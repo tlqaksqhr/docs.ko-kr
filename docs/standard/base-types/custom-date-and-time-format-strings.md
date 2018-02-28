@@ -20,15 +20,18 @@ helpviewer_keywords:
 - formatting [.NET Framework], time
 - date and time strings
 ms.assetid: 98b374e3-0cc2-4c78-ab44-efb671d71984
-caps.latest.revision: "79"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: f0346de00988a6863c212a95be3ffa9d356fe5ce
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 503f9d593235cc81c6e2ecf43b93abb2105e0adf
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="custom-date-and-time-format-strings"></a>사용자 지정 날짜 및 시간 형식 문자열
 날짜 및 시간 형식 문자열은 형식 지정 작업에서 생성되는 <xref:System.DateTime> 또는 <xref:System.DateTimeOffset> 값의 텍스트 표현을 정의합니다. 또한 문자열을 날짜 및 시간으로 성공적으로 변환하기 위해 구문 분석 작업에 필요한 날짜 및 시간 값의 표현을 정의할 수 있습니다. 사용자 지정 형식 문자열은 하나 이상의 사용자 지정 날짜 및 시간 형식 지정자로 구성됩니다. [표준 날짜 및 시간 형식 문자열](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)이 아닌 문자열은 사용자 지정 날짜 및 시간 형식 문자열로 해석됩니다.  
@@ -38,17 +41,17 @@ ms.lasthandoff: 11/21/2017
 > [!TIP]
 >  서식 문자열을 숫자 또는 날짜 및 시간 값에 적용할 수 있도록 지원하고 결과 문자열을 표시하는 응용 프로그램인 [서식 유틸리티](http://code.msdn.microsoft.com/NET-Framework-4-Formatting-9c4dae8d)를 다운로드할 수 있습니다.  
   
-<a name="table"></a> 형식 작업에서 사용자 지정 날짜 및 시간 형식 문자열은 날짜 및 시간 인스턴스의 `ToString` 메서드 또는 복합 형식을 지원하는 메서드에서 사용할 수 있습니다. 다음 예제에서는 두 가지 사용 방법을 모두 보여 줍니다.  
+<a name="table"></a> 형식 작업에서 사용자 지정 날짜 및 시간 형식 문자열은 날짜 및 시간 인스턴스의 `ToString` 메서드 또는 복합 형식을 지원하는 메서드에서 사용할 수 있습니다. 다음 예제에서는 두 가지 사용 방법을 모두 보여줍니다.  
   
  [!code-csharp[Formatting.DateAndTime.Custom#17](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/custandformatting1.cs#17)]
  [!code-vb[Formatting.DateAndTime.Custom#17](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Custom/vb/custandformatting1.vb#17)]  
   
- 구문 분석 작업에서 사용자 지정 날짜 및 시간 형식 문자열은 <xref:System.DateTime.ParseExact%2A?displayProperty=nameWithType>, <xref:System.DateTime.TryParseExact%2A?displayProperty=nameWithType>, <xref:System.DateTimeOffset.ParseExact%2A?displayProperty=nameWithType> 및 <xref:System.DateTimeOffset.TryParseExact%2A?displayProperty=nameWithType> 메서드에서 사용할 수 있습니다. 이러한 메서드를 사용하려면 구문 분석 작업을 성공하기 위해 입력 문자열이 특정 패턴을 정확하게 따라야 합니다. 다음 예제에서는 <xref:System.DateTimeOffset.ParseExact%28System.String%2CSystem.String%2CSystem.IFormatProvider%29?displayProperty=nameWithType> 메서드를 호출하여 일, 월 및 두 자릿수 연도를 포함해야 하는 날짜를 구문 분석하는 방법을 보여 줍니다.  
+ 구문 분석 작업에서 사용자 지정 날짜 및 시간 형식 문자열은 <xref:System.DateTime.ParseExact%2A?displayProperty=nameWithType>, <xref:System.DateTime.TryParseExact%2A?displayProperty=nameWithType>, <xref:System.DateTimeOffset.ParseExact%2A?displayProperty=nameWithType> 및 <xref:System.DateTimeOffset.TryParseExact%2A?displayProperty=nameWithType> 메서드에서 사용할 수 있습니다. 이러한 메서드를 사용하려면 구문 분석 작업을 성공하기 위해 입력 문자열이 특정 패턴을 정확하게 따라야 합니다. 다음 예제에서는 <xref:System.DateTimeOffset.ParseExact%28System.String%2CSystem.String%2CSystem.IFormatProvider%29?displayProperty=nameWithType> 메서드를 호출하여 일, 월 및 두 자릿수 연도를 포함해야 하는 날짜를 구문 분석하는 방법을 보여줍니다.  
   
  [!code-csharp[Formatting.DateAndTime.Custom#18](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/custandparsing1.cs#18)]
  [!code-vb[Formatting.DateAndTime.Custom#18](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Custom/vb/custandparsing1.vb#18)]  
   
- 다음 표에서는 사용자 지정 날짜 및 시간 형식 지정자 및 각 형식 지정자에 따라 생성되는 결과 문자열을 보여 줍니다. 기본적으로 결과 문자열은 en-US 문화권의 형식 규칙을 반영합니다. 특정 형식 지정자가 지역화된 결과 문자열을 생성하는 경우 결과 문자열에 적용되는 문화권의 예도 보여 줍니다. 사용자 지정 날짜 및 시간 형식 문자열을 사용하는 방법에 대한 자세한 내용은 참고 단원을 참조하세요.  
+ 다음 표에서는 사용자 지정 날짜 및 시간 형식 지정자 및 각 형식 지정자에 따라 생성되는 결과 문자열을 보여줍니다. 기본적으로 결과 문자열은 en-US 문화권의 형식 규칙을 반영합니다. 특정 형식 지정자가 지역화된 결과 문자열을 생성하는 경우 결과 문자열에 적용되는 문화권의 예도 보여줍니다. 사용자 지정 날짜 및 시간 형식 문자열을 사용하는 방법에 대한 자세한 내용은 참고 단원을 참조하세요.  
   
 |형식 지정자|설명|예제|  
 |----------------------|-----------------|--------------|  
@@ -220,7 +223,7 @@ ms.lasthandoff: 11/21/2017
   
 <a name="F_Specifier"></a>   
 ## <a name="the-f-custom-format-specifier"></a>"F" 사용자 지정 형식 지정자  
- "F" 사용자 지정 형식 지정자는 초의 소수 부분에 대한 최대 유효 자릿수를 나타냅니다. 즉, 날짜 및 시간 값에서 1/10초까지 표시합니다. 이 자릿수가 0이면 아무 것도 표시되지 않습니다.  
+ "F" 사용자 지정 형식 지정자는 초의 소수 부분에 대한 최대 유효 자릿수를 나타냅니다. 즉, 날짜 및 시간 값에서 1/10초까지 표시합니다. 이 자릿수가 0이면 아무것도 표시되지 않습니다.  
   
  다른 형식 지정자 없이 "F" 형식 지정자만 사용되면 "F" 표준 날짜 및 시간 형식 지정자로 해석됩니다. 단일 형식 지정자를 사용하는 방법에 대한 자세한 내용은 이 항목의 뒷부분에 있는 [단일 사용자 지정 형식 지정자 사용](#UsingSingleSpecifiers)을 참조하세요.  
   
@@ -358,7 +361,7 @@ ms.lasthandoff: 11/21/2017
   
 -   지정되지 않은 표준 시간대(시간의 <xref:System.DateTime.Kind%2A?displayProperty=nameWithType> 속성이 <xref:System.DateTimeKind.Unspecified?displayProperty=nameWithType>임)의 경우 결과가 <xref:System.String.Empty?displayProperty=nameWithType>와 같습니다.  
   
- 에 대 한 <xref:System.DateTimeOffset> 값, "K" 형식 지정자는 "zzz" 형식 지정자와 포함 하는 결과 문자열을 생성 합니다.는 <xref:System.DateTimeOffset> 값 측정 된 UTC에서 오프셋 합니다.  
+ <xref:System.DateTimeOffset> 값의 경우 “K” 형식 지정자는 “zz” 형식 지정자와 같으며 UTC에서의 <xref:System.DateTimeOffset> 값 오프셋이 포함된 결과 문자열을 생성합니다.  
   
  다른 사용자 지정 형식 지정자 없이 "K" 형식 지정자만 사용되면 표준 날짜 및 시간 형식 지정자로 해석되고 <xref:System.FormatException>이 throw됩니다. 단일 형식 지정자를 사용하는 방법에 대한 자세한 내용은 이 항목의 뒷부분에 있는 [단일 사용자 지정 형식 지정자 사용](#UsingSingleSpecifiers)을 참조하세요.  
   
@@ -371,7 +374,7 @@ ms.lasthandoff: 11/21/2017
   
 <a name="mSpecifier"></a>   
 ## <a name="the-m-custom-format-specifier"></a>"m" 사용자 지정 형식 지정자  
- "m" 사용자 지정 형식 지정자는 분을 0부터 59까지의 숫자로 나타냅니다. 분은 마지막 시간 이후 경과한 총 분 수를 나타냅니다. 한 자리 분의 경우 앞에 0이 표시되지 않습니다.  
+ "m" 사용자 지정 형식 지정자는 분을 0부터 59까지의 숫자로 나타냅니다. 분은 마지막 시간 이후 경과한 총 분을 나타냅니다. 한 자리 분의 경우 앞에 0이 표시되지 않습니다.  
   
  다른 사용자 지정 형식 지정자 없이 "m" 형식 지정자만 사용되면 "m" 표준 날짜 및 시간 형식 지정자로 해석됩니다. 단일 형식 지정자를 사용하는 방법에 대한 자세한 내용은 이 항목의 뒷부분에 있는 [단일 사용자 지정 형식 지정자 사용](#UsingSingleSpecifiers)을 참조하세요.  
   
@@ -384,7 +387,7 @@ ms.lasthandoff: 11/21/2017
   
 <a name="mmSpecifier"></a>   
 ## <a name="the-mm-custom-format-specifier"></a>"mm" 사용자 지정 형식 지정자  
- "mm" 사용자 지정 형식 지정자는 임의 개수의 추가 "m" 지정자와 함께 분을 00부터 59까지의 숫자로 나타냅니다. 분은 마지막 시간 이후 경과한 총 분 수를 나타냅니다. 한 자리 분의 경우 앞에 0이 표시됩니다.  
+ "mm" 사용자 지정 형식 지정자는 임의 개수의 추가 "m" 지정자와 함께 분을 00부터 59까지의 숫자로 나타냅니다. 분은 마지막 시간 이후 경과한 총 분을 나타냅니다. 한 자리 분의 경우 앞에 0이 표시됩니다.  
   
  다음 예제에서는 사용자 지정 형식 문자열에 "mm" 사용자 지정 형식 지정자를 포함합니다.  
   
@@ -669,7 +672,7 @@ ms.lasthandoff: 11/21/2017
   
  사용자 지정 날짜 및 시간 형식 지정자 중 하나를 형식 문자열의 유일한 지정자로 사용하려면(즉, "d", "f", "F", "g", "h", "H", "K", "m", "M", "s", "t", "y", "z", ":" 또는 "/" 사용자 지정 형식 지정자를 단독으로 사용하려면) 지정자 앞이나 뒤에 공백을 포함하거나 단일 사용자 지정 날짜 및 시간 지정자 앞에 백분율("%") 형식 지정자를 포함합니다.  
   
- 예를 들어, "`%h"`는 현재 날짜 및 시간 값이 나타내는 시간을 표시하는 사용자 지정 날짜 및 시간 형식 문자열로 해석됩니다. 결과 문자열에 시간 외에 공백이 포함되기는 하지만 " h" 또는 "h " 형식 지정자를 사용할 수도 있습니다. 다음 예제에서는 이러한 세 가지 형식 문자열을 보여 줍니다.  
+ 예를 들어, "`%h"`는 현재 날짜 및 시간 값이 나타내는 시간을 표시하는 사용자 지정 날짜 및 시간 형식 문자열로 해석됩니다. 결과 문자열에 시간 외에 공백이 포함되기는 하지만 " h" 또는 "h " 형식 지정자를 사용할 수도 있습니다. 다음 예제에서는 이러한 세 가지 형식 문자열을 보여줍니다.  
   
  [!code-csharp[Formatting.DateAndTime.Custom#16](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/literal1.cs#16)]
  [!code-vb[Formatting.DateAndTime.Custom#16](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Custom/vb/literal1.vb#16)]  
@@ -681,7 +684,7 @@ ms.lasthandoff: 11/21/2017
  결과 문자열에 백슬래시를 포함하려면`\\`처럼 두 개의 백슬래시를 연속해서 입력해야 합니다.  
   
 > [!NOTE]
->  C++ 및 C# 컴파일러 같은 일부 컴파일러에서는 하나의 백슬래시 문자가 이스케이프 문자로 해석될 수도 있습니다. 형식을 지정할 때 문자열이 올바로 해석되도록 하려면 해당 문자열 앞에 축자 문자열 리터럴 문자(@ 문자)를 사용하거나(C#의 경우) 각 백슬래시 앞에 또 다른 백슬래시를 추가하면 됩니다(C# 및 C++의 경우). 다음 C# 예제에서는 이 두 가지 방법을 모두 보여 줍니다.  
+>  C++ 및 C# 컴파일러 같은 일부 컴파일러에서는 하나의 백슬래시 문자가 이스케이프 문자로 해석될 수도 있습니다. 형식을 지정할 때 문자열이 올바로 해석되도록 하려면 해당 문자열 앞에 축자 문자열 리터럴 문자(@ 문자)를 사용하거나(C#의 경우) 각 백슬래시 앞에 또 다른 백슬래시를 추가하면 됩니다(C# 및 C++의 경우). 다음 C# 예제에서는 이 두 가지 방법을 모두 보여줍니다.  
   
  다음 예제에서는 이스케이프 문자를 사용하여 형식 지정 작업에서 "h" 및 "m" 문자가 형식 지정자로 해석되지 않도록 합니다.  
   
@@ -691,7 +694,7 @@ ms.lasthandoff: 11/21/2017
 ### <a name="control-panel-settings"></a>제어판 설정  
  제어판의 **국가 및 언어 옵션** 설정은 많은 사용자 지정 날짜 및 시간 형식 지정자를 사용한 형식 지정 작업으로 생성되는 결과 문자열에 영향을 줍니다. 이러한 설정은 형식을 제어하는 데 사용되는 값을 제공하는 현재 스레드 문화권과 연결된 <xref:System.Globalization.DateTimeFormatInfo> 개체를 초기화하는 데 사용됩니다. 다른 설정을 사용하는 컴퓨터는 다른 결과 문자열을 생성합니다.  
   
- 또한 사용 하는 경우는 <xref:System.Globalization.CultureInfo.%23ctor%28System.String%29?displayProperty=nameWithType> 생성자를 인스턴스화하는 새 <xref:System.Globalization.CultureInfo> 으로 설정 된 모든 사용자 지정 현재 시스템 문화권과 동일한 문화권을 나타내는 개체는 **국가 및 언어 옵션** 제어판 항목을 적용할 새 <xref:System.Globalization.CultureInfo> 개체입니다. <xref:System.Globalization.CultureInfo.%23ctor%28System.String%2CSystem.Boolean%29?displayProperty=nameWithType> 생성자를 사용하면 시스템의 사용자 지정 내용이 반영되지 않는 <xref:System.Globalization.CultureInfo> 개체를 만들 수 있습니다.  
+ 또한 <xref:System.Globalization.CultureInfo.%23ctor%28System.String%29?displayProperty=nameWithType> 생성자를 사용하여 현재 시스템 문화권과 동일한 문화권을 나타내는 새 <xref:System.Globalization.CultureInfo> 개체를 인스턴스화하는 경우 제어판의 **국가 및 언어 옵션** 항목을 통해 설정된 사용자 지정 내용이 새 <xref:System.Globalization.CultureInfo> 개체에도 적용됩니다. <xref:System.Globalization.CultureInfo.%23ctor%28System.String%2CSystem.Boolean%29?displayProperty=nameWithType> 생성자를 사용하면 시스템의 사용자 지정 내용이 반영되지 않는 <xref:System.Globalization.CultureInfo> 개체를 만들 수 있습니다.  
   
 ### <a name="datetimeformatinfo-properties"></a>DateTimeFormatInfo 속성  
  형식은 현재 스레드 문화권에 의해 암시적으로 제공되거나 형식 지정 작업을 호출하는 메서드의 <xref:System.Globalization.DateTimeFormatInfo> 매개 변수에 의해 명시적으로 제공되는 현재 <xref:System.IFormatProvider> 개체의 속성에 따라 영향을 받습니다. <xref:System.IFormatProvider> 매개 변수의 경우 문화권을 나타내는 <xref:System.Globalization.CultureInfo> 개체나 <xref:System.Globalization.DateTimeFormatInfo> 개체를 지정해야 합니다.  
@@ -702,5 +705,5 @@ ms.lasthandoff: 11/21/2017
  <xref:System.DateTime?displayProperty=nameWithType>  
  <xref:System.IFormatProvider?displayProperty=nameWithType>  
  [형식 서식 지정](../../../docs/standard/base-types/formatting-types.md)  
- [Standard Date and Time Format Strings](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)  
+ [표준 날짜 및 시간 형식 문자열](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)  
  [샘플: .NET Framework 4 서식 유틸리티](http://code.msdn.microsoft.com/NET-Framework-4-Formatting-9c4dae8d)

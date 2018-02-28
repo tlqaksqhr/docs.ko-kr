@@ -1,5 +1,5 @@
 ---
-title: "빠른 시작 - 로컬 환경 - C# 가이드"
+title: "로컬 환경 자습서 - C# 로컬 빠른 시작"
 description: "이 빠른 시작은 로컬에서 빠른 시작을 실행하기 위한 기본 사항을 제공합니다."
 author: billwagner
 ms.topic: article
@@ -8,11 +8,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.custom: mvc
-ms.openlocfilehash: e7747941a7fb1ff43b1a259a78d82665b024a6dd
-ms.sourcegitcommit: 8bde7a3432f30fc771079744955c75c58c4eb393
+ms.openlocfilehash: 9957f524e04f8ff64d4f640cf085b16cf9a2c0c6
+ms.sourcegitcommit: d2da0142247ef42a219a5d2907f153e62dc6ea0d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/20/2018
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="local-environment"></a>로컬 환경
 
@@ -29,11 +29,11 @@ ms.lasthandoff: 01/20/2018
 
 ## <a name="pick-your-quickstart"></a>빠른 시작 선택
 
-다음과 같은 빠른 시작 중 아무것이나 시작할 수 있습니다.
+다음과 같은 빠른 시작 중 하나를 시작할 수 있습니다.
 
 ## <a name="numbers-in-cnumbers-in-csharp-localmd"></a>[C#의 숫자](numbers-in-csharp-local.md)
 
-[C#의 숫자](numbers-in-csharp-local.md) 빠른 시작에서는 컴퓨터가 숫자를 저장하고 여러 숫자 형식으로 계산을 수행하는 방법에 대해 알아봅니다. 반올림의 기본 사항과 C#을 사용하여 수학 계산을 수행하는 방법에 대해 학습합니다. 
+[C#의 숫자](numbers-in-csharp-local.md) 빠른 시작에서는 컴퓨터가 숫자를 저장하는 방법과 여러 숫자 형식으로 계산을 수행하는 방법을 알아봅니다. 반올림의 기본 사항과 C#을 사용하여 수학 계산을 수행하는 방법에 대해 학습합니다. 
 
 이 빠른 시작에서는 [Hello World](hello-world.yml) 자습서를 완료했다고 가정합니다.
 
@@ -47,7 +47,7 @@ ms.lasthandoff: 01/20/2018
 
 [목록 컬렉션](arrays-and-collections.md) 단원에서는 데이터 시퀀스를 저장하는 목록 컬렉션 형식을 살펴봅니다. 항목을 추가 및 제거하고, 항목을 검색하고, 목록을 정렬하는 방법을 배웁니다. 여러 종류의 목록을 살펴봅니다. 
 
-이 빠른 시작에서는 위에 나열된 빠른 시작을 완료했다고 가정합니다.
+이 시작하는 빠른 시작에서는 위에 나열된 빠른 시작을 완료했다고 가정합니다.
 
 ## <a name="introduction-to-classesintroduction-to-classesmd"></a>[클래스 소개](introduction-to-classes.md)
 

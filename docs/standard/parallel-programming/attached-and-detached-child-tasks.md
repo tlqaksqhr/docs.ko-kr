@@ -11,20 +11,24 @@ ms.topic: article
 dev_langs:
 - csharp
 - vb
-helpviewer_keywords: tasks, child tasks
+helpviewer_keywords:
+- tasks, child tasks
 ms.assetid: c95788bf-90a6-4e96-b7bc-58e36a228cc5
-caps.latest.revision: "21"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: c1a0c664dffc2986d4d6985fd2b71cd8055bf2c9
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 298ccdc4628c840874d10832da29c10d6d496655
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="attached-and-detached-child-tasks"></a>연결된 자식 작업 및 분리된 자식 작업
-A *자식 작업* (또는 *중첩된 작업*)은 한 <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> 라고 하는 다른 작업의 사용자 대리자에서 생성 된 인스턴스는 *부모 작업*합니다. 자식 작업을 분리하거나 연결할 수 있습니다. A *분리 된 자식 작업* 은 부모와 독립적으로 실행 되는 작업입니다. *연결 된 자식 작업* 사용 하 여 만든 중첩 된 작업은는 <xref:System.Threading.Tasks.TaskCreationOptions.AttachedToParent?displayProperty=nameWithType> 부모가 명시적으로 나 기본적으로 금지 하지 연결을 하는 옵션입니다. 연결된 자식 작업 및 분리된 자식 작업은 작업에서 개수와 관계없이 만들 수 있고 시스템 자원에 의해서만 제한됩니다.  
+‘자식 작업’(또는 ‘중첩 작업’)은 ‘부모 작업’이라는 다른 작업의 사용자 대리자에 만들어진 <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> 인스턴스입니다. 자식 작업을 분리하거나 연결할 수 있습니다. ‘분리된 자식 작업’은 부모와 독립적으로 실행되는 작업입니다. ‘연결된 자식 작업’은 부모가 명시적으로나 기본적으로 연결을 금지하지 않는 <xref:System.Threading.Tasks.TaskCreationOptions.AttachedToParent?displayProperty=nameWithType> 옵션으로 만들어진 중첩 작업입니다. 연결된 자식 작업 및 분리된 자식 작업은 작업에서 개수와 관계없이 만들 수 있고 시스템 자원에 의해서만 제한됩니다.  
   
  다음 표에는 두 가지 자식 작업의 기본적인 차이점이 나와 있습니다.  
   
@@ -67,7 +71,7 @@ A *자식 작업* (또는 *중첩된 작업*)은 한 <xref:System.Threading.Task
  작업 취소는 협조적입니다. 즉, 취소할 수 있으려면 모든 연결된 자식 작업과 분리된 자식 작업이 취소 토큰의 상태를 모니터링해야 합니다. 하나의 취소 요청을 사용하여 부모 및 모든 자식을 취소하려면 인수와 같은 토큰을 모든 작업에 전달하고 각 작업에서 논리를 제공하여 각 작업의 요청에 응답합니다. 자세한 내용은 [작업 취소](../../../docs/standard/parallel-programming/task-cancellation.md) 및 [방법: 작업 및 해당 자식 취소](../../../docs/standard/parallel-programming/how-to-cancel-a-task-and-its-children.md)를 참조하세요.  
   
 ### <a name="when-the-parent-cancels"></a>부모가 취소되는 경우  
- 자식 작업이 시작되기 전에 부모가 자신을 취소하면 자식이 시작되지 않습니다. 자식 작업이 시작되고 나서 부모가 자신을 취소하면 자체 취소 논리가 없을 경우 자식이 완료까지 실행됩니다. 자세한 내용은 [Task Cancellation](../../../docs/standard/parallel-programming/task-cancellation.md)을 참조하세요.  
+ 자식 작업이 시작되기 전에 부모가 자신을 취소하면 자식이 시작되지 않습니다. 자식 작업이 시작되고 나서 부모가 자신을 취소하면 자체 취소 논리가 없을 경우 자식이 완료까지 실행됩니다. 자세한 내용은 [작업 취소](../../../docs/standard/parallel-programming/task-cancellation.md)를 참조하세요.  
   
 ### <a name="when-a-detached-child-task-cancels"></a>분리된 자식 작업이 취소되는 경우  
  분리된 자식 작업이 부모에 전달된 것과 같은 토큰을 사용하여 자신을 취소하고 부모가 하위 작업을 기다리지 않으면, 예외는 심각하지 않은 협력 취소로 처리되므로 전파되지 않습니다. 이 동작은 모든 최상위 작업의 동작과 같습니다.  
@@ -82,7 +86,7 @@ A *자식 작업* (또는 *중첩된 작업*)은 한 <xref:System.Threading.Task
   
  자식 작업이 부모 작업에 연결되지 않도록 방지하려면 부모 <xref:System.Threading.Tasks.Task> 또는 <xref:System.Threading.Tasks.Task%601> 개체를 만들 때 <xref:System.Threading.Tasks.TaskCreationOptions.DenyChildAttach?displayProperty=nameWithType> 옵션을 지정합니다. 작업이 부모에 연결되려고 하고 부모가 <xref:System.Threading.Tasks.TaskCreationOptions.DenyChildAttach?displayProperty=nameWithType> 옵션을 지정하면 자식 작업이 부모에 연결될 수 있고 <xref:System.Threading.Tasks.TaskCreationOptions.AttachedToParent?displayProperty=nameWithType> 옵션을 지정하지 않은 것처럼 실행됩니다.  
   
- 자식 작업이 시기적절하게 완료되지 않으면 자식 작업이 부모에 연결되지 않도록 방지할 수도 있습니다. 부모 작업은 자식 작업이 모두 완료될 때까지 완료되지 않기 때문에 오래 실행되는 자식 작업은 전체적인 앱의 성능을 저하할 수 있습니다. 작업이 부모 작업에 연결 하지 못하도록 하 여 앱 성능을 향상 하는 방법을 보여 주는 예제를 보려면 [하는 방법: 연결에서 부모에 자식 작업을 방지](../../../docs/standard/parallel-programming/how-to-prevent-a-child-task-from-attaching-to-its-parent.md)합니다.  
+ 자식 작업이 시기적절하게 완료되지 않으면 자식 작업이 부모에 연결되지 않도록 방지할 수도 있습니다. 부모 작업은 자식 작업이 모두 완료될 때까지 완료되지 않기 때문에 오래 실행되는 자식 작업은 전체적인 앱의 성능을 저하할 수 있습니다. 작업이 부모 작업에 연결되지 않도록 방지하여 앱 성능을 향상하는 방법을 보여주는 예제는 [방법: 자식 작업이 부모 작업에 연결되지 않도록 방지](../../../docs/standard/parallel-programming/how-to-prevent-a-child-task-from-attaching-to-its-parent.md)를 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
  [병렬 프로그래밍](../../../docs/standard/parallel-programming/index.md)  

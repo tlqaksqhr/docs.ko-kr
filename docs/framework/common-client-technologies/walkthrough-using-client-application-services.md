@@ -5,7 +5,8 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology: dotnet-clr
+ms.technology:
+- dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
@@ -15,16 +16,17 @@ helpviewer_keywords:
 - application services host [client application services]
 - client application services, walkthroughs
 ms.assetid: bb7c8950-4517-4dae-b705-b74a14059b26
-caps.latest.revision: "47"
+caps.latest.revision: 
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 124c9321623fd6fe9c5414fc1eed2e41be1e75f3
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 71eac85d07ac54cf15edcfcc3a86de58afef5004
+ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="walkthrough-using-client-application-services"></a>연습: 클라이언트 응용 프로그램 서비스 사용
 이 항목에서는 클라이언트 응용 프로그램 서비스를 사용하여 사용자를 인증하고 사용자 역할 및 설정을 검색하는 Windows 응용 프로그램을 만드는 방법을 설명합니다.  
@@ -48,7 +50,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="prerequisites"></a>필수 구성 요소  
  이 연습을 완료하려면 다음 구성 요소가 필요합니다.  
   
--   [!INCLUDE[vs_orcas_long](../../../includes/vs-orcas-long-md.md)].  
+-   [!INCLUDE[vs_orcas_long](../../../includes/vs-orcas-long-md.md)]이어야 합니다.  
   
 ## <a name="creating-the-client-application"></a>클라이언트 응용 프로그램 만들기  
  먼저 Windows Forms 프로젝트를 만듭니다. 이 연습에서는 익숙한 사용자가 더 많기 때문에 Windows Forms를 사용하지만 WPF(Windows Presentation Foundation) 프로젝트에 대한 프로세스는 유사합니다.  
@@ -192,7 +194,7 @@ ms.lasthandoff: 12/22/2017
   	|**암호**|`manager!`|  
   	|**암호 확인**|`manager!`|  
   	|**전자 메일**|`manager@contoso.com`|  
-  	|**보안 질문**|`manager`|  
+  	|**본인 확인 질문**|`manager`|  
   	|**보안 대답**|`manager`|  
   
 12. **사용자 만들기**를 클릭합니다.  
@@ -200,7 +202,7 @@ ms.lasthandoff: 12/22/2017
      성공 메시지가 나타납니다.  
   
     > [!NOTE]
-    >  **메일**, **보안 질문**및 **보안 대답** 값은 폼에 필요하지만 이 예제에서는 사용되지 않습니다.  
+    >  **전자 메일**, **본인 확인 질문** 및 **보안 대답** 값은 폼에 필요하지만, 이 예제에서는 사용되지 않습니다.  
   
 13. **계속**을 클릭합니다.  
   
@@ -214,7 +216,7 @@ ms.lasthandoff: 12/22/2017
   	|**암호**|`employee!`|  
   	|**암호 확인**|`employee!`|  
   	|**전자 메일**|`employee@contoso.com`|  
-  	|**보안 질문**|`Employee`|  
+  	|**본인 확인 질문**|`Employee`|  
   	|**보안 대답**|`employee`|  
   
 15. **사용자 만들기**를 클릭합니다.  

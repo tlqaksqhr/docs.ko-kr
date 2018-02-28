@@ -14,30 +14,33 @@ helpviewer_keywords:
 - asynchronous programming, blocking applications
 - blocking application execution
 ms.assetid: cc5e2834-a65b-4df8-b750-7bdb79997fee
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 dev_langs:
 - csharp
 - vb
-ms.openlocfilehash: ccca6e1e4f6b5cdf098018b59426fb2262e2b346
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 3ec7bfe6fe2cef20a6d74030802113a47e8679e1
+ms.sourcegitcommit: 957c696f25e39f923a827fc3ad5e8ab72768838c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/13/2018
 ---
 # <a name="blocking-application-execution-by-ending-an-async-operation"></a>비동기 작업을 종료하여 응용 프로그램 실행 차단
-계속 비동기 작업의 결과 기다리는 동안 다른 작업을 수행할 수 없는 응용 프로그램은 작업이 완료 될 때까지 차단 되어야 합니다. 다음 옵션 중 하나를 사용 하 여 비동기 작업이 완료 되기를 기다리는 동안 응용 프로그램의 주 스레드를 차단 합니다.  
+비동기 작업의 결과를 기다리는 동안 다른 작업을 계속 수행할 수 없는 응용 프로그램은 작업이 완료될 때까지 차단되어야 합니다. 다음 옵션 중 하나를 사용하여 비동기 작업이 완료될 때까지 대기하는 동안 응용 프로그램의 기본 스레드를 차단합니다.  
   
--   비동기 작업을 호출 **끝** *OperationName* 메서드. 이 방법은이 항목에 나와 있습니다.  
+-   비동기 작업 **End***OperationName* 메서드를 호출합니다. 이 항목에서 이 방법을 설명합니다.  
   
--   사용 하 여는 <xref:System.IAsyncResult.AsyncWaitHandle%2A> 의 속성은 <xref:System.IAsyncResult> 비동기 작업에서 반환 된 **시작** *OperationName* 메서드. 이 방법을 보여 주는 예제를 보려면 [AsyncWaitHandle를 사용한 응용 프로그램 실행 블로킹](../../../docs/standard/asynchronous-programming-patterns/blocking-application-execution-using-an-asyncwaithandle.md)합니다.  
+-   비동기 작업의 **Begin***OperationName* 메서드에 의해 반환된 <xref:System.IAsyncResult>의 <xref:System.IAsyncResult.AsyncWaitHandle%2A> 속성을 사용합니다. 이 방법을 설명하는 예제는 [AsyncWaitHandle을 사용하는 응용 프로그램 실행 블로킹](../../../docs/standard/asynchronous-programming-patterns/blocking-application-execution-using-an-asyncwaithandle.md)을 참조하세요.  
   
- 사용 하는 응용 프로그램의 **끝** *OperationName* 메서드는 비동기 작업이 완료 될 때까지 차단 하려면 일반적으로 호출 됩니다는 **시작**  *OperationName* 메서드는 작업의 결과 없이 수행할 수 있습니다 하 고 호출 하는 작업을 수행 **끝** *OperationName*합니다.  
+ 비동기 작업이 완료될 때까지 **End***OperationName* 메서드를 사용하여 차단되는 응용 프로그램은 일반적으로 **Begin***OperationName* 메서드를 호출하고 작업 결과 없이 완료할 수 있는 작업을 수행한 다음, **End***OperationName*을 호출합니다.  
   
-## <a name="example"></a>예제  
- 다음 코드 예제에서는의 비동기 메서드를 사용 하 여는 <xref:System.Net.Dns> 사용자가 지정한 컴퓨터에 대 한 도메인 이름 시스템 정보를 검색할 수 있습니다. `null` (`Nothing` Visual Basic의)에 대 한 전달 되는 <xref:System.Net.Dns.BeginGetHostByName%2A> `requestCallback` 및 `stateObject` 매개 변수가이 방법을 사용할 때는이 인수를 필요 하지 않으므로 합니다.  
+## <a name="example"></a>예  
+ 다음 코드 예제는 <xref:System.Net.Dns> 클래스에서 비동기 메서드를 사용하여 사용자가 지정한 컴퓨터의 Domain Name System 정보를 검색하는 방법을 보여줍니다. 이 방법을 사용할 경우 이러한 인수가 필요하지 않기 때문에 <xref:System.Net.Dns.BeginGetHostByName%2A>`requestCallback` 및 `stateObject` 매개 변수에 대해 `null`(Visual Basic의 `Nothing`)이 전달됩니다.  
   
  [!code-csharp[AsyncDesignPattern#1](../../../samples/snippets/csharp/VS_Snippets_CLR/AsyncDesignPattern/CS/Async_EndBlock.cs#1)]
  [!code-vb[AsyncDesignPattern#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/AsyncDesignPattern/VB/Async_EndBlock.vb#1)]  

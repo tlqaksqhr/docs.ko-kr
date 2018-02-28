@@ -12,15 +12,18 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 097b0cb1-5743-4c3a-86ef-caf5cbe6750d
-caps.latest.revision: "3"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: ad656e2db17e44733b5718fe2e3a2a48afcb1381
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 2138b9c47c6e41cd94e775eaed005d8a6fd976c9
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="saving-and-writing-a-document"></a>문서 작성 및 저장
 <xref:System.Xml.XmlDocument>를 로드하고 저장할 경우 저장된 문서는 다음과 같이 원래 문서와 다를 수 있습니다.  
@@ -29,7 +32,7 @@ ms.lasthandoff: 10/18/2017
   
 -   특성 사이에 있는 모든 공백은 단일 공백 문자로 줄어듭니다.  
   
--   요소 사이에 있는 공백이 변경됩니다. 유효 공백은 유지되고 무효 공백은 유지되지 않습니다. 하지만 사용 문서를 저장 하는 경우는 <xref:System.Xml.XmlTextWriter> **Indenting** 깔끔하게 더 쉽게 읽을 수 있도록 출력을 인쇄 하는 기본적으로 모드입니다.  
+-   요소 사이에 있는 공백이 변경됩니다. 유효 공백은 유지되고 무효 공백은 유지되지 않습니다. 그러나 문서를 저장할 때 기본적으로 <xref:System.Xml.XmlTextWriter> **Indenting** 모드를 사용하여 출력이 읽기 쉽도록 정리됩니다.  
   
 -   특성 값 주위에 사용된 작은따옴표는 기본적으로 큰따옴표로 변경됩니다. <xref:System.Xml.XmlTextReader.QuoteChar%2A>의 <xref:System.Xml.XmlTextWriter> 속성을 사용하여 인용 문자를 작은따옴표나 큰따옴표로 설정할 수 있습니다.  
   
@@ -67,7 +70,7 @@ doc.Save(tw);
 ## <a name="writing-document-content-using-the-outerxml-property"></a>OuterXml 속성을 사용하여 문서 내용 작성  
  <xref:System.Xml.XmlNode.OuterXml%2A> 속성은 Microsoft에서 W3C(World Wide Web 컨소시엄) XML DOM(문서 개체 모델) 표준을 확장한 결과입니다. <xref:System.Xml.XmlNode.OuterXml%2A> 속성을 사용하여 전체 XML 문서의 태그를 가져오거나 단일 노드 및 해당 자식 노드의 태그만 가져올 수 있습니다. <xref:System.Xml.XmlNode.OuterXml%2A>은 지정된 노드 및 모든 자식 노드를 나타내는 태그를 반환합니다.  
   
- 다음 코드 예제에서는 문서 전체를 문자열로 저장하는 방법을 보여 줍니다.  
+ 다음 코드 예제에서는 문서 전체를 문자열로 저장하는 방법을 보여줍니다.  
   
 ```vb  
 Dim mydoc As New XmlDocument()  
@@ -83,7 +86,7 @@ XmlDocument mydoc = new XmlDocument();
 string xml = mydoc.OuterXml;  
 ```  
   
- 다음 코드 예제에서는 문서 요소만 저장하는 방법을 보여 줍니다.  
+ 다음 코드 예제에서는 문서 요소만 저장하는 방법을 보여줍니다.  
   
 ```vb  
 ' For the content of the Document Element only.  
@@ -98,4 +101,4 @@ string xml = mydoc.DocumentElement.OuterXml;
  이와는 반대로 자식 노드의 내용이 필요한 경우 <xref:System.Xml.XmlNode.InnerText%2A> 속성을 사용할 수 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [XML 문서 개체 모델 (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
+ [XML DOM(문서 개체 모델)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

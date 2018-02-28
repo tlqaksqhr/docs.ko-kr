@@ -18,15 +18,18 @@ helpviewer_keywords:
 - threading [.NET Framework], thread pool
 - threading [.NET Framework], pooling
 ms.assetid: 2be05b06-a42e-4c9d-a739-96c21d673927
-caps.latest.revision: "24"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 38032fccce1a8f6f7cbcb3bbd3d3f9d008a74141
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: e50fd66096d6bd58fb7db692449e7f8654b5ca76
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="the-managed-thread-pool"></a>관리되는 스레드 풀
 <xref:System.Threading.ThreadPool> 클래스는 시스템에서 관리하는 작업자 스레드 풀을 응용 프로그램에 제공하여 스레드 관리 대신 응용 프로그램 작업에 집중할 수 있게 해줍니다. 후순위 처리가 필요한 간단한 작업이 있는 경우 관리되는 스레드 풀을 통해 쉽게 여러 스레드를 활용할 수 있습니다. 예를 들어 [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)]부터는 스레드 풀 스레드에서 비동기 작업을 수행하는 <xref:System.Threading.Tasks.Task> 및 <xref:System.Threading.Tasks.Task%601> 개체를 만들 수 있습니다.  
@@ -52,7 +55,7 @@ ms.lasthandoff: 11/21/2017
 -   스레드와 연결된 안정적인 ID가 있거나 스레드를 작업 전용으로 사용해야 합니다.  
   
 ## <a name="thread-pool-characteristics"></a>스레드 풀 특징  
- 스레드 풀 스레드는 백그라운드 스레드입니다. 참조 [포그라운드 및 백그라운드 스레드](../../../docs/standard/threading/foreground-and-background-threads.md)합니다. 각 스레드는 기본 스택 크기를 사용하고, 기본 우선 순위로 실행되며, 다중 스레드 아파트에 있습니다.  
+ 스레드 풀 스레드는 백그라운드 스레드입니다. [포그라운드 및 백그라운드 스레드](../../../docs/standard/threading/foreground-and-background-threads.md)를 참조하세요. 각 스레드는 기본 스택 크기를 사용하고, 기본 우선 순위로 실행되며, 다중 스레드 아파트에 있습니다.  
   
  프로세스당 하나의 스레드 풀만 있습니다.  
   
@@ -65,7 +68,7 @@ ms.lasthandoff: 11/21/2017
   
 -   공용 언어 런타임 또는 호스트 프로세스에서 스레드를 종료합니다.  
   
- 자세한 내용은 참조 [관리 되는 스레드의 예외](../../../docs/standard/threading/exceptions-in-managed-threads.md)합니다.  
+ 자세한 내용은 [관리되는 스레드의 예외](../../../docs/standard/threading/exceptions-in-managed-threads.md)를 참조하세요.  
   
 > [!NOTE]
 >  .NET Framework 버전 1.0 및 1.1에서는 공용 언어 런타임이 스레드 풀 스레드에서 처리되지 않은 예외를 자동으로 포착합니다. 이는 손상된 응용 프로그램 상태일 수 있으며 결국 응용 프로그램이 중단되게 하여 디버그하기 어려울 수 있습니다.  
@@ -90,25 +93,25 @@ ms.lasthandoff: 11/21/2017
 >  <xref:System.Threading.ThreadPool.SetMinThreads%2A> 메서드를 사용하여 유휴 상태 스레드의 최소 개수를 늘릴 수 있습니다. 그러나 이러한 값을 불필요하게 늘리면 성능 문제가 발생할 수 있습니다. 너무 많은 작업이 동시에 시작되는 경우 모두 속도가 느린 것처럼 나타날 수 있습니다. 대부분의 경우 스레드 풀은 고유한 스레드 할당 알고리즘에서 성능이 향상됩니다.  
   
 ## <a name="skipping-security-checks"></a>보안 검사 건너뛰기  
- 스레드 풀은 <xref:System.Threading.ThreadPool.UnsafeQueueUserWorkItem%2A?displayProperty=nameWithType> 및 <xref:System.Threading.ThreadPool.UnsafeRegisterWaitForSingleObject%2A?displayProperty=nameWithType> 메서드도 제공합니다. 호출자 스택이 큐에 대기 중인 작업을 실행하는 동안 수행되는 보안 검사와 관련이 없는 경우에만 이러한 메서드를 사용합니다. <xref:System.Threading.ThreadPool.QueueUserWorkItem%2A>및 <xref:System.Threading.ThreadPool.RegisterWaitForSingleObject%2A> 둘 다 스레드가 작업 실행을 시작할 때 스레드 풀 스레드 스택에 병합 됩니다 호출자 스택을 캡처합니다. 보안 검사가 필요한 경우 전체 스택을 검사해야 합니다. 검사를 통해 안전성이 제공되지만 성능이 저하되는 단점도 있습니다.  
+ 스레드 풀은 <xref:System.Threading.ThreadPool.UnsafeQueueUserWorkItem%2A?displayProperty=nameWithType> 및 <xref:System.Threading.ThreadPool.UnsafeRegisterWaitForSingleObject%2A?displayProperty=nameWithType> 메서드도 제공합니다. 호출자 스택이 큐에 대기 중인 작업을 실행하는 동안 수행되는 보안 검사와 관련이 없는 경우에만 이러한 메서드를 사용합니다. <xref:System.Threading.ThreadPool.QueueUserWorkItem%2A> 및 <xref:System.Threading.ThreadPool.RegisterWaitForSingleObject%2A>는 둘 다 호출자 스택을 캡처합니다. 호출자 스택은 스레드가 작업 실행을 시작할 때 스레드 풀 스레드 스택에 병합됩니다. 보안 검사가 필요한 경우 전체 스택을 검사해야 합니다. 검사를 통해 안전성이 제공되지만 성능이 저하되는 단점도 있습니다.  
   
 ## <a name="using-the-thread-pool"></a>스레드 풀 사용  
- 부터는 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]를 사용 하는 스레드 풀을 사용 하는 가장 쉬운 방법은 [라이브러리 TPL (작업 병렬)](../../../docs/standard/parallel-programming/task-parallel-library-tpl.md)합니다. 기본적으로 <xref:System.Threading.Tasks.Task> 및 <xref:System.Threading.Tasks.Task%601>과 같은 병렬 라이브러리 형식은 스레드 풀 스레드를 사용하여 작업을 실행합니다. 관리 코드에서 <xref:System.Threading.ThreadPool.QueueUserWorkItem%2A?displayProperty=nameWithType>(또는 비관리 코드에서 `CorQueueUserWorkItem`)을 호출하고 작업을 수행하는 메서드를 나타내는 <xref:System.Threading.WaitCallback> 대리자를 전달하여 스레드 풀을 사용할 수도 있습니다. 스레드 풀을 사용하는 또 다른 방법은 <xref:System.Threading.ThreadPool.RegisterWaitForSingleObject%2A?displayProperty=nameWithType> 메서드를 사용하고 신호를 받거나 시간 초과된 경우 <xref:System.Threading.WaitOrTimerCallback> 대리자가 나타내는 메서드를 호출하는 <xref:System.Threading.WaitHandle>을 전달하여 대기 작업과 관련된 작업 항목을 큐에 대기합니다. 스레드 풀 스레드는 콜백 메서드를 호출하는 데 사용됩니다.  
+ [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]부터 스레드 풀을 사용하는 가장 쉬운 방법은 [TPL(작업 병렬 라이브러리)](../../../docs/standard/parallel-programming/task-parallel-library-tpl.md)을 사용하는 것입니다. 기본적으로 <xref:System.Threading.Tasks.Task> 및 <xref:System.Threading.Tasks.Task%601>과 같은 병렬 라이브러리 형식은 스레드 풀 스레드를 사용하여 작업을 실행합니다. 관리 코드에서 <xref:System.Threading.ThreadPool.QueueUserWorkItem%2A?displayProperty=nameWithType>(또는 비관리 코드에서 `CorQueueUserWorkItem`)을 호출하고 작업을 수행하는 메서드를 나타내는 <xref:System.Threading.WaitCallback> 대리자를 전달하여 스레드 풀을 사용할 수도 있습니다. 스레드 풀을 사용하는 또 다른 방법은 <xref:System.Threading.ThreadPool.RegisterWaitForSingleObject%2A?displayProperty=nameWithType> 메서드를 사용하고 신호를 받거나 시간 초과된 경우 <xref:System.Threading.WaitOrTimerCallback> 대리자가 나타내는 메서드를 호출하는 <xref:System.Threading.WaitHandle>을 전달하여 대기 작업과 관련된 작업 항목을 큐에 대기합니다. 스레드 풀 스레드는 콜백 메서드를 호출하는 데 사용됩니다.  
   
 ## <a name="threadpool-examples"></a>ThreadPool 예제  
- 이 섹션의 코드 예제에서는 <xref:System.Threading.Tasks.Task> 클래스, <xref:System.Threading.ThreadPool.QueueUserWorkItem%2A?displayProperty=nameWithType> 메서드 및 <xref:System.Threading.ThreadPool.RegisterWaitForSingleObject%2A?displayProperty=nameWithType> 메서드를 사용하여 스레드 풀을 보여 줍니다.  
+ 이 섹션의 코드 예제에서는 <xref:System.Threading.Tasks.Task> 클래스, <xref:System.Threading.ThreadPool.QueueUserWorkItem%2A?displayProperty=nameWithType> 메서드 및 <xref:System.Threading.ThreadPool.RegisterWaitForSingleObject%2A?displayProperty=nameWithType> 메서드를 사용하여 스레드 풀을 보여줍니다.  
   
--   [작업 병렬 라이브러리와 비동기 작업 실행](#TaskParallelLibrary)  
+-   [작업 병렬 라이브러리를 사용하여 비동기 작업 실행](#TaskParallelLibrary)  
   
--   [QueueUserWorkItem으로 비동기적으로 코드 실행](#ExecuteCodeWithQUWI)  
+-   [QueueUserWorkItem을 사용하여 비동기적으로 코드 실행](#ExecuteCodeWithQUWI)  
   
--   [QueueUserWorkItem에 대 한 작업 데이터 제공](#TaskDataForQUWI)  
+-   [QueueUserWorkItem에 대한 작업 데이터 제공](#TaskDataForQUWI)  
   
 -   [RegisterWaitForSingleObject 사용](#RegisterWaitForSingleObject)  
   
 <a name="TaskParallelLibrary"></a>   
 ### <a name="executing-asynchronous-tasks-with-the-task-parallel-library"></a>작업 병렬 라이브러리를 사용하여 비동기 작업 실행  
- 다음 예제에서는 <xref:System.Threading.Tasks.TaskFactory.StartNew%2A?displayProperty=nameWithType> 메서드를 호출하여 <xref:System.Threading.Tasks.Task> 개체를 만들고 사용하는 방법을 보여 줍니다. 사용 하는 예제에 대 한는 <xref:System.Threading.Tasks.Task%601> 비동기 작업에서 값을 반환 하는 클래스 [하는 방법: 작업에서 값을 반환할](../../../docs/standard/parallel-programming/how-to-return-a-value-from-a-task.md)합니다.  
+ 다음 예제에서는 <xref:System.Threading.Tasks.TaskFactory.StartNew%2A?displayProperty=nameWithType> 메서드를 호출하여 <xref:System.Threading.Tasks.Task> 개체를 만들고 사용하는 방법을 보여줍니다. <xref:System.Threading.Tasks.Task%601> 클래스를 사용하여 비동기 작업의 값을 반환하는 예제는 [방법: 작업에서 값 반환](../../../docs/standard/parallel-programming/how-to-return-a-value-from-a-task.md)을 참조하세요.  
   
  [!code-csharp[System.Threading.Tasks.Task#01](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.threading.tasks.task/cs/startnew.cs#01)]
  [!code-vb[System.Threading.Tasks.Task#01](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.threading.tasks.task/vb/startnew.vb#01)]  
@@ -131,11 +134,11 @@ ms.lasthandoff: 11/21/2017
   
 <a name="RegisterWaitForSingleObject"></a>   
 ### <a name="using-registerwaitforsingleobject"></a>RegisterWaitForSingleObject 사용  
- 다음 예제에서는 여러 가지 스레딩 기능을 보여 줍니다.  
+ 다음 예제에서는 여러 가지 스레딩 기능을 보여줍니다.  
   
 -   <xref:System.Threading.ThreadPool.RegisterWaitForSingleObject%2A> 메서드를 사용하여 <xref:System.Threading.ThreadPool> 스레드에서 실행할 작업을 큐에 대기.  
   
--   <xref:System.Threading.AutoResetEvent>를 사용하여 실행할 작업에 신호 보내기. 참조 [EventWaitHandle, AutoResetEvent, CountdownEvent, ManualResetEvent](../../../docs/standard/threading/eventwaithandle-autoresetevent-countdownevent-manualresetevent.md)합니다.  
+-   <xref:System.Threading.AutoResetEvent>를 사용하여 실행할 작업에 신호 보내기. [EventWaitHandle, AutoResetEvent, CountdownEvent, ManualResetEvent](../../../docs/standard/threading/eventwaithandle-autoresetevent-countdownevent-manualresetevent.md)를 참조하세요.  
   
 -   <xref:System.Threading.WaitOrTimerCallback> 대리자를 사용하여 시간 초과 및 신호 모두 처리.  
   

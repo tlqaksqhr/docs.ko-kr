@@ -12,21 +12,24 @@ helpviewer_keywords:
 - observer design pattern [.NET Framework], best practices
 - best practices [.NET Framework], observer design pattern
 ms.assetid: c834760f-ddd4-417f-abb7-a059679d5b8c
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 0edba44efcaa46812f535b39364c2f5e4e3a1afe
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: dc42ccd425b52719b2b69525d2bbbe4607a19982
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="observer-design-pattern-best-practices"></a>관찰자 디자인 패턴 유용한 정보
 .NET Framework에서는 관찰자 디자인 패턴이 인터페이스 집합으로 구현됩니다. <xref:System.IObservable%601?displayProperty=nameWithType> 인터페이스는 데이터 공급자를 나타냅니다. 이 데이터 공급자는 관찰자가 알림 구독을 취소할 수 있도록 하는 <xref:System.IDisposable> 구현도 제공합니다. <xref:System.IObserver%601?displayProperty=nameWithType> 인터페이스는 관찰자를 나타냅니다. 이 항목에는 이러한 인터페이스를 사용하여 관찰자 디자인 패턴을 구현할 때 개발자가 따라야 하는 모범 사례에 대해 설명합니다.  
   
 ## <a name="threading"></a>스레딩  
- 일반적으로 공급자는 컬렉션 개체로 표시되는 구독자 목록에 특정 관찰자를 추가하여 <xref:System.IObservable%601.Subscribe%2A?displayProperty=nameWithType> 메서드를 구현하며, 구독자 목록에서 특정 관찰자를 제거하여 <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType> 메서드를 구현합니다. 관찰자는 언제든지 이러한 메서드를 호출할 수 있습니다. 또한 공급자/관찰자 계약에서는 <xref:System.IObserver%601.OnCompleted%2A?displayProperty=nameWithType> 콜백 메서드 후 구독 취소 담당자를 지정하지 않으므로 공급자와 관찰자가 모두 목록에서 같은 멤버를 제거하려고 할 수 있습니다. 이러한 가능성 때문에 <xref:System.IObservable%601.Subscribe%2A> 및 <xref:System.IDisposable.Dispose%2A> 메서드는 모두 스레드로부터 안전해야 합니다. 이렇게 하려면 일반적으로 사용 하는 [동시 컬렉션](../../../docs/standard/parallel-programming/data-structures-for-parallel-programming.md) 또는 잠금. 스레드로부터 안전하지 않은 구현은 스레드로부터 안전하지 않음을 명시적으로 문서화해야 합니다.  
+ 일반적으로 공급자는 컬렉션 개체로 표시되는 구독자 목록에 특정 관찰자를 추가하여 <xref:System.IObservable%601.Subscribe%2A?displayProperty=nameWithType> 메서드를 구현하며, 구독자 목록에서 특정 관찰자를 제거하여 <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType> 메서드를 구현합니다. 관찰자는 언제든지 이러한 메서드를 호출할 수 있습니다. 또한 공급자/관찰자 계약에서는 <xref:System.IObserver%601.OnCompleted%2A?displayProperty=nameWithType> 콜백 메서드 후 구독 취소 담당자를 지정하지 않으므로 공급자와 관찰자가 모두 목록에서 같은 멤버를 제거하려고 할 수 있습니다. 이러한 가능성 때문에 <xref:System.IObservable%601.Subscribe%2A> 및 <xref:System.IDisposable.Dispose%2A> 메서드는 모두 스레드로부터 안전해야 합니다. 일반적으로는 이를 위해 [동시 컬렉션](../../../docs/standard/parallel-programming/data-structures-for-parallel-programming.md) 또는 잠금을 사용합니다. 스레드로부터 안전하지 않은 구현은 스레드로부터 안전하지 않음을 명시적으로 문서화해야 합니다.  
   
  추가로 보장할 내용은 공급자/관찰자 계약을 기반으로 하는 계층에 지정해야 합니다. 구현자는 관찰자 계약에 대한 사용자의 혼동을 방지하기 위해 추가 요구를 사항을 적용하는 경우 이를 명확하게 표시해야 합니다.  
   

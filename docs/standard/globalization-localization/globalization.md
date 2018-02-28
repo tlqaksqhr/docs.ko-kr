@@ -19,15 +19,18 @@ helpviewer_keywords:
 - application development [.NET Framework], globalization
 - culture, globalization
 ms.assetid: 4e919934-6b19-42f2-b770-275a4fae87c9
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: a60284bf2db8f47dd17c04fad5cbd6db4970a8a7
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 357d18843af0af2869d0ec98def6c733e51f9a4c
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="globalization"></a>전역화
 전역화는 다양한 문화권의 사용자를 위해 현지화된 인터페이스와 국가별 데이터를 지원하는 지역화 대비 응용 프로그램을 디자인하고 개발하는 작업을 수반합니다. 디자인 단계를 시작하기 전에 앱에서 지원할 문화권을 결정해야 합니다. 앱이 기본적으로 단일 문화권이나 국가를 대상으로 하더라도, 다른 문화권이나 국가의 사용자에게 쉽게 확장될 수 있도록 디자인하고 작성할 수 있습니다.  
@@ -44,29 +47,29 @@ ms.lasthandoff: 11/21/2017
   
     -   [문자열 검색 및 비교](../../../docs/standard/globalization-localization/globalization.md#Strings_Searching)  
   
-    -   [문자열 같음 여부 테스트](../../../docs/standard/globalization-localization/globalization.md#Strings_Equality)  
+    -   [문자열이 같은지 테스트](../../../docs/standard/globalization-localization/globalization.md#Strings_Equality)  
   
-    -   [순서 지정 및 문자열 정렬](../../../docs/standard/globalization-localization/globalization.md#Strings_Ordering)  
+    -   [문자열 순서 지정 및 정렬](../../../docs/standard/globalization-localization/globalization.md#Strings_Ordering)  
   
-    -   [문자열 연결을 하지 마십시오.](../../../docs/standard/globalization-localization/globalization.md#Strings_Concat)  
+    -   [문자열 연결 사용하지 않기](../../../docs/standard/globalization-localization/globalization.md#Strings_Concat)  
   
 -   [날짜 및 시간 처리](../../../docs/standard/globalization-localization/globalization.md#DatesAndTimes)  
   
     -   [날짜 및 시간 유지](../../../docs/standard/globalization-localization/globalization.md#DatesAndTimes_Persist)  
   
-    -   [날짜와 시간 표시](../../../docs/standard/globalization-localization/globalization.md#DatesAndTimes_Display)  
+    -   [날짜 및 시간 표시](../../../docs/standard/globalization-localization/globalization.md#DatesAndTimes_Display)  
   
-    -   [Serialization 및 표준 시간대 인식 기능이](../../../docs/standard/globalization-localization/globalization.md#DatesAndTimes_TimeZones)  
+    -   [Serialization 및 표준 시간대 인식](../../../docs/standard/globalization-localization/globalization.md#DatesAndTimes_TimeZones)  
   
-    -   [날짜 및 시간 산술 연산을 수행합니다.](../../../docs/standard/globalization-localization/globalization.md#DatesAndTimes_Arithmetic)  
+    -   [날짜 및 시간 연산 수행](../../../docs/standard/globalization-localization/globalization.md#DatesAndTimes_Arithmetic)  
   
 -   [숫자 값 처리](../../../docs/standard/globalization-localization/globalization.md#Numbers)  
   
-    -   [표시 되는 숫자 값](../../../docs/standard/globalization-localization/globalization.md#Numbers_Display)  
+    -   [숫자 값 표시](../../../docs/standard/globalization-localization/globalization.md#Numbers_Display)  
   
     -   [숫자 값 유지](../../../docs/standard/globalization-localization/globalization.md#Numbers_Persist)  
   
--   [Culture 관련 설정 작업](../../../docs/standard/globalization-localization/globalization.md#Cultures)  
+-   [문화권별 설정을 사용하여 작업](../../../docs/standard/globalization-localization/globalization.md#Cultures)  
   
 <a name="HandlingStrings"></a>   
 ## <a name="handling-strings"></a>문자열 처리  
@@ -97,7 +100,7 @@ ms.lasthandoff: 11/21/2017
   
  리소스 파일을 사용하면 특히 현지화된 앱을 만드는 경우에 장점이 있습니다. 위성 어셈블리로 리소스를 배포하는 경우, 공용 언어 런타임은 <xref:System.Globalization.CultureInfo.CurrentUICulture%2A?displayProperty=nameWithType> 속성에 의해 정의된 사용자의 현재 UI 문화권을 기반으로 적절한 문화권의 리소스를 자동으로 선택합니다. 문화권별로 적절한 리소스를 제공하고 <xref:System.Resources.ResourceManager> 개체를 제대로 인스턴스화하거나 강력한 형식 리소스 클래스를 사용하기만 한다면, 런타임에서 적절한 리소스를 가져오는 세부 정보를 처리합니다.  
   
- 리소스 파일 만들기에 대 한 자세한 내용은 참조 [리소스 파일 만들기](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md)합니다. 만들기 및 위성 어셈블리를 배포 하는 방법에 대 한 정보를 참조 하십시오. [위성 어셈블리 만들기](../../../docs/framework/resources/creating-satellite-assemblies-for-desktop-apps.md) 및 [리소스 패키징 및 배포](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md)합니다.  
+ 리소스 파일을 만드는 방법에 대한 자세한 내용은 [리소스 파일 만들기](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md)를 참조하세요. 위성 어셈블리를 만들고 배포하는 방법에 대한 자세한 내용은 [위성 어셈블리 만들기](../../../docs/framework/resources/creating-satellite-assemblies-for-desktop-apps.md) 및 [리소스 패키징 및 배포](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md)를 참조하세요.  
   
 <a name="Strings_Searching"></a>   
 ### <a name="searching-and-comparing-strings"></a>문자열 검색 및 비교  
@@ -182,7 +185,7 @@ ms.lasthandoff: 11/21/2017
   
 -   서식 문자열을 포함하는 <xref:System.DateTimeOffset.ToString%28System.String%29?displayProperty=nameWithType>  
   
--   [합성 서식 지정](../../../docs/standard/base-types/composite-formatting.md) 기능을 날짜와 함께 사용할 경우  
+-   날짜에 사용되는 경우, [복합 서식 지정](../../../docs/standard/base-types/composite-formatting.md) 기능  
   
  다음 예제는 2012년 10월 11일에 대한 일출 및 일몰 데이터를 두 번 표시합니다. 처음에는 현재 문화권을 크로아티아어(크로아티아)로 설정하고 다음에는 영어(영국)로 설정합니다. 각각의 경우, 날짜 및 시간이 해당 문화권에 적절한 서식으로 표시됩니다.  
   
@@ -204,7 +207,7 @@ ms.lasthandoff: 11/21/2017
   
 -   고정 문화권의 서식 규칙을 사용하여 문자열을 저장합니다.  
   
- 다음 예제에서 마지막 방법을 보여 줍니다. 정적 <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType> 속성에 의해 반환되는 고정 문화권의 서식 규칙을 사용합니다.  
+ 다음 예제에서 마지막 방법을 보여줍니다. 정적 <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType> 속성에 의해 반환되는 고정 문화권의 서식 규칙을 사용합니다.  
   
  [!code-csharp[Conceptual.Globalization#4](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.globalization/cs/dates3.cs#4)]
  [!code-vb[Conceptual.Globalization#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.globalization/vb/dates3.vb#4)]  
@@ -213,7 +216,7 @@ ms.lasthandoff: 11/21/2017
 ### <a name="serialization-and-time-zone-awareness"></a>Serialization 및 표준 시간대 인식  
  날짜 및 시간 값은 일반 시간(“매장은 2013년 1월 2일 오전 9:00에 개장합니다.”)에서 특정한 순간(“생년월일: 2013년 1월 2일 오전 6:32:00”)에 이르기까지 다수의 해석이 있을 수 있습니다. 시간 값이 특정한 순간을 나타내는 경우 serialize된 값으로부터 복원하며, 사용자의 지리적 위치 또는 표준 시간대와 상관없이 동일한 순간을 나타내도록 해야 합니다.  
   
- 다음 예제에서는 이 문제를 보여 줍니다. 하나의 로컬 날짜 및 시간 값의 3를 문자열로 저장 [표준 형식을](../../../docs/standard/base-types/standard-date-and-time-format-strings.md) ("G" 일반 날짜 자세한 시간 정렬 가능한 유니버설 날짜/시간, "s"에 대 한 및 "o" 왕복에 대 한 날짜/시간) 뿐만 아니라를 이진 형식입니다.  
+ 다음 예제에서는 이 문제를 보여줍니다. 단일 지역 날짜 및 시간 값을 세 가지 [표준 서식](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)(“G”는 일반 날짜 자세한 시간, “s”는 정렬 가능한 날짜/시간, “o”는 날짜/시간 값 라운드트립)은 물론 이진 형식의 문자열로 저장합니다.  
   
  [!code-csharp[Conceptual.Globalization#10](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.globalization/cs/dates4.cs#10)]
  [!code-vb[Conceptual.Globalization#10](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.globalization/vb/dates4.vb#10)]  
@@ -248,7 +251,7 @@ ms.lasthandoff: 11/21/2017
   
 -   값을 UTC로 변환하고 이진 형식으로 저장합니다. 그런 다음 대상 시스템에서 값을 deserialize하고 현지 시간으로 변환합니다.  
   
- 다음 예제는 각 방법을 보여 줍니다.  
+ 다음 예제는 각 방법을 보여줍니다.  
   
  [!code-csharp[Conceptual.Globalization#11](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.globalization/cs/dates8.cs#11)]
  [!code-vb[Conceptual.Globalization#11](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.globalization/vb/dates8.vb#11)]  
@@ -263,13 +266,13 @@ ms.lasthandoff: 11/21/2017
 3/31/2013 3:00:00 AM Local  
 ```  
   
- 자세한 내용은 참조 [표준 시간대 간에 시간 변환](../../../docs/standard/datetime/converting-between-time-zones.md)합니다.  
+ 자세한 내용은 [표준 시간대 간에 시간 변환](../../../docs/standard/datetime/converting-between-time-zones.md)을 참조하세요.  
   
 <a name="DatesAndTimes_Arithmetic"></a>   
 ### <a name="performing-date-and-time-arithmetic"></a>날짜 및 시간 연산 수행  
  <xref:System.DateTime> 및 <xref:System.DateTimeOffset> 형식 모두 산술 연산을 지원합니다. 두 날짜 값 사이의 차이를 계산하거나 날짜 값에서 특정한 시간 간격을 빼거나 더할 수 있습니다. 하지만 날짜 및 시간 값에 대한 산술 연산은 표준 시간대 및 표준 시간대 조정 규칙을 감안하지 않습니다. 이 때문에, 순간을 나타내는 값에 대한 날짜 및 시간 연산은 부정확한 결과를 반환할 수 있습니다.  
   
- 예를 들어, 태평양 표준시는 3월 둘째 주 일요일 즉, 2013년 3월 10일에 태평양 일광 절약 시간으로 전환됩니다. 2013 년 3 월 9 일 후 48 시간 오전 10시 30분 계산 된 날짜와 시간을 하는 경우 다음 예제와 같이입니다. 태평양 표준 시간대의 시스템에서는 2013 년 3 월 11 일 오전 10 시 30 결과 계정에는 중간 시간 조정을 고려 하지 않습니다.  
+ 예를 들어, 태평양 표준시는 3월 둘째 주 일요일 즉, 2013년 3월 10일에 태평양 일광 절약 시간으로 전환됩니다. 다음 예제에 나와 있듯이 태평양 표준 시간대의 시스템상 시간인 2013년 3월 9일 오전 10시 30분의 48시간 이후인 날짜 및 시간을 계산하면 그 결과가 2013년 3월 11일 오전 10시 30분으로, 중간의 시간대 조정이 고려되지 않습니다.  
   
  [!code-csharp[Conceptual.Globalization#8](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.globalization/cs/dates5.cs#8)]
  [!code-vb[Conceptual.Globalization#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.globalization/vb/dates5.vb#8)]  
@@ -287,7 +290,7 @@ ms.lasthandoff: 11/21/2017
  [!code-csharp[Conceptual.Globalization#9](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.globalization/cs/dates6.cs#9)]
  [!code-vb[Conceptual.Globalization#9](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.globalization/vb/dates6.vb#9)]  
   
- 자세한 내용은 참조 [날짜 및 시간 산술 작업을 수행](../../../docs/standard/datetime/performing-arithmetic-operations.md)합니다.  
+ 자세한 내용은 [날짜 및 시간에 대한 산술 연산 수행](../../../docs/standard/datetime/performing-arithmetic-operations.md)을 참조하세요.  
   
 ### <a name="using-culture-sensitive-names-for-date-elements"></a>날짜 요소에 대한 문화권 구분 이름 사용  
  앱에 월 이름 또는 요일을 표시해야 하는 경우가 있습니다. 이를 위해서는, 다음과 같은 코드가 일반적입니다.  
@@ -297,7 +300,7 @@ ms.lasthandoff: 11/21/2017
   
  하지만 이 코드는 요일의 이름을 항상 영어로 반환합니다. 월 이름을 추출하는 코드는 훨씬 더 유연한 경우가 많습니다. 특정 언어에 월 이름과 12개월 달력이 있을 것으로 가정하는 경우가 많습니다.  
   
- 사용 하 여 [사용자 지정 날짜 및 시간 형식 문자열](../../../docs/standard/base-types/custom-date-and-time-format-strings.md) 또는의 속성은 <xref:System.Globalization.DateTimeFormatInfo> 개체를 다음 예제와 같이 주 또는 월에 사용자의 문화권의 요일 이름을 반영 하는 문자열을 추출 하기 쉽습니다. 현재 문화권을 프랑스어(프랑스)로 변경하고 2013년 7월 1일에 대한 월 이름과 요일 이름을 나타냅니다.  
+ 다음 예제에서 볼 수 있듯이, [사용자 지정 날짜 및 시간 형식 문자열](../../../docs/standard/base-types/custom-date-and-time-format-strings.md) 또는 <xref:System.Globalization.DateTimeFormatInfo> 개체의 속성을 사용하면 사용자 문화권의 월 또는 요일 이름을 반영하는 문자열을 쉽게 추출할 수 있습니다. 현재 문화권을 프랑스어(프랑스)로 변경하고 2013년 7월 1일에 대한 월 이름과 요일 이름을 나타냅니다.  
   
  [!code-csharp[Conceptual.Globalization#20](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.globalization/cs/monthname2.cs#20)]
  [!code-vb[Conceptual.Globalization#20](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.globalization/vb/monthname2.vb#20)]  
@@ -317,7 +320,7 @@ ms.lasthandoff: 11/21/2017
   
 -   서식 문자열을 인수로 포함하는, 숫자 형식의 `ToString(String)` 메서드  
   
--   [합성 서식 지정](../../../docs/standard/base-types/composite-formatting.md) 기능을 숫자 값을 함께 사용 하는 경우  
+-   숫자 값에 사용되는 경우, [복합 서식 지정](../../../docs/standard/base-types/composite-formatting.md) 기능  
   
  다음 예제는 프랑스 파일의 월별 평균 온도를 나타냅니다. 우선 데이터를 표시하기 전에 현재 문화권을 프랑스어(프랑스)로 설정하고 그 다음 영어(미국)로 설정합니다. 각각의 경우, 월 이름 및 온도가 해당 문화권에 적합한 서식으로 표시됩니다. 두 문화권을 온도 값에 다른 소수 구분 기호를 사용합니다. 또한, 월 이름 전체를 표시하기 위해 "MMMM" 사용자 지정 날짜 및 시간 서식 문자열이 예제에 사용되었고, 이를 통해 <xref:System.Globalization.DateTimeFormatInfo.MonthNames%2A?displayProperty=nameWithType> 배열에서 가장 긴 월 이름의 길이를 판단하여 결과 문자열에 월 이름을 나타내기에 적합한 공간이 할당됩니다.  
   
@@ -339,7 +342,7 @@ ms.lasthandoff: 11/21/2017
   
 -   숫자를 이진 형식이 아닌 문자열 형식으로 serialize합니다.  
   
- 다음 예제에서 마지막 방법을 보여 줍니다. <xref:System.Double> 값의 배열을 serialize한 다음 deserialize하고 영어(미국) 및 프랑스어(프랑스) 문화권의 서식 규칙을 사용하여 나타냅니다.  
+ 다음 예제에서 마지막 방법을 보여줍니다. <xref:System.Double> 값의 배열을 serialize한 다음 deserialize하고 영어(미국) 및 프랑스어(프랑스) 문화권의 서식 규칙을 사용하여 나타냅니다.  
   
  [!code-csharp[Conceptual.Globalization#7](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.globalization/cs/numbers3.cs#7)]
  [!code-vb[Conceptual.Globalization#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.globalization/vb/numbers3.vb#7)]  
@@ -374,7 +377,7 @@ ms.lasthandoff: 11/21/2017
   
 -   .NET Framework는 대체 문화권을 지원합니다. 이 때문에 기존의 표준 문화권을 보완하거나 완전히 대체하는 새로운 사용자 지정 문화권을 정의하는 것이 가능합니다.  
   
--   사용자를 사용 하 여 문화권별 설정을 사용자 지정할 수는 **국가 및 언어** 제어판에 응용 프로그램입니다. <xref:System.Globalization.CultureInfo> 개체를 인스턴스화할 때, <xref:System.Globalization.CultureInfo.%23ctor%28System.String%2CSystem.Boolean%29?displayProperty=nameWithType> 생성자를 호출하여 사용자 지정을 반영할지 여부를 결정할 수 있습니다. 일반적으로 최종 사용자 앱에 대해서는 사용자가 예상하는 서식으로 사용자에게 데이터가 표시되도록 사용자 기본 설정을 고려해야 합니다.  
+-   사용자는 제어판의 **국가 및 언어** 앱을 사용하여 문화권별 설정을 사용자 지정할 수 있습니다. <xref:System.Globalization.CultureInfo> 개체를 인스턴스화할 때, <xref:System.Globalization.CultureInfo.%23ctor%28System.String%2CSystem.Boolean%29?displayProperty=nameWithType> 생성자를 호출하여 사용자 지정을 반영할지 여부를 결정할 수 있습니다. 일반적으로 최종 사용자 앱에 대해서는 사용자가 예상하는 서식으로 사용자에게 데이터가 표시되도록 사용자 기본 설정을 고려해야 합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [전역화 및 지역화](../../../docs/standard/globalization-localization/index.md)  

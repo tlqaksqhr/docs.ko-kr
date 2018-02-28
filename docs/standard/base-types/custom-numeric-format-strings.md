@@ -22,27 +22,30 @@ helpviewer_keywords:
 - formatting numbers [.NET Framework]
 - format specifiers, custom numeric format strings
 ms.assetid: 6f74fd32-6c6b-48ed-8241-3c2b86dea5f4
-caps.latest.revision: "54"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: a391ee54aaeaf007afcb6aacdb9376820950e89e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: ec33a093e4f7f8ccda1992f26563bcd63853e634
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="custom-numeric-format-strings"></a>사용자 지정 숫자 형식 문자열
 하나 이상의 사용자 지정 숫자 서식 지정자로 구성된 사용자 지정 숫자 서식 문자열을 만들어 숫자 데이터의 서식을 지정하는 방법을 정의할 수 있습니다. 사용자 지정 숫자 서식 문자열은 [표준 숫자 서식 문자열](../../../docs/standard/base-types/standard-numeric-format-strings.md)이 아닌 모든 서식 문자열입니다.  
   
- 사용자 지정 숫자 서식 문자열은 모든 숫자 형식의 `ToString` 메서드를 오버로드하여 사용할 수 있습니다. 예를 들어 <xref:System.Int32.ToString%28System.String%29> 형식의 <xref:System.Int32.ToString%28System.String%2CSystem.IFormatProvider%29> 및 <xref:System.Int32> 메서드에 숫자 서식 문자열을 제공할 수 있습니다. 사용자 지정 숫자 형식 문자열은.NET에서 지원도 [합성 서식 지정 기능](../../../docs/standard/base-types/composite-formatting.md), 일부에서 사용 되는 `Write` 및 `WriteLine` 의 메서드는 <xref:System.Console> 및 <xref:System.IO.StreamWriter> 클래스는 <xref:System.String.Format%2A?displayProperty=nameWithType>메서드, 및 <xref:System.Text.StringBuilder.AppendFormat%2A?displayProperty=nameWithType> 메서드.  
+ 사용자 지정 숫자 서식 문자열은 모든 숫자 형식의 `ToString` 메서드를 오버로드하여 사용할 수 있습니다. 예를 들어 <xref:System.Int32.ToString%28System.String%29> 형식의 <xref:System.Int32.ToString%28System.String%2CSystem.IFormatProvider%29> 및 <xref:System.Int32> 메서드에 숫자 서식 문자열을 제공할 수 있습니다. <xref:System.Console> 및 <xref:System.IO.StreamWriter> 클래스의 일부 `Write` 및 `WriteLine` 메서드, <xref:System.String.Format%2A?displayProperty=nameWithType> 메서드, <xref:System.Text.StringBuilder.AppendFormat%2A?displayProperty=nameWithType> 메서드에 사용되는 .NET [복합 서식 지정 기능](../../../docs/standard/base-types/composite-formatting.md)을 통해서도 사용자 지정 숫자 형식 문자열을 사용할 수 있습니다.  
   
 > [!TIP]
 >  서식 문자열을 숫자 또는 날짜 및 시간 값에 적용할 수 있도록 지원하고 결과 문자열을 표시하는 응용 프로그램인 [서식 유틸리티](http://code.msdn.microsoft.com/NET-Framework-4-Formatting-9c4dae8d)를 다운로드할 수 있습니다.  
   
-<a name="table"></a> 다음 표에서는 사용자 지정 숫자 서식 지정자 및 각 서식 지정자로 생성되는 샘플 출력을 보여 줍니다. 사용자 지정 숫자 서식 문자열을 사용하는 방법에 대한 자세한 내용은 [참고](#NotesCustomFormatting) 단원을 참조하고, 이러한 사용 방법을 자세히 보여 주는 예제를 보려면 [예제](#example) 단원을 참조하세요.  
+<a name="table"></a> 다음 표에서는 사용자 지정 숫자 서식 지정자 및 각 서식 지정자로 생성되는 샘플 출력을 보여줍니다. 사용자 지정 숫자 서식 문자열을 사용하는 방법에 대한 자세한 내용은 [참고](#NotesCustomFormatting) 단원을 참조하고, 이러한 사용 방법을 자세히 보여주는 예제를 보려면 [예제](#example) 단원을 참조하세요.  
   
-|형식 지정자|이름|설명|예제|  
+|형식 지정자|name|설명|예제|  
 |----------------------|----------|-----------------|--------------|  
 |"0"|0 자리 표시자|해당 숫자가 있을 경우 0을 해당 숫자로 바꾸고, 그렇지 않으면 결과 문자열에 0을 표시합니다.<br /><br /> 추가 정보: ["0" 사용자 지정 지정자](#Specifier0)|1234.5678 ("00000") -> 01235<br /><br /> 0.45678 ("0.00", en-US) -> 0.46<br /><br /> 0.45678 ("0.00", fr-FR) -> 0,46|  
 |"#"|10진수 자리 표시자|해당 숫자가 있을 경우 "#" 기호를 해당 숫자로 바꾸고, 그렇지 않으면 결과 문자열에 숫자를 표시하지 않습니다.<br /><br /> 입력 문자열의 해당 숫자가 의미 없는 0인 경우 결과 문자열에 숫자를 표시하지 않습니다. 예를 들어 0003 ("####") -> 3입니다.<br /><br /> 추가 정보: ["#" 사용자 지정 지정자](#SpecifierD)|1234.5678 ("#####") -> 1235<br /><br /> 0.45678 ("#.##", en-US) -> .46<br /><br /> 0.45678 ("#.##", fr-FR) -> ,46|  
@@ -51,7 +54,7 @@ ms.lasthandoff: 11/21/2017
 |"%"|백분율 자리 표시자|숫자에 100을 곱하고 결과 문자열에 지역화된 백분율 기호를 삽입합니다.<br /><br /> 추가 정보: ["%" 사용자 지정 지정자](#SpecifierPct)|0.3697 ("%#0.00", en-US) -> %36.97<br /><br /> 0.3697 ("%#0.00", el-GR) -> %36,97<br /><br /> 0.3697 ("##.0 %", en-US) -> 37.0 %<br /><br /> 0.3697 ("##.0 %", el-GR) -> 37,0 %|  
 |"‰"|천분율 자리 표시자|숫자에 1000을 곱하고 결과 문자열에 지역화된 천분율 기호를 삽입합니다.<br /><br /> 추가 정보: ["‰" 사용자 지정 지정자](#SpecifierPerMille)|0.03697 ("#0.00‰", en-US) -> 36.97‰<br /><br /> 0.03697 ("#0.00‰", ru-RU) -> 36,97‰|  
 |"E0"<br /><br /> "E+0"<br /><br /> "E-0"<br /><br /> "E0"<br /><br /> "E+0"<br /><br /> "E-0"|지수 표기법|적어도 하나의 0이 뒤에 오면 지수 표기법을 사용하여 결과의 서식을 지정합니다. "E" 또는 "e" 문자는 결과 문자열에 표시되는 지수 기호의 대/소문자를 나타냅니다. "E" 또는 "e" 문자 뒤에 오는 0의 수에 따라 지수의 최소 자릿수가 결정됩니다. 더하기 기호(+)는 기호 문자가 항상 지수 앞에 온다는 것을 나타냅니다. 빼기 기호(-)는 기호 문자가 음의 지수 앞에만 온다는 것을 나타냅니다.<br /><br /> 추가 정보: ["E" 및 "e" 사용자 지정 지정자](#SpecifierExponent)|987654 ("#0.0e0") -> 98.8e4<br /><br /> 1503.92311 ("0.0##e+00") -> 1.504e+03<br /><br /> 1.8901385E-16 ("0.0e+00") -> 1.9e-16|  
-|"\\"|이스케이프 문자|뒤에 오는 문자가 사용자 지정 형식 지정자가 아닌 리터럴로 해석되도록 합니다.<br /><br /> 자세한 내용은: [는 "\\" 이스케이프 문자](#SpecifierEscape)합니다.|987654 ("\\###00\\#") -> #987654#|  
+|"\\"|이스케이프 문자|뒤에 오는 문자가 사용자 지정 형식 지정자가 아닌 리터럴로 해석되도록 합니다.<br /><br /> 추가 정보: [“\\” 이스케이프 문자](#SpecifierEscape)|987654 ("\\###00\\#") -> #987654#|  
 |'*string*'<br /><br /> "*string*"|리터럴 문자열 구분 기호|괄호로 묶인 문자가 변경되지 않은 상태로 결과 문자열에 복사되어야 함을 나타냅니다.|68 ("# ' degrees'") -> 68  degrees<br /><br /> 68 ("#' degrees'") -> 68 degrees|  
 |;|섹션 구분 기호|양수, 음수 및 0에 따라 별도의 서식 문자열을 사용하여 섹션을 정의합니다.<br /><br /> 추가 정보: [";" 섹션 구분 기호](#SectionSeparator)|12.345 ("#0.0#;(#0.0#);-\0-") -> 12.35<br /><br /> 0 ("#0.0#;(#0.0#);-\0-") -> -0-<br /><br /> -12.345 ("#0.0#;(#0.0#);-\0-") -> (12.35)<br /><br /> 12.345 ("#0.0#;(#0.0#)") -> 12.35<br /><br /> 0 ("#0.0#;(#0.0#)") -> 0.0<br /><br /> -12.345 ("#0.0#;(#0.0#)") -> (12.35)|  
 |기타|다른 모든 문자|문자가 변경되지 않은 상태로 결과 문자열에 복사됩니다.|68 ("# °") -> 68 °|  
@@ -74,7 +77,7 @@ ms.lasthandoff: 11/21/2017
   
 <a name="SpecifierD"></a>   
 ## <a name="the--custom-specifier"></a>"#" 사용자 지정 지정자  
- "#" 사용자 지정 지정자는 숫자 표시자 기호로 사용됩니다. 서식을 지정할 값이 서식 문자열의 "#" 기호가 표시된 위치에 숫자를 가지고 있으면 해당 숫자가 결과 문자열로 복사되고, 그렇지 않으면 결과 문자열의 해당 위치에 아무 것도 저장되지 않습니다.  
+ "#" 사용자 지정 지정자는 숫자 표시자 기호로 사용됩니다. 서식을 지정할 값이 서식 문자열의 "#" 기호가 표시된 위치에 숫자를 가지고 있으면 해당 숫자가 결과 문자열로 복사되고, 그렇지 않으면 결과 문자열의 해당 위치에 아무것도 저장되지 않습니다.  
   
  0이 유효 자릿수가 아니면 이 지정자는 문자열에서 0이 유일한 숫자라 할지라도 0을 표시하지 않습니다. 표시되는 숫자에서 0이 유효 자릿수이면 이 지정자는 0을 표시합니다.  
   
@@ -120,13 +123,13 @@ ms.lasthandoff: 11/21/2017
   
  동일한 서식 문자열에 그룹 구분 기호와 숫자 배율 지정자를 함께 사용할 수 있습니다. 예를 들어, 문자열 "#,0,,"과 고정 문화권을 사용하여 숫자 1000000000의 서식을 지정할 경우 "1,000"이 출력됩니다.  
   
- 다음 예제에서는 쉼표를 그룹 구분 기호로 사용하는 방법을 보여 줍니다.  
+ 다음 예제에서는 쉼표를 그룹 구분 기호로 사용하는 방법을 보여줍니다.  
   
  [!code-cpp[Formatting.Numeric.Custom#4](../../../samples/snippets/cpp/VS_Snippets_CLR/formatting.numeric.custom/cpp/custom.cpp#4)]
  [!code-csharp[Formatting.Numeric.Custom#4](../../../samples/snippets/csharp/VS_Snippets_CLR/formatting.numeric.custom/cs/custom.cs#4)]
  [!code-vb[Formatting.Numeric.Custom#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/formatting.numeric.custom/vb/Custom.vb#4)]  
   
- 다음 예제에서는 쉼표를 숫자 배율 지정자로 사용하는 방법을 보여 줍니다.  
+ 다음 예제에서는 쉼표를 숫자 배율 지정자로 사용하는 방법을 보여줍니다.  
   
  [!code-cpp[Formatting.Numeric.Custom#5](../../../samples/snippets/cpp/VS_Snippets_CLR/formatting.numeric.custom/cpp/custom.cpp#5)]
  [!code-csharp[Formatting.Numeric.Custom#5](../../../samples/snippets/csharp/VS_Snippets_CLR/formatting.numeric.custom/cs/custom.cs#5)]
@@ -171,7 +174,7 @@ ms.lasthandoff: 11/21/2017
  [표로 이동](#table)  
   
 <a name="SpecifierEscape"></a>   
-## <a name="the--escape-character"></a>"\\" 이스케이프 문자  
+## <a name="the--escape-character"></a>“\\” 이스케이프 문자  
  서식 문자열의 "#", "0", ".", ",", "%" 및 "‰" 기호는 리터럴 문자가 아닌 서식 지정자로 해석됩니다. 사용자 지정 서식 문자열에서 이러한 문자가 있는 위치에 따라 대문자 및 소문자 "E"와 + 및 - 기호도 서식 지정자로 해석될 수 있습니다.  
   
  문자가 서식 지정자로 해석되지 않도록 하려면 해당 문자 앞에 이스케이프 문자인 백슬래시를 삽입하면 됩니다. 이스케이프 문자는 뒤에 오는 문자가 변경되지 않은 상태로 결과 문자열에 포함되어야 하는 문자 리터럴임을 나타냅니다.  
@@ -179,9 +182,9 @@ ms.lasthandoff: 11/21/2017
  결과 문자열에 백슬래시를 포함하려면`\\`처럼 두 개의 백슬래시를 연속해서 입력해야 합니다.  
   
 > [!NOTE]
->  C++ 및 C# 컴파일러 같은 일부 컴파일러에서는 하나의 백슬래시 문자가 이스케이프 문자로 해석될 수도 있습니다. 형식을 지정할 때 문자열이 올바로 해석되도록 하려면 해당 문자열 앞에 축자 문자열 리터럴 문자(@ 문자)를 사용하거나(C#의 경우) 각 백슬래시 앞에 또 다른 백슬래시를 추가하면 됩니다(C# 및 C++의 경우). 다음 C# 예제에서는 이 두 가지 방법을 모두 보여 줍니다.  
+>  C++ 및 C# 컴파일러 같은 일부 컴파일러에서는 하나의 백슬래시 문자가 이스케이프 문자로 해석될 수도 있습니다. 형식을 지정할 때 문자열이 올바로 해석되도록 하려면 해당 문자열 앞에 축자 문자열 리터럴 문자(@ 문자)를 사용하거나(C#의 경우) 각 백슬래시 앞에 또 다른 백슬래시를 추가하면 됩니다(C# 및 C++의 경우). 다음 C# 예제에서는 이 두 가지 방법을 모두 보여줍니다.  
   
- 다음 예제에서는 이스케이프 문자를 사용 하 여 해석 "#", "0"에서 서식 지정 작업을 방지 하기 위해 및 "\\" 이스케이프 문자 또는 형식 지정자 문자입니다. 이 C# 예제에서는 추가 백슬래시를 사용하여 백슬래시가 리터럴 문자로 해석되도록 합니다.  
+ 다음 예제에서는 이스케이프 문자를 사용하여 서식 지정 작업에서 “#”, “0” 및 “\\” 문자가 이스케이프 문자나 형식 지정자로 해석되지 않도록 합니다. 이 C# 예제에서는 추가 백슬래시를 사용하여 백슬래시가 리터럴 문자로 해석되도록 합니다.  
   
  [!code-cpp[Formatting.Numeric.Custom#11](../../../samples/snippets/cpp/VS_Snippets_CLR/formatting.numeric.custom/cpp/escape1.cpp#11)]
  [!code-csharp[Formatting.Numeric.Custom#11](../../../samples/snippets/csharp/VS_Snippets_CLR/formatting.numeric.custom/cs/escape1.cs#11)]
@@ -197,7 +200,7 @@ ms.lasthandoff: 11/21/2017
 |------------------------|-----------------|  
 |한 섹션|형식 문자열이 모든 값에 적용됩니다.|  
 |두 섹션|첫째 섹션은 양수 값과 0에 적용되고, 둘째 섹션은 음수 값에 적용됩니다.<br /><br /> 서식을 지정할 수가 음수였는데 둘째 섹션의 서식에 따라 반올림한 후에 0이 된 경우, 결과값 0은 첫째 섹션에 따라 서식이 지정됩니다.|  
-|세 섹션|첫째 섹션은 양수 값에 적용되고, 둘째 섹션은 음수 값에 적용되며, 셋째 섹션은 0에 적용됩니다.<br /><br /> 세미콜론 사이에 아무 것도 없어서 둘째 섹션이 비어 있는 경우에는 첫째 섹션을 0이 아닌 모든 값에 적용합니다.<br /><br /> 서식을 지정할 수가 0이 아니었는데 첫째 또는 둘째 섹션의 서식에 따라 반올림한 후에 0이 된 경우, 결과값 0은 셋째 섹션에 따라 서식이 지정됩니다.|  
+|세 섹션|첫째 섹션은 양수 값에 적용되고, 둘째 섹션은 음수 값에 적용되며, 셋째 섹션은 0에 적용됩니다.<br /><br /> 세미콜론 사이에 아무것도 없어서 둘째 섹션이 비어 있는 경우에는 첫째 섹션을 0이 아닌 모든 값에 적용합니다.<br /><br /> 서식을 지정할 수가 0이 아니었는데 첫째 또는 둘째 섹션의 서식에 따라 반올림한 후에 0이 된 경우, 결과값 0은 셋째 섹션에 따라 서식이 지정됩니다.|  
   
  섹션 구분 기호는 마지막 값의 서식을 지정할 때 숫자와 연관된 기존 서식을 무시합니다. 예를 들어, 섹션 구분 기호가 사용되면 음수 값은 항상 빼기 기호 없이 표시됩니다. 마지막에 서식을 지정한 값에 빼기 기호를 붙이려면 빼기 기호를 사용자 지정 서식 지정자의 일부로 명시적으로 포함시켜야 합니다.  
   
@@ -210,7 +213,7 @@ ms.lasthandoff: 11/21/2017
  [표로 이동](#table)  
   
 <a name="NotesCustomFormatting"></a>   
-## <a name="notes"></a>참고  
+## <a name="notes"></a>노트  
   
 ### <a name="floating-point-infinities-and-nan"></a>부동 소수점 무한대 및 NaN  
  서식 문자열에 관계없이 <xref:System.Single> 또는 <xref:System.Double> 부동 소수점 형식의 값이 양의 무한대, 음의 무한대 또는 NaN(Not a Number)이면 서식이 지정된 문자열은 각각 현재 적용 가능한 <xref:System.Globalization.NumberFormatInfo.PositiveInfinitySymbol%2A>개체에서 지정하는 해당 <xref:System.Globalization.NumberFormatInfo.NegativeInfinitySymbol%2A>, <xref:System.Globalization.NumberFormatInfo.NaNSymbol%2A> 또는 <xref:System.Globalization.NumberFormatInfo> 속성의 값입니다.  
@@ -218,7 +221,7 @@ ms.lasthandoff: 11/21/2017
 ### <a name="control-panel-settings"></a>제어판 설정  
  제어판에 있는 **국가 및 언어 옵션** 항목의 설정은 서식 지정 작업으로 생성되는 결과 문자열에 영향을 줍니다. 이러한 설정은 현재 스레드 문화권과 연결된 <xref:System.Globalization.NumberFormatInfo> 개체를 초기화하는 데 사용됩니다. 현재 스레드 문화권은 서식을 제어하는 데 사용되는 값을 제공합니다. 다른 설정을 사용하는 컴퓨터는 다른 결과 문자열을 생성합니다.  
   
- 또한 사용 하는 경우는 <xref:System.Globalization.CultureInfo.%23ctor%28System.String%29?displayProperty=nameWithType> 생성자를 인스턴스화하는 새 <xref:System.Globalization.CultureInfo> 으로 설정 된 모든 사용자 지정 현재 시스템 문화권과 동일한 문화권을 나타내는 개체는 **국가 및 언어 옵션** 제어판 항목을 적용할 새 <xref:System.Globalization.CultureInfo> 개체입니다. <xref:System.Globalization.CultureInfo.%23ctor%28System.String%2CSystem.Boolean%29?displayProperty=nameWithType> 생성자를 사용하면 시스템의 사용자 지정 내용이 반영되지 않는 <xref:System.Globalization.CultureInfo> 개체를 만들 수 있습니다.  
+ 또한 <xref:System.Globalization.CultureInfo.%23ctor%28System.String%29?displayProperty=nameWithType> 생성자를 사용하여 현재 시스템 문화권과 동일한 문화권을 나타내는 새 <xref:System.Globalization.CultureInfo> 개체를 인스턴스화하는 경우 제어판의 **국가 및 언어 옵션** 항목을 통해 설정된 사용자 지정 내용이 새 <xref:System.Globalization.CultureInfo> 개체에도 적용됩니다. <xref:System.Globalization.CultureInfo.%23ctor%28System.String%2CSystem.Boolean%29?displayProperty=nameWithType> 생성자를 사용하면 시스템의 사용자 지정 내용이 반영되지 않는 <xref:System.Globalization.CultureInfo> 개체를 만들 수 있습니다.  
   
 ### <a name="rounding-and-fixed-point-format-strings"></a>반올림 및 고정 소수점 서식 문자열  
  고정 소수점 서식 문자열, 즉 과학적 표기법 서식 문자가 들어 있지 않은 서식 문자열의 경우 소수점 오른쪽에 있는 10진수 자리 표시자와 같은 개수의 소수 자릿수만큼 숫자가 반올림됩니다. 서식 문자열에 소수점이 없으면 숫자는 가장 근접한 정수로 반올림됩니다. 숫자의 자릿수가 소수점 왼쪽의 10진수 자리 표시자보다 많으면, 초과 숫자가 결과 문자열의 첫째 10진수 자리 표시자 바로 앞에 복사됩니다.  
@@ -226,8 +229,8 @@ ms.lasthandoff: 11/21/2017
  [표로 이동](#table)  
   
 <a name="example"></a>   
-## <a name="example"></a>예제  
- 다음 예제에서는 두 개의 사용자 지정 숫자 서식 문자열을 보여 줍니다. 두 경우 모두에서 숫자 자리 표시자(`#`)는 숫자 데이터를 표시하며, 다른 모든 문자는 결과 문자열에 복사됩니다.  
+## <a name="example"></a>예  
+ 다음 예제에서는 두 개의 사용자 지정 숫자 서식 문자열을 보여줍니다. 두 경우 모두에서 숫자 자리 표시자(`#`)는 숫자 데이터를 표시하며, 다른 모든 문자는 결과 문자열에 복사됩니다.  
   
  [!code-cpp[Formatting.Numeric.Custom#10](../../../samples/snippets/cpp/VS_Snippets_CLR/formatting.numeric.custom/cpp/example1.cpp#10)]
  [!code-csharp[Formatting.Numeric.Custom#10](../../../samples/snippets/csharp/VS_Snippets_CLR/formatting.numeric.custom/cs/example1.cs#10)]

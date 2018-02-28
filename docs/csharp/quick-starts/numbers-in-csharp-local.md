@@ -1,5 +1,5 @@
 ---
-title: "빠른 시작 - C#의 숫자 - C# 가이드"
+title: "C#의 숫자 자습서 - C# 로컬 빠른 시작"
 description: "숫자 형식, 해당 속성 및 메서드를 살펴보면서 C#을 학습합니다."
 author: billwagner
 ms.author: wiwagn
@@ -9,17 +9,17 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.custom: mvc
-ms.openlocfilehash: 9a7f061de23c632560f40ac5eb46defd4537da16
-ms.sourcegitcommit: 8bde7a3432f30fc771079744955c75c58c4eb393
+ms.openlocfilehash: 9a8b28d840d3c8ef63611e9f584e5984e1dcb1a3
+ms.sourcegitcommit: d2da0142247ef42a219a5d2907f153e62dc6ea0d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/20/2018
+ms.lasthandoff: 02/01/2018
 ---
-# <a name="numbers-in-c-quick-start"></a>C# 빠른 시작의 숫자 #
+# <a name="numbers-in-c-quickstart"></a>C#의 숫자 빠른 시작
 
-이 빠른 시작에서는 C#에서 대화형으로 숫자 형식을 설명합니다. 작은 양의 코드를 작성한 다음 해당 코드를 컴파일하고 실행합니다. 이 빠른 시작에는 C#의 숫자 및 수학 연산을 살펴보는 일련의 단원이 포함되어 있습니다. 이러한 단원에서는 C# 언어의 기본 사항을 설명합니다.
+이 빠른 시작에서는 C#의 숫자 형식을 대화형으로 설명합니다. 작은 양의 코드를 작성한 다음 해당 코드를 컴파일하고 실행합니다. 이 빠른 시작에는 C#의 숫자 및 수학 연산을 살펴보는 일련의 단원이 포함되어 있습니다. 이러한 단원에서는 C# 언어의 기본 사항을 설명합니다.
 
-이 빠른 시작에서는 개발에 사용할 수 있는 컴퓨터가 있다고 예상합니다. .NET 항목 [Get Started in 10 minutes](https://www.microsoft.com/net/core)(10분 안에 시작)에는 Mac, PC 또는 Linux의 로컬 개발 환경 설정에 대한 지침이 포함되어 있습니다. 사용할 명령에 대한 간단한 개요는 [로컬 빠른 시작 소개](local-environment.md)에 자세한 정보에 대한 링크와 함께 있습니다.
+이 빠른 시작에서는 개발에 사용할 수 있는 컴퓨터가 있다고 예상합니다. .NET 항목 [Get Started in 10 minutes](https://www.microsoft.com/net/core)(10분 안에 시작)에는 Mac, PC 또는 Linux의 로컬 개발 환경 설정에 대한 지침이 포함되어 있습니다. 사용할 명령에 대한 간단한 개요는 [로컬 빠른 시작 소개](local-environment.md)에 나와 있으며, 이 소개에는 자세한 정보에 대한 링크도 함께 있습니다.
 
 ## <a name="explore-integer-math"></a>정수 계산 살펴보기
 
@@ -114,7 +114,7 @@ int d = a + b * c;
 Console.WriteLine(d);
  ```
 
-출력에서는 곱하기가 수행된 후 더하기가 수행되었음을 보여 줍니다.
+출력에서는 곱하기가 수행된 후 더하기가 수행되었음을 보여줍니다.
 
 먼저 수행하려는 연산 주위에 괄호를 추가하여 다른 연산 순서를 적용할 수 있습니다. 다음 줄을 추가하고 다시 실행합니다.
 
@@ -201,7 +201,7 @@ namespace NumbersInCSharp
 ```
 
 ## <a name="explore-integer-precision-and-limits"></a>정수 전체 자릿수 및 한도 살펴보기
-마지막 샘플에서는 정수 나누기가 결과를 자르는 것을 보여 줍니다.
+마지막 샘플에서는 정수 나누기가 결과를 자르는 것을 보여줍니다.
 **modulo** 연산자(`%` 문자)를 사용하여 **나머지**를 얻을 수 있습니다. `Main` 메서드에 다음 코드를 사용해 봅니다.
 
 ```csharp
@@ -319,7 +319,7 @@ Console.WriteLine(c / d);
 
 원하는 경우 다른 수식을 사용해 보세요. 
 
-“C#의 숫자” 빠른 시작을 완료했습니다. 사용자의 개발 환경에서 [분기 및 루프](branches-and-loops-local.md) 빠른 시작을 계속할 수 있습니다.
+“C#의 숫자” 빠른 시작을 완료했습니다. 자체 개발 환경에서 [분기 및 루프](branches-and-loops-local.md) 빠른 시작을 계속할 수 있습니다.
 
 다음 항목에서는 C#의 숫자에 대해 더 자세히 알아볼 수 있습니다.
 

@@ -13,21 +13,24 @@ dev_langs:
 - vb
 - cpp
 ms.assetid: fe1b4a11-37f4-4e1a-93c9-239f4fe736c0
-caps.latest.revision: "2"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: d3b336b0ac4ca4fd02950a572404a117d4c193f2
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: a8c9b513f47fcb07f987b1e17f0b7f485cef3143
+ms.sourcegitcommit: 91691981897cf8451033cb01071d8f5d94017f97
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="including-or-importing-xml-schemas"></a>XML 스키마 포함하기 또는 가져오기
 XML 스키마에 `<xs:import />`, `<xs:include />` 및 `<xs:redefine />` 요소를 포함시킬 수 있습니다. 이 스키마 요소는 이를 포함하거나 가져오는 스키마의 구조를 보완하는 데 사용할 수 있는 다른 XML 스키마를 참조할 수 있습니다. SOM(스키마 개체 모델) API에서 <xref:System.Xml.Schema.XmlSchemaImport>, <xref:System.Xml.Schema.XmlSchemaInclude> 및 <xref:System.Xml.Schema.XmlSchemaRedefine> 클래스는 이러한 요소에 매핑됩니다.  
   
 ## <a name="including-or-importing-an-xml-schema"></a>XML 스키마 포함하기 또는 가져오기  
- 생성 하는 고객 스키마를 보완 하는 다음 코드 예제는 [XML 스키마 빌드](../../../../docs/standard/data/xml/building-xml-schemas.md) 주소 스키마가 있는 항목입니다. 주소 스키마로 고객 스키마를 보완하면 고객 스키마에서 주소 형식을 사용할 수 있습니다.  
+ 다음 코드 예제는 주소 스키마를 사용하여 [XML 스키마 빌드](../../../../docs/standard/data/xml/building-xml-schemas.md) 항목에서 만든 고객 스키마를 보완합니다. 주소 스키마로 고객 스키마를 보완하면 고객 스키마에서 주소 형식을 사용할 수 있습니다.  
   
  `<xs:include />` 또는 `<xs:import />` 요소를 사용하여 주소 스키마의 구성 요소를 그대로 사용하거나 `<xs:redefine />` 요소를 사용하여 고객 스키마의 필요에 맞게 구성 요소를 수정함으로써 주소 스키마를 통합할 수 있습니다. 주소 스키마에는 고객 스키마에 포함된 것과는 다른 `targetNamespace`가 있기 때문에 `<xs:import />` 요소 및 가져오기 의미 체계가 사용됩니다.  
   
@@ -105,7 +108,7 @@ XML 스키마에 `<xs:import />`, `<xs:include />` 및 `<xs:redefine />` 요소�
 </schema>  
 ```  
   
- 에 대 한 자세한 내용은 `<xs:import />`, `<xs:include />`, 및 `<xs:redefine />` 요소 및 <xref:System.Xml.Schema.XmlSchemaImport>, <xref:System.Xml.Schema.XmlSchemaInclude> 및 <xref:System.Xml.Schema.XmlSchemaRedefine> 클래스 참조는 [W3C XML 스키마](http://go.microsoft.com/fwlink/?LinkId=45242) 및 <xref:System.Xml.Schema?displayProperty=nameWithType> 네임 스페이스 클래스 참조 설명서입니다.  
+ `<xs:import />`, `<xs:include />` 및 `<xs:redefine />` 요소와 <xref:System.Xml.Schema.XmlSchemaImport>, <xref:System.Xml.Schema.XmlSchemaInclude> 및 <xref:System.Xml.Schema.XmlSchemaRedefine> 클래스에 대한 자세한 내용은 [W3C XML Schema](http://www.w3.org/XML/Schema)(W3C XML 스키마) 및 <xref:System.Xml.Schema?displayProperty=nameWithType> 네임스페이스 클래스 참조 문서를 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
  [XML 스키마 개체 모델 개요](../../../../docs/standard/data/xml/xml-schema-object-model-overview.md)  
@@ -113,4 +116,4 @@ XML 스키마에 `<xs:import />`, `<xs:include />` 및 `<xs:redefine />` 요소�
  [XML 스키마 빌드](../../../../docs/standard/data/xml/building-xml-schemas.md)  
  [XML 스키마 통과](../../../../docs/standard/data/xml/traversing-xml-schemas.md)  
  [XML 스키마 편집](../../../../docs/standard/data/xml/editing-xml-schemas.md)  
- [스키마 컴파일 위한 XmlSchemaSet](../../../../docs/standard/data/xml/xmlschemaset-for-schema-compilation.md)
+ [스키마 컴파일을 위한 XmlSchemaSet](../../../../docs/standard/data/xml/xmlschemaset-for-schema-compilation.md)

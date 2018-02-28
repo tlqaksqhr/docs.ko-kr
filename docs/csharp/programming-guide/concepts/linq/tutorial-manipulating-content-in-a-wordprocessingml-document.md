@@ -5,31 +5,32 @@ ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 ms.assetid: bc9815f8-13d2-4f50-a4d1-b1c0d50d37b3
-caps.latest.revision: "3"
+caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 3ddd3f35d1a1b6761aace8460aceda638f169f05
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: dca728cf48c6af6437beb43bcb6a8c8b7283d639
+ms.sourcegitcommit: 099aa20d9b6450d1b7452d782a55771a6ad8ff35
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 02/05/2018
 ---
 # <a name="tutorial-manipulating-content-in-a-wordprocessingml-document-c"></a>자습서: WordprocessingML 문서에서 내용 조작(C#)
-이 자습서에서는 함수 변환 방법과 LINQ to XML을 적용하여 XML 문서를 조작하는 방법을 보여 줍니다. C# 예제에서는 Microsoft Word에서 저장한 Office Open XML WordprocessingML 문서의 정보를 쿼리하고 조작합니다.  
+이 자습서에서는 함수 변환 방법과 LINQ to XML을 적용하여 XML 문서를 조작하는 방법을 보여줍니다. C# 예제에서는 Microsoft Word에서 저장한 Office Open XML WordprocessingML 문서의 정보를 쿼리하고 조작합니다.  
   
- 자세한 내용은 [OpenXML Developer](http://go.microsoft.com/fwlink/?LinkID=95573) 웹 사이트를 참조하세요.  
+ 자세한 내용은 [WordprocessingML 소개](http://ericwhite.com/blog/introduction-to-wordprocessingml-series/)를 참조하세요.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
   
 |항목|설명|  
 |-----------|-----------------|  
 |[WordprocessingML 문서의 모양(C#)](../../../../csharp/programming-guide/concepts/linq/shape-of-wordprocessingml-documents.md)|WordprocessingML 문서에 대해 간략히 설명합니다.|  
 |[원본 Office Open XML 문서 만들기(C#)](../../../../csharp/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md)|이 자습서의 쿼리에 대한 소스 문서를 만드는 단계별 지침을 제공합니다.|  
-|[기본 단락 스타일 찾기(C#)](../../../../csharp/programming-guide/concepts/linq/finding-the-default-paragraph-style.md)|문서에 대한 기본 스타일의 이름을 찾는 쿼리를 보여 줍니다.|  
-|[단락 및 해당 스타일 검색(C#)](../../../../csharp/programming-guide/concepts/linq/retrieving-the-paragraphs-and-their-styles.md)|문서의 단락 컬렉션을 검색하는 쿼리를 보여 줍니다.|  
+|[기본 단락 스타일 찾기(C#)](../../../../csharp/programming-guide/concepts/linq/finding-the-default-paragraph-style.md)|문서에 대한 기본 스타일의 이름을 찾는 쿼리를 보여줍니다.|  
+|[단락 및 해당 스타일 검색(C#)](../../../../csharp/programming-guide/concepts/linq/retrieving-the-paragraphs-and-their-styles.md)|문서의 단락 컬렉션을 검색하는 쿼리를 보여줍니다.|  
 |[단락의 텍스트 검색(C#)](../../../../csharp/programming-guide/concepts/linq/retrieving-the-text-of-the-paragraphs.md)|이전 쿼리를 확대하여 각 단락의 텍스트를 검색합니다.|  
 |[확장 메서드를 사용하여 리팩터링(C#)](../../../../csharp/programming-guide/concepts/linq/refactoring-using-an-extension-method.md)|확장명 메서드를 통해 리팩터링하여 코드를 단순화합니다.|  
 |[순수 함수를 사용하여 리팩터링(C#)](../../../../csharp/programming-guide/concepts/linq/refactoring-using-a-pure-function.md)|순수 함수를 통해 리팩터링하여 코드를 더 단순화합니다.|  

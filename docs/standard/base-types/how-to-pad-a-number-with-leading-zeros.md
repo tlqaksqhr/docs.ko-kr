@@ -17,18 +17,21 @@ helpviewer_keywords:
 - number formatting [.NET Framework]
 - numbers [.NET Framework], format strings
 ms.assetid: 0b2c2cb5-c580-4891-8d81-cb632f5ec384
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 6266807a01e8119ae1410a1ba09cab55c788b4d8
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 7ea854f69e59c614d03f10ff546bd3181f5b51ff
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="how-to-pad-a-number-with-leading-zeros"></a>방법: 숫자 앞에 0으로 채우기
-"D" [표준 숫자 서식 문자열](../../../docs/standard/base-types/standard-numeric-format-strings.md)과 함께 전체 자릿수 지정자를 사용하여 앞에 오는 0을 정수에 추가할 수 있습니다. [사용자 지정 숫자 서식 문자열](../../../docs/standard/base-types/custom-numeric-format-strings.md)을 사용하여 정수와 부동 소수점 숫자 둘 다에 앞에 오는 0을 추가할 수 있습니다. 이 항목에서는 두 개의 메서드를 사용하여 앞에 오는 0으로 숫자를 채우는 방법을 보여 줍니다.  
+"D" [표준 숫자 서식 문자열](../../../docs/standard/base-types/standard-numeric-format-strings.md)과 함께 전체 자릿수 지정자를 사용하여 앞에 오는 0을 정수에 추가할 수 있습니다. [사용자 지정 숫자 서식 문자열](../../../docs/standard/base-types/custom-numeric-format-strings.md)을 사용하여 정수와 부동 소수점 숫자 둘 다에 앞에 오는 0을 추가할 수 있습니다. 이 항목에서는 두 개의 메서드를 사용하여 앞에 오는 0으로 숫자를 채우는 방법을 보여줍니다.  
   
 ### <a name="to-pad-an-integer-with-leading-zeros-to-a-specific-length"></a>앞에 오는 0으로 특정 길이까지 정수를 채우려면  
   
@@ -36,11 +39,11 @@ ms.lasthandoff: 11/21/2017
   
 2.  정수를 10진수 값으로 표시할지 아니면 16진수 값으로 표시할지를 결정합니다.  
   
-    -   호출 된 정수를 10 진수 값으로 표시 하려면 해당 `ToString(String)` 메서드와 패스 문자열 "D*n*"의 값으로는 `format` 매개 변수를 여기서  *n*  문자열의 최소 길이 나타냅니다.  
+    -   정수를 10진수 값으로 표시하려면 해당 `ToString(String)` 메서드를 호출하고 “D*n*” 문자열을 `format` 매개 변수의 값으로 전달합니다. 여기서 *n*은 문자열의 최소 길이를 나타냅니다.  
   
-    -   호출 된 정수를 16 진수 값으로 표시 하려면 해당 `ToString(String)` 메서드와 전달 된 문자열 "X*n*"의 값으로는 `format` 매개 변수를 여기서  *n*  문자열의 최소 길이 나타냅니다.  
+    -   정수를 16진수 값으로 표시하려면 해당 `ToString(String)` 메서드를 호출하고 “X*n*” 문자열을 `format` 매개 변수의 값으로 전달합니다. 여기서 *n*은 문자열의 최소 길이를 나타냅니다.  
   
-     메서드, 형식 문자열와 같은 사용할 수도 <xref:System.String.Format%2A> 또는 <xref:System.Console.WriteLine%2A>를 사용 하 여 [합성 서식 지정](../../../docs/standard/base-types/composite-formatting.md)합니다.  
+     또한 [복합 서식 지정](../../../docs/standard/base-types/composite-formatting.md)을 사용하는 메서드에 <xref:System.String.Format%2A> 또는 <xref:System.Console.WriteLine%2A>과 같은 형식 문자열을 사용할 수 있습니다.  
   
  다음 예제에서는 서식이 지정된 숫자의 전체 길이가 8자 이상이 되도록 앞에 오는 0으로 여러 정수 값의 서식을 지정합니다.  
   
@@ -57,7 +60,7 @@ ms.lasthandoff: 11/21/2017
   
 4.  서식이 지정된 문자열에 포함할 앞에 오는 0의 수를 채워지지 않은 숫자 문자열의 길이에 추가합니다. 그러면 채워진 문자열의 전체 길이가 정의됩니다.  
   
-5.  정수 값의 호출 `ToString(String)` 메서드와 패스 문자열 "D*n*" 10 진수 문자열 및 "X*n*" 16 진수 문자열에 대 한 여기서  *n*  채워진된 문자열의 총 길이 나타냅니다. 사용할 수도 있습니다는 "D*n*" 또는 "X*n*" 복합 형식을 지 원하는 메서드의 문자열의 형식을 지정 합니다.  
+5.  정수 값의 `ToString(String)` 메서드를 호출하고 10진수 문자열의 경우 “D*n*” 문자열을 전달하고 16진수 문자열의 경우 “X*n*” 문자열을 전달합니다. 여기서 *n*은 채워진 문자열의 총 길이를 나타냅니다. 또한 복합 서식 지정을 지원하는 메서드에 “D*n*” 또는 “X*n*” 형식 문자열을 사용할 수도 있습니다.  
   
  다음 예제에서는 5개의 앞에 오는 0으로 정수 값을 채웁니다.  
   
@@ -81,7 +84,7 @@ ms.lasthandoff: 11/21/2017
   
 1.  숫자 값을 표시하는 데 사용할 앞에 오는 0의 수를 결정합니다.  
   
-2.  채워지지 않은 숫자 문자열에서 정수 부분의 자릿수를 확인합니다. 이렇게 하려면 다음을 수행합니다.  
+2.  채워지지 않은 숫자 문자열에서 정수 부분의 자릿수를 확인합니다. 가상 하드 디스크 파일에 대한 중요 정보를 제공하려면  
   
     1.  숫자의 문자열 표현에 소수점 기호가 포함되어 있는지 확인합니다.  
   

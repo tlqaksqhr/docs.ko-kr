@@ -3,7 +3,8 @@ title: "개발자를 위한 .NET Framework 배포 가이드"
 ms.custom: updateeachrelease
 ms.date: 12/14/2017
 ms.prod: .net-framework
-ms.technology: dotnet-clr
+ms.technology:
+- dotnet-clr
 ms.topic: article
 helpviewer_keywords:
 - developer's guide, deploying .NET Framework
@@ -12,12 +13,13 @@ ms.assetid: 094d043e-33c4-40ba-a503-e0b20b55f4cf
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: f4a67df0729a85149984f0a72be668cdcee30216
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 6b2083efabd6c16bafd8b241980c4cd413258ae5
+ms.sourcegitcommit: 099aa20d9b6450d1b7452d782a55771a6ad8ff35
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 02/05/2018
 ---
 # <a name="net-framework-deployment-guide-for-developers"></a>개발자를 위한 .NET Framework 배포 가이드
 이 항목에서는 앱과 함께 .NET Framework 4.5에서 [!INCLUDE[net_current](../../../includes/net-current-version.md)]까지의 모든 .NET Framework 버전을 설치하려는 개발자를 위한 정보를 제공합니다.
@@ -28,11 +30,11 @@ ms.lasthandoff: 12/22/2017
 
 - 모든 운영 체제용 .NET Framework 4.7([웹 설치 관리자](http://go.microsoft.com/fwlink/?LinkId=825299) 또는 [오프라인 설치 관리자](http://go.microsoft.com/fwlink/p/?LinkId=825303))
 
-- 모든 운영 체제용[!INCLUDE[net_v462](../../../includes/net-v462-md.md)] ([웹 설치 관리자](http://go.microsoft.com/fwlink/?LinkId=780597) 또는 [오프라인 설치 관리자](http://go.microsoft.com/fwlink/p/?LinkId=780601))
+- [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] 모든 운영 체제용([웹 설치 관리자](http://go.microsoft.com/fwlink/?LinkId=780597) 또는 [오프라인 설치 관리자](http://go.microsoft.com/fwlink/p/?LinkId=780601))
 
-- 모든 운영 체제용[!INCLUDE[net_v461](../../../includes/net-v461-md.md)] ([웹 설치 관리자](http://go.microsoft.com/fwlink/?LinkId=671729) 또는 [오프라인 설치 관리자](http://go.microsoft.com/fwlink/p/?LinkId=671744))
+- [!INCLUDE[net_v461](../../../includes/net-v461-md.md)] 모든 운영 체제용([웹 설치 관리자](http://go.microsoft.com/fwlink/?LinkId=671729) 또는 [오프라인 설치 관리자](http://go.microsoft.com/fwlink/p/?LinkId=671744))
 
-- 모든 운영 체제용[!INCLUDE[net_v46](../../../includes/net-v46-md.md)] ([웹 설치 관리자](http://go.microsoft.com/fwlink/?LinkId=528222) 또는 [오프라인 설치 관리자](http://go.microsoft.com/fwlink/p/?LinkId=528232))
+- [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] 모든 운영 체제용([웹 설치 관리자](http://go.microsoft.com/fwlink/?LinkId=528222) 또는 [오프라인 설치 관리자](http://go.microsoft.com/fwlink/p/?LinkId=528232))
 
 - 모든 운영 체제용 .NET Framework 4.5.2([웹 설치 관리자](http://go.microsoft.com/fwlink/p/?LinkId=397703) 또는 [오프라인 설치 관리자](http://go.microsoft.com/fwlink/p/?LinkId=397706))
 
@@ -77,7 +79,7 @@ ms.lasthandoff: 12/22/2017
 
 ||웹 설치 관리자|오프라인 설치 관리자|
 |-|-------------------|-----------------------|
-|파일 다운로드|.NET Framework 4.7.1: <br/>[NDP471-KB4033344-Web.exe](http://go.microsoft.com/fwlin/?LinkId=852092)<br/><br/>.NET Framework 4.7: <br />[NDP47-KB3186500-Web.exe](http://go.microsoft.com/fwlink/?LinkId=825298) <br /><br />[!INCLUDE[net_v462](../../../includes/net-v462-md.md)]: <br />[NDP462-KB3151802-Web.exe](http://go.microsoft.com/fwlink/?LinkId=780596)<br /><br /> [!INCLUDE[net_v461](../../../includes/net-v461-md.md)]:<br />[NDP461-KB3102438-Web.exe](http://go.microsoft.com/fwlink/?LinkId=671728)<br /><br /> [!INCLUDE[net_v46](../../../includes/net-v46-md.md)]:<br />[NDP46-KB3045560-Web.exe](http://go.microsoft.com/fwlink/?LinkId=528222)<br /><br /> .NET Framework 4.5.2: <br />[NDP452-KB2901954-Web.exe](http://go.microsoft.com/fwlink/?LinkId=397707)<br /><br /> [!INCLUDE[net_v451](../../../includes/net-v451-md.md)]: <br />[NDP451-KB2859818-Web.exe](http://go.microsoft.com/fwlink/?LinkId=322115)<br /><br /> [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]: <br />[dotNetFx45_Full_setup.exe](http://go.microsoft.com/fwlink/?LinkId=225704)|.NET Framework 4.7.1: <br />[NDP471-KB4033342-x86-x64-AllOS-ENU.exe](http://go.microsoft.com/fwlink/?LinkId=852104) <br /><br />.NET Framework 4.7: <br />[NDP47-KB3186497-x86-x64-AllOS-ENU.exe](http://go.microsoft.com/fwlink/?LinkId=825302) <br /><br />[!INCLUDE[net_v462](../../../includes/net-v462-md.md)]: <br />[NDP462-KB3151800-x86-x64-AllOS-ENU.exe](http://go.microsoft.com/fwlink/?LinkId=780600)<br /><br /> [!INCLUDE[net_v461](../../../includes/net-v461-md.md)]: <br />[NDP461-KB3102436-x86-x64-AllOS-ENU.exe](http://go.microsoft.com/fwlink/?LinkId=671743)<br /><br /> [!INCLUDE[net_v46](../../../includes/net-v46-md.md)]: <br />[NDP46-KB3045557-x86-x64-AllOS-ENU.exe](http://go.microsoft.com/fwlink/?LinkId=528232)<br /><br /> .NET Framework 4.5.2: <br />[NDP452-KB2901907-x86-x64-AllOS-ENU.exe](http://go.microsoft.com/fwlink/?LinkId=397708)<br /><br /> [!INCLUDE[net_v451](../../../includes/net-v451-md.md)]: <br />[NDP451-KB2858728-x86-x64-AllOS-ENU.exe](http://go.microsoft.com/fwlink/?LinkId=322116)<br /><br /> [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]: <br />[dotNetFx45_Full_x86_x64.exe](http://go.microsoft.com/fwlink/?LinkId=225702)|
+|파일 다운로드|.NET Framework 4.7.1: <br/>[NDP471-KB4033344-Web.exe](http://go.microsoft.com/fwlink/?LinkId=852092)<br/><br/>.NET Framework 4.7: <br />[NDP47-KB3186500-Web.exe](http://go.microsoft.com/fwlink/?LinkId=825298) <br /><br />[!INCLUDE[net_v462](../../../includes/net-v462-md.md)]: <br />[NDP462-KB3151802-Web.exe](http://go.microsoft.com/fwlink/?LinkId=780596)<br /><br /> [!INCLUDE[net_v461](../../../includes/net-v461-md.md)]:<br />[NDP461-KB3102438-Web.exe](http://go.microsoft.com/fwlink/?LinkId=671728)<br /><br /> [!INCLUDE[net_v46](../../../includes/net-v46-md.md)]:<br />[NDP46-KB3045560-Web.exe](http://go.microsoft.com/fwlink/?LinkId=528222)<br /><br /> .NET Framework 4.5.2: <br />[NDP452-KB2901954-Web.exe](http://go.microsoft.com/fwlink/?LinkId=397707)<br /><br /> [!INCLUDE[net_v451](../../../includes/net-v451-md.md)]: <br />[NDP451-KB2859818-Web.exe](http://go.microsoft.com/fwlink/?LinkId=322115)<br /><br /> [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]: <br />[dotNetFx45_Full_setup.exe](http://go.microsoft.com/fwlink/?LinkId=225704)|.NET Framework 4.7.1: <br />[NDP471-KB4033342-x86-x64-AllOS-ENU.exe](http://go.microsoft.com/fwlink/?LinkId=852104) <br /><br />.NET Framework 4.7: <br />[NDP47-KB3186497-x86-x64-AllOS-ENU.exe](http://go.microsoft.com/fwlink/?LinkId=825302) <br /><br />[!INCLUDE[net_v462](../../../includes/net-v462-md.md)]: <br />[NDP462-KB3151800-x86-x64-AllOS-ENU.exe](http://go.microsoft.com/fwlink/?LinkId=780600)<br /><br /> [!INCLUDE[net_v461](../../../includes/net-v461-md.md)]: <br />[NDP461-KB3102436-x86-x64-AllOS-ENU.exe](http://go.microsoft.com/fwlink/?LinkId=671743)<br /><br /> [!INCLUDE[net_v46](../../../includes/net-v46-md.md)]: <br />[NDP46-KB3045557-x86-x64-AllOS-ENU.exe](http://go.microsoft.com/fwlink/?LinkId=528232)<br /><br /> .NET Framework 4.5.2: <br />[NDP452-KB2901907-x86-x64-AllOS-ENU.exe](http://go.microsoft.com/fwlink/?LinkId=397708)<br /><br /> [!INCLUDE[net_v451](../../../includes/net-v451-md.md)]: <br />[NDP451-KB2858728-x86-x64-AllOS-ENU.exe](http://go.microsoft.com/fwlink/?LinkId=322116)<br /><br /> [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]: <br />[dotNetFx45_Full_x86_x64.exe](http://go.microsoft.com/fwlink/?LinkId=225702)|
 |인터넷 연결 여부|예|아니요|
 |다운로드 크기|작게(대상 플랫폼의 설치 관리자만 포함) *|크게*|
 |언어 팩|포함됨**|반드시 [별도로 설치](#chain_langpack)합니다. 그러지 않으면, 모든 운영 체제를 대상으로 하는 패키지를 사용합니다.|
@@ -253,15 +255,15 @@ dotNetFx45_Full_x86_x64.exe /q /norestart /ChainingPackage Contoso
 |Windows 10 Fall Creators Update 이외의 모든 OS 버전에 설치된 .NET Framework 4.7.1|461310|
 |.NET Framework 4.7이 Windows 10 크리에이터 업데이트에 설치됨|460798|
 |Windows 10 크리에이터스 업데이트 이외의 모든 OS 버전에 설치된 .NET Framework 4.7|460805|
-|Windows 10 Anniversary Edition에 설치된[!INCLUDE[net_v462](../../../includes/net-v462-md.md)] |394802|
-|Windows 10 Anniversary Edition 이외의 다른 모든 OS 버전에 설치된[!INCLUDE[net_v462](../../../includes/net-v462-md.md)] |394806|
-|Windows 10 11월 업데이트에 설치된[!INCLUDE[net_v461](../../../includes/net-v461-md.md)] |394254|
-|Windows 10 11월 업데이트 이외의 다른 모든 OS 버전에 설치된[!INCLUDE[net_v461](../../../includes/net-v461-md.md)] |394271|
-|Windows 10에 설치된[!INCLUDE[net_v46](../../../includes/net-v46-md.md)] |393295|
-|Windows 10 이외의 다른 모든 OS 버전에 설치된[!INCLUDE[net_v46](../../../includes/net-v46-md.md)] |393297|
+|[!INCLUDE[net_v462](../../../includes/net-v462-md.md)] Windows 10 Anniversary Edition에 설치됨|394802|
+|[!INCLUDE[net_v462](../../../includes/net-v462-md.md)] Windows 10 Anniversary Edition 이외의 다른 모든 OS 버전에 설치됨|394806|
+|[!INCLUDE[net_v461](../../../includes/net-v461-md.md)] Windows 10 11월 업데이트에 설치됨|394254|
+|[!INCLUDE[net_v461](../../../includes/net-v461-md.md)] Windows 10 11월 업데이트 이외의 다른 모든 OS 버전에 설치됨|394271|
+|[!INCLUDE[net_v46](../../../includes/net-v46-md.md)] Windows 10에 설치됨|393295|
+|[!INCLUDE[net_v46](../../../includes/net-v46-md.md)] Windows 10 이외의 다른 모든 OS 버전에 설치됨|393297|
 |.NET Framework 4.5.2|379893|
-|[!INCLUDE[net_v451](../../../includes/net-v451-md.md)] 또는 Windows Server 2012 R2와 함께 설치된 [!INCLUDE[win81](../../../includes/win81-md.md)]|378675|
-|[!INCLUDE[net_v451](../../../includes/net-v451-md.md)] , Windows 7에 설치된 [!INCLUDE[win8](../../../includes/win8-md.md)]|378758|
+|[!INCLUDE[net_v451](../../../includes/net-v451-md.md)] [!INCLUDE[win81](../../../includes/win81-md.md)] 또는 Windows Server 2012 R2와 함께 설치됨|378675|
+|[!INCLUDE[net_v451](../../../includes/net-v451-md.md)] [!INCLUDE[win8](../../../includes/win8-md.md)], Windows 7에 설치됨|378758|
 |[!INCLUDE[net_v45](../../../includes/net-v45-md.md)]|378389|
 
 ### <a name="detecting-the-language-packs"></a>언어 팩 검색
@@ -315,7 +317,7 @@ NDP451-KB2858728-x86-x64-AllOS-JPN.exe/q /norestart /ChainingPackage <ProductNam
 ### <a name="troubleshooting"></a>문제 해결
 
 #### <a name="return-codes"></a>반환 코드
- 다음 표에서는 .NET Framework 재배포 가능 설치 관리자의 가장 일반적인 반환 코드를 보여 줍니다. 반환 코드는 설치 관리자 버전에 관계없이 모두 동일합니다. 자세한 정보에 대한 링크는 다음 섹션을 참조하세요.
+ 다음 표에서는 .NET Framework 재배포 가능 설치 관리자의 가장 일반적인 반환 코드를 보여줍니다. 반환 코드는 설치 관리자 버전에 관계없이 모두 동일합니다. 자세한 정보에 대한 링크는 다음 섹션을 참조하세요.
 
 |반환 코드|설명|
 |-----------------|-----------------|
@@ -351,7 +353,7 @@ NDP451-KB2858728-x86-x64-AllOS-JPN.exe/q /norestart /ChainingPackage <ProductNam
 ## <a name="appendix"></a>부록
 
 ### <a name="command-line-options"></a>명령줄 옵션
- 다음 표에서는 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 재배포 가능 패키지를 응용 프로그램 설치 프로그램에 연결할 때 포함할 수 있는 옵션을 보여 줍니다.
+ 다음 표에서는 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 재배포 가능 패키지를 응용 프로그램 설치 프로그램에 연결할 때 포함할 수 있는 옵션을 보여줍니다.
 
 |옵션|설명|
 |------------|-----------------|

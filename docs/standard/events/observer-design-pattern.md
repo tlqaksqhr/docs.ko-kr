@@ -18,18 +18,21 @@ helpviewer_keywords:
 - IObservable(Of T) interface
 - observer design pattern [.NET Framework]
 ms.assetid: 3680171f-f522-453c-aa4a-54f755a78f88
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 83663a28ac7ae19848552583f2ec39a5e96c7fdc
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: c13424ad817ae73b5019f0ce5a7cda54c84adc71
+ms.sourcegitcommit: 91691981897cf8451033cb01071d8f5d94017f97
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="observer-design-pattern"></a>관찰자 디자인 패턴
-관찰자 디자인 패턴은 구독자가 공급자에 등록하고 공급자로부터 알림을 받을 수 있게 합니다. 이는 푸시 기반 알림이 필요한 시나리오에 적합합니다. 패턴을 정의 *공급자* (라고도 *주체* 또는 *observable*) 및 0 개 이상의 *관찰자*합니다. 관찰자는 공급자에 등록하며 미리 정의된 조건, 이벤트 또는 상태 변경이 발생할 때마다 공급자가 해당 메서드 중 하나를 호출하여 자동으로 모든 관찰자에게 알립니다. 이 메서드 호출에서 공급자는 관찰자에게 현재 상태 정보를 제공할 수도 있습니다. .NET Framework에서는 제네릭 <xref:System.IObservable%601?displayProperty=nameWithType> 및 <xref:System.IObserver%601?displayProperty=nameWithType> 인터페이스를 구현하여 관찰자 디자인 패턴을 적용합니다. 제네릭 형식 매개 변수는 알림 정보를 제공하는 형식을 나타냅니다.  
+관찰자 디자인 패턴은 구독자가 공급자에 등록하고 공급자로부터 알림을 받을 수 있게 합니다. 이는 푸시 기반 알림이 필요한 시나리오에 적합합니다. 이 패턴은 ‘공급자’(‘주체’ 또는 ‘관찰 가능 대상’이라고도 함) 및 0개 이상의 ‘관찰자’를 정의합니다. 관찰자는 공급자에 등록하며 미리 정의된 조건, 이벤트 또는 상태 변경이 발생할 때마다 공급자가 해당 메서드 중 하나를 호출하여 자동으로 모든 관찰자에게 알립니다. 이 메서드 호출에서 공급자는 관찰자에게 현재 상태 정보를 제공할 수도 있습니다. .NET Framework에서는 제네릭 <xref:System.IObservable%601?displayProperty=nameWithType> 및 <xref:System.IObserver%601?displayProperty=nameWithType> 인터페이스를 구현하여 관찰자 디자인 패턴을 적용합니다. 제네릭 형식 매개 변수는 알림 정보를 제공하는 형식을 나타냅니다.  
   
 ## <a name="applying-the-pattern"></a>패턴 적용  
  관찰자 디자인 패턴은 데이터 소스(비즈니스 논리) 계층 및 사용자 인터페이스(표시) 계층과 같은 두 가지 구성 요소 또는 응용 프로그램 계층의 명확한 구분을 지원하기 때문에 분산된 푸시 기반 알림에 적합합니다. 공급자가 콜백을 사용하여 해당 클라이언트에 현재 정보를 제공할 때마다 패턴을 구현할 수 있습니다.  
@@ -53,7 +56,7 @@ ms.lasthandoff: 10/18/2017
 -   공급자가 해당 관찰자에게 전송하는 데이터를 포함하는 개체. 이 개체의 형식은 <xref:System.IObservable%601> 및 <xref:System.IObserver%601> 인터페이스의 제네릭 형식 매개 변수에 해당합니다. 이 개체는 <xref:System.IObservable%601> 구현과 동일할 수도 있지만 일반적으로 별도 형식입니다.  
   
 > [!NOTE]
->  관찰자 디자인 패턴 구현 외에도 <xref:System.IObservable%601> 및 <xref:System.IObserver%601> 인터페이스를 사용하여 빌드된 라이브러리 탐색에 관심이 있을 수 있습니다. 예를 들어 [Reactive Extensions (Rx) for.net](http://go.microsoft.com/fwlink/?LinkId=186345) 일련의 확장 메서드 및 비동기 프로그래밍을 지원 하기 위해 LINQ 표준 시퀀스 연산자로 구성 됩니다.  
+>  관찰자 디자인 패턴 구현 외에도 <xref:System.IObservable%601> 및 <xref:System.IObserver%601> 인터페이스를 사용하여 빌드된 라이브러리 탐색에 관심이 있을 수 있습니다. 예를 들어 [.NET용 사후 확장(Rx)](https://msdn.microsoft.com/library/hh242985.aspx)은 비동기 프로그래밍을 지원하기 위해 일련의 확장 메서드와 LINQ 표준 시퀀스 연산자로 구성됩니다.  
   
 ## <a name="implementing-the-pattern"></a>패턴 구현  
  다음 예제에서는 관찰자 디자인 패턴을 사용하여 공항의 수하물 찾는 곳 정보 시스템을 구현합니다. `BaggageInfo` 클래스는 도착 항공편과 각 항공편의 수하물을 찾을 수 있는 컨베이어 벨트에 대한 정보를 제공합니다. 다음 예제에서 이를 확인할 수 있습니다.  

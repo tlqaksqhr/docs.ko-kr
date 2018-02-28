@@ -1,12 +1,8 @@
 ---
 title: "방법: 데이터 흐름 블록의 작업 Scheduler 지정"
-ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
 - csharp
@@ -16,34 +12,35 @@ helpviewer_keywords:
 - Task Parallel Library, dataflows
 - task scheduler, linking from TPL
 ms.assetid: 27ece374-ed5b-49ef-9cec-b20db34a65e8
-caps.latest.revision: "7"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 20faebc8bda3b50c4f762615d84b7a449ae61c6f
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 592b6c5c92a2c752fa0d2694cdb477423b15eb0d
+ms.sourcegitcommit: 6a9030eb5bd0f00e1d144f81958adb195cfb1f6f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 01/10/2018
 ---
 # <a name="how-to-specify-a-task-scheduler-in-a-dataflow-block"></a>방법: 데이터 흐름 블록의 작업 Scheduler 지정
-이 문서에서는 응용 프로그램에서 데이터 흐름을 사용하는 경우 특정 작업 스케줄러를 연결하는 방법을 보여 줍니다. 예제에서는 Windows Forms 응용 프로그램에서 <xref:System.Threading.Tasks.ConcurrentExclusiveSchedulerPair?displayProperty=nameWithType> 클래스를 사용하여 판독기 작업이 활성화된 경우와 작성기 작업이 활성화된 경우를 표시합니다. 또한 <xref:System.Threading.Tasks.TaskScheduler.FromCurrentSynchronizationContext%2A?displayProperty=nameWithType> 메서드를 사용하여 데이터 흐름 블록이 사용자 인터페이스 스레드에서 실행될 수 있도록 합니다.  
+이 문서에서는 응용 프로그램에서 데이터 흐름을 사용하는 경우 특정 작업 스케줄러를 연결하는 방법을 보여줍니다. 예제에서는 Windows Forms 응용 프로그램에서 <xref:System.Threading.Tasks.ConcurrentExclusiveSchedulerPair?displayProperty=nameWithType> 클래스를 사용하여 판독기 작업이 활성화된 경우와 작성기 작업이 활성화된 경우를 표시합니다. 또한 <xref:System.Threading.Tasks.TaskScheduler.FromCurrentSynchronizationContext%2A?displayProperty=nameWithType> 메서드를 사용하여 데이터 흐름 블록이 사용자 인터페이스 스레드에서 실행될 수 있도록 합니다.
+
+[!INCLUDE [tpl-install-instructions](../../../includes/tpl-install-instructions.md)]
+
+## <a name="to-create-the-windows-forms-application"></a>Windows Forms 응용 프로그램을 만들려면  
   
-> [!TIP]
->  TPL 데이터 흐름 라이브러리(<xref:System.Threading.Tasks.Dataflow?displayProperty=nameWithType> 네임스페이스)는 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]와 함께 배포되지 않습니다. 설치 하는 <xref:System.Threading.Tasks.Dataflow> 네임 스페이스에서 프로젝트를 열고 [!INCLUDE[vs_dev11_long](../../../includes/vs-dev11-long-md.md)], 선택 **NuGet 패키지 관리** 프로젝트 메뉴에 대 한 온라인 검색에서는 `Microsoft.Tpl.Dataflow` 패키지 합니다.  
+1.  [!INCLUDE[csprcs](../../../includes/csprcs-md.md)] 또는 Visual Basic **Windows Forms 응용 프로그램** 프로젝트를 만듭니다. 다음 단계에서 프로젝트의 이름은 `WriterReadersWinForms`입니다.  
   
-### <a name="to-create-the-windows-forms-application"></a>Windows Forms 응용 프로그램을 만들려면  
-  
-1.  만들기는 [!INCLUDE[csprcs](../../../includes/csprcs-md.md)] 또는 Visual Basic **Windows Forms 응용 프로그램** 프로젝트. 다음 단계에서 프로젝트의 이름은 `WriterReadersWinForms`입니다.  
-  
-2.  기본 폼인 Form1.cs([!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]에서는 Form1.vb)의 폼 디자이너에서 네 가지 <xref:System.Windows.Forms.CheckBox> 컨트롤을 추가합니다. 설정의 <xref:System.Windows.Forms.Control.Text%2A> 속성을 **Reader 1** 에 대 한 `checkBox1`, **Reader 2** 에 대 한 `checkBox2`, **Reader 3** 에 대 한 `checkBox3`, 및  **기록기** 에 대 한 `checkBox4`합니다. 각 컨트롤의 <xref:System.Windows.Forms.Control.Enabled%2A> 속성을 `False`로 설정합니다.  
+2.  기본 폼인 Form1.cs([!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]에서는 Form1.vb)의 폼 디자이너에서 네 가지 <xref:System.Windows.Forms.CheckBox> 컨트롤을 추가합니다. <xref:System.Windows.Forms.Control.Text%2A> 속성을 `checkBox1`의 경우 **Reader 1**, `checkBox2`의 경우 **Reader 2**, `checkBox3`의 경우 **Reader 3**, `checkBox4`의 경우 **Writer**로 설정합니다. 각 컨트롤의 <xref:System.Windows.Forms.Control.Enabled%2A> 속성을 `False`로 설정합니다.  
   
 3.  폼에 <xref:System.Windows.Forms.Timer> 컨트롤을 추가합니다. <xref:System.Windows.Forms.Timer.Interval%2A> 속성을 `2500`으로 설정합니다.  
   
 ## <a name="adding-dataflow-functionality"></a>데이터 흐름 기능 추가  
  이 단원에서는 응용 프로그램에 참여하는 데이터 흐름 블록을 만드는 방법과 각 데이터 흐름 블록을 작업 스케줄러와 연결하는 방법을 설명합니다.  
   
-#### <a name="to-add-dataflow-functionality-to-the-application"></a>응용 프로그램에 데이터 흐름 기능을 추가하려면  
+### <a name="to-add-dataflow-functionality-to-the-application"></a>응용 프로그램에 데이터 흐름 기능을 추가하려면  
   
 1.  프로젝트에서 System.Threading.Tasks.Dataflow.dll에 대한 참조를 추가합니다.  
   
@@ -83,8 +80,8 @@ ms.lasthandoff: 10/18/2017
   
  또한 이 예제에서는 <xref:System.Threading.Tasks.ConcurrentExclusiveSchedulerPair> 클래스를 사용하여 일부 데이터 흐름 블록이 동시에 동작할 수 있도록 하고 다른 데이터 흐름 블록이 동일한 <xref:System.Threading.Tasks.ConcurrentExclusiveSchedulerPair> 개체에서 실행되는 다른 모든 데이터 흐름 블록과 독립적으로 동작할 수 있도록 합니다. 이 방법은 여러 데이터 흐름 블록이 리소스를 공유할 때 해당 리소스에 대한 액세스를 수동으로 동기화할 필요를 없애기 위해 일부 데이터 흐름 블록에 해당 리소스에 대한 배타적 액세스 권한이 필요한 경우에 유용합니다. 수동 동기화를 제거하면 코드의 효율성이 향상될 수 있습니다.  
   
-## <a name="example"></a>예제  
- 다음 예제에서는 Form1.cs([!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]에서는 Form1.vb)의 전체 코드를 보여 줍니다.  
+## <a name="example"></a>예  
+ 다음 예제에서는 Form1.cs([!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]에서는 Form1.vb)의 전체 코드를 보여줍니다.  
   
  [!code-csharp[TPLDataflow_WriterReadersWinForms#100](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_writerreaderswinforms/cs/writerreaderswinforms/form1.cs#100)]
  [!code-vb[TPLDataflow_WriterReadersWinForms#100](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpldataflow_writerreaderswinforms/vb/writerreaderswinforms/form1.vb#100)]  

@@ -12,15 +12,18 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: e25dd95f-b64c-4d8b-a3a4-379e1aa0ad55
-caps.latest.revision: "2"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 8f7b812d5d6f75e39e9eebcc003686ff88d009e9
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: e6ff5661a7e78f9b37f16acc86834561fc697bcc
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="compiled-xpath-expressions"></a>컴파일된 XPath 식
 <xref:System.Xml.XPath.XPathExpression> 개체는 <xref:System.Xml.XPath.XPathExpression.Compile%2A> 클래스의 정적 <xref:System.Xml.XPath.XPathExpression> 메서드 또는 <xref:System.Xml.XPath.XPathNavigator.Compile%2A> 클래스의 <xref:System.Xml.XPath.XPathNavigator> 메서드 중 하나에서 반환된 컴파일된 XPath 쿼리를 나타냅니다.  
@@ -124,15 +127,15 @@ Console.WriteLine(nodes.Current.Value);
   
  또한 선택 기준이 단순한 경우 <xref:System.Xml.XPath.XPathNavigator> 클래스에서 제공하는 노드 집합 탐색 메서드를 사용하면 <xref:System.Xml.XPath.XPathNavigator> 클래스에서 제공하는 선택 메서드를 사용하는 것보다 성능이 향상됩니다. 예를 들어, 현재 노드의 첫 번째 자식을 선택해야 할 경우 <xref:System.Xml.XPath.XPathNavigator.MoveToFirst%2A> 메서드를 사용하는 것이 `child::*[1]` XPath 식 및 <xref:System.Xml.XPath.XPathNavigator.Select%2A> 메서드를 사용하는 것보다 빠릅니다.  
   
- 노드에 대 한 자세한 내용은 집합 탐색 메서드는 <xref:System.Xml.XPath.XPathNavigator> 클래스를 참조 하십시오. [노드 집합 탐색을 사용 하 여 XPathNavigator](../../../../docs/standard/data/xml/node-set-navigation-using-xpathnavigator.md)합니다.  
+ <xref:System.Xml.XPath.XPathNavigator> 클래스의 노드 집합 탐색 메서드에 대한 자세한 내용은 [XPathNavigator를 사용하여 노드 집합 탐색](../../../../docs/standard/data/xml/node-set-navigation-using-xpathnavigator.md)을 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
  <xref:System.Xml.XmlDocument>  
  <xref:System.Xml.XPath.XPathDocument>  
  <xref:System.Xml.XPath.XPathNavigator>  
  [XPath 데이터 모델을 사용하여 XML 데이터 처리](../../../../docs/standard/data/xml/process-xml-data-using-the-xpath-data-model.md)  
- [XPathNavigator를 사용 하 여 XML 데이터를 선택 합니다.](../../../../docs/standard/data/xml/select-xml-data-using-xpathnavigator.md)  
- [XPathNavigator를 사용 하 여 XPath 식 계산](../../../../docs/standard/data/xml/evaluate-xpath-expressions-using-xpathnavigator.md)  
- [XPathNavigator를 사용 하 여 노드 일치 시키기](../../../../docs/standard/data/xml/matching-nodes-using-xpathnavigator.md)  
- [XPath 쿼리에서 인식 하는 노드 형식](../../../../docs/standard/data/xml/node-types-recognized-with-xpath-queries.md)  
- [XPath 쿼리 및 네임 스페이스](../../../../docs/standard/data/xml/xpath-queries-and-namespaces.md)
+ [XPathNavigator를 사용하여 XML 데이터 선택](../../../../docs/standard/data/xml/select-xml-data-using-xpathnavigator.md)  
+ [XPathNavigator를 사용하여 XPath 식 계산](../../../../docs/standard/data/xml/evaluate-xpath-expressions-using-xpathnavigator.md)  
+ [XPathNavigator를 사용하여 노드 일치시키기](../../../../docs/standard/data/xml/matching-nodes-using-xpathnavigator.md)  
+ [XPath 쿼리에서 인식하는 노드 형식](../../../../docs/standard/data/xml/node-types-recognized-with-xpath-queries.md)  
+ [XPath 쿼리 및 네임스페이스](../../../../docs/standard/data/xml/xpath-queries-and-namespaces.md)

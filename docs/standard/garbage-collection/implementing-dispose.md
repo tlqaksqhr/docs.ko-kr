@@ -15,34 +15,37 @@ helpviewer_keywords:
 - Dispose method
 - garbage collection, Dispose method
 ms.assetid: eb4e1af0-3b48-4fbc-ad4e-fc2f64138bf9
-caps.latest.revision: "44"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: b5a304c48a953b172cbcc3aa1c717a660298d36a
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 404fdece284accf305ef3cf2324be2e37a8da4b6
+ms.sourcegitcommit: bf8a3ba647252010bdce86dd914ac6c61b5ba89d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 01/06/2018
 ---
 # <a name="implementing-a-dispose-method"></a>Dispose 메서드 구현
 
-구현 하는 <xref:System.IDisposable.Dispose%2A> 메서드 응용 프로그램에서 사용 하는 관리 되지 않는 리소스를 해제 합니다. .NET 가비지 수집기는 관리되지 않는 메모리를 할당하거나 해제하지 않습니다.  
+응용 프로그램에서 사용되는 관리되지 않는 리소스를 해제하려면 <xref:System.IDisposable.Dispose%2A> 메서드를 구현합니다. .NET 가비지 수집기는 관리되지 않는 메모리를 할당하거나 해제하지 않습니다.  
   
-개체 삭제 패턴 이라고 하는 [삭제 패턴](../../../docs/standard/design-guidelines/dispose-pattern.md), 개체의 수명에 순서를 적용 합니다. 삭제 패턴은 파일 핸들, 파이프 핸들, 레지스트리 핸들, 대기 핸들 또는 관리되지 않는 메모리의 블록에 대한 포인터와 같이 관리되지 않는 리소스에 액세스하는 개체에만 사용됩니다. 이는 가비지 수집기가 사용되지 않은 관리되는 개체를 회수하는 데 매우 효율적이지만, 관리되지 않는 개체는 회수할 수 없기 때문입니다.  
+[삭제 패턴](../../../docs/standard/design-guidelines/dispose-pattern.md)이라고도 하는 개체 삭제 패턴에서는 개체의 수명에 순서를 적용합니다. 삭제 패턴은 파일 핸들, 파이프 핸들, 레지스트리 핸들, 대기 핸들 또는 관리되지 않는 메모리의 블록에 대한 포인터와 같이 관리되지 않는 리소스에 액세스하는 개체에만 사용됩니다. 이는 가비지 수집기가 사용되지 않은 관리되는 개체를 회수하는 데 매우 효율적이지만, 관리되지 않는 개체는 회수할 수 없기 때문입니다.  
   
 삭제 패턴에는 두 가지 변형이 있습니다.  
   
 * 형식이 SafeHandle(즉, <xref:System.Runtime.InteropServices.SafeHandle?displayProperty=nameWithType>에서 파생된 클래스)에서 사용하는 관리되지 않는 리소스를 각각 래핑합니다. 이 경우 <xref:System.IDisposable> 인터페이스와 추가 `Dispose(Boolean)` 메서드를 구현합니다. 이는 권장되는 변형이며, <xref:System.Object.Finalize%2A?displayProperty=nameWithType> 메서드를 재정의할 필요가 없습니다.  
   
   > [!NOTE]
-  > <xref:Microsoft.Win32.SafeHandles?displayProperty=nameWithType> 네임 스페이스에서 파생 된 클래스 집합을 제공 <xref:System.Runtime.InteropServices.SafeHandle>에 나열 된는 [safehandle을 사용 하 여](#SafeHandles) 섹션. 관리되지 않는 리소스를 해제하는 데 적합한 클래스를 찾을 수 없는 경우 고유한 <xref:System.Runtime.InteropServices.SafeHandle> 서브클래스를 구현할 수 있습니다.  
+  > <xref:Microsoft.Win32.SafeHandles?displayProperty=nameWithType> 네임스페이스는 <xref:System.Runtime.InteropServices.SafeHandle>에서 파생된 클래스 집합을 제공합니다(이러한 클래스는 [SafeHandle 사용](#SafeHandles) 섹션에 나열되어 있음). 관리되지 않는 리소스를 해제하는 데 적합한 클래스를 찾을 수 없는 경우 고유한 <xref:System.Runtime.InteropServices.SafeHandle> 서브클래스를 구현할 수 있습니다.  
   
 * <xref:System.IDisposable> 인터페이스와 추가 `Dispose(Boolean)` 메서드를 구현하고 <xref:System.Object.Finalize%2A?displayProperty=nameWithType> 메서드도 재정의합니다. 형식의 소비자가 <xref:System.Object.Finalize%2A> 구현을 호출하지 않은 경우 관리되지 않는 리소스가 삭제되도록 <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType>를 재정의해야 합니다. 이전 글머리 기호에 설명된 권장 방법을 사용하는 경우 <xref:System.Runtime.InteropServices.SafeHandle?displayProperty=nameWithType> 클래스가 사용자 대신 이 작업을 수행합니다.  
   
 리소스가 항상 적절하게 정리되게 하려면 예외를 throw하지 않고 <xref:System.IDisposable.Dispose%2A> 메서드를 여러 번 호출해야 합니다.  
   
-<xref:System.GC.KeepAlive%2A?displayProperty=nameWithType> 메서드의 코드 예제에서는 적극적인 가비지 수집으로 인해, 회수된 개체의 멤버가 아직 실행되는 동안 종료자가 실행되게 할 수 있는 방법을 보여 줍니다. <xref:System.GC.KeepAlive%2A> 메서드를 오래 실행한 후에는 <xref:System.IDisposable.Dispose%2A> 메서드를 호출하는 것이 좋습니다.  
+<xref:System.GC.KeepAlive%2A?displayProperty=nameWithType> 메서드의 코드 예제에서는 적극적인 가비지 수집으로 인해, 회수된 개체의 멤버가 아직 실행되는 동안 종료자가 실행되게 할 수 있는 방법을 보여줍니다. <xref:System.GC.KeepAlive%2A> 메서드를 오래 실행한 후에는 <xref:System.IDisposable.Dispose%2A> 메서드를 호출하는 것이 좋습니다.  
   
 <a name="Dispose2"></a>
 ## <a name="dispose-and-disposeboolean"></a>Dispose() 및 Dispose(Boolean)  
@@ -67,15 +70,15 @@ ms.lasthandoff: 10/18/2017
   
 ### <a name="the-disposeboolean-overload"></a>Dispose(Boolean) 오버로드
 
-두 번째 오버 로드에서는 *삭제* 매개 변수는는 <xref:System.Boolean> 메서드 호출에서 가져온 것인지 여부를 나타내는 <xref:System.IDisposable.Dispose%2A> 메서드 (해당 값은 `true`) 또는 종료자 (값은 `false`).  
+두 번째 오버로드에서 *disposing* 매개 변수는 메서드 호출이 <xref:System.IDisposable.Dispose%2A> 메서드(값은 `true`)에서 수행되는지 또는 종료자(값은 `false`)에서 수행되는지를 나타내는 <xref:System.Boolean>입니다.  
   
 메서드 본문은 다음과 같은 두 가지 코드 블록으로 구성됩니다.  
   
-* 관리되지 않는 리소스를 해제하는 블록 이 블록은 `disposing` 매개 변수의 값에 관계없이 실행됩니다.  
+* 관리되지 않는 리소스를 해제하는 블록. 이 블록은 `disposing` 매개 변수의 값에 관계없이 실행됩니다.  
   
-* 관리되는 리소스를 해제하는 조건부 블록 이 블록은 `disposing` 값이 `true`인 경우 실행됩니다. 해제되는 관리되는 리소스는 다음과 같습니다.  
+* 관리되는 리소스를 해제하는 조건부 블록. 이 블록은 `disposing` 값이 `true`인 경우 실행됩니다. 해제되는 관리되는 리소스는 다음과 같습니다.  
   
-  **관리 되는 개체를 구현 하는 <xref:System.IDisposable>합니다.** 조건부 블록을 사용하여 <xref:System.IDisposable.Dispose%2A> 구현을 호출할 수 있습니다. 관리되지 않는 리소스를 래핑하기 위해 SafeHandle을 사용한 경우 여기에서 <xref:System.Runtime.InteropServices.SafeHandle.Dispose%28System.Boolean%29?displayProperty=nameWithType> 구현을 호출해야 합니다.  
+  **<xref:System.IDisposable>을 구현하는 관리되는 개체.** 조건부 블록을 사용하여 <xref:System.IDisposable.Dispose%2A> 구현을 호출할 수 있습니다. 관리되지 않는 리소스를 래핑하기 위해 SafeHandle을 사용한 경우 여기에서 <xref:System.Runtime.InteropServices.SafeHandle.Dispose%28System.Boolean%29?displayProperty=nameWithType> 구현을 호출해야 합니다.  
   
   **많은 메모리를 사용하거나 부족한 리소스를 사용하는 관리되는 개체.** 이러한 개체를 `Dispose` 메서드에서 명시적으로 해제하면 가비지 수집기에서 명확하지 않게 회수한 경우보다 빠르게 해제할 수 있습니다.  
   
@@ -100,7 +103,7 @@ SafeHandle을 사용하는 기본 클래스에 대한 삭제 패턴을 구현하
 [!code-vb[System.IDisposable#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.idisposable/vb/base1.vb#3)]  
   
 > [!NOTE]
-> 이전 예제에서는 <xref:Microsoft.Win32.SafeHandles.SafeFileHandle> 개체를 사용하여 패턴을 보여 줍니다. <xref:System.Runtime.InteropServices.SafeHandle>에서 파생된 개체를 대신 사용할 수 있습니다. 예제에서는 해당 <xref:Microsoft.Win32.SafeHandles.SafeFileHandle> 개체를 제대로 인스턴스화하지 않습니다.  
+> 이전 예제에서는 <xref:Microsoft.Win32.SafeHandles.SafeFileHandle> 개체를 사용하여 패턴을 보여줍니다. <xref:System.Runtime.InteropServices.SafeHandle>에서 파생된 개체를 대신 사용할 수 있습니다. 예제에서는 해당 <xref:Microsoft.Win32.SafeHandles.SafeFileHandle> 개체를 제대로 인스턴스화하지 않습니다.  
   
 <xref:System.Object.Finalize%2A?displayProperty=nameWithType>를 재정의하는 기본 클래스에 대한 삭제 패턴을 구현하는 일반적인 패턴은 다음과 같습니다.  
   
@@ -108,13 +111,13 @@ SafeHandle을 사용하는 기본 클래스에 대한 삭제 패턴을 구현하
 [!code-vb[System.IDisposable#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.idisposable/vb/base2.vb#5)]  
   
 > [!NOTE]
-> C#에서는 재정의 <xref:System.Object.Finalize%2A?displayProperty=nameWithType> 정의 하 여 한 [소멸자](~/docs/csharp/programming-guide/classes-and-structs/destructors.md)합니다.  
+> C#에서 [소멸자](~/docs/csharp/programming-guide/classes-and-structs/destructors.md)를 정의하여 <xref:System.Object.Finalize%2A?displayProperty=nameWithType>를 재정의합니다.  
   
 ## <a name="implementing-the-dispose-pattern-for-a-derived-class"></a>파생된 클래스에 대한 삭제 패턴 구현
 
 <xref:System.IDisposable>의 기본 클래스 구현은 파생된 클래스에 의해 상속되므로 <xref:System.IDisposable> 인터페이스를 구현하는 클래스에서 파생된 클래스가 <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType>을 구현하지 않아야 합니다. 대신 파생된 클래스에 대한 삭제 패턴을 구현하려면 다음을 제공합니다.  
   
-* 기본 클래스 메서드를 재정의하고 파생된 클래스의 리소스를 해제하는 실제 작업을 수행하는 `protected``Dispose(Boolean)` 메서드. 이 메서드도 기본 클래스의 `Dispose(Boolean)` 메서드를 호출하여 *disposing* 인수의 `true` 값을 전달합니다.  
+* 기본 클래스 메서드를 재정의하고 파생된 클래스의 리소스를 해제하는 실제 작업을 수행하는 `protected Dispose(Boolean)` 메서드. 이 메서드도 기본 클래스의 `Dispose(Boolean)` 메서드를 호출하여 *disposing* 인수의 `true` 값을 전달합니다.  
   
 * 관리되지 않는 리소스를 래핑하는 <xref:System.Runtime.InteropServices.SafeHandle>에서 파생된 클래스(권장) 또는 <xref:System.Object.Finalize%2A?displayProperty=nameWithType> 메서드 재정의 <xref:System.Runtime.InteropServices.SafeHandle> 클래스는 사용자가 코딩할 필요가 없는 종료자를 제공합니다. 종료자를 제공하는 경우 *disposing* 인수가 `false`인 `Dispose(Boolean)` 오버로드를 호출해야 합니다.  
   
@@ -124,7 +127,7 @@ SafeHandle을 사용하는 파생된 클래스에 대한 삭제 패턴을 구현
 [!code-vb[System.IDisposable#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.idisposable/vb/derived1.vb#4)]  
   
 > [!NOTE]
-> 이전 예제에서는 <xref:Microsoft.Win32.SafeHandles.SafeFileHandle> 개체를 사용하여 패턴을 보여 줍니다. <xref:System.Runtime.InteropServices.SafeHandle>에서 파생된 개체를 대신 사용할 수 있습니다. 예제에서는 해당 <xref:Microsoft.Win32.SafeHandles.SafeFileHandle> 개체를 제대로 인스턴스화하지 않습니다.  
+> 이전 예제에서는 <xref:Microsoft.Win32.SafeHandles.SafeFileHandle> 개체를 사용하여 패턴을 보여줍니다. <xref:System.Runtime.InteropServices.SafeHandle>에서 파생된 개체를 대신 사용할 수 있습니다. 예제에서는 해당 <xref:Microsoft.Win32.SafeHandles.SafeFileHandle> 개체를 제대로 인스턴스화하지 않습니다.  
   
 <xref:System.Object.Finalize%2A?displayProperty=nameWithType>를 재정의하는 파생된 클래스에 대한 삭제 패턴을 구현하는 일반적인 패턴은 다음과 같습니다.  
   
@@ -132,7 +135,7 @@ SafeHandle을 사용하는 파생된 클래스에 대한 삭제 패턴을 구현
 [!code-vb[System.IDisposable#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.idisposable/vb/derived2.vb#6)]  
   
 > [!NOTE]
-> C#에서는 재정의 <xref:System.Object.Finalize%2A?displayProperty=nameWithType> 정의 하 여 한 [소멸자](~/docs/csharp/programming-guide/classes-and-structs/destructors.md)합니다.  
+> C#에서 [소멸자](~/docs/csharp/programming-guide/classes-and-structs/destructors.md)를 정의하여 <xref:System.Object.Finalize%2A?displayProperty=nameWithType>를 재정의합니다.  
   
 <a name="SafeHandles"></a>   
 ## <a name="using-safe-handles"></a>SafeHandle 사용
@@ -154,7 +157,7 @@ SafeHandle을 사용하는 파생된 클래스에 대한 삭제 패턴을 구현
 <a name="base"></a>   
 ## <a name="using-a-safe-handle-to-implement-the-dispose-pattern-for-a-base-class"></a>SafeHandle을 사용하여 기본 클래스에 대한 삭제 패턴 구현
 
-다음 예제는 SafeHandle을 사용하여 관리되지 않는 리소스를 캡슐화하는 기본 클래스에 대한 삭제 패턴인 `DisposableStreamResource`를 보여 줍니다. 이는 `DisposableResource`을 사용하여 열려 있는 파일을 나타내는 <xref:Microsoft.Win32.SafeHandles.SafeFileHandle> 개체를 래핑하는 <xref:System.IO.Stream> 클래스를 정의합니다. 또한 `DisposableResource` 메서드에는 파일 스트림에서 총 바이트 수를 반환하는 단일 속성인 `Size`도 포함됩니다.  
+다음 예제는 SafeHandle을 사용하여 관리되지 않는 리소스를 캡슐화하는 기본 클래스에 대한 삭제 패턴인 `DisposableStreamResource`를 보여줍니다. 이는 `DisposableResource`을 사용하여 열려 있는 파일을 나타내는 <xref:Microsoft.Win32.SafeHandles.SafeFileHandle> 개체를 래핑하는 <xref:System.IO.Stream> 클래스를 정의합니다. 또한 `DisposableResource` 메서드에는 파일 스트림에서 총 바이트 수를 반환하는 단일 속성인 `Size`도 포함됩니다.  
   
 [!code-csharp[Conceptual.Disposable#9](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.disposable/cs/base1.cs#9)]
 [!code-vb[Conceptual.Disposable#9](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.disposable/vb/base1.vb#9)]  
@@ -162,7 +165,7 @@ SafeHandle을 사용하는 파생된 클래스에 대한 삭제 패턴을 구현
 <a name="derived"></a>   
 ## <a name="using-a-safe-handle-to-implement-the-dispose-pattern-for-a-derived-class"></a>SafeHandle을 사용하여 파생된 클래스에 대한 삭제 패턴 구현
 
-다음 예제는 이전 예제에 제공된 `DisposableStreamResource2` 클래스에서 상속되는 파생된 클래스에 대한 삭제 패턴인 `DisposableStreamResource`를 보여 줍니다. 클래스에서 추가 메서드인 `WriteFileInfo`를 추가하고 <xref:Microsoft.Win32.SafeHandles.SafeFileHandle> 개체를 사용하여 쓰기 가능 파일의 핸들을 래핑합니다.  
+다음 예제는 이전 예제에 제공된 `DisposableStreamResource2` 클래스에서 상속되는 파생된 클래스에 대한 삭제 패턴인 `DisposableStreamResource`를 보여줍니다. 클래스에서 추가 메서드인 `WriteFileInfo`를 추가하고 <xref:Microsoft.Win32.SafeHandles.SafeFileHandle> 개체를 사용하여 쓰기 가능 파일의 핸들을 래핑합니다.  
   
 [!code-csharp[Conceptual.Disposable#10](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.disposable/cs/derived1.cs#10)]
 [!code-vb[Conceptual.Disposable#10](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.disposable/vb/derived1.vb#10)]  
@@ -175,5 +178,5 @@ SafeHandle을 사용하는 파생된 클래스에 대한 삭제 패턴을 구현
 <xref:Microsoft.Win32.SafeHandles>   
 <xref:System.Runtime.InteropServices.SafeHandle?displayProperty=nameWithType>   
 <xref:System.Object.Finalize%2A?displayProperty=nameWithType>   
-[방법: 클래스 및 구조체 정의 및 사용 (C + + /cli CLI)](/cpp/dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli)   
+[방법: 클래스 및 구조체 정의 및 사용(C++/CLI)](/cpp/dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli)   
 [삭제 패턴](../../../docs/standard/design-guidelines/dispose-pattern.md)

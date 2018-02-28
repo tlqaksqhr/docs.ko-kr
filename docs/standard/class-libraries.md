@@ -10,11 +10,14 @@ ms.prod: .net
 ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: a67484c3-fe92-44d8-8fa3-36fa2071d880
-ms.openlocfilehash: c72cdcbbe20c3c7a6890cdacb446e3db8de1b37a
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 5445c6971e243e9fc2eea34937683a5c3c432c01
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="net-class-libraries"></a>.NET 클래스 라이브러리
 
@@ -24,7 +27,7 @@ ms.lasthandoff: 10/18/2017
 
 *   **플랫폼별** 클래스 라이브러리는 지정된 플랫폼(예: .NET Framework, Xamarin iOS)의 모든 API에 액세스할 수 있지만 해당 플랫폼을 대상으로 하는 앱과 라이브러리만 사용할 수 있습니다.
 *   **이식 가능** 클래스 라이브러리는 API 하위 집합에 액세스할 수 있으며 여러 플랫폼을 대상으로 하는 앱과 라이브러리에서 사용할 수 있습니다.
-*   **.NET Core** 클래스 라이브러리는 플랫폼별 및 이식 가능한 라이브러리 개념을 두 가지의 장점을 제공하는 하나의 모델로 통합합니다.
+*   **.NET Standard** 클래스 라이브러리는 플랫폼별 및 이식 가능한 라이브러리 개념을 단일 모델로 병합하여 두 가지의 장점을 모두 제공합니다.
 
 ## <a name="platform-specific-class-libraries"></a>플랫폼별 클래스 라이브러리
 

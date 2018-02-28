@@ -11,27 +11,31 @@ ms.topic: article
 dev_langs:
 - csharp
 - vb
-helpviewer_keywords: SpinLock, how to enable thread-tracking
+helpviewer_keywords:
+- SpinLock, how to enable thread-tracking
 ms.assetid: 62ee2e68-0bdd-4869-afc9-f0a57a11ae01
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: ca5f1b6eace7a24a6bbb7fd541858246828fa757
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: f3d5b40f1f7b4b7534a44f4f7ab542d33d373702
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="how-to-enable-thread-tracking-mode-in-spinlock"></a>방법: 스핀 잠금에서 스레드-추적 모드 사용
-<xref:System.Threading.SpinLock?displayProperty=nameWithType>낮은 수준의 상호 배제 하는 매우 짧은 대기 시간이 없는 시나리오에 사용할 수 있습니다. <xref:System.Threading.SpinLock>재진입 성이 아닙니다. 스레드가 이미 잠금을 획득을 종료 해야 잠금을 잘못 다시 시작할 수 있으려면 먼저 합니다. 일반적으로 잠금을 다시 시작 하려는 시도 인해 교착 상태를 하 고 교착 상태 디버깅이 어려워질 수 있습니다. 개발, 높이기 위해 <xref:System.Threading.SpinLock?displayProperty=nameWithType> 스레드가 이미 획득 한 잠금을 다시 입력 하려고 할 때 throw 되는 예외를 발생 시킨 스레드-추적 모드를 지원 합니다. 이는 잠금을 올바르게 종료 되지 않은 지점 보다 쉽게 찾을 수 있습니다. 스레드-추적 모드를 사용 하 여 켤 수 있습니다는 <xref:System.Threading.SpinLock> 부울 값을 사용 하는 생성자의 인수에 전달 하 고 매개 변수를 입력 `true`합니다. 개발 및 테스트 단계를 완료 한 후 성능 향상을 위해 스레드-추적 모드를 해제 합니다.  
+<xref:System.Threading.SpinLock?displayProperty=nameWithType>은 대기 시간이 매우 짧은 시나리오에 사용할 수 있는 하위 수준의 상호 배제적인 잠금입니다. <xref:System.Threading.SpinLock>은 재진입 항목이 아닙니다. 스레드가 잠금 상태가 된 후에는 잠금을 올바르게 종료해야 다시 잠글 수 있습니다. 일반적으로 잠금을 다시 설정하려고 하면 교착 상태가 발생하고, 교착 상태는 디버그하기가 매우 어려울 수 있습니다. 개발에 대한 지원으로 <xref:System.Threading.SpinLock?displayProperty=nameWithType>은 스레드가 이미 보유하고 있는 잠금을 다시 설정하려고 할 때 예외가 throw되도록 하는 스레드 추적 모드를 지원합니다. 따라서 잠금이 올바르게 종료되지 않은 지점을 쉽게 찾을 수 있습니다. 부울 입력 매개 변수를 사용하고 `true`의 인수를 전달하는 <xref:System.Threading.SpinLock> 생성자를 사용하여 스레드 추적 모드를 켤 수 있습니다. 개발 및 테스트 단계를 완료한 후에는 성능을 향상시키기 위해 스레드 추적 모드를 끄세요.  
   
-## <a name="example"></a>예제  
- 다음 예제에서는 스레드-추적 모드를 보여 줍니다. 올바르게 잠금을 종료 하는 줄은 다음 결과 중 하나를 발생 시키는 코딩 오류를 시뮬레이션 하 주석 처리 됩니다.  
+## <a name="example"></a>예  
+ 다음 예제는 스레드 추적 모드를 보여줍니다. 잠금을 올바르게 종료하는 줄은 다음 결과 중 하나를 발생시키는 코딩 오류를 시뮬레이트하기 위해 주석으로 처리됩니다.  
   
--   예외가 발생 하는 경우는 <xref:System.Threading.SpinLock> 의 인수를 사용 하 여 만든 `true` (`True` Visual basic에서).  
+-   <xref:System.Threading.SpinLock>이 `true`(Visual Basic의 경우 `True`)의 인수를 사용하여 생성된 경우 예외가 throw됩니다.  
   
--   경우 교착 상태는 <xref:System.Threading.SpinLock> 의 인수를 사용 하 여 만든 `false` (`False` Visual basic에서).  
+-   <xref:System.Threading.SpinLock>이 `false`(Visual Basic의 경우 `False`)의 인수를 사용하여 생성된 경우 교착 상태가 됩니다.  
   
  [!code-csharp[CDS_SpinLock#01](../../../samples/snippets/csharp/VS_Snippets_Misc/cds_spinlock/cs/spinlockdemo.cs#01)]
  [!code-vb[CDS_SpinLock#01](../../../samples/snippets/visualbasic/VS_Snippets_Misc/cds_spinlock/vb/spinlock_threadtracking.vb#01)]  

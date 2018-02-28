@@ -41,18 +41,21 @@ helpviewer_keywords:
 - pattern-matching with regular expressions, classes
 - GroupCollection class
 ms.assetid: 49a21470-64ca-4b5a-a889-8e24e3c0af7e
-caps.latest.revision: "26"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: e8784ed31de4a511f9eee361a4becee3d080298a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 4f1918788a571e9626554eaeec9fdd3f1686d4cc
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="the-regular-expression-object-model"></a>Regular Expression 개체 모델
-<a name="introduction"></a>이 항목에서는.NET 정규식을 사용한 작업에 사용 되는 개체 모델에 설명 합니다. 여기에는 다음 단원이 포함되어 있습니다.  
+<a name="introduction"></a> 이 항목에서는 .NET 정규식 작업을 수행하는 데 사용되는 개체 모델을 설명합니다. 여기에는 다음 단원이 포함되어 있습니다.  
   
 -   [정규식 엔진](#Engine)  
   
@@ -68,7 +71,7 @@ ms.lasthandoff: 11/21/2017
   
 <a name="Engine"></a>   
 ## <a name="the-regular-expression-engine"></a>정규식 엔진  
- .NET에서 정규식 엔진으로 표시 됩니다는 <xref:System.Text.RegularExpressions.Regex> 클래스입니다. 정규식 엔진은 정규식을 구문 분석 및 컴파일하고, 정규식 패턴을 입력 문자열과 일치시키는 작업 수행을 담당합니다. 엔진은.NET 정규식 개체 모델의 중앙 구성 요소입니다.  
+ .NET의 정규식 엔진은 <xref:System.Text.RegularExpressions.Regex> 클래스로 표현됩니다. 정규식 엔진은 정규식을 구문 분석 및 컴파일하고, 정규식 패턴을 입력 문자열과 일치시키는 작업 수행을 담당합니다. 이 엔진은 .NET 정규식 개체 모델의 중심 구성 요소입니다.  
   
  정규식 엔진은 다음과 같은 두 가지 방법 중 하나로 사용할 수 있습니다.  
   
@@ -148,7 +151,7 @@ ms.lasthandoff: 11/21/2017
   
  바꾸기 패턴 `$$$&`는 다음 테이블과 같이 해석됩니다.  
   
-|패턴|바꾸기 문자열|  
+|무늬|바꾸기 문자열|  
 |-------------|------------------------|  
 |`$$`|달러 기호($) 문자|  
 |`$&`|일치하는 전제 부분 문자열|  
@@ -176,7 +179,7 @@ ms.lasthandoff: 11/21/2017
 ### <a name="the-match-collection"></a>일치 컬렉션  
  <xref:System.Text.RegularExpressions.Regex.Matches%2A?displayProperty=nameWithType> 메서드는 정규식 엔진이 입력 문자열에서 찾은 모든 일치 항목(입력 문자열에서 나타나는 순서대로)을 나타내는 <xref:System.Text.RegularExpressions.MatchCollection> 개체가 포함된 <xref:System.Text.RegularExpressions.Match> 개체를 반환합니다. 일치 항목이 없는 경우 이 메서드는 멤버 없이 <xref:System.Text.RegularExpressions.MatchCollection> 개체를 반환합니다. <xref:System.Text.RegularExpressions.MatchCollection.Item%2A?displayProperty=nameWithType> 속성을 사용하여 인덱스(0에서 <xref:System.Text.RegularExpressions.MatchCollection.Count%2A?displayProperty=nameWithType> 속성 값보다 1 작은 값까지)별로 컬렉션의 개별 멤버에 액세스할 수 있습니다. <xref:System.Text.RegularExpressions.MatchCollection.Item%2A>은 컬렉션의 인덱서(C#의 경우) 및 기본 속성(Visual Basic의 경우)입니다.  
   
- 기본적으로 <xref:System.Text.RegularExpressions.Regex.Matches%2A?displayProperty=nameWithType> 메서드에 대한 호출에서는 지연 평가를 사용하여 <xref:System.Text.RegularExpressions.MatchCollection> 개체를 채웁니다. 완전히 채워진 컬렉션이 필요한 속성(예: <xref:System.Text.RegularExpressions.MatchCollection.Count%2A?displayProperty=nameWithType> 및 <xref:System.Text.RegularExpressions.MatchCollection.Item%2A?displayProperty=nameWithType> 속성)에 액세스할 경우 성능이 저하될 수 있습니다. 따라서 <xref:System.Collections.IEnumerator> 메서드에서 반환하는 <xref:System.Text.RegularExpressions.MatchCollection.GetEnumerator%2A?displayProperty=nameWithType> 개체를 사용하여 컬렉션에 액세스하는 것이 좋습니다. 개별 언어와 같은 구조체를 제공 `For``Each` Visual basic에서 및 `foreach` 컬렉션의 줄 바꿈 C#에서는 <xref:System.Collections.IEnumerator> 인터페이스입니다.  
+ 기본적으로 <xref:System.Text.RegularExpressions.Regex.Matches%2A?displayProperty=nameWithType> 메서드에 대한 호출에서는 지연 평가를 사용하여 <xref:System.Text.RegularExpressions.MatchCollection> 개체를 채웁니다. 완전히 채워진 컬렉션이 필요한 속성(예: <xref:System.Text.RegularExpressions.MatchCollection.Count%2A?displayProperty=nameWithType> 및 <xref:System.Text.RegularExpressions.MatchCollection.Item%2A?displayProperty=nameWithType> 속성)에 액세스할 경우 성능이 저하될 수 있습니다. 따라서 <xref:System.Collections.IEnumerator> 메서드에서 반환하는 <xref:System.Text.RegularExpressions.MatchCollection.GetEnumerator%2A?displayProperty=nameWithType> 개체를 사용하여 컬렉션에 액세스하는 것이 좋습니다. 개별 언어는 컬렉션의 <xref:System.Collections.IEnumerator> 인터페이스를 래핑하는 생성자(예: Visual Basic의 경우 `For``Each` 및 C#의 경우 `foreach`)를 제공합니다.  
   
  다음 예제에서는 <xref:System.Text.RegularExpressions.Regex.Matches%28System.String%29?displayProperty=nameWithType> 메서드를 사용하여, 입력 문자열에서 찾은 모든 일치 항목으로 <xref:System.Text.RegularExpressions.MatchCollection> 개체를 채웁니다. 이 예제에서는 컬렉션을 열거하고 문자열 배열에 일치 항목을 복사하며 정수 배열에 문자 위치를 기록합니다.  
   
@@ -225,7 +228,7 @@ ms.lasthandoff: 11/21/2017
   
  정규식 패턴 `\b\d+(,\d{3})*\.\d{2}\b`는 다음 테이블과 같이 정의됩니다.  
   
-|패턴|설명|  
+|무늬|설명|  
 |-------------|-----------------|  
 |`\b`|단어 경계에서 일치 항목 찾기를 시작합니다.|  
 |`\d+`|하나 이상의 10진수 숫자가 일치하는지 확인합니다.|  
@@ -256,7 +259,7 @@ ms.lasthandoff: 11/21/2017
   
  정규식 패턴 `\b(\w+)\s(\d{1,2}),\s(\d{4})\b`는 다음 테이블과 같이 정의됩니다.  
   
-|패턴|설명|  
+|무늬|설명|  
 |-------------|-----------------|  
 |`\b`|단어 경계에서 일치 항목 찾기를 시작합니다.|  
 |`(\w+)`|하나 이상의 단어 문자를 찾습니다. 이 그룹은 첫 번째 캡처링 그룹입니다.|  
@@ -271,7 +274,7 @@ ms.lasthandoff: 11/21/2017
   
 <a name="the_captured_group"></a>   
 ## <a name="the-captured-group"></a>캡처된 그룹  
- <xref:System.Text.RegularExpressions.Group> 클래스는 단일 캡처링 그룹의 결과를 나타냅니다. 정규식에 정의된 캡처링 그룹을 나타내는 그룹 개체는 <xref:System.Text.RegularExpressions.GroupCollection.Item%2A> 속성에서 반환하는 <xref:System.Text.RegularExpressions.GroupCollection> 개체의 <xref:System.Text.RegularExpressions.Match.Groups%2A?displayProperty=nameWithType> 속성에서 반환합니다. <xref:System.Text.RegularExpressions.GroupCollection.Item%2A> 속성은 <xref:System.Text.RegularExpressions.Group> 클래스의 인덱스(C#의 경우) 및 기본 속성(Visual Basic의 경우)입니다. 사용 하 여 컬렉션을 반복 함으로써 개별 멤버를 검색할 수도 있습니다는 `foreach` 또는 `For``Each` 생성 합니다. 예제는 이전 섹션을 참조하세요.  
+ <xref:System.Text.RegularExpressions.Group> 클래스는 단일 캡처링 그룹의 결과를 나타냅니다. 정규식에 정의된 캡처링 그룹을 나타내는 그룹 개체는 <xref:System.Text.RegularExpressions.GroupCollection.Item%2A> 속성에서 반환하는 <xref:System.Text.RegularExpressions.GroupCollection> 개체의 <xref:System.Text.RegularExpressions.Match.Groups%2A?displayProperty=nameWithType> 속성에서 반환합니다. <xref:System.Text.RegularExpressions.GroupCollection.Item%2A> 속성은 <xref:System.Text.RegularExpressions.Group> 클래스의 인덱스(C#의 경우) 및 기본 속성(Visual Basic의 경우)입니다. 또한 `foreach` 또는 `For``Each` 구문을 사용하여 컬렉션을 반복함으로써 개별 멤버를 검색할 수 있습니다. 예제는 이전 섹션을 참조하세요.  
   
  다음 예제에서는 중첩된 그룹화 구문을 사용하여 부분 문자열을 그룹으로 캡처합니다. 정규식 패턴 `(a(b))c`는 문자열 "abc"와 일치합니다. 이 패턴은 부분 문자열 "ab"를 첫 번째 캡처링 그룹에 할당하고 부분 문자열 "b"를 두 번째 캡처링 그룹에 할당합니다.  
   
@@ -285,7 +288,7 @@ ms.lasthandoff: 11/21/2017
   
  정규식 패턴 `^(?<name>\w+):(?<value>\w+)`는 다음 테이블과 같이 정의됩니다.  
   
-|패턴|설명|  
+|무늬|설명|  
 |-------------|-----------------|  
 |`^`|입력 문자열의 시작 부분에서 일치 항목 찾기를 시작합니다.|  
 |`(?<name>\w+)`|하나 이상의 단어 문자를 찾습니다. 캡처링 그룹은 이름은 `name`입니다.|  
@@ -295,7 +298,7 @@ ms.lasthandoff: 11/21/2017
  
           <xref:System.Text.RegularExpressions.Group> 클래스의 속성은 캡처된 그룹에 대한 정보를 제공합니다. `Group.Value` 속성은 캡처된 부분 문자열을 포함하고, `Group.Index` 속성은 입력 텍스트에서 캡처된 그룹의 시작 위치를 나타내며, `Group.Length` 속성은 캡처된 텍스트의 길이를 포함하고, `Group.Success` 속성은 부분 문자열이 캡처링 그룹에 의해 정의된 패턴과 일치하는지를 나타냅니다.  
   
- 그룹에 수량자를 적용 합니다. (자세한 내용은 참조 [수량자](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md)) 캡처 두 가지 방법으로 그룹별로 한 캡처의 관계를 수정 합니다.  
+ 그룹에 수량자를 적용하면(자세한 내용은 [수량자](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md) 참조) 캡처링 그룹별로 한 캡처의 관계가 다음과 같은 두 가지 방법으로 수정됩니다.  
   
 -   그룹에 `*` 또는 `*?` 수량자(0개 이상의 일치 항목을 지정함)가 적용된 경우 캡처링 그룹은 입력 문자열에 일치 항목이 없을 수도 있습니다. 캡처된 텍스트가 없는 경우 <xref:System.Text.RegularExpressions.Group> 개체의 속성은 다음 테이블과 같이 설정됩니다.  
   
@@ -310,7 +313,7 @@ ms.lasthandoff: 11/21/2017
      [!code-csharp[Conceptual.RegularExpressions.ObjectModel#11](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.objectmodel/cs/nocapture1.cs#11)]
      [!code-vb[Conceptual.RegularExpressions.ObjectModel#11](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.objectmodel/vb/nocapture1.vb#11)]  
   
--   수량자는 캡처링 그룹에 의해 정의된 패턴과 여러 번 일치할 수 있습니다. 이 경우 `Value` 개체의 `Length` 및 <xref:System.Text.RegularExpressions.Group> 속성은 캡처된 마지막 부분 문자열에 대한 정보만 포함합니다. 예를 들어, 다음 정규식은 마침표로 끝나는 단일 문장과 일치합니다. 이 정규식에서는 두 개의 그룹화 구문을 사용하는데, 첫 번째 그룹화 구문은 개별 단어를 공백 문자와 함께 캡처하고, 두 번째 그룹화 구문은 개별 단어를 캡처합니다. 예제의 출력이 보여 주는 것처럼, 정규식이 전체 문장을 캡처하는 데 성공하더라도 두 번째 캡처링 그룹은 마지막 단어만 캡처합니다.  
+-   수량자는 캡처링 그룹에 의해 정의된 패턴과 여러 번 일치할 수 있습니다. 이 경우 `Value` 개체의 `Length` 및 <xref:System.Text.RegularExpressions.Group> 속성은 캡처된 마지막 부분 문자열에 대한 정보만 포함합니다. 예를 들어, 다음 정규식은 마침표로 끝나는 단일 문장과 일치합니다. 이 정규식에서는 두 개의 그룹화 구문을 사용하는데, 첫 번째 그룹화 구문은 개별 단어를 공백 문자와 함께 캡처하고, 두 번째 그룹화 구문은 개별 단어를 캡처합니다. 예제의 출력이 보여주는 것처럼, 정규식이 전체 문장을 캡처하는 데 성공하더라도 두 번째 캡처링 그룹은 마지막 단어만 캡처합니다.  
   
      [!code-csharp[Conceptual.RegularExpressions.ObjectModel#12](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.objectmodel/cs/lastcapture1.cs#12)]
      [!code-vb[Conceptual.RegularExpressions.ObjectModel#12](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.objectmodel/vb/lastcapture1.vb#12)]  
@@ -332,7 +335,7 @@ ms.lasthandoff: 11/21/2017
  [!code-csharp[Conceptual.RegularExpressions.ObjectModel#14](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.objectmodel/cs/capturecollection1.cs#14)]
  [!code-vb[Conceptual.RegularExpressions.ObjectModel#14](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.objectmodel/vb/capturecollection1.vb#14)]  
   
- 다음 예제에서는 정규식 `(Abc)+`를 사용하여 문자열 "XYZAbcAbcAbcXYZAbcAb"에서 문자열 "Abc"의 하나 이상의 연속 발생을 찾습니다. 이 예제에서는 <xref:System.Text.RegularExpressions.Group.Captures%2A?displayProperty=nameWithType> 속성을 사용하여, 캡처된 부분 문자열의 여러 그룹을 반환하는 방법을 보여 줍니다.  
+ 다음 예제에서는 정규식 `(Abc)+`를 사용하여 문자열 "XYZAbcAbcAbcXYZAbcAb"에서 문자열 "Abc"의 하나 이상의 연속 발생을 찾습니다. 이 예제에서는 <xref:System.Text.RegularExpressions.Group.Captures%2A?displayProperty=nameWithType> 속성을 사용하여, 캡처된 부분 문자열의 여러 그룹을 반환하는 방법을 보여줍니다.  
   
  [!code-csharp[RegularExpressions.Classes#5](../../../samples/snippets/csharp/VS_Snippets_CLR/RegularExpressions.Classes/cs/Example.cs#5)]
  [!code-vb[RegularExpressions.Classes#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/RegularExpressions.Classes/vb/Example.vb#5)]  
@@ -350,7 +353,7 @@ ms.lasthandoff: 11/21/2017
   
  정규식은 다음 테이블과 같이 정의됩니다.  
   
-|패턴|설명|  
+|무늬|설명|  
 |-------------|-----------------|  
 |`\w+`|하나 이상의 단어 문자를 찾습니다.|  
 |`(\s\w+)*`|공백 문자 다음에 하나 이상의 단어 문자가 있는 0개 이상의 일치 항목을 찾습니다. 이 패턴에서는 여러 단어로 된 도시 이름을 찾습니다. 이 그룹은 세 번째 캡처링 그룹입니다.|  

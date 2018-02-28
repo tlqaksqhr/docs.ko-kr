@@ -16,25 +16,28 @@ helpviewer_keywords:
 - threading [.NET Framework], timers
 - timers, about timers
 ms.assetid: 7091500d-be18-499b-a942-95366ce185e5
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: fca27cf5261e253c2bb3d3a10fa3db31f28a2415
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 80b4cee03e934d3aec98ca323aac43f934c56455
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="timers"></a>타이머
-타이머는 대리자가 지정된 된 시간에 호출 수를 지정할 수 있는 간단한 개체입니다. 스레드 풀의 스레드 대기 작업을 수행합니다.  
+타이머는 지정된 시간에 대리자가 호출되도록 지정할 수 있는 간단한 개체입니다. 스레드 풀의 스레드가 대기 작업을 수행합니다.  
   
- 사용 하 여 <xref:System.Threading.Timer?displayProperty=nameWithType> 클래스는 간단 합니다. 만들는 **타이머**전달 하는 <xref:System.Threading.TimerCallback> 대리자 콜백 메서드를 콜백, 초기 발생 시간, 및 콜백 호출 사이의 기간을 나타내는 시간에 전달 되는 상태를 나타내는 개체입니다. 보류 타이머를 취소 하려면 호출는 **Timer.Dispose** 함수입니다.  
+ <xref:System.Threading.Timer?displayProperty=nameWithType> 클래스를 사용하는 것은 간단합니다. 콜백 메서드에 <xref:System.Threading.TimerCallback> 대리자를 전달하는 **타이머**, 콜백에 전달되는 상태를 나타내는 개체, 초기 발생 시간, 콜백 호출 사이의 기간을 나타내는 시간을 생성합니다. 보류 중인 타이머를 취소하려면 **Timer.Dispose** 함수를 호출하세요.  
   
 > [!NOTE]
->  다른 두 개의 타이머 클래스가 있습니다. <xref:System.Windows.Forms.Timer?displayProperty=nameWithType> 클래스는 컨트롤 비주얼 디자이너와 함께 작동 하 고 사용자 인터페이스에 대 한 컨텍스트에서 사용 하는 것입니다; 이벤트 사용자 인터페이스 스레드에서 발생 합니다. <xref:System.Timers.Timer?displayProperty=nameWithType> 클래스에서 파생 <xref:System.ComponentModel.Component>, 비주얼 디자이너와 함께 사용할 수 있으므로 이벤트를 발생 시키는 적지만에서 발생 한 <xref:System.Threading.ThreadPool> 스레드입니다. <xref:System.Threading.Timer?displayProperty=nameWithType> 클래스에서 콜백을 사용 하는 <xref:System.Threading.ThreadPool> 스레드 및 이벤트 모델을 전혀 사용 하지 않습니다. 또한 상태 개체를 다른 타이머 콜백 메서드를 제공 합니다. 매우 간단합니다.  
+>  두 가지 다른 타이머 클래스가 있습니다. <xref:System.Windows.Forms.Timer?displayProperty=nameWithType> 클래스는 비주얼 디자이너와 함께 작동하며 사용자 인터페이스 컨텍스트에서 사용되는 컨트롤로, 사용자 인터페이스 스레드에서 이벤트를 발생시킵니다. <xref:System.Timers.Timer?displayProperty=nameWithType> 클래스는 <xref:System.ComponentModel.Component>에서 파생되므로 비주얼 디자이너와 함께 사용할 수 있습니다. 이벤트도 발생시키지만 <xref:System.Threading.ThreadPool> 스레드에서는 발생시킵니다. <xref:System.Threading.Timer?displayProperty=nameWithType> 클래스는 <xref:System.Threading.ThreadPool> 스레드에서 콜백을 생성하며 이벤트 모델을 전혀 사용하지 않습니다. 또한 콜백 메서드에 상태 개체도 제공합니다. 다른 타이머는 이 작업을 수행하지 않습니다. 그리고 이 클래스는 매우 간단합니다.  
   
- 다음 코드 예제에서는 시작 키를 누를 때까지 1 초 (1, 000 밀리초)와 틱 후 시작 되는 타이머는 **Enter** 키입니다. 변수가 타이머에 대 한 참조를 포함 하는 클래스 수준 필드로, 타이머 아닌지 가비지 수집의 대상이 계속 실행 합니다. 적극적인 가비지 수집에 대 한 자세한 내용은 참조 하십시오. <xref:System.GC.KeepAlive%2A>합니다.  
+ 다음 코드 예제에서는 1초(1000밀리초) 후에 시작하고 **Enter** 키를 누를 때까지 매초 틱하는 타이머를 시작합니다. 타이머에 대한 참조를 포함하는 변수는 클래스 수준 필드이므로 타이머가 여전히 실행 중인 동안 타이머가 가비지 수집되지 않도록 할 수 있습니다. 적극적인 가비지 수집에 대한 자세한 내용은 <xref:System.GC.KeepAlive%2A>를 참조하세요.  
   
  [!code-cpp[System.Threading.Timer#2](../../../samples/snippets/cpp/VS_Snippets_CLR_System/system.Threading.Timer/CPP/source2.cpp#2)]
  [!code-csharp[System.Threading.Timer#2](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.Threading.Timer/CS/source2.cs#2)]

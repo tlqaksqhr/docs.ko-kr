@@ -12,22 +12,25 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 118f97d1-7110-4d1b-b0bd-4143252c0bb0
-caps.latest.revision: "3"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 09f89708607ada18181bc6605994c7908e1dd14b
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: c492d470fe29041f32039d98ecb854e18f40423c
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="xpathnavigator-in-transformations"></a>변형 과정에서 XPathNavigator의 역할
 <xref:System.Xml.XPath.XPathNavigator> 클래스는 데이터에 대한 임의의 읽기 전용 액세스를 제공하며 XSLT(Extensible Stylesheet Language for Transformations)의 입력으로 사용하도록 디자인되었습니다. 이 클래스는 <xref:System.Xml.XPath.XPathDocument>, <xref:System.Xml.XmlDataDocument> 및 <xref:System.Xml.XmlDocument>에서 구현합니다. <xref:System.Xml.XPath.XPathNavigator>는 XPath(XML Path Language) 권장 사항의 5단원에서 설명하는 W3C(World Wide Web 컨소시엄) 데이터 모델을 기반으로 합니다.  
   
  <xref:System.Xml.XPath.XPathNavigator>는 모든 저장소에 대한 커서 모델을 정의하며 모든 데이터 저장소에 대한 빠른 속도의 읽기 전용 XPath 쿼리를 제공합니다. 또한 <xref:System.Xml.XPath.XPathNavigator>는 결과 트리 조각을 반복하는 데 사용되는 클래스이기도 합니다.  
   
- API를 사용하면 저장소의 현재 노드에서 정보를 가져오고 연결된 노드로 이동할 수 있습니다. <xref:System.Xml.XPath.XPathNavigator> 집합을 사용 하 여 저장소를 순회 하는 커서 스타일 모델은 **이동** 메서드. <xref:System.Xml.XPath.XPathNavigator>는 항상 노드에 위치합니다. 모든 **이동** 메서드가 실패 하더라도 <xref:System.Xml.XPath.XPathNavigator> 변경 되지 않습니다.  
+ API를 사용하면 저장소의 현재 노드에서 정보를 가져오고 연결된 노드로 이동할 수 있습니다. <xref:System.Xml.XPath.XPathNavigator>는 일련의 **Move** 메서드를 사용하여 저장소를 순회하는 커서 스타일 모델입니다. <xref:System.Xml.XPath.XPathNavigator>는 항상 노드에 위치합니다. **Move** 메서드가 실패하더라도 <xref:System.Xml.XPath.XPathNavigator>는 변경되지 않습니다.  
   
  <xref:System.Xml.XPath.XPathNavigator>는 결과 트리 조각을 반복하는 데 사용되는 클래스입니다. 다음 코드 샘플에서는 XML을 포함하는 `fragment` 매개 변수로 함수를 호출하여 스타일시트 내부에서 결과 트리 조각을 만듭니다.  
   
@@ -70,7 +73,7 @@ ms.lasthandoff: 10/18/2017
 <root>Some text</root>  
 ```  
   
- 다음 코드에서는 **test.xsl** 스타일 시트 및 **test.xml** 입력 데이터를 필터링 합니다.  
+ 다음 코드에서는 **test.xsl** 스타일시트와 **test.xml** 입력 데이터를 사용합니다.  
   
 ```vb  
 Imports System  
@@ -117,7 +120,7 @@ public class sample
 ```  
   
 ## <a name="output"></a>출력  
- 변환의 결과 파일에서 찾은 **out.xml**:  
+ 변환 결과는 **out.xml** 파일에 표시됩니다.  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8"?>Joe  

@@ -1,5 +1,5 @@
 ---
-title: ".NET의 형식 서식 지정"
+title: ".NET의 서식 지정 형식"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net
@@ -31,17 +31,20 @@ helpviewer_keywords:
 - custom formatting [.NET Framework]
 - strings [.NET Framework], formatting
 ms.assetid: 0d1364da-5b30-4d42-8e6b-03378343343f
-caps.latest.revision: "43"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 816337ead810be405339a0616798a06689b97315
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 201212251bf99e5a5bab7685544079968bbebdb1
+ms.sourcegitcommit: 6a9030eb5bd0f00e1d144f81958adb195cfb1f6f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 01/10/2018
 ---
-# <a name="formatting-types-in-net"></a>.NET의 형식 서식 지정
+# <a name="formatting-types-in-net"></a>.NET의 서식 지정 형식
 <a name="Introduction"></a> 형식 지정은 대개 결과 문자열을 사용자에게 표시하거나 deserialize하여 원본 데이터 형식으로 복원하기 위해 클래스, 구조체 또는 열거형 값의 인스턴스를 해당 문자열 표현으로 변환하는 프로세스입니다. 이 변환 프로세스에는 다음과 같은 여러 가지 문제점이 나타날 수 있습니다.  
   
 -   내부적으로 값을 저장하는 방식에 사용자가 원하는 표시 방식이 반영되지 않을 수 있습니다. 예를 들어, 전화 번호가 사용자에게 친숙하지 않은 8009999999 형태로 저장될 수 있습니다. 이 전화 번호는 800-999-9999로 표시되어야 합니다. 이러한 방식으로 숫자의 형식을 지정하는 예제는 [사용자 지정 형식 문자열](#customStrings) 단원을 참조하세요.  
@@ -71,7 +74,7 @@ ms.lasthandoff: 10/18/2017
   
     -   [사용자 지정 형식 문자열](#customStrings)  
   
-    -   [.NET 클래스 라이브러리 형식 및 형식 문자열](#stringRef)  
+    -   [서식 문자열 및 .NET 클래스 라이브러리 형식](#stringRef)  
   
 -   [형식 공급자 및 IFormatProvider 인터페이스를 사용하여 문화권 구분 형식 지정](#FormatProviders)  
   
@@ -91,7 +94,7 @@ ms.lasthandoff: 10/18/2017
   
 <a name="NetFormatting"></a>   
 ## <a name="formatting-in-net"></a>.NET의 형식 지정  
- 서식을 지정 하기 위한 기본 메커니즘은의 기본 구현에서 <xref:System.Object.ToString%2A?displayProperty=nameWithType> 에서 설명 하는 메서드는 [ToString 메서드를 사용 하 여 서식 기본](#DefaultToString) 이 항목의 뒷부분에 나오는 섹션. 그러나 .NET에서는 기본 형식 지정 지원을 수정하고 확장할 수 있는 여러 가지 방법을 제공합니다. 이러한 요구 사항은 다음과 같습니다.  
+ 서식 지정의 기본 메커니즘은 이 항목의 뒷부분에 나오는 [ToString 메서드를 사용한 기본 형식 지정](#DefaultToString) 섹션에서 설명하는 <xref:System.Object.ToString%2A?displayProperty=nameWithType> 메서드의 기본 구현입니다. 그러나 .NET에서는 기본 형식 지정 지원을 수정하고 확장할 수 있는 여러 가지 방법을 제공합니다. 이러한 요구 사항은 다음과 같습니다.  
   
 -   <xref:System.Object.ToString%2A?displayProperty=nameWithType> 메서드를 재정의하여 개체의 값에 대한 사용자 지정 문자열 표현을 정의합니다. 자세한 내용은 이 항목의 뒷부분에 나오는 [ToString 메서드 재정의](#OverrideToString) 단원을 참조하세요.  
   
@@ -121,7 +124,7 @@ ms.lasthandoff: 10/18/2017
   
 <a name="DefaultToString"></a>   
 ## <a name="default-formatting-using-the-tostring-method"></a>ToString 메서드를 사용한 기본 형식 지정  
- <xref:System.Object?displayProperty=nameWithType>에서 파생되는 모든 형식은 기본적으로 형식의 이름을 반환하는 매개 변수가 없는 `ToString` 메서드를 상속합니다. 다음 예제에서는 기본 `ToString` 메서드를 보여 줍니다. 이 예제에서는 구현이 없는 `Automobile` 이라는 클래스를 정의합니다. 클래스가 인스턴스화되고 `ToString` 메서드가 호출되면 해당 형식 이름이 표시됩니다. 예제에서는 `ToString` 메서드를 명시적으로 호출하지 않습니다. <xref:System.Console.WriteLine%28System.Object%29?displayProperty=nameWithType> 메서드는 인수로 전달되는 개체의 `ToString` 메서드를 암시적으로 호출합니다.  
+ <xref:System.Object?displayProperty=nameWithType>에서 파생되는 모든 형식은 기본적으로 형식의 이름을 반환하는 매개 변수가 없는 `ToString` 메서드를 상속합니다. 다음 예제에서는 기본 `ToString` 메서드를 보여줍니다. 이 예제에서는 구현이 없는 `Automobile` 이라는 클래스를 정의합니다. 클래스가 인스턴스화되고 `ToString` 메서드가 호출되면 해당 형식 이름이 표시됩니다. 예제에서는 `ToString` 메서드를 명시적으로 호출하지 않습니다. <xref:System.Console.WriteLine%28System.Object%29?displayProperty=nameWithType> 메서드는 인수로 전달되는 개체의 `ToString` 메서드를 암시적으로 호출합니다.  
   
  [!code-csharp[Conceptual.Formatting.Overview#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.formatting.overview/cs/default1.cs#1)]
  [!code-vb[Conceptual.Formatting.Overview#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.formatting.overview/vb/default1.vb#1)]  
@@ -143,7 +146,7 @@ ms.lasthandoff: 10/18/2017
  [!code-csharp[Conceptual.Formatting.Overview#2](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.formatting.overview/cs/overrides1.cs#2)]
  [!code-vb[Conceptual.Formatting.Overview#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.formatting.overview/vb/overrides1.vb#2)]  
   
- .NET에는 `ToString` 이름 대신 개체의 값을 표시 하려면 각 기본 값 형식의 메서드 재정의 되었습니다. 다음 표에는 각 기본 형식의 재정의가 나와 있습니다. 재정의된 메서드의 대부분은 `ToString` 메서드의 다른 오버로드를 호출하고 이를 해당 형식에 대한 일반적인 형식을 정의하는 "G" 형식 지정자와 현재 문화권을 나타내는 <xref:System.IFormatProvider> 개체에 전달합니다.  
+ .NET에서 각 기본 값 형식의 `ToString` 메서드는 개체의 이름 대신 개체의 값을 표시하도록 재정의되었습니다. 다음 표에는 각 기본 형식의 재정의가 나와 있습니다. 재정의된 메서드의 대부분은 `ToString` 메서드의 다른 오버로드를 호출하고 이를 해당 형식에 대한 일반적인 형식을 정의하는 "G" 형식 지정자와 현재 문화권을 나타내는 <xref:System.IFormatProvider> 개체에 전달합니다.  
   
 |형식|ToString 재정의|  
 |----------|-----------------------|  
@@ -178,7 +181,7 @@ ms.lasthandoff: 10/18/2017
   
  .NET에서는 모든 숫자 형식, 날짜/시간 형식 및 열거형 형식에 대한 표준 형식 지정자 집합을 정의합니다. 예를 들어, 이러한 각 범주는 해당 형식 값에 대한 일반적인 문자열 표현을 정의하는 "G" 표준 형식 지정자를 지원합니다.  
   
- 열거형 형식의 표준 형식 문자열은 값의 문자열 표현을 직접 제어합니다. 열거형 값의 `ToString` 메서드에 전달된 형식 문자열은 값이 문자열 이름("G" 및 "F" 형식 지정자), 내부 정수 값("D" 형식 지정자) 또는 16진수 값("X" 형식 지정자)을 사용하여 표시되는지 여부를 결정합니다. 다음 예제에서는 표준 형식 문자열을 사용하여 <xref:System.DayOfWeek> 열거형 값의 형식을 지정하는 방법을 보여 줍니다.  
+ 열거형 형식의 표준 형식 문자열은 값의 문자열 표현을 직접 제어합니다. 열거형 값의 `ToString` 메서드에 전달된 형식 문자열은 값이 문자열 이름("G" 및 "F" 형식 지정자), 내부 정수 값("D" 형식 지정자) 또는 16진수 값("X" 형식 지정자)을 사용하여 표시되는지 여부를 결정합니다. 다음 예제에서는 표준 형식 문자열을 사용하여 <xref:System.DayOfWeek> 열거형 값의 형식을 지정하는 방법을 보여줍니다.  
   
  [!code-csharp[Conceptual.Formatting.Overview#4](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.formatting.overview/cs/standard1.cs#4)]
  [!code-vb[Conceptual.Formatting.Overview#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.formatting.overview/vb/standard1.vb#4)]  
@@ -214,7 +217,7 @@ ms.lasthandoff: 10/18/2017
   
  표준 숫자 서식 지정 문자열에 대한 자세한 내용은 [Standard Numeric Format Strings](../../../docs/standard/base-types/standard-numeric-format-strings.md)을 참조하세요.  
   
- 날짜 및 시간 값의 표준 형식 문자열은 특정 <xref:System.Globalization.DateTimeFormatInfo> 속성에 저장된 사용자 지정 형식 문자열의 별칭입니다. 예를 들어, "D" 형식 지정자를 사용하여 날짜 및 시간 값의 `ToString` 메서드를 호출하면 현재 문화권의 <xref:System.Globalization.DateTimeFormatInfo.LongDatePattern%2A?displayProperty=nameWithType> 속성에 저장된 사용자 지정 형식 문자열을 사용하여 날짜 및 시간이 표시됩니다. (사용자 지정 형식 문자열에 대 한 자세한 내용은 참조는 [절로](#customStrings).) 다음 예제에서는 이러한 관계를 보여 줍니다.  
+ 날짜 및 시간 값의 표준 형식 문자열은 특정 <xref:System.Globalization.DateTimeFormatInfo> 속성에 저장된 사용자 지정 형식 문자열의 별칭입니다. 예를 들어, "D" 형식 지정자를 사용하여 날짜 및 시간 값의 `ToString` 메서드를 호출하면 현재 문화권의 <xref:System.Globalization.DateTimeFormatInfo.LongDatePattern%2A?displayProperty=nameWithType> 속성에 저장된 사용자 지정 형식 문자열을 사용하여 날짜 및 시간이 표시됩니다. (사용자 지정 서식 문자열에 대한 자세한 내용은 [다음 섹션](#customStrings)을 참조하세요.) 다음 예제에서는 이러한 관계를 보여줍니다.  
   
  [!code-csharp[Conceptual.Formatting.Overview#5](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.formatting.overview/cs/alias1.cs#5)]
  [!code-vb[Conceptual.Formatting.Overview#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.formatting.overview/vb/alias1.vb#5)]  
@@ -258,17 +261,15 @@ ms.lasthandoff: 10/18/2017
  [맨 위로 이동](#Introduction)  
   
 <a name="stringRef"></a>   
-### <a name="format-strings-and-net-class-library-types"></a>.NET 클래스 라이브러리 형식 및 형식 문자열  
- 모든 숫자 형식(즉, <xref:System.Byte>, <xref:System.Decimal>, <xref:System.Double>, <xref:System.Int16>, <xref:System.Int32>, <xref:System.Int64>, <xref:System.SByte>, <xref:System.Single>, <xref:System.UInt16>, <xref:System.UInt32>, <xref:System.UInt64>, <xref:System.Numerics.BigInteger> 형식)  
-  
- 및 <xref:System.DateTime>, <xref:System.DateTimeOffset>, <xref:System.TimeSpan>, <xref:System.Guid>와 모든 열거형 형식은 형식 문자열을 사용한 서식 지정을 지원합니다. 각 형식에서 지원되는 형식 문자열에 대한 자세한 내용은 다음 항목을 참조하세요.  
+### <a name="format-strings-and-net-types"></a>형식 문자열 및 .NET 형식  
+ 모든 숫자 형식(즉, <xref:System.Byte>, <xref:System.Decimal>, <xref:System.Double>, <xref:System.Int16>, <xref:System.Int32>, <xref:System.Int64>, <xref:System.SByte>, <xref:System.Single>, <xref:System.UInt16>, <xref:System.UInt32>,<xref:System.UInt64> 및 <xref:System.Numerics.BigInteger> 형식)과 <xref:System.DateTime>, <xref:System.DateTimeOffset>, <xref:System.TimeSpan>, <xref:System.Guid> 및 모든 열거형 형식은 서식 문자열을 사용한 서식 지정을 지원합니다. 각 형식에서 지원되는 형식 문자열에 대한 자세한 내용은 다음 항목을 참조하세요.  
   
 |제목|정의|  
 |-----------|----------------|  
 |[Standard Numeric Format Strings](../../../docs/standard/base-types/standard-numeric-format-strings.md)|숫자 값의 일반적으로 사용되는 문자열 표현을 만드는 표준 형식 문자열에 대해 설명합니다.|  
 |[Custom Numeric Format Strings](../../../docs/standard/base-types/custom-numeric-format-strings.md)|숫자 값의 응용 프로그램별 형식을 만드는 사용자 지정 형식 문자열에 대해 설명합니다.|  
-|[Standard Date and Time Format Strings](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)|<xref:System.DateTime> 값의 일반적으로 사용되는 문자열 표현을 만드는 표준 형식 문자열에 대해 설명합니다.|  
-|[Custom Date and Time Format Strings](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)|<xref:System.DateTime> 값의 응용 프로그램별 형식을 만드는 사용자 지정 형식 문자열에 대해 설명합니다.|  
+|[표준 날짜 및 시간 형식 문자열](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)|<xref:System.DateTime> 및 <xref:System.DateTimeOffset> 값의 일반적으로 사용되는 문자열 표현을 만드는 표준 서식 문자열에 대해 설명합니다.|  
+|[사용자 지정 날짜 및 시간 형식 문자열](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)|<xref:System.DateTime> 및 <xref:System.DateTimeOffset> 값의 응용 프로그램별 서식을 만드는 사용자 지정 서식 문자열에 대해 설명합니다.|  
 |[표준 TimeSpan 서식 문자열](../../../docs/standard/base-types/standard-timespan-format-strings.md)|시간 간격의 일반적으로 사용되는 문자열 표현을 만드는 표준 형식 문자열에 대해 설명합니다.|  
 |[사용자 지정 TimeSpan 서식 문자열](../../../docs/standard/base-types/custom-timespan-format-strings.md)|시간 간격의 응용 프로그램별 형식을 만드는 사용자 지정 형식 문자열에 대해 설명합니다.|  
 |[Enumeration Format Strings](../../../docs/standard/base-types/enumeration-format-strings.md)|열거형 값의 문자열 표현을 만드는 데 사용되는 표준 형식 문자열에 대해 설명합니다.|  
@@ -276,7 +277,7 @@ ms.lasthandoff: 10/18/2017
   
 <a name="FormatProviders"></a>   
 ## <a name="culture-sensitive-formatting-with-format-providers-and-the-iformatprovider-interface"></a>형식 공급자 및 IFormatProvider 인터페이스를 사용하여 문화권 구분 형식 지정  
- 형식 지정자를 사용하여 개체의 형식 지정을 사용자 지정할 수 있기는 하지만 의미 있는 개체의 문자열 표현을 만들려면 추가 형식 지정 정보가 필요한 경우가 종종 있습니다. 예를 들어, C" 표준 형식 문자열이나 "$ #,#.00" 같은 사용자 지정 형식 문자열을 사용하여 숫자의 형식을 통화 값으로 지정하려면 최소한 올바른 통화 기호, 그룹 구분 기호 및 소수 구분 기호에 대한 정보를 형식 지정된 문자열에 포함할 수 있어야 합니다. .NET에서는이 추가 형식 지정 정보를 통해 사용할 수는 <xref:System.IFormatProvider> 의 하나 이상의 오버 로드에 대 한 매개 변수로 제공 되는 인터페이스는 `ToString` 메서드 숫자 형식과 날짜 및 시간 형식. <xref:System.IFormatProvider>구현은은 문화권별 형식을 지원 하기 위해.NET에서 사용 됩니다. 다음 예제에서는 서로 다른 문화권을 나타내는 세 <xref:System.IFormatProvider> 개체를 사용하여 형식을 지정할 때 개체의 문자열 표현이 어떻게 바뀌는지 보여 줍니다.  
+ 형식 지정자를 사용하여 개체의 형식 지정을 사용자 지정할 수 있기는 하지만 의미 있는 개체의 문자열 표현을 만들려면 추가 형식 지정 정보가 필요한 경우가 종종 있습니다. 예를 들어, C" 표준 형식 문자열이나 "$ #,#.00" 같은 사용자 지정 형식 문자열을 사용하여 숫자의 형식을 통화 값으로 지정하려면 최소한 올바른 통화 기호, 그룹 구분 기호 및 소수 구분 기호에 대한 정보를 형식 지정된 문자열에 포함할 수 있어야 합니다. .NET에서는 이러한 추가 서식 지정 정보를 <xref:System.IFormatProvider> 인터페이스를 통해 사용할 수 있습니다. 이러한 인터페이스는 숫자 형식과 날짜 및 시간 형식의 `ToString` 메서드에 대한 하나 이상의 오버로드에 매개 변수로 제공됩니다. <xref:System.IFormatProvider> 구현은 .NET에서 문화권별 서식 지정을 지원하는 데 사용됩니다. 다음 예제에서는 서로 다른 문화권을 나타내는 세 <xref:System.IFormatProvider> 개체를 사용하여 형식을 지정할 때 개체의 문자열 표현이 어떻게 바뀌는지 보여줍니다.  
   
  [!code-csharp[Conceptual.Formatting.Overview#11](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.formatting.overview/cs/iformatprovider1.cs#11)]
  [!code-vb[Conceptual.Formatting.Overview#11](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.formatting.overview/vb/iformatprovider1.vb#11)]  
@@ -285,7 +286,7 @@ ms.lasthandoff: 10/18/2017
   
  <xref:System.IFormatProvider.GetFormat%2A?displayProperty=nameWithType>은 콜백 메서드입니다. `ToString` 매개 변수가 포함된 <xref:System.IFormatProvider> 메서드 오버로드를 호출하면 해당 <xref:System.IFormatProvider.GetFormat%2A> 개체의 <xref:System.IFormatProvider> 메서드가 호출됩니다. <xref:System.IFormatProvider.GetFormat%2A> 메서드는 `formatType` 매개 변수에 지정된 대로 필요한 형식 지정 정보를 제공하는 개체를 `ToString` 메서드에 반환합니다.  
   
- <xref:System.IFormatProvider>형식의 매개 변수를 포함하는 형식 지정 또는 문자열 변환 메서드가 많이 있기는 하지만 대부분의 경우 메서드가 호출될 때 매개 변수의 값이 무시됩니다. 다음 표에서는 매개 변수를 사용하는 형식 지정 메서드와 이러한 메서드가 <xref:System.Type> 메서드로 전달하는 <xref:System.IFormatProvider.GetFormat%2A?displayProperty=nameWithType> 개체의 형식을 보여 줍니다.  
+ <xref:System.IFormatProvider>형식의 매개 변수를 포함하는 형식 지정 또는 문자열 변환 메서드가 많이 있기는 하지만 대부분의 경우 메서드가 호출될 때 매개 변수의 값이 무시됩니다. 다음 표에서는 매개 변수를 사용하는 형식 지정 메서드와 이러한 메서드가 <xref:System.Type> 메서드로 전달하는 <xref:System.IFormatProvider.GetFormat%2A?displayProperty=nameWithType> 개체의 형식을 보여줍니다.  
   
 |메서드|`formatType` 매개 변수의 형식|  
 |------------|------------------------------------|  
@@ -297,7 +298,7 @@ ms.lasthandoff: 10/18/2017
 > [!NOTE]
 >  숫자 형식과 날짜 및 시간 형식의 `ToString` 메서드는 오버로드되며, 일부 오버로드에만 <xref:System.IFormatProvider> 매개 변수가 포함됩니다. 메서드에 <xref:System.IFormatProvider> 형식의 매개 변수가 없으면 <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=nameWithType> 속성에 의해 반환되는 개체가 대신 전달됩니다. 예를 들어, 기본 <xref:System.Int32.ToString?displayProperty=nameWithType> 메서드를 호출하면 결과적으로 `Int32.ToString("G", System.Globalization.CultureInfo.CurrentCulture)` 같은 메서드가 호출됩니다.  
   
- .NET 3 개의 클래스를 구현 하는 제공 <xref:System.IFormatProvider>:  
+ .NET에는 <xref:System.IFormatProvider>를 구현하는 세 가지 클래스가 있습니다.  
   
 -   특정 문화권의 날짜 및 시간 값에 대한 형식 지정 정보를 제공하는<xref:System.Globalization.DateTimeFormatInfo>클래스. 이 클래스에 대해 <xref:System.IFormatProvider.GetFormat%2A?displayProperty=nameWithType>을 구현하면 해당 클래스의 인스턴스가 반환됩니다.  
   
@@ -376,7 +377,7 @@ ms.lasthandoff: 10/18/2017
   
  형식 항목을 해당 개체의 문자열 표현으로 바꾸는 것 외에도 형식 항목을 통해 다음을 제어할 수 있습니다.  
   
--   개체가 <xref:System.IFormattable> 인터페이스를 구현하고 형식 문자열을 지원하는 경우 개체가 문자열로 표현되는 특정 방식. 이렇게 하려면 형식 항목의 인덱스 뒤에 `:` (콜론) 및 유효한 형식 문자열을 추가합니다. 이전 예제에서는 날짜 값의 형식을 "d"(짧은 날짜 패턴) 형식 문자열(예: `{0:d}`)로 지정하고 숫자 값의 형식을 "C2" 형식 문자열(예: `{2:C2}` )로 지정하여 소수 2자리의 통화 값으로 숫자를 나타냈습니다.  
+-   개체가 <xref:System.IFormattable> 인터페이스를 구현하고 형식 문자열을 지원하는 경우 개체가 문자열로 표현되는 특정 방식. 이렇게 하려면 형식 항목의 인덱스 뒤에 `:`(콜론) 및 유효한 형식 문자열을 추가합니다. 이전 예제에서는 날짜 값의 형식을 "d"(짧은 날짜 패턴) 형식 문자열(예: `{0:d}`)로 지정하고 숫자 값의 형식을 "C2" 형식 문자열(예: `{2:C2}` )로 지정하여 소수 2자리의 통화 값으로 숫자를 나타냈습니다.  
   
 -   개체의 문자열 표현을 포함하는 필드의 너비 및 해당 필드의 문자열 표현 맞춤. 이렇게 하려면 형식 항목의 인덱스 뒤에 `,` (쉼표) 및 필드 너비를 추가합니다. 필드 너비가 양수 값이면 문자열이 필드에 오른쪽 맞춤되고, 필드 너비가 음수 값이면 왼쪽 맞춤됩니다. 다음 예제에서는 날짜 값을 20자 필드에 왼쪽 맞춤하고, 소수 1자리의 10진수 값을 11자 필드에 오른쪽 맞춤합니다.  
   
@@ -400,7 +401,7 @@ ms.lasthandoff: 10/18/2017
  [!code-csharp[Conceptual.Formatting.Overview#15](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.formatting.overview/cs/icustomformatter1.cs#15)]
  [!code-vb[Conceptual.Formatting.Overview#15](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.formatting.overview/vb/icustomformatter1.vb#15)]  
   
- 다음 예제에서는 `ByteByByteFormatter` 클래스를 사용하여 정수 값의 형식을 지정합니다. <xref:System.ICustomFormatter.Format%2A?displayProperty=nameWithType> 두 번째에서 메서드를 두 번 이상 호출 <xref:System.String.Format%28System.IFormatProvider%2CSystem.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> 메서드 호출을 하는 기본 <xref:System.Globalization.NumberFormatInfo> 때문에 세 번째 메서드 호출에서 사용 되는 공급자는 합니다.`ByteByByteFormatter.Format` )를 반환하기 때문에 세 번째 메서드 호출에서는 기본`Nothing` )와 동일한 형식 지정자에 대한 지원.  
+ 다음 예제에서는 `ByteByByteFormatter` 클래스를 사용하여 정수 값의 형식을 지정합니다. <xref:System.ICustomFormatter.Format%2A?displayProperty=nameWithType> 메서드는 두 번째 <xref:System.String.Format%28System.IFormatProvider%2CSystem.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> 메서드 호출에서 두 번 이상 호출되고 세 번째 메서드 호출에서는 기본 <xref:System.Globalization.NumberFormatInfo> 공급자가 사용된다는 점에 유의하세요. 그 이유는 .`ByteByByteFormatter.Format` 메서드가 "N0" 서식 문자열을 인식하지 못하고 null 참조(Visual Basic의 경우 `Nothing`)를 반환하기 때문입니다.  
   
  [!code-csharp[Conceptual.Formatting.Overview#16](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.formatting.overview/cs/icustomformatter1.cs#16)]
  [!code-vb[Conceptual.Formatting.Overview#16](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.formatting.overview/vb/icustomformatter1.vb#16)]  
@@ -414,8 +415,8 @@ ms.lasthandoff: 10/18/2017
 |-----------|----------------|  
 |[Standard Numeric Format Strings](../../../docs/standard/base-types/standard-numeric-format-strings.md)|숫자 값의 일반적으로 사용되는 문자열 표현을 만드는 표준 형식 문자열에 대해 설명합니다.|  
 |[Custom Numeric Format Strings](../../../docs/standard/base-types/custom-numeric-format-strings.md)|숫자 값의 응용 프로그램별 형식을 만드는 사용자 지정 형식 문자열에 대해 설명합니다.|  
-|[Standard Date and Time Format Strings](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)|<xref:System.DateTime> 값의 일반적으로 사용되는 문자열 표현을 만드는 표준 형식 문자열에 대해 설명합니다.|  
-|[Custom Date and Time Format Strings](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)|<xref:System.DateTime> 값의 응용 프로그램별 형식을 만드는 사용자 지정 형식 문자열에 대해 설명합니다.|  
+|[표준 날짜 및 시간 형식 문자열](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)|<xref:System.DateTime> 값의 일반적으로 사용되는 문자열 표현을 만드는 표준 형식 문자열에 대해 설명합니다.|  
+|[사용자 지정 날짜 및 시간 형식 문자열](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)|<xref:System.DateTime> 값의 응용 프로그램별 형식을 만드는 사용자 지정 형식 문자열에 대해 설명합니다.|  
 |[표준 TimeSpan 서식 문자열](../../../docs/standard/base-types/standard-timespan-format-strings.md)|시간 간격의 일반적으로 사용되는 문자열 표현을 만드는 표준 형식 문자열에 대해 설명합니다.|  
 |[사용자 지정 TimeSpan 서식 문자열](../../../docs/standard/base-types/custom-timespan-format-strings.md)|시간 간격의 응용 프로그램별 형식을 만드는 사용자 지정 형식 문자열에 대해 설명합니다.|  
 |[Enumeration Format Strings](../../../docs/standard/base-types/enumeration-format-strings.md)|열거형 값의 문자열 표현을 만드는 데 사용되는 표준 형식 문자열에 대해 설명합니다.|  

@@ -18,18 +18,21 @@ helpviewer_keywords:
 - events [.NET Framework], consuming
 - Web Forms, event handling
 ms.assetid: 73bf8638-c4ec-4069-b0bb-a1dc79b92e32
-caps.latest.revision: "21"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: bdb0a6be309f27348ba13bf93fd5aedd3c66a792
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: d0fec2ed34968bfa8c296f08739dec28e6a6eab9
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="how-to-consume-events-in-a-web-forms-application"></a>방법: Web Forms 응용 프로그램에서 이벤트 사용
-ASP.NET Web Forms 응용 프로그램의 주된 활용 방식은 웹 페이지에 컨트롤을 채운 다음 사용자가 클릭하는 컨트롤에 따라 특정 작업을 수행하는 것입니다. 예를 들어, <xref:System.Web.UI.WebControls.Button?displayProperty=nameWithType> 컨트롤은 사용자가 웹 페이지에서 해당 컨트롤을 클릭하면 이벤트를 발생시킵니다. 응용 프로그램 이벤트를 처리 하 여 해당 단추 클릭에 대 한 적절 한 응용 프로그램 논리를 수행할 수 있습니다.  
+ASP.NET Web Forms 응용 프로그램의 주된 활용 방식은 웹 페이지에 컨트롤을 채운 다음 사용자가 클릭하는 컨트롤에 따라 특정 작업을 수행하는 것입니다. 예를 들어, <xref:System.Web.UI.WebControls.Button?displayProperty=nameWithType> 컨트롤은 사용자가 웹 페이지에서 해당 컨트롤을 클릭하면 이벤트를 발생시킵니다. 이벤트를 처리하면 응용 프로그램이 해당 단추 클릭에 대해 적절한 응용 프로그램 논리를 수행할 수 있습니다.  
   
 ### <a name="to-handle-a-button-click-event-on-a-webpage"></a>웹 페이지에서 단추 클릭 이벤트를 처리하려면  
   
@@ -54,7 +57,7 @@ ASP.NET Web Forms 응용 프로그램의 주된 활용 방식은 웹 페이지�
     End Sub  
     ```  
   
-     <xref:System.Web.UI.WebControls.Button.Click> 이벤트가 사용 하는 <xref:System.EventHandler> 대리자 형식에 대 한 클래스 및 <xref:System.EventArgs> 이벤트 데이터에 대 한 클래스입니다. ASP.NET 페이지 프레임워크에서는 <xref:System.EventHandler>의 인스턴스를 만드는 코드를 자동으로 생성하고 이 대리자 인스턴스를 <xref:System.Web.UI.WebControls.Button.Click> 인스턴스의 <xref:System.Web.UI.WebControls.Button> 이벤트에 추가합니다.  
+     <xref:System.Web.UI.WebControls.Button.Click> 이벤트는 대리자 형식에 <xref:System.EventHandler> 클래스를 사용하고 이벤트 데이터에 <xref:System.EventArgs> 클래스를 사용합니다. ASP.NET 페이지 프레임워크에서는 <xref:System.EventHandler>의 인스턴스를 만드는 코드를 자동으로 생성하고 이 대리자 인스턴스를 <xref:System.Web.UI.WebControls.Button.Click> 인스턴스의 <xref:System.Web.UI.WebControls.Button> 이벤트에 추가합니다.  
   
 3.  2단계에서 정의한 이벤트 처리기 메서드에서 코드를 추가하여 이벤트가 발생할 때 필요한 모든 작업을 수행합니다.  
   

@@ -11,26 +11,30 @@ ms.topic: article
 dev_langs:
 - csharp
 - vb
-helpviewer_keywords: parallel foreach loop, how to use local state
+helpviewer_keywords:
+- parallel foreach loop, how to use local state
 ms.assetid: 24b10041-b30b-45cb-aa65-66cf568ca76d
-caps.latest.revision: "18"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 6102274f75d2fe66b89f917cf9095d3a6dfaa3e2
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 4c65edd8959cbf5f83e3353770f71cad130953d1
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="how-to-write-a-parallelforeach-loop-with-thread-local-variables"></a>방법: 스레드 로컬 변수를 사용하는 Parallel.ForEach 루프 작성
-다음 예제에서는 스레드 지역 변수를 사용하는 <xref:System.Threading.Tasks.Parallel.ForEach%2A> 메서드를 작성하는 방법을 보여 줍니다. <xref:System.Threading.Tasks.Parallel.ForEach%2A> 루프가 실행되면 해당 소스 컬렉션이 여러 파티션으로 나뉩니다. 각 파티션은 "스레드 지역" 변수의 자체 복사본을 갖게 됩니다. (여기서 "스레드 지역"이라는 용어는 다소 부정확합니다. 일부 경우 두 개의 파티션이 동일한 스레드에서 실행될 수 있기 때문입니다.)  
+다음 예제에서는 스레드 지역 변수를 사용하는 <xref:System.Threading.Tasks.Parallel.ForEach%2A> 메서드를 작성하는 방법을 보여줍니다. <xref:System.Threading.Tasks.Parallel.ForEach%2A> 루프가 실행되면 해당 소스 컬렉션이 여러 파티션으로 나뉩니다. 각 파티션은 "스레드 지역" 변수의 자체 복사본을 갖게 됩니다. (여기서 "스레드 지역"이라는 용어는 다소 부정확합니다. 일부 경우 두 개의 파티션이 동일한 스레드에서 실행될 수 있기 때문입니다.)  
   
- 이 예제의 코드와 매개 변수는 해당 <xref:System.Threading.Tasks.Parallel.For%2A> 메서드와 매우 흡사합니다. 자세한 내용은 참조 [하는 방법: 스레드 로컬 변수를 사용 하는 Parallel.For 루프 작성](../../../docs/standard/parallel-programming/how-to-write-a-parallel-for-loop-with-thread-local-variables.md)합니다.  
+ 이 예제의 코드와 매개 변수는 해당 <xref:System.Threading.Tasks.Parallel.For%2A> 메서드와 매우 흡사합니다. 자세한 내용은 [방법: 스레드 로컬 변수를 사용하는 Parallel.For 루프 작성](../../../docs/standard/parallel-programming/how-to-write-a-parallel-for-loop-with-thread-local-variables.md)을 참조하세요.  
   
  <xref:System.Threading.Tasks.Parallel.ForEach%2A> 루프에 스레드 지역 변수를 사용하려면 두 가지 형식의 매개 변수를 사용하는 메서드 오버로드 중 하나를 호출해야 합니다. 첫 번째 형식 매개 변수인 `TSource`는 소스 요소의 형식을 지정하고, 두 번째 형식 매개 변수인 `TLocal`은 스레드 지역 변수의 형식을 지정합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제에서는 <xref:System.Threading.Tasks.Parallel.ForEach%60%602%28System.Collections.Generic.IEnumerable%7B%60%600%7D%2CSystem.Func%7B%60%601%7D%2CSystem.Func%7B%60%600%2CSystem.Threading.Tasks.ParallelLoopState%2C%60%601%2C%60%601%7D%2CSystem.Action%7B%60%601%7D%29?displayProperty=nameWithType> 오버로드를 호출하여 1백만 개의 요소가 포함된 배열의 합계를 계산합니다. 이 오버로드에는 다음과 같은 4개의 매개 변수가 있습니다.  
   
 -   `source`: 데이터 소스이며, <xref:System.Collections.Generic.IEnumerable%601>를 구현해야 합니다. 이 예제에서 데이터 소스는 `IEnumerable<Int32>` 메서드에서 반환된 1백만 개의 멤버 <xref:System.Linq.Enumerable.Range%2A?displayProperty=nameWithType> 개체입니다.  

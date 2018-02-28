@@ -11,44 +11,48 @@ ms.topic: article
 dev_langs:
 - csharp
 - vb
-helpviewer_keywords: PLINQ queries, order preservation
+helpviewer_keywords:
+- PLINQ queries, order preservation
 ms.assetid: 10d202bc-19e1-4b5c-bbf1-9a977322a9ca
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 060459cf8f408e40ddc394fbcda6a022ec6379de
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 164dce7c58e1ce44972e0e390e4f0bf2be8de548
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="order-preservation-in-plinq"></a>PLINQ에서 순서 유지
-PLINQ의 목표는 정확성을 유지 하면서 성능을 극대화할 수입니다. 쿼리 가능한 한 빠르게 실행 되지만 여전히 올바른 결과 생성 해야 합니다. 경우에 따라 정확성 필요 소스 시퀀스의 순서를 보존 해야 합니다. 그러나 순서 계산이 수 있습니다. 따라서 기본적으로 PLINQ 유지 하지 않습니다는 소스 시퀀스의 순서. 이런 점에서 PLINQ 유사한 [!INCLUDE[vbtecdlinq](../../../includes/vbtecdlinq-md.md)], 하지만 순서는 유지 하는 LINQ to Objects와 다릅니다.  
+PLINQ에서 목표는 정확성을 유지하면서 성능을 최대화하는 것입니다. 쿼리는 가능한 한 빠르게 실행되지만 올바른 결과를 생성해야 합니다. 경우에 따라 정확성을 위해 소스 시퀀스의 순서를 유지해야 하지만 순서 지정의 계산 비용이 높을 수 있습니다. 따라서 기본적으로 PLINQ는 소스 시퀀스의 순서를 유지하지 않습니다. 이와 관련하여 PLINQ는 [!INCLUDE[vbtecdlinq](../../../includes/vbtecdlinq-md.md)]과 비슷하지만 순서를 유지하는 LINQ to Objects와는 다릅니다.  
   
- 기본 동작을 재정의 하려면 켤 수 있습니다 순서 유지를 사용 하 여는 <xref:System.Linq.ParallelEnumerable.AsOrdered%2A> 소스 시퀀스에는 연산자입니다. 사용 하 여 나중에 쿼리에서 순서 유지 해제 한 다음는 <xref:System.Linq.ParallelEnumerable.AsUnordered%2A> 메서드. 두 가지 방법, 쿼리는 쿼리를 병렬로 실행할 것인지를 결정 하는 추론에 따라 또는 순차적으로 처리 됩니다. 자세한 내용은 [PLINQ의 속도 향상 이해](../../../docs/standard/parallel-programming/understanding-speedup-in-plinq.md)를 참조하세요.  
+ 기본 동작을 재정의하려면 소스 시퀀스에서 <xref:System.Linq.ParallelEnumerable.AsOrdered%2A> 연산자를 사용하여 순서 유지 기능을 켤 수 있습니다. 그런 다음, <xref:System.Linq.ParallelEnumerable.AsUnordered%2A> 메서드를 사용하여 쿼리에서 나중에 순서 유지 기능을 끌 수 있습니다. 두 메서드를 모두 사용하면 쿼리를 병렬로 실행할지 또는 순차적으로 실행할지 여부를 결정하는 추론을 기반으로 쿼리가 처리됩니다. 자세한 내용은 [PLINQ의 속도 향상 이해](../../../docs/standard/parallel-programming/understanding-speedup-in-plinq.md)를 참조하세요.  
   
- 다음 예제에서는 어떤 방식으로든에서 결과 정렬 하려고 하지 않고도 조건을 일치 하는 모든 요소에 대해 필터링 하는 순서가 지정 되지 않은 병렬 쿼리를 보여 줍니다.  
+ 다음 예제는 어떤 방식으로든 결과의 순서를 지정하지 않고 조건과 일치하는 모든 요소에 대해 필터링되는 순서가 지정되지 않은 병렬 쿼리를 보여줍니다.  
   
  [!code-csharp[PLINQ#8](../../../samples/snippets/csharp/VS_Snippets_Misc/plinq/cs/plinqsamples.cs#8)]
  [!code-vb[PLINQ#8](../../../samples/snippets/visualbasic/VS_Snippets_Misc/plinq/vb/plinq2_vb.vb#8)]  
   
- 이 쿼리를 제외한 아니라 몇 가지 조건을 충족 시키는 1000 도시 조건을 만족 하는 소스 시퀀스의 처음 1000 개의 도시를 반드시 생성 하지 않습니다. PLINQ 쿼리 연산자에는 동시 작업으로 처리 하는 여러 개의 하위 시퀀스로 소스 시퀀스를 분할 합니다. 순서 유지를 지정 하지 않은 경우의 결과를 각 파티션에 임의의 순서로 쿼리의 다음 단계로 전달 됩니다. 또한 파티션 처리는 나머지 요소를 계속 하기 전에 결과의 하위 집합을 얻을 수도 있습니다. 결과 순서 될 때마다 다 수 있습니다. 응용 프로그램 운영 체제 스레드를 예약 하는 방법에 따라 달라 지므로이 제어할 수 없습니다.  
+ 이 쿼리는 조건을 충족하는 처음 1000개 도시를 소스 시퀀스에서 생성하기보다는 조건을 충족하는 1000개 도시 집합을 생성합니다. PLINQ 쿼리 연산자는 소스 시퀀스를 동시 작업으로 처리되는 여러 하위 시퀀스로 분할합니다. 순서 유지를 지정하지 않으면 각 파티션의 결과가 쿼리의 다음 단계에 임의 순서로 전달됩니다. 또한 파티션이 나머지 요소를 계속 처리하기 전에 결과 하위 집합을 생성할 수 있습니다. 결과 순서는 매번 다를 수 있습니다. 순서는 운영 체제가 스레드를 예약하는 방법에 따라 다르므로 응용 프로그램이 순서를 제어할 수 없습니다.  
   
- 다음 예제를 사용 하 여 기본 동작 재정의 <xref:System.Linq.ParallelEnumerable.AsOrdered%2A> 소스 시퀀스에는 연산자입니다. 이렇게 하면 <xref:System.Linq.ParallelEnumerable.Take%2A> 메서드가 소스 시퀀스에서 조건을 충족하는 처음 1000개의 도시를 반환합니다.  
+ 다음 예제에서는 소스 시퀀스에서 <xref:System.Linq.ParallelEnumerable.AsOrdered%2A> 연산자를 사용하여 기본 동작을 재정의합니다. 이렇게 하면 <xref:System.Linq.ParallelEnumerable.Take%2A> 메서드가 소스 시퀀스에서 조건을 충족하는 처음 1000개의 도시를 반환합니다.  
   
  [!code-csharp[PLINQ#9](../../../samples/snippets/csharp/VS_Snippets_Misc/plinq/cs/plinqsamples.cs#9)]
  [!code-vb[PLINQ#9](../../../samples/snippets/visualbasic/VS_Snippets_Misc/plinq/vb/plinq2_vb.vb#9)]  
   
- 그러나이 쿼리 아마도 실행 되지 않습니다 순서가 지정 되지 않은 버전으로 빠른 전체 파티션에서 원래 순서 지정 한 추적 하 고 병합 시 순서 지정이 일치 하는지 확인 해야 하기 때문에. 사용 하는 권장 따라서 <xref:System.Linq.ParallelEnumerable.AsOrdered%2A> 필요한 경우에 하 고 필요로 하는 쿼리 부분에 대해서만 합니다. 순서 유지는 더 이상 필요를 사용 하 여 <xref:System.Linq.ParallelEnumerable.AsUnordered%2A> 을 해제 합니다. 다음 예제에서는 두 개의 쿼리를 작성 하 여 이것을 달성 합니다.  
+ 그러나 이 쿼리는 전체 파티션에서 원래 순서를 추적하고 병합 시 순서가 일치하는지 확인해야 하므로 순서가 지정되지 않은 버전만큼 빠르게 실행되지 않을 수 있습니다. 따라서 <xref:System.Linq.ParallelEnumerable.AsOrdered%2A>는 필요한 경우에만, 그리고 필요한 쿼리의 파트에만 사용하는 것이 좋습니다. 순서 유지가 더 이상 필요하지 않으면 <xref:System.Linq.ParallelEnumerable.AsUnordered%2A>를 사용하여 기능을 끕니다. 다음 예제에서는 두 개의 쿼리를 작성하여 이 작업을 수행합니다.  
   
  [!code-csharp[PLINQ#6](../../../samples/snippets/csharp/VS_Snippets_Misc/plinq/cs/plinqsamples.cs#6)]
  [!code-vb[PLINQ#6](../../../samples/snippets/visualbasic/VS_Snippets_Misc/plinq/vb/plinq2_vb.vb#6)]  
   
- PLINQ 쿼리의 다른 부분에 대 한 주문 부과 연산자에서 생성 되는 시퀀스의 순서 유지 됨을 참고 합니다. 즉, 같은 연산자 <xref:System.Linq.ParallelEnumerable.OrderBy%2A> 및 <xref:System.Linq.ParallelEnumerable.ThenBy%2A> 를 호출 하 여 호출 된 것 처럼 처리 <xref:System.Linq.ParallelEnumerable.AsOrdered%2A>합니다.  
+ PLINQ는 나머지 쿼리에 대해 순서 포함 연산자에 의해 생성된 시퀀스의 순서를 유지합니다. 즉, <xref:System.Linq.ParallelEnumerable.OrderBy%2A> 및 <xref:System.Linq.ParallelEnumerable.ThenBy%2A> 같은 연산자는 뒤에 <xref:System.Linq.ParallelEnumerable.AsOrdered%2A>에 대한 호출이 실행되는 것처럼 처리됩니다.  
   
 ## <a name="query-operators-and-ordering"></a>쿼리 연산자 및 순서 지정  
- 다음 쿼리 연산자 소개 순서 유지 될 때까지 또는 쿼리에서 모든 후속 작업으로 <xref:System.Linq.ParallelEnumerable.AsUnordered%2A> 호출 됩니다.  
+ 다음 쿼리 연산자는 순서 유지를 쿼리의 모든 후속 작업에 포함하거나 <xref:System.Linq.ParallelEnumerable.AsUnordered%2A>가 호출될 때까지 포함합니다.  
   
 -   <xref:System.Linq.ParallelEnumerable.OrderBy%2A>  
   
@@ -58,7 +62,7 @@ PLINQ의 목표는 정확성을 유지 하면서 성능을 극대화할 수입�
   
 -   <xref:System.Linq.ParallelEnumerable.ThenByDescending%2A>  
   
- 다음 PLINQ 쿼리 연산자 경우에 따라 해야 올바른 결과 생성 하기 위해 정렬 된 소스 시퀀스:  
+ 다음 PLINQ 쿼리 연산자는 올바른 결과를 생성하기 위해 경우에 따라 순서가 지정된 소스 시퀀스가 필요할 수 있습니다.  
   
 -   <xref:System.Linq.ParallelEnumerable.Reverse%2A>  
   
@@ -70,63 +74,63 @@ PLINQ의 목표는 정확성을 유지 하면서 성능을 극대화할 수입�
   
 -   <xref:System.Linq.ParallelEnumerable.Zip%2A>  
   
- 일부 PLINQ 쿼리 연산자는 소스 시퀀스의 정렬 또는 순서가 지정 되지 않은 여부에 따라 다르게 동작 합니다. 다음 표에서 이러한 연산자를 나열합니다.  
+ 일부 PLINQ 쿼리 연산자는 소스 시퀀스의 순서가 지정되거나 순서가 지정되지 않았는지에 따라 다르게 동작합니다. 다음 표에 이러한 연산자가 나와 있습니다.  
   
-|연산자|소스 시퀀스 정렬 되는 경우의 결과|소스 시퀀스 정렬 되지 않은 경우의 결과|  
+|연산자|소스 시퀀스의 순서가 지정된 경우의 결과|소스 시퀀스의 순서가 지정되지 않은 경우의 결과|  
 |--------------|------------------------------------------------|--------------------------------------------------|  
-|<xref:System.Linq.ParallelEnumerable.Aggregate%2A>|결합성 없음 또는 비가 작업에 대 한 비결 정적 출력|결합성 없음 또는 비가 작업에 대 한 비결 정적 출력|  
+|<xref:System.Linq.ParallelEnumerable.Aggregate%2A>|비연관 또는 비누적 작업에 대한 비결정적 출력|비연관 또는 비누적 작업에 대한 비결정적 출력|  
 |<xref:System.Linq.ParallelEnumerable.All%2A>|적용할 수 없음|적용할 수 없음|  
 |<xref:System.Linq.ParallelEnumerable.Any%2A>|적용할 수 없음|적용할 수 없음|  
 |<xref:System.Linq.ParallelEnumerable.AsEnumerable%2A>|적용할 수 없음|적용할 수 없음|  
-|<xref:System.Linq.ParallelEnumerable.Average%2A>|결합성 없음 또는 비가 작업에 대 한 비결 정적 출력|결합성 없음 또는 비가 작업에 대 한 비결 정적 출력|  
-|<xref:System.Linq.ParallelEnumerable.Cast%2A>|정렬 된 결과|순서가 지정 되지 않은 결과|  
-|<xref:System.Linq.ParallelEnumerable.Concat%2A>|정렬 된 결과|순서가 지정 되지 않은 결과|  
+|<xref:System.Linq.ParallelEnumerable.Average%2A>|비연관 또는 비누적 작업에 대한 비결정적 출력|비연관 또는 비누적 작업에 대한 비결정적 출력|  
+|<xref:System.Linq.ParallelEnumerable.Cast%2A>|순서가 지정된 결과|순서가 지정되지 않은 결과|  
+|<xref:System.Linq.ParallelEnumerable.Concat%2A>|순서가 지정된 결과|순서가 지정되지 않은 결과|  
 |<xref:System.Linq.ParallelEnumerable.Count%2A>|적용할 수 없음|적용할 수 없음|  
 |<xref:System.Linq.ParallelEnumerable.DefaultIfEmpty%2A>|적용할 수 없음|적용할 수 없음|  
-|<xref:System.Linq.ParallelEnumerable.Distinct%2A>|정렬 된 결과|순서가 지정 되지 않은 결과|  
-|<xref:System.Linq.ParallelEnumerable.ElementAt%2A>|지정 된 요소를 반환 합니다.|임의 요소|  
-|<xref:System.Linq.ParallelEnumerable.ElementAtOrDefault%2A>|지정 된 요소를 반환 합니다.|임의 요소|  
-|<xref:System.Linq.ParallelEnumerable.Except%2A>|순서가 지정 되지 않은 결과|순서가 지정 되지 않은 결과|  
-|<xref:System.Linq.ParallelEnumerable.First%2A>|지정 된 요소를 반환 합니다.|임의 요소|  
-|<xref:System.Linq.ParallelEnumerable.FirstOrDefault%2A>|지정 된 요소를 반환 합니다.|임의 요소|  
-|<xref:System.Linq.ParallelEnumerable.ForAll%2A>|병렬에서 불명확 하 게 실행|병렬에서 불명확 하 게 실행|  
-|<xref:System.Linq.ParallelEnumerable.GroupBy%2A>|정렬 된 결과|순서가 지정 되지 않은 결과|  
-|<xref:System.Linq.ParallelEnumerable.GroupJoin%2A>|정렬 된 결과|순서가 지정 되지 않은 결과|  
-|<xref:System.Linq.ParallelEnumerable.Intersect%2A>|정렬 된 결과|순서가 지정 되지 않은 결과|  
-|<xref:System.Linq.ParallelEnumerable.Join%2A>|정렬 된 결과|순서가 지정 되지 않은 결과|  
-|<xref:System.Linq.ParallelEnumerable.Last%2A>|지정 된 요소를 반환 합니다.|임의 요소|  
-|<xref:System.Linq.ParallelEnumerable.LastOrDefault%2A>|지정 된 요소를 반환 합니다.|임의 요소|  
+|<xref:System.Linq.ParallelEnumerable.Distinct%2A>|순서가 지정된 결과|순서가 지정되지 않은 결과|  
+|<xref:System.Linq.ParallelEnumerable.ElementAt%2A>|지정된 요소 반환|임의 요소|  
+|<xref:System.Linq.ParallelEnumerable.ElementAtOrDefault%2A>|지정된 요소 반환|임의 요소|  
+|<xref:System.Linq.ParallelEnumerable.Except%2A>|순서가 지정되지 않은 결과|순서가 지정되지 않은 결과|  
+|<xref:System.Linq.ParallelEnumerable.First%2A>|지정된 요소 반환|임의 요소|  
+|<xref:System.Linq.ParallelEnumerable.FirstOrDefault%2A>|지정된 요소 반환|임의 요소|  
+|<xref:System.Linq.ParallelEnumerable.ForAll%2A>|병렬로 비결정적으로 실행|병렬로 비결정적으로 실행|  
+|<xref:System.Linq.ParallelEnumerable.GroupBy%2A>|순서가 지정된 결과|순서가 지정되지 않은 결과|  
+|<xref:System.Linq.ParallelEnumerable.GroupJoin%2A>|순서가 지정된 결과|순서가 지정되지 않은 결과|  
+|<xref:System.Linq.ParallelEnumerable.Intersect%2A>|순서가 지정된 결과|순서가 지정되지 않은 결과|  
+|<xref:System.Linq.ParallelEnumerable.Join%2A>|순서가 지정된 결과|순서가 지정되지 않은 결과|  
+|<xref:System.Linq.ParallelEnumerable.Last%2A>|지정된 요소 반환|임의 요소|  
+|<xref:System.Linq.ParallelEnumerable.LastOrDefault%2A>|지정된 요소 반환|임의 요소|  
 |<xref:System.Linq.ParallelEnumerable.LongCount%2A>|적용할 수 없음|적용할 수 없음|  
 |<xref:System.Linq.ParallelEnumerable.Min%2A>|적용할 수 없음|적용할 수 없음|  
-|<xref:System.Linq.ParallelEnumerable.OrderBy%2A>|시퀀스 순서를 재정렬 합니다.|새 섹션 정렬 시작|  
-|<xref:System.Linq.ParallelEnumerable.OrderByDescending%2A>|시퀀스 순서를 재정렬 합니다.|새 섹션 정렬 시작|  
-|<xref:System.Linq.ParallelEnumerable.Range%2A>|해당 사항 없음 (과 동일한 기본값 <xref:System.Linq.ParallelEnumerable.AsParallel%2A> )|적용할 수 없음|  
-|<xref:System.Linq.ParallelEnumerable.Repeat%2A>|해당 사항 없음 (과 동일한 기본값 <xref:System.Linq.ParallelEnumerable.AsParallel%2A>)|적용할 수 없음|  
-|<xref:System.Linq.ParallelEnumerable.Reverse%2A>|역순으로|아무 작업도 수행하지 않습니다.|  
-|<xref:System.Linq.ParallelEnumerable.Select%2A>|정렬 된 결과|순서가 지정 되지 않은 결과|  
-|<xref:System.Linq.ParallelEnumerable.Select%2A>(인덱스)|정렬 된 결과|순서가 지정 되지 않은 결과입니다.|  
-|<xref:System.Linq.ParallelEnumerable.SelectMany%2A>|정렬 된 결과입니다.|순서가 지정 되지 않은 결과|  
-|<xref:System.Linq.ParallelEnumerable.SelectMany%2A>(인덱스)|정렬 된 결과입니다.|순서가 지정 되지 않은 결과입니다.|  
-|<xref:System.Linq.ParallelEnumerable.SequenceEqual%2A>|순서가 지정 된 비교|순서가 지정 되지 않은 비교|  
+|<xref:System.Linq.ParallelEnumerable.OrderBy%2A>|시퀀스의 순서 변경|새 순서가 지정된 섹션 시작|  
+|<xref:System.Linq.ParallelEnumerable.OrderByDescending%2A>|시퀀스의 순서 변경|새 순서가 지정된 섹션 시작|  
+|<xref:System.Linq.ParallelEnumerable.Range%2A>|적용할 수 없음(<xref:System.Linq.ParallelEnumerable.AsParallel%2A>과 동일한 기본값)|적용할 수 없음|  
+|<xref:System.Linq.ParallelEnumerable.Repeat%2A>|적용할 수 없음(<xref:System.Linq.ParallelEnumerable.AsParallel%2A>과 동일한 기본값)|적용할 수 없음|  
+|<xref:System.Linq.ParallelEnumerable.Reverse%2A>|역방향 순서 지정|아무 작업도 수행하지 않습니다.|  
+|<xref:System.Linq.ParallelEnumerable.Select%2A>|순서가 지정된 결과|순서가 지정되지 않은 결과|  
+|<xref:System.Linq.ParallelEnumerable.Select%2A>(인덱싱됨)|순서가 지정된 결과|순서가 지정되지 않은 결과.|  
+|<xref:System.Linq.ParallelEnumerable.SelectMany%2A>|순서가 지정된 결과.|순서가 지정되지 않은 결과|  
+|<xref:System.Linq.ParallelEnumerable.SelectMany%2A>(인덱싱됨)|순서가 지정된 결과.|순서가 지정되지 않은 결과.|  
+|<xref:System.Linq.ParallelEnumerable.SequenceEqual%2A>|순서가 지정된 비교|순서가 지정되지 않은 비교|  
 |<xref:System.Linq.ParallelEnumerable.Single%2A>|적용할 수 없음|적용할 수 없음|  
 |<xref:System.Linq.ParallelEnumerable.SingleOrDefault%2A>|적용할 수 없음|적용할 수 없음|  
-|<xref:System.Linq.ParallelEnumerable.Skip%2A>|먼저 건너뜁니다  *n*  요소|모든 건너뜁니다  *n*  요소|  
-|<xref:System.Linq.ParallelEnumerable.SkipWhile%2A>|정렬 된 결과입니다.|비결 정적입니다. SkipWhile 현재 임의 순서에 수행합니다.|  
-|<xref:System.Linq.ParallelEnumerable.Sum%2A>|결합성 없음 또는 비가 작업에 대 한 비결 정적 출력|결합성 없음 또는 비가 작업에 대 한 비결 정적 출력|  
-|<xref:System.Linq.ParallelEnumerable.Take%2A>|첫 번째는 `n` 요소|사용 `n` 요소|  
-|<xref:System.Linq.ParallelEnumerable.TakeWhile%2A>|정렬 된 결과|비결 정적입니다. TakeWhile 현재 임의 순서에 수행합니다.|  
-|<xref:System.Linq.ParallelEnumerable.ThenBy%2A>|조항`OrderBy`|조항`OrderBy`|  
-|<xref:System.Linq.ParallelEnumerable.ThenByDescending%2A>|조항`OrderBy`|조항`OrderBy`|  
-|<xref:System.Linq.ParallelEnumerable.ToArray%2A>|정렬 된 결과|순서가 지정 되지 않은 결과|  
+|<xref:System.Linq.ParallelEnumerable.Skip%2A>|처음 *n*개 요소를 건너뜀|임의 *n*개 요소를 건너뜀|  
+|<xref:System.Linq.ParallelEnumerable.SkipWhile%2A>|순서가 지정된 결과.|비결정적. 현재 임의 순서로 SkipWhile 수행|  
+|<xref:System.Linq.ParallelEnumerable.Sum%2A>|비연관 또는 비누적 작업에 대한 비결정적 출력|비연관 또는 비누적 작업에 대한 비결정적 출력|  
+|<xref:System.Linq.ParallelEnumerable.Take%2A>|처음 `n`개 요소 사용|임의 `n`개 요소 사용|  
+|<xref:System.Linq.ParallelEnumerable.TakeWhile%2A>|순서가 지정된 결과|비결정적. 현재 임의 순서로 TakeWhile 수행|  
+|<xref:System.Linq.ParallelEnumerable.ThenBy%2A>|`OrderBy` 보완|`OrderBy` 보완|  
+|<xref:System.Linq.ParallelEnumerable.ThenByDescending%2A>|`OrderBy` 보완|`OrderBy` 보완|  
+|<xref:System.Linq.ParallelEnumerable.ToArray%2A>|순서가 지정된 결과|순서가 지정되지 않은 결과|  
 |<xref:System.Linq.ParallelEnumerable.ToDictionary%2A>|적용할 수 없음|적용할 수 없음|  
-|<xref:System.Linq.ParallelEnumerable.ToList%2A>|정렬 된 결과|순서가 지정 되지 않은 결과|  
-|<xref:System.Linq.ParallelEnumerable.ToLookup%2A>|정렬 된 결과|순서가 지정 되지 않은 결과|  
-|<xref:System.Linq.ParallelEnumerable.Union%2A>|정렬 된 결과|순서가 지정 되지 않은 결과|  
-|<xref:System.Linq.ParallelEnumerable.Where%2A>|정렬 된 결과|순서가 지정 되지 않은 결과|  
-|<xref:System.Linq.ParallelEnumerable.Where%2A>(인덱스)|정렬 된 결과|순서가 지정 되지 않은 결과|  
-|<xref:System.Linq.ParallelEnumerable.Zip%2A>|정렬 된 결과|순서가 지정 되지 않은 결과|  
+|<xref:System.Linq.ParallelEnumerable.ToList%2A>|순서가 지정된 결과|순서가 지정되지 않은 결과|  
+|<xref:System.Linq.ParallelEnumerable.ToLookup%2A>|순서가 지정된 결과|순서가 지정되지 않은 결과|  
+|<xref:System.Linq.ParallelEnumerable.Union%2A>|순서가 지정된 결과|순서가 지정되지 않은 결과|  
+|<xref:System.Linq.ParallelEnumerable.Where%2A>|순서가 지정된 결과|순서가 지정되지 않은 결과|  
+|<xref:System.Linq.ParallelEnumerable.Where%2A>(인덱싱됨)|순서가 지정된 결과|순서가 지정되지 않은 결과|  
+|<xref:System.Linq.ParallelEnumerable.Zip%2A>|순서가 지정된 결과|순서가 지정되지 않은 결과|  
   
- 순서가 지정 되지 않은 결과 적극적으로 섞 습니다 되지 않습니다. 단순히 없는에 적용 된 특별 한 정렬 논리입니다. 경우에 따라 순서가 지정 되지 않은 쿼리는 소스 시퀀스의 순서을 유지할 수 있습니다. 인덱스는 Select 연산자를 사용 하는 쿼리에 대 한 출력 요소 증가 시켜 인덱스, 하지만 어떤 인덱스에 대 한 보장은 없습니다 요소에 할당 될 순서 대로 상황이 개선 됩니다는 PLINQ 보장 합니다.  
+ 순서가 지정되지 않은 결과는 순서가 활발히 바뀌지 않습니다. 특별한 순서 지정 논리가 적용되지 않습니다. 경우에 따라 순서가 지정되지 않은 쿼리가 소스 시퀀스의 순서를 유지할 수 있습니다. 인덱싱된 Select 연산자를 사용하는 쿼리의 경우 PLINQ는 출력 요소가 인덱스 증가 순서로 표시되도록 보장하지만 어떤 인덱스가 어떤 요소에 할당되는지에 대한 보장은 하지 않습니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [PLINQ(병렬 LINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)  

@@ -5,7 +5,8 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology: dotnet-clr
+ms.technology:
+- dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -20,16 +21,17 @@ helpviewer_keywords:
 - progress information for installation
 - reporting installation progress
 ms.assetid: 3f9d0533-f895-4897-b4ea-528284e0241d
-caps.latest.revision: "40"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: edda4e415f8ce0246ce6aa1a4d39f5bb6cec7728
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 68bb098cf34839e0587864092d1af302d70eca89
+ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="installutilexe-installer-tool"></a>Installutil.exe(설치 관리자 도구)
 설치 관리자 도구는 특정 어셈블리에서 설치 관리자 구성 요소를 실행하는 방법으로 서버 리소스를 설치하고 제거하는 데 사용할 수 있는 명령줄 유틸리티입니다. 이 도구는 <xref:System.Configuration.Install> 네임스페이스의 클래스와 함께 사용됩니다.  
@@ -158,7 +160,7 @@ installutil /LogFile=myLog.InstallLog myAssembly.exe
 installutil /LogFile=myLog.InstallLog /reg=true myAssembly.exe  
 ```  
   
- 다음 명령은 어셈블리 `myAssembly.exe`에서 설치 관리자를 실행하고 설치 관리자의 사용자 지정 `/email`을 사용하여 사용자의 전자 메일 주소를 지정하고 로그 파일에 대한 출력을 표시하지 않습니다.  
+ 다음 명령은 `myAssembly.exe` 어셈블리에서 설치 관리자를 실행하고 설치 관리자의 사용자 지정 `/email` 옵션을 사용하여 사용자의 전자 메일 주소를 지정하고 로그 파일에 대한 출력을 표시하지 않습니다.  
   
 ```  
 installutil /LogFile= /email=admin@mycompany.com myAssembly.exe  

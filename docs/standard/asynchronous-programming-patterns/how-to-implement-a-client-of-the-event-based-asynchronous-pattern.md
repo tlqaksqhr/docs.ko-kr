@@ -24,27 +24,30 @@ helpviewer_keywords:
 - threading [Windows Forms], asynchronous features
 - AsyncCompletedEventArgs class
 ms.assetid: 21a858c1-3c99-4904-86ee-0d17b49804fa
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 0b70d4ba205d39ad8fcbc7c7f6fa1f5b34a36c98
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: f8069072f5d917d4ef169a1aed8854ae3139016d
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="how-to-implement-a-client-of-the-event-based-asynchronous-pattern"></a>방법: 이벤트 기반 비동기 패턴의 클라이언트 구현
-준수 하는 구성 요소를 사용 하는 방법은 다음 코드 예제는 [이벤트 기반 비동기 패턴 개요](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md)합니다. 이 예제에 대 한 양식에서 사용 하는 `PrimeNumberCalculator` 에 설명 된 구성 요소 [하는 방법: 이벤트 기반 비동기 패턴을 지 원하는 구성 요소를 구현](../../../docs/standard/asynchronous-programming-patterns/component-that-supports-the-event-based-asynchronous-pattern.md)합니다.  
+다음 코드 예제는 [이벤트 기반 비동기 패턴 개요](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md)를 준수하는 구성 요소를 사용하는 방법을 보여줍니다. 이 예제의 양식은 [방법: 이벤트 기반 비동기 패턴을 지원하는 구성 요소 구현](../../../docs/standard/asynchronous-programming-patterns/component-that-supports-the-event-based-asynchronous-pattern.md)에 설명된 `PrimeNumberCalculator` 구성 요소를 사용합니다.  
   
- 이 예제를 사용 하는 프로젝트를 실행 하면 표시 됩니다는 표 및 두 개의 단추를 사용 하 여 "소수 계산기" 폼: **새 작업 시작** 및 **취소**합니다. 클릭할 수는 **새 작업 시작** 단추를 연속 해 서에서 여러 번 해 서 클릭할 때마다는 비동기 작업 계산 임의로 생성 된 테스트 수가 소수 인지 확인을 시작 합니다. 폼은 정기적으로 진행률 및 증분 결과 표시 됩니다. 각 작업 고유 작업 ID가 할당 됩니다. 계산의 결과에 표시 됩니다는 **결과** 열으로 레이블이 지정 된 테스트 수를 프라임 없으면 **복합,** 첫째 제수의 표시 됩니다.  
+ 이 예제를 사용하는 프로젝트를 실행하는 경우 그리드와 2개의 단추 즉, **새 작업 시작** 및 **취소** 단추가 있는 “소수 계산기” 양식이 표시됩니다. **새 작업 시작** 단추를 연속으로 여러 번 클릭할 수 있습니다. 클릭할 때마다 비동기 작업이 무작위로 생성된 테스트 숫자가 소수인지 여부를 확인하기 위해 계산을 시작합니다. 양식은 진행률 및 증분 결과를 주기적으로 표시합니다. 각 작업에는 고유한 작업 ID가 할당됩니다. 계산의 결과는 **결과** 열에 표시됩니다. 테스트 숫자가 소수가 아닌 경우 **합성수**로 레이블이 지정되며 첫 번째 약수가 표시됩니다.  
   
- 보류 중인 모든 작업을 취소할 수 있습니다는 **취소** 단추입니다. 여러 선택 항목을 만들 수 있습니다.  
+ 보류 중인 작업은 **취소** 단추로 취소할 수 있습니다. 여러 번 선택할 수 있습니다.  
   
 > [!NOTE]
->  대부분의 숫자는 소수 되지 않습니다. 여러 완료 된 작업을 수행한 후 소수를 찾지 못한 경우 단순히 더 많은 작업을 시작 하 고 결국 소수를 찾을 수 있습니다.  
+>  대부분의 숫자는 소수가 아닙니다. 몇 가지 작업을 완료한 후에도 소수를 찾지 못한 경우 단지 더 많은 작업을 시작하면 결국 몇 개의 소수를 찾을 수 있습니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  [!code-csharp[System.ComponentModel.AsyncOperationManager#10](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.AsyncOperationManager/CS/primenumbercalculatormain.cs#10)]
  [!code-vb[System.ComponentModel.AsyncOperationManager#10](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.AsyncOperationManager/VB/primenumbercalculatormain.vb#10)]  
   

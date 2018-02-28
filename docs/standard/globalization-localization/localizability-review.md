@@ -22,30 +22,33 @@ helpviewer_keywords:
 - global applications, localizability
 - localizing resources
 ms.assetid: 3aee2fbb-de47-4e37-8fe4-ddebb9719247
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 7633c7fe9e99bde96ee108460e983eff48f1c7f0
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 2aaf7c466c6662611e2b37d5c967a99d050158df
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="localizability-review"></a>지역화 가능성 검토
 지역화 가능성 검토는 지역화 대비 응용 프로그램 개발의 중간 단계로, 전역화된 응용 프로그램이 지역화될 준비가 되어 있는지 점검하고 특별한 처리가 필요한 사용자 인터페이스의 모든 코드 또는 측면을 확인합니다. 또한 이 단계를 통해 지역화 과정 후에도 응용 프로그램에 기능적 결함이 발생되지 않도록 합니다. 지역화 가능성 검토에서 제기된 모든 문제가 해결되면 응용 프로그램은 지역화될 준비가 됩니다. 지역화 가능성 검토가 철저할 경우 지역화 과정 중에 소스 코드를 수정할 필요가 없습니다.  
   
  지역화 가능성 검토는 다음 세 가지 검사로 이루어져 있습니다.  
   
--   [전역화 권장 사항 구현 되었습니까?](#global)  
+-   [전역화 권장 사항이 구현되었습니까?](#global)  
   
--   [문화권 구분 기능이 올바르게 처리 되도록?](#culture)  
+-   [문화권 구분 기능이 올바르게 처리되었습니까?](#culture)  
   
--   [국가별 데이터를 응용 프로그램을 테스트 했습니까?](#test)  
+-   [국가별 데이터를 사용하여 응용 프로그램을 테스트했습니까?](#test)  
   
 <a name="global"></a>   
 ## <a name="implementing-globalization-recommendations"></a>전역화 권장 사항 구현  
- 디자인 하 고 지역화를 염두에서에 응용 프로그램을 개발 하 고 권장 사항에서 설명한를 수행한 경우는 [전역화](../../../docs/standard/globalization-localization/globalization.md) 문서, 지역화 가능성 검토는 주로 품질 보증 패스 됩니다 . 그렇지 않은 경우이 단계에서 검토 하 고 해야에 대 한 권장 구성을 구현 [전역화](../../../docs/standard/globalization-localization/globalization.md), 고 지역화를 방해 하는 소스 코드의 오류를 해결 합니다.  
+ 지역화를 염두에 두고 응용 프로그램을 설계 및 개발했고 [세계화](../../../docs/standard/globalization-localization/globalization.md) 문서에 설명된 권장 사항을 따른 경우 지역화 가능성 검토는 대개 품질 보증 단계에서 통과하게 됩니다. 그러지 않은 경우 이 단계 중에 [세계화](../../../docs/standard/globalization-localization/globalization.md)를 위한 권장 사항을 검토 및 구현하고 지역화를 방해하는 소스 코드의 오류를 수정해야 합니다.  
   
 <a name="culture"></a>   
 ## <a name="handling-culture-sensitive-features"></a>문화권 구분 기능 처리  
@@ -78,7 +81,7 @@ ms.lasthandoff: 11/21/2017
   
 -   예기치 않은 결과를 반환하는 같음 비교 또는 문자열 비교.  
   
- 다음 단계를 진행할 수 한 전역화 권장 뒤에 응용 프로그램을 개발 하는 경우, 문화권 구분 기능이 올바르게 처리 하 고 확인 하 고 테스트 하는 동안 발생 하는 지역화 문제가 해결 되었습니다., 경우 [지역화](../../../docs/standard/globalization-localization/localization.md)합니다.  
+ 응용 프로그램을 개발할 때 세계화 권장 사항을 따르고 문화권 구분 기능을 올바르게 처리하고 테스트 중 발생한 지역화 문제를 해결했다면 다음 단계인 [지역화](../../../docs/standard/globalization-localization/localization.md)로 진행할 수 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [전역화 및 지역화](../../../docs/standard/globalization-localization/index.md)  

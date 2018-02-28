@@ -19,15 +19,18 @@ helpviewer_keywords:
 - composite formatting
 - objects [.NET Framework], formatting multiple objects
 ms.assetid: 87b7d528-73f6-43c6-b71a-f23043039a49
-caps.latest.revision: "36"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 1f4b311d6e933f6c653fd7ab189c2e644021970d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: dae73a7ace3aac4e7d89ccba186fceacfe9898ae
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="composite-formatting"></a>복합 형식 지정
 .NET Framework의 합성 서식 지정 기능에는 개체 목록과 합성 서식 문자열이 입력으로 사용됩니다. 합성 서식 문자열은 고정 텍스트와 목록의 개체에 해당하는 인덱싱된 자리 표시자(서식 항목이라고 함)가 결합된 형태로 구성됩니다. 서식 지정 작업을 통해 원래의 고정 텍스트와 목록에 있는 개체의 문자열 표현이 결합된 형태의 결과 문자열을 얻을 수 있습니다.  
@@ -51,7 +54,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="composite-format-string"></a>합성 서식 문자열  
  합성 서식 문자열과 개체 목록은 합성 서식 지정 기능을 지원하는 메서드의 인수로 사용됩니다. 합성 서식 문자열은 0개 이상의 고정 텍스트가 하나 이상의 서식 항목과 결합된 형태로 구성됩니다. 고정 텍스트는 사용자가 선택하는 임의의 문자열이고, 각 서식 항목은 목록의 개체나 boxed 구조체에 해당합니다. 합성 서식 지정 기능은 각 서식 항목을 목록에 있는 해당 개체의 문자열 표현으로 바꿔 새로운 결과 문자열을 반환합니다.  
   
- 다음은 이 기능을 보여 주는 <xref:System.String.Format%2A> 코드 조각입니다.  
+ 다음은 이 기능을 보여주는 <xref:System.String.Format%2A> 코드 조각입니다.  
   
  [!code-csharp[Formatting.Composite#1](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Composite/cs/Composite1.cs#1)]
  [!code-vb[Formatting.Composite#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Composite/vb/Composite1.vb#1)]  
@@ -87,13 +90,13 @@ ms.lasthandoff: 11/21/2017
  [!code-vb[Formatting.Composite#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Composite/vb/alignment1.vb#8)]  
   
 ### <a name="format-string-component"></a>Format String 구성 요소  
- 선택적 *formatString* 구성 요소는 서식을 지정할 개체 형식에 적절한 형식 문자열입니다. 표준 또는 사용자 지정 숫자 서식 문자열을 해당 개체가 숫자 값 이면 표준 또는 사용자 지정 날짜 및 시간 형식 문자열 해당 개체가 지정 된 <xref:System.DateTime> 개체 또는 [열거형 형식 문자열](../../../docs/standard/base-types/enumeration-format-strings.md)해당 개체가 열거형 값입니다. *formatString*을 지정하지 않으면 숫자, 날짜 및 시간, 또는 열거형 형식에 대해 일반("G") 형식 지정자가 사용됩니다. *formatString*을 지정하는 경우 콜론이 필요합니다.  
+ 선택적 *formatString* 구성 요소는 서식을 지정할 개체 형식에 적절한 형식 문자열입니다. 해당 개체가 숫자 값이면 표준 또는 사용자 지정 숫자 형식 문자열을, <xref:System.DateTime> 개체이면 표준 또는 사용자 지정 날짜 및 시간 형식 문자열을, 열거형 값이면 [열거형 서식 문자열](../../../docs/standard/base-types/enumeration-format-strings.md)을 지정합니다. *formatString*을 지정하지 않으면 숫자, 날짜 및 시간, 또는 열거형 형식에 대해 일반("G") 형식 지정자가 사용됩니다. *formatString*을 지정하는 경우 콜론이 필요합니다.  
   
  다음 표에는 미리 정의된 서식 문자열 집합을 지원하는 .NET Framework 클래스 라이브러리의 형식 또는 형식 범주와 지원되는 서식 문자열을 나열하는 항목에 대한 링크가 나와 있습니다. 문자열 서식 지정은 응용 프로그램 정의 형식에서 지원하는 형식 문자열 집합을 정의하는, 모든 기존 형식을 위한 새 형식 문자열을 정의하는 확장 가능한 메커니즘입니다. 자세한 내용은 <xref:System.IFormattable> 및 <xref:System.ICustomFormatter> 인터페이스 항목을 참조하세요.  
   
-|형식 또는 형식 범주|참조|  
+|형식 또는 형식 범주|보기|  
 |---------------------------|---------|  
-|날짜 및 시간 형식(<xref:System.DateTime>, <xref:System.DateTimeOffset>)|[Standard Date and Time Format Strings](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)<br /><br /> [Custom Date and Time Format Strings](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)|  
+|날짜 및 시간 형식(<xref:System.DateTime>, <xref:System.DateTimeOffset>)|[표준 날짜 및 시간 형식 문자열](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)<br /><br /> [사용자 지정 날짜 및 시간 형식 문자열](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)|  
 |열거형 형식(<xref:System.Enum?displayProperty=nameWithType>에서 파생되는 모든 형식)|[Enumeration Format Strings](../../../docs/standard/base-types/enumeration-format-strings.md)|  
 |숫자 형식(<xref:System.Numerics.BigInteger>, <xref:System.Byte>, <xref:System.Decimal>, <xref:System.Double>, <xref:System.Int16>, <xref:System.Int32>, <xref:System.Int64>, <xref:System.SByte>, <xref:System.Single>, <xref:System.UInt16>, <xref:System.UInt32>, <xref:System.UInt64>)|[Standard Numeric Format Strings](../../../docs/standard/base-types/standard-numeric-format-strings.md)<br /><br /> [Custom Numeric Format Strings](../../../docs/standard/base-types/custom-numeric-format-strings.md)|  
 |<xref:System.Guid>|<xref:System.Guid.ToString%28System.String%29?displayProperty=nameWithType>|  
@@ -114,7 +117,7 @@ ms.lasthandoff: 11/21/2017
   
 5.  표시되는 최종 결과는 리터럴 문자열 "{D}"입니다. 서식 지정 시 의도했던 숫자 값이 표시되지 않습니다.  
   
- 이스케이프된 중괄호 및 서식 항목이 잘못 해석되지 않도록 코드를 작성하는 방법 중 하나는 중괄호와 서식 항목의 서식을 따로 지정하는 것입니다. 즉, 첫째 서식 작업에서 리터럴 여는 중괄호를 표시하고 다음 작업에서 서식 항목의 결과를 표시한 다음 마지막 작업에서 리터럴 닫는 괄호를 표시합니다. 다음 예제에서 이 방법을 보여 줍니다.  
+ 이스케이프된 중괄호 및 서식 항목이 잘못 해석되지 않도록 코드를 작성하는 방법 중 하나는 중괄호와 서식 항목의 서식을 따로 지정하는 것입니다. 즉, 첫째 서식 작업에서 리터럴 여는 중괄호를 표시하고 다음 작업에서 서식 항목의 결과를 표시한 다음 마지막 작업에서 리터럴 닫는 괄호를 표시합니다. 다음 예제에서 이 방법을 보여줍니다.  
   
  [!code-csharp[Formatting.Composite#2](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Composite/cs/Escaping1.cs#2)]
  [!code-vb[Formatting.Composite#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Composite/vb/Escaping1.vb#2)]  
@@ -126,7 +129,7 @@ ms.lasthandoff: 11/21/2017
   
 1.  서식을 지정할 값이 `null`이면 빈 문자열("")이 반환됩니다.  
   
-2.  <xref:System.ICustomFormatter> 구현을 사용할 수 있는 경우 런타임은 <xref:System.ICustomFormatter.Format%2A> 메서드를 호출합니다. 형식 항목의 메서드에 전달 *formatString* 가 없는 경우이 값 또는 `null` 정상이 아닌 경우와 함께 <xref:System.IFormatProvider> 구현 합니다.  
+2.  <xref:System.ICustomFormatter> 구현을 사용할 수 있는 경우 런타임은 <xref:System.ICustomFormatter.Format%2A> 메서드를 호출합니다. <xref:System.IFormatProvider> 구현과 함께, 형식 항목의 *formatString* 값이 있는 경우 메서드에 이 값을 전달하고, 값이 없는 경우에는 `null`을 전달합니다.  
   
 3.  값이 <xref:System.IFormattable> 인터페이스를 구현하면 인터페이스의 <xref:System.IFormattable.ToString%28System.String%2CSystem.IFormatProvider%29> 메서드가 호출됩니다. *formatString* 값(형식 항목에 있는 경우) 또는 `null`(없는 경우)이 메서드에 전달됩니다. <xref:System.IFormatProvider> 인수는 다음과 같이 결정됩니다.  
   
@@ -141,7 +144,7 @@ ms.lasthandoff: 11/21/2017
  앞의 단계가 수행된 후에 맞춤이 적용됩니다.  
   
 ## <a name="code-examples"></a>코드 예제  
- 다음 예제에서는 합성 서식 지정을 사용하여 만든 문자열과 개체의 `ToString` 메서드를 사용하여 만든 문자열을 보여 줍니다. 두 형식의 서식을 지정한 결과는 같습니다.  
+ 다음 예제에서는 합성 서식 지정을 사용하여 만든 문자열과 개체의 `ToString` 메서드를 사용하여 만든 문자열을 보여줍니다. 두 형식의 서식을 지정한 결과는 같습니다.  
   
  [!code-csharp[Formatting.Composite#3](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Composite/cs/Composite1.cs#3)]
  [!code-vb[Formatting.Composite#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Composite/vb/Composite1.vb#3)]  
@@ -153,12 +156,12 @@ ms.lasthandoff: 11/21/2017
  [!code-csharp[Formatting.Composite#4](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Composite/cs/Composite1.cs#4)]
  [!code-vb[Formatting.Composite#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Composite/vb/Composite1.vb#4)]  
   
- 다음 예제에서는 하나의 개체 서식을 두 가지 다른 방법으로 지정하는 경우를 비롯하여 여러 개체의 서식을 지정하는 방법을 보여 줍니다.  
+ 다음 예제에서는 하나의 개체 서식을 두 가지 다른 방법으로 지정하는 경우를 비롯하여 여러 개체의 서식을 지정하는 방법을 보여줍니다.  
   
  [!code-csharp[Formatting.Composite#5](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Composite/cs/Composite1.cs#5)]
  [!code-vb[Formatting.Composite#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Composite/vb/Composite1.vb#5)]  
   
- 다음 예제에서는 서식 지정에서 맞춤을 사용하는 방법을 보여 줍니다. 서식 지정되는 인수가 세로줄 문자(&#124;) 사이에 위치하면서 결과 맞춤이 강조됩니다.  
+ 다음 예제에서는 서식 지정에서 맞춤을 사용하는 방법을 보여줍니다. 서식 지정되는 인수가 세로줄 문자(&#124;) 사이에 위치하면서 결과 맞춤이 강조됩니다.  
   
  [!code-csharp[Formatting.Composite#6](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Composite/cs/Composite1.cs#6)]
  [!code-vb[Formatting.Composite#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Composite/vb/Composite1.vb#6)]  

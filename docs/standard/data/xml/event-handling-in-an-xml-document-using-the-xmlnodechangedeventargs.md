@@ -12,20 +12,23 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 0fe844e3-5b6f-4fe7-ad15-22459501738b
-caps.latest.revision: "4"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 2bfd6eee5831b6bb92c0274fe5925184c80a92e2
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: cc74b13fd4771cc4f00500ff3253795f45db2b40
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="event-handling-in-an-xml-document-using-the-xmlnodechangedeventargs"></a>XmlNodeChangedEventArgs를 사용한 XML 문서의 이벤트 처리
-**XmlNodeChangedEventArgs** 에 등록 된 이벤트 처리기에 전달 된 인수를 캡슐화는 **XmlDocument** 이벤트를 처리 하는 것에 대 한 개체입니다. 다음 표에서는 이벤트와 해당 이벤트가 발생하는 시기에 대해 설명합니다.  
+**XmlNodeChangedEventArgs**는 이벤트 처리를 위해 **XmlDocument** 개체에 등록된 이벤트 처리기에 전달되는 인수를 캡슐화합니다. 다음 표에서는 이벤트와 해당 이벤트가 발생하는 시기에 대해 설명합니다.  
   
-|Event|발생 시기|  
+|이벤트(event)|발생 시기|  
 |-----------|-----------|  
 |<xref:System.Xml.XmlDocument.NodeInserting>|현재 문서에 속한 노드가 다른 노드에 삽입되기 직전|  
 |<xref:System.Xml.XmlDocument.NodeInserted>|현재 문서에 속한 노드가 다른 노드에 삽입된 후|  
@@ -35,9 +38,9 @@ ms.lasthandoff: 10/18/2017
 |<xref:System.Xml.XmlDocument.NodeChanged>|노드 값이 변경된 직후|  
   
 > [!NOTE]
->  경우는 **XmlDataDocument** 메모리 사용량은 완벽 하 게 사용 하도록 최적화 **DataSet** 저장소는 **XmlDataDocument** 변경이 때 위에 나열 된 이벤트 중 하나가 발생 시킬 내부 하려고 **DataSet**합니다. 이러한 이벤트를 해야 하는 경우 전체를 트래버스해야 합니다 **XmlDocument** 완전히 최적화 되지 않은 하 여 메모리 사용에 한 번입니다.  
+>  **XmlDataDocument** 메모리 사용이 **DataSet** 저장소를 사용하도록 완전히 최적화된 경우 기본 **DataSet**이 변경될 때 **XmlDataDocument**에서 위에 나열된 어떠한 이벤트도 발생시키지 않을 수 있습니다. 이러한 이벤트가 필요한 경우 전체 **XmlDocument**를 한 번 트래버스하여 메모리 사용이 완전히 최적화되지 않은 상태로 만들어야 합니다.  
   
- 다음 코드 예제에서는 이벤트 처리기를 정의하는 방법과 이벤트에 이벤트 처리기를 추가하는 방법을 보여 줍니다.  
+ 다음 코드 예제에서는 이벤트 처리기를 정의하는 방법과 이벤트에 이벤트 처리기를 추가하는 방법을 보여줍니다.  
   
 ```vb  
 ' Attach the event handler, NodeInsertedHandler, to the NodeInserted  
@@ -80,9 +83,9 @@ void NodeInsertedHandler(Object src, XmlNodeChangedEventArgs args)
 }  
 ```  
   
- 일부 XML DOM(문서 개체 모델) 작업은 여러 이벤트가 발생될 수 있는 복합 작업입니다. 예를 들어 **AppendChild** 이전 부모에서 추가 될 노드를 제거 해야 할 수 있습니다. 참조 하는 경우에 **NodeRemoved** 먼저 발생 하는 이벤트 다음에 **NodeInserted** 이벤트입니다. 설정 등의 작업 **InnerXml** 여러 이벤트가 발생할 수 있습니다.  
+ 일부 XML DOM(문서 개체 모델) 작업은 여러 이벤트가 발생될 수 있는 복합 작업입니다. 예를 들어 **AppendChild**는 추가되는 노드를 이전 부모에서 제거해야 할 수도 있습니다. 이 경우 먼저 **NodeRemoved** 이벤트가 발생한 다음, **NodeInserted** 이벤트가 발생합니다. **InnerXml**을 설정하는 것과 같은 작업으로 여러 이벤트가 발생할 수 있습니다.  
   
- 다음 코드 예제에서는 이벤트 처리기의 생성 및 처리는 **NodeInserted** 이벤트입니다.  
+ 다음 코드 예제에서는 이벤트 처리기를 만드는 방법과 **NodeInserted** 이벤트를 처리하는 방법을 보여줍니다.  
   
 ```vb  
 Imports System  
@@ -216,4 +219,4 @@ public class Sample
  자세한 내용은 <xref:System.Xml.XmlNodeChangedEventArgs> 및 <xref:System.Xml.XmlNodeChangedEventHandler>를 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
- [XML 문서 개체 모델 (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
+ [XML DOM(문서 개체 모델)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

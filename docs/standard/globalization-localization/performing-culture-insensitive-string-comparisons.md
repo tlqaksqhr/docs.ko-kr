@@ -19,15 +19,18 @@ helpviewer_keywords:
 - culture-insensitive string operations, comparisons
 - culture parameter
 ms.assetid: abae50ef-32f7-4a50-a540-fd256fd1aed0
-caps.latest.revision: "23"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 980b4ac515deaaedb1ab7e240e8f110a5fd0d51c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: fa689a685a58868ccd34b8bcbc4a779b9f826473
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="performing-culture-insensitive-string-comparisons"></a>문화권을 구분하지 않는 문자열 비교 수행
 기본적으로 <xref:System.String.Compare%2A?displayProperty=nameWithType> 메서드는 문화권 구분 및 대/소문자 구분 비교 작업을 수행합니다. 이 메서드에는 사용할 문화권을 지정할 수 있는 `culture` 매개 변수와 사용할 비교 규칙을 지정할 수 있는 `comparisonType` 매개 변수를 제공하는 몇 가지 오버로드도 포함되어 있습니다. 기본 오버로드 대신 이러한 메서드를 호출하면 특정 메서드 호출에서 사용되는 규칙에 대한 모든 모호성이 제거되고 특정 비교가 문화권을 구분하는지 여부가 명확히 나타납니다.  
@@ -35,7 +38,7 @@ ms.lasthandoff: 11/21/2017
 > [!NOTE]
 >  <xref:System.String.CompareTo%2A?displayProperty=nameWithType> 메서드의 두 오버로드는 문화권 구분 비교와 대/소문자 구분 비교를 수행합니다. 이 메서드를 사용하여 문화권을 구분하지 않는 비교를 수행할 수 없습니다. 코드의 명확성을 위해 <xref:System.String.Compare%2A?displayProperty=nameWithType> 메서드를 대신 사용하는 것이 좋습니다.  
   
- 문화권 구분 작업의 경우 <xref:System.StringComparison.CurrentCulture?displayProperty=nameWithType> 또는 <xref:System.StringComparison.CurrentCultureIgnoreCase?displayProperty=nameWithType> 열거형 값을 `comparisonType` 매개 변수로 지정합니다. 현재 문화권이 아닌 지정된 된 문화권을 사용 하 여 문화권 구분 비교를 지정 하려는 경우는 <xref:System.Globalization.CultureInfo> 해당 문화권을 나타내는 개체의 `culture` 매개 변수입니다.  
+ 문화권 구분 작업의 경우 <xref:System.StringComparison.CurrentCulture?displayProperty=nameWithType> 또는 <xref:System.StringComparison.CurrentCultureIgnoreCase?displayProperty=nameWithType> 열거형 값을 `comparisonType` 매개 변수로 지정합니다. 현재 문화권이 아닌 지정된 문화권을 사용하여 문화권 구분 비교를 수행하려면 해당 문화권을 나타내는 <xref:System.Globalization.CultureInfo> 개체를 `culture` 매개 변수로 지정합니다.  
   
  <xref:System.String.Compare%2A?displayProperty=nameWithType> 메서드에서 지원하는 문화권을 구분하지 않는 문자열 비교는 언어적(고정 문화권의 정렬 규칙 기반)이거나 비언어적(문자열에 있는 문자의 서수 값 기반)입니다. 대부분의 문화권을 구분하지 않는 문자열 비교는 비언어적입니다. 이러한 비교의 경우 <xref:System.StringComparison.Ordinal?displayProperty=nameWithType> 또는 <xref:System.StringComparison.OrdinalIgnoreCase?displayProperty=nameWithType> 열거형 값을 `comparisonType` 매개 변수로 지정합니다. 예를 들어 사용자 이름 또는 암호 비교와 같은 보안 결정이 문자열 비교의 결과를 기반으로 하는 경우 결과가 특정 문화권 또는 언어 규칙의 영향을 받지 않도록 작업이 문화권을 구분하지 않고 비언어적이어야 합니다.  
   

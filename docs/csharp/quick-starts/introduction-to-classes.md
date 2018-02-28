@@ -1,5 +1,5 @@
 ---
-title: "빠른 시작 - 클래스 소개 - C# 가이드"
+title: "클래스 소개 자습서 - C# 로컬 빠른 시작"
 description: "첫 번째 C# 프로그램을 만들고 개체 지향 개념을 살펴봅니다."
 author: billwagner
 ms.author: wiwagn
@@ -9,15 +9,15 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.custom: mvc
-ms.openlocfilehash: 4e15b1b12b9420ca1781eca3f2578fa24c9ec82a
-ms.sourcegitcommit: 8bde7a3432f30fc771079744955c75c58c4eb393
+ms.openlocfilehash: 97c1de562c86ea04153ec09bb0e813565523a3ba
+ms.sourcegitcommit: d2da0142247ef42a219a5d2907f153e62dc6ea0d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/20/2018
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="introduction-to-classes"></a>클래스 소개
 
-이 빠른 시작에서는 개발에 사용할 수 있는 컴퓨터가 있다고 예상합니다. .NET 항목 [Get Started in 10 minutes](https://www.microsoft.com/net/core)(10분 안에 시작)에는 Mac, PC 또는 Linux의 로컬 개발 환경 설정에 대한 지침이 포함되어 있습니다. 사용할 명령에 대한 간단한 개요는 [로컬 빠른 시작 소개](local-environment.md)에 자세한 정보에 대한 링크와 함께 있습니다.
+이 빠른 시작에서는 개발에 사용할 수 있는 컴퓨터가 있다고 예상합니다. .NET 항목 [Get Started in 10 minutes](https://www.microsoft.com/net/core)(10분 안에 시작)에는 Mac, PC 또는 Linux의 로컬 개발 환경 설정에 대한 지침이 포함되어 있습니다. 사용할 명령에 대한 간단한 개요는 [로컬 빠른 시작 소개](local-environment.md)에 나와 있으며, 이 소개에는 자세한 정보에 대한 링크도 함께 있습니다.
 
 ## <a name="create-your-application"></a>응용 프로그램 만들기
 
@@ -142,7 +142,7 @@ using System.Collections.Generic;
 
 [!code-csharp[BalanceComputation](../../../samples/csharp/classes-quickstart/BankAccount.cs#BalanceComputation "Computing the balance")]
 
-이 예제에서는 ***속성***의 중요한 측면을 보여 줍니다. 이제 다른 프로그래머가 값을 요청할 때 잔액을 계산합니다. 계산은 모든 트랜잭션을 열거하고 합계를 현재 잔액으로 제공합니다.
+이 예제에서는 ***속성***의 중요한 측면을 보여줍니다. 이제 다른 프로그래머가 값을 요청할 때 잔액을 계산합니다. 계산은 모든 트랜잭션을 열거하고 합계를 현재 잔액으로 제공합니다.
 
 다음으로 `MakeDeposit` 및 `MakeWithdrawal` 메서드를 구현합니다. 이러한 메서드는 최종 두 규칙을 적용합니다. 초기 잔액은 양수여야 하고 인출로 인해 음수의 잔액이 발생되어서는 안 됩니다. 
 
@@ -203,7 +203,7 @@ catch (InvalidOperationException e)
 
 [!code-csharp[History](../../../samples/csharp/classes-quickstart/BankAccount.cs#History "Display transaction history")]
 
-<xref:System.Text.StringBuilder> 클래스를 사용하여 각 트랜잭션에 대해 한 줄을 포함하는 문자열의 형식을 지정합니다. 이전 빠른 시작에서 문자열 형식 지정 코드를 살펴봤습니다. 새 문자는 `\t`입니다. 이 새 문자는 탭을 삽입하여 출력 형식을 지정합니다.
+<xref:System.Text.StringBuilder> 클래스를 사용하여 각 트랜잭션에 대해 한 줄을 포함하는 문자열의 형식을 지정합니다. 이러한 빠른 시작의 앞부분에서 문자열 서식 지정 코드를 살펴봤습니다. 새 문자는 `\t`입니다. 이 새 문자는 탭을 삽입하여 출력 형식을 지정합니다.
 
 **Program.cs**에서 테스트하려면 이 줄을 추가합니다.
 

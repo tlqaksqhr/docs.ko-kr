@@ -13,32 +13,35 @@ helpviewer_keywords:
 - garbage collection, optimizing
 - garbage collection, shared Web hosting
 ms.assetid: be98c0ab-7ef8-409f-8a0d-cb6e5b75ff20
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 1f423d867d4fada075800650627c94f9d09e9e7a
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 7525ca263449da77b4b6364fd6bcfd51dcba145d
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="optimization-for-shared-web-hosting"></a>공유 웹 호스팅을 위한 최적화
-여러 개의 작은 웹 사이트를 호스트 하 여 공유 하는 서버에 대 한 관리자 인 경우 성능을 최적화 하 고 다음을 추가 하 여 사이트 용량을 늘릴 수 `gcTrimCommitOnLowMemory` 을로 설정 된 `runtime` .NET에 Aspnet.config 파일에 있는 노드 디렉터리:  
+여러 소규모 웹 사이트를 호스트하여 공유되는 서버의 관리자인 경우 .NET 디렉터리의 Aspnet.config 파일에서 `runtime` 노드에 ​​다음 `gcTrimCommitOnLowMemory` 설정을 추가하여 성능을 최적화하고 사이트 용량을 늘릴 수 있습니다.  
   
  `<gcTrimCommitOnLowMemory enabled="true|false"/>`  
   
 > [!NOTE]
->  이 설정은 호스팅 시나리오 공유 웹에만 권장 됩니다.  
+>  이 설정은 공유 웹 호스팅 시나리오에만 권장됩니다.  
   
- 가비지 수집기는 이후 할당에 대 한 메모리를 보존, 때문에 커밋된 공간이 꼭 필요한 것 보다 클 수 있습니다. 이 공간 시간을 줄일 수 있으면 시스템 메모리에 상당한 부하를 합니다. 이 커밋된 공간 줄이기 성능이 향상 됩니다 하 고 더 많은 사이트를 호스트 하는 기능을 확장 합니다.  
+ 가비지 수집기가 향후 할당을 위해 메모리를 유지하므로 커밋된 공간이 엄밀히 필요한 것보다 클 수 있습니다. 시스템 메모리에 과부하가 발생할 때 충분한 공간을 제공하기 위해 이 공간을 줄일 수 있습니다. 커밋된 이 공간을 줄이면 성능이 향상되고 용량이 확장되어 더 많은 사이트를 호스트할 수 있습니다.  
   
- 경우는 `gcTrimCommitOnLowMemory` 설정을 사용 하는, 가비지 수집기 시스템 메모리 로드를 평가 하 고 부하 90%에 도달할 때 트리밍 모드를 입력 합니다. 부하 85% 미만 떨어져야 트리밍 모드를 유지 합니다.  
+ `gcTrimCommitOnLowMemory` 설정을 사용하면 가비지 수집기가 시스템 메모리 로드를 평가하고 로드가 90%에 도달하는 경우 조정(trimming) 모드로 전환됩니다. 그리고 로드가 85% 미만으로 떨어질 때까지 조정 모드가 유지됩니다.  
   
- 가비지 수집기를 결정할 수 조건이 충족 될 경우는 `gcTrimCommitOnLowMemory` 설정을 현재 응용 프로그램에 도움이 되지 않습니다 되며 무시 합니다.  
+ 조건이 허용되는 경우 가비지 수집기는 `gcTrimCommitOnLowMemory` 설정으로 현재 응용 프로그램을 지원하지 않고 무시하도록 결정할 수 있습니다.  
   
-## <a name="example"></a>예제  
- 다음 XML 조각은 방법을 볼 수는 `gcTrimCommitOnLowMemory` 설정 합니다. 타원에 있을 수 있는 다른 설정을 나타내는 `runtime` 노드.  
+## <a name="example"></a>예  
+ 다음 XML 조각은 `gcTrimCommitOnLowMemory` 설정을 사용하는 방법을 보여줍니다. 줄임표는 `runtime` 노드에 있는 기타 설정을 나타냅니다.  
   
 ```xml  
 <?xml version="1.0" encoding="UTF-8"?>  

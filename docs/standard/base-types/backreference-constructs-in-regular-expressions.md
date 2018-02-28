@@ -17,15 +17,18 @@ helpviewer_keywords:
 - .NET Framework regular expressions, backreference constructs
 - regular expressions, backreference constructs
 ms.assetid: 567a4b8d-0e79-49dc-8df9-f4b1aa376a2a
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: a884e70f542c2ed7ff63e39cb7eadedf0ef7b4d0
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 2ec92933bdf123412a3d489fc493d76c4a0dc0d0
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="backreference-constructs-in-regular-expressions"></a>정규식의 역참조 구문
 역참조는 문자열 내에서 반복된 문자 또는 부분 문자열을 식별하는 편리한 방법을 제공합니다. 예를 들어 입력 문자열에 임의의 부분 문자열이 여러 번 포함되어 있으면 첫 번째 발생을 캡처링 그룹과 일치시킨 다음 역참조를 사용하여 부분 문자열의 후속 발생을 일치시킬 수 있습니다.  
@@ -33,16 +36,16 @@ ms.lasthandoff: 10/18/2017
 > [!NOTE]
 >  대체 문자열에서 명명된 캡처링 그룹과 번호가 매겨진 캡처링 그룹을 참조하기 위해 별도의 구문이 사용됩니다. 자세한 내용은 [Substitutions](substitutions-in-regular-expressions.md)를 참조하세요.  
   
- .NET에서는 번호가 매겨진 캡처링 그룹과 명명된 캡처링 그룹을 참조하기 위해 별도의 언어 요소를 정의합니다. 캡처링 그룹에 대 한 자세한 내용은 참조 [그룹화 구문](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md)합니다.  
+ .NET에서는 번호가 매겨진 캡처링 그룹과 명명된 캡처링 그룹을 참조하기 위해 별도의 언어 요소를 정의합니다. 캡처링 그룹에 대한 자세한 내용은 [그룹화 구문](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md)을 참조하세요.  
   
 ## <a name="numbered-backreferences"></a>번호가 매겨진 역참조  
  번호가 매겨진 역참조에는 다음 구문이 사용됩니다.  
   
  `\` *number*  
   
- 여기서 *number*는 정규식에서 캡처링 그룹의 서수 위치입니다. 예를 들어 `\4`는 네 번째 캡처링 그룹의 내용을 찾습니다. 경우 *번호* 은 정규식 패턴에 정의 되어 있지는 구문 분석 오류가 발생 하 고 정규식 엔진은 throw는 <xref:System.ArgumentException>합니다. 예를 들어 `\b(\w+)\s\1` 정규식은 `(\w+)`가 식의 첫 번째이자 유일한 캡처링 그룹이기 때문에 유효합니다. 반면에 `\b(\w+)\s\2`는 `\2`로 번호가 매겨진 캡처링 그룹이 없기 때문에 유효하지 않으며 인수 예외를 throw합니다.  
+ 여기서 *number*는 정규식에서 캡처링 그룹의 서수 위치입니다. 예를 들어 `\4`는 네 번째 캡처링 그룹의 내용을 찾습니다. *number*가 정규식 패턴에서 정의되지 않은 경우 구문 분석 오류가 발생하고 정규식 엔진이 <xref:System.ArgumentException>을 throw합니다. 예를 들어 `\b(\w+)\s\1` 정규식은 `(\w+)`가 식의 첫 번째이자 유일한 캡처링 그룹이기 때문에 유효합니다. 반면에 `\b(\w+)\s\2`는 `\2`로 번호가 매겨진 캡처링 그룹이 없기 때문에 유효하지 않으며 인수 예외를 throw합니다.  
   
- 8 진수 이스케이프 코드 사이의 모호성 확인 (같은 `\16`) 및 `\` *번호* 은 동일한 표기법을 사용 하는 역참조 합니다. 이러한 모호성은 다음과 같이 해결됩니다.  
+ 8진수 이스케이프 코드(예: `\16`)와 동일한 표기법을 사용하는 `\`*number* 역참조 간의 모호성에 유의하세요. 이러한 모호성은 다음과 같이 해결됩니다.  
   
 -   `\1`에서 `\9` 사이의 식은 항상 8진수 코드가 아니라 역참조로 해석됩니다.  
   
@@ -50,9 +53,9 @@ ms.lasthandoff: 10/18/2017
   
 -   `\10` 이상인 식은 이 숫자에 해당하는 역참조가 있을 경우 역참조로 간주되고, 없을 경우 8진수 코드로 해석됩니다.  
   
--   정의 되지 않은 그룹 번호에 대 한 역참조를 포함 하는 정규식을 구문 분석 오류가 발생 하 고 정규식 엔진은 throw 된 <xref:System.ArgumentException>합니다.  
+-   정규식에 정의되지 않은 그룹 번호에 대한 역참조가 포함되어 있으면 구문 분석 오류가 발생하고 정규식 엔진이 <xref:System.ArgumentException>을 throw합니다.  
   
- 모호성 문제가 되는 경우 사용할 수 있습니다는 `\k<` *이름* `>` 표기법을 명확 하 고 8 진수 문자 코드와 혼동 될 수 없습니다. 마찬가지로, `\xdd` 등의 16진수 코드는 명확하며 역참조와 혼동되지 않습니다.  
+ 모호성 문제가 발생하는 경우 명확하고 8진수 문자 코드와 혼동되지 않는 `\k<`*name*`>` 표기법을 사용할 수 있습니다. 마찬가지로, `\xdd` 등의 16진수 코드는 명확하며 역참조와 혼동되지 않습니다.  
   
  다음 예제에서는 문자열에서 2배 워드 문자를 찾습니다. 다음과 같은 요소로 구성된 `(\w)\1` 정규식을 정의합니다.  
   
@@ -73,14 +76,14 @@ ms.lasthandoff: 10/18/2017
   
  `\k'` *name* `'`  
   
- 여기서 *name*은 정규식 패턴에 정의된 캡처링 그룹의 이름입니다. 경우 *이름* 은 정규식 패턴에 정의 되어 있지는 구문 분석 오류가 발생 하 고 정규식 엔진은 throw는 <xref:System.ArgumentException>합니다.  
+ 여기서 *name*은 정규식 패턴에 정의된 캡처링 그룹의 이름입니다. *name*이 정규식 패턴에서 정의되지 않은 경우 구문 분석 오류가 발생하고 정규식 엔진이 <xref:System.ArgumentException>을 throw합니다.  
   
  다음 예제에서는 문자열에서 2배 워드 문자를 찾습니다. 다음과 같은 요소로 구성된 `(?<char>\w)\k<char>` 정규식을 정의합니다.  
   
 |요소|설명|  
 |-------------|-----------------|  
-|`(?<char>\w)`|단어 문자를 명명 된 캡처링 그룹에 할당 `char`합니다.|  
-|`\k<char>`|값과 일치 하는 다음 문자를 일치는 `char` 캡처링 그룹입니다.|  
+|`(?<char>\w)`|단어 문자를 찾아 이름이 `char`인 캡처링 그룹에 할당합니다.|  
+|`\k<char>`|`char` 캡처링 그룹의 값과 일치하는 다음 문자를 찾습니다.|  
   
  [!code-csharp[RegularExpressions.Language.Backreferences#2](../../../samples/snippets/csharp/VS_Snippets_CLR/regularexpressions.language.backreferences/cs/backreference2.cs#2)]
  [!code-vb[RegularExpressions.Language.Backreferences#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/regularexpressions.language.backreferences/vb/backreference2.vb#2)]  
@@ -95,17 +98,17 @@ ms.lasthandoff: 10/18/2017
   
  다음 예제에는 이름이 \1인 그룹을 다시 정의하는 정규식 패턴 `(?<1>a)(?<1>\1b)*`가 포함되어 있습니다. 다음 표에서는 정규식의 각 패턴에 대해 설명합니다.  
   
-|패턴|설명|  
+|무늬|설명|  
 |-------------|-----------------|  
-|`(?<1>a)`|문자 "a"와 명명 된 캡처링 그룹에 결과 할당 `1`합니다.|  
-|`(?<1>\1b)*`|명명 된 그룹의 일치 항목 0 또는 1 개 발생 `1` "b", 및 명명 된 캡처링 그룹에 결과 할당 함께 `1`합니다.|  
+|`(?<1>a)`|문자 “a”를 찾은 다음, 이름이 `1`인 캡처링 그룹에 결과를 할당합니다.|  
+|`(?<1>\1b)*`|이름이 `1`과 “b”로 구성된 그룹을 0번 또는 1번 찾은 다음, 이름이 `1`인 캡처링 그룹에 결과를 할당합니다.|  
   
  [!code-csharp[RegularExpressions.Language.Backreferences#4](../../../samples/snippets/csharp/VS_Snippets_CLR/regularexpressions.language.backreferences/cs/backreference4.cs#4)]
  [!code-vb[RegularExpressions.Language.Backreferences#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/regularexpressions.language.backreferences/vb/backreference4.vb#4)]  
   
  입력 문자열("aababb")과 정규식을 비교할 때 정규식 엔진은 다음 작업을 수행합니다.  
   
-1.  문자열의 시작 부분에서 시작하여 `(?<1>a)` 식으로 "a"를 찾습니다. 값은 `1` 그룹은 이제 "a"입니다.  
+1.  문자열의 시작 부분에서 시작하여 `(?<1>a)` 식으로 "a"를 찾습니다. `1` 그룹의 값은 이제 “a”입니다.  
   
 2.  두 번째 문자로 진행하여 `\1b` 또는 "ab" 식으로 "ab" 문자열을 찾습니다. 그런 다음 결과 "ab"를 `\1`에 할당합니다.  
   
@@ -113,9 +116,9 @@ ms.lasthandoff: 10/18/2017
   
  이 예제에서 `*`는 반복 수량자로, 정규식 엔진이 정의되는 패턴을 찾을 수 없을 때까지 반복해서 평가됩니다. 반복 수량자는 그룹 정의를 지우지 않습니다.  
   
- 그룹에서 부분 문자열을 캡처하지 않은 경우 해당 그룹에 대한 역참조가 정의되지 않으며 일치되지 않습니다. 정규식 패턴에서이 확인할 `\b(\p{Lu}{2})(\d{2})?(\p{Lu}{2})\b`, 다음과 같이 정의 됩니다.  
+ 그룹에서 부분 문자열을 캡처하지 않은 경우 해당 그룹에 대한 역참조가 정의되지 않으며 일치되지 않습니다. 이 내용은 다음과 같이 정의된 정규식 패턴 `\b(\p{Lu}{2})(\d{2})?(\p{Lu}{2})\b`를 통해 확인할 수 있습니다.  
   
-|패턴|설명|  
+|무늬|설명|  
 |-------------|-----------------|  
 |`\b`|단어 경계에서 일치 항목 찾기를 시작합니다.|  
 |`(\p{Lu}{2})`|두 개의 대문자를 찾습니다. 이 그룹은 첫 번째 캡처링 그룹입니다.|  
@@ -123,7 +126,7 @@ ms.lasthandoff: 10/18/2017
 |`(\p{Lu}{2})`|두 개의 대문자를 찾습니다. 이 그룹은 세 번째 캡처링 그룹입니다.|  
 |`\b`|단어 경계에서 일치 항목 찾기를 끝냅니다.|  
   
- 두 번째 캡처링 그룹에서 정의된 두 개의 10진수가 없는 경우에도 입력 문자열이 이 정규식과 일치할 수 있습니다. 다음 예제에서는 일치가 성공해도 성공적인 두 캡처링 그룹 사이에 빈 캡처링 그룹이 있음을 보여 줍니다.  
+ 두 번째 캡처링 그룹에서 정의된 두 개의 10진수가 없는 경우에도 입력 문자열이 이 정규식과 일치할 수 있습니다. 다음 예제에서는 일치가 성공해도 성공적인 두 캡처링 그룹 사이에 빈 캡처링 그룹이 있음을 보여줍니다.  
   
  [!code-csharp[RegularExpressions.Language.Backreferences#5](../../../samples/snippets/csharp/VS_Snippets_CLR/regularexpressions.language.backreferences/cs/backreference5.cs#5)]
  [!code-vb[RegularExpressions.Language.Backreferences#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/regularexpressions.language.backreferences/vb/backreference5.vb#5)]  

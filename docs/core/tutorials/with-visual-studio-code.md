@@ -1,21 +1,19 @@
 ---
 title: "C# 및 Visual Studio Code 시작 - C# 가이드"
 description: "Visual Studio Code를 사용하여 C#에서 첫 번째 .NET Core 응용 프로그램을 만들고 디버그하는 방법을 알아봅니다."
-keywords: "C#, 시작, 취득, 설치, Visual Studio Code, 플랫폼 간"
 author: kendrahavens
 ms.author: mairaw
 ms.date: 09/27/2017
 ms.topic: article
 ms.prod: .net
 ms.technology: devlang-csharp
-ms.devlang: csharp
-ms.assetid: 76c23597-4cf9-467e-8a47-0c3703ce37e7
-ms.workload: dotnetcore
-ms.openlocfilehash: 95052da1688ec1026f11ff679dda6aad50a340fa
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.workload:
+- dotnetcore
+ms.openlocfilehash: 0c37040220bb7f38cdd75176bb9ed2a2199b7096
+ms.sourcegitcommit: 099aa20d9b6450d1b7452d782a55771a6ad8ff35
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 02/05/2018
 ---
 # <a name="get-started-with-c-and-visual-studio-code"></a>C# 및 Visual Studio Code 시작
 
@@ -25,7 +23,7 @@ ms.lasthandoff: 12/23/2017
 
 1. [Visual Studio Code](https://code.visualstudio.com/)를 설치합니다.
 2. [.NET Core SDK](https://www.microsoft.com/net/download/core)를 설치합니다.
-3. Visual Studio Code Marketplace에서 [C# 확장](https://marketplace.visualstudio.com/items?itemName=ms-vscode.csharp)을 설치합니다.
+3. Visual Studio Code의 [C# 확장](https://marketplace.visualstudio.com/items?itemName=ms-vscode.csharp)을 설치합니다. Visual Studio Code의 확장을 설치하는 방법에 대한 자세한 내용은 [VS Code Extension Marketplace](https://code.visualstudio.com/docs/editor/extension-gallery)(VS Code 확장 Marketplace)를 참조하세요.
 
 ## <a name="hello-world"></a>Hello World
 

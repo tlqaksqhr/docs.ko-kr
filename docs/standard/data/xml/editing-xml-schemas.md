@@ -13,15 +13,18 @@ dev_langs:
 - vb
 - cpp
 ms.assetid: fa09c8e5-c2b9-49d2-bb0d-40330cd13e4d
-caps.latest.revision: "2"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: b9505f60b2000ef227463404dab051ecb7fa3cc5
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: dd2c5a0e4625a348daad9eccb7bae0e4788cab71
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="editing-xml-schemas"></a>XML 스키마 편집
 XML 스키마 편집 기능은 SOM(스키마 개체 모델)의 중요한 기능 중 하나입니다. SOM의 모든 pre-schema-compilation 속성을 사용하여 XML 스키마에서 기존 값을 변경할 수 있습니다. 그런 다음 XML 스키마를 다시 컴파일하여 변경 내용을 적용할 수 있습니다.  
@@ -29,7 +32,7 @@ XML 스키마 편집 기능은 SOM(스키마 개체 모델)의 중요한 기능 
  SOM에 로드된 스키마를 편집하는 첫 번째 단계는 스키마를 통과하는 것입니다. 스키마를 편집하기 전에 SOM API를 사용하여 스키마를 통과하는 방법을 잘 알아야 합니다. 또한 PSCI(Post-Schema-Compilation-Infoset)의 pre-schema-compilation 속성과 post-schema-compilation 속성에 대해 잘 알아야 합니다.  
   
 ## <a name="editing-an-xml-schema"></a>XML 스키마 편집  
- 이 섹션에서는 두 가지 코드 예제가 제공 된 경우에서 생성 하는 고객 스키마를 편집 하 고 [XML 스키마 빌드](../../../../docs/standard/data/xml/building-xml-schemas.md) 항목입니다. 첫 번째 코드 예제는 새 `PhoneNumber` 요소를 `Customer` 요소에 추가하며 두 번째 코드 예제는 새 `Title` 특성을 `FirstName` 요소에 추가합니다. 또한 첫 번째 샘플에서는 post-schema-compilation <xref:System.Xml.Schema.XmlSchema.Elements%2A?displayProperty=nameWithType> 컬렉션을 사용하여 고객 스키마를 통과하며 두 번째 코드 예제에서는 pre-schema-compilation <xref:System.Xml.Schema.XmlSchema.Items%2A?displayProperty=nameWithType> 컬렉션을 사용합니다.  
+ 이 단원에서는 [XML 스키마 빌드](../../../../docs/standard/data/xml/building-xml-schemas.md) 항목에서 만든 고객 스키마를 편집하는 두 코드 예제가 제공됩니다. 첫 번째 코드 예제는 새 `PhoneNumber` 요소를 `Customer` 요소에 추가하며 두 번째 코드 예제는 새 `Title` 특성을 `FirstName` 요소에 추가합니다. 또한 첫 번째 샘플에서는 post-schema-compilation <xref:System.Xml.Schema.XmlSchema.Elements%2A?displayProperty=nameWithType> 컬렉션을 사용하여 고객 스키마를 통과하며 두 번째 코드 예제에서는 pre-schema-compilation <xref:System.Xml.Schema.XmlSchema.Items%2A?displayProperty=nameWithType> 컬렉션을 사용합니다.  
   
 ### <a name="phonenumber-element-example"></a>PhoneNumber 요소 예제  
  이 첫 번째 코드 예제에서는 새 `PhoneNumber` 요소를 고객 스키마의 `Customer` 요소에 추가합니다. 이 코드 예제는 다음과 같은 단계로 고객 스키마를 편집합니다.  
@@ -54,7 +57,7 @@ XML 스키마 편집 기능은 SOM(스키마 개체 모델)의 중요한 기능 
  [!code-csharp[XmlSchemaEditExample1#1](../../../../samples/snippets/csharp/VS_Snippets_Data/XmlSchemaEditExample1/CS/XmlSchemaEditExample1.cs#1)]
  [!code-vb[XmlSchemaEditExample1#1](../../../../samples/snippets/visualbasic/VS_Snippets_Data/XmlSchemaEditExample1/VB/XmlSchemaEditExample1.vb#1)]  
   
- 다음은에서 만든 수정 된 고객 스키마의 [XML 스키마 빌드](../../../../docs/standard/data/xml/building-xml-schemas.md) 항목입니다.  
+ 다음은 [XML 스키마 빌드](../../../../docs/standard/data/xml/building-xml-schemas.md) 항목에서 만든 고객 스키마를 수정한 예제입니다.  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8"?>  
@@ -118,7 +121,7 @@ XML 스키마 편집 기능은 SOM(스키마 개체 모델)의 중요한 기능 
  [!code-csharp[XmlSchemaEditExample2#1](../../../../samples/snippets/csharp/VS_Snippets_Data/XmlSchemaEditExample2/CS/XmlSchemaEditExample2.cs#1)]
  [!code-vb[XmlSchemaEditExample2#1](../../../../samples/snippets/visualbasic/VS_Snippets_Data/XmlSchemaEditExample2/VB/XmlSchemaEditExample2.vb#1)]  
   
- 다음은에서 만든 수정 된 고객 스키마의 [XML 스키마 빌드](../../../../docs/standard/data/xml/building-xml-schemas.md) 항목입니다.  
+ 다음은 [XML 스키마 빌드](../../../../docs/standard/data/xml/building-xml-schemas.md) 항목에서 만든 고객 스키마를 수정한 예제입니다.  
   
 ```xml  
 <?xml version="1.0" encoding=" utf-8"?>  
@@ -147,6 +150,6 @@ XML 스키마 편집 기능은 SOM(스키마 개체 모델)의 중요한 기능 
  [XML 스키마 읽기 및 쓰기](../../../../docs/standard/data/xml/reading-and-writing-xml-schemas.md)  
  [XML 스키마 빌드](../../../../docs/standard/data/xml/building-xml-schemas.md)  
  [XML 스키마 통과](../../../../docs/standard/data/xml/traversing-xml-schemas.md)  
- [포함 하 여 XML 스키마 또는 가져오기](../../../../docs/standard/data/xml/including-or-importing-xml-schemas.md)  
- [스키마 컴파일 위한 XmlSchemaSet](../../../../docs/standard/data/xml/xmlschemaset-for-schema-compilation.md)  
- [Post-schema Compilation Infoset](../../../../docs/standard/data/xml/post-schema-compilation-infoset.md)
+ [XML 스키마 포함하기 또는 가져오기](../../../../docs/standard/data/xml/including-or-importing-xml-schemas.md)  
+ [스키마 컴파일을 위한 XmlSchemaSet](../../../../docs/standard/data/xml/xmlschemaset-for-schema-compilation.md)  
+ [Post-Schema Compilation Infoset](../../../../docs/standard/data/xml/post-schema-compilation-infoset.md)

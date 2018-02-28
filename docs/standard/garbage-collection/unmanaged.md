@@ -18,22 +18,25 @@ helpviewer_keywords:
 - unmanaged resource cleanup
 - Finalize method
 ms.assetid: a17b0066-71c2-4ba4-9822-8e19332fc213
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: c94a449edbbe38c4028e27fd946b66a054badf51
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: fea76042bb603889764a9d42b5a7836d704fcd48
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="cleaning-up-unmanaged-resources"></a>관리되지 않는 리소스 정리
-대부분의 응용 프로그램에서 만들어지는 개체에 대 한에 사용할 수 있습니다. NET의 가비지 수집기 메모리 관리를 처리 하도록 합니다. 그러나 관리되지 않는 리소스를 포함하는 개체를 만든 경우에는 응용 프로그램에서 해당 개체의 사용을 마치면 이러한 리소스를 명시적으로 해제해야 합니다. 가장 일반적인 형태의 관리되지 않는 리소스로는 파일, 창, 네트워크 연결 또는 데이터베이스 연결 등의 운영 체제 리소스를 래핑하는 개체를 들 수 있습니다. 가비지 수집기에서는 관리되지 않는 리소스를 캡슐화하는 개체의 수명을 추적할 수 있지만, 관리되지 않는 리소스를 해제하고 정리하는 방법에 대해서는 알 수 없습니다.  
+사용자 앱에서 만드는 대부분의 개체에 대해 .NET의 가비지 수집기를 사용하여 메모리 관리를 처리할 수 있습니다. 그러나 관리되지 않는 리소스를 포함하는 개체를 만든 경우에는 응용 프로그램에서 해당 개체의 사용을 마치면 이러한 리소스를 명시적으로 해제해야 합니다. 가장 일반적인 형태의 관리되지 않는 리소스로는 파일, 창, 네트워크 연결 또는 데이터베이스 연결 등의 운영 체제 리소스를 래핑하는 개체를 들 수 있습니다. 가비지 수집기에서는 관리되지 않는 리소스를 캡슐화하는 개체의 수명을 추적할 수 있지만, 관리되지 않는 리소스를 해제하고 정리하는 방법에 대해서는 알 수 없습니다.  
   
  형식이 관리되지 않는 리소스를 사용하는 경우 다음을 수행해야 합니다.  
   
--   구현 된 [삭제 패턴](../../../docs/standard/design-guidelines/dispose-pattern.md)합니다. 이를 수행하려면 관리되지 않는 리소스의 명확한 해제를 활성화하기 위해 <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType> 구현을 제공해야 합니다. 개체 및 해당 개체에서 사용하는 리소스가 더 이상 필요하지 않은 경우 형식의 소비자가 <xref:System.IDisposable.Dispose%2A>를 호출합니다. <xref:System.IDisposable.Dispose%2A> 메서드가 관리되지 않는 리소스를 즉시 해제합니다.  
+-   [삭제 패턴](../../../docs/standard/design-guidelines/dispose-pattern.md)을 구현합니다. 이를 수행하려면 관리되지 않는 리소스의 명확한 해제를 활성화하기 위해 <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType> 구현을 제공해야 합니다. 개체 및 해당 개체에서 사용하는 리소스가 더 이상 필요하지 않은 경우 형식의 소비자가 <xref:System.IDisposable.Dispose%2A>를 호출합니다. <xref:System.IDisposable.Dispose%2A> 메서드가 관리되지 않는 리소스를 즉시 해제합니다.  
   
 -   형식의 소비자가 실수로 <xref:System.IDisposable.Dispose%2A>를 호출하지 않은 경우 해제되는 관리되지 않는 리소스를 제공합니다. 여기에는 두 가지 방법이 있습니다.  
   
@@ -45,9 +48,9 @@ ms.lasthandoff: 10/18/2017
   
  그러면 형식의 소비자가 <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType> 구현을 직접 호출하여 관리되지 않는 리소스가 사용하는 메모리를 확보할 수 있습니다. <xref:System.IDisposable.Dispose%2A> 메서드를 제대로 구현하면 SafeHandle의 <xref:System.Object.Finalize%2A> 메서드 또는 <xref:System.Object.Finalize%2A?displayProperty=nameWithType> 메서드의 고유한 재정의가 <xref:System.IDisposable.Dispose%2A> 메서드가 호출되지 않는 경우 리소스를 정리하는 보호 기능이 됩니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [Dispose 메서드 구현](../../../docs/standard/garbage-collection/implementing-dispose.md)  
- 구현 하는 방법에 설명 된 [삭제 패턴](../../../docs/standard/design-guidelines/dispose-pattern.md) 관리 되지 않는 리소스를 해제 하는 데 있습니다.  
+ 관리되지 않는 리소스를 해제하기 위해 [삭제 패턴](../../../docs/standard/design-guidelines/dispose-pattern.md)을 구현하는 방법을 설명합니다.  
   
  [IDisposable을 구현하는 개체 사용](../../../docs/standard/garbage-collection/using-objects.md)  
  형식의 소비자가 <xref:System.IDisposable.Dispose%2A> 구현이 호출되었는지 확인하는 방법을 설명합니다. 이를 수행하는 경우 C# `using` 문 또는 Visual Basic `Using` 문을 사용하는 것이 좋습니다.  

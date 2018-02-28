@@ -1,7 +1,6 @@
 ---
-title: "빠른 시작 - 컬렉션 - C# 가이드"
-description: "이 빠른 시작에서는 목록 컬렉션을 살펴보면서 C#에 대해 학습합니다."
-keywords: "C#, 시작, 자습서, 컬렉션, 목록"
+title: "컬렉션 자습서 - C# 로컬 빠른 시작"
+description: "이 자습서에서는 목록 컬렉션을 살펴보면서 C#에 대해 학습합니다."
 author: billwagner
 ms.author: wiwagn
 ms.date: 10/13/2017
@@ -10,25 +9,25 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.custom: mvc
-ms.openlocfilehash: 44e79432c0a1970313cba21778e2bf439f8a4388
-ms.sourcegitcommit: 8bde7a3432f30fc771079744955c75c58c4eb393
+ms.openlocfilehash: 76b3baf0525c81e5b3058aa2ab6fd4ccd97d1916
+ms.sourcegitcommit: d2da0142247ef42a219a5d2907f153e62dc6ea0d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/20/2018
+ms.lasthandoff: 02/01/2018
 ---
-# <a name="c-quick-start-collections"></a>C# 빠른 시작: 컬렉션 #
+# <a name="c-quickstart-collections"></a>C# 빠른 시작: 컬렉션
 
 이 빠른 시작에서는 C# 언어 및 <xref:System.Collections.Generic.List%601> 클래스의 기본 사항을 소개합니다.
 
-이 빠른 시작에서는 개발에 사용할 수 있는 컴퓨터가 있다고 예상합니다. .NET 항목 [Get Started in 10 minutes](https://www.microsoft.com/net/core)(10분 안에 시작)에는 Mac, PC 또는 Linux의 로컬 개발 환경 설정에 대한 지침이 포함되어 있습니다. 사용할 명령에 대한 간단한 개요는 [로컬 빠른 시작 소개](local-environment.md)에 자세한 정보에 대한 링크와 함께 있습니다.
+이 빠른 시작에서는 개발에 사용할 수 있는 컴퓨터가 있다고 예상합니다. .NET 항목 [Get Started in 10 minutes](https://www.microsoft.com/net/core)(10분 안에 시작)에는 Mac, PC 또는 Linux의 로컬 개발 환경 설정에 대한 지침이 포함되어 있습니다. 사용할 명령에 대한 간단한 개요는 [로컬 빠른 시작 소개](local-environment.md)에 나와 있으며, 이 소개에는 자세한 정보에 대한 링크도 함께 있습니다.
 
-## <a name="a-basic-list-example"></a>기본 목록 예제입니다.
+## <a name="a-basic-list-example"></a>기본 목록 예제
 
 **list-quickstart**라는 디렉터리를 만듭니다. 현재 디렉터리로 지정하고 `dotnet new console`을 실행합니다.
 
 > [!NOTE]
 > [Get started with .NET in 10 minutes](https://www.microsoft.com/net)(10분 안에 .NET 시작)를 방금 완료한 경우에는 방금 만든 myApp 응용 프로그램을 계속 사용할 수 있습니다.
- 
+
 편집기에서 **Program.cs**를 열고 기존 코드를 다음으로 바꿉니다.
 
 ```csharp
@@ -58,11 +57,11 @@ namespace list_quickstart
 이름을 표시하는 코드는 **보간된 문자열**을 사용합니다.  `string` 앞에 `$` 문자를 넣으면 문자열 선언에 C# 코드를 포함할 수 있습니다. 실제 문자열은 C# 코드를 생성하는 값으로 바꿉니다. 이 예제에서는 <xref:System.String.ToUpper%2A> 메서드를 호출했기 때문에 `{name.ToUpper()}`를 대문자로 변환된 각 이름으로 바꿉니다.
 
 계속해서 살펴보겠습니다.
-    
+
 ## <a name="modify-list-contents"></a>목록 콘텐츠 수정
 
 생성한 컬렉션은 <xref:System.Collections.Generic.List%601> 형식을 사용합니다. 이 형식은 요소의 시퀀스를 저장합니다. 꺾쇠 괄호 사이의 요소 형식을 지정합니다.
-    
+
 이 <xref:System.Collections.Generic.List%601> 형식은 늘리거나 줄일 수 있어 요소를 추가하거나 제거할 수 있습니다. `Main` 메서드에서 `}`를 닫기 전에 이 코드를 추가합니다.
 
 ```csharp
@@ -77,7 +76,7 @@ foreach (var name in names)
 ```
 
 목록 끝에 이름을 두 개 더 추가했습니다. 또한 이름을 하나 제거했습니다. 파일을 저장하고 `dotnet run`을 입력하여 시도해 보세요.
-    
+
 <xref:System.Collections.Generic.List%601>를 사용하면 **인덱스**별로 각 항목을 참조할 수도 있습니다. 목록 이름 뒤 `[`와 `]` 토큰 사이에 인덱스를 배치합니다. C#은 첫 번째 인덱스에 0을 사용합니다. 방금 추가한 코드 바로 아래에 이 코드를 추가하여 시도합니다.
 
 ```csharp
@@ -91,9 +90,10 @@ Console.WriteLine($"I've added {names[2]} and {names[3]} to the list");
 Console.WriteLine($"The list has {names.Count} people in it");
  ```
 
-파일을 저장하고 `dotnet run`을 다시 입력하여 결과를 확인합니다.    
+파일을 저장하고 `dotnet run`을 다시 입력하여 결과를 확인합니다.
 
 ## <a name="search-and-sort-lists"></a>목록 검색 및 정렬
+
 샘플에서는 상대적으로 작은 목록을 사용하지만 응용 프로그램에서는 수천에 달하는 많은 요소가 포함된 목록을 작성할 수 있습니다. 이러한 큰 컬렉션에서 요소를 찾으려면 여러 항목의 목록을 검색해야 합니다. <xref:System.Collections.Generic.List%601.IndexOf%2A> 메서드는 항목을 검색하고 항목의 인덱스를 반환합니다. `Main` 메서드의 맨 아래에 이 코드를 추가합니다.
 
 ```csharp
@@ -113,7 +113,7 @@ if (index == -1)
 } else
 {
     Console.WriteLine($"The name {names[index]} is at index {index}");
-    
+
 }
 ```
 
@@ -184,7 +184,7 @@ namespace list_quickstart
 
 ## <a name="lists-of-other-types"></a>다른 형식 목록
 
-지금까지 목록에 `string` 형식을 사용했습니다. 다른 형식을 사용하여 <xref:System.Collections.Generic.List%601>를 만들어 보겠습니다. 숫자 집합을 빌드하겠습니다. 
+지금까지 목록에 `string` 형식을 사용했습니다. 다른 형식을 사용하여 <xref:System.Collections.Generic.List%601>를 만들어 보겠습니다. 숫자 집합을 빌드하겠습니다.
 
 새 `Main` 메서드의 맨 아래에 다음을 추가합니다.
 
@@ -204,12 +204,13 @@ foreach(var item in fibonacciNumbers)
     Console.WriteLine(item);
 ```
 
-파일을 저장하고 `dotnet run`을 입력하여 결과를 확인합니다. 
+파일을 저장하고 `dotnet run`을 입력하여 결과를 확인합니다.
 
 > [!TIP]
-> 이 섹션에만 집중하려면 `WorkingWithStrings();`를 호출하는 코드를 주석으로 처리할 수 있습니다. `// WorkingWithStrings();`처럼 호출 앞에 `/` 문자를 두 개 배치합니다. 
+> 이 섹션에만 집중하려면 `WorkingWithStrings();`를 호출하는 코드를 주석으로 처리할 수 있습니다. `// WorkingWithStrings();`처럼 호출 앞에 `/` 문자를 두 개 배치합니다.
 
 ## <a name="challenge"></a>과제
+
 이 단원과 이전 단원에서 학습한 개념을 함께 적용할 수 있는지 확인하세요. 피보나치 수를 사용하여 지금까지 빌드한 내용을 확장합니다. 코드를 작성하여 시퀀스에서 처음 20개 수를 생성합니다. (힌트: 20번째 피보나치 수는 6765입니다.)
 
 ## <a name="complete-challenge"></a>과제 완료
@@ -218,6 +219,6 @@ foreach(var item in fibonacciNumbers)
 
 루프의 각 반복을 통해 목록의 마지막 두 정수를 사용하고, 더하고, 해당 값을 목록에 추가합니다. 목록에 20개의 항목이 추가될 때까지 루프가 반복됩니다.
 
-축하합니다. 목록 빠른 시작을 완료했습니다. 사용자의 개발 환경에서 [클래스 소개](introduction-to-classes.md) 빠른 시작을 계속할 수 있습니다.
+축하합니다. 목록 빠른 시작을 완료했습니다. 자체 개발 환경에서 [클래스 소개](introduction-to-classes.md) 빠른 시작을 계속할 수 있습니다.
 
 [.NET 가이드](../../standard/index.md)의 [컬렉션](../../standard/collections/index.md) 항목에서 `List` 형식에 대해 더 자세히 학습할 수 있습니다. 다른 많은 컬렉션 형식에 대해서도 학습합니다.

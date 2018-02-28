@@ -12,29 +12,32 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 00833027-1428-4586-83c1-42f5de3323d1
-caps.latest.revision: "3"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: fab67e10aa0562b59f8c7704a5ca1feeb66d6208
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: f875169d43a2f733050b46c76cea0891b4cfabf7
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="xdr-validation-with-xmlschemacollection"></a>XmlSchemaCollection을 사용하여 XDR 유효성 검사
-에 대 한 유효성을 검사할 Xml-data Reduced (XDR) 스키마에 저장 되는 경우는 **XmlSchemaCollection**, URI 스키마 컬렉션에 추가할 때 지정한 네임 스페이스와 연결 됩니다. **XmlValidatingReader** 컬렉션의 해당 URI에 해당 하는 스키마에 XML 문서에서 네임 스페이스 URI를 매핑합니다.  
+유효성을 검사하려는 XDR(XML 데이터 축소) 스키마가 **XmlSchemaCollection**에 저장된 경우 스키마를 컬렉션에 추가할 때 지정한 네임스페이스 URI와 연관됩니다. **XmlValidatingReader**에서는 XML 문서의 네임스페이스 URI를 컬렉션의 해당 URI에 상응하는 스키마로 매핑합니다.  
   
 > [!IMPORTANT]
->  이제 <xref:System.Xml.Schema.XmlSchemaCollection> 클래스는 사용되지 않으며 <xref:System.Xml.Schema.XmlSchemaSet> 클래스로 대체되었습니다. 에 대 한 자세한 내용은 <xref:System.Xml.Schema.XmlSchemaSet> 클래스 참조 [스키마 컴파일을 위한 XmlSchemaSet](../../../../docs/standard/data/xml/xmlschemaset-for-schema-compilation.md)합니다.  
+>  이제 <xref:System.Xml.Schema.XmlSchemaCollection> 클래스는 사용되지 않으며 <xref:System.Xml.Schema.XmlSchemaSet> 클래스로 대체되었습니다. <xref:System.Xml.Schema.XmlSchemaSet> 클래스에 대한 자세한 내용은 [스키마 컴파일을 위한 XmlSchemaSet](../../../../docs/standard/data/xml/xmlschemaset-for-schema-compilation.md)을 참조하세요.  
   
- 예를 들어, XML 문서의 루트 요소가 `<bookstore xmlns="urn:newbooks-schema">`스키마에 추가 되 면는 **XmlSchemaCollection** 다음과 같이 동일한 네임 스페이스를 참조 합니다.  
+ 예를 들어, XML 문서의 루트 요소가 `<bookstore xmlns="urn:newbooks-schema">`일 경우 스키마를 **XmlSchemaCollection**에 추가하면 다음과 같이 동일한 네임스페이스를 참조합니다.  
   
 ```  
 xsc.Add("urn:newbooks-schema", "newbooks.xdr")  
 ```  
   
- 다음 코드 예제는 **XmlValidatingReader** 를 사용 하는 **XmlTextReader** 에 XDR 스키마 인 HeadCount.xdr을 추가 하 고는 **XmlSchemaCollection**합니다.  
+ 다음 코드 예제에서는 **XmlTextReader**를 사용하는 **XmlValidatingReader**를 만들고 XDR 스키마인 HeadCount.xdr을 **XmlSchemaCollection**에 추가합니다.  
   
 ```vb  
 Imports System  

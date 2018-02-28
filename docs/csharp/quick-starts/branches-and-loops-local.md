@@ -1,5 +1,5 @@
 ---
-title: "빠른 시작 - 분기 및 루프 - C# 가이드"
+title: "분기 및 루프 자습서 - C# 로컬 빠른 시작"
 description: "분기 및 루프에 관한 이 빠른 시작에서는 C# 코드를 작성하여 문을 반복적으로 실행하기 위한 조건부 분기 및 루프를 지원하는 언어 구문을 살펴봅니다."
 author: billwagner
 ms.author: wiwagn
@@ -9,21 +9,21 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.custom: mvc
-ms.openlocfilehash: 609c8625b19025a20c1da1e767870eafbab4c4a0
-ms.sourcegitcommit: 8bde7a3432f30fc771079744955c75c58c4eb393
+ms.openlocfilehash: 7d69b2b9bb02e2999bcd785da653bd4a13ed947c
+ms.sourcegitcommit: d2da0142247ef42a219a5d2907f153e62dc6ea0d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/20/2018
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="branches-and-loops"></a>분기 및 루프
 
-이 빠른 시작에서는 변수를 검사하고 해당 변수에 따라 실행 경로를 변경하는 코드를 작성하는 방법을 설명합니다. C# 코드를 작성하고 컴파일 및 실행 결과를 확인합니다. 이 빠른 시작에는 C#에서 분기 및 루프 구문을 살펴보는 일련의 단원이 포함되어 있습니다. 이러한 단원에서는 C# 언어의 기본 사항을 설명합니다.
+이 빠른 시작에서는 변수를 검사하고 해당 변수에 따라 실행 경로를 변경하는 코드를 작성하는 방법을 설명합니다. C# 코드를 작성하고 컴파일 및 실행 결과를 확인합니다. 이 빠른 시작에는 C#의 분기 및 루프 구문을 살펴보는 일련의 단원이 포함되어 있습니다. 이러한 단원에서는 C# 언어의 기본 사항을 설명합니다.
 
-이 빠른 시작에서는 개발에 사용할 수 있는 컴퓨터가 있다고 예상합니다. .NET 항목 [Get Started in 10 minutes](https://www.microsoft.com/net/core)(10분 안에 시작)에는 Mac, PC 또는 Linux의 로컬 개발 환경 설정에 대한 지침이 포함되어 있습니다. 사용할 명령에 대한 간단한 개요는 [로컬 빠른 시작 소개](local-environment.md)에 자세한 정보에 대한 링크와 함께 있습니다.
+이 빠른 시작에서는 개발에 사용할 수 있는 컴퓨터가 있다고 예상합니다. .NET 항목 [Get Started in 10 minutes](https://www.microsoft.com/net/core)(10분 안에 시작)에는 Mac, PC 또는 Linux의 로컬 개발 환경 설정에 대한 지침이 포함되어 있습니다. 사용할 명령에 대한 간단한 개요는 [로컬 빠른 시작 소개](local-environment.md)에 나와 있으며, 이 소개에는 자세한 정보에 대한 링크도 함께 있습니다.
 
 ## <a name="make-decisions-using-the-if-statement"></a>`if` 문을 사용하여 결정하기
 
-**branches-quickstart**라는 디렉터리를 만듭니다. 현재 디렉터리로 지정하고 `dotnet new console -n BranchesAndLoops -o .`을 실행합니다. 이 명령은 현재 디렉터리에 새 .NET Core 콘솔 응용 프로그램을 만듭니다. 
+**branches-quickstart**라는 디렉터리를 만듭니다. 현재 디렉터리로 지정하고 `dotnet new console -n BranchesAndLoops -o .`을 실행합니다. 이 명령은 현재 디렉터리에 새 .NET Core 콘솔 응용 프로그램을 만듭니다.
 
 원하는 편집기에서 **Program.cs**를 열고 `Console.Writeline("Hello World!");` 줄을 다음 코드로 바꿉니다.
 
@@ -45,12 +45,11 @@ int b = 3;
 `dotnet run`을 다시 입력합니다. 답이 10보다 작기 때문에 아무것도 출력되지 않습니다. 테스트하는 **조건**은 false입니다. `if` 문에 대해 가능한 분기 중 하나(true 분기)만 작성했기 때문에 실행할 코드가 없습니다.
 
 > [!TIP]
-> C# (또는 다른 프로그래밍 언어)를 살펴보면서 코드를 작성할 때 실수를 하게 될 것입니다. 컴파일러가 오류를 찾아 보고합니다. 오류 출력 및 오류를 생성한 코드를 자세히 살펴봅니다. 일반적으로 컴파일러 오류는 문제를 찾는 데 도움이 될 수 있습니다. 
+> C# (또는 다른 프로그래밍 언어)를 살펴보면서 코드를 작성할 때 실수를 하게 될 것입니다. 컴파일러가 오류를 찾아 보고합니다. 오류 출력 및 오류를 생성한 코드를 자세히 살펴봅니다. 일반적으로 컴파일러 오류는 문제를 찾는 데 도움이 될 수 있습니다.
 
-이 첫 번째 샘플에서는 `if`의 기능과 부울 형식을 보여 줍니다. *부울*은 `true` 또는 `false`의 두 값 중 하나를 가질 수 있는 변수입니다. C#은 부울 변수에 대한 특수 형식 `bool`을 정의합니다. `if` 문은 `bool`의 값을 확인합니다. 값이 `true`인 경우 `if` 뒤의 문이 실행됩니다. 그러하지 않으면 건너뜁니다. 
+이 첫 번째 샘플에서는 `if`의 기능과 부울 형식을 보여줍니다. *부울*은 `true` 또는 `false`의 두 값 중 하나를 가질 수 있는 변수입니다. C#은 부울 변수에 대한 특수 형식 `bool`을 정의합니다. `if` 문은 `bool`의 값을 확인합니다. 값이 `true`인 경우 `if` 뒤의 문이 실행됩니다. 그러하지 않으면 건너뜁니다.
 
 조건을 확인하고 해당 조건에 따라 문을 실행하는 이 프로세스는 아주 강력합니다.
-
 
 ## <a name="make-if-and-else-work-together"></a>if와 else를 함께 사용하기
 
@@ -87,7 +86,7 @@ else
 ```
 
 > [!TIP]
-> 이 빠른 시작의 나머지 부분에서 코드 샘플에는 일반적인 방법에 따라 모두 중괄호가 포함되어 있습니다.
+> 이 빠른 시작의 나머지 부분에 있는 코드 샘플에는 일반적인 방법에 따라 모두 중괄호가 포함되어 있습니다.
 
 더 복잡한 조건을 테스트할 수 있습니다. `Main` 메서드에서 지금까지 작성한 코드 뒤에 다음 코드를 추가합니다.
 
@@ -105,7 +104,7 @@ else
 }
 ```
 
-`&&`는 “and”를 나타냅니다. true 분기에서 문을 실행하려면 두 조건이 모두 true여야 합니다.  이러한 예제에서는 `{` 및 `}`로 문을 묶으면 각 조건부 분기에 여러 문을 가질 수 있음도 보여 줍니다.
+`&&`는 “and”를 나타냅니다. true 분기에서 문을 실행하려면 두 조건이 모두 true여야 합니다.  이러한 예제에서는 `{` 및 `}`로 문을 묶으면 각 조건부 분기에 여러 문을 가질 수 있음도 보여줍니다.
 
 `||`을 사용하여 “or”를 나타낼 수도 있습니다. 지금까지 작성한 코드 뒤에 다음 코드를 추가합니다.
 
@@ -227,7 +226,7 @@ for(int index = 0; index < 10; index++)
 } 
 ```
 
-`while` 루프 및 이미 사용한 `do` 루프와 동일한 작업을 수행합니다. `for` 문에는 작동 방식을 제어하는 세 부분이 있습니다. 
+`while` 루프 및 이미 사용한 `do` 루프와 동일한 작업을 수행합니다. `for` 문에는 작동 방식을 제어하는 세 부분이 있습니다.
 
 첫 번째 부분은 **for 이니셜라이저입니다**. `for index = 0;`은 `index`가 루프 변수임을 선언하고 첫 번째 값을 `0`으로 설정합니다.
 
@@ -254,11 +253,11 @@ for(int index = 0; index < 10; index++)
 
 “분기 및 루프” 빠른 시작을 완료했습니다.
 
-사용자의 개발 환경에서 [보간된 문자열](interpolated-strings-local.md) 빠른 시작을 계속할 수 있습니다.
+자체 개발 환경에서 [보간된 문자열](interpolated-strings-local.md) 빠른 시작을 계속할 수 있습니다.
 
 다음 항목에서는 해당 개념에 대해 더 자세히 알아볼 수 있습니다.
 
-[If 및 else 문](../language-reference/keywords/if-else.md)   
-[While 문](../language-reference/keywords/while.md)   
-[Do 문](../language-reference/keywords/do.md)   
-[For 문](../language-reference/keywords/for.md)   
+[If 및 else 문](../language-reference/keywords/if-else.md)  
+[While 문](../language-reference/keywords/while.md)  
+[Do 문](../language-reference/keywords/do.md)  
+[For 문](../language-reference/keywords/for.md)  

@@ -9,18 +9,21 @@ ms.technology: dotnet-standard
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 23975f88-e0af-4b88-93de-9e20e11880ad
-caps.latest.revision: "2"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 45e94954641e935597394b7cf04818c6c78ea675
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 2f86abb7da5509a80cceede0f1092a75cef4d8da
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="attribute-and-namespace-node-navigation-using-xpathnavigator"></a>XPathNavigator를 사용하여 특성 및 네임스페이스 노드 탐색
-<xref:System.Xml.XPath.XPathNavigator> 에서 발견 한 첫 번째 집합 두 집합 탐색 메서드를 제공 하는 클래스는 [노드 집합 탐색을 사용 하 여 XPathNavigator](../../../../docs/standard/data/xml/node-set-navigation-using-xpathnavigator.md) 항목을 탐색 하는 데는 *노드 집합* 에 <xref:System.Xml.XPath.XPathDocument> 또는 <xref:System.Xml.XmlDocument> 개체입니다. 이 항목에서 설명 하는 두 번째 집합을 탐색 하는 데는 *특성 및 네임 스페이스 노드* 에 <xref:System.Xml.XPath.XPathDocument> 또는 <xref:System.Xml.XmlDocument> 개체입니다.  
+<xref:System.Xml.XPath.XPathNavigator> 클래스는 두 개의 탐색 메서드 집합을 제공합니다. [XPathNavigator를 사용하여 노드 집합 탐색](../../../../docs/standard/data/xml/node-set-navigation-using-xpathnavigator.md) 항목에서 찾을 수 있는 첫 번째 집합은 <xref:System.Xml.XPath.XPathDocument> 또는 <xref:System.Xml.XmlDocument> 개체의 ‘노드 집합’을 탐색하는 데 사용합니다. 이 항목에서 설명하는 두 번째 집합은 <xref:System.Xml.XPath.XPathDocument> 또는 <xref:System.Xml.XmlDocument> 개체의 ‘특성 및 네임스페이스 노드’를 탐색하는 데 사용합니다.  
   
 ## <a name="attribute-node-navigation"></a>특성 노드 탐색  
  특성은 요소의 자식이 아니라 요소의 속성입니다. 이러한 구분은 형제, 부모 및 자식 노드를 탐색하는 데 사용되는 <xref:System.Xml.XPath.XPathNavigator> 클래스의 메서드로 인해 중요하게 작용합니다.  
@@ -61,7 +64,7 @@ ms.lasthandoff: 11/21/2017
 ### <a name="the-xpathnamespacescope-enumeration"></a>XPathNamespaceScope 열거형  
  네임스페이스 노드를 탐색할 때 <xref:System.Xml.XPath.XPathNavigator.MoveToFirstNamespace%2A> 매개 변수를 사용하여 <xref:System.Xml.XPath.XPathNavigator.MoveToNextNamespace%2A> 및 <xref:System.Xml.XPath.XPathNamespaceScope> 메서드를 호출할 수 있습니다. 이러한 메서드는 매개 변수 없이 호출되는 메서드와 다르게 동작합니다. <xref:System.Xml.XPath.XPathNamespaceScope> 열거형에는 <xref:System.Xml.XPath.XPathNamespaceScope.All>, <xref:System.Xml.XPath.XPathNamespaceScope.ExcludeXml> 또는 <xref:System.Xml.XPath.XPathNamespaceScope.Local> 값이 있습니다.  
   
- 다음 예제에서는 XML 문서의 다양한 범위에서 <xref:System.Xml.XPath.XPathNavigator.MoveToFirstNamespace%2A> 및 <xref:System.Xml.XPath.XPathNavigator.MoveToNextNamespace%2A> 메서드가 반환하는 네임스페이스를 보여 줍니다.  
+ 다음 예제에서는 XML 문서의 다양한 범위에서 <xref:System.Xml.XPath.XPathNavigator.MoveToFirstNamespace%2A> 및 <xref:System.Xml.XPath.XPathNavigator.MoveToNextNamespace%2A> 메서드가 반환하는 네임스페이스를 보여줍니다.  
   
 ```xml  
 <root>  
@@ -82,7 +85,7 @@ ms.lasthandoff: 11/21/2017
 > [!NOTE]
 >  <xref:System.Xml.XPath.XPathNavigator> 클래스는 네임스페이스 노드를 문서 순서와 역순으로 반환합니다. 따라서 <xref:System.Xml.XPath.XPathNavigator.MoveToFirstNamespace%2A>는 기본적으로 현재 범위의 마지막 네임스페이스 노드로 이동합니다.  
   
- 다음 예제에서는 XML 문서의 다양한 범위에서 <xref:System.Xml.XPath.XPathNavigator.MoveToFirstNamespace%2A> 열거형을 지정한 경우 <xref:System.Xml.XPath.XPathNavigator.MoveToNextNamespace%2A> 및 <xref:System.Xml.XPath.XPathNamespaceScope> 메서드가 반환하는 네임스페이스를 보여 줍니다.  
+ 다음 예제에서는 XML 문서의 다양한 범위에서 <xref:System.Xml.XPath.XPathNavigator.MoveToFirstNamespace%2A> 열거형을 지정한 경우 <xref:System.Xml.XPath.XPathNavigator.MoveToNextNamespace%2A> 및 <xref:System.Xml.XPath.XPathNamespaceScope> 메서드가 반환하는 네임스페이스를 보여줍니다.  
   
 ```xml  
 <root xmlns="http://www.contoso.com" xmlns:a="http://www.contoso.com/a" xmlns:b="http://www.contoso.com/b">  
@@ -108,6 +111,6 @@ ms.lasthandoff: 11/21/2017
  <xref:System.Xml.XPath.XPathDocument>  
  <xref:System.Xml.XPath.XPathNavigator>  
  [XPath 데이터 모델을 사용하여 XML 데이터 처리](../../../../docs/standard/data/xml/process-xml-data-using-the-xpath-data-model.md)  
- [XPathNavigator를 사용 하 여 노드 집합 탐색](../../../../docs/standard/data/xml/node-set-navigation-using-xpathnavigator.md)  
- [XPathNavigator를 사용 하 여 XML 데이터를 추출 합니다.](../../../../docs/standard/data/xml/extract-xml-data-using-xpathnavigator.md)  
- [강력한 형식의 XPathNavigator를 사용 하 여 XML 데이터 액세스](../../../../docs/standard/data/xml/accessing-strongly-typed-xml-data-using-xpathnavigator.md)
+ [XPathNavigator를 사용하여 노드 집합 탐색](../../../../docs/standard/data/xml/node-set-navigation-using-xpathnavigator.md)  
+ [XPathNavigator를 사용하여 XML 데이터 추출](../../../../docs/standard/data/xml/extract-xml-data-using-xpathnavigator.md)  
+ [XPathNavigator를 사용하여 강력한 형식의 XML 데이터 액세스](../../../../docs/standard/data/xml/accessing-strongly-typed-xml-data-using-xpathnavigator.md)

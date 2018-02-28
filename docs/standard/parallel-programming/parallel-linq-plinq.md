@@ -8,24 +8,28 @@ ms.suite:
 ms.technology: dotnet-standard
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: PLINQ, overview
+helpviewer_keywords:
+- PLINQ, overview
 ms.assetid: 3d4d0cd3-bde4-490b-99e7-f4e41be96455
-caps.latest.revision: "17"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: c0028d3d8c30bbc7f0592a4462ca1eeb80c8b1f9
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 94eeeda4666a4e6c1cb8729d6563ffcc4aa479c4
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="parallel-linq-plinq"></a>PLINQ(병렬 LINQ)
-PLINQ(병렬 LINQ)는 LINQ to Objects의 병렬 구현입니다. PLINQ에 대 한 확장 메서드로 LINQ 표준 쿼리 연산자의 전체 집합을 구현는 <xref:System.Linq> 네임 스페이스 및 병렬 작업에 대 한 추가 연산자가 있습니다. PLINQ는 LINQ의 간편성과 가독성을 병렬 프로그래밍의 기능과 결합합니다. 작업 병렬 라이브러리를 대상으로 하는 코드와 마찬가지로 PLINQ 쿼리는 호스트 컴퓨터의 기능에 따라 동시성 수준 규모를 조정합니다.  
+PLINQ(병렬 LINQ)는 LINQ to Objects의 병렬 구현입니다. PLINQ는 LINQ 표준 쿼리 연산자의 전체 집합을 <xref:System.Linq> 네임스페이스의 확장 메서드로 구현하고, 병렬 작업을 위한 추가 연산자를 포함합니다. PLINQ는 LINQ의 간편성과 가독성을 병렬 프로그래밍의 기능과 결합합니다. 작업 병렬 라이브러리를 대상으로 하는 코드와 마찬가지로 PLINQ 쿼리는 호스트 컴퓨터의 기능에 따라 동시성 수준 규모를 조정합니다.  
   
  대부분의 시나리오에서 PLINQ는 호스트 컴퓨터에서 사용 가능한 모든 코어를 보다 효율적으로 사용하여 LINQ to Objects 쿼리 속도를 상당히 높일 수 있습니다. 이렇게 향상된 성능으로 고성능 컴퓨팅 기능을 데스크탑에 제공합니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [PLINQ 소개](../../../docs/standard/parallel-programming/introduction-to-plinq.md)  
   
  [PLINQ의 속도 향상 이해](../../../docs/standard/parallel-programming/understanding-speedup-in-plinq.md)  

@@ -16,15 +16,18 @@ helpviewer_keywords:
 - SemaphoreSlim class, about SemaphoreSlim class
 - threading [.NET Framework], Semaphore class
 ms.assetid: 7722a333-b974-47a2-a7c0-f09097fb644e
-caps.latest.revision: "17"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 039dee4df1a6d06fa1833eae077817ff5eca3ea3
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 3c7d196b54a831c807b7181c1c810c3e78a463a2
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="semaphore-and-semaphoreslim"></a>세마포 및 SemaphoreSlim
 로컬 또는 명명된(시스템 전체) 세마포를 나타내는 <xref:System.Threading.Semaphore?displayProperty=nameWithType> 클래스는 Win32 세마포 개체를 묶는 씬 래퍼입니다. Win32 세마포는 리소스 풀에 대한 액세스를 제어하는 데 사용할 수 있는 가산 세마포입니다.  
@@ -39,7 +42,7 @@ ms.lasthandoff: 11/21/2017
 ### <a name="semaphores-and-thread-identity"></a>세마포 및 스레드 ID  
  두 세마포 형식은 <xref:System.Threading.WaitHandle.WaitOne%2A>, <xref:System.Threading.SemaphoreSlim.Wait%2A>, <xref:System.Threading.Semaphore.Release%2A> 및 <xref:System.Threading.SemaphoreSlim.Release%2A?displayProperty=nameWithType> 메서드 호출에 대해 스레드 ID를 적용하지 않습니다. 예를 들어 세마포의 일반적인 사용 시나리오에서는 생산자 스레드와 소비자 스레드가 사용되는데, 여기서 스레드 하나는 항상 세마포 수를 증가시키고 다른 하나는 항상 세마포 수를 감소시킵니다.  
   
- 프로그래머는 스레드가 세마포를 너무 여러 번 해제하지 않는지 확인해야 합니다. 예를 들어 세마포의 최대 개수가 2개인데 스레드 A와 스레드 B가 모두 세마포를 입력한다고 가정해 보겠습니다. 스레드 B에서 프로그래밍 오류가 발생하여 `Release`가 두 번 호출되면 두 호출은 모두 성공합니다. 세마포 개수 꽉 차서 스레드 A 호출 `Release`, <xref:System.Threading.SemaphoreFullException> throw 됩니다.  
+ 프로그래머는 스레드가 세마포를 너무 여러 번 해제하지 않는지 확인해야 합니다. 예를 들어 세마포의 최대 개수가 2개인데 스레드 A와 스레드 B가 모두 세마포를 입력한다고 가정해 보겠습니다. 스레드 B에서 프로그래밍 오류가 발생하여 `Release`가 두 번 호출되면 두 호출은 모두 성공합니다. 그러면 세마포 개수가 다 차서 스레드 A가 `Release`를 호출하면 <xref:System.Threading.SemaphoreFullException>이 throw됩니다.  
   
 ## <a name="named-semaphores"></a>명명된 세마포  
  Windows 운영 체제에서는 세마포에 이름을 지정할 수 있습니다. 명명된 세마포는 시스템 전체에 사용됩니다. 즉, 명명된 세마포는 작성되고 나면 모든 프로세스의 모든 프로세스에 표시됩니다. 따라서 명명된 세마포는 스레드뿐 아니라 프로세스의 활동을 동기화하는 데도 사용할 수 있습니다.  

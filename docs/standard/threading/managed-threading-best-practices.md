@@ -16,21 +16,24 @@ helpviewer_keywords:
 - threading [.NET Framework], best practices
 - managed threading
 ms.assetid: e51988e7-7f4b-4646-a06d-1416cee8d557
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: e396bb1f6a710e49e311ca1526a7aae9bca7bf90
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: c23ef17e2bf2bec389368d1b9d88d11723ef531e
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="managed-threading-best-practices"></a>관리되는 스레딩을 구현하는 최선의 방법
 다중 스레딩에는 신중한 프로그래밍이 필요합니다. 대부분의 작업의 경우 스레드 풀 스레드로 실행에 대한 요청을 큐에 대기시켜 복잡성을 줄일 수 있습니다. 이 항목에서는 다중 스레드의 작업 조정 또는 차단되는 스레드 처리 등의 더욱 어려운 상황을 다룹니다.  
   
 > [!NOTE]
-> 작업 병렬 라이브러리 및 PLINQ의 일부 복잡성 및 다중 스레드 프로그래밍의 위험을 줄여주는 Api를 제공.NET Framework 4 부터는 합니다. 자세한 내용은 참조 [.NET의 병렬 프로그래밍](../../../docs/standard/parallel-programming/index.md)합니다.  
+> .NET Framework 4부터 작업 병렬 라이브러리 및 PLINQ는 다중 스레드 프로그래밍의 일부 복잡성 및 위험을 줄여주는 API를 제공합니다. 자세한 내용은 [.NET의 병렬 프로그래밍](../../../docs/standard/parallel-programming/index.md)을 참조하세요.  
   
 ## <a name="deadlocks-and-race-conditions"></a>교착 상태 및 경합 상태  
  다중 스레딩은 처리량 및 응답성을 사용하여 문제를 해결하지만 이 과정에서 교착 상태 및 경합 상태의 새로운 문제를 유발합니다.  
@@ -38,7 +41,7 @@ ms.lasthandoff: 11/21/2017
 ### <a name="deadlocks"></a>교착 상태  
  교착 상태는 두 개의 각 스레드가 다른 스레드가 이미 잠근 리소스를 잠그려고 할 때 발생합니다. 두 스레드는 더 이상 진행할 수 없습니다.  
   
- 관리되는 스레딩 클래스의 많은 메서드는 교착 상태를 감지하는 데 도움이 되는 시간 제한을 제공합니다. 다음 코드 예를 들어 라는 개체에 대 한 잠금을 획득 하려고 `lockObject`합니다. 그러면 300 밀리초에서 잠금을 가져오지 않은 경우 <xref:System.Threading.Monitor.TryEnter%2A?displayProperty=nameWithType> 반환 `false`합니다.  
+ 관리되는 스레딩 클래스의 많은 메서드는 교착 상태를 감지하는 데 도움이 되는 시간 제한을 제공합니다. 예를 들어 다음 코드는 `lockObject`라는 개체에 대한 잠금을 획득하려고 합니다. 잠금이 300밀리초 내에 획득되지 않으면 <xref:System.Threading.Monitor.TryEnter%2A?displayProperty=nameWithType>는 `false`를 반환합니다.  
   
 ```vb  
 If Monitor.TryEnter(lockObject, 300) Then  
@@ -73,7 +76,7 @@ else {
   
  다중 스레드 응용 프로그램에서 값을 로드하고 증가시킨 스레드는 세 단계 모두를 수행하는 다른 스레드에 의해 선점될 수 있습니다. 첫 번째 스레드가 실행을 다시 시작하고 해당 값을 저장할 때 그 사이에 값이 변경된 사실을 고려하지 않고 `objCt`를 덮어씁니다.  
   
- 메서드를 사용 하 여이 특정 경합 상태를 쉽게 피할 수는 <xref:System.Threading.Interlocked> 클래스 같은 <xref:System.Threading.Interlocked.Increment%2A?displayProperty=nameWithType>합니다. 다중 스레딩 간에 데이터를 동기화하는 다른 기술에 대해 알아보려면 [다중 스레딩을 위한 데이터 동기화](../../../docs/standard/threading/synchronizing-data-for-multithreading.md)를 참조하세요.  
+ 이 특정 경합 상태는 <xref:System.Threading.Interlocked.Increment%2A?displayProperty=nameWithType>와 같은 <xref:System.Threading.Interlocked> 클래스의 메서드를 사용하여 쉽게 피할 수 있습니다. 다중 스레딩 간에 데이터를 동기화하는 다른 기술에 대해 알아보려면 [다중 스레딩을 위한 데이터 동기화](../../../docs/standard/threading/synchronizing-data-for-multithreading.md)를 참조하세요.  
   
  경합 상태는 다중 스레드의 작업을 동기화할 때에도 발생할 수 있습니다. 코드 줄을 작성할 때마다 줄을 실행하기 전에(또는 줄을 구성하는 개별 컴퓨터 명령 전에) 스레드가 선점되었고 다른 스레드가 먼저 사용한 경우 발생할 수 있는 상황을 고려해야 합니다.  
   
@@ -87,7 +90,7 @@ else {
   
 -   백그라운드 스레드는 포그라운드 스레드 실행 수가 프로세서 수보다 작은 경우에만 실행합니다.  
   
--   호출 하는 경우는 <xref:System.Threading.Thread.Start%2A?displayProperty=nameWithType> 스레드에서 메서드를 해당 스레드 수 또는 프로세서 수와 현재 실행 대기 중인 스레드 수에 따라 실행이 즉시 시작 되지 않을 수 있습니다.  
+-   스레드에서 <xref:System.Threading.Thread.Start%2A?displayProperty=nameWithType> 메서드를 호출하는 경우 해당 스레드는 프로세서의 수와 현재 실행 대기 중인 스레드의 수에 따라 실행을 즉시 시작하거나 시작하지 않을 수 있습니다.  
   
 -   경합 상태는 스레드가 예기치 않게 선점되었기 때문에만 아니라 다른 프로세서에서 실행되는 두 개의 스레드가 동일한 코드 블록에 도달하기 위해 경쟁할 수 있기 때문에 발생할 수 있습니다.  
   
@@ -98,7 +101,7 @@ else {
   
 -   백그라운드 스레드는 주 사용자 스레드가 유휴 상태일 때에만 실행합니다. 지속적으로 실행하는 포그라운드 스레드는 백그라운드 스레드의 프로세서 시간을 가져와서 사용합니다.  
   
--   호출 하는 경우는 <xref:System.Threading.Thread.Start%2A?displayProperty=nameWithType> 메서드 생성 되거나 운영 체제에 의해 선점 될 스레드가 현재 스레드가 될 때까지 실행을 시작 하지 않습니다 하는 스레드에서 합니다.  
+-   스레드에서 <xref:System.Threading.Thread.Start%2A?displayProperty=nameWithType> 메서드를 호출하는 경우 해당 스레드는 현재 스레드가 양보하거나 운영 체제에 의해 선점될 때까지 실행을 시작하지 않습니다.  
   
 -   경합 상태는 일반적으로 스레드가 가끔 다른 스레드가 코드 블록에 먼저 도달하도록 허용하는 곤란한 상황에서 선점될 수 있다는 사실을 프로그래머가 예측하지 않았기 때문에 발생합니다.  
   
@@ -112,21 +115,21 @@ else {
 ## <a name="general-recommendations"></a>일반 권장 사항  
  다중 스레드를 사용하는 경우 다음 지침을 고려합니다.  
   
--   사용 하지 않는 <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> 다른 스레드를 종료 합니다. 다른 스레드에서 **Abort**를 호출하는 것은 해당 처리에서 해당 스레드가 어떤 지점에 도달했는지 알지 못하면서 해당 스레드에서 예외를 throw하는 것과 유사합니다.  
+-   다른 스레드를 종료하는 데 <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType>를 사용하지 마세요. 다른 스레드에서 **Abort**를 호출하는 것은 해당 처리에서 해당 스레드가 어떤 지점에 도달했는지 알지 못하면서 해당 스레드에서 예외를 throw하는 것과 유사합니다.  
   
--   사용 하지 마십시오 <xref:System.Threading.Thread.Suspend%2A?displayProperty=nameWithType> 및 <xref:System.Threading.Thread.Resume%2A?displayProperty=nameWithType> 에 다중 스레드 작업을 동기화 합니다. 사용 마십시오 <xref:System.Threading.Mutex>, <xref:System.Threading.ManualResetEvent>, <xref:System.Threading.AutoResetEvent>, 및 <xref:System.Threading.Monitor>합니다.  
+-   여러 스레드의 활동을 동기화하는 데 <xref:System.Threading.Thread.Suspend%2A?displayProperty=nameWithType> 및 <xref:System.Threading.Thread.Resume%2A?displayProperty=nameWithType>을 사용하지 마세요. <xref:System.Threading.Mutex>, <xref:System.Threading.ManualResetEvent>, <xref:System.Threading.AutoResetEvent> 및 <xref:System.Threading.Monitor>를 사용하세요.  
   
--   기본 프로그램(예: 이벤트 사용)에서 작업자 스레드의 실행을 제어하지 마세요. 대신 작업자 스레드가 작업을 확보할 때까지 대기하고, 실행하고, 완료되면 프로그램의 다른 부분에 알릴 수 있도록 프로그램을 디자인합니다. 작업자 스레드가 차단되지 않는 경우 스레드 풀 스레드를 사용하는 것이 좋습니다. <xref:System.Threading.Monitor.PulseAll%2A?displayProperty=nameWithType>작업자 스레드 블록 수 있는 경우에 유용 합니다.  
+-   기본 프로그램(예: 이벤트 사용)에서 작업자 스레드의 실행을 제어하지 마세요. 대신 작업자 스레드가 작업을 확보할 때까지 대기하고, 실행하고, 완료되면 프로그램의 다른 부분에 알릴 수 있도록 프로그램을 디자인합니다. 작업자 스레드가 차단되지 않는 경우 스레드 풀 스레드를 사용하는 것이 좋습니다. <xref:System.Threading.Monitor.PulseAll%2A?displayProperty=nameWithType>은 작업자 스레드가 차단되는 경우에 유용합니다.  
   
--   잠금 개체로 형식을 사용하지 마세요. 즉, 같은 코드를 사용 하지 `lock(typeof(X))` C# 또는 `SyncLock(GetType(X))` Visual Basic의 경우 또는의 사용에 <xref:System.Threading.Monitor.Enter%2A?displayProperty=nameWithType> 와 <xref:System.Type> 개체입니다. 지정된 된 형식에는 하나의 인스턴스만 <xref:System.Type?displayProperty=nameWithType> 응용 프로그램 도메인입니다. 잠금을 사용하는 형식이 공용인 경우 개인 외의 코드는 잠금을 사용할 수 있으며 교착 상태가 발생합니다. 추가 문제는 [최선의 안정성 구현 방법](../../../docs/framework/performance/reliability-best-practices.md)을 참조하세요.  
+-   잠금 개체로 형식을 사용하지 마세요. 즉, C#에서 `lock(typeof(X))` 또는 Visual Basic에서 `SyncLock(GetType(X))`과 같은 코드를 피하거나 <xref:System.Type> 개체와 함께 <xref:System.Threading.Monitor.Enter%2A?displayProperty=nameWithType>을 사용하지 마세요. 제공된 형식의 경우 응용 프로그램 도메인당 <xref:System.Type?displayProperty=nameWithType> 인스턴스가 하나만 있습니다. 잠금을 사용하는 형식이 공용인 경우 개인 외의 코드는 잠금을 사용할 수 있으며 교착 상태가 발생합니다. 추가 문제는 [최선의 안정성 구현 방법](../../../docs/framework/performance/reliability-best-practices.md)을 참조하세요.  
   
 -   인스턴스를 잠글 때 주의합니다(예: C#에서 `lock(this)` 또는 Visual Basic에서 `SyncLock(Me)`). 형식 외부의 응용 프로그램에 있는 다른 코드가 개체에서 잠금을 사용하는 경우 교착 상태가 발생할 수 있습니다.  
   
--   모니터링을 시작한 스레드가 모니터링 중에 있는 동안 예외가 발생한 경우에도 항상 해당 모니터링을 유지하는지 확인합니다. C# [잠금](~/docs/csharp/language-reference/keywords/lock-statement.md) 문과 Visual Basic [SyncLock](~/docs/visual-basic/language-reference/statements/synclock-statement.md) 문에서 제공이 동작은 자동으로 적용 하는 방법 한 **마지막** 되도록 블록 <xref:System.Threading.Monitor.Exit%2A?displayProperty=nameWithType> 은 호출 됩니다. **Exit**이 호출될지 확인할 수 없는 경우 **뮤텍스**를 사용하도록 설계를 변경하는 것이 좋습니다. 뮤텍스는 현재 소유하고 있는 스레드가 종료되면 자동으로 해제됩니다.  
+-   모니터링을 시작한 스레드가 모니터링 중에 있는 동안 예외가 발생한 경우에도 항상 해당 모니터링을 유지하는지 확인합니다. C# [lock](~/docs/csharp/language-reference/keywords/lock-statement.md) 문 및 Visual Basic [SyncLock](~/docs/visual-basic/language-reference/statements/synclock-statement.md) 문은 <xref:System.Threading.Monitor.Exit%2A?displayProperty=nameWithType>이 호출되었는지 확인하는 **finally** 블록을 사용하여 이 동작을 자동으로 제공합니다. **Exit**이 호출될지 확인할 수 없는 경우 **뮤텍스**를 사용하도록 설계를 변경하는 것이 좋습니다. 뮤텍스는 현재 소유하고 있는 스레드가 종료되면 자동으로 해제됩니다.  
   
 -   다른 리소스를 필요로 하는 작업에 대해 다중 스레드를 사용하고 단일 리소스에 다중 스레드를 할당하지 마세요. 예를 들어 해당 스레드는 I/O 작업 중에 차단되어 다른 스레드의 실행을 허용하므로 I/O와 관련된 모든 작업은 자체 스레드를 소유함으로써 이익을 얻습니다. 사용자 입력은 전용 스레드를 활용하는 다른 리소스입니다. 단일 프로세서 컴퓨터에서 집중적 계산을 포함하는 작업은 사용자 입력 및 I/O와 관련된 작업과 공존하지만 여러 계산 집약적인 작업은 서로 경쟁합니다.  
   
--   메서드를 사용 하는 것이 좋습니다는 <xref:System.Threading.Interlocked> 사용 하는 대신 간단한 상태 변경에 대 한 클래스는 `lock` 문 (`SyncLock` Visual basic에서). `lock` 문에 범용에 적합 한 도구 이지만 <xref:System.Threading.Interlocked> 클래스 원자 단위로 수행 되어야 하는 업데이트에 대 한 더 나은 성능을 제공 합니다. 경합이 없는 경우 내부적으로 단일 잠금 접두사를 실행합니다. 코드 검토에서 다음 예제에서와 같은 코드를 감시합니다. 첫 번째 예제에서 상태 변수가 증가됩니다.  
+-   간단한 상태 변경에 `lock` 문(Visual Basic의 `SyncLock`)을 사용하는 대신 <xref:System.Threading.Interlocked> 클래스의 메서드를 사용하는 것이 좋습니다. `lock` 문은 좋은 일반 용도의 도구이지만 <xref:System.Threading.Interlocked> 클래스는 원자성이어야 하는 업데이트에 더 나은 성능을 제공합니다. 경합이 없는 경우 내부적으로 단일 잠금 접두사를 실행합니다. 코드 검토에서 다음 예제에서와 같은 코드를 감시합니다. 첫 번째 예제에서 상태 변수가 증가됩니다.  
   
     ```vb  
     SyncLock lockObject  
@@ -141,7 +144,7 @@ else {
     }  
     ```  
   
-     사용 하 여 성능을 향상 시킬 수 있습니다는 <xref:System.Threading.Interlocked.Increment%2A> 메서드 대신는 `lock` 문을 다음과 같이 합니다.  
+     다음과 같이 <xref:System.Threading.Interlocked.Increment%2A> 문 대신 `lock` 메서드를 사용하여 성능을 향상시킬 수 있습니다.  
   
     ```vb  
     System.Threading.Interlocked.Increment(myField)  
@@ -152,7 +155,7 @@ else {
     ```  
   
     > [!NOTE]
-    >  .NET Framework 버전 2.0에에서는 <xref:System.Threading.Interlocked.Add%2A> 메서드는 1 보다 큰 간격으로 자동 업데이트를 제공 합니다.  
+    >  .NET Framework 버전 2.0에서 <xref:System.Threading.Interlocked.Add%2A> 메서드는 1보다 큰 단위로 원자성 업데이트를 제공합니다.  
   
      두 번째 예제에서 참조 형식 변수는 null 참조인 경우에만 업데이트됩니다(Visual Basic에서 `Nothing`).  
   
@@ -179,7 +182,7 @@ else {
     }  
     ```  
   
-     사용 하 여 성능을 향상 시킬 수는 <xref:System.Threading.Interlocked.CompareExchange%2A> 메서드 대신, 다음과 같습니다.  
+     다음과 같이 <xref:System.Threading.Interlocked.CompareExchange%2A> 메서드를 대신 사용하여 성능을 향상시킬 수 있습니다.  
   
     ```vb  
     System.Threading.Interlocked.CompareExchange(x, y, Nothing)  
@@ -190,7 +193,7 @@ else {
     ```  
   
     > [!NOTE]
-    >  .NET Framework 버전 2.0에에서는 <xref:System.Threading.Interlocked.CompareExchange%2A> 메서드에 참조 형식의 형식 안전 하 게 대체에 사용할 수 있는 제네릭 오버 로드 합니다.  
+    >  .NET Framework 버전 2.0에서 <xref:System.Threading.Interlocked.CompareExchange%2A> 메서드에는 참조 형식의 형식이 안전한 교체에 사용될 수 있는 제네릭 오버로드가 있습니다.  
   
 ## <a name="recommendations-for-class-libraries"></a>클래스 라이브러리에 대한 권장 사항  
  다중 스레딩에 대한 클래스 라이브러리를 설계할 때 다음 지침을 고려합니다.  

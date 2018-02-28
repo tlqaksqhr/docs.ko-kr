@@ -12,22 +12,25 @@ helpviewer_keywords:
 - threading [.NET Framework], features
 - managed threading
 ms.assetid: 239b2e8d-581b-4ca3-992b-0e8525b9321c
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 2a73e5c60a661c171e9e46e6307484cf5e0e6b80
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 0cb36c004c46e22256928b3b2432da59fb3e6fa2
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="threading-objects-and-features"></a>스레딩 개체 및 기능
 .NET Framework에서는 다중 스레드 응용 프로그램을 만들고 관리하는 데 도움이 되는 많은 개체를 제공합니다. 관리되는 스레드는 <xref:System.Threading.Thread> 클래스를 통해 표현됩니다. <xref:System.Threading.ThreadPool> 클래스는 다중 스레드 백그라운드 작업을 쉽게 만들고 관리할 수 있게 해줍니다. <xref:System.ComponentModel.BackgroundWorker> 클래스는 사용자 인터페이스와 상호 작용하는 작업에 대해 동일한 기능을 수행합니다. <xref:System.Threading.Timer> 클래스는 정해진 간격마다 백그라운드 작업을 실행합니다.  
   
  또한 .NET Framework 버전 2.0에서 도입된 <xref:System.Threading.Semaphore> 및 <xref:System.Threading.EventWaitHandle> 클래스를 포함하여 스레드 작업을 동기화하는 많은 클래스가 있습니다. 이러한 클래스의 기능은 [동기화 기본 형식 개요](../../../docs/standard/threading/overview-of-synchronization-primitives.md)에서 비교합니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [관리되는 스레드 풀](../../../docs/standard/threading/the-managed-thread-pool.md)  
  직접 스레드 관리를 수행할 필요 없이 스레드에 작업을 실행하도록 요청할 수 있게 해주는 **ThreadPool** 클래스를 설명합니다.  
   
@@ -44,7 +47,7 @@ ms.lasthandoff: 10/18/2017
  신호 전송 및 신호 대기를 통해 스레드 작업을 동기화하는 데 사용되는 관리되는 이벤트 대기 핸들을 설명합니다.  
   
  [뮤텍스](../../../docs/standard/threading/mutexes.md)  
- 사용 하는 방법에 설명 된 <xref:System.Threading.Mutex> 개체에 대 한 액세스를 동기화 하거나 고유한 동기화 메커니즘을 구축 합니다.  
+ <xref:System.Threading.Mutex>를 사용하여 개체에 대한 액세스를 동기화하거나 고유한 동기화 메커니즘을 빌드하는 방법을 설명합니다.  
   
  [연동 작업](../../../docs/standard/threading/interlocked-operations.md)  
  <xref:System.Threading.Interlocked> 클래스를 사용하여 값을 증가 또는 감소시키고 단일 원자성 작업에 값을 저장하는 방법을 설명합니다.  

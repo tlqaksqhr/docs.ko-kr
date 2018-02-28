@@ -2,7 +2,8 @@
 title: "방법: Visual C# 기능을 사용하여 Office Interop 개체에 액세스(C# 프로그래밍 가이드)"
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 helpviewer_keywords:
 - optional parameters [C#], Office programming
@@ -12,14 +13,14 @@ helpviewer_keywords:
 - named arguments [C#], Office programming
 - Office programming [C#]
 ms.assetid: 041b25c2-3512-4e0f-a4ea-ceb2999e4d5e
-caps.latest.revision: "33"
+caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 25e83195d5f0d8a49e402a5a32e61940960b052a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 751e8240c9385f516315ff3b53221d1e1348ae58
+ms.sourcegitcommit: d2da0142247ef42a219a5d2907f153e62dc6ea0d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="how-to-access-office-interop-objects-by-using-visual-c-features-c-programming-guide"></a>방법: Visual C# 기능을 사용하여 Office Interop 개체에 액세스(C# 프로그래밍 가이드)
 Visual C#에는 Office API 개체에 간편하게 액세스할 수 있는 기능이 있습니다. 새로운 기능에는 명명된 인수와 선택적 인수, `dynamic`이라는 새 형식 그리고 인수를 값 매개 변수처럼 COM 메서드의 참조 매개 변수로 전달하는 기능이 포함됩니다.  
@@ -80,7 +81,7 @@ Visual C#에는 Office API 개체에 간편하게 액세스할 수 있는 기능
   
 1.  다음 메서드를 `Program` 클래스에 추가하여 Excel 워크시트를 설정합니다.  
   
-     [Add](http://go.microsoft.com/fwlink/?LinkId=210910) 메서드에는 특정 템플릿을 지정하기 위한 선택적 매개 변수가 있습니다. [!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)]에서 새롭게 제공되는 선택적 매개 변수를 사용하면 매개 변수의 기본값을 사용하려는 경우 해당 매개 변수의 인수를 생략할 수 있습니다. 다음 코드에서는 인수가 전송되지 않으므로 `Add`는 기본 템플릿을 사용하며 새 통합 문서를 만듭니다. 이전 버전의 C#에서 이와 동일한 문을 사용하려면 자리 표시자 인수인 `ExcelApp.Workbooks.Add(Type.Missing)`를 사용해야 했습니다.  
+     [Add](https://msdn.microsoft.com/library/microsoft.office.interop.excel.workbooks.add.aspx) 메서드에는 특정 템플릿을 지정하기 위한 선택적 매개 변수가 있습니다. [!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)]에서 새롭게 제공되는 선택적 매개 변수를 사용하면 매개 변수의 기본값을 사용하려는 경우 해당 매개 변수의 인수를 생략할 수 있습니다. 다음 코드에서는 인수가 전송되지 않으므로 `Add`는 기본 템플릿을 사용하며 새 통합 문서를 만듭니다. 이전 버전의 C#에서 이와 동일한 문을 사용하려면 자리 표시자 인수인 `ExcelApp.Workbooks.Add(Type.Missing)`를 사용해야 했습니다.  
   
      [!code-csharp[csProgGuideOfficeHowTo#4](../../../csharp/programming-guide/interop/codesnippet/CSharp/how-to-access-office-onterop-objects_4.cs)]  
   
@@ -96,11 +97,11 @@ Visual C#에는 Office API 개체에 간편하게 액세스할 수 있는 기능
   
      [!code-csharp[csProgGuideOfficeHowTo#13](../../../csharp/programming-guide/interop/codesnippet/CSharp/how-to-access-office-onterop-objects_7.cs)]  
   
-     이전 버전의 C#에서는 이러한 작업을 명시적으로 캐스트해야 했습니다. `ExcelApp.Columns[1]`은 `Object`를 반환하며 `AutoFit`은 Excel [Range](http://go.microsoft.com/fwlink/?LinkId=210911) 메서드이기 때문입니다. 다음 줄에는 캐스팅이 나와 있습니다.  
+     이전 버전의 C#에서는 이러한 작업을 명시적으로 캐스트해야 했습니다. `ExcelApp.Columns[1]`은 `Object`를 반환하며 `AutoFit`은 Excel [Range](https://msdn.microsoft.com/library/microsoft.office.interop.excel.range.aspx) 메서드이기 때문입니다. 다음 줄에는 캐스팅이 나와 있습니다.  
   
      [!code-csharp[csProgGuideOfficeHowTo#14](../../../csharp/programming-guide/interop/codesnippet/CSharp/how-to-access-office-onterop-objects_8.cs)]  
   
-     [!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)] 이상 버전에서는 [/link](../../../csharp/language-reference/compiler-options/link-compiler-option.md) 컴파일러 옵션이 어셈블리를 참조하거나 Excel의 **Interop 형식 포함** 속성이 true로 설정되어 있으면(결과는 동일함) 반환된 `Object`를 `dynamic`으로 자동 변환합니다. 이 속성의 기본값은 true입니다.  
+     [!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)]이상 버전에서는 [/link](../../../csharp/language-reference/compiler-options/link-compiler-option.md) 컴파일러 옵션이 어셈블리를 참조한 경우 또는 이와 동등하게 Excel의 **Interop 형식 포함** 속성이 true로 설정되어 있는 경우, 반환된 `Object`를 `dynamic`으로 자동 변환합니다. 이 속성의 기본값은 true입니다.  
   
 ### <a name="to-run-the-project"></a>프로젝트를 실행하려면  
   
@@ -116,7 +117,7 @@ Visual C#에는 Office API 개체에 간편하게 액세스할 수 있는 기능
   
 1.  [!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)] 이상 버전에서 Office 프로그래밍을 향상시키는 추가 방식을 설명하기 위해 다음 코드는 Word 응용 프로그램을 열고 Excel 워크시트에 연결되는 아이콘을 만듭니다.  
   
-     이 단계의 뒷부분에서 제공되는 `CreateIconInWordDoc` 메서드를 `Program` 클래스에 붙여 넣습니다. `CreateIconInWordDoc`는 [Add](http://go.microsoft.com/fwlink/?LinkId=210937) 및 [PasteSpecial](http://go.microsoft.com/fwlink/?LinkId=147099)에 대한 메서드 호출의 복잡성을 줄이기 위해 명명된 인수와 선택적 인수를 사용합니다. 이러한 호출에는 [!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)]에 도입된 다른 두 가지 새 기능이 통합됩니다. 이러한 기능은 참조 매개 변수가 포함된 COM 메서드 호출을 간소화합니다. 그 중 첫 번째 기능은 인수를 값 매개 변수처럼 참조 매개 변수로 전달하는 것입니다. 즉, 각 참조 매개 변수에 대한 변수를 만들지 않고 직접 값을 보낼 수 있습니다. 컴파일러는 인수 값을 저장하기 위한 임시 변수를 생성하고 호출에서 값이 반환되면 해당 변수를 삭제합니다. 두 번째 기능은 인수 목록의 `ref` 키워드를 생략하는 것입니다.  
+     이 단계의 뒷부분에서 제공되는 `CreateIconInWordDoc` 메서드를 `Program` 클래스에 붙여 넣습니다. `CreateIconInWordDoc`는 [Add](https://msdn.microsoft.com/library/microsoft.office.interop.word.documents.add.aspx) 및 [PasteSpecial](https://msdn.microsoft.com/library/microsoft.office.interop.word.selection.pastespecial.aspx)에 대한 메서드 호출의 복잡성을 줄이기 위해 명명된 인수와 선택적 인수를 사용합니다. 이러한 호출에는 [!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)]에 도입된 다른 두 가지 새 기능이 통합됩니다. 이러한 기능은 참조 매개 변수가 포함된 COM 메서드 호출을 간소화합니다. 그 중 첫 번째 기능은 인수를 값 매개 변수처럼 참조 매개 변수로 전달하는 것입니다. 즉, 각 참조 매개 변수에 대한 변수를 만들지 않고 직접 값을 보낼 수 있습니다. 컴파일러는 인수 값을 저장하기 위한 임시 변수를 생성하고 호출에서 값이 반환되면 해당 변수를 삭제합니다. 두 번째 기능은 인수 목록의 `ref` 키워드를 생략하는 것입니다.  
   
      `Add` 메서드에는 참조 매개 변수 4개가 있습니다(모두 선택적 매개 변수임). [!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)] 이상 버전에서는 기본값을 사용하려는 경우 모든 매개 변수 또는 원하는 매개 변수의 인수를 생략할 수 있습니다. [!INCLUDE[csharp_orcas_long](~/includes/csharp-orcas-long-md.md)] 이하 버전에서는 각 매개 변수에 대해 인수를 제공해야 하며 매개 변수가 참조 매개 변수이므로 인수는 변수여야 합니다.  
   
@@ -146,7 +147,7 @@ Visual C#에는 Office API 개체에 간편하게 액세스할 수 있는 기능
   
      또한 COM 메서드에서 사용해야 하며 반환되는 형식은 `dynamic`가 아닌 `Object` 형식을 사용하여 표시할 수 있으므로 프로그램이 더욱 쉬워집니다. `dynamic` 형식이 포함된 변수는 런타임까지 평가되지 않으므로 명시적 캐스팅을 수행할 필요가 없습니다. 자세한 내용은 [dynamic 형식 사용](../../../csharp/programming-guide/types/using-type-dynamic.md)을 참조하세요.  
   
-     [!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)]에서는 PIA를 사용하는 대신 형식 정보를 포함하는 것이 기본 동작입니다. 이러한 기본 동작으로 인해 명시적 캐스팅이 필요하지 않으므로 위의 여러 예제가 간소화됩니다. 예를 들어 `worksheet`의 `DisplayInExcel` 선언은 `Excel._Worksheet workSheet = excelApp.ActiveSheet`가 아닌 `Excel._Worksheet workSheet = (Excel.Worksheet)excelApp.ActiveSheet`로 작성됩니다. 마찬가지로 기본 동작이 없으면 같은 메서드의 `AutoFit`에 대한 호출에서도 명시적 캐스팅을 수행해야 합니다. `ExcelApp.Columns[1]`는 `Object`를 반환하며 `AutoFit`은 Excel 메서드이기 때문입니다. 다음 코드에서는 캐스팅을 보여 줍니다.  
+     [!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)]에서는 PIA를 사용하는 대신 형식 정보를 포함하는 것이 기본 동작입니다. 이러한 기본 동작으로 인해 명시적 캐스팅이 필요하지 않으므로 위의 여러 예제가 간소화됩니다. 예를 들어 `worksheet`의 `DisplayInExcel` 선언은 `Excel._Worksheet workSheet = excelApp.ActiveSheet`가 아닌 `Excel._Worksheet workSheet = (Excel.Worksheet)excelApp.ActiveSheet`로 작성됩니다. 마찬가지로 기본 동작이 없으면 같은 메서드의 `AutoFit`에 대한 호출에서도 명시적 캐스팅을 수행해야 합니다. `ExcelApp.Columns[1]`는 `Object`를 반환하며 `AutoFit`은 Excel 메서드이기 때문입니다. 다음 코드에서는 캐스팅을 보여줍니다.  
   
      [!code-csharp[csProgGuideOfficeHowTo#14](../../../csharp/programming-guide/interop/codesnippet/CSharp/how-to-access-office-onterop-objects_8.cs)]  
   
@@ -162,18 +163,18 @@ Visual C#에는 Office API 개체에 간편하게 액세스할 수 있는 기능
   
      [!code-csharp[csProgGuideOfficeHowTo#15](../../../csharp/programming-guide/interop/codesnippet/CSharp/how-to-access-office-onterop-objects_14.cs)]  
   
-     [AutoFormat](http://go.microsoft.com/fwlink/?LinkId=210948) 메서드에는 값 매개 변수 7개가 있습니다(모두 선택적 매개 변수임). 명명된 인수와 선택적 인수를 사용하여 이러한 매개 변수 중 일부 또는 모두에 대해 인수를 제공할 수도 있고 모든 매개 변수에 인수를 제공하지 않을 수도 있습니다. 위의 문에서는 `Format` 매개 변수 하나에만 인수가 제공됩니다. `Format`은 매개 변수 목록의 첫 번째 매개 변수이므로 매개 변수 이름은 지정하지 않아도 됩니다. 그러나 다음 코드에 나와 있는 것처럼 매개 변수 이름을 포함하면 문을 더 쉽게 이해할 수 있습니다.  
+     [AutoFormat](https://msdn.microsoft.com/library/microsoft.office.interop.excel.range.autoformat.aspx) 메서드에는 값 매개 변수 7개가 있습니다(모두 선택적 매개 변수임). 명명된 인수와 선택적 인수를 사용하여 이러한 매개 변수 중 일부 또는 모두에 대해 인수를 제공할 수도 있고 모든 매개 변수에 인수를 제공하지 않을 수도 있습니다. 위의 문에서는 `Format` 매개 변수 하나에만 인수가 제공됩니다. `Format`은 매개 변수 목록의 첫 번째 매개 변수이므로 매개 변수 이름은 지정하지 않아도 됩니다. 그러나 다음 코드에 나와 있는 것처럼 매개 변수 이름을 포함하면 문을 더 쉽게 이해할 수 있습니다.  
   
      [!code-csharp[csProgGuideOfficeHowTo#16](../../../csharp/programming-guide/interop/codesnippet/CSharp/how-to-access-office-onterop-objects_15.cs)]  
   
-2.  결과를 보려면 CTRL+F5를 누릅니다. 기타 서식은 [XlRangeAutoFormat](http://go.microsoft.com/fwlink/?LinkId=210967) 열거형에 나열됩니다.  
+2.  결과를 보려면 CTRL+F5를 누릅니다. 기타 서식은 [XlRangeAutoFormat](https://msdn.microsoft.com/library/microsoft.office.interop.excel.xlrangeautoformat.aspx) 열거형에 나열됩니다.  
   
-3.  1단계의 문을 다음 코드와 비교합니다. 이 코드는 [!INCLUDE[csharp_orcas_long](~/includes/csharp-orcas-long-md.md)] 이하 버전에 필요한 인수를 보여 줍니다.  
+3.  1단계의 문을 다음 코드와 비교합니다. 이 코드는 [!INCLUDE[csharp_orcas_long](~/includes/csharp-orcas-long-md.md)] 이하 버전에 필요한 인수를 보여줍니다.  
   
      [!code-csharp[csProgGuideOfficeHowTo#17](../../../csharp/programming-guide/interop/codesnippet/CSharp/how-to-access-office-onterop-objects_16.cs)]  
   
-## <a name="example"></a>예제  
- 다음 코드에서는 전체 예제를 보여 줍니다.  
+## <a name="example"></a>예  
+ 다음 코드에서는 전체 예제를 보여줍니다.  
   
  [!code-csharp[csProgGuideOfficeHowTo#18](../../../csharp/programming-guide/interop/codesnippet/CSharp/how-to-access-office-onterop-objects_17.cs)]  
   

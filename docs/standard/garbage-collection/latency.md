@@ -12,15 +12,18 @@ helpviewer_keywords:
 - garbage collection, intrusiveness
 - garbage collection, latency modes
 ms.assetid: 96278bb7-6eab-4612-8594-ceebfc887d81
-caps.latest.revision: "41"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 439fdd8fe78a0c0f0fda4ac7e759a4a780bb9b58
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: d0ac0db376ad7cd4aa139ed0eb065a5ba33836c8
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="latency-modes"></a>대기 모드
 개체를 회수하려면, 가비지 수집기가 응용 프로그램의 실행 스레드를 모두 중지해야 합니다. 응용 프로그램이 데이터를 검색하거나 콘텐츠를 표시하는 경우와 같은 일부 상황에서는 전체 가비지 수집이 중요한 시간에 발생하여 성능이 저하될 수 있습니다. <xref:System.Runtime.GCSettings.LatencyMode%2A?displayProperty=nameWithType> 속성을 <xref:System.Runtime.GCLatencyMode?displayProperty=nameWithType> 값 중 하나로 설정하여 가비지 수집기의 개입을 조정할 수 있습니다.  
@@ -29,15 +32,15 @@ ms.lasthandoff: 11/21/2017
   
 -   <xref:System.Runtime.GCLatencyMode.LowLatency>는 2세대 수집을 사용하지 않고 0세대 및 1세대 수집만 수행합니다. 짧은 시간 동안에만 사용할 수 있습니다. 긴 시간 동안 사용하여 시스템의 메모리 사용량이 많을 경우 가비지 수집기가 응용 프로그램을 잠시 중지하고 시간 결정적 작업을 방해할 수 있는 수집을 트리거합니다. 이 설정은 워크스테이션 가비지 수집에서만 사용할 수 있습니다.  
   
--   <xref:System.Runtime.GCLatencyMode.SustainedLowLatency>는 2세대 포그라운드 수집을 사용하지 않고 0세대, 1세대 및 2세대 백그라운드 수집만 수행합니다. 오랜 시간 동안 사용할 수 있으며 워크스테이션 및 서버 가비지 컬렉션 모두에 대해 사용할 수 있습니다. [동시 가비지 수집](../../../docs/framework/configure-apps/file-schema/runtime/gcconcurrent-element.md)을 사용하지 않을 경우 이 설정을 사용할 수 없습니다.  
+-   <xref:System.Runtime.GCLatencyMode.SustainedLowLatency>는 2세대 포그라운드 수집을 사용하지 않고 0세대, 1세대 및 2세대 백그라운드 수집만 수행합니다. 오랜 시간 동안 사용할 수 있으며 워크스테이션 및 서버 가비지 수집 모두에 대해 사용할 수 있습니다. [동시 가비지 수집](../../../docs/framework/configure-apps/file-schema/runtime/gcconcurrent-element.md)을 사용하지 않을 경우 이 설정을 사용할 수 없습니다.  
   
  대기 시간이 짧은 기간 중에는 다음이 발생하지 않는 한 2세대 컬렉션이 사용되지 않습니다.  
   
 -   시스템에 운영 체제에서 메모리 부족 알림을 받습니다.  
   
--   응용 프로그램 코드는 <xref:System.GC.Collect%2A?displayProperty=nameWithType> 메서드를 호출하고 `generation` 매개 변수에 대해 2를 지정하여 수집을 줄입니다.  
+-   응용 프로그램 코드는 <xref:System.GC.Collect%2A?displayProperty=nameWithType> 메서드를 호출하고 `generation` 매개 변수에 대해 2를 지정하여 수집을 유도합니다.  
   
- 다음 표에서는 <xref:System.Runtime.GCLatencyMode> 값을 사용하는 응용 프로그램 시나리오를 보여 줍니다.  
+ 다음 표에서는 <xref:System.Runtime.GCLatencyMode> 값을 사용하는 응용 프로그램 시나리오를 보여줍니다.  
   
 |대기 시간 모드|응용 프로그램 시나리오|  
 |------------------|---------------------------|  
@@ -57,11 +60,11 @@ ms.lasthandoff: 11/21/2017
   
 -   할당할 수 있는 스레드를 확인합니다. <xref:System.Runtime.GCSettings.LatencyMode%2A> 속성 설정은 프로세스 전체에 적용되므로 할당될 수 있는 모든 스레드에서 <xref:System.OutOfMemoryException>을 생성할 수 있습니다.  
   
--   제약이 있는 실행 영역에 짧은 대기 시간 코드를 래핑합니다 (자세한 내용은 참조 [제약이 있는 실행 영역](../../../docs/framework/performance/constrained-execution-regions.md)).  
+-   제약이 있는 실행 영역에 짧은 대기 시간 코드를 래핑합니다(자세한 내용은 [제약이 있는 실행 영역](../../../docs/framework/performance/constrained-execution-regions.md) 참조).  
   
 -   <xref:System.GC.Collect%28System.Int32%2CSystem.GCCollectionMode%29?displayProperty=nameWithType> 메서드를 호출하여 짧은 대기 시간 기간 중 2세대 수집을 강제할 수 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  
  <xref:System.GC?displayProperty=nameWithType>  
- [인덱싱된 컬렉션](../../../docs/standard/garbage-collection/induced.md)  
+ [유도된 수집](../../../docs/standard/garbage-collection/induced.md)  
  [가비지 수집](../../../docs/standard/garbage-collection/index.md)

@@ -13,27 +13,30 @@ dev_langs:
 - vb
 - cpp
 ms.assetid: 03a7c5a1-b296-4af4-b209-043c958dc0a5
-caps.latest.revision: "2"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: ec2846dcac6bfe14746e038d592b7dfe49374993
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: cc46aeda6efe9f21bc094a4bc9d211fc282e9b65
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="modify-xml-data-using-xpathnavigator"></a>XPathNavigator를 사용하여 XML 데이터 수정
 <xref:System.Xml.XPath.XPathNavigator> 클래스는 XML 문서에서 노드와 값을 수정하는 메서드 집합을 제공합니다. 이러한 메서드를 사용하려면 <xref:System.Xml.XPath.XPathNavigator> 개체가 편집 가능한 상태여야 합니다. 즉, <xref:System.Xml.XPath.XPathNavigator.CanEdit%2A> 속성이 `true`여야 합니다.  
   
  <xref:System.Xml.XPath.XPathNavigator> 클래스의 <xref:System.Xml.XmlDocument.CreateNavigator%2A> 메서드에서는 XML 문서를 편집할 수 있는 <xref:System.Xml.XmlDocument> 개체를 만듭니다. <xref:System.Xml.XPath.XPathNavigator> 클래스에서 만든 <xref:System.Xml.XPath.XPathDocument> 개체는 읽기 전용이며, <xref:System.Xml.XPath.XPathNavigator> 개체에서 만든 <xref:System.Xml.XPath.XPathDocument> 개체의 편집 메서드를 사용하려고 하면 <xref:System.NotSupportedException>이 발생합니다.  
   
- 편집 가능한 만들기에 대 한 자세한 내용은 <xref:System.Xml.XPath.XPathNavigator> 개체 참조 [XPathDocument 및 XmlDocument를 사용 하 여 XML 데이터를 읽는](../../../../docs/standard/data/xml/reading-xml-data-using-xpathdocument-and-xmldocument.md)합니다.  
+ 편집 가능한 <xref:System.Xml.XPath.XPathNavigator> 개체를 만드는 방법에 대한 자세한 내용은 [XPathDocument 및 XmlDocument를 사용하여 XML 데이터 읽기](../../../../docs/standard/data/xml/reading-xml-data-using-xpathdocument-and-xmldocument.md)를 참조하세요.  
   
 ## <a name="modifying-nodes"></a>노드 수정  
  <xref:System.Xml.XPath.XPathNavigator.SetValue%2A> 클래스의 <xref:System.Xml.XPath.XPathNavigator.SetTypedValue%2A> 및 <xref:System.Xml.XPath.XPathNavigator> 메서드를 사용하면 쉽게 노드 값을 변경할 수 있습니다.  
   
- 다음 표에서는 여러 노드 형식에서 이러한 메서드를 사용한 결과를 보여 줍니다.  
+ 다음 표에서는 여러 노드 형식에서 이러한 메서드를 사용한 결과를 보여줍니다.  
   
 |<xref:System.Xml.XPath.XPathNodeType>|변경되는 데이터|  
 |---------------------------------------------------------------------------------------------------------------------------------------------|------------------|  
@@ -48,7 +51,7 @@ ms.lasthandoff: 11/21/2017
 > [!NOTE]
 >  <xref:System.Xml.XPath.XPathNodeType.Namespace> 노드나 <xref:System.Xml.XPath.XPathNodeType.Root> 노드를 편집할 수 없습니다.  
   
- 또한 <xref:System.Xml.XPath.XPathNavigator> 클래스는 노드를 삽입하고 제거하는 메서드 집합을 제공합니다. 삽입 하 고 XML 문서에서 노드를 제거 하는 방법에 대 한 자세한 내용은 참조는 [XPathNavigator를 사용 하 여 XML 데이터 삽입](../../../../docs/standard/data/xml/insert-xml-data-using-xpathnavigator.md) 및 [XPathNavigator를 사용 하 여 XML 데이터 제거](../../../../docs/standard/data/xml/remove-xml-data-using-xpathnavigator.md) 항목입니다.  
+ 또한 <xref:System.Xml.XPath.XPathNavigator> 클래스는 노드를 삽입하고 제거하는 메서드 집합을 제공합니다. XML 문서에서 노드를 삽입하고 제거하는 방법에 대한 자세한 내용은 [XPathNavigator를 사용하여 XML 데이터 삽입](../../../../docs/standard/data/xml/insert-xml-data-using-xpathnavigator.md) 및 [XPathNavigator를 사용하여 XML 데이터 제거](../../../../docs/standard/data/xml/remove-xml-data-using-xpathnavigator.md) 항목을 참조하세요.  
   
 ### <a name="modifying-untyped-values"></a>형식화되지 않은 값 수정  
  <xref:System.Xml.XPath.XPathNavigator.SetValue%2A> 메서드는 형식화되지 않은 `string` 값을 간단히 삽입합니다. 이 값은 <xref:System.Xml.XPath.XPathNavigator> 개체가 현재 위치하는 노드의 값인 매개 변수로서 전달됩니다. 이 값은 스키마 정보를 사용할 수 있을 경우 노드 형식에 따라 새 값이 유효한지 여부를 확인하지 않거나 특정한 형식 없이 삽입됩니다.  
@@ -122,7 +125,7 @@ navigator.SetTypedValue(DateTime.Now);
   
  요소의 유효성이 자식 요소 및 특성의 유효성에 따라 결정되는 경우 자식 요소나 특성을 수정하면 요소가 이전에 유효했더라도 요소의 유효성이 변경됩니다. 특히 요소의 자식 요소 또는 특성을 삽입, 업데이트 또는 삭제할 경우 요소의 유효성을 알 수 없습니다. 요소의 유효성은 요소의 <xref:System.Xml.Schema.IXmlSchemaInfo.Validity%2A> 속성의 <xref:System.Xml.XPath.XPathNavigator.SchemaInfo%2A> 속성을 <xref:System.Xml.Schema.XmlSchemaValidity.NotKnown>으로 설정하여 나타낼 수 있습니다. 더욱이 요소의 부모 요소, 이 부모 요소의 부모 요소 등의 유효성도 알 수 없기 때문에 이 결과는 XML 문서에서 재귀적 상향 계단식으로 나타납니다.  
   
- 스키마 유효성 검사에 대 한 자세한 내용은 및 <xref:System.Xml.XPath.XPathNavigator> 클래스를 참조 하십시오. [XPathNavigator를 사용 하 여 스키마 유효성 검사](../../../../docs/standard/data/xml/schema-validation-using-xpathnavigator.md)합니다.  
+ 스키마 유효성 검사 및 <xref:System.Xml.XPath.XPathNavigator> 클래스에 대한 자세한 내용은 [XPathNavigator를 사용하여 스키마 유효성 검사](../../../../docs/standard/data/xml/schema-validation-using-xpathnavigator.md)를 참조하세요.  
   
 ### <a name="modifying-attributes"></a>특성 수정  
  <xref:System.Xml.XPath.XPathNavigator.SetValue%2A> 및 <xref:System.Xml.XPath.XPathNavigator.SetTypedValue%2A> 메서드를 사용하여 형식화되지 않은 특성 노드와 형식화된 특성 노드 및 "노드 수정" 단원에 나열된 기타 노드 형식을 수정할 수 있습니다.  
@@ -253,12 +256,12 @@ Console.WriteLine(navigator.OuterXml);
 >  `xsi:nil` 특성이 `false`로 설정된 요소의 내용을 삭제하면 이 특성 값은 `true`로 변경되지 않습니다.  
   
 ## <a name="saving-an-xml-document"></a>XML 문서 저장  
- <xref:System.Xml.XmlDocument> 클래스의 메서드를 사용하면 <xref:System.Xml.XmlDocument> 개체에서 변경된 내용을 이 항목에서 설명하는 편집 메서드의 결과로 저장할 수 있습니다. 변경 내용을 저장 하는 방법에 대 한 자세한 내용은 <xref:System.Xml.XmlDocument> 개체, 참조 [문서 작성 및 저장](../../../../docs/standard/data/xml/saving-and-writing-a-document.md)합니다.  
+ <xref:System.Xml.XmlDocument> 클래스의 메서드를 사용하면 <xref:System.Xml.XmlDocument> 개체에서 변경된 내용을 이 항목에서 설명하는 편집 메서드의 결과로 저장할 수 있습니다. <xref:System.Xml.XmlDocument> 개체에서 변경된 내용을 저장하는 방법에 대한 자세한 내용은 [문서 작성 및 저장](../../../../docs/standard/data/xml/saving-and-writing-a-document.md)을 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
  <xref:System.Xml.XmlDocument>  
  <xref:System.Xml.XPath.XPathDocument>  
  <xref:System.Xml.XPath.XPathNavigator>  
  [XPath 데이터 모델을 사용하여 XML 데이터 처리](../../../../docs/standard/data/xml/process-xml-data-using-the-xpath-data-model.md)  
- [XPathNavigator를 사용 하 여 XML 데이터를 삽입 합니다.](../../../../docs/standard/data/xml/insert-xml-data-using-xpathnavigator.md)  
- [XPathNavigator를 사용 하 여 XML 데이터를 제거 합니다.](../../../../docs/standard/data/xml/remove-xml-data-using-xpathnavigator.md)
+ [XPathNavigator를 사용하여 XML 데이터 삽입](../../../../docs/standard/data/xml/insert-xml-data-using-xpathnavigator.md)  
+ [XPathNavigator를 사용하여 XML 데이터 제거](../../../../docs/standard/data/xml/remove-xml-data-using-xpathnavigator.md)

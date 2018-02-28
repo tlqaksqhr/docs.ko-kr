@@ -9,21 +9,24 @@ ms.technology: dotnet-standard
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 26b071f3-1261-47ef-8690-0717f5cd93c1
-caps.latest.revision: "2"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 5e99573fc3a82db7798426172a13a78e10c65636
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 8c2706782ed1242ecdb5af1fdfab7a3f24e19236
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="xml-type-support-implementation-notes"></a>XML 형식 지원 구현 참고 사항
 이 항목에서는 자세히 알아야 할 몇 가지 구현 정보에 대해 설명합니다.  
   
 ## <a name="list-mappings"></a>목록 매핑  
- <xref:System.Collections.IList>, <xref:System.Collections.ICollection>, <xref:System.Collections.IEnumerable>, **형식의**, 및 <xref:System.String> 형식이 XML 스키마 정의 언어 (XSD) 목록 형식을 나타내는 데 사용 됩니다.  
+ <xref:System.Collections.IList>, <xref:System.Collections.ICollection>, <xref:System.Collections.IEnumerable>, **Type[]** 및 <xref:System.String> 형식을 사용하여 XSD(XML 스키마 정의 언어) 목록 형식을 나타낼 수 있습니다.  
   
 ## <a name="union-mappings"></a>통합 매핑  
  <xref:System.Xml.Schema.XmlAtomicValue> 또는 <xref:System.String> 형식을 사용하여 통합 형식을 나타낼 수 있습니다. 그러므로 소스 형식 또는 대상 형식은 항상 <xref:System.String> 또는 <xref:System.Xml.Schema.XmlAtomicValue>여야 합니다.  

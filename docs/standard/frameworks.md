@@ -8,11 +8,14 @@ ms.topic: article
 ms.custom: updateeachrelease
 ms.prod: .net
 ms.technology: dotnet-standard
-ms.openlocfilehash: 20152a951f11b1b923209b56b31663a9a8a81587
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 838f4f6d78b4544a538e9c4bd6c487bcc731270b
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="target-frameworks"></a>대상 프레임워크
 
@@ -30,19 +33,19 @@ ms.lasthandoff: 10/18/2017
 
 다음 표에서는 가장 일반적인 대상 프레임워크, 프레임워크가 참조되는 방법 및 프레임워크에서 구현하는 [.NET Standard](~/docs/standard/net-standard.md)의 버전을 정의합니다. 이러한 대상 프레임워크 버전은 안정적인 최신 버전입니다. 시험판 버전은 표시되지 않습니다. TFM(대상 프레임워크 모니커)은 .NET 앱 또는 라이브러리의 대상 프레임워크를 지정하기 위해 표준화된 토큰 형식입니다. 
 
-| 대상 프레임워크      | 최신 버전 | TFM(대상 프레임워크 모니커) | 구현 <br/> .NET 표준 버전 |
+| 대상 프레임워크      | 최신 버전 | TFM(대상 프레임워크 모니커) | 구현됨 <br/> .NET 표준 버전 |
 | :-------------------: | :------------: | :----------------------------: | :-------------------------------------: |
-| .NET 표준         | 2.0            | netstandard2.0                 | N/A                                     |
+| .NET Standard         | 2.0            | netstandard2.0                 | N/A                                     |
 | .NET Core 응용 프로그램 | 2.0            | netcoreapp2.0                  | 2.0                                     |
 | .NET Framework        | 4.7.1          | net471                         | 2.0                                     |
 
 ## <a name="supported-target-framework-versions"></a>지원되는 대상 프레임워크 버전
 
-대상 프레임워크는 일반적으로 TFM에서 참조됩니다. 다음 표에서는 .NET Core SDK 및 NuGet 클라이언트에서 지원되는 대상 프레임워크를 보여 줍니다. 일치하는 항목은 대괄호 내에 표시됩니다. 예를 들어 `win81`은 `netcore451`과 일치하는 TFM입니다.
+대상 프레임워크는 일반적으로 TFM에서 참조됩니다. 다음 표에서는 .NET Core SDK 및 NuGet 클라이언트에서 지원되는 대상 프레임워크를 보여줍니다. 일치하는 항목은 대괄호 내에 표시됩니다. 예를 들어 `win81`은 `netcore451`과 일치하는 TFM입니다.
 
 | 대상 프레임워크           | TFM |
 | -------------------------- | --- |
-| .NET 표준              | netstandard1.0<br>netstandard1.1<br>netstandard1.2<br>netstandard1.3<br>netstandard1.4<br>netstandard1.5<br>netstandard1.6<br>netstandard2.0 |
+| .NET Standard              | netstandard1.0<br>netstandard1.1<br>netstandard1.2<br>netstandard1.3<br>netstandard1.4<br>netstandard1.5<br>netstandard1.6<br>netstandard2.0 |
 | .NET Core                  | netcoreapp1.0<br>netcoreapp1.1<br>netcoreapp2.0 |
 | .NET Framework             | net11<br>net20<br>net35<br>net40<br>net403<br>net45<br>net451<br>net452<br>net46<br>net461<br>net462<br>net47<br>net471 |
 | Windows 스토어              | netcore [netcore45]<br>netcore45 [win] [win8]<br>netcore451 [win81] |
@@ -53,7 +56,7 @@ ms.lasthandoff: 10/18/2017
 
 ## <a name="how-to-specify-target-frameworks"></a>대상 프레임워크를 지정하는 방법
 
-대상 프레임워크는 프로젝트 파일에서 지정합니다. 단일 대상 프레임워크를 지정하는 경우 **TargetFramework** 요소를 사용합니다. 다음 콘솔 앱 프로젝트 파일에서는 .NET Core 2.0을 대상으로 하는 방법을 보여 줍니다.
+대상 프레임워크는 프로젝트 파일에서 지정합니다. 단일 대상 프레임워크를 지정하는 경우 **TargetFramework** 요소를 사용합니다. 다음 콘솔 앱 프로젝트 파일에서는 .NET Core 2.0을 대상으로 하는 방법을 보여줍니다.
 
 ```xml
 <Project Sdk="Microsoft.NET.Sdk">

@@ -9,20 +9,23 @@ ms.technology: dotnet-standard
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 06cc7abb-7416-415c-9dd6-67751b8cabd5
-caps.latest.revision: "3"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: beb6265e8b245893cd7fa5edca28ba1b081481ba
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: cae3fa68d3820e98bee333d0252aeb74b15fe2a7
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="xpath-namespace-navigation"></a>XPath 네임스페이스 탐색
 XML 문서가 있는 XPath 쿼리를 사용하려면 네임스페이스에 포함된 XML 네임스페이스 및 요소를 올바르게 지정해야 합니다. 네임스페이스를 사용하면 이름이 둘 이상의 컨텍스트에 사용되는 경우 발생할 수 있는 모호성을 방지할 수 있습니다. 예를 들어 이름 `ID`는 XML 문서의 여러 다른 요소와 연결된 둘 이상의 ID를 참조할 수 있습니다. 네임스페이스 구문은 URI, 이름 및 XML 문서의 요소를 구분하는 접두사를 지정합니다.  
   
- 이 항목의 예제는 <xref:System.Xml.XPath.XPathNavigator>로 XML 문서를 탐색하는 데 접두사를 사용하는 경우를 설명합니다. 네임 스페이스 및 구문에 대 한 자세한 내용은 참조 [XML 네임 스페이스 이해](http://go.microsoft.com/fwlink/?linkid=140245)합니다.  
+ 이 항목의 예제는 <xref:System.Xml.XPath.XPathNavigator>로 XML 문서를 탐색하는 데 접두사를 사용하는 경우를 설명합니다. 네임스페이스 및 구문에 대한 자세한 내용은 [Understanding XML Namespaces](http://go.microsoft.com/fwlink/?linkid=140245)(XML 네임스페이스 이해)를 참조하세요.  
   
 ## <a name="namespace-declarations"></a>네임스페이스 선언  
  네임스페이스 선언은 <xref:System.Xml.XPath.XPathNavigator> 인스턴스를 사용하는 경우 XML 문서의 요소를 구분하고 지정할 수 있게 해 줍니다. 네임스페이스 접두사는 네임스페이스 지정에 사용되는 간단한 구문을 제공합니다.  
@@ -78,5 +81,5 @@ using (XmlReader reader = XmlReader.Create("response.xml"))
  정규화된 네임스페이스 및 이름의 정확한 사용은 단순히 편리한 것 이상의 이점이 있습니다. 이전 예제의 문서 정의 및 코드를 사용한 작은 실험을 통해 정규화된 요소 이름이 없는 탐색에서 예외를 throw한다는 사실을 확인한 바 있습니다. 예를 들어 요소 정의: `<Search xmlns="http://schemas.microsoft.com/v1/Search">` 및 쿼리: `xpath = "/s:Envelope/s:Body/Search";` 요소에 대한 네임스페이스 접두사가 없는 문자열 `Search`는 `null` 요소 대신 `Search`을 반환합니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [XPathNavigator를 사용 하 여 XML 데이터에 액세스](../../../../docs/standard/data/xml/accessing-xml-data-using-xpathnavigator.md)  
- [XPathNavigator를 사용 하 여 일치 하는 XML 데이터 선택, 평가 및](../../../../docs/standard/data/xml/selecting-evaluating-and-matching-xml-data-using-xpathnavigator.md)
+ [XPathNavigator를 사용하여 XML 데이터 액세스](../../../../docs/standard/data/xml/accessing-xml-data-using-xpathnavigator.md)  
+ [XPathNavigator를 사용하여 XML 데이터 선택, 평가 및 일치시키기](../../../../docs/standard/data/xml/selecting-evaluating-and-matching-xml-data-using-xpathnavigator.md)

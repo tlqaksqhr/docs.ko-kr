@@ -12,22 +12,25 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 9f436bca-1b96-494b-a6d2-e102c7551752
-caps.latest.revision: "2"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 29faf92b26908a37fb122dec00b2d4d6b5f3bf16
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 4bc7c2de8bec50293a815195416575d20d648706
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="remove-xml-data-using-xpathnavigator"></a>XPathNavigator를 사용하여 XML 데이터 제거
 <xref:System.Xml.XPath.XPathNavigator> 클래스는 XML 문서에서 노드와 값을 제거하는 메서드 집합을 제공합니다. 이러한 메서드를 사용하려면 <xref:System.Xml.XPath.XPathNavigator> 개체가 편집 가능한 상태여야 합니다. 즉, <xref:System.Xml.XPath.XPathNavigator.CanEdit%2A> 속성이 `true`여야 합니다.  
   
  <xref:System.Xml.XPath.XPathNavigator> 클래스의 <xref:System.Xml.XmlDocument.CreateNavigator%2A> 메서드에서는 XML 문서를 편집할 수 있는 <xref:System.Xml.XmlDocument> 개체를 만듭니다. <xref:System.Xml.XPath.XPathNavigator> 클래스에서 만든 <xref:System.Xml.XPath.XPathDocument> 개체는 읽기 전용이며, <xref:System.Xml.XPath.XPathNavigator> 개체에서 만든 <xref:System.Xml.XPath.XPathDocument> 개체의 편집 메서드를 사용하려고 하면 <xref:System.NotSupportedException>이 발생합니다.  
   
- 편집 가능한 만들기에 대 한 자세한 내용은 <xref:System.Xml.XPath.XPathNavigator> 개체 참조 [XPathDocument 및 XmlDocument를 사용 하 여 XML 데이터를 읽는](../../../../docs/standard/data/xml/reading-xml-data-using-xpathdocument-and-xmldocument.md)합니다.  
+ 편집 가능한 <xref:System.Xml.XPath.XPathNavigator> 개체를 만드는 방법에 대한 자세한 내용은 [XPathDocument 및 XmlDocument를 사용하여 XML 데이터 읽기](../../../../docs/standard/data/xml/reading-xml-data-using-xpathdocument-and-xmldocument.md)를 참조하세요.  
   
 ## <a name="removing-nodes"></a>노드 제거  
  <xref:System.Xml.XPath.XPathNavigator> 클래스는 XML 문서에서 노드를 제거하는 <xref:System.Xml.XPath.XPathNavigator.DeleteSelf%2A> 메서드를 제공합니다.  
@@ -183,15 +186,15 @@ Console.WriteLine(navigator.OuterXml);
   
  <xref:System.Xml.XPath.XPathNavigator.InnerXml%2A> 속성은 <xref:System.Xml.XPath.XPathNavigator> 개체가 현재 위치하는 자식 노드의 XML 태그를 주어진 XML `string`의 구문 분석된 내용과 함께 변경합니다. 마찬가지로, <xref:System.Xml.XPath.XPathNavigator.OuterXml%2A> 속성은 <xref:System.Xml.XPath.XPathNavigator> 개체가 현재 위치하는 자식 노드의 XML 태그뿐만 아니라 현재 노드 자체도 변경합니다.  
   
- 이 항목에 설명된 메서드 외에도 <xref:System.Xml.XPath.XPathNavigator.InnerXml%2A> 및 <xref:System.Xml.XPath.XPathNavigator.OuterXml%2A> 속성을 사용하여 XML 문서에서 노드와 값을 제거할 수 있습니다. 사용 하는 방법에 대 한 자세한 내용은 <xref:System.Xml.XPath.XPathNavigator.InnerXml%2A> 및 <xref:System.Xml.XPath.XPathNavigator.OuterXml%2A> 노드를 수정 하는 속성 참조는 [XPathNavigator를 사용 하 여 XML 데이터 수정](../../../../docs/standard/data/xml/modify-xml-data-using-xpathnavigator.md) 항목입니다.  
+ 이 항목에 설명된 메서드 외에도 <xref:System.Xml.XPath.XPathNavigator.InnerXml%2A> 및 <xref:System.Xml.XPath.XPathNavigator.OuterXml%2A> 속성을 사용하여 XML 문서에서 노드와 값을 제거할 수 있습니다. <xref:System.Xml.XPath.XPathNavigator.InnerXml%2A> 및 <xref:System.Xml.XPath.XPathNavigator.OuterXml%2A> 속성을 사용하여 노드를 수정하는 방법에 대한 자세한 내용은 [XPathNavigator를 사용하여 XML 데이터 수정](../../../../docs/standard/data/xml/modify-xml-data-using-xpathnavigator.md) 항목을 참조하세요.  
   
 ## <a name="saving-an-xml-document"></a>XML 문서 저장  
- <xref:System.Xml.XmlDocument> 클래스의 메서드를 사용하면 <xref:System.Xml.XmlDocument> 개체에서 변경된 내용을 이 항목에서 설명하는 메서드의 결과로 저장할 수 있습니다. 변경 내용을 저장 하는 방법에 대 한 자세한 내용은 <xref:System.Xml.XmlDocument> 개체, 참조 [문서 작성 및 저장](../../../../docs/standard/data/xml/saving-and-writing-a-document.md)합니다.  
+ <xref:System.Xml.XmlDocument> 클래스의 메서드를 사용하면 <xref:System.Xml.XmlDocument> 개체에서 변경된 내용을 이 항목에서 설명하는 메서드의 결과로 저장할 수 있습니다. <xref:System.Xml.XmlDocument> 개체에서 변경된 내용을 저장하는 방법에 대한 자세한 내용은 [문서 작성 및 저장](../../../../docs/standard/data/xml/saving-and-writing-a-document.md)을 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
  <xref:System.Xml.XmlDocument>  
  <xref:System.Xml.XPath.XPathDocument>  
  <xref:System.Xml.XPath.XPathNavigator>  
  [XPath 데이터 모델을 사용하여 XML 데이터 처리](../../../../docs/standard/data/xml/process-xml-data-using-the-xpath-data-model.md)  
- [XPathNavigator를 사용 하 여 XML 데이터를 삽입 합니다.](../../../../docs/standard/data/xml/insert-xml-data-using-xpathnavigator.md)  
- [XPathNavigator를 사용 하 여 XML 데이터 수정](../../../../docs/standard/data/xml/modify-xml-data-using-xpathnavigator.md)
+ [XPathNavigator를 사용하여 XML 데이터 삽입](../../../../docs/standard/data/xml/insert-xml-data-using-xpathnavigator.md)  
+ [XPathNavigator를 사용하여 XML 데이터 수정](../../../../docs/standard/data/xml/modify-xml-data-using-xpathnavigator.md)

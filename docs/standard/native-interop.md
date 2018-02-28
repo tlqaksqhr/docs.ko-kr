@@ -10,11 +10,14 @@ ms.prod: .net
 ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: 3c357112-35fb-44ba-a07b-6a1c140370ac
-ms.openlocfilehash: 9652986491f087b8fa175e2b4041063c71211178
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 11a93f4014734130f7c4e33cf215c6d49d2554c5
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="native-interoperability"></a>기본 상호 운용성
 
@@ -54,9 +57,9 @@ public class Program {
 }
 ```
 
-위의 예제는 상당히 간단하지만 관리 코드에서 관리되지 않는 함수를 호출하는 데 필요한 사항을 보여 줍니다. 예제를 단계별로 살펴보겠습니다.
+위의 예제는 상당히 간단하지만 관리 코드에서 관리되지 않는 함수를 호출하는 데 필요한 사항을 보여줍니다. 예제를 단계별로 살펴보겠습니다.
 
-*   줄 #1에서는 필요한 항목이 모두 포함되어 있는 네임스페이스인 `System.Runtime.InteropServices`에 대한 using 문을 보여 줍니다.
+*   줄 #1에서는 필요한 항목이 모두 포함되어 있는 네임스페이스인 `System.Runtime.InteropServices`에 대한 using 문을 보여줍니다.
 *   줄 #5에서는 `DllImport` 특성을 도입합니다. 이 특성은 관리되지 않는 DLL을 로드하도록 런타임에 지정하므로 중요합니다. 이 DLL을 호출하려고 합니다.
 *   줄 #6은 P/Invoke 작업의 핵심입니다. 관리되지 않는 메서드와 **동일한 시그니처**가 있는 관리되는 메서드를 정의합니다. 선언에서 확인할 수 있는 새 키워드 `extern`은 이 메서드가 외부 메서드이며 호출 시 런타임이 `DllImport` 특성에 지정된 DLL에서 찾도록 런타임에 지정합니다.
 
@@ -71,7 +74,7 @@ using System.Runtime.InteropServices;
 namespace PInvokeSamples {
     public static class Program {
 
-        // Import the libc and define the method corresponding to the native function.
+        // Import the libSystem shared library and define the method corresponding to the native function.
         [DllImport("libSystem.dylib")]
         private static extern int getpid();
 
@@ -84,7 +87,7 @@ namespace PInvokeSamples {
 }
 ```
 
-물론 Linux에서도 이와 비슷합니다. `getpid(2)`는 [POSIX](https://en.wikipedia.org/wiki/POSIX) 시스템 호출이기 때문에 함수 이름이 같습니다.
+Linux에서도 이와 비슷합니다. `getpid(2)`는 표준 [POSIX](https://en.wikipedia.org/wiki/POSIX) 시스템 호출이기 때문에 함수 이름이 같습니다.
 
 ```csharp
 using System;
@@ -93,7 +96,7 @@ using System.Runtime.InteropServices;
 namespace PInvokeSamples {
     public static class Program {
 
-        // Import the libc and define the method corresponding to the native function.
+        // Import the libc shared library and define the method corresponding to the native function.
         [DllImport("libc.so.6")]
         private static extern int getpid();
 
@@ -263,7 +266,7 @@ namespace PInvokeSamples {
 
 **마샬링**은 관리되는 경계를 넘어 네이티브로 변환되거나 그 반대로 변환되어야 할 때 형식을 변환하는 프로세스입니다.
 
-마샬링이 필요한 이유는 관리 코드와 비관리 코드의 형식이 서로 다르기 때문입니다. 예를 들어 관리 코드에서는 `String`을 사용하지만 관리되지 않는 환경에서는 문자열이 유니코드(“와이드”), 비유니코드, null 종료, ASCII 등일 수 있습니다. 기본적으로 P/Invoke 하위 시스템은 [MSDN](https://msdn.microsoft.com/library/zah6xy75.aspx)에서 확인할 수 있는 기본 동작에 따라 올바른 작업을 수행하려고 합니다. 그러나 추가 제어가 필요한 경우 `MarshalAs` 특성을 사용하여 관리되지 않는 쪽에서 필요한 형식을 지정할 수 있습니다. 예를 들어 문자열을 null 종료 ANSI 문자열로 보내려는 경우 다음과 같이 할 수 있습니다.
+마샬링이 필요한 이유는 관리 코드와 비관리 코드의 형식이 서로 다르기 때문입니다. 예를 들어 관리 코드에서는 `String`을 사용하지만 관리되지 않는 환경에서는 문자열이 유니코드(“와이드”), 비유니코드, null 종료, ASCII 등일 수 있습니다. 기본적으로 P/Invoke 하위 시스템은 [MSDN](../../docs/framework/interop/default-marshaling-behavior.md)에서 확인할 수 있는 기본 동작에 따라 올바른 작업을 수행하려고 합니다. 그러나 추가 제어가 필요한 경우 `MarshalAs` 특성을 사용하여 관리되지 않는 쪽에서 필요한 형식을 지정할 수 있습니다. 예를 들어 문자열을 null 종료 ANSI 문자열로 보내려는 경우 다음과 같이 할 수 있습니다.
 
 ```csharp
 [DllImport("somenativelibrary.dll")]
@@ -297,7 +300,7 @@ public static void Main(string[] args) {
 }
 ```
 
-위의 예제에서는 `GetSystemTime()` 함수를 호출하는 간단한 예제를 보여 줍니다. 흥미로운 부분은 줄 4에 있습니다. 특성이 클래스의 필드를 다른 쪽(비관리)의 구조체에 순차적으로 매핑하도록 지정합니다. 즉, 아래와 같이 관리되지 않는 구조체에 대응해야 하므로 필드의 이름 지정은 중요하지 않고 해당 순서만 중요합니다.
+위의 예제에서는 `GetSystemTime()` 함수를 호출하는 간단한 예제를 보여줍니다. 흥미로운 부분은 줄 4에 있습니다. 특성이 클래스의 필드를 다른 쪽(비관리)의 구조체에 순차적으로 매핑하도록 지정합니다. 즉, 아래와 같이 관리되지 않는 구조체에 대응해야 하므로 필드의 이름 지정은 중요하지 않고 해당 순서만 중요합니다.
 
 ```c
 typedef struct _SYSTEMTIME {

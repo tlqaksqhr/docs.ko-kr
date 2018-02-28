@@ -9,15 +9,18 @@ ms.technology: dotnet-standard
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 896a1e12-5655-42c6-8cdd-89c12862b34b
-caps.latest.revision: "4"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 6a06de3f8fb6351d340e1c8f1bfe8f4105967e25
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: e18a3151228ea7edb5a8380f6ed707ee88d369e5
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="xml-schema-object-model-overview"></a>XML 스키마 개체 모델 개요
 Microsoft .NET Framework의 SOM(스키마 개체 모델)은 프로그래밍 방식으로 스키마를 만들고 편집하고 유효성을 검사할 수 있는 다양한 API입니다. SOM은 DOM(문서 개체 모델)이 XML 문서에서 작동하는 것과 비슷한 방식으로 XML 스키마 문서에서 작동합니다. XML 스키마 문서는 유효한 XML 파일로, SOM에 로드된 후에는 스키마를 준수하는 다른 XML 문서의 구조와 유효성에 대한 의미를 전달합니다.  
@@ -50,6 +53,6 @@ Microsoft .NET Framework의 SOM(스키마 개체 모델)은 프로그래밍 방�
  [XML 스키마 빌드](../../../../docs/standard/data/xml/building-xml-schemas.md)  
  [XML 스키마 통과](../../../../docs/standard/data/xml/traversing-xml-schemas.md)  
  [XML 스키마 편집](../../../../docs/standard/data/xml/editing-xml-schemas.md)  
- [포함 하 여 XML 스키마 또는 가져오기](../../../../docs/standard/data/xml/including-or-importing-xml-schemas.md)  
- [스키마 컴파일 위한 XmlSchemaSet](../../../../docs/standard/data/xml/xmlschemaset-for-schema-compilation.md)  
- [Post-schema Compilation Infoset](../../../../docs/standard/data/xml/post-schema-compilation-infoset.md)
+ [XML 스키마 포함하기 또는 가져오기](../../../../docs/standard/data/xml/including-or-importing-xml-schemas.md)  
+ [스키마 컴파일을 위한 XmlSchemaSet](../../../../docs/standard/data/xml/xmlschemaset-for-schema-compilation.md)  
+ [Post-Schema Compilation Infoset](../../../../docs/standard/data/xml/post-schema-compilation-infoset.md)

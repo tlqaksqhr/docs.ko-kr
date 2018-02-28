@@ -18,31 +18,34 @@ helpviewer_keywords:
 - regular expressions [.NET Framework], examples
 - examples [Visual Basic], strings
 - IsValidEmail
-- validation, e-mail strings
+- validation, email strings
 - input, checking
 - strings [.NET Framework], examples [Visual Basic]
-- e-mail [.NET Framework], validating
+- email [.NET Framework], validating
 - IsMatch method
 ms.assetid: 7536af08-4e86-4953-98a1-a8298623df92
-caps.latest.revision: "30"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 03623cc4086981dc321aafe3020dcd571b74d9bc
-ms.sourcegitcommit: 9c4b8d457ffb8d134c9d55c6d7682a0f22e2b9a8
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: fdbb64cac1f1d4043b8b935fcad32aec88b7bb7a
+ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/20/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="how-to-verify-that-strings-are-in-valid-email-format"></a>방법: 문자열이 올바른 전자 메일 형식인지 확인
 다음 예제에서는 정규식을 사용하여 문자열이 올바른 전자 메일 형식인지 확인합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  이 예제에서는 문자열에 올바른 전자 메일 주소가 포함되어 있으면 `IsValidEmail` 를 반환하고, 그렇지 않으면 `true` 를 반환하지만 다른 작업을 수행하지 않는 `false` 메서드를 정의합니다.  
   
  전자 메일 주소가 올바른지 확인하기 위해 `IsValidEmail` 메서드는 <xref:System.Text.RegularExpressions.Regex.Replace%28System.String%2CSystem.String%2CSystem.Text.RegularExpressions.MatchEvaluator%29?displayProperty=nameWithType> 정규식 패턴으로 `(@)(.+)$` 메서드를 호출하여 전자 메일 주소에서 도메인 이름을 분리합니다. 세 번째 매개 변수는 일치하는 텍스트를 처리하고 대체하는 메서드를 나타내는 <xref:System.Text.RegularExpressions.MatchEvaluator> 대리자입니다. 정규식 패턴은 다음과 같이 해석됩니다.  
   
-|패턴|설명|  
+|무늬|설명|  
 |-------------|-----------------|  
 |`(@)`|@ 문자를 찾습니다. 이 그룹은 첫 번째 캡처링 그룹입니다.|  
 |`(.+)`|하나 이상의 문자를 찾습니다. 이 그룹은 두 번째 캡처링 그룹입니다.|  
@@ -59,11 +62,11 @@ ms.lasthandoff: 10/20/2017
   
  이 예제에서 정규식 패턴 ``^(?(")(".+?(?<!\\)"@)|(([0-9a-z]((\.(?!\.))|[-!#\$%&'\*\+/=\?\^`{}|~\w])*)(?<=[0-9a-z])@))(?([)([(\d{1,3}.){3}\d{1,3}])|(([0-9a-z][-0-9a-z]*[0-9a-z]*.)+[a-z0-9][-a-z0-9]{0,22}[a-z0-9]))$``는 다음 테이블과 같이 해석됩니다. 정규식은 <xref:System.Text.RegularExpressions.RegexOptions.IgnoreCase?displayProperty=nameWithType> 플래그를 사용하여 컴파일됩니다.  
   
-|패턴|설명|  
+|무늬|설명|  
 |-------------|-----------------|  
 |`^`|문자열의 시작 부분에서 일치 항목 찾기를 시작합니다.|  
 |`(?(")`|첫 번째 문자가 따옴표인지 확인합니다. `(?(")` 는 대체 구문의 시작 부분입니다.|  
-|`(?("")("".+?(?<!\\)""@)`|첫 번째 문자가 따옴표인 경우 시작 따옴표 뒤에 임의의 문자가 1개 이상 나오고 그 뒤에 끝 따옴표가 나오는 일치 항목을 찾습니다. 끝 따옴표 해야는 앞에 백슬래시 문자 (\\). `(?<!` 는 너비가 0인 부정 lookbehind 어설션의 시작 부분입니다. 문자열은 @ 기호로 끝나야 합니다.|  
+|`(?("")("".+?(?<!\\)""@)`|첫 번째 문자가 따옴표인 경우 시작 따옴표 뒤에 임의의 문자가 1개 이상 나오고 그 뒤에 끝 따옴표가 나오는 일치 항목을 찾습니다. 끝 따옴표는 앞에 백슬래시 문자(\\)가 없어야 합니다. `(?<!` 는 너비가 0인 부정 lookbehind 어설션의 시작 부분입니다. 문자열은 @ 기호로 끝나야 합니다.|  
 |`&#124;(([0-9a-z]`|첫 번째 문자가 따옴표가 아니면 a-z 또는 A-Z(비교는 대/소문자를 구분하지 않음)의 영문자 또는 0-9의 숫자를 찾습니다.|  
 |`(\.(?!\.))`|다음 문자가 마침표이면 일치하게 됩니다. 마침표가 아니면 왼쪽에서 오른쪽으로 다음 문자를 검색하여 일치 항목을 계속 찾습니다. `(?!\.)` 는 메일 주소의 로컬 부분에 마침표 두 개가 연속으로 나타나지 않도록 하며 너비가 0인 부정 lookahead 어설션입니다.|  
 |``&#124;[-!#\$%&'\*\+/=\?\^`{}\&#124;~\w]``|다음 문자가 마침표가 아니면 단어 문자 또는 -!#$%'*+=?^`{}&#124;~ 중 하나를 찾습니다.|  
@@ -72,7 +75,7 @@ ms.lasthandoff: 10/20/2017
 |`(?<=[0-9a-z])`|@ 문자 앞의 문자가 영문자(A-Z, a-z) 또는 숫자(0-9)인 경우 일치 항목 찾기를 계속합니다. `(?<=[0-9a-z])` 구문은 너비가 0인 긍정 lookbehind 어설션을 정의합니다.|  
 |`(?(\[)`|@ 뒤의 문자가 여는 대괄호인지 확인합니다.|  
 |`(\[(\d{1,3}\.){3}\d{1,3}\])`|여는 대괄호이면 IP 주소(1자리에서 3자리까지의 숫자로 이루어진 4개의 집합이며 각 집합은 마침표로 구분됨)와 닫는 대괄호 앞에 있는 여는 대괄호를 찾습니다.|  
-|`&#124;(([0-9a-z][-0-9a-z]*[0-9a-z]*\.)+`|@ 뒤에 오는 문자는 사용할 수 없습니다는 대괄호가 아니면 영숫자 문자 하 나와 일치 값이 A-Z, a ~ z, 또는 0-9, 0 개 이상의 개, 하이픈 뒤에는 값이 A-Z, 0 개 또는 한 영숫자 문자는 a-z 또는 0-9 뒤에 마침표입니다. 이 패턴은 한 번 이상 반복될 수 있으며, 뒤에 최상위 도메인 이름이 있어야 합니다.|  
+|`&#124;(([0-9a-z][-0-9a-z]*[0-9a-z]*\.)+`|@ 뒤의 문자가 여는 대괄호가 아니면 영숫자(A-Z, a-z 또는 0-9) 1개, 하이픈 0개 이상, 영숫자(A-Z, a-z 또는 0-9) 0개 또는 1개와 마침표 1개로 구성된 패턴과 일치하는 항목을 찾습니다. 이 패턴은 한 번 이상 반복될 수 있으며, 뒤에 최상위 도메인 이름이 있어야 합니다.|  
 |`[a-z0-9][\-a-z0-9]{0,22}[a-z0-9]))`|최상위 도메인 이름은 영숫자(a-z, A-Z 및 0-9)로 시작하고 끝나야 하며, 영숫자이거나 하이픈인 0~22개의 ASCII 문자를 포함할 수도 있습니다.|  
 |`$`|문자열의 끝 부분에서 일치 항목 찾기를 끝냅니다.|  
   

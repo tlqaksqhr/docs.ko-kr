@@ -9,15 +9,18 @@ ms.technology: dotnet-standard
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 1e9b55c4-76ad-4f54-8d96-7ce4b4cf1e05
-caps.latest.revision: "3"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 87a03883622ba63a8d999907305356905b36bf1c
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: cf085cf866ea6034679230115e588024fcd79a11
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="namespaces-and-dtds-in-the-dom"></a>DOM의 네임스페이스 및 DTD
 DTD(문서 종류 정의)는 네임스페이스 지원을 어렵게 합니다. 예를 들어, 다음 XML에는 이름에 콜론이 포함되는 기본 특성이 있습니다.  
@@ -38,7 +41,7 @@ DTD(문서 종류 정의)는 네임스페이스 지원을 어렵게 합니다. �
   
 -   사용자가 DTD 유효성 검사를 요청하면 전체 문서에 대한 네임스페이스 지원이 해제됩니다. 이렇게 하면 W3C DTD를 로드하고 동작을 예측할 수 있습니다.  
   
- Microsoft.NET Framework에서 XML을 최대 W3C 호환성을 위해 두 번째 옵션을 구현합니다.  
+ Microsoft .NET Framework의 XML은 W3C 호환성을 극대화하기 위해 두 번째 옵션을 구현합니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [XML 문서 개체 모델 (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
+ [XML DOM(문서 개체 모델)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

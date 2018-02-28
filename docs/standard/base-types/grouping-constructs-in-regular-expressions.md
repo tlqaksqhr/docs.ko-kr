@@ -19,15 +19,18 @@ helpviewer_keywords:
 - constructs, grouping
 - grouping constructs
 ms.assetid: 0fc18634-f590-4062-8d5c-f0b71abe405b
-caps.latest.revision: "33"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 37428cf96bbe36a55e88edeb5ec56e09895be994
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: b6e0b9d3482bbfc3dabeee1f6b7fce7a93364dfb
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="grouping-constructs-in-regular-expressions"></a>정규식의 교체 그룹화 구문
 그룹화 구문은 정규식의 하위 식을 나타내며 입력 문자열의 부분 문자열을 캡처합니다. 그룹화 구문은 다음과 같은 경우에 사용할 수 있습니다.  
@@ -40,7 +43,7 @@ ms.lasthandoff: 11/21/2017
   
 -   <xref:System.Text.RegularExpressions.Match.Groups%2A?displayProperty=nameWithType> 속성에서 개별 하위 식을 검색하여 전체적으로 일치하는 텍스트와 별도로 처리합니다.  
   
- 다음 표에서.NET 정규식 엔진에서 지 원하는 그룹화 구문을 나열 하 고 캡처가 또는 비 캡처링 하는지 여부를 나타냅니다.  
+ 다음 표에는 .NET 정규식 엔진에서 지원되는 그룹화 구문과 해당 그룹화 구문의 캡처링 또는 비 캡처링 여부가 표시되어 있습니다.  
   
 |그룹화 구문|캡처링 또는 비 캡처링|  
 |------------------------|-------------------------------|  
@@ -66,7 +69,7 @@ ms.lasthandoff: 11/21/2017
  여기서 *subexpression* 은 임의의 유효한 정규식 패턴입니다. 괄호를 사용하는 캡처는 정규식에서 여는 괄호의 순서에 따라 왼쪽에서 오른쪽으로 자동으로 번호(1부터 시작)가 매겨집니다. 번호가 0인 캡처는 전체 정규식 패턴에 의해 일치되는 텍스트입니다.  
   
 > [!NOTE]
->  기본적으로 `(`*subexpression*`)` 언어 요소는 일치하는 하위 식을 캡처합니다. 경우에 <xref:System.Text.RegularExpressions.RegexOptions> 정규식 패턴 일치 메서드의 매개 변수에 포함 됩니다는 <xref:System.Text.RegularExpressions.RegexOptions.ExplicitCapture?displayProperty=nameWithType> 플래그를 또는 경우에는 `n` 옵션이이 하위 식에 적용 된 (참조 [옵션 그룹](#group_options) 이 항목의 뒷부분에 나오는), 일치 하는 하위 식이 캡처되지 않습니다.  
+>  기본적으로 `(`*subexpression*`)` 언어 요소는 일치하는 하위 식을 캡처합니다. 그러나 정규식 패턴 일치 메서드의 <xref:System.Text.RegularExpressions.RegexOptions> 매개 변수가 <xref:System.Text.RegularExpressions.RegexOptions.ExplicitCapture?displayProperty=nameWithType> 플래그를 포함하거나, `n` 옵션이 이 하위 식에 적용된 경우(이 항목 뒷부분의 [그룹 옵션](#group_options) 참조) 일치하는 하위 식이 캡처되지 않습니다.  
   
  캡처된 그룹에는 다음과 같은 4가지 방법으로 액세스할 수 있습니다.  
   
@@ -74,11 +77,11 @@ ms.lasthandoff: 11/21/2017
   
 -   정규식 내의 명명된 역참조 구문을 사용합니다. 일치하는 하위 식은 `\k<`*name*`>`구문을 통해 동일한 정규식에서 참조됩니다. 여기서 *name* 은 캡처링 그룹의 이름) 또는 `\k<`*number*`>`구문을 통해 동일한 정규식에서 참조됩니다. 여기서 *number* 는 캡처링 그룹의 서수)을 통해 동일한 정규식에서 참조됩니다. 캡처링 그룹은 해당 서수와 같은 기본 이름을 갖고 있습니다. 자세한 내용은 이 항목 뒷부분의 [명명된 일치하는 하위 식](#named_matched_subexpression) 을 참조하세요.  
   
--   사용 하 여는 `$` *번호* 바꾸기 시퀀스를 한 <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> 또는 <xref:System.Text.RegularExpressions.Match.Result%2A?displayProperty=nameWithType> 메서드 호출에서 여기서 *번호* 는 캡처된 하위 식의 서 수입니다.  
+-   <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> 또는 <xref:System.Text.RegularExpressions.Match.Result%2A?displayProperty=nameWithType> 메서드 호출에서 `$`*number* 바꾸기 시퀀스를 사용합니다. 여기서 *number*는 캡처된 하위 식의 서수입니다.  
   
 -   프로그래밍 방식으로 <xref:System.Text.RegularExpressions.GroupCollection> 속성에서 반환하는 <xref:System.Text.RegularExpressions.Match.Groups%2A?displayProperty=nameWithType> 개체를 사용합니다. 컬렉션에서 위치 0에 있는 멤버는 전체 정규식 일치를 나타냅니다. 각 후속 멤버는 일치하는 하위 식을 나타냅니다. 자세한 내용은 [Grouping Constructs and Regular Expression Objects](#Objects) 섹션을 참조하세요.  
   
- 다음 예제에서는 텍스트에서 중복된 단어를 식별하는 정규식을 보여 줍니다. 정규식 패턴의 두 캡처링 그룹은 중복된 단어의 두 인스턴스를 나타냅니다. 두 번째 인스턴스는 입력 문자열의 해당 시작 위치를 보고하기 위해 캡처됩니다.  
+ 다음 예제에서는 텍스트에서 중복된 단어를 식별하는 정규식을 보여줍니다. 정규식 패턴의 두 캡처링 그룹은 중복된 단어의 두 인스턴스를 나타냅니다. 두 번째 인스턴스는 입력 문자열의 해당 시작 위치를 보고하기 위해 캡처됩니다.  
   
  [!code-csharp[RegularExpressions.Language.Grouping#1](../../../samples/snippets/csharp/VS_Snippets_CLR/regularexpressions.language.grouping/cs/grouping1.cs#1)]
  [!code-vb[RegularExpressions.Language.Grouping#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/regularexpressions.language.grouping/vb/grouping1.vb#1)]  
@@ -89,7 +92,7 @@ ms.lasthandoff: 11/21/2017
 (\w+)\s(\1)\W  
 ```  
   
- 다음 테이블은 정규식 패턴이 해석되는 방법을 보여 줍니다.  
+ 다음 테이블은 정규식 패턴이 해석되는 방법을 보여줍니다.  
   
 |패턴|설명|  
 |-------------|-----------------|  
@@ -115,7 +118,7 @@ ms.lasthandoff: 11/21/2017
  여기서 *name* 은 유효한 그룹 이름이고, *subexpression* 은 임의의 유효한 정규식 패턴입니다. *name* 은 문장 부호 문자를 포함해서는 안 되며 숫자로 시작할 수 없습니다.  
   
 > [!NOTE]
->  경우는 <xref:System.Text.RegularExpressions.RegexOptions> 정규식 패턴 일치 메서드의 매개 변수를 포함는 <xref:System.Text.RegularExpressions.RegexOptions.ExplicitCapture?displayProperty=nameWithType> 플래그를 또는 경우에는 `n` 옵션이이 하위 식에 적용 된 (참조 [옵션 그룹](#group_options) 이 항목의 뒷부분에 나오는), 경우에 하위 식을 캡처하 방법은 이름 명시적으로 캡처링 그룹입니다.  
+>  정규식 패턴 일치 메서드의 <xref:System.Text.RegularExpressions.RegexOptions> 매개 변수가 <xref:System.Text.RegularExpressions.RegexOptions.ExplicitCapture?displayProperty=nameWithType> 플래그를 포함하거나, `n` 옵션이 이 하위 식에 적용된 경우(이 항목 뒷부분의 [그룹 옵션](#group_options) 참조) 하위 식을 캡처하는 유일한 방법은 명시적으로 캡처링 그룹의 이름을 지정하는 것입니다.  
   
  명명된 캡처된 그룹에는 다음과 같은 방법으로 액세스할 수 있습니다.  
   
@@ -123,17 +126,17 @@ ms.lasthandoff: 11/21/2017
   
 -   정규식 내의 역참조 구문을 사용합니다. 일치하는 하위 식은 `\`*number*구문을 통해 동일한 정규식에서 참조됩니다. 여기서 *number* 는 캡처된 하위 식의 서수입니다. 명명된 일치하는 하위 식은 하위 식을 일치시킨 후 왼쪽에서 오른쪽으로 연속적으로 번호가 매겨집니다.  
   
--   사용 하 여는 `${` *이름* `}` 바꾸기 시퀀스를 한 <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> 또는 <xref:System.Text.RegularExpressions.Match.Result%2A?displayProperty=nameWithType> 메서드 호출에서 여기서 *이름* 은 캡처된 하위 식의 이름입니다.  
+-   <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> 또는 <xref:System.Text.RegularExpressions.Match.Result%2A?displayProperty=nameWithType> 메서드 호출에서 `${`*name*`}` 바꾸기 시퀀스를 사용합니다. 여기서 *name*은 캡처된 하위 식의 이름입니다.  
   
--   사용 하 여는 `$` *번호* 바꾸기 시퀀스를 한 <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> 또는 <xref:System.Text.RegularExpressions.Match.Result%2A?displayProperty=nameWithType> 메서드 호출에서 여기서 *번호* 는 캡처된 하위 식의 서 수입니다.  
+-   <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> 또는 <xref:System.Text.RegularExpressions.Match.Result%2A?displayProperty=nameWithType> 메서드 호출에서 `$`*number* 바꾸기 시퀀스를 사용합니다. 여기서 *number*는 캡처된 하위 식의 서수입니다.  
   
 -   프로그래밍 방식으로 <xref:System.Text.RegularExpressions.GroupCollection> 속성에서 반환하는 <xref:System.Text.RegularExpressions.Match.Groups%2A?displayProperty=nameWithType> 개체를 사용합니다. 컬렉션에서 위치 0에 있는 멤버는 전체 정규식 일치를 나타냅니다. 각 후속 멤버는 일치하는 하위 식을 나타냅니다. 명명된 캡처된 그룹은 캡처된 그룹의 번호를 매긴 후 컬렉션에 저장됩니다.  
   
 -   프로그래밍 방식으로 하위 식 이름을 <xref:System.Text.RegularExpressions.GroupCollection> 개체의 인덱서(C#의 경우) 또는 해당 <xref:System.Text.RegularExpressions.GroupCollection.Item%2A> 속성(Visual Basic의 경우)에 제공합니다.  
   
- 단순 정규식 패턴이 프로그래밍 방식으로 또는 정규식 언어 구문을 사용하여, 번호가 매겨진(명명되지 않은) 그룹 및 명명된 그룹을 참조할 수 있는 방법을 보여 줍니다. 정규식 `((?<One>abc)\d+)?(?<Two>xyz)(.*)` 는 번호 및 이름으로 다음 캡처링 그룹을 생성합니다. 첫 번째 캡처링 그룹(번호 0)은 항상 전체 패턴을 지칭합니다.  
+ 단순 정규식 패턴이 프로그래밍 방식으로 또는 정규식 언어 구문을 사용하여, 번호가 매겨진(명명되지 않은) 그룹 및 명명된 그룹을 참조할 수 있는 방법을 보여줍니다. 정규식 `((?<One>abc)\d+)?(?<Two>xyz)(.*)` 는 번호 및 이름으로 다음 캡처링 그룹을 생성합니다. 첫 번째 캡처링 그룹(번호 0)은 항상 전체 패턴을 지칭합니다.  
   
-|number|name|패턴|  
+|number|name|무늬|  
 |------------|----------|-------------|  
 |0|0(기본 이름)|`((?<One>abc)\d+)?(?<Two>xyz)(.*)`|  
 |1|1(기본 이름)|`((?<One>abc)\d+)`|  
@@ -141,7 +144,7 @@ ms.lasthandoff: 11/21/2017
 |3|1|`(?<One>abc)`|  
 |4|2|`(?<Two>xyz)`|  
   
- 다음 예제에서는 중복된 단어와 중복된 각 단어 바로 뒤에 나오는 단어를 식별하는 정규식을 보여 줍니다. 정규식 패턴은 두 개의 명명된 하위 식 즉, 중복된 단어를 나타내는 `duplicateWord`와 중복된 단어 뒤에 나오는 단어를 나타내는 `nextWord`를 정의합니다.  
+ 다음 예제에서는 중복된 단어와 중복된 각 단어 바로 뒤에 나오는 단어를 식별하는 정규식을 보여줍니다. 정규식 패턴은 두 개의 명명된 하위 식 즉, 중복된 단어를 나타내는 `duplicateWord`와 중복된 단어 뒤에 나오는 단어를 나타내는 `nextWord`를 정의합니다.  
   
  [!code-csharp[RegularExpressions.Language.Grouping#2](../../../samples/snippets/csharp/VS_Snippets_CLR/regularexpressions.language.grouping/cs/grouping2.cs#2)]
  [!code-vb[RegularExpressions.Language.Grouping#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/regularexpressions.language.grouping/vb/grouping2.vb#2)]  
@@ -152,9 +155,9 @@ ms.lasthandoff: 11/21/2017
 (?<duplicateWord>\w+)\s\k<duplicateWord>\W(?<nextWord>\w+)  
 ```  
   
- 다음 테이블은 정규식이 해석되는 방법을 보여 줍니다.  
+ 다음 테이블은 정규식이 해석되는 방법을 보여줍니다.  
   
-|패턴|설명|  
+|무늬|설명|  
 |-------------|-----------------|  
 |`(?<duplicateWord>\w+)`|하나 이상의 단어 문자를 찾습니다. 이 캡처링 그룹의 이름을 `duplicateWord`로 지정합니다.|  
 |`\s`|공백 문자를 찾습니다.|  
@@ -169,9 +172,9 @@ ms.lasthandoff: 11/21/2017
  [!code-csharp[RegularExpressions.Language.Grouping#12](../../../samples/snippets/csharp/VS_Snippets_CLR/regularexpressions.language.grouping/cs/duplicate1.cs#12)]
  [!code-vb[RegularExpressions.Language.Grouping#12](../../../samples/snippets/visualbasic/VS_Snippets_CLR/regularexpressions.language.grouping/vb/duplicate1.vb#12)]  
   
- 다음 테이블은 정규식이 해석되는 방법을 보여 줍니다.  
+ 다음 테이블은 정규식이 해석되는 방법을 보여줍니다.  
   
-|패턴|설명|  
+|무늬|설명|  
 |-------------|-----------------|  
 |`\D+`|하나 이상의 10진수가 아닌 문자를 찾습니다.|  
 |`(?<digit>\d+)`|하나 이상의 10진수 문자를 찾습니다. 명명된 그룹 `digit` 에 일치를 할당합니다.|  
@@ -212,7 +215,7 @@ ms.lasthandoff: 11/21/2017
   
  정규식은 다음과 같이 해석됩니다.  
   
-|패턴|설명|  
+|무늬|설명|  
 |-------------|-----------------|  
 |`^`|문자열의 시작 부분에서 시작합니다.|  
 |`[^<>]*`|왼쪽 또는 오른쪽 꺾쇠괄호가 아닌 0개 이상의 문자를 찾습니다.|  
@@ -228,32 +231,32 @@ ms.lasthandoff: 11/21/2017
   
  최종 하위 식 `(?(Open)(?!))`는 입력 문자열의 중첩 구문이 짝이 올바르게 맞는지 여부를 나타냅니다(예: 각 왼쪽 꺾쇠괄호가 오른쪽 꺾쇠괄호와 일치하는지 여부). 최종 하위 식에서는 유효한 캡처된 그룹을 기반으로 조건부 일치를 사용합니다. 자세한 내용은 [Alternation Constructs](../../../docs/standard/base-types/alternation-constructs-in-regular-expressions.md)을 참조하세요. `Open` 그룹이 정의되어 있는 경우 정규식 엔진은 입력 문자열에서 하위 식 `(?!)` 를 찾으려고 시도합니다. `Open` 그룹은 중첩 구문이 짝이 맞지 않는 경우에만 정의해야 합니다. 따라서 입력 문자열에서 찾을 패턴은 항상 찾기가 실패하도록 만드는 패턴이어야 합니다. 이 경우 `(?!)` 는 항상 실패하는 너비가 0인 부정 lookahead 어설션인데, 입력 문자열의 다음 위치에는 항상 암시적으로 빈 문자열이 있기 때문입니다.  
   
- 예제에서는 정규식 엔진이 입력된 문자열을 계산 "\<abc >< mno\<xyz >>"는 다음 표에 나와 있는 것 처럼 합니다.  
+ 이 예제에서 정규식 엔진은 다음 표에 나와 있는 것처럼 입력 문자열 “\<abc><mno\<xyz>>”를 평가합니다.  
   
-|단계|패턴|결과|  
+|단계|무늬|결과|  
 |----------|-------------|------------|  
 |1|`^`|입력 문자열의 시작 부분에서 일치 항목 찾기를 시작합니다.|  
 |2|`[^<>]*`|왼쪽 꺾쇠괄호 앞에서 꺾쇠괄호가 아닌 문자를 찾습니다. 일치 항목이 없습니다.|  
-|3|`(((?'Open'<)`|왼쪽 꺾쇠 괄호를 찾아 "\<abc >"에 할당 된 `Open` 그룹입니다.|  
+|3|`(((?'Open'<)`|“\<abc>”에서 왼쪽 꺾쇠괄호를 찾아 `Open` 그룹에 할당합니다.|  
 |4|`[^<>]*`|"abc"를 찾습니다.|  
 |5|`)+`|"<abc"는 캡처된 두 번째 그룹의 값입니다.<br /><br /> 입력 문자열의 다음 문자가 왼쪽 꺾쇠괄호가 아니므로 정규식 엔진은 `(?'Open'<)[^<>]*)` 하위 패턴으로 루프백하지 않습니다.|  
-|6|`((?'Close-Open'>)`|오른쪽 꺾쇠 괄호를 찾아 "\<abc >", "abc"는 부분 문자열을 할당 사이 `Open` 그룹과 오른쪽 꺾쇠 괄호에 `Close` 현재 값을 삭제 및 그룹 ("<")의 `Open` 그룹 비워 둡니다.|  
+|6|`((?'Close-Open'>)`|“\<abc>”에서 오른쪽 꺾쇠괄호를 찾고 `Open` 그룹과 오른쪽 꺾쇠괄호 사이의 부분 문자열인 “abc”를 `Close` 그룹에 할당한 다음, `Open` 그룹의 현재 값(“<”)을 삭제하여 이 그룹을 비워 둡니다.|  
 |7|`[^<>]*`|오른쪽 꺾쇠괄호 뒤에서 꺾쇠괄호가 아닌 문자를 찾습니다. 일치 항목이 없습니다.|  
 |8|`)+`|캡처된 세 번째 그룹의 값은 ">"입니다.<br /><br /> 입력 문자열의 다음 문자가 오른쪽 꺾쇠괄호가 아니므로 정규식 엔진은 `((?'Close-Open'>)[^<>]*)` 하위 패턴으로 루프백하지 않습니다.|  
-|9|`)*`|캡처된 첫 번째 그룹의 값은 "\<abc >"입니다.<br /><br /> 입력 문자열의 다음 문자가 왼쪽 꺾쇠괄호이므로 정규식 엔진은 `(((?'Open'<)` 하위 패턴으로 루프백합니다.|  
-|10|`(((?'Open'<)`|왼쪽 꺾쇠 괄호를 찾아 "\<m n o >"에 할당 된 `Open` 그룹입니다. 해당 <xref:System.Text.RegularExpressions.Group.Captures%2A?displayProperty=nameWithType> 컬렉션에는 이제 단일 값 "<"가 있습니다.|  
+|10|`)*`|캡처된 첫 번째 그룹의 값은 “\<abc>”입니다.<br /><br /> 입력 문자열의 다음 문자가 왼쪽 꺾쇠괄호이므로 정규식 엔진은 `(((?'Open'<)` 하위 패턴으로 루프백합니다.|  
+|10|`(((?'Open'<)`|“\<mno>”에서 왼쪽 꺾쇠괄호를 찾아 `Open` 그룹에 할당합니다. 해당 <xref:System.Text.RegularExpressions.Group.Captures%2A?displayProperty=nameWithType> 컬렉션에는 이제 단일 값 "<"가 있습니다.|  
 |11|`[^<>]*`|"mno"를 찾습니다.|  
 |12|`)+`|"<mno"는 캡처된 두 번째 그룹의 값입니다.<br /><br /> 입력 문자열의 다음 문자가 왼쪽 꺾쇠괄호이므로 정규식 엔진은 `(?'Open'<)[^<>]*)` 하위 패턴으로 루프백합니다.|  
-|13|`(((?'Open'<)`|왼쪽 꺾쇠 괄호를 찾아 "\<x y z >"에 할당 하 고는 `Open` 그룹입니다. <xref:System.Text.RegularExpressions.Group.Captures%2A?displayProperty=nameWithType> 의 컬렉션은 `Open` 그룹에는 이제 두 개의 캡처에 포함:의 왼쪽된 꺾쇠 괄호가 "\<m n o >", 및의 왼쪽된 꺾쇠 괄호가 "\<x y z >"입니다.|  
+|13|`(((?'Open'<)`|“\<xyz>”에서 왼쪽 꺾쇠괄호를 찾아 `Open` 그룹에 할당합니다. 이제 `Open` 그룹의 <xref:System.Text.RegularExpressions.Group.Captures%2A?displayProperty=nameWithType> 컬렉션에 두 개의 캡처 즉, “\<mno>”의 왼쪽 꺾쇠괄호와 “\<xyz>”의 왼쪽 꺾쇠괄호가 포함되어 있습니다.|  
 |14|`[^<>]*`|"xyz"를 찾습니다.|  
 |15|`)+`|"<xyz"는 캡처된 두 번째 그룹의 값입니다.<br /><br /> 입력 문자열의 다음 문자가 왼쪽 꺾쇠괄호가 아니므로 정규식 엔진은 `(?'Open'<)[^<>]*)` 하위 패턴으로 루프백하지 않습니다.|  
-|16|`((?'Close-Open'>)`|오른쪽 꺾쇠 괄호를 찾아 "\<x y z >"입니다. “xyz”는 `Open` 그룹과 오른쪽 꺾쇠괄호 간의 부분 문자열을 `Close` 그룹에 할당하고 `Open` 그룹의 현재 값을 삭제합니다. 이전 캡처의 값 (의 왼쪽된 꺾쇠 괄호 "\<m n o >")의 현재 값이 됩니다는 `Open` 그룹입니다. <xref:System.Text.RegularExpressions.Group.Captures%2A> 의 컬렉션은 `Open` 그룹에는 이제 단일 캡처 인의 왼쪽된 꺾쇠 괄호가 포함 되어 "\<x y z >"입니다.|  
+|16|`((?'Close-Open'>)`|“\<xyz>”에서 오른쪽 꺾쇠괄호를 찾습니다. “xyz”는 `Open` 그룹과 오른쪽 꺾쇠괄호 간의 부분 문자열을 `Close` 그룹에 할당하고 `Open` 그룹의 현재 값을 삭제합니다. 이전 캡처의 값(“\<mno>”의 왼쪽 꺾쇠괄호)이 `Open` 그룹의 현재 값이 됩니다. 이제 `Open` 그룹의 <xref:System.Text.RegularExpressions.Group.Captures%2A> 컬렉션에 단일 캡처인 “\<xyz>”의 왼쪽 꺾쇠괄호가 포함되어 있습니다.|  
 |17|`[^<>]*`|꺾쇠괄호가 아닌 문자를 찾습니다. 일치 항목이 없습니다.|  
 |18|`)+`|캡처된 세 번째 그룹의 값은 ">"입니다.<br /><br /> 입력 문자열의 다음 문자가 오른쪽 꺾쇠괄호이므로 정규식 엔진은 `((?'Close-Open'>)[^<>]*)` 하위 패턴으로 루프백합니다.|  
-|19|`((?'Close-Open'>)`|최종 오른쪽 꺾쇠 괄호를 찾아 "xyz >>", 할당 "mno\<x y z >" (간의 부분 문자열은 `Open` 그룹과 오른쪽 꺾쇠 괄호)에 `Close` 및 그룹의 현재 값을 삭제는 `Open` 그룹. 이제 `Open` 그룹이 비어 있습니다.|  
+|19|`((?'Close-Open'>)`|“xyz>>”에서 최종 오른쪽 꺾쇠괄호를 찾고 `Open` 그룹과 오른쪽 꺾쇠괄호 사이의 부분 문자열인 “mno\<xyz>”를 `Close` 그룹에 할당한 다음, `Open` 그룹의 현재 값을 삭제합니다. 이제 `Open` 그룹이 비어 있습니다.|  
 |20|`[^<>]*`|꺾쇠괄호가 아닌 문자를 찾습니다. 일치 항목이 없습니다.|  
 |21|`)+`|캡처된 세 번째 그룹의 값은 ">"입니다.<br /><br /> 입력 문자열의 다음 문자가 오른쪽 꺾쇠괄호가 아니므로 정규식 엔진은 `((?'Close-Open'>)[^<>]*)` 하위 패턴으로 루프백하지 않습니다.|  
-|22|`)*`|캡처된 첫 번째 그룹의 값은 "< m n o\<xyz >>"입니다.<br /><br /> 입력 문자열의 다음 문자가 왼쪽 꺾쇠괄호가 아니므로 정규식 엔진은 `(((?'Open'<)` 하위 패턴으로 루프백하지 않습니다.|  
+|22|`)*`|캡처된 첫 번째 그룹의 값은 “<mno\<xyz>>”입니다.<br /><br /> 입력 문자열의 다음 문자가 왼쪽 꺾쇠괄호가 아니므로 정규식 엔진은 `(((?'Open'<)` 하위 패턴으로 루프백하지 않습니다.|  
 |23|`(?(Open)(?!))`|`Open` 그룹이 정의되어 있지 않으므로 찾으려는 시도가 이루어지지 않습니다.|  
 |24|`$`|입력 문자열의 끝 부분을 찾습니다.|  
   
@@ -270,14 +273,14 @@ ms.lasthandoff: 11/21/2017
 > [!NOTE]
 >  정규식에 중첩된 그룹화 구문이 포함된 경우 외부 비 캡처링 그룹 구문은 내부 중첩된 그룹 구문에 적용되지 않습니다.  
   
- 다음 예제에서는 비 캡처링 그룹을 포함하는 정규식을 보여 줍니다. 출력에는 캡처된 그룹이 포함되지 않습니다.  
+ 다음 예제에서는 비 캡처링 그룹을 포함하는 정규식을 보여줍니다. 출력에는 캡처된 그룹이 포함되지 않습니다.  
   
  [!code-csharp[RegularExpressions.Language.Grouping#5](../../../samples/snippets/csharp/VS_Snippets_CLR/regularexpressions.language.grouping/cs/noncapture1.cs#5)]
  [!code-vb[RegularExpressions.Language.Grouping#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/regularexpressions.language.grouping/vb/noncapture1.vb#5)]  
   
  정규식 `(?:\b(?:\w+)\W*)+\.` 는 마침표로 종료된 문장을 찾습니다. 정규식은 개별 단어가 아닌 문장에 초점을 두므로 그룹화 구문은 단독으로 수량자로 사용됩니다. 정규식 패턴은 다음 테이블과 같이 해석됩니다.  
   
-|패턴|설명|  
+|무늬|설명|  
 |-------------|-----------------|  
 |`\b`|단어 경계에서 일치 항목 찾기를 시작합니다.|  
 |`(?:\w+)`|하나 이상의 단어 문자를 찾습니다. 일치하는 텍스트를 캡처된 그룹에 할당하지 않습니다.|  
@@ -300,7 +303,7 @@ ms.lasthandoff: 11/21/2017
   
  예를 들어, 다음 예제의 정규식 `\b(?ix: d \w+)\s` 는 문자 "d"로 시작하는 모든 단어를 식별할 때 대/소문자를 구분하지 않는 일치를 사용하도록 설정하고 패턴 공백을 무시하기 위해 그룹화 구문에 인라인 옵션을 사용합니다. 정규식은 다음 테이블과 같이 정의됩니다.  
   
-|패턴|설명|  
+|무늬|설명|  
 |-------------|-----------------|  
 |`\b`|단어 경계에서 일치 항목 찾기를 시작합니다.|  
 |`(?ix: d \w+)`|이 패턴에서 대/소문자를 구분하지 않는 일치를 사용하고 공백을 무시하여 "d" 다음에 하나 이상의 단어 문자가 있는 일치 항목을 찾습니다.|  
@@ -326,7 +329,7 @@ ms.lasthandoff: 11/21/2017
   
  정규식 `\b\w+(?=\sis\b)` 는 다음 테이블과 같이 해석됩니다.  
   
-|패턴|설명|  
+|무늬|설명|  
 |-------------|-----------------|  
 |`\b`|단어 경계에서 일치 항목 찾기를 시작합니다.|  
 |`\w+`|하나 이상의 단어 문자를 찾습니다.|  
@@ -349,7 +352,7 @@ ms.lasthandoff: 11/21/2017
   
  정규식 `\b(?!un)\w+\b` 는 다음 테이블과 같이 해석됩니다.  
   
-|패턴|설명|  
+|무늬|설명|  
 |-------------|-----------------|  
 |`\b`|단어 경계에서 일치 항목 찾기를 시작합니다.|  
 |`(?!un)`|다음 두 문자가 "un"인지 확인합니다. 그러지 않은 경우 일치가 가능합니다.|  
@@ -363,7 +366,7 @@ ms.lasthandoff: 11/21/2017
   
  정규식 `\b\w+\b(?!\p{P})` 는 다음 테이블과 같이 해석됩니다.  
   
-|패턴|설명|  
+|무늬|설명|  
 |-------------|-----------------|  
 |`\b`|단어 경계에서 일치 항목 찾기를 시작합니다.|  
 |`\w+`|하나 이상의 단어 문자를 찾습니다.|  
@@ -376,7 +379,7 @@ ms.lasthandoff: 11/21/2017
   
  `(?<=` *subexpression* `)`  
   
- 여기서 *subexpression* 은 임의의 정규식 패턴입니다. 찾기가 성공 하려면 일치 하는 항목에 대 한 *subexpression* 있지만 현재 위치의 왼쪽에 있는 입력된 문자열에서 발생 해야 `subexpression` 일치 결과에 포함 되지 않습니다. 너비가 0인 긍정 lookbehind 어설션은 역추적하지 않습니다.  
+ 여기서 *subexpression* 은 임의의 정규식 패턴입니다. 찾기가 성공하려면 `subexpression`이 일치 결과에 포함되지 않더라도 *subexpression*이 입력 문자열에서 현재 위치의 왼쪽에서 발생해야 합니다. 너비가 0인 긍정 lookbehind 어설션은 역추적하지 않습니다.  
   
  너비가 0인 긍정 lookbehind 어설션은 일반적으로 정규식의 시작 부분에 사용됩니다. 이 어설션이 정의하는 패턴은 이 패턴이 일치 결과에 포함되지 않더라도 일치에 대한 사전 조건입니다.  
   
@@ -434,14 +437,14 @@ ms.lasthandoff: 11/21/2017
   
  이 옵션은 역추적이 실패할 것임을 아는 경우에 사용하는 것이 좋습니다. 정규식 엔진이 불필요한 검색을 수행하지 않도록 하면 성능이 향상됩니다.  
   
- 다음 예제에서는 역추적하지 않는 하위 식이 패턴 일치 결과를 수정하는 방법을 보여 줍니다. 역추적 정규식은 단어 경계에서 뒤에 동일한 문자가 하나 더 있는 일련의 반복된 문자를 찾지만 역추적하지 않는 정규식은 그렇지 못합니다.  
+ 다음 예제에서는 역추적하지 않는 하위 식이 패턴 일치 결과를 수정하는 방법을 보여줍니다. 역추적 정규식은 단어 경계에서 뒤에 동일한 문자가 하나 더 있는 일련의 반복된 문자를 찾지만 역추적하지 않는 정규식은 그렇지 못합니다.  
   
  [!code-csharp[RegularExpressions.Language.Grouping#11](../../../samples/snippets/csharp/VS_Snippets_CLR/regularexpressions.language.grouping/cs/nonbacktracking1.cs#11)]
  [!code-vb[RegularExpressions.Language.Grouping#11](../../../samples/snippets/visualbasic/VS_Snippets_CLR/regularexpressions.language.grouping/vb/nonbacktracking1.vb#11)]  
   
  역추적하지 않는 정규식 `(?>(\w)\1+).\b` 는 다음 테이블과 같이 정의됩니다.  
   
-|패턴|설명|  
+|무늬|설명|  
 |-------------|-----------------|  
 |`(\w)`|단일 단어 문자를 찾아 첫 번째 캡처링 그룹에 할당합니다.|  
 |`\1+`|캡처된 첫 번째 부분 문자열의 값을 한 번 이상 찾습니다.|  
@@ -461,14 +464,14 @@ ms.lasthandoff: 11/21/2017
   
  캡처링 그룹에 수량자를 적용하는 경우 해당 <xref:System.Text.RegularExpressions.Group> 개체의 <xref:System.Text.RegularExpressions.Capture.Value%2A?displayProperty=nameWithType>, <xref:System.Text.RegularExpressions.Capture.Index%2A?displayProperty=nameWithType> 및 <xref:System.Text.RegularExpressions.Capture.Length%2A?displayProperty=nameWithType> 속성은 캡처링 그룹에 의해 캡처된 마지막 부분 문자열을 반영합니다. <xref:System.Text.RegularExpressions.CaptureCollection> 속성에서 반환하는 <xref:System.Text.RegularExpressions.Group.Captures%2A?displayProperty=nameWithType> 개체의 수량자를 포함하는 그룹에 의해 캡처된 부분 문자열의 전체 집합을 검색할 수 있습니다.  
   
- 다음 예제에서는 <xref:System.Text.RegularExpressions.Group> 개체와 <xref:System.Text.RegularExpressions.Capture> 개체 간의 관계를 명확하게 보여 줍니다.  
+ 다음 예제에서는 <xref:System.Text.RegularExpressions.Group> 개체와 <xref:System.Text.RegularExpressions.Capture> 개체 간의 관계를 명확하게 보여줍니다.  
   
  [!code-csharp[RegularExpressions.Language.Grouping#4](../../../samples/snippets/csharp/VS_Snippets_CLR/regularexpressions.language.grouping/cs/objectmodel1.cs#4)]
  [!code-vb[RegularExpressions.Language.Grouping#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/regularexpressions.language.grouping/vb/objectmodel1.vb#4)]  
   
  정규식 패턴 `\b(\w+)\W+)+` 는 문자열에서 개별 단어를 추출합니다. 이 패턴은 다음 표에서와 같이 정의됩니다.  
   
-|패턴|설명|  
+|무늬|설명|  
 |-------------|-----------------|  
 |`\b`|단어 경계에서 일치 항목 찾기를 시작합니다.|  
 |`(\w+)`|하나 이상의 단어 문자를 찾습니다. 이러한 문자는 함께 하나의 단어를 형성합니다. 이 그룹은 두 번째 캡처링 그룹입니다.|  

@@ -1,5 +1,5 @@
 ---
-title: "일반적인 I/o 작업"
+title: "공통적인 I/O 작업"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net
@@ -8,20 +8,24 @@ ms.suite:
 ms.technology: dotnet-standard
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: I/O, common tasks
+helpviewer_keywords:
+- I/O, common tasks
 ms.assetid: bf00c380-706a-4e38-b829-454a480629fc
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 51238020f4d93ad32dac85a95d7b1cab26f2dd64
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: be291265d59dca5d1f555f8a98a3d0c79235f3c3
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="common-io-tasks"></a>공통적인 I/O 작업
-<xref:System.IO> 네임스페이스에는 파일, 디렉터리 및 스트림에 대해 읽기, 쓰기 등의 다양한 작업을 수행할 수 있게 해 주는 여러 클래스가 있습니다. 자세한 내용은 참조 [파일 및 스트림 I/o](../../../docs/standard/io/index.md)합니다.  
+<xref:System.IO> 네임스페이스에는 파일, 디렉터리 및 스트림에 대해 읽기, 쓰기 등의 다양한 작업을 수행할 수 있게 해 주는 여러 클래스가 있습니다. 자세한 내용은 [파일 및 스트림 I/O](../../../docs/standard/io/index.md)를 참조하세요.  
   
 ## <a name="common-file-tasks"></a>공통적인 파일 작업  
   

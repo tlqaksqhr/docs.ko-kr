@@ -14,15 +14,18 @@ helpviewer_keywords:
 - globalization [.NET Framework], best practices
 - international applications [.NET Framework], best practices
 ms.assetid: f08169c7-aad8-4ec3-9a21-9ebd3b89986c
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 8a50080fa4b84abe84fbb1a44f18e1fb680a07c7
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 1fbdbe2596f44a6efda35b8c3e3aace303d79364
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="best-practices-for-developing-world-ready-applications"></a>지역화 대비 응용 프로그램 개발을 위한 최선의 구현 방법
 이 단원에서는 지역화 대비 응용 프로그램을 개발할 때 따라야 할 최선의 구현 방법을 소개합니다.  
@@ -57,7 +60,7 @@ ms.lasthandoff: 11/21/2017
   
 9. 국제 데이터를 사용하여 국제 운영 체제 버전에서 응용 프로그램의 기능을 테스트합니다.  
   
-10. 문자열 비교 또는 대/소문자 변경 작업의 결과에 따라 보안을 결정하는 경우 응용 프로그램에서 문화권을 구분하지 않는 작업을 수행하게 합니다. 이러한 구현 방법을 사용하면 결과가 `CultureInfo.CurrentCulture` 값의 영향을 받지 않습니다. "문자열 비교를 사용 하 여의 현재 문화권" 섹션을 참조 [문자열 사용에 대 한 유용한](../../../docs/standard/base-types/best-practices-strings.md) 문화권 구분 문자열을 보여 주는 예제에 대 한 비교 일관 되지 않은 결과가 발생할 수 있습니다.  
+10. 문자열 비교 또는 대/소문자 변경 작업의 결과에 따라 보안을 결정하는 경우 응용 프로그램에서 문화권을 구분하지 않는 작업을 수행하게 합니다. 이러한 구현 방법을 사용하면 결과가 `CultureInfo.CurrentCulture` 값의 영향을 받지 않습니다. 문화권 구분 문자열 비교로 인해 어떻게 일관되지 않은 결과가 나타날 수 있는지에 대한 예제를 보려면 [문자열 사용에 대한 모범 사례](../../../docs/standard/base-types/best-practices-strings.md)의 “현재 문화권을 사용하는 문자열 비교” 섹션을 참조하세요.  
   
 ## <a name="localization-best-practices"></a>최상의 지역화 방법  
   
@@ -77,11 +80,11 @@ ms.lasthandoff: 11/21/2017
   
 8.  <xref:System.Resources.ResourceManager?displayProperty=nameWithType> 클래스를 사용하여 문화권에 따라 리소스를 검색합니다.  
   
-9. 사용 하 여 지역화할 수 수 있도록 Windows Forms 대화 상자를 만드는 Visual Studio를 사용 하 여 [Windows Forms 리소스 편집기 (Winres.exe)](../../../docs/framework/tools/winres-exe-windows-forms-resource-editor.md)합니다. Windows Forms 대화 상자는 직접 코딩하지 마십시오.  
+9. [Windows Forms 리소스 편집기(Winres.exe)](../../../docs/framework/tools/winres-exe-windows-forms-resource-editor.md)를 사용하여 지역화할 수 있도록 Visual Studio를 사용하여 Windows Forms 대화 상자를 만듭니다. Windows Forms 대화 상자는 직접 코딩하지 마십시오.  
   
 10. 전문적인 지역화(번역) 작업을 준비합니다.  
   
-11. 리소스 만들기 및 지역화에 대 한 전체 설명은 참조 하세요. [응용 프로그램의 리소스](../../../docs/framework/resources/index.md)합니다.  
+11. 리소스 만들기 및 지역화에 대한 자세한 설명을 보려면 [응용 프로그램의 리소스](../../../docs/framework/resources/index.md)를 참조하세요.  
   
 ## <a name="globalization-best-practices-for-aspnet-applications"></a>ASP.NET 응용 프로그램을 위한 최상의 전역화 방법  
   
@@ -99,7 +102,7 @@ ms.lasthandoff: 11/21/2017
   
 4.  ASP.NET 응용 프로그램의 다음 세 위치에서 requestEncoding, responseEncoding, fileEncoding, culture 및 uiCulture 특성의 값을 지정합니다.  
   
-    -   Web.config 파일의 전역화 섹션에서. 이 파일은 ASP.NET 응용 프로그램에 대해 외부 파일입니다. 자세한 내용은 참조 [ \<전역화 > 요소](http://msdn.microsoft.com/en-us/e2dffc8e-ebd2-439b-a2fd-e3ac5e620da7)합니다.  
+    -   Web.config 파일의 전역화 섹션에서. 이 파일은 ASP.NET 응용 프로그램에 대해 외부 파일입니다. 자세한 내용은 [\<globalization> 요소](http://msdn.microsoft.com/library/e2dffc8e-ebd2-439b-a2fd-e3ac5e620da7)를 참조하세요.  
   
     -   페이지 지시문에서. 응용 프로그램이 페이지에 있는 경우 파일이 이미 읽혀진 것입니다. 따라서 너무 늦었으므로 fileEncoding 및 requestEncoding을 지정할 수 없습니다. uiCulture, Culture 및 responseEncoding만 페이지 지시문에 지정할 수 있습니다.  
   

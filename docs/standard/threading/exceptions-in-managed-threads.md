@@ -14,15 +14,18 @@ helpviewer_keywords:
 - threading [.NET Framework],exceptions in managed threads
 - managed threading
 ms.assetid: 11294769-2e89-43cb-890e-ad4ad79cfbee
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: ebb5559d300bb3db34fe640e87eb8b9e67931561
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 4f68a7aebdb1625b149287d70fd91c2108a658b9
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="exceptions-in-managed-threads"></a>관리되는 스레드의 예외
 NET Framework 버전 2.0부터 공용 언어 런타임을 통해 스레드에 있는 대부분의 처리되지 않은 예외가 정상적으로 진행됩니다. 즉, 대부분의 경우에서 처리되지 않은 예외는 응용 프로그램을 종료시킵니다.  
@@ -32,9 +35,9 @@ NET Framework 버전 2.0부터 공용 언어 런타임을 통해 스레드에 �
   
  공용 언어 런타임은 프로그램 흐름을 제어하는 데 사용되는 처리되지 않은 예외에 백업을 제공합니다.  
   
--   A <xref:System.Threading.ThreadAbortException> 없으므로 스레드에서 throw <xref:System.Threading.Thread.Abort%2A> 호출 되었습니다.  
+-   <xref:System.Threading.Thread.Abort%2A>가 호출되었으므로 스레드에서 <xref:System.Threading.ThreadAbortException>이 throw됩니다.  
   
--   <xref:System.AppDomainUnloadedException> 스레드가 실행 중인 응용 프로그램 도메인이 언로드되고 있으므로 스레드에 throw 됩니다.  
+-   스레드가 실행 중인 응용 프로그램 도메인이 언로드되는 중이므로 스레드에서 <xref:System.AppDomainUnloadedException>이 throw됩니다.  
   
 -   공용 언어 런타임 또는 호스트 프로세스에서 내부 예외를 throw하여 스레드를 종료합니다.  
   
@@ -56,7 +59,7 @@ NET Framework 버전 2.0부터 공용 언어 런타임을 통해 스레드에 �
   
 -   스레드 풀 스레드에 처리되지 않은 예외가 없습니다. 작업이 처리하지 않는 예외를 throw하는 경우 런타임은 해당 예외의 스택 추적을 콘솔에 출력한 다음 해당 스레드를 스레드 풀에 반환합니다.  
   
--   사용 하 여 만든 스레드에서 처리 되지 않은 예외가 없었고가는 <xref:System.Threading.Thread.Start%2A> 의 메서드는 <xref:System.Threading.Thread> 클래스입니다. 해당 스레드에서 실행되는 코드가 처리하지 않는 예외를 throw하는 경우 런타임은 해당 예외의 스택 추적을 콘솔에 출력한 다음 해당 스레드를 종료합니다.  
+-   <xref:System.Threading.Thread> 클래스의 <xref:System.Threading.Thread.Start%2A> 메서드를 사용하여 만들어진 스레드에는 처리되지 않은 예외가 없습니다. 해당 스레드에서 실행되는 코드가 처리하지 않는 예외를 throw하는 경우 런타임은 해당 예외의 스택 추적을 콘솔에 출력한 다음 해당 스레드를 종료합니다.  
   
 -   종료자 스레드에 처리되지 않은 예외가 없습니다. 종료자가 처리하지 않는 예외를 throw하는 경우 런타임은 해당 예외의 스택 추적을 콘솔에 출력한 다음 해당 종료자 스레드가 종료자 실행을 다시 시작하도록 합니다.  
   
@@ -69,7 +72,7 @@ NET Framework 버전 2.0부터 공용 언어 런타임을 통해 스레드에 �
   
 -   코드를 재구성하여 신호를 받으면 스레드가 정상적으로 종료되도록 합니다.  
   
--   사용 된 <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> 메서드 스레드를 중단 합니다.  
+-   <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> 메서드를 사용하여 스레드를 중단합니다.  
   
 -   프로세스 종료가 진행될 수 있도록 스레드가 중단되어야 하는 경우 해당 스레드를 백그라운드 스레드로 만들어 프로세스가 종료되면 자동으로 종료되도록 합니다.  
   

@@ -1,12 +1,8 @@
 ---
 title: "데이터 흐름(작업 병렬 라이브러리)"
-ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,23 +11,24 @@ helpviewer_keywords:
 - Task Parallel Library, dataflows
 - TPL dataflow library
 ms.assetid: 643575d0-d26d-4c35-8de7-a9c403e97dd6
-caps.latest.revision: "22"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 73933c5f171881b5b3a2479aabdb26d1abd58cfc
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: f91100303cb0970ed430eebe2a377a487017b47d
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="dataflow-task-parallel-library"></a>데이터 흐름(작업 병렬 라이브러리)
 <a name="top"></a>TPL(작업 병렬 라이브러리)은 동시성 사용 응용 프로그램의 견고성을 높이는 데 도움이 되는 데이터 흐름 구성 요소를 제공합니다. 이러한 데이터 흐름 구성 요소를 통칭하여 *TPL 데이터 흐름 라이브러리*라고 합니다. 이 데이터 흐름 모델은 정교하지 않은 데이터 흐름 및 파이프라인 작업을 위해 in-process 메시지 전달을 제공하여 행위자 기반 프로그래밍을 촉진합니다. 데이터 흐름 구성 요소는 TPL의 형식 및 예약 인프라를 바탕으로 빌드되며 비동기 프로그래밍에 대한 C#, [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] 및 F# 언어 지원과 통합됩니다. 이러한 데이터 흐름 구성 요소는 비동기적으로 서로 통신해야 하는 여러 작업이 있는 경우나 데이터를 사용할 수 있게 될 때 해당 데이터를 처리하려는 경우에 유용합니다. 예를 들어 웹 카메라에서 이미지 데이터를 처리하는 응용 프로그램의 경우, 데이터 흐름 모델을 사용함으로써 응용 프로그램은 이미지 프레임을 사용할 수 있게 될 때 해당 이미지 프레임을 처리할 수 있습니다. 응용 프로그램이 명도를 보정하거나 적목 현상을 줄이는 등의 작업을 수행하여 이미지 프레임을 개선하는 경우 데이터 흐름 구성 요소의 *파이프라인*을 만들 수 있습니다. 파이프라인의 각 단계에서는 TPL이 제공하는 기능과 같은 좀더 정교하지 않은 병렬 처리 기능을 사용하여 이미지를 변환할 수도 있습니다.  
   
  이 문서에서는 TPL 데이터 흐름 라이브러리에 대한 개요를 제공합니다. 여기에서는 프로그래밍 모델, 미리 정의된 데이터 흐름 블록 형식 및 응용 프로그램의 특정 요구 사항을 충족하도록 데이터 흐름 블록을 구성하는 방법을 설명합니다.  
-  
-> [!TIP]
->  TPL 데이터 흐름 라이브러리(<xref:System.Threading.Tasks.Dataflow?displayProperty=nameWithType> 네임스페이스)는 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]와 함께 배포되지 않습니다. 설치 하는 <xref:System.Threading.Tasks.Dataflow> 네임 스페이스에서 프로젝트를 열고 [!INCLUDE[vs_dev11_long](../../../includes/vs-dev11-long-md.md)], 선택 **NuGet 패키지 관리** 프로젝트 메뉴에 대 한 온라인 검색에서는 `Microsoft.Tpl.Dataflow` 패키지 합니다.  
+
+[!INCLUDE [tpl-install-instructions](../../../includes/tpl-install-instructions.md)]
   
  이 문서는 다음 섹션으로 구성됩니다.  
   
@@ -64,21 +61,21 @@ ms.lasthandoff: 10/18/2017
 >  미리 정의된 각 소스 데이터 흐름 블록 형식은 메시지가 수신된 순서대로 전파되도록 보장하기 때문에 각 메시지를 소스 블록에서 읽어온 후에야 소스 블록이 다음 메시지를 처리할 수 있습니다. 따라서 필터링을 사용하여 여러 대상을 소스에 연결하는 경우 적어도 하나의 대상 블록이 각 메시지를 받는지 확인해야 합니다. 이렇게 하지 않으면 응용 프로그램에서 교착 상태가 발생할 수도 있습니다.  
   
 ### <a name="message-passing"></a>메시지 전달  
- 데이터 흐름 프로그래밍 모델은 프로그램의 개별 구성 요소가 메시지를 전달하여 서로 통신하는 *메시지 전달* 개념과 관련됩니다. 호출 하는 한 가지 방법은 응용 프로그램 구성 요소 간에 메시지를 전파 하는 것은 <xref:System.Threading.Tasks.Dataflow.DataflowBlock.Post%2A> 및 <xref:System.Threading.Tasks.Dataflow.DataflowBlock.SendAsync%2A?displayProperty=nameWithType> 대상 데이터 흐름 블록 게시에 메시지를 보낼 메서드 (<xref:System.Threading.Tasks.Dataflow.DataflowBlock.Post%2A> , 역할 <xref:System.Threading.Tasks.Dataflow.DataflowBlock.SendAsync%2A> 비동기식으로 역할)와 <xref:System.Threading.Tasks.Dataflow.DataflowBlock.Receive%2A>, <xref:System.Threading.Tasks.Dataflow.DataflowBlock.ReceiveAsync%2A>, 및 <xref:System.Threading.Tasks.Dataflow.DataflowBlock.TryReceive%2A> 소스 블록에서 메시지를 수신 하는 메서드. 입력 데이터를 헤드 노드(대상 블록)에 보내고 출력 데이터를 파이프라인의 터미널 노드나 네트워크의 터미널 노드(하나 이상의 소스 블록)에서 받는 방법으로 이러한 메서드를 데이터 흐름 파이프라인 또는 네트워크와 결합할 수 있습니다. 또한 <xref:System.Threading.Tasks.Dataflow.DataflowBlock.Choose%2A> 메서드를 사용하여 제공된 소스 중에서 사용 가능한 데이터가 있는 첫 번째 소스에서 읽고 해당 데이터에 대한 작업을 수행할 수도 있습니다.  
+ 데이터 흐름 프로그래밍 모델은 프로그램의 개별 구성 요소가 메시지를 전달하여 서로 통신하는 *메시지 전달* 개념과 관련됩니다. 응용 프로그램 구성 요소 간에 메시지를 전파하는 한 가지 방법은 <xref:System.Threading.Tasks.Dataflow.DataflowBlock.Post%2A> 및 <xref:System.Threading.Tasks.Dataflow.DataflowBlock.SendAsync%2A?displayProperty=nameWithType> 메서드를 호출하여 대상 데이터 흐름 블록 게시에 메시지를 보내고(<xref:System.Threading.Tasks.Dataflow.DataflowBlock.Post%2A>는 비동기적으로 동작함, <xref:System.Threading.Tasks.Dataflow.DataflowBlock.SendAsync%2A>는 비동기적으로 동작함), <xref:System.Threading.Tasks.Dataflow.DataflowBlock.Receive%2A>, <xref:System.Threading.Tasks.Dataflow.DataflowBlock.ReceiveAsync%2A> 및 <xref:System.Threading.Tasks.Dataflow.DataflowBlock.TryReceive%2A> 메서드를 호출하여 소스 블록에서 메시지를 받는 것입니다. 입력 데이터를 헤드 노드(대상 블록)에 보내고 출력 데이터를 파이프라인의 터미널 노드나 네트워크의 터미널 노드(하나 이상의 소스 블록)에서 받는 방법으로 이러한 메서드를 데이터 흐름 파이프라인 또는 네트워크와 결합할 수 있습니다. 또한 <xref:System.Threading.Tasks.Dataflow.DataflowBlock.Choose%2A> 메서드를 사용하여 제공된 소스 중에서 사용 가능한 데이터가 있는 첫 번째 소스에서 읽고 해당 데이터에 대한 작업을 수행할 수도 있습니다.  
   
- 소스 블록 호출 하 여 대상 블록에 데이터를 제공 된 <xref:System.Threading.Tasks.Dataflow.ITargetBlock%601.OfferMessage%2A?displayProperty=nameWithType> 메서드. 대상 블록은 세 가지 방법 중 하나로 제공된 메시지에 응답합니다. 즉, 메시지를 수락하거나, 메시지를 거부하거나, 메시지를 연기할 수 있습니다. 대상이 메시지를 수락하면 <xref:System.Threading.Tasks.Dataflow.ITargetBlock%601.OfferMessage%2A> 메서드가 <xref:System.Threading.Tasks.Dataflow.DataflowMessageStatus.Accepted>를 반환하고, 대상이 메시지를 거부하면 <xref:System.Threading.Tasks.Dataflow.ITargetBlock%601.OfferMessage%2A> 메서드가 <xref:System.Threading.Tasks.Dataflow.DataflowMessageStatus.Declined>를 반환합니다. 대상이 소스에서 더 이상 메시지를 받지 않도록 요구하는 경우에는 <xref:System.Threading.Tasks.Dataflow.ITargetBlock%601.OfferMessage%2A>가 <xref:System.Threading.Tasks.Dataflow.DataflowMessageStatus.DecliningPermanently>를 반환합니다. 미리 정의된 소스 블록 형식은 이러한 반환 값이 수신된 후 연결된 대상에 메시지를 보내지 않으며 해당 대상의 연결을 자동으로 해제합니다.  
+ 소스 블록은 <xref:System.Threading.Tasks.Dataflow.ITargetBlock%601.OfferMessage%2A?displayProperty=nameWithType> 메서드를 호출하여 대상 블록에 데이터를 제공합니다. 대상 블록은 세 가지 방법 중 하나로 제공된 메시지에 응답합니다. 즉, 메시지를 수락하거나, 메시지를 거부하거나, 메시지를 연기할 수 있습니다. 대상이 메시지를 수락하면 <xref:System.Threading.Tasks.Dataflow.ITargetBlock%601.OfferMessage%2A> 메서드가 <xref:System.Threading.Tasks.Dataflow.DataflowMessageStatus.Accepted>를 반환하고, 대상이 메시지를 거부하면 <xref:System.Threading.Tasks.Dataflow.ITargetBlock%601.OfferMessage%2A> 메서드가 <xref:System.Threading.Tasks.Dataflow.DataflowMessageStatus.Declined>를 반환합니다. 대상이 소스에서 더 이상 메시지를 받지 않도록 요구하는 경우에는 <xref:System.Threading.Tasks.Dataflow.ITargetBlock%601.OfferMessage%2A>가 <xref:System.Threading.Tasks.Dataflow.DataflowMessageStatus.DecliningPermanently>를 반환합니다. 미리 정의된 소스 블록 형식은 이러한 반환 값이 수신된 후 연결된 대상에 메시지를 보내지 않으며 해당 대상의 연결을 자동으로 해제합니다.  
   
- 대상 블록이 나중에 사용할 수 있도록 메시지를 연기하면 <xref:System.Threading.Tasks.Dataflow.ITargetBlock%601.OfferMessage%2A> 메서드가 <xref:System.Threading.Tasks.Dataflow.DataflowMessageStatus.Postponed>를 반환합니다. 메시지를 연기 하는 대상 블록에 대 한 후속 호출 수는 <xref:System.Threading.Tasks.Dataflow.ISourceBlock%601.ReserveMessage%2A?displayProperty=nameWithType> 메서드에 제공 된 메시지를 예약 하려고 합니다. 이 시점에서 해당 메시지는 여전히 사용 가능하여 대상 블록이 사용할 수 있거나, 다른 대상이 사용하고 있는 상태입니다. 대상 블록은 나중에 메시지가 필요 하거나 더 이상 필요 없는 메시지, 호출 된 <xref:System.Threading.Tasks.Dataflow.ISourceBlock%601.ConsumeMessage%2A?displayProperty=nameWithType> 또는 <xref:System.Threading.Tasks.Dataflow.ISourceBlock%601.ReleaseReservation%2A> 메서드를 각각. 메시지 예약은 non-greedy 모드에서 작동하는 데이터 흐름 블록 형식에서 주로 사용됩니다. non-greedy 모드는 이 문서의 뒷부분에 설명되어 있습니다. 연기된 메시지를 예약하는 대신 대상 블록은 <xref:System.Threading.Tasks.Dataflow.ISourceBlock%601.ConsumeMessage%2A?displayProperty=nameWithType> 메서드를 사용하여 연기된 메시지를 직접 사용하려고 시도할 수도 있습니다.  
+ 대상 블록이 나중에 사용할 수 있도록 메시지를 연기하면 <xref:System.Threading.Tasks.Dataflow.ITargetBlock%601.OfferMessage%2A> 메서드가 <xref:System.Threading.Tasks.Dataflow.DataflowMessageStatus.Postponed>를 반환합니다. 메시지를 연기하는 대상 블록은 나중에 <xref:System.Threading.Tasks.Dataflow.ISourceBlock%601.ReserveMessage%2A?displayProperty=nameWithType> 메서드를 호출하여 제공된 메시지를 예약하려고 시도할 수 있습니다. 이 시점에서 해당 메시지는 여전히 사용 가능하여 대상 블록이 사용할 수 있거나, 다른 대상이 사용하고 있는 상태입니다. 대상 블록은 나중에 메시지가 필요하거나 더 이상 필요하지 않은 경우 각각 <xref:System.Threading.Tasks.Dataflow.ISourceBlock%601.ConsumeMessage%2A?displayProperty=nameWithType> 또는 <xref:System.Threading.Tasks.Dataflow.ISourceBlock%601.ReleaseReservation%2A> 메서드를 호출합니다. 메시지 예약은 non-greedy 모드에서 작동하는 데이터 흐름 블록 형식에서 주로 사용됩니다. non-greedy 모드는 이 문서의 뒷부분에 설명되어 있습니다. 연기된 메시지를 예약하는 대신 대상 블록은 <xref:System.Threading.Tasks.Dataflow.ISourceBlock%601.ConsumeMessage%2A?displayProperty=nameWithType> 메서드를 사용하여 연기된 메시지를 직접 사용하려고 시도할 수도 있습니다.  
   
 ### <a name="dataflow-block-completion"></a>데이터 흐름 블록 완료  
- 데이터 흐름 블록은 *완료* 개념도 지원합니다. 완료된 상태에 있는 데이터 흐름 블록은 더 이상 작업을 수행하지 않습니다. 각 데이터 흐름 블록에 연결 된 <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> 이라고 하는 개체는 *완료 작업*, 블록의 완료 상태를 나타내는입니다. 완료 작업을 사용하여 <xref:System.Threading.Tasks.Task> 개체가 완료될 때까지 기다릴 수 있기 때문에 데이터 흐름 네트워크의 터미널 노드 중 하나 이상이 완료될 때까지 기다릴 수 있습니다. <xref:System.Threading.Tasks.Dataflow.IDataflowBlock> 인터페이스는 데이터 흐름 블록에 완료 요청을 알리는 <xref:System.Threading.Tasks.Dataflow.IDataflowBlock.Complete%2A> 메서드와 데이터 흐름 블록에 대한 완료 작업을 반환하는 <xref:System.Threading.Tasks.Dataflow.IDataflowBlock.Completion%2A> 속성을 정의합니다. <xref:System.Threading.Tasks.Dataflow.ISourceBlock%601> 및 <xref:System.Threading.Tasks.Dataflow.ITargetBlock%601> 모두 <xref:System.Threading.Tasks.Dataflow.IDataflowBlock> 인터페이스를 상속합니다.  
+ 데이터 흐름 블록은 *완료* 개념도 지원합니다. 완료된 상태에 있는 데이터 흐름 블록은 더 이상 작업을 수행하지 않습니다. 각 데이터 흐름 블록에는 블록의 완료 상태를 나타내는 *완료 작업*이라고 하는 <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> 개체가 연결되어 있습니다. 완료 작업을 사용하여 <xref:System.Threading.Tasks.Task> 개체가 완료될 때까지 기다릴 수 있기 때문에 데이터 흐름 네트워크의 터미널 노드 중 하나 이상이 완료될 때까지 기다릴 수 있습니다. <xref:System.Threading.Tasks.Dataflow.IDataflowBlock> 인터페이스는 데이터 흐름 블록에 완료 요청을 알리는 <xref:System.Threading.Tasks.Dataflow.IDataflowBlock.Complete%2A> 메서드와 데이터 흐름 블록에 대한 완료 작업을 반환하는 <xref:System.Threading.Tasks.Dataflow.IDataflowBlock.Completion%2A> 속성을 정의합니다. <xref:System.Threading.Tasks.Dataflow.ISourceBlock%601> 및 <xref:System.Threading.Tasks.Dataflow.ITargetBlock%601> 모두 <xref:System.Threading.Tasks.Dataflow.IDataflowBlock> 인터페이스를 상속합니다.  
   
- 데이터 흐름 블록이 오류 없이 완료되었는지, 하나 이상의 오류가 발생했는지, 아니면 취소되었는지를 확인하는 두 가지 방법이 있습니다. 첫 번째 방법은 호출 하는 <xref:System.Threading.Tasks.Task.Wait%2A?displayProperty=nameWithType> 에서 완료 작업에 대해 메서드는 `try` - `catch` 블록 (`Try` - `Catch` Visual basic에서). 다음 예제에서는 입력 값이 0보다 작은 경우 <xref:System.Threading.Tasks.Dataflow.ActionBlock%601>을 throw하는 <xref:System.ArgumentOutOfRangeException> 개체를 만듭니다. 이 예제에서 완료 작업에 대해 <xref:System.AggregateException>를 호출할 때 <xref:System.Threading.Tasks.Task.Wait%2A>이 throw됩니다. <xref:System.ArgumentOutOfRangeException>은 <xref:System.AggregateException.InnerExceptions%2A> 개체의 <xref:System.AggregateException> 속성을 통해 액세스됩니다.  
+ 데이터 흐름 블록이 오류 없이 완료되었는지, 하나 이상의 오류가 발생했는지, 아니면 취소되었는지를 확인하는 두 가지 방법이 있습니다. 첫 번째 방법은 `try`-`catch`(Visual Basic에서는 `Try`-`Catch`) 블록에서 완료 작업에 대해 <xref:System.Threading.Tasks.Task.Wait%2A?displayProperty=nameWithType> 메서드를 호출하는 것입니다. 다음 예제에서는 입력 값이 0보다 작은 경우 <xref:System.Threading.Tasks.Dataflow.ActionBlock%601>을 throw하는 <xref:System.ArgumentOutOfRangeException> 개체를 만듭니다. 이 예제에서 완료 작업에 대해 <xref:System.AggregateException>를 호출할 때 <xref:System.Threading.Tasks.Task.Wait%2A>이 throw됩니다. <xref:System.ArgumentOutOfRangeException>은 <xref:System.AggregateException.InnerExceptions%2A> 개체의 <xref:System.AggregateException> 속성을 통해 액세스됩니다.  
   
  [!code-csharp[TPLDataflow_Overview#10](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_overview/cs/program.cs#10)]
  [!code-vb[TPLDataflow_Overview#10](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpldataflow_overview/vb/program.vb#10)]  
   
- 이 예제에서는 예외가 예외 데이터 흐름 블록의 대리자에서 처리되지 않는 경우를 보여 줍니다. 이러한 블록의 본문에서 예외를 처리하는 것이 좋습니다. 그러나 이렇게 할 수 없는 경우 블록은 메시지가 취소된 것처럼 동작하고 들어오는 메시지를 처리하지 않습니다.  
+ 이 예제에서는 예외가 예외 데이터 흐름 블록의 대리자에서 처리되지 않는 경우를 보여줍니다. 이러한 블록의 본문에서 예외를 처리하는 것이 좋습니다. 그러나 이렇게 할 수 없는 경우 블록은 메시지가 취소된 것처럼 동작하고 들어오는 메시지를 처리하지 않습니다.  
   
  데이터 흐름 블록이 명시적으로 취소되는 경우 <xref:System.AggregateException> 개체는 <xref:System.OperationCanceledException> 속성에 <xref:System.AggregateException.InnerExceptions%2A>을 포함합니다. 데이터 흐름 취소에 대한 자세한 내용은 이 문서 뒷부분의 취소 사용을 참조하십시오.  
   
@@ -87,7 +84,7 @@ ms.lasthandoff: 10/18/2017
  [!code-csharp[TPLDataflow_Overview#11](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_overview/cs/program.cs#11)]
  [!code-vb[TPLDataflow_Overview#11](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpldataflow_overview/vb/program.vb#11)]  
   
- 연속 작업의 본문에서 <xref:System.Threading.Tasks.Task.IsCanceled%2A>와 같은 속성을 사용하여 데이터 흐름 블록의 완료 상태에 대한 추가 정보를 확인할 수도 있습니다. 연속 작업 및 연속 작업이 취소 및 오류 처리와 어떻게 관련되는지에 대한 자세한 내용은 [연속 작업을 사용하여 작업 연결](../../../docs/standard/parallel-programming/chaining-tasks-by-using-continuation-tasks.md), [작업 취소](../../../docs/standard/parallel-programming/task-cancellation.md), [예외 처리](../../../docs/standard/parallel-programming/exception-handling-task-parallel-library.md) 및 [NIB: 방법: 작업에서 throw된 예외 처리](http://msdn.microsoft.com/en-us/d6c47ec8-9de9-4880-beb3-ff19ae51565d)를 참조하세요.  
+ 연속 작업의 본문에서 <xref:System.Threading.Tasks.Task.IsCanceled%2A>와 같은 속성을 사용하여 데이터 흐름 블록의 완료 상태에 대한 추가 정보를 확인할 수도 있습니다. 연속 작업 및 연속 작업이 취소 및 오류 처리와 어떻게 관련되는지에 대한 자세한 내용은 [연속 작업을 사용하여 작업 연결](../../../docs/standard/parallel-programming/chaining-tasks-by-using-continuation-tasks.md), [작업 취소](../../../docs/standard/parallel-programming/task-cancellation.md), [예외 처리](../../../docs/standard/parallel-programming/exception-handling-task-parallel-library.md) 및 [NIB: 방법: 작업에서 throw된 예외 처리](http://msdn.microsoft.com/library/d6c47ec8-9de9-4880-beb3-ff19ae51565d)를 참조하세요.  
   
  [[맨 위로 이동](#top)]  
   
@@ -106,7 +103,7 @@ ms.lasthandoff: 10/18/2017
  [!code-csharp[TPLDataflow_Overview#1](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_overview/cs/program.cs#1)]
  [!code-vb[TPLDataflow_Overview#1](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpldataflow_overview/vb/program.vb#1)]  
   
- 메시지를 읽고 메시지를 쓰는 방법을 보여 주는 전체 예제는 <xref:System.Threading.Tasks.Dataflow.BufferBlock%601> 개체, 참조 [하는 방법: 메시지를 작성 하 고 데이터 흐름 블록에서 메시지 읽기](../../../docs/standard/parallel-programming/how-to-write-messages-to-and-read-messages-from-a-dataflow-block.md)합니다.  
+ <xref:System.Threading.Tasks.Dataflow.BufferBlock%601> 개체에 메시지를 쓰거나 이 개체에서 메시지를 읽는 방법을 보여주는 전체 예제는 [방법: 데이터 흐름 블록에 메시지 쓰기 및 데이터 흐름 블록에서 메시지 읽기](../../../docs/standard/parallel-programming/how-to-write-messages-to-and-read-messages-from-a-dataflow-block.md)를 참조하세요.  
   
 #### <a name="broadcastblockt"></a>BroadcastBlock(T)  
  <xref:System.Threading.Tasks.Dataflow.BroadcastBlock%601> 클래스는 여러 메시지를 다른 구성 요소에 전달해야 하지만 해당 구성 요소에 최신 값만 필요한 경우에 유용합니다. 이 클래스는 여러 구성 요소에 메시지를 브로드캐스트하려고 할 때도 유용합니다.  
@@ -116,17 +113,17 @@ ms.lasthandoff: 10/18/2017
  [!code-csharp[TPLDataflow_Overview#2](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_overview/cs/program.cs#2)]
  [!code-vb[TPLDataflow_Overview#2](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpldataflow_overview/vb/program.vb#2)]  
   
- 사용 하는 방법을 보여 주는 전체 예제는 <xref:System.Threading.Tasks.Dataflow.BroadcastBlock%601> 브로드캐스트를 여러 대상 블록에 메시지를 참조 하세요. [하는 방법: 데이터 흐름 블록의 작업 스케줄러 지정](../../../docs/standard/parallel-programming/how-to-specify-a-task-scheduler-in-a-dataflow-block.md)합니다.  
+ <xref:System.Threading.Tasks.Dataflow.BroadcastBlock%601>을 사용하여 메시지를 여러 대상 블록에 브로드캐스트하는 방법을 보여주는 전체 예제는 [방법: 데이터 흐름 블록의 작업 스케줄러 지정](../../../docs/standard/parallel-programming/how-to-specify-a-task-scheduler-in-a-dataflow-block.md)을 참조하세요.  
   
 #### <a name="writeonceblockt"></a>WriteOnceBlock(T)  
- <xref:System.Threading.Tasks.Dataflow.WriteOnceBlock%601> 클래스는 <xref:System.Threading.Tasks.Dataflow.BroadcastBlock%601> 개체에 한 번만 쓸 수 있는 점을 제외하고 <xref:System.Threading.Tasks.Dataflow.WriteOnceBlock%601> 클래스와 유사합니다. 생각할 수 있습니다 <xref:System.Threading.Tasks.Dataflow.WriteOnceBlock%601> C# 유사한 것으로 [readonly](~/docs/csharp/language-reference/keywords/readonly.md) ([ReadOnly](~/docs/visual-basic/language-reference/modifiers/readonly.md) 에 [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]) 점을 제외 하 고 키워드는 <xref:System.Threading.Tasks.Dataflow.WriteOnceBlock%601> 개체가 될 값을 받은 후에 변경할 수 없는 대신에 생성 합니다. <xref:System.Threading.Tasks.Dataflow.BroadcastBlock%601> 클래스처럼 대상이 <xref:System.Threading.Tasks.Dataflow.WriteOnceBlock%601> 개체에서 메시지를 수신할 때 해당 메시지는 해당 개체에서 제거되지 않습니다. 따라서 여러 대상이 하나의 메시지 복사본을 수신합니다. <xref:System.Threading.Tasks.Dataflow.WriteOnceBlock%601> 클래스는 여러 메시지 중 첫 메시지만 전파하려는 경우에 유용합니다.  
+ <xref:System.Threading.Tasks.Dataflow.WriteOnceBlock%601> 클래스는 <xref:System.Threading.Tasks.Dataflow.BroadcastBlock%601> 개체에 한 번만 쓸 수 있는 점을 제외하고 <xref:System.Threading.Tasks.Dataflow.WriteOnceBlock%601> 클래스와 유사합니다. <xref:System.Threading.Tasks.Dataflow.WriteOnceBlock%601> 개체가 생성 시가 아니라 값을 받은 후에 변경할 수 없게 되는 점을 제외하면 <xref:System.Threading.Tasks.Dataflow.WriteOnceBlock%601>을 C# [readonly](~/docs/csharp/language-reference/keywords/readonly.md)([!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]에서는 [ReadOnly](~/docs/visual-basic/language-reference/modifiers/readonly.md)) 키워드와 유사한 것으로 간주할 수 있습니다. <xref:System.Threading.Tasks.Dataflow.BroadcastBlock%601> 클래스처럼 대상이 <xref:System.Threading.Tasks.Dataflow.WriteOnceBlock%601> 개체에서 메시지를 수신할 때 해당 메시지는 해당 개체에서 제거되지 않습니다. 따라서 여러 대상이 하나의 메시지 복사본을 수신합니다. <xref:System.Threading.Tasks.Dataflow.WriteOnceBlock%601> 클래스는 여러 메시지 중 첫 메시지만 전파하려는 경우에 유용합니다.  
   
  다음 기본 예제에서는 여러 <xref:System.String> 값을 <xref:System.Threading.Tasks.Dataflow.WriteOnceBlock%601> 개체에 게시한 다음 이 개체에서 해당 값을 다시 읽습니다. <xref:System.Threading.Tasks.Dataflow.WriteOnceBlock%601> 개체에 한 번만 쓸 수 있기 때문에 <xref:System.Threading.Tasks.Dataflow.WriteOnceBlock%601> 개체는 메시지를 받은 후 이후 메시지를 삭제합니다.  
   
  [!code-csharp[TPLDataflow_Overview#3](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_overview/cs/program.cs#3)]
  [!code-vb[TPLDataflow_Overview#3](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpldataflow_overview/vb/program.vb#3)]  
   
- 사용 하는 방법을 보여 주는 전체 예제는 <xref:System.Threading.Tasks.Dataflow.WriteOnceBlock%601> 완료 되는 첫 번째 작업의 값을 받으려면 참조 [하는 방법: 데이터 흐름 블록 링크 끊기](../../../docs/standard/parallel-programming/how-to-unlink-dataflow-blocks.md)합니다.  
+ <xref:System.Threading.Tasks.Dataflow.WriteOnceBlock%601>을 사용하여 완료되는 첫 번째 작업의 값을 받는 방법을 보여주는 전체 예제는 [방법: 데이터 흐름 블록 링크 끊기](../../../docs/standard/parallel-programming/how-to-unlink-dataflow-blocks.md)를 참조하세요.  
   
 ### <a name="execution-blocks"></a>실행 블록  
  실행 블록은 수신된 데이터의 각 조각에 대해 사용자가 제공한 대리자를 호출합니다. TPL 데이터 흐름 라이브러리는 세 가지 실행 블록 형식인 <xref:System.Threading.Tasks.Dataflow.ActionBlock%601>, <xref:System.Threading.Tasks.Dataflow.TransformBlock%602?displayProperty=nameWithType> 및 <xref:System.Threading.Tasks.Dataflow.TransformManyBlock%602?displayProperty=nameWithType>을 제공합니다.  
@@ -139,7 +136,7 @@ ms.lasthandoff: 10/18/2017
  [!code-csharp[TPLDataflow_Overview#4](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_overview/cs/program.cs#4)]
  [!code-vb[TPLDataflow_Overview#4](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpldataflow_overview/vb/program.vb#4)]  
   
- 와 함께 대리자를 사용 하는 방법을 보여 주는 전체 예제는 <xref:System.Threading.Tasks.Dataflow.ActionBlock%601> 클래스를 참조 하십시오 [하는 방법: 수행 작업 때는 데이터 흐름 블록에서 데이터를 받을](../../../docs/standard/parallel-programming/how-to-perform-action-when-a-dataflow-block-receives-data.md)합니다.  
+ <xref:System.Threading.Tasks.Dataflow.ActionBlock%601> 클래스와 함께 대리자를 사용하는 방법을 보여주는 전체 예제는 [방법: 데이터 흐름 블록에서 데이터를 받을 경우 작업 수행](../../../docs/standard/parallel-programming/how-to-perform-action-when-a-dataflow-block-receives-data.md)을 참조하세요.  
   
 #### <a name="transformblocktinput-toutput"></a>TransformBlock(TInput, TOutput)  
  <xref:System.Threading.Tasks.Dataflow.TransformBlock%602> 클래스는 소스와 대상 역할을 모두 수행하는 점을 제외하고 <xref:System.Threading.Tasks.Dataflow.ActionBlock%601> 클래스와 유사합니다. <xref:System.Threading.Tasks.Dataflow.TransformBlock%602> 개체에 전달하는 대리자는 `TOutput` 형식의 값을 반환합니다. <xref:System.Threading.Tasks.Dataflow.TransformBlock%602> 개체에 제공하는 대리자는 `System.Func<TInput, TOutput>` 형식이나 `System.Func<TInput, Task>` 형식일 수 있습니다. <xref:System.Threading.Tasks.Dataflow.TransformBlock%602>와 함께 `System.Func\<TInput, TOutput>` 개체를 사용하는 경우 각 입력 요소의 처리는 대리자가 반환될 때 완료된 것으로 간주됩니다. <xref:System.Threading.Tasks.Dataflow.TransformBlock%602>와 함께 사용된 `System.Func<TInput, Task<TOutput>>` 개체를 사용하는 경우 각 입력 요소의 처리는 반환된 <xref:System.Threading.Tasks.Task> 개체가 완료되는 경우에만 완료된 것으로 간주됩니다. <xref:System.Threading.Tasks.Dataflow.ActionBlock%601>과 마찬가지로, 이 두 가지 메커니즘을 사용함으로써 각 입력 요소의 동기적 처리와 비동기적 처리 모두에 <xref:System.Threading.Tasks.Dataflow.TransformBlock%602>을 사용할 수 있습니다.  
@@ -149,7 +146,7 @@ ms.lasthandoff: 10/18/2017
  [!code-csharp[TPLDataflow_Overview#5](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_overview/cs/program.cs#5)]
  [!code-vb[TPLDataflow_Overview#5](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpldataflow_overview/vb/program.vb#5)]  
   
- 사용 하는 전체 예제 <xref:System.Threading.Tasks.Dataflow.TransformBlock%602> Windows Forms 응용 프로그램에서 이미지 처리를 수행 하는 데이터 흐름 블록의 네트워크에서 참조 [연습: Windows Forms 응용 프로그램에서 사용 하 여 데이터 흐름](../../../docs/standard/parallel-programming/walkthrough-using-dataflow-in-a-windows-forms-application.md)합니다.  
+ Windows Forms 응용 프로그램에서 이미지 처리를 수행하는 데이터 흐름 네트워크에서 <xref:System.Threading.Tasks.Dataflow.TransformBlock%602>을 사용하는 전체 예제는 [연습: Windows Forms 응용 프로그램에서 데이터 흐름 사용](../../../docs/standard/parallel-programming/walkthrough-using-dataflow-in-a-windows-forms-application.md)을 참조하세요.  
   
 #### <a name="transformmanyblocktinput-toutput"></a>TransformManyBlock(TInput, TOutput)  
  <xref:System.Threading.Tasks.Dataflow.TransformManyBlock%602> 클래스는 <xref:System.Threading.Tasks.Dataflow.TransformBlock%602>이 각 입력 값에 대해 하나의 출력 값이 아니라 각 입력 값에 대해 0개 이상의 출력 값을 생성하는 점을 제외하고 <xref:System.Threading.Tasks.Dataflow.TransformManyBlock%602> 클래스와 유사합니다. <xref:System.Threading.Tasks.Dataflow.TransformManyBlock%602> 개체에 제공하는 대리자는 `System.Func<TInput, IEnumerable<TOutput>>` 또는 `type System.Func<TInput, Task<IEnumerable<TOutput>>>` 형식일 수 있습니다. <xref:System.Threading.Tasks.Dataflow.TransformManyBlock%602>와 함께 `System.Func<TInput, IEnumerable<TOutput>>` 개체를 사용하는 경우 각 입력 요소의 처리는 대리자가 반환될 때 완료된 것으로 간주됩니다. <xref:System.Threading.Tasks.Dataflow.TransformManyBlock%602>와 함께 `System.Func<TInput, Task<IEnumerable<TOutput>>>` 개체를 사용하는 경우 각 입력 요소의 처리는 반환된 `System.Threading.Tasks.Task<IEnumerable<TOutput>>` 개체가 완료되는 경우에만 완료된 것으로 간주됩니다.  
@@ -159,7 +156,7 @@ ms.lasthandoff: 10/18/2017
  [!code-csharp[TPLDataflow_Overview#6](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_overview/cs/program.cs#6)]
  [!code-vb[TPLDataflow_Overview#6](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpldataflow_overview/vb/program.vb#6)]  
   
- 사용 하는 전체 예제를 보려면 <xref:System.Threading.Tasks.Dataflow.TransformManyBlock%602> 데이터 흐름 파이프라인의에서 각 입력에 대 한 여러 독립적 출력을 생성 하려면 참조 [연습: 데이터 흐름 파이프라인 만들기](../../../docs/standard/parallel-programming/walkthrough-creating-a-dataflow-pipeline.md)합니다.  
+ <xref:System.Threading.Tasks.Dataflow.TransformManyBlock%602>을 사용하여 데이터 흐름 파이프라인의 각 입력에 대한 여러 독립적 출력을 생성하는 전체 예제는 [연습: 데이터 흐름 파이프라인 만들기](../../../docs/standard/parallel-programming/walkthrough-creating-a-dataflow-pipeline.md)를 참조하세요.  
   
 #### <a name="degree-of-parallelism"></a>병렬 처리 수준  
  모든 <xref:System.Threading.Tasks.Dataflow.ActionBlock%601>, <xref:System.Threading.Tasks.Dataflow.TransformBlock%602> 및 <xref:System.Threading.Tasks.Dataflow.TransformManyBlock%602> 개체는 블록이 입력 메시지를 처리할 준비가 될 때까지 해당 메시지를 버퍼링합니다. 기본적으로 이러한 클래스 받은 순서대로 한 번에 하나씩 메시지를 처리합니다. 또한 <xref:System.Threading.Tasks.Dataflow.ActionBlock%601>, <xref:System.Threading.Tasks.Dataflow.TransformBlock%602> 및 <xref:System.Threading.Tasks.Dataflow.TransformManyBlock%602> 개체가 동시에 여러 메시지를 처리할 수 있도록 하기 위해 병렬 처리 수준을 지정할 수도 있습니다. 동시 실행에 대한 자세한 내용은 이 문서 뒷부분의 병렬 처리 수준 지정 단원을 참조하십시오. 실행 데이터 흐름 블록이 한 번에 두 개 이상의 메시지를 처리할 수 있도록 병렬 처리 수준을 설정하는 예제는 [방법: 데이터 흐름 블록의 병렬 처리 수준 지정](../../../docs/standard/parallel-programming/how-to-specify-the-degree-of-parallelism-in-a-dataflow-block.md)을 참조하세요.  
@@ -173,7 +170,7 @@ ms.lasthandoff: 10/18/2017
 |<xref:System.Threading.Tasks.Dataflow.TransformBlock%602>|`System.Func\<TInput, TOutput>`2`|`System.Func<TInput, Task<TOutput>>`|  
 |<xref:System.Threading.Tasks.Dataflow.TransformManyBlock%602>|`System.Func<TInput, IEnumerable<TOutput>>`|`System.Func<TInput, Task<IEnumerable<TOutput>>>`|  
   
- 실행 블록 형식으로 작업할 때 람다 식을 사용할 수도 있습니다. 실행 블록과 함께 람다 식을 사용하는 방법을 보여 주는 예제는 [방법: 데이터 흐름 블록에서 데이터를 받을 경우 작업 수행](../../../docs/standard/parallel-programming/how-to-perform-action-when-a-dataflow-block-receives-data.md)을 참조하세요.  
+ 실행 블록 형식으로 작업할 때 람다 식을 사용할 수도 있습니다. 실행 블록과 함께 람다 식을 사용하는 방법을 보여주는 예제는 [방법: 데이터 흐름 블록에서 데이터를 받을 경우 작업 수행](../../../docs/standard/parallel-programming/how-to-perform-action-when-a-dataflow-block-receives-data.md)을 참조하세요.  
   
 ### <a name="grouping-blocks"></a>그룹 블록  
  그룹 블록은 다양한 제약 조건에서 하나 이상의 소스로부터 데이터를 결합합니다. TPL 데이터 흐름 라이브러리는 세가지 조인 블록 형식인 <xref:System.Threading.Tasks.Dataflow.BatchBlock%601>, <xref:System.Threading.Tasks.Dataflow.JoinBlock%602> 및 <xref:System.Threading.Tasks.Dataflow.BatchedJoinBlock%602>을 제공합니다.  
@@ -181,26 +178,26 @@ ms.lasthandoff: 10/18/2017
 #### <a name="batchblockt"></a>BatchBlock(T)  
  <xref:System.Threading.Tasks.Dataflow.BatchBlock%601> 클래스는 배치라고 하는 입력 데이터 집합을 출력 데이터의 배열로 결합합니다. <xref:System.Threading.Tasks.Dataflow.BatchBlock%601> 개체를 만들 때 각 배치의 크기를 지정합니다. <xref:System.Threading.Tasks.Dataflow.BatchBlock%601> 개체는 지정된 수의 입력 요소를 받을 때 해당 요소가 포함된 배열을 비동기적으로 전파합니다. <xref:System.Threading.Tasks.Dataflow.BatchBlock%601> 개체가 완료된 상태로 설정되었지만 배치를 형성하는 데 충분한 요소를 포함하지 않은 경우에는 나머지 입력 요소가 포함된 마지막 배열을 전파합니다.  
   
- <xref:System.Threading.Tasks.Dataflow.BatchBlock%601> 클래스 작동 *greedy* 또는 *식별* 모드입니다. 기본값인 greedy 모드에서는 <xref:System.Threading.Tasks.Dataflow.BatchBlock%601> 개체가 제공되는 모든 메시지를 수락하고 지정된 수의 요소를 받은 후 배열을 전파합니다. non-greedy 모드에서는 <xref:System.Threading.Tasks.Dataflow.BatchBlock%601> 개체가 충분한 소스가 배치를 형성하기 위한 메시지를 블록에 제공할 때까지 모든 들어오는 메시지를 연기합니다. 일반적으로 greedy 모드는 필요한 처리 오버헤드가 적기 때문에 non-greedy 모드보다 효율적으로 수행됩니다. 그러나 원자 방식으로 여러 소스에서 사용을 조정해야 하는 경우 non-greedy 모드를 사용할 수 있습니다. <xref:System.Threading.Tasks.Dataflow.GroupingDataflowBlockOptions.Greedy%2A>를 `False` 생성자의 `dataflowBlockOptions` 매개 변수에서 <xref:System.Threading.Tasks.Dataflow.BatchBlock%601.%23ctor%2A>로 설정하여 non-greedy 모드를 지정합니다.  
+ <xref:System.Threading.Tasks.Dataflow.BatchBlock%601> 클래스는 *greedy* 또는 *non-greedy* 모드로 작동합니다. 기본값인 greedy 모드에서는 <xref:System.Threading.Tasks.Dataflow.BatchBlock%601> 개체가 제공되는 모든 메시지를 수락하고 지정된 수의 요소를 받은 후 배열을 전파합니다. non-greedy 모드에서는 <xref:System.Threading.Tasks.Dataflow.BatchBlock%601> 개체가 충분한 소스가 배치를 형성하기 위한 메시지를 블록에 제공할 때까지 모든 들어오는 메시지를 연기합니다. 일반적으로 greedy 모드는 필요한 처리 오버헤드가 적기 때문에 non-greedy 모드보다 효율적으로 수행됩니다. 그러나 원자 방식으로 여러 소스에서 사용을 조정해야 하는 경우 non-greedy 모드를 사용할 수 있습니다. <xref:System.Threading.Tasks.Dataflow.GroupingDataflowBlockOptions.Greedy%2A>를 `False` 생성자의 `dataflowBlockOptions` 매개 변수에서 <xref:System.Threading.Tasks.Dataflow.BatchBlock%601.%23ctor%2A>로 설정하여 non-greedy 모드를 지정합니다.  
   
  다음 기본 예제에서는 몇 가지 <xref:System.Int32> 값을 배치에 10개의 요소를 포함하는 <xref:System.Threading.Tasks.Dataflow.BatchBlock%601> 개체에 게시합니다. <xref:System.Threading.Tasks.Dataflow.BatchBlock%601>에서 모든 값이 전파되도록 보장하기 위해서 이 예제에서는 <xref:System.Threading.Tasks.Dataflow.IDataflowBlock.Complete%2A> 메서드를 호출합니다. <xref:System.Threading.Tasks.Dataflow.IDataflowBlock.Complete%2A> 메서드는 <xref:System.Threading.Tasks.Dataflow.BatchBlock%601> 개체를 완료된 상태로 설정하므로 <xref:System.Threading.Tasks.Dataflow.BatchBlock%601> 개체가 남아 있는 요소를 모두 마지막 배치로 전파합니다.  
   
  [!code-csharp[TPLDataflow_Overview#7](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_overview/cs/program.cs#7)]
  [!code-vb[TPLDataflow_Overview#7](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpldataflow_overview/vb/program.vb#7)]  
   
- 사용 하는 전체 예제에 대 한 <xref:System.Threading.Tasks.Dataflow.BatchBlock%601> 데이터베이스 삽입 작업의 효율성을 향상 시키려면 참조 [연습:를 사용 하 여 BatchBlock 및 BatchedJoinBlock 효율성 향상을](../../../docs/standard/parallel-programming/walkthrough-using-batchblock-and-batchedjoinblock-to-improve-efficiency.md)합니다.  
+ <xref:System.Threading.Tasks.Dataflow.BatchBlock%601>을 사용하여 데이터베이스 삽입 작업의 효율성을 높이는 전체 예제는 [연습: BatchBlock 및 BatchedJoinBlock을 사용하여 효율성 향상](../../../docs/standard/parallel-programming/walkthrough-using-batchblock-and-batchedjoinblock-to-improve-efficiency.md)을 참조하세요.  
   
 #### <a name="joinblockt1-t2-"></a>JoinBlock(T1, T2, ...)  
  <xref:System.Threading.Tasks.Dataflow.JoinBlock%602> 및 <xref:System.Threading.Tasks.Dataflow.JoinBlock%603> 클래스는 입력 요소를 수집하고 해당 요소가 포함된 <xref:System.Tuple%602?displayProperty=nameWithType> 또는 <xref:System.Tuple%603?displayProperty=nameWithType> 개체를 전파합니다. <xref:System.Threading.Tasks.Dataflow.JoinBlock%602> 및 <xref:System.Threading.Tasks.Dataflow.JoinBlock%603> 클래스는 <xref:System.Threading.Tasks.Dataflow.ITargetBlock%601>에서 상속하지 않습니다. 대신에 <xref:System.Threading.Tasks.Dataflow.JoinBlock%602.Target1%2A>을 구현하는 <xref:System.Threading.Tasks.Dataflow.JoinBlock%602.Target2%2A>, <xref:System.Threading.Tasks.Dataflow.JoinBlock%603.Target3%2A> 및 <xref:System.Threading.Tasks.Dataflow.ITargetBlock%601>을 제공합니다.  
   
  마찬가지로 <xref:System.Threading.Tasks.Dataflow.BatchBlock%601>, <xref:System.Threading.Tasks.Dataflow.JoinBlock%602> 및 <xref:System.Threading.Tasks.Dataflow.JoinBlock%603>은 greedy 또는 non-greedy 모드에서 작동합니다. 기본값인 greedy 모드에서는 <xref:System.Threading.Tasks.Dataflow.JoinBlock%602> 또는 <xref:System.Threading.Tasks.Dataflow.JoinBlock%603> 개체가 제공되는 모든 메시지를 수락하고 각 대상이 적어도 하나의 메시지를 받은 후 튜플을 전파합니다. non-greedy 모드에서는 <xref:System.Threading.Tasks.Dataflow.JoinBlock%602> 또는 <xref:System.Threading.Tasks.Dataflow.JoinBlock%603> 개체가 모든 대상에 튜플을 만드는 데 필요한 데이터가 제공될 때까지 들어오는 모든 메시지를 연기합니다. 이 시점에서 블록은 소스로부터 모든 필요한 항목을 원자적으로 검색하는 2단계 커밋 프로토콜에 참여합니다. 이러한 연기를 통해 다른 엔터티가 그 동안 데이터를 사용할 수 있으므로 전반적인 시스템 작업이 진행될 수 있습니다.  
   
- 다음 기본 예제에서는 <xref:System.Threading.Tasks.Dataflow.JoinBlock%603> 개체가 값을 계산하기 위해 여러 데이터를 필요로 하는 경우를 보여 줍니다. 이 예제에서는 산술 연산을 수행하기 위해 두 <xref:System.Threading.Tasks.Dataflow.JoinBlock%603> 값과 <xref:System.Int32> 값을 필요로 하는 <xref:System.Char> 개체를 만듭니다.  
+ 다음 기본 예제에서는 <xref:System.Threading.Tasks.Dataflow.JoinBlock%603> 개체가 값을 계산하기 위해 여러 데이터를 필요로 하는 경우를 보여줍니다. 이 예제에서는 산술 연산을 수행하기 위해 두 <xref:System.Threading.Tasks.Dataflow.JoinBlock%603> 값과 <xref:System.Int32> 값을 필요로 하는 <xref:System.Char> 개체를 만듭니다.  
   
  [!code-csharp[TPLDataflow_Overview#8](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_overview/cs/program.cs#8)]
  [!code-vb[TPLDataflow_Overview#8](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpldataflow_overview/vb/program.vb#8)]  
   
- 사용 하는 전체 예제에 대 한 <xref:System.Threading.Tasks.Dataflow.JoinBlock%602> 를 협조적으로 공유 리소스에 대 한 non-greedy 모드의 개체 참조 [하는 방법: 여러 소스에서 읽기 데이터를 사용 하 여 JoinBlock](../../../docs/standard/parallel-programming/how-to-use-joinblock-to-read-data-from-multiple-sources.md)합니다.  
+ non-greedy 모드에서 <xref:System.Threading.Tasks.Dataflow.JoinBlock%602> 개체를 사용하여 리소스를 협조적으로 공유하는 전체 예제는 [방법: JoinBlock을 사용하여 여러 소스에서 데이터 읽기](../../../docs/standard/parallel-programming/how-to-use-joinblock-to-read-data-from-multiple-sources.md)를 참조하세요.  
   
 #### <a name="batchedjoinblockt1-t2-"></a>BatchedJoinBlock(T1, T2, ...)  
  <xref:System.Threading.Tasks.Dataflow.BatchedJoinBlock%602> 및 <xref:System.Threading.Tasks.Dataflow.BatchedJoinBlock%603> 클래스는 입력 요소의 배치를 수집하고 해당 요소가 포함된 `System.Tuple(IList(T1), IList(T2))` 또는 `System.Tuple(IList(T1), IList(T2), IList(T3))` 개체를 전파합니다. <xref:System.Threading.Tasks.Dataflow.BatchedJoinBlock%602>을 <xref:System.Threading.Tasks.Dataflow.BatchBlock%601>과 <xref:System.Threading.Tasks.Dataflow.JoinBlock%602>이 결합된 것으로 간주할 수 있습니다. <xref:System.Threading.Tasks.Dataflow.BatchedJoinBlock%602> 개체를 만들 때 각 배치의 크기를 지정합니다. <xref:System.Threading.Tasks.Dataflow.BatchedJoinBlock%602>은 <xref:System.Threading.Tasks.Dataflow.BatchedJoinBlock%602.Target1%2A>을 구현하는 <xref:System.Threading.Tasks.Dataflow.BatchedJoinBlock%602.Target2%2A> 및 <xref:System.Threading.Tasks.Dataflow.ITargetBlock%601> 속성도 제공합니다. 모든 대상에서 지정된 수의 입력 요소를 받으면 <xref:System.Threading.Tasks.Dataflow.BatchedJoinBlock%602> 개체는 해당 요소가 포함된 `System.Tuple(IList(T1), IList(T2))` 개체를 비동기적으로 전파합니다.  
@@ -210,7 +207,7 @@ ms.lasthandoff: 10/18/2017
  [!code-csharp[TPLDataflow_Overview#9](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_overview/cs/program.cs#9)]
  [!code-vb[TPLDataflow_Overview#9](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpldataflow_overview/vb/program.vb#9)]  
   
- 사용 하는 전체 예제에 대 한 <xref:System.Threading.Tasks.Dataflow.BatchedJoinBlock%602> 결과 프로그램이 데이터베이스에서 읽는 동안 발생 하는 모든 예외를 캡처하려면 참조 [연습:를 사용 하 여 BatchBlock 및 BatchedJoinBlock 효율성 향상을](../../../docs/standard/parallel-programming/walkthrough-using-batchblock-and-batchedjoinblock-to-improve-efficiency.md)합니다.  
+ <xref:System.Threading.Tasks.Dataflow.BatchedJoinBlock%602>을 사용하여 결과와 프로그램이 데이터베이스에서 읽는 동안 발생하는 모든 예외를 캡처하는 전체 예제는 [연습: BatchBlock 및 BatchedJoinBlock을 사용하여 효율성 향상](../../../docs/standard/parallel-programming/walkthrough-using-batchblock-and-batchedjoinblock-to-improve-efficiency.md)을 참조하세요.  
   
  [[맨 위로 이동](#top)]  
   
@@ -235,7 +232,7 @@ ms.lasthandoff: 10/18/2017
 ### <a name="specifying-the-task-scheduler"></a>작업 스케줄러 지정  
  모든 미리 정의된 데이터 흐름 블록은 TPL 작업 예약 메커니즘을 사용하여 대상에 데이터를 전파하고, 소스에서 데이터를 받고, 데이터를 사용할 수 있게 되면 사용자 정의 대리자를 실행하는 등의 작업을 수행합니다. <xref:System.Threading.Tasks.TaskScheduler>는 작업을 스레드의 큐에 대기시키는 작업 스케줄러를 나타내는 추상 클래스입니다. 기본 작업 스케줄러인 <xref:System.Threading.Tasks.TaskScheduler.Default%2A>는 <xref:System.Threading.ThreadPool> 클래스를 사용하여 작업을 큐에 대기시키고 실행합니다. 데이터 흐름 블록 개체를 생성할 때 <xref:System.Threading.Tasks.Dataflow.DataflowBlockOptions.TaskScheduler%2A> 속성을 설정하여 기본 작업 스케줄러를 재정의할 수 있습니다.  
   
- 동일한 작업 스케줄러가 여러 데이터 흐름 블록을 관리하는 경우 해당 블록 전체에 정책을 적용할 수 있습니다. 예들 들어 여러 데이터 흐름 블록이 동일한 <xref:System.Threading.Tasks.ConcurrentExclusiveSchedulerPair> 개체의 단독 스케줄러를 대상으로 하도록 각각 구성된 경우 해당 블록에서 실행되는 모든 작업이 serialize됩니다. 이와 마찬가지로 이러한 블록이 동일한 <xref:System.Threading.Tasks.ConcurrentExclusiveSchedulerPair> 개체의 동시 스케줄러를 대상으로 하도록 구성되어 있고 이 스케줄러가 최대 동시성 수준을 갖도록 구성된 경우 이러한 블록의 모든 작업은 해당 동시 작업 수로 제한됩니다. 사용 하는 예제에 대 한는 <xref:System.Threading.Tasks.ConcurrentExclusiveSchedulerPair> 클래스를 사용 하는 읽기 작업은 병렬로 발생 하지만 쓰기 작업은 다른 모든 작업과 독립적으로 발생 합니다. 즉, [하는 방법: 데이터 흐름 블록의 작업 스케줄러 지정](../../../docs/standard/parallel-programming/how-to-specify-a-task-scheduler-in-a-dataflow-block.md)합니다. TPL의 작업 스케줄러에 대한 자세한 내용은 <xref:System.Threading.Tasks.TaskScheduler> 클래스 항목을 참조하세요.  
+ 동일한 작업 스케줄러가 여러 데이터 흐름 블록을 관리하는 경우 해당 블록 전체에 정책을 적용할 수 있습니다. 예들 들어 여러 데이터 흐름 블록이 동일한 <xref:System.Threading.Tasks.ConcurrentExclusiveSchedulerPair> 개체의 단독 스케줄러를 대상으로 하도록 각각 구성된 경우 해당 블록에서 실행되는 모든 작업이 serialize됩니다. 이와 마찬가지로 이러한 블록이 동일한 <xref:System.Threading.Tasks.ConcurrentExclusiveSchedulerPair> 개체의 동시 스케줄러를 대상으로 하도록 구성되어 있고 이 스케줄러가 최대 동시성 수준을 갖도록 구성된 경우 이러한 블록의 모든 작업은 해당 동시 작업 수로 제한됩니다. <xref:System.Threading.Tasks.ConcurrentExclusiveSchedulerPair> 클래스를 사용하여 읽기 작업은 병렬로 발생하지만 쓰기 작업은 다른 모든 작업과 독립적으로 발생하도록 설정하는 예제는 [방법: 데이터 흐름 블록의 작업 스케줄러 지정](../../../docs/standard/parallel-programming/how-to-specify-a-task-scheduler-in-a-dataflow-block.md)을 참조하세요. TPL의 작업 스케줄러에 대한 자세한 내용은 <xref:System.Threading.Tasks.TaskScheduler> 클래스 항목을 참조하세요.  
   
 ### <a name="specifying-the-degree-of-parallelism"></a>병렬 처리 수준 지정  
  기본적으로 TPL 데이터 흐름 라이브러리가 제공하는 세 가지 실행 블록 형식인 <xref:System.Threading.Tasks.Dataflow.ActionBlock%601>, <xref:System.Threading.Tasks.Dataflow.TransformBlock%602> 및 <xref:System.Threading.Tasks.Dataflow.TransformManyBlock%602>은 한 번에 하나의 메시지를 처리합니다. 또한 이러한 데이터 흐름 블록 형식은 수신되는 순서대로 메시지를 처리합니다. 이러한 데이터 흐름 블록이 메시지를 동시에 처리하도록 설정하려면 데이터 흐름 블록 개체를 생성할 때 <xref:System.Threading.Tasks.Dataflow.ExecutionDataflowBlockOptions.MaxDegreeOfParallelism%2A?displayProperty=nameWithType> 속성을 설정합니다.  
@@ -257,20 +254,20 @@ ms.lasthandoff: 10/18/2017
 ### <a name="enabling-cancellation"></a>취소 사용  
  TPL은 작업이 협조적 방식으로 취소를 조정할 수 있도록 하는 메커니즘을 제공합니다. 데이터 흐름 블록이 이 취소 메커니즘에 참여할 수 있도록 하려면 <xref:System.Threading.Tasks.Dataflow.DataflowBlockOptions.CancellationToken%2A> 속성을 설정합니다. 이 <xref:System.Threading.CancellationToken> 개체가 취소된 상태로 설정된 경우 이 토큰을 모니터링하는 모든 데이터 흐름 블록은 동시 항목의 실행을 완료하지만 후속 항목의 처리를 시작하지 않습니다. 또한 이러한 데이터 흐름 블록은 버퍼링된 메시지를 모두 지우고, 모든 소스 및 대상 블록에 대한 연결을 해제하고, 취소된 상태로 전환합니다. 취소된 상태로 전환함으로써 <xref:System.Threading.Tasks.Dataflow.IDataflowBlock.Completion%2A> 속성의 <xref:System.Threading.Tasks.Task.Status%2A> 속성은 처리 중에 예외가 발생하지 않는 한 <xref:System.Threading.Tasks.TaskStatus.Canceled>로 설정됩니다. 이 경우 <xref:System.Threading.Tasks.Task.Status%2A>가 <xref:System.Threading.Tasks.TaskStatus.Faulted>로 설정됩니다.  
   
- Windows Forms 응용 프로그램에서 취소를 사용하는 방법을 보여 주는 예제는 [방법: 데이터 흐름 블록 취소](../../../docs/standard/parallel-programming/how-to-cancel-a-dataflow-block.md)를 참조하세요. TPL의 취소에 대한 자세한 내용은 [작업 취소](../../../docs/standard/parallel-programming/task-cancellation.md)를 참조하세요.  
+ Windows Forms 응용 프로그램에서 취소를 사용하는 방법을 보여주는 예제는 [방법: 데이터 흐름 블록 취소](../../../docs/standard/parallel-programming/how-to-cancel-a-dataflow-block.md)를 참조하세요. TPL의 취소에 대한 자세한 내용은 [작업 취소](../../../docs/standard/parallel-programming/task-cancellation.md)를 참조하세요.  
   
 ### <a name="specifying-greedy-versus-non-greedy-behavior"></a>Greedy 및 Non-Greedy 동작 지정  
  몇 가지 그룹 데이터 흐름 블록 형식은 *greedy* 또는 *non-greedy* 모드로 작동할 수 있습니다. 기본적으로 미리 정의된 데이터 흐름 블록 형식은 greedy 모드로 작동합니다.  
   
  <xref:System.Threading.Tasks.Dataflow.JoinBlock%602>과 같은 조인 블록 형식의 경우 greedy 모드는 조인할 데이터를 아직 사용할 수 없는 경우에도 블록이 해당 데이터를 즉시 수락함을 의미합니다. non-greedy 모드는 각 대상에서 조인을 완료하기 위해 메시지를 사용할 수 있을 때까지 블록이 들어오는 모든 메시지를 연기함을 의미합니다. 연기된 메시지 중에서 하나라도 더 이상 사용할 수 없는 경우 조인 블록은 연기된 메시지를 모두 해제하고 프로세스를 다시 시작합니다. <xref:System.Threading.Tasks.Dataflow.BatchBlock%601> 클래스의 경우, non-greedy 모드에서 <xref:System.Threading.Tasks.Dataflow.BatchBlock%601> 개체가 개별 소스들에서 배치를 완료하는 데 충분한 메시지를 사용할 수 있을 때까지 들어오는 메시지를 모두 연기하는 점을 제외하고 greedy 및 non-greedy 동작이 유사합니다.  
   
- 데이터 흐름 블록에 대한 non-greedy 모드를 지정하려면 <xref:System.Threading.Tasks.Dataflow.GroupingDataflowBlockOptions.Greedy%2A>를 `False`로 설정합니다. non-greedy 모드를 사용하여 여러 조인 블록이 데이터 소스를 보다 효율적으로 공유할 수 있도록 하는 방법을 보여 주는 예제는 [방법: JoinBlock을 사용하여 여러 소스에서 데이터 읽기](../../../docs/standard/parallel-programming/how-to-use-joinblock-to-read-data-from-multiple-sources.md)를 참조하세요.  
+ 데이터 흐름 블록에 대한 non-greedy 모드를 지정하려면 <xref:System.Threading.Tasks.Dataflow.GroupingDataflowBlockOptions.Greedy%2A>를 `False`로 설정합니다. non-greedy 모드를 사용하여 여러 조인 블록이 데이터 소스를 보다 효율적으로 공유할 수 있도록 하는 방법을 보여주는 예제는 [방법: JoinBlock을 사용하여 여러 소스에서 데이터 읽기](../../../docs/standard/parallel-programming/how-to-use-joinblock-to-read-data-from-multiple-sources.md)를 참조하세요.  
   
  [[맨 위로 이동](#top)]  
   
 <a name="custom"></a>   
 ## <a name="custom-dataflow-blocks"></a>사용자 지정 데이터 흐름 블록  
- TPL 데이터 흐름 라이브러리가 미리 정의된 블록 형식을 다양하게 제공하지만 사용자 지정 동작을 수행하는 추가 블록 형식을 만들 수 있습니다. <xref:System.Threading.Tasks.Dataflow.ISourceBlock%601> 또는 <xref:System.Threading.Tasks.Dataflow.ITargetBlock%601> 인터페이스를 직접 구현하거나 <xref:System.Threading.Tasks.Dataflow.DataflowBlock.Encapsulate%2A> 메서드를 사용하여 기존 블록 형식의 동작을 캡슐화하는 복합 블록을 작성합니다. 사용자 지정 데이터 흐름 블록 기능을 구현하는 방법을 보여 주는 예제는 [연습: 사용자 지정 데이터 흐름 블록 형식 만들기](../../../docs/standard/parallel-programming/walkthrough-creating-a-custom-dataflow-block-type.md)를 참조하세요.  
+ TPL 데이터 흐름 라이브러리가 미리 정의된 블록 형식을 다양하게 제공하지만 사용자 지정 동작을 수행하는 추가 블록 형식을 만들 수 있습니다. <xref:System.Threading.Tasks.Dataflow.ISourceBlock%601> 또는 <xref:System.Threading.Tasks.Dataflow.ITargetBlock%601> 인터페이스를 직접 구현하거나 <xref:System.Threading.Tasks.Dataflow.DataflowBlock.Encapsulate%2A> 메서드를 사용하여 기존 블록 형식의 동작을 캡슐화하는 복합 블록을 작성합니다. 사용자 지정 데이터 흐름 블록 기능을 구현하는 방법을 보여주는 예제는 [연습: 사용자 지정 데이터 흐름 블록 형식 만들기](../../../docs/standard/parallel-programming/walkthrough-creating-a-custom-dataflow-block-type.md)를 참조하세요.  
   
  [[맨 위로 이동](#top)]  
   
@@ -278,16 +275,16 @@ ms.lasthandoff: 10/18/2017
   
 |제목|설명|  
 |-----------|-----------------|  
-|[방법: 데이터 흐름 블록에 메시지 쓰기 및 테이터 흐름 블록에서 메시지 읽기](../../../docs/standard/parallel-programming/how-to-write-messages-to-and-read-messages-from-a-dataflow-block.md)|<xref:System.Threading.Tasks.Dataflow.BufferBlock%601> 개체에서 메시지를 쓰고 읽는 방법을 보여 줍니다.|  
+|[방법: 데이터 흐름 블록에 메시지 쓰기 및 데이터 흐름 블록에서 메시지 읽기](../../../docs/standard/parallel-programming/how-to-write-messages-to-and-read-messages-from-a-dataflow-block.md)|<xref:System.Threading.Tasks.Dataflow.BufferBlock%601> 개체에서 메시지를 쓰고 읽는 방법을 보여줍니다.|  
 |[방법: 공급자-소비자 데이터 흐름 패턴 구현](../../../docs/standard/parallel-programming/how-to-implement-a-producer-consumer-dataflow-pattern.md)|데이터 흐름 모델을 사용하여 생산자가 메시지를 데이터 흐름 블록에 보내고 소비자가 해당 블록에서 메시지를 읽는 생산자-소비자 패턴을 구현하는 방법을 설명합니다.|  
 |[방법: 데이터 흐름 블록에서 데이터를 받을 경우 작업 수행](../../../docs/standard/parallel-programming/how-to-perform-action-when-a-dataflow-block-receives-data.md)|실행 데이터 흐름 블록 형식인 <xref:System.Threading.Tasks.Dataflow.ActionBlock%601>, <xref:System.Threading.Tasks.Dataflow.TransformBlock%602> 및 <xref:System.Threading.Tasks.Dataflow.TransformManyBlock%602>에 대리자를 제공하는 방법을 설명합니다.|  
 |[연습: 데이터 흐름 파이프라인 만들기](../../../docs/standard/parallel-programming/walkthrough-creating-a-dataflow-pipeline.md)|웹에서 텍스트를 다운로드하고 해당 텍스트에 대한 작업을 수행하는 데이터 흐름 파이프라인을 만드는 방법을 설명합니다.|  
-|[방법: 데이터 흐름 블록 링크 끊기](../../../docs/standard/parallel-programming/how-to-unlink-dataflow-blocks.md)|사용 하는 방법을 보여 줍니다.는 <xref:System.Threading.Tasks.Dataflow.ISourceBlock%601.LinkTo%2A> 메서드를 대상에 메시지를 제공한 후 소스에서 대상 블록의 연결을 해제 합니다.|  
-|[연습: Windows Forms 응용 프로그램에서 데이터 흐름 사용](../../../docs/standard/parallel-programming/walkthrough-using-dataflow-in-a-windows-forms-application.md)|Windows Forms 응용 프로그램에서 이미지 처리를 수행하는 데이터 흐름 블록의 네트워크를 만드는 방법을 보여 줍니다.|  
-|[방법: 데이터 흐름 블록 취소](../../../docs/standard/parallel-programming/how-to-cancel-a-dataflow-block.md)|Windows Forms 응용 프로그램에서 취소를 사용하는 방법을 보여 줍니다.|  
+|[방법: 데이터 흐름 블록 링크 끊기](../../../docs/standard/parallel-programming/how-to-unlink-dataflow-blocks.md)|<xref:System.Threading.Tasks.Dataflow.ISourceBlock%601.LinkTo%2A> 메서드를 사용하여 소스가 대상에 메시지를 제공한 후 소스에서 대상 블록의 연결을 해제하는 방법을 보여줍니다.|  
+|[연습: Windows Forms 응용 프로그램에서 데이터 흐름 사용](../../../docs/standard/parallel-programming/walkthrough-using-dataflow-in-a-windows-forms-application.md)|Windows Forms 응용 프로그램에서 이미지 처리를 수행하는 데이터 흐름 블록의 네트워크를 만드는 방법을 보여줍니다.|  
+|[방법: 데이터 흐름 블록 취소](../../../docs/standard/parallel-programming/how-to-cancel-a-dataflow-block.md)|Windows Forms 응용 프로그램에서 취소를 사용하는 방법을 보여줍니다.|  
 |[방법: JoinBlock을 사용하여 여러 소스에서 데이터 읽기](../../../docs/standard/parallel-programming/how-to-use-joinblock-to-read-data-from-multiple-sources.md)|<xref:System.Threading.Tasks.Dataflow.JoinBlock%602> 클래스를 사용하여 여러 소스에서 데이터를 사용할 수 있을 때 작업을 수행하는 방법과 non-greedy 모드를 사용하여 여러 조인 블록이 데이터 소스를 보다 효율적으로 공유할 수 있도록 하는 방법을 설명합니다.|  
 |[방법: 데이터 흐름 블록의 병렬 처리 수준 지정](../../../docs/standard/parallel-programming/how-to-specify-the-degree-of-parallelism-in-a-dataflow-block.md)|<xref:System.Threading.Tasks.Dataflow.ExecutionDataflowBlockOptions.MaxDegreeOfParallelism%2A> 속성을 설정하여 실행 데이터 흐름 블록이 한 번에 둘 이상의 메시지를 처리할 수 있도록 하는 방법을 설명합니다.|  
-|[방법: 데이터 흐름 블록의 작업 스케줄러 지정](../../../docs/standard/parallel-programming/how-to-specify-a-task-scheduler-in-a-dataflow-block.md)|응용 프로그램에서 데이터 흐름을 사용하는 경우 특정 작업 스케줄러를 연결하는 방법을 보여 줍니다.|  
+|[방법: 데이터 흐름 블록의 작업 스케줄러 지정](../../../docs/standard/parallel-programming/how-to-specify-a-task-scheduler-in-a-dataflow-block.md)|응용 프로그램에서 데이터 흐름을 사용하는 경우 특정 작업 스케줄러를 연결하는 방법을 보여줍니다.|  
 |[연습: BatchBlock 및 BatchedJoinBlock을 사용하여 효율성 향상](../../../docs/standard/parallel-programming/walkthrough-using-batchblock-and-batchedjoinblock-to-improve-efficiency.md)|<xref:System.Threading.Tasks.Dataflow.BatchBlock%601> 클래스를 사용하여 데이터베이스 삽입 작업의 효율성을 높이는 방법과 <xref:System.Threading.Tasks.Dataflow.BatchedJoinBlock%602> 클래스를 사용하여 결과와 프로그램이 데이터베이스에서 읽는 동안 발생하는 모든 예외를 캡처하는 방법을 설명합니다.|  
-|[연습: 사용자 지정 데이터 흐름 블록 형식 만들기](../../../docs/standard/parallel-programming/walkthrough-creating-a-custom-dataflow-block-type.md)|사용자 지정 동작을 구현하는 데이터 흐름 블록 형식을 만드는 두 가지 방법을 보여 줍니다.|  
+|[연습: 사용자 지정 데이터 흐름 블록 형식 만들기](../../../docs/standard/parallel-programming/walkthrough-creating-a-custom-dataflow-block-type.md)|사용자 지정 동작을 구현하는 데이터 흐름 블록 형식을 만드는 두 가지 방법을 보여줍니다.|  
 |[TPL(작업 병렬 라이브러리)](../../../docs/standard/parallel-programming/task-parallel-library-tpl.md)|[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 응용 프로그램에서 병렬 및 동시 프로그래밍을 단순화하는 라이브러리인 TPL을 소개합니다.|

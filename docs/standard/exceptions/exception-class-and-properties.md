@@ -12,15 +12,18 @@ helpviewer_keywords:
 - exceptions, Exception class
 - Exception class
 ms.assetid: e2e1f8c4-e7b4-467d-9a66-13c90861221d
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 253a9846e484aa4e54c3433b0bbc8623519bbb7e
-ms.sourcegitcommit: bbde43da655ae7bea1977f7af7345eb87bd7fd5f
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 120d56832aad5024ee607d6e3114f164c967a12f
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="exception-class-and-properties"></a>Exception 클래스 및 속성
 
@@ -46,7 +49,7 @@ Object
 
 <xref:System.Exception>에서 상속받는 대부분의 클래스는 추가 멤버를 구현하거나 추가 기능을 제공하지 않습니다. 단순히 <xref:System.Exception>에서 상속받습니다. 따라서 가장 중요한 예외 정보는 예외 클래스, 예외 이름 및 예외에 포함된 정보의 계층 구조에서 확인할 수 있습니다.
 
-Throw에서 파생 된 개체를 catch 하는 것이 좋습니다 <xref:System.Exception>에서 파생 된 모든 개체를 throw 할 수 있습니다는 <xref:System.Object> 을 예외 클래스입니다. 일부 언어는 <xref:System.Exception>에서 파생되지 않은 개체의 throw 및 catch를 지원하지 않습니다.
+<xref:System.Exception>에서 파생된 개체만 throw 및 catch하는 것이 좋지만 <xref:System.Object> 클래스에서 파생된 모든 개체를 예외로 throw할 수 있습니다. 일부 언어는 <xref:System.Exception>에서 파생되지 않은 개체의 throw 및 catch를 지원하지 않습니다.
   
 ## <a name="see-also"></a>참고 항목  
 [예외](index.md)

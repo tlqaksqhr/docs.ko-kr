@@ -18,20 +18,23 @@ helpviewer_keywords:
 - Task-based Asynchronous Pattern, .NET Framework support for
 - .NET Framework, asynchronous design patterns
 ms.assetid: f120a5d9-933b-4d1d-acb6-f034a57c3749
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 2e30b562b4795717df526c143df96607686a7582
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: a46358052eb93662408f9c01592f917eee4540b9
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="interop-with-other-asynchronous-patterns-and-types"></a>다른 비동기 패턴 및 형식과의 Interop
 .NET Framework 1.0에서는 <xref:System.IAsyncResult> 또는 [Begin/End](../../../docs/standard/asynchronous-programming-patterns/asynchronous-programming-model-apm.md)패턴이라고도 하는 `Begin/End` 패턴이 도입되었습니다.  .NET Framework 2.0에서는 [Event-based Asynchronous Pattern (EAP)](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md)이 추가되었습니다.  .NET Framework 4부터 [Task-based Asynchronous Pattern (TAP)](../../../docs/standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap.md) 이 APM과 EAP를 둘 다 대체하지만 이전 패턴에서 마이그레이션 루틴을 쉽게 빌드할 수 있는 기능을 제공합니다.  
   
- 항목 내용  
+ 항목 내용:  
   
 -   [작업 및 APM](#APM) ([APM에서 TAP로](#ApmToTap) 또는 [TAP에서 APM으로](#TapToApm))  
   
@@ -55,7 +58,7 @@ ms.lasthandoff: 11/21/2017
 [!code-csharp[Conceptual.AsyncInterop#3](../../../samples/snippets/csharp/VS_Snippets_CLR/Conceptual.AsyncInterop/cs/Stream1.cs#3)]
 [!code-vb[Conceptual.AsyncInterop#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Conceptual.AsyncInterop/vb/stream1.vb#3)]  
   
- 사용할 수는 <xref:System.Threading.Tasks.TaskFactory%601.FromAsync%2A?displayProperty=nameWithType> 다음과 같이이 작업에 대 한 TAP 래퍼를 구현 하려면 메서드:  
+ <xref:System.Threading.Tasks.TaskFactory%601.FromAsync%2A?displayProperty=nameWithType> 메서드를 사용하여 다음과 같이 이 작업에 대한 TAP 래퍼를 구현할 수 있습니다.  
   
  [!code-csharp[Conceptual.AsyncInterop#4](../../../samples/snippets/csharp/VS_Snippets_CLR/Conceptual.AsyncInterop/cs/Wrap1.cs#4)]
  [!code-vb[Conceptual.AsyncInterop#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Conceptual.AsyncInterop/vb/Wrap1.vb#4)]  
@@ -84,7 +87,7 @@ ms.lasthandoff: 11/21/2017
 [!code-csharp[Conceptual.AsyncInterop#9](../../../samples/snippets/csharp/VS_Snippets_CLR/Conceptual.AsyncInterop/cs/APM2.cs#9)]
 [!code-vb[Conceptual.AsyncInterop#9](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Conceptual.AsyncInterop/vb/APM2.vb#9)]  
   
- 다음 예제에서는 APM으로 마이그레이션을 보여 줍니다.  
+ 다음 예제에서는 APM으로 마이그레이션을 보여줍니다.  
   
  [!code-csharp[Conceptual.AsyncInterop#10](../../../samples/snippets/csharp/VS_Snippets_CLR/Conceptual.AsyncInterop/cs/APM2.cs#10)]
  [!code-vb[Conceptual.AsyncInterop#10](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Conceptual.AsyncInterop/vb/APM2.vb#10)]  
@@ -101,12 +104,12 @@ ms.lasthandoff: 11/21/2017
   
 <a name="WHToTap"></a>   
 ### <a name="from-wait-handles-to-tap"></a>대기 핸들에서 TAP로  
- 대기 핸들은 비동기 패턴을 구현 하지 않지만 고급 개발자가 사용할 수는 <xref:System.Threading.WaitHandle> 클래스 및 <xref:System.Threading.ThreadPool.RegisterWaitForSingleObject%2A?displayProperty=nameWithType> 메서드를 비동기 알림에 대기 핸들을 설정 합니다.  <xref:System.Threading.ThreadPool.RegisterWaitForSingleObject%2A> 메서드를 래핑하여 대기 핸들의 동기 대기에 대해 작업 기반 대체 항목을 사용하도록 설정할 수 있습니다.  
+ 대기 핸들은 비동기 패턴을 구현하지 않지만 대기 핸들이 설정된 경우 고급 개발자는 <xref:System.Threading.WaitHandle> 클래스 및 <xref:System.Threading.ThreadPool.RegisterWaitForSingleObject%2A?displayProperty=nameWithType> 메서드를 비동기 알림에 사용할 수 있습니다.  <xref:System.Threading.ThreadPool.RegisterWaitForSingleObject%2A> 메서드를 래핑하여 대기 핸들의 동기 대기에 대해 작업 기반 대체 항목을 사용하도록 설정할 수 있습니다.  
   
  [!code-csharp[Conceptual.AsyncInterop#12](../../../samples/snippets/csharp/VS_Snippets_CLR/Conceptual.AsyncInterop/cs/Wait1.cs#12)]
  [!code-vb[Conceptual.AsyncInterop#12](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Conceptual.AsyncInterop/vb/Wait1.vb#12)]  
   
- 이 메서드를 통해 비동기 메서드에서 기존 <xref:System.Threading.WaitHandle> 구현을 사용할 수 있습니다.  예를 들어 특정 시간에 실행 되는 비동기 작업의 수를 제한 하려는 경우 세마포 활용할 수 있습니다 (한 <xref:System.Threading.SemaphoreSlim?displayProperty=nameWithType> 개체).  세마포 개수를 *N* 으로 초기화하고, 작업을 수행하려는 시간 동안 세마포에서 대기한 다음 작업이 완료되면 세마포를 해제하여 동시에 실행되는 작업 수를 *N*개로 제한할 수 있습니다.  
+ 이 메서드를 통해 비동기 메서드에서 기존 <xref:System.Threading.WaitHandle> 구현을 사용할 수 있습니다.  예를 들어 특정 시간에 실행되는 비동기 작업 수를 제한하려는 경우 세마포(<xref:System.Threading.SemaphoreSlim?displayProperty=nameWithType> 개체)를 활용할 수 있습니다.  세마포 개수를 *N* 으로 초기화하고, 작업을 수행하려는 시간 동안 세마포에서 대기한 다음 작업이 완료되면 세마포를 해제하여 동시에 실행되는 작업 수를 *N*개로 제한할 수 있습니다.  
   
  [!code-csharp[Conceptual.AsyncInterop#13](../../../samples/snippets/csharp/VS_Snippets_CLR/Conceptual.AsyncInterop/cs/Semaphore1.cs#13)]
  [!code-vb[Conceptual.AsyncInterop#13](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Conceptual.AsyncInterop/vb/Semaphore1.vb#13)]  

@@ -12,17 +12,21 @@ dev_langs:
 - csharp
 - vb
 - cpp
-helpviewer_keywords: exceptions, best practices
+helpviewer_keywords:
+- exceptions, best practices
 ms.assetid: f06da765-235b-427a-bfb6-47cd219af539
-caps.latest.revision: "28"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 87f9287c3714416ee5d6b63f3c9db311bb97b131
-ms.sourcegitcommit: 5d0e069655439984862a835f400058b7e8bbadc6
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 4c5ea19077ff9ce8e36a33601b7e5e87c64afe60
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/28/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="best-practices-for-exceptions"></a>예외에 대한 모범 사례
 
@@ -58,7 +62,7 @@ ms.lasthandoff: 10/28/2017
 
 ## <a name="design-classes-so-that-exceptions-can-be-avoided"></a>예외를 방지할 수 있도록 클래스 디자인
 
-클래스는 예외를 트리거하는 호출을 방지할 수 있도록 하는 메서드 또는 속성을 제공할 수 있습니다. 예를 들어, <xref:System.IO.FileStream> 클래스는 파일 끝에 도달했는지 확인하는 데 도움이 되는 메서드를 제공합니다. 이러한 메서드를 사용하면 파일의 끝을 지나서 읽을 경우 throw되는 예외를 방지할 수 있습니다. 다음 예제에서는 예외를 트리거하지 않고 파일의 끝까지 읽는 방법을 보여 줍니다.
+클래스는 예외를 트리거하는 호출을 방지할 수 있도록 하는 메서드 또는 속성을 제공할 수 있습니다. 예를 들어, <xref:System.IO.FileStream> 클래스는 파일 끝에 도달했는지 확인하는 데 도움이 되는 메서드를 제공합니다. 이러한 메서드를 사용하면 파일의 끝을 지나서 읽을 경우 throw되는 예외를 방지할 수 있습니다. 다음 예제에서는 예외를 트리거하지 않고 파일의 끝까지 읽는 방법을 보여줍니다.
 
 [!code-cpp[Conceptual.Exception.Handling#5](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.exception.handling/cpp/source.cpp#5)]
 [!code-csharp[Conceptual.Exception.Handling#5](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.exception.handling/cs/source.cs#5)]
@@ -72,7 +76,7 @@ ms.lasthandoff: 10/28/2017
 
 ## <a name="use-the-predefined-net-exception-types"></a>미리 정의된 .NET 예외 형식 사용
 
-새 예외 클래스는 미리 정의된 예외 클래스가 적용되지 않는 경우에만 도입합니다. 예를 들면 다음과 같습니다.
+새 예외 클래스는 미리 정의된 예외 클래스가 적용되지 않는 경우에만 도입합니다. 예:
 
 - 개체의 현재 상태에서 속성 집합이나 메서드 호출이 적절하지 않을 경우 <xref:System.InvalidOperationException> 예외를 throw합니다.
 
@@ -90,7 +94,7 @@ ms.lasthandoff: 10/28/2017
 
 사용자 고유의 예외 클래스를 만들 때 최소한 다음 세 가지 일반 생성자를 사용합니다. 즉, 기본 생성자, 문자열 메시지를 사용하는 생성자, 문자열 메시지와 내부 예외를 사용하는 생성자입니다.
 
-* <xref:System.Exception.%23ctor>를 사용 하는 기본 값입니다.
+* 기본값을 사용하는 <xref:System.Exception.%23ctor>.
   
 * 문자열 메시지를 수락하는 <xref:System.Exception.%23ctor%28System.String%29>.  
   
@@ -102,7 +106,7 @@ ms.lasthandoff: 10/28/2017
 
 사용자 정의 예외를 만드는 경우 원격으로 실행하는 코드에서 예외에 대한 메타데이터를 사용할 수 있는지 확인합니다. 
 
-예를 들어 응용 프로그램 도메인을 지 원하는.NET 구현에서 예외 응용 프로그램 도메인 간 발생할 수 있습니다. 앱 도메인 A에서 앱 도메인 B를 만들고, 여기서 예외를 throw하는 코드를 실행한다고 가정해봅시다. 앱 도메인 A에서 예외를 정확하게 catch하고 처리하려면 앱 도메인 B에서 throw된 예외를 포함하는 어셈블리를 찾을 수 있어야 합니다. 앱 도메인 B에서 앱 도메인 A의 응용 프로그램 기준 위치가 아니라 해당 응용 프로그램 기준 위치 아래의 어셈블리에 포함된 예외를 throw할 경우 앱 도메인 A는 예외를 찾을 수 없으며 공용 언어 런타임에서 <xref:System.IO.FileNotFoundException> 예외를 throw합니다. 이러한 상황을 방지하기 위해 예외 정보가 포함된 어셈블리를 다음과 같은 두 가지 방법으로 배포할 수 있습니다.
+예를 들어 앱 도메인을 지원하는 .NET 구현에서 앱 도메인 간에 예외가 발생할 수 있습니다. 앱 도메인 A에서 앱 도메인 B를 만들고, 여기서 예외를 throw하는 코드를 실행한다고 가정해봅시다. 앱 도메인 A에서 예외를 정확하게 catch하고 처리하려면 앱 도메인 B에서 throw된 예외를 포함하는 어셈블리를 찾을 수 있어야 합니다. 앱 도메인 B에서 앱 도메인 A의 응용 프로그램 기준 위치가 아니라 해당 응용 프로그램 기준 위치 아래의 어셈블리에 포함된 예외를 throw할 경우 앱 도메인 A는 예외를 찾을 수 없으며 공용 언어 런타임에서 <xref:System.IO.FileNotFoundException> 예외를 throw합니다. 이러한 상황을 방지하기 위해 예외 정보가 포함된 어셈블리를 다음과 같은 두 가지 방법으로 배포할 수 있습니다.
 
 - 해당 어셈블리를 두 응용 프로그램 도메인이 공유하는 공통 응용 프로그램 기본 구조에 넣습니다.
 
@@ -116,7 +120,7 @@ ms.lasthandoff: 10/28/2017
 
 ## <a name="use-grammatically-correct-error-messages"></a>문법적으로 올바른 오류 메시지 사용
 
-명확한 문을 작성하고 종료 문장 부호를 포함합니다. 설명 문자열의 각 문장의 뒤에는 마침표가 있어야 합니다. 예를 들어 "로그 테이블이 오버플로 되었습니다." 적절한 설명 문자열입니다.
+명확한 문을 작성하고 종료 문장 부호를 포함합니다. 설명 문자열의 각 문장의 뒤에는 마침표가 있어야 합니다. 예를 들어 “로그 테이블이 오버플로되었습니다.”는 적절한 설명 문자열입니다.
 
 ## <a name="in-custom-exceptions-provide-additional-properties-as-needed"></a>필요에 따라 사용자 지정 예외에서 추가 속성 제공
 
@@ -134,7 +138,7 @@ ms.lasthandoff: 10/28/2017
 [!code-csharp[Conceptual.Exception.Handling#6](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.exception.handling/cs/source.cs#6)]
 [!code-vb[Conceptual.Exception.Handling#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.exception.handling/vb/source.vb#6)]  
   
-예외의 생성자를 사용하여 예외를 작성하는 것이 더 적합한 경우도 있습니다. 예로 전역 예외 클래스와 같은 <xref:System.ArgumentException>합니다.
+예외의 생성자를 사용하여 예외를 작성하는 것이 더 적합한 경우도 있습니다. 예를 들어 <xref:System.ArgumentException>과 같은 전역 예외 클래스가 있습니다.
 
 ## <a name="clean-up-intermediate-results-when-throwing-an-exception"></a>예외를 throw할 때 중간 결과 정리
 
@@ -167,7 +171,7 @@ private static void TransferFunds(Account from, Account to, decimal amount)
 }
 ```
 
-이 예제에서는 `throw`를 사용하여 원래 예외를 다시 throw하는 방법을 보여 줍니다. 이렇게 하면 호출자가 <xref:System.Exception.InnerException> 속성을 검사하지 않아도 문제의 실제 원인을 쉽게 확인할 수 있습니다. 또는 새 예외를 throw하고 원래 예외를 내부 예외로 포함할 수 있습니다.
+이 예제에서는 `throw`를 사용하여 원래 예외를 다시 throw하는 방법을 보여줍니다. 이렇게 하면 호출자가 <xref:System.Exception.InnerException> 속성을 검사하지 않아도 문제의 실제 원인을 쉽게 확인할 수 있습니다. 또는 새 예외를 throw하고 원래 예외를 내부 예외로 포함할 수 있습니다.
 
 ```csharp
 catch (Exception ex)

@@ -1,5 +1,5 @@
 ---
-title: "가비지 컬렉션 기본 사항"
+title: "가비지 수집 기본 사항"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net
@@ -16,18 +16,21 @@ helpviewer_keywords:
 - garbage collection, workstation garbage collection
 - garbage collection, managed heap
 ms.assetid: 67c5a20d-1be1-4ea7-8a9a-92b0b08658d2
-caps.latest.revision: "51"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: b15ae041cdadb259c59d447b8775844fc96048be
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 9a42c9aeb3295cd90fb6796e36b840daff843aac
+ms.sourcegitcommit: 91691981897cf8451033cb01071d8f5d94017f97
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 01/09/2018
 ---
-# <a name="fundamentals-of-garbage-collection"></a>가비지 컬렉션 기본 사항
-<a name="top"></a> CLR(공용 언어 런타임)에서 가비지 수집은 자동 메모리 관리자 역할을 합니다. 가비지 수집은 다음과 같은 이점을 제공합니다.  
+# <a name="fundamentals-of-garbage-collection"></a>가비지 수집 기본 사항
+<a name="top"></a> CLR(공용 언어 런타임)에서 가비지 수집기는 자동 메모리 관리자 역할을 합니다. 가비지 수집은 다음과 같은 이점을 제공합니다.  
   
 -   응용 프로그램을 개발할 때 메모리를 해제할 필요가 없습니다.  
   
@@ -79,7 +82,7 @@ ms.lasthandoff: 10/18/2017
   
     -   커밋됨. 메모리 블록이 실제 저장소에 할당되어 있습니다.  
   
--   가상 주소 공간은 조각화될 수 있습니다. 즉, 주소 공간에 구멍이라고도 부르는 빈 블록이 존재합니다. 가상 메모리 할당이 요청된 경우 가상 메모리 관리자는 할당 요청을 만족시킬 수 있도록 충분히 큰 단일 빈 블록을 찾아야 합니다. 2GB의 여유 공간이 있는 경우에 2GB를 필요로 하는 할당 되지 것입니다 성공 모든 사용 가능한 공간이 단일 주소 블록에 않는.  
+-   가상 주소 공간은 조각화될 수 있습니다. 즉, 주소 공간에 구멍이라고도 부르는 빈 블록이 존재합니다. 가상 메모리 할당이 요청된 경우 가상 메모리 관리자는 할당 요청을 만족시킬 수 있도록 충분히 큰 단일 빈 블록을 찾아야 합니다. 2GB의 여유 공간이 있는 경우에도 전체 여유 공간이 한 주소 블록에 있는 경우가 아니면 2GB가 필요한 할당이 실패할 수 있습니다.  
   
 -   예약할 가상 주소 공간이 부족하거나 커밋할 실제 공간이 부족한 경우 메모리 부족이 발생할 수 있습니다.  
   
@@ -91,7 +94,7 @@ ms.lasthandoff: 10/18/2017
 ## <a name="conditions-for-a-garbage-collection"></a>가비지 수집 조건  
  가비지 수집은 다음 조건 중 하나가 충족될 경우 발생합니다.  
   
--   시스템의 실제 메모리가 부족합니다. 이 감지 OS에서 메모리 부족 알림을 또는 호스트에 의해 표시 된 메모리 부족 합니다.
+-   시스템의 실제 메모리가 부족합니다. 이는 OS의 메모리 부족 알림 또는 호스트에서 표시되는 메모리 부족을 통해 감지됩니다.
   
 -   관리되는 힙의 할당된 개체에 사용되는 메모리가 허용되는 임계값을 초과합니다. 이 임계값은 프로세스가 실행됨에 따라 계속 조정됩니다.  
   
@@ -105,7 +108,7 @@ ms.lasthandoff: 10/18/2017
   
  관리되는 각 프로세스마다 관리되는 힙이 있습니다. 프로세스의 모든 스레드는 같은 힙에 개체 메모리를 할당합니다.  
   
- 메모리를 예약하기 위해 가비지 수집기는 Win32 [VirtualAlloc](http://go.microsoft.com/fwlink/?LinkId=179047) 함수를 호출하며 관리되는 응용 프로그램을 위해 한 번에 하나의 메모리 세그먼트를 예약합니다. 또한 가비지 수집기는 필요에 따라 세그먼트를 예약하고 Win32 [VirtualFree](http://go.microsoft.com/fwlink/?LinkId=179050) 함수를 호출하여 세그먼트를 해제해 운영 체제로 돌려보냅니다(세그먼트에서 개체를 지운 후).  
+ 메모리를 예약하기 위해 가비지 수집기는 Win32 [VirtualAlloc](https://msdn.microsoft.com/library/aa366887.aspx) 함수를 호출하며 관리되는 응용 프로그램을 위해 한 번에 하나의 메모리 세그먼트를 예약합니다. 또한 가비지 수집기는 필요할 때 세그먼트를 예약하고 Win32 [VirtualFree](https://msdn.microsoft.com/library/aa366892.aspx) 함수를 호출하여 (세그먼트에서 개체를 지운 후) 세그먼트를 운영 체제로 돌려보냅니다.  
   
 > [!IMPORTANT]
 >  가비지 수집기에서 할당되는 세그먼트 크기는 구현에 따라 다르며 정기적인 업데이트를 포함하여 언제든지 변경될 수 있습니다. 앱에서 특정 세그먼트 크기를 가정하거나 의존해서는 안 되며, 세그먼트 할당에 사용할 수 있는 메모리 크기를 구성하려고 해서도 안 됩니다.  
@@ -148,7 +151,7 @@ ms.lasthandoff: 10/18/2017
   
  임시 세대는 임시 세그먼트라는 메모리 세그먼트에 할당되어야 합니다. 가비지 수집기에서 획득하는 새로운 각 세그먼트는 새로운 임시 세그먼트가 되며 0세대 가비지 수집에서 남은 개체를 포함합니다. 이전의 임시 세그먼트는 새로운 2세대 세그먼트가 됩니다.  
   
- 임시 세그먼트의 크기는 시스템이 32비트 또는 64비트인지 및 실행 중인 가비지 수집기 형식에 따라 달라집니다. 다음 표에서는 기본값을 보여 줍니다.  
+ 임시 세그먼트의 크기는 시스템이 32비트 또는 64비트인지 및 실행 중인 가비지 수집기 형식에 따라 달라집니다. 다음 표에서는 기본값을 보여줍니다.  
   
 ||32비트|64비트|  
 |-|-------------|-------------|  
@@ -187,9 +190,9 @@ ms.lasthandoff: 10/18/2017
   
  가비지 수집이 시작되기 전에 가비지 수집을 트리거한 스레드를 제외한 모든 관리되는 스레드가 일시 중단됩니다.  
   
- 다음 그림에서는 가비지 수집을 트리거하여 다른 스레드가 일시 중단되도록 하는 스레드를 보여 줍니다.  
+ 다음 그림에서는 가비지 수집을 트리거하여 다른 스레드가 일시 중단되도록 하는 스레드를 보여줍니다.  
   
- ![스레드에서 트리거하는 시기는 가비지 수집](../../../docs/standard/garbage-collection/media/gc-triggered.png "GC_Triggered")  
+ ![스레드에서 가비지 수집을 트리거하는 시기](../../../docs/standard/garbage-collection/media/gc-triggered.png "GC_Triggered")  
 가비지 수집을 트리거하는 스레드  
   
  [맨 위로 이동](#top)  
@@ -208,7 +211,7 @@ ms.lasthandoff: 10/18/2017
 ## <a name="workstation-and-server-garbage-collection"></a>워크스테이션 및 서버 가비지 수집  
  가비지 수집기는 자체 조정되며 다양한 시나리오에서 작동 가능합니다. 구성 파일 설정을 사용하여 작업 부하의 특징을 기반으로 가비지 수집의 형식을 설정할 수 있습니다. CLR은 다음 유형의 가비지 수집을 제공합니다.  
   
--   모든 클라이언트 워크스테이션 및 독립 실행형 PC를 위한 워크스테이션 가비지 수집. 이 값에 대 한 기본 설정의 [ \<gcServer > 요소](../../../docs/framework/configure-apps/file-schema/runtime/gcserver-element.md) 런타임 구성 스키마에 있습니다.  
+-   모든 클라이언트 워크스테이션 및 독립 실행형 PC를 위한 워크스테이션 가비지 수집. 이는 런타임 구성 스키마의 [\<gcServer> 요소](../../../docs/framework/configure-apps/file-schema/runtime/gcserver-element.md)에 대한 기본 설정입니다.  
   
      워크스테이션 가비지 수집은 동시 수집 또는 비동시 수집일 수 있습니다. 동시 가비지 수집의 경우 가비지 수집 중 관리되는 스레드가 작업을 계속 수행할 수 있습니다.  
   
@@ -216,15 +219,15 @@ ms.lasthandoff: 10/18/2017
   
 -   높은 처리 속도 및 확장성이 필요한 서버 응용 프로그램을 위한 서버 가비지 수집 서버 가비지 수집은 비동시 또는 백그라운드일 수 있습니다.  
   
- 다음 그림에서는 서버에서 가비지 수집을 수행하는 전용 스레드를 보여 줍니다.  
+ 다음 그림에서는 서버에서 가비지 수집을 수행하는 전용 스레드를 보여줍니다.  
   
- ![서버 가비지 컬렉션 스레드](../../../docs/standard/garbage-collection/media/gc-server.png "GC_Server")  
+ ![서버 가비지 수집 스레드](../../../docs/standard/garbage-collection/media/gc-server.png "GC_Server")  
 서버 가비지 수집  
   
 ### <a name="configuring-garbage-collection"></a>가비지 수집 구성  
- 사용할 수는 [ \<gcServer > 요소](../../../docs/framework/configure-apps/file-schema/runtime/gcserver-element.md) CLR에서 수행할 가비지 수집의 유형을 지정 하는 런타임 구성 스키마의 원하는 합니다. 이 요소의 `enabled` 특성을 `false` (기본값)로 설정하면 CLR은 워크스테이션 가비지 수집을 수행합니다. `enabled` 특성을 `true`로 설정하면 CLR은 서버 가비지 수집을 수행합니다.  
+ 런타임 구성 스키마의 [\<gcServer> 요소](../../../docs/framework/configure-apps/file-schema/runtime/gcserver-element.md)를 사용하여 CLR에서 수행할 가비지 수집의 유형을 지정할 수 있습니다. 이 요소의 `enabled` 특성을 `false` (기본값)로 설정하면 CLR은 워크스테이션 가비지 수집을 수행합니다. `enabled` 특성을 `true`로 설정하면 CLR은 서버 가비지 수집을 수행합니다.  
   
- 동시 가비지 수집이 지정 된는 [ \<gcConcurrent > 요소](../../../docs/framework/configure-apps/file-schema/runtime/gcconcurrent-element.md) 런타임 구성 스키마의 합니다. 기본 설정은 `enabled`입니다. 이 설정은 동시 및 백그라운드 가비지 수집을 둘 다 제어합니다.  
+ 동시 가비지 수집은 런타임 구성 스키마의 [\<gcConcurrent> 요소](../../../docs/framework/configure-apps/file-schema/runtime/gcconcurrent-element.md)를 통해 지정됩니다. 기본 설정은 `enabled`입니다. 이 설정은 동시 및 백그라운드 가비지 수집을 둘 다 제어합니다.  
   
  관리되지 않는 호스팅 인터페이스를 통해 서버 가비지 수집을 지정할 수도 있습니다. ASP.NET 및 SQL Server는 응용 프로그램이 이러한 환경 중 하나에서 호스팅되는 경우 서버 가비지 수집을 자동으로 활성화합니다.  
   
@@ -235,7 +238,7 @@ ms.lasthandoff: 10/18/2017
   
      네이티브 코드를 실행하는 스레드는 일시 중단되지 않습니다.  
   
--   워크스테이션 가비지 수집에 관계 없이 프로세서가 하나 밖에 있는 컴퓨터에서 사용 되는 항상는 [ \<gcServer >](../../../docs/framework/configure-apps/file-schema/runtime/gcserver-element.md) 설정 합니다. 서버 가비지 수집을 지정하는 경우 CLR은 동시성이 비활성화된 워크스테이션 가비지 수집을 사용합니다.  
+-   프로세서가 하나뿐인 컴퓨터에서는 [\<gcServer>](../../../docs/framework/configure-apps/file-schema/runtime/gcserver-element.md) 설정에 관계없이 항상 워크스테이션 가비지 수집이 사용됩니다. 서버 가비지 수집을 지정하는 경우 CLR은 동시성이 비활성화된 워크스테이션 가비지 수집을 사용합니다.  
   
  다음은 서버 가비지 수집 시 고려해야 할 스레딩 및 성능 고려 사항입니다.  
   
@@ -259,7 +262,7 @@ ms.lasthandoff: 10/18/2017
   
  동시 가비지 수집을 사용하면 수집을 위한 일시 중지가 최소화되어 대화형 응용 프로그램의 응답성이 향상됩니다. 동시 가비지 수집 스레드가 실행되는 대부분의 시간 동안 관리되는 스레드가 계속 실행될 수 있습니다. 이로써 가비지 수집이 발생하는 동안 일시 중지 시간이 더 짧아지게 됩니다.  
   
- 여러 프로세스가 실행될 때 성능을 개선하려면 동시 가비지 수집을 사용하지 않도록 설정합니다. 추가 하 여이 작업을 수행할 수는 [ \<gcConcurrent > 요소](../../../docs/framework/configure-apps/file-schema/runtime/gcconcurrent-element.md) 응용 프로그램의 구성 파일 및 설정의 값을 해당 `enabled` 특성을 `"false"`합니다.  
+ 여러 프로세스가 실행될 때 성능을 개선하려면 동시 가비지 수집을 사용하지 않도록 설정합니다. 앱의 구성 파일에 [\<gcConcurrent> 요소](../../../docs/framework/configure-apps/file-schema/runtime/gcconcurrent-element.md)를 추가하고 해당 `enabled` 특성의 값을 `"false"`로 설정하여 이 작업을 수행할 수 있습니다.  
   
  동시 가비지 수집은 전용 스레드에서 수행됩니다. 기본적으로 CLR은 동시 가비지 수집을 활성화하여 워크스테이션 가비지 수집을 실행합니다. 이는 단일 프로세서 및 다중 프로세서 컴퓨터에서 모두 마찬가지입니다.  
   
@@ -267,7 +270,7 @@ ms.lasthandoff: 10/18/2017
   
  동시 수집 중에 개체를 할당할 수 있으므로 동시 가비지 수집의 작업 집합은 비동시 가비지 수집에 비해 약간 더 큽니다. 그러나 할당하는 개체가 작업 집합의 일부가 될 수 있으므로 이는 성능에 영향을 미칠 수 있습니다. 기본적으로 동시 가비지 수집은 일시 중지 시간이 짧은 대신 CPU 및 메모리를 더 소비합니다.  
   
- 다음 그림에서는 개별 전용 스레드에서 수행되는 동시 가비지 수집을 보여 줍니다.  
+ 다음 그림에서는 개별 전용 스레드에서 수행되는 동시 가비지 수집을 보여줍니다.  
   
  ![동시 가비지 수집 스레드](../../../docs/standard/garbage-collection/media/gc-concurrent.png "GC_Concurrent")  
 동시 가비지 수집  
@@ -287,7 +290,7 @@ ms.lasthandoff: 10/18/2017
   
  백그라운드 가비지 수집 중에 임시 가비지 수집이 발생할 수 있으므로 백그라운드 가비지 수집은 동시 가비지 수집에 의해 적용된 할당 제한을 제거합니다. 이는 백그라운드 가비지 수집이 임시 세대에서 비활성 개체를 제거할 수 있고, 필요한 경우 1세대 가비지 수집 중에 힙을 확장할 수도 있음을 의미합니다.  
   
- 다음 그림에서는 워크스테이션의 개별 전용 스레드에서 수행되는 백그라운드 가비지 수집을 보여 줍니다.  
+ 다음 그림에서는 워크스테이션의 개별 전용 스레드에서 수행되는 백그라운드 가비지 수집을 보여줍니다.  
   
  ![백그라운드 워크스테이션 가비지 수집](../../../docs/standard/garbage-collection/media/backgroundworkstn.png "BackgroundWorkstn")  
 백그라운드 워크스테이션 가비지 수집  
@@ -296,9 +299,9 @@ ms.lasthandoff: 10/18/2017
   
 <a name="background_server_garbage_collection"></a>   
 ## <a name="background-server-garbage-collection"></a>백그라운드 서버 가비지 수집  
- .NET Framework 4.5부터 백그라운드 서버 가비지 수집이 서버 가비지 수집의 기본 모드입니다. 이 모드를 선택 하려면 설정는 `enabled` 특성의는 [ \<gcServer > 요소](../../../docs/framework/configure-apps/file-schema/runtime/gcserver-element.md) 를 `true` 런타임 구성 스키마에 있습니다. 이 모드는 앞의 단원에서 설명한 백그라운드 워크스테이션 가비지 수집과 비슷하게 작동하지만 몇 가지 다른 점이 있습니다. 백그라운드 서버 가비지 수집은 일반적으로 각 논리 프로세서에 대한 전용 스레드인 다중 스레드를 사용하는 반면, 백그라운드 워크스테이션 가비지 수집은 단일 전용 백그라운드 가비지 수집 스레드를 사용합니다. 워크스테이션 백그라운드 가비지 수집 스레드와는 달리 이러한 스레드는 시간 초과되지 않습니다.  
+ .NET Framework 4.5부터 백그라운드 서버 가비지 수집이 서버 가비지 수집의 기본 모드입니다. 이 모드를 선택하려면 런타임 구성 스키마에서 [\<gcServer> 요소](../../../docs/framework/configure-apps/file-schema/runtime/gcserver-element.md)의 `enabled` 특성을 `true`로 설정합니다. 이 모드는 앞의 단원에서 설명한 백그라운드 워크스테이션 가비지 수집과 비슷하게 작동하지만 몇 가지 다른 점이 있습니다. 백그라운드 서버 가비지 수집은 일반적으로 각 논리 프로세서에 대한 전용 스레드인 다중 스레드를 사용하는 반면, 백그라운드 워크스테이션 가비지 수집은 단일 전용 백그라운드 가비지 수집 스레드를 사용합니다. 워크스테이션 백그라운드 가비지 수집 스레드와는 달리 이러한 스레드는 시간 초과되지 않습니다.  
   
- 다음 그림에서는 서버의 개별 전용 스레드에서 수행되는 백그라운드 가비지 수집을 보여 줍니다.  
+ 다음 그림에서는 서버의 개별 전용 스레드에서 수행되는 백그라운드 가비지 수집을 보여줍니다.  
   
  ![백그라운드 서버 가비지 수집](../../../docs/standard/garbage-collection/media/backgroundserver.png "BackgroundServer")  
 백그라운드 서버 가비지 수집  

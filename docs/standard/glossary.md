@@ -9,11 +9,14 @@ ms.topic: article
 ms.prod: .net
 ms.technology: dotnet-standard
 ms.devlang: dotnet
-ms.openlocfilehash: a6546818eaeac3c32a6a9ddd7e64b1b0e0ea170f
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 33123732514a53574036f6f8e948b2cf9acb9229
+ms.sourcegitcommit: d2da0142247ef42a219a5d2907f153e62dc6ea0d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="net-glossary"></a>.NET 용어
 
@@ -29,21 +32,21 @@ Ahead-Of-Time 컴파일러입니다.
 
 .NET Framework와 함께 제공되는 원래 ASP.NET 구현입니다.
 
-경우에 따라 ASP.NET은 ASP.NET Core를 포함하여 두 ASP.NET 구현을 나타내는 포괄적인 용어입니다. 지정된 인스턴스에서 이 용어가 전달하는 의미는 컨텍스트에 의해 결정됩니다. 참조를 ASP.NET 4.x를 명확히 하려면를 사용 하지 않는 ASP.NET 두 구현 모두 의미 합니다. 
+경우에 따라 ASP.NET은 ASP.NET Core를 포함하여 두 ASP.NET 구현을 나타내는 포괄적인 용어입니다. 지정된 인스턴스에서 이 용어가 전달하는 의미는 컨텍스트에 의해 결정됩니다. 두 구현을 모두 의미하는 데 ASP.NET을 사용하지 않는 것을 분명히 하려는 경우 ASP.NET 4.x를 참조하세요. 
 
-참조 [ASP.NET 설명서](/aspnet/#pivot=aspnet)합니다.
+[ASP.NET 설명서](/aspnet/#pivot=aspnet)를 참조하세요.
 
 ## <a name="aspnet-core"></a>ASP.NET Core
 
 .NET Core를 기반으로 하는 ASP.NET의 플랫폼 간 고성능 오픈 소스 구현입니다.
 
-참조 [ASP.NET Core 설명서](/aspnet/#pivot=core)합니다.
+[ASP.NET Core 설명서](/aspnet/#pivot=core)를 참조하세요.
 
 ## <a name="assembly"></a>어셈블리
 
-앱이나 다른 어셈블리에서 호출할 수 있는 API 컬렉션을 포함하는 *.dll* 파일입니다.
+앱이나 다른 어셈블리에서 호출할 수 있는 API 컬렉션을 포함할 수 있는 *.dll*/*.exe* 파일입니다.
 
-.NET 어셈블리는 형식 컬렉션입니다. 어셈블리에는 인터페이스, 클래스, 구조체, 열거형 및 대리자가 포함됩니다.  프로젝트의 *bin* 폴더에 있는 어셈블리를 *바이너리*라고도 합니다. [라이브러리](#library)를 참조하세요.
+어셈블리에는 인터페이스, 클래스, 구조체, 열거형 및 대리자와 같은 형식이 포함될 수 있습니다. 프로젝트의 *bin* 폴더에 있는 어셈블리를 *바이너리*라고도 합니다. [라이브러리](#library)를 참조하세요.
 
 ## <a name="clr"></a>CLR
 
@@ -189,7 +192,7 @@ UWP는 .NET 네이티브에서 지원하는 첫 번째 응용 프로그램 프�
 
 [.NET 네이티브 및 CoreRT 소개](https://github.com/dotnet/corert/blob/master/Documentation/intro-to-corert.md)를 참조하세요.
 
-## <a name="net-standard"></a>.NET 표준
+## <a name="net-standard"></a>.NET Standard
 
 각 .NET 구현에서 사용할 수 있는 .NET API의 공식 사양입니다.
 
@@ -207,7 +210,7 @@ UWP는 .NET 네이티브에서 지원하는 첫 번째 응용 프로그램 프�
 
 NuGet 패키지(또는 줄여서 패키지)는 작성자 이름과 같은 추가 메타데이터와 함께 동일한 이름의 어셈블리가 하나 이상 있는 .zip 파일입니다.
 
-*.zip* 파일은 *.nupkg* 확장명을 사용하며 *.dll* 파일 및 *.xml* 파일과 같이 여러 프레임워크 및 버전에서 사용할 자산을 포함합니다. 앱 또는 라이브러리에 설치된 경우 앱 또는 라이브러리에서 지정한 대상 프레임워크에 따라 적절한 자산이 선택됩니다. 인터페이스를 정의하는 자산은 *ref* 폴더에 있으며 구현을 정의하는 자산은 *lib* 폴더에 있습니다.
+*.zip* 파일은 *.nupkg* 확장명을 사용하며 *.dll* 파일 및 *.xml* 파일과 같이 여러 대상 프레임워크 및 버전에서 사용할 자산을 포함합니다. 앱 또는 라이브러리에 설치된 경우 앱 또는 라이브러리에서 지정한 대상 프레임워크에 따라 적절한 자산이 선택됩니다. 인터페이스를 정의하는 자산은 *ref* 폴더에 있으며 구현을 정의하는 자산은 *lib* 폴더에 있습니다.
 
 ## <a name="platform"></a>platform
 

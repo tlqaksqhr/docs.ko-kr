@@ -15,32 +15,35 @@ helpviewer_keywords:
 - Task-based Asynchronous Pattern, .NET Framework support for
 - .NET Framework, asynchronous design patterns
 ms.assetid: 033cf871-ae24-433d-8939-7a3793e547bf
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 90b2a36f0e6bf06b0fefe2191d5b17c9c07d1588
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 3eddf8899863b7f1c59950c9cd4fa4d42f7acdb7
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="consuming-the-task-based-asynchronous-pattern"></a>작업 기반 비동기 패턴 사용
-TAP(작업 기반 비동기 패턴)을 사용하여 비동기 작업을 수행할 경우 콜백을 사용하면 차단 없이 대기를 진행할 수 있습니다.  작업의 경우 이렇게 메서드를 통해 같은 <xref:System.Threading.Tasks.Task.ContinueWith%2A?displayProperty=nameWithType>합니다. 언어 기반 비동기 지원은 정상적인 제어 흐름 내에서 비동기 작업이 대기할 수 있도록 함으로써 콜백 숨김을 지원하고, 컴파일러에서 생성된 코드는 이와 동일한 API 수준 지원을 제공합니다.  
+TAP(작업 기반 비동기 패턴)을 사용하여 비동기 작업을 수행할 경우 콜백을 사용하면 차단 없이 대기를 진행할 수 있습니다.  작업의 경우 이는 <xref:System.Threading.Tasks.Task.ContinueWith%2A?displayProperty=nameWithType>와 같은 메서드를 통해 수행됩니다. 언어 기반 비동기 지원은 정상적인 제어 흐름 내에서 비동기 작업이 대기할 수 있도록 함으로써 콜백 숨김을 지원하고, 컴파일러에서 생성된 코드는 이와 동일한 API 수준 지원을 제공합니다.  
   
 ## <a name="suspending-execution-with-await"></a>Await로 실행 일시 중지  
- 부터는 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]를 사용할 수 있습니다는 [await](~/docs/csharp/language-reference/keywords/await.md) C# 키워드 및 [Await 연산자](~/docs/visual-basic/language-reference/operators/await-operator.md) 를 비동기적으로 기다리는 Visual Basic의 <xref:System.Threading.Tasks.Task> 및 <xref:System.Threading.Tasks.Task%601> 개체입니다. 대기 하는 경우는 <xref:System.Threading.Tasks.Task>, `await` 식이 형식이 `void`합니다. 대기 하는 경우는 <xref:System.Threading.Tasks.Task%601>, `await` 식이 형식이 `TResult`합니다. `await` 식은 비동기 메서드의 본문 내에서 발생해야 합니다. [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]의 C# 및 Visual Basic 언어 지원에 대한 자세한 내용은 C# 및 Visual Basic 언어 사양을 참조하세요.  
+ [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]부터는 C#의 [await](~/docs/csharp/language-reference/keywords/await.md) 키워드 및 Visual Basic의 [Await 연산자](~/docs/visual-basic/language-reference/operators/await-operator.md)를 사용하여 <xref:System.Threading.Tasks.Task> 및 <xref:System.Threading.Tasks.Task%601> 개체를 비동기적으로 대기할 수 있습니다. <xref:System.Threading.Tasks.Task> 개체를 대기하고 있을 때 `await` 식은 `void` 형식입니다. <xref:System.Threading.Tasks.Task%601> 개체를 대기하고 있을 때 `await` 식은 `TResult` 형식입니다. `await` 식은 비동기 메서드의 본문 내에서 발생해야 합니다. [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]의 C# 및 Visual Basic 언어 지원에 대한 자세한 내용은 C# 및 Visual Basic 언어 사양을 참조하세요.  
   
- 내부적으로 await 기능은 연속을 사용해서 작업에 콜백을 설치합니다.  이 콜백은 일시 중지 시점에서 비동기 메서드를 재개합니다. 대기 중인된 작업이 완료 되었으며 경우, 비동기 메서드가 다시 시작 되는 <xref:System.Threading.Tasks.Task%601>, 해당 `TResult` 반환 됩니다.  경우는 <xref:System.Threading.Tasks.Task> 또는 <xref:System.Threading.Tasks.Task%601> 에 끝났고 하 던는 <xref:System.Threading.Tasks.TaskStatus.Canceled> 상태는 <xref:System.OperationCanceledException> 예외가 throw 됩니다.  경우는 <xref:System.Threading.Tasks.Task> 또는 <xref:System.Threading.Tasks.Task%601> 에 끝났고 하 던는 <xref:System.Threading.Tasks.TaskStatus.Faulted> 상태 이면 오류를 일으킨 예외가 throw 됩니다. `Task`에서는 여러 식의 결과로 오류가 발생할 수 있지만 이러한 예외 중 하나만 전파됩니다. 그러나는 <xref:System.Threading.Tasks.Task.Exception%2A?displayProperty=nameWithType> 속성에서 반환 된 <xref:System.AggregateException> 모든 오류를 포함 하는 예외입니다.  
+ 내부적으로 await 기능은 연속을 사용해서 작업에 콜백을 설치합니다.  이 콜백은 일시 중지 시점에서 비동기 메서드를 재개합니다. 비동기 메서드가 재개될 때 대기된 작업이 성공적으로 완료되고 <xref:System.Threading.Tasks.Task%601>인 경우 해당 `TResult`가 반환됩니다.  대기된 <xref:System.Threading.Tasks.Task> 또는 <xref:System.Threading.Tasks.Task%601> 개체가 <xref:System.Threading.Tasks.TaskStatus.Canceled> 상태에서 종료된 경우 <xref:System.OperationCanceledException> 예외가 throw됩니다.  대기된 <xref:System.Threading.Tasks.Task> 또는 <xref:System.Threading.Tasks.Task%601> 개체가 <xref:System.Threading.Tasks.TaskStatus.Faulted> 상태에서 종료된 경우 오류를 초래한 예외가 throw됩니다. `Task`에서는 여러 식의 결과로 오류가 발생할 수 있지만 이러한 예외 중 하나만 전파됩니다. 그러나 <xref:System.Threading.Tasks.Task.Exception%2A?displayProperty=nameWithType> 속성은 모든 오류가 포함된 <xref:System.AggregateException> 예외를 반환합니다.  
   
- 경우 동기화 컨텍스트 (<xref:System.Threading.SynchronizationContext> 개체) 실행 중이 던 비동기 메서드가 일시 중단 시 스레드에 연결 된 (경우에 예를 들어는 <xref:System.Threading.SynchronizationContext.Current%2A?displayProperty=nameWithType> 속성은 `null`), 그에 다시 시작 비동기 메서드 컨텍스트를 사용 하 여 동기화 컨텍스트를 동일한 <xref:System.Threading.SynchronizationContext.Post%2A> 메서드. 작업 스케줄러에 의존 하므로 이렇게 하지 않으면 (<xref:System.Threading.Tasks.TaskScheduler> 개체)를 일시 중단 시 현재이 있습니다. 일반적으로이 기본 작업 스케줄러 (<xref:System.Threading.Tasks.TaskScheduler.Default%2A?displayProperty=nameWithType>), 스레드 풀을 대상으로입니다. 이 작업 스케줄러는 대기 중이던 비동기 작업이 완료된 위치에서 다시 시작되어야 하는지 또는 재개를 예약해야 하는지를 결정합니다. 기본 스케줄러는 일반적으로 대기 중이던 작업이 완료된 스레드에서 실행이 계속되도록 허용합니다.  
+ 동기화 컨텍스트(<xref:System.Threading.SynchronizationContext> 개체)가 일시 중단될 때(예를 들어 <xref:System.Threading.SynchronizationContext.Current%2A?displayProperty=nameWithType> 속성이 `null`이 아닌 경우) 비동기 메서드를 실행하고 있던 스레드와 연결되어 있는 경우 비동기 메서드는 컨텍스트의 <xref:System.Threading.SynchronizationContext.Post%2A> 메서드를 사용하여 동일한 동기화 컨텍스트에서 다시 시작됩니다. 그러지 않으면 일시 중단될 때 최신 상태인 작업 스케줄러(<xref:System.Threading.Tasks.TaskScheduler> 개체)를 사용합니다. 일반적으로 이 개체는 스레드 풀을 대상으로 하는 기본 작업 스케줄러(<xref:System.Threading.Tasks.TaskScheduler.Default%2A?displayProperty=nameWithType>)입니다. 이 작업 스케줄러는 대기 중이던 비동기 작업이 완료된 위치에서 다시 시작되어야 하는지 또는 재개를 예약해야 하는지를 결정합니다. 기본 스케줄러는 일반적으로 대기 중이던 작업이 완료된 스레드에서 실행이 계속되도록 허용합니다.  
   
- 비동기 메서드가 호출되면 아직 완료되지 않은 대기 가능 인스턴스에 대한 첫 번째 대기 식이 나올 때까지, 즉 호출이 호출자에게 반환될 때까지 함수 본문을 동기적으로 실행합니다. 에서는 비동기 메서드에서 반환 하지 않는 경우 `void`, <xref:System.Threading.Tasks.Task> 또는 <xref:System.Threading.Tasks.Task%601> 진행 중인 계산을 나타내는 개체를 반환 합니다. Void가 아닌 비동기 메서드의 반환 문이 또는 메서드 본문의 끝에 도달 하는 경우 작업 완료에 <xref:System.Threading.Tasks.TaskStatus.RanToCompletion> 최종 상태입니다. 작업에 종료 처리 되지 않은 예외로 인해 컨트롤을 비동기 메서드의 본문을 벗어날 경우는 <xref:System.Threading.Tasks.TaskStatus.Faulted> 상태입니다. 해당 예외는 경우는 <xref:System.OperationCanceledException>, 끝나는 대신 작업의 <xref:System.Threading.Tasks.TaskStatus.Canceled> 상태입니다. 이러한 방식으로 결과 또는 예외가 게시됩니다.  
+ 비동기 메서드가 호출되면 아직 완료되지 않은 대기 가능 인스턴스에 대한 첫 번째 대기 식이 나올 때까지, 즉 호출이 호출자에게 반환될 때까지 함수 본문을 동기적으로 실행합니다. 비동기 메서드가 `void`를 반환하지 않으면 <xref:System.Threading.Tasks.Task> 또는 <xref:System.Threading.Tasks.Task%601> 개체가 반환되어 진행 중인 계산을 나타냅니다. void가 아닌 비동기 메서드에서, return 문이 나오거나 메서드 본문의 끝에 도달하는 경우 작업이 <xref:System.Threading.Tasks.TaskStatus.RanToCompletion> 최종 상태로 완료됩니다. 처리되지 않은 예외로 인해 제어 권한이 비동기 메서드의 본문을 벗어날 경우 작업이 <xref:System.Threading.Tasks.TaskStatus.Faulted> 상태로 종료됩니다. 해당 예외가 <xref:System.OperationCanceledException>인 경우 대신 작업이 <xref:System.Threading.Tasks.TaskStatus.Canceled> 상태로 종료됩니다. 이러한 방식으로 결과 또는 예외가 게시됩니다.  
   
  이 동작은 몇 가지 중요한 형태로 변형되어 발생합니다.  성능상의 이유로 작업이 대기될 때 이미 거의 완료되었으면 제어가 일시 중단되지 않고 함수는 계속 실행됩니다.  또한 원래 컨텍스트로 돌아간다고 해서 항상 원하는 동작을 얻을 수 있는 것은 아니며 변경될 수 있습니다. 이 내용에 대해서는 다음 섹션에서 좀 더 자세히 설명합니다.  
   
 ### <a name="configuring-suspension-and-resumption-with-yield-and-configureawait"></a>Yield 및 ConfigureAwait를 사용하여 일시 중단 및 재개 구성  
- 몇 가지 메서드는 비동기 메서드 실행을 좀 더 강력하게 제어합니다. 예를 들어, 사용할 수는 <xref:System.Threading.Tasks.Task.Yield%2A?displayProperty=nameWithType> 메서드를 비동기 메서드로 점을 소개:  
+ 몇 가지 메서드는 비동기 메서드 실행을 좀 더 강력하게 제어합니다. 예를 들어 다음과 같이 <xref:System.Threading.Tasks.Task.Yield%2A?displayProperty=nameWithType> 메서드를 사용하여 비동기 메서드에 양보점(yield point)을 삽입할 수 있습니다.  
   
 ```csharp  
 public class Task : …  
@@ -63,16 +66,16 @@ Task.Run(async delegate
 });  
 ```  
   
- 사용할 수도 있습니다는 <xref:System.Threading.Tasks.Task.ConfigureAwait%2A?displayProperty=nameWithType> 메서드를 일시 중단 했다가 비동기 메서드가 보다 효율적으로 제어 합니다.  앞서 언급했듯이 기본적으로 비동기 메서드가 일시 중단되었던 당시의 현재 컨텍스트가 캡처되며 캡처된 해당 컨텍스트는 다시 시작할 때 비동기 메서드의 연속을 호출하는 데 사용합니다.  대부분의 경우에서 사용자가 원하는 정확한 행동이 바로 이것일 것입니다.  연속 컨텍스트를 별로 중요하게 생각하지 않을 수도 있고 원래 컨텍스트로의 다시 게시를 피함으로써 더 나은 성능을 얻을 수 있는 경우도 있습니다.  이 위해 사용 하 여는 <xref:System.Threading.Tasks.Task.ConfigureAwait%2A?displayProperty=nameWithType> 캡처하고에 컨텍스트를 다시 시작 않고 실행을 계속가 대기 중인 비동기 작업이 완료 하는 경우 await 작업을 알리는 메서드:  
+ 또한 비동기 메서드에서 일시 중단 및 다시 시작에 대한 제어를 개선하기 위해 <xref:System.Threading.Tasks.Task.ConfigureAwait%2A?displayProperty=nameWithType> 메서드를 사용할 수도 있습니다.  앞서 언급했듯이 기본적으로 비동기 메서드가 일시 중단되었던 당시의 현재 컨텍스트가 캡처되며 캡처된 해당 컨텍스트는 다시 시작할 때 비동기 메서드의 연속을 호출하는 데 사용합니다.  대부분의 경우에서 사용자가 원하는 정확한 행동이 바로 이것일 것입니다.  연속 컨텍스트를 별로 중요하게 생각하지 않을 수도 있고 원래 컨텍스트로의 다시 게시를 피함으로써 더 나은 성능을 얻을 수 있는 경우도 있습니다.  이 기능을 사용하도록 설정하려면 <xref:System.Threading.Tasks.Task.ConfigureAwait%2A?displayProperty=nameWithType> 메서드를 사용하여 대기 작업에 컨텍스트를 캡처하고 다시 시작하지 않고 대기 중인 비동기 작업이 완료될 때마다 실행을 계속하도록 지시합니다.  
   
 ```csharp  
 await someTask.ConfigureAwait(continueOnCapturedContext:false);  
 ```  
   
 ## <a name="canceling-an-asynchronous-operation"></a>비동기 작업 취소  
- 부터는 [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], 취소를 지원 TAP 메서드는 취소 토큰을 허용 하는 하나 이상의 오버 로드를 제공 (<xref:System.Threading.CancellationToken> 개체).  
+ [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)]부터는 취소를 지원하는 TAP 메서드가 취소 토큰(<xref:System.Threading.CancellationToken> 개체)을 수락하는 오버로드를 하나 이상 제공합니다.  
   
- 취소 토큰이 취소 토큰 소스를 통해 생성 됩니다 (<xref:System.Threading.CancellationTokenSource> 개체).  원본의 <xref:System.Threading.CancellationTokenSource.Token%2A> 신호를 받는 취소 토큰을 반환 하는 속성 때 원본의 <xref:System.Threading.CancellationTokenSource.Cancel%2A> 메서드를 호출 합니다.  예를 들어 하나의 웹 페이지를 다운로드 하 고 작업을 취소할 수 있게 되기를 원하는 경우 만들면는 <xref:System.Threading.CancellationTokenSource> 개체 하 고, TAP 메서드를 해당 토큰이 전달,는 소스를 호출 하 <xref:System.Threading.CancellationTokenSource.Cancel%2A> 작업을 취소 준비가 되었습니다. 메서드:  
+ 취소 토큰은 취소 토큰 소스(<xref:System.Threading.CancellationTokenSource> 개체)를 통해 생성됩니다.  소스의 <xref:System.Threading.CancellationTokenSource.Token%2A> 속성은 소스의 <xref:System.Threading.CancellationTokenSource.Cancel%2A> 메서드가 호출될 때 신호를 받을 취소 토큰을 반환합니다.  예를 들어 단일 웹 페이지를 다운로드하려고 하며 작업을 취소할 수 있게 하려는 경우 <xref:System.Threading.CancellationTokenSource> 개체를 만들고, 해당 토큰을 TAP 메서드에 전달한 후 작업을 취소할 준비가 되면 소스의 <xref:System.Threading.CancellationTokenSource.Cancel%2A> 메서드를 호출합니다.  
   
 ```csharp  
 var cts = new CancellationTokenSource();  
@@ -103,7 +106,7 @@ var cts = new CancellationTokenSource();
   
  어떤 스레드에서도 취소 요청이 시작될 수 있습니다.  
   
- 전달할 수는 <xref:System.Threading.CancellationToken.None%2A?displayProperty=nameWithType> 취소 요청 되지 했음을 나타내기 위해 취소 토큰을 허용 하는 모든 메서드에 값입니다.  이 인해는 <xref:System.Threading.CancellationToken.CanBeCanceled%2A?displayProperty=nameWithType> 반환할 속성 `false`, 고 호출된 된 메서드가 적절 하 게 최적화할 수 있습니다.  테스트를 위해 토큰이 이미 취소된 상태 또는 취소 불가능 상태로 시작되어야 하는지를 나타내는 부울 값을 수락하는 생성자를 사용하여 인스턴스화된 미리 취소된 취소 토큰을 전달할 수도 있습니다.  
+ 취소 토큰을 수락하는 모든 메서드에 <xref:System.Threading.CancellationToken.None%2A?displayProperty=nameWithType> 값을 전달하여 취소가 절대 요청되지 않을 것을 나타낼 수 있습니다.  이렇게 하면 <xref:System.Threading.CancellationToken.CanBeCanceled%2A?displayProperty=nameWithType> 속성이 `false`를 반환하며, 호출된 메서드가 이에 따라 최적화될 수 있습니다.  테스트를 위해 토큰이 이미 취소된 상태 또는 취소 불가능 상태로 시작되어야 하는지를 나타내는 부울 값을 수락하는 생성자를 사용하여 인스턴스화된 미리 취소된 취소 토큰을 전달할 수도 있습니다.  
   
  이러한 취소 방법에는 다음과 같은 여러 가지 이점이 있습니다.  
   
@@ -133,10 +136,10 @@ private async void btnDownload_Click(object sender, RoutedEventArgs e)
   
 <a name="combinators"></a>   
 ## <a name="using-the-built-in-task-based-combinators"></a>기본 제공 작업 기반 조합기 사용  
- <xref:System.Threading.Tasks> 네임 스페이스는 작성 하 고 작업을 사용 하기 위한 몇 가지 메서드를 포함 합니다.  
+ <xref:System.Threading.Tasks> 네임스페이스에는 작업을 구성하고 사용하기 위한 몇 가지 메서드가 포함되어 있습니다.  
   
 ### <a name="taskrun"></a>Task.Run  
- <xref:System.Threading.Tasks.Task> 클래스에 몇 <xref:System.Threading.Tasks.Task.Run%2A> 쉽게 수 있는 메서드를 기준으로 오프 로드는 <xref:System.Threading.Tasks.Task> 또는 <xref:System.Threading.Tasks.Task%601> 예를 들어 스레드 풀에:  
+ <xref:System.Threading.Tasks.Task> 클래스에는 <xref:System.Threading.Tasks.Task> 또는 <xref:System.Threading.Tasks.Task%601> 개체로 스레드 풀에 작업을 쉽게 오프로드할 수 있게 하는 몇 가지 <xref:System.Threading.Tasks.Task.Run%2A> 메서드가 포함되어 있습니다. 예를 들면 다음과 같습니다.  
   
 ```csharp  
 public async void button1_Click(object sender, EventArgs e)  
@@ -149,7 +152,7 @@ public async void button1_Click(object sender, EventArgs e)
 }  
 ```  
   
- 이 중 일부를 <xref:System.Threading.Tasks.Task.Run%2A> 메서드 같은 <xref:System.Threading.Tasks.Task.Run%28System.Func%7BSystem.Threading.Tasks.Task%7D%29?displayProperty=nameWithType> 오버 로드, 하기 위한 줄임 속성으로 존재는 <xref:System.Threading.Tasks.TaskFactory.StartNew%2A?displayProperty=nameWithType> 메서드.  와 같은 다른 overloads <xref:System.Threading.Tasks.Task.Run%28System.Func%7BSystem.Threading.Tasks.Task%7D%29?displayProperty=nameWithType>, 예를 들어 오프 로드 된 작업 내에서 await를 사용 하 여 사용:  
+ <xref:System.Threading.Tasks.Task.Run%28System.Func%7BSystem.Threading.Tasks.Task%7D%29?displayProperty=nameWithType> 오버로드와 같은 이러한 <xref:System.Threading.Tasks.Task.Run%2A> 메서드 중 일부는 <xref:System.Threading.Tasks.TaskFactory.StartNew%2A?displayProperty=nameWithType> 메서드의 축약형으로 존재합니다.  <xref:System.Threading.Tasks.Task.Run%28System.Func%7BSystem.Threading.Tasks.Task%7D%29?displayProperty=nameWithType>과 같은 다른 오버로드를 사용하면 오프로드된 작업 내에서 await를 사용할 수 있습니다. 예를 들면 다음과 같습니다.  
   
 ```csharp  
 public async void button1_Click(object sender, EventArgs e)  
@@ -163,10 +166,10 @@ public async void button1_Click(object sender, EventArgs e)
 }  
 ```  
   
- 이러한 오버 로드를 사용 하 여 논리적으로 동일는 <xref:System.Threading.Tasks.TaskFactory.StartNew%2A?displayProperty=nameWithType> 메서드와 함께 <xref:System.Threading.Tasks.TaskExtensions.Unwrap%2A> 작업 병렬 라이브러리의 확장 메서드.  
+ 이러한 오버로드는 <xref:System.Threading.Tasks.TaskFactory.StartNew%2A?displayProperty=nameWithType> 메서드를 작업 병렬 라이브러리의 <xref:System.Threading.Tasks.TaskExtensions.Unwrap%2A> 확장 메서드와 함께 사용하는 것과 논리적으로 동일합니다.  
   
 ### <a name="taskfromresult"></a>Task.FromResult  
- 사용 하 여 <xref:System.Threading.Tasks.Task.FromResult%2A> 에 적용 되지 않습니다. 작업 반환 메서드에서 반환 될 데이터 사용 가능 하 고 정당한 수 이미 있습니다 시나리오에서 메서드에 필요한는 <xref:System.Threading.Tasks.Task%601>:  
+ 데이터를 이미 사용할 수 있거나 <xref:System.Threading.Tasks.Task%601>에 리프트된 작업 반환 메서드에서 데이터를 반환하기만 하면 되는 시나리오에서는 <xref:System.Threading.Tasks.Task.FromResult%2A> 메서드를 사용합니다.  
   
 ```csharp  
 public Task<int> GetValueAsync(string key)  
@@ -184,7 +187,7 @@ private async Task<int> GetValueAsyncInternal(string key)
 ```  
   
 ### <a name="taskwhenall"></a>Task.WhenAll  
- 사용 된 <xref:System.Threading.Tasks.Task.WhenAll%2A> 메서드를 비동기적으로 작업으로 표현 되는 여러 개의 비동기 작업에서 대기 합니다.  이 메서드에는 비일반 작업 집합 또는 균일하지 않은 일반 작업 집합을 지원하는 오버로드(예: 여러 void 반환 작업을 비동기적으로 대기하거나 각 값이 다른 형식을 가질 수 있는 여러 값 반환 메서드를 비동기적으로 대기) 및 균일한 일반 작업 집합을 지원하는 오버로드(여러 `TResult` 반환 메서드를 비동기적으로 대기)가 있습니다.  
+ <xref:System.Threading.Tasks.Task.WhenAll%2A> 메서드를 사용하여 작업(task)으로 표현되는 여러 비동기 작업을 비동기적으로 대기합니다.  이 메서드에는 비일반 작업 집합 또는 균일하지 않은 일반 작업 집합을 지원하는 오버로드(예: 여러 void 반환 작업을 비동기적으로 대기하거나 각 값이 다른 형식을 가질 수 있는 여러 값 반환 메서드를 비동기적으로 대기) 및 균일한 일반 작업 집합을 지원하는 오버로드(여러 `TResult` 반환 메서드를 비동기적으로 대기)가 있습니다.  
   
  여러 고객에게 전자 메일 메시지를 전송하려는 경우를 가정해 봅니다. 한 메시지가 완료될 때까지 기다렸다가 다음 메시지를 전송하지 않도록 메시지 전송을 겹칠 수 있습니다. 또한 보내기 작업이 완료될 때와 오류가 발생했는지 여부도 확인할 수 있습니다.또  
   
@@ -193,7 +196,7 @@ IEnumerable<Task> asyncOps = from addr in addrs select SendMailAsync(addr);
 await Task.WhenAll(asyncOps);  
 ```  
   
- 이 코드 발생할 수 있지만 전파 예외 수 있게 예외를 명시적으로 처리 하지 않습니다는 `await` 에서 결과 작업에서 <xref:System.Threading.Tasks.Task.WhenAll%2A>합니다.  예외를 처리하려면 다음과 같은 코드를 사용할 수 있습니다.  
+ 이 코드는 발생할 수 있는 예외를 명시적으로 처리하지 않지만 <xref:System.Threading.Tasks.Task.WhenAll%2A>의 결과 작업에 대한 `await`에서 예외가 전파되도록 합니다.  예외를 처리하려면 다음과 같은 코드를 사용할 수 있습니다.  
   
 ```csharp  
 IEnumerable<Task> asyncOps = from addr in addrs select SendMailAsync(addr);  
@@ -207,7 +210,7 @@ catch(Exception exc)
 }  
 ```  
   
- 이 경우 비동기 작업이 실패 하면, 모든 예외는에 통합 되도록는 <xref:System.AggregateException> 에 저장 되는 예외는 <xref:System.Threading.Tasks.Task> 에서 반환 되는 <xref:System.Threading.Tasks.Task.WhenAll%2A> 메서드.  그러나 이러한 예외 중 하나만 `await` 키워드에 의해 전파됩니다.  모든 예외를 검사하려는 경우 앞의 코드를 다음과 같이 다시 작성할 수 있습니다.  
+ 이 경우 비동기 작업이 실패하면 모든 예외가 <xref:System.AggregateException> 예외에서 통합되어 <xref:System.Threading.Tasks.Task.WhenAll%2A> 메서드에서 반환되는 <xref:System.Threading.Tasks.Task>에 저장됩니다.  그러나 이러한 예외 중 하나만 `await` 키워드에 의해 전파됩니다.  모든 예외를 검사하려는 경우 앞의 코드를 다음과 같이 다시 작성할 수 있습니다.  
   
 ```csharp  
 Task [] asyncOps = (from addr in addrs select SendMailAsync(addr)).ToArray();  
@@ -251,7 +254,7 @@ catch(Exception exc)
 ```  
   
 ### <a name="taskwhenany"></a>Task.WhenAny  
- 사용할 수는 <xref:System.Threading.Tasks.Task.WhenAny%2A> 메서드를 비동기적으로 기다리는 여러 비동기 작업 중 하나를 완료 하려면 작업으로 표시 합니다.  이 메서드는 다음 네 가지 기본 사용 사례를 따릅니다.  
+ <xref:System.Threading.Tasks.Task.WhenAny%2A> 메서드를 사용하여 작업(task)으로 표현되는 여러 비동기 작업 중 하나가 완료될 때까지만 비동기적으로 대기할 수 있습니다.  이 메서드는 다음 네 가지 기본 사용 사례를 따릅니다.  
   
 -   중복: 작업을 여러 번 수행하고 먼저 완료되는 작업을 선택합니다(예를 들어, 단일의 결과를 생성하는 여러 주식 시세 웹 서비스에 연결하고 가장 빨리 완료되는 결과를 선택).  
   
@@ -259,10 +262,10 @@ catch(Exception exc)
   
 -   스로틀: 다른 작업이 완료되면 추가 작업을 시작할 수 있습니다.  이것은 인터리브 시나리오의 확장입니다.  
   
--   초기 재귀 한도: 예를 들어, 작업 t1으로 표시되는 작업은 다른 작업 t2를 사용하여 <xref:System.Threading.Tasks.Task.WhenAny%2A> 작업에서 그룹화할 수 있으며 <xref:System.Threading.Tasks.Task.WhenAny%2A> 작업에서 대기할 수 있습니다. 시간 제한 또는 취소 또는 일부 다른 신호를 발생 시키는 작업 t 2를 나타낼 수는 <xref:System.Threading.Tasks.Task.WhenAny%2A> t1 완료 되기 전에 완료할 작업을 합니다.  
+-   초기 재귀 한도: 예를 들어, 작업 t1으로 표시되는 작업은 다른 작업 t2를 사용하여 <xref:System.Threading.Tasks.Task.WhenAny%2A> 작업에서 그룹화할 수 있으며 <xref:System.Threading.Tasks.Task.WhenAny%2A> 작업에서 대기할 수 있습니다. 작업 t2는 시간 제한 또는 취소를 나타내거나 t1이 완료되기 전에 <xref:System.Threading.Tasks.Task.WhenAny%2A> 작업이 완료되도록 하는 일부 다른 신호를 나타낼 수 있습니다.  
   
 #### <a name="redundancy"></a>중복성  
- 주식 구매 여부를 결정하려는 경우를 고려해 봅니다.  신뢰할 수 있는 일부 주식 권장 웹 서비스가 있지만 매일의 부하에 따라 각 서비스가 서로 다른 시간에 느려질 수 있습니다.  사용할 수는 <xref:System.Threading.Tasks.Task.WhenAny%2A> 모든 작업이 완료 될 때 알림을 받기 메서드:  
+ 주식 구매 여부를 결정하려는 경우를 고려해 봅니다.  신뢰할 수 있는 일부 주식 권장 웹 서비스가 있지만 매일의 부하에 따라 각 서비스가 서로 다른 시간에 느려질 수 있습니다.  다음과 같이 <xref:System.Threading.Tasks.Task.WhenAny%2A> 메서드를 사용하면 작업이 완료될 때 알림을 받을 수 있습니다.  
   
 ```csharp  
 var recommendations = new List<Task<bool>>()   
@@ -275,9 +278,9 @@ Task<bool> recommendation = await Task.WhenAny(recommendations);
 if (await recommendation) BuyStock(symbol);  
 ```  
   
- 와 달리 <xref:System.Threading.Tasks.Task.WhenAll%2A>, 성공적으로 완료 되는 모든 작업의 래핑 해제 된 결과 반환 하는 <xref:System.Threading.Tasks.Task.WhenAny%2A> 완료 하는 작업을 반환 합니다. 작업이 실패하면 해당 작업이 실패했다는 사실을 알아야 하고, 작업이 성공하면 해당 반환 값과 연결된 작업이 어떤 작업인지 알아야 합니다.  따라서 반환된 작업의 결과에 액세스하거나 이 예제에 나타난 대로 더 기다려야 합니다.  
+ 성공적으로 완료된 모든 작업의 래핑되지 않은 결과를 반환하는 <xref:System.Threading.Tasks.Task.WhenAll%2A>과 달리, <xref:System.Threading.Tasks.Task.WhenAny%2A>는 완료된 작업을 반환합니다. 작업이 실패하면 해당 작업이 실패했다는 사실을 알아야 하고, 작업이 성공하면 해당 반환 값과 연결된 작업이 어떤 작업인지 알아야 합니다.  따라서 반환된 작업의 결과에 액세스하거나 이 예제에 나타난 대로 더 기다려야 합니다.  
   
- 와 마찬가지로 <xref:System.Threading.Tasks.Task.WhenAll%2A>, 예외를 수용 하기 위해 수 있어야 합니다.  완료된 작업이 다시 수신되므로 반환된 작업이 오류를 전파하고 적절히 `try/catch`할 때까지 기다릴 수 있습니다.  
+ <xref:System.Threading.Tasks.Task.WhenAll%2A>과 마찬가지로 예외를 수용할 수 있어야 합니다.  완료된 작업이 다시 수신되므로 반환된 작업이 오류를 전파하고 적절히 `try/catch`할 때까지 기다릴 수 있습니다.  
   
 ```csharp  
 Task<bool> [] recommendations = …;  
@@ -367,7 +370,7 @@ while(imageTasks.Count > 0)
 }  
 ```  
   
- 인터리빙에 복잡 한 계산 처리와 관련 된 시나리오에 적용할 수 있습니다는 <xref:System.Threading.ThreadPool> 다운로드 한 이미지의 예:  
+ 다운로드한 이미지의 <xref:System.Threading.ThreadPool>에 대해 계산 집약적 처리를 발생시키는 시나리오에 인터리브를 적용할 수도 있습니다. 예를 들면 다음과 같습니다.  
   
 ```csharp  
 List<Task<Bitmap>> imageTasks =   
@@ -422,7 +425,7 @@ while(imageTasks.Count > 0)
 ```  
   
 #### <a name="early-bailout"></a>초기 재귀 한도 초과  
- 사용자의 취소 요청에 동시에 응답하면서 작업이 완료되기를 비동기적으로 기다리는 경우를 고려해 봅니다(예: 사용자가 취소 단추를 클릭한 경우). 다음 코드에서는 이 시나리오를 보여 줍니다.  
+ 사용자의 취소 요청에 동시에 응답하면서 작업이 완료되기를 비동기적으로 기다리는 경우를 고려해 봅니다(예: 사용자가 취소 단추를 클릭한 경우). 다음 코드에서는 이 시나리오를 보여줍니다.  
   
 ```csharp  
 private CancellationTokenSource m_cts;   
@@ -482,12 +485,12 @@ public async void btnRun_Click(object sender, EventArgs e)
 }  
 ```  
   
- 초기 재귀 한도의 또 다른 예를 사용 하는 <xref:System.Threading.Tasks.Task.WhenAny%2A> 메서드와 함께 <xref:System.Threading.Tasks.Task.Delay%2A> 메서드를 다음 섹션에서 설명 했 듯이 합니다.  
+ 조기 종료의 또 다른 예제에는 <xref:System.Threading.Tasks.Task.WhenAny%2A> 메서드를 <xref:System.Threading.Tasks.Task.Delay%2A> 메서드와 함께 사용하는 방법(다음 섹션에서 논의함)이 포함됩니다.  
   
 ### <a name="taskdelay"></a>Task.Delay  
- 사용할 수는 <xref:System.Threading.Tasks.Task.Delay%2A?displayProperty=nameWithType> 소개 하기 위한 메서드는 비동기 메서드 실행을 일시 중지 합니다.  이것은 폴링 루프 작성 및 미리 결정된 기간 동안 사용자 입력 처리 지연 등의 다양한 기능에 유용합니다.  <xref:System.Threading.Tasks.Task.Delay%2A?displayProperty=nameWithType> 메서드도 유용할 수 있습니다 함께에서 <xref:System.Threading.Tasks.Task.WhenAny%2A?displayProperty=nameWithType> 대기 제한 시간에 구현에 대 한 합니다.  
+ <xref:System.Threading.Tasks.Task.Delay%2A?displayProperty=nameWithType> 메서드를 사용하여 비동기 메서드 실행에 일시 중지를 삽입할 수 있습니다.  이것은 폴링 루프 작성 및 미리 결정된 기간 동안 사용자 입력 처리 지연 등의 다양한 기능에 유용합니다.  또한 <xref:System.Threading.Tasks.Task.Delay%2A?displayProperty=nameWithType> 메서드를 <xref:System.Threading.Tasks.Task.WhenAny%2A?displayProperty=nameWithType>와 함께 사용하면 대기 시간 제한을 구현하는 데 유용할 수 있습니다.  
   
- 더 큰 비동기 작업(예: ASP.NET 웹 서비스)에 속하는 작업(task)이 완료하는 데 너무 오래 걸리는 경우 전체 작업에 문제가 발생하며, 완료가 실패하는 경우에는 더 큰 문제가 됩니다.  이러한 이유로 비동기 작업을 대기하는 경우 시간이 초과되도록 할 수 있어야 합니다.  동기 <xref:System.Threading.Tasks.Task.Wait%2A?displayProperty=nameWithType>, <xref:System.Threading.Tasks.Task.WaitAll%2A?displayProperty=nameWithType>, 및 <xref:System.Threading.Tasks.Task.WaitAny%2A?displayProperty=nameWithType> 방법 사용할 수 있지만 해당 시간 제한 값을 <xref:System.Threading.Tasks.TaskFactory.ContinueWhenAll%2A?displayProperty=nameWithType> / <xref:System.Threading.Tasks.Task.WhenAny%2A?displayProperty=nameWithType> 앞에서 언급 한 및 <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType> / <xref:System.Threading.Tasks.Task.WhenAny%2A?displayProperty=nameWithType>다릅니다.  대신 사용할 수 있습니다 <xref:System.Threading.Tasks.Task.Delay%2A?displayProperty=nameWithType> 및 <xref:System.Threading.Tasks.Task.WhenAny%2A?displayProperty=nameWithType> 제한 시간을 구현 하는 조합에서 합니다.  
+ 더 큰 비동기 작업(예: ASP.NET 웹 서비스)에 속하는 작업(task)이 완료하는 데 너무 오래 걸리는 경우 전체 작업에 문제가 발생하며, 완료가 실패하는 경우에는 더 큰 문제가 됩니다.  이러한 이유로 비동기 작업을 대기하는 경우 시간이 초과되도록 할 수 있어야 합니다.  동기 <xref:System.Threading.Tasks.Task.Wait%2A?displayProperty=nameWithType>, <xref:System.Threading.Tasks.Task.WaitAll%2A?displayProperty=nameWithType> 및 <xref:System.Threading.Tasks.Task.WaitAny%2A?displayProperty=nameWithType> 메서드는 시간 제한 값을 허용하지만, 해당 <xref:System.Threading.Tasks.TaskFactory.ContinueWhenAll%2A?displayProperty=nameWithType>/<xref:System.Threading.Tasks.Task.WhenAny%2A?displayProperty=nameWithType> 및 앞에서 언급한 <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType>/<xref:System.Threading.Tasks.Task.WhenAny%2A?displayProperty=nameWithType> 메서드는 시간 제한 값을 허용하지 않습니다.  대신, <xref:System.Threading.Tasks.Task.Delay%2A?displayProperty=nameWithType> 및 <xref:System.Threading.Tasks.Task.WhenAny%2A?displayProperty=nameWithType>를 함께 사용하여 시간 제한을 구현할 수 있습니다.  
   
  예를 들어 UI 응용 프로그램에서 이미지를 다운로드하려고 하며 이미지를 다운로드하는 동안에 UI를 사용하지 않도록 설정하려고 합니다. 그러나 다운로드가 너무 오래 걸리는 경우 UI를 다시 사용하도록 설정하고 다운로드를 취소하려고 합니다.  
   
@@ -516,7 +519,7 @@ public async void btnDownload_Click(object sender, EventArgs e)
 }  
 ```  
   
- 마찬가지 여러 다운로드 하기 때문에 <xref:System.Threading.Tasks.Task.WhenAll%2A> 는 작업을 반환 합니다.  
+ <xref:System.Threading.Tasks.Task.WhenAll%2A>이 작업을 반환하므로 동일한 사항이 여러 다운로드에 적용됩니다.  
   
 ```csharp  
 public async void btnDownload_Click(object sender, RoutedEventArgs e)  
@@ -609,7 +612,7 @@ string pageContents = await RetryOnFault(
 ```  
   
 ### <a name="needonlyone"></a>NeedOnlyOne  
- 경우에 따라 작업의 대기 시간 및 성공 가능성을 개선하기 위해 중복성을 이용할 수 있습니다.  주식 시세를 제공하는 여러 웹 서비스가 있으나 각 서비스는 하루 중 다른 시간에 다른 수준의 품질 및 응답 시간을 제공할 수 있습니다.  이러한 변동을 처리하려면 모든 웹 서비스로 요청을 보내고 응답을 받는 즉시 나머지 요청을 취소할 수 있습니다.  도우미 함수를 구현하면 여러 작업을 시작하고, 하나가 완료되기를 기다린 후 나머지는 취소하는 이러한 일반적인 패턴을 보다 쉽게 구현할 수 있습니다. 다음 예제의 `NeedOnlyOne` 함수는 이 시나리오를 보여 줍니다.  
+ 경우에 따라 작업의 대기 시간 및 성공 가능성을 개선하기 위해 중복성을 이용할 수 있습니다.  주식 시세를 제공하는 여러 웹 서비스가 있으나 각 서비스는 하루 중 다른 시간에 다른 수준의 품질 및 응답 시간을 제공할 수 있습니다.  이러한 변동을 처리하려면 모든 웹 서비스로 요청을 보내고 응답을 받는 즉시 나머지 요청을 취소할 수 있습니다.  도우미 함수를 구현하면 여러 작업을 시작하고, 하나가 완료되기를 기다린 후 나머지는 취소하는 이러한 일반적인 패턴을 보다 쉽게 구현할 수 있습니다. 다음 예제의 `NeedOnlyOne` 함수는 이 시나리오를 보여줍니다.  
   
 ```csharp  
 public static async Task<T> NeedOnlyOne(  
@@ -639,7 +642,7 @@ double currentPrice = await NeedOnlyOne(
 ```  
   
 ### <a name="interleaved-operations"></a>인터리브 작업  
- 사용 하 여 잠재적인 성능 문제가 <xref:System.Threading.Tasks.Task.WhenAny%2A> 메서드를 작업의 매우 큰 집합으로 작업 하는 경우에 인터리빙 시나리오를 지원 합니다.  호출할 때마다 <xref:System.Threading.Tasks.Task.WhenAny%2A> 각 작업과 함께 등록 되는 연속 작업에서 발생 합니다. 작업 수가 N이면 인터리브 작업의 수명 동안 O(N2) 연속이 만들어집니다.  큰 작업을 하는 경우에는 성능 문제를 해결하기 위해 (다음 예의 `Interleaved`와 같은) 조합기를 사용할 수 있습니다.  
+ 매우 큰 작업 집합을 사용할 때 <xref:System.Threading.Tasks.Task.WhenAny%2A> 메서드를 사용하여 인터리브 시나리오를 지원할 경우 성능 문제가 발생할 수 있습니다.  <xref:System.Threading.Tasks.Task.WhenAny%2A>에 대한 모든 호출로 각 작업에 연속이 등록되게 됩니다. 작업 수가 N이면 인터리브 작업의 수명 동안 O(N2) 연속이 만들어집니다.  큰 작업을 하는 경우에는 성능 문제를 해결하기 위해 (다음 예의 `Interleaved`와 같은) 조합기를 사용할 수 있습니다.  
   
 ```csharp  
 static IEnumerable<Task<T>> Interleaved<T>(IEnumerable<Task<T>> tasks)  
@@ -703,10 +706,10 @@ public static Task<T[]> WhenAllOrFirstException<T>(IEnumerable<Task<T>> tasks)
 ```  
   
 ## <a name="building-task-based-data-structures"></a>작업 기반 데이터 구조 구축  
- 사용자 지정 작업 기반 조합 기를 구축 하는 기능, 이외에 데이터 구조에 포함 <xref:System.Threading.Tasks.Task> 및 <xref:System.Threading.Tasks.Task%601> 함께 조인 하는 데 필요한 동기화를 사용 하면 매우 강력한을 비동기 작업의 결과 나타내고 비동기 시나리오에 사용할 사용자 지정 데이터 구조를 구축할 입력 합니다.  
+ 사용자 지정 작업 기반 조합기를 구축하는 기능 외에도, <xref:System.Threading.Tasks.Task> 및 <xref:System.Threading.Tasks.Task%601>에서 비동기 작업의 결과와 조인을 위해 필요한 동기화를 모두 나타내는 데이터 구조를 유지하면 비동기 시나리오에서 사용할 사용자 지정 데이터 구조를 빌드할 수 있는 강력한 형식이 구현됩니다.  
   
 ### <a name="asynccache"></a>AsyncCache  
- 결과 또는 예외가 해당 작업의 중요 한 측면은는 그 수 게 전달할 수 이들은 모두 수 기다려야 합니다, 레지스터 연속 하는 여러 소비자가 하나 가져오기 (의 경우 <xref:System.Threading.Tasks.Task%601>) 등입니다.  이렇게 하면 <xref:System.Threading.Tasks.Task> 및 <xref:System.Threading.Tasks.Task%601> 완벽 하 게 비동기 캐싱 인프라에서 사용할 수에 적합 합니다.  사용할 경우 약간의 예로 하지만 강력한 비동기 캐시의 맨 위에 빌드된 <xref:System.Threading.Tasks.Task%601>:  
+ 작업의 한 가지 중요한 측면은 작업이 여러 소비자에게 전달될 수 있으며, 이들 모두가 작업을 대기하고, 작업에 연속을 등록하고, 해당 결과 또는 예외를 가져올(<xref:System.Threading.Tasks.Task%601>의 경우) 수 있다는 것입니다.  이로 인해 <xref:System.Threading.Tasks.Task> 및 <xref:System.Threading.Tasks.Task%601> 개체가 비동기 캐싱 인프라에서 사용되는 데 완전히 적합하게 됩니다.  다음은 <xref:System.Threading.Tasks.Task%601> 개체를 기반으로 빌드한 작지만 강력한 비동기 캐시의 예입니다.  
   
 ```csharp  
 public class AsyncCache<TKey, TValue>  
@@ -733,7 +736,7 @@ public class AsyncCache<TKey, TValue>
 }  
 ```  
   
- [AsyncCache\<TKey, TValue >](http://go.microsoft.com/fwlink/p/?LinkId=251941) 클래스는으로 허용 대리자 생성자를 사용 하는 함수는 `TKey` 반환는 <xref:System.Threading.Tasks.Task%601>합니다.  캐시에서 이전에 액세스했던 값은 내부 사전에 저장되며, 캐시에 동시에 액세스하더라도 `AsyncCache`는 키당 하나의 작업만 생성되도록 합니다.  
+ [AsyncCache\<TKey,TValue>](http://go.microsoft.com/fwlink/p/?LinkId=251941) 클래스는 `TKey`를 받고 <xref:System.Threading.Tasks.Task%601> 개체를 반환하는 함수를 해당 생성자에 대한 대리자로 허용합니다.  캐시에서 이전에 액세스했던 값은 내부 사전에 저장되며, 캐시에 동시에 액세스하더라도 `AsyncCache`는 키당 하나의 작업만 생성되도록 합니다.  
   
  예를 들어 다운로드한 웹 페이지에 대한 캐시를 빌드할 수 있습니다.  
   
@@ -818,7 +821,7 @@ private static void Produce(int data)
 }  
 ```  
   
- <xref:System.Threading.Tasks.Dataflow> 네임 스페이스는 포함 된 <xref:System.Threading.Tasks.Dataflow.BufferBlock%601> 비슷한 방식 이지만 사용자 지정 컬렉션 유형을 작성할 필요 없이 사용할 수 있는 형식:  
+ <xref:System.Threading.Tasks.Dataflow> 네임스페이스에는 <xref:System.Threading.Tasks.Dataflow.BufferBlock%601> 형식이 포함됩니다. 이 형식을 다음과 유사한 방식으로 사용할 수 있지만, 사용자 지정 컬렉션 형식을 빌드하지 않아도 됩니다.  
   
 ```csharp  
 private static BufferBlock<int> m_data = …;  
@@ -839,7 +842,7 @@ private static void Produce(int data)
 ```  
   
 > [!NOTE]
->  <xref:System.Threading.Tasks.Dataflow> 네임 스페이스는에서 사용할 수는 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 통해 **NuGet**합니다. 포함 된 어셈블리를 설치 하려면는 <xref:System.Threading.Tasks.Dataflow> 네임 스페이스에서 프로젝트를 열고 [!INCLUDE[vs_dev11_long](../../../includes/vs-dev11-long-md.md)], 선택 **NuGet 패키지 관리** 프로젝트 메뉴를 선택한 다음 Microsoft.Tpl.Dataflow 패키지에 대 한 온라인 검색 합니다.  
+>  <xref:System.Threading.Tasks.Dataflow> 네임스페이스는 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]에서 **NuGet**을 통해 사용할 수 있습니다. <xref:System.Threading.Tasks.Dataflow> 네임스페이스가 포함된 어셈블리를 설치하려면 [!INCLUDE[vs_dev11_long](../../../includes/vs-dev11-long-md.md)]에서 프로젝트를 열고 프로젝트 메뉴에서 **NuGet 패키지 관리**를 선택한 후 온라인으로 Microsoft.Tpl.Dataflow 패키지를 검색합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [TAP(작업 기반 비동기 패턴)](../../../docs/standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap.md)  

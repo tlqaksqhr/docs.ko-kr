@@ -13,15 +13,18 @@ helpviewer_keywords:
 - threading [.NET Framework],synchronizing threads
 - managed threading
 ms.assetid: b782bcb8-da6a-4c6a-805f-2eb46d504309
-caps.latest.revision: "17"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 58fb520365d0a80a8f8bc46e3fdbd23483fdf07f
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 79d6e384458e289c4da8587eae66486a054aad08
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="overview-of-synchronization-primitives"></a>동기화 기본 형식 개요
 <a name="top"></a> .NET Framework에서는 스레드 조작을 제어하고 경합 상태를 방지할 수 있는 동기화 기본 형식 범위를 제공합니다. 이들 기본 형식은 크게 잠금, 신호 및 연관 작업의 세 범주로 구분됩니다.  
@@ -47,9 +50,9 @@ ms.lasthandoff: 11/21/2017
  잠금을 통해 리소스를 한 번에 하나의 스레드 또는 지정된 수의 스레드로 제어할 수 있습니다. 잠금이 사용 중일 때 단독 잠금을 요청하는 스레드는 잠금을 사용할 수 있을 때까지 차단됩니다.  
   
 ### <a name="exclusive-locks"></a>단독 잠금  
- 가장 단순한 잠금 형식은 코드 블록에 대한 액세스를 제어하는 C#의 `lock` 문과, Visual Basic의 `SyncLock` 문입니다. 해당 블록을 임계 영역이라고 합니다. `lock` 문을 사용 하 여 구현 되는 <xref:System.Threading.Monitor.Enter%2A?displayProperty=nameWithType> 및 <xref:System.Threading.Monitor.Exit%2A?displayProperty=nameWithType> 메서드, 변수를 사용 `try…catch…finally` 잠금이 해제 되도록 하는 블록입니다.  
+ 가장 단순한 잠금 형식은 코드 블록에 대한 액세스를 제어하는 C#의 `lock` 문과, Visual Basic의 `SyncLock` 문입니다. 해당 블록을 임계 영역이라고 합니다. `lock` 문은 <xref:System.Threading.Monitor.Enter%2A?displayProperty=nameWithType> 및 <xref:System.Threading.Monitor.Exit%2A?displayProperty=nameWithType> 메서드를 사용하여 구현하고 `try…catch…finally` 블록을 사용하여 잠금이 해제되었는지를 확인합니다.  
   
- 일반적으로 사용 하 여는 `lock` 또는 `SyncLock` 문을 작은 블록의 코드, 이상 스패닝 되지 않게 단일 메서드를 보호 하는 가장 좋은 방법은 사용 하 여 <xref:System.Threading.Monitor> 클래스. 강력하지만 <xref:System.Threading.Monitor> 클래스는 잠금 및 교착 상태를 분리할 수 있습니다.  
+ 일반적으로 `lock` 또는 `SyncLock` 문을 통해 작은 코드 블록을 보호하여 메서드가 두 개 이상 스패닝되지 않게 하는 것이 <xref:System.Threading.Monitor> 클래스를 사용하는 가장 좋은 방법입니다. 강력하지만 <xref:System.Threading.Monitor> 클래스는 잠금 및 교착 상태를 분리할 수 있습니다.  
   
 #### <a name="monitor-class"></a>Monitor 클래스  
  <xref:System.Threading.Monitor> 클래스는 `lock` 문과 함께 사용할 수 있는 추가적인 기능을 제공합니다.  
@@ -80,7 +83,7 @@ ms.lasthandoff: 11/21/2017
  개념적인 개요를 보려면 [뮤텍스](../../../docs/standard/threading/mutexes.md)를 참조하세요.  
   
 #### <a name="spinlock-class"></a>SpinLock 클래스  
- 부터는 [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)]를 사용할 수 있습니다는 <xref:System.Threading.SpinLock> 오버 헤드에 따라 필요 하면 클래스 <xref:System.Threading.Monitor> 성능이 저하 됩니다. <xref:System.Threading.SpinLock>는 잠긴 임계 영역을 발견하면 잠금을 사용할 수 있을 때까지 루프에서 스핀합니다. 잠시 잠금이 유지되면 스핀을 통해 차단보다 향상된 성능을 제공할 수 있습니다. 그러나 잠금이 몇 십 주기를 유지 하는 경우, <xref:System.Threading.SpinLock> 은으로 <xref:System.Threading.Monitor>, 하지만 더 많은 CPU 주기를 사용 하므로 다른 스레드 또는 프로세스의 성능이 저하 될 수 있습니다.  
+ [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)]부터는 <xref:System.Threading.Monitor>에 필요한 오버헤드의 성능이 저하될 때 <xref:System.Threading.SpinLock> 클래스를 사용할 수 있습니다. <xref:System.Threading.SpinLock>는 잠긴 임계 영역을 발견하면 잠금을 사용할 수 있을 때까지 루프에서 스핀합니다. 잠시 잠금이 유지되면 스핀을 통해 차단보다 향상된 성능을 제공할 수 있습니다. 그러나 잠금이 몇십 회 주기 이상 유지되면 <xref:System.Threading.SpinLock>은 <xref:System.Threading.Monitor>처럼 동작하지만 더 많은 CPU 주기를 사용하므로 스레드 또는 프로세스의 성능이 저하될 수 있습니다.  
   
 ### <a name="other-locks"></a>기타 잠금  
  잠금은 단독 잠금일 필요가 없습니다. 리소스에 동시에 액세스할 수 있는 스레드 수를 제한하는 것이 유용할 수 있습니다. 세마포와 판독기 및 작성기 잠금은 이런 풀링된 리소스 액세스를 제어하도록 디자인되었습니다.  
@@ -155,7 +158,7 @@ ms.lasthandoff: 11/21/2017
   
 <a name="spinwait"></a>   
 ## <a name="spinwait"></a>SpinWait  
- 부터는 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]를 사용할 수 있습니다는 <xref:System.Threading.SpinWait?displayProperty=nameWithType> 신호 이벤트가 받거나 조건이 충족 될 때까지 대기 하는 스레드에 하지만 실제 대기 시간이 otherwi 또는 대기 핸들을 사용 하 여 필요한 대기 시간 보다 작을 것으로 예상 되는 경우 구조체 se 현재 스레드를 차단 합니다. <xref:System.Threading.SpinWait>를 사용하면 대기하는 동안 스핀하고 지정된 시간 안에 조건이 충족되지 않을 경우에만 대기 또는 중지를 통해 양보하는 짧은 기간을 지정할 수 있습니다.  
+ [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]부터는 이벤트가 신호를 받거나 조건이 충족될 때까지 스레드가 대기해야 하지만 대기 핸들을 사용하거나 현재 스레드를 차단하여 실제 대기 시간이 필요한 대기 시간보다 적을 것으로 예상할 때 <xref:System.Threading.SpinWait?displayProperty=nameWithType> 구조체를 사용할 수 있습니다. <xref:System.Threading.SpinWait>를 사용하면 대기하는 동안 스핀하고 지정된 시간 안에 조건이 충족되지 않을 경우에만 대기 또는 중지를 통해 양보하는 짧은 기간을 지정할 수 있습니다.  
   
  [맨 위로 이동](#top)  
   

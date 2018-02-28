@@ -16,21 +16,24 @@ helpviewer_keywords:
 - generics [.NET Framework], collections
 - generic collections [.NET Framework]
 ms.assetid: 5b646751-6ab7-465c-916c-b1a76aefa9f5
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 94da20072f793e137b0b7545c1a658ed20537a7f
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: d7e7d11446c14cffbef1e5cade5f082874187636
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="generic-collections-in-the-net-framework"></a>.NET Framework의 제네릭 컬렉션
 이 항목에서는 .NET Framework의 제네릭 컬렉션 클래스 및 기타 제네릭 형식을 개략적으로 설명합니다.  
   
 ## <a name="generic-collections-in-the-net-framework"></a>.NET Framework의 제네릭 컬렉션  
- .NET Framework 클래스 라이브러리는 <xref:System.Collections.Generic> 및 <xref:System.Collections.ObjectModel> 네임스페이스에서 다양한 제네릭 컬렉션 클래스를 제공합니다. 이러한 클래스에 대 한 자세한 내용은 참조 [일반적으로 사용 되는 한 컬렉션 형식](../../../docs/standard/collections/commonly-used-collection-types.md)합니다.  
+ .NET Framework 클래스 라이브러리는 <xref:System.Collections.Generic> 및 <xref:System.Collections.ObjectModel> 네임스페이스에서 다양한 제네릭 컬렉션 클래스를 제공합니다. 이러한 클래스에 대한 자세한 내용은 [일반적으로 사용되는 컬렉션 형식](../../../docs/standard/collections/commonly-used-collection-types.md)을 참조하세요.  
   
 ### <a name="systemcollectionsgeneric"></a>System.Collections.Generic  
  대부분의 제네릭 컬렉션 형식은 제네릭이 아닌 형식과 직접적인 연관이 있습니다. <xref:System.Collections.Generic.Dictionary%602>는 <xref:System.Collections.Hashtable>의 제네릭 버전으로, <xref:System.Collections.DictionaryEntry> 대신 제네릭 구조체인 <xref:System.Collections.Generic.KeyValuePair%602>를 열거형에 사용합니다.  

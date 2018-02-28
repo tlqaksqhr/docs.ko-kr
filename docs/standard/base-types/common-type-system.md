@@ -21,15 +21,18 @@ helpviewer_keywords:
 - namespaces [.NET Framework], types
 - types, about types
 ms.assetid: 53c57c96-83e1-4ee3-9543-9ac832671a89
-caps.latest.revision: "25"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 9f9952cfd6ed2d5bac66d1cd5e3c8eed7506cd5c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 26ee5cffd5e04a8c78cf5913b286fadfaab03c7c
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="common-type-system"></a>공용 형식 시스템
 공용 형식 시스템은 공용 언어 런타임에 형식을 선언하고 사용 및 관리하는 방법을 정의할 뿐 아니라 언어 간 통합에 대한 런타임 지원의 중요한 부분을 차지합니다. 공용 형식 시스템은 다음과 같은 기능을 수행합니다.  
@@ -95,7 +98,7 @@ ms.lasthandoff: 11/21/2017
   
 <a name="Structures"></a>   
 ### <a name="structures"></a>구조체  
- 구조체는 <xref:System.ValueType?displayProperty=nameWithType>에서 암시적으로 파생된 뒤 <xref:System.Object?displayProperty=nameWithType>에서 파생되는 값 형식입니다. 구조체는 적은 메모리를 요구하는 값을 나타낼 때 유용할 뿐 아니라 강력한 형식의 매개 변수를 갖는 메서드에 값으로 전달되는 매개 변수로 값을 전달할 때도 유용합니다. .NET에서는 모든 기본 데이터 형식 (<xref:System.Boolean>, <xref:System.Byte>, <xref:System.Char>, <xref:System.DateTime>, <xref:System.Decimal>, <xref:System.Double>, <xref:System.Int16>, <xref:System.Int32>, <xref:System.Int64>, <xref:System.SByte>, <xref:System.Single>, <xref:System.UInt16>, <xref:System.UInt32>, 및 <xref:System.UInt64>) 구조체로 정의 됩니다.  
+ 구조체는 <xref:System.ValueType?displayProperty=nameWithType>에서 암시적으로 파생된 뒤 <xref:System.Object?displayProperty=nameWithType>에서 파생되는 값 형식입니다. 구조체는 적은 메모리를 요구하는 값을 나타낼 때 유용할 뿐 아니라 강력한 형식의 매개 변수를 갖는 메서드에 값으로 전달되는 매개 변수로 값을 전달할 때도 유용합니다. .NET에서 모든 기본 데이터 형식(<xref:System.Boolean>, <xref:System.Byte>, <xref:System.Char>, <xref:System.DateTime>, <xref:System.Decimal>, <xref:System.Double>, <xref:System.Int16>, <xref:System.Int32>, <xref:System.Int64>, <xref:System.SByte>, <xref:System.Single>, <xref:System.UInt16>, <xref:System.UInt32> 및 <xref:System.UInt64>)은 구조체로 정의됩니다.  
   
  클래스와 마찬가지로 구조체는 데이터(구조체의 필드)와 해당 데이터에 대해 수행할 수 있는 작업(구조체의 메서드)을 정의합니다. 이는 <xref:System.Object?displayProperty=nameWithType> 및 <xref:System.ValueType?displayProperty=nameWithType> 클래스에 정의된 가상 메서드와 값 형식 자체에 정의된 메서드를 비롯하여 구조체에서 메서드를 호출할 수 있음을 의미합니다. 다시 말하면 구조체에는 필드, 속성, 이벤트뿐 아니라 정적 및 비정적 메서드가 포함될 수 있습니다. 구조체의 인스턴스를 만들어 매개 변수로 전달하고 지역 변수로 저장하거나 다른 값 형식 또는 참조 형식의 필드에 저장할 수 있습니다. 구조체는 인터페이스를 구현할 수도 있습니다.  
   
@@ -124,7 +127,7 @@ ms.lasthandoff: 11/21/2017
   
  <xref:System.FlagsAttribute> 특성은 비트 필드라는 특수한 열거형을 나타냅니다. 런타임 자체에서는 기존의 열거형과 비트 필드를 구분하지 않지만 언어에 따라서는 이를 구분할 수도 있습니다. 이를 구분할 경우 열거형이 아니라 비트 필드에 비트 연산자를 적용하여 명명되지 않은 값을 생성할 수 있습니다. 일반적으로 열거형은 요일, 국가 또는 지역 이름 등과 같은 고유한 요소의 목록에 사용하고, 비트 필드는 `Red And Big And Fast` 같은 조합에서 나타날 수 있는 특성 및 수량 목록에 사용합니다.  
   
- 다음 예제에서는 비트 필드와 기존의 열거형을 둘 다 사용하는 방법을 보여 줍니다.  
+ 다음 예제에서는 비트 필드와 기존의 열거형을 둘 다 사용하는 방법을 보여줍니다.  
   
  [!code-csharp[Conceptual.Types.Enum#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.types.enum/cs/example.cs#1)]
  [!code-vb[Conceptual.Types.Enum#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.types.enum/vb/example.vb#1)]  
@@ -166,7 +169,7 @@ ms.lasthandoff: 11/21/2017
   
  대부분의 경우 콜백 메서드와 마찬가지로 대리자는 하나의 메서드만 나타내며, 대리자를 만들고 호출하는 것 외에는 필요한 작업이 없습니다.  
   
- 여러 메서드를 나타내는 대리자에 대 한.NET 메서드를 제공는 <xref:System.Delegate> 및 <xref:System.MulticastDelegate> 대리자의 호출 목록에 메서드 추가 등의 작업을 지 원하는 클래스를 위임 (의 <xref:System.Delegate.Combine%2A?displayProperty=nameWithType> 메서드), (의 메서드제거<xref:System.Delegate.Remove%2A?displayProperty=nameWithType> 메서드), 호출 목록 가져오기 (의 <xref:System.Delegate.GetInvocationList%2A?displayProperty=nameWithType> 메서드).  
+ .NET에서는 여러 메서드를 나타내는 대리자에 대해 <xref:System.Delegate> 및 <xref:System.MulticastDelegate> 대리자 클래스의 메서드를 제공하여 대리자 호출 목록에 메서드 추가(<xref:System.Delegate.Combine%2A?displayProperty=nameWithType> 메서드), 메서드 제거(<xref:System.Delegate.Remove%2A?displayProperty=nameWithType> 메서드), 호출 목록 가져오기(<xref:System.Delegate.GetInvocationList%2A?displayProperty=nameWithType> 메서드) 등과 같은 작업을 지원합니다.  
   
 > [!NOTE]
 >  C#, C++ 및 Visual Basic에서는 이벤트 처리기 대리자에 대해 이러한 메서드를 사용할 필요가 없습니다. 이들 언어에서는 이벤트 처리기를 추가하고 제거하기 위한 구문을 제공합니다.  
@@ -258,14 +261,14 @@ ms.lasthandoff: 11/21/2017
   
 -   읽기 전용 변수. 해당 값은 클래스 생성자에서만 할당될 수 있습니다.  
   
- 다음 예제에서는 이 두 가지 읽기 전용 필드를 사용하는 방법을 보여 줍니다.  
+ 다음 예제에서는 이 두 가지 읽기 전용 필드를 사용하는 방법을 보여줍니다.  
   
  [!code-csharp[Conceptual.Types.Members.Fields#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.types.members.fields/cs/example.cs#1)]
  [!code-vb[Conceptual.Types.Members.Fields#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.types.members.fields/vb/example.vb#1)]  
   
 <a name="Properties"></a>   
 ### <a name="properties"></a>속성  
- 속성은 형식의 값 또는 상태에 이름을 지정하고 속성의 값을 가져오거나 설정하는 데 사용하는 메서드를 정의합니다. 속성은 기본 형식, 기본 형식의 컬렉션, 사용자 정의 형식 또는 사용자 정의 형식의 컬렉션일 수 있습니다. 속성은 주로 형식의 공용 인터페이스를 형식의 실제 표시와 무관하게 유지하기 위해 사용합니다. 따라서 속성은 클래스에 직접 저장되지 않은 값을 반영하거나(예를 들어 속성이 계산된 값을 반환하는 경우) 값이 전용 필드에 할당되기 전에 유효성 검사를 수행할 수 있습니다. 다음 예제에서는 후자의 패턴을 보여 줍니다.  
+ 속성은 형식의 값 또는 상태에 이름을 지정하고 속성의 값을 가져오거나 설정하는 데 사용하는 메서드를 정의합니다. 속성은 기본 형식, 기본 형식의 컬렉션, 사용자 정의 형식 또는 사용자 정의 형식의 컬렉션일 수 있습니다. 속성은 주로 형식의 공용 인터페이스를 형식의 실제 표시와 무관하게 유지하기 위해 사용합니다. 따라서 속성은 클래스에 직접 저장되지 않은 값을 반영하거나(예를 들어 속성이 계산된 값을 반환하는 경우) 값이 전용 필드에 할당되기 전에 유효성 검사를 수행할 수 있습니다. 다음 예제에서는 후자의 패턴을 보여줍니다.  
   
  [!code-csharp[Conceptual.Types.Members.Properties#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.types.members.properties/cs/example.cs#1)]
  [!code-vb[Conceptual.Types.Members.Properties#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.types.members.properties/vb/example.vb#1)]  
