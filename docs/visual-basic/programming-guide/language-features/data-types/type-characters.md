@@ -46,11 +46,11 @@ ms.assetid: 6353cb9b-6ee4-4af6-a5a8-88ce39f90cc5
 author: rpetrusha
 ms.author: ronpet
 ms.manager: wpickett
-ms.openlocfilehash: bdb675b9605d03829c95897382daa6d03cf1b041
-ms.sourcegitcommit: d2da0142247ef42a219a5d2907f153e62dc6ea0d
+ms.openlocfilehash: 20a9a30689fb62a6956987b06470e76eeb42ebab
+ms.sourcegitcommit: 3a96c706e4dbb4667bf3bf37edac9e1666646f93
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/27/2018
 ---
 # <a name="type-characters-visual-basic"></a>입력 문자 (Visual Basic)
 
@@ -88,7 +88,7 @@ A *리터럴* 데이터 형식의 특정 값의 텍스트 표현입니다.
 |리터럴 텍스트 형식|기본 데이터 형식|예제|  
 |-----------------------------|-----------------------|-------------|  
 |숫자, 더 소수 부분|`Integer`|`2147483647`|  
-|너무 커서 숫자, 더 소수 부분`Integer`|`Long`|`2147483648`|  
+|너무 커서 숫자, 더 소수 부분 `Integer`|`Long`|`2147483648`|  
 |숫자, 소수 부분|`Double`|`1.2`|  
 |큰따옴표로 묶인|`String`|`"A"`|  
 |숫자 기호 사이 포함 된|`Date`|`#5/17/1993 9:32 AM#`|  
@@ -123,7 +123,7 @@ A *리터럴* 데이터 형식의 특정 값의 텍스트 표현입니다.
 |기 수|접두사|유효한 숫자 값|예|
 |-----------------|------------|------------------------|-------------|
 |16진수|`&H`|0-9 및 A-F|`&HFFFF`|
-|이진 (밑 2)|`0B`|0-1|`&B01111100`|
+|이진 (밑 2)|`&B`|0-1|`&B01111100`|
 |8진수|`&O`|0-7|`&O77`|
 
 Visual Basic 2017 년부터 밑줄만 사용할 수 있습니다 (`_`) 정수 계열 리터럴의 가독성 향상을 위해 그룹 구분 기호로 합니다. 사용 하 여 다음 예제는 `_` 문자 리터럴 이진 8 비트 그룹으로 그룹화입니다.

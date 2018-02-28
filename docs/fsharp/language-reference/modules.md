@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: 46de2d18-da51-40fa-a262-92edecada79d
-ms.openlocfilehash: 89401c1f889be6c5585a302e3a7ac62478573b95
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 9b189903511f53d3ecceb30f3d056e189b00511d
+ms.sourcegitcommit: 3a96c706e4dbb4667bf3bf37edac9e1666646f93
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 02/27/2018
 ---
 # <a name="modules"></a>모듈
 
@@ -91,7 +91,7 @@ F # 모듈은 F # 코드 구문 형식, 값, 함수 값의 코드 등의 그룹 
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/modules/snippet6612.fs)]
 
-## <a name="module-rec-allowing-mutual-recursive-code-at-the-module-level"></a>모듈 `rec`: 모듈 수준에서 상호 재귀 코드
+## <a name="recursive-modules"></a>재귀 모듈
 
 F # 4.1 상호는 재귀적일 수에 포함 된 모든 코드를 허용 하는 모듈의 개념을 소개 합니다.  통해 이렇게 `module rec`합니다.  사용 하 여 `module rec` 의 형식 및 모듈 간에 상호 참조 코드를 작성할 수 없는 일부 그리고를 완화할 수 있습니다.  다음은 이러한 예입니다.
 
