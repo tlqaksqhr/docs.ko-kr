@@ -2,11 +2,13 @@
 title: "오류 번호는 0에서 65535 사이의 범위 내에 있어야 합니다."
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-visual-basic
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
-f1_keywords: vbrMaxErrNumber
+f1_keywords:
+- vbrMaxErrNumber
 ms.assetid: c5cb5753-516e-4568-9d63-0e9a2a4c5812
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: dotnet-bot
 ms.author: dotnetcontent
 ms.openlocfilehash: 33fae43039c9c39be2a3b2a448da606d55c80f3d

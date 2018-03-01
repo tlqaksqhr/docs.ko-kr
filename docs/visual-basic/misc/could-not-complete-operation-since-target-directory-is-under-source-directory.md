@@ -2,11 +2,13 @@
 title: "대상 디렉터리가 소스 디렉터리 아래에 있기 때문에 작업을 완료할 수 없습니다."
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-visual-basic
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
-f1_keywords: vbrIO_CyclicOperation
+f1_keywords:
+- vbrIO_CyclicOperation
 ms.assetid: 850d3a24-5d51-4ac8-a912-630efcd75278
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: dotnet-bot
 ms.author: dotnetcontent
 ms.openlocfilehash: 0a17877b2335ee010a97f0b522bd4c399867cd7d
