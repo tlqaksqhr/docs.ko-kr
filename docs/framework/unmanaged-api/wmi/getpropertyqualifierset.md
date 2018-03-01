@@ -3,18 +3,26 @@ title: "GetPropertyQualifierSet 함수 (관리 되지 않는 API 참조)"
 description: "GetPropertyQualifierSet 함수 속성에 대해 설정할 한정자를 검색 합니다."
 ms.date: 11/06/2017
 ms.prod: .net-framework
-ms.technology: dotnet-clr
+ms.technology:
+- dotnet-clr
 ms.topic: reference
-api_name: GetPropertyQualifierSet
-api_location: WMINet_Utils.dll
-api_type: DLLExport
-f1_keywords: GetPropertyQualifierSet
-helpviewer_keywords: GetPropertyQualifierSet function [.NET WMI and performance counters]
-topic_type: Reference
+api_name:
+- GetPropertyQualifierSet
+api_location:
+- WMINet_Utils.dll
+api_type:
+- DLLExport
+f1_keywords:
+- GetPropertyQualifierSet
+helpviewer_keywords:
+- GetPropertyQualifierSet function [.NET WMI and performance counters]
+topic_type:
+- Reference
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: 7ca2981c8833abaafd5d206b66d6e91f34e2c91d
 ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT

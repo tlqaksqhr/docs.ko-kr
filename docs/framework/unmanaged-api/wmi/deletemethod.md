@@ -3,18 +3,26 @@ title: "DeleteMethod 함수 (관리 되지 않는 API 참조)"
 description: "DeleteMethod 함수 CIM 클래스 정의에서 지정된 된 메서드를 삭제합니다."
 ms.date: 11/06/2017
 ms.prod: .net-framework
-ms.technology: dotnet-clr
+ms.technology:
+- dotnet-clr
 ms.topic: reference
-api_name: DeleteMethod
-api_location: WMINet_Utils.dll
-api_type: DLLExport
-f1_keywords: DeleteMethod
-helpviewer_keywords: DeleteMethod function [.NET WMI and performance counters]
-topic_type: Reference
+api_name:
+- DeleteMethod
+api_location:
+- WMINet_Utils.dll
+api_type:
+- DLLExport
+f1_keywords:
+- DeleteMethod
+helpviewer_keywords:
+- DeleteMethod function [.NET WMI and performance counters]
+topic_type:
+- Reference
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: 03b147d2fd76e34c6152a0b41ee14319811e9300
 ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
