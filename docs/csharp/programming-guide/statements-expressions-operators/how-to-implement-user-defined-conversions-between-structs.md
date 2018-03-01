@@ -2,11 +2,13 @@
 title: "방법: 구조체 간의 사용자 정의 변환 구현(C# 프로그래밍 가이드)"
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
-helpviewer_keywords: user-defined conversions [C#]
+helpviewer_keywords:
+- user-defined conversions [C#]
 ms.assetid: 97839aef-8fbc-40d5-9769-6b569bc2710b
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
 ms.openlocfilehash: 7d86cbd48347e6951f6b6883a385d80d68697c9c

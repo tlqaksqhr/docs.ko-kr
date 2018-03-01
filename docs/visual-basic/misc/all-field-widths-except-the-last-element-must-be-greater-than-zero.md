@@ -2,11 +2,13 @@
 title: "마지막 요소를 제외한 모든 필드 너비는 0보다 커야 합니다."
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-visual-basic
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
-f1_keywords: vbrTextFieldParser_FieldWidthsMustPositive
+f1_keywords:
+- vbrTextFieldParser_FieldWidthsMustPositive
 ms.assetid: 41d8c661-a749-4c89-be56-905c6e7c3c9d
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: dotnet-bot
 ms.author: dotnetcontent
 ms.openlocfilehash: b348494c0a3103641d29998218b546de0d432e2a
