@@ -10,15 +10,15 @@ ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: 8db75596-19a9-4eda-b20d-a12d517c8cc1
-ms.openlocfilehash: beee874e3a549531b520d4ac2150bc10dcab7725
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 776a2ddf5563a954e462b3888ebf05da90241e4b
+ms.sourcegitcommit: 655fd4f78741967f80c409cef98347fdcf77857d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 02/28/2018
 ---
 # <a name="get-started-with-f-in-visual-studio-for-mac"></a>Mac 용 Visual Studio에서 F #으로 시작
 
-F # 및 Visual F # 도구는 Mac IDE에 대 한 Visual Studio에서 지원 됩니다.  를 시작 하려면 [Mac 용 Visual Studio 다운로드](https://www.visualstudio.com/downloads/download-visual-studio-vs)아직 없는 경우, 합니다.  이 문서에서는, Mac 용 Visual Studio 커뮤니티 2017을 사용 하지만 사용할 수 있습니다 F # 원하는 버전으로 합니다.
+F # 및 Visual F # 도구는 Mac IDE에 대 한 Visual Studio에서 지원 됩니다.  를 시작 하려면 [Mac 용 Visual Studio 다운로드](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs)아직 없는 경우, 합니다.  이 문서에서는, Mac 용 Visual Studio 커뮤니티 2017을 사용 하지만 사용할 수 있습니다 F # 원하는 버전으로 합니다.
 
 ## <a name="installing-f"></a>F # 설치 #
 
@@ -38,8 +38,7 @@ Mac 용 Visual Studio에서 가장 기본적인 프로젝트 중 하나는 콘�
 
 4. 프로젝트에 이름을 지정 하 고 응용 프로그램에 사용할 옵션을 선택 합니다.  선택한 옵션을 기반으로 생성 되는 디렉터리 구조를 표시 하는 화면의 측면에 미리 보기 창, 표시 합니다.  
 
-5. 
-              **만들기**를 클릭합니다.  이제 F # 프로젝트를 솔루션 탐색기에 나타납니다.
+5. **만들기**를 클릭합니다.  이제 F # 프로젝트를 솔루션 탐색기에 나타납니다.
 
 ## <a name="writing-your-code"></a>코드 작성
 

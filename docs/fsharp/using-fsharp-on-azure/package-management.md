@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: dd32ef9c-5416-467e-9fa3-c9ee3bb08456
-ms.openlocfilehash: 22dc94ea69e0dfb95e22da4bc64ce915398190d2
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: d1a807053f5c4c45492f206739922aacdf6d4122
+ms.sourcegitcommit: 655fd4f78741967f80c409cef98347fdcf77857d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 02/28/2018
 ---
 # <a name="package-management-for-f-azure-dependencies"></a>F# Azure 종속성에 대한 패키지 관리
 
@@ -26,7 +26,7 @@ Azure 개발에 대 한 패키지를 가져오는 패키지 관리자를 사용 
 
     > paket add nuget WindowsAzure.Storage
 
-사용 중인 경우 또는 [모노](http://www.mono-project.com/) 플랫폼 간.NET 개발을 위한:
+사용 중인 경우 또는 [모노](https://www.mono-project.com/) 플랫폼 간.NET 개발을 위한:
 
     > mono paket.exe add nuget WindowsAzure.Storage
 

@@ -10,16 +10,16 @@ ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: 25697ef6-465e-4248-9de5-1d199d4a8b59
-ms.openlocfilehash: 68462a24a9fbd1ee671d7e335f2774adf3476750
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: f721b5b378bf70fb594cad66bd90bd96a0320ee2
+ms.sourcegitcommit: 655fd4f78741967f80c409cef98347fdcf77857d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 02/28/2018
 ---
 # <a name="type-providers"></a>형식 공급자
 
 > [!NOTE]
-이 가이드는 F# 3.0에서 작성되었으며 업데이트될 예정입니다.  최신 크로스 플랫폼 형식 공급자에 대해서는 [FSharp.Data](http://fsharp.github.io/FSharp.Data/)를 참조하세요.
+이 가이드는 F# 3.0에서 작성되었으며 업데이트될 예정입니다.  최신 크로스 플랫폼 형식 공급자에 대해서는 [FSharp.Data](https://fsharp.github.io/FSharp.Data/)를 참조하세요.
 
 F# 형식 공급자는 사용자 프로그램에서 사용할 형식, 속성 및 메서드를 제공하는 구성 요소입니다. 형식 공급자는 정보가 풍부한 프로그래밍의 F# 3.0 지원에 중요한 부분입니다. 정보가 풍부한 프로그래밍의 핵심은 인터넷 및 현대 엔터프라이즈 환경에 있는 다양한 정보 소스와 함께 작동할 수 있도록 장벽을 제거하는 데 있습니다. 프로그램에 정보 소스를 포함하는 것에 대한 한 가지 큰 장벽은 해당 정보를 프로그래밍 언어 환경에서 사용하기 위해 형식, 속성 및 메서드로 표현해야 한다는 점입니다. 이러한 형식을 수동으로 작성할 경우 시간이 많이 걸리고 관리하기 어렵습니다. 일반적인 대안은 파일을 프로젝트에 추가하는 코드 생성기를 사용하는 것입니다. 그러나 기존의 코드 생성 형식은 서비스 참조를 조정할 때마다 생성된 코드를 바꾸어야 하기 때문에 F#에서 지원하는 프로그래밍의 예비 모드에 잘 통합되지 않습니다.
 

@@ -10,15 +10,15 @@ ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: 8db75596-19a9-4eda-b20d-a12d517c8cc1
-ms.openlocfilehash: 944bbbba6a26634ace269d86cbbdde9ef9de7bcd
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 818bf50507a88e1d765da8d0505ed8da4790b71f
+ms.sourcegitcommit: 655fd4f78741967f80c409cef98347fdcf77857d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 02/28/2018
 ---
 # <a name="get-started-with-f-in-visual-studio"></a>Visual Studio에서 F #으로 시작.
 
-F # 및 Visual F # 도구는 Visual Studio IDE에서 지원 됩니다.  를 시작 하려면 [Visual Studio 다운로드](https://www.visualstudio.com/downloads/download-visual-studio-vs)아직 없는 경우, 합니다.  이 문서에서는 Visual Studio 2017 Community Edition을 사용 하지만 사용할 수 있습니다 F # 원하는 버전으로 합니다.
+F # 및 Visual F # 도구는 Visual Studio IDE에서 지원 됩니다.  를 시작 하려면 [Visual Studio 다운로드](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs)아직 없는 경우, 합니다.  이 문서에서는 Visual Studio 2017 Community Edition을 사용 하지만 사용할 수 있습니다 F # 원하는 버전으로 합니다.
 
 ## <a name="installing-f"></a>F # 설치 #
 

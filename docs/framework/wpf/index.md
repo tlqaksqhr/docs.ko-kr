@@ -28,17 +28,17 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 10f4b45eba5d1b6a4baabe184ad51a3f3fdba3eb
-ms.sourcegitcommit: f28752eab00d2bd97e971542c0f49ce63cfbc239
+ms.openlocfilehash: a6d4596ad10c518a4ddcb9b295393b57ffb243b0
+ms.sourcegitcommit: 655fd4f78741967f80c409cef98347fdcf77857d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/29/2018
+ms.lasthandoff: 02/28/2018
 ---
 # <a name="windows-presentation-foundation"></a>Windows Presentation Foundation
 Visual Studio에서 Windows Presentation Foundation (WPF) 기간 업무 windows 데스크톱 응용 프로그램을 구축 하기 위한 통합된 프로그래밍 모델 개발자에 게 제공 합니다.  
   
  [Windows Presentation Foundation으로 데스크톱 응용 프로그램 만들기](/visualstudio/designers/create-modern-desktop-applications-with-windows-presentation-foundation)  
-  
+
  [Visual Studio 및 Blend for Visual Studio에서 XAML 디자인](/visualstudio/designers/designing-xaml-in-visual-studio)  
   
- [Visual Studio 가져오기](https://www.visualstudio.com/features/wpf-vs)
+ [Visual Studio 가져오기](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs)

@@ -10,16 +10,16 @@ ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: 81adb2eb-625f-4ad8-aeaa-8f672a6d79a2
-ms.openlocfilehash: 1df0344e8dab2b40d82d1b9c61ccd2f026906243
-ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
+ms.openlocfilehash: 901457dce358f768b4f4c980703e09f6c744918e
+ms.sourcegitcommit: 655fd4f78741967f80c409cef98347fdcf77857d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/09/2017
+ms.lasthandoff: 02/28/2018
 ---
 # <a name="walkthrough-generating-f-types-from-an-edmx-schema-file"></a>연습: EDMX 스키마 파일에서 F# 형식 생성
 
 > [!NOTE]
-이 가이드는 F # 3.0 용으로 작성 된 하 고 업데이트 됩니다.  최신 크로스 플랫폼 형식 공급자에 대해서는 [FSharp.Data](http://fsharp.github.io/FSharp.Data/)를 참조하세요.
+이 가이드는 F # 3.0 용으로 작성 된 하 고 업데이트 됩니다.  최신 크로스 플랫폼 형식 공급자에 대해서는 [FSharp.Data](https://fsharp.github.io/FSharp.Data/)를 참조하세요.
 
 > [!NOTE]
 API 참조 링크 MSDN을 이동 합니다.  docs.microsoft.com API 참조가 완전하지 않습니다.
@@ -222,7 +222,7 @@ changeHireDate("Abercrombie", "Kim", DateTime.Parse("1/12/1998"))
 1. 메뉴 모음에서 **SQL**, **TRANSACT-SQL 편집기**, **새 쿼리** 데이터베이스를 만들 수 있습니다. 메시지가 나타나면 데이터베이스 서버 및 인스턴스를 지정합니다.
 <br />
 
-2. 에 설명 된 대로 학생 데이터베이스가 생성 하는 데이터베이스 스크립트의 내용을 복사한는 [Entity Framework 설명서](http://msdn.microsoft.com/data/JJ614587.aspx) 데이터 개발자 센터에서.
+2. 에 설명 된 대로 학생 데이터베이스가 생성 하는 데이터베이스 스크립트의 내용을 복사한는 [Entity Framework 설명서](https://msdn.microsoft.com/data/JJ614587.aspx) 데이터 개발자 센터에서.
 <br />
 
 3. 삼각형 기호 있는 도구 모음 단추를 선택 하거나 Ctrl + Q 키를 선택 하 여 SQL 스크립트를 실행 합니다.
@@ -275,7 +275,7 @@ changeHireDate("Abercrombie", "Kim", DateTime.Parse("1/12/1998"))
 
 [연습: 형식 공급자 및 엔터티를 사용하여 SQL Database에 액세스](accessing-a-sql-database-entities.md)
 
-[Entity Framework](http://msdn.microsoft.com/data/ef)
+[Entity Framework](https://msdn.microsoft.com/data/ef)
 
 [.edmx 파일 개요](https://msdn.microsoft.com/library/f4c8e7ce-1db6-417e-9759-15f8b55155d4)
 

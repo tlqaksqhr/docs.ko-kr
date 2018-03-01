@@ -9,11 +9,11 @@ ms.technology: dotnet-docker
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 576a717cbdcb8cf465e8cb7b4898df1df7447aa7
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 21826e2c90d234d873cc06bfae3bd22ce89a62d2
+ms.sourcegitcommit: 655fd4f78741967f80c409cef98347fdcf77857d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 02/28/2018
 ---
 # <a name="development-process-for-azure"></a>Azure에 대 한 개발 프로세스
 
@@ -36,7 +36,7 @@ ms.lasthandoff: 12/23/2017
 
 **그림 10-1입니다.** Visual Studio 2017에.NET Core 작업 부하를 설치 합니다.
 
-[Visual Studio 2017 다운로드](https://www.visualstudio.com/downloads/)
+[Visual Studio 2017 다운로드](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs)
 
 **Visual Studio Code 및 CLI dotnet** (Mac, Linux 및 Windows 용 플랫폼 간 도구). 모든 개발 언어를 지 원하는 플랫폼 간을 간단 하 고 편집기를 선호 하는 경우에 Microsoft Visual Studio 코드 및 CLI dotnet를 사용할 수 있습니다. 이러한 제품은 개발자 워크플로 간소화 하는 단순 하면서도 강력한 환경을 제공 합니다. 또한 Visual Studio Code C에 대 한 확장을 지원\# 및 웹 개발에 intellisense 및 편집기 내에서 바로 가기 작업을 제공 합니다.
 
@@ -56,9 +56,9 @@ CI/CD를 사용 하 여 ASP.NET Core 응용 프로그램 개발을 시작 하려
 
 앱에 대 한 릴리스 파이프라인을 만들려면 소스 제어에서 응용 프로그램 코드를 포함 하도록 해야 합니다. 로컬 저장소를 설정 하 고 팀 프로젝트의 원격 저장소에 연결 합니다. 이러한 지침을 따르세요.
 
--   [Git 및 Visual Studio와 코드를 공유할](https://www.visualstudio.com/docs/git/share-your-code-in-git-vs) 또는
+-   [Git 및 Visual Studio와 코드를 공유할](https://docs.microsoft.com/vsts/git/share-your-code-in-git-vs) 또는
 
--   [TFVC 및 Visual Studio와 코드 공유](https://www.visualstudio.com/docs/tfvc/share-your-code-in-tfvc-vs)
+-   [TFVC 및 Visual Studio와 코드 공유](https://docs.microsoft.com/vsts/tfvc/share-your-code-in-tfvc-vs)
 
 Azure 앱 서비스 응용 프로그램 배포를 만듭니다. Azure 포털에서 응용 프로그램 서비스 블레이드로 이동 하 여 웹 앱을 만듭니다. 클릭 + 추가 웹 응용 프로그램 템플릿을 선택 하 만들기를 클릭 하 고 이름과 기타 세부 정보를 제공 합니다. 웹 응용 프로그램 {name}에서 액세스할 수 있습니다. azurewebsites.net 합니다.
 
@@ -68,13 +68,13 @@ Azure 앱 서비스 응용 프로그램 배포를 만듭니다. Azure 포털에�
 
 CI 빌드 프로세스는 새 코드 프로젝트의 소스 제어 리포지토리에으로 모두 커밋됩니다 때마다 자동화 된 빌드를 수행 합니다. 이렇게 하면 코드를 작성 하는 즉각적인 피드백 (및을 이상적으로 자동화 된 테스트를 통과) 잠재적으로 배포할 수 있습니다. 이 CI 빌드는 웹을 생성 하는 패키지 아티팩트를 배포 하 고 CD 프로세스에서 사용할 수 있도록 게시 합니다.
 
-[CI 빌드 프로세스 정의](https://www.visualstudio.com/docs/build/apps/aspnet/aspnetcore-to-azure#ci)
+[CI 빌드 프로세스 정의](https://docs.microsoft.com/vsts/build-release/apps/aspnet/build-aspnet-core#ci)
 
 시스템을 때마다 새 코드를 커밋합니다에 빌드 대기 하므로 연속 통합을 사용 하도록 설정 해야 합니다. 빌드를 테스트 하 고 웹 생성 되어 있는지 확인 하십시오. 해당 아티팩트 중 하나로 패키지를 배포 합니다.
 
 빌드에 성공 하면 CD 프로세스는 CI 빌드 결과를 Azure 웹 앱에 배포 합니다. 이 구성 하려면 만들고 구성 된 *릴리스*, 있는 Azure 앱 서비스를 배포 합니다.
 
-[CD 릴리스 프로세스를 정의 합니다.](https://www.visualstudio.com/docs/build/apps/aspnet/aspnetcore-to-azure#cd)
+[CD 릴리스 프로세스를 정의 합니다.](https://docs.microsoft.com/vsts/build-release/apps/aspnet/build-aspnet-core#cd)
 
 CI/CD 파이프라인 구성 되 면 단순히 웹 응용 프로그램에 업데이트를 확인을 배포 하는 소스 제어에 커밋합니다.
 
@@ -92,7 +92,7 @@ Azure에 배포에 대 한 ASP.NET Core 응용 프로그램을 개발 하는 것
 
 #### <a name="step-2-application-code-repository"></a>2단계. 응용 프로그램 코드 리포지토리
 
-코드를 팀과 공유할 준비가 될 때마다 팀의 공유 원본 리포지토리에 변경 내용을 원본 로컬 리포지토리에서 푸시할 해야 있습니다. 사용자 지정 분기에서 작업 한 경우이 단계 일반적 코드 공유 분기에 병합 (아마도 방법으로 [끌어오기 요청](https://www.visualstudio.com/docs/git/pull-requests)).
+코드를 팀과 공유할 준비가 될 때마다 팀의 공유 원본 리포지토리에 변경 내용을 원본 로컬 리포지토리에서 푸시할 해야 있습니다. 사용자 지정 분기에서 작업 한 경우이 단계 일반적 코드 공유 분기에 병합 (아마도 방법으로 [끌어오기 요청](https://docs.microsoft.com/vsts/git/pull-requests)).
 
 #### <a name="step-3-build-server-continuous-integration-build-test-package"></a>3단계. 빌드 서버: 연속 통합 합니다. 빌드, 테스트, 패키지
 
@@ -113,7 +113,7 @@ Azure에 배포에 대 한 ASP.NET Core 응용 프로그램을 개발 하는 것
 ## <a name="references"></a>참조
 
 **빌드 및 Azure에 ASP.NET Core 응용 프로그램 배포**  
-<https://www.visualstudio.com/docs/build/apps/aspnet/aspnetcore-to-azure>
+<https://docs.microsoft.com/vsts/build-release/apps/aspnet/build-aspnet-core>
 
 
 >[!div class="step-by-step"]

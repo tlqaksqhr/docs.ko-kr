@@ -10,16 +10,16 @@ ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: 1c413eb0-16a5-4c1a-9a4e-ad6877e645d6
-ms.openlocfilehash: 7177eca33ded712308bbc6198040d833b7364d55
-ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
+ms.openlocfilehash: dbc5d889fb7883b4327180fdf34accf45bf519e7
+ms.sourcegitcommit: 655fd4f78741967f80c409cef98347fdcf77857d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/09/2017
+ms.lasthandoff: 02/28/2018
 ---
 # <a name="walkthrough-accessing-a-sql-database-by-using-type-providers"></a>연습: 형식 공급자를 사용하여 SQL Database에 액세스
 
 > [!NOTE]
-이 가이드는 F # 3.0 용으로 작성 된 하 고 업데이트 됩니다.  최신 크로스 플랫폼 형식 공급자에 대해서는 [FSharp.Data](http://fsharp.github.io/FSharp.Data/)를 참조하세요.
+이 가이드는 F # 3.0 용으로 작성 된 하 고 업데이트 됩니다.  최신 크로스 플랫폼 형식 공급자에 대해서는 [FSharp.Data](https://fsharp.github.io/FSharp.Data/)를 참조하세요.
 
 > [!NOTE]
 API 참조 링크 MSDN을 이동 합니다.  docs.microsoft.com API 참조가 완전하지 않습니다.
@@ -96,7 +96,7 @@ open Microsoft.FSharp.Linq
 
 #### <a name="to-set-up-the-type-provider-from-a-direct-database-connection"></a>데이터베이스를 직접 연결에서 형식 공급자를 설정 하려면
 
-형식 공급자를 사용 하 여 SQL 데이터베이스를 쿼리 하는 데 사용할 수 있는 형식을 만드는 데 필요한 코드의 두 가지 중요 한 줄 있습니다. 첫째, 형식 공급자를 인스턴스화할 수 있습니다. 이렇게 하려면 형식 약어에 대 한 모양을 만들는 `SqlDataConnection` 정적 제네릭 매개 변수를 사용 합니다. `SqlDataConnection`SQL 형식 공급자는 및와 혼동 해서는 안 `SqlConnection` 즉 입력 ADO.NET 프로그래밍에서 사용 합니다. 형식 공급자를 호출할 수,에 연결 하려는 데이터베이스 있고 연결 문자열을 사용할 경우 다음 코드를 사용 합니다. 제공 된 예에서는 문자열에 대 한 사용자 지정 연결 문자열을 대체 합니다. 예를 들어 MYSERVER 및 데이터베이스 인스턴스는 인스턴스, 데이터베이스 이름, MyDatabase 이며 데이터베이스를 선택한 연결 문자열에 액세스 하려면 Windows 인증을 사용 하려면 서버도 되는 경우 다음 예제 코드에 제공 합니다.
+형식 공급자를 사용 하 여 SQL 데이터베이스를 쿼리 하는 데 사용할 수 있는 형식을 만드는 데 필요한 코드의 두 가지 중요 한 줄 있습니다. 첫째, 형식 공급자를 인스턴스화할 수 있습니다. 이렇게 하려면 형식 약어에 대 한 모양을 만들는 `SqlDataConnection` 정적 제네릭 매개 변수를 사용 합니다. `SqlDataConnection` SQL 형식 공급자는 및와 혼동 해서는 안 `SqlConnection` 즉 입력 ADO.NET 프로그래밍에서 사용 합니다. 형식 공급자를 호출할 수,에 연결 하려는 데이터베이스 있고 연결 문자열을 사용할 경우 다음 코드를 사용 합니다. 제공 된 예에서는 문자열에 대 한 사용자 지정 연결 문자열을 대체 합니다. 예를 들어 MYSERVER 및 데이터베이스 인스턴스는 인스턴스, 데이터베이스 이름, MyDatabase 이며 데이터베이스를 선택한 연결 문자열에 액세스 하려면 Windows 인증을 사용 하려면 서버도 되는 경우 다음 예제 코드에 제공 합니다.
 
 ```fsharp
 type dbSchema = SqlDataConnection<"Data Source=MYSERVER\INSTANCE;Initial Catalog=MyDatabase;Integrated Security=SSPI;">

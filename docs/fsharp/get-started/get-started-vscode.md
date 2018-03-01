@@ -10,15 +10,15 @@ ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: 49775139-082e-442f-b5a2-dd402399b5d2
-ms.openlocfilehash: 336316eaf474f4c10d63657f178ce4a336ad7a54
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 83099005074ea273eae5319edacd2e2ee0f7145f
+ms.sourcegitcommit: 655fd4f78741967f80c409cef98347fdcf77857d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 02/28/2018
 ---
 # <a name="getting-started-with-f-in-visual-studio-code-with-ionide"></a>F # Ionide 사용 하 여 Visual Studio 코드에서 시작
 
-작성할 수 있습니다 F # [Visual Studio Code](https://code.visualstudio.com) 와 [Ionide 플러그 인](https://marketplace.visualstudio.com/items?itemName=Ionide.Ionide-fsharp)는 뛰어난 플랫폼 간 사용할 수 있는 경량 IDE 경험을 얻을 수 IntelliSense 및 기본 코드 리팩터링 합니다.  방문 [Ionide.io](http://ionide.io) 플러그 인 집합에 대 한 자세한 내용을 보려면 합니다.
+작성할 수 있습니다 F # [Visual Studio Code](https://code.visualstudio.com) 와 [Ionide 플러그 인](https://marketplace.visualstudio.com/items?itemName=Ionide.Ionide-fsharp)는 뛰어난 플랫폼 간 사용할 수 있는 경량 IDE 경험을 얻을 수 IntelliSense 및 기본 코드 리팩터링 합니다.  방문 [Ionide.io](https://ionide.io) 플러그 인 집합에 대 한 자세한 내용을 보려면 합니다.
 
 ## <a name="prerequisites"></a>필수 구성 요소
 
@@ -39,9 +39,9 @@ Visual Studio를 설치 하지 않으려는 경우 다음 지침을 따르세요
 2. OS에 대 한 Windows SDK를 설치 합니다.
 
     * [Windows 10 SDK](https://dev.windows.com/en-US/downloads/windows-10-sdk)
-    * [Windows 8.1 SDK](http://msdn.microsoft.com/windows/desktop/bg162891)
-    * [Windows 8 SDK](http://msdn.microsoft.com/windows/hardware/hh852363.aspx)
-    * [Windows 7 SDK](http://www.microsoft.com/download/details.aspx?id=8279)
+    * [Windows 8.1 SDK](https://developer.microsoft.com/windows/downloads/sdk-archive)
+    * [Windows 8 SDK](https://developer.microsoft.com/windows/downloads/sdk-archive)
+    * [Windows 7 SDK](https://www.microsoft.com/download/details.aspx?id=8279)
 
 3. 설치는 [Microsoft Build Tools 2015](https://www.microsoft.com/en-us/download/details.aspx?id=48159)합니다.  또한 설치 해야 할 수 있습니다 [Microsoft 빌드 도구 2013](https://www.microsoft.com/en-us/download/details.aspx?id=40760)합니다.
 
@@ -65,9 +65,9 @@ C:\Program Files\Microsoft SDKs\F#\4.0\Framework\v4.0\fsiAnyCpu.exe
 
 Ionide 컴파일러 및 도구를 자동으로 검색 하지만 어떤 이유로 그렇지 않은 경우 (예를 들어, Visual F # 도구에 설치 된 다른 디렉터리), 포함 된 폴더를 수동으로 추가할 수 있습니다 (`...\Microsoft SDKs\F#\4.0`)를 사용자의 경로입니다.
 
-### <a name="macos"></a>MacOS
+### <a name="macos"></a>macOS
 
-Ionide macOS 등에서 사용 하 여 [모노](http://www.mono-project.com)합니다.  Homebrew를 통해 모노 macOS에 설치 하는 가장 쉬운 방법은 됩니다.  단순히 터미널에 다음을 입력 합니다.
+Ionide macOS 등에서 사용 하 여 [모노](https://www.mono-project.com)합니다.  Homebrew를 통해 모노 macOS에 설치 하는 가장 쉬운 방법은 됩니다.  단순히 터미널에 다음을 입력 합니다.
 
 ```
 brew install mono
@@ -75,7 +75,7 @@ brew install mono
 
 ### <a name="linux"></a>Linux
 
-Linux에서 Ionide 또한 사용 하 여 [모노](http://www.mono-project.com)합니다.  Debian 또는 Ubuntu 인 경우 다음을 사용할 수 있습니다.
+Linux에서 Ionide 또한 사용 하 여 [모노](https://www.mono-project.com)합니다.  Debian 또는 Ubuntu 인 경우 다음을 사용할 수 있습니다.
 
 ```
 sudo apt-get update
@@ -96,7 +96,7 @@ Visual Studio Code에서 설치할 수는 [code.visualstudio.com](https://code.v
 
     ![](media/getting-started-vscode/vscode-ext.png)
 
-Visual Studio 코드에서 지원 되는 F #에 필요한 유일한 플러그 인 [Ionide fsharp](https://marketplace.visualstudio.com/items?itemName=Ionide.Ionide-fsharp)합니다.  그러나 설치할 수도 있습니다 [Ionide 모조](https://marketplace.visualstudio.com/items?itemName=Ionide.Ionide-FAKE) 을 받을 [가짜](http://fsharp.github.io/FAKE/) 지원 및 [Ionide Paket](https://marketplace.visualstudio.com/items?itemName=Ionide.Ionide-Paket) 가져오려는 [Paket](https://fsprojects.github.io/Paket/) 지원 합니다.  가짜 및 Paket는 프로젝트를 빌드하고 각각 종속성을 관리 하기 위한 추가 F # 커뮤니티 도구입니다.
+Visual Studio 코드에서 지원 되는 F #에 필요한 유일한 플러그 인 [Ionide fsharp](https://marketplace.visualstudio.com/items?itemName=Ionide.Ionide-fsharp)합니다.  그러나 설치할 수도 있습니다 [Ionide 모조](https://marketplace.visualstudio.com/items?itemName=Ionide.Ionide-FAKE) 을 받을 [가짜](https://fake.build/) 지원 및 [Ionide Paket](https://marketplace.visualstudio.com/items?itemName=Ionide.Ionide-Paket) 가져오려는 [Paket](https://fsprojects.github.io/Paket/) 지원 합니다.  가짜 및 Paket는 프로젝트를 빌드하고 각각 종속성을 관리 하기 위한 추가 F # 커뮤니티 도구입니다.
 
 ## <a name="creating-your-first-project-with-ionide"></a>Ionide를 사용 하 여 첫 번째 프로젝트 만들기
 
@@ -121,7 +121,7 @@ F #:: "새 프로젝트"를 클릭 하 여 선택 **Enter**는이 단계로 이�
 
 ![](media/getting-started-vscode/vscode-proj-type.png)
 
-이렇게 하면 특정 유형의 프로젝트에 대 한 템플릿을 선택 됩니다.  없는 다음와 같은 몇 가지 옵션이 여기에서 [FsLab](http://fslab.org) 데이터 과학을 위한 서식 파일 또는 [Suave](https://suave.io) 웹 프로그래밍을 위한 서식 파일입니다.  이 문서에서는 `classlib` 템플릿을 하므로 하는 강조 표시 하 고 적중 **Enter**합니다.  다음 단계는 다음과 같은 도달 하 게 됩니다.
+이렇게 하면 특정 유형의 프로젝트에 대 한 템플릿을 선택 됩니다.  없는 다음와 같은 몇 가지 옵션이 여기에서 [FsLab](https://fslab.org) 데이터 과학을 위한 서식 파일 또는 [Suave](https://suave.io) 웹 프로그래밍을 위한 서식 파일입니다.  이 문서에서는 `classlib` 템플릿을 하므로 하는 강조 표시 하 고 적중 **Enter**합니다.  다음 단계는 다음과 같은 도달 하 게 됩니다.
 
 ![](media/getting-started-vscode/vscode-new-dir.png)
 
@@ -138,8 +138,8 @@ F #:: "새 프로젝트"를 클릭 하 여 선택 **Enter**는이 단계로 이�
 이 서식 파일에서는 몇 가지 유용한 있습니다 오류가 생성 됩니다.
 
 1. F # 프로젝트 자체를 아래에서 `ClassLibraryDemo` 폴더입니다.
-2. 통해 패키지를 추가 하기 위한 올바른 디렉터리 구조 [ `Paket` ](http://fsprojects.github.io/Paket/)합니다.
-3. 플랫폼 간 빌드 스크립트와 [ `FAKE` ](http://fsharp.github.io/FAKE/)합니다.
+2. 통해 패키지를 추가 하기 위한 올바른 디렉터리 구조 [ `Paket` ](https://fsprojects.github.io/Paket/)합니다.
+3. 플랫폼 간 빌드 스크립트와 [ `FAKE` ](https://fake.build/)합니다.
 4. `paket.exe` 있습니다에 대 한 종속성을 해결 하 고 패키지를 가져올 수 있는 실행 파일입니다.
 5. A `.gitignore` Git 기반 소스 제어에이 프로젝트를 추가 하려는 경우 파일입니다.
 

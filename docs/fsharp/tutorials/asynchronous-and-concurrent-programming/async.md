@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: f9196bfc-b8a8-4d33-8b53-0dcbd58a69d8
-ms.openlocfilehash: 23528d84d0f28283868a1ea316953543d0fd566a
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: c3fde46e804b7acac78d3ce5454a3c6f806e24e7
+ms.sourcegitcommit: 655fd4f78741967f80c409cef98347fdcf77857d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 02/28/2018
 ---
 # <a name="async-programming-in-f"></a>F #에서 비동기 프로그래밍 #
 
@@ -44,7 +44,7 @@ let fetchHtmlAsync url =
         return html
     }
 
-let html = "http://dotnetfoundation.org" |> fetchHtmlAsync |> Async.RunSynchronously
+let html = "https://dotnetfoundation.org" |> fetchHtmlAsync |> Async.RunSynchronously
 printfn "%s" html
 ```
 
@@ -52,11 +52,11 @@ printfn "%s" html
 
 주목할 만한 있는 몇 가지 구문을 가지가 있습니다.
 
-*   `let!`(다른 컨텍스트에서 실행)이 표시 되는 비동기 식의 결과 바인딩합니다.
-*   `use!`동일 하 게 작동 `let!`, 하지만 범위를 벗어날 때 바인딩된 리소스를 삭제 합니다.
-*   `do!`아무 것도 반환 하지 않는 비동기 워크플로 await 됩니다.
-*   `return`단순히 비동기 식에서 결과 반환 합니다.
-*   `return!`다른 비동기 워크플로 실행 하 고 해당 반환 값을 결과로 반환 합니다.
+*   `let!` (다른 컨텍스트에서 실행)이 표시 되는 비동기 식의 결과 바인딩합니다.
+*   `use!` 동일 하 게 작동 `let!`, 하지만 범위를 벗어날 때 바인딩된 리소스를 삭제 합니다.
+*   `do!` 아무 것도 반환 하지 않는 비동기 워크플로 await 됩니다.
+*   `return` 단순히 비동기 식에서 결과 반환 합니다.
+*   `return!` 다른 비동기 워크플로 실행 하 고 해당 반환 값을 결과로 반환 합니다.
 
 또한 일반 `let`, `use`, 및 `do` 키워드는 일반 기능에서와 마찬가지로 비동기 버전과 함께 사용할 수 있습니다.
 
@@ -64,7 +64,7 @@ printfn "%s" html
 
 앞서 언급 했 듯이 비동기 코드는 명시적으로 시작 하는 다른 컨텍스트에서 수행 하는 작업에 대 한 사양입니다. 이렇게 하려면 두 가지 기본 방법은 다음과 같습니다.
 
-1.  `Async.RunSynchronously`다른 스레드에서 비동기 워크플로 시작 하 고 그 결과 기다립니다.
+1.  `Async.RunSynchronously` 다른 스레드에서 비동기 워크플로 시작 하 고 그 결과 기다립니다.
 
 ```fsharp
 open System
@@ -79,13 +79,13 @@ let fetchHtmlAsync url =
     }
 
  // Execution will pause until fetchHtmlAsync finishes
- let html = "http://dotnetfoundation.org" |> fetchHtmlAsync |> Async.RunSynchronously
+ let html = "https://dotnetfoundation.org" |> fetchHtmlAsync |> Async.RunSynchronously
 
  // you actually have the result from fetchHtmlAsync now!
  printfn "%s" html
  ```
 
-2.  `Async.Start`다른 스레드에서 비동기 워크플로 시작 되며 됩니다 **하지** 그 결과 기다립니다.
+2.  `Async.Start` 다른 스레드에서 비동기 워크플로 시작 되며 됩니다 **하지** 그 결과 기다립니다.
 
 ```fsharp
 open System
@@ -98,7 +98,7 @@ let uploadDataAsync url data =
         webClient.UploadStringAsync(uri, data)
     }
 
-let workflow = uploadDataAsync "http://url-to-upload-to.com" "hello, world!"
+let workflow = uploadDataAsync "https://url-to-upload-to.com" "hello, world!"
 
 // Execution will continue after calling this!
 Async.Start(workflow)
@@ -114,7 +114,7 @@ printfn "%s" "uploadDataAsync is running in the background..."
 
 ## <a name="how-to-add-parallelism-to-async-code"></a>비동기 코드를 병렬 처리를 추가 하는 방법
 
-경우에 따라 수 있습니다 병렬로 여러 비동기 작업을 수행의 결과 수집 및 하 어떤 식으로든에서이 해석 합니다. `Async.Parallel`포함 하도록 강제 지정 하는 작업 병렬 라이브러리를 사용할 필요 없이이 작업을 수행할 수 있습니다 `Task<'T>` 및 `Async<'T>` 형식입니다.
+경우에 따라 수 있습니다 병렬로 여러 비동기 작업을 수행의 결과 수집 및 하 어떤 식으로든에서이 해석 합니다. `Async.Parallel` 포함 하도록 강제 지정 하는 작업 병렬 라이브러리를 사용할 필요 없이이 작업을 수행할 수 있습니다 `Task<'T>` 및 `Async<'T>` 형식입니다.
 
 다음 예제에서는 ´ ֲ `Async.Parallel` HTML를 동시에 4 개의 인기 있는 사이트에서 다운로드를 완료 하는 데 해당 작업에 대 한 기다린 다음 다운로드 한를 HTML을 인쇄 합니다.
 
@@ -123,10 +123,10 @@ open System
 open System.Net
 
 let urlList = 
-    [ "http://www.microsoft.com"
-      "http://www.google.com"
-      "http://www.amazon.com"
-      "http://www.facebook.com" ]
+    [ "https://www.microsoft.com"
+      "https://www.google.com"
+      "https://www.amazon.com"
+      "https://www.facebook.com" ]
 
 let fetchHtmlAsync url = 
     async {
@@ -181,7 +181,7 @@ C# /VB 비동기 모델 및 F # 비동기 모델 간에 근본적인 차이가 �
 
 ### <a name="differences"></a>차이점
 
-*   중첩 된 `let!` 허용, 달리 중첩은`await`
+*   중첩 된 `let!` 허용, 달리 중첩은 `await`
 
  와 달리 `await`를 무기한으로 중첩 될 수 있는 `let!` 수 없으며 다른 내부에서 사용 하기 전에 바인딩된 결과 있어야 `let!`, `do!`, 또는 `use!`합니다.
 
@@ -208,7 +208,7 @@ let uploadDataAsync url data =
         webClient.UploadStringAsync(uri, data)
     }
 
-let workflow = uploadDataAsync "http://url-to-upload-to.com" "hello, world!"
+let workflow = uploadDataAsync "https://url-to-upload-to.com" "hello, world!"
 
 let token = new CancellationTokenSource()
 Async.Start (workflow, token)
@@ -222,5 +222,5 @@ token.Cancel()
 ## <a name="further-resources"></a>추가 리소스:
 
 *   [MSDN에서 비동기 워크플로](https://msdn.microsoft.com/library/dd233250.aspx)
-*   [F #에 대 한 비동기 시퀀스](http://fsprojects.github.io/FSharp.Control.AsyncSeq/library/AsyncSeq.html)
+*   [F #에 대 한 비동기 시퀀스](https://fsprojects.github.io/FSharp.Control.AsyncSeq/library/AsyncSeq.html)
 *   [F # 데이터 HTTP 유틸리티](https://fsharp.github.io/FSharp.Data/library/Http.html)

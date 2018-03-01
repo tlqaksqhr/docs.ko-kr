@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: 9e5d6cea-a98c-461e-a5cc-75f1d154eafd
-ms.openlocfilehash: e003f537c6f0f85b3b0ba932655ae2a54c980bc5
-ms.sourcegitcommit: e2bf8e6bc365bd9a0e86fe81eeae7d14f85f48c1
+ms.openlocfilehash: 905374a60261b0c2a863edb956943d41ae80f04d
+ms.sourcegitcommit: 655fd4f78741967f80c409cef98347fdcf77857d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 02/28/2018
 ---
 # <a name="get-started-with-azure-table-storage-using-f"></a>F #을 사용 하 여 Azure 테이블 저장소 시작 #
 
@@ -187,7 +187,7 @@ Azure 구성 관리자를 사용 하는 것은 선택 사항입니다. .NET Fram
 테이블 저장소의 기본 사항 학습 한, 했으므로 더 복잡 한 저장소 작업에 대 한 자세한 내용은 다음이 링크를 수행:
 
 - [.NET 용 azure 저장소 Api](/dotnet/api/overview/azure/storage)
-- [Azure 저장소 형식 공급자](http://fsprojects.github.io/AzureStorageTypeProvider/)
-- [Azure 저장소 팀 블로그](http://blogs.msdn.com/b/windowsazurestorage/)
+- [Azure 저장소 형식 공급자](https://fsprojects.github.io/AzureStorageTypeProvider/)
+- [Azure 저장소 팀 블로그](https://blogs.msdn.microsoft.com/b/windowsazurestorage/)
 - [Azure 저장소 연결 문자열 구성](/azure/storage/common/storage-configure-connection-string)
 - [.NET에서 Azure 테이블 저장소 시작](https://azure.microsoft.com/documentation/samples/storage-table-dotnet-getting-started/)

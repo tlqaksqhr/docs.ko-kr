@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: c5b74a4f-dcd1-4849-930c-904b6c8a04e1
-ms.openlocfilehash: 9011bdceabd1b5e0541ecb94f3e812871688025b
-ms.sourcegitcommit: e2bf8e6bc365bd9a0e86fe81eeae7d14f85f48c1
+ms.openlocfilehash: 5be948e100c496bc6613f1fdfb826ece5de6df8e
+ms.sourcegitcommit: 655fd4f78741967f80c409cef98347fdcf77857d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 02/28/2018
 ---
 # <a name="get-started-with-azure-blob-storage-using-f"></a>F #을 사용 하 여 Azure Blob 저장소 시작 #
 
@@ -236,7 +236,7 @@ Blob 데이터를 암호화에 대 한 세부 정보를 참조 하십시오. [�
 Blob 저장소의 기본 사항 학습 한, 했으므로 자세한 내용을 보려면 다음이 링크를 수행 합니다.
 
 ### <a name="tools"></a>도구
-- [F # AzureStorageTypeProvider](http://fsprojects.github.io/AzureStorageTypeProvider/) 는 F # 형식 공급자 Blob, 테이블 및 큐 Azure 저장소 자산을 탐색 하 고 쉽게 적용할 수에 대 한 CRUD 작업에 사용할 수 있는 합니다.
+- [F # AzureStorageTypeProvider](https://fsprojects.github.io/AzureStorageTypeProvider/) 는 F # 형식 공급자 Blob, 테이블 및 큐 Azure 저장소 자산을 탐색 하 고 쉽게 적용할 수에 대 한 CRUD 작업에 사용할 수 있는 합니다.
 - [FSharp.Azure.Storage](https://github.com/fsprojects/FSharp.Azure.Storage) F # API Microsoft Azure 테이블 저장소 서비스 사용
 - [Microsoft Azure 저장소 탐색기 (MASE)](/azure/vs-azure-tools-storage-manage-with-storage-explorer) 창과 OS X, Linux에서 시각적으로 Azure 저장소 데이터에 사용할 수 있도록 하는 Microsoft의 무료, 독립 실행형 앱입니다.
 
@@ -251,4 +251,4 @@ Blob 저장소의 기본 사항 학습 한, 했으므로 자세한 내용을 보
 - [Windows에서 AzCopy 명령줄 유틸리티를 사용 하 여 데이터를 전송 합니다.](/azure/storage/common/storage-use-azcopy)
 - [Linux에서 AzCopy 명령줄 유틸리티를 사용 하 여 데이터를 전송 합니다.](/azure/storage/common/storage-use-azcopy-linux)
 - [Azure 저장소 연결 문자열 구성](/azure/storage/common/storage-configure-connection-string)
-- [Azure 저장소 팀 블로그](http://blogs.msdn.com/b/windowsazurestorage/)
+- [Azure 저장소 팀 블로그](https://blogs.msdn.microsoft.com/windowsazurestorage/)

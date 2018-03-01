@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: ee2bb9bf-e04a-4fbe-bf58-46d07229e981
-ms.openlocfilehash: 425dbcbce06f183c81acb90993978c6dd9523de9
-ms.sourcegitcommit: bbde43da655ae7bea1977f7af7345eb87bd7fd5f
+ms.openlocfilehash: e1cbdb452c8f77d97a0231a5ec75d752a98d2ed6
+ms.sourcegitcommit: 655fd4f78741967f80c409cef98347fdcf77857d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/21/2017
+ms.lasthandoff: 02/28/2018
 ---
 # <a name="asynchronous-workflows"></a>비동기 워크플로
 
@@ -52,11 +52,11 @@ let! (result2 : byte[])  = stream.AsyncRead(bufferSize)
 
 ## <a name="asynchronous-primitives"></a>비동기 기본 형식
 
-단일 비동기 작업을 수행 하 고 결과 반환 하는 메서드가 호출 되는 *비동기 기본*, 사용 하도록 특별히 디자인 된 이러한를 `let!`합니다. 여러 비동기 기본 요소는 F # 핵심 라이브러리에 정의 됩니다. 웹 응용 프로그램에 대 한 이러한 두 메서드는 모듈에 정의 되어 [ `Microsoft.FSharp.Control.WebExtensions` ](https://msdn.microsoft.com/library/95ef17bc-ee3f-44ba-8a11-c90fcf4cf003): [ `WebRequest.AsyncGetResponse` ](https://msdn.microsoft.com/library/09a60c31-e6e2-4b5c-ad23-92a86e50060c) 및 [ `WebClient.AsyncDownloadString` ](https://msdn.microsoft.com/library/8a85a9b7-f712-4cac-a0ce-0a797f8ea32a)합니다. 두 기본 URL에 따라 해당 웹 페이지에서 데이터를 다운로드 합니다. `AsyncGetResponse`생성 한 `System.Net.WebResponse` 개체 및 `AsyncDownloadString` 웹 페이지에 대 한 HTML을 나타내는 문자열을 생성 합니다.
+단일 비동기 작업을 수행 하 고 결과 반환 하는 메서드가 호출 되는 *비동기 기본*, 사용 하도록 특별히 디자인 된 이러한를 `let!`합니다. 여러 비동기 기본 요소는 F # 핵심 라이브러리에 정의 됩니다. 웹 응용 프로그램에 대 한 이러한 두 메서드는 모듈에 정의 되어 [ `Microsoft.FSharp.Control.WebExtensions` ](https://msdn.microsoft.com/library/95ef17bc-ee3f-44ba-8a11-c90fcf4cf003): [ `WebRequest.AsyncGetResponse` ](https://msdn.microsoft.com/library/09a60c31-e6e2-4b5c-ad23-92a86e50060c) 및 [ `WebClient.AsyncDownloadString` ](https://msdn.microsoft.com/library/8a85a9b7-f712-4cac-a0ce-0a797f8ea32a)합니다. 두 기본 URL에 따라 해당 웹 페이지에서 데이터를 다운로드 합니다. `AsyncGetResponse` 생성 한 `System.Net.WebResponse` 개체 및 `AsyncDownloadString` 웹 페이지에 대 한 HTML을 나타내는 문자열을 생성 합니다.
 
 비동기 I/O 작업에 대 한 여러 기본 요소에 포함 된는 [ `Microsoft.FSharp.Control.CommonExtensions` ](https://msdn.microsoft.com/library/2edb67cb-6814-4a30-849f-b6dbdd042396) 모듈입니다. 이러한 확장 메서드는 `System.IO.Stream` 클래스 [ `Stream.AsyncRead` ](https://msdn.microsoft.com/library/85698aaa-bdda-47e6-abed-3730f59fda5e) 및 [ `Stream.AsyncWrite` ](https://msdn.microsoft.com/library/1b0a2751-e42a-47e1-bd27-020224adc618)합니다.
 
-비동기 추가 기본 형식에서 사용할 수 있는 [F # 파워 도구](http://fsprojects.github.io/VisualFSharpPowerTools/)합니다. 또한 전체 본문이 비동기 블록으로 묶어야 하는 함수를 정의 하 여 사용자 지정 비동기 기본 형식을 작성할 수 있습니다.
+비동기 추가 기본 형식에서 사용할 수 있는 [F # 파워 도구](https://fsprojects.github.io/VisualFSharpPowerTools/)합니다. 또한 전체 본문이 비동기 블록으로 묶어야 하는 함수를 정의 하 여 사용자 지정 비동기 기본 형식을 작성할 수 있습니다.
 
 F #을 반환 하는 함수를 만드는 다른 비동기 모델 F # 비동기 프로그래밍 모델을 위해 디자인 된.NET Framework에서 비동기 메서드를 사용 하려면 `Async` 개체입니다. F # 라이브러리의이을 쉽게 수행할 수 있도록 하는 기능입니다.
 

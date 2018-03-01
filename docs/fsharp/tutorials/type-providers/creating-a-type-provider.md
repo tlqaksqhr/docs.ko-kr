@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: 82bec076-19d4-470c-979f-6c3a14b7c70a
-ms.openlocfilehash: 58003c88baf0f8aeea1a511334b99bd0295f8bf1
-ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
+ms.openlocfilehash: c09f8abe4dd46453cb6cc5ed7dbb6f60dbf0ad98
+ms.sourcegitcommit: 655fd4f78741967f80c409cef98347fdcf77857d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/09/2017
+ms.lasthandoff: 02/28/2018
 ---
 # <a name="tutorial-creating-a-type-provider"></a>자습서: 형식 공급자 만들기
 
@@ -56,7 +56,7 @@ F # 프로그래밍 경험에 안정적인 데이터 및 서비스 정보 공간
 
 
 ## <a name="a-simple-type-provider"></a>단순 형식 공급자
-이 샘플은에서 Samples.HelloWorldTypeProvider는 `SampleProviders\Providers` 의 디렉터리는 [F # 3.0 샘플 팩](http://fsharp3sample.codeplex.com) Codeplex 웹 사이트입니다. 공급자 있게 사용할 수 있는 F # 시그니처 구문을 사용 하 고을 제외한 모든 페이지에 대 한 세부 정보를 생략 하 여 다음 코드 에서처럼 100 지워진된 형식을 포함 하는 "유형 공간" `Type1`합니다. 지워진된 형식에 대 한 자세한 내용은 참조 [세부 정보에 대 한 지워진 제공 된 형식](#details-about-erased-provided-types) 이 항목의 뒷부분에 나오는 합니다.
+이 샘플은에서 Samples.HelloWorldTypeProvider는 `SampleProviders\Providers` 의 디렉터리는 [F # 3.0 샘플 팩](https://fsharp3sample.codeplex.com) Codeplex 웹 사이트입니다. 공급자 있게 사용할 수 있는 F # 시그니처 구문을 사용 하 고을 제외한 모든 페이지에 대 한 세부 정보를 생략 하 여 다음 코드 에서처럼 100 지워진된 형식을 포함 하는 "유형 공간" `Type1`합니다. 지워진된 형식에 대 한 자세한 내용은 참조 [세부 정보에 대 한 지워진 제공 된 형식](#details-about-erased-provided-types) 이 항목의 뒷부분에 나오는 합니다.
 
 ```fsharp
 namespace Samples.HelloWorldTypeProvider
@@ -499,7 +499,7 @@ let r = reg.Match("425-123-2345").Groups.["AreaCode"].Value //r equals "425"
 - 제공 된 속성의 결과 각 명명 된 그룹에 일치 하는 인덱서를 사용 하는 결과 속성에 액세스 및 `Groups` 컬렉션입니다.
 <br />
 
-다음 코드는 이러한 공급자를 구현 하는 논리의 핵심 하 고이 예에서는 제공 된 형식으로 모든 멤버의 추가 생략 합니다. 추가 된 각 멤버에 대 한 자세한 내용은이 항목 뒷부분의 적절 한 섹션을 참조 합니다. 전체 코드에서 샘플을 다운로드는 [F # 3.0 샘플 팩](http://fsharp3sample.codeplex.com) Codeplex 웹 사이트입니다.
+다음 코드는 이러한 공급자를 구현 하는 논리의 핵심 하 고이 예에서는 제공 된 형식으로 모든 멤버의 추가 생략 합니다. 추가 된 각 멤버에 대 한 자세한 내용은이 항목 뒷부분의 적절 한 섹션을 참조 합니다. 전체 코드에서 샘플을 다운로드는 [F # 3.0 샘플 팩](https://fsharp3sample.codeplex.com) Codeplex 웹 사이트입니다.
 
 ```fsharp
 namespace Samples.FSharp.RegexTypeProvider
@@ -1140,7 +1140,7 @@ let data = connection.Astronomy.Asteroids
 ```fsharp
 open Microsoft.FSharp.TypeProviders 
 
-type Service = ODataService<" http://services.odata.org/Northwind/Northwind.svc/">
+type Service = ODataService<" https://services.odata.org/Northwind/Northwind.svc/">
 ```
 
 F # 3.0 버전의 일부인 ProvidedTypes 0.2 도우미 코드에서는 제한적 으로만 생성 된 형식을 제공 하는 데 지원 합니다. 다음 문은 생성 된 형식 정의 대해 적용 되어야 합니다.
@@ -1196,10 +1196,10 @@ F # 3.0 버전의 일부인 ProvidedTypes 0.2 도우미 코드에서는 제한�
 개발 프로세스 중 다음 팁을 도움이 필요할 수 있습니다.
 
 
-- `Run Two Instances of Visual Studio.`한 인스턴스에서 형식 공급자를 개발 하 고 IDE 테스트 형식 공급자를 다시 작성 하지 않도록 하는.dll 파일에 대해 잠금을 수행 하기 때문에 다른 공급자를 테스트 수 있습니다. 따라서 공급자는 첫 번째 인스턴스에서 만들어지고 공급자 작성 된 후 두 번째 인스턴스를 다시 열 해야 다음 하는 동안 Visual Studio의 두 번째 인스턴스를 닫으십시오.
+- `Run Two Instances of Visual Studio.` 한 인스턴스에서 형식 공급자를 개발 하 고 IDE 테스트 형식 공급자를 다시 작성 하지 않도록 하는.dll 파일에 대해 잠금을 수행 하기 때문에 다른 공급자를 테스트 수 있습니다. 따라서 공급자는 첫 번째 인스턴스에서 만들어지고 공급자 작성 된 후 두 번째 인스턴스를 다시 열 해야 다음 하는 동안 Visual Studio의 두 번째 인스턴스를 닫으십시오.
 <br />
 
-- `Debug type providers by using invocations of fsc.exe.`다음과 같은 도구를 사용 하 여 형식 공급자를 호출할 수 있습니다.
+- `Debug type providers by using invocations of fsc.exe.` 다음과 같은 도구를 사용 하 여 형식 공급자를 호출할 수 있습니다.
 <br />
   - fsc.exe (F #은 명령줄 컴파일러)
 <br />

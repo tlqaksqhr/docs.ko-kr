@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: 5c26a0aa-186e-476c-9f87-e0191754579e
-ms.openlocfilehash: 66b2503744e9024deac3d6dabea57da4fd393bd8
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 5e1f6914acad5ae8c7148a7238e2d1d6a8ca5867
+ms.sourcegitcommit: 655fd4f78741967f80c409cef98347fdcf77857d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 02/28/2018
 ---
 # <a name="get-started-with-azure-file-storage-using-f"></a>F #을 사용 하 여 Azure 파일 저장소 시작 #
 
@@ -97,7 +97,7 @@ Azure 구성 관리자를 사용 하는 것은 선택 사항입니다. .NET Fram
 
 ### <a name="set-the-maximum-size-for-a-file-share"></a>파일 공유에 대 한 최대 크기 설정
 
-아래 예제에는 공유에 대 한 현재 사용량을 확인 하는 방법과 공유에 대 한 할당량을 설정 하는 방법을 보여 줍니다. `FetchAttributes`호출 하는 공유의 채우기 `Properties`, 및 `SetProperties` Azure 파일 저장소에 로컬 변경 내용을 전파 하 합니다.
+아래 예제에는 공유에 대 한 현재 사용량을 확인 하는 방법과 공유에 대 한 할당량을 설정 하는 방법을 보여 줍니다. `FetchAttributes` 호출 하는 공유의 채우기 `Properties`, 및 `SetProperties` Azure 파일 저장소에 로컬 변경 내용을 전파 하 합니다.
 
 [!code-fsharp[FileStorage](../../../samples/snippets/fsharp/azure/file-storage.fsx#L62-L72)]
 
@@ -161,5 +161,5 @@ Azure 파일 저장소에 대 한 자세한 내용은 다음이 링크를 참조
 
 - [Azure 파일 저장소 일반적으로 출시 되었습니다.](https://azure.microsoft.com/blog/azure-file-storage-now-generally-available/)
 - [내부 Azure 파일 저장소](https://azure.microsoft.com/blog/inside-azure-file-storage/) 
-- [Microsoft Azure 파일 서비스 소개](http://blogs.msdn.com/b/windowsazurestorage/archive/2014/05/12/introducing-microsoft-azure-file-service.aspx)
-- [Microsoft Azure 파일에 대 한 영구 연결](http://blogs.msdn.com/b/windowsazurestorage/archive/2014/05/27/persisting-connections-to-microsoft-azure-files.aspx)
+- [Microsoft Azure 파일 서비스 소개](https://blogs.msdn.microsoft.com/windowsazurestorage/2014/05/12/introducing-microsoft-azure-file-service/)
+- [Microsoft Azure 파일에 대 한 영구 연결](https://blogs.msdn.microsoft.com/windowsazurestorage/2014/05/26/persisting-connections-to-microsoft-azure-files/)
