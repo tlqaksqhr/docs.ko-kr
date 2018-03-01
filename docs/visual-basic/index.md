@@ -2,18 +2,19 @@
 title: Visual Basic
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-visual-basic
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - programming, Visual Basic
 - Visual Basic
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 38ccf61b488a40d100895d0dd2bb4bdecca7eba5
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 96c7c93056b11c08ccdfa48a0d78f2996c2d86d4
+ms.sourcegitcommit: 655fd4f78741967f80c409cef98347fdcf77857d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 02/28/2018
 ---
 # <a name="visual-basic-guide"></a>Visual Basic 가이드
 
@@ -21,9 +22,9 @@ Visual Basic은 형식이 안전한 개체 지향 응용 프로그램을 생산�
   
  Visual Basic 이번 버전에는 .NET Framework 기반 응용 프로그램을 만드는 쉽고 빠른 방법을 제공하는 전통 방식이 계속됩니다.  
   
- Visual Basic이 아직 없다면, [Visual Studio](https://www.visualstudio.com/products/downloads) 사이트에서 무료 Visual Basic을 포함하는 Visual Studio 버전을 얻을 수 있습니다.  
+ Visual Basic이 아직 없다면, [Visual Studio](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs) 사이트에서 무료 Visual Basic을 포함하는 Visual Studio 버전을 얻을 수 있습니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [시작](../visual-basic/getting-started/index.md)  
  다양한 버전의 제품에서 사용할 수 있는 기능과 새로운 기능이 나열되어 있기 때문에 작업을 시작하는 데 도움이 됩니다.  
    

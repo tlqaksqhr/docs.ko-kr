@@ -2,20 +2,21 @@
 title: "Visual Basic 시작"
 ms.date: 08/10/2017
 ms.prod: .net
-ms.technology: devlang-visual-basic
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - get started, Visual Basic
 - Visual Basic, get started
 ms.assetid: 6685467b-28fa-4cde-9516-f0e00ad08911
-caps.latest.revision: "36"
+caps.latest.revision: 
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 1593475bf5b4a34f854bc3e89be84d7720cd497b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 291065ae4c42cea741c4631923506076fcbc2f2e
+ms.sourcegitcommit: 655fd4f78741967f80c409cef98347fdcf77857d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 02/28/2018
 ---
 # <a name="get-started-with-visual-basic"></a>Visual Basic 시작
 설명서의 이 섹션에서는 Visual Basic 응용 프로그램의 개발을 시작하는 데 도움이 되는 내용을 제공합니다.  
@@ -44,7 +45,7 @@ ms.lasthandoff: 11/21/2017
 [Visual Studio 2017에서 Visual Basic 및 .NET Core로 클래스 라이브러리 빌드](../../core/tutorials/vb-library-with-visual-studio.md) 
 
 ## <a name="see-also"></a>참고 항목
- [Visual Basic 다운로드](https://www.visualstudio.com/downloads/)  
+ [Visual Basic 다운로드](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs)  
  무료 버전을 포함하여 Visual Basic 지원이 포함된 Visual Studio 버전에 대한 다운로드 링크를 제공합니다.  
 
  [초보자를 위한 Visual Basic 기본 사항](https://mva.microsoft.com/training-courses/visual-basic-fundamentals-for-absolute-beginners-16507)  
