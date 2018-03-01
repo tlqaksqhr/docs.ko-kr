@@ -2,11 +2,13 @@
 title: "방법: 컬렉션 이니셜라이저를 사용하여 사전 초기화(C# 프로그래밍 가이드)"
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
-helpviewer_keywords: collection initializers [C#], with Dictionary
+helpviewer_keywords:
+- collection initializers [C#], with Dictionary
 ms.assetid: 25283922-f8ee-40dc-a639-fac30804ec71
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
 ms.openlocfilehash: 8b8de5fb85a839d52ad00ad552ef823d9817e9b7
@@ -16,7 +18,7 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 11/21/2017
 ---
 # <a name="how-to-initialize-a-dictionary-with-a-collection-initializer-c-programming-guide"></a><span data-ttu-id="e344d-102">방법: 컬렉션 이니셜라이저를 사용하여 사전 초기화(C# 프로그래밍 가이드)</span><span class="sxs-lookup"><span data-stu-id="e344d-102">How to: Initialize a Dictionary with a Collection Initializer (C# Programming Guide)</span></span>
-<span data-ttu-id="e344d-103">@@@<xref:System.Collections.Generic.Dictionary`2> contains a collection of key/value pairs. Its <xref:System.Collections.Generic.Dictionary`2.Add*> 메서드는 키와 값에 대해 하나씩, 두 개의 매개 변수를 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="e344d-103">A <xref:System.Collections.Generic.Dictionary`2> contains a collection of key/value pairs. Its <xref:System.Collections.Generic.Dictionary`2.Add*> method takes two parameters, one for the key and one for the value.</span></span> <span data-ttu-id="e344d-104">@@@<xref:System.Collections.Generic.Dictionary`2>, or any collection whose `Add\` 메서드가 여러 매개 변수를 사용함)를 초기화하려면 다음 예제와 같이 각 매개 변수 집합을 중괄호로 묶습니다.</span><span class="sxs-lookup"><span data-stu-id="e344d-104">To initialize a <xref:System.Collections.Generic.Dictionary`2>, or any collection whose `Add\` method takes multiple parameters, enclose each set of parameters in braces as shown in the following example.</span></span>  
+<span data-ttu-id="e344d-103">@@@<xref:System.Collections.Generic.Dictionary`2> contains a collection of key/value pairs. Its <xref:System.Collections.Generic.Dictionary`2.Add\*> 메서드는 키와 값에 대해 하나씩, 두 개의 매개 변수를 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="e344d-103">A <xref:System.Collections.Generic.Dictionary`2> contains a collection of key/value pairs. Its <xref:System.Collections.Generic.Dictionary`2.Add\*> method takes two parameters, one for the key and one for the value.</span></span> <span data-ttu-id="e344d-104">@@@<xref:System.Collections.Generic.Dictionary`2>, or any collection whose `Add\` 메서드가 여러 매개 변수를 사용함)를 초기화하려면 다음 예제와 같이 각 매개 변수 집합을 중괄호로 묶습니다.</span><span class="sxs-lookup"><span data-stu-id="e344d-104">To initialize a <xref:System.Collections.Generic.Dictionary`2>, or any collection whose `Add\` method takes multiple parameters, enclose each set of parameters in braces as shown in the following example.</span></span>  
   
 ## <a name="example"></a><span data-ttu-id="e344d-105">예제</span><span class="sxs-lookup"><span data-stu-id="e344d-105">Example</span></span>  
  <span data-ttu-id="e344d-106">@@@다음 코드 예제에서 <xref:System.Collections.Generic.Dictionary`2> is initialized with instances of type `StudentName\`.</span><span class="sxs-lookup"><span data-stu-id="e344d-106">In the following code example, a <xref:System.Collections.Generic.Dictionary`2> is initialized with instances of type `StudentName\`.</span></span>  

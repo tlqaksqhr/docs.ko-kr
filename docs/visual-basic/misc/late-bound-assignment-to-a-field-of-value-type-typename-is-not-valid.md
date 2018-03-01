@@ -2,11 +2,13 @@
 title: "값 형식 &#39; 필드에 런타임에 바인딩된 할당 &lt;typename&gt;&#39;는 경우에 유효 &#39;&lt; 이름&gt;&#39;는 런타임에 바인딩된 식의 결과"
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-visual-basic
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
-f1_keywords: vbrRValueBaseForValueType
+f1_keywords:
+- vbrRValueBaseForValueType
 ms.assetid: 050f05b4-7e56-4372-aae5-70b7d73b99e4
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: dotnet-bot
 ms.author: dotnetcontent
 ms.openlocfilehash: 549ae9c7c49d2f7dfaa173ab0e057cbfa05844a2

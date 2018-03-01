@@ -3,15 +3,17 @@ title: "base(C# 참조)"
 description: "C#의 파생 클래스 내에서 기본 클래스의 멤버에 액세스하는 데 사용되는 base 키워드에 대해 알아봅니다."
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 f1_keywords:
 - base
 - BaseClass.BaseClass
 - base_CSharpKeyword
-helpviewer_keywords: base keyword [C#]
+helpviewer_keywords:
+- base keyword [C#]
 ms.assetid: 8b645dbe-1a33-49b8-8716-1c401f9a5ea5
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
 ms.openlocfilehash: 1bbaa0cc05b35f822113bc3a8c3cde966b1484ef
