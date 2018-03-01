@@ -2,11 +2,13 @@
 title: "형식 &#39;의 시작 값으로 변환할 수 없습니다. &lt;type1&gt;&#39; 제한 값의 &#39;&lt; 유형 2&gt;&#39; 및 단계 값의 &#39;&lt; type3&gt;&#39; 공용 형식"
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-visual-basic
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
-f1_keywords: vbrForLoop_CommonType3
+f1_keywords:
+- vbrForLoop_CommonType3
 ms.assetid: 21c45bcf-539c-488a-9cae-221558c37146
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: dotnet-bot
 ms.author: dotnetcontent
 ms.openlocfilehash: 04bcc14bf1ce85423c5a5a99659955c62c74d8a5

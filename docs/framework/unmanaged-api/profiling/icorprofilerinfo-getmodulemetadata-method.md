@@ -5,23 +5,30 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology: dotnet-clr
+ms.technology:
+- dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: reference
-api_name: ICorProfilerInfo.GetModuleMetaData
-api_location: mscorwks.dll
-api_type: COM
-f1_keywords: ICorProfilerInfo::GetModuleMetaData
+api_name:
+- ICorProfilerInfo.GetModuleMetaData
+api_location:
+- mscorwks.dll
+api_type:
+- COM
+f1_keywords:
+- ICorProfilerInfo::GetModuleMetaData
 helpviewer_keywords:
 - GetModuleMetaData method [.NET Framework profiling]
 - ICorProfilerInfo::GetModuleMetaData method [.NET Framework profiling]
 ms.assetid: 7a439d92-348a-44dd-b60f-cad7cba56379
-topic_type: apiref
-caps.latest.revision: "15"
+topic_type:
+- apiref
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: 6ad52460bcd6eb320e970cd0ce2078f2e93df353
 ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
@@ -57,7 +64,7 @@ HRESULT GetModuleMetaData(
 ## <a name="remarks"></a><span data-ttu-id="38952-112">설명</span><span class="sxs-lookup"><span data-stu-id="38952-112">Remarks</span></span>  
  <span data-ttu-id="38952-113">메타 데이터 읽기/쓰기 모드에서 열 수를 요청할 수 있습니다 하지만 프로그램의 메타 데이터 실행 속도가 느려지게 이렇게 하면, 컴파일러에서 했을 때 메타 데이터 변경 때문에 최적화 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="38952-113">You may ask for the metadata to be opened in read/write mode, but this will result in slower metadata execution of the program, because changes made to the metadata cannot be optimized as they were from the compiler.</span></span>  
   
- <span data-ttu-id="38952-114">일부 모듈 (예: 리소스 모듈)에 메타 데이터가 있습니다.</span><span class="sxs-lookup"><span data-stu-id="38952-114">Some modules (such as resource modules) have no metadata.</span></span> <span data-ttu-id="38952-115">이 경우 `GetModuleMetaData` HRESULT 값에 null을 및 S_FALSE를 반환 합니다 *`ppOut`합니다.</span><span class="sxs-lookup"><span data-stu-id="38952-115">In those cases, `GetModuleMetaData` will return an HRESULT value of S_FALSE, and a null in *`ppOut`.</span></span>  
+ <span data-ttu-id="38952-114">일부 모듈 (예: 리소스 모듈)에 메타 데이터가 있습니다.</span><span class="sxs-lookup"><span data-stu-id="38952-114">Some modules (such as resource modules) have no metadata.</span></span> <span data-ttu-id="38952-115">이 경우 `GetModuleMetaData` HRESULT 값에 null을 및 S_FALSE를 반환 합니다 \*`ppOut`합니다.</span><span class="sxs-lookup"><span data-stu-id="38952-115">In those cases, `GetModuleMetaData` will return an HRESULT value of S_FALSE, and a null in \*`ppOut`.</span></span>  
   
 ## <a name="requirements"></a><span data-ttu-id="38952-116">요구 사항</span><span class="sxs-lookup"><span data-stu-id="38952-116">Requirements</span></span>  
  <span data-ttu-id="38952-117">**플랫폼:** 참조 [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="38952-117">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  

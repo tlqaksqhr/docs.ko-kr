@@ -3,18 +3,26 @@ title: "CompareTo 함수 (관리 되지 않는 API 참조)"
 description: "CompareTo 함수는 개체를 다른 WMI 개체를 비교합니다."
 ms.date: 11/06/2017
 ms.prod: .net-framework
-ms.technology: dotnet-clr
+ms.technology:
+- dotnet-clr
 ms.topic: reference
-api_name: CompareTo
-api_location: WMINet_Utils.dll
-api_type: DLLExport
-f1_keywords: CompareTo
-helpviewer_keywords: CompareTo function [.NET WMI and performance counters]
-topic_type: Reference
+api_name:
+- CompareTo
+api_location:
+- WMINet_Utils.dll
+api_type:
+- DLLExport
+f1_keywords:
+- CompareTo
+helpviewer_keywords:
+- CompareTo function [.NET WMI and performance counters]
+topic_type:
+- Reference
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: 038074b5bb3adc816caa226d3167395758d2ae57
 ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT

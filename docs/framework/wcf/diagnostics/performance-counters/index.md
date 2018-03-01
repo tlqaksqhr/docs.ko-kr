@@ -5,16 +5,19 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology: dotnet-clr
+ms.technology:
+- dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: performance counters [WCF]
+helpviewer_keywords:
+- performance counters [WCF]
 ms.assetid: f559b2bd-ed83-4988-97a1-e88f06646609
-caps.latest.revision: "37"
+caps.latest.revision: 
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: be4ffac8444f6365dacb2b20db6abbb6792c2239
 ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
@@ -41,7 +44,7 @@ ms.lasthandoff: 12/22/2017
   
 -   <span data-ttu-id="ed1ac-109">ServiceOnly: ServiceModelService 범주 카운터만 활성화됩니다.</span><span class="sxs-lookup"><span data-stu-id="ed1ac-109">ServiceOnly: Only ServiceModelService category counters are enabled.</span></span> <span data-ttu-id="ed1ac-110">기본값입니다.</span><span class="sxs-lookup"><span data-stu-id="ed1ac-110">This is the default value.</span></span>  
   
--   <span data-ttu-id="ed1ac-111">Off: ServiceModel* 성능 카운터가 비활성화됩니다.</span><span class="sxs-lookup"><span data-stu-id="ed1ac-111">Off: ServiceModel* performance counters are disabled.</span></span>  
+-   <span data-ttu-id="ed1ac-111">Off: ServiceModel\* 성능 카운터가 비활성화됩니다.</span><span class="sxs-lookup"><span data-stu-id="ed1ac-111">Off: ServiceModel\* performance counters are disabled.</span></span>  
   
  <span data-ttu-id="ed1ac-112">모든 [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 응용 프로그램에 대해 성능 카운터를 활성화하려면 Machine.config 파일에 구성 설정을 입력할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="ed1ac-112">If you want to enable performance counters for all [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] applications, you can place the configuration settings in the Machine.config file.</span></span>  <span data-ttu-id="ed1ac-113">참조 하십시오는 **성능 카운터에 대 한 메모리 크기 늘리기** 컴퓨터에 성능 카운터에 대 한 충분 한 메모리를 구성 하는 방법에 대 한 자세한 내용은 아래 섹션.</span><span class="sxs-lookup"><span data-stu-id="ed1ac-113">Please see the **Increasing Memory Size for Performance Counters** section below for more information on configuring sufficient memory for performance counters on your machine.</span></span>  
   

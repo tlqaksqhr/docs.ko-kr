@@ -5,16 +5,19 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology: dotnet-clr
+ms.technology:
+- dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: user-defined bindings [WCF]
+helpviewer_keywords:
+- user-defined bindings [WCF]
 ms.assetid: c4960675-d701-4bc9-b400-36a752fdd08b
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: fe9be6ed74569875fd26f9a4913756e0366d757a
 ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
@@ -49,10 +52,10 @@ ms.lasthandoff: 12/22/2017
 |<span data-ttu-id="f08bc-135">안정성</span><span class="sxs-lookup"><span data-stu-id="f08bc-135">Reliability</span></span>|<xref:System.ServiceModel.Channels.ReliableSessionBindingElement?displayProperty=nameWithType>|<span data-ttu-id="f08bc-136">아니요</span><span class="sxs-lookup"><span data-stu-id="f08bc-136">No</span></span>|  
 |<span data-ttu-id="f08bc-137">보안</span><span class="sxs-lookup"><span data-stu-id="f08bc-137">Security</span></span>|<xref:System.ServiceModel.Channels.SecurityBindingElement?displayProperty=nameWithType>|<span data-ttu-id="f08bc-138">아니요</span><span class="sxs-lookup"><span data-stu-id="f08bc-138">No</span></span>|  
 |<span data-ttu-id="f08bc-139">복합 이중</span><span class="sxs-lookup"><span data-stu-id="f08bc-139">Composite Duplex</span></span>|<xref:System.ServiceModel.Channels.CompositeDuplexBindingElement?displayProperty=nameWithType>|<span data-ttu-id="f08bc-140">아니요</span><span class="sxs-lookup"><span data-stu-id="f08bc-140">No</span></span>|  
-|<span data-ttu-id="f08bc-141">Encoding</span><span class="sxs-lookup"><span data-stu-id="f08bc-141">Encoding</span></span>|<span data-ttu-id="f08bc-142">텍스트, 이진, MTOM, 사용자 지정</span><span class="sxs-lookup"><span data-stu-id="f08bc-142">Text, Binary, MTOM, Custom</span></span>|<span data-ttu-id="f08bc-143">예*</span><span class="sxs-lookup"><span data-stu-id="f08bc-143">Yes*</span></span>|  
+|<span data-ttu-id="f08bc-141">Encoding</span><span class="sxs-lookup"><span data-stu-id="f08bc-141">Encoding</span></span>|<span data-ttu-id="f08bc-142">텍스트, 이진, MTOM, 사용자 지정</span><span class="sxs-lookup"><span data-stu-id="f08bc-142">Text, Binary, MTOM, Custom</span></span>|<span data-ttu-id="f08bc-143">예\*</span><span class="sxs-lookup"><span data-stu-id="f08bc-143">Yes\*</span></span>|  
 |<span data-ttu-id="f08bc-144">전송</span><span class="sxs-lookup"><span data-stu-id="f08bc-144">Transport</span></span>|<span data-ttu-id="f08bc-145">TCP, 명명된 파이프, HTTP, HTTPS, MSMQ, 사용자 지정</span><span class="sxs-lookup"><span data-stu-id="f08bc-145">TCP, Named Pipes, HTTP, HTTPS, MSMQ, Custom</span></span>|<span data-ttu-id="f08bc-146">예</span><span class="sxs-lookup"><span data-stu-id="f08bc-146">Yes</span></span>|  
   
- <span data-ttu-id="f08bc-147">*인코딩은 각 바인딩의 필수적 요소이므로 인코딩을 지정하지 않으면 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서 기본 인코딩을 자동으로 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="f08bc-147">*Because an encoding is required for each binding, if an encoding is not specified, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] adds a default encoding for you.</span></span> <span data-ttu-id="f08bc-148">기본값은 HTTP 및 HTTPS 전송의 경우 텍스트/XML이고 그렇지 않은 경우 이진입니다.</span><span class="sxs-lookup"><span data-stu-id="f08bc-148">The default is Text/XML for the HTTP and HTTPS transports, and Binary otherwise.</span></span>  
+ <span data-ttu-id="f08bc-147">\*인코딩은 각 바인딩의 필수적 요소이므로 인코딩을 지정하지 않으면 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서 기본 인코딩을 자동으로 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="f08bc-147">\*Because an encoding is required for each binding, if an encoding is not specified, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] adds a default encoding for you.</span></span> <span data-ttu-id="f08bc-148">기본값은 HTTP 및 HTTPS 전송의 경우 텍스트/XML이고 그렇지 않은 경우 이진입니다.</span><span class="sxs-lookup"><span data-stu-id="f08bc-148">The default is Text/XML for the HTTP and HTTPS transports, and Binary otherwise.</span></span>  
   
 ## <a name="creating-a-new-binding-element"></a><span data-ttu-id="f08bc-149">새 바인딩 요소 만들기</span><span class="sxs-lookup"><span data-stu-id="f08bc-149">Creating a new Binding Element</span></span>  
  <span data-ttu-id="f08bc-150"><xref:System.ServiceModel.Channels.BindingElement>가 제공하는 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서 파생되는 형식 이외에 바인딩 요소를 만들 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="f08bc-150">In addition to the types derived from <xref:System.ServiceModel.Channels.BindingElement> that are provided by [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], you can create your own binding elements.</span></span> <span data-ttu-id="f08bc-151">따라서 바인딩 스택을 만드는 방법 및 스택에서 기타 시스템 제공 형식으로 구성할 수 있는 <xref:System.ServiceModel.Channels.BindingElement>를 만들어 이 스택에 삽입되는 구성 요소를 사용자 지정할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="f08bc-151">This lets you customize the way the stack of bindings is created and the components that go in it by creating your own <xref:System.ServiceModel.Channels.BindingElement> that can be composed with the other system-provided types in the stack.</span></span>  

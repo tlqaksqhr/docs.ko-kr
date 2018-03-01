@@ -2,11 +2,13 @@
 title: "네트워크 연결을 사용할 수 없어 ping을 실행할 수 없습니다."
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-visual-basic
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
-f1_keywords: vbrNetwork_NetworkNotAvailable
+f1_keywords:
+- vbrNetwork_NetworkNotAvailable
 ms.assetid: 8d2bac12-bc6a-42ae-b28b-80b026dfabce
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: dotnet-bot
 ms.author: dotnetcontent
 ms.openlocfilehash: 057cb9f0fee4f6cee30348edc248121feab0b310

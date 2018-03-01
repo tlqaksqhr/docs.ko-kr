@@ -2,11 +2,13 @@
 title: "개체에서 지원하는 최대 개수의 이벤트 수신자로 이벤트를 발생시키고 있으므로 개체의 이벤트를 싱크할 수 없습니다."
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-visual-basic
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
-f1_keywords: vbrID96
+f1_keywords:
+- vbrID96
 ms.assetid: e40b19a2-8100-43ff-a1a4-0ddee3cc7f9a
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: dotnet-bot
 ms.author: dotnetcontent
 ms.openlocfilehash: 532dc70b6cac70561f49ff2518d4a3afffbb646e

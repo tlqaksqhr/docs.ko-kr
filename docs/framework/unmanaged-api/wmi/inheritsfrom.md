@@ -3,18 +3,26 @@ title: "InheritsFrom 함수 (관리 되지 않는 API 참조)"
 description: "InheritsFrom 함수 클래스 또는 인스턴스는 특정 부모 클래스 로부터 파생 있는지 여부를 결정 합니다."
 ms.date: 11/06/2017
 ms.prod: .net-framework
-ms.technology: dotnet-clr
+ms.technology:
+- dotnet-clr
 ms.topic: reference
-api_name: InheritsFrom
-api_location: WMINet_Utils.dll
-api_type: DLLExport
-f1_keywords: InheritsFrom
-helpviewer_keywords: InheritsFrom function [.NET WMI and performance counters]
-topic_type: Reference
+api_name:
+- InheritsFrom
+api_location:
+- WMINet_Utils.dll
+api_type:
+- DLLExport
+f1_keywords:
+- InheritsFrom
+helpviewer_keywords:
+- InheritsFrom function [.NET WMI and performance counters]
+topic_type:
+- Reference
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: 0dce964829399e6761152a8ff424671b47cc6eb3
 ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT

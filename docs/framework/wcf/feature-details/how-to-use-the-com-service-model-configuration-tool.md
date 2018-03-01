@@ -5,16 +5,19 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology: dotnet-clr
+ms.technology:
+- dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: COM+ [WCF], using service model configuration tool
+helpviewer_keywords:
+- COM+ [WCF], using service model configuration tool
 ms.assetid: 7e68cd8d-5fda-4641-b92f-290db874376e
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: dd89a3333ab68b7d580c813a4b7741686b46c5b6
 ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
@@ -51,7 +54,7 @@ ms.lasthandoff: 12/22/2017
   
      <span data-ttu-id="09c16-117">이 명령은 OnlineStore COM+ 응용 프로그램에 있는 `IFinances` 구성 요소의 `ItemOrders.IFinancial` 인터페이스를 웹 서비스로 노출될 인터페이스 집합에 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="09c16-117">The command adds the `IFinances` interface of the `ItemOrders.IFinancial` component (from the OnlineStore COM+ application) to the set of interfaces that will be exposed as Web services.</span></span> <span data-ttu-id="09c16-118">이 서비스는 COM+ 호스팅 모드를 사용하므로 명시적으로 응용 프로그램을 활성화해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="09c16-118">The service uses the COM+ hosting mode and therefore requires explicit application activation.</span></span>  
   
-     <span data-ttu-id="09c16-119">와일드카드 별표(*) 문자를 구성 요소 및 인터페이스에 사용할 수 있지만 선택한 기능만 웹 서비스로 노출하려는 경우가 있을 수도 있으므로 사용하지 마십시오.</span><span class="sxs-lookup"><span data-stu-id="09c16-119">While the wildcard asterisk (*) character can be used for the component and the interface, avoid using it because you might want to expose only selected functionality as a Web service.</span></span> <span data-ttu-id="09c16-120">이 구성 요소의 다음 버전으로 실행하는 경우 와일드카드를 사용하면 구성 구문을 확인했을 때 표시되지 않은 인터페이스를 실수로 노출할 수도 있습니다.</span><span class="sxs-lookup"><span data-stu-id="09c16-120">If run with a future version of this component, using the wildcard may unintentionally expose interfaces that may not have been present when the configuration syntax was determined.</span></span>  
+     <span data-ttu-id="09c16-119">와일드카드 별표(\*) 문자를 구성 요소 및 인터페이스에 사용할 수 있지만 선택한 기능만 웹 서비스로 노출하려는 경우가 있을 수도 있으므로 사용하지 마십시오.</span><span class="sxs-lookup"><span data-stu-id="09c16-119">While the wildcard asterisk (\*) character can be used for the component and the interface, avoid using it because you might want to expose only selected functionality as a Web service.</span></span> <span data-ttu-id="09c16-120">이 구성 요소의 다음 버전으로 실행하는 경우 와일드카드를 사용하면 구성 구문을 확인했을 때 표시되지 않은 인터페이스를 실수로 노출할 수도 있습니다.</span><span class="sxs-lookup"><span data-stu-id="09c16-120">If run with a future version of this component, using the wildcard may unintentionally expose interfaces that may not have been present when the configuration syntax was determined.</span></span>  
   
      <span data-ttu-id="09c16-121">/verbose 옵션은 도구에 경고와 오류를 표시하도록 지시합니다.</span><span class="sxs-lookup"><span data-stu-id="09c16-121">The /verbose option instructs the tool to display warnings in addition to any errors.</span></span>  
   

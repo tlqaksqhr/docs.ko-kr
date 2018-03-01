@@ -3,18 +3,26 @@ title: "CreateInstanceEnumWmi 함수 (관리 되지 않는 API 참조)"
 description: "CreateInstanceEnumWmi 함수 선택 조건을 만족 하는 지정된 된 클래스의 인스턴스를 포함 하는 열거자를 반환 합니다."
 ms.date: 11/06/2017
 ms.prod: .net-framework
-ms.technology: dotnet-clr
+ms.technology:
+- dotnet-clr
 ms.topic: reference
-api_name: CreateInstanceEnumWmi
-api_location: WMINet_Utils.dll
-api_type: DLLExport
-f1_keywords: CreateInstanceEnumWmi
-helpviewer_keywords: CreateInstanceEnumWmi function [.NET WMI and performance counters]
-topic_type: Reference
+api_name:
+- CreateInstanceEnumWmi
+api_location:
+- WMINet_Utils.dll
+api_type:
+- DLLExport
+f1_keywords:
+- CreateInstanceEnumWmi
+helpviewer_keywords:
+- CreateInstanceEnumWmi function [.NET WMI and performance counters]
+topic_type:
+- Reference
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: b796771b07dee28470d37ca3e4292c0a244e056b
 ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT

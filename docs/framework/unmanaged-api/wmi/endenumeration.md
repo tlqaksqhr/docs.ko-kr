@@ -3,18 +3,26 @@ title: "EndEnumeration 함수 (관리 되지 않는 API 참조)"
 description: "EndEnumeration 함수는 열거형을 종료 합니다."
 ms.date: 11/06/2017
 ms.prod: .net-framework
-ms.technology: dotnet-clr
+ms.technology:
+- dotnet-clr
 ms.topic: reference
-api_name: EndEnumeration
-api_location: WMINet_Utils.dll
-api_type: DLLExport
-f1_keywords: EndEnumeration
-helpviewer_keywords: EndEnumeration function [.NET WMI and performance counters]
-topic_type: Reference
+api_name:
+- EndEnumeration
+api_location:
+- WMINet_Utils.dll
+api_type:
+- DLLExport
+f1_keywords:
+- EndEnumeration
+helpviewer_keywords:
+- EndEnumeration function [.NET WMI and performance counters]
+topic_type:
+- Reference
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: fee3137dad3f89fa8849b28e9ca38b40040f916e
 ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
