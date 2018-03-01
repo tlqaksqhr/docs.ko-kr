@@ -5,23 +5,30 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology: dotnet-clr
+ms.technology:
+- dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: reference
-api_name: ICLRRuntimeInfo.GetInterface
-api_location: mscordbi.dll
-api_type: COM
-f1_keywords: ICLRRuntimeInfo::GetInterface
+api_name:
+- ICLRRuntimeInfo.GetInterface
+api_location:
+- mscordbi.dll
+api_type:
+- COM
+f1_keywords:
+- ICLRRuntimeInfo::GetInterface
 helpviewer_keywords:
 - GetInterface method [.NET Framework hosting]
 - ICLRRuntimeInfo::GetInterface method [.NET Framework hosting]
 ms.assetid: cc7b0e5b-48c3-4509-8ebb-611ddb1f7ec2
-topic_type: apiref
-caps.latest.revision: "21"
+topic_type:
+- apiref
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: 3c5150a10a813da85fc035c7bfa43a7647fac308
 ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
@@ -31,7 +38,7 @@ ms.lasthandoff: 12/22/2017
 # <a name="iclrruntimeinfogetinterface-method"></a><span data-ttu-id="d0b0c-102">ICLRRuntimeInfo::GetInterface 메서드</span><span class="sxs-lookup"><span data-stu-id="d0b0c-102">ICLRRuntimeInfo::GetInterface Method</span></span>
 <span data-ttu-id="d0b0c-103">현재 프로세스에 CLR을 로드 하 고 런타임 인터페이스 포인터와 같은 반환 [ICLRRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-interface.md), [ICLRStrongName](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md), 및 [IMetaDataDispenserEx](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-interface.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="d0b0c-103">Loads the CLR into the current process and returns runtime interface pointers, such as [ICLRRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-interface.md), [ICLRStrongName](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md), and [IMetaDataDispenserEx](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-interface.md).</span></span>  
   
- <span data-ttu-id="d0b0c-104">이 메서드를 모두 대체는 `CorBindTo`*의 함수는 [사용 되지 않는 CLR 호스팅 함수](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md) 섹션.</span><span class="sxs-lookup"><span data-stu-id="d0b0c-104">This method supersedes all the `CorBindTo`* functions in the [Deprecated CLR Hosting Functions](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md) section.</span></span>  
+ <span data-ttu-id="d0b0c-104">이 메서드를 모두 대체는 `CorBindTo`\*의 함수는 [사용 되지 않는 CLR 호스팅 함수](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md) 섹션.</span><span class="sxs-lookup"><span data-stu-id="d0b0c-104">This method supersedes all the `CorBindTo`\* functions in the [Deprecated CLR Hosting Functions](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md) section.</span></span>  
   
 ## <a name="syntax"></a><span data-ttu-id="d0b0c-105">구문</span><span class="sxs-lookup"><span data-stu-id="d0b0c-105">Syntax</span></span>  
   

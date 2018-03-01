@@ -5,23 +5,30 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology: dotnet-clr
+ms.technology:
+- dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: reference
-api_name: ICorDebugProcess.IsTransitionStub
-api_location: mscordbi.dll
-api_type: COM
-f1_keywords: ICorDebugProcess::IsTransitionStub
+api_name:
+- ICorDebugProcess.IsTransitionStub
+api_location:
+- mscordbi.dll
+api_type:
+- COM
+f1_keywords:
+- ICorDebugProcess::IsTransitionStub
 helpviewer_keywords:
 - ICorDebugProcess::IsTransitionStub method [.NET Framework debugging]
 - IsTransitionStub method [.NET Framework debugging]
 ms.assetid: f7653317-7e48-4163-be03-f50f1a4b0f70
-topic_type: apiref
-caps.latest.revision: "11"
+topic_type:
+- apiref
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: 9fe38cf5f53c2514b845238c1d52fa12df526fdd
 ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
@@ -44,7 +51,7 @@ HRESULT IsTransitionStub(
  <span data-ttu-id="2dc4d-106">[in] A `CORDB_ADDRESS` 에 주소를 지정 하는 값입니다.</span><span class="sxs-lookup"><span data-stu-id="2dc4d-106">[in] A `CORDB_ADDRESS` value that specifies the address in question.</span></span>  
   
  `pbTransitionStub`  
- <span data-ttu-id="2dc4d-107">[out] 부울 값이에 대 한 포인터 `true` 지정된 된 주소를 관리 코드로; 전환 하는 스텁 안에 있으면 그렇지 않은 경우 *`pbTransitionStub` 은 `false`합니다.</span><span class="sxs-lookup"><span data-stu-id="2dc4d-107">[out] A pointer to a Boolean value that is `true` if the specified address is inside a stub that will cause a transition to managed code; otherwise *`pbTransitionStub` is `false`.</span></span>  
+ <span data-ttu-id="2dc4d-107">[out] 부울 값이에 대 한 포인터 `true` 지정된 된 주소를 관리 코드로; 전환 하는 스텁 안에 있으면 그렇지 않은 경우 \*`pbTransitionStub` 은 `false`합니다.</span><span class="sxs-lookup"><span data-stu-id="2dc4d-107">[out] A pointer to a Boolean value that is `true` if the specified address is inside a stub that will cause a transition to managed code; otherwise \*`pbTransitionStub` is `false`.</span></span>  
   
 ## <a name="remarks"></a><span data-ttu-id="2dc4d-108">설명</span><span class="sxs-lookup"><span data-stu-id="2dc4d-108">Remarks</span></span>  
  <span data-ttu-id="2dc4d-109">`IsTransitionStub` 메서드를 사용 하 단계별 실행의 비관리 코드 관리 스텝 퍼에 단계별 실행 제어를 반환할 때 결정할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="2dc4d-109">The `IsTransitionStub` method can be used by unmanaged stepping code to decide when to return stepping control to the managed stepper.</span></span>  

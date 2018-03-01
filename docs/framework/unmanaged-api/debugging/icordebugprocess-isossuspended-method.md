@@ -5,23 +5,30 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology: dotnet-clr
+ms.technology:
+- dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: reference
-api_name: ICorDebugProcess.IsOSSuspended
-api_location: mscordbi.dll
-api_type: COM
-f1_keywords: ICorDebugProcess::IsOSSuspended
+api_name:
+- ICorDebugProcess.IsOSSuspended
+api_location:
+- mscordbi.dll
+api_type:
+- COM
+f1_keywords:
+- ICorDebugProcess::IsOSSuspended
 helpviewer_keywords:
 - IsOSSuspended method [.NET Framework debugging]
 - ICorDebugProcess::IsOSSuspended method [.NET Framework debugging]
 ms.assetid: 83406cb2-5797-4402-872d-89c9516aefec
-topic_type: apiref
-caps.latest.revision: "11"
+topic_type:
+- apiref
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: 97c394e3084007227cf157c62a12df3f5cfac8e6
 ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
@@ -44,7 +51,7 @@ HRESULT IsOSSuspended(
  <span data-ttu-id="90cf9-106">[in] 해당 스레드의 ID입니다.</span><span class="sxs-lookup"><span data-stu-id="90cf9-106">[in] The ID of thread in question.</span></span>  
   
  `pbSuspended`  
- <span data-ttu-id="90cf9-107">[out] 부울 값이에 대 한 포인터 `true` 고, 그렇지 않으면 일시 중단 된 지정된 된 스레드가 되었으면 *`pbSuspended` 은 `false`합니다.</span><span class="sxs-lookup"><span data-stu-id="90cf9-107">[out] A pointer to a Boolean value that is `true` if the specified thread has been suspended; otherwise *`pbSuspended` is `false`.</span></span>  
+ <span data-ttu-id="90cf9-107">[out] 부울 값이에 대 한 포인터 `true` 고, 그렇지 않으면 일시 중단 된 지정된 된 스레드가 되었으면 \*`pbSuspended` 은 `false`합니다.</span><span class="sxs-lookup"><span data-stu-id="90cf9-107">[out] A pointer to a Boolean value that is `true` if the specified thread has been suspended; otherwise \*`pbSuspended` is `false`.</span></span>  
   
 ## <a name="remarks"></a><span data-ttu-id="90cf9-108">설명</span><span class="sxs-lookup"><span data-stu-id="90cf9-108">Remarks</span></span>  
  <span data-ttu-id="90cf9-109">지정 된 스레드의 Win32 지정된 된 스레드가으로 일시 중단 된 결과로 디버거가이 프로세스를 중지 하는 경우 일시 중단 횟수가 1 씩 증가 합니다.</span><span class="sxs-lookup"><span data-stu-id="90cf9-109">When the specified thread has been suspended as a result of the debugger stopping this process, the specified thread's Win32 suspend count is incremented by one.</span></span> <span data-ttu-id="90cf9-110">디버거 사용자 인터페이스 (UI) 열 수는 운영 체제를 표시 하는 경우 계정에이 정보를 사용자에 게 스레드의 개수를 일시 중단 (OS).</span><span class="sxs-lookup"><span data-stu-id="90cf9-110">The debugger user interface (UI) may want to take this information into account if it displays the operating system (OS) suspend count of the thread to the user.</span></span>  
