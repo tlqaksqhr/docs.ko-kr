@@ -9,11 +9,11 @@ ms.assetid: 9bcf896a-5826-4189-8c1a-3e35fa08243a
 caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: b845bf6f31ef84c78dcfd84832036ca2f2c4cae4
-ms.sourcegitcommit: cec0525b2121c36198379525e69aa5388266db5b
+ms.openlocfilehash: 6822143df2d02c284d7506d180139c18cfbaf370
+ms.sourcegitcommit: 655fd4f78741967f80c409cef98347fdcf77857d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 02/28/2018
 ---
 # <a name="asynchronous-programming-with-async-and-await-c"></a>async 및 await를 사용한 비동기 프로그래밍(C#)
 비동기 프로그래밍을 사용하여 성능 병목 현상을 방지하고 응용 프로그램의 전체적인 응답성을 향상할 수 있습니다. 그러나 비동기 응용 프로그램을 쓰는 일반적인 기술이 복잡하여 해당 응용 프로그램을 쓰고, 디버깅하고, 유지 관리하기 어려울 수 있습니다.  
@@ -41,7 +41,7 @@ ms.lasthandoff: 02/23/2018
  비동기 기반 접근 방식을 사용하면 비동기 작업을 디자인할 때 선택할 수 있는 옵션 목록에 자동 전송과 동일한 기능을 추가할 수 있습니다. 즉, 기존 비동기 프로그래밍의 이점을 모두 활용할 수 있지만 개발자의 활동이 크게 줄어듭니다.  
   
 ##  <a name="BKMK_HowtoWriteanAsyncMethod"></a> 작성이 간편한 비동기 메서드  
- C#의 [Async](../../../../csharp/language-reference/keywords/async.md) 및 [Await](../../../../csharp/language-reference/keywords/await.md) 키워드는 비동기 프로그래밍의 핵심입니다. 이 키워드 두 개를 사용하면 .NET Framework, .NET Core 또는 Windows 런타임의 리소스를 사용하여 동기 메서드를 만드는 것만큼 쉽게 비동기 메서드를 만들 수 있습니다. `async` 및 `await`를 사용하여 정의하는 비동기 메서드를 *비동기 메서드*라고 합니다.  
+ C#의 [Async](../../../../csharp/language-reference/keywords/async.md) 및 [Await](../../../../csharp/language-reference/keywords/await.md) 키워드는 비동기 프로그래밍의 핵심입니다. 이 키워드 두 개를 사용하면 .NET Framework, .NET Core 또는 Windows 런타임의 리소스를 사용하여 동기 메서드를 만드는 것만큼 쉽게 비동기 메서드를 만들 수 있습니다. `async` 키워드를 사용하여 정의하는 비동기 메서드를 *비동기 메서드*라고 합니다.  
   
  다음 예제에서는 비동기 메서드를 보여줍니다. 코드의 거의 모든 내용이 익숙할 것입니다. 주석은 비동기를 만들 때 추가하는 기능을 호출합니다.  
   
@@ -92,21 +92,21 @@ string urlContents = await client.GetStringAsync();
   
 -   반환 형식은 다음 형식 중 하나입니다.  
   
-    -   메서드에 연산자 형식이 TResult인 Return 문이 있는 경우 <xref:System.Threading.Tasks.Task%601>입니다.  
+    -   메서드에 연산자 형식이 `TResult`인 Return 문이 있는 경우 <xref:System.Threading.Tasks.Task%601>입니다.  
   
     -   메서드에 반환 문이 포함되지 않았거나 피연산자가 없는 반환 문이 포함된 경우 <xref:System.Threading.Tasks.Task>입니다.  
   
-    -   비동기 이벤트 처리기를 작성하는 경우 `Void`입니다.  
+    -   비동기 이벤트 처리기를 작성하는 경우 `void`입니다.  
 
     -   `GetAwaiter` 메서드가 포함된 모든 기타 형식(C# 7부터).
   
-     자세한 내용은 이 항목 뒷부분의 "반환 형식 및 매개 변수"를 참조하세요.  
+     자세한 내용은 [반환 형식 및 매개 변수](#BKMK_ReturnTypesandParameters) 섹션을 참조하세요.  
   
 -   메서드는 일반적으로 비동기 작업이 완료될 때까지 메서드가 계속될 수 없는 지점을 표시하는 하나 이상의 대기 표현을 포함하고 있습니다. 한편, 메서드가 일시 중단되고 컨트롤이 메서드의 호출자로 반환됩니다. 이 항목의 다음 단원은 일시 중단 지점에서 발생하는 상황을 보여줍니다.  
   
  비동기 메서드에서는 제공된 키워드 및 형식을 사용해서 수행하려는 작업을 나타내고, 컴파일러는 일시 중단된 메서드에서 컨트롤이 대기 지점으로 반환될 때 수행되어야 하는 항목을 추적하는 등의 나머지 작업을 수행합니다. 루프 및 예외 처리와 같은 일부 루틴 프로세스는 기존의 비동기 코드에서 처리하기 어려울 수 있습니다. 비동기 메서드에서는 동기 솔루션에서와 같이 필요한 만큼 이러한 요소를 작성하여 문제를 해결합니다.  
   
- 이전 버전의 .NET Framework의 비동기에 대한 자세한 내용은 [TPL 및 일반적인 .NET Framework 비동기 프로그래밍](http://msdn.microsoft.com/library/e7b31170-a156-433f-9f26-b1fc7cd1776f)을 참조하세요.  
+ 이전 버전의 .NET Framework의 비동기에 대한 자세한 내용은 [TPL 및 일반적인 .NET Framework 비동기 프로그래밍](../../../../standard/parallel-programming/tpl-and-traditional-async-programming.md)을 참조하세요.  
   
 ##  <a name="BKMK_WhatHappensUnderstandinganAsyncMethod"></a> 비동기 메서드에서 수행되는 작업  
  비동기 프로그래밍을 이해하는 데 있어 가장 중요한 점은 메서드에서 메서드로 제어 흐름을 이동하는 방법입니다. 다음 다이어그램이 과정을 안내합니다.  
@@ -132,7 +132,7 @@ string urlContents = await client.GetStringAsync();
      따라서 `AccessTheWebAsync`는 await 연산자를 사용해서 해당 프로세스를 일시 중단하고 `AccessTheWebAsync`를 호출한 메서드에 제어 권한을 양도합니다. `AccessTheWebAsync`는 `Task<int>`를 호출자에게 반환합니다. 작업은 다운로드한 문자열의 길이인 정수 결과를 만든다는 약속을 나타냅니다.  
   
     > [!NOTE]
-    >  `GetStringAsync`가 대기하기 전에 `getStringTask`(및 `AccessTheWebAsync`)가 완료되면 `AccessTheWebAsync`에 컨트롤이 유지됩니다. 일시 중단 및 `AccessTheWebAsync`의 반환 비용은 호출된 비동기 프로세스(`getStringTask`)가 이미 완료되었고 AccessTheWebSync가 최종 결과를 기다릴 필요가 없다면 낭비됩니다.  
+    >  `GetStringAsync`가 대기하기 전에 `getStringTask`(및 `AccessTheWebAsync`)가 완료되면 `AccessTheWebAsync`에 컨트롤이 유지됩니다. 일시 중단 및 `AccessTheWebAsync`의 반환 비용은 호출된 비동기 프로세스(`getStringTask`)가 이미 완료되었고 `AccessTheWebSync`가 최종 결과를 기다릴 필요가 없다면 낭비됩니다.  
   
      호출자(이 예제의 이벤트 처리기) 내에서 처리 패턴이 계속됩니다. 호출자가 해당 결과를 기다리거나 즉시 기다리기 전에 `AccessTheWebAsync`에서 결과에 의존하지 않는 다른 작업을 수행할 수 있습니다.   `AccessTheWebAsync`에 대한 이벤트가 대기 중이며 `AccessTheWebAsync`가 `GetStringAsync`를 대기 중입니다.  
   
@@ -146,7 +146,7 @@ string urlContents = await client.GetStringAsync();
 ##  <a name="BKMK_APIAsyncMethods"></a> API 비동기 메서드  
  `GetStringAsync`와 같이 비동기 프로그래밍을 지원하는 메서드를 어디에서 검색해야 할지 궁금했을 것입니다. .NET Framework 4.5 이상 및 .NET Core에는 `async` 및 `await`에 작동하는 많은 멤버가 포함되어 있습니다. 멤버 이름에 붙는 "Async" 접미사와 <xref:System.Threading.Tasks.Task> 또는 <xref:System.Threading.Tasks.Task%601>의 반환 형식으로 멤버를 인식할 수 있습니다. 예를 들어, `System.IO.Stream` 클래스는 동기 메서드인 <xref:System.IO.Stream.CopyTo%2A>, <xref:System.IO.Stream.Read%2A> 및 <xref:System.IO.Stream.Write%2A>와 함께 <xref:System.IO.Stream.CopyToAsync%2A>, <xref:System.IO.Stream.ReadAsync%2A> 및 <xref:System.IO.Stream.WriteAsync%2A>와 같은 메서드를 포함합니다.  
   
- Windows 런타임에는 Windows 앱에서 `async` 및 `await`와 함께 사용할 수 있는 많은 메서드도 포함되어 있습니다. 자세한 내용 및 예제 메서드를 보려면 [빠른 시작: 비동기 프로그래밍에 await 연산자 사용](/previous-versions/windows/apps/hh452713(v=win.10)), [비동기 프로그래밍(Windows 스토어 앱)](/previous-versions/windows/apps/hh464924(v=win.10)) 및 [WhenAny: .NET Framework와 Windows 런타임 간 브리징](https://msdn.microsoft.com/library/jj635140(v=vs.120).aspx)을 참조하세요.  
+ Windows 런타임에는 Windows 앱에서 `async` 및 `await`와 함께 사용할 수 있는 많은 메서드도 포함되어 있습니다. 자세한 내용은 UWP 개발에 대한 [스레딩 및 비동기 프로그래밍](/windows/uwp/threading-async/)과 이전 버전의 Windows 런타임을 사용하는 경우 [Asynchronous programming (Windows Store apps)](/previous-versions/windows/apps/hh464924(v=win.10))(비동기 프로그래밍(Windows 스토어 앱)) 및 [Quickstart: using the await operator for asynchronous programming](/previous-versions/windows/apps/hh452713(v=win.10))(빠른 시작: 비동기 프로그래밍에 await 연산자 사용)을 참조하세요.  
   
 ##  <a name="BKMK_Threads"></a> 스레드  
 비동기 메서드는 비차단 작업입니다. 비동기 메서드의 `await` 식은 대기한 작업이 실행되는 동안 현재 스레드를 차단하지 않습니다. 대신에 이 식은 메서드의 나머지를 연속으로 등록하고 제어 기능을 비동기 메서드 호출자에게 반환합니다.  
@@ -158,7 +158,7 @@ string urlContents = await client.GetStringAsync();
 ##  <a name="BKMK_AsyncandAwait"></a> async 및 await  
  [async](../../../../csharp/language-reference/keywords/async.md) 한정자를 사용해서 메서드를 비동기 메서드로 지정하면 다음 두 기능이 활성화됩니다.  
   
--   표시된 비동기 메서드는 [Await](../../../../csharp/language-reference/keywords/await.md)를 사용하여 일시 중단 지점을 지정할 수 있습니다. Await 연산자는 비동기 프로세스가 완료될 때까지 비동기 메서드가 해당 지점을 계속할 수 없다고 지시합니다. 한편, 컨트롤이 비동기 메서드의 호출자로 반환됩니다.  
+-   표시된 비동기 메서드는 [Await](../../../../csharp/language-reference/keywords/await.md)를 사용하여 일시 중단 지점을 지정할 수 있습니다. `await` 연산자는 대기된 비동기 프로세스가 완료될 때까지 비동기 메서드가 해당 지점을 지나 계속할 수 없도록 컴파일러에 지시합니다. 한편, 컨트롤이 비동기 메서드의 호출자로 반환됩니다.  
   
      `await` 식에서 비동기 메서드를 일시 중단하더라도 메서드가 종료되지는 않으며 `finally` 블록이 실행되지 않습니다.  
   
@@ -232,8 +232,7 @@ Windows 런타임 프로그래밍의 비동기 API에는 작업과 유사한 다
 -   <xref:Windows.Foundation.IAsyncActionWithProgress%601>  
   
 -   <xref:Windows.Foundation.IAsyncOperationWithProgress%602>  
-  
- 자세한 내용 및 예제를 보려면 [빠른 시작: 비동기 프로그래밍에 await 연산자 사용](/previous-versions/windows/apps/hh452713(v=win.10))을 참조하세요.  
+   
   
 ##  <a name="BKMK_NamingConvention"></a> 명명 규칙  
  규칙에 따라 `async` 한정자가 있는 메서드 이름에 "Async"를 추가합니다.  
@@ -342,4 +341,6 @@ namespace AsyncFirstExample
   
 ## <a name="see-also"></a>참고 항목  
  [async](../../../../csharp/language-reference/keywords/async.md)  
- [await](../../../../csharp/language-reference/keywords/await.md)
+ [await](../../../../csharp/language-reference/keywords/await.md)  
+ [비동기 프로그래밍](../../../../csharp/async.md)  
+ [비동기 개요](../../../../standard/async.md)  
