@@ -4,23 +4,23 @@
 ## [의미 체계 작업](work-with-semantics.md)
 ## [작업 영역 작업](work-with-workspace.md)
 
+## 빠른 시작
+### [구문 분석](get-started/syntax-analysis.md)
+### [의미 체계 분석](get-started/semantic-analysis.md)
+
+<!-- Taken from https://github.com/dotnet/roslyn/wiki/Samples-and-Walkthroughs -->
 <!--
-## Quick starts
+### Get started with semantic analysis
+### Get started with Syntax transformation
+### Get started writing custom analyzers and code fixes
+
+<!--
+## Tutorials
+<!-- Taken from https://github.com/dotnet/roslyn/wiki/Samples-and-Walkthroughs
 ### Build your first analyzer
 ### Build your first code fix
 ### Deploy your analyzer as a VSIX
 ### Deploy your analyzer as a NuGet package
--->
-
-<!--
-## Tutorials
--->
-<!-- Taken from https://github.com/dotnet/roslyn/wiki/Samples-and-Walkthroughs -->
-<!--
-### Get started with syntax analysis
-### Get started with semantic analysis
-### Get started with Syntax transformation
-### Get started writing custom analyzers and code fixes
 -->
 
 <!--
@@ -42,3 +42,4 @@
 -->
 <!-- Look at the samples, and determinine which 
     are "How To" vs. Samples. -->
+    
