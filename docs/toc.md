@@ -9,7 +9,6 @@
 ### [.NET Standard의 새로운 기능](standard/whats-new/whats-new-in-dotnet-standard.md)
 ## [대상 프레임워크](standard/frameworks.md)
 ## [.NET 용어](standard/glossary.md)
-## [mdoc를 사용하여 설명서 작성](standard/mdoc/index.md)
 ## [아키텍처 지침](standard/guidance-architecture.md)
 ### [ASP.NET Core 및 Microsoft Azure를 사용하여 현대식 웹 응용 프로그램 설계](standard/modern-web-apps-azure-architecture/)
 ### [Azure 클라우드 및 Windows 컨테이너를 사용하여 기존 .NET 응용 프로그램 현대화](standard/modernize-with-azure-and-containers/)
@@ -25,9 +24,10 @@
 ### [클래스 라이브러리 개요](standard/class-library-overview.md)
 ### [기본 형식](standard/base-types/)
 ## [.NET 클래스 라이브러리](standard/class-libraries.md)
-## 분석기
+## [분석기](standard/analyzers/index.md)
 ### [API 분석기](standard/analyzers/api-analyzer.md) 
 ### [이식성 분석기](standard/analyzers/portability-analyzer.md)
+### [프레임워크 분석기](standard/analyzers/framework-analyzer.md)
 ## [예외 처리 및 Throw](standard/exceptions/)
 ## [.NET 어셈블리 파일 형식](standard/assembly-format.md)
 ## [가비지 수집](standard/garbage-collection/)
@@ -266,6 +266,7 @@
 ### [방법: `String.Split`을 사용하여 문자열 구문 분석](csharp/how-to/parse-strings-using-split.md)
 ### [문자열 연결 방법](csharp/how-to/concatenate-multiple-strings.md)
 ### [방법 문자열을 DateTime으로 변환](standard/base-types/parsing-datetime.md)
+### [문자열 검색 방법](csharp/how-to/search-strings.md)
 <!-- End of C# Concepts section -->
 ## [.NET Compiler Platform SDK(Roslyn API)](csharp/roslyn-sdk/)
 ## [C# 프로그래밍 가이드](csharp/programming-guide/)
