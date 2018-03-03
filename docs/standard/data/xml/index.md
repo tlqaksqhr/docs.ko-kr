@@ -9,18 +9,18 @@ ms.technology: dotnet-standard
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: e695047f-3c0f-4045-8708-5baea91cc380
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 22a2eb72dc06a644171c143a61698e661d2c66c6
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 824e06a00c4242d8ee38bdfc5a57151a71e4f285
+ms.sourcegitcommit: ba765893e3efcece67d99fd6d5ce0074b050d1d9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/02/2018
 ---
 # <a name="xml-documents-and-data"></a>XML 문서 및 데이터
 .NET Framework에서 XML 인식 응용 프로그램을 쉽게 작성할 수 있도록 하는 종합적이고 통합된 클래스 집합을 제공합니다. 다음 네임스페이스의 클래스에서는 XML 구문 분석 및 작성, 메모리에서의 XML 데이터 편집, 데이터 유효성 검사 및 XSLT 변형을 지원합니다.  
@@ -96,5 +96,3 @@ ms.lasthandoff: 12/23/2017
  [보안](../../../../docs/standard/security/index.md)  
  .NET Framework 보안 시스템을 개략적으로 설명합니다.  
   
- [XML 개발자 센터](http://go.microsoft.com/fwlink/?linkid=42458)  
- XML 개발자를 위한 추가 기술 정보, 다운로드, 뉴스 그룹 및 기타 리소스를 제공합니다.
