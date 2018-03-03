@@ -5,23 +5,25 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology: dotnet-ado
+ms.technology:
+- dotnet-ado
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 9053724d-a1fb-4f0f-b9dc-7f6dd893e8ff
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: abb7c9322a9b7ddfd3e0add4d8b9be6941c5e240
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: c186b25aeaa42b7285316d7bc9de913dd7b89af7
+ms.sourcegitcommit: ba765893e3efcece67d99fd6d5ce0074b050d1d9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 03/02/2018
 ---
 # <a name="sql-server-security"></a>SQL Server 보안
-[!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)]에는 보안 데이터베이스 응용 프로그램을 만들 수 있도록 지원하는 많은 기능이 있습니다.  
+[!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] 에 보안 데이터베이스 응용 프로그램 만들기를 지 원하는 많은 기능이 있습니다.  
   
  데이터 절도나 손상 같이 일반적으로 발생하는 보안 문제는 사용 중인 [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] 버전에 관계없이 항상 고려해야 할 사항입니다. 데이터 무결성도 보안 문제로 간주해야 합니다. 데이터를 보호하지 않으면 특수한 데이터 조작이 허용되어 실수나 악의적으로 데이터가 잘못된 값으로 수정되거나 완전히 삭제될 수 있으므로 데이터가 쓸모없게 될 수 있습니다. 또한 기밀 정보의 올바른 저장과 같이 반드시 지켜야 할 법적 요구 사항도 많습니다. 특정 관할권에서는 해당 법률에 따라 몇 가지 개인 데이터를 저장하는 것이 완전히 금지될 수도 있습니다.  
   
@@ -44,13 +46,12 @@ ms.lasthandoff: 01/17/2018
  [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] Express의 보안 고려 사항에 대해 설명합니다.  
   
 ## <a name="related-sections"></a>관련 단원  
- [보안 및 보호 (데이터베이스 엔진)](http://msdn2.microsoft.com/library/bb510589\(SQL.100\).aspx.)  
- [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] 온라인 설명서의 보안 항목입니다.  
-  
- [SQL Server에 대 한 보안 고려 사항](http://go.microsoft.com/fwlink/?LinkId=98587)  
- [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] 온라인 설명서의 보안 항목입니다.  
-  
+[SQL Server 데이터베이스 엔진 및 Azure SQL 데이터베이스에 대 한 보안 센터](/sql/relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database)  
+SQL Server 및 Azure SQL 데이터베이스에 대 한 보안 고려 사항에 설명합니다.
+
+[SQL Server 설치에 대 한 보안 고려 사항](/sql/sql-server/install/security-considerations-for-a-sql-server-installation)  
+SQL Server를 설치 하기 전에 고려해 야 할 보안 문제를 설명 합니다.
+
 ## <a name="see-also"></a>참고 항목  
  [ADO.NET 응용 프로그램 보안](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  
  [SQL Server 및 ADO.NET](../../../../../docs/framework/data/adonet/sql/index.md)  
- [ADO.NET 관리되는 공급자 및 데이터 집합 개발자 센터](http://go.microsoft.com/fwlink/?LinkId=217917)
