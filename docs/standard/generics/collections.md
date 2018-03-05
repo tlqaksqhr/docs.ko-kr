@@ -1,7 +1,7 @@
 ---
-title: ".NET Framework의 제네릭 컬렉션"
+title: ".NET의 제네릭 컬렉션"
 ms.custom: 
-ms.date: 03/30/2017
+ms.date: 02/15/2018
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
@@ -13,27 +13,25 @@ dev_langs:
 - vb
 - cpp
 helpviewer_keywords:
-- generics [.NET Framework], collections
-- generic collections [.NET Framework]
+- generics [.NET], collections
+- generic collections [.NET]
+- generic types [.NET]
 ms.assetid: 5b646751-6ab7-465c-916c-b1a76aefa9f5
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: d7e7d11446c14cffbef1e5cade5f082874187636
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 827d5a7edd335769ec5497518cbdf71181aacc2c
+ms.sourcegitcommit: 96cc82cac4650adfb65ba351506d8a8fbcd17b5c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 02/19/2018
 ---
-# <a name="generic-collections-in-the-net-framework"></a>.NET Framework의 제네릭 컬렉션
-이 항목에서는 .NET Framework의 제네릭 컬렉션 클래스 및 기타 제네릭 형식을 개략적으로 설명합니다.  
-  
-## <a name="generic-collections-in-the-net-framework"></a>.NET Framework의 제네릭 컬렉션  
- .NET Framework 클래스 라이브러리는 <xref:System.Collections.Generic> 및 <xref:System.Collections.ObjectModel> 네임스페이스에서 다양한 제네릭 컬렉션 클래스를 제공합니다. 이러한 클래스에 대한 자세한 내용은 [일반적으로 사용되는 컬렉션 형식](../../../docs/standard/collections/commonly-used-collection-types.md)을 참조하세요.  
+# <a name="generic-collections-in-net"></a>.NET의 제네릭 컬렉션
+
+ .NET 클래스 라이브러리는 <xref:System.Collections.Generic> 및 <xref:System.Collections.ObjectModel> 네임스페이스에서 다양한 제네릭 컬렉션 클래스를 제공합니다. 이러한 클래스에 대한 자세한 내용은 [일반적으로 사용되는 컬렉션 형식](../../../docs/standard/collections/commonly-used-collection-types.md)을 참조하세요.  
   
 ### <a name="systemcollectionsgeneric"></a>System.Collections.Generic  
  대부분의 제네릭 컬렉션 형식은 제네릭이 아닌 형식과 직접적인 연관이 있습니다. <xref:System.Collections.Generic.Dictionary%602>는 <xref:System.Collections.Hashtable>의 제네릭 버전으로, <xref:System.Collections.DictionaryEntry> 대신 제네릭 구조체인 <xref:System.Collections.Generic.KeyValuePair%602>를 열거형에 사용합니다.  
@@ -51,7 +49,7 @@ ms.lasthandoff: 12/23/2017
  <xref:System.Nullable%601> 제네릭 구조체를 통해 `null`이 할당될 수 있는 것처럼 값 형식을 사용할 수 있습니다. 이 기능은 값 형식을 포함하는 필드가 누락될 수 있는 데이터베이스 쿼리를 사용할 때 유용할 수 있습니다. 제네릭 형식 매개 변수는 임의의 값 형식일 수 있습니다.  
   
 > [!NOTE]
->  C#에서는 언어에 nullable 형식에 대한 구문이 있기 때문에 명시적으로 <xref:System.Nullable%601>을 사용해야 합니다.  
+>  C# 및 Visual Basic에서는 언어에 nullable 형식에 대한 구문이 있기 때문에 명시적으로 <xref:System.Nullable%601>을 사용할 필요가 없습니다. [Nullable 형식(C# 프로그래밍 가이드)](../../csharp/programming-guide/nullable-types/index.md) 및 [Nullable 값 형식(Visual Basic)](../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md)을 참조하세요. 
   
  <xref:System.ArraySegment%601> 제네릭 구조체는 0부터 시작하는 임의 형식의 1차원 배열 내에서 요소 범위를 구분하는 방법을 제공합니다. 제네릭 형식 매개 변수는 배열 요소의 형식입니다.  
   

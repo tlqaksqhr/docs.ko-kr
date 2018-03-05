@@ -48,11 +48,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 4f1918788a571e9626554eaeec9fdd3f1686d4cc
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 8917ce764d615282f95aad2eee494fcc0ba7a847
+ms.sourcegitcommit: 96cc82cac4650adfb65ba351506d8a8fbcd17b5c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 02/19/2018
 ---
 # <a name="the-regular-expression-object-model"></a>Regular Expression 개체 모델
 <a name="introduction"></a> 이 항목에서는 .NET 정규식 작업을 수행하는 데 사용되는 개체 모델을 설명합니다. 여기에는 다음 단원이 포함되어 있습니다.  
@@ -313,7 +313,7 @@ ms.lasthandoff: 12/23/2017
      [!code-csharp[Conceptual.RegularExpressions.ObjectModel#11](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.objectmodel/cs/nocapture1.cs#11)]
      [!code-vb[Conceptual.RegularExpressions.ObjectModel#11](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.objectmodel/vb/nocapture1.vb#11)]  
   
--   수량자는 캡처링 그룹에 의해 정의된 패턴과 여러 번 일치할 수 있습니다. 이 경우 `Value` 개체의 `Length` 및 <xref:System.Text.RegularExpressions.Group> 속성은 캡처된 마지막 부분 문자열에 대한 정보만 포함합니다. 예를 들어, 다음 정규식은 마침표로 끝나는 단일 문장과 일치합니다. 이 정규식에서는 두 개의 그룹화 구문을 사용하는데, 첫 번째 그룹화 구문은 개별 단어를 공백 문자와 함께 캡처하고, 두 번째 그룹화 구문은 개별 단어를 캡처합니다. 예제의 출력이 보여주는 것처럼, 정규식이 전체 문장을 캡처하는 데 성공하더라도 두 번째 캡처링 그룹은 마지막 단어만 캡처합니다.  
+-   수량자는 캡처링 그룹에 의해 정의된 패턴과 여러 번 일치할 수 있습니다. 이 경우 `Value` 개체의 `Length` 및 <xref:System.Text.RegularExpressions.Group> 속성은 캡처된 마지막 부분 문자열에 대한 정보만 포함합니다. 예를 들어, 다음 정규식은 마침표로 끝나는 단일 문장과 일치합니다. 이 정규식에서는 두 개의 그룹화 구문을 사용하는데, 첫 번째 그룹화 구문은 개별 단어를 공백 문자와 함께 캡처하고, 두 번째 그룹화 구문은 개별 단어를 캡처합니다. 예제의 출력이 보여 주는 것처럼, 정규식이 전체 문장을 캡처하는 데 성공하더라도 두 번째 캡처링 그룹은 마지막 단어만 캡처합니다.  
   
      [!code-csharp[Conceptual.RegularExpressions.ObjectModel#12](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.objectmodel/cs/lastcapture1.cs#12)]
      [!code-vb[Conceptual.RegularExpressions.ObjectModel#12](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.objectmodel/vb/lastcapture1.vb#12)]  
@@ -335,7 +335,7 @@ ms.lasthandoff: 12/23/2017
  [!code-csharp[Conceptual.RegularExpressions.ObjectModel#14](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.objectmodel/cs/capturecollection1.cs#14)]
  [!code-vb[Conceptual.RegularExpressions.ObjectModel#14](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.objectmodel/vb/capturecollection1.vb#14)]  
   
- 다음 예제에서는 정규식 `(Abc)+`를 사용하여 문자열 "XYZAbcAbcAbcXYZAbcAb"에서 문자열 "Abc"의 하나 이상의 연속 발생을 찾습니다. 이 예제에서는 <xref:System.Text.RegularExpressions.Group.Captures%2A?displayProperty=nameWithType> 속성을 사용하여, 캡처된 부분 문자열의 여러 그룹을 반환하는 방법을 보여줍니다.  
+ 다음 예제에서는 정규식 `(Abc)+`를 사용하여 문자열 "XYZAbcAbcAbcXYZAbcAb"에서 문자열 "Abc"의 하나 이상의 연속 발생을 찾습니다. 이 예제에서는 <xref:System.Text.RegularExpressions.Group.Captures%2A?displayProperty=nameWithType> 속성을 사용하여, 캡처된 부분 문자열의 여러 그룹을 반환하는 방법을 보여 줍니다.  
   
  [!code-csharp[RegularExpressions.Classes#5](../../../samples/snippets/csharp/VS_Snippets_CLR/RegularExpressions.Classes/cs/Example.cs#5)]
  [!code-vb[RegularExpressions.Classes#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/RegularExpressions.Classes/vb/Example.vb#5)]  

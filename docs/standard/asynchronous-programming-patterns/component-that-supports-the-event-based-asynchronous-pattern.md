@@ -31,11 +31,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 57997b00082fd2068638d83cb828b3fa6fbdfb97
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 4d42c1d4b58f5e2517ff8d8c504628c7aab6fd0d
+ms.sourcegitcommit: be1fb5d9447ad459bef22b91a91c72e3e0b2d916
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="walkthrough-implementing-a-component-that-supports-the-event-based-asynchronous-pattern"></a>연습: 이벤트 기반 비동기 패턴을 지원하는 구성 요소 구현
 상당한 지연을 일으킬 수 있는 몇 가지 작업을 사용하여 클래스를 작성하는 경우 [이벤트 기반 비동기 패턴 개요](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md)를 구현하여 비동기 기능을 부여하는 것을 고려할 수 있습니다.  
@@ -60,7 +60,7 @@ ms.lasthandoff: 01/19/2018
   
 -   시작 및 취소 메서드 구현  
   
- 이 항목의 코드를 단일 목록으로 복사하려면 [방법: 이벤트 기반 비동기 패턴을 지원하는 구성 요소 구현](../../../docs/standard/asynchronous-programming-patterns/component-that-supports-the-event-based-asynchronous-pattern.md)을 참조하세요.  
+ 이 항목의 코드를 단일 목록으로 복사하려면 [How to: Implement a Client of the Event-based Asynchronous Pattern](../../../docs/standard/asynchronous-programming-patterns/how-to-implement-a-client-of-the-event-based-asynchronous-pattern.md)(방법: 이벤트 기반 비동기 패턴의 클라이언트 구현)을 참조하세요.  
   
 ## <a name="creating-the-component"></a>구성 요소 만들기  
  첫 번째 단계는 이벤트 기반 비동기 패턴을 구현하는 구성 요소를 만드는 것입니다.  

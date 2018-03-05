@@ -1,5 +1,5 @@
 ---
-title: "빠른 시작 - 보간된 문자열 - C# 가이드"
+title: "보간된 문자열 자습서 - C# 로컬 빠른 시작"
 description: "보간된 문자열에 관한 이 빠른 시작에서는 더 큰 문자열에 식의 결과를 포함하는 C# 코드를 작성합니다."
 author: rpetrusha
 ms.author: ronpet
@@ -9,17 +9,17 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.custom: mvc
-ms.openlocfilehash: 14185dd4e364f12756541ac6401d1c6ff3206fe9
-ms.sourcegitcommit: 8bde7a3432f30fc771079744955c75c58c4eb393
+ms.openlocfilehash: b6089b69eb350fce29f86f19f5abeb44acb4b6b4
+ms.sourcegitcommit: 96cc82cac4650adfb65ba351506d8a8fbcd17b5c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/20/2018
+ms.lasthandoff: 02/19/2018
 ---
 # <a name="interpolated-strings"></a>보간된 문자열
 
 이 빠른 시작에서는 C#에서 보간된 문자열을 사용하여 단일 출력 문자열에 값을 삽입하는 방법을 설명합니다. C# 코드를 작성하고 컴파일 및 실행 결과를 확인합니다. 이 빠른 시작은 문자열에 값을 삽입하고, 이러한 값을 다양한 방식으로 서식화하는 일련의 단원으로 구성됩니다.
 
-이 빠른 시작에서는 개발에 사용할 수 있는 컴퓨터가 있다고 예상합니다. .NET 항목 [Get Started in 10 minutes](https://www.microsoft.com/net/core)(10분 안에 시작)에는 Mac, PC 또는 Linux의 로컬 개발 환경 설정에 대한 지침이 포함되어 있습니다. 사용할 명령에 대한 간단한 개요는 [로컬 빠른 시작 소개](local-environment.md)에 자세한 정보에 대한 링크와 함께 있습니다. 
+이 빠른 시작에서는 개발에 사용할 수 있는 컴퓨터가 있다고 예상합니다. .NET 항목 [Get Started in 10 minutes](https://www.microsoft.com/net/core)(10분 안에 시작)에는 Mac, PC 또는 Linux의 로컬 개발 환경 설정에 대한 지침이 포함되어 있습니다. 사용할 명령에 대한 간단한 개요는 [로컬 빠른 시작 소개](local-environment.md)에 나와 있으며, 이 소개에는 자세한 정보에 대한 링크도 함께 있습니다. 
 
 ## <a name="create-an-interpolated-string"></a>보간된 문자열 만들기
 
@@ -144,9 +144,9 @@ public class Example
 다음 코드처럼 `{"Author",-25}` 및 `{title.Key,-25}` 보간된 식에서 음수 기호를 제거하고 예제를 다시 실행해 보세요.
 
 ```csharp
-Console.WriteLine($"\n{"Author",-25}    {"Title",30}\n");
+Console.WriteLine($"\n{"Author",25}    {"Title",30}\n");
 foreach (var title in titles)
-   Console.WriteLine($"{title.Key,-25}     {title.Value,30}");
+   Console.WriteLine($"{title.Key,25}     {title.Value,30}");
 ```
 
 이때 작성자 정보는 오른쪽 맞춤입니다.
@@ -164,7 +164,7 @@ Console.WriteLine($"{DateTime.Now,-20:d} Hour {DateTime.Now,-10:HH} {1063.342,15
 
 보간된 문자열 빠른 시작을 완료했습니다. 
     
-사용자의 개발 환경에서 [배열 및 컬렉션](arrays-and-collections.md) 빠른 시작을 계속할 수 있습니다.
+자체 개발 환경에서 [배열 및 컬렉션](arrays-and-collections.md) 빠른 시작을 계속할 수 있습니다.
 
 C# 참조의 [보간된 문자열](../language-reference/keywords/interpolated-strings.md) 항목에서 보간된 문자열로 작업하는 방법에 대해 자세히 알아볼 수 있습니다.
 

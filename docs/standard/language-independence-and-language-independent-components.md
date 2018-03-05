@@ -26,11 +26,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: ec6f7df4cc42b71ab9c61e84b71a81f641a1d0b3
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 81ccf70482c8b7f4acb0b18381ed4cf07edc06af
+ms.sourcegitcommit: 96cc82cac4650adfb65ba351506d8a8fbcd17b5c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 02/19/2018
 ---
 # <a name="language-independence-and-language-independent-components"></a>언어 독립성 및 언어 독립적 구성 요소
 .NET Framework는 언어에 국한되지 않습니다. 즉, 개발자로서 .NET Framework를 대상으로 하는 많은 언어 중 하나로 개발할 수 있습니다(예: C#, C++/CLI, Eiffel, F#, IronPython, IronRuby, PowerBuilder, Visual Basic, Visual COBOL 및 Windows PowerShell). 원래 작성된 언어를 모르거나 원래의 언어 규칙을 따르지 않고도 .NET Framework를 위해 개발된 클래스 라이브러리의 형식과 멤버에 액세스할 수 있습니다. 사용자가 구성 요소 개발자일 경우 언어와 상관없이 모든 .NET Framework 응용 프로그램에서 구성 요소를 액세스할 수 있습니다.  
@@ -166,7 +166,7 @@ ms.lasthandoff: 12/23/2017
 ### <a name="types-and-type-member-signatures"></a>형식 및 형식 멤버 시그니처  
  <xref:System.Object?displayProperty=nameWithType> 형식은 CLS 규격이고 .NET Framework 형식 시스템의 모든 개체 형식의 기본 형식입니다. .NET Framework의 상속은 암시적(예: <xref:System.String> 클래스는 <xref:System.Object> 클래스에서 암시적으로 상속됨)이거나 명시적(예: <xref:System.Globalization.CultureNotFoundException> 클래스는 <xref:System.ArgumentException> 클래스에서 명시적으로 상속되고, 이 클래스는 다시 <xref:System.SystemException> 클래스에서 명시적으로 상속되며, 이 클래스는 다시 <xref:System.Exception> 클래스에서 명시적으로 상속됨)입니다. 파생된 형식은 CLS 규격이어야 하며, 그 기본 형식도 CLS 규격이어야 합니다.  
   
- 다음 예제에서는 기본 형식이 CLS 규격이 아닌 파생 형식을 보여줍니다. 부호 없는 32비트 정수를 카운터로 사용하는 기본 `Counter` 클래스를 정의합니다. 이 클래스는 부호 없는 정수를 래핑하여 카운터 기능을 제공하므로 CLS 비규격으로 표시됩니다. 따라서 파생된 클래스인 `NonZeroCounter`도 CLS 규격이 아닙니다.  
+ 다음 예제에서는 기본 형식이 CLS 규격이 아닌 파생 형식을 보여 줍니다. 부호 없는 32비트 정수를 카운터로 사용하는 기본 `Counter` 클래스를 정의합니다. 이 클래스는 부호 없는 정수를 래핑하여 카운터 기능을 제공하므로 CLS 비규격으로 표시됩니다. 따라서 파생된 클래스인 `NonZeroCounter`도 CLS 규격이 아닙니다.  
   
  [!code-csharp[Conceptual.CLSCompliant#12](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/type3.cs#12)]
  [!code-vb[Conceptual.CLSCompliant#12](../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.clscompliant/vb/type3.vb#12)]  
@@ -214,7 +214,7 @@ ms.lasthandoff: 12/23/2017
   
  형식이 CLS 규격이 아닌 경우 <xref:System.CLSCompliantAttribute>의 `isCompliant` 값으로 `false` 특성을 해당 형식에 적용해야 합니다. 자세한 내용은 [CLSCompliantAttribute 특성](#CLSAttribute) 섹션을 참조하세요.  
   
- 다음 예제에서는 메서드 시그니처와 제네릭 형식 인스턴스화의 CLS 규격 문제를 보여줍니다. `InvoiceItem` 클래스를 <xref:System.UInt32> 형식의 속성, `Nullable(Of UInt32)` 형식의 속성, <xref:System.UInt32> 및 `Nullable(Of UInt32)` 형식의 매개 변수를 가진 생성자로 정의합니다. 이 예제를 컴파일하려고 할 때 4개의 컴파일러 경고가 표시됩니다.  
+ 다음 예제에서는 메서드 시그니처와 제네릭 형식 인스턴스화의 CLS 규격 문제를 보여 줍니다. `InvoiceItem` 클래스를 <xref:System.UInt32> 형식의 속성, `Nullable(Of UInt32)` 형식의 속성, <xref:System.UInt32> 및 `Nullable(Of UInt32)` 형식의 매개 변수를 가진 생성자로 정의합니다. 이 예제를 컴파일하려고 할 때 4개의 컴파일러 경고가 표시됩니다.  
   
  [!code-csharp[Conceptual.CLSCompliant#3](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/type1.cs#3)]
  [!code-vb[Conceptual.CLSCompliant#3](../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.clscompliant/vb/type1.vb#3)]  
@@ -253,7 +253,7 @@ ms.lasthandoff: 12/23/2017
   
 -   이름이 같은 메서드, 속성 및 이벤트인 경우 반환 형식 이외의 차이점이 있어야 합니다.  
   
- 다음 예제에서는 멤버 이름이 해당 범위 내에서 고유해야 한다는 요구 사항을 보여줍니다. `Converter`이라는 4개 멤버를 포함하는 `Conversion`라는 클래스를 정의합니다. 세 가지는 메서드이고 한 가지는 속성입니다. <xref:System.Int64> 매개 변수가 포함된 메서드의 이름은 고유하지만, <xref:System.Int32> 매개 변수가 포함된 두 메서드의 이름은 반환 값이 멤버 시그니처의 일부로 간주되지 않으므로 고유하지 않습니다. 속성은 오버로드된 메서드와 동일한 이름을 가질 수 없으므로 `Conversion` 속성 또한 이 요구 사항을 위반합니다.  
+ 다음 예제에서는 멤버 이름이 해당 범위 내에서 고유해야 한다는 요구 사항을 보여 줍니다. `Converter`이라는 4개 멤버를 포함하는 `Conversion`라는 클래스를 정의합니다. 세 가지는 메서드이고 한 가지는 속성입니다. <xref:System.Int64> 매개 변수가 포함된 메서드의 이름은 고유하지만, <xref:System.Int32> 매개 변수가 포함된 두 메서드의 이름은 반환 값이 멤버 시그니처의 일부로 간주되지 않으므로 고유하지 않습니다. 속성은 오버로드된 메서드와 동일한 이름을 가질 수 없으므로 `Conversion` 속성 또한 이 요구 사항을 위반합니다.  
   
  [!code-csharp[Conceptual.CLSCompliant#19](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/naming3.cs#19)]
  [!code-vb[Conceptual.CLSCompliant#19](../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.clscompliant/vb/naming3.vb#19)]  
@@ -315,7 +315,7 @@ ms.lasthandoff: 12/23/2017
   
      이 규칙 때문에 CLS 규격이 아닌 멤버를 구현하는 데에는 CLS 규격 형식이 필요하지 않습니다. CLS 규격 프레임워크에서 CLS 비규격 인터페이스를 구현하는 클래스를 노출하는 경우, 모든 CLS 비규격 멤버의 구체적 구현도 제공해야 합니다.  
   
- CLS 규격 언어 컴파일러를 사용하면 클래스는 다중 인터페이스에서 동일한 이름과 시그니처를 가진 멤버를 개별적으로 구현할 수 있습니다.  C# 및 Visual Basic 모두에서 [명시적 인터페이스 구현](~/docs/csharp/programming-guide/interfaces/explicit-interface-implementation.md)을 지원하여 동일한 이름의 메서드를 다르게 구현할 수 있습니다. Visual Basic에서는 `Implements` 키워드도 지원하므로 특정 멤버가 구현하는 인터페이스와 멤버를 명시적으로 지정할 수 있습니다. 다음 예제에서는 `Temperature` 및 `ICelsius` 인터페이스를 명시적 인터페이스 구현으로 구현하는 `IFahrenheit` 클래스를 정의하여 이 시나리오를 보여줍니다.  
+ CLS 규격 언어 컴파일러를 사용하면 클래스는 다중 인터페이스에서 동일한 이름과 시그니처를 가진 멤버를 개별적으로 구현할 수 있습니다.  C# 및 Visual Basic 모두에서 [명시적 인터페이스 구현](~/docs/csharp/programming-guide/interfaces/explicit-interface-implementation.md)을 지원하여 동일한 이름의 메서드를 다르게 구현할 수 있습니다. Visual Basic에서는 `Implements` 키워드도 지원하므로 특정 멤버가 구현하는 인터페이스와 멤버를 명시적으로 지정할 수 있습니다. 다음 예제에서는 `Temperature` 및 `ICelsius` 인터페이스를 명시적 인터페이스 구현으로 구현하는 `IFahrenheit` 클래스를 정의하여 이 시나리오를 보여 줍니다.  
   
  [!code-csharp[Conceptual.CLSCompliant#24](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/eii1.cs#24)]
  [!code-vb[Conceptual.CLSCompliant#24](../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.clscompliant/vb/eii1.vb#24)]  
@@ -353,12 +353,12 @@ ms.lasthandoff: 12/23/2017
 ### <a name="member-accessibility"></a>멤버 접근성  
  상속된 멤버를 재정의하면 해당 멤버의 액세스 가능성을 변경할 수 없습니다. 예를 들어 파생된 클래스의 private 메서드가 기본 클래스의 public 메서드를 재정의할 수 없습니다. 한 가지 예외는 다른 어셈블리의 형식으로 재정의된 한 어셈블리에 있는 `protected internal`(C#의 경우) 또는 `Protected Friend`(Visual Basic의 경우) 멤버입니다. 이 경우, 재정의에 대한 액세스 가능성은 `Protected`입니다.  
   
- 다음 예제에서는 <xref:System.CLSCompliantAttribute> 특성이 `true`로 설정되고 `Person`에서 파생된 `Animal` 클래스가 `Species` 속성의 액세스 가능성을 public에서 private으로 변경하려고 할 때 생성되는 오류를 보여줍니다. 이 예제는 해당 액세스 가능성이 public으로 변경되는 경우 성공적으로 컴파일됩니다.  
+ 다음 예제에서는 <xref:System.CLSCompliantAttribute> 특성이 `true`로 설정되고 `Person`에서 파생된 `Animal` 클래스가 `Species` 속성의 액세스 가능성을 public에서 private으로 변경하려고 할 때 생성되는 오류를 보여 줍니다. 이 예제는 해당 액세스 가능성이 public으로 변경되는 경우 성공적으로 컴파일됩니다.  
   
  [!code-csharp[Conceptual.CLSCompliant#28](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/accessibility1.cs#28)]
  [!code-vb[Conceptual.CLSCompliant#28](../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.clscompliant/vb/accessibility1.vb#28)]  
   
- 멤버 시그니처의 형식은 해당 멤버를 액세스할 수 있는 경우 항상 액세스할 수 있어야 합니다. 예를 들어 public 멤버는 형식이 private, protected 또는 internal인 매개 변수를 포함할 수 없습니다. 다음 예제에서는 `StringWrapper` 클래스 생성자가 문자열 값을 래핑하는 방법을 결정하는 internal `StringOperationType` 열거형 값을 노출할 때 결과로 발생하는 컴파일러 오류를 보여줍니다.  
+ 멤버 시그니처의 형식은 해당 멤버를 액세스할 수 있는 경우 항상 액세스할 수 있어야 합니다. 예를 들어 public 멤버는 형식이 private, protected 또는 internal인 매개 변수를 포함할 수 없습니다. 다음 예제에서는 `StringWrapper` 클래스 생성자가 문자열 값을 래핑하는 방법을 결정하는 internal `StringOperationType` 열거형 값을 노출할 때 결과로 발생하는 컴파일러 오류를 보여 줍니다.  
   
  [!code-csharp[Conceptual.CLSCompliant#27](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/accessibility3.cs#27)]
  [!code-vb[Conceptual.CLSCompliant#27](../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.clscompliant/vb/accessibility3.vb#27)]  
@@ -367,7 +367,7 @@ ms.lasthandoff: 12/23/2017
 ### <a name="generic-types-and-members"></a>제네릭 형식 및 멤버  
  중첩 형식에는 적어도 바깥쪽 형식과 같은 수의 제네릭 매개 변수가 항상 있어야 합니다. 이러한 값은 바깥쪽 형식의 제네릭 매개 변수와 위치가 같습니다. 제네릭 형식은 새 제네릭 매개 변수를 포함할 수도 있습니다.  
   
- 포함 형식의 제네릭 형식 매개 변수와 중첩 형식 사이의 관계는 개별 언어의 구문에 의해 숨겨질 수 있습니다. 다음 예제에서 제네릭 형식 `Outer<T>`에는 두 개의 중첩된 클래스인 `Inner1A` 및 `Inner1B<U>`가 포함됩니다. `ToString`에서 각 클래스를 상속하는 <xref:System.Object.ToString%2A?displayProperty=nameWithType> 메서드에 대한 호출은 포함하는 해당 클래스의 형식 매개 변수가 각 중첩 클래스에 포함되는 것을 보여줍니다.  
+ 포함 형식의 제네릭 형식 매개 변수와 중첩 형식 사이의 관계는 개별 언어의 구문에 의해 숨겨질 수 있습니다. 다음 예제에서 제네릭 형식 `Outer<T>`에는 두 개의 중첩된 클래스인 `Inner1A` 및 `Inner1B<U>`가 포함됩니다. `ToString`에서 각 클래스를 상속하는 <xref:System.Object.ToString%2A?displayProperty=nameWithType> 메서드에 대한 호출은 포함하는 해당 클래스의 형식 매개 변수가 각 중첩 클래스에 포함되는 것을 보여 줍니다.  
   
  [!code-csharp[Conceptual.CLSCompliant#29](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/nestedgenerics2.cs#29)]
  [!code-vb[Conceptual.CLSCompliant#29](../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.clscompliant/vb/nestedgenerics2.vb#29)]  
@@ -454,7 +454,7 @@ ms.lasthandoff: 12/23/2017
   
 <a name="exceptions"></a>   
 ### <a name="exceptions"></a>예외  
- 예외 개체는 <xref:System.Exception?displayProperty=nameWithType>에서 파생되거나 <xref:System.Exception?displayProperty=nameWithType>에서 파생된 또 다른 형식에서 파생되어야 합니다. 다음 예제에서는 사용자 지정 클래스 `ErrorClass`가 예외 처리에 사용될 때 결과로 발생하는 컴파일러 오류를 보여줍니다.  
+ 예외 개체는 <xref:System.Exception?displayProperty=nameWithType>에서 파생되거나 <xref:System.Exception?displayProperty=nameWithType>에서 파생된 또 다른 형식에서 파생되어야 합니다. 다음 예제에서는 사용자 지정 클래스 `ErrorClass`가 예외 처리에 사용될 때 결과로 발생하는 컴파일러 오류를 보여 줍니다.  
   
  [!code-csharp[Conceptual.CLSCompliant#13](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/exceptions1.cs#13)]
  [!code-vb[Conceptual.CLSCompliant#13](../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.clscompliant/vb/exceptions1.vb#13)]  
@@ -548,7 +548,7 @@ ms.lasthandoff: 12/23/2017
 ## <a name="cross-language-interoperability"></a>언어 간 상호 운용성  
  언어 독립성은 여러 가지 의미를 가질 수 있습니다. [언어 독립성 및 언어 독립 구성 요소](../../docs/standard/language-independence-and-language-independent-components.md) 문서에 설명된 한 가지 의미는 한 언어로 작성된 형식을 다른 언어로 작성된 앱에서 원활하게 사용하는 것입니다. 이 문서의 핵심이기도 한 두 번째 의미는 여러 언어로 작성된 코드를 단일 .NET Framework 어셈블리로 결합하는 것입니다.  
   
- 다음 예제에서는 두 클래스 `NumericLib` 및 `StringLib`를 포함하는 Utilities.dll이라는 클래스 라이브러리를 만들어 언어 간 상호 운용성을 보여줍니다. `NumericLib` 클래스는 C#으로 작성되었고 `StringLib` 클래스는 Visual Basic으로 작성되었습니다. 다음은 단일 멤버 `ToTitleCase`를 해당 `StringLib` 클래스에 포함하는 StringUtil.vb용 소스 코드입니다.  
+ 다음 예제에서는 두 클래스 `NumericLib` 및 `StringLib`를 포함하는 Utilities.dll이라는 클래스 라이브러리를 만들어 언어 간 상호 운용성을 보여 줍니다. `NumericLib` 클래스는 C#으로 작성되었고 `StringLib` 클래스는 Visual Basic으로 작성되었습니다. 다음은 단일 멤버 `ToTitleCase`를 해당 `StringLib` 클래스에 포함하는 StringUtil.vb용 소스 코드입니다.  
   
  [!code-vb[Conceptual.CrossLanguage#1](../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.crosslanguage/vb/stringutil.vb#1)]  
   

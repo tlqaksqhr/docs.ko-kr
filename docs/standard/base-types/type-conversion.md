@@ -37,11 +37,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 643a1c7d8dd141a8d898af61ba8302f46207321b
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: d8bbf57625e1d944ab4e97235e718eef7b61a3a4
+ms.sourcegitcommit: 96cc82cac4650adfb65ba351506d8a8fbcd17b5c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 02/19/2018
 ---
 # <a name="type-conversion-in-the-net-framework"></a>.NET Framework의 형식 변환
 <a name="top"></a> 모든 값에는 연결된 형식이 있으며, 이러한 형식은 값에 할당되는 공간, 포함할 수 있는 값의 범위, 값을 통해 사용할 수 있는 멤버 등의 특성을 정의합니다. 대부분의 값들은 하나 이상의 형식으로 표현될 수 있습니다. 예를 들어, 4라는 값은 정수 값 또는 부동 소수점 값으로 표현될 수 있습니다. 형식 변환을 수행하면 이전 형식과 동일한 값을 가지는 새 형식이 만들어지지만, 원래 개체의 ID(또는 실제 값)가 항상 동일하게 유지되지는 않습니다.  
@@ -75,7 +75,7 @@ ms.lasthandoff: 12/23/2017
 > [!NOTE]
 >  암시적 변환을 수행하는 코드에서 변환 메서드를 호출하거나 캐스팅 연산자를 사용할 수 있지만 암시적 변환을 지원하는 컴파일러에서는 이렇게 할 필요가 없습니다.  
   
- 예를 들어, <xref:System.Decimal> 형식은 <xref:System.Byte>, <xref:System.Char>, <xref:System.Int16>, <xref:System.Int32>, <xref:System.Int64>, <xref:System.SByte>, <xref:System.UInt16>, <xref:System.UInt32> 및 <xref:System.UInt64> 값에서의 암시적 변환을 지원합니다. 다음 예제에서는 값을 <xref:System.Decimal> 변수에 할당할 때의 이러한 암시적 변환을 보여줍니다.  
+ 예를 들어, <xref:System.Decimal> 형식은 <xref:System.Byte>, <xref:System.Char>, <xref:System.Int16>, <xref:System.Int32>, <xref:System.Int64>, <xref:System.SByte>, <xref:System.UInt16>, <xref:System.UInt32> 및 <xref:System.UInt64> 값에서의 암시적 변환을 지원합니다. 다음 예제에서는 값을 <xref:System.Decimal> 변수에 할당할 때의 이러한 암시적 변환을 보여 줍니다.  
   
  [!code-csharp[Conceptual.Conversion#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.conversion/cs/implicit1.cs#1)]
  [!code-vb[Conceptual.Conversion#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.conversion/vb/implicit1.vb#1)]  
@@ -107,7 +107,7 @@ ms.lasthandoff: 12/23/2017
 |<xref:System.UInt32>|<xref:System.UInt32.MaxValue?displayProperty=nameWithType>가 <xref:System.Int32.MaxValue?displayProperty=nameWithType>보다 큰 경우|  
 |<xref:System.UInt64>|<xref:System.UInt64.MaxValue?displayProperty=nameWithType>가 <xref:System.Int32.MaxValue?displayProperty=nameWithType>보다 큰 경우|  
   
- 이러한 축소 변환을 처리하기 위해 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]에서는 형식에서 `Explicit` 연산자를 정의할 수 있게 합니다. 그러면 개별 언어 컴파일러에서 고유 구문을 사용하여 이 연산자를 구현할 수 있거나 변환을 수행하기 위해 <xref:System.Convert> 클래스의 멤버가 호출될 수 있습니다. <xref:System.Convert> 클래스에 대한 자세한 내용은 이 항목의 뒷부분에서 [Convert 클래스](#Convert)를 참조하세요. 다음 예제에서는 언어 기능을 사용하여 범위를 벗어날 수 있는 이러한 정수 값을 <xref:System.Int32> 값으로 명시적으로 변환하는 작업을 처리하는 방법을 보여줍니다.  
+ 이러한 축소 변환을 처리하기 위해 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]에서는 형식에서 `Explicit` 연산자를 정의할 수 있게 합니다. 그러면 개별 언어 컴파일러에서 고유 구문을 사용하여 이 연산자를 구현할 수 있거나 변환을 수행하기 위해 <xref:System.Convert> 클래스의 멤버가 호출될 수 있습니다. <xref:System.Convert> 클래스에 대한 자세한 내용은 이 항목의 뒷부분에서 [Convert 클래스](#Convert)를 참조하세요. 다음 예제에서는 언어 기능을 사용하여 범위를 벗어날 수 있는 이러한 정수 값을 <xref:System.Int32> 값으로 명시적으로 변환하는 작업을 처리하는 방법을 보여 줍니다.  
   
  [!code-csharp[Conceptual.Conversion#4](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.conversion/cs/explicit1.cs#4)]
  [!code-vb[Conceptual.Conversion#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.conversion/vb/explicit1.vb#4)]  
@@ -119,7 +119,7 @@ ms.lasthandoff: 12/23/2017
 > [!NOTE]
 >  C#에서 검사 변환을 수행하려면 캐스팅 연산자와 함께 `checked` 키워드를 사용하거나 `/checked+` 컴파일러 옵션을 지정합니다. 반대로 비검사 변환을 수행하려면 캐스팅 연산자와 함께 `unchecked` 키워드를 사용하거나 `/checked-` 컴파일러 옵션을 지정합니다. 기본적으로 명시적 변환은 검사되지 않습니다. Visual Basic에서 검사 변환을 수행하려면 프로젝트의 **고급 컴파일러 설정** 대화 상자에서 **정수 오버플로 검사 해제** 확인란의 선택을 취소하거나 `/removeintchecks-` 컴파일러 옵션을 지정합니다. 반대로 비검사 변환을 수행하려면 프로젝트의 **고급 컴파일러 설정** 대화 상자에서 **정수 오버플로 검사 해제** 확인란을 선택하거나 `/removeintchecks+` 컴파일러 옵션을 지정합니다. 기본적으로 명시적 변환은 검사됩니다.  
   
- 다음 C# 예제에서는 `checked` 및 `unchecked` 키워드를 사용하여 <xref:System.Byte> 범위 밖에 있는 값을 <xref:System.Byte>로 변환할 때 동작이 어떻게 다른지 보여줍니다. 검사 변환은 예외를 throw하지만 비검사 변환은 <xref:System.Byte.MaxValue?displayProperty=nameWithType>를 <xref:System.Byte> 변수에 할당합니다.  
+ 다음 C# 예제에서는 `checked` 및 `unchecked` 키워드를 사용하여 <xref:System.Byte> 범위 밖에 있는 값을 <xref:System.Byte>로 변환할 때 동작이 어떻게 다른지 보여 줍니다. 검사 변환은 예외를 throw하지만 비검사 변환은 <xref:System.Byte.MaxValue?displayProperty=nameWithType>를 <xref:System.Byte> 변수에 할당합니다.  
   
  [!code-csharp[Conceptual.Conversion#12](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.conversion/cs/explicit1.cs#12)]  
   
@@ -169,12 +169,12 @@ ms.lasthandoff: 12/23/2017
 > [!IMPORTANT]
 >  <xref:System.Convert> 클래스에 각 기본 형식으로 변환하거나 각 기본 형식에서 변환하는 메서드가 포함되어 있기 때문에 각 기본 형식의 <xref:System.IConvertible> 명시적 인터페이스 구현을 호출할 필요가 없습니다.  
   
- 다음 예제에서는 <xref:System.Convert?displayProperty=nameWithType> 클래스를 사용하여 .NET Framework 기본 형식 간의 몇 가지 축소 및 확대 변환을 수행하는 방법을 보여줍니다.  
+ 다음 예제에서는 <xref:System.Convert?displayProperty=nameWithType> 클래스를 사용하여 .NET Framework 기본 형식 간의 몇 가지 축소 및 확대 변환을 수행하는 방법을 보여 줍니다.  
   
  [!code-csharp[Conceptual.Conversion#8](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.conversion/cs/convert1.cs#8)]
  [!code-vb[Conceptual.Conversion#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.conversion/vb/convert1.vb#8)]  
   
- 부동 소수점 값으로 변환하거나 부동 소수점 값에서 변환하는 등의 경우에는 변환을 수행할 때 <xref:System.OverflowException>이 throw되지 않아도 정밀도가 손실될 수 있습니다. 다음 예제에서는 이러한 정밀도 손실을 보여줍니다. 첫 번째 경우에 <xref:System.Decimal> 값은 <xref:System.Double>로 변환될 때 정밀도가 낮아집니다(유효 자릿수가 적어짐). 두 번째 경우에 <xref:System.Double> 값은 변환을 완료하기 위해 42.72에서 43으로 반올림됩니다.  
+ 부동 소수점 값으로 변환하거나 부동 소수점 값에서 변환하는 등의 경우에는 변환을 수행할 때 <xref:System.OverflowException>이 throw되지 않아도 정밀도가 손실될 수 있습니다. 다음 예제에서는 이러한 정밀도 손실을 보여 줍니다. 첫 번째 경우에 <xref:System.Decimal> 값은 <xref:System.Double>로 변환될 때 정밀도가 낮아집니다(유효 자릿수가 적어짐). 두 번째 경우에 <xref:System.Double> 값은 변환을 완료하기 위해 42.72에서 43으로 반올림됩니다.  
   
  [!code-csharp[Conceptual.Conversion#9](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.conversion/cs/convert1.cs#9)]
  [!code-vb[Conceptual.Conversion#9](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.conversion/vb/convert1.vb#9)]  
@@ -188,12 +188,12 @@ ms.lasthandoff: 12/23/2017
 > [!NOTE]
 >  <xref:System.Convert.ChangeType%28System.Object%2CSystem.Type%29?displayProperty=nameWithType> 및 <xref:System.Convert.ChangeType%28System.Object%2CSystem.Type%2CSystem.IFormatProvider%29?displayProperty=nameWithType> 메서드는 <xref:System.Type> 개체를 사용하여 `value`가 변환되는 대상 값을 지정하기 때문에, 이런 메서드를 사용하여 컴파일 타임에 형식을 알 수 없는 개체로 동적 변환을 수행할 수 있습니다. 하지만, <xref:System.IConvertible>의 `value` 구현에서는 이 변환을 계속 지원해야 합니다.  
   
- 다음 예제에서는 <xref:System.IConvertible> 개체와 `TemperatureCelsius` 개체 간을 변환할 수 있게 하는 `TemperatureFahrenheit` 인터페이스의 가능한 구현을 보여줍니다. 이 예제에서는 `Temperature` 인터페이스를 구현하고 <xref:System.IConvertible> 메서드를 재정의하는 기본 클래스 <xref:System.Object.ToString%2A?displayProperty=nameWithType>를 정의합니다. 파생된 `TemperatureCelsius` 및 `TemperatureFahrenheit` 클래스는 기본 클래스의 `ToType` 및 `ToString` 메서드를 각각 재정의합니다.  
+ 다음 예제에서는 <xref:System.IConvertible> 개체와 `TemperatureCelsius` 개체 간을 변환할 수 있게 하는 `TemperatureFahrenheit` 인터페이스의 가능한 구현을 보여 줍니다. 이 예제에서는 `Temperature` 인터페이스를 구현하고 <xref:System.IConvertible> 메서드를 재정의하는 기본 클래스 <xref:System.Object.ToString%2A?displayProperty=nameWithType>를 정의합니다. 파생된 `TemperatureCelsius` 및 `TemperatureFahrenheit` 클래스는 기본 클래스의 `ToType` 및 `ToString` 메서드를 각각 재정의합니다.  
   
  [!code-csharp[Conceptual.Conversion#10](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.conversion/cs/iconvertible2.cs#10)]
  [!code-vb[Conceptual.Conversion#10](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.conversion/vb/iconvertible2.vb#10)]  
   
- 다음 예제에서는 이러한 <xref:System.IConvertible> 구현을 몇 번 호출하여 `TemperatureCelsius` 개체와 `TemperatureFahrenheit` 개체 간에 변환하는 방법을 보여줍니다.  
+ 다음 예제에서는 이러한 <xref:System.IConvertible> 구현을 몇 번 호출하여 `TemperatureCelsius` 개체와 `TemperatureFahrenheit` 개체 간에 변환하는 방법을 보여 줍니다.  
   
  [!code-csharp[Conceptual.Conversion#11](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.conversion/cs/iconvertible2.cs#11)]
  [!code-vb[Conceptual.Conversion#11](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.conversion/vb/iconvertible2.vb#11)]  
