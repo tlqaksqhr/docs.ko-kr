@@ -11,11 +11,11 @@ ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 5d809ecdbef465206015a103a14baab8dc0b49c7
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: d9489bca5ac69046818a1809b2f3082baea1eaa8
+ms.sourcegitcommit: c3957fdb990060559d73cca44ab3e2c7b4d049c0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="when-to-choose-net-core-for-docker-containers"></a>Docker 컨테이너에 대해 .NET Core를 선택할 경우
 
@@ -35,7 +35,7 @@ ms.lasthandoff: 12/23/2017
 
 [Visual Studio for Mac](https://www.visualstudio.com/vs/visual-studio-mac/)은 Xamarin Studio의 확장인 IDE로, 2017년 중반부터 Docker를 지원합니다.
 
-또한 macOS, Linux 및 Windows에서 [Visual Studio Code](https://code.visualstudio.com/)를 사용할 수 있습니다. VS Code는 IntelliSense 및 디버깅을 포함하여 .NET Core를 지원합니다. VS Code는 가벼운 편집기이므로 Mac에서 컨테이너화된 앱을 개발할 때 Docker CLI 및 [.NET Core CLI(명령줄 인터페이스) 도구](https://docs.microsoft.com/dotnet/core/tools/?tabs=netcore2x)와 함께 사용할 수 있습니다. Sublime Text, Emacs, vi 같은 대부분의 타사 편집기와, .NET 언어에 대한 IntelliSense 지원을 제공하는 오픈 소스 OmniSharp 프로젝트를 사용해서도 .NET Core를 대상으로 할 수 있습니다. IDE 및 편집기 외에도 지원되는 모든 플랫폼에 .NET Core CLI를 사용할 수 있습니다.
+또한 macOS, Linux 및 Windows에서 [Visual Studio Code](https://code.visualstudio.com/)를 사용할 수 있습니다. VS Code는 IntelliSense 및 디버깅을 포함하여 .NET Core를 지원합니다. VS Code는 가벼운 편집기이므로 Mac에서 컨테이너화된 앱을 개발할 때 Docker CLI 및 [.NET Core CLI(명령줄 인터페이스) 도구](../../../core/tools/index.md)와 함께 사용할 수 있습니다. Sublime Text, Emacs, vi 같은 대부분의 타사 편집기와, .NET 언어에 대한 IntelliSense 지원을 제공하는 오픈 소스 OmniSharp 프로젝트를 사용해서도 .NET Core를 대상으로 할 수 있습니다. IDE 및 편집기 외에도 지원되는 모든 플랫폼에 .NET Core CLI를 사용할 수 있습니다.
 
 ## <a name="using-containers-for-new-green-field-projects"></a>새("그린-필드") 프로젝트에 컨테이너 사용
 

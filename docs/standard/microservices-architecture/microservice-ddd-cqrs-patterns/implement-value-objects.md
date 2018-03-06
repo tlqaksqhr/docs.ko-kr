@@ -11,11 +11,11 @@ ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 2b7b85d2aa3c563fbd4c7cf89336827d25f22c0e
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: e6ac6f2d316a94e69c2599acf07aaaf6361b3e5a
+ms.sourcegitcommit: c3957fdb990060559d73cca44ab3e2c7b4d049c0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="implementing-value-objects"></a>값 개체 구현
 
@@ -136,7 +136,7 @@ public class Address : ValueObject
 
 ### <a name="background-and-older-approaches-using-ef-core-11"></a>배경 지식 및 EF Core 1.1을 사용한 기존의 접근 방식
 
-배경 지식으로 알려드리자면, EF Core 1.0 및 1.1을 사용하는 경우 기존 .NET Framework의 EF 6.x에서 정의된 것처럼 [복합 형식](https://docs.microsoft.com/dotnet/api/system.componentmodel.dataannotations.schema.complextypeattribute?view=netframework-4.7)을 사용할 수 없다는 제한이 있습니다. 따라서 EF Core 1.0 또는 1.1을 사용하는 경우 값 개체를 ID 필드가 있는 EF 엔터티로 저장해야 했습니다. 그래서 마치 ID가 없는 값 개체처럼 보이기 때문에 ID를 숨겨서 값 개체의 ID가 도메인 모델에서 중요하지 않다는 점을 분명히 할 수 있습니다. ID를 [섀도 속성](https://docs.microsoft.com/ef/core/modeling/shadow-properties )으로 사용하여 해당 ID를 숨길 수 있습니다. 모델에서 ID를 숨기는 구성이 EF 인프라 수준에서 설정되므로 도메인 모델에 대해 투명하다고 할 수 있습니다.
+배경 지식으로 알려드리자면, EF Core 1.0 및 1.1을 사용하는 경우 기존 .NET Framework의 EF 6.x에서 정의된 것처럼 [복합 형식](xref:System.ComponentModel.DataAnnotations.Schema.ComplexTypeAttribute)을 사용할 수 없다는 제한이 있습니다. 따라서 EF Core 1.0 또는 1.1을 사용하는 경우 값 개체를 ID 필드가 있는 EF 엔터티로 저장해야 했습니다. 그래서 마치 ID가 없는 값 개체처럼 보이기 때문에 ID를 숨겨서 값 개체의 ID가 도메인 모델에서 중요하지 않다는 점을 분명히 할 수 있습니다. ID를 [섀도 속성](https://docs.microsoft.com/ef/core/modeling/shadow-properties )으로 사용하여 해당 ID를 숨길 수 있습니다. 모델에서 ID를 숨기는 구성이 EF 인프라 수준에서 설정되므로 도메인 모델에 대해 투명하다고 할 수 있습니다.
 
 eShopOnContainers 초기 버전(.NET Core 1.1)에서, EF Core 인프라에 필요한 숨겨진 ID는 DbContext 수준에서 인프라 프로젝트에 흐름 API를 사용하여 다음과 같은 방식으로 구현되었습니다. 따라서 ID가 보기의 도메인 모델 관점에서 숨겨지더라도 인프라에 계속 존재합니다.
 
@@ -168,7 +168,7 @@ DDD의 정식 값 개체 패턴과 EF Core의 소유된 엔터티 형식 사이�
 도메인 모델을 그냥 보면 소유된 형식에는 ID가 없는 것처럼 보입니다.
 하지만 내부로 들어가면 소유된 형식에 ID가 있고 소유자 탐색 속성은 이 ID의 일부입니다.
 
-자체 형식의 인스턴스 ID가 오직 그 자체로만 구성되는 것은 아닙니다. 다음과 같은 세 가지 구성 요소로 구성됩니다. 
+자체 형식의 인스턴스 ID가 오직 그 자체로만 구성되는 것은 아닙니다. 다음과 같은 세 가지 구성 요소로 구성됩니다.
 
 - 소유자 ID
 
@@ -252,8 +252,8 @@ public class Order
 
 public class OrderDetails
 {
-    public StreetAddress BillingAddress { get; set; }
-    public StreetAddress ShippingAddress { get; set; }
+    public Address BillingAddress { get; set; }
+    public Address ShippingAddress { get; set; }
 }
 
 public class Address

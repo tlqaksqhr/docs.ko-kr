@@ -16,16 +16,16 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 1cfac14f934efb22f7cd39faceb232cc819b540e
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 6cba66a0d8291592b082898d20ca780c8067401e
+ms.sourcegitcommit: ba765893e3efcece67d99fd6d5ce0074b050d1d9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/02/2018
 ---
 # <a name="working-with-xml-schemas"></a>XML 스키마 사용
 XML 문서 구조, 요소 관계, 데이터 형식, 내용 제약 조건 등을 정의하려면 DTD(문서 종류 정의) 또는 XSD(XML 스키마 정의 언어) 스키마를 사용합니다. XML 문서가 제대로 구성된 것으로 간주되더라도 W3C(World Wide Web 컨소시엄) XML(Extensible Markup Language) 1.0 권장 사항에 정의된 구문 요구 사항을 모두 만족할 경우 제대로 구성되고 DTD나 스키마에 정의된 제약 조건을 준수해야만 유효한 것으로 간주됩니다. 그러므로 유효한 모든 XML 문서가 제대로 구성되었더라도 제대로 구성된 XML 문서가 모두 유효한 것은 아닙니다.  
   
- XML에 대한 자세한 내용은 [W3C XML 1.0 Recommendation](http://go.microsoft.com/fwlink/?linkid=7269)(W3C XML 1.0 권장 사항)을 참조하세요. XML 스키마에 대한 자세한 내용은 [W3C XML Schema Part 1: Structures Recommendation](http://go.microsoft.com/fwlink/?linkid=48881) 및 [W3C XML Schema Part 2: Datatypes Recommendation](http://go.microsoft.com/fwlink/?linkid=17392)의 권장 사항을 참조하세요.  
+ XML에 대한 자세한 내용은 [W3C XML 1.0 Recommendation](https://www.w3.org/TR/REC-xml/)(W3C XML 1.0 권장 사항)을 참조하세요. XML 스키마에 대한 자세한 내용은 [W3C XML Schema Part 1: Structures Recommendation](https://www.w3.org/TR/xmlschema-1/) 및 [W3C XML Schema Part 2: Datatypes Recommendation](https://www.w3.org/TR/xmlschema-2/)의 권장 사항을 참조하세요.  
   
 ## <a name="in-this-section"></a>섹션 내용  
  [XML SOM(스키마 개체 모델)](../../../../docs/standard/data/xml/xml-schema-object-model-som.md)  

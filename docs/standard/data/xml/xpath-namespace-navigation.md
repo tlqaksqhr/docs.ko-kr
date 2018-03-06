@@ -16,16 +16,16 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: cae3fa68d3820e98bee333d0252aeb74b15fe2a7
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 8cc8d1f031b3f00cdf2b698514220c25c9fec7be
+ms.sourcegitcommit: ba765893e3efcece67d99fd6d5ce0074b050d1d9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/02/2018
 ---
 # <a name="xpath-namespace-navigation"></a>XPath 네임스페이스 탐색
 XML 문서가 있는 XPath 쿼리를 사용하려면 네임스페이스에 포함된 XML 네임스페이스 및 요소를 올바르게 지정해야 합니다. 네임스페이스를 사용하면 이름이 둘 이상의 컨텍스트에 사용되는 경우 발생할 수 있는 모호성을 방지할 수 있습니다. 예를 들어 이름 `ID`는 XML 문서의 여러 다른 요소와 연결된 둘 이상의 ID를 참조할 수 있습니다. 네임스페이스 구문은 URI, 이름 및 XML 문서의 요소를 구분하는 접두사를 지정합니다.  
   
- 이 항목의 예제는 <xref:System.Xml.XPath.XPathNavigator>로 XML 문서를 탐색하는 데 접두사를 사용하는 경우를 설명합니다. 네임스페이스 및 구문에 대한 자세한 내용은 [Understanding XML Namespaces](http://go.microsoft.com/fwlink/?linkid=140245)(XML 네임스페이스 이해)를 참조하세요.  
+ 이 항목의 예제는 <xref:System.Xml.XPath.XPathNavigator>로 XML 문서를 탐색하는 데 접두사를 사용하는 경우를 설명합니다. 네임스페이스 및 구문에 대한 자세한 내용은 [Understanding XML Namespaces](https://msdn.microsoft.com/library/aa468565.aspx)(XML 네임스페이스 이해)를 참조하세요.  
   
 ## <a name="namespace-declarations"></a>네임스페이스 선언  
  네임스페이스 선언은 <xref:System.Xml.XPath.XPathNavigator> 인스턴스를 사용하는 경우 XML 문서의 요소를 구분하고 지정할 수 있게 해 줍니다. 네임스페이스 접두사는 네임스페이스 지정에 사용되는 간단한 구문을 제공합니다.  

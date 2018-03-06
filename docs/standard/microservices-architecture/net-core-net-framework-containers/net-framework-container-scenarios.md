@@ -11,11 +11,11 @@ ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: fcfb78bf521107b14d7796235f52c836f48f41fe
-ms.sourcegitcommit: d2da0142247ef42a219a5d2907f153e62dc6ea0d
+ms.openlocfilehash: eec258ff01bcfeb834fa7a1138fdf822fd00c996
+ms.sourcegitcommit: c3957fdb990060559d73cca44ab3e2c7b4d049c0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="when-to-choose-net-framework-for-docker-containers"></a>Docker 컨테이너에 대해 .NET Framework를 선택하는 경우
 
@@ -29,7 +29,7 @@ ms.lasthandoff: 02/01/2018
 
 ## <a name="using-third-party-net-libraries-or-nuget-packages-not-available-for-net-core"></a>.NET Core에 사용할 수 없는 타사 .NET 라이브러리 또는 NuGet 패키지 사용
 
-타사 라이브러리는 [.NET 표준](https://docs.microsoft.com/dotnet/standard/net-standard)을 빠르게 수용하여 .NET Core를 포함한 모든 .NET 계열에서 코드 공유를 사용할 수 있게 합니다. .NET Framework 2.0 이상에서는 서로 다른 프레임워크 간의 API 표면 호환성이 크게 증가되었으며, .NET Core 2.0에서는 응용 프로그램이 기존 .NET Framework 라이브러리를 직접 참조할 수도 있습니다([호환 shim](https://github.com/dotnet/standard/blob/master/docs/faq.md#how-does-net-standard-versioning-work) 참조).
+타사 라이브러리는 [.NET 표준](../../net-standard.md)을 빠르게 수용하여 .NET Core를 포함한 모든 .NET 계열에서 코드 공유를 사용할 수 있게 합니다. .NET Framework 2.0 이상에서는 서로 다른 프레임워크 간의 API 표면 호환성이 크게 증가되었으며, .NET Core 2.0에서는 응용 프로그램이 기존 .NET Framework 라이브러리를 직접 참조할 수도 있습니다([호환 shim](https://github.com/dotnet/standard/blob/master/docs/faq.md#how-does-net-standard-versioning-work) 참조).
 
 그러나 .NET Standard 2.0 및 .NET Core 2.0 이후의 뛰어난 발전에도 불구하고 특정 NuGet 패키지에서 Windows를 실행해야 하고 .NET Core를 지원하지 않는 경우가 있을 수도 있습니다. 이러한 패키지가 응용 프로그램에 매우 중요한 경우 Windows 컨테이너에서 .NET Framework를 사용해야 합니다.
 
@@ -56,16 +56,16 @@ ms.lasthandoff: 02/01/2018
 ### <a name="additional-resources"></a>추가 리소스
 
 -   **.NET Core 가이드**
-    [*https://docs.microsoft.com/dotnet/core/index*](https://docs.microsoft.com/dotnet/core/index)
+    [*https://docs.microsoft.com/dotnet/core/index*](../../../core/index.md)
 
 -   **.NET Framework에서 .NET Core로 이식**
-    [*https://docs.microsoft.com/dotnet/core/porting/index*](https://docs.microsoft.com/dotnet/core/porting/index)
+    [*https://docs.microsoft.com/dotnet/core/porting/index*](../../../core/porting/index.md)
 
 -   **Docker 가이드의 .NET Framework**
-    [*https://docs.microsoft.com/dotnet/framework/docker/*](https://docs.microsoft.com/dotnet/framework/docker/)
+    [*https://docs.microsoft.com/dotnet/framework/docker/*](../../../framework/docker/index.md)
 
 -   **.NET 구성 요소 개요**
-    [*https://docs.microsoft.com/dotnet/standard/components*](https://docs.microsoft.com/dotnet/standard/components)
+    [*https://docs.microsoft.com/dotnet/standard/components*](../../components.md)
 
 
 

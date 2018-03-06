@@ -26,11 +26,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: b6e0b9d3482bbfc3dabeee1f6b7fce7a93364dfb
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 9b9e54d8bbc9ca7cc9172fd83bd15968b3cef8e1
+ms.sourcegitcommit: 3a96c706e4dbb4667bf3bf37edac9e1666646f93
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 02/27/2018
 ---
 # <a name="grouping-constructs-in-regular-expressions"></a>정규식의 교체 그룹화 구문
 그룹화 구문은 정규식의 하위 식을 나타내며 입력 문자열의 부분 문자열을 캡처합니다. 그룹화 구문은 다음과 같은 경우에 사용할 수 있습니다.  
@@ -81,7 +81,7 @@ ms.lasthandoff: 12/23/2017
   
 -   프로그래밍 방식으로 <xref:System.Text.RegularExpressions.GroupCollection> 속성에서 반환하는 <xref:System.Text.RegularExpressions.Match.Groups%2A?displayProperty=nameWithType> 개체를 사용합니다. 컬렉션에서 위치 0에 있는 멤버는 전체 정규식 일치를 나타냅니다. 각 후속 멤버는 일치하는 하위 식을 나타냅니다. 자세한 내용은 [Grouping Constructs and Regular Expression Objects](#Objects) 섹션을 참조하세요.  
   
- 다음 예제에서는 텍스트에서 중복된 단어를 식별하는 정규식을 보여줍니다. 정규식 패턴의 두 캡처링 그룹은 중복된 단어의 두 인스턴스를 나타냅니다. 두 번째 인스턴스는 입력 문자열의 해당 시작 위치를 보고하기 위해 캡처됩니다.  
+ 다음 예제에서는 텍스트에서 중복된 단어를 식별하는 정규식을 보여 줍니다. 정규식 패턴의 두 캡처링 그룹은 중복된 단어의 두 인스턴스를 나타냅니다. 두 번째 인스턴스는 입력 문자열의 해당 시작 위치를 보고하기 위해 캡처됩니다.  
   
  [!code-csharp[RegularExpressions.Language.Grouping#1](../../../samples/snippets/csharp/VS_Snippets_CLR/regularexpressions.language.grouping/cs/grouping1.cs#1)]
  [!code-vb[RegularExpressions.Language.Grouping#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/regularexpressions.language.grouping/vb/grouping1.vb#1)]  
@@ -92,7 +92,7 @@ ms.lasthandoff: 12/23/2017
 (\w+)\s(\1)\W  
 ```  
   
- 다음 테이블은 정규식 패턴이 해석되는 방법을 보여줍니다.  
+ 다음 테이블은 정규식 패턴이 해석되는 방법을 보여 줍니다.  
   
 |패턴|설명|  
 |-------------|-----------------|  
@@ -134,7 +134,7 @@ ms.lasthandoff: 12/23/2017
   
 -   프로그래밍 방식으로 하위 식 이름을 <xref:System.Text.RegularExpressions.GroupCollection> 개체의 인덱서(C#의 경우) 또는 해당 <xref:System.Text.RegularExpressions.GroupCollection.Item%2A> 속성(Visual Basic의 경우)에 제공합니다.  
   
- 단순 정규식 패턴이 프로그래밍 방식으로 또는 정규식 언어 구문을 사용하여, 번호가 매겨진(명명되지 않은) 그룹 및 명명된 그룹을 참조할 수 있는 방법을 보여줍니다. 정규식 `((?<One>abc)\d+)?(?<Two>xyz)(.*)` 는 번호 및 이름으로 다음 캡처링 그룹을 생성합니다. 첫 번째 캡처링 그룹(번호 0)은 항상 전체 패턴을 지칭합니다.  
+ 단순 정규식 패턴이 프로그래밍 방식으로 또는 정규식 언어 구문을 사용하여, 번호가 매겨진(명명되지 않은) 그룹 및 명명된 그룹을 참조할 수 있는 방법을 보여 줍니다. 정규식 `((?<One>abc)\d+)?(?<Two>xyz)(.*)` 는 번호 및 이름으로 다음 캡처링 그룹을 생성합니다. 첫 번째 캡처링 그룹(번호 0)은 항상 전체 패턴을 지칭합니다.  
   
 |number|name|무늬|  
 |------------|----------|-------------|  
@@ -144,7 +144,7 @@ ms.lasthandoff: 12/23/2017
 |3|1|`(?<One>abc)`|  
 |4|2|`(?<Two>xyz)`|  
   
- 다음 예제에서는 중복된 단어와 중복된 각 단어 바로 뒤에 나오는 단어를 식별하는 정규식을 보여줍니다. 정규식 패턴은 두 개의 명명된 하위 식 즉, 중복된 단어를 나타내는 `duplicateWord`와 중복된 단어 뒤에 나오는 단어를 나타내는 `nextWord`를 정의합니다.  
+ 다음 예제에서는 중복된 단어와 중복된 각 단어 바로 뒤에 나오는 단어를 식별하는 정규식을 보여 줍니다. 정규식 패턴은 두 개의 명명된 하위 식 즉, 중복된 단어를 나타내는 `duplicateWord`와 중복된 단어 뒤에 나오는 단어를 나타내는 `nextWord`를 정의합니다.  
   
  [!code-csharp[RegularExpressions.Language.Grouping#2](../../../samples/snippets/csharp/VS_Snippets_CLR/regularexpressions.language.grouping/cs/grouping2.cs#2)]
  [!code-vb[RegularExpressions.Language.Grouping#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/regularexpressions.language.grouping/vb/grouping2.vb#2)]  
@@ -155,7 +155,7 @@ ms.lasthandoff: 12/23/2017
 (?<duplicateWord>\w+)\s\k<duplicateWord>\W(?<nextWord>\w+)  
 ```  
   
- 다음 테이블은 정규식이 해석되는 방법을 보여줍니다.  
+ 다음 테이블은 정규식이 해석되는 방법을 보여 줍니다.  
   
 |무늬|설명|  
 |-------------|-----------------|  
@@ -172,7 +172,7 @@ ms.lasthandoff: 12/23/2017
  [!code-csharp[RegularExpressions.Language.Grouping#12](../../../samples/snippets/csharp/VS_Snippets_CLR/regularexpressions.language.grouping/cs/duplicate1.cs#12)]
  [!code-vb[RegularExpressions.Language.Grouping#12](../../../samples/snippets/visualbasic/VS_Snippets_CLR/regularexpressions.language.grouping/vb/duplicate1.vb#12)]  
   
- 다음 테이블은 정규식이 해석되는 방법을 보여줍니다.  
+ 다음 테이블은 정규식이 해석되는 방법을 보여 줍니다.  
   
 |무늬|설명|  
 |-------------|-----------------|  
@@ -273,7 +273,7 @@ ms.lasthandoff: 12/23/2017
 > [!NOTE]
 >  정규식에 중첩된 그룹화 구문이 포함된 경우 외부 비 캡처링 그룹 구문은 내부 중첩된 그룹 구문에 적용되지 않습니다.  
   
- 다음 예제에서는 비 캡처링 그룹을 포함하는 정규식을 보여줍니다. 출력에는 캡처된 그룹이 포함되지 않습니다.  
+ 다음 예제에서는 비 캡처링 그룹을 포함하는 정규식을 보여 줍니다. 출력에는 캡처된 그룹이 포함되지 않습니다.  
   
  [!code-csharp[RegularExpressions.Language.Grouping#5](../../../samples/snippets/csharp/VS_Snippets_CLR/regularexpressions.language.grouping/cs/noncapture1.cs#5)]
  [!code-vb[RegularExpressions.Language.Grouping#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/regularexpressions.language.grouping/vb/noncapture1.vb#5)]  
@@ -421,7 +421,7 @@ ms.lasthandoff: 12/23/2017
 |`\w+`|하나 이상의 단어 문자 다음에 공백 문자가 있는 일치 항목을 찾습니다.|  
 |`\d{1,2},`|한 개 또는 두 개의 10진수 다음에 공백 문자 하나와 쉼표 하나가 있는 일치 항목을 찾습니다.|  
 |`\d{4}\b`|네 개의 10진수를 찾고 단어 경계에서 일치 항목 찾기를 끝냅니다.|  
-|`(?<!(Saturday&#124;Sunday) )`|일치 항목 앞에 문자열 "Saturday" 또는 "Sunday"가 아닌 문자열이 있고 해당 문자열 뒤에 공백이 하나 있으면 찾기가 성공한 것입니다.|  
+|<code>(?<!(Saturday&#124;Sunday) )</code>|일치 항목 앞에 문자열 "Saturday" 또는 "Sunday"가 아닌 문자열이 있고 해당 문자열 뒤에 공백이 하나 있으면 찾기가 성공한 것입니다.|  
   
 <a name="nonbacktracking_subexpression"></a>   
 ## <a name="nonbacktracking-subexpressions"></a>역추적하지 않는 하위 식  
@@ -437,7 +437,7 @@ ms.lasthandoff: 12/23/2017
   
  이 옵션은 역추적이 실패할 것임을 아는 경우에 사용하는 것이 좋습니다. 정규식 엔진이 불필요한 검색을 수행하지 않도록 하면 성능이 향상됩니다.  
   
- 다음 예제에서는 역추적하지 않는 하위 식이 패턴 일치 결과를 수정하는 방법을 보여줍니다. 역추적 정규식은 단어 경계에서 뒤에 동일한 문자가 하나 더 있는 일련의 반복된 문자를 찾지만 역추적하지 않는 정규식은 그렇지 못합니다.  
+ 다음 예제에서는 역추적하지 않는 하위 식이 패턴 일치 결과를 수정하는 방법을 보여 줍니다. 역추적 정규식은 단어 경계에서 뒤에 동일한 문자가 하나 더 있는 일련의 반복된 문자를 찾지만 역추적하지 않는 정규식은 그렇지 못합니다.  
   
  [!code-csharp[RegularExpressions.Language.Grouping#11](../../../samples/snippets/csharp/VS_Snippets_CLR/regularexpressions.language.grouping/cs/nonbacktracking1.cs#11)]
  [!code-vb[RegularExpressions.Language.Grouping#11](../../../samples/snippets/visualbasic/VS_Snippets_CLR/regularexpressions.language.grouping/vb/nonbacktracking1.vb#11)]  
@@ -464,7 +464,7 @@ ms.lasthandoff: 12/23/2017
   
  캡처링 그룹에 수량자를 적용하는 경우 해당 <xref:System.Text.RegularExpressions.Group> 개체의 <xref:System.Text.RegularExpressions.Capture.Value%2A?displayProperty=nameWithType>, <xref:System.Text.RegularExpressions.Capture.Index%2A?displayProperty=nameWithType> 및 <xref:System.Text.RegularExpressions.Capture.Length%2A?displayProperty=nameWithType> 속성은 캡처링 그룹에 의해 캡처된 마지막 부분 문자열을 반영합니다. <xref:System.Text.RegularExpressions.CaptureCollection> 속성에서 반환하는 <xref:System.Text.RegularExpressions.Group.Captures%2A?displayProperty=nameWithType> 개체의 수량자를 포함하는 그룹에 의해 캡처된 부분 문자열의 전체 집합을 검색할 수 있습니다.  
   
- 다음 예제에서는 <xref:System.Text.RegularExpressions.Group> 개체와 <xref:System.Text.RegularExpressions.Capture> 개체 간의 관계를 명확하게 보여줍니다.  
+ 다음 예제에서는 <xref:System.Text.RegularExpressions.Group> 개체와 <xref:System.Text.RegularExpressions.Capture> 개체 간의 관계를 명확하게 보여 줍니다.  
   
  [!code-csharp[RegularExpressions.Language.Grouping#4](../../../samples/snippets/csharp/VS_Snippets_CLR/regularexpressions.language.grouping/cs/objectmodel1.cs#4)]
  [!code-vb[RegularExpressions.Language.Grouping#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/regularexpressions.language.grouping/vb/objectmodel1.vb#4)]  

@@ -7,11 +7,11 @@ ms.date: 10/26/2017
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 4cb85c9dbcc7586510db9947d0151e3856964ef4
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: adcb9d2352022cc94238296562b3eb7677bdf20b
+ms.sourcegitcommit: c3957fdb990060559d73cca44ab3e2c7b4d049c0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="what-about-cloud-optimized-applications"></a>클라우드 액세스에 최적화 된 응용 프로그램은 어떻습니까?
 
@@ -41,7 +41,7 @@ ms.lasthandoff: 12/23/2017
 
 Microservices 사용 하지 않는 새 응용 프로그램을 만들기는 것이 좋습니다. Microservices 기반 접근 방식을 사용자의 요구를 초과할 수 있습니다는 새롭고 현대적인 여전히 많은 시나리오가 있습니다. 경우에 따라 수 하 려 할 간단 모놀리식 웹 응용 프로그램을 만들거나 정교 하지 않은 서비스 N 계층 응용 프로그램에 추가 합니다. 이러한 경우에 사용할 수 있습니다 여전히 전체 클라우드의 Azure 앱 서비스에서 제공 하는 것과 같은 PaaS 기능입니다. 여전히 제한으로 유지 관리 작업을 줄입니다.
 
-또한 새 코드를 작성 하기 때문에 클라우드 액세스에 최적화 된 시나리오 (응용 프로그램의 전체 또는 부분 하위 시스템에 대 한)에서 새 코드를 만들 때 사용 해야 최신 버전의.NET ([.NET Core](https://docs.microsoft.com/dotnet/core/) 및 [ASP.NET Core](https://docs.microsoft.com/aspnet/core/), 특히). .NET Core는 간결 하 고 빠른 프레임 워크 이므로 microservices 및 컨테이너를 만드는 경우 특히 유용 합니다. 작은 메모리 사용 공간 및 컨테이너에 대 한 빠른 시작 얻게 됩니다 하 고 응용 프로그램 성능이 잠금 해제 됩니다. 이 방법은 microservices 및 컨테이너의 요구 사항을 완벽 하 게 맞는 하 고는 플랫폼 간 프레임 워크-되 고 Linux, Windows Server 및 Mac (Mac 개발 환경)에서 동일한 응용 프로그램을 실행할 수의 이점을 얻을 수 있습니다.
+또한 새 코드를 작성 하기 때문에 클라우드 액세스에 최적화 된 시나리오 (응용 프로그램의 전체 또는 부분 하위 시스템에 대 한)에서 새 코드를 만들 때 사용 해야 최신 버전의.NET ([.NET Core](../../../core/index.md) 및 [ASP.NET Core](/aspnet/core/), 특히). .NET Core는 간결 하 고 빠른 프레임 워크 이므로 microservices 및 컨테이너를 만드는 경우 특히 유용 합니다. 작은 메모리 사용 공간 및 컨테이너에 대 한 빠른 시작 얻게 됩니다 하 고 응용 프로그램 성능이 잠금 해제 됩니다. 이 방법은 microservices 및 컨테이너의 요구 사항을 완벽 하 게 맞는 하 고는 플랫폼 간 프레임 워크-되 고 Linux, Windows Server 및 Mac (Mac 개발 환경)에서 동일한 응용 프로그램을 실행할 수의 이점을 얻을 수 있습니다.
 
 ## <a name="cloud-native-applications-with-cloud-optimized-applications"></a>클라우드 액세스에 최적화 된 응용 프로그램과 클라우드 네이티브 응용 프로그램
 
@@ -65,7 +65,7 @@ Microservices 아키텍처는 처음부터 새로 또는 기존 응용 프로그
 
 Microservices 아키텍처 자치 서비스의 형태로 독립적인 여러, 하위 시스템을 기반으로 하는 중요 한 응용 프로그램의 배포 및 대규모 또는 복잡 한 선호 되는 방법은 해지고 있습니다. Microservices 기반 아키텍처에서는 응용 프로그램을 배포 하 고 크기가 조정 독립적으로 개발, 테스트, 버전이 지정 될 수 있는 서비스의 컬렉션으로 만들어집니다. 이 모든 관련, 자치 데이터베이스당 마이크로 서비스를 포함할 수 있습니다.
 
-.NET Core를 사용 하 여 구현할 수 있는 microservices 아키텍처에 자세히, 다운로드 가능한 PDF 전자책을 참조 하십시오. [.NET microservices: 화 된.NET 응용 프로그램에 대 한 아키텍처](https://aka.ms/microservicesebook)합니다. 이 가이드는 또한 사용할 수는 [온라인](https://docs.microsoft.com/dotnet/standard/microservices-architecture/)합니다.
+.NET Core를 사용 하 여 구현할 수 있는 microservices 아키텍처에 자세히, 다운로드 가능한 PDF 전자책을 참조 하십시오. [.NET microservices: 화 된.NET 응용 프로그램에 대 한 아키텍처](https://aka.ms/microservicesebook)합니다. 이 가이드는 또한 사용할 수는 [온라인](../../microservices-architecture/index.md)합니다.
 
 하지만 microservices이 강력한 기능 독립 배포, 강력한 하위 시스템 경계 및 기술 다양성 제공 하는 시나리오 에서도-많은 새로운 문제도 발생 시킵니다. 조각화 하 고 독립적인 데이터 모델과; 같은 분산된 응용 프로그램 개발 관련 된 문제 달성 microservices; 간 복원 가능한 통신 결과적 일관성;에 대 한 필요성 및 작업의 복잡성을 추가 합니다. Microservices는 복잡성 기존의 모놀리식 응용 프로그램에 비해 더 높은 수준의 소개 합니다.
 

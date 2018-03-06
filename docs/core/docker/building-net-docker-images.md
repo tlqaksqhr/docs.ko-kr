@@ -14,11 +14,11 @@ ms.custom: mvc
 manager: wpickett
 ms.workload:
 - dotnetcore
-ms.openlocfilehash: 2b1a57fe264eda0a4d3186c7be8b0de01bd5f0a9
-ms.sourcegitcommit: c1904b0437605a90e5aa65b4abd7e048000e349d
+ms.openlocfilehash: d5631bdbc0334640b290c08df17cba0bfe99fe85
+ms.sourcegitcommit: c3957fdb990060559d73cca44ab3e2c7b4d049c0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/24/2018
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="building-docker-images-for-net-core-applications"></a>.NET Core 응용 프로그램에 대한 Docker 이미지 작성
 
@@ -76,7 +76,7 @@ ms.lasthandoff: 01/24/2018
 
 개발, 빌드 및 프로덕션에 최적화된 시나리오 외에도 추가 이미지를 제공합니다.
 
-* `microsoft/dotnet:<version>-runtime-deps`: **runtime-deps** 이미지는 .NET Core에 필요한 모든 기본 종속성과 함께 운영 체제를 포함합니다. 이 이미지는 [자체 포함된 응용 프로그램](https://docs.microsoft.com/dotnet/core/deploying/index)을 위한 것입니다.
+* `microsoft/dotnet:<version>-runtime-deps`: **runtime-deps** 이미지는 .NET Core에 필요한 모든 기본 종속성과 함께 운영 체제를 포함합니다. 이 이미지는 [자체 포함된 응용 프로그램](../deploying/index.md)을 위한 것입니다.
 
 각 변형의 최신 버전:
 

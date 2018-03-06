@@ -28,14 +28,14 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 648c86c71de3c92825af3cfdd4ac2ca023f5e027
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: e328c294a9b4ca3047c4ad1750ddedf64bac2218
+ms.sourcegitcommit: 3a96c706e4dbb4667bf3bf37edac9e1666646f93
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 02/27/2018
 ---
 # <a name="anchors-in-regular-expressions"></a>정규식의 앵커
-<a name="top"></a> 앵커 또는 원자성 너비가 0인 어설션은 문자열에서 일치 항목이 나타나야 하는 위치를 지정합니다. 검색 식에서 앵커를 사용하면 정규식 엔진은 문자열을 통과하거나 문자를 사용하지 않고, 지정된 위치에서만 일치 항목을 검색합니다. 예를 들어 `^` 기호는 줄이나 문자열의 시작 부분에서 일치 항목 찾기를 시작하도록 지정합니다. 따라서 정규식 `^http:` 은 줄의 시작 부분에 나타날 때만 "http:"을 찾습니다. 다음 표에서는 .NET의 정규식에서 지원하는 앵커를 보여줍니다.  
+<a name="top"></a> 앵커 또는 원자성 너비가 0인 어설션은 문자열에서 일치 항목이 나타나야 하는 위치를 지정합니다. 검색 식에서 앵커를 사용하면 정규식 엔진은 문자열을 통과하거나 문자를 사용하지 않고, 지정된 위치에서만 일치 항목을 검색합니다. 예를 들어 `^` 기호는 줄이나 문자열의 시작 부분에서 일치 항목 찾기를 시작하도록 지정합니다. 따라서 정규식 `^http:` 은 줄의 시작 부분에 나타날 때만 "http:"을 찾습니다. 다음 표에서는 .NET의 정규식에서 지원하는 앵커를 보여 줍니다.  
   
 |앵커|설명|  
 |------------|-----------------|  
@@ -71,9 +71,9 @@ ms.lasthandoff: 12/23/2017
 |`(\w+\s\w+)`|단어 문자 하나 이상, 공백, 단어 문자 하나 이상 순의 일치 항목을 찾습니다. 이 그룹은 네 번째 캡처링 그룹입니다.|  
 |`,`|쉼표 하나를 찾습니다.|  
 |`\s\d{4}`|공백, 10 진수 4개 순의 일치 항목을 찾습니다.|  
-|(-`(\d{4}&#124;present))?`|하이픈과 10진수 4개 또는 문자열 "present" 순으로 나타나는 일치 항목 0개 또는 하나를 찾습니다. 이 그룹은 6번째 캡처 그룹입니다. 7번째 캡처 그룹도 포함됩니다.|  
+|<code>(-(\d{4}&#124;present))?</code>|하이픈과 10진수 4개 또는 문자열 "present" 순으로 나타나는 일치 항목 0개 또는 하나를 찾습니다. 이 그룹은 6번째 캡처 그룹입니다. 7번째 캡처 그룹도 포함됩니다.|  
 |`,?`|쉼표 0개 또는 1개를 찾습니다.|  
-|`(\s\d{4}(-(\d{4}&#124;present))?,?)+`|공백, 10진수 4개, 하이픈과 10진수 4개 또는 문자열 "present", 쉼표 0개 또는 하나 순으로 나타나는 일치 항목 하나 이상을 찾습니다. 이 그룹은 5번째 캡처 그룹입니다.|  
+|<code>(\s\d{4}(-(\d{4}&#124;present))?,?)+</code>|공백, 10진수 4개, 하이픈과 10진수 4개 또는 문자열 "present", 쉼표 0개 또는 하나 순으로 나타나는 일치 항목 하나 이상을 찾습니다. 이 그룹은 5번째 캡처 그룹입니다.|  
   
  [맨 위로 이동](#top)  
   
@@ -151,7 +151,7 @@ ms.lasthandoff: 12/23/2017
 ## <a name="word-boundary-b"></a>단어 경계: \b  
  `\b` 앵커는 일치 항목 찾기가 단어 문자( `\w` 언어 요소)와 비단어 문자( `\W` 언어 요소) 사이 경계에서 수행되도록 지정합니다. 단어 문자는 영숫자 문자 및 밑줄로 구성되고, 비단어 문자는 영숫자나 밑줄이 아닌 문자입니다. 자세한 내용은 [문자 클래스](../../../docs/standard/base-types/character-classes-in-regular-expressions.md)를 참조하세요. 일치 항목은 문자열의 시작 또는 끝의 단어 경계에 있을 수도 있습니다.  
   
- `\b` 앵커는 하위 식이 단어의 시작이나 끝이 아닌 전체 단어와 일치하는지 확인하는 데 자주 사용됩니다. 다음 예제의 정규식 `\bare\w*\b` 는 이 사용법을 보여줍니다. 하위 문자열 "are"로 시작하는 단어를 찾습니다. 예제 출력에서는 `\b` 가 입력 문자열의 시작 및 끝과 둘 다 일치함을 보여줍니다.  
+ `\b` 앵커는 하위 식이 단어의 시작이나 끝이 아닌 전체 단어와 일치하는지 확인하는 데 자주 사용됩니다. 다음 예제의 정규식 `\bare\w*\b` 는 이 사용법을 보여 줍니다. 하위 문자열 "are"로 시작하는 단어를 찾습니다. 예제 출력에서는 `\b` 가 입력 문자열의 시작 및 끝과 둘 다 일치함을 보여 줍니다.  
   
  [!code-csharp[Conceptual.RegEx.Language.Assertions#7](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.assertions/cs/word1.cs#7)]
  [!code-vb[Conceptual.RegEx.Language.Assertions#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.assertions/vb/word1.vb#7)]  

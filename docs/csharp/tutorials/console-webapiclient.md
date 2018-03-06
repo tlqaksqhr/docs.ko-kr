@@ -10,11 +10,11 @@ ms.prod: .net-core
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 51033ce2-7a53-4cdd-966d-9da15c8204d2
-ms.openlocfilehash: 6b0f3acc3a6dbed4f44497d92d3c518ee5a5d2a7
-ms.sourcegitcommit: dd6ea7f0e581ac84e0a90d9b23c463fcf1ec3ce7
+ms.openlocfilehash: 22391c4db3027c0fad2115c767b5e2808fee28a0
+ms.sourcegitcommit: 3a96c706e4dbb4667bf3bf37edac9e1666646f93
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2018
+ms.lasthandoff: 02/27/2018
 ---
 # <a name="rest-client"></a>REST 클라이언트
 
@@ -89,7 +89,7 @@ using System.Threading.Tasks;
 다음에는 `Main` 메서드를 업데이트하여 이 메서드를 호출합니다. `ProcessRepositories` 메서드는 작업을 반환합니다. 이 작업이 완료되기 전에 프로그램을 종료하지 않아야 합니다. 따라서 `Wait` 메서드를 사용하여 작업이 완료될 때까지 차단하고 기다려야 합니다.
 
 ```csharp
-public static void Main(string[] args)
+static void Main(string[] args)
 {
     ProcessRepositories().Wait();
 }

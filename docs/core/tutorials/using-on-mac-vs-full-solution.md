@@ -9,12 +9,13 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: 6945bedf-5bf3-4955-8588-83fb87511b79
-ms.workload: dotnetcore
-ms.openlocfilehash: f64bc6463c455a288a374604e42e6747f701b0e7
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.workload:
+- dotnetcore
+ms.openlocfilehash: 0db67593340ea3bae00a45b845a0effe0c1fcab1
+ms.sourcegitcommit: 655fd4f78741967f80c409cef98347fdcf77857d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 02/28/2018
 ---
 # <a name="building-a-complete-net-core-solution-on-macos-using-visual-studio-for-mac"></a>Visual Studio for Mac을 사용하여 macOS에서 완전한 .NET Core 솔루션 빌드
 
@@ -33,7 +34,7 @@ Visual Studio for Mac은 .NET Core 응용 프로그램 개발을 위해 필요�
 - [.NET Core SDK 1.1 이상](https://www.microsoft.com/net/core#macos)
 - [Mac용 visual Studio 2017](https://www.visualstudio.com/vs/visual-studio-mac/)
 
-필수 구성 요소에 대한 자세한 내용은 [Mac의 .NET Core에 대한 필수 구성 요소](../../core/macos-prerequisites.md)를 참조하세요. Mac용 Visual Studio 2017의 전체 시스템 요구 사항은 [Mac용 Visual Studio 2017 제품군 시스템 요구 사항](https://www.visualstudio.com/productinfo/vs2017-system-requirements-mac)을 참조하세요.
+필수 구성 요소에 대한 자세한 내용은 [Mac의 .NET Core에 대한 필수 구성 요소](../../core/macos-prerequisites.md)를 참조하세요. Mac용 Visual Studio 2017의 전체 시스템 요구 사항은 [Mac용 Visual Studio 2017 제품군 시스템 요구 사항](/visualstudio/productinfo/vs2017-system-requirements-mac)을 참조하세요.
 
 ## <a name="building-a-library"></a>라이브러리 빌드
 
@@ -197,4 +198,4 @@ Visual Studio for Mac은 .NET Core 응용 프로그램 개발을 위해 필요�
 
 ## <a name="see-also"></a>참고 항목
 
-[Mac용 Visual Studio 2017 릴리스 정보](https://www.visualstudio.com/news/releasenotes/vs2017-mac-relnotes)
+[Mac용 Visual Studio 2017 릴리스 정보](/visualstudio/releasenotes/vs2017-mac-relnotes)

@@ -9,12 +9,13 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: 13edec8b-614d-47ed-9e95-ed6d3b94ec0c
-ms.workload: dotnetcore
-ms.openlocfilehash: 2f421c72e8099a328fbc255d51f77a9cd0724e58
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.workload:
+- dotnetcore
+ms.openlocfilehash: 3c358ab9173032b1f76d30b756ee6290233b2702
+ms.sourcegitcommit: 655fd4f78741967f80c409cef98347fdcf77857d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 02/28/2018
 ---
 # <a name="hosting-net-core"></a>.NET Core 호스트
 
@@ -26,7 +27,7 @@ ms.lasthandoff: 12/23/2017
 
 ## <a name="prerequisites"></a>필수 구성 요소
 
-호스트는 네이티브 응용 프로그램이기 때문에 이 자습서에서는 .NET Core를 호스트하는 C++ 응용 프로그램을 생성을 다룹니다. [Visual Studio](https://www.visualstudio.com/downloads/)에서 제공하는 C++ 개발 환경 같은 C++ 개발 환경이 필요합니다.
+호스트는 네이티브 응용 프로그램이기 때문에 이 자습서에서는 .NET Core를 호스트하는 C++ 응용 프로그램을 생성을 다룹니다. [Visual Studio](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs)에서 제공하는 C++ 개발 환경 같은 C++ 개발 환경이 필요합니다.
 
 또한 호스트를 테스트할 간단한 .NET Core 응용 프로그램이 필요하므로 [.NET Core SDK](https://www.microsoft.com/net/core)를 설치하고 [소규모 .NET Core 테스트 앱](../../core/tutorials/with-visual-studio.md)(예: 'Hello World' 앱)을 빌드해야 합니다. 새로운 .NET Core 콘솔 프로젝트 템플릿으로 만든 'Hello World' 앱으로 충분합니다.
 

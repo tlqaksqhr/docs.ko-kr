@@ -8,11 +8,11 @@ ms.date: 09/22/2017
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 3605a6cd53db695de3af015a777e3c1a0e92af58
-ms.sourcegitcommit: 672c9cd122c13c9813f57f022c86ebdf6dd69b4f
+ms.openlocfilehash: 632c04507c1478238a5dc2573542f8c88bae2a51
+ms.sourcegitcommit: c3957fdb990060559d73cca44ab3e2c7b4d049c0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="inner-loop-development-workflow-for-docker-apps"></a>Docker 앱에 대 한 내부 루프 개발 워크플로
 
@@ -123,7 +123,7 @@ DockerFile의 Docker (예: 포트 80) 런타임 시 사용할 TCP 포트를 수�
 
 Docker에서 응용 프로그램을 실행 하는 방법을 알 수 있도록 언어/프레임 워크를 사용 하는 따라 DockerFile에 추가할 수 있는 구성의 다른 줄 있습니다. ENTRYPOINT 줄을 해야 하는 예를 들어, \["dotnet", "MyCustomMicroservice.dll"\] 작성 하 고 서비스를 실행 하는 방법에 따라 여러 변형을 추가할을 포함할 수는 있지만.NET Core 응용 프로그램에 실행 되도록 합니다. 사용 중인 SDK 및 CLI dotnet 작성 하 고.NET 응용 프로그램을 실행 하는 경우 약간 다른 것입니다. 결론입니다 ENTRYPOINT 줄 및 줄에서 응용 프로그램에 대해 선택한 언어/플랫폼에 따라 다른을 수 있습니다.
 
-**자세한 내용은** .NET Core 응용 프로그램에 대 한 Docker 이미지를 작성 하는 방법에 대 한 정보로 이동 <https://docs.microsoft.com/dotnet/articles/core/docker/building-net-docker-images>합니다.
+**자세한 내용은** .NET Core 응용 프로그램에 대 한 Docker 이미지를 작성 하는 방법에 대 한 정보로 이동 <https://docs.microsoft.com/dotnet/core/docker/building-net-docker-images>합니다.
 
 사용자 고유의 이미지를 작성 하는 방법에 대 한 자세한 내용은 이동 [https://docs.docker.com/engine/ \자습서/dockerimages/](https://docs.docker.com/engine/tutorials/dockerimages/)합니다.
 
@@ -258,7 +258,7 @@ Node.js 및.NET Core 컨테이너 등의 다른 플랫폼을 사용 하는 경�
 
 또한 디버그할 수.NET Core 컨테이너 Docker에서 Visual Studio를 사용 하는 경우 다음 섹션에 설명 된 대로 합니다.
 
-**추가 정보:** 이동 Node.js Docker 컨테이너를 디버깅 하는 방법에 대 한 자세한 내용은 <https://blog.docker.com/2016/07/live-debugging-docker/> 및 [https://blogs.msdn.microsoft.com/ \ \ 사용자\_ed/2016/02/27/visual-studio-code-new-features-13-big-debugging-updates-rich-object-hover-conditional-breakpoints-node-js-mono-more/](https://blogs.msdn.microsoft.com/user_ed/2016/02/27/visual-studio-code-new-features-13-big-debugging-updates-rich-object-hover-conditional-breakpoints-node-js-mono-more/)합니다.
+**추가 정보:** 이동 Node.js Docker 컨테이너를 디버깅 하는 방법에 대 한 자세한 내용은 <https://blog.docker.com/2016/07/live-debugging-docker/> 및 [https://blogs.msdn.microsoft.com/ \ \ 사용자\_ed/2016/02/27 / visual-studio-code-new-features-13-big-debugging-updates-rich-object-hover-conditional-breakpoints-node-js-mono-more/](https://blogs.msdn.microsoft.com/user_ed/2016/02/27/visual-studio-code-new-features-13-big-debugging-updates-rich-object-hover-conditional-breakpoints-node-js-mono-more/)합니다.
 
 
 >[!div class="step-by-step"]

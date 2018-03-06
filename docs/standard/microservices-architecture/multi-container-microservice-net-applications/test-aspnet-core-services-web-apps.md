@@ -11,11 +11,11 @@ ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 80b7fa75344f8737baacfba6462a03b436fdf6a8
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 596f588aae8c0814e5b40d29c4bf5723f944c5ac
+ms.sourcegitcommit: c3957fdb990060559d73cca44ab3e2c7b4d049c0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="testing-aspnet-core-services-and-web-apps"></a>ASP.NET Core 서비스 및 웹앱 테스트
 
@@ -102,12 +102,12 @@ public class PrimeWebDefaultRequestShould
 
 #### <a name="additional-resources"></a>추가 리소스
 
--   **Steve Smith. 컨트롤러 테스트** (ASP.NET Core) [*https://docs.microsoft.com/aspnet/core/mvc/controllers/testing*](https://docs.microsoft.com/aspnet/core/mvc/controllers/testing)
+-   **Steve Smith. 컨트롤러 테스트** (ASP.NET Core) [*https://docs.microsoft.com/aspnet/core/mvc/controllers/testing*](/aspnet/core/mvc/controllers/testing)
 
--   **Steve Smith. 통합 테스트** (ASP.NET Core) [*https://docs.microsoft.com/aspnet/core/testing/integration-testing*](https://docs.microsoft.com/aspnet/core/testing/integration-testing)
+-   **Steve Smith. 통합 테스트** (ASP.NET Core) [*https://docs.microsoft.com/aspnet/core/testing/integration-testing*](/aspnet/core/testing/integration-testing)
 
 -   **Dotnet 테스트를 사용하여 .NET Core의 단위 테스트**
-    [*https://docs.microsoft.com/dotnet/core/testing/unit-testing-with-dotnet-test*](https://docs.microsoft.com/dotnet/core/testing/unit-testing-with-dotnet-test)
+    [*https://docs.microsoft.com/dotnet/core/testing/unit-testing-with-dotnet-test*](../../../core/testing/unit-testing-with-dotnet-test.md)
 
 -   **xUnit.net**. 공식 사이트입니다.
     [*https://xunit.github.io/*](https://xunit.github.io/)
@@ -125,7 +125,7 @@ public class PrimeWebDefaultRequestShould
 
 앞서 언급한 것처럼 다중 컨테이너 응용 프로그램을 테스트할 경우 모든 마이크로 서비스는 Docker 호스트 또는 컨테이너 클러스터 내에서 실행해야 합니다. 여러 마이크로 서비스가 관련된 다중 작업을 포함하는 종단간 서비스 테스트는 docker-compose(또는 오케스트레이터를 사용하는 경우 이와 비슷한 메커니즘)를 실행해 Docker 호스트에서 전체 응용 프로그램을 배포하고 시작하도록 요청합니다. 전체 응용 프로그램 및 이의 모든 서비스가 실행되면, 종단 간 통합 및 기능 테스트를 실행할 수 있습니다.
 
-다음과 같은 몇 가지 방법을 사용할 수 있습니다. 해당 응용 프로그램(또는 docker-compose.ci.build.yml과 같은 유사한 응용 프로그램)을 배포하기 위해 사용하는 docker-compose.yml 파일에서 사용자는 솔루션 수준에서 [Dotnet 테스트](https://docs.microsoft.com/dotnet/core/tools/dotnet-test)를 사용하기 위해 진입점을 확장할 수 있습니다. 또한 대상으로 하는 이미지에서 테스트를 실행하는 다른 컴포즈 파일을 사용할 수 있습니다. 컨테이너의 데이터베이스와 마이크로 서비스를 포함하는 통합 테스트용 다른 구성 파일을 사용하여, 테스트를 실행하기 전에 관련 데이터가 항상 원래 상태로 재설정되도록 할수 있습니다.
+다음과 같은 몇 가지 방법을 사용할 수 있습니다. 해당 응용 프로그램(또는 docker-compose.ci.build.yml과 같은 유사한 응용 프로그램)을 배포하기 위해 사용하는 docker-compose.yml 파일에서 사용자는 솔루션 수준에서 [Dotnet 테스트](../../../core/tools/dotnet-test.md)를 사용하기 위해 진입점을 확장할 수 있습니다. 또한 대상으로 하는 이미지에서 테스트를 실행하는 다른 컴포즈 파일을 사용할 수 있습니다. 컨테이너의 데이터베이스와 마이크로 서비스를 포함하는 통합 테스트용 다른 구성 파일을 사용하여, 테스트를 실행하기 전에 관련 데이터가 항상 원래 상태로 재설정되도록 할수 있습니다.
 
 컴포즈 응용 프로그램이 실행되면 Visual Studio를 실행하는 경우 중단점 및 예외를 이용할 수 있습니다. 또는 Docker 컨테이너를 지원하는 Visual Studio Team Services 또는 다른 CI/CD 시스템의 CI 파이프라인에서 자동으로 통합 테스트를 실행할 수 있습니다.
 

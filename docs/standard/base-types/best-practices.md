@@ -22,11 +22,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 4064e3f9bd9be425108baf934817645fc7fa51c2
-ms.sourcegitcommit: 91691981897cf8451033cb01071d8f5d94017f97
+ms.openlocfilehash: c665dfbf8c3b6609a934aae027ba40e0462498db
+ms.sourcegitcommit: 3a96c706e4dbb4667bf3bf37edac9e1666646f93
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 02/27/2018
 ---
 # <a name="best-practices-for-regular-expressions-in-net"></a>.NET의 정규식에 대한 모범 사례
 <a name="top"></a>.NET의 정규식 엔진은 리터럴 텍스트에 대한 비교 및 검색 대신 패턴 일치를 기반으로 텍스트를 처리하는 완벽한 기능을 갖춘 강력한 도구입니다. 대부분의 경우 신속하고 효율적인 방식으로 패턴 일치가 수행됩니다. 하지만 일부 경우에는 정규식 엔진의 실행 속도가 매우 느리게 보일 수 있습니다. 심한 경우에는 입력 크기가 비교적 적은데도 처리하는 데 시간이 몇 시간 또는 며칠씩 걸려서 응답이 멎은 것처럼 보일 수도 있습니다.  
@@ -106,12 +106,12 @@ ms.lasthandoff: 01/09/2018
 ### <a name="static-regular-expressions"></a>정적 정규식  
  정적 정규식 메서드는 동일한 정규식으로 정규식 개체를 반복해서 인스턴스화하기 위한 대안으로 권장됩니다. 정규식 개체에 사용되는 정규식 패턴과 달리 인스턴스 메서드 호출에 사용된 패턴으로부터 컴파일된 MSIL(Microsoft Intermediate Language)이나 작업 코드는 정규식 엔진에서 내부적으로 캐시됩니다.  
   
- 예를 들어 사용자 입력의 유효성을 검사하기 위해 다른 메서드를 자주 호출하는 이벤트 처리기가 있을 수 있습니다. 다음 코드에서 사용자가 적어도 한 자릿수의 숫자와 함께 통화 기호를 입력했는지 확인하는 <xref:System.Windows.Forms.Button>라는 이름의 메서드를 호출하기 위해 사용되는 <xref:System.Windows.Forms.Control.Click> 컨트롤의 `IsValidCurrency` 이벤트는 이러한 경우를 보여줍니다.  
+ 예를 들어 사용자 입력의 유효성을 검사하기 위해 다른 메서드를 자주 호출하는 이벤트 처리기가 있을 수 있습니다. 다음 코드에서 사용자가 적어도 한 자릿수의 숫자와 함께 통화 기호를 입력했는지 확인하는 <xref:System.Windows.Forms.Button>라는 이름의 메서드를 호출하기 위해 사용되는 <xref:System.Windows.Forms.Control.Click> 컨트롤의 `IsValidCurrency` 이벤트는 이러한 경우를 보여 줍니다.  
   
  [!code-csharp[Conceptual.RegularExpressions.BestPractices#2](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.bestpractices/cs/static1.cs#2)]
  [!code-vb[Conceptual.RegularExpressions.BestPractices#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.bestpractices/vb/static1.vb#2)]  
   
- 다음 예제에서는 `IsValidCurrency` 메서드를 구현할 때 매우 비효율적인 형태를 보여줍니다. 여기에서는 메서드를 호출할 때마다 <xref:System.Text.RegularExpressions.Regex> 개체를 동일한 패턴으로 다시 인스턴스화합니다. 결국 메서드를 호출할 때마다 정규식 패턴을 다시 컴파일해야 합니다.  
+ 다음 예제에서는 `IsValidCurrency` 메서드를 구현할 때 매우 비효율적인 형태를 보여 줍니다. 여기에서는 메서드를 호출할 때마다 <xref:System.Text.RegularExpressions.Regex> 개체를 동일한 패턴으로 다시 인스턴스화합니다. 결국 메서드를 호출할 때마다 정규식 패턴을 다시 컴파일해야 합니다.  
   
  [!code-csharp[Conceptual.RegularExpressions.BestPractices#3](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.bestpractices/cs/static1.cs#3)]
  [!code-vb[Conceptual.RegularExpressions.BestPractices#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.bestpractices/vb/static1.vb#3)]  
@@ -150,8 +150,8 @@ ms.lasthandoff: 01/09/2018
 |-------------|-----------------|  
 |`\b`|단어 경계에서 일치 항목 찾기를 시작합니다.|  
 |`\w+`|하나 이상의 단어 문자를 찾습니다.|  
-|`(\r?\n)&#124;,?\s)`|0개 이상의 캐리지 리턴과 이어지는 줄 바꿈 문자 또는 0개 이상의 쉼표와 이어지는 공백 문자가 일치하는지 확인합니다.|  
-|`(\w+((\r?\n)&#124;,?\s))*`|0개 이상의 캐리지 리턴과 줄 바꿈 문자 또는 0개 이상의 쉼표와 공백 문자로 이어지는 한 글자 이상의 단어가 적어도 한 번 이상 일치하는지 확인합니다.|  
+|<code>(\r?\n)&#124;,?\s)</code>|0개 이상의 캐리지 리턴과 이어지는 줄 바꿈 문자 또는 0개 이상의 쉼표와 이어지는 공백 문자가 일치하는지 확인합니다.|  
+|<code>(\w+((\r?\n)&#124;,?\s))*</code>|0개 이상의 캐리지 리턴과 줄 바꿈 문자 또는 0개 이상의 쉼표와 공백 문자로 이어지는 한 글자 이상의 단어가 적어도 한 번 이상 일치하는지 확인합니다.|  
 |`\w+`|하나 이상의 단어 문자를 찾습니다.|  
 |`[.?:;!]`|마침표, 물음표, 콜론, 세미콜론 또는 느낌표가 일치하는지 확인합니다.|  
   
@@ -168,7 +168,7 @@ ms.lasthandoff: 01/09/2018
   
  성능 최적화를 위해 컴파일된 정규식을 사용할 경우에는 어셈블리를 만들고, 정규식 엔진을 로드하고, 패턴 일치 메서드를 실행하기 위해 리플렉션을 사용해서는 안됩니다. 이를 위해서는 정규식 패턴을 동적으로 작성하지 않아야 하며, 어셈블리를 나들 때 모든 패턴 일치 옵션(예: 대/소문자를 구분하지 않는 패턴 일치)을 지정해야 합니다. 또한 정규식을 사용하는 코드와 어셈블리를 만드는 코드를 구분해야 합니다.  
   
- 다음 예제에서는 컴파일된 정규식이 포함된 어셈블리를 만드는 방법을 보여줍니다. 이 예제에서는 [해석된 정규식과 컴파일된 정규식 비교`RegexLib.dll` 섹션에 사용된 문장 일치 정규식 패턴을 포함하는 `SentencePattern`이라는 단일 정규식 클래스가 포함된 ](#Interpreted)이라는 어셈블리를 만듭니다.  
+ 다음 예제에서는 컴파일된 정규식이 포함된 어셈블리를 만드는 방법을 보여 줍니다. 이 예제에서는 [해석된 정규식과 컴파일된 정규식 비교`RegexLib.dll` 섹션에 사용된 문장 일치 정규식 패턴을 포함하는 `SentencePattern`이라는 단일 정규식 클래스가 포함된 ](#Interpreted)이라는 어셈블리를 만듭니다.  
   
  [!code-csharp[Conceptual.RegularExpressions.BestPractices#6](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.bestpractices/cs/compile1.cs#6)]
  [!code-vb[Conceptual.RegularExpressions.BestPractices#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.bestpractices/vb/compile1.vb#6)]  
@@ -223,7 +223,7 @@ ms.lasthandoff: 01/09/2018
 |`(?<=[0-9A-Z])`|종료 문자인 달러 기호의 앞 부분을 조회하여 이전 문자가 영숫자인지 확인합니다.|  
 |`$`|입력 문자열의 끝 부분에서 검색을 종료합니다.|  
   
- 다음 예제에서는 이 정규식을 사용하여 부품 번호가 포함될 수 있는 배열을 찾는 방법을 보여줍니다.  
+ 다음 예제에서는 이 정규식을 사용하여 부품 번호가 포함될 수 있는 배열을 찾는 방법을 보여 줍니다.  
   
  [!code-csharp[Conceptual.RegularExpressions.BestPractices#11](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.bestpractices/cs/backtrack4.cs#11)]
  [!code-vb[Conceptual.RegularExpressions.BestPractices#11](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.bestpractices/vb/backtrack4.vb#11)]  

@@ -16,18 +16,18 @@ helpviewer_keywords:
 - streams, I/O
 - data streams, I/O
 ms.assetid: 4f4a33a9-66b7-4cd7-a285-4ad3e4276cd2
-caps.latest.revision: "33"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 9ddb94119d009d61e8126724df2a4b852b7ad3f5
-ms.sourcegitcommit: 91691981897cf8451033cb01071d8f5d94017f97
+ms.openlocfilehash: e9ebd1a11684afaa143d1f016f31e0a29a3478db
+ms.sourcegitcommit: ba765893e3efcece67d99fd6d5ce0074b050d1d9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 03/02/2018
 ---
 # <a name="file-and-stream-io"></a>파일 및 스트림 I/O
 파일 및 스트림 I/O(입/출력)는 저장 매체로 데이터를 전송하거나 저장 매체로부터 데이터를 전송 받습니다. .NET Framework에서 `System.IO` 네임스페이스는 데이터 스트림과 파일에서 읽기 및 쓰기를 동기적 및 비동기적으로 사용하는 형식을 포함합니다. 이러한 네임스페이스는 파일의 압축 및 압축 풀기 기능을 수행하는 형식 및 파이프 및 직렬 포트를 통한 통신을 가능하도록 하는 형식을 포함합니다.  
@@ -155,7 +155,7 @@ ms.lasthandoff: 01/09/2018
   
  필요하다면 .NET Framework 스트림과 Windows 런타임 스트림 간에 변환할 수 있습니다. 자세한 내용은 [방법: .NET Framework 스트림과 Windows 런타임 스트림 간 변환](../../../docs/standard/io/how-to-convert-between-dotnet-streams-and-winrt-streams.md) 또는 [System.IO.WindowsRuntimeStreamExtensions](https://msdn.microsoft.com/library/system.io.windowsruntimestreamextensions.aspx)를 참조하세요. <!--zz TODO: <xref:System.IO.WindowsRuntimeStreamExtensions>--> 
   
- [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 응용 프로그램에서 I/O 작업에 대한 자세한 내용은 Windows 개발자 센터에서 [퀵 스타트: 파일 읽기 및 쓰기](http://go.microsoft.com/fwlink/p/?LinkId=243072)를 참조하세요.  
+ [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 앱에서 I/O 작업에 대한 자세한 내용은 [빠른 시작: 파일 읽기 및 쓰기](/previous-versions/windows/apps/hh758325(v=win.10))를 참조하세요.  
   
 ## <a name="io-and-security"></a>I/O와 보안  
  <xref:System.IO?displayProperty=nameWithType> 네임스페이스에서 클래스를 사용할 때, 파일 및 디렉터리에 대한 액세스를 제어하기 위해 액세스 제어 목록(ACL)과 같은 운영 체제 보안 요구 사항을 따라야 합니다. <xref:System.Security.Permissions.FileIOPermission> 요구 사항에 이 요구 사항이 추가됩니다. ACL은 프로그래밍 방식으로 관리할 수 있습니다. 자세한 내용은 [방법: Access Control 목록 항목 추가 또는 제거](../../../docs/standard/io/how-to-add-or-remove-access-control-list-entries.md)를 참조하세요.  

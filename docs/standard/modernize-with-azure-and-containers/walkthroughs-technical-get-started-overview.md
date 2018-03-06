@@ -7,11 +7,11 @@ ms.date: 10/26/2017
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: ead28fe1ffe1e002af73642a1c3b2e72479520f4
-ms.sourcegitcommit: bf8a3ba647252010bdce86dd914ac6c61b5ba89d
+ms.openlocfilehash: bced3bed84d138dbda4f322322213b47c0159016
+ms.sourcegitcommit: c3957fdb990060559d73cca44ab3e2c7b4d049c0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/06/2018
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="walkthroughs-and-technical-get-started-overview"></a>연습 및 technical 시작된 개요 가져오기 
 
@@ -47,7 +47,7 @@ ms.lasthandoff: 01/06/2018
 
 이 연습에서는 두 개의 샘플 레거시 응용 프로그램의 초기 구현을 탐색할 수 있습니다. 두 샘플 앱은 모놀리식 아키텍처 및 기존 ASP.NET을 사용 하 여 만든 합니다. ASP.NET을 기반으로 한 응용 프로그램은 4.x MVC; 두 번째 응용 프로그램은 ASP.NET 4.x Web Forms를 기반으로 합니다. 응용 프로그램은 모두에 [eShopModernizing GitHub 리포지토리](https://github.com/dotnet-architecture/eShopModernizing)합니다.
 
-두 샘플 앱을 컨테이너 화할 수, 하는 방식과 비슷하게 수 컨테이너 화할 때는 기존 [Windows Communication Foundation](https://docs.microsoft.com/dotnet/framework/wcf/whats-wcf) (WCF) 응용 프로그램을 데스크톱 응용 프로그램으로 사용할 수 있도록 합니다. 예를 들어 참조 [eShopModernizingWCFWinForms](https://github.com/dotnet-architecture/eShopModernizingWCFWinForms)합니다.
+두 샘플 앱을 컨테이너 화할 수, 하는 방식과 비슷하게 수 컨테이너 화할 때는 기존 [Windows Communication Foundation](../../framework/wcf/whats-wcf.md) (WCF) 응용 프로그램을 데스크톱 응용 프로그램으로 사용할 수 있도록 합니다. 예를 들어 참조 [eShopModernizingWCFWinForms](https://github.com/dotnet-architecture/eShopModernizingWCFWinForms)합니다.
 
 ### <a name="goals"></a>목표
 
@@ -59,7 +59,7 @@ ms.lasthandoff: 01/06/2018
 
 > ![원래 레거시 응용 프로그램의 간단한 아키텍처 시나리오](./media/image5-1.png)
 >
-> **그림 5-1입니다.** 원래 레거시 응용 프로그램의 간단한 아키텍처 시나리오
+> **그림 5-1.** 원래 레거시 응용 프로그램의 간단한 아키텍처 시나리오
 
 비즈니스 도메인 관점에서 두 앱 모두 동일한 카탈로그 관리 기능을 제공합니다. EShop 엔터프라이즈 팀의 멤버를 보고 편집할 제품 카탈로그 응용 프로그램을 사용 합니다. 그림 5-2에는 초기 앱 스크린 샷을 보여 줍니다.
 
@@ -97,7 +97,7 @@ Windows 컨테이너를 사용 하 여 MVC, Web Forms, WCF, 프로덕션, 개발
 
 이 연습의 목표 containerizing 기존.NET Framework 응용 프로그램에 대 한 몇 가지 옵션을 표시 하는입니다. 다음과 같은 작업을 수행할 수 있습니다.
 
--   사용 하 여 응용 프로그램을 컨테이너 화할 [Docker 용 Visual Studio 2017 도구](https://docs.microsoft.com/dotnet/core/docker/visual-studio-tools-for-docker) (Visual Studio 2017 또는 이후 버전).
+-   사용 하 여 응용 프로그램을 컨테이너 화할 [Docker 용 Visual Studio 2017 도구](/aspnet/core/host-and-deploy/docker/visual-studio-tools-for-docker) (Visual Studio 2017 또는 이후 버전).
 
 -   수동으로 추가 하 여 응용 프로그램을 컨테이너 화할는 [Dockerfile](https://docs.docker.com/engine/reference/builder/)를 사용 하 여는 [Docker CLI](https://docs.docker.com/engine/reference/commandline/cli/)합니다.
 
@@ -163,7 +163,7 @@ Azure에서 Windows Server 2016 VM에서 Docker 호스트에 배포 하는 개�
 
 ![Visual Studio Team Services에서 CI/CD 파이프라인에서 Azure VM에 배포](./media/image5-6.png)
 
-> **그림 5-6입니다.** Visual Studio Team Services에서 CI/CD 파이프라인에서 Azure VM에 배포
+> **그림 5-6.** Visual Studio Team Services에서 CI/CD 파이프라인에서 Azure VM에 배포
 
 ### <a name="azure-vms-for-windows-containers"></a>Windows 컨테이너에 대 한 azure Vm
 
