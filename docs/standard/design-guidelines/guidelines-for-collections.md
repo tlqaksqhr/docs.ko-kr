@@ -9,18 +9,18 @@ ms.technology: dotnet-standard
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 297b8f1d-b11f-4dc6-960a-8e990817304e
-caps.latest.revision: "4"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 62205e6bea39214383f6a653d719c0285f374a9f
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 09a2a075e21de6968989575385db07ab39eb627f
+ms.sourcegitcommit: c3957fdb990060559d73cca44ab3e2c7b4d049c0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="guidelines-for-collections"></a>컬렉션에 대한 지침
 일부 일반적인 특성에 포함 된 개체의 그룹을 조작 하도록 특별히 설계 된 모든 형식은 컬렉션을 간주할 수 있습니다. 구현 하는 이러한 형식에 대 한 적절 한 것은 항상 <xref:System.Collections.IEnumerable> 또는 <xref:System.Collections.Generic.IEnumerable%601>이므로이 섹션의만 이라고 생각 컬렉션 수를 하나 또는 둘 다 인터페이스를 구현 하는 형식입니다.  
@@ -31,7 +31,7 @@ ms.lasthandoff: 12/23/2017
   
  **X 하지 않으면** 사용 <xref:System.Collections.ArrayList> 또는 <xref:System.Collections.Generic.List%601> 공용 Api에서 합니다.  
   
- 이러한 형식은 데이터 구조 공용 Api에 없는 내부 구현에 사용할 수 있도록 설계 됩니다. `List<T>`성능 및 유연성과 Api cleanness 대신 전원에 대해 최적화 되어 있습니다. 예를 들어, 반환 하는 경우 `List<T>`, 현재까지 됩니다 클라이언트 코드에서 컬렉션을 수정할 때 알림을 받을 수 있게 합니다. 또한 `List<T>` 와 같은 많은 멤버를 노출 <xref:System.Collections.Generic.List%601.BinarySearch%2A>, 되지 않은 유용 하거나 다양 한 시나리오에 적용할 수 있습니다. 다음 두 섹션에서는 형식 (추상화) 공용 Api에서 사용 하도록 특별히 설계에 대해 설명 합니다.  
+ 이러한 형식은 데이터 구조 공용 Api에 없는 내부 구현에 사용할 수 있도록 설계 됩니다. `List<T>` 성능 및 유연성과 Api cleanness 대신 전원에 대해 최적화 되어 있습니다. 예를 들어, 반환 하는 경우 `List<T>`, 현재까지 됩니다 클라이언트 코드에서 컬렉션을 수정할 때 알림을 받을 수 있게 합니다. 또한 `List<T>` 와 같은 많은 멤버를 노출 <xref:System.Collections.Generic.List%601.BinarySearch%2A>, 되지 않은 유용 하거나 다양 한 시나리오에 적용할 수 있습니다. 다음 두 섹션에서는 형식 (추상화) 공용 Api에서 사용 하도록 특별히 설계에 대해 설명 합니다.  
   
  **X 하지 않으면** 사용 `Hashtable` 또는 `Dictionary<TKey,TValue>` 공용 Api에서 합니다.  
   
@@ -61,7 +61,7 @@ ms.lasthandoff: 12/23/2017
   
  **✓ 수행** 사용 <xref:System.Collections.ObjectModel.ReadOnlyCollection%601>의 서브 클래스 `ReadOnlyCollection<T>`, 또는 드물지만에서 `IEnumerable<T>` 속성 또는 반환 값을 나타내는 읽기 전용 컬렉션에 대 한 합니다.  
   
- 일반적으로 선호 `ReadOnlyCollection<T>`합니다. 몇 가지 요구 사항을 충족 하지 않는 경우 (예: 컬렉션은 구현 하지 해야 `IList`)를 구현 하 여 사용자 지정 컬렉션을 사용 하 여 `IEnumerable<T>`, `ICollection<T>`, 또는 `IList<T>`합니다. 읽기 전용 컬렉션을 사용자 지정을 구현 하는 경우 구현 `ICollection<T>.ReadOnly` false를 반환 합니다.  
+ 일반적으로 선호 `ReadOnlyCollection<T>`합니다. 몇 가지 요구 사항을 충족 하지 않는 경우 (예: 컬렉션은 구현 하지 해야 `IList`)를 구현 하 여 사용자 지정 컬렉션을 사용 하 여 `IEnumerable<T>`, `ICollection<T>`, 또는 `IList<T>`합니다. 읽기 전용 컬렉션을 사용자 지정을 구현 하는 경우 구현 `ICollection<T>.IsReadOnly` 반환할 `true`합니다.  
   
  경우에만 지원 하려는 앞 으로만 이동 가능한 반복 인지는 경우에 사용 하면 `IEnumerable<T>`합니다.  
   
@@ -135,7 +135,7 @@ ms.lasthandoff: 12/23/2017
   
  문자열의 읽기 전용 컬렉션을 호출 해야 하는 예를 들어 `ReadOnlyStringCollection`합니다.  
   
- *일부 © 2005, 2009 Microsoft Corporation. 모든 권리 보유.*  
+ *Portions © 2005, 2009 Microsoft Corporation. 모든 권리 보유.*  
   
  *피어슨 교육, Inc.에서의 사용 권한으로 재인쇄 [Framework 디자인 지침: 규칙, 특징 및 다시 사용할 수 있는.NET 라이브러리를 2nd Edition에 대 한 패턴](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina 및 Brad Abrams 게시 하 여 2008 년 10 월 22 일 Microsoft Windows 개발 시리즈의 일부로: Addison Wesley Professional.*  
   

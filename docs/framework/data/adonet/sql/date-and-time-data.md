@@ -5,23 +5,25 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology: dotnet-ado
+ms.technology:
+- dotnet-ado
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 6f5ff56a-a57e-49d7-8ae9-bbed697e42e3
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: a146cf50639351479d42bff684ea7db21ecf5d3b
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: 904b941a274cdd31485d35cf2d025f869638d448
+ms.sourcegitcommit: c3957fdb990060559d73cca44ab3e2c7b4d049c0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="date-and-time-data"></a>날짜 및 시간 데이터
 SQL Server 2008에서는 날짜 및 시간 정보를 처리하기 위한 새로운 데이터 형식을 지원합니다. 새로운 데이터 형식에는 개별 날짜 형식과 시간 형식을 비롯하여 보다 큰 범위의 확장된 데이터 형식, 정밀도 및 표준 시간대 인식 기능이 포함됩니다. .NET Framework 버전 3.5 SP(서비스 팩) 1부터는 .NET Framework Data Provider for SQL Server(<xref:System.Data.SqlClient>)에 SQL Server 2008 데이터베이스 엔진의 새로운 모든 기능이 완벽하게 지원됩니다. SqlClient에서 이러한 새 기능을 사용하려면 .NET Framework 3.5 SP1 이상을 설치해야 합니다.  
@@ -60,7 +62,7 @@ SQL Server 2008에서는 날짜 및 시간 정보를 처리하기 위한 새로�
  SQL Server 날짜 및 시간 데이터를 해석 하는 방법에 대 한 자세한 내용은 참조 [를 사용 하 여 날짜 및 시간 데이터](http://go.microsoft.com/fwlink/?LinkID=98361) SQL Server 2008 온라인 설명서의 합니다.  
   
 ## <a name="datetime-data-types-and-parameters"></a>날짜/시간 데이터 형식 및 매개 변수  
- <xref:System.Data.SqlClient.SqlParameter> 열거형 중 하나를 사용하여 <xref:System.Data.SqlDbType>의 데이터 형식을 지정할 수 있습니다. 새 날짜 및 시간 데이터 형식을 지원하기 위해 다음 열거형이 <xref:System.Data.SqlDbType>에 추가되었습니다.  
+ 새 날짜 및 시간 데이터 형식을 지원하기 위해 다음 열거형이 <xref:System.Data.SqlDbType>에 추가되었습니다.  
   
 -   `SqlDbType.Date`  
   
@@ -69,7 +71,12 @@ SQL Server 2008에서는 날짜 및 시간 정보를 처리하기 위한 새로�
 -   `SqlDbType.DateTime2`  
   
 -   `SqlDbType.DateTimeOffSet`  
-  
+
+데이터 형식을 지정할 수는 <xref:System.Data.SqlClient.SqlParameter> 이전 중 하나를 사용 하 여 <xref:System.Data.SqlDbType> 열거형입니다. 
+
+> [!NOTE]
+> 설정할 수 없습니다.는 `DbType` 속성은 `SqlParameter` 를 `SqlDbType.Date`합니다.
+
  또한 <xref:System.Data.SqlClient.SqlParameter> 개체의 <xref:System.Data.SqlClient.SqlParameter.DbType%2A> 속성을 특정 `SqlParameter` 열거형 값으로 설정하면 일반적인 방식으로 <xref:System.Data.DbType>의 형식을 지정할 수 있습니다. <xref:System.Data.DbType> 및 `datetime2` 데이터 형식을 지원하기 위해 다음 열거형 값이 `datetimeoffset`에 추가되었습니다.  
   
 -   DbType.DateTime2  

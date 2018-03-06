@@ -5,20 +5,22 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology: dotnet-ado
+ms.technology:
+- dotnet-ado
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: fafdc31a-f435-4cd3-883f-1dfadd971277
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 76343b75f09a3aa007a955b0ee869d1dcf1146aa
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: 812b953935d17320d83e3752d8c7fd600af15533
+ms.sourcegitcommit: c3957fdb990060559d73cca44ab3e2c7b4d049c0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="sql-server-data-type-mappings"></a>SQL Server 데이터 형식 매핑
 SQL Server와 .NET Framework는 서로 다른 형식 시스템을 기반으로 합니다. 예를 들어 .NET Framework <xref:System.Decimal> 구조의 최대 자릿수는 28인 반면 SQL Server decimal 및 숫자 데이터 형식의 최대 자릿수는 38입니다. 데이터를 읽거나 쓸 때 데이터 무결성을 유지하기 위해 <xref:System.Data.SqlClient.SqlDataReader>는 <xref:System.Data.SqlTypes>의 개체를 반환하는 SQL Server 관련 형식화된 접근자 메서드 및 .NET Framework 형식을 반환하는 접근자 메서드를 노출합니다. SQL Server 형식 및 .NET Framework 형식 모두 <xref:System.Data.DbType> 데이터 형식을 지정할 때 사용할 수 있는 <xref:System.Data.SqlDbType> 및 <xref:System.Data.SqlClient.SqlParameter> 클래스에 열거형으로 표시됩니다.  
@@ -31,7 +33,7 @@ SQL Server와 .NET Framework는 서로 다른 형식 시스템을 기반으로 �
 |이진|Byte[]|<xref:System.Data.SqlDbType.VarBinary>|<xref:System.Data.SqlClient.SqlDataReader.GetSqlBinary%2A>|<xref:System.Data.DbType.Binary>|<xref:System.Data.SqlClient.SqlDataReader.GetBytes%2A>|  
 |비트|Boolean|<xref:System.Data.SqlDbType.Bit>|<xref:System.Data.SqlClient.SqlDataReader.GetSqlBoolean%2A>|<xref:System.Data.DbType.Boolean>|<xref:System.Data.SqlClient.SqlDataReader.GetBoolean%2A>|  
 |char|문자열<br /><br /> Char[]|<xref:System.Data.SqlDbType.Char>|<xref:System.Data.SqlClient.SqlDataReader.GetSqlString%2A>|<xref:System.Data.DbType.AnsiStringFixedLength>,<br /><br /> <xref:System.Data.DbType.String>|<xref:System.Data.SqlClient.SqlDataReader.GetString%2A><br /><br /> <xref:System.Data.SqlClient.SqlDataReader.GetChars%2A>|  
-|date<br /><br /> (SQL Server 2008 이상)|DateTime|<xref:System.Data.SqlDbType.Date>|<xref:System.Data.SqlClient.SqlDataReader.GetSqlDateTime%2A>|<xref:System.Data.DbType.Date>|<xref:System.Data.SqlClient.SqlDataReader.GetDateTime%2A>|  
+|날짜 <sup>1</sup><br /><br /> (SQL Server 2008 이상)|DateTime|<xref:System.Data.SqlDbType.Date> <sup>1</sup>|<xref:System.Data.SqlClient.SqlDataReader.GetSqlDateTime%2A>|<xref:System.Data.DbType.Date> <sup>1</sup>|<xref:System.Data.SqlClient.SqlDataReader.GetDateTime%2A>|  
 |datetime|DateTime|<xref:System.Data.SqlDbType.DateTime>|<xref:System.Data.SqlClient.SqlDataReader.GetSqlDateTime%2A>|<xref:System.Data.DbType.DateTime>|<xref:System.Data.SqlClient.SqlDataReader.GetDateTime%2A>|  
 |datetime2<br /><br /> (SQL Server 2008 이상)|DateTime|<xref:System.Data.SqlDbType.DateTime2>|없음|<xref:System.Data.DbType.DateTime2>|<xref:System.Data.SqlClient.SqlDataReader.GetDateTime%2A>|  
 |datetimeoffset<br /><br /> (SQL Server 2008 이상)|DateTimeOffset|<xref:System.Data.SqlDbType.DateTimeOffset>|없음|<xref:System.Data.DbType.DateTimeOffset>|<xref:System.Data.SqlClient.SqlDataReader.GetDateTimeOffset%2A>|  
@@ -50,7 +52,7 @@ SQL Server와 .NET Framework는 서로 다른 형식 시스템을 기반으로 �
 |smalldatetime|DateTime|<xref:System.Data.SqlDbType.DateTime>|<xref:System.Data.SqlClient.SqlDataReader.GetSqlDateTime%2A>|<xref:System.Data.DbType.DateTime>|<xref:System.Data.SqlClient.SqlDataReader.GetDateTime%2A>|  
 |smallint|Int16|<xref:System.Data.SqlDbType.SmallInt>|<xref:System.Data.SqlClient.SqlDataReader.GetSqlInt16%2A>|<xref:System.Data.DbType.Int16>|<xref:System.Data.SqlClient.SqlDataReader.GetInt16%2A>|  
 |smallmoney|Decimal|<xref:System.Data.SqlDbType.SmallMoney>|<xref:System.Data.SqlClient.SqlDataReader.GetSqlMoney%2A>|<xref:System.Data.DbType.Decimal>|<xref:System.Data.SqlClient.SqlDataReader.GetDecimal%2A>|  
-|sql_variant|Object*|<xref:System.Data.SqlDbType.Variant>|<xref:System.Data.SqlClient.SqlDataReader.GetSqlValue%2A> *|<xref:System.Data.DbType.Object>|<xref:System.Data.SqlClient.SqlDataReader.GetValue%2A> *|  
+|sql_variant|개체 <sup>2</sup>|<xref:System.Data.SqlDbType.Variant>|<xref:System.Data.SqlClient.SqlDataReader.GetSqlValue%2A> <sup>2</sup>|<xref:System.Data.DbType.Object>|<xref:System.Data.SqlClient.SqlDataReader.GetValue%2A> <sup>2</sup>|  
 |텍스트|문자열<br /><br /> Char[]|<xref:System.Data.SqlDbType.Text>|<xref:System.Data.SqlClient.SqlDataReader.GetSqlString%2A>|<xref:System.Data.DbType.String>|<xref:System.Data.SqlClient.SqlDataReader.GetString%2A><br /><br /> <xref:System.Data.SqlClient.SqlDataReader.GetChars%2A>|  
 |시간<br /><br /> (SQL Server 2008 이상)|TimeSpan|<xref:System.Data.SqlDbType.Time>|없음|<xref:System.Data.DbType.Time>|<xref:System.Data.SqlClient.SqlDataReader.GetDateTime%2A>|  
 |타임스탬프|Byte[]|<xref:System.Data.SqlDbType.Timestamp>|<xref:System.Data.SqlClient.SqlDataReader.GetSqlBinary%2A>|<xref:System.Data.DbType.Binary>|<xref:System.Data.SqlClient.SqlDataReader.GetBytes%2A>|  
@@ -60,7 +62,8 @@ SQL Server와 .NET Framework는 서로 다른 형식 시스템을 기반으로 �
 |varchar|문자열<br /><br /> Char[]|<xref:System.Data.SqlDbType.VarChar>|<xref:System.Data.SqlClient.SqlDataReader.GetSqlString%2A>|<xref:System.Data.DbType.AnsiString>, <xref:System.Data.DbType.String>|<xref:System.Data.SqlClient.SqlDataReader.GetString%2A><br /><br /> <xref:System.Data.SqlClient.SqlDataReader.GetChars%2A>|  
 |xml|Xml|<xref:System.Data.SqlDbType.Xml>|<xref:System.Data.SqlClient.SqlDataReader.GetSqlXml%2A>|<xref:System.Data.DbType.Xml>|없음|  
   
- \*기본 형식을 알고 있으면 형식화 된 특정 접근자를 사용 하 여는 `sql_variant`합니다.  
+<sup>1</sup> 설정할 수 없습니다.는 `DbType` 속성은 `SqlParameter` 를 `SqlDbType.Date`합니다.  
+<sup>2</sup> 의 기본 형식을 알고 있으면 형식화 된 특정 접근자를 사용 하 여는 `sql_variant`합니다.  
   
 ## <a name="includessnoversionincludesssnoversion-mdmd-books-online-reference"></a>[!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] 온라인 설명서 참조  
  에 대 한 자세한 내용은 [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] 데이터 형식을 참조 [데이터 형식 (데이터베이스 엔진)](http://go.microsoft.com/fwlink/?LinkID=107468)합니다.  
