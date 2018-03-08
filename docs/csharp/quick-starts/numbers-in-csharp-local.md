@@ -9,11 +9,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.custom: mvc
-ms.openlocfilehash: 9a8b28d840d3c8ef63611e9f584e5984e1dcb1a3
-ms.sourcegitcommit: d2da0142247ef42a219a5d2907f153e62dc6ea0d
+ms.openlocfilehash: 99c2f8e4807c4d18c0c798e3a737f4a88d6e62d6
+ms.sourcegitcommit: 3a96c706e4dbb4667bf3bf37edac9e1666646f93
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/27/2018
 ---
 # <a name="numbers-in-c-quickstart"></a>C#의 숫자 빠른 시작
 
@@ -114,7 +114,7 @@ int d = a + b * c;
 Console.WriteLine(d);
  ```
 
-출력에서는 곱하기가 수행된 후 더하기가 수행되었음을 보여줍니다.
+출력에서는 곱하기가 수행된 후 더하기가 수행되었음을 보여 줍니다.
 
 먼저 수행하려는 연산 주위에 괄호를 추가하여 다른 연산 순서를 적용할 수 있습니다. 다음 줄을 추가하고 다시 실행합니다.
 
@@ -201,7 +201,7 @@ namespace NumbersInCSharp
 ```
 
 ## <a name="explore-integer-precision-and-limits"></a>정수 전체 자릿수 및 한도 살펴보기
-마지막 샘플에서는 정수 나누기가 결과를 자르는 것을 보여줍니다.
+마지막 샘플에서는 정수 나누기가 결과를 자르는 것을 보여 줍니다.
 **modulo** 연산자(`%` 문자)를 사용하여 **나머지**를 얻을 수 있습니다. `Main` 메서드에 다음 코드를 사용해 봅니다.
 
 ```csharp
@@ -312,7 +312,7 @@ Console.WriteLine(c / d);
 
 ***과제***
 
-이제 여러 가지 숫자 형식을 살펴봤으므로 반지름이 2.50인치인 원의 면적을 계산하는 코드를 작성하세요. 원의 면적은 반지름 제곱 곱하기 PI입니다. 힌트: .NET에는 PI의 상수가 포함되어 있습니다. 즉 해당 값에 사용할 수 있는 <xref:System.Math.PI?displayProperty=nameWithType>입니다. 
+이제 여러 가지 숫자 형식을 살펴봤으므로 반지름이 2.50센티미터인 원의 면적을 계산하는 코드를 작성하세요. 원의 면적은 반지름 제곱 곱하기 PI입니다. 힌트: .NET에는 PI의 상수가 포함되어 있습니다. 즉 해당 값에 사용할 수 있는 <xref:System.Math.PI?displayProperty=nameWithType>입니다. 
 
 19에서 20 사이의 답을 받아야 합니다.
 [GitHub에서 완성된 샘플 코드를 보고](https://github.com/dotnet/docs/tree/master/samples/csharp/numbers-quickstart/Program.cs#L104-L106) 답을 확인할 수 있습니다.

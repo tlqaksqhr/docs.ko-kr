@@ -22,11 +22,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: c574ab8ddf506802fb42f53b5212dcb4a3bd9d34
-ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
+ms.openlocfilehash: 5b471cd8e934880fc8095fbad68b460174ec338c
+ms.sourcegitcommit: 3a96c706e4dbb4667bf3bf37edac9e1666646f93
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/27/2018
 ---
 # <a name="details-of-regular-expression-behavior"></a>정규식 동작 정보
 .NET Framework 정규식 엔진은 Perl, Python, Emacs 및 Tcl에서 사용하는 것과 같은 기존의 NFA(Nondeterministic Finite Automaton) 엔진을 통합하는 역추적 정규식 일치 도구입니다. 이를 통해 해당 awk, egrep 또는 lex와 같은 빠르지만 제한적인 순수 정규식 DFA(Deterministic Finite Automaton) 엔진과 구분합니다. 또한 표준화되지만 느린 POSIX NFA과도 구분합니다. 다음 섹션에서는 세 가지 유형의 정규식 엔진을 설명하고 기존 NFA 엔진을 사용하여 .NET Framework의 정규식을 구현하는 이유를 설명합니다.  
@@ -48,7 +48,7 @@ ms.lasthandoff: 02/01/2018
   
  .NET Framework 정규식 엔진의 다른 기능은 다음과 같습니다.  
   
--   게으른 수량자: `??`, `*?`, `+?`, `{`*n*`,`*m*`}?`. 이러한 구문은 역추적 엔진이 최소 반복 횟수를 먼저 검색하도록 지시합니다. 반면, 일반적인 탐욕적 수량자는 먼저 최대 반복 횟수를 찾으려고 합니다. 다음 예제에서는 둘 사이의 차이점을 보여줍니다. 정규식은 숫자로 끝나는 문장을 찾고 캡처링 그룹은 해당 숫자를 추출하려고 합니다. 정규식 `.+(\d+)\.`은 탐욕적 수량자 `.+`를 포함하며 이로 인해 정규식 엔진은 번호의 마지막 숫자만 캡처하게 됩니다. 반대로 정규식 `.+?(\d+)\.`은 게으른 수량자 `.+?`를 포함하며 이로 인해 정규식 엔진은 전체 번호를 캡처하게 됩니다.  
+-   게으른 수량자: `??`, `*?`, `+?`, `{`*n*`,`*m*`}?`. 이러한 구문은 역추적 엔진이 최소 반복 횟수를 먼저 검색하도록 지시합니다. 반면, 일반적인 탐욕적 수량자는 먼저 최대 반복 횟수를 찾으려고 합니다. 다음 예제에서는 둘 사이의 차이점을 보여 줍니다. 정규식은 숫자로 끝나는 문장을 찾고 캡처링 그룹은 해당 숫자를 추출하려고 합니다. 정규식 `.+(\d+)\.`은 탐욕적 수량자 `.+`를 포함하며 이로 인해 정규식 엔진은 번호의 마지막 숫자만 캡처하게 됩니다. 반대로 정규식 `.+?(\d+)\.`은 게으른 수량자 `.+?`를 포함하며 이로 인해 정규식 엔진은 전체 번호를 캡처하게 됩니다.  
   
      [!code-csharp[Conceptual.RegularExpressions.Design#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.design/cs/lazy1.cs#1)]
      [!code-vb[Conceptual.RegularExpressions.Design#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.design/vb/lazy1.vb#1)]  
@@ -108,7 +108,7 @@ ms.lasthandoff: 02/01/2018
     |`^`|줄의 시작 부분에서 일치 항목 찾기를 시작합니다.|  
     |`(?<Pvt>\<PRIVATE\>\s)?`|0개 또는 1개의 뒤에 공백 문자가 있는 `<PRIVATE>` 문자열을 찾습니다. `Pvt`로 명명된 캡처 그룹에 일치 항목을 할당합니다.|  
     |`(?(Pvt)((\w+\p{P}?\s)+)`|`Pvt` 캡처링 그룹이 있는 경우 뒤에 0개 이상의 문장 구분 기호와 하나의 공백 문자가 오는 하나 이상의 단어 문자를 한 번 이상 찾습니다. 첫 번째 캡처링 그룹에 부분 문자열을 할당합니다.|  
-    |`&#124;((\w+\p{P}?\s)+))`|`Pvt` 캡처링 그룹이 없는 경우 뒤에 0개 이상의 문장 구분 기호와 하나의 공백 문자가 오는 하나 이상의 단어 문자를 한 번 이상 찾습니다. 세 번째 캡처링 그룹에 부분 문자열을 할당합니다.|  
+    |<code>&#124;((\w+\p{P}?\s)+))<code>|`Pvt` 캡처링 그룹이 없는 경우 뒤에 0개 이상의 문장 구분 기호와 하나의 공백 문자가 오는 하나 이상의 단어 문자를 한 번 이상 찾습니다. 세 번째 캡처링 그룹에 부분 문자열을 할당합니다.|  
     |`\r?$`|줄의 끝 또는 문자열의 끝을 찾습니다.|  
   
      조건부 평가에 대한 자세한 내용은 [교체 구문](../../../docs/standard/base-types/alternation-constructs-in-regular-expressions.md)을 참조하세요.  
@@ -127,7 +127,7 @@ ms.lasthandoff: 02/01/2018
   
      역추적하지 않는 하위 식에 대한 자세한 내용은 [그룹화 구문](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md)을 참조하세요.  
   
--   오른쪽에서 왼쪽 찾기는 <xref:System.Text.RegularExpressions.RegexOptions.RightToLeft?displayProperty=nameWithType> 옵션을 <xref:System.Text.RegularExpressions.Regex> 클래스 생성자 또는 고정 인스턴스 일치 메서드에 제공하여 지정됩니다. 이 기능은 왼쪽에서 오른쪽이 아닌 오른쪽에서 왼쪽으로 찾는 경우에 유용하고 패턴의 왼쪽이 아닌 패턴의 오른쪽 부분에서 찾기를 시작하는 경우 효율적입니다. 다음 예제와 같이 오른쪽에서 왼쪽 찾기를 사용하면 탐욕적 수량자의 동작을 변경할 수 있습니다. 예제에서는 숫자로 끝나는 문장에 대해 두 개의 검색을 수행합니다. 오른쪽에서 왼쪽 검색이 6자리 모두와 일치하는 반면 탐욕적 수량자를 사용하는 왼쪽에서 오른쪽 검색 `+`은 문장에서 6자리 중 하나와 일치합니다. 정규식 패턴에 대한 설명은 이 섹션 앞부분의 게으른 수량자를 보여주는 예제를 참조하세요.  
+-   오른쪽에서 왼쪽 찾기는 <xref:System.Text.RegularExpressions.RegexOptions.RightToLeft?displayProperty=nameWithType> 옵션을 <xref:System.Text.RegularExpressions.Regex> 클래스 생성자 또는 고정 인스턴스 일치 메서드에 제공하여 지정됩니다. 이 기능은 왼쪽에서 오른쪽이 아닌 오른쪽에서 왼쪽으로 찾는 경우에 유용하고 패턴의 왼쪽이 아닌 패턴의 오른쪽 부분에서 찾기를 시작하는 경우 효율적입니다. 다음 예제와 같이 오른쪽에서 왼쪽 찾기를 사용하면 탐욕적 수량자의 동작을 변경할 수 있습니다. 예제에서는 숫자로 끝나는 문장에 대해 두 개의 검색을 수행합니다. 오른쪽에서 왼쪽 검색이 6자리 모두와 일치하는 반면 탐욕적 수량자를 사용하는 왼쪽에서 오른쪽 검색 `+`은 문장에서 6자리 중 하나와 일치합니다. 정규식 패턴에 대한 설명은 이 섹션 앞부분의 게으른 수량자를 보여 주는 예제를 참조하세요.  
   
      [!code-csharp[Conceptual.RegularExpressions.Design#6](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.design/cs/rtl1.cs#6)]
      [!code-vb[Conceptual.RegularExpressions.Design#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.design/vb/rtl1.vb#6)]  
@@ -145,7 +145,7 @@ ms.lasthandoff: 02/01/2018
     |-------------|-----------------|  
     |`^`|문자열의 시작 부분에서 검색을 시작합니다.|  
     |`[A-Z0-9]`|숫자 또는 영숫자 문자를 찾습니다. 비교는 대소문자를 구분하지 않습니다.|  
-    |`([-!#$%&'.*+/=?^`{}&#124;~\w])*`|단어 문자 또는 -, !, #, $, %, &, ', ., *, +, /, =, ?, ^, `, {, }, &#124;이나 ~의 문자로 구성된 0개 이상의 일치 항목을 찾습니다.|  
+    |<code>([-!#$%&'.*+/=?^\`{}&#124;~\w])*<code>|단어 문자 또는 -, !, #, $, %, &, ', ., *, +, /, =, ?, ^, \`, {, }, &#124; 또는 ~ 문자로 구성된 0개 이상의 일치 항목을 찾습니다.|  
     |`(?<=[A-Z0-9])`|영숫자만 또는 숫자여야 하는 이전 문자를 확인합니다. 비교는 대소문자를 구분하지 않습니다.|  
     |`$`|문자열의 끝 부분에서 일치 항목 찾기를 끝냅니다.|  
   
@@ -159,8 +159,8 @@ ms.lasthandoff: 02/01/2018
 |[컴파일 및 다시 사용](../../../docs/standard/base-types/compilation-and-reuse-in-regular-expressions.md)|성능 향상을 위해 정규식을 컴파일하고 다시 사용하는 방법에 대한 정보를 제공합니다.|  
 |[스레드로부터의 안전성](../../../docs/standard/base-types/thread-safety-in-regular-expressions.md)|정규식 스레드로부터의 안전성에 대한 정보를 제공하고 정규식 개체에 대한 액세스를 동기화해야 하는 경우를 설명합니다.|  
 |[.NET Framework 정규식](../../../docs/standard/base-types/regular-expressions.md)|정규식의 프로그래밍 언어 측면에 대한 개요를 제공합니다.|  
-|[정규식 개체 모델](../../../docs/standard/base-types/the-regular-expression-object-model.md)|정규식 클래스를 사용하는 방법을 보여주는 코드 예제 및 정보를 제공합니다.|  
-|[정규식 예제](../../../docs/standard/base-types/regular-expression-examples.md)|일반적인 응용 프로그램에서 정규식 사용을 보여주는 코드 예제를 포함합니다.|  
+|[정규식 개체 모델](../../../docs/standard/base-types/the-regular-expression-object-model.md)|정규식 클래스를 사용하는 방법을 보여 주는 코드 예제 및 정보를 제공합니다.|  
+|[정규식 예제](../../../docs/standard/base-types/regular-expression-examples.md)|일반적인 응용 프로그램에서 정규식 사용을 보여 주는 코드 예제를 포함합니다.|  
 |[정규식 언어 - 빠른 참조](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)|정규식을 정의하는 데 사용할 수 있는 문자, 연산자 및 생성자 집합에 대한 정보를 제공합니다.|  
   
 ## <a name="reference"></a>참조  

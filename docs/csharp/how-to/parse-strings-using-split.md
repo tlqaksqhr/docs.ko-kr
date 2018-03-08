@@ -15,11 +15,11 @@ ms.assetid: 729c2923-4169-41c6-9c90-ef176c1e2953
 author: BillWagner
 ms.author: wiwagn
 ms.custom: mvc
-ms.openlocfilehash: 5143fed04148fb17697bd5d040ad23b762505db4
-ms.sourcegitcommit: 099aa20d9b6450d1b7452d782a55771a6ad8ff35
+ms.openlocfilehash: afaff6f81a1a4240214f738d0fc9f3bafdaf868c
+ms.sourcegitcommit: 655fd4f78741967f80c409cef98347fdcf77857d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/05/2018
+ms.lasthandoff: 02/28/2018
 ---
 # <a name="how-to-parse-strings-using-stringsplit-c-guide"></a>방법: String.Split(C# Guide)를 사용하여 문자열 구문 분석
 
@@ -51,9 +51,9 @@ ms.lasthandoff: 02/05/2018
   
 [!code-csharp-interactive[split strings using strings as separators](../../../samples/snippets/csharp/how-to/strings/ParseStringsUsingSplit.cs#5)]
 
-[GitHub 리포지토리](https://github.com/dotnet/docs/tree/master/samples/snippets/csharp/how-to/strings)의 코드를 확인하여 이러한 샘플을 시험해 볼 수 있습니다.
+[GitHub 리포지토리](https://github.com/dotnet/docs/tree/master/samples/snippets/csharp/how-to/strings)의 코드를 확인하여 이러한 샘플을 시험해 볼 수 있습니다. 또는 샘플을 [zip 파일로](https://github.com/dotnet/docs/tree/master/samples/snippets/csharp/how-to/strings.zip) 다운로드할 수 있습니다.
 
 ## <a name="see-also"></a>참고 항목  
  [C# 프로그래밍 가이드](../programming-guide/index.md)  
  [문자열](../programming-guide/strings/index.md)  
- [.NET Framework 정규식](https://msdn.microsoft.com/library/hs600312)
+ [.NET 정규식](../../standard/base-types/regular-expressions.md)

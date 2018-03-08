@@ -26,14 +26,14 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: c6da140ea82fc3c6d3f5f3001f37711ffe861370
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 6592647ab3ff133bceb05b9ee84ce794e41aaf13
+ms.sourcegitcommit: 3a96c706e4dbb4667bf3bf37edac9e1666646f93
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 02/27/2018
 ---
 # <a name="regular-expression-example-scanning-for-hrefs"></a>정규식 예제: HREF 스캐닝
-다음 예제는 입력 문자열을 검색하고 모든 href="…" 값과 문자열에서의 해당 위치를 보여줍니다.  
+다음 예제는 입력 문자열을 검색하고 모든 href="…" 값과 문자열에서의 해당 위치를 보여 줍니다.  
   
 ## <a name="the-regex-object"></a>Regex 개체  
  `DumpHRefs` 메서드는 사용자 코드에서 여러 번 호출할 수 있으므로 `static`(Visual Basic의 경우 `Shared`) <xref:System.Text.RegularExpressions.Regex.Match%28System.String%2CSystem.String%2CSystem.Text.RegularExpressions.RegexOptions%29?displayProperty=nameWithType> 메서드를 사용합니다. 그러면 정규식 엔진이 정규식을 캐시할 수 있으며 메서드를 호출할 때마다 새 <xref:System.Text.RegularExpressions.Regex> 개체를 인스턴스화하는 오버헤드를 방지합니다. 그리고 <xref:System.Text.RegularExpressions.Match> 개체는 문자열의 모든 일치 항목을 반복하는 데 사용됩니다.  
@@ -41,7 +41,7 @@ ms.lasthandoff: 12/23/2017
  [!code-csharp[RegularExpressions.Examples.HREF#1](../../../samples/snippets/csharp/VS_Snippets_CLR/RegularExpressions.Examples.HREF/cs/example.cs#1)]
  [!code-vb[RegularExpressions.Examples.HREF#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/RegularExpressions.Examples.HREF/vb/example.vb#1)]  
   
- 다음 예제에서는 `DumpHRefs` 메서드를 호출하는 방법을 보여줍니다.  
+ 다음 예제에서는 `DumpHRefs` 메서드를 호출하는 방법을 보여 줍니다.  
   
  [!code-csharp[RegularExpressions.Examples.HREF#2](../../../samples/snippets/csharp/VS_Snippets_CLR/RegularExpressions.Examples.HREF/cs/example.cs#2)]
  [!code-vb[RegularExpressions.Examples.HREF#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/RegularExpressions.Examples.HREF/vb/example.vb#2)]  
@@ -54,7 +54,7 @@ ms.lasthandoff: 12/23/2017
 |`\s*`|0개 이상의 공백 문자가 일치하는지 확인합니다.|  
 |`=`|등호와 일치합니다.|  
 |`\s*`|0개 이상의 공백 문자가 일치하는지 확인합니다.|  
-|`(?:["'](?<1>[^"']*)"&#124;(?<1>\S+))`|캡처된 그룹에 결과를 할당하지 않으며 다음 중 하나와 일치합니다.<br /><br /> - 따옴표 또는 아포스트로피 뒤에 따옴표 또는 아포스트로피 이외의 다른 문자가 0개 이상 나오고 그 뒤에 다시 따옴표 또는 아포스트로피. `1`이라는 그룹이 이 패턴에 포함됩니다.<br />- 하나 이상의 공백이 아닌 문자. `1`이라는 그룹이 이 패턴에 포함됩니다.|  
+|<code>(?:\["'\](?<1>\[^"'\]*)"&#124;(?<1>\S+))</code>|캡처된 그룹에 결과를 할당하지 않으며 다음 중 하나와 일치합니다.<br /> <ul><li><p>따옴표 또는 아포스트로피 뒤에 따옴표 또는 아포스트로피 이외의 다른 문자가 0개 이상 나오고 그 뒤에 다시 따옴표 또는 아포스트로피가 나오는 항목. `1`이라는 그룹이 이 패턴에 포함됩니다.</p></li><li><p>하나 이상의 공백이 아닌 문자. `1`이라는 그룹이 이 패턴에 포함됩니다.</p></li></ul>|  
 |`(?<1>[^"']*)`|`1`이라는 캡처 그룹에 따옴표 또는 아포스트로피 이외의 다른 문자 항목을 0개 이상 할당합니다.|  
 |`"(?<1>\S+)`|`1`이라는 캡처링 그룹에 하나 이상의 공백이 아닌 문자를 할당합니다.|  
   

@@ -2,7 +2,8 @@
 title: "ref(C# 참조)"
 ms.date: 05/30/2017
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 f1_keywords:
 - ref_CSharpKeyword
@@ -11,14 +12,14 @@ helpviewer_keywords:
 - parameters [C#], ref
 - ref keyword [C#]
 ms.assetid: b8a5e59c-907d-4065-b41d-95bf4273c0bd
-caps.latest.revision: "32"
+caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 0be0eee67b507e2a209c9caaa3eb14cc60e8a763
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 9b1e926bd1d9c3a8e0525ed02d102f26e6ec9abd
+ms.sourcegitcommit: 655fd4f78741967f80c409cef98347fdcf77857d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 02/28/2018
 ---
 # <a name="ref-c-reference"></a>ref(C# 참조)
 
@@ -82,19 +83,19 @@ ms.lasthandoff: 11/21/2017
    ```csharp
    public ref decimal GetCurrentValue()
    ``` 
-- 메서드의 각 `return` 문 앞에서. 예:
+- 메서드의 `return` 문에서 반환된 `return` 토큰과 변수 간에. 예:
  
    ```csharp
-   ref return Decimal.Zero;
+   return ref DecimalArray[0];
    ``` 
 
-개체의 상태를 수정 하려면 호출자에 대 한 순서로 참조 반환 값으로 명시적으로 정의 된 변수에 저장 되어야 합니다는 [참조 로컬](#ref-locals)합니다. 
+호출자가 개체 상태를 수정하려면 참조 반환 값을 [참조 로컬](#ref-locals)로 명시적으로 정의된 변수에 저장해야 합니다. 
 
 예를 들어 [참조 반환 및 참조 로컬 예제](#a-ref-returns-and-ref-locals-example)를 참조하세요.
 
 ## <a name="ref-locals"></a>참조 로컬
 
-참조 지역 변수는 `ref return`을 사용하여 반환된 값을 참조하는 데 사용됩니다.  참조 지역 변수를 초기화하고 참조 반환 값에 할당해야 합니다. 참조 로컬 값의 수정 내용은 메서드가 값을 참조로 반환하는 개체 상태에 반영됩니다.
+참조 지역 변수는 `return ref`을 사용하여 반환된 값을 참조하는 데 사용됩니다.  참조 지역 변수를 초기화하고 참조 반환 값에 할당해야 합니다. 참조 로컬 값의 수정 내용은 메서드가 값을 참조로 반환하는 개체 상태에 반영됩니다.
 
 변수 선언 앞, 값을 참조로 반환하는 메서드 호출 직전에 `ref` 키워드를 사용하여 참조 로컬을 정의합니다. 
 

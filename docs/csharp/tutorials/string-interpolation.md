@@ -10,15 +10,15 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: f8806f6b-3ac7-4ee6-9b3e-c524d5301ae9
-ms.openlocfilehash: b6b3ce53a08cfacfacb19266b0be216a40633352
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: db062ed2f832ae933941da1c49e84303090f4390
+ms.sourcegitcommit: 3a96c706e4dbb4667bf3bf37edac9e1666646f93
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 02/27/2018
 ---
 # <a name="string-interpolation-in-c"></a>C#의 문자열 보간 #
 
-문자열 보간은 문자열의 자리 표시자가 문자열 변수의 값으로 바뀌는 방식입니다. C# 6 이전에는 이 작업을 위해 `System.String.Format`을 사용했습니다. 이 방법도 괜찮지만 번호가 매겨진 자리 표시자를 사용하므로 읽기가 더 어렵고 좀 더 길 수 있습니다.
+문자열 보간은 문자열의 자리 표시자가 문자열 변수의 값으로 바뀌는 방식입니다. C# 6 이전에는 이 작업을 위해 <xref:System.String.Format%2A?displayProperty=nameWithType>을 사용했습니다. 이 방법도 괜찮지만 번호가 매겨진 자리 표시자를 사용하므로 읽기가 더 어렵고 좀 더 길 수 있습니다.
 
 다른 프로그래밍 언어의 경우 한동안 문자열 보간이 기본적으로 제공되었습니다. 예를 들면 PHP의 경우 다음과 같습니다.
 
@@ -42,7 +42,7 @@ Windows, Ubuntu Linux, macOS 또는 Docker 컨테이너에서 이 응용 프로�
 dotnet new console
 ```
 
-이 명령은 프로젝트 파일, *interpolated.csproj* 및 소스 코드 파일 *Program.cs*를 사용하여 기본 .NET Core 프로젝트를 만듭니다. `dotnet restore`를 실행하여 이 프로젝트를 컴파일하는 데 필요한 종속성을 복원해야 합니다.
+이 명령은 프로젝트 파일 *interpolated.csproj* 및 소스 코드 파일 *Program.cs*를 사용하여 기본 .NET Core 프로젝트를 만듭니다. `dotnet restore`를 실행하여 이 프로젝트를 컴파일하는 데 필요한 종속성을 복원해야 합니다.
 
 [!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
 
@@ -52,7 +52,7 @@ dotnet new console
 
 ## <a name="intro-to-string-interpolation"></a>문자열 보간 소개
 
-`System.String.Format`을 사용하여 매개 변수와 문자열로 대체되는 "자리 표시자" 문자열을 지정합니다. 예를 들면 다음과 같습니다.
+<xref:System.String.Format%2A?displayProperty=nameWithType>을 사용하여 문자열에 따라 인수로 대체되는 문자열에서 "자리 표시자"를 지정합니다. 예를 들면 다음과 같습니다.
 
 [!code-csharp[String.Format example](../../../samples/snippets/csharp/new-in-6/string-interpolation.cs#StringFormatExample)]  
 
@@ -78,7 +78,7 @@ This is line number 5
 
 ## <a name="how-string-interpolation-works"></a>문자열 보간이 작동하는 방법
 
-내부적으로 이 문자열 보간 구문은 컴파일러에서 String.Format로 변환됩니다. 따라서 [이전에 String.Format으로 수행했던 것과 동일한 형식의 작업](https://msdn.microsoft.com/library/dwhawy9k(v=vs.110).aspx)을 수행할 수 있습니다.
+내부적으로 이 문자열 보간 구문은 컴파일러에서 `String.Format`로 변환됩니다. 따라서 [`String.Format` 이전에 String.Format으로 수행했던 것과 동일한 형식의 작업](../../standard/base-types/formatting-types.md)을 수행할 수 있습니다.
 
 예를 들어 안쪽 여백 및 숫자 서식을 추가할 수 있습니다.
 
@@ -114,14 +114,12 @@ Console.WriteLine(localizeMe);
 
 ## <a name="localization-and-internationalization"></a>지역화 및 국제화
 
-보간된 문자열은 국제화에 유용할 수 있는 `IFormattable` 및 `FormattableString`을 지원합니다.
+보간된 문자열은 국제화에 유용할 수 있는 <xref:System.IFormattable?displayProperty=nameWithType> 및 <xref:System.FormattableString?displayProperty=nameWithType>을 지원합니다.
 
-기본적으로 보간된 문자열은 현재 문화권을 사용합니다. 다른 문화권을 사용하려면 `IFormattable`로 캐스팅할 수 있습니다.
-
-예를 들면 다음과 같습니다.
+기본적으로 보간된 문자열은 현재 문화권을 사용합니다. 다른 문화권을 사용하려면 보간된 문자열을 `IFormattable`로 캐스팅합니다. 예를 들면 다음과 같습니다.
 
 [!code-csharp[Interpolation internationalization example](../../../samples/snippets/csharp/new-in-6/string-interpolation.cs#InterpolationInternationalizationExample)]  
 
 ## <a name="conclusion"></a>결론 
 
-이 자습서에서는 C# 6의 문자열 보간 기능을 사용하는 방법을 알아보았습니다. 이 기능은 좀 더 개선된 방식으로 사용할 때는 몇 가지 주의할 사항이 있지만 단순한 `String.Format` 문을 작성하는 좀 더 정확한 방법입니다.
+이 자습서에서는 C# 6의 문자열 보간 기능을 사용하는 방법을 알아보았습니다. 이 기능은 기본적으로 고급 사용법에 대한 주의 사항을 사용하여 단순한 `String.Format` 문을 작성하는 정확한 방법입니다. 자세한 내용은 [보간된 문자열](../../csharp//language-reference/keywords/interpolated-strings.md) 항목을 참조하세요.
