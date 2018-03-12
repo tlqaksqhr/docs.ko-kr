@@ -4,36 +4,37 @@ description: "기존.NET 응용 프로그램을 Azure 클라우드 및 Windows �
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/26/2017
+ms.prod: .net
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: bced3bed84d138dbda4f322322213b47c0159016
-ms.sourcegitcommit: c3957fdb990060559d73cca44ab3e2c7b4d049c0
+ms.openlocfilehash: 6a2abda3949c1fffc4d731b01e35e58e7c56dac0
+ms.sourcegitcommit: d3cfda0943364aaf6ccd574f55f584576c8a4fee
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 03/08/2018
 ---
-# <a name="walkthroughs-and-technical-get-started-overview"></a>연습 및 technical 시작된 개요 가져오기 
+# <a name="walkthroughs-and-technical-get-started-overview"></a>연습 및 technical 시작된 개요 가져오기
 
-이 전자책 (영문)의 크기를 제한 하려면 만들었고 추가 기술 설명서 및 전체 연습 GitHub 리포지토리에서 사용할 수 있습니다. 온라인 일련의이 장에서 설명 하는 연습에서는 Windows 컨테이너와 Azure로 배포를 기반으로 하는 여러 환경 설치 하는 단계별 설명 합니다.
+이 전자책 (영문)의 크기를 제한 하려면 추가 기술 설명서 및 전체 연습 된 사용할 수는 GitHub 리포지토리에 있습니다. 온라인 일련의이 장에서 설명 하는 연습에서는 Windows 컨테이너와 Azure로 배포를 기반으로 하는 여러 환경 설치 하는 단계별 설명 합니다.
 
-다음 섹션에서는 각 연습 란에 대 한 해당 목표, 상위 수준 비전-하 고 관련 된 작업에 대 한 다이어그램을 제공 합니다. 자체의 연습을 얻을 수에 *eShopModernizing* 앱 GitHub 리포지토리에 wiki에서 [https://github.com/dotnet-architecture/eShopModernizing/wiki](https://github.com/dotnet-architecture/eShopModernizing/wiki)합니다.
+다음 섹션에서는 설명 각 연습에 대해 해당 목표 및 높은 수준의 비전 관련 된 작업에 대 한 다이어그램을 제공 합니다. 자체의 연습을 얻을 수에 *eShopModernizing* 앱 GitHub 리포지토리에 wiki에서 [https://github.com/dotnet-architecture/eShopModernizing/wiki](https://github.com/dotnet-architecture/eShopModernizing/wiki)합니다.
 
-# <a name="technical-walkthrough-list"></a>기술 연습 목록
+## <a name="technical-walkthrough-list"></a>기술 연습 목록
 
 다음 started 연습 리프트 하 및 컨테이너를 사용 하 여 이동 하 고 다음 Azure에서 배포의 여러 선택 항목을 사용 하 여 이동할 수 있는 샘플 응용 프로그램에 일관 되 고 포괄적인 기술 지침을 제공 합니다.
 
 다음 연습 중 각각의 새 샘플 eShopLegacy 및 eShopModernizing 앱의 경우에 GitHub에서 사용할 수 있는 사용 하 여 [https://github.com/dotnet-architecture/eShopModernizing](https://github.com/dotnet-architecture/eShopModernizing)합니다.
 
--   **둘러보기의 eShop 레거시 응용 프로그램**
+- **둘러보기의 eShop 레거시 응용 프로그램**
 
--   **Windows 컨테이너를 기존.NET 응용 프로그램을 컨테이너 화합니다**
+- **Windows 컨테이너를 기존.NET 응용 프로그램을 컨테이너 화합니다**
 
--   **Azure Vm에 Windows 컨테이너 기반 앱 배포**
+- **Azure Vm에 Windows 컨테이너 기반 앱 배포**
 
--   **Azure 컨테이너 서비스에서 Kubernetes에 Windows 컨테이너 기반 앱 배포**
+- **Azure 컨테이너 서비스에서 Kubernetes에 Windows 컨테이너 기반 앱 배포**
 
--   **Azure 서비스 패브릭에 Windows 컨테이너 기반 앱 배포**
+- **Azure 서비스 패브릭에 Windows 컨테이너 기반 앱 배포**
 
 ## <a name="walkthrough-1-tour-of-eshop-legacy-apps"></a>EShop 레거시 응용 프로그램 연습 1: 둘러보기
 
@@ -97,13 +98,13 @@ Windows 컨테이너를 사용 하 여 MVC, Web Forms, WCF, 프로덕션, 개발
 
 이 연습의 목표 containerizing 기존.NET Framework 응용 프로그램에 대 한 몇 가지 옵션을 표시 하는입니다. 다음과 같은 작업을 수행할 수 있습니다.
 
--   사용 하 여 응용 프로그램을 컨테이너 화할 [Docker 용 Visual Studio 2017 도구](/aspnet/core/host-and-deploy/docker/visual-studio-tools-for-docker) (Visual Studio 2017 또는 이후 버전).
+- 사용 하 여 응용 프로그램을 컨테이너 화할 [Docker 용 Visual Studio 2017 도구](/aspnet/core/host-and-deploy/docker/visual-studio-tools-for-docker) (Visual Studio 2017 또는 이후 버전).
 
--   수동으로 추가 하 여 응용 프로그램을 컨테이너 화할는 [Dockerfile](https://docs.docker.com/engine/reference/builder/)를 사용 하 여는 [Docker CLI](https://docs.docker.com/engine/reference/commandline/cli/)합니다.
+- 수동으로 추가 하 여 응용 프로그램을 컨테이너 화할는 [Dockerfile](https://docs.docker.com/engine/reference/builder/)를 사용 하 여는 [Docker CLI](https://docs.docker.com/engine/reference/commandline/cli/)합니다.
 
--   사용 하 여 응용 프로그램을 컨테이너 화할는 [Img2Docker](https://github.com/docker/communitytools-image2docker-win) 도구 (Docker에서 오픈 소스 도구).
+- 사용 하 여 응용 프로그램을 컨테이너 화할는 [Img2Docker](https://github.com/docker/communitytools-image2docker-win) 도구 (Docker에서 오픈 소스 도구).
 
-이 연습에서는 Visual Studio 2017 Tools for Docker 접근 방식에 중점을 두고 있지만 Dockerfile을 사용 하 여 시에서 다른 두 가지 방법으로 매우 비슷합니다.
+이 연습에서는 Visual Studio 2017 Tools for Docker 접근 방식에 중점을 두고 있지만 Dockerfile을 사용 하 여 관련 하 여 다른 두 가지 방법으로 매우 비슷합니다.
 
 ### <a name="scenario"></a>시나리오
 
@@ -137,7 +138,7 @@ GitHub wiki에서이 콘텐츠를 더 자세하게 탐색할: [https://github.co
 
 ### <a name="overview"></a>개요
 
-Azure에서 Windows Server 2016 VM에서 Docker 호스트에 배포 하는 개발/테스트/스테이징 환경을 신속 하 게 설정할 수 있습니다. 또한, 테스터 또는 비즈니스 사용자가 유효성을 검사할 앱에 대 한 공통 위치를 제공 합니다. Vm 유효한 IaaS 프로덕션 환경 수도 있습니다.
+Docker 호스트에 Windows Server 2016 가상 컴퓨터 (VM) Azure에서 배포 개발/테스트/스테이징 환경을 신속 하 게 설정할 수 있습니다. 또한, 테스터 또는 비즈니스 사용자가 유효성을 검사할 앱에 대 한 공통 위치를 제공 합니다. 또한 Vm 서비스 (IaaS) 프로덕션 환경으로 유효한 하 부 구조를 수 있습니다.
 
 ### <a name="goals"></a>목표
 
@@ -167,13 +168,13 @@ Azure에서 Windows Server 2016 VM에서 Docker 호스트에 배포 하는 개�
 
 ### <a name="azure-vms-for-windows-containers"></a>Windows 컨테이너에 대 한 azure Vm
 
-Windows 컨테이너에 대 한 azure Vm은 Windows Server 2016, Windows 10을 기반으로 하는 Vm 하기만 하면 또는 이상 버전에서 모두 Docker 엔진으로 설정 합니다. 대부분의 경우에서 Azure Vm에서 Windows Server 2016을 사용 합니다.
+Windows 컨테이너에 대 한 azure Vm은 Windows Server 2016, Windows 10 또는 이후 버전에 따라 Vm, 모두 Docker 엔진으로 설정 합니다. 대부분의 경우에서 Windows Server 2016은 Azure Vm에서 사용 됩니다.
 
 Azure에서 현재 V 제공 **컨테이너와 Windows Server 2016**합니다. Windows Server Core 또는 Windows Nano Server과 함께 새로운 Windows Server 컨테이너 기능을 사용 하려면이 VM을 사용할 수 있습니다. 컨테이너 OS 이미지 설치 되 고 VM은 Docker에서 사용할 수 있습니다.
 
 ### <a name="benefits"></a>이점
 
-Azure에 배포할 Windows 컨테이너를 온-프레미스 Windows Server 2016 Vm으로 배포할 수 있지만 Windows Server 컨테이너 Vm이 즉시 사용을 시작 하는 쉬운 방법이 가져옵니다. 테스터 및 Azure VM 크기 집합을 통해 자동 확장성에 액세스할 수 있는 공통 온라인 위치를 가져올 수도 있습니다.
+Azure에 배포할 Windows 컨테이너를 온-프레미스 Windows Server 2016 Vm으로 배포할 수 있지만 Windows Server 컨테이너 Vm이 즉시 사용을 시작 하는 쉬운 방법이 가져옵니다. 테스터 및 Azure 가상 컴퓨터 크기 집합을 통해 자동 확장성에 액세스할 수 있는 공통 온라인 위치를 가져올 수도 있습니다.
 
 ### <a name="next-steps"></a>다음 단계
 
@@ -217,25 +218,25 @@ Windows 컨테이너 기반 응용 프로그램 Kubernetes 배포 하는 방법�
 
 ### <a name="benefits"></a>이점
 
-Kubernetes에 있는 클러스터를 배포 하는 다음과 같은 많은 이점이 있습니다. 가장 큰 장점은 적용 되는 즉시 환경 있는 있습니다 수 확장 (내부 확장성의 기존 노드에서에서)를 사용 하 고 클러스터 (에서 노드 또는 Vm의 수에 따라 컨테이너 인스턴스 수에 따라 응용 프로그램을 가져올 전역 확장성 클러스터의)입니다.
+Kubernetes에 있는 클러스터를 배포 하는 다음과 같은 많은 이점이 있습니다. 가장 큰 장점은 적용 되는 응용 프로그램 (내부 확장성의 기존 노드에서에서)를 사용 하 고 클러스터 (에서 노드 또는 Vm의 수에 따라 컨테이너 인스턴스 수에 따라를 확장할 수 있는 프로덕션에 사용 가능한 환경 가져올 전역 확장성 클러스터의)입니다.
 
 Azure 컨테이너 서비스 인기 있는 오픈 소스 도구와 기술을 Azure에 맞게 최적화합니다. 사용자 컨테이너 및 응용 프로그램 구성에 대 한 이식성을 제공 하는 열린 솔루션 가져오기 크기, 호스트의 수를 선택 하 고 다른 모든 항목을 처리 하는 orchestrator 도구-컨테이너 서비스 키를 누릅니다.
 
 Kubernetes와 개발자가 수에서 진행 상황 실제 및 가상 컴퓨터에 대 한 다음과 같은 기능 중 일부를 용이 하 게 하는 컨테이너 중심 인프라 계획:
 
--   여러 컨테이너를 기반으로 응용 프로그램
+- 여러 컨테이너를 기반으로 응용 프로그램
 
--   컨테이너 인스턴스를 복제 하는 가로 자동 크기 조정
+- 컨테이너 인스턴스를 복제 하는 가로 자동 크기 조정
 
--   이름 지정 및 검색 (예를 들어 내부 DNS)
+- 이름 지정 및 검색 (예를 들어 내부 DNS)
 
--   로드 균형 조정
+- 로드 균형 조정
 
--   롤링 업데이트
+- 롤링 업데이트
 
--   암호를 배포합니다.
+- 암호를 배포합니다.
 
--   응용 프로그램 상태 확인
+- 응용 프로그램 상태 확인
 
 ## <a name="next-steps"></a>다음 단계
 
@@ -251,7 +252,7 @@ GitHub wiki에서이 콘텐츠를 더 자세하게 탐색할: [https://github.co
 
 ### <a name="overview"></a>개요
 
-Windows 컨테이너를 기반으로 하는 응용 프로그램 더욱 해소 IaaS Vm에서 다른 페이지로 이동 하는 플랫폼에서 사용 하 여 신속 하 게 할 수 있습니다. 이 쉽게 높은 확장성을 달성 하는 데 필요한 및 더 잘 자동화 확장성, 고 크게 향상에 대 한 배포 및 버전 관리를 자동화 합니다. 다른 공용 클라우드 또는 Azure 클라우드에서 사용할 수 있지만 가능 온-프레미스를 사용 하는 Azure 서비스 패브릭 orchestrator를 사용 하 여 이러한 목표를 달성할 수 있습니다.
+Windows 컨테이너를 신속 하 게 기반 응용 프로그램 플랫폼에서 더욱 해소 IaaS Vm에서 다른 페이지로 이동 사용 해야 합니다. 이 쉽게 높은 확장성을 달성 하는 데 필요한 및 더 잘 자동화 확장성, 고 크게 향상에 대 한 배포 및 버전 관리를 자동화 합니다. 다른 공용 클라우드 또는 Azure 클라우드에서 사용할 수 있지만 가능 온-프레미스를 사용 하는 Azure 서비스 패브릭 orchestrator를 사용 하 여 이러한 목표를 달성할 수 있습니다.
 
 ### <a name="goals"></a>목표
 
@@ -277,37 +278,37 @@ Windows 컨테이너를 기반으로 하는 응용 프로그램 더욱 해소 Ia
 
 ## <a name="benefits"></a>이점
 
-서비스 패브릭 클러스터에 배포의 이점을 Kubernetes 사용의 이점와 비슷합니다. 그러나 한 가지 차이점 서비스 패브릭 Windows 응용 프로그램의 Windows 컨테이너에 대 한 미리 보기 초기까지 2017의 대체 된 있는 Kubernetes에 비해 매우 성숙한 프로덕션 환경 된다는 점입니다. (Kubernetes는 Linux 용 더 성숙한 환경)입니다. 
+서비스 패브릭 클러스터에 배포의 이점을 Kubernetes 사용의 이점와 비슷합니다. 한 가지 차이점 하지만 서비스 패브릭 Windows 응용 프로그램의 버전 1.9 Kubernetes에서 Windows 컨테이너에 대 한 베타 기간 내에 있는 Kubernetes에 비해 더 성숙한 프로덕션 환경 된다는 점입니다 (2017 년 12 월). Kubernetes는 Linux 용 더 성숙한 환경입니다.
 
-Azure Service Fabric을 사용 하 여의 주요 장점은 적용 되는 즉시 환경 있는 있습니다 수 확장 (내부 확장성의 기존 노드에서에서)를 사용 하 고의 수에 따라 컨테이너 인스턴스 수에 따라 응용 프로그램을 가져올 노드 또는 클러스터 (클러스터의 전역 확장성)에서 Vm입니다.
+Azure Service Fabric을 사용 하 여의 주요 장점은 적용 되는 응용 프로그램 (내부 확장성의 기존 노드에서에서)를 사용 하 고의 수에 따라 컨테이너 인스턴스 수에 따라를 확장할 수 있는 프로덕션에 사용 가능한 환경 가져올 노드 또는 클러스터 (클러스터의 전역 확장성)에서 Vm입니다.
 
 Azure 서비스 패브릭 응용 프로그램 구성에 대 한 및 사용자 컨테이너에 대 한 이식성을 제공합니다. 서비스 패브릭 클러스터에 Azure에서 또는 자체 데이터 센터에서 온-프레미스 설치를 할 수 있습니다. 다른 클라우드에서 서비스 패브릭 클러스터 같은 설치도 [AWS Amazon](https://blogs.msdn.microsoft.com/azureservicefabric/2017/05/18/tutorial-how-to-create-a-service-fabric-standalone-cluster-with-aws-ec2-instances/)합니다.
 
 서비스 패브릭 개발자 수에서 진행 상황 실제 및 가상 컴퓨터에 대 한 다음과 같은 기능 중 일부를 용이 하 게 하는 컨테이너 중심 인프라 계획:
 
--   여러 컨테이너를 기반으로 응용 프로그램입니다.
+- 여러 컨테이너를 기반으로 응용 프로그램입니다.
 
--   가로 크기 자동 조정 및 컨테이너 인스턴스를 복제합니다.
+- 가로 크기 자동 조정 및 컨테이너 인스턴스를 복제합니다.
 
--   이름 지정 및 (예를 들어 내부 DNS)를 검색 합니다.
+- 이름 지정 및 (예를 들어 내부 DNS)를 검색 합니다.
 
--   로드 균형 조정 합니다.
+- 로드 균형 조정 합니다.
 
--   롤링 업데이트 합니다.
+- 롤링 업데이트 합니다.
 
--   비밀을 배포합니다.
+- 비밀을 배포합니다.
 
--   응용 프로그램 상태를 확인합니다.
+- 응용 프로그램 상태를 확인합니다.
 
 다음과 같은 기능 (다른 orchestrators 비교) 서비스 패브릭에서 배타적 있습니다.
 
--   신뢰할 수 있는 서비스 응용 프로그램 모델을 통해 상태 저장 서비스 기능입니다.
+- 신뢰할 수 있는 서비스 응용 프로그램 모델을 통해 상태 저장 서비스 기능입니다.
 
--   Reliable Actors 응용 프로그램 모델을 통해 actor 패턴입니다.
+- Reliable Actors 응용 프로그램 모델을 통해 actor 패턴입니다.
 
--   Windows 또는 Linux 컨테이너 외에도 본 운영 체제 미 설치 프로세스를 배포 합니다.
+- Windows 또는 Linux 컨테이너 외에도 본 운영 체제 미 설치 프로세스를 배포 합니다.
 
--   고급 롤링 업데이트 및 상태 검사 합니다.
+- 고급 롤링 업데이트 및 상태 검사 합니다.
 
 ### <a name="next-steps"></a>다음 단계
 

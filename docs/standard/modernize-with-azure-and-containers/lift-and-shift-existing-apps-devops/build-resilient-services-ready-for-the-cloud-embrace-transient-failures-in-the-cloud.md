@@ -4,16 +4,17 @@ description: "컨테이너 화 된.NET 응용 프로그램에 대 한.NET Micros
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/26/2017
+ms.prod: .net
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: eef0197edb3aba555da63f1ea0b75726a826bd32
-ms.sourcegitcommit: c3957fdb990060559d73cca44ab3e2c7b4d049c0
+ms.openlocfilehash: df452c9fbf1c16603efcec40844b55810bd5d2d4
+ms.sourcegitcommit: d3cfda0943364aaf6ccd574f55f584576c8a4fee
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 03/08/2018
 ---
-# <a name="build-resilient-services-ready-for-the-cloud-embrace-transient-failures-in-the-cloud"></a>클라우드에 대 한 준비 복원 력 있는 서비스를 빌드: 클라우드의 일시적 오류를 수용 합니다. 
+# <a name="build-resilient-services-ready-for-the-cloud-embrace-transient-failures-in-the-cloud"></a>클라우드에 대 한 준비 복원 력 있는 서비스를 빌드: 클라우드의 일시적 오류를 수용 합니다.
 
 복원력은 오류를 복구하고 계속 작업을 진행하는 기능입니다. 복구를 사용 하지만 오류를 방지 하 고, 오류가 발생할 수 있는 팩트를 수락 하 고, 다음 가동 중지 시간 또는 데이터 손실 방지 하는 방법에서 응답 하는 방법에 대 한 않습니다. 복원력의 목표는 오류 발생 후 응용 프로그램을 완전히 작동 중인 상태로 되돌리는 것입니다.
 
@@ -43,7 +44,7 @@ HTTP 서비스를 사용 하는 앱에서 이와 유사한 시나리오가 발�
 
 클라우드에서 부분 장애를 처리 하기 위한 전략을 구현 하는 방법을 알아보려면 다음을 참조 합니다.
 
-### <a name="additional-resources"></a>추가 리소스
+### <a name="additional-resources"></a>추가 자료
 
 -   **부분 실패를 처리 하는 복원 력 있는 통신을 구현 합니다.**
 

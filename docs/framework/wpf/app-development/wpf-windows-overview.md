@@ -42,11 +42,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 594bb21983f51f3c0698c43d0f6ea39594b72705
-ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
+ms.openlocfilehash: c176f08904bac8e9c3877977c1e52afb57d5daca
+ms.sourcegitcommit: d3cfda0943364aaf6ccd574f55f584576c8a4fee
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="wpf-windows-overview"></a>WPF 창 개요
 사용자는 창을 통해 [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] 독립 실행형 응용 프로그램과 상호 작용합니다. 창의 기본 용도는 데이터를 시각화하는 콘텐츠를 호스트하고 사용자가 데이터와 상호 작용할 수 있도록 하는 것입니다. 독립 실행형 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 응용 프로그램은 고유 창을 사용 하 여 제공 된 <xref:System.Windows.Window> 클래스입니다. 이 항목에서는 소개 <xref:System.Windows.Window> 독립 실행형 응용 프로그램에는 창을 만들고 관리의 기본 개념을 다루기 전에 합니다.  
@@ -106,7 +106,7 @@ ms.lasthandoff: 02/01/2018
   
 -   코드 숨김 클래스 여야 합니다는 `partial` 변수로 지정 된 동일한 이름의 클래스는 `x:Class` 태그에서 특성에서 파생 되어야 <xref:System.Windows.Window>합니다. 이렇게 하면 연결 된 코드 숨김 파일이 `partial` 응용 프로그램이 빌드될 때 마크업 파일에 대해 생성 되는 클래스 (참조 [WPF 응용 프로그램 빌드](../../../../docs/framework/wpf/app-development/building-a-wpf-application-wpf.md)).  
   
--   코드 숨김에서 <xref:System.Windows.Window> 클래스가 호출 하는 생성자를 구현 해야 합니다는 `InitializeComponent` 메서드. `InitializeComponent`구현 파일에서 생성 된 태그에서 `partial` 클래스를 이벤트 등록 및 태그에 정의 된 속성을 설정 합니다.  
+-   코드 숨김에서 <xref:System.Windows.Window> 클래스가 호출 하는 생성자를 구현 해야 합니다는 `InitializeComponent` 메서드. `InitializeComponent` 구현 파일에서 생성 된 태그에서 `partial` 클래스를 이벤트 등록 및 태그에 정의 된 속성을 설정 합니다.  
   
 > [!NOTE]
 >  추가 하는 경우 새 <xref:System.Windows.Window> 를 사용 하 여 프로젝트에 [!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)], <xref:System.Windows.Window> 태그와 코드 숨김을 사용 하 여 구현 되 고으로 태그와 코드 숨김 파일 간의 연결을 만드는 데 필요한 구성을 포함 여기에서 설명 합니다.  
@@ -164,7 +164,7 @@ ms.lasthandoff: 02/01/2018
  호출 하 여 열려 있는 창을 <xref:System.Windows.Window.Show%2A> 는 모덜리스 창 응용 프로그램을 사용자가 동일한 응용 프로그램에서 다른 창을 활성화를 허용 하는 모드에서 작동 하는 것을 의미 합니다.  
   
 > [!NOTE]
->  <xref:System.Windows.Window.ShowDialog%2A>예: 대화 상자 창이 열리며 해당 모달 형식으로 호출 됩니다. 참조 [대화 상자 개요](../../../../docs/framework/wpf/app-development/dialog-boxes-overview.md) 자세한 정보에 대 한 합니다.  
+>  <xref:System.Windows.Window.ShowDialog%2A> 예: 대화 상자 창이 열리며 해당 모달 형식으로 호출 됩니다. 참조 [대화 상자 개요](../../../../docs/framework/wpf/app-development/dialog-boxes-overview.md) 자세한 정보에 대 한 합니다.  
   
  때 <xref:System.Windows.Window.Show%2A> 은 호출 창이 초기화 작업을 수행한 사용자 입력을 받을 수 있는 인프라를 설정 표시 되기 전에 합니다. 창이 초기화 될 때는 <xref:System.Windows.Window.SourceInitialized> 이벤트가 발생 하 고 창을 표시 합니다.  
   
@@ -267,7 +267,7 @@ ms.lasthandoff: 02/01/2018
   
  두 개의 이벤트를 발생 창이 닫히면: <xref:System.Windows.Window.Closing> 및 <xref:System.Windows.Window.Closed>합니다.  
   
- <xref:System.Windows.Window.Closing>창이 닫히고 창을 여 닫기를 방지할 수 있는 메커니즘을 제공 하기 전에 발생 합니다. 대개 창이 닫히면 안 되는 한 가지 이유는 창 콘텐츠에 수정된 데이터가 있는 경우입니다. 이 경우에는 <xref:System.Windows.Window.Closing> 데이터가 커밋되지 않았는지 여부와 데이터를 저장 하지 않고 창을 닫고 계속할 것인지 아니면 창 닫기를 취소를 사용자에 게 하려는 경우를 결정 하는 이벤트를 처리할 수 있습니다. 다음 예제에서는 처리의 주요 측면은 <xref:System.Windows.Window.Closing>합니다.  
+ <xref:System.Windows.Window.Closing> 창이 닫히고 창을 여 닫기를 방지할 수 있는 메커니즘을 제공 하기 전에 발생 합니다. 대개 창이 닫히면 안 되는 한 가지 이유는 창 콘텐츠에 수정된 데이터가 있는 경우입니다. 이 경우에는 <xref:System.Windows.Window.Closing> 데이터가 커밋되지 않았는지 여부와 데이터를 저장 하지 않고 창을 닫고 계속할 것인지 아니면 창 닫기를 취소를 사용자에 게 하려는 경우를 결정 하는 이벤트를 처리할 수 있습니다. 다음 예제에서는 처리의 주요 측면은 <xref:System.Windows.Window.Closing>합니다.  
   
  [!code-csharp[WindowClosingSnippets](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowClosingSnippets/CSharp/DataWindow.xaml.cs)]
  [!code-vb[WindowClosingSnippets](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WindowClosingSnippets/visualbasic/datawindow.xaml.vb)]  
@@ -322,7 +322,6 @@ ms.lasthandoff: 02/01/2018
  창에는 x 및 y 위치 이외에도 다른 창과 상대적인 수직 위치를 결정하는 z 차원의 위치도 있습니다. 이를 창의 z 순서라고 하며 여기에는 일반 z 순서와 최상위 z 순서의 두 가지 유형이 있습니다. 창의 위치는 *일반 z 순서* 현재 활성 상태 인지 여부에 의해 결정 됩니다. 기본적으로 창은 일반 z 순서로 배치됩니다. 창의 위치는 *최상위 z 순서* 현재 활성화 되었는지 여부에 따라 결정 됩니다. 최상위 z 수준의 창은 항상 일반 z 순서 창의 위에 위치합니다. 설정 하 여 창의 맨 위 z 순서에 있는 해당 <xref:System.Windows.Window.Topmost%2A> 속성을 `true`합니다.  
   
  [!code-xaml[WindowsOverviewSnippets#TopmostWindowMARKUP1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewSnippets/CSharp/TopmostWindow.xaml#topmostwindowmarkup1)]  
-[!code-xaml[WindowsOverviewSnippets#TopmostWindowMARKUP2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewSnippets/CSharp/TopmostWindow.xaml#topmostwindowmarkup2)]  
   
  각 z 순서 안에서는 현재 활성화된 창이 같은 z 순서를 가진 다른 모든 창 위에 나타납니다.  
   
@@ -333,12 +332,10 @@ ms.lasthandoff: 02/01/2018
  <xref:System.Windows.FrameworkElement.MinWidth%2A><xref:System.Windows.FrameworkElement.Width%2A>, 및 <xref:System.Windows.FrameworkElement.MaxWidth%2A> 창 수명 동안 있을 수 있습니다 및 다음 예제와 같이 구성 된 너비의 범위를 관리 하는 데 사용 됩니다.  
   
  [!code-xaml[WindowsOverviewSnippets#WidthWindowMARKUP1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewSnippets/CSharp/WidthWindow.xaml#widthwindowmarkup1)]  
-[!code-xaml[WindowsOverviewSnippets#WidthWindowMARKUP2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewSnippets/CSharp/WidthWindow.xaml#widthwindowmarkup2)]  
   
  관리 하는 창 높이 <xref:System.Windows.FrameworkElement.MinHeight%2A>, <xref:System.Windows.FrameworkElement.Height%2A>, 및 <xref:System.Windows.FrameworkElement.MaxHeight%2A>, 다음 예제와 같이 구성 됩니다.  
   
  [!code-xaml[WindowsOverviewSnippets#HeightWindowMARKUP1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewSnippets/CSharp/HeightWindow.xaml#heightwindowmarkup1)]  
-[!code-xaml[WindowsOverviewSnippets#HeightWindowMARKUP2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewSnippets/CSharp/HeightWindow.xaml#heightwindowmarkup2)]  
   
  다양한 너비 값과 높이 값이 각각 범위를 지정하고 있기 때문에, 크기 조정 가능한 창의 너비와 높이는 지정한 범위 내에서 임의의 크기로 설정될 수 있습니다. 현재 너비 및 높이 검색 하려면 검사 <xref:System.Windows.FrameworkElement.ActualWidth%2A> 및 <xref:System.Windows.FrameworkElement.ActualHeight%2A>각각.  
   
@@ -355,7 +352,6 @@ ms.lasthandoff: 02/01/2018
  다음 예는 창이 처음 표시될 때 콘텐츠에 맞도록 수직 및 수평으로 크기를 자동으로 조정하는 창을 보여 줍니다.  
   
  [!code-xaml[WindowsOverviewSnippets#SizeToContentWindowMARKUP1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewSnippets/CSharp/SizeToContentWindow.xaml#sizetocontentwindowmarkup1)]  
-[!code-xaml[WindowsOverviewSnippets#SizeToContentWindowMARKUP2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewSnippets/CSharp/SizeToContentWindow.xaml#sizetocontentwindowmarkup2)]  
   
  설정 하는 방법을 보여 주는 다음 예제는 <xref:System.Windows.Window.SizeToContent%2A> 창의 내용에 맞게 크기 조정 하는 방법을 지정 하는 코드에서 속성입니다.
   
@@ -410,7 +406,6 @@ ms.lasthandoff: 02/01/2018
  다음 예제에서는 열릴 때 최대화되어 표시되는 창을 만드는 방법을 보여 줍니다.  
   
  [!code-xaml[WindowsOverviewSnippets#WindowStateWindowMARKUP1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewSnippets/CSharp/WindowStateWindow.xaml#windowstatewindowmarkup1)]  
-[!code-xaml[WindowsOverviewSnippets#WindowStateWindowMARKUP2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewSnippets/CSharp/WindowStateWindow.xaml#windowstatewindowmarkup2)]  
   
  일반적으로 설정 해야 <xref:System.Windows.Window.WindowState%2A> 창의 초기 상태를 구성할 수 있습니다. 크기 조정 가능한 창이 표시되면 사용자는 창의 제목 표시줄에서 최소화, 최대화 및 복원 단추를 눌러 창 상태를 변경할 수 있습니다.  
   
@@ -438,7 +433,6 @@ ms.lasthandoff: 02/01/2018
  와 마찬가지로 <xref:System.Windows.Window.WindowStyle%2A>, 창 크기 조정 모드에서 설정 가능성이 합니다 즉의 수명 동안 변경 될 가능성이 없는 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 태그입니다.  
   
  [!code-xaml[WindowsOverviewSnippets#ResizeModeWindowMARKUP1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewSnippets/CSharp/ResizeModeWindow.xaml#resizemodewindowmarkup1)]  
-[!code-xaml[WindowsOverviewSnippets#ResizeModeWindowMARKUP2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewSnippets/CSharp/ResizeModeWindow.xaml#resizemodewindowmarkup2)]  
   
  창이 최대화 되었는지 여부를 감지할 수는 최소화 또는 검사 하 여 복원 된 <xref:System.Windows.Window.WindowState%2A> 속성입니다.  
   
@@ -463,7 +457,6 @@ ms.lasthandoff: 02/01/2018
  설정할 수 있습니다 <xref:System.Windows.Window.WindowStyle%2A> 중 하나를 사용 하 여 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 태그 또는 코드가; 창의 수명 동안 변경 될 가능성이 없기 때문에 대개 구성한를 사용 하 여 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 태그입니다.  
   
  [!code-xaml[WindowsOverviewSnippets#WindowStyleWindowMARKUP1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewSnippets/CSharp/WindowStyleWindow.xaml#windowstylewindowmarkup1)]  
-[!code-xaml[WindowsOverviewSnippets#WindowStyleWindowMARKUP2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewSnippets/CSharp/WindowStyleWindow.xaml#windowstylewindowmarkup2)]  
   
 #### <a name="non-rectangular-window-style"></a>사각형이 아닌 창 스타일  
  경우가 있을 있는 테두리 스타일 <xref:System.Windows.Window.WindowStyle%2A> 사용 하면 권한이 없는 사용할 수 있습니다. 예를 들어 응용 프로그램을 만드는 사각형이 아닌 테두리가 있는 같은 경우가 [!INCLUDE[TLA#tla_wmp](../../../../includes/tlasharptla-wmp-md.md)] 사용 합니다.  
@@ -475,7 +468,6 @@ ms.lasthandoff: 02/01/2018
  이러한 형식의 설정 하 여 만들 수 있습니다는 <xref:System.Windows.Window.WindowStyle%2A> 속성을 <xref:System.Windows.WindowStyle.None>, 특별 한를 사용 하 여이 지원 하 고 <xref:System.Windows.Window> 에 투명도 대 한 합니다.  
   
  [!code-xaml[WindowsOverviewSnippets#TransparentWindowMARKUP1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewSnippets/CSharp/TransparentWindow.xaml#transparentwindowmarkup1)]  
-[!code-xaml[WindowsOverviewSnippets#TransparentWindowMARKUP2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewSnippets/CSharp/TransparentWindow.xaml#transparentwindowmarkup2)]  
   
  값을 조합하여 사용하면 창이 완전히 투명하게 렌더링됩니다. 이 상태에서는 창의 비클라이언트 영역 표시(닫기 메뉴, 최소화, 최대화 및 복원 단추 등)를 사용할 수 없습니다. 따라서 직접 제공해야 합니다.  
   
@@ -488,11 +480,10 @@ ms.lasthandoff: 02/01/2018
  일부 유형의 windows 메시지 상자 대화 상자 등의 작업 표시줄 단추가 없는 (참조 [대화 상자 개요](../../../../docs/framework/wpf/app-development/dialog-boxes-overview.md)). 설정 하 여 창의 작업 표시줄 단추가 표시 되는지 여부를 제어할 수 있습니다는 <xref:System.Windows.Window.ShowInTaskbar%2A> 속성 (`true` 기본적으로).  
   
  [!code-xaml[WindowsOverviewSnippets#ShowInTaskbarWindowMARKUP1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewSnippets/CSharp/ShowInTaskbarWindow.xaml#showintaskbarwindowmarkup1)]  
-[!code-xaml[WindowsOverviewSnippets#ShowInTaskbarWindowMARKUP2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewSnippets/CSharp/ShowInTaskbarWindow.xaml#showintaskbarwindowmarkup2)]  
   
 <a name="SecurityConsiderations"></a>   
 ## <a name="security-considerations"></a>보안 고려 사항  
- <xref:System.Windows.Window>필요한 `UnmanagedCode` 인스턴스화할 수 있는 보안 권한이 있습니다. 로컬 시스템에 설치되어 실행되는 응용 프로그램의 경우에는 응용 프로그램에 허용된 권한 집합에 속합니다.  
+ <xref:System.Windows.Window> 필요한 `UnmanagedCode` 인스턴스화할 수 있는 보안 권한이 있습니다. 로컬 시스템에 설치되어 실행되는 응용 프로그램의 경우에는 응용 프로그램에 허용된 권한 집합에 속합니다.  
   
  그러나이 벗어난 인터넷 또는 로컬 인트라넷 영역 사용 하 여 실행 응용 프로그램에 부여 된 권한 집합이 [!INCLUDE[TLA#tla_clickonce](../../../../includes/tlasharptla-clickonce-md.md)]합니다. 사용자가을 받을 따라서는 [!INCLUDE[TLA2#tla_clickonce](../../../../includes/tla2sharptla-clickonce-md.md)] 보안 경고의 권한 집합을 완전 신뢰 응용 프로그램을 승격 해야 합니다.  
   
@@ -500,7 +491,7 @@ ms.lasthandoff: 02/01/2018
   
 <a name="Other_Types_of_Windows"></a>   
 ## <a name="other-types-of-windows"></a>다른 유형의 창  
- <xref:System.Windows.Navigation.NavigationWindow>탐색 가능한 콘텐츠를 호스트 하도록 설계 된 창이입니다. 자세한 내용은 참조 [탐색 개요](../../../../docs/framework/wpf/app-development/navigation-overview.md)).  
+ <xref:System.Windows.Navigation.NavigationWindow> 탐색 가능한 콘텐츠를 호스트 하도록 설계 된 창이입니다. 자세한 내용은 참조 [탐색 개요](../../../../docs/framework/wpf/app-development/navigation-overview.md)).  
   
  대화 상자는 기능 수행을 위해 사용자로부터 정보를 수집할 때 많이 사용됩니다. 예를 들어 사용자가을 경우 파일을 열는 **파일 열기** 대화 상자가 사용자 로부터 파일 이름을 가져올 응용 프로그램에서 일반적으로 표시 됩니다. 자세한 내용은 [대화 상자 개요](../../../../docs/framework/wpf/app-development/dialog-boxes-overview.md)를 참조하세요.  
   

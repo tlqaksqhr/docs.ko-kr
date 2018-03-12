@@ -4,14 +4,15 @@ description: "컨테이너 화 된.NET 응용 프로그램에 대 한.NET Micros
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/26/2017
+ms.prod: .net
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 84bffe7aad6bbffb40519c9146d8156159d55850
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: aefcd79574cbbf6b3759bfa6cc0f9e46a58244ce
+ms.sourcegitcommit: d3cfda0943364aaf6ccd574f55f584576c8a4fee
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="how-to-deploy-existing-net-apps-to-azure-app-service"></a>Azure 앱 서비스를 기존.NET 응용 프로그램을 배포 하는 방법 
 
@@ -35,9 +36,9 @@ Azure 앱 서비스 Migration Assistant는 클라우드로 Windows Server에서 
 
 앱 서비스 마이그레이션 도구 웹 사이트를 분석 하 고 응용 프로그램 서비스를 이동 하기 위한의 호환성을 보고할 수 있습니다. 분석 만족 했으면 응용 프로그램 서비스 Migration Assistant 콘텐츠, 데이터 및 설정을 마이그레이션할 수 있습니다. 사이트 매우 호환 되지 않으면 마이그레이션 도구를 작동 하도록 조정 해야 알려 줍니다.
 
-### <a name="additional-resources"></a>추가 리소스
+### <a name="additional-resources"></a>추가 자료
 
--   **Azure 앱 서비스 마이그레이션 길잡이**
+- **Azure 앱 서비스 마이그레이션 길잡이**
 
     [https://www.migratetoazure.net/](https://www.migratetoazure.net/)
 

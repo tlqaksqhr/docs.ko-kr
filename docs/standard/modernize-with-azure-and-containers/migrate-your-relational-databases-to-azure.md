@@ -4,14 +4,15 @@ description: "기존.NET 응용 프로그램을 Azure 클라우드 및 Windows �
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/26/2017
+ms.prod: .net
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 221d8c2b837fb738425e26f3af4da895e4987212
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 9189de8d083c8f9dea8c53b428e6cd34ae6dad15
+ms.sourcegitcommit: d3cfda0943364aaf6ccd574f55f584576c8a4fee
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="migrate-your-relational-databases-to-azure"></a>관계형 데이터베이스를 azure로 마이그레이션
 
@@ -21,7 +22,7 @@ Azure에서 데이터베이스 서버 (순수 리프트 및 shift) IaaS Vm에 �
 
 ![Azure에서 데이터베이스 마이그레이션 경로](./media/image3-1.png)
 
-> **그림 3-1입니다.** Azure에서 데이터베이스 마이그레이션 경로
+> **그림 3-1.** Azure에서 데이터베이스 마이그레이션 경로
 
 ## <a name="when-to-migrate-to-azure-sql-database-managed-instance"></a>Azure SQL 데이터베이스 관리 되는 인스턴스를 마이그레이션 시기
 
@@ -35,27 +36,27 @@ Azure SQL 데이터베이스 관리 되는 인스턴스는 표준 Azure SQL 데�
 
 Azure SQL 데이터베이스에서 관리 되는 인스턴스는 다음과 같은 특징이 있습니다.
 
--   Azure 가상 네트워크를 통해 보안 격리
+- Azure 가상 네트워크를 통해 보안 격리
 
--   응용 프로그램 표면 호환성, 이러한 기능:
+- 응용 프로그램 표면 호환성, 이러한 기능:
 
-    -   SQL Server 에이전트 및 SQL Server Profiler
+  - SQL Server 에이전트 및 SQL Server Profiler
 
-    -   데이터베이스 간 참조와 쿼리를 SQL CLR 복제, 변경 데이터 캡처 (CDC) 및 Service Broker
+  - 데이터베이스 간 참조와 쿼리를 SQL CLR 복제, 변경 데이터 캡처 (CDC) 및 Service Broker
 
--   데이터베이스 크기를 최대 35 확장성
+- 데이터베이스 크기를 최대 35 확장성
 
--   이러한 기능을 사용 하 여 최소 가동 중지 시간 마이그레이션:
+- 이러한 기능을 사용 하 여 최소 가동 중지 시간 마이그레이션:
 
-    -   Azure 데이터베이스 마이그레이션 서비스
+  - Azure 데이터베이스 마이그레이션 서비스
 
-    -   기본 백업 및 복원 및 로그 전달
+  - 기본 백업 및 복원 및 로그 전달
 
 이러한 기능을 사용 Azure SQL 데이터베이스를 기존 응용 프로그램 데이터베이스를 마이그레이션할 때의 관리 되는 인스턴스 모델 제공 거의 100 %Paas 이점에 SQL Server에 대 한 합니다. 관리 되는 인스턴스는 인스턴스 수준 기능을 사용 하 여 응용 프로그램 디자인을 변경 하지 않고 계속 하면 SQL Server 환경입니다.
 
 관리 되는 인스턴스는 현재 SQL Server를 사용 하 고 클라우드에서 네트워크 보안에는 유연성 필요 엔터프라이즈의 경우 가장 적합 한 때문일 수 있습니다. SQL 데이터베이스에 대 한 개인 가상 네트워크를 것 같습니다.
 
-## <a name="when-to-migrate-to-azure-sql-database"></a>Azure SQL 데이터베이스로 마이그레이션 시기 
+## <a name="when-to-migrate-to-azure-sql-database"></a>Azure SQL 데이터베이스로 마이그레이션 시기
 
 앞서 언급 했 듯이 표준 Azure SQL 데이터베이스는 완전히 관리 되는, 관계형 DBaaS 합니다. SQL 데이터베이스는 전 세계 38 데이터 센터 간에 수백만 프로덕션 데이터베이스의 현재 관리합니다. 광범위 한 응용 프로그램 및 구동 세계적인 규모에 고급 데이터 처리를 필요로 하는 데이터를 가장 많이 사용, 중요 한 응용 프로그램을 간단 하 게 트랜잭션 데이터를 관리 하에서 작업을 지원 합니다.
 
@@ -65,19 +66,19 @@ Azure SQL 데이터베이스는 응용 프로그램 개발자에 만들어지는
 
 Azure SQL 데이터베이스는 다음과 같은 이점을 제공합니다.
 
--   학습 및 응용 프로그램에 맞게 조정 하는 기본 제공 지능 (기계 학습)
+- 학습 및 응용 프로그램에 맞게 조정 하는 기본 제공 지능 (기계 학습)
 
--   요청 시 데이터베이스 프로 비전
+- 요청 시 데이터베이스 프로 비전
 
--   모든 작업에 대 한 제품의 범위
+- 모든 작업에 대 한 제품의 범위
 
--   99.99% 가용성 SLA, 0 개 유지 관리
+- 99.99% 가용성 SLA, 0 개 유지 관리
 
--   데이터 보호를 위한 지리적 복제 및 복원 서비스
+- 데이터 보호를 위한 지리적 복제 및 복원 서비스
 
--   Azure SQL 데이터베이스 지정 시간 복원 기능
+- Azure SQL 데이터베이스 지정 시간 복원 기능
 
--   SQL Server 2016에서는 하이브리드 및 마이그레이션을 포함 하 여 호환성
+- SQL Server 2016에서는 하이브리드 및 마이그레이션을 포함 하 여 호환성
 
 표준 Azure SQL 데이터베이스 보다에 더 가까운 PaaS Azure SQL 데이터베이스 관리 되는 인스턴스. 해야 사용 하려고 하면, 가능한 경우 하므로 관리 되는 클라우드에서 많은 혜택을 얻게 됩니다. 그러나 Azure SQL 데이터베이스 일반에서 몇 가지 주요 차이점이 있으며 온-프레미스 SQL Server 인스턴스. 기존 응용 프로그램의 데이터베이스 요구 사항 및 enterprise 요구 사항 및 정책에 따라 아닐 적합 하 고 클라우드로 마이그레이션을 계획할 때.
 
@@ -106,25 +107,25 @@ Azure SQL 데이터베이스, Azure SQL 데이터베이스 관리 되는 인스�
 
 Azure 데이터베이스 마이그레이션 서비스를 사용 하 여 데이터베이스를 마이그레이션하는 방법에 자세한 내용은 [Azure SQL 데이터베이스 관리 되는 인스턴스 및 Azure 데이터베이스 마이그레이션 서비스 빠르게 클라우드로 가져올](https://channel9.msdn.com/Events/Build/2017/P4008)합니다.
 
-## <a name="additional-resources"></a>추가 리소스
+## <a name="additional-resources"></a>추가 자료
 
--   **클라우드 SQL Server 옵션 선택: Azure SQL 데이터베이스 (PaaS) 또는 Azure VM (IaaS)에서 SQL Server**
+- **클라우드 SQL Server 옵션 선택: Azure SQL 데이터베이스 (PaaS) 또는 Azure VM (IaaS)에서 SQL Server**
 
     [https://docs.microsoft.com/azure/sql-database/sql-database-paas-vs-sql-server-iaas](https://docs.microsoft.com/azure/sql-database/sql-database-paas-vs-sql-server-iaas)
 
--   **Azure SQL DB 관리 되는 인스턴스 및 데이터베이스 마이그레이션 서비스 빠르게 클라우드로 가져오기**
+- **Azure SQL DB 관리 되는 인스턴스 및 데이터베이스 마이그레이션 서비스 빠르게 클라우드로 가져오기**
 
     [https://channel9.msdn.com/Events/Build/2017/P4008](https://channel9.msdn.com/Events/Build/2017/P4008)
 
--   **클라우드의 SQL 데이터베이스에 SQL Server 데이터베이스 마이그레이션**
+- **클라우드의 SQL 데이터베이스에 SQL Server 데이터베이스 마이그레이션**
 
     [https://docs.microsoft.com/azure/sql-database/sql-database-cloud-migrate](https://docs.microsoft.com/azure/sql-database/sql-database-cloud-migrate)
 
--   **Azure SQL Database**
+- **Azure SQL Database**
 
     [https://azure.microsoft.com/services/sql-database/?v=16.50](https://azure.microsoft.com/services/sql-database/?v=16.50)
 
--   **가상 컴퓨터에서 SQL Server**
+- **가상 컴퓨터에서 SQL Server**
 
     [https://azure.microsoft.com/services/virtual-machines/sql-server/](https://azure.microsoft.com/services/virtual-machines/sql-server/)
 

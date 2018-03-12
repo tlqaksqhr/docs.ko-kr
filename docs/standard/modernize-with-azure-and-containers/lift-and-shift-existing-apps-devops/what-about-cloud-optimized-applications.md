@@ -4,14 +4,15 @@ description: "컨테이너 화 된.NET 응용 프로그램에 대 한.NET Micros
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/26/2017
+ms.prod: .net
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: adcb9d2352022cc94238296562b3eb7677bdf20b
-ms.sourcegitcommit: c3957fdb990060559d73cca44ab3e2c7b4d049c0
+ms.openlocfilehash: 249da9ecbac90514647f4fdc926928ac7ad4648e
+ms.sourcegitcommit: d3cfda0943364aaf6ccd574f55f584576c8a4fee
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="what-about-cloud-optimized-applications"></a>클라우드 액세스에 최적화 된 응용 프로그램은 어떻습니까?
 
@@ -115,7 +116,7 @@ Azure 앱 서비스의 웹 응용 프로그램 기능을 사용 하 여 웹 응�
 
 그러나 앱 서비스 있을 수 있고 새 웹 앱에 대 한 최선의 선택 수, 기존 응용 프로그램에 대 한 앱 서비스 수 있습니다 적합 하 고 응용 프로그램 종속성 앱 서비스에서 사용할 수 있는 경우에 합니다.
 
-### <a name="additional-resources"></a>추가 리소스
+### <a name="additional-resources"></a>추가 자료
 
 -   **Azure 앱 서비스에 대 한 호환성 분석**  
 [https://www.migratetoazure.net/Resources](https://www.migratetoazure.net/Resources)

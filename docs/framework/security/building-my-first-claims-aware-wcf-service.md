@@ -5,20 +5,22 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology: dotnet-clr
+ms.technology:
+- dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: e0e6d091-9a97-4888-8f2c-cbcee42d90ee
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: 791c86b8f833c6b1a8acb6da3b03cfccdafca0e5
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: f5641eba212cfdeb95c0a52a82a28b5c2d3e9aee
+ms.sourcegitcommit: d3cfda0943364aaf6ccd574f55f584576c8a4fee
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="building-my-first-claims-aware-wcf-service"></a>내 첫 번째 클레임 인식 WCF 서비스 구축
 ## <a name="applies-to"></a>적용 대상  
@@ -48,7 +50,7 @@ ms.lasthandoff: 01/19/2018
   
  ADFS 2.0은 Windows Server R2에 속하며, 온-프레미스 시나리오의 STS로 사용할 수 있습니다. Azure Active Directory 액세스 제어(액세스 제어 서비스 또는 ACS라고도 함)는 Microsoft Azure의 일부로 제공되는 클라우드 서비스입니다. 테스트 또는 교육용으로 클레임 인식 응용 프로그램을 작성하기 위해 다른 STS를 사용할 수도 있습니다. 예를 들어, 온라인에서 무료로 제공되는 [Visual Studio용 ID 및 액세스 도구](http://go.microsoft.com/fwlink/?LinkID=245849)(http://go.microsoft.com/fwlink/?LinkID=245849)에 속하는 로컬 개발 STS를 사용할 수 있습니다.  
   
- WIF를 사용하여 첫 번째 클레임 인식 WCF 서비스를 빌드하려면 [방법: WIF를 사용하여 클레임 인식 WCF 서비스 빌드](http://msdn.microsoft.com/library/431e6415-62ed-4a9f-af03-f14d2b4dfe6d)를 참조하세요.  
+ WIF를 사용 하 여 첫 번째 클레임 인식 WCF 서비스를 작성 하려면 참조 [방법: WCF 웹 서비스 응용 프로그램의 WIF를 사용 하도록 설정](../../../docs/framework/security/how-to-enable-wif-for-a-wcf-web-service-application.md)합니다.
   
 ## <a name="see-also"></a>참고 항목  
  [WIF 시작](../../../docs/framework/security/getting-started-with-wif.md)

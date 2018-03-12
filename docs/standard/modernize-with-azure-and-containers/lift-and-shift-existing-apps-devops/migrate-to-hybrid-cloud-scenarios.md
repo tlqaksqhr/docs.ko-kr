@@ -4,14 +4,15 @@ description: "컨테이너 화 된.NET 응용 프로그램에 대 한.NET Micros
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/2/2017
+ms.prod: .net
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 61b22e48afd543ac077ebb4fe1b7be200f9ec859
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 6216068786745ac4ebc00263a14b4afe247193f5
+ms.sourcegitcommit: d3cfda0943364aaf6ccd574f55f584576c8a4fee
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="migrate-to-hybrid-cloud-scenarios"></a>하이브리드 클라우드 시나리오로 마이그레이션
 
@@ -47,7 +48,7 @@ Azure 스택 통합 시스템은 Microsoft 및 하드웨어 파트너의 파트�
 
 Microsoft Azure 스택 개발 키트는 단일 노드 배포 Azure 스택, 평가 하 고 Azure 스택에 대 한 자세한 내용은 사용할 수 있습니다. 여기서 Api를 사용 하 여 개발할 수 있습니다 및 Azure와 일치 하는 도구는 개발자 환경으로 Azure 스택 개발 키트를 사용할 수도 있습니다. Azure 스택 개발 키트는 프로덕션 환경으로 사용할 수 없습니다.
 
-### <a name="additional-resources"></a>추가 리소스
+### <a name="additional-resources"></a>추가 자료
 
 -   **Azure 하이브리드 클라우드**
 

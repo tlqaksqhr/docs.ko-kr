@@ -4,14 +4,15 @@ description: "컨테이너 화 된.NET 응용 프로그램에 대 한.NET Micros
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/26/2017
+ms.prod: .net
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 1535951eb648deab17cf8c2fe64db6ddf7df4cb5
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 3caeb60cf0107aaf5413d935f3bde11863561c7d
+ms.sourcegitcommit: d3cfda0943364aaf6ccd574f55f584576c8a4fee
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="modernize-your-apps-with-monitoring-and-telemetry"></a>모니터링 및 원격 분석을 사용 하 여 앱을 최신식
 
@@ -37,13 +38,13 @@ OMS 포털 또는 모든 브라우저에서 실행 하면 Azure 포털을 통해
 
 [컨테이너 모니터링 솔루션](https://docs.microsoft.com/azure/log-analytics/log-analytics-containers) 로그 분석을 통해에서 보기 있습니다 및이 단일 위치에 Docker 및 Windows 컨테이너 호스트를 관리 합니다. 솔루션을 보여 줍니다 컨테이너를 실행 하 고 컨테이너를 실행 하는 어떤 컨테이너 이미지를 실행 합니다. 컨테이너와 사용 중인 명령을 포함 한 자세한 감사 정보를 볼 수 있습니다. 보기 및 원격으로 Windows 또는 Docker 호스트를 보는 데 필요 없이 중앙 집중화 된 로그를 검색 하 여 컨테이너를 해결할 수도 있습니다. 호스트에서 초과 리소스 노이즈가 많고 소비 될 수 있는 컨테이너를 찾을 수 있습니다. 중앙 집중식된 CPU, 메모리, 저장소 및 네트워크 사용량 및 컨테이너에 대 한 성능 정보를 볼 수 있습니다. Windows를 실행 하는 컴퓨터에 중앙 집중화 하 고 있고 Windows Server에서 로그를 비교 하이퍼-V 및 Docker 컨테이너입니다. 솔루션에는 다음과 같은 컨테이너 orchestrators 지원합니다.
 
--   Docker 웜
+-   Docker Swarm
 
 -   DC/OS
 
 -   Kubernetes
 
--   서비스 패브릭
+-   Service Fabric
 
 -   Red Hat OpenShift
 
@@ -67,7 +68,7 @@ OMS 포털 또는 모든 브라우저에서 실행 하면 Azure 포털을 통해
 
 -   중앙 집중식된 CPU, 메모리, 저장소 및 네트워크 사용량 및 컨테이너에 대 한 성능 정보를 봅니다.
 
-### <a name="additional-resources"></a>추가 리소스
+### <a name="additional-resources"></a>추가 자료
 
 -   **Microsoft Azure에서 모니터링 개요**
 

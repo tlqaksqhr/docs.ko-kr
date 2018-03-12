@@ -4,20 +4,21 @@ description: "컨테이너 화 된.NET 응용 프로그램에 대 한.NET Micros
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/26/2017
+ms.prod: .net
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: f9a30605313c06542fabf9689f700ed726445f57
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: bab6e275c93d2cedddf010ab20f98cb8392fa9fa
+ms.sourcegitcommit: d3cfda0943364aaf6ccd574f55f584576c8a4fee
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="deploy-existing-net-apps-as-windows-containers"></a>Windows 컨테이너도 기존.NET 응용 프로그램 배포
 
 Windows 컨테이너를 기반으로 하는 배포 클라우드 액세스에 최적화 된 응용 프로그램, 클라우드 네이티브 응용 프로그램 및 클라우드 DevOps 지원 응용 프로그램에 적용 됩니다.
 
-이 가이드에서는 하 고 다음 섹션에 대 한 Windows 컨테이너를 사용 하 여 집중 *클라우드 DevOps 지원* 리프트 및 기존.NET 응용 프로그램을 이동 하는 경우 응용 프로그램입니다.
+다음 섹션에서는이 가이드에는 대 한에 대 한 Windows 컨테이너를 사용 하 여 *클라우드 DevOps 지원* 리프트 및 기존.NET 응용 프로그램을 이동 하는 경우 응용 프로그램입니다.
 
 ## <a name="what-are-containers-linux-or-windows"></a>컨테이너 란? (Linux 또는 Windows)
 
@@ -41,7 +42,7 @@ Windows 컨테이너에서 응용 프로그램 패키징 프로세스 자동 완
 
 많은 수의 조직에서는 다음과 같은 이유로 모놀리식 기존 응용 프로그램 containerizing 됩니다.
 
--   **향상 된 배포를 통해 민첩성 릴리스**합니다. 컨테이너는 개발 및 운영 간의 일관 된 배포 계약을 제공합니다. 컨테이너를 사용 하면 예를 들어 개발자 들은지 않습니다를 "작동 제 컴퓨터에서 안 되는 이유 프로덕션 환경에서?" 단순히 말하면, "것으로 실행 한 컨테이너 되므로 프로덕션 환경에서 실행 합니다." 지원 되는 컨테이너 기반 환경에서 모든 종속성과 함께 패키지 된 응용 프로그램을 실행할 수 있습니다. 모든 배포 대상 (개발, QA, 준비, 프로덕션)에서 실행 되도록 원래 방식으로 실행 됩니다. 다음 배포를 크게 향상 시키거나, 한 단계에서 이동할 때 컨테이너 대부분 frictions를 제거 하 고 더 빨리 제공할 수 키를 누릅니다.
+-   **향상 된 배포를 통해 민첩성 릴리스**합니다. 컨테이너는 개발 및 운영 간의 일관 된 배포 계약을 제공합니다. 컨테이너를 사용 하면 예를 들어 개발자 들은지 않습니다를 "작동 제 컴퓨터에서 안 되는 이유 프로덕션 환경에서?" 단순히 말하면, "실행 컨테이너로 사용할 경우 프로덕션 환경에서 실행 됩니다." 지원 되는 컨테이너 기반 환경에서 모든 종속성과 함께 패키지 된 응용 프로그램을 실행할 수 있습니다. 모든 배포 대상 (개발, QA, 준비, 프로덕션)에서 실행 되도록 원래 방식으로 실행 됩니다. 다음 배포를 크게 향상 시키거나, 한 단계에서 이동할 때 컨테이너 대부분 frictions를 제거 하 고 더 빨리 제공할 수 키를 누릅니다.
 
 -   **비용 절감**합니다. 컨테이너를 통합 하 고 하드웨어 단위당 높은 밀도에서 실행 중인 응용 프로그램 또는 기존 하드웨어를 제거 하 여 비용 절감 될 있습니다.
 
@@ -51,13 +52,13 @@ Windows 컨테이너에서 응용 프로그램 패키징 프로세스 자동 완
 
 민첩성, 이식성을 및 제어에 크게 향상 된 기능 궁극적으로 많은 비용을 줄이는 경우 발생할 컨테이너를 사용 하 여 개발 하 고 응용 프로그램을 관리 합니다.
 
-## <a name="what-is-docker"></a>Docker는 무엇입니까?
+## <a name="what-is-docker"></a>Docker란?
 
 [Docker](https://www.docker.com/) 는 [오픈 소스 프로젝트](https://github.com/docker/docker) 클라우드 또는 온-프레미스에서 실행할 수 있는 휴대용, 스페이스인 컨테이너로 응용 프로그램의 배포를 자동화 하는 합니다. Docker는 또한는 [회사](https://www.docker.com/) 승격 하 고이 기술 발전 합니다. 회사는 클라우드, Linux 및 Windows 공급 업체를 비롯 하 여 Microsoft와의 공동 작업에서 작동합니다.
 
 ![](./media/image6.png)
 
-> **그림 4-6입니다.** Docker 컨테이너 하이브리드 클라우드의 모든 계층에서 배포
+> **그림 4-6입니다.** Docker는 하이브리드 클라우드의 모든 계층에서 컨테이너를 배포
 
 다른 사람에 게 가상 컴퓨터에 잘 알고 컨테이너 나타날 수 있습니다 매우 유사 합니다. 컨테이너는 운영 체제를 실행 파일 시스템에 있으며 물리적 또는 가상 컴퓨터 시스템과 마찬가지로 네트워크를 통해 액세스할 수 있습니다. 그러나 기술 및 컨테이너 개념은 가상 컴퓨터와 크게 다릅니다. 개발자의 관점에서 단일 프로세스와 같은 컨테이너를 더 처리 해야 합니다. 사실, 컨테이너는 하나의 프로세스에 대 한 단일 진입점입니다.
 
@@ -81,9 +82,9 @@ Windows 컨테이너를 사용 하는 이점을 기본적 일반적 컨테이너
 
 .NET Core와.NET Framework 간의 차이점 뿐만 아니라 Docker에서 지원 되는 운영 체제의 다양성을 고려할 때, 특정 OS 및 특정 버전을 사용 하는 프레임 워크에 따라 대상 해야 있습니다.
 
-Windows, Windows Server Core 또는 Windows Nano Server를 사용할 수 있습니다. 이러한 Windows 버전 (예: Kestrel 처럼 자체 호스트 된 웹 서버와 IIS).NET Framework 또는.NET Core 응용 프로그램에서 필요할 수 있는 다른 특성을 제공 합니다.
+Windows의 경우 Windows Server Core 또는 Windows Nano Server를 사용할 수 있습니다. 이러한 Windows 버전 (예: Kestrel 처럼 자체 호스트 된 웹 서버와 IIS).NET Framework 또는.NET Core 응용 프로그램에서 필요할 수 있는 다른 특성을 제공 합니다.
 
-Linux 용 여러 배포판은 사용할 수 있으며 (예: Debian).NET Docker 이미지를 공식 지원 합니다.
+Linux의 경우 공식 .NET Docker 이미지(예: Debian)에서 여러 배포판을 제공합니다.
 
 그림 4-7에는.NET Framework의 응용 프로그램의 버전에 따라 표시할 수 있는 운영 체제 버전이 나와 있습니다.
 
@@ -95,14 +96,14 @@ Linux 용 여러 배포판은 사용할 수 있으며 (예: Debian).NET Docker �
 
 Dockerfile 파일을 이미지 이름을 추가 하면.NET Framework 기반 Windows 컨테이너 이미지에 대 한 다음 예제와 같이 태그를 사용 하 여 운영 체제 및 버전을 선택할 수 있습니다.
 
-> | 태그 | **시스템 및 버전** |
+> | **태그** | **시스템 및 버전** |
 > |---|---|
 > | **microsoft/dotnet-framework:4.x-windowsservercore** | .NET framework 4.x Windows Server Core에서 |
 > | **microsoft/aspnet:4.x-windowsservercore** | .NET framework 4.x를 Windows Server Core에서 추가 ASP.NET 사용자 지정 |
 
 .NET Core (플랫폼 간 Linux 및 Windows 용)에 대 한 태그는 다음과 같이 표시 됩니다.
 
-> | 태그 | **시스템 및 버전**
+> | **태그** | **시스템 및 버전**
 > |---|---|
 > | **microsoft/dotnet:2.0.0-runtime** | .NET core 2.0 Linux에서 런타임 전용 |
 > | **microsoft/dotnet:2.0.0-runtime-nanoserver** | .NET core 2.0 Windows Nano Server에서 런타임 전용 |
@@ -123,7 +124,7 @@ Linux 컨테이너와 같은 Windows Server 컨테이너는 Docker 엔진을 사
 
 또는 Hyper-v 격리 하지 않고도 windows 컨테이너를 실행 하는 것은 런타임에 결정 합니다. 처음에 Hyper-v 격리 컨테이너를 만들도록 선택할 수도 있으며 런타임 시 Windows Server 컨테이너로 대신 실행 하도록 선택할 수 있습니다.
 
-### <a name="additional-resources"></a>추가 리소스
+### <a name="additional-resources"></a>추가 자료
 
 -   **Windows 컨테이너 설명서**
 
