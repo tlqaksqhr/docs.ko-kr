@@ -1,62 +1,85 @@
 ---
 title: "F# 가이드"
-description: "F #,.NET에서 실행 되는 함수형 프로그래밍 언어에 알아봅니다."
-keywords: .NET, .NET Core
+description: "이 가이드에서는 F #,.NET에서 실행 되는 함수형 프로그래밍 언어에 대 한 다양 한 교육 자료에 대 한 개요를 제공 합니다."
 author: jackfoxy
 ms.author: phcart
-ms.date: 12/01/2016
+ms.date: 02/28/2018
 ms.topic: article
 ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: ea27fb37-dad1-4bd4-a3cc-4f5c70767ae9
-ms.openlocfilehash: 45f5d2ca794ccea7a35cf6c0bf9d58a3e6500453
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.openlocfilehash: b7cf3feb5699f85bf09a47f008fdaf70ac7c8d77
+ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 03/15/2018
 ---
-# <a name="f-guide"></a><span data-ttu-id="6c974-104">F# 가이드</span><span class="sxs-lookup"><span data-stu-id="6c974-104">F# Guide</span></span>
+# <a name="f-guide"></a><span data-ttu-id="20470-103">F# 가이드</span><span class="sxs-lookup"><span data-stu-id="20470-103">F# Guide</span></span>
 
-<span data-ttu-id="6c974-105">F#은 NET에서 실행 되는 함수형 프로그래밍 언어입니다.</span><span class="sxs-lookup"><span data-stu-id="6c974-105">F# is a functional programming language which runs on .NET.</span></span>  <span data-ttu-id="6c974-106">함수형 프로그래밍 구문을 지원할 뿐만 아니라 객체지향 프로그래밍 기능도 포함합니다.</span><span class="sxs-lookup"><span data-stu-id="6c974-106">In addition to supporting functional programming constructs, it also has object programming capabilities.</span></span>  <span data-ttu-id="6c974-107">객체 지향 기능을 사용한 하이브리드 함수형 프로그래밍이 F#으로 하여금 모든 개발을 할 수 있는 실용적인 언어로 만들어줍니다.</span><span class="sxs-lookup"><span data-stu-id="6c974-107">This hybrid of functional programming with object-oriented capabilities makes F# a pragmatic language for accomplishing any task.</span></span>
+<span data-ttu-id="20470-104">F #은.NET에서 실행 되는 함수형 프로그래밍 언어입니다.</span><span class="sxs-lookup"><span data-stu-id="20470-104">F# is a functional programming language that runs on .NET.</span></span> <span data-ttu-id="20470-105">또한 blend 기능 및 개체 프로그래밍 문제에 대 한 실용적인 솔루션에 대 한 사용자에 게 알려주는 개체에 대 한 완전 한 지원을 제공 합니다.</span><span class="sxs-lookup"><span data-stu-id="20470-105">It also has full support for objects, letting you blend functional and object programming for pragmatic solutions to any problem.</span></span>
 
-## <a name="if-youre-new-to-f"></a><span data-ttu-id="6c974-108">F#을 처음 접하는 경우</span><span class="sxs-lookup"><span data-stu-id="6c974-108">If You're New to F#</span></span> #
+```fsharp
+open System // Get access to functionality in System namespace.
 
-<span data-ttu-id="6c974-109">F#에 익숙하지 않다면, [F# 둘러보기](tour.md) 를 통해 언어의 개요 및 그 프로그래밍 개념 일부를 이해해보세요.</span><span class="sxs-lookup"><span data-stu-id="6c974-109">If you're new to F#, begin with the [Tour of F#](tour.md) to get an overview of the language and some of its programming concepts.</span></span>  <span data-ttu-id="6c974-110">Visual Studio를 사용하고 있다면, 내부의 튜토리얼 프로젝트 템플릿이 동일한 콘텐츠를 포함합니다.</span><span class="sxs-lookup"><span data-stu-id="6c974-110">If you're using Visual Studio, the Tutorial project template contains the same content.</span></span>
+// Function: takes a name and produces a greeting.
+let getGreeting name =
+    sprintf "Hello, %s! Isn't F# great?" name
 
-## <a name="if-youre-experienced-with-f"></a><span data-ttu-id="6c974-111">F#을 사용한 경험이 있는 경우</span><span class="sxs-lookup"><span data-stu-id="6c974-111">If You're Experienced with F#</span></span> #
+// Use the EntryPoint attribute to run the program.
+[<EntryPoint>]
+let main args =
+    args                     // Use F# pipe operators to send the args into some functions.
+    |> Array.map getGreeting // Turn each name into a friendly greeting.
+    |> Array.iter printfn    // Print them!
 
-<span data-ttu-id="6c974-112">F# 관련 방식을 하거나 특정 언어 구문에 대한 자세한 참조는 [언어 참조](language-reference/index.md) 합니다. F# 언어의 모든 기능에 대한 상세한 가이드입니다.</span><span class="sxs-lookup"><span data-stu-id="6c974-112">If you know your way around F#, or want to learn more about a specific language construct, see the [Language Reference](language-reference/index.md).</span></span>  <span data-ttu-id="6c974-113">F # 언어의 모든 기능에 대 한 철저 한이 가이드가.입니다.</span><span class="sxs-lookup"><span data-stu-id="6c974-113">It's a thorough guide of all F# language capabilities.</span></span>
+    0
+```
 
-<span data-ttu-id="6c974-114">또한 [F# 핵심 라이브러리 레퍼런스](https://msdn.microsoft.com/visualfsharpdocs/conceptual/fsharp-core-library-reference) 는 FSharp.Core, F#의 일부인 핵심 라이브러리에 대한 학습을 위한 중요한 리소스입니다.</span><span class="sxs-lookup"><span data-stu-id="6c974-114">Additionally, the [F# Core Library Reference](https://msdn.microsoft.com/visualfsharpdocs/conceptual/fsharp-core-library-reference) is a great resource for learning about FSharp.Core, the core library which is a part of F#.</span></span>
+<span data-ttu-id="20470-106">F #은 본래 생산성에 대 한 합니다.</span><span class="sxs-lookup"><span data-stu-id="20470-106">F# is about productivity at its heart.</span></span> <span data-ttu-id="20470-107">F #에 대 한 도구 지원을 유비쿼터스 이며 다양 한 고급 기능입니다.</span><span class="sxs-lookup"><span data-stu-id="20470-107">The tooling support for F# is ubiquitous and full of advanced features.</span></span>
 
-## <a name="the-f-software-foundation"></a><span data-ttu-id="6c974-115">F# Software Foundation</span><span class="sxs-lookup"><span data-stu-id="6c974-115">The F# Software Foundation</span></span>
+## <a name="learning-f"></a><span data-ttu-id="20470-108">F # 학습</span><span class="sxs-lookup"><span data-stu-id="20470-108">Learning F#</span></span> #
 
-<span data-ttu-id="6c974-116">Microsoft 기본 개발자의 F # 언어와 해당 도구 이지만, F #는 또한 뒷받침 되며는 독립적인 foundation는 F # 소프트웨어 Foundation (FSSF).</span><span class="sxs-lookup"><span data-stu-id="6c974-116">Although Microsoft is the primary developer of the F# language and its tooling, F# is also backed by an independent foundation, the F# Software Foundation (FSSF).</span></span>
+<span data-ttu-id="20470-109">[F # 둘러보기](tour.md) 코드 샘플은 주요 언어 기능의 개요를 제공 합니다.</span><span class="sxs-lookup"><span data-stu-id="20470-109">[Tour of F#](tour.md) gives an overview of major language features with lots of code samples.</span></span> <span data-ttu-id="20470-110">F #에 새로 고 언어의 작동 방식에 대해 하려고 할 경우에 권장 됩니다.</span><span class="sxs-lookup"><span data-stu-id="20470-110">This is recommended if you are new to F# and want to get a feel for how the language works.</span></span>
 
-<span data-ttu-id="6c974-117">F# Software Foundation의 임무는 F# 프로그래밍 언어를 홍보하고 보호하고 발전시키며, F# 프로그래머의 다양한 국제 커뮤니티의 성장을 지원하고 용이하게 만드는 것입니다.</span><span class="sxs-lookup"><span data-stu-id="6c974-117">The mission of the F# Software Foundation is to promote, protect, and advance the F# programming language, and to support and facilitate the growth of a diverse and international community of F# programmers.</span></span>
+<span data-ttu-id="20470-111">[Visual Studio에서 F #으로 시작 하려면](get-started/get-started-visual-studio.md) Windows에 속해 있으며 사용할 것 전체 Visual Studio IDE (Integraded 개발 환경) 하는 경우.</span><span class="sxs-lookup"><span data-stu-id="20470-111">[Get started with F# in Visual Studio](get-started/get-started-visual-studio.md) if you're on Windows and want the full Visual Studio IDE (Integraded Development Environment) experience.</span></span>
 
-<span data-ttu-id="6c974-118">자세한 내용을 알아보고 참여하려면 [fsharp.org](http://fsharp.org)를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="6c974-118">To learn more and get involved, check out [fsharp.org](http://fsharp.org).</span></span>
+<span data-ttu-id="20470-112">[Mac 용 Visual Studio에서 F #으로 시작](get-started/get-started-with-visual-studio-for-mac.md) macOS에 속해 있으며 Visual Studio IDE를 사용 하려는 경우.</span><span class="sxs-lookup"><span data-stu-id="20470-112">[Get started with F# in Visual Studio for Mac](get-started/get-started-with-visual-studio-for-mac.md) if you're on macOS and want to use a Visual Studio IDE.</span></span>
 
-## <a name="documentation"></a><span data-ttu-id="6c974-119">설명서</span><span class="sxs-lookup"><span data-stu-id="6c974-119">Documentation</span></span>
+<span data-ttu-id="20470-113">[Visual Studio Code에서 F #으로 시작 하려면](get-started/get-started-vscode.md) 경우 플랫폼 간 경량 및 IDE 기능이 포함 된 발생 합니다.</span><span class="sxs-lookup"><span data-stu-id="20470-113">[Get Started with F# in Visual Studio Code](get-started/get-started-vscode.md) if you want a lightweight, cross-platform, and feature-packed IDE experience.</span></span>
 
-* [<span data-ttu-id="6c974-120">자습서</span><span class="sxs-lookup"><span data-stu-id="6c974-120">Tutorials</span></span>](tutorials/getting-started/index.md)
-* <span data-ttu-id="6c974-121">[고급 값으로 함수](introduction-to-functional-programming/functions-as-first-class-values.md)<!--[Introduction to Functional Programming](introduction-to-functional-programming/index.md)--></span><span class="sxs-lookup"><span data-stu-id="6c974-121">[Functions as First-Class Values](introduction-to-functional-programming/functions-as-first-class-values.md)<!--[Introduction to Functional Programming](introduction-to-functional-programming/index.md)--></span></span>
-* [<span data-ttu-id="6c974-122">언어 참조</span><span class="sxs-lookup"><span data-stu-id="6c974-122">Language Reference</span></span>](language-reference/index.md)
-* [<span data-ttu-id="6c974-123">F# 주요 라이브러리 참조</span><span class="sxs-lookup"><span data-stu-id="6c974-123">F# Core Library Reference</span></span>](https://msdn.microsoft.com/visualfsharpdocs/conceptual/fsharp-core-library-reference)
+<span data-ttu-id="20470-114">[F #으로.NET Core CLI 시작](get-started/get-started-command-line.md) 명령줄 도구를 사용 하려는 경우.</span><span class="sxs-lookup"><span data-stu-id="20470-114">[Get started with F# with the .NET Core CLI](get-started/get-started-command-line.md) if you want to use command-line tools.</span></span>
 
-## <a name="online-reading-resources"></a><span data-ttu-id="6c974-124">온라인으로 리소스 읽기</span><span class="sxs-lookup"><span data-stu-id="6c974-124">Online Reading Resources</span></span>
+## <a name="references"></a><span data-ttu-id="20470-115">참조</span><span class="sxs-lookup"><span data-stu-id="20470-115">References</span></span>
 
-* [<span data-ttu-id="6c974-125">재미와 수익을 위한 F# Gitbook</span><span class="sxs-lookup"><span data-stu-id="6c974-125">F# for Fun and Profit Gitbook</span></span>](https://swlaschin.gitbooks.io/fsharpforfunandprofit/content/) 
-* [<span data-ttu-id="6c974-126">F# 프로그래밍 Wikibook</span><span class="sxs-lookup"><span data-stu-id="6c974-126">F# Programming Wikibook</span></span>](https://en.wikibooks.org/wiki/F_Sharp_Programming)
+<span data-ttu-id="20470-116">[F # 언어 참조](language-reference/index.md) 은 F # 언어의 모든 기능에 대 한 공식 하 고 포괄적인 참조 합니다.</span><span class="sxs-lookup"><span data-stu-id="20470-116">[F# Language Reference](language-reference/index.md) is the official, comprehensive reference for all F# language features.</span></span> <span data-ttu-id="20470-117">각 문서는 구문에 설명 하 고 코드 샘플을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="20470-117">Each article explains the syntax and shows code samples.</span></span> <span data-ttu-id="20470-118">특정 문서를 찾습니다는 목차에서 필터 표시줄을 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="20470-118">You can use the filter bar in the table of contents to find specific articles.</span></span>
 
-## <a name="video-learning-resources"></a><span data-ttu-id="6c974-127">동영상 학습 리소스</span><span class="sxs-lookup"><span data-stu-id="6c974-127">Video Learning Resources</span></span>
+<span data-ttu-id="20470-119">[F # 핵심 라이브러리 참조가](https://msdn.microsoft.com/visualfsharpdocs/conceptual/fsharp-core-library-reference) F # 핵심 라이브러리에 대 한 API 참조 됩니다.</span><span class="sxs-lookup"><span data-stu-id="20470-119">[F# Core Library Reference](https://msdn.microsoft.com/visualfsharpdocs/conceptual/fsharp-core-library-reference) is the API reference for the F# Core Library.</span></span>
 
-* [<span data-ttu-id="6c974-128">YouTube의 F# 시리즈 프로그래밍 소개</span><span class="sxs-lookup"><span data-stu-id="6c974-128">Introduction to Programming with F# series on YouTube</span></span>](https://www.youtube.com/watch?v=Teak30_pXHk&list=PLEoMzSkcN8oNiJ67Hd7oRGgD1d4YBxYGC)
-* [<span data-ttu-id="6c974-129">FSharpTV의 F# 시리즈 소개</span><span class="sxs-lookup"><span data-stu-id="6c974-129">Introduction to F# series on FSharpTV</span></span>](https://fsharp.tv/courses/fsharp-programming-intro/)
+## <a name="additional-guides"></a><span data-ttu-id="20470-120">추가 가이드</span><span class="sxs-lookup"><span data-stu-id="20470-120">Additional guides</span></span>
 
-## <a name="further-resources"></a><span data-ttu-id="6c974-130">추가 리소스</span><span class="sxs-lookup"><span data-stu-id="6c974-130">Further Resources</span></span>
+<span data-ttu-id="20470-121">[F # 재미와 수익에 대 한](https://swlaschin.gitbooks.io/fsharpforfunandprofit/content/) 는 종합적이 고 매우 자세한 र ् थ 학습 F #은 합니다.</span><span class="sxs-lookup"><span data-stu-id="20470-121">[F# for Fun and Profit](https://swlaschin.gitbooks.io/fsharpforfunandprofit/content/) is a comprehensive and very detailed book on learning F#.</span></span> <span data-ttu-id="20470-122">내용과 작성자는 F # 커뮤니티에서 사랑 합니다.</span><span class="sxs-lookup"><span data-stu-id="20470-122">Its contents and author are beloved by the F# community.</span></span> <span data-ttu-id="20470-123">대상 사용자는 주로 개발자에 게 개체 지향 프로그래밍 배경.</span><span class="sxs-lookup"><span data-stu-id="20470-123">The target audience is primarily developers with an object oriented programming background.</span></span>
 
-* [<span data-ttu-id="6c974-131">fsharp.org의 F# 학습 리소스</span><span class="sxs-lookup"><span data-stu-id="6c974-131">F# Learning Resources on fsharp.org</span></span>](http://fsharp.org/learn.html)
-* [<span data-ttu-id="6c974-132">F# 코드 조각 웹 사이트</span><span class="sxs-lookup"><span data-stu-id="6c974-132">F# Snippets Website</span></span>](http://www.fssnip.net)
-* [<span data-ttu-id="6c974-133">F# Software Foundation</span><span class="sxs-lookup"><span data-stu-id="6c974-133">F# Software Foundation</span></span>](http://fsharp.org)
+<span data-ttu-id="20470-124">[F # 프로그래밍 Wikibook](https://en.wikibooks.org/wiki/F_Sharp_Programming) 학습 F #에 대 한 wikibook 됩니다.</span><span class="sxs-lookup"><span data-stu-id="20470-124">[F# Programming Wikibook](https://en.wikibooks.org/wiki/F_Sharp_Programming) is a wikibook about learning F#.</span></span> <span data-ttu-id="20470-125">F # 커뮤니티의 제품 이기도합니다.</span><span class="sxs-lookup"><span data-stu-id="20470-125">It is also a product of the F# community.</span></span> <span data-ttu-id="20470-126">대상 그룹은 F #을 사용 하면 약간의 개체 지향 프로그래밍 배경을 처음 접하는 사용자입니다.</span><span class="sxs-lookup"><span data-stu-id="20470-126">The target audience is people who are new to F#, with a little bit of object oriented programming background.</span></span>
+
+## <a name="learn-f-through-videos"></a><span data-ttu-id="20470-127">F # 비디오를 통한 학습</span><span class="sxs-lookup"><span data-stu-id="20470-127">Learn F# through videos</span></span>
+
+<span data-ttu-id="20470-128">[YouTube에서 F # 자습서](https://www.youtube.com/watch?v=c7eNDJN758U) F # Visual Studio를 사용 하 여, 1.5 시간의 과정 동안 다양 한 좋은 예를 보여 주는에 충분히 소개 합니다.</span><span class="sxs-lookup"><span data-stu-id="20470-128">[F# tutorial on YouTube](https://www.youtube.com/watch?v=c7eNDJN758U) is a great introduction to F# using Visual Studio, showing lots of great examples over the course of 1.5 hours.</span></span> <span data-ttu-id="20470-129">대상 그룹에는 F #를 처음 접하는 Visual Studio 개발자입니다.</span><span class="sxs-lookup"><span data-stu-id="20470-129">The target audience is Visual Studio developers who are new to F#.</span></span>
+
+<span data-ttu-id="20470-130">[F #을 사용한 프로그래밍 소개](https://www.youtube.com/watch?v=Teak30_pXHk&list=PLEoMzSkcN8oNiJ67Hd7oRGgD1d4YBxYGC) 훌륭한 비디오 일련의 기본 편집기로 Visual Studio 코드를 사용 하 여입니다.</span><span class="sxs-lookup"><span data-stu-id="20470-130">[Introduction to Programming with F#](https://www.youtube.com/watch?v=Teak30_pXHk&list=PLEoMzSkcN8oNiJ67Hd7oRGgD1d4YBxYGC) is a great video series that uses Visual Studio Code as the main editor.</span></span> <span data-ttu-id="20470-131">비디오 시리즈를 시작한 RPG 비디오 텍스트 기반 게임을 빌드하는 것과 끝납니다.</span><span class="sxs-lookup"><span data-stu-id="20470-131">The video series starts from nothing and ends with building a text-based RPG video game.</span></span> <span data-ttu-id="20470-132">대상 사용자는 개발자 처음인 F # 및 Visual Studio Code (또는 간단한 IDE) 선호입니다.</span><span class="sxs-lookup"><span data-stu-id="20470-132">The target audience is developers who prefer Visual Studio Code (or a lightweight IDE) and are new to F#.</span></span>
+
+<span data-ttu-id="20470-133">[F #에 대 한 개발자를 위한 Visual Studio 2017의 새로운](https://www.linkedin.com/learning/what-s-new-in-visual-studio-2017-for-f-sharp-for-developers) 은 Visual Studio 2017에서 F #에 대 한 새로운 기능 중 일부를 보여 주는 비디오 과정입니다.</span><span class="sxs-lookup"><span data-stu-id="20470-133">[What's New in Visual Studio 2017 for F# For Developers](https://www.linkedin.com/learning/what-s-new-in-visual-studio-2017-for-f-sharp-for-developers) is a video course that shows some of the newer features for F# in Visual Studio 2017.</span></span> <span data-ttu-id="20470-134">대상 그룹에는 F #를 처음 접하는 Visual Studio 개발자입니다.</span><span class="sxs-lookup"><span data-stu-id="20470-134">The target audience is Visual Studio developers who are new to F#.</span></span>
+
+## <a name="other-useful-resources"></a><span data-ttu-id="20470-135">기타 유용한 리소스</span><span class="sxs-lookup"><span data-stu-id="20470-135">Other useful resources</span></span>
+
+<span data-ttu-id="20470-136">[F # 코드 조각 웹 사이트](http://www.fssnip.net) massive 완전 초보자를 위한에서 고급 코드 조각에 이르기까지 F #에서 모든 작업 하는 방법을 보여 주는 코드 조각 집합이 포함 되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="20470-136">The [F# Snippets Website](http://www.fssnip.net) contains a massive set of code snippets showing how to do just about anything in F#, ranging from absolute beginner to highly advanced snippets.</span></span>
+
+<span data-ttu-id="20470-137">[F # 소프트웨어 Foundation Slack](http://fsharp.org/guides/slack/) 좋은 곳은 초보자를 위한 및 전문가 게 모두 매우 활성화가 있으며 프로그래머 세계에서 가장 F # 채팅에 사용할 수 있는의 일부입니다.</span><span class="sxs-lookup"><span data-stu-id="20470-137">The [F# Software Foundation Slack](http://fsharp.org/guides/slack/) is a great place for beginners and experts alike, is highly active, and has some of world's best F# programmers available for a chat.</span></span> <span data-ttu-id="20470-138">조인 하는 것이 좋습니다.</span><span class="sxs-lookup"><span data-stu-id="20470-138">We highly recommend joining.</span></span>
+
+## <a name="the-f-software-foundation"></a><span data-ttu-id="20470-139">F# Software Foundation</span><span class="sxs-lookup"><span data-stu-id="20470-139">The F# Software Foundation</span></span>
+
+<span data-ttu-id="20470-140">Microsoft 기본 개발자의 F # 언어와 Visual Studio에서 해당 도구 이지만, F #는 또한 뒷받침 되며는 독립적인 foundation는 F # 소프트웨어 Foundation (FSSF).</span><span class="sxs-lookup"><span data-stu-id="20470-140">Although Microsoft is the primary developer of the F# language and its tools in Visual Studio, F# is also backed by an independent foundation, the F# Software Foundation (FSSF).</span></span>
+
+<span data-ttu-id="20470-141">F# Software Foundation의 임무는 F# 프로그래밍 언어를 홍보하고 보호하고 발전시키며, F# 프로그래머의 다양한 국제 커뮤니티의 성장을 지원하고 용이하게 만드는 것입니다.</span><span class="sxs-lookup"><span data-stu-id="20470-141">The mission of the F# Software Foundation is to promote, protect, and advance the F# programming language, and to support and facilitate the growth of a diverse and international community of F# programmers.</span></span>
+
+<span data-ttu-id="20470-142">자세한 내용을 알아보고 참여하려면 [fsharp.org](http://fsharp.org)를 참조하세요. 조인, 무료 및 foundation의 F # 개발자의 네트워크를 포기 하 고치지 않을!</span><span class="sxs-lookup"><span data-stu-id="20470-142">To learn more and get involved, check out [fsharp.org](http://fsharp.org). It's free to join, and the network of F# developers in the foundation is something you don't want to miss out on!</span></span>
