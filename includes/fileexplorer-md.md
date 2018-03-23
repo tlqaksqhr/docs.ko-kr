@@ -1,1 +1,1 @@
-<span data-ttu-id="287a3-101">파일 탐색기</span><span class="sxs-lookup"><span data-stu-id="287a3-101">File Explorer</span></span>
+<span data-ttu-id="f37b0-101">파일 탐색기</span><span class="sxs-lookup"><span data-stu-id="f37b0-101">File Explorer</span></span>
