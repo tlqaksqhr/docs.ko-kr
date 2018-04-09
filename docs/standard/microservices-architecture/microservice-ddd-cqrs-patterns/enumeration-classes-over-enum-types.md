@@ -1,7 +1,7 @@
 ---
-title: "열거형 형식 대신 열거형 클래스 사용"
-description: "컨테이너화된 .NET 응용 프로그램을 위한 .NET 마이크로 서비스 아키텍처 | 열거형 형식 대신 열거형 클래스 사용"
-keywords: "Docker, 마이크로 서비스, ASP.NET, 컨테이너"
+title: 열거형 형식 대신 열거형 클래스 사용
+description: 컨테이너화된 .NET 응용 프로그램을 위한 .NET 마이크로 서비스 아키텍처 | 열거형 형식 대신 열거형 클래스 사용
+keywords: Docker, 마이크로 서비스, ASP.NET, 컨테이너
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 12/11/2017
@@ -11,29 +11,29 @@ ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 4b190ee9dde5628bf16fe9c483d3636539c29361
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 57ff60ea01421f1a2a0466b7de9716b72b02d2c1
+ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/28/2018
 ---
-# <a name="using-enumeration-classes-instead-of-enum-types"></a><span data-ttu-id="839a6-104">열거형 형식 대신 열거형 클래스 사용</span><span class="sxs-lookup"><span data-stu-id="839a6-104">Using enumeration classes instead of enum types</span></span>
+# <a name="using-enumeration-classes-instead-of-enum-types"></a><span data-ttu-id="03f54-104">열거형 형식 대신 열거형 클래스 사용</span><span class="sxs-lookup"><span data-stu-id="03f54-104">Using enumeration classes instead of enum types</span></span>
 
-<span data-ttu-id="839a6-105">[열거형](../../../../docs/csharp/language-reference/keywords/enum.md)(또는 줄여서 *열거형 형식*)은 정수 형식에 대한 씬 언어 래퍼입니다.</span><span class="sxs-lookup"><span data-stu-id="839a6-105">[Enumerations](../../../../docs/csharp/language-reference/keywords/enum.md) (or *enum types* for short) are a thin language wrapper around an integral type.</span></span> <span data-ttu-id="839a6-106">닫힌 값 집합에서 값을 저장하는 경우 해당 사용을 제한해야 할 수도 있습니다.</span><span class="sxs-lookup"><span data-stu-id="839a6-106">You might want to limit their use to when you are storing one value from a closed set of values.</span></span> <span data-ttu-id="839a6-107">성별(예: 남성, 여성, 알 수 없음) 또는 크기(작음, 중간, 큼)에 따른 분류는 좋은 예제입니다.</span><span class="sxs-lookup"><span data-stu-id="839a6-107">Classification based on gender (for example, male, female, unknown) or sizes (small, medium, large) are good examples.</span></span> <span data-ttu-id="839a6-108">제어 흐름 또는 추가 추상화에 열거형을 사용하는 것은 [코드 스멜](http://deviq.com/code-smells/)일 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="839a6-108">Using enums for control flow or more robust abstractions can be a [code smell](http://deviq.com/code-smells/).</span></span> <span data-ttu-id="839a6-109">이 형식으로 사용하면 열거형의 값을 확인하는 여러 제어 흐름 문을 사용하여 취약한 코드가 발생합니다.</span><span class="sxs-lookup"><span data-stu-id="839a6-109">This type of usage leads to fragile code with many control flow statements checking values of the enum.</span></span>
+<span data-ttu-id="03f54-105">[열거형](../../../../docs/csharp/language-reference/keywords/enum.md)(또는 줄여서 *열거형 형식*)은 정수 형식에 대한 씬 언어 래퍼입니다.</span><span class="sxs-lookup"><span data-stu-id="03f54-105">[Enumerations](../../../../docs/csharp/language-reference/keywords/enum.md) (or *enum types* for short) are a thin language wrapper around an integral type.</span></span> <span data-ttu-id="03f54-106">닫힌 값 집합에서 값을 저장하는 경우 해당 사용을 제한해야 할 수도 있습니다.</span><span class="sxs-lookup"><span data-stu-id="03f54-106">You might want to limit their use to when you are storing one value from a closed set of values.</span></span> <span data-ttu-id="03f54-107">성별(예: 남성, 여성, 알 수 없음) 또는 크기(작음, 중간, 큼)에 따른 분류는 좋은 예제입니다.</span><span class="sxs-lookup"><span data-stu-id="03f54-107">Classification based on gender (for example, male, female, unknown) or sizes (small, medium, large) are good examples.</span></span> <span data-ttu-id="03f54-108">제어 흐름 또는 추가 추상화에 열거형을 사용하는 것은 [코드 스멜](http://deviq.com/code-smells/)일 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="03f54-108">Using enums for control flow or more robust abstractions can be a [code smell](http://deviq.com/code-smells/).</span></span> <span data-ttu-id="03f54-109">이 형식으로 사용하면 열거형의 값을 확인하는 여러 제어 흐름 문을 사용하여 취약한 코드가 발생합니다.</span><span class="sxs-lookup"><span data-stu-id="03f54-109">This type of usage leads to fragile code with many control flow statements checking values of the enum.</span></span>
 
-<span data-ttu-id="839a6-110">대신 개체 지향 언어의 모든 풍부한 기능을 활성화하는 열거형 클래스를 만들 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="839a6-110">Instead, you can create Enumeration classes that enable all the rich features of an object-oriented language.</span></span>
+<span data-ttu-id="03f54-110">대신 개체 지향 언어의 모든 풍부한 기능을 활성화하는 열거형 클래스를 만들 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="03f54-110">Instead, you can create Enumeration classes that enable all the rich features of an object-oriented language.</span></span>
 
-<span data-ttu-id="839a6-111">그러나 중요한 항목은 아니며 대부분의 경우에 간단한 설명을 위해 기본 설정된 기본 [열거형 형식](../../../../docs/csharp/language-reference/keywords/enum.md)을 계속 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="839a6-111">However, this isn't a critical topic and in many cases, for simplicity, you can still use regular [enum types](../../../../docs/csharp/language-reference/keywords/enum.md) if that's your preference.</span></span>
+<span data-ttu-id="03f54-111">그러나 중요한 항목은 아니며 대부분의 경우에 간단한 설명을 위해 기본 설정된 기본 [열거형 형식](../../../../docs/csharp/language-reference/keywords/enum.md)을 계속 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="03f54-111">However, this isn't a critical topic and in many cases, for simplicity, you can still use regular [enum types](../../../../docs/csharp/language-reference/keywords/enum.md) if that's your preference.</span></span>
 
-## <a name="implementing-an-enumeration-base-class"></a><span data-ttu-id="839a6-112">열거형 기본 클래스 구현</span><span class="sxs-lookup"><span data-stu-id="839a6-112">Implementing an Enumeration base class</span></span>
+## <a name="implementing-an-enumeration-base-class"></a><span data-ttu-id="03f54-112">열거형 기본 클래스 구현</span><span class="sxs-lookup"><span data-stu-id="03f54-112">Implementing an Enumeration base class</span></span>
 
-<span data-ttu-id="839a6-113">다음 예제와 같이 eShopOnContainers의 마이크로 서비스를 정렬하면 샘플 열거형 기본 클래스 구현을 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="839a6-113">The ordering microservice in eShopOnContainers provides a sample Enumeration base class implementation, as shown in the following example:</span></span>
+<span data-ttu-id="03f54-113">다음 예제와 같이 eShopOnContainers의 마이크로 서비스를 정렬하면 샘플 열거형 기본 클래스 구현을 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="03f54-113">The ordering microservice in eShopOnContainers provides a sample Enumeration base class implementation, as shown in the following example:</span></span>
 
 ```csharp
 public abstract class Enumeration : IComparable
 {
-    public string Name { get; private set; }
-    public int Id { get; private set; }
+    public string Name { get; }
+    public int Id { get; }
 
     protected Enumeration()
     {
@@ -88,7 +88,7 @@ public abstract class Enumeration : IComparable
 }
 ```
 
-<span data-ttu-id="839a6-114">엔터티 또는 값 개체에서 이 클래스를 다음 CardType 열거형 클래스와 형식으로 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="839a6-114">You can use this class as a type in any entity or value object, as for the following CardType Enumeration class:</span></span>
+<span data-ttu-id="03f54-114">엔터티 또는 값 개체에서 이 클래스를 다음 CardType 열거형 클래스와 형식으로 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="03f54-114">You can use this class as a type in any entity or value object, as for the following CardType Enumeration class:</span></span>
 
 ```csharp
 public class CardType : Enumeration
@@ -112,29 +112,29 @@ public class CardType : Enumeration
 }
 ```
 
-## <a name="additional-resources"></a><span data-ttu-id="839a6-115">추가 리소스</span><span class="sxs-lookup"><span data-stu-id="839a6-115">Additional resources</span></span>
+## <a name="additional-resources"></a><span data-ttu-id="03f54-115">추가 자료</span><span class="sxs-lookup"><span data-stu-id="03f54-115">Additional resources</span></span>
 
--   <span data-ttu-id="839a6-116">**열거형은 악의적인 업데이트입니다.**
-    [*http://www.planetgeek.ch/2009/07/01/enums-are-evil/*](http://www.planetgeek.ch/2009/07/01/enums-are-evil/)</span><span class="sxs-lookup"><span data-stu-id="839a6-116">**Enum’s are evil—update**
+-   <span data-ttu-id="03f54-116">**열거형을 의심할 것 - 업데이트**
+    [*http://www.planetgeek.ch/2009/07/01/enums-are-evil/*](http://www.planetgeek.ch/2009/07/01/enums-are-evil/)</span><span class="sxs-lookup"><span data-stu-id="03f54-116">**Enum’s are evil—update**
 [*http://www.planetgeek.ch/2009/07/01/enums-are-evil/*](http://www.planetgeek.ch/2009/07/01/enums-are-evil/)</span></span>
 
--   <span data-ttu-id="839a6-117">**Daniel Hardman 열거형으로 질병을 분산하는 방법 - 및 이를 치료하기 위한 방법**
-    [*https://codecraft.co/2012/10/29/how-enums-spread-disease-and-how-to-cure-it/*](https://codecraft.co/2012/10/29/how-enums-spread-disease-and-how-to-cure-it/)</span><span class="sxs-lookup"><span data-stu-id="839a6-117">**Daniel Hardman. How Enums Spread Disease — And How To Cure It**
+-   <span data-ttu-id="03f54-117">**Daniel Hardman 열거형이 질병을 전파하는 방법 - 및 질병 치료 방법**
+    [*https://codecraft.co/2012/10/29/how-enums-spread-disease-and-how-to-cure-it/*](https://codecraft.co/2012/10/29/how-enums-spread-disease-and-how-to-cure-it/)</span><span class="sxs-lookup"><span data-stu-id="03f54-117">**Daniel Hardman. How Enums Spread Disease — And How To Cure It**
 [*https://codecraft.co/2012/10/29/how-enums-spread-disease-and-how-to-cure-it/*](https://codecraft.co/2012/10/29/how-enums-spread-disease-and-how-to-cure-it/)</span></span>
 
--   <span data-ttu-id="839a6-118">**Jimmy Bogard. 열거형 클래스**
-    [*https://lostechies.com/jimmybogard/2008/08/12/enumeration-classes/*](https://lostechies.com/jimmybogard/2008/08/12/enumeration-classes/)</span><span class="sxs-lookup"><span data-stu-id="839a6-118">**Jimmy Bogard. Enumeration classes**
+-   <span data-ttu-id="03f54-118">**Jimmy Bogard. 열거형 클래스**
+    [*https://lostechies.com/jimmybogard/2008/08/12/enumeration-classes/*](https://lostechies.com/jimmybogard/2008/08/12/enumeration-classes/)</span><span class="sxs-lookup"><span data-stu-id="03f54-118">**Jimmy Bogard. Enumeration classes**
 [*https://lostechies.com/jimmybogard/2008/08/12/enumeration-classes/*](https://lostechies.com/jimmybogard/2008/08/12/enumeration-classes/)</span></span>
 
--   <span data-ttu-id="839a6-119">**Steve Smith C#에서 열거형 대체**
-    [*http://ardalis.com/enum-alternatives-in-c*](http://ardalis.com/enum-alternatives-in-c)</span><span class="sxs-lookup"><span data-stu-id="839a6-119">**Steve Smith. Enum Alternatives in C#**
+-   <span data-ttu-id="03f54-119">**Steve Smith. C#의 열거형 옵션**
+    [*http://ardalis.com/enum-alternatives-in-c*](http://ardalis.com/enum-alternatives-in-c)</span><span class="sxs-lookup"><span data-stu-id="03f54-119">**Steve Smith. Enum Alternatives in C#**
 [*http://ardalis.com/enum-alternatives-in-c*](http://ardalis.com/enum-alternatives-in-c)</span></span>
 
--   <span data-ttu-id="839a6-120">**Enumeration.cs.**</span><span class="sxs-lookup"><span data-stu-id="839a6-120">**Enumeration.cs.**</span></span> <span data-ttu-id="839a6-121">eShopOnContainers의 기본 열거형 클래스[*https://github.com/dotnet/eShopOnContainers/blob/master/src/Services/Ordering/Ordering.Domain/SeedWork/Enumeration.cs*](https://github.com/dotnet/eShopOnContainers/blob/master/src/Services/Ordering/Ordering.Domain/SeedWork/Enumeration.cs)</span><span class="sxs-lookup"><span data-stu-id="839a6-121">Base Enumeration class in eShopOnContainers [*https://github.com/dotnet/eShopOnContainers/blob/master/src/Services/Ordering/Ordering.Domain/SeedWork/Enumeration.cs*](https://github.com/dotnet/eShopOnContainers/blob/master/src/Services/Ordering/Ordering.Domain/SeedWork/Enumeration.cs)</span></span>
+-   <span data-ttu-id="03f54-120">**Enumeration.cs.**</span><span class="sxs-lookup"><span data-stu-id="03f54-120">**Enumeration.cs.**</span></span> <span data-ttu-id="03f54-121">eShopOnContainers의 기본 열거형 클래스 [*https://github.com/dotnet/eShopOnContainers/blob/master/src/Services/Ordering/Ordering.Domain/SeedWork/Enumeration.cs*](https://github.com/dotnet/eShopOnContainers/blob/master/src/Services/Ordering/Ordering.Domain/SeedWork/Enumeration.cs)</span><span class="sxs-lookup"><span data-stu-id="03f54-121">Base Enumeration class in eShopOnContainers [*https://github.com/dotnet/eShopOnContainers/blob/master/src/Services/Ordering/Ordering.Domain/SeedWork/Enumeration.cs*](https://github.com/dotnet/eShopOnContainers/blob/master/src/Services/Ordering/Ordering.Domain/SeedWork/Enumeration.cs)</span></span>
 
--   <span data-ttu-id="839a6-122">**CardType.cs**.</span><span class="sxs-lookup"><span data-stu-id="839a6-122">**CardType.cs**.</span></span> <span data-ttu-id="839a6-123">eShopOnContainers의 샘플 열거형 클래스</span><span class="sxs-lookup"><span data-stu-id="839a6-123">Sample Enumeration class in eShopOnContainers.</span></span>
-    [<span data-ttu-id="839a6-124">*https://github.com/dotnet/eShopOnContainers/blob/master/src/Services/Ordering/Ordering.Domain/AggregatesModel/BuyerAggregate/CardType.cs*</span><span class="sxs-lookup"><span data-stu-id="839a6-124">*https://github.com/dotnet/eShopOnContainers/blob/master/src/Services/Ordering/Ordering.Domain/AggregatesModel/BuyerAggregate/CardType.cs*</span></span>](https://github.com/dotnet/eShopOnContainers/blob/master/src/Services/Ordering/Ordering.Domain/AggregatesModel/BuyerAggregate/CardType.cs)
+-   <span data-ttu-id="03f54-122">**CardType.cs**.</span><span class="sxs-lookup"><span data-stu-id="03f54-122">**CardType.cs**.</span></span> <span data-ttu-id="03f54-123">eShopOnContainers의 샘플 열거형 클래스</span><span class="sxs-lookup"><span data-stu-id="03f54-123">Sample Enumeration class in eShopOnContainers.</span></span>
+    [*https://github.com/dotnet/eShopOnContainers/blob/master/src/Services/Ordering/Ordering.Domain/AggregatesModel/BuyerAggregate/CardType.cs*](https://github.com/dotnet/eShopOnContainers/blob/master/src/Services/Ordering/Ordering.Domain/AggregatesModel/BuyerAggregate/CardType.cs)
 
 
 >[!div class="step-by-step"]
-<span data-ttu-id="839a6-125">[이전](implement-value-objects.md) [다음](domain-model-layer-validations.md)</span><span class="sxs-lookup"><span data-stu-id="839a6-125">[Previous] (implement-value-objects.md) [Next] (domain-model-layer-validations.md)</span></span>
+<span data-ttu-id="03f54-124">[이전](implement-value-objects.md) [다음](domain-model-layer-validations.md)</span><span class="sxs-lookup"><span data-stu-id="03f54-124">[Previous] (implement-value-objects.md) [Next] (domain-model-layer-validations.md)</span></span>
