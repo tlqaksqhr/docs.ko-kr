@@ -1,6 +1,6 @@
 ---
-title: "ASP.NET Core 및 Azure를 사용하여 현대식 웹 응용 프로그램 설계"
-description: "ASP.NET Core 및 Azure를 사용하여 현대식 웹 응용 프로그램 설계 | 소개"
+title: ASP.NET Core 및 Azure를 사용하여 현대식 웹 응용 프로그램 설계
+description: ASP.NET Core 및 Azure를 사용하여 현대식 웹 응용 프로그램 설계 | 소개
 author: ardalis
 ms.author: wiwagn
 ms.date: 10/06/2017

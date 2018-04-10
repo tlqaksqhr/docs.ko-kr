@@ -1,6 +1,6 @@
 ---
-title: "Azure 클라우드 및 Windows 컨테이너를 사용하여 기존 .NET 응용 프로그램 현대화"
-description: "기존 응용 프로그램을 Azure 클라우드 및이 전자책 (영문)를 사용 하 여 컨테이너를 이동 하에 대해 알아봅니다."
+title: Azure 클라우드 및 Windows 컨테이너를 사용하여 기존 .NET 응용 프로그램 현대화
+description: 기존 응용 프로그램을 Azure 클라우드 및이 전자책 (영문)를 사용 하 여 컨테이너를 이동 하에 대해 알아봅니다.
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/26/2017

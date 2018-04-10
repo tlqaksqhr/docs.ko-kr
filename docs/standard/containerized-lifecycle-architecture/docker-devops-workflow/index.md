@@ -1,7 +1,7 @@
 ---
-title: "Microsoft 도구를 사용하는 Docker 응용 프로그램 DevOps 워크플로"
-description: "Microsoft 플랫폼 및 도구를 사용하여 컨테이너화된 Docker 응용 프로그램 수명 주기 및 Microsoft 도구를 사용하는 DevOps 워크플로"
-keywords: "Docker, 마이크로 서비스, ASP.NET, 컨테이너"
+title: Microsoft 도구를 사용하는 Docker 응용 프로그램 DevOps 워크플로
+description: Microsoft 플랫폼 및 도구를 사용하여 컨테이너화된 Docker 응용 프로그램 수명 주기 및 Microsoft 도구를 사용하는 DevOps 워크플로
+keywords: Docker, 마이크로 서비스, ASP.NET, 컨테이너
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/22/2017

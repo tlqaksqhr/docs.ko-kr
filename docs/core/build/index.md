@@ -1,7 +1,7 @@
 ---
-title: "소스에서 .NET Core 빌드"
-description: "소스 코드에서 .NET Core 및 .NET Core CLI를 빌드하는 방법을 알아봅니다."
-keywords: ".NET, .NET Core, 소스, 빌드"
+title: 소스에서 .NET Core 빌드
+description: 소스 코드에서 .NET Core 및 .NET Core CLI를 빌드하는 방법을 알아봅니다.
+keywords: .NET, .NET Core, 소스, 빌드
 author: bleroy
 ms.author: mairaw
 ms.date: 06/28/2017
@@ -9,7 +9,8 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: 8b49079c-6ede-429a-92d7-ecd2fda1ab0e
-ms.workload: dotnetcore
+ms.workload:
+- dotnetcore
 ms.openlocfilehash: 6aa5abd071355b1c1a367b35e9521e6b1af9c945
 ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT

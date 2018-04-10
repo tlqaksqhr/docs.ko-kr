@@ -1,11 +1,13 @@
 ---
-title: "Visual Basic의 배열"
-ms.custom: 
+title: Visual Basic의 배열
+ms.custom: ''
 ms.date: 12/06/2017
 ms.prod: .net
-ms.technology: devlang-visual-basic
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
-f1_keywords: vb.Array
+f1_keywords:
+- vb.Array
 helpviewer_keywords:
 - arrays [Visual Basic]
 - Visual Basic, arrays
@@ -173,7 +175,7 @@ Dim sales()() As Double = New Double(11)() {}
   
 ## <a name="array-size"></a><span data-ttu-id="bb66b-202">배열 크기</span><span class="sxs-lookup"><span data-stu-id="bb66b-202">Array Size</span></span>  
 
- <span data-ttu-id="bb66b-203">배열 크기는 모든 차원의 길이 곱입니다.</span><span class="sxs-lookup"><span data-stu-id="bb66b-203">The size of an array is the product of the lengths of all its dimensions.</span></span> <span data-ttu-id="bb66b-204">현재 배열에 포함된 요소의 총 수를 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="bb66b-204">It represents the total number of elements currently contained in the array.</span></span>  <span data-ttu-id="bb66b-205">예를 들어 다음 예제에서는 각 차원에 대 한 네 가지 요소로 된 2 차원 배열을 선언 합니다.</span><span class="sxs-lookup"><span data-stu-id="bb66b-205">For example, the following example declares a 2-dimensional array with four elements in each dimension.</span></span> <span data-ttu-id="bb66b-206">배열의 크기는 16 예제의 출력에서 볼 수 있듯이 (또는 (3 + 1) * (3 + 1).</span><span class="sxs-lookup"><span data-stu-id="bb66b-206">As the output from the example shows, the array's size is 16 (or (3 + 1) * (3 + 1).</span></span>
+ <span data-ttu-id="bb66b-203">배열 크기는 모든 차원의 길이 곱입니다.</span><span class="sxs-lookup"><span data-stu-id="bb66b-203">The size of an array is the product of the lengths of all its dimensions.</span></span> <span data-ttu-id="bb66b-204">현재 배열에 포함된 요소의 총 수를 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="bb66b-204">It represents the total number of elements currently contained in the array.</span></span>  <span data-ttu-id="bb66b-205">예를 들어 다음 예제에서는 각 차원에 대 한 네 가지 요소로 된 2 차원 배열을 선언 합니다.</span><span class="sxs-lookup"><span data-stu-id="bb66b-205">For example, the following example declares a 2-dimensional array with four elements in each dimension.</span></span> <span data-ttu-id="bb66b-206">배열의 크기는 16 예제의 출력에서 볼 수 있듯이 (또는 (3 + 1) \* (3 + 1).</span><span class="sxs-lookup"><span data-stu-id="bb66b-206">As the output from the example shows, the array's size is 16 (or (3 + 1) \* (3 + 1).</span></span>
 
  [!code-vb[array-size](../../../../../samples/snippets/visualbasic/programming-guide/language-features/arrays/array-size.vb)]  
 

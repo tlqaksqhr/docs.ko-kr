@@ -1,5 +1,5 @@
 ---
-title: "예외 처리문(C# 참조)"
+title: 예외 처리문(C# 참조)
 ms.date: 07/20/2015
 ms.prod: .net
 ms.technology:
@@ -8,7 +8,7 @@ ms.topic: article
 helpviewer_keywords:
 - keywords [C#], exception handling
 ms.assetid: 6d0323a3-3164-411c-9b84-a3606bd0e13c
-caps.latest.revision: 
+caps.latest.revision: 12
 author: BillWagner
 ms.author: wiwagn
 ms.openlocfilehash: c148165ae02aef5cd8851297834d104b692da721

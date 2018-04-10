@@ -1,10 +1,11 @@
 ---
-title: "클래스 및 구조체(C# 프로그래밍 가이드)"
-description: "C#의 클래스 및 구조(구조체) 사용에 대해 설명합니다."
-keywords: "클래스(C#), 구조체(C#), 구조(구조체)(C#), 참조 형식(C#), 값 형식(C#)"
+title: 클래스 및 구조체(C# 프로그래밍 가이드)
+description: C#의 클래스 및 구조(구조체) 사용에 대해 설명합니다.
+keywords: 클래스(C#), 구조체(C#), 구조(구조체)(C#), 참조 형식(C#), 값 형식(C#)
 ms.date: 01/17/2016
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 helpviewer_keywords:
 - structs [C#], about structs
@@ -14,7 +15,7 @@ helpviewer_keywords:
 - objects [C#]
 - C# language, classes
 ms.assetid: cc39dbda-8754-423e-b5b1-16a1db0734c0
-caps.latest.revision: "48"
+caps.latest.revision: 48
 author: BillWagner
 ms.author: wiwagn
 ms.openlocfilehash: 8c4cbbdd0384c0c0e97d6a7c655e798d0562d9a8

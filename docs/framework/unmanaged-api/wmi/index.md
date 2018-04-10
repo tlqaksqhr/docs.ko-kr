@@ -1,6 +1,6 @@
 ---
-title: "WMI 및 성능 카운터 (관리 되지 않는 API 참조)"
-description: ".NET Framework 요약 API 관리 되지 않는 WMI 및 성능 카운터 정보에 대 한 합니다."
+title: WMI 및 성능 카운터 (관리 되지 않는 API 참조)
+description: .NET Framework 요약 API 관리 되지 않는 WMI 및 성능 카운터 정보에 대 한 합니다.
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett

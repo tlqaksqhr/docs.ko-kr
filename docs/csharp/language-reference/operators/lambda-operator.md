@@ -1,5 +1,5 @@
 ---
-title: "=&gt; 연산자(C# 참조)"
+title: =&gt; 연산자(C# 참조)
 ms.date: 10/02/2017
 ms.prod: .net
 ms.technology:

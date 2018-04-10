@@ -1,8 +1,9 @@
 ---
-title: "특수 문자 (Visual Basic 참조)"
+title: 특수 문자 (Visual Basic 참조)
 ms.date: 10/31/2017
 ms.prod: .net
-ms.technology: devlang-visual-basic
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 author: rpetrusha
 ms.author: ronpet

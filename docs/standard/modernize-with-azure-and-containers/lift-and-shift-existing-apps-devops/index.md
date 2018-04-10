@@ -1,6 +1,6 @@
 ---
-title: "기존 앱 DevOps 리프트 앤 시프트"
-description: "Azure 클라우드 및 Windows 컨테이너를 사용하여 기존 .NET 응용 프로그램 현대화"
+title: 기존 앱 DevOps 리프트 앤 시프트
+description: Azure 클라우드 및 Windows 컨테이너를 사용하여 기존 .NET 응용 프로그램 현대화
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/26/2017

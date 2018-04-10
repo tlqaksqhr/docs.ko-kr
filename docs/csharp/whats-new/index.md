@@ -1,7 +1,7 @@
 ---
-title: "C#의 새로운 기능 - C# 가이드"
-description: "C# 언어 진화 과정"
-keywords: "C#, 최신 기능, 새로운 기능, Roslyn"
+title: C#의 새로운 기능 - C# 가이드
+description: C# 언어 진화 과정
+keywords: C#, 최신 기능, 새로운 기능, Roslyn
 author: BillWagner
 ms.author: wiwagn
 ms.date: 11/13/2017

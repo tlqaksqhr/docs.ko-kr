@@ -1,7 +1,7 @@
 ---
-title: "C# 둘러보기 - C# 가이드"
-description: "C#을 처음 사용하시나요? 언어의 기본 사항에 대해 알아봅니다."
-keywords: ".NET, .NET core, C#, C# 입문서, C# 가이드"
+title: C# 둘러보기 - C# 가이드
+description: C#을 처음 사용하시나요? 언어의 기본 사항에 대해 알아봅니다.
+keywords: .NET, .NET core, C#, C# 입문서, C# 가이드
 author: BillWagner
 ms.author: wiwagn
 ms.date: 08/10/2016

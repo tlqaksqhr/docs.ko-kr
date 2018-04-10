@@ -1,7 +1,7 @@
 ---
-title: ".NET Core의 단위 테스트"
-description: "유닛 테스트가 아주 쉬워졌습니다. .NET Core 및 .NET Standard 프로젝트에서 유닛 테스트를 사용하는 방법을 참조하세요."
-keywords: ".NET, .NET Core, .NET Standard, 유닛 테스트"
+title: .NET Core의 단위 테스트
+description: 유닛 테스트가 아주 쉬워졌습니다. .NET Core 및 .NET Standard 프로젝트에서 유닛 테스트를 사용하는 방법을 참조하세요.
+keywords: .NET, .NET Core, .NET Standard, 유닛 테스트
 author: ardalis
 ms.author: wiwagn
 ms.date: 08/30/2017
@@ -9,7 +9,8 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: 815ac74c-4bd9-4a94-a87c-78288b27c0e2
-ms.workload: dotnetcore
+ms.workload:
+- dotnetcore
 ms.openlocfilehash: cb78a66a3a6a7158a86a76d62e5230c75b51a416
 ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT

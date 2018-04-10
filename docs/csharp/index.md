@@ -1,6 +1,6 @@
 ---
-title: "C# 가이드"
-description: "새 개발자이든 숙련된 전문가이든, C# 가이드를 통해 C#에 관한 폭넓은 지식을 얻는 방법을 알아봅니다."
+title: C# 가이드
+description: 새 개발자이든 숙련된 전문가이든, C# 가이드를 통해 C#에 관한 폭넓은 지식을 얻는 방법을 알아봅니다.
 author: BillWagner
 ms.date: 01/30/2018
 ms.topic: article

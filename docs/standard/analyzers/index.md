@@ -1,6 +1,6 @@
 ---
-title: "Roslyn 기반 분석기 - .NET"
-description: "문제를 찾고 해당 문제에 대한 수정 사항을 제안하는 Roslyn 기반 분석기에 대해 알아봅니다."
+title: Roslyn 기반 분석기 - .NET
+description: 문제를 찾고 해당 문제에 대한 수정 사항을 제안하는 Roslyn 기반 분석기에 대해 알아봅니다.
 keywords: .NET, .NET Core
 author: billwagner
 ms.author: billwagner

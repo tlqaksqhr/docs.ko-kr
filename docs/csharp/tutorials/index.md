@@ -1,6 +1,6 @@
 ---
-title: "C# 자습서"
-description: "C# 자습서를 탐색하여 C# 프로그램을 빌드하는 방법과 C# 언어 기능에 관해 학습합니다."
+title: C# 자습서
+description: C# 자습서를 탐색하여 C# 프로그램을 빌드하는 방법과 C# 언어 기능에 관해 학습합니다.
 keywords: .NET, .NET Core
 author: BillWagner
 ms.author: wiwagn

@@ -1,7 +1,7 @@
 ---
-title: "형식 공급자"
-description: "F # 형식 공급자 형식, 속성 및 메서드를 프로그램에서 사용 하기 위해 제공 하는 구성 요소를가 하는 방법에 대해 알아봅니다."
-keywords: "visual f#, f#, 함수형 프로그래밍"
+title: 형식 공급자
+description: 'F # 형식 공급자 형식, 속성 및 메서드를 프로그램에서 사용 하기 위해 제공 하는 구성 요소를가 하는 방법에 대해 알아봅니다.'
+keywords: visual f#, f#, 함수형 프로그래밍
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
