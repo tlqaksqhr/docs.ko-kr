@@ -1,7 +1,7 @@
 ---
-title: "제네릭(F#)"
-description: "F # 제네릭 함수 및 코드를 반복 하지 않고 다양 한 형식 사용 하는 코드를 작성할 수 있도록 하는 형식을 사용 하는 방법에 알아봅니다."
-keywords: "visual f#, f#, 함수형 프로그래밍"
+title: 제네릭(F#)
+description: 'F # 제네릭 함수 및 코드를 반복 하지 않고 다양 한 형식 사용 하는 코드를 작성할 수 있도록 하는 형식을 사용 하는 방법에 알아봅니다.'
+keywords: visual f#, f#, 함수형 프로그래밍
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016

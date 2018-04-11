@@ -1,7 +1,7 @@
 ---
-title: "예외 처리(F#)"
-description: "F #에서 예외 처리의 기본 사항을 설명 하 고 식과 함수를 처리 하는 예외에 대 한 링크를 찾습니다."
-keywords: "visual f#, f#, 함수형 프로그래밍"
+title: 예외 처리(F#)
+description: 'F #에서 예외 처리의 기본 사항을 설명 하 고 식과 함수를 처리 하는 예외에 대 한 링크를 찾습니다.'
+keywords: visual f#, f#, 함수형 프로그래밍
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016

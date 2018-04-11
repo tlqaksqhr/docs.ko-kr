@@ -10,17 +10,17 @@ ms.technology:
 ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: f362d00e-ce82-484f-9d4f-27e579d5c320
-caps.latest.revision: ''
+caps.latest.revision: 10
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: c12bd11cee62cd769f7dffc142806fa5ab1b0137
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: 8e60d28314c47907cc825871b88a0dc771cd0511
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="comparing-aspnet-web-services-to-wcf-based-on-development"></a>개발을 기반으로 ASP.NET 웹 서비스와 WCF 비교
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]에는 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 응용 프로그램을 ASP.NET 웹 서비스처럼 프로그래밍하고 구성하며 동작을 모방하도록 할 수 있는 ASP.NET 호환 모드 옵션이 있습니다. 다음 단원에서는 ASP.NET 웹 서비스와 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]를 사용하여 응용 프로그램을 개발하는 데 필요한 사항을 기반으로 이 두 가지 기술을 비교합니다.  
@@ -187,7 +187,7 @@ public class LineItem
   
 -   형식의 public이 아닌 멤버를 XML로 serialize할 수 있기 때문에 <xref:System.Runtime.Serialization.DataContractSerializer>에는 XML로 serialize할 수 있는 .NET 형식의 다양성에 대한 제한이 더 적습니다. 특히 <xref:System.Collections.Hashtable> 인터페이스를 구현하는 <xref:System.Collections.IDictionary>과 같은 XML 형식으로 변환할 수 있습니다. 일반적으로 <xref:System.Runtime.Serialization.DataContractSerializer>는 형식의 정의를 수정하거나 형식을 위한 래퍼를 개발하지 않고도 기존 .NET 형식의 인스턴스를 XML로 serialize할 수 있는 가능성이 훨씬 더 높습니다.  
   
--   <xref:System.Runtime.Serialization.DataContractSerializer>가 형식의 public이 아닌 멤버에 액세스할 수 있다는 점에 기인한 또 다른 결과는 <xref:System.Xml.Serialization.XmlSerializer>와 달리 완전 신뢰가 필요하다는 점입니다. 완전 신뢰 코드 액세스 권한이 있으면 코드를 실행하는 자격 증명을 사용하여 액세스할 수 있는 컴퓨터의 모든 리소스에 액세스할 수 있습니다. 완전 신뢰 코드는 컴퓨터의 모든 리소스에 대한 액세스 권한을 부여하므로 이 옵션을 사용할 때는 주의를 기울여야 합니다.  
+-   <xref:System.Runtime.Serialization.DataContractSerializer>가 형식의 public이 아닌 멤버에 액세스할 수 있다는 점에 기인한 또 다른 결과는 <xref:System.Xml.Serialization.XmlSerializer>와 달리 완전 신뢰가 필요하다는 점입니다. 완전 신뢰 코드 액세스 권한 코드를 실행 중인 자격 증명을 사용 하 여 액세스할 수 있는 컴퓨터에 있는 모든 리소스에 대 한 전체 액세스를 제공 합니다. 이 옵션은 완전히 신뢰할 수 있는 코드 컴퓨터에 모든 리소스에 액세스 하는 대로 주의 하 여 사용 해야 합니다.  
   
 -   <xref:System.Runtime.Serialization.DataContractSerializer>는 버전 관리를 위한 일부 지원을 통합합니다.  
   
@@ -195,7 +195,7 @@ public class LineItem
   
     -   데이터 계약에서 <xref:System.Runtime.Serialization.IExtensibleDataObject> 인터페이스를 구현하도록 함으로써 <xref:System.Runtime.Serialization.DataContractSerializer>가 새 버전의 데이터 계약에 정의된 멤버를 이전 버전의 계약을 사용하는 응용 프로그램을 통해 전달하도록 허용할 수 있습니다.  
   
- 이러한 모든 차이점에도 불구하고 <xref:System.Xml.Serialization.XmlSerializer>에서 기본적으로 형식을 serialize하는 XML은 해당 XML에 대한 네임스페이스가 명시적으로 정의되어 있는 경우 <xref:System.Runtime.Serialization.DataContractSerializer>에서 형식을 serialize하는 XML과 의미상 동일합니다. 따라서 다음과 같이 두 serializer에서 사용하는 특성을 가지고 있는 클래스는 <xref:System.Xml.Serialization.XmlSerializer>와 <xref:System.Runtime.Serialization.DataContractAttribute>에서 의미상 동일한 XML로 변환됩니다.  
+ 이러한 모든 차이점에도 불구하고 <xref:System.Xml.Serialization.XmlSerializer>에서 기본적으로 형식을 serialize하는 XML은 해당 XML에 대한 네임스페이스가 명시적으로 정의되어 있는 경우 <xref:System.Runtime.Serialization.DataContractSerializer>에서 형식을 serialize하는 XML과 의미상 동일합니다. 두 serializer와 함께 사용할 특성이 되는 다음 클래스를에서 의미상 동일한 XML로 변환 되는 <xref:System.Xml.Serialization.XmlSerializer> 및는 <xref:System.Runtime.Serialization.DataContractAttribute>:  
   
 ```  
 [Serializable]  
@@ -212,7 +212,7 @@ public class LineItem
 }  
 ```  
   
- Windows 소프트웨어 개발 키트 (SDK) 명령줄 도구가 포함 된 [ServiceModel Metadata 유틸리티 도구 (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)합니다. ASP.NET 웹 서비스와 함께 사용 되는 xsd.exe 도구와 같은 Svcutil.exe XML 스키마에서.NET 데이터 형식의 정의 생성할 수 있습니다. <xref:System.Runtime.Serialization.DataContractSerializer>에서 XML 스키마에 의해 정의된 형식의 XML을 내보낼 수 있으면 이러한 형식은 데이터 계약이 됩니다. 그렇지 않으면 이러한 형식은 <xref:System.Xml.Serialization.XmlSerializer>를 사용하여 serialize됩니다. Svcutil.exe 도구는 또한 `/dataContractOnly` 스위치를 사용하여 데이터 계약에서 XML 스키마를 생성할 수도 있습니다.  
+ Windows 소프트웨어 개발 키트 (SDK) 명령줄 도구가 포함 된 [ServiceModel Metadata 유틸리티 도구 (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)합니다. ASP.NET 웹 서비스와 함께 사용 되는 xsd.exe 도구와 같은 Svcutil.exe XML 스키마에서.NET 데이터 형식의 정의 생성할 수 있습니다. <xref:System.Runtime.Serialization.DataContractSerializer>에서 XML 스키마에 의해 정의된 형식의 XML을 내보낼 수 있으면 이러한 형식은 데이터 계약이 됩니다. 그렇지 않으면 이러한 형식은 <xref:System.Xml.Serialization.XmlSerializer>를 사용하여 serialize됩니다. Svcutil.exe 생성할 수도 XML 스키마 데이터 계약에서 사용 하 여 해당 `dataContractOnly` 전환 합니다.  
   
 > [!NOTE]
 >  ASP.NET 웹 서비스에서 <xref:System.Xml.Serialization.XmlSerializer>를 사용하고, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] ASP.NET 호환 모드를 통해 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 서비스에서 ASP.NET 웹 서비스의 동작을 모방하는 경우에도 ASP.NET 호환 옵션에서 <xref:System.Xml.Serialization.XmlSerializer>를 사용하도록 제한되지는 않습니다. ASP.NET 호환 모드에서 실행되는 서비스에서 <xref:System.Runtime.Serialization.DataContractSerializer>를 계속 사용할 수 있습니다.  

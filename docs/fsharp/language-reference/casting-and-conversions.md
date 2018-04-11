@@ -1,7 +1,7 @@
 ---
-title: "캐스팅 및 변환(F#)"
-description: "F # 프로그래밍 언어로 제공 하는 방법을 변환 연산자 다양 한 기본 형식 간의 산술 변환에 알아봅니다."
-keywords: "visual f#, f#, 함수형 프로그래밍"
+title: 캐스팅 및 변환(F#)
+description: 'F # 프로그래밍 언어로 제공 하는 방법을 변환 연산자 다양 한 기본 형식 간의 산술 변환에 알아봅니다.'
+keywords: visual f#, f#, 함수형 프로그래밍
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: db30db67-da21-4206-bf0c-9211bd3cb22f
-ms.openlocfilehash: f17d3919c59c5881213d28a59cea7ae184493949
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: df8352b0dd8651f1480515311454a218ea79b971
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="casting-and-conversions-f"></a>캐스팅 및 변환(F#)
 
@@ -107,10 +107,10 @@ downcast expression
 let base1 = d1 :> Base1
 ```
 
-을(를) 다음으로 바꾸면 됩니다.
+다음 문자열로 바꾸세요.
 
 ```fsharp
-base1 = upcast d1
+let base1 = upcast d1
 ```
 
 이전 코드에서 형식 인수 및 반환 형식은 `Derived1` 및 `Base1`각각.

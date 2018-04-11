@@ -1,20 +1,20 @@
 ---
-title: "기호 및 연산자 참조(F#)"
-description: "기호 및 F # 프로그래밍 언어에서 사용 되는 연산자에 알아봅니다."
-keywords: "visual f#, f#, 함수형 프로그래밍"
+title: 기호 및 연산자 참조(F#)
+description: '기호 및 F # 프로그래밍 언어에서 사용 되는 연산자에 알아봅니다.'
+keywords: visual f#, f#, 함수형 프로그래밍
 author: cartermp
 ms.author: phcart
-ms.date: 05/16/2016
+ms.date: 04/04/2018
 ms.topic: language-reference
 ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: ab453800-d4d0-4a11-9d55-2b358d56af27
-ms.openlocfilehash: cb21ef7385cb679f9d445f8ee419db3d727fa057
-ms.sourcegitcommit: 2142a4732bb4ff519b9817db4c24a237b9810d4b
+ms.openlocfilehash: 2fa4504c7059b4559b364d4000fe4ec6131430e5
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/05/2018
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="symbol-and-operator-reference"></a>기호 및 연산자 참조
 
@@ -34,9 +34,9 @@ ms.lasthandoff: 01/05/2018
 |`"""`|[문자열](../strings.md)|축자 텍스트 문자열을 구분합니다. 문자열에서 작은따옴표를 사용하여 따옴표 문자를 나타낼 수 있다는 점에서 `@"..."`와는 다릅니다.|
 |`#`|[컴파일러 지시문](../compiler-directives.md)<br /><br />[유연한 형식](../flexible-types.md)|<ul><li>전처리기 또는 컴파일러 지시문에 `#light` 등의 접두사를 추가합니다.<br /></li><li>형식에 사용하는 경우 형식 또는 해당 파생 형식 중 하나를 참조하는 *유연한 형식*을 나타냅니다.<br /></li><ul/>|
 |`$`|추가 정보가 제공되지 않습니다.|<ul><li>특정 컴파일러 생성 변수 및 함수 이름에 내부적으로 사용됩니다.<br /></li><ul/>|
-|`%`|[산술 연산자](arithmetic-operators.md)<br /><br />[코드 인용](../code-quotations.md)|<ul><li>정수 모듈러스를 계산합니다.<br /></li><li>형식화된 코드 인용에 식을 연결하는 데 사용됩니다.<br /></li><ul/>|
+|`%`|[산술 연산자](arithmetic-operators.md)<br /><br />[코드 인용](../code-quotations.md)|<ul><li>정수 나머지를 계산합니다.<br /></li><li>형식화된 코드 인용에 식을 연결하는 데 사용됩니다.<br /></li><ul/>|
 |`%%`|[코드 인용](../code-quotations.md)|<ul><li>형식화되지 않은 코드 인용에 식을 연결하는 데 사용됩니다.<br /></li><ul/>|
-|`%?`|[null 허용 연산자](nullable-operators.md)|<ul><li>우변이 nullable 형식이면 정수 모듈러스를 계산합니다.<br /></li><ul/>|
+|`%?`|[null 허용 연산자](nullable-operators.md)|<ul><li>우변이 nullable 형식이 면 정수 나머지를 계산 합니다.<br /></li><ul/>|
 |`&`|[일치 식](../match-expressions.md)|<ul><li>다른 언어와 상호 작용할 때 사용하기 위해 변경할 수 있는 값의 주소를 계산합니다.<br /></li><li>AND 패턴에 사용됩니다.<br /></li><ul/>|
 |`&&`|[부울 연산자](boolean-operators.md)|<ul><li>부울 AND 연산을 수행합니다.<br /></li><ul/>|
 |`&&&`|[비트 연산자](bitwise-operators.md)|<ul><li>비트 AND 연산을 계산합니다.<br /></li><ul/>|
@@ -127,7 +127,7 @@ ms.lasthandoff: 01/05/2018
 |--------|-------------|
 |`as`|오른쪽|
 |`when`|오른쪽|
-|<code>&#124;</code>(파이프)|왼쪽|
+|<code>&#124;</code> (파이프)|왼쪽|
 |`;`|오른쪽|
 |`let`|결합성 없음|
 |`function`, `fun`, `match`, `try`|결합성 없음|
@@ -138,7 +138,7 @@ ms.lasthandoff: 01/05/2018
 |`or`, <code>&#124;&#124;</code>|왼쪽|
 |`&`, `&&`|왼쪽|
 |`:>`, `:?>`|오른쪽|
-|`!=`*op*, `<` *op*, `>` *op*, `=`, <code>&#124;</code> *op*, `&`  *op*,`&`<br /><br />(`<<<`, `>>>`, <code>&#124;&#124;&#124;</code>, `&&&` 포함)|왼쪽|
+|`!=`*op*, `<`*op*, `>`*op*, `=`, <code>&#124;</code>*op*, `&`*op*, `&`<br /><br />(`<<<`, `>>>`, <code>&#124;&#124;&#124;</code>, `&&&` 포함)|왼쪽|
 |`^`*연산자*<br /><br />(`^^^` 포함)|오른쪽|
 |`::`|오른쪽|
 |`:?`|결합성 없음|
@@ -146,7 +146,7 @@ ms.lasthandoff: 01/05/2018
 |`*`*연산자*, `/`*연산자*, `%`*연산자*|왼쪽|
 |`**`*연산자*|오른쪽|
 |`f x`(함수 적용)|왼쪽|
-|<code>&#124;</code>(패턴 일치)|오른쪽|
+|<code>&#124;</code> (패턴 일치)|오른쪽|
 |전위 연산자(`+`*연산자*, `-`*연산자*, `%`, `%%`, `&`, `&&`, `!`*연산자*, `~`*연산자*)|왼쪽|
 |`.`|왼쪽|
 |`f(x)`|왼쪽|

@@ -1,7 +1,7 @@
 ---
-title: ".NET Framework의 Docker"
-description: "Windows 컨테이너를 사용하여 Docker를 통해 .NET Framework 앱 배포에 관해 알아봅니다."
-keywords: ".NET, .NET 서버, Docker, Windows 컨테이너"
+title: .NET Framework의 Docker
+description: Windows 컨테이너를 사용하여 Docker를 통해 .NET Framework 앱 배포에 관해 알아봅니다.
+keywords: .NET, .NET 서버, Docker, Windows 컨테이너
 author: BillWagner
 ms.author: wiwagn
 ms.date: 09/28/2016
@@ -10,7 +10,8 @@ ms.prod: .net-framework
 ms.technology: dotnet-docker
 ms.devlang: dotnet
 ms.assetid: a27b2ae4-154e-4b2b-b221-0c4c05185274
-ms.workload: wiwagn
+ms.workload:
+- wiwagn
 ms.openlocfilehash: a87b1b90b4ca896b7c1e43ff80ae2f9301101c88
 ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT

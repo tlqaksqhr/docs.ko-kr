@@ -1,11 +1,13 @@
 ---
-title: "Visual Basic의 배열"
-ms.custom: 
+title: Visual Basic의 배열
+ms.custom: ''
 ms.date: 12/06/2017
 ms.prod: .net
-ms.technology: devlang-visual-basic
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
-f1_keywords: vb.Array
+f1_keywords:
+- vb.Array
 helpviewer_keywords:
 - arrays [Visual Basic]
 - Visual Basic, arrays

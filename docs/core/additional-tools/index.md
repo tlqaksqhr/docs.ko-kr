@@ -1,6 +1,6 @@
 ---
-title: ".NET Core 추가 도구"
-description: ".NET Core 기능을 지원하고 확장하는 추가 도구에 대한 개요입니다."
+title: .NET Core 추가 도구
+description: .NET Core 기능을 지원하고 확장하는 추가 도구에 대한 개요입니다.
 author: mlacouture
 manager: wpickett
 ms.author: johalex

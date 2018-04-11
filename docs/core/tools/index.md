@@ -1,6 +1,6 @@
 ---
-title: ".NET Core CLI(명령줄 인터페이스) 도구"
-description: ".NET Core CLI(명령줄 인터페이스) 도구 및 기능에 대한 개요입니다."
+title: .NET Core CLI(명령줄 인터페이스) 도구
+description: .NET Core CLI(명령줄 인터페이스) 도구 및 기능에 대한 개요입니다.
 author: mairaw
 ms.author: mairaw
 ms.date: 08/14/2017

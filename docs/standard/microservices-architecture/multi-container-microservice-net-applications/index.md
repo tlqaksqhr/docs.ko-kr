@@ -1,7 +1,7 @@
 ---
-title: "다중 컨테이너 및 마이크로 서비스 기반 .NET 응용 프로그램 디자인 및 개발"
-description: "컨테이너화된 .NET 응용 프로그램을 위한 .NET 마이크로 서비스 아키텍처 | 다중 컨테이너 및 마이크로 서비스 기반 .NET 응용 프로그램 디자인 및 개발"
-keywords: "Docker, 마이크로 서비스, ASP.NET, 컨테이너"
+title: 다중 컨테이너 및 마이크로 서비스 기반 .NET 응용 프로그램 디자인 및 개발
+description: 컨테이너화된 .NET 응용 프로그램을 위한 .NET 마이크로 서비스 아키텍처 | 다중 컨테이너 및 마이크로 서비스 기반 .NET 응용 프로그램 디자인 및 개발
+keywords: Docker, 마이크로 서비스, ASP.NET, 컨테이너
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017

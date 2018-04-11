@@ -1,7 +1,7 @@
 ---
-title: "컨테이너화된 앱을 위한 Microsoft 플랫폼 및 도구 소개"
-description: "Microsoft 플랫폼 및 도구를 사용하여 컨테이너화된 Docker 응용 프로그램 수명 주기"
-keywords: "Docker, 마이크로 서비스, ASP.NET, 컨테이너"
+title: 컨테이너화된 앱을 위한 Microsoft 플랫폼 및 도구 소개
+description: Microsoft 플랫폼 및 도구를 사용하여 컨테이너화된 Docker 응용 프로그램 수명 주기
+keywords: Docker, 마이크로 서비스, ASP.NET, 컨테이너
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/21/2017

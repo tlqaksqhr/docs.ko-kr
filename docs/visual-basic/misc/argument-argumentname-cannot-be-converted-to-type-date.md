@@ -1,12 +1,14 @@
 ---
-title: "인수 &#39; &lt;argumentname&gt;&#39; 형식의 &#39; 날짜 &#39; 변환할 수 없습니다."
+title: 인수 &#39; &lt;argumentname&gt;&#39; 형식의 &#39; 날짜 &#39; 변환할 수 없습니다.
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-visual-basic
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
-f1_keywords: vbrArgument_InvalidDateValue1
+f1_keywords:
+- vbrArgument_InvalidDateValue1
 ms.assetid: 928b8d75-f523-40c3-819a-03a1eb596ccc
-caps.latest.revision: "10"
+caps.latest.revision: 10
 author: dotnet-bot
 ms.author: dotnetcontent
 ms.openlocfilehash: 305c6fdd26522bc46bc171b9b334de8d357950fe

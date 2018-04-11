@@ -1,7 +1,7 @@
 ---
-title: "C# 대화형 자습서 - C# 빠른 시작"
-description: "브라우저에서 C#에 대해 알아보고 사용자만의 개발 환경을 시작합니다."
-keywords: "C#, 시작, 단원, 대화형"
+title: C# 대화형 자습서 - C# 빠른 시작
+description: 브라우저에서 C#에 대해 알아보고 사용자만의 개발 환경을 시작합니다.
+keywords: C#, 시작, 단원, 대화형
 author: billwagner
 ms.author: wiwagn
 ms.date: 01/30/2018

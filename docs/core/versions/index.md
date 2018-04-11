@@ -1,6 +1,6 @@
 ---
-title: ".NET Core 버전 관리"
-description: ".NET Core 버전 관리의 작동 방식을 이해합니다."
+title: .NET Core 버전 관리
+description: .NET Core 버전 관리의 작동 방식을 이해합니다.
 author: bleroy
 ms.author: mairaw
 ms.date: 02/13/2018

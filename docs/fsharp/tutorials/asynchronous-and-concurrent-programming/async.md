@@ -1,6 +1,6 @@
 ---
-title: "F #에서 비동기 프로그래밍"
-description: "언어 수준 프로그래밍 모델을 사용 하기 편리 하며 자연 언어를 통해 F # 비동기 프로그래밍은 수행 하는 방법을 알아봅니다."
+title: 'F #에서 비동기 프로그래밍'
+description: '언어 수준 프로그래밍 모델을 사용 하기 편리 하며 자연 언어를 통해 F # 비동기 프로그래밍은 수행 하는 방법을 알아봅니다.'
 keywords: .NET, .NET Core
 author: cartermp
 ms.author: phcart

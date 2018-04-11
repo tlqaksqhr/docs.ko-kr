@@ -1,7 +1,7 @@
 ---
-title: "Docker 컨테이너에 대해 .NET Core와 .NET Framework 중에 선택"
-description: "컨테이너화된 .NET 응용 프로그램에 대한 .NET 마이크로 서비스 아키텍처 | Docker 컨테이너에 대해 .NET Core와 .NET Framework 중에 선택"
-keywords: "Docker, 마이크로 서비스, ASP.NET, 컨테이너"
+title: Docker 컨테이너에 대해 .NET Core와 .NET Framework 중에 선택
+description: 컨테이너화된 .NET 응용 프로그램에 대한 .NET 마이크로 서비스 아키텍처 | Docker 컨테이너에 대해 .NET Core와 .NET Framework 중에 선택
+keywords: Docker, 마이크로 서비스, ASP.NET, 컨테이너
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017

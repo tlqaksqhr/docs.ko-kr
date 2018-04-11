@@ -1,6 +1,6 @@
 ---
 title: C# 연산자
-ms.date: 03/09/2017
+ms.date: 04/04/2018
 ms.prod: .net
 ms.technology:
 - devlang-csharp
@@ -25,11 +25,11 @@ ms.assetid: 0301e31f-22ad-49af-ac3c-d5eae7f0ac43
 caps.latest.revision: 40
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 14ebd489c48f53c8618cadf91f9744bb30f582d3
-ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
+ms.openlocfilehash: c62a168c845575e4fd3df212db379548926d2fab
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="c-operators"></a>C# 연산자
 C#에서는 많은 연산자를 제공하며, 이러한 연산자는 식에서 수행할 연산(수학, 인덱싱, 함수 호출 등)을 지정하는 기호입니다. 많은 연산자를 [오버로드](../../../csharp/programming-guide/statements-expressions-operators/overloadable-operators.md)하여 사용자 정의 형식에 적용되는 경우의 의미를 변경할 수 있습니다.  
@@ -101,7 +101,7 @@ C#에서는 많은 연산자를 제공하며, 이러한 연산자는 식에서 �
   
  [x / y](../../../csharp/language-reference/operators/division-operator.md) – 나누기 피연산자가 정수인 경우 결과는 0으로 잘린 정수입니다(예: `-7 / 2 is -3`).  
   
- [x % y](../../../csharp/language-reference/operators/modulus-operator.md) – 나머지 피연산자가 정수인 경우 x를 y로 나눈 나머지를 반환합니다.  `q = x / y`이고 `r = x % y`인 경우 `x = q * y + r`입니다.  
+ [x % y](../../../csharp/language-reference/operators/remainder-operator.md) - 나머지. 피연산자가 정수인 경우 x를 y로 나눈 나머지를 반환합니다.  `q = x / y`이고 `r = x % y`인 경우 `x = q * y + r`입니다.  
   
 ## <a name="additive-operators"></a>더하기 연산자  
  이러한 연산자는 다음 섹션보다 우선 순위가 높고 이전 섹션보다 우선 순위가 낮습니다.  
@@ -187,7 +187,7 @@ C#에서는 많은 연산자를 제공하며, 이러한 연산자는 식에서 �
   
  [x /= y](../../../csharp/language-reference/operators/division-assignment-operator.md) – 나누기 대입. `x`의 값을 `y`의 값으로 나누고 결과를 `x`에 저장한 다음 새 값을 반환합니다.  
   
- [x %= y](../../../csharp/language-reference/operators/modulus-assignment-operator.md) – 모듈러스 대입. `x`의 값을 `y`의 값으로 나누고 나머지를 `x`에 저장한 다음 새 값을 반환합니다.  
+ [x %= y](../../../csharp/language-reference/operators/remainder-assignment-operator.md) – 나머지 할당. `x`의 값을 `y`의 값으로 나누고 나머지를 `x`에 저장한 다음 새 값을 반환합니다.  
   
  [x &= y](../../../csharp/language-reference/operators/and-assignment-operator.md) – AND 대입. `y`의 값을 `x`의 값과 AND하고 결과를 `x`에 저장한 다음 새 값을 반환합니다.  
   

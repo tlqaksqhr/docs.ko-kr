@@ -1,7 +1,7 @@
 ---
-title: "특성 - C#"
-description: "C#에서 특성이 작동하는 방식을 알아봅니다."
-keywords: ".NET, .NET Core, C#, 특성"
+title: 특성 - C#
+description: C#에서 특성이 작동하는 방식을 알아봅니다.
+keywords: .NET, .NET Core, C#, 특성
 author: mgroves
 ms.author: wiwagn
 ms.date: 03/06/2017

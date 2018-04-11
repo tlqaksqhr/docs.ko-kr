@@ -1,7 +1,7 @@
 ---
-title: "값(F#)"
-description: "F #의 값은 특정 유형이 있는 수량 방법에 대해 알아봅니다."
-keywords: "visual f#, f#, 함수형 프로그래밍"
+title: 값(F#)
+description: 'F #의 값은 특정 유형이 있는 수량 방법에 대해 알아봅니다.'
+keywords: visual f#, f#, 함수형 프로그래밍
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016

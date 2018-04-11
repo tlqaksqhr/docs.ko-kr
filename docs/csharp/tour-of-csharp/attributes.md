@@ -1,7 +1,7 @@
 ---
-title: "C# 특성 - C# 언어 둘러보기"
-description: "C#에서 특성을 사용하는 선언적 프로그래밍에 대해 알아보기"
-keywords: ".NET, c샵"
+title: C# 특성 - C# 언어 둘러보기
+description: C#에서 특성을 사용하는 선언적 프로그래밍에 대해 알아보기
+keywords: .NET, c샵
 author: BillWagner
 ms.author: wiwagn
 ms.date: 08/10/2016

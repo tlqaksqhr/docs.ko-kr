@@ -15,14 +15,14 @@ helpviewer_keywords:
 - XML axis [Visual Basic], Value
 - XML Value property [Visual Basic]
 ms.assetid: 7ddd057a-a195-4e9b-ad8b-2ee0e615a20f
-caps.latest.revision: ''
+caps.latest.revision: 18
 author: dotnet-bot
 ms.author: dotnetcontent
 ms.openlocfilehash: d9294c2d1d83dce3bca2abc22ee9c70296fc8014
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="xml-value-property-visual-basic"></a>XML Value 속성(Visual Basic)
 컬렉션의 첫 번째 요소 값에 대 한 액세스를 제공 <xref:System.Xml.Linq.XElement> 개체입니다.  
@@ -46,7 +46,7 @@ object.Value
  <xref:System.Xml.Linq.XElement.Value%2A> 속성을 사용 하면 컬렉션의 첫 번째 요소 값에 액세스 하기가 쉽지 <xref:System.Xml.Linq.XElement> 개체입니다. 이 속성은 먼저는 컬렉션 개체를 하나 이상 포함 되어 있는지 확인 합니다. 이 속성을 반환 하는 경우 컬렉션은 비어, `Nothing`합니다. 이 속성의 값을 반환 하는 그렇지 않은 경우는 <xref:System.Xml.Linq.XElement.Value%2A> 속성 컬렉션의 첫 번째 요소입니다.  
   
 > [!NOTE]
->  사용 하 여 XML 특성의 값에 액세스할 때는 '@' 식별자, 특성 값으로 반환 됩니다는 `String` 명시적으로 지정할 필요가 없습니다는 <xref:System.Xml.Linq.XAttribute.Value%2A> 속성입니다.  
+>  사용 하 여 XML 특성의 값에 액세스할 때는 '\@' 식별자, 특성 값으로 반환 됩니다는 `String` 명시적으로 지정할 필요가 없습니다는 <xref:System.Xml.Linq.XAttribute.Value%2A> 속성입니다.  
   
  컬렉션의 다른 요소에 액세스 하려면 XML 확장 인덱서 속성을 사용할 수 있습니다. 자세한 내용은 참조 [확장 인덱서 속성](../../../visual-basic/language-reference/xml-axis/extension-indexer-property.md)합니다.  
   

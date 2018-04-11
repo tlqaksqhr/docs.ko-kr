@@ -1,28 +1,28 @@
 ---
-title: ".NET으로 병렬 프로그래밍"
-ms.custom: 
+title: .NET으로 병렬 프로그래밍
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - parallel programming
 ms.assetid: 4d83c690-ad2d-489e-a2e0-b85b898a672d
-caps.latest.revision: 
+caps.latest.revision: 19
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 554de5d65929afc03b57bdc604ceeb6ac35362d4
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: c0ea65b0a61719c85ab1da53bcc99f5d43a3210b
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="parallel-programming-in-net"></a>.NET으로 병렬 프로그래밍
 여러 개인용 컴퓨터 및 워크스테이션에는 코어, 즉 CPU가 2개 또는 4개 있기 때문에 다중 스레드가 동시에 실행될 수 있습니다. 가까운 미래에 컴퓨터의 코어 수는 대폭 증가할 것으로 예상됩니다. 현재 및 미래의 하드웨어를 활용하기 위해 코드를 병렬화하여 작업을 여러 프로세스에 분산할 수 있습니다. 이전의 병렬화에서는 스레드 및 잠금에 대한 저수준 조작이 필요했습니다. [!INCLUDE[vs_dev10_long](../../../includes/vs-dev10-long-md.md)] 및 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]에서는 새로운 런타임, 새로운 클래스 라이브러리 형식 및 새로운 진단 도구를 제공하여 병렬 프로그래밍에 대한 지원이 향상되었습니다. 이러한 기능은 병렬 개발을 단순화하기 때문에 개발자는 스레드 또는 스레드 풀을 직접 건드릴 필요 없이 효율적이고 세부적이고 확장명 가능한 병렬 코드를 자연스러운 언어로 작성할 수 있습니다. 다음 그림에서는 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]의 병렬 프로그래밍 아키텍처에 대한 간략한 개요를 제공합니다.  
@@ -43,5 +43,5 @@ ms.lasthandoff: 12/23/2017
 |[추가 정보](../../../docs/standard/parallel-programming/for-further-reading-parallel-programming.md)|.NET Framework의 병렬 프로그래밍과 관련된 추가적 설명서 및 샘플 리소스에 대한 링크를 제공합니다.|  
   
 ## <a name="see-also"></a>참고 항목  
- [병렬 프로그래밍 패턴: .NET Framework 4의 병렬 패턴 이해 및 적용](http://go.microsoft.com/fwlink/?LinkID=185142)  
+ [병렬 프로그래밍 패턴: .NET Framework 4의 병렬 패턴 이해 및 적용](https://www.microsoft.com/download/details.aspx?id=19222)  
  [NET Framework를 사용한 병렬 프로그래밍 샘플](http://code.msdn.microsoft.com/Samples-for-Parallel-b4b76364)

@@ -1,7 +1,7 @@
 ---
-title: "Windows 컨테이너로 레거시 모놀리식 .NET Framework 응용 프로그램 마이그레이션"
-description: "컨테이너화된 .NET 응용 프로그램을 위한 .NET 마이크로 서비스 아키텍처 | Windows 컨테이너로 레거시 모놀리식 .NET Framework 응용 프로그램 마이그레이션"
-keywords: "Docker, 마이크로 서비스, ASP.NET, 컨테이너"
+title: Windows 컨테이너로 레거시 모놀리식 .NET Framework 응용 프로그램 마이그레이션
+description: 컨테이너화된 .NET 응용 프로그램을 위한 .NET 마이크로 서비스 아키텍처 | Windows 컨테이너로 레거시 모놀리식 .NET Framework 응용 프로그램 마이그레이션
+keywords: Docker, 마이크로 서비스, ASP.NET, 컨테이너
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017

@@ -1,6 +1,6 @@
 ---
-title: "Get 함수 (관리 되지 않는 API 참조)"
-description: "Get 함수는 지정된 된 속성 값을 검색합니다."
+title: Get 함수 (관리 되지 않는 API 참조)
+description: Get 함수는 지정된 된 속성 값을 검색합니다.
 ms.date: 11/06/2017
 ms.prod: .net-framework
 ms.technology:

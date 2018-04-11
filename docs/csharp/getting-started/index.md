@@ -1,7 +1,7 @@
 ---
-title: "시작 - C# 가이드"
-description: "기초 C # 개념을 빨리 배우고 .NET Core 응용 프로그램을 작성할 수 있는 짧고 간단한 자습서를 찾아보세요."
-keywords: "C#, 시작, 취득, 설치"
+title: 시작 - C# 가이드
+description: '기초 C # 개념을 빨리 배우고 .NET Core 응용 프로그램을 작성할 수 있는 짧고 간단한 자습서를 찾아보세요.'
+keywords: C#, 시작, 취득, 설치
 helpviewer_keywords:
 - Visual C#, getting started
 - getting started, Visual C#
@@ -12,11 +12,11 @@ ms.topic: article
 ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
-ms.openlocfilehash: 002c0e35bc8dfb54fc081fcb70000c9c61eb5fcc
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: f335ee1412932043b175aa49b29ecd360d447eb9
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="get-started-with-c"></a>C# 시작 #
 
@@ -43,10 +43,6 @@ ms.lasthandoff: 10/18/2017
    Visual Studio Code는 현대적인 웹 및 클라우드 응용 프로그램을 빌드 및 디버깅하기 위해 최적화된 강력한 코드 편집기입니다. IntelliSense를 지원하고 Windows, macOS, Linux에 사용할 수 있습니다.
 
    이 항목에서는 Visual Studio Code 및 .NET Core를 사용하여 간단한 Hello World 응용 프로그램을 만들고 실행하는 방법을 보여 줍니다.
-
-* [Visual C# 프로그래머를 위한 추가 리소스](additional-resources.md)
-
-   일반적인 문제 해결 방법을 찾는 경우 참조할 수 있는 웹 사이트 및 뉴스 그룹의 링크를 제공합니다.
 
 ## <a name="related-sections"></a>관련 단원
 

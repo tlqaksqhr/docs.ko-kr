@@ -1,5 +1,5 @@
 ---
-title: "using 정적 지시문(C# 참조)"
+title: using 정적 지시문(C# 참조)
 ms.date: 03/10/2017
 ms.prod: .net
 ms.technology:

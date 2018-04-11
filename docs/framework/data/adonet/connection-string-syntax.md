@@ -1,24 +1,26 @@
 ---
-title: "연결 문자열 구문"
-ms.custom: 
+title: 연결 문자열 구문
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 0977aeee-04d1-4cce-bbed-750c77fce06e
-caps.latest.revision: "11"
+caps.latest.revision: 11
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 9c7edc59ecb71c4b201b77c993fc839f5700abe3
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: 76d8765be1dc24f4b8c457644595796680c2f2c3
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="connection-string-syntax"></a>연결 문자열 구문
 각 .NET Framework 데이터 공급자에는 `Connection`뿐 아니라 공급자별 <xref:System.Data.Common.DbConnection> 속성에서 상속되는 <xref:System.Data.Common.DbConnection.ConnectionString%2A> 개체가 있습니다. 각 공급자의 특정 연결 문자열 구문은 해당 `ConnectionString` 속성에 설명되어 있습니다. 다음 표에서는 .NET Framework에 포함되어 있는 네 개의 데이터 공급자를 보여 줍니다.  
@@ -42,7 +44,7 @@ ms.lasthandoff: 01/17/2018
 -   <xref:System.Data.OracleClient.OracleConnectionStringBuilder>  
   
  연결 문자열 작성기를 사용하면 구문이 올바른 연결 문자열을 런타임에 작성할 수 있기 때문에 코드에 연결 문자열 값을 직접 연결하지 않아도 됩니다. 자세한 내용은 참조 [연결 문자열 작성기](../../../../docs/framework/data/adonet/connection-string-builders.md)합니다.  
-  
+
 ## <a name="windows-authentication"></a>Windows 인증  
  Windows 인증을 사용 하는 것이 좋습니다 (라고도 *통합 보안*)를 지 원하는 데이터 원본에 연결 합니다. 연결 문자열에 사용되는 구문은 공급자별로 다릅니다. 다음 표에서는 .NET Framework 데이터 공급자에서 사용되는 Windows 인증 구문을 보여 줍니다.  
   
@@ -57,9 +59,13 @@ ms.lasthandoff: 01/17/2018
 >  `Integrated Security=true` 공급자와 함께 사용하는 경우 `OleDb`이면 예외가 throw됩니다.  
   
 ## <a name="sqlclient-connection-strings"></a>SqlClient 연결 문자열  
- <xref:System.Data.SqlClient.SqlConnection> 연결 문자열의 구문은 <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A?displayProperty=nameWithType> 속성에 설명되어 있습니다. <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A> 속성을 사용하면 SQL Server 데이터베이스에 대한 연결 문자열을 가져오거나 설정할 수 있습니다. 이전 버전의 SQL Server에 연결해야 하는 경우에는 .NET Framework Data Provider for OleDb(<xref:System.Data.OleDb>)를 사용해야 합니다. 대부분의 연결 문자열 키워드는 또한 <xref:System.Data.SqlClient.SqlConnectionStringBuilder>의 속성에 매핑됩니다.  
-  
- Windows 인증을 사용 하 여 연결할는 각각 다음과 같은 형태의 구문은 **AdventureWorks** 로컬 서버에는 데이터베이스입니다.  
+<xref:System.Data.SqlClient.SqlConnection> 연결 문자열의 구문은 <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A?displayProperty=nameWithType> 속성에 설명되어 있습니다. <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A> 속성을 사용하면 SQL Server 데이터베이스에 대한 연결 문자열을 가져오거나 설정할 수 있습니다. 이전 버전의 SQL Server에 연결해야 하는 경우에는 .NET Framework Data Provider for OleDb(<xref:System.Data.OleDb>)를 사용해야 합니다. 대부분의 연결 문자열 키워드는 또한 <xref:System.Data.SqlClient.SqlConnectionStringBuilder>의 속성에 매핑됩니다.  
+
+> [!IMPORTANT]
+>  에 대 한 기본 설정은 `Persist Security Info` 키워드는 `false`합니다. 이 키워드를 `true` 또는 `yes`로 설정하면 연결이 열린 다음 연결에서 사용자 ID 및 암호와 같은 보안 관련 정보를 얻을 수 있습니다. 유지 `Persist Security Info` 로 설정 `false` 하려면 신뢰할 수 없는 소스는 중요 한 연결 문자열 정보에 액세스할 수 없습니다.  
+
+### <a name="windows-authentication-with-sqlclient"></a>SqlClient와 함께 Windows 인증 
+ 에 연결할 Windows 인증을 사용 하는 각각 다음과 같은 형태의 구문은 **AdventureWorks** 로컬 서버에는 데이터베이스입니다.  
   
 ```  
 "Persist Security Info=False;Integrated Security=true;  
@@ -70,26 +76,26 @@ ms.lasthandoff: 01/17/2018
     database=AdventureWorks;server=(local)"  
 ```  
   
-### <a name="sql-server-logins"></a>SQL Server 로그인  
+### <a name="sql-server-authentication-with-sqlclient"></a>SqlClient와 함께 SQL Server 인증   
  SQL Server에 연결하기 위해 기본적으로 Windows 인증이 사용됩니다. 그러나 SQL Server 인증이 필요한 경우 다음 구문을 사용하여 사용자 이름과 암호를 지정하세요. 이 예제에서 유효한 사용자 이름과 암호를 나타내기 위해 별표를 사용합니다.  
   
 ```  
 "Persist Security Info=False;User ID=*****;Password=*****;Initial Catalog=AdventureWorks;Server=MySqlServer"  
 ```  
-  
-> [!IMPORTANT]
->  에 대 한 기본 설정은 `Persist Security Info` 키워드는 `false`합니다. 이 키워드를 `true` 또는 `yes`로 설정하면 연결이 열린 다음 연결에서 사용자 ID 및 암호와 같은 보안 관련 정보를 얻을 수 있습니다. 유지 `Persist Security Info` 로 설정 `false` 하려면 신뢰할 수 없는 소스는 중요 한 연결 문자열 정보에 액세스할 수 없습니다.  
-  
- SQL Server의 명명된 된 인스턴스를 연결 하려면 사용 된 *서버 이름 \ 인스턴스 이름* 구문입니다.  
+
+Azure SQL 데이터 웨어하우스 또는 Azure SQL 데이터베이스에 연결 하 고 형식에서 로그인을 제공할 `user@servername`, 있는지 확인은 `servername` 로그인의 값에 제공 된 값이 일치 `Server=`합니다.
+
+> [!NOTE]
+>  Windows 인증은 SQL Server 로그인에 우선적으로 적용됩니다. Integrated Security=true와 사용자 이름 및 암호를 모두 지정하는 경우 사용자 이름과 암호는 무시되고 Windows 인증이 사용됩니다.  
+
+### <a name="connect-to-a-named-instance-of-sql-server"></a>SQL Server의 명명 된 인스턴스에 연결
+SQL Server의 명명된 된 인스턴스를 연결 하려면 사용 된 *서버 이름 \ 인스턴스 이름* 구문입니다.  
   
 ```  
 Data Source=MySqlServer\MSSQL1;"  
 ```  
-  
- 연결 문자열을 작성할 때 <xref:System.Data.SqlClient.SqlConnectionStringBuilder.DataSource%2A>의 `SqlConnectionStringBuilder` 속성을 인스턴스 이름으로 설정할 수도 있습니다. <xref:System.Data.SqlClient.SqlConnection.DataSource%2A> 개체의 <xref:System.Data.SqlClient.SqlConnection> 속성은 읽기 전용입니다.  
-  
-> [!NOTE]
->  Windows 인증은 SQL Server 로그인에 우선적으로 적용됩니다. Integrated Security=true와 사용자 이름 및 암호를 모두 지정하는 경우 사용자 이름과 암호는 무시되고 Windows 인증이 사용됩니다.  
+ 
+연결 문자열을 작성할 때 <xref:System.Data.SqlClient.SqlConnectionStringBuilder.DataSource%2A>의 `SqlConnectionStringBuilder` 속성을 인스턴스 이름으로 설정할 수도 있습니다. <xref:System.Data.SqlClient.SqlConnection.DataSource%2A> 개체의 <xref:System.Data.SqlClient.SqlConnection> 속성은 읽기 전용입니다.  
   
 ### <a name="type-system-version-changes"></a>Type System Version 변경 내용  
  `Type System Version` 내의 <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A?displayProperty=nameWithType> 키워드는 [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] 형식의 클라이언트 측 표현을 지정합니다. <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A?displayProperty=nameWithType> 키워드에 대한 자세한 내용은 `Type System Version`을 참조하세요.  

@@ -1,5 +1,5 @@
 ---
-title: "액세스 키워드(C# 참조)"
+title: 액세스 키워드(C# 참조)
 ms.date: 07/20/2015
 ms.prod: .net
 ms.technology:
@@ -8,7 +8,7 @@ ms.topic: article
 helpviewer_keywords:
 - access keywords [C#]
 ms.assetid: 3b680d9c-0998-42df-8ba7-5783f7abda75
-caps.latest.revision: 
+caps.latest.revision: 10
 author: BillWagner
 ms.author: wiwagn
 ms.openlocfilehash: c66378c3a61eef9f67994af6af425f79f1adf409

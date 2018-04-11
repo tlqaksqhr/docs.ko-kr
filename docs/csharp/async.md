@@ -1,6 +1,6 @@
 ---
-title: "비동기 프로그래밍"
-description: ".NET Core에서 제공하는 C# 언어 수준 비동기 프로그래밍 모델에 대해 알아봅니다."
+title: 비동기 프로그래밍
+description: .NET Core에서 제공하는 C# 언어 수준 비동기 프로그래밍 모델에 대해 알아봅니다.
 keywords: .NET, .NET Core
 author: cartermp
 ms.author: wiwagn

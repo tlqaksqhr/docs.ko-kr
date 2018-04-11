@@ -1,7 +1,7 @@
 ---
-title: "F #을 사용 하 여 Azure Blob 저장소 시작"
-description: "Azure Blob 저장소와 함께 클라우드에 구조화 되지 않은 데이터를 저장 합니다."
-keywords: "visual f #, f #, 기능 프로그래밍,.NET,.NET Core를 Azure"
+title: 'F #을 사용 하 여 Azure Blob 저장소 시작'
+description: Azure Blob 저장소와 함께 클라우드에 구조화 되지 않은 데이터를 저장 합니다.
+keywords: 'visual f #, f #, 기능 프로그래밍,.NET,.NET Core를 Azure'
 author: sylvanc
 ms.author: phcart
 ms.date: 09/20/2016
@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: c5b74a4f-dcd1-4849-930c-904b6c8a04e1
-ms.openlocfilehash: 5be948e100c496bc6613f1fdfb826ece5de6df8e
-ms.sourcegitcommit: 655fd4f78741967f80c409cef98347fdcf77857d
+ms.openlocfilehash: 14ccba36638c724536793a6a589cf1c0a6186eeb
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="get-started-with-azure-blob-storage-using-f"></a>F #을 사용 하 여 Azure Blob 저장소 시작 #
 
@@ -24,7 +24,7 @@ Azure Blob Storage는 클라우드에서 구조화되지 않은 데이터를 개
 
 Blob 저장소의 개념적인 개요를 참조 하십시오. [blob 저장소에 대 한.NET 가이드](/azure/storage/storage-dotnet-how-to-use-blobs)합니다.
 
-## <a name="prerequisites"></a>필수 구성 요소
+## <a name="prerequisites"></a>전제 조건
 
 이 가이드를 사용 하려면 먼저 [Azure 저장소 계정 만들기](/azure/storage/storage-create-storage-account)합니다. 또한이 계정에 대 한 저장소 액세스 키에 필요 합니다.
 
@@ -247,7 +247,7 @@ Blob 저장소의 기본 사항 학습 한, 했으므로 자세한 내용을 보
 
 ### <a name="related-guides"></a>관련된 지침
 
-- [C#에서 Azure Blob 저장소 시작](https://azure.microsoft.com/documentation/samples/storage-blob-dotnet-getting-started/)
+- [C#에서 Azure Blob 저장소 시작](https://azure.microsoft.com/resources/samples/storage-blob-dotnet-getting-started/)
 - [Windows에서 AzCopy 명령줄 유틸리티를 사용 하 여 데이터를 전송 합니다.](/azure/storage/common/storage-use-azcopy)
 - [Linux에서 AzCopy 명령줄 유틸리티를 사용 하 여 데이터를 전송 합니다.](/azure/storage/common/storage-use-azcopy-linux)
 - [Azure 저장소 연결 문자열 구성](/azure/storage/common/storage-configure-connection-string)

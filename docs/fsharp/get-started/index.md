@@ -1,7 +1,7 @@
 ---
-title: "F # 시작"
-description: "F # 언어.net에서 프로그래밍을 시작 하는 방법을 알아봅니다."
-keywords: "visual f#, f#, 함수형 프로그래밍, .NET, .NET Core"
+title: 'F # 시작'
+description: 'F # 언어.net에서 프로그래밍을 시작 하는 방법을 알아봅니다.'
+keywords: visual f#, f#, 함수형 프로그래밍, .NET, .NET Core
 author: cartermp
 ms.author: phcart
 ms.date: 09/06/2016

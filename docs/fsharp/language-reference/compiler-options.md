@@ -11,10 +11,10 @@ ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: c797cf0b-5953-4053-8626-0558e9eaf10f
 ms.openlocfilehash: 23731832141bc2f74a04c5f4027fc210b5589537
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="compiler-options"></a>컴파일러 옵션
 
@@ -67,7 +67,7 @@ ms.lasthandoff: 03/26/2018
 |**--staticlink:&lt;assembly-name**&gt;|지정된 된 어셈블리 및이 어셈블리에 종속 된 모든 참조 Dll을 정적으로 연결 합니다. DLL 이름이 아니라 어셈블리 이름을 사용 합니다.|
 |**--subsystemversion**|생성된 된 실행 파일에서 사용할 운영 체제 하위 시스템의 버전을 지정 합니다. Windows 8.1, windows 7, Windows Vista 용 6.00 6.01에 6.02를 사용 합니다. 만이 옵션 실행 파일, Dll이 아니라에 적용 하 고 응용 프로그램이 특정 버전의 운영 체제에만 사용할 수 있는 특정 보안 기능에 종속 하는 경우에 사용 해야 합니다. 이 옵션을 사용 하는 경우 사용자가 더 낮은 버전의 운영 체제에서 응용 프로그램을 실행 하는 오류 메시지와 함께 실패 합니다.|
 |**--tailcalls**[**+**&#124;**-**]|비상 IL 명령의 스택 프레임을 마무리 재귀 함수에 대 한 다시 사용할 수는 사용 하지 않도록 설정 하거나 사용 합니다. 기본적으로 이 옵션은 사용하도록 설정됩니다.|
-|**-대상**: [**exe** &#124; **winexe** &#124; **라이브러리** &#124; **모듈** ]  **&lt;출력 파일 이름&gt;**|생성된 된 컴파일된 코드의 형식 및 파일 이름을 지정합니다.<ul><li>**exe** 콘솔 응용 프로그램을 의미 합니다.<br /></li><li>**winexe** 는 콘솔 응용 프로그램은 표준 입력/출력 스트림 (stdin, stdout 및 stderr) 정의 없는 한다는 점에서 다른 Windows 응용 프로그램을 의미 합니다.<br /></li><li>**라이브러리** 진입점이 없는 어셈블리입니다.<br /></li><li>**모듈** 은 나중에 사용할 수와 다른 모듈 어셈블리는.NET Framework 모듈 (.netmodule).<br /></li><ul/>이 컴파일러 옵션은 이름이 동일한 C# 컴파일러 옵션에 해당 합니다. 자세한 내용은 참조 [ &#47;대상 &#40;C&#35; 컴파일러 옵션&#41;](https://msdn.microsoft.com/library/6h25dztx.aspx)합니다.|
+|**--target**:[**exe** &#124; **winexe** &#124; **library** &#124; **module** ] **&lt;output-filename&gt;**|생성된 된 컴파일된 코드의 형식 및 파일 이름을 지정합니다.<ul><li>**exe** 콘솔 응용 프로그램을 의미 합니다.<br /></li><li>**winexe** 는 콘솔 응용 프로그램은 표준 입력/출력 스트림 (stdin, stdout 및 stderr) 정의 없는 한다는 점에서 다른 Windows 응용 프로그램을 의미 합니다.<br /></li><li>**라이브러리** 진입점이 없는 어셈블리입니다.<br /></li><li>**모듈** 은 나중에 사용할 수와 다른 모듈 어셈블리는.NET Framework 모듈 (.netmodule).<br /></li><ul/>이 컴파일러 옵션은 이름이 동일한 C# 컴파일러 옵션에 해당 합니다. 자세한 내용은 참조 [ &#47;대상 &#40;C&#35; 컴파일러 옵션&#41;](https://msdn.microsoft.com/library/6h25dztx.aspx)합니다.|
 |**--times**|컴파일에 대 한 시간 정보를 표시 합니다.|
 |**--utf8output**|U t F-8 인코딩으로 컴파일러 출력을 인쇄할 수 있습니다.|
 |**--warn:&lt;warning-level&gt;**|경고 수준 (0 ~ 5)를 설정합니다. 기본값은 3입니다. 각 경고의 심각도 수준을 지정 됩니다. 수준 5는 수준 1 보다 더 적은 심각, 경고를 제공합니다.<br /><br />경고 수준 5는: (재귀 사용 하 여 런타임 시 검사) 21, 22 (**let rec** 순서와 다르게 평가), 45 (전체 추상화) 및 52 (방어 복사). 다른 모든 경고는 수준 2입니다.<br /><br />이 컴파일러 옵션은 이름이 동일한 C# 컴파일러 옵션에 해당 합니다. 자세한 내용은 참조 [ &#47;경고 &#40;C&#35; 컴파일러 옵션&#41;](https://msdn.microsoft.com/library/13b90fz7.aspx)합니다.|

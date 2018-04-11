@@ -1,7 +1,7 @@
 ---
-title: "F# Interactive(fsi.exe) 참조"
-description: "F # Interactive (fsi.exe) 사용량 콘솔에 F # 코드를 대화형으로 실행 하거나 F # 스크립트를 실행 하에 대해 알아봅니다."
-keywords: "visual f#, f#, 함수형 프로그래밍"
+title: F# Interactive(fsi.exe) 참조
+description: 'F # Interactive (fsi.exe) 사용량 콘솔에 F # 코드를 대화형으로 실행 하거나 F # 스크립트를 실행 하에 대해 알아봅니다.'
+keywords: visual f#, f#, 함수형 프로그래밍
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016

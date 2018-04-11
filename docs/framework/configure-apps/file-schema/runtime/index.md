@@ -1,13 +1,13 @@
 ---
-title: "런타임 설정 스키마"
-ms.custom: 
+title: 런타임 설정 스키마
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - schema runtime settings

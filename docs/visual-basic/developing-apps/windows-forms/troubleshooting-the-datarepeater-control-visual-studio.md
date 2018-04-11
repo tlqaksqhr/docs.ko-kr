@@ -1,23 +1,25 @@
 ---
-title: "DataRepeater 컨트롤 문제 해결(Visual Studio)"
+title: DataRepeater 컨트롤 문제 해결(Visual Studio)
 ms.date: 07/20/2015
 ms.prod: .net
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 dev_langs:
 - csharp
 - vb
-helpviewer_keywords: DataRepeater, troubleshooting
+helpviewer_keywords:
+- DataRepeater, troubleshooting
 ms.assetid: c0ab9469-eced-4f52-aa18-4bd8dd4f1a9a
-caps.latest.revision: "10"
+caps.latest.revision: 10
 author: dotnet-bot
 ms.author: dotnetcontent
 ms.openlocfilehash: 2d630dbf8601eeddd5ce3ea02696891a1087f71f
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="troubleshooting-the-datarepeater-control-visual-studio"></a>DataRepeater 컨트롤 문제 해결(Visual Studio)
 이 항목에서는 사용 하 여 작업할 때 발생할 수 있는 일반적인 문제는 <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> 제어 합니다.  
@@ -61,7 +63,7 @@ dataRepeater1.Top = productsBindingNavigator.Height;
   
 -   경우는 <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.ItemHeaderSize%2A> 속성이 11 보다 작은 값으로 설정 되 면 표시기 기호 항목 머리글에서 표시 되지 것입니다.  
   
- 헤더 및 선택 사용자 고유의 항목 기호로 사용 하 여 제공할 수 있습니다는 <xref:System.Windows.Forms.PictureBox> 제어 및 모니터링는 <xref:Microsoft.VisualBasic.PowerPacks.DataRepeaterItem.IsCurrent%2A> 속성은 <xref:Microsoft.VisualBasic.PowerPacks.DataRepeaterItem> 에 <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.DrawItem> 의 이벤트는 <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> 제어 합니다. 자세한 내용은 <xref:Microsoft.VisualBasic.PowerPacks.DataRepeaterItem.IsCurrent%2A>을 참조하십시오.  
+ 헤더 및 선택 사용자 고유의 항목 기호로 사용 하 여 제공할 수 있습니다는 <xref:System.Windows.Forms.PictureBox> 제어 및 모니터링는 <xref:Microsoft.VisualBasic.PowerPacks.DataRepeaterItem.IsCurrent%2A> 속성은 <xref:Microsoft.VisualBasic.PowerPacks.DataRepeaterItem> 에 <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.DrawItem> 의 이벤트는 <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> 제어 합니다. 자세한 내용은 <xref:Microsoft.VisualBasic.PowerPacks.DataRepeaterItem.IsCurrent%2A>을 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
  [DataRepeater 컨트롤 소개](../../../visual-basic/developing-apps/windows-forms/introduction-to-the-datarepeater-control-visual-studio.md)  

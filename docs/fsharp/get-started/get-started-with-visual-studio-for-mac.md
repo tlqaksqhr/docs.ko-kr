@@ -1,20 +1,18 @@
 ---
-title: "Mac 용 Visual Studio에서 F #으로 시작"
-description: "F # Visual Studio와 함께 사용할 Mac. 하는 방법을 알아봅니다"
-keywords: "visual f#, f#, 함수형 프로그래밍"
-author: mizzle-mo
+title: 'Mac 용 Visual Studio에서 F #으로 시작'
+description: 'F # Visual Studio와 함께 사용할 Mac. 하는 방법을 알아봅니다'
+author: cartermp
 ms.author: phcart
 ms.date: 02/13/2017
 ms.topic: article
 ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
-ms.assetid: 8db75596-19a9-4eda-b20d-a12d517c8cc1
-ms.openlocfilehash: 776a2ddf5563a954e462b3888ebf05da90241e4b
-ms.sourcegitcommit: 655fd4f78741967f80c409cef98347fdcf77857d
+ms.openlocfilehash: f56d67a7ecb9c68703638cbe05d8531891c132cd
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="get-started-with-f-in-visual-studio-for-mac"></a>Mac 용 Visual Studio에서 F #으로 시작
 
@@ -126,7 +124,7 @@ val it : bool = true
 
 아직 하지 않는 경우 체크 아웃의 [둘러보기의 F #](../tour.md)는 F # 언어의 핵심 기능 중 일부에 대해 설명 합니다.  F #의 기능 중 일부에 대 한 개요를 제공 하 고 Mac 용 Visual Studio로 복사 하 고 실행할 수 있는 충분 한 코드 예제를 제공 합니다.  사용할 수는 몇 가지 외부 리소스는 또한에서 보여 줍니다는 [F # 가이드](../index.md)합니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참고자료
  [Visual F#](../index.md)  
  [F# 둘러보기](../tour.md)  
  [F # 언어 참조](../language-reference/index.md)  

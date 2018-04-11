@@ -1,7 +1,7 @@
 ---
-title: "복원력 있는 응용 프로그램 구현"
-description: "컨테이너화된 .NET 응용 프로그램을 위한 .NET 마이크로 서비스 아키텍처 | 복원력 있는 응용 프로그램 구현"
-keywords: "Docker, 마이크로 서비스, ASP.NET, 컨테이너"
+title: 복원력 있는 응용 프로그램 구현
+description: 컨테이너화된 .NET 응용 프로그램을 위한 .NET 마이크로 서비스 아키텍처 | 복원력 있는 응용 프로그램 구현
+keywords: Docker, 마이크로 서비스, ASP.NET, 컨테이너
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017

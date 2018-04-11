@@ -1,13 +1,13 @@
 ---
-title: "ICorDebug::CreateProcess 메서드"
-ms.custom: 
+title: ICorDebug::CreateProcess 메서드
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - ICorDebug.CreateProcess
@@ -23,17 +23,17 @@ helpviewer_keywords:
 ms.assetid: b6128694-11ed-46e7-bd4e-49ea1914c46a
 topic_type:
 - apiref
-caps.latest.revision: 
+caps.latest.revision: 21
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
 ms.openlocfilehash: 16e45f3bad92914ce8c7fb0044534789a7a28b2e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="icordebugcreateprocess-method"></a>ICorDebug::CreateProcess 메서드
 프로세스와 디버거 제어 기본 스레드를 시작합니다.  
@@ -97,7 +97,7 @@ HRESULT CreateProcess (
 ## <a name="remarks"></a>설명  
  이 메서드의 매개 변수는 Win32의와 동일 `CreateProcess` 메서드.  
   
- 관리 되지 않는 혼합 모드 디버깅을 사용 하려면 설정 `dwCreationFlags` DEBUG_PROCESS &#124; DEBUG_ONLY_THIS_PROCESS 합니다. 관리 되는 디버깅만 사용 하려는 경우에 이러한 플래그를 설정 하지 마십시오.  
+ 관리 되지 않는 혼합 모드 디버깅을 사용 하려면 설정 `dwCreationFlags` DEBUG_PROCESS를 &#124; DEBUG_ONLY_THIS_PROCESS 합니다. 관리 되는 디버깅만 사용 하려는 경우에 이러한 플래그를 설정 하지 마십시오.  
   
  디버거 및 프로세스를 디버깅 (연결 된 프로세스) 하는 경우 단일 콘솔을 공유 하 고 콘솔 잠금을 유지 하 고 디버그 이벤트에서 중지 하는 연결 된 프로세스에 대 한 가능한는 interop 디버깅을 사용 합니다. 디버거는 콘솔을 사용 하려는 모든 시도가 차단 다음 합니다. 이 문제를 방지 하려면에서 CREATE_NEW_CONSOLE 플래그를 설정의 `dwCreationFlags` 매개 변수입니다.  
   
@@ -110,7 +110,7 @@ HRESULT CreateProcess (
   
  **라이브러리:** CorGuids.lib  
   
- **.NET framework 버전:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>참고 항목  
  [ICorDebug 인터페이스](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)

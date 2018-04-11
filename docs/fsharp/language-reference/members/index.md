@@ -1,7 +1,7 @@
 ---
-title: "멤버(F#)"
-description: "F # 프로그래밍 언어의 개체 멤버에 알아봅니다."
-keywords: "visual f#, f#, 함수형 프로그래밍"
+title: 멤버(F#)
+description: 'F # 프로그래밍 언어의 개체 멤버에 알아봅니다.'
+keywords: visual f#, f#, 함수형 프로그래밍
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016

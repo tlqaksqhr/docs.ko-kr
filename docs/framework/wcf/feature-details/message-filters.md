@@ -1,28 +1,28 @@
 ---
-title: "메시지 필터"
-ms.custom: 
+title: 메시지 필터
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - routing [WCF], message filters
 ms.assetid: cb33ba49-8b1f-4099-8acb-240404a46d9a
-caps.latest.revision: 
+caps.latest.revision: 8
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
 ms.workload:
 - dotnet
 ms.openlocfilehash: bd5019668e865d2fea835b450d992d45b5273ed7
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="message-filters"></a>메시지 필터
 라우팅 서비스는 내용 기반 라우팅을 구현하기 위해 주소, 끝점 이름 또는 특정 XPath 문과 같은 메시지의 특정 섹션을 검사하는 <xref:System.ServiceModel.Dispatcher.MessageFilter> 구현을 사용합니다. [!INCLUDE[netfx_current_short](../../../../includes/netfx-current-short-md.md)]에 제공되는 메시지 필터 중 요구 사항을 충족하는 필터가 없는 경우 기본 <xref:System.ServiceModel.Dispatcher.MessageFilter> 클래스의 새 구현을 만드는 방법으로 사용자 지정 필터를 만들 수 있습니다.  
@@ -38,14 +38,14 @@ ms.lasthandoff: 12/22/2017
   
 |필터 형식|설명|필터 데이터 의미|예제 필터|  
 |------------------|-----------------|-------------------------|--------------------|  
-|동작|<xref:System.ServiceModel.Dispatcher.ActionMessageFilter> 클래스를 사용하여 특정 작업이 포함된 메시지를 일치시킵니다.|필터링할 작업입니다.|\<필터 이름 = "action1" filterType "Action" filterData = = "http://namespace/contract/operation" / >|  
-|EndpointAddress|사용 하 여는 <xref:System.ServiceModel.Dispatcher.EndpointAddressMessageFilter> 클래스와 <xref:System.ServiceModel.Dispatcher.EndpointAddressMessageFilter.IncludeHostNameInComparison%2A>  ==  `true` 특정 주소를 포함 하는 메시지를 일치 시킵니다.|To 헤더의 필터링할 주소입니다.|\<필터 이름 = "address1" filterType "EndpointAddress" filterData = = "http://host/vdir/s.svc/b" / >|  
-|EndpointAddressPrefix|사용 하 여는 <xref:System.ServiceModel.Dispatcher.PrefixEndpointAddressMessageFilter> 클래스와 <xref:System.ServiceModel.Dispatcher.PrefixEndpointAddressMessageFilter.IncludeHostNameInComparison%2A>  ==  `true` 특정 주소 접두사가 포함 된 메시지를 일치 시킵니다.|가장 긴 접두사 일치를 사용하여 필터링을 적용할 주소입니다.|\<필터 이름 = "prefix1" filterType "EndpointAddressPrefix" filterData = = "http://host/" / >|  
-|그리고|반환 전에 항상 두 조건을 모두 평가하는 <xref:System.ServiceModel.Dispatcher.StrictAndMessageFilter> 클래스를 사용합니다.|filterData는 사용 되지 않습니다. 대신 filter1 및 filter2는 (테이블)에 있어야 하 고 해당 메시지 필터의 이름이 **AND**연산 사용 합니다.|\<필터 이름 "and1" filterType = = "및" filter1 "주소 1" filter2 = = "action1" / >|  
-|사용자 지정|<xref:System.ServiceModel.Dispatcher.MessageFilter> 클래스를 확장하고 문자열을 사용하는 생성자를 포함하는 사용자 정의 형식입니다.|customType 특성은 만들 클래스의 정규화된 형식 이름입니다. filterData는 필터를 만들 때 생성자에 전달할 문자열입니다.|\<필터 이름 = "custom1" filterType "Custom" customType="CustomAssembly.CustomMsgFilter, CustomAssembly =" filterData = "사용자 지정 데이터" / >|  
-|EndpointName|<xref:System.ServiceModel.Dispatcher.EndpointNameMessageFilter> 클래스를 사용하여 메시지가 도착하는 서비스 끝점의 이름을 기반으로 메시지를 일치시킵니다.|서비스 끝점의 이름 예: "serviceEndpoint1"입니다.  이는 라우팅 서비스에서 노출되는 끝점 중 하나여야 합니다.|\<필터 이름 = "stock1" filterType "끝점" filterData = = "SvcEndpoint" / >|  
-|MatchAll|<xref:System.ServiceModel.Dispatcher.MatchAllMessageFilter> 클래스를 사용합니다. 이 필터는 도착하는 메시지를 모두 일치시킵니다.|filterData는 사용되지 않습니다. 이 필터는 항상 모든 메시지를 일치시킵니다.|\<필터 이름 "matchAll1" filterType = = "MatchAll" / >|  
-|XPath|<xref:System.ServiceModel.Dispatcher.XPathMessageFilter> 클래스를 사용하여 메시지 내의 특정 XPath 쿼리를 일치시킵니다.|메시지를 대조할 때 사용하는 XPath 쿼리입니다.|\<필터 이름 = "XPath1" filterType "XPath" filterData = = "//ns:element" / >|  
+|동작|<xref:System.ServiceModel.Dispatcher.ActionMessageFilter> 클래스를 사용하여 특정 작업이 포함된 메시지를 일치시킵니다.|필터링할 작업입니다.|\<filter name="action1" filterType="Action" filterData="http://namespace/contract/operation" />|  
+|EndpointAddress|사용 하 여는 <xref:System.ServiceModel.Dispatcher.EndpointAddressMessageFilter> 클래스와 <xref:System.ServiceModel.Dispatcher.EndpointAddressMessageFilter.IncludeHostNameInComparison%2A>  ==  `true` 특정 주소를 포함 하는 메시지를 일치 시킵니다.|To 헤더의 필터링할 주소입니다.|\<filter name="address1" filterType="EndpointAddress" filterData="http://host/vdir/s.svc/b"  />|  
+|EndpointAddressPrefix|사용 하 여는 <xref:System.ServiceModel.Dispatcher.PrefixEndpointAddressMessageFilter> 클래스와 <xref:System.ServiceModel.Dispatcher.PrefixEndpointAddressMessageFilter.IncludeHostNameInComparison%2A>  ==  `true` 특정 주소 접두사가 포함 된 메시지를 일치 시킵니다.|가장 긴 접두사 일치를 사용하여 필터링을 적용할 주소입니다.|\<filter name="prefix1" filterType="EndpointAddressPrefix" filterData="http://host/" />|  
+|그리고|반환 전에 항상 두 조건을 모두 평가하는 <xref:System.ServiceModel.Dispatcher.StrictAndMessageFilter> 클래스를 사용합니다.|filterData는 사용 되지 않습니다. 대신 filter1 및 filter2는 (테이블)에 있어야 하 고 해당 메시지 필터의 이름이 **AND**연산 사용 합니다.|\<filter name="and1" filterType="And" filter1="address1" filter2="action1" />|  
+|사용자 지정|<xref:System.ServiceModel.Dispatcher.MessageFilter> 클래스를 확장하고 문자열을 사용하는 생성자를 포함하는 사용자 정의 형식입니다.|customType 특성은 만들 클래스의 정규화된 형식 이름입니다. filterData는 필터를 만들 때 생성자에 전달할 문자열입니다.|\<filter name="custom1" filterType="Custom" customType="CustomAssembly.CustomMsgFilter, CustomAssembly" filterData="Custom Data" />|  
+|EndpointName|<xref:System.ServiceModel.Dispatcher.EndpointNameMessageFilter> 클래스를 사용하여 메시지가 도착하는 서비스 끝점의 이름을 기반으로 메시지를 일치시킵니다.|서비스 끝점의 이름 예: "serviceEndpoint1"입니다.  이는 라우팅 서비스에서 노출되는 끝점 중 하나여야 합니다.|\<filter name="stock1" filterType="Endpoint" filterData="SvcEndpoint" />|  
+|MatchAll|<xref:System.ServiceModel.Dispatcher.MatchAllMessageFilter> 클래스를 사용합니다. 이 필터는 도착하는 메시지를 모두 일치시킵니다.|filterData는 사용되지 않습니다. 이 필터는 항상 모든 메시지를 일치시킵니다.|\<filter name="matchAll1" filterType="MatchAll" />|  
+|XPath|<xref:System.ServiceModel.Dispatcher.XPathMessageFilter> 클래스를 사용하여 메시지 내의 특정 XPath 쿼리를 일치시킵니다.|메시지를 대조할 때 사용하는 XPath 쿼리입니다.|\<filter name="XPath1" filterType="XPath" filterData="//ns:element" />|  
   
  다음 예제에서는 XPath, EndpointName 및 PrefixEndpointAddress 메시지 필터를 사용하는 필터 항목을 정의합니다. 이 예제에서는 RoundRobinFilter1 및 RoundRobinFilter2 항목에 대해 사용자 지정 필터를 사용하는 방법도 보여 줍니다.  
   
@@ -84,7 +84,7 @@ ms.lasthandoff: 12/22/2017
 |tempuri|http://tempuri.org|  
 |ser|http://schemas.microsoft.com/2003/10/Serialization|  
   
- XPath 쿼리에서 특정 네임스페이스를 사용할 예정인 경우 이를 고유한 네임스페이스 접두사와 함께 네임스페이스 테이블에 추가하면 모든 XPath 쿼리에서 전체 네임스페이스 대신 이 접두사를 사용할 수 있습니다. 다음 예제에서는 "http://my.custom.namespace" 접두사는 filterData에 포함 된 XPath 쿼리에서 사용 되는 네임 스페이스에 대 한 "custom"의 접두사를 정의 합니다.  
+ XPath 쿼리에서 특정 네임스페이스를 사용할 예정인 경우 이를 고유한 네임스페이스 접두사와 함께 네임스페이스 테이블에 추가하면 모든 XPath 쿼리에서 전체 네임스페이스 대신 이 접두사를 사용할 수 있습니다. 네임 스페이스에 대 한 "custom"의 접두사를 정의 하는 다음 예제에서는 "http://my.custom.namespace", filterData에 포함 된 XPath 쿼리에서 사용 되는 합니다.  
   
 ```xml  
 <namespaceTable>  

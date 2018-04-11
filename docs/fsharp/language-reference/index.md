@@ -1,7 +1,7 @@
 ---
-title: "F# 언어 참조"
-description: "언어 토큰, 개념, 형식, 식 및 구문 컴파일러 지원 항목에 대 한이 참조에서 F # 언어 기능 정보를 찾습니다."
-keywords: "visual f#, f#, 함수형 프로그래밍"
+title: F# 언어 참조
+description: '언어 토큰, 개념, 형식, 식 및 구문 컴파일러 지원 항목에 대 한이 참조에서 F # 언어 기능 정보를 찾습니다.'
+keywords: visual f#, f#, 함수형 프로그래밍
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016

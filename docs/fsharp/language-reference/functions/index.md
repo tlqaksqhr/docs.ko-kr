@@ -1,7 +1,7 @@
 ---
-title: "함수(F#)"
-description: "F # 및 F #에서 지 원하는 방법 일반적인 함수형 프로그래밍 구문에서 함수에 알아봅니다."
-keywords: "visual f#, f#, 함수형 프로그래밍"
+title: 함수(F#)
+description: 'F # 및 F #에서 지 원하는 방법 일반적인 함수형 프로그래밍 구문에서 함수에 알아봅니다.'
+keywords: visual f#, f#, 함수형 프로그래밍
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
