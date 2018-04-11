@@ -1,17 +1,19 @@
 ---
-title: "체크섬 값이 잘못되었습니다. 16진수가 아니거나 16진수 값이 홀수입니다."
+title: 체크섬 값이 잘못되었습니다. 16진수가 아니거나 16진수 값이 홀수입니다.
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 f1_keywords:
 - bc42033
 - vbc42033
-helpviewer_keywords: BC42033
+helpviewer_keywords:
+- BC42033
 ms.assetid: 4575554d-3615-46e4-9c6a-18e9c338e4ed
-caps.latest.revision: "10"
+caps.latest.revision: 10
 author: dotnet-bot
 ms.author: dotnetcontent
 ms.openlocfilehash: 1158742c8eaa51bcbb5607795f16ae6c2b570db4

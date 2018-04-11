@@ -1,16 +1,18 @@
 ---
-title: "인스턴스를 통한 공유 멤버 액세스입니다. 정규화 식을 계산하지 않습니다."
+title: 인스턴스를 통한 공유 멤버 액세스입니다. 정규화 식을 계산하지 않습니다.
 ms.date: 07/20/2015
 ms.prod: .net
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 f1_keywords:
 - vbc42025
 - BC42025
-helpviewer_keywords: BC42025
+helpviewer_keywords:
+- BC42025
 ms.assetid: db3337e5-c349-42bf-86df-d9c1e00952a5
-caps.latest.revision: "23"
+caps.latest.revision: 23
 author: dotnet-bot
 ms.author: dotnetcontent
 ms.openlocfilehash: bcf3c37852e73464eec612e9e1d458ca707342e2

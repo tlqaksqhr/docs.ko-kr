@@ -1,7 +1,7 @@
 ---
-title: "특성(F#)"
-description: "F # 특성 프로그래밍 구문에 적용할 메타 데이터를 사용 하는 방법에 대해 알아봅니다."
-keywords: "visual f#, f#, 함수형 프로그래밍"
+title: 특성(F#)
+description: 'F # 특성 프로그래밍 구문에 적용할 메타 데이터를 사용 하는 방법에 대해 알아봅니다.'
+keywords: visual f#, f#, 함수형 프로그래밍
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016

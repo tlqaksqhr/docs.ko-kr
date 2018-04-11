@@ -1,6 +1,6 @@
 ---
-title: "비동기 개요"
-description: "비동기 프로그래밍이 다중 코어에서 차단 I/O 및 동시 작업을 간단하게 처리할 수 있게 해주는 주요 기술이 되는 방법을 알아봅니다."
+title: 비동기 개요
+description: 비동기 프로그래밍이 다중 코어에서 차단 I/O 및 동시 작업을 간단하게 처리할 수 있게 해주는 주요 기술이 되는 방법을 알아봅니다.
 keywords: .NET, .NET Core
 author: cartermp
 ms.author: wiwagn
