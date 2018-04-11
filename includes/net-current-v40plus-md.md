@@ -1,1 +1,1 @@
-<span data-ttu-id="3197a-101">4부터 사용할 수 있음</span><span class="sxs-lookup"><span data-stu-id="3197a-101">Available since 4</span></span>
+<span data-ttu-id="bc04e-101">4부터 사용할 수 있음</span><span class="sxs-lookup"><span data-stu-id="bc04e-101">Available since 4</span></span>

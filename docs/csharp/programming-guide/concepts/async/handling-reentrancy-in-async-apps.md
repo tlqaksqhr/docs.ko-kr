@@ -1,47 +1,47 @@
 ---
-title: "비동기 앱에서 재입력 처리(C#)"
-ms.custom: 
+title: 비동기 앱에서 재입력 처리(C#)
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - devlang-csharp
 ms.topic: article
 ms.assetid: 47c5075e-c448-45ce-9155-ed4e7e98c677
-caps.latest.revision: 
+caps.latest.revision: 3
 author: BillWagner
 ms.author: wiwagn
 ms.openlocfilehash: 0f0b6ba1985ab3cbbcc3490ae9b2ffcceb88f873
-ms.sourcegitcommit: cec0525b2121c36198379525e69aa5388266db5b
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/10/2018
 ---
-# <a name="handling-reentrancy-in-async-apps-c"></a><span data-ttu-id="25a06-102">비동기 앱에서 재입력 처리(C#)</span><span class="sxs-lookup"><span data-stu-id="25a06-102">Handling Reentrancy in Async Apps (C#)</span></span>
-<span data-ttu-id="25a06-103">앱에 비동기 코드를 포함하는 경우 완료되기 전에 비동기 작업을 다시 입력하는 것을 나타내는 재입력을 고려하고 방지할 수 있어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="25a06-103">When you include asynchronous code in your app, you should consider and possibly prevent reentrancy, which refers to reentering an asynchronous operation before it has completed.</span></span> <span data-ttu-id="25a06-104">재입력 가능성을 식별하고 처리하지 못하면 예기치 않은 결과가 발생할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="25a06-104">If you don't identify and handle possibilities for reentrancy, it can cause unexpected results.</span></span>  
+# <a name="handling-reentrancy-in-async-apps-c"></a><span data-ttu-id="931cc-102">비동기 앱에서 재입력 처리(C#)</span><span class="sxs-lookup"><span data-stu-id="931cc-102">Handling Reentrancy in Async Apps (C#)</span></span>
+<span data-ttu-id="931cc-103">앱에 비동기 코드를 포함하는 경우 완료되기 전에 비동기 작업을 다시 입력하는 것을 나타내는 재입력을 고려하고 방지할 수 있어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="931cc-103">When you include asynchronous code in your app, you should consider and possibly prevent reentrancy, which refers to reentering an asynchronous operation before it has completed.</span></span> <span data-ttu-id="931cc-104">재입력 가능성을 식별하고 처리하지 못하면 예기치 않은 결과가 발생할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="931cc-104">If you don't identify and handle possibilities for reentrancy, it can cause unexpected results.</span></span>  
   
- <span data-ttu-id="25a06-105">**항목 내용**</span><span class="sxs-lookup"><span data-stu-id="25a06-105">**In this topic**</span></span>  
+ <span data-ttu-id="931cc-105">**항목 내용**</span><span class="sxs-lookup"><span data-stu-id="931cc-105">**In this topic**</span></span>  
   
--   [<span data-ttu-id="25a06-106">재입력 인식</span><span class="sxs-lookup"><span data-stu-id="25a06-106">Recognizing Reentrancy</span></span>](#BKMK_RecognizingReentrancy)  
+-   [<span data-ttu-id="931cc-106">재입력 인식</span><span class="sxs-lookup"><span data-stu-id="931cc-106">Recognizing Reentrancy</span></span>](#BKMK_RecognizingReentrancy)  
   
--   [<span data-ttu-id="25a06-107">재입력 처리</span><span class="sxs-lookup"><span data-stu-id="25a06-107">Handling Reentrancy</span></span>](#BKMK_HandlingReentrancy)  
+-   [<span data-ttu-id="931cc-107">재입력 처리</span><span class="sxs-lookup"><span data-stu-id="931cc-107">Handling Reentrancy</span></span>](#BKMK_HandlingReentrancy)  
   
-    -   [<span data-ttu-id="25a06-108">시작 단추 사용 안 함</span><span class="sxs-lookup"><span data-stu-id="25a06-108">Disable the Start Button</span></span>](#BKMK_DisableTheStartButton)  
+    -   [<span data-ttu-id="931cc-108">시작 단추 사용 안 함</span><span class="sxs-lookup"><span data-stu-id="931cc-108">Disable the Start Button</span></span>](#BKMK_DisableTheStartButton)  
   
-    -   [<span data-ttu-id="25a06-109">작업 취소 및 다시 시작</span><span class="sxs-lookup"><span data-stu-id="25a06-109">Cancel and Restart the Operation</span></span>](#BKMK_CancelAndRestart)  
+    -   [<span data-ttu-id="931cc-109">작업 취소 및 다시 시작</span><span class="sxs-lookup"><span data-stu-id="931cc-109">Cancel and Restart the Operation</span></span>](#BKMK_CancelAndRestart)  
   
-    -   [<span data-ttu-id="25a06-110">여러 작업을 실행하고 출력을 큐 대기</span><span class="sxs-lookup"><span data-stu-id="25a06-110">Run Multiple Operations and Queue the Output</span></span>](#BKMK_RunMultipleOperations)  
+    -   [<span data-ttu-id="931cc-110">여러 작업을 실행하고 출력을 큐 대기</span><span class="sxs-lookup"><span data-stu-id="931cc-110">Run Multiple Operations and Queue the Output</span></span>](#BKMK_RunMultipleOperations)  
   
--   [<span data-ttu-id="25a06-111">예제 앱 검토 및 실행</span><span class="sxs-lookup"><span data-stu-id="25a06-111">Reviewing and Running the Example App</span></span>](#BKMD_SettingUpTheExample)  
+-   [<span data-ttu-id="931cc-111">예제 앱 검토 및 실행</span><span class="sxs-lookup"><span data-stu-id="931cc-111">Reviewing and Running the Example App</span></span>](#BKMD_SettingUpTheExample)  
   
 > [!NOTE]
->  <span data-ttu-id="25a06-112">예제를 실행하려면 Visual Studio 2012 이상 및 .NET Framework 4.5 이상이 컴퓨터에 설치되어 있어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="25a06-112">To run the example, you must have Visual Studio 2012 or newer and the .NET Framework 4.5 or newer installed on your computer.</span></span>  
+>  <span data-ttu-id="931cc-112">예제를 실행하려면 Visual Studio 2012 이상 및 .NET Framework 4.5 이상이 컴퓨터에 설치되어 있어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="931cc-112">To run the example, you must have Visual Studio 2012 or newer and the .NET Framework 4.5 or newer installed on your computer.</span></span>  
   
-##  <a name="BKMK_RecognizingReentrancy"></a> <span data-ttu-id="25a06-113">재입력 인식</span><span class="sxs-lookup"><span data-stu-id="25a06-113">Recognizing Reentrancy</span></span>  
- <span data-ttu-id="25a06-114">이 항목의 예제에서는 사용자가 **시작** 단추를 선택하여 일련의 웹 사이트를 다운로드하고 다운로드되는 총 바이트 수를 계산하는 비동기 앱을 시작합니다.</span><span class="sxs-lookup"><span data-stu-id="25a06-114">In the example in this topic, users choose a **Start** button to initiate an asynchronous app that downloads a series of websites and calculates the total number of bytes that are downloaded.</span></span> <span data-ttu-id="25a06-115">예제의 동기 버전은 처음 실행 후 앱 실행이 완료될 때까지 UI 스레드에서 해당 이벤트를 무시하므로 사용자가 단추를 선택하는 횟수에 관계없이 동일한 방식으로 응답합니다.</span><span class="sxs-lookup"><span data-stu-id="25a06-115">A synchronous version of the example would respond the same way regardless of how many times a user chooses the button because, after the first time, the UI thread ignores those events until the app finishes running.</span></span> <span data-ttu-id="25a06-116">그러나 비동기 앱에서 UI 스레드는 계속 응답하므로 완료되기 전에 비동기 작업을 다시 입력할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="25a06-116">In an asynchronous app, however, the UI thread continues to respond, and you might reenter the asynchronous operation before it has completed.</span></span>  
+##  <a name="BKMK_RecognizingReentrancy"></a> <span data-ttu-id="931cc-113">재입력 인식</span><span class="sxs-lookup"><span data-stu-id="931cc-113">Recognizing Reentrancy</span></span>  
+ <span data-ttu-id="931cc-114">이 항목의 예제에서는 사용자가 **시작** 단추를 선택하여 일련의 웹 사이트를 다운로드하고 다운로드되는 총 바이트 수를 계산하는 비동기 앱을 시작합니다.</span><span class="sxs-lookup"><span data-stu-id="931cc-114">In the example in this topic, users choose a **Start** button to initiate an asynchronous app that downloads a series of websites and calculates the total number of bytes that are downloaded.</span></span> <span data-ttu-id="931cc-115">예제의 동기 버전은 처음 실행 후 앱 실행이 완료될 때까지 UI 스레드에서 해당 이벤트를 무시하므로 사용자가 단추를 선택하는 횟수에 관계없이 동일한 방식으로 응답합니다.</span><span class="sxs-lookup"><span data-stu-id="931cc-115">A synchronous version of the example would respond the same way regardless of how many times a user chooses the button because, after the first time, the UI thread ignores those events until the app finishes running.</span></span> <span data-ttu-id="931cc-116">그러나 비동기 앱에서 UI 스레드는 계속 응답하므로 완료되기 전에 비동기 작업을 다시 입력할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="931cc-116">In an asynchronous app, however, the UI thread continues to respond, and you might reenter the asynchronous operation before it has completed.</span></span>  
   
- <span data-ttu-id="25a06-117">다음 예제에서는 사용자가 **시작** 단추를 한 번만 선택하는 경우 예상되는 출력을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="25a06-117">The following example shows the expected output if the user chooses the **Start** button only once.</span></span> <span data-ttu-id="25a06-118">다운로드된 웹 사이트 목록이 각 사이트의 크기(바이트)와 함께 나타납니다.</span><span class="sxs-lookup"><span data-stu-id="25a06-118">A list of the downloaded websites appears with the size, in bytes, of each site.</span></span> <span data-ttu-id="25a06-119">총 바이트 수는 끝에 나타납니다.</span><span class="sxs-lookup"><span data-stu-id="25a06-119">The total number of bytes appears at the end.</span></span>  
+ <span data-ttu-id="931cc-117">다음 예제에서는 사용자가 **시작** 단추를 한 번만 선택하는 경우 예상되는 출력을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="931cc-117">The following example shows the expected output if the user chooses the **Start** button only once.</span></span> <span data-ttu-id="931cc-118">다운로드된 웹 사이트 목록이 각 사이트의 크기(바이트)와 함께 나타납니다.</span><span class="sxs-lookup"><span data-stu-id="931cc-118">A list of the downloaded websites appears with the size, in bytes, of each site.</span></span> <span data-ttu-id="931cc-119">총 바이트 수는 끝에 나타납니다.</span><span class="sxs-lookup"><span data-stu-id="931cc-119">The total number of bytes appears at the end.</span></span>  
   
 ```  
 1. msdn.microsoft.com/library/hh191443.aspx                83732  
@@ -56,7 +56,7 @@ ms.lasthandoff: 02/23/2018
 TOTAL bytes returned:  890591  
 ```  
   
- <span data-ttu-id="25a06-120">그러나 사용자가 단추를 두 번 이상 선택하면 이벤트 처리기가 반복적으로 호출되고 다운로드 프로세스가 매번 다시 입력됩니다.</span><span class="sxs-lookup"><span data-stu-id="25a06-120">However, if the user chooses the button more than once, the event handler is invoked repeatedly, and the download process is reentered each time.</span></span> <span data-ttu-id="25a06-121">따라서 여러 개의 비동기 작업이 동시에 실행되고 출력에서 결과를 인터리브하며 총 바이트 수가 혼동됩니다.</span><span class="sxs-lookup"><span data-stu-id="25a06-121">As a result, several asynchronous operations are running at the same time, the output interleaves the results, and the total number of bytes is confusing.</span></span>  
+ <span data-ttu-id="931cc-120">그러나 사용자가 단추를 두 번 이상 선택하면 이벤트 처리기가 반복적으로 호출되고 다운로드 프로세스가 매번 다시 입력됩니다.</span><span class="sxs-lookup"><span data-stu-id="931cc-120">However, if the user chooses the button more than once, the event handler is invoked repeatedly, and the download process is reentered each time.</span></span> <span data-ttu-id="931cc-121">따라서 여러 개의 비동기 작업이 동시에 실행되고 출력에서 결과를 인터리브하며 총 바이트 수가 혼동됩니다.</span><span class="sxs-lookup"><span data-stu-id="931cc-121">As a result, several asynchronous operations are running at the same time, the output interleaves the results, and the total number of bytes is confusing.</span></span>  
   
 ```  
 1. msdn.microsoft.com/library/hh191443.aspx                83732  
@@ -93,27 +93,27 @@ TOTAL bytes returned:  890591
 TOTAL bytes returned:  890591  
 ```  
   
- <span data-ttu-id="25a06-122">이 항목의 끝으로 스크롤하면 이 출력을 생성하는 코드를 검토할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="25a06-122">You can review the code that produces this output by scrolling to the end of this topic.</span></span> <span data-ttu-id="25a06-123">로컬 컴퓨터에 솔루션을 다운로드한 다음, WebsiteDownload 프로젝트를 실행하거나 이 항목의 끝에 있는 코드를 사용하여 고유한 프로젝트를 만들면 코드를 테스트할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="25a06-123">You can experiment with the code by downloading the solution to your local computer and then running the WebsiteDownload project or by using the code at the end of this topic to create your own project.</span></span> <span data-ttu-id="25a06-124">자세한 내용 및 지침은 [예제 앱 검토 및 실행](#BKMD_SettingUpTheExample)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="25a06-124">For more information and instructions, see [Reviewing and Running the Example App](#BKMD_SettingUpTheExample).</span></span>  
+ <span data-ttu-id="931cc-122">이 항목의 끝으로 스크롤하면 이 출력을 생성하는 코드를 검토할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="931cc-122">You can review the code that produces this output by scrolling to the end of this topic.</span></span> <span data-ttu-id="931cc-123">로컬 컴퓨터에 솔루션을 다운로드한 다음, WebsiteDownload 프로젝트를 실행하거나 이 항목의 끝에 있는 코드를 사용하여 고유한 프로젝트를 만들면 코드를 테스트할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="931cc-123">You can experiment with the code by downloading the solution to your local computer and then running the WebsiteDownload project or by using the code at the end of this topic to create your own project.</span></span> <span data-ttu-id="931cc-124">자세한 내용 및 지침은 [예제 앱 검토 및 실행](#BKMD_SettingUpTheExample)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="931cc-124">For more information and instructions, see [Reviewing and Running the Example App](#BKMD_SettingUpTheExample).</span></span>  
   
-##  <a name="BKMK_HandlingReentrancy"></a> <span data-ttu-id="25a06-125">재입력 처리</span><span class="sxs-lookup"><span data-stu-id="25a06-125">Handling Reentrancy</span></span>  
- <span data-ttu-id="25a06-126">앱에서 수행하려는 작업에 따라 다양한 방법으로 재진입을 처리할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="25a06-126">You can handle reentrancy in a variety of ways, depending on what you want your app to do.</span></span> <span data-ttu-id="25a06-127">이 항목에서는 다음 예제를 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="25a06-127">This topic presents the following examples:</span></span>  
+##  <a name="BKMK_HandlingReentrancy"></a> <span data-ttu-id="931cc-125">재입력 처리</span><span class="sxs-lookup"><span data-stu-id="931cc-125">Handling Reentrancy</span></span>  
+ <span data-ttu-id="931cc-126">앱에서 수행하려는 작업에 따라 다양한 방법으로 재진입을 처리할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="931cc-126">You can handle reentrancy in a variety of ways, depending on what you want your app to do.</span></span> <span data-ttu-id="931cc-127">이 항목에서는 다음 예제를 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="931cc-127">This topic presents the following examples:</span></span>  
   
--   [<span data-ttu-id="25a06-128">시작 단추 사용 안 함</span><span class="sxs-lookup"><span data-stu-id="25a06-128">Disable the Start Button</span></span>](#BKMK_DisableTheStartButton)  
+-   [<span data-ttu-id="931cc-128">시작 단추 사용 안 함</span><span class="sxs-lookup"><span data-stu-id="931cc-128">Disable the Start Button</span></span>](#BKMK_DisableTheStartButton)  
   
-     <span data-ttu-id="25a06-129">작업이 실행되는 동안 **시작** 단추를 사용할 수 없도록 설정하여 사용자가 작업을 중단할 수 없도록 합니다.</span><span class="sxs-lookup"><span data-stu-id="25a06-129">Disable the **Start** button while the operation is running so that the user can't interrupt it.</span></span>  
+     <span data-ttu-id="931cc-129">작업이 실행되는 동안 **시작** 단추를 사용할 수 없도록 설정하여 사용자가 작업을 중단할 수 없도록 합니다.</span><span class="sxs-lookup"><span data-stu-id="931cc-129">Disable the **Start** button while the operation is running so that the user can't interrupt it.</span></span>  
   
--   [<span data-ttu-id="25a06-130">작업 취소 및 다시 시작</span><span class="sxs-lookup"><span data-stu-id="25a06-130">Cancel and Restart the Operation</span></span>](#BKMK_CancelAndRestart)  
+-   [<span data-ttu-id="931cc-130">작업 취소 및 다시 시작</span><span class="sxs-lookup"><span data-stu-id="931cc-130">Cancel and Restart the Operation</span></span>](#BKMK_CancelAndRestart)  
   
-     <span data-ttu-id="25a06-131">사용자가 **시작** 단추를 다시 선택하는 경우 계속 실행되고 있는 작업을 취소한 다음 가장 최근에 요청한 작업이 계속되도록 합니다.</span><span class="sxs-lookup"><span data-stu-id="25a06-131">Cancel any operation that is still running when the user chooses the **Start** button again, and then let the most recently requested operation continue.</span></span>  
+     <span data-ttu-id="931cc-131">사용자가 **시작** 단추를 다시 선택하는 경우 계속 실행되고 있는 작업을 취소한 다음 가장 최근에 요청한 작업이 계속되도록 합니다.</span><span class="sxs-lookup"><span data-stu-id="931cc-131">Cancel any operation that is still running when the user chooses the **Start** button again, and then let the most recently requested operation continue.</span></span>  
   
--   [<span data-ttu-id="25a06-132">여러 작업을 실행하고 출력을 큐 대기</span><span class="sxs-lookup"><span data-stu-id="25a06-132">Run Multiple Operations and Queue the Output</span></span>](#BKMK_RunMultipleOperations)  
+-   [<span data-ttu-id="931cc-132">여러 작업을 실행하고 출력을 큐 대기</span><span class="sxs-lookup"><span data-stu-id="931cc-132">Run Multiple Operations and Queue the Output</span></span>](#BKMK_RunMultipleOperations)  
   
-     <span data-ttu-id="25a06-133">요청한 모든 작업이 비동기적으로 실행되도록 허용하지만 각 작업의 결과가 함께 순서대로 나타나도록 출력의 표시를 조정합니다.</span><span class="sxs-lookup"><span data-stu-id="25a06-133">Allow all requested operations to run asynchronously, but coordinate the display of output so that the results from each operation appear together and in order.</span></span>  
+     <span data-ttu-id="931cc-133">요청한 모든 작업이 비동기적으로 실행되도록 허용하지만 각 작업의 결과가 함께 순서대로 나타나도록 출력의 표시를 조정합니다.</span><span class="sxs-lookup"><span data-stu-id="931cc-133">Allow all requested operations to run asynchronously, but coordinate the display of output so that the results from each operation appear together and in order.</span></span>  
   
-###  <a name="BKMK_DisableTheStartButton"></a> <span data-ttu-id="25a06-134">시작 단추 사용 안 함</span><span class="sxs-lookup"><span data-stu-id="25a06-134">Disable the Start Button</span></span>  
- <span data-ttu-id="25a06-135">`StartButton_Click` 이벤트 처리기의 위쪽에 있는 단추를 사용하지 않도록 설정하여 작업이 실행되는 동안 **시작** 단추를 차단할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="25a06-135">You can block the **Start** button while an operation is running by disabling the button at the top of the `StartButton_Click` event handler.</span></span> <span data-ttu-id="25a06-136">그런 다음 작업이 완료되면 `finally` 블록 내에서 단추를 다시 사용하도록 설정하여 사용자가 앱을 다시 실행하도록 할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="25a06-136">You can then reenable the button from within a  `finally` block when the operation finishes so that users can run the app again.</span></span>  
+###  <a name="BKMK_DisableTheStartButton"></a> <span data-ttu-id="931cc-134">시작 단추 사용 안 함</span><span class="sxs-lookup"><span data-stu-id="931cc-134">Disable the Start Button</span></span>  
+ <span data-ttu-id="931cc-135">`StartButton_Click` 이벤트 처리기의 위쪽에 있는 단추를 사용하지 않도록 설정하여 작업이 실행되는 동안 **시작** 단추를 차단할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="931cc-135">You can block the **Start** button while an operation is running by disabling the button at the top of the `StartButton_Click` event handler.</span></span> <span data-ttu-id="931cc-136">그런 다음 작업이 완료되면 `finally` 블록 내에서 단추를 다시 사용하도록 설정하여 사용자가 앱을 다시 실행하도록 할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="931cc-136">You can then reenable the button from within a  `finally` block when the operation finishes so that users can run the app again.</span></span>  
   
- <span data-ttu-id="25a06-137">이 시나리오를 설정하려면 [예제 앱 검토 및 실행](#BKMD_SettingUpTheExample)에서 제공하는 기본 코드를 다음과 같이 변경합니다.</span><span class="sxs-lookup"><span data-stu-id="25a06-137">To set up this scenario, make the following changes to the basic code that is provided in [Reviewing and Running the Example App](#BKMD_SettingUpTheExample).</span></span> <span data-ttu-id="25a06-138">[Async Samples: Reentrancy in .NET Desktop Apps](https://code.msdn.microsoft.com/Async-Sample-Preventing-a8489f06)(비동기 샘플: .NET 데스크톱 앱의 재입력)에서 완성된 앱을 다운로드할 수도 있습니다.</span><span class="sxs-lookup"><span data-stu-id="25a06-138">You also can download the finished app from [Async Samples: Reentrancy in .NET Desktop Apps](https://code.msdn.microsoft.com/Async-Sample-Preventing-a8489f06).</span></span> <span data-ttu-id="25a06-139">프로젝트 이름은 DisableStartButton입니다.</span><span class="sxs-lookup"><span data-stu-id="25a06-139">The name of the project is DisableStartButton.</span></span>  
+ <span data-ttu-id="931cc-137">이 시나리오를 설정하려면 [예제 앱 검토 및 실행](#BKMD_SettingUpTheExample)에서 제공하는 기본 코드를 다음과 같이 변경합니다.</span><span class="sxs-lookup"><span data-stu-id="931cc-137">To set up this scenario, make the following changes to the basic code that is provided in [Reviewing and Running the Example App](#BKMD_SettingUpTheExample).</span></span> <span data-ttu-id="931cc-138">[Async Samples: Reentrancy in .NET Desktop Apps](https://code.msdn.microsoft.com/Async-Sample-Preventing-a8489f06)(비동기 샘플: .NET 데스크톱 앱의 재입력)에서 완성된 앱을 다운로드할 수도 있습니다.</span><span class="sxs-lookup"><span data-stu-id="931cc-138">You also can download the finished app from [Async Samples: Reentrancy in .NET Desktop Apps](https://code.msdn.microsoft.com/Async-Sample-Preventing-a8489f06).</span></span> <span data-ttu-id="931cc-139">프로젝트 이름은 DisableStartButton입니다.</span><span class="sxs-lookup"><span data-stu-id="931cc-139">The name of the project is DisableStartButton.</span></span>  
   
 ```csharp  
 private async void StartButton_Click(object sender, RoutedEventArgs e)  
@@ -140,16 +140,16 @@ private async void StartButton_Click(object sender, RoutedEventArgs e)
 }  
 ```  
   
- <span data-ttu-id="25a06-140">변경의 결과로 `AccessTheWebAsync`에서 웹 사이트를 다운로드하는 동안 단추가 응답하지 않으므로 프로세스를 다시 입력할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="25a06-140">As a result of the changes, the button doesn't respond while `AccessTheWebAsync` is downloading the websites, so the process can’t be reentered.</span></span>  
+ <span data-ttu-id="931cc-140">변경의 결과로 `AccessTheWebAsync`에서 웹 사이트를 다운로드하는 동안 단추가 응답하지 않으므로 프로세스를 다시 입력할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="931cc-140">As a result of the changes, the button doesn't respond while `AccessTheWebAsync` is downloading the websites, so the process can’t be reentered.</span></span>  
   
-###  <a name="BKMK_CancelAndRestart"></a> <span data-ttu-id="25a06-141">작업 취소 및 다시 시작</span><span class="sxs-lookup"><span data-stu-id="25a06-141">Cancel and Restart the Operation</span></span>  
- <span data-ttu-id="25a06-142">**시작** 단추를 사용하지 않도록 설정하는 대신 단추를 활성 상태로 유지하지만 사용자가 해당 단추를 다시 선택하는 경우 이미 실행되고 있는 작업을 취소하고 가장 최근에 시작한 작업이 계속되도록 합니다.</span><span class="sxs-lookup"><span data-stu-id="25a06-142">Instead of disabling the **Start** button, you can keep the button active but, if the user chooses that button again, cancel the operation that's already running and let the most recently started operation continue.</span></span>  
+###  <a name="BKMK_CancelAndRestart"></a> <span data-ttu-id="931cc-141">작업 취소 및 다시 시작</span><span class="sxs-lookup"><span data-stu-id="931cc-141">Cancel and Restart the Operation</span></span>  
+ <span data-ttu-id="931cc-142">**시작** 단추를 사용하지 않도록 설정하는 대신 단추를 활성 상태로 유지하지만 사용자가 해당 단추를 다시 선택하는 경우 이미 실행되고 있는 작업을 취소하고 가장 최근에 시작한 작업이 계속되도록 합니다.</span><span class="sxs-lookup"><span data-stu-id="931cc-142">Instead of disabling the **Start** button, you can keep the button active but, if the user chooses that button again, cancel the operation that's already running and let the most recently started operation continue.</span></span>  
   
- <span data-ttu-id="25a06-143">취소에 대한 자세한 내용은 [비동기 응용 프로그램 미세 조정(C#)](../../../../csharp/programming-guide/concepts/async/fine-tuning-your-async-application.md)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="25a06-143">For more information about cancellation, see [Fine-Tuning Your Async Application (C#)](../../../../csharp/programming-guide/concepts/async/fine-tuning-your-async-application.md).</span></span>  
+ <span data-ttu-id="931cc-143">취소에 대한 자세한 내용은 [비동기 응용 프로그램 미세 조정(C#)](../../../../csharp/programming-guide/concepts/async/fine-tuning-your-async-application.md)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="931cc-143">For more information about cancellation, see [Fine-Tuning Your Async Application (C#)](../../../../csharp/programming-guide/concepts/async/fine-tuning-your-async-application.md).</span></span>  
   
- <span data-ttu-id="25a06-144">이 시나리오를 설정하려면 [예제 앱 검토 및 실행](#BKMD_SettingUpTheExample)에서 제공하는 기본 코드를 다음과 같이 변경합니다.</span><span class="sxs-lookup"><span data-stu-id="25a06-144">To set up this scenario, make the following changes to the basic code that is provided in [Reviewing and Running the Example App](#BKMD_SettingUpTheExample).</span></span> <span data-ttu-id="25a06-145">[Async Samples: Reentrancy in .NET Desktop Apps](https://code.msdn.microsoft.com/Async-Sample-Preventing-a8489f06)(비동기 샘플: .NET 데스크톱 앱의 재입력)에서 완성된 앱을 다운로드할 수도 있습니다.</span><span class="sxs-lookup"><span data-stu-id="25a06-145">You also can download the finished app from [Async Samples: Reentrancy in .NET Desktop Apps](https://code.msdn.microsoft.com/Async-Sample-Preventing-a8489f06).</span></span> <span data-ttu-id="25a06-146">프로젝트의 이름은 CancelAndRestart입니다.</span><span class="sxs-lookup"><span data-stu-id="25a06-146">The name of the project is CancelAndRestart.</span></span>  
+ <span data-ttu-id="931cc-144">이 시나리오를 설정하려면 [예제 앱 검토 및 실행](#BKMD_SettingUpTheExample)에서 제공하는 기본 코드를 다음과 같이 변경합니다.</span><span class="sxs-lookup"><span data-stu-id="931cc-144">To set up this scenario, make the following changes to the basic code that is provided in [Reviewing and Running the Example App](#BKMD_SettingUpTheExample).</span></span> <span data-ttu-id="931cc-145">[Async Samples: Reentrancy in .NET Desktop Apps](https://code.msdn.microsoft.com/Async-Sample-Preventing-a8489f06)(비동기 샘플: .NET 데스크톱 앱의 재입력)에서 완성된 앱을 다운로드할 수도 있습니다.</span><span class="sxs-lookup"><span data-stu-id="931cc-145">You also can download the finished app from [Async Samples: Reentrancy in .NET Desktop Apps](https://code.msdn.microsoft.com/Async-Sample-Preventing-a8489f06).</span></span> <span data-ttu-id="931cc-146">프로젝트의 이름은 CancelAndRestart입니다.</span><span class="sxs-lookup"><span data-stu-id="931cc-146">The name of the project is CancelAndRestart.</span></span>  
   
-1.  <span data-ttu-id="25a06-147">모든 메서드에 대한 범위 내에 있는 <xref:System.Threading.CancellationTokenSource> 변수 `cts`를 선언합니다.</span><span class="sxs-lookup"><span data-stu-id="25a06-147">Declare a <xref:System.Threading.CancellationTokenSource> variable, `cts`, that’s in scope for all methods.</span></span>  
+1.  <span data-ttu-id="931cc-147">모든 메서드에 대한 범위 내에 있는 <xref:System.Threading.CancellationTokenSource> 변수 `cts`를 선언합니다.</span><span class="sxs-lookup"><span data-stu-id="931cc-147">Declare a <xref:System.Threading.CancellationTokenSource> variable, `cts`, that’s in scope for all methods.</span></span>  
   
     ```csharp  
     public partial class MainWindow : Window   // Or class MainPage  
@@ -158,7 +158,7 @@ private async void StartButton_Click(object sender, RoutedEventArgs e)
         CancellationTokenSource cts;  
     ```  
   
-2.  <span data-ttu-id="25a06-148">`StartButton_Click`에서 작업이 이미 진행 중인지 확인합니다.</span><span class="sxs-lookup"><span data-stu-id="25a06-148">In `StartButton_Click`, determine whether an operation is already underway.</span></span> <span data-ttu-id="25a06-149">`cts`의 값이 null인 경우 이미 활성화된 작업이 없습니다.</span><span class="sxs-lookup"><span data-stu-id="25a06-149">If the value of `cts` is null, no operation is already active.</span></span> <span data-ttu-id="25a06-150">값이 null이 아닌 경우 이미 실행되고 있는 작업이 취소됩니다.</span><span class="sxs-lookup"><span data-stu-id="25a06-150">If the value isn't null, the operation that is already running is canceled.</span></span>  
+2.  <span data-ttu-id="931cc-148">`StartButton_Click`에서 작업이 이미 진행 중인지 확인합니다.</span><span class="sxs-lookup"><span data-stu-id="931cc-148">In `StartButton_Click`, determine whether an operation is already underway.</span></span> <span data-ttu-id="931cc-149">`cts`의 값이 null인 경우 이미 활성화된 작업이 없습니다.</span><span class="sxs-lookup"><span data-stu-id="931cc-149">If the value of `cts` is null, no operation is already active.</span></span> <span data-ttu-id="931cc-150">값이 null이 아닌 경우 이미 실행되고 있는 작업이 취소됩니다.</span><span class="sxs-lookup"><span data-stu-id="931cc-150">If the value isn't null, the operation that is already running is canceled.</span></span>  
   
     ```csharp  
     // *** If a download process is already underway, cancel it.  
@@ -168,7 +168,7 @@ private async void StartButton_Click(object sender, RoutedEventArgs e)
     }  
     ```  
   
-3.  <span data-ttu-id="25a06-151">`cts`를 현재 프로세스를 나타내는 다른 값으로 설정합니다.</span><span class="sxs-lookup"><span data-stu-id="25a06-151">Set `cts` to a different value that represents the current process.</span></span>  
+3.  <span data-ttu-id="931cc-151">`cts`를 현재 프로세스를 나타내는 다른 값으로 설정합니다.</span><span class="sxs-lookup"><span data-stu-id="931cc-151">Set `cts` to a different value that represents the current process.</span></span>  
   
     ```csharp  
     // *** Now set cts to a new value that you can use to cancel the current process  
@@ -177,7 +177,7 @@ private async void StartButton_Click(object sender, RoutedEventArgs e)
     cts = newCTS;  
     ```  
   
-4.  <span data-ttu-id="25a06-152">`StartButton_Click`이 끝나면 현재 프로세스가 완료되어 `cts` 값이 다시 null로 설정됩니다.</span><span class="sxs-lookup"><span data-stu-id="25a06-152">At the end of `StartButton_Click`, the current process is complete, so set the value of `cts` back to null.</span></span>  
+4.  <span data-ttu-id="931cc-152">`StartButton_Click`이 끝나면 현재 프로세스가 완료되어 `cts` 값이 다시 null로 설정됩니다.</span><span class="sxs-lookup"><span data-stu-id="931cc-152">At the end of `StartButton_Click`, the current process is complete, so set the value of `cts` back to null.</span></span>  
   
     ```csharp  
     // *** When the process is complete, signal that another process can begin.  
@@ -185,7 +185,7 @@ private async void StartButton_Click(object sender, RoutedEventArgs e)
         cts = null;  
     ```  
   
- <span data-ttu-id="25a06-153">다음 코드에서는 `StartButton_Click`의 모든 변경 내용을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="25a06-153">The following code shows all the changes in `StartButton_Click`.</span></span> <span data-ttu-id="25a06-154">추가된 내용은 별표로 표시됩니다.</span><span class="sxs-lookup"><span data-stu-id="25a06-154">The additions are marked with asterisks.</span></span>  
+ <span data-ttu-id="931cc-153">다음 코드에서는 `StartButton_Click`의 모든 변경 내용을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="931cc-153">The following code shows all the changes in `StartButton_Click`.</span></span> <span data-ttu-id="931cc-154">추가된 내용은 별표로 표시됩니다.</span><span class="sxs-lookup"><span data-stu-id="931cc-154">The additions are marked with asterisks.</span></span>  
   
 ```csharp  
 private async void StartButton_Click(object sender, RoutedEventArgs e)  
@@ -224,15 +224,15 @@ private async void StartButton_Click(object sender, RoutedEventArgs e)
 }  
 ```  
   
- <span data-ttu-id="25a06-155">`AccessTheWebAsync`에서 다음과 같이 변경합니다.</span><span class="sxs-lookup"><span data-stu-id="25a06-155">In `AccessTheWebAsync`, make the following changes.</span></span>  
+ <span data-ttu-id="931cc-155">`AccessTheWebAsync`에서 다음과 같이 변경합니다.</span><span class="sxs-lookup"><span data-stu-id="931cc-155">In `AccessTheWebAsync`, make the following changes.</span></span>  
   
--   <span data-ttu-id="25a06-156">`StartButton_Click`에서 취소 토큰을 허용하도록 매개 변수를 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="25a06-156">Add a parameter to accept the cancellation token from `StartButton_Click`.</span></span>  
+-   <span data-ttu-id="931cc-156">`StartButton_Click`에서 취소 토큰을 허용하도록 매개 변수를 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="931cc-156">Add a parameter to accept the cancellation token from `StartButton_Click`.</span></span>  
   
--   <span data-ttu-id="25a06-157">`GetAsync`는 <xref:System.Threading.CancellationToken> 인수를 허용하므로 <xref:System.Net.Http.HttpClient.GetAsync%2A> 메서드를 사용하여 웹 사이트를 다운로드합니다.</span><span class="sxs-lookup"><span data-stu-id="25a06-157">Use the <xref:System.Net.Http.HttpClient.GetAsync%2A> method to download the websites because `GetAsync` accepts a <xref:System.Threading.CancellationToken> argument.</span></span>  
+-   <span data-ttu-id="931cc-157">`GetAsync`는 <xref:System.Threading.CancellationToken> 인수를 허용하므로 <xref:System.Net.Http.HttpClient.GetAsync%2A> 메서드를 사용하여 웹 사이트를 다운로드합니다.</span><span class="sxs-lookup"><span data-stu-id="931cc-157">Use the <xref:System.Net.Http.HttpClient.GetAsync%2A> method to download the websites because `GetAsync` accepts a <xref:System.Threading.CancellationToken> argument.</span></span>  
   
--   <span data-ttu-id="25a06-158">`DisplayResults`를 호출하여 다운로드한 각 웹 사이트에 대한 결과를 표시하려면 먼저 `ct`를 확인하여 현재 작업이 취소되었는지 확인합니다.</span><span class="sxs-lookup"><span data-stu-id="25a06-158">Before calling `DisplayResults` to display the results for each downloaded website, check `ct` to verify that the current operation hasn’t been canceled.</span></span>  
+-   <span data-ttu-id="931cc-158">`DisplayResults`를 호출하여 다운로드한 각 웹 사이트에 대한 결과를 표시하려면 먼저 `ct`를 확인하여 현재 작업이 취소되었는지 확인합니다.</span><span class="sxs-lookup"><span data-stu-id="931cc-158">Before calling `DisplayResults` to display the results for each downloaded website, check `ct` to verify that the current operation hasn’t been canceled.</span></span>  
   
- <span data-ttu-id="25a06-159">다음 코드에서는 이러한 변경 내용을 보여 주며, 별표로 표시되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="25a06-159">The following code shows these changes, which are marked with asterisks.</span></span>  
+ <span data-ttu-id="931cc-159">다음 코드에서는 이러한 변경 내용을 보여 주며, 별표로 표시되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="931cc-159">The following code shows these changes, which are marked with asterisks.</span></span>  
   
 ```csharp  
 // *** Provide a parameter for the CancellationToken from StartButton_Click.  
@@ -272,7 +272,7 @@ async Task AccessTheWebAsync(CancellationToken ct)
 }     
 ```  
   
- <span data-ttu-id="25a06-160">이 앱이 실행되는 동안 **시작** 단추를 여러 번 선택하면 다음 출력과 유사한 결과가 생성되어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="25a06-160">If you choose the **Start** button several times while this app is running, it should produce results that resemble the following output.</span></span>  
+ <span data-ttu-id="931cc-160">이 앱이 실행되는 동안 **시작** 단추를 여러 번 선택하면 다음 출력과 유사한 결과가 생성되어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="931cc-160">If you choose the **Start** button several times while this app is running, it should produce results that resemble the following output.</span></span>  
   
 ```  
 1. msdn.microsoft.com/library/hh191443.aspx                83732  
@@ -300,16 +300,16 @@ Download canceled.
 TOTAL bytes returned:  890591  
 ```  
   
- <span data-ttu-id="25a06-161">부분 목록을 제거하려면 `StartButton_Click`에서 코드 첫 줄의 주석 처리를 제거하여 사용자가 작업을 다시 시작할 때마다 텍스트 상자의 선택을 취소합니다.</span><span class="sxs-lookup"><span data-stu-id="25a06-161">To eliminate the partial lists, uncomment the first line of code in `StartButton_Click` to clear the text box each time the user restarts the operation.</span></span>  
+ <span data-ttu-id="931cc-161">부분 목록을 제거하려면 `StartButton_Click`에서 코드 첫 줄의 주석 처리를 제거하여 사용자가 작업을 다시 시작할 때마다 텍스트 상자의 선택을 취소합니다.</span><span class="sxs-lookup"><span data-stu-id="931cc-161">To eliminate the partial lists, uncomment the first line of code in `StartButton_Click` to clear the text box each time the user restarts the operation.</span></span>  
   
-###  <a name="BKMK_RunMultipleOperations"></a> <span data-ttu-id="25a06-162">여러 작업을 실행하고 출력을 큐 대기</span><span class="sxs-lookup"><span data-stu-id="25a06-162">Run Multiple Operations and Queue the Output</span></span>  
- <span data-ttu-id="25a06-163">이 세 번째 예제는 사용자가 **시작** 단추를 선택할 때마다 앱이 다른 비동기 작업을 시작하고 모든 작업이 실행되어 완료된다는 점에서 가장 복잡합니다.</span><span class="sxs-lookup"><span data-stu-id="25a06-163">This third example is the most complicated in that the app starts another asynchronous operation each time that the user chooses the **Start** button, and all the operations run to completion.</span></span> <span data-ttu-id="25a06-164">요청한 모든 작업은 목록에서 비동기적으로 웹 사이트를 다운로드하지만 작업의 출력은 순차적으로 제공됩니다.</span><span class="sxs-lookup"><span data-stu-id="25a06-164">All the requested operations download websites from the list asynchronously, but the output from the operations is presented sequentially.</span></span> <span data-ttu-id="25a06-165">즉, 실제 다운로드 작업은 [재입력 인식](#BKMK_RecognizingReentrancy)의 출력에 표시된 대로 인터리브되지만 각 그룹에 대한 결과 목록은 별도로 제공됩니다.</span><span class="sxs-lookup"><span data-stu-id="25a06-165">That is, the actual downloading activity is interleaved, as the output in [Recognizing Reentrancy](#BKMK_RecognizingReentrancy) shows, but the list of results for each group is presented separately.</span></span>  
+###  <a name="BKMK_RunMultipleOperations"></a> <span data-ttu-id="931cc-162">여러 작업을 실행하고 출력을 큐 대기</span><span class="sxs-lookup"><span data-stu-id="931cc-162">Run Multiple Operations and Queue the Output</span></span>  
+ <span data-ttu-id="931cc-163">이 세 번째 예제는 사용자가 **시작** 단추를 선택할 때마다 앱이 다른 비동기 작업을 시작하고 모든 작업이 실행되어 완료된다는 점에서 가장 복잡합니다.</span><span class="sxs-lookup"><span data-stu-id="931cc-163">This third example is the most complicated in that the app starts another asynchronous operation each time that the user chooses the **Start** button, and all the operations run to completion.</span></span> <span data-ttu-id="931cc-164">요청한 모든 작업은 목록에서 비동기적으로 웹 사이트를 다운로드하지만 작업의 출력은 순차적으로 제공됩니다.</span><span class="sxs-lookup"><span data-stu-id="931cc-164">All the requested operations download websites from the list asynchronously, but the output from the operations is presented sequentially.</span></span> <span data-ttu-id="931cc-165">즉, 실제 다운로드 작업은 [재입력 인식](#BKMK_RecognizingReentrancy)의 출력에 표시된 대로 인터리브되지만 각 그룹에 대한 결과 목록은 별도로 제공됩니다.</span><span class="sxs-lookup"><span data-stu-id="931cc-165">That is, the actual downloading activity is interleaved, as the output in [Recognizing Reentrancy](#BKMK_RecognizingReentrancy) shows, but the list of results for each group is presented separately.</span></span>  
   
- <span data-ttu-id="25a06-166">작업은 표시 프로세스의 게이트키퍼 역할을 하는 전역 <xref:System.Threading.Tasks.Task>, `pendingWork`를 공유합니다.</span><span class="sxs-lookup"><span data-stu-id="25a06-166">The operations share a global <xref:System.Threading.Tasks.Task>, `pendingWork`, which serves as a gatekeeper for the display process.</span></span>  
+ <span data-ttu-id="931cc-166">작업은 표시 프로세스의 게이트키퍼 역할을 하는 전역 <xref:System.Threading.Tasks.Task>, `pendingWork`를 공유합니다.</span><span class="sxs-lookup"><span data-stu-id="931cc-166">The operations share a global <xref:System.Threading.Tasks.Task>, `pendingWork`, which serves as a gatekeeper for the display process.</span></span>  
 
- <span data-ttu-id="25a06-167">이 시나리오를 설정하려면 [예제 앱 검토 및 실행](#BKMD_SettingUpTheExample)에서 제공하는 기본 코드를 다음과 같이 변경합니다.</span><span class="sxs-lookup"><span data-stu-id="25a06-167">To set up this scenario, make the following changes to the basic code that is provided in [Reviewing and Running the Example App](#BKMD_SettingUpTheExample).</span></span> <span data-ttu-id="25a06-168">[Async Samples: Reentrancy in .NET Desktop Apps](https://code.msdn.microsoft.com/Async-Sample-Preventing-a8489f06)(비동기 샘플: .NET 데스크톱 앱의 재입력)에서 완성된 앱을 다운로드할 수도 있습니다.</span><span class="sxs-lookup"><span data-stu-id="25a06-168">You also can download the finished app from [Async Samples: Reentrancy in .NET Desktop Apps](https://code.msdn.microsoft.com/Async-Sample-Preventing-a8489f06).</span></span> <span data-ttu-id="25a06-169">프로젝트의 이름은 QueueResults입니다.</span><span class="sxs-lookup"><span data-stu-id="25a06-169">The name of the project is QueueResults.</span></span>  
+ <span data-ttu-id="931cc-167">이 시나리오를 설정하려면 [예제 앱 검토 및 실행](#BKMD_SettingUpTheExample)에서 제공하는 기본 코드를 다음과 같이 변경합니다.</span><span class="sxs-lookup"><span data-stu-id="931cc-167">To set up this scenario, make the following changes to the basic code that is provided in [Reviewing and Running the Example App](#BKMD_SettingUpTheExample).</span></span> <span data-ttu-id="931cc-168">[Async Samples: Reentrancy in .NET Desktop Apps](https://code.msdn.microsoft.com/Async-Sample-Preventing-a8489f06)(비동기 샘플: .NET 데스크톱 앱의 재입력)에서 완성된 앱을 다운로드할 수도 있습니다.</span><span class="sxs-lookup"><span data-stu-id="931cc-168">You also can download the finished app from [Async Samples: Reentrancy in .NET Desktop Apps](https://code.msdn.microsoft.com/Async-Sample-Preventing-a8489f06).</span></span> <span data-ttu-id="931cc-169">프로젝트의 이름은 QueueResults입니다.</span><span class="sxs-lookup"><span data-stu-id="931cc-169">The name of the project is QueueResults.</span></span>  
    
- <span data-ttu-id="25a06-170">다음 출력은 사용자가 **시작** 단추를 한 번만 선택하는 경우의 결과를 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="25a06-170">The following output shows the result if the user chooses the **Start** button only once.</span></span> <span data-ttu-id="25a06-171">문제 레이블 A는 처음으로 **시작** 단추를 선택한 경우의 결과임을 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="25a06-171">The letter label, A, indicates that the result is from the first time the **Start** button is chosen.</span></span> <span data-ttu-id="25a06-172">숫자는 다운로드 대상 목록에서 URL의 순서를 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="25a06-172">The numbers show the order of the URLs in the list of download targets.</span></span>  
+ <span data-ttu-id="931cc-170">다음 출력은 사용자가 **시작** 단추를 한 번만 선택하는 경우의 결과를 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="931cc-170">The following output shows the result if the user chooses the **Start** button only once.</span></span> <span data-ttu-id="931cc-171">문제 레이블 A는 처음으로 **시작** 단추를 선택한 경우의 결과임을 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="931cc-171">The letter label, A, indicates that the result is from the first time the **Start** button is chosen.</span></span> <span data-ttu-id="931cc-172">숫자는 다운로드 대상 목록에서 URL의 순서를 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="931cc-172">The numbers show the order of the URLs in the list of download targets.</span></span>  
   
 ```  
 #Starting group A.  
@@ -329,7 +329,7 @@ TOTAL bytes returned:  918876
 #Group A is complete.  
 ```  
   
- <span data-ttu-id="25a06-173">사용자가 **시작** 단추를 세 번 선택하면 앱이 다음 줄과 유사한 출력을 생성합니다.</span><span class="sxs-lookup"><span data-stu-id="25a06-173">If the user chooses the **Start** button three times, the app produces output that resembles the following lines.</span></span> <span data-ttu-id="25a06-174">파운드 기호(#)로 시작하는 정보 줄은 응용 프로그램의 진행률을 추적합니다.</span><span class="sxs-lookup"><span data-stu-id="25a06-174">The information lines that start with a pound sign (#) trace the progress of the application.</span></span>  
+ <span data-ttu-id="931cc-173">사용자가 **시작** 단추를 세 번 선택하면 앱이 다음 줄과 유사한 출력을 생성합니다.</span><span class="sxs-lookup"><span data-stu-id="931cc-173">If the user chooses the **Start** button three times, the app produces output that resembles the following lines.</span></span> <span data-ttu-id="931cc-174">파운드 기호(#)로 시작하는 정보 줄은 응용 프로그램의 진행률을 추적합니다.</span><span class="sxs-lookup"><span data-stu-id="931cc-174">The information lines that start with a pound sign (#) trace the progress of the application.</span></span>  
   
 ```  
 #Starting group A.  
@@ -385,12 +385,12 @@ TOTAL bytes returned:  920526
 #Group C is complete.  
 ```  
   
- <span data-ttu-id="25a06-175">그룹 B와 C는 그룹 A가 완료되기 전에 시작되지만 각 그룹에 대한 출력은 별도로 나타납니다.</span><span class="sxs-lookup"><span data-stu-id="25a06-175">Groups B and C start before group A has finished, but the output for the each group appears separately.</span></span> <span data-ttu-id="25a06-176">그룹 A에 대한 모든 출력이 먼저 나타나고 그 뒤에 그룹 B에 대한 모든 출력과 그룹 C에 대한 모든 출력이 차례로 나타납니다. 앱은 항상 순서대로 그룹을 표시하고 각 그룹에 대해 URL이 URL 목록에 나타나는 순서대로 개별 웹 사이트에 대한 정보를 항상 표시합니다.</span><span class="sxs-lookup"><span data-stu-id="25a06-176">All the output for group A appears first, followed by all the output for group B, and then all the output for group C. The app always displays the groups in order and, for each group, always displays the information about the individual websites in the order that the URLs appear in the list of URLs.</span></span>  
+ <span data-ttu-id="931cc-175">그룹 B와 C는 그룹 A가 완료되기 전에 시작되지만 각 그룹에 대한 출력은 별도로 나타납니다.</span><span class="sxs-lookup"><span data-stu-id="931cc-175">Groups B and C start before group A has finished, but the output for the each group appears separately.</span></span> <span data-ttu-id="931cc-176">그룹 A에 대한 모든 출력이 먼저 나타나고 그 뒤에 그룹 B에 대한 모든 출력과 그룹 C에 대한 모든 출력이 차례로 나타납니다. 앱은 항상 순서대로 그룹을 표시하고 각 그룹에 대해 URL이 URL 목록에 나타나는 순서대로 개별 웹 사이트에 대한 정보를 항상 표시합니다.</span><span class="sxs-lookup"><span data-stu-id="931cc-176">All the output for group A appears first, followed by all the output for group B, and then all the output for group C. The app always displays the groups in order and, for each group, always displays the information about the individual websites in the order that the URLs appear in the list of URLs.</span></span>  
   
- <span data-ttu-id="25a06-177">그러나 다운로드가 실제로 수행되는 순서는 예측할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="25a06-177">However, you can't predict the order in which the downloads actually happen.</span></span> <span data-ttu-id="25a06-178">여러 그룹이 시작된 후에는 그룹이 생성하는 다운로드 작업이 모두 활성화됩니다.</span><span class="sxs-lookup"><span data-stu-id="25a06-178">After multiple groups have been started, the download tasks that they generate are all active.</span></span> <span data-ttu-id="25a06-179">A-1이 B-1보다 먼저 다운로드된다고 가정할 수 없으며 A-1이 A-2보다 먼저 다운로드된다고 가정할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="25a06-179">You can't assume that A-1 will be downloaded before B-1, and you can't assume that A-1 will be downloaded before A-2.</span></span>  
+ <span data-ttu-id="931cc-177">그러나 다운로드가 실제로 수행되는 순서는 예측할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="931cc-177">However, you can't predict the order in which the downloads actually happen.</span></span> <span data-ttu-id="931cc-178">여러 그룹이 시작된 후에는 그룹이 생성하는 다운로드 작업이 모두 활성화됩니다.</span><span class="sxs-lookup"><span data-stu-id="931cc-178">After multiple groups have been started, the download tasks that they generate are all active.</span></span> <span data-ttu-id="931cc-179">A-1이 B-1보다 먼저 다운로드된다고 가정할 수 없으며 A-1이 A-2보다 먼저 다운로드된다고 가정할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="931cc-179">You can't assume that A-1 will be downloaded before B-1, and you can't assume that A-1 will be downloaded before A-2.</span></span>  
   
-#### <a name="global-definitions"></a><span data-ttu-id="25a06-180">전역 정의</span><span class="sxs-lookup"><span data-stu-id="25a06-180">Global Definitions</span></span>  
- <span data-ttu-id="25a06-181">샘플 코드는 모든 메서드에서 표시되는 다음과 같은 두 가지 전역 선언을 포함합니다.</span><span class="sxs-lookup"><span data-stu-id="25a06-181">The sample code contains the following two global declarations that are visible from all methods.</span></span>  
+#### <a name="global-definitions"></a><span data-ttu-id="931cc-180">전역 정의</span><span class="sxs-lookup"><span data-stu-id="931cc-180">Global Definitions</span></span>  
+ <span data-ttu-id="931cc-181">샘플 코드는 모든 메서드에서 표시되는 다음과 같은 두 가지 전역 선언을 포함합니다.</span><span class="sxs-lookup"><span data-stu-id="931cc-181">The sample code contains the following two global declarations that are visible from all methods.</span></span>  
   
 ```csharp  
 public partial class MainWindow : Window  // Class MainPage in Windows Store app.  
@@ -400,10 +400,10 @@ public partial class MainWindow : Window  // Class MainPage in Windows Store app
     private char group = (char)('A' - 1);  
 ```  
   
- <span data-ttu-id="25a06-182">`Task` 변수 `pendingWork`는 표시 프로세스를 감독하고 모든 그룹이 다른 그룹의 표시 작업을 방해하지 않도록 합니다.</span><span class="sxs-lookup"><span data-stu-id="25a06-182">The `Task` variable, `pendingWork`, oversees the display process and prevents any group from interrupting another group's display operation.</span></span> <span data-ttu-id="25a06-183">문자 변수 `group`은 다른 그룹의 출력에 레이블을 지정하여 해당 결과가 예상 순서대로 나타나는지 확인합니다.</span><span class="sxs-lookup"><span data-stu-id="25a06-183">The character variable, `group`, labels the output from different groups to verify that results appear in the expected order.</span></span>  
+ <span data-ttu-id="931cc-182">`Task` 변수 `pendingWork`는 표시 프로세스를 감독하고 모든 그룹이 다른 그룹의 표시 작업을 방해하지 않도록 합니다.</span><span class="sxs-lookup"><span data-stu-id="931cc-182">The `Task` variable, `pendingWork`, oversees the display process and prevents any group from interrupting another group's display operation.</span></span> <span data-ttu-id="931cc-183">문자 변수 `group`은 다른 그룹의 출력에 레이블을 지정하여 해당 결과가 예상 순서대로 나타나는지 확인합니다.</span><span class="sxs-lookup"><span data-stu-id="931cc-183">The character variable, `group`, labels the output from different groups to verify that results appear in the expected order.</span></span>  
   
-#### <a name="the-click-event-handler"></a><span data-ttu-id="25a06-184">Click 이벤트 처리기</span><span class="sxs-lookup"><span data-stu-id="25a06-184">The Click Event Handler</span></span>  
- <span data-ttu-id="25a06-185">이벤트 처리기 `StartButton_Click`은 사용자가 **시작** 단추를 선택할 때마다 그룹 문자를 증가시킵니다.</span><span class="sxs-lookup"><span data-stu-id="25a06-185">The event handler, `StartButton_Click`, increments the group letter each time the user chooses the **Start** button.</span></span> <span data-ttu-id="25a06-186">그런 다음 처리기에서 `AccessTheWebAsync`를 호출하여 다운로드 중인 작업을 실행합니다.</span><span class="sxs-lookup"><span data-stu-id="25a06-186">Then the handler calls `AccessTheWebAsync` to run the downloading operation.</span></span>  
+#### <a name="the-click-event-handler"></a><span data-ttu-id="931cc-184">Click 이벤트 처리기</span><span class="sxs-lookup"><span data-stu-id="931cc-184">The Click Event Handler</span></span>  
+ <span data-ttu-id="931cc-185">이벤트 처리기 `StartButton_Click`은 사용자가 **시작** 단추를 선택할 때마다 그룹 문자를 증가시킵니다.</span><span class="sxs-lookup"><span data-stu-id="931cc-185">The event handler, `StartButton_Click`, increments the group letter each time the user chooses the **Start** button.</span></span> <span data-ttu-id="931cc-186">그런 다음 처리기에서 `AccessTheWebAsync`를 호출하여 다운로드 중인 작업을 실행합니다.</span><span class="sxs-lookup"><span data-stu-id="931cc-186">Then the handler calls `AccessTheWebAsync` to run the downloading operation.</span></span>  
   
 ```csharp  
 private async void StartButton_Click(object sender, RoutedEventArgs e)  
@@ -429,12 +429,12 @@ private async void StartButton_Click(object sender, RoutedEventArgs e)
 }  
 ```  
   
-#### <a name="the-accessthewebasync-method"></a><span data-ttu-id="25a06-187">AccessTheWebAsync 메서드</span><span class="sxs-lookup"><span data-stu-id="25a06-187">The AccessTheWebAsync Method</span></span>  
- <span data-ttu-id="25a06-188">이 예제에서는 `AccessTheWebAsync`를 두 개의 메서드로 분할합니다.</span><span class="sxs-lookup"><span data-stu-id="25a06-188">This example splits `AccessTheWebAsync` into two methods.</span></span> <span data-ttu-id="25a06-189">첫 번째 메서드 `AccessTheWebAsync`는 그룹에 대해 모든 다운로드 작업을 시작하고 `pendingWork`를 설정하여 표시 프로세스를 제어합니다.</span><span class="sxs-lookup"><span data-stu-id="25a06-189">The first method, `AccessTheWebAsync`, starts all the download tasks for a group and sets up `pendingWork` to control the display process.</span></span> <span data-ttu-id="25a06-190">이 메서드는 LINQ(통합 언어 쿼리) 쿼리 및 <xref:System.Linq.Enumerable.ToArray%2A>를 사용하여 모든 다운로드 작업을 동시에 시작합니다.</span><span class="sxs-lookup"><span data-stu-id="25a06-190">The method uses a Language Integrated Query (LINQ query) and <xref:System.Linq.Enumerable.ToArray%2A> to start all the download tasks at the same time.</span></span>  
+#### <a name="the-accessthewebasync-method"></a><span data-ttu-id="931cc-187">AccessTheWebAsync 메서드</span><span class="sxs-lookup"><span data-stu-id="931cc-187">The AccessTheWebAsync Method</span></span>  
+ <span data-ttu-id="931cc-188">이 예제에서는 `AccessTheWebAsync`를 두 개의 메서드로 분할합니다.</span><span class="sxs-lookup"><span data-stu-id="931cc-188">This example splits `AccessTheWebAsync` into two methods.</span></span> <span data-ttu-id="931cc-189">첫 번째 메서드 `AccessTheWebAsync`는 그룹에 대해 모든 다운로드 작업을 시작하고 `pendingWork`를 설정하여 표시 프로세스를 제어합니다.</span><span class="sxs-lookup"><span data-stu-id="931cc-189">The first method, `AccessTheWebAsync`, starts all the download tasks for a group and sets up `pendingWork` to control the display process.</span></span> <span data-ttu-id="931cc-190">이 메서드는 LINQ(통합 언어 쿼리) 쿼리 및 <xref:System.Linq.Enumerable.ToArray%2A>를 사용하여 모든 다운로드 작업을 동시에 시작합니다.</span><span class="sxs-lookup"><span data-stu-id="931cc-190">The method uses a Language Integrated Query (LINQ query) and <xref:System.Linq.Enumerable.ToArray%2A> to start all the download tasks at the same time.</span></span>  
   
- <span data-ttu-id="25a06-191">그런 다음 `AccessTheWebAsync`는 `FinishOneGroupAsync`를 호출하여 각 다운로드가 완료될 때까지 대기하고 해당 길이를 표시합니다.</span><span class="sxs-lookup"><span data-stu-id="25a06-191">`AccessTheWebAsync` then calls `FinishOneGroupAsync` to await the completion of each download and display its length.</span></span>  
+ <span data-ttu-id="931cc-191">그런 다음 `AccessTheWebAsync`는 `FinishOneGroupAsync`를 호출하여 각 다운로드가 완료될 때까지 대기하고 해당 길이를 표시합니다.</span><span class="sxs-lookup"><span data-stu-id="931cc-191">`AccessTheWebAsync` then calls `FinishOneGroupAsync` to await the completion of each download and display its length.</span></span>  
   
- <span data-ttu-id="25a06-192">`FinishOneGroupAsync`는 `AccessTheWebAsync`의 `pendingWork`에 할당되는 작업을 반환합니다.</span><span class="sxs-lookup"><span data-stu-id="25a06-192">`FinishOneGroupAsync` returns a task that's assigned to `pendingWork` in `AccessTheWebAsync`.</span></span> <span data-ttu-id="25a06-193">해당 값은 작업이 완료되기 전에 다른 작업에 의한 중단을 방지합니다.</span><span class="sxs-lookup"><span data-stu-id="25a06-193">That value prevents interruption by another operation before the task is complete.</span></span>  
+ <span data-ttu-id="931cc-192">`FinishOneGroupAsync`는 `AccessTheWebAsync`의 `pendingWork`에 할당되는 작업을 반환합니다.</span><span class="sxs-lookup"><span data-stu-id="931cc-192">`FinishOneGroupAsync` returns a task that's assigned to `pendingWork` in `AccessTheWebAsync`.</span></span> <span data-ttu-id="931cc-193">해당 값은 작업이 완료되기 전에 다른 작업에 의한 중단을 방지합니다.</span><span class="sxs-lookup"><span data-stu-id="931cc-193">That value prevents interruption by another operation before the task is complete.</span></span>  
   
 ```csharp  
 private async Task<char> AccessTheWebAsync(char grp)  
@@ -461,10 +461,10 @@ private async Task<char> AccessTheWebAsync(char grp)
 }  
 ```  
   
-#### <a name="the-finishonegroupasync-method"></a><span data-ttu-id="25a06-194">FinishOneGroupAsync 메서드</span><span class="sxs-lookup"><span data-stu-id="25a06-194">The FinishOneGroupAsync Method</span></span>  
- <span data-ttu-id="25a06-195">이 메서드는 한 그룹의 다운로드 작업을 순환하여 각 작업을 대기하고 다운로드한 웹 사이트의 길이를 표시하고 길이를 합계에 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="25a06-195">This method cycles through the download tasks in a group, awaiting each one, displaying the length of the downloaded website, and adding the length to the total.</span></span>  
+#### <a name="the-finishonegroupasync-method"></a><span data-ttu-id="931cc-194">FinishOneGroupAsync 메서드</span><span class="sxs-lookup"><span data-stu-id="931cc-194">The FinishOneGroupAsync Method</span></span>  
+ <span data-ttu-id="931cc-195">이 메서드는 한 그룹의 다운로드 작업을 순환하여 각 작업을 대기하고 다운로드한 웹 사이트의 길이를 표시하고 길이를 합계에 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="931cc-195">This method cycles through the download tasks in a group, awaiting each one, displaying the length of the downloaded website, and adding the length to the total.</span></span>  
   
- <span data-ttu-id="25a06-196">`FinishOneGroupAsync`의 첫 번째 문은 `pendingWork`를 사용하여 메서드 입력이 이미 표시 프로세스에 있거나 이미 대기 중인 작업을 방해하지 않는지 확인합니다.</span><span class="sxs-lookup"><span data-stu-id="25a06-196">The first statement in `FinishOneGroupAsync` uses `pendingWork` to make sure that entering the method doesn't interfere with an operation that is already in the display process or that's already waiting.</span></span> <span data-ttu-id="25a06-197">이러한 작업이 진행 중인 경우 입력 작업은 해당 순서를 기다려야 합니다.</span><span class="sxs-lookup"><span data-stu-id="25a06-197">If such an operation is in progress, the entering operation must wait its turn.</span></span>  
+ <span data-ttu-id="931cc-196">`FinishOneGroupAsync`의 첫 번째 문은 `pendingWork`를 사용하여 메서드 입력이 이미 표시 프로세스에 있거나 이미 대기 중인 작업을 방해하지 않는지 확인합니다.</span><span class="sxs-lookup"><span data-stu-id="931cc-196">The first statement in `FinishOneGroupAsync` uses `pendingWork` to make sure that entering the method doesn't interfere with an operation that is already in the display process or that's already waiting.</span></span> <span data-ttu-id="931cc-197">이러한 작업이 진행 중인 경우 입력 작업은 해당 순서를 기다려야 합니다.</span><span class="sxs-lookup"><span data-stu-id="931cc-197">If such an operation is in progress, the entering operation must wait its turn.</span></span>  
   
 ```csharp  
 private async Task FinishOneGroupAsync(List<string> urls, Task<byte[]>[] contentTasks, char grp)  
@@ -491,12 +491,12 @@ private async Task FinishOneGroupAsync(List<string> urls, Task<byte[]>[] content
 ```  
   
    
-#### <a name="points-of-interest"></a><span data-ttu-id="25a06-198">관심 영역</span><span class="sxs-lookup"><span data-stu-id="25a06-198">Points of Interest</span></span>  
- <span data-ttu-id="25a06-199">출력에서 파운드 기호(#)로 시작하는 정보 줄은 이 예제의 작동 방식을 명확히 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="25a06-199">The information lines that start with a pound sign (#) in the output clarify how this example works.</span></span>  
+#### <a name="points-of-interest"></a><span data-ttu-id="931cc-198">관심 영역</span><span class="sxs-lookup"><span data-stu-id="931cc-198">Points of Interest</span></span>  
+ <span data-ttu-id="931cc-199">출력에서 파운드 기호(#)로 시작하는 정보 줄은 이 예제의 작동 방식을 명확히 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="931cc-199">The information lines that start with a pound sign (#) in the output clarify how this example works.</span></span>  
   
- <span data-ttu-id="25a06-200">출력은 다음과 같은 패턴을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="25a06-200">The output shows the following patterns.</span></span>  
+ <span data-ttu-id="931cc-200">출력은 다음과 같은 패턴을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="931cc-200">The output shows the following patterns.</span></span>  
   
--   <span data-ttu-id="25a06-201">이전 그룹이 출력을 표시하는 동안 그룹이 시작될 수 있지만 이전 그룹의 출력 표시가 중단되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="25a06-201">A group can be started while a previous group is displaying its output, but the display of the previous group's output isn't interrupted.</span></span>  
+-   <span data-ttu-id="931cc-201">이전 그룹이 출력을 표시하는 동안 그룹이 시작될 수 있지만 이전 그룹의 출력 표시가 중단되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="931cc-201">A group can be started while a previous group is displaying its output, but the display of the previous group's output isn't interrupted.</span></span>  
   
     ```  
     #Starting group A.  
@@ -532,61 +532,61 @@ private async Task FinishOneGroupAsync(List<string> urls, Task<byte[]>[] content
     TOTAL bytes returned:  915908  
     ```  
   
--   <span data-ttu-id="25a06-202">`pendingWork` 작업은 처음에 시작된 그룹 A에 대해서만 `FinishOneGroupAsync`의 시작 부분에서 null입니다.</span><span class="sxs-lookup"><span data-stu-id="25a06-202">The `pendingWork` task is null  at the start of `FinishOneGroupAsync` only for group A, which started first.</span></span> <span data-ttu-id="25a06-203">그룹 A는 `FinishOneGroupAsync`에 도달할 때 await 식을 아직 완료하지 않았습니다.</span><span class="sxs-lookup"><span data-stu-id="25a06-203">Group A hasn’t yet completed an await expression when it reaches `FinishOneGroupAsync`.</span></span> <span data-ttu-id="25a06-204">따라서 컨트롤이 `AccessTheWebAsync`로 반환되지 않았으며 `pendingWork`에 대한 첫 번째 할당이 발생되지 않았습니다.</span><span class="sxs-lookup"><span data-stu-id="25a06-204">Therefore, control hasn't returned to `AccessTheWebAsync`, and the first assignment to `pendingWork` hasn't occurred.</span></span>  
+-   <span data-ttu-id="931cc-202">`pendingWork` 작업은 처음에 시작된 그룹 A에 대해서만 `FinishOneGroupAsync`의 시작 부분에서 null입니다.</span><span class="sxs-lookup"><span data-stu-id="931cc-202">The `pendingWork` task is null  at the start of `FinishOneGroupAsync` only for group A, which started first.</span></span> <span data-ttu-id="931cc-203">그룹 A는 `FinishOneGroupAsync`에 도달할 때 await 식을 아직 완료하지 않았습니다.</span><span class="sxs-lookup"><span data-stu-id="931cc-203">Group A hasn’t yet completed an await expression when it reaches `FinishOneGroupAsync`.</span></span> <span data-ttu-id="931cc-204">따라서 컨트롤이 `AccessTheWebAsync`로 반환되지 않았으며 `pendingWork`에 대한 첫 번째 할당이 발생되지 않았습니다.</span><span class="sxs-lookup"><span data-stu-id="931cc-204">Therefore, control hasn't returned to `AccessTheWebAsync`, and the first assignment to `pendingWork` hasn't occurred.</span></span>  
   
--   <span data-ttu-id="25a06-205">다음 두 줄은 항상 출력에 함께 나타납니다.</span><span class="sxs-lookup"><span data-stu-id="25a06-205">The following two lines always appear together in the output.</span></span> <span data-ttu-id="25a06-206">코드는 `StartButton_Click`의 그룹 작업 시작과 `pendingWork`에 그룹에 대한 작업 할당 사이에서 중단되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="25a06-206">The code is never interrupted between starting a group's operation in `StartButton_Click` and assigning a task for the group to `pendingWork`.</span></span>  
+-   <span data-ttu-id="931cc-205">다음 두 줄은 항상 출력에 함께 나타납니다.</span><span class="sxs-lookup"><span data-stu-id="931cc-205">The following two lines always appear together in the output.</span></span> <span data-ttu-id="931cc-206">코드는 `StartButton_Click`의 그룹 작업 시작과 `pendingWork`에 그룹에 대한 작업 할당 사이에서 중단되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="931cc-206">The code is never interrupted between starting a group's operation in `StartButton_Click` and assigning a task for the group to `pendingWork`.</span></span>  
   
     ```  
     #Starting group B.  
     #Task assigned for group B. Download tasks are active.  
     ```  
   
-     <span data-ttu-id="25a06-207">그룹이 `StartButton_Click`을 입력한 후 작업은 `FinishOneGroupAsync`를 입력한 다음에야 await 식을 완료합니다.</span><span class="sxs-lookup"><span data-stu-id="25a06-207">After a group enters `StartButton_Click`, the operation doesn't complete an await expression until the operation enters `FinishOneGroupAsync`.</span></span> <span data-ttu-id="25a06-208">따라서 코드의 해당 세그먼트 중에는 다른 작업에서 제어할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="25a06-208">Therefore, no other operation can gain control during that segment of code.</span></span>  
+     <span data-ttu-id="931cc-207">그룹이 `StartButton_Click`을 입력한 후 작업은 `FinishOneGroupAsync`를 입력한 다음에야 await 식을 완료합니다.</span><span class="sxs-lookup"><span data-stu-id="931cc-207">After a group enters `StartButton_Click`, the operation doesn't complete an await expression until the operation enters `FinishOneGroupAsync`.</span></span> <span data-ttu-id="931cc-208">따라서 코드의 해당 세그먼트 중에는 다른 작업에서 제어할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="931cc-208">Therefore, no other operation can gain control during that segment of code.</span></span>  
   
-##  <a name="BKMD_SettingUpTheExample"></a> <span data-ttu-id="25a06-209">예제 앱 검토 및 실행</span><span class="sxs-lookup"><span data-stu-id="25a06-209">Reviewing and Running the Example App</span></span>  
- <span data-ttu-id="25a06-210">예제 앱을 더 잘 이해하려면 다운로드하거나, 직접 빌드하거나, 앱을 구현하지 않고 이 항목의 끝에 있는 코드를 검토할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="25a06-210">To better understand the example app, you can download it, build it yourself, or review the code at the end of this topic without implementing the app.</span></span>  
+##  <a name="BKMD_SettingUpTheExample"></a> <span data-ttu-id="931cc-209">예제 앱 검토 및 실행</span><span class="sxs-lookup"><span data-stu-id="931cc-209">Reviewing and Running the Example App</span></span>  
+ <span data-ttu-id="931cc-210">예제 앱을 더 잘 이해하려면 다운로드하거나, 직접 빌드하거나, 앱을 구현하지 않고 이 항목의 끝에 있는 코드를 검토할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="931cc-210">To better understand the example app, you can download it, build it yourself, or review the code at the end of this topic without implementing the app.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="25a06-211">예제를 WPF(Windows Presentation Foundation) 데스크톱 앱으로 실행하려면 Visual Studio 2012 이상 및 .NET Framework 4.5 이상이 컴퓨터에 설치되어 있어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="25a06-211">To run the example as a Windows Presentation Foundation (WPF) desktop app, you must have Visual Studio 2012 or newer and the .NET Framework 4.5 or newer installed on your computer.</span></span>  
+>  <span data-ttu-id="931cc-211">예제를 WPF(Windows Presentation Foundation) 데스크톱 앱으로 실행하려면 Visual Studio 2012 이상 및 .NET Framework 4.5 이상이 컴퓨터에 설치되어 있어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="931cc-211">To run the example as a Windows Presentation Foundation (WPF) desktop app, you must have Visual Studio 2012 or newer and the .NET Framework 4.5 or newer installed on your computer.</span></span>  
   
-###  <a name="BKMK_DownloadingTheApp"></a> <span data-ttu-id="25a06-212">앱 다운로드</span><span class="sxs-lookup"><span data-stu-id="25a06-212">Downloading the App</span></span>  
+###  <a name="BKMK_DownloadingTheApp"></a> <span data-ttu-id="931cc-212">앱 다운로드</span><span class="sxs-lookup"><span data-stu-id="931cc-212">Downloading the App</span></span>  
   
-1.  <span data-ttu-id="25a06-213">[Async Samples: Reentrancy in .NET Desktop Apps](https://code.msdn.microsoft.com/Async-Sample-Preventing-a8489f06)(비동기 샘플: .NET 데스크톱 앱의 재입력)에서 압축 파일을 다운로드합니다.</span><span class="sxs-lookup"><span data-stu-id="25a06-213">Download the compressed file from [Async Samples: Reentrancy in .NET Desktop Apps](https://code.msdn.microsoft.com/Async-Sample-Preventing-a8489f06).</span></span>  
+1.  <span data-ttu-id="931cc-213">[Async Samples: Reentrancy in .NET Desktop Apps](https://code.msdn.microsoft.com/Async-Sample-Preventing-a8489f06)(비동기 샘플: .NET 데스크톱 앱의 재입력)에서 압축 파일을 다운로드합니다.</span><span class="sxs-lookup"><span data-stu-id="931cc-213">Download the compressed file from [Async Samples: Reentrancy in .NET Desktop Apps](https://code.msdn.microsoft.com/Async-Sample-Preventing-a8489f06).</span></span>  
   
-2.  <span data-ttu-id="25a06-214">다운로드한 파일의 압축을 푼 다음 Visual Studio를 시작합니다.</span><span class="sxs-lookup"><span data-stu-id="25a06-214">Decompress the file that you downloaded, and then start Visual Studio.</span></span>  
+2.  <span data-ttu-id="931cc-214">다운로드한 파일의 압축을 푼 다음 Visual Studio를 시작합니다.</span><span class="sxs-lookup"><span data-stu-id="931cc-214">Decompress the file that you downloaded, and then start Visual Studio.</span></span>  
   
-3.  <span data-ttu-id="25a06-215">메뉴 모음에서 **파일**, **열기**, **프로젝트/솔루션**을 선택합니다.</span><span class="sxs-lookup"><span data-stu-id="25a06-215">On the menu bar, choose **File**, **Open**, **Project/Solution**.</span></span>  
+3.  <span data-ttu-id="931cc-215">메뉴 모음에서 **파일**, **열기**, **프로젝트/솔루션**을 선택합니다.</span><span class="sxs-lookup"><span data-stu-id="931cc-215">On the menu bar, choose **File**, **Open**, **Project/Solution**.</span></span>  
   
-4.  <span data-ttu-id="25a06-216">압축을 푼 샘플 코드가 저장된 폴더로 이동한 다음 솔루션(.sln) 파일을 엽니다.</span><span class="sxs-lookup"><span data-stu-id="25a06-216">Navigate to the folder that holds the decompressed sample code, and then open the solution (.sln) file.</span></span>  
+4.  <span data-ttu-id="931cc-216">압축을 푼 샘플 코드가 저장된 폴더로 이동한 다음 솔루션(.sln) 파일을 엽니다.</span><span class="sxs-lookup"><span data-stu-id="931cc-216">Navigate to the folder that holds the decompressed sample code, and then open the solution (.sln) file.</span></span>  
   
-5.  <span data-ttu-id="25a06-217">**솔루션 탐색기**에서 실행하려는 프로젝트의 바로 가기 메뉴를 연 후 **StartUpProject로 설정**을 선택합니다.</span><span class="sxs-lookup"><span data-stu-id="25a06-217">In **Solution Explorer**, open the shortcut menu for the project that you want to run, and then choose **Set as StartUpProject**.</span></span>  
+5.  <span data-ttu-id="931cc-217">**솔루션 탐색기**에서 실행하려는 프로젝트의 바로 가기 메뉴를 연 후 **StartUpProject로 설정**을 선택합니다.</span><span class="sxs-lookup"><span data-stu-id="931cc-217">In **Solution Explorer**, open the shortcut menu for the project that you want to run, and then choose **Set as StartUpProject**.</span></span>  
   
-6.  <span data-ttu-id="25a06-218">CTRL+F5를 선택하여 프로젝트를 빌드하고 실행합니다.</span><span class="sxs-lookup"><span data-stu-id="25a06-218">Choose the CTRL+F5 keys to build and run the project.</span></span>  
+6.  <span data-ttu-id="931cc-218">CTRL+F5를 선택하여 프로젝트를 빌드하고 실행합니다.</span><span class="sxs-lookup"><span data-stu-id="931cc-218">Choose the CTRL+F5 keys to build and run the project.</span></span>  
   
-###  <a name="BKMK_BuildingTheApp"></a> <span data-ttu-id="25a06-219">앱 빌드</span><span class="sxs-lookup"><span data-stu-id="25a06-219">Building the App</span></span>  
- <span data-ttu-id="25a06-220">다음 섹션에서는 예제를 WPF 앱으로 빌드하는 코드를 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="25a06-220">The following section provides the code to build the example as a WPF app.</span></span>  
+###  <a name="BKMK_BuildingTheApp"></a> <span data-ttu-id="931cc-219">앱 빌드</span><span class="sxs-lookup"><span data-stu-id="931cc-219">Building the App</span></span>  
+ <span data-ttu-id="931cc-220">다음 섹션에서는 예제를 WPF 앱으로 빌드하는 코드를 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="931cc-220">The following section provides the code to build the example as a WPF app.</span></span>  
   
-##### <a name="to-build-a-wpf-app"></a><span data-ttu-id="25a06-221">WPF 응용 프로그램을 빌드하려면</span><span class="sxs-lookup"><span data-stu-id="25a06-221">To build a WPF app</span></span>  
+##### <a name="to-build-a-wpf-app"></a><span data-ttu-id="931cc-221">WPF 응용 프로그램을 빌드하려면</span><span class="sxs-lookup"><span data-stu-id="931cc-221">To build a WPF app</span></span>  
   
-1.  <span data-ttu-id="25a06-222">Visual Studio를 시작합니다.</span><span class="sxs-lookup"><span data-stu-id="25a06-222">Start Visual Studio.</span></span>  
+1.  <span data-ttu-id="931cc-222">Visual Studio를 시작합니다.</span><span class="sxs-lookup"><span data-stu-id="931cc-222">Start Visual Studio.</span></span>  
   
-2.  <span data-ttu-id="25a06-223">메뉴 모음에서 **파일**, **새로 만들기**, **프로젝트**를 차례로 선택합니다.</span><span class="sxs-lookup"><span data-stu-id="25a06-223">On the menu bar, choose **File**, **New**, **Project**.</span></span>  
+2.  <span data-ttu-id="931cc-223">메뉴 모음에서 **파일**, **새로 만들기**, **프로젝트**를 차례로 선택합니다.</span><span class="sxs-lookup"><span data-stu-id="931cc-223">On the menu bar, choose **File**, **New**, **Project**.</span></span>  
   
-     <span data-ttu-id="25a06-224">**새 프로젝트** 대화 상자가 열립니다.</span><span class="sxs-lookup"><span data-stu-id="25a06-224">The **New Project** dialog box opens.</span></span>  
+     <span data-ttu-id="931cc-224">**새 프로젝트** 대화 상자가 열립니다.</span><span class="sxs-lookup"><span data-stu-id="931cc-224">The **New Project** dialog box opens.</span></span>  
   
-3.  <span data-ttu-id="25a06-225">**설치된 템플릿** 창에서 **Visual C#**을 확장한 다음 **Windows**를 확장합니다.</span><span class="sxs-lookup"><span data-stu-id="25a06-225">In the **Installed Templates** pane, expand **Visual C#**, and then expand **Windows**.</span></span>  
+3.  <span data-ttu-id="931cc-225">**설치된 템플릿** 창에서 **Visual C#**을 확장한 다음 **Windows**를 확장합니다.</span><span class="sxs-lookup"><span data-stu-id="931cc-225">In the **Installed Templates** pane, expand **Visual C#**, and then expand **Windows**.</span></span>  
   
-4.  <span data-ttu-id="25a06-226">프로젝트 형식 목록에서 **WPF 응용 프로그램**을 선택합니다.</span><span class="sxs-lookup"><span data-stu-id="25a06-226">In the list of project types, choose **WPF Application**.</span></span>  
+4.  <span data-ttu-id="931cc-226">프로젝트 형식 목록에서 **WPF 응용 프로그램**을 선택합니다.</span><span class="sxs-lookup"><span data-stu-id="931cc-226">In the list of project types, choose **WPF Application**.</span></span>  
   
-5.  <span data-ttu-id="25a06-227">프로젝트 이름을 `WebsiteDownloadWPF`로 지정한 다음 **확인** 단추를 선택합니다.</span><span class="sxs-lookup"><span data-stu-id="25a06-227">Name the project `WebsiteDownloadWPF`, and then choose the **OK** button.</span></span>  
+5.  <span data-ttu-id="931cc-227">프로젝트 이름을 `WebsiteDownloadWPF`로 지정한 다음 **확인** 단추를 선택합니다.</span><span class="sxs-lookup"><span data-stu-id="931cc-227">Name the project `WebsiteDownloadWPF`, and then choose the **OK** button.</span></span>  
   
-     <span data-ttu-id="25a06-228">**솔루션 탐색기**에 새 프로젝트가 표시됩니다.</span><span class="sxs-lookup"><span data-stu-id="25a06-228">The new project appears in **Solution Explorer**.</span></span>  
+     <span data-ttu-id="931cc-228">**솔루션 탐색기**에 새 프로젝트가 표시됩니다.</span><span class="sxs-lookup"><span data-stu-id="931cc-228">The new project appears in **Solution Explorer**.</span></span>  
   
-6.  <span data-ttu-id="25a06-229">Visual Studio 코드 편집기에서 **MainWindow.xaml** 탭을 선택합니다.</span><span class="sxs-lookup"><span data-stu-id="25a06-229">In the Visual Studio Code Editor, choose the **MainWindow.xaml** tab.</span></span>  
+6.  <span data-ttu-id="931cc-229">Visual Studio 코드 편집기에서 **MainWindow.xaml** 탭을 선택합니다.</span><span class="sxs-lookup"><span data-stu-id="931cc-229">In the Visual Studio Code Editor, choose the **MainWindow.xaml** tab.</span></span>  
   
-     <span data-ttu-id="25a06-230">탭이 표시되지 않는 경우 **솔루션 탐색기**에서 MainWindow.xaml의 바로 가기 메뉴를 열고 **코드 보기**를 선택합니다.</span><span class="sxs-lookup"><span data-stu-id="25a06-230">If the tab isn’t visible, open the shortcut menu for MainWindow.xaml in **Solution Explorer**, and then choose **View Code**.</span></span>  
+     <span data-ttu-id="931cc-230">탭이 표시되지 않는 경우 **솔루션 탐색기**에서 MainWindow.xaml의 바로 가기 메뉴를 열고 **코드 보기**를 선택합니다.</span><span class="sxs-lookup"><span data-stu-id="931cc-230">If the tab isn’t visible, open the shortcut menu for MainWindow.xaml in **Solution Explorer**, and then choose **View Code**.</span></span>  
   
-7.  <span data-ttu-id="25a06-231">MainWindow.xaml의 **XAML** 보기에서 코드를 다음 코드로 바꿉니다.</span><span class="sxs-lookup"><span data-stu-id="25a06-231">In the **XAML** view of MainWindow.xaml, replace the code with the following code.</span></span>  
+7.  <span data-ttu-id="931cc-231">MainWindow.xaml의 **XAML** 보기에서 코드를 다음 코드로 바꿉니다.</span><span class="sxs-lookup"><span data-stu-id="931cc-231">In the **XAML** view of MainWindow.xaml, replace the code with the following code.</span></span>  
   
     ```csharp  
     <Window x:Class="WebsiteDownloadWPF.MainWindow"  
@@ -604,13 +604,13 @@ private async Task FinishOneGroupAsync(List<string> urls, Task<byte[]>[] content
     </Window>  
     ```  
   
-     <span data-ttu-id="25a06-232">텍스트 상자와 단추가 포함된 간단한 창이 MainWindow.xaml의 **디자인** 보기에 나타납니다.</span><span class="sxs-lookup"><span data-stu-id="25a06-232">A simple window that contains a text box and a button appears in the **Design** view of MainWindow.xaml.</span></span>  
+     <span data-ttu-id="931cc-232">텍스트 상자와 단추가 포함된 간단한 창이 MainWindow.xaml의 **디자인** 보기에 나타납니다.</span><span class="sxs-lookup"><span data-stu-id="931cc-232">A simple window that contains a text box and a button appears in the **Design** view of MainWindow.xaml.</span></span>  
   
-8.  <span data-ttu-id="25a06-233"><xref:System.Net.Http>에 대한 참조를 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="25a06-233">Add a reference for <xref:System.Net.Http>.</span></span>  
+8.  <span data-ttu-id="931cc-233"><xref:System.Net.Http>에 대한 참조를 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="931cc-233">Add a reference for <xref:System.Net.Http>.</span></span>  
   
-9. <span data-ttu-id="25a06-234">**솔루션 탐색기**에서 MainWindow.xaml.cs의 바로 가기 메뉴를 열고 **코드 보기**를 선택합니다.</span><span class="sxs-lookup"><span data-stu-id="25a06-234">In **Solution Explorer**, open the shortcut menu for MainWindow.xaml.cs, and then choose **View Code**.</span></span>  
+9. <span data-ttu-id="931cc-234">**솔루션 탐색기**에서 MainWindow.xaml.cs의 바로 가기 메뉴를 열고 **코드 보기**를 선택합니다.</span><span class="sxs-lookup"><span data-stu-id="931cc-234">In **Solution Explorer**, open the shortcut menu for MainWindow.xaml.cs, and then choose **View Code**.</span></span>  
   
-10. <span data-ttu-id="25a06-235">MainWindow.xaml.cs에서 코드를 다음 코드로 바꿉니다.</span><span class="sxs-lookup"><span data-stu-id="25a06-235">In MainWindow.xaml.cs, replace the code with the following code.</span></span>  
+10. <span data-ttu-id="931cc-235">MainWindow.xaml.cs에서 코드를 다음 코드로 바꿉니다.</span><span class="sxs-lookup"><span data-stu-id="931cc-235">In MainWindow.xaml.cs, replace the code with the following code.</span></span>  
   
     ```csharp  
     using System;  
@@ -715,10 +715,10 @@ private async Task FinishOneGroupAsync(List<string> urls, Task<byte[]>[] content
     }  
     ```  
   
-11. <span data-ttu-id="25a06-236">CTRL+F5 키를 선택하여 프로그램을 실행한 다음 **시작** 단추를 여러 번 선택합니다.</span><span class="sxs-lookup"><span data-stu-id="25a06-236">Choose the CTRL+F5 keys to run the program, and then choose the **Start** button several times.</span></span>  
+11. <span data-ttu-id="931cc-236">CTRL+F5 키를 선택하여 프로그램을 실행한 다음 **시작** 단추를 여러 번 선택합니다.</span><span class="sxs-lookup"><span data-stu-id="931cc-236">Choose the CTRL+F5 keys to run the program, and then choose the **Start** button several times.</span></span>  
   
-12. <span data-ttu-id="25a06-237">[시작 단추 사용 안 함](#BKMK_DisableTheStartButton), [작업 취소 및 다시 시작](#BKMK_CancelAndRestart) 또는 [여러 작업을 실행하고 출력을 큐 대기](#BKMK_RunMultipleOperations)의 내용을 변경하여 재입력을 처리합니다.</span><span class="sxs-lookup"><span data-stu-id="25a06-237">Make the changes from [Disable the Start Button](#BKMK_DisableTheStartButton), [Cancel and Restart the Operation](#BKMK_CancelAndRestart), or [Run Multiple Operations and Queue the Output](#BKMK_RunMultipleOperations) to handle the reentrancy.</span></span>  
+12. <span data-ttu-id="931cc-237">[시작 단추 사용 안 함](#BKMK_DisableTheStartButton), [작업 취소 및 다시 시작](#BKMK_CancelAndRestart) 또는 [여러 작업을 실행하고 출력을 큐 대기](#BKMK_RunMultipleOperations)의 내용을 변경하여 재입력을 처리합니다.</span><span class="sxs-lookup"><span data-stu-id="931cc-237">Make the changes from [Disable the Start Button](#BKMK_DisableTheStartButton), [Cancel and Restart the Operation](#BKMK_CancelAndRestart), or [Run Multiple Operations and Queue the Output](#BKMK_RunMultipleOperations) to handle the reentrancy.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="25a06-238">참고 항목</span><span class="sxs-lookup"><span data-stu-id="25a06-238">See Also</span></span>  
- [<span data-ttu-id="25a06-239">연습: async 및 await를 사용하여 웹에 액세스(C#)</span><span class="sxs-lookup"><span data-stu-id="25a06-239">Walkthrough: Accessing the Web by Using async and await (C#)</span></span>](../../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)  
- [<span data-ttu-id="25a06-240">async 및 await를 사용한 비동기 프로그래밍(C#)</span><span class="sxs-lookup"><span data-stu-id="25a06-240">Asynchronous Programming with async and await (C#)</span></span>](../../../../csharp/programming-guide/concepts/async/index.md)
+## <a name="see-also"></a><span data-ttu-id="931cc-238">참고 항목</span><span class="sxs-lookup"><span data-stu-id="931cc-238">See Also</span></span>  
+ [<span data-ttu-id="931cc-239">연습: async 및 await를 사용하여 웹에 액세스(C#)</span><span class="sxs-lookup"><span data-stu-id="931cc-239">Walkthrough: Accessing the Web by Using async and await (C#)</span></span>](../../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)  
+ [<span data-ttu-id="931cc-240">async 및 await를 사용한 비동기 프로그래밍(C#)</span><span class="sxs-lookup"><span data-stu-id="931cc-240">Asynchronous Programming with async and await (C#)</span></span>](../../../../csharp/programming-guide/concepts/async/index.md)
