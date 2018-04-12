@@ -1,12 +1,14 @@
 ---
-title: "형식에서 캐스팅 &#39; &lt;typename1&gt;&#39; 형식에 &#39;&lt; typename2&gt;&#39; 사용할 수 없습니다"
+title: 형식에서 캐스팅 &#39; &lt;typename1&gt;&#39; 형식에 &#39;&lt; typename2&gt;&#39; 사용할 수 없습니다
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-visual-basic
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
-f1_keywords: vbrInvalidCast_FromTo
+f1_keywords:
+- vbrInvalidCast_FromTo
 ms.assetid: 4e6a8957-63ca-461f-a833-f48a1ff2eba6
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: dotnet-bot
 ms.author: dotnetcontent
 ms.openlocfilehash: d97aeac3618cb2b9d37ee14ec080d135f1bc5901

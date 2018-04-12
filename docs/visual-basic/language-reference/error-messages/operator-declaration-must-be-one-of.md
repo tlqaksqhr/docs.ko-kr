@@ -1,17 +1,19 @@
 ---
-title: "연산자 선언 중 하나 여야 합니다: +,-, *,-,-, ^, &amp;, 같은, Mod, 및, Or, Xor, Not, &lt; &lt;, &gt; &gt;, =, &lt; &gt;, &lt;, &lt;=, &gt; &gt;=, CType, IsTrue, IsFalse"
+title: '연산자 선언 중 하나 여야 합니다: +,-, *,-,-, ^, &amp;, 같은, Mod, 및, Or, Xor, Not, &lt; &lt;, &gt; &gt;, =, &lt; &gt;, &lt;, &lt;=, &gt; &gt;=, CType, IsTrue, IsFalse'
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 f1_keywords:
 - bc33000
 - vbc33000
-helpviewer_keywords: BC33000
+helpviewer_keywords:
+- BC33000
 ms.assetid: 15c5d8eb-3a8c-4141-8f41-33151afabf97
-caps.latest.revision: "12"
+caps.latest.revision: 12
 author: dotnet-bot
 ms.author: dotnetcontent
 ms.openlocfilehash: 80c8358dd13105c18e73e94735a51b02d5bd22c5
@@ -20,7 +22,7 @@ ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 11/21/2017
 ---
-# <a name="operator-declaration-must-be-one-of----amp-like-mod-and-or-xor-not-ltlt-gtgt"></a><span data-ttu-id="a65f6-102">연산자 선언 중 하나 여야 합니다: +,-, *,\,/, ^, &amp;, 같은, Mod, 및, Or, Xor, Not, &lt; &lt;, &gt; &gt;...</span><span class="sxs-lookup"><span data-stu-id="a65f6-102">Operator declaration must be one of:  +,-,*,\,/,^, &amp;, Like, Mod, And, Or, Xor, Not, &lt;&lt;, &gt;&gt;...</span></span>
+# <a name="operator-declaration-must-be-one-of----amp-like-mod-and-or-xor-not-ltlt-gtgt"></a><span data-ttu-id="a65f6-102">연산자 선언 중 하나 여야 합니다: +,-, \*,\,/, ^, &amp;, 같은, Mod, 및, Or, Xor, Not, &lt; &lt;, &gt; &gt;...</span><span class="sxs-lookup"><span data-stu-id="a65f6-102">Operator declaration must be one of:  +,-,\*,\,/,^, &amp;, Like, Mod, And, Or, Xor, Not, &lt;&lt;, &gt;&gt;...</span></span>
 <span data-ttu-id="a65f6-103">오버 로드할 수 있는 연산자만 선언할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="a65f6-103">You can declare only an operator that is eligible for overloading.</span></span> <span data-ttu-id="a65f6-104">다음 표에서 연산자를 선언할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="a65f6-104">The following table lists the operators you can declare.</span></span>  
   
 |<span data-ttu-id="a65f6-105">형식</span><span class="sxs-lookup"><span data-stu-id="a65f6-105">Type</span></span>|<span data-ttu-id="a65f6-106">연산자</span><span class="sxs-lookup"><span data-stu-id="a65f6-106">Operators</span></span>|  

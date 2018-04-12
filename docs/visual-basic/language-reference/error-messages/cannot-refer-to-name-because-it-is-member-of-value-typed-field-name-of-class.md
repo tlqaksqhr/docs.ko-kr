@@ -1,17 +1,19 @@
 ---
-title: "참조할 수 없습니다. &#39; &lt;이름&gt;&#39; 값 형식 필드 &#39;의 구성원 이므로&lt; 이름&gt;&#39; 클래스 &#39;&lt; classname&gt;&#39; 있는 &#39; System.MarshalByRefObject &#39; 기본 클래스"
+title: 참조할 수 없습니다. &#39; &lt;이름&gt;&#39; 값 형식 필드 &#39;의 구성원 이므로&lt; 이름&gt;&#39; 클래스 &#39;&lt; classname&gt;&#39; 있는 &#39; System.MarshalByRefObject &#39; 기본 클래스
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 f1_keywords:
 - vbc30310
 - bc30310
-helpviewer_keywords: BC30310
+helpviewer_keywords:
+- BC30310
 ms.assetid: 2aeb8872-7c87-4f01-98ef-9714ba3eebbe
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: dotnet-bot
 ms.author: dotnetcontent
 ms.openlocfilehash: 7a84811b9f0e706cf3ebede09e07c03bd7e4cea4

@@ -1,14 +1,16 @@
 ---
-title: "자동화 작업 중 파일 이름 또는 클래스 이름을 찾을 수 없음(Visual Basic)"
+title: 자동화 작업 중 파일 이름 또는 클래스 이름을 찾을 수 없음(Visual Basic)
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
-f1_keywords: vbrID432
+f1_keywords:
+- vbrID432
 ms.assetid: 6883c208-de5e-44da-a525-b50122e5a170
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: dotnet-bot
 ms.author: dotnetcontent
 ms.openlocfilehash: 6215ea41d7a02342df9d44e00e37864c04c98d29

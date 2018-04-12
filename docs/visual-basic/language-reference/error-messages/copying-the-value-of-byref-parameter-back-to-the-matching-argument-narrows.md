@@ -1,17 +1,19 @@
 ---
-title: "값으로 &#39; 복사 ByRef &#39; &#39; 매개 변수 &lt;parametername&gt;&#39; 형식의 &#39;에서 일치 하는 인수 좁힐에 다시&lt; typename1&gt;&#39; 형식에 &#39;&lt; typename2&gt;&#39;"
+title: 값으로 &#39; 복사 ByRef &#39; &#39; 매개 변수 &lt;parametername&gt;&#39; 형식의 &#39;에서 일치 하는 인수 좁힐에 다시&lt; typename1&gt;&#39; 형식에 &#39;&lt; typename2&gt;&#39;
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 f1_keywords:
 - bc32053
 - vbc32053
-helpviewer_keywords: BC32053
+helpviewer_keywords:
+- BC32053
 ms.assetid: 281564b7-99f7-451f-b10d-f985e831bb25
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: dotnet-bot
 ms.author: dotnetcontent
 ms.openlocfilehash: 4bf993639007162e2e17d4b8cb9dfe8d5316acaa

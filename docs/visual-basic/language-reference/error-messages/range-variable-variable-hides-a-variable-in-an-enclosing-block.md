@@ -1,17 +1,19 @@
 ---
-title: "범위 변수 &lt;변수&gt; 바깥쪽 블록, 이전에 정의한 범위 변수 또는 쿼리 식에서 암시적으로 선언 된 변수에서 변수를 숨깁니다."
+title: 범위 변수 &lt;변수&gt; 바깥쪽 블록, 이전에 정의한 범위 변수 또는 쿼리 식에서 암시적으로 선언 된 변수에서 변수를 숨깁니다.
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 f1_keywords:
 - bc36633
 - vbc36633
-helpviewer_keywords: BC36633
+helpviewer_keywords:
+- BC36633
 ms.assetid: 5d5470e4-3de5-49c2-8831-1087625f4a77
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: dotnet-bot
 ms.author: dotnetcontent
 ms.openlocfilehash: ccbac48694a13daa09f2511cf39d5dbd51cdaaf7

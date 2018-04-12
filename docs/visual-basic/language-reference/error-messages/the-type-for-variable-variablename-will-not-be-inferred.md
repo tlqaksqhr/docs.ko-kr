@@ -1,17 +1,19 @@
 ---
-title: "변수 &#39;에 대 한 형식 &lt;variablename&gt;&#39; 괄호로 묶인 범위 내의 필드에 바인딩되어 있기 때문에 유추 되지 것입니다"
+title: 변수 &#39;에 대 한 형식 &lt;variablename&gt;&#39; 괄호로 묶인 범위 내의 필드에 바인딩되어 있기 때문에 유추 되지 것입니다
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 f1_keywords:
 - vbc42110
 - bc42110
-helpviewer_keywords: BC42110
+helpviewer_keywords:
+- BC42110
 ms.assetid: ef4442eb-08d1-434f-a03b-4aa2ed4e4414
-caps.latest.revision: "33"
+caps.latest.revision: 33
 author: dotnet-bot
 ms.author: dotnetcontent
 ms.openlocfilehash: 39968407f4de5436df324320c99dede4d72e2808

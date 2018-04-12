@@ -1,17 +1,19 @@
 ---
-title: "네임스페이스에는 문을 사용할 수 없습니다."
+title: 네임스페이스에는 문을 사용할 수 없습니다.
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 f1_keywords:
 - vbc30001
 - bc30001
-helpviewer_keywords: BC30001
+helpviewer_keywords:
+- BC30001
 ms.assetid: 43c1b509-15f9-4e91-bcad-90bcb5f6f191
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: dotnet-bot
 ms.author: dotnetcontent
 ms.openlocfilehash: b3146f8abe781b69c05f02b2a734698611ee8343

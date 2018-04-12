@@ -1,14 +1,16 @@
 ---
-title: "클래스가 자동화를 지원하지 않거나 필요한 인터페이스를 지원하지 않습니다."
+title: 클래스가 자동화를 지원하지 않거나 필요한 인터페이스를 지원하지 않습니다.
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
-f1_keywords: vbrID430
+f1_keywords:
+- vbrID430
 ms.assetid: d985bb7e-e48e-443e-86f2-ddb86758757c
-caps.latest.revision: "11"
+caps.latest.revision: 11
 author: dotnet-bot
 ms.author: dotnetcontent
 ms.openlocfilehash: 6528ceabeb7fb7a1cdc0beff2fd362632a0a0c9a

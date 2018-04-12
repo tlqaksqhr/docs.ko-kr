@@ -1,17 +1,19 @@
 ---
-title: "이 &#39;의 첫 번째 문 새 하위 &#39; 에 대 한 호출 &#39; 이어야 합니다. MyBase.New &#39; 또는 &#39; MyClass.New &#39; (매개 변수 없이 액세스할 수 있는 생성자 없음)"
+title: 이 &#39;의 첫 번째 문 새 하위 &#39; 에 대 한 호출 &#39; 이어야 합니다. MyBase.New &#39; 또는 &#39; MyClass.New &#39; (매개 변수 없이 액세스할 수 있는 생성자 없음)
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 f1_keywords:
 - bc30148
 - vbc30148
-helpviewer_keywords: BC30148
+helpviewer_keywords:
+- BC30148
 ms.assetid: 4426e8fc-cb39-4eb8-ba95-503cd32fcc89
-caps.latest.revision: "11"
+caps.latest.revision: 11
 author: dotnet-bot
 ms.author: dotnetcontent
 ms.openlocfilehash: 1065643e1f6c868092fbad839af0dbbd33afaf01

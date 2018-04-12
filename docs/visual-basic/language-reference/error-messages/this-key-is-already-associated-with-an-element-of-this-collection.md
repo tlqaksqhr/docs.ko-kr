@@ -1,14 +1,16 @@
 ---
-title: "이 키는 이 컬렉션의 요소와 이미 연결되어 있습니다."
+title: 이 키는 이 컬렉션의 요소와 이미 연결되어 있습니다.
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
-f1_keywords: vbrID457
+f1_keywords:
+- vbrID457
 ms.assetid: 52e15795-907e-4b10-acb7-5c37a76ce594
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: dotnet-bot
 ms.author: dotnetcontent
 ms.openlocfilehash: 04b7d20c7ca0fe8887288158377027b955bc7123

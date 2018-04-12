@@ -1,17 +1,19 @@
 ---
-title: "선택적 매개 변수 형식으로 사용된 제네릭 매개 변수에는 클래스 제약 조건이 있어야 합니다."
+title: 선택적 매개 변수 형식으로 사용된 제네릭 매개 변수에는 클래스 제약 조건이 있어야 합니다.
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 f1_keywords:
 - vbc32124
 - bc32124
-helpviewer_keywords: BC32124
+helpviewer_keywords:
+- BC32124
 ms.assetid: 55aa8b2a-9ce3-4620-a710-2f9b0feb6143
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: dotnet-bot
 ms.author: dotnetcontent
 ms.openlocfilehash: a13ea66f12e54db4e585577e20e1f5396669f1a8

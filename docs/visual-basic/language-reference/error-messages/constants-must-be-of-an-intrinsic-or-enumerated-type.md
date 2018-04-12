@@ -1,17 +1,19 @@
 ---
-title: "상수는 클래스, 구조체, 형식 매개 변수 또는 배열 형식이 아닌 내장 또는 열거 형식이어야 합니다."
+title: 상수는 클래스, 구조체, 형식 매개 변수 또는 배열 형식이 아닌 내장 또는 열거 형식이어야 합니다.
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 f1_keywords:
 - vbc30424
 - bc30424
-helpviewer_keywords: BC30424
+helpviewer_keywords:
+- BC30424
 ms.assetid: 2d402c2f-27ad-428b-b699-d45cd62f7196
-caps.latest.revision: "12"
+caps.latest.revision: 12
 author: dotnet-bot
 ms.author: dotnetcontent
 ms.openlocfilehash: 702472751810c2d2bd08ece944ef0ffafc2049b5
