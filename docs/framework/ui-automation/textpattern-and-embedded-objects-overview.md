@@ -1,13 +1,13 @@
 ---
-title: "TextPattern 및 포함 개체 개요"
-ms.custom: 
+title: TextPattern 및 포함 개체 개요
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-bcl
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - UI Automation, TextPattern class
@@ -15,7 +15,7 @@ helpviewer_keywords:
 - accessing embedded objects
 - embedded objects, UI Automation
 ms.assetid: 93fdfbb9-0025-4b72-8ca0-0714adbb70d5
-caps.latest.revision: 
+caps.latest.revision: 17
 author: Xansky
 ms.author: mhopkins
 manager: markl
@@ -88,7 +88,7 @@ Move() 및 ExpandToEnclosingUnit()에 따라 텍스트 범위가 조정되는 �
 |<xref:System.Windows.Automation.Text.TextPatternRange.GetText%2A>|문자열을 반환 "URL http://www.microsoft.com 텍스트에 포함 된"입니다.|  
 |<xref:System.Windows.Automation.Text.TextPatternRange.GetEnclosingElement%2A>|텍스트 범위를 포함하는 가장 안쪽의 <xref:System.Windows.Automation.AutomationElement> 를 반환합니다. 이 예제에서는 텍스트 공급자 자체를 나타내는 <xref:System.Windows.Automation.AutomationElement> 입니다.|  
 |<xref:System.Windows.Automation.Text.TextPatternRange.GetChildren%2A>|하이퍼링크 컨트롤을 나타내는 <xref:System.Windows.Automation.AutomationElement> 를 반환합니다.|  
-|<xref:System.Windows.Automation.TextPattern.RangeFromChild%2A> 여기서 <xref:System.Windows.Automation.AutomationElement> 는 이전 `GetChildren` 메서드에서 반환되는 개체입니다.|나타내는 범위를 반환 합니다. "http://www.microsoft.com"입니다.|  
+|<xref:System.Windows.Automation.TextPattern.RangeFromChild%2A> 여기서 <xref:System.Windows.Automation.AutomationElement> 는 이전 `GetChildren` 메서드에서 반환되는 개체입니다.|나타내는 범위를 반환 합니다. "http://www.microsoft.com" 입니다.|  
   
  **예제 2 - 포함된 텍스트 하이퍼링크에 부분적으로 걸쳐 있는 텍스트 범위**  
   
