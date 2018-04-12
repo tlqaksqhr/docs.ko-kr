@@ -1,12 +1,14 @@
 ---
-title: "&#39; 하기 전에 &#39; 및 &#39; 후 &#39; 인수는 함께 사용할 수 없습니다."
+title: '&#39; 하기 전에 &#39; 및 &#39; 후 &#39; 인수는 함께 사용할 수 없습니다.'
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-visual-basic
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
-f1_keywords: vbrCollection_BeforeAfterExclusive
+f1_keywords:
+- vbrCollection_BeforeAfterExclusive
 ms.assetid: f55fb8d2-746d-45de-b350-5a47f83e5ab4
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: dotnet-bot
 ms.author: dotnetcontent
 ms.openlocfilehash: bd8de783b2260dcafcac530cba31cfcc759216f8

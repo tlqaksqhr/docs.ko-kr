@@ -1,17 +1,19 @@
 ---
-title: "람다 식의 첫 번째 식에 유효 하지 않은 &#39; 대/소문자 &#39;를 선택 합니다. 문"
+title: 람다 식의 첫 번째 식에 유효 하지 않은 &#39; 대/소문자 &#39;를 선택 합니다. 문
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 f1_keywords:
 - bc36635
 - vbc36635
-helpviewer_keywords: BC36635
+helpviewer_keywords:
+- BC36635
 ms.assetid: 74609979-9c03-4864-bbce-f588aa2e0917
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: dotnet-bot
 ms.author: dotnetcontent
 ms.openlocfilehash: e91401d6891d4e38014bb716a337560885cf73a2

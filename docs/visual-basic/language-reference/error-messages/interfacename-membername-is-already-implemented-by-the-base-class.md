@@ -1,17 +1,19 @@
 ---
-title: "&#39; &lt;interfacename&gt;.&lt; membername&gt;&#39;은 기본 클래스 &#39; 의해 이미 구현&lt; baseclassname&gt;&#39;. 다시 구현 &lt;형식&gt; 가정"
+title: '&#39; &lt;interfacename&gt;.&lt; membername&gt;&#39;은 기본 클래스 &#39; 의해 이미 구현&lt; baseclassname&gt;&#39;. 다시 구현 &lt;형식&gt; 가정'
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 f1_keywords:
 - vbc42015
 - bc42015
-helpviewer_keywords: BC42015
+helpviewer_keywords:
+- BC42015
 ms.assetid: 658c070a-113e-4bd8-b294-12c243191160
-caps.latest.revision: "12"
+caps.latest.revision: 12
 author: dotnet-bot
 ms.author: dotnetcontent
 ms.openlocfilehash: 69884ed567e0046da5cf5c51b3e83e57e890d49f

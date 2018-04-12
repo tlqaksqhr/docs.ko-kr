@@ -1,12 +1,14 @@
 ---
-title: "루프 제어 변수 형식의 &#39; &lt;typename&gt;&#39; 구현 하지 않습니다는 &#39; System.IComparable &#39; 인터페이스"
+title: 루프 제어 변수 형식의 &#39; &lt;typename&gt;&#39; 구현 하지 않습니다는 &#39; System.IComparable &#39; 인터페이스
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-visual-basic
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
-f1_keywords: vbrArgument_IComparable2
+f1_keywords:
+- vbrArgument_IComparable2
 ms.assetid: 8dba1270-380a-4f05-8bad-1031e6a9cc90
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: dotnet-bot
 ms.author: dotnetcontent
 ms.openlocfilehash: daf475d05edd3a520644aef23ba40e054ba95c6d

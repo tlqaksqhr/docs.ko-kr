@@ -1,14 +1,16 @@
 ---
-title: "장치 입/출력(I/O) 오류입니다."
+title: 장치 입/출력(I/O) 오류입니다.
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
-f1_keywords: vbrID57
+f1_keywords:
+- vbrID57
 ms.assetid: 17d22252-f374-400b-9ddb-be5367dd7278
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: dotnet-bot
 ms.author: dotnetcontent
 ms.openlocfilehash: 01926b69b2fa3a72158f6fd3c96efe7d71c4aa19

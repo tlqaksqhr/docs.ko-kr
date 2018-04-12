@@ -1,17 +1,19 @@
 ---
-title: "&#39; 클래스 &#39; 문은 짝이 되는 &#39;로 끝나야 합니다. End 클래스 &#39;"
+title: '&#39; 클래스 &#39; 문은 짝이 되는 &#39;로 끝나야 합니다. End 클래스 &#39;'
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 f1_keywords:
 - vbc30481
 - bc30481
-helpviewer_keywords: BC30481
+helpviewer_keywords:
+- BC30481
 ms.assetid: 583f3029-bc3a-4e06-866f-92dbecc46f19
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: dotnet-bot
 ms.author: dotnetcontent
 ms.openlocfilehash: e8643a0a5b55e220ca8dd53065500fe4b1e473d3

@@ -1,12 +1,14 @@
 ---
-title: "원격 프로세스의 형식 라이브러리 또는 개체 라이브러리에 대한 연결이 끊어졌습니다."
+title: 원격 프로세스의 형식 라이브러리 또는 개체 라이브러리에 대한 연결이 끊어졌습니다.
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-visual-basic
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
-f1_keywords: vbrID442
+f1_keywords:
+- vbrID442
 ms.assetid: 9e3544e2-cfc9-463a-8c0c-ed82e5e6462f
-caps.latest.revision: "10"
+caps.latest.revision: 10
 author: dotnet-bot
 ms.author: dotnetcontent
 ms.openlocfilehash: 41fe6cf0ecec2de4745ffdd156891077c1e2788b

@@ -1,13 +1,15 @@
 ---
-title: "방법: PrintForm 구성 요소를 사용하여 폼 인쇄(Visual Basic)"
+title: '방법: PrintForm 구성 요소를 사용하여 폼 인쇄(Visual Basic)'
 ms.date: 07/20/2015
 ms.prod: .net
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
-helpviewer_keywords: Form [Visual Basic], printing
+helpviewer_keywords:
+- Form [Visual Basic], printing
 ms.assetid: df963bf6-3ee1-49f4-8b2e-1d95d1beb0be
-caps.latest.revision: "19"
+caps.latest.revision: 19
 author: dotnet-bot
 ms.author: dotnetcontent
 ms.openlocfilehash: 5edad4f04b98dcf0dfa328f111db5dcb423036e5

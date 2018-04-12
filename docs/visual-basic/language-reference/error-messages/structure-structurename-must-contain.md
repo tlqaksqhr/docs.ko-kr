@@ -1,17 +1,19 @@
 ---
-title: "구조 &#39; &lt;structurename&gt;&#39; 인스턴스를 하나 이상 멤버 변수 또는 표시 되지 않은 하나 이상의 이벤트 선언이 &#39; 포함 해야 합니다 사용자 지정 &#39;"
+title: 구조 &#39; &lt;structurename&gt;&#39; 인스턴스를 하나 이상 멤버 변수 또는 표시 되지 않은 하나 이상의 이벤트 선언이 &#39; 포함 해야 합니다 사용자 지정 &#39;
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 f1_keywords:
 - bc30941
 - vbc30941
-helpviewer_keywords: BC30941
+helpviewer_keywords:
+- BC30941
 ms.assetid: 7054cc1e-bac3-4c3d-82f3-35772bd8dd3b
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: dotnet-bot
 ms.author: dotnetcontent
 ms.openlocfilehash: b28dd59271bdaca52072710ea797fae6e9168eab

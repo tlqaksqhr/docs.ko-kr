@@ -1,17 +1,19 @@
 ---
-title: "암시적으로 변환 &#39; &lt;typename1&gt;&#39;를 &#39;&lt; typename2&gt;&#39; 값으로 &#39; 복사 ByRef &#39; &#39; 매개 변수 &lt;parametername&gt;&#39; 해당 인수에 저장 합니다."
+title: 암시적으로 변환 &#39; &lt;typename1&gt;&#39;를 &#39;&lt; typename2&gt;&#39; 값으로 &#39; 복사 ByRef &#39; &#39; 매개 변수 &lt;parametername&gt;&#39; 해당 인수에 저장 합니다.
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 f1_keywords:
 - vbc41999
 - bc41999
-helpviewer_keywords: BC41999
+helpviewer_keywords:
+- BC41999
 ms.assetid: ae48c738-dff8-4c0f-8931-bbb70b2c8b03
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: dotnet-bot
 ms.author: dotnetcontent
 ms.openlocfilehash: 9e858b475a816a35d18822643de5a273abe28562

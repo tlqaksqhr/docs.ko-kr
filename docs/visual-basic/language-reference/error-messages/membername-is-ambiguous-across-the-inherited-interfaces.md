@@ -1,17 +1,19 @@
 ---
-title: "&#39; &lt;membername&gt;&#39; 모호 합니다. 상속 된 인터페이스 &#39; 걸쳐&lt; interfacename1&gt;&#39; 및 &#39;&lt; interfacename2&gt;&#39;"
+title: '&#39; &lt;membername&gt;&#39; 모호 합니다. 상속 된 인터페이스 &#39; 걸쳐&lt; interfacename1&gt;&#39; 및 &#39;&lt; interfacename2&gt;&#39;'
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 f1_keywords:
 - vbc30685
 - bc30685
-helpviewer_keywords: BC30685
+helpviewer_keywords:
+- BC30685
 ms.assetid: 756add7a-23d5-4b4f-a48d-8297d6459c73
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: dotnet-bot
 ms.author: dotnetcontent
 ms.openlocfilehash: 0bf4a9c263fd197cdd5d5b4886ee18e2ff112488

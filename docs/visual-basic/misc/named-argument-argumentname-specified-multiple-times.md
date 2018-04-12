@@ -1,12 +1,14 @@
 ---
-title: "명명 된 인수 &#39; &lt;argumentname&gt;&#39; 여러 번 지정 했습니다."
+title: 명명 된 인수 &#39; &lt;argumentname&gt;&#39; 여러 번 지정 했습니다.
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-visual-basic
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
-f1_keywords: vbrNamedArgumentAlreadyUsed1
+f1_keywords:
+- vbrNamedArgumentAlreadyUsed1
 ms.assetid: a5113d23-ca66-4961-909f-74f97a0eaf87
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: dotnet-bot
 ms.author: dotnetcontent
 ms.openlocfilehash: adff48e87b2405df5c166d7924a1053c0cd516be

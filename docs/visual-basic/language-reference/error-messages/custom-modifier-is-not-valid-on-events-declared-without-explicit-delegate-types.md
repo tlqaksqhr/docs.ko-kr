@@ -1,17 +1,19 @@
 ---
-title: "&#39; 사용자 지정 &#39; 한정자 명시적 대리자 형식 없이 선언 된 이벤트에서 유효 하지 않습니다."
+title: '&#39; 사용자 지정 &#39; 한정자 명시적 대리자 형식 없이 선언 된 이벤트에서 유효 하지 않습니다.'
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 f1_keywords:
 - vbc31122
 - bc31122
-helpviewer_keywords: BC31122
+helpviewer_keywords:
+- BC31122
 ms.assetid: 6911f0d1-641a-473b-906d-8ee5681194be
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: dotnet-bot
 ms.author: dotnetcontent
 ms.openlocfilehash: 844bd033ea05e373b04a04f80777af77179c1263

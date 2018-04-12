@@ -1,17 +1,19 @@
 ---
-title: "범위 변수 이름은 인수가 없는 단순한 이름 또는 정규화된 이름에서만 유추할 수 있습니다."
+title: 범위 변수 이름은 인수가 없는 단순한 이름 또는 정규화된 이름에서만 유추할 수 있습니다.
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 f1_keywords:
 - vbc36599
 - bc36599
-helpviewer_keywords: BC36599
+helpviewer_keywords:
+- BC36599
 ms.assetid: 17763dbe-f74f-4ccb-8086-cb7e45ec4d12
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: dotnet-bot
 ms.author: dotnetcontent
 ms.openlocfilehash: 5c986fcf188482c526c53ddf3019cec5163d0b62

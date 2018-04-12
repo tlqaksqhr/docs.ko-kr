@@ -1,17 +1,19 @@
 ---
-title: "&#39; &lt;eventname&gt;&#39;은 (는) 이벤트 및 직접 호출할 수 없습니다"
+title: '&#39; &lt;eventname&gt;&#39;은 (는) 이벤트 및 직접 호출할 수 없습니다'
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 f1_keywords:
 - bc32022
 - vbc32022
-helpviewer_keywords: BC32022
+helpviewer_keywords:
+- BC32022
 ms.assetid: 4dcfcb8d-a9fa-46a7-a034-29d9ff3a59b3
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: dotnet-bot
 ms.author: dotnetcontent
 ms.openlocfilehash: bb987c957a28aa37c40ad975b945c20da4690f6e

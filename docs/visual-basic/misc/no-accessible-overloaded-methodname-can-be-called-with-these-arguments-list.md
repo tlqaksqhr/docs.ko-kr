@@ -1,12 +1,14 @@
 ---
-title: "액세스 가능한 오버 로드 된 &#39; &lt;methodname&gt;&#39;이 인수로 호출할 수 있습니다: &lt;목록&gt;"
+title: '액세스 가능한 오버 로드 된 &#39; &lt;methodname&gt;&#39;이 인수로 호출할 수 있습니다: &lt;목록&gt;'
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-visual-basic
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
-f1_keywords: vbrAmbiguousCall_ExactMatch2
+f1_keywords:
+- vbrAmbiguousCall_ExactMatch2
 ms.assetid: 78d4c7ed-5e18-47d4-948d-fa8b24e47214
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: dotnet-bot
 ms.author: dotnetcontent
 ms.openlocfilehash: 01f8cb116d301c590756e5b85f217a4c47311ac4

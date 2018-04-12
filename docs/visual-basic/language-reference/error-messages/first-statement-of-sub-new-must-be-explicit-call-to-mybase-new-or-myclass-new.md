@@ -1,17 +1,19 @@
 ---
-title: "이 &#39;의 첫 번째 문 새 하위 &#39; 명시적으로 호출 &#39; 이어야 합니다. MyBase.New &#39; 또는 &#39; MyClass.New &#39; 때문에 &#39; &lt;constructorname&gt;&#39; 기본 클래스 &#39;&lt; baseclassname&gt;&#39;의 형식이 &#39;&lt; derivedclassname&gt;&#39; 것으로 표시 됩니다: &#39;&lt; errormessage&gt;&#39;"
+title: '이 &#39;의 첫 번째 문 새 하위 &#39; 명시적으로 호출 &#39; 이어야 합니다. MyBase.New &#39; 또는 &#39; MyClass.New &#39; 때문에 &#39; &lt;constructorname&gt;&#39; 기본 클래스 &#39;&lt; baseclassname&gt;&#39;의 형식이 &#39;&lt; derivedclassname&gt;&#39; 것으로 표시 됩니다: &#39;&lt; errormessage&gt;&#39;'
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 f1_keywords:
 - vbc30920
 - bc30920
-helpviewer_keywords: BC30920
+helpviewer_keywords:
+- BC30920
 ms.assetid: e47dc755-4294-4368-b813-2177b7677957
-caps.latest.revision: "10"
+caps.latest.revision: 10
 author: dotnet-bot
 ms.author: dotnetcontent
 ms.openlocfilehash: 8882acd947251d85804fbefd54267ce078e31b95

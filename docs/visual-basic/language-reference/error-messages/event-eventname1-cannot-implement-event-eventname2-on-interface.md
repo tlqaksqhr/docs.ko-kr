@@ -1,17 +1,19 @@
 ---
-title: "이벤트 &#39; &lt;행사 이름 1&gt;&#39; 이벤트 &#39; 구현할 수 없습니다.&lt; eventname2&gt;&#39; 인터페이스 &#39;에&lt; 인터페이스&gt;&#39; 대리자 형식 &#39;&lt; delegate1&gt;&#39; 및 &#39;&lt; delegate2&gt;&#39; 일치 하지 않습니다"
+title: 이벤트 &#39; &lt;행사 이름 1&gt;&#39; 이벤트 &#39; 구현할 수 없습니다.&lt; eventname2&gt;&#39; 인터페이스 &#39;에&lt; 인터페이스&gt;&#39; 대리자 형식 &#39;&lt; delegate1&gt;&#39; 및 &#39;&lt; delegate2&gt;&#39; 일치 하지 않습니다
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 f1_keywords:
 - vbc31423
 - bc31423
-helpviewer_keywords: BC31423
+helpviewer_keywords:
+- BC31423
 ms.assetid: 2e754b66-5836-48ff-9697-b9c0d7085f18
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: dotnet-bot
 ms.author: dotnetcontent
 ms.openlocfilehash: b0fcbbf8a6e23270e4dcbf9d813c773e1522a92a
