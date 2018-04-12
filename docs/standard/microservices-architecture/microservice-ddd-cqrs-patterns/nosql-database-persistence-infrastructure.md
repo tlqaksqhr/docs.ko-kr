@@ -1,7 +1,7 @@
 ---
-title: "NoSQL 데이터베이스를 지속성 인프라로 사용"
-description: "컨테이너화된 .NET 응용 프로그램을 위한 .NET 마이크로 서비스 아키텍처 | NoSQL 데이터베이스를 지속성 인프라로 사용"
-keywords: "Docker, 마이크로 서비스, ASP.NET, 컨테이너"
+title: NoSQL 데이터베이스를 지속성 인프라로 사용
+description: 컨테이너화된 .NET 응용 프로그램을 위한 .NET 마이크로 서비스 아키텍처 | NoSQL 데이터베이스를 지속성 인프라로 사용
+keywords: Docker, 마이크로 서비스, ASP.NET, 컨테이너
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 12/12/2017
@@ -12,10 +12,10 @@ ms.workload:
 - dotnet
 - dotnetcore
 ms.openlocfilehash: a6f3a991529aea6560eb12f1400ba2750795ebff
-ms.sourcegitcommit: 08684dd61444c2f072b89b926370f750e456fca1
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="using-nosql-databases-as-a-persistence-infrastructure"></a>NoSQL 데이터베이스를 지속성 인프라로 사용
 
@@ -305,19 +305,19 @@ ESHOP_PROD_EXTERNAL_DNS_NAME_OR_IP=<YourDockerHostIP>
 
 `ESHOP_AZURE_COSMOSDB` 전역 변수가 비어 있는 경우(`.env` 파일에서 주석으로 처리된 것을 의미함) 컨테이너는 다음 .yml 코드에 표시된 것처럼 `nosql.data`라는 eShopOnContainers에 배포된 로컬 MongoDB 컨테이너를 가리키는 기본 MongoDB 연결 문자열을 사용합니다. 
 
-#### <a name="additional-resources"></a>추가 리소스
+#### <a name="additional-resources"></a>추가 자료
 
--   **NoSQL 데이터베이스에 대한 문서 데이터 모델링**
+-   **NoSQL 데이터베이스용 문서 데이터 모델링**
     [*https://docs.microsoft.com/en-us/azure/cosmos-db/modeling-data*](https://docs.microsoft.com/en-us/azure/cosmos-db/modeling-data)
 
 -   **Vaughn Vernon. 이상적인 도메인 기반 디자인 집계 저장소?**
     [*https://vaughnvernon.co/?p=942*](https://vaughnvernon.co/?p=942)
 
--   **Azure Cosmos DB 소개: MongoDB용 API** 
+-   **Azure DB Cosmos 소개: MongoDB용 API** 
     [*https://docs.microsoft.com/en-us/azure/cosmos-db/mongodb-introduction*](https://docs.microsoft.com/en-us/azure/cosmos-db/mongodb-introduction)
 
--   **Azure Cosmos DB: .NET 및 Azure Portal을 사용하여 MongoDB API 웹앱 빌드** 
-    [* https://docs.microsoft.com/en-us/azure/cosmos-db/create-mongodb-dotnet *](https://docs.microsoft.com/en-us/azure/cosmos-db/create-mongodb-dotnet )
+-   **Azure Cosmos DB: .NET 및 Azure Portal에서 MongoDB API 웹앱 빌드** 
+    [*https://docs.microsoft.com/en-us/azure/cosmos-db/create-mongodb-dotnet *](https://docs.microsoft.com/en-us/azure/cosmos-db/create-mongodb-dotnet )
 
 -   **로컬 개발 및 테스트에 Azure Cosmos DB 에뮬레이터 사용** 
     [*https://docs.microsoft.com/en-us/azure/cosmos-db/local-emulator*](https://docs.microsoft.com/en-us/azure/cosmos-db/local-emulator)
@@ -331,7 +331,7 @@ ESHOP_PROD_EXTERNAL_DNS_NAME_OR_IP=<YourDockerHostIP>
 -   **MongoDB Docker 이미지(Linux 및 Windows 컨테이너)** 
     [*https://hub.docker.com/r/_/mongo/*](https://hub.docker.com/r/_/mongo/)
 
--   **Azure Cosmos DB로 MongoChef(Studio 3T) 사용: MongoDB 계정에 대한 API** 
+-   **Azure Cosmos DB에서 MongoChef(Studio 3T) 사용: MongoDB 계정용 API** 
     [*https://docs.microsoft.com/en-us/azure/cosmos-db/mongodb-mongochef*](https://docs.microsoft.com/en-us/azure/cosmos-db/mongodb-mongochef)
 
 

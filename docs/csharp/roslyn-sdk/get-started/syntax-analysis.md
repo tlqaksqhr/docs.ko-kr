@@ -8,11 +8,11 @@ ms.topic: conceptual
 ms.prod: .net
 ms.technology: devlang-csharp
 ms.custom: mvc
-ms.openlocfilehash: 90d6542122dd8c579c63f5f003441ce63a7ca5e9
-ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
+ms.openlocfilehash: 9e42253e520b89fd8a864dead8c17d53bdb8a439
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="get-started-with-syntax-analysis"></a>구문 분석 시작
 
@@ -74,7 +74,7 @@ C# 코드 구조의 분석에 구문 API를 사용합니다. **구문 API**는 �
 
 ### <a name="manual-traversal"></a>수동 트래버스
 
-[GitHub 리포지토리](https://github.com/dotnet/docs/tree/master/samples/csharp/roslyn-sdk/SyntaxQuickStart)에서 이 샘플의 완성된 코드를 볼 수 있습니다.
+[GitHub 리포지토리](https://github.com/dotnet/samples/tree/master/csharp/roslyn-sdk/SyntaxQuickStart)에서 이 샘플의 완성된 코드를 볼 수 있습니다.
 
 > [!NOTE]
 > 구문 트리 형식은 상속을 사용하여 프로그램의 여러 위치에서 유효한 다른 구문 요소를 설명합니다. 종종 이러한 API를 사용하면 속성이나 컬렉션 멤버를 파생된 특정 형식에 캐스팅하게 됩니다. 다음 예제에서 할당 및 캐스팅은 명시적으로 형식화된 변수를 사용하는 별도의 문입니다. API의 반환 형식 및 반환되는 개체의 런타임 형식을 확인하기 위해 코드를 읽을 수 있습니다. 이 연습에서는 암시적으로 형식화된 변수를 사용하고 API 이름을 사용하여 검사된 개체의 형식을 설명하는 것이 더 일반적입니다.
@@ -164,7 +164,7 @@ The body text of the Main method follows:
 
 새 C# **독립 실행형 코드 분석 도구** 프로젝트를 만들고 이름을 "**SyntaxWalker**"로 지정합니다.
 
-[GitHub 리포지토리](https://github.com/dotnet/docs/tree/master/samples/csharp/roslyn-sdk/SyntaxQuickStart)에서 이 샘플의 완성된 코드를 볼 수 있습니다. GitHub의 샘플에는 이 자습서에 설명된 모든 프로젝트가 포함됩니다.
+[GitHub 리포지토리](https://github.com/dotnet/samples/tree/master/csharp/roslyn-sdk/SyntaxQuickStart)에서 이 샘플의 완성된 코드를 볼 수 있습니다. GitHub의 샘플에는 이 자습서에 설명된 모든 프로젝트가 포함됩니다.
 
 앞의 예제와 같이 분석하려는 프로그램의 텍스트를 포함하도록 문자열 상수를 정의할 수 있습니다.
 
