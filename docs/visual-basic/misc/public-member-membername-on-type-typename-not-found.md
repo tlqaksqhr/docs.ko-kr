@@ -1,12 +1,14 @@
 ---
-title: "Public 멤버 &#39; &lt;membername&gt;&#39; 형식의 &#39;에&lt; typename&gt;&#39; 찾을 수 없음"
+title: Public 멤버 &#39; &lt;membername&gt;&#39; 형식의 &#39;에&lt; typename&gt;&#39; 찾을 수 없음
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-visual-basic
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
-f1_keywords: vbrMissingMember_MemberNotFoundOnType2
+f1_keywords:
+- vbrMissingMember_MemberNotFoundOnType2
 ms.assetid: 6300feb8-78ac-4dd0-9653-1d03e1f5bc20
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: dotnet-bot
 ms.author: dotnetcontent
 ms.openlocfilehash: ca0ac50c9834bcf051d4e0f15409dd26a99046ae
