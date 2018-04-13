@@ -1,17 +1,17 @@
 ---
-title: "병렬 프로그래밍을 위한 데이터 구조"
-ms.custom: 
+title: 병렬 프로그래밍을 위한 데이터 구조
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - data structures, multi-threading
 ms.assetid: bdc82f2f-4754-45a1-a81e-fe2e9c30cef9
-caps.latest.revision: 
+caps.latest.revision: 15
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett

@@ -1,12 +1,12 @@
 ---
-title: "방법: 병렬 및 순차적 LINQ 쿼리 결합"
-ms.custom: 
+title: '방법: 병렬 및 순차적 LINQ 쿼리 결합'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -14,7 +14,7 @@ dev_langs:
 helpviewer_keywords:
 - parallel queries, combine parallel and sequential
 ms.assetid: 1167cfe6-c8aa-4096-94ba-c66c3a4edf4c
-caps.latest.revision: 
+caps.latest.revision: 10
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett

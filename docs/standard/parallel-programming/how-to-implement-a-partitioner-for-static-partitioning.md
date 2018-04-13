@@ -1,17 +1,17 @@
 ---
-title: "방법: 정적 분할을 위한 파티셔너 구현"
-ms.custom: 
+title: '방법: 정적 분할을 위한 파티셔너 구현'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - tasks, how to create a static partitioner
 ms.assetid: f4410508-cac6-4ba7-bef1-c5e68b2794f3
-caps.latest.revision: 
+caps.latest.revision: 6
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett

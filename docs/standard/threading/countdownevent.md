@@ -1,12 +1,12 @@
 ---
 title: CountdownEvent
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -14,7 +14,7 @@ dev_langs:
 helpviewer_keywords:
 - synchronization primitives, CountdownEvent
 ms.assetid: eec3812a-e20f-4ecd-bfef-6921d508b708
-caps.latest.revision: 
+caps.latest.revision: 8
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett

@@ -1,12 +1,12 @@
 ---
-title: "방법: 작은 루프 본문 속도 개선"
-ms.custom: 
+title: '방법: 작은 루프 본문 속도 개선'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -14,7 +14,7 @@ dev_langs:
 helpviewer_keywords:
 - parallel loops, how to speed up
 ms.assetid: c7a66677-cb59-4cbf-969a-d2e8fc61a6ce
-caps.latest.revision: 
+caps.latest.revision: 18
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett

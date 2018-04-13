@@ -1,12 +1,12 @@
 ---
-title: "예외 처리(작업 병렬 라이브러리)"
-ms.custom: 
+title: 예외 처리(작업 병렬 라이브러리)
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -14,7 +14,7 @@ dev_langs:
 helpviewer_keywords:
 - tasks, exceptions
 ms.assetid: beb51e50-9061-4d3d-908c-56a4f7c2e8c1
-caps.latest.revision: 
+caps.latest.revision: 21
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett

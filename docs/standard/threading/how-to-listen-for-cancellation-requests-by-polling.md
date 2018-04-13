@@ -1,12 +1,12 @@
 ---
-title: "방법: 폴링을 통해 취소 요청 수신 대기"
-ms.custom: 
+title: '방법: 폴링을 통해 취소 요청 수신 대기'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -14,7 +14,7 @@ dev_langs:
 helpviewer_keywords:
 - cancellation, how to poll for requests
 ms.assetid: c7f2f022-d08e-4e00-b4eb-ae84844cb1bc
-caps.latest.revision: 
+caps.latest.revision: 12
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett

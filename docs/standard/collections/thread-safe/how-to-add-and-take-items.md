@@ -1,12 +1,12 @@
 ---
-title: "방법: BlockingCollection에서 개별적으로 항목 추가 및 가져오기"
-ms.custom: 
+title: '방법: BlockingCollection에서 개별적으로 항목 추가 및 가져오기'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -14,7 +14,7 @@ dev_langs:
 helpviewer_keywords:
 - thread-safe collections, blocking dictionary
 ms.assetid: 38f2f3d8-15e5-4bf4-9c83-2b5b6f22bad1
-caps.latest.revision: 
+caps.latest.revision: 7
 author: mairaw
 ms.author: mairaw
 manager: wpickett

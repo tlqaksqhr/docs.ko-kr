@@ -1,17 +1,17 @@
 ---
-title: "유도된 수집"
-ms.custom: 
+title: 유도된 수집
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - garbage collection, forced
 ms.assetid: 019008fe-4708-4e65-bebf-04fd9941e149
-caps.latest.revision: 
+caps.latest.revision: 20
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett

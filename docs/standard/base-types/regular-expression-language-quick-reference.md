@@ -1,12 +1,12 @@
 ---
-title: "정규식 언어 - 빠른 참조"
-ms.custom: 
+title: 정규식 언어 - 빠른 참조
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - VS.RegularExpressionBuilder
@@ -20,7 +20,7 @@ helpviewer_keywords:
 - cheat sheet
 - .NET Framework regular expressions, language elements
 ms.assetid: 930653a6-95d2-4697-9d5a-52d11bb6fd4c
-caps.latest.revision: 
+caps.latest.revision: 56
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett

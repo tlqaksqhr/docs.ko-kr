@@ -1,15 +1,17 @@
 ---
-title: "방법: Visual Basic에서 Object를 다른 형식으로 변환"
-ms.custom: 
+title: '방법: Visual Basic에서 Object를 다른 형식으로 변환'
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
-helpviewer_keywords: objects [Visual Basic], converting
+helpviewer_keywords:
+- objects [Visual Basic], converting
 ms.assetid: 60cb5fc7-7ba4-4ab5-9c24-480fa12ddcdc
-caps.latest.revision: "15"
+caps.latest.revision: 15
 author: dotnet-bot
 ms.author: dotnetcontent
 ms.openlocfilehash: 053c93e7cf842138f5b9299cd2fcfa56342dd40b

@@ -1,17 +1,17 @@
 ---
-title: "TPL과 기타 비동기 패턴 사용"
-ms.custom: 
+title: TPL과 기타 비동기 패턴 사용
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - tasks and APM
 ms.assetid: 7add905b-ff60-4353-af79-5089038d9a08
-caps.latest.revision: 
+caps.latest.revision: 8
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett

@@ -1,12 +1,12 @@
 ---
-title: "가비지 수집 알림"
-ms.custom: 
+title: 가비지 수집 알림
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,7 +15,7 @@ dev_langs:
 helpviewer_keywords:
 - garbage collection, notifications
 ms.assetid: e12d8e74-31e3-4035-a87d-f3e66f0a9b89
-caps.latest.revision: 
+caps.latest.revision: 23
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett

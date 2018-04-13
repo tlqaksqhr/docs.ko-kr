@@ -1,12 +1,12 @@
 ---
-title: "방법: PLINQ에서 병합 옵션 지정"
-ms.custom: 
+title: '방법: PLINQ에서 병합 옵션 지정'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -14,7 +14,7 @@ dev_langs:
 helpviewer_keywords:
 - PLINQ queries, how to use merge options
 ms.assetid: 0f33b527-e91a-4550-a39a-e63e396fd831
-caps.latest.revision: 
+caps.latest.revision: 11
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett

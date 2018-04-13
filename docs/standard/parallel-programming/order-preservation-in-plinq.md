@@ -1,12 +1,12 @@
 ---
-title: "PLINQ에서 순서 유지"
-ms.custom: 
+title: PLINQ에서 순서 유지
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -14,7 +14,7 @@ dev_langs:
 helpviewer_keywords:
 - PLINQ queries, order preservation
 ms.assetid: 10d202bc-19e1-4b5c-bbf1-9a977322a9ca
-caps.latest.revision: 
+caps.latest.revision: 19
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett

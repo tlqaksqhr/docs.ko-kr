@@ -1,12 +1,12 @@
 ---
-title: "관리되는 스레드의 취소"
-ms.custom: 
+title: 관리되는 스레드의 취소
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -14,7 +14,7 @@ dev_langs:
 helpviewer_keywords:
 - cancellation in .NET, overview
 ms.assetid: eea11fe5-d8b0-4314-bb5d-8a58166fb1c3
-caps.latest.revision: 
+caps.latest.revision: 23
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett

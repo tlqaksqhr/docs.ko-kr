@@ -1,12 +1,12 @@
 ---
-title: "방법: PLINQ 쿼리 성능 측정"
-ms.custom: 
+title: '방법: PLINQ 쿼리 성능 측정'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -14,7 +14,7 @@ dev_langs:
 helpviewer_keywords:
 - PLINQ queries, how to measure performance
 ms.assetid: 491ba43b-2c10-473d-9aab-e2cb96446711
-caps.latest.revision: 
+caps.latest.revision: 7
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett

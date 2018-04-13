@@ -1,12 +1,12 @@
 ---
-title: "방법: 사용자 지정 PLINQ 집계 함수 작성"
-ms.custom: 
+title: '방법: 사용자 지정 PLINQ 집계 함수 작성'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -14,7 +14,7 @@ dev_langs:
 helpviewer_keywords:
 - PLINQ queries, how to create aggregate function
 ms.assetid: 5a70dd49-ab2a-4798-b551-196ee7042b1a
-caps.latest.revision: 
+caps.latest.revision: 7
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett

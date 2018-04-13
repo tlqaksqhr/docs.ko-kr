@@ -1,12 +1,12 @@
 ---
-title: "방법: 병렬 작업을 사용하여 이진 트리 트래버스"
-ms.custom: 
+title: '방법: 병렬 작업을 사용하여 이진 트리 트래버스'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -14,7 +14,7 @@ dev_langs:
 helpviewer_keywords:
 - tasks, how to traverse a tree
 ms.assetid: 4265d169-6c69-4f36-b10d-b7ae7f72f4df
-caps.latest.revision: 
+caps.latest.revision: 8
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett

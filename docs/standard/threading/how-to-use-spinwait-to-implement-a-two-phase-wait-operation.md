@@ -1,12 +1,12 @@
 ---
-title: "방법: SpinWait을 사용하여 2단계 대기 작업 구현"
-ms.custom: 
+title: '방법: SpinWait을 사용하여 2단계 대기 작업 구현'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -14,7 +14,7 @@ dev_langs:
 helpviewer_keywords:
 - SpinWait, how to synchronize two-phase wait
 ms.assetid: b2ac4e4a-051a-4f65-b4b9-f8e103aff195
-caps.latest.revision: 
+caps.latest.revision: 8
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett

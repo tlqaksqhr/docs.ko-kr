@@ -1,12 +1,12 @@
 ---
-title: "방법: PLINQ 쿼리의 순서 제어"
-ms.custom: 
+title: '방법: PLINQ 쿼리의 순서 제어'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -14,7 +14,7 @@ dev_langs:
 helpviewer_keywords:
 - PLINQ queries, how to control ordering
 ms.assetid: c67eccc7-004d-4b2f-987e-919cbbd62ef7
-caps.latest.revision: 
+caps.latest.revision: 10
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett

@@ -1,12 +1,12 @@
 ---
-title: "방법: 작업 및 해당 자식 취소"
-ms.custom: 
+title: '방법: 작업 및 해당 자식 취소'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -14,7 +14,7 @@ dev_langs:
 helpviewer_keywords:
 - tasks, how to cancel
 ms.assetid: 08574301-8331-4719-ad50-9cf7f6ff3048
-caps.latest.revision: 
+caps.latest.revision: 16
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett

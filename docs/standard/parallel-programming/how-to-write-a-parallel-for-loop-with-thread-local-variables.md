@@ -1,12 +1,12 @@
 ---
-title: "방법: 스레드 로컬 변수를 사용하는 Parallel.For 루프 작성"
-ms.custom: 
+title: '방법: 스레드 로컬 변수를 사용하는 Parallel.For 루프 작성'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -14,7 +14,7 @@ dev_langs:
 helpviewer_keywords:
 - parallel for loops, how to use local state
 ms.assetid: 68384064-7ee7-41e2-90e3-71f00bde01bb
-caps.latest.revision: 
+caps.latest.revision: 23
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett

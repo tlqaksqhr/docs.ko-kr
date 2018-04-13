@@ -1,12 +1,12 @@
 ---
-title: "방법: 동시 작업을 배리어와 동기화"
-ms.custom: 
+title: '방법: 동시 작업을 배리어와 동기화'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -14,7 +14,7 @@ dev_langs:
 helpviewer_keywords:
 - Barrier, how to use
 ms.assetid: e1a253ff-e0fb-4df8-95ff-d01a90d4cb19
-caps.latest.revision: 
+caps.latest.revision: 10
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett

@@ -1,12 +1,12 @@
 ---
-title: "방법: 스핀 잠금에서 스레드-추적 모드 사용"
-ms.custom: 
+title: '방법: 스핀 잠금에서 스레드-추적 모드 사용'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -14,7 +14,7 @@ dev_langs:
 helpviewer_keywords:
 - SpinLock, how to enable thread-tracking
 ms.assetid: 62ee2e68-0bdd-4869-afc9-f0a57a11ae01
-caps.latest.revision: 
+caps.latest.revision: 8
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett

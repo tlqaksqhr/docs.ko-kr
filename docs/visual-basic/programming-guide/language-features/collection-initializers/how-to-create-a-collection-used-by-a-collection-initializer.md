@@ -1,15 +1,17 @@
 ---
-title: "방법: 컬렉션 이니셜라이저에 사용되는 컬렉션 만들기(Visual Basic)"
-ms.custom: 
+title: '방법: 컬렉션 이니셜라이저에 사용되는 컬렉션 만들기(Visual Basic)'
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
-helpviewer_keywords: collection initializers [Visual Basic]
+helpviewer_keywords:
+- collection initializers [Visual Basic]
 ms.assetid: c858db10-424d-47e0-92cd-e08087cc5ebc
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: dotnet-bot
 ms.author: dotnetcontent
 ms.openlocfilehash: cff862f16530bc268628d9406ae81d23f2761926

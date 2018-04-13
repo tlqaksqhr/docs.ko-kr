@@ -1,12 +1,12 @@
 ---
-title: "방법: 낮은 수준의 동기화에 SpinLock 사용"
-ms.custom: 
+title: '방법: 낮은 수준의 동기화에 SpinLock 사용'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -14,7 +14,7 @@ dev_langs:
 helpviewer_keywords:
 - SpinLock, how to use
 ms.assetid: a9ed3e4e-4f29-4207-b730-ed0a51ecbc19
-caps.latest.revision: 
+caps.latest.revision: 15
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett

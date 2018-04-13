@@ -1,12 +1,12 @@
 ---
-title: "방법: 작업에서 값 반환"
-ms.custom: 
+title: '방법: 작업에서 값 반환'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -14,7 +14,7 @@ dev_langs:
 helpviewer_keywords:
 - tasks, how to return a value
 ms.assetid: c4bc0f44-eba2-4e96-9e03-1cc787461e61
-caps.latest.revision: 
+caps.latest.revision: 9
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett

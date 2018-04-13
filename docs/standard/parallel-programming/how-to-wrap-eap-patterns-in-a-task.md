@@ -1,12 +1,12 @@
 ---
-title: "방법: EAP 패턴을 작업에 래핑"
-ms.custom: 
+title: '방법: EAP 패턴을 작업에 래핑'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -14,7 +14,7 @@ dev_langs:
 helpviewer_keywords:
 - tasks, how to wrap EAP patterns
 ms.assetid: f11ed467-af2f-4504-8a2e-299a6c36d44e
-caps.latest.revision: 
+caps.latest.revision: 9
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett

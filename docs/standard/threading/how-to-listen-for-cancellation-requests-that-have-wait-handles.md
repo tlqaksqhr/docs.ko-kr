@@ -1,12 +1,12 @@
 ---
-title: "방법: 대기 핸들이 있는 취소 요청 수신 대기"
-ms.custom: 
+title: '방법: 대기 핸들이 있는 취소 요청 수신 대기'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -14,7 +14,7 @@ dev_langs:
 helpviewer_keywords:
 - cancellation, waiting with wait handles
 ms.assetid: 6e2aa49b-fc84-4bcf-962b-17db98b7edcb
-caps.latest.revision: 
+caps.latest.revision: 9
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett

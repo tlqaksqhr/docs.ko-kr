@@ -1,12 +1,12 @@
 ---
-title: "방법: 중첩된 작업 래핑 취소"
-ms.custom: 
+title: '방법: 중첩된 작업 래핑 취소'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -14,7 +14,7 @@ dev_langs:
 helpviewer_keywords:
 - tasks, how to unwrap nested tasks
 ms.assetid: a0769dd2-0f6d-48ca-8418-a9d39de7f450
-caps.latest.revision: 
+caps.latest.revision: 11
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett

@@ -1,12 +1,12 @@
 ---
-title: "최선의 예외 구현 방법"
-ms.custom: 
+title: 최선의 예외 구현 방법
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,7 +15,7 @@ dev_langs:
 helpviewer_keywords:
 - exceptions, best practices
 ms.assetid: f06da765-235b-427a-bfb6-47cd219af539
-caps.latest.revision: 
+caps.latest.revision: 28
 author: mairaw
 ms.author: mairaw
 manager: wpickett

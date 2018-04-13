@@ -1,12 +1,12 @@
 ---
-title: "PLINQ 데이터 샘플"
-ms.custom: 
+title: PLINQ 데이터 샘플
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -14,7 +14,7 @@ dev_langs:
 helpviewer_keywords:
 - PLINQ queries, sample data
 ms.assetid: 4fccbb35-eaa5-44e9-a252-a5c3d4bc7604
-caps.latest.revision: 
+caps.latest.revision: 9
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett

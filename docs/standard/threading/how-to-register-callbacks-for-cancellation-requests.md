@@ -1,12 +1,12 @@
 ---
-title: "방법: 취소 요청에 대한 콜백 등록"
-ms.custom: 
+title: '방법: 취소 요청에 대한 콜백 등록'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -14,7 +14,7 @@ dev_langs:
 helpviewer_keywords:
 - cancellation, how to register callbacks
 ms.assetid: 8838dd75-18ed-4b8b-b322-cd4531faac64
-caps.latest.revision: 
+caps.latest.revision: 9
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett

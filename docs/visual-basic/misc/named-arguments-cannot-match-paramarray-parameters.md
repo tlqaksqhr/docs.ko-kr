@@ -1,12 +1,14 @@
 ---
-title: "명명된 인수는 ParamArray 매개 변수와 일치할 수 없습니다."
+title: 명명된 인수는 ParamArray 매개 변수와 일치할 수 없습니다.
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-visual-basic
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
-f1_keywords: vbrNamedArgumentOnParamArray
+f1_keywords:
+- vbrNamedArgumentOnParamArray
 ms.assetid: ba35fb86-329a-4ceb-864b-045c07661482
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: dotnet-bot
 ms.author: dotnetcontent
 ms.openlocfilehash: aee97f441b1d79da999b6d7ac6d7e6ac7340dd04

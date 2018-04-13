@@ -1,12 +1,12 @@
 ---
-title: "방법: 미리 계산된 작업 만들기"
-ms.custom: 
+title: '방법: 미리 계산된 작업 만들기'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -14,7 +14,7 @@ dev_langs:
 helpviewer_keywords:
 - tasks, creating pre-computed
 ms.assetid: a73eafa2-1f49-4106-a19e-997186029b58
-caps.latest.revision: 
+caps.latest.revision: 6
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett

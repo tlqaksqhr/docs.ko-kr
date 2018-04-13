@@ -1,12 +1,12 @@
 ---
-title: "방법: 디렉터리 및 파일 열거"
-ms.custom: 
+title: '방법: 디렉터리 및 파일 열거'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -14,7 +14,7 @@ dev_langs:
 helpviewer_keywords:
 - I/O [.NET Framework], enumerating directories and files
 ms.assetid: 86b69a08-3bfa-4e5f-b4e1-3b7cb8478215
-caps.latest.revision: 
+caps.latest.revision: 18
 author: mairaw
 ms.author: mairaw
 manager: wpickett

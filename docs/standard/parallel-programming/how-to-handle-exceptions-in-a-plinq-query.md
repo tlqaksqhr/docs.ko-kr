@@ -1,12 +1,12 @@
 ---
-title: "방법: PLINQ 쿼리의 예외 처리"
-ms.custom: 
+title: '방법: PLINQ 쿼리의 예외 처리'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -14,7 +14,7 @@ dev_langs:
 helpviewer_keywords:
 - PLINQ queries, how to handle exceptions
 ms.assetid: 8d56ff9b-a571-4d31-b41f-80c0b51b70a5
-caps.latest.revision: 
+caps.latest.revision: 13
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
