@@ -1,18 +1,18 @@
 ---
-title: "공용 컨테이너 디자인 원칙"
-description: "Microsoft 플랫폼 및 도구를 사용하여 컨테이너화된 Docker 응용 프로그램 수명 주기"
-keywords: "Docker, 마이크로 서비스, ASP.NET, 컨테이너"
+title: 공용 컨테이너 디자인 원칙
+description: Microsoft 플랫폼 및 도구를 사용하여 컨테이너화된 Docker 응용 프로그램 수명 주기
+ms.prod: .net
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/22/2017
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: a9cd569a931824c4fab060b99265ea9e3ca75129
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: c398e2da979637c450e2c9754ff3c9e8d8233aeb
+ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="common-container-design-principles"></a>공용 컨테이너 디자인 원칙
 

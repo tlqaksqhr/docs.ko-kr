@@ -1,18 +1,18 @@
 ---
-title: "Docker 응용 프로그램에 대 한 외부 루프 DevOps 워크플로의 단계"
-description: "Microsoft 플랫폼 및 도구를 사용하여 컨테이너화된 Docker 응용 프로그램 수명 주기"
-keywords: "Docker, 마이크로 서비스, ASP.NET, 컨테이너"
+title: Docker 응용 프로그램에 대 한 외부 루프 DevOps 워크플로의 단계
+description: Microsoft 플랫폼 및 도구를 사용하여 컨테이너화된 Docker 응용 프로그램 수명 주기
+ms.prod: .net
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/22/2017
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: fe51fc4b5026d17f0f9b93e7fd0dedde93ef4a3c
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: a03a9d153793b30ca9276b64a0a33e3de26f8f6e
+ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="steps-in-the-outer-loop-devops-workflow-for-a-docker-application"></a>Docker 응용 프로그램에 대 한 외부 루프 DevOps 워크플로의 단계
 
@@ -110,13 +110,13 @@ Visual Studio Team Services 계정에 다음 구성 요소를 설치 하는 Visu
 
 **자세한 내용은** 파이프라인와 연습을 보려면 다음 사이트를 방문 하십시오. Visual Studio Team Services Docker CI 어셈블하는 방법에 대 한 자세한를 읽으려면:
 
-Docker 컨테이너와 Visual Studio Team Services 에이전트를 실행: [https://hub.docker.com/r/ \ 에이전트에서 microsoft/vsts /](https://hub.docker.com/r/microsoft/vsts-agent/)
+Docker 컨테이너와 Visual Studio Team Services 에이전트를 실행: [ https://hub.docker.com/r/\ 에이전트에서 microsoft/vsts /](https://hub.docker.com/r/microsoft/vsts-agent/)
 
 VSTS Docker 확장: <https://aka.ms/vstsdockerextension>
 
 Visual Studio Team Services를 사용 하 여.NET Core Linux Docker 이미지를 구축: <https://blogs.msdn.microsoft.com/stevelasker/2016/06/13/building-net-core-linux-docker-images-with-visual-studio-team-services/>
 
-Docker 지 원하는 컴퓨터를 빌드 Visual Studio 팀 Linux 기반 서비스 빌드: <http://donovanbrown.com/post/2016/06/03/Building-a-Linux-Based-Visual-Studio-Team-Service-Build-Machine-with-Docker-Support>
+Docker 지 원하는 Visual Studio 팀 서비스 Linux 기반 빌드 컴퓨터 구축: <http://donovanbrown.com/post/2016/06/03/Building-a-Linux-Based-Visual-Studio-Team-Service-Build-Machine-with-Docker-Support>
 
 ### <a name="integrate-test-and-validate-multicontainer-docker-applications"></a>통합, 테스트 및 multicontainer Docker 응용 프로그램의 유효성을 검사합니다
 
@@ -158,7 +158,7 @@ Visual Studio Team Services Docker 확장을 사용 하 여 그림 5-5와 같이
 
 그림 5-5: Visual Studio Team Services Docker 레지스트리에 게시 사용자 지정 이미지를 사용 하 여
 
-**자세한 내용은** 자세한 내용을 알아보려면 Visual Studio Team Services에 대 한 Docker 확장 프로그램에 대 한 <https://aka.ms/vstsdockerextension>합니다. Azure 컨테이너 레지스트리에 대 한 자세한 내용은 이동 <https://aka.ms/azurecontainerregistry>합니다.
+**자세한 내용은** 자세한 내용을 알아보려면 Visual Studio Team Services에 대 한 Docker 확장 프로그램에 대 한 <https://aka.ms/vstsdockerextension>합니다. Azure 컨테이너 레지스트리에 대 한 자세한 내용은로 이동 <https://aka.ms/azurecontainerregistry>합니다.
 
 ## <a name="step-4-cd-deploy"></a>4 단계: CD, 배포
 
@@ -220,9 +220,9 @@ CD의 관점 및 Visual Studio Team Services에서 특히에서 실행할 수 �
 
 **자세한 내용은** 자세한 내용은 Visual Studio Team Services 및 Docker와 CD 파이프라인에 대 한 다음 사이트를 방문 하십시오.:
 
-Docker 및 Azure 컨테이너 서비스에 대 한 visual Studio Team Services 확장: [https://aka.ms/ \ vstsdockerextension](https://aka.ms/vstsdockerextension)
+Docker 및 Azure 컨테이너 서비스에 대 한 visual Studio Team Services 확장: [ https://aka.ms/\ vstsdockerextension](https://aka.ms/vstsdockerextension)
 
-Azure Container Service: <https://aka.ms/azurecontainerservice>
+Azure 컨테이너 서비스: <https://aka.ms/azurecontainerservice>
 
 Mesosphere DC/OS: <https://mesosphere.com/product/>
 

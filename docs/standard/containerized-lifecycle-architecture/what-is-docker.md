@@ -1,20 +1,20 @@
 ---
-title: "Docker는 무엇입니까?"
-description: "Microsoft 플랫폼 및 도구를 사용하여 컨테이너화된 Docker 응용 프로그램 수명 주기"
-keywords: "Docker, 마이크로 서비스, ASP.NET, 컨테이너"
+title: Docker란?
+description: Microsoft 플랫폼 및 도구를 사용하여 컨테이너화된 Docker 응용 프로그램 수명 주기
+ms.prod: .net
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/21/2017
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: c75b2fa87e5aad93693c76c3bbd135044b36525f
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: c471c4bc1588aaa6c0e145ede0b67ab5340f254a
+ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/16/2018
 ---
-# <a name="what-is-docker"></a>Docker는 무엇입니까?
+# <a name="what-is-docker"></a>Docker란?
 
 [Docker](https://www.docker.com/) 는 [오픈 소스 프로젝트](https://github.com/docker/docker) 클라우드 또는 온-프레미스에서 실행할 수 있는 휴대용, 스페이스인 컨테이너로 응용 프로그램의 배포를 자동화 하는 데 (참조 그림 1-2). Docker 이기도 한 [회사](https://www.docker.com/) 장려 하 고이 기술은 클라우드, Linux 및 Windows 공급 업체를 비롯 하 여 Microsoft와의 공동 작업에서 작업을 개발 하는 합니다.
 
@@ -30,11 +30,11 @@ Docker 컨테이너 개발 환경에서 호스팅하고 개발자를 위한 추�
 
 실행 하려면 [Windows 컨테이너](https://msdn.microsoft.com/virtualization/windowscontainers/about/about_overview), 두 가지 방법으로 런타임:
 
--   **Windows Server 컨테이너** 이 런타임 프로세스 및 네임 스페이스 격리 기술을 통해 응용 프로그램 격리를 제공 합니다. Windows Server 컨테이너 호스트에서 실행 되는 모든 컨테이너와 컨테이너 호스트와 커널을 공유 합니다.
+-   **Windows Server 컨테이너** 이 런타임 프로세스 및 네임 스페이스 격리 기술을 통해 응용 프로그램 격리를 제공 합니다. Windows Server 컨테이너는 컨테이너 호스트와 호스트에서 실행 중인 모든 컨테이너와 커널을 공유합니다.
 
--   **Hyper-v 컨테이너** 이 각 컨테이너를 고도로 최적화 된 VM에서 실행 하 여 Windows Server 컨테이너에서 제공 하는 격리를 확장 합니다. 이 구성에서는 컨테이너 호스트의 커널은 더 나은 격리를 제공 하는 Hyper-v 컨테이너와 공유 되지 됩니다.
+-   **Hyper-v 컨테이너** 이 각 컨테이너를 고도로 최적화 된 VM에서 실행 하 여 Windows Server 컨테이너에서 제공 하는 격리를 확장 합니다. 이 구성에서 컨테이너 호스트의 커널은 Hyper-V 컨테이너와 공유되지 않으므로 격리 기능이 향상됩니다.
 
-이러한 컨테이너에 대 한 이미지에 동일한 방식으로 만들어지며 동일 하 게 작동 합니다. 차이점은 컨테이너 이미지에서 만들어지는 방법을-추가 매개 변수가 필요한 Hyper-v 컨테이너를 실행 합니다. 자세한 내용은 참조 [Hyper-v 컨테이너](https://msdn.microsoft.com/virtualization/windowscontainers/about/about_overview)합니다.
+이러한 컨테이너에 대 한 이미지에 동일한 방식으로 만들어지며 동일 하 게 작동 합니다. 차이점은 컨테이너 이미지에서 만들어지는 방법을-추가 매개 변수가 필요한 Hyper-v 컨테이너를 실행 합니다. 자세한 내용은 [Hyper-V 컨테이너](https://msdn.microsoft.com/virtualization/windowscontainers/about/about_overview)를 참조하세요.
 
 ## <a name="comparing-docker-containers-with-vms"></a>Vm 사용 하 여 Docker 컨테이너 비교
 
@@ -44,7 +44,7 @@ Docker 컨테이너 개발 환경에서 호스팅하고 개발자를 위한 추�
 
 동일한 커널을에서 실행의 부작용을으로 Vm 보다 적은 격리를 시킬 수 있습니다.
 
-이미지의 주요 목표는 수행 하는 환경 (종속성) 동일한 다른 배포에서입니다. 이 컴퓨터에서 디버깅 하 고 보장 환경으로 다른 컴퓨터에 배포할 수 있는 의미 합니다.
+이미지의 주요 목표는 서로 다른 배포에서 환경(종속성)을 동일하게 만드는 것입니다. 즉, 컴퓨터에서 이를 디버그한 다음, 동일한 환경의 다른 컴퓨터에 배포할 수 있습니다.
 
 컨테이너 이미지는 응용 프로그램 또는 서비스를 패키지 하는 신뢰할 수 있는 고 재현 가능한 방식으로 배포 하는 방법입니다. 이런 점에서 Docker가 아닙니다.만 하는 기술 이기도 한 철학 및 프로세스입니다.
 
@@ -56,4 +56,4 @@ Docker 컨테이너에 기존 Vm의 그림 1-3: 비교
 
 
 >[!div class="step-by-step"]
-[이전] [다음] (docker terminology.md) (index.md)
+[이전] (index.md) [다음] (docker-terminology.md)

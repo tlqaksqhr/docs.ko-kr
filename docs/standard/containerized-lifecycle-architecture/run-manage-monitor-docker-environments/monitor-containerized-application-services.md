@@ -1,18 +1,18 @@
 ---
-title: "컨테이너 화 된 응용 프로그램 서비스를 모니터링 합니다."
-description: "Microsoft 플랫폼 및 도구를 사용하여 컨테이너화된 Docker 응용 프로그램 수명 주기"
-keywords: "Docker, 마이크로 서비스, ASP.NET, 컨테이너"
+title: 컨테이너 화 된 응용 프로그램 서비스를 모니터링 합니다.
+description: Microsoft 플랫폼 및 도구를 사용하여 컨테이너화된 Docker 응용 프로그램 수명 주기
+ms.prod: .net
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/22/2017
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 58bf96dfa06a78892563698200e6f4df5f371346
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: b3ffa6c230176e1de6269ed0b30d05711ff78704
+ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="monitor-containerized-application-services"></a>컨테이너 화 된 응용 프로그램 서비스를 모니터링 합니다.
 
@@ -42,10 +42,10 @@ Docker, 관련 된 수명 주기 이벤트 및 Docker 컨테이너에 Applicatio
 
 Application Insights 리소스를 만들려면 뒤에 오는 목록에 표시 되는 문서에 대 한 지침을 따르십시오. Azure 포털에서 필요한 스크립트를 만듭니다.
 
--   **Application Insights에서 Docker 응용 프로그램 모니터링:**[https://docs.microsoft.com/azure/application-insights/app-insights-docker](https://docs.microsoft.com/azure/application-insights/app-insights-docker)
+-   **Application Insights에서 Docker 응용 프로그램 모니터링:**  [https://docs.microsoft.com/azure/application-insights/app-insights-docker](https://docs.microsoft.com/azure/application-insights/app-insights-docker)
 
 -   **Docker 허브 및 Github에서 응용 프로그램 통찰력 Docker 이미지:**  
-[https://hub.docker.com/r/microsoft/applicationinsights/](https://hub.docker.com/r/microsoft/applicationinsights/) and <https://github.com/Microsoft/ApplicationInsights-Docker>
+[https://hub.docker.com/r/microsoft/applicationinsights/](https://hub.docker.com/r/microsoft/applicationinsights/) 및 <https://github.com/Microsoft/ApplicationInsights-Docker>
 
 -   **ASP.NET 용 Application Insights를 설정 합니다.**  
 [https://docs.microsoft.com/azure/application-insights/app-insights-asp-net](https://docs.microsoft.com/azure/application-insights/app-insights-asp-net)
@@ -97,7 +97,7 @@ Operations Management Suite로 표시 된 Docker 호스트의 그림 6-3: 성능
 
 쿼리를 저장할 Operations Management Suite의 표준 기능이 며 도와 유용 발견 한 및 시스템의 추세를 파악 하는 쿼리를 유지 합니다.
 
-**자세한 내용은** 컨테이너 솔루션에 설치 하 고 Docker 구성 정보를 찾으려면 [Operations Management Suite](http://microsoft.com/oms)로 이동 <https://docs.microsoft.com/azure/log-analytics /log-analytics-containers>합니다.
+**자세한 내용은** 컨테이너 솔루션에 설치 하 고 Docker 구성 정보를 찾으려면 [Operations Management Suite](http://microsoft.com/oms)로 이동 <https://docs.microsoft.com/azure/log-analytics/log-analytics-containers>합니다.
 
 >[!div class="step-by-step"]
 [이전] (관리-프로덕션-docker-environments.md) [다음] (... /key-takeaways/index.md)

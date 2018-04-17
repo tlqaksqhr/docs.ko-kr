@@ -1,22 +1,22 @@
 ---
-title: "Docker 앱을 위한 개발 환경"
-description: "Microsoft 플랫폼 및 도구를 사용하여 컨테이너화된 Docker 응용 프로그램 수명 주기"
-keywords: "Docker, 마이크로 서비스, ASP.NET, 컨테이너"
+title: Docker 앱을 위한 개발 환경
+description: Microsoft 플랫폼 및 도구를 사용하여 컨테이너화된 Docker 응용 프로그램 수명 주기
+ms.prod: .net
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/22/2017
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: ad1a6e4cb0974ebb067cf1a7be987d696e8bc82a
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: c164b94572a8fde58124acaa14d47da574a19383
+ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="development-environment-for-docker-apps"></a>Docker 앱을 위한 개발 환경
 
-## <a name="development-tools-choices-ide-or-editor"></a>개발 도구에서 선택 항목: IDE 또는 편집기
+## <a name="development-tools-choices-ide-or-editor"></a>개발 도구 선택: IDE 또는 편집기
 
 관계 없이 완전 하 고 강력한 IDE 또는 편집기를 간단 하 고 agile 선호 하는 경우 Microsoft에서는 Docker 응용 프로그램 개발에 있어 거둘 수 있습니다.
 
@@ -56,4 +56,4 @@ Docker 응용 프로그램 및 대부분의 언어와 Microsoft 도구를 개발
 
 
 >[!div class="step-by-step"]
-[Previous] (orchestrate-high-scalability-availability.md) [Next] (docker-apps-inner-loop-workflow.md)
+[이전] (오케스트레이션-높은-확장성-availability.md) [다음] (docker-앱-내부-루프-workflow.md)

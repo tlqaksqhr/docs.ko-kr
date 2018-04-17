@@ -1,13 +1,9 @@
 ---
 title: 기본 마샬링 동작
-ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -17,17 +13,16 @@ helpviewer_keywords:
 - interoperation with unmanaged code, marshaling
 - marshaling behavior
 ms.assetid: c0a9bcdf-3df8-4db3-b1b6-abbdb2af809a
-caps.latest.revision: 15
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: f0a8fcba31ddfa09ca60f8ba6cf08d20b270c3da
-ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
+ms.openlocfilehash: 7d653e6bd82a897d1fe8591f263a12f4c3a67abf
+ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="default-marshaling-behavior"></a>기본 마샬링 동작
 Interop 마샬링은 메서드 매개 변수와 연결된 데이터가 관리되는 메모리와 관리되지 않는 메모리 간에 전달될 때 동작하는 방식을 제어하는 규칙에 따라 작동합니다. 이러한 기본 제공 규칙은 데이터 형식 변환, 호출 수신자가 전달된 데이터를 변경하고 해당 변경 내용을 호출자에게 반환할 수 있는지 여부 및 마샬러가 성능 최적화를 제공하는 상황과 같은 마샬링 작업을 제어합니다.  
@@ -52,10 +47,10 @@ BSTR MethodOne (BSTR b) {
   
  그러나 메서드를 플랫폼 호출 프로토타입으로 정의하고, 각 **BSTR** 형식을 <xref:System.String> 형식으로 바꾼 다음 `MethodOne`을 호출하는 경우 공용 언어 런타임에서 `b`를 해제하려고 두 번 시도합니다. **String** 형식보다 <xref:System.IntPtr> 형식을 사용하여 마샬링 동작을 변경할 수 있습니다.  
   
- 런타임은 항상 **CoTaskMemFree** 메서드를 사용하여 메모리를 해제합니다. 사용하는 메모리가 **CoTaskMemAlloc** 메서드를 통해 할당되지 않은 경우 **IntPtr**을 사용하고 적절한 메서드를 통해 수동으로 메모리를 해제해야 합니다. 마찬가지로, 커널 메모리에 대한 포인터를 반환하는 Kernel32.dll의 **GetCommandLine** 함수를 사용하는 경우와 같이 메모리가 해제되지 않아야 하는 상황에서는 자동 메모리 해제를 방지할 수 있습니다. 수동으로 메모리를 해제하는 방법에 대한 자세한 내용은 [Buffers 샘플](http://msdn.microsoft.com/library/e30d36e8-d7c4-4936-916a-8fdbe4d9ffd5)을 참조하세요.  
+ 런타임은 항상 **CoTaskMemFree** 메서드를 사용하여 메모리를 해제합니다. 사용하는 메모리가 **CoTaskMemAlloc** 메서드를 통해 할당되지 않은 경우 **IntPtr**을 사용하고 적절한 메서드를 통해 수동으로 메모리를 해제해야 합니다. 마찬가지로, 커널 메모리에 대한 포인터를 반환하는 Kernel32.dll의 **GetCommandLine** 함수를 사용하는 경우와 같이 메모리가 해제되지 않아야 하는 상황에서는 자동 메모리 해제를 방지할 수 있습니다. 수동으로 메모리를 해제하는 방법에 대한 자세한 내용은 [Buffers 샘플](http://msdn.microsoft.com/library/e30d36e8-d7c4-4936-916a-8fdbe4d9ffd5(v=vs.100))을 참조하세요.  
   
 ## <a name="default-marshaling-for-classes"></a>클래스에 대한 기본 마샬링  
- 클래스는 COM interop에 의해서만 마샬링될 수 있으며 항상 인터페이스로 마샬링됩니다. 클래스를 마샬링하는 데 사용되는 인터페이스를 클래스 인터페이스라고 하는 경우도 있습니다. 선택한 인터페이스로 클래스 인터페이스를 재정의하는 방법에 대한 자세한 내용은 [클래스 인터페이스 소개](http://msdn.microsoft.com/library/733c0dd2-12e5-46e6-8de1-39d5b25df024)를 참조하세요.  
+ 클래스는 COM interop에 의해서만 마샬링될 수 있으며 항상 인터페이스로 마샬링됩니다. 클래스를 마샬링하는 데 사용되는 인터페이스를 클래스 인터페이스라고 하는 경우도 있습니다. 선택한 인터페이스로 클래스 인터페이스를 재정의 하는 방법에 대 한 정보를 참조 하십시오. [클래스 인터페이스 소개](com-callable-wrapper.md#introducing-the-class-interface)합니다.  
   
 ### <a name="passing-classes-to-com"></a>COM에 클래스 전달  
  관리되는 클래스를 COM에 전달하면 interop 마샬러가 자동으로 클래스를 COM 프록시로 래핑하고 프록시에 의해 생성된 클래스 인터페이스를 COM 메서드 호출에 전달합니다. 그런 다음 프록시는 클래스 인터페이스에 대한 모든 호출을 관리되는 개체에 다시 위임합니다. 또한 프록시는 클래스에 의해 명시적으로 구현되지 않은 다른 인터페이스를 노출합니다. 프록시는 클래스를 대신하여 **IUnknown** 및 **IDispatch**와 같은 인터페이스를 자동으로 구현합니다.  
@@ -171,7 +166,7 @@ internal class DelegateTest {
 ```  
   
 ## <a name="default-marshaling-for-value-types"></a>값 형식에 대한 기본 마샬링  
- 정수 및 부동 소수점 숫자와 같은 대부분의 값 형식은 [blittable](../../../docs/framework/interop/blittable-and-non-blittable-types.md)이며 마샬링할 필요가 없습니다. 다른 [비 blittable](../../../docs/framework/interop/blittable-and-non-blittable-types.md) 형식은 관리되는 메모리와 관리되지 않는 메모리에서 서로 다르게 표현되므로 마샬링해야 합니다. 다른 형식은 상호 운용 경계 간에 명시적 형식 지정도 필요합니다.  
+ 정수 및 부동 소수점 숫자와 같은 대부분의 값 형식은 [blittable](blittable-and-non-blittable-types.md)이며 마샬링할 필요가 없습니다. 다른 [비 blittable](blittable-and-non-blittable-types.md) 형식은 관리되는 메모리와 관리되지 않는 메모리에서 서로 다르게 표현되므로 마샬링해야 합니다. 다른 형식은 상호 운용 경계 간에 명시적 형식 지정도 필요합니다.  
   
  이 항목에서는 형식이 지정된 값 형식에 대한 다음 정보를 제공합니다.  
   
@@ -450,8 +445,8 @@ interface IValueTypes : IDispatch {
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [Blittable 형식 및 비 Blittable 형식](../../../docs/framework/interop/blittable-and-non-blittable-types.md)  
- [복사 및 고정](../../../docs/framework/interop/copying-and-pinning.md)  
- [배열에 대한 기본 마샬링](../../../docs/framework/interop/default-marshaling-for-arrays.md)  
- [개체에 대한 마샬링](../../../docs/framework/interop/default-marshaling-for-objects.md)  
- [문자열에 대한 기본 마샬링](../../../docs/framework/interop/default-marshaling-for-strings.md)
+ [Blittable 형식 및 비 Blittable 형식](blittable-and-non-blittable-types.md)  
+ [복사 및 고정](copying-and-pinning.md)  
+ [배열에 대한 기본 마샬링](default-marshaling-for-arrays.md)  
+ [개체에 대한 마샬링](default-marshaling-for-objects.md)  
+ [문자열에 대한 기본 마샬링](default-marshaling-for-strings.md)

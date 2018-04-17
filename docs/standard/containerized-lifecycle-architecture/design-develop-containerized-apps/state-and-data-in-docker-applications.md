@@ -1,20 +1,20 @@
 ---
-title: "상태 및 Docker는 응용 프로그램에서 데이터"
-description: "Microsoft 플랫폼 및 도구를 사용하여 컨테이너화된 Docker 응용 프로그램 수명 주기"
-keywords: "Docker, 마이크로 서비스, ASP.NET, 컨테이너"
+title: Docker 응용 프로그램의 상태 및 데이터
+description: Microsoft 플랫폼 및 도구를 사용하여 컨테이너화된 Docker 응용 프로그램 수명 주기
+ms.prod: .net
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/22/2017
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: d4b75faffd76a85f9ca1c779ed58bfa37625cff3
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 83094cd9a13d77f489df639096bb42b23ce152e7
+ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/16/2018
 ---
-# <a name="state-and-data-in-docker-applications"></a>상태 및 Docker는 응용 프로그램에서 데이터
+# <a name="state-and-data-in-docker-applications"></a>Docker 응용 프로그램의 상태 및 데이터
 
 컨테이너의 기본 형식은 불변성입니다. VM에 비해, 컨테이너 하지 않는 경우가 종종으로 사라집니다. VM은 배달 못 한 프로세스, 오버 로드 된 CPU 또는 전체 또는 실패 한 디스크에서 다양 한 형태로 실패할 수 있습니다. 아직, VM을 사용할 수 있는 것으로 예상 및 RAID 드라이브는 드라이브 오류 데이터를 유지 관리를 일반화 합니다.
 
@@ -36,7 +36,7 @@ Docker는 응용 프로그램에서 영구 데이터를 관리 하는 일반적�
 
 데이터 볼륨 특별 하 게 사용 하지 않는 하나 이상의 컨테이너 내에서 디렉터리를 지정 된 [Union 파일 시스템](https://docs.docker.com/v1.8/reference/glossary#union-file-system)합니다. 데이터 볼륨 컨테이너의 수명 주기에 독립적 데이터를 유지 하기 위해 설계 되었습니다. Docker 따라서 자동으로 삭제 볼륨 컨테이너를 제거 하지 "가비지 수집" 볼륨 컨테이너에 의해 더 이상 참조 되지 않습니다. 호스트 운영 체제 찾아보고 모든 볼륨의 데이터를 데이터 볼륨을 제한적으로 사용 하는 또 다른 이유는 자유롭게 편집할 수 있습니다.
 
-A [데이터 볼륨 컨테이너](https://docs.docker.com/v1.8/userguide/dockervolumes/) 일반 데이터 볼륨 개선 된 합니다. 기본적으로 휴지 컨테이너 (앞에서 설명한) 내에 만들어진 데이터 볼륨을 하나 이상 있는 경우 데이터 볼륨 컨테이너 중앙 탑재 지점에서 컨테이너에 대 한 액세스를 제공합니다. 액세스이 메서드의 장점은 논리 탑재 지점이 데이터 컨테이너를 만드는 원래 데이터의 위치를 추상화 것입니다. "Application" 컨테이너를를 만들고 소멸 전용된 컨테이너에서 영구 데이터를 유지 하면서 데이터 컨테이너 볼륨에 액세스할 수도 있습니다.
+A [데이터 볼륨 컨테이너](https://docs.docker.com/v1.8/userguide/dockervolumes/) 일반 데이터 볼륨 개선 된 합니다. 기본적으로 휴지 컨테이너 (앞에서 설명한) 내에 만들어진 데이터 볼륨을 하나 이상 있는 경우 데이터 볼륨 컨테이너는 중앙 탑재 지점에서 컨테이너에 대한 액세스를 제공합니다. 액세스이 메서드의 장점은 논리 탑재 지점이 데이터 컨테이너를 만드는 원래 데이터의 위치를 추상화 것입니다. "Application" 컨테이너를를 만들고 소멸 전용된 컨테이너에서 영구 데이터를 유지 하면서 데이터 컨테이너 볼륨에 액세스할 수도 있습니다.
 
 그림 4-5를 보여 줍니다 일반의 Docker 볼륨 저장소 컨테이너 자체 되었지만 물리적 호스트 서버/v M 경계 내에 배치할 수 있습니다. *docker 볼륨에 하나의 호스트 서버/v M에서 볼륨을 사용 하는 기능은 없는*합니다.
 

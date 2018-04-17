@@ -1,13 +1,9 @@
 ---
-title: "방법: COM에서 .NET 형식 참조"
-ms.custom: 
+title: '방법: COM에서 .NET 형식 참조'
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
 - cpp
@@ -20,17 +16,16 @@ helpviewer_keywords:
 - type libraries
 - COM interop, importing type library
 ms.assetid: 54917f6f-cb18-4103-b622-856b55da93f3
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: b452dd686286ba0ddf648ee532e67a0c121f66eb
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 3ac4308230f29067f358a45fd7f882abe6e41b96
+ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-reference-net-types-from-com"></a>방법: COM에서 .NET 형식 참조
 클라이언트 및 서버 코드의 관점에서 COM과 .NET Framework의 차이점은 크게 눈에 띄지 않습니다. Microsoft Visual Basic 클라이언트는 개체 메서드와 구문, 속성 및 필드를 정확히 다른 COM 개체인 것처럼 노출하는 개체 브라우저에서 .NET 개체를 볼 수 있습니다.  
@@ -39,15 +34,15 @@ ms.lasthandoff: 01/19/2018
   
 ### <a name="to-import-a-library"></a>라이브러리를 가져오려면  
   
--   **#import** 지시문에서 **raw_interfaces_only** 옵션을 지정합니다. 예:  
+-   **#import** 지시문에서 **raw_interfaces_only** 옵션을 지정합니다. 예를 들어:  
   
     ```cpp  
     #import "..\LoanLib\LoanLib.tlb" raw_interfaces_only  
     ```  
   
-     또는  
+     -또는-  
   
--   Mscorlib.tlb에 대한 #import 지시문을 포함합니다. 예:  
+-   Mscorlib.tlb에 대한 #import 지시문을 포함합니다. 예를 들어:  
   
     ```cpp  
     #import "mscorlib.tlb"  
@@ -55,7 +50,7 @@ ms.lasthandoff: 01/19/2018
     ```  
   
 ## <a name="see-also"></a>참고 항목  
- [.NET Framework 구성 요소를 COM에 노출](../../../docs/framework/interop/exposing-dotnet-components-to-com.md)  
- [COM에 어셈블리 등록](../../../docs/framework/interop/registering-assemblies-with-com.md)  
- [.NET 개체를 호출합니다.](http://msdn.microsoft.com/library/40c9626c-aea6-4bad-b8f0-c1de462efd33)  
- [COM 액세스를 위해 응용 프로그램 배포](http://msdn.microsoft.com/library/fb63564c-c1b9-4655-a094-a235625882ce)
+ [.NET Framework 구성 요소를 COM에 노출](exposing-dotnet-components-to-com.md)  
+ [COM에 어셈블리 등록](registering-assemblies-with-com.md)  
+ [.NET 개체를 호출합니다.](https://msdn.microsoft.com/library/40c9626c-aea6-4bad-b8f0-c1de462efd33(v=vs.100))  
+ [COM 액세스를 위해 응용 프로그램 배포](https://msdn.microsoft.com/library/fb63564c-c1b9-4655-a094-a235625882ce(v=vs.100))

@@ -1,18 +1,18 @@
 ---
-title: "Visual Studio Tools를 사용 하 여 Docker (Visual Studio Windows에서)에 대 한"
-description: "Microsoft 플랫폼 및 도구를 사용하여 컨테이너화된 Docker 응용 프로그램 수명 주기"
-keywords: "Docker, 마이크로 서비스, ASP.NET, 컨테이너"
+title: Visual Studio Tools를 사용 하 여 Docker (Visual Studio Windows에서)에 대 한
+description: Microsoft 플랫폼 및 도구를 사용하여 컨테이너화된 Docker 응용 프로그램 수명 주기
+ms.prod: .net
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/22/2017
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 0525633b23625d915fd447d438c6281fb14b3b46
-ms.sourcegitcommit: c3957fdb990060559d73cca44ab3e2c7b4d049c0
+ms.openlocfilehash: cbd4dea32b98e79e85302aa5d4a5c97b1b0fa556
+ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="using-visual-studio-tools-for-docker-visual-studio-on-windows"></a>Visual Studio Tools를 사용 하 여 Docker (Visual Studio Windows에서)에 대 한
 
@@ -26,7 +26,7 @@ Windows 용 Docker의 최신 버전으로 이전에 Docker 응용 프로그램�
 
 Visual Studio 2015를 사용 하는 경우에 업데이트 3 또는 이후 버전와 Docker 용 Visual Studio Tools 해야 합니다.
 
-**추가 정보:** 알아보려면 Visual Studio를 설치 하는 방법에 지침은 [https://www.visualstudio.com/ \ 제품/vs-2015-제품-버전](https://www.visualstudio.com/products/vs-2015-product-editions)합니다.
+**추가 정보:** 알아보려면 Visual Studio를 설치 하는 방법에 지침은 [ https://www.visualstudio.com/\ 제품/vs-2015-제품-버전](https://www.visualstudio.com/products/vs-2015-product-editions)합니다.
 
 Visual Studio Tools for Docker 설치에 대 한 확인을 이동 <http://aka.ms/vstoolsfordocker> 및 <https://docs.microsoft.com/aspnet/core/host-and-deploy/docker/visual-studio-tools-for-docker>합니다.
 
@@ -70,7 +70,7 @@ multicontainer를 배포할 수 응용 프로그램을 실행할 때 단일 dock
 
 빌드, 디버그, 업데이트 및 새로 고침 로컬 Docker 컨테이너에는 앱: [https://docs.microsoft.com/azure/vs-azure-tools-docker-edit-and-refresh/](https://docs.microsoft.com/azure/vs-azure-tools-docker-edit-and-refresh)
 
-원격 Docker 호스트에는 ASP.NET 컨테이너를 배포: [https://docs.microsoft.com/azure/vs-azure-tools-docker-hosting-web-apps-in-docker/](https://docs.microsoft.com/azure/vs-azure-tools-docker-hosting-web-apps-in-docker)
+원격 Docker 호스트에는 ASP.NET 컨테이너를 배포 합니다. [https://docs.microsoft.com/azure/vs-azure-tools-docker-hosting-web-apps-in-docker/](https://docs.microsoft.com/azure/vs-azure-tools-docker-hosting-web-apps-in-docker)
 
 
 >[!div class="step-by-step"]

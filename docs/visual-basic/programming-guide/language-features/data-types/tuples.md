@@ -1,10 +1,10 @@
 ---
-title: "Visual Basic의 튜플"
-ms.custom: 
+title: Visual Basic의 튜플
+ms.custom: ''
 ms.date: 04/23/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - devlang-visual-basic
 ms.topic: article
@@ -13,11 +13,11 @@ helpviewer_keywords:
 ms.assetid: 3e66cd1b-3432-4e1d-8c37-5ebacae8f53f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bf26b7ce58c1e20fbbe5043cbd2acfd5712837fa
-ms.sourcegitcommit: d95a91d685565f4d95c8773b558752864a6a3d7e
+ms.openlocfilehash: 68c82e75ce4a438381bc9c60ce8c992565eb31cb
+ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="tuples-visual-basic"></a>튜플 (Visual Basic)
 
@@ -80,7 +80,7 @@ Visual Basic 컴파일러에 따라서는 후보 이름에서 튜플 요소 이�
 
 Visual Basic 튜플 값 형식이 중 하나의 인스턴스가는 **System.ValueTuple** 제네릭 형식입니다. 예를 들어는 `holiday` 의 인스턴스가 이전 예제에서 정의 된 튜플을 <xref:System.ValueTuple%603> 구조입니다. 데이터에 대 한 간단한 컨테이너 되도록 설계 되었습니다. 튜플의 쉽게 여러 데이터 항목이 있는 개체를 만들 수 있도록 목표, 이후 사용자 정의 구조를 가질 수 있는 기능 중 일부는 없습니다. 여기에는 다음이 포함됩니다.
 
-- 고객 멤버입니다. 사용자 고유의 속성, 메서드 또는 튜플의 대 한 이벤트를 정의할 수 없습니다.
+- 사용자 지정 멤버입니다. 사용자 고유의 속성, 메서드 또는 튜플의 대 한 이벤트를 정의할 수 없습니다.
 
 - 유효성 검사 합니다. 필드에 할당 된 데이터를 확인할 수 없습니다.
 
@@ -177,6 +177,6 @@ Visual Basic 튜플은 중 하나의 인스턴스는 **System.ValueTuple** 제�
 
 [!code-vb[Convert](../../../../../samples/snippets/visualbasic/programming-guide/language-features/data-types/tuple2.vb#1)]
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참고자료
 
 [Visual Basic 언어 참조](index.md)  

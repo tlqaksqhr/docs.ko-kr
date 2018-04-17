@@ -1,12 +1,9 @@
 ---
-title: "클래스, 구조체 및 공용 구조체 마샬링"
-ms.custom: 
+title: 클래스, 구조체 및 공용 구조체 마샬링
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.technology:
+- dotnet-clr
 ms.topic: article
 dev_langs:
 - csharp
@@ -25,16 +22,16 @@ helpviewer_keywords:
 - data marshaling, platform invoke
 - marshaling, platform invoke
 ms.assetid: 027832a2-9b43-4fd9-9b45-7f4196261a4e
-caps.latest.revision: "10"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 6fb682d898de8cb6bc166426c3a1accbda452c83
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: cc7141bb8fce5d5e1c2420a48d6081fa89aa0d53
+ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="marshaling-classes-structures-and-unions"></a>클래스, 구조체 및 공용 구조체 마샬링
 .NET Framework에서는 클래스와 구조체가 서로 비슷합니다. 둘 다 필드, 속성 및 이벤트를 포함할 수 있습니다. 또한 정적 및 비정적 메서드를 포함할 수 있습니다. 한 가지 주목할 만한 차이점은 구조체는 값 형식이고 클래스는 참조 형식이라는 것입니다.  
@@ -77,7 +74,7 @@ ms.lasthandoff: 01/19/2018
     void TestArrayInStruct( MYARRAYSTRUCT* pStruct );  
     ```  
   
- [PinvokeLib.dll](http://msdn.microsoft.com/library/5d1438d7-9946-489d-8ede-6c694a08f614)은 앞에 나열된 함수 및 4개의 구조체(**MYPERSON**, **MYPERSON2**, **MYPERSON3** 및 **MYARRAYSTRUCT**)에 대한 구현을 포함하는 관리되지 않는 사용자 지정 라이브러리입니다. 이러한 구조체에는 다음과 같은 요소가 포함됩니다.  
+ [PinvokeLib.dll](https://msdn.microsoft.com/library/5d1438d7-9946-489d-8ede-6c694a08f614(v=vs.100))은 앞에 나열된 함수 및 4개의 구조체(**MYPERSON**, **MYPERSON2**, **MYPERSON3** 및 **MYARRAYSTRUCT**)에 대한 구현을 포함하는 관리되지 않는 사용자 지정 라이브러리입니다. 이러한 구조체에는 다음과 같은 요소가 포함됩니다.  
   
 ```  
 typedef struct _MYPERSON  
@@ -107,7 +104,7 @@ typedef struct _MYARRAYSTRUCT
   
  관리되는 `MyPerson`, `MyPerson2`, `MyPerson3` 및 `MyArrayStruct` 구조체는 다음과 같은 특성을 갖습니다.  
   
--   `MyPerson`에는 문자열 멤버만 포함됩니다. [CharSet](../../../docs/framework/interop/specifying-a-character-set.md) 필드는 관리되지 않는 함수에 전달되는 경우 문자열을 ANSI 형식으로 설정합니다.  
+-   `MyPerson`에는 문자열 멤버만 포함됩니다. [CharSet](specifying-a-character-set.md) 필드는 관리되지 않는 함수에 전달되는 경우 문자열을 ANSI 형식으로 설정합니다.  
   
 -   `MyPerson2`에는 `MyPerson` 구조체에 대한 **IntPtr**이 포함됩니다. .NET Framework 응용 프로그램은 코드가 **안전하지 않은** 것으로 표시된 경우가 아니면 포인터를 사용하지 않으므로 **IntPtr** 형식이 관리되지 않는 구조체에 대한 원래 포인터를 대체합니다.  
   
@@ -138,7 +135,7 @@ typedef struct _MYARRAYSTRUCT
  [!code-vb[Conceptual.Interop.Marshaling#24](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.interop.marshaling/vb/structures.vb#24)]  
   
 ## <a name="findfile-sample"></a>FindFile 샘플  
- 이 샘플에서는 포함된 두 번째 구조체를 포함하는 구조체를 관리되지 않는 함수에 전달하는 방법을 보여 줍니다. 또한 <xref:System.Runtime.InteropServices.MarshalAsAttribute> 특성을 사용하여 구조체 내에서 고정 길이 배열을 선언하는 방법을 보여 줍니다. 이 샘플에서는 포함된 구조체 요소가 부모 구조체에 추가됩니다. 결합되지 않는 포함된 구조체의 샘플은 [Structures 샘플](http://msdn.microsoft.com/library/96a62265-dcf9-4608-bc0a-1f762ab9f48e)을 참조하세요.  
+ 이 샘플에서는 포함된 두 번째 구조체를 포함하는 구조체를 관리되지 않는 함수에 전달하는 방법을 보여 줍니다. 또한 <xref:System.Runtime.InteropServices.MarshalAsAttribute> 특성을 사용하여 구조체 내에서 고정 길이 배열을 선언하는 방법을 보여 줍니다. 이 샘플에서는 포함된 구조체 요소가 부모 구조체에 추가됩니다. 결합되지 않는 포함된 구조체의 샘플은 [Structures 샘플](https://msdn.microsoft.com/library/96a62265-dcf9-4608-bc0a-1f762ab9f48e(v=vs.100))을 참조하세요.  
   
  FindFile 샘플에서는 원래 함수 선언과 함께 표시되는 다음과 같은 관리되지 않는 함수를 사용합니다.  
   
@@ -191,7 +188,7 @@ typedef struct _WIN32_FIND_DATA
     void TestUnion(MYUNION u, int type);  
     ```  
   
- [PinvokeLib.dll](http://msdn.microsoft.com/library/5d1438d7-9946-489d-8ede-6c694a08f614)은 앞에 나열된 함수와 두 공용 구조체, **MYUNION** and **MYUNION2**에 대한 구현을 포함하는 관리되지 않는 사용자 지정 라이브러리입니다. 공용 구조체에는 다음과 같은 요소가 포함됩니다.  
+ [PinvokeLib.dll](https://msdn.microsoft.com/library/5d1438d7-9946-489d-8ede-6c694a08f614(v=vs.100))은 앞에 나열된 함수와 두 공용 구조체, **MYUNION** and **MYUNION2**에 대한 구현을 포함하는 관리되지 않는 사용자 지정 라이브러리입니다. 공용 구조체에는 다음과 같은 요소가 포함됩니다.  
   
 ```  
 union MYUNION  
@@ -251,7 +248,7 @@ typedef struct _SYSTEMTIME {
   
  이 샘플에서 `SystemTime` 클래스에는 클래스 멤버로 표현된 원래 구조체의 요소가 포함됩니다. <xref:System.Runtime.InteropServices.StructLayoutAttribute> 특성이 설정되어 멤버가 표시되는 순서대로 순차적으로 메모리에 정렬되게 합니다.  
   
- `LibWrap` 클래스에는 기본적으로 `SystemTime` 클래스를 In/Out 매개 변수로 전달하는 `GetSystemTime` 메서드의 관리되는 프로토타입이 포함됩니다. 참조 형식인 클래스는 기본적으로 In 매개 변수로 전달되므로 <xref:System.Runtime.InteropServices.InAttribute> 및 <xref:System.Runtime.InteropServices.OutAttribute> 특성을 통해 매개 변수를 선언해야 합니다. 호출자가 결과를 받으려면 이러한 [방향 특성](http://msdn.microsoft.com/library/241ac5b5-928e-4969-8f58-1dbc048f9ea2)을 명시적으로 적용해야 합니다. `App` 클래스는 `SystemTime` 클래스의 새 인스턴스를 만들고 해당 데이터 필드에 액세스합니다.  
+ `LibWrap` 클래스에는 기본적으로 `SystemTime` 클래스를 In/Out 매개 변수로 전달하는 `GetSystemTime` 메서드의 관리되는 프로토타입이 포함됩니다. 참조 형식인 클래스는 기본적으로 In 매개 변수로 전달되므로 <xref:System.Runtime.InteropServices.InAttribute> 및 <xref:System.Runtime.InteropServices.OutAttribute> 특성을 통해 매개 변수를 선언해야 합니다. 호출자가 결과를 받으려면 이러한 [방향 특성](https://msdn.microsoft.com/library/241ac5b5-928e-4969-8f58-1dbc048f9ea2(v=vs.100))을 명시적으로 적용해야 합니다. `App` 클래스는 `SystemTime` 클래스의 새 인스턴스를 만들고 해당 데이터 필드에 액세스합니다.  
   
 ### <a name="code-samples"></a>코드 샘플  
  [!code-cpp[Conceptual.Interop.Marshaling#25](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.interop.marshaling/cpp/systime.cpp#25)]
@@ -263,7 +260,7 @@ typedef struct _SYSTEMTIME {
   
  <xref:System.Runtime.InteropServices.Marshal> 클래스 및 안전하지 않은 코드를 사용하여 네이티브 함수를 호출하는 방법을 보여 줍니다.  
   
- 이 샘플에서는 [PinvokeLib.dll](http://msdn.microsoft.com/library/5d1438d7-9946-489d-8ede-6c694a08f614)에서 정의된 래퍼 함수 및 플랫폼 호출을 사용합니다(소스 파일에도 제공됨). `TestOutArrayOfStructs` 함수 및 `MYSTRSTRUCT2` 구조체를 사용합니다. 이 구조체에는 다음과 같은 요소가 포함됩니다.  
+ 이 샘플에서는 [PinvokeLib.dll](https://msdn.microsoft.com/library/5d1438d7-9946-489d-8ede-6c694a08f614(v=vs.100))에서 정의된 래퍼 함수 및 플랫폼 호출을 사용합니다(소스 파일에도 제공됨). `TestOutArrayOfStructs` 함수 및 `MYSTRSTRUCT2` 구조체를 사용합니다. 이 구조체에는 다음과 같은 요소가 포함됩니다.  
   
 ```  
 typedef struct _MYSTRSTRUCT2  
@@ -298,7 +295,7 @@ typedef struct _MYSTRSTRUCT2
  [!code-vb[Conceptual.Interop.Marshaling#21](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.interop.marshaling/vb/outarrayofstructs.vb#21)]  
   
 ## <a name="see-also"></a>참고 항목  
- [플랫폼 호출을 사용하여 데이터 마샬링](../../../docs/framework/interop/marshaling-data-with-platform-invoke.md)  
- [플랫폼 호출 데이터 형식](http://msdn.microsoft.com/library/16014d9f-d6bd-481e-83f0-df11377c550f)  
- [문자열 마샬링](../../../docs/framework/interop/marshaling-strings.md)  
- [형식 배열 마샬링](http://msdn.microsoft.com/library/049b1c1b-228f-4445-88ec-91bc7fd4b1e8)
+ [플랫폼 호출을 사용하여 데이터 마샬링](marshaling-data-with-platform-invoke.md)  
+ [플랫폼 호출 데이터 형식](https://msdn.microsoft.com/library/16014d9f-d6bd-481e-83f0-df11377c550f(v=vs.100))  
+ [문자열 마샬링](marshaling-strings.md)  
+ [형식 배열 마샬링](https://msdn.microsoft.com/library/049b1c1b-228f-4445-88ec-91bc7fd4b1e8(v=vs.100))

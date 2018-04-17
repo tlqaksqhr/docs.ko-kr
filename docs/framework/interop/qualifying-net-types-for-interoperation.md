@@ -1,5 +1,5 @@
 ---
-title: "상호 운용할 .NET 형식의 정규화"
+title: 상호 운용할 .NET 형식의 정규화
 ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.technology:
@@ -18,11 +18,11 @@ ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 0f08f2de4a8f402b2c9c41908aa4bcfe2730fef5
-ms.sourcegitcommit: d95a91d685565f4d95c8773b558752864a6a3d7e
+ms.openlocfilehash: 586772399a458bfc98d35dd0a1fb277e57366eaa
+ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="qualifying-net-types-for-interoperation"></a>상호 운용할 .NET 형식의 정규화
 어셈블리에서 형식을 COM 응용 프로그램으로 노출하려는 경우 디자인 타임에 COM interop의 요구 사항을 고려하세요. 다음 지침을 준수하면 관리되는 형식(클래스, 인터페이스, 구조체 및 열거형)이 COM 형식과 원활하게 통합됩니다.  
@@ -56,6 +56,6 @@ ms.lasthandoff: 03/12/2018
 ## <a name="see-also"></a>참고 항목  
  <xref:System.Runtime.InteropServices.ComVisibleAttribute>  
  [.NET Framework 구성 요소를 COM에 노출](../../../docs/framework/interop/exposing-dotnet-components-to-com.md)  
- [클래스 인터페이스 소개](https://msdn.microsoft.com/library/733c0dd2-12e5-46e6-8de1-39d5b25df024(v=vs.100))  
+ [클래스 인터페이스 소개](com-callable-wrapper.md#introducing-the-class-interface)  
  [Interop 특성 적용](../../../docs/framework/interop/applying-interop-attributes.md)  
  [COM에서 사용할 어셈블리의 패키징](../../../docs/framework/interop/packaging-an-assembly-for-com.md)

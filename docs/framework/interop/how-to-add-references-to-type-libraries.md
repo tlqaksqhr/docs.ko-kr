@@ -1,12 +1,9 @@
 ---
-title: "방법: 형식 라이브러리에 참조 추가"
-ms.custom: 
+title: '방법: 형식 라이브러리에 참조 추가'
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.technology:
+- dotnet-clr
 ms.topic: article
 helpviewer_keywords:
 - importing type library
@@ -14,16 +11,16 @@ helpviewer_keywords:
 - type libraries
 - COM interop, importing type library
 ms.assetid: f5cfa6ba-cc25-4017-82cd-ba7391859113
-caps.latest.revision: "12"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 4e80c4bf5142a9bbbd2b7f75d67553db73f0ff22
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 561e05c82c1882ad5e495ddb3dc1a17356522514
+ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-add-references-to-type-libraries"></a>방법: 형식 라이브러리에 참조 추가
 Visual Studio에서는 형식 라이브러리에 참조를 추가하면 메타데이터가 포함된 interop 어셈블리를 생성합니다. 주 interop 어셈블리를 사용할 수 있는 경우 Visual Studio는 새 interop 어셈블리를 생성하기 전에 기존 어셈블리를 사용합니다.  
@@ -49,14 +46,14 @@ Visual Studio에서는 형식 라이브러리에 참조를 추가하면 메타�
   
 ### <a name="to-add-a-reference-to-a-type-library-for-command-line-compilation"></a>명령줄 컴파일용으로 형식 라이브러리에 대한 참조를 추가하려면  
   
-1.  [방법: 형식 라이브러리에서 Interop 어셈블리 생성](../../../docs/framework/interop/how-to-generate-interop-assemblies-from-type-libraries.md)의 설명에 따라 interop 어셈블리를 생성합니다.  
+1.  [방법: 형식 라이브러리에서 Interop 어셈블리 생성](how-to-generate-interop-assemblies-from-type-libraries.md)의 설명에 따라 interop 어셈블리를 생성합니다.  
   
-2.  interop 어셈블리 이름을 포함한 [/link(C# 컴파일러 옵션)](~/docs/csharp/language-reference/compiler-options/link-compiler-option.md) 또는 [/link(Visual Basic)](~/docs/visual-basic/reference/command-line-compiler/link.md) 컴파일러 옵션을 사용하여 COM 형식에 대한 형식 정보를 실행 파일에 포함합니다.  
+2.  interop 어셈블리 이름을 포함한 [/link(C# 컴파일러 옵션)](../../csharp/language-reference/compiler-options/link-compiler-option.md) 또는 [/link(Visual Basic)](../../visual-basic/reference/command-line-compiler/link.md) 컴파일러 옵션을 사용하여 COM 형식에 대한 형식 정보를 실행 파일에 포함합니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [형식 라이브러리를 어셈블리로 가져오기](../../../docs/framework/interop/importing-a-type-library-as-an-assembly.md)  
- [.NET Framework에 COM 구성 요소 노출](../../../docs/framework/interop/exposing-com-components.md)  
- [연습: Microsoft Office 어셈블리의 형식 정보 포함](http://msdn.microsoft.com/library/85b55e05-bc5e-4665-b6ae-e1ada9299fd3)  
- [연습: 관리되는 어셈블리의 형식 포함](http://msdn.microsoft.com/library/b28ec92c-1867-4847-95c0-61adfe095e21)  
- [/link(C# 컴파일러 옵션)](~/docs/csharp/language-reference/compiler-options/link-compiler-option.md)  
- [/link(Visual Basic)](~/docs/visual-basic/reference/command-line-compiler/link.md)
+ [형식 라이브러리를 어셈블리로 가져오기](importing-a-type-library-as-an-assembly.md)  
+ [.NET Framework에 COM 구성 요소 노출](exposing-com-components.md)  
+ [연습: Microsoft Office 어셈블리의 형식 정보 포함](https://msdn.microsoft.com/library/85b55e05-bc5e-4665-b6ae-e1ada9299fd3(v=vs.100))  
+ [연습: 관리되는 어셈블리의 형식 포함](https://msdn.microsoft.com/library/b28ec92c-1867-4847-95c0-61adfe095e21)  
+ [/link(C# 컴파일러 옵션)](../../csharp/language-reference/compiler-options/link-compiler-option.md)  
+ [/link(Visual Basic)](../../visual-basic/reference/command-line-compiler/link.md)

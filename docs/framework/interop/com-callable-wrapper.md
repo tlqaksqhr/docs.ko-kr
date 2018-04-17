@@ -1,12 +1,9 @@
 ---
 title: CCW
-ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.technology:
+- dotnet-clr
 ms.topic: article
 dev_langs:
 - csharp
@@ -19,23 +16,23 @@ helpviewer_keywords:
 - interoperation with unmanaged code, COM wrappers
 - COM callable wrappers
 ms.assetid: d04be3b5-27b9-4f5b-8469-a44149fabf78
-caps.latest.revision: "10"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 65d09b33982f62b965d6907902ded98f87d9a97e
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: 270d7e85491f0f4ada797910d4fc12c1a14be625
+ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="com-callable-wrapper"></a>CCW
 COM 클라이언트가.NET 개체를 호출할 때 공용 언어 런타임에서는 관리되는 개체 및 개체에 대한 COM 호출 가능 래퍼(CCW)를 만듭니다. .NET 개체를 직접 참조할 수는 없으며, COM 클라이언트는 CCW를 관리되는 개체에 대한 프록시로 사용합니다.  
   
  런타임에서는 서비스를 요청하는 COM 클라이언트 수와 관계없이 관리되는 개체에 대한 CCW를 하나만 만듭니다. 다음 그림과 같이 INew 인터페이스를 노출하는 CCW에 대한 참조가 여러 COM 클라이언트에 포함될 수 있습니다. 반대로 CCW에는 인터페이스를 구현하고 수집된 가비지인 관리되는 개체에 대한 참조 하나가 포함됩니다. COM 및 .NET 클라이언트는 둘 다 동시에 같은 관리되는 개체에 대한 요청을 수행할 수 있습니다.  
   
- ![COM 호출 가능 래퍼](../../../docs/framework/interop/media/ccw.gif "ccw")  
+ ![COM 호출 가능 래퍼](./media/ccw.gif "ccw")  
 COM 호출 가능 래퍼를 통해 .NET 개체 액세스  
   
  COM 호출 가능 래퍼는 .NET Framework 내에서 실행되는 다른 클래스에 표시되지 않습니다. 주요 용도는 관리 및 비관리 코드 간의 호출을 마샬링하는 것이지만 CCW는 래핑하고 있는 관리되는 개체의 개체 ID 및 개체 수명도 관리합니다.  
@@ -46,13 +43,14 @@ COM 호출 가능 래퍼를 통해 .NET 개체 액세스
 ## <a name="object-lifetime"></a>개체 수명  
  CCW는 래핑하고 있는 .NET 클라이언트와 달리 기존 COM 방식으로 참조 횟수가 계산됩니다. CCW의 참조 횟수가 0에 도달하면 래퍼는 관리되는 개체에 대한 참조를 해제합니다. 남은 참조가 없는 관리되는 개체는 다음 가비지 수집 주기 동안 수집됩니다.  
   
-## <a name="simulating-com-interfaces"></a>COM 인터페이스 시뮬레이션  
- CCW([COM 호출 가능 래퍼](../../../docs/framework/interop/com-callable-wrapper.md))는 COM에 표시되는 인터페이스 데이터 형식 및 반환 값을 모두 COM의 인터페이스 기반 조작 적용과 일치하는 방식으로 COM 클라이언트에 노출합니다. COM 클라이언트의 경우 .NET Framework 개체에서 메서드를 호출하는 것은 COM 개체에서 메서드를 호출하는 것과 같습니다.  
+## <a name="simulating-com-interfaces"></a>COM 인터페이스 시뮬레이션
+
+CCW는 모든 public, COM 표시 인터페이스, 데이터 형식 및 COM의 인터페이스 기반 조작 적용과 일치 하는 방식으로 COM 클라이언트에 반환 값을 표시 합니다. COM 클라이언트의 경우 .NET Framework 개체에서 메서드를 호출하는 것은 COM 개체에서 메서드를 호출하는 것과 같습니다.  
   
  이 원활한 접근 방식을 만들기 위해 CCW는 **IUnknown** 및 **IDispatch**와 같은 기존 COM 인터페이스를 만듭니다. 다음 그림과 같이 CCW는 래핑하고 있는 .NET 개체에 대한 단일 참조를 유지 관리합니다. COM 클라이언트 및 .NET 개체는 CCW의 프록시 및 스텁 생성을 통해 서로 상호 작용합니다.  
   
- ![COM 인터페이스](../../../docs/framework/interop/media/ccwwithinterfaces.gif "ccwwithinterfaces")  
-Com 인터페이스 및 COM 호출 가능 래퍼  
+ ![COM 인터페이스](./media/ccwwithinterfaces.gif "ccwwithinterfaces")  
+COM 인터페이스 및 COM 호출 가능 래퍼  
   
  관리되는 환경에서 클래스에 의해 명시적으로 구현되는 인터페이스를 노출하는 것 외에도 .NET Framework는 개체 대신에 다음 표에 나열된 COM 인터페이스의 구현을 제공합니다. .NET 클래스는 이러한 인터페이스의 자체 구현을 제공하여 기본 동작을 재정의할 수 있습니다. 그러나 런타임에서는 항상 **IUnknown** 및 **IDispatch** 인터페이스에 대한 구현을 제공합니다.  
   
@@ -69,15 +67,15 @@ Com 인터페이스 및 COM 호출 가능 래퍼
   
 |인터페이스|설명|  
 |---------------|-----------------|  
-|(_*classname*) 클래스 인터페이스|관리되는 개체에서 명시적으로 노출되는 모든 공용 인터페이스, 메서드, 속성 및 필드를 노출하는, 런타임에서 노출되고 명시적으로 정의되지 않는 인터페이스입니다.|  
+|(\_*classname*) 클래스 인터페이스|관리되는 개체에서 명시적으로 노출되는 모든 공용 인터페이스, 메서드, 속성 및 필드를 노출하는, 런타임에서 노출되고 명시적으로 정의되지 않는 인터페이스입니다.|  
 |**IConnectionPoint** 및 **IconnectionPointContainer**|대리자 기반 이벤트(이벤트 구독자를 등록하기 위한 인터페이스)의 소스가 되는 개체에 대한 인터페이스입니다.|  
 |**IdispatchEx**|클래스가 **IExpando**를 구현하는 경우 런타임에서 제공되는 인터페이스입니다. **IDispatchEx** 인터페이스는 **IDispatch**와 달리 멤버의 대/소문자 구분 호출, 열거형, 추가, 삭제를 가능하게 하는 **IDispatch** 인터페이스의 확장입니다.|  
 |**IEnumVARIANT**|클래스가 **IEnumerable**을 구현하는 경우 컬렉션에서 개체를 열거하는 컬렉션 형식 클래스에 대한 인터페이스입니다.|  
   
 ## <a name="introducing-the-class-interface"></a>클래스 인터페이스 소개  
- 관리 코드에서 명시적으로 정의되지 않은 클래스 인터페이스는 .NET 개체에서 명시적으로 노출되는 모든 공용 메서드, 속성, 필드, 이벤트를 노출하는 인터페이스입니다. 이 인터페이스는 이중 인터페이스이거나 디스패치 전용 인터페이스입니다. 클래스 인터페이스는 앞에 밑줄이 추가된 .NET 클래스 자체의 이름을 수신합니다. 예를 들어 Mammal 클래스의 클래스 인터페이스는 _Mammal입니다.  
+ 관리 코드에서 명시적으로 정의되지 않은 클래스 인터페이스는 .NET 개체에서 명시적으로 노출되는 모든 공용 메서드, 속성, 필드, 이벤트를 노출하는 인터페이스입니다. 이 인터페이스는 이중 인터페이스이거나 디스패치 전용 인터페이스입니다. 클래스 인터페이스는 앞에 밑줄이 추가된 .NET 클래스 자체의 이름을 수신합니다. 예를 들어 Mammal 클래스의 클래스 인터페이스는 \_Mammal 합니다.  
   
- 파생 클래스의 클래스 인터페이스는 기본 클래스의 모든 공용 메서드, 속성 및 필드도 노출합니다. 파생 클래스는 각 기본 클래스의 클래스 인터페이스도 노출합니다. 예를 들어 System.Object를 확장하는 MammalSuperclass 클래스를 Mammal 클래스가 확장하면 .NET 개체는 _Mammal, _MammalSuperclass 및 _Object라는 세 개의 인터페이스를 COM 클라이언트에 노출합니다.  
+ 파생 클래스의 클래스 인터페이스는 기본 클래스의 모든 공용 메서드, 속성 및 필드도 노출합니다. 파생 클래스는 각 기본 클래스의 클래스 인터페이스도 노출합니다. 예를 들어 Mammal 클래스 클래스가 클래스를 확장 하는 경우 논리 System.Object 확대 되었고, 인터페이스 라는 세 개의 클래스 COM 클라이언트에.NET 개체가 공개 \_Mammal, \_클래스가, 및 \_개체입니다.  
   
  예를 들어 다음 .NET 클래스를 예로 들어 봅니다.  
   
@@ -104,7 +102,7 @@ public class Mammal
 }  
 ```  
   
- COM 클라이언트는 [형식 라이브러리 내보내기(Tlbexp.exe)](../../../docs/framework/tools/tlbexp-exe-type-library-exporter.md) 도구에서 생성한 형식 라이브러리에 설명된 `_Mammal`이라는 클래스 인터페이스에 대한 포인터를 가져올 수 있습니다. `Mammal` 클래스가 인터페이스를 하나 이상 구현하면 인터페이스가 coclass 아래에 표시됩니다.  
+ COM 클라이언트는 [형식 라이브러리 내보내기(Tlbexp.exe)](../tools/tlbexp-exe-type-library-exporter.md) 도구에서 생성한 형식 라이브러리에 설명된 `_Mammal`이라는 클래스 인터페이스에 대한 포인터를 가져올 수 있습니다. `Mammal` 클래스가 인터페이스를 하나 이상 구현하면 인터페이스가 coclass 아래에 표시됩니다.  
   
 ```  
 [odl, uuid(…), hidden, dual, nonextensible, oleautomation]  
@@ -156,7 +154,7 @@ public class LoanApp : IExplicit {
   
  **ClassInterfaceType.None** 값은 클래스 메타데이터가 형식 라이브러리에 노출될 때 클래스 인터페이스가 생성되지 않도록 방지합니다. 이전 예제에서 COM 클라이언트는 `IExplicit` 인터페이스를 통해서만 `LoanApp` 클래스에 액세스할 수 있습니다.  
   
-### <a name="avoid-caching-dispatch-identifiers-dispids"></a>디스패치 식별자(DispId)를 캐시하지 마세요.  
+### <a name="avoid-caching-dispatch-identifiers-dispids"></a>디스패치 식별자 (Dispid)를 캐시 하지 마세요
  클래스 인터페이스 사용은 스크립팅된 클라이언트, Microsoft Visual Basic 6.0 클라이언트 또는 인터페이스 멤버의 DispId를 캐시하지 않는 런타임에 바인딩된 클라이언트에 적용할 수 있는 옵션입니다. DispId로 런타임 바인딩을 가능하게 하는 인터페이스 멤버를 구별합니다.  
   
  클래스 인터페이스에 대한 DispId 생성은 인터페이스에서 멤버의 위치에 기반을 둡니다. 멤버 순서를 변경하고 클래스를 형식 라이브러리로 내보내면 클래스 인터페이스에서 생성된 DispId가 변경됩니다.  
@@ -187,9 +185,7 @@ public class LoanApp : IAnother {
   
 ## <a name="see-also"></a>참고 항목  
  <xref:System.Runtime.InteropServices.ClassInterfaceAttribute>  
- [COM 호출 가능 래퍼](../../../docs/framework/interop/com-callable-wrapper.md)  
- [COM 래퍼](../../../docs/framework/interop/com-wrappers.md)  
- [.NET Framework 구성 요소를 COM에 노출](../../../docs/framework/interop/exposing-dotnet-components-to-com.md)  
- [COM 인터페이스 시뮬레이션](http://msdn.microsoft.com/library/ad2ab959-e2be-411b-aaff-275c3fba606c)  
- [상호 운용할 .NET 형식의 정규화](../../../docs/framework/interop/qualifying-net-types-for-interoperation.md)  
- [런타임 호출 가능 래퍼](../../../docs/framework/interop/runtime-callable-wrapper.md)
+ [COM 래퍼](com-wrappers.md)  
+ [.NET Framework 구성 요소를 COM에 노출](exposing-dotnet-components-to-com.md)  
+ [상호 운용할 .NET 형식의 정규화](qualifying-net-types-for-interoperation.md)  
+ [런타임 호출 가능 래퍼](runtime-callable-wrapper.md)

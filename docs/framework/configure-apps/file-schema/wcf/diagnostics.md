@@ -1,54 +1,62 @@
 ---
-title: "&lt;진단&gt;"
-ms.custom: 
+title: '&lt;진단&gt;'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 0c2f95c4-cc12-4fb5-a70c-7fc6fa95db58
-caps.latest.revision: "20"
+caps.latest.revision: 20
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 5c7997b3ffc1a1c3a16372398f43e8f0d06aadee
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: bb5506fd72745f32194b2e3cc409ff848fd1c270
+ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="ltdiagnosticsgt"></a>&lt;진단&gt;
 `diagnostics` 요소는 관리자가 런타임 검사 및 제어에 사용할 수 있는 설정을 정의합니다.  
   
- \<시스템입니다. ServiceModel >  
+ \<system.ServiceModel>  
 \<진단 >  
   
 ## <a name="syntax"></a>구문  
   
 ```xml  
 <system.serviceModel>  
-   <diagnostics etwProviderId="String"       performanceCounters="Off/ServiceOnly/All/Default"              wmiProviderEnabled="Boolean" >       <endToEndTracing activityTracing="Boolean"  
-          messageFlowTracing="Boolean"  
-          propagateActivity="Boolean" />  
-       <messageLogging logEntireMessage="Boolean"  
-          logMalformedMessages="Boolean"  
-          logMessagesAtServiceLevel="Boolean"  
-          logMessagesAtTransportLevel="Boolean"  
-          maxMessagesToLog="Integer"  
-          maxSizeOfMessageToLog="Integer" >  
-          <filters>  
-             <clear />  
-          </filters>  
-       </messageLogging>  
-   </diagnostics>  
+  <diagnostics 
+      etwProviderId="String"       
+      performanceCounters="Off/ServiceOnly/All/Default"              
+      wmiProviderEnabled="Boolean" >       
+    <endToEndTracing 
+        activityTracing="Boolean"  
+        messageFlowTracing="Boolean"  
+        propagateActivity="Boolean" />  
+    <messageLogging 
+        logEntireMessage="Boolean"  
+        logMalformedMessages="Boolean"  
+        logMessagesAtServiceLevel="Boolean"  
+        logMessagesAtTransportLevel="Boolean"  
+        maxMessagesToLog="Integer"  
+        maxSizeOfMessageToLog="Integer" >  
+      <filters>  
+        <clear />  
+      </filters>  
+    </messageLogging>  
+  </diagnostics>  
 </system.serviceModel>  
 ```  
   
 ## <a name="attributes-and-elements"></a>특성 및 요소  
- 다음 단원에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
+ 다음 섹션에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
   
 ### <a name="attributes"></a>특성  
   
@@ -74,21 +82,23 @@ ms.lasthandoff: 12/22/2017
 ## <a name="remarks"></a>설명  
  `diagnostics` 섹션에서는 어셈블리에 있는 모든 서비스의 진단 설정을 정의합니다. 어셈블리에 서비스가 하나만 있는 경우가 아니라면 서비스 수준에서 별도의 진단 설정을 정의할 수 없습니다. 해당 섹션의 요구 사항에 따라 특성이 설정됩니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
   
 ```xml  
-<diagnostics wmiProviderEnabled="false"  
-       performanceCounters="all">  
-       <messageLogging logEntireMessage="true"  
-          logMalformedMessages="true"  
-          logMessagesAtServiceLevel="true"  
-          logMessagesAtTransportLevel="true"  
-          maxMessagesToLog="42"  
-          maxSizeOfMessageToLog="42">  
-         <filters>  
-         <clear />  
+<diagnostics
+    wmiProviderEnabled="false"  
+    performanceCounters="all">  
+  <messageLogging 
+      logEntireMessage="true"  
+      logMalformedMessages="true"  
+      logMessagesAtServiceLevel="true"  
+      logMessagesAtTransportLevel="true"  
+      maxMessagesToLog="42"  
+      maxSizeOfMessageToLog="42">  
+    <filters>  
+      <clear />  
     </filters>  
-       </messageLogging>  
+  </messageLogging>  
 </diagnostics>  
 ```  
   

@@ -1,12 +1,9 @@
 ---
-title: "방법: 등록이 필요 없는 활성화를 위한 .NET Framework 기반 COM 구성 요소 구성"
-ms.custom: 
+title: '방법: 등록이 필요 없는 활성화를 위한 .NET Framework 기반 COM 구성 요소 구성'
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.technology:
+- dotnet-clr
 ms.topic: article
 helpviewer_keywords:
 - components [.NET Framework], manifest
@@ -15,16 +12,16 @@ helpviewer_keywords:
 - registration-free COM interop, configuring .NET-based components
 - activation, registration-free
 ms.assetid: 32f8b7c6-3f73-455d-8e13-9846895bd43b
-caps.latest.revision: "16"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: fdae288650a0ff7b1a34b3a38a231d3da6caf560
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: 8b97f73e93ad0ef8d9def596361ac68e93ae5e6e
+ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-configure-net-framework-based-com-components-for-registration-free-activation"></a>방법: 등록이 필요 없는 활성화를 위한 .NET Framework 기반 COM 구성 요소 구성
 .NET Framework 기반 구성 요소에 대한 등록 없는 활성화는 COM 구성 요소보다 약간 더 복잡합니다. 설치 프로그램에 다음 두 개의 매니페스트가 필요합니다.  
@@ -133,7 +130,7 @@ ms.lasthandoff: 01/19/2018
     <assembly xmlns="urn:schemas-microsoft-com:asm.v1" manifestVersion="1.0">  
            <assemblyIdentity  
                         name="myOrganization.myDivision.myManagedComp"  
-                        version="1.2.3.4" />  
+                        version="1.2.3.4"   
                         publicKeyToken="8275b28176rcbbef"  
            />  
            <clrClass  
@@ -182,7 +179,7 @@ ms.lasthandoff: 01/19/2018
      다시, `myresource.res`는 포함 리소스를 있는 리소스 파일의 이름입니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [등록이 필요 없는 COM interop](../../../docs/framework/interop/registration-free-com-interop.md)  
- [등록이 필요 없는 COM Interop에 대 한 요구 사항](http://msdn.microsoft.com/library/0c43bc57-eecf-4e6c-8114-490141cce4da)  
- [등록이 필요 없는 활성화를 위한 COM 구성 요소 구성](http://msdn.microsoft.com/library/bfe9b02f-d964-4784-960e-a1f94692fbfe)  
- [.NET 기반 구성 요소의 등록이 필요 없는 활성화: 연습](http://go.microsoft.com/fwlink/?LinkId=158812)
+ [등록이 필요 없는 COM interop](registration-free-com-interop.md)  
+ [등록이 필요 없는 COM Interop에 대 한 요구 사항](https://msdn.microsoft.com/library/0c43bc57-eecf-4e6c-8114-490141cce4da(v=vs.100)))  
+ [등록이 필요 없는 활성화를 위한 COM 구성 요소 구성](https://msdn.microsoft.com/library/bfe9b02f-d964-4784-960e-a1f94692fbfe(v=vs.100)))  
+ [.NET 기반 구성 요소의 등록이 필요 없는 활성화: 연습](https://msdn.microsoft.com/library/ms973915.aspx)

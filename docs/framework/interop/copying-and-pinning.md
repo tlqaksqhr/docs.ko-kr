@@ -1,12 +1,9 @@
 ---
-title: "복사 및 고정"
-ms.custom: 
+title: 복사 및 고정
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.technology:
+- dotnet-clr
 ms.topic: article
 helpviewer_keywords:
 - pinning, interop marshaling
@@ -14,38 +11,38 @@ helpviewer_keywords:
 - interop marshaling, copying
 - interop marshaling, pinning
 ms.assetid: 0059f576-e460-4e70-b257-668870e420b8
-caps.latest.revision: "8"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 11739d35d3a6d845feb1f6d9544f6ea347a9942d
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: c785c7bc9160cb252aad61fea00cce0d9a7eacdf
+ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="copying-and-pinning"></a>복사 및 고정
 데이터를 마샬링할 때 interop 마샬러는 마샬링되는 데이터를 복사 또는 고정할 수 있습니다. 데이터를 복사하면 한 메모리 위치의 데이터 복사본이 또 다른 메모리 위치에 배치됩니다. 다음 그림에서는 값 형식 복사와 관리되는 메모리에서 관리되지 않는 메모리로 참조를 통해 전달되는 형식 복사의 차이점을 보여 줍니다.  
   
- ![값 및 참조로 전달되는 값 형식](../../../docs/framework/interop/media/interopmarshalcopy.gif "interopmarshalcopy")  
+ ![값 및 참조로 전달되는 값 형식](./media/interopmarshalcopy.gif "interopmarshalcopy")  
 값 및 참조로 전달되는 값 형식  
   
  값으로 전달되는 메서드 인수는 스택의 값으로 비관리 코드에 마샬링됩니다. 복사는 직접 프로세스입니다. 참조로 전달된 인수는 스택의 포인터로 전달됩니다. 참조 형식도 값 및 참조로 전달됩니다. 다음 그림과 같이 값으로 전달되는 참조 형식은 복사 또는 고정됩니다.  
   
- ![COM interop](../../../docs/framework/interop/media/interopmarshalpin.gif "interopmarshalpin")  
+ ![COM interop](./media/interopmarshalpin.gif "interopmarshalpin")  
 값 및 참조로 전달되는 참조 형식  
   
  고정 작업은 현재 메모리 위치에서 데이터를 일시적으로 잠그므로 공용 언어 런타임의 가비지 수집기에 의해 데이터가 재배치되지 않습니다. 마샬러는 데이터를 고정하여 복사 오버헤드를 줄이고 성능을 개선합니다. 데이터 형식에 따라 마샬링 프로세스 중에 복사 또는 고정되는지 결정됩니다.  고정 작업은 <xref:System.String> 같은 개체의 마샬링 중에 수행되지만 <xref:System.Runtime.InteropServices.GCHandle> 클래스를 사용하여 메모리를 수동으로 고정할 수도 있습니다.  
   
 ## <a name="formatted-blittable-classes"></a>서식 있는 Blittable 클래스  
- 서식 있는 [blittable](../../../docs/framework/interop/blittable-and-non-blittable-types.md) 클래스의 경우 수정된 레이아웃(서식 있음)을 포함하고 관리되는 메모리와 관리되지 않는 메모리에서 모두 공통적인 데이터 표현을 사용합니다. 이러한 형식에 마샬링이 필요하면 힙의 개체 포인터가 호출 수신자에게 직접 전달됩니다. 호출 수신자는 포인터로 참조되는 메모리 위치의 콘텐츠를 변경할 수 있습니다.  
+ 서식 있는 [blittable](blittable-and-non-blittable-types.md) 클래스의 경우 수정된 레이아웃(서식 있음)을 포함하고 관리되는 메모리와 관리되지 않는 메모리에서 모두 공통적인 데이터 표현을 사용합니다. 이러한 형식에 마샬링이 필요하면 힙의 개체 포인터가 호출 수신자에게 직접 전달됩니다. 호출 수신자는 포인터로 참조되는 메모리 위치의 콘텐츠를 변경할 수 있습니다.  
   
 > [!NOTE]
 >  매개 변수가 Out 또는 In/Out으로 표시된 경우 호출 수신자는 메모리 콘텐츠를 변경할 수 있습니다. 반면 호출 수신자는 매개 변수가 In(서식 있는 blittable 형식의 기본값)으로 마샬링되도록 설정된 경우 콘텐츠 변경을 피해야 합니다. In 개체를 수정하면 같은 클래스를 형식 라이브러리로 내보내고 아파트 간 호출을 수행하는 데 사용할 경우 문제가 발생합니다.  
   
 ## <a name="formatted-non-blittable-classes"></a>서식 있는 비 Blittable 클래스  
- 서식 있는 비 [blittable](../../../docs/framework/interop/blittable-and-non-blittable-types.md) 클래스의 경우 수정된 레이아웃(서식 있음)을 포함하지만 관리되는 메모리와 관리되지 않는 메모리에서 서로 다른 데이터 표현을 사용합니다. 다음 조건에서는 데이터를 변환해야 할 수 있습니다.  
+ 서식 있는 비 [blittable](blittable-and-non-blittable-types.md) 클래스의 경우 수정된 레이아웃(서식 있음)을 포함하지만 관리되는 메모리와 관리되지 않는 메모리에서 서로 다른 데이터 표현을 사용합니다. 다음 조건에서는 데이터를 변환해야 할 수 있습니다.  
   
 -   비 blittable 클래스가 값으로 마샬링될 경우 호출 수신자는 데이터 구조의 복사본 포인터를 받습니다.  
   
@@ -87,7 +84,7 @@ ms.lasthandoff: 01/19/2018
  <xref:System.Text.StringBuilder?displayProperty=nameWithType>가 값으로 전달되면 마샬러는 **StringBuilder**의 내부 버퍼에 대한 참조를 호출자에게 직접 전달합니다. 호출자와 호출 수신자가 버퍼 크기가 동의해야 합니다. 호출자는 적절한 길이의 **StringBuilder**를 만들어야 합니다. 호출 수신자는 버퍼가 오버런되지 않도록 필요한 예방 조치를 수행해야 합니다. **StringBuilder**는 값으로 전달되는 참조 형식이 기본적으로 In 매개 변수로 전달되는 규칙의 예외입니다. 항상 In/Out으로 전달됩니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [기본 마샬링 동작](../../../docs/framework/interop/default-marshaling-behavior.md)  
- [Interop 마샬러를 사용한 메모리 관리](http://msdn.microsoft.com/library/417206ce-ee3e-4619-9529-0c0b686c7bee)  
- [방향 특성](http://msdn.microsoft.com/library/241ac5b5-928e-4969-8f58-1dbc048f9ea2)  
- [interop 마샬링](../../../docs/framework/interop/interop-marshaling.md)
+ [기본 마샬링 동작](default-marshaling-behavior.md)  
+ [Interop 마샬러를 사용한 메모리 관리](https://msdn.microsoft.com/library/417206ce-ee3e-4619-9529-0c0b686c7bee(v=vs.100))  
+ [방향 특성](https://msdn.microsoft.com/library/241ac5b5-928e-4969-8f58-1dbc048f9ea2(v=vs.100))  
+ [interop 마샬링](interop-marshaling.md)

@@ -1,13 +1,9 @@
 ---
-title: "Interop 응용 프로그램 배포"
-ms.custom: 
+title: Interop 응용 프로그램 배포
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - deploying applications [.NET Framework], interop
@@ -22,20 +18,19 @@ helpviewer_keywords:
 - signed assemblies
 - COM interop, exposing COM components
 ms.assetid: ea8a403e-ae03-4faa-9d9b-02179ec72992
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: a3d8f9b7a1eae07eb26397f0664ab575165a35d9
-ms.sourcegitcommit: d95a91d685565f4d95c8773b558752864a6a3d7e
+ms.openlocfilehash: 8271a30d2258214defd5a15816813875cf594c8b
+ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="deploying-an-interop-application"></a>Interop 응용 프로그램 배포
-Interop 응용 프로그램에는 일반적으로 .NET 클라이언트 어셈블리, 고유한 COM 형식 라이브러리를 나타내는 하나 이상의 interop 어셈블리 및 하나 이상의 등록된 COM 구성 요소가 포함됩니다. Visual Studio 및 [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)]에서는 [형식 라이브러리를 어셈블리로 가져오기](../../../docs/framework/interop/importing-a-type-library-as-an-assembly.md)에 설명된 대로 형식 라이브러리를 interop 어셈블리로 가져오고 변환하는 도구를 제공합니다. Interop 응용 프로그램을 배포하는 두 가지 방법은 다음과 같습니다.  
+Interop 응용 프로그램에는 일반적으로 .NET 클라이언트 어셈블리, 고유한 COM 형식 라이브러리를 나타내는 하나 이상의 interop 어셈블리 및 하나 이상의 등록된 COM 구성 요소가 포함됩니다. Visual Studio 및 [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)]에서는 [형식 라이브러리를 어셈블리로 가져오기](importing-a-type-library-as-an-assembly.md)에 설명된 대로 형식 라이브러리를 interop 어셈블리로 가져오고 변환하는 도구를 제공합니다. Interop 응용 프로그램을 배포하는 두 가지 방법은 다음과 같습니다.  
   
 -   포함된 interop 형식 사용: [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)]부터 interop 어셈블리의 형식 정보를 실행 파일에 포함하도록 컴파일러에 지시할 수 있습니다. 컴파일러는 응용 프로그램에서 사용하는 형식 정보만 포함합니다. Interop 어셈블리를 응용 프로그램에 배포할 필요는 없습니다. 이것이 권장되는 방법입니다.  
   
@@ -44,21 +39,21 @@ Interop 응용 프로그램에는 일반적으로 .NET 클라이언트 어셈블
  포함된 interop 형식을 사용할 경우 배포는 간단하고 직관적입니다. 특별히 수행할 작업이 없습니다. 이 문서의 나머지 부분에서는 응용 프로그램에 interop 어셈블리를 배포하기 위한 시나리오를 설명합니다.  
   
 ## <a name="deploying-interop-assemblies"></a>Interop 어셈블리 배포  
- 어셈블리는 강력한 이름을 가질 수 있습니다. 강력한 이름의 어셈블리에는 고유한 ID를 제공하는 게시자의 공개 키가 포함됩니다. [형식 라이브러리 가져오기(Tlbimp.exe)](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md)에서 생성되는 어셈블리는 게시자가 **/keyfile** 옵션을 사용하여 서명할 수 있습니다. 서명된 어셈블리를 전역 어셈블리 캐시에 설치할 수 있습니다. 서명되지 않은 어셈블리는 사용자 컴퓨터에 전용 어셈블리로 설치해야 합니다.  
+ 어셈블리는 강력한 이름을 가질 수 있습니다. 강력한 이름의 어셈블리에는 고유한 ID를 제공하는 게시자의 공개 키가 포함됩니다. [형식 라이브러리 가져오기(Tlbimp.exe)](../tools/tlbimp-exe-type-library-importer.md)에서 생성되는 어셈블리는 게시자가 **/keyfile** 옵션을 사용하여 서명할 수 있습니다. 서명된 어셈블리를 전역 어셈블리 캐시에 설치할 수 있습니다. 서명되지 않은 어셈블리는 사용자 컴퓨터에 전용 어셈블리로 설치해야 합니다.  
   
 ### <a name="private-assemblies"></a>전용 어셈블리  
  전용으로 사용할 어셈블리를 설치하려면 응용 프로그램 실행 파일과 가져온 COM 형식을 포함하는 interop 어셈블리가 둘 다 동일한 디렉터리 구조에 설치되어야 합니다. 다음 그림에서는 개별 응용 프로그램 디렉터리에 있는 Client1.exe 및 Client2.exe에서 전용으로 사용할 서명되지 않은 interop 어셈블리를 보여 줍니다. 이 예제에서 LOANLib.dll이라는 interop 어셈블리는 두 번 설치됩니다.  
   
- ![디렉터리 구조 및 Windows 레지스트리](../../../docs/framework/interop/media/comdeployprivate.gif "comdeployprivate")  
+ ![디렉터리 구조 및 Windows 레지스트리](media/comdeployprivate.gif "comdeployprivate")  
 전용 배포에 대한 디렉터리 구조 및 레지스트리 항목  
   
  응용 프로그램과 연결된 모든 COM 구성 요소는 Windows 레지스트리에 설치해야 합니다. 그림의 Client1.exe 및 Client2.exe가 서로 다른 컴퓨터에 설치된 경우에는 두 컴퓨터에 모두 COM 구성 요소를 등록해야 합니다.  
   
 ### <a name="shared-assemblies"></a>공유 어셈블리  
- 여러 응용 프로그램에서 공유되는 어셈블리는 전역 어셈블리 캐시라는 중앙 집중식 리포지토리에 설치해야 합니다. .NET 클라이언트는 전역 어셈블리 캐시에서 시그니처 및 설치된 interop 어셈블리의 동일한 복사본에 액세스할 수 있습니다. 주 interop 어셈블리를 생성 및 사용하는 방법에 대한 자세한 내용은 [주 Interop 어셈블리](http://msdn.microsoft.com/library/b977a8be-59a0-40a0-a806-b11ffba5c080)를 참조하세요.  
+ 여러 응용 프로그램에서 공유되는 어셈블리는 전역 어셈블리 캐시라는 중앙 집중식 리포지토리에 설치해야 합니다. .NET 클라이언트는 전역 어셈블리 캐시에서 시그니처 및 설치된 interop 어셈블리의 동일한 복사본에 액세스할 수 있습니다. 주 interop 어셈블리를 생성 및 사용하는 방법에 대한 자세한 내용은 [주 Interop 어셈블리](https://msdn.microsoft.com/library/b977a8be-59a0-40a0-a806-b11ffba5c080(v=vs.100))를 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
- [.NET Framework에 COM 구성 요소 노출](../../../docs/framework/interop/exposing-com-components.md)  
- [형식 라이브러리를 어셈블리로 가져오기](../../../docs/framework/interop/importing-a-type-library-as-an-assembly.md)  
+ [.NET Framework에 COM 구성 요소 노출](exposing-com-components.md)  
+ [형식 라이브러리를 어셈블리로 가져오기](importing-a-type-library-as-an-assembly.md)  
  [관리 코드에서 COM 형식을 사용 하 여](https://msdn.microsoft.com/library/1a95a8ca-c8b8-4464-90b0-5ee1a1135b66(v=vs.100))  
- [Interop 프로젝트 컴파일](../../../docs/framework/interop/compiling-an-interop-project.md)
+ [Interop 프로젝트 컴파일](compiling-an-interop-project.md)

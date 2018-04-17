@@ -1,18 +1,18 @@
 ---
-title: "Docker 앱에 대 한 내부 루프 개발 워크플로"
-description: "Microsoft 플랫폼 및 도구를 사용하여 컨테이너화된 Docker 응용 프로그램 수명 주기"
-keywords: "Docker, 마이크로 서비스, ASP.NET, 컨테이너"
+title: Docker 앱에 대 한 내부 루프 개발 워크플로
+description: Microsoft 플랫폼 및 도구를 사용하여 컨테이너화된 Docker 응용 프로그램 수명 주기
+ms.prod: .net
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/22/2017
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 632c04507c1478238a5dc2573542f8c88bae2a51
-ms.sourcegitcommit: c3957fdb990060559d73cca44ab3e2c7b4d049c0
+ms.openlocfilehash: 7f49b19b0836636bf7656dc618ef2f181a0d7fff
+ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="inner-loop-development-workflow-for-docker-apps"></a>Docker 앱에 대 한 내부 루프 개발 워크플로
 
@@ -52,7 +52,7 @@ ms.lasthandoff: 03/05/2018
 
 Mac 및 Windows 용 Docker의 최신 버전으로 이전에 Docker 응용 프로그램을 개발 하는 보다 훨씬 더 쉽게 및 설치가 간단 합니다.
 
-**자세한 내용은** 이동에 대 한 지침은 Windows 용 Docker 설정, [https://docs.docker.com/docker-for-windows/](https://docs.docker.com/docker-for-windows/)합니다.
+**자세한 내용은** 이동에 대 한 지침은 Windows 용 Docker 설정, [ https://docs.docker.com/docker-for-windows/ ](https://docs.docker.com/docker-for-windows/)합니다.
 
 에 대 한 지침은 Mac 용 Docker 설정로 이동 <https://docs.docker.com/docker-for-mac/>합니다.
 
@@ -60,7 +60,7 @@ Mac 및 Windows 용 Docker의 최신 버전으로 이전에 Docker 응용 프로
 
 Microsoft 제공 Mac, Windows 및 Linux에서 지원 되 고 있는 IntelliSense를 제공 하는 간단한 코드 편집기는 Visual Studio Code [여러 언어에 대 한 지원](https://code.visualstudio.com/docs/languages/overview) (JavaScript,.NET, 이동, Java, Ruby, Python 및 가장 최신 언어의 경우) [디버깅](https://code.visualstudio.com/Docs/editor/debugging), [Git와의 통합](https://code.visualstudio.com/Docs/editor/versioncontrol) 및 [extensions 지원](https://code.visualstudio.com/docs/extensions/overview)합니다. 이 편집기는 Mac 및 Linux 개발자를 위한 매우 적합 합니다. Windows에서 전체 Visual Studio 응용 프로그램을 사용할 수 있습니다.
 
-**자세한 내용은** 이동에 대 한 지침은 Visual Studio for Windows, Mac 또는 Linux를 설치, [http://code.visualstudio.com/docs/setup/setup-overview/https://docs.docker.com/docker-for-mac/](http://code.visualstudio.com/docs/setup/setup-overview/https:/docs.docker.com/docker-for-mac/)합니다.
+**자세한 내용은** 이동에 대 한 지침은 Visual Studio for Windows, Mac 또는 Linux를 설치, [ http://code.visualstudio.com/docs/setup/setup-overview/https://docs.docker.com/docker-for-mac/ ](http://code.visualstudio.com/docs/setup/setup-overview/https:/docs.docker.com/docker-for-mac/)합니다.
 
 Docker CLI를 사용 하 고 다른 코드 편집기를 사용 하 여 코드를 작성 하지만 Dockerfile 작성자에 게 쉽게 및 docker compose.yml 파일 작업 영역에는 Visual Studio 코드를 사용 하는 경우. 또한 아래 Docker CLI를 사용 하 여 상세 작업 실행 될 수 있는 스크립트 물어봅니다 IDE에서 Visual Studio 코드 작업을 실행할 수 있습니다.
 
@@ -125,7 +125,7 @@ Docker에서 응용 프로그램을 실행 하는 방법을 알 수 있도록 �
 
 **자세한 내용은** .NET Core 응용 프로그램에 대 한 Docker 이미지를 작성 하는 방법에 대 한 정보로 이동 <https://docs.microsoft.com/dotnet/core/docker/building-net-docker-images>합니다.
 
-사용자 고유의 이미지를 작성 하는 방법에 대 한 자세한 내용은 이동 [https://docs.docker.com/engine/ \자습서/dockerimages/](https://docs.docker.com/engine/tutorials/dockerimages/)합니다.
+사용자 고유의 이미지를 작성 하는 방법에 대 한 자세한 내용은 이동 [ https://docs.docker.com/engine/\자습서/dockerimages/](https://docs.docker.com/engine/tutorials/dockerimages/)합니다.
 
 **다중 플랫폼 이미지 리포지토리와**
 
@@ -258,8 +258,8 @@ Node.js 및.NET Core 컨테이너 등의 다른 플랫폼을 사용 하는 경�
 
 또한 디버그할 수.NET Core 컨테이너 Docker에서 Visual Studio를 사용 하는 경우 다음 섹션에 설명 된 대로 합니다.
 
-**추가 정보:** 이동 Node.js Docker 컨테이너를 디버깅 하는 방법에 대 한 자세한 내용은 <https://blog.docker.com/2016/07/live-debugging-docker/> 및 [https://blogs.msdn.microsoft.com/ \ \ 사용자\_ed/2016/02/27 / visual-studio-code-new-features-13-big-debugging-updates-rich-object-hover-conditional-breakpoints-node-js-mono-more/](https://blogs.msdn.microsoft.com/user_ed/2016/02/27/visual-studio-code-new-features-13-big-debugging-updates-rich-object-hover-conditional-breakpoints-node-js-mono-more/)합니다.
+**추가 정보:** 이동 Node.js Docker 컨테이너를 디버깅 하는 방법에 대 한 자세한 내용은 <https://blog.docker.com/2016/07/live-debugging-docker/> 및 [ https://blogs.msdn.microsoft.com/\ \ 사용자\_ed/2016/02/27 / visual-studio-code-new-features-13-big-debugging-updates-rich-object-hover-conditional-breakpoints-node-js-mono-more/](https://blogs.msdn.microsoft.com/user_ed/2016/02/27/visual-studio-code-new-features-13-big-debugging-updates-rich-object-hover-conditional-breakpoints-node-js-mono-more/)합니다.
 
 
 >[!div class="step-by-step"]
-[Previous] (docker-apps-development-environment.md) [Next] (visual-studio-tools-for-docker.md)
+[이전] (docker-앱-개발-environment.md) [다음] (visual-studio-도구-에-docker.md)

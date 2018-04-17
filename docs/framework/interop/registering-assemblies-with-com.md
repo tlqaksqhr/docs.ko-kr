@@ -1,12 +1,9 @@
 ---
-title: "COM에 어셈블리 등록"
-ms.custom: 
+title: COM에 어셈블리 등록
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.technology:
+- dotnet-clr
 ms.topic: article
 helpviewer_keywords:
 - COM interop, registering assemblies
@@ -14,19 +11,20 @@ helpviewer_keywords:
 - interoperation with unmanaged code, registering assemblies
 - registering assemblies
 ms.assetid: 87925795-a3ae-4833-b138-125413478551
-caps.latest.revision: "11"
+caps.latest.revision: 11
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 39466115e3835361c76361d3cfc04f76161e7dd5
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: 3beaffdc0660055dd047f449388216ccfdd312cc
+ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="registering-assemblies-with-com"></a>COM에 어셈블리 등록
-[어셈블리 등록 도구(Regasm.exe)](../../../docs/framework/tools/regasm-exe-assembly-registration-tool.md)라는 명령줄 도구를 실행하여 COM과 사용할 어셈블리를 등록하거나 등록 취소할 수 있습니다. COM 클라이언트에서 .NET Framework 클래스를 투명하게 사용할 수 있도록 Regasm.exe에서는 클래스에 대한 정보를 시스템 레지스트리에 추가합니다. <xref:System.Runtime.InteropServices.RegistrationServices> 클래스는 이와 동등한 기능을 제공합니다.  
+[어셈블리 등록 도구(Regasm.exe)](../tools/regasm-exe-assembly-registration-tool.md)라는 명령줄 도구를 실행하여 COM과 사용할 어셈블리를 등록하거나 등록 취소할 수 있습니다. COM 클라이언트에서 .NET Framework 클래스를 투명하게 사용할 수 있도록 Regasm.exe에서는 클래스에 대한 정보를 시스템 레지스트리에 추가합니다. <xref:System.Runtime.InteropServices.RegistrationServices> 클래스는 이와 동등한 기능을 제공합니다.  
   
  관리되는 구성 요소를 Windows 레지스트리에 등록해야 COM 클라이언트에서 활성화할 수 있습니다. 다음 표에서는 Regasm.exe를 통해 일반적으로 Windows 레지스트리에 추가하는 키를 보여 줍니다. (000000은 실제 GUID 값을 표시합니다.)  
   
@@ -53,7 +51,7 @@ ms.lasthandoff: 01/19/2018
  `InprocServer32` 하위 키의 경우, 기존 COM 형식 라이브러리의 위치에 Mscoree.dll의 참조가 표시되어 공용 언어 런타임을 통해 관리 개체가 생성되었음을 나타냅니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [.NET Framework 구성 요소를 COM에 노출](../../../docs/framework/interop/exposing-dotnet-components-to-com.md)  
- [방법: COM에서 .NET 형식 참조](../../../docs/framework/interop/how-to-reference-net-types-from-com.md)  
- [.NET 개체를 호출합니다.](http://msdn.microsoft.com/library/40c9626c-aea6-4bad-b8f0-c1de462efd33)  
- [COM 액세스를 위해 응용 프로그램 배포](http://msdn.microsoft.com/library/fb63564c-c1b9-4655-a094-a235625882ce)
+ [.NET Framework 구성 요소를 COM에 노출](exposing-dotnet-components-to-com.md)  
+ [방법: COM에서 .NET 형식 참조](how-to-reference-net-types-from-com.md)  
+ [.NET 개체를 호출합니다.](https://msdn.microsoft.com/library/40c9626c-aea6-4bad-b8f0-c1de462efd33(v=vs.100))  
+ [COM 액세스를 위해 응용 프로그램 배포](https://msdn.microsoft.com/library/fb63564c-c1b9-4655-a094-a235625882ce(v=vs.100))

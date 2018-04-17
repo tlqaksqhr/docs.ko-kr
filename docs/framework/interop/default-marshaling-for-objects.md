@@ -1,13 +1,9 @@
 ---
 title: 개체에 대한 마샬링
-ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -16,17 +12,16 @@ helpviewer_keywords:
 - objects, interop marshaling
 - interop marshaling, objects
 ms.assetid: c2ef0284-b061-4e12-b6d3-6a502b9cc558
-caps.latest.revision: ''
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: b49575bb7f16b942a56a48e9ad3f5a44edfb373a
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: 6980db381322d354cace38709586e50681ae0a7e
+ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="default-marshaling-for-objects"></a>개체에 대한 마샬링
 <xref:System.Object?displayProperty=nameWithType>로 형식화된 매개 변수와 필드는 비관리 코드에 다음 형식 하나로 표시할 수 있습니다.  
@@ -304,7 +299,7 @@ mo.SetVariant(new CurrencyWrapper(new Decimal(5.25)));
 ## <a name="marshaling-byref-variants"></a>ByRef 변형 마샬링  
  변형 자체는 값 또는 참조로 전달될 수 있지만 **VT_BYREF** 플래그를 변형 형식과 함께 사용하여 변형의 콘텐츠가 값 대신 참조로 전달되고 있음을 나타낼 수도 있습니다. 참조를 통한 변형 마샬링과 **VT_BYREF** 플래그를 통한 변형 마샬링의 차이점은 혼동될 수 있습니다. 다음 그림에서는 차이점을 분명히 설명합니다.  
   
- ![스택에 전달되는 변형](../../../docs/framework/interop/media/interopvariant.gif "interopvariant")  
+ ![스택에 전달되는 변형](./media/interopvariant.gif "interopvariant")  
 값 및 참조로 전달되는 변형  
   
  **값을 통한 개체 및 변형 마샬링의 기본 동작**  
@@ -342,7 +337,7 @@ mo.SetVariant(new CurrencyWrapper(new Decimal(5.25)));
 |**변형**  *v***(VT_BYREF** *&#124;* **VT_)**|**Ref 개체**  *o*|형식이 변경되지 않은 경우에만.|  
   
 ## <a name="see-also"></a>참고 항목  
- [기본 마샬링 동작](../../../docs/framework/interop/default-marshaling-behavior.md)  
- [Blittable 형식 및 비 Blittable 형식](../../../docs/framework/interop/blittable-and-non-blittable-types.md)  
- [방향 특성](http://msdn.microsoft.com/library/241ac5b5-928e-4969-8f58-1dbc048f9ea2)  
- [복사 및 고정](../../../docs/framework/interop/copying-and-pinning.md)
+ [기본 마샬링 동작](default-marshaling-behavior.md)  
+ [Blittable 형식 및 비 Blittable 형식](blittable-and-non-blittable-types.md)  
+ [방향 특성](https://msdn.microsoft.com/library/241ac5b5-928e-4969-8f58-1dbc048f9ea2(v=vs.100))  
+ [복사 및 고정](copying-and-pinning.md)

@@ -1,12 +1,9 @@
 ---
-title: "배열에 대한 기본 마샬링"
-ms.custom: 
+title: 배열에 대한 기본 마샬링
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.technology:
+- dotnet-clr
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,21 +12,22 @@ helpviewer_keywords:
 - interop marshaling, arrays
 - arrays, interop marshaling
 ms.assetid: 8a3cca8b-dd94-4e3d-ad9a-9ee7590654bc
-caps.latest.revision: "19"
+caps.latest.revision: 19
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 91df17448a57f7495dc95fb2b4ab1fa63dd8a27f
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: 84f4015fd9bc5eb2de11b71530115d20c583d21d
+ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="default-marshaling-for-arrays"></a>배열에 대한 기본 마샬링
 전체적으로 관리 코드로 구성된 응용 프로그램에서는 공용 언어 런타임이 배열 형식을 In/Out 매개 변수로 전달합니다. 반면 interop 마샬러는 기본적으로 배열을 In 매개 변수로 전달합니다.  
   
- [고정 최적화](../../../docs/framework/interop/copying-and-pinning.md)를 통해 blittable 배열은 같은 아파트의 개체와 상호 작용할 때 In/Out 매개 변수로 사용되는 것으로 보일 수 있습니다. 그러나 나중에 컴퓨터 간 프록시를 생성하는 데 사용되는 형식 라이브러리에 코드를 내보내고 해당 라이브러리를 사용하여 아파트 간에 호출을 마샬링할 경우 호출은 실제 In 매개 변수 동작으로 되돌아갈 수 있습니다.  
+ [고정 최적화](copying-and-pinning.md)를 통해 blittable 배열은 같은 아파트의 개체와 상호 작용할 때 In/Out 매개 변수로 사용되는 것으로 보일 수 있습니다. 그러나 나중에 컴퓨터 간 프록시를 생성하는 데 사용되는 형식 라이브러리에 코드를 내보내고 해당 라이브러리를 사용하여 아파트 간에 호출을 마샬링할 경우 호출은 실제 In 매개 변수 동작으로 되돌아갈 수 있습니다.  
   
  배열은 본질적으로 복잡하고 관리되는 배열과 관리되지 않는 배열을 구별하면 다른 비 blittable 형식보다 더 많은 정보를 보장합니다. 이 항목에서는 배열 마샬링에 대한 다음 정보를 제공합니다.  
   
@@ -51,9 +49,9 @@ ms.lasthandoff: 01/19/2018
   
 |관리되는 배열 형식|요소 형식|순위|하한|시그니처 표기법|  
 |------------------------|------------------|----------|-----------------|------------------------|  
-|**ELEMENT_TYPE_ARRAY**|형식으로 지정됩니다.|순위로 지정됩니다.|필요한 경우 경계로 지정됩니다.|*type* **[** *n*,*m* **]**|  
+|**ELEMENT_TYPE_ARRAY**|형식으로 지정됩니다.|순위로 지정됩니다.|필요한 경우 경계로 지정됩니다.|*형식* **[** *n*,*m* **]**|  
 |**ELEMENT_TYPE_CLASS**|알 수 없음|알 수 없음|알 수 없음|**System.Array**|  
-|**ELEMENT_TYPE_SZARRAY**|형식으로 지정됩니다.|1|0|*type* **[** *n* **]**|  
+|**ELEMENT_TYPE_SZARRAY**|형식으로 지정됩니다.|1|0|*형식* **[** *n* **]**|  
   
 <a name="cpcondefaultmarshalingforarraysanchor2"></a>   
 ## <a name="unmanaged-arrays"></a>관리되지 않는 배열  
@@ -71,7 +69,7 @@ ms.lasthandoff: 01/19/2018
 ### <a name="safe-arrays"></a>안전 배열  
  안전 배열을 형식 라이브러리에서 .NET 어셈블리로 가져온 경우 배열은 알려진 형식(예: **int**)의 1차원 배열로 변환됩니다. 매개 변수에 적용되는 같은 형식 변환 규칙이 배열 요소에도 적용됩니다. 예를 들어 **BSTR** 형식의 안전 배열은 문자열의 관리되는 배열이 되고 변형의 안전 배열은 개체의 관리되는 배열이 됩니다. **SAFEARRAY** 요소 형식은 형식 라이브러리에서 캡처되고 <xref:System.Runtime.InteropServices.UnmanagedType> 열거형의 **SAFEARRAY** 값에 저장됩니다.  
   
- 형식 라이브러리에서 안전 배열의 순위와 범위를 확인할 수 없으므로 순위는 1로, 하한은 0으로 가정됩니다. [형식 라이브러리 가져오기(Tlbimp.exe)](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md)에서 생성하는 관리되는 시그니처에 순위와 범위를 정의해야 합니다. 런타임에 메서드에 전달되는 순위가 다른 경우 <xref:System.Runtime.InteropServices.SafeArrayRankMismatchException>이 throw됩니다. 런타임에 전달되는 배열 형식이 다른 경우 <xref:System.Runtime.InteropServices.SafeArrayTypeMismatchException>이 throw됩니다. 다음 예제에서는 관리 및 비관리 코드의 안전 배열을 보여 줍니다.  
+ 형식 라이브러리에서 안전 배열의 순위와 범위를 확인할 수 없으므로 순위는 1로, 하한은 0으로 가정됩니다. [형식 라이브러리 가져오기(Tlbimp.exe)](../tools/tlbimp-exe-type-library-importer.md)에서 생성하는 관리되는 시그니처에 순위와 범위를 정의해야 합니다. 런타임에 메서드에 전달되는 순위가 다른 경우 <xref:System.Runtime.InteropServices.SafeArrayRankMismatchException>이 throw됩니다. 런타임에 전달되는 배열 형식이 다른 경우 <xref:System.Runtime.InteropServices.SafeArrayTypeMismatchException>이 throw됩니다. 다음 예제에서는 관리 및 비관리 코드의 안전 배열을 보여 줍니다.  
   
  **관리되지 않는 시그니처**  
   
@@ -100,7 +98,7 @@ void New3([MarshalAs(UnmanagedType.SafeArray, SafeArraySubType=VT_BSTR)]
    ref String[] ar);  
 ```  
   
- Tlbimp.exe에서 생성된 메서드 시그니처가 **ELEMENT_TYPE_SZARRAY** 대신 **ELEMENT_TYPE_ARRAY**의 요소 형식을 나타내도록 수정될 경우 다차원 또는 0이 아닌 경계 안전 배열은 관리 코드로 마샬링될 수 있습니다. 또는 Tlbimp.exe에서 **/sysarray** 스위치를 사용하여 모든 배열을 <xref:System.Array?displayProperty=nameWithType> 개체로 가져올 수 있습니다. 전달되는 배열이 다차원으로 알려진 경우에는 Tlbimp.exe에서 생성된 MSIL(Microsoft Intermediate Language) 코드를 편집하고 다시 컴파일할 수 있습니다. MSIL 코드를 수정하는 방법에 대한 자세한 내용은 [런타임 호출 가능 래퍼 사용자 지정](http://msdn.microsoft.com/library/4652beaf-77d0-4f37-9687-ca193288c0be)을 참조하세요.  
+ Tlbimp.exe에서 생성된 메서드 시그니처가 **ELEMENT_TYPE_SZARRAY** 대신 **ELEMENT_TYPE_ARRAY**의 요소 형식을 나타내도록 수정될 경우 다차원 또는 0이 아닌 경계 안전 배열은 관리 코드로 마샬링될 수 있습니다. 또는 Tlbimp.exe에서 **/sysarray** 스위치를 사용하여 모든 배열을 <xref:System.Array?displayProperty=nameWithType> 개체로 가져올 수 있습니다. 전달되는 배열이 다차원으로 알려진 경우에는 Tlbimp.exe에서 생성된 MSIL(Microsoft Intermediate Language) 코드를 편집하고 다시 컴파일할 수 있습니다. MSIL 코드를 수정하는 방법에 대한 자세한 내용은 [런타임 호출 가능 래퍼 사용자 지정](https://msdn.microsoft.com/library/4652beaf-77d0-4f37-9687-ca193288c0be(v=vs.100))을 참조하세요.  
   
 ### <a name="c-style-arrays"></a>C 스타일 배열  
  C 스타일 배열을 형식 라이브러리에서 .NET 어셈블리로 가져온 경우 배열은 **ELEMENT_TYPE_SZARRAY**로 변환됩니다.  
@@ -140,7 +138,7 @@ void New2([MarshalAs(UnmanagedType.LPArray,
    ArraySubType=UnmanagedType.LPWStr, SizeConst=10)] String[] ar);  
 ```  
   
- IDL(Interface Definition Language) 소스의 배열에 **size_is** 또는 **length_is** 특성을 적용하여 클라이언트에 크기를 전달할 수 있지만 MIDL(Microsoft 인터페이스 정의 언어) 컴파일러는 해당 정보를 형식 라이브러리에 전파하지 않습니다. 크기를 모르면 interop 마샬링 서비스가 배열 요소를 마샬링할 수 없습니다. 따라서 가변 길이 배열은 참조 인수로 가져옵니다. 예:  
+ IDL(Interface Definition Language) 소스의 배열에 **size_is** 또는 **length_is** 특성을 적용하여 클라이언트에 크기를 전달할 수 있지만 MIDL(Microsoft 인터페이스 정의 언어) 컴파일러는 해당 정보를 형식 라이브러리에 전파하지 않습니다. 크기를 모르면 interop 마샬링 서비스가 배열 요소를 마샬링할 수 없습니다. 따라서 가변 길이 배열은 참조 인수로 가져옵니다. 예를 들어:  
   
  **관리되지 않는 시그니처**  
   
@@ -164,7 +162,7 @@ void New2(ref double ar);
 void New3(ref String ar);   
 ```  
   
- Tlbimp.exe에서 생성된 MSIL(Microsoft Intermediate Language) 코드를 편집하고 다시 컴파일하여 마샬러에 배열을 제공할 수 있습니다. MSIL 코드를 수정하는 방법에 대한 자세한 내용은 [런타임 호출 가능 래퍼 사용자 지정](http://msdn.microsoft.com/library/4652beaf-77d0-4f37-9687-ca193288c0be)을 참조하세요. 배열의 요소 수를 지정하려면 다음 방법 중 하나로 <xref:System.Runtime.InteropServices.MarshalAsAttribute> 형식을 관리되는 메서드 정의의 배열 매개 변수에 적용합니다.  
+ Tlbimp.exe에서 생성된 MSIL(Microsoft Intermediate Language) 코드를 편집하고 다시 컴파일하여 마샬러에 배열을 제공할 수 있습니다. MSIL 코드를 수정하는 방법에 대한 자세한 내용은 [런타임 호출 가능 래퍼 사용자 지정](https://msdn.microsoft.com/library/4652beaf-77d0-4f37-9687-ca193288c0be(v=vs.100))을 참조하세요. 배열의 요소 수를 지정하려면 다음 방법 중 하나로 <xref:System.Runtime.InteropServices.MarshalAsAttribute> 형식을 관리되는 메서드 정의의 배열 매개 변수에 적용합니다.  
   
 -   배열의 요소 수가 포함된 또 다른 매개 변수를 식별합니다. 매개 변수는 위치로 식별되고 첫 번째 매개 변수는 0입니다.     
   
@@ -180,7 +178,7 @@ void New3(ref String ar);
        [MarshalAs(UnmanagedType.LPArray, SizeParamIndex=0)] int[] ar );  
     ```  
   
--   배열 크기를 상수로 정의합니다. 예:  
+-   배열 크기를 상수로 정의합니다. 예를 들어:  
   
     ```vb  
     Sub [New](\<MarshalAs(UnmanagedType.LPArray, SizeConst:=128)> _  
@@ -212,7 +210,7 @@ void New3(ref String ar);
  LPSTR 또는 LPWSTR이 포함된 구조체 배열에 관련된 OLE 자동화에는 제한이 있습니다.  따라서 **String** 필드는 **UnmanagedType.BSTR**로 마샬링되어야 합니다. 그렇지 않으면 예외가 throw됩니다.  
   
 ### <a name="elementtypeszarray"></a>ELEMENT_TYPE_SZARRAY  
- **ELEMENT_TYPE_SZARRAY** 매개 변수(1차원 배열)가 포함된 메서드를 .NET 어셈블리에서 형식 라이브러리로 내보내면 배열 매개 변수가 지정된 형식의 **SAFEARRAY**로 변환됩니다. 같은 변환 규칙이 배열 요소 형식에 적용됩니다. 관리되는 배열의 콘텐츠는 관리되는 메모리에서 **SAFEARRAY**로 자동으로 복사됩니다. 예:  
+ **ELEMENT_TYPE_SZARRAY** 매개 변수(1차원 배열)가 포함된 메서드를 .NET 어셈블리에서 형식 라이브러리로 내보내면 배열 매개 변수가 지정된 형식의 **SAFEARRAY**로 변환됩니다. 같은 변환 규칙이 배열 요소 형식에 적용됩니다. 관리되는 배열의 콘텐츠는 관리되는 메모리에서 **SAFEARRAY**로 자동으로 복사됩니다. 예를 들어:  
   
 #### <a name="managed-signature"></a>관리되는 시그니처  
   
@@ -235,7 +233,7 @@ HRESULT New([in] SAFEARRAY( BSTR ) ar);
   
  안전 배열의 순위는 항상 1이고 하한은 항상 0입니다. 크기는 런타임에 전달 중인 관리되는 배열 크기에 따라 결정됩니다.  
   
- <xref:System.Runtime.InteropServices.MarshalAsAttribute> 특성을 사용하여 배열을 C 스타일 배열로 마샬링할 수도 있습니다. 예:  
+ <xref:System.Runtime.InteropServices.MarshalAsAttribute> 특성을 사용하여 배열을 C 스타일 배열로 마샬링할 수도 있습니다. 예를 들어:  
   
 #### <a name="managed-signature"></a>관리되는 시그니처  
   
@@ -270,7 +268,7 @@ HRESULT New(LPStr ar[]);
  마샬러에는 배열을 마샬링하는 데 필요한 길이 정보가 있지만 배열 길이는 대개 호출 수신자에게 길이를 전달하기 위한 개별 인수로 전달됩니다.  
   
 ### <a name="elementtypearray"></a>ELEMENT_TYPE_ARRAY  
- **ELEMENT_TYPE_ARRAY** 매개 변수가 포함된 메서드를 .NET 어셈블리에서 형식 라이브러리로 내보내면 배열 매개 변수가 지정된 형식의 **SAFEARRAY**로 변환됩니다. 관리되는 배열의 콘텐츠는 관리되는 메모리에서 **SAFEARRAY**로 자동으로 복사됩니다. 예:  
+ **ELEMENT_TYPE_ARRAY** 매개 변수가 포함된 메서드를 .NET 어셈블리에서 형식 라이브러리로 내보내면 배열 매개 변수가 지정된 형식의 **SAFEARRAY**로 변환됩니다. 관리되는 배열의 콘텐츠는 관리되는 메모리에서 **SAFEARRAY**로 자동으로 복사됩니다. 예를 들어:  
   
 #### <a name="managed-signature"></a>관리되는 시그니처  
   
@@ -320,7 +318,7 @@ HRESULT New(long ar[]);
 HRESULT New(LPStr ar[]);  
 ```  
   
- 중첩 배열은 마샬링할 수 없습니다. 예를 들어 다음 시그니처는 [형식 라이브러리 내보내기(Tlbexp.exe)](../../../docs/framework/tools/tlbexp-exe-type-library-exporter.md)를 통해 내보낼 경우 오류를 생성합니다.  
+ 중첩 배열은 마샬링할 수 없습니다. 예를 들어 다음 시그니처는 [형식 라이브러리 내보내기(Tlbexp.exe)](../tools/tlbexp-exe-type-library-exporter.md)를 통해 내보낼 경우 오류를 생성합니다.  
   
 #### <a name="managed-signature"></a>관리되는 시그니처  
   
@@ -333,7 +331,7 @@ void New(long [][][] ar );
 ```  
   
 ### <a name="elementtypeclass-systemarray"></a>ELEMENT_TYPE_CLASS \<System.Array>  
- <xref:System.Array?displayProperty=nameWithType> 매개 변수가 포함된 메서드를 .NET 어셈블리에서 형식 라이브러리로 내보내면 배열 매개 변수가 **_Array** 인터페이스로 변환됩니다. 관리되는 배열의 콘텐츠는 **_Array** 인터페이스의 메서드 및 속성을 통해서만 액세스할 수 있습니다. <xref:System.Runtime.InteropServices.MarshalAsAttribute> 특성을 사용하여 **System.Array**를 **SAFEARRAY**로 마샬링할 수도 있습니다. 안전 배열로 마샬링될 경우 배열 요소는 변형으로 마샬링됩니다. 예:  
+ <xref:System.Array?displayProperty=nameWithType> 매개 변수가 포함된 메서드를 .NET 어셈블리에서 형식 라이브러리로 내보내면 배열 매개 변수가 **_Array** 인터페이스로 변환됩니다. 관리되는 배열의 콘텐츠는 **_Array** 인터페이스의 메서드 및 속성을 통해서만 액세스할 수 있습니다. <xref:System.Runtime.InteropServices.MarshalAsAttribute> 특성을 사용하여 **System.Array**를 **SAFEARRAY**로 마샬링할 수도 있습니다. 안전 배열로 마샬링될 경우 배열 요소는 변형으로 마샬링됩니다. 예를 들어:  
   
 #### <a name="managed-signature"></a>관리되는 시그니처  
   
@@ -382,7 +380,7 @@ public struct MyStruct {
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [기본 마샬링 동작](../../../docs/framework/interop/default-marshaling-behavior.md)  
- [Blittable 형식 및 비 Blittable 형식](../../../docs/framework/interop/blittable-and-non-blittable-types.md)  
- [방향 특성](http://msdn.microsoft.com/library/241ac5b5-928e-4969-8f58-1dbc048f9ea2)  
- [복사 및 고정](../../../docs/framework/interop/copying-and-pinning.md)
+ [기본 마샬링 동작](default-marshaling-behavior.md)  
+ [Blittable 형식 및 비 Blittable 형식](blittable-and-non-blittable-types.md)  
+ [방향 특성](https://msdn.microsoft.com/library/241ac5b5-928e-4969-8f58-1dbc048f9ea2(v=vs.100))  
+ [복사 및 고정](copying-and-pinning.md)

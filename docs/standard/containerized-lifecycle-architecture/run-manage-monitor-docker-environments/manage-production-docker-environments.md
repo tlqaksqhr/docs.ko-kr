@@ -1,18 +1,18 @@
 ---
-title: "프로덕션 Docker 환경 관리"
-description: "Microsoft 플랫폼 및 도구를 사용하여 컨테이너화된 Docker 응용 프로그램 수명 주기"
-keywords: "Docker, 마이크로 서비스, ASP.NET, 컨테이너"
+title: 프로덕션 Docker 환경 관리
+description: Microsoft 플랫폼 및 도구를 사용하여 컨테이너화된 Docker 응용 프로그램 수명 주기
+ms.prod: .net
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/22/2017
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: c962543004c88b0a6413cc22d8bdddf954af66f8
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 72ae92c89ed9b51815016205e20b09fc4dced1e1
+ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="manage-production-docker-environments"></a>프로덕션 Docker 환경 관리
 
@@ -31,7 +31,7 @@ Azure 가상 컴퓨터 크기 집합을 사용 하 여 이러한 클러스터를
 
 | 관리 도구      | 설명           | 관련된 orchestrators |
 |-----------------------|-----------------------|-----------------------|
-| 컨테이너 서비스\(Azure 포털에서 관리 UI) | [컨테이너 서비스](https://azure.microsoft.com/en-us/services/container-service/) 쉽게 이용할 수를 제공 하는 방식으로 시작 [Azure에서 컨테이너-클러스터 배포](https://docs.microsoft.com/azure/container-service/dcos-swarm/container-service-deployment) Mesosphere DC/OS, Kubernetes 및 docker는 Docker Swarm와 같은 인기 있는 orchestrators에 따라 합니다. <br /><br /> 컨테이너 서비스는 해당 플랫폼의 구성을 최적화합니다. 크기, 호스트, 수 및 다양 한 orchestrator 도구를 선택 해야 하 고 다른 모든 항목을 처리 하는 컨테이너 서비스 키를 누릅니다. | Mesosphere DC/OS <br /><br /> Kubernetes <br /><br /> Docker 웜 |
+| 컨테이너 서비스\(Azure 포털에서 관리 UI) | [컨테이너 서비스](https://azure.microsoft.com/en-us/services/container-service/) 쉽게 이용할 수를 제공 하는 방식으로 시작 [Azure에서 컨테이너-클러스터 배포](https://docs.microsoft.com/azure/container-service/dcos-swarm/container-service-deployment) Mesosphere DC/OS, Kubernetes 및 docker는 Docker Swarm와 같은 인기 있는 orchestrators에 따라 합니다. <br /><br /> 컨테이너 서비스는 해당 플랫폼의 구성을 최적화합니다. 크기, 호스트, 수 및 다양 한 orchestrator 도구를 선택 해야 하 고 다른 모든 항목을 처리 하는 컨테이너 서비스 키를 누릅니다. | Mesosphere DC/OS <br /><br /> Kubernetes <br /><br /> Docker Swarm |
 | Docker 유니버설 제어 평면\(온-프레미스 또는 클라우드) | [Docker 유니버설 제어 평면](https://docs.docker.com/v1.11/ucp/overview/) Docker에서 엔터프라이즈급 클러스터 관리 솔루션입니다. 그 한 곳에서 전체 클러스터를 관리할 수 있습니다. <br /><br /> Docker 유니버설 제어 평면 docker는 Docker Swarm, 유니버설 제어 평면 Docker 및 Docker Trusted Registry 제공 하는 Docker 데이터 센터 라는 상용 제품의 일부분으로 포함 됩니다. <br /><br /> Docker 데이터 센터 설치 된 온-프레미스 이거나 Azure와 같은 공용 클라우드를 프로 비전 합니다. | Docker는 docker Swarm\(컨테이너 서비스에서 지원) |
 | Docker 클라우드\(Tutum; 클라우드 SaaS 라고도 함) | [Docker 클라우드](https://docs.docker.com/docker-cloud/) 는 빌드 및 테스트 기능을 Dockerized 응용 프로그램 이미지를 설정 하 고 호스트 인프라를 관리 하는 데 유용한 도구를 사용 하 여 오케스트레이션 기능 및 Docker 레지스트리를 제공 하는 호스팅된 관리 서비스 (SaaS) 및 구체적 인프라에 이미지 배포를 자동화할 수 있도록 배포 기능을 추가 합니다. Docker는 Docker Swarm 클러스터를 실행 하는 컨테이너 서비스에서 인프라를 SaaS Docker 클라우드 계정과 연결할 수 있습니다. | Docker는 docker Swarm\(컨테이너 서비스에서 지원) |
 | Mesosphere 마라톤\(온-프레미스 또는 클라우드) | [풀 마라톤](https://mesosphere.github.io/marathon/docs/marathon-ui.html) Mesosphere의 DC/OS 및 Apache Mesos는 프로덕션 수준의 컨테이너 오케스트레이션 및 스케줄러 플랫폼입니다. <br /><br /> Mesos와 함께 작동 (DC/OS가 기반 Apache Mesos) 장기 실행 제어에 서비스를 제공 하며 제공는 [프로세스 및 컨테이너 관리에 대 한 웹 UI](https://mesosphere.github.io/marathon/docs/marathon-ui.html)합니다. 웹 UI 관리 도구를 제공 | DC/OS mesosphere\(Apache Mesos 기반; 컨테이너 서비스에서 지원) |
