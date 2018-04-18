@@ -5,11 +5,11 @@ hide_bc: true
 title: .NET 설명서
 description: C#, Visual Basic 및 F#을 사용하는 모든 플랫폼에서 .NET을 사용하여 다양한 응용 프로그램을 만드는 방법을 알아보세요. API 참조, 샘플 코드, 자습서 등을 찾아보세요.
 ms.custom: updateeachrelease
-ms.openlocfilehash: f3a044df40a5508f62b5b441965c4ce16e998428
-ms.sourcegitcommit: 498799639937c89de777361aab74261efe7b79ea
+ms.openlocfilehash: 35a85cfc9f829f287a239d1a1bb98fd5d15487ca
+ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/16/2018
 ---
 <div id="main" class="v2">
     <div class="container">
@@ -149,11 +149,11 @@ ms.lasthandoff: 03/22/2018
                                                 </div>
                                             </div>
                                             <div class="cardText">
-                                                <h3><a href="https://developer.xamarin.com/guides/cross-platform/getting_started">Xamarin</a></h3>
-                                                <p><a href="https://developer.xamarin.com/guides/cross-platform/getting_started">시작</a></p>
-                                                <p><a href="https://developer.xamarin.com/guides/ios">Xamarin.iOS 가이드</a></p>
-                                                <p><a href="https://developer.xamarin.com/guides/android/getting_started">Xamarin.Android 가이드</a></p>
-                                                <p><a href="https://developer.xamarin.com/guides/xamarin-forms">Xamarin.Forms 가이드</a></p>
+                                                <h3><a href="/xamarin">Xamarin</a></h3>
+                                                <p><a href="/xamarin/cross-platform">플랫폼 간 개발</a></p>
+                                                <p><a href="/xamarin/ios">Xamarin.iOS 가이드</a></p>
+                                                <p><a href="/xamarin/android">Xamarin.Android 가이드</a></p>
+                                                <p><a href="/xamarin/xamarin-forms">Xamarin.Forms 가이드</a></p>
                                             </div>
                                         </div>
                                     </div>
@@ -438,7 +438,7 @@ ms.lasthandoff: 03/22/2018
                                                 </div>
                                             </div>
                                             <div class="cardText">
-                                                <a href="https://developer.xamarin.com/guides/ios/getting_started/">
+                                                <a href="/xamarin/ios">
                                                     <h3>Xamarin.iOS</h3>
                                                     <p>Xamarin.iOS와 함께 C# 및 F#을 사용하여 네이티브 iOS 앱을 만듭니다.</p>
                                                 </a>
@@ -457,7 +457,7 @@ ms.lasthandoff: 03/22/2018
                                                 </div>
                                             </div>
                                             <div class="cardText">
-                                                <a href="https://developer.xamarin.com/guides/android/getting_started">
+                                                <a href="/xamarin/android">
                                                     <h3>Xamarin.Android</h3>
                                                     <p>Xamarin.Android와 함께 C# 및 F#을 사용하여 네이티브 Android 앱을 만듭니다.</p>
                                                 </a>
@@ -476,7 +476,7 @@ ms.lasthandoff: 03/22/2018
                                                 </div>
                                             </div>
                                             <div class="cardText">
-                                                <a href="https://developer.xamarin.com/guides/xamarin-forms">
+                                                <a href="/xamarin/xamarin-forms">
                                                     <h3>Xamarin.Forms</h3>
                                                     <p>Xamarin.Forms와 함께 C# 및 F#을 사용하여 플랫폼 간 모바일 UI를 만듭니다.</p>
                                                 </a>
@@ -558,7 +558,7 @@ ms.lasthandoff: 03/22/2018
                                                 </div>
                                             </div>
                                             <div class="cardText">
-                                                <a href="https://developer.xamarin.com/guides/mac/getting_started">
+                                                <a href="/xamarin/mac">
                                                     <h3>macOS용 Xamarin</h3>
                                                     <p>Xamarin과 함께 C# 및 F#을 사용하여 macOS용 앱을 만듭니다.</p>
                                                 </a>
