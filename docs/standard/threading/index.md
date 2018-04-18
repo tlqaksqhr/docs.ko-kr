@@ -19,11 +19,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 43fe5f9d193de3f48abfc0d91e01a70ee601a651
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 26f69429bb6ee479bd981474513698bf27993564
+ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="managed-threading"></a>관리되는 스레딩
 개발 대상 컴퓨터에 프로세서가 1개 있든, 여러 개 있든, 응용 프로그램이 현재 다른 작업을 수행하면서도 사용자에게 가장 먼저 반응하는 방식으로 상호 작용을 제공하는 것을 원할 것입니다. 다중 스레드 방식의 실행을 사용하는 것이 사용자에 대한 응용 프로그램 응답성을 유지하면서 사용자 이벤트 중간에 프로세서를 최대한 활용할 수 있는 가장 강력한 방법 중 하나입니다. 이 섹션에서는 스레딩의 기본 개념을 소개하지만 관리되는 스레딩 개념 및 관리되는 스레딩 사용을 집중적으로 다룹니다.  
@@ -61,8 +61,8 @@ ms.lasthandoff: 12/23/2017
  [비동기 파일 I/O](../../../docs/standard/io/asynchronous-file-i-o.md)  
  비동기 I/O의 기본 연산 및 성능상의 이점에 대해 설명합니다.  
   
- [EAP(이벤트 기반 비동기 패턴)](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md)  
- 비동기 프로그래밍에 대한 개요를 제공합니다.  
+ [TAP(작업 기반 비동기 패턴)](../../../docs/standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap.md)  
+ .NET에서 비동기 프로그래밍의 권장 패턴에 대한 개요를 설명합니다.  
   
  [동기 메서드를 비동기 방식으로 호출](../../../docs/standard/asynchronous-programming-patterns/calling-synchronous-methods-asynchronously.md)  
  대리자의 기본 제공 기능을 사용하여 스레드 풀 스레드에 대해 메서드를 호출하는 방법을 설명합니다.  

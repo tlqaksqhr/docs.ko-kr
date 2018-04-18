@@ -11,11 +11,11 @@ ms.devlang: dotnet
 ms.assetid: 8b49079c-6ede-429a-92d7-ecd2fda1ab0e
 ms.workload:
 - dotnetcore
-ms.openlocfilehash: 6aa5abd071355b1c1a367b35e9521e6b1af9c945
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: a14e8dbf3f9be9910a2c50cfbcb3f52f4e7385e1
+ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="build-net-core-from-source"></a>소스에서 .NET Core 빌드
 
@@ -24,7 +24,7 @@ ms.lasthandoff: 12/23/2017
 
 ## <a name="build-the-clr-from-source"></a>소스에서 CLR 빌드
 
-.NET Core CLR에 대한 소스 코드는 [GitHub의 `dotnet/coreclr` 리포지토리](https://github.com/dotnet/coreclr/)에서 확인할 수 있습니다.
+.NET CoreCLR에 대한 소스 코드는 GitHub의 [dotnet/coreclr](https://github.com/dotnet/coreclr/) 리포지토리에서 확인할 수 있습니다.
 
 현재 빌드는 다음 필수 구성 요소에 따라 달라집니다.
 * [Git](https://git-scm.com/)
@@ -32,7 +32,7 @@ ms.lasthandoff: 12/23/2017
 * [Python](https://www.python.org/)
 * C++ 컴파일러
 
-이러한 필수 구성 요소를 설치하면 [Core CLR 리포지토리](https://github.com/dotnet/coreclr/)의 맨 아래에 있는 빌드 스크립트(Windows의 경우 `build.cmd`, Linux 및 macOS의 경우 `build.sh`)를 호출하여 CLR을 빌드할 수 있습니다.
+이러한 필수 구성 요소를 설치하면 [dotnet/coreclr](https://github.com/dotnet/coreclr/) 리포지토리의 맨 아래에 있는 빌드 스크립트(Windows의 경우 `build.cmd`, Linux 및 macOS의 경우 `build.sh`)를 호출하여 CLR을 빌드할 수 있습니다.
 
 구성 요소 설치는 OS(운영 체제)에 따라 달라집니다. 특정 OS에 대한 빌드 지침을 참조하세요.
 
@@ -82,12 +82,12 @@ OS에서 교차 빌드되지 않습니다(X64에서 빌드되는 ARM의 경우�
  2. **corerun.exe를 사용하여 패키지되지 않은 DLL을 사용하는 응용 프로그램을 실행합니다**.
     이 리포지토리는 NuGet에서 종속성을 사용하지 않는 corerun.exe라는 간단한 호스트도 정의합니다.
     실제로 사용할 필요한 DLL을 가져올 위치를 호스트에 입력해야 하고, 수동으로 수집해야 합니다.
-    이 기술은 [Core CLR 리포지토리](https://github.com/dotnet/coreclr)의 모든 테스트에 사용되며, 예비 유닛 테스트처럼 빠른 로컬 'edit-compile-debug' 루프에 유용합니다.
+    이 기술은 [dotnet/coreclr](https://github.com/dotnet/coreclr) 리포지토리의 모든 테스트에 사용되며, 예비 유닛 테스트처럼 빠른 로컬 ‘edit-compile-debug’ 루프에 유용합니다.
     이 기술 사용에 대한 자세한 내용은 [Executing .NET Core Apps with CoreRun.exe](https://github.com/dotnet/coreclr/blob/master/Documentation/workflow/UsingCoreRun.md)(CoreRun.exe를 사용하여 .NET Core 앱 실행)를 참조하세요.
 
 ## <a name="build-the-cli-from-source"></a>소스에서 CLI 빌드
 
-.NET Core CLI에 대한 소스 코드는 [`dotnet/cli` GitHub의 리포지토리](https://github.com/dotnet/cli/)에서 확인할 수 있습니다.
+.NET Core CLI에 대한 소스 코드는 GitHub의 [dotnet/cli](https://github.com/dotnet/cli/) 리포지토리에서 확인할 수 있습니다.
 
 .NET Core CLI을 빌드하려면 컴퓨터에 다음이 설치되어 있어야 합니다.
 
