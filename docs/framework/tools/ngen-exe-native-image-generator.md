@@ -26,7 +26,7 @@ helpviewer_keywords:
 - BypassNGenAttribute
 - System.Runtime.BypassNGenAttribute
 ms.assetid: 44bf97aa-a9a4-4eba-9a0d-cfaa6fc53a66
-caps.latest.revision: ''
+caps.latest.revision: 57
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
@@ -34,7 +34,7 @@ ms.workload:
 - dotnet
 ms.openlocfilehash: 20c120323356171d78da35a490488f4654baece6
 ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 03/26/2018
 ---
