@@ -44,17 +44,17 @@ F #은 본래 생산성에 대 한 합니다. F #에 대 한 도구 지원을 �
 
 ## <a name="learning-f"></a>F # 학습 #
 
-[F # 둘러보기](tour.md) 코드 샘플은 주요 언어 기능의 개요를 제공 합니다. F #에 새로 고 언어의 작동 방식에 대해 하려고 할 경우에 권장 됩니다.
+[F# 둘러보기](tour.md)는 많은 코드 샘플과 함께 언어의 주요 기능에 대한 개요를 제공합니다. F#을 처음 배우는 사람이거나 언어가 어떻게 작동하는지 알아보고 싶은 경우에 해당 문서를 권장합니다.
 
-[Visual Studio에서 F #으로 시작 하려면](get-started/get-started-visual-studio.md) Windows에 속해 있으며 사용할 것 전체 Visual Studio IDE (Integraded 개발 환경) 하는 경우.
+[Visual Studio에서 F #으로 시작](get-started/get-started-visual-studio.md) Windows 환경에서 Visual Studio IDE(Integraded Development Environment) 사용을 원한다면 해당 문서를 참고하십시오.
 
-[Mac 용 Visual Studio에서 F #으로 시작](get-started/get-started-with-visual-studio-for-mac.md) macOS에 속해 있으며 Visual Studio IDE를 사용 하려는 경우.
+[Mac용 Visual Studio에서 F#으로 시작](get-started/get-started-with-visual-studio-for-mac.md) macOS 환경에서 Visual Studio IDE 사용을 원한다면 해당 문서를 참고하십시오.
 
 [Visual Studio Code에서 F #으로 시작 하려면](get-started/get-started-vscode.md) 경우 플랫폼 간 경량 및 IDE 기능이 포함 된 발생 합니다.
 
-[F #으로.NET Core CLI 시작](get-started/get-started-command-line.md) 명령줄 도구를 사용 하려는 경우.
+[F#으로 .NET Core CLI 시작](get-started/get-started-command-line.md) 커맨드 라인 도구 사용을 원한다면 해당 문서를 참고하십시오.
 
-[F # 및 Xamarin 시작](https://docs.microsoft.com/xamarin/cross-platform/platform/fsharp/) F #을 사용한 모바일 프로그래밍에 대 한 합니다.
+[F# 및 Xamarin 시작](https://docs.microsoft.com/xamarin/cross-platform/platform/fsharp/) F#을 이용한 모바일 프로그래밍에 대한 문서입니다.
 
 ## <a name="references"></a>참조
 
