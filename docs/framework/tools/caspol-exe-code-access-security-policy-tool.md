@@ -23,7 +23,7 @@ helpviewer_keywords:
 - security policy [.NET Framework], modifying
 - manually editing security configuration files
 ms.assetid: d2bf6123-7b0c-4e60-87ad-a39a1c3eb2e0
-caps.latest.revision: ''
+caps.latest.revision: 44
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
@@ -31,7 +31,7 @@ ms.workload:
 - dotnet
 ms.openlocfilehash: 6ab363e833ecde86a17d9adea3fcd26351725868
 ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 03/26/2018
 ---
