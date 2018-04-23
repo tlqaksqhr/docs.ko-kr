@@ -21,11 +21,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 2f575e8bdf06490eb0e5eba0ac07fe23787aa18d
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 0b932de530c8ae48c4c8204d7da8e9b3dff59021
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="potential-pitfalls-in-data-and-task-parallelism"></a>데이터 및 작업 병렬 처리에서 발생할 수 있는 문제
 대부분의 경우 <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> 및 <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType>는 일반 순차적 루프에 대해 상당한 성능 향상을 제공할 수 있습니다. 그러나 루프를 병렬화하는 작업은 순차적 코드에서 일반적이지 않거나 전혀 발생하지 않는 문제를 일으킬 수 있는 복잡성을 도입합니다. 이 항목에서는 병렬 루프를 작성할 때 주의해야 할 사항을 나열합니다.  
@@ -85,7 +85,7 @@ ms.lasthandoff: 12/23/2017
  [!code-csharp[TPL_Pitfalls#02](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_pitfalls/cs/pitfalls.cs#02)]
  [!code-vb[TPL_Pitfalls#02](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_pitfalls/vb/pitfalls_vb.vb#02)]  
   
- 다음 예제는 작업 인스턴스 내에서 루프를 실행하여 교착 상태를 방지하는 방법을 보여줍니다. UI 스레드는 루프에 의해 차단되지 않으며 메시지는 처리될 수 있습니다.  
+ 다음 예제는 작업 인스턴스 내에서 루프를 실행하여 교착 상태를 방지하는 방법을 보여 줍니다. UI 스레드는 루프에 의해 차단되지 않으며 메시지는 처리될 수 있습니다.  
   
  [!code-csharp[TPL_Pitfalls#03](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_pitfalls/cs/pitfalls.cs#03)]
  [!code-vb[TPL_Pitfalls#03](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_pitfalls/vb/pitfalls_vb.vb#03)]  
@@ -93,4 +93,4 @@ ms.lasthandoff: 12/23/2017
 ## <a name="see-also"></a>참고 항목  
  [병렬 프로그래밍](../../../docs/standard/parallel-programming/index.md)  
  [PLINQ에서 발생할 수 있는 문제](../../../docs/standard/parallel-programming/potential-pitfalls-with-plinq.md)  
- [병렬 프로그래밍 패턴: .NET Framework 4의 병렬 패턴 이해 및 적용](http://go.microsoft.com/fwlink/?LinkID=185142)
+ [병렬 프로그래밍 패턴: .NET Framework 4의 병렬 패턴 이해 및 적용](https://www.microsoft.com/download/details.aspx?id=19222)

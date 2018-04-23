@@ -1,6 +1,6 @@
 ---
-title: ".NET Compiler Platform SDK 작업 영역 모델 사용"
-description: "이 개요에서는 코드에 대한 작업 영역 및 프로젝트를 쿼리하고 조작하는 데 사용하는 형식에 대한 이해를 제공합니다."
+title: .NET Compiler Platform SDK 작업 영역 모델 사용
+description: 이 개요에서는 코드에 대한 작업 영역 및 프로젝트를 쿼리하고 조작하는 데 사용하는 형식에 대한 이해를 제공합니다.
 author: billwagner
 ms.author: wiwagn
 ms.date: 10/15/2017
@@ -8,11 +8,11 @@ ms.topic: conceptual
 ms.prod: .net
 ms.devlang: devlang-csharp
 ms.custom: mvc
-ms.openlocfilehash: d0d4e9c012b025b9393ac34f0833795fca9841d5
-ms.sourcegitcommit: d095094e942eedf09530ea5636fbaf9029853027
+ms.openlocfilehash: c42795346c505f925c0b4cb232325085fa065201
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/19/2017
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="work-with-a-workspace"></a>작업 영역 작업
 
@@ -40,7 +40,7 @@ IDE와 같은 호스트 환경은 개방형 솔루션에 해당하는 작업 영
 
 다음 다이어그램은 작업 영역이 호스트 환경, 도구에 연결되는 방법 및 편집하는 방법을 표현합니다.
 
-![프로젝트 및 원본 파일을 포함하는 작업 영역의 다양한 요소 간의 관계](media/workspace-obj-relations.png)
+![프로젝트 및 원본 파일을 포함하는 작업 영역의 다양한 요소 간의 관계](media/work-with-workspace/workspace-obj-relations.png)
 
 ## <a name="summary"></a>요약
 

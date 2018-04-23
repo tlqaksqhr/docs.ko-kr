@@ -1,6 +1,6 @@
 ---
-title: "반복기"
-description: "기본 제공 C# 반복기를 사용하는 방법 및 사용자 지정 반복기 메서드를 만드는 방법을 알아봅니다."
+title: 반복기
+description: 기본 제공 C# 반복기를 사용하는 방법 및 사용자 지정 반복기 메서드를 만드는 방법을 알아봅니다.
 keywords: .NET, .NET Core
 author: BillWagner
 ms.author: wiwagn
@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 5cf36f45-f91a-4fca-a0b7-87f233e108e9
-ms.openlocfilehash: 0a78fe3aa4d88cd5ea1c98f372e4d6672cff5236
-ms.sourcegitcommit: d095094e942eedf09530ea5636fbaf9029853027
+ms.openlocfilehash: 403a286e9b1168b9e913b3cb2764e7fe262017d4
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/19/2017
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="iterators"></a>반복기
 
@@ -29,7 +29,7 @@ ms.lasthandoff: 12/19/2017
 
 C# 언어는 이러한 두 시나리오에 대한 기능을 제공합니다. 이 문서에서는 해당 기능에 대한 개요를 제공합니다.
 
-이 자습서는 여러 단계로 구성됩니다. 각 단계 후에 응용 프로그램을 실행하고 진행 상황을 확인할 수 있습니다. 이 항목에 대한 [전체 샘플을 보거나 다운로드](https://github.com/dotnet/docs/blob/master/samples/csharp/iterators)할 수도 있습니다. 다운로드 지침은 [샘플 및 자습서](../samples-and-tutorials/index.md#viewing-and-downloading-samples)를 참조하세요.
+이 자습서는 여러 단계로 구성됩니다. 각 단계 후에 응용 프로그램을 실행하고 진행 상황을 확인할 수 있습니다. 이 항목에 대한 [전체 샘플을 보거나 다운로드](https://github.com/dotnet/samples/blob/master/csharp/iterators)할 수도 있습니다. 다운로드 지침은 [샘플 및 자습서](../samples-and-tutorials/index.md#viewing-and-downloading-samples)를 참조하세요.
 
 ## <a name="iterating-with-foreach"></a>foreach로 반복 처리
 

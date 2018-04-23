@@ -1,5 +1,5 @@
 ---
-title: "연습: Office 프로그래밍(C# 및 Visual Basic)"
+title: '연습: Office 프로그래밍(C# 및 Visual Basic)'
 ms.date: 07/20/2015
 ms.prod: .net
 ms.technology:
@@ -13,23 +13,22 @@ helpviewer_keywords:
 - Office programming [C#]
 - Office programming [Visual Basic]
 ms.assetid: 519cff31-f80b-4f0e-a56b-26358d0f8c51
-caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 684fe023d46d3522aecd3cbd4d89e7f9ee92140f
-ms.sourcegitcommit: d2da0142247ef42a219a5d2907f153e62dc6ea0d
+ms.openlocfilehash: 7108ef10333b2ec7aded1b8f768c2953283ac625
+ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="walkthrough-office-programming-c-and-visual-basic"></a>연습: Office 프로그래밍(C# 및 Visual Basic)
 Visual Studio에서는 Microsoft Office 프로그래밍을 개선하는 C# 및 Visual Basic의 기능을 제공합니다. 유용한 C# 기능으로는 명명된 인수 및 선택적 인수, `dynamic` 형식의 반환 값 등이 있습니다. COM 프로그래밍에서 `ref` 키워드를 생략하면 인덱싱된 속성에 액세스할 수 있게 됩니다. Visual Basic의 기능으로는 자동 구현 속성, 람다 식의 문, 컬렉션 이니셜라이저 등이 있습니다.
 
-이 두 언어에서는 PIA(주 Interop 어셈블리)를 사용자 컴퓨터에 배포하지 않아도 COM 구성 요소와 상호 작용하는 어셈블리를 배포할 수 있도록 하는 형식 정보를 포함할 수 있습니다. 자세한 내용은 [연습: 관리되는 어셈블리의 형식 포함](http://msdn.microsoft.com/library/b28ec92c-1867-4847-95c0-61adfe095e21)을 참조하세요.  
+이 두 언어에서는 PIA(주 Interop 어셈블리)를 사용자 컴퓨터에 배포하지 않아도 COM 구성 요소와 상호 작용하는 어셈블리를 배포할 수 있도록 하는 형식 정보를 포함할 수 있습니다. 자세한 내용은 [연습: 관리되는 어셈블리의 형식 포함](https://msdn.microsoft.com/library/b28ec92c-1867-4847-95c0-61adfe095e21)을 참조하세요.  
   
 이 연습에서는 Office 프로그래밍과 관련해서 이러한 기능을 설명하지만 대부분 일반 프로그래밍에서도 유용합니다. 연습에서는 Excel 추가 기능 응용 프로그램을 사용하여 Excel 통합 문서를 만듭니다. 그런 다음 통합 문서 링크를 포함하는 Word 문서를 만듭니다. 마지막으로 PIA 종속성을 사용 및 사용하지 않도록 설정하는 방법을 알아봅니다.  
   
-## <a name="prerequisites"></a>필수 구성 요소  
+## <a name="prerequisites"></a>전제 조건  
 
 이 연습을 완료하려면 Microsoft Office Excel 및 Microsoft Office Word가 컴퓨터에 설치되어 있어야 합니다.  
   
@@ -121,7 +120,7 @@ Visual Studio에서는 Microsoft Office 프로그래밍을 개선하는 C# 및 V
 
      [!code-vb[csOfficeWalkthrough#7](../../../csharp/programming-guide/interop/codesnippet/VisualBasic/walkthrough-office-programming_7.vb)]  
   
-     여기서 추가하는 코드는 C#의 또 다른 기능, 즉 Office 등의 COM 호스트에서 반환되는 `Object` 값을 [dynamic](../../../csharp/language-reference/keywords/dynamic.md) 형식인 것처럼 처리하는 기능을 보여줍니다. [/link](../../../csharp/language-reference/compiler-options/link-compiler-option.md) 컴파일러 옵션을 통해 어셈블리를 참조할 때 **Interop 형식 포함**을 기본값인 `True` 또는 그와 동일한 값으로 설정하면 이 작업이 자동으로 수행됩니다. `dynamic` 형식을 사용하면 Visual Basic의 기존 기능인 런타임에 바인딩을 사용할 수 있으며, Visual C# 2008 이하 버전 언어에서 필요했던 명시적 캐스팅을 사용할 필요가 없습니다.  
+     여기서 추가하는 코드는 C#의 또 다른 기능, 즉 Office 등의 COM 호스트에서 반환되는 `Object` 값을 [dynamic](../../../csharp/language-reference/keywords/dynamic.md) 형식인 것처럼 처리하는 기능을 보여 줍니다. [/link](../../../csharp/language-reference/compiler-options/link-compiler-option.md) 컴파일러 옵션을 통해 어셈블리를 참조할 때 **Interop 형식 포함**을 기본값인 `True` 또는 그와 동일한 값으로 설정하면 이 작업이 자동으로 수행됩니다. `dynamic` 형식을 사용하면 Visual Basic의 기존 기능인 런타임에 바인딩을 사용할 수 있으며, Visual C# 2008 이하 버전 언어에서 필요했던 명시적 캐스팅을 사용할 필요가 없습니다.  
   
      예를 들어 `excelApp.Columns[1]`는 `Object`를 반환하고, `AutoFit`는 Excel [범위](https://msdn.microsoft.com/library/microsoft.office.interop.excel.range.aspx) 메서드입니다. `dynamic`을 사용하지 않는 경우에는 `excelApp.Columns[1]` 메서드를 호출하기 전에 `Range`에서 반환하는 개체를 `AutoFit` 인스턴스로 캐스팅해야 합니다.  
   
@@ -147,7 +146,7 @@ Visual Studio에서는 Microsoft Office 프로그래밍을 개선하는 C# 및 V
 
      [!code-vb[csOfficeWalkthrough#10](../../../csharp/programming-guide/interop/codesnippet/VisualBasic/walkthrough-office-programming_10.vb)]  
   
-     이 코드는 COM 프로그래밍에서 `ref` 키워드를 생략하는 기능, 명명된 인수, 선택적 인수 등 다양한 C#의 새로운 기능을 보여줍니다. Visual Basic에는 이러한 기능이 이미 포함되어 있습니다. [PasteSpecial](https://msdn.microsoft.com/library/microsoft.office.interop.word.selection.pastespecial.aspx) 메서드에는 모두 선택적 참조 매개 변수로 정의되는 7개의 매개 변수가 있습니다. 명명된 인수와 선택적 인수를 사용하면 액세스할 매개 변수를 이름으로 지정하고 해당 매개 변수에만 인수를 보낼 수 있습니다. 이 예제에서는 클립보드에 통합 문서 링크를 만들어야 하고(`Link` 매개 변수) Word 문서에 링크를 아이콘으로 표시하도록(`DisplayAsIcon` 매개 변수) 지정하는 인수를 전송합니다. Visual C#에서는 이러한 인수의 `ref` 키워드를 생략할 수도 있습니다.
+     이 코드는 COM 프로그래밍에서 `ref` 키워드를 생략하는 기능, 명명된 인수, 선택적 인수 등 다양한 C#의 새로운 기능을 보여 줍니다. Visual Basic에는 이러한 기능이 이미 포함되어 있습니다. [PasteSpecial](https://msdn.microsoft.com/library/microsoft.office.interop.word.selection.pastespecial.aspx) 메서드에는 모두 선택적 참조 매개 변수로 정의되는 7개의 매개 변수가 있습니다. 명명된 인수와 선택적 인수를 사용하면 액세스할 매개 변수를 이름으로 지정하고 해당 매개 변수에만 인수를 보낼 수 있습니다. 이 예제에서는 클립보드에 통합 문서 링크를 만들어야 하고(`Link` 매개 변수) Word 문서에 링크를 아이콘으로 표시하도록(`DisplayAsIcon` 매개 변수) 지정하는 인수를 전송합니다. Visual C#에서는 이러한 인수의 `ref` 키워드를 생략할 수도 있습니다.
   
 ### <a name="to-run-the-application"></a>응용 프로그램을 실행하려면  
   
@@ -169,7 +168,7 @@ Visual Studio에서는 Microsoft Office 프로그래밍을 개선하는 C# 및 V
   
      자세한 내용은 [방법: 어셈블리 내용 보기](../../../framework/app-domains/how-to-view-assembly-contents.md)를 참조하세요.  
   
-5.  **MANIFEST** 아이콘을 두 번 클릭합니다. 프로젝트가 참조하는 항목이 들어 있는 어셈블리 목록이 포함된 창이 표시됩니다. `Microsoft.Office.Interop.Excel` 및 `Microsoft.Office.Interop.Word`는 목록에 포함되어 있지 않습니다. 프로젝트에 필요한 형식을 어셈블리로 가져왔기 때문에 PIA에 대한 참조는 필요하지 않으므로 배포를 손쉽게 수행할 수 있습니다. PIA는 사용자의 컴퓨터에 없어도 되며 응용 프로그램에서 특정 PIA 버전을 배포할 필요가 없으므로 필요한 API가 모든 버전에 있다면 여러 Office 버전에서 사용하도록 응용 프로그램을 설계할 수 있습니다.  
+5.  **MANIFEST** 아이콘을 두 번 클릭합니다. 프로젝트가 참조하는 항목이 들어 있는 어셈블리 목록이 포함된 창이 표시됩니다. `Microsoft.Office.Interop.Excel` 및 `Microsoft.Office.Interop.Word`는 목록에 포함되어 있지 않습니다. 프로젝트에 필요한 형식을 어셈블리로 가져왔기 때문에 PIA에 대한 참조는 필요하지 않으므로 배포를 손쉽게 수행할 수 있습니다. PIA는 사용자의 컴퓨터에 없어도 되며 응용 프로그램에서 특정 PIA 버전을 배포할 필요가 없으므로 필요한 PIA가 모든 버전에 있다면 여러 Office 버전에서 사용하도록 응용 프로그램을 설계할 수 있습니다.  
   
      PIA를 배포할 필요가 없으므로 이전 버전을 비롯한 여러 Office 버전에서 사용 가능한 응용 프로그램을 고급 시나리오에서 만들 수 있습니다. 그러나 사용 중인 Office 버전에서 제공되지 않는 API를 코드에서 사용하지 않는 경우에만 이러한 방식이 작동합니다. 특정 API가 이전 버전에서 제공되었는지 여부를 항상 명확하게 파악할 수 있는 것은 아니므로 이전 버전의 Office는 사용하지 않는 것이 좋습니다.  
   
@@ -210,8 +209,8 @@ Visual Studio에서는 Microsoft Office 프로그래밍을 개선하는 C# 및 V
  [람다 식(Visual Basic)](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)  
  [람다 식(C#)](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)  
  [방법: COM Interop 프로그래밍에서 인덱싱된 속성 사용](../../../csharp/programming-guide/interop/how-to-use-indexed-properties-in-com-interop-rogramming.md)  
- [연습: Microsoft Office 어셈블리의 형식 정보 포함](http://msdn.microsoft.com/library/85b55e05-bc5e-4665-b6ae-e1ada9299fd3)  
- [연습: 관리되는 어셈블리의 형식 포함](http://msdn.microsoft.com/library/b28ec92c-1867-4847-95c0-61adfe095e21)  
- [연습: Excel용 첫 VSTO 추가 기능 만들기](http://msdn.microsoft.com/library/a855e2be-3ecf-4112-a7f5-ec0f7fad3b5f)  
+ [연습: Microsoft Office 어셈블리의 형식 정보 포함](https://msdn.microsoft.com/library/85b55e05-bc5e-4665-b6ae-e1ada9299fd3(v=vs.100))  
+ [연습: 관리되는 어셈블리의 형식 포함](https://msdn.microsoft.com/library/b28ec92c-1867-4847-95c0-61adfe095e21)  
+ [연습: Excel용 첫 VSTO 추가 기능 만들기](https://msdn.microsoft.com/library/a855e2be-3ecf-4112-a7f5-ec0f7fad3b5f)  
  [COM Interop](../../../visual-basic/programming-guide/com-interop/index.md)  
  [상호 운용성](../../../csharp/programming-guide/interop/index.md)

@@ -1,6 +1,6 @@
 ---
-title: "방법: String.Split(C# Guide)를 사용하여 문자열 구문 분석"
-description: "String.Split은 구분 기호 집합에서 분리된 문자열 배열을 반환합니다. 문자열을 구문 분석하는 쉬운 방법입니다."
+title: '방법: String.Split(C# Guide)를 사용하여 문자열 구문 분석'
+description: String.Split은 구분 기호 집합에서 분리된 문자열 배열을 반환합니다. 문자열을 구문 분석하는 쉬운 방법입니다.
 ms.date: 01/03/2018
 ms.prod: .net
 ms.technology:
@@ -15,11 +15,11 @@ ms.assetid: 729c2923-4169-41c6-9c90-ef176c1e2953
 author: BillWagner
 ms.author: wiwagn
 ms.custom: mvc
-ms.openlocfilehash: afaff6f81a1a4240214f738d0fc9f3bafdaf868c
-ms.sourcegitcommit: 655fd4f78741967f80c409cef98347fdcf77857d
+ms.openlocfilehash: c6ccbe8e1287101d3b79d0ec84e530e0e525ff57
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="how-to-parse-strings-using-stringsplit-c-guide"></a>방법: String.Split(C# Guide)를 사용하여 문자열 구문 분석
 
@@ -51,7 +51,7 @@ ms.lasthandoff: 02/28/2018
   
 [!code-csharp-interactive[split strings using strings as separators](../../../samples/snippets/csharp/how-to/strings/ParseStringsUsingSplit.cs#5)]
 
-[GitHub 리포지토리](https://github.com/dotnet/docs/tree/master/samples/snippets/csharp/how-to/strings)의 코드를 확인하여 이러한 샘플을 시험해 볼 수 있습니다. 또는 샘플을 [zip 파일로](https://github.com/dotnet/docs/tree/master/samples/snippets/csharp/how-to/strings.zip) 다운로드할 수 있습니다.
+[GitHub 리포지토리](https://github.com/dotnet/samples/tree/master/snippets/csharp/how-to/strings)의 코드를 확인하여 이러한 샘플을 시험해 볼 수 있습니다. 또는 샘플을 [zip 파일로](https://github.com/dotnet/samples/raw/master/snippets/csharp/how-to/strings.zip) 다운로드할 수 있습니다.
 
 ## <a name="see-also"></a>참고 항목  
  [C# 프로그래밍 가이드](../programming-guide/index.md)  

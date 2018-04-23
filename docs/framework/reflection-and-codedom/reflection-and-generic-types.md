@@ -1,12 +1,13 @@
 ---
-title: "리플렉션 및 제네릭 형식"
-ms.custom: 
+title: 리플렉션 및 제네릭 형식
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -22,16 +23,17 @@ helpviewer_keywords:
 - types, generic
 - type parameters
 ms.assetid: f7180fc5-dd41-42d4-8a8e-1b34288e06de
-caps.latest.revision: "16"
+caps.latest.revision: 16
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 2c6ace8f34999a6d98fc6784dd21ce88baf2af42
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 54ce839c6a569bed784a03acd5e2b92f4f1f5aca
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="reflection-and-generic-types"></a>리플렉션 및 제네릭 형식
 <a name="top"></a> 리플렉션의 관점에서 제네릭 형식과 일반 형식 간 차이점은 제네릭 형식이 형식 매개 변수(제네릭 형식 정의인 경우) 또는 형식 인수(생성된 형식인 경우)의 집합과 연결되어 있다는 점입니다. 제네릭 메서드는 동일한 방식으로 일반 메서드와 다릅니다.  
@@ -65,15 +67,15 @@ ms.lasthandoff: 12/22/2017
   
 <a name="is_this_a_generic_type_or_method"></a>   
 ## <a name="is-this-a-generic-type-or-method"></a>제네릭 형식인가요 아니면 제네릭 메서드인가요?  
- 리플렉션을 사용하여 <xref:System.Type>의 인스턴스에서 나타내는 알 수 없는 형식을 검사할 때 알 수 없는 형식이 제네릭인지 여부를 확인하는 데 <xref:System.Type.IsGenericType%2A> 속성을 사용합니다. 형식이 제네릭 경우 `true` 를 반환합니다. 마찬가지로 리플렉션을 사용하여 <xref:System.Reflection.MethodInfo> 클래스의 인스턴스에서 나타내는 알 수 없는 메서드를 검사할 때 메서드가 제네릭인지 여부를 확인하는 데 <xref:System.Reflection.MethodInfo.IsGenericMethod%2A> 속성을 사용합니다.  
+ 리플렉션을 사용하여 <xref:System.Type>의 인스턴스에서 나타내는 알 수 없는 형식을 검사할 때 알 수 없는 형식이 제네릭인지 여부를 확인하는 데 <xref:System.Type.IsGenericType%2A> 속성을 사용합니다. 형식이 제네릭 경우 `true` 를 반환합니다. 마찬가지로 리플렉션을 사용하여 <xref:System.Reflection.MethodInfo> 클래스의 인스턴스에서 나타내는 알 수 없는 메서드를 검사할 때 메서드가 제네릭인지 여부를 확인하는 데 <xref:System.Reflection.MethodBase.IsGenericMethod%2A> 속성을 사용합니다.  
   
 ### <a name="is-this-a-generic-type-or-method-definition"></a>제네릭 형식인가요 아니면 메서드 정의인가요?  
- <xref:System.Type.IsGenericTypeDefinition%2A> 속성을 사용하여 <xref:System.Type> 개체가 제네릭 형식 정의를 나타내는지를 확인하고, <xref:System.Reflection.MethodInfo.IsGenericMethodDefinition%2A> 메서드를 사용하여 <xref:System.Reflection.MethodInfo> 개체가 제네릭 메서드 정의를 나타내는지를 확인합니다.  
+ <xref:System.Type.IsGenericTypeDefinition%2A> 속성을 사용하여 <xref:System.Type> 개체가 제네릭 형식 정의를 나타내는지를 확인하고, <xref:System.Reflection.MethodBase.IsGenericMethodDefinition%2A> 메서드를 사용하여 <xref:System.Reflection.MethodInfo> 개체가 제네릭 메서드 정의를 나타내는지를 확인합니다.  
   
  제네릭 형식 및 메서드 정의는 인스턴스화할 수 있는 형식을 생성하는 템플릿입니다. <xref:System.Collections.Generic.Dictionary%602>와 같은 .NET Framework 클래스 라이브러리의 제네릭 형식은 제네릭 형식 정의입니다.  
   
 ### <a name="is-the-type-or-method-open-or-closed"></a>형식 또는 메서드가 개방형인가요 아니면 폐쇄형인가요?  
- 인스턴스화할 수 있는 형식이 모든 바깥쪽 형식의 모든 형식 매개 변수를 비롯하여 모든 해당 형식 매개 변수를 대체한 경우 제네릭 형식 또는 메서드는 폐쇄형입니다. 폐쇄형인 경우 제네릭 형식의 인스턴스만 만들 수 있습니다. 형식이 개방형인 경우 <xref:System.Type.ContainsGenericParameters%2A?displayProperty=nameWithType> 속성에서 `true` 를 반환합니다. 메서드의 경우 <xref:System.Reflection.MethodInfo.ContainsGenericParameters%2A?displayProperty=nameWithType> 메서드가 같은 기능을 수행합니다.  
+ 인스턴스화할 수 있는 형식이 모든 바깥쪽 형식의 모든 형식 매개 변수를 비롯하여 모든 해당 형식 매개 변수를 대체한 경우 제네릭 형식 또는 메서드는 폐쇄형입니다. 폐쇄형인 경우 제네릭 형식의 인스턴스만 만들 수 있습니다. 형식이 개방형인 경우 <xref:System.Type.ContainsGenericParameters%2A?displayProperty=nameWithType> 속성에서 `true` 를 반환합니다. 메서드의 경우 <xref:System.Reflection.MethodBase.ContainsGenericParameters%2A?displayProperty=nameWithType> 메서드가 같은 기능을 수행합니다.  
   
  [맨 위로 이동](#top)  
   
@@ -149,7 +151,7 @@ generic<typename V, typename W> ref class D : B<int, V> {};
   
 <a name="invariants"></a>   
 ## <a name="invariants"></a>고정  
- 제네릭 형식에 대한 리플렉션의 일반적인 용어에 대한 고정 조건 표는 <xref:System.Type.IsGenericType%2A?displayProperty=nameWithType>을 참조하세요. 제네릭 메서드와 관련된 추가 용어는 <xref:System.Reflection.MethodInfo.IsGenericMethod%2A?displayProperty=nameWithType>를 참조하세요.  
+ 제네릭 형식에 대한 리플렉션의 일반적인 용어에 대한 고정 조건 표는 <xref:System.Type.IsGenericType%2A?displayProperty=nameWithType>을 참조하세요. 제네릭 메서드와 관련된 추가 용어는 <xref:System.Reflection.MethodBase.IsGenericMethod%2A?displayProperty=nameWithType>를 참조하세요.  
   
  [맨 위로 이동](#top)  
   

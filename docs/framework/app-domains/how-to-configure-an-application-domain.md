@@ -1,12 +1,13 @@
 ---
-title: "방법: 응용 프로그램 도메인 구성"
-ms.custom: 
+title: '방법: 응용 프로그램 도메인 구성'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-bcl
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-bcl
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -16,16 +17,17 @@ helpviewer_keywords:
 - application domains, configuring
 - ApplicationBase property
 ms.assetid: 07ea8438-7a34-49f0-a7e8-3d6ff7e4a482
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 1024d41d99b9752fbbf8ef9458a8396d91c68fd0
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: d8db75edec8e80e0e137593a424f12575cfc747b
+ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-configure-an-application-domain"></a>방법: 응용 프로그램 도메인 구성
 <xref:System.AppDomainSetup> 클래스를 사용하여 새 응용 프로그램 도메인에 대한 구성 정보를 공용 언어 런타임에 제공할 수 있습니다. 사용자 고유의 응용 프로그램 도메인을 만들 때 가장 중요한 속성은 <xref:System.AppDomainSetup.ApplicationBase%2A>입니다. 다른 **AppDomainSetup** 속성은 런타임 호스트에서 특정 응용 프로그램 도메인을 구성하는 데 주로 사용됩니다.  
@@ -43,5 +45,5 @@ ms.lasthandoff: 01/19/2018
  [!code-vb[ADApplicationBase#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/ADApplicationBase/VB/source2.vb#2)]  
   
 ## <a name="see-also"></a>참고 항목  
- [응용 프로그램 도메인으로 프로그래밍](http://msdn.microsoft.com/library/bd36055b-56bd-43eb-b4d8-820c37172131)  
+ [응용 프로그램 도메인으로 프로그래밍](application-domains.md#programming-with-application-domains)  
  [응용 프로그램 도메인 사용](../../../docs/framework/app-domains/use.md)

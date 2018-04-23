@@ -1,7 +1,7 @@
 ---
-title: ".NET Core CLI 확장성 모델"
-description: "CLI(명령줄 인터페이스) 도구를 확장할 수 있는 방법을 알아봅니다."
-keywords: "CLI, 확장성, 사용자 지정 명령, .NET Core"
+title: .NET Core CLI 확장성 모델
+description: CLI(명령줄 인터페이스) 도구를 확장할 수 있는 방법을 알아봅니다.
+keywords: CLI, 확장성, 사용자 지정 명령, .NET Core
 author: blackdwarf
 ms.author: mairaw
 ms.date: 04/12/2017
@@ -10,12 +10,13 @@ ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: fffc3400-aeb9-4c07-9fea-83bc8dbdcbf3
-ms.workload: dotnetcore
-ms.openlocfilehash: 0d273510903c888f3212a57f4c28b118b73cab5c
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.workload:
+- dotnetcore
+ms.openlocfilehash: 53329c302066891c240a234156c2572acc66e7ab
+ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="net-core-cli-tools-extensibility-model"></a>.NET Core CLI 도구 확장성 모델
 
@@ -82,8 +83,8 @@ CLI 도구는 세 가지 주요 방법으로 확장할 수 있습니다.
 
 이러한 종류의 도구에는 해당 도구를 사용하는 프로젝트의 종속성 그래프와 완전히 구분되는 종속성 그래프가 있습니다. 복원 프로세스에서는 먼저 프로젝트의 종속성을 복원한 다음 각 도구 및 해당 종속성을 복원합니다.
 
-보다 풍부한 예제 및 다양한 조합은 [.NET Core CLI 리포지토리](https://github.com/dotnet/cli/tree/rel/1.0.1/TestAssets/TestProjects)에서 확인할 수 있습니다.
-동일한 리포지토리에서 [사용된 도구의 구현](https://github.com/dotnet/cli/tree/rel/1.0.1/TestAssets/TestPackages)도 확인할 수 있습니다.
+보다 풍부한 예제 및 다양한 조합은 [.NET Core CLI 리포지토리](https://github.com/dotnet/cli/tree/release/2.1/TestAssets/TestProjects)에서 확인할 수 있습니다.
+동일한 리포지토리에서 [사용된 도구의 구현](https://github.com/dotnet/cli/tree/release/2.1/TestAssets/TestPackages)도 확인할 수 있습니다.
 
 ### <a name="custom-targets"></a>사용자 지정 대상
 NuGet에는 [사용자 지정 MSBuild 대상 및 props 파일을 패키지](/nuget/create-packages/creating-a-package#including-msbuild-props-and-targets-in-a-package)하는 기능이 있습니다. .NET Core CLI 도구가 MSBuild를 사용하도록 이동하면서 이제 동일한 확장성 메커니즘이 .NET Core 프로젝트에 적용됩니다. 빌드 프로세스를 확장하거나 빌드 프로세스에서 생성된 파일과 같은 아티팩트에 액세스하거나 빌드 호출 시 구성을 검사하려는 경우 이 유형의 확장성을 사용하게 됩니다.

@@ -1,6 +1,6 @@
 ---
-title: "방법: 문자열을 DateTime으로 변환"
-description: "날짜 및 시간을 나타내는 문자열을 구문 분석하여 날짜 및 시간 문자열에서 DateTime을 만드는 기술을 알아봅니다."
+title: '방법: 문자열을 DateTime으로 변환'
+description: 날짜 및 시간을 나타내는 문자열을 구문 분석하여 날짜 및 시간 문자열에서 DateTime을 만드는 기술을 알아봅니다.
 ms.date: 02/15/2018
 ms.prod: .net
 ms.technology: dotnet-standard
@@ -22,11 +22,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: a94300a879ac18d21d35dfe58ac0d9805f240a92
-ms.sourcegitcommit: d3cfda0943364aaf6ccd574f55f584576c8a4fee
+ms.openlocfilehash: 6912109c11039c311067f330c3af71b15cbadc7a
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="parsing-date-and-time-strings-in-net"></a>.NET에서 날짜 및 시간 문자열 구문 분석
 
@@ -64,7 +64,7 @@ ms.lasthandoff: 03/08/2018
 > 이 문서의 모든 C# 샘플은 브라우저에서 실행됩니다. **실행** 단추를 눌러 출력을 볼 수 있습니다. 편집해서 직접 실험할 수도 있습니다.
 
 > [!NOTE]
-> 이러한 예제는 GitHub 문서 리포지토리에서 [C#](https://github.com/dotnet/docs/samples/tree/master/snippets/csharp/how-to/conversions) 및 [VB](https://github.com/dotnet/docs/samples/tree/master/snippets/visualbasic/how-to/conversions)용으로 제공됩니다. 또는 [C#](https://github.com/dotnet/docs/samples/tree/master/snippets/csharp/how-to/conversions.zip) 또는 [VB](https://github.com/dotnet/docs/samples/tree/master/snippets/visualbasic/how-to/conversions.zip)용 zip 파일로 프로젝트를 다운로드할 수 있습니다.
+> 이러한 예제는 GitHub 문서 리포지토리에서 [C#](https://github.com/dotnet/samples/tree/master/snippets/csharp/how-to/conversions) 및 [VB](https://github.com/dotnet/samples/tree/master/snippets/visualbasic/how-to/conversions)용으로 제공됩니다. 또는 [C#](https://github.com/dotnet/samples/raw/master/snippets/csharp/how-to/conversions.zip) 또는 [VB](https://github.com/dotnet/samples/raw/master/snippets/visualbasic/how-to/conversions.zip)용 zip 파일로 프로젝트를 다운로드할 수 있습니다.
 
 [!code-csharp-interactive[Parsing.DateAndTime#1](../../../samples/snippets/csharp/how-to/conversions/StringToDateTime.cs#1)]
 [!code-vb[Parsing.DateAndTime#1](../../../samples/snippets/visualbasic/how-to/conversions/Program.vb#1)]

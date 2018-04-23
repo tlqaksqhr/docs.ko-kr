@@ -1,6 +1,6 @@
 ---
-title: ".NET Compiler Platform SDK 개념 및 개체 모델"
-description: "이 개요는 .NET 컴파일러 SDK와 함께 효과적으로 작동해야 하는 배경 정보를 제공합니다. API 계층, 관련된 주요 형식 및 전체 개체 모델을 학습합니다."
+title: .NET Compiler Platform SDK 개념 및 개체 모델
+description: 이 개요는 .NET 컴파일러 SDK와 함께 효과적으로 작동해야 하는 배경 정보를 제공합니다. API 계층, 관련된 주요 형식 및 전체 개체 모델을 학습합니다.
 author: billwagner
 ms.author: wiwagn
 ms.date: 10/10/2017
@@ -8,11 +8,11 @@ ms.topic: conceptual
 ms.prod: .net
 ms.devlang: devlang-csharp
 ms.custom: mvc
-ms.openlocfilehash: d230d334eba4e438635a4c70e8c1b5fc5075b065
-ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
+ms.openlocfilehash: 17a7884518f71d7df1f4a9fe8c91da87d7335e0d
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="understand-the-net-compiler-platform-sdk-model"></a>.NET Compiler Platform SDK 모델 이해
 
@@ -22,15 +22,15 @@ ms.lasthandoff: 03/15/2018
 
 .NET Compiler Platform SDK는 기존의 컴파일러 파이프라인을 미러링하는 API 계층을 제공하여 소비자로서 사용자에게 C# 및 Visual Basic 컴파일러의 코드 분석을 노출합니다.
 
-![개체 코드로 소스 코드를 처리하는 컴파일러 파이프라인의 단계](media/compiler-pipeline.png)
+![개체 코드로 소스 코드를 처리하는 컴파일러 파이프라인의 단계](media/compiler-api-model/compiler-pipeline.png)
 
 이 파이프라인의 각 단계는 별도 구성 요소입니다. 첫째로, 구문 분석 단계는 원본 텍스트를 언어 문법 뒤에 오는 구문으로 토큰화하고 구문 분석합니다. 둘째로, 선언 단계는 원본 및 가져온 메타데이터를 분석하여 명명된 기호를 형성합니다. 다음으로 바인딩 단계는 코드의 식별자를 기호와 일치시킵니다. 마지막으로 내보내기 단계는 컴파일러로 생성된 모든 정보와 함께 어셈블리를 내보냅니다.
 
-![컴파일러 파이프라인 API는 컴파일러 파이프라인의 일부인 각 단계에 대한 액세스를 제공합니다.](media/compiler-pipeline-api.png)
+![컴파일러 파이프라인 API는 컴파일러 파이프라인의 일부인 각 단계에 대한 액세스를 제공합니다.](media/compiler-api-model/compiler-pipeline-api.png)
 
 이러한 각 단계에 해당하여 .NET Compiler Platform SDK는 해당 단계에서 정보에 액세스할 수 있는 개체 모델을 노출합니다. 구문 분석 단계는 구문 트리를 노출하고, 선언 단계는 계층적 기호 테이블을 노출하고, 바인딩 단계는 컴파일러의 의미 체계 분석 결과를 노출하고, 내보내기 단계는 IL 바이트 코드를 생성하는 API입니다.
 
-![컴파일러 파이프라인의 각 단계에서 컴파일러 API에 사용할 수 있는 언어 서비스](media/compiler-pipeline-lang-svc.png)
+![컴파일러 파이프라인의 각 단계에서 컴파일러 API에 사용할 수 있는 언어 서비스](media/compiler-api-model/compiler-pipeline-lang-svc.png)
 
 각 컴파일러는 단일 종단 간 전체로 이러한 구성 요소를 하나로 결합합니다.
 
@@ -40,7 +40,7 @@ ms.lasthandoff: 03/15/2018
 
 .NET 컴파일러 SDK는 두 개의 주요 API 계층인 컴파일러 API 및 작업 영역 API로 이루어져 있습니다.
 
-![컴파일러 파이프라인 API에 의해 표시되는 API 계층](media/api-layers.png)
+![컴파일러 파이프라인 API에 의해 표시되는 API 계층](media/compiler-api-model/api-layers.png)
 
 ### <a name="compiler-apis"></a>컴파일러 API
 

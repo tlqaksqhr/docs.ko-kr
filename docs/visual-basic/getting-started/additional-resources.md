@@ -1,6 +1,6 @@
 ---
-title: "Visual Basic 프로그래머를 위한 추가 리소스"
-description: "자세히 알아보기 위해 웹의 리소스를 검색하고, 질문하고, Visual Basic에 대한 자세한 내용을 확인할 수 있습니다."
+title: Visual Basic 프로그래머를 위한 추가 리소스
+description: 자세히 알아보기 위해 웹의 리소스를 검색하고, 질문하고, Visual Basic에 대한 자세한 내용을 확인할 수 있습니다.
 ms.date: 02/21/2018
 ms.prod: .net
 ms.technology:
@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 9bfb42e9-327f-439b-935e-8884f6aca80c
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9b2e9718d6f342bdd0865a9593e85683a5bf9a45
-ms.sourcegitcommit: cec0525b2121c36198379525e69aa5388266db5b
+ms.openlocfilehash: 10fe7506f2112ef15566a35c1c330a25024744f8
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/09/2018
 ---
-# <a name="additional-resources"></a>추가 리소스
+# <a name="additional-resources"></a>추가 자료
 
 다음 웹 사이트에서는 관련 지침과 일반적인 문제에 대한 대답을 제공합니다.
 
@@ -38,7 +38,7 @@ ms.lasthandoff: 02/23/2018
 |용어|정의|
 |----------|----------------|
 |[Code Gallery](https://code.msdn.microsoft.com/site/search?f%5B0%5D.Type=ProgrammingLanguage&f%5B0%5D.Value=VB&f%5B0%5D.Text=VB.NET)(코드 갤러리)|샘플 응용 프로그램과 기타 리소스를 다운로드하고 개발자 커뮤니티와 공유할 수 있습니다.|
-|[Visual Basic 설명서 샘플](https://github.com/dotnet/docs/tree/master/samples/snippets/visualbasic)|Visual Basic 및 .NET 설명서 전체에서 사용되는 샘플을 포함합니다.|
+|[Visual Basic 설명서 샘플](https://github.com/dotnet/samples/tree/master/snippets/visualbasic)|Visual Basic 및 .NET 설명서 전체에서 사용되는 샘플을 포함합니다.|
 
 ### <a name="forums"></a>포럼
 

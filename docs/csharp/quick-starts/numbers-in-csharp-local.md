@@ -1,6 +1,6 @@
 ---
-title: "C#의 숫자 자습서 - C# 로컬 빠른 시작"
-description: "숫자 형식, 해당 속성 및 메서드를 살펴보면서 C#을 학습합니다."
+title: C#의 숫자 자습서 - C# 로컬 빠른 시작
+description: 숫자 형식, 해당 속성 및 메서드를 살펴보면서 C#을 학습합니다.
 author: billwagner
 ms.author: wiwagn
 ms.date: 10/31/2017
@@ -9,11 +9,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.custom: mvc
-ms.openlocfilehash: 99c2f8e4807c4d18c0c798e3a737f4a88d6e62d6
-ms.sourcegitcommit: 3a96c706e4dbb4667bf3bf37edac9e1666646f93
+ms.openlocfilehash: 6570693ea09ca2b548615291ba4f2b69f6d92482
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="numbers-in-c-quickstart"></a>C#의 숫자 빠른 시작
 
@@ -315,7 +315,7 @@ Console.WriteLine(c / d);
 이제 여러 가지 숫자 형식을 살펴봤으므로 반지름이 2.50센티미터인 원의 면적을 계산하는 코드를 작성하세요. 원의 면적은 반지름 제곱 곱하기 PI입니다. 힌트: .NET에는 PI의 상수가 포함되어 있습니다. 즉 해당 값에 사용할 수 있는 <xref:System.Math.PI?displayProperty=nameWithType>입니다. 
 
 19에서 20 사이의 답을 받아야 합니다.
-[GitHub에서 완성된 샘플 코드를 보고](https://github.com/dotnet/docs/tree/master/samples/csharp/numbers-quickstart/Program.cs#L104-L106) 답을 확인할 수 있습니다.
+[GitHub에서 완성된 샘플 코드를 보고](https://github.com/dotnet/samples/tree/master/csharp/numbers-quickstart/Program.cs#L104-L106) 답을 확인할 수 있습니다.
 
 원하는 경우 다른 수식을 사용해 보세요. 
 

@@ -11,11 +11,11 @@ ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 9c3df50430117936fd0b9d4390cb84e02085e48d
-ms.sourcegitcommit: 498799639937c89de777361aab74261efe7b79ea
+ms.openlocfilehash: 73d4ad82ef8c48f57aa4cceceedba862a2c9ffa4
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="development-workflow-for-docker-apps"></a>Docker 앱에 대한 개발 워크플로
 
@@ -107,7 +107,7 @@ Visual Studio와 Docker용 도구를 사용하면 마우스 클릭 몇 번으로
 
 다음 예제에서는 ASP.NET Core 컨테이너에 대한 샘플 Dockerfile을 보여줍니다.
 
-```
+```Dockerfile
 FROM microsoft/aspnetcore:2.0
   
 ARG source
@@ -296,7 +296,7 @@ docker-compose up 명령을 사용하여 단일 docker-compose.yml 파일이 있
 
 그림 5-9처럼 docker run 명령을 사용하여 Docker 컨테이너를 실행할 수 있습니다.
 
-```
+```console
   docker run -t -d -p 80:5000 cesardl/netcore-webapi-microservice-docker:first
 ```
 
@@ -405,7 +405,7 @@ Visual Studio를 사용하면 편집기/CLI 방식을 사용할 때보다 워크
 
 [Windows 컨테이너](https://msdn.microsoft.com/en-us/virtualization/windowscontainers/about/about_overview)를 사용하면 Docker 생태계의 나머지 부분과 동일한 도구로 기존 Windows 응용 프로그램을 Docker 이미지로 변환하고 배포할 수 있습니다. Windows 컨테이너를 사용하려면 다음 예제와 같이 Dockerfile에서 PowerShell 명령을 실행합니다.
 
-```
+```Dockerfile
 FROM microsoft/windowsservercore
   
 LABEL Description="IIS" Vendor="Microsoft" Version="10"
@@ -417,7 +417,7 @@ CMD [ "ping", "localhost", "-t" ]
 
 이 예에서는 PowerShell 명령(RUN 설정)을 통해 Windows Server Core 기본 이미지(FROM 설정)를 사용하고 IIS를 설치합니다. 비슷한 방법으로 PowerShell 명령을 사용하여 ASP.NET 4.x, .NET 4.6 또는 다른 Windows 소프트웨어 같은 추가 구성 요소를 설치할 수도 있습니다. 예를 들어 Dockerfile의 다음 명령은 ASP.NET 4.5를 설치합니다.
 
-```
+```Dockerfile
 RUN powershell add-windowsfeature web-asp-net45
 ```
 

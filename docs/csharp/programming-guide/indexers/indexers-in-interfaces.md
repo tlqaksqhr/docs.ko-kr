@@ -1,21 +1,22 @@
 ---
-title: "인터페이스의 인덱서(C# 프로그래밍 가이드)"
+title: 인터페이스의 인덱서(C# 프로그래밍 가이드)
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 helpviewer_keywords:
 - indexers [C#], in interfaces
 - accessors [C#], indexers
 ms.assetid: e16b54bd-4a83-4f52-bd75-65819fca79e8
-caps.latest.revision: "18"
+caps.latest.revision: 18
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 304f2e037d8df025376d06f229ddd1584f8713b6
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 478920b5c1dea489db48caa48c045c4bd3da66ec
+ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="indexers-in-interfaces-c-programming-guide"></a>인터페이스의 인덱서(C# 프로그래밍 가이드)
 [interface](../../../csharp/language-reference/keywords/interface.md)에 인덱서를 선언할 수 있습니다. 인터페이스 인덱서 접근자와 [class](../../../csharp/language-reference/keywords/class.md) 인덱서 접근자 간에는 다음과 같은 차이점이 있습니다.  
@@ -32,7 +33,7 @@ ms.lasthandoff: 11/21/2017
   
  인덱서의 시그니처는 동일한 인터페이스에 선언된 다른 모든 인덱서의 시그니처와 달라야 합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제에서는 인터페이스 인덱서를 구현하는 방법을 보여 줍니다.  
   
  [!code-csharp[csProgGuideIndexers#4](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/indexers-in-interfaces_2.cs)]  
@@ -40,7 +41,7 @@ ms.lasthandoff: 11/21/2017
  앞의 예제에서는 인터페이스 멤버의 정규화된 이름을 사용하여 명시적 인터페이스 멤버 구현을 사용할 수 있습니다. 예:  
   
 ```  
-public string ISomeInterface.this   
+public string ISomeInterface.this[int index]   
 {   
 }   
 ```  
@@ -48,7 +49,7 @@ public string ISomeInterface.this
  그러나 정규화된 이름은 클래스가 동일한 인덱서 시그니처로 둘 이상의 인터페이스를 구현할 때 모호성을 피하기 위해서만 필요합니다. 예를 들어 `Employee` 클래스가 두 인터페이스 `ICitizen` 및 `IEmployee`를 구현하고 두 인터페이스의 인덱서 시그니처가 같으면 명시적 인터페이스 멤버 구현이 필요합니다. 즉, 다음과 같은 인덱서 선언이 있다고 가정합니다.  
   
 ```  
-public string IEmployee.this   
+public string IEmployee.this[int index]   
 {   
 }   
 ```  
@@ -56,7 +57,7 @@ public string IEmployee.this
  이 선언은 `IEmployee` 인터페이스의 인덱서를 구현합니다. 또한 다음과 같은 선언이 있다고 가정합니다.  
   
 ```  
-public string ICitizen.this   
+public string ICitizen.this[int index]
 {   
 }   
 ```  

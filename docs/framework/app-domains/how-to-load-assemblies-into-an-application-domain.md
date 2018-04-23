@@ -1,12 +1,13 @@
 ---
-title: "방법: 응용 프로그램 도메인에 어셈블리 로드"
-ms.custom: 
+title: '방법: 응용 프로그램 도메인에 어셈블리 로드'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-bcl
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-bcl
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -16,16 +17,17 @@ helpviewer_keywords:
 - application domains, loading assemblies
 - loading assemblies
 ms.assetid: 1432aa2d-bd83-4346-bf3b-a1b7920e2aa9
-caps.latest.revision: "16"
+caps.latest.revision: 16
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 55c166b4d996eb96b284ea8c78fd2df98431187f
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: 69867e71f363d8b0ad4513a9cffe8e49dac801e3
+ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-load-assemblies-into-an-application-domain"></a>방법: 응용 프로그램 도메인에 어셈블리 로드
 응용 프로그램 도메인에 어셈블리를 로드하는 방법에는 여러 가지가 있습니다. <xref:System.Reflection.Assembly?displayProperty=nameWithType> 클래스의 `static`(Visual Basic에서는 `Shared`) <xref:System.Reflection.Assembly.Load%2A> 메서드를 사용하는 것이 좋습니다. 어셈블리를 로드할 수 있는 다른 방법은 다음과 같습니다.  
@@ -57,7 +59,7 @@ ms.lasthandoff: 01/19/2018
   
 ## <a name="see-also"></a>참고 항목  
  <xref:System.Reflection.Assembly.ReflectionOnlyLoad%2A>  
- [응용 프로그램 도메인으로 프로그래밍](http://msdn.microsoft.com/library/bd36055b-56bd-43eb-b4d8-820c37172131)  
+ [응용 프로그램 도메인으로 프로그래밍](application-domains.md#programming-with-application-domains)  
  [리플렉션](../../../docs/framework/reflection-and-codedom/reflection.md)  
  [응용 프로그램 도메인 사용](../../../docs/framework/app-domains/use.md)  
  [방법: 리플렉션 전용 컨텍스트에 어셈블리 로드](../../../docs/framework/reflection-and-codedom/how-to-load-assemblies-into-the-reflection-only-context.md)  

@@ -1,12 +1,13 @@
 ---
-title: "응용 프로그램 도메인에서 설치 정보 검색"
-ms.custom: 
+title: 응용 프로그램 도메인에서 설치 정보 검색
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-bcl
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-bcl
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -17,16 +18,17 @@ helpviewer_keywords:
 - retrieving setup information
 - application domains, retrieving setup information
 ms.assetid: 5cdb12ae-1e37-4a62-8ec7-93d6dcc6e8d9
-caps.latest.revision: "10"
+caps.latest.revision: 10
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: eeb0921eefc7ac157b94f3b6de43460cdfd42ba8
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: b5a7585b68c36fe5e435e563729d9a0f3540a42a
+ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="retrieving-setup-information-from-an-application-domain"></a>응용 프로그램 도메인에서 설치 정보 검색
 응용 프로그램 도메인의 각 인스턴스는 두 속성과 <xref:System.AppDomainSetup> 정보로 구성됩니다. <xref:System.AppDomain?displayProperty=nameWithType> 클래스를 사용하여 응용 프로그램 도메인에서 설치 정보를 검색할 수 있습니다. 이 클래스는 응용 프로그램 도메인에 대한 구성 정보를 검색하는 여러 멤버를 제공합니다.  
@@ -46,5 +48,5 @@ ms.lasthandoff: 01/19/2018
  [!code-vb[AppDomain_Setup#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/AppDomain_Setup/VB/source3.vb#3)]  
   
 ## <a name="see-also"></a>참고 항목  
- [응용 프로그램 도메인으로 프로그래밍](http://msdn.microsoft.com/library/bd36055b-56bd-43eb-b4d8-820c37172131)  
+ [응용 프로그램 도메인으로 프로그래밍](application-domains.md#programming-with-application-domains)  
  [응용 프로그램 도메인 사용](../../../docs/framework/app-domains/use.md)

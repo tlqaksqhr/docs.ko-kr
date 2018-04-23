@@ -1,6 +1,6 @@
 ---
-title: "클래스 소개 자습서 - C# 로컬 빠른 시작"
-description: "첫 번째 C# 프로그램을 만들고 개체 지향 개념을 살펴봅니다."
+title: 클래스 소개 자습서 - C# 로컬 빠른 시작
+description: 첫 번째 C# 프로그램을 만들고 개체 지향 개념을 살펴봅니다.
 author: billwagner
 ms.author: wiwagn
 ms.date: 10/11/2017
@@ -9,11 +9,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.custom: mvc
-ms.openlocfilehash: 97c1de562c86ea04153ec09bb0e813565523a3ba
-ms.sourcegitcommit: d2da0142247ef42a219a5d2907f153e62dc6ea0d
+ms.openlocfilehash: dd3fff6f74c92a45545e8e36f28eab351b39b37e
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="introduction-to-classes"></a>클래스 소개
 
@@ -142,7 +142,7 @@ using System.Collections.Generic;
 
 [!code-csharp[BalanceComputation](../../../samples/csharp/classes-quickstart/BankAccount.cs#BalanceComputation "Computing the balance")]
 
-이 예제에서는 ***속성***의 중요한 측면을 보여줍니다. 이제 다른 프로그래머가 값을 요청할 때 잔액을 계산합니다. 계산은 모든 트랜잭션을 열거하고 합계를 현재 잔액으로 제공합니다.
+이 예제에서는 ***속성***의 중요한 측면을 보여 줍니다. 이제 다른 프로그래머가 값을 요청할 때 잔액을 계산합니다. 계산은 모든 트랜잭션을 열거하고 합계를 현재 잔액으로 제공합니다.
 
 다음으로 `MakeDeposit` 및 `MakeWithdrawal` 메서드를 구현합니다. 이러한 메서드는 최종 두 규칙을 적용합니다. 초기 잔액은 양수여야 하고 인출로 인해 음수의 잔액이 발생되어서는 안 됩니다. 
 
@@ -215,6 +215,6 @@ Console.WriteLine(account.GetAccountHistory());
 
 ## <a name="next-steps"></a>다음 단계
 
-잘 모르겠는 경우 [GitHub 리포지토리](https://github.com/dotnet/docs/tree/master/samples/csharp/classes-quickstart/)에서 이 빠른 시작의 소스를 확인할 수 있습니다.
+잘 모르겠는 경우 [GitHub 리포지토리](https://github.com/dotnet/samples/tree/master/csharp/classes-quickstart/)에서 이 빠른 시작의 소스를 확인할 수 있습니다.
 
 축하합니다. 모든 빠른 시작을 완료했습니다. 더 자세히 학습하려면 [자습서](../tutorials/index.md)를 확인하세요.

@@ -1,5 +1,5 @@
 ---
-title: "방법: 설치된 .NET Framework 버전 확인"
+title: '방법: 설치된 .NET Framework 버전 확인'
 ms.date: 01/24/2018
 ms.prod: .net-framework
 ms.technology:
@@ -18,13 +18,14 @@ ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 0a25ba2d72588dddf0ac1f88d4de59c623e31ff6
-ms.sourcegitcommit: ba765893e3efcece67d99fd6d5ce0074b050d1d9
+ms.openlocfilehash: edf1e5a53f6f578f943cf8775a798b5681d2d9dd
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/02/2018
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="how-to-determine-which-net-framework-versions-are-installed"></a>방법: 설치된 .NET Framework 버전 확인
+
 사용자는 자신의 컴퓨터에 여러 버전의 .NET Framework를 설치하여 실행할 수 있습니다. 따라서 앱을 개발하거나 배포할 때는 사용자의 컴퓨터에 어떤 .NET Framework 버전이 설치되었는지 알아야 합니다. .NET Framework는 각 버전으로 식별되는 다음과 같은 2개의 주요 구성 요소로 구성됩니다.  
   
 -   앱의 기능을 제공하는 형식 및 리소스 컬렉션에 해당하는 어셈블리 집합. .NET Framework와 어셈블리는 동일한 버전 번호를 공유합니다.  
@@ -47,7 +48,7 @@ ms.lasthandoff: 03/02/2018
  .NET Framework 버전별로 설치된 업데이트를 검색하는 방법에 대한 자세한 내용은 [방법: 설치된 .NET Framework 업데이트 확인](~/docs/framework/migration-guide/how-to-determine-which-net-framework-updates-are-installed.md)을 참조하세요. .NET Framework 설치에 대한 자세한 내용은 [개발자용 .NET Framework 설치](../../../docs/framework/install/guide-for-developers.md)를 참조하세요.  
   
 <a name="net_a"></a>   
-#### <a name="to-find-net-framework-versions-by-viewing-the-registry-net-framework-1-4"></a>레지스트리를 확인하여 .NET Framework 버전을 찾으려면(.NET Framework 1-4)  
+## <a name="to-find-net-framework-versions-by-viewing-the-registry-net-framework-1-4"></a>레지스트리를 확인하여 .NET Framework 버전을 찾으려면(.NET Framework 1-4)  
   
 1.  **시작** 메뉴에서 **실행**을 선택합니다.  
   
@@ -66,7 +67,7 @@ ms.lasthandoff: 03/02/2018
     > 레지스트리의 "NET Framework Setup" 폴더는 마침표로 시작하지 않습니다.
 
 <a name="net_b"></a> 
-#### <a name="to-find-net-framework-versions-by-viewing-the-registry-net-framework-45-and-later"></a>레지스트리를 확인하여 .NET Framework 버전을 찾으려면(.NET Framework 4.5 이상)
+## <a name="to-find-net-framework-versions-by-viewing-the-registry-net-framework-45-and-later"></a>레지스트리를 확인하여 .NET Framework 버전을 찾으려면(.NET Framework 4.5 이상)
 
 1. **시작** 메뉴에서 **실행**을 선택합니다.
 
@@ -102,8 +103,9 @@ ms.lasthandoff: 03/02/2018
     |Windows 10 1주년 업데이트: 394802<br /><br /> 모든 다른 OS 버전: 394806|[!INCLUDE[net_v462](../../../includes/net-v462-md.md)]| 
     |Windows 10 작성자 업데이트: 460798<br/><br/> 다른 모든 OS 버전: 460805 | .NET Framework 4.7 |
     |Windows 10 Fall Creators Update: 461308<br/><br/> 다른 모든 OS 버전: 461310 | .NET Framework 4.7.1 |
+    
 <a name="net_c"></a> 
-#### <a name="to-find-net-framework-versions-by-querying-the-registry-in-code-net-framework-1-4"></a>코드로 레지스트리를 쿼리하여 .NET Framework 버전을 찾으려면(.NET Framework 1-4)
+## <a name="to-find-net-framework-versions-by-querying-the-registry-in-code-net-framework-1-4"></a>코드로 레지스트리를 쿼리하여 .NET Framework 버전을 찾으려면(.NET Framework 1-4)
 
 - <xref:Microsoft.Win32.RegistryKey?displayProperty=nameWithType> 클래스를 사용하여 Windows 레지스트리의 HKEY_LOCAL_MACHINE 아래에 있는 Software\Microsoft\NET Framework Setup\NDP\ 하위 키에 액세스합니다.
 
@@ -127,7 +129,7 @@ ms.lasthandoff: 03/02/2018
     ```
 
 <a name="net_d"></a> 
-#### <a name="to-find-net-framework-versions-by-querying-the-registry-in-code-net-framework-45-and-later"></a>코드로 레지스트리를 쿼리하여 .NET Framework 버전을 찾으려면(.NET Framework 4.5 이상)
+## <a name="to-find-net-framework-versions-by-querying-the-registry-in-code-net-framework-45-and-later"></a>코드로 레지스트리를 쿼리하여 .NET Framework 버전을 찾으려면(.NET Framework 4.5 이상)
 
 1. `Release` DWORD가 있으면 .NET Framework 4.5 이상이 컴퓨터에 설치되어 있는 것입니다. 이 키워드 값이 설치된 버전을 나타냅니다. 이 키워드를 확인하려면 <xref:Microsoft.Win32.RegistryKey?displayProperty=nameWithType> 클래스의 <xref:Microsoft.Win32.RegistryKey.OpenBaseKey%2A> 및 <xref:Microsoft.Win32.RegistryKey.OpenSubKey%2A> 메서드를 사용하여 Windows 레지스트리의 HKEY_LOCAL_MACHINE 아래에 있는 Software\Microsoft\NET Framework Setup\NDP\v4\Full 하위 키에 액세스합니다.
 
@@ -164,7 +166,7 @@ ms.lasthandoff: 03/02/2018
     - 최신 버전에서 가장 오래된 버전 순서대로 확인합니다.
 
 <a name="ps_a"></a> 
-#### <a name="to-check-for-a-minimum-required-net-framework-version-by-querying-the-registry-in-powershell-net-framework-45-and-later"></a>PowerShell로 레지스트리를 쿼리하여 최소한 필요한 .NET Framework 버전을 확인하려면(.NET Framework 4.5 이상)
+## <a name="to-check-for-a-minimum-required-net-framework-version-by-querying-the-registry-in-powershell-net-framework-45-and-later"></a>PowerShell로 레지스트리를 쿼리하여 최소한 필요한 .NET Framework 버전을 확인하려면(.NET Framework 4.5 이상)
 
 - 다음 예제에서는 `Release` 키워드 값을 확인하여 Windows OS 버전에 관계없이 .NET Framework 4.6.2 이상이 설치되어 있는지 확인합니다(해당하는 경우 `True` 반환, 이외의 경우 `False` 반환).
 
@@ -186,7 +188,7 @@ ms.lasthandoff: 03/02/2018
     |.NET Framework 4.7.1|461308|
     
 <a name="clr_a"></a> 
-#### <a name="to-find-the-current-runtime-version-by-using-the-clrver-tool"></a>Clrver 도구를 사용하여 현재 런타임 버전을 찾으려면
+## <a name="to-find-the-current-runtime-version-by-using-the-clrver-tool"></a>Clrver 도구를 사용하여 현재 런타임 버전을 찾으려면
 
 - CLR 버전 도구(Clrver.exe)를 사용하여 컴퓨터에 설치된 공용 언어 런타임의 버전을 확인합니다.
 
@@ -201,7 +203,7 @@ ms.lasthandoff: 03/02/2018
      이 도구의 사용 방법에 대한 자세한 내용은 [Clrver.exe(CLR 버전 도구)](~/docs/framework/tools/clrver-exe-clr-version-tool.md)를 참조하세요.
 
 <a name="clr_b"></a> 
-#### <a name="to-find-the-current-runtime-version-by-querying-the-environment-class-in-code"></a>Environment 클래스를 코드로 쿼리하여 현재 런타임 버전을 확인하려면
+## <a name="to-find-the-current-runtime-version-by-querying-the-environment-class-in-code"></a>Environment 클래스를 코드로 쿼리하여 현재 런타임 버전을 확인하려면
 
 - 현재 코드를 실행하는 런타임 버전을 식별하는 <xref:System.Version> 개체를 검색하기 위해 <xref:System.Environment.Version%2A?displayProperty=nameWithType> 속성을 쿼리합니다. <xref:System.Version.Major%2A?displayProperty=nameWithType> 속성을 사용하여 주 릴리스 식별자(예: 버전 4.0의 "4")를 얻거나 <xref:System.Version.Minor%2A?displayProperty=nameWithType> 속성을 사용하여 부 릴리스 식별자(예: 버전 4.0의 "0")를 얻거나 <xref:System.Object.ToString%2A?displayProperty=nameWithType> 메서드를 사용하여 전체 버전 문자열(예: 다음 코드에 표시된 "4.0.30319.18010")을 얻을 수 있습니다. 이 속성은 현재 코드를 실행 중인 런타임 버전을 반영하는 단일 값을 반환합니다. 컴퓨터에 설치되어 있을 수 있는 다른 버전의 런타임이나 어셈블리 버전은 반환하지 않습니다.
 
@@ -222,6 +224,7 @@ ms.lasthandoff: 03/02/2018
     ```
 
 ## <a name="see-also"></a>참고 항목
- [방법: 설치된 .NET Framework 업데이트 확인](~/docs/framework/migration-guide/how-to-determine-which-net-framework-updates-are-installed.md)  
- [개발자용 .NET Framework 설치](../../../docs/framework/install/guide-for-developers.md)  
- [버전 및 종속성](~/docs/framework/migration-guide/versions-and-dependencies.md)
+
+[방법: 설치된 .NET Framework 업데이트 확인](~/docs/framework/migration-guide/how-to-determine-which-net-framework-updates-are-installed.md)  
+[개발자용 .NET Framework 설치](../../../docs/framework/install/guide-for-developers.md)  
+[버전 및 종속성](~/docs/framework/migration-guide/versions-and-dependencies.md)  
