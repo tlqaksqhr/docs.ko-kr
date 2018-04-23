@@ -1,27 +1,28 @@
 ---
-title: "dotnet test 및 xUnit을 사용하여 .NET Core에서 C# 코드 유닛 테스트"
-description: "dotnet test 및 xUnit을 사용하여 샘플 솔루션을 단계별로 빌드하는 대화형 환경을 통해 C# 및 .NET Core의 단위 테스트 개념을 알아봅니다."
+title: dotnet test 및 xUnit을 사용하여 .NET Core에서 C# 코드 유닛 테스트
+description: dotnet test 및 xUnit을 사용하여 샘플 솔루션을 단계별로 빌드하는 대화형 환경을 통해 C# 및 .NET Core의 단위 테스트 개념을 알아봅니다.
 author: ardalis
 ms.author: wiwagn
 ms.date: 11/29/2017
 ms.topic: article
 ms.prod: .net-core
-ms.workload: dotnetcore
-ms.openlocfilehash: 22f1f460ed87767768e806a85daab39f204db24f
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.workload:
+- dotnetcore
+ms.openlocfilehash: 382b5b5e8bafccbcaaa5ef247d894506c1b0b172
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/09/2018
 ---
-# <a name="unit-testing-c-in-net-core-using-dotnet-test-and-xunit"></a><span data-ttu-id="50b2b-103">dotnet 테스트 및 xUnit을 사용하여 .NET Core에서 C# 단위 테스트</span><span class="sxs-lookup"><span data-stu-id="50b2b-103">Unit testing C# in .NET Core using dotnet test and xUnit</span></span>
+# <a name="unit-testing-c-in-net-core-using-dotnet-test-and-xunit"></a><span data-ttu-id="4b2de-103">dotnet 테스트 및 xUnit을 사용하여 .NET Core에서 C# 단위 테스트</span><span class="sxs-lookup"><span data-stu-id="4b2de-103">Unit testing C# in .NET Core using dotnet test and xUnit</span></span>
 
-<span data-ttu-id="50b2b-104">이 자습서에서는 샘플 솔루션을 단계별로 빌드하는 대화형 환경을 통해 단위 테스트 개념을 알아볼 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="50b2b-104">This tutorial takes you through an interactive experience building a sample solution step-by-step to learn unit testing concepts.</span></span> <span data-ttu-id="50b2b-105">미리 빌드된 솔루션을 사용하여 이 자습서를 진행하려는 경우 시작하기 전에 [샘플 코드를 보거나 다운로드](https://github.com/dotnet/docs/tree/master/samples/core/getting-started/unit-testing-using-dotnet-test/).</span><span class="sxs-lookup"><span data-stu-id="50b2b-105">If you prefer to follow the tutorial using a pre-built solution, [view or download the sample code](https://github.com/dotnet/docs/tree/master/samples/core/getting-started/unit-testing-using-dotnet-test/) before you begin.</span></span> <span data-ttu-id="50b2b-106">다운로드 지침은 [샘플 및 자습서](../../samples-and-tutorials/index.md#viewing-and-downloading-samples)를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="50b2b-106">For download instructions, see [Samples and Tutorials](../../samples-and-tutorials/index.md#viewing-and-downloading-samples).</span></span>
+<span data-ttu-id="4b2de-104">이 자습서에서는 샘플 솔루션을 단계별로 빌드하는 대화형 환경을 통해 단위 테스트 개념을 알아볼 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="4b2de-104">This tutorial takes you through an interactive experience building a sample solution step-by-step to learn unit testing concepts.</span></span> <span data-ttu-id="4b2de-105">미리 빌드된 솔루션을 사용하여 이 자습서를 진행하려는 경우 시작하기 전에 [샘플 코드를 보거나 다운로드](https://github.com/dotnet/samples/tree/master/core/getting-started/unit-testing-using-dotnet-test/).</span><span class="sxs-lookup"><span data-stu-id="4b2de-105">If you prefer to follow the tutorial using a pre-built solution, [view or download the sample code](https://github.com/dotnet/samples/tree/master/core/getting-started/unit-testing-using-dotnet-test/) before you begin.</span></span> <span data-ttu-id="4b2de-106">다운로드 지침은 [샘플 및 자습서](../../samples-and-tutorials/index.md#viewing-and-downloading-samples)를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="4b2de-106">For download instructions, see [Samples and Tutorials](../../samples-and-tutorials/index.md#viewing-and-downloading-samples).</span></span>
 
-## <a name="creating-the-source-project"></a><span data-ttu-id="50b2b-107">소스 프로젝트 만들기</span><span class="sxs-lookup"><span data-stu-id="50b2b-107">Creating the source project</span></span>
+## <a name="creating-the-source-project"></a><span data-ttu-id="4b2de-107">소스 프로젝트 만들기</span><span class="sxs-lookup"><span data-stu-id="4b2de-107">Creating the source project</span></span>
 
-<span data-ttu-id="50b2b-108">셸 창을 엽니다.</span><span class="sxs-lookup"><span data-stu-id="50b2b-108">Open a shell window.</span></span> <span data-ttu-id="50b2b-109">솔루션을 저장하기 위한 *unit-testing-using-dotnet-test*라는 디렉터리를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="50b2b-109">Create a directory called *unit-testing-using-dotnet-test* to hold the solution.</span></span>
-<span data-ttu-id="50b2b-110">이 새 디렉터리 내에서 [`dotnet new sln`](../tools/dotnet-new.md)을 실행하여 새 솔루션을 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="50b2b-110">Inside this new directory, run [`dotnet new sln`](../tools/dotnet-new.md) to create a new solution.</span></span> <span data-ttu-id="50b2b-111">솔루션이 있으면 클래스 라이브러리와 단위 테스트 프로젝트를 모두 더 쉽게 관리할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="50b2b-111">Having a solution makes it easier to manage both the class library and the unit test project.</span></span>
-<span data-ttu-id="50b2b-112">솔루션 디렉터리 내에 *PrimeService* 디렉터리를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="50b2b-112">Inside the solution directory, create a *PrimeService* directory.</span></span> <span data-ttu-id="50b2b-113">지금까지의 디렉터리 및 파일 구조는 다음과 같아야 합니다.</span><span class="sxs-lookup"><span data-stu-id="50b2b-113">The directory and file structure thus far should be as follows:</span></span>
+<span data-ttu-id="4b2de-108">셸 창을 엽니다.</span><span class="sxs-lookup"><span data-stu-id="4b2de-108">Open a shell window.</span></span> <span data-ttu-id="4b2de-109">솔루션을 저장하기 위한 *unit-testing-using-dotnet-test*라는 디렉터리를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="4b2de-109">Create a directory called *unit-testing-using-dotnet-test* to hold the solution.</span></span>
+<span data-ttu-id="4b2de-110">이 새 디렉터리 내에서 [`dotnet new sln`](../tools/dotnet-new.md)을 실행하여 새 솔루션을 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="4b2de-110">Inside this new directory, run [`dotnet new sln`](../tools/dotnet-new.md) to create a new solution.</span></span> <span data-ttu-id="4b2de-111">솔루션이 있으면 클래스 라이브러리와 단위 테스트 프로젝트를 모두 더 쉽게 관리할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="4b2de-111">Having a solution makes it easier to manage both the class library and the unit test project.</span></span>
+<span data-ttu-id="4b2de-112">솔루션 디렉터리 내에 *PrimeService* 디렉터리를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="4b2de-112">Inside the solution directory, create a *PrimeService* directory.</span></span> <span data-ttu-id="4b2de-113">지금까지의 디렉터리 및 파일 구조는 다음과 같아야 합니다.</span><span class="sxs-lookup"><span data-stu-id="4b2de-113">The directory and file structure thus far should be as follows:</span></span>
 
 ```
 /unit-testing-using-dotnet-test
@@ -29,7 +30,7 @@ ms.lasthandoff: 12/23/2017
     /PrimeService
 ```
 
-<span data-ttu-id="50b2b-114">*PrimeService*를 현재 디렉터리로 만들고 [`dotnet new classlib`](../tools/dotnet-new.md)를 실행하여 소스 프로젝트를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="50b2b-114">Make *PrimeService* the current directory and run [`dotnet new classlib`](../tools/dotnet-new.md) to create the source project.</span></span> <span data-ttu-id="50b2b-115">*Class1.cs*의 이름을 *PrimeService.cs*로 바꿉니다.</span><span class="sxs-lookup"><span data-stu-id="50b2b-115">Rename *Class1.cs* to *PrimeService.cs*.</span></span> <span data-ttu-id="50b2b-116">TDD(테스트 기반 개발)를 사용하기 위해 먼저 `PrimeService` 클래스의 실패 구현을 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="50b2b-116">To use test-driven development (TDD), you first create a failing implementation of the `PrimeService` class:</span></span>
+<span data-ttu-id="4b2de-114">*PrimeService*를 현재 디렉터리로 만들고 [`dotnet new classlib`](../tools/dotnet-new.md)를 실행하여 소스 프로젝트를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="4b2de-114">Make *PrimeService* the current directory and run [`dotnet new classlib`](../tools/dotnet-new.md) to create the source project.</span></span> <span data-ttu-id="4b2de-115">*Class1.cs*의 이름을 *PrimeService.cs*로 바꿉니다.</span><span class="sxs-lookup"><span data-stu-id="4b2de-115">Rename *Class1.cs* to *PrimeService.cs*.</span></span> <span data-ttu-id="4b2de-116">TDD(테스트 기반 개발)를 사용하기 위해 먼저 `PrimeService` 클래스의 실패 구현을 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="4b2de-116">To use test-driven development (TDD), you first create a failing implementation of the `PrimeService` class:</span></span>
 
 ```csharp
 using System;
@@ -46,17 +47,17 @@ namespace Prime.Services
 }
 ```
 
-<span data-ttu-id="50b2b-117">디렉터리를 다시 *unit-testing-using-dotnet-test* 디렉터리로 변경합니다.</span><span class="sxs-lookup"><span data-stu-id="50b2b-117">Change the directory back to the *unit-testing-using-dotnet-test* directory.</span></span>
+<span data-ttu-id="4b2de-117">디렉터리를 다시 *unit-testing-using-dotnet-test* 디렉터리로 변경합니다.</span><span class="sxs-lookup"><span data-stu-id="4b2de-117">Change the directory back to the *unit-testing-using-dotnet-test* directory.</span></span>
 
-<span data-ttu-id="50b2b-118">[dotnet sln](../tools/dotnet-sln.md) 명령을 실행하여 클래스 라이브러리 프로젝트를 솔루션에 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="50b2b-118">Run the [dotnet sln](../tools/dotnet-sln.md) command to add the class library project to the solution:</span></span>
+<span data-ttu-id="4b2de-118">[dotnet sln](../tools/dotnet-sln.md) 명령을 실행하여 클래스 라이브러리 프로젝트를 솔루션에 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="4b2de-118">Run the [dotnet sln](../tools/dotnet-sln.md) command to add the class library project to the solution:</span></span>
 
 ```
 dotnet sln add .\PrimeService\PrimeService.csproj
 ```
 
-## <a name="creating-the-test-project"></a><span data-ttu-id="50b2b-119">테스트 프로젝트 만들기</span><span class="sxs-lookup"><span data-stu-id="50b2b-119">Creating the test project</span></span>
+## <a name="creating-the-test-project"></a><span data-ttu-id="4b2de-119">테스트 프로젝트 만들기</span><span class="sxs-lookup"><span data-stu-id="4b2de-119">Creating the test project</span></span>
 
-<span data-ttu-id="50b2b-120">다음으로 *PrimeService.Tests* 디렉터리를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="50b2b-120">Next, create the *PrimeService.Tests* directory.</span></span> <span data-ttu-id="50b2b-121">다음 개요에는 디렉터리 구조가 나와 있습니다.</span><span class="sxs-lookup"><span data-stu-id="50b2b-121">The following outline shows the directory structure:</span></span>
+<span data-ttu-id="4b2de-120">다음으로 *PrimeService.Tests* 디렉터리를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="4b2de-120">Next, create the *PrimeService.Tests* directory.</span></span> <span data-ttu-id="4b2de-121">다음 개요에는 디렉터리 구조가 나와 있습니다.</span><span class="sxs-lookup"><span data-stu-id="4b2de-121">The following outline shows the directory structure:</span></span>
 
 ```
 /unit-testing-using-dotnet-test
@@ -67,7 +68,7 @@ dotnet sln add .\PrimeService\PrimeService.csproj
     /PrimeService.Tests
 ```
 
-<span data-ttu-id="50b2b-122">*PrimeService.Tests* 디렉터리를 현재 디렉터리로 만들고 [`dotnet new xunit`](../tools/dotnet-new.md)를 사용하여 새 프로젝트를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="50b2b-122">Make the *PrimeService.Tests* directory the current directory and create a new project using [`dotnet new xunit`](../tools/dotnet-new.md).</span></span> <span data-ttu-id="50b2b-123">이 명령은 xUnit을 테스트 라이브러리로 사용하는 테스트 프로젝트를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="50b2b-123">This command creates a test project that uses xUnit as the test library.</span></span> <span data-ttu-id="50b2b-124">생성된 템플릿은 다음 코드와 유사한 *PrimeServiceTests.csproj* 파일에서 Test Runner를 구성합니다.</span><span class="sxs-lookup"><span data-stu-id="50b2b-124">The generated template configures the test runner in the *PrimeServiceTests.csproj* file similar to the following code:</span></span>
+<span data-ttu-id="4b2de-122">*PrimeService.Tests* 디렉터리를 현재 디렉터리로 만들고 [`dotnet new xunit`](../tools/dotnet-new.md)를 사용하여 새 프로젝트를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="4b2de-122">Make the *PrimeService.Tests* directory the current directory and create a new project using [`dotnet new xunit`](../tools/dotnet-new.md).</span></span> <span data-ttu-id="4b2de-123">이 명령은 xUnit을 테스트 라이브러리로 사용하는 테스트 프로젝트를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="4b2de-123">This command creates a test project that uses xUnit as the test library.</span></span> <span data-ttu-id="4b2de-124">생성된 템플릿은 다음 코드와 유사한 *PrimeServiceTests.csproj* 파일에서 Test Runner를 구성합니다.</span><span class="sxs-lookup"><span data-stu-id="4b2de-124">The generated template configures the test runner in the *PrimeServiceTests.csproj* file similar to the following code:</span></span>
 
 ```xml
 <ItemGroup>
@@ -77,15 +78,15 @@ dotnet sln add .\PrimeService\PrimeService.csproj
 </ItemGroup>
 ```
 
-<span data-ttu-id="50b2b-125">테스트 프로제트는 다른 패키지에 단위 테스트를 만들고 실행하도록 요구합니다.</span><span class="sxs-lookup"><span data-stu-id="50b2b-125">The test project requires other packages to create and run unit tests.</span></span> <span data-ttu-id="50b2b-126">이전 단계의 `dotnet new`는 xUnit 및 xUnit runner를 추가했습니다.</span><span class="sxs-lookup"><span data-stu-id="50b2b-126">`dotnet new` in the previous step added xUnit and the xUnit runner.</span></span> <span data-ttu-id="50b2b-127">이제 `PrimeService` 클래스 라이브러리를 프로젝트에 다른 종속성으로 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="50b2b-127">Now, add the `PrimeService` class library as another dependency to the project.</span></span> <span data-ttu-id="50b2b-128">[`dotnet add reference`](../tools/dotnet-add-reference.md) 명령을 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="50b2b-128">Use the [`dotnet add reference`](../tools/dotnet-add-reference.md) command:</span></span>
+<span data-ttu-id="4b2de-125">테스트 프로제트는 다른 패키지에 단위 테스트를 만들고 실행하도록 요구합니다.</span><span class="sxs-lookup"><span data-stu-id="4b2de-125">The test project requires other packages to create and run unit tests.</span></span> <span data-ttu-id="4b2de-126">이전 단계의 `dotnet new`는 xUnit 및 xUnit runner를 추가했습니다.</span><span class="sxs-lookup"><span data-stu-id="4b2de-126">`dotnet new` in the previous step added xUnit and the xUnit runner.</span></span> <span data-ttu-id="4b2de-127">이제 `PrimeService` 클래스 라이브러리를 프로젝트에 다른 종속성으로 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="4b2de-127">Now, add the `PrimeService` class library as another dependency to the project.</span></span> <span data-ttu-id="4b2de-128">[`dotnet add reference`](../tools/dotnet-add-reference.md) 명령을 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="4b2de-128">Use the [`dotnet add reference`](../tools/dotnet-add-reference.md) command:</span></span>
 
 ```
 dotnet add reference ../PrimeService/PrimeService.csproj
 ```
 
-<span data-ttu-id="50b2b-129">GitHub의 [샘플 리포지토리](https://github.com/dotnet/docs/blob/master/samples/core/getting-started/unit-testing-using-dotnet-test/PrimeService.Tests/PrimeService.Tests.csproj)에서 전체 파일을 볼 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="50b2b-129">You can see the entire file in the [samples repository](https://github.com/dotnet/docs/blob/master/samples/core/getting-started/unit-testing-using-dotnet-test/PrimeService.Tests/PrimeService.Tests.csproj) on GitHub.</span></span>
+<span data-ttu-id="4b2de-129">GitHub의 [샘플 리포지토리](https://github.com/dotnet/samples/blob/master/core/getting-started/unit-testing-using-dotnet-test/PrimeService.Tests/PrimeService.Tests.csproj)에서 전체 파일을 볼 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="4b2de-129">You can see the entire file in the [samples repository](https://github.com/dotnet/samples/blob/master/core/getting-started/unit-testing-using-dotnet-test/PrimeService.Tests/PrimeService.Tests.csproj) on GitHub.</span></span>
 
-<span data-ttu-id="50b2b-130">최종 솔루션 레이아웃은 다음과 같습니다.</span><span class="sxs-lookup"><span data-stu-id="50b2b-130">The following shows the final solution layout:</span></span>
+<span data-ttu-id="4b2de-130">최종 솔루션 레이아웃은 다음과 같습니다.</span><span class="sxs-lookup"><span data-stu-id="4b2de-130">The following shows the final solution layout:</span></span>
 
 ```
 /unit-testing-using-dotnet-test
@@ -98,15 +99,15 @@ dotnet add reference ../PrimeService/PrimeService.csproj
         PrimeServiceTests.csproj
 ```
 
-<span data-ttu-id="50b2b-131">솔루션에 테스트 프로젝트를 추가하려면 *unit-testing-using-dotnet-test* 디렉터리에서 [dotnet sln](../tools/dotnet-sln.md) 명령을 실행합니다.</span><span class="sxs-lookup"><span data-stu-id="50b2b-131">To add the test project to the solution, run the [dotnet sln](../tools/dotnet-sln.md) command in the *unit-testing-using-dotnet-test* directory:</span></span>
+<span data-ttu-id="4b2de-131">솔루션에 테스트 프로젝트를 추가하려면 *unit-testing-using-dotnet-test* 디렉터리에서 [dotnet sln](../tools/dotnet-sln.md) 명령을 실행합니다.</span><span class="sxs-lookup"><span data-stu-id="4b2de-131">To add the test project to the solution, run the [dotnet sln](../tools/dotnet-sln.md) command in the *unit-testing-using-dotnet-test* directory:</span></span>
 
 ```
 dotnet sln add .\PrimeService.Tests\PrimeService.Tests.csproj
 ```
 
-## <a name="creating-the-first-test"></a><span data-ttu-id="50b2b-132">첫 번째 테스트 만들기</span><span class="sxs-lookup"><span data-stu-id="50b2b-132">Creating the first test</span></span>
+## <a name="creating-the-first-test"></a><span data-ttu-id="4b2de-132">첫 번째 테스트 만들기</span><span class="sxs-lookup"><span data-stu-id="4b2de-132">Creating the first test</span></span>
 
-<span data-ttu-id="50b2b-133">TDD 접근 방식에서는 하나의 실패 테스트를 작성하고, 통과시키고, 이 프로세스를 반복해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="50b2b-133">The TDD approach calls for writing one failing test, making it pass, then repeating the process.</span></span> <span data-ttu-id="50b2b-134">*PrimeService.Tests* 디렉터리에서 *UnitTest1.cs*를 제거하고 새 C# 파일 *PrimeService_IsPrimeShould.cs*를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="50b2b-134">Remove *UnitTest1.cs* from the *PrimeService.Tests* directory and create a new C# file named *PrimeService_IsPrimeShould.cs*.</span></span> <span data-ttu-id="50b2b-135">다음 코드를 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="50b2b-135">Add the following code:</span></span>
+<span data-ttu-id="4b2de-133">TDD 접근 방식에서는 하나의 실패 테스트를 작성하고, 통과시키고, 이 프로세스를 반복해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="4b2de-133">The TDD approach calls for writing one failing test, making it pass, then repeating the process.</span></span> <span data-ttu-id="4b2de-134">*PrimeService.Tests* 디렉터리에서 *UnitTest1.cs*를 제거하고 새 C# 파일 *PrimeService_IsPrimeShould.cs*를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="4b2de-134">Remove *UnitTest1.cs* from the *PrimeService.Tests* directory and create a new C# file named *PrimeService_IsPrimeShould.cs*.</span></span> <span data-ttu-id="4b2de-135">다음 코드를 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="4b2de-135">Add the following code:</span></span>
 
 ```csharp
 using Xunit;
@@ -134,9 +135,9 @@ namespace Prime.UnitTests.Services
 }
 ```
 
-<span data-ttu-id="50b2b-136">`[Fact]` 특성은 Test Runner에서 실행하는 테스트 메서드를 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="50b2b-136">The `[Fact]` attribute indicates a test method that is run by the test runner.</span></span> <span data-ttu-id="50b2b-137">*PrimeService.Tests* 폴더에서 [`dotnet test`](../tools/dotnet-test.md)를 실행하여 테스트 및 클래스 라이브러리를 빌드한 다음 테스트를 실행합니다.</span><span class="sxs-lookup"><span data-stu-id="50b2b-137">From the *PrimeService.Tests* folder, execute [`dotnet test`](../tools/dotnet-test.md) to build the tests and the class library and then run the tests.</span></span> <span data-ttu-id="50b2b-138">xUnit Test Runner에는 테스트를 실행할 프로그램 진입점이 포함되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="50b2b-138">The xUnit test runner contains the program entry point to run your tests.</span></span> <span data-ttu-id="50b2b-139">`dotnet test`는 만든 단위 테스트 프로젝트를 사용하여 Test Runner를 시작합니다.</span><span class="sxs-lookup"><span data-stu-id="50b2b-139">`dotnet test` starts the test runner using the unit test project you've created.</span></span>
+<span data-ttu-id="4b2de-136">`[Fact]` 특성은 Test Runner에서 실행하는 테스트 메서드를 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="4b2de-136">The `[Fact]` attribute indicates a test method that is run by the test runner.</span></span> <span data-ttu-id="4b2de-137">*PrimeService.Tests* 폴더에서 [`dotnet test`](../tools/dotnet-test.md)를 실행하여 테스트 및 클래스 라이브러리를 빌드한 다음 테스트를 실행합니다.</span><span class="sxs-lookup"><span data-stu-id="4b2de-137">From the *PrimeService.Tests* folder, execute [`dotnet test`](../tools/dotnet-test.md) to build the tests and the class library and then run the tests.</span></span> <span data-ttu-id="4b2de-138">xUnit Test Runner에는 테스트를 실행할 프로그램 진입점이 포함되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="4b2de-138">The xUnit test runner contains the program entry point to run your tests.</span></span> <span data-ttu-id="4b2de-139">`dotnet test`는 만든 단위 테스트 프로젝트를 사용하여 Test Runner를 시작합니다.</span><span class="sxs-lookup"><span data-stu-id="4b2de-139">`dotnet test` starts the test runner using the unit test project you've created.</span></span>
 
-<span data-ttu-id="50b2b-140">테스트가 실패합니다.</span><span class="sxs-lookup"><span data-stu-id="50b2b-140">Your test fails.</span></span> <span data-ttu-id="50b2b-141">구현은 아직 만들지 않았습니다.</span><span class="sxs-lookup"><span data-stu-id="50b2b-141">You haven't created the implementation yet.</span></span> <span data-ttu-id="50b2b-142">`PrimeService` 클래스에서 작동하는 가장 간단한 코드를 작성하여 이 테스트를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="50b2b-142">Make this test by writing the simplest code in the `PrimeService` class that works.</span></span> <span data-ttu-id="50b2b-143">기존 `IsPrime` 메서드 구현을 다음 코드로 바꿉니다.</span><span class="sxs-lookup"><span data-stu-id="50b2b-143">Replace the existing `IsPrime` method implementation with the following code:</span></span>
+<span data-ttu-id="4b2de-140">테스트가 실패합니다.</span><span class="sxs-lookup"><span data-stu-id="4b2de-140">Your test fails.</span></span> <span data-ttu-id="4b2de-141">구현은 아직 만들지 않았습니다.</span><span class="sxs-lookup"><span data-stu-id="4b2de-141">You haven't created the implementation yet.</span></span> <span data-ttu-id="4b2de-142">`PrimeService` 클래스에서 작동하는 가장 간단한 코드를 작성하여 이 테스트를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="4b2de-142">Make this test by writing the simplest code in the `PrimeService` class that works.</span></span> <span data-ttu-id="4b2de-143">기존 `IsPrime` 메서드 구현을 다음 코드로 바꿉니다.</span><span class="sxs-lookup"><span data-stu-id="4b2de-143">Replace the existing `IsPrime` method implementation with the following code:</span></span>
 
 ```csharp
 public bool IsPrime(int candidate)
@@ -149,28 +150,28 @@ public bool IsPrime(int candidate)
 }
 ```
 
-<span data-ttu-id="50b2b-144">*PrimeService.Tests* 디렉터리에서 `dotnet test`를 다시 실행합니다.</span><span class="sxs-lookup"><span data-stu-id="50b2b-144">In the *PrimeService.Tests* directory, run `dotnet test` again.</span></span> <span data-ttu-id="50b2b-145">`dotnet test` 명령은 `PrimeService` 프로젝트에 대한 빌드를 실행한 다음 `PrimeService.Tests` 프로젝트에 대한 빌드를 실행합니다.</span><span class="sxs-lookup"><span data-stu-id="50b2b-145">The `dotnet test` command runs a build for the `PrimeService` project and then for the `PrimeService.Tests` project.</span></span> <span data-ttu-id="50b2b-146">두 프로젝트를 모두 빌드한 후 이 단일 테스트를 실행합니다.</span><span class="sxs-lookup"><span data-stu-id="50b2b-146">After building both projects, it runs this single test.</span></span> <span data-ttu-id="50b2b-147">전달합니다.</span><span class="sxs-lookup"><span data-stu-id="50b2b-147">It passes.</span></span>
+<span data-ttu-id="4b2de-144">*PrimeService.Tests* 디렉터리에서 `dotnet test`를 다시 실행합니다.</span><span class="sxs-lookup"><span data-stu-id="4b2de-144">In the *PrimeService.Tests* directory, run `dotnet test` again.</span></span> <span data-ttu-id="4b2de-145">`dotnet test` 명령은 `PrimeService` 프로젝트에 대한 빌드를 실행한 다음 `PrimeService.Tests` 프로젝트에 대한 빌드를 실행합니다.</span><span class="sxs-lookup"><span data-stu-id="4b2de-145">The `dotnet test` command runs a build for the `PrimeService` project and then for the `PrimeService.Tests` project.</span></span> <span data-ttu-id="4b2de-146">두 프로젝트를 모두 빌드한 후 이 단일 테스트를 실행합니다.</span><span class="sxs-lookup"><span data-stu-id="4b2de-146">After building both projects, it runs this single test.</span></span> <span data-ttu-id="4b2de-147">전달합니다.</span><span class="sxs-lookup"><span data-stu-id="4b2de-147">It passes.</span></span>
 
-## <a name="adding-more-features"></a><span data-ttu-id="50b2b-148">더 많은 기능 추가</span><span class="sxs-lookup"><span data-stu-id="50b2b-148">Adding more features</span></span>
+## <a name="adding-more-features"></a><span data-ttu-id="4b2de-148">더 많은 기능 추가</span><span class="sxs-lookup"><span data-stu-id="4b2de-148">Adding more features</span></span>
 
-<span data-ttu-id="50b2b-149">이제 하나의 테스트를 통과했으므로 더 작성할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="50b2b-149">Now that you've made one test pass, it's time to write more.</span></span> <span data-ttu-id="50b2b-150">소수에 대한 몇 가지 다른 간단한 사례가 있습니다(0, -1).</span><span class="sxs-lookup"><span data-stu-id="50b2b-150">There are a few other simple cases for prime numbers: 0, -1.</span></span> <span data-ttu-id="50b2b-151">이러한 사례를 `[Fact]` 특성과 함께 새 테스트로 추가할 수도 있지만, 이렇게 하면 금방 지루해질 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="50b2b-151">You could add those cases as new tests with the `[Fact]` attribute, but that quickly becomes tedious.</span></span> <span data-ttu-id="50b2b-152">유사한 테스트 모음을 작성하는 데 사용할 수 있는 다른 xUnit 특성이 있습니다.</span><span class="sxs-lookup"><span data-stu-id="50b2b-152">There are other xUnit attributes that enable you to write a suite of similar tests:</span></span>
+<span data-ttu-id="4b2de-149">이제 하나의 테스트를 통과했으므로 더 작성할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="4b2de-149">Now that you've made one test pass, it's time to write more.</span></span> <span data-ttu-id="4b2de-150">소수에 대한 몇 가지 다른 간단한 사례가 있습니다(0, -1).</span><span class="sxs-lookup"><span data-stu-id="4b2de-150">There are a few other simple cases for prime numbers: 0, -1.</span></span> <span data-ttu-id="4b2de-151">이러한 사례를 `[Fact]` 특성과 함께 새 테스트로 추가할 수도 있지만, 이렇게 하면 금방 지루해질 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="4b2de-151">You could add those cases as new tests with the `[Fact]` attribute, but that quickly becomes tedious.</span></span> <span data-ttu-id="4b2de-152">유사한 테스트 모음을 작성하는 데 사용할 수 있는 다른 xUnit 특성이 있습니다.</span><span class="sxs-lookup"><span data-stu-id="4b2de-152">There are other xUnit attributes that enable you to write a suite of similar tests:</span></span>
 
-- <span data-ttu-id="50b2b-153">`[Theory]`는 같은 코드를 실행하지만, 다른 입력 인수가 포함된 테스트 모음을 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="50b2b-153">`[Theory]` represents a suite of tests that execute the same code but have different input arguments.</span></span>
+- <span data-ttu-id="4b2de-153">`[Theory]`는 같은 코드를 실행하지만, 다른 입력 인수가 포함된 테스트 모음을 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="4b2de-153">`[Theory]` represents a suite of tests that execute the same code but have different input arguments.</span></span>
 
-- <span data-ttu-id="50b2b-154">`[InlineData]` 특성은 해당 입력에 대한 값을 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="50b2b-154">`[InlineData]` attribute specifies values for those inputs.</span></span>
+- <span data-ttu-id="4b2de-154">`[InlineData]` 특성은 해당 입력에 대한 값을 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="4b2de-154">`[InlineData]` attribute specifies values for those inputs.</span></span>
 
-<span data-ttu-id="50b2b-155">새 테스트를 만드는 대신 이러한 두 가지 특성 `[Theory]` 및 `[InlineData]`를 적용하여 *PrimeService_IsPrimeShould.cs* 파일에서 단일 이론을 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="50b2b-155">Instead of creating new tests, apply these two attributes, `[Theory]` and `[InlineData]`, to create a single theory in the *PrimeService_IsPrimeShould.cs* file.</span></span> <span data-ttu-id="50b2b-156">이 이론은 가장 작은 소수인 2보다 작은 몇 가지 값을 테스트하는 메서드입니다.</span><span class="sxs-lookup"><span data-stu-id="50b2b-156">The theory is a method that tests several values less than two, which is the lowest prime number:</span></span>
+<span data-ttu-id="4b2de-155">새 테스트를 만드는 대신 이러한 두 가지 특성 `[Theory]` 및 `[InlineData]`를 적용하여 *PrimeService_IsPrimeShould.cs* 파일에서 단일 이론을 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="4b2de-155">Instead of creating new tests, apply these two attributes, `[Theory]` and `[InlineData]`, to create a single theory in the *PrimeService_IsPrimeShould.cs* file.</span></span> <span data-ttu-id="4b2de-156">이 이론은 가장 작은 소수인 2보다 작은 몇 가지 값을 테스트하는 메서드입니다.</span><span class="sxs-lookup"><span data-stu-id="4b2de-156">The theory is a method that tests several values less than two, which is the lowest prime number:</span></span>
 
 [!code-csharp[Sample_TestCode](../../../samples/core/getting-started/unit-testing-using-dotnet-test/PrimeService.Tests/PrimeService_IsPrimeShould.cs?name=Sample_TestCode)]
 
-<span data-ttu-id="50b2b-157">`dotnet test`를 다시 실행하면 이러한 두 가지 테스트가 실패합니다.</span><span class="sxs-lookup"><span data-stu-id="50b2b-157">Run `dotnet test` again, and two of these tests should fail.</span></span> <span data-ttu-id="50b2b-158">모든 테스트를 통과하려면 *PrimeService.cs* 파일에서 `IsPrime` 메서드의 시작 부분에 있는 `if` 절을 변경합니다.</span><span class="sxs-lookup"><span data-stu-id="50b2b-158">To make all of the tests pass, change the `if` clause at the beginning of the `IsPrime` method in the *PrimeService.cs* file:</span></span>
+<span data-ttu-id="4b2de-157">`dotnet test`를 다시 실행하면 이러한 두 가지 테스트가 실패합니다.</span><span class="sxs-lookup"><span data-stu-id="4b2de-157">Run `dotnet test` again, and two of these tests should fail.</span></span> <span data-ttu-id="4b2de-158">모든 테스트를 통과하려면 *PrimeService.cs* 파일에서 `IsPrime` 메서드의 시작 부분에 있는 `if` 절을 변경합니다.</span><span class="sxs-lookup"><span data-stu-id="4b2de-158">To make all of the tests pass, change the `if` clause at the beginning of the `IsPrime` method in the *PrimeService.cs* file:</span></span>
 
 ```csharp
 if (candidate < 2)
 ```
 
-<span data-ttu-id="50b2b-159">기본 라이브러리에서 더 많은 테스트, 더 많은 이론, 더 많은 코드를 추가하여 계속 반복합니다.</span><span class="sxs-lookup"><span data-stu-id="50b2b-159">Continue to iterate by adding more tests, more theories, and more code in the main library.</span></span> <span data-ttu-id="50b2b-160">[테스트의 완료된 버전](https://github.com/dotnet/docs/blob/master/samples/core/getting-started/unit-testing-using-dotnet-test/PrimeService.Tests/PrimeService_IsPrimeShould.cs) 및 [라이브러리의 완전한 구현](https://github.com/dotnet/docs/blob/master/samples/core/getting-started/unit-testing-using-dotnet-test/PrimeService/PrimeService.cs)을 얻게 됩니다.</span><span class="sxs-lookup"><span data-stu-id="50b2b-160">You have the [finished version of the tests](https://github.com/dotnet/docs/blob/master/samples/core/getting-started/unit-testing-using-dotnet-test/PrimeService.Tests/PrimeService_IsPrimeShould.cs) and the [complete implementation of the library](https://github.com/dotnet/docs/blob/master/samples/core/getting-started/unit-testing-using-dotnet-test/PrimeService/PrimeService.cs).</span></span>
+<span data-ttu-id="4b2de-159">기본 라이브러리에서 더 많은 테스트, 더 많은 이론, 더 많은 코드를 추가하여 계속 반복합니다.</span><span class="sxs-lookup"><span data-stu-id="4b2de-159">Continue to iterate by adding more tests, more theories, and more code in the main library.</span></span> <span data-ttu-id="4b2de-160">[테스트의 완료된 버전](https://github.com/dotnet/samples/blob/master/core/getting-started/unit-testing-using-dotnet-test/PrimeService.Tests/PrimeService_IsPrimeShould.cs) 및 [라이브러리의 완전한 구현](https://github.com/dotnet/samples/blob/master/core/getting-started/unit-testing-using-dotnet-test/PrimeService/PrimeService.cs)을 얻게 됩니다.</span><span class="sxs-lookup"><span data-stu-id="4b2de-160">You have the [finished version of the tests](https://github.com/dotnet/samples/blob/master/core/getting-started/unit-testing-using-dotnet-test/PrimeService.Tests/PrimeService_IsPrimeShould.cs) and the [complete implementation of the library](https://github.com/dotnet/samples/blob/master/core/getting-started/unit-testing-using-dotnet-test/PrimeService/PrimeService.cs).</span></span>
 
-### <a name="additional-resources"></a><span data-ttu-id="50b2b-161">추가 리소스</span><span class="sxs-lookup"><span data-stu-id="50b2b-161">Additional resources</span></span>
+### <a name="additional-resources"></a><span data-ttu-id="4b2de-161">추가 자료</span><span class="sxs-lookup"><span data-stu-id="4b2de-161">Additional resources</span></span>
 
-[<span data-ttu-id="50b2b-162">ASP.NET Core에서 컨트롤러 논리 테스트</span><span class="sxs-lookup"><span data-stu-id="50b2b-162">Testing controller logic in ASP.NET Core</span></span>](/aspnet/core/mvc/controllers/testing)
+[<span data-ttu-id="4b2de-162">ASP.NET Core에서 컨트롤러 논리 테스트</span><span class="sxs-lookup"><span data-stu-id="4b2de-162">Testing controller logic in ASP.NET Core</span></span>](/aspnet/core/mvc/controllers/testing)
