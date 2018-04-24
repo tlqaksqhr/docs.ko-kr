@@ -1,1 +1,0 @@
-Microsoft AJAX 라이브러리
