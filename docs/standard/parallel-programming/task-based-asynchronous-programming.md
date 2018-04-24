@@ -21,11 +21,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 8e5367c8a786d720cdf3394922527020f8d4d47a
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: c0782498743f857afac4af073fb0a0cb8fc4d55a
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="task-based-asynchronous-programming"></a>작업 기반 비동기 프로그래밍
 TPL(작업 병렬 라이브러리)은 *작업*이란 개념을 기반으로 하며 비동기 작업을 나타냅니다. 몇 가지 점에서 작업은 스레드 또는 <xref:System.Threading.ThreadPool> 작업 항목과 비슷하지만 추상화 수준은 더 높습니다. *작업 병렬 처리*는 동시에 실행되는 하나 이상의 독립적인 작업을 의미합니다. 작업을 사용할 때의 주된 이점 두 가지는 다음과 같습니다.  
@@ -41,7 +41,7 @@ TPL(작업 병렬 라이브러리)은 *작업*이란 개념을 기반으로 하�
  이 두 가지 이유 때문에 .NET Framework에서는 다중 스레드, 비동기 및 병렬 코드를 작성하는 API로 TPL이 선호됩니다.  
   
 ## <a name="creating-and-running-tasks-implicitly"></a>암시적으로 작업 만들기 및 실행  
- <xref:System.Threading.Tasks.Parallel.Invoke%2A?displayProperty=nameWithType> 메서드를 사용하면 개수에 관계없이 여러 개의 임의 문을 간편하게 동시에 실행할 수 있습니다. 작업의 각 항목에 대한 <xref:System.Action> 대리자를 전달하기만 하면 됩니다. 이러한 대리자를 만드는 가장 쉬운 방법은 람다 식을 사용하는 것입니다. 람다 식은 명명된 메서드를 호출하거나 코드를 인라인으로 제공합니다. 다음 예제에서는 동시에 실행되는 두 개의 작업을 만들고 시작하는 기본적인 <xref:System.Threading.Tasks.Parallel.Invoke%2A> 호출을 보여줍니다.call that creates and starts two tasks that run concurrently. 이름이 `DoSomeWork`인 메서드를 호출하는 람다 식에서 첫 번째 작업을 표시하며 이름이 `DoSomeOtherWork`인 메서드를 호출하는 람다 식에서 두 번째 작업을 표시합니다.  
+ <xref:System.Threading.Tasks.Parallel.Invoke%2A?displayProperty=nameWithType> 메서드를 사용하면 개수에 관계없이 여러 개의 임의 문을 간편하게 동시에 실행할 수 있습니다. 작업의 각 항목에 대한 <xref:System.Action> 대리자를 전달하기만 하면 됩니다. 이러한 대리자를 만드는 가장 쉬운 방법은 람다 식을 사용하는 것입니다. 람다 식은 명명된 메서드를 호출하거나 코드를 인라인으로 제공합니다. 다음 예제에서는 동시에 실행되는 두 개의 작업을 만들고 시작하는 기본적인 <xref:System.Threading.Tasks.Parallel.Invoke%2A> 호출을 보여 줍니다.call that creates and starts two tasks that run concurrently. 이름이 `DoSomeWork`인 메서드를 호출하는 람다 식에서 첫 번째 작업을 표시하며 이름이 `DoSomeOtherWork`인 메서드를 호출하는 람다 식에서 두 번째 작업을 표시합니다.  
   
 > [!NOTE]
 >  이 문서에서는 람다 식을 사용하여 TPL에 대리자를 정의합니다. C# 또는 Visual Basic의 람다 식을 잘 모르는 경우 [PLINQ 및 TPL의 람다 식](../../../docs/standard/parallel-programming/lambda-expressions-in-plinq-and-tpl.md)을 참조하세요.  
@@ -81,7 +81,7 @@ TPL(작업 병렬 라이브러리)은 *작업*이란 개념을 기반으로 하�
   
  자세한 내용은 [방법: 작업에서 값 반환](../../../docs/standard/parallel-programming/how-to-return-a-value-from-a-task.md)을 참조하세요.  
   
- 람다 식을 사용하여 대리자를 만드는 경우 소스 코드의 해당 지점에서 표시되는 모든 변수에 액세스할 수 있습니다. 그러나 특히 루프 내에서 람다가 기대한 대로 변수를 캡처하지 않는 경우가 있습니다. 이 경우 람다는 각 반복 후에 변경할 때 값이 아닌 최종 값만 capture합니다. 다음 예제에서 이 문제를 보여줍니다. `CustomData` 개체를 인스턴스화하고 루프 카운터를 개체 식별자로 사용하는 람다 식에 루프 카운터를 전달합니다. 이 예제의 출력에서 표시되는 것처럼 각 `CustomData` 개체에는 동일한 식별자가 있습니다.  
+ 람다 식을 사용하여 대리자를 만드는 경우 소스 코드의 해당 지점에서 표시되는 모든 변수에 액세스할 수 있습니다. 그러나 특히 루프 내에서 람다가 기대한 대로 변수를 캡처하지 않는 경우가 있습니다. 이 경우 람다는 각 반복 후에 변경할 때 값이 아닌 최종 값만 capture합니다. 다음 예제에서 이 문제를 보여 줍니다. `CustomData` 개체를 인스턴스화하고 루프 카운터를 개체 식별자로 사용하는 람다 식에 루프 카운터를 전달합니다. 이 예제의 출력에서 표시되는 것처럼 각 `CustomData` 개체에는 동일한 식별자가 있습니다.  
   
  [!code-csharp[TPL_TaskIntro#22](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_taskintro/cs/iteration1b.cs#22)]
  [!code-vb[TPL_TaskIntro#22](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_taskintro/vb/iteration1b.vb#22)]  
@@ -100,7 +100,7 @@ TPL(작업 병렬 라이브러리)은 *작업*이란 개념을 기반으로 하�
  모든 작업은 응용 프로그램 도메인에서 작업을 고유하게 식별하는 정수 ID를 받으며, 이 ID는 <xref:System.Threading.Tasks.Task.Id%2A?displayProperty=nameWithType> 속성을 사용하여 액세스할 수 있습니다. ID는 Visual Studio 디버거의 **병렬 스택** 및 **작업** 창에서 작업 정보를 보는 데 유용합니다. ID는 나중에 만들어집니다. 즉, 요청될 때까지는 ID가 만들어지지 않으므로 프로그램이 실행될 때마다 작업 ID가 달라질 수 있습니다. 디버거에서 작업 ID를 보는 방법에 대한 자세한 내용은 [작업 창 사용](/visualstudio/debugger/using-the-tasks-window) 및 [병렬 스택 창 사용](/visualstudio/debugger/using-the-parallel-stacks-window)을 참조하세요.  
   
 ## <a name="task-creation-options"></a>작업 생성 옵션  
- 작업을 만드는 대부분의 API는 <xref:System.Threading.Tasks.TaskCreationOptions> 매개 변수를 사용하는 오버로드를 제공합니다. 이러한 옵션 중 하나를 지정하여 스레드 풀에서 작업을 예약하는 방법을 작업 스케줄러에 지시할 수 있습니다. 다음 표에서는 다양한 작업 생성 옵션을 보여줍니다.  
+ 작업을 만드는 대부분의 API는 <xref:System.Threading.Tasks.TaskCreationOptions> 매개 변수를 사용하는 오버로드를 제공합니다. 이러한 옵션 중 하나를 지정하여 스레드 풀에서 작업을 예약하는 방법을 작업 스케줄러에 지시할 수 있습니다. 다음 표에서는 다양한 작업 생성 옵션을 보여 줍니다.  
   
 |<xref:System.Threading.Tasks.TaskCreationOptions> 매개 변수 값|설명|  
 |-------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------|  
@@ -111,7 +111,7 @@ TPL(작업 병렬 라이브러리)은 *작업*이란 개념을 기반으로 하�
 |<xref:System.Threading.Tasks.TaskCreationOptions.DenyChildAttach>|내부 작업이 `AttachedToParent` 옵션을 지정할 경우 해당 작업이 연결된 자식 작업이 되지 않도록 지정합니다.|  
 |<xref:System.Threading.Tasks.TaskCreationOptions.HideScheduler>|특정 작업 내에서 <xref:System.Threading.Tasks.TaskFactory.StartNew%2A?displayProperty=nameWithType> 또는 <xref:System.Threading.Tasks.Task%601.ContinueWith%2A?displayProperty=nameWithType> 같은 메서드를 호출하여 만든 작업을 위한 작업 스케줄러가 이 작업이 실행 중인 스케줄러 대신 기본 스케줄러임을 지정합니다.|  
   
- 이러한 옵션과 비트 **OR** 연산을 함께 사용할 수 있습니다. 다음 예제에서는 <xref:System.Threading.Tasks.TaskCreationOptions.LongRunning> 및 <xref:System.Threading.Tasks.TaskContinuationOptions.PreferFairness> 옵션이 있는 작업을 보여줍니다.  
+ 이러한 옵션과 비트 **OR** 연산을 함께 사용할 수 있습니다. 다음 예제에서는 <xref:System.Threading.Tasks.TaskCreationOptions.LongRunning> 및 <xref:System.Threading.Tasks.TaskContinuationOptions.PreferFairness> 옵션이 있는 작업을 보여 줍니다.  
   
  [!code-csharp[TPL_TaskIntro#03](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_taskintro/cs/taskintro.cs#03)]
  [!code-vb[TPL_TaskIntro#03](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_taskintro/vb/tpl_intro.vb#03)]  
@@ -153,7 +153,7 @@ TPL(작업 병렬 라이브러리)은 *작업*이란 개념을 기반으로 하�
  자세한 내용은 [연속 작업을 사용하여 작업 연결](../../../docs/standard/parallel-programming/chaining-tasks-by-using-continuation-tasks.md)을 참조하세요.  
   
 ## <a name="creating-detached-child-tasks"></a>분리된 자식 작업 만들기  
- 작업에서 실행되는 사용자 코드를 통해 새 작업이 만들어지지만 <xref:System.Threading.Tasks.TaskCreationOptions.AttachedToParent> 옵션은 지정되지 않을 경우 새 작업은 어떤 특수한 방법으로도 부모 작업과 동기화되지 않습니다. 이 유형의 동기화되지 않은 작업을 *분리된 중첩 작업* 또는 *분리된 자식 작업*이라고 부릅니다. 다음 예제에서는 분리된 상태의 자식 작업을 하나 만드는 작업을 보여줍니다.  
+ 작업에서 실행되는 사용자 코드를 통해 새 작업이 만들어지지만 <xref:System.Threading.Tasks.TaskCreationOptions.AttachedToParent> 옵션은 지정되지 않을 경우 새 작업은 어떤 특수한 방법으로도 부모 작업과 동기화되지 않습니다. 이 유형의 동기화되지 않은 작업을 *분리된 중첩 작업* 또는 *분리된 자식 작업*이라고 부릅니다. 다음 예제에서는 분리된 상태의 자식 작업을 하나 만드는 작업을 보여 줍니다.  
   
  [!code-csharp[TPL_TaskIntro#07](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_taskintro/cs/taskintro.cs#07)]
  [!code-vb[TPL_TaskIntro#07](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_taskintro/vb/tpl_intro.vb#07)]  
@@ -161,7 +161,7 @@ TPL(작업 병렬 라이브러리)은 *작업*이란 개념을 기반으로 하�
  부모 작업은 분리된 자식 작업이 완료될 때까지 대기하지 않습니다.  
   
 ## <a name="creating-child-tasks"></a>자식 작업 만들기  
- 작업에서 실행되는 사용자 코드를 통해 <xref:System.Threading.Tasks.TaskCreationOptions.AttachedToParent> 옵션을 사용해서 작업을 만들 경우, 새 작업은 부모 작업의 ‘연결된 자식 작업’으로 알려집니다. <xref:System.Threading.Tasks.TaskCreationOptions.AttachedToParent> 옵션을 사용하면 부모 작업은 암시적으로 모든 연결된 자식 작업이 완료될 때까지 대기하게 되므로 이 옵션을 사용하여 구조적 작업 병렬 처리를 표현할 수 있습니다. 다음 예제에서는 10개의 연결된 자식 작업을 만드는 부모 작업을 보여줍니다. 예제는 부모 작업이 완료되기를 기다리도록 <xref:System.Threading.Tasks.Task.Wait%2A?displayProperty=nameWithType> 메서드를 호출하지만 첨부된 자식 작업이 완료되기를 명시적으로 기다릴 필요가 없습니다.  
+ 작업에서 실행되는 사용자 코드를 통해 <xref:System.Threading.Tasks.TaskCreationOptions.AttachedToParent> 옵션을 사용해서 작업을 만들 경우, 새 작업은 부모 작업의 ‘연결된 자식 작업’으로 알려집니다. <xref:System.Threading.Tasks.TaskCreationOptions.AttachedToParent> 옵션을 사용하면 부모 작업은 암시적으로 모든 연결된 자식 작업이 완료될 때까지 대기하게 되므로 이 옵션을 사용하여 구조적 작업 병렬 처리를 표현할 수 있습니다. 다음 예제에서는 10개의 연결된 자식 작업을 만드는 부모 작업을 보여 줍니다. 예제는 부모 작업이 완료되기를 기다리도록 <xref:System.Threading.Tasks.Task.Wait%2A?displayProperty=nameWithType> 메서드를 호출하지만 첨부된 자식 작업이 완료되기를 명시적으로 기다릴 필요가 없습니다.  
   
  [!code-csharp[TPL_TaskIntro#8](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_taskintro/cs/child1.cs#8)]
  [!code-vb[TPL_TaskIntro#8](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_taskintro/vb/child1.vb#8)]  
@@ -179,12 +179,12 @@ TPL(작업 병렬 라이브러리)은 *작업*이란 개념을 기반으로 하�
   
 -   응용 프로그램은 모든 작업이 실행을 완료하기 전에 종료할 수 있습니다. 예를 들어, 콘솔 응용 프로그램은 `Main`(응용 프로그램 진입점)의 모든 동기 코드가 실행되는 즉시 종료됩니다.  
   
- 다음 예제에서는 예외 처리가 포함되지 않은 기본적인 패턴을 보여줍니다.  
+ 다음 예제에서는 예외 처리가 포함되지 않은 기본적인 패턴을 보여 줍니다.  
   
  [!code-csharp[TPL_TaskIntro#06](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_taskintro/cs/taskintro.cs#06)]
  [!code-vb[TPL_TaskIntro#06](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_taskintro/vb/tpl_intro.vb#06)]  
   
- 예외 처리를 보여주는 예제는 [예외 처리](../../../docs/standard/parallel-programming/exception-handling-task-parallel-library.md)를 참조하세요.  
+ 예외 처리를 보여 주는 예제는 [예외 처리](../../../docs/standard/parallel-programming/exception-handling-task-parallel-library.md)를 참조하세요.  
   
  일부 오버로드에서는 제한 시간을 지정할 수 있으며, 다른 오버로드에서는 프로그래밍 방식으로 또는 사용자 입력에 대한 응답으로 대기 자체를 취소할 수 있도록 추가 <xref:System.Threading.CancellationToken>을 입력 매개 변수로 사용합니다.  
   
@@ -273,10 +273,10 @@ TPL(작업 병렬 라이브러리)은 *작업*이란 개념을 기반으로 하�
 |[방법: 작업 및 해당 자식 취소](../../../docs/standard/parallel-programming/how-to-cancel-a-task-and-its-children.md)|작업을 취소하는 방법을 설명합니다.|  
 |[방법: 미리 계산된 작업 만들기](../../../docs/standard/parallel-programming/how-to-create-pre-computed-tasks.md)|<xref:System.Threading.Tasks.Task.FromResult%2A?displayProperty=nameWithType> 메서드를 사용하여 캐시에 저장된 비동기 다운로드 작업 결과를 검색하는 방법을 설명합니다.|  
 |[방법: 병렬 작업을 사용하여 이진 트리 트래버스](../../../docs/standard/parallel-programming/how-to-traverse-a-binary-tree-with-parallel-tasks.md)|작업을 사용하여 이진 트리를 따라 이동하는 방법을 설명합니다.|  
-|[방법: 중첩된 작업 래핑 취소](../../../docs/standard/parallel-programming/how-to-unwrap-a-nested-task.md)|<xref:System.Threading.Tasks.TaskExtensions.Unwrap%2A> 확장 메서드를 사용하는 방법을 보여줍니다.|  
+|[방법: 중첩된 작업 래핑 취소](../../../docs/standard/parallel-programming/how-to-unwrap-a-nested-task.md)|<xref:System.Threading.Tasks.TaskExtensions.Unwrap%2A> 확장 메서드를 사용하는 방법을 보여 줍니다.|  
 |[데이터 병렬 처리](../../../docs/standard/parallel-programming/data-parallelism-task-parallel-library.md)|<xref:System.Threading.Tasks.Parallel.For%2A> 및 <xref:System.Threading.Tasks.Parallel.ForEach%2A>를 사용하여 데이터에 대한 병렬 루프를 만드는 방법을 설명합니다.|  
 |[병렬 프로그래밍](../../../docs/standard/parallel-programming/index.md)|.NET Framework 병렬 프로그래밍의 최상위 노드입니다.|  
   
 ## <a name="see-also"></a>참고 항목  
  [병렬 프로그래밍](../../../docs/standard/parallel-programming/index.md)  
- [NET Framework를 사용한 병렬 프로그래밍 샘플](http://code.msdn.microsoft.com/Samples-for-Parallel-b4b76364)
+ [NET Framework를 사용한 병렬 프로그래밍 샘플](https://code.msdn.microsoft.com/Samples-for-Parallel-b4b76364)

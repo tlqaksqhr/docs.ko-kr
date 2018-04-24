@@ -1,38 +1,38 @@
 ---
-title: "복구할 수 있는 XSLT 오류"
-ms.custom: 
+title: 복구할 수 있는 XSLT 오류
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 484929b0-fefb-4629-87ee-ebdde70ff1f8
-caps.latest.revision: 
+caps.latest.revision: 2
 author: mairaw
 ms.author: mairaw
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 4564530cd173793519471c78105d0394595f6d5c
-ms.sourcegitcommit: 91691981897cf8451033cb01071d8f5d94017f97
+ms.openlocfilehash: 70491e86697356766b64a98201b2969883ab7ee4
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="recoverable-xslt-errors"></a>복구할 수 있는 XSLT 오류
-W3C XSLT(XSL 변환) 버전 1.0 권장 사항에는 구현 공급자가 특정 상황을 처리하는 방법을 결정할 수 있는 영역이 포함되어 있습니다. 이러한 영역은 임의 동작으로 간주됩니다. 예를 들어, 7.3단원의 처리 명령 만들기에 나오는 XSLT 1.0 권장 사항에 따르면 `xsl:processing-instruction`의 내용을 인스턴스화하여 텍스트 노드 이외의 노드가 만들어질 경우 오류가 발생합니다. XSLT 1.0 권장 사항에서는 일부 문제점에 대해 프로세서가 오류로부터 복구하기로 결정한 경우 어떤 결정을 내려야 하는지 알려 줍니다. 7.3단원에 제시된 문제점의 경우에는 W3C에서 노드 및 해당 내용을 무시함으로써 이 오류에서 구현을 복구할 수 있다고 설명합니다.  
+W3C XSLT(XSL Transformations) 버전 1.0 권장 사항에는 구현 공급자가 특정 상황을 처리하는 방법을 결정할 수 있는 영역이 포함되어 있습니다. 이러한 영역은 임의 동작으로 간주됩니다. 예를 들어, 7.3단원의 처리 명령 만들기에 나오는 XSLT 1.0 권장 사항에 따르면 `xsl:processing-instruction`의 내용을 인스턴스화하여 텍스트 노드 이외의 노드가 만들어질 경우 오류가 발생합니다. XSLT 1.0 권장 사항에서는 일부 문제점에 대해 프로세서가 오류로부터 복구하기로 결정한 경우 어떤 결정을 내려야 하는지 알려 줍니다. 7.3단원에 제시된 문제점의 경우에는 W3C에서 노드 및 해당 내용을 무시함으로써 이 오류에서 구현을 복구할 수 있다고 설명합니다.  
   
 ## <a name="discretionary-behaviors"></a>임의 동작  
- 다음 표에서는 XSLT 1.0 권장 사항에서 허용하는 임의 동작 및 <xref:System.Xml.Xsl.XslCompiledTransform> 클래스를 사용하여 임의 동작을 처리하는 방법을 보여줍니다.  
+ 다음 표에서는 XSLT 1.0 권장 사항에서 허용하는 임의 동작 및 <xref:System.Xml.Xsl.XslCompiledTransform> 클래스를 사용하여 임의 동작을 처리하는 방법을 보여 줍니다.  
   
 -   복구는 <xref:System.Xml.Xsl.XslCompiledTransform> 클래스가 이 오류로부터 복구하는 것을 나타냅니다. <xref:System.Xml.Xsl.XsltArgumentList.XsltMessageEncountered?displayProperty=nameWithType> 이벤트를 사용하여 XSLT 프로세서의 모든 이벤트를 보고할 수 있습니다.  
   
 -   오류는 이 조건에 대해 예외가 발생함을 나타냅니다.  
   
--   [W3C XSLT(XSL 변환) 버전 1.0 권장 사항](http://www.w3.org/TR/xslt) 및 [W3C XSLT(XSL 변환) 버전 1.0 Specification Errata](http://www.w3.org/1999/11/REC-xslt-19991116-errata/)에서 섹션 참조를 찾을 수 있습니다.  
+-   [W3C XSLT(XSL 변환) 버전 1.0 권장 사항](http://www.w3.org/TR/xslt) 및 [W3C XSLT(XSL 변환) 버전 1.0 Specification Errata](https://www.w3.org/1999/11/REC-xslt-19991116-errata/)에서 섹션 참조를 찾을 수 있습니다.  
   
 |XSLT 조건|단원|XslCompiledTransform 동작|  
 |--------------------|-------------|-----------------------------------|  

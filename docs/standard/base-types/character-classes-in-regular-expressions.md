@@ -1,12 +1,12 @@
 ---
-title: "정규식의 문자 클래스"
-ms.custom: 
+title: 정규식의 문자 클래스
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -17,18 +17,18 @@ helpviewer_keywords:
 - characters, matching syntax
 - .NET Framework regular expressions, character classes
 ms.assetid: 0f8bffab-ee0d-4e0e-9a96-2b4a252bb7e4
-caps.latest.revision: 
+caps.latest.revision: 58
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 98aaa5c7bbd28facf9cc06fd0d0898b72ea7dbc2
-ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
+ms.openlocfilehash: 538aa21712f1e2290fb009c24774059098c60c1e
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="character-classes-in-regular-expressions"></a>정규식의 문자 클래스
 <a name="Top"></a> 문자 클래스는 문자 집합을 정의하며, 이 중 하나가 입력 문자열에서 발생하면 일치하는 것으로 판정할 수 있습니다. .NET의 정규식 언어는 다음과 같은 문자 클래스를 지원합니다.  
@@ -58,7 +58,7 @@ ms.lasthandoff: 03/15/2018
  .NET에서는 한 문자 클래스에서 다른 문자 클래스를 제외한 결과로 문자 집합을 정의하는 데 사용할 수 있는 문자 클래스 빼기 식을 지원합니다. 자세한 내용은 [문자 클래스 빼기](#CharacterClassSubtraction)를 참조하세요.  
   
 > [!NOTE]
->  일치하는 단어 문자를 검색하는 [\w](#WordCharacter) 또는 일치하는 유니코드 범주를 검색하는 [\p{}](#CategoryOrBlock)와 같이 범주별로 일치하는 문자를 검색하는 문자 클래스는 <xref:System.Globalization.CharUnicodeInfo>를 활용하여 문자 범주에 대한 정보를 제공합니다.  [!INCLUDE[net_v462](../../../includes/net-v462-md.md)]부터, 문자 범주는 [유니코드 표준, 버전 8.0.0](http://www.unicode.org/versions/Unicode8.0.0/)을 기준으로 합니다. [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] ~ [!INCLUDE[net_v461](../../../includes/net-v461-md.md)]에서는 [유니코드 표준, 버전 6.3.0](http://www.unicode.org/versions/Unicode6.3.0/)를 기준으로 합니다.  
+>  일치하는 단어 문자를 검색하는 [\w](#WordCharacter) 또는 일치하는 유니코드 범주를 검색하는 [\p{}](#CategoryOrBlock)와 같이 범주별로 일치하는 문자를 검색하는 문자 클래스는 <xref:System.Globalization.CharUnicodeInfo>를 활용하여 문자 범주에 대한 정보를 제공합니다.  [!INCLUDE[net_v462](../../../includes/net-v462-md.md)]부터, 문자 범주는 [유니코드 표준, 버전 8.0.0](https://www.unicode.org/versions/Unicode8.0.0/)을 기준으로 합니다. [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] ~ [!INCLUDE[net_v461](../../../includes/net-v461-md.md)]에서는 [유니코드 표준, 버전 6.3.0](https://www.unicode.org/versions/Unicode6.3.0/)를 기준으로 합니다.  
   
 <a name="PositiveGroup"></a>   
 ## <a name="positive-character-group--"></a>긍정 문자 그룹: [ ]  
@@ -408,7 +408,7 @@ ms.lasthandoff: 03/15/2018
   
 <a name="SupportedUnicodeGeneralCategories"></a>   
 ## <a name="supported-unicode-general-categories"></a>지원되는 유니코드 일반 범주  
- 유니코드는 다음 표에 나와 있는 일반 범주를 정의합니다. 자세한 내용은 [유니코드 문자 데이터베이스](http://www.unicode.org/reports/tr44/)의 하위 항목인 "UCD 파일 형식"과 "일반 범주 값"을 참조하세요.  
+ 유니코드는 다음 표에 나와 있는 일반 범주를 정의합니다. 자세한 내용은 [유니코드 문자 데이터베이스](https://www.unicode.org/reports/tr44/)의 하위 항목인 "UCD 파일 형식"과 "일반 범주 값"을 참조하세요.  
   
 |범주|설명|  
 |--------------|-----------------|  

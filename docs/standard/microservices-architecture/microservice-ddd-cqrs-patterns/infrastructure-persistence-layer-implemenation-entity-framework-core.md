@@ -1,7 +1,7 @@
 ---
-title: "Entity Framework Core를 사용하여 인프라 지속성 레이어 구현"
-description: "컨테이너화된 .NET 응용 프로그램을 위한 .NET 마이크로 서비스 아키텍처 | Entity Framework Core를 사용하여 인프라 지속성 레이어 구현"
-keywords: "Docker, 마이크로 서비스, ASP.NET, 컨테이너"
+title: Entity Framework Core를 사용하여 인프라 지속성 레이어 구현
+description: 컨테이너화된 .NET 응용 프로그램을 위한 .NET 마이크로 서비스 아키텍처 | Entity Framework Core를 사용하여 인프라 지속성 레이어 구현
+keywords: Docker, 마이크로 서비스, ASP.NET, 컨테이너
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 12/12/2017
@@ -11,11 +11,11 @@ ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 4acdbde6405af7eb78a8c605562fdb1795fedf4d
-ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
+ms.openlocfilehash: 49bd528db50397ea896b7251ea60d18b90fea30c
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="implementing-the-infrastructure-persistence-layer-with-entity-framework-core"></a>Entity Framework Core를 사용하여 인프라 지속성 레이어 구현
 
@@ -342,7 +342,7 @@ Hi/Lo 알고리즘은 데이터베이스가 아닌 클라이언트 쪽에서 안
 
 -   GUID를 사용하는 기술은 달리, 사람이 읽을 수 있는 식별자를 생성합니다.
 
-EF Core는 앞의 예제와 같이 ForSqlServerUseSequenceHiLo 메서드를 통해 [HiLo](http://stackoverflow.com/questions/282099/whats-the-hi-lo-algorithm)를 지원합니다.
+EF Core는 앞의 예제와 같이 ForSqlServerUseSequenceHiLo 메서드를 통해 [HiLo](https://stackoverflow.com/questions/282099/whats-the-hi-lo-algorithm)를 지원합니다.
 
 ### <a name="mapping-fields-instead-of-properties"></a>속성 대신 필드 매핑
 
@@ -467,7 +467,7 @@ public IEnumerable<T> List(ISpecification<T> spec)
     [*https://docs.microsoft.com/ef/core/modeling/backing-field*](https://docs.microsoft.com/ef/core/modeling/backing-field)
 
 -   **Steve Smith. Entity Framework Core에서 캡슐화된 컬렉션**
-    [*http://ardalis.com/encapsulated-collections-in-entity-framework-core*](http://ardalis.com/encapsulated-collections-in-entity-framework-core)
+    [*https://ardalis.com/encapsulated-collections-in-entity-framework-core*](https://ardalis.com/encapsulated-collections-in-entity-framework-core)
 
 -   **섀도 속성**
     [*https://docs.microsoft.com/ef/core/modeling/shadow-properties*](https://docs.microsoft.com/ef/core/modeling/shadow-properties)

@@ -1,6 +1,6 @@
 ---
-title: ".NET 및 Docker 소개"
-description: "Docker 및 .NET Core 이해"
+title: .NET 및 Docker 소개
+description: Docker 및 .NET Core 이해
 keywords: .NET, .NET Core, Docker
 author: jralexander
 ms.author: johalex
@@ -14,11 +14,11 @@ manager: wpickett
 ms.custom: mvc
 ms.workload:
 - dotnetcore
-ms.openlocfilehash: dabc7c0c4a0afab8edf7d2bab410bb9635821936
-ms.sourcegitcommit: 75a180acb5d8a2dbd4a52915ce8e980749fb1d05
+ms.openlocfilehash: 75c631cf0abac543889cb7387f6fc3fdb2624512
+ms.sourcegitcommit: 68b60d38043e50104ccc90c76f8599b1ffe18346
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/24/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="introduction-to-net-and-docker"></a>.NET 및 Docker 소개
 
@@ -105,15 +105,15 @@ Docker 컨테이너 개발을 위해 .NET Core와 .NET Framework 중에서 결�
 
 **.NET Framework 4.7**
 
-[dotnet-framework:4.7 샘플](https://github.com/Microsoft/dotnet-framework-docker-samples/tree/master/dotnetapp-4.7)은 [.NET Framework 4.7](../../framework/whats-new/index.md#v47)의 기본 “Hello World” 사용을 보여 줍니다. 이 샘플은 [.NET Framework 4.7 Docker 이미지](https://github.com/Microsoft/dotnet-framework-docker/blob/master/4.7/Dockerfile)를 사용하여 앱을 빌드하고 배포하는 방법을 보여 줍니다.
+[dotnet-framework:4.7 샘플](https://github.com/Microsoft/dotnet-framework-docker-samples/tree/master/dotnetapp-4.7)은 [.NET Framework 4.7](../../framework/whats-new/index.md#v47)의 기본 “Hello World” 사용을 보여 줍니다. 이 샘플은 [.NET Framework 4.7 Docker 이미지](https://github.com/Microsoft/dotnet-framework-docker-samples/blob/master/dotnetapp-4.7/Dockerfile)를 사용하여 앱을 빌드하고 배포하는 방법을 보여 줍니다.
 
 **.NET Framework 4.6.2**
 
-[dotnet-framework:4.6.2 샘플](https://github.com/Microsoft/dotnet-framework-docker-samples/tree/master/dotnetapp-4.6.2)은 [.NET Framework 4.6.2](../../framework/whats-new/index.md#v462)의 기본 “Hello World” 사용을 보여 줍니다. 이 샘플은 [.NET Framework 4.6.2 Docker 이미지](https://github.com/Microsoft/dotnet-framework-docker/tree/master/4.6.2)를 사용하여 앱을 빌드하고 배포하는 방법을 보여 줍니다.
+[dotnet-framework:4.6.2 샘플](https://github.com/Microsoft/dotnet-framework-docker-samples/tree/master/dotnetapp-4.6.2)은 [.NET Framework 4.6.2](../../framework/whats-new/index.md#v462)의 기본 “Hello World” 사용을 보여 줍니다. 이 샘플은 [.NET Framework 4.6.2 Docker 이미지](https://github.com/Microsoft/dotnet-framework-docker-samples/blob/master/dotnetapp-4.6.2/Dockerfile)를 사용하여 앱을 빌드하고 배포하는 방법을 보여 줍니다.
 
 **.NET Framework 3.5**
 
- [dotnet-framework:3.5 샘플](https://github.com/Microsoft/dotnet-framework-docker-samples/tree/master/dotnetapp-3.5)은 [.NET Framework 3.5](https://github.com/Microsoft/dotnet-framework-docker/tree/master/3.5)의 기본 “Hello World” 사용을 보여 줍니다. 이 샘플은 Docker에서 .NET Framework 3.5를 사용하여 프로젝트를 빌드하고 배포하는 방법을 보여 줍니다.
+ [dotnet-framework:3.5 샘플](https://github.com/Microsoft/dotnet-framework-docker-samples/tree/master/dotnetapp-3.5)은 [.NET Framework 3.5](https://github.com/Microsoft/dotnet-framework-docker-samples/blob/master/dotnetapp-3.5/dotnetapp-3.5/Dockerfile)의 기본 “Hello World” 사용을 보여 줍니다. 이 샘플은 Docker에서 .NET Framework 3.5를 사용하여 프로젝트를 빌드하고 배포하는 방법을 보여 줍니다.
 
 #### <a name="aspnet-core"></a>ASP.NET Core
 
@@ -133,7 +133,7 @@ Docker 컨테이너 개발을 위해 .NET Core와 .NET Framework 중에서 결�
 
 * [DockerHub의 WCF(Windows Communication Framework) 이미지](https://hub.docker.com/r/microsoft/wcf/)
 
-* [GitHub의 WCF(Windows Communication Framework) 이미지](https://github.com/microsoft/iis-docker)
+* [GitHub의 WCF(Windows Communication Framework) 이미지](https://github.com/microsoft/wcf-docker)
 
 * [.NET Full Framework 4.6.2를 사용하는 WCF(Windows Communication Framework) Docker 샘플](https://github.com/Microsoft/wcf-docker-samples)
 
@@ -141,7 +141,7 @@ Docker 컨테이너 개발을 위해 .NET Core와 .NET Framework 중에서 결�
 
 * [DockerHub의 IIS(Internet Information Server) 이미지](https://hub.docker.com/r/microsoft/iis/)
 
-* [GitHub의 IIS(Internet Information Server) 이미지](https://github.com/microsoft/wcf-docker)
+* [GitHub의 IIS(Internet Information Server) 이미지](https://github.com/microsoft/iis-docker)
 
 ### <a name="interact-with-other-microsoft-stack-container-images"></a>다른 Microsoft 스택 컨테이너 이미지와 상호 작용
 
@@ -149,9 +149,7 @@ Docker 컨테이너 개발을 위해 .NET Core와 .NET Framework 중에서 결�
 
 * [Docker 빠른 시작을 통해 Linux 2017용 Microsoft SQL Server 컨테이너 이미지 실행](https://docs.microsoft.com/sql/linux/quickstart-install-connect-docker)
 
-* [DockerHub의 Linux용 Microsoft SQL Server 이미지](https://hub.docker.com/r/microsoft/mssql-server-windows/)
-
-* [DockerHub의 Windows 컨테이너용 Microsoft SQL Server 이미지](https://hub.docker.com/r/microsoft/mssql-server-windows/)
+* [DockerHub의 Linux용 Microsoft SQL Server 이미지](https://hub.docker.com/r/microsoft/mssql-server-linux/)
 
 * [DockerHub의 Windows 컨테이너용 Microsoft SQL Server Express Edition 이미지](https://hub.docker.com/r/microsoft/mssql-server-windows-express/)
 
@@ -165,9 +163,9 @@ Docker 컨테이너 개발을 위해 .NET Core와 .NET Framework 중에서 결�
 
 #### <a name="operations-management-suite-oms-linux-agent"></a>OMS(Operations Management Suite) Linux 에이전트
 
-* [OMS(Operations Management Suite) Linux 에이전트 개요](https://github.com/Microsoft/OMS-Agent-for-Linux/blob/master/docs/Docker-Instructions.md#overview)
+* [OMS(Operations Management Suite) Linux 에이전트 개요](https://github.com/Microsoft/OMS-Agent-for-Linux/blob/master/docs/Docker-Instructions.md)
 
-* [DockerHub의 OMS(Operations Management Suite) 이미지](https://hub.docker.com/r/microsoft/vsts-agent/)
+* [DockerHub의 OMS(Operations Management Suite) 이미지](https://hub.docker.com/r/microsoft/oms/)
 
 * [GitHub의 OMS(Operations Management Suite) 이미지](https://github.com/Microsoft/OMS-docker)
 
@@ -175,7 +173,7 @@ Docker 컨테이너 개발을 위해 .NET Core와 .NET Framework 중에서 결�
 
 * [DockerHub의 Microsoft Azure CLI(명령줄 인터페이스) 이미지](https://hub.docker.com/r/microsoft/azure-cli/) 
 
-* [GitHub의 Microsoft Azure CLI(명령줄 인터페이스) 이미지](https://github.com/Microsoft/OMS-docker)
+* [GitHub의 Microsoft Azure CLI(명령줄 인터페이스) 이미지](https://github.com/Azure/azure-cli#Docker)
 
 > [!NOTE]
 > Azure 구독이 없는 경우 무료 30일 계정에 [오늘 등록](https://azure.microsoft.com/free/?b=16.48)하고 Azure 크레딧 $200를 받아 원하는 조합의 Azure 서비스를 사용해 보세요.

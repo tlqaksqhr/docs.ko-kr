@@ -1,12 +1,12 @@
 ---
-title: ".NET의 문자 인코딩"
-ms.custom: 
+title: .NET의 문자 인코딩
+ms.custom: ''
 ms.date: 12/22/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -16,18 +16,18 @@ helpviewer_keywords:
 - encoding, choosing
 - encoding, fallback strategy
 ms.assetid: bf6d9823-4c2d-48af-b280-919c5af66ae9
-caps.latest.revision: 
+caps.latest.revision: 33
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: ac24e3a685c20445c473f0f5222ddba72b6b098c
-ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
+ms.openlocfilehash: 1d296920d75af2194323791c4ea571c10f1e3c7d
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="character-encoding-in-net"></a>.NET의 문자 인코딩
 문자는 다양한 방법으로 표현할 수 있는 추상 엔터티입니다. 문자 인코딩은 지원되는 문자 집합의 각 문자와 해당 문자를 나타내는 일부 값의 쌍을 만드는 시스템입니다. 예를 들어 모르스 부호는 로마 알파벳의 각 문자와 전화선을 통한 전송에 적합한 점과 대시 패턴의 쌍을 만드는 문자 인코딩입니다. 컴퓨터의 문자 인코딩은 지원되는 문자 집합의 각 문자와 해당 문자를 나타내는 숫자 값의 쌍을 만듭니다. 문자 인코딩에는 다음 두 가지 구성 요소가 있습니다.  
@@ -70,7 +70,7 @@ ms.lasthandoff: 02/01/2018
 > [!NOTE]
 >  유니코드 표준은 지원되는 모든 스크립트의 각 문자에 코드 포인트(숫자)와 이름을 할당합니다. 예를 들어 "A" 문자는 코드 포인트 U+0041 및 이름 "LATIN CAPITAL LETTER A"로 표시됩니다. UTF(유니코드 변환 형식) 인코딩은 코드 포인트를 하나 이상의 바이트 시퀀스로 인코딩하는 방법을 정의합니다. 유니코드 인코딩 체계를 사용하면 모든 문자 집합의 문자를 단일 인코딩으로 나타낼 수 있으므로 국제 응용 프로그램 개발이 간소화됩니다. 응용 프로그램 개발자가 더 이상 특정 언어나 쓰기 시스템을 위한 문자를 생성하는 데 사용된 인코딩 체계를 추적할 필요가 없으며 손상 없이 전 세계 시스템 간에 데이터를 공유할 수 있습니다.  
 >   
->  .NET에서는 유니코드 표준에서 정의된 세 가지 인코딩인 UTF-8, UTF-16 및 UTF-32를 지원합니다. 자세한 내용은 [유니코드 홈페이지](http://www.unicode.org/)에서 유니코드 표준을 참조하세요.  
+>  .NET에서는 유니코드 표준에서 정의된 세 가지 인코딩인 UTF-8, UTF-16 및 UTF-32를 지원합니다. 자세한 내용은 [유니코드 홈페이지](https://www.unicode.org/)에서 유니코드 표준을 참조하세요.  
   
  <xref:System.Text.Encoding.GetEncodings%2A?displayProperty=nameWithType> 메서드를 호출하여 .NET에서 사용할 수 있는 모든 인코딩에 대한 정보를 검색할 수 있습니다. .NET에서는 다음 표에 나열된 문자 인코딩 시스템을 지원합니다.  
   
@@ -129,7 +129,7 @@ ms.lasthandoff: 02/01/2018
   
  특정 인코딩에 대한 <xref:System.Text.Encoder> 개체는 해당 인코딩의 <xref:System.Text.Encoding.GetEncoder%2A?displayProperty=nameWithType> 속성에서 확인할 수 있습니다. 특정 인코딩에 대한 <xref:System.Text.Decoder> 개체는 해당 인코딩의 <xref:System.Text.Encoding.GetDecoder%2A?displayProperty=nameWithType> 속성에서 확인할 수 있습니다. 디코딩 작업의 경우 <xref:System.Text.Decoder>에서 파생된 클래스에 <xref:System.Text.Decoder.GetChars%2A?displayProperty=nameWithType> 메서드가 포함되지만 <xref:System.Text.Encoding.GetString%2A?displayProperty=nameWithType>에 해당하는 메서드가 없습니다.  
   
- 다음 예제에서는 유니코드 바이트 배열 디코딩에 <xref:System.Text.Encoding.GetChars%2A?displayProperty=nameWithType> 및 <xref:System.Text.Decoder.GetChars%2A?displayProperty=nameWithType> 메서드를 사용하는 경우의 차이점을 보여줍니다. 이 예제에서는 일부 유니코드 문자를 포함하는 문자열을 파일로 인코딩한 다음 두 개의 디코딩 메서드를 사용하여 한 번에 10바이트씩 디코딩합니다. 10번째 및 11번째 바이트에서 서로게이트 쌍이 발생하기 때문에 별도 메서드 호출에서 디코딩됩니다. 출력에서 볼 수 있듯이 <xref:System.Text.Encoding.GetChars%2A?displayProperty=nameWithType> 메서드는 바이트를 올바르게 디코딩할 수 없으며, 대신 U+FFFD(REPLACEMENT CHARACTER)로 바꿉니다. 반면, <xref:System.Text.Decoder.GetChars%2A?displayProperty=nameWithType> 메서드는 바이트 배열을 성공적으로 디코딩하여 원래 문자열을 가져올 수 있습니다.  
+ 다음 예제에서는 유니코드 바이트 배열 디코딩에 <xref:System.Text.Encoding.GetChars%2A?displayProperty=nameWithType> 및 <xref:System.Text.Decoder.GetChars%2A?displayProperty=nameWithType> 메서드를 사용하는 경우의 차이점을 보여 줍니다. 이 예제에서는 일부 유니코드 문자를 포함하는 문자열을 파일로 인코딩한 다음 두 개의 디코딩 메서드를 사용하여 한 번에 10바이트씩 디코딩합니다. 10번째 및 11번째 바이트에서 서로게이트 쌍이 발생하기 때문에 별도 메서드 호출에서 디코딩됩니다. 출력에서 볼 수 있듯이 <xref:System.Text.Encoding.GetChars%2A?displayProperty=nameWithType> 메서드는 바이트를 올바르게 디코딩할 수 없으며, 대신 U+FFFD(REPLACEMENT CHARACTER)로 바꿉니다. 반면, <xref:System.Text.Decoder.GetChars%2A?displayProperty=nameWithType> 메서드는 바이트 배열을 성공적으로 디코딩하여 원래 문자열을 가져올 수 있습니다.  
   
  [!code-csharp[Conceptual.Encoding#10](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.encoding/cs/stream1.cs#10)]
  [!code-vb[Conceptual.Encoding#10](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.encoding/vb/stream1.vb#10)]  
@@ -157,9 +157,9 @@ ms.lasthandoff: 02/01/2018
  최적 전략은 코드 페이지마다 다릅니다. 예를 들어 일부 코드 페이지에서는 전자 라틴 문자가 더 일반적인 반자 라틴 문자에 매핑됩니다. 다른 코드 페이지에서는 이 매핑이 수행되지 않습니다. 적극적인 최적 전략에서도 일부 인코딩의 일부 문자는 상상할 수 있는 최적 항목이 없습니다. 예를 들어 중국어 표의 문자에는 코드 페이지 1252에 적합한 매핑이 없습니다. 이 경우 대체 문자열이 사용됩니다. 기본적으로 이 문자열은 단일 QUESTION MARK(U+003F)입니다.  
   
 > [!NOTE]
->  최적 전략은 자세히 문서화되지 않습니다. 그러나 여러 가지 코드 페이지가 [유니코드 컨소시엄](http://www.unicode.org/Public/MAPPINGS/VENDORS/MICSFT/WindowsBestFit/) 웹 사이트에서 문서화됩니다. 매핑 파일을 해석하는 방법에 대한 설명은 해당 폴더의 **readme.txt** 파일을 검토하세요.
+>  최적 전략은 자세히 문서화되지 않습니다. 그러나 여러 가지 코드 페이지가 [유니코드 컨소시엄](https://www.unicode.org/Public/MAPPINGS/VENDORS/MICSFT/WindowsBestFit/) 웹 사이트에서 문서화됩니다. 매핑 파일을 해석하는 방법에 대한 설명은 해당 폴더의 **readme.txt** 파일을 검토하세요.
   
- 다음 예제에서는 코드 페이지 1252(서유럽 언어에 대한 Windows 코드 페이지)를 사용하여 최적 매핑과 해당 결점을 보여줍니다. <xref:System.Text.Encoding.GetEncoding%28System.Int32%29?displayProperty=nameWithType> 메서드는 코드 페이지 1252에 대한 인코딩 개체를 검색하는 데 사용됩니다. 기본적으로 지원하지 않는 유니코드 문자에 대해 최적 매핑을 사용합니다. 이 예제에서는 CIRCLED LATIN CAPITAL LETTER S(U+24C8), SUPERSCRIPT FIVE(U+2075) 및 INFINITY(U+221E)라는 3개의 비 ASCII 문자가 공백으로 구분되어 포함된 문자열을 인스턴스화합니다. 예제의 출력에서 볼 수 있듯이, 문자열을 인코딩할 때 공백이 아닌 원래 문자 3자가 QUESTION MARK(U+003F), DIGIT FIVE(U+0035) 및 DIGIT EIGHT(U+0038)으로 대체됩니다. DIGIT EIGHT은 지원되지 않는 INFINITY 문자에 대한 특히 부적절한 대체이고, QUESTION MARK는 원래 문자에 사용할 수 있는 매핑이 없음을 나타냅니다.  
+ 다음 예제에서는 코드 페이지 1252(서유럽 언어에 대한 Windows 코드 페이지)를 사용하여 최적 매핑과 해당 결점을 보여 줍니다. <xref:System.Text.Encoding.GetEncoding%28System.Int32%29?displayProperty=nameWithType> 메서드는 코드 페이지 1252에 대한 인코딩 개체를 검색하는 데 사용됩니다. 기본적으로 지원하지 않는 유니코드 문자에 대해 최적 매핑을 사용합니다. 이 예제에서는 CIRCLED LATIN CAPITAL LETTER S(U+24C8), SUPERSCRIPT FIVE(U+2075) 및 INFINITY(U+221E)라는 3개의 비 ASCII 문자가 공백으로 구분되어 포함된 문자열을 인스턴스화합니다. 예제의 출력에서 볼 수 있듯이, 문자열을 인코딩할 때 공백이 아닌 원래 문자 3자가 QUESTION MARK(U+003F), DIGIT FIVE(U+0035) 및 DIGIT EIGHT(U+0038)으로 대체됩니다. DIGIT EIGHT은 지원되지 않는 INFINITY 문자에 대한 특히 부적절한 대체이고, QUESTION MARK는 원래 문자에 사용할 수 있는 매핑이 없음을 나타냅니다.  
   
  [!code-csharp[Conceptual.Encoding#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.encoding/cs/bestfit1.cs#1)]
  [!code-vb[Conceptual.Encoding#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.encoding/vb/bestfit1.vb#1)]  
@@ -176,7 +176,7 @@ ms.lasthandoff: 02/01/2018
   
 <a name="Replacement"></a>   
 ### <a name="replacement-fallback"></a>Replacement Fallback  
- 대상 구성표에 문자와 정확히 일치하는 항목이 없고 매핑할 수 있는 적절한 문자가 없는 경우 응용 프로그램에서 대체 문자 또는 문자열을 지정할 수 있습니다. 이는 유니코드 디코더의 기본 동작으로, 디코딩할 수 없는 모든 2바이트 시퀀스를 REPLACEMENT_CHARACTER(U+FFFD)로 대체합니다. <xref:System.Text.ASCIIEncoding> 클래스의 기본 동작이기도 하며, 인코딩 또는 디코딩할 수 없는 각 문자를 물음표로 대체합니다. 다음 예제에서는 이전 예제의 유니코드 문자열에 대한 문자 대체를 보여줍니다. 출력에서 볼 수 있듯이, ASCII 바이트 값으로 디코딩할 수 없는 각 문자는 물음표의 ASCII 코드인 0x3F로 대체됩니다.  
+ 대상 구성표에 문자와 정확히 일치하는 항목이 없고 매핑할 수 있는 적절한 문자가 없는 경우 응용 프로그램에서 대체 문자 또는 문자열을 지정할 수 있습니다. 이는 유니코드 디코더의 기본 동작으로, 디코딩할 수 없는 모든 2바이트 시퀀스를 REPLACEMENT_CHARACTER(U+FFFD)로 대체합니다. <xref:System.Text.ASCIIEncoding> 클래스의 기본 동작이기도 하며, 인코딩 또는 디코딩할 수 없는 각 문자를 물음표로 대체합니다. 다음 예제에서는 이전 예제의 유니코드 문자열에 대한 문자 대체를 보여 줍니다. 출력에서 볼 수 있듯이, ASCII 바이트 값으로 디코딩할 수 없는 각 문자는 물음표의 ASCII 코드인 0x3F로 대체됩니다.  
   
  [!code-csharp[Conceptual.Encoding#2](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.encoding/cs/replacementascii.cs#2)]
  [!code-vb[Conceptual.Encoding#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.encoding/vb/replacementascii.vb#2)]  
@@ -193,7 +193,7 @@ ms.lasthandoff: 02/01/2018
   
 <a name="Exception"></a>   
 ### <a name="exception-fallback"></a>예외 대체(fallback)  
- 최적 대체(fallback) 또는 대체 문자열을 제공하는 대신 인코더가 문자 집합을 인코딩할 수 없는 경우 <xref:System.Text.EncoderFallbackException> 이 발생하고, 디코더가 바이트 배열을 디코딩할 수 없는 경우 <xref:System.Text.DecoderFallbackException> 이 발생할 수 있습니다. 인코딩 및 디코딩 작업에서 예외를 발생시키려면 <xref:System.Text.Encoding.GetEncoding%28System.String%2CSystem.Text.EncoderFallback%2CSystem.Text.DecoderFallback%29?displayProperty=nameWithType> 메서드에 각각 <xref:System.Text.EncoderExceptionFallback> 개체 및 <xref:System.Text.DecoderExceptionFallback> 개체를 제공합니다. 다음 예제에서는 <xref:System.Text.ASCIIEncoding> 클래스를 사용한 예외 대체(fallback)를 보여줍니다.  
+ 최적 대체(fallback) 또는 대체 문자열을 제공하는 대신 인코더가 문자 집합을 인코딩할 수 없는 경우 <xref:System.Text.EncoderFallbackException> 이 발생하고, 디코더가 바이트 배열을 디코딩할 수 없는 경우 <xref:System.Text.DecoderFallbackException> 이 발생할 수 있습니다. 인코딩 및 디코딩 작업에서 예외를 발생시키려면 <xref:System.Text.Encoding.GetEncoding%28System.String%2CSystem.Text.EncoderFallback%2CSystem.Text.DecoderFallback%29?displayProperty=nameWithType> 메서드에 각각 <xref:System.Text.EncoderExceptionFallback> 개체 및 <xref:System.Text.DecoderExceptionFallback> 개체를 제공합니다. 다음 예제에서는 <xref:System.Text.ASCIIEncoding> 클래스를 사용한 예외 대체(fallback)를 보여 줍니다.  
   
  [!code-csharp[Conceptual.Encoding#4](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.encoding/cs/exceptionascii.cs#4)]
  [!code-vb[Conceptual.Encoding#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.encoding/vb/exceptionascii.vb#4)]  

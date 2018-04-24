@@ -1,12 +1,12 @@
 ---
-title: "표준 날짜 및 시간 형식 문자열"
-ms.custom: 
+title: 표준 날짜 및 시간 형식 문자열
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -20,18 +20,18 @@ helpviewer_keywords:
 - formatting [.NET Framework], time
 - date and time strings
 ms.assetid: bb79761a-ca08-44ee-b142-b06b3e2fc22b
-caps.latest.revision: 
+caps.latest.revision: 92
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 55f8f6b544a3ade0ad9423e8253cc44e0fb5fec1
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 5de7da12867e11fcde00089e13c98396ed279a5e
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="standard-date-and-time-format-strings"></a>표준 날짜 및 시간 형식 문자열
 표준 날짜 및 시간 서식 문자열은 단일 서식 지정자를 사용하여 날짜 및 시간 값의 텍스트 표현을 정의합니다. 공백을 포함하여 문자가 두 개 이상 포함된 날짜 및 시간 서식 문자열은 사용자 지정 날짜 및 시간 서식 문자열로 해석됩니다. 자세한 내용은 [사용자 지정 날짜 및 시간 서식 문자열](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)을 참조하세요. 표준 또는 사용자 지정 서식 문자열은 다음 두 가지 방법으로 사용할 수 있습니다.  
@@ -43,7 +43,7 @@ ms.lasthandoff: 12/23/2017
  표준 날짜 및 시간 서식 문자열은 <xref:System.DateTime>과 <xref:System.DateTimeOffset> 값 모두에 사용할 수 있습니다.  
   
 > [!TIP]
->  서식 문자열을 숫자 또는 날짜 및 시간 값에 적용할 수 있도록 지원하고 결과 문자열을 표시하는 응용 프로그램인 [서식 유틸리티](http://code.msdn.microsoft.com/NET-Framework-4-Formatting-9c4dae8d)를 다운로드할 수 있습니다.  
+>  서식 문자열을 숫자 또는 날짜 및 시간 값에 적용할 수 있도록 지원하고 결과 문자열을 표시하는 응용 프로그램인 [서식 유틸리티](https://code.msdn.microsoft.com/NET-Framework-4-Formatting-9c4dae8d)를 다운로드할 수 있습니다.  
   
 <a name="table"></a> 다음 표에서는 표준 날짜 및 시간 서식 지정자에 대해 설명합니다. 다른 설명이 없는 한 특정 표준 날짜 및 시간 서식 지정자는 <xref:System.DateTime> 값에 사용할 때와 <xref:System.DateTimeOffset> 값에 사용할 때 동일한 문자열을 생성합니다. 표준 날짜 및 시간 서식 문자열을 사용하는 방법에 대한 자세한 내용은 [참고](#Notes) 섹션을 참조하세요.  
   
@@ -98,7 +98,7 @@ ms.lasthandoff: 12/23/2017
 |"s"|<xref:System.Globalization.DateTimeFormatInfo.SortableDateTimePattern%2A>|yyyy'-'MM'-'dd'T'HH':'mm':'ss|  
 |"u"|<xref:System.Globalization.DateTimeFormatInfo.UniversalSortableDateTimePattern%2A>|yyyy'-'MM'-'dd HH':'mm':'ss'Z'|  
   
- 표준 서식 문자열은 입력 문자열이 특정 패턴을 정확하게 따라야 구문 분석 작업이 성공하는 <xref:System.DateTime.ParseExact%2A?displayProperty=nameWithType> 또는 <xref:System.DateTimeOffset.ParseExact%2A?displayProperty=nameWithType> 메서드의 구문 분석 작업에서도 사용할 수 있습니다. 많은 표준 서식 문자열은 여러 사용자 지정 서식 문자열로 매핑되므로 날짜 및 시간 값을 여러 서식으로 표현할 수 있으며 그래도 구문 분석 작업이 성공합니다. <xref:System.Globalization.DateTimeFormatInfo.GetAllDateTimePatterns%28System.Char%29?displayProperty=nameWithType> 메서드를 호출하면 표준 서식 문자열에 해당하는 사용자 지정 서식 문자열을 확인할 수 있습니다. 다음 예제에서는 "d"(간단한 날짜 패턴) 표준 서식 문자열로 매핑되는 사용자 지정 서식 문자열을 보여줍니다.  
+ 표준 서식 문자열은 입력 문자열이 특정 패턴을 정확하게 따라야 구문 분석 작업이 성공하는 <xref:System.DateTime.ParseExact%2A?displayProperty=nameWithType> 또는 <xref:System.DateTimeOffset.ParseExact%2A?displayProperty=nameWithType> 메서드의 구문 분석 작업에서도 사용할 수 있습니다. 많은 표준 서식 문자열은 여러 사용자 지정 서식 문자열로 매핑되므로 날짜 및 시간 값을 여러 서식으로 표현할 수 있으며 그래도 구문 분석 작업이 성공합니다. <xref:System.Globalization.DateTimeFormatInfo.GetAllDateTimePatterns%28System.Char%29?displayProperty=nameWithType> 메서드를 호출하면 표준 서식 문자열에 해당하는 사용자 지정 서식 문자열을 확인할 수 있습니다. 다음 예제에서는 "d"(간단한 날짜 패턴) 표준 서식 문자열로 매핑되는 사용자 지정 서식 문자열을 보여 줍니다.  
   
  [!code-csharp[Formatting.DateAndTime.Standard#17](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Standard/cs/stdandparsing1.cs#17)]
  [!code-vb[Formatting.DateAndTime.Standard#17](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Standard/vb/stdandparsing1.vb#17)]  
@@ -109,7 +109,7 @@ ms.lasthandoff: 12/23/2017
 ## <a name="the-short-date-d-format-specifier"></a>간단한 날짜("d") 서식 지정자  
  "d" 표준 서식 지정자는 특정 문화권의 <xref:System.Globalization.DateTimeFormatInfo.ShortDatePattern%2A?displayProperty=nameWithType> 속성에 의해 정의되는 사용자 지정 날짜 및 시간 서식 문자열을 나타냅니다. 예를 들어, 고정 문화권의 <xref:System.Globalization.DateTimeFormatInfo.ShortDatePattern%2A> 속성이 반환하는 사용자 지정 서식 문자열은 "MM/dd/yyyy"입니다.  
   
- 다음 표에서는 반환된 문자열의 서식을 제어하는 <xref:System.Globalization.DateTimeFormatInfo> 개체의 속성을 보여줍니다.  
+ 다음 표에서는 반환된 문자열의 서식을 제어하는 <xref:System.Globalization.DateTimeFormatInfo> 개체의 속성을 보여 줍니다.  
   
 |속성|설명|  
 |--------------|-----------------|  
@@ -127,7 +127,7 @@ ms.lasthandoff: 12/23/2017
 ## <a name="the-long-date-d-format-specifier"></a>자세한 날짜("D") 서식 지정자  
  "D" 표준 서식 지정자는 현재 <xref:System.Globalization.DateTimeFormatInfo.LongDatePattern%2A?displayProperty=nameWithType> 속성에 의해 정의되는 사용자 지정 날짜 및 시간 서식 문자열을 나타냅니다. 예를 들어, 고정 문화권에 대한 사용자 지정 서식 문자열은 "dddd, dd MMMM yyyy"입니다.  
   
- 다음 표에서는 반환된 문자열의 서식을 제어하는 <xref:System.Globalization.DateTimeFormatInfo> 개체의 속성을 보여줍니다.  
+ 다음 표에서는 반환된 문자열의 서식을 제어하는 <xref:System.Globalization.DateTimeFormatInfo> 개체의 속성을 보여 줍니다.  
   
 |속성|설명|  
 |--------------|-----------------|  
@@ -146,7 +146,7 @@ ms.lasthandoff: 12/23/2017
 ## <a name="the-full-date-short-time-f-format-specifier"></a>전체 날짜, 간단한 시간("f") 서식 지정자  
  "f" 표준 서식 지정자는 공백으로 구분된 자세한 날짜("D")와 간단한 시간("t") 패턴의 조합입니다.  
   
- 결과 문자열은 특정 <xref:System.Globalization.DateTimeFormatInfo> 개체의 서식 지정 정보에 영향을 받습니다. 다음 표에서는 반환된 문자열의 서식을 제어하는 <xref:System.Globalization.DateTimeFormatInfo> 개체 속성을 보여줍니다. 일부 문화권의 <xref:System.Globalization.DateTimeFormatInfo.LongDatePattern%2A?displayProperty=nameWithType> 및 <xref:System.Globalization.DateTimeFormatInfo.ShortTimePattern%2A?displayProperty=nameWithType> 속성에서 반환하는 사용자 지정 서식 지정자는 일부 속성을 사용하지 못할 수 있습니다.  
+ 결과 문자열은 특정 <xref:System.Globalization.DateTimeFormatInfo> 개체의 서식 지정 정보에 영향을 받습니다. 다음 표에서는 반환된 문자열의 서식을 제어하는 <xref:System.Globalization.DateTimeFormatInfo> 개체 속성을 보여 줍니다. 일부 문화권의 <xref:System.Globalization.DateTimeFormatInfo.LongDatePattern%2A?displayProperty=nameWithType> 및 <xref:System.Globalization.DateTimeFormatInfo.ShortTimePattern%2A?displayProperty=nameWithType> 속성에서 반환하는 사용자 지정 서식 지정자는 일부 속성을 사용하지 못할 수 있습니다.  
   
 |속성|설명|  
 |--------------|-----------------|  
@@ -169,7 +169,7 @@ ms.lasthandoff: 12/23/2017
 ## <a name="the-full-date-long-time-f-format-specifier"></a>전체 날짜, 자세한 시간("F") 서식 지정자  
  "F" 표준 서식 지정자는 현재 <xref:System.Globalization.DateTimeFormatInfo.FullDateTimePattern%2A?displayProperty=nameWithType> 속성에 의해 정의되는 사용자 지정 날짜 및 시간 서식 문자열을 나타냅니다. 예를 들어, 고정 문화권에 대한 사용자 지정 서식 문자열은 "dddd, dd MMMM yyyy HH:mm:ss"입니다.  
   
- 다음 표에서는 반환된 문자열의 서식을 제어하는 <xref:System.Globalization.DateTimeFormatInfo> 개체 속성을 보여줍니다. 일부 문화권의 <xref:System.Globalization.DateTimeFormatInfo.FullDateTimePattern%2A> 속성에서 반환하는 사용자 지정 서식 지정자는 일부 속성을 사용하지 못할 수 있습니다.  
+ 다음 표에서는 반환된 문자열의 서식을 제어하는 <xref:System.Globalization.DateTimeFormatInfo> 개체 속성을 보여 줍니다. 일부 문화권의 <xref:System.Globalization.DateTimeFormatInfo.FullDateTimePattern%2A> 속성에서 반환하는 사용자 지정 서식 지정자는 일부 속성을 사용하지 못할 수 있습니다.  
   
 |속성|설명|  
 |--------------|-----------------|  
@@ -191,7 +191,7 @@ ms.lasthandoff: 12/23/2017
 ## <a name="the-general-date-short-time-g-format-specifier"></a>일반 날짜, 간단한 시간("g") 서식 지정자  
  "g" 표준 서식 지정자는 공백으로 구분된 간단한 날짜("d")와 간단한 시간("t") 패턴의 조합입니다.  
   
- 결과 문자열은 특정 <xref:System.Globalization.DateTimeFormatInfo> 개체의 서식 지정 정보에 영향을 받습니다. 다음 표에서는 반환된 문자열의 서식을 제어하는 <xref:System.Globalization.DateTimeFormatInfo> 개체 속성을 보여줍니다. 일부 문화권의 <xref:System.Globalization.DateTimeFormatInfo.ShortDatePattern%2A?displayProperty=nameWithType> 및 <xref:System.Globalization.DateTimeFormatInfo.ShortTimePattern%2A?displayProperty=nameWithType> 속성에서 반환하는 사용자 지정 서식 지정자는 일부 속성을 사용하지 못할 수 있습니다.  
+ 결과 문자열은 특정 <xref:System.Globalization.DateTimeFormatInfo> 개체의 서식 지정 정보에 영향을 받습니다. 다음 표에서는 반환된 문자열의 서식을 제어하는 <xref:System.Globalization.DateTimeFormatInfo> 개체 속성을 보여 줍니다. 일부 문화권의 <xref:System.Globalization.DateTimeFormatInfo.ShortDatePattern%2A?displayProperty=nameWithType> 및 <xref:System.Globalization.DateTimeFormatInfo.ShortTimePattern%2A?displayProperty=nameWithType> 속성에서 반환하는 사용자 지정 서식 지정자는 일부 속성을 사용하지 못할 수 있습니다.  
   
 |속성|설명|  
 |--------------|-----------------|  
@@ -213,7 +213,7 @@ ms.lasthandoff: 12/23/2017
 ## <a name="the-general-date-long-time-g-format-specifier"></a>일반 날짜, 자세한 시간("G") 서식 지정자  
  "G" 표준 서식 지정자는 공백으로 구분된 간단한 날짜("d")와 자세한 시간("T") 패턴의 조합입니다.  
   
- 결과 문자열은 특정 <xref:System.Globalization.DateTimeFormatInfo> 개체의 서식 지정 정보에 영향을 받습니다. 다음 표에서는 반환된 문자열의 서식을 제어하는 <xref:System.Globalization.DateTimeFormatInfo> 개체 속성을 보여줍니다. 일부 문화권의 <xref:System.Globalization.DateTimeFormatInfo.ShortDatePattern%2A?displayProperty=nameWithType> 및 <xref:System.Globalization.DateTimeFormatInfo.LongTimePattern%2A?displayProperty=nameWithType> 속성에서 반환하는 사용자 지정 서식 지정자는 일부 속성을 사용하지 못할 수 있습니다.  
+ 결과 문자열은 특정 <xref:System.Globalization.DateTimeFormatInfo> 개체의 서식 지정 정보에 영향을 받습니다. 다음 표에서는 반환된 문자열의 서식을 제어하는 <xref:System.Globalization.DateTimeFormatInfo> 개체 속성을 보여 줍니다. 일부 문화권의 <xref:System.Globalization.DateTimeFormatInfo.ShortDatePattern%2A?displayProperty=nameWithType> 및 <xref:System.Globalization.DateTimeFormatInfo.LongTimePattern%2A?displayProperty=nameWithType> 속성에서 반환하는 사용자 지정 서식 지정자는 일부 속성을 사용하지 못할 수 있습니다.  
   
 |속성|설명|  
 |--------------|-----------------|  
@@ -235,7 +235,7 @@ ms.lasthandoff: 12/23/2017
 ## <a name="the-month-m-m-format-specifier"></a>월("M", "m") 서식 지정자  
  "M" 또는 "m" 표준 서식 지정자는 현재 <xref:System.Globalization.DateTimeFormatInfo.MonthDayPattern%2A?displayProperty=nameWithType> 속성에 의해 정의되는 사용자 지정 날짜 및 시간 서식 문자열을 나타냅니다. 예를 들어, 고정 문화권에 대한 사용자 지정 서식 문자열은 "MMMM dd"입니다.  
   
- 다음 표에서는 반환된 문자열의 서식을 제어하는 <xref:System.Globalization.DateTimeFormatInfo> 개체의 속성을 보여줍니다.  
+ 다음 표에서는 반환된 문자열의 서식을 제어하는 <xref:System.Globalization.DateTimeFormatInfo> 개체의 속성을 보여 줍니다.  
   
 |속성|설명|  
 |--------------|-----------------|  
@@ -319,7 +319,7 @@ ms.lasthandoff: 12/23/2017
 ## <a name="the-short-time-t-format-specifier"></a>간단한 시간("t") 서식 지정자  
  "t" 표준 서식 지정자는 현재 <xref:System.Globalization.DateTimeFormatInfo.ShortTimePattern%2A?displayProperty=nameWithType> 속성에 의해 정의되는 사용자 지정 날짜 및 시간 서식 문자열을 나타냅니다. 예를 들어, 고정 문화권에 대한 사용자 지정 서식 문자열은 "HH:mm"입니다.  
   
- 결과 문자열은 특정 <xref:System.Globalization.DateTimeFormatInfo> 개체의 서식 지정 정보에 영향을 받습니다. 다음 표에서는 반환된 문자열의 서식을 제어하는 <xref:System.Globalization.DateTimeFormatInfo> 개체 속성을 보여줍니다. 일부 문화권의 <xref:System.Globalization.DateTimeFormatInfo.ShortTimePattern%2A?displayProperty=nameWithType> 속성에서 반환하는 사용자 지정 서식 지정자는 일부 속성을 사용하지 못할 수 있습니다.  
+ 결과 문자열은 특정 <xref:System.Globalization.DateTimeFormatInfo> 개체의 서식 지정 정보에 영향을 받습니다. 다음 표에서는 반환된 문자열의 서식을 제어하는 <xref:System.Globalization.DateTimeFormatInfo> 개체 속성을 보여 줍니다. 일부 문화권의 <xref:System.Globalization.DateTimeFormatInfo.ShortTimePattern%2A?displayProperty=nameWithType> 속성에서 반환하는 사용자 지정 서식 지정자는 일부 속성을 사용하지 못할 수 있습니다.  
   
 |속성|설명|  
 |--------------|-----------------|  
@@ -339,7 +339,7 @@ ms.lasthandoff: 12/23/2017
 ## <a name="the-long-time-t-format-specifier"></a>자세한 시간("T") 서식 지정자  
  "T" 표준 서식 지정자는 특정 문화권의 <xref:System.Globalization.DateTimeFormatInfo.LongTimePattern%2A?displayProperty=nameWithType> 속성에 의해 정의되는 사용자 지정 날짜 및 시간 서식 문자열을 나타냅니다. 예를 들어, 고정 문화권에 대한 사용자 지정 서식 문자열은 "HH:mm:ss"입니다.  
   
- 다음 표에서는 반환된 문자열의 서식을 제어하는 <xref:System.Globalization.DateTimeFormatInfo> 개체 속성을 보여줍니다. 일부 문화권의 <xref:System.Globalization.DateTimeFormatInfo.LongTimePattern%2A?displayProperty=nameWithType> 속성에서 반환하는 사용자 지정 서식 지정자는 일부 속성을 사용하지 못할 수 있습니다.  
+ 다음 표에서는 반환된 문자열의 서식을 제어하는 <xref:System.Globalization.DateTimeFormatInfo> 개체 속성을 보여 줍니다. 일부 문화권의 <xref:System.Globalization.DateTimeFormatInfo.LongTimePattern%2A?displayProperty=nameWithType> 속성에서 반환하는 사용자 지정 서식 지정자는 일부 속성을 사용하지 못할 수 있습니다.  
   
 |속성|설명|  
 |--------------|-----------------|  
@@ -372,7 +372,7 @@ ms.lasthandoff: 12/23/2017
 ## <a name="the-universal-full-u-format-specifier"></a>유니버설 전체("U") 서식 지정자  
  "U" 표준 서식 지정자는 지정된 문화권의 <xref:System.Globalization.DateTimeFormatInfo.FullDateTimePattern%2A?displayProperty=nameWithType> 속성에 의해 정의되는 사용자 지정 날짜 및 시간 서식 문자열을 나타냅니다. 이 패턴은 "F" 패턴과 동일합니다. 그러나 서식 지정 작업을 수행하기 전에 <xref:System.DateTime> 값이 자동으로 UTC로 변환됩니다.  
   
- 다음 표에서는 반환된 문자열의 서식을 제어하는 <xref:System.Globalization.DateTimeFormatInfo> 개체 속성을 보여줍니다. 일부 문화권의 <xref:System.Globalization.DateTimeFormatInfo.FullDateTimePattern%2A> 속성에서 반환하는 사용자 지정 서식 지정자는 일부 속성을 사용하지 못할 수 있습니다.  
+ 다음 표에서는 반환된 문자열의 서식을 제어하는 <xref:System.Globalization.DateTimeFormatInfo> 개체 속성을 보여 줍니다. 일부 문화권의 <xref:System.Globalization.DateTimeFormatInfo.FullDateTimePattern%2A> 속성에서 반환하는 사용자 지정 서식 지정자는 일부 속성을 사용하지 못할 수 있습니다.  
   
 |속성|설명|  
 |--------------|-----------------|  
@@ -396,7 +396,7 @@ ms.lasthandoff: 12/23/2017
 ## <a name="the-year-month-y-y-format-specifier"></a>년 월("Y", "y") 서식 지정자  
  "Y" 또는 "y" 표준 서식 지정자는 지정된 문화권의 <xref:System.Globalization.DateTimeFormatInfo.YearMonthPattern%2A?displayProperty=nameWithType> 속성에 의해 정의되는 사용자 지정 날짜 및 시간 서식 문자열을 나타냅니다. 예를 들어, 고정 문화권에 대한 사용자 지정 서식 문자열은 "yyyy MMMM"입니다.  
   
- 다음 표에서는 반환된 문자열의 서식을 제어하는 <xref:System.Globalization.DateTimeFormatInfo> 개체의 속성을 보여줍니다.  
+ 다음 표에서는 반환된 문자열의 서식을 제어하는 <xref:System.Globalization.DateTimeFormatInfo> 개체의 속성을 보여 줍니다.  
   
 |속성|설명|  
 |--------------|-----------------|  
@@ -426,4 +426,4 @@ ms.lasthandoff: 12/23/2017
  <xref:System.DateTimeOffset?displayProperty=nameWithType>  
  [형식 서식 지정](../../../docs/standard/base-types/formatting-types.md)  
  [사용자 지정 날짜 및 시간 형식 문자열](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)  
- [샘플: .NET Framework 4 서식 유틸리티](http://code.msdn.microsoft.com/NET-Framework-4-Formatting-9c4dae8d)
+ [샘플: .NET Framework 4 서식 유틸리티](https://code.msdn.microsoft.com/NET-Framework-4-Formatting-9c4dae8d)

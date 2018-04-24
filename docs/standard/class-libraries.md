@@ -13,15 +13,15 @@ ms.assetid: a67484c3-fe92-44d8-8fa3-36fa2071d880
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 8f7c421d2490678f7122e78bc0b83ebf3a1aa9ea
-ms.sourcegitcommit: 15316053918995cc1380163a7d7e7edd5c44e6d7
+ms.openlocfilehash: 44d5745daed8539c5dd48b08f9f73edce4da939f
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/19/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="net-class-libraries"></a>.NET 클래스 라이브러리
 
-클래스 라이브러리는 .NET에 대한 [공유 라이브러리](http://en.wikipedia.org/wiki/Library_%28computing%29#Shared_libraries) 개념입니다. 유용한 기능을 여러 응용 프로그램에서 사용할 수 있는 모듈로 구성 요소화할 수 있게 합니다. 불필요하거나 응용 프로그램 시작 시 알 수 없는 기능을 로드하는 수단으로 사용할 수도 있습니다. 클래스 라이브러리는 [.NET 어셈블리 파일 형식](assembly-format.md)을 사용하여 설명됩니다.
+클래스 라이브러리는 .NET에 대한 [공유 라이브러리](https://en.wikipedia.org/wiki/Library_%28computing%29#Shared_libraries) 개념입니다. 유용한 기능을 여러 응용 프로그램에서 사용할 수 있는 모듈로 구성 요소화할 수 있게 합니다. 불필요하거나 응용 프로그램 시작 시 알 수 없는 기능을 로드하는 수단으로 사용할 수도 있습니다. 클래스 라이브러리는 [.NET 어셈블리 파일 형식](assembly-format.md)을 사용하여 설명됩니다.
 
 사용할 수 있는 세 가지 유형의 클래스 라이브러리는 다음과 같습니다.
 
@@ -43,7 +43,7 @@ ms.lasthandoff: 03/19/2018
 
 이식 가능한 라이브러리를 만드는 경우 플랫폼 구성을 선택합니다. 이러한 구성은 지원해야 하는 플랫폼 집합(예: .NET Framework 4.5 이상, Windows Phone 8.0 이상)입니다. 더 많은 플랫폼을 지원하도록 선택할수록 만들 수 있는 API 및 플랫폼 가정(최소 공통 분모)이 줄어듭니다. “많을수록 더 좋다”고 생각하는 경향이 있으므로 이 특성은 처음에 혼동을 줄 수도 있지만 지원되는 플랫폼이 많을수록 사용 가능한 API가 줄어듭니다.
 
-많은 라이브러리 개발자가 한 소스에서 여러 플랫폼별 라이브러리를 생성하는 형태(조건부 컴파일 지시문 사용)에서 이식 가능한 라이브러리로 전환했습니다. 이식 가능한 라이브러리 내에서 플랫폼별 기능에 액세스하기 위한 [여러 가지 방법](http://blog.stephencleary.com/2012/11/portable-class-library-enlightenment.html)이 있으며, [bait-and-switch](http://log.paulbetts.org/the-bait-and-switch-pcl-trick/)가 현재 가장 광범위하게 사용되는 기술입니다.
+많은 라이브러리 개발자가 한 소스에서 여러 플랫폼별 라이브러리를 생성하는 형태(조건부 컴파일 지시문 사용)에서 이식 가능한 라이브러리로 전환했습니다. 이식 가능한 라이브러리 내에서 플랫폼별 기능에 액세스하기 위한 [여러 가지 방법](https://blog.stephencleary.com/2012/11/portable-class-library-enlightenment.html)이 있으며, [bait-and-switch](https://log.paulbetts.org/the-bait-and-switch-pcl-trick/)가 현재 가장 광범위하게 사용되는 기술입니다.
 
 ### <a name="net-standard-class-libraries"></a>.NET Standard 클래스 라이브러리
 

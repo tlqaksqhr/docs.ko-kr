@@ -1,5 +1,5 @@
 ---
-title: "CLR(공용 언어 런타임)"
+title: CLR(공용 언어 런타임)
 ms.custom: updateeachrelease
 ms.date: 10/17/2017
 ms.prod: .net
@@ -24,11 +24,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 4aa9a6d37a52d5f15643e9179060450a2d7a34c4
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 2993fbcdc1caf73147c252a0d501e65478a3d08d
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="common-language-runtime-clr"></a>CLR(공용 언어 런타임)
 .NET Framework에서는 공용 언어 런타임이라고 하는 런타임 환경을 제공하는데, 여기에서는 코드를 실행하며 개발 과정을 더 쉽게 해 주는 서비스를 제공합니다.  
@@ -87,7 +87,7 @@ ms.lasthandoff: 01/19/2018
 |-----------|-----------------|  
 |[관리되는 실행 프로세스](../../docs/standard/managed-execution-process.md)|공용 언어 런타임을 사용하는 데 필요한 단계에 대해 설명합니다.|  
 |[자동 메모리 관리](../../docs/standard/automatic-memory-management.md)|가비지 수집기에서 메모리를 할당하고 해제하는 방법에 대해 설명합니다.|  
-|[NIB: .NET Framework의 개요](http://msdn.microsoft.com/library/ea38ac1e-92af-4d1b-8db1-e8a5ea10ed85)|공용 형식 시스템, 언어 간 상호 운용성, 관리되는 실행, 응용 프로그램 도메인, 어셈블리 등과 같은 .NET Framework의 주요 개념에 대해 설명합니다.|  
+|[NIB: .NET Framework의 개요](https://msdn.microsoft.com/library/ea38ac1e-92af-4d1b-8db1-e8a5ea10ed85)|공용 형식 시스템, 언어 간 상호 운용성, 관리되는 실행, 응용 프로그램 도메인, 어셈블리 등과 같은 .NET Framework의 주요 개념에 대해 설명합니다.|  
 |[공용 형식 시스템](../../docs/standard/base-types/common-type-system.md)|언어 간 통합을 지원하면서 런타임에서 형식을 선언, 사용, 관리하는 방법에 대해 설명합니다.|  
   
 ## <a name="see-also"></a>참고 항목  

@@ -1,12 +1,12 @@
 ---
-title: "지역화 대비 응용 프로그램 개발을 위한 최선의 구현 방법"
-ms.custom: 
+title: 지역화 대비 응용 프로그램 개발을 위한 최선의 구현 방법
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - global applications, best practices
@@ -14,18 +14,18 @@ helpviewer_keywords:
 - globalization [.NET Framework], best practices
 - international applications [.NET Framework], best practices
 ms.assetid: f08169c7-aad8-4ec3-9a21-9ebd3b89986c
-caps.latest.revision: 
+caps.latest.revision: 20
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 1fbdbe2596f44a6efda35b8c3e3aace303d79364
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 65566d54c97db7592fdd38178d88fe2963e637bf
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="best-practices-for-developing-world-ready-applications"></a>지역화 대비 응용 프로그램 개발을 위한 최선의 구현 방법
 이 단원에서는 지역화 대비 응용 프로그램을 개발할 때 따라야 할 최선의 구현 방법을 소개합니다.  
@@ -102,7 +102,7 @@ ms.lasthandoff: 01/19/2018
   
 4.  ASP.NET 응용 프로그램의 다음 세 위치에서 requestEncoding, responseEncoding, fileEncoding, culture 및 uiCulture 특성의 값을 지정합니다.  
   
-    -   Web.config 파일의 전역화 섹션에서. 이 파일은 ASP.NET 응용 프로그램에 대해 외부 파일입니다. 자세한 내용은 [\<globalization> 요소](http://msdn.microsoft.com/library/e2dffc8e-ebd2-439b-a2fd-e3ac5e620da7)를 참조하세요.  
+    -   Web.config 파일의 전역화 섹션에서. 이 파일은 ASP.NET 응용 프로그램에 대해 외부 파일입니다. 자세한 내용은 [\<globalization> 요소](https://msdn.microsoft.com/library/e2dffc8e-ebd2-439b-a2fd-e3ac5e620da7)를 참조하세요.  
   
     -   페이지 지시문에서. 응용 프로그램이 페이지에 있는 경우 파일이 이미 읽혀진 것입니다. 따라서 너무 늦었으므로 fileEncoding 및 requestEncoding을 지정할 수 없습니다. uiCulture, Culture 및 responseEncoding만 페이지 지시문에 지정할 수 있습니다.  
   

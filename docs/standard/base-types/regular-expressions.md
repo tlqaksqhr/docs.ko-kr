@@ -1,12 +1,12 @@
 ---
-title: ".NET Framework 정규식"
-ms.custom: 
+title: .NET Framework 정규식
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -26,18 +26,18 @@ helpviewer_keywords:
 - .NET Framework regular expressions
 - strings [.NET Framework], regular expressions
 ms.assetid: 521b3f6d-f869-42e1-93e5-158c54a6895d
-caps.latest.revision: 
+caps.latest.revision: 24
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 145e0c9a722afd9f49216058604936189c003f17
-ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
+ms.openlocfilehash: 5d0ec5572776368fa9943a87fa72280a4ebeb03d
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="net-regular-expressions"></a>.NET 정규식
 정규식은 텍스트를 처리하는 강력하고 유연하며 효율적인 방법을 제공합니다. 정규식의 광범위한 패턴 일치 표기법을 사용하여 많은 양의 텍스트를 신속하게 구문 분석함으로써 특정 문자 패턴을 찾고, 텍스트의 유효성을 검사하여 해당 텍스트가 미리 정의된 패턴(예: 전자 메일 주소)과 일치하는지 확인하며, 텍스트 부분 문자열을 추출, 편집, 바꾸기 또는 삭제하고, 추출된 문자열을 컬렉션에 추가하여 보고서를 생성할 수 있습니다. 문자열을 처리하거나 텍스트의 큰 블록을 구문 분석하는 많은 응용 프로그램의 경우 정규식은 필수적인 도구입니다.  
@@ -63,14 +63,14 @@ ms.lasthandoff: 02/01/2018
   
  정규식 언어에 대한 자세한 내용은 [정규식 언어 - 빠른 참조](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)를 참조하거나, 다음 브로슈어 중 하나를 다운로드하여 인쇄하세요.  
   
- [Word(.docx) 형식의 빠른 참조](http://download.microsoft.com/download/D/2/4/D240EBF6-A9BA-4E4F-A63F-AEB6DA0B921C/Regular%20expressions%20quick%20reference.docx)  
- [PDF(.pdf) 형식의 빠른 참조](http://download.microsoft.com/download/D/2/4/D240EBF6-A9BA-4E4F-A63F-AEB6DA0B921C/Regular%20expressions%20quick%20reference.pdf)  
+ [Word(.docx) 형식의 빠른 참조](https://download.microsoft.com/download/D/2/4/D240EBF6-A9BA-4E4F-A63F-AEB6DA0B921C/Regular%20expressions%20quick%20reference.docx)  
+ [PDF(.pdf) 형식의 빠른 참조](https://download.microsoft.com/download/D/2/4/D240EBF6-A9BA-4E4F-A63F-AEB6DA0B921C/Regular%20expressions%20quick%20reference.pdf)  
   
 ## <a name="regular-expression-examples"></a>정규식 예제  
- <xref:System.String> 클래스에는 큰 문자열에서 리터럴 문자열을 찾을 때 사용할 수 있는 다양한 문자열 검색 및 바꾸기 메서드가 포함되어 있습니다. 정규식은 다음 예제에서 보여주는 것처럼 큰 문자열에서 여러 부분 문자열 중 하나를 찾거나 문자열에서 패턴을 식별할 때 가장 유용합니다.  
+ <xref:System.String> 클래스에는 큰 문자열에서 리터럴 문자열을 찾을 때 사용할 수 있는 다양한 문자열 검색 및 바꾸기 메서드가 포함되어 있습니다. 정규식은 다음 예제에서 보여 주는 것처럼 큰 문자열에서 여러 부분 문자열 중 하나를 찾거나 문자열에서 패턴을 식별할 때 가장 유용합니다.  
   
 ### <a name="example-1-replacing-substrings"></a>예제 1: 부분 문자열 바꾸기  
- 메일 그룹에 경우에 따라 호칭(Mr., Mrs., Miss 또는 Ms.)이 이름 및 성과 함께 포함되어 있는 이름이 들어 있다고 가정합니다. 메일 그룹에서 봉투 레이블을 생성할 때 호칭을 포함하지 않으려는 경우 다음 예제에서 보여주는 것처럼 정규식을 사용하여 호칭을 제거할 수 있습니다.  
+ 메일 그룹에 경우에 따라 호칭(Mr., Mrs., Miss 또는 Ms.)이 이름 및 성과 함께 포함되어 있는 이름이 들어 있다고 가정합니다. 메일 그룹에서 봉투 레이블을 생성할 때 호칭을 포함하지 않으려는 경우 다음 예제에서 보여 주는 것처럼 정규식을 사용하여 호칭을 제거할 수 있습니다.  
   
  [!code-csharp[Conceptual.Regex#2](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex/cs/example1.cs#2)]
  [!code-vb[Conceptual.Regex#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex/vb/example1.vb#2)]  
@@ -78,7 +78,7 @@ ms.lasthandoff: 02/01/2018
  정규식 패턴 `(Mr\.? |Mrs\.? |Miss |Ms\.? )`는 모든 “Mr”, “Mr.”, “Mrs”, “Mrs.”, “Miss”, “Ms” 또는 “Ms.”가 발생하는 것과 일치합니다. <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> 메서드에 대한 호출은 일치하는 문자열을 <xref:System.String.Empty?displayProperty=nameWithType>로 바꿉니다. 즉, 원래 문자열에서 일치하는 문자열을 제거합니다.  
   
 ### <a name="example-2-identifying-duplicated-words"></a>예제 2: 중복된 단어 식별  
- 실수로 단어를 중복하는 것은 작성자가 흔히 하는 실수입니다. 다음 예제에서 보여주는 것처럼 정규식을 사용하여 중복된 단어를 식별할 수 있습니다.  
+ 실수로 단어를 중복하는 것은 작성자가 흔히 하는 실수입니다. 다음 예제에서 보여 주는 것처럼 정규식을 사용하여 중복된 단어를 식별할 수 있습니다.  
   
  [!code-csharp[Conceptual.Regex#3](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex/cs/example2.cs#3)]
  [!code-vb[Conceptual.Regex#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex/vb/example2.vb#3)]  
@@ -124,12 +124,12 @@ ms.lasthandoff: 02/01/2018
 |제목|설명|  
 |-----------|-----------------|  
 |[정규식 언어 - 빠른 참조](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)|정규식을 정의하는 데 사용할 수 있는 문자, 연산자 및 생성자 집합에 대한 정보를 제공합니다.|  
-|[정규식 개체 모델](../../../docs/standard/base-types/the-regular-expression-object-model.md)|정규식 클래스를 사용하는 방법을 보여주는 코드 예제 및 정보를 제공합니다.|  
+|[정규식 개체 모델](../../../docs/standard/base-types/the-regular-expression-object-model.md)|정규식 클래스를 사용하는 방법을 보여 주는 코드 예제 및 정보를 제공합니다.|  
 |[정규식 동작 정보](../../../docs/standard/base-types/details-of-regular-expression-behavior.md)|.NET 정규식의 기능 및 동작에 대한 정보를 제공합니다.|  
-|[정규식 예제](../../../docs/standard/base-types/regular-expression-examples.md)|정규식의 일반적인 사용을 보여주는 코드 예제를 제공합니다.|  
+|[정규식 예제](../../../docs/standard/base-types/regular-expression-examples.md)|정규식의 일반적인 사용을 보여 주는 코드 예제를 제공합니다.|  
   
 ## <a name="reference"></a>참조  
  <xref:System.Text.RegularExpressions?displayProperty=nameWithType>  
  <xref:System.Text.RegularExpressions.Regex?displayProperty=nameWithType>  
- [정규식 - 빠른 참조(Word 형식으로 다운로드)](http://download.microsoft.com/download/D/2/4/D240EBF6-A9BA-4E4F-A63F-AEB6DA0B921C/Regular%20expressions%20quick%20reference.docx)  
- [정규식 - 빠른 참조(PDF 형식으로 다운로드)](http://download.microsoft.com/download/D/2/4/D240EBF6-A9BA-4E4F-A63F-AEB6DA0B921C/Regular%20expressions%20quick%20reference.pdf)
+ [정규식 - 빠른 참조(Word 형식으로 다운로드)](https://download.microsoft.com/download/D/2/4/D240EBF6-A9BA-4E4F-A63F-AEB6DA0B921C/Regular%20expressions%20quick%20reference.docx)  
+ [정규식 - 빠른 참조(PDF 형식으로 다운로드)](https://download.microsoft.com/download/D/2/4/D240EBF6-A9BA-4E4F-A63F-AEB6DA0B921C/Regular%20expressions%20quick%20reference.pdf)

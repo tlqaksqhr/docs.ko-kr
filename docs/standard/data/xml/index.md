@@ -16,11 +16,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 824e06a00c4242d8ee38bdfc5a57151a71e4f285
-ms.sourcegitcommit: ba765893e3efcece67d99fd6d5ce0074b050d1d9
+ms.openlocfilehash: 0da27afc5509af6db510b5e622ffde461ae2e0a1
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/02/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="xml-documents-and-data"></a>XML 문서 및 데이터
 .NET Framework에서 XML 인식 응용 프로그램을 쉽게 작성할 수 있도록 하는 종합적이고 통합된 클래스 집합을 제공합니다. 다음 네임스페이스의 클래스에서는 XML 구문 분석 및 작성, 메모리에서의 XML 데이터 편집, 데이터 유효성 검사 및 XSLT 변형을 지원합니다.  
@@ -35,21 +35,21 @@ ms.lasthandoff: 03/02/2018
   
 -   <xref:System.Xml.Linq>  
   
- 전체 목록은 [System.Xml Namespaces](http://msdn.microsoft.com/library/gg145036.aspx) 웹 페이지를 참조하세요.  
+ 전체 목록은 [System.Xml Namespaces](https://msdn.microsoft.com/library/gg145036.aspx) 웹 페이지를 참조하세요.  
   
  이러한 네임스페이스의 클래스는 W3C(World Wide Web 컨소시엄) 권장 사항을 지원합니다. 예:  
   
--   <xref:System.Xml.XmlDocument?displayProperty=nameWithType> 클래스는 [W3C DOM(문서 개체 모델) Level 1 Core](http://www.w3.org/TR/REC-DOM-Level-1/) 및 [DOM Level 2 Core](http://www.w3.org/TR/DOM-Level-2-Core/) 권장 사항을 구현합니다.  
+-   <xref:System.Xml.XmlDocument?displayProperty=nameWithType> 클래스는 [W3C DOM(문서 개체 모델) Level 1 Core](https://www.w3.org/TR/REC-DOM-Level-1/) 및 [DOM Level 2 Core](https://www.w3.org/TR/DOM-Level-2-Core/) 권장 사항을 구현합니다.  
   
--   <xref:System.Xml.XmlReader?displayProperty=nameWithType> 및 <xref:System.Xml.XmlWriter?displayProperty=nameWithType> 클래스는 [W3C XML 1.0](http://www.w3.org/TR/2006/REC-xml-20060816/) 및 [XML의 네임스페이스](http://www.w3.org/TR/REC-xml-names/) 권장 사항을 지원합니다.  
+-   <xref:System.Xml.XmlReader?displayProperty=nameWithType> 및 <xref:System.Xml.XmlWriter?displayProperty=nameWithType> 클래스는 [W3C XML 1.0](https://www.w3.org/TR/2006/REC-xml-20060816/) 및 [XML의 네임스페이스](https://www.w3.org/TR/REC-xml-names/) 권장 사항을 지원합니다.  
   
--   <xref:System.Xml.Schema.XmlSchemaSet?displayProperty=nameWithType> 클래스의 스키마는 [W3C XML 스키마 1장: 구조](http://www.w3.org/TR/xmlschema-1/) 및 [XML 스키마 2장: 데이터 형식](http://www.w3.org/TR/xmlschema-2/) 권장 사항을 지원합니다.  
+-   <xref:System.Xml.Schema.XmlSchemaSet?displayProperty=nameWithType> 클래스의 스키마는 [W3C XML 스키마 1장: 구조](https://www.w3.org/TR/xmlschema-1/) 및 [XML 스키마 2장: 데이터 형식](https://www.w3.org/TR/xmlschema-2/) 권장 사항을 지원합니다.  
   
 -   <xref:System.Xml.Xsl?displayProperty=nameWithType> 네임스페이스의 클래스는 [W3C XSLT 1.0](http://www.w3.org/TR/xslt) 권장 사항을 준수하는 XSLT 변환을 지원합니다.  
   
  .NET Framework의 XML 클래스는 다음과 같은 이점을 제공합니다.  
   
--   **생산성** [LINQ to XML](http://msdn.microsoft.com/library/f0fe21e9-ee43-4a55-b91a-0800e5782c13)을 사용하면 XML을 사용하여 더욱 쉽게 프로그래밍하고 SQL과 유사한 쿼리 환경을 제공합니다.  
+-   **생산성** [LINQ to XML](https://msdn.microsoft.com/library/f0fe21e9-ee43-4a55-b91a-0800e5782c13)을 사용하면 XML을 사용하여 더욱 쉽게 프로그래밍하고 SQL과 유사한 쿼리 환경을 제공합니다.  
   
 -   **확장성** .NET Framework의 XML 클래스는 추상 기본 클래스와 가상 메서드를 사용하여 확장 가능합니다. 예를 들어, 캐시 스트림을 로컬 디스크에 저장하는 <xref:System.Xml.XmlUrlResolver> 클래스의 파생 클래스를 만들 수 있습니다.  
   
@@ -72,7 +72,7 @@ ms.lasthandoff: 03/02/2018
  XML 데이터를 처리하는 옵션에 대해 설명합니다.  
   
  [메모리 내 XML 데이터 처리](../../../../docs/standard/data/xml/processing-xml-data-in-memory.md)  
- 메모리 내 XML 데이터 처리에 대한 세 가지 모델을 설명합니다. [LINQ to XML](http://msdn.microsoft.com/library/f0fe21e9-ee43-4a55-b91a-0800e5782c13), <xref:System.Xml.XmlDocument> 클래스(W3C 문서 개체 모델 기반) 및 <xref:System.Xml.XPath.XPathDocument> 클래스(XPath 데이터 모델 기반).  
+ 메모리 내 XML 데이터 처리에 대한 세 가지 모델을 설명합니다. [LINQ to XML](https://msdn.microsoft.com/library/f0fe21e9-ee43-4a55-b91a-0800e5782c13), <xref:System.Xml.XmlDocument> 클래스(W3C 문서 개체 모델 기반) 및 <xref:System.Xml.XPath.XPathDocument> 클래스(XPath 데이터 모델 기반).  
   
  [XSLT 변환](../../../../docs/standard/data/xml/xslt-transformations.md)  
  XSLT 프로세서의 사용 방법에 대해 설명합니다.  

@@ -27,16 +27,16 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: a0fed14784327c6fe16f083a22471b56032b6b5d
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: b8e43264619158ed9325875d9843e322e08872a4
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="regular-expression-language---quick-reference"></a>정규식 언어 - 빠른 참조
 <a name="top"></a> 정규식은 정규식 엔진이 입력 텍스트에서 찾으려고 하는 패턴입니다. 패턴은 하나 이상의 문자 리터럴, 연산자 또는 구문으로 구성됩니다.  간략하게 살펴보려면 [.NET 정규식](../../../docs/standard/base-types/regular-expressions.md)을 참조하세요.  
   
- 이 빠른 참조의 각 단원에서는 정규식을 정의하는 데 사용할 수 있는 특정 범주의 문자, 연산자 및 구문을 보여줍니다.  
+ 이 빠른 참조의 각 단원에서는 정규식을 정의하는 데 사용할 수 있는 특정 범주의 문자, 연산자 및 구문을 보여 줍니다.  
   
  [문자 이스케이프](#character_escapes)  
  [문자 클래스](#character_classes)  
@@ -51,8 +51,8 @@ ms.lasthandoff: 12/23/2017
   
  또한 쉽게 참조할 수 있도록 다운로드 및 인쇄할 수 있는 다음과 같은 두 가지 형식으로 이 정보를 제공했습니다.  
   
- [Word(.docx) 형식으로 다운로드](http://download.microsoft.com/download/D/2/4/D240EBF6-A9BA-4E4F-A63F-AEB6DA0B921C/Regular%20expressions%20quick%20reference.docx)  
- [PDF(.pdf) 형식으로 다운로드](http://download.microsoft.com/download/D/2/4/D240EBF6-A9BA-4E4F-A63F-AEB6DA0B921C/Regular%20expressions%20quick%20reference.pdf)  
+ [Word(.docx) 형식으로 다운로드](https://download.microsoft.com/download/D/2/4/D240EBF6-A9BA-4E4F-A63F-AEB6DA0B921C/Regular%20expressions%20quick%20reference.docx)  
+ [PDF(.pdf) 형식으로 다운로드](https://download.microsoft.com/download/D/2/4/D240EBF6-A9BA-4E4F-A63F-AEB6DA0B921C/Regular%20expressions%20quick%20reference.pdf)  
   
 <a name="character_escapes"></a>   
 ## <a name="character-escapes"></a>문자 이스케이프  
@@ -99,7 +99,7 @@ ms.lasthandoff: 12/23/2017
   
 <a name="atomic_zerowidth_assertions"></a>   
 ## <a name="anchors"></a>앵커  
- 앵커 또는 너비가 0인 원자적 어설션은 문자열에서 일치 항목의 현재 위치에 따라 일치의 성공 또는 실패 여부를 결정하지만 엔진에서 문자열을 따라 가거나 문자를 소비하도록 하지는 않습니다. 다음 표에 나와 있는 메타 문자는 앵커입니다. 자세한 내용은 [앵커](../../../docs/standard/base-types/anchors-in-regular-expressions.md)을 참조하세요.  
+ 앵커 또는 너비가 0인 원자적 어설션은 문자열에서 일치 항목의 현재 위치에 따라 일치의 성공 또는 실패 여부를 결정하지만 엔진에서 문자열을 따라 가거나 문자를 소비하도록 하지는 않습니다. 다음 표에 나와 있는 메타문자는 앵커입니다. 자세한 내용은 [앵커](../../../docs/standard/base-types/anchors-in-regular-expressions.md)을 참조하세요.  
   
 |어설션|설명|무늬|일치 항목|  
 |---------------|-----------------|-------------|-------------|  
@@ -144,13 +144,13 @@ ms.lasthandoff: 12/23/2017
 |`?`|이전 요소를 0개 또는 1개 찾습니다.|`"rai?n"`|"ran", "rain"|  
 |`{` *n* `}`|이전 요소를 정확히 *n* 회 찾습니다.|`",\d{3}"`|"1,043.6"의 ",043" 및 "9,876,543,210"의 ",876", ",543", ",210"|  
 |`{` *n* `,}`|이전 요소를 최소한 *n* 회 찾습니다.|`"\d{2,}"`|"166", "29", "1930"|  
-|`{` *n* `,` *분* `}`|이전 요소를 최소한 *n* 회 이상 *분* 회 찾습니다.|`"\d{3,5}"`|"166", "17668"<br /><br /> "193024"의 "19302"|  
+|`{` *n* `,` *분* `}`|이전 요소를 *n* 회 이상 *m* 회 이하로 찾습니다.|`"\d{3,5}"`|"166", "17668"<br /><br /> "193024"의 "19302"|  
 |`*?`|이전 요소를 0개 이상 가능한 한 적은 개수로 찾습니다.|`\d*?\.\d`|".0", "19.9", "219.9"|  
 |`+?`|이전 요소를 1개 이상 가능한 한 적은 개수로 찾습니다.|`"be+?"`|"been"의 "be", "bent"의 "be"|  
 |`??`|이전 요소를 가능한 한 적은 개수로 0개 또는 1개 찾습니다.|`"rai??n"`|"ran", "rain"|  
 |`{` *n* `}?`|이전 요소를 정확히 *n* 회 찾습니다.|`",\d{3}?"`|"1,043.6"의 ",043" 및 "9,876,543,210"의 ",876", ",543", ",210"|  
 |`{` *n* `,}?`|이전 요소를 최소한 *n* 회 이상 가능한 한 적은 개수로 찾습니다.|`"\d{2,}?"`|"166", "29", "1930"|  
-|`{` *n* `,` *분* `}?`|이전 요소를 *n* 회에서 *분* 회 이상 가능한 한 적은 개수로 찾습니다.|`"\d{3,5}?"`|"166", "17668"<br /><br /> "193024"의 "193", "024"|  
+|`{` *n* `,` *분* `}?`|이전 요소를 *n* 회에서 *m* 회 사이에서 찾으며, 가능한 한 적은 개수로 찾습니다.|`"\d{3,5}?"`|"166", "17668"<br /><br /> "193024"의 "193", "024"|  
   
  [맨 위로 이동](#top)  
   
@@ -179,7 +179,7 @@ ms.lasthandoff: 12/23/2017
   
 <a name="substitutions"></a>   
 ## <a name="substitutions"></a>대체  
- 대체는 바꾸기 패턴에서 지원하는 정규식 언어 요소입니다. 자세한 내용은 [Substitutions](substitutions-in-regular-expressions.md)를 참조하세요. 다음 표에 나와 있는 메타 문자는 너비가 0인 원자성 어설션입니다.  
+ 대체는 바꾸기 패턴에서 지원하는 정규식 언어 요소입니다. 자세한 내용은 [Substitutions](substitutions-in-regular-expressions.md)를 참조하세요. 다음 표에 나와 있는 메타문자는 너비가 0인 원자성 어설션입니다.  
   
 |문자|설명|무늬|바꾸기 패턴|입력 문자열|결과 문자열|  
 |---------------|-----------------|-------------|-------------------------|------------------|-------------------|  
@@ -232,5 +232,5 @@ ms.lasthandoff: 12/23/2017
  [정규식](regular-expressions.md)  
  [정규식 클래스](the-regular-expression-object-model.md)  
  [정규식 예제](regular-expression-examples.md)  
- [정규식 - 빠른 참조(Word 형식으로 다운로드)](http://download.microsoft.com/download/D/2/4/D240EBF6-A9BA-4E4F-A63F-AEB6DA0B921C/Regular%20expressions%20quick%20reference.docx)  
- [정규식 - 빠른 참조(PDF 형식으로 다운로드)](http://download.microsoft.com/download/D/2/4/D240EBF6-A9BA-4E4F-A63F-AEB6DA0B921C/Regular%20expressions%20quick%20reference.pdf)
+ [정규식 - 빠른 참조(Word 형식으로 다운로드)](https://download.microsoft.com/download/D/2/4/D240EBF6-A9BA-4E4F-A63F-AEB6DA0B921C/Regular%20expressions%20quick%20reference.docx)  
+ [정규식 - 빠른 참조(PDF 형식으로 다운로드)](https://download.microsoft.com/download/D/2/4/D240EBF6-A9BA-4E4F-A63F-AEB6DA0B921C/Regular%20expressions%20quick%20reference.pdf)

@@ -1,30 +1,30 @@
 ---
-title: "Windows에서 관리되는 스레딩 및 관리되지 않는 스레딩"
-ms.custom: 
+title: Windows에서 관리되는 스레딩 및 관리되지 않는 스레딩
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - threading [.NET Framework], unmanaged
 - threading [.NET Framework], managed
 - managed threading
 ms.assetid: 4fb6452f-c071-420d-9e71-da16dee7a1eb
-caps.latest.revision: 
+caps.latest.revision: 17
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 2ce17ef15a5b582a9df0f16d7e0ac82df626579d
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 66bf8458a3f4f9dd622129e82acb659dddf8467a
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="managed-and-unmanaged-threading-in-windows"></a>Windows에서 관리되는 스레딩 및 관리되지 않는 스레딩
 공용 언어 런타임에 의해 만들어진 스레드 및 런타임 외부에서 만들어져 코드를 실행하기 위해 관리되는 환경에 들어가는 스레드를 비롯한 모든 스레드는 <xref:System.Threading.Thread> 클래스를 통해 관리됩니다. 런타임은 해당 프로세스에서 관리되는 실행 환경 내에서 코드를 실행한 적이 있는 모든 스레드를 모니터링하며, 다른 모든 스레드는 추적하지 않습니다. 스레드는 COM interop(런타임이 관리되는 개체를 관리되지 않는 환경에 COM 개체로 노출하므로), COM [DllGetClassObject](https://msdn.microsoft.com/library/ms680760.aspx) 함수 및 플랫폼 호출을 통해 관리되는 실행 환경에 들어갈 수 있습니다.  
@@ -55,7 +55,7 @@ ms.lasthandoff: 01/19/2018
 |**CoInitializeEx** (OLE32.DLL)와 비슷함|<xref:System.Threading.Thread.ApartmentState%2A?displayProperty=nameWithType>|  
   
 ## <a name="managed-threads-and-com-apartments"></a>관리되는 스레드 및 COM 아파트  
- 관리되는 스레드는 [단일 스레드](http://msdn.microsoft.com/library/windows/desktop/ms680112.aspx) 또는 [다중 스레드](http://msdn.microsoft.com/library/windows/desktop/ms693421.aspx) 아파트를 호스트할 것임을 나타내기 위해 표시될 수 있습니다. (COM 스레딩 아키텍처에 대한 자세한 내용은 [프로세스, 스레드 및 아파트](http://msdn.microsoft.com/library/windows/desktop/ms693344.aspx)를 참조하세요.) <xref:System.Threading.Thread.GetApartmentState%2A> 클래스의 <xref:System.Threading.Thread.SetApartmentState%2A>, <xref:System.Threading.Thread.TrySetApartmentState%2A> 및 <xref:System.Threading.Thread> 메서드는 스레드의 아파트 상태를 반환하고 할당합니다. 상태가 설정되지 않은 경우 <xref:System.Threading.Thread.GetApartmentState%2A>는 <xref:System.Threading.ApartmentState.Unknown?displayProperty=nameWithType>을 반환합니다.  
+ 관리되는 스레드는 [단일 스레드](https://msdn.microsoft.com/library/windows/desktop/ms680112.aspx) 또는 [다중 스레드](https://msdn.microsoft.com/library/windows/desktop/ms693421.aspx) 아파트를 호스트할 것임을 나타내기 위해 표시될 수 있습니다. (COM 스레딩 아키텍처에 대한 자세한 내용은 [프로세스, 스레드 및 아파트](https://msdn.microsoft.com/library/windows/desktop/ms693344.aspx)를 참조하세요.) <xref:System.Threading.Thread.GetApartmentState%2A> 클래스의 <xref:System.Threading.Thread.SetApartmentState%2A>, <xref:System.Threading.Thread.TrySetApartmentState%2A> 및 <xref:System.Threading.Thread> 메서드는 스레드의 아파트 상태를 반환하고 할당합니다. 상태가 설정되지 않은 경우 <xref:System.Threading.Thread.GetApartmentState%2A>는 <xref:System.Threading.ApartmentState.Unknown?displayProperty=nameWithType>을 반환합니다.  
   
  이 속성은 스레드가 <xref:System.Threading.ThreadState.Unstarted?displayProperty=nameWithType> 상태일 때만 설정될 수 있으며, 한 스레드에 대해 한 번만 설정될 수 있습니다.  
   

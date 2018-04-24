@@ -1,7 +1,7 @@
 ---
-title: "마이크로 서비스 아키텍처의 통신"
-description: "컨테이너화된 .NET 응용 프로그램을 위한 .NET 마이크로 서비스 아키텍처 | 마이크로 서비스 아키텍처의 통신"
-keywords: "Docker, 마이크로 서비스, ASP.NET, 컨테이너"
+title: 마이크로 서비스 아키텍처의 통신
+description: 컨테이너화된 .NET 응용 프로그램을 위한 .NET 마이크로 서비스 아키텍처 | 마이크로 서비스 아키텍처의 통신
+keywords: Docker, 마이크로 서비스, ASP.NET, 컨테이너
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/18/2017
@@ -11,11 +11,11 @@ ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 3c80ce8e3c4ccdc7e53634f54dd998581758ab07
-ms.sourcegitcommit: cec0525b2121c36198379525e69aa5388266db5b
+ms.openlocfilehash: 6bf4de57d3431577e6c770a5a83b911f41e5a4fe
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="communication-in-a-microservice-architecture"></a>마이크로 서비스 아키텍처의 통신
 
@@ -25,7 +25,7 @@ ms.lasthandoff: 02/23/2018
 
 마이크로 서비스 기반 응용 프로그램은 보통 여러 서버 또는 호스트에 걸쳐있더라도 여러 프로세스 또는 서비스에서 실행되는 분산 시스템입니다. 각 서비스 인스턴스는 일반적으로 프로세스입니다. 따라서 서비스는 각 서비스의 성격에 따라 HTTP, AMQP 또는 TCP와 같은 이진 프로토콜과 같은 프로세스 내 통신 프로토콜을 사용하여 상호 작용해야 합니다.
 
-마이크로 서비스 커뮤니티는 “[스마트 엔드포인트 및 단순 파이프](http://simplicable.com/new/smart-endpoints-and-dumb-pipes)”의 원칙을 장려합니다. 이 표어는 마이크로 서비스 간 가능한 분리되고, 단일 마이크로 서비스 내에서는 가능한 화합하는 디자인을 권장합니다. 앞에서 설명한 대로 각 마이크로 서비스는 자체 데이터 및 자체 도메인 논리를 소유합니다. 종단 간 응용 프로그램을 작성하는 마이크로 서비스는 보통 WS-\*와 같은 복잡한 프로토콜 대신 REST 통신, 그리고 중앙 집중화된 비즈니스 프로세스 오케스트레이터 대신 유연한 이벤트 구동 통신을 사용하여 간단히 조율됩니다.
+마이크로 서비스 커뮤니티는 “[스마트 엔드포인트 및 단순 파이프](https://simplicable.com/new/smart-endpoints-and-dumb-pipes)”의 원칙을 장려합니다. 이 표어는 마이크로 서비스 간 가능한 분리되고, 단일 마이크로 서비스 내에서는 가능한 화합하는 디자인을 권장합니다. 앞에서 설명한 대로 각 마이크로 서비스는 자체 데이터 및 자체 도메인 논리를 소유합니다. 종단 간 응용 프로그램을 작성하는 마이크로 서비스는 보통 WS-\*와 같은 복잡한 프로토콜 대신 REST 통신, 그리고 중앙 집중화된 비즈니스 프로세스 오케스트레이터 대신 유연한 이벤트 구동 통신을 사용하여 간단히 조율됩니다.
 
 일반적으로 사용되는 두 가지 프로토콜은 리소스 API를 통한 HTTP 요청/응답(대부분 쿼리할 때)과 여러 마이크로 서비스 간 업데이트를 통신할 때의 간단한 비동기 메시징입니다. 이 내용은 다음 섹션에서 더 자세히 설명합니다.
 
@@ -43,7 +43,7 @@ ms.lasthandoff: 02/23/2018
 
 -   단일 수신기. 각 요청은 정확히 하나의 수신기 또는 서비스에서 처리되어야 합니다. 이 통신의 예는 [명령 패턴](https://en.wikipedia.org/wiki/Command_pattern)입니다.
 
--   여러 수신기. 각 요청을 처리하는 수신기는 없거나 여러 개일 수 있습니다. 이 유형의 통신은 비동기여야 합니다. [이벤트 기반 아키텍처](http://microservices.io/patterns/data/event-driven-architecture.html)와 같은 패턴에서 사용되는 [게시/구독](https://en.wikipedia.org/wiki/Publish%E2%80%93subscribe_pattern) 메커니즘이 그 예입니다. 이는 데이터 업데이트를 이벤트를 통해 여러 마이크로 서비스 사이에 전파하는 경우 이벤트 버스 인터페이스 또는 메시지 브로커를 기반으로 합니다. 보통 Service Bus 또는 [항목과 구독](https://docs.microsoft.com/azure/service-bus-messaging/service-bus-dotnet-how-to-use-topics-subscriptions)을 사용하여 [Azure Service Bus](https://azure.microsoft.com/services/service-bus/)와 같은 비슷한 아티팩트를 통해 구현됩니다.
+-   여러 수신기. 각 요청을 처리하는 수신기는 없거나 여러 개일 수 있습니다. 이 유형의 통신은 비동기여야 합니다. [이벤트 기반 아키텍처](https://microservices.io/patterns/data/event-driven-architecture.html)와 같은 패턴에서 사용되는 [게시/구독](https://en.wikipedia.org/wiki/Publish%E2%80%93subscribe_pattern) 메커니즘이 그 예입니다. 이는 데이터 업데이트를 이벤트를 통해 여러 마이크로 서비스 사이에 전파하는 경우 이벤트 버스 인터페이스 또는 메시지 브로커를 기반으로 합니다. 보통 Service Bus 또는 [항목과 구독](https://docs.microsoft.com/azure/service-bus-messaging/service-bus-dotnet-how-to-use-topics-subscriptions)을 사용하여 [Azure Service Bus](https://azure.microsoft.com/services/service-bus/)와 같은 비슷한 아티팩트를 통해 구현됩니다.
 
 마이크로 서비스 기반 응용 프로그램은 이러한 통신 스타일의 조합을 종종 사용합니다. 가장 일반적인 유형은 일반 Web API HTTP 서비스를 호출할 때 HTTP/HTTPS와 같은 동기 프로토콜을 사용하는 단일 수신기 통신입니다. 또한 마이크로 서비스는 마이크로 서비스 간 비동기 통신을 위해 일반적으로 메시징 프로토콜을 사용합니다.
 
@@ -91,15 +91,15 @@ ms.lasthandoff: 02/23/2018
 
 요청/응답 통신을 위한 인기 있는 아키텍처 스타일은 [REST](https://en.wikipedia.org/wiki/Representational_state_transfer)입니다. 이 방법은 [HTTP](https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol) 프로토콜을 기반으로 하며 밀접하게 결합되어 있으며 GET, POST 및 PUT과 같은 HTTP 동사를 수용합니다. REST는 서비스를 만들 때 가장 흔히 사용되는 아키텍처 통신 방법입니다. ASP.NET Core Web API 서비스를 개발하는 경우 REST 서비스를 구현할 수 있습니다.
 
-인터페이스 정의 언어로 HTTP REST 서비스를 사용하는 경우 추가 값이 있습니다. 예를 들어, [Swagger 메타데이터](http://swagger.io/)를 사용하여 서비스 API를 설명하는 경우 서비스를 직접 검색하고 사용할 수 있는 클라이언트 스텁을 생성하는 도구를 사용할 수 있습니다.
+인터페이스 정의 언어로 HTTP REST 서비스를 사용하는 경우 추가 값이 있습니다. 예를 들어, [Swagger 메타데이터](https://swagger.io/)를 사용하여 서비스 API를 설명하는 경우 서비스를 직접 검색하고 사용할 수 있는 클라이언트 스텁을 생성하는 도구를 사용할 수 있습니다.
 
-### <a name="additional-resources"></a>추가 리소스
+### <a name="additional-resources"></a>추가 자료
 
 -   **Martin Fowler. Richardson Maturity 모델입니다.** REST 모델에 대한 설명입니다.
-    [*http://martinfowler.com/articles/richardsonMaturityModel.html*](http://martinfowler.com/articles/richardsonMaturityModel.html)
+    [*https://martinfowler.com/articles/richardsonMaturityModel.html*](https://martinfowler.com/articles/richardsonMaturityModel.html)
 
 -   **Swagger.** 공식 사이트입니다.
-    [*http://swagger.io/*](http://swagger.io/)
+    [*https://swagger.io/*](https://swagger.io/)
 
 ### <a name="push-and-real-time-communication-based-on-http"></a>HTTP 기반 푸시 및 실시간 통신
 

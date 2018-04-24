@@ -1,6 +1,6 @@
 ---
-title: "대상 프레임워크"
-description: ".NET Core 앱 및 라이브러리의 대상 프레임워크에 대해 알아봅니다."
+title: 대상 프레임워크
+description: .NET Core 앱 및 라이브러리의 대상 프레임워크에 대해 알아봅니다.
 author: richlander
 ms.author: mairaw
 ms.date: 09/22/2017
@@ -11,11 +11,11 @@ ms.technology: dotnet-standard
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 838f4f6d78b4544a538e9c4bd6c487bcc731270b
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: e9f47647a1d4dc82b2df2ea8905f8d0a1e705b96
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="target-frameworks"></a>대상 프레임워크
 
@@ -41,7 +41,7 @@ ms.lasthandoff: 12/23/2017
 
 ## <a name="supported-target-framework-versions"></a>지원되는 대상 프레임워크 버전
 
-대상 프레임워크는 일반적으로 TFM에서 참조됩니다. 다음 표에서는 .NET Core SDK 및 NuGet 클라이언트에서 지원되는 대상 프레임워크를 보여줍니다. 일치하는 항목은 대괄호 내에 표시됩니다. 예를 들어 `win81`은 `netcore451`과 일치하는 TFM입니다.
+대상 프레임워크는 일반적으로 TFM에서 참조됩니다. 다음 표에서는 .NET Core SDK 및 NuGet 클라이언트에서 지원되는 대상 프레임워크를 보여 줍니다. 일치하는 항목은 대괄호 내에 표시됩니다. 예를 들어 `win81`은 `netcore451`과 일치하는 TFM입니다.
 
 | 대상 프레임워크           | TFM |
 | -------------------------- | --- |
@@ -56,7 +56,7 @@ ms.lasthandoff: 12/23/2017
 
 ## <a name="how-to-specify-target-frameworks"></a>대상 프레임워크를 지정하는 방법
 
-대상 프레임워크는 프로젝트 파일에서 지정합니다. 단일 대상 프레임워크를 지정하는 경우 **TargetFramework** 요소를 사용합니다. 다음 콘솔 앱 프로젝트 파일에서는 .NET Core 2.0을 대상으로 하는 방법을 보여줍니다.
+대상 프레임워크는 프로젝트 파일에서 지정합니다. 단일 대상 프레임워크를 지정하는 경우 **TargetFramework** 요소를 사용합니다. 다음 콘솔 앱 프로젝트 파일에서는 .NET Core 2.0을 대상으로 하는 방법을 보여 줍니다.
 
 ```xml
 <Project Sdk="Microsoft.NET.Sdk">
@@ -141,4 +141,4 @@ public class MyClass
 [.NET Core 버전 관리](~/docs/core/versions/index.md)  
 [dotnet/standard GitHub repository](https://github.com/dotnet/standard)(dotnet/표준 GitHub 리포지토리)  
 [NuGet Tools GitHub Repository](https://github.com/joelverhagen/NuGetTools)(NuGet 도구 GitHub 리포지토리)  
-[Framework Profiles in .NET](http://blog.stephencleary.com/2012/05/framework-profiles-in-net.html)(.NET의 프레임워크 프로필)
+[Framework Profiles in .NET](https://blog.stephencleary.com/2012/05/framework-profiles-in-net.html)(.NET의 프레임워크 프로필)

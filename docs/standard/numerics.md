@@ -1,12 +1,12 @@
 ---
-title: ".NET Framework의 숫자"
-ms.custom: 
+title: .NET Framework의 숫자
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - SIMD
@@ -17,18 +17,18 @@ helpviewer_keywords:
 - numerics
 - BigInteger
 ms.assetid: dfebc18e-acde-4510-9fa7-9a0f4aa3bd11
-caps.latest.revision: 
+caps.latest.revision: 11
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: bd55b127f73fe1cefce9724f3a74400b5fe7488f
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 074ed60a3cbc1949eea4a8d866cdb3bba7c0f196
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="numerics-in-the-net-framework"></a>.NET Framework의 숫자
 .NET Framework에서는 표준 숫자 정수 계열 및 부동 소수점 기본 형식과 <xref:System.Numerics.BigInteger>, 이론적 상한 또는 하한이 없는 정수 형식, <xref:System.Numerics.Complex>, 복소수를 나타내는 형식, <xref:System.Numerics> 네임스페이스에서 SIMD 사용 벡터 형식 집합을 지원합니다.  
@@ -85,7 +85,7 @@ ms.lasthandoff: 12/23/2017
   
  SimD 사용 벡터 형식은 비SimD 사용 하드웨어 및 JIT 컴파일러에서 이 형식을 사용할 수 있는 IL에서 구현됩니다. SIMD 지침을 활용하려면 64비트 앱을 관리 코드에 대한 새로운 64비트 JIT 컴파일러로 컴파일해야 합니다. 이 관리 코드는 .NET Framework 4.6과 함께 포함되어 있으며 x64 프로세서를 대상으로 지정할 때 SIMD 지원을 추가합니다.  
   
- SIMD는 [NuGet 패키지](http://www.nuget.org/packages/System.Numerics.Vectors)로 다운로드할 수도 있습니다.  NuGet 패키지에도 포함된 제네릭 <xref:System.Numerics.Vector%601> 구조를 사용하면 기본 숫자 형식의 벡터를 만들 수 있습니다. 기본 숫자 형식에는 <xref:System.Decimal>을 제외하고 <xref:System> 네임스페이스의 모든 숫자 형식이 포함됩니다. 또한 <xref:System.Numerics.Vector%601> 구조는 벡터 작업 시 호출할 수 있는 편리한 메서드 라이브러리를 제공합니다.  
+ SIMD는 [NuGet 패키지](https://www.nuget.org/packages/System.Numerics.Vectors)로 다운로드할 수도 있습니다.  NuGet 패키지에도 포함된 제네릭 <xref:System.Numerics.Vector%601> 구조를 사용하면 기본 숫자 형식의 벡터를 만들 수 있습니다. 기본 숫자 형식에는 <xref:System.Decimal>을 제외하고 <xref:System> 네임스페이스의 모든 숫자 형식이 포함됩니다. 또한 <xref:System.Numerics.Vector%601> 구조는 벡터 작업 시 호출할 수 있는 편리한 메서드 라이브러리를 제공합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [응용 프로그램 주요 사항](../../docs/standard/application-essentials.md)

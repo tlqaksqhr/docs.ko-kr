@@ -1,7 +1,7 @@
 ---
-title: "각 마이크로 서비스의 도메인 모델 경계 식별"
-description: "컨테이너화된 .NET 응용 프로그램을 위한 .NET 마이크로 서비스 아키텍처 | 각 마이크로 서비스의 도메인 모델 경계 식별"
-keywords: "Docker, 마이크로 서비스, ASP.NET, 컨테이너"
+title: 각 마이크로 서비스의 도메인 모델 경계 식별
+description: 컨테이너화된 .NET 응용 프로그램을 위한 .NET 마이크로 서비스 아키텍처 | 각 마이크로 서비스의 도메인 모델 경계 식별
+keywords: Docker, 마이크로 서비스, ASP.NET, 컨테이너
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
@@ -11,17 +11,17 @@ ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 830dd48a420a462842de57e436323a5a930c195d
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 23b5ebafc5ea037568f168426d76b3ec9839040e
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="identify-domain-model-boundaries-for-each-microservice"></a>각 마이크로 서비스의 도메인 모델 경계 식별
 
 가능하면 마이크로 서비스가 작아야 하지만 각 마이크로 서비스에 대한 모델 경계 및 크기를 식별할 때 세분화하여 분리하지 않는 것이 좋습니다. 대신, 도메인 지식에 의해 설명된 가장 적합한 분리로 이동하는 것이 목적입니다. 중요한 점은 크기가 아닌 비즈니스 용량입니다. 또한 많은 수의 종속성을 기반으로 응용 프로그램의 특정 부분에 필요한 응집력이 있는 경우 단일 마이크로 서비스가 필요하다는 것을 나타냅니다. 응집력은 마이크로 서비스를 분리하거나 그룹화하는 방법을 식별하는 방법입니다. 궁극적으로 도메인에 대한 더 많은 지식을 확보하는 동안 마이크로 서비스의 크기를 반복적으로 활용해야 합니다. 적절한 크기를 찾는 것은 원샷 프로세스가 아닙니다.
 
-마이크로 서비스의 선구자이며 [마이크로 서비스 빌드](http://samnewman.io/books/building_microservices/)라는 책의 저자인 [Sam Newman](http://samnewman.io/)은 앞서 소개한 대로 BC(경계가 지정된 컨텍스트) 패턴(도메인 기반 디자인의 일부)에 따라 마이크로 서비스를 디자인해야 한다고 강조합니다. 경우에 따라 BC는 몇 가지 물리적 서비스로 구성되지만 그 반대의 경우는 불가능합니다.
+마이크로 서비스의 선구자이며 [마이크로 서비스 빌드](https://samnewman.io/books/building_microservices/)라는 책의 저자인 [Sam Newman](https://samnewman.io/)은 앞서 소개한 대로 BC(경계가 지정된 컨텍스트) 패턴(도메인 기반 디자인의 일부)에 따라 마이크로 서비스를 디자인해야 한다고 강조합니다. 경우에 따라 BC는 몇 가지 물리적 서비스로 구성되지만 그 반대의 경우는 불가능합니다.
 
 특정 도메인 엔터티를 사용하는 도메인 모델은 특정 BC 또는 마이크로 서비스 내에서 적용됩니다. BC는 도메인 모델의 적용 가능성을 제한하고 개발자 팀 멤버에게 화합되어야 하는 기능 및 독립적으로 개발할 수 있는 기능에 대한 명확하고 공유된 이해를 제공합니다. 마이크로 서비스에 대한 동일한 목표입니다.
 

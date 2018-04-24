@@ -1,6 +1,6 @@
 ---
-title: "기본 상호 운용성"
-description: ".NET에서 네이티브 구성 요소와 상호 작용하는 방법을 알아봅니다."
+title: 기본 상호 운용성
+description: .NET에서 네이티브 구성 요소와 상호 작용하는 방법을 알아봅니다.
 keywords: .NET, .NET Core
 author: blackdwarf
 ms.author: ronpet
@@ -13,11 +13,11 @@ ms.assetid: 3c357112-35fb-44ba-a07b-6a1c140370ac
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 11a93f4014734130f7c4e33cf215c6d49d2554c5
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: d9b0fa5ebe37e51c45a8a5d8a42ce9b9688cc7c1
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="native-interoperability"></a>기본 상호 운용성
 
@@ -26,7 +26,7 @@ ms.lasthandoff: 12/23/2017
 네이티브 코드를 호출하려는 이유 중 몇 가지는 다음과 같습니다.
 
 *   운영 체제에서 관리되는 클래스 라이브러리에 없는 많은 API를 제공합니다. 이러한 경우의 대표적인 예는 하드웨어 또는 운영 체제 관리 기능 액세스입니다.
-*   C 스타일 ABI(네이티브 ABI)를 포함하거나 생성할 수 있는 다른 구성 요소와 통신합니다. 예를 들어 [JNI(Java 기본 인터페이스)](http://docs.oracle.com/javase/8/docs/technotes/guides/jni/)를 통해 표시되는 Java 코드 또는 기본 구성 요소를 생성할 수 있는 다른 모든 관리되는 언어가 여기에 포함됩니다.
+*   C 스타일 ABI(네이티브 ABI)를 포함하거나 생성할 수 있는 다른 구성 요소와 통신합니다. 예를 들어 [JNI(Java 기본 인터페이스)](https://docs.oracle.com/javase/8/docs/technotes/guides/jni/)를 통해 표시되는 Java 코드 또는 기본 구성 요소를 생성할 수 있는 다른 모든 관리되는 언어가 여기에 포함됩니다.
 *   Windows에서는 Microsoft Office 제품군 등 설치되는 대부분의 소프트웨어가 해당 프로그램을 나타내며 개발자가 자동화하거나 사용할 수 있도록 하는 COM 구성 요소를 등록합니다. 이 경우 기본 상호 운용성도 필요합니다.
 
 물론, 개발자가 기본 구성 요소를 조작하려 하거나 조작해야 하는 모든 잠재적인 상황 및 시나리오가 위 목록에 포함된 것은 아닙니다. 예를 들어 .NET 클래스 라이브러리는 기본 상호 운용성 지원을 사용하여 콘솔 지원 및 조작, 파일 시스템 액세스 등의 많은 API를 구현합니다. 그러나 필요한 경우 한 가지 옵션이 있다는 것에 유의해야 합니다.
@@ -57,9 +57,9 @@ public class Program {
 }
 ```
 
-위의 예제는 상당히 간단하지만 관리 코드에서 관리되지 않는 함수를 호출하는 데 필요한 사항을 보여줍니다. 예제를 단계별로 살펴보겠습니다.
+위의 예제는 상당히 간단하지만 관리 코드에서 관리되지 않는 함수를 호출하는 데 필요한 사항을 보여 줍니다. 예제를 단계별로 살펴보겠습니다.
 
-*   줄 #1에서는 필요한 항목이 모두 포함되어 있는 네임스페이스인 `System.Runtime.InteropServices`에 대한 using 문을 보여줍니다.
+*   줄 #1에서는 필요한 항목이 모두 포함되어 있는 네임스페이스인 `System.Runtime.InteropServices`에 대한 using 문을 보여 줍니다.
 *   줄 #5에서는 `DllImport` 특성을 도입합니다. 이 특성은 관리되지 않는 DLL을 로드하도록 런타임에 지정하므로 중요합니다. 이 DLL을 호출하려고 합니다.
 *   줄 #6은 P/Invoke 작업의 핵심입니다. 관리되지 않는 메서드와 **동일한 시그니처**가 있는 관리되는 메서드를 정의합니다. 선언에서 확인할 수 있는 새 키워드 `extern`은 이 메서드가 외부 메서드이며 호출 시 런타임이 `DllImport` 특성에 지정된 DLL에서 찾도록 런타임에 지정합니다.
 
@@ -300,7 +300,7 @@ public static void Main(string[] args) {
 }
 ```
 
-위의 예제에서는 `GetSystemTime()` 함수를 호출하는 간단한 예제를 보여줍니다. 흥미로운 부분은 줄 4에 있습니다. 특성이 클래스의 필드를 다른 쪽(비관리)의 구조체에 순차적으로 매핑하도록 지정합니다. 즉, 아래와 같이 관리되지 않는 구조체에 대응해야 하므로 필드의 이름 지정은 중요하지 않고 해당 순서만 중요합니다.
+위의 예제에서는 `GetSystemTime()` 함수를 호출하는 간단한 예제를 보여 줍니다. 흥미로운 부분은 줄 4에 있습니다. 특성이 클래스의 필드를 다른 쪽(비관리)의 구조체에 순차적으로 매핑하도록 지정합니다. 즉, 아래와 같이 관리되지 않는 구조체에 대응해야 하므로 필드의 이름 지정은 중요하지 않고 해당 순서만 중요합니다.
 
 ```c
 typedef struct _SYSTEMTIME {
@@ -340,6 +340,6 @@ public class StatClass {
 
 ## <a name="more-resources"></a>추가 리소스
 
-*   [PInvoke.net wiki](http://www.pinvoke.net)는 일반적인 Win32 API 및 호출 방법에 대한 정보가 포함된 우수한 Wiki입니다.
+*   [PInvoke.net wiki](https://www.pinvoke.net/)는 일반적인 Win32 API 및 호출 방법에 대한 정보가 포함된 우수한 Wiki입니다.
 *   [MSDN의 P/Invoke](https://msdn.microsoft.com/library/zbz07712.aspx)
-*   [P/Invoke에 대한 Mono 설명서](http://www.mono-project.com/docs/advanced/pinvoke/)
+*   [P/Invoke에 대한 Mono 설명서](https://www.mono-project.com/docs/advanced/pinvoke/)

@@ -5,14 +5,15 @@ ms.prod: .net
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/22/2017
+ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 13f279b371bc5212a4ce9a171d37316c5e6efb77
-ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
-ms.translationtype: MT
+ms.openlocfilehash: bde96fd6348cf651dcca988eb546549fedf4df85
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="docker-application-devops-workflow-with-microsoft-tools"></a>Microsoft 도구를 사용하는 Docker 응용 프로그램 DevOps 워크플로
 
@@ -32,7 +33,7 @@ Microsoft 도구는 Visual Studio Team Services 또는 Team Foundation Server를
 
 -   Visual Studio Team Services에서 빌드 파이프라인의 일부로 자동화된 테스트를 실행합니다.
 
--   Visual Studio Team Services는 프로덕션 환경뿐만 아니라 A/B 실험, [카나리아 릴리스](http://martinfowler.com/bliki/CanaryRelease.html) 등의 테스트에 사용되는 여러 환경에 대한 전송으로 DevOps 수명 주기를 강화할 수 있습니다.
+-   Visual Studio Team Services는 프로덕션 환경뿐만 아니라 A/B 실험, [카나리아 릴리스](https://martinfowler.com/bliki/CanaryRelease.html) 등의 테스트에 사용되는 여러 환경에 대한 전송으로 DevOps 수명 주기를 강화할 수 있습니다.
 
 -   조직에서는 이미 사용법을 잘 알고 있는 도구와 Azure Resource Manager 템플릿을 사용하여 Azure 구성 요소(데이터, PaaS 등)에 대한 종속성과 함께 Azure Container Registry에 저장된 비공개 이미지에서 Docker 컨테이너를 쉽게 프로비전할 수 있습니다.
 

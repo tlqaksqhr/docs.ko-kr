@@ -6,14 +6,15 @@ ms.author: wiwagn
 ms.date: 10/07/2017
 ms.prod: .net-core
 ms.technology: dotnet-docker
+ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: df80dfb6029932c53e028bfb753dcfa94b548ba1
-ms.sourcegitcommit: 498799639937c89de777361aab74261efe7b79ea
+ms.openlocfilehash: 7d160d23808832ff6456e5c95f6e5ed5f4d44fa5
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="working-with-data-in-aspnet-core-apps"></a>ASP.NET Core 앱에서 데이터 작업
 
@@ -206,7 +207,7 @@ await strategy.ExecuteAsync(async () =>
 > - **EF Core: 관련 데이터**  
 > <https://docs.microsoft.com/ef/core/querying/related-data>
 > - **ASPNET 응용 프로그램에서 엔터티 지연 로드 방지**  
-> <http://ardalis.com/avoid-lazy-loading-entities-in-asp-net-applications>
+> <https://ardalis.com/avoid-lazy-loading-entities-in-asp-net-applications>
 
 ## <a name="ef-core-or-micro-orm"></a>EF Core 또는 마이크로 ORM
 
@@ -270,7 +271,7 @@ EF Core는 대부분의 응용 프로그램에서, 그리고 응용 프로그램
 
 NoSQL 데이터베이스에서는 개체의 여러 버전을 저장할 수 있으며, 무언가 고정된 스키마 관계형 데이터베이스는 일반적으로 지원하지 않습니다. 그러나 이 경우 응용 프로그램 코드에서 개체의 이전 버전이 존재하여 복잡성이 추가되는지 고려해야 합니다.
 
-NoSQL 데이터베이스는 일반적으로 [ACID](http://en.wikipedia.org/wiki/ACID)를 적용하지 않습니다. 즉, 관계형 데이터베이스보다 성능과 확장성이 더 좋습니다. 정규화된 테이블 구조의 저장소에 적합하지 않은 매우 거대한 데이터 집합 및 개체에 적합합니다. 각 데이터베이스를 적합하게 사용한다면 단일 응용 프로그램으로 관계형 데이터베이스와 NoSQL 데이터베이스의 장점을 모두 취하지 못할 이유가 없습니다.
+NoSQL 데이터베이스는 일반적으로 [ACID](https://en.wikipedia.org/wiki/ACID)를 적용하지 않습니다. 즉, 관계형 데이터베이스보다 성능과 확장성이 더 좋습니다. 정규화된 테이블 구조의 저장소에 적합하지 않은 매우 거대한 데이터 집합 및 개체에 적합합니다. 각 데이터베이스를 적합하게 사용한다면 단일 응용 프로그램으로 관계형 데이터베이스와 NoSQL 데이터베이스의 장점을 모두 취하지 못할 이유가 없습니다.
 
 ## <a name="azure-documentdb"></a>Azure DocumentDB
 

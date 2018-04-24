@@ -18,11 +18,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: f2da3e1ecfb9018adf7827aad6a569cd057c59eb
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 7b59a6c15e9a11a6b76187aabcbfe9104d595a1f
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="data-structures-for-parallel-programming"></a>병렬 프로그래밍을 위한 데이터 구조
 .NET Framework 버전 4에서는 동시 컬렉션 클래스, 간단한 동기화 기본 요소 및 초기화 지연 관련 형식을 포함하여 병렬 프로그래밍에서 유용한 여러 가지 새로운 형식을 소개합니다. 이러한 형식을 작업 병렬 라이브러리 및 PLINQ를 포함한 다중 스레드 응용 프로그램 코드와 함께 사용할 수 있습니다.  
@@ -76,7 +76,7 @@ ms.lasthandoff: 01/19/2018
  자세한 내용은 [초기화 지연](../../../docs/framework/performance/lazy-initialization.md)을 참조하세요.  
   
 ## <a name="aggregate-exceptions"></a>집계 예외  
- <xref:System.AggregateException?displayProperty=nameWithType> 형식은 개별 스레드에서 동시에 throw되는 여러 예외를 캡처하고 조인 스레드에 단일 예외로 반환하는 데 사용할 수 있습니다. <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> 및 <xref:System.Threading.Tasks.Parallel?displayProperty=nameWithType> 형식과 PLINQ는 이 용도로 <xref:System.AggregateException>을 광범위하게 사용합니다. 자세한 내용은 [NIB: 방법: 작업에서 throw된 예외 처리](http://msdn.microsoft.com/library/d6c47ec8-9de9-4880-beb3-ff19ae51565d) 및 [방법: PLINQ 쿼리의 예외 처리](../../../docs/standard/parallel-programming/how-to-handle-exceptions-in-a-plinq-query.md)를 참조하세요.  
+ <xref:System.AggregateException?displayProperty=nameWithType> 형식은 개별 스레드에서 동시에 throw되는 여러 예외를 캡처하고 조인 스레드에 단일 예외로 반환하는 데 사용할 수 있습니다. <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> 및 <xref:System.Threading.Tasks.Parallel?displayProperty=nameWithType> 형식과 PLINQ는 이 용도로 <xref:System.AggregateException>을 광범위하게 사용합니다. 자세한 내용은 [NIB: 방법: 작업에서 throw된 예외 처리](https://msdn.microsoft.com/library/d6c47ec8-9de9-4880-beb3-ff19ae51565d) 및 [방법: PLINQ 쿼리의 예외 처리](../../../docs/standard/parallel-programming/how-to-handle-exceptions-in-a-plinq-query.md)를 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
  <xref:System.Collections.Concurrent?displayProperty=nameWithType>  

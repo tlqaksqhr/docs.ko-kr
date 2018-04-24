@@ -1,12 +1,12 @@
 ---
-title: "비동기 파일 I-O"
-ms.custom: 
+title: 비동기 파일 I-O
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -23,18 +23,18 @@ helpviewer_keywords:
 - multiple I/O requests
 - data streams, synchronous streams
 ms.assetid: dbdd55e7-d6b9-4f9e-8abb-ab0edd4457f7
-caps.latest.revision: 
+caps.latest.revision: 23
 author: mairaw
 ms.author: mairaw
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: ff9ae65e47a35f4acfade1d06c703f9e1f5f6bee
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: e0c67c9b397dfcd6f6ba947c2876919693c4f472
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="asynchronous-file-io"></a>비동기 파일 I/O
 비동기 작업을 사용하면 주 스레드를 차단하지 않고 리소스 집중형 I/O 작업을 수행할 수 있습니다. 이 성능 고려 사항은 특히 시간이 소비되는 스트림 작업이 UI 스레드를 차단하고 응용 프로그램이 작동하지 않는 것처럼 표시할 수 있는 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 응용 프로그램 또는 [!INCLUDE[desktop_appname](../../../includes/desktop-appname-md.md)] 응용 프로그램에서 중요합니다.  
@@ -49,7 +49,7 @@ ms.lasthandoff: 12/23/2017
   
  비동기 메서드의 결과에 적용되는`Await` (Visual Basic) 또는 `await` (C#) 연산자.  
   
- 비동기 I/O 작업을 구현하려면 다음 예제와 같이 이러한 키워드를 비동기 메서드와 함께 사용합니다. 자세한 내용은 [Async 및 Await를 사용한 비동기 프로그래밍](http://msdn.microsoft.com/library/db854f91-ccef-4035-ae4d-0911fde808c7)을 참조하세요.  
+ 비동기 I/O 작업을 구현하려면 다음 예제와 같이 이러한 키워드를 비동기 메서드와 함께 사용합니다. 자세한 내용은 [Async 및 Await를 사용한 비동기 프로그래밍](https://msdn.microsoft.com/library/db854f91-ccef-4035-ae4d-0911fde808c7)을 참조하세요.  
   
  다음 예제에서는 두 가지 <xref:System.IO.FileStream> 개체를 사용하여 한 디렉터리에서 다른 디렉터리로 파일을 비동기적으로 복사하는 방법을 보여 줍니다. <xref:System.Web.UI.WebControls.Button.Click> 컨트롤에 대한 <xref:System.Windows.Controls.Button> 이벤트 처리기는 비동기 메서드를 호출하므로 `async` 한정자로 표시됩니다.  
   
@@ -71,4 +71,4 @@ ms.lasthandoff: 12/23/2017
 ## <a name="see-also"></a>참고 항목  
  <xref:System.IO.Stream>  
  [파일 및 스트림 I/O](../../../docs/standard/io/index.md)  
- [Async 및 Await를 사용한 비동기 프로그래밍](http://msdn.microsoft.com/library/db854f91-ccef-4035-ae4d-0911fde808c7)
+ [Async 및 Await를 사용한 비동기 프로그래밍](https://msdn.microsoft.com/library/db854f91-ccef-4035-ae4d-0911fde808c7)

@@ -1,30 +1,30 @@
 ---
-title: "이벤트 기반 비동기 패턴(EAP)"
-ms.custom: 
+title: 이벤트 기반 비동기 패턴(EAP)
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - asynchronous calls
 - asynchronous programming, design patterns
 - asynchronous programming
 ms.assetid: c6baed9f-2a25-4728-9a9a-53b7b14840cf
-caps.latest.revision: 
+caps.latest.revision: 20
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 2a83d638255d27317ba5d566ab46b83526659365
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: fecd71355d53f1e3937d3724569b10fa0c8e50da
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="event-based-asynchronous-pattern-eap"></a>이벤트 기반 비동기 패턴(EAP)
 비동기 기능을 클라이언트 코드에 노출하는 방법은 여러 가지가 있습니다. 이벤트 기반 비동기 패턴은 클래스에 비동기 동작을 표시하는 한 가지 방법을 규정합니다.  
@@ -68,11 +68,11 @@ ms.lasthandoff: 12/23/2017
  [스레딩](../../../docs/standard/threading/index.md)  
  .NET Framework 다중 스레딩 기능에 대해 설명합니다.  
   
- [스레딩](http://msdn.microsoft.com/library/552f6c68-dbdb-4327-ae36-32cf9063d88c)  
+ [스레딩](https://msdn.microsoft.com/library/552f6c68-dbdb-4327-ae36-32cf9063d88c)  
  C# 및 Visual Basic 언어의 다중 스레딩 기능에 대해 설명합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [관리되는 스레딩을 구현하는 최선의 방법](../../../docs/standard/threading/managed-threading-best-practices.md)  
  [이벤트](../../../docs/standard/events/index.md)  
- [구성 요소에서 다중 스레딩](http://msdn.microsoft.com/library/2fc31e68-fb71-4544-b654-0ce720478779)  
+ [구성 요소에서 다중 스레딩](https://msdn.microsoft.com/library/2fc31e68-fb71-4544-b654-0ce720478779)  
  [비동기 프로그래밍 패턴](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md)
