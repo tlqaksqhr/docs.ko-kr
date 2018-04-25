@@ -13,11 +13,11 @@ ms.assetid: 1e38e9d9-8284-46ee-a15f-199adc4f26f4
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: f2dddc21dfb124fe97c397a156743981a67e4037
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 85e30292fdc0e0e529eacdd328d4515bba5ee3e8
+ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="async-overview"></a>비동기 개요
 
@@ -41,4 +41,14 @@ ms.lasthandoff: 12/23/2017
 
 ## <a name="whats-next"></a>새로운 기능
 
-비동기 개념 및 프로그래밍에 대한 자세한 내용은 [비동기에 대한 자세한 설명](async-in-depth.md) 및 [작업 기반 비동기 프로그래밍](~/docs/standard/parallel-programming/task-based-asynchronous-programming.md)을 참조하세요.
+자세한 내용은 [비동기에 대한 자세한 설명](async-in-depth.md) 항목을 참조하세요.
+
+[비동기 프로그래밍 패턴](/asynchronous-programming-patterns/index.md) 항목은 .NET에서 지원되는 세 가지 비동기 프로그래밍 패턴에 대한 개요를 제공합니다.  
+  
+-   [APM(비동기 프로그래밍 모델)](asynchronous-programming-patterns/asynchronous-programming-model-apm.md)(레거시)  
+  
+-   [EAP(이벤트 기반 비동기 패턴)](asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md)(레거시)  
+  
+-   [TAP(작업 기반 비동기 패턴)](asynchronous-programming-patterns/task-based-asynchronous-pattern-tap.md)(새로운 개발에 권장)  
+
+권장 작업 기반 프로그래밍 모델에 대한 자세한 내용은 [작업 기반 비동기 프로그래밍](parallel-programming/task-based-asynchronous-programming.md) 항목을 참조하세요.

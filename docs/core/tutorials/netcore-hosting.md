@@ -1,7 +1,7 @@
 ---
-title: ".NET Core 호스트"
-description: "네이티브 코드에서 .NET Core 런타임 호스트"
-keywords: ".NET, .NET Core, 호스트, .NET Core 호스트"
+title: .NET Core 호스트
+description: 네이티브 코드에서 .NET Core 런타임 호스트
+keywords: .NET, .NET Core, 호스트, .NET Core 호스트
 author: mjrousos
 ms.author: mikerou
 ms.date: 2/3/2017
@@ -11,11 +11,11 @@ ms.devlang: dotnet
 ms.assetid: 13edec8b-614d-47ed-9e95-ed6d3b94ec0c
 ms.workload:
 - dotnetcore
-ms.openlocfilehash: 3c358ab9173032b1f76d30b756ee6290233b2702
-ms.sourcegitcommit: 655fd4f78741967f80c409cef98347fdcf77857d
+ms.openlocfilehash: 5ff2e8e4da12b2a9822b595abbb2bdb0f583cf02
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="hosting-net-core"></a>.NET Core 호스트
 
@@ -25,7 +25,7 @@ ms.lasthandoff: 02/28/2018
 
 이 문서에서는 네이티브 코드에서 .NET Core 런타임을 시작하고 초기 응용 프로그램 도메인(<xref:System.AppDomain>)을 만들고 관리 코드를 실행하는 데 필요한 단계에 대한 개요를 제공합니다.
 
-## <a name="prerequisites"></a>필수 구성 요소
+## <a name="prerequisites"></a>전제 조건
 
 호스트는 네이티브 응용 프로그램이기 때문에 이 자습서에서는 .NET Core를 호스트하는 C++ 응용 프로그램을 생성을 다룹니다. [Visual Studio](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs)에서 제공하는 C++ 개발 환경 같은 C++ 개발 환경이 필요합니다.
 
@@ -35,7 +35,7 @@ ms.lasthandoff: 02/28/2018
 
 ## <a name="creating-the-host"></a>호스트 만들기
 
-이 문서에 설명된 단계를 보여 주는 [샘플 호스트](https://github.com/dotnet/docs/tree/master/samples/core/hosting)는 GitHub의 dotnet/docs 리포지토리에서 사용할 수 있습니다. 샘플의 *host.cpp* 파일에 있는 주석은 이 자습서에서 번호가 매겨진 단계를 샘플에서 수행되는 위치와 명확하게 연결합니다. 다운로드 지침은 [샘플 및 자습서](../../samples-and-tutorials/index.md#viewing-and-downloading-samples)를 참조하세요.
+이 문서에 설명된 단계를 보여주는 [샘플 호스트](https://github.com/dotnet/samples/tree/master/core/hosting)는 GitHub의 dotnet/samples 리포지토리에서 사용할 수 있습니다. 샘플의 *host.cpp* 파일에 있는 주석은 이 자습서에서 번호가 매겨진 단계를 샘플에서 수행되는 위치와 명확하게 연결합니다. 다운로드 지침은 [샘플 및 자습서](../../samples-and-tutorials/index.md#viewing-and-downloading-samples)를 참조하세요.
 
 샘플 호스트는 학습 목적으로 사용되므로 오류 검사가 부족하며 효율성보다 가독성을 강조하도록 설계되었습니다. [dotnet/coreclr](https://github.com/dotnet/coreclr/tree/master/src/coreclr/hosts) 리포지토리에서 더 많은 실제 호스트 샘플을 사용할 수 있습니다. 특히 [CoreRun 호스트](https://github.com/dotnet/coreclr/tree/master/src/coreclr/hosts/corerun)는 간단한 샘플을 읽은 후 학습하기 좋은 일반 용도의 호스트입니다.
 
@@ -90,7 +90,7 @@ AppDomain 플래그는 보안 및 interop와 관련된 AppDomain 동작을 지�
 *  `PLATFORM_RESOURCE_ROOTS` 이 목록에는 (문화권별 하위 디렉터리에서) 리소스 위성 어셈블리에 대해 검색하는 경로가 포함됩니다.
 *  `AppDomainCompatSwitch` 이 문자열은 명시적 대상 프레임워크 모니커(어셈블리에서 실행할 프레임워크를 나타내는 어셈블리 수준 특성)가 없는 어셈블리에 대해 사용해야 할 호환성 쿼크를 지정합니다. 일반적으로 `"UseLatestBehaviorWhenTFMNotSpecified"`로 설정되어야 하지만 일부 호스트에서는 대신 이전 Silverlight 또는 Windows Phone 호환성 쿼크를 가져올 수도 있습니다.
 
-[간단한 샘플 호스트](https://github.com/dotnet/docs/tree/master/samples/core/hosting)에서는 이러한 속성이 다음과 같이 설정됩니다.
+[간단한 샘플 호스트](https://github.com/dotnet/samples/tree/master/core/hosting)에서는 이러한 속성이 다음과 같이 설정됩니다.
 
 [!code-cpp[NetCoreHost#6](../../../samples/core/hosting/host.cpp#6)]
 

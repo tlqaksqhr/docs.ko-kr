@@ -1,6 +1,6 @@
 ---
-title: "dotnet test 및 xUnit을 사용하여 .NET Core에서 F# 라이브러리 유닛 테스트"
-description: "dotnet test 및 xUnit을 사용하여 샘플 솔루션을 단계별로 빌드하는 대화형 환경을 통해 .NET Core의 F#에 대한 단위 테스트 개념을 알아봅니다."
+title: dotnet test 및 xUnit을 사용하여 .NET Core에서 F# 라이브러리 유닛 테스트
+description: dotnet test 및 xUnit을 사용하여 샘플 솔루션을 단계별로 빌드하는 대화형 환경을 통해 .NET Core의 F#에 대한 단위 테스트 개념을 알아봅니다.
 author: billwagner
 ms.author: wiwagn
 ms.date: 08/30/2017
@@ -10,15 +10,15 @@ dev_langs:
 ms.prod: .net-core
 ms.workload:
 - dotnetcore
-ms.openlocfilehash: 6a9596db49024bead9c33b52642f46f519bb2b4c
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 8485b1a64992c7a632d22d9dc492ee4d83592208
+ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="unit-testing-f-libraries-in-net-core-using-dotnet-test-and-xunit"></a>dotnet test 및 xUnit을 사용하여 .NET Core에서 F# 라이브러리 유닛 테스트
 
-이 자습서에서는 샘플 솔루션을 단계별로 빌드하는 대화형 환경을 통해 단위 테스트 개념을 알아볼 수 있습니다. 미리 빌드된 솔루션을 사용하여 이 자습서를 진행하려는 경우 시작하기 전에 [샘플 코드를 보거나 다운로드](https://github.com/dotnet/docs/tree/master/samples/core/getting-started/unit-testing-with-fsharp/). 다운로드 지침은 [샘플 및 자습서](../../samples-and-tutorials/index.md#viewing-and-downloading-samples)를 참조하세요.
+이 자습서에서는 샘플 솔루션을 단계별로 빌드하는 대화형 환경을 통해 단위 테스트 개념을 알아볼 수 있습니다. 미리 빌드된 솔루션을 사용하여 이 자습서를 진행하려는 경우 시작하기 전에 [샘플 코드를 보거나 다운로드](https://github.com/dotnet/samples/tree/master/core/getting-started/unit-testing-with-fsharp/). 다운로드 지침은 [샘플 및 자습서](../../samples-and-tutorials/index.md#viewing-and-downloading-samples)를 참조하세요.
 
 ## <a name="creating-the-source-project"></a>소스 프로젝트 만들기
 
@@ -36,7 +36,7 @@ ms.lasthandoff: 12/23/2017
 
 ```fsharp
 module MyMath =
-    let sumOfSquares xs = raise (System.NotImplementedException("You haven't written a test yet!"))
+    let squaresOfOdds xs = raise (System.NotImplementedException("You haven't written a test yet!"))
 ```
 
 디렉터리를 다시 *unit-testing-with-fsharp* 디렉터리로 변경합니다. [`dotnet sln add .\MathService\MathService.fsproj`](../tools/dotnet-sln.md)를 실행하여 클래스 라이브러리 프로젝트를 솔루션에 추가합니다.
@@ -70,7 +70,7 @@ module MyMath =
 dotnet add reference ../MathService/MathService.fsproj
 ```
 
-GitHub의 [샘플 리포지토리](https://github.com/dotnet/docs/blob/master/samples/core/getting-started/unit-testing-with-fsharp/MathService.Tests/MathService.Tests.fsproj)에서 전체 파일을 볼 수 있습니다.
+GitHub의 [샘플 리포지토리](https://github.com/dotnet/samples/blob/master/core/getting-started/unit-testing-with-fsharp/MathService.Tests/MathService.Tests.fsproj)에서 전체 파일을 볼 수 있습니다.
 
 최종 솔루션 레이아웃은 다음과 같습니다.
 
@@ -102,22 +102,22 @@ let ``Fail every time`` () = Assert.True(false)
 
 `[<Fact>]` 특성은 Test Runner에서 실행하는 테스트 메서드를 나타냅니다. *unit-testing-with-fsharp*에서 [`dotnet test`](../tools/dotnet-test.md)를 실행하여 테스트 및 클래스 라이브러리를 빌드한 다음 테스트를 실행합니다. xUnit Test Runner에는 테스트를 실행할 프로그램 진입점이 포함되어 있습니다. `dotnet test`는 만든 단위 테스트 프로젝트를 사용하여 Test Runner를 시작합니다.
 
-이러한 두 테스트는 가장 기본적인 통과 및 실패 테스트를 보여 줍니다. `My test`는 통과하고 `Fail every time`은 실패합니다. 이제 `sumOfSquares` 메서드에 대한 테스트를 만듭니다. `sumOfSquares` 메서드는 입력 시퀀스에 포함된 모든 홀수 정수 값 제곱의 합을 반환합니다. 이러한 모든 함수를 한 번에 작성하지 않고 기능의 유효성을 검사하는 테스트를 반복적으로 만들 수 있습니다. 각 테스트 패스를 만들면 메서드에 필요한 기능이 만들어집니다.
+이러한 두 테스트는 가장 기본적인 통과 및 실패 테스트를 보여 줍니다. `My test`는 통과하고 `Fail every time`은 실패합니다. 이제 `squaresOfOdds` 메서드에 대한 테스트를 만듭니다. `squaresOfOdds` 메서드는 입력 시퀀스에 포함된 모든 홀수 정수 값 제곱의 시퀀스를 반환합니다. 이러한 모든 함수를 한 번에 작성하지 않고 기능의 유효성을 검사하는 테스트를 반복적으로 만들 수 있습니다. 각 테스트 패스를 만들면 메서드에 필요한 기능이 만들어집니다.
 
-작성할 수 있는 가장 간단한 테스트는 모든 짝수를 사용하여 `sumOfSquares`를 호출하는 것입니다. 이 경우 결과는 빈 정수 시퀀스여야 합니다.  해당 테스트는 다음과 같습니다.
+작성할 수 있는 가장 간단한 테스트는 모든 짝수를 사용하여 `squaresOfOdds`를 호출하는 것입니다. 이 경우 결과는 빈 정수 시퀀스여야 합니다.  해당 테스트는 다음과 같습니다.
 
 ```fsharp
 [<Fact>]
-let ``Sum of evens returns empty collection`` () =
+let ``Sequence of Evens returns empty collection`` () =
     let expected = Seq.empty<int>
-    let actual = MyMath.sumOfSquares [2; 4; 6; 8; 10]
+    let actual = MyMath.squaresOfOdds [2; 4; 6; 8; 10]
     Assert.Equal<Collections.Generic.IEnumerable<int>>(expected, actual)
 ```
 
 테스트가 실패합니다. 구현은 아직 만들지 않았습니다. `MathService` 클래스에서 작동하는 가장 간단한 코드를 작성하여 이 테스트를 만듭니다.
 
 ```csharp
-let sumOfSquares xs =
+let squaresOfOdds xs =
     Seq.empty<int>
 ```
 
@@ -129,18 +129,18 @@ let sumOfSquares xs =
 
 ```fsharp
 [<Fact>]
-let ``Sum of sequences of Ones and Evens`` () =
+let ``Sequences of Ones and Evens returns Ones`` () =
     let expected = [1; 1; 1; 1]
-    let actual = MyMath.sumOfSquares [2; 1; 4; 1; 6; 1; 8; 1; 10]
+    let actual = MyMath.squaresOfOdds [2; 1; 4; 1; 6; 1; 8; 1; 10]
     Assert.Equal<Collections.Generic.IEnumerable<int>>(expected, actual)
 ```
 
-`dotnet test`를 실행하면 테스트가 실행되고 새 테스트가 실패합니다. 이제 `sumOfSquares` 메서드를 업데이트하여 이 새 테스트를 처리합니다. 시퀀스에서 모든 짝수를 필터링하여 이 테스트가 통과하게 만듭니다. 이렇게 하려면 작은 필터 함수를 작성하고 `Seq.filter`를 사용합니다.
+`dotnet test`를 실행하면 테스트가 실행되고 새 테스트가 실패합니다. 이제 `squaresOfOdds` 메서드를 업데이트하여 이 새 테스트를 처리합니다. 시퀀스에서 모든 짝수를 필터링하여 이 테스트가 통과하게 만듭니다. 이렇게 하려면 작은 필터 함수를 작성하고 `Seq.filter`를 사용합니다.
 
 ```fsharp
 let private isOdd x = x % 2 <> 0
 
-let sumOfSquares xs =
+let squaresOfOdds xs =
     xs
     |> Seq.filter isOdd
 ```
@@ -151,7 +151,7 @@ let sumOfSquares xs =
 [<Fact>]
 let ``SquaresOfOdds works`` () =
     let expected = [1; 9; 25; 49; 81]
-    let actual = MyMath.sumOfSquares [1; 2; 3; 4; 5; 6; 7; 8; 9; 10]
+    let actual = MyMath.squaresOfOdds [1; 2; 3; 4; 5; 6; 7; 8; 9; 10]
     Assert.Equal(expected, actual)
 ```
 
@@ -161,7 +161,7 @@ let ``SquaresOfOdds works`` () =
 let private square x = x * x
 let private isOdd x = x % 2 <> 0
 
-let sumOfSquares xs = 
+let squaresOfOdds xs = 
     xs 
     |> Seq.filter isOdd 
     |> Seq.map square

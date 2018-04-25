@@ -11,11 +11,11 @@ ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 6281442f42b511170f83eaeb1c940a35a566e519
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 0ca69ada16fbb5a6757da96a7ea64d2113c15b6f
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="securing-net-microservices-and-web-applications"></a>.NET 마이크로 서비스 및 웹 응용 프로그램 보안
 
@@ -136,7 +136,7 @@ Visual Studio에서 ASP.NET Core 웹 응용 프로그램 프로젝트를 만들 
 
 ASP.NET Core ID(또는 ID 및 외부 인증 공급자)를 사용한 인증은 사용자 정보를 쿠키에 저장하는 것이 적합한 다수의 웹 응용 프로그램 시나리오에 대해 효과적으로 작동합니다. 그러나 다른 시나리오의 경우 쿠키는 데이터를 유지하고 전송하는 자연스러운 방법이 아닙니다.
 
-예를 들어 SPA(단일 페이지 응용 프로그램), 네이티브 클라이언트 또는 다른 웹 API에서 액세스할 수 있는 RESTful 끝점을 노출하는 ASP.NET Core 웹 API에서는 쿠키 대신 일반적으로 전달자 토큰 인증을 사용하는 것이 좋습니다. 이러한 유형의 응용 프로그램은 쿠키와는 작동하지 않지만 간편하게 전달자 토큰을 검색하여 후속 요청의 인증 헤더에 포함합니다. 토큰 인증을 사용하기 위해 ASP.NET Core는 [OAuth 2.0](https://oauth.net/2/) 및 [OpenID Connect](http://openid.net/connect/) 사용에 대한 몇 가지 옵션을 지원합니다.
+예를 들어 SPA(단일 페이지 응용 프로그램), 네이티브 클라이언트 또는 다른 웹 API에서 액세스할 수 있는 RESTful 끝점을 노출하는 ASP.NET Core 웹 API에서는 쿠키 대신 일반적으로 전달자 토큰 인증을 사용하는 것이 좋습니다. 이러한 유형의 응용 프로그램은 쿠키와는 작동하지 않지만 간편하게 전달자 토큰을 검색하여 후속 요청의 인증 헤더에 포함합니다. 토큰 인증을 사용하기 위해 ASP.NET Core는 [OAuth 2.0](https://oauth.net/2/) 및 [OpenID Connect](https://openid.net/connect/) 사용에 대한 몇 가지 옵션을 지원합니다.
 
 ## <a name="authenticating-with-an-openid-connect-or-oauth-20-identity-provider"></a>OpenID Connect 또는 OAuth 2.0 ID 공급자를 사용한 인증
 
@@ -228,9 +228,9 @@ app.UseJwtBearerAuthentication(new JwtBearerOptions()
 
 JWT 전달자 인증 미들웨어는 인증 기관을 사용할 수 없는 경우 로컬 인증서를 사용하여 토큰의 유효성을 검사하는 상황과 같은 고급 시나리오도 지원할 수 있습니다. 이 시나리오에 대해서는 JwtBearerOptions 개체에서 TokenValidationParameters 개체를 지정할 수 있습니다.
 
-## <a name="additional-resources"></a>추가 리소스
+## <a name="additional-resources"></a>추가 자료
 
--   **응용 프로그램 간 쿠키 공유**
+-   **응용 프로그램 간 쿠키 공유하기**
     [*https://docs.microsoft.com/aspnet/core/security/data-protection/compatibility/cookie-sharing\#sharing-authentication-cookies-between-applications*](https://docs.microsoft.com/aspnet/core/security/data-protection/compatibility/cookie-sharing#sharing-authentication-cookies-between-applications)
 
 -   **ID 소개**
@@ -239,7 +239,7 @@ JWT 전달자 인증 미들웨어는 인증 기관을 사용할 수 없는 경�
 -   **Rick Anderson. SMS를 사용한 2단계 인증**
     [*https://docs.microsoft.com/aspnet/core/security/authentication/2fa*](https://docs.microsoft.com/aspnet/core/security/authentication/2fa)
 
--   **Facebook, Google 및 다른 외부 공급자를 통한 인증 사용**
+-   **Facebook, Google 및 기타 외부 공급자를 통해 인증 사용**
     [*https://docs.microsoft.com/aspnet/core/security/authentication/social/*](https://docs.microsoft.com/aspnet/core/security/authentication/social/)
 
 -   **Michell Anicas. OAuth 2 소개**
@@ -248,10 +248,10 @@ JWT 전달자 인증 미들웨어는 인증 기관을 사용할 수 없는 경�
 -   **AspNet.Security.OAuth.Providers**(ASP.NET OAuth 공급자를 위한 GitHub 리포지토리)
     [*https://github.com/aspnet-contrib/AspNet.Security.OAuth.Providers/tree/dev/src*](https://github.com/aspnet-contrib/AspNet.Security.OAuth.Providers/tree/dev/src)
 
--   **Danny Strockis. Azure AD를 ASP.NET Core 웹앱에 통합**
+-   **Danny Strockis. ASP.NET Core 웹앱에 Azure AD 통합**
     [*https://azure.microsoft.com/resources/samples/active-directory-dotnet-webapp-openidconnect-aspnetcore/*](https://azure.microsoft.com/resources/samples/active-directory-dotnet-webapp-openidconnect-aspnetcore/)
 
--   **IdentityServer4. 공식 설명서**
+-   **IdentityServer4. 공식 문서**
     [*https://identityserver4.readthedocs.io/en/release/*](https://identityserver4.readthedocs.io/en/release/)
 
 

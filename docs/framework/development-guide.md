@@ -1,28 +1,28 @@
 ---
-title: ".NET Framework 개발 가이드"
-ms.custom: 
+title: .NET Framework 개발 가이드
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - .NET Framework, development guide
 ms.assetid: 26e3d285-24c3-435c-a797-9fe5affb8525
-caps.latest.revision: 
+caps.latest.revision: 13
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 5d7950ae39ada3e1e0e070967f8d578fc3371126
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 3432ac629a6c754cf7f863b6444dc81b6f9919ef
+ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="net-framework-development-guide"></a>.NET Framework 개발 가이드
 이 섹션에서는 .NET Framework 앱을 생성, 구성, 디버그, 배포하고 보안을 적용하는 방법을 설명합니다. 이 섹션에서는 또한 동적 프로그래밍, 상호 운용성, 확장성, 메모리 관리 및 스레딩과 같은 기술 영역에 대한 정보를 제공합니다.  
@@ -49,7 +49,7 @@ ms.lasthandoff: 01/19/2018
  [Windows 서비스 응용 프로그램](../../docs/framework/windows-services/index.md)  
  Visual Studio 및 .NET Framework를 사용하여 서비스로서 설치되는 앱을 만들고 서비스 동작을 시작, 중지 및 다른 방식으로 제어하는 방법에 대해 설명합니다.  
   
- [병렬 처리 및 동시성](../../docs/standard/parallel-processing-and-concurrency.md)  
+ [.NET의 병렬 처리, 동시성 및 비동기 프로그래밍](../../docs/standard/parallel-processing-and-concurrency.md)  
  관리되는 스레딩, 병렬 프로그래밍 및 비동기 프로그래밍 디자인 패턴에 대한 정보를 제공합니다.  
   
  [.NET Framework의 네트워크 프로그래밍](../../docs/framework/network-programming/index.md)  

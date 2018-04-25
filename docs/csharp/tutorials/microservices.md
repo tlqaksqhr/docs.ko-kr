@@ -1,7 +1,7 @@
 ---
-title: "Docker에서 호스트되는 마이크로 서비스 - C#"
-description: "Docker 컨테이너에서 실행되는 ASP.NET Core 서비스를 만드는 방법 알아보기"
-keywords: ".NET, .NET Core, Docker, C#, ASP.NET, 마이크로 서비스"
+title: Docker에서 호스트되는 마이크로 서비스 - C#
+description: Docker 컨테이너에서 실행되는 ASP.NET Core 서비스를 만드는 방법 알아보기
+keywords: .NET, .NET Core, Docker, C#, ASP.NET, 마이크로 서비스
 author: BillWagner
 ms.author: wiwagn
 ms.date: 02/03/2017
@@ -10,11 +10,11 @@ ms.prod: .net-core
 ms.technology: dotnet-docker
 ms.devlang: csharp
 ms.assetid: 87e93838-a363-4813-b859-7356023d98ed
-ms.openlocfilehash: d399cdce81350356b71e21d879a4f5b5079f98d8
-ms.sourcegitcommit: 2142a4732bb4ff519b9817db4c24a237b9810d4b
+ms.openlocfilehash: 253b622618ef62c28ac13a287c34b9d9049dd066
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/05/2018
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="microservices-hosted-in-docker"></a>Docker에서 호스트되는 마이크로 서비스
 
@@ -32,7 +32,7 @@ ms.lasthandoff: 01/05/2018
 * 들어오는 HTTP 요청을 처리하고 HTTP 응답을 생성하는 방법
 * null 허용 값 형식을 사용하는 방법
 
-이 항목에 대한 [샘플 앱을 보거나 다운로드](https://github.com/dotnet/docs/tree/master/samples/csharp/getting-started/WeatherMicroservice)할 수 있습니다. 다운로드 지침은 [샘플 및 자습서](../../samples-and-tutorials/index.md#viewing-and-downloading-samples)를 참조하세요.
+이 항목에 대한 [샘플 앱을 보거나 다운로드](https://github.com/dotnet/samples/tree/master/csharp/getting-started/WeatherMicroservice)할 수 있습니다. 다운로드 지침은 [샘플 및 자습서](../../samples-and-tutorials/index.md#viewing-and-downloading-samples)를 참조하세요.
 
 ### <a name="why-docker"></a>Docker를 사용해야 하는 이유
 
@@ -41,7 +41,7 @@ Docker를 사용하면 데이터 센터 또는 공용 클라우드에서 서비�
 이 자습서의 모든 코드는 모든 .NET Core 환경에서 작동합니다.
 Docker 설치를 위한 추가 작업은 ASP.NET Core 응용 프로그램에 해당합니다. 
 
-## <a name="prerequisites"></a>필수 구성 요소
+## <a name="prerequisites"></a>전제 조건
 .NET Core를 실행하도록 컴퓨터에 설정해야 합니다. [.NET Core](https://www.microsoft.com/net/core) 페이지에서 설치 지침을 확인할 수 있습니다.
 Windows, Ubuntu Linux, macOS 또는 Docker 컨테이너에서 이 응용 프로그램을 실행할 수 있습니다. 선호하는 코드 편집기를 설치해야 합니다. 아래 설명에서는 오픈 소스 플랫폼 간 편집기인 [Visual Studio Code](https://code.visualstudio.com/)를 사용합니다. 그러나 익숙한 어떤 도구도 사용 가능합니다.
 
@@ -98,7 +98,7 @@ dotnet build
 dotnet run
 ```
 
-기본 구성은 http://localhost:5000 을 수신합니다. 브라우저를 열고 해당 페이지로 이동하면 "Hello World!" 반환됩니다.
+기본 구성은 `http://localhost:5000`을 수신 대기합니다. 브라우저를 열고 해당 페이지로 이동하면 "Hello World!" 반환됩니다.
 
 ### <a name="anatomy-of-an-aspnet-core-application"></a>ASP.NET Core 응용 프로그램 분석
 

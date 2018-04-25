@@ -21,11 +21,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 50c4f9cfeb135f1046fbb427585897ca99248afd
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 2acfb9a564f3a7bc96ed303f49349afe56ca7fe4
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="tpl-and-traditional-net-framework-asynchronous-programming"></a>TPL 및 일반적인 .NET Framework 비동기 프로그래밍
 .NET Framework에서는 I/O에 바인딩된 비동기 작업과 계산에 바인딩된 비동기 작업을 수행하도록 다음 표준 패턴 두 개를 제공합니다.  
@@ -53,7 +53,7 @@ ms.lasthandoff: 12/23/2017
   
  `Begin` 메서드에 매개 변수가 4개 이상 포함되거나 `ref` 또는 `out` 매개 변수가 포함되는 경우에는 `End` 메서드만 캡슐화하는 추가 `FromAsync` 오버로드가 제공됩니다.  
   
- 다음 예제에서는 <xref:System.IO.FileStream.BeginRead%2A?displayProperty=nameWithType> 및 <xref:System.IO.FileStream.EndRead%2A?displayProperty=nameWithType> 메서드와 일치하는 `FromAsync` 오버로드에 대한 서명을 보여줍니다. 이 오버로드는 다음과 같이 입력 매개 변수 세 개를 사용합니다.  
+ 다음 예제에서는 <xref:System.IO.FileStream.BeginRead%2A?displayProperty=nameWithType> 및 <xref:System.IO.FileStream.EndRead%2A?displayProperty=nameWithType> 메서드와 일치하는 `FromAsync` 오버로드에 대한 서명을 보여 줍니다. 이 오버로드는 다음과 같이 입력 매개 변수 세 개를 사용합니다.  
   
  [!code-csharp[FromAsync#01](../../../samples/snippets/csharp/VS_Snippets_Misc/fromasync/cs/fromasync.cs#01)]
  [!code-vb[FromAsync#01](../../../samples/snippets/visualbasic/VS_Snippets_Misc/fromasync/vb/module1.vb#01)]  
@@ -71,7 +71,7 @@ ms.lasthandoff: 12/23/2017
 ### <a name="using-continuewith-for-the-callback-functionality"></a>콜백 기능에 ContinueWith 사용  
  단순한 바이트 수와는 달리 파일의 데이터에 대한 액세스 권한이 필요할 경우에는 <xref:System.Threading.Tasks.TaskFactory.FromAsync%2A> 메서드로는 충분하지 않습니다. 대신에 파일 데이터가 들어 있는 `Result` 속성이 포함된 <xref:System.Threading.Tasks.Task>를 사용하세요. 이 작업을 하려면 원래 작업에 연속을 추가합니다. 연속은 일반적으로 <xref:System.AsyncCallback> 대리자에서 수행하는 작업을 수행합니다. 연속은 선행이 완료되고 데이터 버퍼가 채워졌을 때 호출됩니다. 돌아가기 전에 <xref:System.IO.FileStream> 개체를 닫아야 합니다.  
   
- 다음 예제에서는 <xref:System.IO.FileStream> 클래스의 BeginRead/EndRead 쌍을 캡슐화하는 <xref:System.Threading.Tasks.Task>를 반환하는 방법을 보여줍니다.  
+ 다음 예제에서는 <xref:System.IO.FileStream> 클래스의 BeginRead/EndRead 쌍을 캡슐화하는 <xref:System.Threading.Tasks.Task>를 반환하는 방법을 보여 줍니다.  
   
  [!code-csharp[FromAsync#03](../../../samples/snippets/csharp/VS_Snippets_Misc/fromasync/cs/fromasync.cs#03)]
  [!code-vb[FromAsync#03](../../../samples/snippets/visualbasic/VS_Snippets_Misc/fromasync/vb/module1.vb#03)]  
@@ -88,7 +88,7 @@ ms.lasthandoff: 12/23/2017
  [!code-vb[FromAsync#05](../../../samples/snippets/visualbasic/VS_Snippets_Misc/fromasync/vb/module1.vb#05)]  
   
 ### <a name="synchronizing-multiple-fromasync-tasks"></a>여러 FromAsync 작업 동기화  
- 정적 <xref:System.Threading.Tasks.TaskFactory.ContinueWhenAll%2A> 및 <xref:System.Threading.Tasks.TaskFactory.ContinueWhenAny%2A> 메서드는 `FromAsync` 메서드와 함께 사용될 때 더 큰 유연성을 제공합니다. 다음 예제에서는 여러 비동기 I/O 작업을 시작하고 연속을 실행하기 전에 모든 작업이 완료될 때까지 기다리는 방법을 보여줍니다.  
+ 정적 <xref:System.Threading.Tasks.TaskFactory.ContinueWhenAll%2A> 및 <xref:System.Threading.Tasks.TaskFactory.ContinueWhenAny%2A> 메서드는 `FromAsync` 메서드와 함께 사용될 때 더 큰 유연성을 제공합니다. 다음 예제에서는 여러 비동기 I/O 작업을 시작하고 연속을 실행하기 전에 모든 작업이 완료될 때까지 기다리는 방법을 보여 줍니다.  
   
  [!code-csharp[FromAsync#06](../../../samples/snippets/csharp/VS_Snippets_Misc/fromasync/cs/fromasync.cs#06)]
  [!code-vb[FromAsync#06](../../../samples/snippets/visualbasic/VS_Snippets_Misc/fromasync/vb/module1.vb#06)]  
@@ -109,7 +109,7 @@ ms.lasthandoff: 12/23/2017
 ## <a name="exposing-complex-eap-operations-as-tasks"></a>복잡한 EAP 작업을 작업으로 노출  
  TPL은 메서드의 `FromAsync` 패밀리가 <xref:System.IAsyncResult> 패턴을 래핑하는 것과 같은 방법으로 이벤트 기반 비동기 작업을 캡슐화하도록 특수 디자인된 메서드를 제공하지 않습니다. 그러나 TPL은 임의 작업 집합을 <xref:System.Threading.Tasks.Task%601>로 표현하는 데 사용할 수 있는 <xref:System.Threading.Tasks.TaskCompletionSource%601?displayProperty=nameWithType> 클래스를 제공합니다. 작업은 동기 또는 비동기 작업일 수 있고 I/O에 바인딩되거나 계산에 바인딩된 작업이거나 두 작업에 모두 해당할 수 있습니다.  
   
- 다음 예제에서는 a <xref:System.Threading.Tasks.TaskCompletionSource%601>을 사용하여 비동기 <xref:System.Net.WebClient> 작업 집합을 클라이언트 코드에 기본 <xref:System.Threading.Tasks.Task%601>로 노출하는 방법을 보여줍니다. 메서드를 통해 웹 URL 배열과 검색할 용어 또는 이름을 입력할 수 있고, 그리고 나서 각 사이트에서 검색 용어가 발생하는 횟수가 반환됩니다.  
+ 다음 예제에서는 a <xref:System.Threading.Tasks.TaskCompletionSource%601>을 사용하여 비동기 <xref:System.Net.WebClient> 작업 집합을 클라이언트 코드에 기본 <xref:System.Threading.Tasks.Task%601>로 노출하는 방법을 보여 줍니다. 메서드를 통해 웹 URL 배열과 검색할 용어 또는 이름을 입력할 수 있고, 그리고 나서 각 사이트에서 검색 용어가 발생하는 횟수가 반환됩니다.  
   
  [!code-csharp[FromAsync#10](../../../samples/snippets/csharp/VS_Snippets_Misc/fromasync/cs/snippet10.cs#10)]
  [!code-vb[FromAsync#10](../../../samples/snippets/visualbasic/VS_Snippets_Misc/fromasync/vb/snippet10.vb#10)]  
@@ -121,13 +121,13 @@ ms.lasthandoff: 12/23/2017
 ## <a name="implementing-the-apm-pattern-by-using-tasks"></a>작업을 사용하여 APM 패턴 구현  
  몇몇 시나리오에서는 API에서 Begin/End 메서드 쌍을 사용하여 <xref:System.IAsyncResult> 패턴을 직접 노출하는 것이 좋을 수 있습니다. 예를 들어 기존 API와 일관성을 유지하려고 하거나 이 패턴이 필요한 자동화된 도구가 있을 수 있습니다. 이 경우 작업을 사용하여 APM 패턴을 내부적으로 구현하는 방법을 간소화할 수 있습니다.  
   
- 다음 예제에서는 작업을 사용하여 계산에 바인딩된 장기 실행 메서드에 대한 APM Begin/End 메서드 쌍을 구현하는 방법을 보여줍니다.  
+ 다음 예제에서는 작업을 사용하여 계산에 바인딩된 장기 실행 메서드에 대한 APM Begin/End 메서드 쌍을 구현하는 방법을 보여 줍니다.  
   
  [!code-csharp[FromAsync#09](../../../samples/snippets/csharp/VS_Snippets_Misc/fromasync/cs/fromasync.cs#09)]
  [!code-vb[FromAsync#09](../../../samples/snippets/visualbasic/VS_Snippets_Misc/fromasync/vb/module1.vb#09)]  
   
 ## <a name="using-the-streamextensions-sample-code"></a>StreamExtensions 샘플 코드 사용  
- MSDN 웹 사이트의 [Samples for Parallel Programming with the .NET Framework 4](http://go.microsoft.com/fwlink/?LinkID=165717)(.NET Framework 4를 사용한 병렬 프로그래밍 샘플)에서 제공되는 Streamextensions.cs 파일에는 비동기 파일 및 네트워크 I/O에 Task 개체를 사용하는 몇 가지 참조 구현이 포함되어 있습니다.  
+ [Samples for Parallel Programming with the .NET Framework 4](https://code.msdn.microsoft.com/ParExtSamples)(.NET Framework 4를 사용한 병렬 프로그래밍 샘플)에서 제공되는 Streamextensions.cs 파일에는 비동기 파일 및 네트워크 I/O에 Task 개체를 사용하는 몇 가지 참조 구현이 포함되어 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [TPL(작업 병렬 라이브러리)](../../../docs/standard/parallel-programming/task-parallel-library-tpl.md)

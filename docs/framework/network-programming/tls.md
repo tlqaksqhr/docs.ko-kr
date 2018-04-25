@@ -19,11 +19,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 64829eee5b21a44acb18cbec9b901d77d49cab90
-ms.sourcegitcommit: 32172ca05d5dcce7ef3d327b9c8639c736e0fe2b
+ms.openlocfilehash: 7298c87c3e61103577d4262ab2dc2645d7e6265a
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/20/2018
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="transport-layer-security-tls-best-practices-with-the-net-framework"></a>.NET Framework를 사용한 TLS(전송 계층 보안) 모범 사례
 
@@ -114,7 +114,7 @@ WCF는 .NET Framework의 나머지와 동일한 네트워킹 스택을 사용합
 
 다음 섹션을 통해 코드를 감사하여 특정 TLS 또는 SSL 버전을 설정하지 않는지 확인합니다.
 
-### <a name="for-net-framework-46---462-and-not-wfc"></a>WFC가 아니고 .NET Framework 4.6~4.6.2인 경우
+### <a name="for-net-framework-46---462-and-not-wcf"></a>WCF가 아니고 .NET Framework 4.6~4.6.2인 경우
 
 `DontEnableSystemDefaultTlsVersions` `AppContext` 스위치를 `false`로 설정합니다. [AppContext 스위치를 통해 보안 구성](#configuring-security-via-appcontext-switches)을 참조하세요.
 

@@ -1,21 +1,22 @@
 ---
-title: "제네릭 및 리플렉션(C# 프로그래밍 가이드)"
+title: 제네릭 및 리플렉션(C# 프로그래밍 가이드)
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 helpviewer_keywords:
 - generics [C#], reflection
 - reflection [C#], generic types
 ms.assetid: 162fd9b4-dd5b-4abb-8c9b-e44e21e2f451
-caps.latest.revision: "15"
+caps.latest.revision: 15
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: cc2363eea7d5c601fc73f5f9eb14b4b07ad14cb8
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 3048cb6a9b333107f6ea37edf31ead96f9fe2057
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="generics-and-reflection-c-programming-guide"></a>제네릭 및 리플렉션(C# 프로그래밍 가이드)
 CLR(공용 언어 런타임)은 런타임에 제네릭 형식 정보에 액세스할 수 있으므로 제네릭이 아닌 형식에 대한 방법과 동일한 방법으로 리플렉션을 사용하여 제네릭 형식에 대한 정보를 가져올 수 있습니다. 자세한 내용은 [런타임의 제네릭](../../../csharp/programming-guide/generics/generics-in-the-run-time.md)을 참조하세요.  
@@ -38,15 +39,15 @@ CLR(공용 언어 런타임)은 런타임에 제네릭 형식 정보에 액세�
 |<xref:System.Type.DeclaringMethod%2A>|현재 제네릭 형식 매개 변수를 정의한 제네릭 메서드를 반환하거나 형식 매개 변수가 제네릭 메서드에 의해 정의되지 않은 경우 null을 반환합니다.|  
 |<xref:System.Type.MakeGenericType%2A>|형식 배열의 요소를 현재 제네릭 형식 정의의 형식 매개 변수로 대체하고 생성된 형식을 나타내는 <xref:System.Type> 개체를 반환합니다.|  
   
- 또한 제네릭 메서드에 대한 런타임 정보를 사용할 수 있도록 <xref:System.Reflection.MethodInfo> 클래스에 새 멤버가 추가되었습니다. 제네릭 메서드를 반영하는 데 사용되는 용어에 대한 고정 조건 목록은 <xref:System.Reflection.MethodInfo.IsGenericMethod%2A> 속성 설명을 참조하세요.  
+ 또한 <xref:System.Reflection.MethodInfo> 클래스에 새 멤버는 제네릭 메서드에 대한 런타임 정보를 사용하도록 설정합니다. 제네릭 메서드를 반영하는 데 사용되는 용어에 대한 고정 조건 목록은 <xref:System.Reflection.MethodBase.IsGenericMethod%2A> 속성 설명을 참조하세요.  
   
 |System.Reflection.MemberInfo 멤버 이름|설명|  
 |----------------------------------------------|-----------------|  
-|<xref:System.Reflection.MethodInfo.IsGenericMethod%2A>|메서드가 제네릭인 경우 true를 반환합니다.|  
+|<xref:System.Reflection.MethodBase.IsGenericMethod%2A>|메서드가 제네릭인 경우 true를 반환합니다.|  
 |<xref:System.Reflection.MethodInfo.GetGenericArguments%2A>|생성된 제네릭 메서드의 형식 인수나 제네릭 메서드 정의의 형식 매개 변수를 나타내는 Type 개체의 배열을 반환합니다.|  
 |<xref:System.Reflection.MethodInfo.GetGenericMethodDefinition%2A>|현재 생성된 메서드에 대한 기본 제네릭 메서드 정의를 반환합니다.|  
-|<xref:System.Reflection.MethodInfo.ContainsGenericParameters%2A>|메서드 또는 바깥쪽 형식에 제공되지 않은 특정 형식에 대한 형식 매개 변수가 포함된 경우 true를 반환합니다.|  
-|<xref:System.Reflection.MethodInfo.IsGenericMethodDefinition%2A>|현재 <xref:System.Reflection.MethodInfo>가 제네릭 메서드의 정의를 나타내는 경우 true를 반환합니다.|  
+|<xref:System.Reflection.MethodBase.ContainsGenericParameters%2A>|메서드 또는 바깥쪽 형식에 제공되지 않은 특정 형식에 대한 형식 매개 변수가 포함된 경우 true를 반환합니다.|  
+|<xref:System.Reflection.MethodBase.IsGenericMethodDefinition%2A>|현재 <xref:System.Reflection.MethodInfo>가 제네릭 메서드의 정의를 나타내는 경우 true를 반환합니다.|  
 |<xref:System.Reflection.MethodInfo.MakeGenericMethod%2A>|현재 제네릭 메서드 정의의 형식 매개 변수를 형식 배열의 요소로 대체하고, 결과로 생성된 메서드를 나타내는 <xref:System.Reflection.MethodInfo> 개체를 반환합니다.|  
   
 ## <a name="see-also"></a>참고 항목  

@@ -1,21 +1,21 @@
 ---
-title: "dotnet test 및 NUnit을 사용하여 .NET Core에서 F# 라이브러리 유닛 테스트"
-description: "dotnet test 및 NUnit을 사용하여 샘플 솔루션을 단계별로 빌드하는 대화형 환경을 통해 .NET Core의 F#에 대한 단위 테스트 개념을 알아봅니다."
+title: dotnet test 및 NUnit을 사용하여 .NET Core에서 F# 라이브러리 유닛 테스트
+description: dotnet test 및 NUnit을 사용하여 샘플 솔루션을 단계별로 빌드하는 대화형 환경을 통해 .NET Core의 F#에 대한 단위 테스트 개념을 알아봅니다.
 author: rprouse
 ms.date: 12/01/2017
 ms.topic: article
 dev_langs:
 - fsharp
 ms.prod: .net-core
-ms.openlocfilehash: 27a7bb889fd736294252da39b1839b2197b8df03
-ms.sourcegitcommit: 401c4427a3ec0d1263543033b3084039278509dc
+ms.openlocfilehash: c38be75ff39fae3afd371a5a3a9332ee5ac96022
+ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/06/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="unit-testing-f-libraries-in-net-core-using-dotnet-test-and-nunit"></a>dotnet test 및 NUnit을 사용하여 .NET Core에서 F# 라이브러리 유닛 테스트
 
-이 자습서에서는 샘플 솔루션을 단계별로 빌드하는 대화형 환경을 통해 단위 테스트 개념을 알아볼 수 있습니다. 미리 빌드된 솔루션을 사용하여 이 자습서를 진행하려는 경우 시작하기 전에 [샘플 코드를 보거나 다운로드](https://github.com/dotnet/docs/tree/master/samples/core/getting-started/unit-testing-with-fsharp-nunit/). 다운로드 지침은 [샘플 및 자습서](../../samples-and-tutorials/index.md#viewing-and-downloading-samples)를 참조하세요.
+이 자습서에서는 샘플 솔루션을 단계별로 빌드하는 대화형 환경을 통해 단위 테스트 개념을 알아볼 수 있습니다. 미리 빌드된 솔루션을 사용하여 이 자습서를 진행하려는 경우 시작하기 전에 [샘플 코드를 보거나 다운로드](https://github.com/dotnet/samples/tree/master/core/getting-started/unit-testing-with-fsharp-nunit/). 다운로드 지침은 [샘플 및 자습서](../../samples-and-tutorials/index.md#viewing-and-downloading-samples)를 참조하세요.
 
 ## <a name="creating-the-source-project"></a>소스 프로젝트 만들기
 
@@ -33,7 +33,7 @@ ms.lasthandoff: 12/06/2017
 
 ```fsharp
 module MyMath =
-    let sumOfSquares xs = raise (System.NotImplementedException("You haven't written a test yet!"))
+    let squaresOfOdds xs = raise (System.NotImplementedException("You haven't written a test yet!"))
 ```
 
 디렉터리를 다시 *unit-testing-with-fsharp* 디렉터리로 변경합니다. [`dotnet sln add .\MathService\MathService.fsproj`](../tools/dotnet-sln.md)를 실행하여 클래스 라이브러리 프로젝트를 솔루션에 추가합니다.
@@ -75,7 +75,7 @@ NUnit 테스트 프로젝트 템플릿은 테스트 프로젝트를 만들기 �
 dotnet add reference ../MathService/MathService.fsproj
 ```
 
-GitHub의 [샘플 리포지토리](https://github.com/dotnet/docs/blob/master/samples/core/getting-started/unit-testing-with-fsharp/MathService.Tests/MathService.Tests.fsproj)에서 전체 파일을 볼 수 있습니다.
+GitHub의 [샘플 리포지토리](https://github.com/dotnet/samples/blob/master/core/getting-started/unit-testing-with-fsharp/MathService.Tests/MathService.Tests.fsproj)에서 전체 파일을 볼 수 있습니다.
 
 최종 솔루션 레이아웃은 다음과 같습니다.
 
@@ -116,15 +116,15 @@ type TestClass () =
 
 `[<TestFixture>]` 특성은 테스트가 포함된 클래스를 나타냅니다. `[<Test>]` 특성은 Test Runner에서 실행하는 테스트 메서드를 나타냅니다. *unit-testing-with-fsharp* 디렉터리에서 [`dotnet test`](../tools/dotnet-test.md)를 실행하여 테스트 및 클래스 라이브러리를 빌드한 다음 테스트를 실행합니다. NUnit Test Runner에는 테스트를 실행할 프로그램 진입점이 포함되어 있습니다. `dotnet test`는 만든 단위 테스트 프로젝트를 사용하여 Test Runner를 시작합니다.
 
-이러한 두 테스트는 가장 기본적인 통과 및 실패 테스트를 보여 줍니다. `My test`는 통과하고 `Fail every time`은 실패합니다. 이제 `sumOfSquares` 메서드에 대한 테스트를 만듭니다. `sumOfSquares` 메서드는 입력 시퀀스에 포함된 모든 홀수 정수 값 제곱의 합을 반환합니다. 이러한 모든 함수를 한 번에 작성하지 않고 기능의 유효성을 검사하는 테스트를 반복적으로 만들 수 있습니다. 각 테스트 패스를 만들면 메서드에 필요한 기능이 만들어집니다.
+이러한 두 테스트는 가장 기본적인 통과 및 실패 테스트를 보여 줍니다. `My test`는 통과하고 `Fail every time`은 실패합니다. 이제 `squaresOfOdds` 메서드에 대한 테스트를 만듭니다. `squaresOfOdds` 메서드는 입력 시퀀스에 포함된 모든 홀수 정수 값 제곱의 시퀀스를 반환합니다. 이러한 모든 함수를 한 번에 작성하지 않고 기능의 유효성을 검사하는 테스트를 반복적으로 만들 수 있습니다. 각 테스트 패스를 만들면 메서드에 필요한 기능이 만들어집니다.
 
-작성할 수 있는 가장 간단한 테스트는 모든 짝수를 사용하여 `sumOfSquares`를 호출하는 것입니다. 이 경우 결과는 빈 정수 시퀀스여야 합니다.  해당 테스트는 다음과 같습니다.
+작성할 수 있는 가장 간단한 테스트는 모든 짝수를 사용하여 `squaresOfOdds`를 호출하는 것입니다. 이 경우 결과는 빈 정수 시퀀스여야 합니다.  해당 테스트는 다음과 같습니다.
 
 ```fsharp
 [<Test>]
 member this.TestEvenSequence() =
-    let expected = Seq.empty<int> |> Seq.toList
-    let actual = MyMath.sumOfSquares [2; 4; 6; 8; 10]
+    let expected = Seq.empty<int>
+    let actual = MyMath.squaresOfOdds [2; 4; 6; 8; 10]
     Assert.That(actual, Is.EqualTo(expected))
 ```
 
@@ -133,8 +133,8 @@ member this.TestEvenSequence() =
 테스트를 실행하면 테스트가 실패합니다. 구현은 아직 만들지 않았습니다. `Mathservice` 클래스에서 작동하는 가장 간단한 코드를 작성하여 이 테스트를 만듭니다.
 
 ```csharp
-let sumOfSquares xs =
-    Seq.empty<int> |> Seq.toList
+let squaresOfOdds xs =
+    Seq.empty<int>
 ```
 
 *unit-testing-with-fsharp* 디렉터리에서 `dotnet test`를 다시 실행합니다. `dotnet test` 명령은 `MathService` 프로젝트에 대한 빌드를 실행한 다음 `MathService.Tests` 프로젝트에 대한 빌드를 실행합니다. 두 프로젝트를 모두 빌드한 후 이 단일 테스트를 실행합니다. 전달합니다.
@@ -145,21 +145,20 @@ let sumOfSquares xs =
 
 ```fsharp
 [<Test>]
-member public this.SumOnesAndEvens() =
+member public this.TestOnesAndEvens() =
     let expected = [1; 1; 1; 1]
-    let actual = MyMath.sumOfSquares [2; 1; 4; 1; 6; 1; 8; 1; 10]
+    let actual = MyMath.squaresOfOdds [2; 1; 4; 1; 6; 1; 8; 1; 10]
     Assert.That(actual, Is.EqualTo(expected))
 ```
 
-`dotnet test`를 실행하면 새 테스트가 실패합니다. 이제 `sumOfSquares` 메서드를 업데이트하여 이 새 테스트를 처리해야 합니다. 시퀀스에서 모든 짝수를 필터링하여 이 테스트가 통과하게 만들어야 합니다. 이렇게 하려면 작은 필터 함수를 작성하고 `Seq.filter`를 사용합니다.
+`dotnet test`를 실행하면 새 테스트가 실패합니다. 이제 `squaresOfOdds` 메서드를 업데이트하여 이 새 테스트를 처리해야 합니다. 시퀀스에서 모든 짝수를 필터링하여 이 테스트가 통과하게 만들어야 합니다. 이렇게 하려면 작은 필터 함수를 작성하고 `Seq.filter`를 사용합니다.
 
 ```fsharp
 let private isOdd x = x % 2 <> 0
 
-let sumOfSquares xs =
+let squaresOfOdds xs =
     xs
     |> Seq.filter isOdd
-    |> Seq.toList
 ```
 
 `Seq.toList`를 호출합니다. 그러면 <xref:System.Collections.ICollection> 인터페이스를 구현하는 목록이 생성됩니다.
@@ -170,7 +169,7 @@ let sumOfSquares xs =
 [<Test>]
 member public this.TestSquaresOfOdds() =
     let expected = [1; 9; 25; 49; 81]
-    let actual = MyMath.sumOfSquares [1; 2; 3; 4; 5; 6; 7; 8; 9; 10]
+    let actual = MyMath.squaresOfOdds [1; 2; 3; 4; 5; 6; 7; 8; 9; 10]
     Assert.That(actual, Is.EqualTo(expected))
 ```
 
@@ -180,11 +179,10 @@ member public this.TestSquaresOfOdds() =
 let private square x = x * x
 let private isOdd x = x % 2 <> 0
 
-let sumOfSquares xs =
+let squaresOfOdds xs =
     xs
     |> Seq.filter isOdd
     |> Seq.map square
-    |> Seq.toList
 ```
 
 작은 라이브러리 및 이 라이브러리에 대한 단위 테스트 집합을 작성했습니다. 새 패키지 및 테스트 추가가 정상 워크플로에 포함되도록 솔루션을 구조화했습니다. 응용 프로그램의 목표를 해결하는 데 대부분의 시간과 노력을 들였습니다.

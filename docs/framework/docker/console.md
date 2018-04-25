@@ -1,19 +1,19 @@
 ---
-title: "Docker에서 콘솔 응용 프로그램 실행"
-description: "기존 .NET Framework 콘솔 응용 프로그램을 가져와 Windows Docker 컨테이너에서 실행하는 방법을 알아봅니다."
+title: Docker에서 콘솔 응용 프로그램 실행
+description: 기존 .NET Framework 콘솔 응용 프로그램을 가져와 Windows Docker 컨테이너에서 실행하는 방법을 알아봅니다.
 author: spboyer
-keywords: ".NET, 컨테이너, 콘솔, 응용 프로그램"
+keywords: .NET, 컨테이너, 콘솔, 응용 프로그램
 ms.date: 09/28/2016
 ms.topic: article
 ms.prod: .net-framework
 ms.technology: vs-ide-deployment
 ms.devlang: dotnet
 ms.assetid: 85cca1d5-c9a4-4eb2-93e6-4f878de07fd7
-ms.openlocfilehash: 037d94452dd62c06fe6d8ac7aea1143f52b96d32
-ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
+ms.openlocfilehash: 7990ed03028ea9361a8b1760b237b8ed2f9d204d
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/09/2017
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="running-console-applications-in-windows-containers"></a>Windows 컨테이너에서 콘솔 응용 프로그램 실행
 
@@ -25,7 +25,7 @@ Docker 및 Windows Server 컨테이너를 사용하도록 콘솔 응용 프로�
 
 대답 외에도 `Environment.MachineName`이 응답에 추가되어 로컬과 Windows 컨테이너에서 실행 중인 응용 프로그램 간의 차이를 보여 줍니다. 로컬에서 응용 프로그램을 실행하는 경우 로컬 컴퓨터 이름이 반환되어야 하며, Windows 컨테이너에서 실행하는 경우 컨테이너 세션 ID가 반환됩니다.
 
-[전체 예제](https://github.com/dotnet/docs/tree/master/samples/framework/docker/ConsoleRandomAnswerGenerator)는 GitHub의 dotnet/docs 리포지토리에서 확인할 수 있습니다. 다운로드 지침은 [샘플 및 자습서](../../samples-and-tutorials/index.md#viewing-and-downloading-samples)를 참조하세요.
+[전체 예제](https://github.com/dotnet/samples/tree/master/framework/docker/ConsoleRandomAnswerGenerator)는 GitHub의 dotnet/samples 리포지토리에서 사용 가능합니다. 다운로드 지침은 [샘플 및 자습서](../../samples-and-tutorials/index.md#viewing-and-downloading-samples)를 참조하세요.
 
 응용 프로그램을 컨테이너로 이동하는 작업을 시작하기 전에 몇 가지 Docker 용어를 알고 있어야 합니다.
 
@@ -46,7 +46,7 @@ Docker 사이트에서 [Docker 개요](https://docs.docker.com/engine/understand
 1. [이미지에 대한 Dockerfile 만들기](#creating-the-dockerfile)
 1. [Docker 컨테이너를 빌드 및 실행하는 프로세스](#creating-the-image)
 
-## <a name="prerequisites"></a>필수 구성 요소
+## <a name="prerequisites"></a>전제 조건
 Windows 컨테이너는 [Windows 10 1주년 업데이트](https://www.microsoft.com/en-us/software-download/windows10/) 또는 [Windows Server 2016](https://www.microsoft.com/en-us/cloud-platform/windows-server)에서 지원됩니다.
 
 > [!NOTE]

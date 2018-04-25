@@ -1,6 +1,6 @@
 ---
-title: "인덱서"
-description: "하나 이상의 인수를 사용하여 참조된 속성인 인덱싱된 속성을 구현하는 방법 및 C# 인덱서에 대해 알아봅니다."
+title: 인덱서
+description: 하나 이상의 인수를 사용하여 참조된 속성인 인덱싱된 속성을 구현하는 방법 및 C# 인덱서에 대해 알아봅니다.
 keywords: .NET, .NET Core
 author: BillWagner
 ms.author: wiwagn
@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 0e9496da-e766-45a9-b92b-91820d4a350e
-ms.openlocfilehash: 32e090524f414ef93b8481a8ad356b313191d8b9
-ms.sourcegitcommit: 5fb6646b5ee3769ffb214e672041833ea4ceeb26
+ms.openlocfilehash: f0731061c518a61ce5b81e8282915b1245239864
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/08/2017
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="indexers"></a>인덱서
 
@@ -39,7 +39,7 @@ public int this[string key]
 }
 ```
 
-이 초기 예제에서 속성 및 인덱서 구문 간의 관계를 확인할 수 있습니다. 이 유사성은 인덱서에 대한 대부분의 구문 규칙에 적용됩니다. 인덱서에 유효한 액세스 한정자를 사용할 수 있습니다 (public, protected 내부, protected, 내부, 개인 또는 private protected). sealed, virtual 또는 abstract일 수 있습니다. 속성과 마찬가지로, 인덱서의 get 및 set 접근자에 대해 다양한 액세스 한정자를 지정할 수 있습니다.
+이 초기 예제에서 속성 및 인덱서 구문 간의 관계를 확인할 수 있습니다. 이 유사성은 인덱서에 대한 대부분의 구문 규칙에 적용됩니다. 인덱서에는 유효한 모든 액세스 한정자(public, protected internal, protected, internal, private 또는 private protected)를 사용할 수 있습니다. sealed, virtual 또는 abstract일 수 있습니다. 속성과 마찬가지로, 인덱서의 get 및 set 접근자에 대해 다양한 액세스 한정자를 지정할 수 있습니다.
 읽기 전용 인덱서(set 접근자 생략) 또는 쓰기 전용 인덱서(get 접근자 생략)를 지정할 수도 있습니다.
 
 속성 작업에서 배운 거의 모든 내용을 인덱서에 적용할 수 있습니다. 해당 규칙의 유일한 예외는 *자동 구현 속성*입니다. 컴파일러가 항상 인덱서에 올바른 저장소를 생성할 수 있는 것은 아닙니다.
@@ -51,7 +51,7 @@ public int this[string key]
 API가 해당 컬렉션에 대한 인수가 정의되는 일부 컬렉션을 모델링하는 경우 형식에 *인덱서*를 정의합니다. 인덱서는 .NET Core Framework의 일부인 컬렉션 형식에 직접 매핑될 수도 있고, 매핑되지 않을 수도 있습니다. 형식에 컬렉션 모델링 이외의 다른 책임이 있을 수도 있습니다.
 인덱서를 사용하면 해당 추상화의 값이 저장 또는 계산되는 방법의 내부 세부 정보를 노출하지 않고 형식의 추상화와 일치하는 API를 제공할 수 있습니다.
 
-*인덱서*를 사용하기 위한 몇 가지 일반적인 시나리오를 살펴보겠습니다. [인덱서에 대한 샘플 폴더](https://github.com/dotnet/docs/tree/master/samples/csharp/indexers)에 액세스할 수 있습니다. 다운로드 지침은 [샘플 및 자습서](../samples-and-tutorials/index.md#viewing-and-downloading-samples)를 참조하세요.
+*인덱서*를 사용하기 위한 몇 가지 일반적인 시나리오를 살펴보겠습니다. [인덱서에 대한 샘플 폴더](https://github.com/dotnet/samples/tree/master/csharp/indexers)에 액세스할 수 있습니다. 다운로드 지침은 [샘플 및 자습서](../samples-and-tutorials/index.md#viewing-and-downloading-samples)를 참조하세요.
 
 ### <a name="arrays-and-vectors"></a>배열 및 벡터
 

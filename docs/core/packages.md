@@ -1,6 +1,6 @@
 ---
-title: "패키지, 메타패키지 및 프레임워크"
-description: "패키지, 메타패키지 및 프레임워크 용어에 관해 알아봅니다."
+title: 패키지, 메타패키지 및 프레임워크
+description: 패키지, 메타패키지 및 프레임워크 용어에 관해 알아봅니다.
 keywords: .NET, .NET Core
 author: richlander
 ms.author: mairaw
@@ -11,11 +11,11 @@ ms.devlang: dotnet
 ms.assetid: 609b0845-49e7-4864-957b-21ffe1b93bf2
 ms.workload:
 - dotnetcore
-ms.openlocfilehash: 85f20594844025655bbfb590364324631bd8e695
-ms.sourcegitcommit: 1c0b0f082b3f300e54b4d069b317ac724c88ddc3
+ms.openlocfilehash: f9b98fb38390e91c7a144ff5585c0a26824303dc
+ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="packages-metapackages-and-frameworks"></a>패키지, 메타패키지 및 프레임워크
 
@@ -78,6 +78,7 @@ ms.lasthandoff: 03/16/2018
 주요 .NET Core 메타패키지:
 
 - [Microsoft.NETCore.App](https://www.nuget.org/packages/Microsoft.NETCore.App) - .NET Core 배포에 포함된 라이브러리를 설명합니다. [`.NETCoreApp` 프레임워크를 설정합니다](https://github.com/dotnet/core-setup/blob/release/1.1.0/pkg/projects/Microsoft.NETCore.App/Microsoft.NETCore.App.pkgproj). 더 작은 `NETStandard.Library`에 종속됩니다.
+- [Microsoft.AspNetCore.All](https://www.nuget.org/packages/Microsoft.AspNetCore.All) - ASP.NET Core, Entity Framework Core 및 ASP.NET Core와 Entity Framework Core에서 사용되는 내부/타사 종속성의 모든 지원되는 패키지를 포함합니다. 자세한 내용은 [ASP.NET Core 2.x에 대한 Microsoft.AspNetCore.All 메타패키지](/aspnet/core/fundamentals/metapackage)를 참조하세요.
 - [Microsoft.NETCore.Portable.Compatibility](https://www.nuget.org/packages/Microsoft.NETCore.Portable.Compatibility) - .NET Core에서 실행되는 mscorlib 기반 PCL(이식 가능한 클래스 라이브러리)을 사용하도록 설정하는 호환성 외관의 집합입니다.
 
 ## <a name="frameworks"></a>프레임워크

@@ -1,6 +1,6 @@
 ---
-title: "패턴 일치 - C# 가이드"
-description: "C#의 패턴 일치 식에 대한 자세한 정보"
+title: 패턴 일치 - C# 가이드
+description: C#의 패턴 일치 식에 대한 자세한 정보
 keywords: .NET, .NET Core, C#
 ms.date: 01/24/2017
 ms.author: wiwagn
@@ -9,11 +9,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 1e575c32-2e2b-4425-9dca-7d118f3ed15b
-ms.openlocfilehash: 0c77c3c3da9983d20cdd86db18f60f83b86b07ea
-ms.sourcegitcommit: 281070dee88db86ec3bb4634d5f558d1a4e159dd
+ms.openlocfilehash: c3fbc617f742e8dd5db4b2ac46b38958cdc30007
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/11/2017
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="pattern-matching"></a>패턴 일치 #
 
@@ -112,27 +112,27 @@ C# 7 이전에는 일련의 `if` 및 `is` 문에서 각 형식을 테스트해�
 
 `null` 패턴의 특수 동작은 패턴에서 형식이 없는 `null` 상수를 모든 참조 형식 또는 nullable 형식으로 변환할 수 있기 때문에 흥미롭습니다. `null`을 임의 형식으로 변환하는 대신, 언어에서 `null` 값은 변수의 컴파일 시간 형식과 관계없이 어떠한 형식 패턴과도 일치하지 않는다고 정의합니다. 이 동작을 통해 새 `switch` 기반 형식 패턴이 `is` 문과 일치하게 됩니다. `is` 문은 확인되는 값이 `null`일 경우 항상 `false`를 반환합니다. 더 간단하기도 합니다. 형식을 확인한 후에는 추가 null 검사가 필요하지 않습니다. 위 샘플의 case 블록에 null 검사가 없다는 사실에서 이를 확인할 수 있습니다. 형식 패턴 일치를 통해 null이 아닌 값이 보장되므로 null 검사가 필요하지 않습니다.
 
-## <a name="var-declarations-in-case-expressions"></a>`var`선언 `case` 식
+## <a name="var-declarations-in-case-expressions"></a>`case` 식의 `var` 선언
 
-도입 `var` 처럼 패턴 일치를 사용 하는 새 규칙 변경 되어 일치 식 중 하나입니다.
+match 식 중 하나인 `var`이 소개되면서 패턴 일치에 대한 새 규칙이 도입됩니다.
 
-첫 번째 규칙은는 `var` 선언 일반 형식 유추 규칙을 따릅니다: switch 식의 정적 형식이 되도록 형식이 유추 됩니다. 해당 규칙에서 형식이 항상 일치 합니다.
+첫 번째 규칙은 `var` 선언이 일반 형식 유추 규칙을 따른다는 것입니다. 형식은 switch 식의 정적 형식으로 유추됩니다. 이 규칙에 따라 형식이 항상 일치합니다.
 
-두 번째 규칙은 한 `var` 선언 다른 유형 패턴 식을 포함 하는 null 검사는 없습니다. 즉, 변수는 null 일 수 및 null 검사는 경우에 필요 합니다.
+두 번째 규칙은 `var` 선언에 다른 형식 패턴 식이 포함하는 null 검사가 없다는 것입니다. 즉, 변수가 null일 수 있고 이 경우 null 검사가 필요합니다.
 
-이러한 두 규칙은 대부분의 경우에서는 의미는 `var` 선언에는 `case` 조건과 일치 하는 식은 `default` 식입니다.
-모든 기본이 아닌 경우에는 기본 설정 이므로 `default` 경우는 `default` 대/소문자 실행 되지 것입니다.
+이러한 두 규칙은 여러 인스턴스에서 `case` 식의 `var` 선언이 `default` 식과 동일한 조건과 일치함을 의미합니다.
+`default` 사례보다 기본값이 아닌 사례가 선호되므로 `default` 사례는 실행되지 않습니다.
 
 > [!NOTE]
-> 컴파일러는 이러한 경우에 경고를 생성 하지 않습니다 여기서는 `default` 대/소문자가 기록 되었습니다 되었지만 실행 되지 것입니다. 이것은 현재 `switch` 문 동작 모든 가능한 사례 수를 설명 되어 있습니다.
+> 컴파일러는 `default` 사례가 작성되었지만 실행되지 않을 경우에 경고를 표시하지 않습니다. 이것은 모든 가능한 사례가 나열된 현재 `switch` 문 동작과 일치합니다.
 
-세 번째 규칙을 사용 하 여 소개 여기서는 `var` 경우 유용할 수 있습니다. 입력은 문자열이 고 알려진된 명령 값에 대 한 검색 하는 패턴 일치를 수행 하는 한다고 가정 합니다. 다음과 같이 작성할 수 있습니다.
+세 번째 규칙은 `var` 사례가 유용할 수 있는 사용법을 소개합니다. 입력이 문자열이고 알려진 명령 값을 검색하는 패턴 일치를 수행한다고 가정해 봅니다. 다음과 같이 작성할 수 있습니다.
 
 [!code-csharp[VarCaseExpression](../../samples/csharp/PatternMatching/Program.cs#VarCaseExpression "use a var case expression to filter white space")]
 
-`var` 일치 항목이 대/소문자 `null`, 빈 문자열 이거나 공백만 포함 된 모든 문자열. 위의 코드는 `?.` 는 발생 하지 않는 실수로 되도록 연산자는 <xref:System.NullReferenceException>합니다. `default` 경우가 명령은 파서에서 인식 되지 않는 다른 문자열 값을 처리 합니다.
+`var` 사례는 `null`, 빈 문자열, 또는 공백만 포함하는 문자열과 일치합니다. 앞의 코드에서는 `?.` 연산자를 사용하여 실수로 <xref:System.NullReferenceException>을 throw하지 않도록 합니다. `default` 사례는 이 명령 파서에서 인식되지 않는 기타 문자열 값을 처리합니다.
 
-이것은 하나의 고려해 야 할 수 있는 한 `var` case 식과 구별 되는 `default` 식입니다.
+이는 `default` 식과 구별되는 `var` 사례 식을 고려할 수 있는 하나의 예제입니다.
 
 ## <a name="conclusions"></a>결론
 

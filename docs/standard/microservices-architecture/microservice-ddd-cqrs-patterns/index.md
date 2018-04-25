@@ -11,11 +11,11 @@ ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 45f29a8d19e49685f864b7ca83e466ceb1f73a62
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 8098c62ac18593d8044d52cb24c4cd8859972e68
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="tackling-business-complexity-in-a-microservice-with-ddd-and-cqrs-patterns"></a>DDD 및 CQRS 패턴을 사용하여 마이크로 서비스에서 비즈니스 복잡성 처리
 
@@ -33,45 +33,45 @@ ms.lasthandoff: 12/23/2017
 
 DDD는 다양한 학습 리소스 집합이 있는 큰 주제입니다. Eric Evans의 [Domain-Driven Design](https://domainlanguage.com/ddd/)과 같은 서적 및 Vaughn Vernon, Jimmy Nilsson, Greg Young, Udi Dahan, Jimmy Bogard와 그 밖의 여러 DDD/CQRS 전문가의 추가 자료로 시작할 수 있습니다. 그러나 무엇보다도 구체적인 비즈니스 도메인 전문가와 함께 하는 대화, 화이트 보드 및 도메인 모델링 세션에서 DDD 기술을 적용하는 방법을 알아보려고 노력해야 합니다.
 
-#### <a name="additional-resources"></a>추가 리소스
+#### <a name="additional-resources"></a>추가 자료
 
 ##### <a name="ddd-domain-driven-design"></a>DDD(도메인 기반 디자인)
 
--   **Eric Evans. Domain Language**
-    [*http://domainlanguage.com/*](http://domainlanguage.com/)
+-   **Eric Evans. 도메인 언어**
+    [*https://domainlanguage.com/*](https://domainlanguage.com/)
 
 -   **Martin Fowler. 도메인 기반 디자인**
-    [*http://martinfowler.com/tags/domain%20driven%20design.html*](http://martinfowler.com/tags/domain%20driven%20design.html)
+    [*https://martinfowler.com/tags/domain%20driven%20design.html*](https://martinfowler.com/tags/domain%20driven%20design.html)
 
--   **Jimmy Bogard. Strengthening your domain: a primer**(도메인 강화: 입문서)
+-   **Jimmy Bogard. 도메인 강화: 입문**
     [*https://lostechies.com/jimmybogard/2010/02/04/strengthening-your-domain-a-primer/*](https://lostechies.com/jimmybogard/2010/02/04/strengthening-your-domain-a-primer/)
 
 ##### <a name="ddd-books"></a>DDD 서적
 
--   **Eric Evans. Domain-Driven Design: Tackling Complexity in the Heart of Software**
+-   **Eric Evans. 도메인 기반 디자인: 소프트웨어 핵심에서 복잡성 처리**
     [*https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/*](https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/)
 
--   **Eric Evans. Domain-Driven Design Reference: Definitions and Pattern Summaries**
+-   **Eric Evans. 도메인 기반 디자인 참조: 정의 및 패턴 요약**
     [*https://www.amazon.com/Domain-Driven-Design-Reference-Definitions-2014-09-22/dp/B01N8YB4ZO/*](https://www.amazon.com/Domain-Driven-Design-Reference-Definitions-2014-09-22/dp/B01N8YB4ZO/)
 
--   **Vaughn Vernon. Implementing Domain-Driven Design**
+-   **Vaughn Vernon. 도메인 기반 디자인 구현**
     [*https://www.amazon.com/Implementing-Domain-Driven-Design-Vaughn-Vernon/dp/0321834577/*](https://www.amazon.com/Implementing-Domain-Driven-Design-Vaughn-Vernon/dp/0321834577/)
 
--   **Vaughn Vernon. Domain-Driven Design Distilled**
+-   **Vaughn Vernon. 도메인 기반 디자인 핵심 정리**
     [*https://www.amazon.com/Domain-Driven-Design-Distilled-Vaughn-Vernon/dp/0134434420/*](https://www.amazon.com/Domain-Driven-Design-Distilled-Vaughn-Vernon/dp/0134434420/)
 
--   **Jimmy Nilsson. Applying Domain-Driven Design and Patterns**
+-   **Jimmy Nilsson. 도메인 기반 디자인 및 패턴 적용**
     [*https://www.amazon.com/Applying-Domain-Driven-Design-Patterns-Examples/dp/0321268202/*](https://www.amazon.com/Applying-Domain-Driven-Design-Patterns-Examples/dp/0321268202/)
 
--   **Cesar de la Torre. N-Layered Domain-Oriented Architecture Guide with .NET**
+-   **Cesar de la Torre. .NET을 사용한 N-레이어 도메인 지향 아키텍처 가이드**
     [*https://www.amazon.com/N-Layered-Domain-Oriented-Architecture-Guide-NET/dp/8493903612/*](https://www.amazon.com/N-Layered-Domain-Oriented-Architecture-Guide-NET/dp/8493903612/)
 
--   **Abel Avram 및 Floyd Marinescu. Domain-Driven Design Quickly**
+-   **Abel Avram 및 Floyd Marinescu. 신속한 도메인 기반 디자인**
     [*https://www.amazon.com/Domain-Driven-Design-Quickly-Abel-Avram/dp/1411609255/*](https://www.amazon.com/Domain-Driven-Design-Quickly-Abel-Avram/dp/1411609255/)
 
 DDD 교육
 
--   **Julie Lerman 및 Steve Smith. Domain-Driven Design Fundamentals**(도메인 기반 디자인 기본 사항)
+-   **Julie Lerman 및 Steve Smith. 도메인 기반 디자인 기본 사항**
     [*http://bit.ly/PS-DDD*](http://bit.ly/PS-DDD)
 
 
