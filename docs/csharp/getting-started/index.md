@@ -12,11 +12,11 @@ ms.topic: article
 ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
-ms.openlocfilehash: f335ee1412932043b175aa49b29ecd360d447eb9
-ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
+ms.openlocfilehash: 630815032925e5dac0477147c6265657face44a5
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="get-started-with-c"></a>C# 시작 #
 
@@ -48,7 +48,7 @@ ms.lasthandoff: 04/09/2018
 
 * [C#용 Visual Studio 개발 환경 사용](/visualstudio/csharp-ide/using-the-visual-studio-development-environment-for-csharp)  
 
-    [!INCLUDE[csprcs](~/includes/csprcs-md.md)] 통합 개발 환경 사용 지침을 제공합니다.
+    Visual C# 통합 개발 환경 사용 지침을 제공합니다.
 
 * [C# 프로그래밍 가이드](../../csharp/programming-guide/index.md)
 

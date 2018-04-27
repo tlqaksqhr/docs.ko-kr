@@ -18,17 +18,17 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: ae53d5afbca15f8adafed428d4c2141312c972ed
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 5850335a13960df9094c1a6276799de043eb28f3
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="thread-safe-collections"></a>스레드로부터 안전한 컬렉션
 [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)]에서는 네임스페이스는 스레드로부터 안전하면서 확장 가능한 몇 가지 컬렉션 클래스를 포함하는 <xref:System.Collections.Concurrent?displayProperty=nameWithType> 네임스페이스를 도입합니다. 여러 스레드는 사용자 코드에서 추가로 동기화할 필요없이 이러한 컬렉션으로부터 안전하고 효율적으로 항목을 추가하거나 제거할 수 있습니다. 새 코드를 작성하는 경우 컬렉션이 여러 스레드를 동시에 작성할 때마다 동시 컬렉션 클래스를 사용합니다. 공유 컬렉션에서 읽기만 하는 경우에 <xref:System.Collections.Generic?displayProperty=nameWithType> 네임스페이스에서 클래스를 사용할 수 있습니다. .NET Framework 1.1 또는 이전 런타임을 대상으로 해야 하는 경우가 아니면 1.0 컬렉션 클래스를 사용하지 않는 것이 좋습니다.  
   
 ## <a name="thread-synchronization-in-the-net-framework-10-and-20-collections"></a>.NET Framework 1.0 및 2.0 컬렉션에서 스레드 동기화  
- .NET Framework 1.0에 도입된 컬렉션은 <xref:System.Collections?displayProperty=nameWithType> 네임스페이스에 있습니다. 일반적으로 사용되는 <xref:System.Collections.ArrayList> 및 <xref:System.Collections.Hashtable>을 포함하는 이러한 컬렉션은 컬렉션 주변에서 스레드로부터 안전한 래퍼를 반환하는 `Synchronized` 속성을 통해 어느 정도 스레드로부터의 안전성을 제공합니다. 래퍼는 모든 추가 또는 제거 작업에서 전체 컬렉션을 잠그는 방식으로 작동합니다. 따라서 컬렉션에 액세스하려고 하는 각 스레드는 잠금을 사용하기 위해 차례를 기다려야 합니다. 이것은 확장할 수 없고 큰 컬렉션에 상당한 성능 저하가 발생할 수 있습니다. 또한 디자인은 경합 조건에서 완전히 보호되지 않습니다. 자세한 내용은 MSDN 웹 사이트의 [제네릭 컬렉션에서의 동기화](http://go.microsoft.com/fwlink/?LinkID=161130)를 참조하세요.  
+ .NET Framework 1.0에 도입된 컬렉션은 <xref:System.Collections?displayProperty=nameWithType> 네임스페이스에 있습니다. 일반적으로 사용되는 <xref:System.Collections.ArrayList> 및 <xref:System.Collections.Hashtable>을 포함하는 이러한 컬렉션은 컬렉션 주변에서 스레드로부터 안전한 래퍼를 반환하는 `Synchronized` 속성을 통해 어느 정도 스레드로부터의 안전성을 제공합니다. 래퍼는 모든 추가 또는 제거 작업에서 전체 컬렉션을 잠그는 방식으로 작동합니다. 따라서 컬렉션에 액세스하려고 하는 각 스레드는 잠금을 사용하기 위해 차례를 기다려야 합니다. 이것은 확장할 수 없고 큰 컬렉션에 상당한 성능 저하가 발생할 수 있습니다. 또한 디자인은 경합 조건에서 완전히 보호되지 않습니다. 자세한 내용은 [제네릭 컬렉션에서의 동기화](https://blogs.msdn.microsoft.com/bclteam/2005/03/15/synchronization-in-generic-collections-brian-grunkemeyer/)를 참조하세요.  
   
  .NET Framework 2.0에 도입된 컬렉션 클래스는 <xref:System.Collections.Generic?displayProperty=nameWithType> 네임스페이스에 있습니다. 여기에는 <xref:System.Collections.Generic.List%601>, <xref:System.Collections.Generic.Dictionary%602> 등이 포함됩니다. 이러한 클래스는 .NET Framework 1.0 클래스에 비해 형식 안정성 및 성능을 향상시킵니다. 그러나 .NET Framework 2.0 컬렉션 클래스는 스레드 동기화를 제공하지 않습니다. 여러 스레드에서 동시에 항목이 추가되거나 제거되는 경우 사용자 코드에서는 모든 동기화를 제공해야 합니다.  
   

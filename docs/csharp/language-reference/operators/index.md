@@ -25,11 +25,11 @@ ms.assetid: 0301e31f-22ad-49af-ac3c-d5eae7f0ac43
 caps.latest.revision: 40
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: c62a168c845575e4fd3df212db379548926d2fab
-ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
+ms.openlocfilehash: a52fad2755c8c255d9489cd7148b0d279c0e1a5e
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="c-operators"></a>C# 연산자
 C#에서는 많은 연산자를 제공하며, 이러한 연산자는 식에서 수행할 연산(수학, 인덱싱, 함수 호출 등)을 지정하는 기호입니다. 많은 연산자를 [오버로드](../../../csharp/programming-guide/statements-expressions-operators/overloadable-operators.md)하여 사용자 정의 형식에 적용되는 경우의 의미를 변경할 수 있습니다.  
@@ -63,7 +63,7 @@ C#에서는 많은 연산자를 제공하며, 이러한 연산자는 식에서 �
   
  [unchecked](../../../csharp/language-reference/keywords/unchecked.md) – 정수 연산에 오버플로 검사를 사용하지 않도록 설정합니다. 이것은 기본 컴파일러 동작입니다.  
   
- [default(T)](../../../csharp/programming-guide/statements-expressions-operators/default-value-expressions.md) – T 형식의 기본값을 반환합니다. 참조 형식의 경우 `null`, 숫자 형식의 경우 0, 구조체 형식의 경우 멤버에 입력된 0/`null`을 반환합니다.  
+ [default(T)](../../../csharp/programming-guide/statements-expressions-operators/default-value-expressions.md) – T 형식의 기본값을 생성합니다.  
   
  [delegate](../../../csharp/programming-guide/statements-expressions-operators/anonymous-methods.md) – 대리자 인스턴스를 선언하고 반환합니다.  
   

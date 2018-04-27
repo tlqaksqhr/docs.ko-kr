@@ -9,11 +9,11 @@ ms.assetid: 9bcf896a-5826-4189-8c1a-3e35fa08243a
 caps.latest.revision: 5
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: c9f2699646db17c9358f84f4c5407e7aab8b60cf
-ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
+ms.openlocfilehash: 70dd5606ba81619658eda24f8c4bfd4970d29308
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="asynchronous-programming-with-async-and-await-c"></a>async 및 await를 사용한 비동기 프로그래밍(C#)
 비동기 프로그래밍을 사용하여 성능 병목 현상을 방지하고 응용 프로그램의 전체적인 응답성을 향상할 수 있습니다. 그러나 비동기 응용 프로그램을 쓰는 일반적인 기술이 복잡하여 해당 응용 프로그램을 쓰고, 디버깅하고, 유지 관리하기 어려울 수 있습니다.  
@@ -98,7 +98,7 @@ string urlContents = await client.GetStringAsync();
   
     -   비동기 이벤트 처리기를 작성하는 경우 `void`입니다.  
 
-    -   `GetAwaiter` 메서드가 포함된 모든 기타 형식(C# 7부터).
+    -   `GetAwaiter` 메서드가 포함된 모든 기타 형식(C# 7.0부터).
   
      자세한 내용은 [반환 형식 및 매개 변수](#BKMK_ReturnTypesandParameters) 섹션을 참조하세요.  
   
@@ -179,7 +179,7 @@ string urlContents = await client.GetStringAsync();
   
 메서드에 return 문이 없거나 피연산자를 반환하지 않는 return 문이 있을 경우 반환 형식으로 <xref:System.Threading.Tasks.Task>를 사용합니다.  
 
-C# 7부터는 형식에 `GetAwaiter` 메서드가 포함된 경우 다른 반환 형식을 지정할 수도 있습니다. <xref:System.Threading.Tasks.ValueTask%601>가 이러한 형식의 예입니다. [System.Threading.Tasks.Extension](https://www.nuget.org/packages/System.Threading.Tasks.Extensions/) NuGet 패키지에서 사용할 수 있습니다.
+C# 7.0부터는 형식에 `GetAwaiter` 메서드가 포함된 경우 다른 반환 형식을 지정할 수도 있습니다. <xref:System.Threading.Tasks.ValueTask%601>가 이러한 형식의 예입니다. [System.Threading.Tasks.Extension](https://www.nuget.org/packages/System.Threading.Tasks.Extensions/) NuGet 패키지에서 사용할 수 있습니다.
   
  다음 예제는 <xref:System.Threading.Tasks.Task%601> 또는 <xref:System.Threading.Tasks.Task>를 반환하는 메서드를 선언하고 호출하는 방법을 보여줍니다.  
   
