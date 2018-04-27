@@ -11,14 +11,14 @@ ms.assetid: e986ab45-e3ce-430e-8704-5882e5da1104
 caps.latest.revision: 7
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: ab126e3ac030e855659d5e4a02e523eefb7860e7
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: b36b533e889135d03dd7f17d01000c7e00c57790
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="format-not-valid-in-resource-file"></a>리소스 파일의 형식이 잘못되었습니다.
-프로젝트의 리소스 파일이 Windows 리소스 파일의 표준 형식을 따르지 않거나 리소스 파일과 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 프로젝트가 일치하지 않습니다.  
+프로젝트에 리소스 파일에 Windows 리소스 파일에 대 한 표준 형식 어긋납니다 않거나 리소스 파일 및 Visual Basic 프로젝트 사이 불일치가 있습니다.  
   
 ## <a name="to-correct-this-error"></a>이 오류를 해결하려면  
   

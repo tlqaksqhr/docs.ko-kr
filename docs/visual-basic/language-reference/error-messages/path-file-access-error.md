@@ -13,11 +13,11 @@ ms.assetid: 6ce3a161-7316-46bd-a785-0d50e5414020
 caps.latest.revision: 8
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 2c86d46c884617be152a5954426e9ddd6ef61651
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: bff3ec554a594e99bc65e5cd8df28a056dcc1ebd
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="pathfile-access-error"></a>경로/파일 액세스 오류입니다.
 파일 액세스 또는 디스크 액세스 작업 중 운영 체제의 경로 파일 이름 간의 연결을 만들지 못했습니다.  
@@ -30,7 +30,7 @@ ms.lasthandoff: 10/18/2017
   
 3.  순차적 읽기 전용 파일을 열려고 하지 확인 `Output` 또는 `Append` 모드입니다. 이 경우에서 파일을 엽니다 `Input` 모드 또는 파일의 읽기 전용 특성을 변경 합니다.  
   
-4.  변경 하려고 하지 않았습니다 있는지 확인 한 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 데이터베이스 또는 문서 내에서 프로젝트.  
+4.  데이터베이스 또는 문서 내에서 Visual Basic 프로젝트를 변경 하려고 하지 않았습니다 있는지 확인 합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [오류 형식](../../../visual-basic/programming-guide/language-features/error-types.md)

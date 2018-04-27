@@ -1,28 +1,29 @@
 ---
-title: "Visual Basic의 변수 문제 해결"
-ms.custom: 
+title: Visual Basic의 변수 문제 해결
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - troubleshooting [Visual Basic], variables
 - variables [Visual Basic], troubleshooting
 ms.assetid: 928a2dc8-e565-4ae4-8ba3-80cc0cb50090
-caps.latest.revision: "20"
+caps.latest.revision: 20
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: bf6d2a0c7318c12b3001a92a8aa06625b4edabb6
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 6b14b3f48dbe9e74879d232966a07fa29bb1102c
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="troubleshooting-variables-in-visual-basic"></a>Visual Basic의 변수 문제 해결
-이 페이지에서는 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]에서 변수 작업 시 발생할 수 있는 일반적인 문제를 보여 줍니다.  
+이 페이지는 Visual Basic의 변수를 사용할 때 발생할 수 있는 몇 가지 일반적인 문제를 나열 합니다.  
   
 ## <a name="unable-to-access-members-of-an-object"></a>개체의 멤버에 액세스할 수 없습니다.  
  코드에서 개체의 속성이나 메서드에 액세스하려고 하면 다음과 같은 두 가지 오류가 발생할 수 있습니다.  
@@ -41,7 +42,7 @@ ms.lasthandoff: 11/21/2017
  특정 클래스 개체의 모든 멤버에 액세스하려면 개체 변수를 해당 클래스의 형식으로 선언합니다. 그렇게 할 수 없는 경우(예: 컴파일 타임에 개체 형식을 모르는 경우)에는 `Option Strict` 를 `Off` 로 설정하고 변수를 [Object Data Type](../../../../visual-basic/language-reference/data-types/object-data-type.md)에서 변수 작업 시 발생할 수 있는 일반적인 문제를 보여 줍니다. 그러면 모든 형식의 개체가 변수에 할당될 수 있으므로 현재 할당된 개체의 형식이 적합한지 확인해야 합니다. 사용할 수는 [TypeOf 연산자](../../../../visual-basic/language-reference/operators/typeof-operator.md) 이 확인 하기 위해 합니다.  
   
 ## <a name="other-components-cannot-access-your-variable"></a>다른 구성 요소에서 사용자 변수에 액세스할 수 없습니다.  
- [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 이름은 *대/소문자를 구분하지 않습니다*. 따라서 컴파일러에서는 대/소문자만 다른 두 이름을 동일한 이름으로 간주합니다. 예를 들어, `ABC` 와 `abc` 는 동일한 선언 요소를 참조하는 것으로 간주합니다.  
+ Visual Basic 이름은 *대/소문자 구분*합니다. 따라서 컴파일러에서는 대/소문자만 다른 두 이름을 동일한 이름으로 간주합니다. 예를 들어, `ABC` 와 `abc` 는 동일한 선언 요소를 참조하는 것으로 간주합니다.  
   
  그러나, CLR(공용 언어 런타임)에서는 *대/소문자를 구분하는* 바인딩을 사용합니다. 그러므로, 어셈블리나 DLL을 작성하여 다른 어셈블리에서 이를 사용하게 되면 이름의 대/소문자가 구분됩니다. 예를 들어, `ABC`라는 이름의 요소를 포함하는 클래스를 정의하고 다른 어셈블리에서 공용 언어 런타임을 통해 이 클래스를 사용할 경우 해당 어셈블리에서 이 요소를 `ABC`로 참조해야 합니다. 클래스를 다시 컴파일하고 요소 이름을 `abc`로 변경하면 이 클래스를 사용하는 다른 어셈블리가 더 이상 이 요소에 액세스할 수 없습니다. 따라서, 어셈블리를 업데이트하여 릴리스하는 경우 공용 요소의 알파벳 대/소문자를 변경하지 않아야 합니다.  
   
@@ -51,7 +52,7 @@ ms.lasthandoff: 11/21/2017
  다른 구성 요소에서 사용자 변수에 액세스할 수 있도록 하려면 이름의 대/소문자를 구분합니다. 클래스나 모듈을 테스트하는 경우에는 다른 어셈블리가 원하는 변수에 바인딩되는지 확인합니다. 구성 요소를 게시한 경우에는 대/소문자 변경을 포함하여 기존 변수 이름을 수정하는 어떤 작업도 수행하지 마세요.  
   
 ## <a name="wrong-variable-being-used"></a>잘못된 변수 사용  
- 이름이 같은 변수가 두 개 이상인 경우 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 컴파일러에서는 해당 이름에 대해 각 참조를 확인하려고 합니다. 변수 범위가 다른 경우 컴파일러에서는 범위가 가장 작은 선언에 대한 참조를 확인합니다. 변수 범위가 같은 경우에는 확인에 실패하고 컴파일러에서 오류를 발생시킵니다. 자세한 내용은 [References to Declared Elements](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)을 참조하세요.  
+ 동일한 이름 가진 둘 이상의 변수가 있는 경우 Visual Basic 컴파일러에서는 이름에 대 한 각 참조를 확인 하려고 합니다. 변수 범위가 다른 경우 컴파일러에서는 범위가 가장 작은 선언에 대한 참조를 확인합니다. 변수 범위가 같은 경우에는 확인에 실패하고 컴파일러에서 오류를 발생시킵니다. 자세한 내용은 [References to Declared Elements](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)을 참조하세요.  
   
 ### <a name="correct-approach"></a>해결 방법  
  이름은 같지만 범위가 다른 변수를 사용하지 않습니다. 다른 어셈블리나 프로젝트를 사용하는 경우에는 가능하면 이러한 외부 구성 요소에 정의된 이름을 사용하지 않습니다. 이름이 같은 변수가 두 개 이상 있는 경우 모든 참조를 해당 이름으로 한정해야 합니다. 자세한 내용은 [References to Declared Elements](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)을 참조하세요.  

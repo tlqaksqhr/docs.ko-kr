@@ -1,12 +1,13 @@
 ---
-title: "방법: 코드에서 마우스 및 키보드 이벤트 시뮬레이션"
-ms.custom: 
+title: '방법: 코드에서 마우스 및 키보드 이벤트 시뮬레이션'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-winforms
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -19,16 +20,17 @@ helpviewer_keywords:
 - mouse clicks [Windows Forms], simulating
 - mouse [Windows Forms], event simulation
 ms.assetid: 6abcb67e-3766-4af2-9590-bf5dabd17e41
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: c06cb2868c810b685401c78dd9d0bc3f70479cd1
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: d606c8dbe79b3ca1114f79cbf9eb7d4f17a05742
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-simulate-mouse-and-keyboard-events-in-code"></a>방법: 코드에서 마우스 및 키보드 이벤트 시뮬레이션
 Windows Forms는 프로그래밍 방식으로 마우스 및 키보드 입력을 시뮬레이션하기 위한 여러 가지 옵션을 제공합니다. 이 항목에서는 이러한 옵션에 대해 간략하게 설명합니다.  
@@ -86,7 +88,7 @@ Windows Forms는 프로그래밍 방식으로 마우스 및 키보드 입력을 
      [!code-csharp[System.Windows.Forms.SimulateKeyPress#5](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.SimulateKeyPress/CS/form1.cs#5)]
      [!code-vb[System.Windows.Forms.SimulateKeyPress#5](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.SimulateKeyPress/VB/form1.vb#5)]  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 코드 예제는 이전 코드 예제에 대한 전체 응용 프로그램입니다.  
   
  [!code-cpp[System.Windows.Forms.SimulateKeyPress#0](../../../samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.SimulateKeyPress/cpp/form1.cpp#0)]
@@ -98,7 +100,7 @@ Windows Forms는 프로그래밍 방식으로 마우스 및 키보드 입력을 
   
 -   System, System.Drawing 및 System.Windows.Forms 어셈블리에 대한 참조  
   
- [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] 또는 [!INCLUDE[csprcs](../../../includes/csprcs-md.md)]의 명령줄에서 이 예제를 빌드하는 방법에 대한 자세한 내용은 [명령줄에서 빌드](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md) 또는 [csc.exe를 사용한 명령줄 빌드](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)를 참조하세요. [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]에서 코드를 새 프로젝트에 붙여넣어 이 예제를 빌드할 수도 있습니다.  [방법: Visual Studio를 사용하여 전체 Windows Forms 코드 예제 컴파일 및 실행](http://msdn.microsoft.com/library/Bb129228\(v=vs.110\))을 참조하세요.  
+ Visual Basic 또는 Visual C#에 대 한 명령줄에서이 예제를 빌드하는 방법에 대 한 정보를 참조 하십시오. [명령줄에서 빌드](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md) 또는 [사용한 명령줄 빌드 csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)합니다. [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 에서 코드를 새 프로젝트에 붙여넣어 이 예제를 빌드할 수도 있습니다.  [방법: Visual Studio를 사용하여 전체 Windows Forms 코드 예제 컴파일 및 실행](http://msdn.microsoft.com/library/Bb129228\(v=vs.110\))을 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
  [Windows Forms에 사용자 입력](../../../docs/framework/winforms/user-input-in-windows-forms.md)

@@ -1,12 +1,13 @@
 ---
-title: "방법: MDI 자식 폼 만들기"
-ms.custom: 
+title: '방법: MDI 자식 폼 만들기'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-winforms
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -16,16 +17,17 @@ helpviewer_keywords:
 - MDI [Windows Forms], creating forms
 - child forms
 ms.assetid: 164b69bb-2eca-4339-ada3-0679eb2c6dda
-caps.latest.revision: "21"
+caps.latest.revision: 21
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: d0ee60e9b25ed4238ccdd738cd59a69876f6b55d
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: d28a7390ea3cfbd922f029d963ad3249db399177
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-create-mdi-child-forms"></a>방법: MDI 자식 폼 만들기
 MDI 자식 폼의 중요 한 요소는 [다중 문서 MDI (인터페이스) 응용 프로그램](../../../../docs/framework/winforms/advanced/multiple-document-interface-mdi-applications.md)사용자 상호 작용의 중심 이므로, 합니다.  
@@ -47,7 +49,7 @@ MDI 자식 폼의 중요 한 요소는 [다중 문서 MDI (인터페이스) 응�
   
 4.  **솔루션 탐색기**프로젝트를 마우스 오른쪽 단추로 가리킨 **추가**를 선택한 후 **새 항목 추가**합니다.  
   
-5.  에 **새 항목 추가** 대화 상자에서 **Windows Form** (에서 [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)] 또는 [!INCLUDE[csprcs](../../../../includes/csprcs-md.md)]) 또는 **Windows Forms 응용 프로그램 (.NET)** (에서 [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) **템플릿** 창. 에 **이름** 상자, 폼의 이름을 **Form2**합니다. 클릭는 **열려** 단추를 프로젝트에 폼을 추가 합니다.  
+5.  에 **새 항목 추가** 대화 상자에서 **Windows Form** (Visual basic에서 또는 Visual C#) 또는 **Windows Forms 응용 프로그램 (.NET)** (에서 [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)])는 에서 **템플릿** 창. 에 **이름** 상자, 폼의 이름을 **Form2**합니다. 클릭는 **열려** 단추를 프로젝트에 폼을 추가 합니다.  
   
     > [!NOTE]
     >  이 단계에서 만든 MDI 자식 폼은 표준 Windows Form입니다. 따라서 폼의 투명도를 제어할 수 있는 <xref:System.Windows.Forms.Form.Opacity%2A> 속성이 있습니다. 그러나 <xref:System.Windows.Forms.Form.Opacity%2A> 속성은 최상위 창에 사용하도록 설계되었습니다. 그리기 문제가 발생할 수 있으므로 MDI 자식 폼에는 사용하지 마세요.  

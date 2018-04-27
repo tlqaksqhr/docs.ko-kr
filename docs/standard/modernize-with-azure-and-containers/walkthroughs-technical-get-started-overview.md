@@ -1,30 +1,31 @@
 ---
-title: "연습 및 technical 시작된 개요 가져오기"
-description: "기존.NET 응용 프로그램을 Azure 클라우드 및 Windows 컨테이너를 최신식 | 연습 및 technical 시작된 개요 가져오기"
+title: 연습 및 technical 시작된 개요 가져오기
+description: 기존.NET 응용 프로그램을 Azure 클라우드 및 Windows 컨테이너를 최신식 | 연습 및 technical 시작된 개요 가져오기
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/26/2017
 ms.prod: .net
+ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 6a2abda3949c1fffc4d731b01e35e58e7c56dac0
-ms.sourcegitcommit: d3cfda0943364aaf6ccd574f55f584576c8a4fee
+ms.openlocfilehash: 0bad7e3afbdf3e55c447319b3756f2235b9e0a19
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="walkthroughs-and-technical-get-started-overview"></a>연습 및 technical 시작된 개요 가져오기
 
 이 전자책 (영문)의 크기를 제한 하려면 추가 기술 설명서 및 전체 연습 된 사용할 수는 GitHub 리포지토리에 있습니다. 온라인 일련의이 장에서 설명 하는 연습에서는 Windows 컨테이너와 Azure로 배포를 기반으로 하는 여러 환경 설치 하는 단계별 설명 합니다.
 
-다음 섹션에서는 설명 각 연습에 대해 해당 목표 및 높은 수준의 비전 관련 된 작업에 대 한 다이어그램을 제공 합니다. 자체의 연습을 얻을 수에 *eShopModernizing* 앱 GitHub 리포지토리에 wiki에서 [https://github.com/dotnet-architecture/eShopModernizing/wiki](https://github.com/dotnet-architecture/eShopModernizing/wiki)합니다.
+다음 섹션에서는 설명 각 연습에 대해 해당 목표 및 높은 수준의 비전 관련 된 작업에 대 한 다이어그램을 제공 합니다. 자체의 연습을 얻을 수에 *eShopModernizing* 앱 GitHub 리포지토리에 wiki에서 [ https://github.com/dotnet-architecture/eShopModernizing/wiki ](https://github.com/dotnet-architecture/eShopModernizing/wiki)합니다.
 
 ## <a name="technical-walkthrough-list"></a>기술 연습 목록
 
 다음 started 연습 리프트 하 및 컨테이너를 사용 하 여 이동 하 고 다음 Azure에서 배포의 여러 선택 항목을 사용 하 여 이동할 수 있는 샘플 응용 프로그램에 일관 되 고 포괄적인 기술 지침을 제공 합니다.
 
-다음 연습 중 각각의 새 샘플 eShopLegacy 및 eShopModernizing 앱의 경우에 GitHub에서 사용할 수 있는 사용 하 여 [https://github.com/dotnet-architecture/eShopModernizing](https://github.com/dotnet-architecture/eShopModernizing)합니다.
+다음 연습 중 각각의 새 샘플 eShopLegacy 및 eShopModernizing 앱의 경우에 GitHub에서 사용할 수 있는 사용 하 여 [ https://github.com/dotnet-architecture/eShopModernizing ](https://github.com/dotnet-architecture/eShopModernizing)합니다.
 
 - **둘러보기의 eShop 레거시 응용 프로그램**
 
@@ -66,7 +67,7 @@ ms.lasthandoff: 03/08/2018
 
 ![ASP.NET MVC와 ASP.NET Web Forms 응용 프로그램 (기존/레거시 technologies)](./media/image5-2.png)
 
-> **그림 5-2입니다.** ASP.NET MVC와 ASP.NET Web Forms 응용 프로그램 (기존/레거시 technologies)
+> **그림 5-2.** ASP.NET MVC와 ASP.NET Web Forms 응용 프로그램 (기존/레거시 technologies)
 
 이들은 탐색 및 카탈로그 항목을 수정 하는 데 사용 되는 웹 응용 프로그램입니다. 두 앱 모두 동일한 비즈니스 기능/기능을 제공 하는 팩트는 단순히 비교 목적으로 합니다. ASP.NET Web Forms 및 ASP.NET MVC 프레임 워크를 사용 하 여 만든 앱에 대 한 비슷한 현대화 프로세스를 볼 수 있습니다.
 
@@ -112,7 +113,7 @@ Windows 컨테이너를 사용 하 여 MVC, Web Forms, WCF, 프로덕션, 개발
 
 > ![개발 환경에서 화 된 응용 프로그램의 간소화 된 아키텍처 다이어그램](./media/image5-3.png)
 >
-> **그림 5-3입니다.** 개발 환경에서 화 된 응용 프로그램의 간소화 된 아키텍처 다이어그램
+> **그림 5-3.** 개발 환경에서 화 된 응용 프로그램의 간소화 된 아키텍처 다이어그램
 
 ### <a name="benefits"></a>이점
 
@@ -126,7 +127,7 @@ Windows 컨테이너를 사용 하 여 MVC, Web Forms, WCF, 프로덕션, 개발
 
 ### <a name="next-steps"></a>다음 단계
 
-GitHub wiki에서이 콘텐츠를 더 자세하게 탐색할: [https://github.com/dotnet-architecture/eShopModernizing/wiki/02.-How-to-containerize-the-.NET-Framework-web-apps-with-Windows-Containers-and-Docker](https://github.com/dotnet-architecture/eShopModernizing/wiki/02.-How-to-containerize-the-.NET-Framework-web-apps-with-Windows-Containers-and-Docker)
+GitHub wiki에서이 콘텐츠를 더 자세히 살펴봅니다. [https://github.com/dotnet-architecture/eShopModernizing/wiki/02.-How-to-containerize-the-.NET-Framework-web-apps-with-Windows-Containers-and-Docker](https://github.com/dotnet-architecture/eShopModernizing/wiki/02.-How-to-containerize-the-.NET-Framework-web-apps-with-Windows-Containers-and-Docker)
 
 ## <a name="walkthrough-3-deploy-your-windows-containers-based-app-to-azure-vms"></a>Azure Vm에 Windows 컨테이너 기반 앱을 배포 하는 연습 3:
 
@@ -152,13 +153,13 @@ Docker 호스트에 Windows Server 2016 가상 컴퓨터 (VM) Azure에서 배포
 
 ![Docker 엔진 연결을 통해 개발 PC에서에서 Azure VM에 배포](./media/image5-4.png)
 
-> **그림 5-4입니다.** Docker 엔진 연결을 통해 개발 PC에서에서 Azure VM에 배포
+> **그림 5-4.** Docker 엔진 연결을 통해 개발 PC에서에서 Azure VM에 배포
 
 #### <a name="scenario-b-deploy-to-an-azure-vm-through-a-docker-registry"></a>Docker 레지스트리를 통해 Azure VM에 배포 시나리오 b:
 
 ![Docker 레지스트리를 통해 Azure VM에 배포](./media/image5-5.png)
 
-> **그림 5-5입니다.** Docker 레지스트리를 통해 Azure VM에 배포
+> **그림 5-5.** Docker 레지스트리를 통해 Azure VM에 배포
 
 #### <a name="scenario-c-deploy-to-an-azure-vm-from-cicd-pipelines-in-visual-studio-team-services"></a>Visual Studio Team Services에서 CI/CD 파이프라인에서 Azure VM에 시나리오 c: 배포
 
@@ -208,13 +209,13 @@ Windows 컨테이너 기반 응용 프로그램 Kubernetes 배포 하는 방법�
 
 ![개발 환경에서 Kubernetes 클러스터에 직접 배포 합니다.](./media/image5-7.png)
 
-> **그림 5-7입니다.** 개발 환경에서 Kubernetes 클러스터에 직접 배포 합니다.
+> **그림 5-7.** 개발 환경에서 Kubernetes 클러스터에 직접 배포 합니다.
 
 #### <a name="scenario-b-deploy-to-a-kubernetes-cluster-from-cicd-pipelines-in-team-services"></a>Team Services에서 파이프라인 CI/CD에서 Kubernetes 클러스터 시나리오 b: 배포
 
 ![Team Services에서 CI/CD 파이프라인에서 Kubernetes 클러스터에 배포 합니다.](./media/image5-8.png)
 
-> **그림 5-8입니다.** Team Services에서 CI/CD 파이프라인에서 Kubernetes 클러스터에 배포 합니다.
+> **그림 5-8.** Team Services에서 CI/CD 파이프라인에서 Kubernetes 클러스터에 배포 합니다.
 
 ### <a name="benefits"></a>이점
 
@@ -240,7 +241,7 @@ Kubernetes와 개발자가 수에서 진행 상황 실제 및 가상 컴퓨터�
 
 ## <a name="next-steps"></a>다음 단계
 
-GitHub wiki에서이 콘텐츠를 더 자세하게 탐색할: [https://github.com/dotnet-architecture/eShopModernizing/wiki/04.-How-to-deploy-your-Windows-Containers-based-apps-into-Kubernetes-in-Azure-Container-Service-드 ( Including-C-CD)](https://github.com/dotnet-architecture/eShopModernizing/wiki/04.-How-to-deploy-your-Windows-Containers-based-apps-into-Kubernetes-in-Azure-Container-Service-(Including-C-CD))
+GitHub wiki에서이 콘텐츠를 더 자세히 살펴봅니다. [https://github.com/dotnet-architecture/eShopModernizing/wiki/04.-How-to-deploy-your-Windows-Containers-based-apps-into-Kubernetes-in-Azure-Container-Service-(Including-C-CD)](https://github.com/dotnet-architecture/eShopModernizing/wiki/04.-How-to-deploy-your-Windows-Containers-based-apps-into-Kubernetes-in-Azure-Container-Service-(Including-C-CD))
 
 ## <a name="walkthrough-5-deploy-your-windows-containers-based-apps-to-azure-service-fabric"></a>Azure 서비스 패브릭에 Windows 컨테이너 기반 응용 프로그램을 배포 하는 연습 5:
 
@@ -268,13 +269,13 @@ Windows 컨테이너를 신속 하 게 기반 응용 프로그램 플랫폼에�
 
 ![개발 환경에서 서비스 패브릭 클러스터에 직접 배포 합니다.](./media/image5-9.png)
 
-> **그림 5-9입니다.** 개발 환경에서 서비스 패브릭 클러스터에 직접 배포 합니다.
+> **그림 5-9.** 개발 환경에서 서비스 패브릭 클러스터에 직접 배포 합니다.
 
 ### <a name="scenario-b-deploy-to-a-service-fabric-cluster-from-cicd-pipelines-in-team-services"></a>Team Services에서 파이프라인 CI/CD에서 서비스 패브릭 클러스터를 시나리오 b: 배포
 
 ![Visual Studio Team Services에서 CI/CD 파이프라인에서 서비스 패브릭 클러스터를 배포](./media/image5-10.png)
 
-> **그림 5-10입니다.** Visual Studio Team Services에서 CI/CD 파이프라인에서 서비스 패브릭 클러스터를 배포
+> **그림 5-10.** Visual Studio Team Services에서 CI/CD 파이프라인에서 서비스 패브릭 클러스터를 배포
 
 ## <a name="benefits"></a>이점
 

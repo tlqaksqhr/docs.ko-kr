@@ -1,30 +1,31 @@
 ---
-title: "워크플로 디자이너 재호스트"
-ms.custom: 
+title: 워크플로 디자이너 재호스트
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: bec1fc28-f902-4edb-86c5-436cec802c2b
-caps.latest.revision: "10"
+caps.latest.revision: 10
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ba0308505f54b7c96259af5d797dd7c1957e6a92
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: a37c37aa34db8f04a354d3b6e323c414b4c0ee07
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="rehosting-the-workflow-designer"></a>워크플로 디자이너 재호스트
 워크플로 만들기, 수정, 모니터링을 위해 [!INCLUDE[wfd1](../../../includes/wfd1-md.md)] 외부 환경에서 [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)]를 다시 호스트할 수 있습니다.  
   
- <xref:System.Activities.Presentation.WorkflowDesigner> 형식은 캔버스, 속성표 및 기타 요소의 래퍼이며 기본 프로그래밍 모델을 노출하여 대부분의 디자이너 다시 호스팅 시나리오를 처리합니다. <xref:System.Activities.Presentation.WorkflowDesigner> 응용 프로그램 내부에 [!INCLUDE[avalon1](../../../includes/avalon1-md.md)]를 호스트하는 것은 [!INCLUDE[wfd2](../../../includes/wfd2-md.md)]에 대한 일반적인 재호스팅 시나리오입니다.  
+ <xref:System.Activities.Presentation.WorkflowDesigner> 형식은 캔버스, 속성표 및 기타 요소의 래퍼이며 기본 프로그래밍 모델을 노출하여 대부분의 디자이너 다시 호스팅 시나리오를 처리합니다. 호스팅하는 <xref:System.Activities.Presentation.WorkflowDesigner> Windows Presentation Foundation (WPF) 내 응용 프로그램에 대 한 일반적인 재호스팅 시나리오는 [!INCLUDE[wfd2](../../../includes/wfd2-md.md)]합니다.  
   
-## <a name="in-this-section"></a>섹션 내용  
+## <a name="in-this-section"></a>단원 내용  
  [작업 1: 새 Windows Presentation Foundation 응용 프로그램 만들기](../../../docs/framework/windows-workflow-foundation/task-1-create-a-new-wpf-app.md)  
   
  [작업 2: 워크플로 디자이너 호스트](../../../docs/framework/windows-workflow-foundation/task-2-host-the-workflow-designer.md)  

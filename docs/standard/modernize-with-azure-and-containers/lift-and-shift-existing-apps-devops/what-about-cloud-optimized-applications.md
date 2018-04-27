@@ -1,18 +1,19 @@
 ---
-title: "클라우드 액세스에 최적화 된 응용 프로그램은 어떻습니까?"
-description: "컨테이너 화 된.NET 응용 프로그램에 대 한.NET Microservices 아키텍처 | 클라우드 액세스에 최적화 된 응용 프로그램은 어떻습니까?"
+title: 클라우드 액세스에 최적화 된 응용 프로그램은 어떻습니까?
+description: 컨테이너 화 된.NET 응용 프로그램에 대 한.NET Microservices 아키텍처 | 클라우드 액세스에 최적화 된 응용 프로그램은 어떻습니까?
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/26/2017
 ms.prod: .net
+ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 249da9ecbac90514647f4fdc926928ac7ad4648e
-ms.sourcegitcommit: d3cfda0943364aaf6ccd574f55f584576c8a4fee
+ms.openlocfilehash: 63eb80dc43e174f4c803f772f09f6e72d8c8e7c2
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="what-about-cloud-optimized-applications"></a>클라우드 액세스에 최적화 된 응용 프로그램은 어떻습니까?
 
@@ -72,7 +73,7 @@ Microservices 아키텍처 자치 서비스의 형태로 독립적인 여러, �
 
 Microservices 아키텍처의 복잡성 때문에 특정 응용 프로그램 종류 및 특정 시나리오는 마이크로 서비스 기반 응용 프로그램에 적합 합니다. 여기에 포함 하는 여러 크고 복잡 한 응용 프로그램 하위 시스템을 발전 합니다. 이러한 경우에 더 복잡 한 소프트웨어 아키텍처 장기 민첩성을 향상할된 및 보다 효율적인 응용 프로그램 유지 관리에 대 한 투자 이므로 합니다. 그러나 덜 복잡 한 시나리오에 대 한 좋을 수도 있습니다는 모놀리식 응용 프로그램 접근 방식으로 계속 하 나 간단한 N 계층 접근 합니다.
 
-마지막으로,이 개념에 대 한 반복 되 고 위험이 있는 서는 안 보면 microservices로 응용 프로그램에서 사용 하 여 "올인원 하거나 전혀 nothing*.*" 확장 하 고 새로 만들기, microservices 기반 소규모 시나리오를 추가 하 여 기존 모놀리식 응용 프로그램을 개발할 수 있습니다. microservices 아키텍처 접근 방식으로 작업을 시작 하는 처음부터 다시 시작할 필요가 없습니다. 사실, 새로운 시나리오를 추가 하 여 기존 모놀리식 또는 N 계층 응용 프로그램을 사용 하 여도 발전 하는 것이 좋습니다. 결국 응용 프로그램 자치 구성 요소 또는 microservices을 나눌 수 있습니다. 진화 단계별 microservices 방향의 모놀리식 응용 프로그램을 시작할 수 있습니다.
+마지막으로,이 개념에 대 한 반복 되 고 위험이 있는 서는 안 보면 microservices로 응용 프로그램에서 사용 하 여 "올인원 하거나 전혀 nothing *.*" 확장 하 고 새로 만들기, microservices 기반 소규모 시나리오를 추가 하 여 기존 모놀리식 응용 프로그램을 개발할 수 있습니다. microservices 아키텍처 접근 방식으로 작업을 시작 하는 처음부터 다시 시작할 필요가 없습니다. 사실, 새로운 시나리오를 추가 하 여 기존 모놀리식 또는 N 계층 응용 프로그램을 사용 하 여도 발전 하는 것이 좋습니다. 결국 응용 프로그램 자치 구성 요소 또는 microservices을 나눌 수 있습니다. 진화 단계별 microservices 방향의 모놀리식 응용 프로그램을 시작할 수 있습니다.
 
 ## <a name="when-to-use-azure-app-service-for-modernizing-existing-net-apps"></a>현대화 기존.NET 응용 프로그램에 대 한 Azure 앱 서비스를 사용 하는 경우
 

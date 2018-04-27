@@ -1,11 +1,12 @@
 ---
-title: "사용자 정의 상수(Visual Basic)"
-ms.custom: 
+title: 사용자 정의 상수(Visual Basic)
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - constants [Visual Basic], circular references
@@ -15,14 +16,14 @@ helpviewer_keywords:
 - constants [Visual Basic], user-defined
 - circular references between constants [Visual Basic]
 ms.assetid: a1206d5c-c45e-4ac2-970a-4a0be6a05fdd
-caps.latest.revision: "19"
+caps.latest.revision: 19
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: ce839c3e843a52b31e40c13cb765f8eaf9959ea4
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 9f4210193aeb386d3a4a76794cc9329cb24b2317
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="user-defined-constants-visual-basic"></a>사용자 정의 상수(Visual Basic)
 상수는 숫자 또는 변경 되지 않는 문자열의 일어나는 의미 있는 이름입니다. 상수는 응용 프로그램 실행 중 변함없이 유지되는 값을 저장합니다. 컨트롤이 나 함께 작업 하는 구성 요소에 정의 된 상수를 사용할 수 하거나 직접 만들 수 있습니다. 직접 만든 상수를 상수 라고 *사용자 정의*합니다.  
@@ -61,7 +62,7 @@ ms.lasthandoff: 11/21/2017
  [!code-vb[VbEnumsTask#16](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/user-defined-constants_4.vb)]  
 [!code-vb[VbEnumsTask#17](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/user-defined-constants_5.vb)]  
   
- 주기가 발생 하면 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 컴파일러 오류를 생성 합니다.  
+ 주기가 발생 하는 경우 Visual Basic 컴파일러 오류를 생성 합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [Const 문](../../../../visual-basic/language-reference/statements/const-statement.md)  

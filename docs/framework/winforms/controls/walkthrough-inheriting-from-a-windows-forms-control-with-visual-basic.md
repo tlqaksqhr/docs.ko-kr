@@ -1,13 +1,13 @@
 ---
-title: "연습: Visual Basic을 사용하여 Windows Forms 컨트롤에서 상속"
-ms.custom: 
+title: '연습: Visual Basic을 사용하여 Windows Forms 컨트롤에서 상속'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-winforms
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - vb
@@ -18,20 +18,20 @@ helpviewer_keywords:
 - inheritance [Windows Forms], walkthroughs
 - custom controls [Windows Forms], inheritance
 ms.assetid: fb58d7c8-b702-4478-ad31-b00cae118882
-caps.latest.revision: 
+caps.latest.revision: 16
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: b165de0d18cede275dfe8405b0266c1a909ac570
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 342ab60d4c3481d2154293fab9fb1254f937a934
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="walkthrough-inheriting-from-a-windows-forms-control-with-visual-basic"></a>연습: Visual Basic을 사용하여 Windows Forms 컨트롤에서 상속
-[!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)]에서는 *상속*을 통해 강력한 사용자 지정 컨트롤을 만들 수 있습니다. 상속을 통해 표준 Windows Forms 컨트롤의 모든 고유 기능을 유지하면서 사용자 지정 기능을 통합하는 컨트롤을 만들 수 있습니다. 이 연습에서는 `ValueButton`이라는 간단한 상속된 컨트롤을 만듭니다. 이 단추는 표준 Windows Forms에서 기능을 상속 <xref:System.Windows.Forms.Button> 컨트롤을 호출 하는 사용자 지정 속성을 노출 합니다 `ButtonValue`합니다.  
+Visual Basic의 경우 사용을 통해 강력한 사용자 지정 컨트롤을 만들 수 있습니다 *상속*합니다. 상속을 통해 표준 Windows Forms 컨트롤의 모든 고유 기능을 유지하면서 사용자 지정 기능을 통합하는 컨트롤을 만들 수 있습니다. 이 연습에서는 `ValueButton`이라는 간단한 상속된 컨트롤을 만듭니다. 이 단추는 표준 Windows Forms에서 기능을 상속 <xref:System.Windows.Forms.Button> 컨트롤을 호출 하는 사용자 지정 속성을 노출 합니다 `ButtonValue`합니다.  
   
 > [!NOTE]
 >  표시되는 대화 상자와 메뉴 명령은 활성 설정이나 버전에 따라 도움말에서 설명하는 것과 다를 수 있습니다. 설정을 변경하려면 **도구** 메뉴에서 **설정 가져오기 및 내보내기** 를 선택합니다. 자세한 내용은 [Visual Studio에서 개발 설정 사용자 지정](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3)을 참조하세요.  
@@ -43,7 +43,7 @@ ms.lasthandoff: 01/19/2018
   
 1.  **파일** 메뉴에서 **새로 만들기**를 가리키고 **프로젝트**를 선택하여 **새 프로젝트** 대화 상자를 엽니다.  
   
-2.  [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)] 프로젝트 목록에서 **Windows Forms 컨트롤 라이브러리** 프로젝트 템플릿을 선택하고 **이름** 상자에 `ValueButtonLib`를 입력합니다.  
+2.  선택 된 **Windows Forms 컨트롤 라이브러리** Visual Basic 프로젝트 및 형식 목록에서 프로젝트 템플릿을 `ValueButtonLib` 에 **이름** 상자.  
   
      프로젝트 이름, `ValueButtonLib`는 기본적으로 루트 네임스페이스에도 할당됩니다. 루트 네임스페이스는 어셈블리에서 구성 요소의 이름을 정규화하는 데 사용됩니다. 예를 들어 두 어셈블리에서 `ValueButton`이라는 구성 요소를 제공하면 `ValueButtonLib.ValueButton`을 사용하여 `ValueButton` 구성 요소를 지정할 수 있습니다. 자세한 내용은 [Visual Basic의 네임스페이스](~/docs/visual-basic/programming-guide/program-structure/namespaces.md)를 참조하세요.  
   
@@ -107,7 +107,7 @@ ms.lasthandoff: 01/19/2018
   
 1.  **파일** 메뉴에서 **추가**를 가리킨 후 **새 프로젝트**를 클릭하여 **새 프로젝트 추가** 대화 상자를 엽니다.  
   
-2.  [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)] 프로젝트 노드를 선택하고 **Windows Forms 응용 프로그램**을 클릭합니다.  
+2.  Visual Basic 프로젝트 노드를 선택 하 고 클릭 **Windows Forms 응용 프로그램**합니다.  
   
 3.  **이름** 상자에 `Test`을 입력합니다.  
   

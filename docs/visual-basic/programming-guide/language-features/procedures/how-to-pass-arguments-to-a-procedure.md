@@ -1,11 +1,12 @@
 ---
-title: "방법: 프로시저에 인수 전달(Visual Basic)"
-ms.custom: 
+title: '방법: 프로시저에 인수 전달(Visual Basic)'
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - arguments [Visual Basic], passing to procedures
@@ -17,14 +18,14 @@ helpviewer_keywords:
 - procedures [Visual Basic], calling
 - argument passing [Visual Basic], procedures
 ms.assetid: 08723588-3890-4ddc-8249-79e049e0f241
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 3debb4fa6e7b15f9c321ef207d0cc04181a98da2
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 1e8f8e438dc749e7f5f0d33aeaa26dfbcf4c29f3
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-pass-arguments-to-a-procedure-visual-basic"></a>방법: 프로시저에 인수 전달(Visual Basic)
 프로시저를 호출 하는 경우에 인수 목록 괄호로 묶어 프로시저 이름 뒤에. 프로시저에 정의 된 모든 필수 매개 변수에 해당 하는 인수를 제공 하 고 인수를 선택적으로 제공할 수는 `Optional` 매개 변수입니다. 지정 하지 않으면 프로그램 `Optional` 호출에 매개 변수를 모든 후속 인수를 제공 하는 경우 인수 목록에 해당 위치를 표시 하려면 쉼표를 포함 해야 합니다.  
@@ -45,7 +46,7 @@ ms.lasthandoff: 11/21/2017
   
 5.  에 대 한 인수를 생략 하는 경우는 `Optional` 매개 변수 및 매개 변수 목록 뒤에 다른 매개 변수가 있는, 인수 목록에 여분의 쉼표 여 생략 된 인수의 위치를 표시할 수 있습니다.  
   
-     다음 예제에서는 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] <xref:Microsoft.VisualBasic.Interaction.MsgBox%2A> 함수입니다.  
+     다음 예제에서는 Visual Basic <xref:Microsoft.VisualBasic.Interaction.MsgBox%2A> 함수입니다.  
   
      [!code-vb[VbVbcnProcedures#34](./codesnippet/VisualBasic/how-to-pass-arguments-to-a-procedure_1.vb)]  
   
@@ -53,7 +54,8 @@ ms.lasthandoff: 11/21/2017
   
      인수 목록에 두 번째 쉼표는 생략 두 번째 인수의 위치를 표시 하 고 마지막 문자열의 선택적 세 번째 매개 변수에 전달 되 `MsgBox`, 제목 표시줄에 표시할 텍스트 이며 합니다.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>참고자료
+
  [Sub 프로시저](./sub-procedures.md)  
  [Function 프로시저](./function-procedures.md)  
  [속성 프로시저](./property-procedures.md)  
@@ -63,4 +65,4 @@ ms.lasthandoff: 11/21/2017
  [재귀 프로시저](./recursive-procedures.md)  
  [프로시저 오버로딩](./procedure-overloading.md)  
  [개체 및 클래스](../../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)  
- [개체 지향 프로그래밍](http://msdn.microsoft.com/library/1cf6e655-3f30-45f1-9a5d-4a88ca24a1c2)
+ [개체 지향 프로그래밍(Visual Basic)](../../concepts/object-oriented-programming.md)  

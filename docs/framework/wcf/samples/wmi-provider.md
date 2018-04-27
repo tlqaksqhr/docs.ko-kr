@@ -1,26 +1,26 @@
 ---
 title: WMI Provider
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 462f0db3-f4a4-4a4b-ac26-41fc25c670a4
-caps.latest.revision: 
+caps.latest.revision: 35
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: c1b1f923b6673ead42c7c702bd50d253ea06c765
-ms.sourcegitcommit: 15316053918995cc1380163a7d7e7edd5c44e6d7
+ms.openlocfilehash: c1b90a5231505f7d72d10c0ab9f9f80037d48bd7
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/19/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="wmi-provider"></a>WMI Provider
 이 샘플에서는 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]에 빌드된 WMI(Windows Management Instrumentation) 공급자를 사용하여 런타임에 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 서비스에서 데이터를 수집하는 방법을 보여 줍니다. 또한 사용자 정의 WMI 개체를 서비스에 추가하는 방법도 보여 줍니다. 이 샘플에 대 한 WMI 공급자를 활성화는 [시작](../../../../docs/framework/wcf/samples/getting-started-sample.md) 에서 데이터를 수집 하는 방법을 보여 줍니다는 `ICalculator` 런타임에 서비스입니다.  
@@ -45,7 +45,7 @@ ms.lasthandoff: 03/19/2018
  서비스에 WMI 개체를 추가하면 기본 제공 WMI 공급자 정보와 함께 사용자 정의 정보를 표시할 수 있습니다. 그러려면 Installutil.exe 응용 프로그램을 사용하여 WMI에 서비스의 스키마를 게시합니다. 이 작업을 수행하기 위한 지침과 자세한 설명은 항목 끝 부분에 있는 설치 지침을 참조하세요.  
   
 ## <a name="accessing-wmi-information"></a>WMI 정보 액세스  
- 다양한 방식으로 WMI 데이터에 액세스할 수 있습니다. 스크립트에 대 한 WMI Api를 제공 하는 Microsoft [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)] 응용 프로그램, c + + 응용 프로그램 및 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] (http://msdn.microsoft.com/library/default.asp?url=/library/wmisdk/wmi/using_wmi.asp)합니다.  
+ 다양한 방식으로 WMI 데이터에 액세스할 수 있습니다. 스크립트, Visual Basic 응용 프로그램, c + + 응용 프로그램에 대 한 WMI Api를 제공 하는 Microsoft 및 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] (http://msdn.microsoft.com/library/default.asp?url=/library/wmisdk/wmi/using_wmi.asp)합니다.  
   
  이 샘플에서는 두 개의 Java 스크립트를 사용합니다. 하나는 컴퓨터에서 실행 중인 서비스를 속성과 함께 나열하고, 다른 하나는 사용자 정의 WMI 데이터를 표시합니다. 스크립트에서는 WMI 공급자에 대한 연결을 열고, 데이터를 구문 분석하고, 수집된 데이터를 표시합니다.  
   

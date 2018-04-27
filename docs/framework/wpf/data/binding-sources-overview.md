@@ -1,28 +1,30 @@
 ---
-title: "바인딩 소스 개요"
-ms.custom: 
+title: 바인딩 소스 개요
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - binding data [WPF], binding sources
 - data binding [WPF], binding source
 - binding sources [WPF]
 ms.assetid: 2df2cd11-6aac-4bdf-ab7b-ea5f464cd5ca
-caps.latest.revision: "25"
+caps.latest.revision: 25
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 6b603599232a5cb4d33e2b7c9ad00e7ab3a24649
-ms.sourcegitcommit: 91691981897cf8451033cb01071d8f5d94017f97
+ms.workload:
+- dotnet
+ms.openlocfilehash: 94238ba34976ad5971e7181aa3377e38ab0e4659
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="binding-sources-overview"></a>바인딩 소스 개요
 데이터 바인딩에서 바인딩 소스 개체는 데이터를 가져오는 개체를 의미합니다. 이 항목에서는 바인딩 소스로 사용할 수 있는 개체 형식에 대해 설명합니다.  
@@ -55,7 +57,7 @@ ms.lasthandoff: 01/09/2018
 ### <a name="other-characteristics"></a>기타 특성  
  다음은 고려해야 할 기타 중요 사항의 목록입니다.  
   
--   [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]에서 개체를 만들려는 경우 클래스에 기본 생성자가 있어야 합니다. [!INCLUDE[TLA#tla_cshrp](../../../../includes/tlasharptla-cshrp-md.md)]과 같은 일부 [!INCLUDE[TLA2#tla_net](../../../../includes/tla2sharptla-net-md.md)] 언어에서는 기본 생성자가 자동으로 만들어질 수 있습니다.  
+-   [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]에서 개체를 만들려는 경우 클래스에 기본 생성자가 있어야 합니다. 일부 [!INCLUDE[TLA2#tla_net](../../../../includes/tla2sharptla-net-md.md)] C#과 같은 언어 기본 생성자는 만들 수 있습니다.  
   
 -   바인딩의 바인딩 소스 속성으로 사용하는 속성은 클래스의 공용 속성이어야 합니다. 명시적으로 정의된 인터페이스 속성은 바인딩 용도로 액세스할 수 없으며, 기본 구현이 없는 보호, 전용, 내부 또는 가상 속성이 될 수 없습니다.  
   
@@ -79,7 +81,7 @@ ms.lasthandoff: 01/09/2018
   
  WPF는 컬렉션에 직접 바인딩되지 않습니다. 바인딩 소스로 컬렉션을 지정하면 WPF가 실제로 컬렉션의 기본 뷰에 바인딩됩니다. 기본 뷰에 대한 자세한 내용은 [데이터 바인딩 개요](../../../../docs/framework/wpf/data/data-binding-overview.md)를 참조하세요.  
   
- 고급 시나리오에 있고 컬렉션을 직접 구현 하려는 경우 사용 하 여 고려는 <xref:System.Collections.IList> 인터페이스입니다. <xref:System.Collections.IList>성능을 향상 시킬 수 있는 인덱스에서 개별적으로 액세스할 수 있는 개체의 제네릭이 아닌 컬렉션을 제공 합니다.  
+ 고급 시나리오에 있고 컬렉션을 직접 구현 하려는 경우 사용 하 여 고려는 <xref:System.Collections.IList> 인터페이스입니다. <xref:System.Collections.IList> 성능을 향상 시킬 수 있는 인덱스에서 개별적으로 액세스할 수 있는 개체의 제네릭이 아닌 컬렉션을 제공 합니다.  
   
 <a name="permissions"></a>   
 ## <a name="permission-requirements-in-data-binding"></a>데이터 바인딩의 사용 권한 요구 사항  

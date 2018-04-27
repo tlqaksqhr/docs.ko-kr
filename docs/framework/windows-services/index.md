@@ -24,11 +24,11 @@ ms.author: ghogen
 manager: douge
 ms.workload:
 - dotnet
-ms.openlocfilehash: 325e43f4b1734bc6ab8753285e5069f36b0fda51
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 4ed6a741a6f86b492929598613a0c10ae08981c5
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="developing-windows-service-applications"></a>Windows 서비스 응용 프로그램 개발
 Microsoft를 사용 하 여 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 또는 Microsoft [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] SDK를 쉽게 만들 수 있습니다 서비스 서비스로 설치 하는 응용 프로그램을 만들어 합니다. 이 유형의 응용 프로그램에는 Windows 서비스를 라고 합니다. Framework 기능을 사용 있습니다 수는 서비스를 만들, 설치, 시작, 중지 및 그렇지 않은 경우의 동작을 제어 합니다.  
@@ -41,7 +41,7 @@ Microsoft를 사용 하 여 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] �
  서비스 및 서비스 응용 프로그램 다른 공통 프로젝트 형식에서 어떻게 다른 지의 수명을 Windows 서비스 응용 프로그램에 대 한 개요를 제공 합니다.  
   
  [연습: 구성 요소 디자이너에서 Windows 서비스 응용 프로그램 만들기](../../../docs/framework/windows-services/walkthrough-creating-a-windows-service-application-in-the-component-designer.md)  
- 서비스를 만드는 예제를 제공 [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] 및 Visual C#입니다.  
+ Visual Basic 및 Visual C#에서 서비스를 만드는 예제를 제공 합니다.  
   
  [서비스 응용 프로그램 프로그래밍 아키텍처](../../../docs/framework/windows-services/service-application-programming-architecture.md)  
  서비스 프로그래밍에 사용 되는 언어 요소에 설명 합니다.  

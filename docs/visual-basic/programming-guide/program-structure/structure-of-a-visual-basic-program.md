@@ -1,11 +1,12 @@
 ---
-title: "Visual Basic 프로그램의 구조"
-ms.custom: 
+title: Visual Basic 프로그램의 구조
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - conditional compilation [Visual Basic], Visual Basic
@@ -13,35 +14,35 @@ helpviewer_keywords:
 - procedures [Visual Basic], structure
 - Visual Basic code, program structure
 ms.assetid: ad0c6531-d762-4c77-a700-de16b07b6119
-caps.latest.revision: "17"
+caps.latest.revision: 17
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 136be5e2eab3ed0226e0ca471ee1d84cdc7a52d1
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 5def0de1e22af39eb16489a2d4d27bdbd1853f2b
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="structure-of-a-visual-basic-program"></a>Visual Basic 프로그램의 구조
-A [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 프로그램은 표준 구성 요소에서 빌드됩니다. A *솔루션* 하나 이상의 프로젝트를 구성 합니다. A *프로젝트* 어셈블리를 하나 이상 포함할 수 있습니다. 각 *어셈블리* 는 하나 이상의 소스 파일에서 컴파일됩니다. A *소스 파일* 정 및 클래스, 구조체, 모듈 및 모든 코드를 포함 하는 인터페이스의 구현을 제공 합니다.  
+Visual Basic 프로그램은 표준 구성 요소에서 빌드됩니다. A *솔루션* 하나 이상의 프로젝트를 구성 합니다. A *프로젝트* 어셈블리를 하나 이상 포함할 수 있습니다. 각 *어셈블리* 는 하나 이상의 소스 파일에서 컴파일됩니다. A *소스 파일* 정 및 클래스, 구조체, 모듈 및 모든 코드를 포함 하는 인터페이스의 구현을 제공 합니다.  
   
- 이러한 구성 요소에 대 한 자세한 내용은 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 프로그램의 경우 참조 [솔루션 및 프로젝트](/visualstudio/ide/solutions-and-projects-in-visual-studio) 및 [어셈블리 및 전역 어셈블리 캐시](../../../visual-basic/programming-guide/concepts/assemblies-gac/index.md)합니다.  
+ Visual Basic 프로그램의 이러한 빌딩 블록에 대 한 자세한 내용은 참조 [솔루션 및 프로젝트](/visualstudio/ide/solutions-and-projects-in-visual-studio) 및 [어셈블리 및 전역 어셈블리 캐시](../../../visual-basic/programming-guide/concepts/assemblies-gac/index.md)합니다.  
   
 ## <a name="file-level-programming-elements"></a>파일-수준 프로그래밍 요소  
  프로젝트나 파일을 시작 하 고을 코드 편집기를 열려면 일부 코드가 이미 있는 및 올바른 순서로 표시 됩니다. 작성 하는 모든 코드를 다음 순서 대로 따라야 합니다.  
   
-1.  `Option`문  
+1.  `Option` 문  
   
-2.  `Imports`문  
+2.  `Imports` 문  
   
-3.  `Namespace`문 및 네임 스페이스 수준 요소  
+3.  `Namespace` 문 및 네임 스페이스 수준 요소  
   
  다른 순서로 문을 입력 하면 컴파일 오류가 발생할 수 있습니다.  
   
  프로그램에는 조건부 컴파일 문에 포함할 수도 있습니다. 앞에 나온 일련의 문 함께 소스 파일에서 이러한 중간에 삽입할 수 있습니다.  
   
 ### <a name="option-statements"></a>옵션 문  
- `Option`문 구문 및 논리 오류를 방지 하는 후속 코드에 대 한 기본 규칙을 구성 합니다. [Option Explicit 문](../../../visual-basic/language-reference/statements/option-explicit-statement.md) 모든 변수 선언를 제대로 입력 했는지, 디버깅 시간을 줄여주는 보장 합니다. [Option Strict 문](../../../visual-basic/language-reference/statements/option-strict-statement.md) 서로 다른 데이터 형식의 변수 사이 작업할 때 발생할 수 있는 논리 오류 및 데이터 손실을 최소화 하는 데 도움이 됩니다. [옵션 비교 문](../../../visual-basic/language-reference/statements/option-compare-statement.md) 서로 하나에 따라 방식으로 문자열 비교 지정 자신의 `Binary` 또는 `Text` 값입니다.  
+ `Option` 문 구문 및 논리 오류를 방지 하는 후속 코드에 대 한 기본 규칙을 구성 합니다. [Option Explicit 문](../../../visual-basic/language-reference/statements/option-explicit-statement.md) 모든 변수 선언를 제대로 입력 했는지, 디버깅 시간을 줄여주는 보장 합니다. [Option Strict 문](../../../visual-basic/language-reference/statements/option-strict-statement.md) 서로 다른 데이터 형식의 변수 사이 작업할 때 발생할 수 있는 논리 오류 및 데이터 손실을 최소화 하는 데 도움이 됩니다. [옵션 비교 문](../../../visual-basic/language-reference/statements/option-compare-statement.md) 서로 하나에 따라 방식으로 문자열 비교 지정 자신의 `Binary` 또는 `Text` 값입니다.  
   
 ### <a name="imports-statements"></a>Imports 문  
  포함할 수 있습니다는 [Imports 문 (.NET Namespace 및 형식)](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md) 프로젝트 외부에 정의 된 이름을 가져올 수 있습니다. `Imports` 문은 클래스와 한정 하지 않고는 가져온된 네임 스페이스 내에서 정의 된 다른 형식을 참조 하도록 코드를 허용 합니다. 만큼 사용할 수 있습니다 `Imports` 문을 적절 하 게 합니다. 자세한 내용은 참조 [참조 및 Imports 문](../../../visual-basic/programming-guide/program-structure/references-and-the-imports-statement.md)합니다.  
@@ -88,7 +89,7 @@ A [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 프로그램은 표준 구성 요�
  프로시저 수준에서 데이터 요소는 로컬 변수 및 상수 제한 됩니다.  
   
 ## <a name="the-main-procedure"></a>Main 프로시저  
- `Main` 프로시저는 첫 번째 코드를 응용 프로그램 로드 되었을 때를 실행 합니다. `Main`시작 지점 및 응용 프로그램에 대 한 전체 제어 하는 데 사용 합니다. 네 가지 종류의 `Main`:  
+ `Main` 프로시저는 첫 번째 코드를 응용 프로그램 로드 되었을 때를 실행 합니다. `Main` 시작 지점 및 응용 프로그램에 대 한 전체 제어 하는 데 사용 합니다. 네 가지 종류의 `Main`:  
   
 -   `Sub Main()`  
   

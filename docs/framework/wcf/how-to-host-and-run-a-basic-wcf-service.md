@@ -17,11 +17,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 1e1c00abfec36622f5da493165259fb1786ab8d6
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: a13e5a0044c51700acce6b123688868443f635ae
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-host-and-run-a-basic-windows-communication-foundation-service"></a>방법: 기본 Windows Communication Foundation 서비스 호스트 및 실행
 이 작업은 기본 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 응용 프로그램을 만드는 데 필요한 6가지 작업 중 세 번째 작업입니다. 모든 6 가지 작업의 개요를 참조 하십시오.는 [초보자를 위한 자습서](../../../docs/framework/wcf/getting-started-tutorial.md) 항목입니다.  
@@ -170,7 +170,7 @@ ms.lasthandoff: 03/26/2018
   
 ### <a name="to-verify-the-service-is-working"></a>서비스가 작동하는지 확인하려면  
   
-1.  [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)]에서 GettingStartedHost 콘솔 응용 프로그램을 실행합니다. [!INCLUDE[wv](../../../includes/wv-md.md)]에서 실행하면서 나중에 운영 체제에서 실행하는 경우 서비스를 관리자 권한으로 실행해야 합니다. [!INCLUDE[vs_current_short](../../../includes/vs-current-short-md.md)]가 관리자 권한으로 실행되었기 때문에 GettingStartedHost도 관리자 권한으로 실행됩니다. 또한 관리자 권한으로 서비스를 실행하는 새 명령 프롬프트를 시작하고 해당 명령 프롬프트 내에서 service.exe를 실행할 수 있습니다.  
+1.  [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)]에서 GettingStartedHost 콘솔 응용 프로그램을 실행합니다. [!INCLUDE[wv](../../../includes/wv-md.md)]에서 실행하면서 나중에 운영 체제에서 실행하는 경우 서비스를 관리자 권한으로 실행해야 합니다. Visual Studio를 관리자 권한으로 실행 하기 때문에 GettingStartedHost도 관리자 권한으로 실행 됩니다. 또한 관리자 권한으로 서비스를 실행하는 새 명령 프롬프트를 시작하고 해당 명령 프롬프트 내에서 service.exe를 실행할 수 있습니다.  
   
 2.  Internet Explorer를 열고 서비스의 디버그 페이지인 `http://localhost:8000/GettingStarted/CalculatorService`를 찾습니다.  
   
@@ -424,7 +424,7 @@ End Module
 ```  
   
 > [!NOTE]
->  이러한 서비스에는 수신 대기를 위해 시스템에 HTTP 주소를 등록할 권한이 있어야 합니다. 관리자 계정에는 이 권한이 있지만, 관리자 이외의 계정에는 HTTP 네임스페이스에 대한 권한을 부여해야 합니다. [!INCLUDE[crabout](../../../includes/crabout-md.md)] 네임 스페이스 예약을 구성을 참조 하는 방법 [HTTP 및 HTTPS 구성](../../../docs/framework/wcf/feature-details/configuring-http-and-https.md)합니다. [!INCLUDE[vs_current_short](../../../includes/vs-current-short-md.md)]에서 실행하는 경우 service.exe는 관리자 권한으로 실행해야 합니다.  
+>  이러한 서비스에는 수신 대기를 위해 시스템에 HTTP 주소를 등록할 권한이 있어야 합니다. 관리자 계정에는 이 권한이 있지만, 관리자 이외의 계정에는 HTTP 네임스페이스에 대한 권한을 부여해야 합니다. [!INCLUDE[crabout](../../../includes/crabout-md.md)] 네임 스페이스 예약을 구성을 참조 하는 방법 [HTTP 및 HTTPS 구성](../../../docs/framework/wcf/feature-details/configuring-http-and-https.md)합니다. Visual Studio에서 실행 하는 경우 service.exe는 관리자 권한으로 실행 되어야 합니다.  
   
  서비스가 실행되고 있습니다. 진행 [하는 방법: 클라이언트 만들기](../../../docs/framework/wcf/how-to-create-a-wcf-client.md)합니다. 문제 해결 정보를 참조 하세요. [초보자를 위한 자습서 문제 해결](../../../docs/framework/wcf/troubleshooting-the-getting-started-tutorial.md)합니다.  
   

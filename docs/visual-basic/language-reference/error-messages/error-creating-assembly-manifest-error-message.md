@@ -1,9 +1,9 @@
 ---
-title: "어셈블리 매니페스트를 만드는 동안 오류 발생: &lt;오류 메시지&gt;"
+title: '어셈블리 매니페스트를 만드는 동안 오류 발생: &lt;오류 메시지&gt;'
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - devlang-visual-basic
 ms.topic: article
@@ -13,17 +13,17 @@ f1_keywords:
 helpviewer_keywords:
 - BC30140
 ms.assetid: 1beb5aa0-7b79-4c85-946b-5c2d0a41d1d2
-caps.latest.revision: 
+caps.latest.revision: 13
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 5e88d28ef787eb57b71d94f4ee51c09e9751dbff
-ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
+ms.openlocfilehash: 4032bbcbf9924eb5aad4e2cb1a6e74df9a472eca
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="error-creating-assembly-manifest-lterror-messagegt"></a>어셈블리 매니페스트를 만드는 동안 오류 발생: &lt;오류 메시지&gt;
-[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 컴파일러가 어셈블리 링커(Al.exe, Alink라고도 함)를 호출하여 매니페스트를 사용해 어셈블리를 생성합니다. 링커가 어셈블리 만들기의 내보내기 전 단계에서 오류를 보고했습니다.  
+Visual Basic 컴파일러는 매니페스트를 사용해 어셈블리를 생성 하는 어셈블리 링커 (Al.exe, Alink 라고도 함)를 호출 합니다. 링커가 어셈블리 만들기의 내보내기 전 단계에서 오류를 보고했습니다.  
   
  지정한 키 파일 또는 키 컨테이너에 문제가 있으면 이러한 현상이 발생할 수 있습니다. 어셈블리에 완전히 서명을 하려면 공개 키와 개인 키에 대한 정보가 포함된 유효한 키 파일을 제공해야 합니다. 어셈블리 서명을 연기하려면 **서명만 연기** 확인란을 선택하고 공개 키에 대한 정보가 포함된 유효한 키 파일을 제공해야 합니다. 어셈블리 서명을 연기할 때 개인 키는 필요하지 않습니다. 자세한 내용은 [방법: 강력한 이름으로 어셈블리 서명](../../../framework/app-domains/how-to-sign-an-assembly-with-a-strong-name.md)을 참조하세요.  
   

@@ -1,18 +1,19 @@
 ---
-title: "관계형 데이터베이스를 azure로 마이그레이션"
-description: "기존.NET 응용 프로그램을 Azure 클라우드 및 Windows 컨테이너를 최신식 | 관계형 데이터베이스를 azure로 마이그레이션"
+title: 관계형 데이터베이스를 azure로 마이그레이션
+description: 기존.NET 응용 프로그램을 Azure 클라우드 및 Windows 컨테이너를 최신식 | 관계형 데이터베이스를 azure로 마이그레이션
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/26/2017
 ms.prod: .net
+ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 9189de8d083c8f9dea8c53b428e6cd34ae6dad15
-ms.sourcegitcommit: d3cfda0943364aaf6ccd574f55f584576c8a4fee
+ms.openlocfilehash: aa23d525c80d02ae19783a32f197a412276db36e
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="migrate-your-relational-databases-to-azure"></a>관계형 데이터베이스를 azure로 마이그레이션
 

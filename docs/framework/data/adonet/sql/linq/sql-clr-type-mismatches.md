@@ -1,27 +1,29 @@
 ---
-title: "SQL-CLR 형식 불일치"
-ms.custom: 
+title: SQL-CLR 형식 불일치
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 0a90c33f-7ed7-4501-ad5f-6224c5da8e9b
-caps.latest.revision: "2"
+caps.latest.revision: 2
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 6a027bd898409708dd6800908a6736f5853058df
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: 6006bb8fd1f6b49382c89acc2b55efcb035ffbf5
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="sql-clr-type-mismatches"></a>SQL-CLR 형식 불일치
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]에서는 개체 모델과 SQL Server 간의 변환을 대부분 자동화합니다. 하지만 정확한 변환이 불가능한 경우도 있습니다. 공용 언어 런타임 (CLR) 형식 및 SQL Server 데이터베이스 형식 간의 주요 이러한 불일치는 다음 섹션에 요약 되어 있습니다. 특정 형식 매핑과 함수로 변환 하는 방법에 대 한 자세한 정보를 볼 수 [SQL-CLR 형식 매핑](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mapping.md) 및 [데이터 형식 및 함수](../../../../../../docs/framework/data/adonet/sql/linq/data-types-and-functions.md)합니다.  
@@ -44,7 +46,7 @@ Select DateOfBirth From Customer Where CustomerId = @id
   
     -   **부울**합니다. 이 형식은 1비트 또는 더 큰 숫자나 문자열로 매핑될 수 있습니다. 리터럴은 동일한 값으로 계산되는 식(예: SQL의 `1=1`과 CLS의 `True`)에 매핑할 수 있습니다.  
   
-    -   **TimeSpan**. 이 형식은 두 `DateTime` 값의 차이를 나타내며 SQL Server의 `timestamp`에 대응되지 않습니다. 일부 경우에는 CLR의 <xref:System.TimeSpan?displayProperty=nameWithType>이 SQL Server의 `TIME` 형식에 매핑될 수 있습니다. SQL Server의 `TIME` 형식은 24시간 미만의 양수 값을 나타낼 때만 사용되지만 CLR의 <xref:System.TimeSpan>은 나타낼 수 있는 범위가 넓습니다.  
+    -   **TimeSpan**합니다. 이 형식은 두 `DateTime` 값의 차이를 나타내며 SQL Server의 `timestamp`에 대응되지 않습니다. 일부 경우에는 CLR의 <xref:System.TimeSpan?displayProperty=nameWithType>이 SQL Server의 `TIME` 형식에 매핑될 수 있습니다. SQL Server의 `TIME` 형식은 24시간 미만의 양수 값을 나타낼 때만 사용되지만 CLR의 <xref:System.TimeSpan>은 나타낼 수 있는 범위가 넓습니다.  
   
     > [!NOTE]
     >  [!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)]의 SQL Server 관련 <xref:System.Data.SqlTypes> 형식은 이러한 비교에 포함되지 않습니다.  
@@ -53,7 +55,7 @@ Select DateOfBirth From Customer Where CustomerId = @id
   
     -   **고정 길이 문자 형식**합니다. Transact SQL 유니코드와 비유니코드 범주를 구분 하 고 각 범주에는 3 가지 고유 형식: 고정 길이 `nchar` / `char`, 가변 길이 `nvarchar` / `varchar`, 및 크기가 더 큰 `ntext` / `text`합니다. 고정 길이 문자 형식은 문자를 검색하기 위해 CLR의 <xref:System.Char?displayProperty=nameWithType> 형식에 매핑될 수 있지만 실제 변환 및 동작은 동일한 형식과 일치하지 않습니다.  
   
-    -   **비트**합니다. `bit` 도메인에는 `Nullable<Boolean>`과 동일한 수의 값이 있지만 형식이 서로 다릅니다. `Bit`에 값이 `1` 및 `0` 대신 `true` / `false`, 부울 식에 동등 개체로 사용할 수 없습니다.  
+    -   **비트**합니다. `bit` 도메인에는 `Nullable<Boolean>`과 동일한 수의 값이 있지만 형식이 서로 다릅니다. `Bit` 에 값이 `1` 및 `0` 대신 `true` / `false`, 부울 식에 동등 개체로 사용할 수 없습니다.  
   
     -   **타임 스탬프**합니다. CLR의 <xref:System.TimeSpan?displayProperty=nameWithType> 형식과 달리 SQL Server의 `TIMESTAMP` 형식은 각 업데이트에 고유하고 <xref:System.DateTime> 값 간의 차이를 기반으로 하지 않는 데이터베이스에서 생성된 8바이트 숫자를 나타냅니다.  
   
@@ -118,7 +120,7 @@ or col1 != col2
   
  앞의 경우에서 SQL을 생성할 때 동등한 동작을 얻을 수는 있지만 변환이 사용자 의도를 정확하게 반영하지 못할 수 있습니다.  
   
- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]은 C# `null` 또는 [!INCLUDE[vbprvb](../../../../../../includes/vbprvb-md.md)] `nothing` 비교 의미 체계를 SQL에 적용하지 않습니다. 비교 연산자는 구문상 동등한 SQL 항목으로 변환됩니다. 의미 체계는 서버 또는 연결 설정에 정의된 SQL 의미 체계를 반영합니다. 설정을 변경하여 의미 체계를 변경할 수 있지만 기본 SQL Server 설정에서는 두 개의 null 값이 같지 않은 것으로 고려됩니다. 하지만 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]은 쿼리 변환에서 서버 설정을 고려하지 않습니다.  
+ [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 적용 하지 않는 C# `null` 또는 Visual Basic `nothing` 비교 의미 체계를 SQL 합니다. 비교 연산자는 구문상 동등한 SQL 항목으로 변환됩니다. 의미 체계는 서버 또는 연결 설정에 정의된 SQL 의미 체계를 반영합니다. 설정을 변경하여 의미 체계를 변경할 수 있지만 기본 SQL Server 설정에서는 두 개의 null 값이 같지 않은 것으로 고려됩니다. 하지만 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]은 쿼리 변환에서 서버 설정을 고려하지 않습니다.  
   
  리터럴 `null`(`nothing`)을 사용한 비교는 해당 SQL 버전(`is null` 또는 `is not null`)으로 변환됩니다.  
   
@@ -179,7 +181,7 @@ Where Col1 = Col2
     > [!NOTE]
     >  이 `Like` 연산자 동작은 C#에만 적용됩니다. Visual Basic `Like` 키워드는 변경되지 않습니다.  
   
--   오버플로는 항상 SQL에서 확인되지만 래핑을 방지하기 위해 [!INCLUDE[vbprvb](../../../../../../includes/vbprvb-md.md)]이 아닌 C#에서 명시적으로 지정해야 합니다. C1+C2가 C3에 저장되는 경우 정수 열 C1, C2 및 C3이 지정됩니다(Update T Set C3 = C1 + C2).  
+-   오버플로 항상 SQL에서 확인 되었지만 (Visual Basic의 경우)에 없는 C#에서 명시적으로 지정 되어야 래핑을 방지 하기 위해 합니다. C1+C2가 C3에 저장되는 경우 정수 열 C1, C2 및 C3이 지정됩니다(Update T Set C3 = C1 + C2).  
   
     ```  
     create table T3 (  
@@ -197,7 +199,7 @@ Where Col1 = Col2
   
 -   SQL은 대칭 산술 반올림을 수행하는 반면 [!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)]는 banker’s rounding을 사용합니다. 자세한 내용은 기술 자료 문서 196652를 참조하세요.  
   
--   기본적으로 일반 로캘의 경우 SQL에서 문자열 비교는 대/소문자를 구분하지 않습니다. Visual Basic 및 C#에서는 대/소문자를 구분합니다. 예를 들어 `s == "Food"`가 `s = "Food"`인 경우 [!INCLUDE[vbprvb](../../../../../../includes/vbprvb-md.md)](`s == "Food"`의 `s`) 및 `food`가 다른 결과를 생성할 수 있습니다.  
+-   기본적으로 일반 로캘의 경우 SQL에서 문자열 비교는 대/소문자를 구분하지 않습니다. Visual Basic 및 C#에서는 대/소문자를 구분합니다. 예를 들어 `s == "Food"` (`s = "Food"` Visual basic에서) 및 `s == "Food"` 다른 결과가 나타날 수 `s` 은 `food`합니다.  
   
     ```  
     -- Assume default US-English locale (case insensitive).  

@@ -17,11 +17,11 @@ ms.assetid: 9eafb6a4-dd9d-4866-85e8-0654c65abc44
 caps.latest.revision: 16
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 906fd2494dd952c08088b9b7e38dba4505780481
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: e8dfc091409e060e20970b0b6d6bc19b4fc2aeea
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="xml-cdata-literal-visual-basic"></a>XML CDATA 리터럴(Visual Basic)
 리터럴 나타내는 <xref:System.Xml.Linq.XCData> 개체입니다.  
@@ -34,13 +34,13 @@ ms.lasthandoff: 11/21/2017
   
 ## <a name="parts"></a>요소  
  `<![CDATA[`  
- 필수 요소. XML CDATA 섹션의 시작을 나타냅니다.  
+ 필수. XML CDATA 섹션의 시작을 나타냅니다.  
   
  `content`  
- 필수 요소. XML CDATA 섹션에 표시할 텍스트 콘텐츠입니다.  
+ 필수. XML CDATA 섹션에 표시할 텍스트 콘텐츠입니다.  
   
  `]]>`  
- 필수 요소. 섹션의 끝을 나타냅니다.  
+ 필수. 섹션의 끝을 나타냅니다.  
   
 ## <a name="return-value"></a>반환 값  
  <xref:System.Xml.Linq.XCData> 개체입니다.  
@@ -55,9 +55,9 @@ ms.lasthandoff: 11/21/2017
  XML 주석 리터럴에서 변수에 할당 하거나 XML 요소 리터럴에에 포함할 수 있습니다.  
   
 > [!NOTE]
->  XML 리터럴에 여러 줄으로 나누어 입력할 수 있지만 줄 연속 문자를 사용 하지 않습니다. 이렇게 하면 XML 문서에서 콘텐츠를 복사 하 고에 직접 붙여넣을 수 있습니다는 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 프로그램.  
+>  XML 리터럴에 여러 줄으로 나누어 입력할 수 있지만 줄 연속 문자를 사용 하지 않습니다. 따라서 XML 문서에서 콘텐츠를 복사 하 고 Visual Basic 프로그램에 직접 붙여넣을 수 있습니다.  
   
- [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 컴파일러를 호출 하는 XML CDATA 리터럴 변환는 <xref:System.Xml.Linq.XCData.%23ctor%2A> 생성자입니다.  
+ Visual Basic 컴파일러를 호출 하는 XML CDATA 리터럴 변환는 <xref:System.Xml.Linq.XCData.%23ctor%2A> 생성자입니다.  
   
 ## <a name="example"></a>예제  
  다음 예제에서는 텍스트를 포함 하는 CDATA 섹션 "리터럴을 포함 될 수 있습니다 \<XML > 태그"입니다.  

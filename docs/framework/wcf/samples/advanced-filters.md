@@ -1,24 +1,26 @@
 ---
-title: "고급 필터"
-ms.custom: 
+title: 고급 필터
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 8d81590f-e036-4f96-824a-4a187f462764
-caps.latest.revision: "23"
+caps.latest.revision: 23
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 357b57bb39ca31b48d21cb83209a72d0b3d12a62
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: a374765317751a5adc241941a0c0dc613a3ea2cc
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="advanced-filters"></a>고급 필터
 이 샘플에서는 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 라우팅 서비스를 보여 줍니다. 라우팅 서비스는 응용 프로그램에 내용 기반 라우터를 손쉽게 포함할 수 있게 해 주는 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 구성 요소입니다. 이 샘플에서는 라우팅 서비스를 사용하여 통신하도록 표준 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Calculator 샘플을 조정합니다. 이 샘플에서는 메시지 필터 및 메시지 필터 테이블을 사용하여 내용 기반 라우팅 논리를 정의하는 방법을 보여 줍니다.  
@@ -60,7 +62,7 @@ XPathMessageFilter xpathFilter = new XPathMessageFilter("/s12:Envelope/s12:Heade
 EndpointNameMessageFilter endpointNameFilter = new EndpointNameMessageFilter("calculatorEndpoint");  
 ```  
   
- 세 번째 필터는 <xref:System.ServiceModel.Dispatcher.PrefixEndpointAddressMessageFilter>입니다. 이 필터는 제공된 주소 접두사 또는 앞 부분과 일치하는 주소를 가진 끝점에 표시되는 모든 메시지를 일치시킵니다. 이 예제에서 주소 접두사는 "http://localhost/routingservice/router/rounding/"으로 정의됩니다. 즉, 주소가 "http://localhost/routingservice/router/rounding/*"로 지정된 모든 들어오는 메시지는 이 필터와 일치합니다. 이 경우 주소가 "http://localhost/routingservice/router/rounding/calculator"인 반올림 계산기 끝점에 표시되는 메시지가 이에 해당합니다.  
+ 세 번째 필터는 <xref:System.ServiceModel.Dispatcher.PrefixEndpointAddressMessageFilter>입니다. 이 필터는 제공된 주소 접두사 또는 앞 부분과 일치하는 주소를 가진 끝점에 표시되는 모든 메시지를 일치시킵니다. 이 예에서 주소 접두사를 이루어집니다 "http://localhost/routingservice/router/rounding/"입니다. 즉, 주소가 지정 되는 모든 들어오는 메시지 "http://localhost/routingservice/router/rounding/*"이이 필터와 일치 하 합니다. 이 경우,이 반올림 계산기 끝점에 표시 되는 메시지의 주소에 있는 "http://localhost/routingservice/router/rounding/calculator"입니다.  
   
 ```  
 PrefixEndpointAddressMessageFilter prefixAddressFilter = new PrefixEndpointAddressMessageFilter(new EndpointAddress("http://localhost/routingservice/router/rounding/"));  
@@ -91,7 +93,7 @@ RoundRobinMessageFilter roundRobinFilter2 = new RoundRobinMessageFilter("group1"
   
 2.  열려는 **솔루션 탐색기**선택, **솔루션 탐색기** 에서 **보기** 메뉴.  
   
-3.  [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)]에서 F5 키 또는 Ctrl+Shift+B를 누릅니다.  
+3.  Visual Studio에서 F5 또는 CTRL + SHIFT + B를 누릅니다.  
   
     1.  F5 키를 누를 때 필요한 프로젝트가 자동 시작 하려는 경우 솔루션을 마우스 오른쪽 단추로 클릭 하 고 선택 **속성**합니다. 선택 된 **시작 프로젝트** 노드 아래의 **공용 속성** 왼쪽된 창에서. 선택은 **여러 개의 시작 프로젝트** 라디오 단추 및 모든 프로젝트에 설정 된 **시작** 작업 합니다.  
   

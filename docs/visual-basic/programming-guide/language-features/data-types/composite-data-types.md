@@ -1,11 +1,12 @@
 ---
-title: "복합 데이터 형식(Visual Basic)"
-ms.custom: 
+title: 복합 데이터 형식(Visual Basic)
+ms.custom: ''
 ms.date: 04/25/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - classes [Visual Basic], composite data types
@@ -17,17 +18,17 @@ helpviewer_keywords:
 - classes [Visual Basic], composite types
 - types [Visual Basic], composite
 ms.assetid: 62970f2e-52c0-4369-8963-613820f1f434
-caps.latest.revision: "19"
+caps.latest.revision: 19
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: e9adb407757dbee2f7ac5a94118623a62212faec
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: caa832fc191ad925674e21b1237ac98328ce0bd7
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="composite-data-types-visual-basic"></a>복합 데이터 형식(Visual Basic)
-기본 데이터 형식 뿐만 아니라 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 공급 장치, 수 조합 하 여 만들려는 다른 형식의 항목 *복합 데이터 형식* 클래스, 구조체 및 배열, 등입니다. 복합 데이터 형식 및 다른 복합 형식의 기본 형식에서 만들 수 있습니다. 예를 들어 배열 멤버가 포함 된 구조 요소, 배열 또는 구조를 정의할 수 있습니다.  
+기본 데이터 형식, Visual Basic로 제공 하는 수 조합 하 여 만들려는 다른 형식의 항목 *복합 데이터 형식* 클래스, 구조체 및 배열, 등입니다. 복합 데이터 형식 및 다른 복합 형식의 기본 형식에서 만들 수 있습니다. 예를 들어 배열 멤버가 포함 된 구조 요소, 배열 또는 구조를 정의할 수 있습니다.  
   
 ## <a name="data-types"></a>데이터 형식  
  복합 형식이의 각 구성 요소의 데이터 형식과 다른 경우 예를 들어 배열을 `Integer` 요소 아닙니다는 `Integer` 데이터 형식.  
@@ -35,7 +36,7 @@ ms.lasthandoff: 11/21/2017
  배열 데이터 형식이 일반적으로 요소 형식, 괄호 및 쉼표를 사용 하 여 필요에 따라 표시 됩니다. 예를 들어 1 차원 배열이 `String` 요소로 표시 됩니다 `String()`와의 2 차원 배열을 `Boolean` 요소로 표시 됩니다 `Boolean(,)`합니다.  
   
 ## <a name="structure-types"></a>구조체 형식  
- 모든 구조를 포함 하는 단일 데이터 형식은 없습니다. 대신, 구조체의 각 정의 두 개의 구조 동일한 순서로 동일한 요소를 정의 하는 경우에 고유한 데이터 형식을 나타냅니다. 그러나 동일한 구조를 두 개 이상의 인스턴스를 만드는 경우 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 데이터 형식이 동일한 것으로 간주 합니다.  
+ 모든 구조를 포함 하는 단일 데이터 형식은 없습니다. 대신, 구조체의 각 정의 두 개의 구조 동일한 순서로 동일한 요소를 정의 하는 경우에 고유한 데이터 형식을 나타냅니다. 그러나 동일한 구조체의 두 개 이상의 인스턴스를 만들 경우 Visual Basic 데이터 형식이 동일한 것으로 간주 합니다.  
   
 ## <a name="tuples"></a>튜플
 

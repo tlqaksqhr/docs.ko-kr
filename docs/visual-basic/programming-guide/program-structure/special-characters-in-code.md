@@ -1,11 +1,12 @@
 ---
-title: "코드의 특수 문자(Visual Basic)"
-ms.custom: 
+title: 코드의 특수 문자(Visual Basic)
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 f1_keywords:
 - vb.)
@@ -36,17 +37,17 @@ helpviewer_keywords:
 - exclamation point operator (!)
 - Visual Basic code, special characters
 ms.assetid: 310dce0c-45b5-4e0d-83e9-32df258d2a3e
-caps.latest.revision: "21"
+caps.latest.revision: 21
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 11c5ef9ad41fc2362d9ba4f2cb5eb5b63a9ca31c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: b724c48320f74045d7192be6d6e269c00511ffc9
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="special-characters-in-code-visual-basic"></a>코드의 특수 문자(Visual Basic)
-경우에 따라 영문자 또는 숫자 하지 않은 문자가 즉, 사용자 코드에 특수 문자를 사용 해야 할 수도 있습니다. 문장 부호와 특수 문자는 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 문자 집합은 프로그램 텍스트에서 컴파일러 또는 컴파일된 프로그램이 수행 하는 작업 정의에 이르기까지 다양 한 용도로 사용 합니다. 이러한 특수 문자는 수행할 작업을 지정하지 않습니다.  
+경우에 따라 영문자 또는 숫자 하지 않은 문자가 즉, 사용자 코드에 특수 문자를 사용 해야 할 수도 있습니다. 문장 부호 및 Visual Basic 문자 집합의 특수 문자는 프로그램 텍스트에서 컴파일러 또는 컴파일된 프로그램이 수행 하는 작업 정의에 이르기까지 다양 한 용도로 사용 합니다. 이러한 특수 문자는 수행할 작업을 지정하지 않습니다.  
   
 ## <a name="parentheses"></a>괄호  
  와 같은 프로시저를 정의 하는 경우 괄호를 사용 하 여 한 `Sub` 또는 `Function`합니다. 모든 프로시저 인수 목록을 괄호로 묶어야 합니다. 또한 사용 하면 괄호를 논리 그룹으로 변수나 인수에 대 한 특히 다시 정의할 복잡 한 식에서 연산자 우선 순위의 기본 순서입니다. 다음은 이에 대한 예입니다.  
@@ -56,7 +57,7 @@ ms.lasthandoff: 11/21/2017
  값을 이전 코드의 실행 `d` 8.225의 값은 `e` 3입니다. 에 대 한 계산 `d` 는 기본 우선 순위를 사용 하 여 `/` 통해 `+` 와 같습니다 `d = b + (c / a)`합니다. 에 대 한 계산에 괄호 `e` 기본 우선 순위를 무시 합니다.  
   
 ## <a name="separators"></a>Separators  
- 구분 기호는 이름 기준의 제안지 않습니다: 여러 코드 섹션입니다. [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)], 구분 기호 문자는 콜론 (`:`). 별도 줄이 아니라 한 줄에 여러 개의 문을 포함할 구분 기호를 사용 합니다. 이 공간을 절약 하 고 코드의 가독성을 향상 됩니다. 다음 예제에는 콜론으로 구분 된 세 가지 문을 보여 줍니다.  
+ 구분 기호는 이름 기준의 제안지 않습니다: 여러 코드 섹션입니다. Visual Basic의 경우 구분 기호 문자는 콜론 (`:`). 별도 줄이 아니라 한 줄에 여러 개의 문을 포함할 구분 기호를 사용 합니다. 이 공간을 절약 하 고 코드의 가독성을 향상 됩니다. 다음 예제에는 콜론으로 구분 된 세 가지 문을 보여 줍니다.  
   
  [!code-vb[VbVbcnConventions#12](../../../visual-basic/programming-guide/language-features/codesnippet/VisualBasic/special-characters-in-code_2.vb)]  
   

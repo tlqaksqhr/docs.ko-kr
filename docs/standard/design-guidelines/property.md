@@ -1,29 +1,29 @@
 ---
-title: "속성 디자인"
-ms.custom: 
+title: 속성 디자인
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - member design guidelines, properties
 - properties [.NET Framework], design guidelines
 ms.assetid: 127cbc0c-cbed-48fd-9c89-7c5d4f98f163
-caps.latest.revision: "12"
+caps.latest.revision: 12
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 8f9c65dc6265daa793656177f066b97373f48ab8
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 6dcb164daea6809f0d0e9c221f182d5019385bc1
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="property-design"></a>속성 디자인
 속성 메서드 기술적으로 매우 유사 하지만는 해당 사용 시나리오 측면에서 매우 다릅니다. 이러한 스마트 필드도 이해 되어야 합니다. 필드가 호출 구문 및 메서드의 유연성을가지고 있습니다.  
@@ -94,9 +94,9 @@ ms.lasthandoff: 12/23/2017
   
  속성 값을 외부 요인 (방식 외의 다른 개체에서 메서드를 호출 하 여)을 통해 변경 되 면 발생 시키는 값이 변경 및 변경 된 개발자에 게 이벤트를 나타냅니다. 좋은 예로 `Text` 텍스트 상자 컨트롤의 속성입니다. 사용자의 텍스트를 입력 하는 경우는 `TextBox`, 속성 값이 자동으로 변경 합니다.  
   
- *일부 © 2005, 2009 Microsoft Corporation. 모든 권리 보유.*  
+ *Portions © 2005, 2009 Microsoft Corporation. 모든 권리 보유.*  
   
- *피어슨 교육, Inc.에서의 사용 권한으로 재인쇄 [Framework 디자인 지침: 규칙, 특징 및 다시 사용할 수 있는.NET 라이브러리를 2nd Edition에 대 한 패턴](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina 및 Brad Abrams 게시 하 여 2008 년 10 월 22 일 Microsoft Windows 개발 시리즈의 일부로: Addison Wesley Professional.*  
+ *피어슨 교육, Inc.에서의 사용 권한으로 재인쇄 [Framework 디자인 지침: 규칙, 특징 및 다시 사용할 수 있는.NET 라이브러리를 2nd Edition에 대 한 패턴](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina 및 Brad Abrams 게시 하 여 2008 년 10 월 22 일 Microsoft Windows 개발 시리즈의 일부로: Addison Wesley Professional.*  
   
 ## <a name="see-also"></a>참고 항목  
  [멤버 디자인 지침](../../../docs/standard/design-guidelines/member.md)  

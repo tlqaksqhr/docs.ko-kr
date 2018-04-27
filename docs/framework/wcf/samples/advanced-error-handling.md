@@ -1,24 +1,26 @@
 ---
-title: "고급 오류 처리"
-ms.custom: 
+title: 고급 오류 처리
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: ed54b687-78af-4eda-8507-9fd081bdea1a
-caps.latest.revision: "21"
+caps.latest.revision: 21
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 7771b9a4d5a6c0fb4349894afd348e9dece27fd9
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 35911a80e7686a1023f42115f785fb64d949aeff
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="advanced-error-handling"></a>고급 오류 처리
 이 샘플에서는 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 라우팅 서비스를 보여 줍니다. 라우팅 서비스는 응용 프로그램에 내용 기반 라우터를 손쉽게 포함할 수 있게 해 주는 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 구성 요소입니다. 이 샘플에서는 라우팅 서비스가 트랜잭션과 멀티캐스트 같은 보다 복잡한 다른 메시징 개념을 사용하여 오류에서 적절하게 복구하는 방법을 보여 줍니다.  
@@ -44,7 +46,7 @@ ms.lasthandoff: 12/22/2017
   
      [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)]에서 AdvancedErrorHandling.sln을 엽니다.  
   
-2.  키를 눌러 **F5** 또는 **CTRL + SHIFT + B** 에서 [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)]합니다.  
+2.  키를 눌러 **F5** 또는 **CTRL + SHIFT + B** Visual Studio에서.  
   
     1.  Ctrl+Shift+B를 사용하여 응용 프로그램을 빌드하는 경우에는 ./RoutingService/bin/debug/RoutingService.exe에서 응용 프로그램을 시작해야 합니다.  
   

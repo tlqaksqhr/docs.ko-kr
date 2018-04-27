@@ -1,10 +1,11 @@
 ---
-title: "Option Infer 문"
+title: Option Infer 문
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 f1_keywords:
 - vb.OptionInfer
@@ -16,14 +17,14 @@ helpviewer_keywords:
 - declaring variables [Visual Basic], inferred
 - inferred variable declaration
 ms.assetid: 4ad3e6e9-8f5b-4209-a248-de22ef6e4652
-caps.latest.revision: "72"
+caps.latest.revision: 72
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 1c8bd94bc8dd379edfda8c4350428684a5cda0b1
-ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
+ms.openlocfilehash: fb6aea2b1e8faf9afd7d252d8828358130fb5374
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="option-infer-statement"></a>Option Infer 문
 변수를 선언할 때 지역 형식 유추를 사용하도록 설정합니다.  
@@ -57,7 +58,7 @@ Option Infer가 설정된 경우의 IntelliSense
 Option Infer가 해제된 경우의 IntelliSense  
   
 > [!NOTE]
->  변수가 `Object`로 선언되면 프로그램을 실행하는 동안 런타임 형식이 변경될 수 있습니다. [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]작업을 수행 *boxing* 및 *unboxing* 간을 변환 하는 `Object` 및 값 형식이 하므로 실행 속도가 느려집니다. Boxing 및 unboxing 하는 방법에 대 한 정보를 참조 하십시오.는 [Visual Basic 언어 사양](../../../visual-basic/reference/language-specification/index.md)합니다.
+>  변수가 `Object`로 선언되면 프로그램을 실행하는 동안 런타임 형식이 변경될 수 있습니다. 작업을 수행 하는 Visual Basic *boxing* 및 *unboxing* 간을 변환 하는 `Object` 및 값 형식이 하므로 실행 속도가 느려집니다. Boxing 및 unboxing 하는 방법에 대 한 정보를 참조 하십시오.는 [Visual Basic 언어 사양](../../../visual-basic/reference/language-specification/index.md)합니다.
   
  형식 유추는 프로시저 수준에서 적용되며 클래스, 구조체, 모듈 또는 인터페이스의 프로시저 외부에는 적용되지 않습니다.  
   
@@ -90,12 +91,12 @@ Option Infer가 해제된 경우의 IntelliSense
 |예|아니요|`Dim qty As Integer`|변수는 데이터 형식의 기본값으로 초기화됩니다. 자세한 내용은 참조 [Dim 문](../../../visual-basic/language-reference/statements/dim-statement.md)합니다.|  
 |예|예|`Dim qty  As Integer = 5`|이니셜라이저의 데이터 형식을 지정한 데이터 형식으로 변환할 수 없으면 컴파일 시간 오류가 발생합니다.|  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 예제에서는 `Option Infer` 문이 지역 형식 유추를 사용하도록 설정하는 방법을 보여 줍니다.  
   
  [!code-vb[VbVbalrTypeInference#6](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/option-infer-statement_1.vb)]  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 예제에서는 변수가 `Object`로 식별되는 경우 런타임 형식이 달라질 수 있음을 보여 줍니다.  
   
  [!code-vb[VbVbalrTypeInference#11](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/option-infer-statement_2.vb)]  

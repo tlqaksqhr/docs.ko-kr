@@ -1,11 +1,12 @@
 ---
 title: Comparison Operators in Visual Basic
-ms.custom: 
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - comparison operators [Visual Basic], comparing strings
@@ -21,32 +22,32 @@ helpviewer_keywords:
 - comparison operators [Visual Basic], comparing numeric values
 - operators [Visual Basic], comparison
 ms.assetid: 0b570339-5407-474f-8421-e183a8b303ee
-caps.latest.revision: "13"
+caps.latest.revision: 13
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: d8bf37ad30f410251f18aea6747734fc24d42cd0
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 77c5520be63d6d05cc4b895b99b466cd8e486f6a
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="comparison-operators-in-visual-basic"></a>Comparison Operators in Visual Basic
 두 식을 비교 하 고 반환 하는 비교 연산자는 `Boolean` 값의 관계를 나타내는 값입니다. 숫자 값, 문자열, 비교 연산자 및 개체를 비교 연산자를 비교 하는 데는 연산자입니다. 세 가지 유형의 연산자를 모두 여기에 설명 되어 있습니다.  
   
 ## <a name="comparing-numeric-values"></a>숫자 값 비교  
- [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]6 명의 숫자 비교 연산자를 사용 하 여 숫자 값을 비교 합니다. 각 연산자는 숫자 값으로 계산 되는 두 식 피연산자 변수로 사용 합니다. 다음 표에서 연산자를 나열 하 고 각각의 예를 보여 줍니다.  
+ Visual Basic 6 명의 숫자 비교 연산자를 사용 하 여 숫자 값을 비교 합니다. 각 연산자는 숫자 값으로 계산 되는 두 식 피연산자 변수로 사용 합니다. 다음 표에서 연산자를 나열 하 고 각각의 예를 보여 줍니다.  
   
 |연산자|테스트 조건|예제|  
 |--------------|----------------------|--------------|  
-|`=`(같음)|두 번째 값으로 첫 번째 식이 같음의 값은?|`23`   `=`   `33    ' False`<br /><br /> `23`   `=`   `23    ' True`<br /><br /> `23`   `=`   `12    ' False`|  
-|`<>`(같지 않음)|첫 번째 식의 값과 같지 않은 값의 두 번째?|`23`   `<>`   `33    ' True`<br /><br /> `23`   `<>`   `23    ' False`<br /><br /> `23`   `<>`   `12    ' True`|  
-|`<`(보다 작음)|첫 번째 식의 값 보다 작지의 두 번째 값은?|`23`   `<`   `33    ' True`<br /><br /> `23`   `<`   `23    ' False`<br /><br /> `23`   `<`   `12    ' False`|  
-|`>`(보다 큼)|첫 번째 식의 값이 두 번째 값 보다 크면?|`23`   `>`   `33    ' False`<br /><br /> `23`   `>`   `23    ' False`<br /><br /> `23`   `>`   `12    ' True`|  
-|`<=`(작거나 같음)|두 번째 값 보다 작거나 같은 첫 번째 식의 값은?|`23`   `<=`   `33    ' True`<br /><br /> `23`   `<=`   `23    ' True`<br /><br /> `23`   `<=`   `12    ' False`|  
-|`>=`(보다 크거나 같음)|두 번째 값 보다 크거나 같은 경우 첫 번째 식의 값은?|`23`   `>=`   `33    ' False`<br /><br /> `23`   `>=`   `23    ' True`<br /><br /> `23`   `>=`   `12    ' True`|  
+|`=` (같음)|두 번째 값으로 첫 번째 식이 같음의 값은?|`23`   `=`   `33    ' False`<br /><br /> `23`   `=`   `23    ' True`<br /><br /> `23`   `=`   `12    ' False`|  
+|`<>` (같지 않음)|첫 번째 식의 값과 같지 않은 값의 두 번째?|`23`   `<>`   `33    ' True`<br /><br /> `23`   `<>`   `23    ' False`<br /><br /> `23`   `<>`   `12    ' True`|  
+|`<` (보다 작음)|첫 번째 식의 값 보다 작지의 두 번째 값은?|`23`   `<`   `33    ' True`<br /><br /> `23`   `<`   `23    ' False`<br /><br /> `23`   `<`   `12    ' False`|  
+|`>` (보다 큼)|첫 번째 식의 값이 두 번째 값 보다 크면?|`23`   `>`   `33    ' False`<br /><br /> `23`   `>`   `23    ' False`<br /><br /> `23`   `>`   `12    ' True`|  
+|`<=` (작거나 같음)|두 번째 값 보다 작거나 같은 첫 번째 식의 값은?|`23`   `<=`   `33    ' True`<br /><br /> `23`   `<=`   `23    ' True`<br /><br /> `23`   `<=`   `12    ' False`|  
+|`>=` (보다 크거나 같음)|두 번째 값 보다 크거나 같은 경우 첫 번째 식의 값은?|`23`   `>=`   `33    ' False`<br /><br /> `23`   `>=`   `23    ' True`<br /><br /> `23`   `>=`   `12    ' True`|  
   
 ## <a name="comparing-strings"></a>문자열 비교  
- [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]사용 하 여 문자열 비교는 [Like 연산자](../../../../visual-basic/language-reference/operators/like-operator.md) 숫자 비교 연산자 뿐 아니라 합니다. `Like` 연산자를 사용 하면 패턴을 지정할 수 있습니다. 문자열을 다음 패턴에 대해 비교 하 고, 일치 하는 경우 결과 `True`합니다. 그렇지 않으면 결과 `False`합니다. 숫자 연산자를 사용 하 여 비교할 수 `String` 다음 예제와 같이 정렬 순서에 따라 값입니다.  
+ Visual Basic을 사용 하 여 문자열 비교는 [Like 연산자](../../../../visual-basic/language-reference/operators/like-operator.md) 숫자 비교 연산자 뿐 아니라 합니다. `Like` 연산자를 사용 하면 패턴을 지정할 수 있습니다. 문자열을 다음 패턴에 대해 비교 하 고, 일치 하는 경우 결과 `True`합니다. 그렇지 않으면 결과 `False`합니다. 숫자 연산자를 사용 하 여 비교할 수 `String` 다음 예제와 같이 정렬 순서에 따라 값입니다.  
   
  `"73" < "9"`  
   
@@ -67,7 +68,7 @@ ms.lasthandoff: 11/21/2017
  정렬 순서는 이진 비교 또는의 설정에 따라 텍스트 비교를 기반으로 하며 `Option Compare`합니다. 자세한 내용은 참조 [옵션 비교 문](../../../../visual-basic/language-reference/statements/option-compare-statement.md)합니다.  
   
 ## <a name="comparing-objects"></a>개체 비교  
- [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]두 비교 하 여 개체 참조 변수의 [Is 연산자](../../../../visual-basic/language-reference/operators/is-operator.md) 및 [IsNot 연산자](../../../../visual-basic/language-reference/operators/isnot-operator.md)합니다. 동일한 개체 인스턴스를 두 개의 참조 변수 참조를 확인 하려면 이러한 연산자 중 하나를 사용할 수 있습니다. 다음은 이에 대한 예입니다.  
+ Visual Basic 비교 된 두 개체 참조 변수는 [Is 연산자](../../../../visual-basic/language-reference/operators/is-operator.md) 및 [IsNot 연산자](../../../../visual-basic/language-reference/operators/isnot-operator.md)합니다. 동일한 개체 인스턴스를 두 개의 참조 변수 참조를 확인 하려면 이러한 연산자 중 하나를 사용할 수 있습니다. 다음은 이에 대한 예입니다.  
   
  [!code-vb[VbVbalrOperators#65](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/comparison-operators_1.vb)]  
   

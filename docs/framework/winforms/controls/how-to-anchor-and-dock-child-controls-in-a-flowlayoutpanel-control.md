@@ -1,12 +1,13 @@
 ---
-title: "방법: FlowLayoutPanel 컨트롤의 자식 컨트롤 고정 및 도킹"
-ms.custom: 
+title: '방법: FlowLayoutPanel 컨트롤의 자식 컨트롤 고정 및 도킹'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-winforms
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - layout [Windows Forms], child controls
@@ -14,16 +15,17 @@ helpviewer_keywords:
 - controls [Windows Forms], child
 - child controls [Windows Forms], anchoring and docking
 ms.assetid: a2bcdfca-9b63-45e6-9c0e-3411015cba98
-caps.latest.revision: "15"
+caps.latest.revision: 15
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: bfcb802df01ce9d8f1cbaaf72dcf00d06028fb36
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 183e9ea4a8451b3d1ed59aa5200dd4da22e50cf1
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-anchor-and-dock-child-controls-in-a-flowlayoutpanel-control"></a>방법: FlowLayoutPanel 컨트롤의 자식 컨트롤 고정 및 도킹
 <xref:System.Windows.Forms.FlowLayoutPanel> 컨트롤은 자식 컨트롤의 <xref:System.Windows.Forms.Control.Anchor%2A> 및 <xref:System.Windows.Forms.Control.Dock%2A> 속성을 지원합니다.  
@@ -50,7 +52,7 @@ ms.lasthandoff: 12/22/2017
     > [!IMPORTANT]
     >  두 번째 단추는 첫 번째 단추와 동일한 너비를 사용합니다. <xref:System.Windows.Forms.FlowLayoutPanel> 컨트롤의 너비에 가로로 늘여지지 않습니다. 이는 <xref:System.Windows.Forms.FlowLayoutPanel> 컨트롤의 고정 및 도킹에 대한 일반적인 규칙입니다. 세로 흐름 방향에서는 <xref:System.Windows.Forms.FlowLayoutPanel> 컨트롤이 폼에서 가장 넓은 자식 컨트롤의 암시된 열 너비를 계산합니다. 이 열에서 <xref:System.Windows.Forms.Control.Anchor%2A> 또는 <xref:System.Windows.Forms.Control.Dock%2A> 속성을 가진 다른 모든 컨트롤은 이 암시된 열에 맞게 맞춰지거나 늘어납니다. 이 동작은 가로 흐름 방향에서도 비슷하게 작동합니다. <xref:System.Windows.Forms.FlowLayoutPanel> 컨트롤은 행에서 가장 높은 자식 컨트롤의 암시된 행 높이를 계산하고 이 행에서 도킹 또는 고정된 모든 자식 컨트롤이 암시된 행을 채우도록 맞춰지거나 크기가 조정됩니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 그림에서는 <xref:System.Windows.Forms.FlowLayoutPanel>의 파란색 단추를 기준으로 고정 및 도킹된 단추 4개를 보여 줍니다. <xref:System.Windows.Forms.FlowLayoutPanel.FlowDirection%2A>이 <xref:System.Windows.Forms.FlowDirection.LeftToRight>인 경우  
   
  ![FlowLayoutPanel 고정](../../../../docs/framework/winforms/controls/media/net-flpanchorexp.gif "NET_FLPanchorExp")  
@@ -69,7 +71,7 @@ ms.lasthandoff: 12/22/2017
   
 -   System, System.Data, System.Drawing 및 System.Windows.Forms 어셈블리에 대한 참조  
   
- [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)] 또는 [!INCLUDE[csprcs](../../../../includes/csprcs-md.md)]의 명령줄에서 이 예제를 빌드하는 방법에 대한 자세한 내용은 [명령줄에서 빌드](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md) 또는 [csc.exe를 사용한 명령줄 빌드](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)를 참조하세요. [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)]에서 코드를 새 프로젝트에 붙여넣어 이 예제를 빌드할 수도 있습니다.  [방법: Visual Studio를 사용하여 전체 Windows Forms 코드 예제 컴파일 및 실행](http://msdn.microsoft.com/library/Bb129228\(v=vs.110\))을 참조하세요.  
+ Visual Basic 또는 Visual C#에 대 한 명령줄에서이 예제를 빌드하는 방법에 대 한 정보를 참조 하십시오. [명령줄에서 빌드](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md) 또는 [사용한 명령줄 빌드 csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)합니다. [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] 에서 코드를 새 프로젝트에 붙여넣어 이 예제를 빌드할 수도 있습니다.  [방법: Visual Studio를 사용하여 전체 Windows Forms 코드 예제 컴파일 및 실행](http://msdn.microsoft.com/library/Bb129228\(v=vs.110\))을 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
  <xref:System.Windows.Forms.FlowLayoutPanel>  

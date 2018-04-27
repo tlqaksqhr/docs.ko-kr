@@ -23,17 +23,17 @@ helpviewer_keywords:
 - characters [WPF], curly brace
 - DynamicResource markup extensions [WPF]
 ms.assetid: 618dc745-8b14-4886-833f-486d2254bb78
-caps.latest.revision: ''
+caps.latest.revision: 26
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 5e6dec42d40039f9cc23ba976ecf421f6471888e
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: cf1d7fda58c3bca0f9d76c3c4d3b8d22545a9912
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="markup-extensions-and-wpf-xaml"></a>태그 확장명 및 WPF XAML
 이 항목에서는 XAML 태그 확장의 구문 규칙, 용도, 기반이 되는 클래스 개체 모델 등을 비롯한 개념에 대해 소개합니다. 태그 확장은 XAML 언어의 일반적 기능이며 XAML 서비스에 대한 .NET 구현의 일반적 기능입니다. 이 항목에서는 WPF XAML에서 사용할 태그 확장에 대해 자세히 설명합니다.  
@@ -64,7 +64,7 @@ ms.lasthandoff: 03/26/2018
 -   `x:Array`는 WPF 기본 요소 및 컨트롤 모델에서 제공하는 컬렉션 지원이 의도적으로 사용되지 않는 경우 XAML 구문에서 일반적인 배열 만들기를 지원합니다. 자세한 내용은 [x:Array 태그 확장](../../../../docs/framework/xaml-services/x-array-markup-extension.md)을 참조하세요.  
   
 > [!NOTE]
->  `x:` 접두사는 XAML 파일 또는 프로덕션의 루트 요소에서 XAML 언어 내장 형식의 일반적인 XAML 네임스페이스 매핑에 사용됩니다. 예를 들어 WPF 응용 프로그램용 [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)] 템플릿은 이 `x:` 매핑을 사용하여 XAML 파일을 초기화합니다. 사용자 고유의 XAML 네임스페이스 매핑에서 다른 접두사 토큰을 선택할 수 있지만 이 설명서에서는 특정 프레임워크와 관련되지 않은 WPF 기본 네임스페이스나 다른 XAML 네임스페이스와 달리 XAML 언어의 XAML 네임스페이스에서 정의된 부분인 해당 엔터티를 식별하는 방법으로 기본 `x:` 매핑을 가정합니다.  
+>  `x:` 접두사는 XAML 파일 또는 프로덕션의 루트 요소에서 XAML 언어 내장 형식의 일반적인 XAML 네임스페이스 매핑에 사용됩니다. WPF 응용 프로그램에 대 한 Visual Studio 템플릿이를 사용 하 여 XAML 파일을 시작 하는 예를 들어 `x:` 매핑. 사용자 고유의 XAML 네임스페이스 매핑에서 다른 접두사 토큰을 선택할 수 있지만 이 설명서에서는 특정 프레임워크와 관련되지 않은 WPF 기본 네임스페이스나 다른 XAML 네임스페이스와 달리 XAML 언어의 XAML 네임스페이스에서 정의된 부분인 해당 엔터티를 식별하는 방법으로 기본 `x:` 매핑을 가정합니다.  
   
 <a name="WPF_Specific_Markup_Extensions"></a>   
 ## <a name="wpf-specific-markup-extensions"></a>WPF 관련 태그 확장  
@@ -112,7 +112,7 @@ ms.lasthandoff: 03/26/2018
   
 <a name="EscapeSequences"></a>   
 ## <a name="escape-sequences-and-markup-extensions"></a>이스케이프 시퀀스 및 태그 확장  
- XAML 프로세서의 특성 처리에서는 중괄호를 태그 확장 시퀀스의 표시기로 사용합니다. 또한 필요한 경우에는 리터럴 중괄호 다음에 비어 있는 중괄호 쌍을 사용하여 이스케이프 시퀀스를 입력함으로써 리터럴 중괄호 문자 특성 값을 생성할 수 있습니다. 참조 [{} 이스케이프 시퀀스 태그 확장](../../xaml-services/escape-sequence-markup-extension.md)합니다.  
+ XAML 프로세서의 특성 처리에서는 중괄호를 태그 확장 시퀀스의 표시기로 사용합니다. 또한 필요한 경우에는 리터럴 중괄호 다음에 비어 있는 중괄호 쌍을 사용하여 이스케이프 시퀀스를 입력함으로써 리터럴 중괄호 문자 특성 값을 생성할 수 있습니다. 참조 [ {} 이스케이프 시퀀스-태그 확장](../../xaml-services/escape-sequence-markup-extension.md)합니다.  
   
 <a name="Nesting"></a>   
 ## <a name="nesting-markup-extensions-in-xaml-usage"></a>XAML에서 중첩 태그 확장 사용법  

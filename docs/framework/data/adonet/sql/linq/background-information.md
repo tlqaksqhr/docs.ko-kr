@@ -1,24 +1,26 @@
 ---
-title: "배경 정보"
-ms.custom: 
+title: 배경 정보
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 724888f2-d3f1-4bea-b9a1-a0adb8a00f3b
-caps.latest.revision: "2"
+caps.latest.revision: 2
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 7adb74578bcab646744ea674bd6a07017101896e
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: 10e0facae7856db2f169503ca89facb0194e9237
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="background-information"></a>배경 정보
 이 단원의 항목은 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 사용에 대한 개념 및 기본 사용법을 확장하는 절차와 관련되어 있습니다.  
@@ -29,7 +31,7 @@ ms.lasthandoff: 01/17/2018
   
 -   에 참여는 [LINQ 포럼](http://go.microsoft.com/fwlink/?LinkId=76488)전문가 함께 보다 복잡 한 주제를 자세히 논의할 수 있는, 합니다.  
   
--   [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 및 C# 코드 예제를 통해 [!INCLUDE[vbprvb](../../../../../../includes/vbprvb-md.md)] 기술에 대해 자세히 설명하는 백서를 학습합니다. 자세한 내용은 참조 [LINQ to SQL: 관계형 데이터에 대 한 쿼리.NET Language-Integrated](http://go.microsoft.com/fwlink/?LinkId=93205)합니다.  
+-   에 대해 자세히 설명 하는 백서를 학습할 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 기술, Visual Basic 및 C# 코드 예제를 완료 합니다. 자세한 내용은 참조 [LINQ to SQL: 관계형 데이터에 대 한 쿼리.NET Language-Integrated](http://go.microsoft.com/fwlink/?LinkId=93205)합니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
  [ADO.NET 및 LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/ado-net-and-linq-to-sql.md)  

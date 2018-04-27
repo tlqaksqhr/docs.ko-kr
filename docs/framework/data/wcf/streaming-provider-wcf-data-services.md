@@ -1,12 +1,13 @@
 ---
-title: "스트리밍 공급자(WCF Data Services)"
-ms.custom: 
+title: 스트리밍 공급자(WCF Data Services)
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework-oob
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -17,16 +18,17 @@ helpviewer_keywords:
 - streaming data provider [WCF Data Services]
 - WCF Data Services, streams
 ms.assetid: f0978fe4-5f9f-42aa-a5c2-df395d7c9495
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: f965bc46c62742c0e2ffb0a7f8ae2e09eca5dc1c
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: bc66d4154f60e46e53de8ca72596e133dc84eb97
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="streaming-provider-wcf-data-services"></a>스트리밍 공급자(WCF Data Services)
 데이터 서비스에서 BLOB(Binary Large Object) 데이터를 노출할 수 있습니다. 이 이진 데이터는 비디오 및 오디오 스트림, 이미지, 문서 파일 또는 다른 형식의 이진 미디어를 나타낼 수 있습니다. 데이터 모델의 엔터티에 이진 속성이 하나 이상 포함되어 있는 경우 데이터 서비스가 이 이진 데이터를 응답 피드의 항목 안에 base-64로 인코딩하여 반환합니다. 로드 하 고 이런이 방식으로 큰 이진 데이터를 직렬화 하는 작업 성능이 저하 될 수 있으므로 [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] 속한 엔터티와 독립적으로 이진 데이터를 검색 하기 위한 메커니즘을 정의 합니다. 이 작업은 엔터티의 이진 데이터를 하나 이상의 데이터 스트림으로 구분하여 수행됩니다.  
@@ -61,7 +63,7 @@ ms.lasthandoff: 01/19/2018
   
  또한 데이터 모델을 정의하는 .edmx 또는 .csdl 파일의 루트나 엔터티에 `xmlns:m=http://schemas.microsoft.com/ado/2007/08/dataservices/metadata` 네임스페이스를 추가해야 합니다.  
   
- [!INCLUDE[crexample](../../../../includes/crexample-md.md)]사용 하는 데이터 서비스는 [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] 공급자 미디어 리소스를 노출 하 고 게시물을 참조 [데이터 서비스 스트리밍 공급자 시리즈: 스트리밍 공급자 (파트 1) 구현](http://go.microsoft.com/fwlink/?LinkID=198989)합니다.  
+ 사용 하는 데이터 서비스에 대 한 예제는 [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] 공급자 미디어 리소스를 노출 하 고 게시물을 참조 [데이터 서비스 스트리밍 공급자 시리즈: 스트리밍 공급자 (파트 1) 구현](http://go.microsoft.com/fwlink/?LinkID=198989)합니다.  
   
  **리플렉션 공급자**  
  엔터티가 미디어 링크 항목임을 나타내려면 리플렉션 공급자에서 엔터티 형식을 정의하는 클래스에 <xref:System.Data.Services.Common.HasStreamAttribute>를 추가합니다.  
@@ -122,7 +124,7 @@ ms.lasthandoff: 01/19/2018
   
     -   미디어 리소스인 이진 속성이 데이터 모델에 포함되면 안 됩니다. 데이터 모델에서 노출된 모든 속성은 응답 피드의 항목에 반환됩니다.  
   
-    -   큰 이진 스트림의 성능을 높이려면 사용자 지정 스트림 클래스를 만들어 데이터베이스에 이진 데이터를 저장하는 것이 좋습니다. 이 클래스는 <xref:System.Data.Services.Providers.IDataServiceStreamProvider.GetWriteStream%2A> 구현에 의해 반환되며 이진 데이터를 청크로 데이터베이스에 보냅니다. 에 대 한는 [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] 데이터베이스 권장 이진 데이터가 1MB 보다 클 경우 데이터베이스에 데이터를 스트리밍하려면 FILESTREAM을 사용 하는 합니다.  
+    -   큰 이진 스트림의 성능을 높이려면 사용자 지정 스트림 클래스를 만들어 데이터베이스에 이진 데이터를 저장하는 것이 좋습니다. 이 클래스는 <xref:System.Data.Services.Providers.IDataServiceStreamProvider.GetWriteStream%2A> 구현에 의해 반환되며 이진 데이터를 청크로 데이터베이스에 보냅니다. SQL Server 데이터베이스에 대 한 이진 데이터가 1MB 보다 클 경우 데이터베이스에 데이터를 스트리밍하려면 FILESTREAM을 사용 하는 것이 좋습니다.  
   
     -   사용하는 데이터베이스가 데이터 서비스를 통해 받을 큰 이진 스트림을 저장하도록 디자인되었는지 확인합니다.  
   

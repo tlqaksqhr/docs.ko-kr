@@ -1,7 +1,7 @@
 ---
 title: '&lt;AppContextSwitchOverrides&gt; 요소'
 ms.custom: ''
-ms.date: 03/28/2018
+ms.date: 04/19/2018
 ms.prod: .net-framework
 ms.technology:
 - dotnet-bcl
@@ -19,11 +19,11 @@ ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: a17d67a1c6143897802bb15b983a9a909fd5949c
-ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
+ms.openlocfilehash: 146416a9872a8444316c2e4a754067b82030a81d
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="ltappcontextswitchoverridesgt-element"></a>&lt;AppContextSwitchOverrides&gt; 요소
 <xref:System.AppContext> 클래스에 사용되는 스위치를 하나 이상 정의하여 새 기능의 옵트아웃 메커니즘을 제공합니다.  
@@ -80,12 +80,13 @@ ms.lasthandoff: 04/09/2018
 |`Switch.System.Drawing.Printing.`</br>`OptimizePrintPreview`|컨트롤 여부의 성능을 <xref:System.Windows.Forms.PrintPreviewDialog> 네트워크 프린터에 대해 최적화 됩니다. 자세한 내용은 참조 [PrintPreviewDialog 컨트롤 개요](../../../winforms/controls/printpreviewdialog-control-overview-windows-forms.md)합니다.|.NET Framework 4.6|
 |`Switch.System.Globalization.NoAsyncCurrentCulture`|비동기 작업 호출 스레드의 컨텍스트를 전달 하지 않는 있는지 여부를 제어 합니다. 자세한 내용은 참조 [CurrentCulture 및 CurrentUICulture 흐름 태스크에 걸쳐](~/docs/framework/migration-guide/retargeting/4.5.2-4.6.md#currentculture-and-currentuiculture-flow-across-tasks)합니다.|.NET Framework 4.6|  
 |`Switch.System.IdentityModel.`<br/>`DisableMultipleDNSEntriesInSANCertificate`|컨트롤 여부는 <xref:System.IdentityModel.Claims.X509CertificateClaimSet.FindClaims%2A?displayProperty=nameWithType> 메서드 클레임 유형을 마지막 DNS 항목만 일치 시 키 려 합니다. 자세한 내용은 [완화: X509CertificateClaimSet.FindClaims 메서드](~/docs/framework/migration-guide/mitigation-x509certificateclaimset-findclaims-method.md)를 참조하십시오.|.NET Framework 4.6.1|  
+|`Switch.System.IdentityModel.`<br/>`EnableCachedEmptyDefaultAuthorizationContext`|AuthorizationContext.Empty 변경할 수 있는 개체를 반환할 수 있도록 할지 여부를 제어 합니다.|.NET Framework 4.6|  
 |`Switch.System.IO.BlockLongPaths`|컨트롤 있는지 여부를 보다 긴 경로 `MAX_PATH` (260 자)를 throw 한 <xref:System.IO.PathTooLongException>합니다. 자세한 내용은 참조 [긴 경로 지원](~/docs/framework/migration-guide/retargeting/4.6.1-4.6.2.md#long-path-support)합니다.|.NET Framework 4.6.2|  
 |`Switch.System.IO.Compression.ZipFile.`<br/>`UseBackslash`|백슬래시를 사용 하 여 ("\\") 대신 슬래시 ("/")로 경로 구분 기호에는 <xref:System.IO.Compression.ZipArchiveEntry.FullName%2A?displayProperty=nameWithType> 속성입니다. 자세한 내용은 참조 [완화: ZipArchiveEntry.FullName 경로 구분 기호](~/docs/framework/migration-guide/mitigation-ziparchiveentry-fullname-path-separator.md)합니다.|.NET Framework 4.6.1|  
 |`Switch.System.IO.Ports.`<br/>`DoNotCatchSerialStreamThreadExceptions`|운영 체제 throw 된 예외를 사용 하 여 만든 백그라운드 스레드에서 있는지 여부를 제어 <xref:System.IO.Ports.SerialPort> 스트림을 프로세스를 종료 합니다.|.NET Framework 4.7.1| 
 |`Switch.System.IO.`<br/>`UseLegacyPathHandling`|레거시 경로 정규화 사용 되 고 URI 경로에서 사용할 수 있는지 여부를 제어는 <xref:System.IO.Path.GetDirectoryName%2A?displayProperty=nameWithType> 및 <xref:System.IO.Path.GetPathRoot%2A?displayProperty=nameWithType> 메서드. 자세한 내용은 참조 [완화: 경로 정규화](~/docs/framework/migration-guide/mitigation-path-normalization.md) 및 [완화: 경로 콜론 검사](~/docs/framework/migration-guide/mitigation-path-colon-checks.md)합니다.|.NET Framework 4.6.2|  
 |`Switch.System.`<br/>`MemberDescriptorEqualsReturnsFalseIfEquivalent`|같음 비교에 대 한 테스트가 있는지 여부를 제어는 <xref:System.ComponentModel.MemberDescriptor.Category%2A?displayProperty=nameWithType> 한 개체의 속성은 <xref:System.ComponentModel.MemberDescriptor.Description%2A?displayProperty=nameWithType> 두 번째 개체의 속성입니다. 자세한 내용은 참조 [MemberDescriptor.Equals 잘못 구현](~/docs/framework/migration-guide/retargeting/4.6.1-4.6.2.md#incorrect-implementation-of-memberdescriptorequals)합니다.|.NET Framework 4.6.2|  
- `Switch.System.Net.`<br/>`DontCheckCertificateEKUs`|인증서 확장 된 키 사용 (EKU) 개체 식별자 (OID) 유효성 검사를 사용 하지 않습니다. (Eku 확장) 확장 된 키 사용 확장은 키를 사용 하는 응용 프로그램을 나타내는 개체 식별자 (Oid)의 컬렉션입니다.|.NET Framework 4.6|
+ `Switch.System.Net.`<br/>`DontCheckCertificateEKUs`|인증서 확장 된 키 사용 (EKU) 개체 식별자 (OID) 유효성 검사를 사용 하지 않습니다. EKU(향상된 키 사용) 확장은 키를 사용하는 응용 프로그램을 나타내는 OID(개체 식별자)의 모음입니다.|.NET Framework 4.6|
 |`Switch.System.Net.`<br/>`DontEnableSchSendAuxRecord`|SCH_SEND_AUX_RECORD의 사용을 비활성화 하 여 완화 방법은 TLS1.0 브라우저 악용에 대해 SSL/TLS (비스 트)를 사용 하지 않도록 설정 합니다.|.NET Framework 4.6|
 |`Switch.System.Net.`<br/>`DontEnableSchUseStrongCrypto`|컨트롤 여부는 <xref:System.Net.ServicePointManager?displayProperty=nameWithType> 및 <xref:System.Net.Security.SslStream?displayProperty=nameWithType> 클래스는 SSL 3.0 프로토콜을 사용할 수 있습니다. 자세한 내용은 [완화: TLS 프로토콜](~/docs/framework/migration-guide/mitigation-tls-protocols.md)을 참조하십시오.|.NET Framework 4.6|
 |`Switch.System.Net.`<br/>`DontEnableSystemDefaultTlsVersions`|기본값은 t l s 12, Tls11, Tls 되돌립니다 SystemDefault TLS 버전을 사용 하지 않도록 설정 합니다.|.NET Framework 4.7|
@@ -100,10 +101,13 @@ ms.lasthandoff: 04/09/2018
 |`Switch.System.ServiceModel.`<br/>`AllowUnsignedToHeader`|결정 여부는 `TransportWithMessageCredential` 보안 모드에서는 메시지를 부호 없는 "to" 헤더가 합니다. 옵트인 스위치입니다. 자세한 내용은 참조 [.NET Framework 4.6.1의에서 런타임 변경 내용](https://msdn.microsoft.com/library/mt592686.aspx#WCF)합니다.|.NET Framework 4.6.1| 
 |`Switch.System.ServiceModel.`<br/>`DisableAddressHeaderCollectionValidation`>|컨트롤 여부는 <xref:System.ServiceModel.Channels.AddressHeaderCollection.%23ctor(System.Collections.Generic.IEnumerable{System.ServiceModel.Channels.AddressHeader})> 생성자 throw는 <xref:System.ArgumentException> 요소 중 하나 이면 `null`합니다.|.NET Framework 4.7.1| 
 |`Switch.System.ServiceModel.`<br />`DisableCngCertificates`|CSG 키 저장소 공급자 예외가 throw X509 사용 시도가 함께 인증서 있는지 여부를 결정 합니다. 자세한 내용은 참조 [WCF 전송 보안 지원 CNG를 사용 하 여 저장 된 인증서를](~/docs/framework/migration-guide/retargeting/4.6.1-4.6.2.md#wcf-transport-security-supports-certificates-stored-using-cng)합니다.|.NET Framework 4.6.1|
+|`Switch.System.ServiceModel.`<br/>`DisableExplicitConnectionCloseHeader`|자체 호스팅된 서비스와 HTTP 전송을 사용 하는 경우이 값을 설정 `true` 경우 추가 하는 응용 프로그램을 무시 하는 WCF에서 `Connection: close` 헤더는 요청에 대 한 응답 헤더를 합니다. 이 값을 설정 `false` 을 추가할 수는 `Connection: close` 응답 헤더에 대 한 응답을 보낸 후 요청 소켓을 닫을 결과적 헤더입니다.|.NET Framework 4.6|
 |`Switch.System.ServiceModel.`<br/>`DisableOperationContextAsyncFlow`|재진입 서비스의 인스턴스를 한 번에 실행의 단일 스레드로 제한 하 여 발생 하는 교착 상태를 처리 합니다.|.NET Framework 4.6.2|
 |`Switch.System.ServiceModel.`<br/>`DisableUsingServicePointManagerSecurityProtocols`|와 함께 `Switch.System.Net.DontEnableSchUseStrongCrypto`, TLS 1.1 및 TLS 1.2 WCF 메시지 보안을 사용할지 여부를 결정 합니다.|.NET Framework 4.7 |    
+|`Switch.System.ServiceModel.`<br/>`DontEnableSystemDefaultTlsVersions`|값이 `false` 운영 체제의 프로토콜을 선택 하려면 허용 하는 기본 구성을 설정 합니다. 값이 `true` 기본값을 사용할 수 있는 가장 높은 프로토콜을 설정 합니다. (에서도 다운로드 가능 서비스 이전 프레임 워크 버전의 분기)|.NET Framework 4.7.1|
 |`Switch.System.ServiceModel.`<br/>`UseSha1InMsmqEncryptionAlgorithm`|서명 알고리즘 WCF에서 MSMQ 메시지에 대 한 기본 메시지 SHA1 또는 s h a 256 인지 확인 합니다.|.NET Framework 4.7.1|
 |`Switch.System.ServiceModel.`<br/>`UseSha1InPipeConnectionGetHashAlgorithm`|WCF는 SHA1, SHA256 해시 명명 된 파이프에 대 한 임의의 이름을 생성을 사용 하는지 여부를 제어 합니다.|.NET Framework 4.7.1|
+|`Switch.System.ServiceModel.Internals`<br/>`IncludeNullExceptionMessageInETWTrace`|throw 할지를 제어는 [NullReferenceException](xref:System.NullReferenceException) 예외 메시지가 null입니다.|.NET Framework 4.7|  
 |`Switch.System.ServiceProcess.`<br/>`DontThrowExceptionsOnStart`|호출자에 게 서비스를 시작할 때 발생 한 예외는 전파 하는지 여부를 제어는 <xref:System.ServiceProcess.ServiceBase.Run%2A?displayProperty=nameWithType> 메서드.|.NET Framework 4.7.1|
 |`Switch.System.Windows.Controls.Grid.`<br/>`StarDefinitionsCanExceedAvailableSpace` |Windows Presentation Foundation 오래 된 알고리즘에 적용 되는지 여부를 결정 (`true`) 또는 새 알고리즘 (`false`)에서 공간을 할당 \*-열입니다. 자세한 내용은 [완화: Grid 컨트롤의 별 열 공간 할당](Mitigation:%20Grid%20Control's%20Space%20Allocation%20to%20Star-columns.md)을 참조하세요. |.NET Framework 4.7 |
 |`Switch.System.Windows.Controls.TabControl.`<br/>`SelectionPropertiesCanLagBehindSelectionChangedEvent`|컨트롤 선택 발생 하기 전에 선택한 값 속성의 값을 업데이트 하는지 여부는 선택기 또는 탭 컨트롤에서 항상 변경 이벤트.|.NET Framework 4.7.1|

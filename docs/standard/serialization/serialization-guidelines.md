@@ -1,5 +1,5 @@
 ---
-title: "Serialization 지침"
+title: Serialization 지침
 ms.date: 03/30/2017
 ms.prod: .net
 ms.topic: article
@@ -10,18 +10,18 @@ helpviewer_keywords:
 - serialization, guidelines
 - binary serialization, guidelines
 ms.assetid: ebbeddff-179d-443f-bf08-9c373199a73a
-caps.latest.revision: "11"
+caps.latest.revision: 11
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 27423607959af4b3201da8d83630b7827b2eeeb6
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 60ae369bcf3d1e874c01c9daa8db097b3c1aee5f
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="serialization-guidelines"></a>Serialization 지침
 이 문서에서는 serialize될 API를 디자인할 때 고려해야 할 지침을 보여 줍니다.  
@@ -146,11 +146,11 @@ ms.lasthandoff: 12/23/2017
      [!code-csharp[SerializationGuidelines#11](../../../samples/snippets/csharp/VS_Snippets_CFX/serializationguidelines/cs/source.cs#11)]
      [!code-vb[SerializationGuidelines#11](../../../samples/snippets/visualbasic/VS_Snippets_CFX/serializationguidelines/vb/source.vb#11)]  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>참고자료  
  [데이터 계약 사용](../../../docs/framework/wcf/feature-details/using-data-contracts.md)  
  [데이터 계약 직렬 변환기](../../../docs/framework/wcf/feature-details/data-contract-serializer.md)  
  [데이터 계약 직렬 변환기에서 지원하는 형식](../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md)  
  [이진 serialization](binary-serialization.md)  
- [원격 개체](http://msdn.microsoft.com/library/515686e6-0a8d-42f7-8188-73abede57c58)  
+ [원격 개체](https://msdn.microsoft.com/library/515686e6-0a8d-42f7-8188-73abede57c58)  
  [XML 및 SOAP serialization](xml-and-soap-serialization.md)  
  [보안 및 Serialization](../../../docs/framework/misc/security-and-serialization.md)

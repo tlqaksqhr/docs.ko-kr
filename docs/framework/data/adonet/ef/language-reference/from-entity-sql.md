@@ -1,24 +1,26 @@
 ---
 title: FROM(Entity SQL)
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: ff3e3048-0d5d-4502-ae5c-9187fcbd0514
-caps.latest.revision: "3"
+caps.latest.revision: 3
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 115fb8dfef46c74837d774012babdef9db915341
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: 64d41359ba8a4131acb38b128238065ee2545f80
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="from-entity-sql"></a>FROM(Entity SQL)
 사용 되는 컬렉션을 지정 [선택](../../../../../../docs/framework/data/adonet/ef/language-reference/select-entity-sql.md) 문.  
@@ -107,7 +109,7 @@ LOB.Customers
 >  [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)]과 달리, [!INCLUDE[esql](../../../../../../includes/esql-md.md)]에서는 명시적 중첩 해제 단계가 필요하지 않습니다.  
   
 > [!NOTE]
->  `CROSS` 및 `OUTER APPLY` 연산자는 [!INCLUDE[ssVersion2005](../../../../../../includes/ssversion2005-md.md)]에서 도입되었습니다. 경우에 따라 쿼리 파이프라인에서 `CROSS APPLY` 및/또는 `OUTER APPLY` 연산자가 포함된 Transact-SQL을 생성할 수 있습니다. [!INCLUDE[ssNoVersion](../../../../../../includes/ssnoversion-md.md)]보다 이전 버전의 [!INCLUDE[ssVersion2005](../../../../../../includes/ssversion2005-md.md)]를 비롯한 일부 백엔드 공급자는 이러한 연산자를 지원하지 않으므로 해당 백엔드 공급자에서 이 쿼리를 실행할 수 없습니다.  
+>  `CROSS` 및 `OUTER APPLY` 연산자는 [!INCLUDE[ssVersion2005](../../../../../../includes/ssversion2005-md.md)]에서 도입되었습니다. 경우에 따라 쿼리 파이프라인에서 `CROSS APPLY` 및/또는 `OUTER APPLY` 연산자가 포함된 Transact-SQL을 생성할 수 있습니다. 때문에 SQL Server의 버전을 비롯 한 일부 백엔드 공급자 보다 이전 [!INCLUDE[ssVersion2005](../../../../../../includes/ssversion2005-md.md)]를 이러한 연산자를 지원 하지 않으므로 해당 백엔드 공급자에서 쿼리를 실행할 수 없습니다.  
 >   
 >  출력 쿼리에 `CROSS APPLY` 및/또는 `OUTER APPLY` 연산자가 포함될 수 있는 일부 일반적인 시나리오는 페이징이 포함된 상호 관련된 하위 쿼리, 상호 관련된 하위 쿼리 또는 탐색으로 생성된 컬렉션에 대한 AnyElement, 요소 선택기를 허용하는 그룹화 메서드를 사용하는 LINQ 쿼리, `CROSS APPLY` 또는 `OUTER APPLY`가 명시적으로 지정된 쿼리, `DEREF` 구문에 대한 `REF` 구문이 있는 쿼리 등입니다.  
   

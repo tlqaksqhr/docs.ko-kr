@@ -1,26 +1,27 @@
 ---
 title: Programming Model Item Tree
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 0229efde-19ac-4bdc-a187-c6227a7bd1a5
-caps.latest.revision: "11"
+caps.latest.revision: 11
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 83e804a3ede525510b5c46b494882656c74591b8
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 497aa75214bdbbefa7f09ef56fe96926c2461ed6
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="programming-model-item-tree"></a>Programming Model Item Tree
-이 샘플에서는 <xref:System.Activities.Presentation.Model.ModelItem> 트리 뷰에서 선언적 데이터 바인딩을 사용하여 [!INCLUDE[avalon1](../../../../includes/avalon1-md.md)]을 탐색하는 방법을 보여 줍니다.  
+이 샘플에서는 탐색 하는 방법을 보여 줍니다.는 <xref:System.Activities.Presentation.Model.ModelItem> Windows Presentation Foundation (WPF) 트리 뷰에서 선언적 데이터 바인딩을 사용 하 여 트리 합니다.  
   
 ## <a name="sample-details"></a>샘플 세부 정보  
  <xref:System.Activities.Presentation.Model.ModelItem> 트리는 [!INCLUDE[wfd1](../../../../includes/wfd1-md.md)] 인프라에서 편집할 기본 인스턴스에 대한 데이터를 노출하는 데 사용되는 추상화입니다. 다음 그림에서는 [!INCLUDE[wfd2](../../../../includes/wfd2-md.md)] 내의 다양한 인프라 계층을 보여 줍니다.  

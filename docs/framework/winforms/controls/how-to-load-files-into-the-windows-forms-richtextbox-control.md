@@ -1,12 +1,13 @@
 ---
-title: "방법: Windows Forms RichTextBox 컨트롤에 파일 로드"
-ms.custom: 
+title: '방법: Windows Forms RichTextBox 컨트롤에 파일 로드'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-winforms
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -22,16 +23,17 @@ helpviewer_keywords:
 - RichTextBox control [Windows Forms], opening files
 - RTF files [Windows Forms], displaying in RichTextBox control
 ms.assetid: c03451be-f285-4428-a71a-c41e002cc919
-caps.latest.revision: "13"
+caps.latest.revision: 13
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 003770e5d21383973946c4ebb83d560f0fa23207
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 27ddc78c16b04f067e83f799e8ccb275cebdeb14
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-load-files-into-the-windows-forms-richtextbox-control"></a>방법: Windows Forms RichTextBox 컨트롤에 파일 로드
 Windows Forms <xref:System.Windows.Forms.RichTextBox> 컨트롤은 일반 텍스트, 유니코드 일반 텍스트 또는 RTF(서식 있는 텍스트) 파일을 표시할 수 있습니다. 이렇게 하려면 <xref:System.Windows.Forms.RichTextBox.LoadFile%2A> 메서드를 호출합니다. 스트림에서 데이터를 로드하려면 <xref:System.Windows.Forms.RichTextBox.LoadFile%2A> 메서드를 사용할 수도 있습니다. 자세한 내용은 <xref:System.Windows.Forms.RichTextBox.LoadFile%28System.IO.Stream%2CSystem.Windows.Forms.RichTextBoxStreamType%29>을 참조하십시오.  
@@ -77,7 +79,7 @@ Windows Forms <xref:System.Windows.Forms.RichTextBox> 컨트롤은 일반 텍스
        }  
     ```  
   
-     ([!INCLUDE[csprcs](../../../../includes/csprcs-md.md)], [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) 폼 생성자에 다음 코드를 추가하여 이벤트 처리기를 등록합니다.  
+     (Visual C# [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) 이벤트 처리기를 등록 하려면 폼의 생성자에 다음 코드를 추가 합니다.  
   
     ```csharp  
     this.btnOpenFile.Click += new System.EventHandler(this. btnOpenFile_Click);  

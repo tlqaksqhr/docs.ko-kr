@@ -1,34 +1,36 @@
 ---
-title: "연습: Microsoft Expression Blend를 사용하여 단추 만들기"
-ms.custom: 
+title: '연습: Microsoft Expression Blend를 사용하여 단추 만들기'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - buttons [WPF]
 - converting [WPF], shape to button
 - Expression Blend [WPF Designer]
 ms.assetid: ff5037c2-bba7-4cae-8abb-6475b686c48e
-caps.latest.revision: "13"
+caps.latest.revision: 13
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 76025da208cc0929a20c379f76106d7e101c3358
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: e029537466e836cfc103bad64d4102652162c465
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="walkthrough-create-a-button-by-using-microsoft-expression-blend"></a>연습: Microsoft Expression Blend를 사용하여 단추 만들기
 이 연습 단계를 만드는 과정을 안내는 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] Microsoft Expression Blend를 사용 하 여 사용자 지정 된 단추입니다.  
   
 > [!IMPORTANT]
->  Microsoft Expression Blend를 생성 하 여 작동 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] 실행 프로그램을 확인 한 다음 컴파일됩니다입니다. 하면 사용 하려는 경우 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] 를 직접는이 수행 하 여와 같은 응용 프로그램을 만드는 다른 연습을 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] 와 [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)] Blend 대신 합니다. 참조 [xaml을 사용 하 여 단추 만들기](../../../../docs/framework/wpf/controls/walkthrough-create-a-button-by-using-xaml.md) 자세한 정보에 대 한 합니다.  
+>  Microsoft Expression Blend를 생성 하 여 작동 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] 실행 프로그램을 확인 한 다음 컴파일됩니다입니다. 하면 사용 하려는 경우 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] 를 직접는이 수행 하 여와 같은 응용 프로그램을 만드는 다른 연습을 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] Blend 대신 Visual Studio를 사용 합니다. 참조 [xaml을 사용 하 여 단추 만들기](../../../../docs/framework/wpf/controls/walkthrough-create-a-button-by-using-xaml.md) 자세한 정보에 대 한 합니다.  
   
  다음 그림 만들기는 사용자 지정된 단추를 보여 줍니다.  
   
@@ -45,7 +47,7 @@ ms.lasthandoff: 12/22/2017
   
 3.  **파일** 메뉴에서 **새 프로젝트**를 클릭합니다.  
   
-4.  선택 **표준 응용 프로그램 (.exe)**합니다.  
+4.  선택 **표준 응용 프로그램 (.exe)** 합니다.  
   
 5.  프로젝트 이름을 `CustomButton` 누릅니다 **확인**합니다.  
   
@@ -73,7 +75,7 @@ ms.lasthandoff: 12/22/2017
   
      !["스타일 리소스 만들기" 대화 상자](../../../../docs/framework/wpf/controls/media/custom-button-blend-makebutton2.gif "custom_button_blend_MakeButton2")  
   
-     에 대 한 **리소스 이름 (키)**선택, **모두 적용**합니다.  이렇게 하면 결과 스타일 및 단추 템플릿은 단추가 있는 모든 개체에 적용 합니다. 에 대 한 **에서 정의**선택, **응용 프로그램**합니다. 이렇게 하면 결과 스타일 및 범위는 전체 응용 프로그램에 대 한 단추 템플릿이 있습니다. 전체 응용 프로그램 내에서 모든 단추에 적용 하는 단추 스타일 및 서식 파일 및 응용 프로그램에서 만드는 모든 단추는 기본적으로 이러한 두 상자에 값을 설정할 때이 템플릿을 사용 합니다.  
+     에 대 한 **리소스 이름 (키)** 선택, **모두 적용**합니다.  이렇게 하면 결과 스타일 및 단추 템플릿은 단추가 있는 모든 개체에 적용 합니다. 에 대 한 **에서 정의**선택, **응용 프로그램**합니다. 이렇게 하면 결과 스타일 및 범위는 전체 응용 프로그램에 대 한 단추 템플릿이 있습니다. 전체 응용 프로그램 내에서 모든 단추에 적용 하는 단추 스타일 및 서식 파일 및 응용 프로그램에서 만드는 모든 단추는 기본적으로 이러한 두 상자에 값을 설정할 때이 템플릿을 사용 합니다.  
   
 ## <a name="edit-the-button-template"></a>편집 단추 템플릿  
  단추에 변경 된 사각형을 생깁니다. 이 섹션에서는 단추 서식 파일을 수정 하 고 어떻게 나타나는지를 추가로 사용자 지정할 합니다.  

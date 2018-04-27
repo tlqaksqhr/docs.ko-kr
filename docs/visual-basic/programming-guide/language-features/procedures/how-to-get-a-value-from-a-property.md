@@ -1,11 +1,12 @@
 ---
-title: "방법: 속성에서 값 가져오기(Visual Basic)"
-ms.custom: 
+title: '방법: 속성에서 값 가져오기(Visual Basic)'
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - property values [Visual Basic]
@@ -14,29 +15,29 @@ helpviewer_keywords:
 - Visual Basic code, properties
 - properties [Visual Basic], values
 ms.assetid: 3954423e-6ab7-4a4c-b55c-a8d27be47891
-caps.latest.revision: "11"
+caps.latest.revision: 11
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 6cde5408ea09398a79a3da01ae9b2d0202c58eaf
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 7161052b9d9b388d8da8bd421c3b220f15037805
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-get-a-value-from-a-property-visual-basic"></a>방법: 속성에서 값 가져오기(Visual Basic)
 식에서 속성 이름을 포함 하 여 속성의 값을 검색 합니다.  
   
- 속성의 `Get` 프로시저는 값을 검색 하지만 호출 하지 않으면 명시적으로 해당 이름으로 합니다. 변수를 사용할 때와 마찬가지로 속성을 사용 합니다. [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]에서는 속성의 프로시저를 호출 합니다.  
+ 속성의 `Get` 프로시저는 값을 검색 하지만 호출 하지 않으면 명시적으로 해당 이름으로 합니다. 변수를 사용할 때와 마찬가지로 속성을 사용 합니다. Visual Basic에서는 속성의 프로시저를 호출 합니다.  
   
 ### <a name="to-retrieve-a-value-from-a-property"></a>속성에서 값을 검색 하려면  
   
 1.  변수 이름을 사용할 것 같은 방법으로 식에서 속성 이름을 사용 합니다. 속성을 사용 하 여 아무 곳 이나 변수 또는 상수를 사용할 수 있습니다.  
   
-     또는  
+     -또는-  
   
      다음에 오는 속성 이름을 사용 하 여 (`=`) 대입문에 로그인 합니다.  
   
-     다음 예제에서는 값을 읽었습니다는 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] `Now` 속성을 호출 하는 암시적으로 해당 `Get` 프로시저입니다.  
+     다음 예제에서는 Visual Basic의 값을 읽습니다 `Now` 속성을 호출 하는 암시적으로 해당 `Get` 프로시저입니다.  
   
      [!code-vb[VbVbalrDateProperties#4](./codesnippet/VisualBasic/how-to-get-a-value-from-a-property_1.vb)]  
   

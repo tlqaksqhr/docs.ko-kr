@@ -1,11 +1,12 @@
 ---
-title: "인수를 값으로 전달할 때와 참조로 전달할 때의 차이점(Visual Basic)"
-ms.custom: 
+title: 인수를 값으로 전달할 때와 참조로 전달할 때의 차이점(Visual Basic)
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - ByRef keyword [Visual Basic], passing arguments by reference
@@ -14,26 +15,26 @@ helpviewer_keywords:
 - ByVal keyword [Visual Basic], passing arguments by value
 - arguments [Visual Basic], passing by value or by reference
 ms.assetid: 5f5c38fe-3e2d-494c-8fff-f4025b55ec93
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 3efd4f41184287cdcd3d499712a857bee997c1a4
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 8f733b4fd50612292c0c4ac7195304d99ae2dbea
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="differences-between-passing-an-argument-by-value-and-by-reference-visual-basic"></a>인수를 값으로 전달할 때와 참조로 전달할 때의 차이점(Visual Basic)
 프로시저에 하나 이상의 인수를 전달 하는 경우 각 인수에서 호출 코드의 기본 프로그래밍 요소에 해당 합니다. 이 내부 요소 값 또는 그에 대 한 참조를 전달할 수 있습니다. 이것은 *전달 메커니즘*합니다.  
   
 ## <a name="passing-by-value"></a>값으로 전달  
- 인수를 전달 하면 *값별로* 지정 하 여는 [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md) 프로시저 정의에서 해당 매개 변수에 대 한 키워드입니다. 이 전달 메커니즘을 사용 하는 경우 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 절차에서 지역 변수에 기본 프로그래밍 요소의 값을 복사 합니다. 호출 코드의 프로시저 코드 내부 요소에 대 한 액세스를 않아도 됩니다.  
+ 인수를 전달 하면 *값별로* 지정 하 여는 [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md) 프로시저 정의에서 해당 매개 변수에 대 한 키워드입니다. 이 전달 메커니즘을 사용 하는 경우 Visual Basic 프로시저의 지역 변수에는 기본 프로그래밍 요소의 값을 복사 합니다. 호출 코드의 프로시저 코드 내부 요소에 대 한 액세스를 않아도 됩니다.  
   
 ## <a name="passing-by-reference"></a>참조로 전달  
- 인수를 전달 하면 *참조로* 지정 하 여는 [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md) 프로시저 정의에서 해당 매개 변수에 대 한 키워드입니다. 이 전달 메커니즘을 사용 하는 경우 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 호출 코드에서 기본 프로그래밍 요소에 대 한 직접 참조 프로시저를 제공 합니다.  
+ 인수를 전달 하면 *참조로* 지정 하 여는 [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md) 프로시저 정의에서 해당 매개 변수에 대 한 키워드입니다. 이 전달 메커니즘을 사용 하는 경우 Visual Basic에서는 호출 코드에서 기본 프로그래밍 요소에 대 한 직접 참조를 프로시저에 제공 합니다.  
   
 ## <a name="passing-mechanism-and-element-type"></a>전달 메커니즘 및 요소 형식  
- 전달 메커니즘의 선택은 요소 형식의 분류와 동일 합니다. 기능 참조 값 이나 참조로 전달 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 프로시저 코드에 제공 합니다. 값 형식 또는 참조 형식에는 프로그래밍 요소는 메모리에 저장 하는 방법을 참조 합니다.  
+ 전달 메커니즘의 선택은 요소 형식의 분류와 동일 합니다. 값 이나 참조로 전달 프로시저 코드에 제공 될 Visual Basic 참조 합니다. 값 형식 또는 참조 형식에는 프로그래밍 요소는 메모리에 저장 하는 방법을 참조 합니다.  
   
  그러나 전달 메커니즘 및 요소 형식이 서로 관련 되어 있습니다. 참조 형식의 값은 메모리의 다른 위치에서 데이터에 대 한 포인터입니다. 즉, 참조 형식 값으로 전달 하면 프로시저 코드에는 기본 요소 데이터에 대 한 포인터 요소 자체에 액세스할 수 없는 경우에 있습니다. 예를 들어 요소는 배열 변수, 프로시저 코드에는 변수 자체에 액세스할 수 없는 있지만 배열 멤버에 액세스할 수 있습니다.  
   
@@ -42,7 +43,7 @@ ms.lasthandoff: 11/21/2017
   
  다음 표에서 수정할 수 있는 요소에 대 한 요소 형식 및 전달 메커니즘 간의 상호 작용 요약 되어 있습니다.  
   
-|요소 형식|전달`ByVal`|전달`ByRef`|  
+|요소 형식|전달 `ByVal`|전달 `ByRef`|  
 |------------------|--------------------|--------------------|  
 |값 형식 (값만 포함)|프로시저 변수 또는 해당 멤버 중 하나를 변경할 수 없습니다.|프로시저가 변수 및 해당 멤버를 변경할 수 있습니다.|  
 |참조 형식 (클래스 또는 구조체 인스턴스에 대 한 포인터 포함)|프로시저 변수 변경할 수 없지만 가리키는 인스턴스의 멤버를 변경할 수 있습니다.|프로시저 변수와 가리키는 인스턴스의 멤버 변경할 수 있습니다.|  

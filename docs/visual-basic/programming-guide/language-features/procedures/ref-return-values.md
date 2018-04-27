@@ -1,12 +1,13 @@
 ---
-title: "Ref 반환 값 (Visual Basic)"
-ms.custom: 
+title: Ref 반환 값 (Visual Basic)
+ms.custom: ''
 ms.date: 04/28/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - variables [Visual Basic]
@@ -15,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 5ef0cc69-eb3a-4a67-92a2-78585f223cb5
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 560607f7aa304b25314daabeef3952e6bbef7426
-ms.sourcegitcommit: 7e99f66ef09d2903e22c789c67ff5a10aa953b2f
+ms.openlocfilehash: 6055028ac92016cbc4b6f7bffa7f483e5ea76608
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="support-for-reference-return-values-visual-basic"></a>참조 반환 값 (Visual Basic)에 대 한 지원
 
-C# 언어에서 지 원하는 C# 7 부터는 *반환 값을 참조*합니다. 참조 반환 값을 이해 하는 한 가지 방법은 이들이 반대 메서드에 참조로 전달 되는 인수입니다. 참조로 전달 되는 인수를 수정한 경우 변경 내용은 호출자에 변수 값에 반영 됩니다. 메서드를 호출자에 게 참조 반환 값을 제공 하는 경우 수정 내용 참조 반환 값에는 호출자가 호출된 된 메서드의 데이터에 반영 됩니다.
+C# 언어에서 지 원하는 C# 7.0 부터는 *반환 값을 참조*합니다. 참조 반환 값을 이해 하는 한 가지 방법은 이들이 반대 메서드에 참조로 전달 되는 인수입니다. 참조로 전달 되는 인수를 수정한 경우 변경 내용은 호출자에 변수 값에 반영 됩니다. 메서드를 호출자에 게 참조 반환 값을 제공 하는 경우 수정 내용 참조 반환 값에는 호출자가 호출된 된 메서드의 데이터에 반영 됩니다.
 
 Visual Basic 참조를 사용 하 여 만든 메서드 수 값을 반환 하지만 참조 반환 값을 사용할 수 있습니다 수를 허용 하지 않습니다. 즉, 참조 반환 값을 사용 하 여 메서드를 호출 하 고 해당 반환 값을 수정할 수 있습니다 및 참조 반환 값을 변경 하는 호출된 된 메서드의 데이터에 반영 됩니다.
 
@@ -53,7 +54,7 @@ Visual Basic 참조를 사용 하 여 만든 메서드 수 값을 반환 하지�
 
 [!code-vb[Ref-Return](../../../../../samples/snippets/visualbasic/getting-started/ref-return-helper.vb#1)]
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참고자료
 
 [값 및 참조로 인수 전달](passing-arguments-by-value-and-by-reference.md)   
 [Visual Basic의 프로시저](index.md)   

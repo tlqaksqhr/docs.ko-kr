@@ -1,11 +1,12 @@
 ---
-title: "방법: 속성 값 입력(Visual Basic)"
-ms.custom: 
+title: '방법: 속성 값 입력(Visual Basic)'
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - property values [Visual Basic]
@@ -14,25 +15,25 @@ helpviewer_keywords:
 - Visual Basic code, properties
 - properties [Visual Basic], values
 ms.assetid: c39401e5-b5fc-4439-8f31-ed640f7ce6ed
-caps.latest.revision: "13"
+caps.latest.revision: 13
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 44e7c4a92ea3d087c12e74aa2ede33a52c8730cf
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 0f00303b290e324612ad3ac7af673690b4cf4e15
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-put-a-value-in-a-property-visual-basic"></a>방법: 속성 값 입력(Visual Basic)
 대입문의 왼쪽에 속성 이름을 입력 하 여 속성에 값을 저장 합니다.  
   
- 속성의 `Set` 프로시저 값을 저장 하지만 호출 하지 않으면 명시적으로 해당 이름으로 합니다. 변수를 사용할 때와 마찬가지로 속성을 사용 합니다. [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]에서는 속성의 프로시저를 호출 합니다.  
+ 속성의 `Set` 프로시저 값을 저장 하지만 호출 하지 않으면 명시적으로 해당 이름으로 합니다. 변수를 사용할 때와 마찬가지로 속성을 사용 합니다. Visual Basic에서는 속성의 프로시저를 호출 합니다.  
   
 ### <a name="to-store-a-value-in-a-property"></a>속성의 값을 저장 하려면  
   
 1.  대입문의 왼쪽에 속성 이름을 사용 합니다.  
   
-     값을 설정 하는 다음 예제는 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] `TimeOfDay` 속성 정오에을 암시적으로 호출 해당 `Set` 프로시저입니다.  
+     다음 예제에서는 Visual Basic의 값을 설정 `TimeOfDay` 속성 정오에을 암시적으로 호출 해당 `Set` 프로시저입니다.  
   
      [!code-vb[VbVbcnProcedures#11](./codesnippet/VisualBasic/how-to-put-a-value-in-a-property_1.vb)]  
   

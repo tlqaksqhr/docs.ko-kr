@@ -1,12 +1,13 @@
 ---
-title: "방법: ColorDialog 구성 요소를 사용하여 색상표 표시"
-ms.custom: 
+title: '방법: ColorDialog 구성 요소를 사용하여 색상표 표시'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-winforms
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -21,16 +22,17 @@ helpviewer_keywords:
 - color palettes [Windows Forms], showing in ColorDialog component
 - colors [Windows Forms], showing palettes
 ms.assetid: ee050f61-dbc8-4436-ba22-51360981ab48
-caps.latest.revision: "15"
+caps.latest.revision: 15
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 8abaab09d2c2e20211463bb8fc93d7efaa1b38fd
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: f3f75c6ec29b82c70d4160ccc40ddb9ced0ea711
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-show-a-color-palette-with-the-colordialog-component"></a>방법: ColorDialog 구성 요소를 사용하여 색상표 표시
 [ColorDialog](../../../../docs/framework/winforms/controls/colordialog-component-windows-forms.md) 구성 요소는 색의 팔레트를 표시 하 고 사용자가 선택한 색을 포함 하는 속성을 반환 합니다.  
@@ -76,7 +78,7 @@ ms.lasthandoff: 12/22/2017
        }  
     ```  
   
-     ([!INCLUDE[csprcs](../../../../includes/csprcs-md.md)], [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) 폼 생성자에 다음 코드를 추가하여 이벤트 처리기를 등록합니다.  
+     (Visual C# [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) 이벤트 처리기를 등록 하려면 폼의 생성자에 다음 코드를 추가 합니다.  
   
     ```csharp  
     this.button1.Click += new System.EventHandler(this.button1_Click);  

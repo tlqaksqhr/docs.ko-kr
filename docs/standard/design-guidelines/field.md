@@ -1,30 +1,30 @@
 ---
-title: "필드 디자인"
-ms.custom: 
+title: 필드 디자인
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - fields, design guidelines
 - read-only fields
 - member design guidelines, fields
 ms.assetid: 7cb4b0f3-7a10-4c93-b84d-733f7134fcf8
-caps.latest.revision: "10"
+caps.latest.revision: 10
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: ccced2c9e816122d770f43056c36ab4a6d510fde
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 102c52a125c3f34dc027d01eecd24f13613e20c6
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="field-design"></a>필드 디자인
 캡슐화의 원칙 개체 지향 디자인에서 가장 중요 한 개념 중 하나를입니다. 이 규칙에 따르면 개체 내부에 저장 된 데이터를 해당 개체에만 액세스할 수 여야 합니다.  
@@ -49,9 +49,9 @@ ms.lasthandoff: 12/23/2017
   
  변경 가능한 형식은 인스턴스화되는 후 수정할 수 있는 인스턴스는 형식이입니다. 예를 들어, 배열, 대부분의 컬렉션 및 스트림 모두 변경할 수 있는 유형 하지만 <xref:System.Int32?displayProperty=nameWithType>, <xref:System.Uri?displayProperty=nameWithType>, 및 <xref:System.String?displayProperty=nameWithType> 는 모두 변경할 수 없습니다. 대체 되 고 있는 필드에 저장 된 인스턴스는 참조 형식 필드는 읽기 전용 한정자 없지만 필드의 인스턴스 데이터는 인스턴스 변경 멤버를 호출 하 여 수정 하지 못하도록 방지 되지 않습니다.  
   
- *일부 © 2005, 2009 Microsoft Corporation. 모든 권리 보유.*  
+ *Portions © 2005, 2009 Microsoft Corporation. 모든 권리 보유.*  
   
- *피어슨 교육, Inc.에서의 사용 권한으로 재인쇄 [Framework 디자인 지침: 규칙, 특징 및 다시 사용할 수 있는.NET 라이브러리를 2nd Edition에 대 한 패턴](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina 및 Brad Abrams 게시 하 여 2008 년 10 월 22 일 Microsoft Windows 개발 시리즈의 일부로: Addison Wesley Professional.*  
+ *피어슨 교육, Inc.에서의 사용 권한으로 재인쇄 [Framework 디자인 지침: 규칙, 특징 및 다시 사용할 수 있는.NET 라이브러리를 2nd Edition에 대 한 패턴](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina 및 Brad Abrams 게시 하 여 2008 년 10 월 22 일 Microsoft Windows 개발 시리즈의 일부로: Addison Wesley Professional.*  
   
 ## <a name="see-also"></a>참고 항목  
  [멤버 디자인 지침](../../../docs/standard/design-guidelines/member.md)  

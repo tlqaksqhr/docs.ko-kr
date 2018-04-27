@@ -1,24 +1,26 @@
 ---
-title: "SQL Server에서 동적 보안 SQL 작성"
-ms.custom: 
+title: SQL Server에서 동적 보안 SQL 작성
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: df5512b0-c249-40d2-82f9-f9a2ce6665bc
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 41c396bf2101e54adb1608f938c702ff7663cb1d
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: 5fdf41353e1772eab46e2e6b8f16ad7bfdf7a72f
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="writing-secure-dynamic-sql-in-sql-server"></a>SQL Server에서 동적 보안 SQL 작성
 SQL 삽입은 악의적 사용자가 유효한 입력 대신 Transact-SQL 문을 입력하는 데 사용하는 프로세스입니다. 이러한 공격으로 인해 입력이 유효성 검사를 거치지 않고 서버로 직접 전달되고 응용 프로그램이 삽입된 코드를 실행하면 데이터가 손상되거나 파괴될 수 있습니다.  
@@ -68,7 +70,7 @@ SQL 삽입은 악의적 사용자가 유효한 입력 대신 Transact-SQL 문을
  인증서로 서명된 저장 프로시저가 실행될 때는 인증서 사용자에게 부여된 권한이 호출자의 권한과 병합됩니다. 실행 컨텍스트는 동일하게 유지되고 인증서 사용자는 호출자를 가장하지 않습니다. 저장 프로시저에 서명하려면 몇 가지 단계를 구현해야 합니다. 프로시저가 수정될 때마다 다시 서명해야 합니다.  
   
 ### <a name="cross-database-access"></a>데이터베이스 간 액세스  
- 동적으로 생성된 SQL 문이 실행되는 경우에는 데이터베이스 간 소유권 체인이 작동하지 않습니다. [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)]에서는 다른 데이터베이스의 데이터에 액세스하는 저장 프로시저를 만들고 두 데이터베이스 모두에 존재하는 인증서로 프로시저에 서명하여 이 문제를 해결할 수 있습니다. 이렇게 하면 사용자에게 데이터베이스 액세스 또는 권한을 부여하지 않고 프로시저에서 사용되는 데이터베이스 리소스에 사용자가 액세스하도록 할 수 있습니다.  
+ 동적으로 생성된 SQL 문이 실행되는 경우에는 데이터베이스 간 소유권 체인이 작동하지 않습니다. 다른 데이터베이스의 데이터에 액세스 하는 저장된 프로시저를 만들고 두 데이터베이스 모두에 존재 하는 인증서로 프로시저에 서명 하 여 SQL Server에서이 문제를 해결할 작업할 수 있습니다. 이렇게 하면 사용자에게 데이터베이스 액세스 또는 권한을 부여하지 않고 프로시저에서 사용되는 데이터베이스 리소스에 사용자가 액세스하도록 할 수 있습니다.  
   
 ## <a name="external-resources"></a>외부 리소스  
  자세한 내용은 다음 리소스를 참조하세요.  

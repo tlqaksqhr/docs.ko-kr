@@ -1,12 +1,13 @@
 ---
-title: "방법: Windows Forms에서 다중 페이지 텍스트 파일 인쇄"
-ms.custom: 
+title: '방법: Windows Forms에서 다중 페이지 텍스트 파일 인쇄'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-winforms
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -17,16 +18,17 @@ helpviewer_keywords:
 - Windows Forms, printing text
 - printing [Windows Forms], text
 ms.assetid: 362427f8-03d4-4826-b49f-60ab066ad322
-caps.latest.revision: "24"
+caps.latest.revision: 24
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 4576e969ba917b845cc8fbd6420741e2b24062fe
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: fd08d40c9b4e5f796c200966482781dfb2e700d8
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-print-a-multi-page-text-file-in-windows-forms"></a>방법: Windows Forms에서 다중 페이지 텍스트 파일 인쇄
 Windows 기반 응용 프로그램에서 텍스트를 인쇄하는 것은 매우 일반적입니다. <xref:System.Drawing.Graphics> 클래스는 화면이나 프린터와 같은 장치에 개체(그래픽 또는 텍스트)를 그리기 위한 메서드를 제공합니다.  
@@ -58,7 +60,7 @@ Windows 기반 응용 프로그램에서 텍스트를 인쇄하는 것은 매우
      [!code-csharp[System.Drawing.Printing.PrintExamples#5](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.Printing.PrintExamples/CS/Form1.cs#5)]
      [!code-vb[System.Drawing.Printing.PrintExamples#5](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.Printing.PrintExamples/VB/Form1.vb#5)]  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  [!code-csharp[System.Drawing.Printing.PrintExamples#0](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.Printing.PrintExamples/CS/Form1.cs#0)]
  [!code-vb[System.Drawing.Printing.PrintExamples#0](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.Printing.PrintExamples/VB/Form1.vb#0)]  
   
@@ -69,7 +71,7 @@ Windows 기반 응용 프로그램에서 텍스트를 인쇄하는 것은 매우
   
 -   System, System.Windows.Forms, System.Drawing 어셈블리에 대한 참조  
   
--   [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)] 또는 [!INCLUDE[csprcs](../../../../includes/csprcs-md.md)]의 명령줄에서 이 예제를 빌드하는 방법에 대한 자세한 내용은 [명령줄에서 빌드](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md) 또는 [csc.exe를 사용한 명령줄 빌드](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)를 참조하세요. [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)]에서 코드를 새 프로젝트에 붙여넣어 이 예제를 빌드할 수도 있습니다.  [방법: Visual Studio를 사용하여 전체 Windows Forms 코드 예제 컴파일 및 실행](http://msdn.microsoft.com/library/Bb129228\(v=vs.110\))을 참조하세요.  
+-   Visual Basic 또는 Visual C#에 대 한 명령줄에서이 예제를 빌드하는 방법에 대 한 정보를 참조 하십시오. [명령줄에서 빌드](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md) 또는 [사용한 명령줄 빌드 csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)합니다. [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] 에서 코드를 새 프로젝트에 붙여넣어 이 예제를 빌드할 수도 있습니다.  [방법: Visual Studio를 사용하여 전체 Windows Forms 코드 예제 컴파일 및 실행](http://msdn.microsoft.com/library/Bb129228\(v=vs.110\))을 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
  <xref:System.Drawing.Graphics>  

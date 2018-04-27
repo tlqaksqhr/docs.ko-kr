@@ -1,12 +1,12 @@
 ---
-title: "봉인"
-ms.custom: 
+title: 봉인
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - limiting extensibility
@@ -14,18 +14,18 @@ helpviewer_keywords:
 - preventing customization
 - sealed classes
 ms.assetid: cc42267f-bb7a-427a-845e-df97408528d4
-caps.latest.revision: "10"
+caps.latest.revision: 10
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 39bb29d36b6d81464b1213ebc0bf7aee6ceb5713
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 8a9ea7fd4f5df08631231db08ba7943a9c131012
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="sealing"></a>봉인
 개체 지향 프레임 워크의 기능 중 하나는 개발자가 확장 하 고 프레임 워크 디자이너에서 예기치 않은 방식으로 사용자 지정할 수 있습니다. 이 기능과 확장 가능한 디자인의 위험 합니다. 사용자 프레임 워크를 디자인할 때 즉,이 필요한 경우 확장성을 위해 신중 하 게 디자인 하 고는 것은 위험 확장성을 제한할 매우 중요 합니다.  
@@ -54,9 +54,9 @@ ms.lasthandoff: 12/23/2017
   
  가상 멤버 소개에서 발생할 수 있는 문제 (에 설명 된 [가상 멤버](../../../docs/standard/design-guidelines/virtual-members.md)) 있지만에 약간도 재정의를 적용 합니다. 재정의가 봉인 하면 상속 계층 구조에서 해당 시점에서 시작 하는 이러한 문제 로부터 보호 합니다.  
   
- *일부 © 2005, 2009 Microsoft Corporation. 모든 권리 보유.*  
+ *Portions © 2005, 2009 Microsoft Corporation. 모든 권리 보유.*  
   
- *피어슨 교육, Inc.에서의 사용 권한으로 재인쇄 [Framework 디자인 지침: 규칙, 특징 및 다시 사용할 수 있는.NET 라이브러리를 2nd Edition에 대 한 패턴](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina 및 Brad Abrams 게시 하 여 2008 년 10 월 22 일 Microsoft Windows 개발 시리즈의 일부로: Addison Wesley Professional.*  
+ *피어슨 교육, Inc.에서의 사용 권한으로 재인쇄 [Framework 디자인 지침: 규칙, 특징 및 다시 사용할 수 있는.NET 라이브러리를 2nd Edition에 대 한 패턴](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina 및 Brad Abrams 게시 하 여 2008 년 10 월 22 일 Microsoft Windows 개발 시리즈의 일부로: Addison Wesley Professional.*  
   
 ## <a name="see-also"></a>참고 항목  
  [프레임워크 디자인 지침](../../../docs/standard/design-guidelines/index.md)  

@@ -19,15 +19,15 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 1d2a79a05f18fecf4e008aa6a95d359c719e854b
-ms.sourcegitcommit: f28752eab00d2bd97e971542c0f49ce63cfbc239
+ms.openlocfilehash: 00161608997abc14202775c06ecfb283d8d67013
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/29/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="application-development"></a>응용 프로그램 개발
 <a name="introduction"></a>
-[!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)]다음과 같은 종류의 응용 프로그램을 개발 하는 데 사용할 수 있는 프레젠테이션 프레임 워크:  
+[!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] 다음과 같은 종류의 응용 프로그램을 개발 하는 데 사용할 수 있는 프레젠테이션 프레임 워크:  
   
 -   독립 실행형 응용 프로그램(클라이언트 컴퓨터에 설치되어 실행되는 실행 가능한 어셈블리로 빌드된 전형적인 [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] 응용 프로그램)  
   
@@ -70,7 +70,7 @@ ms.lasthandoff: 01/29/2018
   
 <a name="WPF_Application_Resource__Content__and_Data_Files"></a>   
 ## <a name="wpf-application-resource-content-and-data-files"></a>WPF 응용 프로그램 리소스, 콘텐츠 및 데이터 파일  
- [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]는 세 종류의 실행 불가능한 데이터 파일(리소스, 콘텐츠 및 데이터)에 대한 지원으로 포함된 리소스에 대한 [!INCLUDE[TLA#tla_winfx](../../../../includes/tlasharptla-winfx-md.md)]의 핵심 지원을 확장합니다. 자세한 내용은 [WPF 응용 프로그램 리소스, 콘텐츠 및 데이터 파일](../../../../docs/framework/wpf/app-development/wpf-application-resource-content-and-data-files.md)을 참조하세요.  
+ [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 세 가지 실행 파일이 아닌 데이터 파일에 대 한 지원과 함께 포함 된 리소스에 대 한 Microsoft.NET Framework의 핵심 지원 확장: 리소스, 내용 및 데이터입니다. 자세한 내용은 [WPF 응용 프로그램 리소스, 콘텐츠 및 데이터 파일](../../../../docs/framework/wpf/app-development/wpf-application-resource-content-and-data-files.md)을 참조하세요.  
   
  WPF 실행 불가능 데이터 파일에 대한 지원의 핵심 구성 요소는 고유한 [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)]를 사용하여 이를 식별하고 로드하는 기능입니다. 자세한 내용은 [WPF의 Pack URI](../../../../docs/framework/wpf/app-development/pack-uris-in-wpf.md)를 참조하세요.  
   
@@ -90,7 +90,7 @@ ms.lasthandoff: 01/29/2018
   
  <xref:System.Windows.Window>는 대화 상자로 알려진 특별한 유형의 창을 만드는 기능을 지원합니다. 모달 및 모덜리스 유형의 대화 상자를 모두 만들 수 있습니다.  
   
- 여러 응용 프로그램에서 일관된 사용자 환경과 재사용 가능성 이점을 제공하기 위해 편의상 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]는 공통 [!INCLUDE[TLA2#tla_mswin](../../../../includes/tla2sharptla-mswin-md.md)] 대화 상자 3개(<xref:Microsoft.Win32.OpenFileDialog>, <xref:Microsoft.Win32.SaveFileDialog>, <xref:System.Windows.Controls.PrintDialog>)를 표시합니다.  
+ 편의 위해 및 재사용 가능성 및 응용 프로그램에서 일관 된 사용자 경험의 이점에 대 한 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 공통 Windows 대화 상자를 세 개를 노출: <xref:Microsoft.Win32.OpenFileDialog>, <xref:Microsoft.Win32.SaveFileDialog>, 및 <xref:System.Windows.Controls.PrintDialog>합니다.  
   
  메시지 상자는 중요한 텍스트 정보를 보여 주고 간단한 예/아니요/확인/취소 질문을 묻는 특별한 유형의 대화 상자입니다. <xref:System.Windows.MessageBox> 클래스를 사용하여 메시지 상자를 만들고 표시합니다.  
   

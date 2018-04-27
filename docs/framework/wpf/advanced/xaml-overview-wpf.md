@@ -1,12 +1,13 @@
 ---
-title: "XAML 개요(WPF)"
-ms.custom: 
+title: XAML 개요(WPF)
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -26,16 +27,17 @@ helpviewer_keywords:
 - Extensible Application Markup Language (see XAML)
 - attribute syntax [XAML]
 ms.assetid: a80db4cd-dd0f-479f-a45f-3740017c22e4
-caps.latest.revision: "57"
+caps.latest.revision: 57
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ce83713d2483320569bde0d5c9a677f0b357ebf2
-ms.sourcegitcommit: c3ebb11a66e85a465c9ba2c42592222630b7ff9e
+ms.workload:
+- dotnet
+ms.openlocfilehash: 87785d6bba58442a1a5ad27f5304aa63e16c1aa9
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="xaml-overview-wpf"></a>XAML 개요(WPF)
 이 항목에서는 XAML 언어의 기능을 설명하고 XAML을 사용하여 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 응용 프로그램을 작성하는 방법을 보여 줍니다. 이 항목에서는 특히 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]에서 구현된 XAML에 대해 자세히 설명합니다. XAML 자체는 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]보다 큰 언어 개념입니다.  
@@ -146,7 +148,7 @@ ms.lasthandoff: 01/25/2018
   
  여기에서 각 <xref:System.Windows.Controls.Button> 의 자식 요소인 <xref:System.Windows.Controls.StackPanel>합니다. 이는 두 가지 서로 다른 이유로 두 태그를 생략하는 효율적이며 직관적인 태그입니다.  
   
--   **생략 된 StackPanel.Children 속성 요소:** <xref:System.Windows.Controls.StackPanel> 에서 파생 <xref:System.Windows.Controls.Panel>합니다. <xref:System.Windows.Controls.Panel>정의 <xref:System.Windows.Controls.Panel.Children%2A?displayProperty=nameWithType> 해당 XAML로 콘텐츠 속성입니다.  
+-   **생략 된 StackPanel.Children 속성 요소:** <xref:System.Windows.Controls.StackPanel> 에서 파생 <xref:System.Windows.Controls.Panel>합니다. <xref:System.Windows.Controls.Panel> 정의 <xref:System.Windows.Controls.Panel.Children%2A?displayProperty=nameWithType> 해당 XAML로 콘텐츠 속성입니다.  
   
 -   **생략 된 UIElementCollection object 요소:** 는 <xref:System.Windows.Controls.Panel.Children%2A?displayProperty=nameWithType> 속성은 형식 <xref:System.Windows.Controls.UIElementCollection>를 구현 하는 <xref:System.Collections.IList>합니다. 컬렉션의 요소 태그는 생략 될 수와 같은 컬렉션을 처리 하는 것에 대 한 XAML 규칙에 따라 <xref:System.Collections.IList>합니다. (이 경우 <xref:System.Windows.Controls.UIElementCollection> 실제로 인스턴스화할 수 없으며 기본 생성자를 노출 하지 않으며 이유는 바로 때문에 <xref:System.Windows.Controls.UIElementCollection> object 요소를 주석으로 표시 됩니다).  
   
@@ -192,7 +194,7 @@ ms.lasthandoff: 01/25/2018
 ## <a name="type-converters"></a>형식 변환기  
  이 [XAML 구문 개요](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md#xaml_syntax_in_brief) 섹션에서는 문자열로 특성 값을 설정할 수 있어야 한다고 설명했습니다. 문자열이 다른 개체 형식 또는 기본 값으로 변환 되는 방법의 한 기본 처리에 따라는 <xref:System.String> 형식 자체와 같은 형식은 또한 기본 처리 특정, <xref:System.DateTime> 또는 <xref:System.Uri>합니다. 그러나 대부분의 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 형식 또는 이러한 형식의 멤버는 더 복잡한 개체 형식의 인스턴스를 문자열과 특성으로 지정할 수 있도록 기본 문자열 특성 처리 동작을 확장합니다.  
   
- <xref:System.Windows.Thickness> 구조는 형식에 형식 변환이 XAML 사용에 대 한 설정의 예입니다. <xref:System.Windows.Thickness>중첩 된 사각형 내에서 측정값을 나타내며과 같은 속성에 대 한 값으로 사용 됩니다 <xref:System.Windows.FrameworkElement.Margin%2A>합니다. 에 형식 변환기를 배치 하 여 <xref:System.Windows.Thickness>, 사용 하는 모든 속성을 <xref:System.Windows.Thickness> 쉽게 특성으로 지정할 수 있기 때문에 XAML에서 지정 합니다. 다음 예제에서는 형식 변환과 특성 구문을 사용 하 여에 대 한 값을 제공 하는 <xref:System.Windows.FrameworkElement.Margin%2A>:  
+ <xref:System.Windows.Thickness> 구조는 형식에 형식 변환이 XAML 사용에 대 한 설정의 예입니다. <xref:System.Windows.Thickness> 중첩 된 사각형 내에서 측정값을 나타내며과 같은 속성에 대 한 값으로 사용 됩니다 <xref:System.Windows.FrameworkElement.Margin%2A>합니다. 에 형식 변환기를 배치 하 여 <xref:System.Windows.Thickness>, 사용 하는 모든 속성을 <xref:System.Windows.Thickness> 쉽게 특성으로 지정할 수 있기 때문에 XAML에서 지정 합니다. 다음 예제에서는 형식 변환과 특성 구문을 사용 하 여에 대 한 값을 제공 하는 <xref:System.Windows.FrameworkElement.Margin%2A>:  
   
  [!code-xaml[XAMLOvwSupport#MarginTCE](../../../../samples/snippets/csharp/VS_Snippets_Wpf/XAMLOvwSupport/CSharp/page7.xaml#margintce)]  
   
@@ -260,7 +262,7 @@ ms.lasthandoff: 01/25/2018
   
 <a name="events_and_xaml_codebehind"></a>   
 ## <a name="events-and-xaml-code-behind"></a>이벤트 및 XAML 코드 숨김  
- 대부분의 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 응용 프로그램은 XAML 태그와 코드 숨김으로 구성됩니다. 프로젝트에서 XAML은 `.xaml` 파일로 작성되며 코드 숨김 파일은 [!INCLUDE[TLA#tla_visualb](../../../../includes/tlasharptla-visualb-md.md)] 또는 [!INCLUDE[TLA#tla_cshrp](../../../../includes/tlasharptla-cshrp-md.md)] 등의 [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] 언어를 사용하여 작성됩니다. XAML 파일이 WPF 프로그래밍 및 응용 프로그램 모델의 일부로 태그 컴파일될 때 XAML 파일에 대한 XAML 코드 숨김 파일의 위치는 네임스페이스와 클래스를 XAML 루트 요소의 `x:Class` 특성으로 지정하여 식별합니다.  
+ 대부분의 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 응용 프로그램은 XAML 태그와 코드 숨김으로 구성됩니다. 프로젝트에서 XAML로 작성 되어 한 `.xaml` 파일 및 [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] Microsoft Visual Basic 또는 C#과 같은 언어 코드 숨김 파일을 쓰는 데 사용 되 합니다. XAML 파일이 WPF 프로그래밍 및 응용 프로그램 모델의 일부로 태그 컴파일될 때 XAML 파일에 대한 XAML 코드 숨김 파일의 위치는 네임스페이스와 클래스를 XAML 루트 요소의 `x:Class` 특성으로 지정하여 식별합니다.  
   
  지금까지의 예제에서 몇 개의 단추를 살펴보았지만 아직 논리적 동작이 연결된 단추는 없었습니다. 개체 요소에 대한 동작을 추가하는 기본 응용 프로그램 수준 메커니즘은, 요소 클래스의 기존 이벤트를 사용하고 런타임에서 해당 이벤트가 발생할 때 호출되는 해당 이벤트에 대한 특정 처리기를 작성하는 것입니다. 사용할 이벤트 이름과 처리기 이름은 태그에서 지정하고 처리기를 구현하는 코드는 코드 숨김에서 정의합니다.  
   
@@ -314,7 +316,7 @@ ms.lasthandoff: 01/25/2018
   
 <a name="base_classes_and_xaml"></a>   
 ## <a name="base-types-and-xaml"></a>기본 형식 및 XAML  
- 내부 WPF XAML 및 해당 XAML 네임스페이스는 XAML의 태그 요소이자 [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] 개체에 해당하는 형식의 컬렉션입니다. 하지만 모든 클래스를 요소에 매핑할 수 있는 것은 아닙니다. 추상 클래스를 같은 <xref:System.Windows.Controls.Primitives.ButtonBase>, 특정 비추상 기본 클래스의 상속에 사용 되 고는 [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] 개체 모델입니다. 각각의 구체적인 XAML 요소는 계층 구조의 일부 기본 클래스에서 멤버를 상속하기 때문에 추상 클래스를 포함한 기본 클래스는 여전히 XAML 개발에 있어서 중요합니다. 이러한 멤버에는 대개 요소에서 특성으로 설정할 수 있는 속성 또는 처리될 수 있는 이벤트가 포함됩니다. <xref:System.Windows.FrameworkElement>구체적인 기반 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 의 클래스 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] WPF 프레임 워크 수준입니다. 디자인할 때 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)], 다양 한 셰이프, 패널, 데코레이터를 사용할지, 아니면 모든 컨트롤 클래스에서 파생 <xref:System.Windows.FrameworkElement>합니다. 관련된 기본 클래스 <xref:System.Windows.FrameworkContentElement>, 흐름 레이아웃 표현에 대 한 잘 작동 하는 문서 기반 요소를 지원 합니다. 사용 하 여 [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] 의도 한 대로 미러는 [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] 에서 <xref:System.Windows.FrameworkElement>합니다. 요소 수준 및 [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] 개체 모델에서 특성의 조합은 특정 요소 및 해당 기본 형식에 관계없이 대부분의 구체적 XAML 요소에 설정할 수 있는 공통 속성 집합을 제공합니다.  
+ 내부 WPF XAML 및 해당 XAML 네임스페이스는 XAML의 태그 요소이자 [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] 개체에 해당하는 형식의 컬렉션입니다. 하지만 모든 클래스를 요소에 매핑할 수 있는 것은 아닙니다. 추상 클래스를 같은 <xref:System.Windows.Controls.Primitives.ButtonBase>, 특정 비추상 기본 클래스의 상속에 사용 되 고는 [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] 개체 모델입니다. 각각의 구체적인 XAML 요소는 계층 구조의 일부 기본 클래스에서 멤버를 상속하기 때문에 추상 클래스를 포함한 기본 클래스는 여전히 XAML 개발에 있어서 중요합니다. 이러한 멤버에는 대개 요소에서 특성으로 설정할 수 있는 속성 또는 처리될 수 있는 이벤트가 포함됩니다. <xref:System.Windows.FrameworkElement> 구체적인 기반 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 의 클래스 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] WPF 프레임 워크 수준입니다. 디자인할 때 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)], 다양 한 셰이프, 패널, 데코레이터를 사용할지, 아니면 모든 컨트롤 클래스에서 파생 <xref:System.Windows.FrameworkElement>합니다. 관련된 기본 클래스 <xref:System.Windows.FrameworkContentElement>, 흐름 레이아웃 표현에 대 한 잘 작동 하는 문서 기반 요소를 지원 합니다. 사용 하 여 [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] 의도 한 대로 미러는 [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] 에서 <xref:System.Windows.FrameworkElement>합니다. 요소 수준 및 [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] 개체 모델에서 특성의 조합은 특정 요소 및 해당 기본 형식에 관계없이 대부분의 구체적 XAML 요소에 설정할 수 있는 공통 속성 집합을 제공합니다.  
   
 <a name="xaml_security"></a>   
 ## <a name="xaml-security"></a>XAML 보안  
@@ -332,7 +334,7 @@ ms.lasthandoff: 01/25/2018
   
  자습서 항목의 예제 시도 하면 아직 수행 하지 않은이, [연습: 내 첫 WPF 데스크톱 응용 프로그램](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md)합니다. 자습서에서 설명하는 태그 중심 응용 프로그램을 만들어보면 이 항목에서 설명하는 많은 개념을 더 확실하게 이해할 수 있을 것입니다.  
   
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]기반으로 하는 특정 응용 프로그램 모델을 사용 하 여 <xref:System.Windows.Application> 클래스입니다. 자세한 내용은 [응용 프로그램 관리 개요](../../../../docs/framework/wpf/app-development/application-management-overview.md)를 참조하세요.  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 기반으로 하는 특정 응용 프로그램 모델을 사용 하 여 <xref:System.Windows.Application> 클래스입니다. 자세한 내용은 [응용 프로그램 관리 개요](../../../../docs/framework/wpf/app-development/application-management-overview.md)를 참조하세요.  
   
  [WPF 응용 프로그램 빌드](../../../../docs/framework/wpf/app-development/building-a-wpf-application-wpf.md) 에서는 명령줄에서 [!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)]를 사용하여 XAML 포함 응용 프로그램을 만드는 방법에 대해 더 자세하게 설명합니다.  
   

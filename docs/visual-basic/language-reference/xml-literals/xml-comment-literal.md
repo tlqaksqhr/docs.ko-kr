@@ -18,11 +18,11 @@ ms.assetid: 634c1cee-5e01-48d0-88d7-2dd55e4a9e52
 caps.latest.revision: 19
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 36be34ac22cfe926a2eea946f5e4c4eb534de696
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: d5bb8c10c28a4ab864220c1b4ce4702622e55c92
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="xml-comment-literal-visual-basic"></a>XML 주석 리터럴(Visual Basic)
 리터럴 나타내는 <xref:System.Xml.Linq.XComment> 개체입니다.  
@@ -37,9 +37,9 @@ ms.lasthandoff: 11/21/2017
   
 |용어|정의|  
 |---|---|  
-|`<!--`|필수 요소. XML 주석의 시작을 나타냅니다.|  
-|`content`|필수 요소. XML 주석에 표시할 텍스트입니다. 일련을의 두 개의 하이픈 (-) 또는 닫는 태그에 인접 한 하이픈으로 끝날 수 없습니다.|  
-|`-->`|필수 요소. XML 주석의 끝을 나타냅니다.|  
+|`<!--`|필수. XML 주석의 시작을 나타냅니다.|  
+|`content`|필수. XML 주석에 표시할 텍스트입니다. 일련을의 두 개의 하이픈 (-) 또는 닫는 태그에 인접 한 하이픈으로 끝날 수 없습니다.|  
+|`-->`|필수. XML 주석의 끝을 나타냅니다.|  
   
 ## <a name="return-value"></a>반환 값  
  <xref:System.Xml.Linq.XComment> 개체입니다.  
@@ -54,9 +54,9 @@ ms.lasthandoff: 11/21/2017
  XML 주석 리터럴를 변수에 할당할 수 있습니다 또는 XML 요소 리터럴에에 포함할 수 있습니다.  
   
 > [!NOTE]
->  XML 리터럴 줄 연속 문자를 사용 하지 않고 여러 줄을 확장할 수 있습니다. 이 기능을 사용 하면 XML 문서에서 콘텐츠를 복사 하 고에 직접 붙여는 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 프로그램.  
+>  XML 리터럴 줄 연속 문자를 사용 하지 않고 여러 줄을 확장할 수 있습니다. 이 기능을 사용 하면 XML 문서에서 콘텐츠를 복사 하 고 Visual Basic 프로그램에 직접 붙여넣을 수 있습니다.  
   
- [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 컴파일러에 대 한 호출을 XML 주석 리터럴에 변환는 <xref:System.Xml.Linq.XComment.%23ctor%2A> 생성자입니다.  
+ Visual Basic 컴파일러에 대 한 호출을 XML 주석 리터럴에 변환는 <xref:System.Xml.Linq.XComment.%23ctor%2A> 생성자입니다.  
   
 ## <a name="example"></a>예제  
  다음 예제에서는 "This is a comment" 텍스트를 포함 하는 XML 주석을 만듭니다.  

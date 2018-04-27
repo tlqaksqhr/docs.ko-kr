@@ -1,12 +1,13 @@
 ---
-title: "방법: Windows Forms StatusBar 컨트롤에서 클릭한 패널 확인"
-ms.custom: 
+title: '방법: Windows Forms StatusBar 컨트롤에서 클릭한 패널 확인'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-winforms
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -20,16 +21,17 @@ helpviewer_keywords:
 - PanelClick event [Windows Forms], determining panel clicked
 - Panel control [Windows Forms], determining click
 ms.assetid: d14c6092-04b2-4a07-8ddf-0dd11277ff5f
-caps.latest.revision: "16"
+caps.latest.revision: 16
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a91ad8c28bae7d517a9e13937d5de340b1b6a605
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 35dc392ed95a5dbe8182b1adbd05affea55d0baa
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-determine-which-panel-in-the-windows-forms-statusbar-control-was-clicked"></a>방법: Windows Forms StatusBar 컨트롤에서 클릭한 패널 확인
 > [!IMPORTANT]
@@ -42,7 +44,7 @@ ms.lasthandoff: 12/22/2017
   
 ### <a name="to-determine-which-panel-was-clicked"></a>클릭 한 패널을 확인 하려면  
   
-1.  에 <xref:System.Windows.Forms.StatusBar.PanelClick> 이벤트 처리기를 사용 하 여 한 `Select Case` (에서 [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)]) 또는 `switch case` ([!INCLUDE[csprcs](../../../../includes/csprcs-md.md)] 또는 [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) 문에를 이벤트 인수에 클릭 한 패널의 인덱스를 검사 하 여 클릭 한 패널을 확인 합니다.  
+1.  에 <xref:System.Windows.Forms.StatusBar.PanelClick> 이벤트 처리기를 사용 하 여 한 `Select Case` (Visual Basic)에서는 또는 `switch case` (Visual C# 또는 [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) 문에를 이벤트 인수에 클릭 한 패널의 인덱스를 검사 하 여 클릭 한 패널을 확인 합니다.  
   
      다음 코드 예제에서는의 현재 상태, 폼에 필요는 <xref:System.Windows.Forms.StatusBar> 컨트롤 `StatusBar1`와 두 개의 <xref:System.Windows.Forms.StatusBarPanel> 개체 `StatusBarPanel1` 및 `StatusBarPanel2`합니다.  
   
@@ -90,7 +92,7 @@ ms.lasthandoff: 12/22/2017
        }  
     ```  
   
-     ([!INCLUDE[csprcs](../../../../includes/csprcs-md.md)], [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) 폼 생성자에 다음 코드를 추가하여 이벤트 처리기를 등록합니다.  
+     (Visual C# [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) 이벤트 처리기를 등록 하려면 폼의 생성자에 다음 코드를 추가 합니다.  
   
     ```csharp  
     this.statusBar1.PanelClick += new   

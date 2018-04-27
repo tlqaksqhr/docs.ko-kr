@@ -1,11 +1,12 @@
 ---
-title: "코드 주석(Visual Basic)"
-ms.custom: 
+title: 코드 주석(Visual Basic)
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - Uncomment button
@@ -20,17 +21,17 @@ helpviewer_keywords:
 - comments
 - code comments
 ms.assetid: 90136fba-22eb-49f9-ba81-63db629b4a47
-caps.latest.revision: "17"
+caps.latest.revision: 17
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 0cf1aa755c479c73c64951f80ab0b76985507da6
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 9cd3277ea61ac9b46d8d20028bd100811988f611
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="comments-in-code-visual-basic"></a>코드 주석(Visual Basic)
-코드 예제를 읽다 보면 종종 주석 기호(`'`)를 보게 됩니다. 에서는이 기호는 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] , 다음의 텍스트를 무시 하도록 컴파일러에 또는 *주석*합니다. 주석이란 해당 코드를 읽을 사람의 편의를 위해 코드에 추가되는 간단한 설명입니다.  
+코드 예제를 읽다 보면 종종 주석 기호(`'`)를 보게 됩니다. 이 기호는 Visual Basic 컴파일러가, 다음의 텍스트를 무시 또는 *주석*합니다. 주석이란 해당 코드를 읽을 사람의 편의를 위해 코드에 추가되는 간단한 설명입니다.  
   
  모든 프로시저를 시작할 때 프로시저의 기능적 특징, 즉 해당 프로시저가 수행하는 작업에 대한 간단한 주석을 사용하는 것이 좋습니다. 이는 사용자 자신이나 코드를 보게 될 다른 사용자를 위한 것입니다. 프로시저의 구현 방식 등 구현에 대한 자세한 정보는 기능적 특징을 설명하는 주석과 분리되어야 합니다. 이 정보를 설명하는 부분에 포함시킨 경우에는 함수를 업데이트할 때 이 정보도 업데이트해야 합니다.  
   
@@ -43,7 +44,7 @@ ms.lasthandoff: 11/21/2017
  [!code-vb[VbVbcnConventions#17](../../../visual-basic/programming-guide/language-features/codesnippet/VisualBasic/comments-in-code_2.vb)]  
   
 ## <a name="commenting-guidelines"></a>주석 지침  
- 다음 표에서는 코드 부분의 앞에 올 수 있는 주석의 종류에 대한 일반적인 지침을 보여 줍니다. 이 내용은 권장 사항이며 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]에서 주석을 추가할 때 따라야 할 규칙은 아닙니다. 사용자 자신이나 해당 코드를 읽을 다른 모든 사용자에게 적합하도록 주석을 쓰면 됩니다.  
+ 다음 표에서는 코드 부분의 앞에 올 수 있는 주석의 종류에 대한 일반적인 지침을 보여 줍니다. 이러한 권장 사항이 며 Visual Basic에서 메모 추가 대 한 규칙을 적용 하지 않습니다. 사용자 자신이나 해당 코드를 읽을 다른 모든 사용자에게 적합하도록 주석을 쓰면 됩니다.  
   
 |||  
 |---|---|  

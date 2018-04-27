@@ -1,24 +1,26 @@
 ---
-title: "연습: 저장 프로시저만 사용(C#)"
-ms.custom: 
+title: '연습: 저장 프로시저만 사용(C#)'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: ecde4bf2-fa4d-4252-b5e4-96a46b9e097d
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: befc1cbafa7e2ab0a6f6ceeddf1170090f13f92d
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: 4c13e4c12abf17f995bb819ddd7d6337407e3b28
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="walkthrough-using-only-stored-procedures-c"></a>연습: 저장 프로시저만 사용(C#)
 이 연습에서는 저장 프로시저만 실행하여 데이터에 액세스하기 위한 기본 종단 간 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 시나리오를 제공합니다. 일반적으로 데이터베이스 관리자는 데이터 저장소에 액세스하는 방법을 제한하기 위해 이 방법을 사용합니다.  
@@ -28,13 +30,13 @@ ms.lasthandoff: 01/17/2018
   
  이 연습에서는 Northwind 샘플 데이터베이스인 CustOrdersDetail 및 CustOrderHist의 저장 프로시저에 매핑된 두 개의 메서드를 사용합니다. SqlMetal 명령줄 도구를 실행하여 C# 파일을 생성할 경우 매핑이 발생합니다. 자세한 내용은 이 연습 뒷부분의 사전 요구 사항 단원을 참조하세요.  
   
- 이 연습에서는 [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)]에 의존하지 않습니다. [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)]를 사용하는 개발자는 [!INCLUDE[vs_ordesigner_short](../../../../../../includes/vs-ordesigner-short-md.md)]를 사용하여 저장 프로시저 기능을 구현할 수도 있습니다. 참조 [LINQ to SQL 도구 Visual Studio에서](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2)합니다.  
+ 이 연습에서는 [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)]에 의존하지 않습니다. Visual Studio를 사용 하는 개발자 ´ ï ´는 [!INCLUDE[vs_ordesigner_short](../../../../../../includes/vs-ordesigner-short-md.md)] 저장된 프로시저 기능을 구현 합니다. 참조 [LINQ to SQL 도구 Visual Studio에서](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2)합니다.  
   
  [!INCLUDE[note_settings_general](../../../../../../includes/note-settings-general-md.md)]  
   
  이 연습은 Visual C# 개발 설정을 사용하여 작성했습니다.  
   
-## <a name="prerequisites"></a>필수 구성 요소  
+## <a name="prerequisites"></a>전제 조건  
  이 연습에서는 다음 사항이 필요합니다.  
   
 -   이 연습에서는 파일을 보유하기 위해 전용 폴더("c:\linqtest7")가 사용됩니다. 연습을 시작하기 전에 먼저 이 폴더를 만듭니다.  
@@ -54,7 +56,7 @@ ms.lasthandoff: 01/17/2018
 ## <a name="overview"></a>개요  
  이 연습은 다음과 같은 여섯 가지 주요 작업으로 구성됩니다.  
   
--   [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]에서 [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)] 솔루션 설정  
+-   설정 된 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Visual Studio에서 솔루션입니다.  
   
 -   System.Data.Linq 어셈블리를 프로젝트에 추가  
   
@@ -67,13 +69,13 @@ ms.lasthandoff: 01/17/2018
 -   응용 프로그램 실행 및 테스트  
   
 ## <a name="creating-a-linq-to-sql-solution"></a>LINQ to SQL 솔루션 만들기  
- 이 첫 번째 작업에서는 [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)] 프로젝트를 빌드하고 실행하는 데 필요한 참조가 들어 있는 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 솔루션을 만듭니다.  
+ 이 첫 번째 작업에서 빌드 및 실행 하는 데 필요한 참조가 포함 된 Visual Studio 솔루션을 만들는 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 프로젝트.  
   
 #### <a name="to-create-a-linq-to-sql-solution"></a>LINQ to SQL 솔루션을 만들려면  
   
-1.  에 [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)] **파일** 메뉴에서 **새로**, 클릭 하 고 **프로젝트**합니다.  
+1.  Visual Studio에서 **파일** 메뉴에서 **새로**, 클릭 하 고 **프로젝트**합니다.  
   
-2.  에 **프로젝트 형식** 창에는 **새 프로젝트** 대화 상자를 클릭 **Visual C#**합니다.  
+2.  에 **프로젝트 형식** 창에는 **새 프로젝트** 대화 상자를 클릭 **Visual C#** 합니다.  
   
 3.  **템플릿** 창에서 **Windows Forms 응용 프로그램**을 클릭합니다.  
   
@@ -138,9 +140,9 @@ ms.lasthandoff: 01/17/2018
   
 4.  마우스 오른쪽 단추로 클릭 **label1**, 클릭 하 고 **속성**합니다.  
   
-5.  변경 된 **텍스트** 속성 **label1** 를 **Enter OrderID:**합니다.  
+5.  변경 된 **텍스트** 속성 **label1** 를 **Enter OrderID:** 합니다.  
   
-6.  에 대해 같은 방식 **label2**, 변경의 **텍스트** 속성 **label2** 를 **Enter CustomerID:**합니다.  
+6.  에 대해 같은 방식 **label2**, 변경의 **텍스트** 속성 **label2** 를 **Enter CustomerID:** 합니다.  
   
 7.  동일한 방식으로 변경 된 **텍스트** 속성에 대 한 **button1** 를 **Order Details**합니다.  
   

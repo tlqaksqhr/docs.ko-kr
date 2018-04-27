@@ -1,24 +1,26 @@
 ---
-title: "Entity Framework용 SqlClient"
-ms.custom: 
+title: Entity Framework용 SqlClient
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 9a5d6d39-d955-43a5-a5c2-931c239398f1
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 08f662d41f1a147970ae7611f4fe061dd86bac1f
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: 2801ad445be073f2cd4725d04a0c731e8bfcdd1b
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="sqlclient-for-the-entity-framework"></a>Entity Framework용 SqlClient
 이 단원에서는 Entity Framework가 Microsoft SQL Server에서 작동할 수 있도록 하는 .NET Framework Data Provider for SQL Server(SqlClient)에 대해 설명합니다.  
@@ -31,7 +33,7 @@ ms.lasthandoff: 01/19/2018
 ## <a name="providermanifesttoken-schema-attribute"></a>ProviderManifestToken 스키마 특성  
  `ProviderManifestToken`은 SSDL에서 `Schema` 요소의 필수 특성입니다. 이 토큰은 오프라인 시나리오용으로 공급자 매니페스트를 로드하는 데 사용됩니다. 에 대 한 자세한 내용은 `ProviderManifestToken` 특성을 참조 하십시오. [스키마 요소 (SSDL)](http://msdn.microsoft.com/library/fec75ae4-7f16-4421-9265-9dac61509222)합니다.  
   
- SqlClient는 여러 [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] 버전용 데이터 공급자로 사용할 수 있습니다. 이러한 버전에는 서로 다른 기능이 있습니다. 예를 들어 [!INCLUDE[ssVersion2000](../../../../../includes/ssversion2000-md.md)]은 `varchar(max)`에서 도입된 `nvarchar(max)` 및 [!INCLUDE[ssVersion2005](../../../../../includes/ssversion2005-md.md)] 형식을 지원하지 않습니다.  
+ SqlClient 서로 다른 버전의 SQL Server에 대 한 데이터 공급자로 사용할 수 있습니다. 이러한 버전에는 서로 다른 기능이 있습니다. 예를 들어 [!INCLUDE[ssVersion2000](../../../../../includes/ssversion2000-md.md)]은 `varchar(max)`에서 도입된 `nvarchar(max)` 및 [!INCLUDE[ssVersion2005](../../../../../includes/ssversion2005-md.md)] 형식을 지원하지 않습니다.  
   
  SqlClient는 여러 버전의 SQL Server에 대해 다음과 같은 공급자 매니페스트 토큰을 생성하고 허용합니다.  
   

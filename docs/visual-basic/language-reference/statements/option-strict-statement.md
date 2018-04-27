@@ -2,9 +2,10 @@
 title: Long
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 f1_keywords:
 - vb.Strict
@@ -16,14 +17,14 @@ helpviewer_keywords:
 - late binding [Visual Basic]
 - implicit conversions [Visual Basic]
 ms.assetid: 5883e0c1-a920-4274-8e46-b0ff047eaee5
-caps.latest.revision: "49"
+caps.latest.revision: 49
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 1a01edd918ea49c08defddb45bf23c33307e814f
-ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
+ms.openlocfilehash: 0e49c8f64d38b7f8d2dc1a34cf22925c15e3a505
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="option-strict-statement"></a>Long
 암시적 데이터 형식 변환을 확대 변환 으로만 제한 하 고 런타임에 바인딩을 사용할 수 없습니다. 암시적 형식 지정을 허용 하지 않는 한 `Object` 유형입니다.  
@@ -68,7 +69,7 @@ Option Strict { On | Off }
 ## <a name="implicit-narrowing-conversion-errors"></a>암시적 축소 변환 오류  
  암시적 축소 변환 오류는 축소 변환인 암시적 데이터 형식 변환이 있을 경우 발생합니다.  
   
- [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]다양 한 데이터 형식을 다른 데이터 형식으로 변환할 수 있습니다. 한 데이터 형식의 값을 정밀도 나 용량이 있는 데이터 형식으로 변환 하면 데이터 손실이 발생할 수 있습니다. 축소 변환에 실패 하면 런타임 오류가 발생 합니다. `Option Strict`사용 하면 컴파일 시간 알림이 축소 변환의를 방지할 수 있습니다. 자세한 내용은 참조 [암시적 변환과 명시적 변환](../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md) 및 [확장 변환과 축소 변환](../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)합니다.  
+ Visual Basic는 다양 한 데이터 형식을 다른 데이터 형식으로 변환할 수 있습니다. 한 데이터 형식의 값을 정밀도 나 용량이 있는 데이터 형식으로 변환 하면 데이터 손실이 발생할 수 있습니다. 축소 변환에 실패 하면 런타임 오류가 발생 합니다. `Option Strict` 사용 하면 컴파일 시간 알림이 축소 변환의를 방지할 수 있습니다. 자세한 내용은 참조 [암시적 변환과 명시적 변환](../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md) 및 [확장 변환과 축소 변환](../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)합니다.  
   
  식에서 발생 하는 암시적 변환이 포함 하는 오류가 발생할 수 있는 변환 합니다. 자세한 내용은 다음 항목을 참조하세요.  
   
@@ -120,7 +121,7 @@ Option Strict { On | Off }
   
 2.  에 **컴파일** 탭에서 값을 설정는 **Option Strict** 상자입니다.  
   
-###  <a name="conditions"></a>IDE에 경고 구성을 설정 하려면  
+###  <a name="conditions"></a> IDE에 경고 구성을 설정 하려면  
  사용 하는 경우는 [컴파일 페이지, 프로젝트 디자이너 (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic) 대신는 `Option Strict` 오류를 생성 하는 조건에 대 한 추가 제어 있는 문. **경고 구성** 섹션은 **컴파일 페이지** 에 컴파일 시간 오류가 발생 하는 세 가지 조건에 해당 하는 설정이 때 `Option Strict` 켜져 있습니다. 이러한 설정은 다음과 같습니다.  
   
 -   **암시적 변환**  
@@ -131,7 +132,7 @@ Option Strict { On | Off }
   
  **Option Strict**를 **On**으로 설정하는 경우 이러한 세 가지 경고 구성 설정은 모두 **Error**로 설정됩니다. **Option Strict**를 **Off**로 설정하는 경우 세 가지 설정은 모두 **None**으로 설정됩니다.  
   
- 각 경고 구성 설정은 **None**, **Warning** 또는 **Error**로 개별적으로 변경할 수 있습니다. 세 가지 경고 구성 설정이 모두 **Error**로 설정된 경우 `On`이 `Option strict` 상자에 표시됩니다. 세 가지 모두 **None**으로 설정된 경우 `Off`가 이 상자에 표시됩니다. 이러한 설정의 다른 조합의 경우 **(사용자 지정)**이 나타납니다.  
+ 각 경고 구성 설정은 **None**, **Warning** 또는 **Error**로 개별적으로 변경할 수 있습니다. 세 가지 경고 구성 설정이 모두 **Error**로 설정된 경우 `On`이 `Option strict` 상자에 표시됩니다. 세 가지 모두 **None**으로 설정된 경우 `Off`가 이 상자에 표시됩니다. 이러한 설정의 다른 조합의 경우 **(사용자 지정)** 이 나타납니다.  
   
 ### <a name="to-set-the-option-strict-default-setting-for-new-projects"></a>새 프로젝트에 대 한 Option Strict 기본 설정을 설정 하려면  
  프로젝트를 만들 때의 **Option Strict** 에 설정 된 **컴파일** 탭으로 설정 됩니다는 **Option Strict** 에서 설정는 **옵션** 대화 상자입니다.  
@@ -141,17 +142,17 @@ Option Strict { On | Off }
 ### <a name="to-set-option-strict-on-the-command-line"></a>명령줄에서 Option Strict를 설정 하려면  
  포함 된 [/optionstrict](../../../visual-basic/reference/command-line-compiler/optionstrict.md) 컴파일러 옵션에는 **vbc** 명령 합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 예에서는 암시적 형식 변환은 축소 변환에 의해 발생 한 컴파일 시간 오류를 보여 줍니다. 에 해당 하는 이러한 종류의 오류가 **암시적 변환** 조건에 **컴파일 페이지**합니다.  
   
  [!code-vb[VbVbalrStatements#161](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/option-strict-statement_1.vb)]  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 예제에서는 런타임에 바인딩하여 발생 하는 컴파일 타임 오류를 보여 줍니다. 이 범주의 오류에 해당 하는 **지연 바인딩; 호출이 런타임에 실패할 수 있음** 조건에 **컴파일 페이지**합니다.  
   
  [!code-vb[VbVbalrStatements#162](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/option-strict-statement_2.vb)]  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 예에서는 암시적 유형으로 선언 된 변수에 의해 발생 한 오류를 보여 줍니다. `Object`합니다. 이 범주의 오류에 해당 하는 **암시적 형식이 아니므로 개체로 간주** 조건에 **컴파일 페이지**합니다.  
   
  [!code-vb[VbVbalrStatements#163](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/option-strict-statement_3.vb)]  

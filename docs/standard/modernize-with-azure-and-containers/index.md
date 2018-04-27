@@ -5,14 +5,15 @@ author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/26/2017
 ms.prod: .net
+ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: ba48579735379bfc857993cd1546f5f7125101f4
-ms.sourcegitcommit: d3cfda0943364aaf6ccd574f55f584576c8a4fee
+ms.openlocfilehash: ac4cd9f14f046a970b6ec41c1b176e9980a960cf
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="modernize-existing-net-applications-with-azure-cloud-and-windows-containers-v10"></a>Azure 클라우드 및 Windows 컨테이너를 사용하여 기존 .NET 응용 프로그램 현대화(v1.0)
 
@@ -28,7 +29,7 @@ Copyright © 2017 by Microsoft Corporation
 
 All rights reserved. 이 가이드의 내용 중 어떤 부분도 게시자의 서면 허가 없이는 어떠한 형식이나 방법으로도 복제할 수 없습니다.
 
-이 가이드는 전자책 (전자책) http://dot.net/architecture 등 microsoft 여러 채널을 통해 사용할 수 있는 형태의 무료로 제공 됩니다.
+이 책은와 같은 microsoft 여러 채널을 통해 사용할 수 있는 전자는 책 (전자책)의 형태로 무료로 사용할 수 있는 http://dot.net/architecture합니다.
 
 이 책에 관한 질문이 있는 경우 [dotnet-architecture-ebooks-feedback@service.microsoft.com](mailto:dotnet-architecture-ebooks-feedback@service.microsoft.com?subject=Feedback%20for%20.NET%20Container%20&%20Microservices%20Architecture%20book)으로 이메일을 보내 주세요.
 
@@ -36,7 +37,7 @@ All rights reserved. 이 가이드의 내용 중 어떤 부분도 게시자의 �
 
 여기에 설명된 일부 예제는 예시 용도로만 제공되며 실제 데이터가 아닙니다. 실제로 연관시키거나 관련시키려고 의도하거나 추론해서는 안 됩니다.
 
-"상표" 웹 페이지의 http://www.microsoft.com에 나열된 Microsoft 및 상표는 Microsoft 그룹 계열사의 상표입니다. 기타 모든 표시는 해당 소유자의 자산입니다.
+Microsoft 및에 나열 된 상표 http://www.microsoft.com "상표" 웹 페이지에는 Microsoft 그룹 계열사의 상표입니다. 기타 모든 표시는 해당 소유자의 자산입니다.
 
 만든 이:
 > **Cesar de la Torre**, 선임 PM, Microsoft Corp. .NET 제품 팀
@@ -172,11 +173,11 @@ All rights reserved. 이 가이드의 내용 중 어떤 부분도 게시자의 �
 
 ### <a name="additional-resources"></a>추가 자료
 
-- **Microsoft 플랫폼 및 도구를 사용하여 컨테이너화된 Docker 응용 프로그램 수명 주기**(다운로드 가능한 전자책) [*https://aka.ms/dockerlifecycleebook*](https://aka.ms/dockerlifecycleebook)
+- **Microsoft 플랫폼 및 도구와 응용 프로그램 수명 주기 Docker 컨테이너 화 된** (다운로드 가능한 전자책 (영문)): [*https://aka.ms/dockerlifecycleebook*](https://aka.ms/dockerlifecycleebook)
 
-- **컨테이너화된 .NET 응용 프로그램을 위한 .NET 마이크로 서비스 아키텍처**(다운로드 가능한 전자책): [*https://aka.ms/microservicesebook*](https://aka.ms/microservicesebook)
+- **.NET Microservices: 컨테이너 화 된.NET 응용 프로그램에 대 한 아키텍처** (다운로드 가능한 전자책 (영문)): [*https://aka.ms/microservicesebook*](https://aka.ms/microservicesebook)
 
-- **ASP.NET Core 및 Azure로 현대식 웹 응용 프로그램 설계**(다운로드 가능한 전자책): [*https://aka.ms/webappebook*](https://aka.ms/webappebook)
+- **ASP.NET Core 및 Azure로 웹 응용 프로그램 설계** (다운로드 가능한 전자책 (영문)): [*https://aka.ms/webappebook*](https://aka.ms/webappebook)
 
 ## <a name="who-should-use-this-guide"></a>이 가이드의 대상 사용자
 

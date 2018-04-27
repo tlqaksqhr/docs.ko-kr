@@ -1,22 +1,23 @@
 ---
-title: "LINQ to XML 축 (Visual Basic)"
-ms.custom: 
+title: LINQ to XML 축 (Visual Basic)
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: ecd3bd00-28e5-4517-a59f-53bff39fd478
-caps.latest.revision: "3"
+caps.latest.revision: 3
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 119c4808b6d436c2227331dbb3ab9c4077ff56f2
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 404ddcc89e6549d7575761e10c23413d9688a38f
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="linq-to-xml-axes-visual-basic"></a>LINQ to XML 축 (Visual Basic)
 XML 트리를 만들거나 XML 문서를 XML 트리에 로드한 후 XML 트리를 쿼리하여 요소와 특성을 찾고 해당 값을 검색할 수 있습니다.  
@@ -37,7 +38,7 @@ XML 트리를 만들거나 XML 문서를 XML 트리에 로드한 후 XML 트리�
 |[방법: 단일 특성 (LINQ to XML)을 검색 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-retrieve-a-single-attribute-linq-to-xml.md)|특성 이름이 제공된 경우 요소의 단일 특성을 검색하는 방법을 보여 줍니다.|  
 |[방법: 검색 (LINQ to XML) 특성의 값 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-retrieve-the-value-of-an-attribute-linq-to-xml.md)|특성의 값을 가져오는 방법을 보여 줍니다.|  
 |[방법: 요소 (Visual Basic)의 단순 값 검색](../../../../visual-basic/programming-guide/concepts/linq/how-to-retrieve-the-shallow-value-of-an-element.md)|요소의 부분 값을 검색하는 방법을 보여 줍니다.|  
-|[Visual Basic (LINQ to XML)의 언어 통합 축](../../../../visual-basic/programming-guide/concepts/linq/language-integrated-axes.md)|요약의 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 통합 축 합니다.|  
+|[Visual Basic (LINQ to XML)의 언어 통합 축](../../../../visual-basic/programming-guide/concepts/linq/language-integrated-axes.md)|Visual Basic 통합 축에 요약 되어 있습니다.|  
   
 ## <a name="see-also"></a>참고 항목  
  [프로그래밍 가이드 (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/programming-guide-linq-to-xml.md)

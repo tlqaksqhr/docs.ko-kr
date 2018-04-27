@@ -1,12 +1,12 @@
 ---
-title: "클래스와 구조체 간의 선택"
-ms.custom: 
+title: 클래스와 구조체 간의 선택
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - class library design guidelines [.NET Framework], structures
@@ -18,18 +18,18 @@ helpviewer_keywords:
 - classes [.NET Framework], vs. structures
 - type design guidelines, classes
 ms.assetid: f8b8ec9b-0ba7-4dea-aadf-a93395cd804f
-caps.latest.revision: "11"
+caps.latest.revision: 11
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 68a3d2c7335ff15706925f9a7986164e6d9c0c36
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: d7b7a0b290b97966894b9fa7d3b5597e68037cb0
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="choosing-between-class-and-struct"></a>클래스와 구조체 간의 선택
 모든 프레임 워크 디자이너를 향하도록 기본 디자인 결정 사항 중 하나 (예: 참조 형식)는 클래스 또는 구조체 (값 형식)으로 형식을 디자인을 여부입니다. 참조 형식 및 값 형식의 동작의 차이점에 잘 알고는이 선택 하는 중요 합니다.  
@@ -60,9 +60,9 @@ ms.lasthandoff: 12/23/2017
   
  다른 모든 경우에 클래스 형식을 정의 해야 합니다.  
   
- *일부 © 2005, 2009 Microsoft Corporation. 모든 권리 보유.*  
+ *Portions © 2005, 2009 Microsoft Corporation. 모든 권리 보유.*  
   
- *피어슨 교육, Inc.에서의 사용 권한으로 재인쇄 [Framework 디자인 지침: 규칙, 특징 및 다시 사용할 수 있는.NET 라이브러리를 2nd Edition에 대 한 패턴](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina 및 Brad Abrams 게시 하 여 2008 년 10 월 22 일 Microsoft Windows 개발 시리즈의 일부로: Addison Wesley Professional.*  
+ *피어슨 교육, Inc.에서의 사용 권한으로 재인쇄 [Framework 디자인 지침: 규칙, 특징 및 다시 사용할 수 있는.NET 라이브러리를 2nd Edition에 대 한 패턴](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina 및 Brad Abrams 게시 하 여 2008 년 10 월 22 일 Microsoft Windows 개발 시리즈의 일부로: Addison Wesley Professional.*  
   
 ## <a name="see-also"></a>참고 항목  
  [형식 디자인 지침](../../../docs/standard/design-guidelines/type.md)  

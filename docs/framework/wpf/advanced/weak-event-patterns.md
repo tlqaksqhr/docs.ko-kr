@@ -1,34 +1,36 @@
 ---
-title: "약한 이벤트 패턴"
-ms.custom: 
+title: 약한 이벤트 패턴
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - weak event pattern implementation [WPF]
 - event handlers [WPF], weak event pattern
 - IWeakEventListener interface [WPF]
 ms.assetid: e7c62920-4812-4811-94d8-050a65c856f6
-caps.latest.revision: "18"
+caps.latest.revision: 18
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 21a36797f945f37a641e7002bbb9937a664650fd
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: f96327f8eaad36f3faebf48db083125816589821
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="weak-event-patterns"></a>약한 이벤트 패턴
-응용 프로그램에서 있기 이벤트 소스에 연결 된 처리기를 조정 하 여 처리기는 소스에 연결 하는 수신기 개체 소멸 되지 것입니다. 이 경우 메모리 누수가 발생할 수 있습니다. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]특정 이벤트에 대 한 전용된 관리자 클래스를 제공 하 고 해당 이벤트에 대 한 수신기에 인터페이스를 구현 하 여이 문제를 해결 하는 데 사용할 수 있는 디자인 패턴을 소개 합니다. 이 디자인 패턴 이라고는 *취약 한 이벤트 패턴*합니다.  
+응용 프로그램에서 있기 이벤트 소스에 연결 된 처리기를 조정 하 여 처리기는 소스에 연결 하는 수신기 개체 소멸 되지 것입니다. 이 경우 메모리 누수가 발생할 수 있습니다. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 특정 이벤트에 대 한 전용된 관리자 클래스를 제공 하 고 해당 이벤트에 대 한 수신기에 인터페이스를 구현 하 여이 문제를 해결 하는 데 사용할 수 있는 디자인 패턴을 소개 합니다. 이 디자인 패턴 이라고는 *취약 한 이벤트 패턴*합니다.  
   
 ## <a name="why-implement-the-weak-event-pattern"></a>취약 한 이벤트 패턴을 구현 하는 이유  
- 이벤트를 수신 대기 메모리 누수 될 수 있습니다. 이벤트를 수신 하는 일반적인 방법 처리기 이벤트 소스에 연결 하는 언어 관련 구문을 사용 하는 것입니다. 예를 들어 [!INCLUDE[TLA#tla_cshrp](../../../../includes/tlasharptla-cshrp-md.md)], 구문이 않은: `source.SomeEvent += new SomeEventHandler(MyEventHandler)`합니다.  
+ 이벤트를 수신 대기 메모리 누수 될 수 있습니다. 이벤트를 수신 하는 일반적인 방법 처리기 이벤트 소스에 연결 하는 언어 관련 구문을 사용 하는 것입니다. 예를 들어 C#에서 해당 구문은: `source.SomeEvent += new SomeEventHandler(MyEventHandler)`합니다.  
   
  이 기술은 이벤트 소스에서 이벤트 수신기에 강력한 참조를 만듭니다. 일반적으로 수신기에 대 한 이벤트 처리기를 연결 하면 해당 수신기는 영향을 원본 개체 수명 (이벤트 처리기가 명시적으로 제거) 하는 개체 수명이 합니다. 하지만 속해 있는지 여부 현재 소스의 수명이 아니라에 응용 프로그램의 시각적 트리 같은 개체 수명에 대 한 다른 요인에 의해 제어 수신기의 하려는 특정 상황에서는 있습니다. 메모리 누수 일반 이벤트 패턴으로 인해 소스 개체 수명 수신기의 개체 수명을 넘어가는, 때마다: 수신기 예정 보다 더 이상 활성 상태로 유지 됩니다.  
   

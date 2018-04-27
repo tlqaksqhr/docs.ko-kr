@@ -1,11 +1,12 @@
 ---
-title: "방법: 연산자 프로시저 호출(Visual Basic)"
-ms.custom: 
+title: '방법: 연산자 프로시저 호출(Visual Basic)'
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - operator procedures [Visual Basic], calling
@@ -17,19 +18,19 @@ helpviewer_keywords:
 - overloaded operators [Visual Basic], calling
 - operator overloading
 ms.assetid: 0dce42cc-f0b0-4c14-9f62-018b21f33497
-caps.latest.revision: "16"
+caps.latest.revision: 16
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 0abff0a81ebcdacb59b69d0c307bb4aa219906c3
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 21545f2488bfabd0abc9c6e316d21bbc4d5aeb91
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-call-an-operator-procedure-visual-basic"></a>방법: 연산자 프로시저 호출(Visual Basic)
 연산자 기호를 사용 하 여 식에서 연산자 프로시저를 호출 합니다. 호출 하 여 변환 연산자의 경우는 [CType 함수](../../../../visual-basic/language-reference/functions/ctype-function.md) 다른 값의 데이터 형식을 변환 하 합니다.  
   
- 연산자 프로시저를 명시적으로 호출 하지 않습니다. 연산자를 사용 또는 `CType` 대입문 또는 식에서 일반적으로 연산자를 사용 하면 동일한 방식으로 함수입니다. [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]연산자 프로시저를 호출을 수행 합니다.  
+ 연산자 프로시저를 명시적으로 호출 하지 않습니다. 연산자를 사용 또는 `CType` 대입문 또는 식에서 일반적으로 연산자를 사용 하면 동일한 방식으로 함수입니다. Visual Basic 연산자 프로시저를 호출을 수행 합니다.  
   
  클래스 또는 구조체에서 연산자를 정의 라고도 *오버 로드* 연산자입니다.  
   
@@ -47,7 +48,7 @@ ms.lasthandoff: 11/21/2017
   
 2.  피연산자의 데이터 형식에 적합 한 변환, 올바른 순서로 이어야 합니다.  
   
-3.  `CType`변환 연산자 프로시저를 호출 하 고 변환 된 값을 반환 합니다.  
+3.  `CType` 변환 연산자 프로시저를 호출 하 고 변환 된 값을 반환 합니다.  
   
 ## <a name="example"></a>예제  
  다음 예제에서는 두 개의 <xref:System.TimeSpan> 구조가 함께 추가 하 고 세 번째 결과 저장 <xref:System.TimeSpan> 구조입니다. <xref:System.TimeSpan> 구조는 여러 가지 표준 연산자를 오버 로드할 연산자 프로시저를 정의 합니다.  

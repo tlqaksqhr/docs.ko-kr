@@ -1,24 +1,26 @@
 ---
-title: "연습으로 학습"
-ms.custom: 
+title: 연습으로 학습
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: a8ae2965-6a49-4155-89b0-7fab2c488ab1
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: c49ecfec032a20090e8eca1c94efe9e1f35cce7d
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: 98373ccee7f9fde178f26c62cd77acb17676c6cc
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="learning-by-walkthroughs"></a>연습으로 학습
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 설명서에서는 여러 가지 연습을 제공 합니다. 이 항목에서는 몇 가지 일반적인 연습 문제와 해결 방법을 살펴보고 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]을 배울 수 있는 여러 초급 수준 연습에 대한 링크를 제공합니다.  
@@ -41,7 +43,7 @@ ms.lasthandoff: 01/19/2018
 ## <a name="general"></a>일반  
  일반적으로 다음과 같은 정보가 이러한 연습과 관련됩니다.  
   
--   환경: 각 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 연습에서는 [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)]를 IDE(통합 개발 환경)로 사용합니다.  
+-   환경: 각 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 연습 Visual Studio 통합된 개발 환경 (IDE)에서 사용 합니다.  
   
 -   SQL 엔진: 이러한 연습은 SQL Server Express를 사용하여 구현하도록 작성됩니다. SQL Server Express가 없을 경우 무료로 다운로드할 수 있습니다. 자세한 내용은 참조 [샘플 데이터베이스 다운로드](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md)합니다.  
   
@@ -50,11 +52,11 @@ ms.lasthandoff: 01/19/2018
   
 -   [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 연습을 수행하려면 일반적으로 Northwind 샘플 데이터베이스가 있어야 합니다. 자세한 내용은 참조 [샘플 데이터베이스 다운로드](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md)합니다.  
   
--   연습에서 표시되는 대화 상자와 메뉴 명령은 실제 설정이나 [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)] 버전에 따라 도움말에서 설명하는 것과 다를 수 있습니다. 설정을 변경하려면 **도구** 메뉴에서 **설정 가져오기 및 내보내기** 를 클릭합니다. 자세한 내용은 [Visual Studio에서 개발 설정 사용자 지정](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3)을 참조하세요.  
+-   대화 상자와 메뉴 명령은 연습에서 표시는 실제 설정이 나 Visual Studio 버전에 따라 도움말에서 설명 하는 것에서 달라질 수 있습니다. 설정을 변경하려면 **도구** 메뉴에서 **설정 가져오기 및 내보내기** 를 클릭합니다. 자세한 내용은 [Visual Studio에서 개발 설정 사용자 지정](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3)을 참조하세요.  
   
 -   다중 계층 시나리오를 다루는 연습의 경우 서버는 개발 컴퓨터와 별개인 컴퓨터에 있어야 하고 서버에 액세스하기 위한 적절한 권한이 있어야 합니다.  
   
--   일반적으로 Northwind 샘플 데이터베이스의 Orders 테이블을 나타내는 클래스의 이름은 `[Order]`입니다. `Order`가 [!INCLUDE[vbprvb](../../../../../../includes/vbprvb-md.md)]에서 키워드이기 때문에 이스케이프가 필요합니다.  
+-   일반적으로 Northwind 샘플 데이터베이스의 Orders 테이블을 나타내는 클래스의 이름은 `[Order]`입니다. 이스케이프가 필요 하기 때문에 `Order` Visual Basic의 키워드입니다.  
   
 ## <a name="troubleshooting"></a>문제 해결  
  이러한 연습에 사용되는 데이터베이스에 액세스하기 위한 충분한 사용 권한이 없기 때문에 런타임 오류가 발생할 수 있습니다. 이와 관련된 가장 일반적인 문제를 해결하는 데 도움이 되는 다음 단계를 참조하세요.  

@@ -1,34 +1,34 @@
 ---
-title: "연습: XAML을 사용하여 단추 만들기"
-ms.custom: 
+title: '연습: XAML을 사용하여 단추 만들기'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-wpf
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - buttons [WPF]
 ms.assetid: 138c41c4-1759-4bbf-8d77-77031a06a8a0
-caps.latest.revision: 
+caps.latest.revision: 13
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 5c5efa9f8787e65d59e1b544632e806bf3fbbc81
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 94ec5e56862190026b43331488cbc699fe7dfda4
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="walkthrough-create-a-button-by-using-xaml"></a>연습: XAML을 사용하여 단추 만들기
 애니메이션된 단추에서 사용 하기 위해 만드는 방법을 설명 하는이 연습의 [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] 응용 프로그램입니다. 이 연습에서는 스타일 및 서식 파일을 사용 하 여 코드 재사용 및 단추 선언에서 단추 논리 분리를 허용 하는 사용자 지정된 단추 리소스를 만듭니다. 이 연습은 전체 코드를 작성은 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]합니다.  
   
 > [!IMPORTANT]
->  이 연습을 입력 하거나 복사 하 여 응용 프로그램을 만들기 위한 단계를 안내해 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] 를 Microsoft [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)]합니다. 디자인 도구 (Microsoft Expression Blend) 동일한 응용 프로그램 만들기, 참조를 사용 하는 방법을 알아보려면 않으려면 [Microsoft Expression Blend를 사용 하 여 단추 만들기](../../../../docs/framework/wpf/controls/walkthrough-create-a-button-by-using-microsoft-expression-blend.md)합니다.  
+>  이 연습을 입력 하거나 복사 하 여 응용 프로그램을 만들기 위한 단계를 안내해 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] Microsoft Visual studio입니다. 디자인 도구 (Microsoft Expression Blend) 동일한 응용 프로그램 만들기, 참조를 사용 하는 방법을 알아보려면 않으려면 [Microsoft Expression Blend를 사용 하 여 단추 만들기](../../../../docs/framework/wpf/controls/walkthrough-create-a-button-by-using-microsoft-expression-blend.md)합니다.  
   
  다음 그림은 완료 된 단추입니다.  
   
@@ -39,7 +39,7 @@ ms.lasthandoff: 12/22/2017
   
 #### <a name="to-create-a-new-wpf-project-and-add-buttons-to-the-window"></a>새 WPF 프로젝트를 만들고 창에 단추를 추가 하려면  
   
-1.  시작[!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)]합니다.  
+1.  Visual Studio를 시작합니다.  
   
 2.  **새 WPF 프로젝트를 만들:** 에 **파일** 메뉴에서 **새로**, 클릭 하 고 **프로젝트**합니다. 찾을 **Windows 응용 프로그램 (WPF)** 템플릿과 "AnimatedButton" 프로젝트 이름을 지정 합니다. 이렇게 하면 응용 프로그램에 대 한 기본 항목이 만들어집니다.  
   
@@ -332,7 +332,7 @@ ms.lasthandoff: 12/22/2017
   
      F5 키를 눌러 응용 프로그램을 실행 하 고 단추 중 하나를 클릭 합니다. 포커스를 여전히 있기 때문에 클릭 한 후 단추가 강조 표시 된에 유지 된다는 것을 확인 합니다. 다른 단추를 클릭 하면 마지막이를 손실 하는 동안 새 단추 포커스를 얻습니다.  
   
-4.  **에 대 한 애니메이션 추가** <xref:System.Windows.UIElement.MouseEnter> **및** <xref:System.Windows.UIElement.MouseLeave> **:** 다음 일부 애니메이션 트리거를 추가 했습니다. 내에 다음 태그를 추가 `ControlTemplate.Triggers` 블록입니다.  
+4.  **에 대 한 애니메이션 추가** <xref:System.Windows.UIElement.MouseEnter> **및** <xref:System.Windows.UIElement.MouseLeave> **:** 다음 일부 애니메이션 트리거를 추가 했습니다.   내에 다음 태그를 추가 `ControlTemplate.Triggers` 블록입니다.  
   
     ```  
     <!-- Animations that start when mouse enters and leaves button. -->  

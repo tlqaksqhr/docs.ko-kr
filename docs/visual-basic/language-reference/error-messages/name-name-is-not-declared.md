@@ -1,5 +1,5 @@
 ---
-title: 이름 &#39; &lt;이름&gt;&#39; 선언 되지 않았습니다
+title: 이름 &#39; &lt;이름&gt; &#39; 선언 되지 않았습니다
 ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: ''
@@ -16,20 +16,20 @@ ms.assetid: 765f099b-e21e-47c6-a906-a065444e56b3
 caps.latest.revision: 11
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 7a63ae74c7179d71756e2b9b4bf6b41a71ce12a6
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 26245952a2dc5341dedba6c497c47773b882b49b
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
-# <a name="name-39ltnamegt39-is-not-declared"></a>이름 &#39; &lt;이름&gt;&#39; 선언 되지 않았습니다
+# <a name="name-39ltnamegt39-is-not-declared"></a>이름 &#39; &lt;이름&gt; &#39; 선언 되지 않았습니다
 문에서 프로그래밍 요소를 참조 하지만 컴파일러에서 정확한 해당 이름 가진 요소를 찾을 수 없습니다.  
   
  **오류 ID:** BC30451  
   
 ## <a name="to-correct-this-error"></a>이 오류를 해결하려면  
   
-1.  참조하는 문에서 이름의 철자를 검사합니다. [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]소문자를 구분 하지 않지만 철자 다르면 전혀 다른 이름으로 간주 됩니다. 밑줄(`_`)은 이름의 일부이므로 철자의 일부입니다.  
+1.  참조하는 문에서 이름의 철자를 검사합니다. Visual Basic은 대/소문자를 구분 하지만 맞춤법 다르면 전혀 다른 이름으로 간주 됩니다. 밑줄(`_`)은 이름의 일부이므로 철자의 일부입니다.  
   
 2.  멤버 액세스 연산자 있는지 확인 (`.`) 개체와 해당 멤버 사이입니다. 예를 들어 <xref:System.Windows.Forms.TextBox> 이라는 `TextBox1`컨트롤이 있는 경우 해당 <xref:System.Windows.Forms.TextBoxBase.Text%2A> 속성에 액세스하려면 `TextBox1.Text`를 입력해야 합니다. `TextBox1Text`를 대신 입력하면 다른 이름이 만들어집니다.  
   

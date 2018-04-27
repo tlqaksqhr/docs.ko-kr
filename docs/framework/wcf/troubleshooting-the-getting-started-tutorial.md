@@ -1,31 +1,33 @@
 ---
-title: "초보자를 위한 자습서 문제 해결"
-ms.custom: 
+title: 초보자를 위한 자습서 문제 해결
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 69a21511-0871-4c41-9a53-93110e84d7fd
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 55288074b35bcb00d6c6b453f1320ad40d26a5f7
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: d8bc077b1ef24ecfcb4d37a9ddb8389dc705f68e
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="troubleshooting-the-getting-started-tutorial"></a>초보자를 위한 자습서 문제 해결
 이 항목에서는 초보자를 위한 자습서를 수행할 때 발생하는 가장 일반적인 문제 및 해결 방법을 보여 줍니다.  
   
 1.  [하드 드라이브에서 프로젝트 파일을 찾을 수 없는 경우](../../../docs/framework/wcf/troubleshooting-the-getting-started-tutorial.md#BKMK_q1)  
   
-2.  [서비스 응용 프로그램을 실행하려고 할 때 다음 오류가 발생합니다. HTTP가 URL http://+:8000/ServiceModelSamples/Service/를 등록할 수 없습니다. 사용자의 프로세스에 이 네임스페이스에 액세스할 수 있는 권한이 없습니다.](../../../docs/framework/wcf/troubleshooting-the-getting-started-tutorial.md#BKMK_q2)  
+2.  [서비스 응용 프로그램을 실행 하는: HTTP URL을 등록 하지 못했습니다 http://+:8000/ServiceModelSamples/Service/합니다. 사용자의 프로세스에 이 네임스페이스에 액세스할 수 있는 권한이 없습니다.](../../../docs/framework/wcf/troubleshooting-the-getting-started-tutorial.md#BKMK_q2)  
   
 3.  [Svcutil.exe 도구를 사용 하려고: 'svcutil'는 내부 또는 외부 명령, 실행할 수 있는 프로그램 또는 배치 파일으로 인식 되지 않습니다.](../../../docs/framework/wcf/troubleshooting-the-getting-started-tutorial.md#BKMK_q3)  
   
@@ -35,14 +37,14 @@ ms.lasthandoff: 12/22/2017
   
 6.  [클라이언트 응용 프로그램의 컴파일: 형식 또는 네임 스페이스 이름 'CalculatorClient'를 찾을 수 없습니다 (사용 하는 누락 된 지시문 또는 어셈블리 참조가?)](../../../docs/framework/wcf/troubleshooting-the-getting-started-tutorial.md#BKMK_q6)  
   
-7.  [클라이언트를 실행: 처리 되지 않은 예외: System.ServiceModel.EndpointNotFoundException:: //localhost: 8000/ServiceModelSamples/Service/CalculatorService에 연결 하지 못했습니다. TCP 오류 코드 10061: 대상 컴퓨터 거부 했으므로 없습니다 연결을 설정할 수 없습니다.](../../../docs/framework/wcf/troubleshooting-the-getting-started-tutorial.md#BKMK_q7)  
+7.  [클라이언트를 실행: 처리 되지 않은 예외: System.ServiceModel.EndpointNotFoundException:에 연결 하지 못했습니다 http://localhost:8000/ServiceModelSamples/Service/CalculatorService합니다. TCP 오류 코드 10061: 대상 컴퓨터 거부 했으므로 없습니다 연결을 설정할 수 없습니다.](../../../docs/framework/wcf/troubleshooting-the-getting-started-tutorial.md#BKMK_q7)  
   
 <a name="BKMK_q1"></a>   
 ## <a name="i-am-unable-to-find-the-project-files-on-my-hard-drive"></a>하드 드라이브에서 프로젝트 파일을 찾을 수 없습니다.  
- [!INCLUDE[vs_current_short](../../../includes/vs-current-short-md.md)]저장 프로젝트 c:\users 파일\\< 사용자 name\Documents\\< Visual Studio 버전\>에 \Projects [!INCLUDE[wv](../../../includes/wv-md.md)] 및 [!INCLUDE[win7_client_secondref](../../../includes/win7-client-secondref-md.md)], c:\Documents and Settings 및\\< 사용자 이름\>\My documents\\< Visual Studio 버전\>이전 버전의 Windows에서 \Projects 합니다.  
+ C:\users에서 프로젝트 파일을 저장 하는 visual Studio\\< 사용자 name\Documents\\< Visual Studio 버전\>에 \Projects [!INCLUDE[wv](../../../includes/wv-md.md)] 및 [!INCLUDE[win7_client_secondref](../../../includes/win7-client-secondref-md.md)], 및 c:\Documents and Settings\\< 사용자 이름 \>\My documents\\< Visual Studio 버전\>이전 버전의 Windows에서 \Projects 합니다.  
   
 <a name="BKMK_q2"></a>   
-## <a name="attempting-to-run-the-service-application-http-could-not-register-url-http8000servicemodelsamplesservice-your-process-does-not-have-access-rights-to-this-namespace"></a>서비스 응용 프로그램을 실행하려고 할 때 다음 오류가 발생합니다. HTTP가 URL http://+:8000/ServiceModelSamples/Service/을(를) 등록할 수 없습니다. 사용자의 프로세스에 이 네임스페이스에 액세스할 수 있는 권한이 없습니다.  
+## <a name="attempting-to-run-the-service-application-http-could-not-register-url-http8000servicemodelsamplesservice-your-process-does-not-have-access-rights-to-this-namespace"></a>서비스 응용 프로그램을 실행 하는: HTTP URL을 등록 하지 못했습니다 http://+:8000/ServiceModelSamples/Service/합니다. 사용자의 프로세스에 이 네임스페이스에 액세스할 수 있는 권한이 없습니다.  
  [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 서비스를 호스팅하는 프로세스는 관리자 권한으로 실행해야 합니다. [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)] 내에서 서비스를 실행 중인 경우에는 [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)]을 관리자로 실행해야 합니다. 이렇게 하려면 **시작**를 마우스 오른쪽 단추로 클릭 [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)] 선택 **관리자 권한으로 실행**합니다. 명령줄 프롬프트에서 서비스를 실행 중인 경우에는 동일한 방식으로 명령줄 프롬프트를 관리자로 시작해야 합니다. 클릭 **시작**를 마우스 오른쪽 단추로 클릭 **명령 프롬프트** 선택 **관리자 권한으로 실행**합니다.  
   
 <a name="BKMK_q3"></a>   
@@ -62,11 +64,11 @@ ms.lasthandoff: 12/22/2017
  클라이언트 프로젝트에 Proxy.cs 또는 Proxy.vb 파일을 추가하면 이 오류가 발생합니다.  
   
 <a name="BKMK_q7"></a>   
-## <a name="running-the-client-unhandled-exception-systemservicemodelendpointnotfoundexception-could-not-connect-to-httplocalhost8000servicemodelsamplesservicecalculatorservice-tcp-error-code-10061-no-connection-could-be-made-because-the-target-machine-actively-refused-it"></a>클라이언트를 실행할 때 다음 오류가 발생합니다. 처리되지 않은 예외: System.ServiceModel.EndpointNotFoundException: http://localhost:8000/ServiceModelSamples/Service/CalculatorService에 연결할 수 없습니다. TCP 오류 코드 10061: 대상 컴퓨터에서 연결을 거부했으므로 연결하지 못했습니다.  
+## <a name="running-the-client-unhandled-exception-systemservicemodelendpointnotfoundexception-could-not-connect-to-httplocalhost8000servicemodelsamplesservicecalculatorservice-tcp-error-code-10061-no-connection-could-be-made-because-the-target-machine-actively-refused-it"></a>클라이언트를 실행: 처리 되지 않은 예외: System.ServiceModel.EndpointNotFoundException:에 연결 하지 못했습니다 http://localhost:8000/ServiceModelSamples/Service/CalculatorService합니다. TCP 오류 코드 10061: 대상 컴퓨터에서 연결을 거부했으므로 연결하지 못했습니다.  
  서비스를 실행하지 않고 클라이언트 응용 프로그램을 실행하면 이 오류가 발생합니다.  
   
 <a name="BKMK_q8"></a>   
-## <a name="unhandled-exception-systemservicemodelsecuritysecuritynegotiationexception-soap-security-negotiation-with-httplocalhost8000servicemodelsamplesservicecalculatorservice-for-target-httplocalhost8000servicemodelsamplesservicecalculatorservice-failed"></a>다음 오류가 발생합니다. 처리되지 않은 예외: System.ServiceModel.Security.SecurityNegotiationException: 'http://localhost:8000/ServiceModelSamples/Service/CalculatorService' 대상에 대한 'http://localhost:8000/ServiceModelSamples/Service/CalculatorService'과(와)의 SOAP 보안 협상을 실행하지 못했습니다.  
+## <a name="unhandled-exception-systemservicemodelsecuritysecuritynegotiationexception-soap-security-negotiation-with-httplocalhost8000servicemodelsamplesservicecalculatorservice-for-target-httplocalhost8000servicemodelsamplesservicecalculatorservice-failed"></a>처리 되지 않은 예외: System.ServiceModel.Security.SecurityNegotiationException:와 SOAP 보안 협상 'http://localhost:8000/ServiceModelSamples/Service/CalculatorService'대상'에 대 한http://localhost:8000/ServiceModelSamples/Service/CalculatorService' 하지 못했습니다.  
  이 오류는 도메인에 참가한 컴퓨터가 네트워크에 연결할 수 없는 경우 발생합니다. 컴퓨터를 네트워크에 연결하거나 클라이언트와 서비스 모두에 대해 보안을 해제하십시오. 서비스의 경우에는 WSHttpBinding을 만드는 코드를 다음과 같이 수정합니다.  
   
 ```  

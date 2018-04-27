@@ -1,12 +1,12 @@
 ---
-title: "추상화(추상 형식 및 인터페이스)"
-ms.custom: 
+title: 추상화(추상 형식 및 인터페이스)
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - interfaces [.NET Framework], abstract
@@ -14,18 +14,18 @@ helpviewer_keywords:
 - abstract types [.NET Framework]
 - types [.NET Framework], abstract
 ms.assetid: 0a632bc7-9b03-44ee-8842-c82f88672a45
-caps.latest.revision: "10"
+caps.latest.revision: 10
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 276c5883487d8fba47d7fb80060d4c947e0f6cd6
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 2628758891d629400603c51d12ece33df0e1ff1c
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="abstractions-abstract-types-and-interfaces"></a>추상화(추상 형식 및 인터페이스)
 추상화 형식이 하는 계약에 설명 하지만 계약의 전체 구현을 제공 하지 않습니다. 추상화는 일반적으로 추상 클래스 또는 인터페이스를 구현 하 고 참조 설명서는 계약을 구현 하는 형식의 필요한 의미 체계를 설명 하는 잘 정의 된 집합이 함께 제공 되 합니다. .NET Framework의 가장 중요 한 추상화 같습니다 <xref:System.IO.Stream>, <xref:System.Collections.Generic.IEnumerable%601>, 및 <xref:System.Object>합니다.  
@@ -44,9 +44,9 @@ ms.lasthandoff: 12/23/2017
   
  **✓ 고려** 추상화의 구체적인 구현에 대 한 참조 테스트를 제공 합니다. 이러한 테스트는 구현 계약을 올바르게 구현 하는지 테스트 하려면 사용자가 허용 해야 합니다.  
   
- *일부 © 2005, 2009 Microsoft Corporation. 모든 권리 보유.*  
+ *Portions © 2005, 2009 Microsoft Corporation. 모든 권리 보유.*  
   
- *피어슨 교육, Inc.에서의 사용 권한으로 재인쇄 [Framework 디자인 지침: 규칙, 특징 및 다시 사용할 수 있는.NET 라이브러리를 2nd Edition에 대 한 패턴](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina 및 Brad Abrams 게시 하 여 2008 년 10 월 22 일 Microsoft Windows 개발 시리즈의 일부로: Addison Wesley Professional.*  
+ *피어슨 교육, Inc.에서의 사용 권한으로 재인쇄 [Framework 디자인 지침: 규칙, 특징 및 다시 사용할 수 있는.NET 라이브러리를 2nd Edition에 대 한 패턴](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina 및 Brad Abrams 게시 하 여 2008 년 10 월 22 일 Microsoft Windows 개발 시리즈의 일부로: Addison Wesley Professional.*  
   
 ## <a name="see-also"></a>참고 항목  
  [프레임워크 디자인 지침](../../../docs/standard/design-guidelines/index.md)  

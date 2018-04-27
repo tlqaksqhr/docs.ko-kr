@@ -1,12 +1,13 @@
 ---
-title: "방법: 인쇄 작업을 현재 인쇄할 수 있는지 확인"
-ms.custom: 
+title: '방법: 인쇄 작업을 현재 인쇄할 수 있는지 확인'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -17,25 +18,26 @@ helpviewer_keywords:
 - printers [WPF], availability
 - print jobs [WPF], timing
 ms.assetid: 7e9c8ec1-abf6-4b3d-b1c6-33b35d3c4063
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ef9da205792823b7069024c5e4a3e9ac80d60a24
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: eef74cfa290614e530fa22a34533c7924d4af1b4
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-discover-whether-a-print-job-can-be-printed-at-this-time-of-day"></a>방법: 인쇄 작업을 현재 인쇄할 수 있는지 확인
 인쇄 큐 항상 사용할 수 없는 하루 24 시간에 대 한 합니다. 하루 중 특정 시간에 사용할 수 없도록 설정할 수 있는 시작 및 종료 시간 속성을 갖게 됩니다. 예를 들어 특정 부서 오후 5 시 이후에 단독으로 사용에 대 한 프린터를 예약 하 고이 기능을 사용할 수 있습니다. 해당 부서 사용 되는 다른 큐에서는 다른 부서에서 프린터를 처리 해야 합니다. 다른 부서에 대 한 큐 오후 5 시 이후에 사용할 수 없게 설정 됩니다, 그리고 부서에서 선호 하는 방식된에 대 한 큐 수로 설정 되어 동안 항상 사용 가능한 합니다.  
   
  또한 인쇄 작업 자체는 지정한 시간 범위 내 에서만 인쇄 가능 하도록 설정할 수 있습니다.  
   
- <xref:System.Printing.PrintQueue> 및 <xref:System.Printing.PrintSystemJobInfo> 클래스에 노출 된 [!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)] 의 [!INCLUDE[TLA#tla_winfx](../../../../includes/tlasharptla-winfx-md.md)] 원격으로 현재 시간에 지정된 된 큐에 지정된 된 인쇄 작업 인쇄할 수 있는지를 확인 하기 위한 수단을 제공 합니다.  
+ <xref:System.Printing.PrintQueue> 및 <xref:System.Printing.PrintSystemJobInfo> 클래스에 노출 된 [!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)] Microsoft.NET Framework의 원격으로 현재 시간에 지정된 된 큐에 지정된 된 인쇄 작업 인쇄할 수 있는지를 확인 하기 위한 수단을 제공 합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 예제에서는 인쇄 작업 문제를 진단할 수 있는 샘플입니다.  
   
  이러한 종류의 기능에 대 한 두 가지 주요 단계는 다음과 같습니다.  
@@ -65,7 +67,7 @@ ms.lasthandoff: 12/22/2017
  두 오버 로드는 **ReportAvailabilityAtThisTime** 메서드 항목에 전달 하는 형식을 제외한 동일는 <xref:System.Printing.PrintQueue> 버전은 아래 제시 된 합니다.  
   
 > [!NOTE]
->  메서드는 형식 제외 하면 동일한 팩트에 대 한 문제를 발생 시킵니다 때문에 샘플에서는 변수를 제네릭 메서드 **ReportAvailabilityAtThisTime\<T >**합니다. 이유는 이러한 메서드를 가진 에게만 부여 되어야 해야 하는 **StartTimeOfDay** 및 **UntilTimeOfDay** 메서드를 호출 하는 속성 이지만 제네릭 메서드만 제한할 수 있습니다는 단일 클래스 및 모두에 공통적인 유일한 클래스 <xref:System.Printing.PrintQueue> 및 <xref:System.Printing.PrintSystemJobInfo> 상속 트리는 <xref:System.Printing.PrintSystemObject> 있는 이러한 속성이 없습니다.  
+>  메서드는 형식 제외 하면 동일한 팩트에 대 한 문제를 발생 시킵니다 때문에 샘플에서는 변수를 제네릭 메서드 **ReportAvailabilityAtThisTime\<T >** 합니다. 이유는 이러한 메서드를 가진 에게만 부여 되어야 해야 하는 **StartTimeOfDay** 및 **UntilTimeOfDay** 메서드를 호출 하는 속성 이지만 제네릭 메서드만 제한할 수 있습니다는 단일 클래스 및 모두에 공통적인 유일한 클래스 <xref:System.Printing.PrintQueue> 및 <xref:System.Printing.PrintSystemJobInfo> 상속 트리는 <xref:System.Printing.PrintSystemObject> 있는 이러한 속성이 없습니다.  
   
  **ReportAvailabilityAtThisTime** 메서드 (아래 코드 예제에 제공 된)을 초기화 하 여 시작 된 <xref:System.Boolean> 센티널 변수를 `true`합니다. 으로 다시 설정 `false`큐를 사용할 수 없는 경우, 합니다.  
   
@@ -79,7 +81,7 @@ ms.lasthandoff: 12/22/2017
  [!code-csharp[DiagnoseProblematicPrintJob#PrintQueueStartUntil](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/CSharp/Program.cs#printqueuestartuntil)]
  [!code-vb[DiagnoseProblematicPrintJob#PrintQueueStartUntil](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/visualbasic/program.vb#printqueuestartuntil)]  
   
- **TimeConverter.ConvertToLocalHumanReadableTime** 메서드 (아래 코드 예제에 제공 된)에 도입 된 모든 메서드를 사용 하지 않는 [!INCLUDE[TLA#tla_winfx](../../../../includes/tlasharptla-winfx-md.md)]이므로 간단한 진행 됩니다. 메서드에 이중 변환 작업: 자정 이후의 시간 (분)을 표현 하는 정수를 사람이 읽을 수 시간으로 변환 해야 하 고이 현지 시간으로 변환 해야 합니다. 먼저 만들어이 작업을 수행 하기는 <xref:System.DateTime> UTC 다음 변수를 사용 하는 자정으로 설정 된 개체는 <xref:System.DateTime.AddMinutes%2A> 메서드를 메서드에 전달 된 시간 (분)을 추가 합니다. 반환 합니다. 새 <xref:System.DateTime> 메서드에 전달 된 원래 시간을 표현 합니다. <xref:System.DateTime.ToLocalTime%2A> 메서드 다음이 현지 시간으로 변환 합니다.  
+ **TimeConverter.ConvertToLocalHumanReadableTime** 메서드 (아래 코드 예제에 제공 된) 토론은 간단한 Microsoft.NET Framework와 함께 도입 하는 메서드를 사용 하지 않습니다. 메서드에 이중 변환 작업: 자정 이후의 시간 (분)을 표현 하는 정수를 사람이 읽을 수 시간으로 변환 해야 하 고이 현지 시간으로 변환 해야 합니다. 먼저 만들어이 작업을 수행 하기는 <xref:System.DateTime> UTC 다음 변수를 사용 하는 자정으로 설정 된 개체는 <xref:System.DateTime.AddMinutes%2A> 메서드를 메서드에 전달 된 시간 (분)을 추가 합니다. 반환 합니다. 새 <xref:System.DateTime> 메서드에 전달 된 원래 시간을 표현 합니다. <xref:System.DateTime.ToLocalTime%2A> 메서드 다음이 현지 시간으로 변환 합니다.  
   
  [!code-cpp[DiagnoseProblematicPrintJob#TimeConverter](../../../../samples/snippets/cpp/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/CPP/Program.cpp#timeconverter)]
  [!code-csharp[DiagnoseProblematicPrintJob#TimeConverter](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/CSharp/Program.cs#timeconverter)]

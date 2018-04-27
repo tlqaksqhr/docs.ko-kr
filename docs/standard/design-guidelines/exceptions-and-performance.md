@@ -1,12 +1,12 @@
 ---
-title: "예외 및 성능"
-ms.custom: 
+title: 예외 및 성능
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - tester-doer pattern
@@ -15,18 +15,18 @@ helpviewer_keywords:
 - exceptions, performance
 - throwing exceptions, performance
 ms.assetid: 3ad6aad9-08e6-4232-b336-0e301f2493e6
-caps.latest.revision: "12"
+caps.latest.revision: 12
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 9a876a818086e0d54251f53a1e8f83cc74a574ae
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 7972cf7d63ee22e791d46046f30c9be467cc758e
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="exceptions-and-performance"></a>예외 및 성능
 예외와 관련 된 일반적인 문제 하나는 지속적으로 실패 하는 코드에 대 한 예외를 사용 하면 성능을 구현 됩니다 허용입니다. 이 유효한 중요 합니다. 예외를 throw 하는 멤버 성능이 현저히 저하 될 수 있습니다. 그러나, 오류 코드를 사용 하지 않도록 설정 하는 예외 지침을 따르면 엄격 하 게 하는 동안 좋은 성능을 얻을 수는 있습니다. 이 섹션에 설명 된 두 개의 패턴에는이 작업을 수행 하는 방법을 제안 합니다.  
@@ -79,9 +79,9 @@ public struct DateTime {
   
  **✓ 않습니다** Try 구문 분석 패턴을 사용 하 여 각 멤버에 대 한 예외 throw 멤버를 제공 합니다.  
   
- *일부 © 2005, 2009 Microsoft Corporation. 모든 권리 보유.*  
+ *Portions © 2005, 2009 Microsoft Corporation. 모든 권리 보유.*  
   
- *피어슨 교육, Inc.에서의 사용 권한으로 재인쇄 [Framework 디자인 지침: 규칙, 특징 및 다시 사용할 수 있는.NET 라이브러리를 2nd Edition에 대 한 패턴](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina 및 Brad Abrams 게시 하 여 2008 년 10 월 22 일 Microsoft Windows 개발 시리즈의 일부로: Addison Wesley Professional.*  
+ *피어슨 교육, Inc.에서의 사용 권한으로 재인쇄 [Framework 디자인 지침: 규칙, 특징 및 다시 사용할 수 있는.NET 라이브러리를 2nd Edition에 대 한 패턴](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina 및 Brad Abrams 게시 하 여 2008 년 10 월 22 일 Microsoft Windows 개발 시리즈의 일부로: Addison Wesley Professional.*  
   
 ## <a name="see-also"></a>참고 항목  
  [프레임워크 디자인 지침](../../../docs/standard/design-guidelines/index.md)  

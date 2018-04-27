@@ -23,14 +23,14 @@ ms.assetid: d6ff7f1e-b94f-4205-ab8d-5cfa91758724
 caps.latest.revision: 10
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: aceffe59fb6043b3089621b9a3f95b0425f9a522
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 10ecc965fb6d728454b3af33a6e93b2d7dbc327d
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="early-and-late-binding-visual-basic"></a>초기 바인딩 및 런타임에 바인딩(Visual Basic)
-[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 컴파일러는 개체가 개체 변수에 할당될 때 `binding`이라는 프로세스를 수행합니다. 개체는 특정 개체 형식으로 선언된 변수에 할당되면 *초기 바인딩*됩니다. 초기 바인딩된 개체는 응용 프로그램이 실행되기 전에 컴파일러가 메모리를 할당하고 기타 최적화를 수행할 수 있도록 합니다. 예를 들어 다음 코드 조각에서는 변수를 <xref:System.IO.FileStream> 형식으로 선언합니다.  
+이라는 프로세스를 수행 하는 Visual Basic 컴파일러 `binding` 개체는 개체 변수에 할당 된 경우. 개체는 특정 개체 형식으로 선언된 변수에 할당되면 *초기 바인딩*됩니다. 초기 바인딩된 개체는 응용 프로그램이 실행되기 전에 컴파일러가 메모리를 할당하고 기타 최적화를 수행할 수 있도록 합니다. 예를 들어 다음 코드 조각에서는 변수를 <xref:System.IO.FileStream> 형식으로 선언합니다.  
   
  [!code-vb[VbVbalrOOP#90](../../../../visual-basic/misc/codesnippet/VisualBasic/early-and-late-binding_1.vb)]  
   

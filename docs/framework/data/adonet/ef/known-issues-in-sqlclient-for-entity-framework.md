@@ -1,38 +1,40 @@
 ---
-title: "Entity Framework용 SqlClient에서 알려진 문제"
-ms.custom: 
+title: Entity Framework용 SqlClient에서 알려진 문제
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 48fe4912-4d0f-46b6-be96-3a42c54780f6
-caps.latest.revision: "2"
+caps.latest.revision: 2
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 3fb62e266ee6f0ca7957667d7c41fbd90dd34d32
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: 8d5363ede9735ea805284638f795af67f2415ad0
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="known-issues-in-sqlclient-for-entity-framework"></a>Entity Framework용 SqlClient에서 알려진 문제
 이 단원에서는 .NET Framework Data Provider for SQL Server(SqlClient)와 관련된 알려진 문제에 대해 설명합니다.  
   
 ## <a name="trailing-spaces-in-string-functions"></a>문자열 함수의 후행 공백  
- [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)]는 문자열 값의 후행 공백을 무시합니다. 따라서 문자열에 후행 공백을 전달 하면 예기치 않은 결과가 발생 하며 오류가 발생할 수 있습니다.  
+ SQL Server에는 문자열 값의 후행 공백을 무시 합니다. 따라서 문자열에 후행 공백을 전달 하면 예기치 않은 결과가 발생 하며 오류가 발생할 수 있습니다.  
   
- 문자열에 후행 공백을 포함해야 하는 경우 [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)]에서 문자열을 트리밍하지 않도록 끝에 공백 문자를 추가해야 합니다. 후행 공백이 필요하지 않은 경우 쿼리 파이프라인을 통해 전달하기 전에 트리밍해야 합니다.  
+ 문자열에서 후행 공백을 포함 해야 할 경우 고려해 야 마지막에는 공백 문자를 추가 하 여 SQL Server 문자열을 트리밍 하지 않습니다. 후행 공백이 필요하지 않은 경우 쿼리 파이프라인을 통해 전달하기 전에 트리밍해야 합니다.  
   
 ## <a name="right-function"></a>RIGHT 함수  
  `null`이 아닌 값을 첫 번째 인수, 0을 두 번째 인수로 `RIGHT(nvarchar(max)`, 0`)` 또는 `RIGHT(varchar(max)`, 0`)`에 전달하면 `NULL` 문자열 대신 `empty` 값이 반환됩니다.  
   
 ## <a name="cross-and-outer-apply-operators"></a>CROSS 및 OUTER APPLY 연산자  
- CROSS 및 OUTER APPLY 연산자는 [!INCLUDE[ssVersion2005](../../../../../includes/ssversion2005-md.md)]에서 도입되었습니다. 경우에 따라 쿼리 파이프라인에는 CROSS APPLY 및/또는 OUTER APPLY 연산자를 포함 하는 TRANSACT-SQL 문을 생성할 수 있습니다. [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)]보다 이전 버전의 [!INCLUDE[ssVersion2005](../../../../../includes/ssversion2005-md.md)]를 비롯한 일부 백엔드 공급자는 이러한 연산자를 지원하지 않으므로 해당 백엔드 공급자에서 이 쿼리를 실행할 수 없습니다.  
+ CROSS 및 OUTER APPLY 연산자는 [!INCLUDE[ssVersion2005](../../../../../includes/ssversion2005-md.md)]에서 도입되었습니다. 경우에 따라 쿼리 파이프라인에는 CROSS APPLY 및/또는 OUTER APPLY 연산자를 포함 하는 TRANSACT-SQL 문을 생성할 수 있습니다. 때문에 SQL Server의 버전을 비롯 한 일부 백엔드 공급자 보다 이전 [!INCLUDE[ssVersion2005](../../../../../includes/ssversion2005-md.md)]를 이러한 연산자를 지원 하지 않으므로 해당 백엔드 공급자에서 쿼리를 실행할 수 없습니다.  
   
  다음은 출력 쿼리에 CROSS APPLY 및/또는 OUTER APPLY 연산자가 포함될 수 있는 일반적인 시나리오입니다.  
   
@@ -68,7 +70,7 @@ SELECT c, (SELECT c, (SELECT c FROM AdventureWorksModel.Vendor AS c  ) As Inner2
 ```  
   
 ## <a name="server-generated-guid-identity-values"></a>서버에서 생성된 GUID ID 값  
- [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]에서는 서버에서 생성된 GUID 형식 ID 값을 지원하지만 공급자에서 행이 삽입된 이후 서버에서 생성된 ID 값을 반환하는 기능을 지원해야 합니다. 부터는 [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] 2005 년에서 서버 생성 GUID 형식을 반환할 수 있습니다는 [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] 를 통해 데이터베이스는 [OUTPUT 절](http://go.microsoft.com/fwlink/?LinkId=169400) 합니다.  
+ [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]에서는 서버에서 생성된 GUID 형식 ID 값을 지원하지만 공급자에서 행이 삽입된 이후 서버에서 생성된 ID 값을 반환하는 기능을 지원해야 합니다. SQL Server 2005 이상에서는 반환할 수 있습니다 서버 생성 GUID 형식을 통해 SQL Server 데이터베이스는 [OUTPUT 절](http://go.microsoft.com/fwlink/?LinkId=169400) 합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [Entity Framework용 SqlClient](../../../../../docs/framework/data/adonet/ef/sqlclient-for-the-entity-framework.md)  

@@ -1,31 +1,33 @@
 ---
-title: "특성 기반 매핑"
-ms.custom: 
+title: 특성 기반 매핑
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 6dd89999-f415-4d61-b8c8-237d23d7924e
-caps.latest.revision: "3"
+caps.latest.revision: 3
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: a7a66b165e5bcfc605842b96295ae1721e7b3af5
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: 49969af962db9fb533ad316622af42104438be7d
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="attribute-based-mapping"></a>특성 기반 매핑
-[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]SQL Server 데이터베이스를 매핑하는 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 특성을 적용 하거나 또는 외부 매핑 파일을 사용 하 여 개체 모델입니다. 이 항목에서는 특성 기반 접근 방법에 대해 간략하게 설명합니다.  
+[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] SQL Server 데이터베이스를 매핑하는 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 특성을 적용 하거나 또는 외부 매핑 파일을 사용 하 여 개체 모델입니다. 이 항목에서는 특성 기반 접근 방법에 대해 간략하게 설명합니다.  
   
  가장 기본적인 형식인 경우에 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]은 데이터베이스를 <xref:System.Data.Linq.DataContext>에 매핑하고 테이블을 클래스에 매핑하며 열과 관계를 이러한 클래스의 속성에 매핑합니다. 또한 특성을 사용하여 개체 모델에서 상속 계층 구조를 매핑할 수도 있습니다. 자세한 내용은 참조 [하는 방법: Visual Basic 또는 C#에서 개체 모델 생성](../../../../../../docs/framework/data/adonet/sql/linq/how-to-generate-the-object-model-in-visual-basic-or-csharp.md)합니다.  
   
- [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)]를 사용하는 개발자는 일반적으로 [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)]를 사용하여 특성 기반 매핑을 수행합니다. SQLMetal 명령줄 도구를 사용하거나 특성을 직접 코딩할 수도 있습니다. 자세한 내용은 참조 [하는 방법: Visual Basic 또는 C#에서 개체 모델 생성](../../../../../../docs/framework/data/adonet/sql/linq/how-to-generate-the-object-model-in-visual-basic-or-csharp.md)합니다.  
+ 일반적으로 Visual Studio를 사용 하는 개발자는 특성 기반 매핑을 사용 하 여 수행 된 [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)]합니다. SQLMetal 명령줄 도구를 사용하거나 특성을 직접 코딩할 수도 있습니다. 자세한 내용은 참조 [하는 방법: Visual Basic 또는 C#에서 개체 모델 생성](../../../../../../docs/framework/data/adonet/sql/linq/how-to-generate-the-object-model-in-visual-basic-or-csharp.md)합니다.  
   
 > [!NOTE]
 >  이외에도 외부 XML 파일을 사용하여 매핑할 수도 있습니다. 자세한 내용은 참조 [외부 매핑](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md)합니다.  
@@ -72,7 +74,7 @@ ms.lasthandoff: 01/17/2018
  자세한 내용은 <xref:System.Data.Linq.Mapping.ColumnAttribute>을 참조하세요.  
   
 > [!NOTE]
->  AssociationAttribute 및 ColumnAttribute Storage 속성 값은 대/소문자를 구분합니다. 예를 들어 AssociationAttribute.Storage 속성의 특성에 사용하는 값은 코드의 다른 곳에서 사용하는 해당 속성 이름과 대/소문자가 동일해야 합니다. 이 규칙은 [!INCLUDE[vb_current_short](../../../../../../includes/vb-current-short-md.md)]과 같이 일반적으로 대/소문자를 구분하지 않는 프로그래밍 언어를 포함하여 모든 .NET 프로그래밍 언어에 적용됩니다. Storage 속성에 대한 자세한 내용은 <xref:System.Data.Linq.Mapping.DataAttribute.Storage%2A?displayProperty=nameWithType>를 참조하세요.  
+>  AssociationAttribute 및 ColumnAttribute Storage 속성 값은 대/소문자를 구분합니다. 예를 들어 AssociationAttribute.Storage 속성의 특성에 사용하는 값은 코드의 다른 곳에서 사용하는 해당 속성 이름과 대/소문자가 동일해야 합니다. 이 일반적으로 대/소문자 구분, Visual Basic을 비롯 한 나오지 않은 이더라도 모든.NET 프로그래밍 언어에 적용 됩니다. Storage 속성에 대한 자세한 내용은 <xref:System.Data.Linq.Mapping.DataAttribute.Storage%2A?displayProperty=nameWithType>를 참조하세요.  
   
 ## <a name="associationattribute-attribute"></a>AssociationAttribute 특성  
  외래 키와 기본 키 사이의 관계와 같은 데이터베이스 내 연결을 나타내려면 이 특성을 사용하여 속성을 지정합니다. 관계에 대 한 자세한 내용은 참조 [하는 방법: 지도 데이터베이스 관계](../../../../../../docs/framework/data/adonet/sql/linq/how-to-map-database-relationships.md)합니다.  
@@ -91,7 +93,7 @@ ms.lasthandoff: 01/17/2018
  자세한 내용은 <xref:System.Data.Linq.Mapping.AssociationAttribute>을 참조하세요.  
   
 > [!NOTE]
->  AssociationAttribute 및 ColumnAttribute Storage 속성 값은 대/소문자를 구분합니다. 예를 들어 AssociationAttribute.Storage 속성의 특성에 사용하는 값은 코드의 다른 곳에서 사용하는 해당 속성 이름과 대/소문자가 동일해야 합니다. 이 규칙은 [!INCLUDE[vb_current_short](../../../../../../includes/vb-current-short-md.md)]과 같이 일반적으로 대/소문자를 구분하지 않는 프로그래밍 언어를 포함하여 모든 .NET 프로그래밍 언어에 적용됩니다. Storage 속성에 대한 자세한 내용은 <xref:System.Data.Linq.Mapping.DataAttribute.Storage%2A?displayProperty=nameWithType>를 참조하세요.  
+>  AssociationAttribute 및 ColumnAttribute Storage 속성 값은 대/소문자를 구분합니다. 예를 들어 AssociationAttribute.Storage 속성의 특성에 사용하는 값은 코드의 다른 곳에서 사용하는 해당 속성 이름과 대/소문자가 동일해야 합니다. 이 일반적으로 대/소문자 구분, Visual Basic을 비롯 한 나오지 않은 이더라도 모든.NET 프로그래밍 언어에 적용 됩니다. Storage 속성에 대한 자세한 내용은 <xref:System.Data.Linq.Mapping.DataAttribute.Storage%2A?displayProperty=nameWithType>를 참조하세요.  
   
 ## <a name="inheritancemappingattribute-attribute"></a>InheritanceMappingAttribute 특성  
  상속 계층 구조를 매핑하려면 이 특성을 사용합니다.  

@@ -1,11 +1,12 @@
 ---
-title: "Visual Basic의 수명"
-ms.custom: 
+title: Visual Basic의 수명
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - static variables [Visual Basic], lifetime
@@ -16,14 +17,14 @@ helpviewer_keywords:
 - lifetime [Visual Basic], Visual Basic
 - lifetime [Visual Basic]
 ms.assetid: bd91e390-690a-469a-9946-8dca70bc14e7
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 999490885571889b2de911cc14754f8db257d0af
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 14a75a2c3af52f63051d02df9341faf19c3b76c7
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="lifetime-in-visual-basic"></a>Visual Basic의 수명
 *수명* 는 시간 동안의 선언 된 요소는 자신이 사용 하 여 사용할 수 있습니다. 변수는 수명이 유일한 요소입니다. 이 작업을 위해 컴파일러가 프로시저 매개 변수를 처리 하 고 함수 변수의 특별 한 경우로 반환 합니다. 변수의 수명은 해당 값을 보유할 수 있는 시간을 나타냅니다. 해당 값은 수명 주기 동안 변경 될 수 있지만 항상 어떤 값을 가집니다.  
@@ -41,7 +42,7 @@ ms.lasthandoff: 11/21/2017
  프로시저 내의 블록 내에서 선언 된 변수 (같은 `For` 루프)에 절차 항목에 대해 초기화 됩니다. 이러한 초기화 코드는 현재까지 해당 블록을 실행 여부 적용 합니다.  
   
 ## <a name="end-of-lifetime"></a>수명 끝  
- 해당 로컬 변수 값은 유지 되지 않습니다 프로시저가 종료 되 고 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 던 메모리를 회수 합니다. 다음에 프로시저를 호출 하면 모든 지역 변수가 후 새로 만들고 다시 초기화 합니다.  
+ 프로시저가 종료 되는 지역 변수의 값이 유지 되지 않습니다 및 Visual Basic 던 메모리를 회수 합니다. 다음에 프로시저를 호출 하면 모든 지역 변수가 후 새로 만들고 다시 초기화 합니다.  
   
  클래스 또는 구조체의 인스턴스를 종료 하는 경우 메모리와 해당 값 비공유 변수의 손실 됩니다. 클래스 또는 구조체의 새 인스턴스 각각 만들고 비공유 변수의 다시 초기화 합니다. 그러나 `Shared` 변수는 응용 프로그램의 실행이 중지 될 때까지 유지 됩니다.  
   
@@ -55,7 +56,7 @@ ms.lasthandoff: 11/21/2017
 |클래스의 인스턴스에서 하지 `Shared` (절차는 인스턴스 멤버는)|처음으로 특정 인스턴스에서 프로시저가 호출 됩니다.|가비지 수집 (GC) 인스턴스가 해제 될 때|  
   
 ## <a name="static-variables-of-the-same-name"></a>이름이 같은 정적 변수  
- 둘 이상의 프로시저에서 동일한 이름 가진 정적 변수를 선언할 수 있습니다. 이 작업을 수행 하는 경우는 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 컴파일러에서는 각 변수를 별도 요소로 간주 합니다. 이러한 변수 중 하나를 초기화는 다른 인스턴스의 값에 영향을 주지 않습니다. 오버 로드 집합이 있는 프로시저를 정의 하 고 각 오버 로드에 동일한 이름 가진 정적 변수를 선언 하는 경우 동일한 적용 됩니다.  
+ 둘 이상의 프로시저에서 동일한 이름 가진 정적 변수를 선언할 수 있습니다. 이 작업을 수행 하는 경우 Visual Basic 컴파일러는 각 변수는 별도 요소를 고려 합니다. 이러한 변수 중 하나를 초기화는 다른 인스턴스의 값에 영향을 주지 않습니다. 오버 로드 집합이 있는 프로시저를 정의 하 고 각 오버 로드에 동일한 이름 가진 정적 변수를 선언 하는 경우 동일한 적용 됩니다.  
   
 ## <a name="containing-elements-for-static-variables"></a>정적 변수에 대 한 요소가 포함 된  
  해당 클래스의 프로시저 즉, 클래스 내의 정적 지역 변수를 선언할 수 있습니다. 그러나 구조체 멤버 또는 해당 구조 내에서 프로시저의 지역 변수로 구조체에 정적 지역 변수를 선언할 수 없습니다.  

@@ -26,11 +26,11 @@ ms.assetid: cffac744-ab8c-4f1f-ba50-732c22ab4b88
 caps.latest.revision: 27
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: c18d0a9abb1d8b9e3e22f3b81bf605fb8ed75cfa
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 0ec038a17b4a6b10dbe339fe33969c4ade57e2a7
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="namespaces-in-visual-basic"></a>Visual Basic의 네임스페이스
 네임스페이스는 어셈블리에 정의된 개체를 구성합니다. 어셈블리는 여러 네임스페이스를 포함할 수 있으며, 이러한 각 네임스페이스는 다른 네임스페이스를 포함할 수 있습니다. 클래스 라이브러리와 같은 대규모 개체 그룹을 사용할 때 네임스페이스는 모호성을 방지하고 참조를 단순화합니다.  
@@ -42,7 +42,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="avoiding-name-collisions"></a>이름 충돌 방지  
  [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 네임스페이스는 클래스 라이브러리의 개발자가 또 다른 라이브러리에서 유사한 이름을 사용하여 방해를 받는 *네임스페이스 공해*라고도 하는 문제를 해결합니다. 기존 구성 요소와의 이러한 충돌을 *이름 충돌*이라고도 합니다.  
   
- 예를 들어 `ListBox`라는 새 클래스를 만드는 경우, 프로젝트 내부에서 한정자 없이 사용할 수 있습니다. 그러나 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] <xref:System.Windows.Forms.ListBox> 클래스를 같은 프로젝트에서 사용하려는 경우, 참조를 고유하게 지정하기 위해 정규화된 참조를 사용해야 합니다. 참조가 고유하지 않으면 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 에서 이름이 모호하다는 오류를 표시합니다. 다음 코드 예제에서는 이러한 개체를 선언하는 방법을 보여 줍니다.  
+ 예를 들어 `ListBox`라는 새 클래스를 만드는 경우, 프로젝트 내부에서 한정자 없이 사용할 수 있습니다. 그러나 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] <xref:System.Windows.Forms.ListBox> 클래스를 같은 프로젝트에서 사용하려는 경우, 참조를 고유하게 지정하기 위해 정규화된 참조를 사용해야 합니다. 참조에 고유 하지 않으면 Visual Basic 오류 이름이 모호 메시지가 생성 합니다. 다음 코드 예제에서는 이러한 개체를 선언하는 방법을 보여 줍니다.  
   
  [!code-vb[VbVbalrApplication#7](../../../visual-basic/programming-guide/program-structure/codesnippet/VisualBasic/namespaces_2.vb)]  
   
@@ -50,9 +50,9 @@ ms.lasthandoff: 11/21/2017
   
  ![Namespace 계층](../../../visual-basic/programming-guide/program-structure/media/vanamespacehierarchy.gif "vaNamespaceHierarchy")  
   
- 기본적으로 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 에서 만드는 모든 실행 파일에는 프로젝트와 이름이 같은 네임스페이스가 포함되어 있습니다. 예를 들어 `ListBoxProject`라는 이름의 프로젝트 내에서 개체를 정의하면 실행 파일 ListBoxProject.exe는 `ListBoxProject`라는 네임스페이스를 포함합니다.  
+ 기본적으로 Visual Basic을 사용한 만들 모든 실행 파일 프로젝트와 동일한 이름 가진 네임 스페이스를 포함 합니다. 예를 들어 `ListBoxProject`라는 이름의 프로젝트 내에서 개체를 정의하면 실행 파일 ListBoxProject.exe는 `ListBoxProject`라는 네임스페이스를 포함합니다.  
   
- 여러 어셈블리에서 동일한 네임스페이스를 사용할 수 있습니다. [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 은 이를 단일 이름 집합으로 처리합니다. 예를 들어 `SomeNameSpace` 이라는 이름의 어셈블리에서 `Assemb1`라는 네임스페이스에 대한 클래스를 정의하고, `Assemb2`라는 이름의 어셈블리에서 동일한 네임스페이스에 대해 추가 클래스를 정의할 수 있습니다.  
+ 여러 어셈블리에서 동일한 네임스페이스를 사용할 수 있습니다. Visual Basic로 처리할 수 있으며 단일 집합의 이름입니다. 예를 들어 `SomeNameSpace` 이라는 이름의 어셈블리에서 `Assemb1`라는 네임스페이스에 대한 클래스를 정의하고, `Assemb2`라는 이름의 어셈블리에서 동일한 네임스페이스에 대해 추가 클래스를 정의할 수 있습니다.  
   
 ## <a name="fully-qualified-names"></a>정규화된 이름  
  정규화된 이름은 개체가 정의된 네임스페이스의 이름으로 접두사가 지정된 개체 참조입니다. 클래스에 대한 참조를 만들고( **프로젝트** 메뉴에서 **참조 추가** 선택) 코드에서 개체에 대해 정규화된 이름을 사용하면 다른 프로젝트에 정의된 개체를 사용할 수 있습니다. 다음 코드 조각은 다른 프로젝트의 네임스페이스에서 개체에 대해 정규화된 이름을 사용하는 방법을 보여 줍니다.  
@@ -69,7 +69,7 @@ ms.lasthandoff: 11/21/2017
   
  [!code-vb[VbVbalrApplication#11](../../../visual-basic/programming-guide/program-structure/codesnippet/VisualBasic/namespaces_6.vb)]  
   
- 이름을 정규화하지 않고 `Class1` 을 사용하려고 시도하면 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 은 `Class1` 이름이 모호하다는 오류 메시지를 표시합니다.  
+ 사용 하려는 경우 `Class1` 정규화, 하지 않고 Visual Basic 오류 생성 하는 내용을 입력 하는 이름을 `Class1` 모호 합니다.  
   
 ## <a name="namespace-level-statements"></a>네임스페이스 수준 문  
  네임스페이스 내에서 모듈, 인터페이스, 클래스, 대리자, 열거형, 구조체 및 기타 네임스페이스와 같은 항목을 정의할 수 있습니다. 네임스페이스 수준에서는 속성, 프로시저, 변수 및 이벤트와 같은 항목을 정의할 수 없습니다. 이러한 항목은 모듈, 구조체 또는 클래스와 같은 컨테이너 내에서 선언되어야 합니다.  

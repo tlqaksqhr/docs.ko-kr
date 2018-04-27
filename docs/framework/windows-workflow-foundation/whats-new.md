@@ -11,17 +11,17 @@ helpviewer_keywords:
 - Windows Workflow Foundation [WF], what's new
 - WF [WF], what's new
 ms.assetid: 11f96014-001e-41a0-bcc2-d0684a52fa43
-caps.latest.revision: ''
+caps.latest.revision: 29
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 9c5026c7c3e90afa843b819fb51d7a4a7c8249a0
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: 93915e8eeb46d91140198c2d51f88535a93a28cc
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/23/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="what39s-new-in-windows-workflow-foundation"></a>어떤&#39;Windows Workflow Foundation의 새로운 s
 [!INCLUDE[wf](../../../includes/wf-md.md)]의 [!INCLUDE[netfx40_long](../../../includes/netfx40-long-md.md)]에서는 여러 개발 패러다임이 이전 버전과 다르게 변경되었습니다. 이제 워크플로에서 많은 새로운 기능을 보다 쉽게 작성, 실행, 유지 관리 및 구현할 수 있습니다. [!INCLUDE[crabout](../../../includes/crabout-md.md)] 마이그레이션.NET 3.0 및 최신 버전을 사용 하려면.NET 3.5 워크플로 응용 프로그램 참조 [마이그레이션 지침](../../../docs/framework/windows-workflow-foundation/migration-guidance.md)합니다.  
@@ -66,4 +66,4 @@ ms.lasthandoff: 03/23/2018
 -   이제 보류 중인 워크플로 다시 시작이 <xref:System.Activities.Bookmark> 개체를 사용하여 관리됩니다.  
   
 ## <a name="easier-ability-to-extend-wf-designer-experience"></a>간편한 WF Designer 환경 확장 기능  
- 새 WF Designer는 [!INCLUDE[avalon1](../../../includes/avalon1-md.md)]를 기반으로 작성되어 Visual Studio 외부에서 WF Designer를 다시 호스트할 때 사용할 수 있는 간편한 모델을 제공할 뿐만 아니라 사용자 지정 활동 디자이너를 만드는 간편한 메커니즘을 제공합니다. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [워크플로 디자인 환경 사용자 지정](../../../docs/framework/windows-workflow-foundation/customizing-the-workflow-design-experience.md)합니다.
+ 새 WF Designer는 Windows Presentation Foundation (WPF) 및 Visual Studio 외부에서 WF 디자이너를 다시 호스트할 때 사용할 수 있는 간편한 모델을 제공 만들어지고 또한 사용자 지정 활동 디자이너를 만드는 간편한 메커니즘을 제공 합니다. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [워크플로 디자인 환경 사용자 지정](../../../docs/framework/windows-workflow-foundation/customizing-the-workflow-design-experience.md)합니다.

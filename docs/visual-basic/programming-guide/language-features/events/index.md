@@ -15,11 +15,11 @@ ms.assetid: 8fb0353a-e41b-4e23-b78f-da65db832f70
 caps.latest.revision: 12
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 5a1edd7976f1e22117e1f4f31354388d5257ffc1
-ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
+ms.openlocfilehash: c18c1ea645c9f144e2c2043af5460d6fb03f13a1
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="events-visual-basic"></a>이벤트(Visual Basic)
 [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] 프로젝트를 시퀀스로 실행되는 프로시저 시리즈로 시각화할 수 있지만 실제로 대부분의 프로그램은 이벤트 구동 방식을 따릅니다. 즉, 실행 흐름은 *이벤트*라는 외부 발생 요인에 의해 결정됩니다.  
@@ -27,7 +27,7 @@ ms.lasthandoff: 12/21/2017
  이벤트는 중요한 문제가 발생했음을 응용 프로그램에 알리는 신호입니다. 예를 들어 사용자가 폼의 컨트롤을 클릭하면 폼이 `Click` 이벤트를 발생시키고 이벤트를 처리하는 프로시저를 호출할 수 있습니다. 또한 이벤트는 개별 작업이 통신할 수 있도록 합니다. 예를 들어 응용 프로그램이 주 응용 프로그램과는 별도로 정렬 작업을 수행한다고 가정해 봅니다. 사용자가 정렬을 취소하면 응용 프로그램은 정렬 프로세스를 중지하도록 지시하는 취소 이벤트를 전송할 수 있습니다.  
   
 ## <a name="event-terms-and-concepts"></a>이벤트 용어 및 개념  
- 이 섹션에서는 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]의 이벤트에서 사용되는 용어 및 개념에 대해 설명합니다.  
+ 이 섹션에서는 용어 및 Visual Basic에서 이벤트와 함께 사용 되는 개념을 설명 합니다.  
   
 ### <a name="declaring-events"></a>이벤트 선언  
  다음 예제와 같이 `Event` 키워드를 사용하여 클래스, 구조체, 모듈 및 인터페이스를 사용하여 이벤트를 선언합니다.  
@@ -35,7 +35,7 @@ ms.lasthandoff: 12/21/2017
  [!code-vb[VbVbalrEvents#24](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/events_1.vb)]  
   
 ### <a name="raising-events"></a>이벤트 발생  
- 이벤트는 중요한 문제가 발생했음을 알리는 메시지와 같습니다. 메시지를 브로드캐스트하는 동작을 이벤트 *발생*이라고 합니다. [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]에서는 다음 예제와 같이 `RaiseEvent` 문으로 이벤트를 발생시킵니다.  
+ 이벤트는 중요한 문제가 발생했음을 알리는 메시지와 같습니다. 메시지를 브로드캐스트하는 동작을 이벤트 *발생*이라고 합니다. Visual Basic에서 사용 하 여 이벤트 올리면는 `RaiseEvent` 다음 예제와 같이 문을:  
   
  [!code-vb[VbVbalrEvents#25](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/events_2.vb)]  
   
@@ -47,7 +47,7 @@ ms.lasthandoff: 12/21/2017
 ### <a name="event-handlers"></a>이벤트 처리기  
  *이벤트 처리기*는 해당 이벤트가 발생할 때 호출되는 프로시저입니다. 서명이 일치하는 모든 유효한 서브루틴을 이벤트 처리기로 사용할 수 있습니다. 그러나 함수는 이벤트 처리기로 사용할 수 없습니다. 이벤트 소스에 값을 반환할 수 없기 때문입니다.  
   
- [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]에서는 이벤트 처리기에 대해 이벤트 전송자의 이름, 밑줄 및 이벤트의 이름을 조합하는 표준 명명 규칙을 사용합니다. 예를 들어 `button1`이라는 단추의 `Click` 이벤트의 이름은 `Sub button1_Click`으로 지정됩니다.  
+ Visual Basic의 이벤트 보낸 사람, 밑줄, 및 이벤트의 이름의 이름을 결합 하는 이벤트 처리기에 대 한 표준 명명 규칙을 사용 합니다. 예를 들어 `button1`이라는 단추의 `Click` 이벤트의 이름은 `Sub button1_Click`으로 지정됩니다.  
   
 > [!NOTE]
 >  사용자 고유의 이벤트에 대해 이벤트 처리기를 정의하는 경우 이러한 명명 규칙을 사용하는 것이 좋지만 필수는 아닙니다. 유효한 어떤 서브루틴 이름도 사용 가능합니다.  
@@ -72,7 +72,7 @@ ms.lasthandoff: 12/21/2017
   
  `Handles` 절은 이벤트를 이벤트 처리기와 연결하는 표준 방법이지만 컴파일 타임에 이벤트를 이벤트 처리기와 연결하도록 제한됩니다.  
   
- 폼이나 컨트롤에 이벤트가 연결된 것과 같은 일부 경우에서 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]는 빈 이벤트 처리기를 자동으로 스텁하고 이벤트와 연결합니다. 예를 들어 디자인 모드에서 폼의 명령 단추를 두 번 클릭하면 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]에서는 다음 코드와 같이 명령 버튼에 대해 빈 이벤트 처리기와 `WithEvents` 변수를 만듭니다.  
+ 경우에 따라과 같은 폼 이나 컨트롤에 연결 된 이벤트와 함께 Visual Basic 자동으로 끊고 빈 이벤트 처리기 및를 이벤트와 연결 합니다. 예를 들어 폼 디자인 모드에서 명령 단추를 두 번 클릭 하면 Visual Basic 만듭니다 빈 이벤트 처리기 및 `WithEvents` 다음 코드 에서처럼 명령 단추에 대 한 변수:  
   
  [!code-vb[VbVbalrEvents#26](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/events_4.vb)]  
   
@@ -83,7 +83,7 @@ ms.lasthandoff: 12/21/2017
   
  [!code-vb[VbVbalrEvents#28](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/events_5.vb)]  
   
- 이벤트 처리기에서 이벤트의 연결을 끊는 `RemoveHandler`는 `AddHandler`와 동일한 구문을 사용합니다. 예:  
+ 이벤트 처리기에서 이벤트의 연결을 끊는 `RemoveHandler`는 `AddHandler`와 동일한 구문을 사용합니다. 예를 들어:  
   
  [!code-vb[VbVbalrEvents#29](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/events_6.vb)]  
   
@@ -100,7 +100,7 @@ ms.lasthandoff: 12/21/2017
   
 #### <a name="to-handle-events-from-a-base-class"></a>기본 클래스의 이벤트를 처리하려면  
   
--   이벤트 처리기 프로시저의 선언 줄에 `Handles MyBase.`*eventname* 문을 추가하여 파생 클래스에서 이벤트 처리기를 선언합니다. 여기서 *eventname*은 처리하는 기본 클래스의 이벤트 이름입니다. 예:  
+-   이벤트 처리기 프로시저의 선언 줄에 `Handles MyBase.`*eventname* 문을 추가하여 파생 클래스에서 이벤트 처리기를 선언합니다. 여기서 *eventname*은 처리하는 기본 클래스의 이벤트 이름입니다. 예를 들어:  
   
      [!code-vb[VbVbalrEvents#12](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/events_8.vb)]  
   

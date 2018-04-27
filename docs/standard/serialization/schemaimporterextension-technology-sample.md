@@ -1,28 +1,28 @@
 ---
-title: "SchemaImporterExtension 기술 샘플"
-ms.custom: 
+title: SchemaImporterExtension 기술 샘플
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 3f5eb78f-0ef6-433a-b095-3a63b1ce0bc9
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 5001b31e11432c36c08f43bfa06b95483b247115
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 82178bb5b8915cef3f238bffa4c3ebcbbc6ecd2b
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="schemaimporterextension-technology-sample"></a>SchemaImporterExtension 기술 샘플
-[샘플 다운로드](http://download.microsoft.com/download/4/7/B/47B2164C-E780-4B10-8DE4-2CB5B886E0A6/Technologies/Serialization/Xml%20Serialization/SchemaImporterExtension.zip.exe)  
+[샘플 다운로드](https://download.microsoft.com/download/4/7/B/47B2164C-E780-4B10-8DE4-2CB5B886E0A6/Technologies/Serialization/Xml%20Serialization/SchemaImporterExtension.zip.exe)  
   
  이 샘플에서는 XML 스키마를 가져올 때의 코드 생성을 자세히 제어할 수 있는 사용자 지정 <xref:System.Xml.Serialization.Advanced.SchemaImporterExtension>을 보여 줍니다. 이 응용 프로그램에서는 이러한 확장을 빌드, 등록 및 호출하는 방법을 보여 줍니다.  
   
@@ -46,7 +46,7 @@ ms.lasthandoff: 12/23/2017
   
 1.  명령 프롬프트를 사용하여 새 실행 파일이 있는 디렉터리로 이동합니다.  
   
-2.  명령줄에 **[exe name]**을 입력합니다.  
+2.  명령줄에 **[exe name]** 을 입력합니다.  
   
 ## <a name="remarks"></a>설명  
  샘플의 이진 생성 및 등록 단계에 대한 자세한 내용은 소스 코드의 주석 및 build.proj 파일을 참조하십시오.  

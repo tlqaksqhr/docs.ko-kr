@@ -1,13 +1,13 @@
 ---
-title: "방법: TreeView 또는 ListView 컨트롤에 사용자 지정 정보 추가(Windows Forms)"
-ms.custom: 
+title: '방법: TreeView 또는 ListView 컨트롤에 사용자 지정 정보 추가(Windows Forms)'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-winforms
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -21,17 +21,17 @@ helpviewer_keywords:
 - ListView control [Windows Forms], adding custom information
 - TreeView control [Windows Forms], adding custom information
 ms.assetid: 68be11de-1d5b-430e-901f-cfbe48d14b19
-caps.latest.revision: 
+caps.latest.revision: 13
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 64e51a8911e27a612500ba222df7e3637cd24a13
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 8c7d8b881b3aa79122134deda7f5d95a98a68461
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-add-custom-information-to-a-treeview-or-listview-control-windows-forms"></a>방법: TreeView 또는 ListView 컨트롤에 사용자 지정 정보 추가(Windows Forms)
 Windows Forms에서 파생 된 노드를 만들 수 있습니다 <xref:System.Windows.Forms.TreeView> 컨트롤 또는 파생된 항목에는 <xref:System.Windows.Forms.ListView> 제어 합니다. 파생은 필드를 처리하는 사용자 지정 메서드 및 생성자뿐만 아니라 필요로 하는 모든 필드를 추가할 수 있습니다. 이 기능을 사용하여 각 트리 노드 또는 목록 항목에 고객 개체를 연결합니다. 에 대 한 예제는는 <xref:System.Windows.Forms.TreeView> 컨트롤, 하지만 동일한 방식을에 사용할 수는 <xref:System.Windows.Forms.ListView> 제어 합니다.  
@@ -113,7 +113,7 @@ Windows Forms에서 파생 된 노드를 만들 수 있습니다 <xref:System.Wi
        "\\TextFile.txt")));  
     ```  
   
-2.  트리 노드를 전달 하 고로 형식화 되는 <xref:System.Windows.Forms.TreeNode> 클래스를 파생 클래스로 캐스팅 해야 합니다. 캐스팅은 개체의 한 유형에서 다른 유형으로의 명시적 변환입니다. 캐스팅에 대한 자세한 내용은 [암시적 변환 및 명시적 변환](~/docs/visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md)([!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)]), [()연산자](~/docs/csharp/language-reference/operators/invocation-operator.md)([!INCLUDE[csprcs](../../../../includes/csprcs-md.md)]) 또는 [캐스트 연산자:()](/cpp/cpp/cast-operator-parens)([!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)])를 참조하세요.  
+2.  트리 노드를 전달 하 고로 형식화 되는 <xref:System.Windows.Forms.TreeNode> 클래스를 파생 클래스로 캐스팅 해야 합니다. 캐스팅은 개체의 한 유형에서 다른 유형으로의 명시적 변환입니다. 캐스팅에 대 한 자세한 내용은 참조 하십시오. [암시적 변환과 명시적 변환](~/docs/visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md) (Visual Basic) [() 연산자](~/docs/csharp/language-reference/operators/invocation-operator.md) (Visual C#), 또는 [캐스트 연산자: ()](/cpp/cpp/cast-operator-parens) ([!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]).  
   
     ```vb  
     Public Sub TreeView1_AfterSelect(ByVal sender As Object, ByVal e As System.Windows.Forms.TreeViewEventArgs) Handles TreeView1.AfterSelect  

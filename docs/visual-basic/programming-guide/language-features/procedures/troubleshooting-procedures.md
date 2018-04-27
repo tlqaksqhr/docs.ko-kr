@@ -1,11 +1,12 @@
 ---
-title: "프로시저 문제 해결(Visual Basic)"
-ms.custom: 
+title: 프로시저 문제 해결(Visual Basic)
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - troubleshooting Visual Basic, procedures
@@ -14,14 +15,14 @@ helpviewer_keywords:
 - troubleshooting procedures
 - procedures [Visual Basic], about procedures
 ms.assetid: 525721e8-2e02-4f75-b5d8-6b893462cf2b
-caps.latest.revision: "17"
+caps.latest.revision: 17
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: b838644baa5ad10f1deb917cff5751a0f625fca6
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 7e54c965dc15131734be2c5bcfe04ad70292bf23
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="troubleshooting-procedures-visual-basic"></a>프로시저 문제 해결(Visual Basic)
 이 페이지는 프로시저를 작업할 때 발생할 수 있는 몇 가지 일반적인 문제를 나열 합니다.  
@@ -83,11 +84,11 @@ ms.lasthandoff: 11/21/2017
   
  다음 항목을 매개 변수 목록에 포함 되어 있더라도 없는 프로시저의 서명의 구성 요소:  
   
--   프로시저 한정자 키워드와 같은 `Public`, `Shared`, 및`Static`  
+-   프로시저 한정자 키워드와 같은 `Public`, `Shared`, 및 `Static`  
   
 -   매개 변수 이름  
   
--   매개 변수 한정자 키워드와 같은 `ByRef` 및`Optional`  
+-   매개 변수 한정자 키워드와 같은 `ByRef` 및 `Optional`  
   
 -   반환 값 (변환 연산자 제외)의 데이터 형식  
   
@@ -99,7 +100,7 @@ ms.lasthandoff: 11/21/2017
  하나 이상의 프로시저 오버 로드 된 경우 [Optional](../../../../visual-basic/language-reference/modifiers/optional.md) 매개 변수 또는 [ParamArray](../../../../visual-basic/language-reference/modifiers/paramarray.md) 매개 변수 중 하나를 중복을 피해 야 할는 *암시적 오버 로드*합니다. 자세한 내용은 참조 [프로시저 오버 로드에 대 한 고려 사항](./considerations-in-overloading-procedures.md)합니다.  
   
 ## <a name="calling-a-wrong-version-of-an-overloaded-procedure"></a>잘못 된 버전의 오버 로드 된 프로시저를 호출합니다.  
- 모든 매개 변수 목록은 잘 알고 있어야 하 고 이해 해야 프로시저에 있는 경우 몇 가지 오버 로드 된 버전을 어떻게 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 오버 로드 간의 호출을 해결 합니다. 그렇지 않은 경우 원하지 않은 오버 로드를 호출할 수 있습니다.  
+ 프로시저에 있는 여러 오버 로드 된 버전을 모든 매개 변수 목록은 잘 알고 있어야 하 고 Visual Basic에서 오버 로드 간의 호출을 확인 하는 방법을 이해 해야 합니다. 그렇지 않은 경우 원하지 않은 오버 로드를 호출할 수 있습니다.  
   
  호출 하려는 오버 로드를 확인 한 다음 규칙을 준수 해야:  
   

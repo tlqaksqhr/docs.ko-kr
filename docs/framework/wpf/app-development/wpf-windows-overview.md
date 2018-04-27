@@ -1,13 +1,13 @@
 ---
-title: "WPF 창 개요"
-ms.custom: 
+title: WPF 창 개요
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-wpf
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -36,17 +36,17 @@ helpviewer_keywords:
 - modal dialog boxes [WPF]
 - displaying XAML pages [WPF]
 ms.assetid: 737d04ec-8861-46c3-8d44-fa11d3528d23
-caps.latest.revision: 
+caps.latest.revision: 65
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: c176f08904bac8e9c3877977c1e52afb57d5daca
-ms.sourcegitcommit: d3cfda0943364aaf6ccd574f55f584576c8a4fee
+ms.openlocfilehash: ae454e54abc2c8200f33bdb0bc5537806c824074
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="wpf-windows-overview"></a>WPF 창 개요
 사용자는 창을 통해 [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] 독립 실행형 응용 프로그램과 상호 작용합니다. 창의 기본 용도는 데이터를 시각화하는 콘텐츠를 호스트하고 사용자가 데이터와 상호 작용할 수 있도록 하는 것입니다. 독립 실행형 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 응용 프로그램은 고유 창을 사용 하 여 제공 된 <xref:System.Windows.Window> 클래스입니다. 이 항목에서는 소개 <xref:System.Windows.Window> 독립 실행형 응용 프로그램에는 창을 만들고 관리의 기본 개념을 다루기 전에 합니다.  
@@ -282,7 +282,7 @@ ms.lasthandoff: 03/08/2018
   
  창의 클라이언트 및 비클라이언트 영역에서 제공 하는 메커니즘을 통해 명시적으로 닫을 수 있지만, 창의 닫을 수도 있습니다 암시적으로 응용 프로그램의 다른 부분에는 동작의 결과로 또는 [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)], 다음을 포함 하 여:  
   
--   사용자가 로그 오프 하거나 종료 [!INCLUDE[TLA2#tla_mswin](../../../../includes/tla2sharptla-mswin-md.md)]합니다.  
+-   사용자가 로그 오프 하거나 Windows를 종료 합니다.  
   
 -   창의 소유자 닫습니다 (참조 <xref:System.Windows.Window.Owner%2A>).  
   
@@ -315,7 +315,7 @@ ms.lasthandoff: 03/08/2018
   
 -   <xref:System.Windows.WindowStartupLocation.Manual>  
   
- 시작 위치로 지정 된 경우 <xref:System.Windows.WindowStartupLocation.Manual>, 및 <xref:System.Windows.Window.Left%2A> 및 <xref:System.Windows.Window.Top%2A> 속성이 설정 되지 않은 <xref:System.Windows.Window> 묻습니다 [!INCLUDE[TLA2#tla_mswin](../../../../includes/tla2sharptla-mswin-md.md)] 에 표시할 위치에 대 한 합니다.  
+ 시작 위치로 지정 된 경우 <xref:System.Windows.WindowStartupLocation.Manual>, 및 <xref:System.Windows.Window.Left%2A> 및 <xref:System.Windows.Window.Top%2A> 속성이 설정 되지 않은 <xref:System.Windows.Window> 위치에 대 한 기간에 게 표시 합니다.  
   
 <a name="Topmost_Windows_and_Z_Order"></a>   
 ### <a name="topmost-windows-and-z-order"></a>최상위 창 및 Z 순서  

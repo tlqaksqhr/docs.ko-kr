@@ -1,18 +1,19 @@
 ---
-title: "현대화 CI/CD 파이프라인 및 DevOps 도구로 클라우드에서 앱의 수명 주기"
-description: "컨테이너 화 된.NET 응용 프로그램에 대 한.NET Microservices 아키텍처 | 현대화 CI/CD 파이프라인 및 DevOps 도구로 클라우드에서 앱의 수명 주기"
+title: 현대화 CI/CD 파이프라인 및 DevOps 도구로 클라우드에서 앱의 수명 주기
+description: 컨테이너 화 된.NET 응용 프로그램에 대 한.NET Microservices 아키텍처 | 현대화 CI/CD 파이프라인 및 DevOps 도구로 클라우드에서 앱의 수명 주기
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/26/2017
 ms.prod: .net
+ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 668c48b64cab964da65625ef5326fb75e133b3b9
-ms.sourcegitcommit: d3cfda0943364aaf6ccd574f55f584576c8a4fee
+ms.openlocfilehash: 56dbd4a867e0f47d0f7e681d924584629d763f87
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="modernize-your-apps-lifecycle-with-cicd-pipelines-and-devops-tools-in-the-cloud"></a>현대화 CI/CD 파이프라인 및 DevOps 도구로 클라우드에서 앱의 수명 주기
 

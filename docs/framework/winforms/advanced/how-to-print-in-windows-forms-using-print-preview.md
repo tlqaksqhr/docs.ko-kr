@@ -1,12 +1,13 @@
 ---
-title: "방법: Windows Forms에서 인쇄 미리 보기를 사용하여 인쇄"
-ms.custom: 
+title: '방법: Windows Forms에서 인쇄 미리 보기를 사용하여 인쇄'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-winforms
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -16,16 +17,17 @@ helpviewer_keywords:
 - printing [Windows Forms], with print preview
 - print preview
 ms.assetid: 4a16f7e2-ae10-4485-b0ae-3d558334d0fe
-caps.latest.revision: "10"
+caps.latest.revision: 10
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 9aec07ab0f0897fcabcc2980dea5ef52d81082a6
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: abdae9dc9f7a68f1272cb7499705728b72825247
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-print-in-windows-forms-using-print-preview"></a>방법: Windows Forms에서 인쇄 미리 보기를 사용하여 인쇄
 Windows Forms 프로그래밍에서는 인쇄 서비스 외에 인쇄 미리 보기를 제공하는 것이 일반적입니다. 인쇄 미리 보기 서비스를 응용 프로그램에 추가하는 편리한 방법은 파일 인쇄에 대한 <xref:System.Windows.Forms.PrintPreviewDialog> 이벤트 처리 논리와 함께 <xref:System.Drawing.Printing.PrintDocument.PrintPage> 컨트롤을 사용하는 것입니다.  
@@ -64,7 +66,7 @@ Windows Forms 프로그래밍에서는 인쇄 서비스 외에 인쇄 미리 보
      [!code-csharp[System.Drawing.Printing.PrintPreviewExample#4](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.Printing.PrintPreviewExample/CS/Form1.cs#4)]
      [!code-vb[System.Drawing.Printing.PrintPreviewExample#4](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.Printing.PrintPreviewExample/VB/Form1.vb#4)]  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  [!code-csharp[System.Drawing.Printing.PrintPreviewExample#0](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.Printing.PrintPreviewExample/CS/Form1.cs#0)]
  [!code-vb[System.Drawing.Printing.PrintPreviewExample#0](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.Printing.PrintPreviewExample/VB/Form1.vb#0)]  
   
@@ -73,7 +75,7 @@ Windows Forms 프로그래밍에서는 인쇄 서비스 외에 인쇄 미리 보
   
 -   System, System.Windows.Forms, System.Drawing 어셈블리에 대한 참조  
   
--   [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)] 또는 [!INCLUDE[csprcs](../../../../includes/csprcs-md.md)]의 명령줄에서 이 예제를 빌드하는 방법에 대한 자세한 내용은 [명령줄에서 빌드](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md) 또는 [csc.exe를 사용한 명령줄 빌드](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)를 참조하세요. [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)]에서 코드를 새 프로젝트에 붙여넣어 이 예제를 빌드할 수도 있습니다.  [방법: Visual Studio를 사용하여 전체 Windows Forms 코드 예제 컴파일 및 실행](http://msdn.microsoft.com/library/Bb129228\(v=vs.110\))을 참조하세요.  
+-   Visual Basic 또는 Visual C#에 대 한 명령줄에서이 예제를 빌드하는 방법에 대 한 정보를 참조 하십시오. [명령줄에서 빌드](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md) 또는 [사용한 명령줄 빌드 csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)합니다. [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] 에서 코드를 새 프로젝트에 붙여넣어 이 예제를 빌드할 수도 있습니다.  [방법: Visual Studio를 사용하여 전체 Windows Forms 코드 예제 컴파일 및 실행](http://msdn.microsoft.com/library/Bb129228\(v=vs.110\))을 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
  [방법: Windows Forms에서 다중 페이지 텍스트 파일 인쇄](../../../../docs/framework/winforms/advanced/how-to-print-a-multi-page-text-file-in-windows-forms.md)  

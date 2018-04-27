@@ -1,36 +1,38 @@
 ---
-title: "데이터 바인딩"
-ms.custom: 
+title: 데이터 바인딩
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: cbec8b02-a1e8-4ae8-a83b-bb5190413ac5
-caps.latest.revision: "2"
+caps.latest.revision: 2
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: bb7562c2f6fab7ce496fd87ecdd891531589abfa
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: 8308700a35bdd2aec2d66f4edd8a89c128e07d7c
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="data-binding"></a>데이터 바인딩
-[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]에서는 표 컨트롤과 같은 공용 컨트롤에 대 한 바인딩을 지원 합니다. 특히 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]에서는 데이터 표에 바인딩과 마스터-세부 사항 바인딩 처리를 위한 기본 패턴을 표시 및 업데이트 측면 모두에서 정의합니다.  
+[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 에서는 표 컨트롤과 같은 공용 컨트롤에 대 한 바인딩을 지원 합니다. 특히 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]에서는 데이터 표에 바인딩과 마스터-세부 사항 바인딩 처리를 위한 기본 패턴을 표시 및 업데이트 측면 모두에서 정의합니다.  
   
 ## <a name="underlying-principle"></a>기본 원칙  
  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]에서는 [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)] 쿼리를 데이터베이스에서 실행하기 위해 SQL로 변환합니다. 그 결과 강력한 형식의 `IEnumerable`이 생성됩니다. 이러한 개체는 일반 공용 언어 런타임 (CLR) 개체를 일반 개체 데이터 바인딩은 결과 표시 하 고 사용할 수 있습니다. 반면 변경 작업(삽입, 업데이트 및 삭제)에는 추가 단계가 필요합니다.  
   
 ## <a name="operation"></a>작업  
- Windows Forms 컨트롤에 명시적으로 바인딩하려면 <xref:System.ComponentModel.IListSource>를 구현합니다. 데이터 소스 제네릭 <xref:System.Data.Linq.Table%601>(C#의 `Table<T>` 또는 `Table(Of T)`의 [!INCLUDE[vbprvb](../../../../../../includes/vbprvb-md.md)]) 및 제네릭 `DataQuery`는 <xref:System.ComponentModel.IListSource>를 구현하도록 업데이트되었습니다. UI(사용자 인터페이스) 데이터 바인딩 엔진(Windows Forms 및 Windows Presentation Foundation)에서는 모두 해당 데이터 소스에서 <xref:System.ComponentModel.IListSource>를 구현하는지 여부를 테스트합니다. 따라서 다음 예제와 같이 쿼리의 직접 영향을 컨트롤의 데이터 소스에 쓰면 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 컬렉션 생성이 암시적으로 호출됩니다.  
+ Windows Forms 컨트롤에 명시적으로 바인딩하려면 <xref:System.ComponentModel.IListSource>를 구현합니다. 제네릭 데이터 소스 <xref:System.Data.Linq.Table%601> (`Table<T>` C# 또는 `Table(Of T)` Visual basic에서) 및 일반 `DataQuery` 구현 하도록 업데이트 되었습니다 <xref:System.ComponentModel.IListSource>합니다. UI(사용자 인터페이스) 데이터 바인딩 엔진(Windows Forms 및 Windows Presentation Foundation)에서는 모두 해당 데이터 소스에서 <xref:System.ComponentModel.IListSource>를 구현하는지 여부를 테스트합니다. 따라서 다음 예제와 같이 쿼리의 직접 영향을 컨트롤의 데이터 소스에 쓰면 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 컬렉션 생성이 암시적으로 호출됩니다.  
   
  [!code-csharp[DLinqDataBinding#1](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqDataBinding/cs/Program.cs#1)]
  [!code-vb[DLinqDataBinding#1](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqDataBinding/vb/Module1.vb#1)]  
@@ -51,7 +53,7 @@ ms.lasthandoff: 01/17/2018
   
     -   [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]가 <xref:System.Data.Linq.Table%601>에서 기본 <xref:System.Linq.IQueryable%601>을 찾는 경우 소스를 편집할 수 있으며 첫 번째 글머리 기호의 경우와 상황이 같아집니다.  
   
-    -   경우 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 내부 찾을 수 없습니다 <xref:System.Data.Linq.Table%601>, 소스 버전에 대 한 허용 하지 않습니다 (예를 들어 `groupby`). [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]에서는 쿼리를 채우는 제네릭 검색 `SortableBindingList`는 단순 <xref:System.ComponentModel.BindingList%601> 지정된 된 속성의 T 엔터티에 대 한 정렬 기능을 구현 하는 합니다.  
+    -   경우 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 내부 찾을 수 없습니다 <xref:System.Data.Linq.Table%601>, 소스 버전에 대 한 허용 하지 않습니다 (예를 들어 `groupby`). [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 에서는 쿼리를 채우는 제네릭 검색 `SortableBindingList`는 단순 <xref:System.ComponentModel.BindingList%601> 지정된 된 속성의 T 엔터티에 대 한 정렬 기능을 구현 하는 합니다.  
   
 ## <a name="specialized-collections"></a>특수 컬렉션  
  이 문서의 앞부분에서 설명한 많은 기능에서 <xref:System.ComponentModel.BindingList%601>는 몇 가지 다른 클래스용으로 설계된 특수 클래스입니다. 이러한 클래스는 제네릭 `SortableBindingList` 및 제네릭 `DataBindingList` 클래스입니다. 둘 다 정수로 선언됩니다.  

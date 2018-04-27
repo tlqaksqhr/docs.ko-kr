@@ -1,11 +1,12 @@
 ---
-title: "데이터 형식의 효율적 사용(Visual Basic)"
-ms.custom: 
+title: 데이터 형식의 효율적 사용(Visual Basic)
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - performance, data type efficiency
@@ -19,14 +20,14 @@ helpviewer_keywords:
 - data types [Visual Basic], optimizing
 - ChrW function [Visual Basic], preferred to Chr
 ms.assetid: 28f5e4ba-ec24-4f37-b90a-e8ee822f778a
-caps.latest.revision: "16"
+caps.latest.revision: 16
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 0e13a1d61aacb06eb336c39aab969847127dfc67
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 4cac585cdc3072d595d2446e1937678f9ab03335
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="efficient-use-of-data-types-visual-basic"></a>데이터 형식의 효율적 사용(Visual Basic)
 할당 된 선언 되지 않은 변수 및 데이터 형식 없이 선언 된 변수는 `Object` 데이터 형식입니다. 이렇게 하면 프로그램을 신속 하 게 작성 하지만 더 느리게 실행 발생할 수 있습니다.  
@@ -41,7 +42,7 @@ ms.lasthandoff: 11/21/2017
 -   코드의 더 빠른 실행에서 발생합니다.  
   
 ## <a name="most-efficient-data-types"></a>가장 효율적인 데이터 형식  
- 분수를 포함 하지 않은 변수의 경우 정수 데이터 형식이 비정 수 계열 형식 보다 더 효율적입니다. [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)], `Integer` 및 `UInteger` 은 가장 효율적인 숫자 유형입니다.  
+ 분수를 포함 하지 않은 변수의 경우 정수 데이터 형식이 비정 수 계열 형식 보다 더 효율적입니다. Visual Basic에서는 `Integer` 및 `UInteger` 은 가장 효율적인 숫자 유형입니다.  
   
  소수 자릿수의 숫자에 대 한 `Double` 가장 효율적인 데이터 형식 이므로 현재 플랫폼의 프로세서 배정밀도의 부동 소수점 연산을 수행 합니다. 그러나 작업과 `Double` 과 같은 정수 계열 형식에서와 마찬가지로 빠르지 않습니다 `Integer`합니다.  
   

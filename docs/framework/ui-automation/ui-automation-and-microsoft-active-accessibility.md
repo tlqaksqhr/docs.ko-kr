@@ -1,12 +1,13 @@
 ---
-title: "UI 자동화 및 Microsoft Active Accessibility"
-ms.custom: 
+title: UI 자동화 및 Microsoft Active Accessibility
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-bcl
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-bcl
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Active Accessibility
@@ -14,16 +15,17 @@ helpviewer_keywords:
 - UI Automation, Microsoft Active Accessibility
 - Active Accessibility, UI Automation compared to
 ms.assetid: 87bee662-0a3e-4232-a421-20e7a5968321
-caps.latest.revision: "24"
+caps.latest.revision: 24
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: b826bff9f16dcd564e9b5bd91aab8b2170db6ce3
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 2028f312433e3a4cf8c90f2e6809ed29288d7819
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="ui-automation-and-microsoft-active-accessibility"></a>UI 자동화 및 Microsoft Active Accessibility
 > [!NOTE]
@@ -35,7 +37,7 @@ ms.lasthandoff: 12/22/2017
   
 <a name="Programming_Languages_compare"></a>   
 ## <a name="programming-languages"></a>프로그래밍 언어  
- [!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)] 는 이중 인터페이스 지원과 함께 [!INCLUDE[TLA#tla_com](../../../includes/tlasharptla-com-md.md)] 을 기반으로 하므로 C/C++, [!INCLUDE[TLA#tla_vb6](../../../includes/tlasharptla-vb6-md.md)]및 스크립팅 언어로 프로그래밍 가능합니다. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] (표준 컨트롤에 대한 클라이언트 쪽 공급자 라이브러리 포함)은 관리되는 코드로 작성되므로 [!INCLUDE[TLA#tla_vcshrp](../../../includes/tlasharptla-vcshrp-md.md)] 또는 [!INCLUDE[TLA#tla_visualbnet](../../../includes/tlasharptla-visualbnet-md.md)]을 사용하여 UI 자동화 클라이언트 응용 프로그램을 쉽게 프로그래밍할 수 있습니다. 인터페이스 구현인 UI 자동화 공급자는 관리되는 코드 또는 C/C++로 작성할 수 있습니다.  
+<[!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)] 에 따라는 [!INCLUDE[TLA#tla_com](../../../includes/tlasharptla-com-md.md)] 이중 인터페이스를 지 원하는 C/c + +에서 프로그래밍 가능한 되므로 [!INCLUDE[TLA#tla_vb6](../../../includes/tlasharptla-vb6-md.md)], 및 스크립트 언어입니다. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 관리 되는 코드로 작성 되므로 (표준 컨트롤에 대 한 클라이언트 쪽 공급자 라이브러리 포함) 및 UI 자동화 클라이언트 응용 프로그램을 쉽게 C# 또는 Visual Basic.NET을 사용 하 여 프로그래밍할 합니다. 인터페이스 구현인 UI 자동화 공급자는 관리되는 코드 또는 C/C++로 작성할 수 있습니다.  
   
 <a name="Support_in_Windows_Presentation_Foundation_"></a>   
 ## <a name="support-in-windows-presentation-foundation"></a>Windows Presentation Foundation에서의 지원  
@@ -91,7 +93,7 @@ ms.lasthandoff: 12/22/2017
 |ROLE_SYSTEM_DOCUMENT|문서|  
 |ROLE_SYSTEM_TEXT|편집|  
 |ROLE_SYSTEM_GROUPING|그룹화|  
-|ROLE_SYSTEM_LIST|머리글|  
+|ROLE_SYSTEM_LIST|Header|  
 |ROLE_SYSTEM_COLUMNHEADER|헤더 항목|  
 |ROLE_SYSTEM_LINK|하이퍼링크|  
 |ROLE_SYSTEM_GRAPHIC|이미지|  
@@ -135,7 +137,7 @@ ms.lasthandoff: 12/22/2017
   
  다음 표는 두 모델에서 속성 간의 상관 관계를 보여줍니다.  
   
-|[!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)] 속성 접근자|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 속성 ID|주의|  
+|[!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)] 속성 접근자|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 속성 ID|설명|  
 |-----------------------------------------------------------------------------------|---------------------------------------------------------------------------------------|-------------|  
 |`get_accKeyboardShortcut`|<xref:System.Windows.Automation.AutomationElement.AccessKeyProperty> 또는 <xref:System.Windows.Automation.AutomationElement.AcceleratorKeyProperty>|둘 다 있는 경우`AccessKeyProperty` 가 우선적으로 적용됩니다.|  
 |`get_accName`|<xref:System.Windows.Automation.AutomationElement.NameProperty>||  
@@ -218,7 +220,7 @@ ms.lasthandoff: 12/22/2017
 |EVENT_OBJECT_SELECTIONWITHIN|동일한 요소 없음|  
 |EVENT_OBJECT_SHOW|<xref:System.Windows.Automation.AutomationElement.StructureChangedEvent>|  
 |EVENT_OBJECT_STATECHANGE|다양한 속성 변경 이벤트|  
-|EVENT_OBJECT_VALUECHANGE|<xref:System.Windows.Automation.RangeValuePattern.ValueProperty?displayProperty=nameWithType>및 <xref:System.Windows.Automation.ValuePattern.ValueProperty?displayProperty=nameWithType> 변경|  
+|EVENT_OBJECT_VALUECHANGE|<xref:System.Windows.Automation.RangeValuePattern.ValueProperty?displayProperty=nameWithType> 및 <xref:System.Windows.Automation.ValuePattern.ValueProperty?displayProperty=nameWithType> 변경|  
 |EVENT_SYSTEM_ALERT|동일한 요소 없음|  
 |EVENT_SYSTEM_CAPTUREEND|동일한 요소 없음|  
 |EVENT_SYSTEM_CAPTURESTART|동일한 요소 없음|  

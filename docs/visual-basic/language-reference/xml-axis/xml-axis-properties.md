@@ -1,10 +1,11 @@
 ---
-title: "XML 축 속성(Visual Basic)"
+title: XML 축 속성(Visual Basic)
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - XML axis properties [Visual Basic]
@@ -12,19 +13,19 @@ helpviewer_keywords:
 - XML axis [Visual Basic]
 - XML [Visual Basic], accessing
 ms.assetid: 7e400e20-5d1e-4d22-a65c-9df79d5c1621
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 9564d1d8c7b262e9532bd2fafd8ebd2582f47412
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 94b75237512b292f3c93e42e4c43c10a9df94396
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="xml-axis-properties-visual-basic"></a>XML 축 속성(Visual Basic)
-이 섹션의 항목에 XML 축 속성의 구문은 문서화 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]합니다. XML 축 속성 쉽게 XML 코드에서 직접 액세스할 수 있습니다.  
+이 섹션의 항목에는 Visual Basic의 XML 축 속성의 구문은 문서화합니다. XML 축 속성 쉽게 XML 코드에서 직접 액세스할 수 있습니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
   
 |항목|설명|  
 |-----------|-----------------|  

@@ -12,17 +12,17 @@ ms.assetid: c188b38e-bd9d-4121-9983-41ea6a94d28e
 caps.latest.revision: 18
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 4a37bf43096931597278974099becb9be6ae133d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: d931a2034d681c4e14cc35ecfbd9ad7accf5afaa
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-my-depends-on-project-type-visual-basic"></a>My가 프로젝트 형식에 의존하는 방식(Visual Basic)
-`My`특정 프로젝트 형식에 필요한 개체만 표시 합니다. 예를 들어는 `My.Forms` 개체는 Windows Forms 응용 프로그램에서 사용할 수 있지만 콘솔 응용 프로그램에서 사용할 수 없습니다. 이 항목을 설명 하는 `My` 다양 한 프로젝트 형식에 사용할 수 있는 개체입니다.  
+`My` 특정 프로젝트 형식에 필요한 개체만 표시 합니다. 예를 들어는 `My.Forms` 개체는 Windows Forms 응용 프로그램에서 사용할 수 있지만 콘솔 응용 프로그램에서 사용할 수 없습니다. 이 항목을 설명 하는 `My` 다양 한 프로젝트 형식에 사용할 수 있는 개체입니다.  
   
 ## <a name="my-in-windows-applications-and-web-sites"></a>내에서 Windows 응용 프로그램 및 웹 사이트  
- `My`현재 프로젝트 형식;에 사용 되는 개체에 대해서만 표시 적용할 수 없는 개체를 표시 되지 않습니다. 예를 들어 다음 그림에서는 `My` Windows Forms 프로젝트의 개체 모델입니다.  
+ `My` 현재 프로젝트 형식;에 사용 되는 개체에 대해서만 표시 적용할 수 없는 개체를 표시 되지 않습니다. 예를 들어 다음 그림에서는 `My` Windows Forms 프로젝트의 개체 모델입니다.  
   
  ![모양을 내 Windows Forms 응용 프로그램에서](../../../visual-basic/developing-apps/development-with-my/media/myinwinform.png "MyInWinForm")  
   
@@ -48,7 +48,7 @@ ms.lasthandoff: 11/21/2017
 |`My.User`|**예** <sup>6</sup>|**예** <sup>6</sup>|**예** <sup>6</sup>|**예** <sup>6</sup>|**예** <sup>7</sup>|**예** <sup>6</sup>|아니요|**예** <sup>7</sup>|  
 |`My.WebServices`|**예**|**예**|**예**|**예**|**예**|**예**|아니요|아니요|  
   
- <sup>1</sup> 버전의 Windows Forms `My.Application`합니다. 콘솔 버전에서 파생 됩니다 (참고 3 참조). 응용 프로그램의 windows와 상호 작용에 대 한 지원을 추가 하 고 제공 된 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 응용 프로그램 모델입니다.  
+ <sup>1</sup> 버전의 Windows Forms `My.Application`합니다. 콘솔 버전에서 파생 됩니다 (참고 3 참조). 응용 프로그램의 windows와 상호 작용에 대 한 지원을 추가 하 고 Visual Basic 응용 프로그램 모델을 제공 합니다.  
   
  <sup>2</sup> library의 `My.Application`합니다. 응용 프로그램에 필요한 기본 기능을 제공: 응용 프로그램 로그에 작성 하 고 응용 프로그램 정보에 액세스 하기 위한 멤버를 제공 합니다.  
   

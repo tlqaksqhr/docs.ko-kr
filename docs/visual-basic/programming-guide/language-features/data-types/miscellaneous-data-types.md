@@ -1,29 +1,30 @@
 ---
-title: "기타 데이터 형식(Visual Basic)"
-ms.custom: 
+title: 기타 데이터 형식(Visual Basic)
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - Object data type [Visual Basic], data types
 - data types [Visual Basic], choosing
 ms.assetid: 64c71a12-9057-4dbf-baca-7379c4aada69
-caps.latest.revision: "22"
+caps.latest.revision: 22
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: b6bb86bb6d203aa4e6bdded27a4cb78a8155ddec
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: f80aacccab4c215b3e3917cc73097080aa6b9941
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="miscellaneous-data-types-visual-basic"></a>기타 데이터 형식(Visual Basic)
-[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]숫자 또는 문자 분류 되지 않는 몇 가지 데이터 형식을 제공 합니다. 를 처리 특수 데이터와 같은 예/아니요 값, 날짜/시간 값 및 개체 주소입니다.  
+Visual Basic에서 숫자 또는 문자 분류 되지 않는 몇 가지 데이터 형식을 제공 합니다. 를 처리 특수 데이터와 같은 예/아니요 값, 날짜/시간 값 및 개체 주소입니다.  
   
- 나란히 비교를 보여 주는 표는 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 데이터 형식을 참조 [데이터 형식](../../../../visual-basic/language-reference/data-types/data-type-summary.md)합니다.  
+ Visual Basic 데이터 형식-나란히 비교를 보여 주는 테이블을 참조 하십시오. [데이터 형식](../../../../visual-basic/language-reference/data-types/data-type-summary.md)합니다.  
   
 ## <a name="boolean-type"></a>부울 유형  
  [Boolean 데이터 형식](../../../../visual-basic/language-reference/data-types/boolean-data-type.md) 로 해석 되는 부호 없는 값은 `True` 또는 `False`합니다. 데이터 너비 구현 하는 플랫폼에 따라 달라 집니다. 변수를 포함할 수 있으면 true/false 같은 두 가지 상태 값만 예/아니요 또는 켜기/끄기로 선언 `Boolean`합니다.  

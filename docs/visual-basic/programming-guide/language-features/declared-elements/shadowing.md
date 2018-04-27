@@ -1,11 +1,12 @@
 ---
-title: "Visual Basic의 숨김 기능"
-ms.custom: 
+title: Visual Basic의 숨김 기능
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - inheritance [Visual Basic], shadowing
@@ -24,17 +25,17 @@ helpviewer_keywords:
 - objects [Visual Basic], names
 - names [Visual Basic], shadowing
 ms.assetid: 54bb4c25-12c4-4181-b4a0-93546053964e
-caps.latest.revision: "24"
+caps.latest.revision: 24
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: cbfce3edc122ca875552b2d41ba876fe5cfcfc4d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 489e1786b08085f229f66b2dbc434b96b06d86df
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="shadowing-in-visual-basic"></a>Visual Basic의 숨김 기능
-두 개의 프로그래밍 요소가 동일한 이름을 공유 하는 경우 그 중 하나가 숨길 수, 또는 *그림자*, 다른 하나 있습니다. 이러한 상황에서 숨겨진된 요소는 참조용; 수 대신, 코드 사용 하는 경우 요소 이름에서 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 컴파일러 숨기는 요소를 확인 합니다.  
+두 개의 프로그래밍 요소가 동일한 이름을 공유 하는 경우 그 중 하나가 숨길 수, 또는 *그림자*, 다른 하나 있습니다. 이러한 상황에서 숨겨진된 요소는 참조용; 수 대신, 코드에서 요소 이름, Visual Basic 컴파일러 숨기는 요소 확인 합니다.  
   
 ## <a name="purpose"></a>용도  
  섀도잉의 주요 목적은 클래스 멤버의 정의 보호 하는 것입니다. 기본 클래스를 이미 정의한 하나로 동일한 이름을 가진 요소를 만드는 경우가 있을 수 있습니다. 이런 경우는 `Shadows` 한정자를 사용 하면 클래스 멤버로 확인 수를 통한 참조가 이미 정의한 대신 새 기본 클래스 요소입니다.  

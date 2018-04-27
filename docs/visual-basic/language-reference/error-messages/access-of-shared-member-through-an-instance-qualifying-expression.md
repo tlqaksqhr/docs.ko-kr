@@ -15,18 +15,18 @@ ms.assetid: db3337e5-c349-42bf-86df-d9c1e00952a5
 caps.latest.revision: 23
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: bcf3c37852e73464eec612e9e1d458ca707342e2
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 9bbec233435ab728657c1b99e26ab157d4657093
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="access-of-shared-member-through-an-instance-qualifying-expression-will-not-be-evaluated"></a>인스턴스를 통한 공유 멤버 액세스입니다. 정규화 식을 계산하지 않습니다.
 클래스 또는 구조체의 인스턴스 변수가 사용 되는 액세스 하는 `Shared` 변수, 속성, 프로시저 또는 해당 클래스 또는 구조체에 정의 된 이벤트입니다. 이 경고는 인스턴스 변수를 사용 하 여 클래스 또는 상수 또는 열거형 또는 중첩 된 클래스 또는 구조체와 같은 구조체의 암시적으로 공유 된 멤버를 액세스 하는 경우에 발생할 수 있습니다.  
   
  멤버는 공유의 목적은 해당 멤버의 단일 복사본만 만들고 단일 복사본을 선언 된 구조체 또는 클래스의 모든 인스턴스를 사용할 수 있도록 하는 것입니다. 에 액세스 하려면이 용도와 일치 한 `Shared` 해당 클래스 또는 구조체의 개별 인스턴스를 저장 하는 변수 대신 해당 클래스 또는 구조체의 이름을 통해 멤버입니다.  
   
- 에 액세스 하는 `Shared` 인스턴스 변수를 통해 멤버는 멤버는 모호 이해 하기 어려울 코드를 만들 수 `Shared`합니다. 또한 이러한 액세스는 식의 일부인 경우 하는 다른 작업을 수행와 같은 한 `Function` 공유 멤버의 인스턴스를 반환 하는 프로시저 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 식 및 수행할 수도 있는 모든 작업을 건너뜁니다.  
+ 에 액세스 하는 `Shared` 인스턴스 변수를 통해 멤버는 멤버는 모호 이해 하기 어려울 코드를 만들 수 `Shared`합니다. 또한 이러한 액세스는 식의 일부인 경우 하는 다른 작업을 수행와 같은 `Function` 공유 멤버의 인스턴스를 반환 하는 절차, Visual Basic 식 및 수행할 수도 있는 모든 작업을 건너뜁니다.  
   
  자세한 내용 및 예제에 대 한 참조 [Shared](../../../visual-basic/language-reference/modifiers/shared.md)합니다.  
   

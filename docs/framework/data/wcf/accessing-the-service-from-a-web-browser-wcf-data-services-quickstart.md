@@ -1,30 +1,32 @@
 ---
-title: "웹 브라우저에서 서비스 액세스(WCF Data Services 빠른 시작)"
-ms.custom: 
+title: 웹 브라우저에서 서비스 액세스(WCF Data Services 빠른 시작)
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework-oob
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 5a6fa180-3094-4e6e-ba2b-8c80975d18d1
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 71beb254bf258da97207f14afca73cd68c6927ca
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: c9ae96facd79ae3d268c630ff7bf8adf411eb775
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="accessing-the-service-from-a-web-browser-wcf-data-services-quickstart"></a>웹 브라우저에서 서비스 액세스(WCF Data Services 빠른 시작)
-이 작업에서는 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]에서 [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)]를 시작하고 웹 브라우저에서 선택적으로 피드 읽기를 사용하지 않도록 설정합니다. 또한 서비스 정의 문서를 검색 됩니다 있을 뿐만 아니라 노출 된 리소스를 웹 브라우저를 통해 HTTP GET 요청을 제출 하 여 데이터 서비스 리소스에 액세스 한 다음 있습니다.  
+이 작업에서는 Visual Studio에서 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]를 시작하고 웹 브라우저에서 선택적으로 피드 읽기를 사용하지 않도록 설정합니다. 또한 서비스 정의 문서를 검색 됩니다 있을 뿐만 아니라 노출 된 리소스를 웹 브라우저를 통해 HTTP GET 요청을 제출 하 여 데이터 서비스 리소스에 액세스 한 다음 있습니다.  
   
 > [!NOTE]
->  기본적으로 [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)]에서는 사용자 컴퓨터에서 `localhost` URI에 포트 번호를 자동으로 할당합니다. 이 작업에서는 URI 예제에서 포트 번호 `12345`를 사용합니다. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]에 특정 포트 번호를 설정 하 여 [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)] 프로젝트 참조 [데이터 서비스를 만드는](../../../../docs/framework/data/wcf/creating-the-data-service.md)합니다.  
+>  기본적으로 Visual Studio에서는 사용자 컴퓨터에서 `localhost` URI에 포트 번호를 자동으로 할당합니다. 이 작업에서는 URI 예제에서 포트 번호 `12345`를 사용합니다. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] Visual Studio 프로젝트 참조에 특정 포트 번호를 설정 하는 방법 [데이터 서비스를 만드는](../../../../docs/framework/data/wcf/creating-the-data-service.md)합니다.  
   
 ### <a name="to-request-the-default-service-document-by-using-internet-explorer"></a>Internet Explorer를 사용하여 기본 서비스 문서를 요청하려면  
   
@@ -35,7 +37,7 @@ ms.lasthandoff: 12/22/2017
     > [!NOTE]
     >  브라우저에서 피드를 원시 XML 데이터로 표시할 수 없는 경우 피드를 페이지의 소스 코드로 볼 수 있어야 합니다.  
   
-2.  [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)]에서 F5 키를 눌러 응용 프로그램 디버깅을 시작합니다.  
+2.  Visual Studio에서 F5 키를 눌러 응용 프로그램 디버깅을 시작합니다.  
   
 3.  로컬 컴퓨터에서 웹 브라우저를 엽니다. 주소 표시줄에 다음 URI를 입력합니다.  
   

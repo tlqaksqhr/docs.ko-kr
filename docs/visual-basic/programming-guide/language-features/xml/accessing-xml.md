@@ -1,12 +1,13 @@
 ---
-title: "Visual Basic에서 XML에 액세스"
-ms.custom: 
+title: Visual Basic에서 XML에 액세스
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - LINQ to XML [Visual Basic], accessing XML
@@ -15,19 +16,19 @@ helpviewer_keywords:
 - XML [Visual Basic], axis properties
 - XML [Visual Basic], accessing
 ms.assetid: c47f88b2-3cbc-4bb1-b4b9-be60f71ffc6a
-caps.latest.revision: "18"
+caps.latest.revision: 18
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 79c7b8a94731e151a803a041d91dd1e240ddeb97
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 064e4b224d37172b8f79e57c73164b90186ef922
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="accessing-xml-in-visual-basic"></a>Visual Basic에서 XML에 액세스
-[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]XML 축 속성에 액세스 하 고 탐색 하기 위한 제공 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 구조입니다. 이러한 속성에는 XML 이름을 지정 하 여 요소 및 특성에 액세스할 수 있도록 특수 한 구문을 사용 합니다.  
+Visual Basic에서 XML 축 속성에 액세스 하 고 탐색 하기 위한 제공 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 구조입니다. 이러한 속성에는 XML 이름을 지정 하 여 요소 및 특성에 액세스할 수 있도록 특수 한 구문을 사용 합니다.  
   
- 다음 표에서 XML 요소와 특성에 액세스할 수 있도록 하는 언어 기능을 보여 줍니다. [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]합니다.  
+ 다음 표에서 XML 요소 및 Visual Basic의 특성에 액세스할 수 있도록 하는 언어 기능을 보여 줍니다.  
   
 ### <a name="xml-axis-properties"></a>XML 축 속성  
   
@@ -37,9 +38,9 @@ ms.lasthandoff: 10/18/2017
 |*특성 축*|`phone.@type`|모든 가져옵니다 `type` 의 특성은 `phone` 요소입니다.|  
 |*descendant 축*|`contacts...<name>`|모든 가져옵니다 `name` 의 요소는 `contacts` 요소와 상관 없이 발생 하는 계층 구조에서.|  
 |*확장 인덱서*|`contacts...<name>(0)`|첫 번째 `name` 시퀀스의 요소입니다.|  
-|*value*|`contacts...<name>.Value`|시퀀스의 첫 번째 개체의 문자열 표현을 가져옵니다 또는 `Nothing` 시퀀스가 비어 있는 경우.|  
+|*값*|`contacts...<name>.Value`|시퀀스의 첫 번째 개체의 문자열 표현을 가져옵니다 또는 `Nothing` 시퀀스가 비어 있는 경우.|  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [방법: XML 하위 요소 액세스](../../../../visual-basic/programming-guide/language-features/xml/how-to-access-xml-descendant-elements.md)  
  지정 된 이름이 지정된 된 XML 요소 아래에 포함 된 모든 XML 요소에 액세스 하려면 하위 항목 축 속성을 사용 하는 방법을 보여 줍니다.  
   

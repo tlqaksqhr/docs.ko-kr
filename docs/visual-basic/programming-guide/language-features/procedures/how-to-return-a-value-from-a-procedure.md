@@ -1,25 +1,26 @@
 ---
-title: "방법: 프로시저에서 값 반환(Visual Basic)"
-ms.custom: 
+title: '방법: 프로시저에서 값 반환(Visual Basic)'
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - Visual Basic code, procedures
 - procedures [Visual Basic], returning from
 - procedures [Visual Basic], returning a value
 ms.assetid: 4bcc4724-2b4e-4df8-9b4b-16054607f87d
-caps.latest.revision: "12"
+caps.latest.revision: 12
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 6ce7aa0942be413986cb010963753447ea18cdf2
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: affcb25951a6647604286bc91dcaec8898fe2e30
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-return-a-value-from-a-procedure-visual-basic"></a>방법: 프로시저에서 값 반환(Visual Basic)
 A `Function` 프로시저가 반환 값을 호출 하는 코드 실행 하거나 한 `Return` 문 또는 발생 하 여는 `Exit Function` 또는 `End Function` 문.  
@@ -44,7 +45,7 @@ A `Function` 프로시저가 반환 값을 호출 하는 코드 실행 하거나
   
 1.  적어도 한 위치에 `Function` 프로시저를 프로시저의 이름에 값 할당 합니다.  
   
-2.  실행 하는 동안는 `Exit Function` 또는 `End Function` 문, [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 프로시저의 이름에 가장 최근에 할당 된 값을 반환 합니다.  
+2.  실행 하는 동안는 `Exit Function` 또는 `End Function` 문, Visual Basic 프로시저의 이름에 가장 최근에 할당 된 값을 반환 합니다.  
   
 3.  동일한 프로시저에 `Exit Function` 문을 둘 이상 사용할 수 있으며, `Return` 및 `Exit Function` 문을 혼합할 수도 있습니다.  
   

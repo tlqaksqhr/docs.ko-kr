@@ -1,9 +1,10 @@
 ---
-title: "방법: 응용 프로그램 지역화"
+title: '방법: 응용 프로그램 지역화'
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -16,12 +17,13 @@ ms.assetid: 5001227e-9326-48a4-9dcd-ba1b89ee6653
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 83ed8ee8b8bfd9c3d6dadfedad8889af10a86466
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 3c5621de2a2d10e67f45fa2d6980cb84c388630f
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-localize-an-application"></a>방법: 응용 프로그램 지역화
 이 자습서에서는 LocBaml 도구를 사용하여 지역화된 응용 프로그램을 만드는 방법을 설명합니다.  
@@ -88,7 +90,7 @@ ms.lasthandoff: 12/22/2017
 <a name="build_locbaml"></a>   
 ## <a name="build-the-locbaml-tool"></a>LocBaml 도구 빌드  
   
-1.  LocBaml을 빌드하는 데 필요한 모든 파일은 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 샘플에 있습니다. 다운로드는 [!INCLUDE[TLA#tla_lhcshrp](../../../../includes/tlasharptla-lhcshrp-md.md)] 에서 파일의 [LocBaml 도구 샘플](http://go.microsoft.com/fwlink/?LinkID=160016)합니다.  
+1.  LocBaml을 빌드하는 데 필요한 모든 파일은 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 샘플에 있습니다. C# 파일을 다운로드는 [LocBaml 도구 샘플](http://go.microsoft.com/fwlink/?LinkID=160016)합니다.  
   
 2.  명령줄에서 프로젝트 파일(locbaml.csproj)을 실행하여 도구를 빌드합니다.  
   

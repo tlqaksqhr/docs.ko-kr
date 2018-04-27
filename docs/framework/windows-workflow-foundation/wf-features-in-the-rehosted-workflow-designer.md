@@ -1,23 +1,24 @@
 ---
-title: "재호스팅된 워크플로 디자이너에서 새 Workflow Foundation 4.5 기능에 대한 지원"
-ms.custom: 
+title: 재호스팅된 워크플로 디자이너에서 새 Workflow Foundation 4.5 기능에 대한 지원
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 1a4a4038-d8e6-41dd-99ea-93bd76286772
-caps.latest.revision: "3"
+caps.latest.revision: 3
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ee8467eaeaef490f4c7a8bfbcb204506d71f5500
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 999c18f20264a71cf73bbd5afd352ad3104a03e8
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="support-for-new-workflow-foundation-45-features-in-the-rehosted-workflow-designer"></a>재호스팅된 워크플로 디자이너에서 새 Workflow Foundation 4.5 기능에 대한 지원
 [!INCLUDE[wf](../../../includes/wf-md.md)]의 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]에는 Workflow Designer 환경의 몇 가지 향상된 기능을 포함하여 새로운 여러 기능이 도입되었습니다. 이 항목에서는 이러한 기능 중 재호스트된 디자이너에서 지원되는 기능과 현재 지원되지 않는 기능을 자세히 설명합니다.  
@@ -54,7 +55,7 @@ ms.lasthandoff: 12/22/2017
   
  다음 스크린 샷에서는 `WriteLine`의 `Body`에 있는 `NoPersistScope` 활동을 보여 줍니다.  
   
- ![자동 &#45; 저장 위치 서라운드](../../../docs/framework/windows-workflow-foundation/media/autosurround1.png "AutoSurround1")  
+ ![자동&#45;저장 위치를 둘러싸고](../../../docs/framework/windows-workflow-foundation/media/autosurround1.png "AutoSurround1")  
   
  다음 스크린 샷에서는 두 번째 `Sequence`이 첫 번째 항목 아래에 놓였을 때 `Body`에 자동으로 만들어진 `WriteLine` 활동을 보여 줍니다.  
   
@@ -75,7 +76,7 @@ ms.lasthandoff: 12/22/2017
  디자이너 내에서 선택된 여러 활동을 끌어다 놓을 수도 있으며 상황에 맞는 메뉴를 사용하여 상호 작용할 수도 있습니다.  
   
 ### <a name="outline-view-of-workflow-items"></a>워크플로 항목 개요 뷰  
- 계층적 워크플로를 쉽게 탐색할 수 있도록 워크플로의 구성 요소는 트리 스타일 개요 뷰로 표시됩니다. 개요 보기에 표시 되는 **문서 개요** 보기. 이 뷰를 열려면 [!INCLUDE[vs_current_short](../../../includes/vs-current-short-md.md)], 맨 위 메뉴에서 선택 **보기**, **다른 창**, **문서 개요**, 하거나 ctrl + W, u입니다. 개요 뷰의 노드를 클릭하면 워크플로 디자이너의 해당 활동으로 이동되고 개요 뷰가 업데이트되어 디자이너에서 선택된 활동이 표시됩니다. 이 기능은 재호스트된 디자이너에서 지원됩니다.  
+ 계층적 워크플로를 쉽게 탐색할 수 있도록 워크플로의 구성 요소는 트리 스타일 개요 뷰로 표시됩니다. 개요 보기에 표시 되는 **문서 개요** 보기. 상단 메뉴에서 Visual Studio에서이 뷰를 열려면 **보기**, **다른 창**, **문서 개요**, 하거나 ctrl + W, u입니다. 개요 뷰의 노드를 클릭하면 워크플로 디자이너의 해당 활동으로 이동되고 개요 뷰가 업데이트되어 디자이너에서 선택된 활동이 표시됩니다. 이 기능은 재호스트된 디자이너에서 지원됩니다.  
   
  완료 된 워크플로의 다음 스크린 샷에서 [초보자를 위한 자습서](../../../docs/framework/windows-workflow-foundation/getting-started-tutorial.md) 순차 워크플로 개요 보기를 보여 줍니다.  
   
@@ -93,7 +94,7 @@ ms.lasthandoff: 12/22/2017
   
  활동을 순서도 노드와 상태 간 연결로 끌어 와 다른 두 노드 사이에 노드를 자동으로 삽입할 수도 있습니다. 다음 스크린 샷에서는 도구 상자의 활동을 끌어다 놓을 수 있는 강조 표시된 연결선을 보여 줍니다.  
   
- ![자동 &#45; insert 처리 활동을 끌기 위한](../../../docs/framework/windows-workflow-foundation/media/autoinsert.png "Autoinsert")  
+ ![자동&#45;핸들 활동을 끌기 위한 삽입](../../../docs/framework/windows-workflow-foundation/media/autoinsert.png "Autoinsert")  
   
  자동 연결 및 자동 삽입은 재호스트된 디자이너에서 지원됩니다.  
   
@@ -149,7 +150,7 @@ ms.lasthandoff: 12/22/2017
  상태 시스템 워크플로 만드는 방법에 대 한 자세한 내용은 참조 하십시오. [상태 시스템 워크플로](../../../docs/framework/windows-workflow-foundation/state-machine-workflows.md)합니다. 상태 시스템 워크플로는 재호스트된 디자이너에서 지원됩니다.  
   
 ### <a name="contract-first-workflow-development"></a>계약 중심 워크플로 개발  
- 계약 중심 워크플로 개발 도구를 사용하면 개발자가 코드에서 계약을 먼저 디자인한 다음 [!INCLUDE[vs_current_short](../../../includes/vs-current-short-md.md)]에서 몇 번의 클릭으로 도구 상자에서 각 작업을 나타내는 활동 템플릿을 자동으로 생성할 수 있습니다. 그런 다음 이러한 활동은 계약에서 정의한 작업을 구현하는 워크플로를 만드는 데 사용됩니다. Workflow Designer는 워크플로 서비스의 유효성을 검사하여 이러한 작업을 구현하고 워크플로의 서명이 계약 서명과 일치하도록 합니다. 개발자는 워크플로 서비스와 구현된 계약 컬렉션을 연결할 수도 있습니다. 계약 중심 워크플로 서비스 개발에 대 한 자세한 내용은 참조 하십시오. [하는 방법: 기존 서비스 계약을 사용 하는 워크플로 서비스 만들기](../../../docs/framework/windows-workflow-foundation/how-to-create-a-workflow-service-that-consumes-an-existing-service-contract.md)합니다.  
+ 계약 중심 워크플로 개발 도구를 사용 하면 코드에서 계약을 먼저 디자인 한 다음, Visual Studio에서 몇 번의 클릭으로 자동으로 생성 활동 템플릿을 각 작업을 나타내는 도구 상자에서 개발자. 그런 다음 이러한 활동은 계약에서 정의한 작업을 구현하는 워크플로를 만드는 데 사용됩니다. Workflow Designer는 워크플로 서비스의 유효성을 검사하여 이러한 작업을 구현하고 워크플로의 서명이 계약 서명과 일치하도록 합니다. 개발자는 워크플로 서비스와 구현된 계약 컬렉션을 연결할 수도 있습니다. 계약 중심 워크플로 서비스 개발에 대 한 자세한 내용은 참조 하십시오. [하는 방법: 기존 서비스 계약을 사용 하는 워크플로 서비스 만들기](../../../docs/framework/windows-workflow-foundation/how-to-create-a-workflow-service-that-consumes-an-existing-service-contract.md)합니다.  
   
 > [!WARNING]
 >  계약 중심 워크플로 개발은 워크플로 디자이너에서 지원되지 않습니다.

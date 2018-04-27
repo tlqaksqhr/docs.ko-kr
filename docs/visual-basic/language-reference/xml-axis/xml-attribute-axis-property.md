@@ -19,11 +19,11 @@ ms.assetid: 7a4777e1-0618-4de9-9510-fb9ace2bf4db
 caps.latest.revision: 23
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: a286c70f57128d0406b3a300610fea5e1c44b32d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 9968e5de0f8cb45fb896ba43c80d9c9a3ab8ef08
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="xml-attribute-axis-property-visual-basic"></a>XML 특성 축 속성(Visual Basic)
 에 대 한 특성의 값에 액세스할 수는 <xref:System.Xml.Linq.XElement> 개체 또는 컬렉션의 첫 번째 요소로 <xref:System.Xml.Linq.XElement> 개체입니다.  
@@ -38,24 +38,24 @@ object.@<attribute>
   
 ## <a name="parts"></a>요소  
  `object`  
- 필수 요소. <xref:System.Xml.Linq.XElement> 개체 또는 컬렉션 <xref:System.Xml.Linq.XElement> 개체입니다.  
+ 필수. <xref:System.Xml.Linq.XElement> 개체 또는 컬렉션 <xref:System.Xml.Linq.XElement> 개체입니다.  
   
  .@  
  필수 요소. 특성 축 속성의 시작을 나타냅니다.  
   
  <  
- 선택 사항입니다. 특성의 이름의 시작 부분을 나타내는 경우 `attribute` 에서 올바른 식별자가 아닌 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]합니다.  
+ 선택 사항입니다. 특성의 이름의 시작 부분을 나타내는 경우 `attribute` Visual Basic에서 유효한 식별자가 아닙니다.  
   
  `attribute`  
- 필수 요소. 폼의에 액세스 하려면 특성의 이름을 [`prefix`:]`name`합니다.  
+ 필수. 폼의에 액세스 하려면 특성의 이름을 [`prefix`:]`name`합니다.  
   
 |파트|설명|  
 |----------|-----------------|  
 |`prefix`|선택 사항입니다. 특성에 대 한 XML 네임 스페이스 접두사입니다. `Imports` 문으로 정의되는 전역 XML 네임스페이스여야 합니다.|  
-|`name`|필수 요소. 로컬 특성 이름입니다. 참조 [선언 된 XML 요소 및 특성의 이름을](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md)합니다.|  
+|`name`|필수. 로컬 특성 이름입니다. 참조 [선언 된 XML 요소 및 특성의 이름을](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md)합니다.|  
   
  \>  
- 선택 사항입니다. 특성의 이름의 끝을 나타냅니다 때 `attribute` 에서 올바른 식별자가 아닌 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]합니다.  
+ 선택 사항입니다. 특성의 이름의 끝을 나타냅니다 때 `attribute` Visual Basic에서 유효한 식별자가 아닙니다.  
   
 ## <a name="return-value"></a>반환 값  
  값을 포함 하는 문자열 `attribute`합니다. 특성 이름이 없으면 `Nothing` 반환 됩니다.  
@@ -65,7 +65,7 @@ object.@<attribute>
   
  사용 하 여 XML 특성을 참조 하는 경우는 @ 식별자, 특성 값을 문자열로 반환 되 고 명시적으로 지정할 필요가 없습니다는 <xref:System.Xml.Linq.XAttribute.Value%2A> 속성입니다.  
   
- XML 특성에 대 한 명명 규칙에 대 한 명명 규칙에서 다른 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 식별자입니다. 이름이 유효한 Visual Basic 식별자가 아닌 XML 특성에 액세스 하려면 이름을 꺾쇠 괄호로 묶습니다 (\< 및 >).  
+ Visual Basic 식별자에 대 한 명명 규칙에서 XML 특성에 대 한 명명 규칙은 서로 다릅니다. 이름이 유효한 Visual Basic 식별자가 아닌 XML 특성에 액세스 하려면 이름을 꺾쇠 괄호로 묶습니다 (\< 및 >).  
   
 ## <a name="xml-namespaces"></a>XML 네임스페이스  
  특성 축 속성의 이름을 사용 하 여 전역적으로 선언 된 XML 네임 스페이스 접두사만 사용할 수는 `Imports` 문. XML 요소 리터럴 내에서 로컬로 선언된 XML 네임스페이스 접두사를 사용할 수 없습니다. 자세한 내용은 참조 [Imports 문 (XML Namespace)](../../../visual-basic/language-reference/statements/imports-statement-xml-namespace.md)합니다.  
@@ -97,7 +97,7 @@ object.@<attribute>
 ```  
   
 ## <a name="example"></a>예제  
- 다음 예제에서는 꺾쇠 괄호 구문 라는 XML 특성의 값을 사용 하 여 `number-type`에 올바른 식별자가 없는 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]합니다.  
+ 다음 예제에서는 꺾쇠 괄호 구문 라는 XML 특성의 값을 사용 하 여 `number-type`는 Visual Basic에서 유효한 식별자가 아닙니다.  
   
  [!code-vb[VbXMLSamples#13](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/xml-attribute-axis-property_3.vb)]  
   

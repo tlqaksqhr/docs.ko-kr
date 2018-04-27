@@ -10,37 +10,37 @@ ms.technology:
 ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 3bb65d38-cce2-46f5-b979-e5c505e95e10
-caps.latest.revision: ''
+caps.latest.revision: 25
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload:
 - dotnet
-ms.openlocfilehash: fb23f329906e21f3d8558139075c5f575f2f13bd
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: a636734958cd73a2f158d3f25cbbe448ff703612
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/23/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="what39s-new-in-adonet"></a>어떤&#39;ADO.NET의 새로운 s
 다음은 [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)]에서 [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)]의 새로운 기능입니다.  
   
 ## <a name="sqlclient-data-provider"></a>SqlClient Data Provider  
- 다음은 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]에서 [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] Data Provider for [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)]의 새로운 기능입니다.  
+ 다음 기능은의 새로운는 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Data Provider for SQL Server에서 [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)]:  
   
 -   ConnectRetryCount 및 ConnectRetryInterval 연결 문자열 키워드(<xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A>)를 사용하면 유휴 연결 복원 기능을 제어할 수 있습니다.  
   
--   [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)]에서 응용 프로그램으로의 스트리밍 지원은 서버의 데이터가 구조화되지 않는 시나리오를 지원합니다.  참조 [SqlClient 스트리밍 지원](../../../../docs/framework/data/adonet/sqlclient-streaming-support.md) 자세한 정보에 대 한 합니다.  
+-   에서 스트리밍 지원은 SQL Server 응용 프로그램에 서버에서 데이터를 구조화 하는 시나리오를 지원 합니다.  참조 [SqlClient 스트리밍 지원](../../../../docs/framework/data/adonet/sqlclient-streaming-support.md) 자세한 정보에 대 한 합니다.  
   
 -   비동기 프로그래밍에 대한 지원이 추가되었습니다.  참조 [비동기 프로그래밍](../../../../docs/framework/data/adonet/asynchronous-programming.md) 자세한 정보에 대 한 합니다.  
   
 -   이제 연결 실패가 확장 이벤트 로그에 기록됩니다. 자세한 내용은 [ADO.NET의 데이터 추적](../../../../docs/framework/data/adonet/data-tracing.md)을 참조하세요.  
   
--   이제 SqlClient에 [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)]의 고가용성, 재해 복구 기능, AlwaysOn에 대한 지원이 포함되어 있습니다. 자세한 내용은 참조 [고가용성, 재해 복구에 대 한 SqlClient 지원](../../../../docs/framework/data/adonet/sql/sqlclient-support-for-high-availability-disaster-recovery.md)합니다.  
+-   이제 SqlClient에서는 SQL Server의 고가용성, 재해 복구 기능, AlwaysOn 지원 합니다. 자세한 내용은 참조 [고가용성, 재해 복구에 대 한 SqlClient 지원](../../../../docs/framework/data/adonet/sql/sqlclient-support-for-high-availability-disaster-recovery.md)합니다.  
   
--   <xref:System.Security.SecureString> 인증을 사용할 때 암호를 [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)]으로 전달할 수 있습니다. 자세한 내용은 <xref:System.Data.SqlClient.SqlCredential>를 참조하세요.  
+-   암호를 변수로 전달할 수 있습니다는 <xref:System.Security.SecureString> SQL Server 인증을 사용 하는 경우. 자세한 내용은 <xref:System.Data.SqlClient.SqlCredential>를 참조하세요.  
   
--   `TrustServerCertificate`가 false이고 `Encrypt`가 true인 경우 [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] SSL 인증서의 서버 이름 또는 IP 주소는 연결 문자열에 지정된 서버 이름 또는 IP 주소와 정확하게 일치해야 합니다. 그렇지 않으면 연결을 시도할 경우 실패합니다. 자세한 내용은 `Encrypt`의 <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A> 연결 옵션에 대한 설명을 참조하세요.  
+-   때 `TrustServerCertificate` false 및 `Encrypt` 가 true 이면 연결 문자열에 지정 된 서버 이름 (또는 IP 주소)는 SQL Server SSL 인증서에 서버 이름 (또는 IP 주소) 정확히 일치 해야 합니다. 그렇지 않으면 연결을 시도할 경우 실패합니다. 자세한 내용은 `Encrypt`의 <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A> 연결 옵션에 대한 설명을 참조하세요.  
   
      이러한 변경으로 인해 기존 응용 프로그램이 더 이상 연결되지 않는 경우 다음 중 하나를 사용하여 응용 프로그램을 수정하면 됩니다.  
   

@@ -1,18 +1,19 @@
 ---
-title: "Windows 컨테이너도 기존.NET 응용 프로그램 배포"
-description: "컨테이너 화 된.NET 응용 프로그램에 대 한.NET Microservices 아키텍처 | Windows 컨테이너도 기존.NET 응용 프로그램 배포"
+title: Windows 컨테이너도 기존.NET 응용 프로그램 배포
+description: 컨테이너 화 된.NET 응용 프로그램에 대 한.NET Microservices 아키텍처 | Windows 컨테이너도 기존.NET 응용 프로그램 배포
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/26/2017
 ms.prod: .net
+ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: bab6e275c93d2cedddf010ab20f98cb8392fa9fa
-ms.sourcegitcommit: d3cfda0943364aaf6ccd574f55f584576c8a4fee
+ms.openlocfilehash: 6c70e30c10674c086e6ad880b97151ae1918ed87
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="deploy-existing-net-apps-as-windows-containers"></a>Windows 컨테이너도 기존.NET 응용 프로그램 배포
 

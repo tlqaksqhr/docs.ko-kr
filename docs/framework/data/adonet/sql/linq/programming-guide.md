@@ -1,29 +1,31 @@
 ---
-title: "프로그래밍 가이드"
-ms.custom: 
+title: 프로그래밍 가이드
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: ed1012d4-3ff2-4877-af27-93125c4180ea
-caps.latest.revision: "3"
+caps.latest.revision: 3
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: c70dd820f7f3ec4091810b030ba2b22e0c1ab1dd
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: 703f10466755ddea5a0117a3413374613e178346
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="programming-guide"></a>프로그래밍 가이드
-이 단원에는 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 개체 모델을 생성하고 사용하는 방법에 대한 정보가 들어 있습니다. [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)]를 사용하는 경우 [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)]를 사용하여 동일한 여러 작업을 수행할 수 있습니다.  
+이 단원에는 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 개체 모델을 생성하고 사용하는 방법에 대한 정보가 들어 있습니다. Visual Studio를 사용 하는 경우 사용할 수도 있습니다는 [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] 많은 이와 같은 태스크를 수행 합니다.  
   
- 특정 문제에 대 한 Microsoft Docs를 검색할 수도 및에 참여할 수 있습니다는 [LINQ 포럼](http://go.microsoft.com/fwlink/?LinkId=76488)전문가 함께 보다 복잡 한 주제를 자세히 논의할 수 있는, 합니다. 마지막으로 [LINQ to SQL: .NET Language-Integrated Query for Relational Data](http://go.microsoft.com/fwlink/?LinkId=93205)(LINQ to SQL: 관계형 데이터에 대한 .NET Language-Integrated Query) 백서에서는 [!INCLUDE[vbprvb](../../../../../../includes/vbprvb-md.md)] 및 C# 코드 예제를 통해 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 기술에 대해 자세히 설명합니다.  
+ 특정 문제에 대 한 Microsoft Docs를 검색할 수도 및에 참여할 수 있습니다는 [LINQ 포럼](http://go.microsoft.com/fwlink/?LinkId=76488)전문가 함께 보다 복잡 한 주제를 자세히 논의할 수 있는, 합니다. 마지막으로 [LINQ to SQL: 관계형 데이터에 대 한 쿼리.NET Language-Integrated](http://go.microsoft.com/fwlink/?LinkId=93205) 백서 세부 정보 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 기술, Visual Basic 및 C# 코드 예제와 함께 완료 합니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
  [개체 모델 만들기](../../../../../../docs/framework/data/adonet/sql/linq/creating-the-object-model.md)  

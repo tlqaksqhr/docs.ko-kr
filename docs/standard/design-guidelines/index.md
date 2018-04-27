@@ -20,11 +20,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: c48b3cbaae4155a894ba77263505b2ca85238427
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: c54ec4a5cc3c4bef1e6460b2c9971af4e2af983a
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="framework-design-guidelines"></a>프레임워크 디자인 지침
 이 섹션을 확장 하 고.NET Framework와 상호 작용 하는 라이브러리를 디자인 하기 위한 지침을 제공 합니다. 목표를 통합된 프로그래밍 모델 개발에 사용 되는 프로그래밍 언어와 독립적을 제공 하 여의 사용 편이성과 API 일관성을 확인 하는 라이브러리 디자이너 있습니다. 클래스와.NET Framework를 확장 하는 구성 요소를 개발 하는 경우 이러한 지침을 따르는 것이 좋습니다. 일관성 없는 라이브러리 부정적인 개발자 생산성에 영향을 줍니다 디자인과 채택 하지 못하도록 합니다.  
@@ -57,9 +57,9 @@ ms.lasthandoff: 01/19/2018
   
  *Portions © 2005, 2009 Microsoft Corporation. 모든 권리 보유.*  
   
- *피어슨 교육, Inc.에서의 사용 권한으로 재인쇄 [Framework 디자인 지침: 규칙, 특징 및 다시 사용할 수 있는.NET 라이브러리를 2nd Edition에 대 한 패턴](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina 및 Brad Abrams 게시 하 여 2008 년 10 월 22 일 Microsoft Windows 개발 시리즈의 일부로: Addison Wesley Professional.*  
+ *피어슨 교육, Inc.에서의 사용 권한으로 재인쇄 [Framework 디자인 지침: 규칙, 특징 및 다시 사용할 수 있는.NET 라이브러리를 2nd Edition에 대 한 패턴](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina 및 Brad Abrams 게시 하 여 2008 년 10 월 22 일 Microsoft Windows 개발 시리즈의 일부로: Addison Wesley Professional.*  
   
 ## <a name="see-also"></a>참고 항목  
  [개요](../../../docs/framework/get-started/overview.md)  
- [.NET Framework에 대 한 로드맵](http://msdn.microsoft.com/library/0b46b7c6-9163-4f99-8e58-0d1ee7da8c67)  
+ [.NET Framework에 대 한 로드맵](https://msdn.microsoft.com/library/0b46b7c6-9163-4f99-8e58-0d1ee7da8c67)  
  [개발 가이드](../../../docs/framework/development-guide.md)

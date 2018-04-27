@@ -1,24 +1,26 @@
 ---
-title: "사용자 정의 함수"
-ms.custom: 
+title: 사용자 정의 함수
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 3304c9b2-5c7a-4a95-9d45-4f260dcb606e
-caps.latest.revision: "3"
+caps.latest.revision: 3
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: ad269ddaa7d7c3995672398a24de06f57f7122e2
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: 2e015b8fff16ade9bbe93e5e036c53d5527b961f
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="user-defined-functions"></a>사용자 정의 함수
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]에서는 개체 모델에 메서드를 사용하여 사용자 정의 함수를 제공합니다. 필요한 위치에 <xref:System.Data.Linq.Mapping.FunctionAttribute> 특성과 <xref:System.Data.Linq.Mapping.ParameterAttribute> 특성을 적용하여 메서드를 함수로 지정합니다. 자세한 내용은 참조 [LINQ to SQL 개체 모델](../../../../../../docs/framework/data/adonet/sql/linq/the-linq-to-sql-object-model.md)합니다.  
@@ -31,7 +33,7 @@ ms.lasthandoff: 01/17/2018
   
 -   [!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)] 메서드에서 지원되는 함수입니다.  
   
- 이 단원의 항목에서는 코드를 사용자가 직접 작성하는 경우 응용 프로그램에서 이러한 메서드를 만들어 호출하는 방법을 보여 줍니다. [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)]를 사용하는 개발자는 일반적으로 [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)]를 사용하여 사용자 정의 함수를 매핑합니다.  
+ 이 단원의 항목에서는 코드를 사용자가 직접 작성하는 경우 응용 프로그램에서 이러한 메서드를 만들어 호출하는 방법을 보여 줍니다. Visual Studio를 사용 하 여 개발자가 일반적으로 사용 된 [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] 사용자 정의 함수에 매핑됩니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
  [방법: 스칼라 반환 사용자 정의 함수 사용](../../../../../../docs/framework/data/adonet/sql/linq/how-to-use-scalar-valued-user-defined-functions.md)  

@@ -1,24 +1,26 @@
 ---
-title: "정보 공개"
-ms.custom: 
+title: 정보 공개
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 4064c89f-afa6-444a-aa7e-807ef072131c
-caps.latest.revision: "11"
+caps.latest.revision: 11
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 7cf47ce71c70ab9054b1417bab7ae05d9c029188
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 0af083ba1d97fcf07eab6f9d789f023a9194070c
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="information-disclosure"></a>정보 공개
 정보 공개를 사용하여 공격자가 시스템에 대해 유용한 정보를 얻을 수 있습니다. 따라서 항상 노출하려는 정보의 내용과 악의가 있는 사용자가 사용해도 되는지 여부를 고려합니다. 다음은 가능한 정보 공개 공격을 나열하고 각 공격에 대한 완화 방안을 제공합니다.  
@@ -27,10 +29,10 @@ ms.lasthandoff: 12/22/2017
  HTTP 전송 계층을 통해 메시지 수준 보안을 사용하는 경우 메시지 수준 보안이 HTTP 헤더를 보호하지 않습니다. HTTP 헤더를 보호하기 위한 유일한 방법은 HTTP 대신 HTTPS 전송을 사용하는 것입니다. HTTPS 전송은 HTTP 헤더를 포함한 전체 메시지를 SSL(Secure Sockets Layer) 프로토콜을 사용하여 암호화합니다.  
   
 ## <a name="policy-information"></a>정책 정보  
- 민감한 발급된 토큰 요구 사항 또는 토큰 발급자 정보가 정책에 노출되는 페더레이션 시나리오의 경우 특히 정책 보안 유지가 중요합니다. 이러한 경우 페더레이션 서비스 정책 끝점의 보안을 유지하여 발급된 토큰에 삽입할 클레임 형식 또는 악의적인 토큰 발급자에게 클라이언트 리디렉션과 같이 공격자가 서비스에 대한 정보를 가져오지 못하도록 하는 것이 좋습니다. 예를 들어, 공격자가 메시지 가로채기(man-in-the-middle) 공격을 실행한 발급자로 끝나도록 페더레이션 신뢰 체인을 다시 구성하여 사용자 이름/암호 쌍을 검색할 수 있습니다. 또한 정책 검색을 통해 바인딩을 가져오는 페더레이션 클라이언트가 가져온 페더레이션 신뢰 체인의 발급자를 신뢰하는지 확인하는 것이 좋습니다. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]페더레이션 시나리오 참조 [페더레이션](../../../../docs/framework/wcf/feature-details/federation.md)합니다.  
+ 민감한 발급된 토큰 요구 사항 또는 토큰 발급자 정보가 정책에 노출되는 페더레이션 시나리오의 경우 특히 정책 보안 유지가 중요합니다. 이러한 경우 페더레이션 서비스 정책 끝점의 보안을 유지하여 발급된 토큰에 삽입할 클레임 형식 또는 악의적인 토큰 발급자에게 클라이언트 리디렉션과 같이 공격자가 서비스에 대한 정보를 가져오지 못하도록 하는 것이 좋습니다. 예를 들어, 공격자가 메시지 가로채기(man-in-the-middle) 공격을 실행한 발급자로 끝나도록 페더레이션 신뢰 체인을 다시 구성하여 사용자 이름/암호 쌍을 검색할 수 있습니다. 또한 정책 검색을 통해 바인딩을 가져오는 페더레이션 클라이언트가 가져온 페더레이션 신뢰 체인의 발급자를 신뢰하는지 확인하는 것이 좋습니다. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 페더레이션 시나리오 참조 [페더레이션](../../../../docs/framework/wcf/feature-details/federation.md)합니다.  
   
 ## <a name="memory-dumps-can-reveal-claim-information"></a>메모리 덤프가 클레임 정보를 노출할 수 있음  
- 응용 프로그램이 실패할 경우 예를 들어 Dr. Watson씨가 작성한 파일과 같이 로그 파일에 클레임 정보를 포함할 수 있습니다. 이 정보는 지원 팀과 같은 다른 엔터티에 내보내지 않아야 합니다. 그렇지 않을 경우 개인 데이터가 포함된 클레임 정보도 내보내집니다. 로그 파일을 알 수 없는 엔터티에 보내지 않으면 이러한 문제를 줄일 수 있습니다. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Windows Server 2003](http://go.microsoft.com/fwlink/?LinkId=89160)합니다.  
+ 응용 프로그램이 실패할 경우 예를 들어 Dr. Watson씨가 작성한 파일과 같이 로그 파일에 클레임 정보를 포함할 수 있습니다. 이 정보는 지원 팀과 같은 다른 엔터티에 내보내지 않아야 합니다. 그렇지 않을 경우 개인 데이터가 포함된 클레임 정보도 내보내집니다. 로그 파일을 알 수 없는 엔터티에 보내지 않으면 이러한 문제를 줄일 수 있습니다. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [Windows Server 2003](http://go.microsoft.com/fwlink/?LinkId=89160)합니다.  
   
 ## <a name="endpoint-addresses"></a>끝점 주소  
  끝점 주소에는 끝점과 통신하는 데 필요한 정보가 포함되어 있습니다. SOAP 보안에서는 클라이언트와 서버 간의 대칭 키를 협상하기 위해 교환되는 보안 협상 메시지에 전체 주소가 포함되어 있어야 합니다. 보안 협상은 부트스트랩 프로세스이기 때문에 이 프로세스 동안 주소 헤더를 암호화할 수 없습니다. 따라서 주소에 어떠한 기밀 데이터도 포함하지 않아야 합니다. 포함할 경우 정보 공개 공격을 받을 수 있습니다.  
@@ -57,7 +59,7 @@ ms.lasthandoff: 12/22/2017
 ### <a name="specifying-client-credentials-or-invalid-identity-forces-ntlm-usage"></a>클라이언트 자격 증명 또는 잘못된 ID를 지정하면 강제로 NTLM 사용  
  클라이언트를 만들 때 도메인 이름 없이 클라이언트 자격 증명을 지정하거나 잘못된 서버 ID를 지정하면 NTLM이 Kerberos 프로토콜 대신 사용됩니다(`AlllowNtlm` 속성을 `true`로 설정한 경우). NTLM이 서버 인증을 수행하지 않기 때문에 정보가 잠재적으로 공개될 수 있습니다.  
   
- 예를 들어, 다음 [!INCLUDE[csprcs](../../../../includes/csprcs-md.md)] 코드에 표시된 것처럼 도메인 이름 없이 Windows 클라이언트 자격 증명을 지정할 수 있습니다.  
+ 예를 들어 있기 도메인 이름 없이 Windows 클라이언트 자격 증명을 지정 하려면 다음 Visual C# 코드에 표시 된 대로.  
   
 ```  
 MyChannelFactory.Credentials.Windows.ClientCredential = new System.Net.NetworkCredential("username", "password");  
@@ -65,7 +67,7 @@ MyChannelFactory.Credentials.Windows.ClientCredential = new System.Net.NetworkCr
   
  코드가 도메인 이름을 지정하지 않기 때문에 NTLM이 사용됩니다.  
   
- 도메인을 지정했지만 끝점 ID 기능을 사용하여 잘못된 서비스 사용자 이름을 지정하는 경우 NTLM이 사용됩니다. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]끝점 id를 지정 하는 방법 참조 [서비스 Id 및 인증](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)합니다.  
+ 도메인을 지정했지만 끝점 ID 기능을 사용하여 잘못된 서비스 사용자 이름을 지정하는 경우 NTLM이 사용됩니다. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 끝점 id를 지정 하는 방법 참조 [서비스 Id 및 인증](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [보안 고려 사항](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md)  

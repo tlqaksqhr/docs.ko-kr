@@ -17,11 +17,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 55a9a50527df0605cb9699622a165147597a500a
-ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
+ms.openlocfilehash: 9e461a847e36277cb7d70534249a926693584b1f
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-programmatically-print-xps-files"></a>방법: 프로그래밍 방식으로 XPS 파일 인쇄
 한 오버 로드를 사용할 수 있습니다는 <xref:System.Printing.PrintQueue.AddJob%2A> 인쇄 하려면 메서드 [!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)] 는 여는 파일을 <xref:System.Windows.Controls.PrintDialog> 또는 원칙적으로 모든 [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] 전혀 합니다.  
@@ -56,11 +56,11 @@ ms.lasthandoff: 04/16/2018
   
  XPSDrv 프린터를 사용하는 경우 마지막 매개 변수를 `true`로 설정할 수 있습니다. 이 경우에 [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)]가 프린터의 페이지 설명 언어이므로 메서드는 유효성을 검사하거나 다른 페이지 설명 언어로 변환하지 않고 파일을 프린터로 보냅니다. 모르는 디자인 타임에 있는지 여부는 응용 프로그램을 사용할 XPSDrv 프린터, 응용 프로그램을 읽고 수정할 수 있습니다는 <xref:System.Printing.PrintQueue.IsXpsDevice%2A> 속성 및 내용에 따라 분기 합니다.  
   
- 초기에 [!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)] 및 [!INCLUDE[TLA#tla_winfx](../../../../includes/tlasharptla-winfx-md.md)]를 릴리스한 후에 즉시 사용 가능한 몇 개의 XPSDrv 프린터가 있으므로 XPSDrv 프린터인 XPSDrv가 아닌 프린터를 가장해야 합니다. 이렇게 하려면 응용 프로그램을 실행하는 컴퓨터의 다음 레지스트리 키에 있는 파일의 목록에 Pipelineconfig.xml을 추가합니다.  
+ 처음 사용할 수 있는 몇 가지 XPSDrv 프린터의 릴리스 후 즉시 이후 [!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)] 및 Microsoft.NET Framework XPSDrv 프린터로 비 XPSDrv 프린터를 가장 해야 할 수 있습니다. 이렇게 하려면 응용 프로그램을 실행하는 컴퓨터의 다음 레지스트리 키에 있는 파일의 목록에 Pipelineconfig.xml을 추가합니다.  
   
- HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Print\Environments\Windows NT x86\Drivers\Version-3\\*\<PseudoXPSPrinter>*\DependentFiles  
+ HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Print\Environments\Windows NT x86\Drivers\Version-3\\*\<PseudoXPSPrinter>* \DependentFiles  
   
- 여기서 *\<PseudoXPSPrinter>*는 인쇄 대기열입니다. 그런 다음 컴퓨터를 다시 부팅해야 합니다.  
+ 여기서 *\<PseudoXPSPrinter>* 는 인쇄 대기열입니다. 그런 다음 컴퓨터를 다시 부팅해야 합니다.  
   
  이 가장을 사용 하면 주고 `true` 의 마지막 매개 변수로 <xref:System.Printing.PrintQueue.AddJob%28System.String%2CSystem.String%2CSystem.Boolean%29> 있지만 예외를 발생 하지 않고  *\<PseudoXPSPrinter >* 는 XPSDrv 프린터를 실제로 가비지만 인쇄 됩니다.  
   

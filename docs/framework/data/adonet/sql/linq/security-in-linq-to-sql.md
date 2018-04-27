@@ -1,24 +1,26 @@
 ---
-title: "LINQ to SQL의 보안"
-ms.custom: 
+title: LINQ to SQL의 보안
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: d49787f7-414e-4c71-aa33-80a5895536b1
-caps.latest.revision: "2"
+caps.latest.revision: 2
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 0ee361c27bd14f0266b2b86f315f9c091e049c12
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: 96951b3b3c8a6ee93a83ba24f6c6a19c3e36381c
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="security-in-linq-to-sql"></a>LINQ to SQL의 보안
 데이터베이스에 연결할 때는 항상 보안 위험이 따릅니다. LINQ to SQL에서는 SQL Server에서 데이터를 사용하는 여러 가지 새로운 방법을 제공하지만 추가적인 보안 메커니즘은 지원하지 않습니다.  
@@ -32,7 +34,7 @@ ms.lasthandoff: 01/17/2018
 ## <a name="connection-strings"></a>연결 문자열  
  가능하면 연결 문자열에 암호를 사용하지 않아야 합니다. 개체 관계형 디자이너 또는 SQLMetal 명령줄 도구를 사용하는 경우 연결 문자열은 자체적으로 보안 위험 요소일 뿐 아니라 개체 모델 또는 외부 매핑 파일에 일반 텍스트로 추가될 수도 있습니다. 따라서 파일 시스템을 통해 개체 모델 또는 외부 매핑 파일에 액세스할 수 있는 사용자는 누구든지 연결 문자열에 포함된 연결 암호를 볼 수 있습니다.  
   
- 이러한 위험을 최소화하려면 통합 보안을 사용하여 [!INCLUDE[ssNoVersion](../../../../../../includes/ssnoversion-md.md)]에 신뢰할 수 있는 연결을 설정합니다. 이러한 접근 방식을 사용하면 연결 문자열에서 암호를 저장하지 않아도 됩니다. 자세한 내용은 참조 [SQL Server 보안](../../../../../../docs/framework/data/adonet/sql/sql-server-security.md)합니다.  
+ 이러한 위험을 최소화 하려면 SQL Server와 함께 신뢰할 수 있는 연결을 통합된 보안을 사용 합니다. 이러한 접근 방식을 사용하면 연결 문자열에서 암호를 저장하지 않아도 됩니다. 자세한 내용은 참조 [SQL Server 보안](../../../../../../docs/framework/data/adonet/sql/sql-server-security.md)합니다.  
   
  통합 보안을 사용하지 않는 경우에는 연결 문자열에 일반 텍스트 암호를 사용해야 합니다. 연결 문자열을 보호하는 가장 좋은 방법은 다음과 같습니다. 아래 항목은 위험 수준에 따라 오름차순으로 나열되어 있습니다.   
   

@@ -1,30 +1,32 @@
 ---
-title: "테이블 반환 매개 변수"
-ms.custom: 
+title: 테이블 반환 매개 변수
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 370c16d5-db7b-43e3-945b-ccaab35b739b
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 6e881213979d32cb9335f01d2804c35c19856b5e
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: 01b19d49ee82a884247e4eb260f659f19f124cee
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="table-valued-parameters"></a>테이블 반환 매개 변수
-테이블 반환 매개 변수를 사용하면 클라이언트 응용 프로그램에서 반복적인 라운드트립이나 데이터 처리를 위한 특수한 서버측 논리를 사용하지 않고도 여러 행 데이터를 [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)]로 쉽게 마샬링할 수 있습니다. 또한 테이블 반환 매개 변수를 사용하면 클라이언트 응용 프로그램에서 데이터 행을 캡슐화하여 매개 변수화된 단일 명령을 통해 데이터를 서버에 보낼 수 있습니다. 들어오는 데이터 행은 테이블 변수에 저장되며, 이러한 테이블 변수에 대해서는 [!INCLUDE[tsql](../../../../../includes/tsql-md.md)]을 사용하여 작업할 수 있습니다.  
+테이블 반환 매개 변수를 사용하면 클라이언트 응용 프로그램에서 여러 행 데이터를 반복적인 라운드트립이나 데이터 처리를 위한 특수한 서버측 논리를 사용하지 않고도 SQL Server로 쉽게 마샬링할 수 있습니다. 또한 테이블 반환 매개 변수를 사용하면 클라이언트 응용 프로그램에서 데이터 행을 캡슐화하여 매개 변수화된 단일 명령을 통해 데이터를 서버에 보낼 수 있습니다. 들어오는 데이터 행은 테이블 변수에 저장되며, 이러한 테이블 변수에 대해서는 [!INCLUDE[tsql](../../../../../includes/tsql-md.md)]을 사용하여 작업할 수 있습니다.  
   
  테이블 반환 매개 변수의 열 값은 표준 [!INCLUDE[tsql](../../../../../includes/tsql-md.md)] SELECT 문을 사용하여 액세스할 수 있습니다. 테이블 반환 매개 변수는 강력한 형식이며 해당 구조체의 유효성은 자동으로 검사됩니다. 테이블 반환 매개 변수의 크기는 서버 메모리 크기의 제한만 받습니다.  
   
@@ -35,13 +37,13 @@ ms.lasthandoff: 01/17/2018
   
 |리소스|설명|  
 |--------------|-----------------|  
-|[테이블 반환 매개 변수 (데이터베이스 엔진)](http://go.microsoft.com/fwlink/?LinkId=98363) 에 [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] 온라인 설명서|테이블 반환 매개 변수를 만들고 사용하는 방법에 대해 설명합니다.|  
-|[사용자 정의 테이블 형식을](http://go.microsoft.com/fwlink/?LinkId=98364) 에 [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] 온라인 설명서|테이블 반환 매개 변수를 선언하는 데 사용되는 사용자 정의 테이블 형식에 대해 설명합니다.|  
+|[테이블 반환 매개 변수 (데이터베이스 엔진)](http://go.microsoft.com/fwlink/?LinkId=98363) SQL Server 온라인 설명서의|테이블 반환 매개 변수를 만들고 사용하는 방법에 대해 설명합니다.|  
+|[사용자 정의 테이블 형식을](http://go.microsoft.com/fwlink/?LinkId=98364) SQL Server 온라인 설명서의|테이블 반환 매개 변수를 선언하는 데 사용되는 사용자 정의 테이블 형식에 대해 설명합니다.|  
   
 ## <a name="passing-multiple-rows-in-previous-versions-of-sql-server"></a>이전 버전의 SQL Server에서 여러 행 전달  
- [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] 2008에 테이블 반환 매개 변수가 도입되기 전에는 여러 행의 데이터를 저장 프로시저나 매개 변수화된 SQL 명령에 전달하는 옵션이 제한적이었습니다. 개발자는 서버에 여러 행을 전달하기 위해 다음 옵션 중에서 선택할 수 있었습니다.  
+ 테이블 반환 매개 변수를 SQL Server 2008 도입 되기 전에 저장된 프로시저 또는 매개 변수가 있는 SQL 명령에 여러 행의 데이터를 전달 하기 위한 옵션이 제한적 이었습니다. 개발자는 서버에 여러 행을 전달하기 위해 다음 옵션 중에서 선택할 수 있었습니다.  
   
--   여러 데이터 열과 행의 값을 나타내는 일련의 개별 매개 변수를 사용합니다. 이 방법을 사용하여 전달할 수 있는 데이터의 양은 허용되는 매개 변수 수로 제한됩니다. [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] 프로시저에는 매개 변수를 2100개까지 사용할 수 있습니다. 이러한 개별 값을 테이블 변수 또는 처리를 위한 임시 테이블로 어셈블하기 위한 서버측 논리가 필요합니다.  
+-   여러 데이터 열과 행의 값을 나타내는 일련의 개별 매개 변수를 사용합니다. 이 방법을 사용하여 전달할 수 있는 데이터의 양은 허용되는 매개 변수 수로 제한됩니다. SQL Server 프로시저에는 매개 변수를 2100개까지 사용할 수 있습니다. 이러한 개별 값을 테이블 변수 또는 처리를 위한 임시 테이블로 어셈블하기 위한 서버측 논리가 필요합니다.  
   
 -   여러 데이터 값을 구분된 문자열 또는 XML 문서로 묶은 후 이러한 텍스트 값을 프로시저나 문에 전달합니다. 이렇게 하려면 데이터 구조의 유효성을 검사하고 묶인 값을 해제하는 논리를 프로시저나 문에 포함해야 합니다.  
   
@@ -50,7 +52,7 @@ ms.lasthandoff: 01/17/2018
 -   `bcp` 유틸리티 프로그램이나 <xref:System.Data.SqlClient.SqlBulkCopy> 개체를 사용하여 여러 데이터 행을 테이블에 로드합니다. 이 기술은 매우 효율적이기는 하지만 데이터를 임시 테이블이나 테이블 변수에 로드해야만 서버측 처리가 지원됩니다.  
   
 ## <a name="creating-table-valued-parameter-types"></a>테이블 반환 매개 변수 형식 만들기  
- 테이블 반환 매개 변수는 [!INCLUDE[tsql](../../../../../includes/tsql-md.md)] CREATE TYPE 문을 사용하여 정의된 강력한 형식의 테이블 구조를 기반으로 합니다. 클라이언트 응용 프로그램에서 테이블 반환 매개 변수를 사용할 수 있으려면 먼저 [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)]에서 테이블 형식을 만들고 구조를 정의해야 합니다. 테이블 형식 만들기에 대 한 자세한 내용은 참조 [사용자 정의 테이블 형식](http://go.microsoft.com/fwlink/?LinkID=98364) 에 [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] 온라인 설명서.  
+ 테이블 반환 매개 변수는 [!INCLUDE[tsql](../../../../../includes/tsql-md.md)] CREATE TYPE 문을 사용하여 정의된 강력한 형식의 테이블 구조를 기반으로 합니다. 클라이언트 응용 프로그램에서 테이블 반환 매개 변수를 사용할 수 있으려면 먼저 SQL Server에서 테이블 형식을 만들고 구조를 정의해야 합니다. 테이블 형식 만들기에 대 한 자세한 내용은 참조 [사용자 정의 테이블 형식](http://go.microsoft.com/fwlink/?LinkID=98364) SQL Server 온라인 설명서의 합니다.  
   
  다음 문은 이름이 CategoryTableType이고 CategoryID 및 CategoryName 열로 구성된 테이블 형식을 만듭니다.  
   
@@ -90,14 +92,14 @@ INSERT INTO dbo.Categories (CategoryID, CategoryName)
   
 -   테이블 반환 매개 변수를 전달할 수 없습니다 [CLR 사용자 정의 함수](http://msdn.microsoft.com/library/ms131077.aspx)합니다.  
   
--   테이블 반환 매개 변수는 UNIQUE 또는 PRIMARY KEY 제약 조건을 지원하도록 인덱싱만 수행할 수 있습니다. [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)]에서는 테이블 반환 매개 변수에 대한 통계가 유지되지 않습니다.  
+-   테이블 반환 매개 변수는 UNIQUE 또는 PRIMARY KEY 제약 조건을 지원하도록 인덱싱만 수행할 수 있습니다. SQL Server에서는 테이블 반환 매개 변수에 대한 통계가 유지되지 않습니다.  
   
 -   테이블 반환 매개 변수는 [!INCLUDE[tsql](../../../../../includes/tsql-md.md)] 코드에서 읽기 전용입니다. 테이블 반환 매개 변수의 행에서 열 값을 업데이트하거나, 행을 삽입 또는 삭제할 수 없습니다. 테이블 반환 매개 변수를 사용하여 저장 프로시저나 매개 변수화된 문에 전달된 데이터를 수정하려면 데이터를 임시 테이블이나 테이블 변수에 삽입해야 합니다.  
   
 -   ALTER TABLE 문을 사용하여 테이블 반환 매개 변수의 디자인을 수정할 수 없습니다.  
   
 ## <a name="configuring-a-sqlparameter-example"></a>SqlParameter 예제 구성  
- <xref:System.Data.SqlClient>테이블 반환 매개 변수를 채우는 지원 <xref:System.Data.DataTable>, <xref:System.Data.Common.DbDataReader> 또는 <xref:System.Collections.Generic.IEnumerable%601>  \  <xref:Microsoft.SqlServer.Server.SqlDataRecord> 개체입니다. 이 경우 <xref:System.Data.SqlClient.SqlParameter.TypeName%2A>의 <xref:System.Data.SqlClient.SqlParameter> 속성을 사용하여 테이블 반환 매개 변수의 형식 이름을 지정해야 합니다. `TypeName`은 이전에 서버에서 만든 호환 가능한 형식의 이름과 일치해야 합니다. 다음 코드 조각에서는 <xref:System.Data.SqlClient.SqlParameter>를 구성하여 데이터를 삽입하는 방법을 보여 줍니다.  
+ <xref:System.Data.SqlClient> 테이블 반환 매개 변수를 채우는 지원 <xref:System.Data.DataTable>, <xref:System.Data.Common.DbDataReader> 또는 <xref:System.Collections.Generic.IEnumerable%601>  \  <xref:Microsoft.SqlServer.Server.SqlDataRecord> 개체입니다. 이 경우 <xref:System.Data.SqlClient.SqlParameter.TypeName%2A>의 <xref:System.Data.SqlClient.SqlParameter> 속성을 사용하여 테이블 반환 매개 변수의 형식 이름을 지정해야 합니다. `TypeName`은 이전에 서버에서 만든 호환 가능한 형식의 이름과 일치해야 합니다. 다음 코드 조각에서는 <xref:System.Data.SqlClient.SqlParameter>를 구성하여 데이터를 삽입하는 방법을 보여 줍니다.  
   
 ```csharp  
 // Configure the command and parameter.  

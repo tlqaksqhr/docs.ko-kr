@@ -1,24 +1,26 @@
 ---
-title: "샘플 데이터베이스 다운로드"
-ms.custom: 
+title: 샘플 데이터베이스 다운로드
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: ef9d69a1-9461-43fe-94bb-7c836754bcb5
-caps.latest.revision: "2"
+caps.latest.revision: 2
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 3b0dccd831591946684fb0087f33563b87ee6ba7
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: dd0b29e97d36d67781c92ee24c56aed43c703261
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="downloading-sample-databases"></a>샘플 데이터베이스 다운로드
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 설명서의 여러 가지 예제와 연습에서는 Northwind 샘플 데이터베이스와 SQL Server Express Edition을 사용합니다. Microsoft 다운로드 사이트에서 해당 제품을 무료로 다운로드할 수 있습니다.  
@@ -57,7 +59,7 @@ ms.lasthandoff: 01/17/2018
 6.  웹 사이트의 설치 지침을 따릅니다.  
   
 ## <a name="downloading-management-studio-express"></a>Management Studio Express 다운로드  
- 데이터베이스에 액세스할 수 다운로드 한 데이터베이스를 수정 하려는 경우 **서버 탐색기** 에 [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)] 통합된 개발 환경 (IDE) 또는 Microsoft SQL Server Management Studio Express (사용 SSMSE)입니다.  
+ 데이터베이스에 액세스할 수 다운로드 한 데이터베이스를 수정 하려는 경우 **서버 탐색기** Visual studio에서 통합 개발 환경 (IDE) 또는 Microsoft SQL Server Management Studio Express (SSMSE)를 사용 하 여 .  
   
 #### <a name="to-download-management-studio-express"></a>Management Studio Express 다운로드하려면  
   

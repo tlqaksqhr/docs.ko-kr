@@ -1,27 +1,29 @@
 ---
-title: "DataAdapter 매개 변수"
-ms.custom: 
+title: DataAdapter 매개 변수
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: f21e6aba-b76d-46ad-a83e-2ad8e0af1e12
-caps.latest.revision: "3"
+caps.latest.revision: 3
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 4b5cc66e1d2240450743afa8ca8aaa6efe94398d
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: 600dd949ffbed5c1066f9e3c3d9cc09eb174a22e
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="dataadapter-parameters"></a>DataAdapter 매개 변수
 <xref:System.Data.Common.DbDataAdapter>에는 데이터 소스에서 데이터를 검색하고 업데이트하는 데 사용되는 다음과 같은 네 가지 속성이 있습니다. <xref:System.Data.Common.DbDataAdapter.SelectCommand%2A> 속성은 데이터 소스에서 데이터를 반환하며 <xref:System.Data.Common.DbDataAdapter.InsertCommand%2A> , <xref:System.Data.Common.DbDataAdapter.UpdateCommand%2A> 및 <xref:System.Data.Common.DbDataAdapter.DeleteCommand%2A> 속성은 데이터 소스에서 변경 내용을 관리하는 데 사용됩니다. `SelectCommand` 속성은 `Fill`의 `DataAdapter` 메서드를 호출하기 전에 설정해야 합니다. `InsertCommand`, `UpdateCommand` 또는 `DeleteCommand` 속성은 `Update`의 `DataAdapter` 메서드가 호출되기 전에 설정해야 하며, <xref:System.Data.DataTable>의 데이터에 적용된 변경 내용에 따라 설정 값이 달라집니다. 예를 들어, 행이 추가되었으면 `InsertCommand`를 호출하기 전에 `Update`를 설정해야 합니다. `Update`가 삽입, 업데이트 또는 삭제된 행을 처리하는 동안 `DataAdapter`는 해당 `Command` 속성을 사용하여 동작을 처리합니다. 수정된 행에 대한 현재 정보는 `Command` 컬렉션을 통해 `Parameters` 개체에 전달됩니다.  
@@ -36,7 +38,7 @@ UPDATE Customers SET CompanyName = @CompanyName
 > [!NOTE]
 >  매개 변수 자리 표시자의 구문은 데이터 소스에 따라 다릅니다. 이 예제에서는 SQL Server 데이터 소스용 자리 표시자를 보여 줍니다. <xref:System.Data.OleDb> 및 <xref:System.Data.Odbc> 매개 변수의 경우 물음표(?) 자리 표시자를 사용합니다.  
   
- 이 [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)] 예제에서는 `CompanyName` 필드의 값으로 업데이트 됩니다는 `@CompanyName` 행에 대 한 매개 변수 있는 `CustomerID` 의 값과 같으면는 `@CustomerID` 매개 변수입니다. 사용 하 여 수정 된 행에서 정보를 검색 하는 매개 변수는 <xref:System.Data.SqlClient.SqlParameter.SourceColumn%2A> 의 속성은 <xref:System.Data.SqlClient.SqlParameter> 개체입니다. 다음은 앞에 나온 샘플 UPDATE 문에 대한 매개 변수입니다. 이 코드에서는 `adapter` 변수가 올바른 <xref:System.Data.SqlClient.SqlDataAdapter> 개체를 나타낸다고 가정합니다.  
+ 이 Visual Basic 예제에서는 `CompanyName` 필드의 값으로 업데이트 됩니다는 `@CompanyName` 행에 대 한 매개 변수 있는 `CustomerID` 의 값과 같으면는 `@CustomerID` 매개 변수입니다. 사용 하 여 수정 된 행에서 정보를 검색 하는 매개 변수는 <xref:System.Data.SqlClient.SqlParameter.SourceColumn%2A> 의 속성은 <xref:System.Data.SqlClient.SqlParameter> 개체입니다. 다음은 앞에 나온 샘플 UPDATE 문에 대한 매개 변수입니다. 이 코드에서는 `adapter` 변수가 올바른 <xref:System.Data.SqlClient.SqlDataAdapter> 개체를 나타낸다고 가정합니다.  
   
 ```  
 adapter.Parameters.Add( _  
@@ -64,7 +66,7 @@ parameter.SourceVersion = DataRowVersion.Original
 |`Original`|열의 원래 값을 사용하는 매개 변수입니다.|  
 |`Proposed`|제안된 값을 사용하는 매개 변수입니다.|  
   
- 다음 단원의 `SqlClient` 코드 예제에서는 <xref:System.Data.Common.DbDataAdapter.UpdateCommand%2A> 열이 두 매개 변수 `CustomerID`(`SourceColumn`) 및 `@CustomerID` (`SET CustomerID = @CustomerID`)에 대한 `@OldCustomerID`으로 사용되는 `WHERE CustomerID = @OldCustomerID`의 매개 변수를 정의합니다. `@CustomerID` 매개 변수 업데이트에 사용 되는 **CustomerID** 열에 현재 값으로는 `DataRow`합니다. 결과적으로 `CustomerID` `SourceColumn` 와 `SourceVersion` 의 `Current` 사용 됩니다.  *@OldCustomerID*  매개 변수를 사용 하는 데이터 원본에서 현재 행을 식별 합니다. 행의 `Original` 버전에 일치하는 열 값이 있으므로 `SourceColumn`이 `CustomerID`인 동일한 `SourceVersion`(`Original`)이 사용됩니다.  
+ 다음 단원의 `SqlClient` 코드 예제에서는 <xref:System.Data.Common.DbDataAdapter.UpdateCommand%2A> 열이 두 매개 변수 `CustomerID`(`SourceColumn`) 및 `@CustomerID` (`SET CustomerID = @CustomerID`)에 대한 `@OldCustomerID`으로 사용되는 `WHERE CustomerID = @OldCustomerID`의 매개 변수를 정의합니다. `@CustomerID` 매개 변수 업데이트에 사용 되는 **CustomerID** 열에 현재 값으로는 `DataRow`합니다. 결과적으로 `CustomerID` `SourceColumn` 와 `SourceVersion` 의 `Current` 사용 됩니다. *@OldCustomerID* 매개 변수를 사용 하는 데이터 원본에서 현재 행을 식별 합니다. 행의 `Original` 버전에 일치하는 열 값이 있으므로 `SourceColumn`이 `CustomerID`인 동일한 `SourceVersion`(`Original`)이 사용됩니다.  
   
 ## <a name="working-with-sqlclient-parameters"></a>SqlClient 매개 변수 사용  
  다음 예제에서는 데이터베이스에서 추가적인 스키마 정보를 검색하기 위해 <xref:System.Data.SqlClient.SqlDataAdapter>를 만들고 <xref:System.Data.Common.DataAdapter.MissingSchemaAction%2A>을 <xref:System.Data.MissingSchemaAction.AddWithKey>로 설정하는 방법을 보여 줍니다. <xref:System.Data.SqlClient.SqlDataAdapter.SelectCommand%2A>, <xref:System.Data.SqlClient.SqlDataAdapter.InsertCommand%2A>, <xref:System.Data.SqlClient.SqlDataAdapter.UpdateCommand%2A> 및 <xref:System.Data.SqlClient.SqlDataAdapter.DeleteCommand%2A> 속성이 설정되고 해당 <xref:System.Data.SqlClient.SqlParameter> 개체가 <xref:System.Data.SqlClient.SqlCommand.Parameters%2A> 컬렉션에 추가됩니다. 메서드에서 `SqlDataAdapter` 개체를 반환합니다.  

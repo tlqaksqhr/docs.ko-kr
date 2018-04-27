@@ -1,24 +1,26 @@
 ---
-title: "비동기 프로그래밍"
+title: 비동기 프로그래밍
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.technology: dotnet-ado
+ms.technology:
+- dotnet-ado
 ms.topic: article
 ms.assetid: 85da7447-7125-426e-aa5f-438a290d1f77
-caps.latest.revision: "30"
+caps.latest.revision: 30
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 20e40a6705ad77dc42a70739e75abdbb058465e6
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: 7dbc106b96e4e695108b6178951e3d43078467bc
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="asynchronous-programming"></a>비동기 프로그래밍
 
-이 항목에서는 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]에서 도입된 비동기 프로그래밍 기능을 지원하는 향상된 기능을 포함하여 [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] Data Provider for [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)](SqlClient)의 비동기 프로그래밍 지원에 대해 설명합니다.  
+이 항목에서는의 비동기 프로그래밍에 대 한 지원을 설명는 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 에 도입 된 비동기 프로그래밍 기능을 지 원하는 향상 된 기능을 포함 하 여 Data Provider for SQL Server (SqlClient) [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)]합니다.  
   
 ## <a name="legacy-asynchronous-programming"></a>레거시 비동기 프로그래밍  
  [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)] 이전에 SqlClient의 비동기 프로그래밍은 다음 메서드 및 `Asynchronous Processing=true` 연결 속성을 사용하여 수행되었습니다.  
@@ -637,7 +639,7 @@ namespace SqlBulkCopyAsyncCodeSample {
  이 예제에서는 단일 연결을 열어 고 **AdventureWorks** 데이터베이스입니다. <xref:System.Data.SqlClient.SqlCommand> 개체를 사용하면 <xref:System.Data.SqlClient.SqlDataReader>가 만들어집니다. 판독기를 사용하면 두 번째 <xref:System.Data.SqlClient.SqlDataReader>가 열리고 첫 번째 <xref:System.Data.SqlClient.SqlDataReader>의 데이터가 두 번째 판독기의 WHERE 절에 대한 입력으로 사용됩니다.  
   
 > [!NOTE]
->  다음 예제에서는 샘플을 사용 하 여 **AdventureWorks** 에 포함 된 데이터베이스 [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)]합니다. 샘플 코드에 제공된 연결 문자열은 데이터베이스가 로컬 컴퓨터에 설치되었으며 사용 가능하다고 가정합니다. 사용자 환경의 필요에 따라 연결 문자열을 수정합니다.  
+>  다음 예제에서는 샘플을 사용 하 여 **AdventureWorks** SQL Server에 포함 된 데이터베이스입니다. 샘플 코드에 제공된 연결 문자열은 데이터베이스가 로컬 컴퓨터에 설치되었으며 사용 가능하다고 가정합니다. 사용자 환경의 필요에 따라 연결 문자열을 수정합니다.  
   
 ```csharp
 using System;  
@@ -709,7 +711,7 @@ class Class1 {
  다음 콘솔 응용 프로그램에서는 두 개의 <xref:System.Data.SqlClient.SqlDataReader> 개체와 MARS가 활성화된 세 개의 <xref:System.Data.SqlClient.SqlCommand> 개체 및 하나의 <xref:System.Data.SqlClient.SqlConnection> 개체를 함께 사용하는 방법을 보여 줍니다. 첫 번째 명령 개체에서는 신용 등급이 5인 공급업체 목록을 검색합니다. 두 번째 명령 개체는 <xref:System.Data.SqlClient.SqlDataReader>에서 제공한 공급업체 ID를 사용하여 두 번째 <xref:System.Data.SqlClient.SqlDataReader>와 함께 특정 공급업체의 모든 제품을 로드합니다. 각 제품 레코드에는 두 번째 <xref:System.Data.SqlClient.SqlDataReader>에서 액세스합니다. 새로운 결정 하는 계산을 수행 하는 **OnOrderQty** 이어야 합니다. 세 번째 명령 개체는 다음 업데이트 하는 데는 **ProductVendor** 새 값이 있는 테이블입니다. 이 전체 프로세스가 단일 트랜잭션에서 발생하며 프로세스가 끝나면 롤백됩니다.  
   
 > [!NOTE]
->  다음 예제에서는 샘플을 사용 하 여 **AdventureWorks** 에 포함 된 데이터베이스 [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)]합니다. 샘플 코드에 제공된 연결 문자열은 데이터베이스가 로컬 컴퓨터에 설치되었으며 사용 가능하다고 가정합니다. 사용자 환경의 필요에 따라 연결 문자열을 수정합니다.  
+>  다음 예제에서는 샘플을 사용 하 여 **AdventureWorks** SQL Server에 포함 된 데이터베이스입니다. 샘플 코드에 제공된 연결 문자열은 데이터베이스가 로컬 컴퓨터에 설치되었으며 사용 가능하다고 가정합니다. 사용자 환경의 필요에 따라 연결 문자열을 수정합니다.  
   
 ```csharp
 using System;  

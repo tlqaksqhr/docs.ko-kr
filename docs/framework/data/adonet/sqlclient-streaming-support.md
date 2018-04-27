@@ -1,29 +1,31 @@
 ---
-title: "SqlClient 스트리밍 지원"
-ms.custom: 
+title: SqlClient 스트리밍 지원
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: c449365b-470b-4edb-9d61-8353149f5531
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: f870bab357db7a425378afcfb0bedd19b0359ce1
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: cfa672908248afa951ab3a429e437e0e2c0607c5
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="sqlclient-streaming-support"></a>SqlClient 스트리밍 지원
-[!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)]와 응용 프로그램 간의 스트리밍 지원([!INCLUDE[net_v45](../../../../includes/net-v45-md.md)]의 새로운 기능)을 통해 서버 측의 구조화되지 않은 데이터(문서, 이미지 및 미디어 파일)가 지원됩니다. [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] 데이터베이스는 BLOB(Binary Large Object)를 저장할 수 있지만 BLOB를 검색할 때 많은 메모리가 사용될 수 있습니다.  
+SQL Server 및 응용 프로그램 간의 스트리밍 지원 (의 새로운 [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)])는 서버 (문서, 이미지 및 미디어 파일)에서 구조화 되지 않은 데이터를 지원 합니다. SQL Server 데이터베이스를 사용 하는 이진 대형 개체 (Blob)을 저장할 수 있지만 BLOB를 검색 하는 다량의 메모리를 사용할 수 있습니다.  
   
- [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)]로의 스트리밍과 그 반대로의 스트리밍이 지원되면 데이터를 메모리에 완전하게 로드하지 않고 데이터를 스트리밍함으로써 메모리 오버플로 예외가 보다 적게 발생하는 응용 프로그램을 간단하게 작성할 수 있습니다.  
+ 완전히 더 적은 메모리 오버플로 예외가 발생 하는 메모리에 데이터를 로드할 필요 없이 응용 프로그램 작성 해당 스트림 데이터를 단순화의 스트리밍 지원은 SQL Server에서 합니다.  
   
  또한 스트리밍 지원을 통해 중간 계층 응용 프로그램의 확장성이 높아질 수 있습니다. 특히 대형 BLOB를 전송, 검색 및 조작하기 위해 비즈니스 개체를 SQL Azure에 연결하는 시나리오에서는 더욱 그렇습니다.  
   
@@ -32,10 +34,10 @@ ms.lasthandoff: 01/17/2018
 >   
 >  스트리밍을 지원하기 위해 추가된 멤버는 쿼리에서 데이터를 검색하고 쿼리 및 저장 프로시저에 매개 변수를 전달하는 데 사용됩니다. 스트리밍 기능은 기본 OLTP 및 데이터 마이그레이션 시나리오를 처리하며 온-프레미스 및 오프-프레미스 데이터 마이그레이션 환경에 적용할 수 있습니다.  
   
-## <a name="streaming-support-from-includessnoversionincludesssnoversion-mdmd"></a>[!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)]에서의 스트리밍 지원  
- [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)]에서의 스트리밍 지원은 <xref:System.Data.Common.DbDataReader> 및 <xref:System.Data.SqlClient.SqlDataReader> 클래스에 새로운 기능을 도입함으로써 <xref:System.IO.Stream>, <xref:System.Xml.XmlReader> 및 <xref:System.IO.TextReader> 개체를 가져오고 이러한 개체에 반응할 수 있습니다.  이러한 클래스는 쿼리에서 데이터를 검색하는 데 사용됩니다. 따라서 [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)]에서의 스트리밍 지원은 OLTP 시나리오를 처리하며 온-프레미스 및 오프-프레미스 환경에 적용됩니다.  
+## <a name="streaming-support-from-sql-server"></a>SQL Server에서의 스트리밍 지원  
+ 새로운 기능에서는 SQL Server에서의 스트리밍 지원은 <xref:System.Data.Common.DbDataReader> 및는 <xref:System.Data.SqlClient.SqlDataReader> 가져오려면 클래스 <xref:System.IO.Stream>, <xref:System.Xml.XmlReader>, 및 <xref:System.IO.TextReader> 개체에 대응 하 합니다.  이러한 클래스는 쿼리에서 데이터를 검색하는 데 사용됩니다. 결과적으로, SQL Server에서 스트리밍 지원은 OLTP 시나리오를 처리 하며 온-프레미스 및 오프-프레미스 환경에 적용 됩니다 합니다.  
   
- <xref:System.Data.SqlClient.SqlDataReader>에서의 스트리밍 지원을 활성화하기 위해 [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)]에 추가된 메서드는 다음과 같습니다.  
+ 에 추가 된 다음 메서드는 <xref:System.Data.SqlClient.SqlDataReader> SQL Server에서의 스트리밍 지원을 사용 하도록 설정 하려면:  
   
 1.  <xref:System.Data.SqlClient.SqlDataReader.IsDBNullAsync%2A>  
   
@@ -49,7 +51,7 @@ ms.lasthandoff: 01/17/2018
   
 6.  <xref:System.Data.SqlClient.SqlDataReader.GetXmlReader%2A>  
   
- <xref:System.Data.Common.DbDataReader>에서의 스트리밍 지원을 활성화하기 위해 [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)]에 추가된 메서드는 다음과 같습니다.  
+ 에 추가 된 다음 메서드는 <xref:System.Data.Common.DbDataReader> SQL Server에서의 스트리밍 지원을 사용 하도록 설정 하려면:  
   
 1.  <xref:System.Data.Common.DbDataReader.GetFieldValue%2A>  
   
@@ -57,8 +59,8 @@ ms.lasthandoff: 01/17/2018
   
 3.  <xref:System.Data.Common.DbDataReader.GetTextReader%2A>  
   
-## <a name="streaming-support-to-includessnoversionincludesssnoversion-mdmd"></a>[!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)]로의 스트리밍 지원  
- [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)]로의 스트리밍 지원은 <xref:System.Data.SqlClient.SqlParameter> 클래스에 새로운 기능을 도입함으로써 <xref:System.Xml.XmlReader>, <xref:System.IO.Stream> 및 <xref:System.IO.TextReader> 개체를 받아들이고 이러한 개체에 반응할 수 있습니다. <xref:System.Data.SqlClient.SqlParameter>는 쿼리 및 저장 프로시저에 매개 변수를 전달하는 데 사용됩니다.  
+## <a name="streaming-support-to-sql-server"></a>SQL Server로의 스트리밍 지원  
+ 새로운 기능에서는 SQL Server로의 스트리밍 지원은 <xref:System.Data.SqlClient.SqlParameter> 수락 하 고에 반응할 수 있도록 클래스 <xref:System.Xml.XmlReader>, <xref:System.IO.Stream>, 및 <xref:System.IO.TextReader> 개체입니다. <xref:System.Data.SqlClient.SqlParameter>는 쿼리 및 저장 프로시저에 매개 변수를 전달하는 데 사용됩니다.  
   
  <xref:System.Data.SqlClient.SqlCommand> 개체를 삭제하거나 <xref:System.Data.SqlClient.SqlCommand.Cancel%2A>을 호출할 때는 모든 스트리밍 작업이 취소되어야 합니다. 응용 프로그램에서 <xref:System.Threading.CancellationToken>을 전송하면 취소되지 않을 수 있습니다.  
   
@@ -84,7 +86,7 @@ ms.lasthandoff: 01/17/2018
   
  <xref:System.Xml.XmlReader>, <xref:System.IO.TextReader> 및 <xref:System.IO.Stream> 개체는 <xref:System.Data.SqlClient.SqlParameter.Size%2A>에 정의된 값까지 전송됩니다.  
   
-## <a name="sample----streaming-from-includessnoversionincludesssnoversion-mdmd"></a>샘플 - [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)]에서의 스트리밍  
+## <a name="sample----streaming-from-sql-server"></a>샘플-SQL Server에서 스트리밍  
  다음 [!INCLUDE[tsql](../../../../includes/tsql-md.md)]에 따라 샘플 데이터베이스를 작성할 수 있습니다.  
   
 ```  
@@ -108,13 +110,13 @@ GO
   
 -   큰 파일을 검색하는 비동기적 방법을 제공하여 사용자 인터페이스 스레드의 차단을 방지합니다.  
   
--   [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)]를 통해 [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)]에서 큰 텍스트 파일을 전송합니다.  
+-   SQL server에서 큰 텍스트 파일을 전송 [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)]합니다.  
   
--   [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)]를 통해 [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)]에서 큰 XML 파일을 전송합니다.  
+-   SQL server에서 큰 XML 파일을 전송 [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)]합니다.  
   
--   [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)]에서 데이터를 검색합니다.  
+-   SQL Server에서 데이터를 검색 합니다.  
   
--   메모리를 지나치게 소모하지 않으면서 [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] 데이터베이스 간에 큰 파일(BLOB)을 전송합니다.  
+-   한 SQL Server 데이터베이스에서 메모리를 지나치게 소모 하지 않고 다른 큰 파일 (Blob)를 전송 합니다.  
   
 ```  
 using System;  
@@ -305,7 +307,7 @@ namespace StreamingFromServer {
 }  
 ```  
   
-## <a name="sample----streaming-to-includessnoversionincludesssnoversion-mdmd"></a>샘플 - [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)]로의 스트리밍  
+## <a name="sample----streaming-to-sql-server"></a>샘플-SQL Server로 스트리밍  
  다음 [!INCLUDE[tsql](../../../../includes/tsql-md.md)]에 따라 샘플 데이터베이스를 작성할 수 있습니다.  
   
 ```  
@@ -329,9 +331,9 @@ GO
   
  이 샘플에서는 다음 작업의 수행 방법을 보여 줍니다.  
   
--   [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)]를 통해 [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)]로 큰 BLOB를 전송합니다.  
+-   큰 BLOB를 SQL Server에 전송 [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)]합니다.  
   
--   [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)]를 통해 [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)]로 큰 텍스트 파일을 전송합니다.  
+-   큰 텍스트 파일에서 SQL Server로 전송 [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)]합니다.  
   
 -   새로운 비동기 기능을 사용하여 큰 BLOB를 전송합니다.  
   
@@ -339,7 +341,7 @@ GO
   
 -   큰 BLOB의 전송을 취소합니다.  
   
--   새로운 비동기 기능을 사용하여 하나의 [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] 간에 스트리밍합니다.  
+-   에 새로운 비동기 기능을 사용 하 여 다른 SQL Server 간에 스트리밍합니다.  
   
 ```  
 using System;  
@@ -461,8 +463,8 @@ namespace StreamingToServer {
 }  
 ```  
   
-## <a name="sample----streaming-from-one-includessnoversionincludesssnoversion-mdmd-to-another-includessnoversionincludesssnoversion-mdmd"></a>샘플 - 한 [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)]에서 다른 [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)]로의 스트리밍  
- 이 샘플에서는 [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] 간에 큰 BLOB를 비동기적으로 스트리밍하는 방법을 보여 줍니다.  
+## <a name="sample----streaming-from-one-sql-server-to-another-sql-server"></a>샘플-한 SQL Server에서 다른 SQL Server로 스트리밍  
+ 이 샘플에 비동기적으로 취소를 지 원하는 다른 SQL Server 간에 큰 BLOB를 스트림 하는 방법을 보여 줍니다.  
   
 ```  
 using System;  

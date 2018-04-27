@@ -1,11 +1,12 @@
 ---
-title: "재귀 프로시저(Visual Basic)"
-ms.custom: 
+title: 재귀 프로시저(Visual Basic)
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - Visual Basic code, procedures
@@ -16,17 +17,17 @@ helpviewer_keywords:
 - functions [Visual Basic], calling recursively
 - recursion
 ms.assetid: ba1d3962-b4c3-48d3-875e-96fdb4198327
-caps.latest.revision: "13"
+caps.latest.revision: 13
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 444eeaf043cf3710c5154fd7e8577590e3ce7d1e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 471746f4412b61c9782e8019aa8a9ec6221afb04
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="recursive-procedures-visual-basic"></a>재귀 프로시저(Visual Basic)
-A *재귀* 절차는 자신을 호출 하는 하나입니다. 일반적으로 이것이 작성 하는 가장 효과적인 방법 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 코드입니다.  
+A *재귀* 절차는 자신을 호출 하는 하나입니다. 일반적으로 Visual Basic 코드를 작성 하려면 가장 효과적인 방법은 아닙니다.  
   
  다음 절차 재귀를 사용 하 여 원래 인수의 계승값을 계산 합니다.  
   

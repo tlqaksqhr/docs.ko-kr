@@ -1,9 +1,9 @@
 ---
-title: "&lt;메시지&gt; 어셈블리 &#39;에 대 한 프로젝트 참조를 사용 하는 파일 참조가 섞여 있기 때문에이 오류도 수&lt; assemblyname&gt;&#39;"
+title: '&lt;메시지&gt; 어셈블리에 대 한 프로젝트 참조를 사용 하는 파일 참조가 섞여 있기 때문에이 오류도 수 &#39; &lt;assemblyname&gt;&#39;'
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - devlang-visual-basic
 ms.topic: article
@@ -13,21 +13,21 @@ f1_keywords:
 helpviewer_keywords:
 - BC30971
 ms.assetid: 75d2e8b5-2fdc-4623-8b32-cba805dab7db
-caps.latest.revision: 
+caps.latest.revision: 10
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 0fcbcc48928b1b03487f31930e3d14051ddd990a
-ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
+ms.openlocfilehash: 37a152da06a36756b86576bad9c6c5d6a392dc8d
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/26/2018
 ---
-# <a name="ltmessagegt-this-error-could-also-be-due-to-mixing-a-file-reference-with-a-project-reference-to-assembly-39ltassemblynamegt39"></a>&lt;메시지&gt; 어셈블리 &#39;에 대 한 프로젝트 참조를 사용 하는 파일 참조가 섞여 있기 때문에이 오류도 수&lt; assemblyname&gt;&#39;
+# <a name="ltmessagegt-this-error-could-also-be-due-to-mixing-a-file-reference-with-a-project-reference-to-assembly-39ltassemblynamegt39"></a>&lt;메시지&gt; 어셈블리에 대 한 프로젝트 참조를 사용 하는 파일 참조가 섞여 있기 때문에이 오류도 수 &#39; &lt;assemblyname&gt;&#39;
 \<메시지 > 어셈블리에 대 한 프로젝트 참조를 사용 하는 파일 참조가 섞여 있기 때문에이 오류도 수 '\<assemblyname > 합니다. 이 경우에 대 한 파일 참조를 바꿔를 보십시오 '\<assemblyfilename >' 프로젝트에서 '\<projectname1 >'에 대 한 프로젝트 참조 '\<projectname2 >'입니다.  
   
- 프로젝트 코드에서 다른 프로젝트의 멤버에 액세스하지만 솔루션 구성상 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 컴파일러에서 참조를 확인할 수 없습니다.  
+ 코드 프로젝트의 다른 프로젝트의 멤버에 액세스 하지만 솔루션의 구성 참조를 해결 하려면 Visual Basic 컴파일러를 허용 하지 않습니다.  
   
- 다른 어셈블리에 정의된 형식에 액세스하려면 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 컴파일러에 해당 어셈블리에 대한 참조가 있어야 합니다. 이 참조는 프로젝트 간의 순환 참조를 발생시키지 않는 명확한 단일 참조여야 합니다.  
+ 다른 어셈블리에 정의 된 형식에 액세스 하려면 Visual Basic 컴파일러에 해당 어셈블리에 대 한 참조가 있어야 합니다. 이 참조는 프로젝트 간의 순환 참조를 발생시키지 않는 명확한 단일 참조여야 합니다.  
   
  **오류 ID:** BC30971  
   

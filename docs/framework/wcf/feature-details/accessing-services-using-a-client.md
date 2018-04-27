@@ -1,27 +1,29 @@
 ---
-title: "클라이언트를 사용하여 서비스 액세스"
-ms.custom: 
+title: 클라이언트를 사용하여 서비스 액세스
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: c8329832-bf66-4064-9034-bf39f153fc2d
-caps.latest.revision: "15"
+caps.latest.revision: 15
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 1e011eb2f22abdc06a35fb7f656e180a4537245d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 5258f2eaf9ca60dc43ff8182c058d9c68043200f
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="accessing-services-using-a-client"></a>클라이언트를 사용하여 서비스 액세스
 클라이언트 응용 프로그램은 서비스와 통신할 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 클라이언트 또는 채널 개체를 만들고 구성 및 사용해야 합니다. [WCF 클라이언트 개요](../../../../docs/framework/wcf/wcf-client-overview.md) 항목에서는 개체 및 기본 클라이언트 및 채널 개체 만들기 및 사용에 관련 된 단계에 대 한 개요를 제공 합니다.  
@@ -51,7 +53,7 @@ ms.lasthandoff: 12/22/2017
 > [!NOTE]
 >  알림을 받는 시기가 세션 구현에 따라 달라지므로 실패한 세션 채널을 명시적으로 검색하려는 시도는 일반적으로 유용하지 않습니다. 예를 들어 신뢰할 수 있는 세션을 사용하지 않는 <xref:System.ServiceModel.NetTcpBinding?displayProperty=nameWithType>은 TCP 연결의 세션을 표시하므로 서비스 또는 클라이언트의 <xref:System.ServiceModel.ICommunicationObject.Faulted?displayProperty=nameWithType> 이벤트를 수신 대기하면 네트워크 오류가 발생할 경우 신속하게 알림을 받습니다. 그러나 <xref:System.ServiceModel.Channels.ReliableSessionBindingElement?displayProperty=nameWithType>를 사용하는 바인딩으로 설정된 신뢰할 수 있는 세션은 소규모 네트워크 오류로부터 서비스를 분리합니다. 적절한 기간 내에 세션을 다시 설정할 수 있는 경우 보다 긴 기간 동안 중단이 계속될 때까지 신뢰할 수 있는 세션에 대해 구성된 동일한 바인딩이 실패하지 않습니다.  
   
- 채널을 응용 프로그램 계층에 노출하는 대부분의 시스템 제공 바인딩은 기본적으로 세션을 사용하지만 <xref:System.ServiceModel.BasicHttpBinding?displayProperty=nameWithType>은 사용하지 않습니다. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][세션을 사용 하 여](../../../../docs/framework/wcf/using-sessions.md)합니다.  
+ 채널을 응용 프로그램 계층에 노출하는 대부분의 시스템 제공 바인딩은 기본적으로 세션을 사용하지만 <xref:System.ServiceModel.BasicHttpBinding?displayProperty=nameWithType>은 사용하지 않습니다. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [세션을 사용 하 여](../../../../docs/framework/wcf/using-sessions.md)합니다.  
   
 ### <a name="the-proper-use-of-sessions"></a>적절한 세션 사용  
  세션은 전체 메시지 교환이 완료되었는지 여부 및 양쪽에서 성공했다고 간주하는지 여부를 확인하는 방법을 제공합니다. 호출 응용 프로그램은 하나의 try 블록 내에서 채널을 열고 사용한 후 닫는 것이 좋습니다. 세션 채널이 열려 있고 <xref:System.ServiceModel.ICommunicationObject.Close%2A?displayProperty=nameWithType> 메서드를 한 번 호출한 후 해당 호출이 성공적으로 반환되면 세션이 성공했습니다. 이 경우 성공은 바인딩에서 지정한 모든 배달 보증이 충족되었으며 다른 쪽이 <xref:System.ServiceModel.ICommunicationObject.Abort%2A?displayProperty=nameWithType>를 호출하기 전에 채널에서 <xref:System.ServiceModel.ICommunicationObject.Close%2A>를 호출하지 않았음을 의미합니다.  
@@ -62,7 +64,7 @@ ms.lasthandoff: 12/22/2017
  클라이언트 응용 프로그램의 예외 처리는 단순합니다. 하나의 try 블록 내에서 채널을 열고 사용한 후 닫으면 예외가 throw되지 않는 한 대화가 성공합니다. 일반적으로 예외가 throw되면 대화가 중단됩니다.  
   
 > [!NOTE]
->  `using` 문(`Using`의 [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)])은 사용하지 않는 것이 좋습니다. 이는 `using` 문의 끝에서 예외가 발생하여 사용자가 확인해야 하는 다른 예외를 마스킹할 수 있기 때문입니다. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Using 문과 문제 방지](../../../../docs/framework/wcf/samples/avoiding-problems-with-the-using-statement.md)합니다.  
+>  사용은 `using` 문 (`Using` Visual basic에서) 권장 되지 않습니다. 이는 `using` 문의 끝에서 예외가 발생하여 사용자가 확인해야 하는 다른 예외를 마스킹할 수 있기 때문입니다. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [사용 하 여 문 사용 하 여 문제를 방지](../../../../docs/framework/wcf/samples/avoiding-problems-with-the-using-statement.md)합니다.  
   
  다음 코드 예제에서는 `using` 문이 아니라 try/catch 블록을 사용한 권장되는 클라이언트 패턴을 보여 줍니다.  
   
@@ -74,16 +76,16 @@ ms.lasthandoff: 12/22/2017
   
  데이터그램 채널은 닫을 때 예외가 발생하는 경우에도 실패하지 않습니다. 또한 보안 대화를 사용하여 인증할 수 없는 비이중 클라이언트는 일반적으로 <xref:System.ServiceModel.Security.MessageSecurityException?displayProperty=nameWithType>을 throw합니다. 그러나 보안 대화를 사용하는 이중 클라이언트가 인증할 수 없는 경우 클라이언트는 대신 <xref:System.TimeoutException?displayProperty=nameWithType>을 수신합니다.  
   
- 응용 프로그램 수준에서 오류 정보로 작업 하는 방법에 대 한 자세한 정보를 참조 하십시오. [지정 및 계약 및 서비스에서 처리 오류](../../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)합니다. [예상 되는 오류](../../../../docs/framework/wcf/samples/expected-exceptions.md) 예상 되는 예외를 설명 하 고 처리 하는 방법을 보여 줍니다. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]채널 개발 하는 경우 오류 처리를 참조 하는 방법 [예외 처리 및 오류](../../../../docs/framework/wcf/extending/handling-exceptions-and-faults.md)합니다.  
+ 응용 프로그램 수준에서 오류 정보로 작업 하는 방법에 대 한 자세한 정보를 참조 하십시오. [지정 및 계약 및 서비스에서 처리 오류](../../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)합니다. [예상 되는 오류](../../../../docs/framework/wcf/samples/expected-exceptions.md) 예상 되는 예외를 설명 하 고 처리 하는 방법을 보여 줍니다. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 채널 개발 하는 경우 오류 처리를 참조 하는 방법 [예외 처리 및 오류](../../../../docs/framework/wcf/extending/handling-exceptions-and-faults.md)합니다.  
   
 ### <a name="client-blocking-and-performance"></a>클라이언트 차단 및 성능  
- 응용 프로그램에서 동기적으로 request-reply 작업을 호출하는 경우 클라이언트는 반환 값이 수신되거나 <xref:System.TimeoutException?displayProperty=nameWithType> 같은 예외가 throw될 때까지 차단됩니다. 이 동작은 로컬 동작과 유사합니다. 응용 프로그램이 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 클라이언트 개체나 채널에서 동기적으로 작업을 호출하는 경우 클라이언트는 채널 계층이 데이터를 네트워크에 쓸 수 있을 때까지 또는 예외가 throw될 때까지 반환되지 않습니다. <xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A?displayProperty=nameWithType>를 `true`로 설정하여 작업을 표시함으로써 지정된 단방향 메시지 교환 패턴은 일부 클라이언트의 응답을 향상시키지만 바인딩 및 이미 전송된 메시지에 따라 단방향 작업이 차단될 수도 있습니다. 단방향 작업은 메시지 교환에만 사용됩니다. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][단방향 서비스](../../../../docs/framework/wcf/feature-details/one-way-services.md)합니다.  
+ 응용 프로그램에서 동기적으로 request-reply 작업을 호출하는 경우 클라이언트는 반환 값이 수신되거나 <xref:System.TimeoutException?displayProperty=nameWithType> 같은 예외가 throw될 때까지 차단됩니다. 이 동작은 로컬 동작과 유사합니다. 응용 프로그램이 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 클라이언트 개체나 채널에서 동기적으로 작업을 호출하는 경우 클라이언트는 채널 계층이 데이터를 네트워크에 쓸 수 있을 때까지 또는 예외가 throw될 때까지 반환되지 않습니다. <xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A?displayProperty=nameWithType>를 `true`로 설정하여 작업을 표시함으로써 지정된 단방향 메시지 교환 패턴은 일부 클라이언트의 응답을 향상시키지만 바인딩 및 이미 전송된 메시지에 따라 단방향 작업이 차단될 수도 있습니다. 단방향 작업은 메시지 교환에만 사용됩니다. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [단방향 서비스](../../../../docs/framework/wcf/feature-details/one-way-services.md)합니다.  
   
  큰 데이터 청크는 메시지 교환 패턴에 관계없이 클라이언트 처리 속도를 저하시킬 수 있습니다. 이러한 문제를 처리 하는 방법을 알아보려면 참조 [큰 데이터 및 스트리밍](../../../../docs/framework/wcf/feature-details/large-data-and-streaming.md)합니다.  
   
  작업이 완료되는 동안 응용 프로그램에서 추가 작업을 수행해야 하는 경우 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 클라이언트가 구현하는 서비스 계약 인터페이스에 비동기 메서드 쌍을 만들어야 합니다. 이 작업을 수행 하는 가장 쉬운 방법은 사용 하는 `/async` 스위치에 [ServiceModel Metadata 유틸리티 도구 (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)합니다. 예를 들어 참조 [하는 방법: 비동기적 서비스 작업 호출](../../../../docs/framework/wcf/feature-details/how-to-call-wcf-service-operations-asynchronously.md)합니다.  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]클라이언트 성능을 향상 시키는 참조 [중간 계층 클라이언트 응용 프로그램](../../../../docs/framework/wcf/feature-details/middle-tier-client-applications.md)합니다.  
+ [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 클라이언트 성능을 향상 시키는 참조 [중간 계층 클라이언트 응용 프로그램](../../../../docs/framework/wcf/feature-details/middle-tier-client-applications.md)합니다.  
   
 ### <a name="enabling-the-user-to-select-credentials-dynamically"></a>사용자가 동적으로 자격 증명을 선택할 수 있도록 설정  
  <xref:System.ServiceModel.Dispatcher.IInteractiveChannelInitializer> 인터페이스를 사용하면 응용 프로그램이 시간 제한 타이머가 시작되기 전에 채널을 만드는 데 사용할 자격 증명을 사용자가 선택할 수 있도록 하는 사용자 인터페이스를 표시할 수 있습니다.  

@@ -1,10 +1,11 @@
 ---
-title: "방법: 명령줄 컴파일러 호출(Visual Basic)"
+title: '방법: 명령줄 컴파일러 호출(Visual Basic)'
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - command-line arguments
@@ -12,14 +13,14 @@ helpviewer_keywords:
 - Visual Basic compiler, starting
 - command line [Visual Basic], arguments
 ms.assetid: 0fd9a8f6-f34e-4c35-a49d-9b9bbd8da4a9
-caps.latest.revision: "28"
+caps.latest.revision: 28
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 5c69860ede5620272e67bde435e6e6fa08cc81bc
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: f1ccf08ba58fa6af60bd8ffd7cba79b205dc0f3d
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-invoke-the-command-line-compiler-visual-basic"></a>방법: 명령줄 컴파일러 호출(Visual Basic)
 MS-DOS 프롬프트 라고도 하는 명령줄에 실행 파일의 이름을 입력 하 여 명령줄 컴파일러를 호출할 수 있습니다. 기본 Windows 명령 프롬프트에서에서 컴파일하는 경우에 실행 파일의 정규화 된 경로 입력 해야 합니다. 이 기본 동작을 재정의 하려면 사용할 수 있습니다는 [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] 명령 프롬프트 또는 PATH 환경 변수를 수정 합니다. 둘 다 컴파일러 이름을 입력 하 여 원하는 디렉터리에서 컴파일할 수 있습니다.  
@@ -54,7 +55,7 @@ MS-DOS 프롬프트 라고도 하는 명령줄에 실행 파일의 이름을 입
   
 6.  클릭 **확인** 편집 내용을 확인 하는 대화 상자를 닫습니다.  
   
-     PATH 환경 변수를 변경한 후 실행할 수 있습니다는 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 컴파일러는 컴퓨터의 모든 디렉터리에서 Windows 명령 프롬프트에서 합니다.  
+     PATH 환경 변수를 변경한 후 실행할 수 있습니다 Visual Basic 컴파일러 Windows 명령 프롬프트에서 디렉터리에서 컴퓨터에 있습니다.  
   
 ### <a name="to-invoke-the-compiler-using-the-windows-command-prompt"></a>Windows 명령 프롬프트를 사용 하 여 컴파일러를 호출 하려면  
   

@@ -16,11 +16,11 @@ ms.author: douglasl
 manager: craigg
 ms.workload:
 - dotnet
-ms.openlocfilehash: e25f6dceb6018b719a0a8a07822b20d85a08a012
-ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
+ms.openlocfilehash: 757c64fdc66d9c564fc151bc78fdbda23d9b6705
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="filestream-data"></a>FILESTREAM 데이터
 FILESTREAM 저장소 특성은 varbinary(max) 열에 저장된 이진(BLOB) 데이터에 사용됩니다. FILESTREAM 이전에는 이진 데이터를 저장하려면 특별한 처리가 필요했습니다. 텍스트 문서, 이미지 및 비디오 같이 구조화되지 않은 데이터는 대개 데이터베이스의 외부에 저장되어 관리가 어렵습니다.  
@@ -28,13 +28,13 @@ FILESTREAM 저장소 특성은 varbinary(max) 열에 저장된 이진(BLOB) 데�
 > [!NOTE]
 >  SqlClient에서 FILESTREAM 데이터로 작업하려면 .NET Framework 3.5 SP1 이상을 설치해야 합니다.  
   
- varbinary(max) 열에 FILESTREAM 특성을 지정하면 [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)]에서는 데이터베이스 파일 대신 로컬 NTFS 파일 시스템에 데이터를 저장합니다. 데이터가 별도로 저장되기는 하지만 데이터베이스에 저장된 varbinary(max) 데이터로 작업할 때와 동일한 [!INCLUDE[tsql](../../../../../includes/tsql-md.md)] 문을 사용할 수 있습니다.  
+ varbinary(max) 열에 FILESTREAM 특성을 지정하면 SQL Server에서는 데이터베이스 파일 대신 로컬 NTFS 파일 시스템에 데이터를 저장합니다. 데이터가 별도로 저장되기는 하지만 데이터베이스에 저장된 varbinary(max) 데이터로 작업할 때와 동일한 [!INCLUDE[tsql](../../../../../includes/tsql-md.md)] 문을 사용할 수 있습니다.  
   
 ## <a name="sqlclient-support-for-filestream"></a>FILESTREAM에 대한 SqlClient 지원  
- [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] Data Provider for [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)](<xref:System.Data.SqlClient>)에서는 <xref:System.Data.SqlTypes.SqlFileStream> 네임스페이스에 정의된 <xref:System.Data.SqlTypes> 클래스를 사용하여 FILESTREAM 데이터에 대한 읽기와 쓰기를 지원합니다. `SqlFileStream`은 데이터 스트림에 대한 읽기 및 쓰기 메서드를 제공하는 <xref:System.IO.Stream> 클래스에서 상속됩니다. 스트림에서 읽으면 바이트 배열과 같은 데이터가 스트림에서 데이터 구조로 전송되고, 데이터를 쓰면 데이터가 데이터 구조에서 스트림으로 전송됩니다.  
+ [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] Data Provider for SQL Server <xref:System.Data.SqlClient>, 지원 읽기 및 쓰기를 사용 하 여 FILESTREAM 데이터는 <xref:System.Data.SqlTypes.SqlFileStream> 에 정의 된 클래스는 <xref:System.Data.SqlTypes> 네임 스페이스입니다. `SqlFileStream`은 데이터 스트림에 대한 읽기 및 쓰기 메서드를 제공하는 <xref:System.IO.Stream> 클래스에서 상속됩니다. 스트림에서 읽으면 바이트 배열과 같은 데이터가 스트림에서 데이터 구조로 전송되고, 데이터를 쓰면 데이터가 데이터 구조에서 스트림으로 전송됩니다.  
   
-### <a name="creating-the-includessnoversionincludesssnoversion-mdmd-table"></a>[!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] 테이블 만들기  
- 다음 [!INCLUDE[tsql](../../../../../includes/tsql-md.md)] 문은 employees라는 테이블을 만들어 데이터 행을 삽입합니다. FILESTREAM 저장소를 설정한 후에는 다음에 나오는 코드 예제와 함께 이 테이블을 사용할 수 있습니다. 이 항목의 맨 마지막에는 [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] 온라인 설명서의 리소스에 대한 링크가 나옵니다.  
+### <a name="creating-the-sql-server-table"></a>SQL Server 테이블 만들기  
+ 다음 [!INCLUDE[tsql](../../../../../includes/tsql-md.md)] 문은 employees라는 테이블을 만들어 데이터 행을 삽입합니다. FILESTREAM 저장소를 설정한 후에는 다음에 나오는 코드 예제와 함께 이 테이블을 사용할 수 있습니다. SQL Server 온라인 설명서의 리소스에 대 한 링크는이 항목의 끝부분에 나와 있습니다.  
   
 ```  
 CREATE TABLE employees  
@@ -182,8 +182,8 @@ namespace FileStreamTest
   
  또 다른 예제를 참조 하십시오. [저장 하 고 파일 스트림 열에 이진 데이터를 인출 하는 방법을](http://www.codeproject.com/Articles/32216/How-to-store-and-fetch-binary-data-into-a-file-str)합니다.  
   
-## <a name="resources-in-includessnoversionincludesssnoversion-mdmd-books-online"></a>[!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] 온라인 설명서 리소스  
- FILESTREAM에 대한 자세한 설명은 [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] 온라인 설명서의 다음 단원에 나와 있습니다.  
+## <a name="resources-in-sql-server-books-online"></a>SQL Server 온라인 설명서 리소스  
+ FILESTREAM에 대 한 전체 설명서는 SQL Server 온라인 설명서의 다음 섹션에 있습니다.  
   
 |항목|설명|  
 |-----------|-----------------|  

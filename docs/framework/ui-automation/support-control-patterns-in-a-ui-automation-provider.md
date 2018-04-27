@@ -1,12 +1,13 @@
 ---
-title: "UI 자동화 공급자의 컨트롤 패턴 지원"
-ms.custom: 
+title: UI 자동화 공급자의 컨트롤 패턴 지원
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-bcl
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-bcl
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,16 +16,17 @@ helpviewer_keywords:
 - control patterns, supporting in UI Automation provider
 - UI Automation, supporting control patterns in provider
 ms.assetid: 0d635c35-ffa8-4dc8-bbc9-12fcd5445776
-caps.latest.revision: "13"
+caps.latest.revision: 13
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: 9e85aa2fe36ad6fab59ae071a662755219ccbbb8
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: c66df9103b1edb43490a7e1a6a9d1a3cc87bfc28
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="support-control-patterns-in-a-ui-automation-provider"></a>UI 자동화 공급자의 컨트롤 패턴 지원
 > [!NOTE]
@@ -36,16 +38,16 @@ ms.lasthandoff: 12/22/2017
   
 1.  <xref:System.Windows.Automation.Provider.IInvokeProvider> 용 <xref:System.Windows.Automation.InvokePattern>와 같이 요소가 지원해야 하는 컨트롤 패턴에 사용되는 적절한 인터페이스를 구현합니다.  
   
-2.  각 컨트롤 인터페이스의 구현에서의 사용자 구현을 포함 하는 개체를 반환 합니다.<xref:System.Windows.Automation.Provider.IRawElementProviderSimple.GetPatternProvider%2A?displayProperty=nameWithType>  
+2.  각 컨트롤 인터페이스의 구현에서의 사용자 구현을 포함 하는 개체를 반환 합니다. <xref:System.Windows.Automation.Provider.IRawElementProviderSimple.GetPatternProvider%2A?displayProperty=nameWithType>  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 예제에서는 단일 선택 사용자 지정 목록 상자에 대한 <xref:System.Windows.Automation.Provider.ISelectionProvider> 의 구현을 보여 줍니다. 3개의 속성을 반환하고 현재 선택된 항목을 가져옵니다.  
   
  [!code-csharp[UIAFragmentProvider_snip#119](../../../samples/snippets/csharp/VS_Snippets_Wpf/UIAFragmentProvider_snip/CSharp/ListPattern.cs#119)]
  [!code-vb[UIAFragmentProvider_snip#119](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/UIAFragmentProvider_snip/VisualBasic/ListPattern.vb#119)]  
   
-## <a name="example"></a>예  
- 다음 예제에서는 <xref:System.Windows.Automation.Provider.IRawElementProviderSimple.GetPatternProvider%2A> 를 구현하는 클래스를 반환하는 <xref:System.Windows.Automation.Provider.ISelectionProvider>의 구현을 보여 줍니다. 대부분의 목록 상자 컨트롤은 다른 패턴도 지원하지만, 이 예제에서는 다른 모든 패턴 식별자에 대해 null 참조(`Nothing` 에서 [!INCLUDE[TLA#tla_visualbnet](../../../includes/tlasharptla-visualbnet-md.md)])가 반환됩니다.  
+## <a name="example"></a>예제  
+ 다음 예제에서는 <xref:System.Windows.Automation.Provider.IRawElementProviderSimple.GetPatternProvider%2A> 를 구현하는 클래스를 반환하는 <xref:System.Windows.Automation.Provider.ISelectionProvider>의 구현을 보여 줍니다. 대부분의 목록 상자 컨트롤은 다른 패턴도 지원 하지만,이 예제는 null 참조 (`Nothing` Microsoft Visual Basic.net에서) 다른 모든 패턴 식별자에 대해 반환 됩니다.  
   
  [!code-csharp[UIAFragmentProvider_snip#120](../../../samples/snippets/csharp/VS_Snippets_Wpf/UIAFragmentProvider_snip/CSharp/ListFragment.cs#120)]
  [!code-vb[UIAFragmentProvider_snip#120](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/UIAFragmentProvider_snip/VisualBasic/ListFragment.vb#120)]  

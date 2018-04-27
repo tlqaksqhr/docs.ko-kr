@@ -1,20 +1,18 @@
 ---
-title: "일치 식(F#)"
-description: "F # 일치 식 패턴의 집합 식의 비교를 기반으로 하는 분기를 제어를 제공 하는 방법에 대해 알아봅니다."
-keywords: "visual f#, f#, 함수형 프로그래밍"
+title: '일치 식 (F #)'
+description: 'F # 일치 식 패턴의 집합 식의 비교를 기반으로 하는 분기를 제어를 제공 하는 방법에 대해 알아봅니다.'
 author: cartermp
 ms.author: phcart
-ms.date: 05/16/2016
+ms.date: 04/19/2018
 ms.topic: language-reference
 ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
-ms.assetid: 8854b713-255a-408d-942a-e80ab52fd2a4
-ms.openlocfilehash: c8b9be744cfa7bc76f0d663b12abd66f8757fc56
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: f843e6fde98eae8a10235dd5cae38ffc10a4fb9f
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="match-expressions"></a>일치 식
 
@@ -48,7 +46,7 @@ fun arg ->
     | pattern1 [ when condition ] -> result-expression1
     | pattern2 [ when condition ] -> result-expression2
     | ...
-```    
+```
 
 람다 식에 대 한 자세한 내용은 참조 [람다 식:는 `fun` 키워드](functions/lambda-expressions-the-fun-keyword.md)합니다.
 
@@ -66,14 +64,29 @@ fun arg ->
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet4602.fs)]
 
-패턴의 리터럴 이외의 값을 사용할 수 없으므로, 있습니다를 사용 해야는 `when` 절 값에 대해 입력의 일부 비교 해야 하는 경우. 다음 코드에서 이를 확인할 수 있습니다.
+패턴의 리터럴 이외의 값을 사용할 수 없으므로, 있습니다를 사용 해야는 `when` 절 값에 대해 입력의 일부 비교 해야 하는 경우. 이 다음 코드에 나와 있습니다.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet4603.fs)]
 
-## <a name="see-also"></a>참고 항목
+공용 구조체 패턴을 가드에서 검사 하는 가드를 적용 **모든** 의 마지막 하나 뿐 아니라 패턴입니다. 예를 들어 다음 코드에서는 가드 `when a > 12` 모두에 적용 되지만 `A a` 및 `B a`:
 
-[F# 언어 참조](index.md)
+```fsharp
+type Union =
+    | A of int
+    | B of int
 
-[활성 패턴](active-patterns.md)
+let foo() =
+    let test = A 42
+    match test with
+    | A a
+    | B a when a > 41 -> a // the guard applies to both patterns
+    | _ -> 1
 
-[패턴 일치](pattern-matching.md)
+foo() // returns 42
+```
+
+## <a name="see-also"></a>참고자료
+
+[F# 언어 참조](index.md)  
+[활성 패턴](active-patterns.md)  
+[패턴 일치](pattern-matching.md)  

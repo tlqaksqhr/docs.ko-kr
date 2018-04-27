@@ -1,30 +1,31 @@
 ---
-title: "사용자 지정 식 편집기 사용"
-ms.custom: 
+title: 사용자 지정 식 편집기 사용
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 0901b58b-e037-44a8-8281-f6f54361cfca
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 5ae60b8267e60d880ccdc156566b489163d2e686
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 5388ed3f55d97f3282a710ac59fe36cfb32fa49c
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="using-a-custom-expression-editor"></a>사용자 지정 식 편집기 사용
 사용자 지정 식 편집기를 구현하여 보다 다양하거나 단순한 식 편집 환경을 제공할 수 있습니다. 사용자 지정 식 편집기는 다음과 같은 경우에 사용할 수 있습니다.  
   
 -   IntelliSense와 다시 호스트된 Workflow Designer의 다른 다양한 편집 기능을 지원하려는 경우. 다시 호스트된 응용 프로그램에서는 기본 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 식 편집기를 사용할 수 없으므로 이 기능을 제공해야 합니다.  
   
--   예를 들어 비즈니스 분석가가 [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]에 대해 배우거나 [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] 식을 처리할 필요가 없도록 식 편집 환경을 단순화하려는 경우  
+-   , 예를 들어 않아도 됩니다 Visual Basic 살펴보기 또는 Visual Basic 식이 다루기가 식 편집 환경을 비즈니스 분석가 사용자를 위한를 단순화 합니다.  
   
  사용자 지정 식 편집기를 구현하는 데는 기본적으로 다음과 같은 세 단계가 필요합니다.  
   

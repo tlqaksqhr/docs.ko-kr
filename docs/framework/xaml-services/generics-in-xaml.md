@@ -1,34 +1,34 @@
 ---
-title: "XAML의 제네릭"
-ms.custom: 
+title: XAML의 제네릭
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-wpf
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - generics [XAML Services]
 ms.assetid: 835bfed7-585c-4216-ae67-b674edab8b92
-caps.latest.revision: 
+caps.latest.revision: 8
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: c0e5bfb4f327028f09e8c898cf07e5fec9a5f789
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: e64224edcb49d5040332b7cef9649c98cf26798b
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="generics-in-xaml"></a>XAML의 제네릭
 System.Xaml에 구현 된 대로.NET Framework XAML 서비스 제네릭 CLR 형식 사용에 대 한 지원을 제공 합니다. 이 지원 형식 인수로 제네릭의 제약 조건을 지정 하는 제약 조건을 적절 한 호출 하 여 적용 및 포함 `Add` 방법의 경우 제네릭 컬렉션입니다. 이 항목에서는 사용 하 고 XAML의 제네릭 형식 참조의 측면을 설명 합니다.  
   
 ## <a name="xtypearguments"></a>나온  
- `x:TypeArguments`지시문은 XAML 언어에 의해 정의 됩니다. 제네릭 형식에 의해 지원 되는 XAML 형식의 멤버로 사용할 경우 `x:TypeArguments` 형식 제네릭을 지원 생성자의 인수를 전달 합니다. .NET Framework XAML 서비스에 관련 된 참조 구문이 사용 하 여의 `x:TypeArguments`, 구문 예제를 포함 된, 참조 [X:typearguments 지시문](../../../docs/framework/xaml-services/x-typearguments-directive.md)합니다.  
+ `x:TypeArguments` 지시문은 XAML 언어에 의해 정의 됩니다. 제네릭 형식에 의해 지원 되는 XAML 형식의 멤버로 사용할 경우 `x:TypeArguments` 형식 제네릭을 지원 생성자의 인수를 전달 합니다. .NET Framework XAML 서비스에 관련 된 참조 구문이 사용 하 여의 `x:TypeArguments`, 구문 예제를 포함 된, 참조 [X:typearguments 지시문](../../../docs/framework/xaml-services/x-typearguments-directive.md)합니다.  
   
  때문에 `x:TypeArguments` 는 문자열을 형식 변환기 지원을 갖고 특성으로 XAML 사용에 일반적으로 선언 된 것입니다.  
   
@@ -53,7 +53,7 @@ System.Xaml에 구현 된 대로.NET Framework XAML 서비스 제네릭 CLR 형�
   
  WPF와 대상 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]와 함께 XAML 2009 기능을 사용할 수 있습니다 `x:TypeArguments`, 느슨한 XAML (태그 컴파일되지 않은 XAML)에 대해서만 합니다. WPF에 대한 태그로 컴파일된 XAML 및 BAML 형식의 XAML은 현재 XAML 2009 키워드 및 기능을 지원하지 않습니다.  
   
- 사용자 지정 워크플로 [!INCLUDE[TLA#tla_workflow](../../../includes/tlasharptla-workflow-md.md)] 에 대 한 [!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)] 일반 XAML 사용을 지원 하지 않습니다.  
+ Windows Workflow foundation에 대 한 사용자 지정 워크플로 [!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)] 일반 XAML 사용을 지원 하지 않습니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [x:TypeArguments 지시문](../../../docs/framework/xaml-services/x-typearguments-directive.md)  

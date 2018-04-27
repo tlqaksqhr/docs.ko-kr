@@ -1,12 +1,13 @@
 ---
-title: "x:ClassModifier 지시문"
-ms.custom: 
+title: x:ClassModifier 지시문
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - xClassModifier
@@ -17,16 +18,17 @@ helpviewer_keywords:
 - x:ClassModifier attribute [XAML Services]
 - ClassModifier attribute in XAML [XAML Services]
 ms.assetid: ef30ab78-d334-4668-917d-c9f66c3b6aea
-caps.latest.revision: "22"
+caps.latest.revision: 22
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 1a4918e23a915ee07eace388ea2cea512c2e479d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: ab6036ecb37bb80588a59b581af0b88fc83230a4
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="xclassmodifier-directive"></a>x:ClassModifier 지시문
 XAML 컴파일 동작을 수정 하는 경우 `x:Class` 도 제공 됩니다. 특히 부분을 만드는 대신 `class` 있는 `Public` 액세스 수준 (기본값), 제공 된 `x:Class` 사용 하 여 만든는 `NotPublic` 액세스 수준입니다. 이 문제는 생성된 된 어셈블리의 클래스에 대 한 액세스 수준을 영향을 줍니다.  
@@ -51,15 +53,15 @@ XAML 컴파일 동작을 수정 하는 경우 `x:Class` 도 제공 됩니다. �
 ## <a name="remarks"></a>설명  
  값 `x:ClassModifier` .NET Framework XAML 서비스에서 사용 현황 프로그래밍 언어에 따라 다릅니다. 사용할 문자열을 각 언어 구현 하는 방법에 따라 달라 집니다 해당 <xref:System.CodeDom.Compiler.CodeDomProvider> 및 형식 변환기에 대 한 의미를 정의 하려면 반환 <xref:System.Reflection.TypeAttributes.Public?displayProperty=nameWithType> 및 <xref:System.Reflection.TypeAttributes.NotPublic?displayProperty=nameWithType>, 해당 언어는 대/소문자 구분 여부입니다.  
   
--   에 대 한 [!INCLUDE[TLA2#tla_cshrp](../../../includes/tla2sharptla-cshrp-md.md)]를 지정 하려면 전달할 문자열 <xref:System.Reflection.TypeAttributes.NotPublic?displayProperty=nameWithType> 은 `internal`합니다.  
+-   C#을 지정 하려면 전달할 문자열 <xref:System.Reflection.TypeAttributes.NotPublic?displayProperty=nameWithType> 은 `internal`합니다.  
   
--   에 대 한 [!INCLUDE[TLA2#tla_visualbnet](../../../includes/tla2sharptla-visualbnet-md.md)]를 지정 하려면 전달할 문자열 <xref:System.Reflection.TypeAttributes.NotPublic?displayProperty=nameWithType> 은 `Friend`합니다.  
+-   Microsoft Visual Basic.NET을 지정 하려면 전달할 문자열에 대 한 <xref:System.Reflection.TypeAttributes.NotPublic?displayProperty=nameWithType> 은 `Friend`합니다.  
   
 -   에 대 한 [!INCLUDE[TLA2#tla_cppcli](../../../includes/tla2sharptla-cppcli-md.md)], 대상이 존재 XAML 컴파일을 지 원하는; 따라서 전달할 값을 지정 되지 않았습니다.  
   
- 지정할 수도 있습니다 <xref:System.Reflection.TypeAttributes.Public?displayProperty=nameWithType> (`public` 에 [!INCLUDE[TLA2#tla_cshrp](../../../includes/tla2sharptla-cshrp-md.md)], `Public` 에 [!INCLUDE[TLA2#tla_visualb](../../../includes/tla2sharptla-visualb-md.md)]) 소비량이 적어지지만 지정 <xref:System.Reflection.TypeAttributes.Public?displayProperty=nameWithType> 때문에 자주 수행 됩니다 <xref:System.Reflection.TypeAttributes.Public?displayProperty=nameWithType> 이미 기본 동작입니다.  
+ 지정할 수도 있습니다 <xref:System.Reflection.TypeAttributes.Public?displayProperty=nameWithType> (`public` C#에서는 `Public` Visual Basic의) 소비량이 적어지지만 지정 <xref:System.Reflection.TypeAttributes.Public?displayProperty=nameWithType> 때문에 자주 수행 됩니다 <xref:System.Reflection.TypeAttributes.Public?displayProperty=nameWithType> 이미 기본 동작입니다.  
   
- 다른 값을 해당 하는 사용자 코드와 액세스 수준 제한 사항 등 `private` 에 [!INCLUDE[TLA2#tla_cshrp](../../../includes/tla2sharptla-cshrp-md.md)], 관련이 없으므로 `x:ClassModifier` XAML에서 중첩 된 클래스 참조는 지원 되지 않으므로 <xref:System.Reflection.TypeAttributes.NotPublic?displayProperty=nameWithType> 한정자가 동일한 효과입니다.  
+ 다른 값을 해당 하는 사용자 코드와 액세스 수준 제한 사항 등 `private` C#에 관련이 없는 `x:ClassModifier` XAML에서 중첩 된 클래스 참조는 지원 되지 않으므로 <xref:System.Reflection.TypeAttributes.NotPublic?displayProperty=nameWithType> 한정자는 같습니다.  
   
 ## <a name="security-notes"></a>보안 정보  
  액세스 수준에서 선언 된 `x:ClassModifier` 특정 프레임 워크와 기능에서 여전히 해석 됩니다. WPF에 로드 하 고 형식을 인스턴스화합니다 기능이 포함 되어 있습니다. 여기서 `x:ClassModifier` 은 `internal`pack URI 참조를 통해 WPF 리소스에서 해당 클래스를 참조 하는 경우. 이 대/이 소문자 및 다른 사용자 같은 다른 프레임 워크에 의해 구현 된을 결과로 마십시오에 의존 하지 `x:ClassModifier` 가능한 모든 인스턴스화를 차단 하도록 시도 합니다.  

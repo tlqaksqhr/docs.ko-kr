@@ -1,11 +1,12 @@
 ---
-title: "연습: COM 개체를 사용한 상속 구현(Visual Basic)"
-ms.custom: 
+title: '연습: COM 개체를 사용한 상속 구현(Visual Basic)'
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - inheritance [Visual Basic], COM reusability
@@ -13,17 +14,17 @@ helpviewer_keywords:
 - inheritance [Visual Basic], walkthroughs
 - derived classes [Visual Basic], COM reusability
 ms.assetid: f8e7263a-de13-48d1-b67c-ca1adf3544d9
-caps.latest.revision: "16"
+caps.latest.revision: 16
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 8d6906c58431a0e844e8f430ade10ae819e77ff2
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 10c6bdf46e351b23705107da3b693531718cfd37
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="walkthrough-implementing-inheritance-with-com-objects-visual-basic"></a>연습: COM 개체를 사용한 상속 구현(Visual Basic)
-Visual Basic 클래스를 파생 시켜 `Public` 의 이전 버전에서 만든 된 COM 개체의 클래스 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]합니다. 속성 및 COM 개체에서 상속 된 클래스의 메서드를 재정의 하거나 속성와 마찬가지로 오버 로드 및 다른 기본 클래스의 메서드를 재정의 하거나 오버 로드 합니다. COM 개체에서 상속 다시 컴파일하지 않을 기존 클래스 라이브러리에 있는 경우에 유용 합니다.  
+Visual Basic 클래스를 파생 시켜 `Public` 도 이전 버전의 Visual Basic에 생성 된 COM 개체의 클래스. 속성 및 COM 개체에서 상속 된 클래스의 메서드를 재정의 하거나 속성와 마찬가지로 오버 로드 및 다른 기본 클래스의 메서드를 재정의 하거나 오버 로드 합니다. COM 개체에서 상속 다시 컴파일하지 않을 기존 클래스 라이브러리에 있는 경우에 유용 합니다.  
   
  다음 절차에는 클래스를 포함 하는 COM 개체를 만들려면 Visual Basic 6.0을 사용 하 여 다음 기본 클래스로 사용 하 여 하는 방법을 보여 줍니다.  
   
@@ -77,18 +78,18 @@ Visual Basic 클래스를 파생 시켜 `Public` 의 이전 버전에서 만든 
 10. 만들기 및 COM 개체를 클릭 하 여 등록 **확인 ComObject1.dll** 에 **파일** 메뉴.  
   
     > [!NOTE]
-    >  만든 클래스를 노출할 수도 있지만 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 를 COM 개체로 실제 COM 개체 아니며이 연습에서 사용할 수 없습니다. 자세한 내용은 참조 [.NET Framework 응용 프로그램의 COM 상호 운용성](../../../visual-basic/programming-guide/com-interop/com-interoperability-in-net-framework-applications.md)합니다.  
+    >  클래스를 COM 개체로 Visual Basic을 사용 하 여 만든를 노출할 수도 있지만 실제 COM 개체 아니며이 연습에서 사용할 수 없습니다. 자세한 내용은 참조 [.NET Framework 응용 프로그램의 COM 상호 운용성](../../../visual-basic/programming-guide/com-interop/com-interoperability-in-net-framework-applications.md)합니다.  
   
 ## <a name="interop-assemblies"></a>Interop 어셈블리  
- 다음 절차에서는 관리 되지 않는 코드 (예: COM 개체)와 관리 코드 간 브리지 역할을 하는 interop 어셈블리를 만들게 됩니다 [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] 사용 합니다. Interop 어셈블리는 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 와 같은 다양 한 COM 사용의 세부 정보 개체 핸들을 만듭니다 *interop 마샬링*, 프로세스 매개 변수 및 반환 값에 해당 하는 데이터를 이동 하는 동안 형식 및 com에서 개체입니다. 에 대 한 참조는 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 응용 프로그램이 interop 어셈블리를 실제 COM 개체를 가리키는 합니다.  
+ 다음 절차에서는 관리 되지 않는 코드 (예: COM 개체)와 관리 코드 간 브리지 역할을 하는 interop 어셈블리를 만들게 됩니다 [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] 사용 합니다. Interop 어셈블리를 Visual Basic 만듭니다이 COM 개체와 같은 작업의 세부 사항을 처리 *interop 마샬링*, 프로세스 매개 변수 및 반환 값에 해당 하는 데이터를 이동 하는 동안 형식 및 COM 개체입니다. Visual Basic 응용 프로그램에 대 한 참조는 interop 어셈블리를 실제 COM 개체를 가리킵니다.  
   
 #### <a name="to-use-a-com-object-with-visual-basic-2005-and-later-versions"></a>Visual Basic 2005 및 이후 버전으로 COM 개체를 사용 하려면  
   
-1.  새 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] Windows 응용 프로그램 프로젝트를 엽니다.  
+1.  새 Visual Basic Windows 응용 프로그램 프로젝트를 엽니다.  
   
 2.  **프로젝트** 메뉴에서 **참조 추가**를 클릭합니다.  
   
-     **참조 추가** 대화 상자가 표시 됩니다.  
+     **참조 추가** 대화 상자가 표시됩니다.  
   
 3.  에 **COM** 탭을 두 번 클릭 `ComObject1` 에 **구성 요소 이름** 나열 하 고 클릭 **확인**합니다.  
   
@@ -124,7 +125,7 @@ Visual Basic 클래스를 파생 시켜 `Public` 의 이전 버전에서 만든 
   
 3.  F5 키를 눌러 프로젝트를 실행 합니다.  
   
- 폼에 단추를 클릭할 때는 `AddNumbers` 메서드를 먼저 호출한 `Short` 데이터 형식이 숫자 및 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 기본 클래스에서 적절 한 방법을 선택 합니다. 두 번째 호출으로 `AddNumbers` 에서 메서드를 오버 로드로 향하는 `MathClass`합니다. 세 번째 호출은 호출에서 `SubtractNumbers` 메서드를 클래스를 확장 합니다. 기본 클래스에서 속성을 설정 하 고 값이 표시 됩니다.  
+ 폼에 단추를 클릭할 때는 `AddNumbers` 메서드를 먼저 호출한 `Short` 데이터 번호를 입력 한 Visual Basic 기본 클래스에서 적절 한 방법을 선택 합니다. 두 번째 호출으로 `AddNumbers` 에서 메서드를 오버 로드로 향하는 `MathClass`합니다. 세 번째 호출은 호출에서 `SubtractNumbers` 메서드를 클래스를 확장 합니다. 기본 클래스에서 속성을 설정 하 고 값이 표시 됩니다.  
   
 ## <a name="next-steps"></a>다음 단계  
  알 수 있습니다 하는 오버 로드 된 `AddNumbers` 함수를 동일한 데이터 형식이 COM 개체의 기본 클래스에서 상속 하는 방법으로 나타납니다. 인수 및 기본 클래스 메서드의 매개 변수는 Visual Basic 6.0에서 16 비트 정수로 정의 되지만 16 비트 정수 형식으로 노출 되어 때문에 이것이 `Short` 이후 버전의 Visual Basic에서 합니다. 새 함수는 32 비트 정수를 사용 하며 기본 클래스 함수를 오버 로드 합니다.  

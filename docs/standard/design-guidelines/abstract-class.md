@@ -1,12 +1,12 @@
 ---
-title: "추상 클래스 디자인"
-ms.custom: 
+title: 추상 클래스 디자인
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - type design guidelines, abstract classes
@@ -16,18 +16,18 @@ helpviewer_keywords:
 - classes [.NET Framework], design guidelines
 - type design guidelines, classes
 ms.assetid: d3646e6d-5c1f-4922-8fb0-ec5effb30d60
-caps.latest.revision: "13"
+caps.latest.revision: 13
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 739f86acd534549bc997dc7a939cf43a0c6fc3cb
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: a98c40ccc8005789a3a991bfc93deb11786b8943
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="abstract-class-design"></a>추상 클래스 디자인
 **X 하지 않으면** 추상 형식에 public 또는 protected 내부 생성자를 정의 합니다.  
@@ -44,9 +44,9 @@ ms.lasthandoff: 12/23/2017
   
  이 사용이 하면 유효성을 검사 하는 추상 클래스의 디자인을 수행 합니다. 예를 들어 <xref:System.IO.FileStream?displayProperty=nameWithType> 는의 구현에서 <xref:System.IO.Stream?displayProperty=nameWithType> 추상 클래스입니다.  
   
- *일부 © 2005, 2009 Microsoft Corporation. 모든 권리 보유.*  
+ *Portions © 2005, 2009 Microsoft Corporation. 모든 권리 보유.*  
   
- *피어슨 교육, Inc.에서의 사용 권한으로 재인쇄 [Framework 디자인 지침: 규칙, 특징 및 다시 사용할 수 있는.NET 라이브러리를 2nd Edition에 대 한 패턴](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina 및 Brad Abrams 게시 하 여 2008 년 10 월 22 일 Microsoft Windows 개발 시리즈의 일부로: Addison Wesley Professional.*  
+ *피어슨 교육, Inc.에서의 사용 권한으로 재인쇄 [Framework 디자인 지침: 규칙, 특징 및 다시 사용할 수 있는.NET 라이브러리를 2nd Edition에 대 한 패턴](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina 및 Brad Abrams 게시 하 여 2008 년 10 월 22 일 Microsoft Windows 개발 시리즈의 일부로: Addison Wesley Professional.*  
   
 ## <a name="see-also"></a>참고 항목  
  [형식 디자인 지침](../../../docs/standard/design-guidelines/type.md)  

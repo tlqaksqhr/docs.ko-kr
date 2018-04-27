@@ -1,30 +1,30 @@
 ---
-title: "이식 가능한 클래스 라이브러리로 크로스 플랫폼 개발"
-ms.custom: 
+title: 이식 가능한 클래스 라이브러리로 크로스 플랫폼 개발
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Portable Class Library [.NET Framework]
 - targeting multiple platforms
 - multiple platforms, targeting
 ms.assetid: c31e1663-c164-4e65-b66d-d3aa8750a154
-caps.latest.revision: "95"
+caps.latest.revision: 95
 author: mairaw
 ms.author: mairaw
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: ea0a111727093cb65a98e48255b06b3c4516d258
-ms.sourcegitcommit: 91691981897cf8451033cb01071d8f5d94017f97
+ms.openlocfilehash: 4e6b853c3548f27bbb4056f7d59d51a6964e0d91
+ms.sourcegitcommit: 68b60d38043e50104ccc90c76f8599b1ffe18346
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="cross-platform-development-with-the-portable-class-library"></a>이식 가능한 클래스 라이브러리로 크로스 플랫폼 개발
 Visual Studio의 .NET Framework 이식 가능한 클래스 라이브러리 프로젝트 형식으로 Microsoft 플랫폼용 플랫폼 간 앱 및 라이브러리를 신속하고 쉽게 빌드할 수 있습니다.  
@@ -38,7 +38,7 @@ Visual Studio의 .NET Framework 이식 가능한 클래스 라이브러리 프�
  Visual Studio에서는 이식 가능한 클래스 라이브러리로 개발하는 데 도움이 되는 템플릿을 제공합니다. 사용 중인 Visual Studio의 버전에 따라 사용 가능한 템플릿 및 메뉴가 이 문서에서 설명하는 것과 다를 수 있습니다.  
   
 > [!WARNING]
->  [Visual Studio 2013 업데이트 2](http://go.microsoft.com/fwlink/p/?LinkId=393658) 이식 가능한 클래스 라이브러리 템플릿에 대 한 업데이트가 포함 됩니다. 이전 버전의 Visual Studio와 동일한 컴퓨터에 설치 하는 Visual Studio 2013 업데이트 2를 변경 하려면 다음 설치 하는 경우는 **대상 프레임 워크** 선택 항목을 Visual Studio의 두 버전 모두에 적용 됩니다.  
+>  Visual Studio 2013 업데이트 2에 이식 가능한 클래스 라이브러리 템플릿에 대 한 업데이트가 포함 됩니다. 이전 버전의 Visual Studio와 동일한 컴퓨터에 설치 하는 Visual Studio 2013 업데이트 2를 변경 하려면 다음 설치 하는 경우는 **대상 프레임 워크** 선택 항목을 Visual Studio의 두 버전 모두에 적용 됩니다.  
   
  항목 내용:  
   
@@ -59,10 +59,10 @@ Visual Studio의 .NET Framework 이식 가능한 클래스 라이브러리 프�
 |-----------------------|---------------------------------------------------|  
 |Visual Studio 2010, Professional, Premium 또는 Ultimate|예, 설치할 때의 [이식 가능한 라이브러리 도구](https://marketplace.visualstudio.com/items?itemName=BCLTeam.PortableLibraryTools2)합니다.|  
 |Visual Studio Express 2010 버전|아니요.|  
-|Visual Studio 2012 Professional, Premium 또는 Ultimate|예. 전화 지원에 대 한 설치는 [Windows Phone SDK 8.0](http://go.microsoft.com/fwlink/?LinkId=265772)합니다.|  
+|Visual Studio 2012 Professional, Premium 또는 Ultimate|예. Windows Phone 8.0 지원에 대 한 설치는 [Windows Phone SDK 8.0](https://www.microsoft.com/download/details.aspx?id=35471)합니다.|  
 |Visual Studio Express 2012 버전|아니요.|  
-|Visual Studio 2013 Professional, Premium 또는 Ultimate|예. Windows Phone 8.1 지원을 설치 [Visual Studio 2013 업데이트 2](http://go.microsoft.com/fwlink/p/?LinkId=393658)합니다.|  
-|Visual Studio Express 2013 for Windows|예, 설치할 때의 [최신 버전의 Visual Studio Express](http://go.microsoft.com/fwlink/p/?LinkId=394629), 업데이트 2를 포함 하거나 추가 [Visual Studio 2013 업데이트 2](http://go.microsoft.com/fwlink/p/?LinkId=393658)합니다.|  
+|Visual Studio 2013 Professional, Premium 또는 Ultimate|예. Windows Phone 8.1 지원을 설치는 [최신 버전의 Visual Studio 2013](https://www.visualstudio.com/vs/older-downloads/)합니다.|  
+|Windows 용 visual Studio Community 2013|예, 설치할 때는 [최신 버전의 Visual Studio Community 2013](https://www.visualstudio.com/vs/older-downloads/), 업데이트 2 포함 합니다.|  
   
 <a name="create_pcl"></a>   
 ## <a name="creating-a-portable-class-library-project"></a>이식 가능한 클래스 라이브러리 프로젝트 만들기  
@@ -76,7 +76,7 @@ Visual Studio의 .NET Framework 이식 가능한 클래스 라이브러리 프�
   
 -   Silverlight  
   
- C#에서 라이브러리를 대상 Windows Phone 8.1 및 Windows 8.1 만들려는 경우 선택할 수 있습니다 **스토어 앱**를 선택한 후 **클래스 라이브러리 (유니버설 앱에 이식 가능)**합니다.  
+ C#에서 라이브러리를 대상 Windows Phone 8.1 및 Windows 8.1 만들려는 경우 선택할 수 있습니다 **스토어 앱**를 선택한 후 **클래스 라이브러리 (유니버설 앱에 이식 가능)** 합니다.  
   
  ![스토어 앱 용 이식 가능한 클래스 라이브러리](../../../docs/standard/cross-platform/media/storeuniversalpcl.png "StoreUniversalPCL")  
   
@@ -152,10 +152,10 @@ Visual Studio 2012의 대상 변경 대화 상자
   
  ➊ [Microsoft 비동기](https://www.nuget.org/packages/Microsoft.Bcl.Async/) 패키지  
  ➋ [Microsoft 압축](https://www.nuget.org/packages/Microsoft.Bcl.Compression) 패키지  
- ➌ [Microsoft HTTP 클라이언트 라이브러리](http://www.nuget.org/packages/Microsoft.Net.Http) 패키지  
+ ➌ [Microsoft HTTP 클라이언트 라이브러리](https://www.nuget.org/packages/Microsoft.Net.Http) 패키지  
   
 > [!WARNING]
->  참조 하는 경우 오류가 발생할 수 있습니다는 [Microsoft 압축](https://www.nuget.org/packages/Microsoft.Bcl.Compression) 및 [Microsoft HTTP 클라이언트 라이브러리](http://www.nuget.org/packages/Microsoft.Net.Http) 패키지는 Windows Phone Silverlight 8.1 앱에서 사용 하는 이식 가능한 라이브러리에서. 자세한 내용은 참조 [의 플랫폼 규격 및 주요 변경 내용에 대 한 Windows Phone Silverlight 8.1 앱](http://go.microsoft.com/fwlink/p/?LinkId=394744)합니다.  
+>  참조 하는 경우 오류가 발생할 수 있습니다는 [Microsoft 압축](https://www.nuget.org/packages/Microsoft.Bcl.Compression) 및 [Microsoft HTTP 클라이언트 라이브러리](https://www.nuget.org/packages/Microsoft.Net.Http) 패키지는 Windows Phone Silverlight 8.1 앱에서 사용 하는 이식 가능한 라이브러리에서. 자세한 내용은 참조 [의 플랫폼 규격 및 주요 변경 내용에 대 한 Windows Phone Silverlight 8.1 앱](/previous-versions/windows/apps/dn642084(v=vs.105))합니다.  
   
 <a name="members"></a>   
 ## <a name="supported-types-and-members"></a>지원되는 형식 및 멤버  
@@ -197,7 +197,7 @@ Visual Studio 2012의 대상 변경 대화 상자
  이식 가능한 클래스 라이브러리 어셈블리를 참조하는 Windows 스토어 또는 Windows Phone 앱을 만드는 경우 만든 앱을 배포하는 데 필요한 모든 것이 앱 패키지에 들어 있으므로 추가 단계를 수행할 필요가 없습니다.  
   
 ### <a name="deploying-a-net-framework-app"></a>.NET Framework 앱 배포  
- 이식 가능한 클래스 라이브러리 어셈블리를 참조하는 .NET Framework 앱을 배포할 때 종속성을 올바른 .NET Framework 버전에 지정해야 합니다. 이 종속성을 지정하여 응용 프로그램에 필수 버전이 설치되도록 해야 합니다. .NET Framework 4를 대상 또는 컴퓨터와.NET Framework 4 이상 버전에서는 있어야 하는 경우는 [업데이트](http://go.microsoft.com/fwlink/?LinkId=210824),.NET Framework 4 또는.NET Framework 4.5가 설치 되어 업데이트 4.0.3.  
+ 이식 가능한 클래스 라이브러리 어셈블리를 참조하는 .NET Framework 앱을 배포할 때 종속성을 올바른 .NET Framework 버전에 지정해야 합니다. 이 종속성을 지정하여 응용 프로그램에 필수 버전이 설치되도록 해야 합니다. .NET Framework 4를 대상 또는 컴퓨터와.NET Framework 4 이상 버전에서는 있어야 하는 경우는 [업데이트](https://www.microsoft.com/download/details.aspx?id=3556),.NET Framework 4 또는.NET Framework 4.5가 설치 되어 업데이트 4.0.3.  
   
 -   ClickOnce 배포 종속성을 만들려면:에서 **솔루션 탐색기**를 게시 하려면 프로젝트의 프로젝트 노드를 선택 합니다. 이 프로젝트가 이식 가능한 클래스 라이브러리 프로젝트를 참조할 프로젝트입니다. 메뉴 모음에서 **프로젝트**, **속성**를 선택한 후는 **게시** 탭 합니다. 에 **게시** 페이지에서 선택 **필수 구성 요소**합니다. 필수 .NET Framework 버전(또는 .NET Framework 4 업데이트)을 필수 구성 요소로 선택합니다.  
   
@@ -217,9 +217,9 @@ Visual Studio 2012의 대상 변경 대화 상자
     <param name="background" value="white" />  
     <param name="minRuntimeVersion" value="4.0.60129.0" />  
     <param name="autoUpgrade" value="true" />  
-    <a href="http://go.microsoft.com/fwlink/?LinkID=149156&v=4.0.50826.0"   
+    <a href="https://www.microsoft.com/getsilverlight/get-started/install/"   
              style="text-decoration:none">  
-      <img src=http://go.microsoft.com/fwlink/?LinkId=161376  
+      <img src=http://download.microsoft.com/download/5/1/6/5165823D-1D79-4871-8AC2-42DDDB94A5C2/PNGs/SLMedallion_ENU.png  
              alt="Get Microsoft Silverlight" style="border-style:none"/>  
     </a>  
   </object>  

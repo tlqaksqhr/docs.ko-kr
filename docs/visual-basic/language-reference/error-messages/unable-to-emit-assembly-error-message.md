@@ -1,9 +1,9 @@
 ---
-title: "어셈블리를 생성할 수 없습니다: &lt;오류 메시지&gt;"
+title: '어셈블리를 생성할 수 없습니다: &lt;오류 메시지&gt;'
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - devlang-visual-basic
 ms.topic: article
@@ -13,17 +13,17 @@ f1_keywords:
 helpviewer_keywords:
 - BC30145
 ms.assetid: 2e7eb2b9-eda6-4bdb-95cc-72c7f0be7528
-caps.latest.revision: 
+caps.latest.revision: 11
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: b19b6439d85822c69adac0b3e0e04b2f31299836
-ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
+ms.openlocfilehash: 61a5c6b753b8aa70905027bc1449739769cd8da5
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="unable-to-emit-assembly-lterror-messagegt"></a>어셈블리를 생성할 수 없습니다: &lt;오류 메시지&gt;
-[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 컴파일러가 어셈블리 링커(Al.exe, Alink라고도 함)를 호출하여 매니페스트를 사용해 어셈블리를 생성합니다. 링커가 어셈블리 생성의 내보내기 단계에서 오류를 보고했습니다.  
+Visual Basic 컴파일러 링커 어셈블리 만들기의 내보내기 단계에서 오류가 보고 어셈블리 링커 (Al.exe, Alink 라고도 함)는 매니페스트를 사용해 어셈블리를 생성 하려면를 호출 합니다.  
   
  **오류 ID:** BC30145  
   

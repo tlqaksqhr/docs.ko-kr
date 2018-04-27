@@ -1,11 +1,12 @@
 ---
-title: "Visual Basic 제한 사항"
-ms.custom: 
+title: Visual Basic 제한 사항
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - limits
@@ -14,19 +15,19 @@ helpviewer_keywords:
 - limits, Visual Basic code
 - Visual Basic code, limitations
 ms.assetid: cf1646b7-5d24-48c6-9616-bda8a4849d91
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 97a2e162b9f1a673fbe805a5d2ef1421cd423a4f
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: d06b743996969dcd7fc022bbb8ab625f3a151137
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="visual-basic-limitations"></a>Visual Basic 제한 사항
-이전 버전의 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 제한이 있었습니다 변수 이름의 길이 같이 코드에서 모듈, 모듈 크기에 허용 되는 변수 수입니다. Visual Basic.net에서는 이러한 제한이 완화 되었습니다, 훨씬 자유롭게 작성 하 고 정렬 코드를 제공 합니다.  
+이전 버전의 Visual Basic 코드에서 변수 이름, 모듈, 모듈 크기에 허용 되는 변수 수 길이 같은 제한이 있었습니다. Visual Basic.net에서는 이러한 제한이 완화 되었습니다, 훨씬 자유롭게 작성 하 고 정렬 코드를 제공 합니다.  
   
- 실제 제한 되 컴파일 시간 고려 사항에는 런타임에 메모리 보다 더 종속. 거의 발생할 가능성을 내부 사용을 하 고 큰 응용 프로그램을 여러 클래스 및 모듈을 나누는 경우 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 제한 합니다.  
+ 실제 제한 되 컴파일 시간 고려 사항에는 런타임에 메모리 보다 더 종속. 사용, 여러 클래스와 모듈 큰 응용 프로그램을 나누는 하는 경우에 내부 Visual Basic 제한 사항이 발생할 확률이 거의 없습니다.  
   
  극단적인 경우에 발생할 수 있는 몇 가지 제한 사항이 다음과 같습니다.  
   

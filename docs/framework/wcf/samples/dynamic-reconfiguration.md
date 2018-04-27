@@ -1,24 +1,26 @@
 ---
-title: "동적 재구성"
-ms.custom: 
+title: 동적 재구성
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: b20786ae-cce6-4f91-b6cb-9cae116faf8b
-caps.latest.revision: "20"
+caps.latest.revision: 20
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: cbf286891211da0e35274ff59f3bee69ebf3c9bb
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 36b548ee47ed9165743bbfb1eaab5cf3bbe82bd2
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="dynamic-reconfiguration"></a>동적 재구성
 이 샘플에서는 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 라우팅 서비스를 보여 줍니다. 라우팅 서비스는 응용 프로그램에 내용 기반 라우터를 손쉽게 포함할 수 있게 해 주는 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 구성 요소입니다. 이 샘플에서는 라우팅 서비스를 사용하여 통신하도록 표준 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Calculator 샘플을 조정합니다. 이 샘플에서는 런타임 동안 라우팅 서비스를 동적으로 다시 구성하는 방법을 보여 줍니다.  
@@ -43,7 +45,7 @@ ms.lasthandoff: 12/22/2017
   
 2.  열려는 **솔루션 탐색기**선택, **솔루션 탐색기** 에서 **보기** 메뉴.  
   
-3.  키를 눌러 **F5** 또는 **CTRL + SHIFT + B** 에서 [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)]합니다.  
+3.  키를 눌러 **F5** 또는 **CTRL + SHIFT + B** Visual Studio에서.  
   
     1.  키를 누를 때 필요한 프로젝트가 자동 시작을 원하는 경우 **F5**솔루션을 마우스 오른쪽 단추로 클릭 하 고 선택 **속성**합니다. 선택 된 **시작 프로젝트** 노드 아래의 **공용 속성** 왼쪽된 창에서. 선택은 **여러 개의 시작 프로젝트** 라디오 단추 및 모든 프로젝트에 설정 된 **시작** 작업 합니다.  
   

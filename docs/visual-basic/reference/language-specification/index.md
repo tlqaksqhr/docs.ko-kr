@@ -13,14 +13,14 @@ ms.assetid: 42c30017-19d0-442e-87a2-850b66ddc3df
 caps.latest.revision: 14
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 16079ad7854630f68ecb6fd9fb3b640a440fe69b
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: a4bfab2f6f06cbe1ac971fc21d53a7336ad03c58
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="visual-basic-language-specification"></a>Visual Basic 언어 사양
-[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 언어 사양은 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 문법 및 구문에 대한 모든 의문 사항을 해결할 수 있는 공식 문서입니다. [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 참조 설명서에서 다루지 않은 여러 항목을 비롯해서 해당 언어에 대한 자세한 정보가 포함되어 있습니다.  
+Visual Basic 언어 사양은 Visual Basic 문법 및 구문에 대 한 모든 질문에 대 한 답변에 대 한 신뢰할 수 있는 소스입니다. Visual Basic 참조 설명서에서 다루지 않은 여러 항목을 포함 하 여 언어에 대 한 자세한 정보가 있습니다.  
   
  이 사양은 [Microsoft 다운로드 센터](http://go.microsoft.com/fwlink/?LinkId=188623)에서 제공됩니다.  
   

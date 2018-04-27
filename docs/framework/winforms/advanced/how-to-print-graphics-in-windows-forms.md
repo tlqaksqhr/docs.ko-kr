@@ -1,12 +1,13 @@
 ---
-title: "방법: Windows Forms의 그래픽 인쇄"
-ms.custom: 
+title: '방법: Windows Forms의 그래픽 인쇄'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-winforms
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -16,16 +17,17 @@ helpviewer_keywords:
 - graphics [Windows Forms], printing
 - printing [Windows Forms], graphics
 ms.assetid: 32b891e6-52ff-4fea-a9ff-2ce5db20a4c6
-caps.latest.revision: "20"
+caps.latest.revision: 20
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 634689b0b39510cbcc9dc49b1f4717e7e07f88d9
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: f9c18f563cfd1ab15740ea773effefd89206eb0a
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-print-graphics-in-windows-forms"></a>방법: Windows Forms의 그래픽 인쇄
 대부분의 경우 Windows 기반 응용 프로그램의 그래픽 인쇄 합니다. <xref:System.Drawing.Graphics> 클래스는 화면이 나 프린터와 같은 장치에 개체를 그리기 위한 메서드를 제공 합니다.  
@@ -63,7 +65,7 @@ ms.lasthandoff: 12/22/2017
        }  
     ```  
   
-     ([!INCLUDE[csprcs](../../../../includes/csprcs-md.md)] 및 [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) 폼 생성자에 다음 코드를 추가하여 이벤트 처리기를 등록합니다.  
+     (Visual C# 및 [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) 이벤트 처리기를 등록 하려면 폼의 생성자에 다음 코드를 추가 합니다.  
   
     ```csharp  
     this.printDocument1.PrintPage += new  

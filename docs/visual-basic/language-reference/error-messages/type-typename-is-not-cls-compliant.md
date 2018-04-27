@@ -1,9 +1,9 @@
 ---
-title: "형식 &lt;typename&gt; CLS 규격이 아닙니다"
+title: 형식 &lt;typename&gt; CLS 규격이 아닙니다
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - devlang-visual-basic
 ms.topic: article
@@ -13,21 +13,21 @@ f1_keywords:
 helpviewer_keywords:
 - BC40041
 ms.assetid: 634132c2-5646-44aa-98c6-f773e2e63882
-caps.latest.revision: 
+caps.latest.revision: 7
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 36a49ccf7d2185c26ef8d23eebea216cc193d951
-ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
+ms.openlocfilehash: 73abc8b055e7eb9d1a4f6917d816cab5b4509f86
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="type-lttypenamegt-is-not-cls-compliant"></a>형식 &lt;typename&gt; CLS 규격이 아닙니다
 변수, 속성 또는 함수 반환는 CLS 호환 되지 않는 데이터 형식으로 선언 됩니다.  
   
  과 호환 되도록 응용 프로그램에 대 한는 [언어 독립성 및 언어 독립적 구성 요소](../../../standard/language-independence-and-language-independent-components.md) (CLS) CLS 규격 형식만 사용 해야 합니다.  
   
- 다음 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 데이터 형식은 CLS 규격이 아닙니다.  
+ 다음 Visual Basic 데이터 형식 CLS 호환 되지 않습니다.  
   
 -   [SByte 데이터 형식](../../../visual-basic/language-reference/data-types/sbyte-data-type.md)  
   

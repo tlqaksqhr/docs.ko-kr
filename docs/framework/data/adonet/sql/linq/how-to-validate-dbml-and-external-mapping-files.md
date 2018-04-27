@@ -1,27 +1,29 @@
 ---
-title: "방법: DBML 및 외부 매핑 파일 유효성 검사"
-ms.custom: 
+title: '방법: DBML 및 외부 매핑 파일 유효성 검사'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: d9ea37f5-0a9e-4401-8fc3-1e6fd44c49f9
-caps.latest.revision: "2"
+caps.latest.revision: 2
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 7724586c33c19654c3657a5a4604a3c74f2c8756
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: 4d3fc297078c9f6c1ac8b2d8a498050f294a5437
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-validate-dbml-and-external-mapping-files"></a>방법: DBML 및 외부 매핑 파일 유효성 검사
-수정한 외부 매핑 파일 및 .dbml 파일은 해당 스키마 정의에 대해 유효성이 검사되어야 합니다. 이 항목에서는 유효성 검사 프로세스를 구현하는 단계를 [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)] 사용자에게 제공합니다.  
+수정한 외부 매핑 파일 및 .dbml 파일은 해당 스키마 정의에 대해 유효성이 검사되어야 합니다. 이 항목에서는 유효성 검사 프로세스를 구현 하는 단계를 통해 Visual Studio 사용자를 제공 합니다.  
   
  [!INCLUDE[note_settings_general](../../../../../../includes/note-settings-general-md.md)]  
   
@@ -56,7 +58,7 @@ ms.lasthandoff: 01/17/2018
      오류, 경고 또는 메시지가 생성되었는지 여부를 확인합니다. 생성된 것이 없는 경우 스키마 정의에 대해 XML 파일이 유효합니다.  
   
 ## <a name="alternate-method-for-supplying-schema-definition"></a>스키마 정의 제공을 위한 대체 방법  
- 어떤 이유로 적절 한.xsd 파일에 표시 되지 않으면는 **XML 스키마** 대화 상자에서 도움말 항목에서.xsd 파일을 다운로드할 수 있습니다. 다음 단계에서는 다운로드한 파일을 [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)] XML 편집기에 필요한 유니코드 형식으로 저장합니다.  
+ 어떤 이유로 적절 한.xsd 파일에 표시 되지 않으면는 **XML 스키마** 대화 상자에서 도움말 항목에서.xsd 파일을 다운로드할 수 있습니다. 다음 단계에 Visual Studio XML 편집기에서 필요한 유니코드 형식으로 다운로드 한 파일을 저장 하는 데 도움이 됩니다.  
   
 #### <a name="to-copy-a-schema-definition-file-from-a-help-topic"></a>도움말 항목에서 스키마 정의 파일을 복사하려면  
   

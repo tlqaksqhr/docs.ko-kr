@@ -1,36 +1,38 @@
 ---
-title: "SQL Server와의 System.Transactions 통합"
-ms.custom: 
+title: SQL Server와의 System.Transactions 통합
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: b555544e-7abb-4814-859b-ab9cdd7d8716
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 21924441c091c53a79d4b7bf8a683f8a7c74bd07
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: 06f1555c8dbbdf10e8a1d0de867ddb227cb148b6
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="systemtransactions-integration-with-sql-server"></a>SQL Server와의 System.Transactions 통합
 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 버전 2.0에는 <xref:System.Transactions> 네임스페이스를 통해 액세스할 수 있는 트랜잭션 프레임워크가 추가되었습니다. 이 프레임워크는 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]을 포함하여 [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)]에 완전히 통합된 방식으로 트랜잭션을 노출시킵니다.  
   
  프로그래밍 기능이 향상된 것 외에도 <xref:System.Transactions> 및 [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] 이 함께 작동하여 트랜잭션 사용 시 최적화되도록 조정할 수 있습니다. 승격 가능한 트랜잭션이란 필요에 따라 완전 분산 트랜잭션으로 자동 승격될 수 있는 간단한(로컬) 트랜잭션입니다.  
   
- [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] 2.0부터 <xref:System.Data.SqlClient> 에서는 [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)]사용 시 승격 가능한 트랜잭션이 지원됩니다. 승격 가능한 트랜잭션은 추가 오버헤드가 필요한 경우를 제외하고 분산 트랜잭션의 추가 오버헤드를 호출하지 않습니다. 승격 가능한 트랜잭션은 자동 이며 개발자의 개입 없이 필요 합니다.  
+ 부터는 [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] 2.0 <xref:System.Data.SqlClient> SQL Server 사용 시 승격 가능한 트랜잭션을 지원 합니다. 승격 가능한 트랜잭션은 추가 오버헤드가 필요한 경우를 제외하고 분산 트랜잭션의 추가 오버헤드를 호출하지 않습니다. 승격 가능한 트랜잭션은 자동 이며 개발자의 개입 없이 필요 합니다.  
   
- 승격 가능한 트랜잭션은 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 에서`SqlClient`Data Provider for SQL Server( [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)])를 사용할 때만 사용할 수 있습니다.  
+ 승격 가능한 트랜잭션을 사용 하는 경우에 사용할 수 있는 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Data Provider for SQL Server (`SqlClient`) SQL Server와 함께 합니다.  
   
 ## <a name="creating-promotable-transactions"></a>승격 가능한 트랜잭션 만들기  
  [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Provider for SQL Server는 승격 가능한 트랜잭션을 지원합니다. 승격 가능한 트랜잭션은 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] <xref:System.Transactions> 네임스페이스에서 클래스를 통해 처리됩니다. 승격 가능한 트랜잭션은 필요할 때까지 분산 트랜잭션 만들기를 연기하여 분산 트랜잭션을 최적화합니다. 리소스 관리자만 필요할 경우 분산 트랜잭션은 발생하지 않습니다.  
@@ -39,7 +41,7 @@ ms.lasthandoff: 01/17/2018
 >  부분적으로 신뢰할 수 있는 시나리오에서 트랜잭션을 분산 트랜잭션으로 승격시키려면 <xref:System.Transactions.DistributedTransactionPermission> 이 필요합니다.  
   
 ## <a name="promotable-transaction-scenarios"></a>승격 가능한 트랜잭션 시나리오  
- 분산 트랜잭션에서는 일반적으로 MS DTC(Microsoft Distributed Transaction Coordinator)를 통해 관리되는 많은 양의 시스템 리소스를 사용합니다. MS DTC는 트랜잭션에서 액세스하는 모든 리소스 관리자를 통합합니다. 승격 가능한 트랜잭션은 실제로 작업을 단순 <xref:System.Transactions> 트랜잭션에 효과적으로 위임하는 [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] 트랜잭션의 특수한 형태입니다. <xref:System.Transactions>, <xref:System.Data.SqlClient>및 [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] 는 트랜잭션 처리 관련 작업을 조정하며 필요에 따라 이 트랜잭션을 완전 분산 트랜잭션으로 승격시킵니다.  
+ 분산 트랜잭션에서는 일반적으로 MS DTC(Microsoft Distributed Transaction Coordinator)를 통해 관리되는 많은 양의 시스템 리소스를 사용합니다. MS DTC는 트랜잭션에서 액세스하는 모든 리소스 관리자를 통합합니다. 승격 가능한 트랜잭션은 특별 한 형태의 <xref:System.Transactions> 간단한 SQL Server 트랜잭션 하는 작업을 효과적으로 위임 하는 트랜잭션. <xref:System.Transactions><xref:System.Data.SqlClient>, 작업 및 SQL Server는 트랜잭션 처리에 포함 된 작업 필요에 따라이 트랜잭션을 완전 분산 트랜잭션으로 승격 합니다.  
   
  승격 가능한 트랜잭션을 사용하면 활성 <xref:System.Transactions.TransactionScope> 트랜잭션을 사용하여 연결이 열리고, 다른 연결이 열려 있지 않은 경우 완전 분산 트랜잭션의 추가 오버헤드를 발생시키는 대신 간단한 트랜잭션으로 커밋됩니다.  
   

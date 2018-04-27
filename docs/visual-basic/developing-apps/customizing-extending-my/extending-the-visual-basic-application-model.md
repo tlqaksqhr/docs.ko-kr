@@ -11,11 +11,11 @@ ms.assetid: e91d3bed-4c27-40e3-871d-2be17467c72c
 caps.latest.revision: 21
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 15e6ea1a8b2df0b8ed1b84abceee9e6be2c556f9
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 5ffd882c2a1d04c29483d380e972d6ce70bdb5c4
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="extending-the-visual-basic-application-model"></a>Visual Basic 응용 프로그램 모델 확장
 재정의 하 여 응용 프로그램 모델에 기능을 추가할 수 있습니다는 `Overridable` 의 멤버는 <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase> 클래스입니다. 이 기법을 사용 하면 응용 프로그램이 시작 되 고 종료 하는 대로 사용자 고유의 메서드 호출을 추가 하 고 응용 프로그램 모델의 동작을 사용자 지정할 수 있습니다.  
@@ -46,11 +46,11 @@ ms.lasthandoff: 11/21/2017
   
     1.  <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.ShowSplashScreen%2A>. 응용 프로그램 정의 시작 화면 인지 여부를 결정 하 고 그렇지 않으면 시작 화면을 별도 스레드에 표시 합니다.  
   
-         <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.ShowSplashScreen%2A> 시작을 표시 하는 코드를 포함 하는 메서드 이상으로 지정 된 밀리초 수에 대 한 화면는 <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.MinimumSplashScreenDisplayTime%2A> 속성입니다. 이 기능을 사용 하려면 시작 화면을 더해야를 사용 하 여 응용 프로그램에서 **프로젝트 디자이너** (로 설정 하는 `My.Application.MinimumSplashScreenDisplayTime` 속성을 2 초), 설정 또는 `My.Application.MinimumSplashScreenDisplayTime` 는 를재정의하는메서드에에서속성<xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnInitialize%2A> 또는 <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnCreateSplashScreen%2A> 메서드. 자세한 내용은 <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.MinimumSplashScreenDisplayTime%2A>을 참조하십시오.  
+         <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.ShowSplashScreen%2A> 시작을 표시 하는 코드를 포함 하는 메서드 이상으로 지정 된 밀리초 수에 대 한 화면는 <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.MinimumSplashScreenDisplayTime%2A> 속성입니다. 이 기능을 사용 하려면 시작 화면을 더해야를 사용 하 여 응용 프로그램에서 **프로젝트 디자이너** (로 설정 하는 `My.Application.MinimumSplashScreenDisplayTime` 속성을 2 초), 설정 또는 `My.Application.MinimumSplashScreenDisplayTime` 는 를재정의하는메서드에에서속성<xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnInitialize%2A> 또는 <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnCreateSplashScreen%2A> 메서드. 자세한 내용은 <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.MinimumSplashScreenDisplayTime%2A>을 참조하세요.  
   
     2.  <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnCreateSplashScreen%2A>. 디자이너를를 시작 화면을 초기화 하는 코드를 내보낼 수 있습니다.  
   
-         기본적으로이 메서드는 아무 작업도 수행 하지 않습니다. 시작 화면에서 응용 프로그램에 대 한 선택 하는 경우는 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] **프로젝트 디자이너**, 디자이너 재정의 <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnCreateSplashScreen%2A> 메서드를 설정 하는 메서드로 <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.SplashScreen%2A> 시작 화면의 새 인스턴스를 속성 폼입니다.  
+         기본적으로이 메서드는 아무 작업도 수행 하지 않습니다. Visual Basic에서 응용 프로그램에 대 한 시작 화면을 선택 하는 경우 **프로젝트 디자이너**, 디자이너 재정의 <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnCreateSplashScreen%2A> 메서드를 설정 하는 메서드로 <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.SplashScreen%2A> 시작 화면 폼의 새 인스턴스 속성 .  
   
 2.  <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnStartup%2A>. 발생 시키기 위한 확장 지점을 제공는 `Startup` 이벤트입니다. 이 함수를 반환 하는 경우 응용 프로그램 시작 시퀀스 중지 `False`합니다.  
   
@@ -62,7 +62,7 @@ ms.lasthandoff: 11/21/2017
   
     1.  <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnCreateMainForm%2A>. 기본 폼을 초기화 하는 코드를 내보낼 디자이너에 대 한 방법을 제공 합니다.  
   
-         기본적으로이 메서드는 아무 작업도 수행 하지 않습니다. 그러나 선택 하면 기본 폼에서 응용 프로그램에 대 한는 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] **프로젝트 디자이너**, 디자이너 재정의 <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnCreateMainForm%2A> 메서드를 설정 하는 메서드로 <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.MainForm%2A> 기본 폼의 새 인스턴스를 속성 .  
+         기본적으로이 메서드는 아무 작업도 수행 하지 않습니다. 그러나 선택 하면 기본 폼의 Visual Basic에서 응용 프로그램에 대 한 **프로젝트 디자이너**, 디자이너 재정의 <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnCreateMainForm%2A> 메서드를 설정 하는 메서드로 <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.MainForm%2A> 기본 폼의 새 인스턴스를 속성.  
   
     2.  <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.HideSplashScreen%2A>. 응용 프로그램에 정의 된 시작 화면이 열려 있는 경우이 메서드는 시작 화면을 닫습니다.  
   
@@ -85,7 +85,7 @@ ms.lasthandoff: 11/21/2017
  <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnStartupNextInstance(Microsoft.VisualBasic.ApplicationServices.StartupNextInstanceEventArgs)> 생성자 호출은 <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.UseCompatibleTextRendering%2A> 응용 프로그램의 폼에 사용할 텍스트 렌더링 엔진을 결정 하는 속성입니다. 기본적으로는 <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.UseCompatibleTextRendering%2A> 속성에서 반환 `False`, GDI 텍스트 렌더링 엔진을 사용 하는 것을 나타내는, 기본값인에 [!INCLUDE[vbprvblong](~/includes/vbprvblong-md.md)]합니다. 재정의할 수 있습니다는 <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.UseCompatibleTextRendering%2A> 반환할 속성 `True`, GDI + 텍스트 렌더링 엔진을 사용할 수 없음을 나타냅니다 Visual Basic.NET 2002 및 Visual Basic.NET 2003에서 기본값입니다.  
   
 ## <a name="configuring-the-application"></a>응용 프로그램 구성  
- 일부로 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 응용 프로그램 모델의 <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.UseCompatibleTextRendering> 클래스 응용 프로그램을 구성 하는 보호 된 속성을 제공 합니다. 이러한 속성을 구현 하는 클래스의 생성자에서 설정 되어야 합니다.  
+ Visual Basic 응용 프로그램 모델의 일부로 <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.UseCompatibleTextRendering> 클래스 응용 프로그램을 구성 하는 보호 된 속성을 제공 합니다. 이러한 속성을 구현 하는 클래스의 생성자에서 설정 되어야 합니다.  
   
  기본 Windows Forms 프로젝트에서는 **프로젝트 디자이너** 디자이너 설정으로 속성을 설정 하는 코드를 만듭니다. 속성은 응용 프로그램이; 시작 하는 경우에 사용 됩니다. 응용 프로그램이 시작 된 이후에 설정 해도 아무 효과가 없습니다.  
   

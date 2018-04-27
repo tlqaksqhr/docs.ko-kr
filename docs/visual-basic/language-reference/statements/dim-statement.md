@@ -1,10 +1,11 @@
 ---
-title: "Dim 문(Visual Basic)"
+title: Dim 문(Visual Basic)
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 f1_keywords:
 - vb.Dim
@@ -34,14 +35,14 @@ helpviewer_keywords:
 - Dim statement [Visual Basic], syntax
 - variables [Visual Basic], member and local
 ms.assetid: fae3eca1-f0b2-4400-994b-7aa58a848448
-caps.latest.revision: "72"
+caps.latest.revision: 72
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: a428f8be7b62600ca8fffd3160039c1de911e34e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 36e2d416e4653bfa6fe212b75b92ae2d90775d53
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="dim-statement-visual-basic"></a>Dim 문(Visual Basic)
 선언 하 고 하나 이상의 변수에 대 한 저장 공간을 할당 합니다.  
@@ -97,7 +98,7 @@ Dim [ WithEvents ] variablelist
   
 -   `variablelist`  
   
-     필수 요소. 이 문에서 선언 되는 변수의 목록입니다.  
+     필수. 이 문에서 선언 되는 변수의 목록입니다.  
   
      `variable [ , variable ... ]`  
   
@@ -107,7 +108,7 @@ Dim [ WithEvents ] variablelist
   
     |파트|설명|  
     |---|---|  
-    |`variablename`|필수 요소. 변수의 이름입니다. 참조 [선언 된 요소 이름](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)합니다.|  
+    |`variablename`|필수. 변수의 이름입니다. 참조 [선언 된 요소 이름](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)합니다.|  
     |`boundslist`|선택 사항입니다. 각 차원의 배열 변수의 범위 목록입니다.|  
     |`New`|선택 사항입니다. 클래스의 새 인스턴스를 만듭니다 때는 `Dim` 문 실행 합니다.|  
     |`datatype`|선택 사항입니다. 변수의 데이터 형식입니다.|  
@@ -251,7 +252,7 @@ Dim twoDimensions(,) As Integer = {{0, 1, 2}, {10, 11, 12}}
   
  배열 리터럴에 대 한 자세한 내용은 참조 [배열](../../../visual-basic/programming-guide/language-features/arrays/index.md)합니다.  
   
-##  <a name="default"></a>기본 데이터 형식 및 값  
+##  <a name="default"></a> 기본 데이터 형식 및 값  
  다음 테이블에는 `Dim` 문에서 데이터 형식과 이니셜라이저를 지정하는 다양한 조합의 결과에 대한 설명이 나와 있습니다.  
   
 |데이터 형식 지정 여부|이니셜라이저 지정 여부|예제|결과|  
@@ -261,7 +262,7 @@ Dim twoDimensions(,) As Integer = {{0, 1, 2}, {10, 11, 12}}
 |예|아니요|`Dim qty As Integer`|변수는 데이터 형식의 기본값으로 초기화됩니다. 이 섹션의 뒷부분에 나오는 표를 참조 하세요.|  
 |예|예|`Dim qty  As Integer = 5`|이니셜라이저의 데이터 형식을 지정한 데이터 형식으로 변환할 수 없으면 컴파일 시간 오류가 발생합니다.|  
   
- 데이터 형식을 지정 하지만 한 이니셜라이저를 지정 하지 않는 경우 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 변수 데이터 형식에 대 한 기본 값으로 초기화 합니다. 다음 표에서 기본 초기화 값을 보여 줍니다.  
+ 데이터 형식을 지정 해도 이니셜라이저를 지정 하지 않은 경우 Visual Basic 데이터 형식에 대 한 기본 값으로 변수를 초기화 합니다. 다음 표에서 기본 초기화 값을 보여 줍니다.  
   
 |데이터 형식|기본값|  
 |---|---|  
@@ -279,8 +280,8 @@ Dim twoDimensions(,) As Integer = {{0, 1, 2}, {10, 11, 12}}
 |프로시저 선언|변수 초기화|기존 변수 중지|  
 |---|---|---|  
 |모듈에서|처음에 프로시저 호출 될 때|프로그램 실행을 중지 하는 경우|  
-|클래스 또는 구조체에서 절차는`Shared`|처음으로 프로시저를 호출할 특정 인스턴스 또는 클래스 또는 구조체 자체|프로그램 실행을 중지 하는 경우|  
-|클래스 또는 구조체에서 프로시저 되지 않습니다.`Shared`|처음 절차 특정 인스턴스에서 호출|가비지 수집 (GC) 인스턴스가 해제 될 때|  
+|클래스 또는 구조체에서 절차는 `Shared`|처음으로 프로시저를 호출할 특정 인스턴스 또는 클래스 또는 구조체 자체|프로그램 실행을 중지 하는 경우|  
+|클래스 또는 구조체에서 프로시저 되지 않습니다. `Shared`|처음 절차 특정 인스턴스에서 호출|가비지 수집 (GC) 인스턴스가 해제 될 때|  
   
 ## <a name="attributes-and-modifiers"></a>특성 및 한정자  
  지역 변수가 아니라 멤버 변수에만 특성을 적용할 수 있습니다. 특성은 지역 변수 같은 임시 저장소에 의미가 없습니다 어셈블리의 메타 데이터에 대 한 정보를 제공 합니다.  

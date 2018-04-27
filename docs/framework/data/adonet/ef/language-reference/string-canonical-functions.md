@@ -1,24 +1,26 @@
 ---
-title: "문자열 정식 함수"
-ms.custom: 
+title: 문자열 정식 함수
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 5e2cbebd-5df3-47c7-b0e2-49a17ab22bfb
-caps.latest.revision: "2"
+caps.latest.revision: 2
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 2eef6928098f762274ecd19272b34cce6ab41920
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: 8bead8bc61c06a2daf4dd95dca8808caf823f245
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="string-canonical-functions"></a>문자열 정식 함수
 [!INCLUDE[esql](../../../../../../includes/esql-md.md)]에는 문자열 정식 함수가 포함되어 있습니다.  
@@ -30,7 +32,7 @@ ms.lasthandoff: 01/17/2018
 |--------------|-----------------|  
 |`Concat (` `string1`, `string2``)`|`string2`에 `string1`가 추가된 문자열을 반환합니다.<br /><br /> **인수**<br /><br /> `string1`: `string2`가 추가되는 문자열입니다.<br /><br /> `string2`: `string1`에 추가되는 문자열입니다.<br /><br /> **반환 값**<br /><br /> `String` 반환 값 문자열의 길이가 허용되는 최대 길이보다 크면 오류가 발생합니다.<br /><br /> **예제**<br /><br /> `-- The following example returns abcxyz.`<br /><br /> `Concat('abc', 'xyz')`|  
 |`Contains (` `string`, `target``)`|`true`이 `target`에 포함되어 있으면 `string`를 반환합니다.<br /><br /> **인수**<br /><br /> `string`: 검색되는 문자열입니다.<br /><br /> `target`: 검색되는 대상 문자열입니다.<br /><br /> **반환 값**<br /><br /> `true`이 `target`에 포함되어 있으면 `string`이고, 그렇지 않으면 `false`입니다.<br /><br /> **예제**<br /><br /> `-- The following example returns true.`<br /><br /> `Contains('abc', 'bc')`|  
-|`EndsWith (` `string`, `target``)`|`true`이 `target`으로 끝나면 `string`를 반환합니다.<br /><br /> **인수**<br /><br /> `string`: 검색되는 문자열입니다.<br /><br /> `target`: `string`의 끝에서 검색되는 대상 문자열입니다.<br /><br /> **반환 값**<br /><br /> `True`이 `string`으로 끝나면 `target`를 반환하고, 그렇지 않으면 `false`를 반환합니다.<br /><br /> **예제**<br /><br /> `-- The following example returns true.`<br /><br /> `EndsWith('abc', 'bc')`**참고:** 사용 하는 경우는 [!INCLUDE[ssNoVersion](../../../../../../includes/ssnoversion-md.md)] 데이터 공급자를이 함수는 반환 `false` 는 문자열은 고정된 길이 문자열 열에 저장 하는 경우 및 `target` 상수입니다. 이 경우 뒤쪽 채움 공백을 포함하여 전체 문자열이 검색됩니다. `EndsWith(TRIM(string), target)` 예제에 나와 있는 대로 고정 길이 문자열의 데이터를 잘라내면 문제를 해결할 수 있습니다.|  
+|`EndsWith (` `string`, `target``)`|`true`이 `target`으로 끝나면 `string`를 반환합니다.<br /><br /> **인수**<br /><br /> `string`: 검색되는 문자열입니다.<br /><br /> `target`: `string`의 끝에서 검색되는 대상 문자열입니다.<br /><br /> **반환 값**<br /><br /> `True`이 `string`으로 끝나면 `target`를 반환하고, 그렇지 않으면 `false`를 반환합니다.<br /><br /> **예제**<br /><br /> `-- The following example returns true.`<br /><br /> `EndsWith('abc', 'bc')` **참고:** SQL Server 데이터 공급자를 사용 하는 경우이 함수 반환 `false` 는 문자열은 고정된 길이 문자열 열에 저장 하는 경우 및 `target` 상수입니다. 이 경우 뒤쪽 채움 공백을 포함하여 전체 문자열이 검색됩니다. `EndsWith(TRIM(string), target)` 예제에 나와 있는 대로 고정 길이 문자열의 데이터를 잘라내면 문제를 해결할 수 있습니다.|  
 |`IndexOf(` `target`, `string``)`|`target` 내부의 `string` 위치를 반환하거나, 찾을 수 없는 경우 0을 반환합니다. `string`의 시작 부분을 나타내려면 1을 반환합니다. 인덱스 번호는 1부터 시작합니다.<br /><br /> **인수**<br /><br /> `target`: 검색되는 대상 문자열입니다.<br /><br /> `string`: 검색되는 문자열입니다.<br /><br /> **반환 값**<br /><br /> `Int32`입니다.<br /><br /> **예제**<br /><br /> `-- The following example returns 4.`<br /><br /> `IndexOf('xyz', 'abcxyz')`|  
 |`Left (` `string`, `length``)`|`length` 왼쪽에서 처음 `string`개 문자를 반환합니다. `string` 길이가 `length`보다 작으면 전체 문자열이 반환됩니다.<br /><br /> **인수**<br /><br /> `string`: `String`입니다.<br /><br /> `length`: `Int16`, `Int32`, `Int64` 또는 `Byte`입니다. `length`는 0보다 작을 수 없습니다.<br /><br /> **반환 값**<br /><br /> `String`<br /><br /> **예제**<br /><br /> `-- The following example returns abc.`<br /><br /> `Left('abcxyz', 3)`|  
 |`Length (` `string` `)`|문자열의 (`Int32`) 길이(문자)를 반환합니다.<br /><br /> **인수**<br /><br /> `string`: `String`입니다.<br /><br /> **반환 값**<br /><br /> `Int32`입니다.<br /><br /> **예제**<br /><br /> `-- The following example returns 6.`<br /><br /> `Legth('abcxyz')`|  

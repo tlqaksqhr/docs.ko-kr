@@ -1,12 +1,13 @@
 ---
-title: "개체 변수 값(Visual Basic)"
-ms.custom: 
+title: 개체 변수 값(Visual Basic)
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - object variables [Visual Basic], values
@@ -14,27 +15,27 @@ helpviewer_keywords:
 - data types [Visual Basic], object variable
 - variables [Visual Basic], object
 ms.assetid: 31555704-58a3-49f1-9a0a-6421f605664f
-caps.latest.revision: "18"
+caps.latest.revision: 18
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: ccab22920923500a2332db2372e52813c890e5e8
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 28307cc477f661c3046e125f297c1519485ad797
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="object-variable-values-visual-basic"></a>개체 변수 값(Visual Basic)
 변수는 [Object 데이터 형식](../../../../visual-basic/language-reference/data-types/object-data-type.md) 모든 형식의 데이터를 참조할 수 있습니다. 에 저장 되는 값은 `Object` 변수는 특정 위치에 보관 메모리 변수 자체는 데이터에 대 한 포인터를 유지 합니다.  
   
 ## <a name="object-classifier-functions"></a>개체 분류자 함수  
- [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]기능에 대 한 정보를 반환 하는 함수를 제공 하는 `Object` 변수가 참조 하는 다음 표에 나와 있는 것 처럼 합니다.  
+ 기능에 대 한 정보를 반환 하는 함수를 제공 하는 Visual Basic 프로그램 `Object` 변수가 참조 하는 다음 표에 나와 있는 것 처럼 합니다.  
   
 |함수|개체 변수가 참조 하는 경우 True를 반환 합니다.|  
 |--------------|---------------------------------------------------|  
 |<xref:Microsoft.VisualBasic.Information.IsArray%2A>|단일 값이 아닌 값의 배열|  
 |<xref:Microsoft.VisualBasic.Information.IsDate%2A>|A [Date 데이터 형식](../../../../visual-basic/language-reference/data-types/date-data-type.md) 값 또는 날짜 및 시간 값으로 해석 될 수 있는 문자열|  
 |<xref:Microsoft.VisualBasic.Information.IsDBNull%2A>|형식의 개체 <xref:System.DBNull>, 누락 되었거나 존재 하지 않는 데이터를 나타내는|  
-|<xref:Microsoft.VisualBasic.Information.IsError%2A>|파생 되는 예외 개체<xref:System.Exception>|  
+|<xref:Microsoft.VisualBasic.Information.IsError%2A>|파생 되는 예외 개체 <xref:System.Exception>|  
 |<xref:Microsoft.VisualBasic.Information.IsNothing%2A>|[아무 것도](../../../../visual-basic/language-reference/nothing.md), 개체가 변수에 현재 할당 되어, 즉|  
 |<xref:Microsoft.VisualBasic.Information.IsNumeric%2A>|숫자 또는 숫자로 해석 될 수 있는 문자열|  
 |<xref:Microsoft.VisualBasic.Information.IsReference%2A>|참조 형식 (예: 문자열, 배열, 대리자 또는 클래스 형식)|  

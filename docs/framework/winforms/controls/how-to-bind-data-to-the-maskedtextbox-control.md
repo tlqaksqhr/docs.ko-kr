@@ -1,12 +1,13 @@
 ---
-title: "방법: MaskedTextBox 컨트롤에 데이터 바인딩"
-ms.custom: 
+title: '방법: MaskedTextBox 컨트롤에 데이터 바인딩'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-winforms
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -17,16 +18,17 @@ helpviewer_keywords:
 - data binding [Windows Forms], MaskedTextBox control [Windows Forms]
 - MaskedTextBox control [Windows Forms], binding data
 ms.assetid: 34b29f07-e8df-48d4-b08b-53fcca524708
-caps.latest.revision: "12"
+caps.latest.revision: 12
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: cb3fd4038634969d34be4514f4d314cf5d7513e4
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 8adf445de4648c0a751a852f67a55ca9683e3469
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-bind-data-to-the-maskedtextbox-control"></a>방법: MaskedTextBox 컨트롤에 데이터 바인딩
 데이터를 바인딩할 수 있습니다는 <xref:System.Windows.Forms.MaskedTextBox> 다른 Windows Forms 컨트롤에 경우와 마찬가지로 제어 합니다. 그러나 데이터베이스의 데이터 형식 마스크 정의 필요한 형식이 일치 하지 않는 데이터의 서식을 다시 지정 해야 합니다. 다음 절차를 사용 하 여 수행 하는 방법을 보여 줍니다는 <xref:System.Windows.Forms.Binding.Format> 및 <xref:System.Windows.Forms.Binding.Parse> 의 이벤트는 <xref:System.Windows.Forms.Binding> 클래스를 별도 전화 번호를 표시 및 편집할 수 있는 단일 필드로 확장 데이터베이스 필드에 전화 합니다.  
@@ -241,7 +243,7 @@ ms.lasthandoff: 12/22/2017
   
 9. 샘플을 실행합니다. 데이터를 편집 하 고 사용 하 여는 **이전** 및 **다음** 데이터가 올바르게 유지 되어 있는지 확인 하려면 단추는 <xref:System.Data.DataSet>합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 코드 예제는 이전 절차를 완료 한 결과를 나열 하는 전체 코드입니다.  
   
  [!code-cpp[MaskedTextBoxData#1](../../../../samples/snippets/cpp/VS_Snippets_Winforms/MaskedTextBoxData/cpp/form1.cpp#1)]
@@ -250,7 +252,7 @@ ms.lasthandoff: 12/22/2017
   
 ## <a name="compiling-the-code"></a>코드 컴파일  
   
--   만들기는 [!INCLUDE[csprcs](../../../../includes/csprcs-md.md)] 또는 [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)] 프로젝트.  
+-   Visual C# 또는 Visual Basic 프로젝트를 만듭니다.  
   
 -   추가 <xref:System.Windows.Forms.TextBox> 및 <xref:System.Windows.Forms.MaskedTextBox> 이전 절차에 설명 된 대로을 폼으로 제어 합니다.  
   

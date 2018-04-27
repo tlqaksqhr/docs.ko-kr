@@ -1,11 +1,12 @@
 ---
-title: "(Visual Basic) 이벤트 선언 및 발생"
-ms.custom: 
+title: (Visual Basic) 이벤트 선언 및 발생
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - declarations [Visual Basic], events
@@ -15,14 +16,14 @@ helpviewer_keywords:
 - events [Visual Basic], raising
 - raising events [Visual Basic], walkthroughs
 ms.assetid: 8ffb3be8-097d-4d3c-b71e-04555ebda2a2
-caps.latest.revision: "16"
+caps.latest.revision: 16
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 0bf75cfba5102be5d837af385e2d3578f78a03c0
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 27db585084703607a7389f5a0aa3eba6f70dd793
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="walkthrough-declaring-and-raising-events-visual-basic"></a>연습: 이벤트 선언 및 발생(Visual Basic)
 이 연습에서는 선언 하 고 라는 클래스에 이벤트를 발생 하는 방법을 보여 줍니다. `Widget`합니다. 항목을 참고할 하려는 단계를 완료 한 후 [연습: 이벤트 처리](../../../../visual-basic/programming-guide/language-features/events/walkthrough-handling-events.md), 이벤트를 사용 하는 방법을 보여 주는 `Widget` 응용 프로그램에서 상태 정보를 제공 하는 개체입니다.  
@@ -36,7 +37,7 @@ ms.lasthandoff: 11/21/2017
   
 #### <a name="to-build-the-code-example-for-this-topic"></a>이 항목에 대 한 코드 예제를 빌드합니다.  
   
-1.  새 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] Windows 응용 프로그램 프로젝트 만들고 라는 폼 `Form1`합니다.  
+1.  새 Visual Basic Windows 응용 프로그램 프로젝트를 열고 라는 양식을 만드는 `Form1`합니다.  
   
 2.  두 개의 단추와 적절 한 레이블을 추가 `Form1`합니다.  
   
@@ -61,7 +62,7 @@ ms.lasthandoff: 11/21/2017
 > [!NOTE]
 >  다음과 같은 예외가 프로시저 인수를 같은 방식으로 이벤트 인수를 선언할 수 있습니다: 이벤트 가질 수 없습니다 `Optional` 또는 `ParamArray` 이벤트 및 인수, 반환 값이 없습니다.  
   
- `PercentDone` 이벤트에 의해 발생 되는 `LongTask` 의 메서드는 `Widget` 클래스입니다. `LongTask`두 개의 인수: 작업 및 하기 전에 최소 시간 간격에는 시간 메서드가 가로채어 `LongTask` 일시 중지를 발생 시키는 `PercentDone` 이벤트입니다.  
+ `PercentDone` 이벤트에 의해 발생 되는 `LongTask` 의 메서드는 `Widget` 클래스입니다. `LongTask` 두 개의 인수: 작업 및 하기 전에 최소 시간 간격에는 시간 메서드가 가로채어 `LongTask` 일시 중지를 발생 시키는 `PercentDone` 이벤트입니다.  
   
 #### <a name="to-raise-the-percentdone-event"></a>PercentDone 이벤트 발생  
   

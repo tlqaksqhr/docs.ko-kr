@@ -13,14 +13,14 @@ helpviewer_keywords:
 ms.assetid: a7fe83a2-a6d8-460c-8dad-79a8f433f501
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 59dc833299161eac7b119e654c94534f202b1cb7
-ms.sourcegitcommit: 498799639937c89de777361aab74261efe7b79ea
+ms.openlocfilehash: 5dc321f7f927d68a9f270076640cbc6d31d2f6d5
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="-errorreport"></a>-errorreport
-[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 컴파일러에서 내부 컴파일러 오류를 보고하는 방식을 지정합니다.  
+Visual Basic 컴파일러에서 내부 컴파일러 오류를 보고 하는 방법을 지정 합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -29,7 +29,7 @@ ms.lasthandoff: 03/22/2018
 ```  
   
 ## <a name="remarks"></a>설명  
- 이 옵션은 보고서에는 편리한 방법을 제공는 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 에 내부 컴파일러 오류 (ICE)는 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 팀 시작 합니다. 기본적으로 컴파일러 정보가 Microsoft에 보냅니다. 그러나 내부 컴파일러 오류를 발생 수행 하면이 옵션 Microsoft로 오류를 보고할 수 있습니다. 해당 정보 Microsoft 엔지니어가 원인을 파악 하는 데 도움이 되며 다음 릴리스의 향상 하는 데 도움이 될 수 있습니다 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]합니다.  
+ 이 옵션을 microsoft Visual Basic 팀 Visual Basic 내부 컴파일러 오류 (ICE)를 보고 하는 편리한 방법을 제공 합니다. 기본적으로 컴파일러 정보가 Microsoft에 보냅니다. 그러나 내부 컴파일러 오류를 발생 수행 하면이 옵션 Microsoft로 오류를 보고할 수 있습니다. 이 정보는 Microsoft 엔지니어가 원인을 파악 하는 데 도움이 되며 Visual Basic의 다음 릴리스에서 성능을 높일 수 있습니다.  
   
  컴퓨터 및 사용자 정책 사용 권한에 사용자의 보고서를 보낼 수 있는 기능에 따라 다릅니다.  
   

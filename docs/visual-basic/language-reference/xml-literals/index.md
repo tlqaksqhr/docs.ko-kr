@@ -18,16 +18,16 @@ ms.assetid: 16b28c40-8768-423f-bd9c-22ff10de2b54
 caps.latest.revision: 16
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 149959ac279f63bfd3b070461a4316941c2b7c19
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 846d9823722a3c7e93c3f45d7cc98e23832df822
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="xml-literals-visual-basic"></a>XML 리터럴(Visual Basic)
-이 섹션의 항목에서는 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]의 XML 리터럴 구문을 설명합니다. XML 리터럴 구문을 사용하여 코드에서 직접 XML을 통합할 수 있습니다.  
+이 섹션의 항목에는 Visual Basic에서 XML 리터럴의 구문을 문서화합니다. XML 리터럴 구문을 사용하여 코드에서 직접 XML을 통합할 수 있습니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
   
 |항목|설명|  
 |-----------|-----------------|  

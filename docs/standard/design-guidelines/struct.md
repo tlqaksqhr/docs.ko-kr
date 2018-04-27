@@ -24,11 +24,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 2f4a6debc25a51e3a0a83e70fc8c8f8fc55c62f5
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: dfa32112a2eb85a93cdd1e7a72d4411a3b197a1a
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="struct-design"></a>구조체 디자인
 범용 값 형식이 가장 자주 C# 키워드는 구조체 라고 합니다. 이 섹션에서는 일반 구조체 디자인에 대 한 지침을 제공 합니다.  
@@ -47,15 +47,15 @@ ms.lasthandoff: 12/23/2017
   
  **✓ 않습니다** 구현 <xref:System.IEquatable%601> 값 형식에 있습니다.  
   
- <xref:System.Object.Equals%2A?displayProperty=nameWithType> 값 형식에서 메서드를 boxing을 사용 하면 고 리플렉션을 사용 하기 때문에 기본 구현 효율적이 지 않습니다. <xref:System.IEquatable%601.Equals%2A>성능을 향상을 가질 수 있습니다 및 boxing이 발생 하지 것입니다 있도록 구현할 수 있습니다.  
+ <xref:System.Object.Equals%2A?displayProperty=nameWithType> 값 형식에서 메서드를 boxing을 사용 하면 고 리플렉션을 사용 하기 때문에 기본 구현 효율적이 지 않습니다. <xref:System.IEquatable%601.Equals%2A> 성능을 향상을 가질 수 있습니다 및 boxing이 발생 하지 것입니다 있도록 구현할 수 있습니다.  
   
  **X 하지 않으면** 명시적으로 확장 <xref:System.ValueType>합니다. 실제로 대부분의 언어가를 방지 합니다.  
   
  일반적으로 구조체 매우 유용할 수 있지만 자주 boxed 하지 하는 작은를 변경할 수 없는 단일 값만 사용 해야 합니다.  
   
- *일부 © 2005, 2009 Microsoft Corporation. 모든 권리 보유.*  
+ *Portions © 2005, 2009 Microsoft Corporation. 모든 권리 보유.*  
   
- *피어슨 교육, Inc.에서의 사용 권한으로 재인쇄 [Framework 디자인 지침: 규칙, 특징 및 다시 사용할 수 있는.NET 라이브러리를 2nd Edition에 대 한 패턴](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina 및 Brad Abrams 게시 하 여 2008 년 10 월 22 일 Microsoft Windows 개발 시리즈의 일부로: Addison Wesley Professional.*  
+ *피어슨 교육, Inc.에서의 사용 권한으로 재인쇄 [Framework 디자인 지침: 규칙, 특징 및 다시 사용할 수 있는.NET 라이브러리를 2nd Edition에 대 한 패턴](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina 및 Brad Abrams 게시 하 여 2008 년 10 월 22 일 Microsoft Windows 개발 시리즈의 일부로: Addison Wesley Professional.*  
   
 ## <a name="see-also"></a>참고 항목  
  [형식 디자인 지침](../../../docs/standard/design-guidelines/type.md)  

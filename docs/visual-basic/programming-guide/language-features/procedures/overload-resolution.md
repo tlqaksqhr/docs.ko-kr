@@ -1,11 +1,12 @@
 ---
-title: "오버로드 확인(Visual Basic)"
-ms.custom: 
+title: 오버로드 확인(Visual Basic)
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - Visual Basic code, procedures
@@ -16,19 +17,19 @@ helpviewer_keywords:
 - signatures [Visual Basic], procedure
 - overloads [Visual Basic], resolution
 ms.assetid: 766115d1-4352-45fb-859f-6063e0de0ec0
-caps.latest.revision: "21"
+caps.latest.revision: 21
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 7eb71b69496e27b664fe297e9e5f105b360ce01d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: e62560d853c95bc4bba6ba829d8579ee4388858e
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="overload-resolution-visual-basic"></a>오버로드 확인(Visual Basic)
-경우는 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 몇 가지 오버 로드 된 버전에 정의 된 프로시저 호출을 발견 하는 컴파일러, 컴파일러를 호출 하는 오버 로드를 결정 해야 합니다. 다음 단계를 수행 하 여 수행 합니다.  
+Visual Basic 컴파일러에서 몇 가지 오버 로드 된 버전에 정의 된 프로시저 호출을를 발견 하면 호출 하는 오버 로드 중 어떤 결정 해야 합니다. 다음 단계를 수행 하 여 수행 합니다.  
   
-1.  **액세스 가능성입니다.** 호출 코드에서 메서드를 호출 하지 않도록 설정 하는 액세스 수준으로 오버 로드 모두 제거 합니다.  
+1.  **접근성.** 호출 코드에서 메서드를 호출 하지 않도록 설정 하는 액세스 수준으로 오버 로드 모두 제거 합니다.  
   
 2.  **매개 변수 수입니다.** 호출에서 제공 하는 다른 개수의 매개 변수를 정의 하는 오버 로드를 모두 제거 합니다.  
   

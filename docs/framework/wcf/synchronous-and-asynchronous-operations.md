@@ -1,12 +1,13 @@
 ---
-title: "동기 및 비동기 작업"
-ms.custom: 
+title: 동기 및 비동기 작업
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,16 +16,17 @@ helpviewer_keywords:
 - service contracts [WCF], synchronous operations
 - service contracts [WCF], asynchronous operations
 ms.assetid: db8a51cb-67e6-411b-9035-e5821ed350c9
-caps.latest.revision: "24"
+caps.latest.revision: 24
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 3d108c8c84af2563e48a9f339df2a96f8218c742
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 123186dd5f0d63693c04c0857709292ce122f918
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="synchronous-and-asynchronous-operations"></a>동기 및 비동기 작업
 이 항목에서는 비동기 서비스 작업의 구현 및 호출에 대해 설명합니다.  
@@ -53,7 +55,7 @@ ms.lasthandoff: 12/22/2017
   
 -   ASP.NET 페이지 내에서 작업을 호출하는 경우에는 비동기 페이지를 사용하세요.  
   
--   Windows Forms 또는 [!INCLUDE[avalon1](../../../includes/avalon1-md.md)] 등의 단일 스레드 응용 프로그램에서 작업을 호출하는 경우. 이벤트 기반의 비동기 호출 모델을 사용하는 경우에는 결과 이벤트가 UI 스레드에서 발생하기 때문에 사용자가 직접 여러 스레드를 처리할 필요 없이 응용 프로그램에 응답이 추가됩니다.  
+-   단일 응용 프로그램에서 작업을 호출 하는 경우 Windows Forms 또는 Windows Presentation Foundation (WPF) 같은 스레드입니다. 이벤트 기반의 비동기 호출 모델을 사용하는 경우에는 결과 이벤트가 UI 스레드에서 발생하기 때문에 사용자가 직접 여러 스레드를 처리할 필요 없이 응용 프로그램에 응답이 추가됩니다.  
   
 -   일반적으로 동기 호출과 비동기 호출 중에서 선택해야 하는 경우에는 비동기 호출을 선택하세요.  
   
@@ -67,7 +69,7 @@ ms.lasthandoff: 12/22/2017
 3.  IAsyncResult 비동기 패턴  
   
 #### <a name="task-based-asynchronous-pattern"></a>작업 기반 비동기 패턴  
- 작업 기반 비동기 패턴은 가장 쉽고 단순하기 때문에 비동기 작업을 구현하는 데 가장 선호하는 방법입니다. 이 방법을 사용 하려면 서비스 작업을 구현 하 고 작업의 반환 형식을 지정\<T >, 여기서 T는 논리 연산에서 반환 되는 형식입니다. 예:  
+ 작업 기반 비동기 패턴은 가장 쉽고 단순하기 때문에 비동기 작업을 구현하는 데 가장 선호하는 방법입니다. 이 방법을 사용 하려면 서비스 작업을 구현 하 고 작업의 반환 형식을 지정\<T >, 여기서 T는 논리 연산에서 반환 되는 형식입니다. 예를 들어:  
   
 ```csharp  
 public class SampleService:ISampleService   

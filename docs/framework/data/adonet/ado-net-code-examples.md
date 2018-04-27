@@ -1,23 +1,25 @@
 ---
-title: "ADO.NET 코드 예제"
+title: ADO.NET 코드 예제
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.technology: dotnet-ado
+ms.technology:
+- dotnet-ado
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: c119657a-9ce6-4940-91e4-ac1d5f0d9584
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: ea26b4297f587a449b8484947257081e0d11906c
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: 8fec055db7069a213b31b9f4443b2f0e7467dd7b
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="adonet-code-examples"></a>ADO.NET 코드 예제
 이 항목에 나열된 코드에서는 다음과 같은 ADO.NET 기술을 사용하여 데이터베이스에서 데이터를 검색하는 방법을 보여 줍니다.
@@ -46,7 +48,7 @@ ms.lasthandoff: 01/17/2018
 다음에 나열된 코드에서는 ADO.NET 데이터 공급자를 사용하여 데이터베이스에서 데이터를 검색하는 방법을 보여 줍니다. 데이터는 `DataReader`에서 반환됩니다. 자세한 내용은 참조 [DataReader를 사용 하 여 데이터 검색](../../../../docs/framework/data/adonet/retrieving-data-using-a-datareader.md)합니다.
 
 ### <a name="sqlclient"></a>SqlClient
-이 예제 코드에서는 Microsoft `Northwind`에서 [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] 샘플 데이터베이스에 연결할 수 있다고 가정합니다. 이 코드에서는 Products 테이블에서 행을 선택하는 <xref:System.Data.SqlClient.SqlCommand>를 만들고 <xref:System.Data.SqlClient.SqlParameter>를 추가하여 UnitPrice가 지정한 매개 변수 값(이 경우 5)보다 큰 행만 반환되도록 제한합니다. <xref:System.Data.SqlClient.SqlConnection> 내부에서 열리면는 `using` 블록 리소스가 닫히고 삭제 코드가 종료 될 때 삭제 됩니다. 이 코드에서는 <xref:System.Data.SqlClient.SqlDataReader>를 사용하여 명령을 실행하고 결과를 콘솔 창에 표시합니다.
+이 예제 코드에서는에 연결할 수 있는지는 `Northwind` 에서 Microsoft SQL Server 예제 데이터베이스. 이 코드에서는 Products 테이블에서 행을 선택하는 <xref:System.Data.SqlClient.SqlCommand>를 만들고 <xref:System.Data.SqlClient.SqlParameter>를 추가하여 UnitPrice가 지정한 매개 변수 값(이 경우 5)보다 큰 행만 반환되도록 제한합니다. <xref:System.Data.SqlClient.SqlConnection> 내부에서 열리면는 `using` 블록 리소스가 닫히고 삭제 코드가 종료 될 때 삭제 됩니다. 이 코드에서는 <xref:System.Data.SqlClient.SqlDataReader>를 사용하여 명령을 실행하고 결과를 콘솔 창에 표시합니다.
 
  [!code-csharp[DataWorks SampleApp.SqlClient#1](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SampleApp.SqlClient/CS/source.cs#1)]
  [!code-vb[DataWorks SampleApp.SqlClient#1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SampleApp.SqlClient/VB/source.vb#1)]
@@ -350,7 +352,7 @@ Class LinqSqlSample
 End Class
 ```
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참고자료
  [ADO.NET 개요](../../../../docs/framework/data/adonet/ado-net-overview.md)  
  [ADO.NET에서 데이터 검색 및 수정](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)  
  [데이터 응용 프로그램 만들기](http://msdn.microsoft.com/library/ab334d5f-4f49-4346-bce0-3325d6130b3e)  

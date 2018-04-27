@@ -1,28 +1,29 @@
 ---
-title: "쿼리(Visual Basic)"
+title: 쿼리(Visual Basic)
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - queries [Visual Basic]
 - LINQ, queries
 ms.assetid: 8edc717c-4a24-4cbc-9c16-11f479c935db
-caps.latest.revision: "11"
+caps.latest.revision: 11
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 80038bae51f16daca19da73905f6bbce42a63b97
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 83a8b152e2125ba69623e3cefdda5752abc268ea
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="queries-visual-basic"></a>쿼리(Visual Basic)
-[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]만들 수 있습니다 [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] 코드의 식입니다.  
+Visual Basic을 사용 하면 만들려는 [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] 코드의 식입니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [Aggregate 절](../../../visual-basic/language-reference/queries/aggregate-clause.md)  
  설명의 `Aggregate` 를 컬렉션에 하나 이상의 집계 함수를 적용 하는 절.  
   

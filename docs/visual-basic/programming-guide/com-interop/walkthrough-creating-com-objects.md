@@ -1,11 +1,12 @@
 ---
-title: "연습: Visual Basic을 사용하여 COM 개체 만들기"
-ms.custom: 
+title: '연습: Visual Basic을 사용하여 COM 개체 만들기'
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - COM interop [Visual Basic], creating COM objects
@@ -14,22 +15,22 @@ helpviewer_keywords:
 - object creation [Visual Basic], COM objects
 - COM objects, walkthroughs
 ms.assetid: 7b07a463-bc72-4392-9ba0-9dfcb697a44f
-caps.latest.revision: "30"
+caps.latest.revision: 30
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: ff7d3868a2e3ddaba06ebc6f98c8eacfc7299366
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: e660d672fc32455cee349dc44ad20c3244c087b4
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="walkthrough-creating-com-objects-with-visual-basic"></a>연습: Visual Basic을 사용하여 COM 개체 만들기
-새 응용 프로그램 또는 구성 요소를 만들 때.NET Framework 어셈블리를 만드는 것이 좋습니다. 그러나 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 도 쉽게 com.NET Framework 구성 요소를 노출 하려면 이 COM 구성 요소를 필요로 하는 이전 응용 프로그램 제품군에 대 한 새 구성 요소를 제공할 수 있습니다. 이 연습에서는 사용 하는 방법을 보여 줍니다. [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 노출 하도록 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 와 COM 클래스 템플릿을 사용 하지 않고 COM 개체로 개체입니다.  
+새 응용 프로그램 또는 구성 요소를 만들 때.NET Framework 어셈블리를 만드는 것이 좋습니다. 그러나 Visual Basic을 사용 하면 com.NET Framework 구성 요소를 노출 하기가 이 COM 구성 요소를 필요로 하는 이전 응용 프로그램 제품군에 대 한 새 구성 요소를 제공할 수 있습니다. 이 연습에서는 Visual Basic을 사용 하 여 노출 하도록 하는 방법을 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 와 COM 클래스 템플릿을 사용 하지 않고 COM 개체로 개체입니다.  
   
  COM 클래스 템플릿을 사용 하 여 COM 개체를 노출 하는 가장 쉬운 방법은 됩니다. COM 클래스 템플릿을 새 클래스를 만들고 COM 개체로 클래스 및 상호 운용성 계층을 생성 하 고 운영 체제에 등록 하려면 프로젝트를 구성 합니다.  
   
 > [!NOTE]
->  만든 클래스를 노출할 수도 있지만 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] COM 개체로 사용 하 여 비관리 코드를 실제 COM 개체 아니며에서 사용할 수 없는 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]합니다. 자세한 내용은 참조 [.NET Framework 응용 프로그램의 COM 상호 운용성](../../../visual-basic/programming-guide/com-interop/com-interoperability-in-net-framework-applications.md)합니다.  
+>  Visual Basic에서 사용 하 여 비관리 코드를 COM 개체로 만든 클래스를 노출할 수도 있지만 true COM 개체가 아니라 및 Visual Basic에서 사용할 수 없습니다. 자세한 내용은 참조 [.NET Framework 응용 프로그램의 COM 상호 운용성](../../../visual-basic/programming-guide/com-interop/com-interoperability-in-net-framework-applications.md)합니다.  
   
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
@@ -41,11 +42,11 @@ ms.lasthandoff: 11/21/2017
   
 3.  선택 **새 항목 추가** 에서 **프로젝트** 메뉴. **새 항목 추가** 대화 상자가 표시됩니다.  
   
-4.  선택 **COM 클래스** 에서 **템플릿** 목록으로 이동한 다음 클릭 **추가**합니다. [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]새 클래스를 추가 하 고 COM interop에 대 한 새 프로젝트를 구성 합니다.  
+4.  선택 **COM 클래스** 에서 **템플릿** 목록으로 이동한 다음 클릭 **추가**합니다. Visual Basic 새 클래스를 추가 하 고 COM interop에 대 한 새 프로젝트를 구성 합니다.  
   
 5.  COM 클래스에 속성, 메서드 및 이벤트 등의 코드를 추가 합니다.  
   
-6.  선택 **빌드 ClassLibrary1** 에서 **빌드** 메뉴. [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]어셈블리를 빌드하고 운영 체제와 COM 개체를 등록 합니다.  
+6.  선택 **빌드 ClassLibrary1** 에서 **빌드** 메뉴. Visual Basic 어셈블리를 빌드하고 운영 체제와 COM 개체를 등록 합니다.  
   
 ## <a name="creating-com-objects-without-the-com-class-template"></a>COM 클래스 템플릿 사용 하지 않고 COM 개체 만들기  
  COM 클래스 템플릿을 사용 하지 않고 수동으로 COM 클래스를 만들 수 있습니다. 이 절차는 명령줄에서 작업할 때 또는 COM 개체를 정의 하는 방법을 보다 더 많은 제어 하려는 경우 유용 합니다.  
@@ -93,10 +94,10 @@ ms.lasthandoff: 11/21/2017
   
      [!code-vb[VbVbalrInterop#6](../../../visual-basic/programming-guide/com-interop/codesnippet/VisualBasic/walkthrough-creating-com-objects_5.vb)]  
   
-9. 속성, 메서드 및 이벤트에 추가 클래스를 사용 하 여 종료는 `End Class` 문. 선택 **솔루션 빌드** 에서 **빌드** 메뉴. [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]어셈블리를 빌드하고 운영 체제와 COM 개체를 등록 합니다.  
+9. 속성, 메서드 및 이벤트에 추가 클래스를 사용 하 여 종료는 `End Class` 문. 선택 **솔루션 빌드** 에서 **빌드** 메뉴. Visual Basic 어셈블리를 빌드하고 운영 체제와 COM 개체를 등록 합니다.  
   
     > [!NOTE]
-    >  COM 개체를 생성 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 다른에서 사용할 수 없는 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 응용 프로그램 진정한 COM 개체가 없기 때문에 있습니다. 이러한 COM 개체에 대 한 참조를 추가 하려는 시도 오류가 발생 합니다. 자세한 내용은 참조 [.NET Framework 응용 프로그램의 COM 상호 운용성](../../../visual-basic/programming-guide/com-interop/com-interoperability-in-net-framework-applications.md)합니다.  
+    >  True 이면 COM 개체 되지 않기 때문에 다른 Visual Basic 응용 프로그램에서 Visual Basic을 사용한 생성 COM 개체를 사용할 수 없습니다. 이러한 COM 개체에 대 한 참조를 추가 하려는 시도 오류가 발생 합니다. 자세한 내용은 참조 [.NET Framework 응용 프로그램의 COM 상호 운용성](../../../visual-basic/programming-guide/com-interop/com-interoperability-in-net-framework-applications.md)합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  <xref:Microsoft.VisualBasic.ComClassAttribute>  

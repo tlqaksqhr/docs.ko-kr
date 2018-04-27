@@ -1,28 +1,28 @@
 ---
-title: "연습: 데이터 조작(Visual Basic)"
-ms.custom: 
+title: '연습: 데이터 조작(Visual Basic)'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-ado
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - vb
 ms.assetid: 1f6a54f6-ec33-452a-a37d-48122207bf14
-caps.latest.revision: 
+caps.latest.revision: 2
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload:
 - dotnet
-ms.openlocfilehash: b4bc7baee8e95243cf05a52f49c37aa2d8916666
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: db11ff39eb11c40fa0f7b1bcb51245d2966cbdbe
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="walkthrough-manipulating-data-visual-basic"></a>연습: 데이터 조작(Visual Basic)
 이 연습에서는 데이터베이스의 데이터를 추가, 수정 및 삭제하기 위한 기본 종단 간 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 시나리오를 제공합니다. Northwind 샘플 데이터베이스의 복사본을 사용하여 고객을 추가하고, 고객의 이름을 변경하고, 주문을 삭제합니다.  
@@ -31,7 +31,7 @@ ms.lasthandoff: 01/17/2018
   
  이 연습은 Visual Basic 개발 설정을 사용하여 작성했습니다.  
   
-## <a name="prerequisites"></a>필수 구성 요소  
+## <a name="prerequisites"></a>전제 조건  
  이 연습에서는 다음 사항이 필요합니다.  
   
 -   이 연습에서는 전용 폴더("c:\linqtest2")를 사용하여 파일을 저장합니다. 연습을 시작하기 전에 먼저 이 폴더를 만듭니다.  
@@ -51,7 +51,7 @@ ms.lasthandoff: 01/17/2018
 ## <a name="overview"></a>개요  
  이 연습은 다음과 같은 여섯 가지 주요 작업으로 구성됩니다.  
   
--   [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]에 [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)] 솔루션 만들기  
+-   만들기는 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Visual Studio에서 솔루션입니다.  
   
 -   데이터베이스 코드 파일을 프로젝트에 추가  
   
@@ -64,11 +64,11 @@ ms.lasthandoff: 01/17/2018
 -   이러한 변경 내용을 Northwind 데이터베이스로 전송  
   
 ## <a name="creating-a-linq-to-sql-solution"></a>LINQ to SQL 솔루션 만들기  
- 이 첫 번째 작업에서는 [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)] 프로젝트를 빌드하고 실행하는 데 필요한 참조가 들어 있는 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 솔루션을 만듭니다.  
+ 이 첫 번째 작업에서 빌드 및 실행 하는 데 필요한 참조가 포함 된 Visual Studio 솔루션을 만들는 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 프로젝트.  
   
 #### <a name="to-create-a-linq-to-sql-solution"></a>LINQ to SQL 솔루션을 만들려면  
   
-1.  에 [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)] **파일** 메뉴를 클릭 하 여 **새 프로젝트**합니다.  
+1.  Visual Studio의 **파일** 메뉴에서 **새 프로젝트**를 클릭합니다.  
   
 2.  에 **프로젝트 형식** 창에는 **새 프로젝트** 대화 상자를 클릭 **Visual Basic**합니다.  
   
@@ -117,7 +117,7 @@ ms.lasthandoff: 01/17/2018
   
      A **콘솔** 창이 열립니다.  
   
-     Enter 키를 눌러 응용 프로그램을 닫습니다는 **콘솔** 창을 클릭 하 여 **디버깅 중지** 에 [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)] **디버그** 메뉴.  
+     Enter 키를 눌러 응용 프로그램을 닫습니다는 **콘솔** 창을 클릭 하 여 **디버깅 중지** Visual Studio에서 **디버그** 메뉴.  
   
 ## <a name="creating-a-new-entity"></a>새 엔터티 만들기  
  새 엔터티를 만드는 과정은 단순합니다. `Customer` 키워드를 사용하여 개체(예: `New`)를 만들 수 있습니다.  

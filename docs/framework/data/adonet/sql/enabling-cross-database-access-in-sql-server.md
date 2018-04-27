@@ -1,24 +1,26 @@
 ---
-title: "SQL Server에서 데이터베이스간 액세스 활성화"
-ms.custom: 
+title: SQL Server에서 데이터베이스간 액세스 활성화
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 10663fb6-434c-4c81-8178-ec894b9cf895
-caps.latest.revision: "10"
+caps.latest.revision: 10
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 2a31bddfec44ad4b33f1b595c2746d1a0e841b82
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: 0f27f5bd63acbf532d3dca2a8c6fea0b1a59d659
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="enabling-cross-database-access-in-sql-server"></a>SQL Server에서 데이터베이스간 액세스 활성화
 데이터베이스 간 소유권 체인은 한 데이터베이스의 프로시저가 다른 데이터베이스의 개체에 종속되는 경우 발생합니다. 끊어지지 않은 소유권 체인에서는 모든 개체 소유자가 동일한 로그인 계정에 매핑되어야 한다는 점을 제외하고 데이터베이스 간 소유권 체인은 단일 데이터베이스 내의 소유권 체인과 같은 방식으로 작동합니다. 소스 데이터베이스의 소스 개체와 대상 데이터베이스의 대상 개체를 동일한 로그인 계정에서 소유하는 경우 SQL Server는 대상 개체의 권한을 확인하지 않습니다.  
@@ -52,14 +54,14 @@ ALTER DATABASE Database2 SET DB_CHAINING ON;
 ```  
   
 ### <a name="dynamic-sql"></a>동적 SQL  
- 데이터베이스 간 소유권 체인은 동일 사용자가 두 데이터베이스에 없는 경우 동적으로 생성된 SQL 문이 실행되는 환경에서는 동작하지 않습니다. [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)]에서는 다른 데이터베이스의 데이터에 액세스하는 저장 프로시저를 만들고 두 데이터베이스 모두에 존재하는 인증서로 프로시저에 서명하여 이 문제를 해결할 수 있습니다. 이렇게 하면 사용자에게 데이터베이스 액세스 또는 권한을 부여하지 않고 프로시저에서 사용되는 데이터베이스 리소스에 사용자가 액세스하도록 할 수 있습니다.  
+ 데이터베이스 간 소유권 체인은 동일 사용자가 두 데이터베이스에 없는 경우 동적으로 생성된 SQL 문이 실행되는 환경에서는 동작하지 않습니다. 다른 데이터베이스의 데이터에 액세스 하는 저장된 프로시저를 만들고 두 데이터베이스 모두에 존재 하는 인증서로 프로시저에 서명 하 여 SQL Server에서이 문제를 해결할 작업할 수 있습니다. 이렇게 하면 사용자에게 데이터베이스 액세스 또는 권한을 부여하지 않고 프로시저에서 사용되는 데이터베이스 리소스에 사용자가 액세스하도록 할 수 있습니다.  
   
 ## <a name="external-resources"></a>외부 리소스  
  자세한 내용은 다음 리소스를 참조하세요.  
   
 |리소스|설명|  
 |--------------|-----------------|  
-|[EXECUTE AS를 사용 하 여 데이터베이스 가장 확장](http://msdn.microsoft.com/library/ms188304\(SQL.105\).aspx) 및 [Cross DB Ownership Chaining 옵션](http://msdn.microsoft.com/library/ms188694.aspx) [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] 온라인 설명서.|이 항목에서는 [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] 인스턴스에 대해 데이터베이스 간 소유권 체인을 구성하는 방법을 설명합니다.|  
+|[EXECUTE AS를 사용 하 여 데이터베이스 가장 확장](http://msdn.microsoft.com/library/ms188304\(SQL.105\).aspx) 및 [Cross DB Ownership Chaining 옵션](http://msdn.microsoft.com/library/ms188694.aspx)SQL Server 온라인 설명서.|항목에서는 데이터베이스 간 소유권 체인에 대 한 SQL Server의 인스턴스를 구성 하는 방법에 설명 합니다.|  
   
 ## <a name="see-also"></a>참고 항목  
  [ADO.NET 응용 프로그램 보안](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  

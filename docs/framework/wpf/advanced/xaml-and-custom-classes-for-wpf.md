@@ -1,28 +1,30 @@
 ---
-title: "WPF에 대한 XAML 및 사용자 지정 클래스"
-ms.custom: 
+title: WPF에 대한 XAML 및 사용자 지정 클래스
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - custom classes in XAML [WPF]
 - XAML [WPF], custom classes
 - classes [WPF], custom classes in XAML
 ms.assetid: e7313137-581e-4a64-8453-d44e15a6164a
-caps.latest.revision: "22"
+caps.latest.revision: 22
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: da599afc94fba617d4df17c57679d8ee4bb05c61
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: a7aa7ffe38f1fbd7de71dbc95ae12b8faca6e356
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="xaml-and-custom-classes-for-wpf"></a>WPF에 대한 XAML 및 사용자 지정 클래스
 [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] 프레임워크에서 구현된 XAML은 모든 [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] 언어로 사용자 지정 클래스 또는 구조체를 정의한 다음 XAML 태그를 사용하여 해당 클래스에 액세스하는 기능을 지원합니다. 일반적으로 사용자 지정 형식을 XAML 네임스페이스 접두사에 매핑하여 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 정의 형식과 사용자 지정 형식의 혼합을 동일한 태그 파일에서 함께 사용할 수 있습니다. 이 항목에서는 사용자 지정 클래스를 XAML 요소로 사용 가능하기 위해 만족해야 하는 요구 사항을 설명합니다.  
@@ -70,7 +72,7 @@ ms.lasthandoff: 12/22/2017
  여기서 특성 구문을 사용할 수 있지만 xaml 속성 요소 구문을 개체 요소를 포함 하는 허용 되지 않습니다. 속성의 예로 사용 하는 다양 한 속성의 <xref:System.Windows.Input.Cursor> 유형입니다. <xref:System.Windows.Input.Cursor> 클래스에는 전용된 형식 변환기 <xref:System.Windows.Input.CursorConverter>, 하지만 기본 생성자를 노출 하지 않습니다 하므로 <xref:System.Windows.FrameworkElement.Cursor%2A> 만 속성 특성 구문을 통해도 실제 <xref:System.Windows.Input.Cursor> 형식은 참조 형식입니다.  
   
 ### <a name="per-property-type-converters"></a>속성별 형식 변환기  
- 또는 속성 자체가 속성 수준에서 형식 변환기를 선언할 수도 있습니다. 이렇게 하면 "미니 language"에 대 한 입력으로 특성의 들어오는 문자열 값을 처리 하 여 속성 인라인 유형의 개체를 인스턴스화하는 <xref:System.ComponentModel.TypeConverter.ConvertFrom%2A> 적절 한 형식에 따라 작업입니다. 일반적으로 이 작업은 XAML에서 속성을 설정할 수 있는 유일한 방법이 아니라 편리한 접근자를 제공하기 위해 수행합니다. 그러나 기본 생성자나 특성 사용 형식 변환기를 제공하지 않는 기존 [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] 형식을 사용하려는 특성에 대해서도 형식 변환기를 사용할 수도 있습니다. 예제는 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] API를 사용 하는 특정 속성은는 <xref:System.Globalization.CultureInfo> 유형입니다. 이 경우 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 기존 사용 [!INCLUDE[TLA#tla_winfx](../../../../includes/tlasharptla-winfx-md.md)] <xref:System.Globalization.CultureInfo> 이전 버전의 프레임 워크에서 사용 되었던 호환성 및 마이그레이션 시나리오를 해결 하기 위해 형식 이지만 <xref:System.Globalization.CultureInfo> 형식은 필요한 생성자를 지원 하지 않습니다 또는 형식 수준의 직접 XAML 속성 값으로 사용할 수 있도록 하려면 형식 변환 합니다.  
+ 또는 속성 자체가 속성 수준에서 형식 변환기를 선언할 수도 있습니다. 이렇게 하면 "미니 language"에 대 한 입력으로 특성의 들어오는 문자열 값을 처리 하 여 속성 인라인 유형의 개체를 인스턴스화하는 <xref:System.ComponentModel.TypeConverter.ConvertFrom%2A> 적절 한 형식에 따라 작업입니다. 일반적으로 이 작업은 XAML에서 속성을 설정할 수 있는 유일한 방법이 아니라 편리한 접근자를 제공하기 위해 수행합니다. 그러나 기본 생성자나 특성 사용 형식 변환기를 제공하지 않는 기존 [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] 형식을 사용하려는 특성에 대해서도 형식 변환기를 사용할 수도 있습니다. 예제는 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] API를 사용 하는 특정 속성은는 <xref:System.Globalization.CultureInfo> 유형입니다. 이 경우 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 기존 Microsoft.NET Framework를 사용 <xref:System.Globalization.CultureInfo> 이전 버전의 프레임 워크에서 사용 되었던 호환성 및 마이그레이션 시나리오를 해결 하기 위해 형식 이지만 <xref:System.Globalization.CultureInfo> 형식은 필요한을 지원 하지 않았습니다 생성자 또는 직접 XAML 속성 값으로 사용할 수 있도록 하려면 형식 수준의 형식 변환 합니다.  
   
  따라서 컨트롤 작성자는 XAML을 사용하는 속성을 노출할 때마다 해당 속성에 종속성 속성을 지원하는 방법을 고려해야 합니다. 기존 사용 하는 경우에 특히 그렇습니다 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] XAML 프로세서의 구현을 사용 하 여 성능을 향상 시킬 수 있습니다 때문에 <xref:System.Windows.DependencyProperty> 백업 합니다. 종속성 속성은 XAML 액세스 가능 속성이 제공할 것으로 예상되는 속성 시스템의 기능을 노출합니다. 이러한 기능에는 애니메이션, 데이터 바인딩 및 스타일 지원 등이 포함됩니다. 자세한 내용은 [사용자 지정 종속성 속성](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md) 및 [XAML 로드 및 종속성 속성](../../../../docs/framework/wpf/advanced/xaml-loading-and-dependency-properties.md)을 참조하세요.  
   

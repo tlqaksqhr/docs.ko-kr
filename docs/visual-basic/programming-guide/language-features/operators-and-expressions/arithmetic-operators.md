@@ -1,11 +1,12 @@
 ---
-title: "Visual Basic의 산술 연산자"
-ms.custom: 
+title: Visual Basic의 산술 연산자
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - type safety
@@ -19,14 +20,14 @@ helpviewer_keywords:
 - Visual Basic code, operators
 - arithmetic operators [Visual Basic], about arithmetic operators
 ms.assetid: 325dac7a-ea4f-41d5-8b48-f6e904211569
-caps.latest.revision: "20"
+caps.latest.revision: 20
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 7fec98c38eebc34a0f84e051dc7c0914f537418f
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: cef1e3610d885a0f3a2bae718641f7b8ca1062dc
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="arithmetic-operators-in-visual-basic"></a>Visual Basic의 산술 연산자
 산술 연산자는 많은 리터럴, 변수, 다른 식, 함수 및 속성 호출 및 상수를 나타내는 숫자 값의 계산을 포함 하는 친숙 한 산술 연산을 수행 하는 데 사용 됩니다. 피연산자의 개별 비트 수준에서 작동 하 고 왼쪽 이나 오른쪽으로의 비트 패턴을 이동 하는 비트 시프트 연산자는 산술 연산자를 사용 하 여 분류도 합니다.  
@@ -65,7 +66,7 @@ ms.lasthandoff: 11/21/2017
   
 |피제수 데이터 형식|제 수 데이터 형식|피제수 값|결과|  
 |---|---|---|---|  
-|`Double`|`Double`|0|<xref:System.Double.NaN>(수학적으로 정의 된 숫자가 아님)|  
+|`Double`|`Double`|0|<xref:System.Double.NaN> (수학적으로 정의 된 숫자가 아님)|  
 |`Double`|`Double`|> 0|<xref:System.Double.PositiveInfinity>|  
 |`Double`|`Double`|\< 0|<xref:System.Double.NegativeInfinity>|  
   
@@ -98,9 +99,9 @@ ms.lasthandoff: 11/21/2017
 ## <a name="type-safety"></a>형식 안전성  
  피연산자는 일반적으로 같은 형식 이어야 합니다. 예를 들어, 추가 하는 경우는 `Integer` 변수를 추가 해야 다른 `Integer` 변수에 결과 형식의 변수를 할당 해야 `Integer` 도 합니다.  
   
- 형식이 안전한 되도록 한 가지 방법은 코딩 사례 사용 하는 것은 [Option Strict 문](../../../../visual-basic/language-reference/statements/option-strict-statement.md)합니다. 설정한 경우 `Option Strict On`, [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 자동으로 수행 *형식이 안전한* 변환 합니다. 추가 하려는 경우 등는 `Integer` 변수를 한 `Double` 변수 값을 할당 하 고는 `Double` 변수, 작업을 정상적으로 진행 되므로 `Integer` 값을 변환할 수 `Double` 데이터 손실 없이 합니다. 변환의 형식이 안전 하지 않은 경우에 반면에으로 컴파일러 오류가 발생 `Option Strict On`합니다. 추가 하려는 경우 등는 `Integer` 변수를 `Double` 변수 값을 할당 하 고는 `Integer` 변수, 컴파일러 오류가 발생 한 `Double` 변수 형식으로 암시적으로 변환 될 수 없습니다 `Integer`합니다.  
+ 형식이 안전한 되도록 한 가지 방법은 코딩 사례 사용 하는 것은 [Option Strict 문](../../../../visual-basic/language-reference/statements/option-strict-statement.md)합니다. 설정한 경우 `Option Strict On`, Visual Basic에서 자동으로 수행 *형식이 안전한* 변환 합니다. 추가 하려는 경우 등는 `Integer` 변수를 한 `Double` 변수 값을 할당 하 고는 `Double` 변수, 작업을 정상적으로 진행 되므로 `Integer` 값을 변환할 수 `Double` 데이터 손실 없이 합니다. 변환의 형식이 안전 하지 않은 경우에 반면에으로 컴파일러 오류가 발생 `Option Strict On`합니다. 추가 하려는 경우 등는 `Integer` 변수를 `Double` 변수 값을 할당 하 고는 `Integer` 변수, 컴파일러 오류가 발생 한 `Double` 변수 형식으로 암시적으로 변환 될 수 없습니다 `Integer`합니다.  
   
- 설정한 경우 `Option Strict Off`그러나 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 암시적 축소 변환을 수행 하면 허용 예기치 않은 데이터 또는 정밀도 손실을 초래할 수 있습니다. 이러한 이유로 사용 하는 권장 `Option Strict On` 프로덕션 코드를 작성할 때. 자세한 내용은 [Widening and Narrowing Conversions](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)을 참조하세요.  
+ 설정한 경우 `Option Strict Off`, 예기치 않은 데이터 또는 정밀도 손실 발생할 수도 있지만 Visual Basic에서 암시적 축소 변환을 수행를 허용 하는 반면 합니다. 이러한 이유로 사용 하는 권장 `Option Strict On` 프로덕션 코드를 작성할 때. 자세한 내용은 [Widening and Narrowing Conversions](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)을 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
  [산술 연산자](../../../../visual-basic/language-reference/operators/arithmetic-operators.md)  

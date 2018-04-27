@@ -1,12 +1,13 @@
 ---
-title: "방법: 인쇄 작업 문제 진단"
-ms.custom: 
+title: '방법: 인쇄 작업 문제 진단'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -17,21 +18,22 @@ helpviewer_keywords:
 - print jobs [WPF], troubleshooting
 - print jobs [WPF], diagnosing problems
 ms.assetid: b081a170-84c6-48f9-a487-5766a8d58a82
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: cd9bfb187f77f1cff344aaeabebd36aec1312e30
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 2d8650f0bc5e30ff2ccbd4c2074a00c17140e7e2
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-diagnose-problematic-print-job"></a>방법: 인쇄 작업 문제 진단
-네트워크 관리자는 사용자로부터 인쇄 작업이 인쇄되지 않거나 느리게 인쇄되는 문제에 대한 불만을 흔히 처리합니다. [!INCLUDE[TLA#tla_winfx](../../../../includes/tlasharptla-winfx-md.md)]의 [!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)]에 노출된 다양한 인쇄 작업 속성은 인쇄 작업의 신속한 원격 진단을 수행하기 위한 수단을 제공합니다.  
+네트워크 관리자는 사용자로부터 인쇄 작업이 인쇄되지 않거나 느리게 인쇄되는 문제에 대한 불만을 흔히 처리합니다. 다양 한 인쇄 작업 속성에서 노출 되는 [!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)] Microsoft.NET Framework의 인쇄 작업에 대해 신속 하 게 원격 진단을 수행 하기 위한 수단을 제공 합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  이러한 종류의 유틸리티를 만드는 주요 단계는 다음과 같습니다.  
   
 1.  사용자가 불만족하는 인쇄 작업을 식별합니다. 사용자는 흔히 이런 작업을 정확하게 수행할 수 없습니다. 인쇄 서버 또는 프린터의 이름을 모를 수 있습니다. 설정에 사용한 것과 다른 용어로 프린터의 위치를 설명할 수 있습니다는 <xref:System.Printing.PrintQueue.Location%2A> 속성입니다. 따라서 사용자가 현재 제출한 작업 목록을 생성하는 것이 좋습니다. 둘 이상인 경우 사용자와 인쇄 시스템 관리자 간의 통신을 사용하여 문제가 있는 작업을 찾을 수 있습니다. 하위단계는 다음과 같습니다.  

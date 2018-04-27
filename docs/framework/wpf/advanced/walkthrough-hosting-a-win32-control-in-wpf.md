@@ -1,12 +1,13 @@
 ---
-title: "연습: WPF에서 Win32 컨트롤 호스팅"
-ms.custom: 
+title: '연습: WPF에서 Win32 컨트롤 호스팅'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,19 +16,20 @@ helpviewer_keywords:
 - hosting Win32 control in WPF [WPF]
 - Win32 code [WPF], WPF interoperation
 ms.assetid: a676b1eb-fc55-4355-93ab-df840c41cea0
-caps.latest.revision: "21"
+caps.latest.revision: 21
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 0795875b4d5f1a91b7c570320acb078b845ae712
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: ab80f39a15952bee8296166ea19a78498c3c1b23
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="walkthrough-hosting-a-win32-control-in-wpf"></a>연습: WPF에서 Win32 컨트롤 호스팅
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]에서는 응용 프로그램을 만들기 위한 다양한 환경을 제공합니다. 그러나에 있는 경우 상당한 투자 [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] 코드는 것이 보다 효율적으로 이라도 다시 사용을 코드의 일부 여 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 완전히 다시 작성 하지 않고 응용 프로그램입니다. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]호스팅을 위한 간단한 메커니즘을 제공는 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 창에는 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 페이지.  
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]에서는 응용 프로그램을 만들기 위한 다양한 환경을 제공합니다. 그러나에 있는 경우 상당한 투자 [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] 코드는 것이 보다 효율적으로 이라도 다시 사용을 코드의 일부 여 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 완전히 다시 작성 하지 않고 응용 프로그램입니다. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 호스팅을 위한 간단한 메커니즘을 제공는 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 창에는 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 페이지.  
   
  이 항목에서는 응용 프로그램을 통해 [WPF 샘플에서 Win32 ListBox 컨트롤 호스팅](http://go.microsoft.com/fwlink/?LinkID=159998), 해당 호스트는 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 목록 상자 컨트롤입니다. 하나를 호스팅하는 것이 일반적인 절차를 확장할 수 있습니다 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 창.  
   
@@ -36,7 +38,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="requirements"></a>요구 사항  
  이 항목에서는 둘 다에 대 한 기본 지식이 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 및 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 프로그래밍 합니다. 대 한 기본적인 소개 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 프로그래밍 참조 [시작](../../../../docs/framework/wpf/getting-started/index.md)합니다. 에 대 한 소개 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] , 프로그래밍 참조 해야는 주제에 수많은 책의 모든 특히 *Windows 프로그래밍* Charles Petzold 여 합니다.  
   
- 이 항목과 함께 제공 되는 샘플에 구현 되기 때문에 [!INCLUDE[TLA#tla_cshrp](../../../../includes/tlasharptla-cshrp-md.md)], 것 활용 [!INCLUDE[TLA#tla_pinvoke](../../../../includes/tlasharptla-pinvoke-md.md)] 액세스로는 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] [!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)]합니다. 지식이 [!INCLUDE[TLA2#tla_pinvoke](../../../../includes/tla2sharptla-pinvoke-md.md)] 반드시 필요 하지는 않지만 도움은 됩니다.  
+ 이 항목과 함께 제공 되는 샘플 C#에서 구현 되는 경우 있으므로 활용 [!INCLUDE[TLA#tla_pinvoke](../../../../includes/tlasharptla-pinvoke-md.md)] 액세스로는 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] [!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)]합니다. 지식이 [!INCLUDE[TLA2#tla_pinvoke](../../../../includes/tla2sharptla-pinvoke-md.md)] 반드시 필요 하지는 않지만 도움은 됩니다.  
   
 > [!NOTE]
 >  이 항목에는 관련 샘플의 많은 코드 예제가 포함되어 있습니다. 그러나 가독성을 위해 전체 샘플 코드를 포함하지는 않습니다. 전체 코드를 확인 하거나 가져올 수 있습니다 [WPF 샘플에서 Win32 ListBox 컨트롤 호스팅](http://go.microsoft.com/fwlink/?LinkID=159998)합니다.  
@@ -57,7 +59,7 @@ ms.lasthandoff: 12/22/2017
   
 5.  호스트 창을 만들었으면 호스트된 창의 HWND를 반환합니다. 하나 이상의 호스트 하려는 경우 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 컨트롤을 일반적으로 호스 창 HWND의 자식으로 만들고 컨트롤을 자식 해당 호스트 창으로 확인 합니다. 에 대 한 간단한 방법을 제공 하는 호스 창에 컨트롤을 배치 하면 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 몇몇 특정을 처리 하는 컨트롤에서 알림을 받을 페이지 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] HWND 경계를 넘어 알림 문제입니다.  
   
-6.  자식 컨트롤의 알림과 같이 호스트 창으로 전송되는 선택한 메시지를 처리합니다. 이렇게 하는 데는 두 가지 방법이 있습니다.  
+6.  자식 컨트롤의 알림과 같이 호스트 창으로 전송되는 선택한 메시지를 처리합니다. 구체적인 방법은 두 가지입니다.  
   
     -   호스팅 클래스에 메시지를 처리 하는 것을 선호 하는 경우 재정의 <xref:System.Windows.Interop.HwndHost.WndProc%2A> 의 메서드는 <xref:System.Windows.Interop.HwndHost> 클래스입니다.  
   

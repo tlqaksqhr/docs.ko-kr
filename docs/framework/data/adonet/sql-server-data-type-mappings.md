@@ -1,26 +1,26 @@
 ---
-title: "SQL Server 데이터 형식 매핑"
-ms.custom: 
+title: SQL Server 데이터 형식 매핑
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-ado
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: fafdc31a-f435-4cd3-883f-1dfadd971277
-caps.latest.revision: 
+caps.latest.revision: 8
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload:
 - dotnet
-ms.openlocfilehash: 812b953935d17320d83e3752d8c7fd600af15533
-ms.sourcegitcommit: c3957fdb990060559d73cca44ab3e2c7b4d049c0
+ms.openlocfilehash: e1af00ba0a1f631868711f191c028a04c5e0441a
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="sql-server-data-type-mappings"></a>SQL Server 데이터 형식 매핑
 SQL Server와 .NET Framework는 서로 다른 형식 시스템을 기반으로 합니다. 예를 들어 .NET Framework <xref:System.Decimal> 구조의 최대 자릿수는 28인 반면 SQL Server decimal 및 숫자 데이터 형식의 최대 자릿수는 38입니다. 데이터를 읽거나 쓸 때 데이터 무결성을 유지하기 위해 <xref:System.Data.SqlClient.SqlDataReader>는 <xref:System.Data.SqlTypes>의 개체를 반환하는 SQL Server 관련 형식화된 접근자 메서드 및 .NET Framework 형식을 반환하는 접근자 메서드를 노출합니다. SQL Server 형식 및 .NET Framework 형식 모두 <xref:System.Data.DbType> 데이터 형식을 지정할 때 사용할 수 있는 <xref:System.Data.SqlDbType> 및 <xref:System.Data.SqlClient.SqlParameter> 클래스에 열거형으로 표시됩니다.  
@@ -65,8 +65,8 @@ SQL Server와 .NET Framework는 서로 다른 형식 시스템을 기반으로 �
 <sup>1</sup> 설정할 수 없습니다.는 `DbType` 속성은 `SqlParameter` 를 `SqlDbType.Date`합니다.  
 <sup>2</sup> 의 기본 형식을 알고 있으면 형식화 된 특정 접근자를 사용 하 여는 `sql_variant`합니다.  
   
-## <a name="includessnoversionincludesssnoversion-mdmd-books-online-reference"></a>[!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] 온라인 설명서 참조  
- 에 대 한 자세한 내용은 [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] 데이터 형식을 참조 [데이터 형식 (데이터베이스 엔진)](http://go.microsoft.com/fwlink/?LinkID=107468)합니다.  
+## <a name="sql-server-books-online-reference"></a>SQL Server 온라인 설명서 참조  
+ SQL Server 데이터 형식에 대 한 자세한 내용은 참조 [데이터 형식 (데이터베이스 엔진)](http://go.microsoft.com/fwlink/?LinkID=107468)합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [SQL Server 데이터 형식 및 ADO.NET](../../../../docs/framework/data/adonet/sql/sql-server-data-types.md)  

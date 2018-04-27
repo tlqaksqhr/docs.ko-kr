@@ -1,28 +1,28 @@
 ---
-title: "Version Tolerant Serialization 기술 샘플"
-ms.custom: 
+title: Version Tolerant Serialization 기술 샘플
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 2a183664-bfbf-4ff0-96f6-c836284ea916
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 9517abe23dba1b1b4b198fb8375e1ae35d8a2ca4
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: ddeea50bafe250addad33a024c563258ede357c4
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="version-tolerant-serialization-technology-sample"></a>Version Tolerant Serialization 기술 샘플
-[샘플 다운로드](http://download.microsoft.com/download/4/7/B/47B2164C-E780-4B10-8DE4-2CB5B886E0A6/Technologies/Serialization/Runtime%20Serialization/VTS.zip.exe)  
+[샘플 다운로드](https://download.microsoft.com/download/4/7/B/47B2164C-E780-4B10-8DE4-2CB5B886E0A6/Technologies/Serialization/Runtime%20Serialization/VTS.zip.exe)  
   
  이 샘플에서는 .NET Serialization의 버전 내결함성 기능을 보여 줍니다. 이 샘플에서는 서로 다른 버전의 <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter>를 사용하여 데이터를 serialize하거나 deserialize하는 두 개의 응용 프로그램을 만듭니다. 서로 다른 형식 버전이 사용되지만 응용 프로그램은 서로 원활하게 통신합니다. 자세한 내용은 [버전 독립적 Serialization](../../../docs/standard/serialization/version-tolerant-serialization.md)을 참조하세요.  
   

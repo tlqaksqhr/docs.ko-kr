@@ -1,5 +1,5 @@
 ---
-title: '출력 파일 &#39;에 쓸 수 없습니다. &lt;filename&gt;&#39;: &lt;오류&gt;'
+title: '출력 파일에 쓸 수 없습니다 &#39; &lt;filename&gt;&#39;: &lt;오류&gt;'
 ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: ''
@@ -16,13 +16,13 @@ ms.assetid: 0845b245-11bb-46fd-95ca-f6cef3c318ef
 caps.latest.revision: 10
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: d142a8c741a9f0e25b8ac3c0002d04f437bf0ca9
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: a183f81a73c3c8034d9ba7366be8b36d425263da
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/26/2018
 ---
-# <a name="unable-to-write-to-output-file-39ltfilenamegt39-lterrorgt"></a>출력 파일 &#39;에 쓸 수 없습니다. &lt;filename&gt;&#39;: &lt;오류&gt;
+# <a name="unable-to-write-to-output-file-39ltfilenamegt39-lterrorgt"></a>출력 파일에 쓸 수 없습니다 &#39; &lt;filename&gt;&#39;: &lt;오류&gt;
 파일을 만드는 동안 문제가 발생했습니다.  
   
  출력 파일을 쓰기 위해 열 수 없습니다. 파일 또는 파일이 포함된 폴더가 다른 프로세스에서 단독으로 사용되도록 열려 있거나 읽기 전용 특성이 설정되어 있을 수 있습니다.  
@@ -45,7 +45,7 @@ ms.lasthandoff: 10/18/2017
   
 3.  오류가 계속 발생하면 컴퓨터를 다시 시작합니다.  
   
-4.  그래도 오류가 다시 발생하면 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]을 다시 설치합니다.  
+4.  오류가 다시 발생 하는 경우에 Visual Basic을 다시 설치 하십시오.  
   
 5.  다시 설치 후에도 오류가 계속 발생하면 Microsoft 기술 지원 서비스에 알립니다.  
   

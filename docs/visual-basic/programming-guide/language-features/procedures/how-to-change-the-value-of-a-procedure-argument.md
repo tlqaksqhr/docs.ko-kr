@@ -1,11 +1,12 @@
 ---
-title: "방법: 프로시저 인수의 값 변경(Visual Basic)"
-ms.custom: 
+title: '방법: 프로시저 인수의 값 변경(Visual Basic)'
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - procedures [Visual Basic], arguments
@@ -19,19 +20,19 @@ helpviewer_keywords:
 - arguments [Visual Basic], ByRef
 - arguments [Visual Basic], changing value
 ms.assetid: 6fad2368-5da7-4c07-8bf8-0f4e65a1be67
-caps.latest.revision: "16"
+caps.latest.revision: 16
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: ba23c8f0b4b0b6e751546019af902a6305b9ef53
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 93d9cc11e919e45fdd3b48dd2731b165f3466640
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-change-the-value-of-a-procedure-argument-visual-basic"></a>방법: 프로시저 인수의 값 변경(Visual Basic)
 프로시저를 호출할 때 각 인수를 제공 하는 프로시저에 정의 된 매개 변수 중 하나에 해당 합니다. 경우에 따라 프로시저 코드에서 호출 코드의 기반이 되는 값을 변경할 수 있습니다. 다른 경우에 프로시저 자체 로컬 복사본 인수를 변경할 수 있습니다.  
   
- 프로시저를 호출할 때 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 전달 되는 모든 인수의 로컬 복사본을 만들어 [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md)합니다. 각 인수에 대해 전달 된 [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md), [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 프로시저 코드에 호출 코드의 기반이 되는 프로그래밍 요소에 대 한 직접 참조를 제공 합니다.  
+ Visual Basic 전달 되는 모든 인수의 로컬 복사본을 만듭니다는 프로시저를 호출할 때 [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md)합니다. 각 인수에 대해 전달 된 [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md), Visual Basic 프로시저 코드에 호출 코드의 기반이 되는 프로그래밍 요소에 대 한 직접 참조를 제공 합니다.  
   
  호출 코드에서 해당 요소는 수정할 수 있고 인수가 전달 될 경우 `ByRef`, 프로시저 코드 호출 코드에서 요소의 값을 변경 하려면 직접 참조를 사용할 수 있습니다.  
   
@@ -56,9 +57,9 @@ ms.lasthandoff: 11/21/2017
   
 1.  프로시저 선언에서 지정 [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md) 인수에 해당 하는 매개 변수에 대 한 합니다.  
   
-     또는  
+     -또는-  
   
-     호출 코드에서 인수 목록의 괄호 안에 인수를 묶습니다. 이렇게 하면 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 해당 매개 변수를 지정 하는 경우에 값으로 인수를 전달 하 `ByRef`합니다.  
+     호출 코드에서 인수 목록의 괄호 안에 인수를 묶습니다. 이렇게 하면 Visual Basic 값으로 인수를 전달 하 여 해당 매개 변수를 지정 하는 경우에 `ByRef`합니다.  
   
 2.  프로시저 코드에서 매개 변수 이름을 사용 하 여 인수의 로컬 복사본에 값을 할당 합니다. 호출 코드에서 기본 값이 변경 되지 않습니다.  
   
@@ -80,7 +81,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="compiling-the-code"></a>코드 컴파일  
  참조 하 여 변수를 전달할 때 사용 해야는 `ByRef` 키워드가이 메커니즘을 지정 합니다.  
   
- 대화 상자에서 기본 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 값으로 인수를 전달 합니다. 그러나 것이 바람직한 프로그래밍 습관 하나를 포함 하는 [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md) 또는 [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md) 키워드 모든 선언 된 매개 변수를 사용 합니다. 이렇게 하면 코드를 보다 쉽게 읽을 수 있습니다.  
+ Visual Basic의 기본값인 값으로 인수 전달 합니다. 그러나 것이 바람직한 프로그래밍 습관 하나를 포함 하는 [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md) 또는 [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md) 키워드 모든 선언 된 매개 변수를 사용 합니다. 이렇게 하면 코드를 보다 쉽게 읽을 수 있습니다.  
   
 ## <a name="net-framework-security"></a>.NET Framework 보안  
  호출 코드의 기반이 되는 값을 변경 하는 절차를 허용할 경우 잠재적인 위험이 항상 있습니다. 변경 되 고 사용 하기 전에 유효성을 검사할 수 있도록 준비 하려면이 값을 예상 해야 합니다.  

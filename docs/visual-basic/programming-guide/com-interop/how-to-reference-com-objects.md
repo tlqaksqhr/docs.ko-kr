@@ -1,11 +1,12 @@
 ---
-title: "방법: Visual Basic에서 COM 개체 참조"
-ms.custom: 
+title: '방법: Visual Basic에서 COM 개체 참조'
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - COM interop [Visual Basic], referencing COM objects
@@ -14,21 +15,21 @@ helpviewer_keywords:
 - COM objects, referencing
 - interop assemblies
 ms.assetid: 9c518fb4-27d9-4112-9e6a-5a7d0210af6f
-caps.latest.revision: "13"
+caps.latest.revision: 13
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: a8ac167b40688b1d1116f148d0d5fd6afdcaada8
-ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
+ms.openlocfilehash: 0f6f7b4887e2cfba65da7a7a890b78c3d6a8508f
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-reference-com-objects-from-visual-basic"></a>방법: Visual Basic에서 COM 개체 참조
-[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)], COM 라이브러리에 대 한 interop 어셈블리의 생성이 필요한 형식 라이브러리에 있는 COM 개체에 대 한 참조를 추가 합니다. COM 개체의 멤버에 대 한 참조는 interop 어셈블리를 라우팅되고 실제 COM 개체에 전달 합니다. Interop 어셈블리를 COM 개체의 응답은 라우팅되고에 전달 하면 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 응용 프로그램입니다.  
+Visual Basic의 형식 라이브러리에 있는 COM 개체에 대 한 참조를 추가 합니다. COM 라이브러리에 대 한 interop 어셈블리의 생성이 필요 합니다. COM 개체의 멤버에 대 한 참조는 interop 어셈블리를 라우팅되고 실제 COM 개체에 전달 합니다. Interop 어셈블리를 COM 개체의 응답은 라우팅되고에 전달 하면 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 응용 프로그램입니다.  
   
  .NET 어셈블리에서 COM 개체에 대 한 형식 정보를 포함 하 여 interop 어셈블리를 사용 하지 않고 COM 개체를 참조할 수 있습니다. 설정 유형 정보를 포함 하려면는 `Embed Interop Types` 속성을 `True` COM 개체에 대 한 참조에 대 한 합니다. 명령줄 컴파일러를 사용 하 여 컴파일하는 사용 하 여는 `/link` COM 라이브러리를 참조 하는 옵션입니다. 자세한 내용은 참조 [/link (Visual Basic)](../../../visual-basic/reference/command-line-compiler/link.md)합니다.  
   
- [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]통합된 개발 환경 (IDE)에서 형식 라이브러리에 대 한 참조를 추가 하는 경우 interop 어셈블리를 자동으로 만듭니다. 명령줄에서 작업을 하는 경우 interop 어셈블리를 수동으로 만들려고 Tlbimp 유틸리티를 사용할 수 있습니다.  
+ 통합된 개발 환경 (IDE)에서 형식 라이브러리에 대 한 참조를 추가 하면 Visual Basic interop 어셈블리를 자동으로 만듭니다. 명령줄에서 작업을 하는 경우 interop 어셈블리를 수동으로 만들려고 Tlbimp 유틸리티를 사용할 수 있습니다.  
   
 ### <a name="to-add-references-to-com-objects"></a>COM 개체에 대 한 참조를 추가 하려면  
   

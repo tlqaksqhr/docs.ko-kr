@@ -1,9 +1,10 @@
 ---
-title: "죄송 합니다. 여기서 don &#39;이 Visual Basic 오류에 대 한 구체적인 정보가 t"
+title: 죄송 하지만 우리 않는&#39;t이 Visual Basic 오류에 대 한 구체적인 정보가
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
+ms.technology:
+- devlang-visual-basic
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - vbc30234
@@ -3048,32 +3049,32 @@ f1_keywords:
 - bc30233
 - bc30829
 ms.assetid: 0938efc2-e205-450b-9314-99951fcbd702
-caps.latest.revision: "21"
+caps.latest.revision: 21
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 132bb3f93ae5084df73aed56b6d1483830984928
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 4ab447c06504d6c3bb7c51107e422b2cba1f45e3
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
-# <a name="sorry-we-don39t-have-specifics-on-this-visual-basic-error"></a>죄송 합니다. 여기서 don &#39;이 Visual Basic 오류에 대 한 구체적인 정보가 t
+# <a name="sorry-we-don39t-have-specifics-on-this-visual-basic-error"></a>죄송 하지만 우리 않는&#39;t이 Visual Basic 오류에 대 한 구체적인 정보가
 죄송합니다. 이 오류에 대한 구체적인 정보가 없습니다. 오류 번호와 메시지 텍스트를 검색하여 웹에서 정보를 찾을 수 있습니다. 또는 다음 포럼 중 하나에서 다른 개발자에게 질문을 할 수 있습니다.  
   
  [Visual Basic 언어](http://go.microsoft.com/fwlink/?LinkId=145963)  
- [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 언어 구문 및 컴파일러와 관련된 질문과 일반적인 토론을 위한 포럼을 제공합니다.  
+ Visual Basic 언어 구문 및 컴파일러의 일반적인 토론 질문에 대 한 포럼을 제공 합니다.  
   
  [Visual Basic Interop 및 업그레이드](http://go.microsoft.com/fwlink/?LinkId=145966)  
- [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]으로의 업그레이드 및 상호 운용성 기능 사용과 관련한 질문과 문제를 위한 포럼을 제공합니다.  
+ 에 대 한 질문에 대 한 포럼을 제공 하지 않으며 Visual Basic로 업그레이드 및 상호 운용성 기능을 사용 합니다.  
   
  [Visual Basic IDE](http://go.microsoft.com/fwlink/?LinkId=145971)  
  [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] 환경에서 작업하는 방법과 관련된 질문을 위한 포럼을 제공합니다.  
   
  [Visual Basic 일반](http://go.microsoft.com/fwlink/?LinkId=145973)  
- 다른 포럼에서 다루지 않는 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 관련 질문과 문제를 위한 포럼을 제공합니다.  
+ 에 대 한 질문에 대 한 포럼을 제공 하지 않으며 다른 포럼에서 다루지 않는 Visual Basic을 사용한 합니다.  
   
  [StackOverflow](http://stackoverflow.com/questions/tagged/vb.net)  
- [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 관련 질문과 문제를 위한 포럼을 제공합니다.  
+ 에 대 한 질문에 대 한 포럼을 제공 하지 않으며 Visual Basic을 사용한 합니다.  
   
  다음 항목도 참조하세요.  
  [Visual Basic 프로그래머를 위한 추가 리소스](../../visual-basic/getting-started/additional-resources.md)  

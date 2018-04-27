@@ -1,28 +1,28 @@
 ---
-title: "연습: 간단한 개체 모델 및 쿼리(Visual Basic)"
-ms.custom: 
+title: '연습: 간단한 개체 모델 및 쿼리(Visual Basic)'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-ado
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - vb
 ms.assetid: c878e457-f715-46e4-a136-ff14d6c86018
-caps.latest.revision: 
+caps.latest.revision: 3
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload:
 - dotnet
-ms.openlocfilehash: 9d72c0e1f432679f4dc818703dafb813ab8ebd19
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: d9b9f69b15b5df981ee47da9ac3c1e2eb2514beb
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="walkthrough-simple-object-model-and-query-visual-basic"></a>연습: 간단한 개체 모델 및 쿼리(Visual Basic)
 이 연습에서는 간단한 기본 종단 간 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 시나리오에 대해 설명합니다. 샘플 Northwind 데이터베이스의 Customers 테이블을 모델링하는 엔터티 클래스를 만듭니다. 그런 다음 단순 쿼리를 만들어 London에 있는 고객을 나열합니다.  
@@ -33,7 +33,7 @@ ms.lasthandoff: 01/17/2018
   
  이 연습은 Visual Basic 개발 설정을 사용하여 작성했습니다.  
   
-## <a name="prerequisites"></a>필수 구성 요소  
+## <a name="prerequisites"></a>전제 조건  
   
 -   이 연습에서는 파일을 저장하기 위해 전용 폴더("c:\linqtest")가 사용됩니다. 연습을 시작하기 전에 먼저 이 폴더를 만듭니다.  
   
@@ -42,7 +42,7 @@ ms.lasthandoff: 01/17/2018
 ## <a name="overview"></a>개요  
  이 연습은 다음과 같은 여섯 가지 주요 작업으로 구성됩니다.  
   
--   [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]에 [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)] 솔루션 만들기  
+-   만들기는 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Visual Studio에서 솔루션입니다.  
   
 -   데이터베이스 테이블에 클래스 매핑  
   
@@ -55,7 +55,7 @@ ms.lasthandoff: 01/17/2018
 -   쿼리 실행 및 결과 검토  
   
 ## <a name="creating-a-linq-to-sql-solution"></a>LINQ to SQL 솔루션 만들기  
- 이 첫 번째 작업에서는 [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)] 프로젝트를 빌드하고 실행하는 데 필요한 참조가 들어 있는 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 솔루션을 만듭니다.  
+ 이 첫 번째 작업에서 빌드 및 실행 하는 데 필요한 참조가 포함 된 Visual Studio 솔루션을 만들는 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 프로젝트.  
   
 #### <a name="to-create-a-linq-to-sql-solution"></a>LINQ to SQL 솔루션을 만들려면  
   

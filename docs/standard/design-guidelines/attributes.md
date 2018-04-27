@@ -19,14 +19,14 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 89e892a379c7540cf67488471ae5281a4c4b86f4
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: c169586091f0e7e094e0231f9e247e8907371ec4
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="attributes"></a>특성
-<xref:System.Attribute?displayProperty=nameWithType>기본 클래스 사용자 지정 특성을 정의 하는 데 사용 합니다.  
+<xref:System.Attribute?displayProperty=nameWithType> 기본 클래스 사용자 지정 특성을 정의 하는 데 사용 합니다.  
   
  특성은 어셈블리, 형식, 멤버 및 매개 변수 같은 프로그래밍 요소에 추가할 수 있는 주석입니다. 이러한 어셈블리의 메타 데이터에 저장 되 고 리플렉션 Api를 사용 하 여 런타임에 액세스할 수 있습니다. 예를 들어 프레임 워크 정의 <xref:System.ObsoleteAttribute>, 하는 형식 또는 멤버는 형식 또는 멤버가 사용 되지 않습니다 나타냅니다에 적용할 수 있습니다.  
   
@@ -56,9 +56,9 @@ ms.lasthandoff: 12/23/2017
   
  **✓ 않습니다** 사용자 지정 특성 클래스를 가능 하면 항상 봉인 됩니다. 이렇게 하면 특성에 대 한 조회가 속도가 빨라집니다.  
   
- *일부 © 2005, 2009 Microsoft Corporation. 모든 권리 보유.*  
+ *Portions © 2005, 2009 Microsoft Corporation. 모든 권리 보유.*  
   
- *피어슨 교육, Inc.에서의 사용 권한으로 재인쇄 [Framework 디자인 지침: 규칙, 특징 및 다시 사용할 수 있는.NET 라이브러리를 2nd Edition에 대 한 패턴](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina 및 Brad Abrams 게시 하 여 2008 년 10 월 22 일 Microsoft Windows 개발 시리즈의 일부로: Addison Wesley Professional.*  
+ *피어슨 교육, Inc.에서의 사용 권한으로 재인쇄 [Framework 디자인 지침: 규칙, 특징 및 다시 사용할 수 있는.NET 라이브러리를 2nd Edition에 대 한 패턴](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina 및 Brad Abrams 게시 하 여 2008 년 10 월 22 일 Microsoft Windows 개발 시리즈의 일부로: Addison Wesley Professional.*  
   
 ## <a name="see-also"></a>참고 항목  
  [프레임워크 디자인 지침](../../../docs/standard/design-guidelines/index.md)  

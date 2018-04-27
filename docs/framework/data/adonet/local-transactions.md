@@ -1,27 +1,29 @@
 ---
-title: "로컬 트랜잭션"
-ms.custom: 
+title: 로컬 트랜잭션
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 8ae3712f-ef5e-41a1-9ea9-b3d0399439f1
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 3d7865675871bafb527bb9ee85de1f96e9847402
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: d56e2a978c3b9b58eadb946ee053721435c9f2d9
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="local-transactions"></a>로컬 트랜잭션
 [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)]의 트랜잭션은 여러 작업을 바인딩하여 하나의 작업 단위로 실행하려는 경우에 사용합니다. 예를 들어 응용 프로그램이 두 가지 작업을 수행한다고 가정합니다. 먼저 응용 프로그램에서 주문 정보로 테이블을 업데이트합니다. 그런 다음, 응용 프로그램에서 재고 정보가 포함된 테이블을 업데이트하고 주문이 들어온 품목을 차변에 기입합니다. 이 작업에 실패 하면 다음 두 업데이트가 모두 롤백됩니다.  
@@ -40,7 +42,7 @@ ms.lasthandoff: 01/17/2018
 > [!NOTE]
 >  `EnlistDistributedTransaction` 메서드는 로컬 트랜잭션에 사용할 수 없습니다.  
   
- 트랜잭션의 범위는 연결로 제한됩니다. 다음 예제에서는 `try` 블록에서 두 개의 개별 명령으로 이루어진 명시적 트랜잭션을 수행합니다. 두 명령은 AdventureWorks [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] 샘플 데이터베이스에서 Production.ScrapReason 테이블에 대해 INSERT 문을 실행합니다. 이 작업은 예외가 throw되지 않을 경우 커밋됩니다. `catch` 블록의 코드는 예외가 발생하는 경우 트랜잭션을 롤백합니다. 트랜잭션이 완료되기 전에 트랜잭션이 중단되거나 연결이 끊어지면 트랜잭션이 자동으로 롤백됩니다.  
+ 트랜잭션의 범위는 연결로 제한됩니다. 다음 예제에서는 `try` 블록에서 두 개의 개별 명령으로 이루어진 명시적 트랜잭션을 수행합니다. 명령에에서 INSERT 문을 실행 Production.ScrapReason 테이블에 대해 SQL Server AdventureWorks 예제 데이터베이스는 예외가 throw 되지 않을 경우 커밋됩니다. `catch` 블록의 코드는 예외가 발생하는 경우 트랜잭션을 롤백합니다. 트랜잭션이 완료되기 전에 트랜잭션이 중단되거나 연결이 끊어지면 트랜잭션이 자동으로 롤백됩니다.  
   
 ## <a name="example"></a>예제  
  다음 단계를 사용하여 트랜잭션을 수행합니다.  

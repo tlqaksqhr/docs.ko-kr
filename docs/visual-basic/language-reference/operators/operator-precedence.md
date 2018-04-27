@@ -1,10 +1,11 @@
 ---
-title: "Visual Basic에서의 연산자 우선 순위"
+title: Visual Basic에서의 연산자 우선 순위
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - arithmetic operators [Visual Basic], precedence
@@ -19,14 +20,14 @@ helpviewer_keywords:
 - math operators [Visual Basic]
 - order of precedence
 ms.assetid: cbbdb282-f572-458e-a520-008a675f8063
-caps.latest.revision: "18"
+caps.latest.revision: 18
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 6c0fb466b404cafdd4b91d061971fd683375c715
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 2d8de9deea84c7f0c11c91b55951cdfc200b017f
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="operator-precedence-in-visual-basic"></a>Visual Basic에서의 연산자 우선 순위
 각 부분 평가 되 고 호출 미리 결정 된 순서 대로 확인 식에서 여러 작업이 발생 하는 경우 *연산자 우선 순위*합니다.  
@@ -84,7 +85,7 @@ ms.lasthandoff: 11/21/2017
   
  `Is` 및 `IsNot` 연산자는 개체 참조 비교 연산자. 두 개체;의 값을 비교 하지 않습니다. 이러한 두 개체 변수가 동일한 개체 인스턴스를 나타내는지 확인에 확인 합니다.  
   
-## <a name="associativity"></a>결합성  
+## <a name="associativity"></a>associativity  
  동일한 우선 순위의 연산자를 식, 곱하기 및 나누기, 예를 들어에 함께 나타납니다. 컴파일러도 왼쪽에서 오른쪽으로 각 작업을 평가 합니다. 다음은 이에 대한 예입니다.  
   
 ```  
@@ -95,10 +96,10 @@ Dim n3 As Integer = 96 / (8 / 4)
   
  첫 번째 식이 96 나누기 / 8 (있음 결과 12) 및 나누기 12 / 결과 3 4입니다. 에 대 한 작업으로 계산 하므로 `n1` 왼쪽에서 오른쪽으로 계산 같습니다에 대 한 해당 순서를 명시적으로 지정 하는 경우 `n2`합니다. 둘 다 `n1` 및 `n2` 결과는 3입니다. 반면, `n3` 괄호는 컴파일러가 8 평가 때문에 48의 결과가 / 4 첫 번째입니다.  
   
- 이러한 동작으로 인해 연산자에 있다고 *왼쪽 결합형* 에서 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]합니다.  
+ 이러한 동작으로 인해 연산자에 있다고 *왼쪽 결합형* Visual Basic의 합니다.  
   
 ## <a name="overriding-precedence-and-associativity"></a>재정의 우선 순위 및 결합성  
- 다른 대체 이전 평가할 식의 일부분에 괄호를 사용할 수 있습니다. 우선 순위와 왼쪽된 결합성을 재정의할 수 있습니다. [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]항상 외부 보다 먼저 괄호로 묶여 있는 작업을 수행 합니다. 그러나 괄호 안에 유지 일반 우선 순위와 결합성 괄호 안에 괄호를 사용 하지 않는 한 됩니다. 다음은 이에 대한 예입니다.  
+ 다른 대체 이전 평가할 식의 일부분에 괄호를 사용할 수 있습니다. 우선 순위와 왼쪽된 결합성을 재정의할 수 있습니다. Visual Basic에는 항상 외부 보다 먼저 괄호로 묶인 작업이 수행 됩니다. 그러나 괄호 안에 유지 일반 우선 순위와 결합성 괄호 안에 괄호를 사용 하지 않는 한 됩니다. 다음은 이에 대한 예입니다.  
   
 ```  
 Dim a, b, c, d, e, f, g As Double  

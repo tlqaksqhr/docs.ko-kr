@@ -13,11 +13,11 @@ helpviewer_keywords:
 ms.assetid: 84a0b670-33ae-44c4-a46a-b90388809317
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bb1cc114c2882aa82787f94a271dd7684c716b01
-ms.sourcegitcommit: 498799639937c89de777361aab74261efe7b79ea
+ms.openlocfilehash: 195d4b8f8e88d22e63c29ab9152399eb5c4a19df
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="-recurse"></a>-recurse
 지정된 된 디렉터리 또는 프로젝트 디렉터리의 모든 하위 디렉터리의 소스 코드 파일을 컴파일합니다.  
@@ -42,13 +42,13 @@ ms.lasthandoff: 03/22/2018
 >  `-recurse` 옵션은 Visual Studio 개발 환경 내에서 사용할 수 없습니다; 명령줄에서 컴파일할 경우에 사용할 수는 있습니다.  
   
 ## <a name="example"></a>예제  
- 다음 명령에서는 모든 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 현재 디렉터리에 있는 파일입니다.  
+ 다음 명령은 현재 디렉터리에 모든 Visual Basic 파일을 컴파일합니다.  
   
 ```console
 vbc *.vb  
 ```  
   
- 다음 명령에서는 모든 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 파일에 `Test\ABC` 디렉터리와이 디렉터리, 한 다음 생성 `Test.ABC.dll`합니다.  
+ 다음 명령에서는 모든 Visual Basic 파일에는 `Test\ABC` 디렉터리와이 디렉터리, 한 다음 생성 `Test.ABC.dll`합니다.  
   
 ```console
 vbc -target:library -out:Test.ABC.dll -recurse:Test\ABC\*.vb  

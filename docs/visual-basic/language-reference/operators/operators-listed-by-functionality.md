@@ -13,14 +13,14 @@ ms.assetid: d1fb027c-872b-4ccc-afc8-2380e3f65d4a
 caps.latest.revision: 8
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: de65fdd3a71c87199127b9013a6e89e0528be18e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: a41089514bb4f38ef981b4fe014b249f0d7ee6da
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="operators-listed-by-functionality-visual-basic"></a>기능별 연산자 목록(Visual Basic)
-아래에 나열 된 범주 중 하나를 참조 하거나 도움말 목차 사전순으로 볼 수의이 부분을 열면 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 연산자입니다.  
+아래에 나열 된 범주 중 하나를 참조 하거나 도움말 목차를 보려면 Visual Basic 연산자의 사전순 목록의이 부분을 엽니다.  
   
 ## <a name="categories-of-operators"></a>연산자 범주  
   

@@ -1,26 +1,27 @@
 ---
-title: "XAML의 WPF 및 WF 통합"
-ms.custom: 
+title: XAML의 WPF 및 WF 통합
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: a4f53b48-fc90-4315-bca0-ba009562f488
-caps.latest.revision: "12"
+caps.latest.revision: 12
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 327efb0b829e2628328d2e324c0736f8cb423b75
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 0447df0e6d4f14a4171a315858f992ad23d69373
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="wpf-and-wf-integration-in-xaml"></a>XAML의 WPF 및 WF 통합
-이 샘플에서는 단일 XAML 문서에 [!INCLUDE[avalon1](../../../../includes/avalon1-md.md)] 및 [!INCLUDE[wf](../../../../includes/wf-md.md)] 기능을 사용하는 응용 프로그램을 만드는 방법을 보여 줍니다. 이를 수행하기 위해 이 샘플에는 [!INCLUDE[wf](../../../../includes/wf-md.md)] 및 XAML 확장성이 사용됩니다.  
+이 샘플에서는 Windows Presentation Foundation (WPF)를 사용 하는 응용 프로그램을 만드는 방법을 보여 줍니다. 및 [!INCLUDE[wf](../../../../includes/wf-md.md)] 단일 XAML 문서에는 기능입니다. 이를 수행하기 위해 이 샘플에는 [!INCLUDE[wf](../../../../includes/wf-md.md)] 및 XAML 확장성이 사용됩니다.  
   
 ## <a name="sample-details"></a>샘플 세부 정보  
  <xref:System.Activities.Statements.Sequence> 및 `ShowWindow`이라는 활동 시퀀스를 통해 조작되는 문자열 변수 두 개를 사용하여 ShowWindow.xaml 파일을 `WriteLine` 활동으로 deserialize합니다. <xref:System.Activities.Statements.WriteLine> 활동은 <xref:System.Activities.Statements.WriteLine.Text%2A> 속성에 할당되는 식을 콘솔 창에 출력합니다. `ShowWindow` 활동은 해당 실행 논리의 일부로 [!INCLUDE[avalon2](../../../../includes/avalon2-md.md)] 창을 표시합니다. 이 창의 <xref:System.Activities.ActivityContext.DataContext%2A>에는 시퀀스에서 선언한 변수가 포함됩니다. `ShowWindow` 활동에 선언된 창의 컨트롤에서 데이터 바인딩을 사용하여 해당 변수를 조작합니다. 마지막으로, 창에 단추 컨트롤이 포함됩니다. 단추에 대한 `Click` 이벤트는 이름이 <xref:System.Activities.ActivityDelegate>인 `MarkupExtension` 활동이 포함된 `CloseWindow`에서 처리됩니다. `MarkUpExtension`은 포함된 활동을 호출하고, 이 활동은 컨텍스트에 따라 `x:Name`으로 식별되는 개체 및 해당 활동을 포함하는 창의 <xref:System.Activities.ActivityContext.DataContext%2A>를 제공합니다. 따라서 창의 이름을 참조하는 식을 사용하여 `CloseWindow.InArgument<Window>`를 바인딩할 수 있습니다.  

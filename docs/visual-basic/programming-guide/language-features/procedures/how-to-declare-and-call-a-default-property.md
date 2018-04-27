@@ -1,11 +1,12 @@
 ---
-title: "방법: Visual Basic에서 기본 속성 선언 및 호출"
-ms.custom: 
+title: '방법: Visual Basic에서 기본 속성 선언 및 호출'
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - defaults [Visual Basic], properties
@@ -16,17 +17,17 @@ helpviewer_keywords:
 - Visual Basic code, properties
 - default properties
 ms.assetid: 68b4026e-09ef-4613-808e-f6287494ff63
-caps.latest.revision: "23"
+caps.latest.revision: 23
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 8baa03e37325a6ad7065ec1a60052b3ea6a46c6f
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 9c4f471eba42e47d6bef45a4d38abc0cbd2d32bc
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-declare-and-call-a-default-property-in-visual-basic"></a>방법: Visual Basic에서 기본 속성 선언 및 호출
-A *기본 속성* 지정 하지 않고 코드에 액세스할 수 있는 클래스 또는 구조체 속성입니다. 클래스 또는 구조 있지만 속성이 아니라 이름을 코드 호출 지정 하 고 컨텍스트 속성에 대 한 액세스를 허용 하는 경우 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 있을 경우 해당 클래스 또는 구조체의 기본 속성에 대 한 액세스를 확인 합니다.  
+A *기본 속성* 지정 하지 않고 코드에 액세스할 수 있는 클래스 또는 구조체 속성입니다. 코드 이름을 호출 하는 경우 클래스 또는 구조 하지만 하지는 속성 및 컨텍스트 속성에 대 한 액세스를 허용, Visual Basic 있을 경우 해당 클래스 또는 구조체의 기본 속성에 대 한 액세스를 확인 합니다.  
   
  클래스 또는 구조체 수 최대 하나의 기본 속성이 있어야 합니다. 그러나 기본 속성을 오버 로드 수 있으며 버전을 여러 개 있을 수 있습니다.  
   

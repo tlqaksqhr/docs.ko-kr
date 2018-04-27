@@ -1,22 +1,23 @@
 ---
-title: "데이터 분할 (Visual Basic)"
-ms.custom: 
+title: 데이터 분할 (Visual Basic)
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 69c59379-b66e-422c-b324-5b5c07760ef7
-caps.latest.revision: "3"
+caps.latest.revision: 3
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 0ea305a67765e1b11ceebbf65c48a685024a41f3
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 01e4e6d6db07a520b97911de5388b8e42b7e1acc
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="partitioning-data-visual-basic"></a>데이터 분할 (Visual Basic)
 LINQ의 분할은 요소를 다시 정렬한 후 섹션 중 하나를 반환하지 않고 입력 시퀀스를 두 개의 섹션으로 나누는 작업을 가리킵니다.  
@@ -39,22 +40,22 @@ LINQ의 분할은 요소를 다시 정렬한 후 섹션 중 하나를 반환하�
 ## <a name="query-expression-syntax-examples"></a>쿼리 식 구문 예제  
   
 ### <a name="skip"></a>Skip  
- 다음 코드 예제에서는 `Skip` 절 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 문자열의 배열에서 처음 4 개의 문자열 배열에서 나머지 문자열을 반환 하기 전에 건너뛸 수 있습니다.  
+ 다음 코드 예제에서는 `Skip` 절에 나머지를 반환 하기 전에 문자열의 배열에서 처음 4 개의 문자열을 건너뛰도록 Visual Basic의 배열에 있는 문자열입니다.  
   
  [!code-vb[CsLINQPartitioning#1](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/partitioning-data_1.vb)]  
   
 ### <a name="skipwhile"></a>SkipWhile  
- 다음 코드 예제에서는 `Skip While` 절 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 를 건너 뛰 동안는 문자열의 첫 번째 문자 배열에서 문자열은 "a"입니다. 배열에서 나머지 문자열이 반환 됩니다.  
+ 다음 코드 예제에서는 `Skip While` 절에는 문자열의 첫 번째 문자는 배열에서 문자열을 건너뛰도록 Visual Basic의 "a"입니다. 배열에서 나머지 문자열이 반환 됩니다.  
   
  [!code-vb[CsLINQPartitioning#2](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/partitioning-data_2.vb)]  
   
 ### <a name="take"></a>Take  
- 다음 코드 예제에서는 `Take` 절 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 문자열의 배열에서 처음 두 개의 문자열을 반환 합니다.  
+ 다음 코드 예제에서는 `Take` 절 Visual basic의 문자열의 배열에서 처음 두 개의 문자열을 반환 합니다.  
   
  [!code-vb[CsLINQPartitioning#3](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/partitioning-data_3.vb)]  
   
 ### <a name="takewhile"></a>TakeWhile  
- 다음 코드 예제에서는 `Take While` 절 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 문자열의 길이 5 개 이하의 배열에서 문자열을 반환 하려면.  
+ 다음 코드 예제에서는 `Take While` Visual basic의 문자열의 길이 5 개 이하의 배열에서 문자열을 반환 하는 절.  
   
  [!code-vb[CsLINQPartitioning#4](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/partitioning-data_4.vb)]  
   

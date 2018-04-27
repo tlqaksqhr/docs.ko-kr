@@ -16,11 +16,11 @@ ms.author: douglasl
 manager: craigg
 ms.workload:
 - dotnet
-ms.openlocfilehash: 62f7a3b0fcefa9eb6f5b56d96217a9988a193104
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 7f303f5b7a7b8675f7d322c6855f4273ebe826ff
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="linq-to-sql"></a>LINQ to SQL
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]은 관계형 데이터를 개체로 관리하는 데 필요한 런타임 인프라를 제공하는 [!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)] 버전 3.5의 구성 요소입니다.  
@@ -31,9 +31,9 @@ ms.lasthandoff: 01/19/2018
  
           [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]에서 관계형 데이터베이스의 데이터 모델은 개발자의 프로그래밍 언어로 표현되는 개체 모델에 매핑됩니다. 응용 프로그램을 실행하면 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]에서는 개체 모델의 SQL 언어 통합 쿼리를 변환하여 실행을 위해 데이터베이스로 전송합니다. 데이터베이스에서 결과를 반환하면 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]에서는 해당 결과를 사용자의 프로그래밍 언어로 작업할 수 있는 개체로 다시 변환합니다.  
   
- 일반적으로 [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)]를 사용하는 개발자는 [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)]의 많은 기능을 구현하는 데 필요한 사용자 인터페이스를 제공하는 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]를 사용합니다.  
+ 사용 하 여 일반적으로 Visual Studio를 사용 하는 개발자는 [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)], 다양 한 기능을 구현 하기 위한 사용자 인터페이스를 제공 하는 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]합니다.  
   
- 이 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 릴리스에 포함된 설명서에서는 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 응용 프로그램을 빌드하는 데 필요한 기본 빌드 블록, 프로세스 및 기술에 대해 설명합니다. 특정 문제에 대 한 Microsoft Docs를 검색할 수도 및에 참여할 수 있습니다는 [LINQ 포럼](http://go.microsoft.com/fwlink/?LinkId=76488)전문가 함께 보다 복잡 한 주제를 자세히 논의할 수 있는, 합니다. 마지막으로 [LINQ to SQL: .NET Language-Integrated Query for Relational Data](http://go.microsoft.com/fwlink/?LinkId=93205)(LINQ to SQL: 관계형 데이터에 대한 .NET Language-Integrated Query) 백서에서는 [!INCLUDE[vbprvb](../../../../../../includes/vbprvb-md.md)] 및 C# 코드 예제를 통해 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 기술에 대해 자세히 설명합니다.  
+ 이 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 릴리스에 포함된 설명서에서는 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 응용 프로그램을 빌드하는 데 필요한 기본 빌드 블록, 프로세스 및 기술에 대해 설명합니다. 특정 문제에 대 한 Microsoft Docs를 검색할 수도 및에 참여할 수 있습니다는 [LINQ 포럼](http://go.microsoft.com/fwlink/?LinkId=76488)전문가 함께 보다 복잡 한 주제를 자세히 논의할 수 있는, 합니다. 마지막으로 [LINQ to SQL: 관계형 데이터에 대 한 쿼리.NET Language-Integrated](http://go.microsoft.com/fwlink/?LinkId=93205) 백서 세부 정보 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 기술, Visual Basic 및 C# 코드 예제와 함께 완료 합니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
  [시작](../../../../../../docs/framework/data/adonet/sql/linq/getting-started.md)  
@@ -46,14 +46,14 @@ ms.lasthandoff: 01/19/2018
  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]의 일부 측면에 대한 참조 정보를 제공합니다. 항목에는 SQL-CLR 형식 매핑, 표준 쿼리 연산자 변환 등이 포함됩니다.  
   
  [샘플](../../../../../../docs/framework/data/adonet/sql/linq/samples.md)  
- [!INCLUDE[vbprvb](../../../../../../includes/vbprvb-md.md)] 및 C# 샘플에 대한 링크를 제공합니다.  
+ Visual Basic 및 C# 샘플에 대 한 링크를 제공합니다.  
   
 ## <a name="related-sections"></a>관련 단원  
  [LINQ(Language-Integrated Query)](http://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d)  
  [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)] 기술에 대한 개요를 제공합니다.  
   
  [LINQ](../../../../../visual-basic/programming-guide/language-features/linq/index.md)  
- [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)] 사용자를 위해 [!INCLUDE[vbprvb](../../../../../../includes/vbprvb-md.md)] 기술에 대해 설명합니다.  
+ 설명 [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)] Visual Basic 사용자를 위한 기술입니다.  
   
  [LINQ to ADO.NET](http://msdn.microsoft.com/library/be3297b9-1b54-4d4c-82a8-add0d79c2006)  
  [!INCLUDE[vstecado](../../../../../../includes/vstecado-md.md)] 포털에 대한 링크입니다.  

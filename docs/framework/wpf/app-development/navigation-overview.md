@@ -1,12 +1,13 @@
 ---
-title: "탐색 개요"
-ms.custom: 
+title: 탐색 개요
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -31,19 +32,20 @@ helpviewer_keywords:
 - programmatic navigation [WPF]
 - hyperlinks [WPF]
 ms.assetid: 86ad2143-606a-4e34-bf7e-51a2594248b8
-caps.latest.revision: "69"
+caps.latest.revision: 69
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 3a3b7d865a503189ebb5b3adadc7258603461c9b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 07609671d061851e6ede2f2bd90e4bee38e43159
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="navigation-overview"></a>탐색 개요
-[!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)]두 가지 유형의 응용 프로그램에서 사용할 수 있는 브라우저 스타일 탐색을 지 원하는: 독립 실행형 응용 프로그램 및 [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)]합니다. 콘텐츠 탐색을 위한 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 제공는 <xref:System.Windows.Controls.Page> 클래스입니다. 하나를 탐색할 수 <xref:System.Windows.Controls.Page> 다른 선언적으로 사용 하 여는 <xref:System.Windows.Documents.Hyperlink>, 또는 사용 하 여 프로그래밍 방식으로 <xref:System.Windows.Navigation.NavigationService>합니다. [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]는 저널을 사용하여 탐색했던 페이지를 기억했다가 다시 해당 페이지로 돌아옵니다.  
+[!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] 두 가지 유형의 응용 프로그램에서 사용할 수 있는 브라우저 스타일 탐색을 지 원하는: 독립 실행형 응용 프로그램 및 [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)]합니다. 콘텐츠 탐색을 위한 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 제공는 <xref:System.Windows.Controls.Page> 클래스입니다. 하나를 탐색할 수 <xref:System.Windows.Controls.Page> 다른 선언적으로 사용 하 여는 <xref:System.Windows.Documents.Hyperlink>, 또는 사용 하 여 프로그래밍 방식으로 <xref:System.Windows.Navigation.NavigationService>합니다. [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]는 저널을 사용하여 탐색했던 페이지를 기억했다가 다시 해당 페이지로 돌아옵니다.  
   
  <xref:System.Windows.Controls.Page><xref:System.Windows.Documents.Hyperlink>, <xref:System.Windows.Navigation.NavigationService>, 및 저널은에서 제공 하는 탐색 지원의 핵심 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]합니다. 이 개요에 느슨한 탐색을 포함 하는 고급 탐색 지원을 다루기 전에이 기능을 자세히 탐색 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] 파일, [!INCLUDE[TLA#tla_html](../../../../includes/tlasharptla-html-md.md)] 파일 및 개체입니다.  
   
@@ -118,7 +120,7 @@ ms.lasthandoff: 12/22/2017
   
 -   코드 숨김 클래스 여야 합니다는 `partial` 변수로 지정 된 동일한 이름의 클래스는 `x:Class` 태그에서 특성에서 파생 되어야 <xref:System.Windows.Controls.Page>합니다. 이렇게 하면 연결 된 코드 숨김 파일이 `partial` 응용 프로그램이 빌드될 때 마크업 파일에 대해 생성 되는 클래스 (참조 [WPF 응용 프로그램 빌드](../../../../docs/framework/wpf/app-development/building-a-wpf-application-wpf.md)).  
   
--   코드 숨김에서 <xref:System.Windows.Controls.Page> 클래스가 호출 하는 생성자를 구현 해야 합니다는 `InitializeComponent` 메서드. `InitializeComponent`구현 파일에서 생성 된 태그에서 `partial` 클래스를 이벤트 등록 및 태그에 정의 된 속성을 설정 합니다.  
+-   코드 숨김에서 <xref:System.Windows.Controls.Page> 클래스가 호출 하는 생성자를 구현 해야 합니다는 `InitializeComponent` 메서드. `InitializeComponent` 구현 파일에서 생성 된 태그에서 `partial` 클래스를 이벤트 등록 및 태그에 정의 된 속성을 설정 합니다.  
   
 > [!NOTE]
 >  추가 하는 경우 새 <xref:System.Windows.Controls.Page> 사용 하 여 프로젝트를 [!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)], <xref:System.Windows.Controls.Page> 는 태그와 코드 숨김을 사용 하 여 구현에 따라 이러한 태그 및 코드 숨김 파일 간의 연결을 만들기 위해 필요한 구성을 포함 여기에서 설명 합니다.  
@@ -215,7 +217,7 @@ ms.lasthandoff: 12/22/2017
 [!code-xaml[NavigationOverviewSnippets#PageThatNavigatesXAML3](../../../../samples/snippets/csharp/VS_Snippets_Wpf/NavigationOverviewSnippets/CSharp/PageThatNavigatesToFragment.xaml#pagethatnavigatesxaml3)]  
   
 > [!NOTE]
->  이 섹션에서는 기본 조각 탐색 구현에서 설명 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]합니다. [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]부분적으로 처리를 필요로 하는 사용자 고유의 조각 탐색 체계를 구현할 수 있습니다는 <xref:System.Windows.Navigation.NavigationService.FragmentNavigation?displayProperty=nameWithType> 이벤트입니다.  
+>  이 섹션에서는 기본 조각 탐색 구현에서 설명 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]합니다. [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 부분적으로 처리를 필요로 하는 사용자 고유의 조각 탐색 체계를 구현할 수 있습니다는 <xref:System.Windows.Navigation.NavigationService.FragmentNavigation?displayProperty=nameWithType> 이벤트입니다.  
   
 > [!IMPORTANT]
 >  느슨한의 조각으로 이동할 수 있습니다 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 페이지 (태그 전용 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 확장명이 `Page` 루트 요소로)를 통해 페이지를 찾아볼 수 있는 경우에 [!INCLUDE[TLA2#tla_http](../../../../includes/tla2sharptla-http-md.md)]합니다.  
@@ -276,7 +278,7 @@ ms.lasthandoff: 12/22/2017
  [!code-csharp[NavigationOverviewSnippets#NSNavigationPageCODEBEHIND](../../../../samples/snippets/csharp/VS_Snippets_Wpf/NavigationOverviewSnippets/CSharp/NSNavigationPage.xaml.cs#nsnavigationpagecodebehind)]
  [!code-vb[NavigationOverviewSnippets#NSNavigationPageCODEBEHIND](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/NavigationOverviewSnippets/VisualBasic/NSNavigationPage.xaml.vb#nsnavigationpagecodebehind)]  
   
- 때는 <xref:System.Windows.Documents.Hyperlink> 이 <xref:System.Windows.Controls.Page> 은 클릭 하면 탐색을 시작 인스턴스화는 <xref:System.Windows.Controls.Page> 폴더로 이동 하는 기본이 아닌 생성자를 사용 하 고 호출 하는 <xref:System.Windows.Navigation.NavigationService.Navigate%2A?displayProperty=nameWithType> 메서드. <xref:System.Windows.Navigation.NavigationService.Navigate%2A>개체에 대 한 참조를 허용 하는 <xref:System.Windows.Navigation.NavigationService> 팩 하는 대신,로 이동 됩니다 [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)]합니다.  
+ 때는 <xref:System.Windows.Documents.Hyperlink> 이 <xref:System.Windows.Controls.Page> 은 클릭 하면 탐색을 시작 인스턴스화는 <xref:System.Windows.Controls.Page> 폴더로 이동 하는 기본이 아닌 생성자를 사용 하 고 호출 하는 <xref:System.Windows.Navigation.NavigationService.Navigate%2A?displayProperty=nameWithType> 메서드. <xref:System.Windows.Navigation.NavigationService.Navigate%2A> 개체에 대 한 참조를 허용 하는 <xref:System.Windows.Navigation.NavigationService> 팩 하는 대신,로 이동 됩니다 [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)]합니다.  
   
 #### <a name="programmatic-navigation-with-a-pack-uri"></a>Pack URI를 사용하여 프로그래밍 방식으로 탐색  
  팩을 생성 하는 경우 [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] 프로그래밍 방식으로 (팩을만 확인할 수 있습니다 때 [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] 런타임에만 예를 들어)를 사용할 수 있습니다는 <xref:System.Windows.Navigation.NavigationService.Navigate%2A?displayProperty=nameWithType> 메서드. 다음 예제에서 이를 확인할 수 있습니다.  
@@ -338,7 +340,7 @@ ms.lasthandoff: 12/22/2017
   
 -   <xref:System.Windows.Application.FragmentNavigation?displayProperty=nameWithType>  
   
- 때마다 <xref:System.Windows.Navigation.NavigationService> 이벤트를 발생 시킨는 <xref:System.Windows.Application> 클래스에 해당 하는 이벤트를 발생 시킵니다. <xref:System.Windows.Controls.Frame>및 <xref:System.Windows.Navigation.NavigationWindow> 해당 범위 내의 탐색을 검색 하려면 동일한 이벤트를 제공 합니다.  
+ 때마다 <xref:System.Windows.Navigation.NavigationService> 이벤트를 발생 시킨는 <xref:System.Windows.Application> 클래스에 해당 하는 이벤트를 발생 시킵니다. <xref:System.Windows.Controls.Frame> 및 <xref:System.Windows.Navigation.NavigationWindow> 해당 범위 내의 탐색을 검색 하려면 동일한 이벤트를 제공 합니다.  
   
  일부 경우에는 <xref:System.Windows.Controls.Page> 이러한 이벤트에 관심이 있을 수도 있습니다. 예를 들어 한 <xref:System.Windows.Controls.Page> 처리할 수 있습니다는 <xref:System.Windows.Navigation.NavigationService.Navigating?displayProperty=nameWithType> 자체 탐색을 취소할지 여부를 결정 하기 위해 이벤트입니다. 다음 예제에서 이를 확인할 수 있습니다.  
   
@@ -455,7 +457,7 @@ ms.lasthandoff: 12/22/2017
   
 3.  <xref:System.Windows.Controls.Page> 다시 탐색 합니다.  
   
- [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]다음 컨트롤에서 사용 되는 경우 자동으로이 지원을 사용 하 여 한 <xref:System.Windows.Controls.Page>:  
+ [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 다음 컨트롤에서 사용 되는 경우 자동으로이 지원을 사용 하 여 한 <xref:System.Windows.Controls.Page>:  
   
 -   <xref:System.Windows.Controls.CheckBox>  
   
@@ -513,13 +515,13 @@ ms.lasthandoff: 12/22/2017
   
  다음은 쿠키에서 지원 되는 방식 중 몇 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]:  
   
--   [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]독립 실행형 응용 프로그램 및 [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] 모두 만들고 수 쿠키를 관리 합니다.  
+-   [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 독립 실행형 응용 프로그램 및 [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] 모두 만들고 수 쿠키를 관리 합니다.  
   
 -   에 의해 만들어진 쿠키는 [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] 브라우저에서 액세스할 수 있습니다.  
   
 -   동일한 도메인의 [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)]에서 쿠키를 만들고 공유할 수 있습니다.  
   
--   [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)]및 [!INCLUDE[TLA2#tla_html](../../../../includes/tla2sharptla-html-md.md)] 동일한 도메인 페이지에서에서 만들고 쿠키를 공유할 수 있습니다.  
+-   [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] 및 [!INCLUDE[TLA2#tla_html](../../../../includes/tla2sharptla-html-md.md)] 동일한 도메인 페이지에서에서 만들고 쿠키를 공유할 수 있습니다.  
   
 -   쿠키가 디스패치 됩니다 때 [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] 및 느슨한 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 페이지 웹 요청을 확인 합니다.  
   
@@ -537,15 +539,15 @@ ms.lasthandoff: 12/22/2017
   
 <a name="The_NavigationWindow_Class"></a>   
 ## <a name="the-navigationwindow-class"></a>NavigationWindow 클래스  
- 지금까지 탐색 가능한 콘텐츠로 응용 프로그램을 빌드하는 데 가장 많이 사용되는 탐색 서비스 영역을 살펴보았습니다. 이러한 서비스의 컨텍스트에서 설명한 [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)]로 제한 되지 않지만, [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)]합니다. 최신 운영 체제 및 [!INCLUDE[TLA2#tla_mswin](../../../../includes/tla2sharptla-mswin-md.md)] 응용 프로그램에 독립 실행형 응용 프로그램 브라우저 스타일 탐색을 통합 최근 사용자의 브라우저 환경을 활용 합니다. 일반적인 예는 다음과 같습니다.  
+ 지금까지 탐색 가능한 콘텐츠로 응용 프로그램을 빌드하는 데 가장 많이 사용되는 탐색 서비스 영역을 살펴보았습니다. 이러한 서비스의 컨텍스트에서 설명한 [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)]로 제한 되지 않지만, [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)]합니다. 최신 운영 체제와 Windows 응용 프로그램은 독립 실행형 응용 프로그램에 브라우저 스타일 탐색을 통합 최근 사용자의 브라우저 환경을 활용 합니다. 일반적인 예는 다음과 같습니다.  
   
 -   **단어 동의어 사전**: 선택한 단어를 탐색합니다.  
   
 -   **파일 탐색기**: 파일 및 폴더를 탐색합니다.  
   
--   **마법사**: 복잡한 작업을 여러 페이지로 나누어 탐색할 수 있습니다. 예로 추가 및 제거를 처리 하는 Windows 구성 요소 마법사 [!INCLUDE[TLA2#tla_mswin](../../../../includes/tla2sharptla-mswin-md.md)] 기능입니다.  
+-   **마법사**: 복잡한 작업을 여러 페이지로 나누어 탐색할 수 있습니다. 예로 Windows 기능 추가 및 제거를 처리 하는 Windows 구성 요소 마법사.  
   
- 브라우저 스타일에 탐색을 통합 독립 실행형 응용 프로그램을 사용할 수 있습니다는 <xref:System.Windows.Navigation.NavigationWindow> 클래스입니다. <xref:System.Windows.Navigation.NavigationWindow>파생 <xref:System.Windows.Window> 사용 하도록 확장 탐색에 대 한 동일한 지원을 있는 [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] 제공 합니다. 사용할 수 있습니다 <xref:System.Windows.Navigation.NavigationWindow> 독립 실행형 응용 프로그램의 주 창 또는 대화 상자와 같은 보조 창으로 합니다.  
+ 브라우저 스타일에 탐색을 통합 독립 실행형 응용 프로그램을 사용할 수 있습니다는 <xref:System.Windows.Navigation.NavigationWindow> 클래스입니다. <xref:System.Windows.Navigation.NavigationWindow> 파생 <xref:System.Windows.Window> 사용 하도록 확장 탐색에 대 한 동일한 지원을 있는 [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] 제공 합니다. 사용할 수 있습니다 <xref:System.Windows.Navigation.NavigationWindow> 독립 실행형 응용 프로그램의 주 창 또는 대화 상자와 같은 보조 창으로 합니다.  
   
  구현 하는 <xref:System.Windows.Navigation.NavigationWindow>의 최상위 클래스와 마찬가지로, [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] (<xref:System.Windows.Window>, <xref:System.Windows.Controls.Page>등), 태그 및 코드 숨김의 조합을 사용 합니다. 다음 예제에서 이를 확인할 수 있습니다.  
   
@@ -592,7 +594,7 @@ ms.lasthandoff: 12/22/2017
   
 <a name="Frame_in_Standalone_Applications"></a>   
 ## <a name="the-frame-class"></a>Frame 클래스  
- 두 브라우저 및 <xref:System.Windows.Navigation.NavigationWindow> 해당 호스트 탐색 가능한 콘텐츠는 창입니다. 응용 프로그램의 콘텐츠가 전체 창에서 호스트될 필요가 없는 경우가 있습니다. 대신, 이러한 콘텐츠는 다른 콘텐츠 내에 호스트됩니다. 사용 하 여 다른 콘텐츠 탐색 가능한 콘텐츠를 삽입할 수 있습니다는 <xref:System.Windows.Controls.Frame> 클래스입니다. <xref:System.Windows.Controls.Frame>동일한 기능을 제공할 <xref:System.Windows.Navigation.NavigationWindow> 및 [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)]합니다.  
+ 두 브라우저 및 <xref:System.Windows.Navigation.NavigationWindow> 해당 호스트 탐색 가능한 콘텐츠는 창입니다. 응용 프로그램의 콘텐츠가 전체 창에서 호스트될 필요가 없는 경우가 있습니다. 대신, 이러한 콘텐츠는 다른 콘텐츠 내에 호스트됩니다. 사용 하 여 다른 콘텐츠 탐색 가능한 콘텐츠를 삽입할 수 있습니다는 <xref:System.Windows.Controls.Frame> 클래스입니다. <xref:System.Windows.Controls.Frame> 동일한 기능을 제공할 <xref:System.Windows.Navigation.NavigationWindow> 및 [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)]합니다.  
   
  추가 하는 방법을 보여 주는 다음 예제는 <xref:System.Windows.Controls.Frame> 에 <xref:System.Windows.Controls.Page> 선언적으로 사용 하 여는 `Frame` 요소입니다.  
   
@@ -633,7 +635,7 @@ ms.lasthandoff: 12/22/2017
   
 <a name="Navigation_Hosts"></a>   
 ## <a name="navigation-hosts"></a>탐색 호스트  
- <xref:System.Windows.Controls.Frame>및 <xref:System.Windows.Navigation.NavigationWindow> 탐색 호스트 이라고 하는 클래스입니다. A *탐색 호스트* 로 이동 하 고 콘텐츠를 표시할 수 있는 클래스입니다. 이를 위해 각 탐색 호스트에서 사용 하는 자체 <xref:System.Windows.Navigation.NavigationService> 와 저널 합니다. 다음 그림은 탐색 호스트의 기본 구성을 보여 줍니다.  
+ <xref:System.Windows.Controls.Frame> 및 <xref:System.Windows.Navigation.NavigationWindow> 탐색 호스트 이라고 하는 클래스입니다. A *탐색 호스트* 로 이동 하 고 콘텐츠를 표시할 수 있는 클래스입니다. 이를 위해 각 탐색 호스트에서 사용 하는 자체 <xref:System.Windows.Navigation.NavigationService> 와 저널 합니다. 다음 그림은 탐색 호스트의 기본 구성을 보여 줍니다.  
   
  ![탐색기 다이어그램](../../../../docs/framework/wpf/app-development/media/navigationoverviewfigure15.png "NavigationOverviewFigure15")  
   
@@ -738,7 +740,7 @@ ms.lasthandoff: 12/22/2017
   
 <a name="Security"></a>   
 ## <a name="security"></a>보안  
- [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]탐색 지원을 통해 [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] 사용 하면 응용 프로그램 콘텐츠를 호스트 제 3 자 인터넷에서 탐색할 수 있습니다. 응용 프로그램 및 사용자를 모두 해로운 동작을 방지 하기 위해 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 다양 한 보안 기능에 설명 된 제공 [보안](../../../../docs/framework/wpf/security-wpf.md) 및 [WPF 부분 신뢰 보안](../../../../docs/framework/wpf/wpf-partial-trust-security.md)합니다.  
+ [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 탐색 지원을 통해 [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] 사용 하면 응용 프로그램 콘텐츠를 호스트 제 3 자 인터넷에서 탐색할 수 있습니다. 응용 프로그램 및 사용자를 모두 해로운 동작을 방지 하기 위해 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 다양 한 보안 기능에 설명 된 제공 [보안](../../../../docs/framework/wpf/security-wpf.md) 및 [WPF 부분 신뢰 보안](../../../../docs/framework/wpf/wpf-partial-trust-security.md)합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  <xref:System.Windows.Application.SetCookie%2A>  

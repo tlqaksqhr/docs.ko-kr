@@ -31,11 +31,11 @@ ms.assetid: dea01dad-a8ac-484a-bb3a-8c45a1b1eccc
 caps.latest.revision: 21
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: cf6b3ce7e5f9549ca04c4980bd3c91513b343ff6
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 06702cdc9073065a418b17d198dbb43be4aefca1
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-break-and-combine-statements-in-code-visual-basic"></a>방법: 코드에서 문 분리 및 결합(Visual Basic)
 코드를 작성할 시간에 가로 스크롤 코드 편집기에서 볼 수 있는 긴 문을 만들 수 있습니다. 방식에 영향을 주지 않지만 코드를 실행, 하기 쉽게 없는 사용자나 다른 사람이 모니터에 표시 된 대로 코드를 읽을 수에 대 한 합니다. 이러한 경우 긴 문은 여러 줄으로 분리를 고려해 야 합니다.  
@@ -59,7 +59,7 @@ ms.lasthandoff: 11/21/2017
   
      줄 연속 문자를 사용 하 여 메모를 계속할 수 없습니다. 컴파일러 특별 한 의미에 대 한 설명의 문자를 검사 하지 않습니다. 주석이 여러 행에 대 한 반복 주석 기호 (`'`) 각 줄에 있습니다.  
   
- 권장 되는 방법에는 일반적으로 별도 줄에 각 문을 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 같은 줄에 여러 개의 문을 배치할 수 있습니다.  
+ 있지만 별도 줄에 각 문을 배치 하는 것이 좋지만, Visual Basic에서는 같은 줄에 여러 개의 문을 배치할 수 있습니다.  
   
 ### <a name="to-place-multiple-statements-on-the-same-line"></a>같은 줄에 여러 개의 문을 배치 하려면  
   

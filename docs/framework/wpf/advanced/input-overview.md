@@ -1,12 +1,13 @@
 ---
-title: "입력 개요"
-ms.custom: 
+title: 입력 개요
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -31,16 +32,17 @@ helpviewer_keywords:
 - focus [WPF]
 - mouse position [WPF]
 ms.assetid: ee5258b7-6567-415a-9b1c-c0cbe46e79ef
-caps.latest.revision: "50"
+caps.latest.revision: 50
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 910eed7c1786730a3ffce5add995e543021f4759
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: b10890cc433e1adf72b7e26c91e919bd239942b8
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="input-overview"></a>입력 개요
 <a name="introduction"></a>[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 하위 시스템은 마우스, 키보드, 터치, 스타일러스를 비롯한 다양한 장치에서 입력을 가져오는 데 사용할 수 있는 강력한 [!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)]를 제공합니다. 이 항목에서는 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]가 제공하는 서비스에 대해 설명하고 입력 시스템의 아키텍처를 살펴봅니다.  
@@ -70,7 +72,7 @@ ms.lasthandoff: 12/22/2017
  <xref:System.Windows.Input.Mouse> 및 <xref:System.Windows.Input.Keyboard> 클래스가이 개요 항목에서 자세히 다룹니다.  
   
 ### <a name="stylus-input"></a>스타일러스 입력  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]에 통합에 대 한 지원이 <xref:System.Windows.Input.Stylus>합니다.  <xref:System.Windows.Input.Stylus> 에 널리 사용 되는 펜 입력는 [!INCLUDE[TLA#tla_tpc](../../../../includes/tlasharptla-tpc-md.md)]합니다.  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 응용 프로그램은 마우스 [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)]를 사용하여 스타일러스를 마우스로 처리할 수 있지만 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]는 키보드 및 마우스와 비슷한 모델을 사용하는 스타일러스 장치 추상화도 노출합니다.  스타일러스와 관련된 모든 [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)]에는 “Stylus”라는 단어가 포함됩니다.  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 에 통합에 대 한 지원이 <xref:System.Windows.Input.Stylus>합니다.  <xref:System.Windows.Input.Stylus> 에 널리 사용 되는 펜 입력는 [!INCLUDE[TLA#tla_tpc](../../../../includes/tlasharptla-tpc-md.md)]합니다.  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 응용 프로그램은 마우스 [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)]를 사용하여 스타일러스를 마우스로 처리할 수 있지만 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]는 키보드 및 마우스와 비슷한 모델을 사용하는 스타일러스 장치 추상화도 노출합니다.  스타일러스와 관련된 모든 [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)]에는 “Stylus”라는 단어가 포함됩니다.  
   
  스타일러스는 마우스처럼 동작할 수 있으므로 마우스 입력만 지원하는 응용 프로그램도 약간의 스타일러스 지원을 자동으로 받을 수 있습니다. 이러한 방식으로 스타일러스를 사용하는 경우 응용 프로그램은 알맞은 스타일러스 이벤트를 처리한 다음 해당 마우스 이벤트를 처리할 수 있게 됩니다. 뿐만 아니라 스타일러스 장치 추상화를 통해 잉크 입력과 같은 높은 수준의 서비스도 사용할 수 있습니다.  잉크 입력에 대한 자세한 내용은 [잉크 시작](../../../../docs/framework/wpf/advanced/getting-started-with-ink.md)을 참조하세요.  
   
@@ -84,7 +86,7 @@ ms.lasthandoff: 12/22/2017
   
 <a name="handling_input_events"></a>   
 ## <a name="handling-input-events"></a>입력 이벤트 처리  
- 요소에서 입력을 받으려면 특정 이벤트에 이벤트 처리기를 연결해야 합니다.  [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]에서는 이 작업이 매우 간단합니다. 이 이벤트를 수신할 요소의 특성으로 이벤트 이름을 참조합니다.  그런 다음 대리자에 따라 정의하는 이벤트 처리기의 이름으로 특성 값을 설정하기만 하면 됩니다.  이벤트 처리기는 [!INCLUDE[TLA#tla_cshrp](../../../../includes/tlasharptla-cshrp-md.md)]과 같은 코드로 작성해야 하며 코드 숨김 파일에 포함할 수 있습니다.  
+ 요소에서 입력을 받으려면 특정 이벤트에 이벤트 처리기를 연결해야 합니다.  [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]에서는 이 작업이 매우 간단합니다. 이 이벤트를 수신할 요소의 특성으로 이벤트 이름을 참조합니다.  그런 다음 대리자에 따라 정의하는 이벤트 처리기의 이름으로 특성 값을 설정하기만 하면 됩니다.  이벤트 처리기 코드 예: C#으로 작성 되어야 하 고 코드 숨김 파일에 포함 될 수 있습니다.  
   
  키보드 이벤트는 키보드 포커스가 요소에 있는 동안 발생하는 키 동작을 운영 체제에서 보고할 때 발생합니다. 마우스 및 스타일러스 이벤트는 각각 요소를 기준으로 포인터 위치의 변경을 보고하는 이벤트와 장치 단추의 상태 변경을 보고하는 이벤트의 두 범주로 나뉩니다.  
   
@@ -153,7 +155,7 @@ ms.lasthandoff: 12/22/2017
   
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]는 터치가 발생할 때 두 가지 형식의 이벤트, 즉 터치 이벤트와 조작 이벤트를 노출합니다. 터치 이벤트는 터치 스크린의 각 손가락과 그 이동에 대한 원시 데이터를 제공합니다. 조작 이벤트는 특정 작업으로 입력을 해석합니다. 이 섹션에서는 두 가지 형식의 이벤트에 대해 모두 설명합니다.  
   
-### <a name="prerequisites"></a>필수 구성 요소  
+### <a name="prerequisites"></a>전제 조건  
  터치에 응답하는 응용 프로그램을 개발하려면 다음 구성 요소가 필요합니다.  
   
 -   [!INCLUDE[vs_dev10_ext](../../../../includes/vs-dev10-ext-md.md)].  
@@ -330,7 +332,7 @@ ms.lasthandoff: 12/22/2017
 ### <a name="keyboard-focus"></a>키보드 포커스  
  키보드 포커스는 키보드 입력을 받고 있는 요소를 말합니다.  키보드 포커스가 있는 전체 데스크탑에는 요소가 하나뿐이어야 합니다.  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], 키보드 포커스가 있는 요소에 포함 될 <xref:System.Windows.IInputElement.IsKeyboardFocused%2A> 로 설정 `true`합니다.  정적 <xref:System.Windows.Input.Keyboard> 메서드 <xref:System.Windows.Input.Keyboard.FocusedElement%2A> 현재 키보드 포커스가 있는 요소를 반환 합니다.  
   
- 요소에 탭 이동 하거나와 같은 특정 요소에 마우스를 클릭 하 여 키보드 포커스를 얻을 수 있습니다는 <xref:System.Windows.Controls.TextBox>합니다.  키보드 포커스를 사용 하 여 프로그래밍 방식으로 얻을 수도 있습니다는 <xref:System.Windows.Input.Keyboard.Focus%2A> 에서 메서드는 <xref:System.Windows.Input.Keyboard> 클래스입니다.  <xref:System.Windows.Input.Keyboard.Focus%2A>지정 된 요소가 키보드 포커스를 시도 합니다.  반환한 요소 <xref:System.Windows.Input.Keyboard.Focus%2A> 는 현재 키보드 포커스가 있는 요소입니다.  
+ 요소에 탭 이동 하거나와 같은 특정 요소에 마우스를 클릭 하 여 키보드 포커스를 얻을 수 있습니다는 <xref:System.Windows.Controls.TextBox>합니다.  키보드 포커스를 사용 하 여 프로그래밍 방식으로 얻을 수도 있습니다는 <xref:System.Windows.Input.Keyboard.Focus%2A> 에서 메서드는 <xref:System.Windows.Input.Keyboard> 클래스입니다.  <xref:System.Windows.Input.Keyboard.Focus%2A> 지정 된 요소가 키보드 포커스를 시도 합니다.  반환한 요소 <xref:System.Windows.Input.Keyboard.Focus%2A> 는 현재 키보드 포커스가 있는 요소입니다.  
   
  요소에 키보드 포커스가를 위해는 <xref:System.Windows.UIElement.Focusable%2A> 속성 및 <xref:System.Windows.UIElement.IsVisible%2A> 속성으로 설정 되어 있어야 **true**합니다.  와 같은 일부 클래스 <xref:System.Windows.Controls.Panel>, 있어야 <xref:System.Windows.UIElement.Focusable%2A> 로 설정 `false` 기본적으로 따라서 할 수 있습니다이 속성을 설정 `true` 포커스를 얻을 수 있게 되기를 해당 요소에 들어 있습니다.  
   
@@ -375,11 +377,11 @@ ms.lasthandoff: 12/22/2017
 ## <a name="commands"></a>명령  
  명령을 사용하면 장치 입력에 비해 보다 의미적 수준에서 입력을 처리할 수 있습니다.  명령은 `Cut`, `Copy`, `Paste` 또는 `Open`과 같은 단순한 지시문입니다.  명령은 명령 논리를 중앙 집중화하는 데 유용합니다.  동일한 명령에서 액세스할 수 있습니다는 <xref:System.Windows.Controls.Menu>의 <xref:System.Windows.Controls.ToolBar>, 또는 바로 가기 키입니다. 또한 명령은 명령을 사용할 수 없을 때 컨트롤을 비활성화하는 메커니즘도 제공합니다.  
   
- <xref:System.Windows.Input.RoutedCommand>이 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 구현의 <xref:System.Windows.Input.ICommand>합니다.  경우는 <xref:System.Windows.Input.RoutedCommand> 실행 되는 <xref:System.Windows.Input.CommandManager.PreviewExecuted> 및 <xref:System.Windows.Input.CommandManager.Executed> 어떤 터널와 요소 트리를 통해 거품형 등의 다른 입력 명령 대상에서 이벤트 발생 합니다.  명령 대상이 설정되어 있지 않으면 키보드 포커스가 있는 요소가 명령 대상이 됩니다.  에 연결 된 명령을 수행 하는 논리는 <xref:System.Windows.Input.CommandBinding>합니다.  경우는 <xref:System.Windows.Input.CommandManager.Executed> 이벤트가 도달할는 <xref:System.Windows.Input.CommandBinding> 특정 명령에 대 한는 <xref:System.Windows.Input.ExecutedRoutedEventHandler> 에 <xref:System.Windows.Input.CommandBinding> 호출 됩니다.  이 처리기는 명령의 작업을 수행합니다.  
+ <xref:System.Windows.Input.RoutedCommand> 이 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 구현의 <xref:System.Windows.Input.ICommand>합니다.  경우는 <xref:System.Windows.Input.RoutedCommand> 실행 되는 <xref:System.Windows.Input.CommandManager.PreviewExecuted> 및 <xref:System.Windows.Input.CommandManager.Executed> 어떤 터널와 요소 트리를 통해 거품형 등의 다른 입력 명령 대상에서 이벤트 발생 합니다.  명령 대상이 설정되어 있지 않으면 키보드 포커스가 있는 요소가 명령 대상이 됩니다.  에 연결 된 명령을 수행 하는 논리는 <xref:System.Windows.Input.CommandBinding>합니다.  경우는 <xref:System.Windows.Input.CommandManager.Executed> 이벤트가 도달할는 <xref:System.Windows.Input.CommandBinding> 특정 명령에 대 한는 <xref:System.Windows.Input.ExecutedRoutedEventHandler> 에 <xref:System.Windows.Input.CommandBinding> 호출 됩니다.  이 처리기는 명령의 작업을 수행합니다.  
   
  명령에 대한 자세한 내용은 [명령 개요](../../../../docs/framework/wpf/advanced/commanding-overview.md)를 참조하세요.  
   
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]구성 된 일반적인 명령의 라이브러리를 제공 <xref:System.Windows.Input.ApplicationCommands>, <xref:System.Windows.Input.MediaCommands>, <xref:System.Windows.Input.ComponentCommands>, <xref:System.Windows.Input.NavigationCommands>, 및 <xref:System.Windows.Documents.EditingCommands>, 하거나 사용자 고유의 정의할 수 있습니다.  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 구성 된 일반적인 명령의 라이브러리를 제공 <xref:System.Windows.Input.ApplicationCommands>, <xref:System.Windows.Input.MediaCommands>, <xref:System.Windows.Input.ComponentCommands>, <xref:System.Windows.Input.NavigationCommands>, 및 <xref:System.Windows.Documents.EditingCommands>, 하거나 사용자 고유의 정의할 수 있습니다.  
   
  설정 하는 방법을 보여 주는 다음 예제는 <xref:System.Windows.Controls.MenuItem> 를 클릭 하면 호출 됩니다는 <xref:System.Windows.Input.ApplicationCommands.Paste%2A> 명령을 <xref:System.Windows.Controls.TextBox>되었다고 가정 하 고는 <xref:System.Windows.Controls.TextBox> 키보드 포커스가 합니다.  
   

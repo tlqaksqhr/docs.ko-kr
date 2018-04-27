@@ -1,24 +1,25 @@
 ---
-title: "Visual Basic 런타임 메시지"
+title: Visual Basic 런타임 메시지
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-visual-basic
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - errors [Visual Basic], run-time
 - run-time errors [Visual Basic], Visual Basic
 ms.assetid: 130f7c2b-8eb1-4a6e-81aa-e30e27d3d4f7
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 37c88c7d88e01e6201a4679ae312e045c8cfab4a
-ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
+ms.openlocfilehash: 14258d0cb19b62ec93672998039b8d59a1943fb2
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="visual-basic-run-time-messages"></a>Visual Basic 런타임 메시지
-이 섹션에는 런타임에 발생하는 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 오류 메시지가 나와 있습니다.  
+이 섹션에는 런타임 시 발생 하는 Visual Basic 오류 메시지 포함 되어 있습니다.  
   
  [\<주소 > 올바른 원격 파일 주소가 아닙니다](../../visual-basic/misc/address-is-not-a-valid-remote-file-address.md)  
   

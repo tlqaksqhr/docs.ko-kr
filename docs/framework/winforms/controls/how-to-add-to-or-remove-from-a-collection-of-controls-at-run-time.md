@@ -1,12 +1,13 @@
 ---
-title: "방법: 런타임에 컨트롤 컬렉션에서 컨트롤 추가 또는 제거"
-ms.custom: 
+title: '방법: 런타임에 컨트롤 컬렉션에서 컨트롤 추가 또는 제거'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-winforms
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -19,16 +20,17 @@ helpviewer_keywords:
 - run time [Windows Forms], adding controls
 - controls [Windows Forms], removing using collections
 ms.assetid: 771bf895-3d5f-469b-a324-3528f343657e
-caps.latest.revision: "10"
+caps.latest.revision: 10
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 548ca8d682ffea6f2afa03124719a1bb5097a2fb
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: b34863e7846f75c5dc9a8af24591522e37252f4c
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-add-to-or-remove-from-a-collection-of-controls-at-run-time"></a>방법: 런타임에 컨트롤 컬렉션에서 컨트롤 추가 또는 제거
 응용 프로그램 개발에서 일반적인 작업은에 컨트롤 추가 폼의 컨테이너 컨트롤에서 컨트롤 제거 (같은 <xref:System.Windows.Forms.Panel> 또는 <xref:System.Windows.Forms.GroupBox> 컨트롤 또는 양식 자체도). 디자인 타임에 컨트롤을 패널이나 그룹 상자로 직접 끌어 놓을 수 있습니다. 런타임 시 이러한 컨트롤은 `Controls` 컬렉션을 유지 관리하고 여기서 배치된 컨트롤을 추적합니다.  
@@ -77,7 +79,7 @@ ms.lasthandoff: 12/22/2017
   
 ### <a name="to-remove-controls-from-a-collection-programmatically"></a>컬렉션에서 컨트롤을 프로그래밍 방식으로 제거하려면  
   
-1.  이벤트에서 이벤트 처리기를 제거합니다. [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)]에서는 [RemoveHandler 문](~/docs/visual-basic/language-reference/statements/removehandler-statement.md) 키워드를 사용합니다. [!INCLUDE[csprcs](../../../../includes/csprcs-md.md)]에서는 [-= 연산자(C# 참조)](~/docs/csharp/language-reference/operators/subtraction-assignment-operator.md)를 사용합니다.  
+1.  이벤트에서 이벤트 처리기를 제거합니다. Visual Basic에서 사용 하 여는 [RemoveHandler 문](~/docs/visual-basic/language-reference/statements/removehandler-statement.md) 키워드입니다; Visual C#을 사용 하 여는 [-= 연산자 (C# 참조)](~/docs/csharp/language-reference/operators/subtraction-assignment-operator.md)합니다.  
   
 2.  `Remove` 메서드를 사용하여 패널의 `Controls` 컬렉션에서 원하는 컨트롤을 삭제합니다.  
   

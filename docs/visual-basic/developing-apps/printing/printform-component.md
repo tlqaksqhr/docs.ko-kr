@@ -12,14 +12,14 @@ ms.assetid: 03de98b8-b54c-4764-91d7-83c64e974750
 caps.latest.revision: 19
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 890d5a3a3f9c3a737a59e17fef0d4ac0407e9924
-ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
+ms.openlocfilehash: 3269a980d19466205e6c67a18f22dded9301ec59
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="printform-component-visual-basic"></a>PrintForm 구성 요소(Visual Basic)
-<xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm> 용 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 구성 요소를 사용하여 런타임 Windows Form의 이미지를 인쇄할 수 있습니다. 해당 동작은 이전 Visual Basic 버전에서 `PrintForm` 메서드의 동작을 대체합니다.  
+<xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm> Visual basic의 경우 구성 요소를 사용 하면 런타임 시 Windows Form의 이미지를 인쇄할 수 있습니다. 해당 동작은 이전 Visual Basic 버전에서 `PrintForm` 메서드의 동작을 대체합니다.  
   
  PowerPack 컨트롤은 Visual Studio에 더 포함되지 않지만 [다운로드 센터](http://www.microsoft.com/en-us/download/details.aspx?id=25169)에서 다운로드할 수 있습니다.  
   

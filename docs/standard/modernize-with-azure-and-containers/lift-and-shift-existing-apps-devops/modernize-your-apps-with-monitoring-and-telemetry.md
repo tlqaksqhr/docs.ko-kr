@@ -1,18 +1,19 @@
 ---
-title: "모니터링 및 원격 분석을 사용 하 여 앱을 최신식"
-description: "컨테이너 화 된.NET 응용 프로그램에 대 한.NET Microservices 아키텍처 | 모니터링 및 원격 분석을 사용 하 여 앱을 최신식"
+title: 모니터링 및 원격 분석을 사용 하 여 앱을 최신식
+description: 컨테이너 화 된.NET 응용 프로그램에 대 한.NET Microservices 아키텍처 | 모니터링 및 원격 분석을 사용 하 여 앱을 최신식
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/26/2017
 ms.prod: .net
+ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 3caeb60cf0107aaf5413d935f3bde11863561c7d
-ms.sourcegitcommit: d3cfda0943364aaf6ccd574f55f584576c8a4fee
+ms.openlocfilehash: 539e7d48b6115dbd77a78ba3e06914196826c344
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="modernize-your-apps-with-monitoring-and-telemetry"></a>모니터링 및 원격 분석을 사용 하 여 앱을 최신식
 

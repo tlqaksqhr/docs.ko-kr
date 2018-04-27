@@ -16,17 +16,17 @@ ms.assetid: 4cfaa06d-4ae3-4307-897b-cf599dc24caa
 caps.latest.revision: 27
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: a7a47ad7e4ade9f15159c27ac672aeb937a05493
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 5e4397fb90e4fa5a3e68390137b84a375cf35956
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="variables-in-visual-basic"></a>Visual Basic의 변수
-일반적으로 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]에서 계산을 수행할 경우 값을 저장해야 합니다. 예를 들어 여러 값을 계산하여 비교하고 비교 결과에 따라 값에서 다른 작업을 수행해야 할 수 있습니다. 값을 비교하려면 값을 보존해야 합니다.  
+Visual Basic을 사용한 계산을 수행 하면 값을 저장 해야 하는 경우가 많습니다. 예를 들어 여러 값을 계산하여 비교하고 비교 결과에 따라 값에서 다른 작업을 수행해야 할 수 있습니다. 값을 비교하려면 값을 보존해야 합니다.  
   
-## <a name="usage"></a>용도  
- 대부분 프로그래밍 언어처럼 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]에서는 값 저장에 변수를 사용합니다. *변수*에는 이름(변수에 포함된 값을 참조하는 데 사용할 단어)이 있습니다. 변수에는 데이터 형식(변수가 저장할 수 있는 데이터 종류 결정)도 있습니다. 변수는 밀접하게 관련된 데이터 항목의 인덱싱된 집합을 저장해야 할 경우 배열을 나타낼 수 있습니다.  
+## <a name="usage"></a>사용법  
+ Visual Basic의 경우 대부분의 프로그래밍 언어와 마찬가지로 사용 하 여 변수 값을 저장 합니다. *변수*에는 이름(변수에 포함된 값을 참조하는 데 사용할 단어)이 있습니다. 변수에는 데이터 형식(변수가 저장할 수 있는 데이터 종류 결정)도 있습니다. 변수는 밀접하게 관련된 데이터 항목의 인덱싱된 집합을 저장해야 할 경우 배열을 나타낼 수 있습니다.  
   
  데이터 형식을 명시적으로 지정하지 않고 지역 형식 유추를 사용하여 변수를 선언할 수 있습니다. 대신에 컴파일러는 초기화 식의 형식에서 변수 형식을 유추합니다. 자세한 내용은 [지역 형식 유추](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md) 및 [Option Infer 문](../../../../visual-basic/language-reference/statements/option-infer-statement.md)을 참조하세요.  
   

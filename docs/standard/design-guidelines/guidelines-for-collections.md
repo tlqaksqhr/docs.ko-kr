@@ -1,26 +1,26 @@
 ---
-title: "컬렉션에 대한 지침"
-ms.custom: 
+title: 컬렉션에 대한 지침
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 297b8f1d-b11f-4dc6-960a-8e990817304e
-caps.latest.revision: 
+caps.latest.revision: 4
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 09a2a075e21de6968989575385db07ab39eb627f
-ms.sourcegitcommit: c3957fdb990060559d73cca44ab3e2c7b4d049c0
+ms.openlocfilehash: 5a1bb81a23a180c3f7738d811398a5a45abd9122
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="guidelines-for-collections"></a>컬렉션에 대한 지침
 일부 일반적인 특성에 포함 된 개체의 그룹을 조작 하도록 특별히 설계 된 모든 형식은 컬렉션을 간주할 수 있습니다. 구현 하는 이러한 형식에 대 한 적절 한 것은 항상 <xref:System.Collections.IEnumerable> 또는 <xref:System.Collections.Generic.IEnumerable%601>이므로이 섹션의만 이라고 생각 컬렉션 수를 하나 또는 둘 다 인터페이스를 구현 하는 형식입니다.  
@@ -137,7 +137,7 @@ ms.lasthandoff: 03/05/2018
   
  *Portions © 2005, 2009 Microsoft Corporation. 모든 권리 보유.*  
   
- *피어슨 교육, Inc.에서의 사용 권한으로 재인쇄 [Framework 디자인 지침: 규칙, 특징 및 다시 사용할 수 있는.NET 라이브러리를 2nd Edition에 대 한 패턴](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina 및 Brad Abrams 게시 하 여 2008 년 10 월 22 일 Microsoft Windows 개발 시리즈의 일부로: Addison Wesley Professional.*  
+ *피어슨 교육, Inc.에서의 사용 권한으로 재인쇄 [Framework 디자인 지침: 규칙, 특징 및 다시 사용할 수 있는.NET 라이브러리를 2nd Edition에 대 한 패턴](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina 및 Brad Abrams 게시 하 여 2008 년 10 월 22 일 Microsoft Windows 개발 시리즈의 일부로: Addison Wesley Professional.*  
   
 ## <a name="see-also"></a>참고 항목  
  [프레임워크 디자인 지침](../../../docs/standard/design-guidelines/index.md)  

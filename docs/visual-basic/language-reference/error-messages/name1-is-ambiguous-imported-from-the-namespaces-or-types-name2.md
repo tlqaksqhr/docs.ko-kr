@@ -1,5 +1,5 @@
 ---
-title: '&#39; &lt;name1&gt;&#39; 모호 네임 스페이스 또는 형식 &#39;에서 가져온&lt; name2&gt;&#39;'
+title: '&#39;&lt;name1&gt; &#39; 모호 네임 스페이스 또는 형식에서 가져온 &#39; &lt;name2&gt;&#39;'
 ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: ''
@@ -16,14 +16,14 @@ ms.assetid: 761091f7-1018-4299-b481-3966a4a2c126
 caps.latest.revision: 8
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: b6ebc9b75d171a28b4388d48625b772ac6f20dc8
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 1125e3ac6265484477a76efa2805e13f82ee9e59
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
-# <a name="39ltname1gt39-is-ambiguous-imported-from-the-namespaces-or-types-39ltname2gt39"></a>&#39; &lt;name1&gt;&#39; 모호 네임 스페이스 또는 형식 &#39;에서 가져온&lt; name2&gt;&#39;
-모호한 이름을 제공했으므로 다른 이름과 충돌합니다. [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 컴파일러에는 충돌 해결 규칙이 없으므로 직접 이름을 명확하게 해야 합니다.  
+# <a name="39ltname1gt39-is-ambiguous-imported-from-the-namespaces-or-types-39ltname2gt39"></a>&#39;&lt;name1&gt; &#39; 모호 네임 스페이스 또는 형식에서 가져온 &#39; &lt;name2&gt;&#39;
+모호한 이름을 제공했으므로 다른 이름과 충돌합니다. Visual Basic 컴파일러에서는 충돌 해결 규칙이 없으므로 직접 이름을 구분 해야 합니다.  
   
  **오류 ID:** BC30561  
   

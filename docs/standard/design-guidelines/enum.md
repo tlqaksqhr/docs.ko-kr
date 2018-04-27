@@ -1,12 +1,12 @@
 ---
-title: "열거형 디자인"
-ms.custom: 
+title: 열거형 디자인
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - type design guidelines, enumerations
@@ -15,18 +15,18 @@ helpviewer_keywords:
 - class library design guidelines [.NET Framework], enumerations
 - flags enumerations
 ms.assetid: dd53c952-9d9a-4736-86ff-9540e815d545
-caps.latest.revision: "11"
+caps.latest.revision: 11
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 3ee73e8677ca3fd48f4bb3c94bd4e15c49a564c7
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: c3e89567761367ddcd67078b138c15b982a0d666
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="enum-design"></a>열거형 디자인
 열거형은 특수 한 유형의 값 형식입니다. 열거형의 두 종류가: 단순 열거형 및 플래그 열거형입니다.  
@@ -77,7 +77,7 @@ ms.lasthandoff: 12/23/2017
   
  **X 하지 않으면** 확장 <xref:System.Enum?displayProperty=nameWithType> 직접 합니다.  
   
- <xref:System.Enum?displayProperty=nameWithType>특별 한 형식 CLR에서 만드는 데 사용자 정의 열거형. 대부분의 프로그래밍 언어에이 기능에 액세스할 수 있는 프로그래밍 요소를 제공 합니다. 예를 들어 C#에서 `enum` 키워드를 사용 하는 열거형을 정의 합니다.  
+ <xref:System.Enum?displayProperty=nameWithType> 특별 한 형식 CLR에서 만드는 데 사용자 정의 열거형. 대부분의 프로그래밍 언어에이 기능에 액세스할 수 있는 프로그래밍 요소를 제공 합니다. 예를 들어 C#에서 `enum` 키워드를 사용 하는 열거형을 정의 합니다.  
   
 <a name="design"></a>   
 ### <a name="designing-flag-enums"></a>디자인 플래그 열거형  
@@ -87,7 +87,7 @@ ms.lasthandoff: 12/23/2017
   
  **✓ 고려** 플래그의 조합을 사용 되는 일반적으로 특수 한 열거 값을 제공 합니다.  
   
- 비트 연산은 고급 개념 및 간단한 작업에 필요한 수 없습니다. <xref:System.IO.FileAccess.ReadWrite>이러한 특수 값의 예시입니다.  
+ 비트 연산은 고급 개념 및 간단한 작업에 필요한 수 없습니다. <xref:System.IO.FileAccess.ReadWrite> 이러한 특수 값의 예시입니다.  
   
  **하지 말고 X** 만들기 플래그 열거형 값의 조합이 올바르지 않습니다.  
   
@@ -103,9 +103,9 @@ ms.lasthandoff: 12/23/2017
   
  열거형에 대 한 추가 인해 발생 하는 응용 프로그램 호환성 문제에 대 한 실제 데이터를 설정한 경우에 새과 이전 값을 반환 하는 새로운 API를 추가 하는 것이 좋습니다. 하 고 이전 값만 반환 합니다. 계속 하는 이전 API에 사용할 수 없게 합니다. 이렇게 하면 기존 응용 프로그램 호환성을 유지 합니다.  
   
- *일부 © 2005, 2009 Microsoft Corporation. 모든 권리 보유.*  
+ *Portions © 2005, 2009 Microsoft Corporation. 모든 권리 보유.*  
   
- *피어슨 교육, Inc.에서의 사용 권한으로 재인쇄 [Framework 디자인 지침: 규칙, 특징 및 다시 사용할 수 있는.NET 라이브러리를 2nd Edition에 대 한 패턴](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina 및 Brad Abrams 게시 하 여 2008 년 10 월 22 일 Microsoft Windows 개발 시리즈의 일부로: Addison Wesley Professional.*  
+ *피어슨 교육, Inc.에서의 사용 권한으로 재인쇄 [Framework 디자인 지침: 규칙, 특징 및 다시 사용할 수 있는.NET 라이브러리를 2nd Edition에 대 한 패턴](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina 및 Brad Abrams 게시 하 여 2008 년 10 월 22 일 Microsoft Windows 개발 시리즈의 일부로: Addison Wesley Professional.*  
   
 ## <a name="see-also"></a>참고 항목  
  [형식 디자인 지침](../../../docs/standard/design-guidelines/type.md)  

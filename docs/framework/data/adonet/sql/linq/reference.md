@@ -1,24 +1,26 @@
 ---
-title: "참조"
-ms.custom: 
+title: 참조
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 312c3935-a947-4220-a837-0039d9fc458b
-caps.latest.revision: "3"
+caps.latest.revision: 3
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 13950af006ff756dfb5daa874ac5ca3c0f5dac0a
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: 8906c02395531685d732c55b2baf03e492fca615
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="reference"></a>참조
 이 단원에서는 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 개발자를 위한 참조 정보를 제공합니다.  
@@ -42,7 +44,7 @@ ms.lasthandoff: 01/19/2018
  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]에 관련된 일반적인 질문에 대한 대답을 제공합니다.  
   
  [SQL Server Compact 및 LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/sql-server-compact-and-linq-to-sql.md)  
- [!INCLUDE[ssEW](../../../../../../includes/ssew-md.md)] 응용 프로그램에서 [!INCLUDE[ssNoVersion](../../../../../../includes/ssnoversion-md.md)]와 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]의 차이점에 대해 설명합니다.  
+ 설명 방법을 [!INCLUDE[ssEW](../../../../../../includes/ssew-md.md)] SQL server에서 다른 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 응용 프로그램입니다.  
   
  [표준 쿼리 연산자 변환](../../../../../../docs/framework/data/adonet/sql/linq/standard-query-operator-translation.md)  
  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]에서 표준 쿼리 연산자를 SQL 명령으로 변환하는 방법에 대해 설명합니다.  

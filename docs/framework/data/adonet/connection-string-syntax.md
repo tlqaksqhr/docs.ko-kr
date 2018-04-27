@@ -16,11 +16,11 @@ ms.author: douglasl
 manager: craigg
 ms.workload:
 - dotnet
-ms.openlocfilehash: 76d8765be1dc24f4b8c457644595796680c2f2c3
-ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
+ms.openlocfilehash: 3939abaf376100e09d244afdb32662729a990ff7
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="connection-string-syntax"></a>연결 문자열 구문
 각 .NET Framework 데이터 공급자에는 `Connection`뿐 아니라 공급자별 <xref:System.Data.Common.DbConnection> 속성에서 상속되는 <xref:System.Data.Common.DbConnection.ConnectionString%2A> 개체가 있습니다. 각 공급자의 특정 연결 문자열 구문은 해당 `ConnectionString` 속성에 설명되어 있습니다. 다음 표에서는 .NET Framework에 포함되어 있는 네 개의 데이터 공급자를 보여 줍니다.  
@@ -98,7 +98,7 @@ Data Source=MySqlServer\MSSQL1;"
 연결 문자열을 작성할 때 <xref:System.Data.SqlClient.SqlConnectionStringBuilder.DataSource%2A>의 `SqlConnectionStringBuilder` 속성을 인스턴스 이름으로 설정할 수도 있습니다. <xref:System.Data.SqlClient.SqlConnection.DataSource%2A> 개체의 <xref:System.Data.SqlClient.SqlConnection> 속성은 읽기 전용입니다.  
   
 ### <a name="type-system-version-changes"></a>Type System Version 변경 내용  
- `Type System Version` 내의 <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A?displayProperty=nameWithType> 키워드는 [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] 형식의 클라이언트 측 표현을 지정합니다. <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A?displayProperty=nameWithType> 키워드에 대한 자세한 내용은 `Type System Version`을 참조하세요.  
+ `Type System Version` 키워드는 <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A?displayProperty=nameWithType> SQL 서버 유형의 클라이언트 측 표현을 지정 합니다. <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A?displayProperty=nameWithType> 키워드에 대한 자세한 내용은 `Type System Version`을 참조하세요.  
   
 ## <a name="connecting-and-attaching-to-sql-server-express-user-instances"></a>SQL Server Express 사용자 인스턴스에 연결 및 추가  
  사용자 인스턴스는 SQL Server Express의 한 기능입니다. 최소 권한의 로컬 Windows 계정에서 실행 중인 사용자가 관리자 권한 없이 SQL Server 데이터베이스에 연결하여 SQL Server 데이터베이스를 실행할 수 있습니다. 사용자 인스턴스는 서비스가 아닌 사용자의 Windows 자격 증명을 사용하여 실행됩니다.  
@@ -106,7 +106,7 @@ Data Source=MySqlServer\MSSQL1;"
  사용자 인스턴스를 사용한 작업에 대 한 자세한 내용은 참조 하십시오. [SQL Server Express 사용자 인스턴스](../../../../docs/framework/data/adonet/sql/sql-server-express-user-instances.md)합니다.  
   
 ## <a name="using-trustservercertificate"></a>TrustServerCertificate 사용  
- `TrustServerCertificate` 키워드는 유효한 인증서로 [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] 인스턴스에 연결할 때만 유효합니다. `TrustServerCertificate`이 `true`로 설정된 경우 전송 계층에서는 SSL을 사용하여 채널을 암호화하고 인증서 체인을 무시하여 신뢰의 유효성을 확인합니다.  
+ `TrustServerCertificate` 키워드는 유효한 인증서로 SQL Server 인스턴스에 연결할 때에 유효 합니다. `TrustServerCertificate`이 `true`로 설정된 경우 전송 계층에서는 SSL을 사용하여 채널을 암호화하고 인증서 체인을 무시하여 신뢰의 유효성을 확인합니다.  
   
 ```  
 "TrustServerCertificate=true;"   

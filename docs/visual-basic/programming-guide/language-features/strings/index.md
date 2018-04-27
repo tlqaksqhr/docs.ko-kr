@@ -15,18 +15,18 @@ ms.assetid: 7e4c777c-ad69-46e2-8b9e-9be4033b1c96
 caps.latest.revision: 13
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: ffa6e015339387746b0cc1c4e5d3c2b84f84720e
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: eae0bec98d960dd8d6cbe5859599a3758bdbfe56
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="strings-in-visual-basic"></a>Visual Basic의 문자열
-이 섹션에서는 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]의 문자열 사용에 관한 기본 개념을 설명합니다.  
+이 섹션에서는 Visual Basic에서 문자열 사용에 대 한 기본 개념을 설명 합니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [Visual Basic의 문자열 소개](../../../../visual-basic/programming-guide/language-features/strings/introduction-to-strings.md)  
- [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]의 문자열 사용에 관한 기본 개념을 설명하는 항목을 나열합니다.  
+ Visual Basic에서 문자열 사용에 대 한 기본 개념을 설명 하는 항목을 나열 합니다.  
   
  [방법: Visual Basic에서 StringBuilder를 사용하여 문자열 만들기](../../../../visual-basic/programming-guide/language-features/strings/how-to-create-strings-using-a-stringbuilder.md)  
  많은 짧은 문자열에서 긴 문자열을 효율적으로 만드는 방법을 보여 줍니다.  

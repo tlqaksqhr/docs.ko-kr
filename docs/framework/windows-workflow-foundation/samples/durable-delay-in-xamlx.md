@@ -1,23 +1,24 @@
 ---
-title: "XAMLX의 지속적 지연"
-ms.custom: 
+title: XAMLX의 지속적 지연
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: efc38df4-2d34-453c-8e59-2c21d1307354
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ff5eb09acea16ac125fac5d9e3ed875c9095e1c5
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 2d7377d843e4ab8bd583e135dcdfd2cbfca67b8d
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="durable-delay-in-xamlx"></a>XAMLX의 지속적 지연
 이 샘플에서는 지속적 지연을 사용하는 방법을 보여 줍니다. 지속적 지연은 지연되는 동안 워크플로를 영구적인 장치에 유지하는 지연입니다.  
@@ -34,7 +35,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="discussion"></a>토론  
  샘플 워크플로에는 로컬 파일에 대해 지연으로 구분되는 두 메시지가 포함되어 있습니다. 지연이 트리거되면 워크플로가 언로드된 다음 메모리에 다시 로드되기 전에 워크플로 인스턴스 저장소에서 5초 동안 기다립니다.  
   
- .xamlx 파일은 [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)]에서 호스트되는 워크플로 서비스입니다. [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)]에서는 워크플로 서비스 호스트를 사용하여 워크플로를 호스트하는 Cassini를 사용합니다.  
+ .Xamlx 파일은 Visual Studio에서 호스트 된 워크플로 서비스입니다. Visual Studio 워크플로 호스트 하는 워크플로 서비스를 사용 하는 Cassini를 사용 합니다.  
   
  워크플로 서비스는 워크플로를 호스트하는 외에도 워크플로 인스턴스를 로드하거나 언로드하는 등의 방법으로 관리합니다. 워크플로 서비스 호스트에서 [!INCLUDE[wf](../../../../includes/wf-md.md)] 정의의 인스턴스를 시작하려면 워크플로의 <xref:System.ServiceModel.Activities.Receive> 활동에 메시지를 보내는 클라이언트를 설정합니다. 이 <xref:System.ServiceModel.Activities.Receive>의 <xref:System.ServiceModel.Activities.Receive.CanCreateInstance%2A> 속성은 `true`로 설정되어 있으므로, 메시지를 받으면 워크플로의 새 인스턴스를 만들 수 있습니다.  
   

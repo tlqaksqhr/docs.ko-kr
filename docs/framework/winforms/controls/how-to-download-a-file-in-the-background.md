@@ -1,12 +1,13 @@
 ---
-title: "방법: 백그라운드에서 파일 다운로드"
-ms.custom: 
+title: '방법: 백그라운드에서 파일 다운로드'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-winforms
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -21,21 +22,22 @@ helpviewer_keywords:
 - threading [Windows Forms], background operations
 - background operations
 ms.assetid: 9b7bc5ae-051c-4904-9720-18f6667388bd
-caps.latest.revision: "10"
+caps.latest.revision: 10
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 875ad9a17078865c526770587d36b1db1adf378c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: bdc587fb42722108466361500816a6598c8515e9
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-download-a-file-in-the-background"></a>방법: 백그라운드에서 파일 다운로드
 파일 다운로드는 일반 작업이며, 대체로 시간이 많이 걸릴 수 있는 이 작업을 별도 스레드에서 실행하는 데 유용합니다. 매우 적은 양의 코드로 이 작업을 수행려면 <xref:System.ComponentModel.BackgroundWorker> 구성 요소를 사용합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 코드 예제에서는 <xref:System.ComponentModel.BackgroundWorker> 구성 요소를 사용하여 URL에서 XML 파일을 로드하는 방법을 보여 줍니다. 사용자가 클릭할 때는 **다운로드** 단추를는 <xref:System.Windows.Forms.Control.Click> 이벤트 처리기 호출의 <xref:System.ComponentModel.BackgroundWorker.RunWorkerAsync%2A> 의 메서드는 <xref:System.ComponentModel.BackgroundWorker> 구성 요소 다운로드 작업을 시작 합니다. 다운로드 기간 중에는 단추를 사용할 수 없으며, 다운로드가 완료되면 사용할 수 있습니다. <xref:System.Windows.Forms.MessageBox>는 파일 내용을 표시합니다.  
   
  [!code-csharp[System.ComponentModel.BackgroundWorker.IsBusy#1](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.BackgroundWorker.IsBusy/CS/Form1.cs#1)]
@@ -71,7 +73,7 @@ ms.lasthandoff: 12/22/2017
   
 -   System.Drawing, System.Windows.Forms 및 System.Xml 어셈블리에 대한 참조  
   
- [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)] 또는 [!INCLUDE[csprcs](../../../../includes/csprcs-md.md)]의 명령줄에서 이 예제를 빌드하는 방법에 대한 자세한 내용은 [명령줄에서 빌드](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md) 또는 [csc.exe를 사용한 명령줄 빌드](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)를 참조하세요. [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)]에서 코드를 새 프로젝트에 붙여넣어 이 예제를 빌드할 수도 있습니다.  또한 [방법: Visual Studio를 사용하여 전체 Windows Forms 코드 예제 컴파일 및 실행](http://msdn.microsoft.com/library/Bb129228\(v=vs.110\))을 참조하세요.  
+ Visual Basic 또는 Visual C#에 대 한 명령줄에서이 예제를 빌드하는 방법에 대 한 정보를 참조 하십시오. [명령줄에서 빌드](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md) 또는 [사용한 명령줄 빌드 csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)합니다. [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] 에서 코드를 새 프로젝트에 붙여넣어 이 예제를 빌드할 수도 있습니다.  또한 [방법: Visual Studio를 사용하여 전체 Windows Forms 코드 예제 컴파일 및 실행](http://msdn.microsoft.com/library/Bb129228\(v=vs.110\))을 참조하세요.  
   
 ## <a name="robust-programming"></a>강력한 프로그래밍  
  <xref:System.ComponentModel.RunWorkerCompletedEventArgs.Result%2A?displayProperty=nameWithType> 속성이나 <xref:System.ComponentModel.BackgroundWorker.DoWork> 이벤트 처리기의 영향을 받았을 수 있는 다른 개체에 액세스하기 전에 항상 <xref:System.ComponentModel.BackgroundWorker.RunWorkerCompleted> 이벤트 처리기의 <xref:System.ComponentModel.AsyncCompletedEventArgs.Error%2A?displayProperty=nameWithType> 속성을 확인합니다.  

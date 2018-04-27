@@ -1,26 +1,27 @@
 ---
 title: Load From XAML
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 1f103ef6-7bed-4f16-ae52-9e665c5a43d7
-caps.latest.revision: "10"
+caps.latest.revision: 10
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 28f5f4a57f8fd6ee8b739b38735d41a118abc0cb
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 9176114d65cc48164835b04f76612b4fd1103121
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="load-from-xaml"></a>Load From XAML
-이 샘플에서는 XamlBuildTask 도구를 실행할 필요 없이 XAML 워크플로를 동적으로 로드하는 방법을 보여 줍니다. 이 샘플에서는 대신 <xref:System.Activities.XamlIntegration.ActivityXamlServices.Load%2A> 메서드를 호출합니다. 이 샘플은 [!INCLUDE[avalon1](../../../../includes/avalon1-md.md)] 클래스를 사용하여 XAML 워크플로를 로드하고 이를 실행하는 <xref:System.Activities.XamlIntegration.ActivityXamlServices> 클라이언트 응용 프로그램입니다. <xref:System.Activities.XamlIntegration.ActivityXamlServices> 클래스를 사용하여 XAML 워크플로를 로드한 후에는 실행할 수 있는 <xref:System.Activities.DynamicActivity%601>가 반환됩니다.  
+이 샘플에서는 XamlBuildTask 도구를 실행할 필요 없이 XAML 워크플로를 동적으로 로드하는 방법을 보여 줍니다. 이 샘플에서는 대신 <xref:System.Activities.XamlIntegration.ActivityXamlServices.Load%2A> 메서드를 호출합니다. 이 샘플은 사용 하 여 XAML 워크플로 로드 하는 Windows Presentation Foundation (WPF) 클라이언트 응용 프로그램은 <xref:System.Activities.XamlIntegration.ActivityXamlServices> 클래스 하 고 실행 합니다. <xref:System.Activities.XamlIntegration.ActivityXamlServices> 클래스를 사용하여 XAML 워크플로를 로드한 후에는 실행할 수 있는 <xref:System.Activities.DynamicActivity%601>가 반환됩니다.  
   
 #### <a name="to-use-this-sample"></a>이 샘플을 사용하려면  
   

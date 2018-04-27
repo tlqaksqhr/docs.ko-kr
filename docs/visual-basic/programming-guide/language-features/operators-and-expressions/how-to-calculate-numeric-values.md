@@ -1,11 +1,12 @@
 ---
-title: "방법: 숫자 값 계산(Visual Basic)"
-ms.custom: 
+title: '방법: 숫자 값 계산(Visual Basic)'
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - operator precedence
@@ -17,14 +18,14 @@ helpviewer_keywords:
 - Visual Basic code, expressions
 - numeric expressions
 ms.assetid: ba6bf43d-bd96-49b8-b1de-4a7797551372
-caps.latest.revision: "13"
+caps.latest.revision: 13
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 65cd446b99018d029e8a18d69ed33d8b8ac28f8c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 322e2c9fe7f668e08a42cd707c5d81090aca627c
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-calculate-numeric-values-visual-basic"></a>방법: 숫자 값 계산(Visual Basic)
 숫자 식 사용 하 여 숫자 값을 계산할 수 있습니다. A *숫자 식* 리터럴, 상수 및 숫자 값을 나타내는 변수를 포함 하는 식을 이며 해당 값에 대해 작동 하는 연산자입니다.  
@@ -45,7 +46,7 @@ ms.lasthandoff: 11/21/2017
   
      처음 세 줄은 리터럴, 상수 및 변수를 보여 줍니다. 각각 자체적으로 유효한 숫자 식을 형성합니다. 마지막 줄에서는 두 개의 리터럴 사용 하 여 변수의 조합을 보여 줍니다.  
   
-     숫자 식이 전체 형성 하지 않습니다 참고 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 문을 단독으로 합니다. 전체 문의 일부로 식을 사용 해야 합니다.  
+     참고는 숫자 식 단독으로 전체 Visual Basic 문을 형성 하지 않습니다. 전체 문의 일부로 식을 사용 해야 합니다.  
   
 #### <a name="to-store-a-numeric-value"></a>숫자 값을 저장 하려면  
   

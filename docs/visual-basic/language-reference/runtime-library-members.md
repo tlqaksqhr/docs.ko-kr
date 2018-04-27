@@ -16,14 +16,14 @@ ms.assetid: f5e82c6e-3500-452b-bdb8-78f0d5477604
 caps.latest.revision: 16
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: f928a01424853dc7e3637f49cc3af4108c5afb5b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 47c7af031b2169d1a259a8f96f5485bcb354aa25
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="visual-basic-runtime-library-members"></a>Visual Basic 런타임 라이브러리 멤버
-`Microsoft.VisualBasic` 클래스, 모듈, 상수, 및 구성 하는 열거형을 포함 하는 네임 스페이스는 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 런타임 라이브러리입니다. 이 라이브러리 멤버 프로시저, 속성 및 코드에서 사용할 수 있는 상수 값을 제공 합니다. 각 모듈 및 클래스에는 기능의 특정 범주를 나타냅니다.  
+`Microsoft.VisualBasic` 네임 스페이스 클래스, 모듈, 상수, 및 Visual Basic 런타임 라이브러리를 구성 하는 열거형을 포함 합니다. 이 라이브러리 멤버 프로시저, 속성 및 코드에서 사용할 수 있는 상수 값을 제공 합니다. 각 모듈 및 클래스에는 기능의 특정 범주를 나타냅니다.  
   
 ## <a name="microsoftvisualbasiccollection-class"></a>Microsoft.VisualBasic.Collection 클래스  
   
@@ -197,7 +197,7 @@ ms.lasthandoff: 11/21/2017
 |<xref:Microsoft.VisualBasic.VBMath.Randomize%2A>|<xref:Microsoft.VisualBasic.VBMath.Rnd%2A>|||  
   
 ## <a name="microsoftvisualbasic-constants-and-enumerations"></a>Microsoft.VisualBasic 상수 및 열거형  
- `Microsoft.VisualBasic` 네임 스페이스는 상수 및 열거형의 일부로 제공 된 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 런타임 라이브러리입니다. 코드에서 이러한 상수 값을 사용할 수 있습니다. 각 열거 기능의 특정 범주를 나타냅니다. 자세한 내용은 참조 [상수 및 열거형](../../visual-basic/language-reference/constants-and-enumerations.md)합니다.  
+ `Microsoft.VisualBasic` 네임 스페이스는 Visual Basic 런타임 라이브러리의 일부로 상수 및 열거형을 제공 합니다. 코드에서 이러한 상수 값을 사용할 수 있습니다. 각 열거 기능의 특정 범주를 나타냅니다. 자세한 내용은 참조 [상수 및 열거형](../../visual-basic/language-reference/constants-and-enumerations.md)합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [상수 및 열거형](../../visual-basic/language-reference/constants-and-enumerations.md)  

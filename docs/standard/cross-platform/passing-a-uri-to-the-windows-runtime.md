@@ -1,12 +1,12 @@
 ---
-title: "Windows 런타임에 URI 전달"
-ms.custom: 
+title: Windows 런타임에 URI 전달
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,21 +15,21 @@ helpviewer_keywords:
 - Windows Runtime, .NET Framework support for
 - Windows Runtime, passing a URI to
 ms.assetid: 3eb5ce6f-f304-4f87-8e81-0f25092f5ad4
-caps.latest.revision: "10"
+caps.latest.revision: 10
 author: mairaw
 ms.author: mairaw
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 78ba02fa227bd5c10337da0ef8b65ceab476c1ed
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 5ed49555b7d87973849f30a502a46e508b6323e7
+ms.sourcegitcommit: 68b60d38043e50104ccc90c76f8599b1ffe18346
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="passing-a-uri-to-the-windows-runtime"></a>Windows 런타임에 URI 전달
-Windows 런타임 메서드는 절대 URI만 허용합니다. 상대 URI를 [!INCLUDE[wrt](../../../includes/wrt-md.md)] 메서드에 전달하면 <xref:System.ArgumentException> 예외가 throw됩니다. 이유는 다음과 같습니다: 사용 하는 경우는 [!INCLUDE[wrt](../../../includes/wrt-md.md)] .NET Framework 코드에서는 [Windows.Foundation.Uri](http://go.microsoft.com/fwlink/p/?LinkId=238376) 로 표시 된 클래스 <xref:System.Uri?displayProperty=nameWithType> Intellisense에 있습니다. <xref:System.Uri?displayProperty=nameWithType> 클래스에는 상대 Uri를 허용 하지만 [Windows.Foundation.Uri](http://go.microsoft.com/fwlink/p/?LinkId=238376) 클래스는 그렇지 않습니다. 이는 [!INCLUDE[wrt](../../../includes/wrt-md.md)] 구성 요소에 노출하는 메서드의 경우에도 마찬가지입니다. 구성 요소가 URI를 사용하는 메서드를 노출하면 코드의 서명에 <xref:System.Uri?displayProperty=nameWithType>가 포함됩니다. 그러나 구성 요소의 사용자에 게는 시그니처에 [Windows.Foundation.Uri](http://go.microsoft.com/fwlink/p/?LinkId=238376)합니다. 구성 요소에 전달된 URI는 절대 URI여야 합니다.  
+Windows 런타임 메서드는 절대 URI만 허용합니다. 상대 URI를 [!INCLUDE[wrt](../../../includes/wrt-md.md)] 메서드에 전달하면 <xref:System.ArgumentException> 예외가 throw됩니다. 이유는 다음과 같습니다: 사용 하는 경우는 [!INCLUDE[wrt](../../../includes/wrt-md.md)] .NET Framework 코드에서는 <xref:Windows.Foundation.Uri?displayProperty=nameWithType> 로 표시 된 클래스 <xref:System.Uri?displayProperty=nameWithType> Intellisense에 있습니다. <xref:System.Uri?displayProperty=nameWithType> 클래스에는 상대 Uri를 허용 하지만 <xref:Windows.Foundation.Uri?displayProperty=nameWithType> 클래스는 그렇지 않습니다. 이는 [!INCLUDE[wrt](../../../includes/wrt-md.md)] 구성 요소에 노출하는 메서드의 경우에도 마찬가지입니다. 구성 요소가 URI를 사용하는 메서드를 노출하면 코드의 서명에 <xref:System.Uri?displayProperty=nameWithType>가 포함됩니다. 그러나 구성 요소의 사용자에 게는 시그니처에 <xref:Windows.Foundation.Uri?displayProperty=nameWithType>합니다. 구성 요소에 전달된 URI는 절대 URI여야 합니다.  
   
  이 항목은 절대 URI를 검색하는 방법과 앱 패키지의 리소스를 참조하는 경우 절대 URI를 만드는 방법을 보여 줍니다.  
   

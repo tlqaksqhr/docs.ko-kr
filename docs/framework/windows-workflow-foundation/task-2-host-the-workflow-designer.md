@@ -8,20 +8,20 @@ ms.suite: ''
 ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 0a29b138-270d-4846-b78e-2b875e34e501
-caps.latest.revision: ''
+caps.latest.revision: 19
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 991f3d25a81e90ab779936c993ec7dd09a71b794
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: 15fa4372f4a110577f055d0e3c22977d0f5417bb
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="task-2-host-the-workflow-designer"></a>작업 2: 워크플로 디자이너 호스팅
-이 항목에서는 [!INCLUDE[wfd1](../../../includes/wfd1-md.md)] 응용 프로그램에서 [!INCLUDE[avalon1](../../../includes/avalon1-md.md)] 인스턴스를 호스트하는 절차를 설명합니다.  
+이 항목의 인스턴스를 호스트 하는 절차에 설명 된 [!INCLUDE[wfd1](../../../includes/wfd1-md.md)] Windows Presentation Foundation (WPF) 응용 프로그램에서 합니다.  
   
  절차는 구성의 **그리드** 디자이너에 포함 된 컨트롤의 인스턴스를 프로그래밍 방식으로 만듭니다는 <xref:System.Activities.Presentation.WorkflowDesigner> 기본값을 포함 하 <xref:System.Activities.Statements.Sequence> 활동을 제공 하기 디자이너 메타 데이터를 등록 합니다. 모든 기본 제공 활동 및 호스트에 대 한 디자이너 지원을 [!INCLUDE[wfd2](../../../includes/wfd2-md.md)] 에 [!INCLUDE[avalon2](../../../includes/avalon2-md.md)] 응용 프로그램입니다.  
   

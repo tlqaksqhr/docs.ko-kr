@@ -1,26 +1,26 @@
 ---
 title: Serialization1
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: bebb27ac-9712-4196-9931-de19fc04dbac
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: dd6989e651f09a5e4d3354227a44b823b1b3ddcf
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 14b2f596245eb7f9cdcb9b3e30eeb100180cd793
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="serialization"></a>Serialization
 Serialization은 개체를 쉽게 유지 하거나 전송할 수 있는 형식으로 변환는 프로세스입니다. 예를 들어 HTTP를 사용 하 고 대상 컴퓨터에서 deserialize 인터넷을 통해 전송을 개체를 serialize 할 수 있습니다.  
@@ -59,7 +59,7 @@ Serialization은 개체를 쉽게 유지 하거나 전송할 수 있는 형식�
   
  개체가 deserialize될 때는 생성자가 호출되지 않습니다. (규칙의 예외는. 생성자의 컬렉션으로 표시 된 <xref:System.Runtime.Serialization.CollectionDataContractAttribute> deserialization 중에 호출 됩니다.) 따라서 일반 생성 하는 동안 실행 되는 논리 serialization 콜백 중 하나로 구현 해야 합니다.  
   
- `OnDeserializedAttribute`가장 일반적으로 사용 되는 콜백 특성이입니다. 패밀리의 다른 특성으로는 <xref:System.Runtime.Serialization.OnDeserializingAttribute>, <xref:System.Runtime.Serialization.OnSerializingAttribute> 및 <xref:System.Runtime.Serialization.OnSerializedAttribute>가 있습니다. 이 특성은 deserialization하기 전, serialization하기 전 및 마지막으로 serialization한 후에 각각 실행되는 콜백을 표시하는 데 사용할 수 있습니다.  
+ `OnDeserializedAttribute` 가장 일반적으로 사용 되는 콜백 특성이입니다. 패밀리의 다른 특성으로는 <xref:System.Runtime.Serialization.OnDeserializingAttribute>, <xref:System.Runtime.Serialization.OnSerializingAttribute> 및 <xref:System.Runtime.Serialization.OnSerializedAttribute>가 있습니다. 이 특성은 deserialization하기 전, serialization하기 전 및 마지막으로 serialization한 후에 각각 실행되는 콜백을 표시하는 데 사용할 수 있습니다.  
   
  **✓ 고려** 를 사용 하 여는 <xref:System.Runtime.Serialization.KnownTypeAttribute> 복잡 한 개체 그래프를 역직렬화 할 때 사용 해야 하는 구체적인 형식을 나타냅니다.  
   
@@ -108,9 +108,9 @@ public class Person : ISerializable {
   
  **✓ 않습니다** 링크 요청에 적용 <xref:System.Runtime.Serialization.ISerializable.GetObjectData%2A?displayProperty=nameWithType> 구현 합니다. 이렇게 하면 완전히 신뢰할 수 있는 코어 및 런타임 Serializer 멤버에 대 한 액세스 권한이 있습니다.  
   
- *일부 © 2005, 2009 Microsoft Corporation. 모든 권리 보유.*  
+ *Portions © 2005, 2009 Microsoft Corporation. 모든 권리 보유.*  
   
- *피어슨 교육, Inc.에서의 사용 권한으로 재인쇄 [Framework 디자인 지침: 규칙, 특징 및 다시 사용할 수 있는.NET 라이브러리를 2nd Edition에 대 한 패턴](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina 및 Brad Abrams 게시 하 여 2008 년 10 월 22 일 Microsoft Windows 개발 시리즈의 일부로: Addison Wesley Professional.*  
+ *피어슨 교육, Inc.에서의 사용 권한으로 재인쇄 [Framework 디자인 지침: 규칙, 특징 및 다시 사용할 수 있는.NET 라이브러리를 2nd Edition에 대 한 패턴](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina 및 Brad Abrams 게시 하 여 2008 년 10 월 22 일 Microsoft Windows 개발 시리즈의 일부로: Addison Wesley Professional.*  
   
 ## <a name="see-also"></a>참고 항목  
  [프레임워크 디자인 지침](../../../docs/standard/design-guidelines/index.md)  

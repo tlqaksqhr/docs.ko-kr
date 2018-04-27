@@ -1,23 +1,24 @@
 ---
-title: "활동 대리자 사용"
-ms.custom: 
+title: 활동 대리자 사용
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: e33cf876-8979-440b-9b23-4a12d1139960
-caps.latest.revision: "12"
+caps.latest.revision: 12
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 82aafd49528e7ce36f9cf09b7402e65d0844f797
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: efec9885ae804263f7ae4c6d1d5c3bc4f39831c9
+ms.sourcegitcommit: 68b60d38043e50104ccc90c76f8599b1ffe18346
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="using-activity-delegates"></a>활동 대리자 사용
 작업 대리자를 사용하면 활동 작성자는 활동 사용자가 활동 기반 처리기를 제공할 수 있는 특정 시그니처가 있는 콜백을 노출할 수 있습니다. 두 가지 형식의 작업 대리자를 사용할 수 있습니다. <xref:System.Activities.ActivityAction%601>은 반환 값이 없는 작업 대리자를 정의하는 데 사용되고 <xref:System.Activities.ActivityFunc%601>은 반환 값이 있는 작업 대리자를 정의하는 데 사용됩니다.  
@@ -37,7 +38,7 @@ ms.lasthandoff: 12/22/2017
   
  [!code-csharp[CFX_ActivityExample#7](../../../samples/snippets/csharp/VS_Snippets_CFX/CFX_ActivityExample/cs/Program.cs#7)]  
   
- [!INCLUDE[crabout](../../../includes/crabout-md.md)]개체 이니셜라이저를 참조 하십시오. [하는 방법: 생성자 (C# 프로그래밍 가이드)를 호출 하지 않고 개체 초기화](http://go.microsoft.com/fwlink/?LinkId=161015) 및 [하는 방법: 개체 이니셜라이저를 사용 하 여 개체 선언](http://go.microsoft.com/fwlink/?LinkId=161016)합니다.  
+ [!INCLUDE[crabout](../../../includes/crabout-md.md)] 개체 이니셜라이저를 참조 하십시오. [하는 방법: 생성자 (C# 프로그래밍 가이드)를 호출 하지 않고 개체 초기화](http://go.microsoft.com/fwlink/?LinkId=161015) 및 [하는 방법: 개체 이니셜라이저를 사용 하 여 개체 선언](http://go.microsoft.com/fwlink/?LinkId=161016)합니다.  
   
  다음 예제에서는 <xref:System.Activities.Statements.TryCatch> 활동이 워크플로에 사용됩니다. <xref:System.ApplicationException>이 워크플로를 통해 throw되고 <xref:System.Activities.Statements.Catch%601> 활동을 통해 처리됩니다. 에 대 한 처리기는 <xref:System.Activities.Statements.Catch%601> 활동의 활동 동작은 <xref:System.Activities.Statements.WriteLine> 활동과 예외 세부 정보를 통해을 사용 하 여 전달 되는 `ex` <xref:System.Activities.DelegateInArgument%601>합니다.  
   
@@ -62,7 +63,7 @@ ms.lasthandoff: 12/22/2017
   
  [!code-csharp[CFX_ActivityExample#4](../../../samples/snippets/csharp/VS_Snippets_CFX/CFX_ActivityExample/cs/Program.cs#4)]  
   
- `TextGenerator` 활동을 `WriteRandomText` 활동과 함께 사용하려면 이 활동을 <xref:System.Activities.ActivityDelegate.Handler%2A>로 지정합니다.  
+ `TextGenerator` 활동을 `WriteFillerText` 활동과 함께 사용하려면 이 활동을 <xref:System.Activities.ActivityDelegate.Handler%2A>로 지정합니다.  
   
  [!code-csharp[CFX_ActivityExample#5](../../../samples/snippets/csharp/VS_Snippets_CFX/CFX_ActivityExample/cs/Program.cs#5)]  
   

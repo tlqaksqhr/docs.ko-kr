@@ -1,31 +1,32 @@
 ---
-title: "코드를 XML로 문서화(Visual Basic)"
-ms.custom: 
+title: 코드를 XML로 문서화(Visual Basic)
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - XML [Visual Basic], documenting code
 - XML comments, Visual Basic
 - Visual Basic code, documenting with XML
 ms.assetid: a0d35dc7-c5f9-4d74-92ff-a1c6f28d5235
-caps.latest.revision: "17"
+caps.latest.revision: 17
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: ddb1f366002c4f0c675c591d83aab1b31ef8f602
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 645dd4a8a9d1c78fd54f0f31ad0efd772b671d39
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="documenting-your-code-with-xml-visual-basic"></a>코드를 XML로 문서화(Visual Basic)
-[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)], XML을 사용 하 여 코드를 문서화할 수 있습니다  
+Visual Basic에서 XML을 사용 하 여 코드를 문서화할 수 있습니다.  
   
 ## <a name="xml-documentation-comments"></a>XML 문서 주석  
- [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]쉽게 자동으로 프로젝트에 대 한 XML 문서를 만들 수 있는 방법을 제공 합니다. 형식 및 멤버에 대 한 XML 구조는 자동으로 생성할 수 있으며 각 매개 변수 및 기타 설명을 대 한 요약, 설명이 포함 된 설명서를 제공 합니다. 적절 한 설치 프로그램을 XML 문서는.xml 확장명 프로젝트와 동일한 이름 가진 XML 파일에 자동으로 내보내집니다. 자세한 내용은 [/doc](../../../visual-basic/reference/command-line-compiler/doc.md)를 참조하세요.  
+ Visual Basic에서 쉽게 자동으로 프로젝트에 대 한 XML 문서를 만들 수 있는 방법을 제공 합니다. 형식 및 멤버에 대 한 XML 구조는 자동으로 생성할 수 있으며 각 매개 변수 및 기타 설명을 대 한 요약, 설명이 포함 된 설명서를 제공 합니다. 적절 한 설치 프로그램을 XML 문서는.xml 확장명 프로젝트와 동일한 이름 가진 XML 파일에 자동으로 내보내집니다. 자세한 내용은 [/doc](../../../visual-basic/reference/command-line-compiler/doc.md)를 참조하세요.  
   
  XML 파일을 사용 또는 XML로 조작할 수 있습니다. 이 파일은 프로젝트의 출력.exe 또는.dll 파일과 동일한 디렉터리에 있습니다.  
   

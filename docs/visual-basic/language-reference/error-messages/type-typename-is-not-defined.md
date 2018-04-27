@@ -1,5 +1,5 @@
 ---
-title: 형식 &#39; &lt;typename&gt;&#39; 정의 되어 있지 않습니다
+title: 형식 &#39; &lt;typename&gt; &#39; 정의 되어 있지 않습니다
 ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: ''
@@ -16,13 +16,13 @@ ms.assetid: b0faf204-57fd-44de-8c05-9db027eea663
 caps.latest.revision: 18
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 68eb37f43600c51dc9117c3785a12e3c8ede1965
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 7c3efbcabf1e40c7f550b5f54d16e697561cf82c
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
-# <a name="type-39lttypenamegt39-is-not-defined"></a>형식 &#39; &lt;typename&gt;&#39; 정의 되어 있지 않습니다
+# <a name="type-39lttypenamegt39-is-not-defined"></a>형식 &#39; &lt;typename&gt; &#39; 정의 되어 있지 않습니다
 문이 정의 되지 않은 형식에 대 한 참조를 만들었습니다. 선언문의 형식을 같은 정의 `Enum`, `Structure`, `Class`, 또는 `Interface`합니다.  
   
  **오류 ID:** BC30002  
@@ -35,7 +35,7 @@ ms.lasthandoff: 11/21/2017
   
 -   형식의 네임 스페이스 프로젝트 내에서 다시 정의 되지 않는지 확인 하십시오. 사용 하 여는 `Global` 키워드 형식 이름을 정규화 해야 합니다. 예를 들어, 명명 된 네임 스페이스를 정의 하는 프로젝트 `System`, <xref:System.Object?displayProperty=nameWithType> 사용 하 여 정규화 하지 않은 형식에 액세스할 수 없습니다는 `Global` 키워드: `Global.System.Object`합니다.  
   
--   형식이 정의 되어 있지만 개체 라이브러리 또는 정의 된 형식 라이브러리에 등록 되지 않은 경우 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)], 클릭 **참조 추가** 에 **프로젝트** 메뉴를 선택한 후 적절 한 개체 라이브러리 또는 형식 라이브러리입니다.  
+-   형식이 정의 되어 있지만 Visual Basic을 사용 하면 클릭에 개체 라이브러리 또는 정의 된 형식 라이브러리 등록 되지 않은 경우 **참조 추가** 에 **프로젝트** 메뉴를 선택한 후 적절 한 개체 라이브러리 또는 형식 라이브러리입니다.  
   
 -   대상된.NET Framework 프로필의 일부인 어셈블리에 형식 인지 확인 합니다. 자세한 내용은 [.NET Framework 대상 지정 오류 문제 해결](/visualstudio/msbuild/troubleshooting-dotnet-framework-targeting-errors)을 참조하세요.  
   

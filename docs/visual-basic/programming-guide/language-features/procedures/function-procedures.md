@@ -1,11 +1,12 @@
 ---
-title: "Function 프로시저(Visual Basic)"
-ms.custom: 
+title: Function 프로시저(Visual Basic)
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - Function procedures
@@ -15,17 +16,17 @@ helpviewer_keywords:
 - procedures [Visual Basic], Function procedures
 - syntax [Visual Basic], function procedures
 ms.assetid: 1b9f632c-553b-4cb6-920a-ded117ead8c0
-caps.latest.revision: "27"
+caps.latest.revision: 27
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 9520a6555e65fd801a5c40d40748028e04a10739
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: ad4f55a9dd9fbd68c36dd53a01f97ddb03c2bb9b
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="function-procedures-visual-basic"></a>Function 프로시저(Visual Basic)
-A `Function` 절차는 일련의 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 포함 되는 문에 `Function` 및 `End Function` 문. `Function` 프로시저는 작업을 수행한 다음 호출 코드에 제어를 반환 합니다. 제어를 반환 하기 호출 코드에도 값을 반환 합니다.  
+A `Function` 절차는 일련의 Visual Basic 문으로 둘러싸인는 `Function` 및 `End Function` 문. `Function` 프로시저는 작업을 수행한 다음 호출 코드에 제어를 반환 합니다. 제어를 반환 하기 호출 코드에도 값을 반환 합니다.  
   
  다음의 첫 번째 실행 문에서로 프로시저가 호출 된 문이 실행 될 때마다 시작는 `Function` 문과 여 첫 번째 `End Function`, `Exit Function`, 또는 `Return` 문을 발견 했습니다.  
   
@@ -91,11 +92,11 @@ End Function
   
  에 대 한 호출에 대 한 구문은 `Function` 절차는 다음과 같습니다.  
   
- *lvalue*`=`*functionname* `[(` *argumentlist*    `)]`  
+ *lvalue*`=`*functionname* `[(` *argumentlist*  `)]`  
   
- `If ((`*functionname* `[(` *argumentlist* `)] / 3) <=` *식*  `) Then`  
+ `If ((` *functionname* `[(` *argumentlist* `)] / 3) <=` *식*  `) Then`  
   
- 호출 하는 경우는 `Function` 프로시저 않아도 해당 반환 값을 사용 하도록 합니다. 이렇게 하지 않으면 함수는 모든 작업이 수행 되었는지, 있지만 반환 값은 무시 됩니다. <xref:Microsoft.VisualBasic.Interaction.MsgBox%2A>이런이 방식으로 라고도 합니다.  
+ 호출 하는 경우는 `Function` 프로시저 않아도 해당 반환 값을 사용 하도록 합니다. 이렇게 하지 않으면 함수는 모든 작업이 수행 되었는지, 있지만 반환 값은 무시 됩니다. <xref:Microsoft.VisualBasic.Interaction.MsgBox%2A> 이런이 방식으로 라고도 합니다.  
   
 ### <a name="illustration-of-declaration-and-call"></a>선언 및 호출의 그림  
  다음 `Function` 프로시저 가장 긴 면 또는 다른 두 변에 대 한 값을 지정 하는 직각 삼각형의 빗변을 계산 합니다.  

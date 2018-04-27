@@ -1,9 +1,9 @@
 ---
-title: "임시 Win32 리소스 파일 &#39; 저장할 수 없습니다. &lt;filename&gt;&#39;: &lt;오류 메시지&gt;"
+title: '임시 Win32 리소스 파일을 저장할 수 없습니다. &#39; &lt;filename&gt;&#39;: &lt;오류 메시지&gt;'
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - devlang-visual-basic
 ms.topic: article
@@ -13,17 +13,17 @@ f1_keywords:
 helpviewer_keywords:
 - BC30137
 ms.assetid: 61c23f48-0e06-42fc-be00-5598053c86dd
-caps.latest.revision: 
+caps.latest.revision: 11
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: ef9d98e7a0b2698ea2bea46734389db015e04b6a
-ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
+ms.openlocfilehash: e2e4bbc095e419ae0af6eecf9ae4863d3cbd4bce
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/26/2018
 ---
-# <a name="error-saving-temporary-win32-resource-file-39ltfilenamegt39-lterror-messagegt"></a>임시 Win32 리소스 파일 &#39; 저장할 수 없습니다. &lt;filename&gt;&#39;: &lt;오류 메시지&gt;
-[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 컴파일러가 어셈블리 링커(Al.exe, Alink라고도 함)를 호출하여 매니페스트를 사용해 어셈블리를 생성합니다. 링커가 메모리 내 리소스를 쓰는 데 사용할 파일 이름을 가져오는 동안 오류를 보고했습니다.  
+# <a name="error-saving-temporary-win32-resource-file-39ltfilenamegt39-lterror-messagegt"></a>임시 Win32 리소스 파일을 저장할 수 없습니다. &#39; &lt;filename&gt;&#39;: &lt;오류 메시지&gt;
+Visual Basic 컴파일러는 매니페스트를 사용해 어셈블리를 생성 하는 어셈블리 링커 (Al.exe, Alink 라고도 함)를 호출 합니다. 링커가 메모리 내 리소스를 쓰는 데 사용할 파일 이름을 가져오는 동안 오류를 보고했습니다.  
   
  **오류 ID:** BC30137  
   

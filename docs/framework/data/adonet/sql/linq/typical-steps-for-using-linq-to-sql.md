@@ -1,24 +1,26 @@
 ---
-title: "LINQ to SQL 사용을 위한 일반 단계"
-ms.custom: 
+title: LINQ to SQL 사용을 위한 일반 단계
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 9a88bd51-bd74-48f7-a9b1-f650e8d55a3e
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 3aedef610d8ad3f743b346a46059b15d917cf7ca
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: 31daf8ee10334327070cb5bfc4068bc80e1d7ea4
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="typical-steps-for-using-linq-to-sql"></a>LINQ to SQL 사용을 위한 일반 단계
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 응용 프로그램을 구현하려면 이 항목에 설명된 단계를 따릅니다. 대부분의 단계는 선택 사항이며 고유한 개체 모델을 기본 상태에서 사용할 수 있습니다.  
@@ -33,7 +35,7 @@ ms.lasthandoff: 01/17/2018
   
 -   [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)]  
   
-     이 디자이너는 기존 데이터베이스에서 개체 모델을 만들기 위한 풍부한 사용자 인터페이스를 제공합니다. 이 도구는 [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)] IDE의 일부이며 중소 규모의 데이터베이스에 가장 적합합니다.  
+     이 디자이너는 기존 데이터베이스에서 개체 모델을 만들기 위한 풍부한 사용자 인터페이스를 제공합니다. 이 도구는 Visual Studio IDE의 일부 이며 중소 규모의 데이터베이스에 가장 적합 합니다.  
   
 -   SQLMetal 코드 생성 도구  
   
@@ -41,13 +43,13 @@ ms.lasthandoff: 01/17/2018
   
 -   코드 편집기  
   
-     [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)] 코드 편집기나 다른 편집기를 사용하여 고유한 코드를 작성할 수 있습니다. 그러나 기존 데이터베이스가 있고 [!INCLUDE[vs_ordesigner_short](../../../../../../includes/vs-ordesigner-short-md.md)] 또는 SQLMetal 도구를 사용할 수 있는 경우 이 방법은 오류가 발생하기 쉽기 때문에 사용하지 않는 것이 좋습니다. 단, 다른 도구를 사용하여 이미 생성한 코드를 구체화하거나 수정하려는 경우 코드 편집기가 유용할 수 있습니다. 자세한 내용은 참조 [하는 방법: 코드 편집기를 사용 하 여 엔터티 클래스 사용자 지정](../../../../../../docs/framework/data/adonet/sql/linq/how-to-customize-entity-classes-by-using-the-code-editor.md)합니다.  
+     Visual Studio 코드 편집기나 다른 편집기를 사용 하 여 사용자 고유의 코드를 작성할 수 있습니다. 그러나 기존 데이터베이스가 있고 [!INCLUDE[vs_ordesigner_short](../../../../../../includes/vs-ordesigner-short-md.md)] 또는 SQLMetal 도구를 사용할 수 있는 경우 이 방법은 오류가 발생하기 쉽기 때문에 사용하지 않는 것이 좋습니다. 단, 다른 도구를 사용하여 이미 생성한 코드를 구체화하거나 수정하려는 경우 코드 편집기가 유용할 수 있습니다. 자세한 내용은 참조 [하는 방법: 코드 편집기를 사용 하 여 엔터티 클래스 사용자 지정](../../../../../../docs/framework/data/adonet/sql/linq/how-to-customize-entity-classes-by-using-the-code-editor.md)합니다.  
   
 ### <a name="2-select-the-kind-of-code-you-want-to-generate"></a>2. 생성할 코드의 종류를 선택합니다.  
   
--   특성 기반 매핑을 위한 C# 또는 [!INCLUDE[vbprvb](../../../../../../includes/vbprvb-md.md)] 소스 코드 파일  
+-   C# 또는 Visual Basic 소스 코드 파일에 대 한 특성 기반 매핑.  
   
-     이 코드 파일을 [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)] 프로젝트에 포함합니다. 자세한 내용은 참조 [특성 기반 매핑](../../../../../../docs/framework/data/adonet/sql/linq/attribute-based-mapping.md)합니다.  
+     그런 다음 Visual Studio 프로젝트에이 코드 파일을 포함 합니다. 자세한 내용은 참조 [특성 기반 매핑](../../../../../../docs/framework/data/adonet/sql/linq/attribute-based-mapping.md)합니다.  
   
 -   외부 매핑을 위한 XML 파일  
   

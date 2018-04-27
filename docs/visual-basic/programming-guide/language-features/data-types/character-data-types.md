@@ -1,11 +1,12 @@
 ---
-title: "문자 데이터 형식(Visual Basic)"
-ms.custom: 
+title: 문자 데이터 형식(Visual Basic)
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - data types [Visual Basic], character
@@ -14,22 +15,22 @@ helpviewer_keywords:
 - Char data type [Visual Basic], character data types
 - data types [Visual Basic], choosing
 ms.assetid: 902479ef-1679-47fc-9911-0c1c5008226c
-caps.latest.revision: "23"
+caps.latest.revision: 23
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: d1066444ba3a98f26fc2a35135a50b2954c6b992
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: dca9cde0af08c4113ea9a4644efa40a721b4d9b1
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="character-data-types-visual-basic"></a>문자 데이터 형식(Visual Basic)
-[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]제공 *문자 데이터 형식과* 를 인쇄 하거나 표시할 수 있는 문자를 처리 합니다. 유니코드 문자는 모두 처리 하는 동안 `Char` 반면은 단일 문자를 `String` 불특정 개수의 문자를 포함 합니다.  
+Visual Basic에서는 *문자 데이터 형식과* 를 인쇄 하거나 표시할 수 있는 문자를 처리 합니다. 유니코드 문자는 모두 처리 하는 동안 `Char` 반면은 단일 문자를 `String` 불특정 개수의 문자를 포함 합니다.  
   
- 나란히 비교를 표시 하는 테이블에 대 한는 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 데이터 형식을 참조 [데이터 형식](../../../../visual-basic/language-reference/data-types/data-type-summary.md)합니다.  
+ Visual Basic 데이터 형식 비교 나란히 표시 하는 테이블을 참조 하십시오. [데이터 형식](../../../../visual-basic/language-reference/data-types/data-type-summary.md)합니다.  
   
 ## <a name="char-type"></a>Char 형식  
- `Char` 데이터 형식은 2 바이트 (16 비트) 단일 유니코드 문자입니다. 변수는 항상 정확히 한 문자를 저장, 하는 경우로 선언 `Char`합니다. 예:  
+ `Char` 데이터 형식은 2 바이트 (16 비트) 단일 유니코드 문자입니다. 변수는 항상 정확히 한 문자를 저장, 하는 경우로 선언 `Char`합니다. 예를 들어:  
   
  [!code-vb[VbVbalrCharTypes#1](../../../../visual-basic/programming-guide/language-features/data-types/codesnippet/VisualBasic/character-data-types_1.vb)]  
   
@@ -41,7 +42,7 @@ ms.lasthandoff: 11/21/2017
  자세한 내용은 참조 [Char 데이터 형식을](../../../../visual-basic/language-reference/data-types/char-data-type.md)합니다.  
   
 ## <a name="string-type"></a>문자열 형식  
- `String` 데이터 형식은 0 개 이상의 2 바이트 (16 비트) 유니코드 문자 시퀀스입니다. 변수에서 불특정 개수의 문자를 포함할 수 있으면로 선언 `String`합니다. 예:  
+ `String` 데이터 형식은 0 개 이상의 2 바이트 (16 비트) 유니코드 문자 시퀀스입니다. 변수에서 불특정 개수의 문자를 포함할 수 있으면로 선언 `String`합니다. 예를 들어:  
   
  [!code-vb[VbVbalrCharTypes#2](../../../../visual-basic/programming-guide/language-features/data-types/codesnippet/VisualBasic/character-data-types_2.vb)]  
   

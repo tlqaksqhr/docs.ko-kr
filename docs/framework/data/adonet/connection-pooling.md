@@ -1,31 +1,33 @@
 ---
-title: "연결 풀링"
-ms.custom: 
+title: 연결 풀링
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 955c057f-aea8-4ba8-aa6d-e3dfa18ba8d5
-caps.latest.revision: "3"
+caps.latest.revision: 3
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 7205bc307af6a4a9f307b84a7b3875b77dadb765
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: 3cc97ec0681e58facd30e3dbbb74001676a6e451
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="connection-pooling"></a>연결 풀링
 데이터 소스에 연결하는 작업은 시간이 많이 걸릴 수 있습니다. ADO.NET 연결을 여는 비용을 최소화 하려면 이라는 최적화 기법을 사용 *연결 풀링*를 반복적으로 열고 연결을 닫는의 비용 최소화 합니다. 연결 풀링은 .NET Framework 데이터 공급자마다 각각 다른 방식으로 처리됩니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
  [SQL Server 연결 풀링(ADO.NET)](../../../../docs/framework/data/adonet/sql-server-connection-pooling.md)  
- 연결 풀링에 대해 간략하게 설명하고 [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)]에서 연결 풀링이 작동하는 방식에 대해 설명합니다.  
+ 연결 풀링에 대해 간략하게 설명 하 고 SQL Server에서 연결 풀링이 작동 방법을 설명 합니다.  
   
  [OLE DB, ODBC 및 Oracle 연결 풀링](../../../../docs/framework/data/adonet/ole-db-odbc-and-oracle-connection-pooling.md)  
  .NET Framework Data Provider for OLE DB, .NET Framework Data Provider for ODBC 및 .NET Framework Data Provider for Oracle의 연결 풀링에 대해 설명합니다.  

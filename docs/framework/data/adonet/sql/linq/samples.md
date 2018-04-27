@@ -1,30 +1,32 @@
 ---
-title: "샘플"
-ms.custom: 
+title: 샘플
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 3fcc0c4a-b952-4cfe-9e09-0c0cf874ba2c
-caps.latest.revision: "2"
+caps.latest.revision: 2
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 98bcb52d193cffb19f6144364895c040f9860f10
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: 36e619e47a46c14c3b4496ac61968850ebce9f99
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="samples"></a>샘플
-이 항목에서는 [!INCLUDE[vbprvb](../../../../../../includes/vbprvb-md.md)]에 대한 링크와 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 샘플 코드가 포함된 C# 솔루션을 제공합니다.  
+이 항목에서는 포함 하는 Visual Basic 및 C# 솔루션에 대 한 링크를 제공 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 샘플 코드입니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
- SampleQueries 솔루션의 [!INCLUDE[vbprvb](../../../../../../includes/vbprvb-md.md)] 버전  
+ SampleQueries 솔루션의 Visual Basic 버전  
  [예제 쿼리 (Visual Basic)](~/docs/visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)  
   
  SampleQueries 솔루션의 C # 버전  
@@ -36,7 +38,7 @@ ms.lasthandoff: 01/19/2018
   
 -   에 참여는 [LINQ 포럼](http://go.microsoft.com/fwlink/?LinkId=76488)전문가 함께 보다 복잡 한 주제를 자세히 논의할 수 있는, 합니다.  
   
--   [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 및 C# 코드 예제를 통해 [!INCLUDE[vbprvb](../../../../../../includes/vbprvb-md.md)] 기술에 대해 자세히 설명하는 백서를 학습합니다. 자세한 내용은 참조 [LINQ to SQL: 관계형 데이터에 대 한 쿼리.NET Language-Integrated](http://go.microsoft.com/fwlink/?LinkId=93205)합니다.  
+-   에 대해 자세히 설명 하는 백서를 학습할 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 기술, Visual Basic 및 C# 코드 예제를 완료 합니다. 자세한 내용은 참조 [LINQ to SQL: 관계형 데이터에 대 한 쿼리.NET Language-Integrated](http://go.microsoft.com/fwlink/?LinkId=93205)합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/index.md)  

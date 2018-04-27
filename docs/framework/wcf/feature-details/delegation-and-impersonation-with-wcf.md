@@ -1,12 +1,13 @@
 ---
-title: "WCF를 통한 위임 및 가장"
-ms.custom: 
+title: WCF를 통한 위임 및 가장
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,16 +16,17 @@ helpviewer_keywords:
 - impersonation [WCF]
 - delegation [WCF]
 ms.assetid: 110e60f7-5b03-4b69-b667-31721b8e3152
-caps.latest.revision: "40"
+caps.latest.revision: 40
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 6319a9793698e12a984c875670d71b2cbb0b00ba
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 5c1acfdfdbac2660fd4de7ec391c94b39890f669
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="delegation-and-impersonation-with-wcf"></a>WCF를 통한 위임 및 가장
 *가장* 은 서비스에서 서비스 도메인 리소스에 대한 클라이언트 액세스를 제한하는 데 사용하는 일반적인 기술 서비스입니다. 서비스 도메인 리소스는 로컬 파일(가장)과 같은 시스템 리소스이거나 파일 공유(위임)와 같은 다른 시스템의 리소스일 수 있습니다. 샘플 응용 프로그램을 보려면 [Impersonating the Client](../../../../docs/framework/wcf/samples/impersonating-the-client.md)을 참조하세요. 가장을 사용하는 방법에 대한 예제는 [How to: Impersonate a Client on a Service](../../../../docs/framework/wcf/how-to-impersonate-a-client-on-a-service.md)을 참조하십시오.  
@@ -68,7 +70,7 @@ ms.lasthandoff: 12/22/2017
  서비스를 통해 클라이언트를 가장할 수 있는 범위는 서비스를 통해 가장을 시도할 때의 서비스 계정 권한, 사용되는 가장 형식 및 클라이언트에서 허용하는 가장 범위에 따라 다릅니다.  
   
 > [!NOTE]
->  클라이언트 및 서비스가 동일한 컴퓨터에서 실행 중이고 클라이언트가 시스템 계정(예: `Local System` 또는 `Network Service`)으로 실행 중인 경우, 상태 저장 보안 컨텍스트 토큰을 사용하여 보안 세션을 설정할 때 클라이언트를 가장할 수 없습니다. 일반적으로 Windows Form 또는 콘솔 응용 프로그램은 현재 계정에 로그인된 상태에서 실행되기 때문에 기본적으로 계정을 가장할 수 있습니다. 그러나 클라이언트가 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 페이지이고 해당 페이지가 [!INCLUDE[iis601](../../../../includes/iis601-md.md)] 또는 [!INCLUDE[iisver](../../../../includes/iisver-md.md)]에서 호스팅된 경우 클라이언트는 기본적으로 `Network Service` 계정으로 실행됩니다. 보안 세션을 지원하는 모든 시스템 제공 바인딩은 기본적으로 상태 비저장 SCT(보안 컨텍스트 토큰)를 사용합니다. 그러나 클라이언트가 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 페이지이고 상태 저장 SCT를 통한 보안 세션을 사용하는 경우, 클라이언트를 가장할 수 없습니다. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]상태 저장 Sct를 사용 하 여 보안 세션에서 참조 [하는 방법: 보안 세션에 대 한 보안 컨텍스트 토큰 만들기](../../../../docs/framework/wcf/feature-details/how-to-create-a-security-context-token-for-a-secure-session.md)합니다.  
+>  클라이언트 및 서비스가 동일한 컴퓨터에서 실행 중이고 클라이언트가 시스템 계정(예: `Local System` 또는 `Network Service`)으로 실행 중인 경우, 상태 저장 보안 컨텍스트 토큰을 사용하여 보안 세션을 설정할 때 클라이언트를 가장할 수 없습니다. 일반적으로 Windows Form 또는 콘솔 응용 프로그램은 현재 계정에 로그인된 상태에서 실행되기 때문에 기본적으로 계정을 가장할 수 있습니다. 그러나 클라이언트가 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 페이지이고 해당 페이지가 [!INCLUDE[iis601](../../../../includes/iis601-md.md)] 또는 [!INCLUDE[iisver](../../../../includes/iisver-md.md)]에서 호스팅된 경우 클라이언트는 기본적으로 `Network Service` 계정으로 실행됩니다. 보안 세션을 지원하는 모든 시스템 제공 바인딩은 기본적으로 상태 비저장 SCT(보안 컨텍스트 토큰)를 사용합니다. 그러나 클라이언트가 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 페이지이고 상태 저장 SCT를 통한 보안 세션을 사용하는 경우, 클라이언트를 가장할 수 없습니다. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 상태 저장 Sct를 사용 하 여 보안 세션에서 참조 [하는 방법: 보안 세션에 대 한 보안 컨텍스트 토큰 만들기](../../../../docs/framework/wcf/feature-details/how-to-create-a-security-context-token-for-a-secure-session.md)합니다.  
   
 ## <a name="impersonation-in-a-service-method-declarative-model"></a>서비스 메서드에서의 가장: 선언적 모델  
  대부분의 가장 시나리오의 경우 호출자 컨텍스트에서 서비스 메서드를 실행하게 됩니다. 이러한 작업을 편리하게 수행할 수 있도록[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 에서는 사용자가 <xref:System.ServiceModel.OperationBehaviorAttribute> 특성에 가장 요구 사항을 지정할 수 있는 가장 기능을 제공합니다. 예를 들어 다음 코드에서 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 인프라는 `Hello` 메서드를 실행하기 전에 호출자를 가장합니다. `Hello` 메서드 내의 네이티브 리소스에 대한 액세스 시도는 이 리소스의 ACL(액세스 제어 목록)에서 호출자 액세스 권한을 허용하는 경우에만 가능합니다. 가장을 가능하게 하려면, 다음 예제에서와 같이 <xref:System.ServiceModel.OperationBehaviorAttribute.Impersonation%2A> 속성을 <xref:System.ServiceModel.ImpersonationOption> 열거형 값인 <xref:System.ServiceModel.ImpersonationOption.Required?displayProperty=nameWithType> 또는 <xref:System.ServiceModel.ImpersonationOption.Allowed?displayProperty=nameWithType> 중 하나로 설정합니다.  
@@ -82,13 +84,13 @@ ms.lasthandoff: 12/22/2017
  [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 인프라에서는 호출자가 Windows 사용자 계정에 매핑될 수 있는 자격 증명으로 인증된 경우에만 호출자를 가장할 수 있습니다. Windows 계정에 매핑될 수 없는 자격 증명을 통해 인증하도록 서비스를 구성한 경우에는 서비스 메서드가 실행되지 않습니다.  
   
 > [!NOTE]
->  [!INCLUDE[wxp](../../../../includes/wxp-md.md)]에서는 상태 저장 SCT가 만들어지면 가장이 실패하여 <xref:System.InvalidOperationException>이 발생합니다. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][지원 되지 않는 시나리오](../../../../docs/framework/wcf/feature-details/unsupported-scenarios.md)합니다.  
+>  [!INCLUDE[wxp](../../../../includes/wxp-md.md)]에서는 상태 저장 SCT가 만들어지면 가장이 실패하여 <xref:System.InvalidOperationException>이 발생합니다. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [지원 되지 않는 시나리오](../../../../docs/framework/wcf/feature-details/unsupported-scenarios.md)합니다.  
   
 ## <a name="impersonation-in-a-service-method-imperative-model"></a>서비스 메서드에서의 가장: 명령적 모델  
  작동하는 전체 서비스 메서드가 아닌 그 중 일부만 호출자가 가장해야 하는 경우가 있습니다. 이 경우에는 서비스 메서드 내의 호출자 Windows ID를 가져와 명령적 방식으로 가장을 수행합니다. 이 작업은 <xref:System.ServiceModel.ServiceSecurityContext.WindowsIdentity%2A> 클래스의 인스턴스를 반환하도록 <xref:System.ServiceModel.ServiceSecurityContext> 의 <xref:System.Security.Principal.WindowsIdentity> 속성을 사용하고 해당 인스턴스를 사용하기 전에 <xref:System.Security.Principal.WindowsIdentity.Impersonate%2A> 메서드를 호출하여 수행합니다.  
   
 > [!NOTE]
->  가장 동작을 자동으로 되돌리려면 [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)]`Using` 문 또는 C# `using` 문을 사용해야 합니다. 이러한 문을 사용하지 않거나 [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)] 또는 C# 이외의 프로그래밍 언어를 사용할 경우에는 가장 수준을 되돌려야 합니다. 이 작업에 실패하면 서비스 거부 및 권한 상승 공격이 발생할 수 있습니다.  
+>  Visual Basic을 사용 해야`Using` 문 또는 C# `using` 문을 가장 동작을 자동으로 되돌립니다. 문을 사용 하지 않는 경우 또는 Visual Basic 또는 C# 이외의 프로그래밍 언어를 사용 하는 경우에 가장 수준이 되돌려야 해야 합니다. 이 작업에 실패하면 서비스 거부 및 권한 상승 공격이 발생할 수 있습니다.  
   
  [!code-csharp[c_ImpersonationAndDelegation#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_impersonationanddelegation/cs/source.cs#2)]
  [!code-vb[c_ImpersonationAndDelegation#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_impersonationanddelegation/vb/source.vb#2)]  

@@ -1,27 +1,29 @@
 ---
-title: "매개 변수 및 매개 변수 데이터 형식 구성"
-ms.custom: 
+title: 매개 변수 및 매개 변수 데이터 형식 구성
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 537d8a2c-d40b-4000-83eb-bc1fcc93f707
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: a71ba7ed12196184b7e826ed70c92a9873efdb0c
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: cdb6efb428f5c096178895f95fe1256846e9c1e5
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="configuring-parameters-and-parameter-data-types"></a>매개 변수 및 매개 변수 데이터 형식 구성
 Command 개체는 매개 변수를 통해 SQL 문이나 저장 프로시저에 값을 전달하여 형식 검사 및 유효성 검사 기능을 제공합니다. 명령 텍스트와 달리 매개 변수 입력은 실행 코드가 아니라 리터럴 값으로 처리됩니다. 따라서 매개 변수화된 명령을 사용하면 공격자가 서버의 보안을 손상시키는 명령을 SQL 문에 삽입하는 "SQL 삽입" 공격을 막을 수 있습니다.  
@@ -90,7 +92,7 @@ Command 개체는 매개 변수를 통해 SQL 문이나 저장 프로시저에 �
 >  decimal 형식에서 다른 형식으로의 변환은 decimal 값을 0에 가장 가까운 정수 값으로 반올림하는 축소 변환입니다. 변환 결과를 대상 형식으로 표현할 수 없는 경우에는 <xref:System.OverflowException> 이 throw됩니다.  
   
 > [!NOTE]
->  null 매개 변수 값을 서버에 보낼 때는 <xref:System.DBNull>( `null` 의 경우`Nothing` )이 아니라 [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)]을 지정해야 합니다. 시스템에서 null 값은 값이 없는 빈 개체입니다. <xref:System.DBNull> 은 null 값을 나타내는 데 사용됩니다. 데이터베이스 null에 대한 자세한 내용은 [Handling Null Values](../../../../docs/framework/data/adonet/sql/handling-null-values.md)를 참조하세요.  
+>  서버에 null 매개 변수 값을 보낼 때 지정 해야 <xref:System.DBNull>이 아니라 `null` (`Nothing` Visual basic에서). 시스템에서 null 값은 값이 없는 빈 개체입니다. <xref:System.DBNull> 은 null 값을 나타내는 데 사용됩니다. 데이터베이스 null에 대한 자세한 내용은 [Handling Null Values](../../../../docs/framework/data/adonet/sql/handling-null-values.md)를 참조하세요.  
   
 ## <a name="deriving-parameter-information"></a>매개 변수 정보 파생  
  `DbCommandBuilder` 클래스를 사용하여 저장 프로시저에서 매개 변수를 파생할 수 있습니다. `SqlCommandBuilder` 및 `OleDbCommandBuilder` 클래스는 모두 정적 메서드인 `DeriveParameters`를 제공합니다. 이 메서드는 자동으로 명령 개체의 매개 변수 컬렉션을 저장 프로시저의 매개 변수 정보로 채웁니다. `DeriveParameters` 는 명령에 대한 기존 매개 변수 정보를 모두 덮어씁니다.  

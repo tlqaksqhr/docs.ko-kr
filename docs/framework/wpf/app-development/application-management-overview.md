@@ -1,13 +1,13 @@
 ---
-title: "응용 프로그램 관리 개요"
-ms.custom: 
+title: 응용 프로그램 관리 개요
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-wpf
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,17 +15,17 @@ dev_langs:
 helpviewer_keywords:
 - application management [WPF]
 ms.assetid: 32b1c054-5aca-423b-b4b5-ed8dc4dc637d
-caps.latest.revision: 
+caps.latest.revision: 56
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: a881793c50a4ce506e752774e70e0904e30525c1
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 96a1ae8dce80588b296d9ab7fc9dff60fb7a04f0
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="application-management-overview"></a>응용 프로그램 관리 개요
 모든 응용 프로그램은 응용 프로그램 구현 및 관리에 적용하는 일반적인 기능 집합을 공유하는 경향이 있습니다. 이 항목에서는에서 기능의 개요는 <xref:System.Windows.Application> 만들고 응용 프로그램을 관리 하기 위한 클래스입니다.  
@@ -128,7 +128,7 @@ ms.lasthandoff: 01/19/2018
  [!code-csharp[ApplicationManagementOverviewSnippets#GetCurrentAppCODE](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ApplicationManagementOverviewSnippets/CSharp/MainWindow.xaml.cs#getcurrentappcode)]
  [!code-vb[ApplicationManagementOverviewSnippets#GetCurrentAppCODE](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ApplicationManagementOverviewSnippets/VisualBasic/MainWindow.xaml.vb#getcurrentappcode)]  
   
- <xref:System.Windows.Application.Current%2A>인스턴스에 대 한 참조 반환은 <xref:System.Windows.Application> 클래스입니다. 에 대 한 참조를 원하는 경우 프로그램 <xref:System.Windows.Application> 파생 클래스의 값을 캐스팅 해야는 <xref:System.Windows.Application.Current%2A> 속성을 다음 예제와 같이 합니다.  
+ <xref:System.Windows.Application.Current%2A> 인스턴스에 대 한 참조 반환은 <xref:System.Windows.Application> 클래스입니다. 에 대 한 참조를 원하는 경우 프로그램 <xref:System.Windows.Application> 파생 클래스의 값을 캐스팅 해야는 <xref:System.Windows.Application.Current%2A> 속성을 다음 예제와 같이 합니다.  
   
  [!code-csharp[ApplicationManagementOverviewSnippets#GetSTCurrentAppCODE](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ApplicationManagementOverviewSnippets/CSharp/MainWindow.xaml.cs#getstcurrentappcode)]
  [!code-vb[ApplicationManagementOverviewSnippets#GetSTCurrentAppCODE](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ApplicationManagementOverviewSnippets/VisualBasic/MainWindow.xaml.vb#getstcurrentappcode)]  
@@ -159,7 +159,7 @@ ms.lasthandoff: 01/19/2018
   
 <a name="Showing_a_User_Interface"></a>   
 ### <a name="showing-a-user-interface"></a>사용자 인터페이스 표시  
- 대부분의 독립 실행형 [!INCLUDE[TLA2#tla_mswin](../../../../includes/tla2sharptla-mswin-md.md)] 응용 프로그램을 열어는 <xref:System.Windows.Window> 시작할 때 실행 됩니다. <xref:System.Windows.Application.Startup> 다음 코드 에서처럼 이벤트 처리기는이 수행할 수 있는 한 위치입니다.  
+ 대부분의 독립 실행형 Windows 응용 프로그램을 열고는 <xref:System.Windows.Window> 시작할 때 실행 됩니다. <xref:System.Windows.Application.Startup> 다음 코드 에서처럼 이벤트 처리기는이 수행할 수 있는 한 위치입니다.  
   
  [!code-xaml[AppShowWindowHardSnippets#StartupEventMARKUP](../../../../samples/snippets/csharp/VS_Snippets_Wpf/AppShowWindowHardSnippets/CSharp/App.xaml#startupeventmarkup)]  
   
@@ -195,7 +195,7 @@ ms.lasthandoff: 01/19/2018
   
 <a name="Processing_Command_Line_Arguments"></a>   
 ### <a name="processing-command-line-arguments"></a>명령줄 인수 처리  
- [!INCLUDE[TLA2#tla_mswin](../../../../includes/tla2sharptla-mswin-md.md)], 명령 프롬프트 또는 바탕 화면에서 독립 실행형 응용 프로그램을 시작할 수 있습니다. 두 경우 모두 명령줄 인수를 응용 프로그램으로 전달할 수 있습니다. 다음 예제에서는 단일 명령줄 인수 "/StartMinimized"를 사용하여 시작되는 응용 프로그램을 보여 줍니다.  
+ Windows에서 명령 프롬프트 또는 바탕 화면에서 독립 실행형 응용 프로그램을 실행할 수 있습니다. 두 경우 모두 명령줄 인수를 응용 프로그램으로 전달할 수 있습니다. 다음 예제에서는 단일 명령줄 인수 "/StartMinimized"를 사용하여 시작되는 응용 프로그램을 보여 줍니다.  
   
  `wpfapplication.exe /StartMinimized`  
   
@@ -208,11 +208,11 @@ ms.lasthandoff: 01/19/2018
   
  코드 핸들 <xref:System.Windows.Application.Startup> 확인 하려면 여부는 **/StartMinimized** 명령줄 인수가 제공; 열었을 있는 주 창 그렇다면는 <xref:System.Windows.WindowState> 의 <xref:System.Windows.WindowState.Minimized>합니다. 되므로 <xref:System.Windows.Window.WindowState%2A> 속성을 설정 해야 프로그래밍 방식으로 주 <xref:System.Windows.Window> 코드에서 명시적으로 열어야 합니다.  
   
- [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)]검색 및 사용 하 여 시작 되기 때문에 명령줄 인수를 처리할 수 없는 [!INCLUDE[TLA#tla_clickonce](../../../../includes/tlasharptla-clickonce-md.md)] 배포 (참조 [WPF 응용 프로그램 배포](../../../../docs/framework/wpf/app-development/deploying-a-wpf-application-wpf.md)). 그러나 XBAP를 시작하는 데 사용되는 URL에서 쿼리 문자열 매개 변수를 검색하고 처리할 수 있습니다.  
+ [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] 검색 및 사용 하 여 시작 되기 때문에 명령줄 인수를 처리할 수 없는 [!INCLUDE[TLA#tla_clickonce](../../../../includes/tlasharptla-clickonce-md.md)] 배포 (참조 [WPF 응용 프로그램 배포](../../../../docs/framework/wpf/app-development/deploying-a-wpf-application-wpf.md)). 그러나 XBAP를 시작하는 데 사용되는 URL에서 쿼리 문자열 매개 변수를 검색하고 처리할 수 있습니다.  
   
 <a name="Application_Activation_and_Deactivation"></a>   
 ### <a name="application-activation-and-deactivation"></a>응용 프로그램 활성화 및 비활성화  
- [!INCLUDE[TLA2#tla_mswin](../../../../includes/tla2sharptla-mswin-md.md)]를 사용하면 응용 프로그램 간을 전환할 수가 있습니다. 가장 일반적인 방법은 ALT+TAB 키 조합을 사용하는 것입니다. 응용 프로그램만 전환할 수 있는 표시 되어 있는 경우 <xref:System.Windows.Window> 사용자가 선택할 수 있는 합니다. 현재 선택 된 <xref:System.Windows.Window> 는 *활성 창* (라고도 *전경 창이*) 이며는 <xref:System.Windows.Window> 사용자 입력을 받는 합니다. 활성 창이 있는 응용 프로그램은는 *활성 응용 프로그램* (또는 *포그라운드 응용 프로그램이*). 다음과 같은 경우에 응용 프로그램이 활성 응용 프로그램이 됩니다.  
+ Windows에서는 사용자가 응용 프로그램 간에 전환할 수 있습니다. 가장 일반적인 방법은 ALT+TAB 키 조합을 사용하는 것입니다. 응용 프로그램만 전환할 수 있는 표시 되어 있는 경우 <xref:System.Windows.Window> 사용자가 선택할 수 있는 합니다. 현재 선택 된 <xref:System.Windows.Window> 는 *활성 창* (라고도 *전경 창이*) 이며는 <xref:System.Windows.Window> 사용자 입력을 받는 합니다. 활성 창이 있는 응용 프로그램은는 *활성 응용 프로그램* (또는 *포그라운드 응용 프로그램이*). 다음과 같은 경우에 응용 프로그램이 활성 응용 프로그램이 됩니다.  
   
 -   시작 하 고 표시는 <xref:System.Windows.Window>합니다.  
   
@@ -248,14 +248,14 @@ ms.lasthandoff: 01/19/2018
   
 -   사용자가 주 <xref:System.Windows.Window>합니다.  
   
--   사용자는 [!INCLUDE[TLA2#tla_mswin](../../../../includes/tla2sharptla-mswin-md.md)] 세션 로그 오프 하거나 종료 합니다.  
+-   사용자 로그 오프 하거나 종료 하는 Windows 세션을 종료 합니다.  
   
 -   응용 프로그램별 조건이 충족된 경우  
   
  응용 프로그램 종료를 관리할 수 있도록 <xref:System.Windows.Application> 제공는 <xref:System.Windows.Application.Shutdown%2A> 메서드를는 <xref:System.Windows.Application.ShutdownMode%2A> 속성 및 <xref:System.Windows.Application.SessionEnding> 및 <xref:System.Windows.Application.Exit> 이벤트입니다.  
   
 > [!NOTE]
->  <xref:System.Windows.Application.Shutdown%2A>이 있는 응용 프로그램에서 호출할 수만 <xref:System.Security.Permissions.UIPermission>합니다. 독립 실행형 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 응용 프로그램에는 항상이 권한을 가집니다. 그러나 [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] 인터넷 영역 부분 신뢰 보안 샌드박스에서 실행 되는 그렇지 않습니다.  
+>  <xref:System.Windows.Application.Shutdown%2A> 이 있는 응용 프로그램에서 호출할 수만 <xref:System.Security.Permissions.UIPermission>합니다. 독립 실행형 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 응용 프로그램에는 항상이 권한을 가집니다. 그러나 [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] 인터넷 영역 부분 신뢰 보안 샌드박스에서 실행 되는 그렇지 않습니다.  
   
 #### <a name="shutdown-mode"></a>종료 모드  
  대부분의 응용 프로그램은 모든 창을 닫거나 주 창을 닫으면 종료됩니다. 하지만 다른 응용 프로그램과 관련된 조건이 특정 응용 프로그램의 종료 시점을 결정하는 경우가 있습니다. 응용 프로그램을 설정 하 여 종료 됩니다 조건을 지정할 수 있습니다 <xref:System.Windows.Application.ShutdownMode%2A> 다음 중 하나가 지정 된 <xref:System.Windows.ShutdownMode> 열거형 값:  
@@ -273,10 +273,10 @@ ms.lasthandoff: 01/19/2018
  응용 프로그램별 종료 조건이 있는 경우 설정 <xref:System.Windows.Application.ShutdownMode%2A> 를 <xref:System.Windows.ShutdownMode.OnExplicitShutdown>합니다. 명시적으로 호출 하 여 응용 프로그램을 종료 하려면 작업은이 경우에 <xref:System.Windows.Application.Shutdown%2A> 메서드도 있습니다; 그렇지 않으면 응용 프로그램이 실행 모든 창을 닫은 경우에 계속 됩니다. <xref:System.Windows.Application.Shutdown%2A> 때 암시적으로 호출 됩니다는 <xref:System.Windows.Application.ShutdownMode%2A> 있거나 <xref:System.Windows.ShutdownMode.OnLastWindowClose> 또는 <xref:System.Windows.ShutdownMode.OnMainWindowClose>합니다.  
   
 > [!NOTE]
->  <xref:System.Windows.Application.ShutdownMode%2A>설정할 수 있습니다는 [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)], 되지만 무시 됩니다; [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] 가 항상 종료를 탐색에서 브라우저 또는 브라우저를 호스팅하는 경우는 [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] 닫힙니다. 자세한 내용은 [탐색 개요](../../../../docs/framework/wpf/app-development/navigation-overview.md)를 참조하세요.  
+>  <xref:System.Windows.Application.ShutdownMode%2A> 설정할 수 있습니다는 [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)], 되지만 무시 됩니다; [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] 가 항상 종료를 탐색에서 브라우저 또는 브라우저를 호스팅하는 경우는 [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] 닫힙니다. 자세한 내용은 [탐색 개요](../../../../docs/framework/wpf/app-development/navigation-overview.md)를 참조하세요.  
   
 #### <a name="session-ending"></a>세션 종료  
- 설명 하는 종료 조건을 <xref:System.Windows.Application.ShutdownMode%2A> 속성 응용 프로그램에 따라 다릅니다. 하지만 외부 조건에 따라 응용 프로그램이 종료되는 경우도 있습니다. 가장 일반적인 외부 상태 종료 하는 경우에 발생는 [!INCLUDE[TLA2#tla_mswin](../../../../includes/tla2sharptla-mswin-md.md)] 다음 작업에 의해 세션:  
+ 설명 하는 종료 조건을 <xref:System.Windows.Application.ShutdownMode%2A> 속성 응용 프로그램에 따라 다릅니다. 하지만 외부 조건에 따라 응용 프로그램이 종료되는 경우도 있습니다. 가장 일반적인 외부 조건에는 사용자는 다음 작업에 의해 Windows 세션 종료 될 때 발생 합니다.  
   
 -   로그오프  
   
@@ -286,17 +286,17 @@ ms.lasthandoff: 01/19/2018
   
 -   최대 절전 모드  
   
- 시기를 알 수는 [!INCLUDE[TLA2#tla_mswin](../../../../includes/tla2sharptla-mswin-md.md)] 세션이 종료를 처리할 수 있습니다는 <xref:System.Windows.Application.SessionEnding> 이벤트, 다음 예제의 그림과 같이 합니다.  
+ Windows 세션이 종료 될 때를 검색 하려면 처리할 수 있습니다는 <xref:System.Windows.Application.SessionEnding> 이벤트, 다음 예제의 그림과 같이 합니다.  
   
  [!code-xaml[ApplicationSessionEndingSnippets#HandlingSessionEndingXAML](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ApplicationSessionEndingSnippets/CSharp/App.xaml#handlingsessionendingxaml)]  
   
  [!code-csharp[ApplicationSessionEndingSnippets#HandlingSessionEndingCODEBEHIND](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ApplicationSessionEndingSnippets/CSharp/App.xaml.cs#handlingsessionendingcodebehind)]
  [!code-vb[ApplicationSessionEndingSnippets#HandlingSessionEndingCODEBEHIND](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ApplicationSessionEndingSnippets/visualbasic/application.xaml.vb#handlingsessionendingcodebehind)]  
   
- 이 예제에서는 코드 검사는 <xref:System.Windows.SessionEndingCancelEventArgs.ReasonSessionEnding%2A> 속성 확인 하는 방법을 [!INCLUDE[TLA2#tla_mswin](../../../../includes/tla2sharptla-mswin-md.md)] 세션이 종료 되는 합니다. 또한 이 값을 사용하여 사용자에게 확인 메시지를 표시합니다. 이 코드를 설정 하는 사용자가을 종료 하려면 세션을 원하지 않을 경우 <xref:System.ComponentModel.CancelEventArgs.Cancel%2A> 를 `true` 방지 하기 위해는 [!INCLUDE[TLA2#tla_mswin](../../../../includes/tla2sharptla-mswin-md.md)] 세션이 종료 됩니다.  
+ 이 예제에서는 코드 검사는 <xref:System.Windows.SessionEndingCancelEventArgs.ReasonSessionEnding%2A> Windows 세션이 종료 되는 방식을 결정 하는 속성입니다. 또한 이 값을 사용하여 사용자에게 확인 메시지를 표시합니다. 이 코드를 설정 하는 사용자가을 종료 하려면 세션을 원하지 않을 경우 <xref:System.ComponentModel.CancelEventArgs.Cancel%2A> 를 `true` Windows 세션 종료 하지 못하도록 합니다.  
   
 > [!NOTE]
->  <xref:System.Windows.Application.SessionEnding>에 대 한 끝나면 [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)]합니다.  
+>  <xref:System.Windows.Application.SessionEnding> 에 대 한 끝나면 [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)]합니다.  
   
 #### <a name="exit"></a>종료  
  응용 프로그램이 종료될 때 응용 프로그램 상태 유지와 같은 몇 가지 최종 처리를 수행해야 할 경우가 있습니다. 이러한 상황을 처리할 수 있습니다는 <xref:System.Windows.Application.Exit> 이벤트입니다.  
@@ -311,7 +311,7 @@ ms.lasthandoff: 01/19/2018
   
  전체 예제를 참조 하십시오. [지속 및 응용 프로그램 세션 간에 응용 프로그램 범위의 속성 복원](../../../../docs/framework/wpf/app-development/persist-and-restore-application-scope-properties.md)합니다.  
   
- <xref:System.Windows.Application.Exit>두 독립 실행형 응용 프로그램에 의해 처리 될 수 있습니다 및 [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)]합니다. 에 대 한 [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)], <xref:System.Windows.Application.Exit> 는 다음과 같은 경우에 있을 때 발생 합니다.  
+ <xref:System.Windows.Application.Exit> 두 독립 실행형 응용 프로그램에 의해 처리 될 수 있습니다 및 [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)]합니다. 에 대 한 [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)], <xref:System.Windows.Application.Exit> 는 다음과 같은 경우에 있을 때 발생 합니다.  
   
 -   [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] 에서 멀리 이동 하 게 됩니다.  
   
@@ -320,7 +320,7 @@ ms.lasthandoff: 01/19/2018
 -   브라우저가 닫힌 경우  
   
 #### <a name="exit-code"></a>종료 코드  
- 대부분의 경우 응용 프로그램은 운영 체제에서 사용자 요청에 대한 응답으로 시작하게 됩니다. 하지만 다른 응용 프로그램에서 일부 특정 작업을 수행하기 위해 응용 프로그램을 시작할 수도 있습니다. 시작된 응용 프로그램이 종료될 경우 시작하는 응용 프로그램에서 시작된 응용 프로그램이 종료되는 조건을 알고 싶을 수 있습니다. 이러한 상황에서는 [!INCLUDE[TLA2#tla_mswin](../../../../includes/tla2sharptla-mswin-md.md)] 응용 프로그램이 응용 프로그램 종료 코드를 반환할 수 있습니다. 기본적으로 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 응용 프로그램은 종료 코드 값 0을 반환 합니다.  
+ 대부분의 경우 응용 프로그램은 운영 체제에서 사용자 요청에 대한 응답으로 시작하게 됩니다. 하지만 다른 응용 프로그램에서 일부 특정 작업을 수행하기 위해 응용 프로그램을 시작할 수도 있습니다. 시작된 응용 프로그램이 종료될 경우 시작하는 응용 프로그램에서 시작된 응용 프로그램이 종료되는 조건을 알고 싶을 수 있습니다. 이러한 상황에서는 Windows 응용 프로그램을 응용 프로그램 종료 코드를 반환할 수 있습니다. 기본적으로 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 응용 프로그램은 종료 코드 값 0을 반환 합니다.  
   
 > [!NOTE]
 >  디버깅할 경우 [!INCLUDE[TLA2#tla_visualstu](../../../../includes/tla2sharptla-visualstu-md.md)], 응용 프로그램 종료 코드에 표시 됩니다는 **출력** 다음과 같은 메시지에 응용 프로그램이 종료 될 때 창:  
@@ -351,7 +351,7 @@ ms.lasthandoff: 01/19/2018
   
 -   응용 프로그램을 실행 상태로 유지  
   
--   , 개발자 기반의 예외 정보를 기록 하는 [!INCLUDE[TLA2#tla_mswin](../../../../includes/tla2sharptla-mswin-md.md)] 이벤트 로그입니다.  
+-   기록 세부, 개발자 기반의 Windows 이벤트 로그의 예외 정보.  
   
  이 지원을 구현에 따라 달라 집니다 처리 되지 않은 예외를 탐지 하 되 어떤는 <xref:System.Windows.Application.DispatcherUnhandledException> 처리 됩니다.  
   

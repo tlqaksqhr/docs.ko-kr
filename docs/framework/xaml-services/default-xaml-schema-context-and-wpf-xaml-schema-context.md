@@ -1,24 +1,26 @@
 ---
-title: "기본 XAML 스키마 컨텍스트 및 WPF XAML 스키마 컨텍스트"
-ms.custom: 
+title: 기본 XAML 스키마 컨텍스트 및 WPF XAML 스키마 컨텍스트
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 04e06a15-09b3-4210-9bdf-9a64c2eccb83
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 9ee7c83868934f1a524bb0068ea5e749e6cbfab4
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: ec5e29ae9022470f8b583dc1b673a0b93040c862
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="default-xaml-schema-context-and-wpf-xaml-schema-context"></a>기본 XAML 스키마 컨텍스트 및 WPF XAML 스키마 컨텍스트
 XAML 스키마 컨텍스트는 특정 XAML 어휘를 사용 하는 XAML 프로덕션 형식 매핑을 확인 하는 방법을, 어셈블리를 로드 하는 방법, 특정 어떻게 판독기 및 작성기를 포함 하 여 동작을 작성 하는 개체 상호 작용 하는 방법을 정규화 하는 개념적 엔터티 설정은 해석 됩니다. 이 항목에서는 CLR 형식 시스템을 기반으로 하는 연결 된 기본 XAML 스키마 컨텍스트 및.NET Framework XAML 서비스의 기능을 설명 합니다. 이 항목에서는 WPF에 사용 되는 XAML 스키마 컨텍스트를 설명 합니다.  
@@ -35,7 +37,7 @@ XAML 스키마 컨텍스트는 특정 XAML 어휘를 사용 하는 XAML 프로�
 ## <a name="wpf-xaml-schema-context"></a>WPF XAML 스키마 컨텍스트  
  WPF XAML 스키마 컨텍스트는 WPF 구현은 기능 기본이 아닌 XAML 스키마 컨텍스트를 구현 하 여 유발 될 수 있는 종류의 흥미로운 그림을 제공 하기 때문에이 항목에 설명 되어 있습니다. 또한 XAML 스키마 컨텍스트 개념에서에서 설명 하지 않은 매우 유사 WPF XAML; 해결할 수 있는 WPF 설명서 XAML 스키마 컨텍스트를 사용 하면 동작만 함께 기본 XAML 스키마 컨텍스트 작동 방식을 설명 하는 경우 완벽 하 게 이해할 수 있습니다. WPF XAML 스키마 컨텍스트는 다음과 같은 동작을 구현 합니다.  
   
- **조회를 재정의:** WPF XAML을 위한 몇 가지 정적 콘텐츠 모델에 있는 되지 않아도 작동 하는 XAML 콘텐츠 속성 <xref:System.Windows.Markup.ContentPropertyAttribute> 특성을 사용 합니다. <xref:System.Xaml.XamlType.LookupContentProperty%2A>WPF에 대 한 재정의이 동작을 구현 합니다.  
+ **조회를 재정의:** WPF XAML을 위한 몇 가지 정적 콘텐츠 모델에 있는 되지 않아도 작동 하는 XAML 콘텐츠 속성 <xref:System.Windows.Markup.ContentPropertyAttribute> 특성을 사용 합니다. <xref:System.Xaml.XamlType.LookupContentProperty%2A> WPF에 대 한 재정의이 동작을 구현 합니다.  
   
  **WPF 식에 대 한 지연:** WPF 런타임 컨텍스트를 사용할 수 있는 될 때까지 값을 지연 하는 몇 가지 식 클래스를 제공 합니다. 또한 템플릿 확장은 지연 기술을 사용 하는 런타임 동작입니다.  
   
@@ -68,7 +70,7 @@ XAML 스키마 컨텍스트는 특정 XAML 어휘를 사용 하는 XAML 프로�
     -   이름, 매개 변수 매핑에서 정규화 된 경우 호출 <xref:System.Reflection.Assembly.LoadWithPartialName%2A?displayProperty=nameWithType>합니다.  
   
 #### <a name="xamlbuildtask"></a>XamlBuildTask  
- `XamlBuildTask`에 사용 되 [!INCLUDE[vsindigo](../../../includes/vsindigo-md.md)] 및 [!INCLUDE[TLA#tla_workflow](../../../includes/tlasharptla-workflow-md.md)]합니다.  
+ `XamlBuildTask` 에 사용 되 [!INCLUDE[vsindigo](../../../includes/vsindigo-md.md)] , Windows Workflow Foundation 합니다.  
   
  어셈블리 참조를 통해 `XamlBuildTask` 는 항상 정규화 합니다.  
   

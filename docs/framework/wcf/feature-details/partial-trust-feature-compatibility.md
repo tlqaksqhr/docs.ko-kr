@@ -1,24 +1,26 @@
 ---
-title: "부분 신뢰 기능 호환성"
-ms.custom: 
+title: 부분 신뢰 기능 호환성
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: a36a540b-1606-4e63-88e0-b7c59e0e6ab7
-caps.latest.revision: "75"
+caps.latest.revision: 75
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 1950a0c4015658affb0b9fa0d7c87a062865144b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 72282c62ad23ec825eab7054ab1909d07a062b45
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="partial-trust-feature-compatibility"></a>부분 신뢰 기능 호환성
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 는 부분 신뢰 환경에서 실행되는 경우 기능의 제한된 하위 집합을 지원합니다. 부분 신뢰에서 지원되는 기능은 [Supported Deployment Scenarios](../../../../docs/framework/wcf/feature-details/supported-deployment-scenarios.md) 항목에서 설명한 대로 특정 시나리오 집합을 바탕으로 설계되었습니다.  
@@ -103,7 +105,7 @@ ms.lasthandoff: 12/22/2017
   
 -   부분 신뢰 환경에서 응용 프로그램을 실행하기 위해 사용자가 코드 액세스 보안 설정을 수정할 수 없는 완전 신뢰 응용 프로그램으로서 응용 프로그램이 배포되는지 확인합니다. 사용자가 보안 설정을 수정할 수 있는 경우 동작이 실행되지 않고 예외가 throw되지 않습니다. 이 위해 참조는 **levelfinal** 옵션을 사용 하 여 [Caspol.exe (코드 액세스 보안 정책 도구)](../../../../docs/framework/tools/caspol-exe-code-access-security-policy-tool.md)합니다.  
   
- [!INCLUDE[crexample](../../../../includes/crexample-md.md)] 일반 동작의 경우 [How to: Lock Down Endpoints in the Enterprise](../../../../docs/framework/wcf/extending/how-to-lock-down-endpoints-in-the-enterprise.md)이어야 합니다.  
+ 일반적인 동작의 예제를 보려면 [하는 방법: 엔터프라이즈에서 끝점 아래로 잠금](../../../../docs/framework/wcf/extending/how-to-lock-down-endpoints-in-the-enterprise.md)합니다.  
   
 ## <a name="configuration"></a>구성  
  한 가지 경우를 제외하고 부분 신뢰 코드는 로컬 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 파일에서 `app.config` 구성 섹션만 로드할 수 있습니다. machine.config 또는 루트 web.config 파일에서 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 섹션을 참조하는 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 구성 섹션을 로드하려면 ConfigurationPermission(Unrestricted)이 필요합니다. 이 권한 없이 로컬 구성 파일 외부에 있는 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 구성 섹션(동작, 바인딩)을 참조할 경우 구성을 로드할 때 예외가 발생합니다.  

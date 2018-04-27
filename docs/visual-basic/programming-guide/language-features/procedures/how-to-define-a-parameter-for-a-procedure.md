@@ -1,11 +1,12 @@
 ---
-title: "방법: 프로시저의 매개 변수 정의(Visual Basic)"
-ms.custom: 
+title: '방법: 프로시저의 매개 변수 정의(Visual Basic)'
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - procedure parameters [Visual Basic], defining data types for
@@ -14,14 +15,14 @@ helpviewer_keywords:
 - Visual Basic code, procedures
 - procedure parameters [Visual Basic], defining
 ms.assetid: 7962808d-407e-4e84-984e-43e9857c53c9
-caps.latest.revision: "15"
+caps.latest.revision: 15
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 3c909cfe1b45a42aae91948917f310474575f225
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: eb4bac9208c03fd18e1904f58b247824d2c215da
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-define-a-parameter-for-a-procedure-visual-basic"></a>방법: 프로시저의 매개 변수 정의(Visual Basic)
 A *매개 변수* 호출 코드를 호출할 때 프로시저에 값을 전달할 수 있습니다. 동일한 방식으로 변수를 선언 이름 및 데이터 형식을 지정 하는 프로시저에 대 한 각 매개 변수를 선언 합니다. 전달 메커니즘을 지정할 수도 및 매개 변수는 선택 사항입니다.  
@@ -48,19 +49,20 @@ A *매개 변수* 호출 코드를 호출할 때 프로시저에 값을 전달�
   
      첫 번째 매개 변수가 허용는 `customer` 개체 및 `updateCustomer` 에 전달 된 변수를 직접 업데이트할 수 `c` 인수 전달 되기 때문에 [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md)합니다. 프로시저 전달 되기 때문에 마지막 두 인수 값을 변경할 수 없습니다 [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md)합니다.  
   
-     호출 코드에 대 한 값을 제공 하지 않는 경우는 `level` 매개 변수를 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 기본값인 0으로 설정 합니다.  
+     호출 코드에 대 한 값을 제공 하지 않는 경우는 `level` 매개 변수, Visual Basic 설정 기본값인 0입니다.  
   
      형식 검사 스위치 하는 경우 ([Option Strict 문](../../../../visual-basic/language-reference/statements/option-strict-statement.md))은 `Off`, `As` 매개 변수를 정의할 때 절은 선택 사항입니다. 그러나 하나의 매개 변수를 사용 하는 경우는 `As` 절을 모두 사용 해야 합니다. 형식 검사 스위치 이면 `On`, `As` 절은 모든 매개 변수 정의에 필요 합니다.  
   
-     모든 프로그래밍 요소에 대 한 데이터 형식 지정 이라고 *강력한 형식 지정*합니다. 설정 하는 경우 `Option Strict On`, [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 강력한 형식 지정을 적용 합니다. 이 것이 좋습니다 이유는 다음과 같습니다.  
+     모든 프로그래밍 요소에 대 한 데이터 형식 지정 이라고 *강력한 형식 지정*합니다. 설정 하는 경우 `Option Strict On`, Visual Basic에서 강력한 형식 지정을 적용 합니다. 이 것이 좋습니다 이유는 다음과 같습니다.  
   
     -   변수 및 매개 변수에 대 한 IntelliSense 지원도를 수 있습니다. 그러면 코드에서 입력할 때 해당 속성 및 기타 멤버를 볼 수 있습니다.  
   
     -   컴파일러를 형식 검사를 수행할 수 있습니다. 이렇게 하면 catch 문을 오버플로와 같은 오류로 인해 런타임에 실패할 수 있습니다. 또한 지원 하지 않는 개체에 메서드 호출을 catch 합니다.  
   
-    -   코드의 더 빠른 실행에서 발생합니다. 이 대 한 한 가지 이유 하는 경우 프로그래밍 요소에 대 한 데이터 형식을 지정 하지 않으면는 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 컴파일러가 할당에서 `Object` 유형입니다. 컴파일된 코드 사이 변환 해야 할 수 `Object` 및 다른 데이터 형식의 경우 성능이 떨어집니다.  
+    -   코드의 더 빠른 실행에서 발생합니다. 이 대 한 한 가지 이유는 경우 프로그래밍 요소에 대 한 데이터 형식을 지정 하지 않으면, Visual Basic 컴파일러 할당은 `Object` 유형입니다. 컴파일된 코드 사이 변환 해야 할 수 `Object` 및 다른 데이터 형식의 경우 성능이 떨어집니다.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>참고자료
+
  [절차](./index.md)  
  [Sub 프로시저](./sub-procedures.md)  
  [Function 프로시저](./function-procedures.md)  
@@ -69,4 +71,4 @@ A *매개 변수* 호출 코드를 호출할 때 프로시저에 값을 전달�
  [재귀 프로시저](./recursive-procedures.md)  
  [프로시저 오버로딩](./procedure-overloading.md)  
  [개체 및 클래스](../../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)  
- [개체 지향 프로그래밍](http://msdn.microsoft.com/library/1cf6e655-3f30-45f1-9a5d-4a88ca24a1c2)
+ [개체 지향 프로그래밍(Visual Basic)](../../concepts/object-oriented-programming.md)  

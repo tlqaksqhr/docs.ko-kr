@@ -1,11 +1,12 @@
 ---
-title: "확대 변환과 축소 변환(Visual Basic)"
-ms.custom: 
+title: 확대 변환과 축소 변환(Visual Basic)
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - widening conversions [Visual Basic]
@@ -25,14 +26,14 @@ helpviewer_keywords:
 - data type conversion [Visual Basic], exceptions during conversion
 - conversions [Visual Basic], widening
 ms.assetid: 058c3152-6c28-4268-af44-2209e774f0bd
-caps.latest.revision: "27"
+caps.latest.revision: 27
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 2cf1f8d956935a9a363211abf94b4f1c2f538074
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 960b4e4c7184309b6a84247d86fb94ccb2faf877
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="widening-and-narrowing-conversions-visual-basic"></a>확대 변환과 축소 변환(Visual Basic)
 형식 변환에 중요 한 고려 사항은 변환 결과 대상 데이터 형식의 범위 이내 인지 여부입니다.  
@@ -59,7 +60,7 @@ ms.lasthandoff: 11/21/2017
 |[Double](../../../../visual-basic/language-reference/data-types/double-data-type.md)|`Double`|  
 |모든 열거형 형식 ([Enum](../../../../visual-basic/language-reference/statements/enum-statement.md))|내부 정수 계열 형식 및 모든 형식을 내부 형식 확대 변환 합니다.|  
 |[Char](../../../../visual-basic/language-reference/data-types/char-data-type.md)|`Char`, `String`|  
-|`Char` 배열|`Char`배열에`String`|  
+|`Char` 배열|`Char` 배열에 `String`|  
 |모든 형식|[개체](../../../../visual-basic/language-reference/data-types/object-data-type.md)|  
 |모든 파생된 형식|파생 된 형식의 기본 <sup>3</sup>합니다.|  
 |모든 형식|모든 인터페이스를 구현 합니다.|  
@@ -97,11 +98,11 @@ ms.lasthandoff: 11/21/2017
 ## <a name="exceptions-during-conversion"></a>변환 중 예외  
  확대 변환은 항상 때문에 성공 하 고 예외를 throw 하지 않습니다. 실패할 경우에 축소 변환이 가장 일반적으로 다음과 같은 예외를 throw 합니다.  
   
--   <xref:System.InvalidCastException>-두 형식 간의 정의 된 변환이 없는 경우  
+-   <xref:System.InvalidCastException> -두 형식 간의 정의 된 변환이 없는 경우  
   
--   <xref:System.OverflowException>-(정수 계열 형식만) 변환 된 값이 너무 커서 대상 유형에 적합 하지  
+-   <xref:System.OverflowException> -(정수 계열 형식만) 변환 된 값이 너무 커서 대상 유형에 적합 하지  
   
- 클래스 또는 구조체 정의 하는 경우는 [CType 함수](../../../../visual-basic/language-reference/functions/ctype-function.md) 변환 연산자 또는 해당 클래스 또는 구조체에서 역할을 하는 `CType` 적절 하다 고 판단 되는 모든 예외를 throw 할 수 있습니다. 또한 하는 `CType` 호출할 수 있는 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 함수 또는 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 는 다양 한 예외를 throw 할 수 있는 메서드입니다.  
+ 클래스 또는 구조체 정의 하는 경우는 [CType 함수](../../../../visual-basic/language-reference/functions/ctype-function.md) 변환 연산자 또는 해당 클래스 또는 구조체에서 역할을 하는 `CType` 적절 하다 고 판단 되는 모든 예외를 throw 할 수 있습니다. 또한 하 `CType` Visual Basic 함수를 호출할 수 있습니다 또는 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 는 다양 한 예외를 throw 할 수 있는 메서드입니다.  
   
 ## <a name="changes-during-reference-type-conversions"></a>참조 형식 변환 하는 동안 변경 내용  
  변환은 *유형을 참조* 포인터만 값으로 복사 합니다. 값 자체 복사 아니고 어떤 식으로든에서 변경 합니다. 변경할 수 있는 유일한 항목에는 포인터를가지고 있는 변수의 데이터 형식입니다. 다음 예제에서는 데이터 형식은 해당 기본 클래스나 파생된 클래스에서 변환 됩니다 있지만 두 변수가 가리키는 개체는 변경 되지 않습니다.  

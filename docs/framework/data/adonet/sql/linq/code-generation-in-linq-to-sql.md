@@ -1,24 +1,26 @@
 ---
-title: "LINQ to SQL에서 코드 생성"
-ms.custom: 
+title: LINQ to SQL에서 코드 생성
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: ddcbdaa1-e7fa-4d85-a379-313b49965c07
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 0d1c80817bb1126d8e9828171c2a2aeee52eb672
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: ff543efecb65e61fecef0056650b35735bef83c0
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="code-generation-in-linq-to-sql"></a>LINQ to SQL에서 코드 생성
 데이터베이스를 나타내는 코드는 [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] 또는 SQLMetal 명령줄 도구를 사용하여 생성할 수 있습니다. 두 경우 모두 다음과 같은 세 단계로 코드가 생성됩니다.  
@@ -29,13 +31,13 @@ ms.lasthandoff: 01/17/2018
   
 3.  유효성 검사 오류가 없으면 파일이 코드 생성기에 전달됩니다.  
   
- 자세한 내용은 [SqlMetal.exe(코드 생성 도구)](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md)를 참조하세요. 사용 하는 개발자 [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)] 수도 있습니다는 [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] 코드를 생성 합니다. 참조 [LINQ to SQL 도구 Visual Studio에서](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2)합니다.  
+ 자세한 내용은 [SqlMetal.exe(코드 생성 도구)](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md)를 참조하세요. Visual Studio를 사용 하는 개발자 ´ ï ´는 [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] 코드를 생성 합니다. 참조 [LINQ to SQL 도구 Visual Studio에서](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2)합니다.  
   
 ## <a name="dbml-extractor"></a>DBML 추출기  
  DBML 추출기는 데이터베이스 메타데이터를 입력으로 사용하여 DMBL 파일을 출력하는 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 구성 요소입니다.  
   
 ## <a name="code-generator"></a>코드 생성기  
- 코드 생성기는 DBML 파일을 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)], C# 또는 XML 매핑 파일로 변환하는 [!INCLUDE[vbprvb](../../../../../../includes/vbprvb-md.md)] 구성 요소입니다.  
+ 코드 생성기가는 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] DBML을 변환 하는 구성 요소 파일 Visual Basic, C# 또는 XML 매핑 파일을 합니다.  
   
 ## <a name="xml-schema-definition-file"></a>XML 스키마 정의 파일  
  DBML 파일은 다음 XSD 스키마 정의 파일에 대해 유효해야 합니다.  
@@ -43,7 +45,7 @@ ms.lasthandoff: 01/17/2018
  이 스키마 정의 파일은 외부 매핑 파일의 유효성을 검사하는 데 사용하는 스키마 정의 파일과 다릅니다. 자세한 내용은 참조 [외부 매핑](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md)).  
   
 > [!NOTE]
->  [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)] 사용자의 경우 이 XSD 파일은 XML 스키마 대화 상자에 "DbmlSchema.xsd"로 표시됩니다. DBML 파일의 유효성 검사에 대 한 XSD 파일을 올바르게 사용 하려면 참조 [하는 방법: DBML 유효성 검사 및 외부 매핑 파일](../../../../../../docs/framework/data/adonet/sql/linq/how-to-validate-dbml-and-external-mapping-files.md)합니다.  
+>  Visual Studio 사용자에 게 XML 스키마 대화 상자에서이 XSD 파일 "DbmlSchema.xsd"로 찾을 됩니다. DBML 파일의 유효성 검사에 대 한 XSD 파일을 올바르게 사용 하려면 참조 [하는 방법: DBML 유효성 검사 및 외부 매핑 파일](../../../../../../docs/framework/data/adonet/sql/linq/how-to-validate-dbml-and-external-mapping-files.md)합니다.  
   
 ```  
 ?<?xml version="1.0" encoding="utf-16"?>  

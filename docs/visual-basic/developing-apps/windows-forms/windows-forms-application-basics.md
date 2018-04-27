@@ -1,25 +1,26 @@
 ---
-title: "Windows Forms 응용 프로그램 기초(Visual Basic)"
+title: Windows Forms 응용 프로그램 기초(Visual Basic)
 ms.date: 07/20/2015
 ms.prod: .net
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - Windows applications
 - Windows Forms, Visual Basic
 ms.assetid: 0b919d30-7fd6-42db-85c8-543d15312441
-caps.latest.revision: "20"
+caps.latest.revision: 20
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 7872d3c7b19ec9cd7059cccf41e5fab50d85123b
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: aaa7fbd679eceea53a673646173dc14dc4f209bc
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="windows-forms-application-basics-visual-basic"></a>Windows Forms 응용 프로그램 기초(Visual Basic)
-중요 한 부분이 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 사용자의 컴퓨터에서 로컬로 실행 되는 Windows Forms 응용 프로그램을 만들 수 있습니다. Windows Forms를 사용 하 여 응용 프로그램 및 사용자 인터페이스를 만들려면 Visual Studio를 사용할 수 있습니다. Windows Forms 응용 프로그램의 클래스 기반는 <xref:System.Windows.Forms> 네임 스페이스입니다.  
+Visual Basic의 핵심은 사용자의 컴퓨터에서 로컬로 실행 되는 Windows Forms 응용 프로그램을 만드는 기능입니다. Windows Forms를 사용 하 여 응용 프로그램 및 사용자 인터페이스를 만들려면 Visual Studio를 사용할 수 있습니다. Windows Forms 응용 프로그램의 클래스 기반는 <xref:System.Windows.Forms> 네임 스페이스입니다.  
   
 ## <a name="designing-windows-forms-applications"></a>디자인 Windows Forms 응용 프로그램  
  Windows Forms 및 Windows 서비스 응용 프로그램을 만들 수 있습니다 [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)]합니다. 자세한 내용은 다음 항목을 참조하세요.  
@@ -52,9 +53,9 @@ ms.lasthandoff: 01/19/2018
   
 |대상|보기|  
 |--------|---------|  
-|새 Windows Forms 응용 프로그램을 만듭니다[!INCLUDE[vsprvs](~/includes/vsprvs-md.md)]|[연습: 간단한 Windows Form 만들기](http://msdn.microsoft.com/library/2d9daec0-0543-41d0-acb1-964f685bddbb)|  
+|새 Windows Forms 응용 프로그램을 만듭니다 [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)]|[연습: 간단한 Windows Form 만들기](http://msdn.microsoft.com/library/2d9daec0-0543-41d0-acb1-964f685bddbb)|  
 |폼에서 컨트롤 사용|[방법: Windows Forms에 컨트롤 추가](../../../framework/winforms/controls/how-to-add-controls-to-windows-forms.md)|   
-|사용 하 여 그래픽 만들기<xref:System.Drawing>|[그래픽 프로그래밍 시작](../../../framework/winforms/advanced/getting-started-with-graphics-programming.md)|  
+|사용 하 여 그래픽 만들기 <xref:System.Drawing>|[그래픽 프로그래밍 시작](../../../framework/winforms/advanced/getting-started-with-graphics-programming.md)|  
 |사용자 지정 컨트롤 만들기|[방법: UserControl 클래스에서 상속](../../../framework/winforms/controls/how-to-inherit-from-the-usercontrol-class.md)|  
   
 ## <a name="displaying-and-manipulating-data"></a>데이터 표시 및 조작  
@@ -77,19 +78,19 @@ ms.lasthandoff: 01/19/2018
 |데이터 소스 창 사용|[연습: Windows Form에 데이터 표시](/visualstudio/data-tools/accessing-data-in-visual-studio)|  
   
 ## <a name="deploying-applications-to-client-computers"></a>클라이언트 컴퓨터에 응용 프로그램 배포  
- 응용 프로그램을 작성 한 후 설치 하 고 자신의 클라이언트 컴퓨터에서 실행할 수 있도록 사용자에 게 보낼 해야 있습니다. 사용 하는 [!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)] 기술, 내에서 응용 프로그램을 배포할 수 있습니다 [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] 에서 몇 번의 클릭을 사용 하 고 사용자는 웹에서 응용 프로그램을 가리키는 URL에 제공 합니다. [!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)]모든 요소와 응용 프로그램에서 종속성을 관리 하 고 응용 프로그램이 클라이언트 컴퓨터에 제대로 설치 되어 있는지 확인 합니다.  
+ 응용 프로그램을 작성 한 후 설치 하 고 자신의 클라이언트 컴퓨터에서 실행할 수 있도록 사용자에 게 보낼 해야 있습니다. 사용 하는 [!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)] 기술, 내에서 응용 프로그램을 배포할 수 있습니다 [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] 에서 몇 번의 클릭을 사용 하 고 사용자는 웹에서 응용 프로그램을 가리키는 URL에 제공 합니다. [!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)] 모든 요소와 응용 프로그램에서 종속성을 관리 하 고 응용 프로그램이 클라이언트 컴퓨터에 제대로 설치 되어 있는지 확인 합니다.  
   
  사용자가 네트워크에 연결된 경우에만 실행되거나 온라인 및 오프라인 둘 다에서 실행되도록 [!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)] 응용 프로그램을 구성할 수 있습니다. 응용 프로그램 오프 라인 작업을 지원 해야 한다고 지정 하는 경우 [!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)] 사용자의 응용 프로그램에 대 한 링크 추가 **시작** 메뉴에서 사용자 URL을 사용 하지 않고 열 수 있도록 합니다.  
   
- 응용 프로그램을 업데이트하는 경우 새 배포 매니페스트와 응용 프로그램의 새 복사본을 웹 서버에 게시합니다. [!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)]사용 가능한 업데이트에 대 한 사용자의 설치; 업그레이드를 검색 합니다. 사용자 지정 프로그래밍 작업 없이 이전 어셈블리를 업데이트 해야 합니다.  
+ 응용 프로그램을 업데이트하는 경우 새 배포 매니페스트와 응용 프로그램의 새 복사본을 웹 서버에 게시합니다. [!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)] 사용 가능한 업데이트에 대 한 사용자의 설치; 업그레이드를 검색 합니다. 사용자 지정 프로그래밍 작업 없이 이전 어셈블리를 업데이트 해야 합니다.  
   
  [!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)]에 대한 전체 개요는 [ClickOnce 보안 및 배포](/visualstudio/deployment/clickonce-security-and-deployment)를 참조하세요. 이러한 기능을 사용 하는 방법에 대 한 단계별 정보는 다음 도움말 항목을 참조 하십시오.  
   
 |대상|보기|  
 |--------|---------|  
-|응용 프로그램 배포[!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)]|[방법: 게시 마법사를 사용하여 ClickOnce 응용 프로그램 게시](/visualstudio/deployment/how-to-publish-a-clickonce-application-using-the-publish-wizard)<br /><br /> [연습: ClickOnce 응용 프로그램 수동 배포](/visualstudio/deployment/walkthrough-manually-deploying-a-clickonce-application)|  
+|응용 프로그램 배포 [!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)]|[방법: 게시 마법사를 사용하여 ClickOnce 응용 프로그램 게시](/visualstudio/deployment/how-to-publish-a-clickonce-application-using-the-publish-wizard)<br /><br /> [연습: ClickOnce 응용 프로그램 수동 배포](/visualstudio/deployment/walkthrough-manually-deploying-a-clickonce-application)|  
 |업데이트는 [!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)] 배포|[방법: ClickOnce 응용 프로그램에 대한 업데이트 관리](/visualstudio/deployment/how-to-manage-updates-for-a-clickonce-application)|  
-|보안을 관리 합니다.[!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)]|[방법: ClickOnce 보안 설정 사용](/visualstudio/deployment/how-to-enable-clickonce-security-settings)|  
+|보안을 관리 합니다. [!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)]|[방법: ClickOnce 보안 설정 사용](/visualstudio/deployment/how-to-enable-clickonce-security-settings)|  
   
 ## <a name="other-controls-and-features"></a>기타 컨트롤 및 기능  
  Windows Forms에는 대화 상자 만들기, 인쇄, 도움말 및 설명서 추가 및 여러 언어로 응용 프로그램 지역화 지원과 같이 일반적인 작업을 쉽고 빠르게 구현할 수 있게 해주는 다른 여러 기능이 있습니다. Windows Forms의 강력한 보안 시스템에 의존 하는 또한는 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)], 고객에 게 보다 안전한 응용 프로그램을 해제할 수 있습니다.  

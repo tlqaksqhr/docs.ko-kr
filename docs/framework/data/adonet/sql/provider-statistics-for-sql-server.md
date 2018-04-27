@@ -1,27 +1,29 @@
 ---
-title: "SQL Server용 공급자 통계"
-ms.custom: 
+title: SQL Server용 공급자 통계
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 429c9d09-92ac-46ec-829a-fbff0a9575a2
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 43cafc8feb6cee761baffcb2efe41aec18e98abb
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: 27346f483251231f16abfa1d0fc5001e156ca8ea
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="provider-statistics-for-sql-server"></a>SQL Server용 공급자 통계
 .NET Framework 버전 2.0부터는 .NET Framework Data Provider for SQL Server에 런타임 통계가 지원됩니다. 유효한 연결 개체를 만든 후 <xref:System.Data.SqlClient.SqlConnection.StatisticsEnabled%2A> 개체의 <xref:System.Data.SqlClient.SqlConnection> 속성을 `True`로 설정하여 통계를 활성화해야 합니다. 통계를 활성화한 후에는 <xref:System.Collections.IDictionary> 개체의 <xref:System.Data.SqlClient.SqlConnection.RetrieveStatistics%2A> 메서드를 통해 <xref:System.Data.SqlClient.SqlConnection> 참조를 검색하여 통계를 "적시 스냅샷"으로 검토할 수 있습니다. 이름/값 쌍 사전 항목의 집합으로 목록을 열거합니다. 이러한 이름/값 쌍은 순서가 정해져 있지 않습니다. 언제라도 <xref:System.Data.SqlClient.SqlConnection.ResetStatistics%2A> 개체의 <xref:System.Data.SqlClient.SqlConnection> 메서드를 호출하여 카운터를 다시 설정할 수 있습니다. 통계 수집을 활성화하지 않으면 예외가 생성되지 않습니다. 또한 <xref:System.Data.SqlClient.SqlConnection.RetrieveStatistics%2A>를 먼저 호출하지 않은 상태에서 <xref:System.Data.SqlClient.SqlConnection.StatisticsEnabled%2A>를 호출한 경우 각 항목의 초기 값이 검색됩니다. 통계를 활성화하고 나서 잠시 동안 응용 프로그램을 실행했다가 통계를 비활성화하면 검색된 값은 통계가 사용되지 않은 지점까지 수집된 값을 반영합니다. 모든 통계 값은 각 연결 단위로 수집됩니다.  
@@ -59,7 +61,7 @@ ms.lasthandoff: 01/17/2018
  다음 콘솔 응용 프로그램에서는 연결에서 통계를 활성화하고 네 가지 개별 통계 값을 검색하여 콘솔 창에 쓰는 방법을 보여 줍니다.  
   
 > [!NOTE]
->  다음 예제에서는 샘플을 사용 하 여 **AdventureWorks** 에 포함 된 데이터베이스 [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)]합니다. 샘플 코드에 제공된 연결 문자열은 데이터베이스가 로컬 컴퓨터에 설치되었으며 사용 가능하다고 가정합니다. 사용자 환경의 필요에 따라 연결 문자열을 수정합니다.  
+>  다음 예제에서는 샘플을 사용 하 여 **AdventureWorks** SQL Server에 포함 된 데이터베이스입니다. 샘플 코드에 제공된 연결 문자열은 데이터베이스가 로컬 컴퓨터에 설치되었으며 사용 가능하다고 가정합니다. 사용자 환경의 필요에 따라 연결 문자열을 수정합니다.  
   
 ```vb  
 Option Strict On  
@@ -215,7 +217,7 @@ namespace CS_Stats_Console_GetValue
  다음 콘솔 응용 프로그램에서는 연결에서 통계를 활성화하고 열거자를 사용하여 모든 사용 가능한 통계 값을 검색한 후 콘솔 창에 쓰는 방법을 보여 줍니다.  
   
 > [!NOTE]
->  다음 예제에서는 샘플을 사용 하 여 **AdventureWorks** 에 포함 된 데이터베이스 [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)]합니다. 샘플 코드에 제공된 연결 문자열은 데이터베이스가 로컬 컴퓨터에 설치되었으며 사용 가능하다고 가정합니다. 사용자 환경의 필요에 따라 연결 문자열을 수정합니다.  
+>  다음 예제에서는 샘플을 사용 하 여 **AdventureWorks** SQL Server에 포함 된 데이터베이스입니다. 샘플 코드에 제공된 연결 문자열은 데이터베이스가 로컬 컴퓨터에 설치되었으며 사용 가능하다고 가정합니다. 사용자 환경의 필요에 따라 연결 문자열을 수정합니다.  
   
 ```vb  
 Option Strict On  

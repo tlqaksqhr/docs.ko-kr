@@ -1,12 +1,13 @@
 ---
-title: "인쇄 개요"
-ms.custom: 
+title: 인쇄 개요
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -22,19 +23,20 @@ helpviewer_keywords:
 - XPSDrv-based printers
 - GDI print path [WPF]
 ms.assetid: 0de8ac41-9aa6-413d-a121-7aa6f41539b1
-caps.latest.revision: "35"
+caps.latest.revision: 35
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 91ccf1f98d9e1e2f5784246cf30995b689a0b94b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 9a36589ca670892398b4d6bb171e79a07060d458
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="printing-overview"></a>인쇄 개요
-[!INCLUDE[TLA#tla_winfx](../../../../includes/tlasharptla-winfx-md.md)]에서 [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)]를 사용하는 응용 프로그램 개발자는 새로운 풍부한 인쇄 및 인쇄 시스템 관리 집합 [!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)]를 이용할 수 있습니다. 
+Microsoft.NET Framework를 사용 하 여 응용 프로그램 개발자와 [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] 인쇄 및 인쇄 시스템 관리의 새로운 풍부한이 [!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)]합니다. 
           [!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)]에서는 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 응용 프로그램을 만드는 개발자와 비관리 코드를 사용하는 개발자도 이러한 인쇄 시스템 향상 기능을 일부 사용할 수 있습니다. 이 새로운 기능의 핵심은 새 [!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)] 파일 형식과 [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] 인쇄 경로입니다.  
   
  이 항목에는 다음과 같은 섹션이 포함되어 있습니다.  
@@ -48,14 +50,12 @@ ms.lasthandoff: 12/22/2017
   
 <a name="XPS_print_path_intro"></a>   
 ## <a name="xps-print-path"></a>XPS 인쇄 경로  
- 
-          [!INCLUDE[TLA#tla_metro](../../../../includes/tlasharptla-metro-md.md)] 인쇄 경로는 [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] 응용 프로그램에서 인쇄를 처리하는 방법을 다시 정의하는 새로운 [!INCLUDE[TLA2#tla_mswin](../../../../includes/tla2sharptla-mswin-md.md)] 기능입니다. [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)]는 문서 표시 언어(예: RTF), 인쇄 스풀러 형식(예: WMF) 및 페이지 설명 언어(예: PCL 또는 포스트스크립트)를 대체할 수 있습니다. 새로운 인쇄 경로는 인쇄 드라이버 또는 장치에서 응용 프로그램 게시부터 최종 처리까지 [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] 형식을 유지 관리합니다.  
+ [!INCLUDE[TLA#tla_metro](../../../../includes/tlasharptla-metro-md.md)] 인쇄 경로 새 [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] Windows 응용 프로그램에서 인쇄를 처리 하는 방법을 재정의 하는 기능입니다. [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)]는 문서 표시 언어(예: RTF), 인쇄 스풀러 형식(예: WMF) 및 페이지 설명 언어(예: PCL 또는 포스트스크립트)를 대체할 수 있습니다. 새로운 인쇄 경로는 인쇄 드라이버 또는 장치에서 응용 프로그램 게시부터 최종 처리까지 [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] 형식을 유지 관리합니다.  
   
  
           [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] 인쇄 경로는 [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] 인쇄, 향상된 색 지원, 향상된 인쇄 성능 등 개발자에게 여러 가지 혜택을 제공하는 [!INCLUDE[TLA#tla_wys](../../../../includes/tlasharptla-wys-md.md)] 프린터 드라이버 모델(XPSDrv)을 기반으로 합니다. XPSDrv에 대한 자세한 내용은 [Windows 드라이버 개발 키트](https://msdn.microsoft.com/library/windows/hardware/ff557573.aspx)를 참조하세요.  
   
- 
-          [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] 문서에 대한 인쇄 스풀러 작업은 기본적으로 이전 버전의 [!INCLUDE[TLA2#tla_mswin](../../../../includes/tla2sharptla-mswin-md.md)]와 동일합니다. 그러나 기존의 [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] 인쇄 경로뿐 아니라 [!INCLUDE[TLA2#tla_gdi](../../../../includes/tla2sharptla-gdi-md.md)] 인쇄 경로도 지원하도록 향상되었습니다. 새로운 인쇄 경로는 기본적으로 [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] 스풀 파일을 사용합니다. 이전 버전의 [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)]용으로 작성된 사용자 모드 프린터 드라이버도 계속 작동하지만 [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] 인쇄 경로를 사용하려면 [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] 프린터 드라이버(XPSDrv)가 필요합니다.  
+ 에 대 한 인쇄 스풀러 작업 [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] 문서는 기본적으로 이전 버전의 Windows에서 동일 합니다. 그러나 기존의 [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] 인쇄 경로뿐 아니라 [!INCLUDE[TLA2#tla_gdi](../../../../includes/tla2sharptla-gdi-md.md)] 인쇄 경로도 지원하도록 향상되었습니다. 새로운 인쇄 경로는 기본적으로 [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] 스풀 파일을 사용합니다. 이전 버전의 [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)]용으로 작성된 사용자 모드 프린터 드라이버도 계속 작동하지만 [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] 인쇄 경로를 사용하려면 [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] 프린터 드라이버(XPSDrv)가 필요합니다.  
   
  
           [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] 인쇄 경로에는 다음과 같은 중요한 장점이 있습니다.  

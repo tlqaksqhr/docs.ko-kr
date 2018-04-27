@@ -1,11 +1,12 @@
 ---
-title: "이벤트 처리 (Visual Basic)"
-ms.custom: 
+title: 이벤트 처리 (Visual Basic)
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - event handling [Visual Basic], walkthroughs
@@ -15,19 +16,19 @@ helpviewer_keywords:
 - WithEvents keyword [Visual Basic], walkthroughs
 - event handlers [Visual Basic], walkthroughs
 ms.assetid: f145b3fc-5ae0-4509-a2aa-1ff6934706bd
-caps.latest.revision: "18"
+caps.latest.revision: 18
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: e4e31937d67d2140865a9626f79fbddc16796709
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: c1743e5f5d9dcdf83ab646407cd1fcdc77ff71cd
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="walkthrough-handling-events-visual-basic"></a>연습: 이벤트 처리(Visual Basic)
 이벤트로 작업 하는 방법을 보여 주는 두 항목 중 두 번째 숫자입니다. 첫 번째 항목 [연습: 이벤트 선언 및 발생](../../../../visual-basic/programming-guide/language-features/events/walkthrough-declaring-and-raising-events.md)를 선언 하는 방법을 보여 줍니다. 이 섹션에서는 발생할 때 이벤트를 처리 하는 방법을 보여 주는 폼과 다음 연습에서 클래스를 사용 합니다.  
   
- `Widget` 클래스 예제에는 일반적인 이벤트 처리 문을 사용 합니다. [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]이벤트를 사용한 작업에 대 한 기타 기술을 제공 합니다. 연습으로 사용 하도록이 예제를 수정할 수 있습니다는 `AddHandler` 및 `Handles` 문.  
+ `Widget` 클래스 예제에는 일반적인 이벤트 처리 문을 사용 합니다. Visual Basic에서 이벤트를 사용한 작업에 대 한 명시 된 기타 기술을 제공 합니다. 연습으로 사용 하도록이 예제를 수정할 수 있습니다는 `AddHandler` 및 `Handles` 문.  
   
 ### <a name="to-handle-the-percentdone-event-of-the-widget-class"></a>위젯 클래스의 PercentDone 이벤트를 처리 하려면  
   
@@ -66,7 +67,7 @@ ms.lasthandoff: 11/21/2017
  클릭 하면는 **취소** 동안 단추 `LongTask` 실행 되는 `Button2_Click` 이벤트가 실행 될으로 `DoEvents` 문을 적용 되려면 이벤트 처리를 허용 합니다. 클래스 수준 변수 `mblnCancel` 로 설정 된 `True`, 및 `mWidget_PercentDone` 테스트 한 설정 하는 다음 이벤트는 `ByRef Cancel` 인수 `True`합니다.  
   
 ## <a name="connecting-a-withevents-variable-to-an-object"></a>WithEvents 변수 개체에 연결  
- `Form1`처리 하도록 설정 된 `Widget` 개체의 이벤트입니다. 이제 남은 것 찾으려고는 `Widget` 어딘가에 합니다.  
+ `Form1` 처리 하도록 설정 된 `Widget` 개체의 이벤트입니다. 이제 남은 것 찾으려고는 `Widget` 어딘가에 합니다.  
   
  변수를 선언 하는 경우 `WithEvents` 디자인 타임에 없는 개체는 이와 연관 됩니다. A `WithEvents` 변수는 다른 개체 변수 처럼 합니다. 개체를 만들고 사용 하 여에 대 한 참조를 할당 해야는 `WithEvents` 변수입니다.  
   
@@ -80,7 +81,7 @@ ms.lasthandoff: 11/21/2017
   
      [!code-vb[VbVbcnWalkthroughDeclaringAndRaisingEvents#7](../../../../visual-basic/programming-guide/language-features/events/codesnippet/VisualBasic/walkthrough-handling-events_4.vb)]  
   
- 이 코드를 실행 하는 경우 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 만듭니다는 `Widget` 개체 및 해당 이벤트와 연결 된 이벤트 프로시저에 연결 `mWidget`합니다. 때부터, 때마다는 `Widget` 발생 해당 `PercentDone` 이벤트는 `mWidget_PercentDone` 이벤트 프로시저를 실행 합니다.  
+ Visual Basic 만듭니다이 코드가 실행 되는 `Widget` 개체 및 해당 이벤트와 연결 된 이벤트 프로시저에 연결 `mWidget`합니다. 때부터, 때마다는 `Widget` 발생 해당 `PercentDone` 이벤트는 `mWidget_PercentDone` 이벤트 프로시저를 실행 합니다.  
   
 #### <a name="to-call-the-longtask-method"></a>LongTask 메서드를 호출 하려면  
   
@@ -90,7 +91,7 @@ ms.lasthandoff: 11/21/2017
   
  전에 `LongTask` 메서드를 호출 완료율을 표시 해야 초기화 레이블과 클래스 수준 `Boolean` 으로 설정 되어 있어야 해당 메서드를 취소에 대 한 플래그 `False`합니다.  
   
- `LongTask`작업 기간 12.2 시간 (초)으로 호출 됩니다. `PercentDone` 이벤트가 발생 한 번 마다 1 / 3 초입니다. 이벤트가 발생할 때마다는 `mWidget_PercentDone` 이벤트 프로시저를 실행 합니다.  
+ `LongTask` 작업 기간 12.2 시간 (초)으로 호출 됩니다. `PercentDone` 이벤트가 발생 한 번 마다 1 / 3 초입니다. 이벤트가 발생할 때마다는 `mWidget_PercentDone` 이벤트 프로시저를 실행 합니다.  
   
  때 `LongTask` 완료 되 면 `mblnCancel` 있는지 테스트 `LongTask` 정상적으로 종료 하기 때문에 중지 된 경우 또는 `mblnCancel` 로 설정 된 `True`합니다. 완료율 전자의 경우에만 업데이트 됩니다.  
   

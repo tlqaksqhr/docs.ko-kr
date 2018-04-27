@@ -1,32 +1,33 @@
 ---
-title: "선언된 요소 참조(Visual Basic)"
-ms.custom: 
+title: 선언된 요소 참조(Visual Basic)
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - declared elements [Visual Basic]
 - references [Visual Basic], declared elements
 - qualified names [Visual Basic]
 ms.assetid: d6301709-f4cc-4b7a-b8ba-80898f14ab46
-caps.latest.revision: "19"
+caps.latest.revision: 19
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 9b3847164b4e577a9265a746b9329218b4af928b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 86d25d42688cffbf4076c4fb42eccc3b917d1dc1
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="references-to-declared-elements-visual-basic"></a>선언된 요소 참조(Visual Basic)
-코드에서 선언 된 요소를 참조 하는 경우는 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 컴파일러에서 참조를 해당 이름의 적절 한 선언에 있는 이름과 일치 합니다. 이름이 같은 둘 이상의 요소가 선언 된 경우 요소를 참조할 수는 제어할 수 있습니다 *조건에 맞는* 이름입니다.  
+코드에서 선언 된 요소를 참조 하는 경우 Visual Basic 컴파일러에서 참조를 해당 이름의 적절 한 선언에 있는 이름과 일치 합니다. 이름이 같은 둘 이상의 요소가 선언 된 경우 요소를 참조할 수는 제어할 수 있습니다 *조건에 맞는* 이름입니다.  
   
  컴파일러는 이름 선언에 대 한 이름 참조를 일치 시 키 려 고 *가장 좁은 범위*합니다. 즉 못하여 참조가 코드로 시작 하 고 다음 요소가 포함 된 수준을 통해 바깥쪽으로 작동 합니다.  
   
- 다음 예제에서는 이름이 같은 두 변수에 대 한 참조를 보여 줍니다. 이 예제에서는 두 개의 변수 선언, 각각의 명명 `totalCount`, 서로 다른 수준의 모듈의 범위 내에서 `container`합니다. 때 프로시저 `showCount` 표시 `totalCount` 한정자 없이 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 컴파일러는 로컬 선언 내부 즉 가장 좁은 범위에서 선언에 대 한 참조를 확인 `showCount`합니다. 모듈인 `totalCount` 포함 하는 모듈와 `container`, 컴파일러는 광범위 한 범위에서 선언에 대 한 참조를 확인 합니다.  
+ 다음 예제에서는 이름이 같은 두 변수에 대 한 참조를 보여 줍니다. 이 예제에서는 두 개의 변수 선언, 각각의 명명 `totalCount`, 서로 다른 수준의 모듈의 범위 내에서 `container`합니다. 때 프로시저 `showCount` 표시 `totalCount` Visual Basic 컴파일러 한정자 없이 로컬 선언 내부 즉 가장 좁은 범위에서 선언에 대 한 참조를 확인 `showCount`합니다. 모듈인 `totalCount` 포함 하는 모듈와 `container`, 컴파일러는 광범위 한 범위에서 선언에 대 한 참조를 확인 합니다.  
   
 ```vb  
 ' Assume these two modules are both in the same assembly.  
@@ -199,7 +200,7 @@ Dim xDoc As xD.XmlDocument
  모든 요소에 고유한 이름을 지정 하 여 이름 모호성을 방지할 수 있습니다. 다음 네임 스페이스, 모듈 또는 클래스를 사용 하 여 이름을 한정 하지 않고도 모든 요소에 대 한 참조를 만들 수 있습니다. 실수로 잘못 된 요소를 참조 하는 가능성 줄일 수도 있습니다.  
   
 ## <a name="shadowing"></a>섀도잉  
- 두 개의 프로그래밍 요소가 동일한 이름을 공유 하는 경우 그 중 하나가 숨길 수, 또는 *그림자*, 다른 하나 있습니다. 숨겨진된는 요소는 참조;에 사용할 수 없습니다. 대신, 코드 섀도잉 된 요소 이름을 사용의 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 컴파일러 숨기는 요소를 확인 합니다. 보다 자세한 내용 및 예제를 참조 하십시오. [Visual Basic의 숨김 기능](../../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)합니다.  
+ 두 개의 프로그래밍 요소가 동일한 이름을 공유 하는 경우 그 중 하나가 숨길 수, 또는 *그림자*, 다른 하나 있습니다. 숨겨진된는 요소는 참조;에 사용할 수 없습니다. 대신, 섀도잉 된 요소 이름을 사용 하는 코드를 Visual Basic 컴파일러 숨기는 요소 확인 합니다. 보다 자세한 내용 및 예제를 참조 하십시오. [Visual Basic의 숨김 기능](../../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [선언 요소 이름](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)  

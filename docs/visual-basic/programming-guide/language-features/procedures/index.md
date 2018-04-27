@@ -18,14 +18,14 @@ ms.assetid: 9effbcf0-80a0-4d1a-98f4-2c6920592766
 caps.latest.revision: 16
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 5487dc7dbe9be50e065610cfd61815242bb74ac0
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 92cb2dd3f356acf89cbe62b5f3f5dc81fce271fc
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="procedures-in-visual-basic"></a>Visual Basic의 프로시저
-*프로시저*란 선언문(`Function`, `Sub`, `Operator`, `Get`, `Set`) 및 일치하는 `End` 문으로 감싼 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 문의 블록입니다. [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]의 모든 실행문은 프로시저 내에 있어야 합니다.  
+A *프로시저* 는 Visual Basic 문에 포함 되는 선언문의 블록 (`Function`, `Sub`, `Operator`, `Get`, `Set`) 일치 하는 `End` 선언 합니다. Visual Basic의 모든 실행 가능 문은 프로시저 내에 있어야 합니다.  
   
 ## <a name="calling-a-procedure"></a>프로시저 호출  
  코드에서 다른 위치에 있는 프로시저를 호출합니다. 이것을 *프로시저 호출*이라고 합니다. 프로시저는 실행이 완료되면 자신을 호출한 코드(*호출 코드*라고 함)로 컨트롤을 반환합니다. 호출 코드란 프로시저를 이름으로 지정하고 프로시저에 컨트롤을 전달하는 문 또는 문 내부의 식입니다.  
@@ -43,7 +43,7 @@ ms.lasthandoff: 11/21/2017
  대부분의 경우 프로시저는 사용자가 호출할 때마다 다른 데이터에서 작동해야 합니다. 프로시저 호출의 일부로 이 정보를 프로시저에 전달할 수 있습니다. 프로시저는 0개 이상의 *매개 변수*를 정의하며, 각 매개 변수는 사용자가 전달할 것으로 예상하는 값을 나타냅니다. 프로시저 정의의 각 매개 변수에 해당하는 것이 프로시저 호출의 *인수*입니다. 인수는 지정된 프로시저 호출에서 해당 매개 변수에 전달하는 값을 나타냅니다.  
   
 ## <a name="types-of-procedures"></a>프로시저 유형  
- [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]은 여러 유형의 프로시저를 사용합니다.  
+ Visual Basic에서는 여러 가지 유형의 프로시저를 사용합니다.  
   
 -   [Sub 프로시저](./sub-procedures.md)는 작업을 수행하지만 호출 코드에 값을 반환하지 않습니다.  
   

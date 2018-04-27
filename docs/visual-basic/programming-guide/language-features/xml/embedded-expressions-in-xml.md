@@ -19,11 +19,11 @@ ms.assetid: bf2eb779-b751-4b7c-854f-9f2161482352
 caps.latest.revision: 22
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: b1cdba0a39a932f143ac98c2514240e1696a8fe0
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 3c6dff88d123f33ad4c33e91685104b760ecca3b
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="embedded-expressions-in-xml-visual-basic"></a>XML의 포함 식(Visual Basic)
 포함 된 식을 사용 하면 런타임 시 계산 되는 식을 포함 하는 XML 리터럴을 만들 수 있습니다. 포함 식 구문은 `<%=` `expression` `%>`, 같습니다 구문에서 사용 되는 [!INCLUDE[vstecasp](~/includes/vstecasp-md.md)]합니다.  
@@ -43,14 +43,14 @@ ms.lasthandoff: 11/21/2017
 ## <a name="embedded-expression-location-and-validation"></a>포함된 식 위치 및 유효성 검사  
  포함된 식은 XML 리터럴 식에서 특정 위치에만 나타날 수 있습니다. 식 형식 되는 식 위치 제어를 반환할 수 있습니다 및 방법을 `Nothing` 처리 됩니다. 다음 표에서 허용 되는 위치 및 포함 된 식의 형식에 설명 합니다.  
   
-|리터럴에 위치|식의 형식|처리`Nothing`|  
+|리터럴에 위치|식의 형식|처리 `Nothing`|  
 |---|---|---|  
-|XML 요소 이름|<xref:System.Xml.Linq.XName>|오류|  
-|XML 요소 내용|`Object`배열 또는`Object`|무시됨|  
-|XML 요소 특성 이름|<xref:System.Xml.Linq.XName>|오류, 아니면 특성 값`Nothing`|  
+|XML 요소 이름|<xref:System.Xml.Linq.XName>|Error|  
+|XML 요소 내용|`Object` 배열 또는 `Object`|무시됨|  
+|XML 요소 특성 이름|<xref:System.Xml.Linq.XName>|오류, 아니면 특성 값 `Nothing`|  
 |XML 요소 특성 값|`Object`|특성 선언이 무시 됩니다.|  
-|XML 요소 특성|<xref:System.Xml.Linq.XAttribute>또는 컬렉션<xref:System.Xml.Linq.XAttribute>|무시됨|  
-|XML 문서 루트 요소|<xref:System.Xml.Linq.XElement>하나의 컬렉션 또는 <xref:System.Xml.Linq.XElement> 개체와 임의 개수의 <xref:System.Xml.Linq.XProcessingInstruction> 및 <xref:System.Xml.Linq.XComment> 개체|무시됨|  
+|XML 요소 특성|<xref:System.Xml.Linq.XAttribute> 또는 컬렉션 <xref:System.Xml.Linq.XAttribute>|무시됨|  
+|XML 문서 루트 요소|<xref:System.Xml.Linq.XElement> 하나의 컬렉션 또는 <xref:System.Xml.Linq.XElement> 개체와 임의 개수의 <xref:System.Xml.Linq.XProcessingInstruction> 및 <xref:System.Xml.Linq.XComment> 개체|무시됨|  
   
 -   XML 요소 이름에 포함 된 식의 예:  
   
@@ -83,7 +83,7 @@ ms.lasthandoff: 11/21/2017
  특정 유형의 리터럴 포함된 식을 사용 하는 방법에 대 한 자세한 내용은 참조 [XML 문서 리터럴](../../../../visual-basic/language-reference/xml-literals/xml-document-literal.md), [XML 요소 리터럴](../../../../visual-basic/language-reference/xml-literals/xml-element-literal.md)합니다.  
   
 ## <a name="scoping-rules"></a>범위 지정 규칙  
- 컴파일러가 각 XML 리터럴을 적절 한 리터럴 형식에 대 한 생성자 호출을 변환합니다. 리터럴 내용과 XML 리터럴의의 포함된 식 생성자에 인수로 전달 됩니다. 즉, 모든 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 프로그래밍 요소는 XML 리터럴을 사용할 수 있는 해당 포함된 식을 사용할 수도 있습니다.  
+ 컴파일러가 각 XML 리터럴을 적절 한 리터럴 형식에 대 한 생성자 호출을 변환합니다. 리터럴 내용과 XML 리터럴의의 포함된 식 생성자에 인수로 전달 됩니다. 즉, XML 리터럴을 사용할 수 있는 모든 Visual Basic 프로그래밍 요소는 포함된 식을 사용할 수도 있습니다.  
   
  XML 리터럴 내에서 사용 하 여 접두사를 선언 하는 XML 네임 스페이스에 액세스할 수 있습니다는 `Imports` 문. 새 XML 네임 스페이스 접두사를 선언 하거나 사용 하 여 요소에서 기존 XML 네임 스페이스 접두사를 숨길 수 있습니다는 `xmlns` 특성입니다. 새 네임 스페이스는 포함된 식에서 XML 리터럴의 아니라 해당 요소의 자식 노드를 사용할 수 있습니다.  
   

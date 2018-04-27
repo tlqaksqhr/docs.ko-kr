@@ -16,11 +16,11 @@ helpviewer_keywords:
 ms.assetid: db7cfa59-c315-401c-a59b-0daf355343d6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 82a0adc9e821df3a789cf19e798d4bad9e9a69e3
-ms.sourcegitcommit: 498799639937c89de777361aab74261efe7b79ea
+ms.openlocfilehash: f07fc7988c4329397e464f05d334648e98cb129d
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="-netcf"></a>-netcf
 [!INCLUDE[Compact](~/includes/compact-md.md)]를 대상으로 하도록 컴파일러를 설정합니다.  
@@ -32,12 +32,12 @@ ms.lasthandoff: 03/22/2018
 ```  
   
 ## <a name="remarks"></a>설명  
- `-netcf` 옵션을 사용 하면은 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 대상에 컴파일러는 [!INCLUDE[Compact](~/includes/compact-md.md)] 전체 대신 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]합니다. 전체에만 존재 하는 언어 기능이 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 을 사용할 수 없습니다.  
+ `-netcf` 옵션을 사용 하면 대상에 Visual Basic 컴파일러는 [!INCLUDE[Compact](~/includes/compact-md.md)] 전체 대신 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]합니다. 전체에만 존재 하는 언어 기능이 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 을 사용할 수 없습니다.  
   
  `-netcf` 옵션은 함께 사용할 [-sdkpath](../../../visual-basic/reference/command-line-compiler/sdkpath.md)합니다. 사용 하지 않도록 설정 하는 언어 기능은 `-netcf` 대상 파일에 없는 동일한 언어 기능과 `-sdkpath`합니다.  
   
 > [!NOTE]
->  `-netcf` 옵션은 Visual Studio 개발 환경 내에서 사용할 수 없습니다; 명령줄에서 컴파일할 경우에 사용할 수는 있습니다. `-netcf` 옵션을 설정 하는 경우는 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 장치 프로젝트를 로드 합니다.  
+>  `-netcf` 옵션은 Visual Studio 개발 환경 내에서 사용할 수 없습니다; 명령줄에서 컴파일할 경우에 사용할 수는 있습니다. `-netcf` 장치 Visual Basic 프로젝트를 로드할 때 옵션이 설정 되어 있습니다.  
   
  `-netcf` 다음과 같은 언어 기능을 변경 하는 옵션:  
   
@@ -53,7 +53,7 @@ ms.lasthandoff: 03/22/2018
   
      [!code-vb[VbVbalrCompiler#36](../../../visual-basic/reference/command-line-compiler/codesnippet/VisualBasic/netcf_3.vb)]  
   
--   제거 된 Visual Basic 6.0 키워드를 사용 하 여 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 다른 오류를 생성 때 `-netcf` 사용 됩니다. 이 다음 키워드에 대 한 오류 메시지를 영향을 줍니다.  
+-   다른 오류를 생성 하는 Visual Basic에서 제거 된 Visual Basic 6.0 키워드를 사용 하는 경우 `-netcf` 사용 됩니다. 이 다음 키워드에 대 한 오류 메시지를 영향을 줍니다.  
   
     -   `Open`  
   

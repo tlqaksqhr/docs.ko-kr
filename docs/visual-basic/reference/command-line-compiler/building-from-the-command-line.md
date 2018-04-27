@@ -19,19 +19,19 @@ helpviewer_keywords:
 - command-line compilers [Visual Basic], Visual Basic
 - command line [Visual Basic], Visual Basic
 ms.assetid: e61947e9-a42e-4717-a699-5f70a98cdd03
-caps.latest.revision: ''
+caps.latest.revision: 13
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: c3f71a84feffce46bafd92ff701a0250c059a82e
-ms.sourcegitcommit: 498799639937c89de777361aab74261efe7b79ea
+ms.openlocfilehash: 1fd4054838925267647986a5166fd88037b17fae
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="building-from-the-command-line-visual-basic"></a>명령줄에서 빌드(Visual Basic)
-A [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 프로젝트 하나 이상의 별도 소스 파일로 구성 됩니다. 컴파일 이라는 프로세스 동안 이러한 파일 통합할 하나의 패키지로-응용 프로그램으로 실행할 수 있는 단일 실행 파일입니다.  
+Visual Basic 프로젝트는 하나 이상의 별도 소스 파일로 구성 됩니다. 컴파일 이라는 프로세스 동안 이러한 파일 통합할 하나의 패키지로-응용 프로그램으로 실행할 수 있는 단일 실행 파일입니다.  
   
- [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 내에서 프로그램을 컴파일 하는 대신 명령줄 컴파일러를 제공는 [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] 통합된 개발 환경 (IDE). 명령줄 컴파일러는 필요 하지 않으면 IDE의 기능 중 일부만 상황 용인지-예를 들어 경우 있습니다 하거나 작성 하는 제한 된 시스템 메모리 또는 저장소 공간이 있는 컴퓨터에 대 한 합니다.  
+ Visual Basic 프로그램 내에서 컴파일 하는 대신 명령줄 컴파일러에서 제공 된 [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] 통합된 개발 환경 (IDE). 명령줄 컴파일러는 필요 하지 않으면 IDE의 기능 중 일부만 상황 용인지-예를 들어 경우 있습니다 하거나 작성 하는 제한 된 시스템 메모리 또는 저장소 공간이 있는 컴퓨터에 대 한 합니다.  
   
   내에서 소스 파일을 컴파일하는 [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] IDE, 선택는 **빌드** 명령을 **빌드** 메뉴.  
   

@@ -1,27 +1,29 @@
 ---
-title: "UI 자동화 클라이언트의 캐싱"
-ms.custom: 
+title: UI 자동화 클라이언트의 캐싱
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-bcl
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-bcl
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - UI Automation caching in clients
 - caching, UI Automation clients
 ms.assetid: 94c15031-4975-43cc-bcd5-c9439ed21c9c
-caps.latest.revision: "24"
+caps.latest.revision: 24
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: cce1890357f5781f1772b6a0aa583e493e2cfa8b
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: 5bbd54d4e1e8a6a1eae52f50696aecddd1f8bd8a
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="caching-in-ui-automation-clients"></a>UI 자동화 클라이언트의 캐싱
 > [!NOTE]
@@ -67,7 +69,7 @@ ms.lasthandoff: 01/19/2018
 ## <a name="activating-the-cacherequest"></a>CacheRequest 활성화  
  캐싱은 현재 스레드에 대해 <xref:System.Windows.Automation.AutomationElement> 가 활성 상태일 때 <xref:System.Windows.Automation.CacheRequest> 개체가 검색되는 경우에만 수행됩니다. <xref:System.Windows.Automation.CacheRequest>를 활성화하는 방법은 두 가지입니다.  
   
- 일반적인 방법은 <xref:System.Windows.Automation.CacheRequest.Activate%2A>를 호출하는 것입니다. 이 메서드는 <xref:System.IDisposable>을 구현하는 개체를 반환합니다. <xref:System.IDisposable> 개체가 존재하는 한 이 요청은 활성 상태로 유지됩니다. 개체의 수명을 제어하는 가장 쉬운 방법은 `using` ([!INCLUDE[TLA#tla_cshrp](../../../includes/tlasharptla-cshrp-md.md)]) 또는 `Using` ([!INCLUDE[TLA2#tla_visualb](../../../includes/tla2sharptla-visualb-md.md)]) 블록 내에 호출을 포함하는 것입니다. 이렇게 하면 예외가 발생하더라도 요청이 스택에서 팝됩니다.  
+ 일반적인 방법은 <xref:System.Windows.Automation.CacheRequest.Activate%2A>를 호출하는 것입니다. 이 메서드는 <xref:System.IDisposable>을 구현하는 개체를 반환합니다. <xref:System.IDisposable> 개체가 존재하는 한 이 요청은 활성 상태로 유지됩니다. 내에서 호출을 포함 하는 개체의 수명을 제어 하는 가장 쉬운 방법은 `using` (C#) 또는 `Using` 블록 (Visual Basic). 이렇게 하면 예외가 발생하더라도 요청이 스택에서 팝됩니다.  
   
  다른 방법으로는 <xref:System.Windows.Automation.CacheRequest.Push%2A>를 호출하는 것이며, 이 방법은 캐시 요청을 중첩할 때 유용합니다. 이렇게 하면 스택에 요청이 배치되고 활성화됩니다. 이 요청은 <xref:System.Windows.Automation.CacheRequest.Pop%2A>에 의해 스택에서 제거될 때까지 활성 상태로 유지됩니다. 다른 요청이 스택에 푸시되면 이 요청이 일시적으로 비활성 상태가 되고 스택 맨 위의 요청만 활성 상태로 유지됩니다.  
   

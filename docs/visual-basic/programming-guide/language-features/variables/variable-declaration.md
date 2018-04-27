@@ -1,12 +1,13 @@
 ---
-title: "Visual Basic의 변수 선언"
-ms.custom: 
+title: Visual Basic의 변수 선언
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - variables [Visual Basic], declaring
@@ -24,14 +25,14 @@ helpviewer_keywords:
 - local variables [Visual Basic], declarations
 - scope [Visual Basic], variables
 ms.assetid: d8f10226-92b1-480f-9f53-df377b2d7e15
-caps.latest.revision: "31"
+caps.latest.revision: 31
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 7f7b924aed1da7db816aa5c11239e301428770b7
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 8edd0b65b08efd437cc35e8f58ed7ed423736920
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="variable-declaration-in-visual-basic"></a>Visual Basic의 변수 선언
 이름 및 특성을 지정 하려면 변수를 선언 합니다. 변수에 대 한 선언문이 [Dim 문](../../../../visual-basic/language-reference/statements/dim-statement.md)합니다. 해당 위치 및 내용을 변수의 특성을 결정 합니다.  
@@ -41,7 +42,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="declaration-levels"></a>선언 수준  
   
 ### <a name="local-and-member-variables"></a>로컬 및 멤버 변수  
- A *지역 변수* 은 프로시저 내에서 선언입니다. A *멤버 변수* 의 멤버인는 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 입력; 모듈 수준에서 해당 클래스, 구조체 또는 모듈의 내부 프로시저 내부가 아니라 클래스, 구조체 또는 모듈 내에서 선언 합니다.  
+ A *지역 변수* 은 프로시저 내에서 선언입니다. A *멤버 변수* Visual Basic 형식의 멤버는 해당 클래스, 구조체 또는 모듈의 내부 프로시저 내부가 아니라 내 클래스, 구조체 또는 모듈의 모듈 수준에서 선언 합니다.  
   
 ### <a name="shared-and-instance-variables"></a>공유 및 인스턴스 변수  
  클래스 또는 구조체에서 멤버 변수 범주의 공유 되는지 여부에 따라 달라 집니다. 으로 선언 된 경우는 [Shared](../../../../visual-basic/language-reference/modifiers/shared.md) 키워드를 *공유 변수*, 클래스 또는 구조체의 모든 인스턴스에서 공유 하는 단일 복사본에 존재 합니다.  
@@ -51,15 +52,15 @@ ms.lasthandoff: 11/21/2017
 ## <a name="declaring-data-type"></a>데이터 형식 선언  
  [으로](../../../../visual-basic/language-reference/statements/as-clause.md) 선언문에 절을 사용 하면 데이터 형식 또는 선언 하는 변수의 개체 유형을 정의할 수 있습니다. 변수에 대 한 다음 유형 중 하나를 지정할 수 있습니다.  
   
--   등의 기본 데이터 형식 `Boolean`, `Long`, 또는`Decimal`  
+-   등의 기본 데이터 형식 `Boolean`, `Long`, 또는 `Decimal`  
   
 -   배열 또는 구조체와 같은 복합 데이터 형식  
   
 -   개체 유형 또는 다른 응용 프로그램 또는 응용 프로그램에 정의 된 클래스  
   
--   A [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 클래스 같은 <xref:System.Windows.Forms.Label> 또는<xref:System.Windows.Forms.TextBox>  
+-   A [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 클래스 같은 <xref:System.Windows.Forms.Label> 또는 <xref:System.Windows.Forms.TextBox>  
   
--   와 같은 인터페이스 형식 <xref:System.IComparable> 또는<xref:System.IDisposable>  
+-   와 같은 인터페이스 형식 <xref:System.IComparable> 또는 <xref:System.IDisposable>  
   
  데이터 형식을 반복 하지 않고 하나의 문에서 여러 변수를 선언할 수 있습니다. 다음 문에서 변수 `i`, `j`, 및 `k` 유형으로 선언 `Integer`, `l` 및 `m` 으로 `Long`, 및 `x` 및 `y` 로`Single`:  
   

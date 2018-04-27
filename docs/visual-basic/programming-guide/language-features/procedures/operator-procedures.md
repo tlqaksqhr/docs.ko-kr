@@ -1,11 +1,12 @@
 ---
-title: "연산자 프로시저(Visual Basic)"
-ms.custom: 
+title: 연산자 프로시저(Visual Basic)
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - Visual Basic code, procedures
@@ -17,22 +18,22 @@ helpviewer_keywords:
 - operator overloading
 - operator procedures
 ms.assetid: 8c513d38-246b-4fb7-8b75-29e1364e555b
-caps.latest.revision: "17"
+caps.latest.revision: 17
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 865695731dd591b0c48f4416814fa97edf4ea42e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 8fba5180da6498d280fa4192937c39d3e33168e8
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="operator-procedures-visual-basic"></a>연산자 프로시저(Visual Basic)
-연산자 프로시저는 일련의 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 표준 연산자의 동작을 정의 하는 문 (같은 `*`, `<>`, 또는 `And`) 클래스 또는 구조체 정의에서 합니다. 이 라고도 *연산자 오버 로드*합니다.  
+연산자 프로시저는 일련의 표준 연산자의 동작을 정의 하는 Visual Basic 문 (같은 `*`, `<>`, 또는 `And`) 클래스 또는 구조체 정의에서 합니다. 이 라고도 *연산자 오버 로드*합니다.  
   
 ## <a name="when-to-define-operator-procedures"></a>연산자 프로시저를 정의 하는 경우  
  클래스 또는 구조를 정의한 경우 해당 클래스 또는 구조체의 형식으로 변수를 선언할 수 있습니다. 경우에 따라 이러한 변수는 식의 일부로에 참여 해야 합니다. 이렇게 하려면 연산자의 피연산자 이어야 합니다.  
   
- [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]해당 기본 데이터 형식에 대해서만 연산자를 정의합니다. 두 개의 피연산자는 클래스 또는 구조체의 형식 또는 한 경우 연산자의 동작을 정의할 수 있습니다.  
+ Visual Basic의 기본 데이터 형식에 대해서만 연산자를 정의합니다. 두 개의 피연산자는 클래스 또는 구조체의 형식 또는 한 경우 연산자의 동작을 정의할 수 있습니다.  
   
  자세한 내용은 참조 [Operator 문](../../../../visual-basic/language-reference/statements/operator-statement.md)합니다.  
   

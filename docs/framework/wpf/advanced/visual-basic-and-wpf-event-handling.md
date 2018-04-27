@@ -1,30 +1,32 @@
 ---
-title: "Visual Basic 및 WPF 이벤트 처리"
-ms.custom: 
+title: Visual Basic 및 WPF 이벤트 처리
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Visual Basic [WPF], event handlers
 - event handlers [WPF], Visual Basic
 ms.assetid: ad4eb9aa-3afc-4a71-8cf6-add3fbea54a1
-caps.latest.revision: "12"
+caps.latest.revision: 12
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ed10e52c59112714a500fe52ccf5b398c14a97b7
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: f61b63e7f80ec779d03c230bd4f24eed00098242
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="visual-basic-and-wpf-event-handling"></a>Visual Basic 및 WPF 이벤트 처리
-에 대 한는 [!INCLUDE[TLA#tla_visualbnet](../../../../includes/tlasharptla-visualbnet-md.md)] 언어 구체적으로, 특정 언어를 사용할 수 있습니다 `Handles` 이벤트 처리기 특성을 사용 하 여 이벤트 처리기를 연결 하거나 사용 하지 않고 인스턴스와 연결할 키워드는 <xref:System.Windows.UIElement.AddHandler%2A> 메서드. 그러나 처리기를 인스턴스에 연결하는 `Handles` 기술에는 몇 가지 제한 사항이 있습니다. 이는 `Handles` 구문이 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 이벤트 시스템의 특정 라우트된 이벤트 기능 중 일부를 지원할 수 없기 때문입니다.  
+Microsoft Visual Basic.NET 언어에 대 한 특히 있습니다 사용할 수는 언어별 `Handles` 이벤트 처리기 특성을 사용 하 여 이벤트 처리기를 연결 하거나 사용 하지 않고 인스턴스와 연결할 키워드는 <xref:System.Windows.UIElement.AddHandler%2A> 메서드. 그러나 처리기를 인스턴스에 연결하는 `Handles` 기술에는 몇 가지 제한 사항이 있습니다. 이는 `Handles` 구문이 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 이벤트 시스템의 특정 라우트된 이벤트 기능 중 일부를 지원할 수 없기 때문입니다.  
   
 ## <a name="using-handles-in-a-wpf-application"></a>WPF 응용 프로그램에서 "Handles" 사용  
  `Handles`를 사용하여 인스턴스 및 이벤트에 연결되는 이벤트 처리기는 모두 인스턴스의 partial 클래스 선언 내에 정의되어야 하며, 이는 요소에서 특성 값을 통해 할당되는 이벤트 처리기에 대한 요구 사항이기도 합니다. 만 지정할 수 있습니다 `Handles` 있는 페이지에는 요소는 <xref:System.Windows.FrameworkContentElement.Name%2A> 속성 값 (또는 [X:name 지시문](../../../../docs/framework/xaml-services/x-name-directive.md) 선언). 때문에 이것이 <xref:System.Windows.FrameworkContentElement.Name%2A> 에 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 지 원하는 데 필요한 인스턴스 참조는 *Instance.Event* 참조 형식에 필요한는 `Handles` 구문. 에 사용할 수 있는 유일한 요소 `Handles` 없이 <xref:System.Windows.FrameworkContentElement.Name%2A> 참조는 partial 클래스를 정의 하는 루트 요소 인스턴스.  
@@ -45,7 +47,7 @@ ms.lasthandoff: 12/22/2017
  `Handles`는 처리된 것으로 이미 표시된 이벤트에 대해 호출되는 처리기를 연결할 수 없습니다. 코드 및 호출을 사용 해야 대신는 `handledEventsToo` 오버 로드 <xref:System.Windows.UIElement.AddHandler%28System.Windows.RoutedEvent%2CSystem.Delegate%2CSystem.Boolean%29>합니다.  
   
 > [!NOTE]
->  XAML에서 동일한 이벤트에 대한 이벤트 처리기를 지정할 때 [!INCLUDE[vb_current_short](../../../../includes/vb-current-short-md.md)] 코드에서 `Handles` 구문을 사용하지 마세요. 이 경우 이벤트 처리기가 두 번 호출됩니다.  
+>  사용 하지 않는 `Handles` XAML의 동일한 이벤트에 대 한 이벤트 처리기를 지정 하는 경우 Visual Basic 코드에서 구문입니다. 이 경우 이벤트 처리기가 두 번 호출됩니다.  
   
 ## <a name="how-wpf-implements-handles-functionality"></a>WPF에서 "Handles" 기능을 구현하는 방법  
  경우는 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] 페이지가 컴파일되는 경우 중간 파일 선언 `Friend` `WithEvents` 있는 페이지에 있는 모든 요소에 대 한 참조는 <xref:System.Windows.FrameworkContentElement.Name%2A> 속성 집합 (또는 [X:name 지시문](../../../../docs/framework/xaml-services/x-name-directive.md) 선언). 각 명명된 인스턴스는 `Handles`를 통해 처리기에 할당할 수 있는 요소일 수 있습니다.  

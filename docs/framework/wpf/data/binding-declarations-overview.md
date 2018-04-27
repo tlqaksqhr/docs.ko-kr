@@ -1,13 +1,13 @@
 ---
-title: "바인딩 선언 개요"
-ms.custom: 
+title: 바인딩 선언 개요
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-wpf
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -20,17 +20,17 @@ helpviewer_keywords:
 - syntax [WPF], object elements
 - binding declarations [WPF]
 ms.assetid: b97fd626-4c0d-4761-872a-2bca5820da2c
-caps.latest.revision: 
+caps.latest.revision: 34
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 615b92d264b91ab5b267d5e79ab829b8afa489cd
-ms.sourcegitcommit: 973a12d1e6962cd9a9c263fbfaad040ec8267fe9
+ms.openlocfilehash: 3fcc1b57f758abd2791bc6970c29300fd2fc0e30
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/22/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="binding-declarations-overview"></a>바인딩 선언 개요
 이 항목에서는 바인딩을 선언할 수 있는 여러 가지 방법을 설명합니다.  
@@ -38,7 +38,7 @@ ms.lasthandoff: 02/22/2018
  
   
 <a name="Prereq"></a>   
-## <a name="prerequisites"></a>필수 구성 요소  
+## <a name="prerequisites"></a>전제 조건  
  이 항목은 태그 확장의 개념 및 사용 방법에 익숙하다는 것을 전제로 합니다. 태그 확장에 대한 자세한 내용은 [XAML 태그 확장 및 WPF XAML](../../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md)을 참조하세요.  
   
  이 항목에서는 데이터 바인딩 개념에 대해 다루지 않습니다. 데이터 바인딩 개념에 대한 자세한 내용은 [데이터 바인딩 개요](../../../../docs/framework/wpf/data/data-binding-overview.md)를 참조하세요.  
@@ -88,7 +88,7 @@ ms.lasthandoff: 02/22/2018
   
 -   가장 단순한 경우는 <xref:System.Windows.Data.Binding.Path%2A> 속성 값은 바인딩의 경우와 같은 사용할 소스 개체의 속성 이름 `Path=PropertyName`합니다.  
   
--   [!INCLUDE[TLA#tla_cshrp](../../../../includes/tlasharptla-cshrp-md.md)]과 비슷한 구문을 사용하여 속성의 하위 속성을 지정할 수 있습니다. 예를 들어 `Path=ShoppingCart.Order` 절은 개체 또는 속성 `ShoppingCart`의 하위 속성 `Order`에 대한 바인딩을 설정합니다.  
+-   C#와 유사한 구문을 사용 하 여 속성의 하위 속성을 지정할 수 있습니다. 예를 들어 `Path=ShoppingCart.Order` 절은 개체 또는 속성 `ShoppingCart`의 하위 속성 `Order`에 대한 바인딩을 설정합니다.  
   
 -   연결된 속성에 바인딩하려면 연결된 속성을 괄호로 묶습니다. 예를 들어, 연결된 된 속성에 바인딩할 <xref:System.Windows.Controls.DockPanel.Dock%2A?displayProperty=nameWithType>, 구문은 `Path=(DockPanel.Dock)`합니다.  
   

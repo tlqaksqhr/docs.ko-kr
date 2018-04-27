@@ -1,12 +1,13 @@
 ---
-title: "데이터 서비스 쿼리(WCF Data Services)"
-ms.custom: 
+title: 데이터 서비스 쿼리(WCF Data Services)
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework-oob
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -16,16 +17,17 @@ helpviewer_keywords:
 - WCF Data Services, querying
 - WCF Data Services, accessing data
 ms.assetid: 823e9444-27aa-4f1f-be8e-0486d67f54c0
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 976f1e4d8a149f8104325fd5d006d245afee04a9
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 35370b5d4757d16c766499c1f3ea8254c2d90116
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="querying-the-data-service-wcf-data-services"></a>데이터 서비스 쿼리(WCF Data Services)
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 클라이언트 라이브러리를 사용하면 LINQ(Language-Integrated Query) 사용을 비롯한 익숙한 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 프로그래밍 패턴을 사용하여 데이터 서비스에 대해 쿼리를 실행할 수 있습니다. 클라이언트 라이브러리는 클라이언트에서 <xref:System.Data.Services.Client.DataServiceQuery%601> 클래스의 인스턴스로 정의된 쿼리를 HTTP GET 요청 메시지로 변환합니다. 라이브러리는 응답 메시지를 받아 클라이언트 데이터 서비스 클래스의 인스턴스로 변환 합니다. 이러한 클래스는 <xref:System.Data.Services.Client.DataServiceContext>가 속해 있는 <xref:System.Data.Services.Client.DataServiceQuery%601>에 의해 추적됩니다.  
@@ -39,7 +41,7 @@ ms.lasthandoff: 12/22/2017
   
 -   결과가 다음과 같이 암시적으로 열거되는 경우  
   
-    -   <xref:System.Data.Services.Client.DataServiceContext>(C#) 또는 `foreach`(`For Each`) 루프 중과 같이 엔터티 집합을 나타내는 [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)]에 대한 속성이 열거되는 경우  
+    -   <xref:System.Data.Services.Client.DataServiceContext>(C#) 또는 `foreach`(Visual Basic) 루프 중과 같이 엔터티 집합을 나타내는 `For Each`에 대한 속성이 열거되는 경우  
   
     -   쿼리가 `List` 컬렉션에 할당된 경우  
   

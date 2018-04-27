@@ -1,12 +1,13 @@
 ---
-title: "연습: Visual C#에서 합성 컨트롤 제작"
-ms.custom: 
+title: '연습: Visual C#에서 합성 컨트롤 제작'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-winforms
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - custom controls [C#]
@@ -15,16 +16,17 @@ helpviewer_keywords:
 - user controls [C#]
 - custom controls [Windows Forms], creating
 ms.assetid: f88481a8-c746-4a36-9479-374ce5f2e91f
-caps.latest.revision: "21"
+caps.latest.revision: 21
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 880effb930943fcb8715dbc10c9676fae0bd903c
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: c88a9b4786fd544d175243fedb56b5071c8990f6
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="walkthrough-authoring-a-composite-control-with-visual-c"></a>연습: Visual C#에서 합성 컨트롤 제작 #
 복합 컨트롤은 사용자 지정 그래픽 인터페이스를 만들고 재사용할 수 있는 방법을 제공합니다. 복합 컨트롤은 기본적으로 시각적 표현이 있는 구성 요소입니다. 따라서 사용자 입력의 유효성을 검사하고 표시 속성을 수정하거나 작성자가 요구하는 다른 작업을 수행하여 기능을 확장할 수 있는 하나 이상의 Windows Forms 컨트롤, 구성 요소 또는 코드 블록으로 구성할 수 있습니다. 복합 컨트롤은 다른 컨트롤과 동일한 방식으로 Windows Forms에 배치할 수 있습니다. 이 연습의 첫 번째 부분에서는 `ctlClock`이라는 간단한 복합 컨트롤을 만듭니다. 두 번째 부분에서는 상속을 통해 `ctlClock`의 기능을 확장합니다.  
@@ -39,7 +41,7 @@ ms.lasthandoff: 01/19/2018
   
 1.  **파일** 메뉴에서 **새로 만들기**를 가리키고 **프로젝트**를 선택하여 **새 프로젝트** 대화 상자를 엽니다.  
   
-2.  [!INCLUDE[csprcs](../../../../includes/csprcs-md.md)] 프로젝트 목록에서 **Windows Forms 컨트롤 라이브러리** 프로젝트 템플릿을 선택하고 **이름** 상자에 `ctlClockLib`를 입력한 후 **확인**을 클릭합니다.  
+2.  Visual C# 프로젝트의 목록에서 선택 된 **Windows Forms 컨트롤 라이브러리** 프로젝트 템플릿, 형식 `ctlClockLib` 에 **이름** 상자를 선택한 다음 클릭 **확인**합니다.  
   
      프로젝트 이름, `ctlClockLib`는 기본적으로 루트 네임스페이스에도 할당됩니다. 루트 네임스페이스는 어셈블리에서 구성 요소의 이름을 정규화하는 데 사용됩니다. 예를 들어 두 어셈블리에서 `ctlClock`이라는 구성 요소를 제공하면 `ctlClockLib.ctlClock.`을 사용하여 `ctlClock` 구성 요소를 지정할 수 있습니다.  
   

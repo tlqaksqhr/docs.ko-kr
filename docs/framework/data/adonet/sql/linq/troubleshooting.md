@@ -1,24 +1,26 @@
 ---
-title: "문제 해결"
-ms.custom: 
+title: 문제 해결
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 8cd4401c-b12c-4116-a421-f3dcffa65670
-caps.latest.revision: "3"
+caps.latest.revision: 3
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 56d06fa7adf2690a2cb9194342071c7814a4ec4a
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: 5544540c6a27975a885bf4cd8b2e0a26183e192b
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="troubleshooting"></a>문제 해결
 다음은 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 응용 프로그램에서 발생할 수 있는 문제와 이러한 문제를 방지하거나 문제의 영향을 줄일 수 있는 방법에 대한 설명입니다.  
@@ -57,7 +59,7 @@ ms.lasthandoff: 01/17/2018
   
 -   `System.Core.dll` 및 `System.Data.Linq.dll`에 대한 참조가 있는지 여부  
   
--   `Imports` 및 [!INCLUDE[vbprvb](../../../../../../includes/vbprvb-md.md)]에 사용할 `using`(<xref:System.Linq>) 또는 <xref:System.Data.Linq>(C#) 지시문이 있는지 여부  
+-   있는 `Imports` (Visual Basic) 또는 `using` (C#) 지시문에 대 한 <xref:System.Linq> 및 <xref:System.Data.Linq>합니다.  
   
 ## <a name="duplicatekeyexception"></a>DuplicateKeyException  
  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 프로젝트를 디버깅하는 동안 엔터티의 관계를 이동할 수 있습니다. 이렇게 하면 이러한 항목이 캐시에 들어 오고 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]에서 이를 인식합니다. 이 상태에서 <xref:System.Data.Linq.Table%601.Attach%2A>나 <xref:System.Data.Linq.Table%601.InsertOnSubmit%2A>을 실행하거나 키가 동일한 여러 행을 생성하는 유사한 메서드를 실행하면 <xref:System.Data.Linq.DuplicateKeyException>이 throw됩니다.  

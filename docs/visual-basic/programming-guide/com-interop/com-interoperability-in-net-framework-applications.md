@@ -1,30 +1,31 @@
 ---
-title: ".NET Framework 응용 프로그램의 COM 상호 운용성(Visual Basic)"
-ms.custom: 
+title: .NET Framework 응용 프로그램의 COM 상호 운용성(Visual Basic)
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - interoperability, COM and .NET framework objects
 - COM interop [Visual Basic]
 - shared components
 ms.assetid: f5a72143-c268-4dff-a019-974ad940e17d
-caps.latest.revision: "15"
+caps.latest.revision: 15
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 0c84143e22f33f572447c50e33559a52469b181a
-ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
+ms.openlocfilehash: 25fbde3845d378d4a2bcfc13c71124ad1bc29514
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="com-interoperability-in-net-framework-applications-visual-basic"></a>.NET Framework 응용 프로그램의 COM 상호 운용성(Visual Basic)
-동일한 응용 프로그램에서 COM 개체와.NET Framework 개체를 사용 하려는 경우 개체가 메모리에 존재 하는 방식에서 차이 해결 해야 합니다. 관리 되는 메모리에 있는.NET Framework 개체-공용 언어 런타임에 의해 제어 하는 메모리-필요에 따라 런타임에 의해 이동 될 수 있습니다. COM 개체는 관리 되지 않는 메모리에 있으며 다른 메모리 위치로 이동 될 수 없습니다. [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)]및 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 이러한 상호 작용을 제어 하는 도구를 관리 및 구성 요소 관리 되지 않는 리소스를 제공 합니다. 관리 코드에 대 한 자세한 내용은 참조 [공용 언어 런타임](../../../standard/clr.md)합니다.  
+동일한 응용 프로그램에서 COM 개체와.NET Framework 개체를 사용 하려는 경우 개체가 메모리에 존재 하는 방식에서 차이 해결 해야 합니다. 관리 되는 메모리에 있는.NET Framework 개체-공용 언어 런타임에 의해 제어 하는 메모리-필요에 따라 런타임에 의해 이동 될 수 있습니다. COM 개체는 관리 되지 않는 메모리에 있으며 다른 메모리 위치로 이동 될 수 없습니다. [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] 및 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 이러한 상호 작용을 제어 하는 도구를 관리 및 구성 요소 관리 되지 않는 리소스를 제공 합니다. 관리 코드에 대 한 자세한 내용은 참조 [공용 언어 런타임](../../../standard/clr.md)합니다.  
   
- .NET 응용 프로그램에서 COM 개체를 사용 하는 것 외에도 수 또한 사용 하려는 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] COM. 통해 관리 되지 않는 코드에서 액세스할 수 있는 개체를 개발 하려면  
+ .NET 응용 프로그램에서 COM 개체를 사용 하는 것 외에도 수 하려는 Visual Basic을 사용 하 여 COM. 통해 비관리 코드에서 액세스할 수 있는 개체를 개발  
   
  이 페이지의 링크 COM 및.NET Framework 개체 간의 상호 작용에 자세히 설명 합니다.  
   

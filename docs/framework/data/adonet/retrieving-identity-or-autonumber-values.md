@@ -13,17 +13,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: d6b7f9cb-81be-44e1-bb94-56137954876d
-caps.latest.revision: ''
+caps.latest.revision: 7
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload:
 - dotnet
-ms.openlocfilehash: 15c435d46d3695f78db27801f54ec9de475b2989
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: ef070c737f6a108aa9c9285d2cc8e0a1144479bd
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="retrieving-identity-or-autonumber-values"></a>ID 또는 일련 번호 값 검색
 관계형 데이터베이스에서 기본 키는 항상 고유한 값이 들어 있는 열 또는 열의 조합입니다. 기본 키 값을 알면 해당 값이 있는 행을 찾을 수 있습니다. SQL Server, Oracle 및 Microsoft Access/Jet 등과 같은 관계형 데이터베이스 엔진은 기본 키로 지정할 수 있는 자동 증분 열의 작성을 지원합니다. 이러한 값은 서버에 의해 행으로 생성되어 테이블에 추가됩니다. 이를 위해서는 SQL Server에서는 열의 identity 속성을 설정하고, Oracle에서는 시퀀스를 만들고, Microsoft Access에서는 AutoNumber 열을 만듭니다.  
@@ -35,7 +35,7 @@ ms.lasthandoff: 03/26/2018
  Microsoft Access Jet 데이터베이스 엔진과 같은 일부 데이터베이스에서는 출력 매개 변수를 지원하지 않으며 하나의 배치에서 여러 문을 처리할 수 없습니다. Jet 데이터베이스 엔진으로 작업하는 경우 `RowUpdated`의 `DataAdapter` 이벤트에 대한 이벤트 처리기에서 별도의 SELECT 명령을 실행하여 삽입된 행에 대해 생성되는 새 AutoNumber 값을 검색할 수 있습니다.  
   
 > [!NOTE]
->  자동 증분 값 대신 사용할 수 있는 방법은 <xref:System.Guid.NewGuid%2A> 개체의 <xref:System.Guid> 메서드를 사용하여 새로운 행이 삽입될 때마다 서버로 복사될 수 있는 GUID(Globally Unique Identifier)를 클라이언트 컴퓨터에 생성하는 것입니다. `NewGuid` 메서드는 값이 복제되지 않을 확률이 높은 알고리즘을 사용하여 16바이트 이진 값을 생성합니다. SQL Server 데이터베이스에서 GUID는 SQL Server가 Transact-SQL `uniqueidentifier` 함수를 사용하여 자동으로 생성할 수 있는 `NEWID()` 열에 저장됩니다. GUID를 기본 키로 사용하면 성능에 부정적 영향을 미칠 수 있습니다. [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)]에서는 전역적으로 고유하지 않을 수도 있지만 더 효율적으로 인덱싱할 수 있는 순차적 GUID를 생성하는 `NEWSEQUENTIALID()` 함수에 대한 지원을 제공합니다.  
+>  자동 증분 값 대신 사용할 수 있는 방법은 <xref:System.Guid.NewGuid%2A> 개체의 <xref:System.Guid> 메서드를 사용하여 새로운 행이 삽입될 때마다 서버로 복사될 수 있는 GUID(Globally Unique Identifier)를 클라이언트 컴퓨터에 생성하는 것입니다. `NewGuid` 메서드는 값이 복제되지 않을 확률이 높은 알고리즘을 사용하여 16바이트 이진 값을 생성합니다. SQL Server 데이터베이스에서 GUID는 SQL Server가 Transact-SQL `uniqueidentifier` 함수를 사용하여 자동으로 생성할 수 있는 `NEWID()` 열에 저장됩니다. GUID를 기본 키로 사용하면 성능에 부정적 영향을 미칠 수 있습니다. SQL Server에 대 한 지원을 제공는 `NEWSEQUENTIALID()` 를 하지 않을 전역적으로 고유 해야 하지만 더 효율적으로 인덱싱할 수 있는 순차적 GUID를 생성 하는 함수입니다.  
   
 ## <a name="retrieving-sql-server-identity-column-values"></a>SQL Server ID 열 값 검색  
  Microsoft SQL Server로 작업하는 경우에는 출력 매개 변수를 사용하는 저장 프로시저를 만들어서 삽입된 행에 대한 ID 값을 반환할 수 있습니다. 다음 테이블에서는 ID 열 값을 검색하는 데 사용할 수 있는 SQL Server의 세 가지 Transact-SQL 함수를 설명합니다.  

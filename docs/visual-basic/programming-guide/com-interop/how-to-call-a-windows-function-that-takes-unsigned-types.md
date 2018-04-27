@@ -1,11 +1,12 @@
 ---
-title: "방법: 부호 없는 형식을 사용하는 Windows 함수 호출(Visual Basic)"
-ms.custom: 
+title: '방법: 부호 없는 형식을 사용하는 Windows 함수 호출(Visual Basic)'
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - Windows functions [Visual Basic], calling
@@ -20,21 +21,21 @@ helpviewer_keywords:
 - data types [Visual Basic], numeric
 - unsigned types [Visual Basic], using
 ms.assetid: c2c0e712-8dc2-43b9-b4c6-345fbb02e7ce
-caps.latest.revision: "18"
+caps.latest.revision: 18
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 78e6789e7def5deeb8394e3aefecfdc187ec6ef6
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: dd0738300ec846041e78f19836f29e7adff1c821
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-call-a-windows-function-that-takes-unsigned-types-visual-basic"></a>방법: 부호 없는 형식을 사용하는 Windows 함수 호출(Visual Basic)
-클래스, 모듈 또는 부호 없는 정수 형식의 멤버가 포함 된 구조를 사용 하는 경우이 멤버에 액세스할 수 있습니다 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]합니다.  
+클래스, 모듈 또는 부호 없는 정수 형식의 멤버가 포함 된 구조를 사용 하는 경우에 Visual Basic을 사용한 이러한 멤버를 액세스할 수 있습니다.  
   
 ### <a name="to-call-a-windows-function-that-takes-an-unsigned-type"></a>부호 없는 형식을 사용 하는 Windows 함수를 호출 하려면  
   
-1.  사용 하 여 한 [선언 문의](../../../visual-basic/language-reference/statements/declare-statement.md) 하기가 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 함수가 포함 된 라이브러리, 해당 라이브러리에 해당 이름이 무엇 인지, 호출 시퀀스 무엇 인지 및 메서드를 호출 하는 경우 문자열을 변환 하는 방법입니다.  
+1.  사용 하 여 한 [선언 문의](../../../visual-basic/language-reference/statements/declare-statement.md) 함수가 포함 된 라이브러리, 해당 라이브러리에 해당 이름이 무엇 인지, 호출 시퀀스 무엇 인지 및 메서드를 호출 하는 경우 문자열을 변환 하는 방법을 Visual Basic을 알려야 합니다.  
   
 2.  에 `Declare` 문을 사용 하 여 `UInteger`, `ULong`, `UShort`, 또는 `Byte` 각 매개 변수를 부호 없는 형식에 적합 합니다.  
   

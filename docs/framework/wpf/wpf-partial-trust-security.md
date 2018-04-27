@@ -1,12 +1,13 @@
 ---
-title: "WPF 부분 신뢰 보안"
-ms.custom: 
+title: WPF 부분 신뢰 보안
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -22,21 +23,22 @@ helpviewer_keywords:
 - feature security requirements [WPF]
 - managing permissions [WPF]
 ms.assetid: ef2c0810-1dbf-4511-babd-1fab95b523b5
-caps.latest.revision: "40"
+caps.latest.revision: 40
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 745a5b87119bbce3211332eee9f23d80c15c9c28
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 740146bffe869dc30bbf8e8472c30be317ce6f7c
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="wpf-partial-trust-security"></a>WPF 부분 신뢰 보안
 <a name="introduction"></a> 일반적으로 악의적인 손상을 방지하기 위해 중요한 시스템 리소스에 직접 액세스하지 않도록 인터넷 응용 프로그램을 제한해야 합니다. 기본적으로 [!INCLUDE[TLA#tla_html](../../../includes/tlasharptla-html-md.md)] 되며 클라이언트 쪽 스크립트 언어 중요 한 시스템 리소스에 액세스할 수 없습니다. 때문에 [!INCLUDE[TLA#tla_wpf](../../../includes/tlasharptla-wpf-md.md)] 브라우저 호스팅되는 응용 프로그램을 브라우저에서 시작할 수 있습니다는 비슷한 일련의 제한 따라야 합니다. 이러한 제한 사항이 적용 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 둘 다에 의존 [!INCLUDE[TLA#tla_cas](../../../includes/tlasharptla-cas-md.md)] 및 [!INCLUDE[TLA#tla_clickonce](../../../includes/tlasharptla-clickonce-md.md)] (참조 [WPF 보안 전략-플랫폼 보안](../../../docs/framework/wpf/wpf-security-strategy-platform-security.md)). 기본적으로 브라우저에서 호스팅되는 응용 프로그램 요청 인터넷 영역 [!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)] 인터넷, 로컬 인트라넷 또는 로컬 컴퓨터에서 실행 되는 여부에 관계 없이 사용 권한 집합입니다. 전체 권한 집합보다 적은 권한으로 실행하는 응용 프로그램은 부분 신뢰로 실행된다고 할 수 있습니다.  
   
- [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]다양 한 많은 기능을 최대한 사용할 수 있도록 안전 하 게 부분 신뢰에서 및과 함께 지원 제공 [!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)], 부분 신뢰 프로그래밍에 대 한 추가 지원을 제공 합니다.  
+ [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 다양 한 많은 기능을 최대한 사용할 수 있도록 안전 하 게 부분 신뢰에서 및과 함께 지원 제공 [!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)], 부분 신뢰 프로그래밍에 대 한 추가 지원을 제공 합니다.  
   
  이 항목에는 다음과 같은 단원이 포함되어 있습니다.  
   
@@ -63,7 +65,7 @@ ms.lasthandoff: 12/22/2017
   
  이 표는 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 높은 수준에서 기능입니다. 자세한 내용은는 [!INCLUDE[TLA#tla_lhsdk](../../../includes/tlasharptla-lhsdk-md.md)] 의 각 멤버에 필요한 사용 권한에 대해 설명 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]합니다. 또한 다음 기능에는 특별한 고려 사항을 포함하는 부분 신뢰 실행에 대한 자세한 정보가 있습니다.  
   
--   [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)](참조 [XAML 개요 (WPF)](../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)).  
+-   [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] (참조 [XAML 개요 (WPF)](../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)).  
   
 -   팝업 (참조 <xref:System.Windows.Controls.Primitives.Popup?displayProperty=nameWithType>).  
   
@@ -100,18 +102,18 @@ ms.lasthandoff: 12/22/2017
 > [!NOTE]
 >  위의 표에 설명된 동작은 ClickOnce 신뢰 배포 모델을 따르지 않는 완전 신뢰 XBAP에 대한 것입니다.  
   
- 일반적으로 허용되는 권한을 초과하는 코드는, 독립 실행형 응용 프로그램과 브라우저에서 호스트된 응용 프로그램 간에 공유되는 일반적인 코드일 수 있습니다. [!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)]및 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 이 시나리오를 관리 하기 위한 몇 가지 방법을 제공 합니다.  
+ 일반적으로 허용되는 권한을 초과하는 코드는, 독립 실행형 응용 프로그램과 브라우저에서 호스트된 응용 프로그램 간에 공유되는 일반적인 코드일 수 있습니다. [!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)] 및 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 이 시나리오를 관리 하기 위한 몇 가지 방법을 제공 합니다.  
   
 <a name="Detecting_Permissions_using_CAS"></a>   
 ### <a name="detecting-permissions-using-cas"></a>CAS를 사용하여 권한 검색  
- 일부 경우에는 공유 코드 라이브러리 두 독립 실행형 응용 프로그램에서 사용할 어셈블리의 및 [!INCLUDE[TLA2#tla_xbap#plural](../../../includes/tla2sharptla-xbapsharpplural-md.md)]합니다. 이러한 경우 코드는 응용 프로그램에서 얻은 권한 집합이 허용하는 것보다 많은 권한이 필요할 수 있는 기능을 실행할 수 있습니다. 응용 프로그램 사용 하 여 특정 권한을 갖고 있는지 여부를 감지할 수 [!INCLUDE[TLA#tla_winfx](../../../includes/tlasharptla-winfx-md.md)] 보안 합니다. 호출 하 여 특정 권한이 있는지 여부를 테스트할 수는 특히는 <xref:System.Security.CodeAccessPermission.Demand%2A> 원하는 권한의 인스턴스에서 메서드. 다음 예제는 로컬 디스크에 파일을 저장하는 기능이 있는지 여부에 대해 쿼리하는 코드입니다.  
+ 일부 경우에는 공유 코드 라이브러리 두 독립 실행형 응용 프로그램에서 사용할 어셈블리의 및 [!INCLUDE[TLA2#tla_xbap#plural](../../../includes/tla2sharptla-xbapsharpplural-md.md)]합니다. 이러한 경우 코드는 응용 프로그램에서 얻은 권한 집합이 허용하는 것보다 많은 권한이 필요할 수 있는 기능을 실행할 수 있습니다. 응용 프로그램이 Microsoft.NET Framework의 보안을 사용 하 여 특정 권한을 갖고 있는지 여부를 검색할 수 있습니다. 호출 하 여 특정 권한이 있는지 여부를 테스트할 수는 특히는 <xref:System.Security.CodeAccessPermission.Demand%2A> 원하는 권한의 인스턴스에서 메서드. 다음 예제는 로컬 디스크에 파일을 저장하는 기능이 있는지 여부에 대해 쿼리하는 코드입니다.  
   
  [!code-csharp[PartialTrustSecurityOverviewSnippets#DetectPermsCODE1](../../../samples/snippets/csharp/VS_Snippets_Wpf/PartialTrustSecurityOverviewSnippets/CSharp/FileHandling.cs#detectpermscode1)]
  [!code-vb[PartialTrustSecurityOverviewSnippets#DetectPermsCODE1](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/PartialTrustSecurityOverviewSnippets/VisualBasic/FileHandling.vb#detectpermscode1)]  
 [!code-csharp[PartialTrustSecurityOverviewSnippets#DetectPermsCODE2](../../../samples/snippets/csharp/VS_Snippets_Wpf/PartialTrustSecurityOverviewSnippets/CSharp/FileHandling.cs#detectpermscode2)]
 [!code-vb[PartialTrustSecurityOverviewSnippets#DetectPermsCODE2](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/PartialTrustSecurityOverviewSnippets/VisualBasic/FileHandling.vb#detectpermscode2)]  
   
- 응용 프로그램에 필요한 권한을에 대 한 호출 수 없는 경우 <xref:System.Security.CodeAccessPermission.Demand%2A> 보안 예외를 throw 합니다. 그렇지 않은 경우 사용 권한이 부여됩니다. `IsPermissionGranted`이 동작을 캡슐화 하 고 반환 `true` 또는 `false` 적절 하 게 합니다.  
+ 응용 프로그램에 필요한 권한을에 대 한 호출 수 없는 경우 <xref:System.Security.CodeAccessPermission.Demand%2A> 보안 예외를 throw 합니다. 그렇지 않은 경우 사용 권한이 부여됩니다. `IsPermissionGranted` 이 동작을 캡슐화 하 고 반환 `true` 또는 `false` 적절 하 게 합니다.  
   
 <a name="Graceful_Degradation_of_Functionality"></a>   
 ### <a name="graceful-degradation-of-functionality"></a>점진적인 기능 저하  
@@ -131,7 +133,7 @@ ms.lasthandoff: 12/22/2017
  사용 하 여 [!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)] 권한을 검사 하는 적합 한 기술 해야 할 때 권한 단위로를 확인 합니다. 이 기술은 일반적인 프로세스의 일부인 예외 감지에 영향을 받으며, 일반적으로 권장되지 않고 성능 문제를 일으킬 수 있습니다. 대신, 경우에 [!INCLUDE[TLA#tla_xbap](../../../includes/tlasharptla-xbap-md.md)] 인터넷 영역 샌드박스에서 실행 하면 צ ְ ײ는 <xref:System.Windows.Interop.BrowserInteropHelper.IsBrowserHosted%2A?displayProperty=nameWithType> 에 대 한 true를 반환 하는 속성 [!INCLUDE[TLA#tla_xbap#plural](../../../includes/tlasharptla-xbapsharpplural-md.md)]합니다.  
   
 > [!NOTE]
->  <xref:System.Windows.Interop.BrowserInteropHelper.IsBrowserHosted%2A>만 응용 프로그램은 어떤 설정 되지 않은 응용 프로그램 사용 권한으로 실행 되 고 브라우저에서 실행 되는지 여부를 구분 합니다.  
+>  <xref:System.Windows.Interop.BrowserInteropHelper.IsBrowserHosted%2A> 만 응용 프로그램은 어떤 설정 되지 않은 응용 프로그램 사용 권한으로 실행 되 고 브라우저에서 실행 되는지 여부를 구분 합니다.  
   
 <a name="Managing_Permissions"></a>   
 ## <a name="managing-permissions"></a>권한 관리  

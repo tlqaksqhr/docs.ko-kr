@@ -8,21 +8,21 @@ ms.suite: ''
 ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: cdc15ea4-f678-4729-8ebe-188ae720bef7
-caps.latest.revision: ''
+caps.latest.revision: 7
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 0c29e6778cc0749620a7e38d51303356c2e99436
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: aa4e54a1085e3e5713004c489051e54b0fc8ee9d
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/23/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="web-services-generics-serialization-technology-sample"></a>Web Services Generics Serialization 기술 샘플
-[샘플 다운로드](http://download.microsoft.com/download/4/7/B/47B2164C-E780-4B10-8DE4-2CB5B886E0A6/Technologies/Serialization/Xml%20Serialization/GenericsSerialization.zip.exe)  
+[샘플 다운로드](https://download.microsoft.com/download/4/7/B/47B2164C-E780-4B10-8DE4-2CB5B886E0A6/Technologies/Serialization/Xml%20Serialization/GenericsSerialization.zip.exe)  
   
  이 샘플에서는 ASP.NET 웹 서비스에서 제네릭의 serialization을 사용하고 제어하는 방법을 보여 줍니다.  
   
@@ -57,7 +57,7 @@ ms.lasthandoff: 03/23/2018
   
 1.  **인터넷 정보 서비스** 관리 스냅인을 열고 **웹 사이트**를 확장합니다.  
   
-2.  **기본 웹 사이트**를 마우스 왼쪽 단추로 클릭하고 **새로 만들기**, **가상 디렉터리?**를 차례로 선택하여 **가상 디렉터리 만들기 마법사**를 만듭니다.  
+2.  **기본 웹 사이트**를 마우스 왼쪽 단추로 클릭하고 **새로 만들기**, **가상 디렉터리?** 를 차례로 선택하여 **가상 디렉터리 만들기 마법사**를 만듭니다.  
   
 3.  **다음**을 클릭하고 가상 디렉터리의 공용 별칭을 입력한 후 **다음**을 클릭합니다.  
   
@@ -70,14 +70,14 @@ ms.lasthandoff: 03/23/2018
   
 1.  브라우저 창을 열고 주소 표시줄을 선택합니다.  
   
-2.  **http ://localhost/[가상디렉터리]/Service.asmx** 를 입력합니다. 여기서 [가상 디렉터리]는 샘플을 빌드할 때 만든 가상 디렉터리를 나타냅니다.  
+2.  형식  **http://localhost/[가상 directory]/Service.asmx**여기서 [가상 디렉터리] 샘플을 빌드할 때 만든 가상 디렉터리를 나타냅니다.  
   
 ## <a name="remarks"></a>설명  
- 이 샘플에서는 웹 서비스의 정의에 대한 링크가 포함된 기본 ASP.NET 페이지를 표시합니다. 웹 서비스의 소스 코드를 수정할 수 있을 뿐 아니라 화면 표시를 사용자 지정할 수도 있습니다. 자세한 내용은 [XML Web Service 클라이언트 빌드](http://msdn.microsoft.com/library/c606f3cb-4111-45b4-ae42-9300420fa16c)를 참조하세요.  
+ 이 샘플에서는 웹 서비스의 정의에 대한 링크가 포함된 기본 ASP.NET 페이지를 표시합니다. 웹 서비스의 소스 코드를 수정할 수 있을 뿐 아니라 화면 표시를 사용자 지정할 수도 있습니다. 자세한 내용은 [XML Web Service 클라이언트 빌드](https://msdn.microsoft.com/library/c606f3cb-4111-45b4-ae42-9300420fa16c)를 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
  <xref:System.Collections.Generic>  
  <xref:System.Web.Services>  
  <xref:System.Xml.Serialization>  
  [serialization](../../../docs/standard/serialization/index.md)  
- [ASP.NET 및 XML Web Service 클라이언트를 사용하여 만든 XML Web Services](http://msdn.microsoft.com/library/1e64af78-d705-4384-b08d-591a45f4379c)
+ [ASP.NET 및 XML Web Service 클라이언트를 사용하여 만든 XML Web Services](https://msdn.microsoft.com/library/1e64af78-d705-4384-b08d-591a45f4379c)

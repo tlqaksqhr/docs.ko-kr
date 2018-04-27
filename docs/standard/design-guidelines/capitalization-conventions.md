@@ -1,12 +1,12 @@
 ---
-title: "대/소문자 표기법"
-ms.custom: 
+title: 대/소문자 표기법
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - camel-case names [.NET Framework]
@@ -15,18 +15,18 @@ helpviewer_keywords:
 - case sensitivity, capitalization conventions
 - names [.NET Framework], capitalization
 ms.assetid: 4c4ea526-9203-486f-b72d-29d61c5b3c6d
-caps.latest.revision: "16"
+caps.latest.revision: 16
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: b36f230c9a5f8653f3e252d26fe6464bb9cac4bb
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 248a787c8858d62e77725d159e9826fabfa37ee1
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="capitalization-conventions"></a>대/소문자 표기법
 지침에 사용 하기 위한 간단한 방법이 장 레이아웃을 만드는 경우, 형식, 멤버 및 매개 변수를 읽기 쉽게에 대 한 확인 식별자를 일관 되 게 적용 될 때.  
@@ -59,7 +59,7 @@ ms.lasthandoff: 12/23/2017
   
  다음 표에서 다양 한 유형의 식별자에 대 한 대/소문자 규칙을 설명합니다.  
   
-|식별자|대/소문자 구분|예|  
+|식별자|대/소문자 구분|예제|  
 |----------------|------------|-------------|  
 |네임스페이스|파스칼|`namespace System.Security { ... }`|  
 |형식|파스칼|`public class StreamReader { ... }`|  
@@ -111,9 +111,9 @@ ms.lasthandoff: 12/23/2017
   
  **X 하지 않으면** 모든 프로그래밍 언어는 대/소문자 구분 하는 것으로 가정 합니다. 그러나 동일하지 않습니다. 대/소문자만 다른 이름 수 없습니다.  
   
- *일부 © 2005, 2009 Microsoft Corporation. 모든 권리 보유.*  
+ *Portions © 2005, 2009 Microsoft Corporation. 모든 권리 보유.*  
   
- *피어슨 교육, Inc.에서의 사용 권한으로 재인쇄 [Framework 디자인 지침: 규칙, 특징 및 다시 사용할 수 있는.NET 라이브러리를 2nd Edition에 대 한 패턴](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina 및 Brad Abrams 게시 하 여 2008 년 10 월 22 일 Microsoft Windows 개발 시리즈의 일부로: Addison Wesley Professional.*  
+ *피어슨 교육, Inc.에서의 사용 권한으로 재인쇄 [Framework 디자인 지침: 규칙, 특징 및 다시 사용할 수 있는.NET 라이브러리를 2nd Edition에 대 한 패턴](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina 및 Brad Abrams 게시 하 여 2008 년 10 월 22 일 Microsoft Windows 개발 시리즈의 일부로: Addison Wesley Professional.*  
   
 ## <a name="see-also"></a>참고 항목  
  [프레임워크 디자인 지침](../../../docs/standard/design-guidelines/index.md)  

@@ -16,14 +16,14 @@ ms.assetid: 3b77b7e3-8b17-40de-b4e1-05e4b9b325ad
 caps.latest.revision: 8
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: be5576c56c2c6b2b1021c98e1e48314beaac4cbd
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 298faf593dc15d6ede5fbb4238599373f3a49a82
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="unable-to-write-temporary-file-because-temporary-path-is-not-available"></a>임시 경로를 사용할 수 없으므로 임시 파일에 쓸 수 없습니다.
-[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]에서 임시 파일을 저장할 경로를 확인할 수 없습니다.  
+Visual Basic에서 임시 파일을 저장할 경로 확인 하지 못했습니다.  
   
  **오류 ID:** BC30698  
   

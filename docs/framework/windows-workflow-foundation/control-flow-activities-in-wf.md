@@ -1,26 +1,27 @@
 ---
-title: "WF의 흐름 제어 활동"
-ms.custom: 
+title: WF의 흐름 제어 활동
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 6892885b-f7c5-4aea-8f5e-28863fb4ae75
-caps.latest.revision: "16"
+caps.latest.revision: 16
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 1e8520e34cf9bd9d31e9b877849e7c9611d6d989
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 91fb4e18d753709ab973730300ffef5a952c56d6
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="control-flow-activities-in-wf"></a>WF의 흐름 제어 활동
-[!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)]에서는 워크플로 내의 실행 흐름 제어를 위한 다양한 활동을 제공합니다. `Switch` 및 `If`와 같은 활동은 프로그래밍 환경(예: [!INCLUDE[csprcs](../../../includes/csprcs-md.md)])에서와 비슷한 흐름 제어 구조를 구현하지만, `Pick`과 같은 활동은 새 프로그래밍 구조를 모델링합니다.  
+[!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)]에서는 워크플로 내의 실행 흐름 제어를 위한 다양한 활동을 제공합니다. 이러한 작업 중 일부 (같은 `Switch` 및 `If`) 프로그래밍 하는 동안 다른 사용자와 같은 Visual C#, 환경에서와 비슷한 흐름 제어 구조를 구현 (같은 `Pick`) 새 프로그래밍 구조를 모델링 합니다.  
   
  `Parallel` 및 `ParallelForEach`와 같은 활동은 동시에 실행할 여러 자식 활동을 예약하지만, 스레드는 워크플로별로 하나씩만 사용됩니다. 이러한 활동의 각 자식 활동은 순차적으로 실행되며 이전 활동이 완료되거나 유휴 상태로 전환될 때까지는 다음 활동이 실행되지 않습니다. 따라서 이러한 활동은 다른 활동을 차단하는 여러 활동을 인터리브하게 실행해야 하는 응용 프로그램에 매우 유용합니다. 이러한 활동의 자식 활동이 유휴 상태로 전환되지 않는 경우에는 `Parallel` 활동은 `Sequence` 활동처럼 실행되고 `ParallelForEach` 활동은 `ForEach` 활동처럼 실행됩니다. 하지만 비동기 활동(예: <xref:System.Activities.AsyncCodeActivity>에서 파생된 활동) 또는 메시징 활동이 사용되는 경우에는 자식 활동이 메시지를 받거나 비동기 작업을 완료할 때가지 기다리는 동안 제어가 다음 분기로 전달됩니다.  
   

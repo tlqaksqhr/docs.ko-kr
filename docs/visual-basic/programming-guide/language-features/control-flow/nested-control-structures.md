@@ -1,11 +1,12 @@
 ---
-title: "중첩 제어 구조(Visual Basic)"
-ms.custom: 
+title: 중첩 제어 구조(Visual Basic)
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - Visual Basic code, control flow
@@ -16,20 +17,20 @@ helpviewer_keywords:
 - structures [Visual Basic], nested control
 - nested control statements [Visual Basic]
 ms.assetid: cf60b061-65d9-44a8-81f2-b0bdccd23a05
-caps.latest.revision: "20"
+caps.latest.revision: 20
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 22adf4086cd494202a540b2ec16310072329b6ca
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: f2c91bcdd741ef75417fe50b0c08bd0f9bd5ff80
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="nested-control-structures-visual-basic"></a>중첩 제어 구조(Visual Basic)
 예를 들어 다른 제어 문의 내부에 제어 문을 배치할 수 있습니다는 `If...Then...Else` 블록 내에 `For...Next` 루프입니다. 다른 컨트롤 문 안에 있는 제어 문을 라고 *중첩*합니다.  
   
 ## <a name="nesting-levels"></a>중첩 수준  
- 에서는 제어 구조 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 원하는 수준까지 중첩 될 수 있습니다. 각각의 본문을 들여쓰 중첩된 구조를 보다 쉽게 읽을 수 있도록 하는 일반적인이 좋습니다. 통합된 개발 환경 (IDE) 편집기 자동으로 수행할 수 있습니다.  
+ Visual Basic의 제어 구조 수준 원하는 만큼 중첩할 수 있습니다. 각각의 본문을 들여쓰 중첩된 구조를 보다 쉽게 읽을 수 있도록 하는 일반적인이 좋습니다. 통합된 개발 환경 (IDE) 편집기 자동으로 수행할 수 있습니다.  
   
  다음 예제에서는 절차 `sumRows` 행렬의 각 행의 양의 요소를 추가 합니다.  
   
@@ -78,7 +79,7 @@ Next ctl
  ![잘못 된 중첩의 그래픽 다이어그램](../../../../visual-basic/programming-guide/language-features/control-flow/media/nestexampleinvalid.gif "NestExampleInvalid")  
 에 대 한 및 구조에 잘못 된 중첩의  
   
- [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 컴파일러 검색 겹치는 같은 제어 구조 및 컴파일 타임 오류를 발생 시킵니다.  
+ Visual Basic 컴파일러는 이러한 겹치는 제어 구조를 감지 하 고 컴파일 타임 오류를 발생 시킵니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [제어 흐름](../../../../visual-basic/programming-guide/language-features/control-flow/index.md)  

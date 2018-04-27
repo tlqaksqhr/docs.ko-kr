@@ -1,24 +1,26 @@
 ---
-title: "보안 고려 사항(Entity Framework)"
-ms.custom: 
+title: 보안 고려 사항(Entity Framework)
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 84758642-9b72-4447-86f9-f831fef46962
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 68b077ec6c7edd30882c9c84a10aa14060a589e8
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: d70b1a6aff3e93122b5d0fb21affdfcd13d817e6
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="security-considerations-entity-framework"></a>보안 고려 사항(Entity Framework)
 이 항목에서는 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] 응용 프로그램의 개발, 배포 및 실행과 관련된 보안 고려 사항에 대해 설명합니다. 또한 보안 [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] 응용 프로그램을 만들기 위한 권장 사항도 따라야 합니다. 자세한 내용은 참조 [보안 개요](../../../../../docs/framework/data/adonet/security-overview.md)합니다.  
@@ -84,7 +86,7 @@ ms.lasthandoff: 01/19/2018
   
 -   <xref:System.Security.Permissions.SecurityPermission>: <xref:System.Security.Permissions.SecurityPermissionFlag.SerializationFormatter> 인터페이스를 사용하여 예외를 serialize할 수 있는 <xref:System.Runtime.Serialization.ISerializable>  
   
--   데이터베이스 연결을 열고 데이터베이스에 대해 명령을 실행할 수 있는 권한(예: <xref:System.Data.SqlClient.SqlClientPermission> 데이터베이스에 대한 [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)])  
+-   데이터베이스 연결을 열고와 같은 데이터베이스에 대해 명령을 실행할 수 있는 권한이 <xref:System.Data.SqlClient.SqlClientPermission> SQL Server 데이터베이스에 대 한 합니다.  
   
  자세한 내용은 [코드 액세스 보안 및 ADO.NET](../../../../../docs/framework/data/adonet/code-access-security.md)을 참조하세요.  
   

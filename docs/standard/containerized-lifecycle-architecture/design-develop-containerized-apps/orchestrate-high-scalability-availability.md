@@ -5,14 +5,15 @@ ms.prod: .net
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/19/2017
+ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 92bfd4516866fe82408dd3dd341a13db0ee216c0
-ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
+ms.openlocfilehash: 59c03755bebce98e018f56fc7213b00a0d3eae38
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="orchestrating-microservices-and-multicontainer-applications-for-high-scalability-and-availability"></a>Microservices 및 높은 확장성 및 가용성 multicontainer 응용 프로그램 오케스트레이션
 
@@ -104,7 +105,7 @@ Azure 컨테이너 서비스를 사용 하면 오케스트레이션 계층에 �
     <https://docs.mesosphere.com/1.7/overview/>
 
 -   Kubernetes (공식 사이트):  
-    <http://kubernetes.io/>
+    <https://kubernetes.io/>
 
 ## <a name="using-service-fabric"></a>서비스 패브릭을 사용 하 여
 
@@ -178,7 +179,7 @@ Service Fabric에서는 오케스트레이터 또는 클러스터의 패키징 �
 
 상태 저장 서비스에는 단점이 있습니다. 간단한 수준을 제시 쉽게 확장할 수 있도록 해 주는 비교해 합니다. 일반적으로 외부 데이터베이스 시스템에 의해 구현되는 기능은 상태 저장 마이크로 서비스 간 데이터 복제 및 데이터 분할과 같은 작업을 위해 처리되어야 합니다. 그러나이 orchestrator와 같은 영역 중 하나는 [서비스 패브릭](https://docs.microsoft.com/azure/service-fabric/service-fabric-reliable-services-platform-architecture) 와 해당 [신뢰할 수 있는 상태 저장 서비스](https://docs.microsoft.com/azure/service-fabric/service-fabric-reliable-services-introduction#when-to-use-reliable-services-apis) 가장 수-개발 및 상태 저장의 수명 주기를 단순화 하 여 microservices를 사용 하 여 [신뢰할 수 있는 서비스 API](https://docs.microsoft.com/azure/service-fabric/service-fabric-work-with-reliable-collections) 및 [Reliable Actors](https://docs.microsoft.com/azure/service-fabric/service-fabric-reliable-actors-introduction)합니다.
 
-상태 저장 서비스를 허용하고 Actor 패턴을 지원하며 비즈니스 논리와 데이터 간의 내결함성과 대기 시간을 향상시키는 기타 마이크로 서비스 프레임워크로는 Microsoft Research의 Microsoft [Orleans](https://github.com/dotnet/orleans) 및 [Akka.NET](http://getakka.net/)이 있습니다. 두 프레임워크는 현재 Docker에 대한 지원을 개선 중입니다.
+상태 저장 서비스를 허용하고 Actor 패턴을 지원하며 비즈니스 논리와 데이터 간의 내결함성과 대기 시간을 향상시키는 기타 마이크로 서비스 프레임워크로는 Microsoft Research의 Microsoft [Orleans](https://github.com/dotnet/orleans) 및 [Akka.NET](https://getakka.net/)이 있습니다. 두 프레임워크는 현재 Docker에 대한 지원을 개선 중입니다.
 
 Docker 컨테이너 자체는 상태 비저장입니다. 상태 저장 서비스를 구현하려면 앞에서 언급한 추가 규범 및 상위 수준 프레임워크 중 하나가 필요합니다. 그러나이 문서의 작성일 서비스 패브릭의 상태 저장 서비스 일반 microservices 으로만 컨테이너로 지원 되지 않습니다. 컨테이너에서 신뢰할 수 있는 서비스 지원 서비스 구성의 후속 버전에서 사용할 수 있습니다.
 

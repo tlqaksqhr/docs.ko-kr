@@ -32,11 +32,11 @@ ms.assetid: f1ee8458-b156-44e0-9a8a-5dd171648cd8
 caps.latest.revision: 22
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: f985d6bf7b26ec22d6e533eae1f1d7ea0682e56c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: d93d0c94bdbeb93e0527ef6b5c6248b3b580599f
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="object-lifetime-how-objects-are-created-and-destroyed-visual-basic"></a>개체 수명: 개체가 만들어지고 제거되는 방법(Visual Basic)
 `New` 키워드를 사용하여 클래스의 인스턴스인 개체를 만듭니다. 새 개체를 사용하기 전에 초기화 작업을 수행해야 하는 경우가 많습니다. 일반적인 초기화 작업으로는 파일 열기, 데이터베이스에 연결, 레지스트리 키의 값 읽기 등이 포함됩니다. Visual Basic 라는 프로시저를 사용 하 여 새 개체를 초기화 하는 제어 *생성자* (초기화 제어할 수 있는 특별 한 메서드).  
@@ -44,10 +44,10 @@ ms.lasthandoff: 11/21/2017
  범위를 벗어나는 개체는 CLR(공용 언어 런타임)에 의해 해제됩니다. 라는 프로시저를 사용 하 여 시스템 리소스 해제를 제어 하는 Visual Basic *소멸자*합니다. 생성자와 소멸자를 통해 예측 가능하며 효율적인 클래스 라이브러리 만들기를 지원할 수 있습니다.  
   
 ## <a name="using-constructors-and-destructors"></a>생성자 및 소멸자 사용  
- 생성자와 소멸자는 개체 만들기 및 소멸을 제어합니다. `Sub New` 6.0 이하 버전에서 사용되었던 `Sub Finalize` 및 `Class_Initialize` 메서드 대신 사용되는 Visual Basic의 `Class_Terminate` 및 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 프로시저는 개체를 초기화하고 소멸시킵니다.  
+ 생성자와 소멸자는 개체 만들기 및 소멸을 제어합니다. `Sub New` 및 `Sub Finalize` ; 대체 초기화 하 고 개체를 제거 하는 Visual Basic의 프로시저는 `Class_Initialize` 및 `Class_Terminate` Visual Basic 6.0 및 이전 버전에서 사용 하는 방법입니다.  
   
 ### <a name="sub-new"></a>Sub New  
- `Sub New` 생성자는 클래스를 만들 때 한 번만 실행할 수 있으며, 같은 클래스나 파생 클래스에서 다른 생성자의 첫 번째 코드 줄이 아닌 위치에서 명시적으로 호출할 수는 없습니다. 또한 `Sub New` 메서드의 코드는 항상 클래스의 다른 코드보다 먼저 실행됩니다. [!INCLUDE[vbprvblong](~/includes/vbprvblong-md.md)]이상 버전에서 암시적으로 만듭니다는 `Sub New` 명시적으로 정의 하지 않는 경우 런타임 시 생성자는 `Sub New` 클래스에 대 한 프로시저입니다.  
+ `Sub New` 생성자는 클래스를 만들 때 한 번만 실행할 수 있으며, 같은 클래스나 파생 클래스에서 다른 생성자의 첫 번째 코드 줄이 아닌 위치에서 명시적으로 호출할 수는 없습니다. 또한 `Sub New` 메서드의 코드는 항상 클래스의 다른 코드보다 먼저 실행됩니다. [!INCLUDE[vbprvblong](~/includes/vbprvblong-md.md)] 이상 버전에서 암시적으로 만듭니다는 `Sub New` 명시적으로 정의 하지 않는 경우 런타임 시 생성자는 `Sub New` 클래스에 대 한 프로시저입니다.  
   
  클래스의 생성자를 만들려면 클래스 정의 내 임의의 위치에 `Sub New` 프로시저를 만듭니다. 매개 변수화된 생성자를 만들려면 다음 코드에 나와 있는 것처럼 다른 프로시저에 인수를 지정할 때와 마찬가지로 `Sub New`에 인수의 이름과 데이터 형식을 지정합니다.  
   
@@ -57,7 +57,7 @@ ms.lasthandoff: 11/21/2017
   
  [!code-vb[VbVbalrOOP#116](../../../../visual-basic/misc/codesnippet/VisualBasic/object-lifetime-how-objects-are-created-and-destroyed_2.vb)]  
   
- 다른 클래스에서 파생되는 클래스를 정의할 때 생성자의 첫 줄은 기본 클래스의 생성자에 대한 호출이어야 합니다. 단, 기본 클래스에 매개 변수가 없는 액세스 가능 생성자가 있는 경우는 예외입니다. 예를 들어 위의 생성자를 포함하는 기본 클래스에 대한 호출은 `MyBase.New(s)`가 됩니다. 그 외의 경우 `MyBase.New`는 선택적 항목이 되며 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 런타임에서 이 클래스를 암시적으로 호출합니다.  
+ 다른 클래스에서 파생되는 클래스를 정의할 때 생성자의 첫 줄은 기본 클래스의 생성자에 대한 호출이어야 합니다. 단, 기본 클래스에 매개 변수가 없는 액세스 가능 생성자가 있는 경우는 예외입니다. 예를 들어 위의 생성자를 포함하는 기본 클래스에 대한 호출은 `MyBase.New(s)`가 됩니다. 그렇지 않으면 `MyBase.New` 는 선택 사항이 고 Visual Basic 런타임 암시적으로 호출 합니다.  
   
  부모 개체의 생성자를 호출하는 코드를 작성한 후에는 `Sub New` 프로시저에 초기화 코드를 더 추가할 수 있습니다. `Sub New`는 매개 변수화된 생성자로 호출할 때 인수를 허용할 수 있습니다. 이러한 매개 변수는 생성자를 호출하는 프로시저에서 전달됩니다(예: `Dim AnObject As New ThisClass(X)`).  
   

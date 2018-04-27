@@ -18,14 +18,14 @@ ms.assetid: 294e0736-ff1e-498e-af83-6db71ed41a72
 caps.latest.revision: 14
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 54712deb8bb2a5ed1e7b1f5fb8aa073dcdaf76d6
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 7815d4c9fddc4e760c7495ef7a2509c55141e96e
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="recommended-xml-tags-for-documentation-comments-visual-basic"></a>문서 주석에 대한 권장 XML 태그(Visual Basic)
-[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 컴파일러에서 XML 파일에 코드에서 문서 주석을 처리할 수 있습니다. 문서에 XML 파일을 처리 하려면 추가 도구를 사용할 수 있습니다.  
+Visual Basic 컴파일러에는 XML 파일에 코드에서 문서 주석을 처리할 수 있습니다. 문서에 XML 파일을 처리 하려면 추가 도구를 사용할 수 있습니다.  
   
  XML 주석 형식 등과 같은 코드 구문에서 허용 하 고 멤버를 입력 합니다. 부분 형식에 대 한 종류의 한 부분일 뿐 해당 멤버의 주석 처리에 제한이 없으며 있지만 XML 주석을 가질 수 있습니다.  
   

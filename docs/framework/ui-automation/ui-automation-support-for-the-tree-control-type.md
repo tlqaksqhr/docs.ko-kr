@@ -1,28 +1,30 @@
 ---
-title: "Tree 컨트롤 형식에 대한 UI 자동화 지원"
-ms.custom: 
+title: Tree 컨트롤 형식에 대한 UI 자동화 지원
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-bcl
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-bcl
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - control types, Tree
 - Tree control type
 - UI Automation, Tree control type
 ms.assetid: 312dd04d-a86b-4072-8b12-2beeabdff5e3
-caps.latest.revision: "20"
+caps.latest.revision: 20
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: 14356089cfcef3fcd51ecd470322b04d29a989a4
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 3eece614368bb35cda5d7345daebb540b1ae1d95
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="ui-automation-support-for-the-tree-control-type"></a>Tree 컨트롤 형식에 대한 UI 자동화 지원
 > [!NOTE]
@@ -63,7 +65,7 @@ ms.lasthandoff: 12/22/2017
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.IsContentElementProperty>|True|트리 컨트롤이 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 트리의 콘텐츠 뷰에 항상 포함됩니다.|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.IsControlElementProperty>|True|트리 컨트롤이 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 트리의 컨트롤 뷰에 항상 포함됩니다.|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.IsKeyboardFocusableProperty>|메모를 참조하세요.|컨트롤이 키보드 포커스를 받을 수 있으면 해당 컨트롤은 이 속성을 지원해야 합니다.|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.LabeledByProperty>|메모를 참조하세요.|트리 컨트롤에 연결된 레이블이 있는 경우, 이 속성은 해당 레이블에 대해 <xref:System.Windows.Automation.AutomationElement> 를 반환합니다. 그렇지 않은 경우, 이 속성은 null 참조를 반환합니다(`Nothing` 의 [!INCLUDE[TLA#tla_visualbnet](../../../includes/tlasharptla-visualbnet-md.md)]).|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.LabeledByProperty>|메모를 참조하세요.|트리 컨트롤에 연결된 레이블이 있는 경우, 이 속성은 해당 레이블에 대해 <xref:System.Windows.Automation.AutomationElement> 를 반환합니다. 속성은 null 참조를 반환 하는 그렇지 않은 경우 (`Nothing` Microsoft Visual Basic.net에서).|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.LocalizedControlTypeProperty>|"tree"|List 컨트롤 형식에 해당하는 지역화된 문자열입니다.|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.NameProperty>|메모를 참조하세요.|트리 컨트롤의 Name 속성 값은 일반적으로 컨트롤의 레이블을 지정하는 텍스트에서 제공됩니다. 텍스트 레이블이 없는 경우, 응용 프로그램 개발자가 이 속성에 대한 값을 제공해야 합니다.|  
   

@@ -1,27 +1,29 @@
 ---
-title: "Oracle 및 ADO.NET"
-ms.custom: 
+title: Oracle 및 ADO.NET
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 8ee8e389-53cf-45cf-80bd-1df63ef34f2e
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 529c98b0ea9b9d4ec3587ce138af8af981f1e008
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: 40b81df158dbad0247df76124201decae41e3267
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="oracle-and-adonet"></a>Oracle 및 ADO.NET
 > [!NOTE]
@@ -29,7 +31,7 @@ ms.lasthandoff: 01/17/2018
   
  이 단원에서는 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Data Provider for Oracle과 관련된 기능 및 동작에 대해 설명합니다.  
   
- [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Data Provider for Oracle에서는 Oracle Client 소프트웨어에서 제공하는 OCI(Oracle Call Interface)를 사용하여 Oracle 데이터베이스에 액세스할 수 있습니다. 이 데이터 공급자의 기능은 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)], OLE DB 및 ODBC용 [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] 데이터 공급자의 기능과 유사하게 디자인되었습니다.  
+ [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Data Provider for Oracle에서는 Oracle Client 소프트웨어에서 제공하는 OCI(Oracle Call Interface)를 사용하여 Oracle 데이터베이스에 액세스할 수 있습니다. 데이터 공급자의 기능은 유사 하지만 되도록 설계는 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] SQL Server, OLE DB 및 ODBC 데이터 공급자입니다.  
   
  [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Data Provider for Oracle을 사용하려면 다음과 같이 응용 프로그램에서 <xref:System.Data.OracleClient> 네임스페이스를 참조해야 합니다.  
   
@@ -83,7 +85,7 @@ csc /r:System.Data.OracleClient.dll
  ADO.NET에서 데이터로 작업하는 방법을 설명합니다.  
   
  [SQL Server 및 ADO.NET](../../../../docs/framework/data/adonet/sql/index.md)  
- [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] 관련 기능을 사용하는 방법에 대해 설명합니다.  
+ SQL Server 관련 기능을 사용하는 방법에 대해 설명합니다.  
   
  [DbProviderFactory](../../../../docs/framework/data/adonet/dbproviderfactories.md)  
  [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)]에서 공급자 독립적인 코드를 쓸 수 있게 하는 일반 클래스에 대해 설명합니다.  

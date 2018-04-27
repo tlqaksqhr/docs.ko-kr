@@ -1,28 +1,29 @@
 ---
-title: "방법: XML (Visual Basic)에서 텍스트 파일을 생성 합니다."
-ms.custom: 
+title: '방법: XML (Visual Basic)에서 텍스트 파일을 생성 합니다.'
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 3b33f191-4abe-4419-b81b-3cb81d9a317f
-caps.latest.revision: "3"
+caps.latest.revision: 3
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 901d31b6dbac54740404a7dc182ecbadca5ddd74
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 14d70da183a1dd179d9e3665de2aba0195e37148
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-generate-text-files-from-xml-visual-basic"></a>방법: XML (Visual Basic)에서 텍스트 파일을 생성 합니다.
 이 예제에서는 XML 파일에서 CSV(쉼표로 구분된 값) 파일을 생성하는 방법을 보여 줍니다.  
   
 ## <a name="example"></a>예제  
- [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 버전에서는 절차적 코드를 사용하여 문자열 컬렉션을 단일 문자열로 집계합니다.  
+ Visual Basic 버전 절차적 코드를 사용 하 여 문자열의 컬렉션을 단일 문자열로 집계.  
   
  이 예제에서는 XML 문서 [샘플 XML 파일: 고객 및 주문(LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml.md)을 사용합니다.  
   

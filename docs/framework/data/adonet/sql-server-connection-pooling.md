@@ -1,27 +1,29 @@
 ---
-title: "SQL Server 연결 풀링(ADO.NET)"
-ms.custom: 
+title: SQL Server 연결 풀링(ADO.NET)
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 7e51d44e-7c4e-4040-9332-f0190fe36f07
-caps.latest.revision: "11"
+caps.latest.revision: 11
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 497ebbd573ea05568010485f04f08cdeddbf6041
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: c0be63e767255508ac93555a503980f3798e70c0
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="sql-server-connection-pooling-adonet"></a>SQL Server 연결 풀링(ADO.NET)
 데이터베이스 서버에 연결하는 과정은 일반적으로 시간이 많이 걸리는 여러 단계로 이루어져 있습니다. 즉, 소켓이나 명명된 파이프 같은 실제 채널을 설정하고 서버와의 초기 핸드셰이크를 발생시키며 연결 문자열 정보를 구문 분석할 뿐 아니라 서버에 연결을 인증하고 현재 트랜잭션에 인리스트먼트하기 위해 검사를 실행해야 하는 등의 단계를 거쳐야 합니다.  
@@ -78,13 +80,13 @@ using (SqlConnection connection = new SqlConnection(
  연결 풀러는 연결이 다시 풀로 회수될 때 연결을 다시 할당하여 연결 요청을 처리합니다. 최대 풀 크기에 도달했는데 사용 가능한 연결이 없으면 요청이 대기됩니다. 그러면 풀러는 시간 제한(기본값 15초)에 도달할 때까지 연결을 회수합니다. 연결 제한 시간을 초과하기 전에 풀러가 요청을 처리하지 못하면 예외가 throw됩니다.  
   
 > [!CAUTION]
->  사용이 끝난 연결은 풀로 반환되도록 항상 닫는 것이 좋습니다. 연결을 닫으려면 `Close` 개체의 `Dispose` 또는 `Connection` 메서드를 사용하거나, C#의 `using` 문 또는 `Using`의 [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)] 문 내에서 모든 연결을 열면 됩니다. 명시적으로 닫히지 않은 연결은 풀에 추가되거나 반환되지 않을 수 있습니다. 자세한 내용은 참조 [문을 사용 하 여](~/docs/csharp/language-reference/keywords/using-statement.md) 또는 [하는 방법: 시스템 리소스 해제](~/docs/visual-basic/programming-guide/language-features/control-flow/how-to-dispose-of-a-system-resource.md) 에 대 한 [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)]합니다.  
+>  사용이 끝난 연결은 풀로 반환되도록 항상 닫는 것이 좋습니다. 중 하나를 사용 하 여 수행할 수 있습니다는 `Close` 또는 `Dispose` 의 메서드는 `Connection` 개체 또는 내부 모든 연결을 열면는 `using` C#에서는 문이 또는 `Using` Visual Basic의 문. 명시적으로 닫히지 않은 연결은 풀에 추가되거나 반환되지 않을 수 있습니다. 자세한 내용은 참조 [문을 사용 하 여](~/docs/csharp/language-reference/keywords/using-statement.md) 또는 [하는 방법: 시스템 리소스 해제](~/docs/visual-basic/programming-guide/language-features/control-flow/how-to-dispose-of-a-system-resource.md) Visual basic의 경우.  
   
 > [!NOTE]
 >  클래스의 `Close` 메서드에 있는 `Dispose`, `Connection` 또는 다른 관리 개체에 `DataReader` 또는 `Finalize`를 호출해서는 안 됩니다. 종료자에서는 클래스에 직접 속한 관리되지 않는 리소스만 해제합니다. 클래스에 관리되지 않는 리소스가 없는 경우 클래스 정의에 `Finalize` 메서드를 포함하지 마세요. 자세한 내용은 참조 [가비지 수집](../../../../docs/standard/garbage-collection/index.md)합니다.  
   
 > [!NOTE]
->  연결이 연결 풀에서 페치되거나 연결 풀로 반환되는 경우 서버에서 로그인 및 로그아웃 이벤트가 발생하지 않습니다. 이는 연결이 연결 풀에서 반환될 때 실제로 닫히지 않기 때문입니다. 자세한 내용은 참조 [Audit Login 이벤트 클래스](http://msdn2.microsoft.com/library/ms190260.aspx) 및 [Audit Logout 이벤트 클래스](http://msdn2.microsoft.com/library/ms175827.aspx) 에 [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] 온라인 설명서.  
+>  연결이 연결 풀에서 페치되거나 연결 풀로 반환되는 경우 서버에서 로그인 및 로그아웃 이벤트가 발생하지 않습니다. 이는 연결이 연결 풀에서 반환될 때 실제로 닫히지 않기 때문입니다. 자세한 내용은 참조 [Audit Login 이벤트 클래스](http://msdn2.microsoft.com/library/ms190260.aspx) 및 [Audit Logout 이벤트 클래스](http://msdn2.microsoft.com/library/ms175827.aspx) SQL Server 온라인 설명서의 합니다.  
   
 ## <a name="removing-connections"></a>연결 제거  
  연결이 4-8분 정도 유휴 상태였거나 풀러에서 서버와 연결하기 어렵다는 것을 감지하면 연결 풀러는 풀에서 연결을 제거합니다. 이러한 연결은 서버와 통신하려는 시도가 있어야만 감지할 수 있습니다. 서버에 더 이상 연결되지 않는 연결이 있으면 그 연결은 잘못된 연결로 표시됩니다. 잘못된 연결은 연결이 닫혀 있거나 회수되는 경우에만 연결 풀에서 제거됩니다.  
@@ -111,7 +113,7 @@ using (SqlConnection connection = new SqlConnection(
 ### <a name="pool-fragmentation-due-to-many-databases"></a>많은 데이터베이스로 인한 풀 조각화  
  많은 인터넷 서비스 공급자가 단일 서버에서 여러 개의 웹 사이트를 호스트합니다. 이들은 단일 데이터베이스를 사용하여 폼 인증 로그인을 확인한 다음 해당 사용자나 사용자 그룹에 대해 특정 데이터베이스 연결을 열 수 있습니다. 그러면 인증 데이터베이스 연결이 풀링되어 모든 사용자가 사용하게 됩니다. 그러나 각 데이터베이스마다 개별 연결 풀이 있으므로 서버에 대한 연결 수가 증가하게 됩니다.  
   
- 이 역시 응용 프로그램 디자인의 부작용입니다. 하지만 [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)]에 연결할 때 보안 수준을 떨어뜨리지 않고 이러한 부작용을 비교적 간단히 해결할 수 있는 방법이 있습니다. 각 사용자나 그룹에 대해 개별 데이터베이스에 연결하는 대신 서버에 있는 동일한 데이터베이스에 연결한 다음 [!INCLUDE[tsql](../../../../includes/tsql-md.md)] USE 문을 실행하여 원하는 데이터베이스로 변경하는 것입니다. 다음 코드 조각에서는 `master` 데이터베이스에 대한 초기 연결을 만든 다음 이를 `databaseName` 문자열 변수에 지정된 원하는 데이터베이스로 전환하는 방법을 보여 줍니다.  
+ 이 역시 응용 프로그램 디자인의 부작용입니다. 하지만 SQL Server에 연결할 때 보안 수준을 떨어뜨리지 않고 이러한 부작용을 비교적 간단히 해결할 수 있는 방법이 있습니다. 각 사용자나 그룹에 대해 개별 데이터베이스에 연결하는 대신 서버에 있는 동일한 데이터베이스에 연결한 다음 [!INCLUDE[tsql](../../../../includes/tsql-md.md)] USE 문을 실행하여 원하는 데이터베이스로 변경하는 것입니다. 다음 코드 조각에서는 `master` 데이터베이스에 대한 초기 연결을 만든 다음 이를 `databaseName` 문자열 변수에 지정된 원하는 데이터베이스로 전환하는 방법을 보여 줍니다.  
   
 ```vb  
 ' Assumes that command is a valid SqlCommand object and that  
@@ -136,7 +138,7 @@ using (SqlConnection connection = new SqlConnection(
 ```  
   
 ## <a name="application-roles-and-connection-pooling"></a>응용 프로그램 역할 및 연결 풀링  
- [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] 시스템 저장 프로시저를 호출하여 `sp_setapprole` 응용 프로그램 역할을 활성화한 후에는 해당 연결의 보안 컨텍스트를 다시 설정할 수 없습니다. 그러나 풀링이 활성화된 경우 연결이 풀로 반환되고 풀링된 연결이 다시 사용될 때 오류가 발생합니다. 자세한 내용은 기술 자료 문서를 참조 하십시오. "[OLE DB 리소스 풀링의 SQL 응용 프로그램 역할 오류](http://support.microsoft.com/default.aspx?scid=KB;EN-US;Q229564)."  
+ `sp_setapprole` 시스템 저장 프로시저를 호출하여 SQL Server 응용 프로그램 역할을 활성화한 후에는 해당 연결의 보안 컨텍스트를 다시 설정할 수 없습니다. 그러나 풀링이 활성화된 경우 연결이 풀로 반환되고 풀링된 연결이 다시 사용될 때 오류가 발생합니다. 자세한 내용은 기술 자료 문서를 참조 하십시오. "[OLE DB 리소스 풀링의 SQL 응용 프로그램 역할 오류](http://support.microsoft.com/default.aspx?scid=KB;EN-US;Q229564)."  
   
 ### <a name="application-role-alternatives"></a>응용 프로그램 역할의 대안  
  응용 프로그램 역할 대신 사용할 수 있는 보안 메커니즘을 사용하는 것이 좋습니다. 자세한 내용은 참조 [SQL Server의 응용 프로그램 역할 만들기](../../../../docs/framework/data/adonet/sql/creating-application-roles-in-sql-server.md)합니다.  

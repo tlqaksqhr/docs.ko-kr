@@ -1,9 +1,10 @@
 ---
-title: "수학 요약(Visual Basic)"
+title: 수학 요약(Visual Basic)
 ms.date: 07/20/2015
 ms.prod: .net
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - math functions, summary
@@ -11,17 +12,17 @@ helpviewer_keywords:
 - math functions, Visual Basic
 - math functions
 ms.assetid: 6abf2dd7-92d2-488a-8e2b-819be9b30c3f
-caps.latest.revision: "12"
+caps.latest.revision: 12
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 330ea0616da11ab5ccb02f5ee91c406f51de5893
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 45d682dffe699f12a7d58418d332dc05d5822209
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="math-summary-visual-basic"></a>수학 요약(Visual Basic)
-[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]언어 키워드 및 런타임 라이브러리 멤버 용도 따라 구성 하 고 사용 합니다.  
+Visual Basic 언어 키워드 및 런타임 라이브러리 멤버 용도 따라 구성 하 고 사용 합니다.  
   
 |작업|언어 요소|  
 |------------|----------------------|  

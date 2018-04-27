@@ -1,30 +1,30 @@
 ---
-title: "예외 Throw"
-ms.custom: 
+title: 예외 Throw
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - exceptions, throwing
 - explicitly throwing exceptions
 - throwing exceptions, design guidelines
 ms.assetid: 5388e02b-52f5-460e-a2b5-eeafe60eeebe
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 2c1fc02b64a494220070a1cfed928b616e4970c0
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 47c16ac94054fff193b1f5976fe7f04f10a39ecd
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="exception-throwing"></a>예외 Throw
 이 섹션에서 설명 하는 예외 throw 지침 실행이 실패의 의미를 정의 하는 것 필요 합니다. 구성원을 수행할 수 없는 될 때마다 실행 오류가 발생 (어떤 멤버 이름을 의미 함)를 수행 하도록 설계 합니다. 예를 들어 경우는 `OpenFile` 메서드 호출자에 게 열려 있는 파일 핸들을 반환할 수 없습니다, 실행 실패로 간주 합니다.  
@@ -71,9 +71,9 @@ ms.lasthandoff: 12/23/2017
   
  **하지 말고 X** 명시적으로 finally 블록에서 예외를 throw 합니다. throw 하는 메서드를 호출 하 여 발생 하는 암시적으로 throw 된 예외를 사용할 수 있습니다.  
   
- *일부 © 2005, 2009 Microsoft Corporation. 모든 권리 보유.*  
+ *Portions © 2005, 2009 Microsoft Corporation. 모든 권리 보유.*  
   
- *피어슨 교육, Inc.에서의 사용 권한으로 재인쇄 [Framework 디자인 지침: 규칙, 특징 및 다시 사용할 수 있는.NET 라이브러리를 2nd Edition에 대 한 패턴](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina 및 Brad Abrams 게시 하 여 2008 년 10 월 22 일 Microsoft Windows 개발 시리즈의 일부로: Addison Wesley Professional.*  
+ *피어슨 교육, Inc.에서의 사용 권한으로 재인쇄 [Framework 디자인 지침: 규칙, 특징 및 다시 사용할 수 있는.NET 라이브러리를 2nd Edition에 대 한 패턴](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina 및 Brad Abrams 게시 하 여 2008 년 10 월 22 일 Microsoft Windows 개발 시리즈의 일부로: Addison Wesley Professional.*  
   
 ## <a name="see-also"></a>참고 항목  
  [프레임워크 디자인 지침](../../../docs/standard/design-guidelines/index.md)  

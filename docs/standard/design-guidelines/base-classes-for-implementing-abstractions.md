@@ -1,29 +1,29 @@
 ---
-title: "추상화 구현을 위한 기본 클래스"
-ms.custom: 
+title: 추상화 구현을 위한 기본 클래스
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - abstractions [.NET Framework]
 - base classes, abstractions
 ms.assetid: 37a2d9a4-9721-482a-a40f-eee2c1d97875
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 96264456ac6afc569c46caf5faed6c37ea22bc8e
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 70d107d96576b8cafe9e76135c00bd2c635f2d7e
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="base-classes-for-implementing-abstractions"></a>추상화 구현을 위한 기본 클래스
 엄격히 말해서, 클래스는 다른 클래스에서 파생 된 경우 기본 클래스를 수 있습니다. 그러나이 섹션에서는 목적으로 기본 클래스는 클래스는 일반적인 추상화를 제공 합니다. 또는 일부를 다시 사용 다른 클래스에 대 한 기본 구현을 통해 상속을 주로. 일반적으로 기본 클래스 추상화 계층의 루트에 맨 아래에 몇 가지 사용자 지정 구현이 사이의 상속 계층 구조 가운데에 배치 합니다.  
@@ -40,9 +40,9 @@ ms.lasthandoff: 12/23/2017
   
  **하지 말고 X** 클래스가 공용 Api에서 사용 하기 위한 경우 "기본" 접미사를 사용 하 여 기본 클래스 이름을 지정 합니다.  
   
- *일부 © 2005, 2009 Microsoft Corporation. 모든 권리 보유.*  
+ *Portions © 2005, 2009 Microsoft Corporation. 모든 권리 보유.*  
   
- *피어슨 교육, Inc.에서의 사용 권한으로 재인쇄 [Framework 디자인 지침: 규칙, 특징 및 다시 사용할 수 있는.NET 라이브러리를 2nd Edition에 대 한 패턴](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina 및 Brad Abrams 게시 하 여 2008 년 10 월 22 일 Microsoft Windows 개발 시리즈의 일부로: Addison Wesley Professional.*  
+ *피어슨 교육, Inc.에서의 사용 권한으로 재인쇄 [Framework 디자인 지침: 규칙, 특징 및 다시 사용할 수 있는.NET 라이브러리를 2nd Edition에 대 한 패턴](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina 및 Brad Abrams 게시 하 여 2008 년 10 월 22 일 Microsoft Windows 개발 시리즈의 일부로: Addison Wesley Professional.*  
   
 ## <a name="see-also"></a>참고 항목  
  [프레임워크 디자인 지침](../../../docs/standard/design-guidelines/index.md)  

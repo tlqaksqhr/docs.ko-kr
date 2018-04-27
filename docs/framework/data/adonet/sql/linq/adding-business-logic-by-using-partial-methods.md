@@ -1,33 +1,35 @@
 ---
-title: "Partial 메서드를 사용하여 비즈니스 논리 추가"
-ms.custom: 
+title: Partial 메서드를 사용하여 비즈니스 논리 추가
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 3a73991e-fd4e-4610-93fb-7ced4dc6b7f9
-caps.latest.revision: "3"
+caps.latest.revision: 3
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 9704ad7d4030ee85701f1f95f87c539c1fbd0122
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: 8ea345f01c68f8c962069a3e9fdca7feff84c5c0
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="adding-business-logic-by-using-partial-methods"></a>Partial 메서드를 사용하여 비즈니스 논리 추가
-사용자 지정할 수 있습니다 [!INCLUDE[vbprvb](../../../../../../includes/vbprvb-md.md)] C# 코드를 생성 하 고 프로그램 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 사용 하 여 프로젝트 *부분 메서드*합니다. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]에서 생성한 코드에는 부분 메서드의 일부로 시그니처를 정의합니다. 메서드를 구현하려면 사용자 고유의 부분 메서드를 추가합니다. 사용자 고유의 구현을 추가하지 않으면 컴파일러에서는 부분 메서드 시그니처를 취소하고 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]의 기본 메서드를 호출합니다.  
+사용자 지정할 수 있습니다 Visual Basic 및 C# 코드에서 생성 된 프로그램 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 사용 하 여 프로젝트 *부분 메서드*합니다. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]에서 생성한 코드에는 부분 메서드의 일부로 시그니처를 정의합니다. 메서드를 구현하려면 사용자 고유의 부분 메서드를 추가합니다. 사용자 고유의 구현을 추가하지 않으면 컴파일러에서는 부분 메서드 시그니처를 취소하고 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]의 기본 메서드를 호출합니다.  
   
 > [!NOTE]
->  [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)]를 사용하면 [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)]를 사용하여 엔터티 클래스에 유효성 검사와 기타 사용자 지정을 추가할 수 있습니다.  
+>  Visual Studio를 사용 하는 경우 사용할 수 있습니다는 [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] 엔터티 클래스에 유효성 검사 및 기타 사용자 지정을 추가 합니다.  
   
  예를 들어 Northwind 샘플 데이터베이스의 `Customer` 클래스에 대한 기본 매핑에는 다음 부분 메서드가 포함됩니다.  
   
@@ -41,9 +43,9 @@ ms.lasthandoff: 01/17/2018
   
  이러한 접근 방식은 일반적으로 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]에서 `Insert`, `Update` 및 `Delete`에 대한 기본 메서드를 재정의하고 개체 수명 주기 이벤트 동안 속성의 유효성을 검사하는 데 사용됩니다.  
   
- 자세한 내용은 참조 [부분 메서드](~/docs/visual-basic/programming-guide/language-features/procedures/partial-methods.md) ([!INCLUDE[vbprvb](../../../../../../includes/vbprvb-md.md)]) 또는 [부분 (메서드) (C# 참조)](~/docs/csharp/language-reference/keywords/partial-method.md) (C#).  
+ 자세한 내용은 참조 [부분 메서드](~/docs/visual-basic/programming-guide/language-features/procedures/partial-methods.md) (Visual Basic) 또는 [부분 (메서드) (C# 참조)](~/docs/csharp/language-reference/keywords/partial-method.md) (C#).  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
   
 ### <a name="description"></a>설명  
  다음 예제에서는 SQLMetal와 같은 코드 생성 도구에서 정의한 `ExampleClass`를 먼저 보여 준 다음 두 개의 메서드 중 하나만 구현하는 방법을 보여 줍니다.  

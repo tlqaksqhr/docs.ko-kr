@@ -1,34 +1,36 @@
 ---
-title: "UI 자동화 TextPattern 개요"
-ms.custom: 
+title: UI 자동화 TextPattern 개요
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-bcl
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-bcl
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - UI Automation, TextPattern class
 - TextPattern class
 - classes, TextPattern
 ms.assetid: 41787927-df1f-4f4a-aba3-641662854fc4
-caps.latest.revision: "38"
+caps.latest.revision: 38
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: dbf3e125d911a407be3b07d0ce93d5c17bd8a0b7
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: 1b9504dceea6987945cfb3960f756148db9ebb8f
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="ui-automation-textpattern-overview"></a>UI 자동화 TextPattern 개요
 > [!NOTE]
 >  이 설명서는 <xref:System.Windows.Automation> 네임스페이스에 정의된 관리되는 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 클래스를 사용하려는 .NET Framework 개발자를 위한 것입니다. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]에 대한 최신 정보는 [Windows 자동화 API: UI 자동화](http://go.microsoft.com/fwlink/?LinkID=156746)를 참조하세요.  
   
- 이 개요에서는 [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] 을 사용하여 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]이 지원되는 플랫폼에 있는 텍스트 컨트롤의 텍스트 콘텐츠(형식 및 스타일 특성 포함)를 노출하는 방법을 설명합니다. 이러한 컨트롤에는 [!INCLUDE[TLA#tla_winfx](../../../includes/tlasharptla-winfx-md.md)] <xref:System.Windows.Controls.TextBox> 및 <xref:System.Windows.Controls.RichTextBox> 와 해당 [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] 값이 포함되지만 이에만 제한되지 않습니다.  
+ 이 개요에서는 [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] 을 사용하여 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]이 지원되는 플랫폼에 있는 텍스트 컨트롤의 텍스트 콘텐츠(형식 및 스타일 특성 포함)를 노출하는 방법을 설명합니다. 이러한 컨트롤 포함 되지만 Microsoft.NET Framework로 제한 되 지도 않습니다 <xref:System.Windows.Controls.TextBox> 및 <xref:System.Windows.Controls.RichTextBox> 뿐만 아니라 해당 [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] 해당 합니다.  
   
  컨트롤의 텍스트 콘텐츠 노출은 텍스트 컨테이너의 내용을 텍스트 스트림으로 나타내는 <xref:System.Windows.Automation.TextPattern> 컨트롤 패턴을 사용하여 수행됩니다. 다시, <xref:System.Windows.Automation.TextPattern> 을 사용하려면 형식 및 스타일 특성을 노출하는 <xref:System.Windows.Automation.Text.TextPatternRange> 클래스를 지원해야 합니다. <xref:System.Windows.Automation.Text.TextPatternRange> 는 <xref:System.Windows.Automation.TextPattern> 및 <xref:System.Windows.Automation.Text.TextPatternRangeEndpoint.Start> 끝점 컬렉션을 사용하여 텍스트 컨테이너의 연속 텍스트 범위나 여러 비연속 텍스트 범위를 나타내 <xref:System.Windows.Automation.Text.TextPatternRangeEndpoint.End> 을 지원합니다. <xref:System.Windows.Automation.Text.TextPatternRange> 는 선택, 비교, 검색 및 탐색 등의 기능을 지원합니다.  
   
@@ -121,7 +123,7 @@ ms.lasthandoff: 01/19/2018
  텍스트 범위의 형식 특성(예: <xref:System.Windows.Automation.TextPattern.IsItalicAttribute> 또는 <xref:System.Windows.Automation.TextPattern.FontNameAttribute>)입니다.  
   
  **중복 제거 범위**  
- 중복 제거 범위는 비어 있거나 0자 텍스트 범위입니다. TextPattern 컨트롤 패턴의 목적을 위해 텍스트 삽입 지점(또는 시스템 캐럿)은 중복 제거 범위로 간주됩니다. 선택한 텍스트가 없는 경우 <xref:System.Windows.Automation.TextPattern.GetSelection%2A> 은 중복 제거 범위를 텍스트 삽입 지점에 반환하고 <xref:System.Windows.Automation.TextPattern.RangeFromPoint%2A> 는 중복 제거 범위를 시작 끝점으로 반환합니다. 텍스트 공급자가 지정된 조건과 일치하는 텍스트 범위를 찾을 수 없는 경우<xref:System.Windows.Automation.TextPattern.RangeFromChild%2A> 및 <xref:System.Windows.Automation.TextPattern.GetVisibleRanges%2A> 에서 중복 제거 범위를 반환할 수도 있습니다. 이 중복 제거 범위는 텍스트 공급자 내에서 시작 끝점으로 사용될 수 있습니다. <xref:System.Windows.Automation.Text.TextPatternRange.FindText%2A> 및 <xref:System.Windows.Automation.Text.TextPatternRange.FindAttribute%2A> 는 null 참조(`Nothing` 에서는 [!INCLUDE[TLA2#tla_visualbnet](../../../includes/tla2sharptla-visualbnet-md.md)])를 반환하여 검색된 범위와 중복 제거 범위가 혼동되지 않도록 합니다.  
+ 중복 제거 범위는 비어 있거나 0자 텍스트 범위입니다. TextPattern 컨트롤 패턴의 목적을 위해 텍스트 삽입 지점(또는 시스템 캐럿)은 중복 제거 범위로 간주됩니다. 선택한 텍스트가 없는 경우 <xref:System.Windows.Automation.TextPattern.GetSelection%2A> 은 중복 제거 범위를 텍스트 삽입 지점에 반환하고 <xref:System.Windows.Automation.TextPattern.RangeFromPoint%2A> 는 중복 제거 범위를 시작 끝점으로 반환합니다. 텍스트 공급자가 지정된 조건과 일치하는 텍스트 범위를 찾을 수 없는 경우<xref:System.Windows.Automation.TextPattern.RangeFromChild%2A> 및 <xref:System.Windows.Automation.TextPattern.GetVisibleRanges%2A> 에서 중복 제거 범위를 반환할 수도 있습니다. 이 중복 제거 범위는 텍스트 공급자 내에서 시작 끝점으로 사용될 수 있습니다. <xref:System.Windows.Automation.Text.TextPatternRange.FindText%2A> 및 <xref:System.Windows.Automation.Text.TextPatternRange.FindAttribute%2A> null 참조를 반환 (`Nothing` Microsoft Visual Basic.net에서)와 검색 된 범위와 중복 제거 범위가 혼동 되지 않도록 합니다.  
   
  **포함 개체**  
  [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 텍스트 모델에는 두 가지 유형의 포함 개체가 있습니다. 하이퍼링크 또는 테이블과 같은 텍스트 기반 콘텐츠 요소와 이미지 및 단추와 같은 컨트롤 요소로 구성됩니다. 자세한 내용은 [Access Embedded Objects Using UI Automation](../../../docs/framework/ui-automation/access-embedded-objects-using-ui-automation.md)를 참조하세요.  
@@ -129,7 +131,7 @@ ms.lasthandoff: 01/19/2018
  **끝점**  
  텍스트 컨테이너 내에서 텍스트 범위의 절대 <xref:System.Windows.Automation.Text.TextPatternRangeEndpoint.Start> 또는 <xref:System.Windows.Automation.Text.TextPatternRangeEndpoint.End> 지점입니다.  
   
- ![TextPatternRangeEndpoints &#40; 시작 및 끝 &#41;. ] (../../../docs/framework/ui-automation/media/uia-textpattern-endpoints.PNG "UIA_TextPattern_Endpoints")  
+ ![TextPatternRangeEndpoints &#40;시작 및 종료&#41;합니다. ] (../../../docs/framework/ui-automation/media/uia-textpattern-endpoints.PNG "UIA_TextPattern_Endpoints")  
 다음은 시작점과 끝점 집합을 보여 줍니다.  
   
  **TextRange**  

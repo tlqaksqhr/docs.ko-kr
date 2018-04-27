@@ -1,23 +1,24 @@
 ---
-title: "속성 표 확장성"
-ms.custom: 
+title: 속성 표 확장성
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 3530c3a3-756d-4712-9f10-fb2897414d3a
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: e3069e97a1696b37d56728eb86161cc2487dfdfa
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 9393947420709590312200e8f142092c95b91b1f
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="property-grid-extensibliity"></a>속성 표 확장성
 개발자는 디자이너 내에서 지정된 활동을 선택할 경우 표시되는 속성 표를 사용자 지정할 수 있으므로 이를 통해 다양한 편집 환경을 만들 수 있습니다. 이 샘플에서는 이러한 작업을 수행하는 방식을 보여 줍니다.  
@@ -42,7 +43,7 @@ ms.lasthandoff: 12/22/2017
   
 -   <xref:System.Activities.Presentation.PropertyEditing.PropertyValueEditor>에서 파생되는 형식을 만듭니다.  
   
--   생성자에서 <xref:System.Activities.Presentation.PropertyEditing.PropertyValueEditor.InlineEditorTemplate%2A> 값은 [!INCLUDE[avalon1](../../../../includes/avalon1-md.md)] 데이터 템플릿을 사용하여 설정됩니다. 이 값은 XAML 템플릿에 바인딩할 수 있지만 이 샘플에서는 코드를 사용하여 데이터 바인딩을 초기화합니다.  
+-   생성자에는 <xref:System.Activities.Presentation.PropertyEditing.PropertyValueEditor.InlineEditorTemplate%2A> Windows Presentation Foundation (WPF) 데이터 템플릿을 사용 하 여 설정 됩니다. 이 값은 XAML 템플릿에 바인딩할 수 있지만 이 샘플에서는 코드를 사용하여 데이터 바인딩을 초기화합니다.  
   
 -   데이터 템플릿에는 속성 표에서 렌더링된 항목의 <xref:System.Activities.Presentation.PropertyEditing.PropertyValue>에 대한 데이터 컨텍스트가 있습니다. CustomInlineEditor.cs에 있는 다음 코드에서는 이 컨텍스트가 `Value` 속성에 바인딩됩니다.  
   

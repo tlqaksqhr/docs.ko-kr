@@ -1,18 +1,19 @@
 ---
-title: "하이브리드 클라우드 시나리오로 마이그레이션"
-description: "컨테이너 화 된.NET 응용 프로그램에 대 한.NET Microservices 아키텍처 | 하이브리드 클라우드 시나리오로 마이그레이션"
+title: 하이브리드 클라우드 시나리오로 마이그레이션
+description: 컨테이너 화 된.NET 응용 프로그램에 대 한.NET Microservices 아키텍처 | 하이브리드 클라우드 시나리오로 마이그레이션
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/2/2017
 ms.prod: .net
+ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 6216068786745ac4ebc00263a14b4afe247193f5
-ms.sourcegitcommit: d3cfda0943364aaf6ccd574f55f584576c8a4fee
+ms.openlocfilehash: a2fc5a2118736d3491a5a0731e47c697edd674f1
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="migrate-to-hybrid-cloud-scenarios"></a>하이브리드 클라우드 시나리오로 마이그레이션
 

@@ -11,17 +11,17 @@ helpviewer_keywords:
 - international user interface [WPF], XAML
 - globalization [WPF]
 ms.assetid: 4571ccfe-8a60-4f06-9b37-7ac0b1c2d10f
-caps.latest.revision: ''
+caps.latest.revision: 35
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: e6f39d40284e6212715d85fece545e653ff2e60a
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: 8bf63c59c0948dd8414232a52fc12fafa0d13aa1
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="globalization-for-wpf"></a>WPF의 전역화
 이 항목에서는 문제를 작성할 때 알고 있어야 하는 소개 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 글로벌 시장에 대 한 응용 프로그램입니다. 전역화 프로그래밍 요소에 정의 된 [!INCLUDE[TLA#tla_net](../../../../includes/tlasharptla-net-md.md)] 에서 `System.Globalization`합니다.  
@@ -76,7 +76,7 @@ ms.lasthandoff: 03/26/2018
   
 <a name="intl_text"></a>   
 ### <a name="international-text"></a>국가별 텍스트  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 모든 기본 제공 처리 작업이 포함 되어 [!INCLUDE[TLA#tla_winfx](../../../../includes/tlasharptla-winfx-md.md)] 쓰기 시스템을 지원 합니다.  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 모든 Microsoft.NET Framework 지원 쓰기 시스템에 대 한 기본 제공 처리에 포함 되어 있습니다.  
   
  현재 지원되는 스크립트는 다음과 같습니다.  
   
@@ -158,7 +158,7 @@ ms.lasthandoff: 03/26/2018
   
 <a name="localizable_ui"></a>   
 ### <a name="localizable-user-interface"></a>지역화할 수 있는 사용자 인터페이스  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 응용 프로그램 사용 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 정의 하려면 해당 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]합니다. [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]를 사용하면 개발자가 속성 및 논리 집합이 포함된 개체의 계층 구조를 지정할 수 있습니다. 주된 용도 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 개발 하는 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 하지만 응용 프로그램의 계층 구조를 지정 하려면 사용할 수 [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] 개체입니다. 대부분의 개발자 사용 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 해당 응용 프로그램을 지정 하려면 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 와 같은 프로그래밍 언어를 사용 하 고 [!INCLUDE[TLA#tla_cshrp](../../../../includes/tlasharptla-cshrp-md.md)] 사용자 상호 작용에 반응 하 합니다.  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 응용 프로그램 사용 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 정의 하려면 해당 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]합니다. [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]를 사용하면 개발자가 속성 및 논리 집합이 포함된 개체의 계층 구조를 지정할 수 있습니다. 주된 용도 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 개발 하는 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 하지만 응용 프로그램의 계층 구조를 지정 하려면 사용할 수 [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] 개체입니다. 대부분의 개발자 사용 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 해당 응용 프로그램을 지정 하려면 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] C#과 같은 프로그래밍 언어를 사용 하 여 사용자 상호 작용에 반응 하 고 있습니다.  
   
  리소스의 관점에서 한 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 언어 종속적 설명 하기 위해 설계 된 파일 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 리소스 요소 이며 따라서의 최종 배포 형식은 국가별 언어를 지원 하기 위해 지역화할 수 있어야 합니다. 때문에 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 수 없는 이벤트를 처리할 여러 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 응용 프로그램에이 작업을 수행 하는 코드 블록을 포함 합니다. 자세한 내용은 참조 [XAML 개요 (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)합니다. 코드에서 제거 되 고 다른 이진 파일이 컴파일될 때는 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 파일 BAML 형식의 XAML으로 토큰화 됩니다. XAML 파일의 BAML 양식, 이미지 및 기타 형식의 관리 리소스 개체는 위성 리소스 어셈블리에 포함되어 다른 언어로 지역화되거나, 지역화가 필요하지 않은 경우 기본 어셈블리에 포함됩니다.  
   

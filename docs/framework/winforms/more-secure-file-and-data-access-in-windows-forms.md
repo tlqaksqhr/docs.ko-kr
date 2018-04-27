@@ -1,12 +1,13 @@
 ---
-title: "Windows Forms의 파일 및 데이터 액세스 추가 보안"
-ms.custom: 
+title: Windows Forms의 파일 및 데이터 액세스 추가 보안
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-winforms
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -20,16 +21,17 @@ helpviewer_keywords:
 - file access [Windows Forms]
 - security [Windows Forms], data access
 ms.assetid: 3cd3e55b-2f5e-40dd-835d-f50f7ce08967
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 335e9487468522abb3a18f51f9a089d25519e71c
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: 61e4893ac32d2013b090a748078ec1e3a84ea3ac
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="more-secure-file-and-data-access-in-windows-forms"></a>Windows Forms의 파일 및 데이터 액세스 추가 보안
 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]에서는 리소스 및 데이터 보호를 위해 권한을 사용합니다. 응용 프로그램이 데이터를 일거나 쓸 수 있는 위치는 응용 프로그램에 부여된 권한에 따라 달라집니다. 응용 프로그램이 부분 신뢰 환경에서 실행되는 경우 데이터에 대한 액세스 권한이 없거나 데이터에 액세스하는 방법을 변경해야 할 수 있습니다.  
@@ -144,7 +146,7 @@ private void ButtonOpen_Click(object sender, System.EventArgs e)
 ```  
   
 > [!NOTE]
->  [!INCLUDE[csprcs](../../../includes/csprcs-md.md)]에서 이벤트 처리기를 사용하도록 설정하는 코드를 추가해야 합니다. 이전 예제의 코드를 사용하여 다음 코드에서는 이벤트 처리기 `this.ButtonOpen.Click += newSystem.Windows.Forms.EventHandler(this.ButtonOpen_Click);`를 사용하도록 설정하는 방법을 보여 줍니다.  
+>  Visual C#, 이벤트 처리기를 사용 하는 코드를 추가 하는 것을 확인 합니다. 이전 예제의 코드를 사용하여 다음 코드에서는 이벤트 처리기 `this.ButtonOpen.Click += newSystem.Windows.Forms.EventHandler(this.ButtonOpen_Click);`를 사용하도록 설정하는 방법을 보여 줍니다.  
   
 ### <a name="other-files"></a>기타 파일  
  응용 프로그램 설정을 유지해야 하는 경우와 같이 사용자가 지정하지 않는 파일을 읽거나 써야 하는 경우가 있습니다. 로컬 인트라넷 및 인터넷 영역에서는 로컬 파일에 데이터를 저장할 수 있는 권한이 응용 프로그램에 없습니다. 그러나 응용 프로그램은 격리된 저장소에 데이터를 저장할 수 있습니다. 격리된 저장소는 데이터가 저장된 실제 디렉터리 위치를 포함하는 하나 이상의 격리된 저장소 파일(저장소라고 함)이 포함된 추상 데이터 컴파트먼트(특정 저장소 위치가 아님)입니다. <xref:System.Security.Permissions.FileIOPermission>과 같은 파일 액세스 권한은 필요하지 않습니다. 대신, <xref:System.Security.Permissions.IsolatedStoragePermission> 클래스는 격리된 저장소에 대한 권한을 제어합니다. 기본적으로 로컬 인트라넷 및 인터넷 영역에서 실행 중인 응용 프로그램은 격리된 저장소를 사용하여 데이터를 저장할 수 있습니다. 그러나 디스크 할당량과 같은 설정이 달라질 수 있습니다. 격리 된 저장소에 대 한 자세한 내용은 참조 [격리 된 저장소](../../../docs/standard/io/isolated-storage.md)합니다.  

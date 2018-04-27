@@ -1,23 +1,24 @@
 ---
-title: "채용 프로세스"
-ms.custom: 
+title: 채용 프로세스
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: d5fcacbb-c884-4b37-a5d6-02b1b8eec7b4
-caps.latest.revision: "13"
+caps.latest.revision: 13
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 30cad662a9cca679f7e8ce720cfde3d369b9ba60
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 8cfa23ab5f36b3a40de107a546dd4700a4523595
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="hiring-process"></a>채용 프로세스
 이 샘플에서는 워크플로 서비스로 호스트되는 두 개의 워크플로와 메시징 활동을 사용하여 비즈니스 프로세스를 구현하는 방법을 보여 줍니다. 이 워크플로는 Contoso, Inc라는 가상 회사의 IT 인프라 중 일부입니다.  
@@ -129,7 +130,7 @@ ms.lasthandoff: 12/22/2017
 |사용자 지정 추적|샘플에는 `HiringRequestProcess`의 기록을 저장하는 사용자 지정 추적 참가자가 포함되어 있으며, 이 참가자는 어떤 조치가 취해졌는지와 조치를 취한 사람 및 시기를 기록합니다. 소스 코드는 HiringRequestService의 Tracking 폴더에 있습니다.|HiringRequestService|  
 |ETW 추적|시스템 제공 ETW 추적은 HiringRequestService 서비스의 App.config 파일에 구성되어 있습니다.|HiringRequestService|  
 |활동의 컴퍼지션|프로세스 정의는 <xref:System.Activities.Activity>의 자유 컴퍼지션을 사용합니다. 순서도에는 다른 활동과 함께 여러 개의 시퀀스 활동 및 병렬 활동이 포함되어 있습니다.|HiringRequestService|  
-|병렬 활동|-   <xref:System.Activities.Statements.ParallelForEach%601>(두 명의 HR 관리자의 승인 단계를 기다리는 중) 병렬로 CEO 및 HR 관리자의 수신함에 등록 하는 데 사용 됩니다.<br />-   <xref:System.Activities.Statements.Parallel>완료 됨 및 거부 된 단계에서 몇 가지 정리 작업을 수행 하는 데 사용|HiringRequestService|  
+|병렬 활동|-   <xref:System.Activities.Statements.ParallelForEach%601> (두 명의 HR 관리자의 승인 단계를 기다리는 중) 병렬로 CEO 및 HR 관리자의 수신함에 등록 하는 데 사용 됩니다.<br />-   <xref:System.Activities.Statements.Parallel> 완료 됨 및 거부 된 단계에서 몇 가지 정리 작업을 수행 하는 데 사용|HiringRequestService|  
 |모델 취소|순서도는 <xref:System.Activities.Statements.CancellationScope>를 사용하여 취소 동작을 만들며, 몇 가지 정리 작업을 수행합니다.|HiringRequestService|  
 |고객 지속성 참가자|`HiringRequestPersistenceParticipant`는 워크플로 변수의 데이터를 Contoso HR 데이터베이스에 저장된 테이블에 저장합니다.|HiringRequestService|  
 |워크플로 서비스|`ResumeRequestService`는 워크플로 서비스를 사용하여 구현됩니다. 워크플로 정의와 서비스 정보는 ResumeRequestService.xamlx에 포함되어 있습니다. 서비스는 지속성과 추적을 사용하도록 구성됩니다.|ResumeRequestService|  
@@ -141,13 +142,13 @@ ms.lasthandoff: 12/22/2017
 ## <a name="data-storage"></a>데이터 저장소  
  데이터는 `ContosoHR`이라는 SQL Server 데이터베이스에 저장되며, 이 데이터베이스를 만드는 데 사용되는 스크립트는 `DbSetup` 폴더에 있습니다. 워크플로 인스턴스는 `InstanceStore`라는 SQL Server 데이터베이스에 저장되며, 인스턴스 저장소를 만드는 데 사용되는 스크립트는 [!INCLUDE[netfx_current_short](../../../../includes/netfx-current-short-md.md)] 배포의 일부입니다.  
   
- 두 데이터베이스 모두 [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)] 명령 프롬프트에서 Setup.cmd 스크립트를 실행하여 만들어집니다.  
+ Visual Studio 명령 프롬프트에서 Setup.cmd 스크립트를 실행 하 여 두 데이터베이스가 만들어집니다.  
   
 ## <a name="running-the-sample"></a>샘플 실행  
   
 #### <a name="to-create-the-databases"></a>데이터베이스를 만들려면  
   
-1.  [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)] 명령 프롬프트를 엽니다.  
+1.  Visual Studio 명령 프롬프트를 엽니다.  
   
 2.  샘플 폴더로 이동합니다.  
   
@@ -157,7 +158,7 @@ ms.lasthandoff: 12/22/2017
   
 #### <a name="to-set-up-the-solution-for-execution"></a>실행할 솔루션을 설치하려면  
   
-1.  관리자 권한으로 [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)]을 실행합니다. HiringRequest.sln을 엽니다.  
+1.  관리자 권한으로 Visual Studio를 실행합니다. HiringRequest.sln을 엽니다.  
   
 2.  솔루션을 마우스 오른쪽 단추로 클릭 **솔루션 탐색기** 선택 **속성**합니다.  
   
@@ -221,7 +222,7 @@ ms.lasthandoff: 12/22/2017
   
 ## <a name="troubleshooting"></a>문제 해결  
   
-1.  관리자 권한으로 [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)]을 실행 중인지 확인합니다.  
+1.  Visual Studio를 관리자 권한으로 실행 되 고 확인 합니다.  
   
 2.  솔루션이 제대로 빌드되지 않으면 다음 내용을 확인합니다.  
   
@@ -237,7 +238,7 @@ ms.lasthandoff: 12/22/2017
   
         2.  마우스 오른쪽 단추로 클릭 **Contoso** 선택 **웹/서비스 참조 업데이트**합니다.  
   
-        3.  [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)]에서 Ctrl+Shift+B를 눌러 솔루션을 다시 빌드합니다.  
+        3.  Visual Studio에서 CTRL + SHIFT + B를 눌러 솔루션을 다시 빌드하십시오.  
   
 ## <a name="uninstalling"></a>제거  
   

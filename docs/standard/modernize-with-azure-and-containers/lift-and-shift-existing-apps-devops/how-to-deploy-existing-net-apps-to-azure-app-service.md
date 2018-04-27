@@ -1,18 +1,19 @@
 ---
-title: "Azure 앱 서비스를 기존.NET 응용 프로그램을 배포 하는 방법"
-description: "컨테이너 화 된.NET 응용 프로그램에 대 한.NET Microservices 아키텍처 | Azure 앱 서비스를 기존.NET 응용 프로그램을 배포 하는 방법"
+title: Azure 앱 서비스를 기존.NET 응용 프로그램을 배포 하는 방법
+description: 컨테이너 화 된.NET 응용 프로그램에 대 한.NET Microservices 아키텍처 | Azure 앱 서비스를 기존.NET 응용 프로그램을 배포 하는 방법
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/26/2017
 ms.prod: .net
+ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: aefcd79574cbbf6b3759bfa6cc0f9e46a58244ce
-ms.sourcegitcommit: d3cfda0943364aaf6ccd574f55f584576c8a4fee
+ms.openlocfilehash: 74f4d4b1812976d2e2b1581e10134fa57938bffc
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="how-to-deploy-existing-net-apps-to-azure-app-service"></a>Azure 앱 서비스를 기존.NET 응용 프로그램을 배포 하는 방법 
 

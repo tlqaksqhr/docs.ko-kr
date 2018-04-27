@@ -1,12 +1,13 @@
 ---
-title: "연습: 시각적 상속 설명"
-ms.custom: 
+title: '연습: 시각적 상속 설명'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-winforms
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -18,16 +19,17 @@ helpviewer_keywords:
 - walkthroughs [Windows Forms], visual inheritance
 - Windows Forms, inheritance
 ms.assetid: 01966086-3142-450e-8210-3fd4cb33f591
-caps.latest.revision: "24"
+caps.latest.revision: 24
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 7c5ef33be9841b5c74b6ae2448daf56079489b61
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: e76ddcb33980db1a6d1b6e602c1b71da60b53381
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="walkthrough-demonstrating-visual-inheritance"></a>연습: 시각적 상속 설명
 시각적 상속을 통해 기본 폼의 컨트롤을 보고 새 컨트롤을 추가할 수 있습니다. 이 연습에서는 기본 폼을 만들고 클래스 라이브러리로 컴파일합니다. 이 클래스 라이브러리를 다른 프로젝트로 가져와 기본 폼에서 상속하는 새 양식을 만듭니다. 이 연습에서는 다음 작업을 수행하는 방법을 배웁니다.  
@@ -157,7 +159,7 @@ ms.lasthandoff: 01/19/2018
   
 7.  개인 선택 **Say Goodbye** 단추 및 크기 조정 핸들이 있는 없습니다. 또한에 **속성** 창에서이 단추의 속성은 수정할 수 없음을 나타내기 위해 회색 표시 됩니다.  
   
-8.  [!INCLUDE[csprcs](../../../../includes/csprcs-md.md)]을 사용하는 경우  
+8.  Visual C# 사용 중인 경우:  
   
     1.  **솔루션 탐색기**를 마우스 오른쪽 단추로 클릭 **Form1** 에 **InheritanceTest** 프로젝트를 선택한 후 **삭제**합니다. 메시지 상자가 나타나면 클릭 **확인** 여 삭제를 확인 합니다.  
   
@@ -172,7 +174,7 @@ ms.lasthandoff: 01/19/2018
 12. F5 키를 눌러 응용 프로그램을 실행하고 상속된 폼의 동작을 관찰합니다.  
   
 ## <a name="next-steps"></a>다음 단계  
- 사용자 정의 컨트롤의 상속도 거의 동일한 방식으로 작동합니다. 새 클래스 라이브러리 프로젝트를 열고 사용자 정의 컨트롤을 추가합니다. 구성 요소 컨트롤을 배치하고 프로젝트를 컴파일합니다. 다른 새 클래스 라이브러리 프로젝트를 열고 컴파일된 클래스 라이브러리에 대한 참조를 추가합니다. 또한 상속된 된 컨트롤을 추가 해 보십시오 (통해는 **새 항목 추가** 대화 상자) 프로젝트에 사용 하 고는 **상속 선택**합니다. 사용자 정의 컨트롤을 추가하고 `Inherits`([!INCLUDE[csprcs](../../../../includes/csprcs-md.md)]에서는 `:`) 문을 변경합니다. 자세한 내용은 참조 [하는 방법: Windows Forms 상속](../../../../docs/framework/winforms/advanced/how-to-inherit-windows-forms.md)합니다.  
+ 사용자 정의 컨트롤의 상속도 거의 동일한 방식으로 작동합니다. 새 클래스 라이브러리 프로젝트를 열고 사용자 정의 컨트롤을 추가합니다. 구성 요소 컨트롤을 배치하고 프로젝트를 컴파일합니다. 다른 새 클래스 라이브러리 프로젝트를 열고 컴파일된 클래스 라이브러리에 대한 참조를 추가합니다. 또한 상속된 된 컨트롤을 추가 해 보십시오 (통해는 **새 항목 추가** 대화 상자) 프로젝트에 사용 하 고는 **상속 선택**합니다. 사용자 정의 컨트롤을 추가 하 고 변경 된 `Inherits` (`:` Visual C#) 문을 합니다. 자세한 내용은 참조 [하는 방법: Windows Forms 상속](../../../../docs/framework/winforms/advanced/how-to-inherit-windows-forms.md)합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [방법: Windows Forms 상속](../../../../docs/framework/winforms/advanced/how-to-inherit-windows-forms.md)  

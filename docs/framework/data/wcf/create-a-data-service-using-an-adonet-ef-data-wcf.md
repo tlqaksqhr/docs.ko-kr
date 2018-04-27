@@ -1,32 +1,34 @@
 ---
-title: "방법: ADO.NET Entity Framework 데이터 원본을 사용하여 데이터 서비스 만들기(WCF Data Services)"
-ms.custom: 
+title: '방법: ADO.NET Entity Framework 데이터 원본을 사용하여 데이터 서비스 만들기(WCF Data Services)'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework-oob
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - WCF Data Services, providers
 - WCF Data Services, Entity Framework
 ms.assetid: 6d11fec8-0108-42f5-8719-2a7866d04428
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: e90b11800685707460171e5e2d250ef757979c44
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: 5993837546b28742756ed4a5ec323e6f1a5ef782
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-create-a-data-service-using-an-adonet-entity-framework-data-source-wcf-data-services"></a>방법: ADO.NET Entity Framework 데이터 원본을 사용하여 데이터 서비스 만들기(WCF Data Services)
-[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]에서는 엔터티 데이터를 데이터 서비스로 노출합니다. 이 엔터티 데이터에서 제공 되는 [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] 때 데이터 소스는 관계형 데이터베이스입니다. 이 항목에서는 기존 데이터베이스를 기반으로 하는 [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] 웹 응용 프로그램에서 [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)] 기반 데이터 모델을 만들고 이 데이터 모델을 사용하여 새 데이터 서비스를 만드는 방법을 보여 줍니다.  
+[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]에서는 엔터티 데이터를 데이터 서비스로 노출합니다. 이 엔터티 데이터에서 제공 되는 [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] 때 데이터 소스는 관계형 데이터베이스입니다. 이 항목을 만드는 방법을 보여 줍니다.는 [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)]-기존 데이터베이스를 기반으로 하며 새 데이터 서비스를 만들려면이 데이터 모델을 사용 하는 Visual Studio 웹 응용 프로그램에서 데이터 모델을 기반으로 합니다.  
   
- [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)]는 [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] 프로젝트 외부에서 [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)] 모델을 생성할 수 있는 명령줄 도구도 제공합니다. 자세한 내용은 참조 [하는 방법: 모델 및 매핑 파일 생성을 사용 하 여 EdmGen.exe](../../../../docs/framework/data/adonet/ef/how-to-use-edmgen-exe-to-generate-the-model-and-mapping-files.md)합니다.  
+ [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] 도 생성할 수 있는 명령줄 도구를 제공는 [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] Visual Studio 프로젝트 외부의 모델입니다. 자세한 내용은 참조 [하는 방법: 모델 및 매핑 파일 생성을 사용 하 여 EdmGen.exe](../../../../docs/framework/data/adonet/ef/how-to-use-edmgen-exe-to-generate-the-model-and-mapping-files.md)합니다.  
   
 ### <a name="to-add-an-entity-framework-model-that-is-based-on-an-existing-database-to-an-existing-web-application"></a>기존 웹 응용 프로그램에 기존 데이터베이스를 기반으로 하는 Entity Framework 모델을 추가하려면  
   
@@ -59,7 +61,7 @@ ms.lasthandoff: 01/19/2018
   
 ### <a name="to-create-the-data-service-by-using-the-new-data-model"></a>새 데이터 모델을 사용하여 데이터 서비스를 만들려면  
   
-1.  [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)]에서 데이터 모델을 나타내는 .edmx 파일을 엽니다.  
+1.  Visual Studio에서 데이터 모델을 나타내는 .edmx 파일을 엽니다.  
   
 2.  에 **모델 브라우저**모델을 마우스 오른쪽 단추로 클릭 하 여 **속성**, 다음 엔터티 컨테이너의 이름을 기록해 둡니다.  
   
@@ -69,7 +71,7 @@ ms.lasthandoff: 01/19/2018
   
 5.  서비스에 대 한 이름을 입력 한 다음 클릭 **확인**합니다.  
   
-     [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)]에서 새 서비스의 XML 태그와 코드 파일이 만들어집니다. 기본적으로 코드 편집기 창이 열립니다.  
+     Visual Studio에서 새 서비스의 XML 태그 및 코드 파일이 생성됩니다. 기본적으로 코드 편집기 창이 열립니다.  
   
 6.  데이터 서비스 코드에서 데이터 서비스를 정의하는 클래스 정의의 `/* TODO: put your data source class name here */` 주석을 <xref:System.Data.Objects.ObjectContext> 클래스에서 상속되고 2단계에서 적어 둔 데이터 모델의 엔터티 컨테이너인 형식으로 바꿉니다.  
   

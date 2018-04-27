@@ -18,14 +18,14 @@ ms.assetid: b5a65ef0-c408-4836-afb6-e6828c0771ca
 caps.latest.revision: 43
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 2ee98b317e9d94cad5087e708bd71ca88d2bae63
-ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
+ms.openlocfilehash: 5a8e1f06e1f32baacd494339a561a363f5d81c9d
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="keywords-visual-basic"></a>키워드(Visual Basic)
-다음 표에는 모든 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 언어 키워드가 나와 있습니다.  
+다음 표에서 모든 Visual Basic 언어 키워드를 보여 줍니다.  
   
 ## <a name="reserved-keywords"></a>예약 키워드  
  다음 키워드는 *예약*되어 있습니다. 즉, 이러한 키워드를 변수 또는 프로시저와 같은 프로그래밍 요소의 이름으로 사용할 수 없습니다. 이름을 대괄호(`[]`)로 묶으면 이 제한을 무시할 수 있습니다. 자세한 내용은 [선언 요소 이름](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)에서 "이스케이프 이름"을 참조하세요.  
@@ -84,7 +84,7 @@ ms.lasthandoff: 12/21/2017
 |[>> 연산자](../../../visual-basic/language-reference/operators/right-shift-operator.md)|[>>= 연산자](../../../visual-basic/language-reference/operators/right-shift-assignment-operator.md)|[<<](../../../visual-basic/language-reference/operators/left-shift-operator.md)|[<\<=](../../../visual-basic/language-reference/operators/left-shift-assignment-operator.md)|  
   
 > [!NOTE]
->  `EndIf`, `GoSub`, `Variant` 및 `Wend`는 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]에서 더 이상 사용되지 않더라도 예약 키워드로 유지됩니다. `Let` 키워드의 의미가 변경되었습니다. `Let`은 이제 LINQ 쿼리에서 사용됩니다. 자세한 내용은 [Let 절](../../../visual-basic/language-reference/queries/let-clause.md)을 참조하세요.  
+>  `EndIf``GoSub`, `Variant`, 및 `Wend` Visual Basic에서 더 이상 사용 하지만 예약 된 키워드 변수로 유지 됩니다. `Let` 키워드의 의미가 변경되었습니다. `Let`은 이제 LINQ 쿼리에서 사용됩니다. 자세한 내용은 [Let 절](../../../visual-basic/language-reference/queries/let-clause.md)을 참조하세요.  
   
 ## <a name="unreserved-keywords"></a>예약되지 않은 키워드  
  다음 키워드는 예약되어 있지 않습니다. 즉, 이러한 키워드를 프로그래밍 요소의 이름으로 사용할 수 있습니다. 하지만 이렇게 하면 코드를 읽기 힘들어 사소한 오류를 찾기 어려울 수 있으므로 권장하지 않습니다.  

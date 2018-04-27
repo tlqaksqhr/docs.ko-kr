@@ -1,12 +1,12 @@
 ---
-title: "중첩 형식"
-ms.custom: 
+title: 중첩 형식
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - types, nested
@@ -16,18 +16,18 @@ helpviewer_keywords:
 - members [.NET Framework], type
 - class library design guidelines [.NET Framework], nested types
 ms.assetid: 12feb7f0-b793-4d96-b090-42d6473bab8c
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 389ba73c4509f41f6c2cf86363e59ea720eb3c9f
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 681e11ef3994e4c38dee9f99c6c82cc4b103a0db
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="nested-types"></a>중첩 형식
 중첩된 형식은 바깥쪽 형식의 호출 하는 다른 형식의 범위 내에 정의 된 하는 형식이입니다. 중첩된 형식은 바깥쪽 형식의 모든 멤버 권한이 있습니다. 예를 들어 바깥쪽 형식의 모든 상위 항목에 정의 된 필드를 보호 및 바깥쪽 형식에 정의 된 전용 필드에 액세스를 권한이 있습니다.  
@@ -52,9 +52,9 @@ ms.lasthandoff: 12/23/2017
   
  **X 하지 않으면** 인터페이스의 구성원으로 중첩 된 형식을 정의 합니다. 대부분의 언어에서는 이러한 구문을 지원 하지 않습니다.  
   
- *일부 © 2005, 2009 Microsoft Corporation. 모든 권리 보유.*  
+ *Portions © 2005, 2009 Microsoft Corporation. 모든 권리 보유.*  
   
- *피어슨 교육, Inc.에서의 사용 권한으로 재인쇄 [Framework 디자인 지침: 규칙, 특징 및 다시 사용할 수 있는.NET 라이브러리를 2nd Edition에 대 한 패턴](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina 및 Brad Abrams 게시 하 여 2008 년 10 월 22 일 Microsoft Windows 개발 시리즈의 일부로: Addison Wesley Professional.*  
+ *피어슨 교육, Inc.에서의 사용 권한으로 재인쇄 [Framework 디자인 지침: 규칙, 특징 및 다시 사용할 수 있는.NET 라이브러리를 2nd Edition에 대 한 패턴](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina 및 Brad Abrams 게시 하 여 2008 년 10 월 22 일 Microsoft Windows 개발 시리즈의 일부로: Addison Wesley Professional.*  
   
 ## <a name="see-also"></a>참고 항목  
  [형식 디자인 지침](../../../docs/standard/design-guidelines/type.md)  

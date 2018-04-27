@@ -1,11 +1,12 @@
 ---
-title: "Property 프로시저(Visual Basic)"
-ms.custom: 
+title: Property 프로시저(Visual Basic)
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - Set statement [Visual Basic], Property procedures
@@ -19,19 +20,19 @@ helpviewer_keywords:
 - property procedures
 - Get statement [Visual Basic], property procedures
 ms.assetid: 46a98379-e1a2-45dd-a48c-b51213f5ab07
-caps.latest.revision: "22"
+caps.latest.revision: 22
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: cbdf49d5c3eb5ef71b25a060d62f55f19098f445
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 0d9df6f381c89263aa16315fb06a2b3b0d645bbf
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="property-procedures-visual-basic"></a>Property 프로시저(Visual Basic)
-속성 프로시저는 일련의 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 모듈, 클래스 또는 구조체에서 사용자 지정 속성을 조작 하는 문입니다. 속성 프로시저는 라고도 *속성 접근자*합니다.  
+속성 프로시저는 일련의 모듈, 클래스 또는 구조체에서 사용자 지정 속성을 조작 하는 Visual Basic 문입니다. 속성 프로시저는 라고도 *속성 접근자*합니다.  
   
- [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]다음 속성 프로시저를 제공합니다.  
+ 다음 속성 프로시저에 대 한 Visual Basic을 제공합니다.  
   
 -   A `Get` 프로시저가 속성의 값을 반환 합니다. 식에서 속성에 액세스할 때 호출 됩니다.  
   

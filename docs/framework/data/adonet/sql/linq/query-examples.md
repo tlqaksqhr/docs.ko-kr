@@ -1,27 +1,29 @@
 ---
-title: "쿼리 예제"
-ms.custom: 
+title: 쿼리 예제
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 137f8677-494c-4d49-95ce-c17742f2d01f
-caps.latest.revision: "2"
+caps.latest.revision: 2
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 1b3aabf5a47088fa408547527c5f18fa69a48e02
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: 5b1681f609d8715167defcb1df57cc270b61e53a
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="query-examples"></a>쿼리 예제
-이 단원에서는 일반적인 [!INCLUDE[vbprvb](../../../../../../includes/vbprvb-md.md)] 쿼리에 대한 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 및 C# 예제를 제공합니다. [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)]를 사용하는 개발자들은 샘플 단원에서 제공하는 샘플 솔루션에서 더 많은 예제를 찾아볼 수 있습니다. 자세한 내용은 참조 [샘플](../../../../../../docs/framework/data/adonet/sql/linq/samples.md)합니다.  
+이 섹션에서는 일반적인 Visual Basic 및 C# 예제 제공 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 쿼리 합니다. Visual Studio를 사용 하는 개발자 예제 섹션에서 사용할 수 있는 샘플 솔루션에 더 많은 예제를 찾을 수 있습니다. 자세한 내용은 참조 [샘플](../../../../../../docs/framework/data/adonet/sql/linq/samples.md)합니다.  
   
 > [!IMPORTANT]
 >  *db* 의 코드 예제에는 대개 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 설명서입니다. *db* 인스턴스의 것으로 간주 되는 *Northwind* 클래스에서 상속 하는 <xref:System.Data.Linq.DataContext>합니다.  

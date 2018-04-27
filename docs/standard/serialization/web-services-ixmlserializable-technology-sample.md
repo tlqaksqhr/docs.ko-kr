@@ -1,28 +1,28 @@
 ---
-title: "Web Services IXmlSerializable 기술 샘플"
-ms.custom: 
+title: Web Services IXmlSerializable 기술 샘플
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 0202d3f1-a50b-427d-a5bb-79208b8f1c22
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: be0c76371bda9e91e0becf8a9e09beb44e44dd3c
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: d4a963051096d153232e8891839ded97ff356b9d
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="web-services-ixmlserializable-technology-sample"></a>Web Services IXmlSerializable 기술 샘플
-[샘플 다운로드](http://download.microsoft.com/download/4/7/B/47B2164C-E780-4B10-8DE4-2CB5B886E0A6/Technologies/Serialization/Xml%20Serialization/IXmlSerializable.zip.exe)  
+[샘플 다운로드](https://download.microsoft.com/download/4/7/B/47B2164C-E780-4B10-8DE4-2CB5B886E0A6/Technologies/Serialization/Xml%20Serialization/IXmlSerializable.zip.exe)  
   
  이 샘플에서는 <xref:System.Xml.Serialization.IXmlSerializable>을 사용하여 ASP.NET 웹 서비스에서 사용자 지정 형식의 serialization을 제어하는 방법을 보여 줍니다.  
   
@@ -52,7 +52,7 @@ ms.lasthandoff: 12/23/2017
   
 1.  브라우저 창을 열고 주소 표시줄을 선택합니다.  
   
-2.  **http://localhost/IXmlSerializable/Service.asmx**를 입력합니다.  
+2.  형식 **http://localhost/IXmlSerializable/Service.asmx**합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  <xref:System.Xml.Serialization.IXmlSerializable>  

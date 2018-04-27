@@ -1,10 +1,11 @@
 ---
-title: "For Each...Next 문(Visual Basic)"
+title: For Each...Next 문(Visual Basic)
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 f1_keywords:
 - vb.ForEach
@@ -27,14 +28,14 @@ helpviewer_keywords:
 - Exit statement [Visual Basic], For Each...Next statements
 - iteration
 ms.assetid: ebce3120-95c3-42b1-b70b-fa7da40c75e2
-caps.latest.revision: "56"
+caps.latest.revision: 56
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 11601eb1caad1c6cc6d9898f590436a977a78fa1
-ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
+ms.openlocfilehash: b1593d279d4338ebadca803fe757a201cbcd654b
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="for-eachnext-statement-visual-basic"></a>For Each...Next 문(Visual Basic)
 컬렉션의 각 요소에 대 한 문 그룹을 반복합니다.  
@@ -97,7 +98,7 @@ Next [ element ]
   
  개수에 관계 없이 넣을 수 `Exit For` 의 문에서 `For Each` 루프입니다. 사용할 경우 내에 중첩 `For Each` 루프, `Exit For` 실행이 중첩 다음으로 높은 수준으로 가장 안쪽 루프 및 전송에 제어를 종료 합니다.  
   
- `Exit For`일부 조건에 대 한 평가 후에 대개에서 예를 들어 한 `If`... `Then`... `Else` 구조입니다. 사용 하려는 경우도 `Exit For` 다음 조건에 대 한 합니다.  
+ `Exit For` 일부 조건에 대 한 평가 후에 대개에서 예를 들어 한 `If`... `Then`... `Else` 구조입니다. 사용 하려는 경우도 `Exit For` 다음 조건에 대 한 합니다.  
   
 -   계속 반복은 불필요 하거나 불가능 합니다. 이 잘못 된 값 이나 종료 요청으로 발생할 수 있습니다.  
   
@@ -133,7 +134,7 @@ Next [ element ]
   
  데이터 형식이 `element` 요소의의 데이터 형식이 있는 형식 이어야 합니다 `group` 변환할 수 있습니다.  
   
- 데이터 형식이 `group` 열거 가능한 배열 또는 컬렉션에 대 한 참조는 참조 형식 이어야 합니다. 즉 가장 일반적으로 `group` 구현 하는 개체를 참조 하는 <xref:System.Collections.IEnumerable> 의 인터페이스는 `System.Collections` 네임 스페이스 또는 <xref:System.Collections.Generic.IEnumerable%601> 의 인터페이스는 `System.Collections.Generic` 네임 스페이스입니다. `System.Collections.IEnumerable`정의 <xref:System.Collections.IEnumerable.GetEnumerator%2A> 메서드는 컬렉션에 대 한 열거자 개체를 반환 합니다. 열거자 개체를 구현 하는 `System.Collections.IEnumerator` 의 인터페이스는 `System.Collections` 네임 스페이스를 노출 하 고는 <xref:System.Collections.IEnumerator.Current%2A> 속성 및 <xref:System.Collections.IEnumerator.Reset%2A> 및 <xref:System.Collections.IEnumerator.MoveNext%2A> 메서드. 사용 하 여 이러한 컬렉션을 순회 하 합니다.  
+ 데이터 형식이 `group` 열거 가능한 배열 또는 컬렉션에 대 한 참조는 참조 형식 이어야 합니다. 즉 가장 일반적으로 `group` 구현 하는 개체를 참조 하는 <xref:System.Collections.IEnumerable> 의 인터페이스는 `System.Collections` 네임 스페이스 또는 <xref:System.Collections.Generic.IEnumerable%601> 의 인터페이스는 `System.Collections.Generic` 네임 스페이스입니다. `System.Collections.IEnumerable` 정의 <xref:System.Collections.IEnumerable.GetEnumerator%2A> 메서드는 컬렉션에 대 한 열거자 개체를 반환 합니다. 열거자 개체를 구현 하는 `System.Collections.IEnumerator` 의 인터페이스는 `System.Collections` 네임 스페이스를 노출 하 고는 <xref:System.Collections.IEnumerator.Current%2A> 속성 및 <xref:System.Collections.IEnumerator.Reset%2A> 및 <xref:System.Collections.IEnumerator.MoveNext%2A> 메서드. 사용 하 여 이러한 컬렉션을 순회 하 합니다.  
   
 ### <a name="narrowing-conversions"></a>축소 변환  
  때 `Option Strict` 로 설정 된 `On`, 축소 변환에는 일반적으로 컴파일러 오류가 발생 합니다. 그러나에 `For Each` 문을의 요소에서 변환 `group` 를 `element` 계산 되 고 실행 시 수행 축소 변환 하 여 발생 하는 컴파일러 오류 표시 되지 않습니다.  
@@ -149,7 +150,7 @@ Next [ element ]
   
  **컬렉션을 수정 합니다.** 반환 되는 열거자 개체 <xref:System.Collections.IEnumerable.GetEnumerator%2A> 정상적으로 선택할 수는 없습니다 추가, 삭제, 교체, 또는 모든 요소를 다시 정렬 하 여 컬렉션을 변경 합니다. 초기화 한 후에 컬렉션을 변경 하는 경우는 `For Each`... `Next` 루프 무효화 되는 열거자 개체 및 요소에 액세스 하는 다음 시도 인해는 <xref:System.InvalidOperationException> 예외입니다.  
   
- 그러나에 따라 결정 되지 수정 작업의이 차단은 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)], 있지만 구현에 의해 아니라는 <xref:System.Collections.IEnumerable> 인터페이스입니다. 구현 하는 것이 불가능 `IEnumerable` 반복 과정에서 수정할 수 있도록 하는 방식에서입니다. 그러한 동적 수정 방식을 고려 하는 경우의 특징을 이해 하 고 있는지 확인은 `IEnumerable` 구현을 사용 하는 컬렉션에 있습니다.  
+ 그러나 수정 작업의이 차단은으로 Visual Basic에서 있지만 구현에 의해 대신 결정 되지 않습니다는 <xref:System.Collections.IEnumerable> 인터페이스입니다. 구현 하는 것이 불가능 `IEnumerable` 반복 과정에서 수정할 수 있도록 하는 방식에서입니다. 그러한 동적 수정 방식을 고려 하는 경우의 특징을 이해 하 고 있는지 확인은 `IEnumerable` 구현을 사용 하는 컬렉션에 있습니다.  
   
  **컬렉션 요소를 수정 합니다.** <xref:System.Collections.IEnumerator.Current%2A> 열거자 개체의 속성은 [ReadOnly](../../../visual-basic/language-reference/modifiers/readonly.md), 각 컬렉션 요소의의 로컬 복사본을 반환 합니다. 즉, 요소 자체를 수정할 수 없음을에 `For Each`... `Next` 루프입니다. 수정 내용이의 로컬 복사본에 영향을 줍니다 `Current` 및 기본 컬렉션에 반영 되지 않습니다. 그러나 요소 참조 형식인 가리키는 인스턴스의 멤버를 수정할 수 있습니다. 다음 예제에서는 수정 된 `BackColor` 의 각 구성원 `thisControl` 요소입니다. 그러나 수정할 수는 없습니다 `thisControl` 자체입니다.  
   
@@ -165,12 +166,12 @@ End Sub
   
  **배열을 탐색 합니다.** 때문에 <xref:System.Array> 클래스가 구현 하는 <xref:System.Collections.IEnumerable> 인터페이스, 모든 배열 노출는 <xref:System.Array.GetEnumerator%2A> 메서드. 즉, 배열을으로 반복할 수 있는지는 `For Each`... `Next` 루프입니다. 그러나 배열 요소만 읽을 수 있습니다. 변경할 수 없습니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 예에서는 C:\ 디렉터리에 있는 모든 폴더를 사용 하 여 나열 된 <xref:System.IO.DirectoryInfo> 클래스입니다.  
   
  [!code-vb[VbVbalrStatements#124](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/for-each-next-statement_6.vb)]  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 예제에서는 컬렉션 정렬 절차를 보여 줍니다. 이 예제에서는 인스턴스를 정렬 한 `Car` 에 저장 되어 있는 클래스는 <xref:System.Collections.Generic.List%601>합니다. `Car` 클래스는 <xref:System.IComparable%601.CompareTo%2A> 메서드가 구현되어야 하는 <xref:System.IComparable%601> 인터페이스를 구현합니다.  
   
  호출할 때마다는 <xref:System.IComparable%601.CompareTo%2A> 메서드 정렬에 사용 되는 단일 비교가 수행 합니다. `CompareTo` 메서드의 사용자 작성 코드는 다른 개체와 현재 개체의 각 비교에 대한 값을 반환합니다. 현재 개체가 다른 개체보다 작으면 반환되는 값이 0보다 작고, 현재 개체가 다른 개체보다 크면 0보다 크고, 같으면 0입니다. 이렇게 하면 보다 큼, 보다 작음 및 같음에 대한 조건을 코드에서 정의할 수 있습니다.  

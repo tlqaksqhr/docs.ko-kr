@@ -1,30 +1,32 @@
 ---
-title: "삽입, 업데이트 및 삭제 작업을 사용자 지정"
-ms.custom: 
+title: 삽입, 업데이트 및 삭제 작업을 사용자 지정
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 07eef055-8f6c-414d-850e-d323ff946cd0
-caps.latest.revision: "3"
+caps.latest.revision: 3
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: aa12b26723c3c97e45f75ae951a7496025fde5a9
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: 410385d1689a9fd15a1399411f601e407d590830
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="customizing-insert-update-and-delete-operations"></a>삽입, 업데이트 및 삭제 작업을 사용자 지정
 기본적으로 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]에서는 동적 SQL을 생성하여 삽입, 읽기, 업데이트 및 삭제 작업을 수행합니다. 그러나 실제로는 대개 비즈니스 요구에 맞게 응용 프로그램을 사용자 지정합니다.  
   
 > [!NOTE]
->  [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)]를 사용하는 경우 [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)]를 통해 삽입, 업데이트 및 삭제 작업을 사용자 지정할 수 있습니다.  
+>  Visual Studio를 사용 하는 경우 사용할 수 있습니다는 [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] 삽입을 사용자 지정 하려면 업데이트 및 삭제 작업입니다.  
   
  이 항목의 단원에서는 사용자 응용 프로그램에서 삽입, 읽기, 업데이트, 삭제 작업을 사용자 지정하도록 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]에서 제공하는 기술을 설명합니다.  
   

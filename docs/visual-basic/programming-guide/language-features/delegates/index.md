@@ -15,19 +15,19 @@ ms.assetid: 410b60dc-5e60-4ec0-bfae-426755a2ee28
 caps.latest.revision: 10
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: fe21d8c0dcefaea35d9f96cd2ecbff92a1c83d36
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 6c83667534dcf69ea0ec1106bb3a02d2c9accd87
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="delegates-visual-basic"></a>대리자(Visual Basic)
-대리자는 메서드를 참조하는 개체입니다. 다른 프로그래밍 언어에서 사용되는 함수 포인터와 비슷하기 때문에 *형식 안전 함수 포인터*라고도 합니다. 그러나 함수 포인터와 달리 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 대리자는 <xref:System.Delegate?displayProperty=nameWithType> 클래스를 기준으로 하는 참조 형식입니다. 대리자는 공유 메서드(클래스의 특정 인스턴스 없이 호출할 수 있는 메서드) 및 인스턴스 메서드를 둘 다 참조할 수 있습니다.  
+대리자는 메서드를 참조하는 개체입니다. 다른 프로그래밍 언어에서 사용되는 함수 포인터와 비슷하기 때문에 *형식 안전 함수 포인터*라고도 합니다. 함수 포인터와 달리 Visual Basic 대리자는 참조 형식 클래스에 기반 하지만 <xref:System.Delegate?displayProperty=nameWithType>합니다. 대리자는 공유 메서드(클래스의 특정 인스턴스 없이 호출할 수 있는 메서드) 및 인스턴스 메서드를 둘 다 참조할 수 있습니다.  
   
 ## <a name="delegates-and-events"></a>대리자 및 이벤트  
- 대리자는 호출 프로시저와 호출되는 프로시저 간에 중개자가 필요한 경우에 유용합니다. 예를 들어 다양한 상황에서 다른 이벤트 처리기를 호출하도록 하는 이벤트를 발생시키는 개체를 원할 수 있습니다. 그러나 이벤트를 발생시키는 개체는 특정 이벤트를 처리할 이벤트 처리기가 어느 것인지를 미리 알 수 없습니다. [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]에서는 사용자가 `AddHandler` 문을 사용할 때 사용자의 대리자를 만들어 이벤트 처리기를 이벤트에 동적으로 연결할 수 있습니다. 런타임 시 대리자는 적절한 이벤트 처리기로 호출을 전달합니다.  
+ 대리자는 호출 프로시저와 호출되는 프로시저 간에 중개자가 필요한 경우에 유용합니다. 예를 들어 다양한 상황에서 다른 이벤트 처리기를 호출하도록 하는 이벤트를 발생시키는 개체를 원할 수 있습니다. 그러나 이벤트를 발생시키는 개체는 특정 이벤트를 처리할 이벤트 처리기가 어느 것인지를 미리 알 수 없습니다. Visual Basic 사용 하면 이벤트를 사용 하 여 동적으로 연결할 이벤트 처리기 대리자를 사용 하는 경우 만들어는 `AddHandler` 문. 런타임 시 대리자는 적절한 이벤트 처리기로 호출을 전달합니다.  
   
- 사용자가 직접 대리자를 만들 수 있지만 대부분의 경우에서 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]에서 대리자를 만들고 사용자에 대한 세부 사항을 처리합니다. 예를 들어 `Event` 문은 `<EventName>EventHandler`라는 대리자 클래스를 `Event` 문을 포함하고 이벤트와 시그니처가 같은 클래스의 중첩 클래스로 암시적으로 정의합니다. `AddressOf` 문은 특정 프로시저를 참조하는 대리자의 인스턴스를 암시적으로 만듭니다. 다음 두 코드 줄은 동일한 의미를 갖습니다. 첫 번째 줄에서는 `Button1_Click` 메서드에 대한 참조가 인수로 전달된 `Eventhandler`의 인스턴스를 명시적으로 만듭니다. 두 번째 줄은 동일한 작업을 좀 더 편리하게 수행합니다.  
+ 사용자가 직접 대리자를 만들 수 있지만 대부분의 경우에서 Visual Basic에서 대리자를 만들어 세부 사항을 관리 합니다. 예를 들어 `Event` 문은 `<EventName>EventHandler`라는 대리자 클래스를 `Event` 문을 포함하고 이벤트와 시그니처가 같은 클래스의 중첩 클래스로 암시적으로 정의합니다. `AddressOf` 문은 특정 프로시저를 참조하는 대리자의 인스턴스를 암시적으로 만듭니다. 다음 두 코드 줄은 동일한 의미를 갖습니다. 첫 번째 줄에서는 `Button1_Click` 메서드에 대한 참조가 인수로 전달된 `Eventhandler`의 인스턴스를 명시적으로 만듭니다. 두 번째 줄은 동일한 작업을 좀 더 편리하게 수행합니다.  
   
  [!code-vb[VbVbalrDelegates#6](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/delegates_1.vb)]  
   

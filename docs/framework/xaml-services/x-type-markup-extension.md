@@ -1,12 +1,13 @@
 ---
-title: "x:Type 태그 확장명"
-ms.custom: 
+title: x:Type 태그 확장명
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - x:TypeExtension
@@ -21,16 +22,17 @@ helpviewer_keywords:
 - TargetType attribute [XAML Services]
 - Type markup extension in XAML [XAML Services]
 ms.assetid: e0e0ce6f-e873-49c7-8ad7-8b840eb353ec
-caps.latest.revision: "27"
+caps.latest.revision: 27
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a4d645d5c953c0ff33435a5648024ace099455e2
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: db56c2bcdca14b87de320dfe19a6c364c76ecef7
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="xtype-markup-extension"></a>x:Type 태그 확장명
 CLR 제공 <xref:System.Type> 개체는 지정된 된 XAML 형식에 대 한 기본 형식입니다.  
@@ -55,7 +57,7 @@ CLR 제공 <xref:System.Type> 개체는 지정된 된 XAML 형식에 대 한 기
 |`typeNameValue`|필수. 현재 기본 XAML 네임 스페이스;에서 확인할 수 없는 형식 이름 지정 된 매핑된 접두사 경우 또는 `prefix` 를 제공 합니다.|  
   
 ## <a name="remarks"></a>설명  
- `x:Type` 태그 확장은 비슷한 기능을는 `typeof()` 연산자 [!INCLUDE[TLA#tla_cshrp](../../../includes/tlasharptla-cshrp-md.md)] 또는 `GetType` 연산자 [!INCLUDE[TLA#tla_visualb](../../../includes/tlasharptla-visualb-md.md)]합니다.  
+ `x:Type` 태그 확장은 비슷한 기능을는 `typeof()` C#에서 연산자 또는 `GetType` Microsoft Visual Basic의 연산자입니다.  
   
  `x:Type` 유형을 사용 하는 속성에 대 한 문자열에서 변환 동작을 제공 <xref:System.Type>합니다. 입력은 XAML 형식입니다. 입력된 XAML 형식 및 CLR 출력 간의 관계 <xref:System.Type> 은 출력 <xref:System.Type> 는 <xref:System.Xaml.XamlType.UnderlyingType%2A> 입력의 <xref:System.Xaml.XamlType>, 필요한을 조회 한 후 <xref:System.Xaml.XamlType> XAML 스키마 컨텍스트와 기반<xref:System.Windows.Markup.IXamlTypeResolver>서비스 컨텍스트를 제공 합니다.  
   
@@ -67,7 +69,7 @@ CLR 제공 <xref:System.Type> 개체는 지정된 된 XAML 형식에 대 한 기
   
  `x:Type` 개체 요소 구문에서 태그 확장을 사용할 수 있습니다. 이 경우의 값을 지정 하는 <xref:System.Windows.Markup.TypeExtension.TypeName%2A> 속성 확장을 제대로 초기화 해야 합니다.  
   
- `x:Type` 태그 확장 verbose 특성으로도 사용할 수 있습니다; 그러나이 사용이 일반적인 하지 않습니다: `<``object``property``="{x:Type TypeName=``typeNameValue``}" .../>`  
+ `x:Type` 태그 확장 verbose 특성으로도 사용할 수 있습니다; 그러나이 사용이 일반적인 하지 않습니다. `<``object` `property``="{x:Type TypeName=``typeNameValue``}" .../>`  
   
 ## <a name="wpf-usage-notes"></a>WPF 사용 정보  
   
@@ -82,7 +84,7 @@ CLR 제공 <xref:System.Type> 개체는 지정된 된 XAML 형식에 대 한 기
 ## <a name="xaml-2009"></a>XAML 2009  
  제네릭 형식 및의 동작을 수정에 대 한 추가 지원을 제공 하는 XAML 2009 `x:TypeArguments` 및 `x:Type` 이 지원을 제공 하기 위해 합니다.  
   
--   `x:TypeArguments`및 일반 개체 인스턴스화의 관련된 개체 요소는 루트 이외의 요소에 있을 수 있습니다. 자세한 내용은의 "XAML 2009" 섹션을 참조 하십시오. [X:typearguments 지시문](../../../docs/framework/xaml-services/x-typearguments-directive.md)합니다.  
+-   `x:TypeArguments` 및 일반 개체 인스턴스화의 관련된 개체 요소는 루트 이외의 요소에 있을 수 있습니다. 자세한 내용은의 "XAML 2009" 섹션을 참조 하십시오. [X:typearguments 지시문](../../../docs/framework/xaml-services/x-typearguments-directive.md)합니다.  
   
 -   XAML 2009 태그에서 제네릭 형식의 제약 조건을 지정 하는 구문을 지원 합니다. 이에서 사용 될 `x:TypeArguments`를 위한 것 이며 `x:Type`, 또는 조합 하 여 두 가지 기능입니다.  
   

@@ -1,24 +1,26 @@
 ---
-title: "Entity Framework 용어"
-ms.custom: 
+title: Entity Framework 용어
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: fa2a1bd1-6118-487b-8673-eebc66b92945
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: a2d55319b5463b2c9624fe22e7a16235c3d57614
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: cd85760e219e810c089ebe88c8295d79ebaf0944
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="entity-framework-terminology"></a>Entity Framework 용어
 이 항목에서는에서 자주 참조 되는 용어를 정의 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] 설명서입니다. 추가 정보를 볼 수 있는 관련 항목에 대한 링크가 제공됩니다.  
@@ -55,7 +57,7 @@ ms.lasthandoff: 01/19/2018
 |독립 연결|독립 개체에 의해 표현되고 추적되는 엔터티 간의 연결입니다.|  
 |key|엔터티 형식의 고유한 인스턴스를 식별하는 데 사용되는 속성 또는 속성 집합을 지정하는 엔터티 형식의 특성입니다. <xref:System.Data.EntityKey> 클래스에 의해 개체 계층에서 표현됩니다.<br /><br /> 자세한 내용은 참조 [키 요소 (CSDL)](http://msdn.microsoft.com/library/0cdb1402-dbc7-4a04-a11e-5729cdf7431b) 및 [엔터티 키](../../../../../docs/framework/data/adonet/entity-key.md)합니다.|  
 |지연 로드|개체가 쿼리에서 반환될 때 관련 개체가 동시에 로드되지 않습니다. 대신 탐색 속성에 액세스하면 관련 개체가 자동으로 로드됩니다.|  
-|[!INCLUDE[linq_entities](../../../../../includes/linq-entities-md.md)]|[!INCLUDE[csprcs](../../../../../includes/csprcs-md.md)] 및 [!INCLUDE[vbprvb](../../../../../includes/vbprvb-md.md)]에서 탐색, 필터 및 프로젝션 작업을 직접적인 선언 방법으로 표현할 수 있도록 하는 쿼리 연산자 집합을 정의하는 쿼리 구문입니다.<br /><br /> 자세한 내용은 참조 [LINQ to Entities](../../../../../docs/framework/data/adonet/ef/language-reference/linq-to-entities.md)합니다.|  
+|[!INCLUDE[linq_entities](../../../../../includes/linq-entities-md.md)]|Visual C# 및 Visual Basic에서 직접적인 선언 방법으로 표현할 수 있는 탐색, 필터 및 프로젝션 작업을 허용 하는 쿼리 연산자 집합을 정의 하는 쿼리 구문입니다.<br /><br /> 자세한 내용은 참조 [LINQ to Entities](../../../../../docs/framework/data/adonet/ef/language-reference/linq-to-entities.md)합니다.|  
 |매핑|개념적 모델에 있는 항목과 저장소 모델에 있는 항목 간의 대응 지정입니다.<br /><br /> 자세한 내용은 참조 [MSL 사양](../../../../../docs/framework/data/adonet/ef/language-reference/msl-specification.md)합니다.|  
 |.msl 파일|MSL로 표현된, 개념적 모델과 저장소 모델 간의 매핑이 포함된 XML 파일입니다.|  
 |MSL(매핑 사양 언어)|개념 모델에서 정의한 항목을 저장소 모델의 항목에 매핑하는 데 사용되는 XML 기반 언어입니다.<br /><br /> 자세한 내용은 참조 [MSL 사양](../../../../../docs/framework/data/adonet/ef/language-reference/msl-specification.md)합니다.|  
@@ -64,7 +66,7 @@ ms.lasthandoff: 01/19/2018
 |형식별 다중 엔터티 집합|둘 이상의 엔터티 집합에서 같은 엔터티 형식을 정의할 수 있는 기능입니다.<br /><br /> 자세한 내용은 참조 [EntitySet 요소 (CSDL)](http://msdn.microsoft.com/library/ec56db77-718d-4c0e-adc9-f1d33c896287) 및 [하는 방법: 형식별 다중 엔터티 집합을 사용 하 여 모델 정의](http://msdn.microsoft.com/library/61aa4fca-5ac0-4f47-9bc8-46e8c2965ef7)합니다.|  
 |탐색 속성(navigation property)|연결에서 정의된 대로 다른 엔터티 형식에 대한 관계를 나타내는 엔터티 형식의 속성입니다. 탐색 속성은 연결에서 반대쪽 End의 복합성에 따라 관련 개체를 <xref:System.Data.Objects.DataClasses.EntityCollection%601> 또는 <xref:System.Data.Objects.DataClasses.EntityReference%601>로 반환하는 데 사용됩니다.<br /><br /> 자세한 내용은 참조 [NavigationProperty 요소 (CSDL)](http://msdn.microsoft.com/library/5829a238-a50e-4c81-901d-7b54fc00f27e) 및 [탐색 속성](../../../../../docs/framework/data/adonet/navigation-property.md)합니다.|  
 |쿼리 경로|개체 쿼리가 실행될 때 반환할 관련 개체를 지정하는 경로의 문자열 표현입니다. 쿼리 경로는 <xref:System.Data.Objects.ObjectQuery%601.Include%2A>의 <xref:System.Data.Objects.ObjectQuery%601> 메서드를 호출하여 정의됩니다.<br /><br /> 자세한 내용은 참조 [관련 개체 로드](http://msdn.microsoft.com/library/452347d2-7b3b-44cd-9001-231299a28cb1)합니다.|  
-|개체 컨텍스트|개념적 모델에서 정의된 엔터티 컨테이너를 나타냅니다. 기본 데이터 소스에 대한 연결을 포함하며, 변경 내용 추적 및 ID 확인과 같은 서비스를 제공합니다. 개체 컨텍스트는 <xref:System.Data.Objects.ObjectContext> 또는 `DbContext` 클래스 인스턴스로 표현됩니다.<br /><br /> `DbContext`일부는 [Entity Framework 5.0](http://go.microsoft.com/fwlink/?LinkId=234900)합니다. Entity Framework 5.0은 .NET Framework의 일부가 아니지만 .NET Framework 4.5에 빌드되어 있습니다. Entity Framework 5.0은 사용할 수는 [' Entity Framework'](http://go.microsoft.com/fwlink/?LinkID=215714)[NuGet](http://go.microsoft.com/fwlink/?LinkId=232488) 패키지 합니다. 자세한 내용은 참조 [Entity Framework 릴리스 및 버전 관리](http://go.microsoft.com/fwlink/?LinkId=234899)합니다.|  
+|개체 컨텍스트|개념적 모델에서 정의된 엔터티 컨테이너를 나타냅니다. 기본 데이터 소스에 대한 연결을 포함하며, 변경 내용 추적 및 ID 확인과 같은 서비스를 제공합니다. 개체 컨텍스트는 <xref:System.Data.Objects.ObjectContext> 또는 `DbContext` 클래스 인스턴스로 표현됩니다.<br /><br /> `DbContext` 일부는 [Entity Framework 5.0](http://go.microsoft.com/fwlink/?LinkId=234900)합니다. Entity Framework 5.0은 .NET Framework의 일부가 아니지만 .NET Framework 4.5에 빌드되어 있습니다. Entity Framework 5.0은 사용할 수는 [' Entity Framework'](http://go.microsoft.com/fwlink/?LinkID=215714)[NuGet](http://go.microsoft.com/fwlink/?LinkId=232488) 패키지 합니다. 자세한 내용은 참조 [Entity Framework 릴리스 및 버전 관리](http://go.microsoft.com/fwlink/?LinkId=234899)합니다.|  
 |개체 계층|Entity Framework에서 사용되는 엔터티 형식 및 개체 컨텍스트 정의입니다.|  
 |개체 쿼리|개체 컨텍스트 내에서 개념적 모델에 대해 실행되어 데이터를 개체로 반환하는 쿼리입니다.<br /><br /> 자세한 내용은 참조 [개체 쿼리](http://msdn.microsoft.com/library/0768033c-876f-471d-85d5-264884349276)합니다.|  
 |개체-관계형 매핑|관계형 데이터베이스의 데이터를 개체 지향 소프트웨어 응용 프로그램에서 사용할 수 있는 데이터 형식으로 변환하기 위한 기술입니다.<br /><br /> [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]는 저장소 모델에 정의된 관계형 데이터를 개념적 모델에 정의된 데이터 형식에 매핑하여 개체-관계형 매핑 서비스를 제공합니다.<br /><br /> 자세한 내용은 참조 [모델링 및 매핑](../../../../../docs/framework/data/adonet/ef/modeling-and-mapping.md)합니다.|  

@@ -1,45 +1,47 @@
 ---
-title: "방법: Visual Basic 또는 C#에서 개체 모델 생성"
-ms.custom: 
+title: '방법: Visual Basic 또는 C#에서 개체 모델 생성'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: a0c73b33-5650-420c-b9dc-f49310c201ee
-caps.latest.revision: "3"
+caps.latest.revision: 3
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: ec28b175dddb98eb035061363dd6581e796280b3
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: 77d7020a985abb8ed56af4fdd9f50a98bfc478c4
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-generate-the-object-model-in-visual-basic-or-c"></a>방법: Visual Basic 또는 C#에서 개체 모델 생성 #
-[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]에서 사용자 프로그래밍 언어의 개체 모델은 관계형 데이터베이스에 매핑됩니다. 기존 데이터베이스의 메타데이터에서 [!INCLUDE[vbprvb](../../../../../../includes/vbprvb-md.md)] 또는 C# 모델을 자동으로 생성할 수 있는 두 개의 도구를 제공합니다.  
+[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]에서 사용자 프로그래밍 언어의 개체 모델은 관계형 데이터베이스에 매핑됩니다. 두 도구는 자동으로 기존 데이터베이스의 메타 데이터에서 Visual Basic 또는 C# 모델을 생성할 수 있습니다.  
   
--   [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)]를 사용하는 경우 [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)]를 통해 개체 모델을 생성할 수 있습니다. [!INCLUDE[vs_ordesigner_short](../../../../../../includes/vs-ordesigner-short-md.md)]에서는 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 개체 모델을 생성하는 데 도움이 되는 다양한 사용자 인터페이스를 제공합니다. 자세한 내용은 참조 하십시오 [Linq to SQL 도구 Visual Studio에서](https://docs.microsoft.com/en-us/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2)합니다.
+-   Visual Studio를 사용 하는 경우 사용할 수 있습니다는 [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] 를 개체 모델을 생성 합니다. [!INCLUDE[vs_ordesigner_short](../../../../../../includes/vs-ordesigner-short-md.md)]에서는 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 개체 모델을 생성하는 데 도움이 되는 다양한 사용자 인터페이스를 제공합니다. 자세한 내용은 참조 하십시오 [Linq to SQL 도구 Visual Studio에서](https://docs.microsoft.com/en-us/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2)합니다.
   
 -   SQLMetal 명령줄 도구. 자세한 내용은 [SqlMetal.exe(코드 생성 도구)](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md)를 참조하세요.  
   
     > [!NOTE]
     >  기존 데이터베이스가 없는 경우 개체 모델에서 데이터베이스를 만들려면 코드 편집기와 <xref:System.Data.Linq.DataContext.CreateDatabase%2A>를 사용하여 개체 모델을 만들 수 있습니다. 자세한 내용은 참조 [하는 방법: 동적으로 데이터베이스를 만들](../../../../../../docs/framework/data/adonet/sql/linq/how-to-dynamically-create-a-database.md)합니다.  
   
- [!INCLUDE[vs_ordesigner_short](../../../../../../includes/vs-ordesigner-short-md.md)] 설명서에서는 [!INCLUDE[vbprvb](../../../../../../includes/vbprvb-md.md)]를 사용하여 [!INCLUDE[vs_ordesigner_short](../../../../../../includes/vs-ordesigner-short-md.md)] 또는 C# 개체 모델을 생성하는 방법에 대한 예제를 제공합니다. 다음 정보에서는 SQLMetal 명령줄 도구를 사용하는 방법에 대한 예제를 제공합니다. 자세한 내용은 [SqlMetal.exe(코드 생성 도구)](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md)를 참조하세요.  
+ 에 대 한 설명서는 [!INCLUDE[vs_ordesigner_short](../../../../../../includes/vs-ordesigner-short-md.md)] 를 사용 하 여 Visual Basic 또는 C# 개체 모델을 생성 하는 방법의 예제를 제공는 [!INCLUDE[vs_ordesigner_short](../../../../../../includes/vs-ordesigner-short-md.md)]합니다. 다음 정보에서는 SQLMetal 명령줄 도구를 사용하는 방법에 대한 예제를 제공합니다. 자세한 내용은 [SqlMetal.exe(코드 생성 도구)](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md)를 참조하세요.  
   
-## <a name="example"></a>예  
- 다음 예제의 SQLMetal 명령줄에서는 Northwind 샘플 데이터베이스의 특성 기반 개체 모델과 같은 [!INCLUDE[vbprvb](../../../../../../includes/vbprvb-md.md)] 코드를 생성합니다. 또한 저장 프로시저와 함수가 렌더링됩니다.  
+## <a name="example"></a>예제  
+ 다음 예제에서에 표시 된 SQLMetal 명령줄에서는 Northwind 샘플 데이터베이스의 특성 기반 개체 모델을 Visual Basic 코드를 생성 합니다. 또한 저장 프로시저와 함수가 렌더링됩니다.  
   
 ```  
 sqlmetal /code:northwind.vb /language:vb "c:\northwnd.mdf" /sprocs /functions  
 ```  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 예제의 SQLMetal 명령줄에서는 Northwind 샘플 데이터베이스의 특성 기반 개체 모델과 같은 C# 코드를 생성합니다. 또한 저장 프로시저와 함수가 렌더링되며 테이블 이름은 자동으로 복수화됩니다.  
   
 ```  

@@ -1,22 +1,23 @@
 ---
-title: "LINQ to XML 개요 (Visual Basic)"
-ms.custom: 
+title: LINQ to XML 개요 (Visual Basic)
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 502661e0-bc5d-438d-94c2-7efb63bb6fbd
-caps.latest.revision: "3"
+caps.latest.revision: 3
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 41dd5818dc33a690c7abe4c33aa7a7becfde2123
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: f4ccc81f1f7b875c7388dc09cc45521c6257c00d
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="linq-to-xml-overview-visual-basic"></a>LINQ to XML 개요 (Visual Basic)
 XML은 다양한 컨텍스트에서 데이터의 형식을 지정하는 방법으로 널리 채택되고 있습니다. 예를 들어, 웹에 있는 구성 파일, Microsoft Office Word 파일 및 데이터베이스에서 XML을 찾을 수 있습니다.  
@@ -92,7 +93,7 @@ Dim contacts = _
 </Contacts>  
 ```  
   
- [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 컴파일러는 XML 리터럴을 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 메서드 호출로 변환합니다.  
+ Visual Basic 컴파일러는 XML 리터럴을 변환 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 메서드를 호출 합니다.  
   
  자세한 내용은 참조 [XML 트리 만들기 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-xml-trees.md)합니다.  
   

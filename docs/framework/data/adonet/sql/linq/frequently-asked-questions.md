@@ -1,27 +1,29 @@
 ---
-title: "질문과 대답"
-ms.custom: 
+title: 질문과 대답
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 252ed666-0679-4eea-b71b-2f14117ef443
-caps.latest.revision: "3"
+caps.latest.revision: 3
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: e09dd7cb3fc979a9be0165705247cc5a63a6b328
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: caccbb76f32c38f29fa4f49adc9b7b1c8fe4045d
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="frequently-asked-questions"></a>질문과 대답
 다음 단원에서는 [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)]를 구현할 때 발생할 수 있는 일반적인 문제에 대한 해결 방법을 제시합니다.  
@@ -31,7 +33,7 @@ ms.lasthandoff: 01/17/2018
 ## <a name="cannot-connect"></a>연결할 수 없음  
  질문. 데이터베이스에 연결할 수 없습니다.  
   
- 대답: 연결 문자열이 올바르고 [!INCLUDE[ssNoVersion](../../../../../../includes/ssnoversion-md.md)] 인스턴스가 실행 중인지 확인하세요. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]을 사용하려면 명명된 파이프 프로토콜도 사용하도록 설정해야 합니다. 자세한 내용은 참조 [연습으로 학습](../../../../../../docs/framework/data/adonet/sql/linq/learning-by-walkthroughs.md)합니다.  
+ 대답: 연결 문자열이 올바르고 SQL Server 인스턴스가 실행 되 고 있는지 확인 합니다. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]을 사용하려면 명명된 파이프 프로토콜도 사용하도록 설정해야 합니다. 자세한 내용은 참조 [연습으로 학습](../../../../../../docs/framework/data/adonet/sql/linq/learning-by-walkthroughs.md)합니다.  
   
 ## <a name="changes-to-database-lost"></a>데이터베이스 변경 내용 손실  
  질문. 데이터베이스의 데이터를 변경했는데 응용 프로그램을 다시 실행했더니 변경 내용이 없어졌습니다.  
@@ -155,7 +157,7 @@ dlo.LoadWith<Order>(o => o.OrderDetails);
 ## <a name="provider-model"></a>공급자 모델  
  질문. 사용할 수 있는 공용 공급자 모델이 있습니까?  
   
- 대답: 아니요, 사용할 수 있는 공용 공급자 모델은 없습니다. 현재 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]에서는 [!INCLUDE[ssNoVersion](../../../../../../includes/ssnoversion-md.md)] 및 [!INCLUDE[ssEW](../../../../../../includes/ssew-md.md)]만 지원합니다.  
+ 대답: 아니요, 사용할 수 있는 공용 공급자 모델은 없습니다. 이때 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] SQL Server 지원 및 [!INCLUDE[ssEW](../../../../../../includes/ssew-md.md)] 만 합니다.  
   
 ## <a name="sql-injection-attacks"></a>SQL 삽입 공격  
  질문. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]은 SQL 삽입 공격으로부터 어떻게 보호됩니까?  
@@ -174,7 +176,7 @@ dlo.LoadWith<Order>(o => o.OrderDetails);
 3.  기본 <xref:System.Data.Linq.Mapping.UpdateCheck> 값(<xref:System.Data.Linq.Mapping.UpdateCheck.Never>)을 검토하여 응용 프로그램에 사용할 수 있는 올바른 값인지 확인합니다.  
   
     > [!CAUTION]
-    >  [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)]에서 [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)]를 사용할 경우에는 변경 내용이 덮어쓰여질 수 있습니다.  
+    >  사용 하는 경우는 [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] Visual Studio에서 변경 내용을 덮어쓸 수 있습니다.  
   
 ## <a name="aptca"></a>APTCA  
  질문. 부분적으로 신뢰할 수 있는 코드에서 System.Data.Linq를 사용할 수 있습니까?  
@@ -196,7 +198,7 @@ dlo.LoadWith<Order>(o => o.OrderDetails);
   
  대답: <xref:System.Data.Linq.DataContext>의 인스턴스는 다시 사용하지 마세요. 각 <xref:System.Data.Linq.DataContext>는 하나의 특정 편집/쿼리 세션에 대한 상태(ID 캐시 포함)를 유지합니다. 데이터베이스의 현재 상태를 기반으로 새 인스턴스를 사용하려면 새 <xref:System.Data.Linq.DataContext>를 사용하세요.  
   
- 기본 [!INCLUDE[vstecado](../../../../../../includes/vstecado-md.md)] 연결 풀링은 사용할 수 있습니다. 자세한 내용은 참조 [SQL Server 연결 풀링 (ADO.NET)](../../../../../../docs/framework/data/adonet/sql-server-connection-pooling.md)합니다.  
+ 기본 [!INCLUDE[vstecado](../../../../../../includes/vstecado-md.md)] 연결 풀링은 사용할 수 있습니다. 자세한 내용은 [SQL Server 연결 풀링(ADO.NET)](../../../../../../docs/framework/data/adonet/sql-server-connection-pooling.md)을 참조하세요.  
   
 ## <a name="second-datacontext-is-not-updated"></a>두 번째 DataContext가 업데이트되지 않음  
  질문. <xref:System.Data.Linq.DataContext>의 인스턴스 하나를 사용하여 데이터베이스에 값을 저장했습니다. 그런데 동일한 데이터베이스에 대한 두 번째 <xref:System.Data.Linq.DataContext>에 업데이트된 값이 반영되지 않습니다. 두 번째 <xref:System.Data.Linq.DataContext> 인스턴스가 캐시된 값을 반환하는 것 같습니다.  

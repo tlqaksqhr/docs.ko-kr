@@ -1,31 +1,32 @@
 ---
-title: "Visual Basic에서 MaskedTextBox 컨트롤과 함께 정규식 사용"
-ms.custom: 
+title: Visual Basic에서 MaskedTextBox 컨트롤과 함께 정규식 사용
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - strings [Visual Basic], regular expressions
 - strings [Visual Basic], masked edit
 ms.assetid: 2a048fb0-7053-487d-b2c5-ffa5e22ed6f9
-caps.latest.revision: "10"
+caps.latest.revision: 10
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 2638ed804593dd52481bd3865e1c67c5fdb2dcf9
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: c72542c05123ef62a8f95afbe1bb19cb823d1f21
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="using-regular-expressions-with-the-maskedtextbox-control-in-visual-basic"></a>Visual Basic에서 MaskedTextBox 컨트롤과 함께 정규식 사용
 단순 정규식 작업을 변환 하는 방법을 보여 주는이 예제는 <xref:System.Windows.Forms.MaskedTextBox> 제어 합니다.  
   
 ## <a name="description-of-the-masking-language"></a>마스킹 언어 설명  
- 표준 <xref:System.Windows.Forms.MaskedTextBox> 기반 마스킹 언어에서 사용 된 것으로는 `Masked Edit` 제어 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 6.0 및 해당 플랫폼에서 마이그레이션하는 사용자에 잘 알고 있어야 합니다.  
+ 표준 <xref:System.Windows.Forms.MaskedTextBox> 기반 마스킹 언어에서 사용 된 것으로는 `Masked Edit` Visual Basic 6.0에서 제어 하 고 해당 플랫폼에서 마이그레이션하는 사용자에 잘 알고 있어야 합니다.  
   
  <xref:System.Windows.Forms.MaskedTextBox.Mask%2A> 의 속성은 <xref:System.Windows.Forms.MaskedTextBox> 컨트롤 입력된 마스크를 사용 하 여 지정 합니다. / / 마스크에는 하나 이상의 다음 표에서 마스킹 요소로 구성 된 문자열 이어야 합니다.  
   
@@ -39,7 +40,7 @@ ms.lasthandoff: 11/21/2017
 |&|문자. 항목이 필요 합니다.|[\p{Ll}\p{Lu}\p{Lt}\p{Lm}\p{Lo}]|  
 |C|문자. 선택적 항목입니다.|[\p{Ll}\p{Lu}\p{Lt}\p{Lm}\p{Lo}]?|  
 |A|영숫자입니다. 선택적 항목입니다.|\W|  
-|입니다.|10 진수 자리 표시자 culture에 따른입니다.|사용할 수 없습니다.|  
+|이어야 합니다.|10 진수 자리 표시자 culture에 따른입니다.|사용할 수 없습니다.|  
 |,|Culture에 따른 천 단위 자리 표시자입니다.|사용할 수 없습니다.|  
 |:|문화권에 적합 한 시간 구분 기호입니다.|사용할 수 없습니다.|  
 |/|Culture에 따른 날짜 구분 기호입니다.|사용할 수 없습니다.|  
@@ -57,7 +58,7 @@ ms.lasthandoff: 11/21/2017
   
  다음 표에서 각각에 대해 4 개의 정규식과 해당 하는 마스크를 비교 합니다.  
   
-|정규식|마스크|참고|  
+|정규식|마스크|노트|  
 |------------------------|----------|-----------|  
 |`\d{2}/\d{2}/\d{4}`|`00/00/0000`|`/` 마스크의 문자에에서는 논리 날짜 구분 기호 이며 사용자에 게 응용 프로그램의 현재 문화권에 적합 한 날짜 구분 기호로 표시 됩니다.|  
 |`\d{2}-[A-Z][a-z]{2}-\d{4}`|`00->L<LL-0000`|날짜 (예: 일, 월의 약어 및 연도) 미국 형식 뒤에 두 문자는 소문자 초기 대문자로 표시 되는 세 자리 월의 약어입니다.|  

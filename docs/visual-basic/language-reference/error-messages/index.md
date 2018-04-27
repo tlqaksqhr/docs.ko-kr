@@ -16,11 +16,11 @@ ms.assetid: f2dda05b-baef-41f5-8bb1-598bd7cf239f
 caps.latest.revision: 19
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: f7f5138d430e6737a4a8a47d4a800905dedff660
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: de52d95cfbc8135db1dc9434860f02b8992db0b4
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="error-messages-visual-basic"></a>오류 메시지(Visual Basic)
 Visual Basic 응용 프로그램을 작성, 컴파일 또는 실행할 때 다음과 같은 유형의 오류가 발생할 수 있습니다.  
@@ -34,7 +34,7 @@ Visual Basic 응용 프로그램을 작성, 컴파일 또는 실행할 때 다�
  특정 오류를 해결하는 방법에 대한 자세한 내용은 [Visual Basic 프로그래머를 위한 추가 리소스](../../../visual-basic/getting-started/additional-resources.md)를 참조하세요.  
   
 ## <a name="run-time-errors"></a>런타임 오류  
- Visual Basic 응용 프로그램이 시스템에서 실행할 수 없는 작업을 수행하려고 하는 경우 런타임 오류가 발생하고 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]에서 `Exception` 개체를 throw합니다. [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]에서는 `Throw` 문을 사용하여 `Exception` 개체를 포함하는 모든 데이터 형식의 사용자 지정 오류를 생성할 수 있습니다. 응용 프로그램은 catch한 예외의 오류 번호 및 메시지를 표시하여 오류를 식별할 수 있습니다. 오류가 catch되지 않으면 응용 프로그램이 종료됩니다.  
+ Visual Basic 응용 프로그램을는 시스템이 실행할 수 없는 작업을 수행 하려고 하는 경우 런타임 오류가 발생 하 고 Visual Basic에서 throw 한 `Exception` 개체입니다. Visual Basic에서 모든 데이터의 사용자 지정 오류를 생성할 수 입력을 포함 하 여 `Exception` 사용 하 여 개체는 `Throw` 문. 응용 프로그램은 catch한 예외의 오류 번호 및 메시지를 표시하여 오류를 식별할 수 있습니다. 오류가 catch되지 않으면 응용 프로그램이 종료됩니다.  
   
  코드는 런타임 오류를 트래핑하고 검사할 수 있습니다. 오류를 생성하는 코드를 `Try` 블록에 포함할 경우 일치 하는 `Catch` 블록 내에서 throw된 오류를 catch할 수 있습니다. 런타임 시 오류를 트래핑하고 코드에 응답하는 방법에 대한 자세한 내용은 [Try...Catch...Finally 문](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)을 참조하세요.  
   

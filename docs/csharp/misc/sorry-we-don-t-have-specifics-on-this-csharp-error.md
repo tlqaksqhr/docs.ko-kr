@@ -1,5 +1,5 @@
 ---
-title: "죄송 합니다. 여기서 don &#39;이 C# 오류에 대 한 구체적인 정보가 t"
+title: 죄송 하지만 우리 않는&#39;t이 C# 오류에 대 한 구체적인 정보가
 ms.date: 07/20/2015
 ms.prod: .net
 ms.technology:
@@ -886,29 +886,29 @@ f1_keywords:
 helpviewer_keywords:
 - errors [C#], additional information
 ms.assetid: 48320e4a-6e17-45a6-9966-88c6ec89bd2f
-caps.latest.revision: 
+caps.latest.revision: 15
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 5f6224f661aff817b4314d832fcc2ff3938644c0
-ms.sourcegitcommit: 973a12d1e6962cd9a9c263fbfaad040ec8267fe9
+ms.openlocfilehash: 4aeea86778b44cbe8e71ed64ee5a3a3a1618cccd
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/22/2018
+ms.lasthandoff: 04/26/2018
 ---
-# <a name="sorry-we-don39t-have-specifics-on-this-c-error"></a>죄송 합니다. 여기서 don &#39;이 C# 오류에 대 한 구체적인 정보가 t
+# <a name="sorry-we-don39t-have-specifics-on-this-c-error"></a>죄송 하지만 우리 않는&#39;t이 C# 오류에 대 한 구체적인 정보가
 죄송합니다. 이 오류에 대한 구체적인 정보가 없습니다. 오류 번호와 메시지 텍스트를 검색하여 웹에서 정보를 찾을 수 있습니다. 또는 다음이 포럼 중 하나를 사용 하 여 다른 개발자에 게 요청할 수 있습니다.  
   
  [Visual C# 언어](https://social.msdn.microsoft.com/Forums/en-US/home?forum=csharplanguage)  
- [!INCLUDE[csprcs](~/includes/csprcs-md.md)] 언어 구문 및 컴파일러와 관련된 질문과 일반적인 토론을 위한 포럼을 제공합니다.  
+ 에 대 한 질문과 일반적인 토론 Visual C# 언어 구문 및 컴파일러를 위한 포럼을 제공 합니다.  
   
  [Visual C# IDE](https://social.msdn.microsoft.com/Forums/en-US/home?forum=csharpide)  
  [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] 환경에서 작업하는 방법과 관련된 질문을 위한 포럼을 제공합니다.  
   
  [Visual C# 일반](https://social.msdn.microsoft.com/Forums/vstudio/en-US/home?forum=csharpgeneral)  
- 다른 포럼에서 다루지 않는 [!INCLUDE[csprcs](~/includes/csprcs-md.md)] 관련 질문과 문제를 위한 포럼을 제공합니다.  
+ 에 대 한 질문에 대 한 포럼을 제공 하지 않으며 Visual C# 다른 포럼에서 다루지 않는 합니다.  
   
  [StackOverflow](http://stackoverflow.com/questions/tagged/c%23)  
- [!INCLUDE[csprcs](~/includes/csprcs-md.md)] 관련 질문과 문제를 위한 포럼을 제공합니다.  
+ 에 대 한 질문에 대 한 포럼을 제공 하지 않으며 Visual C#을 사용 합니다.  
   
  다음 항목도 참조하세요.  
  [Visual C# 프로그래머를 위한 추가 리소스](../../csharp/getting-started/additional-resources.md)  

@@ -1,11 +1,12 @@
 ---
-title: "방법: 속성 프로시저 호출(Visual Basic)"
-ms.custom: 
+title: '방법: 속성 프로시저 호출(Visual Basic)'
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - Visual Basic code, procedures
@@ -14,25 +15,25 @@ helpviewer_keywords:
 - properties [Visual Basic], property procedures
 - procedure calls [Visual Basic], property procedures
 ms.assetid: 96bc4d74-d9c3-4b7a-954d-58ac8553cd94
-caps.latest.revision: "16"
+caps.latest.revision: 16
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: cf9080e3c2b23302257499f13e734231f3614495
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 38b3704328916a487f94879ea0096ae923f19082
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-call-a-property-procedure-visual-basic"></a>방법: 속성 프로시저 호출(Visual Basic)
 속성에 값을 저장 하거나 값을 검색 하는 속성 프로시저를 호출 합니다. 속성 변수에 액세스 하는 동일한 방식으로 액세스 합니다.  
   
- 속성의 `Set` 프로시저 값을 저장 및 해당 `Get` 값을 검색 하는 프로시저입니다. 그러나 호출 하지 않으면 명시적으로 이러한 프로시저 이름으로 합니다. 저장 하거나 변수 값을 검색할 것 처럼 대입문 이나 하나의 식에서 속성을 사용 합니다. [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]에서는 속성의 프로시저를 호출 합니다.  
+ 속성의 `Set` 프로시저 값을 저장 및 해당 `Get` 값을 검색 하는 프로시저입니다. 그러나 호출 하지 않으면 명시적으로 이러한 프로시저 이름으로 합니다. 저장 하거나 변수 값을 검색할 것 처럼 대입문 이나 하나의 식에서 속성을 사용 합니다. Visual Basic에서는 속성의 프로시저를 호출 합니다.  
   
 ### <a name="to-call-a-propertys-get-procedure"></a>속성의 Get 프로시저를 호출 하려면  
   
 1.  변수 이름을 사용할 것 같은 방법으로 식에서 속성 이름을 사용 합니다. 속성을 사용 하 여 아무 곳 이나 변수 또는 상수를 사용할 수 있습니다.  
   
-     또는  
+     -또는-  
   
      다음에 오는 속성 이름을 사용 하 여 (`=`) 대입문에 로그인 합니다.  
   

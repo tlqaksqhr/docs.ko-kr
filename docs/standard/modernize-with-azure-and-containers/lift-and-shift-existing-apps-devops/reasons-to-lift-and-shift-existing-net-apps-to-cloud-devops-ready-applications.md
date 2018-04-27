@@ -1,18 +1,19 @@
 ---
-title: "리프트 및 클라우드 DevOps 지원 응용 프로그램에.NET 응용 프로그램을 기존 시프트 하는 이유"
-description: "컨테이너 화 된.NET 응용 프로그램에 대 한.NET Microservices 아키텍처 | 리프트 및 클라우드 DevOps 지원 응용 프로그램에.NET 응용 프로그램을 기존 시프트 하는 이유"
+title: 리프트 및 클라우드 DevOps 지원 응용 프로그램에.NET 응용 프로그램을 기존 시프트 하는 이유
+description: 컨테이너 화 된.NET 응용 프로그램에 대 한.NET Microservices 아키텍처 | 리프트 및 클라우드 DevOps 지원 응용 프로그램에.NET 응용 프로그램을 기존 시프트 하는 이유
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/26/2017
 ms.prod: .net
+ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 1339264f49a065888a95e6ef6fe8575aa3c75564
-ms.sourcegitcommit: d3cfda0943364aaf6ccd574f55f584576c8a4fee
+ms.openlocfilehash: b6a65dfff45b240e89ab22fd7eba82d6cdbc27b8
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="reasons-to-lift-and-shift-existing-net-apps-to-cloud-devops-ready-applications"></a>리프트 및 클라우드 DevOps 지원 응용 프로그램에.NET 응용 프로그램을 기존 시프트 하는 이유
 
@@ -48,7 +49,7 @@ ms.lasthandoff: 03/08/2018
 
 > ![클라우드 DevOps 지원 응용 프로그램의 주요 사항](./media/image2.png)
 >
-> **그림 4-2입니다.** 클라우드 DevOps 지원 응용 프로그램의 주요 사항
+> **그림 4-2.** 클라우드 DevOps 지원 응용 프로그램의 주요 사항
 
 요약 하면, 클라우드 DevOps 지원 응용 프로그램은 클라우드 모델의 컨테이너, 관리 되는 클라우드 인프라, 복원 력 있는 응용 프로그램 기술 조합을 사용 하는 동안 컴퓨팅을 활용 하는 빌드 및 응용 프로그램을 관리 하는 방식 모니터링, 지속적인 업데이트 및 다시 설계 하 고 기존 응용 프로그램 코드를 다시 작성 하지 않고도 모든 DevOps 합니다.
 

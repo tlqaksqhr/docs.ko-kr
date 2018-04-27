@@ -1,28 +1,28 @@
 ---
-title: "추적 구성"
-ms.custom: 
+title: 추적 구성
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - tracing [WCF]
 ms.assetid: 82922010-e8b3-40eb-98c4-10fc05c6d65d
-caps.latest.revision: 
+caps.latest.revision: 53
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 3beeaec1ed9982fc49f6bf81e2717db862e7882f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: b7b9590096789af609e83d1a5ed736cf18e27700
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="configuring-tracing"></a>추적 구성
 이 항목에서는 추적을 사용하고, 추적을 내보내도록 추적 소스를 구성하고, 추적 수준을 설정하고, 종단 간 추적 상관 관계를 지원하도록 동작 추적 및 전파를 설정하고, 추적에 액세스하도록 추적 수신기를 설정하는 방법에 대해 설명합니다.  
@@ -66,7 +66,7 @@ ms.lasthandoff: 12/22/2017
 ```  
   
 > [!NOTE]
->  구성 파일을 편집 하려면는 [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 서비스 프로젝트에 [!INCLUDE[vs_current_short](../../../../../includes/vs-current-short-md.md)], 응용 프로그램의 구성 파일을 마우스 오른쪽 단추로 클릭-Web.config, 자체 호스팅 응용 프로그램의 경우 appname.exe.config 웹 호스팅 응용 프로그램에 대 한  **솔루션 탐색기**합니다. 선택 된 **WCF 구성 편집** 상황에 맞는 메뉴 항목입니다. 그러면는 [Configuration Editor 도구 (SvcConfigEditor.exe)](../../../../../docs/framework/wcf/configuration-editor-tool-svcconfigeditor-exe.md)에 대 한 구성 설정을 수정할 수 있습니다 [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 그래픽 사용자 인터페이스를 사용 하 여 서비스입니다.  
+>  구성 파일을 편집 하려면는 [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] Visual Studio에서 프로젝트를 서비스, 응용 프로그램의 구성 파일을 마우스 오른쪽 단추로 클릭-Web.config, 자체 호스팅 응용 프로그램의 경우 appname.exe.config 웹 호스팅 응용 프로그램에 대 한  **솔루션 탐색기**합니다. 선택 된 **WCF 구성 편집** 상황에 맞는 메뉴 항목입니다. 그러면는 [Configuration Editor 도구 (SvcConfigEditor.exe)](../../../../../docs/framework/wcf/configuration-editor-tool-svcconfigeditor-exe.md)에 대 한 구성 설정을 수정할 수 있습니다 [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 그래픽 사용자 인터페이스를 사용 하 여 서비스입니다.  
   
 ## <a name="configuring-trace-sources-to-emit-traces"></a>추적을 내보내도록 추적 소스 구성  
  [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)]는 각 어셈블리에 대한 추적 소스를 정의합니다. 어셈블리 내에 생성된 추적은 해당 소스에 대해 정의된 수신기를 통해 액세스합니다. 다음 추적 소스가 정의됩니다.  
@@ -146,7 +146,7 @@ ms.lasthandoff: 12/22/2017
 </system.diagnostics>  
 ```  
   
- [!INCLUDE[crabout](../../../../../includes/crabout-md.md)]만드는 사용자 정의 추적 소스, 참조 [추적 확장](../../../../../docs/framework/wcf/samples/extending-tracing.md)합니다.  
+ [!INCLUDE[crabout](../../../../../includes/crabout-md.md)] 만드는 사용자 정의 추적 소스, 참조 [추적 확장](../../../../../docs/framework/wcf/samples/extending-tracing.md)합니다.  
   
 ## <a name="configuring-trace-listeners-to-consume-traces"></a>추적을 사용하도록 추적 수신기 구성  
  런타임 시 [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)]는 데이터를 처리하는 수신기에 추적 데이터를 공급합니다. [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)]는 <xref:System.Diagnostics>(출력에 사용하는 형식은 다를 수 있음)에 대해 사전 정의된 몇 가지 수신기를 제공합니다. 사용자 지정 수신기 형식을 추가할 수도 있습니다.  
@@ -155,7 +155,7 @@ ms.lasthandoff: 12/22/2017
   
  원격 데이터베이스와 같은 연결을 통해 추적을 보내도록 사용자 지정 추적 수신기를 구성할 수 있습니다. 응용 프로그램 배포자인 경우 원격 컴퓨터의 추적 로그에 적절한 액세스 제어를 적용해야 합니다.  
   
- 추적 수신기를 프로그래밍 방식으로 구성할 수도 있습니다. [!INCLUDE[crdefault](../../../../../includes/crdefault-md.md)][하는 방법: 추적 수신기 만들기 및 초기화](http://go.microsoft.com/fwlink/?LinkId=94648) 및 [만드는 사용자 지정 TraceListener](http://go.microsoft.com/fwlink/?LinkId=96239)합니다.  
+ 추적 수신기를 프로그래밍 방식으로 구성할 수도 있습니다. [!INCLUDE[crdefault](../../../../../includes/crdefault-md.md)] [방법: 추적 수신기 만들기 및 초기화](http://go.microsoft.com/fwlink/?LinkId=94648) 및 [만드는 사용자 지정 TraceListener](http://go.microsoft.com/fwlink/?LinkId=96239)합니다.  
   
 > [!CAUTION]
 >  `System.Diagnostics.XmlWriterTraceListener`는 스레드로부터 안전하지 않으므로 추적을 출력할 때 추적 소스가 리소스를 단독으로 잠글 수도 있습니다. 여러 스레드에서 이 수신기를 사용하도록 구성된 추적 소스로 추적을 출력하면 리소스 경합이 발생할 수 있으며, 이로 인해 성능이 크게 저하될 수 있습니다. 이 문제를 해결하려면 스레드로부터 안전한 사용자 지정 수신기를 구현해야 합니다.  
@@ -187,7 +187,7 @@ ms.lasthandoff: 12/22/2017
   
  `propagateActivity` 특성은 동작을 메시지 교환에 참여하는 다른 끝점에 전파해야 하는지 여부를 나타냅니다. 이 값을 `true`로 설정하여 두 끝점에서 생성된 추적 파일을 가져오고 한 끝점의 추적 집합이 다른 끝점의 추적 집합으로 이동한 방법을 확인할 수 있습니다.  
   
- [!INCLUDE[crabout](../../../../../includes/crabout-md.md)]동작 추적 및 전파 참조 [전파](../../../../../docs/framework/wcf/diagnostics/tracing/propagation.md)합니다.  
+ [!INCLUDE[crabout](../../../../../includes/crabout-md.md)] 동작 추적 및 전파 참조 [전파](../../../../../docs/framework/wcf/diagnostics/tracing/propagation.md)합니다.  
   
  둘 다 `propagateActivity` 및 `ActivityTracing` 부울 값 System.ServiceModel TraceSource에 적용 합니다. `ActivityTracing` 모든 추적 소스에도 적용 됩니다 값 포함 하 여 [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 또는 사용자 정의 합니다.  
   

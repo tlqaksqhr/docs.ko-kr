@@ -1,18 +1,19 @@
 ---
-title: "기존 응용 프로그램이 Azure IaaS 이동할"
-description: "기존.NET 응용 프로그램을 Azure 클라우드 및 Windows 컨테이너를 현대화 합니다."
+title: 기존 응용 프로그램이 Azure IaaS 이동할
+description: 기존.NET 응용 프로그램을 Azure 클라우드 및 Windows 컨테이너를 현대화 합니다.
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/26/2017
 ms.prod: .net
+ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 6811da4b59531e27f2d832c102d37ba1383b15ab
-ms.sourcegitcommit: d3cfda0943364aaf6ccd574f55f584576c8a4fee
+ms.openlocfilehash: d7922ad3a3cd5346f81008e1841a55b5e3663832
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="lift-and-shift-existing-apps-azure-iaas"></a>기존 응용 프로그램이 Azure IaaS 이동할
 
@@ -26,7 +27,7 @@ ms.lasthandoff: 03/08/2018
 
 ![클라우드 인프라를 갖춘 응용 프로그램을 위치 지정](./media/image2-1.png)
 
-> **그림 2-1입니다.** 클라우드 인프라를 갖춘 응용 프로그램을 위치 지정
+> **그림 2-1.** 클라우드 인프라를 갖춘 응용 프로그램을 위치 지정
 
 ## <a name="why-migrate-existing-net-web-applications-to-azure-iaas"></a>기존.NET 웹 응용 프로그램에서는 Azure IaaS 마이그레이션하는 이유
 
@@ -88,9 +89,9 @@ Azure 마이그레이션 작업 마이그레이션할 비즈니스에 미치는 
 
 - **Azure 마이그레이션 데이터 시트**
 
-    [https://aka.ms/azuremigration\_datasheet](https://aka.ms/azuremigration\_datasheet)
+    [https://aka.ms/azuremigration\_데이터 시트](https://aka.ms/azuremigration\_datasheet)
 
-- **Azure Migrate**
+- **Azure 마이그레이션**
 
     [http://azuremigrationcenter.com/](http://azuremigrationcenter.com/)
 

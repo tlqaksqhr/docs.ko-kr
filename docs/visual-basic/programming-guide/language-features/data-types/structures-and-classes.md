@@ -1,11 +1,12 @@
 ---
-title: "구조체와 클래스(Visual Basic)"
-ms.custom: 
+title: 구조체와 클래스(Visual Basic)
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - classes [Visual Basic], vs. structures
@@ -15,17 +16,17 @@ helpviewer_keywords:
 - structures [Visual Basic], structure variables
 - structure variables [Visual Basic]
 ms.assetid: a221e74a-ffcf-4bdc-a0f6-a088a9bf26cc
-caps.latest.revision: "21"
+caps.latest.revision: 21
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 08e31481feac7a6184c6b29269d193c749f440ff
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: cf72fb0a7a34d45774cb9a58c037ebcb1c05288f
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="structures-and-classes-visual-basic"></a>구조체와 클래스(Visual Basic)
-[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]구조체와 클래스에 대 한 구문의 통합 합니다. 그러나 구조체와 클래스의 중요 한 차이점이 있습니다.  
+Visual Basic 구조체와 클래스에 대 한 구문의 통합 합니다. 그러나 구조체와 클래스의 중요 한 차이점이 있습니다.  
   
  클래스에는 참조 형식이 될 수 있는 이점이-대 한 참조를 전달 하는 것이 모든 데이터와 함께 구조체 변수를 전달할 때 보다 더 효율적입니다. 반면에 구조 전역 힙에 대 한 메모리 할당이 필요 하지 않습니다.  
   
@@ -92,7 +93,7 @@ ms.lasthandoff: 11/21/2017
   
      그러나 구조 요소를 자신의 인스턴스 내에서 격리 됩니다. 해당 값에 대 한 변경의 동일한 다른 인스턴스에 있는 변수를 포함 하 여 다른 구조 변수에 반영 되지 않습니다 `Structure` 선언 합니다.  
   
--   **같음입니다.** 요소 별로 테스트와 함께 두 같음 테스트를 수행 되어야 합니다. 두 개체 변수를 사용 하 여 비교할 수는 <xref:System.Object.Equals%2A> 메서드. <xref:System.Object.Equals%2A>두 변수의 같은 인스턴스를 가리키는지 여부를 나타냅니다.  
+-   **같음입니다.** 요소 별로 테스트와 함께 두 같음 테스트를 수행 되어야 합니다. 두 개체 변수를 사용 하 여 비교할 수는 <xref:System.Object.Equals%2A> 메서드. <xref:System.Object.Equals%2A> 두 변수의 같은 인스턴스를 가리키는지 여부를 나타냅니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [데이터 형식](../../../../visual-basic/programming-guide/language-features/data-types/index.md)  

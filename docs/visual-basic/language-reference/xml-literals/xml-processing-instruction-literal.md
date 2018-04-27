@@ -17,11 +17,11 @@ ms.assetid: cef4f7f8-0011-4f64-8602-795077ad4f15
 caps.latest.revision: 19
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 9ce0f2d0dff80072beefdb4f84643ea28e2cf165
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 2d2df93a46d426358988b3ad7f3161c7ae0c7b9e
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="xml-processing-instruction-literal-visual-basic"></a>XML 처리 명령 리터럴(Visual Basic)
 리터럴 나타내는 <xref:System.Xml.Linq.XProcessingInstruction> 개체입니다.  
@@ -34,16 +34,16 @@ ms.lasthandoff: 11/21/2017
   
 ## <a name="parts"></a>요소  
  `<?`  
- 필수 요소. XML 처리 명령 리터럴의 시작을 나타냅니다.  
+ 필수. XML 처리 명령 리터럴의 시작을 나타냅니다.  
   
  `piName`  
- 필수 요소. 이름을 응용 프로그램을 나타내는 처리 명령의 대상입니다. "Xml" 또는 "XML"로 시작할 수 없습니다.  
+ 필수. 이름을 응용 프로그램을 나타내는 처리 명령의 대상입니다. "Xml" 또는 "XML"로 시작할 수 없습니다.  
   
  `piData`  
  선택 사항입니다. 응용 프로그램이 대상으로 지정 하는 방법을 나타내는 문자열 `piName` XML 문서를 처리 해야 합니다.  
   
  `?>`  
- 필수 요소. 처리 명령의 끝을 나타냅니다.  
+ 필수. 처리 명령의 끝을 나타냅니다.  
   
 ## <a name="return-value"></a>반환 값  
  <xref:System.Xml.Linq.XProcessingInstruction> 개체입니다.  
@@ -59,9 +59,9 @@ ms.lasthandoff: 11/21/2017
  XML 처리 명령 리터럴을 변수에 할당 하거나 XML 문서 리터럴의에 포함할 수 있습니다.  
   
 > [!NOTE]
->  XML 리터럴은 줄 연속 문자 필요 없이 여러 줄으로 나타날 수 있습니다. 이렇게 하면 XML 문서에서 콘텐츠를 복사 하 고에 직접 붙여넣을 수 있습니다는 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 프로그램.  
+>  XML 리터럴은 줄 연속 문자 필요 없이 여러 줄으로 나타날 수 있습니다. 따라서 XML 문서에서 콘텐츠를 복사 하 고 Visual Basic 프로그램에 직접 붙여넣을 수 있습니다.  
   
- [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 컴파일러에 대 한 호출을 XML 처리 명령 리터럴의 변환는 <xref:System.Xml.Linq.XProcessingInstruction.%23ctor%2A> 생성자입니다.  
+ Visual Basic 컴파일러를 호출 하는 XML 처리 명령 리터럴를 변환의 <xref:System.Xml.Linq.XProcessingInstruction.%23ctor%2A> 생성자입니다.  
   
 ## <a name="example"></a>예제  
  다음 예제에서는 XML 문서에 대 한 스타일 시트를 식별 하는 처리 명령을 만듭니다.  

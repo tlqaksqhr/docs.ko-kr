@@ -1,21 +1,21 @@
 ---
-title: "Serialization 개념"
+title: Serialization 개념
 ms.date: 08/07/2017
 ms.prod: .net
 ms.topic: article
 ms.assetid: e1ff4740-20a1-4c76-a8ad-d857db307054
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 84bb6b4d80d59a09a1daa808cbfed60c2464ec19
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 038e150e167da62c7e67d59eb1f460237851ed87
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="serialization-concepts"></a>Serialization 개념
 serialization을 사용하는 이유는 무엇입니까? 가장 중요한 두 가지 이유는 이후 단계에서 정확한 복사본을 다시 만들 수 있도록 저장 매체에 개체의 상태를 유지하는 것과 개체를 한 응용 프로그램 도메인에서 다른 응용 프로그램 도메인으로 값으로 전송하는 것입니다. 예를 들어 serialization을 사용하여 세션 상태를 ASP.NET에 저장하고 개체를 Windows Forms의 클립보드로 복사할 수 있습니다. 또한 Remoting에서 이를 사용하여 개체를 한 응용 프로그램 도메인에서 다른 응용 프로그램 도메인으로 값으로 전달할 수도 있습니다.
@@ -38,7 +38,7 @@ serialization을 사용하는 이유는 무엇입니까? 가장 중요한 두 �
  [이진 serialization](../../../docs/standard/serialization/binary-serialization.md)  
  공용 언어 런타임에 포함된 이진 serialization 메커니즘을 설명합니다.  
   
- [원격 개체](http://msdn.microsoft.com/library/515686e6-0a8d-42f7-8188-73abede57c58)  
+ [원격 개체](https://msdn.microsoft.com/library/515686e6-0a8d-42f7-8188-73abede57c58)  
  .NET Framework에서 원격 통신에 사용할 수 있는 다양한 통신 방법에 대해 설명합니다.  
   
  [XML 및 SOAP serialization](../../../docs/standard/serialization/xml-and-soap-serialization.md)  

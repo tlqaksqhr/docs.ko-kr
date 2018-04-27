@@ -1,11 +1,12 @@
 ---
-title: "데이터 형식 문제 해결(Visual Basic)"
-ms.custom: 
+title: 데이터 형식 문제 해결(Visual Basic)
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - Char data type [Visual Basic], converting
@@ -25,14 +26,14 @@ helpviewer_keywords:
 - floating-point numbers [Visual Basic], comparison
 - floating-point numbers
 ms.assetid: 90040d67-b630-4125-a6ae-37195b079042
-caps.latest.revision: "29"
+caps.latest.revision: 29
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 4d2fb1cd1be9c88ad0dd413eedb8a226fe59f41e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: f34e7bc50a51032387cf01db3fae17ef44b8b4d9
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="troubleshooting-data-types-visual-basic"></a>데이터 형식 문제 해결(Visual Basic)
 이 페이지는 내장 데이터 형식에 대 한 작업을 수행할 때 발생할 수 있는 몇 가지 일반적인 문제를 나열 합니다.  
@@ -74,7 +75,7 @@ ms.lasthandoff: 11/21/2017
  선언 하는 데 충분 하지 않습니다 `decimalRemainder` 으로 `Decimal`합니다. 리터럴을 강제 해야 `Decimal`를 사용 하 여 `Double` 기본적으로 및 `decimalRemainder` 같은 부정확 한 값을 받는 `doubleRemainder`합니다.  
   
 ## <a name="boolean-type-does-not-convert-to-numeric-type-accurately"></a>Boolean 형식의 숫자 형식으로 정확 하 게 변환 되지 않습니다.  
- [Boolean 데이터 형식](../../../../visual-basic/language-reference/data-types/boolean-data-type.md) 숫자로 값은 저장 되지 않으며 숫자에 해당 되는 저장 된 값은 하지 않습니다. 이전 버전과 호환성을 위해 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 변환 키워드를 제공 합니다. ([CType 함수](../../../../visual-basic/language-reference/functions/ctype-function.md), `CBool`, `CInt`등) 사이 변환할 `Boolean` 및 숫자 형식입니다. 하지만 다른 언어 때로는 이러한 변환을 수행 같이 다르게는 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 메서드.  
+ [Boolean 데이터 형식](../../../../visual-basic/language-reference/data-types/boolean-data-type.md) 숫자로 값은 저장 되지 않으며 숫자에 해당 되는 저장 된 값은 하지 않습니다. 이전 버전과 호환성에 대 한 Visual Basic에서는 변환 키워드 ([CType 함수](../../../../visual-basic/language-reference/functions/ctype-function.md), `CBool`, `CInt`등) 사이 변환할 `Boolean` 및 숫자 형식입니다. 하지만 다른 언어 때로는 이러한 변환을 수행 같이 다르게는 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 메서드.  
   
  해당 하는 숫자 값을 사용 하는 코드를 작성 하지 마십시오 `True` 및 `False`합니다. 용도 제한 해야 가능 하면 항상 `Boolean` 변수도 설계 된 논리 값입니다. 혼합 해야 `Boolean` 숫자 값을 선택 하는 변환 메서드를 알고 있는지 확인 합니다.  
   
@@ -87,7 +88,7 @@ ms.lasthandoff: 11/21/2017
  변환 해야 하는 경우는 `Boolean` 숫자 데이터 형식으로 값을 주의 변환 메서드를 사용 합니다.  
   
 ## <a name="character-literal-generates-compiler-error"></a>문자 리터럴은 컴파일러 오류를 생성합니다.  
- 형식 문자가 없을 경우 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 에서는 기본 리터럴에 대 한 데이터 형식을 사용 합니다. 리터럴 문자에 대 한 기본 형식-따옴표로 묶인 (`" "`)-은 `String`합니다.  
+ 형식 문자가 없는 경우, Visual Basic 리터럴에 대 한 데이터 형식을 기본을 가정합니다. 리터럴 문자에 대 한 기본 형식-따옴표로 묶인 (`" "`)-은 `String`합니다.  
   
  `String` 데이터 형식으로 확대 되지 않습니다는 [Char 데이터 형식을](../../../../visual-basic/language-reference/data-types/char-data-type.md)합니다. 즉 리터럴을 할당 하려는 경우는 `Char` 변수인 축소 변환을 하거나에 리터럴을 `Char` 유형입니다.  
 
@@ -102,7 +103,7 @@ ms.lasthandoff: 11/21/2017
  항상 위험이 있습니다 축소 변환을 사용 하 여 런타임 시 실패할 수 있기 때문입니다. 변환 예를 들어 `String` 를 `Char` 에 실패할 수 있습니다는 `String` 값 둘 이상의 문자가 포함 되어 있습니다. 사용 하 여 더 잘 프로그래밍 따라서는 `C` 문자를 입력 합니다.  
   
 ## <a name="string-conversion-fails-at-run-time"></a>런타임 시 문자열 변환이 실패  
- [문자열 데이터 형식](../../../../visual-basic/language-reference/data-types/string-data-type.md) 매우 적은 확대 변환에 참여 합니다. `String`자체에 확장 및 `Object`만 `Char` 및 `Char()` (한 `Char` 배열)으로 확장 `String`합니다. 즉, `String` 변수 및 상수를 포함할 수 없는 다른 데이터 형식 값을 포함할 수 있습니다.  
+ [문자열 데이터 형식](../../../../visual-basic/language-reference/data-types/string-data-type.md) 매우 적은 확대 변환에 참여 합니다. `String` 자체에 확장 및 `Object`만 `Char` 및 `Char()` (한 `Char` 배열)으로 확장 `String`합니다. 즉, `String` 변수 및 상수를 포함할 수 없는 다른 데이터 형식 값을 포함할 수 있습니다.  
   
  형식 검사 스위치 ([Option Strict 문](../../../../visual-basic/language-reference/statements/option-strict-statement.md))은 `On`, 컴파일러에 모든 암시적 축소 변환을 허용 하지 않습니다. 여기에 관련 된 `String`합니다. 코드 여전히 צ ְ ײ 변환 키워드와 같은 `CStr` 및 [CType 함수](../../../../visual-basic/language-reference/functions/ctype-function.md)를 지시할은 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 변환 하려고 합니다.  
   

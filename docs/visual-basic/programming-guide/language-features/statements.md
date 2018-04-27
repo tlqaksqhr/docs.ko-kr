@@ -1,11 +1,12 @@
 ---
-title: "Visual Basic의 문"
-ms.custom: 
+title: Visual Basic의 문
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - variables [Visual Basic], declaring
@@ -21,17 +22,17 @@ helpviewer_keywords:
 - variables [Visual Basic], defining
 - statements [Visual Basic], about statements
 ms.assetid: fcfdee1a-82b7-4846-98f7-9ca3f5160089
-caps.latest.revision: "30"
+caps.latest.revision: 30
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 210637105e54244ba829dabd73feab0b43ec7c6c
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.openlocfilehash: beb33b8f2c30723158e41244cbb5c9cfca108a53
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="statements-in-visual-basic"></a>Visual Basic의 문
-문 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 은 전체 명령입니다. 키워드, 연산자, 변수, 상수, 및 식을 포함할 수 있습니다. 각 문에 다음 범주 중 하나에 속합니다.  
+Visual Basic의 문은 전체 명령입니다. 키워드, 연산자, 변수, 상수, 및 식을 포함할 수 있습니다. 각 문에 다음 범주 중 하나에 속합니다.  
   
 -   **선언문**, 변수, 상수 또는 프로시저 이름을 지정 하 고 또한 데이터 형식을 지정할 수는 있습니다.  
   
@@ -53,7 +54,7 @@ ms.lasthandoff: 10/22/2017
  세 번째 선언 되는 `Dim` 변수를 선언 하는 문에 `thisWidget`합니다. 데이터 형식이 특정 개체, 즉에서 생성 된 개체는 `Widget` 클래스입니다. 사용 하는 응용 프로그램에 노출 되는 모든 개체 유형일 또는 모든 기본 데이터 형식의 변수를 선언할 수 있습니다.  
   
 ### <a name="initial-values"></a>초기 값  
- 선언문을 포함 하는 코드를 실행 하는 경우 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 선언된 된 요소에 필요한 메모리를 예약 합니다. 요소는 값이 있는 경우 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 해당 데이터 형식의 기본값으로 초기화 합니다. 자세한 내용은의 "동작" 참조 [Dim 문](../../../visual-basic/language-reference/statements/dim-statement.md)합니다.  
+ 선언문을 포함 하는 코드를 실행 하는 경우 Visual Basic 선언된 된 요소에 필요한 메모리를 예약 합니다. 요소 값이 있는 경우 Visual Basic 데이터 형식에 대 한 기본값으로 초기화 합니다. 자세한 내용은의 "동작" 참조 [Dim 문](../../../visual-basic/language-reference/statements/dim-statement.md)합니다.  
   
  다음 예제와 같이 해당 선언의 일부로 변수에 초기 값을 할당할 수 있습니다.  
   
@@ -121,7 +122,7 @@ ms.lasthandoff: 10/22/2017
 ### <a name="type-conversions-in-assignment-statements"></a>대입문의 형식 변환  
  해당 대상 요소에 적절 한 데이터 형식의 변수, 속성 또는 배열 요소에 할당 하는 값 이어야 합니다. 일반적으로 대상 요소의 것과 동일한 데이터 형식의 값을 생성 하려고 해야 합니다. 그러나 할당 하는 동안 일부 형식은 다른 형식으로 변환 수 있습니다.  
   
- 데이터 형식 간의 변환에 대 한 참조 [Visual Basic의 형식 변환](../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)합니다. 간단히 말해서 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 자동으로 지정 된 형식의 값으로 확대 다른 형식으로 변환 합니다. A *확대 변환* 는 주는 하나 항상 런타임에 성공 하 고 데이터가 손실 되지 않습니다. 예를 들어 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 변환는 `Integer` 값을 `Double` 해당 되는 경우 때문에 `Integer` 로 확대 `Double`합니다. 자세한 내용은 [Widening and Narrowing Conversions](../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)을 참조하세요.  
+ 데이터 형식 간의 변환에 대 한 참조 [Visual Basic의 형식 변환](../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)합니다. 간단히 말해서 Visual Basic는 자동으로 확대 다른 형식으로 지정 된 형식의 값을 변환 합니다. A *확대 변환* 는 주는 하나 항상 런타임에 성공 하 고 데이터가 손실 되지 않습니다. 예를 들어, Visual Basic로 변환 된 `Integer` 값을 `Double` 해당 되는 경우 때문에 `Integer` 로 확대 `Double`합니다. 자세한 내용은 [Widening and Narrowing Conversions](../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)을 참조하세요.  
   
  *축소 변환* (확대 되지 것) 런타임 시 오류 또는 데이터 손실의 위험을 수행 합니다. 형식 변환 함수를 사용 하 여 명시적으로 축소 변환을 수행 하거나 변환을 수행 하기 위해 모든 암시적으로 설정 하 여 컴파일러에 지시할 수 있습니다 `Option Strict Off`합니다. 자세한 내용은 참조 [암시적 변환과 명시적 변환](../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md)합니다.  
   
@@ -158,7 +159,7 @@ ms.lasthandoff: 10/22/2017
 |후의 `From` 컬렉션 이니셜라이저에는 키워드입니다.|[!code-vb[VbVbalrLineContinuation#13](../../../visual-basic/programming-guide/language-features/codesnippet/VisualBasic/statements_27.vb)]<br /><br /> 자세한 내용은 [컬렉션 이니셜라이저](../../../visual-basic/programming-guide/language-features/collection-initializers/index.md)를 참조하세요.|  
   
 ## <a name="adding-comments"></a>주석 추가  
- 소스 코드는 항상 자체 것은 프로그래머에 게도 설명 합니다. 따라서 코드를 문서화할를 하기 위해 대부분의 프로그래머가 쉽게가 포함 되어 있는 설명 자유롭게 사용 하 여를 확인 합니다. 코드의 주석 프로시저 또는 특정 명령을 읽거나 작업을 나중에 모든 사용자에 게 설명할 수 있습니다. [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]컴파일하는 동안 주석을 무시는 컴파일된 코드가 영향을 주지 않습니다.  
+ 소스 코드는 항상 자체 것은 프로그래머에 게도 설명 합니다. 따라서 코드를 문서화할를 하기 위해 대부분의 프로그래머가 쉽게가 포함 되어 있는 설명 자유롭게 사용 하 여를 확인 합니다. 코드의 주석 프로시저 또는 특정 명령을 읽거나 작업을 나중에 모든 사용자에 게 설명할 수 있습니다. Visual Basic 컴파일하는 동안 주석을 무시 하 고는 컴파일된 코드가 영향을 주지 않습니다.  
   
  아포스트로피로 주석 줄 시작 (`'`) 또는 `REM` 뒤에 공백이 있습니다. 추가할 수 있습니다 아무 곳 이나 코드에서 제외 하 고 문자열 내에서. 문에 주석을 추가할 아포스트로피 삽입 또는 `REM` 주석 뒤 문 다음 합니다. 별도 줄에 주석을 수행할 수도 있습니다. 다음 예제에서는 이러한 가능성을 보여 줍니다.  
   

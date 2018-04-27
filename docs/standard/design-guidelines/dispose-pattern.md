@@ -1,12 +1,12 @@
 ---
-title: "삭제 패턴"
-ms.custom: 
+title: 삭제 패턴
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Dispose method
@@ -15,18 +15,18 @@ helpviewer_keywords:
 - customizing Dispose method name
 - Finalize method
 ms.assetid: 31a6c13b-d6a2-492b-9a9f-e5238c983bcb
-caps.latest.revision: 
+caps.latest.revision: 22
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: e0c2e74afea8a0cb5a0e187f05511eabe0527b90
-ms.sourcegitcommit: 08684dd61444c2f072b89b926370f750e456fca1
+ms.openlocfilehash: cb83b943a03eadd760d0080b1c9920e2c1e78cce
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="dispose-pattern"></a>삭제 패턴
 모든 프로그램 실행을 사용 하는 동안 메모리, 시스템 핸들 또는 데이터베이스 연결과 같은 하나 이상의 시스템 리소스를 획득합니다. 개발자가 직접 획득 고 사용한 후 해제 되어야 합니다 때문에 이러한 시스템 리소스를 사용할 때는 주의 해야 해야 합니다.  
@@ -287,7 +287,7 @@ public class ComplexResourceHolder : IDisposable {
   
  *Portions © 2005, 2009 Microsoft Corporation. 모든 권리 보유.*  
   
- *피어슨 교육, Inc.에서의 사용 권한으로 재인쇄 [Framework 디자인 지침: 규칙, 특징 및 다시 사용할 수 있는.NET 라이브러리를 2nd Edition에 대 한 패턴](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina 및 Brad Abrams 게시 하 여 2008 년 10 월 22 일 Microsoft Windows 개발 시리즈의 일부로: Addison Wesley Professional.*  
+ *피어슨 교육, Inc.에서의 사용 권한으로 재인쇄 [Framework 디자인 지침: 규칙, 특징 및 다시 사용할 수 있는.NET 라이브러리를 2nd Edition에 대 한 패턴](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina 및 Brad Abrams 게시 하 여 2008 년 10 월 22 일 Microsoft Windows 개발 시리즈의 일부로: Addison Wesley Professional.*  
   
 ## <a name="see-also"></a>참고 항목  
  <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType>  

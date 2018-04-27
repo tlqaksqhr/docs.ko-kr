@@ -1,32 +1,34 @@
 ---
-title: "WPF의 양방향 기능 개요"
-ms.custom: 
+title: WPF의 양방향 기능 개요
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Span elements [WPF]
 - bidirectional features [WPF]
 ms.assetid: fd850e25-7dba-408c-b521-8873e51dc968
-caps.latest.revision: "22"
+caps.latest.revision: 22
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: b50d98d5f02a59a013d7577f0e312e6ffde35690
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: fa2349bca86676f4dc3e1703216a2b0dc50ccd59
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="bidirectional-features-in-wpf-overview"></a>WPF의 양방향 기능 개요
 다른 개발 플랫폼 달리 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 혼합된 왼쪽에서 오른쪽을 마우스 오른쪽 단추로 같은 문서에 데이터를 유지 하는 예를 들어, 양방향 콘텐츠의 신속 하 게 개발을 지 원하는 많은 기능이 있습니다. 같은 시간에 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 예: 아랍어 및 히브리어 사용자 양방향 기능이 필요한 사용자를 위한 뛰어난 경험을 만듭니다.  
   
- 다음 섹션에서는 최상의 양방향 콘텐츠 표시를 수행하는 방법을 보여주는 예제와 함께 다양한 양방향 기능을 설명합니다. 대부분의 예제를 사용 하 여 [!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)]개념을 쉽게 적용할 수 있지만, [!INCLUDE[TLA#tla_cshrp](../../../../includes/tlasharptla-cshrp-md.md)] 또는 [!INCLUDE[TLA#tla_visualb](../../../../includes/tlasharptla-visualb-md.md)] 코드입니다.  
+ 다음 섹션에서는 최상의 양방향 콘텐츠 표시를 수행하는 방법을 보여주는 예제와 함께 다양한 양방향 기능을 설명합니다. 대부분의 예제를 사용 하 여 [!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)]경우에 C# 또는 Microsoft Visual Basic 코드를 쉽게 개념을 적용할 수 있습니다.  
   
 
   
@@ -70,7 +72,7 @@ ms.lasthandoff: 12/22/2017
   
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], <xref:System.Windows.Documents.FlowDocument> 는 용도가 넓은 함수로 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 텍스트, 테이블, 이미지 및 기타 요소를 조합한을 호스팅할 수 있는 요소입니다. 다음 섹션의 샘플은 이 요소를 사용합니다.  
   
- 텍스트를 추가 <xref:System.Windows.Documents.FlowDocument> 을 여러 방법으로 더에서 수행할 수 있습니다. 작업을 수행 하는 간단한 방법을 통해는 <xref:System.Windows.Documents.Paragraph> 하는 블록 수준 요소 텍스트와 같은 그룹 콘텐츠 하는 데 사용 합니다. 샘플 사용 인라인 수준 요소에 텍스트를 추가 하려면 <xref:System.Windows.Documents.Span> 및 <xref:System.Windows.Documents.Run>합니다. <xref:System.Windows.Documents.Span>다른 인라인 요소를 그룹화 하는 데 사용 되는 인라인 수준의 유동 콘텐츠 요소는 동안는 <xref:System.Windows.Documents.Run> 인라인 수준의 유동 콘텐츠 요소는 서식 있는 텍스트 실행을 포함 하기 위한 것이 있습니다. A <xref:System.Windows.Documents.Span> 여러 개 포함할 수 <xref:System.Windows.Documents.Run> 요소입니다.  
+ 텍스트를 추가 <xref:System.Windows.Documents.FlowDocument> 을 여러 방법으로 더에서 수행할 수 있습니다. 작업을 수행 하는 간단한 방법을 통해는 <xref:System.Windows.Documents.Paragraph> 하는 블록 수준 요소 텍스트와 같은 그룹 콘텐츠 하는 데 사용 합니다. 샘플 사용 인라인 수준 요소에 텍스트를 추가 하려면 <xref:System.Windows.Documents.Span> 및 <xref:System.Windows.Documents.Run>합니다. <xref:System.Windows.Documents.Span> 다른 인라인 요소를 그룹화 하는 데 사용 되는 인라인 수준의 유동 콘텐츠 요소는 동안는 <xref:System.Windows.Documents.Run> 인라인 수준의 유동 콘텐츠 요소는 서식 있는 텍스트 실행을 포함 하기 위한 것이 있습니다. A <xref:System.Windows.Documents.Span> 여러 개 포함할 수 <xref:System.Windows.Documents.Run> 요소입니다.  
   
  다양 한 네트워크 이름을; 공유에 있는 문서를 포함 하는 첫 번째 문서 예제 예를 들어 `\\server1\folder\file.ext`합니다. 이 네트워크 링크가 아랍어나 영어 문서에 있는지 여부에 따라 같은 방식으로 항상 표시될 수 있습니다. 다음 그림에서는 아랍어 <xref:System.Windows.FlowDirection.RightToLeft> 문서.  
   
@@ -131,7 +133,7 @@ ms.lasthandoff: 12/22/2017
   
 <a name="FlowDirectionNontext"></a>   
 ## <a name="flowdirection-with-non-text-elements"></a>텍스트가 아닌 요소가 있는 FlowDirection  
- <xref:System.Windows.FlowDirection>뿐만 아니라 텍스트 방향을 텍스트 요소 뿐만 아니라 거의 모든 다른 흐름 방향에서 정의 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 요소입니다. 다음 그래픽에 표시 된는 <xref:System.Windows.Controls.ToolBar> 가로 사용 하 여 <xref:System.Windows.Media.LinearGradientBrush> 의 배경을 그리는 데 합니다.  
+ <xref:System.Windows.FlowDirection> 뿐만 아니라 텍스트 방향을 텍스트 요소 뿐만 아니라 거의 모든 다른 흐름 방향에서 정의 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 요소입니다. 다음 그래픽에 표시 된는 <xref:System.Windows.Controls.ToolBar> 가로 사용 하 여 <xref:System.Windows.Media.LinearGradientBrush> 의 배경을 그리는 데 합니다.  
   
  **그라데이션이 왼쪽에서 오른쪽인 도구 모음을 표시하는 그래픽**  
   
@@ -245,13 +247,13 @@ ms.lasthandoff: 12/22/2017
   
  먼저, 응용 프로그램 구성 요소의 설정 `NumberSubstitution.CultureSource="Text"`합니다. 이 설정을 사용 하면 설정을에서 제공 되지 않는 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 텍스트 요소에 대해 "User" 기본적으로 같은 <xref:System.Windows.Controls.TextBlock>합니다.  
   
- 예:  
+ 예를 들어:  
   
 ||  
 |-|  
 |`<TextBlock`<br /><br /> `Name="text1" NumberSubstitution.CultureSource="Text">`<br /><br /> `1234+5679=6913`<br /><br /> `</TextBlock>`|  
   
- 해당 [!INCLUDE[TLA2#tla_lhcshrp](../../../../includes/tla2sharptla-lhcshrp-md.md)] 코드, 설정 된 `Language` 속성 예를 들어 `"ar-SA"`합니다.  
+ C# 코드에서 해당 설정의 `Language` 속성 예를 들어 `"ar-SA"`합니다.  
   
 ||  
 |-|  
@@ -263,13 +265,13 @@ ms.lasthandoff: 12/22/2017
 |-|  
 |`text1.Language =`<br /><br /> `System.Windows.Markup.XmlLanguage.GetLanguage(`<br /><br /> `System.Globalization.CultureInfo.CurrentUICulture.IetfLanguageTag);`|  
   
- <xref:System.Globalization.CultureInfo.CurrentCulture%2A>런타임 시 현재 스레드에서 사용 하는 현재 문화권을 나타냅니다.  
+ <xref:System.Globalization.CultureInfo.CurrentCulture%2A> 런타임 시 현재 스레드에서 사용 하는 현재 문화권을 나타냅니다.  
   
  최종 [!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)] 예제는 다음 예제와 유사 해야 합니다.  
   
  [!code-xaml[Numbers2#Numbers2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Numbers2/CS/Window1.xaml#numbers2)]  
   
- 최종 [!INCLUDE[TLA#tla_cshrp](../../../../includes/tlasharptla-cshrp-md.md)] 예제는 다음과 비슷해야 합니다.  
+ 마지막 C# 예제는 다음과 비슷해야 합니다.  
   
  [!code-csharp[NumbersCSharp#NumbersCSharp](../../../../samples/snippets/csharp/VS_Snippets_Wpf/NumbersCSharp/CSharp/Window1.xaml.cs#numberscsharp)]  
   

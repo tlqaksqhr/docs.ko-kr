@@ -1,27 +1,29 @@
 ---
-title: "WPF 응용 프로그램 배포(WPF)"
-ms.custom: 
+title: WPF 응용 프로그램 배포(WPF)
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - WPF applications [WPF], deployment
 - deployment [WPF], applications
 ms.assetid: 12cadca0-b32c-4064-9a56-e6a306dcc76d
-caps.latest.revision: "27"
+caps.latest.revision: 27
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 7cf0c5383728648d46427ce8fe2f5a97a736ab00
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: 3beb8ee0869384f9f453023fe549b2339c126898
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="deploying-a-wpf-application-wpf"></a>WPF 응용 프로그램 배포(WPF)
 [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] 응용 프로그램을 만들었으면 배포해야 합니다. [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] 및 [!INCLUDE[TLA2#tla_winfx](../../../../includes/tla2sharptla-winfx-md.md)]에서는 여러 가지 배포 기술을 제공합니다. [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 응용 프로그램을 배포하는 데 사용되는 배포 기술은 응용 프로그램 종류에 따라 달라집니다. 이 항목에서는 각 배포 기술과 해당 기술이 각 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 응용 프로그램 종류의 배포 요구 사항과 함께 사용되는 방법에 대해 간략하게 설명합니다.  
@@ -93,7 +95,7 @@ ms.lasthandoff: 01/19/2018
   
  [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 응용 프로그램의 보안에 대한 자세한 내용은 [보안](../../../../docs/framework/wpf/security-wpf.md)을 참조하세요.  
   
- 마크업 전용 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 페이지는 XCopy나 [!INCLUDE[TLA2#tla_wininstall](../../../../includes/tla2sharptla-wininstall-md.md)]를 사용하여 로컬 파일 시스템에 설치할 수 있습니다. 이러한 페이지는 [!INCLUDE[TLA2#tla_iegeneric](../../../../includes/tla2sharptla-iegeneric-md.md)] 또는 [!INCLUDE[TLA2#tla_mswin](../../../../includes/tla2sharptla-mswin-md.md)] 탐색기를 사용하여 볼 수 있습니다.  
+ 마크업 전용 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 페이지는 XCopy나 [!INCLUDE[TLA2#tla_wininstall](../../../../includes/tla2sharptla-wininstall-md.md)]를 사용하여 로컬 파일 시스템에 설치할 수 있습니다. 이 페이지를 사용 하 여 볼 수 있습니다 [!INCLUDE[TLA2#tla_iegeneric](../../../../includes/tla2sharptla-iegeneric-md.md)] 또는 Windows 탐색기입니다.  
   
  XAML에 대한 자세한 내용은 [XAML 개요(WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)를 참조하세요.  
   
@@ -124,7 +126,7 @@ ms.lasthandoff: 01/19/2018
   
 <a name="Installing__NET_Framework_3_0"></a>   
 ## <a name="installing-the-net-framework"></a>.NET Framework 설치  
- [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 응용 프로그램을 실행하려면 [!INCLUDE[TLA#tla_winfx](../../../../includes/tlasharptla-winfx-md.md)]를 클라이언트에 설치해야 합니다. [!INCLUDE[TLA2#tla_ie](../../../../includes/tla2sharptla-ie-md.md)]는 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 브라우저에서 호스팅되는 응용 프로그램이 표시될 때 클라이언트에 [!INCLUDE[TLA2#tla_winfx](../../../../includes/tla2sharptla-winfx-md.md)]가 설치되어 있는지 자동으로 검색합니다. [!INCLUDE[TLA2#tla_winfx](../../../../includes/tla2sharptla-winfx-md.md)]가 설치되지 않은 경우 설치하라는 메시지가 [!INCLUDE[TLA2#tla_ie](../../../../includes/tla2sharptla-ie-md.md)]에 표시됩니다.  
+ 실행 하는 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 응용 프로그램을 클라이언트에 Microsoft.NET Framework를 설치 해야 합니다. [!INCLUDE[TLA2#tla_ie](../../../../includes/tla2sharptla-ie-md.md)]는 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 브라우저에서 호스팅되는 응용 프로그램이 표시될 때 클라이언트에 [!INCLUDE[TLA2#tla_winfx](../../../../includes/tla2sharptla-winfx-md.md)]가 설치되어 있는지 자동으로 검색합니다. [!INCLUDE[TLA2#tla_winfx](../../../../includes/tla2sharptla-winfx-md.md)]가 설치되지 않은 경우 설치하라는 메시지가 [!INCLUDE[TLA2#tla_ie](../../../../includes/tla2sharptla-ie-md.md)]에 표시됩니다.  
   
  [!INCLUDE[TLA2#tla_winfx](../../../../includes/tla2sharptla-winfx-md.md)]가 설치되어 있는지 여부를 검색하기 위해 [!INCLUDE[TLA2#tla_ie](../../../../includes/tla2sharptla-ie-md.md)]에는 .xaml, .xps, .xbap 및 .application 확장명을 사용하는 콘텐츠 파일에 대한 대체(fallback) [!INCLUDE[TLA#tla_mime](../../../../includes/tlasharptla-mime-md.md)] 처리기로 등록되는 부트스트래퍼 응용 프로그램이 있습니다. 이러한 파일 형식으로 이동한 경우 [!INCLUDE[TLA2#tla_winfx](../../../../includes/tla2sharptla-winfx-md.md)]가 클라이언트에 설치되어 있지 않으면 부트스트래퍼 응용 프로그램에서 설치 권한을 요청합니다. 권한을 제공하지 않을 경우 [!INCLUDE[TLA2#tla_winfx](../../../../includes/tla2sharptla-winfx-md.md)]와 응용 프로그램이 모두 설치되지 않습니다.  
   

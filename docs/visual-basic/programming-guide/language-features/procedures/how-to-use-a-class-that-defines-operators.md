@@ -1,11 +1,12 @@
 ---
-title: "방법: 연산자를 정의하는 클래스 사용(Visual Basic)"
-ms.custom: 
+title: '방법: 연산자를 정의하는 클래스 사용(Visual Basic)'
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - operator procedures [Visual Basic], calling
@@ -17,22 +18,22 @@ helpviewer_keywords:
 - return values [Visual Basic], Operator procedures
 - operator overloading
 ms.assetid: 7ccce94a-6ca0-47d1-9f3f-13385d34f5d5
-caps.latest.revision: "21"
+caps.latest.revision: 21
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 223b3fc84fe75d1d530cd182c9332e5c663aa519
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 7e0bcfaeca638dfabb841a9e935b872f76fdf957
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-use-a-class-that-defines-operators-visual-basic"></a>방법: 연산자를 정의하는 클래스 사용(Visual Basic)
-해당 연산자를 액세스할 수 있습니다를 사용 하는 클래스 또는 구조체는 자체 연산자를 정의 하는 경우 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]합니다.  
+클래스 또는 고유한 연산자를 정의 하는 구조체를 사용 하는 경우에 Visual Basic에서 이러한 연산자를 액세스할 수 있습니다.  
   
  클래스 또는 구조체에서 연산자를 정의 라고도 *오버 로드* 연산자입니다.  
   
 ## <a name="example"></a>예제  
- 다음 예제에서는 액세스 SQL 구조 <xref:System.Data.SqlTypes.SqlString>, 변환 연산자를 정의 하는 ([CType 함수](../../../../visual-basic/language-reference/functions/ctype-function.md)) SQL 문자열 사이 두 방향에서 및 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 문자열입니다. 사용 하 여 `CType(` *SQL 문자열 식*, `String)` SQL 문자열을 변환 하는 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 문자열 및 `CType(` *Visual Basic 문자열 식을*, <xref:System.Data.SqlTypes.SqlString> `)` 는 다른 곳에서 변환 하도록 합니다.  
+ 다음 예제에서는 액세스 SQL 구조 <xref:System.Data.SqlTypes.SqlString>, 변환 연산자를 정의 하는 ([CType 함수](../../../../visual-basic/language-reference/functions/ctype-function.md)) SQL 문자열 및 Visual Basic 문자열 사이 두 방향에서 합니다. 사용 하 여 `CType(` *SQL 문자열 식*, `String)` Visual Basic 문자열에 SQL 문자열을 변환 하 고 `CType(` *Visual Basic 문자열 식을*, <xref:System.Data.SqlTypes.SqlString> `)` 는 다른 곳에서 변환 하도록 합니다.  
   
  [!code-vb[VbVbcnProcedures#30](./codesnippet/VisualBasic/how-to-use-a-class-that-defines-operators_1.vb)]  
   

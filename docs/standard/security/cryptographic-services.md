@@ -1,12 +1,12 @@
 ---
-title: "암호화 서비스"
-ms.custom: 
+title: 암호화 서비스
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - cryptography [.NET Framework]
@@ -30,18 +30,18 @@ helpviewer_keywords:
 - cryptography [.NET Framework], about
 - random number generation
 ms.assetid: f96284bc-7b73-44b5-ac59-fac613ad09f8
-caps.latest.revision: 
+caps.latest.revision: 34
 author: mairaw
 ms.author: mairaw
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 941dd9d130a31c997b634bce8059afef04c178d3
-ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
+ms.openlocfilehash: 02d399d85c53cd296fc5f49ca0ec4b51b14ad677
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="cryptographic-services"></a>암호화 서비스
 <a name="top"></a> 인터넷과 같은 공용 네트워크에서는 엔터티 간의 보안 통신 수단을 제공하지 않습니다. 이러한 네트워크를 통한 통신은 권한이 없는 제3자가 읽거나 심지어는 수정하기도 쉽습니다. 암호화는 데이터를 볼 수 없도록 보호하며 데이터가 수정되었는지 감지하는 방법을 제공하며 기타 보안상 위험한 채널을 통한 안전한 통신 수단 제공을 지원합니다. 예를 들어 데이터를 암호화된 상태로 전송하고 나중에 의도된 당사자가 해독하는 암호화 알고리즘을 사용하여 데이터를 암호화할 수 있습니다. 제3자가 암호화된 데이터를 가로채는 경우 해독하기 어렵습니다.  
@@ -103,7 +103,7 @@ ms.lasthandoff: 02/01/2018
   
  또한 비밀 키 암호화는 동일한 키가 암호화 및 해독에 사용되므로 대칭 암호화라고도 합니다. 비밀 키 암호화 알고리즘은 공개 키 알고리즘과 비교하여 매우 빠르며, 대규모 데이터 스트림에 대해 암호화 변환을 수행하는 데 매우 적합합니다. RSA와 같은 비대칭 암호화 알고리즘은 암호화할 수 있는 데이터 양에 있어 수학적으로 제한됩니다. 일반적으로 대칭 암호화 알고리즘에는 이러한 문제가 없습니다.  
   
- 블록 암호라고 하는 비밀 키 알고리즘의 유형은 한 번에 한 데이터 블록을 암호화하는 데 사용합니다. DES(데이터 암호화 표준), TripleDES 및 AES(Advanced Encryption Standard)와 같은 블록 암호는 *n* 바이트의 입력 블록을 암호화된 바이트의 출력 블록으로 암호화하여 변환합니다. 바이트 시퀀스를 암호화하거나 해독하려는 경우 작업을 블록 단위로 수행해야 합니다. 때문에  *n*  작습니다 (DES 및 TripleDES의 경우 8 바이트 16 바이트 [기본값], 24 바이트 또는 aes 32 바이트)를 초과 하는 데이터 값  *n*  한 블록씩 암호화 되어야 한 번에. 보다 작은 데이터 값  *n*  으로 확장  *n*  처리 하려면.  
+ 블록 암호라고 하는 비밀 키 알고리즘의 유형은 한 번에 한 데이터 블록을 암호화하는 데 사용합니다. DES(데이터 암호화 표준), TripleDES 및 AES(Advanced Encryption Standard)와 같은 블록 암호는 *n* 바이트의 입력 블록을 암호화된 바이트의 출력 블록으로 암호화하여 변환합니다. 바이트 시퀀스를 암호화하거나 해독하려는 경우 작업을 블록 단위로 수행해야 합니다. *n* 이 작기(DES 및 TripleDES의 경우 8바이트, AES의 경우 16바이트[기본값], 24바이트 또는 32바이트) 때문에 *n* 보다 큰 데이터 값은 한 번에 한 블록씩 암호화되어야 합니다. *n* 보다 작은 데이터 값은 처리하려면 *n* 으로 확장해야 합니다.  
   
  블록 암호의 한 가지 간단한 형태는 ECB(Electronic CodeBook) 모드라고 합니다. ECB 모드는 첫 번째 일반 텍스트 블록을 초기화하는 데 초기화 벡터를 사용하지 않으므로 안전하지 않은 것으로 간주됩니다. 비밀 키 *k*가 주어진 경우 초기화 벡터를 사용하지 않는 단순 블록 암호는 일반 텍스트의 동일한 입력 블록을 암호 텍스트의 동일한 출력 블록으로 암호화합니다. 따라서 입력 일반 텍스트 스트림에 중복된 블록이 있는 경우 출력 암호 텍스트 스트림에도 중복된 블록이 생성됩니다. 이러한 중복 출력 블록을 통해 권한이 없는 사용자가 취약한 암호화 알고리즘이 사용되었다는 사실과 가능한 공격 방식을 알게 됩니다. 따라서 ECB 암호화 모드는 분석에 매우 취약하므로 키가 노출될 수 있습니다.  
   
@@ -206,7 +206,7 @@ ms.lasthandoff: 02/01/2018
   
 -   Alice는 일반 텍스트 메시지와 해시된 메시지(디지털 서명)를 Bob에게 보냅니다. Bob은 메시지를 받아 해시하고 자신의 해시 값과 Alice로부터 받은 해시 값을 비교합니다. 해시 값이 동일하면 메시지가 변경되지 않은 것입니다. 값이 동일하지 않으면 Alice가 메시지를 작성한 후 해당 메시지가 변경된 것입니다.  
   
-     하지만 이 방법이 보낸 사람의 신뢰성을 보장하지는 않습니다. 다른 사람이 Alice를 가장하여 Bob에게 메시지를 보낼 수도 있습니다. Alice와 Bob이 동일한 해시 알고리즘을 사용하여 메시지에 서명할 수 있는데 이때 Bob은 메시지와 해당 서명이 일치한다는 사실만 확인하면 됩니다. 이는 메시지 가로채기(man-in-the-middle) 공격의 한 가지 형태입니다. 참조 [NIB: 암호화 CNG (Next Generation) 보안 통신 예제](http://msdn.microsoft.com/library/8048e94e-054a-417b-87c6-4f5e26710e6e) 자세한 정보에 대 한 합니다.  
+     하지만 이 방법이 보낸 사람의 신뢰성을 보장하지는 않습니다. 다른 사람이 Alice를 가장하여 Bob에게 메시지를 보낼 수도 있습니다. Alice와 Bob이 동일한 해시 알고리즘을 사용하여 메시지에 서명할 수 있는데 이때 Bob은 메시지와 해당 서명이 일치한다는 사실만 확인하면 됩니다. 이는 메시지 가로채기(man-in-the-middle) 공격의 한 가지 형태입니다. 참조 [NIB: 암호화 CNG (Next Generation) 보안 통신 예제](https://msdn.microsoft.com/library/8048e94e-054a-417b-87c6-4f5e26710e6e) 자세한 정보에 대 한 합니다.  
   
 -   Alice가 비보안 공용 채널을 통해 Bob에게 일반 텍스트 메시지를 보냅니다. 그리고 보안 개인 채널을 통해 Bob에게 해시된 메시지를 보냅니다. Bob은 일반 텍스트 메시지를 받아 해시하고, 이 해시를 개인 채널로 교환된 해시와 비교합니다. 해시가 일치하면 Bob은 다음 두 가지 사실을 알게 됩니다.  
   

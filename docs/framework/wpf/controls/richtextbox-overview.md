@@ -1,12 +1,13 @@
 ---
-title: "RichTextBox 개요"
-ms.custom: 
+title: RichTextBox 개요
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,26 +16,27 @@ helpviewer_keywords:
 - controls [WPF], RichTextBox
 - RichTextBox control [WPF], about RichTextBox control
 ms.assetid: c94548b2-c1e9-4b62-b10c-dd8740eb23d8
-caps.latest.revision: "11"
+caps.latest.revision: 11
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: e88afe5f9c35448b3234498af413500bee163abc
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 3ac25413aaf15a18f70eff6114db81fbb6cc5411
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="richtextbox-overview"></a>RichTextBox 개요
-<xref:System.Windows.Controls.RichTextBox> 컨트롤 표시 하거나 단락, 이미지, 테이블 등 유동 콘텐츠를 편집할 수 있습니다. 이 항목에서는 소개는 <xref:System.Windows.Controls.TextBox> 모두에서 사용 하는 방법의 예제를 제공 하 고 클래스 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] 및 [!INCLUDE[TLA#tla_lhcshrp](../../../../includes/tlasharptla-lhcshrp-md.md)]합니다.  
+<xref:System.Windows.Controls.RichTextBox> 컨트롤 표시 하거나 단락, 이미지, 테이블 등 유동 콘텐츠를 편집할 수 있습니다. 이 항목에서는 소개는 <xref:System.Windows.Controls.TextBox> 모두에서 사용 하는 방법의 예제를 제공 하 고 클래스 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] 및 C#입니다.  
   
   
 <a name="textbox_or_richtextbox"></a>   
 ## <a name="textbox-or-richtextbox"></a>TextBox 또는 RichTextBox?  
  둘 다 <xref:System.Windows.Controls.RichTextBox> 및 <xref:System.Windows.Controls.TextBox> 두 컨트롤은 다양 한 시나리오에서 사용 되는 반면, 사용자가 텍스트를 편집할 수 있도록 합니다. A <xref:System.Windows.Controls.RichTextBox> 서식 있는 텍스트, 이미지, 테이블 또는 기타 풍부한 콘텐츠를 편집 하려면 사용자에 대 한 필요한 경우에 더 유용 합니다. 예를 들어, 문서, 문서 또는 서식, 필요한 블로그 편집 이미지, 등을 사용 하 여 훌륭하게 수행할는 <xref:System.Windows.Controls.RichTextBox>합니다. A <xref:System.Windows.Controls.TextBox> 적은 시스템 리소스를 필요 없으면 <xref:System.Windows.Controls.RichTextBox> 는 일반 텍스트 해야 함 (즉, 형태로 사용)를 편집 합니다. 참조 [TextBox 개요](../../../../docs/framework/wpf/controls/textbox-overview.md) 대 한 자세한 내용은 <xref:System.Windows.Controls.TextBox>합니다. 다음 표에서의 주요 기능을 요약 <xref:System.Windows.Controls.TextBox> 및 <xref:System.Windows.Controls.RichTextBox>합니다.  
   
-|Control|실시간 맞춤법 검사|상황에 맞는 메뉴|서식 명령 처럼 <xref:System.Windows.Documents.EditingCommands.ToggleBold%2A> (Ctr + B)|<xref:System.Windows.Documents.FlowDocument>이미지, 단락, 테이블 등과 같은 콘텐츠입니다.|  
+|Control|실시간 맞춤법 검사|상황에 맞는 메뉴|서식 명령 처럼 <xref:System.Windows.Documents.EditingCommands.ToggleBold%2A> (Ctr + B)|<xref:System.Windows.Documents.FlowDocument> 이미지, 단락, 테이블 등과 같은 콘텐츠입니다.|  
 |-------------|------------------------------|------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|  
 |<xref:System.Windows.Controls.TextBox>|예|예|아니요|아니요.|  
 |<xref:System.Windows.Controls.RichTextBox>|예|예|예|예|  

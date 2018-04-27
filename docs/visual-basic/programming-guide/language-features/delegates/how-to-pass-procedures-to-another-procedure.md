@@ -1,29 +1,30 @@
 ---
-title: "방법: Visual Basic에서 프로시저에 다른 프로시저 전달"
-ms.custom: 
+title: '방법: Visual Basic에서 프로시저에 다른 프로시저 전달'
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - AddressOf operator [Visual Basic]
 - delegates [Visual Basic], passing procedures
 ms.assetid: 5adbba15-5a1d-413f-ab3e-3ff6cc0a4669
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 4e8e205f5238aab39aa92574bc5c680e68cc8a81
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 30264e0480b603b21f8f71893af0fd742af40286
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-pass-procedures-to-another-procedure-in-visual-basic"></a>방법: Visual Basic에서 프로시저에 다른 프로시저 전달
 이 예제에서는 대리자를 사용 하는 프로시저를 다른 프로시저에 전달 하는 방법을 보여 줍니다.  
   
- 다른 형식 처럼 사용할 수 있는 형식이 대리자 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]합니다. `AddressOf` 연산자 프로시저 이름에 적용 될 때 대리자 개체를 반환 합니다.  
+ 대리자 형식이 Visual Basic에서 다른 형식 처럼 사용할 수 있습니다. `AddressOf` 연산자 프로시저 이름에 적용 될 때 대리자 개체를 반환 합니다.  
   
  이 예제에 다른 프로시저를 사용 하 여 얻은에 대 한 참조를 사용할 수 있는 대리자 매개 변수가 있는 프로시저는 `AddressOf` 연산자입니다.  
   

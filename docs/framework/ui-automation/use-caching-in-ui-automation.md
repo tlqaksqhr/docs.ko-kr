@@ -1,12 +1,13 @@
 ---
-title: "UI 자동화의 캐싱 사용"
-ms.custom: 
+title: UI 자동화의 캐싱 사용
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-bcl
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-bcl
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,16 +16,17 @@ helpviewer_keywords:
 - caching, UI Automation
 - UI Automation, caching
 ms.assetid: ec722dff-6009-4279-b86a-e18d3fa94ebf
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: 808ba16cbacfad2cc255ae40e2cbad3178350afc
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 2f559153190e4acb3b67acf75954260b31906c0d
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="use-caching-in-ui-automation"></a>UI 자동화의 캐싱 사용
 > [!NOTE]
@@ -44,9 +46,9 @@ ms.lasthandoff: 12/22/2017
   
 5.  개체에 대한 전체 참조를 검색하지 않음으로써 효율성을 높이려는 경우 <xref:System.Windows.Automation.CacheRequest.AutomationElementMode%2A> 속성을 <xref:System.Windows.Automation.AutomationElementMode.None> 으로 설정합니다. (이렇게 하면 해당 개체에서 현재 값을 검색할 수 없습니다.)  
   
-6.  <xref:System.Windows.Automation.CacheRequest.Activate%2A> 블록의 `using` 를 사용하여(`Using` 의 [!INCLUDE[TLA#tla_visualbnet](../../../includes/tlasharptla-visualbnet-md.md)]) 요청을 활성화합니다.  
+6.  사용 하 여 요청을 활성화 <xref:System.Windows.Automation.CacheRequest.Activate%2A> 내에서 한 `using` 블록 (`Using` Microsoft Visual Basic.net에서).  
   
- <xref:System.Windows.Automation.AutomationElement> 개체를 가져오거나 이벤트를 구독한 후, <xref:System.Windows.Automation.CacheRequest.Pop%2A> ( <xref:System.Windows.Automation.CacheRequest.Push%2A> 가 사용된 경우)를 사용하거나 <xref:System.Windows.Automation.CacheRequest.Activate%2A>에서 생성된 개체를 삭제하여 요청을 비활성화합니다. ( <xref:System.Windows.Automation.CacheRequest.Activate%2A> 블록의 `using` 를 사용합니다(`Using` 의 [!INCLUDE[TLA#tla_visualbnet](../../../includes/tlasharptla-visualbnet-md.md)])).  
+ <xref:System.Windows.Automation.AutomationElement> 개체를 가져오거나 이벤트를 구독한 후, <xref:System.Windows.Automation.CacheRequest.Pop%2A> ( <xref:System.Windows.Automation.CacheRequest.Push%2A> 가 사용된 경우)를 사용하거나 <xref:System.Windows.Automation.CacheRequest.Activate%2A>에서 생성된 개체를 삭제하여 요청을 비활성화합니다. (사용 하 여 <xref:System.Windows.Automation.CacheRequest.Activate%2A> 에 `using` 블록 (`Using` Microsoft Visual Basic.net에서).  
   
 ### <a name="cache-automationelement-properties"></a>AutomationElement 속성 캐시  
   
@@ -62,13 +64,13 @@ ms.lasthandoff: 12/22/2017
   
 3.  컨트롤 패턴의 `Cached` 속성에서 속성 값을 검색합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 코드 예제는 <xref:System.Windows.Automation.CacheRequest.Activate%2A> 를 사용하여 <xref:System.Windows.Automation.CacheRequest>를 활성화하는 캐싱의 다양한 측면을 보여줍니다.  
   
  [!code-csharp[UIAClient_snip#107](../../../samples/snippets/csharp/VS_Snippets_Wpf/UIAClient_snip/CSharp/ClientForm.cs#107)]
  [!code-vb[UIAClient_snip#107](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/UIAClient_snip/VisualBasic/ClientForm.vb#107)]  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 코드 예제는 <xref:System.Windows.Automation.CacheRequest.Push%2A> 를 사용하여 <xref:System.Windows.Automation.CacheRequest>를 활성화하는 캐싱의 다양한 측면을 보여줍니다. 캐시 요청을 중첩하려는 경우를 제외하고, <xref:System.Windows.Automation.CacheRequest.Activate%2A>를 사용하는 것이 좋습니다.  
   
  [!code-csharp[UIAClient_snip#108](../../../samples/snippets/csharp/VS_Snippets_Wpf/UIAClient_snip/CSharp/ClientForm.cs#108)]

@@ -1,12 +1,13 @@
 ---
-title: "방법: Windows Forms BindingNavigator 컨트롤을 사용하여 데이터 탐색"
-ms.custom: 
+title: '방법: Windows Forms BindingNavigator 컨트롤을 사용하여 데이터 탐색'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-winforms
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -17,16 +18,17 @@ helpviewer_keywords:
 - data navigation
 - examples [Windows Forms], BindingNavigator control
 ms.assetid: 0e5d4f34-bc9b-47cf-9b8d-93acbb1f1dbb
-caps.latest.revision: "18"
+caps.latest.revision: 18
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 6c5b49d84f98213e95c83c5476007297149adc16
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 5a47273f9598b3776276c14d41e88f7f0dff5bed
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-navigate-data-with-the-windows-forms-bindingnavigator-control"></a>방법: Windows Forms BindingNavigator 컨트롤을 사용하여 데이터 탐색
 Windows Forms의 <xref:System.Windows.Forms.BindingNavigator> 컨트롤을 통해 개발자는 자신이 만든 폼에서 간단한 데이터 탐색 및 조작 사용자 인터페이스를 최종 사용자에게 제공할 수 있습니다.  
@@ -51,7 +53,7 @@ Windows Forms의 <xref:System.Windows.Forms.BindingNavigator> 컨트롤을 통�
      [!code-csharp[System.Windows.Forms.BindingNavigatorNavigate#3](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.BindingNavigatorNavigate/CS/Form1.cs#3)]
      [!code-vb[System.Windows.Forms.BindingNavigatorNavigate#3](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.BindingNavigatorNavigate/VB/Form1.vb#3)]  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 코드 예제는 앞에 나열된 단계의 전체 예제입니다.  
   
  [!code-csharp[System.Windows.Forms.BindingNavigatorNavigate#1](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.BindingNavigatorNavigate/CS/Form1.cs#1)]
@@ -62,7 +64,7 @@ Windows Forms의 <xref:System.Windows.Forms.BindingNavigator> 컨트롤을 통�
   
 -   System, System.Data, System.Drawing, System.Windows.Forms and System.Xml 어셈블리에 대한 참조  
   
- [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)] 또는 [!INCLUDE[csprcs](../../../../includes/csprcs-md.md)]의 명령줄에서 이 예제를 빌드하는 방법에 대한 자세한 내용은 [명령줄에서 빌드](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md) 또는 [csc.exe를 사용한 명령줄 빌드](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)를 참조하세요. [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)]에서 코드를 새 프로젝트에 붙여넣어 이 예제를 빌드할 수도 있습니다.  [방법: Visual Studio를 사용하여 전체 Windows Forms 코드 예제 컴파일 및 실행](http://msdn.microsoft.com/library/Bb129228\(v=vs.110\))을 참조하세요.  
+ Visual Basic 또는 Visual C#에 대 한 명령줄에서이 예제를 빌드하는 방법에 대 한 정보를 참조 하십시오. [명령줄에서 빌드](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md) 또는 [사용한 명령줄 빌드 csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)합니다. [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] 에서 코드를 새 프로젝트에 붙여넣어 이 예제를 빌드할 수도 있습니다.  [방법: Visual Studio를 사용하여 전체 Windows Forms 코드 예제 컴파일 및 실행](http://msdn.microsoft.com/library/Bb129228\(v=vs.110\))을 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
  <xref:System.Windows.Forms.BindingNavigator>  

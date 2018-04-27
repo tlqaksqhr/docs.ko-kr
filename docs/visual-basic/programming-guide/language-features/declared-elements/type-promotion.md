@@ -1,11 +1,12 @@
 ---
-title: "형식 승격(Visual Basic)"
-ms.custom: 
+title: 형식 승격(Visual Basic)
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - declared elements [Visual Basic], scope
@@ -16,17 +17,17 @@ helpviewer_keywords:
 - type promotion
 - declared elements [Visual Basic], visibility
 ms.assetid: 035eeb15-e4c5-4288-ab3c-6bd5d22f7051
-caps.latest.revision: "17"
+caps.latest.revision: 17
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: f3a55c023afe7afe96f862f0b3cbbdb03a15b902
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: ddb0d61f0f1c94e8e28493d0c62afe1e09503804
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="type-promotion-visual-basic"></a>형식 승격(Visual Basic)
-모듈에는 프로그래밍 요소를 선언 하는 경우 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 모듈을 포함 하는 네임 스페이스에 해당 범위를 승격 합니다. 로 알려져 *형식 승격*합니다.  
+모듈에는 프로그래밍 요소를 선언 하면 Visual Basic 모듈을 포함 하는 네임 스페이스에 해당 범위를 승격 합니다. 로 알려져 *형식 승격*합니다.  
   
  다음 예제에서는 모듈의 기본 정 및 해당 모듈의 두 명의 멤버를 보여 줍니다.  
   
@@ -46,7 +47,7 @@ ms.lasthandoff: 11/21/2017
   
  [!code-vb[VbVbalrDeclaredElements#3](../../../../visual-basic/programming-guide/language-features/declared-elements/codesnippet/VisualBasic/type-promotion_3.vb)]  
   
- 앞의 예제에서 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 클래스를 승격할 수 없습니다 `abc` 를 `thisNameSpace` 네임 스페이스 수준에서 동일한 이름 가진 열거형 이미 있기 때문에 있습니다. 에 액세스 하려면 `abcSub`, 정규화 문자열을 사용 해야 `thisNamespace.thisModule.abc.abcSub`합니다. 그러나 클래스 `xyz` 여전히 승격에 액세스할 수 있습니다 및 `xyzSub` 짧은 한정 문자열 `thisNamespace.xyz.xyzSub`합니다.  
+ 위의 예제에서는 Visual Basic 클래스를 승격할 수 없습니다 `abc` 를 `thisNameSpace` 네임 스페이스 수준에서 동일한 이름 가진 열거형 이미 있기 때문에 있습니다. 에 액세스 하려면 `abcSub`, 정규화 문자열을 사용 해야 `thisNamespace.thisModule.abc.abcSub`합니다. 그러나 클래스 `xyz` 여전히 승격에 액세스할 수 있습니다 및 `xyzSub` 짧은 한정 문자열 `thisNamespace.xyz.xyzSub`합니다.  
   
 ### <a name="defeat-of-type-promotion-for-partial-types"></a>부분 형식에 대 한 형식 승격의 무효화  
  클래스 또는 모듈 내 구조를 사용 하는 경우는 [부분](../../../../visual-basic/language-reference/modifiers/partial.md) 키워드를 네임 스페이스에 같은 이름의 멤버가 여부 형식 승격 해당 클래스 또는 구조체에 대 한 자동으로 무효화 됩니다. 모듈의 다른 요소는 여전히 형식 승격에 적합 합니다.  

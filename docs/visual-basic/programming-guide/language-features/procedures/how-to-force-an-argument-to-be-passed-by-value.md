@@ -1,11 +1,12 @@
 ---
-title: "방법: 인수가 값으로 전달되도록 설정(Visual Basic)"
-ms.custom: 
+title: '방법: 인수가 값으로 전달되도록 설정(Visual Basic)'
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - procedures [Visual Basic], arguments
@@ -20,23 +21,23 @@ helpviewer_keywords:
 - procedure arguments [Visual Basic], in parentheses
 - arguments [Visual Basic], changing value
 ms.assetid: 77b4f2d2-1055-4c2f-a521-874d1db86946
-caps.latest.revision: "16"
+caps.latest.revision: 16
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: fdb2df7e114f49c23db9f5b322ca9dd32135ac88
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 30f5e5fe7b9c92f90673dc99a0e299136a38305b
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-force-an-argument-to-be-passed-by-value-visual-basic"></a>방법: 인수가 값으로 전달되도록 설정(Visual Basic)
-프로시저 선언 전달 메커니즘을 결정 합니다. 매개 변수가 선언 된 경우 [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md), [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 참조로 해당 인수를 전달 하는 예상 합니다. 따라서 프로시저를를 호출 코드의 기반이 되는 프로그래밍 요소의 값을 변경할 수 있습니다. 이러한 변경 으로부터 내부 요소를 보호 하려는 경우 재정의할 수 있습니다는 `ByRef` 프로시저에 전달 메커니즘 괄호 안에 인수 이름을 포함 하 여 호출 합니다. 이 괄호는 호출에 인수 목록을 묶는 괄호는 별개입니다.  
+프로시저 선언 전달 메커니즘을 결정 합니다. 매개 변수가 선언 된 경우 [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md), Visual Basic 참조로 전달 하는 해당 인수를 모니터링 해야 합니다. 따라서 프로시저를를 호출 코드의 기반이 되는 프로그래밍 요소의 값을 변경할 수 있습니다. 이러한 변경 으로부터 내부 요소를 보호 하려는 경우 재정의할 수 있습니다는 `ByRef` 프로시저에 전달 메커니즘 괄호 안에 인수 이름을 포함 하 여 호출 합니다. 이 괄호는 호출에 인수 목록을 묶는 괄호는 별개입니다.  
   
  호출 코드에서 재정의할 수 없습니다. 한 [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md) 메커니즘입니다.  
   
 ### <a name="to-force-an-argument-to-be-passed-by-value"></a>인수가 값으로 전달 되도록 설정 하려면  
   
--   해당 매개 변수가 선언 된 경우 `ByVal` 절차에서는 필요가 없습니다 모든 추가 단계를 수행 해야 합니다. [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]값으로 인수를 전달 하는 이미 필요 합니다.  
+-   해당 매개 변수가 선언 된 경우 `ByVal` 절차에서는 필요가 없습니다 모든 추가 단계를 수행 해야 합니다. Visual Basic은 이미 값으로 인수를 전달 하는 필요 합니다.  
   
 -   해당 매개 변수가 선언 된 경우 `ByRef` 프로시저에서 프로시저 호출에서 괄호 안에 인수를 묶습니다.  
   
@@ -52,7 +53,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="compiling-the-code"></a>코드 컴파일  
  참조 하 여 변수를 전달할 때 사용 해야는 `ByRef` 키워드가이 메커니즘을 지정 합니다.  
   
- 대화 상자에서 기본 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 값으로 인수를 전달 합니다. 그러나 것이 바람직한 프로그래밍 습관 하나를 포함 하는 [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md) 또는 [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md) 키워드 모든 선언 된 매개 변수를 사용 합니다. 이렇게 하면 코드를 보다 쉽게 읽을 수 있습니다.  
+ Visual Basic의 기본값인 값으로 인수 전달 합니다. 그러나 것이 바람직한 프로그래밍 습관 하나를 포함 하는 [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md) 또는 [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md) 키워드 모든 선언 된 매개 변수를 사용 합니다. 이렇게 하면 코드를 보다 쉽게 읽을 수 있습니다.  
   
 ## <a name="robust-programming"></a>강력한 프로그래밍  
  프로시저 매개 변수를 선언한 경우 [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md)을 올바르게 실행 되는 코드의 호출 코드에서 기본 요소를 변경할 수 있는지에 따라 달라질 수 있습니다. 호출 코드에 있는 괄호 안에 인수를 포함 하 여이 호출 하는 메커니즘을 재정의 하거나 수정할 수 없는 인수를 전달 하는 경우 프로시저는 내부 요소를 변경할 수 없습니다. 이 호출 코드에 예기치 않은 결과가 발생할 수 있습니다.  

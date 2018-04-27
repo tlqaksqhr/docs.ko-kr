@@ -1,27 +1,28 @@
 ---
-title: "Visual Basic의 언어 통합 축(LINQ to XML)"
-ms.custom: 
+title: Visual Basic의 언어 통합 축(LINQ to XML)
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: d450a556-a134-4261-b011-44e399660894
-caps.latest.revision: "3"
+caps.latest.revision: 3
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: d648ba7c8710f73c4aeb8dad3983f219c5fe1815
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 8360281d1d8de0cad243297cd78e97958530bae4
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="language-integrated-axes-in-visual-basic-linq-to-xml"></a>Visual Basic의 언어 통합 축(LINQ to XML)
-이 섹션에 직접 빌드된 기능에 설명 된 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 언어 쉽게 XML에 액세스할 수 있도록 합니다. LINQ to XML 설명서의 많은 예제에서는 이러한 통합된 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 축을 사용합니다.  
+이 섹션에서는 쉽게 XML에 액세스할 수 있도록 Visual Basic 언어에 직접 빌드된 기능에 설명 합니다. 많은 예제는 linq에서 to XML 설명서에는 이러한 통합된 Visual Basic 축 사용합니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
   
 |항목|설명|  
 |-----------|-----------------|  

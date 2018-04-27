@@ -1,10 +1,11 @@
 ---
-title: "Try...Catch...Finally 문(Visual Basic)"
+title: Try...Catch...Finally 문(Visual Basic)
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 f1_keywords:
 - vb.Try...Catch...Finally
@@ -24,14 +25,14 @@ helpviewer_keywords:
 - Visual Basic code, handling errors while running
 - structured exception handling, Try...Catch...Finally statements
 ms.assetid: d6488026-ccb3-42b8-a810-0d97b9d6472b
-caps.latest.revision: "69"
+caps.latest.revision: 69
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: c297a84b37b455a4b30b1848aa9bdd30dc567ec1
-ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
+ms.openlocfilehash: 701475d41d24ad89e6c83796f7cc5cd4b7802a32
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="trycatchfinally-statement-visual-basic"></a>Try...Catch...Finally 문(Visual Basic)
 코드 실행 하는 동안 코드 블록에서 발생할 수 있는 일부 또는 모든 가능한 오류를 처리 하는 방법을 제공 합니다.  
@@ -70,22 +71,22 @@ End Try
 ## <a name="remarks"></a>설명  
  특정 예외를 코드의 특정 섹션 중 발생할 수 예상 되는 경우에 코드를 입력 한 `Try` 차단 하 고 사용 하 여는 `Catch` 제어를 유지 하 고 발생 하는 경우 예외를 처리 하는 블록입니다.  
   
- A `Try…Catch` 문을 이루어져는 `Try` 블록 뒤에 하나 이상의 `Catch` 다양 한 예외에 대 한 처리기를 지정 하는 절. 예외가 throw 되는 경우는 `Try` 블록 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 찾습니다는 `Catch` 예외를 처리 하는 문입니다. 일치 하는 경우 `Catch` 문을 발견 되지 않으면 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 호출 스택에서 등 현재 메서드를 호출한 메서드를 검사 합니다. 없는 경우 `Catch` 블록이 발견 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 처리 되지 않은 예외 메시지가 사용자에 게 표시 하 고 프로그램의 실행을 중지 합니다.  
+ A `Try…Catch` 문을 이루어져는 `Try` 블록 뒤에 하나 이상의 `Catch` 다양 한 예외에 대 한 처리기를 지정 하는 절. 예외가 throw 되는 경우는 `Try` 차단, Visual Basic을 찾습니다는 `Catch` 예외를 처리 하는 문입니다. 일치 하는 경우 `Catch` 문을 찾을 수 없습니다, Visual Basic에서 호출 스택까지 등 현재 메서드를 호출한 메서드를 검사 합니다. 되지 않은 경우 `Catch` 블록이 발견, Visual Basic 처리 되지 않은 예외 메시지가 사용자에 게 표시 하 고 프로그램의 실행을 중지 합니다.  
   
  여러 개 사용할 수 있습니다 `Catch` 의 문에서 `Try…Catch` 문. 이 순서는 `Catch` 절은 순서 대로 검사 되므로 중요 합니다. 더 구체적인 예외를 덜 구체적인 예외보다 먼저 catch합니다.  
   
  다음 `Catch` 문 조건은 가장 일반적인 것 이며 하며 모든 catch에서 파생 되는 예외는 <xref:System.Exception> 클래스입니다. 마지막으로 이러한 종류의 일반적으로 사용 해야 `Catch` 의 블록은 `Try...Catch...Finally` 예상 된 특정 한 예외를 catch 한 후 구조입니다. 제어 흐름 도달할 수 없습니다는 `Catch` 블록 뒤에 오는 이러한 변형 중 하나입니다.  
   
--   `type` 은 `Exception`, 예:`Catch ex As Exception`  
+-   `type` 은 `Exception`, 예: `Catch ex As Exception`  
   
--   문이 아무런 `exception` 변수 예:`Catch`  
+-   문이 아무런 `exception` 변수 예: `Catch`  
   
- 경우는 `Try…Catch…Finally` 다른 문이 중첩 되 `Try` 블록 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 먼저 각 검사 `Catch` 문의 가장 안쪽에서 `Try` 블록입니다. 일치 하는 경우 `Catch` 검색 진행, 문이 발견 되는 `Catch` 문 외부 `Try…Catch…Finally` 블록.  
+ 경우는 `Try…Catch…Finally` 다른 문이 중첩 되 `Try` 블록, Visual Basic에 각 항목을 먼저 검사 `Catch` 가장 안쪽의 문에서 `Try` 블록입니다. 일치 하는 경우 `Catch` 검색 진행, 문이 발견 되는 `Catch` 문 외부 `Try…Catch…Finally` 블록.  
   
  지역 변수는 `Try` 블록에서 사용할 수 없는 `Catch` 별도 블록 되기 때문에 차단 합니다. 둘 이상의 블록에서 변수를 사용 하려는 경우 외부 변수 선언에서 `Try...Catch...Finally` 구조입니다.  
   
 > [!TIP]
->  `Try…Catch…Finally` IntelliSense 코드 조각으로 취급 합니다. 코드 조각 관리자에서 확장 **코드 패턴-If, 각 항목에 대해 Try Catch, 속성, 등**, 차례로 **오류 처리 (예외)**합니다. 자세한 내용은 [코드 조각](/visualstudio/ide/code-snippets)을 참조하세요.  
+>  `Try…Catch…Finally` IntelliSense 코드 조각으로 취급 합니다. 코드 조각 관리자에서 확장 **코드 패턴-If, 각 항목에 대해 Try Catch, 속성, 등**, 차례로 **오류 처리 (예외)** 합니다. 자세한 내용은 [코드 조각](/visualstudio/ide/code-snippets)을 참조하세요.  
   
 ## <a name="finally-block"></a>Finally 블록  
  종료 하기 전에 실행 해야 하는 하나 이상의 문이 있는 경우는 `Try` 구조을 사용 하 여 한 `Finally` 블록입니다. 컨트롤을 전달는 `Finally` 블록 밖으로 전달 하기 바로 전에 `Try…Catch` 구조입니다. 내에서 예외가 발생 하는 경우에 마찬가지입니다는 `Try` 구조입니다.  
@@ -108,7 +109,7 @@ End Try
 ## <a name="exception-argument"></a>예외 인수  
  `Catch` 블록 `exception` 인수가의 인스턴스는 <xref:System.Exception> 클래스 또는 클래스에서 파생 되는 `Exception` 클래스입니다. `Exception` 에서 발생 한 오류에 해당 하는 클래스 인스턴스는 `Try` 블록입니다.  
   
- 속성은 `Exception` 원인과 예외의 위치를 식별 하는 도움말 개체입니다. 예를 들어는 <xref:System.Exception.StackTrace%2A> 속성 코드에서 오류가 발생 한 위치를 찾을 수 있도록 하는 예외를 발생 시킨 호출된 메서드를 보여 줍니다. <xref:System.Exception.Message%2A>예외를 설명 하는 메시지를 반환 합니다. <xref:System.Exception.HelpLink%2A>연결된 된 도움말 파일에 대 한 링크를 반환합니다. <xref:System.Exception.InnerException%2A>반환 된 `Exception` 현재 예외를 발생 시킨 개체를 반환 `Nothing` 원본 이면 `Exception`합니다.  
+ 속성은 `Exception` 원인과 예외의 위치를 식별 하는 도움말 개체입니다. 예를 들어는 <xref:System.Exception.StackTrace%2A> 속성 코드에서 오류가 발생 한 위치를 찾을 수 있도록 하는 예외를 발생 시킨 호출된 메서드를 보여 줍니다. <xref:System.Exception.Message%2A> 예외를 설명 하는 메시지를 반환 합니다. <xref:System.Exception.HelpLink%2A> 연결된 된 도움말 파일에 대 한 링크를 반환합니다. <xref:System.Exception.InnerException%2A> 반환 된 `Exception` 현재 예외를 발생 시킨 개체를 반환 `Nothing` 원본 이면 `Exception`합니다.  
   
 ## <a name="considerations-when-using-a-trycatch-statement"></a>Try 사용 시 고려 사항 중... Catch 문  
  사용 하 여 한 `Try…Catch` 을 비정상적인 또는 예기치 않은 프로그램 이벤트의 발생을 알리기 위해서만 문. 이 대 한 이유는 다음과 같습니다.  
@@ -150,29 +151,29 @@ End Try
   
  이러한 부분 신뢰 상황에서 입력할 필요가 `Process.Start` 문을 별도의 `Sub`합니다. 에 대 한 초기 호출에서 `Sub` 실패 합니다. 이 통해 `Try...Catch` 를 catch 하기 전에 `Sub` 포함 된 `Process.Start` 시작 되 고 보안 예외가 발생 했습니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 예제에서는의 구조는 `Try...Catch...Finally` 문.  
   
  [!code-vb[VbVbalrStatements#86](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/try-catch-finally-statement_3.vb)]  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 예제에서는 `CreateException` 메서드가 throw 한 `NullReferenceException`합니다. 예외를 생성 하는 코드에 속하지 않는 한 `Try` 블록입니다. 따라서는 `CreateException` 메서드 예외를 처리 하지 않습니다. `RunSample` 메서드 예외를 처리할지 않습니다에 대 한 호출에서 `CreateException` 방법은에 `Try` 블록입니다.  
   
  예제에 포함 되어 `Catch` 에서 정렬 된 여러 유형의 예외에 대 한 문을 가장 일반적인 가장 구체적인 합니다.  
   
  [!code-vb[VbVbalrStatements#91](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/try-catch-finally-statement_4.vb)]  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  사용 하는 방법을 보여 주는 다음 예제는 `Catch When` 문을 조건 식에 필터를 적용 합니다. 조건부 식이 `True`의 코드는 `Catch` 블록이 실행 됩니다.  
   
  [!code-vb[VbVbalrStatements#92](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/try-catch-finally-statement_5.vb)]  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 예제에는 `Try…Catch` 에 포함 된 문에 `Try` 블록입니다. 내부 `Catch` 있는 예외를 throw 하는 블록의 `InnerException` 속성이 원래 예외를 설정 합니다. 외부 `Catch` 블록 자체 예외 및 내부 예외를 보고 합니다.  
   
  [!code-vb[VbVbalrStatements#93](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/try-catch-finally-statement_6.vb)]  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 예제에서는 비동기 메서드에 대한 예외 처리를 보여 줍니다. 비동기 작업에 적용 되는 예외를 catch 하는 `Await` 해당 식을 `Try` 호출자 및 예외 블록에 들어갈는 `Catch` 블록입니다.  
   
  예제에서 `Throw New Exception` 줄의 주석 처리를 제거하여 예외 처리를 보여 줍니다. 예외에 들어갈는 `Catch` 차단 작업의 `IsFaulted` 속성이로 설정 되어 `True`, 및 작업의 `Exception.InnerException` 예외에 속성이 설정 되어 있습니다.  
@@ -181,7 +182,7 @@ End Try
   
  [!code-vb[csAsyncExceptions#1](../../../csharp/language-reference/keywords/codesnippet/VisualBasic/try-catch-finally-statement_7.vb)]  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 예제에서는 여러 작업에서 여러 예외가 발생할 수 있는 경우 예외 처리를 보여 줍니다. `Try` 블록에는 `Await` 작업에 대 한 식을 <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType> 반환 합니다. 세 가지 작업을 하는 경우 작업이 완료 될 <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType> 적용 조건이 완료 합니다.  
   
  세 작업에서 각각 예외가 발생합니다. `Catch` 블록에 있는 예외를 반복는 `Exception.InnerExceptions` 태스크의 속성은 `Task.WhenAll` 반환 합니다.  

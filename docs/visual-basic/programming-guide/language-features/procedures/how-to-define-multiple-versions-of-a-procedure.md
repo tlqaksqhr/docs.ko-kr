@@ -1,11 +1,12 @@
 ---
-title: "방법: 여러 버전의 프로시저 정의(Visual Basic)"
-ms.custom: 
+title: '방법: 여러 버전의 프로시저 정의(Visual Basic)'
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - procedures [Visual Basic], defining
@@ -14,14 +15,14 @@ helpviewer_keywords:
 - procedures [Visual Basic], multiple versions
 - procedure overloading [Visual Basic], multiple versions
 ms.assetid: 71ccdd66-1b00-4b66-bee4-6926c0d696f4
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 1abeaa6806252005dd3abfab3ff60bafa0c0cef1
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: e6db075e9b31355d4a0a593040b1fe7c96a0c730
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-define-multiple-versions-of-a-procedure-visual-basic"></a>방법: 여러 버전의 프로시저 정의(Visual Basic)
 여러 버전으로 프로시저를 정의할 수 *오버 로드* 이름은 동일 하지만 다른 매개 변수 목록을 사용 하 여 각 버전에 대 한 것입니다. 오버 로드의 목적은 이름을 다르게 필요 없이 프로시저의 밀접 한 관련이 있는 여러 버전을 정의 하는 것입니다.  
@@ -34,7 +35,7 @@ ms.lasthandoff: 11/21/2017
   
 2.  앞의 `Sub` 또는 `Function` 각 선언에서 키워드는 [오버 로드](../../../../visual-basic/language-reference/modifiers/overloads.md) 키워드입니다. 선택적으로 생략할 수 `Overloads` 선언 중 하나에 포함 하는 경우를 제외한 선언에 포함 해야 모든 선언에 있습니다.  
   
-3.  각 선언문 뒤 호출 코드에서 해당 버전의 매개 변수 목록과 일치 하는 인수를 제공 하는 여기서 특정 경우를 처리 하는 프로시저 코드를 작성 합니다. 않아도 테스트 하려면 호출 코드에서 제공한 매개 변수입니다. [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]에서는 프로시저의 짝이 되는 버전으로 제어가 전달 됩니다.  
+3.  각 선언문 뒤 호출 코드에서 해당 버전의 매개 변수 목록과 일치 하는 인수를 제공 하는 여기서 특정 경우를 처리 하는 프로시저 코드를 작성 합니다. 않아도 테스트 하려면 호출 코드에서 제공한 매개 변수입니다. Visual Basic에서는 프로시저의 짝이 되는 버전 제어를 전달합니다.  
   
 4.  사용 하 여 프로시저의 각 버전을 종료는 `End Sub` 또는 `End Function` 문으로 적절 하 게 합니다.  
   

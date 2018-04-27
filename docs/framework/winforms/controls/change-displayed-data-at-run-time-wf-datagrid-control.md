@@ -1,12 +1,13 @@
 ---
-title: "방법: 런타임에 Windows Forms DataGrid 컨트롤에 표시되는 데이터 변경"
-ms.custom: 
+title: '방법: 런타임에 Windows Forms DataGrid 컨트롤에 표시되는 데이터 변경'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-winforms
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -17,16 +18,17 @@ helpviewer_keywords:
 - DataGrid control [Windows Forms], data binding
 - cells [Windows Forms], changing DataGrid cell values
 ms.assetid: 0c7a6d00-30de-416e-8223-0a81ddb4c1f8
-caps.latest.revision: "16"
+caps.latest.revision: 16
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: c34c6207c29f008606cc4ace83aa4f94c41f6851
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: ea90c3532203a61beded5eceeee5cf535a74b87b
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-change-displayed-data-at-run-time-in-the-windows-forms-datagrid-control"></a>방법: 런타임에 Windows Forms DataGrid 컨트롤에 표시되는 데이터 변경
 > [!NOTE]
@@ -64,7 +66,7 @@ ms.lasthandoff: 12/22/2017
        }  
     ```  
   
-     ([!INCLUDE[csprcs](../../../../includes/csprcs-md.md)], [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) 폼 생성자에 다음 코드를 추가하여 이벤트 처리기를 등록합니다.  
+     (Visual C# [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) 이벤트 처리기를 등록 하려면 폼의 생성자에 다음 코드를 추가 합니다.  
   
     ```csharp  
     this.button1.Click += new System.EventHandler(this.button1_Click);  

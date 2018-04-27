@@ -1,12 +1,12 @@
 ---
-title: "매개 변수 디자인"
-ms.custom: 
+title: 매개 변수 디자인
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - member design guidelines [.NET Framework], parameters
@@ -15,18 +15,18 @@ helpviewer_keywords:
 - parameters, design guidelines
 - reserved parameters
 ms.assetid: 3f33bf46-4a7b-43b3-bb78-1ffebe0dcfa6
-caps.latest.revision: "11"
+caps.latest.revision: 11
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: f95301bab57e8bdb6b22c54140a4c02ed208b8d3
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 0d89ed81c06558a6bc101864a7fef3173f019fd0
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="parameter-design"></a>매개 변수 디자인
 이 섹션 인수 검사에 대 한 지침과 섹션을 추가 하는 매개 변수 디자인에는 광범위 한 지침을 제공 합니다. 에 설명 된 지침을 참조 해야 또한 [매개 변수 이름 지정](../../../docs/standard/design-guidelines/naming-parameters.md)합니다.  
@@ -82,9 +82,9 @@ ms.lasthandoff: 12/23/2017
   
  인수에 값으로 매개 변수를 통해 전달 될 때는 멤버에 전달 된 실제 인수의 복사본을 받습니다. 인수가 값 형식, 인수의 복사본이 스택의 전환 됩니다. 인수가 참조 형식이 면 참조의 복사본이 스택의 전환 됩니다. 가장 인기 있는 CLR과 같은 언어를 C#, VB.NET 및 c + +에서는 기본적으로 매개 변수 값으로 전달 합니다.  
   
- 인수를 통해 전달 되 면는 `ref` 매개 변수를 멤버에 전달 되는 실제 인수에 대 한 참조를 받습니다. 인수가 값 형식, 인수에 대 한 참조를 스택에 저장 됩니다. 인수가 참조 형식이 면 스택에 대 한 참조에 대 한 참조가 저장 됩니다. `Ref`매개 변수 멤버를 호출자에 의해 전달 된 인수를 수정 하려면 데 사용할 수 있습니다.  
+ 인수를 통해 전달 되 면는 `ref` 매개 변수를 멤버에 전달 되는 실제 인수에 대 한 참조를 받습니다. 인수가 값 형식, 인수에 대 한 참조를 스택에 저장 됩니다. 인수가 참조 형식이 면 스택에 대 한 참조에 대 한 참조가 저장 됩니다. `Ref` 매개 변수 멤버를 호출자에 의해 전달 된 인수를 수정 하려면 데 사용할 수 있습니다.  
   
- `Out`매개 변수는 비슷합니다 `ref` 작은 몇 가지 차이점이 있지만 매개 변수입니다. 매개 변수가 처음 것으로 간주 되어 할당 되지 않은 일부 값을 할당 하기 전에 멤버 본문에서 읽을 수 없습니다. 또한는 매개 변수는 멤버 반환 되기 전에 일부 값이 할당 되어야 합니다.  
+ `Out` 매개 변수는 비슷합니다 `ref` 작은 몇 가지 차이점이 있지만 매개 변수입니다. 매개 변수가 처음 것으로 간주 되어 할당 되지 않은 일부 값을 할당 하기 전에 멤버 본문에서 읽을 수 없습니다. 또한는 매개 변수는 멤버 반환 되기 전에 일부 값이 할당 되어야 합니다.  
   
  **하지 말고 X** 를 사용 하 여 `out` 또는 `ref` 매개 변수입니다.  
   
@@ -162,9 +162,9 @@ public class String {
   
  예를 들어 동일한 결과 얻기 위해 단순한 포인터 산술을 사용할 수 있으므로 시작 인덱스를 전달할 필요가 없습니다 있습니다.  
   
- *일부 © 2005, 2009 Microsoft Corporation. 모든 권리 보유.*  
+ *Portions © 2005, 2009 Microsoft Corporation. 모든 권리 보유.*  
   
- *피어슨 교육, Inc.에서의 사용 권한으로 재인쇄 [Framework 디자인 지침: 규칙, 특징 및 다시 사용할 수 있는.NET 라이브러리를 2nd Edition에 대 한 패턴](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina 및 Brad Abrams 게시 하 여 2008 년 10 월 22 일 Microsoft Windows 개발 시리즈의 일부로: Addison Wesley Professional.*  
+ *피어슨 교육, Inc.에서의 사용 권한으로 재인쇄 [Framework 디자인 지침: 규칙, 특징 및 다시 사용할 수 있는.NET 라이브러리를 2nd Edition에 대 한 패턴](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina 및 Brad Abrams 게시 하 여 2008 년 10 월 22 일 Microsoft Windows 개발 시리즈의 일부로: Addison Wesley Professional.*  
   
 ## <a name="see-also"></a>참고 항목  
  [멤버 디자인 지침](../../../docs/standard/design-guidelines/member.md)  

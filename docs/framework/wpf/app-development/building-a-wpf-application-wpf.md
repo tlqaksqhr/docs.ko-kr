@@ -1,13 +1,13 @@
 ---
-title: "WPF 응용 프로그램 빌드(WPF)"
-ms.custom: 
+title: WPF 응용 프로그램 빌드(WPF)
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-wpf
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,17 +15,17 @@ dev_langs:
 helpviewer_keywords:
 - WPF application [WPF], building
 ms.assetid: a58696fd-bdad-4b55-9759-136dfdf8b91c
-caps.latest.revision: 
+caps.latest.revision: 45
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 87fc77aaa95e2d2de4b0c6eb75484ab9b4006c31
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 054f6cd6ae71428aca6b99eb510b2ac34fc6c4b6
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="building-a-wpf-application-wpf"></a>WPF 응용 프로그램 빌드(WPF)
 [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] 응용 프로그램을 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 실행 파일(.exe), 라이브러리(.dll) 또는 두 어셈블리 형식의 조합으로 빌드할 수 있습니다. 이 항목에서는 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 응용 프로그램을 빌드하는 방법과 빌드 프로세스의 주요 단계에 대해 설명합니다.  
@@ -77,7 +77,7 @@ ms.lasthandoff: 01/19/2018
   
 3.  새 partial 클래스의 CodeDOM 표현이 만들어져서 obj\Release 폴더에 복사됩니다.  
   
- 또한 모든 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 파일에 대해 언어별 코드 파일이 생성됩니다. 예를 들어 [!INCLUDE[TLA2#tla_visualb](../../../../includes/tla2sharptla-visualb-md.md)] 프로젝트의 Page1.xaml 페이지에 대해 Page1.g.vb가 생성되고, [!INCLUDE[TLA2#tla_cshrp](../../../../includes/tla2sharptla-cshrp-md.md)] 프로젝트의 Page1.xaml 페이지에 대해서는 Page1.g.cs가 생성됩니다. 파일 이름에 ".g"가 있으면 파일이 태그 파일(예: `Page` 또는 `Window`)의 최상위 수준 요소에 대한 partial 클래스 선언을 포함하여 생성된 코드라는 의미입니다. 이 클래스는 [!INCLUDE[TLA2#tla_cshrp](../../../../includes/tla2sharptla-cshrp-md.md)]의 `partial` 한정자([!INCLUDE[TLA2#tla_visualb](../../../../includes/tla2sharptla-visualb-md.md)]에서는 `Extends`)를 통해 선언되며 이 한정자는 다른 위치(일반적으로 Page1.xaml.cs의 코드 숨김 파일)에 클래스에 대한 다른 선언이 있음을 나타냅니다.  
+ 또한 모든 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 파일에 대해 언어별 코드 파일이 생성됩니다. 예를 들어 Page1.xaml 페이지 Visual Basic 프로젝트에 대해 한 Page1.g.vb 생성 됩니다. Page1.g.cs Page1.xaml 페이지는 C# 프로젝트에 대해 생성 됩니다. 파일 이름에 ".g"가 있으면 파일이 태그 파일(예: `Page` 또는 `Window`)의 최상위 수준 요소에 대한 partial 클래스 선언을 포함하여 생성된 코드라는 의미입니다. 클래스 선언에서 `partial` C# 한정자 (`Extends` Visual Basic의) 나타내려면 클래스를 다른 위치에 대 한 다른 선언, 일반적으로 코드 숨김 파일에서는 Page1.xaml.cs 합니다.  
   
  해당 기본 클래스에서 확장 되는 partial 클래스 (같은 <xref:System.Windows.Controls.Page> 페이지에 대 한) 구현 하 고는 <xref:System.Windows.Markup.IComponentConnector?displayProperty=nameWithType> 인터페이스. <xref:System.Windows.Markup.IComponentConnector> 인터페이스에는 구성 요소를 초기화 하 고 이름과 이벤트 내용에 있는 요소를 연결 하는 메서드가 있습니다. 결과적으로 생성된 코드 파일에는 다음과 같은 메서드 구현이 있습니다.  
   
@@ -137,7 +137,7 @@ End Sub
   
  이러한 매니페스트 파일은 [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)]에 대해 항상 만들어집니다. 설치된 응용 프로그램의 경우 프로젝트 파일에서 `GenerateManifests` 속성 값이 `true`로 지정되지 않는 한 만들어지지 않습니다.  
   
- [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)]두 개의 추가적인 권한인 일반적인 인터넷 영역 응용 프로그램에 할당 된 사용 권한만 가져오기: <xref:System.Security.Permissions.WebBrowserPermission> 및 <xref:System.Security.Permissions.MediaPermission>합니다. [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 빌드 시스템은 응용 프로그램 매니페스트에서 이러한 사용 권한을 선언합니다.  
+ [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] 두 개의 추가적인 권한인 일반적인 인터넷 영역 응용 프로그램에 할당 된 사용 권한만 가져오기: <xref:System.Security.Permissions.WebBrowserPermission> 및 <xref:System.Security.Permissions.MediaPermission>합니다. [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 빌드 시스템은 응용 프로그램 매니페스트에서 이러한 사용 권한을 선언합니다.  
   
 <a name="Incremental_Build_Support"></a>   
 ## <a name="incremental-build-support"></a>증분 빌드 지원  

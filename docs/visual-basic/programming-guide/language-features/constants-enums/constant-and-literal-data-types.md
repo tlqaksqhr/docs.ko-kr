@@ -1,11 +1,12 @@
 ---
-title: "상수 및 리터럴 데이터 형식(Visual Basic)"
-ms.custom: 
+title: 상수 및 리터럴 데이터 형식(Visual Basic)
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - declaring constants [Visual Basic], literal data types
@@ -15,14 +16,14 @@ helpviewer_keywords:
 - literals [Visual Basic], coercing data type
 - declarations [Visual Basic], data types
 ms.assetid: 057206d2-3a5b-40b9-b3af-57446f9b52fa
-caps.latest.revision: "19"
+caps.latest.revision: 19
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 554753e26d185593ce43b741b3b2f9e3cb1ad6dd
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 58fa1e8c6c659c80cd7998a88d07849ea223750f
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="constant-and-literal-data-types-visual-basic"></a>상수 및 리터럴 데이터 형식(Visual Basic)
 리터럴은 변수의 값 또는 3 숫자 또는 문자열 "Hello"와 같은 식의 결과가 아닌 자체로 표시 되는 값입니다. 상수는 리터럴 대신 하며 값 변경 될 수 있습니다 변수와 달리 프로그램 전체이 동일한 값을 유지 하는 의미 있는 이름을.  
@@ -53,7 +54,7 @@ myDecimal = 100000000000000000000   ' This causes a compiler error.
   
  [!code-vb[VbVbalrConstants#3](../../../../visual-basic/programming-guide/language-features/constants-enums/codesnippet/VisualBasic/constant-and-literal-data-types_3.vb)]  
   
- 바깥쪽 문자와 형식에서 사용할 수 있는 문자는 다음 표에 나와 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]합니다.  
+ 다음 표에 나와 바깥쪽 문자 및 Visual Basic에서 사용할 수 있는 형식 문자.  
   
 |데이터 형식|구분 기호|추가 된 형식 문자|  
 |---|---|---|  

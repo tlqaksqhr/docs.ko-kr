@@ -1,12 +1,13 @@
 ---
-title: "스키마를 가져와 클래스 생성"
-ms.custom: 
+title: 스키마를 가져와 클래스 생성
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,16 +16,17 @@ helpviewer_keywords:
 - WCF, schema import and export
 - XsdDataContractImporter class
 ms.assetid: b9170583-8c34-43bd-97bb-6c0c8dddeee0
-caps.latest.revision: "15"
+caps.latest.revision: 15
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a872fbd5be56fed3d01481d1740c70932fd60c06
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 7fc755ff7f1b6c583a1e9aa1bc209495563812f0
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="importing-schema-to-generate-classes"></a>스키마를 가져와 클래스 생성
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]에서 사용할 수 있는 스키마에서 클래스를 생성하려면 <xref:System.Runtime.Serialization.XsdDataContractImporter> 클래스를 사용합니다. 이 항목에서는 프로세스와 변형에 대해 설명합니다.  
@@ -77,7 +79,7 @@ ms.lasthandoff: 12/22/2017
   
  [!code-xml[c_SchemaImportExport#10](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_schemaimportexport/common/source.config#10)]  
   
- 다음 예제에서는 `Namespaces` 속성을 사용하여 "http://schemas.contoso.com/carSchema" 네임스페이스를 "Contoso.Cars"에 매핑합니다.  
+ 다음 예제에서는 `Namespaces` 매핑할 속성의 "http://schemas.contoso.com/carSchema" 네임 스페이스를 "contoso.cars"에 매핑합니다.  
   
  [!code-csharp[c_SchemaImportExport#8](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_schemaimportexport/cs/source.cs#8)]
  [!code-vb[c_SchemaImportExport#8](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_schemaimportexport/vb/source.vb#8)]  
@@ -95,7 +97,7 @@ ms.lasthandoff: 12/22/2017
 #### <a name="adding-data-binding-support-enabledatabinding-or-the-enabledatabinding-switch"></a>데이터 바인딩 지원 추가(EnableDataBinding 또는 /enableDataBinding 스위치)  
  이에 해당는 **/enableDataBinding** Svcutil.exe 도구를 켭니다.  
   
- 경우에 따라 스키마에서 생성된 형식을 그래픽 사용자 인터페이스 구성 요소에 바인딩하여 이러한 형식의 인스턴스를 업데이트할 경우 자동으로 UI가 업데이트되도록 할 수도 있습니다. `XsdDataContractImporter`는 속성을 변경할 경우 이벤트가 트리거되는 방식으로 <xref:System.ComponentModel.INotifyPropertyChanged> 인터페이스를 구현하는 형식을 생성할 수 있습니다. 이 인터페이스를 지원하는 클라이언트 UI 프로그래밍 환경(예: [!INCLUDE[avalon1](../../../../includes/avalon1-md.md)])에서 사용할 형식을 생성하는 경우 이 기능을 사용하려면 <xref:System.Runtime.Serialization.ImportOptions.EnableDataBinding%2A> 속성을 `true`로 설정합니다.  
+ 경우에 따라 스키마에서 생성된 형식을 그래픽 사용자 인터페이스 구성 요소에 바인딩하여 이러한 형식의 인스턴스를 업데이트할 경우 자동으로 UI가 업데이트되도록 할 수도 있습니다. `XsdDataContractImporter`는 속성을 변경할 경우 이벤트가 트리거되는 방식으로 <xref:System.ComponentModel.INotifyPropertyChanged> 인터페이스를 구현하는 형식을 생성할 수 있습니다. 이 인터페이스 (예: WPF Windows Presentation Foundation ())를 지 원하는 클라이언트 UI 프로그래밍 환경 사용할 형식을 생성 하는 경우 설정의 <xref:System.Runtime.Serialization.ImportOptions.EnableDataBinding%2A> 속성을 `true` 이 기능을 사용 하도록 합니다.  
   
  다음 예제에서는 `Vehicle`을 <xref:System.Runtime.Serialization.ImportOptions.EnableDataBinding%2A>로 설정하여 생성된 `true` 클래스를 보여 줍니다.  
   
@@ -112,7 +114,7 @@ ms.lasthandoff: 12/22/2017
  [!code-xml[C_SchemaImportExport#12](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_schemaimportexport/common/source.config#12)]  
   
 > [!NOTE]
->  모든 연결을 목록으로 간주할 수도 있습니다. 예를 들어 앞의 연결을 두 개의 필드(문자열 필드 및 정수 필드)가 있는 복잡한 `city` 개체 목록으로 간주할 수 있습니다. 두 패턴은 모두 XSD 스키마에서 하나로 표현됩니다. 목록과 연결을 구분할 수 없으므로 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에 관련된 특별한 주석이 스키마에 없으면 해당 패턴은 항상 목록으로 처리됩니다. 주석은 지정된 패턴이 연결을 나타냄을 가리킵니다. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][데이터 계약 스키마 참조](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md)합니다.  
+>  모든 연결을 목록으로 간주할 수도 있습니다. 예를 들어 앞의 연결을 두 개의 필드(문자열 필드 및 정수 필드)가 있는 복잡한 `city` 개체 목록으로 간주할 수 있습니다. 두 패턴은 모두 XSD 스키마에서 하나로 표현됩니다. 목록과 연결을 구분할 수 없으므로 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에 관련된 특별한 주석이 스키마에 없으면 해당 패턴은 항상 목록으로 처리됩니다. 주석은 지정된 패턴이 연결을 나타냄을 가리킵니다. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [데이터 계약 스키마 참조](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md)합니다.  
   
  일반적으로 목록은 스키마가 컬렉션의 표준 명명 패턴을 따르는지 여부에 따라 제네릭 목록에서 파생된 컬렉션 데이터 계약이나 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 배열로 가져옵니다. 이 내용이에 보다 자세히 설명 되어 [데이터 계약의 컬렉션 형식](../../../../docs/framework/wcf/feature-details/collection-types-in-data-contracts.md)합니다. 연결은 일반적으로 <xref:System.Collections.Generic.Dictionary%602> 또는 사전 개체에서 파생된 컬렉션 데이터 계약으로 가져옵니다. 예를 들어 다음 스키마를 생각해 볼 수 있습니다.  
   
@@ -159,7 +161,7 @@ ms.lasthandoff: 12/22/2017
   
 ##### <a name="design-considerations"></a>디자인 고려 사항  
   
--   약한 형식의 XML 표현을 직접 사용하기 어려울 수도 있습니다. <xref:System.Xml.Serialization.XmlSerializer> 같은 대체 serialization 엔진을 사용하여 강력한 형식의 데이터 계약과 호환되지 않는 스키마 작업을 수행해 보세요. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][XmlSerializer 클래스를 사용 하 여](../../../../docs/framework/wcf/feature-details/using-the-xmlserializer-class.md)합니다.  
+-   약한 형식의 XML 표현을 직접 사용하기 어려울 수도 있습니다. <xref:System.Xml.Serialization.XmlSerializer> 같은 대체 serialization 엔진을 사용하여 강력한 형식의 데이터 계약과 호환되지 않는 스키마 작업을 수행해 보세요. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [XmlSerializer 클래스를 사용 하 여](../../../../docs/framework/wcf/feature-details/using-the-xmlserializer-class.md)합니다.  
   
 -   <xref:System.Runtime.Serialization.XsdDataContractImporter> 속성이 <xref:System.Runtime.Serialization.ImportOptions.ImportXmlType%2A>로 설정되어 있어도 일부 스키마 구문은 `true`로 가져올 수 없습니다. 이 경우에도 <xref:System.Xml.Serialization.XmlSerializer>를 사용해 보세요.  
   
@@ -188,7 +190,7 @@ ms.lasthandoff: 12/22/2017
   
 -   <xref:System.Runtime.Serialization.ImportOptions.CodeProvider%2A> 속성. 생성된 클래스에 대한 코드를 생성하는 데 사용할 <xref:System.CodeDom.Compiler.CodeDomProvider>를 지정합니다. 가져오기 메커니즘은 <xref:System.CodeDom.Compiler.CodeDomProvider>에서 지원하지 않는 기능을 피하려고 합니다. <xref:System.Runtime.Serialization.ImportOptions.CodeProvider%2A>를 설정하지 않으면 전체 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 기능 집합이 제한 없이 사용됩니다.  
   
--   <xref:System.Runtime.Serialization.ImportOptions.DataContractSurrogate%2A> 속성. 이 속성을 사용하여 <xref:System.Runtime.Serialization.IDataContractSurrogate> 구현을 지정할 수 있습니다. <xref:System.Runtime.Serialization.IDataContractSurrogate>는 가져오기 프로세스를 사용자 지정합니다. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][데이터 계약 서로게이트](../../../../docs/framework/wcf/extending/data-contract-surrogates.md)합니다. 기본적으로 서로게이트는 사용되지 않습니다.  
+-   <xref:System.Runtime.Serialization.ImportOptions.DataContractSurrogate%2A> 속성. 이 속성을 사용하여 <xref:System.Runtime.Serialization.IDataContractSurrogate> 구현을 지정할 수 있습니다. <xref:System.Runtime.Serialization.IDataContractSurrogate>는 가져오기 프로세스를 사용자 지정합니다. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [데이터 계약 서로게이트](../../../../docs/framework/wcf/extending/data-contract-surrogates.md)합니다. 기본적으로 서로게이트는 사용되지 않습니다.  
   
 ## <a name="see-also"></a>참고 항목  
  <xref:System.Runtime.Serialization.DataContractSerializer>  

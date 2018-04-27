@@ -1,28 +1,29 @@
 ---
-title: "디렉터리 및 파일 요약(Visual Basic)"
+title: 디렉터리 및 파일 요약(Visual Basic)
 ms.date: 07/20/2015
 ms.prod: .net
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - files [Visual Basic]
 - directories [Visual Basic], Visual Basic
 - files [Visual Basic], summary
 ms.assetid: 588b75fd-a09b-4381-822d-19868990c170
-caps.latest.revision: "15"
+caps.latest.revision: 15
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: b07c2c400bd682d2340349435d03e192a1840c6e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 7df9d0de955e6d9a225373d3711948886cff4c97
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="directories-and-files-summary-visual-basic"></a>디렉터리 및 파일 요약(Visual Basic)
-[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]언어 키워드 및 런타임 라이브러리 멤버 용도 따라 구성 하 고 사용 합니다.  
+Visual Basic 언어 키워드 및 런타임 라이브러리 멤버 용도 따라 구성 하 고 사용 합니다.  
   
- 사용 하 여 `My` 기능을 사용 하면 생산성과 성능 향상 보다 이러한 멤버를 사용 하 여 파일 I/O 작업의 합니다. 자세한 내용은 <xref:Microsoft.VisualBasic.FileIO.FileSystem>을 참조하십시오.  
+ 사용 하 여 `My` 기능을 사용 하면 생산성과 성능 향상 보다 이러한 멤버를 사용 하 여 파일 I/O 작업의 합니다. 자세한 내용은 <xref:Microsoft.VisualBasic.FileIO.FileSystem>을 참조하세요.  
   
 |**작업**|**언어 요소**|  
 |----------------|--------------------------|  

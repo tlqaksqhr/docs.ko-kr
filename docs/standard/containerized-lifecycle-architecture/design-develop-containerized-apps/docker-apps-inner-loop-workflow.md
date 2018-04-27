@@ -5,14 +5,15 @@ ms.prod: .net
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/22/2017
+ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 7f49b19b0836636bf7656dc618ef2f181a0d7fff
-ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
+ms.openlocfilehash: 8ee1918091fe72e8606be6e7503ecd850084a4ba
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="inner-loop-development-workflow-for-docker-apps"></a>Docker 앱에 대 한 내부 루프 개발 워크플로
 
@@ -193,7 +194,7 @@ services:
 
 -   웹 서비스는 redis 서비스에 연결
 
-Redis 서비스에서 사용 하는 [최신 공용 redis 이미지](https://hub.docker.com/_/redis/) Docker 허브 레지스트리에서 찾아볼 수 있습니다. [redis](http://redis.io/) 는 서버 쪽 응용 프로그램을 위한 인기 있는 캐시 시스템.
+Redis 서비스에서 사용 하는 [최신 공용 redis 이미지](https://hub.docker.com/_/redis/) Docker 허브 레지스트리에서 찾아볼 수 있습니다. [redis](https://redis.io/) 는 서버 쪽 응용 프로그램을 위한 인기 있는 캐시 시스템.
 
 ### <a name="step-5-build-and-run-your-docker-app"></a>5 단계: 빌드 및 Docker 앱 실행
 

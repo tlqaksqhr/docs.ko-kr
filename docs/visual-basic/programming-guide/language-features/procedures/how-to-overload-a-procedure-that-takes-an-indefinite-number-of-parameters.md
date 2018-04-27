@@ -1,11 +1,12 @@
 ---
-title: "방법: 매개 변수를 무제한으로 사용하는 프로시저 오버로드(Visual Basic)"
-ms.custom: 
+title: '방법: 매개 변수를 무제한으로 사용하는 프로시저 오버로드(Visual Basic)'
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - procedures [Visual Basic], parameters
@@ -16,14 +17,14 @@ helpviewer_keywords:
 - procedures [Visual Basic], overloading
 - procedures [Visual Basic], multiple versions
 ms.assetid: c7042de2-2422-4039-94e8-ac298896af69
-caps.latest.revision: "18"
+caps.latest.revision: 18
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 37d5b47f06bad1c2a8871168c5642663aedcccf2
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 8cb4faa2dfd01f854dcc3bf8c2a330adf5acdcac
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-overload-a-procedure-that-takes-an-indefinite-number-of-parameters-visual-basic"></a>방법: 매개 변수를 무제한으로 사용하는 프로시저 오버로드(Visual Basic)
 프로시저에 있는 경우는 [ParamArray](../../../../visual-basic/language-reference/modifiers/paramarray.md) 매개 변수를 1 차원 배열을 매개 변수 배열에 대 한 오버 로드 된 버전을 정의할 수 없습니다. 자세한 내용은 "암시적 오버 로드에 대 한는 ParamArray 매개 변수"를 참조 [프로시저 오버 로드에 대 한 고려 사항](./considerations-in-overloading-procedures.md)합니다.  
@@ -53,7 +54,7 @@ ms.lasthandoff: 11/21/2017
   
  [!code-vb[VbVbcnProcedures#71](./codesnippet/VisualBasic/how-to-overload-a-procedure-that-takes-an-indefinite-number-of-parameters_3.vb)]  
   
- 오버 로드 된 버전의에서 코드 호출 코드에 대 한 하나 이상의 값을 제공 했는지 여부를 테스트 하지 않아도 `ParamArray` 매개 변수를 그렇다면 또는 개수입니다. [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]호출 인수 목록과 일치 하는 버전으로 제어가 전달 됩니다.  
+ 오버 로드 된 버전의에서 코드 호출 코드에 대 한 하나 이상의 값을 제공 했는지 여부를 테스트 하지 않아도 `ParamArray` 매개 변수를 그렇다면 또는 개수입니다. Visual Basic에서는 호출 인수 목록과 일치 하는 버전 제어를 전달 합니다.  
   
 ## <a name="compiling-the-code"></a>코드 컴파일  
  때문에 있는 프로시저는 `ParamArray` 매개 변수는 오버 로드 된 버전 집합, 이러한 암시적 오버 로드 중 하나에 해당 매개 변수 목록을 사용 하 여 이러한 프로시저를 오버 로드할 수 없습니다. 자세한 내용은 참조 [프로시저 오버 로드에 대 한 고려 사항](./considerations-in-overloading-procedures.md)합니다.  

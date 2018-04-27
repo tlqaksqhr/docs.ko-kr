@@ -1,24 +1,26 @@
 ---
-title: "ADO.NET에서 데이터 검색 및 수정"
-ms.custom: 
+title: ADO.NET에서 데이터 검색 및 수정
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 722e7f87-3691-46c6-87e8-7d159722d675
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: ff937e619d449fbfbedb234749292b6acc4bdf50
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: 05760e7295606f700f72e5a3af14e395bcc5d820
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="retrieving-and-modifying-data-in-adonet"></a>ADO.NET에서 데이터 검색 및 수정
 데이터베이스 응용 프로그램의 기본 기능은 데이터 소스에 연결하여 포함된 데이터를 검색하는 것입니다. ADO.NET의.NET Framework 데이터 공급자 다리 역할을 응용 프로그램과 데이터 원본을 사용 하 여 데이터 검색 뿐 아니라 명령 실행 수는 **DataReader** 또는 **DataAdapter** . 모든 데이터베이스 응용 프로그램의 한 가지 핵심 기능은 데이터베이스에 저장된 데이터를 업데이트하는 것입니다. Ado.net에서 데이터 업데이트를 사용 하는 **DataAdapter** 및 <xref:System.Data.DataSet>, 및 **명령** 개체; 수 트랜잭션도 사용 해야 합니다.  
@@ -43,7 +45,7 @@ ms.lasthandoff: 01/17/2018
  로컬 트랜잭션, 분산 트랜잭션 및 낙관적 동시성 관련 작업의 수행 방법을 설명하는 항목을 제공합니다.  
   
  [ID 또는 일련 번호 값 검색](../../../../docs/framework/data/adonet/retrieving-identity-or-autonumber-values.md)  
- 에 대해 생성 된 값을 매핑할의 예제를 제공는 **identity** 열에는 [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] 테이블 또는 **일련 번호** 테이블에 삽입된 된 행의 열에는 Microsoft Access 테이블의 필드입니다. `DataTable`에서의 ID 값 병합에 대해 설명합니다.  
+ 에 대해 생성 된 값을 매핑할의 예제를 제공는 **identity** 또는 열에는 SQL Server 테이블에 대 한 프로그램 **일련 번호** 테이블에 삽입된 된 행의 열에는 Microsoft Access 테이블의 필드입니다. `DataTable`에서의 ID 값 병합에 대해 설명합니다.  
   
  [이진 데이터 검색](../../../../docs/framework/data/adonet/retrieving-binary-data.md)  
  이진 데이터 나 대형 데이터 구조를 사용 하 여 검색 하는 방법을 설명 `CommandBehavior`합니다.`SequentialAccess` 기본 동작을 수정 하는 `DataReader`합니다.  
@@ -67,7 +69,7 @@ ms.lasthandoff: 01/17/2018
  비동기 프로그래밍에 대한 [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] 지원에 대해 설명합니다.  
   
  [SqlClient 스트리밍 지원](../../../../docs/framework/data/adonet/sqlclient-streaming-support.md)  
- 메모리에 완전하게 로드하지 않고 [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)]에서 데이터를 스트리밍하는 응용 프로그램을 쓰는 방법에 대해 논의합니다.  
+ 응용 프로그램을 작성 스트림 데이터는 SQL Server에서 메모리에 완전 하 게 로드 하지 않고도 방법을 설명 합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [ADO.NET에서 데이터 형식 매핑](../../../../docs/framework/data/adonet/data-type-mappings-in-ado-net.md)  

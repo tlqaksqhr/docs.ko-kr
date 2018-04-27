@@ -1,42 +1,44 @@
 ---
-title: "WPF에서 System.Xaml로 마이그레이션된 형식"
-ms.custom: 
+title: WPF에서 System.Xaml로 마이그레이션된 형식
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - WPF XAML [XAML Services], migration to System.Xaml
 - XAML [XAML Services], System.Xaml and WPF
 - System.Xaml [XAML Services], types migrated from WPF
 ms.assetid: d79dabf5-a2ec-4e8d-a37a-67c4ba8a2b91
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 86dd2dc74903dfb889ab618622786f5349a5fb32
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: f4d4bc0b21770e5ac0c138c140334198d30a740a
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="types-migrated-from-wpf-to-systemxaml"></a>WPF에서 System.Xaml로 마이그레이션된 형식
-[!INCLUDE[net_v35_long](../../../includes/net-v35-long-md.md)] 및 [!INCLUDE[net_v30_long](../../../includes/net-v30-long-md.md)]에서는 [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] 및 [!INCLUDE[TLA#tla_workflow](../../../includes/tlasharptla-workflow-md.md)] 둘 다에 XAML 언어 구현이 포함되었습니다. WPF XAML 구현에 대해 확장성을 제공한 공용 형식은 대부분 WindowsBase, PresentationCore 및 PresentationFramework 어셈블리에 있었습니다. 마찬가지로, [!INCLUDE[TLA#tla_workflow](../../../includes/tlasharptla-workflow-md.md)] XAML에 대한 확장성을 제공한 공용 형식은 System.Workflow.ComponentModel 어셈블리에 있었습니다. [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)]에서는 XAML 관련 형식 중 일부가 System.Xaml 어셈블리로 마이그레이션되었습니다. XAML 언어 서비스의 공용 .NET Framework 구현은 원래 특정 프레임워크의 XAML 구현에서 정의되었지만 현재 전반적인 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] XAML 언어 지원의 일부인 많은 XAML 확장성 시나리오를 사용할 수 있게 합니다. 이 항목에서는 마이그레이션되는 형식을 나열하고 마이그레이션과 관련된 문제를 논의합니다.  
+[!INCLUDE[net_v35_long](../../../includes/net-v35-long-md.md)] 및 [!INCLUDE[net_v30_long](../../../includes/net-v30-long-md.md)]모두 [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] Windows Workflow Foundation XAML 언어 구현이 포함 합니다. WPF XAML 구현에 대해 확장성을 제공한 공용 형식은 대부분 WindowsBase, PresentationCore 및 PresentationFramework 어셈블리에 있었습니다. 마찬가지로, Windows Workflow Foundation XAML에 대 한 확장성을 제공한 공용 형식은 System.Workflow.ComponentModel 어셈블리에 존재 합니다. [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)]에서는 XAML 관련 형식 중 일부가 System.Xaml 어셈블리로 마이그레이션되었습니다. XAML 언어 서비스의 공용 .NET Framework 구현은 원래 특정 프레임워크의 XAML 구현에서 정의되었지만 현재 전반적인 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] XAML 언어 지원의 일부인 많은 XAML 확장성 시나리오를 사용할 수 있게 합니다. 이 항목에서는 마이그레이션되는 형식을 나열하고 마이그레이션과 관련된 문제를 논의합니다.  
   
 <a name="assemblies_and_namespaces"></a>   
 ## <a name="assemblies-and-namespaces"></a>어셈블리 및 네임스페이스  
  [!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)] 및 [!INCLUDE[net_v30_short](../../../includes/net-v30-short-md.md)]에서는 XAML을 지원하기 위해 WPF에서 구현한 형식이 일반적으로 <xref:System.Windows.Markup> 네임스페이스에 있었습니다. 이러한 형식은 대부분 WindowsBase 어셈블리에 있었습니다.  
   
- [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]에서는 새로운 <xref:System.Xaml> 네임스페이스와 새로운 System.Xaml 어셈블리가 있습니다. 원래 WPF XAML에 대해 구현된 많은 형식이 이제 XAML 구현에 대한 확장성 지점 또는 서비스로 제공됩니다. 보다 일반적인 시나리오에 사용할 수 있도록 하는 작업의 일부로 원래의 WPF 어셈블리에서 System.Xaml 어셈블리로 형식이 전달됩니다. 이렇게 하면 WPF 및 [!INCLUDE[TLA#tla_workflow](../../../includes/tlasharptla-workflow-md.md)]와 같은 다른 프레임워크의 어셈블리를 포함하지 않고 XAML 확장성 시나리오를 사용할 수 있습니다.  
+ [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]에서는 새로운 <xref:System.Xaml> 네임스페이스와 새로운 System.Xaml 어셈블리가 있습니다. 원래 WPF XAML에 대해 구현된 많은 형식이 이제 XAML 구현에 대한 확장성 지점 또는 서비스로 제공됩니다. 보다 일반적인 시나리오에 사용할 수 있도록 하는 작업의 일부로 원래의 WPF 어셈블리에서 System.Xaml 어셈블리로 형식이 전달됩니다. 이렇게 하면 WPF 및 Windows Workflow Foundation) (등 다른 프레임 워크의 어셈블리를 포함 하지 않고 XAML 확장성 시나리오.  
   
  마이그레이션된 형식의 경우 대부분의 형식이 <xref:System.Windows.Markup> 네임스페이스에 계속 유지됩니다. 이는 부분적으로 기존 구현의 CLR 네임스페이스 매핑이 파일별로 분할되지 않도록 하기 위한 것이었습니다. 결과적으로, <xref:System.Windows.Markup> 의 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] 네임스페이스에 System.Xaml 어셈블리의 일반 XAML 언어 지원 형식과 WindowsBase 및 기타 WPF 어셈블리의 WPF XAML 구현과 관련된 형식이 혼합되어 포함됩니다. System.Xaml로 마이그레이션되었지만 이전에 WPF 어셈블리에 있었던 형식은 WPF 어셈블리의 버전 4에서 형식 전달을 지원합니다.  
   
 ### <a name="workflow-xaml-support-types"></a>워크플로 XAML 지원 형식  
- [!INCLUDE[TLA#tla_workflow](../../../includes/tlasharptla-workflow-md.md)] 에서는 XAML 지원 형식도 제공했으며, 대부분의 경우 WPF 동등 항목과 동일한 짧은 이름을 가졌습니다. 다음은 [!INCLUDE[TLA#tla_workflow](../../../includes/tlasharptla-workflow-md.md)] XAML 지원 형식의 목록입니다.  
+ Windows Workflow Foundation XAML 지원 형식을 제공 하 고 대부분의 경우에 해당 하는 WPF 항목과 동일한 짧은 이름을 가졌습니다. 다음은 Windows Workflow Foundation XAML 지원 형식의 목록입니다.  
   
 -   <xref:System.Workflow.ComponentModel.Serialization.ContentPropertyAttribute>  
   
@@ -44,11 +46,11 @@ ms.lasthandoff: 12/22/2017
   
 -   <xref:System.Workflow.ComponentModel.Serialization.XmlnsPrefixAttribute>  
   
- 이러한 지원 형식은 [!INCLUDE[TLA#tla_workflow](../../../includes/tlasharptla-workflow-md.md)] 용 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] 어셈블리에 여전히 있으며 특정 [!INCLUDE[TLA#tla_workflow](../../../includes/tlasharptla-workflow-md.md)] 에 계속 사용할 수 있지만 [!INCLUDE[TLA#tla_workflow](../../../includes/tlasharptla-workflow-md.md)]를 사용하지 않는 응용 프로그램이나 프레임워크에서 참조하면 안 됩니다.  
+ 이러한 지원 형식에 대 한 Windows Workflow Foundation 어셈블리에 여전히 존재 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] 특정 Windows Workflow Foundation 응용 프로그램에 계속 사용할 수 있습니다; 그러나 해야 참조 됩니다 응용 프로그램 또는 사용 하지 않는 프레임 워크에서 Windows Workflow Foundation 합니다.  
   
 <a name="markupextension"></a>   
 ## <a name="markupextension"></a>MarkupExtension  
- [!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)] 및 [!INCLUDE[net_v30_short](../../../includes/net-v30-short-md.md)]에서는 WPF용 <xref:System.Windows.Markup.MarkupExtension> 클래스가 WindowsBase 어셈블리에 있었습니다. [!INCLUDE[TLA#tla_workflow](../../../includes/tlasharptla-workflow-md.md)]에 대한 병렬 클래스, <xref:System.Workflow.ComponentModel.Serialization.MarkupExtension>은 System.Workflow.ComponentModel 어셈블리에 있었습니다. [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]에서는 <xref:System.Windows.Markup.MarkupExtension> 클래스가 System.Xaml 어셈블리로 마이그레이션되었습니다. [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]에서는 <xref:System.Windows.Markup.MarkupExtension> 이 특정 프레임워크에서 빌드된 시나리오가 아니라 .NET Framework XAML 서비스를 사용하는 모든 XAML 확장성 시나리오에 사용됩니다. 가능한 경우 특정 프레임워크 또는 프레임워크의 사용자 코드도 XAML 확장에 대한 <xref:System.Windows.Markup.MarkupExtension> 클래스에서 빌드되어야 합니다.  
+ [!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)] 및 [!INCLUDE[net_v30_short](../../../includes/net-v30-short-md.md)]에서는 WPF용 <xref:System.Windows.Markup.MarkupExtension> 클래스가 WindowsBase 어셈블리에 있었습니다. Windows Workflow Foundation에 대 한 병렬 클래스 <xref:System.Workflow.ComponentModel.Serialization.MarkupExtension>System.Workflow.ComponentModel 어셈블리에 있었습니다. [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]에서는 <xref:System.Windows.Markup.MarkupExtension> 클래스가 System.Xaml 어셈블리로 마이그레이션되었습니다. [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]에서는 <xref:System.Windows.Markup.MarkupExtension> 이 특정 프레임워크에서 빌드된 시나리오가 아니라 .NET Framework XAML 서비스를 사용하는 모든 XAML 확장성 시나리오에 사용됩니다. 가능한 경우 특정 프레임워크 또는 프레임워크의 사용자 코드도 XAML 확장에 대한 <xref:System.Windows.Markup.MarkupExtension> 클래스에서 빌드되어야 합니다.  
   
 <a name="markupextension_supporting_service_classes"></a>   
 ## <a name="markupextension-supporting-service-classes"></a>MarkupExtension 지원 서비스 클래스  

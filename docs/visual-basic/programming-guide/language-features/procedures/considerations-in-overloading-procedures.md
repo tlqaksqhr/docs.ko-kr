@@ -1,11 +1,12 @@
 ---
-title: "프로시저를 오버로드할 때 고려해야 할 사항(Visual Basic)"
-ms.custom: 
+title: 프로시저를 오버로드할 때 고려해야 할 사항(Visual Basic)
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - signatures [Visual Basic], ParamArray arguments
@@ -31,14 +32,14 @@ helpviewer_keywords:
 - restrictions [Visual Basic], overloading procedures
 - procedures [Visual Basic], parameter lists
 ms.assetid: a2001248-10d0-42c5-b0ce-eeedc987319f
-caps.latest.revision: "26"
+caps.latest.revision: 26
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 3c9a9a4759d4ec2dd87778c49c4fd82a08c081a8
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: ac4bc47f9e781f83c7930efffedd40d9c25c2ec2
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="considerations-in-overloading-procedures-visual-basic"></a>프로시저를 오버로드할 때 고려해야 할 사항(Visual Basic)
 프로시저를 오버 로드할 때는 다른 사용 해야 *서명* 각 오버 로드 된 버전에 대 한 합니다. 일반적으로 즉, 각 버전에는 다른 매개 변수 목록을 지정 해야 합니다. 자세한 내용은 "다른 서명"의 참조 [프로시저 오버 로드](./procedure-overloading.md)합니다.  
@@ -50,7 +51,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="alternatives-to-overloaded-versions"></a>오버 로드 된 버전에 대 한 대안  
  경우에 따라 해야 오버 로드 된 버전에 대 한 대안 특히의 수에는 변수 또는 인수를 생략할 경우.  
   
- 선택적 인수 하 여 모든 언어에서 지원 되는 것은 아니며 및 매개 변수 배열은를 제한 하는 염두에 둬야 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]합니다. 여러 다른 언어로 작성 된 코드에서 호출 될 가능성이 있는 프로시저를 작성 하는 경우 버전 제공 시 뛰어난 유연성 오버 로드 됩니다.  
+ 선택적 인수 하 여 모든 언어에서 지원 되는 것은 아니며 및 매개 변수 배열이 Visual Basic로 제한 되어 염두에 둬야 합니다. 여러 다른 언어로 작성 된 코드에서 호출 될 가능성이 있는 프로시저를 작성 하는 경우 버전 제공 시 뛰어난 유연성 오버 로드 됩니다.  
   
 ### <a name="overloads-and-optional-arguments"></a>오버 로드 및 선택적 인수  
  호출 코드에서 필요에 따라 제공 하거나 하나 이상의 인수를 생략할 수, 하는 경우 여러 오버 로드 된 버전을 정의 또는 선택적 매개 변수를 사용할 수 있습니다.  
@@ -104,7 +105,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="implicit-overloads-for-a-paramarray-parameter"></a>ParamArray 매개 변수에 대 한 암시적 오버 로드  
  컴파일러에 사용 하 여 프로시저 있다고 간주는 [ParamArray](../../../../visual-basic/language-reference/modifiers/paramarray.md) 무한 어떤 호출 코드에서 전달 매개 변수 배열에 다음과 같이 서로 다른 오버 로드 중에 매개 변수:  
   
--   호출 코드에 인수를 제공 하지 않는 하나의 오버 로드는`ParamArray`  
+-   호출 코드에 인수를 제공 하지 않는 하나의 오버 로드는 `ParamArray`  
   
 -   호출 코드 1 차원 배열을 제공 하는 경우 하나의 오버 로드는 `ParamArray` 요소 형식  
   

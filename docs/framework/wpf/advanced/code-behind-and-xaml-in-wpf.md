@@ -1,30 +1,32 @@
 ---
-title: "WPF의 코드 숨김 및 XAML"
-ms.custom: 
+title: WPF의 코드 숨김 및 XAML
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - XAML [WPF], code-behind
 - code-behind files [WPF], XAML
 ms.assetid: 9df6d3c9-aed3-471c-af36-6859b19d999f
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 19c7c2cdd49663a57a4184027fd7d6ad8fcd7656
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 9c28a501996e4f2cc25e9e280b2f63e1c0c67051
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="code-behind-and-xaml-in-wpf"></a>WPF의 코드 숨김 및 XAML
-<a name="introduction"></a>코드 숨김은 태그 정의 된 개체와 결합 되는 코드를 설명 하는 데 사용 되는 용어는 경우는 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 태그 컴파일된 페이지는 합니다. 이 항목에서는 코드에 대 한 대체 인라인 코드 메커니즘 및 코드 숨김에 대 한 요구 사항을 설명 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]합니다.  
+<a name="introduction"></a> 코드 숨김은 태그 정의 된 개체와 결합 되는 코드를 설명 하는 데 사용 되는 용어는 경우는 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 태그 컴파일된 페이지는 합니다. 이 항목에서는 코드에 대 한 대체 인라인 코드 메커니즘 및 코드 숨김에 대 한 요구 사항을 설명 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]합니다.  
   
  이 항목에는 다음과 같은 단원이 포함되어 있습니다.  
   
@@ -39,7 +41,7 @@ ms.lasthandoff: 12/22/2017
 -   [인라인 코드 제한 사항](#Inline_Code_Limitations)  
   
 <a name="Prerequisites"></a>   
-## <a name="prerequisites"></a>필수 구성 요소  
+## <a name="prerequisites"></a>전제 조건  
  이 항목에서는 읽기는 [XAML 개요 (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md) 대 한 기본 지식이 있고는 [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] 및 개체 지향 프로그래밍 합니다.  
   
 <a name="codebehind_and_the_xaml_language"></a>   
@@ -57,11 +59,11 @@ ms.lasthandoff: 12/22/2017
   
 -   처리기는 지원 형식 시스템의 적절 한 이벤트에 대 한 대리자를 일치 해야 합니다.  
   
--   에 대 한는 [!INCLUDE[TLA#tla_visualb](../../../../includes/tlasharptla-visualb-md.md)] 언어 구체적으로, 특정 언어를 사용할 수 있습니다 `Handles` 처리기 인스턴스 및 처리기 선언에서 특성을 사용 하 여 처리기를 연결 하는 대신에 이벤트와 연결할 키워드 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]합니다. 그러나이 기법에는 몇 가지 제한 때문에 `Handles` 키워드의 특정 기능을 모두 지원할 수 없는 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 와 같은 특정 이벤트 시스템 라우트된 이벤트 시나리오 또는 연결 된 이벤트입니다. 자세한 내용은 참조 [Visual Basic 및 WPF 이벤트 처리](../../../../docs/framework/wpf/advanced/visual-basic-and-wpf-event-handling.md)합니다.  
+-   Microsoft Visual Basic 언어에 대 한 특히 있습니다 사용할 수는 언어별 `Handles` 처리기 인스턴스 및 처리기 선언에서 특성을 사용 하 여 처리기를 연결 하는 대신에 이벤트와 연결할 키워드 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]합니다. 그러나이 기법에는 몇 가지 제한 때문에 `Handles` 키워드의 특정 기능을 모두 지원할 수 없는 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 와 같은 특정 이벤트 시스템 라우트된 이벤트 시나리오 또는 연결 된 이벤트입니다. 자세한 내용은 참조 [Visual Basic 및 WPF 이벤트 처리](../../../../docs/framework/wpf/advanced/visual-basic-and-wpf-event-handling.md)합니다.  
   
 <a name="x_Code"></a>   
 ## <a name="xcode"></a>x: 코드  
- [X:code](../../../../docs/framework/xaml-services/x-code-intrinsic-xaml-type.md) 지시문 요소에 정의 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]합니다. `x:Code` 지시문 요소 인라인 프로그래밍 코드를 포함할 수 있습니다. 인라인으로 정의 되는 코드와 상호 작용할 수는 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 동일한 페이지에 있습니다. 다음 예제에서는 인라인 [!INCLUDE[TLA2#tla_cshrp](../../../../includes/tla2sharptla-cshrp-md.md)] 코드입니다. 코드 내에 있는 통지는 `x:Code` 요소와 코드로 묶어야 `<CDATA[`... `]]>` 에 대 한 콘텐츠를 이스케이프 [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)]되도록는 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 프로세서 (해석 중 하나는 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 스키마 또는 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 스키마) 내용을 해석 하려고 시도 하지 것입니다로 [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)]합니다.  
+ [X:code](../../../../docs/framework/xaml-services/x-code-intrinsic-xaml-type.md) 지시문 요소에 정의 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]합니다. `x:Code` 지시문 요소 인라인 프로그래밍 코드를 포함할 수 있습니다. 인라인으로 정의 되는 코드와 상호 작용할 수는 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 동일한 페이지에 있습니다. 다음 예제에서는 인라인 C# 코드를 보여 줍니다. 코드 내에 있는 통지는 `x:Code` 요소와 코드로 묶어야 `<CDATA[`... `]]>` 에 대 한 콘텐츠를 이스케이프 [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)]되도록는 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 프로세서 (해석 중 하나는 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 스키마 또는 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 스키마) 내용을 해석 하려고 시도 하지 것입니다로 [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)]합니다.  
   
  [!code-xaml[XAMLOvwSupport#ButtonWithInlineCode](../../../../samples/snippets/csharp/VS_Snippets_Wpf/XAMLOvwSupport/CSharp/page4.xaml#buttonwithinlinecode)]  
   

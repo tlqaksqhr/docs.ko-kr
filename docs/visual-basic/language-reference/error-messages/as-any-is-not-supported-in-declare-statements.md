@@ -1,5 +1,5 @@
 ---
-title: '&#39; 모든 &#39; 지원 되지 않습니다 &#39; Declare &#39; 문'
+title: '&#39;As Any&#39; 에서 지원 되지 않습니다 &#39;Declare&#39; 문'
 ms.date: 07/20/2015
 ms.prod: .net
 ms.suite: ''
@@ -15,14 +15,14 @@ ms.assetid: 7e5cf519-8b64-4ac5-8116-705fe26c846d
 caps.latest.revision: 11
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 59120622688ee38d5b8f45c08dfc3ae40711fb8b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: d8146e339ac5cb005b99c9a1e02f1cd248c4558b
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
-# <a name="39as-any39-is-not-supported-in-39declare39-statements"></a>&#39; 모든 &#39; 지원 되지 않습니다 &#39; Declare &#39; 문
-`Any` 데이터 형식이 사용 된 `Declare` Visual Basic 6.0 및 이전 버전의 모든 종류의 데이터를 포함할 수 있는 인수 사용을 허용 하는 문입니다. [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]그러나 오버 로드 지원 하 고 그렇게는 `Any` 데이터 형식은 사용 되지 않습니다.  
+# <a name="39as-any39-is-not-supported-in-39declare39-statements"></a>&#39;As Any&#39; 에서 지원 되지 않습니다 &#39;Declare&#39; 문
+`Any` 데이터 형식이 사용 된 `Declare` Visual Basic 6.0 및 이전 버전의 모든 종류의 데이터를 포함할 수 있는 인수 사용을 허용 하는 문입니다. 그러나 오버 로드 하는 Visual Basic 지원 하 고 그렇게는 `Any` 데이터 형식은 사용 되지 않습니다.  
   
  **오류 ID:** BC30828  
   

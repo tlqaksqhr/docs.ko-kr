@@ -18,11 +18,11 @@ ms.assetid: a16a4b13-54be-432c-82b3-a87091464ada
 caps.latest.revision: 22
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 99d14b6e54a59ffc904a9e786c22498d23ee8ab6
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 6bcb19388a9449a76eed5689b12fb95c5a4fb8de
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="extension-indexer-property-visual-basic"></a>확장명 인덱서 속성(Visual Basic)
 컬렉션의 개별 요소에 액세스할 수 있도록 합니다.  
@@ -37,10 +37,10 @@ object(index)
   
 |용어|정의|  
 |---|---|  
-|`object`|필수 요소. 쿼리 가능 컬렉션입니다. 구현 하는 컬렉션, 즉 <xref:System.Collections.Generic.IEnumerable%601> 또는 <xref:System.Linq.IQueryable%601>합니다.|  
-|(|필수 요소. 인덱서 속성의 시작을 나타냅니다.|  
-|`index`|필수 요소. 컬렉션의 요소에 0부터 시작 위치를 지정 하는 정수 식입니다.|  
-|)|필수 요소. 인덱서 속성의 끝을 나타냅니다.|  
+|`object`|필수. 쿼리 가능 컬렉션입니다. 구현 하는 컬렉션, 즉 <xref:System.Collections.Generic.IEnumerable%601> 또는 <xref:System.Linq.IQueryable%601>합니다.|  
+|(|필수. 인덱서 속성의 시작을 나타냅니다.|  
+|`index`|필수. 컬렉션의 요소에 0부터 시작 위치를 지정 하는 정수 식입니다.|  
+|)|필수. 인덱서 속성의 끝을 나타냅니다.|  
   
 ## <a name="return-value"></a>반환 값  
  컬렉션에서 지정된 된 위치에서 개체 또는 `Nothing` 경우 인덱스가 범위를 벗어났습니다.  
@@ -48,7 +48,7 @@ object(index)
 ## <a name="remarks"></a>설명  
  컬렉션의 개별 요소에 액세스 하는 확장 인덱서 속성을 사용할 수 있습니다. 이 인덱서 속성은 일반적으로 XML 축 속성의 출력에 사용 됩니다. XML 자식 및 XML 하위 축 속성의 컬렉션을 반환 합니다. <xref:System.Xml.Linq.XElement> 개체 또는 특성 값입니다.  
   
- [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 컴파일러에 대 한 호출을 확장 인덱서 속성을 변환의 `ElementAtOrDefault` 메서드. 배열 인덱서 달리는 `ElementAtOrDefault` 메서드가 반환 되 `Nothing` 경우 인덱스가 범위를 벗어났습니다. 이 동작은 컬렉션에 있는 요소의 수를 쉽게 확인할 수 없는 경우에 유용 합니다.  
+ Visual Basic 컴파일러에 대 한 호출을 확장 인덱서 속성을 변환의 `ElementAtOrDefault` 메서드. 배열 인덱서 달리는 `ElementAtOrDefault` 메서드가 반환 되 `Nothing` 경우 인덱스가 범위를 벗어났습니다. 이 동작은 컬렉션에 있는 요소의 수를 쉽게 확인할 수 없는 경우에 유용 합니다.  
   
  이 인덱서 속성은 구현 하는 컬렉션에 대 한 확장 속성 처럼 <xref:System.Collections.Generic.IEnumerable%601> 또는 <xref:System.Linq.IQueryable%601>: 기본 속성 또는 인덱서는 컬렉션에 없는 경우에 사용 됩니다.  
   

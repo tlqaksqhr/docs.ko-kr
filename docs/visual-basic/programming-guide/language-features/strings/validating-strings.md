@@ -1,12 +1,13 @@
 ---
-title: "Visual Basic의 문자열 유효성 검사"
-ms.custom: 
+title: Visual Basic의 문자열 유효성 검사
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Visual Basic, strings
@@ -14,19 +15,19 @@ helpviewer_keywords:
 - strings [Visual Basic], validating
 - validation [Visual Basic], strings
 ms.assetid: 9a1acf9b-7e2c-40cb-bba4-656ee2bc2ed0
-caps.latest.revision: "15"
+caps.latest.revision: 15
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 0d83cca26540689c30fbcc60c8fd29e49c90e0dd
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 5ca7d5ed51b6556c871431ce001f76a77435a1d8
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="validating-strings-in-visual-basic"></a>Visual Basic의 문자열 유효성 검사
-이 섹션에서는 문자열의 유효성을 검사 하는 방법을 설명 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]합니다.  
+이 섹션에서는 Visual Basic에서 문자열의 유효성을 검사 하는 방법에 설명 합니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [방법: Visual Basic에서 파일 이름 및 경로 확인 합니다.](../../../../visual-basic/programming-guide/language-features/strings/how-to-validate-file-names-and-paths.md)  
  파일 이름 또는 경로 문자열을 나타내는지 여부를 확인 하는 방법.  
   

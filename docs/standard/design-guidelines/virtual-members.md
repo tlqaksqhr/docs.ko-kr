@@ -1,30 +1,30 @@
 ---
-title: "가상 멤버"
-ms.custom: 
+title: 가상 멤버
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - overridable members
 - virtual members
 - members [.NET Framework], virtual
 ms.assetid: 8ff4eb97-0364-43ec-8a02-934b5cd94d19
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 692a5803ddb538de6dc5f061c18cc0b250d0f4ae
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 1b7abe1dbeb7f4888dd8ee4001b410cc583935c4
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="virtual-members"></a>가상 멤버
 가상 멤버는 하위 클래스의 동작을 변경 하는 따라서 재정의할 수 있습니다. 콜백을 제공 하 고 확장성 측면에서 매우 유사 하지만 실행 성능 및 메모리 사용량 측면에서 더 좋은 것은 있습니다. 또한 가상 멤버 만들어야 하는 특별 한 종류의 기존 유형 (특수화) 시나리오에서 더 자연 스러운 느낍니다.  
@@ -45,9 +45,9 @@ ms.lasthandoff: 12/23/2017
   
  클래스의 public 멤버는 해당 클래스의 직접 소비자에 대 한 올바른 기능 집합을 제공 해야 합니다. 가상 멤버 하위 클래스에서 재정의 될 수 있도록 되어 및 보호 된 액세스 가능성은 모든 가상 확장성 지점을 사용할 수는 있는 범위를 지정 하는 좋은 방법입니다.  
   
- *일부 © 2005, 2009 Microsoft Corporation. 모든 권리 보유.*  
+ *Portions © 2005, 2009 Microsoft Corporation. 모든 권리 보유.*  
   
- *피어슨 교육, Inc.에서의 사용 권한으로 재인쇄 [Framework 디자인 지침: 규칙, 특징 및 다시 사용할 수 있는.NET 라이브러리를 2nd Edition에 대 한 패턴](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina 및 Brad Abrams 게시 하 여 2008 년 10 월 22 일 Microsoft Windows 개발 시리즈의 일부로: Addison Wesley Professional.*  
+ *피어슨 교육, Inc.에서의 사용 권한으로 재인쇄 [Framework 디자인 지침: 규칙, 특징 및 다시 사용할 수 있는.NET 라이브러리를 2nd Edition에 대 한 패턴](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina 및 Brad Abrams 게시 하 여 2008 년 10 월 22 일 Microsoft Windows 개발 시리즈의 일부로: Addison Wesley Professional.*  
   
 ## <a name="see-also"></a>참고 항목  
  [프레임워크 디자인 지침](../../../docs/standard/design-guidelines/index.md)  

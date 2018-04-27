@@ -1,28 +1,30 @@
 ---
-title: "연습: 내게 필요한 옵션이 지원되는 Windows 기반 응용 프로그램 만들기"
-ms.custom: 
+title: '연습: 내게 필요한 옵션이 지원되는 Windows 기반 응용 프로그램 만들기'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-winforms
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - accessibility [Windows Forms], Windows applications
 - Windows applications [Windows Forms], accessibility
 - applications [Windows Forms], accessibility
 ms.assetid: 654c7f2f-1586-480b-9f12-9d9b8f5cc32b
-caps.latest.revision: "15"
+caps.latest.revision: 15
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a8f0a35b569b38e0d7ca79129f720034420ecd23
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 600a0d3aaf7da1cd7513ba6dd1dadcb58031fbef
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="walkthrough-creating-an-accessible-windows-based-application"></a>연습: 내게 필요한 옵션이 지원되는 Windows 기반 응용 프로그램 만들기
 액세스할 수 있는 응용 프로그램을 만드는 것은 비즈니스에 중요한 영향을 줍니다. 많은 정부 기관에는 소프트웨어 구매와 관련된 접근성 규정이 있습니다. Certified for Windows 로고에는 접근성 요구 사항이 포함됩니다. 미국에만 3천만 명이 거주하는 것으로 추정되는 잠재 고객 중 많은 사람이 소프트웨어의 내게 필요한 옵션 기능에 따른 영향을 받습니다.  
@@ -52,7 +54,7 @@ ms.lasthandoff: 12/22/2017
   
 #### <a name="to-begin-making-the-application"></a>응용 프로그램 만들기를 시작하려면  
   
--   [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)] 또는 [!INCLUDE[csprcs](../../../../includes/csprcs-md.md)]에서 새 Windows 응용 프로그램을 만듭니다. 프로젝트 이름을 **PizzaOrder**로 지정합니다. 자세한 내용은 [새 솔루션 및 프로젝트 만들기](/visualstudio/ide/creating-solutions-and-projects)를 참조하세요.  
+-   Visual Basic 또는 Visual C#에서 새 Windows 응용 프로그램을 만듭니다. 프로젝트 이름을 **PizzaOrder**로 지정합니다. 자세한 내용은 [새 솔루션 및 프로젝트 만들기](/visualstudio/ide/creating-solutions-and-projects)를 참조하세요.  
   
 ## <a name="adding-the-controls-to-the-form"></a>폼에 컨트롤 추가  
  폼에 컨트롤을 추가하는 경우 액세스할 수 있는 응용 프로그램을 만들기 위한 다음 지침을 고려하세요.  

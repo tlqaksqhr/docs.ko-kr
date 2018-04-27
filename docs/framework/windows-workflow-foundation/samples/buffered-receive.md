@@ -1,23 +1,24 @@
 ---
-title: "버퍼링되는 수신"
-ms.custom: 
+title: 버퍼링되는 수신
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 9d46d9b9-96c9-4531-9695-ab526b4d704a
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a7a486d3fbfb520ffe3b32c392566e5147c5dfcc
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 9cd4dfcbfc9d417766615c624905f8bce2c10e54
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="buffered-receive"></a>버퍼링되는 수신
 이 샘플에서는 [!INCLUDE[wf](../../../../includes/wf-md.md)]에서 버퍼링된 수신 기능을 설정하고 구성하는 방법을 보여 줍니다. 버퍼링된 수신 기능을 사용하면 워크플로 작성자가 메시지의 수신 순서에 신경을 쓰지 않고 워크플로를 만들 수 있습니다. 버퍼링된 수신 기능은 메시지를 로컬로 버퍼링하고 워크플로에서 메시지를 받을 준비가 되었을 때 이를 전달하는 역할을 합니다.  
@@ -47,7 +48,7 @@ ms.lasthandoff: 12/22/2017
   
  이 서비스에서는 <xref:System.ServiceModel.Description.ServiceMetadataBehavior>를 사용하여 서비스에 대한 메타데이터도 노출합니다.  
   
- 마찬가지로, 클라이언트 끝점은 <xref:System.ServiceModel.NetMsmqBinding>을 사용하여 구성됩니다. 클라이언트 코드 및 구성을 사용 하 여 생성 되는 **서비스 참조 추가** 의 기능 [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)]합니다. 다음 예제에서는 App.config 파일에 생성된 클라이언트 끝점을 보여 줍니다.  
+ 마찬가지로, 클라이언트 끝점은 <xref:System.ServiceModel.NetMsmqBinding>을 사용하여 구성됩니다. 클라이언트 코드 및 구성을 사용 하 여 생성 되는 **서비스 참조 추가** Visual Studio의 기능입니다. 다음 예제에서는 App.config 파일에 생성된 클라이언트 끝점을 보여 줍니다.  
   
 ```xml  
 <endpoint address="net.msmq://localhost/private/LoanService/Service1.xamlx"  
@@ -95,7 +96,7 @@ ms.lasthandoff: 12/22/2017
   
 #### <a name="to-run-the-sample"></a>이 샘플을 실행하려면  
   
-1.  http://localhost/private/loanservice/service1.xamlx로 이동하여 서비스가 실행되고 있는지 확인합니다.  
+1.  찾아 http://localhost/private/loanservice/service1.xamlx 를 서비스가 실행 되 고 있는지 확인 합니다.  
   
 2.  F5 키를 눌러 LoanClient 응용 프로그램을 실행합니다. 워크플로를 완료하면 메시지 교환 결과가 포함된 out.txt 파일이 C:\Inbox에 저장됩니다.  
   

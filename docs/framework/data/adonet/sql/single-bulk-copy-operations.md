@@ -1,27 +1,29 @@
 ---
-title: "단일 대량 복사 작업"
-ms.custom: 
+title: 단일 대량 복사 작업
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 5e7ff0be-3f23-4996-a92c-bd54d65c3836
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 961981fcdf9709a336d76df99c8f65448e76b98a
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: 37402672a6df808cb5e1c2424817fd9ce749cc82
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="single-bulk-copy-operations"></a>단일 대량 복사 작업
 SQL Server 대량 복사 작업을 수행하는 가장 간단한 접근 방식은 데이터베이스에 단일 작업을 수행하는 것입니다. 기본적으로 대량 복사 작업은 격리된 작업으로 수행됩니다. 복사 작업은 롤백할 수 없는 비트랜잭트 방식으로 이루어집니다.  
@@ -51,7 +53,7 @@ SQL Server 대량 복사 작업을 수행하는 가장 간단한 접근 방식�
 >  소스 열과 대상 열의 데이터 형식은 일치하는 것이 좋습니다. 데이터 형식이 일치 하지 않으면 **SqlBulkCopy** 각 소스 값으로는 규칙을 사용 하 여 대상 데이터 형식으로 변환 하려고 <xref:System.Data.SqlClient.SqlParameter.Value%2A>합니다. 변환을 수행하면 성능에 영향을 줄 뿐 아니라 예기치 않은 오류가 발생할 수도 있습니다. 예를 들어, `Double` 데이터 형식은 일반적으로 `Decimal` 데이터 형식으로 변환되지만 항상 그런 것은 아닙니다.  
   
 ## <a name="example"></a>예제  
- 다음 콘솔 응용 프로그램에서는 <xref:System.Data.SqlClient.SqlBulkCopy> 클래스를 사용하여 데이터를 로드하는 방법을 보여 줍니다. 이 예제에서는 <xref:System.Data.SqlClient.SqlDataReader> 데이터를 복사 하는 데 사용 되는 **Production.Product** 테이블에 [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] **AdventureWorks** 동일한 데이터베이스의 유사한 테이블에는 데이터베이스입니다.  
+ 다음 콘솔 응용 프로그램에서는 <xref:System.Data.SqlClient.SqlBulkCopy> 클래스를 사용하여 데이터를 로드하는 방법을 보여 줍니다. 이 예제에서는 <xref:System.Data.SqlClient.SqlDataReader> 데이터를 복사 하는 데 사용 되는 **Production.Product** SQL Server 테이블에에서**AdventureWorks** 동일한 데이터베이스의 유사한 테이블에는 데이터베이스입니다.  
   
 > [!IMPORTANT]
 >  이 샘플을 만들지 않은 경우 작업 테이블에 설명 된 대로 실행 되지 것입니다 [대량 복사 예제 설정](../../../../../docs/framework/data/adonet/sql/bulk-copy-example-setup.md)합니다. 이 코드는 사용 하는 구문을 보여 주기 위해 제공 됩니다 **SqlBulkCopy** 만 합니다. 소스 테이블과 대상 테이블이 동일한 SQL Server 인스턴스에 있으면 Transact-SQL `INSERT … SELECT` 문을 사용하여 데이터를 더 쉽고 빠르게 복사할 수 있습니다.  

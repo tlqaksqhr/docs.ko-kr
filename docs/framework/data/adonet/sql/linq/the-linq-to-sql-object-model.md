@@ -1,27 +1,29 @@
 ---
-title: "LINQ to SQL 개체 모델"
-ms.custom: 
+title: LINQ to SQL 개체 모델
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 81dd0c37-e2a4-4694-83b0-f2e49e693810
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 0bfaf7b08b3725f1c1cc2f0985c7612aa47a6cb4
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: cc05166cffdd7254c657f0c490afaaac4cf08fcb
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="the-linq-to-sql-object-model"></a>LINQ to SQL 개체 모델
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)], 개발자의 프로그래밍 언어로 표현 되는 개체 모델은 관계형 데이터베이스의 데이터 모델에 매핑됩니다. 그런 다음 개체 모델에 따라 데이터 작업이 수행됩니다.  
@@ -69,7 +71,7 @@ ms.lasthandoff: 01/17/2018
   
  다음 코드 예제에서는 `Customer` 클래스의 `Order` 속성을 보여 줍니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  [!code-csharp[DLinqObjectModel#3](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqObjectModel/cs/northwind.cs#3)]
  [!code-vb[DLinqObjectModel#3](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqObjectModel/vb/northwind.vb#3)]  
   
@@ -83,9 +85,9 @@ ms.lasthandoff: 01/17/2018
  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]은 <xref:System.Data.Linq.Mapping.FunctionAttribute> 및 <xref:System.Data.Linq.Mapping.ParameterAttribute> 특성을 사용하여 저장 프로시저와 함수를 메서드에 매핑합니다. 저장 프로시저를 나타내는 메서드와 사용자 정의 함수를 나타내는 메서드는 <xref:System.Data.Linq.Mapping.FunctionAttribute.IsComposable%2A> 속성에 의해 구별됩니다. 이 속성이 `false`(기본값)로 설정된 경우 메서드는 저장 프로시저를 나타내고 `true`로 설정된 경우 메서드는 데이터베이스 함수를 나타냅니다.  
   
 > [!NOTE]
->  [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)]를 사용하는 경우 [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)]를 통해 저장 프로시저 및 사용자 정의 함수에 매핑되는 메서드를 만들 수 있습니다.  
+>  Visual Studio를 사용 하는 경우 사용할 수 있습니다는 [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] 저장된 프로시저 및 사용자 정의 함수에 매핑되는 메서드를 만들 수 있습니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  [!code-csharp[DLinqObjectModel#4](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqObjectModel/cs/northwind.cs#4)]
  [!code-vb[DLinqObjectModel#4](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqObjectModel/vb/northwind.vb#4)]  
   

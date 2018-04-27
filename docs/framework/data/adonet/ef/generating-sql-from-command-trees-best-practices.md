@@ -1,24 +1,26 @@
 ---
-title: "명령 트리에서 SQL 생성 - 최선의 방법"
-ms.custom: 
+title: 명령 트리에서 SQL 생성 - 최선의 방법
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 71ef6a24-4c4f-4254-af3a-ffc0d855b0a8
-caps.latest.revision: "3"
+caps.latest.revision: 3
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: d68194ab83a6606337a33668470411ed8b1c6957
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: 037d1eaa8d781d012cde7a1bd3b08aa7003edd77
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="generating-sql-from-command-trees---best-practices"></a>명령 트리에서 SQL 생성 - 최선의 방법
 출력 쿼리 명령 트리는 SQL로 표현 가능한 쿼리를 유사하게 모델링합니다. 그러나 출력 명령 트리에서 SQL을 생성할 때 공급자 작성기에 대한 특정한 공통적 문제가 있습니다. 이 항목에서는 이러한 문제에 대해 설명하며, 그 다음 항목에서는 동일한 공급자가 이러한 문제를 처리하는 방법을 보여 줍니다.  
@@ -147,7 +149,7 @@ ON b.y = d.z
  식은 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]에서 전달되는 쿼리 명령 트리에서 다시 사용할 수 있습니다. 각 식이 쿼리 명령 트리에서 한 번만 나타난다고 가정하지 마십시오.  
   
 ## <a name="mapping-primitive-types"></a>기본 형식 매핑  
- 개념적(EDM) 형식을 공급자 형식에 매핑하는 경우 가능한 모든 값이 들어가도록 가장 넓은 형식(Int32)에 매핑해야 합니다. 또한 BLOB 형식과 같이 많은 작업에 사용할 수 없는 형식(예: `ntext`의 [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)])에 매핑하지 마세요.  
+ 개념적(EDM) 형식을 공급자 형식에 매핑하는 경우 가능한 모든 값이 들어가도록 가장 넓은 형식(Int32)에 매핑해야 합니다. 또한 BLOB 형식과 마찬가지로 많은 작업에 사용할 수 없는 형식에 대 한 매핑을 하지 마세요 (예를 들어 `ntext` SQL Server에서).  
   
 ## <a name="see-also"></a>참고 항목  
  [SQL 생성](../../../../../docs/framework/data/adonet/ef/sql-generation.md)
