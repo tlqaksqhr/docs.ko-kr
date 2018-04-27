@@ -20,11 +20,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 1e194a0784eb27043bbd0c127cde6883b4fafb2e
-ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
+ms.openlocfilehash: 2fa6efdc61620647d5c6318746e61e09cdde7a46
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="what-is-windows-communication-foundation"></a>Windows Communication Foundation 정의
 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 는 서비스 지향 응용 프로그램을 만드는 데 사용되는 프레임워크입니다. [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]를 사용하면 데이터를 비동기 메시지로 서비스 끝점 간에 전송할 수 있습니다. 서비스 끝점은 IIS에서 호스팅하는 계속 사용 가능한 서비스의 일부분일 수도 있고 응용 프로그램에서 호스팅되는 서비스일 수도 있습니다. 또한 끝점은 서비스 끝점에서 데이터를 요청하는 서비스의 클라이언트일 수 있습니다. 메시지는 XML로 전송되는 한 문자나 단어처럼 간단할 수도 있고 이진 데이터 스트림처럼 복잡할 수도 있습니다. 다음은 몇 가지 샘플 시나리오입니다.  
@@ -80,7 +80,7 @@ ms.lasthandoff: 04/16/2018
   
 -   **지속적 메시지**  
   
-     지속적 메시지는 통신이 중단되어도 손실되지 않는 메시지입니다. 지속적 메시지 패턴의 메시지는 항상 데이터베이스에 저장됩니다. 통신이 중단되는 경우 연결이 복원되면 데이터베이스가 메시지 교환을 다시 시작할 수 있도록 해 줍니다. [!INCLUDE[wf](../../../includes/wf-md.md)]를 사용하여 지속적 메시지를 만들 수도 있습니다. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [Workflow Services](../../../docs/framework/wcf/feature-details/workflow-services.md).  
+     지속적 메시지는 통신이 중단되어도 손실되지 않는 메시지입니다. 지속적 메시지 패턴의 메시지는 항상 데이터베이스에 저장됩니다. 통신이 중단되는 경우 연결이 복원되면 데이터베이스가 메시지 교환을 다시 시작할 수 있도록 해 줍니다. Windows WF (Workflow Foundation)를 사용 하 여 지속적 메시지를 만들 수 있습니다. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [Workflow Services](../../../docs/framework/wcf/feature-details/workflow-services.md).  
   
 -   **트랜잭션**  
   
@@ -97,7 +97,7 @@ ms.lasthandoff: 04/16/2018
 ## <a name="wcf-integration-with-other-microsoft-technologies"></a>WCF와 다른 Microsoft 기술의 통합  
  [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 는 유동적인 플랫폼입니다. 이와 같이 뛰어난 유연성으로 인해 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 는 다른 여러 Microsoft 제품에서도 사용됩니다. [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]의 기본 사항을 이해하면 이러한 제품을 사용할 때 해당 기능을 즉시 활용할 수 있습니다.  
   
- [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 와 함께 사용된 최초의 기술은 Windows WF(Workflow Foundation)입니다. 워크플로 "활동"으로 캡슐화 하는 워크플로의 단계에서 응용 프로그램 개발을 단순화 [!INCLUDE[wf2](../../../includes/wf2-md.md)]의 첫 번째 버전에서 개발자는 워크플로에 대한 호스트를 만들어야 했습니다. [!INCLUDE[wf2](../../../includes/wf2-md.md)] 의 다음 버전은 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]와 통합되었습니다. 따라서 워크플로를 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 서비스에서 쉽게 호스팅할 수 있게 되었습니다. [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)]에서 프로젝트 형식으로 WF/WCF를 선택하면 자동으로 이렇게 할 수 있습니다.  
+ [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 와 함께 사용된 최초의 기술은 Windows WF(Workflow Foundation)입니다. 워크플로 "활동"으로 캡슐화 하는 워크플로의 단계에서 응용 프로그램 개발을 단순화 Windows Workflow Foundation의 첫 번째 버전에서 개발자는 워크플로에 대 한 호스트를 만들어야 했습니다. 다음 버전의 Windows Workflow Foundation와 통합 되었습니다 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]합니다. 따라서 워크플로를 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 서비스에서 쉽게 호스팅할 수 있게 되었습니다. [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)]에서 프로젝트 형식으로 WF/WCF를 선택하면 자동으로 이렇게 할 수 있습니다.  
   
  Microsoft BizTalk Server R2에서도 통신 기술로 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 를 활용합니다. BizTalk는 표준화된 형식 간에 데이터를 전송 및 수신하도록 디자인되었습니다. 메시지는 중앙의 메시지 상자로 배달되어야 하며, 여기서 엄격한 매핑을 사용하거나 워크플로 엔진과 같은 BizTalk 기능 중 하나를 사용하여 메시지를 변환할 수 있습니다. 이제 BizTalk에서는 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] LOB(기간 업무) 어댑터를 사용하여 메시지를 메시지 상자로 배달할 수 있습니다.  
   

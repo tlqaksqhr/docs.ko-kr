@@ -1,13 +1,13 @@
 ---
-title: "WS-I Basic Profile 1.1 상호 운용할 수 있는 서비스 만들기"
-ms.custom: 
+title: WS-I Basic Profile 1.1 상호 운용할 수 있는 서비스 만들기
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,17 +15,17 @@ dev_langs:
 helpviewer_keywords:
 - configuration [WCF], interoperable services
 ms.assetid: 91b70a21-8f5c-4679-808c-2ed5fa6b2013
-caps.latest.revision: 
+caps.latest.revision: 8
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: d6bef68c8ba433e902cfd50e59a3b343e3af08cd
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: fa561e5019bcf90e93da669f93cbce51d02e89dc
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="creating-ws-i-basic-profile-11-interoperable-services"></a>WS-I Basic Profile 1.1 상호 운용할 수 있는 서비스 만들기
 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 서비스 끝점을 [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] 웹 서비스 클라이언트와 상호 운용할 수 있도록 구성하려면  
@@ -42,9 +42,9 @@ ms.lasthandoff: 01/19/2018
   
 -   <xref:System.ServiceModel.BasicHttpBinding.Security%2A?displayProperty=nameWithType> 값을 사용하여 제어하는 메시지 보안에서는 WS-I Basic Security Profile 1.0과 호환되는 WS-Security를 지원합니다. WS-Security를 사용하지 않으려면 이 속성을 기본값인 <xref:System.ServiceModel.SecurityMode.Transport?displayProperty=nameWithType>로 둡니다.  
   
- 에 대 한 메타 데이터를 확인 하는 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 를 사용할 수 있는 서비스 [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)], 웹 서비스 클라이언트 생성 도구를 사용 하 여: [웹 서비스 설명 언어 도구 (Wsdl.exe)](http://msdn.microsoft.com/library/b9210348-8bc2-4367-8c91-d1a04b403e88), [웹 서비스 검색 도구 ( Disco.exe)](http://msdn.microsoft.com/library/acd88078-c581-42bc-94ca-6633e2851979), 및 `Add Web Reference` 기능 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]; 메타 데이터 게시를 사용 하도록 설정 해야 합니다. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][메타 데이터 끝점 게시](../../../docs/framework/wcf/publishing-metadata-endpoints.md)합니다.  
+ 에 대 한 메타 데이터를 확인 하는 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 를 사용할 수 있는 서비스 [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)], 웹 서비스 클라이언트 생성 도구를 사용 하 여: [웹 서비스 설명 언어 도구 (Wsdl.exe)](http://msdn.microsoft.com/library/b9210348-8bc2-4367-8c91-d1a04b403e88), [웹 서비스 검색 도구 ( Disco.exe)](http://msdn.microsoft.com/library/acd88078-c581-42bc-94ca-6633e2851979), 및 `Add Web Reference` Visual Studio에서 기능; 메타 데이터 게시를 사용 하도록 설정 해야 합니다. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [메타 데이터 끝점 게시](../../../docs/framework/wcf/publishing-metadata-endpoints.md)합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
   
 ### <a name="description"></a>설명  
  다음 예제 코드에 추가 하는 방법을 보여 줍니다는 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 와 호환 되는 끝점 [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] 웹 서비스 클라이언트 코드에서 또는 구성 파일에 있습니다.  

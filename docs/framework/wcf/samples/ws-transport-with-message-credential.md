@@ -1,24 +1,26 @@
 ---
 title: WS Transport With Message Credential
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 0d092f3a-b309-439b-920b-66d8f46a0e3c
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: f782ac12c92755eb26eddd30c5d8c15168c35858
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 7b954e2d19f601476876beef6482ca10eb3f113b
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="ws-transport-with-message-credential"></a>WS Transport With Message Credential
 이 샘플에서는 메시지로 전달되는 클라이언트 자격 증명과 SSL 전송 보안을 조합하여 사용하는 방법을 보여 줍니다. 이 샘플에서는 `wsHttpBinding` 바인딩을 사용합니다.  
@@ -33,15 +35,15 @@ ms.lasthandoff: 12/22/2017
 >  이 샘플의 설치 절차 및 빌드 지침은 이 항목의 끝부분에 나와 있습니다.  
   
  이 샘플에 있는 프로그램 코드는 거의 동일 합니다는 [시작](../../../../docs/framework/wcf/samples/getting-started-sample.md) 서비스입니다. 서비스 계약에서 제공되는 추가 작업으로 `GetCallerIdentity`가 있습니다. 이 작업에서는 호출자의 ID 이름을 호출자에게 반환합니다.  
-  
-```  
+
+```csharp
 public string GetCallerIdentity()  
 {  
     // Use ServiceSecurityContext.WindowsIdentity to get the name of the caller.  
     return ServiceSecurityContext.Current.WindowsIdentity.Name;  
 }  
-```  
-  
+```
+
  샘플을 빌드하고 실행하기 전에 Web Server Certificate Wizard를 사용하여 인증서를 만들고 할당해야 합니다. 구성 파일 설정의 끝점 정의와 바인딩 정의를 사용하면 클라이언트의 다음 샘플 구성에 표시된 것과 같이 `TransportWithMessageCredential` 보안 모드를 활성화할 수 있습니다.  
   
 ```xml  
@@ -72,13 +74,13 @@ public string GetCallerIdentity()
   
  지정된 주소에서는 https:// 체계를 사용합니다. 바인딩 구성에서는 보안 모드를 `TransportWithMessageCredential`로 설정합니다. 서비스의 Web.config 파일에도 같은 보안 모드를 지정해야 합니다.  
   
- 이 샘플에 사용된 인증서는 Makecert.exe를 사용하여 만든 테스트 인증서이므로 브라우저에서 https://localhost/servicemodelsamples/service.svc와 같은 https: 주소에 액세스하려 하면 보안 경고가 나타납니다. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 클라이언트에서 제공되는 테스트 인증서를 사용하여 작업을 수행할 수 있도록 클라이언트에 추가 코드를 추가하여 보안 경고가 나타나지 않게 합니다. 이 코드 및 함께 사용되는 클래스는 프로덕션 인증서를 사용할 때에는 필요가 없습니다.  
-  
-```  
+ Https에 액세스 하려고 할 때 보안 경고가 나타납니다이 샘플에 사용 된 인증서는 Makecert.exe를 사용 하 여 만든 테스트 인증서 이므로: 주소, https://localhost/servicemodelsamples/service.svc, 브라우저에서 합니다. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 클라이언트에서 제공되는 테스트 인증서를 사용하여 작업을 수행할 수 있도록 클라이언트에 추가 코드를 추가하여 보안 경고가 나타나지 않게 합니다. 이 코드 및 함께 사용되는 클래스는 프로덕션 인증서를 사용할 때에는 필요가 없습니다.  
+
+```csharp
 // WARNING: This code is only needed for test certificates such as those created by makecert. It is   
 // not recommended for production code.  
 PermissiveCertificatePolicy.Enact("CN=ServiceModelSamples-HTTPS-Server");  
-```  
+```
   
  샘플을 실행하면 작업 요청 및 응답이 클라이언트 콘솔 창에 표시됩니다. 클라이언트를 종료하려면 클라이언트 창에서 Enter 키를 누릅니다.  
   

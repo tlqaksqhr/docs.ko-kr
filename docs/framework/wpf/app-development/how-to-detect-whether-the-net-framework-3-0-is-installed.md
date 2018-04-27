@@ -20,21 +20,21 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 48295a187870340948b045a64b852f1e6fdc1a65
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: dfa5eb8ec1e4f9f2eeeb142670b92d5ec35ab6cf
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="how-to-detect-whether-the-net-framework-30-is-installed"></a>방법: .NET Framework 3.0 설치 여부 확인
-배포 하려면 관리자 [!INCLUDE[TLA#tla_avalonwinfx](../../../../includes/tlasharptla-avalonwinfx-md.md)] 응용 프로그램 시스템에서는 먼저 확인 해야 하는 [!INCLUDE[TLA2#tla_avalonwinfx](../../../../includes/tla2sharptla-avalonwinfx-md.md)] 런타임이 있는지 합니다. 이 항목에서는 작성 된 스크립트 관리자가 결정 하는 데 사용할 수 있는 HTML/javascript 여부 [!INCLUDE[TLA2#tla_avalonwinfx](../../../../includes/tla2sharptla-avalonwinfx-md.md)] 는 시스템에 있습니다.  
+관리자가 시스템에서 Microsoft.NET Framework 응용 프로그램을 배포 하려면 먼저.NET Framework 런타임에서 존재 하는지 먼저 확인 해야 합니다. 이 항목에서는 HTML/JavaScript로 작성 된 스크립트를 관리자는 시스템에.NET Framework 되는지 확인 하려면 사용할 수 있습니다.  
   
 > [!NOTE]
 >  자세한 내용은 설치 하는 방법, 배포 및 Microsoft.NET Framework 검색에서 참조 [배포 Microsoft.NET Framework 버전 3.0](http://go.microsoft.com/fwlink/?LinkId=96739)합니다.  
   
 <a name="content_expiration"></a>   
 ## <a name="detect-the-net-clr-user-agent-string"></a>".NET CLR" 사용자 에이전트 문자열 검색  
- 때 [!INCLUDE[TLA2#tla_avalonwinfx](../../../../includes/tla2sharptla-avalonwinfx-md.md)] 가 설치 된 MSI ".NET CLR" 및 버전 번호를 추가 UserAgent 문자열입니다. 다음 예제에서는 간단한 HTML 페이지에 포함 된 스크립트를 보여 줍니다. 확인 하려면 UserAgent 문자열을 검색 하는 스크립트 여부 [!INCLUDE[TLA2#tla_avalonwinfx](../../../../includes/tla2sharptla-avalonwinfx-md.md)] 설치 되 고 검색 결과에 상태 메시지를 표시 합니다.  
+ .NET Framework 설치 되 면 MSI ".NET CLR" 및 버전 번호는 UserAgent 문자열에 추가 합니다. 다음 예제에서는 간단한 HTML 페이지에 포함 된 스크립트를 보여 줍니다. .NET Framework가 설치 되어 있는지 확인 하는 검색 결과에 상태 메시지를 표시 하려면 UserAgent 문자열을 검색 하는 스크립트입니다.  
   
 ```  
 <HTML>  

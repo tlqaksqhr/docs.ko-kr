@@ -1,36 +1,36 @@
 ---
-title: "SplitContainer 컨트롤 개요(Windows Forms)"
-ms.custom: 
+title: SplitContainer 컨트롤 개요(Windows Forms)
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-winforms
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - SplitContainer
 helpviewer_keywords:
 - SplitContainer control [Windows Forms], about SplitContainer control
 ms.assetid: 6de5a5f7-97a5-402d-be6d-7e2785483db5
-caps.latest.revision: 
+caps.latest.revision: 11
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 7d2e538241cca8288158628df777895fae9aa756
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: a553ea1b6dae24b4a0c3bd169edccbd9b52c5203
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="splitcontainer-control-overview-windows-forms"></a>SplitContainer 컨트롤 개요(Windows Forms)
 Windows Forms <xref:System.Windows.Forms.SplitContainer> 컨트롤은 복합으로 간주될 수 있습니다. 이동 가능한 막대로 구분된 두 개의 패널입니다. 마우스 포인터가 막대 위에 있으면 포인터 모양이 변경되어 막대를 이동할 수 있음을 표시합니다.  
   
 > [!IMPORTANT]
->  에 **도구 상자**, <xref:System.Windows.Forms.SplitContainer> 대체 제어는 <xref:System.Windows.Forms.Splitter> 컨트롤의 이전 버전에 있던 [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)]합니다. <xref:System.Windows.Forms.SplitContainer> 컨트롤이 <xref:System.Windows.Forms.Splitter> 컨트롤보다 훨씬 선호됩니다. <xref:System.Windows.Forms.Splitter> 클래스에 여전히 포함 되어는 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 기존 응용 프로그램과 호환성에 대 한 하지만 좋습니다 사용 하 여 <xref:System.Windows.Forms.SplitContainer> 새 프로젝트에 대 한 제어 합니다.  
+>  에 **도구 상자**, <xref:System.Windows.Forms.SplitContainer> 대체 제어는 <xref:System.Windows.Forms.Splitter> 이전 버전의 Visual Studio에 있던 제어 합니다. <xref:System.Windows.Forms.SplitContainer> 컨트롤이 <xref:System.Windows.Forms.Splitter> 컨트롤보다 훨씬 선호됩니다. <xref:System.Windows.Forms.Splitter> 클래스에 여전히 포함 되어는 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 기존 응용 프로그램과 호환성에 대 한 하지만 좋습니다 사용 하 여 <xref:System.Windows.Forms.SplitContainer> 새 프로젝트에 대 한 제어 합니다.  
   
  와 <xref:System.Windows.Forms.SplitContainer> 컨트롤, 복잡 한 사용자 인터페이스를 만들 수 있습니다; 다른 패널에 표시 되는 개체가 한 패널에서 선택한 항목을 결정 하는 경우가 많습니다. 이 정렬은 정보를 표시하고 찾는 데 매우 효율적입니다. 두 개의 패널 수 있는 영역에 정보를 집계 하 고 막대 또는 "분할자"를 통해 사용자가 쉽게 패널 크기 조정 하 합니다.  
   
@@ -59,8 +59,8 @@ Windows Forms <xref:System.Windows.Forms.SplitContainer> 컨트롤은 복합으�
 |<xref:System.Windows.Forms.SplitContainer.SplitterDistance%2A> 속성|이동할 수 있는 분할 막대를 왼쪽 또는 위쪽 가장자리에서 픽셀 거리를 결정합니다.|  
 |<xref:System.Windows.Forms.SplitContainer.SplitterIncrement%2A> 속성|최소 거리 (픽셀)를 사용자가 분할자를 이동할 수 있는지를 결정 합니다.|  
 |<xref:System.Windows.Forms.SplitContainer.SplitterWidth%2A> 속성|분할자의 픽셀 단위로 두께 결정합니다.|  
-|<xref:System.Windows.Forms.SplitContainer.SplitterMoving>이벤트|분할자 이동 하는 경우 발생 합니다.|  
-|<xref:System.Windows.Forms.SplitContainer.SplitterMoved>이벤트|분할 자가 이동한 때 발생 합니다.|  
+|<xref:System.Windows.Forms.SplitContainer.SplitterMoving> 이벤트|분할자 이동 하는 경우 발생 합니다.|  
+|<xref:System.Windows.Forms.SplitContainer.SplitterMoved> 이벤트|분할 자가 이동한 때 발생 합니다.|  
   
 ## <a name="see-also"></a>참고 항목  
  <xref:System.Windows.Forms.SplitContainer>  

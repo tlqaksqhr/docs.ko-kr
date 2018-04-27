@@ -1,28 +1,30 @@
 ---
-title: "자동화된 테스트를 위해 UI 자동화 사용"
-ms.custom: 
+title: 자동화된 테스트를 위해 UI 자동화 사용
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-bcl
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-bcl
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - automated testing
 - testing, UI Automation
 - UI Automation, automated testing
 ms.assetid: 3a0435c0-a791-4ad7-ba92-a4c1d1231fde
-caps.latest.revision: "26"
+caps.latest.revision: 26
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: 128af9a015d25985b7075f5b670fea36c6773267
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 6539829feacf8c9a5c9c1339df299a21ac5fe64f
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="using-ui-automation-for-automated-testing"></a>자동화된 테스트를 위해 UI 자동화 사용
 > [!NOTE]
@@ -50,7 +52,7 @@ ms.lasthandoff: 12/22/2017
   
 <a name="Implementing_UI_Automation"></a>   
 ### <a name="implementing-ui-automation"></a>UI 자동화 구현  
- 앞에서 언급했듯이, [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]에서 제공되는 통합된 모델을 사용하지 않고 테스트 도구와 개발자는 프레임워크에서 컨트롤의 속성과 동작을 노출하기 위해서는 프레임워크 관련 정보를 알아야 합니다. [!INCLUDE[TLA2#tla_win](../../../includes/tla2sharptla-win-md.md)] , [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)]및 [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)]를 비롯하여, [!INCLUDE[TLA#tla_wpf](../../../includes/tlasharptla-wpf-md.md)]운영 체제 내에는 언제든지 여러 개의 다른 UI 프레임워크가 있을 수 있으므로 비슷한 컨트롤이 포함된 여러 응용 프로그램을 테스트하는 것은 어려울 수 있습니다. 예를 들어, 다음 표에서는 단추 컨트롤과 연결된 이름 (또는 텍스트)를 검색하는 데 필요한 프레임워크 관련 속성 이름에 대해 간략하게 설명하고 해당되는 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 속성 하나를 보여 줍니다.  
+ 앞에서 언급했듯이, [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]에서 제공되는 통합된 모델을 사용하지 않고 테스트 도구와 개발자는 프레임워크에서 컨트롤의 속성과 동작을 노출하기 위해서는 프레임워크 관련 정보를 알아야 합니다. 포함 하 여 여러 다른 UI 프레임 워크는 언제 든 지 Windows 운영 체제 내에서 표시 될 수 있으므로 [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)], [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)], 및 [!INCLUDE[TLA#tla_wpf](../../../includes/tlasharptla-wpf-md.md)], 비슷해 보이는 컨트롤이 있는 여러 개의 응용 프로그램을 테스트 하는 것이 어려울 수 있습니다 . 예를 들어, 다음 표에서는 단추 컨트롤과 연결된 이름 (또는 텍스트)를 검색하는 데 필요한 프레임워크 관련 속성 이름에 대해 간략하게 설명하고 해당되는 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 속성 하나를 보여 줍니다.  
   
 |UI 자동화 컨트롤 형식|UI 프레임워크|프레임워크 관련 속성|UI 자동화 속성|  
 |--------------------------------|------------------|---------------------------------|----------------------------|  

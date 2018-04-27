@@ -1,10 +1,11 @@
 ---
-title: "Module 문"
+title: Module 문
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 f1_keywords:
 - Module
@@ -18,21 +19,21 @@ helpviewer_keywords:
 - classes [Visual Basic], vs. modules
 - declarations [Visual Basic], modules
 ms.assetid: a1243afc-14a5-45df-95d5-51118aeac362
-caps.latest.revision: "24"
+caps.latest.revision: 24
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 92cdcd1919f21243118108da3bc382ea5d954130
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 51f8fd063449c072a69cdffd9f6ce2a96cc3f68c
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="module-statement"></a>Module 문
 모듈의 이름을 선언 하 고 변수, 속성, 이벤트 및 모듈을 구성 하는 프로시저의 정의 소개 합니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```vb 
 [ <attributelist> ] [ accessmodifier ]  Module name  
     [ statements ]  
 End Module  
@@ -52,7 +53,7 @@ End Module
  참조 [액세스 수준을 Visual Basic의](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)합니다.  
   
  `name`  
- 필수 요소. 이 모듈의 이름입니다. 참조 [선언 된 요소 이름](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)합니다.  
+ 필수. 이 모듈의 이름입니다. 참조 [선언 된 요소 이름](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)합니다.  
   
  `statements`  
  선택 사항입니다. 변수, 속성, 이벤트, 프로시저 및이 모듈의 중첩된 형식을 정의 하는 문입니다.  

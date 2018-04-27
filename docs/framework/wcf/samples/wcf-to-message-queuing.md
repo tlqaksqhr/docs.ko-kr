@@ -1,31 +1,33 @@
 ---
-title: "Windows Communication Foundation에서 메시지 큐로"
-ms.custom: 
+title: Windows Communication Foundation에서 메시지 큐로
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 78d0d0c9-648e-4d4a-8f0a-14d9cafeead9
-caps.latest.revision: "32"
+caps.latest.revision: 32
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 90013752ed03f24c0995bc837efde5f20bf272c6
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: f2ea59c7f1ef2ac6f22500a13eb9bb4456149b7c
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="windows-communication-foundation-to-message-queuing"></a>Windows Communication Foundation에서 메시지 큐로
 이 샘플에서는 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 응용 프로그램에서 MSMQ(메시지 큐) 응용 프로그램으로 메시지를 보내는 방법을 보여 줍니다. 이 서비스는 자체적으로 호스트되는 콘솔 응용 프로그램으로서 이를 사용하여 서비스에서 대기된 메시지를 받는 것을 볼 수 있습니다. 서비스 및 클라이언트가 동시에 실행될 필요는 없습니다.  
   
  서비스는 큐로부터 메시지를 받아 주문을 처리합니다. 다음 샘플 코드에서 보여 주는 것처럼 서비스는 트랜잭션 큐를 만들고 메시지 수신 메시지 처리기를 설정합니다.  
-  
-```  
+
+```csharp
 static void Main(string[] args)  
 {  
     if (!MessageQueue.Exists(  
@@ -41,11 +43,11 @@ static void Main(string[] args)
     Console.WriteLine("Order Service is running");  
     Console.ReadLine();  
 }  
-```  
-  
+```
+
  큐에 메시지가 수신되면 메시지 처리기 `ProcessOrder`가 호출됩니다.  
-  
-```  
+
+```csharp
 public static void ProcessOrder(Object source,  
     ReceiveCompletedEventArgs asyncResult)  
 {  
@@ -70,8 +72,8 @@ public static void ProcessOrder(Object source,
     }  
   
 }  
-```  
-  
+```
+
  서비스는 MSMQ 메시지 본문으로부터 `ProcessOrder`를 추출하고 주문을 처리합니다.  
   
  다음 샘플 구성에서 보여 주는 것처럼 MSMQ 큐 이름은 구성 파일의 appSettings 섹션에 지정됩니다.  
@@ -86,8 +88,8 @@ public static void ProcessOrder(Object source,
 >  큐 이름은 로컬 컴퓨터에 점(.)을, 그 경로에는 백슬래시 구분 기호를 사용합니다.  
   
  다음 샘플 코드에서 보여 주는 것처럼 클라이언트가 구매 주문을 만들고 트랜잭션 범위 내에서 구매 주문을 제출합니다.  
-  
-```  
+
+```csharp
 // Create the purchase order  
 PurchaseOrder po = new PurchaseOrder();  
 // Fill in the details  
@@ -105,13 +107,13 @@ Console.WriteLine("Order has been submitted:{0}", po);
   
 //Closing the client gracefully closes the connection and cleans up resources  
 client.Close();  
-```  
-  
+```
+
  클라이언트는 큐에 MSMQ 메시지를 보내기 위해 사용자 지정 클라이언트를 사용합니다. 메시지를 받아 처리하는 응용 프로그램은 MSMQ 응용 프로그램이고 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 응용 프로그램이 아니기 때문에 두 응용 프로그램 사이에 암시적인 서비스 계약은 없습니다. 따라서 이 시나리오에서는 Svcutil.exe 도구를 사용하여 프록시를 만들 수 없습니다.  
   
  사용자 지정 클라이언트는 실질적으로 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 바인딩을 사용하여 메시지를 보내는 모든 `MsmqIntegration` 응용 프로그램에서 동일합니다. 다른 클라이언트와 달리, 여기에는 서비스 작업 범위가 포함되지 않으며 메시지 제출 작업으로만 한정됩니다.  
-  
-```  
+
+```csharp
 [System.ServiceModel.ServiceContractAttribute(Namespace = "http://Microsoft.ServiceModel.Samples")]  
 public interface IOrderProcessor  
 {  
@@ -136,8 +138,8 @@ public partial class OrderProcessorClient : System.ServiceModel.ClientBase<IOrde
         base.Channel.SubmitPurchaseOrder(msg);  
     }  
 }  
-```  
-  
+```
+
  샘플을 실행하면 클라이언트 및 서비스 동작이 서비스 콘솔 창과 클라이언트 콘솔 창에 모두 표시됩니다. 서비스에서 클라이언트가 보내는 메시지를 받는 것을 볼 수 있습니다. 서비스와 클라이언트를 종료하려면 각 콘솔 창에서 Enter 키를 누릅니다. 큐를 사용하므로 클라이언트와 서비스가 동시에 실행 중일 필요는 없습니다. 예를 들어 클라이언트를 실행하고 종료한 다음 서비스를 다시 시작해도 메시지를 받을 수 있습니다.  
   
 > [!NOTE]

@@ -1,24 +1,25 @@
 ---
-title: "My에 사용할 수 있는 개체 사용자 지정(Visual Basic)"
+title: My에 사용할 수 있는 개체 사용자 지정(Visual Basic)
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-visual-basic
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - My namespace [Visual Basic], customizing
 - My namespace
 ms.assetid: 4e8279c2-ed5b-4681-8903-8a6671874000
-caps.latest.revision: "12"
+caps.latest.revision: 12
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: e5f5be7481ee102074fe1236b91110ee6b1d2944
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 669641a2b6ecbf988f6cad68acf52c5561b32515
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="customizing-which-objects-are-available-in-my-visual-basic"></a>My에 사용할 수 있는 개체 사용자 지정(Visual Basic)
-이 여기서는를 제어 하는 방법에 대해 설명 `My` 개체는 프로젝트의 설정 하 여 활성화 되어 `_MYTYPE` 조건부 컴파일 상수입니다. [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] 통합 개발 환경 (IDE) 유지는 `_MYTYPE` 동기화 된 프로젝트의 형식을 프로젝트에 대 한 조건부 컴파일 상수입니다.  
+이 여기서는를 제어 하는 방법에 대해 설명 `My` 개체는 프로젝트의 설정 하 여 활성화 되어 `_MYTYPE` 조건부 컴파일 상수입니다. Visual Studio 통합 개발 환경 (IDE) 유지는 `_MYTYPE` 동기화 된 프로젝트의 형식을 프로젝트에 대 한 조건부 컴파일 상수입니다.  
   
 ## <a name="predefined-mytype-values"></a>미리 정의 된 _MYTYPE 값  
  사용 해야 합니다는 `/define` 컴파일러 옵션을 설정 하려면는 `_MYTYPE` 조건부 컴파일 상수입니다. 에 대 한 값을 지정 하는 경우는 `_MYTYPE` 상수를 문자열 값에에서 묶어야 백슬래시/따옴표 (\\") 시퀀스입니다. 예를 들어 사용할 수 있습니다.  
@@ -36,7 +37,7 @@ ms.lasthandoff: 11/21/2017
 |웹|"웹"|  
 |웹 컨트롤 라이브러리|"WebControl"|  
 |Windows 응용 프로그램|"WindowsForms"|  
-|Windows 응용 프로그램을 사용자 지정을 시작할 때`Sub Main`|"WindowsFormsWithCustomSubMain"|  
+|Windows 응용 프로그램을 사용자 지정을 시작할 때 `Sub Main`|"WindowsFormsWithCustomSubMain"|  
 |Windows 컨트롤 라이브러리|"Windows"|  
 |Windows 서비스|"Console"|  
 |Empty|"Empty"|  
@@ -49,14 +50,14 @@ ms.lasthandoff: 11/21/2017
   
 |_MYTYPE|_MYAPPLICATIONTYPE|_MYCOMPUTERTYPE|_MYFORMS|_MYUSERTYPE|_MYWEBSERVICES|  
 |--------------|-------------------------|----------------------|---------------|------------------|---------------------|  
-|"Console"|"Console"|"Windows"|정의 되지 않은|"Windows"|TRUE|  
-|"Custom"|정의 되지 않은|정의 되지 않은|정의 되지 않은|정의 되지 않은|정의 되지 않은|  
-|"Empty"|정의 되지 않은|정의 되지 않은|정의 되지 않은|정의 되지 않은|정의 되지 않은|  
-|"웹"|정의 되지 않은|"웹"|FALSE|"웹"|FALSE|  
-|"WebControl"|정의 되지 않은|"웹"|FALSE|"웹"|TRUE|  
-|"Windows" 또는 ""|"Windows"|"Windows"|정의 되지 않은|"Windows"|TRUE|  
-|"WindowsForms"|"WindowsForms"|"Windows"|TRUE|"Windows"|TRUE|  
-|"WindowsFormsWithCustomSubMain"|"Console"|"Windows"|TRUE|"Windows"|TRUE|  
+|"Console"|"Console"|"Windows"|Undefined|"Windows"|true|  
+|"Custom"|Undefined|Undefined|Undefined|Undefined|Undefined|  
+|"Empty"|Undefined|Undefined|Undefined|Undefined|Undefined|  
+|"웹"|Undefined|"웹"|false|"웹"|false|  
+|"WebControl"|Undefined|"웹"|false|"웹"|true|  
+|"Windows" 또는 ""|"Windows"|"Windows"|Undefined|"Windows"|TRUE|  
+|"WindowsForms"|"WindowsForms"|"Windows"|TRUE|"Windows"|true|  
+|"WindowsFormsWithCustomSubMain"|"Console"|"Windows"|TRUE|"Windows"|true|  
   
  기본적으로 정의 되지 않은 조건부 컴파일 상수를 확인 `FALSE`합니다. 기본 동작을 재정의 하도록 프로젝트를 컴파일할 때 정의 되지 않은 상수에 대 한 값을 지정할 수 있습니다.  
   

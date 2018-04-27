@@ -1,24 +1,26 @@
 ---
-title: "WS 2007 페더레이션 HTTP 바인딩"
-ms.custom: 
+title: WS 2007 페더레이션 HTTP 바인딩
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 91c1b477-a96e-4bf5-9330-5e9312113371
-caps.latest.revision: "23"
+caps.latest.revision: 23
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 8b04984ad1e21da4bc86760046029d3b94b70758
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: b7126e4c0c293bfbf78cecf97cc13ea91e6c0c62
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="ws-2007-federation-http-binding"></a>WS 2007 페더레이션 HTTP 바인딩
 이 샘플에서는 버전 1.3의 WS-Trust 사양을 지원하는 페더레이션 시나리오를 작성하는 데 사용할 수 있는 표준 바인딩인 <xref:System.ServiceModel.WS2007FederationHttpBinding>을 보여 줍니다.  
@@ -108,17 +110,15 @@ ms.lasthandoff: 12/22/2017
  STS는 표준 <xref:System.ServiceModel.WS2007HttpBinding>을 사용하여 단일 끝점을 사용할 수 있게 만듭니다. 서비스는 토큰에 대한 클라이언트의 요청에 응답합니다. 클라이언트가 Windows 계정을 사용하여 인증될 경우 서비스는 클라이언트의 사용자 이름을 클레임으로 포함하는 토큰을 발급합니다. 토큰을 만드는 도중에 STS는 CN=STS 인증서와 연관된 개인 키를 사용하여 토큰에 서명합니다. 또한 대칭 키를 만들고 CN=localhost 인증서와 연관된 공개 키를 사용하여 이를 암호화합니다. 토큰을 클라이언트에게 반환할 때 STS는 대칭 키도 반환합니다. 클라이언트는 발급된 토큰을 `ICalculator` 서비스에 제공하고 대칭 키로 메시지에 서명하여 해당 키를 알고 있음을 증명합니다.  
   
  샘플을 실행하면 보안 토큰에 대한 요청이 STS 콘솔 창에 표시되고 작업의 요청과 응답이 클라이언트 및 서비스 콘솔 창에 표시됩니다. 응용 프로그램을 종료하려면 아무 콘솔 창에서나 Enter 키를 누릅니다.  
-  
- `Add(100,15.99) = 115.99`  
-  
- `Subtract(145,76.54) = 68.46`  
-  
- `Multiply(9,81.25) = 731.25`  
-  
- `Divide(22,7) = 3.14285714285714`  
-  
- `Press <ENTER> to terminate client.`  
-  
+
+```
+Add(100,15.99) = 115.99
+Subtract(145,76.54) = 68.46
+Multiply(9,81.25) = 731.25
+Divide(22,7) = 3.14285714285714
+Press <ENTER> to terminate client.
+```
+
  이 샘플에 포함된 Setup.bat 파일을 사용하면 자체 호스팅 응용 프로그램을 실행하도록 관련 인증서가 있는 서버 및 STS를 구성할 수 있습니다. 배치 파일은 LocalMachine/TrustedPeople 인증서 저장소에서 두 개의 인증서를 만듭니다. 주체 이름 CN=STS를 가지는 첫 번째 인증서는 클라이언트에 발급되는 보안 토큰에 서명하기 위해 STS에 사용됩니다. 주체 이름 CN=localhost를 가지는 두 번째 인증서는 서비스에서 해독할 수 있도록 STS에서 키를 암호화할 때 사용됩니다.  
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>샘플을 설치, 빌드 및 실행하려면  

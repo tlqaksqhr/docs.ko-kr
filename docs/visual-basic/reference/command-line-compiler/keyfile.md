@@ -13,11 +13,11 @@ helpviewer_keywords:
 ms.assetid: ffa82a4b-517a-4c6c-9889-5bae7b534bb8
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 02169f1f43ba93b68dc47f5bad038b78d3635a80
-ms.sourcegitcommit: 498799639937c89de777361aab74261efe7b79ea
+ms.openlocfilehash: 319d01e8162dbc3806b0d9ba59e90410acb1acd5
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="-keyfile"></a>-keyfile
 어셈블리에 강력한 이름을 지정하는 키 또는 키 쌍이 포함된 파일을 지정합니다.  
@@ -48,7 +48,7 @@ ms.lasthandoff: 03/22/2018
  참조 [and using strong-named Assemblies](../../../framework/app-domains/create-and-use-strong-named-assemblies.md) 어셈블리 서명에 대 한 자세한 내용은 합니다.  
   
 > [!NOTE]
->  `-keyfile` 옵션 내에서 사용할 수 없는 [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] 개발 환경; 명령줄에서 컴파일할 경우에 사용 가능 합니다.  
+>  `-keyfile` 옵션은 Visual Studio 개발 환경 내에서 사용할 수 없습니다; 명령줄에서 컴파일할 경우에 사용할 수는 있습니다.  
   
 ## <a name="example"></a>예제  
  다음 코드는 소스 파일을 컴파일하 `Input.vb` 및 키 파일을 지정 합니다.  

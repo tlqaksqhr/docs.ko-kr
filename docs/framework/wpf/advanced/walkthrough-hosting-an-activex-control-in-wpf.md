@@ -1,12 +1,13 @@
 ---
-title: "연습: WPF에서 ActiveX 컨트롤 호스팅"
-ms.custom: 
+title: '연습: WPF에서 ActiveX 컨트롤 호스팅'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,16 +16,17 @@ helpviewer_keywords:
 - ActiveX controls [WPF interoperability]
 - hosting ActiveX controls [WPF]
 ms.assetid: 1931d292-0dd1-434f-963c-dcda7638d75a
-caps.latest.revision: "30"
+caps.latest.revision: 30
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: b0e85c715db30c6e577980376d25d56238e2835a
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: fc4f577da04fb8ed15bae3c0497b35803a46f08f
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="walkthrough-hosting-an-activex-control-in-wpf"></a>연습: WPF에서 ActiveX 컨트롤 호스팅
 향상 된 상호 작용할 수 있도록 브라우저를 사용할 수 있습니다 [!INCLUDE[TLA#tla_actx](../../../../includes/tlasharptla-actx-md.md)] 의 제어 프로그램 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-기반 응용 프로그램입니다. 이 연습에서는 호스팅하는 방법을 보여 줍니다.는 [!INCLUDE[TLA#tla_wmp](../../../../includes/tlasharptla-wmp-md.md)] 의 컨트롤로 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 페이지.  
@@ -39,10 +41,10 @@ ms.lasthandoff: 01/19/2018
   
  사용 하는 방법을 이해 하 게이 연습을 완료 하는 경우 [!INCLUDE[TLA#tla_actx](../../../../includes/tlasharptla-actx-md.md)] 의 제어 프로그램 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-기반 응용 프로그램입니다.  
   
-## <a name="prerequisites"></a>필수 구성 요소  
+## <a name="prerequisites"></a>전제 조건  
  이 연습을 완료하려면 다음 구성 요소가 필요합니다.  
   
--   [!INCLUDE[TLA#tla_wmp](../../../../includes/tlasharptla-wmp-md.md)]컴퓨터에 설치 되어 있는 [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] 가 설치 되어 있습니다.  
+-   [!INCLUDE[TLA#tla_wmp](../../../../includes/tlasharptla-wmp-md.md)] Visual Studio가 설치 된 컴퓨터에 설치 합니다.  
   
 -   [!INCLUDE[vs_dev10_long](../../../../includes/vs-dev10-long-md.md)].  
   
@@ -71,7 +73,7 @@ ms.lasthandoff: 01/19/2018
 9. 모든 참조는 메시지가 클릭 **예**합니다.  
   
 ## <a name="creating-the-activex-control"></a>ActiveX 컨트롤 만들기  
- [!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)]자동으로 생성 한 <xref:System.Windows.Forms.AxHost> 에 대 한 래퍼 클래스는 [!INCLUDE[TLA#tla_actx](../../../../includes/tlasharptla-actx-md.md)] 컨트롤 디자인 화면에 추가 된 경우를 제어 합니다. 다음 절차는 AxInterop.WMPLib.dll 이라는 관리 되는 어셈블리를 만듭니다.  
+ [!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)] 자동으로 생성 한 <xref:System.Windows.Forms.AxHost> 에 대 한 래퍼 클래스는 [!INCLUDE[TLA#tla_actx](../../../../includes/tlasharptla-actx-md.md)] 컨트롤 디자인 화면에 추가 된 경우를 제어 합니다. 다음 절차는 AxInterop.WMPLib.dll 이라는 관리 되는 어셈블리를 만듭니다.  
   
 #### <a name="to-create-the-activex-control"></a>ActiveX 컨트롤을 만들려면  
   

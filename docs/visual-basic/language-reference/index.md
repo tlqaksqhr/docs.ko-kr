@@ -17,11 +17,11 @@ ms.assetid: 5c6bd31a-9542-4f3e-bfd5-e951af58f0f2
 caps.latest.revision: 17
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: f65df8469ecfbc1296963f95eefbb29068f1cb57
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 8cc41f5d4f60b1ed5ee81128d0ab9a53728ceb65
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="visual-basic-language-reference"></a>Visual Basic 언어 참조
 이 섹션에서는 Visual Basic 언어의 다양 한 측면에 대 한 참조 정보를 제공 합니다.  
@@ -92,4 +92,4 @@ ms.lasthandoff: 04/26/2018
  Visual Basic 언어의 모든 영역에 광범위 한 도움말을 제공합니다.  
   
  [Visual Basic 명령줄 컴파일러](../../visual-basic/reference/command-line-compiler/index.md)  
- [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] IDE(통합 개발 환경) 내에서 프로그램을 컴파일하는 대신 명령줄 컴파일러를 사용하는 방법을 설명합니다.
+ Visual Studio 통합된 개발 환경 (IDE)에서 프로그램 컴파일 하는 대신 명령줄 컴파일러를 사용 하는 방법을 설명 합니다.

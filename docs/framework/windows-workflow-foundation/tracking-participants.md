@@ -1,23 +1,24 @@
 ---
-title: "추적 참가자"
-ms.custom: 
+title: 추적 참가자
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: f13e360c-eeb7-4a49-98a0-8f6a52d64f68
-caps.latest.revision: "24"
+caps.latest.revision: 24
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: f335695c86037d792b17b98080b7a2e668ac1df5
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 0d67924061b5d87bdb2e3229d9bf956501036c30
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="tracking-participants"></a>추적 참가자
 추적 참가자는 워크플로 개발자가 <xref:System.Activities.Tracking.InteropTrackingRecord.TrackingRecord%2A> 개체에 액세스하여 처리할 수 있는 확장성 지점입니다. [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)]에는 추적 레코드를 ETW(Windows용 이벤트 추적) 이벤트로 기록하는 표준 추적 참가자가 포함되어 있습니다. 표준 참가자가 요구 사항에 맞지 않는 경우 사용자 지정 추적 참가자를 작성할 수도 있습니다.  
@@ -25,7 +26,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="tracking-participants"></a>추적 참가자  
  추적 인프라를 사용하면 참가자가 레코드 하위 집합을 구독할 수 있도록 보내는 추적 레코드에 필터를 적용할 수 있습니다. 필터를 적용하는 메커니즘은 추적 프로필을 사용합니다.  
   
- [!INCLUDE[wf](../../../includes/wf-md.md)]의 [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)]는 추적 레코드를 ETW 세션에 기록하는 추적 참가자를 제공합니다. 추적 참가자는 워크플로 서비스에서 구성 파일에 추적별 동작을 추가하여 구성할 수 있습니다. ETW 추적 참가자를 사용하여 이벤트 뷰어에서 추적 레코드를 볼 수 있습니다. ETW 기반 추적에 대한 SDK 샘플을 사용하면 ETW 기반 추적 참가자를 사용하는 WF 추적을 쉽게 익힐 수 있습니다.  
+ Windows WF (Workflow Foundation)에서 [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] 추적 레코드를 ETW 세션에 기록 하는 추적 참가자를 제공 합니다. 추적 참가자는 워크플로 서비스에서 구성 파일에 추적별 동작을 추가하여 구성할 수 있습니다. ETW 추적 참가자를 사용하여 이벤트 뷰어에서 추적 레코드를 볼 수 있습니다. ETW 기반 추적에 대한 SDK 샘플을 사용하면 ETW 기반 추적 참가자를 사용하는 WF 추적을 쉽게 익힐 수 있습니다.  
   
 ## <a name="etw-tracking-participant"></a>ETW 추적 참가자  
  [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)]에는 추적 레코드를 ETW 세션에 기록하는 ETW 추적 참가자가 포함됩니다. 이 작업은 응용 프로그램 성능이나 서버 처리량에 미치는 영향을 최소화하면서 매우 효율적인 방식으로 수행됩니다. 표준 ETW 추적 참가자를 사용하는 이점은 Windows 이벤트 뷰어에서 다른 응용 프로그램 및 시스템 로그를 사용하여 참가자가 받는 추적 레코드를 볼 수 있다는 것입니다.  

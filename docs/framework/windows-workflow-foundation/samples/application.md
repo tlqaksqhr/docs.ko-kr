@@ -1,26 +1,27 @@
 ---
-title: "응용 프로그램"
-ms.custom: 
+title: 응용 프로그램
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 22d27e12-ab04-432b-9695-9f74e098cff3
-caps.latest.revision: "10"
+caps.latest.revision: 10
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 2b3037f6229c16ef6a5164cb0e7053f5993d2a9c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: c4aa2a1a2510bd915d9c1225c2a6be6e16712192
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="application"></a>응용 프로그램
-이 단원에는 [!INCLUDE[wf](../../../../includes/wf-md.md)]의 워크플로 응용 프로그램과 관련된 샘플이 포함되어 있습니다.  
+이 섹션에는 워크플로 응용 프로그램에서 Windows WF (Workflow Foundation)에 관련 된 샘플이 포함 되어 있습니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
  [문서 승인 프로세스](../../../../docs/framework/windows-workflow-foundation/samples/document-approval-process.md)  

@@ -22,11 +22,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 7fc755ff7f1b6c583a1e9aa1bc209495563812f0
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 43eaa4ffe562cf1dde5abd7e7540125dcf383732
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="importing-schema-to-generate-classes"></a>스키마를 가져와 클래스 생성
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]에서 사용할 수 있는 스키마에서 클래스를 생성하려면 <xref:System.Runtime.Serialization.XsdDataContractImporter> 클래스를 사용합니다. 이 항목에서는 프로세스와 변형에 대해 설명합니다.  
@@ -154,7 +154,7 @@ ms.lasthandoff: 04/26/2018
  `ReferencedTypes` 속성에 해당 하는 **/참조** 연산의 Svcutil.exe 도구의 특정 모드를 전환 합니다.  
   
 > [!NOTE]
->  Svcutil.exe를 사용 하는 경우 또는 (에서 [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)])는 **서비스 참조 추가** 도구 형식이 MsCorLib.dll에 모두 자동으로 참조 됩니다.  
+>  Svcutil.exe를 사용 하는 경우 나 (Visual Studio)는 **서비스 참조 추가** 도구 형식이 MsCorLib.dll에 모두 자동으로 참조 됩니다.  
   
 #### <a name="import-options-importing-non-datacontract-schema-as-ixmlserializable-types"></a>가져오기 옵션: DataContract가 아닌 스키마를 IXmlSerializable 형식으로 가져오기  
  <xref:System.Runtime.Serialization.XsdDataContractImporter>는 스키마의 제한된 하위 집합을 지원합니다. 지원되지 않는 스키마 구문이 있으면(예: XML 특성) 예외와 함께 가져오기 시도가 실패합니다. 그러나 <xref:System.Runtime.Serialization.ImportOptions.ImportXmlType%2A> 속성을 `true`로 설정하면 지원되는 스키마 범위가 확장됩니다. `true`는 <xref:System.Runtime.Serialization.XsdDataContractImporter>로 설정된 경우 <xref:System.Xml.Serialization.IXmlSerializable> 인터페이스를 구현하는 형식을 생성합니다. 이 경우 이러한 형식의 XML 표현에 직접 액세스할 수 있습니다.  

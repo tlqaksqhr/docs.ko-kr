@@ -16,14 +16,14 @@ ms.assetid: 0fd9a8f6-f34e-4c35-a49d-9b9bbd8da4a9
 caps.latest.revision: 28
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: f1ccf08ba58fa6af60bd8ffd7cba79b205dc0f3d
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 20239045426e466ba58427bb9794ea7e55b3aa4c
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="how-to-invoke-the-command-line-compiler-visual-basic"></a>방법: 명령줄 컴파일러 호출(Visual Basic)
-MS-DOS 프롬프트 라고도 하는 명령줄에 실행 파일의 이름을 입력 하 여 명령줄 컴파일러를 호출할 수 있습니다. 기본 Windows 명령 프롬프트에서에서 컴파일하는 경우에 실행 파일의 정규화 된 경로 입력 해야 합니다. 이 기본 동작을 재정의 하려면 사용할 수 있습니다는 [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] 명령 프롬프트 또는 PATH 환경 변수를 수정 합니다. 둘 다 컴파일러 이름을 입력 하 여 원하는 디렉터리에서 컴파일할 수 있습니다.  
+MS-DOS 프롬프트 라고도 하는 명령줄에 실행 파일의 이름을 입력 하 여 명령줄 컴파일러를 호출할 수 있습니다. 기본 Windows 명령 프롬프트에서에서 컴파일하는 경우에 실행 파일의 정규화 된 경로 입력 해야 합니다. 이 기본 동작을 재정의 하려면 Visual Studio 명령 프롬프트를 사용 하거나 PATH 환경 변수를 수정 합니다. 둘 다 컴파일러 이름을 입력 하 여 원하는 디렉터리에서 컴파일할 수 있습니다.  
   
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
@@ -31,9 +31,9 @@ MS-DOS 프롬프트 라고도 하는 명령줄에 실행 파일의 이름을 입
   
 1.  Microsoft Visual Studio 프로그램 그룹 내에서 Visual Studio Tools 프로그램 폴더를 엽니다.  
   
-2.  사용할 수는 [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] Visual Studio가 설치 되어 컴퓨터에 모든 디렉터리에서 컴파일러에 액세스 하려면 명령 프롬프트입니다.  
+2.  Visual Studio가 설치 되어 컴퓨터에 모든 디렉터리에서 컴파일러 액세스할 Visual Studio 명령 프롬프트를 사용할 수 있습니다.  
   
-3.  호출 된 [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] 명령 프롬프트입니다.  
+3.  Visual Studio 명령 프롬프트를 호출 합니다.  
   
 4.  명령줄에서 입력 `vbc.exe` *sourceFileName* 한 다음 ENTER 키를 누릅니다.  
   

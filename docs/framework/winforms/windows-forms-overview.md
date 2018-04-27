@@ -1,27 +1,29 @@
 ---
-title: "Windows Forms 개요"
-ms.custom: 
+title: Windows Forms 개요
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-winforms
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - smart clients
 - Windows Forms, about Windows Forms
 ms.assetid: 3a2b6284-c8d6-4e1c-8c69-0bed38f38cd4
-caps.latest.revision: "34"
+caps.latest.revision: 34
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: bc9ff97583566bd950486d96bd100f05ef651c7e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 2620d8314a11e0a90864120c40dbc3935cce75fe
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="windows-forms-overview"></a>Windows Forms 개요
 다음 개요에서는 스마트 클라이언트 응용 프로그램의 이점, Windows Forms 프로그래밍의 주요 기능 및 Windows Forms를 사용하여 오늘날의 기업과 최종 사용자의 요구를 충족하는 스마트 클라이언트를 빌드하는 방법을 설명합니다.  
@@ -30,7 +32,7 @@ ms.lasthandoff: 12/22/2017
  Windows Forms를 사용하여 스마트 클라이언트를 개발합니다. *스마트 클라이언트*는 쉽게 배포 및 업데이트되며, 인터넷에 연결되었거나 연결이 끊어졌을 때 작동할 수 있고, 기존의 Windows 기반 응용 프로그램보다 더 안전하게 로컬 컴퓨터의 리소스에 액세스할 수 있는 시각적으로 풍부한 응용 프로그램입니다.  
   
 ### <a name="building-rich-interactive-user-interfaces"></a>풍부한 대화형 사용자 인터페이스 빌드  
- Windows Forms는 파일 시스템 읽기 및 쓰기와 같은 일반적인 응용 프로그램 작업을 간소화하는 관리되는 라이브러리 집합인 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]용 스마트 클라이언트 기술입니다. [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]와 같은 개발 환경을 사용하는 경우 정보를 표시하고, 사용자 입력을 요청하고, 네트워크를 통해 원격 컴퓨터와 통신하는 Windows Forms 스마트 클라이언트 응용 프로그램을 만들 수 있습니다.  
+ Windows Forms는 파일 시스템 읽기 및 쓰기와 같은 일반적인 응용 프로그램 작업을 간소화하는 관리되는 라이브러리 집합인 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]용 스마트 클라이언트 기술입니다. Visual Studio와 같은 개발 환경을 사용 하는 경우 네트워크를 통해 원격 컴퓨터와 정보를 표시할 사용자 로부터 입력을 요청 하 고 통신 하는 Windows Forms 스마트 클라이언트 응용 프로그램을 만들 수 있습니다.  
   
  Windows Forms에서 *폼*은 정보를 사용자에게 표시하는 비주얼 화면입니다. 일반적으로 폼에 컨트롤을 추가하고 마우스 클릭이나 키 누름과 같은 사용자 동작에 대한 응답을 개발하여 Windows Forms 응용 프로그램을 빌드합니다. *컨트롤*은 데이터를 표시하거나 데이터 입력을 수락하는 고유한 UI(사용자 인터페이스) 요소입니다.  
   
@@ -40,7 +42,7 @@ ms.lasthandoff: 12/22/2017
   
  Windows Forms에는 Microsoft Office와 같은 고급 응용 프로그램의 기능을 에뮬레이트하는 풍부한 UI 컨트롤이 있습니다. <xref:System.Windows.Forms.ToolStrip> 및 <xref:System.Windows.Forms.MenuStrip> 컨트롤을 사용하는 경우 텍스트와 이미지를 포함하고, 하위 메뉴를 표시하며, 텍스트 상자 및 콤보 상자와 같은 기타 컨트롤을 호스트하는 도구 모음과 메뉴를 만들 수 있습니다.  
   
- [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 끌어서 놓기 Windows Forms 디자이너를 통해 Windows Forms 응용 프로그램을 쉽게 만들 수 있습니다. 커서를 사용하여 컨트롤을 선택하고 폼에서 원하는 위치에 추가하면 됩니다. 디자이너는 컨트롤을 쉽게 배치하기 위한 모눈선 및 맞춤선과 같은 도구를 제공합니다. 또한 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]를 사용하든 또는 명령줄에서 컴파일하든 관계없이 <xref:System.Windows.Forms.FlowLayoutPanel>, <xref:System.Windows.Forms.TableLayoutPanel> 및 <xref:System.Windows.Forms.SplitContainer> 컨트롤을 사용하여 더 짧은 시간에 고급 폼 레이아웃을 만들 수 있습니다.  
+ Visual Studio 끌어서 놓기 Windows Forms 디자이너와 Windows Forms 응용 프로그램을 쉽게 만들 수 있습니다. 커서를 사용하여 컨트롤을 선택하고 폼에서 원하는 위치에 추가하면 됩니다. 디자이너는 컨트롤을 쉽게 배치하기 위한 모눈선 및 맞춤선과 같은 도구를 제공합니다. 사용할 수 있는지를 Visual Studio를 사용 하거나 명령줄에서 컴파일 및는 <xref:System.Windows.Forms.FlowLayoutPanel>, <xref:System.Windows.Forms.TableLayoutPanel> 및 <xref:System.Windows.Forms.SplitContainer> 짧은 시간 내에 폼 레이아웃 컨트롤 고급 만들려고 합니다.  
   
  끝으로, 고유한 사용자 지정 UI 요소를 만들어야 하는 경우 <xref:System.Drawing> 네임스페이스에는 선, 원 및 기타 도형을 폼에 직접 렌더링하는 다양한 클래스가 포함되어 있습니다.  
   
@@ -64,7 +66,7 @@ ms.lasthandoff: 12/22/2017
   
  데이터 소스 창을 통해 데이터 바인딩된 컨트롤을 쉽게 만들 수 있습니다. 창에는 데이터베이스, 웹 서비스 및 개체와 같은 프로젝트의 데이터 소스가 표시됩니다. 이 창에서 프로젝트의 폼으로 항목을 끌어 데이터 바인딩된 컨트롤을 만들 수 있습니다. 데이터 소스 창에서 기존 컨트롤로 개체를 끌어 기존 컨트롤을 데이터에 바인딩할 수도 있습니다.  
   
- Windows Forms에서 관리할 수 있는 다른 형식의 데이터 바인딩은 *설정*입니다. 대부분의 스마트 클라이언트 응용 프로그램은 마지막으로 알려진 폼 크기와 같은 런타임 상태에 대한 일부 정보를 유지하고 저장된 파일의 기본 위치와 같은 사용자 기본 설정 데이터를 유지해야 합니다. 응용 프로그램 설정 기능은 클라이언트 컴퓨터에 두 유형의 설정을 모두 쉽게 저장할 수 있는 방법을 제공하여 이러한 요구 사항을 충족합니다. [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 또는 코드 편집기를 사용하여 이러한 설정을 정의하면 설정이 XML로 유지되며 런타임에 자동으로 다시 메모리로 읽어옵니다.  
+ Windows Forms에서 관리할 수 있는 다른 형식의 데이터 바인딩은 *설정*입니다. 대부분의 스마트 클라이언트 응용 프로그램은 마지막으로 알려진 폼 크기와 같은 런타임 상태에 대한 일부 정보를 유지하고 저장된 파일의 기본 위치와 같은 사용자 기본 설정 데이터를 유지해야 합니다. 응용 프로그램 설정 기능은 클라이언트 컴퓨터에 두 유형의 설정을 모두 쉽게 저장할 수 있는 방법을 제공하여 이러한 요구 사항을 충족합니다. Visual Studio 또는 코드 편집기를 사용 하 여 이러한 설정을 정의 하면 설정이 XML로 유지 하 고 런타임 시 자동으로 다시 메모리로 읽어옵니다.  
   
 #### <a name="help-displaying-and-manipulating-data"></a>데이터 표시 및 조작 도움말  
  이러한 기능을 사용하는 방법에 대한 단계별 정보는 다음 도움말 항목을 참조하세요.  
@@ -77,7 +79,7 @@ ms.lasthandoff: 12/22/2017
 |응용 프로그램 설정 사용|[방법: 응용 프로그램 설정 만들기](../../../docs/framework/winforms/advanced/how-to-create-application-settings.md)|  
   
 ### <a name="deploying-applications-to-client-computers"></a>클라이언트 컴퓨터에 응용 프로그램 배포  
- 응용 프로그램을 작성한 후 해당 클라이언트 컴퓨터에 설치하고 실행할 수 있도록 사용자에게 응용 프로그램을 보내야 합니다. [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] 기술을 사용하는 경우 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 내에서 마우스만 몇 번 클릭하여 응용 프로그램을 배포하고 웹에서 해당 응용 프로그램을 가리키는 URL을 사용자에게 제공할 수 있습니다. [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)]는 응용 프로그램의 모든 요소와 종속성을 관리하고 클라이언트 컴퓨터에 응용 프로그램이 올바르게 설치되었는지 확인합니다.  
+ 응용 프로그램을 작성한 후 해당 클라이언트 컴퓨터에 설치하고 실행할 수 있도록 사용자에게 응용 프로그램을 보내야 합니다. 사용 하는 경우는 [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] 기술, 단 몇 번의 클릭을 사용 하 여 Visual Studio 내에서 응용 프로그램을 배포할 수 있고 사용자는 웹에서 응용 프로그램을 가리키는 URL에 게 제공 합니다. [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)]는 응용 프로그램의 모든 요소와 종속성을 관리하고 클라이언트 컴퓨터에 응용 프로그램이 올바르게 설치되었는지 확인합니다.  
   
  사용자가 네트워크에 연결된 경우에만 실행되거나 온라인 및 오프라인 둘 다에서 실행되도록 [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] 응용 프로그램을 구성할 수 있습니다. 응용 프로그램이 오프라인 작업을 지원하도록 지정하면 [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)]는 사용자의 **시작** 메뉴에 응용 프로그램에 대한 링크를 추가합니다. 그러면 사용자가 URL을 사용하지 않고도 응용 프로그램을 열 수 있습니다.  
   

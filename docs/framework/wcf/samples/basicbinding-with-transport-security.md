@@ -1,24 +1,26 @@
 ---
-title: "전송 보안 포함한 기본 바인딩"
-ms.custom: 
+title: 전송 보안 포함한 기본 바인딩
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: f49b1de6-0254-4362-8ef2-fccd8ff9688b
-caps.latest.revision: "26"
+caps.latest.revision: 26
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: 2a65adbb908aded9f4124f473f0b298d573a521f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 4d06f7652f7366fc795cd157398bbb15ed78828c
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="basicbinding-with-transport-security"></a>전송 보안 포함한 기본 바인딩
 이 샘플에서는 기본 바인딩이 있는 SSL 전송 보안을 사용하는 방법을 보여 줍니다. 이 샘플에 따라는 [시작](../../../../docs/framework/wcf/samples/getting-started-sample.md) 계산기 서비스를 구현 하는 합니다.  
@@ -65,15 +67,14 @@ ms.lasthandoff: 12/22/2017
 </system.serviceModel>  
 ```  
   
- 이 샘플에 사용된 인증서는 Makecert.exe를 사용하여 만든 테스트 인증서이므로 브라우저에서 https://localhost/servicemodelsamples/service.svc와 같은 HTTPS: 주소에 액세스하려고 하면 보안 경고가 나타납니다. [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 클라이언트에서 테스트 인증서를 사용하여 작업을 수행할 수 있도록 하려면 클라이언트에 일부 코드를 추가하여 보안 경고가 나타나지 않도록 합니다. 실제 인증서를 사용할 때는 이 코드 및 함께 사용되는 클래스가 필요하지 않습니다.  
-  
-```  
+ HTTPS에 액세스 하려고 할 때 보안 경고가 나타납니다이 샘플에 사용 된 인증서는 Makecert.exe를 사용 하 여 만든 테스트 인증서 이므로:와 같은 브라우저의 주소 https://localhost/servicemodelsamples/service.svc합니다. [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 클라이언트에서 테스트 인증서를 사용하여 작업을 수행할 수 있도록 하려면 클라이언트에 일부 코드를 추가하여 보안 경고가 나타나지 않도록 합니다. 실제 인증서를 사용할 때는 이 코드 및 함께 사용되는 클래스가 필요하지 않습니다.  
+
+```csharp
 // This code is required only for test certificates such as those   
 // created by Makecert.exe.  
-PermissiveCertificatePolicy.Enact(  
-                           "CN=ServiceModelSamples-HTTPS-Server");  
-```  
-  
+PermissiveCertificatePolicy.Enact("CN=ServiceModelSamples-HTTPS-Server");  
+```
+
  샘플을 실행하면 작업 요청 및 응답이 클라이언트 콘솔 창에 표시됩니다. 클라이언트를 종료하려면 클라이언트 창에서 Enter 키를 누릅니다.  
   
 ```  

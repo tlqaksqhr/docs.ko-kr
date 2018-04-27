@@ -1,35 +1,36 @@
 ---
-title: "엔터티 활동"
-ms.custom: 
+title: 엔터티 활동
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: c04f7413-7fb8-40c6-819e-dc92b145b62e
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: c507c3da7f4583bf6ffb7b869cecbf0bfd305077
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 81f8b1852b939d7ceb8b9afae4435ca12239b880
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="entity-activities"></a>엔터티 활동
-이 샘플에서는 [!INCLUDE[wf2](../../../../includes/wf2-md.md)]에서 ADO.NET Entity Framework를 사용하여 데이터 액세스를 단순화하는 방법을 보여 줍니다.  
+이 샘플에서는 Windows Workflow Foundation와 ADO.NET Entity Framework를 사용 하 여 데이터 액세스를 단순화 하는 방법을 보여 줍니다.  
   
- ADO.NET Entity Framework를 사용하면 개발자가 고객, 주문서, 주문 세부 사항 및 이러한 엔터티 사이의 관계 같은 도메인별 개체, 속성 및 관계의 형태로 데이터를 다룰 수 있습니다. 이를 위해 ADO.NET Entity Framework에서는 관계형 저장소 스키마에 대해 직접 프로그래밍하는 대신 개념적 응용 프로그램 모델에 대해 프로그래밍할 수 있는 추상화 수준을 제공합니다. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]ADO.NET Entity Framework 참조 [ADO.NET Entity Framework](http://go.microsoft.com/fwlink/?LinkId=165549)합니다.  
+ ADO.NET Entity Framework를 사용하면 개발자가 고객, 주문서, 주문 세부 사항 및 이러한 엔터티 사이의 관계 같은 도메인별 개체, 속성 및 관계의 형태로 데이터를 다룰 수 있습니다. 이를 위해 ADO.NET Entity Framework에서는 관계형 저장소 스키마에 대해 직접 프로그래밍하는 대신 개념적 응용 프로그램 모델에 대해 프로그래밍할 수 있는 추상화 수준을 제공합니다. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] ADO.NET Entity Framework 참조 [ADO.NET Entity Framework](http://go.microsoft.com/fwlink/?LinkId=165549)합니다.  
   
 ## <a name="sample-details"></a>샘플 세부 정보  
  이 샘플에는 `Northwind` 데이터베이스가 사용되며 `Northwind` 데이터베이스를 만들고 제거하기 위한 스크립트(Setup.cmd 및 Cleanup.cmd)가 포함됩니다. 이 샘플의 프로젝트에는 `Northwind` 데이터베이스를 기반으로 하는 엔터티 데이터 모델이 포함됩니다. 프로젝트에 포함되어 있는 `Northwind.edmx` 파일을 열면 모델을 찾을 수 있습니다. 이는 ADO.NET Entity Framework를 사용하여 액세스할 수 있는 개체의 모양을 정의하는 모델입니다.  
   
  이 샘플에 포함되어 있는 활동은 다음과 같습니다.  
   
--   `EntitySQLQuery`: `EntitySQLQuery` 활동을 사용하면 Entity SQL 쿼리 문자열을 기반으로 데이터베이스에서 개체를 검색할 수 있습니다. Entity SQL은 SQL과 유사하며 저장소로부터 독립적인 언어입니다. 이를 사용하면 모델이나 도메인의 일부인 엔터티와 개념적 모델을 기반으로 쿼리를 지정할 수 있습니다. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Entity SQL 언어 참조 [Entity SQL 언어](http://go.microsoft.com/fwlink/?LinkId=165646)합니다.  
+-   `EntitySQLQuery`: `EntitySQLQuery` 활동을 사용하면 Entity SQL 쿼리 문자열을 기반으로 데이터베이스에서 개체를 검색할 수 있습니다. Entity SQL은 SQL과 유사하며 저장소로부터 독립적인 언어입니다. 이를 사용하면 모델이나 도메인의 일부인 엔터티와 개념적 모델을 기반으로 쿼리를 지정할 수 있습니다. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] Entity SQL 언어 참조 [Entity SQL 언어](http://go.microsoft.com/fwlink/?LinkId=165646)합니다.  
   
 -   `EntityLinqQuery`: 이 활동을 사용하면 LINQ 쿼리나 조건자를 기반으로 데이터베이스에서 개체를 검색할 수 있습니다.  
   

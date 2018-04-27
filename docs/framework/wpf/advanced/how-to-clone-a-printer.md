@@ -1,12 +1,13 @@
 ---
-title: "방법: 프린터 복제"
-ms.custom: 
+title: '방법: 프린터 복제'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -18,21 +19,22 @@ helpviewer_keywords:
 - print queues [WPF], cloning
 - cloning print queues [WPF]
 ms.assetid: dd6997c9-fe04-40f8-88a6-92e3ac0889eb
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 43a08faf27186bde85dd12f027034f759378debf
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 9ffb9f5ab8e7b768d888f5f2800fae668e47bfc3
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="how-to-clone-a-printer"></a>방법: 프린터 복제
-대부분의 기업, 어느 시점 부터는 구입할지 동일한 모델의 여러 프린터입니다. 일반적으로 모든 설치 실제로 동일한 구성 설정을 사용 합니다. 각 프린터를 설치 시간이 오래 걸릴 수 및 오류가 발생 하기 쉽습니다. <xref:System.Printing.IndexedProperties?displayProperty=nameWithType> 네임 스페이스 및 <xref:System.Printing.PrintServer.InstallPrintQueue%2A> 으로 노출 되는 클래스 [!INCLUDE[TLA#tla_avalonwinfx](../../../../includes/tlasharptla-avalonwinfx-md.md)] 즉시 기존 인쇄 대기열에서 임의 개수의 추가 인쇄 큐는 복제를 설치할 수 있습니다.  
+대부분의 기업, 어느 시점 부터는 구입할지 동일한 모델의 여러 프린터입니다. 일반적으로 모든 설치 실제로 동일한 구성 설정을 사용 합니다. 각 프린터를 설치 시간이 오래 걸릴 수 및 오류가 발생 하기 쉽습니다. <xref:System.Printing.IndexedProperties?displayProperty=nameWithType> 네임 스페이스 및 <xref:System.Printing.PrintServer.InstallPrintQueue%2A> Microsoft.NET Framework로 노출 되는 클래스를 사용 하면 즉시 추가 인쇄 큐는 복제를 개수에 관계 없이 기존 인쇄 대기열에서 설치할 수 있습니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  아래 예제에서는 두 번째 인쇄 큐는 기존 인쇄 대기열에서 복제 됩니다. 두 번째 다른 첫 번째에서 이름, 위치, 포트 및 공유 상태에만 합니다. 이 작업을 위한 주요 단계는 다음과 같습니다.  
   
 1.  만들기는 <xref:System.Printing.PrintQueue> 기존 프린터에 복제에 대 한 개체입니다.  

@@ -22,18 +22,18 @@ ms.assetid: e61947e9-a42e-4717-a699-5f70a98cdd03
 caps.latest.revision: 13
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 1fd4054838925267647986a5166fd88037b17fae
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 9a9dee47f06e4f7d9fc8d237376df7707130921d
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="building-from-the-command-line-visual-basic"></a>명령줄에서 빌드(Visual Basic)
 Visual Basic 프로젝트는 하나 이상의 별도 소스 파일로 구성 됩니다. 컴파일 이라는 프로세스 동안 이러한 파일 통합할 하나의 패키지로-응용 프로그램으로 실행할 수 있는 단일 실행 파일입니다.  
   
- Visual Basic 프로그램 내에서 컴파일 하는 대신 명령줄 컴파일러에서 제공 된 [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] 통합된 개발 환경 (IDE). 명령줄 컴파일러는 필요 하지 않으면 IDE의 기능 중 일부만 상황 용인지-예를 들어 경우 있습니다 하거나 작성 하는 제한 된 시스템 메모리 또는 저장소 공간이 있는 컴퓨터에 대 한 합니다.  
+ Visual Basic을 Visual Studio 통합된 개발 환경 (IDE)에서 프로그램을 컴파일하는 대신 명령줄 컴파일러를 제공 합니다. 명령줄 컴파일러는 필요 하지 않으면 IDE의 기능 중 일부만 상황 용인지-예를 들어 경우 있습니다 하거나 작성 하는 제한 된 시스템 메모리 또는 저장소 공간이 있는 컴퓨터에 대 한 합니다.  
   
-  내에서 소스 파일을 컴파일하는 [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] IDE, 선택는 **빌드** 명령을 **빌드** 메뉴.  
+  Visual Studio IDE 내에서 소스 파일을 컴파일하려면 선택 된 **빌드** 명령을 **빌드** 메뉴.  
   
 > [!TIP]
 >  연결 된 작업에 대 한 정보를 표시할 수는 Visual Studio IDE를 사용 하 여 프로젝트 파일을 빌드할 때 **vbc** 명령 및 출력 창에 해당 스위치입니다. 이 정보를 표시 하려면 엽니다는 [옵션 대화 상자, 프로젝트 및 솔루션, 빌드 및 실행](/visualstudio/ide/reference/options-dialog-box-projects-and-solutions-build-and-run)를 설정한는 **MSBuild 프로젝트 빌드 출력의 자세한 정도** 를 **보통** 또는 더 높은 수준의 세부 정보 표시 합니다. 자세한 내용은 [방법: 빌드 로그 파일 보기, 저장 및 구성](http://msdn.microsoft.com/library/75d38b76-26d6-4f43-bbe7-cbacd7cc81e7)을 참조하세요.  

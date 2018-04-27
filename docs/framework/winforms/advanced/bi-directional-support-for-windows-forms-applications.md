@@ -1,8 +1,9 @@
 ---
-title: "Windows Forms 응용 프로그램에 대한 양방향 지원"
+title: Windows Forms 응용 프로그램에 대한 양방향 지원
 ms.date: 09/30/2017
 ms.prod: .net-framework
-ms.technology: dotnet-winforms
+ms.technology:
+- dotnet-winforms
 ms.topic: article
 helpviewer_keywords:
 - globalization [Windows Forms], bi-directional support in Windows
@@ -13,15 +14,16 @@ helpviewer_keywords:
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a8ae0e958c842c2f3cf3fbb788cad1cde6e6cc2b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: d670fedb2fe693a871de8f0147b81b97b4958853
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="bi-directional-support-for-windows-forms-applications"></a>Windows Forms 응용 프로그램에 대한 양방향 지원
-[!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)]를 사용하여 아랍어 및 히브리어와 같은 양방향(오른쪽에서 왼쪽) 언어를 지원하는 Windows 기반 응용 프로그램을 만들 수 있습니다. 여기에는 표준 폼, 대화 상자, MDI 폼 및 이러한 폼에서 사용할 수 있는 모든 컨트롤(즉, <xref:System.Windows.Forms.Control> 네임스페이스의 모든 개체)이 포함됩니다.  
+Visual Studio를 사용 하 여 예: 아랍어 및 히브리어 양방향 (오른쪽에서 왼쪽) 언어를 지 원하는 Windows 기반 응용 프로그램을 만들 수 있습니다. 여기에는 표준 폼, 대화 상자, MDI 폼 및 이러한 폼에서 사용할 수 있는 모든 컨트롤(즉, <xref:System.Windows.Forms.Control> 네임스페이스의 모든 개체)이 포함됩니다.  
   
 ## <a name="culture-support"></a>문화권 지원  
  문화권 및 UI 문화권 설정은 응용 프로그램에서 날짜, 시간, 통화 및 기타 정보를 사용하는 방법을 결정합니다. 양방향 언어에 대한 문화권 및 UI 문화권 지원은 다른 언어의 경우와 동일합니다.   [전역 Windows Forms 및 Web Forms를 위한 문화권 관련 클래스](http://msdn.microsoft.com/library/94ye9x8c\(v=vs.110\)) 또는 [전역 Windows Forms 및 Web Forms를 위한 문화권 관련 클래스](http://msdn.microsoft.com/library/94ye9x8c\(v=vs.120\))를 참조하세요.  
@@ -122,5 +124,5 @@ ms.lasthandoff: 12/22/2017
  일부 컨트롤은 봉인됩니다. 따라서 해당 컨트롤에서 새 컨트롤을 파생시킬 수 없습니다. 여기에는 <xref:System.Windows.Forms.ImageList> 및 <xref:System.Windows.Forms.ProgressBar> 컨트롤이 포함됩니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [ASP.NET 웹 응용 프로그램에 대 한 양방향 지원](http://msdn.microsoft.com/library/5576f9b1-9b86-41ef-8354-092d366bcd03)  
+ [ASP.NET 웹 응용 프로그램에 대한 양방향 지원](http://msdn.microsoft.com/library/5576f9b1-9b86-41ef-8354-092d366bcd03)  
  [Windows Forms 전역화](../../../../docs/framework/winforms/advanced/globalizing-windows-forms.md)

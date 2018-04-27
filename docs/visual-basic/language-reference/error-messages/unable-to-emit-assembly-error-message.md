@@ -16,11 +16,11 @@ ms.assetid: 2e7eb2b9-eda6-4bdb-95cc-72c7f0be7528
 caps.latest.revision: 11
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 61a5c6b753b8aa70905027bc1449739769cd8da5
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 59288ba7b4cec34cd2266d66aa931e92598e819a
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="unable-to-emit-assembly-lterror-messagegt"></a>어셈블리를 생성할 수 없습니다: &lt;오류 메시지&gt;
 Visual Basic 컴파일러 링커 어셈블리 만들기의 내보내기 단계에서 오류가 보고 어셈블리 링커 (Al.exe, Alink 라고도 함)는 매니페스트를 사용해 어셈블리를 생성 하려면를 호출 합니다.  
@@ -61,7 +61,7 @@ Visual Basic 컴파일러 링커 어셈블리 만들기의 내보내기 단계�
   
      경로나 파일에 공백이 있으면 큰따옴표(")를 사용합니다.  
   
-6.  [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)]에서 방금 만든 파일에 대한 .NET 어셈블리 참조를 추가합니다.  
+6.  Visual Studio에서 방금 만든 파일에 대 한.NET 어셈블리 참조를 추가 합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  

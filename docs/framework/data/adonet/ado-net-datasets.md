@@ -1,24 +1,26 @@
 ---
-title: "ADO.NET 데이터 집합"
-ms.custom: 
+title: ADO.NET 데이터 집합
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 82b641bb-6001-4512-bf1a-2830acdd92ab
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: b9d566f99802ea80ae73132579bb3068b1ff3b28
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: 9458206ea7edfeba61f9805c2b601d6aa9198256
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="adonet-datasets"></a>ADO.NET 데이터 집합
 <xref:System.Data.DataSet> 개체는 연결되지 않은 분산 데이터 시나리오를 [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)]을 사용하여 지원하는 데 핵심적인 역할을 수행합니다. **DataSet** 데이터 소스에 관계 없이 일관성 있는 관계형 프로그래밍 모델을 제공 하는 데이터의 메모리 상주 표현입니다. 이 개체는 다양한 여러 데이터 소스에 사용하거나 XML 데이터에 사용할 수 있을 뿐 아니라 이 개체를 사용하여 응용 프로그램의 로컬 데이터를 관리할 수도 있습니다. **DataSet** 관련된 테이블, 제약 조건 및 테이블 간의 관계를 포함 하 여 데이터의 전체 집합을 나타냅니다. 다음 그림에서는 **DataSet** 개체 모델입니다.  
@@ -52,7 +54,7 @@ DataSet 개체 모델
  **DataSet**, **DataTable**, 및 **DataColumn** 모두는 **ExtendedProperties** 속성입니다. **ExtendedProperties** 는 **PropertyCollection** 결과 집합을 생성 하는 데 사용한 SELECT 문이나 데이터가 생성 된 시간 같은 사용자 지정 정보를 배치할 수 있습니다. **ExtendedProperties** 컬렉션에 대 한 스키마 정보로 유지 되는 **DataSet**합니다.  
   
 ## <a name="linq-to-dataset"></a>LINQ to DataSet  
- [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]에서는 데이터 집합에 저장되어 있는 연결되지 않은 데이터에 대한 통합 언어 쿼리 기능을 제공합니다. [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]표준 사용 하 여 [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] 구문을 사용 하는 경우 컴파일 타임 구문 검사, 정적 입력 및 IntelliSense 지원을 제공 하 고는 [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] IDE.  
+ [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]에서는 데이터 집합에 저장되어 있는 연결되지 않은 데이터에 대한 통합 언어 쿼리 기능을 제공합니다. [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] 표준 사용 하 여 [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] 구문 하 고 Visual Studio IDE를 사용 하는 경우 컴파일 타임 구문 검사, 정적 입력 및 IntelliSense 지원을 제공 합니다.  
   
  자세한 내용은 [LINQ to DataSet](../../../../docs/framework/data/adonet/linq-to-dataset.md)를 참조하세요.  
   

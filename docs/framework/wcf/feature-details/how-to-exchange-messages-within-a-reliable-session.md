@@ -1,24 +1,26 @@
 ---
-title: "방법: 신뢰할 수 있는 세션 내에서 메시지 교환"
-ms.custom: 
+title: '방법: 신뢰할 수 있는 세션 내에서 메시지 교환'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 87cd0e75-dd2c-44c1-8da0-7b494bbdeaea
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ba3948ef52e6ce527b0bdba77652949e43d05eb2
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: ee558542eacede87ca29acf965491c965b6c4c63
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="how-to-exchange-messages-within-a-reliable-session"></a>방법: 신뢰할 수 있는 세션 내에서 메시지 교환
 
@@ -66,7 +68,7 @@ ms.lasthandoff: 01/19/2018
 
    [!code-csharp[C_HowTo_UseReliableSession#1222](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_usereliablesession/cs/client.cs#1222)]
 
-1. *Svcutil.exe* 사용 하는 클라이언트에 대 한 구성도 생성는 <xref:System.ServiceModel.WSHttpBinding> 클래스입니다. 구성 파일의 이름을 *App.config* 사용 하는 경우 [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)]합니다.
+1. *Svcutil.exe* 사용 하는 클라이언트에 대 한 구성도 생성는 <xref:System.ServiceModel.WSHttpBinding> 클래스입니다. 구성 파일의 이름을 *App.config* Visual Studio를 사용 하는 경우.
 
    [!code-xml[C_HowTo_UseReliableSession#2211](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_usereliablesession/common/app.config#2211)]
 
@@ -76,7 +78,7 @@ ms.lasthandoff: 01/19/2018
 
 1. 클라이언트를 컴파일하고 실행합니다.
 
-## <a name="example"></a>예
+## <a name="example"></a>예제
 
 기본적으로 여러 시스템 제공 바인딩은 신뢰할 수 있는 세션을 지원합니다. 여기에는 다음이 포함됩니다.
 
@@ -88,6 +90,6 @@ ms.lasthandoff: 01/19/2018
 
 신뢰할 수 있는 세션을 지 원하는 사용자 지정 바인딩을 만드는 방법의 예제를 보려면 [하는 방법: HTTPS로 신뢰할 수 있는 사용자 지정 세션 바인딩 만들기](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-reliable-session-binding-with-https.md)합니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참고자료
 
 [신뢰할 수 있는 세션](../../../../docs/framework/wcf/feature-details/reliable-sessions.md)

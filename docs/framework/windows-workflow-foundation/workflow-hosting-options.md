@@ -1,26 +1,27 @@
 ---
-title: "워크플로 호스팅 옵션"
-ms.custom: 
+title: 워크플로 호스팅 옵션
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 37bcd668-9c5c-4e7c-81da-a1f1b3a16514
-caps.latest.revision: "3"
+caps.latest.revision: 3
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: be885a964ad7e8d63045febfa279b23d0d85ab1f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 3f022a5162ab8624d0c696efde6416484e77e874
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="workflow-hosting-options"></a>워크플로 호스팅 옵션
-대부분의 [!INCLUDE[wf](../../../includes/wf-md.md)] 샘플에서는 콘솔 응용 프로그램에서 호스트되는 워크플로를 사용하지만 이는 실제 워크플로에는 실질적으로 적합한 시나리오는 아닙니다. 실제 비즈니스 응용 프로그램의 워크플로는 영구 프로세스, 즉 개발자가 작성한 Windows 서비스나 [!INCLUDE[iisver](../../../includes/iisver-md.md)] 또는 AppFabric 같은 서버 응용 프로그램에서 호스트됩니다. 이러한 방법에는 다음과 같은 차이가 있습니다.  
+대부분의 Windows WF (Workflow Foundation) 샘플 콘솔 응용 프로그램에서 호스트 되는 워크플로 사용 하지만이 실제 워크플로에 실질적으로 시나리오는 아닙니다. 실제 비즈니스 응용 프로그램의 워크플로는 영구 프로세스, 즉 개발자가 작성한 Windows 서비스나 [!INCLUDE[iisver](../../../includes/iisver-md.md)] 또는 AppFabric 같은 서버 응용 프로그램에서 호스트됩니다. 이러한 방법에는 다음과 같은 차이가 있습니다.  
   
 ## <a name="hosting-workflows-in-iis-with-windows-appfabric"></a>IIS에서 Windows AppFabric을 사용하여 워크플로 호스팅  
  IIS와 AppFabric을 함께 사용하는 것은 기본적인 워크플로 호스팅 방법입니다. AppFabric을 사용하는 워크플로용 호스트 응용 프로그램은 Windows Activation Service로, 이 응용 프로그램에서는 IIS만을 통해 HTTP에 대한 종속성을 제거합니다.  

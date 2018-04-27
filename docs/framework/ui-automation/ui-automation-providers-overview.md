@@ -1,27 +1,29 @@
 ---
-title: "UI 자동화 공급자 개요"
-ms.custom: 
+title: UI 자동화 공급자 개요
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-bcl
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-bcl
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - UI Automation, providers
 - providers, UI Automation
 ms.assetid: 859557b8-51e1-4d15-92e8-318d2dcdb2f7
-caps.latest.revision: "38"
+caps.latest.revision: 38
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: dc5cb5749bbfe06fd3a1bbe3537b28c7bbfa295d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: a8279b8c2c39ce37fa9e3af55a6b079e8202b3ff
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="ui-automation-providers-overview"></a>UI 자동화 공급자 개요
 > [!NOTE]
@@ -38,12 +40,12 @@ ms.lasthandoff: 12/22/2017
  UI 자동화 공급자는 클라이언트 쪽 공급자와 서버 쪽 공급자 두 범주로 나누어집니다.  
   
 ### <a name="client-side-providers"></a>클라이언트 쪽 공급자  
- 클라이언트 쪽 공급자는 UI 자동화 클라이언트가 구현하여 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]을 지원하지 않거나 완전하게 지원되지 않는 응용 프로그램과 통신합니다. 클라이언트 쪽 공급자는 일반적으로 [!INCLUDE[TLA2#tla_win](../../../includes/tla2sharptla-win-md.md)] 메시지를 주고받아 프로세스 경계를 넘어 서버와 통신합니다.  
+ 클라이언트 쪽 공급자는 UI 자동화 클라이언트가 구현하여 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]을 지원하지 않거나 완전하게 지원되지 않는 응용 프로그램과 통신합니다. 일반적으로 클라이언트 쪽 공급자 프로세스 경계를 넘어 Windows 메시지 송신 및 수신 서버와 통신 합니다.  
   
- [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)], [!INCLUDE[TLA2#tla_winforms](../../../includes/tla2sharptla-winforms-md.md)], 또는 [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] 응용 프로그램에서 컨트롤에 대한 UI 자동화 공급자는 운영 체제의 일부로 제공되므로,클라이언트 응용 프로그램은 자체 공급자를 구현할 필요가 거의 없으며 이 개요에서는 자세히 다루지 않습니다.  
+ 때문에 컨트롤에 대 한 UI 자동화 공급자 [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)], Windows Forms 또는 [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] 응용 프로그램은 운영 체제의 일부로 제공 하 고 클라이언트 응용 프로그램은 자체 공급자를 구현할 필요가 거의이 개요에서는 설명 하지 추가 합니다.  
   
 ### <a name="server-side-providers"></a>서버 쪽 공급자  
- 서버 쪽 공급자는 [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)], [!INCLUDE[TLA2#tla_winforms](../../../includes/tla2sharptla-winforms-md.md)], 또는 [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)]이외의 UI 프레임워크를 기반으로 하는 응용 프로그램 또는 사용자 지정 컨트롤에서 구현합니다.  
+ 서버 쪽 공급자 이외의 UI 프레임 워크에 기반 하는 응용 프로그램이 나 사용자 지정 컨트롤에서 구현 되어 [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)], Windows Forms 또는 [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)]합니다.  
   
  서버 쪽 공급자는 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 핵심 시스템에 인터페이스를 노출하여 프로세스 경계를 넘어 클라이언트 응용 프로그램과 통신하고, 클라이언트의 요청을 처리합니다.  
   

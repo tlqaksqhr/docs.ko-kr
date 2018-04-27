@@ -14,11 +14,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 2d7377d843e4ab8bd583e135dcdfd2cbfca67b8d
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 8fa5a9e4287bcbcb490754b84a8b5060d321f779
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="durable-delay-in-xamlx"></a>XAMLX의 지속적 지연
 이 샘플에서는 지속적 지연을 사용하는 방법을 보여 줍니다. 지속적 지연은 지연되는 동안 워크플로를 영구적인 장치에 유지하는 지연입니다.  
@@ -37,7 +37,7 @@ ms.lasthandoff: 04/26/2018
   
  .Xamlx 파일은 Visual Studio에서 호스트 된 워크플로 서비스입니다. Visual Studio 워크플로 호스트 하는 워크플로 서비스를 사용 하는 Cassini를 사용 합니다.  
   
- 워크플로 서비스는 워크플로를 호스트하는 외에도 워크플로 인스턴스를 로드하거나 언로드하는 등의 방법으로 관리합니다. 워크플로 서비스 호스트에서 [!INCLUDE[wf](../../../../includes/wf-md.md)] 정의의 인스턴스를 시작하려면 워크플로의 <xref:System.ServiceModel.Activities.Receive> 활동에 메시지를 보내는 클라이언트를 설정합니다. 이 <xref:System.ServiceModel.Activities.Receive>의 <xref:System.ServiceModel.Activities.Receive.CanCreateInstance%2A> 속성은 `true`로 설정되어 있으므로, 메시지를 받으면 워크플로의 새 인스턴스를 만들 수 있습니다.  
+ 워크플로 서비스는 워크플로를 호스트하는 외에도 워크플로 인스턴스를 로드하거나 언로드하는 등의 방법으로 관리합니다. 워크플로 서비스 호스트에서 Windows WF (Workflow Foundation) 정의의 인스턴스를 시작 하려면 메시지를 보내는 클라이언트를 설정의 <xref:System.ServiceModel.Activities.Receive> 워크플로의 활동입니다. 이 <xref:System.ServiceModel.Activities.Receive>의 <xref:System.ServiceModel.Activities.Receive.CanCreateInstance%2A> 속성은 `true`로 설정되어 있으므로, 메시지를 받으면 워크플로의 새 인스턴스를 만들 수 있습니다.  
   
  초기화하는 동안 인스턴스 언로드 동작이 구성 파일에 추가됩니다. 이 구성 파일은 인스턴스를 지속성 저장소(데이터베이스)에 언로드해야 하는 워크플로 서비스 호스트에 지정되어 있습니다. 이 샘플의 경우 지연이 트리거되어 워크플로가 유휴 상태가 되는 직후 인스턴스를 언로드합니다.  
   

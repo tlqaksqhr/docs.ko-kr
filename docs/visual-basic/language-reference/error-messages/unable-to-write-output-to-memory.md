@@ -16,11 +16,11 @@ ms.assetid: 23996dca-250f-4320-8211-1560e90172df
 caps.latest.revision: 8
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 3f27fcf3bd1f80b5daf501609c2cd157c209924a
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 5314702192dd4536f1d49c3ac8b26214d06b786b
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="unable-to-write-output-to-memory"></a>메모리에 출력을 쓸 수 없습니다.
 출력을 메모리에 쓰는 동안 문제가 발생했습니다.  
@@ -31,7 +31,7 @@ ms.lasthandoff: 04/26/2018
   
 1.  프로그램을 다시 컴파일하여 오류가 다시 발생하는지 확인합니다.  
   
-2.  오류가 계속되면 작업을 저장하고 [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)]를 다시 시작합니다.  
+2.  오류가 계속 발생 하는 경우 작업 내용을 저장 하 고 Visual Studio를 다시 시작 합니다.  
   
 3.  오류가 다시 발생 하는 경우에 Visual Basic을 다시 설치 하십시오.  
   

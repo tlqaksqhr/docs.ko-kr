@@ -16,11 +16,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 72282c62ad23ec825eab7054ab1909d07a062b45
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 20cb6c1cd7a3b06b57bce02d5c3caacc7e2e42b7
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="partial-trust-feature-compatibility"></a>부분 신뢰 기능 호환성
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 는 부분 신뢰 환경에서 실행되는 경우 기능의 제한된 하위 집합을 지원합니다. 부분 신뢰에서 지원되는 기능은 [Supported Deployment Scenarios](../../../../docs/framework/wcf/feature-details/supported-deployment-scenarios.md) 항목에서 설명한 대로 특정 시나리오 집합을 바탕으로 설계되었습니다.  
@@ -154,7 +154,7 @@ ms.lasthandoff: 04/26/2018
 >  추적 파일에 중복 오류가 발생하는 것을 방지하기 위해 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 에서는 첫 번째 보안 실패 후 리소스 또는 작업 추적을 사용하지 않습니다. 처음으로 리소스에 액세스하거나 작업을 수행할 때 실패한 각 리소스 액세스에 대해 한 가지 예외 추적이 있습니다.  
   
 ## <a name="wcf-service-host"></a>WCF 서비스 호스트  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 서비스 호스트는 부분 신뢰를 지원하지 않습니다. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 서비스를 부분 신뢰에서 사용하려는 경우 서비스를 빌드하기 위해 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 에서 [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] 서비스 라이브러리 프로젝트 템플릿을 사용하지 마십시오. 대신 [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] 서비스 웹 사이트 템플릿을 선택하여 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 에서 새 웹 사이트를 만들고, 이를 통해 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 부분 신뢰가 지원되는 웹 서버에서 서비스를 호스팅할 수 있습니다.  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 서비스 호스트는 부분 신뢰를 지원하지 않습니다. 사용 하려는 경우는 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 부분 신뢰 환경에서 서비스를 사용 하지 않는 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 서비스를 빌드하기 위해 Visual Studio에서 서비스 라이브러리 프로젝트 템플릿을 합니다. Visual Studio에서 선택 하 여 새 웹 사이트를 대신 만듭니다는 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 웹 서버를에 서비스를 호스팅할 수 있는 서비스 웹 사이트 템플릿을 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 부분 신뢰가 지원 되 합니다.  
   
 ## <a name="other-limitations"></a>기타 제한 사항  
  [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 는 일반적으로 호스팅 응용 프로그램에서 적용된 보안 고려 사항으로 제한됩니다. 예를 들어 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 가 XBAP(XAML 브라우저 응용 프로그램)에서 호스트되는 경우 [Windows Presentation Foundation 부분 신뢰 보안](http://go.microsoft.com/fwlink/?LinkId=89138)에 설명된 대로 XBAP 제한의 영향을 받습니다.  

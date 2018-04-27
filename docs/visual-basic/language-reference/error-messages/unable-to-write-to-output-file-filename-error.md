@@ -16,11 +16,11 @@ ms.assetid: 0845b245-11bb-46fd-95ca-f6cef3c318ef
 caps.latest.revision: 10
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: a183f81a73c3c8034d9ba7366be8b36d425263da
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: ce97bcb2dd0de774c1a82ae75ef5b83c02467edb
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="unable-to-write-to-output-file-39ltfilenamegt39-lterrorgt"></a>출력 파일에 쓸 수 없습니다 &#39; &lt;filename&gt;&#39;: &lt;오류&gt;
 파일을 만드는 동안 문제가 발생했습니다.  
@@ -41,7 +41,7 @@ ms.lasthandoff: 04/26/2018
   
 1.  프로그램을 다시 컴파일하여 오류가 다시 발생하는지 확인합니다.  
   
-2.  오류가 계속되면 작업을 저장하고 [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)]를 다시 시작합니다.  
+2.  오류가 계속 발생 하는 경우 작업 내용을 저장 하 고 Visual Studio를 다시 시작 합니다.  
   
 3.  오류가 계속 발생하면 컴퓨터를 다시 시작합니다.  
   

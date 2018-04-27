@@ -1,12 +1,13 @@
 ---
-title: "WPF 응용 프로그램 성능 최적화"
-ms.custom: 
+title: WPF 응용 프로그램 성능 최적화
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - application rendering [WPF], performance
@@ -14,19 +15,20 @@ helpviewer_keywords:
 - applications [WPF], optimizing
 - WPF application [WPF], optimizing
 ms.assetid: ac8c6aa3-3c68-4a24-9827-3b6c829c1ebf
-caps.latest.revision: "45"
+caps.latest.revision: 45
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 385bcb8678b11e1cb8f84ae509b1f1b6777665d7
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: d2de2d4009cb29c5e9cbdace0d69c220f95a54e1
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="optimizing-wpf-application-performance"></a>WPF 응용 프로그램 성능 최적화
-이 섹션에 대 한 참조로 제공 됩니다 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 응용 프로그램 개발자가 응용 프로그램의 성능을 향상 시키는 방법을 찾고 있습니다. 개발자는 새로운 기능으로 인 경우는 [!INCLUDE[TLA#tla_avalonwinfx](../../../../includes/tlasharptla-avalonwinfx-md.md)] 및 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]를 먼저 잘 이해 해야 두 플랫폼 모두 사용 합니다. 이 섹션에서는 두 항목을 작업 지식이 있다고 가정 하 고 이미 알고 있는 응용 프로그램을 시작 하 고 실행할 수 있을 만큼 프로그래머를 위한 기록 됩니다.  
+이 섹션에 대 한 참조로 제공 됩니다 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 응용 프로그램 개발자가 응용 프로그램의 성능을 향상 시키는 방법을 찾고 있습니다. 개발자는 새로운 기능으로 Microsoft.NET Framework가는 경우 및 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]를 먼저 잘 이해 해야 두 플랫폼입니다. 이 섹션에서는 두 항목을 작업 지식이 있다고 가정 하 고 이미 알고 있는 응용 프로그램을 시작 하 고 실행할 수 있을 만큼 프로그래머를 위한 기록 됩니다.  
   
 > [!NOTE]
 >  이 섹션에 제공 되는 성능 데이터를 기반으로 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] RAM과 ATI Radeon 9700 512와 2.8 g h z PC에서 실행 중인 그래픽 카드입니다.  

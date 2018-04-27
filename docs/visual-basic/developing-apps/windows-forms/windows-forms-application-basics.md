@@ -13,17 +13,17 @@ ms.assetid: 0b919d30-7fd6-42db-85c8-543d15312441
 caps.latest.revision: 20
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: aaa7fbd679eceea53a673646173dc14dc4f209bc
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 230229203029740b82e706fe2aa7ff8ee06c486a
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="windows-forms-application-basics-visual-basic"></a>Windows Forms 응용 프로그램 기초(Visual Basic)
 Visual Basic의 핵심은 사용자의 컴퓨터에서 로컬로 실행 되는 Windows Forms 응용 프로그램을 만드는 기능입니다. Windows Forms를 사용 하 여 응용 프로그램 및 사용자 인터페이스를 만들려면 Visual Studio를 사용할 수 있습니다. Windows Forms 응용 프로그램의 클래스 기반는 <xref:System.Windows.Forms> 네임 스페이스입니다.  
   
 ## <a name="designing-windows-forms-applications"></a>디자인 Windows Forms 응용 프로그램  
- Windows Forms 및 Windows 서비스 응용 프로그램을 만들 수 있습니다 [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)]합니다. 자세한 내용은 다음 항목을 참조하세요.  
+ Visual Studio와 함께 Windows Forms 및 Windows 서비스 응용 프로그램을 만들 수 있습니다. 자세한 내용은 다음 항목을 참조하세요.  
   
 -   [Windows Forms 시작](../../../framework/winforms/getting-started-with-windows-forms.md)합니다. 만들고 Windows Forms 프로그래밍 방법에 대 한 정보를 제공 합니다.  
    
@@ -32,7 +32,7 @@ Visual Basic의 핵심은 사용자의 컴퓨터에서 로컬로 실행 되는 W
 -   [Windows 서비스 응용 프로그램](../../../framework/windows-services/index.md)합니다. Windows 서비스를 만드는 방법을 설명 하는 항목을 나열 합니다.  
   
 ## <a name="building-rich-interactive-user-interfaces"></a>풍부한 대화형 사용자 인터페이스 빌드  
- Windows Forms는의 스마트 클라이언트 구성 요소는 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)], 읽기 및 쓰기 파일 시스템 등의 일반적인 응용 프로그램 작업을 사용할 수 있는 관리 되는 라이브러리의 집합입니다. 와 같은 개발 환경을 사용 하 여 [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)], 네트워크를 통해 원격 컴퓨터와 정보를 표시할 사용자 로부터 입력을 요청 하 고 통신 하는 Windows Forms 응용 프로그램을 만들 수 있습니다.  
+ Windows Forms는의 스마트 클라이언트 구성 요소는 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)], 읽기 및 쓰기 파일 시스템 등의 일반적인 응용 프로그램 작업을 사용할 수 있는 관리 되는 라이브러리의 집합입니다. Visual Studio와 같은 개발 환경을 사용 하는 네트워크를 통해 원격 컴퓨터와 정보를 표시할 사용자 로부터 입력을 요청 하 고 통신 하는 Windows Forms 응용 프로그램 만들 수 있습니다.  
   
  Windows Forms에서 양식은를 사용자에 게 정보를 표시할 비주얼 화면입니다. 일반적으로 폼에 컨트롤을 배치 하 고 마우스 클릭 이나 키 누름 등의 사용자 동작에 대 한 응답을 개발 하 여 Windows Forms 응용 프로그램을 빌드합니다. *컨트롤*은 데이터를 표시하거나 데이터 입력을 수락하는 고유한 UI(사용자 인터페이스) 요소입니다.  
   
@@ -44,7 +44,7 @@ Visual Basic의 핵심은 사용자의 컴퓨터에서 로컬로 실행 되는 W
   
  Windows Forms에는 Microsoft Office와 같은 고급 응용 프로그램의 기능을 에뮬레이트하는 풍부한 UI 컨트롤이 있습니다. 사용 하는 <xref:System.Windows.Forms.ToolStrip> 및 <xref:System.Windows.Forms.MenuStrip> 컨트롤을 도구 모음과 메뉴 텍스트 및 이미지를 포함 하 고, 하위 메뉴를 표시, 텍스트 상자 및 콤보 상자와 같은 다른 컨트롤을 호스팅하는 만들 수 있습니다.  
   
- 와 [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] 끌어서 놓기 폼 디자이너를 쉽게 만들 수 있습니다 Windows Forms 응용 프로그램: 커서를 사용 하 여 컨트롤을 선택 하 고 폼의 원하는 위치에 넣습니다. 디자이너는 눈금선 및 "맞춤선"와 같은 도구를 제공 합니다. 컨트롤을 쉽게 배치할 합니다. 사용 여부 및 [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] 또는 컴파일, 명령줄에서 사용할 수 있습니다는 <xref:System.Windows.Forms.FlowLayoutPanel>, <xref:System.Windows.Forms.TableLayoutPanel> 및 <xref:System.Windows.Forms.SplitContainer> 고급 만들 컨트롤에 최소한의 시간과 노력으로 레이아웃을 형성 합니다.  
+ Visual Studio 끌어서 놓기 폼 디자이너를 쉽게 만들 수 있습니다 Windows Forms 응용 프로그램: 커서를 사용 하 여 컨트롤을 선택 하 고 폼의 원하는 위치에 넣습니다. 디자이너는 눈금선 및 "맞춤선"와 같은 도구를 제공 합니다. 컨트롤을 쉽게 배치할 합니다. 사용할 수 있는지를 Visual Studio를 사용 하거나 명령줄에서 컴파일 및는 <xref:System.Windows.Forms.FlowLayoutPanel>, <xref:System.Windows.Forms.TableLayoutPanel> 및 <xref:System.Windows.Forms.SplitContainer> 고급 만들 컨트롤에 최소한의 시간과 노력으로 레이아웃을 형성 합니다.  
   
 ### <a name="custom-ui-elements"></a>사용자 지정 UI 요소  
  마지막으로, 사용자 지정 UI 요소를 만들어야 하는 경우는 <xref:System.Drawing> 선, 원 및 기타 도형을 폼에 직접 렌더링 해야 하는 클래스의 모든 네임 스페이스 포함 합니다.  
@@ -53,7 +53,7 @@ Visual Basic의 핵심은 사용자의 컴퓨터에서 로컬로 실행 되는 W
   
 |대상|보기|  
 |--------|---------|  
-|새 Windows Forms 응용 프로그램을 만듭니다 [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)]|[연습: 간단한 Windows Form 만들기](http://msdn.microsoft.com/library/2d9daec0-0543-41d0-acb1-964f685bddbb)|  
+|Visual Studio와 함께 새 Windows Forms 응용 프로그램 만들기|[연습: 간단한 Windows Form 만들기](http://msdn.microsoft.com/library/2d9daec0-0543-41d0-acb1-964f685bddbb)|  
 |폼에서 컨트롤 사용|[방법: Windows Forms에 컨트롤 추가](../../../framework/winforms/controls/how-to-add-controls-to-windows-forms.md)|   
 |사용 하 여 그래픽 만들기 <xref:System.Drawing>|[그래픽 프로그래밍 시작](../../../framework/winforms/advanced/getting-started-with-graphics-programming.md)|  
 |사용자 지정 컨트롤 만들기|[방법: UserControl 클래스에서 상속](../../../framework/winforms/controls/how-to-inherit-from-the-usercontrol-class.md)|  
@@ -67,7 +67,7 @@ Visual Basic의 핵심은 사용자의 컴퓨터에서 로컬로 실행 되는 W
  프로젝트의 데이터베이스, 웹 서비스 및 개체와 같은 데이터 소스를 표시 하는 데이터 원본 창을 사용 하 여 쉽게 데이터 바인딩된 컨트롤을 만들 수 있습니다. 이 창에서 프로젝트의 폼으로 항목을 끌어 데이터 바인딩된 컨트롤을 만들 수 있습니다. 데이터 소스 창에서 기존 컨트롤로 개체를 끌어 기존 컨트롤을 데이터에 바인딩할 수도 있습니다.  
   
 ### <a name="settings"></a>설정  
- 다른 형식의 데이터 바인딩은 Windows Forms에서 관리할 수 있는 설정입니다. 대부분의 스마트 클라이언트 응용 프로그램 폼 마지막으로 알려진 크기 등의 런타임 상태에 대 한 정보를 유지 하 고 저장 된 파일의 기본 위치와 같은 사용자 기본 설정 데이터를 유지 해야 합니다. 응용 프로그램 설정 기능은 클라이언트 컴퓨터에 두 유형의 설정 저장할 수 있는 간단한 방법을 제공 하 여 이러한 요구 사항을 해결 합니다. 한 번 중 하나를 사용 하 여 정의 된 [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] 또는 코드 편집기, 이러한 설정은 XML로 유지 되며 런타임에 자동으로 다시 메모리로 읽어옵니다.  
+ 다른 형식의 데이터 바인딩은 Windows Forms에서 관리할 수 있는 설정입니다. 대부분의 스마트 클라이언트 응용 프로그램 폼 마지막으로 알려진 크기 등의 런타임 상태에 대 한 정보를 유지 하 고 저장 된 파일의 기본 위치와 같은 사용자 기본 설정 데이터를 유지 해야 합니다. 응용 프로그램 설정 기능은 클라이언트 컴퓨터에 두 유형의 설정 저장할 수 있는 간단한 방법을 제공 하 여 이러한 요구 사항을 해결 합니다. Visual Studio 또는 코드 편집기를 사용 하 여 정의 되 면 이러한 설정은 XML로 유지 되며 런타임에 자동으로 다시 메모리로 읽어옵니다 됩니다.  
   
  이러한 기능을 사용 하는 방법에 대 한 단계별 정보는 다음 도움말 항목을 참조 하십시오.  
   
@@ -78,7 +78,7 @@ Visual Basic의 핵심은 사용자의 컴퓨터에서 로컬로 실행 되는 W
 |데이터 소스 창 사용|[연습: Windows Form에 데이터 표시](/visualstudio/data-tools/accessing-data-in-visual-studio)|  
   
 ## <a name="deploying-applications-to-client-computers"></a>클라이언트 컴퓨터에 응용 프로그램 배포  
- 응용 프로그램을 작성 한 후 설치 하 고 자신의 클라이언트 컴퓨터에서 실행할 수 있도록 사용자에 게 보낼 해야 있습니다. 사용 하는 [!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)] 기술, 내에서 응용 프로그램을 배포할 수 있습니다 [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] 에서 몇 번의 클릭을 사용 하 고 사용자는 웹에서 응용 프로그램을 가리키는 URL에 제공 합니다. [!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)] 모든 요소와 응용 프로그램에서 종속성을 관리 하 고 응용 프로그램이 클라이언트 컴퓨터에 제대로 설치 되어 있는지 확인 합니다.  
+ 응용 프로그램을 작성 한 후 설치 하 고 자신의 클라이언트 컴퓨터에서 실행할 수 있도록 사용자에 게 보낼 해야 있습니다. 사용 하는 [!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)] 기술 있습니다 수 몇 번의 클릭을 사용 하 여 Visual Studio 내에서 응용 프로그램을 배포 및 사용자는 웹에서 응용 프로그램을 가리키는 URL에 제공 합니다. [!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)] 모든 요소와 응용 프로그램에서 종속성을 관리 하 고 응용 프로그램이 클라이언트 컴퓨터에 제대로 설치 되어 있는지 확인 합니다.  
   
  사용자가 네트워크에 연결된 경우에만 실행되거나 온라인 및 오프라인 둘 다에서 실행되도록 [!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)] 응용 프로그램을 구성할 수 있습니다. 응용 프로그램 오프 라인 작업을 지원 해야 한다고 지정 하는 경우 [!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)] 사용자의 응용 프로그램에 대 한 링크 추가 **시작** 메뉴에서 사용자 URL을 사용 하지 않고 열 수 있도록 합니다.  
   

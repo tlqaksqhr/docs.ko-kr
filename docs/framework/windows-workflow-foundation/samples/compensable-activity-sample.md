@@ -1,26 +1,27 @@
 ---
-title: "보정 가능한 활동 샘플"
-ms.custom: 
+title: 보정 가능한 활동 샘플
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 58f4898c-b2b8-44a4-9a73-3bef4da6d5ba
-caps.latest.revision: "11"
+caps.latest.revision: 11
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: b2fd8d38e95dbddbe85f11bf88ef500697b6c02a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: ba81d0eb32305e8ea099a291bef612639915292f
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="compensable-activity-sample"></a>보정 가능한 활동 샘플
-이 샘플에서는 `CompensableActivity` 활동을 사용하여 정상적인 실행 중에 지정된 동작에 대해 수행할 작업과 해당 동작을 보정하기 위해 필요한 경우 나중에 수행해야 하는 작업을 정의하는 방법을 보여 줍니다.  샘플의 첫 번째 부분에서는 [!INCLUDE[wf](../../../../includes/wf-md.md)] 활동을 사용하여 `CompensableActivity`에서 보정 가능한 작업 단위를 정의하는 방법과 성공적인 실행 시 해당 작업 단위를 실행하는 방법을 보여 줍니다.  샘플의 두 번째 부분에서는 예기치 않은 이벤트가 발생하고 워크플로 인스턴스가 취소될 경우 동일한 보정 가능 작업 단위가 자동으로 보정을 처리하는 방법을 보여 줍니다.  
+이 샘플에서는 `CompensableActivity` 활동을 사용하여 정상적인 실행 중에 지정된 동작에 대해 수행할 작업과 해당 동작을 보정하기 위해 필요한 경우 나중에 수행해야 하는 작업을 정의하는 방법을 보여 줍니다.  샘플의 첫 번째 부분에서는 보정 가능한 작업 단위를 정의할 수 있는 방법을에서 Windows WF (Workflow Foundation)을 보여 줍니다. 사용 하는 `CompensableActivity` 활동 및 실행을 성공적으로 실행 하는 방법입니다.  샘플의 두 번째 부분에서는 예기치 않은 이벤트가 발생하고 워크플로 인스턴스가 취소될 경우 동일한 보정 가능 작업 단위가 자동으로 보정을 처리하는 방법을 보여 줍니다.  
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>샘플을 설치, 빌드 및 실행하려면  
   

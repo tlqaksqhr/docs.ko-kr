@@ -26,11 +26,11 @@ ms.assetid: b324cc1e-b03c-4f39-aea6-6a6d5bfd0e37
 caps.latest.revision: 21
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: f3ff175a0f8d152febf2d50c294d401b12285fc7
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 1fae8215543c50484dc5ea7fc24f292ba84e2699
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="troubleshooting-interoperability-visual-basic"></a>상호 운용성 문제 해결(Visual Basic)
 COM과의 관리 코드 상호 운용할 때는 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)], 다음과 같은 일반적인 문제 중 하나 이상을 발생할 수 있습니다.  
@@ -107,7 +107,7 @@ Set db = DBEngine.OpenDatabase("C:\nwind.mdb")
  예외 개체의 내용을 검사 하 여 오류 설명, HRESULT 및 COM 오류의 출처와 같은 정보를 찾을 수 있습니다.  
   
 ##  <a name="vbconinteroperabilitymarshalinganchor10"></a> ActiveX 컨트롤 문제  
- Visual Basic 6.0을 사용 하는 대부분의 ActiveX 컨트롤 Visual Basic.NET과 함께 문제 없이 작동 합니다. 중요 한 예외는 컨테이너 컨트롤 또는 다른 컨트롤을 시각적으로 포함 하는 컨트롤입니다. 이전 버전에서 올바르게 작동 하지 않는 컨트롤의 몇 가지 예 [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] 은 다음과 같습니다.  
+ Visual Basic 6.0을 사용 하는 대부분의 ActiveX 컨트롤 Visual Basic.NET과 함께 문제 없이 작동 합니다. 중요 한 예외는 컨테이너 컨트롤 또는 다른 컨트롤을 시각적으로 포함 하는 컨트롤입니다. Visual Studio와 함께 올바르게 작동 하지 않는 이전 버전의 컨트롤의 몇 가지 예는 다음과 같습니다.  
   
 -   Microsoft Forms 2.0 프레임 제어  
   
@@ -115,7 +115,7 @@ Set db = DBEngine.OpenDatabase("C:\nwind.mdb")
   
 -   Sheridan 탭 컨트롤  
   
- 지원 되지 않는 ActiveX 컨트롤 문제에 대 한 몇 가지 대안만 있습니다. 에 기존 컨트롤을 마이그레이션할 수 있습니다 [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] 원래 소스 코드를 소유 하는 경우. 그렇지 않은 경우 업데이트에 대 한 소프트웨어 공급 업체에 확인할 수 있습니다. NET 호환 버전을 대체 하는 컨트롤의 ActiveX 컨트롤을 지원 되지 않습니다.  
+ 지원 되지 않는 ActiveX 컨트롤 문제에 대 한 몇 가지 대안만 있습니다. 기존 컨트롤을 통해 원래 소스 코드를 소유 하는 경우 Visual Studio로 마이그레이션할 수 있습니다. 그렇지 않은 경우 업데이트에 대 한 소프트웨어 공급 업체에 확인할 수 있습니다. NET 호환 버전을 대체 하는 컨트롤의 ActiveX 컨트롤을 지원 되지 않습니다.  
   
 ##  <a name="vbconinteroperabilitymarshalinganchor11"></a> ByRef 컨트롤의 읽기 전용 속성에 전달  
  Visual Basic.NET "오류 0x800A017F CTL_E_SETNOTSUPPORTED"와 같은 COM 오류를 전달 하는 경우 때로는 발생 `ReadOnly` 으로 오래 된 일부 ActiveX 컨트롤의 속성 `ByRef` 다른 프로시저에 매개 변수입니다. Visual Basic 6.0에서 유사한 프로시저 호출에서 오류가 발생 하지 않습니다 및 매개 변수는 값으로 전달 된 것 처럼 처리 됩니다. Visual Basic.NET 오류 메시지 표시 속성 하지 않은 속성을 변경 하려는 `Set` 프로시저입니다.  

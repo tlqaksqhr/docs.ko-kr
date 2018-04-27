@@ -1,12 +1,13 @@
 ---
-title: "WPF 보안 전략 - 플랫폼 보안"
-ms.custom: 
+title: WPF 보안 전략 - 플랫폼 보안
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -24,16 +25,17 @@ helpviewer_keywords:
 - Windows Presentation Foundation [WPF], about security model
 - security model [WPF], operating system
 ms.assetid: 2a39a054-3e2a-4659-bcb7-8bcea490ba31
-caps.latest.revision: "30"
+caps.latest.revision: 30
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: b40a4f1ba28559ee35dff9866539476e55cbd0fd
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: c3c1654bd63d59bf6588b1dc18593ef7a33f37c0
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="wpf-security-strategy---platform-security"></a>WPF 보안 전략 - 플랫폼 보안
 [!INCLUDE[TLA#tla_wpf](../../../includes/tlasharptla-wpf-md.md)]에서는 다양한 보안 서비스를 제공하지만 운영 체제, [!INCLUDE[TLA2#tla_clr](../../../includes/tla2sharptla-clr-md.md)] 및 [!INCLUDE[TLA2#tla_ie](../../../includes/tla2sharptla-ie-md.md)]를 포함하는 내부 플랫폼의 보안 기능도 활용합니다. 이러한 계층이 결합되어 다음 그림과 같이 단일 실패 지점을 방지하는 강력한 심층 방어 보안 모델인 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]를 제공합니다.  
@@ -46,11 +48,11 @@ ms.lasthandoff: 12/22/2017
   
 <a name="Operating_System_Security"></a>   
 ## <a name="operating-system-security"></a>운영 체제 보안  
- [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]에 필요한 최소 수준의 운영 체제는 [!INCLUDE[TLA2#tla_winxpsp2](../../../includes/tla2sharptla-winxpsp2-md.md)]입니다. [!INCLUDE[TLA2#tla_winxpsp2](../../../includes/tla2sharptla-winxpsp2-md.md)] 코어에서는 [!INCLUDE[TLA2#tla_win](../../../includes/tla2sharptla-win-md.md)]로 빌드된 응용 프로그램을 포함하여 모든 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 응용 프로그램에 대한 보안 기초를 형성하는 여러 가지 보안 기능을 제공합니다. [!INCLUDE[TLA#tla_longhorn](../../../includes/tlasharptla-longhorn-md.md)]은 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]의 보안 기능을 통합하고 더욱 확장합니다. 이 항목에서는 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]에 중요한 다양한 보안 기능 및 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]가 더욱 심층 방어를 제공하기 위해 이러한 기능과 통합되는 방법을 설명합니다.  
+ [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]에 필요한 최소 수준의 운영 체제는 [!INCLUDE[TLA2#tla_winxpsp2](../../../includes/tla2sharptla-winxpsp2-md.md)]입니다. 핵심 [!INCLUDE[TLA2#tla_winxpsp2](../../../includes/tla2sharptla-winxpsp2-md.md)] 사용 하 여 빌드한 포함 하 여 모든 Windows 응용 프로그램을 위한 보안 기초를 형성 하는 몇 가지 보안 기능이 제공 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]합니다. [!INCLUDE[TLA#tla_longhorn](../../../includes/tlasharptla-longhorn-md.md)]은 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]의 보안 기능을 통합하고 더욱 확장합니다. 이 항목에서는 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]에 중요한 다양한 보안 기능 및 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]가 더욱 심층 방어를 제공하기 위해 이러한 기능과 통합되는 방법을 설명합니다.  
   
 <a name="Microsoft_Windows_XP_Service_Pack_2__SP2_"></a>   
 ### <a name="microsoft-windows-xp-service-pack-2-sp2"></a>Microsoft Windows XP SP2(서비스 팩 2)  
- [!INCLUDE[TLA2#tla_win](../../../includes/tla2sharptla-win-md.md)]의 일반적인 검토 및 강화뿐 아니라 이 항목에서 설명하는 [!INCLUDE[TLA2#tla_winxpsp2](../../../includes/tla2sharptla-winxpsp2-md.md)]의 세 가지 주요 기능이 있습니다.  
+ 일반 검토 및의 Windows 강화 외에 세 가지 주요 기능에서 [!INCLUDE[TLA2#tla_winxpsp2](../../../includes/tla2sharptla-winxpsp2-md.md)] 이 항목에 설명 합니다.  
   
 -   /GS 컴파일  
   
@@ -73,7 +75,7 @@ ms.lasthandoff: 12/22/2017
  [!INCLUDE[TLA#tla_longhorn](../../../includes/tlasharptla-longhorn-md.md)]의 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 사용자는 "최소 권한 사용자 액세스", 코드 무결성 검사 및 권한 격리를 비롯한 운영 체제의 향상된 추가 보안 기능을 활용합니다.  
   
 #### <a name="user-account-control-uac"></a>UAC(사용자 계정 컨트롤)  
- 현재 많은 응용 프로그램에서 설치, 실행 또는 둘 다에 대해 관리자 권한을 요구하기 때문에 [!INCLUDE[TLA2#tla_win](../../../includes/tla2sharptla-win-md.md)] 사용자는 관리자 권한으로 실행하려는 경향이 있습니다. 한 가지 예로 기본 응용 프로그램 설정을 레지스트리에 쓸 수 있습니다.  
+ 현재 Windows 사용자 대부분의 응용 프로그램 설치 또는 실행 또는 둘 다에 대 한 필요 하기 때문에 관리자 권한으로 실행 하는 경향이 있습니다. 한 가지 예로 기본 응용 프로그램 설정을 레지스트리에 쓸 수 있습니다.  
   
  관리자 권한으로 실행은 실제로 관리자 권한이 부여된 프로세스에서 응용 프로그램이 실행됨을 의미합니다. 이 경우 보안에 미치는 영향은 관리자 권한으로 실행되는 프로세스를 가로챈 악성 코드가 중요한 시스템 리소스에 대한 액세스를 포함하여 해당 권한을 자동으로 상속하게 된다는 것입니다.  
   
@@ -174,18 +176,18 @@ ms.lasthandoff: 12/22/2017
   
  이 경우 해당 권한이 호스트 응용 프로그램 도메인의 인터넷 영역 권한 집합에 의해 제어되지 않도록 하는 동시에 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]가 높은 권한을 받아야 합니다.  
   
- [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]사용 하 여이 작업을 수행 된 **Assert** 메서드는 사용 합니다. 다음 코드에서는 이렇게 되는 방식을 보여 줍니다.  
+ [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 사용 하 여이 작업을 수행 된 **Assert** 메서드는 사용 합니다. 다음 코드에서는 이렇게 되는 방식을 보여 줍니다.  
   
  [!code-csharp[WPFPlatformSecuritySnippets#Permission](../../../samples/snippets/csharp/VS_Snippets_Wpf/WPFPlatformSecuritySnippets/CSharp/Page1.xaml.cs#permission)]
  [!code-vb[WPFPlatformSecuritySnippets#Permission](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WPFPlatformSecuritySnippets/VisualBasic/Page1.xaml.vb#permission)]  
   
  **Assert** 에 필요한 무제한 권한 기본적으로 방지 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 에서 인터넷에 의해 제한 되 고 영역의 권한에 [!INCLUDE[TLA2#tla_winfxwebapp](../../../includes/tla2sharptla-winfxwebapp-md.md)]합니다.  
   
- 플랫폼 관점에서 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 사용에 대 한 책임이 **Assert** 잘못 되었습니다; 사용이 잘못 **Assert** 권한을 상승 하는 악성 코드가 설정 될 수 있습니다. 따라서 것이 매우 중요 합니다만 호출 **Assert** 필요할 때 해당 샌드박스 되도록 제한 사항이 그대로 유지 하 고 있습니다. 예를 들어 샌드박스 코드는 임의의 파일을 열 수 없지만 글꼴을 사용할 수 있습니다. [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]호출 하 여 글꼴 기능을 사용 하려면 샌드 박싱된 응용 **Assert**, 및에 대 한 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 샌드 박싱된 응용 프로그램 대신 이러한 글꼴이 들어에 알려진 파일을 읽을 수 있습니다.  
+ 플랫폼 관점에서 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 사용에 대 한 책임이 **Assert** 잘못 되었습니다; 사용이 잘못 **Assert** 권한을 상승 하는 악성 코드가 설정 될 수 있습니다. 따라서 것이 매우 중요 합니다만 호출 **Assert** 필요할 때 해당 샌드박스 되도록 제한 사항이 그대로 유지 하 고 있습니다. 예를 들어 샌드박스 코드는 임의의 파일을 열 수 없지만 글꼴을 사용할 수 있습니다. [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 호출 하 여 글꼴 기능을 사용 하려면 샌드 박싱된 응용 **Assert**, 및에 대 한 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 샌드 박싱된 응용 프로그램 대신 이러한 글꼴이 들어에 알려진 파일을 읽을 수 있습니다.  
   
 <a name="ClickOnce_Deployment"></a>   
 ### <a name="clickonce-deployment"></a>ClickOnce 배포  
- [!INCLUDE[TLA#tla_clickonce](../../../includes/tlasharptla-clickonce-md.md)]에 포함 된 포괄적인 배포 기술 [!INCLUDE[TLA2#tla_winfx](../../../includes/tla2sharptla-winfx-md.md)]과 통합할 [!INCLUDE[TLA#tla_visualstu](../../../includes/tlasharptla-visualstu-md.md)] (참조 [ClickOnce 배포 개요](http://msdn.microsoft.com/library/142dbbz4.aspx) 자세한 정보에 대 한). 브라우저에서 호스트된 응용 프로그램은 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]로 배포해야 하지만 독립 실행형 [!INCLUDE[TLA#tla_clickonce](../../../includes/tlasharptla-clickonce-md.md)] 응용 프로그램은 [!INCLUDE[TLA2#tla_clickonce](../../../includes/tla2sharptla-clickonce-md.md)]로 배포할 수 있습니다.  
+ [!INCLUDE[TLA#tla_clickonce](../../../includes/tlasharptla-clickonce-md.md)] 에 포함 된 포괄적인 배포 기술 [!INCLUDE[TLA2#tla_winfx](../../../includes/tla2sharptla-winfx-md.md)]과 통합할 [!INCLUDE[TLA#tla_visualstu](../../../includes/tlasharptla-visualstu-md.md)] (참조 [ClickOnce 배포 개요](http://msdn.microsoft.com/library/142dbbz4.aspx) 자세한 정보에 대 한). 브라우저에서 호스트된 응용 프로그램은 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]로 배포해야 하지만 독립 실행형 [!INCLUDE[TLA#tla_clickonce](../../../includes/tlasharptla-clickonce-md.md)] 응용 프로그램은 [!INCLUDE[TLA2#tla_clickonce](../../../includes/tla2sharptla-clickonce-md.md)]로 배포할 수 있습니다.  
   
  [!INCLUDE[TLA2#tla_clickonce](../../../includes/tla2sharptla-clickonce-md.md)]로 배포된 응용 프로그램에는 [!INCLUDE[TLA#tla_cas](../../../includes/tlasharptla-cas-md.md)]보다 높은 추가 보안 계층이 제공됩니다. 기본적으로 [!INCLUDE[TLA#tla_clickonce](../../../includes/tlasharptla-clickonce-md.md)]로 배포된 응용 프로그램이 필요한 권한을 요청합니다. 응용 프로그램이 배포된 소스 영역에 대한 권한 집합을 초과하지 않는 경우에만 해당 권한이 부여됩니다. 시작 영역의 권한 집합에서 제공하는 것보다 작아도 권한 집합을 필요한 권한으로만 줄이면 응용 프로그램이 액세스할 수 있는 리소스 수가 최소한으로 줄어듭니다. 따라서 응용 프로그램을 가로채는 경우 클라이언트 컴퓨터의 손상 가능성이 줄어듭니다.  
   
@@ -211,7 +213,7 @@ ms.lasthandoff: 12/22/2017
   
  경우에 따라 신뢰할 수 없는 웹 사이트가 설치 [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)]를 스푸핑하거나 사용자가 취소해도 [!INCLUDE[TLA#tla_actx](../../../includes/tlasharptla-actx-md.md)] 설치 대화 상자를 반복적으로 표시하여 사용자를 속이려고 합니다. 이러한 기술을 사용하면 다수의 사용자가 속아서 잘못된 결정을 내리고 스파이웨어 응용 프로그램을 설치할 수 있습니다.  
   
- [!INCLUDE[TLA2#tla_ie6sp2](../../../includes/tla2sharptla-ie6sp2-md.md)]에는 사용자 시작의 개념을 중심으로 이러한 유형의 문제를 완화하는 여러 가지 기능이 포함되어있습니다. [!INCLUDE[TLA2#tla_ie6sp2](../../../includes/tla2sharptla-ie6sp2-md.md)]작업으로 알려진 전에 링크 또는 페이지 요소에 대해 사용자가 클릭 하는 경우를 검색 *사용자 초기화*, 스크립트는 페이지에 의해 트리거되는 유사한 작업과 처리 합니다. 예를 들어, [!INCLUDE[TLA2#tla_ie6sp2](../../../includes/tla2sharptla-ie6sp2-md.md)] 를 통합 한 **팝업 차단** 페이지 팝업을 만들기 전에 단추를 클릭할 때이 감지 하 합니다. 이 기능을 통해 [!INCLUDE[TLA2#tla_ie6sp2](../../../includes/tla2sharptla-ie6sp2-md.md)]에서는 사용자가 요청하거나 원하지 않는 팝업을 차단하는 동시에 무해한 팝업을 대부분 허용할 수 있습니다. 차단 된 팝업은 새 아래에 트래핑 **알림 표시줄**, 사용자가 직접 블록을 재정의 하 고 팝업을 볼 수 있습니다.  
+ [!INCLUDE[TLA2#tla_ie6sp2](../../../includes/tla2sharptla-ie6sp2-md.md)]에는 사용자 시작의 개념을 중심으로 이러한 유형의 문제를 완화하는 여러 가지 기능이 포함되어있습니다. [!INCLUDE[TLA2#tla_ie6sp2](../../../includes/tla2sharptla-ie6sp2-md.md)] 작업으로 알려진 전에 링크 또는 페이지 요소에 대해 사용자가 클릭 하는 경우를 검색 *사용자 초기화*, 스크립트는 페이지에 의해 트리거되는 유사한 작업과 처리 합니다. 예를 들어, [!INCLUDE[TLA2#tla_ie6sp2](../../../includes/tla2sharptla-ie6sp2-md.md)] 를 통합 한 **팝업 차단** 페이지 팝업을 만들기 전에 단추를 클릭할 때이 감지 하 합니다. 이 기능을 통해 [!INCLUDE[TLA2#tla_ie6sp2](../../../includes/tla2sharptla-ie6sp2-md.md)]에서는 사용자가 요청하거나 원하지 않는 팝업을 차단하는 동시에 무해한 팝업을 대부분 허용할 수 있습니다. 차단 된 팝업은 새 아래에 트래핑 **알림 표시줄**, 사용자가 직접 블록을 재정의 하 고 팝업을 볼 수 있습니다.  
   
  동일한 사용자 초기화 논리에도 적용 됩니다 **열려**/**저장** 보안 메시지입니다. 이전에 설치된 컨트롤의 업그레이드를 나타내지 않는 경우 [!INCLUDE[TLA2#tla_actx](../../../includes/tla2sharptla-actx-md.md)] 설치 대화 상자는 항상 알림 표시줄 아래에 포착됩니다. 이러한 조치가 결합되어 사용자에게 더 안전하고 제어된 사용자 환경을 제공합니다. 사용자가 원하지 않는 소프트웨어나 악성 소프트웨어를 설치하도록 유인하는 사이트로부터 보호되기 때문입니다.  
   

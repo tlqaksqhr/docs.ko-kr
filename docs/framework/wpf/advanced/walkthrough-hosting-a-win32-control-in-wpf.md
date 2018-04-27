@@ -22,11 +22,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: ab80f39a15952bee8296166ea19a78498c3c1b23
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 7c33e764b9af46aec3788e7e113d01c4c5fc9905
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="walkthrough-hosting-a-win32-control-in-wpf"></a>연습: WPF에서 Win32 컨트롤 호스팅
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]에서는 응용 프로그램을 만들기 위한 다양한 환경을 제공합니다. 그러나에 있는 경우 상당한 투자 [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] 코드는 것이 보다 효율적으로 이라도 다시 사용을 코드의 일부 여 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 완전히 다시 작성 하지 않고 응용 프로그램입니다. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 호스팅을 위한 간단한 메커니즘을 제공는 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 창에는 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 페이지.  
@@ -141,7 +141,7 @@ ms.lasthandoff: 04/26/2018
   
 <a name="communication"></a>   
 ## <a name="implement-communication-between-the-control-and-the-page"></a>컨트롤과 페이지 간의 통신 구현  
- 전송 하 여 컨트롤을 조작 [!INCLUDE[TLA2#tla_win](../../../../includes/tla2sharptla-win-md.md)] 메시지입니다. 컨트롤은 사용자가 호스트 창에 알림을 보내 상호 작용할 때 알려 줍니다. [WPF 샘플에서 Win32 ListBox 컨트롤 호스팅](http://go.microsoft.com/fwlink/?LinkID=159998) 샘플이 과정의 몇 가지 예제를 제공 하는 UI에 포함 되어 있습니다.  
+ Windows 메시지를 전송 하 여 컨트롤을 조작 합니다. 컨트롤은 사용자가 호스트 창에 알림을 보내 상호 작용할 때 알려 줍니다. [WPF 샘플에서 Win32 ListBox 컨트롤 호스팅](http://go.microsoft.com/fwlink/?LinkID=159998) 샘플이 과정의 몇 가지 예제를 제공 하는 UI에 포함 되어 있습니다.  
   
 -   목록에 항목을 추가합니다.  
   

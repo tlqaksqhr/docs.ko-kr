@@ -1,24 +1,26 @@
 ---
-title: "Message Security 샘플"
-ms.custom: 
+title: Message Security 샘플
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 82444166-6288-493a-85d4-85f43f134d19
-caps.latest.revision: "33"
+caps.latest.revision: 33
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: efad1940def2c27d57bb1e9da28e51362de5b237
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: 0ead08c454ed8b9e484d23d426e918c9f11fe3ed
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="message-security-sample"></a>Message Security 샘플
 이 샘플에서는 `basicHttpBinding` 및 메시지 보안을 사용하는 응용 프로그램을 구현하는 방법을 보여 줍니다. 이 샘플에 따라는 [시작](../../../../docs/framework/wcf/samples/getting-started-sample.md) 계산기 서비스를 구현 하는 합니다.  
@@ -105,11 +107,11 @@ ms.lasthandoff: 01/19/2018
  동일한 바인딩 및 보안 세부 정보가 클라이언트 구성 파일에 지정됩니다.  
   
  호출자의 ID는 다음 코드를 사용하여 서비스 콘솔 창에 표시됩니다.  
-  
-```  
+
+```csharp
 Console.WriteLine("Called by {0}", ServiceSecurityContext.Current.PrimaryIdentity.Name);  
-```  
-  
+```
+
  샘플을 실행하면 작업 요청 및 응답이 클라이언트 콘솔 창에 표시됩니다. 클라이언트를 종료하려면 클라이언트 창에서 Enter 키를 누릅니다.  
   
 ```  

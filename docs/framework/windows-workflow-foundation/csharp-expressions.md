@@ -14,14 +14,14 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: ea613d21cf7c8064938b94df3826e40caeecf3c3
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 17528db182676ae69694c4e416ee10bff1ae6ef2
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="c-expressions"></a>C# 식
-[!INCLUDE[net_v45](../../../includes/net-v45-md.md)]부터는 [!INCLUDE[wf](../../../includes/wf-md.md)]에서 C# 식이 지원됩니다. [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)]에서 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]를 대상으로 만들어진 새 C# 워크플로 프로젝트에서는 C# 식을 사용하고, Visual Basic 워크플로 프로젝트에서는 Visual Basic 식을 사용합니다. Visual Basic 식을 사용하는 기존 [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] 워크플로 프로젝트는 프로젝트 언어에 관계없이 [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)]로 마이그레이션할 수 있으며 지원됩니다. 이 항목에서는 [!INCLUDE[wf1](../../../includes/wf1-md.md)]의 C# 식에 대해 간략하게 설명합니다.  
+부터는 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], C# 식에서 Windows WF (Workflow Foundation)를 지원 됩니다. [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)]에서 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]를 대상으로 만들어진 새 C# 워크플로 프로젝트에서는 C# 식을 사용하고, Visual Basic 워크플로 프로젝트에서는 Visual Basic 식을 사용합니다. Visual Basic 식을 사용하는 기존 [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] 워크플로 프로젝트는 프로젝트 언어에 관계없이 [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)]로 마이그레이션할 수 있으며 지원됩니다. 이 항목에서는 [!INCLUDE[wf1](../../../includes/wf1-md.md)]의 C# 식에 대해 간략하게 설명합니다.  
   
 ## <a name="using-c-expressions-in-workflows"></a>워크플로에서 C# 식 사용  
   
@@ -40,7 +40,7 @@ ms.lasthandoff: 04/26/2018
 -   [XAMLX 워크플로 서비스에서 C# 식 사용](../../../docs/framework/windows-workflow-foundation/csharp-expressions.md#WFServices)  
   
 ###  <a name="WFDesigner"></a> 워크플로 디자이너에서 C# 식 사용  
- [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]부터는 [!INCLUDE[wf](../../../includes/wf-md.md)]에서 C# 식이 지원됩니다. [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)]에서 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]를 대상으로 만들어진 C# 워크플로 프로젝트에서는 C# 식을 사용하는 반면, Visual Basic 워크플로 프로젝트에서는 Visual Basic 식을 사용합니다. 원하는 C# 식을 지정 하려면 입력란에 입력 **C# 식 입력**합니다. 이 레이블은 디자이너에서 활동이 선택된 경우 속성 창에 표시되거나 워크플로 디자이너의 활동에 표시됩니다. 다음 예제에서는 `WriteLine`의 `Sequence` 내에 두 개의 `NoPersistScope` 활동이 포함되어 있습니다.  
+ 부터는 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], C# 식에서 Windows WF (Workflow Foundation)를 지원 됩니다. [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)]에서 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]를 대상으로 만들어진 C# 워크플로 프로젝트에서는 C# 식을 사용하는 반면, Visual Basic 워크플로 프로젝트에서는 Visual Basic 식을 사용합니다. 원하는 C# 식을 지정 하려면 입력란에 입력 **C# 식 입력**합니다. 이 레이블은 디자이너에서 활동이 선택된 경우 속성 창에 표시되거나 워크플로 디자이너의 활동에 표시됩니다. 다음 예제에서는 `WriteLine`의 `Sequence` 내에 두 개의 `NoPersistScope` 활동이 포함되어 있습니다.  
   
  ![자동으로 만들어진 sequence 활동](../../../docs/framework/windows-workflow-foundation/media/autosurround2.png "AutoSurround2")  
   

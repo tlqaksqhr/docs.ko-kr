@@ -1,13 +1,13 @@
 ---
-title: "방법: 관리되는 HTML 문서 개체 모델의 요소에 대한 스타일 변경"
-ms.custom: 
+title: '방법: 관리되는 HTML 문서 개체 모델의 요소에 대한 스타일 변경'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-winforms
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,20 +15,20 @@ dev_langs:
 helpviewer_keywords:
 - managed HTML DOM [Windows Forms], changing styles on elements
 ms.assetid: 154e8d9f-3e2d-4e8b-a6f3-c85a070e9cc1
-caps.latest.revision: 
+caps.latest.revision: 7
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 3726ccdebf310d831fb0d7ea21fab011293f6d99
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: e833a15e33d0baf80f0078b26758137e7908a8fd
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="how-to-change-styles-on-an-element-in-the-managed-html-document-object-model"></a>방법: 관리되는 HTML 문서 개체 모델의 요소에 대한 스타일 변경
-모양을 제어 하는 문서 및 해당 요소의 html에서 스타일을 사용할 수 있습니다. <xref:System.Windows.Forms.HtmlDocument>및 <xref:System.Windows.Forms.HtmlElement> 지원 <xref:System.Windows.Forms.HtmlElement.Style%2A> 는 다음과 같은 형식의 스타일 문자열을 사용 하는 속성:  
+모양을 제어 하는 문서 및 해당 요소의 html에서 스타일을 사용할 수 있습니다. <xref:System.Windows.Forms.HtmlDocument> 및 <xref:System.Windows.Forms.HtmlElement> 지원 <xref:System.Windows.Forms.HtmlElement.Style%2A> 는 다음과 같은 형식의 스타일 문자열을 사용 하는 속성:  
   
  `name1:value1;...;nameN:valueN;`  
   
@@ -75,14 +75,14 @@ ms.lasthandoff: 12/22/2017
 6.  프로젝트의 코드 파일에 다음 코드를 추가 합니다.  
   
     > [!IMPORTANT]
-    >  확인은 `webBrowser1_DocumentCompleted` 이벤트 처리기에 대 한 수신기로 구성 된는 <xref:System.Windows.Forms.WebBrowser.DocumentCompleted> 이벤트입니다. [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)]를 두 번 클릭 하는 <xref:System.Windows.Forms.WebBrowser> 제어할; 텍스트 편집기에서 수신기를 프로그래밍 방식으로 구성 합니다.  
+    >  확인은 `webBrowser1_DocumentCompleted` 이벤트 처리기에 대 한 수신기로 구성 된는 <xref:System.Windows.Forms.WebBrowser.DocumentCompleted> 이벤트입니다. Visual Studio에서 두 번 클릭은 <xref:System.Windows.Forms.WebBrowser> 제어할; 텍스트 편집기에서 수신기를 프로그래밍 방식으로 구성 합니다.  
   
      [!code-csharp[ManagedDOMStyles#2](../../../../samples/snippets/csharp/VS_Snippets_Winforms/ManagedDOMStyles/CS/Form1.cs#2)]
      [!code-vb[ManagedDOMStyles#2](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/ManagedDOMStyles/VB/Form1.vb#2)]  
   
 7.  프로젝트를 실행합니다. 커서를 첫 번째 실행 `DIV` 코드의 결과를 관찰 합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 코드 예제에 대 한 전체 코드를 보여 줍니다.는 `StyleGenerator` 기존 스타일 값을 구문 분석 하는 클래스 지원 추가, 변경 및 스타일을 제거 하 고 요청된 된 변경 포함 된 새 스타일 값을 반환 합니다.  
   
  [!code-csharp[ManagedDOMStyles#1](../../../../samples/snippets/csharp/VS_Snippets_Winforms/ManagedDOMStyles/CS/StyleGenerator.cs#1)]

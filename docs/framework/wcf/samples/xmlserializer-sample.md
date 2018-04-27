@@ -1,24 +1,26 @@
 ---
-title: "XMLSerializer 샘플"
-ms.custom: 
+title: XMLSerializer 샘플
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 7d134453-9a35-4202-ba77-9ca3a65babc3
-caps.latest.revision: "23"
+caps.latest.revision: 23
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: c89194eebbfe4f25b8d8120be16a18306a92a889
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: af051dffa93aea6586adaea1e49081ddc357a210
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="xmlserializer-sample"></a>XMLSerializer 샘플
 이 샘플에서는 <xref:System.Xml.Serialization.XmlSerializer>와 호환되는 형식을 serialize 및 deserialize하는 방법을 보여 줍니다. 기본 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 포맷터는 <xref:System.Runtime.Serialization.DataContractSerializer> 클래스입니다. <xref:System.Xml.Serialization.XmlSerializer> 클래스를 사용할 수 없는 경우 <xref:System.Runtime.Serialization.DataContractSerializer> 클래스를 사용하여 형식을 serialize 및 deserialize할 수 있습니다. 이는 XML에 대한 정밀한 제어가 필요한 경우(예: 데이터의 일부가 XML 요소가 아닌 XML 특성이어야 하는 경우)에 자주 발생합니다. 또한 <xref:System.Xml.Serialization.XmlSerializer>가 아닌 서비스를 위해 클라이언트를 만들 때 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]가 자동으로 선택되는 경우가 많습니다.  
@@ -30,7 +32,7 @@ ms.lasthandoff: 12/22/2017
   
  다음 샘플 코드에서 보여 주는 것처럼 <xref:System.ServiceModel.ServiceContractAttribute> 및 <xref:System.ServiceModel.XmlSerializerFormatAttribute>가 인터페이스에 적용되어야 합니다.  
   
-```  
+```csharp  
 [ServiceContract(Namespace="http://Microsoft.ServiceModel.Samples"), XmlSerializerFormat]  
 public interface IXmlSerializerCalculator  
 {  
@@ -47,7 +49,7 @@ public interface IXmlSerializerCalculator
   
  `ComplexNumber` 클래스의 public 멤버는 <xref:System.Xml.Serialization.XmlSerializer>에 의해 XML 특성으로 serialize됩니다. 이러한 종류의 XML 인스턴스를 만들 때는 <xref:System.Runtime.Serialization.DataContractSerializer>를 사용할 수 없습니다.  
   
-```  
+```csharp  
 public class ComplexNumber  
 {  
     private double real;  
@@ -83,7 +85,7 @@ public class ComplexNumber
   
  서비스 구현은 적절한 결과를 계산하여 반환합니다. 즉, `ComplexNumber` 형식의 값을 수락하고 반환합니다.  
   
-```  
+```csharp  
 public class XmlSerializerCalculatorService : IXmlSerializerCalculator  
 {  
     public ComplexNumber Add(ComplexNumber n1, ComplexNumber n2)  
@@ -97,7 +99,7 @@ public class XmlSerializerCalculatorService : IXmlSerializerCalculator
   
  클라이언트 구현에서도 복소수가 사용됩니다. 서비스 계약 및 데이터 형식을 둘 다에 의해 생성 된 generatedClient.cs 소스 파일에 정의 되어는 [ServiceModel Metadata 유틸리티 도구 (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) 서비스 메타 데이터에서 합니다. Svcutil.exe는 계약이 <xref:System.Runtime.Serialization.DataContractSerializer>에 의해 serialize될 수 없는 경우를 감지할 수 있으며, 이 경우 `XmlSerializable` 형식 내보내기로 되돌아갑니다. 강제로 <xref:System.Xml.Serialization.XmlSerializer>를 사용하려는 경우 /serializer:XmlSerializer(XmlSerializer 사용) 명령 옵션을 Svcutil.exe 도구에 전달할 수 있습니다.  
   
-```  
+```csharp  
 // Create a client.  
 XmlSerializerCalculatorClient client = new  
                          XmlSerializerCalculatorClient();  

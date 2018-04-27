@@ -1,27 +1,29 @@
 ---
-title: "성능 최적화: 데이터 바인딩"
-ms.custom: 
+title: '성능 최적화: 데이터 바인딩'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - binding data [WPF], performance
 - data binding [WPF], performance
 ms.assetid: 1506a35d-c009-43db-9f1e-4e230ad5be73
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: c420748a9361655eeb2df33ce8426d9f167d3414
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 4b21089ea3f3aef8a934c78187b30f2576b8d39b
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="optimizing-performance-data-binding"></a>성능 최적화: 데이터 바인딩
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 데이터 바인딩은 응용 프로그램이 데이터를 제공하고 상호 작용할 수 있는 간단하고 일관된 방법을 제공합니다. 다양한 데이터 소스에서 [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] 개체 및 [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)]의 형태로 데이터에 요소를 바인딩할 수 있습니다.  
@@ -34,7 +36,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="how-data-binding-references-are-resolved"></a>데이터 바인딩 참조를 확인하는 방법  
  데이터 바인딩 성능 문제를 다루기 전에 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 데이터 바인딩 엔진에서 바인딩의 개체 참조를 확인하는 방법을 살펴보는 것이 좋습니다.  
   
- [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 데이터 바인딩의 소스는 [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] 개체일 수 있습니다. [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] 개체의 속성, 하위 속성 또는 인덱서에 바인딩할 수 있습니다. 바인딩 참조 중 하나를 사용 하 여 해결 [!INCLUDE[TLA#tla_avalonwinfx](../../../../includes/tlasharptla-avalonwinfx-md.md)] 리플렉션 또는 <xref:System.ComponentModel.ICustomTypeDescriptor>합니다. 다음은 바인딩의 개체 참조를 확인하는 세 가지 방법입니다.  
+ [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 데이터 바인딩의 소스는 [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] 개체일 수 있습니다. [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] 개체의 속성, 하위 속성 또는 인덱서에 바인딩할 수 있습니다. Microsoft.NET Framework 리플렉션 중 하나를 사용 하 여 바인딩 참조는 확인 또는 <xref:System.ComponentModel.ICustomTypeDescriptor>합니다. 다음은 바인딩의 개체 참조를 확인하는 세 가지 방법입니다.  
   
  첫 번째 방법에서는 리플렉션을 사용합니다. 이 경우에 <xref:System.Reflection.PropertyInfo> 개체 속성의 특성을 검색 하는 데 사용 하 고 속성 메타 데이터에 대 한 액세스를 제공 합니다. 사용 하는 경우는 <xref:System.ComponentModel.ICustomTypeDescriptor> 인터페이스, 데이터 바인딩 엔진은이 인터페이스를 속성 값에 액세스 합니다. <xref:System.ComponentModel.ICustomTypeDescriptor> 인터페이스 개체에는 정적 속성 집합이 없는 경우에 특히 유용 합니다.  
   
@@ -51,7 +53,7 @@ ms.lasthandoff: 12/22/2017
 |**TextBlock의 Text 속성 바인딩 대상**|**바인딩 시간(ms)**|**렌더링 시간 -- 바인딩 시간 포함(ms)**|  
 |--------------------------------------------------|-----------------------------|--------------------------------------------------|  
 |[!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] 개체의 속성|115|314|  
-|속성에는 [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] 구현 하는 개체<xref:System.ComponentModel.INotifyPropertyChanged>|115|305|  
+|속성에는 [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] 구현 하는 개체 <xref:System.ComponentModel.INotifyPropertyChanged>|115|305|  
 |에 <xref:System.Windows.DependencyProperty> 의 <xref:System.Windows.DependencyObject>합니다.|90|263|  
   
 <a name="Binding_to_Large_CLR_Objects"></a>   
@@ -74,7 +76,7 @@ ms.lasthandoff: 12/22/2017
 |**ItemsSource 데이터 바인딩 대상**|**1개 항목의 업데이트 시간(ms)**|  
 |--------------------------------------|---------------------------------------|  
 |에 [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] <xref:System.Collections.Generic.List%601> 개체|1656|  
-|에<xref:System.Collections.ObjectModel.ObservableCollection%601>|20|  
+|에 <xref:System.Collections.ObjectModel.ObservableCollection%601>|20|  
   
 <a name="Binding_IList_to_ItemsControl_not_IEnumerable"></a>   
 ## <a name="bind-ilist-to-itemscontrol-not-ienumerable"></a>IList를 IEnumerable이 아닌 ItemsControl에 바인딩  

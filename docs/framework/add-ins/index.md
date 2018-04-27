@@ -26,11 +26,11 @@ ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 4d288d321063512f91ad94b417bb1a6bf38c9ef9
-ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
+ms.openlocfilehash: 2e31605f428f4e1dc58ee3332977f14dfd394489
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="add-ins-and-extensibility"></a>추가 기능 및 확장성
 <a name="top"></a> 추가 기능은 호스트 응용 프로그램에 대한 확장명 기능이나 서비스를 제공합니다. [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 에서는 개발자가 추가 기능을 개발하고 호스트 응용 프로그램에서 활성화하는 데 사용할 수 있는 프로그래밍 모델을 제공합니다. 모델은 이 작업을 위해 호스트와 추가 기능 간에 통신 파이프라인을 생성합니다. 모델은 <xref:System.AddIn>, <xref:System.AddIn.Hosting>, <xref:System.AddIn.Pipeline>및 <xref:System.AddIn.Contract> 네임스페이스의 형식을 사용하여 구현됩니다.  
@@ -54,7 +54,7 @@ ms.lasthandoff: 02/01/2018
   
  다음 그림에서는 파이프라인을 보여 줍니다.  
   
- ![추가 &#45; 파이프라인 모델입니다. ] (../../../docs/framework/add-ins/media/addin1.png "AddIn1")  
+ ![추가&#45;파이프라인 모델에 있습니다. ] (../../../docs/framework/add-ins/media/addin1.png "AddIn1")  
 추가 기능 파이프라인  
   
  이러한 세그먼트에 대한 어셈블리가 동일한 응용 프로그램 도메인에 있을 필요는 없습니다. 고유한 새 응용 프로그램 도메인, 기존 응용 프로그램 도메인 또는 호스트의 응용 프로그램 도메인에 추가 기능을 로드할 수 있습니다. 동일한 응용 프로그램 도메인에 여러 추가 기능을 로드할 수 있으며, 이 경우 추가 기능이 리소스와 보안 컨텍스트를 공유할 수 있습니다.  
@@ -116,7 +116,7 @@ ms.lasthandoff: 02/01/2018
   
 |제목|설명|  
 |-----------|-----------------|  
-|[Pipeline Development](../../../docs/framework/add-ins/pipeline-development.md)|호스트 응용 프로그램과 추가 기능 간의 세그먼트 통신 파이프라인을 설명합니다. 파이프라인을 생성하는 방법 및 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]에서 세그먼트를 파이프라인에 배포하는 방법을 설명하는 코드 예제를 연습 항목에서 제공합니다.|  
+|[Pipeline Development](../../../docs/framework/add-ins/pipeline-development.md)|호스트 응용 프로그램과 추가 기능 간의 세그먼트 통신 파이프라인을 설명합니다. 파이프라인을 생성 하는 방법 및 Visual Studio에서 파이프라인에 세그먼트를 배포 하는 방법에 설명 하는 연습 항목의 코드 예제를 제공 합니다.|  
 |[응용 프로그램 도메인 및 어셈블리](http://msdn.microsoft.com/library/433b04ae-4ba8-4849-9dbd-79194f240346)|보안, 안정성 및 버전 관리를 위한 격리 경계를 제공하는 응용 프로그램 도메인과 어셈블리 간의 관계를 설명합니다.|  
   
  [맨 위로 이동](#top)  

@@ -1,23 +1,24 @@
 ---
-title: "속성 승격 활동"
-ms.custom: 
+title: 속성 승격 활동
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 802196b7-1159-4c05-b41b-d3bfdfcc88d9
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 244cea33b684a8674681c4d1974d5d857c4c402b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 12f7aa4bd10a22a3cd3ea361e32016b95e41e46b
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="property-promotion-activity"></a>속성 승격 활동
 이 샘플에서는 <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> 승격 기능을 워크플로 작성 환경에 직접 통합하는 종단 간 솔루션을 제공합니다. 승격 기능의 사용을 단순화하는 워크플로 확장, 워크플로 활동 및 구성 요소의 컬렉션이 제공됩니다. 또한 샘플에는 이 컬렉션을 사용하는 방법을 보여 주는 간단한 워크플로가 포함되어 있습니다.  
@@ -109,7 +110,7 @@ go
  `promotedValue` 요소의 순서는 `InstancePromotedProperties` 뷰에서 승격된 속성의 배치와 관련됩니다. `Count`는 첫 번째 `promotedValue` 요소입니다. `Value1` 뷰의 `InstancePromotedProperties` 열에 매핑됩니다. `LastIncrementedAt`는 두 번째 `promotedValue` 요소입니다. `Value2` 뷰의 `InstancePromotedProperties` 열에 매핑됩니다.  
   
 #### <a name="using-the-promotevalue-activity"></a>PromoteValue 활동 사용  
- [!INCLUDE[wf2](../../../../includes/wf2-md.md)] Designer에서 CounterService.xamlx 파일을 검사합니다. WF 정의에는 `PromoteValue<DateTime>` 및 `PromoteValue<Int32>`라는 두 가지 특수 활동이 있습니다.  
+ Windows Workflow Foundation Designer에서 CounterService.xamlx 파일을 검사 합니다. WF 정의에는 `PromoteValue<DateTime>` 및 `PromoteValue<Int32>`라는 두 가지 특수 활동이 있습니다.  
   
  `PromoteValue<Int32>` 활동의 `Name` 멤버는 `Count`으로 정의됩니다. 이는 구성의 첫 번째 `promotedValue` 요소와 일치하며 `Value`가 `Counter` 워크플로 변수로 정의됩니다. 워크플로가 유지될 때 `Counter` 워크플로 변수는 `Value1` 뷰의 `InstancePromotedProperties` 열에 승격된 속성으로 유지됩니다.  
   

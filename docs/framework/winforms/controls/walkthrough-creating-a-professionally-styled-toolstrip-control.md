@@ -1,12 +1,13 @@
 ---
-title: "연습: 전문적인 스타일의 ToolStrip 컨트롤 만들기"
-ms.custom: 
+title: '연습: 전문적인 스타일의 ToolStrip 컨트롤 만들기'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-winforms
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -17,16 +18,17 @@ helpviewer_keywords:
 - toolbars [Windows Forms], walkthroughs
 - ToolStrip control [Windows Forms], creating professionally styled controls
 ms.assetid: b52339ae-f1d3-494e-996e-eb455614098a
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ab9adb72a174da25298b6ea104b002914de0cc40
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: 18ffb09e581b830329a0d32f11ae09d8b0f68788
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="walkthrough-creating-a-professionally-styled-toolstrip-control"></a>연습: 전문적인 스타일의 ToolStrip 컨트롤 만들기
 응용 프로그램을 제공할 수 있습니다 <xref:System.Windows.Forms.ToolStrip> 에서 파생 되는 고유한 클래스를 작성 하 여 전문적인 모양과 동작을 제어는 <xref:System.Windows.Forms.ToolStripProfessionalRenderer> 유형입니다.  
@@ -46,10 +48,10 @@ ms.lasthandoff: 01/19/2018
 > [!NOTE]
 >  표시되는 대화 상자와 메뉴 명령은 활성 설정이나 버전에 따라 도움말에서 설명하는 것과 다를 수 있습니다. 설정을 변경하려면 **도구** 메뉴에서 **설정 가져오기 및 내보내기** 를 선택합니다. 자세한 내용은 [Visual Studio에서 개발 설정 사용자 지정](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3)을 참조하세요.  
   
-## <a name="prerequisites"></a>필수 구성 요소  
+## <a name="prerequisites"></a>전제 조건  
  이 연습을 완료하려면 다음 사항이 필요합니다.  
   
--   만들고 컴퓨터에 Windows Forms 응용 프로그램 프로젝트를 실행할 수 있는 충분 한 권한이 있는 [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] 가 설치 되어 있습니다.  
+-   충분 한 권한이을 만들고 Visual Studio가 설치 된 컴퓨터에서 Windows Forms 응용 프로그램 프로젝트를 실행할 수 있습니다.  
   
 ## <a name="creating-a-windows-control-library-project"></a>Windows 컨트롤 라이브러리 프로젝트 만들기  
  첫 번째 단계는 컨트롤 라이브러리 프로젝트를 만드는 것입니다.  
@@ -75,7 +77,7 @@ ms.lasthandoff: 01/19/2018
   
     |속성|값|  
     |--------------|-----------|  
-    |name|`stackStrip`|  
+    |이름|`stackStrip`|  
     |CanOverflow|`false`|  
     |도킹|<xref:System.Windows.Forms.DockStyle.Bottom>|  
     |글꼴|`Tahoma, 10pt, style=Bold`|  
@@ -90,7 +92,7 @@ ms.lasthandoff: 01/19/2018
   
     |속성|값|  
     |--------------|-----------|  
-    |name|`mailStackButton`|  
+    |이름|`mailStackButton`|  
     |CheckOnClick|true|  
     |CheckState|<xref:System.Windows.Forms.CheckState.Checked>|  
     |DisplayStyle|<xref:System.Windows.Forms.ToolStripItemDisplayStyle.ImageAndText>|  
@@ -99,7 +101,7 @@ ms.lasthandoff: 01/19/2018
     |ImageTransparentColor|`238, 238, 238`|  
     |여백|`0, 0, 0, 0`|  
     |안쪽 여백|`3, 3, 3, 3`|  
-    |텍스트|**Mail**|  
+    |텍스트|**메일**|  
     |TextAlign|<xref:System.Drawing.ContentAlignment.MiddleLeft>|  
   
 5.  세 개의 추가 대 한 7 단계를 반복 <xref:System.Windows.Forms.ToolStripButton> 컨트롤입니다.  

@@ -14,14 +14,14 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 60f6571d7702236ee24c0cb9da2aa4121feddcf0
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: ecf45e4d40c305c5e324d3ab8469ff24f5a092ef
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="scenario"></a>시나리오
-이 단원에는 [!INCLUDE[wf](../../../../includes/wf-md.md)] 시나리오의 예제가 포함되어 있습니다.  
+이 섹션에서는 Windows WF (Workflow Foundation) 시나리오의 예제를 포함합니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
  [작업 라이브러리](../../../../docs/framework/windows-workflow-foundation/samples/activity-library.md)  
@@ -40,7 +40,7 @@ ms.lasthandoff: 04/26/2018
  <xref:System.Activities.Statements.Flowchart> 및 <xref:System.Activities.Statements.Pick> 활동을 함께 사용하여 간단한 스톱워치 시나리오를 구현하는 방법을 보여 줍니다.  
   
  [XAML의 WPF 및 WF 통합](../../../../docs/framework/windows-workflow-foundation/samples/wpf-and-wf-integration-in-xaml.md)  
- Windows Presentation Foundation (WPF)를 사용 하는 응용 프로그램을 만드는 방법을 보여 줍니다 및 [!INCLUDE[wf](../../../../includes/wf-md.md)] 단일 XAML 문서에는 기능입니다. 이를 수행하기 위해 이 샘플에는 [!INCLUDE[wf](../../../../includes/wf-md.md)] 및 XAML 확장성이 사용됩니다.  
+ 단일 XAML 문서에 Windows Presentation Foundation (WPF) 및 Windows WF (Workflow Foundation) 기능을 사용 하 여 응용 프로그램을 만드는 방법을 보여 줍니다. 이를 위해 샘플 Windows WF (Workflow Foundation) 및 XAML 확장성을 사용 합니다.  
   
  [외부 규칙 집합 도구 키트](../../../../docs/framework/windows-workflow-foundation/samples/external-ruleset-toolkit.md)  
  데이터베이스에서 RuleSet을 관리 및 편집하고 런타임에 워크플로에서 이 RuleSet에 액세스하는 방법을 보여 줍니다.

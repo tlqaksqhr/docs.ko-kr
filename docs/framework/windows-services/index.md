@@ -24,14 +24,14 @@ ms.author: ghogen
 manager: douge
 ms.workload:
 - dotnet
-ms.openlocfilehash: 4ed6a741a6f86b492929598613a0c10ae08981c5
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: cc01c836daa73b1a39ceab0b523791b6a520dc70
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="developing-windows-service-applications"></a>Windows 서비스 응용 프로그램 개발
-Microsoft를 사용 하 여 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 또는 Microsoft [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] SDK를 쉽게 만들 수 있습니다 서비스 서비스로 설치 하는 응용 프로그램을 만들어 합니다. 이 유형의 응용 프로그램에는 Windows 서비스를 라고 합니다. Framework 기능을 사용 있습니다 수는 서비스를 만들, 설치, 시작, 중지 및 그렇지 않은 경우의 동작을 제어 합니다.  
+Microsoft 또는 Microsoft Visual Studio를 사용 하 여 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] SDK를 쉽게 만들 수 있습니다 서비스 서비스로 설치 하는 응용 프로그램을 만들어 합니다. 이 유형의 응용 프로그램에는 Windows 서비스를 라고 합니다. Framework 기능을 사용 있습니다 수는 서비스를 만들, 설치, 시작, 중지 및 그렇지 않은 경우의 동작을 제어 합니다.  
   
 > [!WARNING]
 >  C + +에 대 한 Windows 서비스 템플릿은 Visual Studio 2010에 포함 되지 않았습니다. Windows 서비스를 만들려면 Visual C# 또는 Visual Basic, 필요한 경우 기존 c + + 코드 상호 작용할 수에서 관리 코드에서 서비스를 만들 수 있습니다 또는 네이티브 c + +에서를 사용 하 여 Windows 서비스를 만들 수는 [ATL프로젝트마법사](/cpp/atl/reference/atl-project-wizard).  

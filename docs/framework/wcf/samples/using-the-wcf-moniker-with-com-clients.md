@@ -1,24 +1,26 @@
 ---
 title: Using the WCF Moniker with COM Clients
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: e2799bfe-88bd-49d7-9d6d-ac16a9b16b04
-caps.latest.revision: "34"
+caps.latest.revision: 34
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 18633ab7c7d54b4feafc22f6b598acc564084f4a
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: 322467510d499040c07d6e5e84842542aa325737
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="using-the-wcf-moniker-with-com-clients"></a>Using the WCF Moniker with COM Clients
 이 샘플에서는 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 서비스 모니커를 사용하여 웹 서비스를 Microsoft Office VBA(Office Visual Basic for Applications) 또는 Visual Basic 6.0과 같은 COM 기반 개발 환경에 통합하는 방법을 보여 줍니다. 이 샘플은 IIS(인터넷 정보 서비스)에서 호스트되는 Windows 스크립트 호스트 클라이언트(.vbs), 지원 클라이언트 라이브러리(.dll) 및 서비스 라이브러리(.dll)로 구성됩니다. 서비스는 계산기 서비스이고 COM 클라이언트는 서비스에서 수학 작업인 Add, Subtract, Multiply 및 Divide를 호출합니다. 클라이언트 동작이 메시지 상자 창에 표시됩니다.  
@@ -199,7 +201,7 @@ WScript.Echo "MEX service moniker: 9 * 81.25 = " & mexServiceMoniker.Multiply(9,
   
 2.  C# 또는 Visual Basic .NET 버전의 솔루션을 빌드하려면 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)의 지침을 따릅니다.  
   
-3.  [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] 명령 프롬프트에서 언어별 폴더의 \client\bin 폴더를 엽니다.  
+3.  Visual Studio 명령 프롬프트에서 언어별 폴더의 \client\bin 폴더를 엽니다.  
   
     > [!NOTE]
     >  [!INCLUDE[wv](../../../../includes/wv-md.md)], [!INCLUDE[lserver](../../../../includes/lserver-md.md)], Windows 7 또는 Windows Server 2008 R2를 사용하는 경우에는 관리자 권한으로 명령 프롬프트를 실행해야 합니다.  

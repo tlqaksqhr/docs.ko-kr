@@ -15,11 +15,11 @@ ms.assetid: 3ffd1bdf-1b8d-47f5-87eb-75b659f64294
 caps.latest.revision: 14
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: f3f9d7fb51198041356cfc68d49cc703dfdf78b5
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: a2c418855cd2e79c31301705706ff1b98f119a97
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="com-interop-visual-basic"></a>COM Interop(Visual Basic)
 COM(구성 요소 개체 모델)을 통해 개체는 기능을 다른 구성 요소에 노출하고 응용 프로그램을 호스트할 수 있습니다. 오늘날 대부분의 소프트웨어에는 COM 개체가 포함됩니다. 새 응용 프로그램에는 .NET 어셈블리가 제일 나은 선택이지만 때로는 COM 개체를 채택해야 할 수 있습니다. 이 섹션에서는 작성 및 Visual Basic을 사용한 COM 개체를 사용 하 여 관련 된 문제 중 일부에 대해 설명 합니다.  
@@ -32,7 +32,7 @@ COM(구성 요소 개체 모델)을 통해 개체는 기능을 다른 구성 요
  형식 라이브러리가 포함된 COM 개체에 참조를 추가하는 방법을 설명합니다.  
   
  [방법: ActiveX 컨트롤을 사용하여 작업](../../../visual-basic/programming-guide/com-interop/how-to-work-with-activex-controls.md)  
- 기존 ActiveX 컨트롤을 사용하여 [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] 도구 상자에 기능을 추가하는 방법을 보여 줍니다.  
+ Visual Studio 도구 상자에 기능을 추가할 기존 ActiveX 컨트롤을 사용 하는 방법을 보여 줍니다.  
   
  [연습: Windows API 호출](../../../visual-basic/programming-guide/com-interop/walkthrough-calling-windows-apis.md)  
  Windows 운영 체제에 포함된 API를 호출하는 프로세스를 단계별로 진행합니다.  

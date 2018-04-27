@@ -17,11 +17,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 8bf63c59c0948dd8414232a52fc12fafa0d13aa1
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 909461811907c1eb3f494b29294db45dbbe8b01d
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="globalization-for-wpf"></a>WPF의 전역화
 이 항목에서는 문제를 작성할 때 알고 있어야 하는 소개 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 글로벌 시장에 대 한 응용 프로그램입니다. 전역화 프로그래밍 요소에 정의 된 [!INCLUDE[TLA#tla_net](../../../../includes/tlasharptla-net-md.md)] 에서 `System.Globalization`합니다.  
@@ -180,7 +180,7 @@ ms.lasthandoff: 04/26/2018
   
 <a name="using_clickonce"></a>   
 ## <a name="using-clickonce-with-localized-applications"></a>지역화된 응용 프로그램에서 ClickOnce 사용  
- ClickOnce는는 함께 제공 되는 새 Windows Forms 배포 기술 [!INCLUDE[TLA#tla_visualstu2005](../../../../includes/tlasharptla-visualstu2005-md.md)]합니다. 응용 프로그램 설치 및 웹 응용 프로그램의 업그레이드를 수행할 수 있습니다. ClickOnce로 배포된 응용 프로그램이 지역화되면 지역화된 문화권에서만 볼 수 있습니다. 예를 들어 배포 된 응용 프로그램은 일본어로 지역화 된 경우만 볼 수 있습니다 일본어 [!INCLUDE[TLA#tla_win](../../../../includes/tlasharptla-win-md.md)] 영어에 없는 [!INCLUDE[TLA2#tla_win](../../../../includes/tla2sharptla-win-md.md)]합니다. 영어 버전을 실행 하도록 일본 사용자에 대 한 일반적인 시나리오 이기 때문에 문제가 발생 [!INCLUDE[TLA2#tla_win](../../../../includes/tla2sharptla-win-md.md)]합니다.  
+ ClickOnce는는 함께 제공 되는 새 Windows Forms 배포 기술 [!INCLUDE[TLA#tla_visualstu2005](../../../../includes/tlasharptla-visualstu2005-md.md)]합니다. 응용 프로그램 설치 및 웹 응용 프로그램의 업그레이드를 수행할 수 있습니다. ClickOnce로 배포된 응용 프로그램이 지역화되면 지역화된 문화권에서만 볼 수 있습니다. 예를 들어 배포 된 응용 프로그램은 일본어로 지역화 된 경우만 볼 수 있습니다 일본어 [!INCLUDE[TLA#tla_win](../../../../includes/tlasharptla-win-md.md)] 영어 버전의 Windows에 없습니다. 이 경우 일본어 사용자가 영어 버전의 Windows 실행 하는 일반적인 시나리오 이기 때문에 문제가 발생 합니다.  
   
  이 문제는 중립 언어 대체 특성을 설정하여 해결합니다. 응용 프로그램 개발자가 선택적으로 기본 어셈블리에서 리소스를 제거하고 특정 문화권에 해당하는 위성 어셈블리에서 해당 리소스를 찾을 수 있게 지정할 수 있습니다. 이 프로세스 사용을 제어 하는 <xref:System.Resources.NeutralResourcesLanguageAttribute>합니다. 생성자는 <xref:System.Resources.NeutralResourcesLanguageAttribute> 클래스에 두 개의 서명, 사용 하는 <xref:System.Resources.UltimateResourceFallbackLocation> 위치를 지정 하려면 매개 변수 위치는 <xref:System.Resources.ResourceManager> 대체 리소스를 추출 하도록: 주 어셈블리 또는 위성 어셈블리입니다. 다음 예제에서는 이 특성을 사용하는 방법을 보여 줍니다. 최종 대체 (fallback) 위치에 대 한 코드에서 발생 된 <xref:System.Resources.ResourceManager> 를 현재 실행 중인 디렉터리의 "de" 하위 디렉터리에 리소스를 찾도록 합니다.  
   

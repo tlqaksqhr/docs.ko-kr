@@ -10,20 +10,20 @@ ms.technology:
 ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: c13b4d7b-dac7-4ffd-9f84-765c903511e1
-caps.latest.revision: ''
+caps.latest.revision: 8
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 02332e04f729abd125f43acdbe0883851004537e
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: af557d41709ea1015a4454d62df93e60dd975217
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/23/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="jsonp"></a>JSONP
-이 샘플에서는 WCF REST 서비스에서 JSONP(JSON with Padding)를 지원하는 방법을 보여 줍니다. JSONP는 스크립트 태그를 현재 문서에서 생성함으로써 도메인의 제한 없이 스크립트를 호출하는 데 사용되는 규칙입니다. 결과는 지정된 콜백 함수를 통해 반환됩니다. 와 같은 태그는 아이디어를 기반으로 하는 JSONP \<src = "http:/ /..." > 모든 도메인의에서 스크립트를 평가할 수 있으며 이러한 태그로 검색 된 스크립트는 다른 함수 이미 정의 되어 있을 수는 범위 내에서 평가 됩니다.  
+이 샘플에서는 WCF REST 서비스에서 JSONP(JSON with Padding)를 지원하는 방법을 보여 줍니다. JSONP는 스크립트 태그를 현재 문서에서 생성함으로써 도메인의 제한 없이 스크립트를 호출하는 데 사용되는 규칙입니다. 결과는 지정된 콜백 함수를 통해 반환됩니다. 와 같은 태그는 아이디어를 기반으로 하는 JSONP `<script src="http://..." >` 모든 도메인의에서 스크립트를 평가할 수 있으며 이러한 태그로 검색 된 스크립트는 다른 함수 이미 정의 되어 있을 수는 범위 내에서 평가 됩니다.  
   
 ## <a name="demonstrates"></a>세부 항목  
  JSONP를 사용한 도메인 간 스크립팅  
@@ -79,6 +79,6 @@ Sys._json0({"__type":"Customer:#Microsoft.Samples.Jsonp","Address":"1 Example Wa
   
 1.  JSONP 샘플의 솔루션을 엽니다.  
   
-2.  하이퍼링크 "눌러 http://localhost:26648/JSONPClientPage.aspx" 눌러 http://localhost:26648/JSONPClientPage.aspx 브라우저에서 시작 하려면 F5 키를 누릅니다.  
+2.  시작 하려면 F5 키를 눌러 `http://localhost:26648/JSONPClientPage.aspx` 브라우저에서 합니다.  
   
 3.  공지는 페이지를 로드 한 후 "Name" 및 "Address"에 대 한 텍스트 입력 값으로 채워집니다.  이러한 값은 브라우저에서 페이지 렌더링을 마친 후 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 서비스에 대한 호출에서 제공된 값입니다.

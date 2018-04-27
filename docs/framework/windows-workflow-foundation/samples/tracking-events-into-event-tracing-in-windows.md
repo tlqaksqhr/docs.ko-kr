@@ -1,31 +1,32 @@
 ---
-title: "Windows에서 이벤트 추적으로 이벤트 추적"
-ms.custom: 
+title: Windows에서 이벤트 추적으로 이벤트 추적
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: f812659b-0943-45ff-9430-4defa733182b
-caps.latest.revision: "19"
+caps.latest.revision: 19
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 6798494e442b2e7633461fb821c56130a2af2508
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 1a1038f848563c106ee1cac441b8a247e161e268
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="tracking-events-into-event-tracing-in-windows"></a>Windows에서 이벤트 추적으로 이벤트 추적
-이 샘플에서는 워크플로 서비스에 대해 [!INCLUDE[wf](../../../../includes/wf-md.md)] 추적을 사용하고 ETW(Windows용 이벤트 추적)에 추적 이벤트를 내보내는 방법을 보여 줍니다. 이 샘플에서는 ETW 추적 참가자(<xref:System.Activities.Tracking.EtwTrackingParticipant>)를 사용하여 워크플로 추적 레코드를 ETW로 내보냅니다.  
+이 샘플에는 Windows WF (Workflow Foundation)는 워크플로 서비스에서 추적을 사용 하도록 설정 하는 추적 이벤트에 이벤트 추적에 대 한 ETW (Windows)를 생성 하는 방법을 보여 줍니다. 이 샘플에서는 ETW 추적 참가자(<xref:System.Activities.Tracking.EtwTrackingParticipant>)를 사용하여 워크플로 추적 레코드를 ETW로 내보냅니다.  
   
  샘플에서 워크플로는 요청을 받고, 입력 데이터의 상호 데이터를 입력 변수에 할당한 다음, 클라이언트에 상호 데이터를 다시 반환합니다. 입력 데이터가 0인 경우 처리되지 않는 0으로 나누기 예외가 발생하여 워크플로가 중단됩니다. 추적 기능을 사용하도록 설정되어 있으면 오류 추적 레코드가 ETW로 내보내지므로 나중에 오류 문제를 해결하는 데 도움이 됩니다. ETW 추적 참가자는 추적 레코드를 구독하도록 추적 프로필을 사용하여 구성됩니다. 추적 프로필은 Web.config 파일에 정의되고 ETW 추적 참가자에 구성 매개 변수로 제공됩니다. ETW 추적 참가자는 워크플로 서비스의 Web.config 파일에 구성되며 서비스에 서비스 동작으로 적용됩니다. 이 샘플에서는 이벤트 뷰어를 사용하여 이벤트 로그의 추적 이벤트를 확인합니다.  
   
 ## <a name="workflow-tracking-details"></a>워크플로 추적 세부 정보  
- [!INCLUDE[wf2](../../../../includes/wf2-md.md)]은 워크플로 인스턴스 실행을 추적하기 위한 추적 인프라를 제공합니다. 추적 런타임은 워크플로 인스턴스를 만들어 워크플로 수명 주기와 관련된 이벤트, 워크플로 활동의 이벤트 및 사용자 지정 이벤트를 내보냅니다. 다음 표에서는 추적 인프라의 기본 구성 요소에 대해 자세히 설명합니다  
+ Windows Workflow Foundation 워크플로 인스턴스의 실행을 추적 하기 위한 추적 인프라를 제공 합니다. 추적 런타임은 워크플로 인스턴스를 만들어 워크플로 수명 주기와 관련된 이벤트, 워크플로 활동의 이벤트 및 사용자 지정 이벤트를 내보냅니다. 다음 표에서는 추적 인프라의 기본 구성 요소에 대해 자세히 설명합니다  
   
 |구성 요소|설명|  
 |---------------|-----------------|  
@@ -55,7 +56,7 @@ ms.lasthandoff: 12/22/2017
   
 3.  F5 키를 눌러 솔루션을 실행합니다.  
   
-     기본적으로 서비스는 포트 53797(http://localhost:53797/SampleWorkflowService.xamlx)에서 수신 대기하고 있습니다.  
+     기본적으로 서비스에서 수신 대기 포트 53797 (http://localhost:53797/SampleWorkflowService.xamlx)합니다.  
   
 4.  [!INCLUDE[fileExplorer](../../../../includes/fileexplorer-md.md)]를 사용하여 WCF 테스트 클라이언트를 엽니다.  
   

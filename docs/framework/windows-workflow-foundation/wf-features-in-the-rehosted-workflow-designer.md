@@ -14,17 +14,17 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 999c18f20264a71cf73bbd5afd352ad3104a03e8
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: a11a1cddbb5b65bf174cabe7774ad62791657f54
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="support-for-new-workflow-foundation-45-features-in-the-rehosted-workflow-designer"></a>재호스팅된 워크플로 디자이너에서 새 Workflow Foundation 4.5 기능에 대한 지원
-[!INCLUDE[wf](../../../includes/wf-md.md)]의 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]에는 Workflow Designer 환경의 몇 가지 향상된 기능을 포함하여 새로운 여러 기능이 도입되었습니다. 이 항목에서는 이러한 기능 중 재호스트된 디자이너에서 지원되는 기능과 현재 지원되지 않는 기능을 자세히 설명합니다.  
+Windows WF (Workflow Foundation)에서 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 워크플로 디자이너 환경의 몇 가지 향상 된 기능을 포함 하 여 같은 많은 새로운 기능이 도입 되었습니다. 이 항목에서는 이러한 기능 중 재호스트된 디자이너에서 지원되는 기능과 현재 지원되지 않는 기능을 자세히 설명합니다.  
   
 > [!NOTE]
->  모든 새 목록에 대 한 [!INCLUDE[wf](../../../includes/wf-md.md)] 에서 도입 된 기능 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], 디자이너 재호스팅 관련이 없는 것을 포함 하 여 참조 [.NET 4.5에서 Windows Workflow Foundation의 새로운](../../../docs/framework/windows-workflow-foundation/whats-new-in-wf-in-dotnet.md)합니다.  
+>  에 도입 된 새 Windows WF (Workflow Foundation) 기능을 모두 목록은 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], 디자이너 재호스팅 관련이 없는 것을 포함 하 여 참조 [.NET 4.5에서 Windows Workflow Foundation의 새로운](../../../docs/framework/windows-workflow-foundation/whats-new-in-wf-in-dotnet.md)합니다.  
   
 ## <a name="activities"></a>활동  
  기본 제공 활동 라이브러리에는 새로운 활동과 기존 활동의 새로운 기능이 들어 있습니다. 이러한 모든 새 활동은 재호스트된 디자이너에서 지원됩니다. 이러한 새 작업에 대 한 자세한 내용은 참조는 [활동](../../../docs/framework/windows-workflow-foundation/whats-new-in-wf-in-dotnet.md#BKMK_NewActivities) 섹션 [.NET 4.5에서 Windows Workflow Foundation의 새로운](../../../docs/framework/windows-workflow-foundation/whats-new-in-wf-in-dotnet.md)합니다.  

@@ -1,26 +1,26 @@
 ---
-title: "MSMQ 활성화"
-ms.custom: 
+title: MSMQ 활성화
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: e3834149-7b8c-4a54-806b-b4296720f31d
-caps.latest.revision: 
+caps.latest.revision: 29
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: a4c3d1dc8116e9c1b26febc4d8473b15d8648c01
-ms.sourcegitcommit: 15316053918995cc1380163a7d7e7edd5c44e6d7
+ms.openlocfilehash: e0f8077e425464d5a9f33662366377d573719659
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/19/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="msmq-activation"></a>MSMQ 활성화
 이 샘플에서는 메시지 큐에서 읽은 WAS(Windows Process Activation Service)에서 응용 프로그램을 호스트하는 방법을 보여 줍니다. 이 샘플에서는 `netMsmqBinding` 기반으로 하 고는 [양방향 통신](../../../../docs/framework/wcf/samples/two-way-communication.md) 샘플. 이 경우 서비스는 웹 호스팅 응용 프로그램이고 클라이언트는 자체 호스트되며 전송된 구매 주문의 상태를 확인하기 위해 콘솔에 출력됩니다.  
@@ -33,7 +33,7 @@ ms.lasthandoff: 03/19/2018
 >   
 >  \<InstallDrive>:\WF_WCF_Samples  
 >   
->  이 디렉터리가 이동 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 하이퍼링크 "http://go.microsoft.com/fwlink/?LinkId=150780" \t "_blank" 및 [!INCLUDE[wf](../../../../includes/wf-md.md)] Samples for [!INCLUDE[netfx40_long](../../../../includes/netfx40-long-md.md)] 모두 다운로드 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 및 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플입니다. 이 샘플은 다음 디렉터리에 있습니다.  
+>  이 디렉터리가 이동 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 하이퍼링크 "http://go.microsoft.com/fwlink/?LinkId=150780" \t "_blank" 및 Windows WF (Workflow Foundation) 샘플 [!INCLUDE[netfx40_long](../../../../includes/netfx40-long-md.md)] 모두 다운로드 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 및 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플입니다. 이 샘플은 다음 디렉터리에 있습니다.  
 >   
 >  \<InstallDrive>:\Samples\WCFWFCardSpace\WCF\Basic\Services\Hosting\WASHost\MsmqActivation.  
   
@@ -282,7 +282,7 @@ Status of order 70cf9d63-3dfa-4e69-81c2-23aa4478ebed :Pending
         > [!NOTE]
         >  이 명령은 줄 바꿈 없이 한 줄로 입력해야 합니다.  
   
-         이 명령을 실행하면 http://localhost/servicemodelsamples 및 net.msmq://localhost/servicemodelsamples를 사용하여 /servicemodelsamples 응용 프로그램에 액세스할 수 있습니다.  
+         이 명령은 /servicemodelsamples 응용 프로그램에 사용 하 여 액세스를 활성화 http://localhost/servicemodelsamples 및 net.msmq://localhost/servicemodelsamples 합니다.  
   
 7.  아직 설정하지 않은 경우 MSMQ 활성화 서비스를 사용하도록 설정합니다. **시작** 메뉴를 클릭 하 여 **실행**, 유형과 `Services.msc`합니다. 검색에 대 한 서비스 목록에서 **Net.Msmq Listener Adapter**합니다. 마우스 오른쪽 단추로 클릭 하 고 선택 **속성**합니다. 설정의 **시작 유형** 를 **자동**, 클릭 **적용** 클릭는 **시작** 단추입니다. 이 단계는 Net.Msmq Listener Adapter 서비스를 처음 사용하기 전에 한 번만 수행해야 합니다.  
   

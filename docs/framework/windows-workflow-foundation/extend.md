@@ -18,14 +18,14 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 06ee3a1e62320aef3b1a67afe5610b13a95de375
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 1006b32d7a265c94753081eab7b2bd279ed3dbdf
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="extending-windows-workflow-foundation"></a>Windows Workflow Foundation 확장
-다음 단원에서는 [!INCLUDE[wf](../../../includes/wf-md.md)] 외부에 다시 호스트된 환경에서 사용자 지정 활동과 디자이너로 [!INCLUDE[vs2010](../../../includes/vs2010-md.md)]를 확장하는 방법을 설명합니다.  
+다음 섹션에서는 사용자 지정 활동 및 디자이너 외부에 다시 호스트 된 환경에서 사용 하 여 Windows WF (Workflow Foundation)를 확장 하는 방법을 설명 [!INCLUDE[vs2010](../../../includes/vs2010-md.md)]합니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
  [워크플로 디자인 환경 사용자 지정](../../../docs/framework/windows-workflow-foundation/customizing-the-workflow-design-experience.md)  

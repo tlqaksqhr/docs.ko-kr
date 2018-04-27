@@ -16,14 +16,14 @@ helpviewer_keywords:
 ms.assetid: 5bfbb487-5f47-4267-969a-39dfb917beeb
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cf20e2916efd2eb10065be22c319e34ddb2bda9a
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: b61ef6facf33fa043cad28a78405a19308a9864f
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/23/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="sample-compilation-command-lines-visual-basic"></a>샘플 컴파일 명령줄 (Visual Basic)
-Visual Basic 프로그램 내에서 컴파일 하는 대신 [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)], 실행 파일 (.exe) 또는 동적 연결 라이브러리 (.dll) 파일을 생성 하기 위해 명령줄에서 컴파일할 수 있습니다.  
+Visual Studio 내에서 Visual Basic 프로그램 컴파일 하는 대신, 실행 파일 (.exe) 또는 동적 연결 라이브러리 (.dll) 파일을 생성 하기 위해 명령줄에서 컴파일할 수 있습니다.  
   
  Visual Basic 명령줄 컴파일러 입출력 파일, 어셈블리 및 디버그 및 전처리기 옵션을 제어 하는 옵션 집합을 지원 합니다. 각 옵션은 서로 바꿔 사용할 수 있는 두 가지 형태로 사용할 수 있는: `-option` 및 `/option`합니다. 이 설명서 표시는 `-option` 폼입니다.  
   

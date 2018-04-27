@@ -1,12 +1,13 @@
 ---
-title: "데이터 바인딩 및 Windows Forms"
-ms.custom: 
+title: 데이터 바인딩 및 Windows Forms
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-winforms
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - master-details lists
@@ -19,16 +20,17 @@ helpviewer_keywords:
 - Windows Forms controls, data binding
 - data-bound controls [Windows Forms], Windows Forms
 ms.assetid: 419aac5e-819b-4aad-88b0-73a2f8c0bd27
-caps.latest.revision: "20"
+caps.latest.revision: 20
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: f2a4d023600456adf1e14b801ee6c24fd0a2348c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: db0e3ad5602d7ee608299bc5b9c5c85b860cab7d
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="data-binding-and-windows-forms"></a>데이터 바인딩 및 Windows Forms
 Windows Forms에서는 기존의 데이터 소스뿐 아니라 데이터를 포함하는 거의 모든 구조에 바인딩할 수 있습니다. 런타임에 계산하거나 파일에서 읽거나 다른 컨트롤의 값에서 파생하는 값 배열에 바인딩할 수 있습니다.  
@@ -48,7 +50,7 @@ Windows Forms에서는 기존의 데이터 소스뿐 아니라 데이터를 포�
   
 |데이터 바인딩 형식|설명|  
 |--------------------------|-----------------|  
-|단순 데이터 바인딩|컨트롤이 데이터 집합 테이블의 열 값과 같은 단일 데이터 요소에 바인딩하는 기능입니다. 이러한 형식의 바인딩은 일반적으로 <xref:System.Windows.Forms.TextBox> 컨트롤 또는 <xref:System.Windows.Forms.Label> 컨트롤과 같이 보통 단일 값만 표시하는 컨트롤에 사용됩니다. 실제로 컨트롤의 모든 속성은 데이터베이스의 필드에 바인딩할 수 있습니다. [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]에서는 이 기능이 광범위하게 지원됩니다.<br /><br /> 자세한 내용은 다음을 참조하세요.<br /><br /> -   [관련 된 데이터 바인딩 인터페이스](../../../docs/framework/winforms/interfaces-related-to-data-binding.md)<br />-   [방법: Windows Forms에서 데이터 탐색](../../../docs/framework/winforms/how-to-navigate-data-in-windows-forms.md)<br />-   [방법: Windows Form에 단순 바인딩된 컨트롤 만들기](../../../docs/framework/winforms/how-to-create-a-simple-bound-control-on-a-windows-form.md)|  
+|단순 데이터 바인딩|컨트롤이 데이터 집합 테이블의 열 값과 같은 단일 데이터 요소에 바인딩하는 기능입니다. 이러한 형식의 바인딩은 일반적으로 <xref:System.Windows.Forms.TextBox> 컨트롤 또는 <xref:System.Windows.Forms.Label> 컨트롤과 같이 보통 단일 값만 표시하는 컨트롤에 사용됩니다. 실제로 컨트롤의 모든 속성은 데이터베이스의 필드에 바인딩할 수 있습니다. Visual Studio에서는이 기능이 광범위 하 게 지원이 있습니다.<br /><br /> 자세한 내용은 다음을 참조하세요.<br /><br /> -   [관련 된 데이터 바인딩 인터페이스](../../../docs/framework/winforms/interfaces-related-to-data-binding.md)<br />-   [방법: Windows Forms에서 데이터 탐색](../../../docs/framework/winforms/how-to-navigate-data-in-windows-forms.md)<br />-   [방법: Windows Form에 단순 바인딩된 컨트롤 만들기](../../../docs/framework/winforms/how-to-create-a-simple-bound-control-on-a-windows-form.md)|  
 |복합 데이터 바인딩|둘 이상의 데이터 요소(일반적으로 데이터베이스 내 둘 이상의 레코드)에 바인딩하는 컨트롤의 기능입니다. 복합 바인딩은 목록 기반 바인딩이라고도 합니다. 복합 바인딩을 지원하는 컨트롤의 예로는 <xref:System.Windows.Forms.DataGridView>, <xref:System.Windows.Forms.ListBox> 및 <xref:System.Windows.Forms.ComboBox> 컨트롤이 있습니다. 예를 보려면 복합 데이터 바인딩 참조 [하는 방법: Windows Forms ComboBox 또는 ListBox 컨트롤의 데이터를 바인딩할](../../../docs/framework/winforms/controls/how-to-bind-a-windows-forms-combobox-or-listbox-control-to-data.md)합니다.|  
   
 ## <a name="bindingsource-component"></a>BindingSource 구성 요소  

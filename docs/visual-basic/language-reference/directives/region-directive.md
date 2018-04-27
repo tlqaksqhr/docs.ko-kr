@@ -1,9 +1,10 @@
 ---
-title: "#<a name=\"region-directive\"></a>Region 지시문"
+title: '#Region 지시문'
 ms.date: 07/20/2015
 ms.prod: .net
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 f1_keywords:
 - vb.Region
@@ -14,22 +15,22 @@ helpviewer_keywords:
 - region directive (#region)
 - '#Region keyword [Visual Basic]'
 ms.assetid: 90a6a104-3cbf-47d0-bdc4-b585d0921b87
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: fb308da6ad0ca6243f14e0d825ed7eb005d622bc
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 83ceac7d73eff23e16c5f6efb1c4eb8a2210ee2c
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="region-directive"></a>#Region 지시문
 Visual Basic 파일에서 코드 섹션을 축소하고 숨깁니다.  
   
 ## <a name="syntax"></a>구문  
-  
-```  
-      #Region "identifier_string"  
+
+```vb
+#Region "identifier_string"  
 #End Region  
 ```  
   
@@ -37,7 +38,7 @@ Visual Basic 파일에서 코드 섹션을 축소하고 숨깁니다.
   
 |용어|정의|  
 |---|---|  
-|`identifier_string`|필수 요소. 축소된 경우 영역의 제목 역할을 하는 문자열입니다. 영역은 기본적으로 축소되어 있습니다.|  
+|`identifier_string`|필수. 축소된 경우 영역의 제목 역할을 하는 문자열입니다. 영역은 기본적으로 축소되어 있습니다.|  
 |`#End Region`|`#Region` 블록을 종료합니다.|  
   
 ## <a name="remarks"></a>설명  

@@ -1,28 +1,28 @@
 ---
 title: WS Transaction Flow
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Transactions
 ms.assetid: f8eecbcf-990a-4dbb-b29b-c3f9e3b396bd
-caps.latest.revision: 
+caps.latest.revision: 43
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: bf441831a205b022899999b1bf34e1505b8fb6bb
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: f79ffdfe624674074f2e9cadeaccb7f2ab3ba0d7
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="ws-transaction-flow"></a>WS Transaction Flow
 이 샘플에서는 클라이언트에서 조정하는 트랜잭션의 사용법과 WS-Atomic Transaction 또는 OleTransactions 프로토콜을 사용하는 트랜잭션 흐름의 클라이언트 및 서버 옵션을 보여 줍니다. 이 샘플에 따라는 [시작](../../../../docs/framework/wcf/samples/getting-started-sample.md) 계산기 서비스를 구현 하는 작업의 사용을 보여 주기 위해 특성을 사용 하지만 `TransactionFlowAttribute` 와 **TransactionFlowOption** 어떤 수준 트랜잭션 흐름이 활성화 된 결정 하는 열거형입니다. 흐름이 지정된 트랜잭션의 범위 내에서는 요청한 작업에 대한 로그가 데이터베이스에 기록되고 클라이언트에서 조정하는 트랜잭션이 완료될 때까지 유지됩니다. 클라이언트 트랜잭션이 완료되지 않으면 웹 서비스 트랜잭션에서 데이터베이스에 적합한 업데이트가 커밋되지 않도록 합니다.  
@@ -31,8 +31,8 @@ ms.lasthandoff: 12/22/2017
 >  이 샘플의 설치 절차 및 빌드 지침은 이 항목의 끝부분에 나와 있습니다.  
   
  서비스 및 트랜잭션에 대한 연결을 시작하면 클라이언트에서 여러 가지 서비스 작업에 액세스합니다. 서비스에 대한 계약은 서로 다른 `TransactionFlowOption` 설정을 보여 주는 각 작업을 사용하여 다음과 같이 정의됩니다.  
-  
-```  
+
+```csharp
 [ServiceContract(Namespace = "http://Microsoft.ServiceModel.Samples")]  
 public interface ICalculator  
 {  
@@ -48,8 +48,8 @@ public interface ICalculator
     [OperationContract]  
     double Divide(double n1, double n2);   
 }  
-```  
-  
+```
+
  여기서는 처리될 순서대로 작업을 정의합니다.  
   
 -   `Add` 연산 요청에는 흐름이 지정된 트랜잭션이 포함되어야 합니다.  
@@ -83,8 +83,8 @@ public interface ICalculator
   
 > [!NOTE]
 >  <xref:System.ServiceModel.OperationBehaviorAttribute.TransactionScopeRequired%2A> 속성은 서비스 메서드 구현에 로컬인 동작을 정의하며 트랜잭션 흐름에 대한 클라이언트의 기능이나 요구 사항은 정의하지 않습니다.  
-  
-```  
+
+```csharp
 // Service class that implements the service contract.  
 [ServiceBehavior(TransactionIsolationLevel = System.Transactions.IsolationLevel.Serializable)]  
 public class CalculatorService : ICalculator  
@@ -119,22 +119,22 @@ public class CalculatorService : ICalculator
   
     // Logging method omitted for brevity  
 }  
-```  
-  
+```
+
  클라이언트에서 작업에 대한 서비스의 `TransactionFlowOption`설정은`ICalculator` 인터페이스에 대해 클라이언트에서 생성한 정의에 반영됩니다. 또한 서비스의 `transactionFlow` 속성 설정은 클라이언트의 응용 프로그램 구성에 반영됩니다. 클라이언트는 다음과 같이 적합한 `endpointConfigurationName`을 선택하여 전송 및 프로토콜을 선택할 수 있습니다.  
-  
-```  
+
+```csharp
 // Create a client using either wsat or oletx endpoint configurations  
 CalculatorClient client = new CalculatorClient("WSAtomicTransaction_endpoint");  
 // CalculatorClient client = new CalculatorClient("OleTransactions_endpoint");  
-```  
-  
+```
+
 > [!NOTE]
 >  이 샘플의 실제 동작은 선택한 프로토콜이나 전송에 관계없이 동일합니다.  
   
  서비스에 대한 연결을 시작하면 클라이언트는 다음과 같이 서비스 작업에 대한 호출에 따라 `TransactionScope`를 만듭니다.  
-  
-```  
+
+```csharp
 // Start a transaction scope  
 using (TransactionScope tx =  
             new TransactionScope(TransactionScopeOption.RequiresNew))  
@@ -191,8 +191,8 @@ using (TransactionScope tx =
 }  
   
 Console.WriteLine("Transaction committed");  
-```  
-  
+```
+
  다음과 같이 작업이 호출됩니다.  
   
 -   `Add` 요청에서 필요한 트랜잭션의 흐름을 서비스로 지정하고 서비스의 작업은 클라이언트의 트랜잭션 범위 내에서 발생합니다.  

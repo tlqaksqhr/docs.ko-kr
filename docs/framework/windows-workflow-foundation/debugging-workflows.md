@@ -14,11 +14,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 788cc6b25e4faa8a680f5ec23d88a5d18d0a7c87
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 866fe3ebcec295b57444f937b3b6fd6677bfe0f4
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="debugging-workflows"></a>워크플로 디버깅
 [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)]는 개발 환경에서 실행 중인 워크플로를 디버깅하기 위한 여러 옵션을 제공합니다. 디자이너, XAML 및 코드에서 워크플로를 디버깅할 수 있습니다.  
@@ -36,7 +36,7 @@ ms.lasthandoff: 04/26/2018
  워크플로 디버깅은 Visual Studio 인프라를 사용하여 프로세스에 연결하는 방식도 지원합니다. 이렇게 하면 워크플로 작성자가 Internet Information Services(IIS) 7.0 등 다른 호스트 환경에서 실행되는 워크플로를 디버깅할 수 있습니다.  
   
 ## <a name="remote-debugging"></a>Remote Debugging  
- [!INCLUDE[wf](../../../includes/wf-md.md)] 원격 디버깅 다른 Visual Studio 구성 요소에 대 한 원격 디버깅으로 동일 하 게 작동 합니다. 원격 디버깅을 사용 하는 방법은 참조 하십시오. [하는 방법: 원격 디버깅 사용](http://go.microsoft.com/fwlink/?LinkId=196257)합니다.  
+ Windows WF (Workflow Foundation) 원격 디버깅 다른 Visual Studio 구성 요소에 대 한 원격 디버깅으로 동일 하 게 작동 합니다. 원격 디버깅을 사용 하는 방법은 참조 하십시오. [하는 방법: 원격 디버깅 사용](http://go.microsoft.com/fwlink/?LinkId=196257)합니다.  
   
 > [!NOTE]
 >  워크플로 응용 프로그램에는 x86 대상으로 하는 경우 아키텍처 원격 디버깅은 작동 되지 않습니다 되거나 워크플로 응용 프로그램에 대 한 대상에 변경 되 면 Visual Studio가 원격 컴퓨터에 설치 하지 않는 한 64 비트 운영 체제를 실행 하는 컴퓨터에 호스트 됩니다 **모든 CPU**합니다.  

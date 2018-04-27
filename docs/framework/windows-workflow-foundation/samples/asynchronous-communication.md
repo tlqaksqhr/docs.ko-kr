@@ -1,26 +1,27 @@
 ---
 title: Asynchronous Communication
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 128dc092-9eb2-4e33-9470-9a7f62b60df6
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 602fc0ee27d460b11851103b88983d37b472b77a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 9cf1cc88f2b9dda0b0f6e155a5d6a465552d6267
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="asynchronous-communication"></a>Asynchronous Communication
-이 샘플에서는 기본적으로 서로 다른 두 [!INCLUDE[wf](../../../../includes/wf-md.md)] 서비스 간에 비동기 통신이 이루어지는 방식을 보여 줍니다.  
+이 샘플에서는 두 개의 Windows WF (Workflow Foundation) 서비스 간의 통신은 기본적으로 비동기적으로 수행 방법을 보여 줍니다.  
   
 ## <a name="demonstrates"></a>세부 항목  
  [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 서비스 간의 비동기 통신  

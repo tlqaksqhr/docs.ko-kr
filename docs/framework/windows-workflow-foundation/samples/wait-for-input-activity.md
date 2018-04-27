@@ -1,26 +1,27 @@
 ---
-title: "입력 대기 활동"
-ms.custom: 
+title: 입력 대기 활동
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: d58c344e-9ee8-4ce2-b199-75b3fe45237f
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ac05054d56c424ab3f4d1fdfd9c3590aac8b00bb
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: b9e7942ced071a795f1bf408ca4778a216cd85e4
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="wait-for-input-activity"></a>입력 대기 활동
-이 샘플은 워크플로에 명명된 책갈피를 만드는 방법을 보여 줍니다. [!INCLUDE[wf](../../../../includes/wf-md.md)]에서는 선언적 책갈피 작성을 위한 활동을 제공하지 않습니다. 따라서 워크플로에 책갈피가 필요하면 책갈피를 만드는 사용자 지정 활동을 작성해야 합니다. 이 샘플에 정의되어 있는 `WaitForInput` 활동에서 이러한 기능을 제공하므로 사용자가 워크플로 내에 선언적으로 책갈피를 만들 수 있습니다.  
+이 샘플은 워크플로에 명명된 책갈피를 만드는 방법을 보여 줍니다. Windows WF (Workflow Foundation)는 선언적 책갈피 작성에 대 한 활동을 제공 하지 않습니다. 따라서 워크플로에 책갈피가 필요하면 책갈피를 만드는 사용자 지정 활동을 작성해야 합니다. 이 샘플에 정의되어 있는 `WaitForInput` 활동에서 이러한 기능을 제공하므로 사용자가 워크플로 내에 선언적으로 책갈피를 만들 수 있습니다.  
   
 ## <a name="projects-in-this-sample"></a>이 샘플의 프로젝트  
   

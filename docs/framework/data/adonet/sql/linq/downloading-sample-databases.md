@@ -16,11 +16,11 @@ ms.author: douglasl
 manager: craigg
 ms.workload:
 - dotnet
-ms.openlocfilehash: dd0b29e97d36d67781c92ee24c56aed43c703261
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: c4f18bc3e078a03795037f77505aa2533f1e853e
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="downloading-sample-databases"></a>샘플 데이터베이스 다운로드
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 설명서의 여러 가지 예제와 연습에서는 Northwind 샘플 데이터베이스와 SQL Server Express Edition을 사용합니다. Microsoft 다운로드 사이트에서 해당 제품을 무료로 다운로드할 수 있습니다.  
@@ -42,7 +42,7 @@ ms.lasthandoff: 04/26/2018
      기본적으로 데이터베이스에 설치 *드라이브*: \SQL Server 2000 예제 데이터베이스.  
   
 ## <a name="downloading-sql-server-express-edition"></a>SQL Server Express Edition 다운로드  
- SQL Server Express Edition은 무료로 제공되며 응용 프로그램과 함께 재배포할 수 있습니다. [!INCLUDE[vsprvs](../../../../../../includes/vsprvs-md.md)]를 사용하는 경우에 SQL Server Express Edition은 Pro and greater editions에 포함되어 있습니다.  
+ SQL Server Express Edition은 무료로 제공되며 응용 프로그램과 함께 재배포할 수 있습니다. Visual Studio를 사용 하는 경우 SQL Server Express Edition은 Pro 이상 버전에 포함 됩니다.  
   
 #### <a name="to-download-and-install-sql-server-express-edition"></a>SQL Server Express Edition을 다운로드하여 설치하려면  
   

@@ -1,28 +1,30 @@
 ---
-title: "클라이언트 쪽 UI 자동화 공급자 구현"
-ms.custom: 
+title: 클라이언트 쪽 UI 자동화 공급자 구현
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-bcl
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-bcl
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - UI Automation, client-side provider implementation
 - client-side UI Automation provider, implementation
 - provider implementation, UI Automation
 ms.assetid: 3584c0a1-9cd0-4968-8b63-b06390890ef6
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: 50335994fab424b3100c91a202a7ea53643db551
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 09f54098c34d835c04a18b16dc5e33c7ebed5edb
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="client-side-ui-automation-provider-implementation"></a>클라이언트 쪽 UI 자동화 공급자 구현
 > [!NOTE]
@@ -34,9 +36,9 @@ ms.lasthandoff: 12/22/2017
   
  그러나 [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] 및 [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)] 에 있는 컨트롤과 같은 이전의 컨트롤은 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]을 직접 지원하지 않습니다. 이러한 컨트롤은 클라이언트 프로세스에 존재하며 크로스 프로세스 통신을 사용하여(예: 컨트롤에서 창 메시지 모니터링) 컨트롤에 대한 정보를 얻는 공급자가 대신 제공합니다. 이러한 클라이언트쪽 공급자를 프록시라고도 합니다.  
   
- [!INCLUDE[TLA2#tla_winvista](../../../includes/tla2sharptla-winvista-md.md)] 는 표준 [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] 및 [!INCLUDE[TLA2#tla_winforms](../../../includes/tla2sharptla-winforms-md.md)] 컨트롤에 대한 공급자를 제공합니다. 또한 대체(fallback) 공급자는 다른 서버쪽 공급자 또는 프록시가 제공하지는 않지만 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 구현이 있는 모든 컨트롤에 부분적 [!INCLUDE[TLA#tla_aa](../../../includes/tlasharptla-aa-md.md)] 지원을 제공합니다. 이러한 공급자는 모두 자동으로 로드되며 클라이언트 응용 프로그램에 사용할 수 있습니다.  
+ [!INCLUDE[TLA2#tla_winvista](../../../includes/tla2sharptla-winvista-md.md)] 표준에 대 한 공급자를 제공 [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] 및 Windows Forms 컨트롤입니다. 또한 대체(fallback) 공급자는 다른 서버쪽 공급자 또는 프록시가 제공하지는 않지만 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 구현이 있는 모든 컨트롤에 부분적 [!INCLUDE[TLA#tla_aa](../../../includes/tlasharptla-aa-md.md)] 지원을 제공합니다. 이러한 공급자는 모두 자동으로 로드되며 클라이언트 응용 프로그램에 사용할 수 있습니다.  
   
- 에 대 한 지원에 대 한 자세한 내용은 [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] 및 [!INCLUDE[TLA2#tla_winforms](../../../includes/tla2sharptla-winforms-md.md)] 컨트롤 참조 [표준 컨트롤에 대 한 UI 자동화 지원](../../../docs/framework/ui-automation/ui-automation-support-for-standard-controls.md)합니다.  
+ 에 대 한 지원에 대 한 자세한 내용은 [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] Windows Forms 컨트롤, 참조 및 [표준 컨트롤에 대 한 UI 자동화 지원](../../../docs/framework/ui-automation/ui-automation-support-for-standard-controls.md)합니다.  
   
  응용 프로그램이 다른 클라이언트쪽 공급자를 등록할 수도 있습니다.  
   

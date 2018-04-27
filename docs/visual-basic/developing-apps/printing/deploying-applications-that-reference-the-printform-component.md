@@ -12,11 +12,11 @@ ms.assetid: b595ea44-a712-4625-a761-190c64f59bbe
 caps.latest.revision: 10
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 15b6e21e769c90e23e66e4f87b37f74462423985
-ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
+ms.openlocfilehash: f49a5ef8dd4e36c9ab055ca01dc25ed05b083349
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="deploying-applications-that-reference-the-printform-component-visual-basic"></a>PrintForm 구성 요소 (Visual Basic)를 참조 하는 응용 프로그램 배포
 <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm> 구성 요소를 참조하는 응용 프로그램을 배포하려면 대상 컴퓨터에 구성 요소를 설치해야 합니다.  
@@ -26,7 +26,7 @@ ms.lasthandoff: 04/10/2018
 ## <a name="installing-the-printform-as-a-prerequisite"></a>PrintForm을 필수 조건으로 설치  
  응용 프로그램을 성공적으로 배포하려면 응용 프로그램이 참조하는 모든 구성 요소도 배포해야 합니다. 필수 조건 구성 요소를 설치하는 프로세스를 *부트스트래핑*이라고 합니다.  
   
- <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm> 구성 요소가 개발 컴퓨터에 설치될 때 Microsoft Visual Basic Power Packs 부트스트래퍼 패키지가 [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] 부트스트래퍼 디렉터리에 추가됩니다. 이 패키지는 [!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)] 또는 Windows Installer 배포에 대한 필수 조건을 추가하는 절차를 수행할 때 사용할 수 있습니다.  
+ 경우는 <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm> 구성 요소가 개발 컴퓨터에 설치 되어, Microsoft Visual Basic Power Packs 부트스트래퍼 패키지가 Visual Studio 부트스트래퍼 디렉터리에 추가 됩니다. 이 패키지는 [!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)] 또는 Windows Installer 배포에 대한 필수 조건을 추가하는 절차를 수행할 때 사용할 수 있습니다.  
   
  기본적으로 부트스트랩된 구성 요소는 설치 패키지와 같은 위치에서 배포됩니다. 또는 사용자가 필요한 경우 다운로드할 수 있는 URL 또는 파일 공유 위치에서 구성 요소를 배포하도록 선택할 수 있습니다.  
   

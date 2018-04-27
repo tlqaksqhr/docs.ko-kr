@@ -1,23 +1,24 @@
 ---
 title: External RuleSet Toolkit
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: a306d283-a031-475e-aa01-9ae86e7adcb0
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 7fbac6bf8be169aca8ad61c69b8d024f44928d8b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 40e28bb2b17e511a1b8953ccc8ff9bdf4f0f7392
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="external-ruleset-toolkit"></a>External RuleSet Toolkit
 일반적으로 워크플로 응용 프로그램 내에서 규칙이 사용될 경우 해당 규칙은 어셈블리의 일부입니다. 일부 시나리오에서는 워크플로 어셈블리를 다시 빌드하고 배포하지 않고도 RuleSet을 업데이트할 수 있도록 어셈블리와 별도로 RuleSet을 유지할 수 있습니다. 이 샘플에서는 데이터베이스에 있는 RuleSet을 관리하고 편집하며 런타임에 워크플로에서 이러한 RuleSet에 액세스할 수 있습니다. 따라서 워크플로 인스턴스를 실행하여 RuleSet 변경 내용을 자동으로 통합할 수 있습니다.  
@@ -67,9 +68,9 @@ ms.lasthandoff: 12/22/2017
   
  그림 3: RuleSet 편집기  
   
- 규칙 집합 편집기는 Windows Workflow Foundation [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] 추가 기능의 일부인 편집기 대화 상자를 다시 호스트하는 것으로서, Intellisense 지원을 비롯하여 편집기 대화 상자와 동일한 기능을 제공합니다. 도구; RuleSet과 연결 되는 대상 형식 (예: 워크플로)에 대해 규칙 작성 클릭할 때 **찾아보기** 주 도구 대화 상자에는 **워크플로/형식 선택기** 그림 4에 나와 있는 것 처럼 대화 상자가 나타납니다.  
+ Windows Workflow Foundation에 대 한 Visual Studio 추가 기능의 일부인 편집기 대화 상자를 다시 호스트입니다. Intellisense 지원을 비롯하여 편집기 대화 상자와 동일한 기능을 제공합니다. 도구; RuleSet과 연결 되는 대상 형식 (예: 워크플로)에 대해 규칙 작성 클릭할 때 **찾아보기** 주 도구 대화 상자에는 **워크플로/형식 선택기** 그림 4에 나와 있는 것 처럼 대화 상자가 나타납니다.  
   
- ![워크플로 &#47; 입력 선택](../../../../docs/framework/windows-workflow-foundation/samples/media/71f08d57-e8f2-499e-8151-ece2cbdcabfd.gif "71f08d57-e8f2-499e-8151-ece2cbdcabfd")  
+ ![워크플로 &#47;유형 선택](../../../../docs/framework/windows-workflow-foundation/samples/media/71f08d57-e8f2-499e-8151-ece2cbdcabfd.gif "71f08d57-e8f2-499e-8151-ece2cbdcabfd")  
   
  그림 4: 워크플로/형식 선택기  
   
@@ -83,7 +84,7 @@ ms.lasthandoff: 12/22/2017
   
  그림 5: 유효성 검사 오류  
   
- **데이터** 메뉴 도구에서 가져올을 규칙 집합을 내보낼 수 있습니다. 클릭할 때 **가져오기**,.rules 파일을 선택할 수 있는, 파일 선택 대화 상자가 나타납니다. 이 파일은 [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)]에서 처음으로 만든 파일이거나 그렇지 않을 수 있습니다. .rules 파일에는 조건 컬렉션과 RuleSet 컬렉션을 포함하는 serialize된 `RuleDefinitions` 인스턴스가 포함되어야 합니다. 도구에서는 조건 컬렉션을 사용하지 않지만 `RuleDefinitions` .rules 형식을 사용하여 [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] 환경과 상호 작용할 수 있습니다.  
+ **데이터** 메뉴 도구에서 가져올을 규칙 집합을 내보낼 수 있습니다. 클릭할 때 **가져오기**,.rules 파일을 선택할 수 있는, 파일 선택 대화 상자가 나타납니다. 있거나 처음에 Visual Studio에서 만든 파일이 아닐 수도 있습니다. .rules 파일에는 조건 컬렉션과 RuleSet 컬렉션을 포함하는 serialize된 `RuleDefinitions` 인스턴스가 포함되어야 합니다. 도구에서는 조건 컬렉션을 사용 하지 않지만 사용 된 `RuleDefinitions` .rules 형식을 Visual Studio 환경과 상호 작용을 허용 합니다.  
   
  .Rules 파일을 선택한 후는 **RuleSet 선택기** (그림 6 참조) 대화 상자가 나타납니다. 이 대화 상자를 사용하여 파일에서 가져올 RuleSet을 선택할 수 있습니다. 기본적으로 모든 RuleSet으로 지정되어 있습니다. WF 프로젝트 내의 버전 관리는 어셈블리의 버전과 동일하기 때문에 .rules 파일의 RuleSet에는 버전 번호가 없습니다. 가져오기 프로세스 도중 도구가 자동으로 할당 (있으며 사용자가 가져온 후 변경할 수 있습니다) 다음 사용 가능한 주 버전 번호. 에 할당 된 버전 번호를 볼 수는 **RuleSet 선택기** 목록입니다.  
   
@@ -141,7 +142,7 @@ ms.lasthandoff: 12/22/2017
   
 9. 응용 프로그램 구성 파일이 워크플로 프로젝트에 추가되어 서비스에서 사용할 데이터베이스에 대한 연결 문자열을 지정합니다. 이 문자열은 RuleSet 도구에서 사용하는 연결 문자열과 동일해야 합니다. RuleSet 도구에서 사용하는 연결 문자열은 RuleSet 테이블을 포함하는 데이터베이스를 가리킵니다.  
   
-10. 이제 다른 모든 워크플로 콘솔 응용 프로그램처럼 `RuleSetToolkitUsageSample` 프로젝트를 실행할 수 있습니다. [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)]에서 F5 키 또는 Ctrl+F5를 누르거나 RuleSetToolkitUsageSample.exe 파일을 직접 실행합니다.  
+10. 이제 다른 모든 워크플로 콘솔 응용 프로그램처럼 `RuleSetToolkitUsageSample` 프로젝트를 실행할 수 있습니다. F5 또는 Ctrl + f 5를 눌러 Visual Studio 내에서 누르거나 RuleSetToolkitUsageSample.exe 파일을 직접 실행 합니다.  
   
     > [!NOTE]
     >  RuleSet 도구에서는 사용 샘플 어셈블리를 로드하므로 사용 샘플을 다시 컴파일하려면 도구를 닫아야 합니다.

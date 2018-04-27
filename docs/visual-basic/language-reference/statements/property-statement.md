@@ -2,9 +2,10 @@
 title: Property Statement
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 f1_keywords:
 - vb.PropertySet
@@ -16,21 +17,21 @@ helpviewer_keywords:
 - property procedures [Visual Basic], Property statements
 - Property keyword [Visual Basic]
 ms.assetid: 3155edaf-8ebd-45c6-9cef-11d5d2dc8d38
-caps.latest.revision: "41"
+caps.latest.revision: 41
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: af4666ecb059f141480be2295055644537819293
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 558b62dd8c676532355ef12134ad8cb803b70796
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="property-statement"></a>Property Statement
 속성을 저장 하 고 속성의 값을 검색 하는 데 사용 하는 속성 프로시저의 이름을 선언 합니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```vb  
 [ <attributelist> ] [ Default ] [ accessmodifier ]   
 [ propertymodifiers ] [ Shared ] [ Shadows ] [ ReadOnly | WriteOnly ] [ Iterator ]  
 Property name ( [ parameterlist ] ) [ As returntype ] [ Implements implementslist ]  
@@ -113,7 +114,7 @@ Property name ( [ parameterlist ] ) [ As returntype ] [ Implements implementslis
   
 -   `name`  
   
-     필수 요소. 속성의 이름입니다. 참조 [선언 된 요소 이름](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)합니다.  
+     필수. 속성의 이름입니다. 참조 [선언 된 요소 이름](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)합니다.  
   
 -   `parameterlist`  
   
@@ -139,8 +140,8 @@ Property name ( [ parameterlist ] ) [ As returntype ] [ Implements implementslis
   
     |파트|설명|  
     |---|---|  
-    |`interface`|필수 요소. 이 속성에 의해 구현 되는 인터페이스의 이름의 클래스 또는 구조체를 포함 합니다.|  
-    |`definedname`|필수 요소. 이름에 속성이 정의 된 `interface`합니다.|  
+    |`interface`|필수. 이 속성에 의해 구현 되는 인터페이스의 이름의 클래스 또는 구조체를 포함 합니다.|  
+    |`definedname`|필수. 이름에 속성이 정의 된 `interface`합니다.|  
   
 -   `Get`  
   

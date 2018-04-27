@@ -16,11 +16,11 @@ ms.author: douglasl
 manager: craigg
 ms.workload:
 - dotnet
-ms.openlocfilehash: 2801ad445be073f2cd4725d04a0c731e8bfcdd1b
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 5949ee1931b9ab9adf1f14b921432cae531cebd5
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="sqlclient-for-the-entity-framework"></a>Entity Framework용 SqlClient
 이 단원에서는 Entity Framework가 Microsoft SQL Server에서 작동할 수 있도록 하는 .NET Framework Data Provider for SQL Server(SqlClient)에 대해 설명합니다.  
@@ -42,7 +42,7 @@ ms.lasthandoff: 04/26/2018
 |2000|2005|2008|  
   
 > [!NOTE]
->  부터는 [!INCLUDE[vsprvs](../../../../../includes/vsprvs-md.md)] 2010는 [ADO.NET 엔터티 데이터 모델 도구](http://msdn.microsoft.com/library/91076853-0881-421b-837a-f582f36be527) SQL Server 2000을 지원 하지 않습니다.  
+>  Visual Studio 2010부터는 [ADO.NET 엔터티 데이터 모델 도구](http://msdn.microsoft.com/library/91076853-0881-421b-837a-f582f36be527) SQL Server 2000을 지원 하지 않습니다.  
   
 ## <a name="provider-namespace-name"></a>공급자 네임스페이스 이름  
  모든 공급자에서 네임스페이스가 지정되어야 합니다. 이 속성이 있으면 특정 구문(예: 형식 및 함수)에 대해 이 공급자에서 사용할 수 있는 접두사를 Entity Framework에서 구할 수 있습니다. SqlClient 공급자 매니페스트의 네임스페이스는 `SqlServer`입니다. 네임 스페이스에 대 한 자세한 내용은 참조 [네임 스페이스](../../../../../docs/framework/data/adonet/ef/language-reference/namespaces-entity-sql.md)합니다.  

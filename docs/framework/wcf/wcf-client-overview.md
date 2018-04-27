@@ -21,11 +21,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 491cbf19ac3c8f1817b12c895655ca1958972a62
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 3669260d34aac0783f2ebd735c79ced91741408a
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="wcf-client-overview"></a>WCF 클라이언트 개요
 이 단원에서는 클라이언트 응용 프로그램이 수행하는 작업, [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 클라이언트를 구성, 생성 및 사용하는 방법, 그리고 클라이언트 응용 프로그램의 보안을 유지하는 방법에 대해 설명합니다.  
@@ -73,11 +73,11 @@ svcutil /language:vb /out:ClientCode.vb /config:app.config http://computerName/M
  <xref:System.ServiceModel.ClientBase%601> 클래스 사용을 설명하기 위해 다음 서비스 계약이 생성되어 있는 것으로 가정합니다.  
   
 > [!NOTE]
->  [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]를 사용하여 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 클라이언트를 만들 경우 프로젝트에 대한 서비스 참조를 추가하면 개체가 개체 브라우저에 자동으로 로드됩니다.  
+>  만들려면 Visual Studio를 사용 하는 경우 프로그램 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 클라이언트 개체가 자동으로 로드 됩니다 개체 브라우저에 프로젝트에 대 한 서비스 참조를 추가 합니다.  
   
  [!code-csharp[C_GeneratedCodeFiles#12](../../../samples/snippets/csharp/VS_Snippets_CFX/c_generatedcodefiles/cs/proxycode.cs#12)]  
   
- [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]를 사용하지 않는 경우 생성된 계약 코드를 조사하여 <xref:System.ServiceModel.ClientBase%601> 및 서비스 계약 인터페이스 `ISampleService`를 확장하는 형식을 찾습니다. 이 경우 형식은 다음 코드와 비슷합니다.  
+ Visual Studio를 사용 하지 않는 경우 확장 하는 형식을 찾기 위해 생성 된 계약 코드를 검사 <xref:System.ServiceModel.ClientBase%601> 및 서비스 계약 인터페이스 `ISampleService`합니다. 이 경우 형식은 다음 코드와 비슷합니다.  
   
  [!code-csharp[C_GeneratedCodeFiles#14](../../../samples/snippets/csharp/VS_Snippets_CFX/c_generatedcodefiles/cs/proxycode.cs#14)]  
   

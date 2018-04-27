@@ -1,12 +1,13 @@
 ---
-title: "ShouldSerialize 및 Reset 메서드를 사용하여 기본값 정의"
-ms.custom: 
+title: ShouldSerialize 및 Reset 메서드를 사용하여 기본값 정의
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-winforms
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,19 +16,20 @@ helpviewer_keywords:
 - custom controls [Windows Forms], property methods
 - ShouldPersist method
 ms.assetid: 7b6c5e00-3771-46b4-9142-5a80d5864a5e
-caps.latest.revision: "11"
+caps.latest.revision: 11
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a654fef461d92c4b93db131e303bb07a1e839d34
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: a28cd84c88cd7434eaca3fdaa7b4406006c44dad
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="defining-default-values-with-the-shouldserialize-and-reset-methods"></a>ShouldSerialize 및 Reset 메서드를 사용하여 기본값 정의
-`ShouldSerialize`및 `Reset` 속성이 없는 경우 속성에 대해 제공할 수 있는 선택적 메서드는는 간단한 기본값을 가집니다. 속성에 기본값을 적용 해야는 <xref:System.ComponentModel.DefaultValueAttribute> 특성 클래스 생성자에 기본값을 대신 제공 합니다. 이러한 메커니즘 중 하나를 통해 디자이너에서 다음과 같은 기능 수 있습니다.  
+`ShouldSerialize` 및 `Reset` 속성이 없는 경우 속성에 대해 제공할 수 있는 선택적 메서드는는 간단한 기본값을 가집니다. 속성에 기본값을 적용 해야는 <xref:System.ComponentModel.DefaultValueAttribute> 특성 클래스 생성자에 기본값을 대신 제공 합니다. 이러한 메커니즘 중 하나를 통해 디자이너에서 다음과 같은 기능 수 있습니다.  
   
 -   속성 값이 기본값에서 수정 된 경우 속성 브라우저에서 시각적 표시를 제공 합니다.  
   
@@ -53,9 +55,9 @@ public void ResetMyFont() {
 ```  
   
 > [!NOTE]
->  속성이 없는 경우는 `Reset` 메서드를로 표시 되지 않으면는 <xref:System.ComponentModel.DefaultValueAttribute>, 선언에 제공 되는 기본 값이 없으면는 `Reset` 의 바로 가기 메뉴에서 해당 속성이 사용 되지 않는지에 대 한 옵션는 **속성** 에 Windows Forms 디자이너의 창 [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)]합니다.  
+>  속성이 없는 경우는 `Reset` 메서드를로 표시 되지 않으면는 <xref:System.ComponentModel.DefaultValueAttribute>, 선언에 제공 되는 기본 값이 없으면는 `Reset` 의 바로 가기 메뉴에서 해당 속성이 사용 되지 않는지에 대 한 옵션는 **속성** Visual Studio에서 Windows Forms 디자이너의 창.  
   
- 와 같은 디자이너 [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] 사용는 `ShouldSerialize` *PropertyName* 속성이 기본값에서 변경 되었는지 여부를 확인 하 고 속성 경우에만 폼에 코드를 작성 하는 방법을 변경 되 면 되므로 보다 효율적인 코드를 생성 합니다. 예:  
+ Visual Studio와 같은 디자이너 사용 하 여는 `ShouldSerialize` *PropertyName* 속성이 기본값에서 변경 되었는지 여부를 확인 하 고 속성 경우에만 폼에 코드를 작성 하는 방법을 변경 되 면 되므로 보다 효율적인 코드 세대입니다. 예를 들어:  
   
 ```vb  
 'Returns true if the font has changed; otherwise, returns false.  

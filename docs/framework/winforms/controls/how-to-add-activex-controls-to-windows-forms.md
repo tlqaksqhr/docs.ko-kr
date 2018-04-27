@@ -1,28 +1,30 @@
 ---
-title: "방법: Windows Forms에 ActiveX 컨트롤 추가"
-ms.custom: 
+title: '방법: Windows Forms에 ActiveX 컨트롤 추가'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-winforms
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Windows Forms controls, ActiveX controls
 - forms [Windows Forms], adding ActiveX controls
 - ActiveX controls [Windows Forms], adding
 ms.assetid: 54a61e5b-555e-4887-b41e-6244fed271eb
-caps.latest.revision: "10"
+caps.latest.revision: 10
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 940dd21fc48c23ce623280aab2c487db5810057c
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: 2cedd71665dc098ca3a6a6bf43c74b2d3a11fe11
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="how-to-add-activex-controls-to-windows-forms"></a>방법: Windows Forms에 ActiveX 컨트롤 추가
 Windows Forms 컨트롤 호스트에 Windows Forms 디자이너가 최적화 하는 동안에 Windows Forms에서 ActiveX 컨트롤을 넣을 수 있습니다.  
@@ -39,7 +41,7 @@ Windows Forms 컨트롤 호스트에 Windows Forms 디자이너가 최적화 하
   
 -   도구 상자에 컨트롤을 두 번 클릭 합니다.  
   
-     [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)]컨트롤에 대 한 모든 참조는 프로젝트에에서 추가 합니다. Windows Forms에서 ActiveX 컨트롤을 사용 하는 경우 유의 해야 할 사항에 대 한 자세한 내용은 참조 [Windows Form에서 ActiveX 컨트롤을 호스팅할 때의 고려 사항](../../../../docs/framework/winforms/controls/considerations-when-hosting-an-activex-control-on-a-windows-form.md)합니다.  
+     Visual Studio 프로젝트에서 컨트롤에 대 한 모든 참조를 추가합니다. Windows Forms에서 ActiveX 컨트롤을 사용 하는 경우 유의 해야 할 사항에 대 한 자세한 내용은 참조 [Windows Form에서 ActiveX 컨트롤을 호스팅할 때의 고려 사항](../../../../docs/framework/winforms/controls/considerations-when-hosting-an-activex-control-on-a-windows-form.md)합니다.  
   
     > [!NOTE]
     >  Windows Forms ActiveX 컨트롤 가져오기 (AxImp.exe) ActiveX 동적 연결 라이브러리를 가져오는에 예상 보다 다른 종류의 이벤트 인수를 만듭니다. AxImp.exe에서 만든 인수는 다음과 같은: `Invoke(object sender, DWebBrowserEvents2_ProgressChangeEvent e)`때 `Invoke(object sender, DWebBrowserEvents2_ProgressChangeEventArgs e)` 가 필요 합니다. 주의이 불일치로 하지 않는 코드는 정상적으로 작동 합니다. 자세한 내용은 참조 [Windows Forms ActiveX 컨트롤 가져오기 (Aximp.exe)](../../../../docs/framework/tools/aximp-exe-windows-forms-activex-control-importer.md)합니다.  

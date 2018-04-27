@@ -1,29 +1,30 @@
 ---
-title: "COM Interop 소개(Visual Basic)"
-ms.custom: 
+title: COM Interop 소개(Visual Basic)
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - interop assemblies
 - COM interop [Visual Basic], about COM interop
 ms.assetid: 8bd62e68-383d-407f-998b-29aa0ce0fd67
-caps.latest.revision: "12"
+caps.latest.revision: 12
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 39a4245b51c1199a6aeb0c23282b1917f51164d2
-ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
+ms.openlocfilehash: 5a13fabd729218dc2a980b9c63e153d17a140cce
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="introduction-to-com-interop-visual-basic"></a>COM Interop 소개(Visual Basic)
 구성 요소 개체 모델 (COM)에 다른 구성 요소를 응용 프로그램을 호스트 하는 기능을 노출 하는 개체 수 있습니다. COM 개체, 기본 windows 수 년에 대 한 프로그래밍 된 하는 동안 공용 언어 런타임 (CLR)에 대 한 설계 된 응용 프로그램에는 다양 한 이점을 제공 합니다.  
   
- [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]응용 프로그램 대체 com 개발 된 그때 까지는 할 수 있습니다를 사용 하거나 사용 하 여 COM 개체를 만들 [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)]합니다. Com 상호 운용성 또는 *COM interop*를 전환 하는 동안 기존 COM 개체를 사용할 수 있습니다는 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 자신의 진도에 있습니다.  
+ [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 응용 프로그램 대체 com 개발 된 그때 까지는 사용 하거나 Visual Studio를 사용 하 여 COM 개체를 만들고 할 수 있습니다. Com 상호 운용성 또는 *COM interop*를 전환 하는 동안 기존 COM 개체를 사용할 수 있습니다는 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 자신의 진도에 있습니다.  
   
  사용 하 여는 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] COM 구성 요소를 만들려면 등록이 필요 없는 COM interop를 사용할 수 있습니다. 이 기능을 사용 하면 여러 개의 버전이 컴퓨터에 설치 되 고 최종 사용자는 XCOPY 또는 FTP를 사용 응용 프로그램을 컴퓨터에 있는 적절 한 디렉터리로 복사할 실행 될 수 있습니다 하는 경우에 DLL 버전을 사용할 수를 제어할 수 있습니다. 자세한 내용은 참조 [등록이 필요 없는 COM Interop](http://msdn.microsoft.com/library/90f308b9-82dc-414a-bce1-77e0155e56bd)합니다.  
   
@@ -49,7 +50,7 @@ ms.lasthandoff: 12/21/2017
  어셈블리 및 어셈블리 매니페스트에 대 한 자세한 내용은 참조 하십시오. [어셈블리 및 전역 어셈블리 캐시](../../../visual-basic/programming-guide/concepts/assemblies-gac/index.md)합니다.  
   
 ### <a name="importing-and-exporting-type-libraries"></a>가져오기 및 내보내기 형식 라이브러리  
- [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)]에 형식 라이브러리에서 정보를 가져올 수 있는 Tlbimp 유틸리티를 포함 한 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 응용 프로그램입니다. Tlbexp 유틸리티를 사용 하 여 어셈블리에서 형식 라이브러리를 생성할 수 있습니다.  
+ Visual Studio에는 형식 라이브러리에서 정보를 가져올 수 있는 Tlbimp 유틸리티를 포함 한 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 응용 프로그램입니다. Tlbexp 유틸리티를 사용 하 여 어셈블리에서 형식 라이브러리를 생성할 수 있습니다.  
   
  Tlbimp와 Tlbexp에 대 한 정보를 참조 하십시오. [Tlbimp.exe (형식 라이브러리 가져오기)](../../../framework/tools/tlbimp-exe-type-library-importer.md) 및 [Tlbexp.exe (형식 라이브러리 내보내기)](http://msdn.microsoft.com/library/a487d61b-d166-467b-a7ca-d8b52fbff42d)합니다.  
   

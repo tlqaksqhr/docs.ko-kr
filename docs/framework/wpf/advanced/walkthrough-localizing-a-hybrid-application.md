@@ -1,27 +1,29 @@
 ---
-title: "연습: 혼합 응용 프로그램 지역화"
-ms.custom: 
+title: '연습: 혼합 응용 프로그램 지역화'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - localization [WPF interoperability]
 - hybrid applications [WPF interoperability]
 ms.assetid: fbc0c54e-930a-4c13-8e9c-27b83665010a
-caps.latest.revision: "17"
+caps.latest.revision: 17
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 9f9bb7588ef1f6962a5cd55196154ac7f666d53b
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: b00553c005b714094f208fc6d4ed40e838b90b49
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="walkthrough-localizing-a-hybrid-application"></a>연습: 혼합 응용 프로그램 지역화
 이 연습에서는 지역화 하는 방법을 보여 줍니다. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 의 요소는 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]-하이브리드 응용 프로그램을 기반으로 합니다.  
@@ -42,7 +44,7 @@ ms.lasthandoff: 01/19/2018
   
  위의 작업을 완료하면 지역화된 하이브리드 응용 프로그램이 구현됩니다.  
   
-## <a name="prerequisites"></a>필수 구성 요소  
+## <a name="prerequisites"></a>전제 조건  
  이 연습을 완료하려면 다음 구성 요소가 필요합니다.  
   
 -   [!INCLUDE[vs_orcas_long](../../../../includes/vs-orcas-long-md.md)].  
@@ -75,7 +77,7 @@ ms.lasthandoff: 01/19/2018
   
 5.  F5 키를 눌러 응용 프로그램을 빌드하고 실행합니다.  
   
-     두는 `SimpleControl` 요소와 레이블 컨트롤에 텍스트 표시 **"Hello"**합니다.  
+     두는 `SimpleControl` 요소와 레이블 컨트롤에 텍스트 표시 **"Hello"** 합니다.  
   
 ## <a name="enabling-localization"></a>지역화 사용  
  Windows Forms 디자이너에서는 위성 어셈블리에서 지역화를 사용하도록 설정하기 위한 설정을 제공합니다.  
@@ -86,7 +88,7 @@ ms.lasthandoff: 01/19/2018
   
 2.  속성 창에서 폼의 값을 설정 **Localizable** 속성을 `true`합니다.  
   
-3.  속성 창에서 설정의 값은 **언어** 속성을 **스페인어 (스페인)**합니다.  
+3.  속성 창에서 설정의 값은 **언어** 속성을 **스페인어 (스페인)** 합니다.  
   
 4.  Windows Forms 디자이너에서 레이블 컨트롤을 선택합니다.  
   
@@ -102,7 +104,7 @@ ms.lasthandoff: 01/19/2018
   
 8.  솔루션 탐색기에서 마우스 오른쪽 단추로 클릭 **LocalizingWpfInWf** 클릭 **프로젝트 언로드**합니다.  
   
-     프로젝트 이름 레이블이 **(사용 불가)**합니다.  
+     프로젝트 이름 레이블이 **(사용 불가)** 합니다.  
   
 9. 마우스 오른쪽 단추로 클릭 **LocalizingWpfInWf**를 클릭 하 고 **편집 LocalizingWpfInWf.csproj**합니다.  
   
@@ -123,7 +125,7 @@ ms.lasthandoff: 01/19/2018
   
 #### <a name="to-assign-resource-identifiers"></a>리소스 식별자를 할당하려면  
   
-1.  시작 메뉴에서 열고는 [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] 명령 프롬프트입니다.  
+1.  시작 메뉴에서 Visual Studio 명령 프롬프트를 엽니다.  
   
 2.  다음 명령을 사용하여 지역화 가능한 콘텐츠에 리소스 식별자를 할당합니다.  
   
@@ -150,7 +152,7 @@ ms.lasthandoff: 01/19/2018
     LocBaml /parse LocalizingWpfInWf.g.en-US.resources /out:temp.csv  
     ```  
   
-3.  사용 하 여 temp.csv 파일을 엽니다 [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] 이나 다른 텍스트 편집기입니다. 문자열 `"Hello"` 해당 스페인어 번역 된 `"Hola"`합니다.  
+3.  Visual Studio 또는 다른 텍스트 편집기와 함께 사용 하 여 temp.csv 파일을 엽니다. 문자열 `"Hello"` 해당 스페인어 번역 된 `"Hola"`합니다.  
   
 4.  temp.csv 파일을 저장합니다.  
   

@@ -1,26 +1,27 @@
 ---
-title: "추적"
-ms.custom: 
+title: 추적
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: afdcd9bd-b462-4b2a-aac7-bebf9c80be81
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 79ec9c423f86a0a736ed1b99d8ddf0f5a38160c0
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 6bb7d918fcc3b0948d5902764d8351a8f86b0389
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="tracking"></a>추적
-이 단원에는 [!INCLUDE[wf](../../../../includes/wf-md.md)]의 워크플로 추적을 보여 주는 샘플이 포함되어 있습니다.  
+이 섹션에는 추적에서 Windows WF (Workflow Foundation) 워크플로 보여 주는 샘플이 포함 되어 있습니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
  [사용자 지정 추적](../../../../docs/framework/windows-workflow-foundation/samples/custom-tracking.md)  

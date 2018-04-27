@@ -1,24 +1,26 @@
 ---
-title: "ASMX 웹 서비스와의 상호 운영성"
-ms.custom: 
+title: ASMX 웹 서비스와의 상호 운영성
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: a7c11f0a-9e68-4f03-a6b1-39cf478d1a89
-caps.latest.revision: "19"
+caps.latest.revision: 19
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ce0f548f345e3711edfd547b2e6879fafdbd0ad4
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 8fa28637ad4ffdc2652c4c925208cd699134579a
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="interoperating-with-asmx-web-services"></a>ASMX 웹 서비스와의 상호 운영성
 이 샘플에서는 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 클라이언트 응용 프로그램을 기존 ASMX 웹 서비스와 통합하는 방법을 보여 줍니다.  
@@ -30,7 +32,7 @@ ms.lasthandoff: 12/22/2017
   
  다음 샘플 코드에 나와 있는 ASMX 웹 서비스 구현은 적절한 결과를 계산하여 반환합니다.  
   
-```  
+```csharp  
 [WebService(Namespace="http://Microsoft.ServiceModel.Samples")]  
 public class CalculatorService : System.Web.Services.WebService  
     {  
@@ -57,7 +59,7 @@ public class CalculatorService : System.Web.Services.WebService
     }  
 ```  
   
- 구성된 대로 동일한 컴퓨터의 클라이언트는 http://localhost/servicemodelsamples/service.asmx에서 서비스에 액세스할 수 있습니다. 원격 시스템의 클라이언트가 서비스에 액세스하려면 localhost 대신 정규화된 도메인 이름을 지정해야 합니다.  
+ 서비스에 액세스할 수 구성 된 대로 http://localhost/servicemodelsamples/service.asmx 동일한 컴퓨터에 클라이언트에서. 원격 시스템의 클라이언트가 서비스에 액세스하려면 localhost 대신 정규화된 도메인 이름을 지정해야 합니다.  
   
  통신에 의해 생성 된 클라이언트를 통해 이루어진다는 [ServiceModel Metadata 유틸리티 도구 (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)합니다. 클라이언트는 generatedClient.cs 파일에 포함됩니다. 업데이트된 메타데이터를 검색하는 데 프록시 코드가 사용되므로 프록시 코드를 생성하기 위해 ASMX 서비스를 사용할 수 있어야 합니다. 클라이언트 디렉터리의 명령 프롬프트에서 다음 명령을 실행하여 형식화된 프록시를 생성합니다.  
   
@@ -78,7 +80,7 @@ svcutil.exe /n:http://Microsoft.ServiceModel.Samples,Microsoft.ServiceModel.Samp
   
  클라이언트 구현은 생성된 클라이언트의 인스턴스를 생성합니다. 그런 다음 생성된 클라이언트를 사용하여 서비스와 통신할 수 있습니다.  
   
-```  
+```csharp  
 // Create a client.  
 CalculatorServiceSoapClient client = new CalculatorServiceSoapClient();  
   

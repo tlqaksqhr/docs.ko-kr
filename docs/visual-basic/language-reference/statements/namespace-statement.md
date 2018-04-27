@@ -21,18 +21,18 @@ ms.assetid: a31fbd95-9ace-4c3d-bbb1-51222a2272b2
 caps.latest.revision: 39
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 9863286a8eda2559ab678c77a81cc7d6063c3e3d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 90eb33bdbc01afc983869c919f9d7b2feab44037
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="namespace-statement"></a>Namespace 문
 네임 스페이스의 이름을 선언 하 고 해당 네임 스페이스에서 컴파일되도록 선언 뒤에 오는 소스 코드.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```vb  
 Namespace [Global.] { name | name.name }  
     [ componenttypes ]  
 End Namespace  
@@ -43,7 +43,7 @@ End Namespace
  선택 사항입니다. 프로젝트의 루트 네임 스페이스에서 네임 스페이스를 정의할 수 있습니다. 참조 [Visual Basic의 네임 스페이스](../../../visual-basic/programming-guide/program-structure/namespaces.md)합니다.  
   
  `name`  
- 필수 요소. 네임 스페이스를 식별 하는 고유 이름입니다. 유효한 Visual Basic 식별자 여야 합니다. 자세한 내용은 참조 [선언 요소 이름](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)합니다.  
+ 필수. 네임 스페이스를 식별 하는 고유 이름입니다. 유효한 Visual Basic 식별자 여야 합니다. 자세한 내용은 참조 [선언 요소 이름](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)합니다.  
   
  `componenttypes`  
  선택 사항입니다. 네임 스페이스를 구성 하는 요소입니다. 이러한 포함 되지만 열거형, 구조체, 인터페이스, 클래스, 모듈, 대리자 및 다른 네임 스페이스에 제한 되지 않습니다.  

@@ -12,16 +12,16 @@ ms.assetid: 6e90eb8a-1a4e-4387-8a68-9287dc7875e8
 caps.latest.revision: 14
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: e1e57ac4650eb625ce2eb18e092024ac40607d81
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 4163fbb1bd429442badfa429034d34133f825898
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="registry-summary-visual-basic"></a>레지스트리 요약(Visual Basic)
-[!INCLUDE[vsprvs](~/includes/vsprvs-md.md)]언어 키워드 및 런타임 라이브러리 멤버 용도 따라 구성 하 고 사용 합니다.  
+Visual Studio 언어 키워드 및 런타임 라이브러리 멤버 용도 따라 구성 하 고 사용 합니다.  
   
- 사용 하 여 `My` 기능은 수 있는 생산성 및 이러한 요소 보다 레지스트리 작업의 성능이 제공 합니다. 자세한 내용은 <xref:Microsoft.VisualBasic.MyServices.RegistryProxy>을 참조하십시오.  
+ 사용 하 여 `My` 기능은 수 있는 생산성 및 이러한 요소 보다 레지스트리 작업의 성능이 제공 합니다. 자세한 내용은 <xref:Microsoft.VisualBasic.MyServices.RegistryProxy>을 참조하세요.  
   
 |**작업**|**언어 요소**|  
 |----------------|--------------------------|  

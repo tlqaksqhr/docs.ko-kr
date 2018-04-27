@@ -13,11 +13,11 @@ ms.assetid: 309c0ad5-83e4-4f96-99ea-83cd95107417
 caps.latest.revision: 18
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: da42d58190e8069154cd8383cf0a87e0b19f5ae4
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: bffbb8dabdd2463633c9d2ca8de3ef120850be3f
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="constants-and-enumerations-visual-basic"></a>상수 및 열거형(Visual Basic)
 Visual Basic에서는 다양 한 미리 정의 된 상수와 개발자를 위한 열거형을 제공 합니다. 상수는 응용 프로그램의 실행 되는 동안 일정 하 게 유지 하는 값을 저장 합니다. 열거형은 관련된 상수 집합으로 작업하고 이름과 상수 값을 연결하는 편리한 방법을 제공합니다.  
@@ -31,7 +31,7 @@ Visual Basic에서는 다양 한 미리 정의 된 상수와 개발자를 위한
 |---|---|  
 |`CONFIG`|현재 설정에 해당 하는 문자열은 **활성 솔루션 구성** 상자에 **Configuration Manager**합니다.|  
 |`DEBUG`|A `Boolean` 에 설정할 수 있는 값의 **프로젝트 속성** 대화 상자. 기본적으로 프로젝트의 디버그 구성은 정의 `DEBUG`합니다. 때 `DEBUG` 정의 된 <xref:System.Diagnostics.Debug> 클래스 메서드의 결과가 **출력** 창. 정의 되지 않은 경우 <xref:System.Diagnostics.Debug> 클래스 메서드가 컴파일되지 않으므로 및 디버그 출력이 생성 되지 않습니다.|  
-|`TARGET`|프로젝트 또는 명령줄의 설정에 대 한 출력 형식을 나타내는 문자열 **/대상** 옵션입니다. 가능한 값 `TARGET` 됩니다.<br /><br /> -Windows 응용 프로그램에 대 한 "winexe"입니다.<br />-콘솔 응용 프로그램에 대 한 "exe"입니다.<br />-클래스 라이브러리에 대 한 "library"입니다.<br />-"모듈" 모듈에 대 한 합니다.<br />- **/대상** 옵션에서 설정할 수 있습니다는 [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] 통합된 개발 환경입니다. 자세한 내용은 참조 [/target (Visual Basic)](../../visual-basic/reference/command-line-compiler/target.md)합니다.|  
+|`TARGET`|프로젝트 또는 명령줄의 설정에 대 한 출력 형식을 나타내는 문자열 **/대상** 옵션입니다. 가능한 값 `TARGET` 됩니다.<br /><br /> -Windows 응용 프로그램에 대 한 "winexe"입니다.<br />-콘솔 응용 프로그램에 대 한 "exe"입니다.<br />-클래스 라이브러리에 대 한 "library"입니다.<br />-"모듈" 모듈에 대 한 합니다.<br />- **/대상** Visual Studio 통합된 개발 환경에서 옵션을 설정할 수 있습니다. 자세한 내용은 참조 [/target (Visual Basic)](../../visual-basic/reference/command-line-compiler/target.md)합니다.|  
 |`TRACE`|A `Boolean` 에 설정할 수 있는 값의 **프로젝트 속성** 대화 상자. 기본적으로 프로젝트에 대 한 모든 구성을 정의 `TRACE`합니다. 때 `TRACE` 정의 된 <xref:System.Diagnostics.Trace> 클래스 메서드의 결과가 **출력** 창. 정의 되지 않은 경우 <xref:System.Diagnostics.Trace> 클래스 메서드가 컴파일되지 않으므로 및 아니요 `Trace` 출력이 생성 됩니다.|  
 |`VBC_VER`|Visual Basic 버전을 나타내는 숫자 *주요*. *보조* 형식입니다. 버전 번호를 [!INCLUDE[vbprvblong](~/includes/vbprvblong-md.md)] 8.0 됩니다.|  
   

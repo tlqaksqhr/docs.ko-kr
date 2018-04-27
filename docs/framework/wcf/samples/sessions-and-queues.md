@@ -1,24 +1,26 @@
 ---
-title: "세션 및 큐"
-ms.custom: 
+title: 세션 및 큐
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 47d7c5c2-1e6f-4619-8003-a0ff67dcfbd6
-caps.latest.revision: "27"
+caps.latest.revision: 27
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 0de2668eb03a658632bb8a18c711f780b333e86b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: f1aeaa72937d23a321eb615ad8b1eb4ec1e7b48e
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="sessions-and-queues"></a>세션 및 큐
 이 샘플에서는 MSMQ(메시지 큐) 전송을 통해 대기 중인 통신으로 일련의 관련된 메시지를 보내고 받는 방법을 보여 줍니다. 이 샘플에서는 `netMsmqBinding` 바인딩을 사용합니다. 이 서비스는 자체적으로 호스트되는 콘솔 응용 프로그램으로서 이를 사용하여 서비스에서 대기된 메시지를 받는 것을 볼 수 있습니다.  
@@ -42,8 +44,8 @@ ms.lasthandoff: 12/22/2017
  샘플에서 클라이언트는 단일 트랜잭션 범위 내에서 세션의 일부로 서비스에 몇 개의 메시지를 보냅니다.  
   
  서비스 계약은 `IOrderTaker`이며, 이는 큐에 사용하기에 적합한 단방향 서비스를 정의합니다. 다음 샘플 코드에 표시된 계약에 사용된 <xref:System.ServiceModel.SessionMode>는 메시지가 세션의 일부임을 나타냅니다.  
-  
-```  
+
+```csharp
 [ServiceContract(Namespace = "http://Microsoft.ServiceModel.Samples", SessionMode=SessionMode.Required)]  
 public interface IOrderTaker  
 {  
@@ -56,11 +58,11 @@ public interface IOrderTaker
     [OperationContract(IsOneWay = true)]  
     void EndPurchaseOrder();  
 }  
-```  
-  
+```
+
  서비스에서는 첫 작업으로 트랜잭션을 참여시키지만 트랜잭션을 자동으로 완료하지는 않는 방식으로 서비스 작업을 정의합니다. 후속 작업에서도 같은 트랜잭션을 참여시키지만 자동으로 완료하지는 않습니다. 세션의 마지막 작업에서는 트랜잭션을 자동으로 완료합니다. 따라서 서비스 계약의 몇 가지 작업 호출에 같은 트랜잭션이 사용됩니다. 작업에서 예외가 throw되면 트랜잭션이 롤백되고 세션이 다시 큐로 돌아갑니다. 마지막 작업을 성공적으로 완료하고 나면 트랜잭션이 커밋됩니다. 서비스에서는 `PerSession`을 <xref:System.ServiceModel.InstanceContextMode>로 사용하여 같은 서비스 인스턴스의 세션에서 모든 메시지를 받습니다.  
-  
-```  
+
+```csharp
 [ServiceBehavior(InstanceContextMode=InstanceContextMode.PerSession)]  
 public class OrderTakerService : IOrderTaker  
 {  
@@ -92,11 +94,11 @@ public class OrderTakerService : IOrderTaker
        Console.WriteLine(po.ToString());  
     }  
 }  
-```  
-  
+```
+
  서비스는 자체 호스트됩니다. MSMQ 전송을 사용하는 경우에는 사용되는 큐를 미리 만들어야 합니다. 수동으로 또는 코드를 통해 이 작업을 수행할 수 있습니다. 이 샘플에서 서비스는 큐가 있는지 확인하고 필요한 경우 큐를 만드는 <xref:System.Messaging> 코드를 포함합니다. 큐 이름은 <xref:System.Configuration.ConfigurationManager.AppSettings%2A> 클래스를 사용하여 구성 파일로부터 읽습니다.  
-  
-```  
+
+```csharp
 // Host the service within this EXE console application.  
 public static void Main()  
 {  
@@ -123,8 +125,8 @@ public static void Main()
         serviceHost.Close();   
     }  
 }  
-```  
-  
+```
+
  MSMQ 큐 이름은 구성 파일의 appSettings 섹션에 지정됩니다. 서비스의 끝점은 구성 파일의 system.serviceModel 섹션에 정의되며 `netMsmqBinding` 바인딩을 지정합니다.  
   
 ```xml  
@@ -150,8 +152,8 @@ public static void Main()
 ```  
   
  클라이언트는 트랜잭션 범위를 만듭니다. 세션에 있는 모든 메시지가 트랜잭션 범위 내의 큐로 전송되기 때문에 트랜잭션 범위는 모든 메시지가 성공하거나 실패하는 원자 단위로 간주됩니다. 트랜잭션은 <xref:System.Transactions.TransactionScope.Complete%2A>를 호출하여 커밋합니다.  
-  
-```  
+
+```csharp
 //Create a transaction scope.  
 using (TransactionScope scope = new TransactionScope(TransactionScopeOption.Required))  
 {  
@@ -178,8 +180,8 @@ using (TransactionScope scope = new TransactionScope(TransactionScopeOption.Requ
     // Complete the transaction.  
     scope.Complete();  
 }  
-```  
-  
+```
+
 > [!NOTE]
 >  세션에 있는 모든 메시지에 대해 단일 트랜잭션만 사용할 수 있으며 세션에 있는 모든 메시지는 트랜잭션을 커밋하기 전에 보내야 합니다. 클라이언트를 닫으면 세션이 닫힙니다. 따라서 트랜잭션을 완료하여 세션에 있는 모든 메시지를 큐로 보내기 전에 클라이언트를 닫아야 합니다.  
   

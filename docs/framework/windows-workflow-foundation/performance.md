@@ -14,11 +14,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 94eca5c2aad919fe46fa75626954e10bb68f1110
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: b34a0118c9223e8d09bf56de39e3fea1b115688f
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="windows-workflow-foundation-4-performance"></a>Windows Workflow Foundation 4 성능
 Dustin Metzgar  
@@ -27,7 +27,7 @@ Dustin Metzgar
   
  Microsoft Corporation, 2010년 9월  
   
- Microsoft [!INCLUDE[netfx40_long](../../../includes/netfx40-long-md.md)]에는 성능에 많은 투자를 한 [!INCLUDE[wf](../../../includes/wf-md.md)]의 주요 수정 버전이 포함되어 있습니다.  이 새로운 수정 버전에서는 .NET Framework 3.0 및 [!INCLUDE[wf1](../../../includes/wf1-md.md)]의 일부로 제공된 [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] 이전 버전의 디자인이 상당 부분 변경되었습니다. 성능과 유용성을 보다 향상시키기 위해 프로그래밍 모델, 런타임 및 도구의 핵심에서 다시 설계되었습니다. 이 항목에서는 이러한 수정 버전의 중요한 성능 특징을 보여 주고 이전 버전의 성능 특징과 비교합니다.  
+ Microsoft [!INCLUDE[netfx40_long](../../../includes/netfx40-long-md.md)] 성능에 많은 투자를 Windows Workflow Foundation (WF)의 주 버전을 포함 합니다.  이 새로운 수정 버전에서는 .NET Framework 3.0 및 [!INCLUDE[wf1](../../../includes/wf1-md.md)]의 일부로 제공된 [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] 이전 버전의 디자인이 상당 부분 변경되었습니다. 성능과 유용성을 보다 향상시키기 위해 프로그래밍 모델, 런타임 및 도구의 핵심에서 다시 설계되었습니다. 이 항목에서는 이러한 수정 버전의 중요한 성능 특징을 보여 주고 이전 버전의 성능 특징과 비교합니다.  
   
  개별 워크플로 구성 요소 성능은 WF3과 WF4 사이에 몇 배나 증가했습니다.  이에 비해 직접 코딩된 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 서비스와 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 워크플로 서비스 간의 차이는 매우 적은 편입니다.  WF4에서는 워크플로 대기 시간이 훨씬 줄었습니다.  지속성 성능은 2.5-3.0의 비율로 증가했습니다.  워크플로 추적을 통한 상태 모니터링의 오버헤드가 훨씬 줄었습니다.  이러한 특성은 응용 프로그램에서 WF4로 마이그레이션하거나 채택하는 강력한 이유가 됩니다.  
   
@@ -192,7 +192,7 @@ public sealed class CompensableActivityEmptyCompensation : CodeActivity
  이전 섹션 "구성 요소 수준 성능 비교" 에서처럼 w f 3과 WF4 사이 오버 헤드가 크게 감소가 했습니다.  이제 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 워크플로 서비스는 직접 코딩된 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 서비스의 성능과 거의 일치하는 동시에 [!INCLUDE[wf1](../../../includes/wf1-md.md)] 런타임의 모든 이점을 가질 수 있습니다.  이 테스트 시나리오에서는 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 서비스를 WF4의 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 워크플로 서비스와 비교합니다.  
   
 ### <a name="online-store-service"></a>온라인 저장소 서비스  
- [!INCLUDE[wf2](../../../includes/wf2-md.md)]의 장점 중 하나는 여러 서비스를 사용하여 프로세스를 작성할 수 있다는 것입니다.  이러한 예로 서비스 호출 두 개를 오케스트레이션하여 주문을 구입하는 온라인 저장소 서비스가 있습니다.  첫 번째 단계에서는 주문 확인 서비스를 사용하여 주문을 확인합니다.  두 번째 단계에서는 웨어하우스 서비스를 사용하여 주문을 채웁니다.  
+ Windows Workflow Foundation의 장점 중 하나에 몇 가지 서비스를 사용 하 여 프로세스를 작성 하는 기능입니다.  이러한 예로 서비스 호출 두 개를 오케스트레이션하여 주문을 구입하는 온라인 저장소 서비스가 있습니다.  첫 번째 단계에서는 주문 확인 서비스를 사용하여 주문을 확인합니다.  두 번째 단계에서는 웨어하우스 서비스를 사용하여 주문을 채웁니다.  
   
  두 개의 백 엔드 서비스인 주문 확인 서비스와 웨어하우스 서비스는 두 테스트에서 모두 동일하게 유지됩니다.  변경되는 부분은 오케스트레이션을 수행하는 온라인 저장소 서비스입니다.  한 사례에서는 서비스가 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 서비스로 직접 코딩됩니다.  다른 사례에서는 서비스가 WF4의 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 워크플로 서비스로 작성됩니다. 추적 및 지속성과 같은 [!INCLUDE[wf1](../../../includes/wf1-md.md)] 관련 기능은 이 테스트에서 해제됩니다.  
   
@@ -448,7 +448,7 @@ public class Workflow1 : Activity
  상태 모니터링은 처리량에 대략 3% 영향을 줍니다.  기본 프로필 비용은 약 8%입니다.  
   
 ## <a name="interop"></a>Interop  
- WF4는 [!INCLUDE[wf1](../../../includes/wf1-md.md)]에서 거의 완전히 다시 작성되었으므로 WF3 워크플로와 작업은 WF4와 직접 호환되지 않습니다.  채택한 많은 고객 [!INCLUDE[wf2](../../../includes/wf2-md.md)] 일찍 권한이 사내 또는 타사 워크플로 정 및 사용자 지정 활동에 w f 3입니다.  WF4로 간단하게 전환하는 방법 중 하나는 WF4 워크플로 내에서 WF3 작업을 실행할 수 있는 Interop 작업을 사용하는 것입니다.  필요한 경우 <xref:System.Activities.Statements.Interop> 작업만 사용하는 것이 좋습니다. [!INCLUDE[crabout](../../../includes/crabout-md.md)] 체크 아웃 w f 4로 마이그레이션하는 [WF4 마이그레이션 지침](http://go.microsoft.com/fwlink/?LinkID=153313)합니다.  
+ WF4는 [!INCLUDE[wf1](../../../includes/wf1-md.md)]에서 거의 완전히 다시 작성되었으므로 WF3 워크플로와 작업은 WF4와 직접 호환되지 않습니다.  W f 3에 대 한 사내 또는 타사 워크플로 정 및 사용자 지정 활동을 초기 Windows Workflow Foundation를 채택한 많은 고객 갖습니다.  WF4로 간단하게 전환하는 방법 중 하나는 WF4 워크플로 내에서 WF3 작업을 실행할 수 있는 Interop 작업을 사용하는 것입니다.  필요한 경우 <xref:System.Activities.Statements.Interop> 작업만 사용하는 것이 좋습니다. [!INCLUDE[crabout](../../../includes/crabout-md.md)] 체크 아웃 w f 4로 마이그레이션하는 [WF4 마이그레이션 지침](http://go.microsoft.com/fwlink/?LinkID=153313)합니다.  
   
 ### <a name="environment-setup"></a>환경 설치  
  ![워크플로 성능 테스트 환경](../../../docs/framework/windows-workflow-foundation/media/wfperfenvironment.gif "WFPerfEnvironment")  

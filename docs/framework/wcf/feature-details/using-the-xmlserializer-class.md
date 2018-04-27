@@ -1,13 +1,13 @@
 ---
-title: "XmlSerializer 클래스 사용"
-ms.custom: 
+title: XmlSerializer 클래스 사용
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,17 +15,17 @@ dev_langs:
 helpviewer_keywords:
 - XmlSerializer [WCF], using
 ms.assetid: c680602d-39d3-44f1-bf22-8e6654ad5069
-caps.latest.revision: 
+caps.latest.revision: 26
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: bc1ede649a68747461882dfe607214bfb06b2ec3
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: c541c44f0043000ccd4e7edb0d38eba2c66d0844
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="using-the-xmlserializer-class"></a>XmlSerializer 클래스 사용
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]에서는 두 가지 다른 serialization 기술을 사용하여 응용 프로그램의 데이터를 클라이언트와 서비스 간에 전송되는 XML로 바꿀 수 있습니다. 이 프로세스를 serialization이라고 합니다.  
@@ -45,12 +45,12 @@ ms.lasthandoff: 12/22/2017
   
  많은 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 형식은 끝의 두 범주에 해당하므로 serialize할 수 있습니다. serialize할 수 있는 형식의 배열도 serialize할 수 있습니다. 전체 목록을 보려면를 참조 하십시오. [서비스 계약에 데이터 전송 지정](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md)합니다.  
   
- 데이터 계약 형식과 함께 <xref:System.Runtime.Serialization.DataContractSerializer>를 사용하여 새 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 서비스를 작성하는 것이 좋습니다. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][데이터 계약을 사용 하 여](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)합니다.  
+ 데이터 계약 형식과 함께 <xref:System.Runtime.Serialization.DataContractSerializer>를 사용하여 새 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 서비스를 작성하는 것이 좋습니다. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [데이터 계약을 사용 하 여](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)합니다.  
   
 ## <a name="when-to-use-the-xmlserializer-class"></a>XmlSerializer 클래스 사용 시기  
  [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서는 <xref:System.Xml.Serialization.XmlSerializer> 클래스도 지원합니다. <xref:System.Xml.Serialization.XmlSerializer> 클래스는 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서 고유하지 않습니다. 이는 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 웹 서비스에서 사용되는 serialization 엔진과 동일합니다. <xref:System.Xml.Serialization.XmlSerializer> 클래스는 <xref:System.Runtime.Serialization.DataContractSerializer> 클래스보다 훨씬 더 제한된 형식 집합을 지원하지만 결과 XML을 보다 강력하게 제어할 수 있으며 XSD(XML 스키마 정의 언어) 표준의 더 많은 부분을 지원합니다. 또한 이 클래스에는 serialize할 수 있는 형식의 선언적 특성이 필요 없습니다. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 설명서의 XML Serialization 항목 <xref:System.Xml.Serialization.XmlSerializer> 클래스는 데이터 계약 형식을 지원하지 않습니다.  
   
- Svcutil.exe를 사용 하는 경우 또는 **서비스 참조 추가** 기능 [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] 제 3 자 서비스에 대 한 클라이언트 코드를 생성 하거나 타사 스키마에 액세스 하는 적절 한 serializer가 자동으로 선택 됩니다. 스키마가 <xref:System.Runtime.Serialization.DataContractSerializer>와 호환되지 않으면 <xref:System.Xml.Serialization.XmlSerializer>가 선택됩니다.  
+ Svcutil.exe를 사용 하는 경우 또는 **서비스 참조 추가** 기능 제 3 자 서비스에 대 한 클라이언트 코드를 생성 하거나 타사 스키마에 적절 한 serializer를 액세스 하는 Visual Studio에서 자동으로 선택 됩니다. 스키마가 <xref:System.Runtime.Serialization.DataContractSerializer>와 호환되지 않으면 <xref:System.Xml.Serialization.XmlSerializer>가 선택됩니다.  
   
 ## <a name="manually-switching-to-the-xmlserializer"></a>XmlSerializer로 수동 전환  
  경우에 따라 수동으로 <xref:System.Xml.Serialization.XmlSerializer>로 전환해야 할 수도 있습니다. 예를 들어 다음과 같은 경우 수동 전환할 수 있습니다.  
@@ -133,11 +133,11 @@ ms.lasthandoff: 12/22/2017
 ### <a name="schema-considerations-for-ixmlserializable-content-types"></a>IXmlSerializable 콘텐츠 형식의 스키마 고려 사항  
  스키마와 `IXmlSerializable` 콘텐츠 형식을 내보내면 스키마 공급자 메서드가 호출됩니다. <xref:System.Xml.Schema.XmlSchemaSet>가 스키마 공급자 메서드로 전달됩니다. 메서드는 유효한 스키마를 모두 스키마 집합에 추가할 수 있습니다. 스키마 집합에는 스키마를 내보낼 때 이미 알려진 스키마가 포함됩니다. 스키마 공급자 메서드는 스키마 집합에 항목을 추가해야 하는 경우 해당 네임스페이스를 가진 <xref:System.Xml.Schema.XmlSchema>가 집합에 이미 있는지 확인해야 합니다. 이미 있으면 스키마 공급자 메서드는 기존 `XmlSchema`에 새 항목을 추가해야 합니다. 없는 경우에는 새 `XmlSchema` 인스턴스를 만들어야 합니다. 이 기능은 `IXmlSerializable` 형식의 배열을 사용하는 경우에 중요합니다. 예를 들어 "B" 네임스페이스에 "A" 형식으로 내보내지는 `IXmlSerializable` 형식이 있는 경우 스키마 공급자 메서드가 호출될 때까지 스키마 집합에 "ArrayOfA" 형식을 보유할 "B"의 스키마가 이미 포함될 수 있습니다.  
   
- <xref:System.Xml.Schema.XmlSchemaSet>에 형식을 추가하는 것 외에 콘텐츠 형식의 스키마 공급자 메서드는 null이 아닌 값을 반환해야 합니다. 이 메서드는 지정된 <xref:System.Xml.XmlQualifiedName> 형식에 사용할 스키마 형식의 이름을 지정하는 `IXmlSerializable`을 반환할 수 있습니다. 이 정규화된 이름은 형식의 데이터 계약 이름과 네임스페이스로도 사용됩니다. 스키마 공급자 메서드가 반환될 때 즉시 스키마 집합에 없는 형식을 반환할 수 있습니다. 그러나 관련된 모든 형식을 내보낼 때까지, 즉 <xref:System.Runtime.Serialization.XsdDataContractExporter.Export%2A>의 모든 관련 형식에 대해 <xref:System.Runtime.Serialization.XsdDataContractExporter> 메서드가 호출되고 <xref:System.Runtime.Serialization.XsdDataContractExporter.Schemas%2A> 속성에 액세스할 때까지 형식은 스키마 집합에 있습니다. 관련된 `Schemas` 호출을 수행하기 전에 `Export` 속성에 액세스하면 <xref:System.Xml.Schema.XmlSchemaException>이 발생할 수 있습니다. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]내보내기 프로세스 참조 [클래스에서 스키마 내보내기](../../../../docs/framework/wcf/feature-details/exporting-schemas-from-classes.md)합니다.  
+ <xref:System.Xml.Schema.XmlSchemaSet>에 형식을 추가하는 것 외에 콘텐츠 형식의 스키마 공급자 메서드는 null이 아닌 값을 반환해야 합니다. 이 메서드는 지정된 <xref:System.Xml.XmlQualifiedName> 형식에 사용할 스키마 형식의 이름을 지정하는 `IXmlSerializable`을 반환할 수 있습니다. 이 정규화된 이름은 형식의 데이터 계약 이름과 네임스페이스로도 사용됩니다. 스키마 공급자 메서드가 반환될 때 즉시 스키마 집합에 없는 형식을 반환할 수 있습니다. 그러나 관련된 모든 형식을 내보낼 때까지, 즉 <xref:System.Runtime.Serialization.XsdDataContractExporter.Export%2A>의 모든 관련 형식에 대해 <xref:System.Runtime.Serialization.XsdDataContractExporter> 메서드가 호출되고 <xref:System.Runtime.Serialization.XsdDataContractExporter.Schemas%2A> 속성에 액세스할 때까지 형식은 스키마 집합에 있습니다. 관련된 `Schemas` 호출을 수행하기 전에 `Export` 속성에 액세스하면 <xref:System.Xml.Schema.XmlSchemaException>이 발생할 수 있습니다. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 내보내기 프로세스 참조 [클래스에서 스키마 내보내기](../../../../docs/framework/wcf/feature-details/exporting-schemas-from-classes.md)합니다.  
   
  스키마 공급자 메서드는 또한 사용할 <xref:System.Xml.Schema.XmlSchemaType>을 반환할 수도 있습니다. 형식은 익명이거나 익명이 아닐 수 있습니다. 익명인 경우 `IXmlSerializable` 형식을 데이터 멤버로 사용할 때마다 `IXmlSerializable` 형식의 스키마가 익명 형식으로 내보내집니다. `IXmlSerializable` 형식에 여전히 데이터 계약 이름과 네임스페이스가 있습니다. (에 설명 된 대로이 확인할 [데이터 계약 이름을](../../../../docs/framework/wcf/feature-details/data-contract-names.md) 점을 제외 하 고는 <xref:System.Runtime.Serialization.DataContractAttribute> 특성을 사용 하 여 이름을 사용자 지정할 수 없습니다.) 익명이 아닌 경우 `XmlSchemaSet`의 형식 중 하나여야 합니다. 이 경우는 형식의 `XmlQualifiedName`을 반환하는 것과 같습니다.  
   
- 또한 전역 요소 선언이 형식에 대해 내보내집니다. 형식에 <xref:System.Xml.Serialization.XmlRootAttribute> 특성이 적용되지 않은 경우 요소가 데이터 계약과 동일한 이름 및 네임스페이스를 갖게 되며 "nillable" 속성이 `true`가 됩니다. 단, 스키마 네임스페이스("http://www.w3.org/2001/XMLSchema")는 예외입니다. 형식의 데이터 계약이 이 네임스페이스에 있으면 스키마 네임스페이스에 새 요소를 추가할 수 없으므로 해당 전역 요소가 빈 네임스페이스에 포함됩니다. 형식에 `XmlRootAttribute` 특성이 적용되어 있으면 전역 요소 선언이 <xref:System.Xml.Serialization.XmlRootAttribute.ElementName%2A>, <xref:System.Xml.Serialization.XmlRootAttribute.Namespace%2A> 및 <xref:System.Xml.Serialization.XmlRootAttribute.IsNullable%2A> 속성을 사용하여 내보내집니다. `XmlRootAttribute`가 적용된 경우의 기본값은 데이터 계약 이름, 빈 네임스페이스 및 `true`인 "nillable"입니다.  
+ 또한 전역 요소 선언이 형식에 대해 내보내집니다. 형식에 <xref:System.Xml.Serialization.XmlRootAttribute> 특성이 적용되지 않은 경우 요소가 데이터 계약과 동일한 이름 및 네임스페이스를 갖게 되며 "nillable" 속성이 `true`가 됩니다. 이 유일한 예외는 스키마 네임 스페이스 ("http://www.w3.org/2001/XMLSchema") – 새 요소는 스키마 네임 스페이스를 추가할 수는 없으므로 해당 전역 요소가 빈 네임 스페이스에는 형식의 데이터 계약이이 네임 스페이스에 포함 된 경우. 형식에 `XmlRootAttribute` 특성이 적용되어 있으면 전역 요소 선언이 <xref:System.Xml.Serialization.XmlRootAttribute.ElementName%2A>, <xref:System.Xml.Serialization.XmlRootAttribute.Namespace%2A> 및 <xref:System.Xml.Serialization.XmlRootAttribute.IsNullable%2A> 속성을 사용하여 내보내집니다. `XmlRootAttribute`가 적용된 경우의 기본값은 데이터 계약 이름, 빈 네임스페이스 및 `true`인 "nillable"입니다.  
   
  레거시 데이터 집합 형식에도 동일한 전역 요소 선언 규칙이 적용됩니다. `XmlRootAttribute`는 사용자 지정 코드를 통해 추가된, 즉 스키마 공급자 메서드를 사용하거나 레거시 데이터 집합 형식의 경우 `XmlSchemaSet`를 통해 `GetSchema`에 추가된 전역 요소 선언을 재정의할 수 없습니다.  
   
@@ -150,7 +150,7 @@ ms.lasthandoff: 12/22/2017
   
 -   `ReadXml` 구현은 래퍼 요소를 읽어서는 안 됩니다. `WriteXml`에서 생성하는 하나의 요소를 읽습니다.  
   
--   예를 들어 데이터 계약의 데이터 멤버로 정기적으로 요소 형식을 serialize하는 경우 serializer는 콘텐츠 형식과 마찬가지로 `WriteXml`을 호출하기 전에 래퍼 요소를 출력합니다. 그러나 최상위 수준에서 요소 형식을 serialize할 때 serializer는 일반적으로 `WriteXml` 또는 `DataContractSerializer` 생성자에서 serializer를 생성할 때 루트 이름과 네임스페이스를 명시적으로 지정하지 않은 경우 `NetDataContractSerializer`에서 쓰는 요소를 둘러싼 래퍼 요소를 출력하지 않습니다. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Serialization 및 Deserialization](../../../../docs/framework/wcf/feature-details/serialization-and-deserialization.md)합니다.  
+-   예를 들어 데이터 계약의 데이터 멤버로 정기적으로 요소 형식을 serialize하는 경우 serializer는 콘텐츠 형식과 마찬가지로 `WriteXml`을 호출하기 전에 래퍼 요소를 출력합니다. 그러나 최상위 수준에서 요소 형식을 serialize할 때 serializer는 일반적으로 `WriteXml` 또는 `DataContractSerializer` 생성자에서 serializer를 생성할 때 루트 이름과 네임스페이스를 명시적으로 지정하지 않은 경우 `NetDataContractSerializer`에서 쓰는 요소를 둘러싼 래퍼 요소를 출력하지 않습니다. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [Serialization 및 Deserialization](../../../../docs/framework/wcf/feature-details/serialization-and-deserialization.md)합니다.  
   
 -   생성 시 루트 이름과 네임스페이스를 지정하지 않고 최상위 수준에서 요소 형식을 serialize하는 경우 <xref:System.Runtime.Serialization.XmlObjectSerializer.WriteStartObject%2A> 및 <xref:System.Runtime.Serialization.XmlObjectSerializer.WriteEndObject%2A>에서 아무 작업도 수행하지 않으며 <xref:System.Runtime.Serialization.XmlObjectSerializer.WriteObjectContent%2A>는 `WriteXml`을 호출합니다. 이 모드에서 serialize되는 개체는 `null`일 수 없으며 다형적으로 할당할 수 없습니다. 또한 개체 그래프 유지를 활성화할 수 없고 `NetDataContractSerializer`를 사용할 수 없습니다.  
   

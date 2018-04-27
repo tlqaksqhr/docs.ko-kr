@@ -1,13 +1,13 @@
 ---
-title: "연결된 속성 개요"
-ms.custom: 
+title: 연결된 속성 개요
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-wpf
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,24 +15,24 @@ dev_langs:
 helpviewer_keywords:
 - attached properties [WPF Designer]
 ms.assetid: 75928354-dc01-47e8-a018-8409aec1f32d
-caps.latest.revision: 
+caps.latest.revision: 28
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 2d1d0eb55e75cd450d55b69aadca9c60e157eb09
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ceba94d80ca66ab228804ffff2a5b8f89a68d7c4
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="attached-properties-overview"></a>연결된 속성 개요
 연결된 속성은 XAML로 정의되는 개념입니다. 연결된 속성은 모든 개체에 설정할 수 있는 전역 속성의 형식으로 사용할 수 있습니다. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]에서, 연결된 속성은 일반적으로 기존 속성 "래퍼"가 없는 종속성 속성의 특수 형식으로 정의됩니다.  
   
    
 <a name="prerequisites"></a>   
-## <a name="prerequisites"></a>필수 구성 요소  
+## <a name="prerequisites"></a>전제 조건  
  이 항목에서는 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 클래스에서 기존 종속성 속성의 이용자 관점에서 종속성 속성을 이해하고 [종속성 속성 개요](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)를 읽었다고 가정합니다. 이 항목의 예제를 따르려면 XAML을 이해하고 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 응용 프로그램을 작성하는 방법도 알아야 합니다.  
   
 <a name="attached_properties_usage"></a>   
@@ -67,7 +67,7 @@ ms.lasthandoff: 12/22/2017
 ### <a name="an-example-of-a-parent-defined-attached-property"></a>부모 정의되어 연결된 속성의 예  
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]가 연결된 속성을 정의하는 가장 일반적인 시나리오는 부모 요소가 자식 요소 컬렉션을 지원하는 경우이며, 동작의 세부 사항이 각 자식 요소에 대해 개별적으로 보고되는 동작도 구현합니다.  
   
- <xref:System.Windows.Controls.DockPanel>정의 <xref:System.Windows.Controls.DockPanel.Dock%2A?displayProperty=nameWithType> 연결 된 속성 및 <xref:System.Windows.Controls.DockPanel> 렌더링 논리의 일부로 클래스 수준 번호가 (특히 <xref:System.Windows.Controls.DockPanel.MeasureOverride%2A> 및 <xref:System.Windows.Controls.DockPanel.ArrangeOverride%2A>). A <xref:System.Windows.Controls.DockPanel> 인스턴스 항상 확인 여부를 모든 직계 자식 요소에 대 한에 값을 설정 하 게 <xref:System.Windows.Controls.DockPanel.Dock%2A?displayProperty=nameWithType>합니다. 그런 경우, 이 값은 해당 자식 요소에 적용된 렌더링 논리에 대한 입력이 됩니다. 중첩 된 <xref:System.Windows.Controls.DockPanel> 각 인스턴스 자신의 직계 자식 요소 컬렉션을 처리 하지만 해당 동작은 특정 구현 하는 방법을 <xref:System.Windows.Controls.DockPanel> 프로세스 <xref:System.Windows.Controls.DockPanel.Dock%2A?displayProperty=nameWithType> 값입니다. 이론적으로 직계 부모를 넘어서 요소에 영향을 주는 연결된 속성이 있을 수 있습니다. 경우는 <xref:System.Windows.Controls.DockPanel.Dock%2A?displayProperty=nameWithType> 없는 요소에 연결 된 속성은 설정 <xref:System.Windows.Controls.DockPanel> 발생 하는 작업을 수행할 것, 없음의 오류 또는 예외 부모 요소입니다. 이 작업은 단순히 전역 속성 값 설정 되었지만 없는 현재 있기 <xref:System.Windows.Controls.DockPanel> 부모 개체 정보를 사용할 수 있습니다.  
+ <xref:System.Windows.Controls.DockPanel> 정의 <xref:System.Windows.Controls.DockPanel.Dock%2A?displayProperty=nameWithType> 연결 된 속성 및 <xref:System.Windows.Controls.DockPanel> 렌더링 논리의 일부로 클래스 수준 번호가 (특히 <xref:System.Windows.Controls.DockPanel.MeasureOverride%2A> 및 <xref:System.Windows.Controls.DockPanel.ArrangeOverride%2A>). A <xref:System.Windows.Controls.DockPanel> 인스턴스 항상 확인 여부를 모든 직계 자식 요소에 대 한에 값을 설정 하 게 <xref:System.Windows.Controls.DockPanel.Dock%2A?displayProperty=nameWithType>합니다. 그런 경우, 이 값은 해당 자식 요소에 적용된 렌더링 논리에 대한 입력이 됩니다. 중첩 된 <xref:System.Windows.Controls.DockPanel> 각 인스턴스 자신의 직계 자식 요소 컬렉션을 처리 하지만 해당 동작은 특정 구현 하는 방법을 <xref:System.Windows.Controls.DockPanel> 프로세스 <xref:System.Windows.Controls.DockPanel.Dock%2A?displayProperty=nameWithType> 값입니다. 이론적으로 직계 부모를 넘어서 요소에 영향을 주는 연결된 속성이 있을 수 있습니다. 경우는 <xref:System.Windows.Controls.DockPanel.Dock%2A?displayProperty=nameWithType> 없는 요소에 연결 된 속성은 설정 <xref:System.Windows.Controls.DockPanel> 발생 하는 작업을 수행할 것, 없음의 오류 또는 예외 부모 요소입니다. 이 작업은 단순히 전역 속성 값 설정 되었지만 없는 현재 있기 <xref:System.Windows.Controls.DockPanel> 부모 개체 정보를 사용할 수 있습니다.  
   
 <a name="attached_properties_code"></a>   
 ## <a name="attached-properties-in-code"></a>코드에서 연결된 속성  
@@ -106,7 +106,7 @@ ms.lasthandoff: 12/22/2017
  연결 된 속성을 선언 하 여 종속성 속성으로 정의 된 `public` `static` `readonly` 형식의 필드 <xref:System.Windows.DependencyProperty>합니다. 반환 값을 사용 하 여이 필드를 정의 고 <xref:System.Windows.DependencyProperty.RegisterAttached%2A> 메서드. 나타내는 속성 및 필드를 식별하는 이름을 지정하는 설정된 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 패턴을 따르도록, 필드 이름은 문자열 `Property`가 추가된 연결된 속성 이름과 일치해야 합니다. 또한 연결된 속성 공급자는 정적 `Get`*PropertyName* 및 `Set`*PropertyName* 메서드를 연결된 속성의 접근자로 제공해야 합니다. 이렇게 하지 않으면 속성 시스템이 연결된 속성을 사용할 수 없게 됩니다.  
   
 > [!NOTE]
->  연결된 속성의 get 접근자를 생략하면 속성에 대한 데이터 바인딩은 [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] 및 Expression Blend와 같은 디자인 도구에서 작동하지 않습니다.  
+>  연결 된 속성의 get 접근자를 생략 하면 Expression Blend 등 Visual Studio 디자인 도구에서 데이터 바인딩 속성에 작동 하지 않습니다.  
   
 #### <a name="the-get-accessor"></a>Get 접근자  
  `Get`*PropertyName* 접근자에 대한 서명은 다음과 같아야 합니다.  

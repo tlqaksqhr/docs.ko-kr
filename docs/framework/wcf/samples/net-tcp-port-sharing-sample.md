@@ -1,24 +1,26 @@
 ---
-title: "Net.TCP Port Sharing 샘플"
-ms.custom: 
+title: Net.TCP Port Sharing 샘플
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 03da5959-0574-4e91-8a53-05854b6c55dc
-caps.latest.revision: "18"
+caps.latest.revision: 18
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 7dea3a0f0d69662021c78b0f1d57ad0ba8c11fcb
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 0db4148f9be6db97dec2b8b680dad56171106b2c
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="nettcp-port-sharing-sample"></a>Net.TCP Port Sharing 샘플
 TCP/IP 프로토콜은 포트라는 16비트 숫자를 사용하여 동일한 컴퓨터에서 실행되는 여러 네트워크 응용 프로그램에 대한 연결을 구분합니다. 응용 프로그램이 포트에서 수신 대기 중이면 이 포트의 모든 TCP 트래픽이 해당 응용 프로그램으로 이동합니다. 다른 응용 프로그램이 동시에 이 포트에서 수신 대기할 수는 없습니다.  
@@ -46,8 +48,8 @@ Unhandled Exception: System.ServiceModel.CommunicationException: The TransportMa
   
 ## <a name="enabling-port-sharing"></a>포트 공유 사용  
  다음 코드에서는 서버에서 포트 공유를 사용하는 방법을 보여 줍니다. 여기서는 임의의 URI 경로가 있는 고정 포트에서 `ICalculator` 서비스의 인스턴스를 시작합니다. 두 서비스에서 같은 포트를 공유할 수 있더라도, NetTcp 포트 공유 서비스에서 올바른 응용 프로그램에 메시지를 라우트할 수 있도록 전체 끝점 주소가 고유해야 합니다.  
-  
-```  
+
+```csharp
 // Configure a binding with TCP port sharing enabled  
 NetTcpBinding binding = new NetTcpBinding();  
 binding.PortSharingEnabled = true;  
@@ -59,8 +61,8 @@ string address =
    String.Format("net.tcp://localhost:9000/calculator/{0}", salt);  
 host.AddServiceEndpoint(typeof(ICalculator), binding, address);  
 host.Open();  
-```  
-  
+```
+
  포트 공유가 사용되면 포트 번호 충돌 없이 서비스를 여러 번 실행할 수 있습니다. 코드를 변경하여 포트 공유를 사용하지 않는 경우 서비스의 두 복사본을 시작하면 두 번째 복사본에서 <xref:System.ServiceModel.AddressAlreadyInUseException>이 발생합니다.  
   
 ```  
@@ -69,8 +71,8 @@ Unhandled Exception: System.ServiceModel.AddressAlreadyInUseException: There is 
   
 ## <a name="running-the-sample"></a>샘플 실행  
  테스트 클라이언트를 사용하여 메시지가 포트를 공유하는 서비스로 올바르게 라우트되는지 확인할 수 있습니다.  
-  
-```  
+
+```csharp
 class client  
 {  
    static void Main(string[] args)  
@@ -112,8 +114,8 @@ class client
       factory.Close();  
    }  
 }  
-```  
-  
+```
+
  서비스의 각 인스턴스에서는 고유한 번호와 주소를 인쇄합니다. 예를 들어, service.exe를 실행했을 때 다음 텍스트가 표시될 수 있습니다.  
   
 ```  

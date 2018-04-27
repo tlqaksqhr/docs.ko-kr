@@ -1,24 +1,26 @@
 ---
-title: "트랜잭션된 일괄 처리"
-ms.custom: 
+title: 트랜잭션된 일괄 처리
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: ecd328ed-332e-479c-a894-489609bcddd2
-caps.latest.revision: "23"
+caps.latest.revision: 23
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 87d8e3e09618b214dcafb7afd82970dde54fc4fc
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 50596aaf5290146148ecb9636b78f7f9180c0b79
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="transacted-batching"></a>트랜잭션된 일괄 처리
 이 샘플에서는 MSMQ(메시지 큐)를 사용하여 트랜잭션된 읽기를 일괄 처리하는 방법을 보여 줍니다. 트랜잭션된 일괄 처리는 대기 중인 통신에서 트랜잭션된 읽기의 성능을 최적화하는 기능입니다.  
@@ -142,8 +144,8 @@ ms.lasthandoff: 12/22/2017
  서비스 동작은 `TransactionScopeRequired`가 `true`로 설정된 작업 동작을 정의합니다. 따라서 큐에서 메시지를 검색할 때 사용되는 트랜잭션 범위가 메서드에서 액세스하는 리소스 관리자에서 동일하게 사용됩니다. 이 예제에서는 기본 데이터베이스를 사용하여 메시지에 포함된 구매 주문 정보를 저장합니다. 트랜잭션 범위도 메서드에서 예외가 throw될 경우 큐로 메시지가 반환되도록 설정됩니다. 이 작업 동작을 설정하지 않으면 대기 중인 채널에서 트랜잭션을 만들어 큐의 메시지를 읽고 디스패치하기 전에 자동으로 커밋하므로 작업이 실패할 경우 메시지가 손실됩니다. 가장 일반적인 시나리오는 다음 코드에 표시된 대로 큐에서 메시지를 읽는 데 사용되는 트랜잭션에 서비스 작업이 참여하는 것입니다.  
   
  `ReleaseServiceInstanceOnTransactionComplete`를 `false`로 설정합니다. 이 설정은 일괄 처리에 중요한 요구 사항입니다. `ReleaseServiceInstanceOnTransactionComplete`의 `ServiceBehaviorAttribute` 속성은 트랜잭션이 완료된 다음 서비스 인스턴스로 수행할 작업을 나타냅니다. 기본적으로 서비스 인스턴스는 트랜잭션이 완료될 때 해제됩니다. 일괄 처리에서 중요한 측면은 큐에 있는 많은 메시지를 읽고 디스패치하는 데 단일 트랜잭션을 사용한다는 점입니다. 따라서 서비스 인스턴스를 해제하면 일괄 처리 사용을 부정하여 영구적인 트랜잭션 완료로 끝납니다. 이 속성을 `true`로 설정하고 트랜잭션된 일괄 처리 동작을 끝점에 추가하면 일괄 처리 유효성 검사 동작에서 예외가 throw됩니다.  
-  
-```  
+
+```csharp
 // Service class that implements the service contract.  
 // Added code to write output to the console window.  
 [ServiceBehavior(ReleaseServiceInstanceOnTransactionComplete=false,   
@@ -160,11 +162,11 @@ public class OrderProcessorService : IOrderProcessor
     }  
     …  
 }  
-```  
-  
+```
+
  `Orders` 클래스는 주문 처리를 캡슐화합니다. 이 예제에서는 구매 주문 정보로 데이터베이스를 업데이트합니다.  
-  
-```  
+
+```csharp
 // Order Processing Logic  
 public class Orders  
 {  
@@ -234,8 +236,8 @@ public class Orders
                                      {1} ", rowsAffected, po.PONumber);  
     }  
 }  
-```  
-  
+```
+
  일괄 처리 동작 및 구성은 서비스 응용 프로그램 구성에 지정됩니다.  
   
 ```xml  
@@ -292,8 +294,8 @@ public class Orders
 >  일괄 처리 크기는 응용 프로그램에 따라 선택할 수 있습니다. 일괄 처리 크기가 너무 작으면 원하는 성능을 얻지 못할 수 있습니다. 그러나 일괄 처리 크기가 너무 크면 성능이 저하될 수 있습니다. 예를 들어 트랜잭션을 더 길게 늘리고 데이터베이스에 잠금을 유지하거나 트랜잭션이 교착 상태가 되어 일괄 처리가 롤백되고 작업을 다시 수행하도록 할 수 있습니다.  
   
  클라이언트는 트랜잭션 범위를 만듭니다. 트랜잭션 범위 내에서 큐와 통신을 수행하여 모든 메시지가 큐로 전송되거나 어떤 메시지도 큐로 전송되지 않는 가장 작은 단위로 처리되도록 합니다. 트랜잭션은 트랜잭션 범위에서 <xref:System.Transactions.TransactionScope.Complete%2A>를 호출하여 커밋합니다.  
-  
-```  
+
+```csharp
 //Client implementation code.  
 class Client  
 {  
@@ -340,8 +342,8 @@ class Client
         Console.ReadLine();  
     }  
 }  
-```  
-  
+```
+
  샘플을 실행하면 클라이언트 및 서비스 동작이 서비스 콘솔 창과 클라이언트 콘솔 창에 모두 표시됩니다. 서비스에서 클라이언트가 보내는 메시지를 받는 것을 볼 수 있습니다. 서비스와 클라이언트를 종료하려면 각 콘솔 창에서 Enter 키를 누릅니다. 큐를 사용하므로 클라이언트와 서비스가 동시에 실행 중일 필요는 없습니다. 클라이언트를 실행하고 종료한 다음 서비스를 다시 시작해도 서비스에서 계속 메시지를 받을 수 있습니다. 일괄 처리에서 메시지를 읽고 처리할 때 롤링 출력이 표시됩니다.  
   
 ```  

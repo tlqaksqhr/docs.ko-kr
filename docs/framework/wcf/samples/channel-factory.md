@@ -1,24 +1,26 @@
 ---
-title: "채널 팩터리"
-ms.custom: 
+title: 채널 팩터리
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 09b53aa1-b13c-476c-a461-e82fcacd2a8b
-caps.latest.revision: "24"
+caps.latest.revision: 24
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 7f5fb22c329bf7b27c32f05a2d8e41734723f53b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 37b5f880b18f4caac9dc452d93129922ecc33543
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="channel-factory"></a>채널 팩터리
 이 샘플에서는 클라이언트 응용 프로그램에서 생성된 클라이언트 대신 <xref:System.ServiceModel.ChannelFactory> 클래스가 있는 채널을 만드는 방법을 보여 줍니다. 이 샘플에 따라는 [시작](../../../../docs/framework/wcf/samples/getting-started-sample.md) 계산기 서비스를 구현 하는 합니다.  
@@ -28,7 +30,7 @@ ms.lasthandoff: 12/22/2017
   
  이 샘플에서는 <xref:System.ServiceModel.ChannelFactory%601> 클래스를 사용하여 서비스 끝점에 채널을 만듭니다. 포함 된 클라이언트 형식의 생성 하는 서비스 끝점으로 채널을 만드는 일반적으로 [ServiceModel Metadata 유틸리티 도구 (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) 생성 된 형식의 인스턴스를 만듭니다. 이 샘플에서와 같이 <xref:System.ServiceModel.ChannelFactory%601> 클래스를 사용하여 채널을 만들 수도 있습니다. 다음 샘플 코드에서 만들어진 서비스는 서비스에 동일는 [시작](../../../../docs/framework/wcf/samples/getting-started-sample.md)합니다.  
   
-```  
+```csharp  
 EndpointAddress address = new EndpointAddress("http://localhost/servicemodelsamples/service.svc");  
 WSHttpBinding binding = new WSHttpBinding();  
 ChannelFactory<ICalculator> factory = new   
@@ -41,7 +43,7 @@ ICalculator channel = factory.CreateChannel();
   
  채널이 만들어지면 생성된 클라이언트의 경우와 마찬가지로 서비스 작업을 호출할 수 있습니다.  
   
-```  
+```csharp  
 // Call the Add service operation.  
 double value1 = 100.00D;  
 double value2 = 15.99D;  
@@ -51,7 +53,7 @@ Console.WriteLine("Add({0},{1}) = {2}", value1, value2, result);
   
  채널을 닫으려면 먼저 <xref:System.ServiceModel.IClientChannel> 인터페이스로 캐스팅해야 합니다. 이는 생성된 채널이 `ICalculator` 및 `Add` 등의 메서드가 있지만 `Subtract`는 없는 `Close` 인터페이스를 사용하여 클라이언트 응용 프로그램에 선언되기 때문입니다. `Close` 메서드는 <xref:System.ServiceModel.ICommunicationObject> 인터페이스에서 시작됩니다.  
   
-```  
+```csharp  
 // Close the channel.  
  ((IClientChannel)client).Close();  
 ```  
@@ -79,7 +81,7 @@ Press <ENTER> to terminate client.
   
 1.  다음 코드에서 "localhost"를 서비스를 실행하는 컴퓨터의 정규화된 이름으로 바꿉니다.  
   
-    ```  
+    ```csharp  
     EndpointAddress address = new EndpointAddress("http://localhost/servicemodelsamples/service.svc");  
     ```  
   

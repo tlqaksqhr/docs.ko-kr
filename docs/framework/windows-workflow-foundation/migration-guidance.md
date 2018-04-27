@@ -8,20 +8,20 @@ ms.suite: ''
 ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: cb65c132-58c9-4028-b3d4-1efc71d5e60e
-caps.latest.revision: ''
+caps.latest.revision: 7
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: e04c63754960dca44558d888b8ce357220562ea7
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: 11a4b1d6665e0198f8c9afc0209e9fb09cc599ad
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="migration-guidance"></a>마이그레이션 지침
-[!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)]에서 Microsoft는 [!INCLUDE[wf](../../../includes/wf-md.md)]의 두 번째 주요 버전을 릴리스하고 있습니다. [!INCLUDE[wf1](../../../includes/wf1-md.md)]는 [!INCLUDE[vstecwinfx](../../../includes/vstecwinfx-md.md)]에서 처음 릴리스되었고(System.Workflow.* 네임스페이스의 형식 포함. 현재 WF3이라고 함) [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)]에서 기능이 향상되었습니다. W f 3은 또한의 일부로 [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)], 새 워크플로 기술과 함께 존재 하지만 (System.Activities.의 형식을\* 네임 스페이스 w f 4 라고). WF4 사용을 고려하는 경우 타이밍을 제어한다는 점을 먼저 인식해야 합니다.  
+에 [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)], Microsoft는 출시 하 고 두 번째 주요 버전의 Windows WF (Workflow Foundation). [!INCLUDE[wf1](../../../includes/wf1-md.md)]는 [!INCLUDE[vstecwinfx](../../../includes/vstecwinfx-md.md)]에서 처음 릴리스되었고(System.Workflow.* 네임스페이스의 형식 포함. 현재 WF3이라고 함) [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)]에서 기능이 향상되었습니다. W f 3은 또한의 일부로 [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)], 새 워크플로 기술과 함께 존재 하지만 (System.Activities.의 형식을\* 네임 스페이스 w f 4 라고). WF4 사용을 고려하는 경우 타이밍을 제어한다는 점을 먼저 인식해야 합니다.  
   
 -   WF3은 [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)]에서 완전히 지원되는 부분입니다.  
   

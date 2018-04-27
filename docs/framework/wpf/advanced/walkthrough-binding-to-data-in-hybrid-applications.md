@@ -1,12 +1,13 @@
 ---
-title: "연습: 혼합 응용 프로그램에서 데이터 바인딩"
-ms.custom: 
+title: '연습: 혼합 응용 프로그램에서 데이터 바인딩'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,16 +16,17 @@ helpviewer_keywords:
 - hybrid applications [WPF interoperability]
 - data binding [WPF interoperability]
 ms.assetid: 18997e71-745a-4425-9c69-2cbce1d8669e
-caps.latest.revision: "39"
+caps.latest.revision: 39
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: c1348f3a57dd04d58298c9746b74a7c3a1baf30c
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: b8afe4732363ec61d73db13e9b190381cbd8f29d
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="walkthrough-binding-to-data-in-hybrid-applications"></a>연습: 혼합 응용 프로그램에서 데이터 바인딩
 컨트롤에 데이터 소스 바인딩 반드시 기본 데이터에 액세스할 수 있는 사용자가 제공 하는 데 사용 하 든 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 또는 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]합니다. 이 연습에서는 둘 다 포함 하는 하이브리드 응용 프로그램에서 데이터 바인딩을 사용 하는 방법을 보여 줍니다. [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 및 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 컨트롤입니다.  
@@ -49,7 +51,7 @@ ms.lasthandoff: 01/19/2018
   
  작업을 완료하면 혼합 응용 프로그램의 데이터 바인딩 기능을 이해하게 됩니다.  
   
-## <a name="prerequisites"></a>필수 구성 요소  
+## <a name="prerequisites"></a>전제 조건  
  이 연습을 완료하려면 다음 구성 요소가 필요합니다.  
   
 -   [!INCLUDE[vs_dev10_long](../../../../includes/vs-dev10-long-md.md)].  
@@ -90,7 +92,7 @@ ms.lasthandoff: 01/19/2018
      [!code-xaml[WPFWithWFAndDatabinding#3](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WPFWithWFAndDatabinding/CSharp/WPFWithWFAndDatabinding/Window1.xaml#3)]  
   
 ## <a name="specifying-the-form-layout"></a>폼 레이아웃 지정  
- 폼의 레이아웃은 세 개의 행과 세 개의 열이 있는 그리드로 정의됩니다. <xref:System.Windows.Controls.Label>Customers 테이블의 각 열을 식별 하는 컨트롤이 제공 됩니다.  
+ 폼의 레이아웃은 세 개의 행과 세 개의 열이 있는 그리드로 정의됩니다. <xref:System.Windows.Controls.Label> Customers 테이블의 각 열을 식별 하는 컨트롤이 제공 됩니다.  
   
 #### <a name="to-set-up-the-grid-layout"></a>그리드 레이아웃을 설정하려면  
   
@@ -127,7 +129,7 @@ ms.lasthandoff: 01/19/2018
      [!code-xaml[WPFWithWFAndDatabinding#7](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WPFWithWFAndDatabinding/CSharp/WPFWithWFAndDatabinding/Window1.xaml#7)]  
   
 ## <a name="adding-the-data-source-to-the-project"></a>프로젝트에 데이터 소스 추가  
- 와 [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)], 프로젝트에 데이터 소스를 쉽게 추가할 수 있습니다. 이 절차에서는 강력한 형식의 데이터 집합을 프로젝트에 추가합니다. 선택한 각 테이블에 대한 테이블 어댑터 같은 여러 가지 다른 지원 클래스도 추가됩니다.  
+ Visual Studio 프로젝트에 데이터 소스를 쉽게 추가할 수 있습니다. 이 절차에서는 강력한 형식의 데이터 집합을 프로젝트에 추가합니다. 선택한 각 테이블에 대한 테이블 어댑터 같은 여러 가지 다른 지원 클래스도 추가됩니다.  
   
 #### <a name="to-add-the-data-source"></a>데이터 소스를 추가하려면  
   

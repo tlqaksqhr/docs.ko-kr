@@ -1,12 +1,13 @@
 ---
 title: contextSwitchDeadlock MDA
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - deadlocks [.NET Framework]
@@ -19,16 +20,17 @@ helpviewer_keywords:
 - message pumping
 - context switching deadlocks
 ms.assetid: 26dfaa15-9ddb-4b0a-b6da-999bba664fa6
-caps.latest.revision: "22"
+caps.latest.revision: 22
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 816afbae0cca18de24c11152541a509b54c119b8
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 2f3ee9aef3bc824ee25e577a5dbd14aeaa210be3
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="contextswitchdeadlock-mda"></a>contextSwitchDeadlock MDA
 `contextSwitchDeadlock` MDA(관리 디버깅 도우미)는 COM 컨텍스트 전환이 시도되는 동안 교착 상태가 감지되면 활성화됩니다.  
@@ -54,7 +56,7 @@ ms.lasthandoff: 12/22/2017
  MDA가 잘못 활성화되었는지 확인하려면 모든 중단점을 사용하지 않도록 설정하고 응용 프로그램을 다시 시작한 후 응용 프로그램이 중지되지 않고 실행되도록 허용합니다. MDA가 활성화되지 않으면 초기 활성화가 잘못된 것입니다. 이 경우 MDA를 사용하지 않도록 설정하여 디버깅 세션의 방해를 방지합니다.  
   
 > [!NOTE]
->  이 MDA는 [!INCLUDE[vsprvslong](../../../includes/vsprvslong-md.md)] 이상 버전의 기본 집합에 있습니다. 호스팅 프로세스가 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]에서 사용하도록 설정된 경우 기본 집합에 있는 MDA를 사용하지 않도록 설정할 수 없습니다. 호스팅 프로세스는 기본적으로 사용하도록 설정되므로 명시적으로 사용하지 않도록 설정되어야 합니다. MDA를 사용하지 않도록 설정하는 방법에 대한 자세한 내용은 [관리 디버깅 도우미를 사용하여 오류 진단](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)의 “MDA 사용 및 사용 안 함”을 참조하세요.  
+>  이 MDA는 [!INCLUDE[vsprvslong](../../../includes/vsprvslong-md.md)] 이상 버전의 기본 집합에 있습니다. Visual Studio에서 호스팅 프로세스 사용은 기본 집합에 있는 Mda를 비활성화할 수 없습니다. 호스팅 프로세스는 기본적으로 사용하도록 설정되므로 명시적으로 사용하지 않도록 설정되어야 합니다. MDA를 사용하지 않도록 설정하는 방법에 대한 자세한 내용은 [관리 디버깅 도우미를 사용하여 오류 진단](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)의 “MDA 사용 및 사용 안 함”을 참조하세요.  
   
 ## <a name="resolution"></a>해결  
  STA 메시지 펌핑 관련 COM 규칙을 따릅니다.  

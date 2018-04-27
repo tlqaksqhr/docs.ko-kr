@@ -1,24 +1,26 @@
 ---
-title: "WCF 테스트 클라이언트(WcfTestClient.exe)"
-ms.custom: 
+title: WCF 테스트 클라이언트(WcfTestClient.exe)
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: d4302855-677f-4640-aa90-c5d785d72fb7
-caps.latest.revision: "45"
+caps.latest.revision: 45
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 18866260c5d14cf27634afcd8391b159abac1dd1
-ms.sourcegitcommit: 2142a4732bb4ff519b9817db4c24a237b9810d4b
+ms.workload:
+- dotnet
+ms.openlocfilehash: 2eb32d36b1e6710f666391f918aff68c33566ab8
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/05/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="wcf-test-client-wcftestclientexe"></a>WCF 테스트 클라이언트(WcfTestClient.exe)
 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 테스트 클라이언트(WcfTestClient.exe)는 사용자가 테스트 매개 변수를 입력하고, 해당 입력 내용을 서비스에 전송하고, 서비스에서 돌려보내는 응답을 보는 데 사용할 수 있는 GUI 도구입니다. [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 서비스 호스트와 이 도구를 함께 사용하면 서비스를 매끄럽게 테스트할 수 있습니다.  
@@ -172,9 +174,9 @@ ms.lasthandoff: 01/05/2018
 ## <a name="closing-wcf-test-client"></a>WCF 테스트 클라이언트 닫기  
  다음과 같은 방법으로 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 테스트 클라이언트를 닫을 수 있습니다.  
   
--   에 **파일** 메뉴를 클릭 하 여 **종료**합니다. 또는에서 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 테스트 클라이언트 주 창의 클릭 **닫기**합니다. [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 테스트 클라이언트가 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]를 통해 시작된 경우 이 두 작업은 또한 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 서비스 자동 호스트를 종료하고 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 디버깅 프로세스를 중지합니다.  
+-   에 **파일** 메뉴를 클릭 하 여 **종료**합니다. 또는에서 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 테스트 클라이언트 주 창의 클릭 **닫기**합니다. 두이 작업은 또한 종료 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 서비스 자동 호스트 및 중지 하는 경우 처리는 Visual Studio 디버깅 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Visual Studio에서 테스트 클라이언트 시작 되었습니다.  
   
--   마우스 오른쪽 단추로 클릭는 **WCF 서비스 호스트** 클릭 한 다음 확인 하 고 알림 영역에서 아이콘 **종료 합니다.** 그러면 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 서비스 자동 호스트 및 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 테스트 클라이언트가 모두 종료되고 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 디버깅 프로세스가 중지됩니다.  
+-   마우스 오른쪽 단추로 클릭는 **WCF 서비스 호스트** 클릭 한 다음 확인 하 고 알림 영역에서 아이콘 **종료 합니다.** 이 모두 종료 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 서비스 자동 호스트 및 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 테스트 클라이언트 및 중지 프로세스는 Visual Studio 디버깅 합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [WCF 서비스 호스트(WcfSvcHost.exe)](../../../docs/framework/wcf/wcf-service-host-wcfsvchost-exe.md)

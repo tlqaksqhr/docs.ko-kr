@@ -1,24 +1,26 @@
 ---
-title: "사용자 지정 Demux"
-ms.custom: 
+title: 사용자 지정 Demux
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: fc54065c-518e-4146-b24a-0fe00038bfa7
-caps.latest.revision: "41"
+caps.latest.revision: 41
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 540469571f06f9c2ab38f9754a40aae5a3c3b267
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 45184c2d884347baef4090ed496e22e77aab5423
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="custom-demux"></a>사용자 지정 Demux
 이 샘플에서는 MSMQ 메시지 헤더는 서로 다른 서비스 작업에 매핑할 수 있는 방법을 보여 줍니다. 있도록 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 사용 하는 서비스 <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding> 에서처럼 하나의 서비스 작업을 사용 하 여 제한 되지 않습니다는 [메시지 큐에 Windows Communication Foundation](../../../../docs/framework/wcf/samples/message-queuing-to-wcf.md) 및 [메시지 큐에 Windows Communication Foundation](../../../../docs/framework/wcf/samples/wcf-to-message-queuing.md) 샘플입니다.  
@@ -26,8 +28,8 @@ ms.lasthandoff: 12/22/2017
  이 샘플의 서비스는 자체적으로 호스트되는 콘솔 응용 프로그램으로서 이를 사용하여 대기 중인 메시지를 받는 서비스를 확인할 수 있습니다.  
   
  서비스 계약은 `IOrderProcessor`이며, 큐에서 사용하는 데 적합한 단방향 서비스를 정의합니다.  
-  
-```  
+
+```csharp
 [ServiceContract]  
 [KnownType(typeof(PurchaseOrder))]  
 [KnownType(typeof(String))]  
@@ -39,11 +41,11 @@ public interface IOrderProcessor
     [OperationContract(IsOneWay = true, Name = "CancelPurchaseOrder")]  
     void CancelPurchaseOrder(MsmqMessage<string> ponumber);  
 }  
-```  
-  
+```
+
  MSMQ 메시지에는 Action 헤더가 없습니다. 다양한 MSMQ 메시지를 작업 계약에 자동으로 매핑할 수 없습니다. 따라서 작업 계약이 하나만 있을 수 있습니다. 이러한 제한을 해결하기 위해 서비스에서는 <xref:System.ServiceModel.Dispatcher.IDispatchOperationSelector.SelectOperation%2A> 인터페이스의 <xref:System.ServiceModel.Dispatcher.IDispatchOperationSelector> 메서드를 구현합니다. <xref:System.ServiceModel.Dispatcher.IDispatchOperationSelector.SelectOperation%2A> 메서드를 사용하여 서비스는 지정된 메시지 헤더를 특정 서비스 작업에 매핑할 수 있습니다. 이 샘플에서는 메시지의 레이블 헤더를 서비스 작업에 매핑합니다. 작업 계약의 `Name` 매개 변수는 지정된 메시지 레이블에 대해 디스패치되어야 하는 서비스 작업을 결정합니다. 예를 들어 메시지의 레이블 헤더에 "SubmitPurchaseOrder"가 포함되어 있으면 "SubmitPurchaseOrder" 서비스 작업이 호출됩니다.  
-  
-```  
+
+```csharp
 public class OperationSelector : IDispatchOperationSelector  
 {  
     public string SelectOperation(ref System.ServiceModel.Channels.Message message)  
@@ -52,29 +54,29 @@ public class OperationSelector : IDispatchOperationSelector
         return property.Label;  
     }  
 }  
-```  
-  
+```
+
  서비스는 다음 샘플 코드와 같이 <xref:System.ServiceModel.Description.IContractBehavior.ApplyDispatchBehavior%28System.ServiceModel.Description.ContractDescription%2CSystem.ServiceModel.Description.ServiceEndpoint%2CSystem.ServiceModel.Dispatcher.DispatchRuntime%29> 인터페이스의 <xref:System.ServiceModel.Description.IContractBehavior> 메서드를 구현해야 합니다. 이렇게 하면 사용자 지정 `OperationSelector`가 서비스 프레임워크 디스패치 런타임에 적용됩니다.  
-  
-```  
+
+```csharp
 void IContractBehavior.ApplyDispatchBehavior(ContractDescription description, ServiceEndpoint endpoint, DispatchRuntime dispatch)  
 {  
     dispatch.OperationSelector = new OperationSelector();  
 }  
-```  
-  
+```
+
  메시지는 OperationSelector에 도달하기 전에 디스패처의 <xref:System.ServiceModel.Dispatcher.EndpointDispatcher.ContractFilter%2A>를 통과해야 합니다. 기본적으로 서비스에 의해 구현된 계약에서 해당 동작을 찾을 수 없으면 메시지가 거부됩니다. 이러한 문제를 방지하기 위해 다음과 같이 <xref:System.ServiceModel.Description.IEndpointBehavior>를 적용하여 모든 메시지가 `MatchAllFilterBehavior`를 통과할 수 있도록 하는 `ContractFilter`라는 <xref:System.ServiceModel.Dispatcher.MatchAllMessageFilter>를 구현합니다.  
-  
-```  
+
+```csharp
 public void ApplyDispatchBehavior(ServiceEndpoint serviceEndpoint, EndpointDispatcher endpointDispatcher)  
 {  
     endpointDispatcher.ContractFilter = new MatchAllMessageFilter();  
 }  
-```  
+```
   
  서비스에서 메시지를 받으면 레이블 헤더에서 제공하는 정보를 사용하여 적합한 서비스 작업이 디스패치됩니다. 다음 샘플 코드와 같이 메시지 본문은 `PurchaseOrder` 개체로 deserialize됩니다.  
-  
-```  
+
+```csharp
 [OperationBehavior(TransactionScopeRequired = true, TransactionAutoComplete = true)]  
 public void SubmitPurchaseOrder(MsmqMessage<PurchaseOrder> msg)  
 {  
@@ -83,11 +85,11 @@ public void SubmitPurchaseOrder(MsmqMessage<PurchaseOrder> msg)
     po.Status = (OrderStates)statusIndexer.Next(3);  
     Console.WriteLine("Processing {0} ", po);  
 }  
-```  
-  
+```
+
  서비스는 자체 호스트됩니다. MSMQ를 사용할 때 사용되는 큐는 미리 만들어야 합니다. 수동으로 또는 코드를 통해 이 작업을 수행할 수 있습니다. 이 샘플의 서비스에는 큐가 있는지 확인하고 없을 경우 큐를 만드는 코드가 포함되어 있습니다. 큐 이름은 구성 파일에서 읽습니다.  
-  
-```  
+
+```csharp
 public static void Main()  
 {  
     // Get MSMQ queue name from app settings in configuration  
@@ -115,8 +117,8 @@ public static void Main()
         serviceHost.Close();  
     }  
 }  
-```  
-  
+```
+
  MSMQ 큐 이름은 구성 파일의 appSettings 섹션에 지정됩니다.  
   
 > [!NOTE]

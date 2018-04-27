@@ -1,34 +1,35 @@
 ---
-title: "While 활동의 열거 중단"
-ms.custom: 
+title: While 활동의 열거 중단
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: ddff715d-d623-4b54-b841-60bacbc3ca21
-caps.latest.revision: "10"
+caps.latest.revision: 10
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 22a03c2e7dcc8d024ed407e7df24a4e9db4e2bf6
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 27264832dd82719d7ccb81e1398df343653515b1
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="emulating-breaking-in-a-while-activity"></a>While 활동의 열거 중단
 이 샘플에서는 <xref:System.Activities.Statements.DoWhile>, <xref:System.Activities.Statements.ForEach%601>, <xref:System.Activities.Statements.While> 및 <xref:System.Activities.Statements.ParallelForEach%601> 활동의 루프 메커니즘을 중단하는 방법을 보여 줍니다.  
   
- [!INCLUDE[wf](../../../../includes/wf-md.md)]에는 이러한 루프의 실행을 중단하는 활동이 전혀 포함되어 있지 않으므로 이와 같은 방법이 유용할 수 있습니다.  
+ Windows WF (Workflow Foundation) 이러한 루프의 실행을 중단 하는 활동이 전혀 포함 하지 않기 때문에 유용 합니다.  
   
 ## <a name="scenario"></a>시나리오  
  이 샘플에서는 `Vendor` 클래스의 인스턴스인 공급업체 목록 중 신뢰할 수 있는 첫째 공급업체를 찾습니다. 각 공급업체에는 `ID`와 `Name` 및 공급업체의 신뢰도를 나타내는 숫자 값이 있습니다. 이 샘플에서는 공급업체 목록과 최소 신뢰도 값을 나타내는 입력 매개 변수 두 개를 받고 목록 중 지정된 조건에 일치하는 첫째 공급업체를 반환하는 `FindReliableVendor`라는 사용자 지정 활동을 만듭니다.  
   
 ## <a name="breaking-a-loop"></a>루프 중단  
- [!INCLUDE[wf](../../../../includes/wf-md.md)]에는 루프를 중단하는 활동이 포함되어 있지 않습니다. 이 코드 샘플에서는 <xref:System.Activities.Statements.If> 활동과 여러 가지 변수를 사용하여 루프를 중단합니다. 이 샘플에서 <xref:System.Activities.Statements.While> 변수에 `reliableVendor`이 아닌 다른 값이 할당되면 `null` 활동이 중단됩니다.  
+ Windows WF (Workflow Foundation)는 루프를 중단 하는 활동을 포함 하지 않습니다. 이 코드 샘플에서는 <xref:System.Activities.Statements.If> 활동과 여러 가지 변수를 사용하여 루프를 중단합니다. 이 샘플에서 <xref:System.Activities.Statements.While> 변수에 `reliableVendor`이 아닌 다른 값이 할당되면 `null` 활동이 중단됩니다.  
   
  다음 코드 예제에서는 이 샘플을 통해 while 루프가 어떻게 중단되는지 보여 줍니다.  
   

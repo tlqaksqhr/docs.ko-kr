@@ -1,24 +1,26 @@
 ---
-title: "상호 통신"
-ms.custom: 
+title: 상호 통신
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: fb64192d-b3ea-4e02-9fb3-46a508d26c60
-caps.latest.revision: "24"
+caps.latest.revision: 24
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 3ea6ea34e83f9c813062620c5029ea4b812cd777
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 9eb37e7e307bc9748113e5580ee96c8863d3ef89
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="two-way-communication"></a>상호 통신
 이 샘플에서는 MSMQ를 통해 트랜잭션된 대기 중인 양방향 통신을 수행하는 방법을 보여 줍니다. 이 샘플에서는 `netMsmqBinding` 바인딩을 사용합니다. 이 경우 서비스는 자체적으로 호스트되는 콘솔 응용 프로그램으로서 이를 사용하여 서비스에서 대기 중인 메시지 받는 것을 볼 수 있습니다.  
@@ -33,33 +35,33 @@ ms.lasthandoff: 12/22/2017
  이 샘플에서는 큐를 사용하는 양방향 통신을 보여 줍니다. 클라이언트는 트랜잭션의 범위 내에서 큐로 구매 주문을 보냅니다. 서비스는 주문을 받고 처리한 다음 트랜잭션의 범위 내에 있는 큐에서 주문 상태로 클라이언트를 콜백합니다. 양방향 통신을 쉽게 수행하기 위해 클라이언트와 서비스는 둘 다 큐를 사용하여 구매 주문과 주문 상태를 큐에 삽입합니다.  
   
  서비스 계약 `IOrderProcessor`는 큐를 사용하는 데 적합한 단방향 서비스 작업을 정의합니다. 서비스 작업에는 주문 상태를 보내는 데 사용되는 회신 끝점이 포함됩니다. 회신 끝점은 주문 상태를 클라이언트로 다시 보내는 큐의 URI입니다. 주문 처리 응용 프로그램에서 이 계약을 구현합니다.  
-  
-```  
+
+```csharp
 [ServiceContract(Namespace="http://Microsoft.ServiceModel.Samples")]  
 public interface IOrderProcessor  
 {  
     [OperationContract(IsOneWay = true)]  
     void SubmitPurchaseOrder(PurchaseOrder po, string   
                                   reportOrderStatusTo);  
-}  
-```  
+}
+```
   
  주문 상태를 보낼 회신 계약은 클라이언트에서 지정합니다. 클라이언트는 주문 상태 계약을 구현합니다. 서비스는 생성된 이 계약의 프록시를 사용하여 주문 상태를 클라이언트로 다시 보냅니다.  
-  
-```  
+
+```csharp
 [ServiceContract]  
 public interface IOrderStatus  
 {  
     [OperationContract(IsOneWay = true)]  
     void OrderStatus(string poNumber, string status);  
 }  
-```  
-  
+```
+
  서비스 작업은 전송된 구매 주문을 처리합니다. <xref:System.ServiceModel.OperationBehaviorAttribute>를 서비스 작업에 적용하여 큐에서 메시지를 받는 데 사용되는 트랜잭션에 자동 인리스트먼트를 지정하고 서비스 작업 완료 시 트랜잭션이 자동으로 완료되도록 지정합니다. `Orders` 클래스는 주문 처리 기능을 캡슐화합니다. 이 경우에는 구매 주문을 사전에 추가합니다. 서비스 작업이 참여하는 트랜잭션은 `Orders` 클래스의 작업에서 사용할 수 있습니다.  
   
  서비스 작업은 전송된 구매 주문을 처리할 뿐만 아니라 주문 상태에 대해 클라이언트에 다시 회신합니다.  
-  
-```  
+
+```csharp
 [OperationBehavior(TransactionScopeRequired = true, TransactionAutoComplete = true)]  
 public void SubmitPurchaseOrder(PurchaseOrder po, string reportOrderStatusTo)  
 {  
@@ -79,16 +81,16 @@ public void SubmitPurchaseOrder(PurchaseOrder po, string reportOrderStatusTo)
     //Close the client.  
     client.Close();  
 }  
-```  
-  
+```
+
  MSMQ 큐 이름은 구성 파일의 appSettings 섹션에 지정됩니다. 서비스의 끝점은 구성 파일의 System.ServiceModel 섹션에 정의됩니다.  
   
 > [!NOTE]
 >  MSMQ 큐 이름 및 끝점 주소는 약간 다른 주소 지정 규칙을 사용합니다. MSMQ 큐 이름은 로컬 컴퓨터에 점(.)을 사용하고, 그 경로에는 백슬래시 구분 기호를 사용합니다. [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 끝점 주소에서는 net.msmq: 체계를 지정하고 로컬 컴퓨터에 "localhost"를 사용하며 경로에 슬래시를 사용합니다. 원격 컴퓨터에서 호스트되는 큐에서 읽으려면 "." 및 "localhost"를 원격 컴퓨터 이름으로 바꿉니다.  
   
  서비스는 자체 호스트됩니다. MSMQ 전송을 사용하는 경우에는 사용되는 큐를 미리 만들어야 합니다. 수동으로 또는 코드를 통해 이 작업을 수행할 수 있습니다. 이 샘플에서 서비스는 큐가 있는지 확인하고 필요한 경우 큐를 만듭니다. 큐 이름은 구성 파일에서 읽습니다. 기본 주소에서 사용 되는 [ServiceModel Metadata 유틸리티 도구 (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) 서비스에 대 한 프록시를 생성 합니다.  
-  
-```  
+
+```csharp
 // Host the service within this EXE console application.  
 public static void Main()  
 {  
@@ -112,11 +114,11 @@ public static void Main()
         Console.ReadLine();  
     }  
 }  
-```  
-  
+```
+
  클라이언트에서 트랜잭션을 만듭니다. 큐와의 통신은 트랜잭션 범위 내에서 발생하므로 트랜잭션 범위를 모든 메시지가 성공하거나 실패하는 가장 작은 단위로 간주할 수 있습니다.  
-  
-```  
+
+```csharp
 // Create a ServiceHost for the OrderStatus service type.  
 using (ServiceHost serviceHost = new ServiceHost(typeof(OrderStatusService)))  
 {  
@@ -152,11 +154,11 @@ using (ServiceHost serviceHost = new ServiceHost(typeof(OrderStatusService)))
     // Close the ServiceHost to shutdown the service.  
     serviceHost.Close();  
 }  
-```  
-  
+```
+
  클라이언트 코드는 서비스로부터 주문 상태를 수신하기 위해 `IOrderStatus` 계약을 구현합니다. 이 경우 주문 상태가 출력됩니다.  
-  
-```  
+
+```csharp
 [ServiceBehavior]  
 public class OrderStatusService : IOrderStatus  
 {  
@@ -168,8 +170,8 @@ public class OrderStatusService : IOrderStatus
                                                            status);  
     }  
 }  
-```  
-  
+```
+
  주문 상태 큐는 `Main` 메서드에 생성됩니다. 다음 샘플 구성과 같이 클라이언트 구성에는 주문 상태 서비스를 호스트하는 주문 상태 서비스 구성이 포함됩니다.  
   
 ```xml  
@@ -323,7 +325,7 @@ Status of order 124a1f69-3699-4b16-9bcc-43147a8756fc:Pending
   
 3.  이 샘플의 서비스에서는 `OrderProcessorService`에 바인딩을 만듭니다. 바인딩이 인스턴스화된 후 코드 줄을 추가하여 보안 모드를 `None`으로 설정합니다.  
   
-    ```  
+    ```csharp
     NetMsmqBinding msmqCallbackBinding = new NetMsmqBinding();  
     msmqCallbackBinding.Security.Mode = NetMsmqSecurityMode.None;  
     ```  

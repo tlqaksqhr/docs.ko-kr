@@ -16,16 +16,16 @@ ms.author: douglasl
 manager: craigg
 ms.workload:
 - dotnet
-ms.openlocfilehash: be91650c7c06a3bdb5410166cc560ffc9a65d542
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: d86a3f97bcdb748d397dcf5edf20d4d8ce945bc6
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="linq-and-adonet"></a>LINQ 및 ADO.NET
 오늘날 많은 비즈니스 개발자가 두 개 이상의 프로그래밍 언어를 사용 해야 합니다. (예: Visual C# 또는 Visual Basic)에서는 비즈니스 논리와 프레젠테이션 계층에 대 한 높은 수준의 언어 및 데이터베이스와 상호 작용 하는 쿼리 언어 (같은 [!INCLUDE[tsql](../../../../includes/tsql-md.md)]). 따라서 효과적으로 작업을 수행하려면 여러 언어에 능숙해야 하며 개발 환경에서 언어 불일치 문제도 발생하게 됩니다. 예를 들어, 데이터 액세스 API를 사용하여 데이터베이스에 대한 쿼리를 실행하는 응용 프로그램에서는 따옴표를 사용하여 쿼리를 문자열 리터럴로 지정합니다. 이 쿼리 문자열은 컴파일러에서 인식되지 않으므로 잘못된 구문, 참조되는 열이나 행이 실제로 있는지 여부 등의 오류가 검사되지 않습니다. 쿼리 매개 변수에 대한 형식 검사뿐 아니라 `IntelliSense` 지원도 제공되지 않습니다.  
   
- [!INCLUDE[vbteclinqext](../../../../includes/vbteclinqext-md.md)]에서는 별도의 쿼리 언어를 사용하지 않고도 응용 프로그램 코드에서 집합 기반 쿼리를 작성할 수 있습니다. 메모리 내 데이터 구조체, XML 문서, SQL 데이터베이스 및 [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] 개체와 같은 다양한 열거 가능 데이터 소스(<xref:System.Collections.IEnumerable> 인터페이스를 구현한 데이터 소스)에 대한 <xref:System.Data.DataSet> 쿼리를 작성할 수 있습니다. 열거 가능한 데이터 소스가 다양한 방법으로 구현되기는 하지만 이러한 데이터 소스는 모두 동일한 구문 및 언어 구문을 노출합니다. 프로그래밍 언어 자체에서 쿼리를 작성할 수 있으므로 컴파일러에서 인식하거나 확인할 수 없는 문자열 리터럴로 포함되는 다른 쿼리 언어를 사용하지 않아도 됩니다. 쿼리가 프로그래밍 언어에 통합되었기 때문에 [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] 프로그래머는 컴파일 타임 형식 및 구문 검사와 `IntelliSense`를 통해 생산성을 높일 수 있습니다. 이러한 기능은 쿼리 디버깅 및 오류 수정에 소요되는 시간을 줄여 줍니다.  
+ [!INCLUDE[vbteclinqext](../../../../includes/vbteclinqext-md.md)]에서는 별도의 쿼리 언어를 사용하지 않고도 응용 프로그램 코드에서 집합 기반 쿼리를 작성할 수 있습니다. 메모리 내 데이터 구조체, XML 문서, SQL 데이터베이스 및 [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] 개체와 같은 다양한 열거 가능 데이터 소스(<xref:System.Collections.IEnumerable> 인터페이스를 구현한 데이터 소스)에 대한 <xref:System.Data.DataSet> 쿼리를 작성할 수 있습니다. 열거 가능한 데이터 소스가 다양한 방법으로 구현되기는 하지만 이러한 데이터 소스는 모두 동일한 구문 및 언어 구문을 노출합니다. 프로그래밍 언어 자체에서 쿼리를 작성할 수 있으므로 컴파일러에서 인식하거나 확인할 수 없는 문자열 리터럴로 포함되는 다른 쿼리 언어를 사용하지 않아도 됩니다. Visual Studio 프로그래머는 컴파일 타임 형식 및 구문 검사를 제공 하 여 생산성을 높일 수 해줍니다 쿼리가 프로그래밍 언어에 통합 하 고 `IntelliSense`합니다. 이러한 기능은 쿼리 디버깅 및 오류 수정에 소요되는 시간을 줄여 줍니다.  
   
  SQL 테이블의 데이터를 메모리에 있는 개체로 전송하는 작업은 번거롭고 오류가 발생하기 쉽습니다. [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)]과 [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]로 구현된 [!INCLUDE[vbtecdlinq](../../../../includes/vbtecdlinq-md.md)] 공급자는 소스 데이터를 <xref:System.Collections.IEnumerable> 기반 개체 컬렉션으로 변환합니다. 프로그래머는 쿼리하거나 업데이트할 때 데이터를 항상 <xref:System.Collections.IEnumerable> 컬렉션으로 봅니다. 이러한 컬렉션에 대한 쿼리 작성을 위해 완전한 `IntelliSense` 지원이 제공됩니다.  
   

@@ -1,24 +1,26 @@
 ---
-title: "주소 헤더"
-ms.custom: 
+title: 주소 헤더
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: b0c94d4a-3bde-4b4d-bb6d-9f12bc3a6940
-caps.latest.revision: "10"
+caps.latest.revision: 10
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: aafd6ec911464dcc2b936b9f9fc74b9bc39808bf
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 1392e06b0148ee24c9591839b58baf45da5109d4
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="address-headers"></a>주소 헤더
 Address Headers 샘플은 클라이언트가 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]를 사용하여 참조 매개 변수를 서비스에 전달할 수 있는 방법을 보여 줍니다.  
@@ -35,7 +37,7 @@ Address Headers 샘플은 클라이언트가 [!INCLUDE[indigo1](../../../../incl
 ## <a name="client"></a>클라이언트  
  클라이언트는 참조 매개 변수를 보내려면 `AddressHeader`의 `EndpointAddress`에 `ServiceEndpoint`를 추가해야 합니다. `EndpointAddress` 클래스를 변경할 수 없으므로 끝점 주소 수정은 `EndpointAddressBuilder` 클래스를 사용하여 수행해야 합니다. 다음 코드에서는 해당 메시지의 일부로 참조 매개 변수를 보내도록 클라이언트를 초기화합니다.  
   
-```  
+```csharp   
 HelloClient client = new HelloClient();  
 EndpointAddressBuilder builder =   
     new EndpointAddressBuilder(client.Endpoint.Address);  
@@ -54,23 +56,21 @@ client.Endpoint.Address = builder.ToEndpointAddress();
 ## <a name="server"></a>서버  
  서비스 작업 `Hello()`의 구현에서는 현재 `OperationContext`를 사용하여 들어오는 메시지에서 헤더 값을 검사합니다.  
   
-```  
+```csharp   
 string id = null;  
 // look at headers on incoming message  
 for (int i = 0;   
      i < OperationContext.Current.IncomingMessageHeaders.Count;   
      ++i)  
 {  
-    MessageHeaderInfo h =   
-        OperationContext.Current.IncomingMessageHeaders[i];  
+    MessageHeaderInfo h = OperationContext.Current.IncomingMessageHeaders[i];  
     // for any reference parameters with the correct name & namespace  
     if (h.IsReferenceParameter &&   
         h.Name == IDName &&   
         h.Namespace == IDNamespace)  
     {  
         // read the value of that header  
-        XmlReader xr =   
-OperationContext.Current.IncomingMessageHeaders.GetReaderAtHeader(i);  
+        XmlReader xr = OperationContext.Current.IncomingMessageHeaders.GetReaderAtHeader(i);  
         id = xr.ReadElementContentAsString();  
     }  
 }  

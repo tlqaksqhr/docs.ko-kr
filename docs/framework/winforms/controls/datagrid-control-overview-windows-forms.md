@@ -1,13 +1,13 @@
 ---
-title: "DataGrid 컨트롤 개요(Windows Forms)"
-ms.custom: 
+title: DataGrid 컨트롤 개요(Windows Forms)
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-winforms
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - DataGrid
@@ -28,17 +28,17 @@ helpviewer_keywords:
 - parent table navigation in DataGrid
 - child tables [Windows Forms], dataGrid control
 ms.assetid: 85604bce-bc03-49d9-9030-dda8896c44b1
-caps.latest.revision: 
+caps.latest.revision: 22
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 10220efc0bb77ddcc7f0f9fa0e3f2793a032a1bd
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: fd74ed0e31fff211f0197ad27f297f9fbecf5cab
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="datagrid-control-overview-windows-forms"></a>DataGrid 컨트롤 개요(Windows Forms)
 > [!NOTE]
@@ -103,7 +103,7 @@ ms.lasthandoff: 12/22/2017
 |관련된 여러 테이블.|테이블을 선택하는 데 사용할 트리 뷰가 표 형태 창에 표시되거나, 부모 테이블이 표 형태 창에 표시되도록 지정할 수 있습니다. 사용자는 부모 테이블의 레코드를 통해 관련된 자식 행을 탐색할 수 있습니다.|  
   
 > [!NOTE]
->  데이터 집합의 테이블은 <xref:System.Data.DataRelation>을 사용하여 관련됩니다.  또한 [데이터 집합의 HYPERLINK "http://msdn.microsoft.com/library/dbwcse3d(v=vs.110)" 관계](http://msdn.microsoft.com/library/dbwcse3d\(v=vs.110\)) 또는 [데이터 집합의 관계](http://msdn.microsoft.com/library/dbwcse3d\(v=vs.120\))를 참조하십시오.  
+>  데이터 집합의 테이블은 <xref:System.Data.DataRelation>을 사용하여 관련됩니다.  또한 참조 [하이퍼링크 "http://msdn.microsoft.com/library/dbwcse3d(v=vs.110)" 데이터 집합의 관계](http://msdn.microsoft.com/library/dbwcse3d\(v=vs.110\)) 또는 [데이터 집합의 관계](http://msdn.microsoft.com/library/dbwcse3d\(v=vs.120\))합니다.  
   
  <xref:System.Windows.Forms.DataGrid> 컨트롤에서 테이블을 표시하고 <xref:System.Windows.Forms.DataGrid.AllowSorting%2A> 속성이 `true`로 설정된 경우 열 머리글을 클릭하여 데이터를 다시 정렬할 수 있습니다. 사용자가 행을 추가하고 셀을 편집할 수도 있습니다.  
   
@@ -137,7 +137,7 @@ ms.lasthandoff: 12/22/2017
   
  테이블 스타일이 데이터 테이블과 관련이 있는 것처럼 열 스타일은 데이터 집합의 열과 관련이 있습니다. 각 테이블에 대해 한 번에 하나의 테이블 스타일만 정의될 수 있는 것처럼 특정 테이블 스타일에서 각 열에 대해 하나의 열 스타일만 정의될 수 있습니다. 이 관계는 열의 <xref:System.Windows.Forms.DataGridColumnStyle.MappingName%2A> 속성에서 정의됩니다.  
   
- 열 스타일을 추가하지 않고 테이블 스타일을 만든 경우 런타임에 폼과 표 형식 창이 생성될 때 [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)]에서 기본 열 스타일을 추가합니다. 그러나 테이블 스타일을 만들고 열 스타일을 추가한 경우에는 [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)]에서 열 스타일을 만들지 않습니다. 또한 열 스타일을 정의하고 표 형태 창에 표시할 열을 포함하는 매핑 이름으로 할당해야 합니다.  
+ 열 스타일을 추가 하지 않고 테이블 스타일을 만든 경우 런타임에 폼과 표를 만들 때 Visual Studio 기본 열 스타일을 추가 합니다. 그러나, 테이블 스타일을 만들 때 열 스타일을 추가한 경우에 Visual Studio에서 열 스타일을 만들지 않습니다. 또한 열 스타일을 정의하고 표 형태 창에 표시할 열을 포함하는 매핑 이름으로 할당해야 합니다.  
   
  열 스타일을 할당하여 데이터 표에 포함할 열을 지정하며 열 스타일이 열에 할당되지 않았기 때문에 표 형태 창에 표시되지 않는 데이터 열을 데이터 집합에 포함할 수 있습니다. 그러나 데이터 열이 데이터 집합에 포함되었기 때문에 표시되지 않는 데이터를 프로그래밍 방식으로 편집할 수 있습니다.  
   

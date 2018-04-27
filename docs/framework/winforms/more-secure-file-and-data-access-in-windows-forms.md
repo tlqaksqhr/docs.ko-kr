@@ -27,11 +27,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 61e4893ac32d2013b090a748078ec1e3a84ea3ac
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 77c69c5c39d90dcc28aa9c6084d84ace29df6f18
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="more-secure-file-and-data-access-in-windows-forms"></a>Windows Forms의 파일 및 데이터 액세스 추가 보안
 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]에서는 리소스 및 데이터 보호를 위해 권한을 사용합니다. 응용 프로그램이 데이터를 일거나 쓸 수 있는 위치는 응용 프로그램에 부여된 권한에 따라 달라집니다. 응용 프로그램이 부분 신뢰 환경에서 실행되는 경우 데이터에 대한 액세스 권한이 없거나 데이터에 액세스하는 방법을 변경해야 할 수 있습니다.  
@@ -39,7 +39,7 @@ ms.lasthandoff: 04/26/2018
  보안 제한이 발생할 경우 다음 두가지 옵션이 있습니다. 권한을 어설션(응용 프로그램에 부여되었다고 가정)하거나 부분 신뢰에서 작동하도록 작성된 기능 버전을 사용합니다. 다음 섹션에서는 부분 신뢰 환경에서 실행 중인 응용 프로그램에서 파일, 데이터베이스 및 레지스트리 액세스 작업을 수행하는 방법을 설명합니다.  
   
 > [!NOTE]
->  기본적으로 [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] 배포를 생성하는 도구는 이러한 배포의 기본값을 실행되는 컴퓨터에서 완전 신뢰 요청으로 설정합니다. 부분 신뢰로 실행의 추가 보안 이점을 사용하려는 경우 이 기본값을 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 또는 [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)] 도구 중 하나(Mage.exe 또는 MageUI.exe)로 변경해야 합니다. 응용 프로그램에 대 한 적절 한 신뢰 수준을 확인 하는 방법 및 Windows Forms 보안에 대 한 자세한 내용은 참조 [의 보안 Windows Forms 개요](../../../docs/framework/winforms/security-in-windows-forms-overview.md)합니다.  
+>  기본적으로 [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] 배포를 생성하는 도구는 이러한 배포의 기본값을 실행되는 컴퓨터에서 완전 신뢰 요청으로 설정합니다. Visual Studio 또는 중 하나에서이 기본값을 변경 해야 부분 신뢰에서 실행의 추가 보안 이점을 원하는 결정 한 경우는 [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)] 도구 (Mage.exe 또는 MageUI.exe). 응용 프로그램에 대 한 적절 한 신뢰 수준을 확인 하는 방법 및 Windows Forms 보안에 대 한 자세한 내용은 참조 [의 보안 Windows Forms 개요](../../../docs/framework/winforms/security-in-windows-forms-overview.md)합니다.  
   
 ## <a name="file-access"></a>파일 액세스  
  <xref:System.Security.Permissions.FileIOPermission> 클래스는 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]에서 파일 및 폴더 액세스를 제어합니다. 기본적으로 보안 시스템은 로컬 인트라넷 및 인터넷 영역과 같은 부분 신뢰 환경에 <xref:System.Security.Permissions.FileIOPermission>을 부여하지 않습니다. 그러나 응용 프로그램의 디자인을 수정하거나 다른 메서드를 사용하여 파일에 액세스하는 경우 파일 액세스가 필요한 응용 프로그램이 여전히 이러한 환경에서 작동할 수 있습니다. 기본적으로 로컬 인트라넷 영역에는 동일한 사이트 액세스 및 동일한 디렉터리 액세스를 포함하고, 원본 사이트에 다시 연결하고, 설치 디렉터리에서 읽을 수 있는 권한이 부여됩니다. 기본적으로 인터넷 영역에는 원본 사이트에 다시 연결할 수 있는 권한만 부여됩니다.  

@@ -1,12 +1,13 @@
 ---
-title: "Windows Forms의 보안 개요"
-ms.custom: 
+title: Windows Forms의 보안 개요
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-winforms
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - code access security [Windows Forms], Windows Forms
@@ -15,16 +16,17 @@ helpviewer_keywords:
 - security [Windows Forms], about security
 - access control [Windows Forms], Windows Forms
 ms.assetid: 4810dc9f-ea23-4ce1-8ea1-657f0ff1d820
-caps.latest.revision: "16"
+caps.latest.revision: 16
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: e56ae77a36ce0000fd518a3324ab5e5b8409d1d4
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: 57f46620e7b98bb1a4c120684075dbe065db9714
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="security-in-windows-forms-overview"></a>Windows Forms의 보안 개요
 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 릴리스 이전에는 사용자 컴퓨터에서 실행되는 모든 코드가 컴퓨터의 사용자와 동일한 리소스 액세스 권한을 가졌습니다. 예를 들어 사용자가 파일 시스템에 액세스할 수 있는 경우 코드에서 파일 시스템에 액세스할 수 있었습니다. 사용자가 데이터베이스에 액세스할 수 있는 경우 코드에서 해당 데이터베이스에 액세스할 수 있었습니다. 이러한 권한 또는 사용 권한은 사용자가 명시적으로 로컬 컴퓨터에 설치한 실행 파일의 코드에는 적합할 수 있지만 인터넷 또는 로컬 인트라넷에서 들어오는 잠재적 악성 코드에는 적합하지 않을 수 있습니다. 이 코드는 권한 없이 사용자의 컴퓨터 리소스에 액세스할 수 없어야 합니다.  
@@ -60,7 +62,7 @@ ms.lasthandoff: 01/19/2018
   
  선택적 권한을 요청할 때는 응용 프로그램에서 부여되지 않은 권한이 필요한 작업을 수행하는 경우 생성되는 보안 예외를 처리해야 합니다. <xref:System.Security.SecurityException>을 적절히 처리하면 응용 프로그램이 계속 작동할 수 있습니다. 응용 프로그램은 예외를 사용하여 사용자에 대해 기능을 사용할 수 없도록 설정할지 여부를 결정할 수 있습니다. 예를 들어 필요한 파일 권한이 부여되지 않은 경우 응용 프로그램에서 **저장** 메뉴 옵션을 사용할 수 없습니다.  
   
- 적절한 권한을 모두 어설션했는지 확인하기 어려운 경우도 있습니다. 예를 들어 화면에서 무해한 것처럼 보이는 메서드 호출이 실행 중 특정 지점에서 파일 시스템에 액세스할 수도 있습니다. 필요한 모든 권한으로 응용 프로그램을 배포하지 않을 경우 데스크톱에서 디버그할 때는 정상적으로 테스트되지만 배포 시 실패할 수 있습니다. [!INCLUDE[dnprdnlong](../../../includes/dnprdnlong-md.md)] SDK 및 [!INCLUDE[vsprvslong](../../../includes/vsprvslong-md.md)]에는 모두 응용 프로그램에 필요한 권한을 계산하기 위한 도구인 MT.exe 명령줄 도구와 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]의 권한 계산 기능이 각각 포함되어 있습니다.  
+ 적절한 권한을 모두 어설션했는지 확인하기 어려운 경우도 있습니다. 예를 들어 화면에서 무해한 것처럼 보이는 메서드 호출이 실행 중 특정 지점에서 파일 시스템에 액세스할 수도 있습니다. 필요한 모든 권한으로 응용 프로그램을 배포하지 않을 경우 데스크톱에서 디버그할 때는 정상적으로 테스트되지만 배포 시 실패할 수 있습니다. 두는 [!INCLUDE[dnprdnlong](../../../includes/dnprdnlong-md.md)] SDK 및 [!INCLUDE[vsprvslong](../../../includes/vsprvslong-md.md)] 응용 프로그램에 필요한 권한을 계산 하기 위한 도구가 포함:는 MT.exe 명령줄 도구 및 Visual Studio의 권한 계산 기능이 명령을 각각.  
   
  다음 항목에서는 추가 Windows Forms 보안 기능을 설명합니다.  
   
@@ -86,12 +88,12 @@ ms.lasthandoff: 01/19/2018
   
  선택하는 기술은 배포 환경에 따라 달라집니다. 자세한 내용은 [ClickOnce 배포 전략 선택](/visualstudio/deployment/choosing-a-clickonce-deployment-strategy)을 참조하세요.  
   
- 기본적으로 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 또는 [!INCLUDE[dnprdnlong](../../../includes/dnprdnlong-md.md)] SDK 도구(Mage.exe 및 MageUI.exe) 중 하나를 사용하여 배포된 [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] 응용 프로그램은 완전히 신뢰할 수 있는 클라이언트 컴퓨터에서 실행되도록 구성됩니다. 부분 신뢰를 사용하거나 일부 추가 권한만 사용하여 응용 프로그램을 배포하는 경우 이 기본값을 변경해야 합니다. 이 작업을 배포를 구성할 때 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 또는 [!INCLUDE[dnprdnlong](../../../includes/dnprdnlong-md.md)] SDK 도구 MageUI.exe를 사용하여 수행할 수 있습니다. MageUI.exe를 사용하는 방법에 대한 자세한 내용은 연습: 명령줄에서 ClickOnce 응용 프로그램 배포를 참조하세요.  또한 [방법: ClickOnce 응용 프로그램에 대한 사용자 지정 권한 설정](http://msdn.microsoft.com/library/hafybdaa\(v=vs.110\)) 또는 [방법: ClickOnce 응용 프로그램에 대한 사용자 지정 권한 설정](http://msdn.microsoft.com/library/hafybdaa\(v=vs.120\))을 참조하세요.  
+ 기본적으로 [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] Visual Studio를 사용 하 여 배포 된 응용 프로그램 또는 [!INCLUDE[dnprdnlong](../../../includes/dnprdnlong-md.md)] SDK 도구 (Mage.exe 및 MageUI.exe)은 완전 신뢰 하는 클라이언트 컴퓨터에서 실행 되도록 구성 됩니다. 부분 신뢰를 사용하거나 일부 추가 권한만 사용하여 응용 프로그램을 배포하는 경우 이 기본값을 변경해야 합니다. 두 Visual Studio와 함께 수행할 수 있습니다 또는 [!INCLUDE[dnprdnlong](../../../includes/dnprdnlong-md.md)] SDK 도구 MageUI.exe 배포를 구성 합니다. MageUI.exe를 사용하는 방법에 대한 자세한 내용은 연습: 명령줄에서 ClickOnce 응용 프로그램 배포를 참조하세요.  또한 [방법: ClickOnce 응용 프로그램에 대한 사용자 지정 권한 설정](http://msdn.microsoft.com/library/hafybdaa\(v=vs.110\)) 또는 [방법: ClickOnce 응용 프로그램에 대한 사용자 지정 권한 설정](http://msdn.microsoft.com/library/hafybdaa\(v=vs.120\))을 참조하세요.  
   
  [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] 및 권한 상승의 보안 측면에 대한 자세한 내용은 [ClickOnce 응용 프로그램 보안](/visualstudio/deployment/securing-clickonce-applications)을 참조하세요. 신뢰할 수 있는 응용 프로그램 배포에 대한 자세한 내용은 [신뢰할 수 있는 응용 프로그램 배포 개요](/visualstudio/deployment/trusted-application-deployment-overview)를 참조하세요.  
   
 ### <a name="testing-the-application"></a>응용 프로그램 테스트  
- [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]를 사용하여 Windows Forms 응용 프로그램을 배포한 경우 개발 환경에서 부분 신뢰 또는 제한된 권한 집합으로 디버깅을 사용할 수 있습니다.  또한 [방법: 제한된 권한으로 ClickOnce 응용 프로그램 디버그](http://msdn.microsoft.com/library/593zkfdf\(v=vs.110\)) 또는 [방법: 제한된 권한으로 ClickOnce 응용 프로그램 디버그](http://msdn.microsoft.com/library/593zkfdf\(v=vs.120\))를 참조하세요.  
+ Visual Studio를 사용 하 여 Windows Forms 응용 프로그램을 배포한 경우 개발 환경에서 설정 된 제한 된 권한이 나 부분 신뢰 환경에서 디버깅을 사용할 수 있습니다.  또한 [방법: 제한된 권한으로 ClickOnce 응용 프로그램 디버그](http://msdn.microsoft.com/library/593zkfdf\(v=vs.110\)) 또는 [방법: 제한된 권한으로 ClickOnce 응용 프로그램 디버그](http://msdn.microsoft.com/library/593zkfdf\(v=vs.120\))를 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
  [Windows Forms 보안](../../../docs/framework/winforms/windows-forms-security.md)  

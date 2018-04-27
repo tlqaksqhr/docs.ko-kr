@@ -1,12 +1,13 @@
 ---
-title: "연습: 확장 가능한 응용 프로그램 만들기"
-ms.custom: 
+title: '연습: 확장 가능한 응용 프로그램 만들기'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -18,16 +19,17 @@ helpviewer_keywords:
 - add-in-side adapter [.NET Framework]
 - contracts for add-in pipelines [.NET Framework]
 ms.assetid: 694a33c5-a040-450d-aed5-ac49fc88ce61
-caps.latest.revision: "32"
+caps.latest.revision: 32
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 5cee99346d19c632739bcc6540c43f1a35217a2f
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: 8946e30ac9d7a224af7801bc721e7d9cf6e1fab0
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="walkthrough-creating-an-extensible-application"></a>연습: 확장 가능한 응용 프로그램 만들기
 이 연습에는 추가 기능에 대 한 간단한 계산기 기능을 수행 하는 파이프라인을 만드는 방법을 설명 합니다. 실제 시나리오; 보여 주지 않습니다. 대신, 파이프라인 및 방법을 추가 기능에서 서비스를 제공할 수는 호스트의 기본 기능을 보여 줍니다.  
@@ -58,17 +60,17 @@ ms.lasthandoff: 01/19/2018
   
  버전 2는 계산기 추가 기능에 추가 계산 기능을 제공 하 고 버전 관리를 보여 줍니다. 에 설명 되어 [연습: 내용은 이전 버전과 호환성 활성화](http://msdn.microsoft.com/library/6fa15bb5-8f04-407d-bd7d-675dc043c848)합니다.  
   
-## <a name="prerequisites"></a>필수 구성 요소  
+## <a name="prerequisites"></a>전제 조건  
  이 연습을 진행하려면 먼저 다음 작업을 수행해야 합니다.  
   
--   [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)].  
+-   Visual Studio.  
   
 ## <a name="creating-a-visual-studio-solution"></a>Visual Studio 솔루션 만들기  
- 솔루션을 사용 하 여 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 파이프라인 세그먼트의 프로젝트를 포함 하도록 합니다.  
+ 파이프라인 세그먼트의 프로젝트를 포함 하도록 Visual Studio에서 솔루션을 사용 합니다.  
   
 #### <a name="to-create-the-pipeline-solution"></a>파이프라인 솔루션을 만들려면  
   
-1.  [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)], 라는 새 프로젝트를 만들 `Calc1Contract`합니다. 기반으로 **클래스 라이브러리** 템플릿.  
+1.  Visual Studio에서 이라는 새 프로젝트를 만듭니다 `Calc1Contract`합니다. 기반으로 **클래스 라이브러리** 템플릿.  
   
 2.  솔루션 이름을 `CalculatorV1`합니다.  
   

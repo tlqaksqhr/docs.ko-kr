@@ -1,26 +1,27 @@
 ---
-title: "SQL 추적"
-ms.custom: 
+title: SQL 추적
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: bcaebeb1-b9e5-49e8-881b-e49af66fd341
-caps.latest.revision: "15"
+caps.latest.revision: 15
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 6bd8fbe1a29793778d93eeca64b185079d706f3e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 2eeb5cf57e6efac77de4a76fe8131189273d5438
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="sql-tracking"></a>SQL 추적
-이 샘플에서는 SQL 데이터베이스에 추적 레코드를 기록하는 사용자 지정 SQL 추적 참가자를 작성하는 방법을 보여 줍니다. [!INCLUDE[wf](../../../../includes/wf-md.md)]에서는 워크플로 인스턴스의 실행을 시각적으로 추적할 수 있는 워크플로를 제공합니다. 추적 런타임에서는 워크플로를 실행하는 동안 워크플로 추적 레코드를 내보냅니다. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]워크플로 추적을 참조 하세요. [워크플로 추적 및 트레이싱](../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)합니다.  
+이 샘플에서는 SQL 데이터베이스에 추적 레코드를 기록하는 사용자 지정 SQL 추적 참가자를 작성하는 방법을 보여 줍니다. Windows WF (Workflow Foundation) 워크플로 워크플로 인스턴스 실행에 추적을 제공 합니다. 추적 런타임에서는 워크플로를 실행하는 동안 워크플로 추적 레코드를 내보냅니다. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 워크플로 추적을 참조 하세요. [워크플로 추적 및 트레이싱](../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)합니다.  
   
 #### <a name="to-use-this-sample"></a>이 샘플을 사용하려면  
   
@@ -43,7 +44,7 @@ ms.lasthandoff: 12/22/2017
   
 7.  브라우저에 StockPriceService 페이지가 표시됩니다. 이 페이지에는 로컬 서비스 WSDL 주소가 포함되어 있습니다. 이 주소를 복사합니다.  
   
-     로컬 서비스 WSDL 주소 예로는 http://localhost:65193/StockPriceService.xamlx?wsdl이 있습니다.  
+     로컬 서비스 WSDL 주소의 예로 http://localhost:65193/StockPriceService.xamlx?wsdl합니다.  
   
 8.  [!INCLUDE[fileExplorer](../../../../includes/fileexplorer-md.md)]를 사용하여 WCF 테스트 클라이언트(WcfTestClient.exe)를 실행합니다. 이는 Microsoft Visual Studio 10.0\Common7\IDE 디렉터리에 있습니다.  
   
@@ -51,7 +52,7 @@ ms.lasthandoff: 12/22/2017
   
 10. WCF 테스트 클라이언트에서 두 번 클릭 **GetStockPrice**합니다. 열립니다는 `GetStockPrice` 값을 입력 한 매개 변수를 사용 하는 작업 `Contoso` 클릭 **Invoke**합니다.  
   
-11. 내보낸 추적 레코드가 SQL 데이터베이스에 기록됩니다. 추적 레코드를 보려면 SQL Management Studio에서 TrackingSample 데이터베이스를 열고 테이블을 찾습니다. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]SQL Server Management Studio 참조 [SQL Server Management Studio 소개](http://go.microsoft.com/fwlink/?LinkId=165645)합니다. SQL Server 2008 Management Studio Express를 다운로드할 수 있습니다 [여기](http://go.microsoft.com/fwlink/?LinkId=180520)합니다. 테이블에 대해 선택 쿼리를 실행하면 해당 테이블에 저장되어 있는 추적 레코드 내의 데이터가 표시됩니다.  
+11. 내보낸 추적 레코드가 SQL 데이터베이스에 기록됩니다. 추적 레코드를 보려면 SQL Management Studio에서 TrackingSample 데이터베이스를 열고 테이블을 찾습니다. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] SQL Server Management Studio 참조 [SQL Server Management Studio 소개](http://go.microsoft.com/fwlink/?LinkId=165645)합니다. SQL Server 2008 Management Studio Express를 다운로드할 수 있습니다 [여기](http://go.microsoft.com/fwlink/?LinkId=180520)합니다. 테이블에 대해 선택 쿼리를 실행하면 해당 테이블에 저장되어 있는 추적 레코드 내의 데이터가 표시됩니다.  
   
 #### <a name="to-uninstall-the-sample"></a>샘플을 제거하려면  
   

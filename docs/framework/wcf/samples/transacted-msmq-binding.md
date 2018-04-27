@@ -1,24 +1,26 @@
 ---
-title: "트랜잭션된 MSMQ 바인딩"
-ms.custom: 
+title: 트랜잭션된 MSMQ 바인딩
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 71f5cb8d-f1df-4e1e-b8a2-98e734a75c37
-caps.latest.revision: "50"
+caps.latest.revision: 50
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 702f3ac45ade5fcd2f37d256ce1213a79f012ae3
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: e0529aa940c02ee79e25034e57f89d4b476861b8
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="transacted-msmq-binding"></a>트랜잭션된 MSMQ 바인딩
 이 샘플에서는 MSMQ(메시지 큐)를 사용하여 큐에 있는 트랜잭션된 통신을 수행하는 방법을 보여 줍니다.  
@@ -33,19 +35,19 @@ ms.lasthandoff: 12/22/2017
  이 샘플에서 클라이언트는 트랜잭션의 범위 내에서 일련의 메시지를 서비스로 보냅니다. 그러면 서비스는 큐로 전송된 메시지를 서비스에 정의된 트랜잭션 범위 내에서 받습니다.  
   
  다음 샘플 코드와 같이 서비스 계약은 `IOrderProcessor`입니다. 이 인터페이스는 큐에서 사용하기에 적합한 단방향 서비스를 정의합니다.  
-  
-```  
+
+```csharp
 [ServiceContract(Namespace="http://Microsoft.ServiceModel.Samples")]  
 public interface IOrderProcessor  
 {  
     [OperationContract(IsOneWay = true)]  
     void SubmitPurchaseOrder(PurchaseOrder po);  
 }  
-```  
-  
+```
+
  서비스 동작은 `TransactionScopeRequired`가 `true`로 설정된 작업 동작을 정의합니다. 따라서 큐에서 메시지를 검색할 때 사용되는 트랜잭션 범위가 메서드에서 액세스하는 리소스 관리자에서 동일하게 사용됩니다. 또한 메서드에서 예외를 throw하는 경우 메시지가 큐로 반환됩니다. 이 작업 동작을 설정하지 않을 경우 큐에 있는 채널은 큐로부터 메시지를 읽는 트랜잭션을 만들고 디스패치 전에 자동으로 이를 커밋하므로, 작업이 실패하면 메시지를 잃게 됩니다. 가장 일반적인 시나리오는 다음 코드에서와 같이 큐로부터 메시지를 읽을 때 사용되는 트랜잭션에 서비스 작업이 참여하는 것입니다.  
-  
-```  
+
+```csharp
  // This service class that implements the service contract.  
  // This added code writes output to the console window.  
  public class OrderProcessorService : IOrderProcessor  
@@ -58,11 +60,11 @@ public interface IOrderProcessor
      }  
   …  
 }  
-```  
-  
+```
+
  서비스는 자체 호스트됩니다. MSMQ 전송을 사용하는 경우에는 사용되는 큐를 미리 만들어야 합니다. 수동으로 또는 코드를 통해 이 작업을 수행할 수 있습니다. 이 샘플에서 서비스에는 큐가 있는지 확인하고 큐가 없으면 이를 만드는 코드가 포함되어 있습니다. 큐 이름은 구성 파일에서 읽습니다. 기본 주소에서 사용 되는 [ServiceModel Metadata 유틸리티 도구 (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) 서비스에 대 한 프록시를 생성 합니다.  
-  
-```  
+
+```csharp
 // Host the service within this EXE console application.  
 public static void Main()  
 {  
@@ -89,8 +91,8 @@ public static void Main()
         serviceHost.Close();  
     }  
 }  
-```  
-  
+```
+
  다음 샘플 구성에서 보여 주는 것처럼 MSMQ 큐 이름은 구성 파일의 appSettings 섹션에 지정됩니다.  
   
 ```xml  
@@ -103,8 +105,8 @@ public static void Main()
 >  <xref:System.Messaging>을 사용하여 큐를 만들 때 큐 이름은 로컬 컴퓨터에 점(.)을, 그 경로에는 백슬래시 구분 기호를 사용합니다. [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 끝점은 net.msmq 체계의 큐 주소를 사용하고 로컬 컴퓨터를 나타내기 위해 "localhost"를 사용하며 경로에 슬래시를 사용합니다.  
   
  클라이언트는 트랜잭션 범위를 만듭니다. 트랜잭션 범위 내에서 큐와 통신을 수행하여 모든 메시지가 큐로 전송되거나 어떤 메시지도 큐로 전송되지 않는 가장 작은 단위로 처리되도록 합니다. 트랜잭션은 트랜잭션 범위에서 <xref:System.Transactions.TransactionScope.Complete%2A>를 호출하여 커밋합니다.  
-  
-```  
+
+```csharp
 // Create a client.  
 OrderProcessorClient client = new OrderProcessorClient();  
   
@@ -142,14 +144,14 @@ client.Close();
 Console.WriteLine();  
 Console.WriteLine("Press <ENTER> to terminate client.");  
 Console.ReadLine();  
-```  
-  
+```
+
  트랜잭션이 작동 중임을 확인하려면 아래 샘플 코드에서와 같이 클라이언트를 수정하여 트랜잭션 범위를 주석 처리하고 솔루션을 다시 빌드한 다음 클라이언트를 실행합니다.  
-  
-```  
+
+```csharp
 //scope.Complete();  
-```  
-  
+```
+
  트랜잭션이 완료되지 않았으므로 메시지가 큐에 보내지지 않습니다.  
   
  샘플을 실행하면 클라이언트 및 서비스 동작이 서비스 콘솔 창과 클라이언트 콘솔 창에 모두 표시됩니다. 서비스에서 클라이언트가 보내는 메시지를 받는 것을 볼 수 있습니다. 서비스와 클라이언트를 종료하려면 각 콘솔 창에서 Enter 키를 누릅니다. 큐를 사용하므로 클라이언트와 서비스가 동시에 실행 중일 필요는 없습니다. 클라이언트를 실행하고 종료한 다음 서비스를 다시 시작해도 메시지를 받을 수 있습니다.  

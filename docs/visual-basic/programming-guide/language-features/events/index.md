@@ -15,14 +15,14 @@ ms.assetid: 8fb0353a-e41b-4e23-b78f-da65db832f70
 caps.latest.revision: 12
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: c18c1ea645c9f144e2c2043af5460d6fb03f13a1
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 6a303b0bc9a51ec5566be5cf6db40ff9b9de4c9c
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="events-visual-basic"></a>이벤트(Visual Basic)
-[!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] 프로젝트를 시퀀스로 실행되는 프로시저 시리즈로 시각화할 수 있지만 실제로 대부분의 프로그램은 이벤트 구동 방식을 따릅니다. 즉, 실행 흐름은 *이벤트*라는 외부 발생 요인에 의해 결정됩니다.  
+시각화할 수 있지만 Visual Studio 프로젝트를 일련의 절차를 순서 실제로 실행 하는 대부분의 프로그램은 이벤트 구동 방식-라는 외부 발생 요인에 의해 결정 됩니다 실행 흐름이 *이벤트*합니다.  
   
  이벤트는 중요한 문제가 발생했음을 응용 프로그램에 알리는 신호입니다. 예를 들어 사용자가 폼의 컨트롤을 클릭하면 폼이 `Click` 이벤트를 발생시키고 이벤트를 처리하는 프로시저를 호출할 수 있습니다. 또한 이벤트는 개별 작업이 통신할 수 있도록 합니다. 예를 들어 응용 프로그램이 주 응용 프로그램과는 별도로 정렬 작업을 수행한다고 가정해 봅니다. 사용자가 정렬을 취소하면 응용 프로그램은 정렬 프로세스를 중지하도록 지시하는 취소 이벤트를 전송할 수 있습니다.  
   

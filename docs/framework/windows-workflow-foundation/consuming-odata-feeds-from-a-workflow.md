@@ -1,29 +1,30 @@
 ---
-title: "워크플로에서 OData 피드 사용"
-ms.custom: 
+title: 워크플로에서 OData 피드 사용
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 1b26617c-53e9-476a-81af-675c36d95919
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 9a01be08367fac1f7713f5db4953f67b0d32e073
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 2057e2b1c03a1ebcd68d7d59be8839171305707f
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="consuming-odata-feeds-from-a-workflow"></a>워크플로에서 OData 피드 사용
 WCF Data Services는 REST(Representational State Transfer)의 의미 체계를 사용하여 웹 또는 인트라넷을 통해 데이터를 노출하고 사용하기 위해 Open Data Protocol(OData)을 사용하는 서비스를 만들 수 있도록 하는 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 의 구성 요소입니다. OData는 URI로 주소를 지정할 수 있는 리소스로 데이터를 노출합니다. HTTP 요청을 보내고 데이터 서비스에서 반환하는 OData 피드를 처리할 수 있는 응용 프로그램은 모두 OData 기반 데이터 서비스와 상호 작용할 수 있습니다. 또한 WCF Data Services에는 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 응용 프로그램에서 OData 피드를 사용할 때 보다 다양한 기능을 갖춘 프로그래밍 환경을 제공하는 클라이언트 라이브러리가 포함되어 있습니다. 이 항목에서는 클라이언트 라이브러리를 사용하거나 사용하지 않고 워크플로에서 OData 피드를 사용하는 방법에 대해 간략하게 설명합니다.  
   
 ## <a name="using-the-sample-northwind-odata-service"></a>샘플 Northwind OData 서비스 사용  
- 이 항목의 예제에서는 [http://services.odata.org/Northwind/Northwind.svc/](http://go.microsoft.com/fwlink/?LinkID=187426)에 있는 샘플 Northwind 데이터 서비스를 사용합니다. 이 서비스는 [OData SDK](http://go.microsoft.com/fwlink/?LinkID=185248) 의 일부로 제공되며 샘플 Northwind 데이터베이스에 읽기 전용으로 액세스할 수 있게 해줍니다. 쓰기 권한이 필요하거나 로컬 WCF 데이터 서비스가 필요한 경우 [퀵 스타트(WCF Data Services)](http://go.microsoft.com/fwlink/?LinkID=131076) 의 단계를 수행하여 Northwind 데이터베이스에 액세스할 수 있게 해 주는 로컬 OData 서비스를 만들 수 있습니다. 퀵 스타트를 따르는 경우 이 항목의 예제 코드에 제공된 URI를 로컬 URI로 바꿉니다.  
+ 이 항목의 예제에서는 사용 샘플 Northwind 데이터 서비스에 있는 [ http://services.odata.org/Northwind/Northwind.svc/ ](http://go.microsoft.com/fwlink/?LinkID=187426)합니다. 이 서비스는 [OData SDK](http://go.microsoft.com/fwlink/?LinkID=185248) 의 일부로 제공되며 샘플 Northwind 데이터베이스에 읽기 전용으로 액세스할 수 있게 해줍니다. 쓰기 권한이 필요하거나 로컬 WCF 데이터 서비스가 필요한 경우 [퀵 스타트(WCF Data Services)](http://go.microsoft.com/fwlink/?LinkID=131076) 의 단계를 수행하여 Northwind 데이터베이스에 액세스할 수 있게 해 주는 로컬 OData 서비스를 만들 수 있습니다. 퀵 스타트를 따르는 경우 이 항목의 예제 코드에 제공된 URI를 로컬 URI로 바꿉니다.  
   
 ## <a name="consuming-an-odata-feed-using-the-client-libraries"></a>클라이언트 라이브러리를 사용하여 OData 피드 사용  
  WCF Data Services에는 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 및 클라이언트 응용 프로그램에서 OData 피드를 보다 쉽게 사용할 수 있도록 클라이언트 라이브러리가 포함되어 있습니다. 이러한 라이브러리는 HTTP 메시지를 보내고 받는 작업을 단순화합니다. 또한 엔터티 데이터를 나타내는 CLR 개체로 메시지 페이로드를 변환합니다. 클라이언트 라이브러리는 두 가지 핵심 클래스인 <xref:System.Data.Services.Client.DataServiceContext> 및 <xref:System.Data.Services.Client.DataServiceQuery%601>를 제공합니다. 이러한 클래스를 사용하면 데이터 서비스를 쿼리한 다음 반환된 엔터티 데이터를 CLR 개체로 사용하여 작업할 수 있습니다. 이 단원에서는 클라이언트 라이브러리를 사용하는 활동을 만드는 두 가지 방법에 대해 설명합니다.  
@@ -36,13 +37,13 @@ WCF Data Services는 REST(Representational State Transfer)의 의미 체계를 �
  서비스에서 노출하는 서비스 작업이 없으며 **서비스** 목록에 Northwind 데이터 서비스에서 노출하는 엔터티를 나타내는 항목이 있습니다. 서비스 참조가 추가되면 이러한 엔터티에 대한 클래스가 생성되며 클라이언트 코드에서 사용될 수 있습니다. 이 항목의 예제에서는 이러한 클래스와 `NorthwindEntities` 클래스를 사용하여 쿼리를 수행합니다.  
   
 > [!NOTE]
->  [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][(WCF Data Services) 데이터 서비스 클라이언트 라이브러리 생성](http://go.microsoft.com/fwlink/?LinkID=191611)합니다.  
+>  [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [데이터 서비스 클라이언트 라이브러리 (WCF Data Services) 생성](http://go.microsoft.com/fwlink/?LinkID=191611)합니다.  
   
 ### <a name="using-asynchronous-methods"></a>비동기 메서드 사용  
- 웹을 통해 리소스에 액세스할 때 발생할 수 있는 지연 문제를 해결하려면 WCF Data Services에 비동기적으로 액세스하는 것이 좋습니다. WCF Data Services 클라이언트 라이브러리는 쿼리를 호출하는 데 필요한 비동기 메서드를 포함하고 [!INCLUDE[wf](../../../includes/wf-md.md)] 는 권한 부여 비동기 동작에 필요한 <xref:System.Activities.AsyncCodeActivity> 클래스를 제공합니다. <xref:System.Activities.AsyncCodeActivity> 파생 동작은 비동기 메서드가 있는 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 클래스를 사용하여 기록될 수 있거나, 비동기적으로 실행되는 코드는 메서드에 넣어 대리자를 사용하여 호출할 수 있습니다. 이 단원에서는 <xref:System.Activities.AsyncCodeActivity> 파생 활동의 두 가지 예제를 제공합니다. 한 예제에서는 WCF Data Services 클라이언트 라이브러리의 비동기 메서드를 사용하고 다른 예제에서는 대리자를 사용합니다.  
+ 웹을 통해 리소스에 액세스할 때 발생할 수 있는 지연 문제를 해결하려면 WCF Data Services에 비동기적으로 액세스하는 것이 좋습니다. WCF Data Services 클라이언트 라이브러리는 쿼리를 호출 하는 데 필요한 비동기 메서드를 포함 하 고 제공 하는 Windows WF (Workflow Foundation)는 <xref:System.Activities.AsyncCodeActivity> 권한 부여 비동기 동작에 대 한 클래스입니다. <xref:System.Activities.AsyncCodeActivity> 파생 동작은 비동기 메서드가 있는 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 클래스를 사용하여 기록될 수 있거나, 비동기적으로 실행되는 코드는 메서드에 넣어 대리자를 사용하여 호출할 수 있습니다. 이 단원에서는 <xref:System.Activities.AsyncCodeActivity> 파생 활동의 두 가지 예제를 제공합니다. 한 예제에서는 WCF Data Services 클라이언트 라이브러리의 비동기 메서드를 사용하고 다른 예제에서는 대리자를 사용합니다.  
   
 > [!NOTE]
->  [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][비동기 작업 (WCF Data Services)](http://go.microsoft.com/fwlink/?LinkId=193396) 및 [비동기 활동 만들기](../../../docs/framework/windows-workflow-foundation/creating-asynchronous-activities-in-wf.md)합니다.  
+>  [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [비동기 작업 (WCF Data Services)](http://go.microsoft.com/fwlink/?LinkId=193396) 및 [비동기 활동 만들기](../../../docs/framework/windows-workflow-foundation/creating-asynchronous-activities-in-wf.md)합니다.  
   
 ### <a name="using-client-library-asynchronous-methods"></a>클라이언트 라이브러리 비동기 메서드 사용  
  <xref:System.Data.Services.Client.DataServiceQuery%601> 클래스는 OData 서비스를 비동기적으로 쿼리하기 위한 <xref:System.Data.Services.Client.DataServiceQuery%601.BeginExecute%2A> 및 <xref:System.Data.Services.Client.DataServiceQuery%601.EndExecute%2A> 메서드를 제공합니다. 이러한 메서드는 <xref:System.Activities.AsyncCodeActivity.BeginExecute%2A> 파생 클래스의 <xref:System.Activities.AsyncCodeActivity.EndExecute%2A> 및 <xref:System.Activities.AsyncCodeActivity> 재정의에서 호출할 수 있습니다. <xref:System.Activities.AsyncCodeActivity> <xref:System.Activities.AsyncCodeActivity.BeginExecute%2A> 재정의가 반환되면 워크플로가 유휴 상태가 될 수 있으며(그러나 유지되지는 않음), 비동기 작업이 완료되면 <xref:System.Activities.AsyncCodeActivity.EndExecute%2A> 는 런타임에서 호출됩니다.  
@@ -77,7 +78,7 @@ WCF Data Services는 REST(Representational State Transfer)의 의미 체계를 �
  다음 예제에서는 `ListCustomers` 활동을 정의합니다. 이 활동은 샘플 Northwind 데이터 서비스를 쿼리하고 Northwind 데이터베이스의 모든 고객이 포함된 `List<Customer>` 를 반환합니다. 비동기 작업은 `GetCustomers` 메서드에서 수행됩니다. 이 메서드는 서비스에서 모든 고객을 쿼리하여 `List<Customer>`에 복사합니다. 그런 다음 결과가 페이징되는지 확인하고 페이징되면 서비스에서 결과의 다음 페이지를 쿼리하여 목록에 추가하고 모든 고객 데이터가 검색될 때까지 계속합니다.  
   
 > [!NOTE]
->  [!INCLUDE[crabout](../../../includes/crabout-md.md)]WCF Data Services의 페이징 작업을 참조 하세요. [방법: 페이지 단위 결과 로드(WCF Data Services)](http://go.microsoft.com/fwlink/?LinkId=193452).  
+>  [!INCLUDE[crabout](../../../includes/crabout-md.md)] WCF Data Services의 페이징 작업을 참조 하세요. [방법: 페이지 단위 결과 로드(WCF Data Services)](http://go.microsoft.com/fwlink/?LinkId=193452).  
   
  모든 고객이 추가되면 목록이 반환됩니다. `GetCustomers` 메서드는 활동의 <xref:System.Activities.AsyncCodeActivity.BeginExecute%2A> 재정의에 지정됩니다. 메서드에 반환 값이 있으므로 `Func<string, List<Customer>>` 가 메서드를 지정하기 위해 만들어집니다.  
   
@@ -110,7 +111,7 @@ WCF Data Services는 REST(Representational State Transfer)의 의미 체계를 �
   
  **반환 된 원시 데이터:**  
 **\<? xml 버전 "1.0" encoding = "utf-8" 독립 실행형 = = "yes"? >**   
-**\<ContactName xmlns = "http://schemas.microsoft.com/ado/2007/08/dataservices" > Maria Anders\</ContactName >** 워크플로에서이 예제의 코드에 통합 될 수는 <xref:System.Activities.CodeActivity.Execute%2A> 는 의재정의<xref:System.Activities.CodeActivity>-사용자 지정 활동을 기반으로 하지만 사용 하 여 동일한 기능을 수행할는 <xref:System.Activities.Expressions.InvokeMethod%601> 활동입니다. 워크플로 작성자는 <xref:System.Activities.Expressions.InvokeMethod%601> 활동을 사용하여 클래스의 정적 메서드와 인스턴스 메서드를 호출할 수 있습니다. 이 활동에는 지정된 메서드를 비동기적으로 호출하는 옵션도 있습니다. 다음 예제에서는 <xref:System.Activities.Expressions.InvokeMethod%601> 활동이 <xref:System.Net.WebClient.DownloadString%2A> 클래스의 <xref:System.Net.WebClient> 메서드를 호출하도록 구성되며 고객의 목록을 반환합니다.  
+**\<ContactName xmlns = "http://schemas.microsoft.com/ado/2007/08/dataservices" > Maria Anders\</ContactName >** 워크플로에서이 예제의 코드에 통합 될 수는 <xref:System.Activities.CodeActivity.Execute%2A> 의 재정의 <xref:System.Activities.CodeActivity>-동일 하지만 사용자 지정 활동을 기반으로 기능을 사용 하 여 수행할 수도 있습니다는 <xref:System.Activities.Expressions.InvokeMethod%601> 활동입니다. 워크플로 작성자는 <xref:System.Activities.Expressions.InvokeMethod%601> 활동을 사용하여 클래스의 정적 메서드와 인스턴스 메서드를 호출할 수 있습니다. 이 활동에는 지정된 메서드를 비동기적으로 호출하는 옵션도 있습니다. 다음 예제에서는 <xref:System.Activities.Expressions.InvokeMethod%601> 활동이 <xref:System.Net.WebClient.DownloadString%2A> 클래스의 <xref:System.Net.WebClient> 메서드를 호출하도록 구성되며 고객의 목록을 반환합니다.  
   
  [!code-csharp[CFX_WCFDataServicesActivityExample#3](../../../samples/snippets/csharp/VS_Snippets_CFX/CFX_WCFDataServicesActivityExample/cs/Program.cs#3)]  
   
@@ -124,16 +125,16 @@ WCF Data Services는 REST(Representational State Transfer)의 의미 체계를 �
 **Raw data returned:**   
 **\<? xml 버전 "1.0" encoding = "utf-8" 독립 실행형 = = "yes"? >**   
 **\<피드**   
- **xml:base "http://services.odata.org/Northwind/Northwind.svc/" =**  
- **xmlns:d "http://schemas.microsoft.com/ado/2007/08/dataservices" =**  
- **xmlns:m "http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" =**  
+ **xml:base = "http://services.odata.org/Northwind/Northwind.svc/"**  
+ **xmlns:d = "http://schemas.microsoft.com/ado/2007/08/dataservices"**  
+ **xmlns:m = "http://schemas.microsoft.com/ado/2007/08/dataservices/metadata"**  
  **xmlns = "http://www.w3.org/2005/Atom" >**  
  **\<형식 제목 = "text" > Orders\<제목/>**  
- **\<id > http://services.odata.org/Northwind/Northwind.svc/Customers('ALFKI')/Orders\</id >**  
+ **\<id >http://services.odata.org/Northwind/Northwind.svc/Customers('ALFKI') orders\</id >**  
  **\<업데이트 > 2010-05-19T19:37:07Z\<업데이트 / >**  
  **\<연결 rel = "자체" title = "Orders" href = "Orders" / >**  
  **\<항목 >**  
- **\<id > http://services.odata.org/Northwind/Northwind.svc/Orders (10643)\</id >**  
+ **\<id >http://services.odata.org/Northwind/Northwind.svc/Orders(10643)\</id >**  
  **\<형식 제목 = "text" >\<제목/>**  
  **\<업데이트 > 2010-05-19T19:37:07Z\<업데이트 / >**  
  **\<작성자 >**  

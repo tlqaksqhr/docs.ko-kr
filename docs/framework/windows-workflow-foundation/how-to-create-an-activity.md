@@ -1,26 +1,27 @@
 ---
-title: "방법: 활동 만들기"
-ms.custom: 
+title: '방법: 활동 만들기'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: c09b1e99-21b5-4d96-9c04-ec31db3f4436
-caps.latest.revision: "39"
+caps.latest.revision: 39
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 4a3b9698d6a060120addff52e6600916a2de19fc
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 0d0d48d1e78efb3484f521958edf22d97ca8053d
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="how-to-create-an-activity"></a>방법: 활동 만들기
 활동은 [!INCLUDE[wf1](../../../includes/wf1-md.md)]에서 동작의 핵심 단위입니다. 활동의 실행 논리는 관리 코드에서 구현하거나 다른 활동을 사용하여 구현할 수 있습니다. 이 항목에서는 두 개의 활동을 만드는 방법을 보여 줍니다. 첫 번째 활동은 코드를 사용하여 실행 논리를 구현하는 간단한 활동입니다. 두 번째 활동의 구현은 다른 활동을 사용하여 정의됩니다. 이러한 활동은 자습서의 다음 단계에서 사용됩니다.  
@@ -44,7 +45,7 @@ ms.lasthandoff: 12/22/2017
 5.  **설치됨** 노드에서 **Visual C#**, **워크플로** (또는 **Visual Basic**, **워크플로**)를 차례로 선택합니다. 되도록 **.NET Framework 4.5** 에서 선택한는 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 버전 드롭다운 목록입니다. 선택 **활동 라이브러리** 에서 **워크플로** 목록입니다. 형식 `NumberGuessWorkflowActivities` 에 **이름** 상자 한 다음 클릭 **확인**합니다.  
   
     > [!NOTE]
-    >  기본 언어로 구성 된 프로그래밍 언어에 따라 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)], **Visual C#** 또는 **Visual Basic** 노드가 있을 수 있습니다는 **다른 언어**에서 노드는 **설치 됨** 노드.  
+    >  **설치됨** 노드의 **다른 언어** 노드 아래에는 Visual Studio에서 기본 언어로 구성된 프로그래밍 언어에 따라 **Visual C#** 또는 **Visual Basic** 노드가 표시될 수 있습니다.  
   
 6.  마우스 오른쪽 단추로 클릭 **Activity1.xaml** 에 **솔루션 탐색기** 선택 **삭제**합니다. **확인** 을 클릭하여 확인합니다.  
   

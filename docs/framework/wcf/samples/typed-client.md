@@ -1,24 +1,26 @@
 ---
-title: "형식화된 클라이언트"
-ms.custom: 
+title: 형식화된 클라이언트
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 62c40e8f-e9b4-4b1a-939a-93c37393d343
-caps.latest.revision: "22"
+caps.latest.revision: 22
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: edad174ac5977aabf6c3fb410ede6ab07b85e4aa
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 638b4a82a5407cbfbe15b75f6f1bfda27367b174
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="typed-client"></a>형식화된 클라이언트
 에 의해 생성 된 형식화 된 클라이언트에서 정보를 가져오는 방법을 보여 줍니다는 [ServiceModel Metadata 유틸리티 도구 (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)합니다. 이 샘플에 따라는 [시작](../../../../docs/framework/wcf/samples/getting-started-sample.md) 계산기 서비스를 구현 하는 합니다. 이 샘플에서 클라이언트는 콘솔 응용 프로그램(.exe)이고 서비스는 IIS(인터넷 정보 서비스)를 통해 호스트됩니다.  
@@ -28,7 +30,7 @@ ms.lasthandoff: 12/22/2017
   
  클라이언트의 `Endpoint` 속성을 사용하면 클라이언트가 통신 중인 서비스 끝점에 대한 정보(예: 주소, 바인딩 및 계약 정보)에 액세스할 수 있습니다. 클라이언트의 `InnerChannel` 속성은 <xref:System.ServiceModel.IClientChannel>의 인스턴스로서 기본 채널에 대한 정보(예: 상태, 세션 식별자)에 액세스할 수 있게 합니다.  
   
-```  
+```csharp   
 // Create a client.  
 CalculatorClient client = new CalculatorClient();  
 ...  

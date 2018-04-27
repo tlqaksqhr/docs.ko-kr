@@ -1,24 +1,26 @@
 ---
-title: "메시지 큐에 대한 메시지 보안"
-ms.custom: 
+title: 메시지 큐에 대한 메시지 보안
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 329aea9c-fa80-45c0-b2b9-e37fd7b85b38
-caps.latest.revision: "22"
+caps.latest.revision: 22
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: a63c89e969f7a245dcf14d87872b8d629f1ee846
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: aeb0e66c5bad2b2d03a08560e1021b57e793ad55
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="message-security-over-message-queuing"></a>메시지 큐에 대한 메시지 보안
 이 샘플에서는 클라이언트에 대해 X.509v3 인증서를 통한 WS-Security 인증을 사용하며 MSMQ를 통해 서버의 X.509v3 인증서를 사용한 서버 인증을 수행해야 하는 응용 프로그램의 구현 방법을 보여 줍니다. 메시지 보안에서는 MSMQ 저장소에 있는 메시지의 암호화가 유지되며 응용 프로그램에서 메시지의 자체 인증을 수행할 수 있도록 하는 것이 더 좋습니다.  
@@ -105,8 +107,8 @@ ms.lasthandoff: 01/19/2018
   
 ## <a name="description"></a>설명  
  샘플 클라이언트 및 서비스 코드는 단계와 동일는 [트랜잭션 된 MSMQ 바인딩](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md) 한 가지 차이점 샘플입니다. 작업 계약에는 보호 수준에서 주석을 달아야 하기 때문에 메시지에 서명과 암호화가 필요합니다.  
-  
-```  
+
+```csharp
 // Define a service contract.   
 [ServiceContract(Namespace="http://Microsoft.ServiceModel.Samples")]  
 public interface IOrderProcessor  
@@ -114,8 +116,8 @@ public interface IOrderProcessor
     [OperationContract(IsOneWay = true, ProtectionLevel=ProtectionLevel.EncryptAndSign)]  
     void SubmitPurchaseOrder(PurchaseOrder po);  
 }  
-```  
-  
+```
+
  필수 토큰을 사용하여 서비스 및 클라이언트를 식별하는 방식으로 메시지를 보호할 수 있도록 App.config에는 자격 증명 정보가 포함됩니다.  
   
  클라이언트 구성에서는 서비스를 인증할 서비스 인증서를 지정합니다. 여기서는 LocalMachine 저장소를 서비스의 유효성에 의존하는 신뢰할 수 있는 저장소로 사용합니다. 여기서는 클라이언트의 서비스 인증을 위해 메시지와 함께 첨부되는 클라이언트 인증서도 지정합니다.  
@@ -256,29 +258,29 @@ public interface IOrderProcessor
   
  이 샘플에서는 다음 샘플 코드에서와 같이 구성을 이용하여 인증을 제어하는 방법과 보안 컨텍스트에서 호출자의 ID를 가져오는 방법을 보여 줍니다.  
   
-```  
-    // Service class which implements the service contract.  
-    // Added code to write output to the console window.  
-    public class OrderProcessorService : IOrderProcessor  
+```csharp
+// Service class which implements the service contract.  
+// Added code to write output to the console window.  
+public class OrderProcessorService : IOrderProcessor  
+{  
+    private string GetCallerIdentity()  
     {  
-        private string GetCallerIdentity()  
-        {  
-            // The client certificate is not mapped to a Windows identity by default.  
-            // ServiceSecurityContext.PrimaryIdentity is populated based on the information  
-            // in the certificate that the client used to authenticate itself to the service.  
-            return ServiceSecurityContext.Current.PrimaryIdentity.Name;  
-        }  
-  
-        [OperationBehavior(TransactionScopeRequired = true, TransactionAutoComplete = true)]  
-        public void SubmitPurchaseOrder(PurchaseOrder po)  
-        {  
-            Console.WriteLine("Client's Identity {0} ", GetCallerIdentity());  
-            Orders.Add(po);  
-            Console.WriteLine("Processing {0} ", po);  
-        }  
+        // The client certificate is not mapped to a Windows identity by default.  
+        // ServiceSecurityContext.PrimaryIdentity is populated based on the information  
+        // in the certificate that the client used to authenticate itself to the service.  
+        return ServiceSecurityContext.Current.PrimaryIdentity.Name;  
+    }  
+
+    [OperationBehavior(TransactionScopeRequired = true, TransactionAutoComplete = true)]  
+    public void SubmitPurchaseOrder(PurchaseOrder po)  
+    {  
+        Console.WriteLine("Client's Identity {0} ", GetCallerIdentity());  
+        Orders.Add(po);  
+        Console.WriteLine("Processing {0} ", po);  
+    }  
   //…  
 }  
-```  
+```
   
  서비스 코드를 실행하면 클라이언트 ID가 표시됩니다. 다음은 서비스 코드의 출력 샘플입니다.  
   
@@ -302,7 +304,7 @@ Processing Purchase Order: 6536e097-da96-4773-9da3-77bab4345b5d
   
      배치 파일의 다음 줄에서는 클라이언트 인증서를 만듭니다. 지정된 클라이언트 이름은 만든 인증서의 제목 이름에 사용됩니다. 인증서는 `My` 저장소 위치에 있는 `CurrentUser` 저장소에 저장됩니다.  
   
-    ```  
+    ```bat
     echo ************  
     echo making client cert  
     echo ************  
@@ -313,7 +315,7 @@ Processing Purchase Order: 6536e097-da96-4773-9da3-77bab4345b5d
   
      배치 파일의 다음 줄에서는 서버에서 관련된 신뢰 여부를 결정할 수 있도록 서버의 TrustedPeople 저장소에 클라이언트 인증서를 복사합니다. TrustedPeople 저장소에 설치된 인증서를 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 서비스에서 신뢰하려면 클라이언트 인증서 유효성 검사 모드를 `PeerOrChainTrust` 또는 `PeerTrust` 값으로 설정해야 합니다. 구성 파일을 사용하여 이런 작업을 수행하는 방법을 보려면 앞서 소개된 서비스 구성 샘플을 참조하십시오.  
   
-    ```  
+    ```bat
     echo ************  
     echo copying client cert to server's LocalMachine store  
     echo ************  
@@ -324,7 +326,7 @@ Processing Purchase Order: 6536e097-da96-4773-9da3-77bab4345b5d
   
      Setup.bat 배치 파일에서 다음 줄은 사용할 서버 인증서를 만듭니다.  
   
-    ```  
+    ```bat  
     echo ************  
     echo Server cert setup starting  
     echo %SERVER_NAME%  

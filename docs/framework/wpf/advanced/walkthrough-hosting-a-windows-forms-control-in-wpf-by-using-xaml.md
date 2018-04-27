@@ -1,28 +1,28 @@
 ---
-title: "연습: XAML을 사용하여 WPF에서 Windows Forms 컨트롤 호스팅"
-ms.custom: 
+title: '연습: XAML을 사용하여 WPF에서 Windows Forms 컨트롤 호스팅'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-wpf
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - hosting Windows Forms control in WPF [WPF]
 ms.assetid: 1aef42cb-4cfb-44b4-9a7a-c02632d3d9c7
-caps.latest.revision: 
+caps.latest.revision: 34
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 65afce3e5a5b113b5243d68fd3b35231e2d92f86
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 49d5a998cfa9465bc17a6acd2a459a6ef2c28cff
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="walkthrough-hosting-a-windows-forms-control-in-wpf-by-using-xaml"></a>연습: XAML을 사용하여 WPF에서 Windows Forms 컨트롤 호스팅
 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]에서는 풍부한 기능 집합이 있는 많은 컨트롤을 제공합니다. 그러나, 때때로 경우도 있습니다 사용할 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 컨트롤에 사용자 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 페이지입니다. 예를 들어 기존 상당한 투자를 해야 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 컨트롤 또는 있습니다 있을 수는 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 고유 기능을 제공 하는 컨트롤입니다.  
@@ -31,7 +31,7 @@ ms.lasthandoff: 01/19/2018
   
  이 연습에 나와 있는 작업의 전체 코드 목록을 보려면 [wpf XAML 예제를 사용 하 여 Windows Forms 컨트롤 호스팅](http://go.microsoft.com/fwlink/?LinkID=160000)합니다.  
   
-## <a name="prerequisites"></a>필수 구성 요소  
+## <a name="prerequisites"></a>전제 조건  
  이 연습을 완료하려면 다음 구성 요소가 필요합니다.  
   
 -   [!INCLUDE[vs_dev10_long](../../../../includes/vs-dev10-long-md.md)].  
@@ -50,7 +50,7 @@ ms.lasthandoff: 01/19/2018
   
 3.  MainWindow.xaml의 열은 [!INCLUDE[wpfdesigner_current_short](../../../../includes/wpfdesigner-current-short-md.md)]합니다.  
   
-4.  에 <xref:System.Windows.Window> 요소를 다음 네임 스페이스 매핑을 추가 합니다. `wf` 네임 스페이스 매핑은 포함 된 어셈블리에 대 한 참조는 [!INCLUDE[TLA2#tla_winforms](../../../../includes/tla2sharptla-winforms-md.md)] 제어 합니다.  
+4.  에 <xref:System.Windows.Window> 요소를 다음 네임 스페이스 매핑을 추가 합니다. `wf` 네임 스페이스 매핑을 Windows Forms 컨트롤을 포함 하는 어셈블리에 대 한 참조를 설정 합니다.  
   
     ```xaml  
     xmlns:wf="clr-namespace:System.Windows.Forms;assembly=System.Windows.Forms"  

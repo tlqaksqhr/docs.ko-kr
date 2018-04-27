@@ -1,24 +1,26 @@
 ---
 title: Poison Message Handling in MSMQ 4.0
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: ec8d59e3-9937-4391-bb8c-fdaaf2cbb73e
-caps.latest.revision: "18"
+caps.latest.revision: 18
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 32d7c7a93636cbe0086cfbcb5fd1e401a2f013fb
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 6f2361ed862986d2490968ae422b9b1313eedea3
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="poison-message-handling-in-msmq-40"></a>Poison Message Handling in MSMQ 4.0
 이 샘플에서는 서비스에서 포이즌 메시지 처리를 수행하는 방법을 보여 줍니다. 이 샘플에 따라는 [트랜잭션 된 MSMQ 바인딩](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md) 샘플. 이 샘플에서는 `netMsmqBinding`을 사용합니다. 이 서비스는 자체적으로 호스트되는 콘솔 응용 프로그램으로서 이를 사용하여 서비스에서 대기된 메시지를 받는 것을 볼 수 있습니다.  
@@ -49,19 +51,19 @@ ms.lasthandoff: 12/22/2017
  이 샘플에서는 포이즌 메시지에 `Move` 처리를 사용하는 방법을 보여 줍니다. `Move`를 사용하면 메시지가 포이즌 하위 큐로 이동합니다.  
   
  서비스 계약은 `IOrderProcessor`이며, 이는 큐에 사용하기에 적합한 단방향 서비스를 정의합니다.  
-  
-```  
+
+```csharp
 [ServiceContract(Namespace="http://Microsoft.ServiceModel.Samples")]  
 public interface IOrderProcessor  
 {  
     [OperationContract(IsOneWay = true)]  
     void SubmitPurchaseOrder(PurchaseOrder po);  
 }  
-```  
-  
+```
+
  서비스 작업에는 주문을 처리하고 있다는 메시지가 표시됩니다. 포이즌 메시지 기능을 보여 주기 위해 `SubmitPurchaseOrder` 서비스 작업에서는 서비스를 임의로 호출하여 트랜잭션을 롤백하는 예외를 throw합니다. 그러면 메시지는 큐로 돌아가서, 포이즌 메시지로 표시됩니다. 구성은 포이즌 메시지를 포이즌 하위 큐로 이동하도록 설정됩니다.  
-  
-```  
+
+```csharp
 // Service class that implements the service contract.  
 // Added code to write output to the console window.  
 public class OrderProcessorService : IOrderProcessor  
@@ -127,8 +129,8 @@ public class OrderProcessorService : IOrderProcessor
   
     }  
 }  
-```  
-  
+```
+
  서비스 구성에는 다음 구성 파일에 표시된 `receiveRetryCount`, `maxRetryCycles`, `retryCycleDelay` 및 `receiveErrorHandling`와 같은 포이즌 메시지 속성이 포함됩니다.  
   
 ```xml  
@@ -171,8 +173,8 @@ public class OrderProcessorService : IOrderProcessor
  포이즌 메시지 큐의 메시지는 메시지를 처리 중인 서비스로 주소가 지정되는 메시지입니다. 이 서비스는 포이즌 메시지 서비스 끝점과 다를 수 있습니다. 따라서 포이즌 메시지 서비스가 큐에서 메시지를 읽으면 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 채널 계층은 끝점에서 불일치를 발견하고 메시지를 디스패치하지 않습니다. 이 경우 메시지의 주소는 주문 처리 서비스로 지정되지만 포이즌 메시지 서비스에서 메시지를 받게 됩니다. 메시지의 주소가 다른 끝점으로 지정되는 경우에도 메시지를 계속 받으려면 `ServiceBehavior`를 추가하여 메시지 주소가 지정된 서비스 끝점과 일치하는 주소를 필터링해야 합니다. 포이즌 메시지 큐에서 읽은 메시지를 성공적으로 처리하려면 이러한 구성이 필요합니다.  
   
  포이즌 메시지 서비스 구현 자체는 서비스 구현과 매우 유사합니다. 이 구현에서는 계약을 구현하고 주문을 처리합니다. 코드 예제는 다음과 같습니다.  
-  
-```  
+
+```csharp
 // Service class that implements the service contract.  
 // Added code to write output to the console window.  
 [ServiceBehavior(AddressFilterMode=AddressFilterMode.Any)]  
@@ -215,8 +217,8 @@ public class OrderProcessorService : IOrderProcessor
             serviceHost.Close();  
         }  
     }  
-```  
-  
+```
+
  주문 큐에서 메시지를 읽는 주문 처리 서비스와 달리 포이즌 메시지 서비스는 포이즌 하위 큐에서 메시지를 읽습니다. 포이즌 큐는 기본 큐의 하위 큐로서 "poison"이라는 이름이 지정되고 MSMQ에서 자동으로 생성됩니다. 이 큐에 액세스하려면 다음 샘플 구성처럼 기본 큐 이름, ";" 및 하위 큐 이름(여기서는 -"poison")을 차례로 입력합니다.  
   
 > [!NOTE]
@@ -325,7 +327,7 @@ Processing Purchase Order: 23e0b991-fbf9-4438-a0e2-20adf93a4f89
     > [!NOTE]
     >  `security mode`를 `None`으로 설정하는 것은 `MsmqAuthenticationMode`, `MsmqProtectionLevel` 및 `Message` 보안을 `None`으로 설정하는 것과 같습니다.  
   
-3.  메타데이터 교환을 작동하기 위해 http 바인딩을 사용하여 URL을 등록합니다. 이렇게 하려면 권한이 높은 명령 창에서 서비스를 실행해야 합니다. 그렇지 않으면 "처리되지 않은 예외: System.ServiceModel.AddressAccessDeniedException: HTTP가 URL http://+:8000/ServiceModelSamples/service/을(를) 등록할 수 없습니다. 사용자의 프로세스에 이 네임스페이스에 액세스할 수 있는 권한이 없습니다(자세한 내용은 http://go.microsoft.com/fwlink/?LinkId=70353 참조). ---> System.Net.HttpListenerException: 액세스가 거부되었습니다."와 같은 예외가 발생합니다.  
+3.  메타데이터 교환을 작동하기 위해 http 바인딩을 사용하여 URL을 등록합니다. 이렇게 하려면 권한이 높은 명령 창에서 서비스를 실행해야 합니다. 그렇지 않으면 예외가 같은: 처리 되지 않은 예외: System.ServiceModel.AddressAccessDeniedException: HTTP URL을 등록 하지 못했습니다 http://+:8000/ServiceModelSamples/service/합니다. 프로세스에이 네임 스페이스에 액세스 권한이 없습니다 (참조 http://go.microsoft.com/fwlink/?LinkId=70353 세부 정보에 대 한). ---> System.Net.HttpListenerException: 액세스가 거부되었습니다."와 같은 예외가 발생합니다.  
   
 > [!IMPORTANT]
 >  컴퓨터에 이 샘플이 이미 설치되어 있을 수도 있습니다. 계속하기 전에 다음(기본) 디렉터리를 확인하세요.  

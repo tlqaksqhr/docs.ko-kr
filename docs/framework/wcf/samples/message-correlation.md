@@ -1,24 +1,26 @@
 ---
-title: "메시지 상관 관계"
-ms.custom: 
+title: 메시지 상관 관계
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 3f62babd-c991-421f-bcd8-391655c82a1f
-caps.latest.revision: "26"
+caps.latest.revision: 26
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 95336c55b2c3e83e2bd68bb653bbaacc446d8934
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 52dd8d66a4a28b515ebfaee88c4383889839fff0
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="message-correlation"></a>메시지 상관 관계
 이 샘플에서는 MSMQ(메시지 큐) 응용 프로그램에서 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 서비스로 MSMQ 메시지를 보내는 방법과 요청/응답 시나리오의 발신자 응용 프로그램과 수신자 응용 프로그램 간에 메시지를 상호 연결하는 방법을 보여 줍니다. 이 샘플에서는 msmqIntegrationBinding 바인딩을 사용합니다. 이 경우 서비스는 자체 호스팅 콘솔 응용 프로그램으로, 이를 사용하여 대기 중인 메시지를 받는 서비스를 확인할 수 있습니다. k  
@@ -28,8 +30,8 @@ ms.lasthandoff: 12/22/2017
  `IOrderProcessor` 서비스 계약은 큐에 사용하기 적합한 단방향 서비스 작업을 정의합니다. MSMQ 메시지에는 동작 헤더가 없기 때문에 여러 MSMQ 메시지를 작업 계약에 자동으로 매핑할 수 없습니다. 따라서 이 경우에는 한 작업 계약만 있을 수 있습니다. 서비스에 좀더 많은 작업 계약을 정의하려는 경우 응용 프로그램은 발송할 작업 계약을 결정하는 데 사용할 수 있는 MSMQ 메시지의 헤더에 대한 정보(예: 레이블 또는 correlationID)를 제공해야 합니다. 이 확인할는 [사용자 지정 Demux](../../../../docs/framework/wcf/samples/custom-demux.md)합니다.  
   
  MSMQ 메시지에는 작업 계약의 다른 매개 변수에 매핑되는 헤더에 대한 정보도 포함되지 않습니다. 따라서 작업 계약에는 한 매개 변수만 있을 수 있습니다. 이 매개 변수는 형식 <!--zz <xref:System.ServiceModel.MSMQIntegration.MsmqMessage%601>`MsmqMessage<T>`--> , `System.ServiceModel.MSMQIntegration.MsmqMessage` 는 기본 MSMQ 메시지를 포함 하 합니다. `MsmqMessage<T>` 클래스의 "T" 형식은 MSMQ 메시지 본문에 serialize되는 데이터를 나타냅니다. 이 샘플에서는 `PurchaseOrder` 형식이 MSMQ 메시지 본문으로 serialize됩니다.  
-  
-```  
+
+```csharp
 [ServiceContract(Namespace = "http://Microsoft.ServiceModel.Samples")]  
 [ServiceKnownType(typeof(PurchaseOrder))]  
 public interface IOrderProcessor  
@@ -37,11 +39,11 @@ public interface IOrderProcessor
     [OperationContract(IsOneWay = true, Action = "*")]  
     void SubmitPurchaseOrder(MsmqMessage<PurchaseOrder> msg);  
 }  
-```  
-  
+```
+
  서비스 작업을 통해 구매 주문을 처리하고 구매 주문의 내용과 상태를 서비스 콘솔 창에 표시합니다. <xref:System.ServiceModel.OperationBehaviorAttribute>를 통해 트랜잭션에 작업을 큐로 나열하고 작업이 반환되면 트랜잭션이 완료된 것으로 표시하도록 구성합니다. `PurchaseOrder`에는 서비스에서 처리해야 할 주문 세부 정보가 포함되어 있습니다.  
-  
-```  
+
+```csharp
 // Service class that implements the service contract.  
 public class OrderProcessorService : IOrderProcessor  
 {  
@@ -74,13 +76,13 @@ public class OrderProcessorService : IOrderProcessor
         client.Close();  
     }  
 }  
-```  
-  
+```
+
  서비스는 사용자 지정 클라이언트 `OrderResponseClient`를 사용하여 MSMQ 메시지를 큐에 보냅니다. 메시지를 받아 처리하는 응용 프로그램은 MSMQ 응용 프로그램이고 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 응용 프로그램이 아니기 때문에 두 응용 프로그램 사이에 암시적인 서비스 계약은 없습니다. 따라서 이 시나리오에서는 Svcutil.exe 도구를 사용하여 프록시를 만들 수 없습니다.  
   
  기본적으로 사용자 지정 프록시는 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 바인딩을 사용하여 메시지를 보내는 모든 `msmqIntegrationBinding` 응용 프로그램에서 동일합니다. 하지만 다른 프록시와 달리 사용자 지정 프록시에는 일정 범위의 서비스 작업이 포함되지 않습니다. 메시지 제출 작업으로만 한정됩니다.  
-  
-```  
+
+```csharp
 [System.ServiceModel.ServiceContractAttribute(Namespace = "http://Microsoft.ServiceModel.Samples")]  
 public interface IOrderResponse  
 {  
@@ -108,11 +110,11 @@ public partial class OrderResponseClient : System.ServiceModel.ClientBase<IOrder
         base.Channel.SendOrderResponse(msg);  
     }  
 }  
-```  
-  
+```
+
  서비스는 자체 호스트됩니다. MSMQ 통합 전송을 사용하는 경우에는 사용되는 큐를 미리 만들어야 합니다. 수동으로 또는 코드를 통해 이 작업을 수행할 수 있습니다. 이 샘플의 서비스에는 큐가 있는지 확인하고 필요한 경우 만드는 <xref:System.Messaging> 코드가 포함되어 있습니다. 큐 이름은 구성 파일에서 읽습니다.  
-  
-```  
+
+```csharp
 public static void Main()  
 {  
        // Get the MSMQ queue name from application settings in configuration.  
@@ -134,7 +136,7 @@ public static void Main()
             serviceHost.Close();  
       }  
 }  
-```  
+```
   
  주문 요청을 받는 MSMQ 큐는 구성 파일의 appSettings 섹션에 지정됩니다. 클라이언트 끝점과 서비스 끝점은 구성 파일의 system.serviceModel 섹션에 정의됩니다. 둘 다 `msmqIntegrationbinding` 바인딩을 지정합니다.  
   
@@ -176,8 +178,8 @@ public static void Main()
 ```  
   
  클라이언트 응용 프로그램은 <xref:System.Messaging>을 사용하여 지속적인 메시지와 트랜잭션 메시지를 큐로 보냅니다. 메시지 본문에는 구매 주문이 포함됩니다.  
-  
-```  
+
+```csharp
 static void PlaceOrder()  
 {  
     //Connect to the queue  
@@ -219,8 +221,8 @@ static void PlaceOrder()
     orderMessageID = msg.Id;  
     Console.WriteLine("Placed the order, waiting for response...");  
 }  
-```  
-  
+```
+
  주문 응답을 받는 MSMQ 큐는 다음 샘플 구성에 표시된 것처럼 구성 파일의 appSettings 섹션에 지정됩니다.  
   
 > [!NOTE]
@@ -233,8 +235,8 @@ static void PlaceOrder()
 ```  
   
  클라이언트 응용 프로그램은 서비스로 보내는 주문 요청 메시지의 `messageID`를 저장하고 서비스의 응답을 기다립니다. 큐에 응답이 도착하면 클라이언트는 메시지의 `correlationID` 속성을 사용하여 보낸 주문 메시지와 응답 메시지를 상호 연결합니다. 여기에는 클라이언트에서 원래 서비스로 보낸 주문 메시지의 `messageID`가 포함되어 있습니다.  
-  
-```  
+
+```csharp
 static void DisplayOrderStatus()  
 {  
     MessageQueue orderResponseQueue = new   
@@ -273,8 +275,8 @@ static void DisplayOrderStatus()
     }  
   }  
 }  
-```  
-  
+```
+
  샘플을 실행하면 클라이언트 및 서비스 동작이 서비스 콘솔 창과 클라이언트 콘솔 창에 모두 표시됩니다. 클라이언트의 서비스 수신 메시지를 확인하고 클라이언트로 다시 응답을 보낼 수 있습니다. 클라이언트는 서비스로부터 받은 응답을 표시합니다. 서비스와 클라이언트를 종료하려면 각 콘솔 창에서 Enter 키를 누릅니다.  
   
 > [!NOTE]

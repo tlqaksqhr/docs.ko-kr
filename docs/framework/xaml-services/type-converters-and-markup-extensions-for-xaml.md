@@ -1,12 +1,13 @@
 ---
-title: "XAML을 위한 형식 변환기 및 태그 확장명"
-ms.custom: 
+title: XAML을 위한 형식 변환기 및 태그 확장명
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - XAML [XAML Services], type converter services
@@ -15,16 +16,17 @@ helpviewer_keywords:
 - value converters for XAML [XAML Services]
 - XAML [XAML Services], service context
 ms.assetid: db07a952-05ce-4aa4-b6f9-aac7397d0326
-caps.latest.revision: "13"
+caps.latest.revision: 13
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 946049cea6c9148d600cb50e6d49a4cc686c6d2d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 6425685083c3b73d75d2d7c8a4509ae035542085
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="type-converters-and-markup-extensions-for-xaml"></a>XAML을 위한 형식 변환기 및 태그 확장명
 형식 변환기 및 태그 확장은 XAML 형식 시스템과 XAML 작성기가 개체 그래프 구성 요소를 생성하는 데 사용하는 두 가지 기술입니다. 일부 특징을 공유하지만 형식 변환기 및 태그 확장은 XAML 노드 스트림에서 다르게 표현됩니다. 이 설명서 집합에서는 때때로 형식 변환기, 태그 확장 및 유사한 구문을 총체적으로 값 변환기라고 합니다.  
@@ -56,7 +58,7 @@ ms.lasthandoff: 12/22/2017
  XAML에 대한 태그 확장 구현 패턴에 대한 자세한 내용은 [Markup Extensions for XAML Overview](../../../docs/framework/xaml-services/markup-extensions-for-xaml-overview.md).  
   
 > [!NOTE]
->  <xref:System.Windows.Markup.MarkupExtension> 및 <xref:System.Windows.Markup.ValueSerializer> 형식은 둘 다 <xref:System.Windows.Markup> 네임스페이스에 있고 <xref:System.Xaml> 네임스페이스에는 없습니다. 이러한 형식이 그렇지 않을 경우 [!INCLUDE[TLA2#tla_winforms](../../../includes/tla2sharptla-winforms-md.md)] 문자열을 포함하는 CLR 네임스페이스를 채우는 WPF 또는 `Windows`기술과 관련이 있다는 의미는 아닙니다. <xref:System.Windows.Markup.MarkupExtension> 및 <xref:System.Windows.Markup.ValueSerializer> 는 System.Xaml 어셈블리에 있으며 특정 프레임워크 종속성이 없습니다. 이러한 형식은 [!INCLUDE[net_v30_short](../../../includes/net-v30-short-md.md)] 에 대한 CLR 네임스페이스에 있었으며 기존 WPF 프로젝트의 참조 손상을 방지하기 위해 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] 에서 CLR 네임스페이스에 유지됩니다. 자세한 내용은 [Types Migrated from WPF to System.Xaml](../../../docs/framework/xaml-services/types-migrated-from-wpf-to-system-xaml.md)을 참조하세요.  
+>  <xref:System.Windows.Markup.MarkupExtension> 및 <xref:System.Windows.Markup.ValueSerializer> 형식은 둘 다 <xref:System.Windows.Markup> 네임스페이스에 있고 <xref:System.Xaml> 네임스페이스에는 없습니다. 이러한 유형은 특정 문자열을 포함 하는 CLR 네임 스페이스를 채우는 WPF 또는 Windows Forms 기술을 `Windows`합니다. <xref:System.Windows.Markup.MarkupExtension> 및 <xref:System.Windows.Markup.ValueSerializer> 는 System.Xaml 어셈블리에 있으며 특정 프레임워크 종속성이 없습니다. 이러한 형식은 [!INCLUDE[net_v30_short](../../../includes/net-v30-short-md.md)] 에 대한 CLR 네임스페이스에 있었으며 기존 WPF 프로젝트의 참조 손상을 방지하기 위해 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] 에서 CLR 네임스페이스에 유지됩니다. 자세한 내용은 [Types Migrated from WPF to System.Xaml](../../../docs/framework/xaml-services/types-migrated-from-wpf-to-system-xaml.md)을 참조하세요.  
   
 <a name="value_serializers"></a>   
 ## <a name="value-serializers"></a>값 직렬 변환기  

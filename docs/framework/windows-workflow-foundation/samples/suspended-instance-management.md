@@ -1,23 +1,24 @@
 ---
-title: "일시 중단된 인스턴스 관리"
-ms.custom: 
+title: 일시 중단된 인스턴스 관리
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: f5ca3faa-ba1f-4857-b92c-d927e4b29598
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 6e04f1e2f334993975b2c4261efdc28ba318dfa3
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 5f5073e9de217637141d7e3c9d70bb6a0b7a9cd0
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="suspended-instance-management"></a>일시 중단된 인스턴스 관리
 이 샘플에서는 일시 중단된 워크플로 인스턴스를 관리하는 방법을 보여 줍니다.  <xref:System.ServiceModel.Activities.Description.WorkflowUnhandledExceptionBehavior>의 기본 동작은 `AbandonAndSuspend`입니다. 즉, 기본적으로 <xref:System.ServiceModel.WorkflowServiceHost>에서 호스트되는 워크플로 인스턴스에서 처리되지 않은 예외가 throw될 경우 인스턴스가 메모리에서 삭제(중단)되고 영속/지속적 버전의 인스턴스는 일시 중단된 인스턴스로 표시됩니다. 일시 중단된 워크플로 인스턴스는 일시 중단이 해제될 때까지 실행할 수 없습니다.  
@@ -25,7 +26,7 @@ ms.lasthandoff: 12/22/2017
  이 샘플에서는 일시 중단된 인스턴스를 쿼리하는 명령줄 유틸리티를 구현하는 방법과 사용자에게 해당 인스턴스를 다시 시작하거나 종료하는 옵션을 제공하는 방법을 보여 줍니다. 이 샘플에서는 워크플로 서비스가 의도적으로 예외를 throw하여 일시 중단 상태가 됩니다. 그런 다음 명령줄 유틸리티를 사용하여 인스턴스를 쿼리하고 이후에 인스턴스를 다시 시작하거나 종료할 수 있습니다.  
   
 ## <a name="demonstrates"></a>세부 항목  
- <xref:System.ServiceModel.WorkflowServiceHost>에서 <xref:System.ServiceModel.Activities.Description.WorkflowUnhandledExceptionBehavior> 및 <xref:System.ServiceModel.Activities.WorkflowControlEndpoint>가 있는 [!INCLUDE[wf](../../../../includes/wf-md.md)]  
+ <xref:System.ServiceModel.WorkflowServiceHost> 와 <xref:System.ServiceModel.Activities.Description.WorkflowUnhandledExceptionBehavior> 및 <xref:System.ServiceModel.Activities.WorkflowControlEndpoint> Windows WF (Workflow Foundation)에 있습니다.  
   
 ## <a name="discussion"></a>토론  
  이 샘플에서 구현하는 명령줄 유틸리티는 [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]에서 제공되는 SQL 인스턴스 저장소 구현에 따라 다릅니다. 인스턴스 저장소의 사용자 지정 구현이 있는 경우 샘플의 `WorkflowInstanceCommand` 구현을 현재 인스턴스 저장소와 관련된 구현으로 바꿔 이 유틸리티를 적용할 수 있습니다.  

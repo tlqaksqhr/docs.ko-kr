@@ -1,26 +1,27 @@
 ---
-title: "Windows Workflow 아키텍처"
-ms.custom: 
+title: Windows Workflow 아키텍처
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 1d4c6495-d64a-46d0-896a-3a01fac90aa9
-caps.latest.revision: "20"
+caps.latest.revision: 20
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ed13d7885cb8abd760aed6bd5812cb8b7c75bc02
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: a3a59369738ada0c6b770d272afa9c6c79c2ce01
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="windows-workflow-architecture"></a>Windows Workflow 아키텍처
-[!INCLUDE[wf](../../../includes/wf-md.md)]에서는 대화형 장기 실행 응용 프로그램 개발을 위한 추상화 수준을 생성합니다. 작업 단위는 활동으로 캡슐화됩니다. 또한 활동은 흐름 제어, 예외 처리, 오류 전파, 상태 데이터 지속성, 메모리에서 진행 중인 워크플로 로드 및 언로드, 추적, 트랜잭션 흐름 등과 같은 기능을 제공하는 환경에서 실행됩니다.  
+Windows WF (Workflow Foundation)에 대화형 장기 실행 응용 프로그램을 개발 하기 위한 추상화 수준을 생성 합니다. 작업 단위는 활동으로 캡슐화됩니다. 또한 활동은 흐름 제어, 예외 처리, 오류 전파, 상태 데이터 지속성, 메모리에서 진행 중인 워크플로 로드 및 언로드, 추적, 트랜잭션 흐름 등과 같은 기능을 제공하는 환경에서 실행됩니다.  
   
 ## <a name="activity-architecture"></a>활동 아키텍처  
  활동은 <xref:System.Activities.Activity>, <xref:System.Activities.CodeActivity>, <xref:System.Activities.AsyncCodeActivity> 또는 <xref:System.Activities.NativeActivity>에서 파생되는 CLR 형식 또는 <xref:System.Activities.Activity%601>, <xref:System.Activities.CodeActivity%601>, <xref:System.Activities.AsyncCodeActivity%601> 또는 <xref:System.Activities.NativeActivity%601> 값을 반환하는 변형으로 개발됩니다. <xref:System.Activities.Activity>에서 파생되는 개발 활동을 사용하면 기존 활동을 어셈블하여 워크플로 환경에서 실행되는 작업 단위를 신속하게 만들 수 있습니다. 반면 <xref:System.Activities.CodeActivity>를 사용하면 주로 <xref:System.Activities.CodeActivityContext>를 통해 관리 코드에서 활동 인수에 액세스하는 데 필요한 실행 논리를 작성할 수 있습니다. <xref:System.Activities.AsyncCodeActivity>는 비동기 작업을 구현하는 데 사용할 수 있다는 점을 제외하고 <xref:System.Activities.CodeActivity>와 비슷합니다. <xref:System.Activities.NativeActivity>에서 파생되는 활동을 개발하면 자식 예약, 책갈피 만들기, 비동기 작업 호출, 트랜잭션 등록 등과 같은 기능에 <xref:System.Activities.NativeActivityContext>를 통해 런타임에 액세스할 수 있습니다.  

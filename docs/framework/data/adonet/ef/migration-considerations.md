@@ -1,24 +1,26 @@
 ---
-title: "마이그레이션 고려 사항(Entity Framework)"
-ms.custom: 
+title: 마이그레이션 고려 사항(Entity Framework)
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: c85b6fe8-cc32-4642-8f0a-dc0e5a695936
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 8e4c1b06e5a3a7717b99379fd9bca2c5a8a14a6a
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: c31d7d481d5016b8f2d440f8a727e5bfcf66717c
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="migration-considerations-entity-framework"></a>마이그레이션 고려 사항(Entity Framework)
 [!INCLUDE[vstecado](../../../../../includes/vstecado-md.md)] Entity Framework를 사용하면 기존 응용 프로그램보다 몇 가지 이점이 있습니다. 가장 중요한 이점 중 하나는 개념적 모델을 사용하여 응용 프로그램에서 사용되는 데이터 구조를 데이터 소스의 스키마와 구분할 수 있다는 것입니다. 이렇게 하면 응용 프로그램을 적절하게 변경하지 않아도 나중에 저장소 모델이나 데이터 소스 자체를 쉽게 변경할 수 있습니다. 사용 하 여의 이점에 대 한 자세한 내용은 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)], 참조 [Entity Framework 개요](../../../../../docs/framework/data/adonet/ef/overview.md) 및 [엔터티 데이터 모델](../../../../../docs/framework/data/adonet/entity-data-model.md)합니다.  
@@ -44,7 +46,7 @@ ms.lasthandoff: 01/19/2018
   
 1.  응용 프로그램을 업그레이드합니다.  
   
-     이전 버전을 사용 하 여 만든 프로젝트 [!INCLUDE[vsprvs](../../../../../includes/vsprvs-md.md)] 및 [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] 를 사용 하도록 업그레이드 해야 [!INCLUDE[vsOrcas](../../../../../includes/vsorcas-md.md)] s p 1 및 [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] 버전 3.5 s p 1로 시작 합니다.  
+     이전 버전의 Visual Studio를 사용 하 여 만든 프로젝트 및 [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] 사용 하도록 업그레이드 해야 [!INCLUDE[vsOrcas](../../../../../includes/vsorcas-md.md)] s p 1 및 [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] 버전 3.5 s p 1부터 시작 합니다.  
   
 2.  모델 및 매핑을 정의합니다.  
   
@@ -59,15 +61,15 @@ ms.lasthandoff: 01/19/2018
   
      [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]는 개념적 모델에 대해 쿼리를 실행할 때 특별한 형식의 연결 문자열을 사용합니다. 이 연결 문자열은 모델과 매핑 파일 및 데이터 소스에 대한 연결 정보를 캡슐화합니다. 자세한 내용은 참조 [하는 방법: 연결 문자열 정의](../../../../../docs/framework/data/adonet/ef/how-to-define-the-connection-string.md)합니다.  
   
-4.  [!INCLUDE[vsprvs](../../../../../includes/vsprvs-md.md)] 프로젝트를 구성합니다.  
+4.  Visual Studio 프로젝트를 구성 합니다.  
   
-     [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] 어셈블리 및 모델과 매핑 파일에 대한 참조를 [!INCLUDE[vsprvs](../../../../../includes/vsprvs-md.md)] 프로젝트에 추가해야 합니다. 이러한 매핑 파일을 프로젝트에 추가하여 연결 문자열에 표시된 위치에 응용 프로그램과 함께 배포되도록 할 수 있습니다. 자세한 내용은 참조 [하는 방법: 수동으로 Entity Framework 프로젝트 구성](http://msdn.microsoft.com/library/73f6ae1d-b3b2-4577-aebd-ad5a75954e9e)합니다.  
+     에 대 한 참조 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] 어셈블리 및 모델과 매핑 파일을 Visual Studio 프로젝트에 추가 해야 합니다. 이러한 매핑 파일을 프로젝트에 추가하여 연결 문자열에 표시된 위치에 응용 프로그램과 함께 배포되도록 할 수 있습니다. 자세한 내용은 참조 [하는 방법: 수동으로 Entity Framework 프로젝트 구성](http://msdn.microsoft.com/library/73f6ae1d-b3b2-4577-aebd-ad5a75954e9e)합니다.  
   
 ## <a name="considerations-for-applications-with-existing-objects"></a>기존 개체가 있는 응용 프로그램에 대한 고려 사항  
  [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] 4부터 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]는 지속성 무시 개체라고도 하는 POCO(Plain Old CLR Object)를 지원합니다. 대부분의 경우 기존 개체는 적은 부분만 변경하여 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]와 작동할 수 있습니다. 자세한 내용은 참조 [POCO 엔터티 작업](http://msdn.microsoft.com/library/5e0fb82a-b6d1-41a1-b37b-c12db61629d3)합니다. 응용 프로그램을 마이그레이션할 수도 있습니다는 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] Entity Framework 도구에서 생성 되는 데이터 클래스를 사용 하 고 있습니다. 자세한 내용은 참조 [하는 방법: 엔터티 데이터 모델 마법사를 사용 하 여](http://msdn.microsoft.com/library/dadb058a-c5d9-4c5c-8b01-28044112231d)합니다.  
   
 ## <a name="considerations-for-applications-that-use-adonet-providers"></a>ADO.NET 공급자를 사용하는 응용 프로그램에 대한 고려 사항  
- [!INCLUDE[vstecado](../../../../../includes/vstecado-md.md)]SqlClient와 같은 공급자를 사용 하면 표 형식 데이터를 반환 하는 데이터 원본의 쿼리할 수 있도록 합니다. 에 데이터를 로드할 수는 [!INCLUDE[vstecado](../../../../../includes/vstecado-md.md)] 데이터 집합입니다. 다음 목록에서는 기존 [!INCLUDE[vstecado](../../../../../includes/vstecado-md.md)] 공급자를 사용하는 응용 프로그램을 업그레이드할 때 고려할 사항에 대해 설명합니다.  
+ [!INCLUDE[vstecado](../../../../../includes/vstecado-md.md)] SqlClient와 같은 공급자를 사용 하면 표 형식 데이터를 반환 하는 데이터 원본의 쿼리할 수 있도록 합니다. 에 데이터를 로드할 수는 [!INCLUDE[vstecado](../../../../../includes/vstecado-md.md)] 데이터 집합입니다. 다음 목록에서는 기존 [!INCLUDE[vstecado](../../../../../includes/vstecado-md.md)] 공급자를 사용하는 응용 프로그램을 업그레이드할 때 고려할 사항에 대해 설명합니다.  
   
  데이터 판독기를 사용하여 표 형식 데이터 표시  
  실행 하는 것을 고려할 수 있는 [!INCLUDE[esql](../../../../../includes/esql-md.md)] EntityClient 공급자를 사용 하 여 쿼리하고 반환 된 전체를 열거 하 <xref:System.Data.EntityClient.EntityDataReader> 개체입니다. 응용 프로그램이 데이터 판독기를 사용하여 표 형식 데이터를 표시하며 데이터를 개체로 구체화, 변경 내용 추적 및 업데이트를 위해 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]에서 제공하는 기능이 필요하지 않은 경우에만 이 작업을 수행합니다. 데이터 소스를 업데이트하는 기존 데이터 액세스 코드를 계속 사용할 수 있지만 <xref:System.Data.EntityClient.EntityConnection.StoreConnection%2A>의 <xref:System.Data.EntityClient.EntityConnection> 속성에서 액세스된 기존 연결을 사용할 수도 있습니다. 자세한 내용은 참조 [Entity Framework 용 EntityClient 공급자](../../../../../docs/framework/data/adonet/ef/entityclient-provider-for-the-entity-framework.md)합니다.  
@@ -104,7 +106,7 @@ ms.lasthandoff: 01/19/2018
  응용 프로그램에 XML 데이터 쿼리 기능이 필요한 경우에도 LINQ to XML을 사용하여 LINQ 쿼리의 이점을 활용할 수 있습니다. 자세한 내용은 참조 [LINQ to XML](http://msdn.microsoft.com/library/f0fe21e9-ee43-4a55-b91a-0800e5782c13)합니다.  
   
  상태를 유지하는 응용 프로그램  
- [!INCLUDE[vstecasp](../../../../../includes/vstecasp-md.md)]웹 응용 프로그램 또는 사용자 세션의 웹 페이지의 상태를 유지 자주 해야 합니다. 개체에 <xref:System.Data.Objects.ObjectContext> 인스턴스 수는 서버에서 세션 상태 또는 클라이언트 보기 상태나에 저장 하 고 나중에 검색 하 고 새 개체 컨텍스트에 다시 연결 합니다. 자세한 내용은 참조 [연결 및 분리 개체](http://msdn.microsoft.com/library/41d5c1ef-1b78-4502-aa10-7e1438d62d23)합니다.  
+ [!INCLUDE[vstecasp](../../../../../includes/vstecasp-md.md)] 웹 응용 프로그램 또는 사용자 세션의 웹 페이지의 상태를 유지 자주 해야 합니다. 개체에 <xref:System.Data.Objects.ObjectContext> 인스턴스 수는 서버에서 세션 상태 또는 클라이언트 보기 상태나에 저장 하 고 나중에 검색 하 고 새 개체 컨텍스트에 다시 연결 합니다. 자세한 내용은 참조 [연결 및 분리 개체](http://msdn.microsoft.com/library/41d5c1ef-1b78-4502-aa10-7e1438d62d23)합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [배포 고려 사항](../../../../../docs/framework/data/adonet/ef/deployment-considerations.md)  

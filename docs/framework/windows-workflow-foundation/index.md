@@ -17,14 +17,14 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: d6b61f5ae7d0e7f3102e0566fb1a6eff3ca072d9
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ca790f97eb677414655b583e46cb693506ed0cc2
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="windows-workflow-foundation"></a>Windows Workflow Foundation
-이 단원에서는 [!INCLUDE[wf](../../../includes/wf-md.md)]의 프로그래밍 모델, 샘플 및 도구에 대해 설명합니다.  
+이 섹션에서는 프로그래밍 모델, 샘플 및 도구에는 Windows WF (Workflow Foundation)에 대해 설명 합니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
  [Windows 워크플로 설명서에 대한 안내](../../../docs/framework/windows-workflow-foundation/guide-to-the-documentation.md)  
@@ -40,16 +40,16 @@ ms.lasthandoff: 12/22/2017
  [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] Windows Workflow Foundation의 새로운 기능에 대해 설명합니다.  
   
  [Windows 워크플로 개념적 개요](../../../docs/framework/windows-workflow-foundation/conceptual-overview.md)  
- [!INCLUDE[wf2](../../../includes/wf2-md.md)]의 광범위한 기본 개념을 설명하는 항목입니다.  
+ Windows Workflow Foundation의 보다 큰 개념에 설명 하는 항목 집합이 있습니다.  
   
  [초보자를 위한 자습서](../../../docs/framework/windows-workflow-foundation/getting-started-tutorial.md)  
- [!INCLUDE[wf2](../../../includes/wf2-md.md)] 응용 프로그램 프로그래밍을 소개하는 연습 항목입니다.  
+ Windows Workflow Foundation 응용 프로그램 프로그래밍을 소개 하는 연습 항목 집합이 있습니다.  
   
  [Windows Workflow Foundation 프로그래밍](../../../docs/framework/windows-workflow-foundation/programming.md)  
  능숙한 [!INCLUDE[wf1](../../../includes/wf1-md.md)] 프로그래머가 되기 위해 이해해야 할 입문 항목입니다.  
   
  [Windows Workflow Foundation 확장](../../../docs/framework/windows-workflow-foundation/extend.md)  
- 필요에 맞게 [!INCLUDE[wf2](../../../includes/wf2-md.md)]을 확장하거나 사용자 지정하는 방법에 대해 설명하는 항목입니다.  
+ 확장 하거나 필요에 따라 Windows Workflow Foundation 사용자 지정 하는 방법을 설명 하는 항목 집합이 있습니다.  
   
  [.NET Framework 4.5용 Windows Workflow Foundation 용어집](../../../docs/framework/windows-workflow-foundation/glossary.md)  
  WF와 관련된 일련의 용어를 정의합니다.  

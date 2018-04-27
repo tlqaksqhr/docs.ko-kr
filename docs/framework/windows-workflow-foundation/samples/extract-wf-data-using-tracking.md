@@ -1,29 +1,30 @@
 ---
-title: "추적을 사용하여 WF 데이터 추출"
-ms.custom: 
+title: 추적을 사용하여 WF 데이터 추출
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: e30c68f5-8c6a-495a-bd20-667a4364c68e
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 4d6c269dc9c8b5a0050cfc3ffcefc3160b07c897
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 44e49aa0c9b3b9b53b921fe90838875ab34b7772
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="extract-wf-data-using-tracking"></a>추적을 사용하여 WF 데이터 추출
 이 샘플에서는 워크플로 추적을 사용하여 활동에서 워크플로 변수와 인수를 추출하는 방법을 보여 줍니다. 또한 여기에서는 추적 레코드에 주석을 추가하고 사용자 지정 추적 레코드 내의 데이터 페이로드를 추출하는 방법도 보여 줍니다. 이 샘플에서 워크플로의 데이터를 추출하는 데는 ETW(Event Tracing for Windows) 추적 참가자가 사용됩니다.  
   
 ## <a name="sample-details"></a>샘플 세부 정보  
- [!INCLUDE[wf](../../../../includes/wf-md.md)]에서는 워크플로 인스턴스의 실행을 시각적으로 추적할 수 있는 기능을 제공합니다. 추적 런타임에서는 워크플로를 실행하는 동안 워크플로 추적 레코드를 내보냅니다. 워크플로 추적 레코드와 함께 워크플로 인스턴스 내의 데이터를 워크플로에서 추출할 수 있습니다. 다음 목록에는 추적 레코드로부터 추출할 수 있는 데이터의 형식에 대한 자세한 설명이 나와 있습니다.  
+ Windows WF (Workflow Foundation) 워크플로 인스턴스 실행에 추적을 제공 합니다. 추적 런타임에서는 워크플로를 실행하는 동안 워크플로 추적 레코드를 내보냅니다. 워크플로 추적 레코드와 함께 워크플로 인스턴스 내의 데이터를 워크플로에서 추출할 수 있습니다. 다음 목록에는 추적 레코드로부터 추출할 수 있는 데이터의 형식에 대한 자세한 설명이 나와 있습니다.  
   
 1.  활동을 실행하는 동안의 활동 및 추적 레코드 내의 워크플로 변수.  
   

@@ -1,28 +1,28 @@
 ---
 title: Message Security Anonymous
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - WS Security
 ms.assetid: c321cbf9-8c05-4cce-b5a5-4bf7b230ee03
-caps.latest.revision: 
+caps.latest.revision: 52
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
 ms.workload:
 - dotnet
-ms.openlocfilehash: d6f3ac3ba51939f319d1d0e98265d7867233f2b6
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: c93aacbe5af47c9094dccdaa15828bfa9fda79c5
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="message-security-anonymous"></a>Message Security Anonymous
 Message Security Anonymous 샘플에서는 클라이언트 인증 없이 메시지 수준 보안을 사용하지만 서버의 X.509 인증서를 사용하는 서버 인증을 요구하는 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 응용 프로그램을 구현하는 방법을 보여 줍니다. 클라이언트와 서버 간의 모든 응용 프로그램 메시지는 서명 및 암호화됩니다. 이 샘플에 따라는 [WSHttpBinding](../../../../docs/framework/wcf/samples/wshttpbinding.md) 샘플. 이 샘플은 IIS(인터넷 정보 서비스)에 의해 호스트되는 클라이언트 콘솔 프로그램(.exe) 및 서비스 라이브러리(.dll)로 구성됩니다. 이 서비스는 요청-회신 통신 패턴을 정의하는 계약을 구현합니다.  
@@ -31,8 +31,8 @@ Message Security Anonymous 샘플에서는 클라이언트 인증 없이 메시�
 >  이 샘플의 설치 절차 및 빌드 지침은 이 항목의 끝부분에 나와 있습니다.  
   
  이 샘플은 클라이언트가 인증되지 않은 경우 `True`를 반환하는 새 작업을 계산기 인터페이스에 추가합니다.  
-  
-```  
+
+```csharp
 public class CalculatorService : ICalculator  
 {  
     public bool IsCallerAnonymous()  
@@ -42,8 +42,8 @@ public class CalculatorService : ICalculator
     }  
     ...  
 }  
-```  
-  
+```
+
  서비스는 구성 파일(Web.config)을 사용하여 서비스와 통신하기 위한 단일 끝점을 노출합니다. 끝점은 하나의 주소, 바인딩 및 계약으로 구성됩니다. 바인딩은 `wsHttpBinding` 바인딩을 사용하여 구성됩니다. `wsHttpBinding` 바인딩의 기본 보안 모드는 `Message`입니다. `clientCredentialType` 특성은 `None`으로 설정됩니다.  
   
 ```xml  
@@ -123,8 +123,8 @@ public class CalculatorService : ICalculator
  서비스의 인증서를 인증하기 위해 샘플에서는 <xref:System.ServiceModel.Security.X509ServiceCertificateAuthentication.CertificateValidationMode%2A>가 <xref:System.ServiceModel.Security.X509CertificateValidationMode.PeerOrChainTrust>로 설정됩니다. 클라이언트의 App.config 파일에 있는 `behaviors` 섹션에서 이 작업을 수행합니다. 이는 인증서가 사용자의 신뢰할 수 있는 사용자 저장소에 있는 경우 인증서의 발급자 체인에 대한 유효성 검사를 수행하지 않고 인증서가 신뢰된다는 것을 의미합니다. 여기서 이 설정은 편의상 사용된 것이므로 CA(인증 기관)에서 발급된 인증서를 요구하지 않고 샘플을 실행할 수 있습니다. 이 설정은 기본 ChainTrust보다 덜 안전합니다. 프로덕션 코드에서 `PeerOrChainTrust`를 사용하기 전에 이 설정의 보안 문제를 신중하게 고려해야 합니다.  
   
  에 대 한 호출을 추가 하는 클라이언트 구현에서 `IsCallerAnonymous` 메서드 그렇지 않은 경우와 동일에서 및는 [WSHttpBinding](../../../../docs/framework/wcf/samples/wshttpbinding.md) 샘플.  
-  
-```  
+
+```csharp
 // Create a client with a client endpoint configuration.  
 CalculatorClient client = new CalculatorClient();  
   
@@ -145,8 +145,8 @@ client.Close();
 Console.WriteLine();  
 Console.WriteLine("Press <ENTER> to terminate client.");  
 Console.ReadLine();  
-```  
-  
+```
+
  샘플을 실행하면 작업 요청 및 응답이 클라이언트 콘솔 창에 표시됩니다. 클라이언트를 종료하려면 클라이언트 창에서 Enter 키를 누릅니다.  
   
 ```  
@@ -166,7 +166,7 @@ Press <ENTER> to terminate client.
   
      Setup.bat 배치 파일에서 다음 행은 사용할 서버 인증서를 만듭니다.  
   
-    ```  
+    ```bat
     echo ************  
     echo Server cert setup starting  
     echo %SERVER_NAME%  
@@ -190,7 +190,7 @@ Press <ENTER> to terminate client.
   
      Setup.bat 배치 파일의 다음 줄은 LocalMachine 저장소에 저장된 서버 인증서를 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 작업자 프로세스 계정에서 액세스할 수 있게 합니다.  
   
-    ```  
+    ```bat
     echo ************  
     echo setting privileges on server certificates  
     echo ************  
@@ -218,7 +218,7 @@ Press <ENTER> to terminate client.
     > [!NOTE]
     >  Setup 배치 파일은 [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] 명령 프롬프트에서 실행되도록 디자인되었습니다. PATH 환경 변수는 SDK가 설치되는 디렉터리를 가리켜야 합니다. 이 환경 변수는 [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] 명령 프롬프트 내에서 자동으로 설정됩니다.  
   
-3.  http://localhost/servicemodelsamples/service.svc 주소를 입력하여 브라우저에서 서비스에 대한 액세스를 확인합니다.  
+3.  브라우저를 사용 하 여 주소를 입력 하 여 서비스에 대 한 액세스 확인 http://localhost/servicemodelsamples/service.svc합니다.  
   
 4.  \client\bin에서 Client.exe를 실행합니다. 클라이언트 콘솔 응용 프로그램에 클라이언트 동작이 표시됩니다.  
   

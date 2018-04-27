@@ -12,11 +12,11 @@ ms.assetid: df6e7c50-5f3e-4381-98ed-ba5c3e9fe228
 caps.latest.revision: 21
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 26cb885187cff31a085e34c60c820fe7c0bdc787
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 15d71f039223b464a3b5affb9ba7b37886b93200
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="reference-visual-basic"></a>참조(Visual Basic)
 이 섹션에서는 Visual Basic 프로그래밍의 다양 한 측면에 대 한 참조 정보에 대 한 링크를 제공 합니다.  
@@ -43,10 +43,10 @@ ms.lasthandoff: 04/26/2018
   
 ## <a name="related-sections"></a>관련 단원  
  [일반 사용자 인터페이스 요소(Visual Studio)](/visualstudio/ide/reference/general-user-interface-elements-visual-studio)  
- [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)]에서 사용되는 대화 상자 및 창에 대한 항목이 포함되어 있습니다.  
+ 대화 상자와 Visual Studio에서 사용 되는 windows에 대 한 항목이 포함 되어 있습니다.  
   
  [Visual Studio의 XML 도구](/visualstudio/xml-tools/xml-tools-in-visual-studio)  
- [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)]에서 제공되는 다양한 XML 도구에 대한 항목의 링크를 제공합니다.  
+ Visual Studio에서 사용할 수 있는 다양 한 XML 도구에 항목에 대 한 링크를 제공합니다.  
   
  [자동화 및 확장성 참조](http://msdn.microsoft.com/library/93112562-db21-4188-9383-ed19ad79bddf)  
- 공유 및 언어별 구성 요소 둘 다에 대한 [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)]의 자동화 및 확장성에 대해 다루는 항목의 링크를 제공합니다.
+ 자동화 및 공유 및 언어별 구성 요소에 대 한 Visual Studio의 확장성을 설명 하는 항목의 링크를 제공 합니다.

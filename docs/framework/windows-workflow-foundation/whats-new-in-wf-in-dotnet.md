@@ -14,17 +14,17 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: b57cf990f9fdf987f4cc414cb42db6cf9fe0da21
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 4aa77a0135cea18847c4d4425171b0bdcf447988
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="what39s-new-in-windows-workflow-foundation-in-net-45"></a>어떤&#39;.NET 4.5에서에서 Windows Workflow Foundation의 새로운 s
-[!INCLUDE[wf](../../../includes/wf-md.md)]의 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]에는 새 활동, 디자이너 기능 및 워크플로 개발 모델과 같은 여러 가지 새로운 기능이 추가되었습니다. [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]에서 새로 추가된 워크플로 기능 중 다수는 재호스트된 Workflow Designer에서 지원됩니다. [!INCLUDE[crabout](../../../includes/crabout-md.md)] 지원 되는 새로운 기능 참조 [다시 호스트 된 워크플로 디자이너에서 새 Workflow Foundation 4.5 기능에 대 한 지원을](../../../docs/framework/windows-workflow-foundation/wf-features-in-the-rehosted-workflow-designer.md)합니다. [!INCLUDE[crabout](../../../includes/crabout-md.md)] 마이그레이션.NET 3.0 및 최신 버전을 사용 하려면.NET 3.5 워크플로 응용 프로그램 참조 [마이그레이션 지침](../../../docs/framework/windows-workflow-foundation/migration-guidance.md)합니다. 이 항목에서는 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]에 새로 추가된 워크플로 기능에 대해 간략하게 설명합니다.  
+Windows WF (Workflow Foundation)에서 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 새 활동, 디자이너 기능 및 워크플로 개발 모델과 같은 많은 새로운 기능이 도입 되었습니다. [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]에서 새로 추가된 워크플로 기능 중 다수는 재호스트된 Workflow Designer에서 지원됩니다. [!INCLUDE[crabout](../../../includes/crabout-md.md)] 지원 되는 새로운 기능 참조 [다시 호스트 된 워크플로 디자이너에서 새 Workflow Foundation 4.5 기능에 대 한 지원을](../../../docs/framework/windows-workflow-foundation/wf-features-in-the-rehosted-workflow-designer.md)합니다. [!INCLUDE[crabout](../../../includes/crabout-md.md)] 마이그레이션.NET 3.0 및 최신 버전을 사용 하려면.NET 3.5 워크플로 응용 프로그램 참조 [마이그레이션 지침](../../../docs/framework/windows-workflow-foundation/migration-guidance.md)합니다. 이 항목에서는 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]에 새로 추가된 워크플로 기능에 대해 간략하게 설명합니다.  
   
 > [!WARNING]
->  이전 버전의 프레임워크를 대상으로 하는 프로젝트에는 [!INCLUDE[wf2](../../../includes/wf2-md.md)]에 새로 추가된 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 기능을 사용할 수 없습니다. [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]를 대상으로 하는 프로젝트의 대상이 이전 버전의 프레임워크로 변경될 경우 여러 문제가 발생할 수 있습니다.  
+>  에 도입 된 새로운 Windows Workflow Foundation 기능 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 는 이전 버전의 framework 대상으로 하는 프로젝트에 대해 사용할 수 없습니다. [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]를 대상으로 하는 프로젝트의 대상이 이전 버전의 프레임워크로 변경될 경우 여러 문제가 발생할 수 있습니다.  
 >   
 >  -   메시지와 함께 C# 식은 디자이너에서 교체 **XAML에서 값이 설정**합니다.  
 > -   다음 오류를 포함하여 여러 빌드 오류가 발생합니다.  

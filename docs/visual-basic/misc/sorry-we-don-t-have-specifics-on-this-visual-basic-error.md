@@ -3052,11 +3052,11 @@ ms.assetid: 0938efc2-e205-450b-9314-99951fcbd702
 caps.latest.revision: 21
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 4ab447c06504d6c3bb7c51107e422b2cba1f45e3
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 2af9ad571f1e89c11d3aafc118124093d1246f19
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="sorry-we-don39t-have-specifics-on-this-visual-basic-error"></a>죄송 하지만 우리 않는&#39;t이 Visual Basic 오류에 대 한 구체적인 정보가
 죄송합니다. 이 오류에 대한 구체적인 정보가 없습니다. 오류 번호와 메시지 텍스트를 검색하여 웹에서 정보를 찾을 수 있습니다. 또는 다음 포럼 중 하나에서 다른 개발자에게 질문을 할 수 있습니다.  
@@ -3068,7 +3068,7 @@ ms.lasthandoff: 04/26/2018
  에 대 한 질문에 대 한 포럼을 제공 하지 않으며 Visual Basic로 업그레이드 및 상호 운용성 기능을 사용 합니다.  
   
  [Visual Basic IDE](http://go.microsoft.com/fwlink/?LinkId=145971)  
- [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] 환경에서 작업하는 방법과 관련된 질문을 위한 포럼을 제공합니다.  
+ Visual Studio 환경에서 작업 하는 방법에 대 한 질문에 대 한 포럼을 제공 합니다.  
   
  [Visual Basic 일반](http://go.microsoft.com/fwlink/?LinkId=145973)  
  에 대 한 질문에 대 한 포럼을 제공 하지 않으며 다른 포럼에서 다루지 않는 Visual Basic을 사용한 합니다.  

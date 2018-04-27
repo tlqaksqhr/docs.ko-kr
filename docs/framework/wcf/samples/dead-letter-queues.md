@@ -1,24 +1,26 @@
 ---
-title: "배달 못 한 편지 큐"
-ms.custom: 
+title: 배달 못 한 편지 큐
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: ff664f33-ad02-422c-9041-bab6d993f9cc
-caps.latest.revision: "35"
+caps.latest.revision: 35
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 09a41abc8bc9fc3469ba35d7c7cfbe85d05ca174
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 9892579633103f1e7a6612c09865c91c559df34c
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="dead-letter-queues"></a>배달 못 한 편지 큐
 이 샘플에서는 배달에 실패한 메시지를 처리하는 방법을 보여 줍니다. 에 따라 결정 된 [트랜잭션 된 MSMQ 바인딩](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md) 샘플. 이 샘플에서는 `netMsmqBinding` 바인딩을 사용합니다. 이 서비스는 자체적으로 호스트되는 콘솔 응용 프로그램으로서 이를 사용하여 서비스에서 대기된 메시지를 받는 것을 볼 수 있습니다.  
@@ -50,21 +52,21 @@ ms.lasthandoff: 12/22/2017
  클라이언트 응용 프로그램은 배달 못 한 편지 큐에서 메시지를 읽고 메시지 보내기를 다시 시도하거나 원본 메시지가 배달 못 한 편지 큐에 저장된 원인을 해결한 후 메시지를 보낼 수 있습니다. 이 샘플에서 클라이언트는 오류 메시지를 표시합니다.  
   
  다음 샘플 코드와 같이 서비스 계약은 `IOrderProcessor`입니다.  
-  
-```  
+
+```csharp
 [ServiceContract(Namespace="http://Microsoft.ServiceModel.Samples")]  
 public interface IOrderProcessor  
 {  
     [OperationContract(IsOneWay = true)]  
     void SubmitPurchaseOrder(PurchaseOrder po);  
 }  
-```  
-  
+```
+
  이 샘플에서 서비스 코드의입니다는 [트랜잭션 된 MSMQ 바인딩](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md)합니다.  
   
  서비스와의 통신은 트랜잭션 범위 내에서 수행됩니다. 서비스는 큐에서 메시지를 읽고 작업을 수행한 후 작업 결과를 표시합니다. 응용 프로그램도 배달 못 한 메시지에 대해 배달 못 한 편지 큐를 만듭니다.  
-  
-```  
+
+```csharp
 //The service contract is defined in generatedClient.cs, generated from the service by the svcutil tool.  
   
 //Client implementation code.  
@@ -117,8 +119,8 @@ class Client
         Console.ReadLine();  
     }  
 }  
-```  
-  
+```
+
  클라이언트 구성에는 메시지가 서비스에 도달하는 데 걸리는 시간을 짧게 지정됩니다. 지정된 시간 내에 메시지를 전송할 수 없으면 메시지가 만료되어 배달 못 한 편지 큐로 이동합니다.  
   
 > [!NOTE]
@@ -163,8 +165,8 @@ class Client
 >  배달 못 한 편지 큐는 클라이언트 큐이며 클라이언트 큐 관리자에 대해 로컬입니다.  
   
  배달 못 한 메시지 서비스 구현에서는 메시지 배달 실패의 원인을 확인하고 올바른 방법으로 해결합니다. 메시지 실패 원인은 <xref:System.ServiceModel.Channels.MsmqMessageProperty.DeliveryFailure%2A> 및 <xref:System.ServiceModel.Channels.MsmqMessageProperty.DeliveryStatus%2A> 열거형으로 캡처됩니다. 다음 샘플 코드와 같이 <xref:System.ServiceModel.Channels.MsmqMessageProperty>에서 <xref:System.ServiceModel.OperationContext>를 검색할 수 있습니다.  
-  
-```  
+
+```csharp
 public void SubmitPurchaseOrder(PurchaseOrder po)  
 {  
     Console.WriteLine("Submitting purchase order did not succed ", po);  
@@ -176,15 +178,15 @@ public void SubmitPurchaseOrder(PurchaseOrder po)
     Console.WriteLine("Message Delivery Failure: {0}",   
                                                mqProp.DeliveryFailure);  
     Console.WriteLine();  
-    ….  
-}  
-```  
-  
+    …  
+}
+```
+
  배달 못 한 편지 큐의 메시지는 메시지를 처리하고 있는 서비스로 주소가 지정되는 메시지입니다. 따라서 배달 못 한 메시지 서비스가 큐에서 메시지를 읽으면 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 채널 계층은 끝점에서 일치하지 않는 항목을 찾고 메시지를 디스패치하지 않습니다. 이 경우 메시지의 주소는 주문 처리 서비스로 지정되지만 배달 못 한 메시지 서비스에서 해당 메시지를 받습니다. 다른 끝점으로 주소가 지정된 메시지를 받으려면 모든 주소와 일치하는 주소 필터를 `ServiceBehavior`에 지정합니다. 이 구성은 배달 못 한 편지 큐에서 읽은 메시지를 성공적으로 처리하기 위해 필요합니다.  
   
  이 샘플에서 배달 못 한 메시지 서비스는 실패의 원인이 메시지 시간 초과인 경우 메시지를 다시 보냅니다. 다른 모든 원인에 대해서는 다음 샘플 코드와 같이 배달 오류를 표시합니다.  
-  
-```  
+
+```csharp
 // Service class that implements the service contract.  
 // Added code to write output to the console window.  
 [ServiceBehavior(InstanceContextMode=InstanceContextMode.Single, ConcurrencyMode=ConcurrencyMode.Single, AddressFilterMode=AddressFilterMode.Any)]  
@@ -237,8 +239,8 @@ public class PurchaseOrderDLQService : IOrderProcessor
         }  
     }  
 }   
-```  
-  
+```
+
  다음 샘플에서는 배달 못 한 메시지에 대한 구성을 보여 줍니다.  
   
 ```xml  

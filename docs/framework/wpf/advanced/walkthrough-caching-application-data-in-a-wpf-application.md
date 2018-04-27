@@ -1,12 +1,13 @@
 ---
-title: "연습: WPF 응용 프로그램에서 응용 프로그램 데이터 캐싱"
-ms.custom: 
+title: '연습: WPF 응용 프로그램에서 응용 프로그램 데이터 캐싱'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -16,16 +17,17 @@ helpviewer_keywords:
 - caching [.NET Framework]
 - caching [WPF]
 ms.assetid: dac2c9ce-042b-4d23-91eb-28f584415cef
-caps.latest.revision: "25"
+caps.latest.revision: 25
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 81d808b982852d5cc6dc187a3c8389748a0dc0bf
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: a8d3fe2dbfe0b4b5fb9081d71cec080dfa54add8
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="walkthrough-caching-application-data-in-a-wpf-application"></a>연습: WPF 응용 프로그램에서 응용 프로그램 데이터 캐싱
 캐싱을 사용하면 빠른 액세스를 위해 데이터를 메모리에 저장할 수 있습니다. 데이터 다시 액세스 하는 응용 프로그램 원본에서 검색 하는 대신 캐시에서 데이터를 가져올 수 있습니다. 이 경우 성능과 확장성이 향상됩니다. 또한 캐싱을 사용하면 데이터 소스를 일시적으로 사용할 수 없는 경우에도 데이터를 사용할 수 있습니다.  
@@ -51,7 +53,7 @@ ms.lasthandoff: 12/22/2017
   
 -   캐시 된 파일의 경로 모니터링 하 고 캐시 인스턴스에 대 한 알리기 모니터링된 항목을 변경 합니다.  
   
-## <a name="prerequisites"></a>필수 구성 요소  
+## <a name="prerequisites"></a>전제 조건  
  이 연습을 완료하려면 다음 사항이 필요합니다.  
   
 -   Microsoft [!INCLUDE[vs_dev10_long](../../../../includes/vs-dev10-long-md.md)]  
@@ -67,7 +69,7 @@ ms.lasthandoff: 12/22/2017
   
 #### <a name="to-create-a-wpf-application"></a>WPF 응용 프로그램을 만들려면  
   
-1.  [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)]를 시작합니다.  
+1.  Visual Studio를 시작합니다.  
   
 2.  에 **파일** 메뉴를 클릭 **새로**, 클릭 하 고 **새 프로젝트**합니다.  
   
@@ -86,7 +88,7 @@ ms.lasthandoff: 12/22/2017
   
 7.  **확인**을 클릭합니다.  
   
-     WPF 디자이너에서 엽니다 **디자인** 본 MainWindow.xaml 파일을 표시 합니다. [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)]만듭니다는 **My Project** 폴더, Application.xaml 파일 및 MainWindow.xaml 파일입니다.  
+     WPF 디자이너에서 엽니다 **디자인** 본 MainWindow.xaml 파일을 표시 합니다. Visual Studio 만듭니다는 **My Project** 폴더, Application.xaml 파일 및 MainWindow.xaml 파일입니다.  
   
 ## <a name="targeting-the-net-framework-and-adding-a-reference-to-the-caching-assemblies"></a>.NET Framework를 대상으로 하 고 캐싱 어셈블리에 대 한 참조를 추가 합니다.  
  기본적으로 WPF 응용 프로그램 대상에서 [!INCLUDE[net_client_v40_long](../../../../includes/net-client-v40-long-md.md)]합니다. 사용 하는 <xref:System.Runtime.Caching> WPF 응용 프로그램에서 네임 스페이스를 응용 프로그램 대상으로 해야 합니다는 [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)] (하지는 [!INCLUDE[net_client_v40_long](../../../../includes/net-client-v40-long-md.md)]) 네임 스페이스에 대 한 참조를 포함 해야 합니다.  

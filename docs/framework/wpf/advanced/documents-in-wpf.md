@@ -1,12 +1,13 @@
 ---
-title: "WPF의 문서"
-ms.custom: 
+title: WPF의 문서
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - documents [WPF], packaging
@@ -17,16 +18,17 @@ helpviewer_keywords:
 - documents [WPF], types of
 - documents [WPF], browser-viewable
 ms.assetid: 6e8db7bc-050a-4070-aa72-bb8c46e87ff8
-caps.latest.revision: "36"
+caps.latest.revision: 36
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 02f65d68cdaad8824905c4545239f5b607c672d6
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 0fcf7281cce7e5921ad7a03011ff85c254231690
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="documents-in-wpf"></a>WPF의 문서
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]에서는 이전 세대의 [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)]보다 더 쉽게 액세스하고 읽도록 설계된 고품질 콘텐츠를 만들 수 있는 다양한 문서 기능을 제공합니다. 고급 기능 및 품질 외에도 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]에서는 문서 표시, 패키징 및 보안을 위한 통합 서비스도 제공합니다. 이 항목에서는 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 문서 형식 및 문서 패키징을 소개합니다.  
@@ -42,12 +44,12 @@ ms.lasthandoff: 12/22/2017
   
 <a name="document_viewer"></a>   
 ## <a name="document-controls-and-text-layout"></a>문서 컨트롤 및 텍스트 레이아웃  
- [!INCLUDE[TLA2#tla_avalonwinfx](../../../../includes/tla2sharptla-avalonwinfx-md.md)]에서는 고정 문서, 유동 문서 및 응용 프로그램의 일반 텍스트를 간편하게 사용할 수 있게 하는 미리 빌드된 컨트롤 집합을 제공합니다.  고정된 문서 콘텐츠 표시를 사용 하 여 사용할 수는 <xref:System.Windows.Controls.DocumentViewer> 제어 합니다.  유동 문서 콘텐츠 표시는 세 가지 다른 컨트롤에서 지 원하는: <xref:System.Windows.Controls.FlowDocumentReader>, <xref:System.Windows.Controls.FlowDocumentPageViewer>, 및 <xref:System.Windows.Controls.FlowDocumentScrollViewer> 여러 다양 한 사용자 시나리오 (아래 섹션 참조).  기타 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 컨트롤에서는 일반 텍스트 사용을 지원하는 간소화된 레이아웃을 제공합니다(아래 [사용자 인터페이스의 텍스트](#text_in_the_user_interface) 참조).  
+ .NET Framework를 간단 하 게 고정 된 문서, 유동 문서 및 응용 프로그램 내에서 일반 텍스트를 사용 하는 미리 작성 된 컨트롤의 집합을 제공 합니다.  고정된 문서 콘텐츠 표시를 사용 하 여 사용할 수는 <xref:System.Windows.Controls.DocumentViewer> 제어 합니다.  유동 문서 콘텐츠 표시는 세 가지 다른 컨트롤에서 지 원하는: <xref:System.Windows.Controls.FlowDocumentReader>, <xref:System.Windows.Controls.FlowDocumentPageViewer>, 및 <xref:System.Windows.Controls.FlowDocumentScrollViewer> 여러 다양 한 사용자 시나리오 (아래 섹션 참조).  기타 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 컨트롤에서는 일반 텍스트 사용을 지원하는 간소화된 레이아웃을 제공합니다(아래 [사용자 인터페이스의 텍스트](#text_in_the_user_interface) 참조).  
   
 ### <a name="fixed-document-control---documentviewer"></a>고정 문서 컨트롤 - DocumentViewer  
  <xref:System.Windows.Controls.DocumentViewer> 표시 하도록 디자인 된 <xref:System.Windows.Documents.FixedDocument> 콘텐츠입니다. <xref:System.Windows.Controls.DocumentViewer> 컨트롤은 인쇄 출력을 포함 하 여 일반적인 작업 복사 하려면 클립보드를 확대/축소, 텍스트 검색 기능에 대 한 기본 제공 지원을 제공 하는 직관적인 사용자 인터페이스를 제공 합니다. 컨트롤에서는 친숙한 스크롤링 메커니즘을 통해 콘텐츠 페이지에 액세스하는 권한을 제공합니다. 모든 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 컨트롤 <xref:System.Windows.Controls.DocumentViewer> 전체 또는 부분 스타일 재설정 지 원하는 컨트롤을 시각적으로 거의 모든 응용 프로그램 또는 환경에 통합 될 수 있습니다.  
   
- <xref:System.Windows.Controls.DocumentViewer>읽기 전용 방식; 콘텐츠를 표시 하도록 디자인 편집 하거나 콘텐츠 수정 사용할 수 없게 되며 지원 되지 않습니다.  
+ <xref:System.Windows.Controls.DocumentViewer> 읽기 전용 방식; 콘텐츠를 표시 하도록 디자인 편집 하거나 콘텐츠 수정 사용할 수 없게 되며 지원 되지 않습니다.  
   
 <a name="flow_document"></a>   
 ### <a name="flow-document-controls"></a>유동 문서 컨트롤  
@@ -56,16 +58,16 @@ ms.lasthandoff: 12/22/2017
  유동 문서 콘텐츠 표시는 세 가지 컨트롤에서 지원 됩니다: <xref:System.Windows.Controls.FlowDocumentReader>, <xref:System.Windows.Controls.FlowDocumentPageViewer>, 및 <xref:System.Windows.Controls.FlowDocumentScrollViewer>합니다.  
   
 #### <a name="flowdocumentreader"></a>FlowDocumentReader  
- <xref:System.Windows.Controls.FlowDocumentReader>사용자가 동적으로 단일 페이지 (페이지-에-) 보기 모드를 한 번에 두 페이지 (책 읽기 형식) 보기 모드 및 연속 스크롤 (바닥 없음) 보기 모드를 포함 하 여 다양 한 보기 모드 사이 선택할 수 있는 기능이 포함 되어 있습니다.  이러한 보기 모드에 대 한 자세한 내용은 참조 하십시오. <xref:System.Windows.Controls.FlowDocumentReaderViewingMode>합니다.  동적으로 다른 보기 모드 사이 전환 하는 기능이 필요 하지 않은 경우 <xref:System.Windows.Controls.FlowDocumentPageViewer> 및 <xref:System.Windows.Controls.FlowDocumentScrollViewer> 간단한 유동 특정 보기 모드에서 수정 된 콘텐츠 뷰어를 제공 합니다.  
+ <xref:System.Windows.Controls.FlowDocumentReader> 사용자가 동적으로 단일 페이지 (페이지-에-) 보기 모드를 한 번에 두 페이지 (책 읽기 형식) 보기 모드 및 연속 스크롤 (바닥 없음) 보기 모드를 포함 하 여 다양 한 보기 모드 사이 선택할 수 있는 기능이 포함 되어 있습니다.  이러한 보기 모드에 대 한 자세한 내용은 참조 하십시오. <xref:System.Windows.Controls.FlowDocumentReaderViewingMode>합니다.  동적으로 다른 보기 모드 사이 전환 하는 기능이 필요 하지 않은 경우 <xref:System.Windows.Controls.FlowDocumentPageViewer> 및 <xref:System.Windows.Controls.FlowDocumentScrollViewer> 간단한 유동 특정 보기 모드에서 수정 된 콘텐츠 뷰어를 제공 합니다.  
   
 #### <a name="flowdocumentpageviewer-and-flowdocumentscrollviewer"></a>FlowDocumentPageViewer 및 FlowDocumentScrollViewer  
- <xref:System.Windows.Controls.FlowDocumentPageViewer>콘텐츠 페이지 런타임을 표시 하는 동안 보기 모드로 <xref:System.Windows.Controls.FlowDocumentScrollViewer> 콘텐츠 연속 스크롤 모드를 표시 합니다.  둘 다 <xref:System.Windows.Controls.FlowDocumentPageViewer> 및 <xref:System.Windows.Controls.FlowDocumentScrollViewer> 특정 보기 모드에 고정 됩니다. 비교할 <xref:System.Windows.Controls.FlowDocumentReader>, 사용자 동적으로 다양 한 보기 모드 중에서 선택할 수 있는 기능이 포함 되어 (에서 제공 됨는 <xref:System.Windows.Controls.FlowDocumentReaderViewingMode> 열거형), 더 많은 리소스를 보다 많이 사용 되 고 커밋되지만 <xref:System.Windows.Controls.FlowDocumentPageViewer> 또는 <xref:System.Windows.Controls.FlowDocumentScrollViewer>합니다.  
+ <xref:System.Windows.Controls.FlowDocumentPageViewer> 콘텐츠 페이지 런타임을 표시 하는 동안 보기 모드로 <xref:System.Windows.Controls.FlowDocumentScrollViewer> 콘텐츠 연속 스크롤 모드를 표시 합니다.  둘 다 <xref:System.Windows.Controls.FlowDocumentPageViewer> 및 <xref:System.Windows.Controls.FlowDocumentScrollViewer> 특정 보기 모드에 고정 됩니다. 비교할 <xref:System.Windows.Controls.FlowDocumentReader>, 사용자 동적으로 다양 한 보기 모드 중에서 선택할 수 있는 기능이 포함 되어 (에서 제공 됨는 <xref:System.Windows.Controls.FlowDocumentReaderViewingMode> 열거형), 더 많은 리소스를 보다 많이 사용 되 고 커밋되지만 <xref:System.Windows.Controls.FlowDocumentPageViewer> 또는 <xref:System.Windows.Controls.FlowDocumentScrollViewer>합니다.  
   
  기본적으로 세로 스크롤 막대는 항상 표시되며 가로 스크롤 막대는 필요한 경우 표시됩니다. 기본 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 에 대 한 <xref:System.Windows.Controls.FlowDocumentScrollViewer> 도구 모음을 포함 하지 않습니다; 그러나는 <xref:System.Windows.Controls.FlowDocumentScrollViewer.IsToolBarVisible%2A> 기본 제공 도구 모음을 사용 하도록 설정 하려면 속성을 사용할 수 있습니다.  
   
 <a name="text_in_the_user_interface"></a>   
 ### <a name="text-in-the-user-interface"></a>사용자 인터페이스의 텍스트  
- 문서에 텍스트를 추가하는 외에도 양식과 같은 응용 프로그램 UI에서 명확하게 텍스트를 사용할 수 있습니다. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]에서는 화면에 텍스트를 그리는 데 사용하는 여러 컨트롤이 포함되어 있습니다. 각 컨트롤은 다른 시나리오를 대상으로 하며 고유 기능 및 제한 사항 목록을 가지고 있습니다. 일반적으로 <xref:System.Windows.Controls.TextBlock> 요소 제한 텍스트 지원에 대 한 간단한 문장을 같이 필요한 경우 사용 되어야 합니다는 [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]합니다. <xref:System.Windows.Controls.Label>텍스트를 최소한 지원이 필요한 경우 사용할 수 있습니다. 자세한 내용은 [TextBlock 개요](../../../../docs/framework/wpf/controls/textblock-overview.md)를 참조하세요.  
+ 문서에 텍스트를 추가하는 외에도 양식과 같은 응용 프로그램 UI에서 명확하게 텍스트를 사용할 수 있습니다. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]에서는 화면에 텍스트를 그리는 데 사용하는 여러 컨트롤이 포함되어 있습니다. 각 컨트롤은 다른 시나리오를 대상으로 하며 고유 기능 및 제한 사항 목록을 가지고 있습니다. 일반적으로 <xref:System.Windows.Controls.TextBlock> 요소 제한 텍스트 지원에 대 한 간단한 문장을 같이 필요한 경우 사용 되어야 합니다는 [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]합니다. <xref:System.Windows.Controls.Label> 텍스트를 최소한 지원이 필요한 경우 사용할 수 있습니다. 자세한 내용은 [TextBlock 개요](../../../../docs/framework/wpf/controls/textblock-overview.md)를 참조하세요.  
   
 <a name="packaging"></a>   
 ## <a name="document-packaging"></a>문서 패키징  
@@ -85,7 +87,7 @@ ms.lasthandoff: 12/22/2017
   
 <a name="packages"></a>   
 ### <a name="package-components"></a>패키지 구성 요소  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 패키징 API를 사용하면 응용 프로그램 데이터와 문서를 이식 가능한 단일 단위로 구성할 수 있습니다. ZIP 파일은 가장 일반적인 패키지 유형 중 하나이고, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]에서 제공하는 기본 패키지 유형입니다.  <xref:System.IO.Packaging.Package>자체 클래스는 추상 클래스를 <xref:System.IO.Packaging.ZipPackage> 하는 개방형 표준 XML 및 ZIP 파일 아키텍처를 사용 하 여 구현 됩니다.  <xref:System.IO.Packaging.Package.Open%2A> 메서드 <xref:System.IO.Packaging.ZipPackage> 생성 및 기본적으로 ZIP 파일을 사용 합니다. 패키지에는 다음과 같은 세 가지 기본 유형의 항목이 포함될 수 있습니다.  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 패키징 API를 사용하면 응용 프로그램 데이터와 문서를 이식 가능한 단일 단위로 구성할 수 있습니다. ZIP 파일은 가장 일반적인 패키지 유형 중 하나이고, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]에서 제공하는 기본 패키지 유형입니다.  <xref:System.IO.Packaging.Package> 자체 클래스는 추상 클래스를 <xref:System.IO.Packaging.ZipPackage> 하는 개방형 표준 XML 및 ZIP 파일 아키텍처를 사용 하 여 구현 됩니다.  <xref:System.IO.Packaging.Package.Open%2A> 메서드 <xref:System.IO.Packaging.ZipPackage> 생성 및 기본적으로 ZIP 파일을 사용 합니다. 패키지에는 다음과 같은 세 가지 기본 유형의 항목이 포함될 수 있습니다.  
   
 |||  
 |-|-|  
@@ -95,7 +97,7 @@ ms.lasthandoff: 12/22/2017
   
 <a name="PackageParts"></a>   
 #### <a name="packageparts"></a>PackageParts  
- A <xref:System.IO.Packaging.PackagePart> ("파트")에 저장 된 개체를 참조 하는 추상 클래스는는 <xref:System.IO.Packaging.Package>합니다. ZIP 파일에서 패키지 파트는 ZIP 파일에 저장된 개별 파일에 해당합니다.  <xref:System.IO.Packaging.ZipPackagePart>에 저장 된 직렬화 가능 개체에 대 한 기본 구현을 제공는 <xref:System.IO.Packaging.ZipPackage>합니다.  파일 시스템과 마찬가지로 패키지에 포함된 파트는 계층 구조 디렉터리 또는 “폴더 스타일” 조직에 저장됩니다.  사용 하는 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 패키징 Api를 응용 프로그램 수를 작성, 저장 및 여러 읽기 <xref:System.IO.Packaging.PackagePart> 단일 ZIP 파일 컨테이너를 사용 하 여 개체입니다.  
+ A <xref:System.IO.Packaging.PackagePart> ("파트")에 저장 된 개체를 참조 하는 추상 클래스는는 <xref:System.IO.Packaging.Package>합니다. ZIP 파일에서 패키지 파트는 ZIP 파일에 저장된 개별 파일에 해당합니다.  <xref:System.IO.Packaging.ZipPackagePart> 에 저장 된 직렬화 가능 개체에 대 한 기본 구현을 제공는 <xref:System.IO.Packaging.ZipPackage>합니다.  파일 시스템과 마찬가지로 패키지에 포함된 파트는 계층 구조 디렉터리 또는 “폴더 스타일” 조직에 저장됩니다.  사용 하는 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 패키징 Api를 응용 프로그램 수를 작성, 저장 및 여러 읽기 <xref:System.IO.Packaging.PackagePart> 단일 ZIP 파일 컨테이너를 사용 하 여 개체입니다.  
   
 <a name="PackageDigitalSignatures"></a>   
 #### <a name="packagedigitalsignatures"></a>PackageDigitalSignatures  

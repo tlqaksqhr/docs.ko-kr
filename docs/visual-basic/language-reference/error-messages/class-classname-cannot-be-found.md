@@ -16,11 +16,11 @@ ms.assetid: 72528d02-77b7-4b4c-8b9e-d12f666f92ef
 caps.latest.revision: 8
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 63dfdf0f2fe8869577d450f21c4f12b5eec125bb
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: ab3f9d2729dec1d97dc00fac3527e492d3c5880a
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="class-39ltclassnamegt39-cannot-be-found"></a>클래스 &#39; &lt;classname&gt; &#39; 찾을 수 없습니다
 클래스의\<n a m e >' 찾을 수 없습니다. 대개 'Microsoft.VisualBasic.dll'이 일치하지 않으면 이러한 상황이 발생합니다.  
@@ -33,7 +33,7 @@ ms.lasthandoff: 04/26/2018
   
 1.  프로그램을 다시 컴파일하여 오류가 다시 발생하는지 확인합니다.  
   
-2.  오류가 다시 발생하면 작업을 저장하고 [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)]를 다시 시작합니다.  
+2.  오류가 다시 발생 하는 경우 작업 내용을 저장 하 고 Visual Studio를 다시 시작 합니다.  
   
 3.  오류가 계속 발생 하는 경우에 Visual Basic을 다시 설치 하십시오.  
   

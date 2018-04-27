@@ -1,24 +1,26 @@
 ---
 title: Custom Binding Security
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: a6383dff-4308-46d2-bc6d-acd4e18b4b8d
-caps.latest.revision: "30"
+caps.latest.revision: 30
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: 94c43586606f42cca120ded59637a998d113d229
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: 4774e4ed6c5afc6e9c4af50e0663ffe8c0964b7f
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="custom-binding-security"></a>Custom Binding Security
 이 샘플에서는 사용자 지정 바인딩을 사용하여 보안을 구성하는 방법을 보여 줍니다. 여기서는 사용자 지정 바인딩을 사용하여 메시지를 안전하게 전송하고 메시지 수준 보안을 가능하게 하는 방법을 보여 줍니다. 이러한 방법은 클라이언트와 서비스 간에 메시지를 전송하는 데 보안 전송이 요구되면서 동시에 메시지가 메시지 수준에서 보호되어야 하는 경우에 유용합니다. 이 구성은 시스템 제공 바인딩에서는 지원되지 않습니다.  
@@ -56,16 +58,16 @@ ms.lasthandoff: 01/19/2018
   
 ```xml  
 <behaviors>  
-      <serviceBehaviors>  
-        <behavior name="CalculatorServiceBehavior">  
-          <serviceMetadata />  
-          <serviceDebug includeExceptionDetailInFaults="False" />  
-          <serviceCredentials>  
-            <serviceCertificate findValue="localhost" storeLocation="LocalMachine" storeName="My" x509FindType="FindBySubjectName"/>  
-          </serviceCredentials>  
-        </behavior>  
-      </serviceBehaviors>  
-    </behaviors>  
+    <serviceBehaviors>  
+    <behavior name="CalculatorServiceBehavior">  
+        <serviceMetadata />  
+        <serviceDebug includeExceptionDetailInFaults="False" />  
+        <serviceCredentials>  
+        <serviceCertificate findValue="localhost" storeLocation="LocalMachine" storeName="My" x509FindType="FindBySubjectName"/>  
+        </serviceCredentials>  
+    </behavior>  
+    </serviceBehaviors>  
+</behaviors>  
 ```  
   
  또한 사용자 지정 바인딩은 기본 자격 증명 형식인 Windows 자격 증명 형식의 메시지 보안을 사용합니다.  이러한 작업은 `security` 바인딩 요소에 의해 수행됩니다. Kerberos 인증 메커니즘이 사용 가능한 경우 클라이언트 및 서비스는 모두 메시지 수준 보안을 사용하여 인증됩니다. Active Directory 환경에서 샘플이 실행될 경우 이 방법이 사용됩니다. Kerberos 인증 메커니즘을 사용할 수 없는 경우에는 NTLM 인증이 사용됩니다. NTLM은 서비스에 대해 클라이언트를 인증하지만 클라이언트에 대해 서비스를 인증하지는 않습니다. `security` 바인딩 요소는 사용 하도록 구성 된 `SecureConversation``authenticationType`, 결과 클라이언트와 서비스 모두에 보안 세션이 만들어집니다. 이러한 구성은 서비스의 이중 계약을 사용할 때 필요합니다.  
@@ -93,7 +95,7 @@ Equation(0 + 100 - 50 * 17.65 / 2 = 441.25)
   
      인증서는 웹 호스팅 서비스에 대한 CurrentUser 저장소에 저장됩니다.  
   
-    ```  
+    ```bat
     echo ************  
     echo Server cert setup starting  
     echo %SERVER_NAME%  

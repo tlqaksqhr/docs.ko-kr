@@ -1,26 +1,27 @@
 ---
-title: "변수 및 인수"
-ms.custom: 
+title: 변수 및 인수
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: d03dbe34-5b2e-4f21-8b57-693ee49611b8
-caps.latest.revision: "15"
+caps.latest.revision: 15
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: d01c31cce9aa6ae6d87773fc8e616e0e08bbd8c8
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: c81d05120f8cf0decc7c6036e2a722ba6271dab8
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="variables-and-arguments"></a>변수 및 인수
-[!INCLUDE[wf](../../../includes/wf-md.md)]에서 변수는 데이터 저장소를 나타내고 인수는 활동 내부와 외부로 흐르는 데이터 흐름을 나타냅니다. 활동에는 인수 집합이 있으며 인수는 활동의 시그니처를 구성합니다. 또한 활동은 개발자가 워크플로 디자인 중에 변수를 추가하거나 제거할 수 있는 변수 목록을 유지할 수 있습니다. 인수는 값을 반환하는 식을 사용하여 바인딩됩니다.  
+Windows WF (Workflow Foundation), 변수 데이터 저장소를 나타내고 인수 및 작업 외부로 데이터 흐름을 나타냅니다. 활동에는 인수 집합이 있으며 인수는 활동의 시그니처를 구성합니다. 또한 활동은 개발자가 워크플로 디자인 중에 변수를 추가하거나 제거할 수 있는 변수 목록을 유지할 수 있습니다. 인수는 값을 반환하는 식을 사용하여 바인딩됩니다.  
   
 ## <a name="variables"></a>변수  
  변수는 데이터의 저장 위치입니다. 변수는 워크플로 정의의 일부로 선언됩니다. 변수는 런타임에 값을 가져오고 이 값은 워크플로 인스턴스 상태의 일부로 저장됩니다. 변수 정의는 변수의 형식과 선택적으로 이름을 지정합니다. 다음 코드에서는 변수를 선언하고 <xref:System.Activities.Statements.Assign%601> 활동을 사용하여 변수에 값을 할당한 다음 <xref:System.Activities.Statements.WriteLine> 활동을 사용하여 콘솔에 값을 표시하는 방법을 보여 줍니다.  
@@ -77,7 +78,7 @@ Variable<string> var = new Variable<string>
   
 2.  <xref:System.Activities.InOutArgument%601.Set%2A>이 호출되면 런타임은 값을 즉시 설정합니다.  
   
-3.  인수는 선택적으로 <xref:System.Activities.Argument.EvaluationOrder%2A>를 지정할 수 있습니다. <xref:System.Activities.Argument.EvaluationOrder%2A>는 인수를 평가하는 순서를 지정하는 0부터 시작하는 값입니다. 기본적으로 인수의 평가 순서는 지정되지 않으며 <xref:System.Activities.Argument.UnspecifiedEvaluationOrder> 값과 같습니다. <xref:System.Activities.Argument.EvaluationOrder%2A>를 0보다 크거나 같은 값으로 설정하여 이 인수의 평가 순서를 지정합니다. [!INCLUDE[wf2](../../../includes/wf2-md.md)]에서는 지정한 평가 순서의 인수를 오름차순으로 평가합니다. 평가 순서가 지정되지 않은 인수는 평가 순서가 지정된 인수 이전에 평가됩니다.  
+3.  인수는 선택적으로 <xref:System.Activities.Argument.EvaluationOrder%2A>를 지정할 수 있습니다. <xref:System.Activities.Argument.EvaluationOrder%2A>는 인수를 평가하는 순서를 지정하는 0부터 시작하는 값입니다. 기본적으로 인수의 평가 순서는 지정되지 않으며 <xref:System.Activities.Argument.UnspecifiedEvaluationOrder> 값과 같습니다. <xref:System.Activities.Argument.EvaluationOrder%2A>를 0보다 크거나 같은 값으로 설정하여 이 인수의 평가 순서를 지정합니다. Windows Workflow Foundation 오름차순에서 지정한 평가 순서의 인수를 평가합니다. 평가 순서가 지정되지 않은 인수는 평가 순서가 지정된 인수 이전에 평가됩니다.  
   
  활동 작성자는 강력한 형식의 메커니즘을 사용하여 인수를 노출합니다. 이 작업은 <xref:System.Activities.InArgument%601>, <xref:System.Activities.OutArgument%601> 및 <xref:System.Activities.InOutArgument%601> 형식의 속성을 선언하여 수행됩니다. 이렇게 하면 활동 작성자가 활동 내부 및 외부로 이동하는 데이터에 대한 특정 계약을 설정할 수 있습니다.  
   
@@ -151,4 +152,4 @@ public sealed class Add : CodeActivity<int>
 }  
 ```  
   
- [!INCLUDE[crabout](../../../includes/crabout-md.md)]참조 인수, 변수 및 코드의 식 사용 [제작 워크플로, 활동 및 식을 사용 하 여 명령적 코드](../../../docs/framework/windows-workflow-foundation/authoring-workflows-activities-and-expressions-using-imperative-code.md) 및 [필요한 인수 및 오버 로드 그룹](../../../docs/framework/windows-workflow-foundation/required-arguments-and-overload-groups.md)합니다.
+ [!INCLUDE[crabout](../../../includes/crabout-md.md)] 참조 인수, 변수 및 코드의 식 사용 [제작 워크플로, 활동 및 식을 사용 하 여 명령적 코드](../../../docs/framework/windows-workflow-foundation/authoring-workflows-activities-and-expressions-using-imperative-code.md) 및 [필요한 인수 및 오버 로드 그룹](../../../docs/framework/windows-workflow-foundation/required-arguments-and-overload-groups.md)합니다.

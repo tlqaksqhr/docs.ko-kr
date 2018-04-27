@@ -16,16 +16,16 @@ ms.author: douglasl
 manager: craigg
 ms.workload:
 - dotnet
-ms.openlocfilehash: 3e518a18787a7faa1d3e501d5941fae70daf8b9d
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: f57b07d03297347561b6b2e2634038aa1f29bc40
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="how-to-customize-entity-classes-by-using-the-code-editor"></a>방법: 코드 편집기를 사용하여 엔터티 클래스 사용자 지정
 Visual Studio를 사용 하 여 개발자가 사용할 수는 [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] 를 만들거나 해당 엔터티 클래스 사용자 지정 합니다.  
   
- [!INCLUDE[vsprvs](../../../../../../includes/vsprvs-md.md)] 코드 편집기를 사용하여 사용자 고유의 매핑 코드를 작성하거나 이미 생성된 코드를 사용자 지정할 수도 있습니다. 자세한 내용은 참조 [특성 기반 매핑](../../../../../../docs/framework/data/adonet/sql/linq/attribute-based-mapping.md)합니다.  
+ 또한 사용자 고유의 매핑 코드를 작성 하거나 이미 생성 된 코드를 사용자 지정할 수는 Visual Studio 코드 편집기를 사용할 수 있습니다. 자세한 내용은 참조 [특성 기반 매핑](../../../../../../docs/framework/data/adonet/sql/linq/attribute-based-mapping.md)합니다.  
   
  이 단원의 항목에서는 개체 모델을 사용자 지정하는 방법에 대해 설명합니다.  
   

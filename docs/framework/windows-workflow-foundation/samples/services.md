@@ -1,26 +1,27 @@
 ---
 title: Services1
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 521cdb66-98cb-4ad1-b706-370788a43485
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 924368f5de4c5698c439a6c8744a15babd62d762
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: f53c3ee686c4117a621eac43ede1035a83a08e46
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="services"></a>서비스
-이 단원에는 [!INCLUDE[wf](../../../../includes/wf-md.md)] 서비스 기능을 보여 주는 샘플에 대한 링크가 포함되어 있습니다.  
+이 섹션에는 Windows WF (Workflow Foundation) 서비스 기능을 보여 주는 샘플에 대 한 링크 포함 되어 있습니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
  [절대 지연](../../../../docs/framework/windows-workflow-foundation/samples/absolute-delay.md)  
@@ -42,7 +43,7 @@ ms.lasthandoff: 12/22/2017
  메시징 활동(WF 서비스)에서 여러 가지 사용자 형식을 사용하는 방법을 보여 줍니다. 샘플 서비스는 간단한 비용 승인 서비스이며 세 가지 작업을 노출합니다.  
   
  [영속 이중](../../../../docs/framework/windows-workflow-foundation/samples/durable-duplex.md)  
- [!INCLUDE[wf](../../../../includes/wf-md.md)]에서 메시징 활동을 사용하여 영속 이중 메시지 교환을 설정하고 구성하는 방법을 보여 줍니다.  
+ 설정 및의 Windows WF (Workflow Foundation) 메시징 활동을 사용 하 여 영 속 이중 메시지 교환을 구성 하는 방법을 보여 줍니다.  
   
  [내용 기반 상관 관계](../../../../docs/framework/windows-workflow-foundation/samples/content-based-correlation.md)  
  여러 내용 기반 상관 관계와 내용 기반 상관 관계에 메시징 활동(<xref:System.ServiceModel.Activities.Send>, <xref:System.ServiceModel.Activities.Receive>, <xref:System.ServiceModel.Activities.SendReply> 및 <xref:System.ServiceModel.Activities.ReceiveReply>)을 사용하는 방법을 보여 줍니다.  
@@ -54,7 +55,7 @@ ms.lasthandoff: 12/22/2017
  지속적 지연을 사용하는 방법을 보여 줍니다. 지속적 지연은 지연되는 동안 워크플로를 영구적인 장치에 유지하는 지연입니다.  
   
  [버퍼링되는 수신](../../../../docs/framework/windows-workflow-foundation/samples/buffered-receive.md)  
- [!INCLUDE[wf](../../../../includes/wf-md.md)]에서 버퍼링된 수신 기능을 설정하고 구성하는 방법을 보여 줍니다.  
+ 설정 및의 Windows WF (Workflow Foundation) 버퍼링 된 수신 기능을 구성 하는 방법을 보여 줍니다.  
   
  [XAML 활성화](../../../../docs/framework/windows-workflow-foundation/samples/xaml-activation.md)  
  [!INCLUDE[iisver](../../../../includes/iisver-md.md)]에서 선언적 워크플로를 호스트하는 방법을 보여 줍니다.  

@@ -13,11 +13,11 @@ helpviewer_keywords:
 ms.assetid: 5fc32ec9-a149-4648-994c-a8d0cccd0a65
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0948b9ef0675541ca595bb297e01e62c9d79a181
-ms.sourcegitcommit: 498799639937c89de777361aab74261efe7b79ea
+ms.openlocfilehash: e7dc75a0600c9694c4a20f028c810c6aca54eeb6
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="-doc"></a>-doc
 XML 파일에 대해 문서 주석을 처리합니다.  
@@ -46,7 +46,7 @@ XML 파일에 대해 문서 주석을 처리합니다.
   
 -   멤버는 필드와 같은 [이벤트](../../../visual-basic/language-reference/statements/event-statement.md), [속성](../../../visual-basic/language-reference/statements/property-statement.md), [함수](../../../visual-basic/language-reference/statements/function-statement.md), 또는 [서브루틴](../../../visual-basic/language-reference/statements/sub-statement.md)합니다.  
   
- 생성 된 XML 파일을 사용 하는 [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] [IntelliSense](/visualstudio/ide/using-intellisense) 기능, XML 파일의 파일 이름을 지원 하려는 어셈블리와 동일 합니다. 어셈블리에서 참조 되는 경우 되도록 XML 파일을 어셈블리와 동일한 디렉터리에 있는지 확인은 [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] 프로젝트.xml 파일과 함께 검색 합니다. XML 문서 파일 intellisense는 프로젝트 내 또는 프로젝트에서 참조 하는 프로젝트 내에서 코드에 대 한 작동 하려면 필요 하지 않습니다.  
+ Visual Studio와 함께 생성된 된 XML 파일을 사용 하려면 [IntelliSense](/visualstudio/ide/using-intellisense) 기능, XML 파일의 파일 이름을 지원 하려는 어셈블리와 동일 합니다. Visual Studio 프로젝트에 어셈블리를 참조할 때.xml 파일이 되도록 XML 파일을 어셈블리와 동일한 디렉터리에 있는지 확인 합니다. XML 문서 파일 intellisense는 프로젝트 내 또는 프로젝트에서 참조 하는 프로젝트 내에서 코드에 대 한 작동 하려면 필요 하지 않습니다.  
   
  사용 하 여 컴파일하지 않으면 `/target:module`, XML 파일에는 태그가 포함 된 `<assembly></assembly>`합니다. 이러한 태그는 컴파일의 출력 파일에 대 한 어셈블리 매니페스트를 포함 하는 파일의 이름을 지정 합니다.  
   

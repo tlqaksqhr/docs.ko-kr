@@ -16,11 +16,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: d40b59faa4d0f50e59daaa71da6127da367f008b
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: b8b3e3006072855673c37786ffb763fcd610e40c
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="building-the-windows-communication-foundation-samples"></a>Windows Communication Foundation 샘플 빌드
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 또는 Visual Studio 2010을 사용 하 여 예제를 빌드할 수 있습니다는 **msbuild** 명령줄에서 명령을 합니다. 이 항목에서는 이 두 절차를 모두 설명합니다.  
@@ -39,9 +39,9 @@ ms.lasthandoff: 04/26/2018
   
 ### <a name="to-build-the-sample-using-visual-studio"></a>Visual Studio를 사용하여 샘플을 빌드하려면  
   
-1.  [!INCLUDE[wv](../../../../includes/wv-md.md)], [!INCLUDE[lserver](../../../../includes/lserver-md.md)], Windows 7 또는 Windows Server 2008 R2를 사용하고 있고 [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)]을 실행하는 경우에는 높은 권한으로 [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)]를 실행해야 합니다. 이렇게 하려면 시작 메뉴에 있는 아이콘을 마우스 오른쪽 단추로 클릭 하 고 클릭 **관리자 권한으로 실행**합니다.  
+1.  사용 중인 경우 [!INCLUDE[wv](../../../../includes/wv-md.md)], [!INCLUDE[lserver](../../../../includes/lserver-md.md)], Windows 7 또는 Windows Server 2008 R2, 및 실행 [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)], 관리자 권한으로 Visual Studio를 실행 해야 합니다. 이렇게 하려면 시작 메뉴에 있는 아이콘을 마우스 오른쪽 단추로 클릭 하 고 클릭 **관리자 권한으로 실행**합니다.  
   
-2.  **파일** Visual Studio에서 메뉴를 클릭 **열려**, 클릭 **프로젝트/솔루션**합니다. 샘플을 설치한 디렉터리 아래에 있는 언어별 하위 디렉터리로 이동한 다음 .sln 파일 아이콘을 두 번 클릭하여 [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)]에서 솔루션을 엽니다.  
+2.  **파일** Visual Studio에서 메뉴를 클릭 **열려**, 클릭 **프로젝트/솔루션**합니다. 샘플을 설치한 디렉터리 아래의 언어별 하위 디렉터리로 이동한 다음 솔루션을 열려면 Visual Studio에서.sln 파일 아이콘을 두 번 클릭 합니다.  
   
 3.  에 **빌드** 메뉴 선택 **솔루션 다시 빌드**합니다. 클라이언트 프로그램 파일이 client\bin에 빌드되고 서비스 프로그램 파일이 service\bin에 빌드됩니다. IIS에서 서비스를 호스팅하는 경우에는 서비스 프로그램 파일이 servicemodelsamples 디렉터리와 \bin 하위 디렉터리에도 복사됩니다.  
   

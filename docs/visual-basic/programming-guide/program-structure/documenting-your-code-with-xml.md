@@ -16,11 +16,11 @@ ms.assetid: a0d35dc7-c5f9-4d74-92ff-a1c6f28d5235
 caps.latest.revision: 17
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 645dd4a8a9d1c78fd54f0f31ad0efd772b671d39
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: d132fa514008d072158a0e6bedaff511c55b18c0
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="documenting-your-code-with-xml-visual-basic"></a>코드를 XML로 문서화(Visual Basic)
 Visual Basic에서 XML을 사용 하 여 코드를 문서화할 수 있습니다.  
@@ -40,7 +40,7 @@ Visual Basic에서 XML을 사용 하 여 코드를 문서화할 수 있습니다
   
     -   `cref` 특성을 태그에 연결하여 코드 요소에 대한 참조를 제공할 수 있습니다. 컴파일러는 코드 요소가이 존재 하는지 확인 합니다. 확인에 실패 하는 경우 컴파일러에서 경고가 발생 합니다. 또한 컴파일러는 하나는 존중 `Imports` 에 설명 된 형식의 찾을 때 문은 `cref` 특성입니다.  
   
-    -   \<요약 > 태그의 IntelliSense에 의해 사용 [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] 형식이 나 멤버에 대 한 추가 정보를 표시 합니다.  
+    -   \<요약 > 태그를 사용 하 여 Visual Studio의 IntelliSense 형식이 나 멤버에 대 한 추가 정보를 표시 합니다.  
   
 ## <a name="related-sections"></a>관련 단원  
  문서 주석을 사용 하 여 XML 파일을 만드는 방법에 자세한 다음 항목을 참조 합니다.  

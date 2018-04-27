@@ -1,30 +1,32 @@
 ---
-title: "방법: 연결 문자열 정의"
-ms.custom: 
+title: '방법: 연결 문자열 정의'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 6027335d-4e26-420d-9151-6523289b1989
-caps.latest.revision: "3"
+caps.latest.revision: 3
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 355d313fd607ccf85ba55b09b9ece4d9c88e298f
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: 7cfde8d819a9b3a4eaeaed5f20c07130198714fd
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="how-to-define-the-connection-string"></a>방법: 연결 문자열 정의
 이 항목에서는 개념적 모델에 연결할 때 사용하는 연결 문자열을 정의하는 방법을 설명합니다. 이 항목에 따라는 [AdventureWorks Sales](http://msdn.microsoft.com/library/f16cd988-673f-4376-b034-129ca93c7832) 개념적 모델입니다. AdventureWorks Sales 모델은 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] 문서의 작업 관련 항목 전체에서 사용됩니다. 이 항목에서는 이미 구성 된 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] AdventureWorks Sales 모델을 정의 합니다. 자세한 내용은 참조 [하는 방법: 모델 및 매핑 파일을 수동으로 정의](http://msdn.microsoft.com/library/d4fd6864-f2a1-48f0-aa32-1e318775a99a)합니다. 이 항목의 절차에도 나와 [하는 방법: 수동으로 Entity Framework 프로젝트 구성](http://msdn.microsoft.com/library/73f6ae1d-b3b2-4577-aebd-ad5a75954e9e)합니다.  
   
 > [!NOTE]
->  [!INCLUDE[adonet_edm](../../../../../includes/adonet-edm-md.md)] 프로젝트에서 [!INCLUDE[vsprvs](../../../../../includes/vsprvs-md.md)] 마법사를 사용하면 이 마법사에서 자동으로 .edmx 파일을 생성하고 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]를 사용하도록 프로젝트를 구성합니다. 자세한 내용은 참조 [하는 방법: 엔터티 데이터 모델 마법사 사용](http://msdn.microsoft.com/library/dadb058a-c5d9-4c5c-8b01-28044112231d)  
+>  사용 하는 경우는 [!INCLUDE[adonet_edm](../../../../../includes/adonet-edm-md.md)] 마법사 Visual Studio 프로젝트에 자동으로.edmx 파일을 생성 하 고 사용 하도록 프로젝트 구성의 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]합니다. 자세한 내용은 참조 [하는 방법: 엔터티 데이터 모델 마법사 사용](http://msdn.microsoft.com/library/dadb058a-c5d9-4c5c-8b01-28044112231d)  
   
 ### <a name="to-define-the-entity-framework-connection-string"></a>Entity Framework 연결 문자열을 정의하려면  
   

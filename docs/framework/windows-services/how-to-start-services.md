@@ -1,27 +1,29 @@
 ---
-title: "방법: 서비스 시작"
-ms.custom: 
+title: '방법: 서비스 시작'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Windows Service applications, starting
 - services, starting
 ms.assetid: 9ea77955-2d96-4c3d-913c-14db7604cdad
-caps.latest.revision: "16"
+caps.latest.revision: 16
 author: ghogen
 ms.author: ghogen
 manager: douge
-ms.workload: dotnet
-ms.openlocfilehash: 8352edaa9386adc1fbf3057c6e98f5a9cf9ce4a1
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 47e27f579c0ed7d1be0b061bc6e79bba0c060abb
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="how-to-start-services"></a>방법: 서비스 시작
 서비스를 설치한 후에 시작 되어야 합니다. 호출을 시작는 <xref:System.ServiceProcess.ServiceBase.OnStart%2A> 서비스 클래스에 메서드. 일반적으로 <xref:System.ServiceProcess.ServiceBase.OnStart%2A> 메서드는 서비스에서 수행할 유용한 작업을 정의 합니다. 서비스 시작 후 수동으로 일시 중지 또는 중지 될 때까지 활성 남아 있습니다.  
@@ -29,7 +31,7 @@ ms.lasthandoff: 12/22/2017
  자동 또는 수동으로 시작 하려면 서비스를 설정할 수 있습니다. 자동으로 시작 하는 서비스는 설치 된 컴퓨터를 다시 부팅 하거나 처음 켤 때 시작 됩니다. 사용자는 수동으로 시작 하는 서비스를 시작 해야 합니다.  
   
 > [!NOTE]
->  기본적으로 서비스 사용 하 여 만든 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 수동으로 시작 되도록 설정 됩니다.  
+>  기본적으로 Visual Studio를 사용 하 여 만든 서비스를 수동으로 시작 하도록 설정 됩니다.  
   
  여러 가지 방법으로 서비스를 수동으로 시작할 수 있습니다-에서 **서버 탐색기**에서 **서비스 제어 관리자**, 라는 구성 요소를 사용 하 여 코드에서 또는 <xref:System.ServiceProcess.ServiceController>합니다.  
   

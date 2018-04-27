@@ -16,11 +16,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: b4ccab2f885a6e177cb81cce153aa92c457b4fb6
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: b27547189692ac6f83b1c41d5f88fac35c7925c0
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="windows-communication-foundation-wcf-samples"></a>WCF(Windows Communication Foundation) 샘플
 이 샘플에서는 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]의 다양한 측면에 대한 지침을 제공합니다.  
@@ -29,7 +29,7 @@ ms.lasthandoff: 12/22/2017
   
 -   Visual Basic 버전 샘플의에 대해 알아보려면 [Visual Basic 2010 예제](http://go.microsoft.com/fwlink/?LinkID=193373) 클릭 **WF 하이퍼링크 "javascript:__doPostBack('ctl00$ctl00$Content$TabContentPanel$Content$ReleaseFiles$FileList$ctl02$ FileNameLink', ') "_WCF_Samples.zip**합니다.  
   
- [!INCLUDE[wf](../../../../includes/wf-md.md)] [응용 프로그램](../../../../docs/framework/windows-workflow-foundation/samples/application.md) 도 샘플은 몇 가지 보여 줍니다 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]기능입니다.  
+ Windows WF (Workflow Foundation) [응용 프로그램](../../../../docs/framework/windows-workflow-foundation/samples/application.md) 도 샘플은 몇 가지 보여 줍니다 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]기능입니다.  
   
  독립 실행형 버전의 설명서 및 도움말 뷰어를 설치 하려면 다운로드는 [Microsoft Windows SDK v 7.1](http://go.microsoft.com/fwlink/?LinkID=194146)합니다.  
   

@@ -1,24 +1,26 @@
 ---
-title: "JSON 및 XML 샘플을 포함한 AJAX 서비스"
-ms.custom: 
+title: JSON 및 XML 샘플을 포함한 AJAX 서비스
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 8ea5860d-0c42-4ae9-941a-e07efdd8e29c
-caps.latest.revision: "15"
+caps.latest.revision: 15
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 7d831d4663031419977b75c6cfe183ac4bd52a86
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: f1a3f2185743be6d6331db4aa253a0767484b32d
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="ajax-service-with-json-and-xml-sample"></a>JSON 및 XML 샘플을 포함한 AJAX 서비스
 이 샘플에서는 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]를 사용하여 JSON(JavaScript Object Notation) 또는 XML 데이터를 반환하는 AJAX(Asynchronous JavaScript And XML) 서비스를 만드는 방법을 보여 줍니다. 웹 브라우저 클라이언트에서 JavaScript 코드를 사용하여 AJAX 서비스에 액세스할 수 있습니다. 기반으로 하는이 샘플은 [기본 AJAX 서비스](../../../../docs/framework/wcf/samples/basic-ajax-service.md) 샘플.  
@@ -30,9 +32,9 @@ ms.lasthandoff: 01/19/2018
 > [!NOTE]
 >  이 샘플의 설치 절차 및 빌드 지침은 이 항목의 끝부분에 나와 있습니다.  
   
- ASP.NET 이외의 AJAX 클라이언트를 사용할 수 있도록 설정하려면 .svc 파일에서 <xref:System.ServiceModel.Activation.WebServiceHostFactory>가 아닌 <xref:System.ServiceModel.Activation.WebScriptServiceHostFactory>를 사용합니다. <xref:System.ServiceModel.Activation.WebServiceHostFactory>는 <xref:System.ServiceModel.Description.WebHttpEndpoint> 표준 끝점을 서비스에 추가합니다. 끝점은 .svc 파일을 기준으로 하는 빈 주소에 구성됩니다. 이는 작업 이름이 아닌 추가 접미사를 포함하지 않는 http://localhost/ServiceModelSamples/service.svc가 서비스의 주소라는 것을 의미합니다.  
+ ASP.NET 이외의 AJAX 클라이언트를 사용할 수 있도록 설정하려면 .svc 파일에서 <xref:System.ServiceModel.Activation.WebServiceHostFactory>가 아닌 <xref:System.ServiceModel.Activation.WebScriptServiceHostFactory>를 사용합니다. <xref:System.ServiceModel.Activation.WebServiceHostFactory>는 <xref:System.ServiceModel.Description.WebHttpEndpoint> 표준 끝점을 서비스에 추가합니다. 끝점은.svc 파일;을 기준으로 빈 주소에 구성 됩니다. 즉, 서비스 주소가 http://localhost/ServiceModelSamples/service.svc와 작업 이름이 아닌 추가 접미사 없습니다.  
   
-```html  
+```svc
 <%@ServiceHost language="c#" Debug="true" Service="Microsoft.Samples.XmlAjaxService.CalculatorService" Factory="System.ServiceModel.Activation.WebServiceHostFactory" %>  
 ```  
   
@@ -52,28 +54,28 @@ ms.lasthandoff: 01/19/2018
  기본 데이터 형식은 <xref:System.ServiceModel.Description.WebHttpEndpoint> 는 XML에 대 한 기본 데이터 형식을 동안 <xref:System.ServiceModel.Description.WebScriptEndpoint> 은 JSON입니다. 자세한 내용은 참조 [ASP.NET 하지 않고 WCF AJAX 서비스 만들기](../../../../docs/framework/wcf/feature-details/creating-wcf-ajax-services-without-aspnet.md)합니다.  
   
  다음 샘플의 서비스는 두 개의 작업을 포함하는 표준 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 서비스입니다. 두 작업 모두 <xref:System.ServiceModel.Web.WebMessageBodyStyle.Wrapped> 또는 <xref:System.ServiceModel.Web.WebGetAttribute> 특성에서 <xref:System.ServiceModel.Web.WebInvokeAttribute> 본문 스타일을 필요로 합니다. 이는 `webHttp` 동작과 관련이 있으며 JSON/XML 데이터 형식 전환과는 관계가 없습니다.  
-  
-```  
+
+```csharp
 [OperationContract]  
 [WebInvoke(ResponseFormat = WebMessageFormat.Xml, BodyStyle = WebMessageBodyStyle.Wrapped)]  
 MathResult DoMathXml(double n1, double n2);  
-```  
-  
+```
+
  기본 설정인 XML로 작업에 대 한 응답 형식을 지정에 대 한 설정에서 [ \<webHttp >](../../../../docs/framework/configure-apps/file-schema/wcf/webhttp.md) 동작 합니다. 그러나 응답 형식을 명시적으로 지정하는 것이 좋습니다.  
   
  다른 작업에서는 `WebInvokeAttribute` 특성을 사용하고 응답에 대해 XML 대신 명시적으로 JSON을 지정합니다.  
-  
-```  
+
+```csharp
 [OperationContract]  
 [WebInvoke(ResponseFormat = WebMessageFormat.Json, BodyStyle = WebMessageBodyStyle.Wrapped)]  
 MathResult DoMathJson(double n1, double n2);  
-```  
-  
+```
+
  두 경우 모두 작업은 표준 `MathResult` 데이터 계약 형식인 복합 형식 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]를 반환합니다.  
   
  클라이언트 웹 페이지 XmlAjaxClientPage.htm에는 사용자가 클릭할 때 위의 두 작업 중 하나를 호출 하는 JavaScript 코드가 포함 되어는 **(return JSON) 계산을 수행할** 또는 **계산 (return XML)**  페이지 단추를 합니다. 서비스를 호출하는 코드는 JSON 본문을 만든 다음 HTTP POST를 사용하여 전송합니다. 요청을 만들 수동으로 JavaScript에서와 달리는 [기본 AJAX 서비스](../../../../docs/framework/wcf/samples/basic-ajax-service.md) 샘플 및 ASP.NET AJAX를 사용 하 여 다른 예제입니다.  
-  
-```  
+
+```csharp
 // Create HTTP request  
 var xmlHttp;  
 // Request instantiation code omitted…  
@@ -92,19 +94,19 @@ body = body + document.getElementById("num2").value + '}';
 xmlHttp.open("POST", url, true);  
 xmlHttp.setRequestHeader("Content-type", "application/json");  
 xmlHttp.send(body);  
-```  
-  
+```
+
  서비스가 응답하면 페이지의 텍스트 상자에서 더 이상의 처리 작업 없이 응답이 표시됩니다. 이는 사용된 XML 및 JSON 데이터 형식을 직접 확인할 수 있도록 데모용으로 구현됩니다.  
-  
-```  
+
+```javascript
 // Create result handler   
 xmlHttp.onreadystatechange=function(){  
      if(xmlHttp.readyState == 4){  
           document.getElementById("result").value = xmlHttp.responseText;  
      }  
 }  
-```  
-  
+```
+
 > [!IMPORTANT]
 >  컴퓨터에 이 샘플이 이미 설치되어 있을 수도 있습니다. 계속하기 전에 다음(기본) 디렉터리를 확인하세요.  
 >   
@@ -120,7 +122,7 @@ xmlHttp.onreadystatechange=function(){
   
 2.  에 설명 된 대로 XmlAjaxService.sln 솔루션을 구축 [Windows Communication Foundation 샘플 빌드](../../../../docs/framework/wcf/samples/building-the-samples.md)합니다.  
   
-3.  http://localhost/ServiceModelSamples/XmlAjaxClientPage.htm으로 이동합니다. 브라우저의 프로젝트 디렉터리에서 XmlAjaxClientPage.htm을 열지 마십시오.  
+3.  로 이동 http://localhost/ServiceModelSamples/XmlAjaxClientPage.htm (열지 마십시오 XmlAjaxClientPage.htm 브라우저의 프로젝트 디렉터리에서).  
   
 ## <a name="see-also"></a>참고 항목  
  [HTTP POST를 사용하는 AJAX 서비스](../../../../docs/framework/wcf/samples/ajax-service-using-http-post.md)

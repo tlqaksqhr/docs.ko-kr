@@ -1,24 +1,26 @@
 ---
-title: "일시 대기 통신"
-ms.custom: 
+title: 일시 대기 통신
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 0d012f64-51c7-41d0-8e18-c756f658ee3d
-caps.latest.revision: "28"
+caps.latest.revision: 28
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: d7af5e29faf000fe3fe86463cb4eca9dc1e5c567
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 01dc48d7df85051449c92f4e91e5d1e58d6ddb91
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="volatile-queued-communication"></a>일시 대기 통신
 이 샘플에서는 MSMQ(메시지 큐) 전송을 통해 일시 대기 중인 통신을 수행하는 방법을 보여 줍니다. 이 샘플에서는 <xref:System.ServiceModel.NetMsmqBinding>을 사용합니다. 이 경우의 서비스는 자체 호스팅 콘솔 응용 프로그램이며 이를 사용하여 서비스에서 대기 중인 메시지를 받는 것을 관찰할 수 있습니다.  
@@ -36,19 +38,19 @@ ms.lasthandoff: 12/22/2017
 >  MSMQ를 사용하여 트랜잭션 범위 내에서 보증이 없는 일시 메시지를 보낼 수는 없습니다. 또한 일시 메시지를 보내려면 비트랜잭션 큐를 만들어야 합니다.  
   
  이 샘플에서 서비스 계약은 큐에서 사용하기에 가장 적합한 단방향 서비스를 정의하는 `IStockTicker`입니다.  
-  
-```  
+
+```csharp
 [ServiceContract(Namespace = "http://Microsoft.ServiceModel.Samples")]  
 public interface IStockTicker  
 {  
     [OperationContract(IsOneWay = true)]  
     void StockTick(string symbol, float price);  
 }  
-```  
-  
+```
+
  서비스 작업에서는 다음 샘플 코드에 표시된 것과 같이 주식 기호와 주가를 표시합니다.  
   
-```  
+```csharp
 public class StockTickerService : IStockTicker  
 {  
     public void StockTick(string symbol, float price)  
@@ -60,8 +62,8 @@ public class StockTickerService : IStockTicker
 ```  
   
  서비스는 자체 호스트됩니다. MSMQ 전송을 사용하는 경우에는 사용되는 큐를 미리 만들어야 합니다. 수동으로 또는 코드를 통해 이 작업을 수행할 수 있습니다. 이 샘플에서 서비스에는 큐가 있는지 확인하고 필요한 경우 큐를 만드는 코드가 포함되어 있습니다. 큐 이름은 구성 파일에서 읽습니다. 기본 주소에서 사용 되는 [ServiceModel Metadata 유틸리티 도구 (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) 서비스에 대 한 프록시를 생성 합니다.  
-  
-```  
+
+```csharp
 // Host the service within this EXE console application.  
 public static void Main()  
 {  
@@ -88,8 +90,8 @@ public static void Main()
         serviceHost.Close();  
     }  
 }  
-```  
-  
+```
+
  MSMQ 큐 이름은 구성 파일의 appSettings 섹션에 지정됩니다. 서비스의 끝점은 구성 파일의 system.serviceModel 섹션에 정의되며 `netMsmqBinding` 바인딩을 지정합니다.  
   
 > [!NOTE]
@@ -114,7 +116,7 @@ public static void Main()
                 bindingConfiguration="volatileBinding"   
                 contract="Microsoft.ServiceModel.Samples.IStockTicker" />  
     ...  
-          </service>  
+    </service>  
   </services>  
   
   <bindings>  
@@ -129,8 +131,8 @@ public static void Main()
 ```  
   
  샘플에서 비트랜잭션 큐를 사용하여 대기 중인 메시지를 보내기 때문에 트랜잭션된 메시지를 큐로 보낼 수 없습니다.  
-  
-```  
+
+```csharp
 // Create a client.  
 Random r = new Random(137);  
   
@@ -145,8 +147,8 @@ for (int i = 0; i < 10; i++)
   
 //Closing the client gracefully cleans up resources.  
 client.Close();  
-```  
-  
+```
+
  샘플을 실행하면 클라이언트 및 서비스 동작이 서비스 콘솔 창과 클라이언트 콘솔 창에 모두 표시됩니다. 서비스에서 클라이언트가 보내는 메시지를 받는 것을 볼 수 있습니다. 서비스와 클라이언트를 종료하려면 각 콘솔 창에서 Enter 키를 누릅니다. 큐를 사용하므로 클라이언트와 서비스가 동시에 실행 중일 필요는 없습니다. 클라이언트를 실행하고 종료한 다음 서비스를 다시 시작해도 서비스에서 계속 메시지를 받을 수 있습니다.  
   
 ```  

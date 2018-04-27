@@ -20,17 +20,17 @@ helpviewer_keywords:
 - drag-and-drop [WPF], events
 - drop targets [WPF], drag-and-drop
 ms.assetid: 1a5b27b0-0ac5-4cdf-86c0-86ac0271fa64
-caps.latest.revision: ''
+caps.latest.revision: 31
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: b7a69a4dcd5fc39b700bf9c3404e70d581509ebc
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: fe34933c19e7f8a50d144cad99b99decbd501965
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="drag-and-drop-overview"></a>끌어서 놓기 개요
 이 항목에서는 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 응용 프로그램의 끌어서 놓기 지원에 대해 개괄적으로 설명합니다. 끌어서 놓기는 일반적으로 마우스(또는 다른 포인팅 장치)를 사용하여 하나 이상의 개체를 선택하고 이러한 개체를 [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]에서 원하는 놓기 대상 위로 끌어서 놓는 데이터 전송 방법을 가리킵니다.  
@@ -45,7 +45,7 @@ ms.lasthandoff: 03/26/2018
  끌어서 놓기 작업 중 수행되는 특정 작업은 응용 프로그램과 관련이 있으며 컨텍스트에 의해 결정되는 경우가 많습니다.  예를들어 동일한 저장 장치의 폴더 간에 선택한 파일을 끌어서 놓으면 기본적으로 파일이 이동하는 반면, [!INCLUDE[TLA#tla_unc](../../../../includes/tlasharptla-unc-md.md)] 공유에서 로컬 폴더로 파일을 끌어서 놓으면 기본적으로 파일이 복사됩니다.  
   
  
-          [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]에서 제공하는 끌어서 놓기 기능은 다양한 끌어서 놓기 시나리오를 지원하도록 매우 유연하고 사용자 지정 가능하도록 설계되었습니다.  끌어서 놓기는 단일 응용 프로그램 내에서 또는 서로 다른 응용 프로그램 간에 개체 조작을 지원합니다. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 응용 프로그램과 다른 [!INCLUDE[TLA2#tla_win](../../../../includes/tla2sharptla-win-md.md)] 응용 프로그램 간의 끌어서 놓기도 완전히 지원됩니다.  
+          [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]에서 제공하는 끌어서 놓기 기능은 다양한 끌어서 놓기 시나리오를 지원하도록 매우 유연하고 사용자 지정 가능하도록 설계되었습니다.  끌어서 놓기는 단일 응용 프로그램 내에서 또는 서로 다른 응용 프로그램 간에 개체 조작을 지원합니다. 드래그 앤 드롭 간의 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 응용 프로그램 및 다른 Windows 응용 프로그램도 완전히 지원 됩니다.  
   
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]에서는 모든 <xref:System.Windows.UIElement> 또는 <xref:System.Windows.ContentElement>가 끌어서 놓기에 참여할 수 있습니다. 끌어서 놓기 작업에 필요한 이벤트와 메서드는 <xref:System.Windows.DragDrop> 클래스에서 정의됩니다. <xref:System.Windows.UIElement> 또는 <xref:System.Windows.ContentElement>가 기본 요소로 상속될 때 이벤트가 클래스 멤버에 표시되도록 <xref:System.Windows.DragDrop> 및 <xref:System.Windows.UIElement> 클래스에는 <xref:System.Windows.ContentElement> 연결된 이벤트에 대한 별칭이 포함됩니다. 이러한 이벤트에 연결된 이벤트 처리기는 내부 <xref:System.Windows.DragDrop> 연결된 이벤트에 연결되며 동일한 이벤트 데이터 인스턴스를 받습니다. 자세한 내용은 <xref:System.Windows.UIElement.Drop?displayProperty=nameWithType> 이벤트를 참조하세요.  
   

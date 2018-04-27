@@ -1,24 +1,26 @@
 ---
-title: "문 사용시 문제 회피"
-ms.custom: 
+title: 문 사용시 문제 회피
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: aff82a8d-933d-4bdc-b0c2-c2f7527204fb
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 202bf02f017857a354a6f23270e49571c6240b26
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: dd3065a21c1714b0643bfb87b731193d3367352f
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="avoiding-problems-with-the-using-statement"></a>문 사용시 문제 회피
 이 샘플에서는 형식화된 클라이언트를 사용할 때 C# "using" 문을 사용하여 리소스를 자동으로 정리하지 않아야 한다는 것을 보여 줍니다. 이 샘플에 따라는 [시작](../../../../docs/framework/wcf/samples/getting-started-sample.md) 계산기 서비스를 구현 하는 합니다. 이 샘플에서 클라이언트는 콘솔 응용 프로그램(.exe)이고 서비스는 IIS(인터넷 정보 서비스)를 통해 호스트됩니다.  
@@ -32,7 +34,7 @@ ms.lasthandoff: 12/22/2017
   
  `DemonstrateProblemUsingCanThrow` 메서드에서 나타나는 첫 번째 문제는 닫는 중괄호로 인해 예외가 throw되고 닫는 중괄호 뒤의 코드가 실행되지 않는다는 것입니다.  
   
-```  
+```csharp   
 using (CalculatorClient client = new CalculatorClient())  
 {  
     ...  
@@ -44,7 +46,7 @@ Console.WriteLine("Hope this code wasn't important, because it might not happen.
   
  `DemonstrateProblemUsingCanThrowAndMask` 메서드에서 나타나는 두 번째 문제는 예외를 throw하는 닫는 중괄호와 관련된 또 다른 문제입니다.  
   
-```  
+```csharp   
 using (CalculatorClient client = new CalculatorClient())  
 {  
     ...  
@@ -57,7 +59,7 @@ using (CalculatorClient client = new CalculatorClient())
   
  마지막으로 이 샘플에서는 `DemonstrateCleanupWithExceptions`에 예외가 발생할 경우 올바르게 정리하는 방법을 보여 줍니다. 이를 위해 오류를 보고하고 `Abort`를 호출하는 try/catch 블록이 사용됩니다. 참조는 [예상 예외](../../../../docs/framework/wcf/samples/expected-exceptions.md) 클라이언트 호출에서 예외를 catch 하는 방법에 대 한 자세한 내용은 샘플입니다.  
   
-```  
+```csharp   
 try  
 {  
     ...  

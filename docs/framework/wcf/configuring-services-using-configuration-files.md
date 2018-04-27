@@ -18,11 +18,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: e5ad91fa70a743b7135648cb10c7c519e3559bdb
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 5f1c7449372ad012280b360c09017a15733fb95b
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="configuring-services-using-configuration-files"></a>구성 파일을 사용하여 서비스 구성
 구성 파일을 사용하여 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 서비스를 구성하면 디자인 타임 대신 배포 시 끝점 및 서비스 동작 데이터를 제공할 수 있습니다. 이 항목에서는 사용할 수 있는 기본 기술에 대해 간략하게 설명합니다.  
@@ -37,9 +37,9 @@ ms.lasthandoff: 04/26/2018
 ## <a name="systemconfiguration-webconfig-and-appconfig"></a>System.Configuration: Web.config 및 App.config  
  [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 에서는 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]의 System.Configuration 구성 시스템을 사용합니다.  
   
- [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]에서 서비스를 구성할 때는 Web.config 파일 또는 App.config 파일을 사용하여 설정을 지정합니다. 구성 파일 이름은 서비스에 대해 선택한 호스팅 환경에 따라 결정됩니다. IIS를 사용하여 서비스를 호스트하는 경우에는 Web.config 파일을 사용합니다. 다른 호스팅 환경을 사용하는 경우에는 App.config 파일을 사용합니다.  
+ Visual Studio에서 서비스를 구성할 때 Web.config 파일 또는 App.config 파일 중 하나를 사용 하 여 설정을 지정할 수 있습니다. 구성 파일 이름은 서비스에 대해 선택한 호스팅 환경에 따라 결정됩니다. IIS를 사용하여 서비스를 호스트하는 경우에는 Web.config 파일을 사용합니다. 다른 호스팅 환경을 사용하는 경우에는 App.config 파일을 사용합니다.  
   
- [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]에서 App.config라는 파일은 최종 구성 파일을 만드는 데 사용됩니다. 구성에 사용되는 최종 이름은 어셈블리 이름에 따라 달라집니다. 예를 들어, "Cohowinery.exe"라는 어셈블리에는 "Cohowinery.exe.config"의 최종 구성 파일 이름이 포함됩니다. 그러나 App.config 파일만 수정하면 됩니다. 이 파일의 변경 내용은 컴파일 타임에 최종 응용 프로그램 구성 파일에 자동으로 적용됩니다.  
+ Visual Studio에서 App.config 라는 파일은 최종 구성 파일을 만드는 데 됩니다. 구성에 사용되는 최종 이름은 어셈블리 이름에 따라 달라집니다. 예를 들어, "Cohowinery.exe"라는 어셈블리에는 "Cohowinery.exe.config"의 최종 구성 파일 이름이 포함됩니다. 그러나 App.config 파일만 수정하면 됩니다. 이 파일의 변경 내용은 컴파일 타임에 최종 응용 프로그램 구성 파일에 자동으로 적용됩니다.  
   
  App.config 파일 사용 시 응용 프로그램이 시작되고 구성이 적용되면 구성 시스템에서는 App.config 파일을 Machine.config 파일의 내용과 병합합니다. 이 메커니즘을 통해 시스템 수준의 설정이 Machine.config 파일에 정의됩니다. App.config 파일을 사용하여 Machine.config 파일의 설정을 재정의할 수 있습니다. 또한 Machine.config 파일의 설정이 사용되도록 해당 설정을 잠글 수 있습니다. Web.config의 경우 구성 시스템에서는 응용 프로그램 디렉터리에 이르는 모든 디렉터리의 Web.config 파일을 적용된 구성에 병합합니다. 구성과 설정의 우선 순위에 대한[!INCLUDE[crabout](../../../includes/crabout-md.md)] 는 <xref:System.Configuration> 네임스페이스에 있는 항목을 참조하세요.  
   

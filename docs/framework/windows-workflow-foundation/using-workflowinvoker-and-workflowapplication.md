@@ -1,26 +1,27 @@
 ---
-title: "WorkflowInvoker 및 WorkflowApplication 사용"
-ms.custom: 
+title: WorkflowInvoker 및 WorkflowApplication 사용
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: cd0e583c-a3f9-4fa2-b247-c7b3368c48a7
-caps.latest.revision: "19"
+caps.latest.revision: 19
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 669e1bd1daeb8f2569a851e21d10f250d1bc2204
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 90999867ee1dd678e279832d73d7ecaaa416fe7b
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="using-workflowinvoker-and-workflowapplication"></a>WorkflowInvoker 및 WorkflowApplication 사용
-[!INCLUDE[wf](../../../includes/wf-md.md)]는 호스팅 워크플로의 여러 메서드를 제공합니다. <xref:System.Activities.WorkflowInvoker>는 메서드 호출과 같은 방식으로 워크플로를 호출하기 위한 간단한 방법을 제공하며, 지속성을 사용하지 않는 워크플로에만 사용될 수 있습니다. <xref:System.Activities.WorkflowApplication>은 수명 주기 이벤트 알림, 실행 제어, 책갈피 다시 시작 및 지속성을 비롯한 다양한 워크플로 실행 모델을 제공합니다. <xref:System.ServiceModel.Activities.WorkflowServiceHost>는 메시징 활동에 대한 지원을 제공하며 주로 워크플로 서비스에 사용됩니다. 이 항목에서는 <xref:System.Activities.WorkflowInvoker> 및 <xref:System.Activities.WorkflowApplication>을 사용하는 워크플로 호스팅을 소개합니다. [!INCLUDE[crabout](../../../includes/crabout-md.md)]사용 하 여 워크플로 호스팅 <xref:System.ServiceModel.Activities.WorkflowServiceHost>, 참조 [워크플로 서비스](../../../docs/framework/wcf/feature-details/workflow-services.md) 및 [호스팅 워크플로 서비스 개요](../../../docs/framework/wcf/feature-details/hosting-workflow-services-overview.md)합니다.  
+Windows WF (Workflow Foundation) 워크플로 호스트 하는 여러 가지 방법을 제공 합니다. <xref:System.Activities.WorkflowInvoker> 는 메서드 호출과 같은 방식으로 워크플로를 호출하기 위한 간단한 방법을 제공하며, 지속성을 사용하지 않는 워크플로에만 사용될 수 있습니다. <xref:System.Activities.WorkflowApplication>은 수명 주기 이벤트 알림, 실행 제어, 책갈피 다시 시작 및 지속성을 비롯한 다양한 워크플로 실행 모델을 제공합니다. <xref:System.ServiceModel.Activities.WorkflowServiceHost>는 메시징 활동에 대한 지원을 제공하며 주로 워크플로 서비스에 사용됩니다. 이 항목에서는 <xref:System.Activities.WorkflowInvoker> 및 <xref:System.Activities.WorkflowApplication>을 사용하는 워크플로 호스팅을 소개합니다. [!INCLUDE[crabout](../../../includes/crabout-md.md)] 사용 하 여 워크플로 호스팅 <xref:System.ServiceModel.Activities.WorkflowServiceHost>, 참조 [워크플로 서비스](../../../docs/framework/wcf/feature-details/workflow-services.md) 및 [호스팅 워크플로 서비스 개요](../../../docs/framework/wcf/feature-details/hosting-workflow-services-overview.md)합니다.  
   
 ## <a name="using-workflowinvoker"></a>WorkflowInvoker 사용  
  <xref:System.Activities.WorkflowInvoker>는 워크플로를 메서드 호출처럼 실행하는 방법을 제공합니다. <xref:System.Activities.WorkflowInvoker>를 사용하여 워크플로를 호출하려면 <xref:System.Activities.WorkflowInvoker.Invoke%2A> 메서드를 호출하고 호출할 워크플로의 워크플로 정의를 전달합니다. 이 예제에서는 <xref:System.Activities.Statements.WriteLine>를 사용하여 <xref:System.Activities.WorkflowInvoker> 활동을 호출합니다.  
@@ -34,7 +35,7 @@ ms.lasthandoff: 12/22/2017
 > [!NOTE]
 >  <xref:System.TimeoutException>은 시간 제한 간격이 경과하고 실행 시 워크플로가 유휴 상태가 되는 경우에만 throw됩니다. 완료하는 데 지정한 시간 제한 간격보다 오래 걸리는 워크플로는 해당 워크플로가 유효 상태가 되지 않는 경우에 성공적으로 완료됩니다.  
   
- <xref:System.Activities.WorkflowInvoker>는 호출 메서드의 비동기 버전도 제공합니다. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)]<xref:System.Activities.WorkflowInvoker.InvokeAsync%2A> 및 <xref:System.Activities.WorkflowInvoker.BeginInvoke%2A>합니다.  
+ <xref:System.Activities.WorkflowInvoker>는 호출 메서드의 비동기 버전도 제공합니다. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] <xref:System.Activities.WorkflowInvoker.InvokeAsync%2A> 및 <xref:System.Activities.WorkflowInvoker.BeginInvoke%2A>합니다.  
   
 ### <a name="setting-input-arguments-of-a-workflow"></a>워크플로의 입력 인수 설정  
  워크플로의 입력 인수에 매핑되는 인수 이름으로 키가 지정된 입력 매개 변수 사전을 사용하여 워크플로에 데이터를 전달할 수 있습니다. 이 예제에서는 <xref:System.Activities.Statements.WriteLine>을 호출하고 입력 매개 변수 사전을 사용하여 해당 <xref:System.Activities.Statements.WriteLine.Text%2A> 인수의 값을 지정합니다.  
@@ -77,7 +78,7 @@ ms.lasthandoff: 12/22/2017
  [!code-csharp[CFX_WorkflowApplicationExample#21](../../../samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowapplicationexample/cs/program.cs#21)]  
   
 > [!NOTE]
->  <xref:System.Activities.WorkflowApplication> 및 <xref:System.Activities.WorkflowInvoker>는 입력 인수의 사전을 취하여 `out` 인수 사전을 반환합니다. 이 사전 매개 변수, 속성 및 반환 값은 `IDictionary<string, object>` 형식입니다. 전달되는 사전 클래스의 실제 인스턴스는 `IDictionary<string, object>`를 구현하는 클래스일 수 있습니다. 이 예제에서는 `Dictionary<string, object>`를 사용합니다. [!INCLUDE[crabout](../../../includes/crabout-md.md)]사전 참조 <xref:System.Collections.Generic.IDictionary%602> 및 <xref:System.Collections.Generic.Dictionary%602>합니다.  
+>  <xref:System.Activities.WorkflowApplication> 및 <xref:System.Activities.WorkflowInvoker>는 입력 인수의 사전을 취하여 `out` 인수 사전을 반환합니다. 이 사전 매개 변수, 속성 및 반환 값은 `IDictionary<string, object>` 형식입니다. 전달되는 사전 클래스의 실제 인스턴스는 `IDictionary<string, object>`를 구현하는 클래스일 수 있습니다. 이 예제에서는 `Dictionary<string, object>`를 사용합니다. [!INCLUDE[crabout](../../../includes/crabout-md.md)] 사전 참조 <xref:System.Collections.Generic.IDictionary%602> 및 <xref:System.Collections.Generic.Dictionary%602>합니다.  
   
 ### <a name="passing-data-into-a-running-workflow-using-bookmarks"></a>책갈피를 사용하여 실행 중인 워크플로에 데이터 전달  
  책갈피는 활동이 다시 시작되기를 수동적으로 대기하는 메커니즘이자 실행 중인 워크플로 인스턴스에 데이터를 전달하기 위한 메커니즘입니다. 다음 예와 같이 활동이 데이터를 대기 중인 경우 <xref:System.Activities.Bookmark>를 만들고 <xref:System.Activities.Bookmark>를 다시 시작할 때 호출할 콜백 메서드를 등록할 수 있습니다.  

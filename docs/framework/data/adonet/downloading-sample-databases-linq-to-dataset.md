@@ -1,24 +1,26 @@
 ---
-title: "샘플 데이터베이스 다운로드(LINQ to DataSet)"
-ms.custom: 
+title: 샘플 데이터베이스 다운로드(LINQ to DataSet)
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: eb42a7af-d410-4b7f-b4a8-13c72ce6fd09
-caps.latest.revision: "2"
+caps.latest.revision: 2
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: c8c1c2dabb13393764ca8b1fd9c1a717b9e2527e
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: 8e19e51ecf4868d0d49e26b4aafd7e8b3840992d
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="downloading-sample-databases-linq-to-dataset"></a>샘플 데이터베이스 다운로드(LINQ to DataSet)
 샘플 및 연습에는 [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] 설명서 AdventureWorks 예제 데이터베이스를 사용 합니다. 이 제품은 Microsoft 다운로드 사이트에서 무료로 다운로드할 수 있습니다. [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] 설명서의 샘플과 연습에서는 SQL Server를 데이터 저장소로 사용합니다. SQL Server 대신 무료로 사용할 수 있는 SQL Server Express Edition을 데이터 저장소로 사용할 수도 있습니다.  
@@ -74,7 +76,7 @@ ms.lasthandoff: 01/17/2018
      이러한 파일을 다른 드라이브나 디렉터리에 설치한 경우에는 `sp_attach_db` 저장 프로시저를 실행하기 전에 경로를 올바르게 수정해야 합니다.  
   
 ## <a name="downloading-sql-server-express-edition"></a>SQL Server Express Edition 다운로드  
- [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] 단원의 샘플과 연습에서는 SQL Server 2005를 데이터 저장소로 사용하지만 SQL Server Express Edition을 대신 사용하도록 수정할 수 있습니다. SQL Server Express Edition은 무료로 제공되며 응용 프로그램과 함께 재배포할 수 있습니다. [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)]를 사용하고 있는 경우에는 SQL Server Express Edition이 Pro 이상의 에디션에 포함되어 있습니다.  
+ [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] 단원의 샘플과 연습에서는 SQL Server 2005를 데이터 저장소로 사용하지만 SQL Server Express Edition을 대신 사용하도록 수정할 수 있습니다. SQL Server Express Edition은 무료로 제공되며 응용 프로그램과 함께 재배포할 수 있습니다. Visual Studio를 사용 하는 경우 SQL Server Express Edition이 Pro 이상의 에디션에 포함 됩니다.  
   
 #### <a name="to-download-and-install-sql-server-express-edition"></a>SQL Server Express Edition을 다운로드하여 설치하려면  
   

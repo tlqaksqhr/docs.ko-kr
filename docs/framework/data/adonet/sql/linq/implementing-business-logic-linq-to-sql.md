@@ -1,27 +1,29 @@
 ---
-title: "비즈니스 논리 구현(LINQ to SQL)"
-ms.custom: 
+title: 비즈니스 논리 구현(LINQ to SQL)
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: c4577590-7b12-42e1-84a6-95aa2562727e
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: d905f34c29fbd8a15cb8225a4a547490a5c14efd
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: f519162818739d04cbe66b107911a0e0c30d93bc
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="implementing-business-logic-linq-to-sql"></a>비즈니스 논리 구현(LINQ to SQL)
 이 항목에서 "비즈니스 논리"는 데이터베이스에서 데이터를 삽입, 업데이트 또는 삭제하기 전에 데이터에 적용하는 모든 사용자 지정 규칙 또는 유효성 검사 테스트를 의미합니다. 비즈니스 논리를 "비즈니스 규칙" 또는 "도메인 논리"라고도 합니다. N 계층 응용 프로그램의 경우 비즈니스 논리는 일반적으로 프레젠테이션 계층이나 데이터 액세스 계층과 독립적으로 수정될 수 있도록 논리 계층으로 디자인됩니다. 비즈니스 논리는 데이터베이스 데이터의 업데이트, 삽입 또는 삭제 전과 후에 데이터 액세스 계층에서 호출될 수 있습니다.  
@@ -166,7 +168,7 @@ public string CustomerID
 }  
 ```  
   
- 사용자가 작성하는 클래스 부분에 메서드의 구현 정의를 작성할 수 있습니다. [!INCLUDE[vsprvs](../../../../../../includes/vsprvs-md.md)]입력 한 후, `partial` 메서드 정의 클래스의 다른 부분에 대 한 IntelliSense 나타납니다.  
+ 사용자가 작성하는 클래스 부분에 메서드의 구현 정의를 작성할 수 있습니다. 입력 한 후 Visual Studio에서 `partial` 메서드 정의 클래스의 다른 부분에 대 한 IntelliSense 나타납니다.  
   
 ```vb  
 Partial Public Class Customer  

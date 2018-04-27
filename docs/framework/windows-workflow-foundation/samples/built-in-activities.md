@@ -1,26 +1,27 @@
 ---
-title: "기본 제공 활동"
-ms.custom: 
+title: 기본 제공 활동
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 31e1b8c2-7f74-458a-b2e2-fddc5b10eac1
-caps.latest.revision: "3"
+caps.latest.revision: 3
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 15282ae7d1988e560877d10c249fa026510e1d64
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 40423c1684b1f971c7e0d8d812fdcf7d952bb888
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="built-in-activities"></a>기본 제공 활동
-이 단원에는 기본 제공 [!INCLUDE[wf](../../../../includes/wf-md.md)] 활동을 보여 주는 샘플이 포함되어 있습니다.  
+이 섹션에는 기본 제공 Windows WF (Workflow Foundation) 활동을 보여 주는 샘플이 포함 되어 있습니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
  [Flowchart 작업에서 TryCatch를 사용하여 오류 처리](../../../../docs/framework/windows-workflow-foundation/samples/fault-handling-in-a-flowchart-activity-using-trycatch.md)  

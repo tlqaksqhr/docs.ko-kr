@@ -14,14 +14,14 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 9cd4dfcbfc9d417766615c624905f8bce2c10e54
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: abec64433d10a23dca6186c6c9a553bbed12a017
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="buffered-receive"></a>버퍼링되는 수신
-이 샘플에서는 [!INCLUDE[wf](../../../../includes/wf-md.md)]에서 버퍼링된 수신 기능을 설정하고 구성하는 방법을 보여 줍니다. 버퍼링된 수신 기능을 사용하면 워크플로 작성자가 메시지의 수신 순서에 신경을 쓰지 않고 워크플로를 만들 수 있습니다. 버퍼링된 수신 기능은 메시지를 로컬로 버퍼링하고 워크플로에서 메시지를 받을 준비가 되었을 때 이를 전달하는 역할을 합니다.  
+이 샘플에는 설정 및의 Windows WF (Workflow Foundation) 버퍼링된 된 수신 기능을 구성 하는 방법을 보여 줍니다. 버퍼링된 수신 기능을 사용하면 워크플로 작성자가 메시지의 수신 순서에 신경을 쓰지 않고 워크플로를 만들 수 있습니다. 버퍼링된 수신 기능은 메시지를 로컬로 버퍼링하고 워크플로에서 메시지를 받을 준비가 되었을 때 이를 전달하는 역할을 합니다.  
   
 ## <a name="demonstrates"></a>세부 항목  
  메시징 활동에 버퍼링된 수신 기능을 사용하여 순서에 상관없이 메시지 처리  

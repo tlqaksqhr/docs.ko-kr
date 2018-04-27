@@ -1,33 +1,35 @@
 ---
-title: "생성된 클라이언트 코드 이해"
-ms.custom: 
+title: 생성된 클라이언트 코드 이해
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: c3f6e4b0-1131-4c94-aa39-a197c5c2f2ca
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 4c57469b61a12ff5043632cf2b6f4fe3a8a53d56
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: f7716921be5ff97c2353b3b31d841c0c8dc01658
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="understanding-generated-client-code"></a>생성된 클라이언트 코드 이해
 [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) 는 클라이언트 응용 프로그램을 빌드하는 데 사용할 클라이언트 응용 프로그램 구성 파일과 클라이언트 코드를 생성합니다. 이 항목에서는 표준 서비스 계약 시나리오를 위해 생성된 코드 예제를 간략히 살펴 봅니다. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 는 [WCF Client Overview](../../../../docs/framework/wcf/wcf-client-overview.md)를 참조하세요.  
   
 ## <a name="overview"></a>개요  
- [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] 를 사용하여 프로젝트의 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 클라이언트 형식을 생성하는 경우 일반적으로 생성된 클라이언트 코드를 검사할 필요가 없습니다. 동일한 서비스를 수행하는 개발 환경을 사용하지 않는 경우 Svcutil.exe 같은 도구를 사용하여 클라이언트 코드를 생성한 다음 해당 코드를 사용하여 클라이언트 응용 프로그램을 개발할 수 있습니다.  
+ Visual Studio를 사용 하 여 생성 하는 경우 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 프로젝트에 대 한 클라이언트 유형, 일반적으로 불필요 생성 된 클라이언트 코드를 검사 합니다. 동일한 서비스를 수행하는 개발 환경을 사용하지 않는 경우 Svcutil.exe 같은 도구를 사용하여 클라이언트 코드를 생성한 다음 해당 코드를 사용하여 클라이언트 응용 프로그램을 개발할 수 있습니다.  
   
  Svcutil.exe에는 생성된 형식 정보를 수정하는 많은 옵션이 있으므로 이 항목에서 모든 시나리오에 대해 설명하지는 않습니다. 그러나 다음 표준 작업에는 생성된 코드를 찾는 과정이 포함됩니다.  
   
@@ -50,14 +52,14 @@ ms.lasthandoff: 12/22/2017
   
  [!code-csharp[C_GeneratedCodeFiles#12](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_generatedcodefiles/cs/proxycode.cs#12)]  
   
- 생성된 서비스 계약 인터페이스를 <xref:System.ServiceModel.ChannelFactory?displayProperty=nameWithType> 클래스와 함께 사용하여 서비스 작업을 호출할 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 채널 개체를 만들 수 있습니다. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][하는 방법: ChannelFactory를 사용 하 여](../../../../docs/framework/wcf/feature-details/how-to-use-the-channelfactory.md)합니다.  
+ 생성된 서비스 계약 인터페이스를 <xref:System.ServiceModel.ChannelFactory?displayProperty=nameWithType> 클래스와 함께 사용하여 서비스 작업을 호출할 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 채널 개체를 만들 수 있습니다. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [방법: ChannelFactory를 사용 하 여](../../../../docs/framework/wcf/feature-details/how-to-use-the-channelfactory.md)합니다.  
   
 ### <a name="finding-wcf-client-classes"></a>WCF 클라이언트 클래스 찾기  
  사용할 서비스 계약을 구현하는 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 클라이언트 클래스를 찾으려면 형식 매개 변수가 이전에 찾았으며 해당 인터페이스를 확장하는 서비스 계약 인터페이스인 <xref:System.ServiceModel.ClientBase%601?displayProperty=nameWithType>의 확장을 검색합니다. 다음 코드 예제에서는 <xref:System.ServiceModel.ClientBase%601> 형식의 `ISampleService`클래스를 보여 줍니다.  
   
  [!code-csharp[C_GeneratedCodeFiles#14](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_generatedcodefiles/cs/proxycode.cs#14)]  
   
- 새 인스턴스를 만들고 구현하는 메서드를 호출하여 이 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 클라이언트 클래스를 사용할 수 있습니다. 이러한 메서드는 상호 작용하도록 디자인 및 구성된 서비스 작업을 호출합니다. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][WCF 클라이언트 개요](../../../../docs/framework/wcf/wcf-client-overview.md)합니다.  
+ 새 인스턴스를 만들고 구현하는 메서드를 호출하여 이 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 클라이언트 클래스를 사용할 수 있습니다. 이러한 메서드는 상호 작용하도록 디자인 및 구성된 서비스 작업을 호출합니다. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [WCF 클라이언트 개요](../../../../docs/framework/wcf/wcf-client-overview.md)합니다.  
   
 > [!NOTE]
 >  SvcUtil.exe는 WCF 클라이언트 클래스를 생성할 때 디버거가 WCF 클라이언트 클래스를 단계별로 실행하지 못하도록 하는 <xref:System.Diagnostics.DebuggerStepThroughAttribute> 를 클라이언트 클래스에 추가합니다.  
@@ -74,7 +76,7 @@ ms.lasthandoff: 12/22/2017
  이 경우 데이터 형식은 클라이언트의 특정 예외인 <xref:System.ServiceModel.FaultException%601> 에서 throw되는 세부 유형이며, 여기서 세부 유형 매개 변수는 `microsoft.wcf.documentation.SampleFault`입니다. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 는 [Specifying Data Transfer in Service Contracts](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md)를 참조하세요. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 는 [Sending and Receiving Faults](../../../../docs/framework/wcf/sending-and-receiving-faults.md)를 참조하세요.  
   
 ### <a name="finding-callback-contracts-for-duplex-services"></a>이중 서비스에 대한 콜백 계약 찾기  
- 계약 인터페이스가 <xref:System.ServiceModel.ServiceContractAttribute.CallbackContract%2A?displayProperty=nameWithType> 속성 값을 지정하는 서비스 계약을 찾으면 해당 계약이 이중 계약을 지정합니다. 이중 계약에서는 클라이언트 응용 프로그램이 콜백 계약을 구현하는 콜백 클래스를 만들고 해당 클래스의 인스턴스를 서비스와의 통신에 사용되는 <xref:System.ServiceModel.DuplexClientBase%601?displayProperty=nameWithType> 또는 <xref:System.ServiceModel.DuplexChannelFactory%601?displayProperty=nameWithType>로 전달해야 합니다. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]이중 클라이언트 참조 [하는 방법: 이중 계약와 함께 Access Services](../../../../docs/framework/wcf/feature-details/how-to-access-services-with-a-duplex-contract.md)합니다.  
+ 계약 인터페이스가 <xref:System.ServiceModel.ServiceContractAttribute.CallbackContract%2A?displayProperty=nameWithType> 속성 값을 지정하는 서비스 계약을 찾으면 해당 계약이 이중 계약을 지정합니다. 이중 계약에서는 클라이언트 응용 프로그램이 콜백 계약을 구현하는 콜백 클래스를 만들고 해당 클래스의 인스턴스를 서비스와의 통신에 사용되는 <xref:System.ServiceModel.DuplexClientBase%601?displayProperty=nameWithType> 또는 <xref:System.ServiceModel.DuplexChannelFactory%601?displayProperty=nameWithType>로 전달해야 합니다. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 이중 클라이언트 참조 [하는 방법: 이중 계약와 함께 Access Services](../../../../docs/framework/wcf/feature-details/how-to-access-services-with-a-duplex-contract.md)합니다.  
   
  다음 계약에서는 `SampleDuplexHelloCallback`형식의 콜백 계약을 지정합니다.  
   

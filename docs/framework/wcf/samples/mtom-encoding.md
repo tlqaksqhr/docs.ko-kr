@@ -1,24 +1,26 @@
 ---
-title: "MTOM 인코딩"
-ms.custom: 
+title: MTOM 인코딩
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 820e316f-4ee1-4eb5-ae38-b6a536e8a14f
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ed65e2098a95a05f7cc5efa6d9014f67bf5ed261
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: d826b5f2973ac451b3943fd78b661093906c72ad
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="mtom-encoding"></a>MTOM 인코딩
 이 샘플에서는 WSHttpBinding과 함께 MTOM(Message Transmission Optimization Mechanism) 메시지 인코딩을 사용하는 것을 보여 줍니다. MTOM은 SOAP 메시지와 함께 큰 이진 첨부 파일을 원시 바이트로 전송함으로써 더 작은 크기의 메시지를 허용하는 메커니즘입니다.  
@@ -41,15 +43,15 @@ ms.lasthandoff: 12/22/2017
 ```  
   
  MTOM 인코더는 바이트 및 스트림의 배열을 최적화할 수 있습니다. 이 샘플의 작업에서는 `Stream` 매개 변수를 사용하므로 최적화될 수 있습니다.  
-  
-```  
+
+```csharp
 [ServiceContract(Namespace="http://Microsoft.ServiceModel.Samples")]  
   public interface IUpload  
   {  
       [OperationContract]  
       int Upload(Stream data);  
   }  
-```  
+```
   
  이 샘플에서 선택된 계약은 이진 데이터를 서비스에 전송하고 업로드된 바이트 수를 반환 값으로 받습니다. 서비스가 설치되고 클라이언트가 실행될 때 숫자 1000을 출력하는데, 이는 총 1000바이트를 수신했음을 나타냅니다. 출력의 나머지에서는 다양한 페이로드에 대해 최적화되고 최적화되지 않은 메시지 크기를 나열합니다.  
   

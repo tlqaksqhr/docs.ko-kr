@@ -14,16 +14,16 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 5388ed3f55d97f3282a710ac59fe36cfb32fa49c
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 6e9481364a70257f6c1711692daf5c81eee9fd88
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="using-a-custom-expression-editor"></a>사용자 지정 식 편집기 사용
 사용자 지정 식 편집기를 구현하여 보다 다양하거나 단순한 식 편집 환경을 제공할 수 있습니다. 사용자 지정 식 편집기는 다음과 같은 경우에 사용할 수 있습니다.  
   
--   IntelliSense와 다시 호스트된 Workflow Designer의 다른 다양한 편집 기능을 지원하려는 경우. 다시 호스트된 응용 프로그램에서는 기본 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 식 편집기를 사용할 수 없으므로 이 기능을 제공해야 합니다.  
+-   IntelliSense와 다시 호스트된 Workflow Designer의 다른 다양한 편집 기능을 지원하려는 경우. 기본 Visual Studio 식 편집기는 재 호스트 된 응용 프로그램에서 사용할 수 없으므로이 기능을 제공 해야 합니다.  
   
 -   , 예를 들어 않아도 됩니다 Visual Basic 살펴보기 또는 Visual Basic 식이 다루기가 식 편집 환경을 비즈니스 분석가 사용자를 위한를 단순화 합니다.  
   

@@ -1,29 +1,30 @@
 ---
-title: "방법: 사용자 지정 추적 참가자 만들기"
-ms.custom: 
+title: '방법: 사용자 지정 추적 참가자 만들기'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 1b612c7e-2381-4a7c-b07a-77030415f2a3
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 345fd696559ba52d41874ff774bd46a2d37f6e6f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: d53035c2fb41800a91d3cdea134ae811a09fa3e9
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="how-to-create-a-custom-tracking-participant"></a>방법: 사용자 지정 추적 참가자 만들기
-워크플로 추적을 통해 워크플로 실행 상태를 볼 수 있습니다. 워크플로 런타임은 워크플로 수명 주기 이벤트, 활동 수명 주기 이벤트, 책갈피 다시 시작 및 오류를 설명하는 추적 레코드를 내보냅니다. 이러한 추적 레코드는 추적 참가자에서 사용됩니다. [!INCLUDE[wf](../../../includes/wf-md.md)]에는 추적 레코드를 ETW(Windows용 이벤트 추적) 이벤트로 기록하는 표준 추적 참가자가 포함되어 있습니다. 표준 참가자가 요구 사항에 맞지 않는 경우 사용자 지정 추적 참가자를 작성할 수도 있습니다. 이 자습서 단계에서는 `WriteLine` 활동의 출력을 캡처하여 사용자에게 표시될 수 있도록 하는 추적 프로필 및 사용자 지정 추적 참가자를 만드는 방법에 대해 설명합니다.  
+워크플로 추적을 통해 워크플로 실행 상태를 볼 수 있습니다. 워크플로 런타임은 워크플로 수명 주기 이벤트, 활동 수명 주기 이벤트, 책갈피 다시 시작 및 오류를 설명하는 추적 레코드를 내보냅니다. 이러한 추적 레코드는 추적 참가자에서 사용됩니다. Windows WF (Workflow Foundation) 추적 레코드 이벤트에 대 한 ETW (Windows 추적) 이벤트로 기록 하는 표준 추적 참가자가 포함 되어 있습니다. 표준 참가자가 요구 사항에 맞지 않는 경우 사용자 지정 추적 참가자를 작성할 수도 있습니다. 이 자습서 단계에서는 `WriteLine` 활동의 출력을 캡처하여 사용자에게 표시될 수 있도록 하는 추적 프로필 및 사용자 지정 추적 참가자를 만드는 방법에 대해 설명합니다.  
   
 > [!NOTE]
 >  초보자를 위한 자습서의 각 항목은 이전 항목을 바탕으로 합니다. 이 항목을 진행하려면 먼저 이전 항목을 완료해야 합니다. 를 전체 버전을 다운로드 하거나이 자습서의 비디오 연습을 보려면 참조 [Windows Workflow Foundation (WF45)-초보자를 위한 자습서](http://go.microsoft.com/fwlink/?LinkID=248976)합니다.  
@@ -38,7 +39,7 @@ ms.lasthandoff: 12/22/2017
   
 -   [작성 하 고 응용 프로그램 실행](../../../docs/framework/windows-workflow-foundation/how-to-create-a-custom-tracking-participant.md#BKMK_BuildAndRun)  
   
-###  <a name="BKMK_CustomTrackingParticipant"></a>사용자 지정 추적 참가자를 만들려면  
+###  <a name="BKMK_CustomTrackingParticipant"></a> 사용자 지정 추적 참가자를 만들려면  
   
 1.  마우스 오른쪽 단추로 클릭 **NumberGuessWorkflowHost** 에 **솔루션 탐색기** 선택 **추가**, **클래스**합니다. 형식 `StatusTrackingParticipant` 에 **이름** 고 클릭 **추가**합니다.  
   
@@ -114,7 +115,7 @@ ms.lasthandoff: 12/22/2017
   
      추적 프로필이 지정되어 있지 않은 경우 기본 추적 프로필이 사용됩니다. 기본 추적 프로필이 사용될 경우 모든 `ActivityStates`에 대해 추적 레코드가 내보내집니다. 여기서는 `WriteLine` 활동의 수명 주기 동안 텍스트를 한 번만 캡처하면 되므로 `ActivityStates.Executing` 상태의 텍스트만 추출합니다. [추적 프로필을 만들고 추적 참가자를 등록 하](../../../docs/framework/windows-workflow-foundation/how-to-create-a-custom-tracking-participant.md#BKMK_TrackingProfile)를 지정 하는 추적 프로필이 만들어질 `WriteLine` `ActivityStates.Executing` 추적 레코드가 내보내집니다.  
   
-###  <a name="BKMK_TrackingProfile"></a>추적 프로필을 만들고 추적 참가자를 등록 하려면  
+###  <a name="BKMK_TrackingProfile"></a> 추적 프로필을 만들고 추적 참가자를 등록 하려면  
   
 1.  마우스 오른쪽 단추로 클릭 **WorkflowHostForm** 에 **솔루션 탐색기** 선택 **코드 보기**합니다.  
   
@@ -235,7 +236,7 @@ ms.lasthandoff: 12/22/2017
         // Workflow lifecycle handlers...  
     ```  
   
-###  <a name="BKMK_DisplayTracking"></a>추적 정보를 표시 하려면  
+###  <a name="BKMK_DisplayTracking"></a> 추적 정보를 표시 하려면  
   
 1.  마우스 오른쪽 단추로 클릭 **WorkflowHostForm** 에 **솔루션 탐색기** 선택 **코드 보기**합니다.  
   
@@ -330,7 +331,7 @@ ms.lasthandoff: 12/22/2017
     }  
     ```  
   
-###  <a name="BKMK_BuildAndRun"></a>작성 하 고 응용 프로그램 실행  
+###  <a name="BKMK_BuildAndRun"></a> 작성 하 고 응용 프로그램 실행  
   
 1.  Ctrl+Shift+B를 눌러 응용 프로그램을 빌드합니다.  
   

@@ -17,11 +17,11 @@ ms.assetid: f8e7263a-de13-48d1-b67c-ca1adf3544d9
 caps.latest.revision: 16
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 10c6bdf46e351b23705107da3b693531718cfd37
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: b03b81c9e04e79f8ce7763ecf8a489d248ff480b
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="walkthrough-implementing-inheritance-with-com-objects-visual-basic"></a>연습: COM 개체를 사용한 상속 구현(Visual Basic)
 Visual Basic 클래스를 파생 시켜 `Public` 도 이전 버전의 Visual Basic에 생성 된 COM 개체의 클래스. 속성 및 COM 개체에서 상속 된 클래스의 메서드를 재정의 하거나 속성와 마찬가지로 오버 로드 및 다른 기본 클래스의 메서드를 재정의 하거나 오버 로드 합니다. COM 개체에서 상속 다시 컴파일하지 않을 기존 클래스 라이브러리에 있는 경우에 유용 합니다.  
@@ -81,7 +81,7 @@ Visual Basic 클래스를 파생 시켜 `Public` 도 이전 버전의 Visual Bas
     >  클래스를 COM 개체로 Visual Basic을 사용 하 여 만든를 노출할 수도 있지만 실제 COM 개체 아니며이 연습에서 사용할 수 없습니다. 자세한 내용은 참조 [.NET Framework 응용 프로그램의 COM 상호 운용성](../../../visual-basic/programming-guide/com-interop/com-interoperability-in-net-framework-applications.md)합니다.  
   
 ## <a name="interop-assemblies"></a>Interop 어셈블리  
- 다음 절차에서는 관리 되지 않는 코드 (예: COM 개체)와 관리 코드 간 브리지 역할을 하는 interop 어셈블리를 만들게 됩니다 [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] 사용 합니다. Interop 어셈블리를 Visual Basic 만듭니다이 COM 개체와 같은 작업의 세부 사항을 처리 *interop 마샬링*, 프로세스 매개 변수 및 반환 값에 해당 하는 데이터를 이동 하는 동안 형식 및 COM 개체입니다. Visual Basic 응용 프로그램에 대 한 참조는 interop 어셈블리를 실제 COM 개체를 가리킵니다.  
+ 다음 절차에서는 관리 되지 않는 코드 (예: COM 개체) 및 Visual Studio를 사용 하 여 관리 코드 간 브리지 역할을 하는 interop 어셈블리를 만들게 됩니다. Interop 어셈블리를 Visual Basic 만듭니다이 COM 개체와 같은 작업의 세부 사항을 처리 *interop 마샬링*, 프로세스 매개 변수 및 반환 값에 해당 하는 데이터를 이동 하는 동안 형식 및 COM 개체입니다. Visual Basic 응용 프로그램에 대 한 참조는 interop 어셈블리를 실제 COM 개체를 가리킵니다.  
   
 #### <a name="to-use-a-com-object-with-visual-basic-2005-and-later-versions"></a>Visual Basic 2005 및 이후 버전으로 COM 개체를 사용 하려면  
   

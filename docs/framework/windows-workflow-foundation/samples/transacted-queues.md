@@ -1,26 +1,27 @@
 ---
-title: "트랜잭션된 큐"
-ms.custom: 
+title: 트랜잭션된 큐
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: b1b011dd-5e0b-482c-9bb0-9d8727038f14
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: fa475ac31287cebe173df255380b1f34d9af2567
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 628e91589ad32a2646316401c7b2ddb31b13eace
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="transacted-queues"></a>트랜잭션된 큐
-이 샘플에서는 [!INCLUDE[wf](../../../../includes/wf-md.md)]에서 큐와 트랜잭션을 통합하여 안정적이고 확장 가능한 서비스를 만드는 방법을 보여 줍니다. A <!--zz <xref:System.Activities.TransactionScope>--> `System.Activities.TransactionScope` 클라이언트 워크플로에서 사용 하 여 트랜잭션 중인 큐로 메시지를 보내는 데 사용 된 <xref:System.ServiceModel.NetMsmqBinding>합니다. 서버에서는 큐로부터 메시지를 받고 동일한 트랜잭션을 진행 중인 워크플로의 상태를 업데이트하기 위해 <xref:System.ServiceModel.Activities.TransactedReceiveScope>를 사용합니다.  
+이 샘플에서는 큐와 트랜잭션을의 Windows WF (Workflow Foundation)를 안정적이 고 확장 가능한 서비스를 만드는 통합 하는 방법을 보여 줍니다. A <!--zz <xref:System.Activities.TransactionScope>--> `System.Activities.TransactionScope` 클라이언트 워크플로에서 사용 하 여 트랜잭션 중인 큐로 메시지를 보내는 데 사용 된 <xref:System.ServiceModel.NetMsmqBinding>합니다. 서버에서는 큐로부터 메시지를 받고 동일한 트랜잭션을 진행 중인 워크플로의 상태를 업데이트하기 위해 <xref:System.ServiceModel.Activities.TransactedReceiveScope>를 사용합니다.  
   
 ## <a name="demonstrates"></a>세부 항목  
  <xref:System.Activities.Statements.TransactionScope>, <xref:System.ServiceModel.Activities.TransactedReceiveScope>, <xref:System.ServiceModel.NetMsmqBinding>, <xref:System.ServiceModel.Activities.Receive> 및 내용 기반 상관 관계  
