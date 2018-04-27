@@ -20,21 +20,21 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 48295a187870340948b045a64b852f1e6fdc1a65
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: dfa5eb8ec1e4f9f2eeeb142670b92d5ec35ab6cf
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
-# <a name="how-to-detect-whether-the-net-framework-30-is-installed"></a><span data-ttu-id="6b119-102">방법: .NET Framework 3.0 설치 여부 확인</span><span class="sxs-lookup"><span data-stu-id="6b119-102">How to: Detect Whether the .NET Framework 3.0 Is Installed</span></span>
-<span data-ttu-id="6b119-103">배포 하려면 관리자 [!INCLUDE[TLA#tla_avalonwinfx](../../../../includes/tlasharptla-avalonwinfx-md.md)] 응용 프로그램 시스템에서는 먼저 확인 해야 하는 [!INCLUDE[TLA2#tla_avalonwinfx](../../../../includes/tla2sharptla-avalonwinfx-md.md)] 런타임이 있는지 합니다.</span><span class="sxs-lookup"><span data-stu-id="6b119-103">Before administrators can deploy [!INCLUDE[TLA#tla_avalonwinfx](../../../../includes/tlasharptla-avalonwinfx-md.md)] applications on a system, they must first confirm that the [!INCLUDE[TLA2#tla_avalonwinfx](../../../../includes/tla2sharptla-avalonwinfx-md.md)] runtime is present.</span></span> <span data-ttu-id="6b119-104">이 항목에서는 작성 된 스크립트 관리자가 결정 하는 데 사용할 수 있는 HTML/javascript 여부 [!INCLUDE[TLA2#tla_avalonwinfx](../../../../includes/tla2sharptla-avalonwinfx-md.md)] 는 시스템에 있습니다.</span><span class="sxs-lookup"><span data-stu-id="6b119-104">This topic provides a script written in HTML/JavaScript that administrators can use to determine whether [!INCLUDE[TLA2#tla_avalonwinfx](../../../../includes/tla2sharptla-avalonwinfx-md.md)] is present on a system.</span></span>  
+# <a name="how-to-detect-whether-the-net-framework-30-is-installed"></a><span data-ttu-id="2e570-102">방법: .NET Framework 3.0 설치 여부 확인</span><span class="sxs-lookup"><span data-stu-id="2e570-102">How to: Detect Whether the .NET Framework 3.0 Is Installed</span></span>
+<span data-ttu-id="2e570-103">관리자가 시스템에서 Microsoft.NET Framework 응용 프로그램을 배포 하려면 먼저.NET Framework 런타임에서 존재 하는지 먼저 확인 해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="2e570-103">Before administrators can deploy Microsoft .NET Framework applications on a system, they must first confirm that the .NET Framework runtime is present.</span></span> <span data-ttu-id="2e570-104">이 항목에서는 HTML/JavaScript로 작성 된 스크립트를 관리자는 시스템에.NET Framework 되는지 확인 하려면 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="2e570-104">This topic provides a script written in HTML/JavaScript that administrators can use to determine whether the .NET Framework is present on a system.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="6b119-105">자세한 내용은 설치 하는 방법, 배포 및 Microsoft.NET Framework 검색에서 참조 [배포 Microsoft.NET Framework 버전 3.0](http://go.microsoft.com/fwlink/?LinkId=96739)합니다.</span><span class="sxs-lookup"><span data-stu-id="6b119-105">For more detailed information on installing, deploying, and detecting the Microsoft .NET Framework, see the discussion in [Deploying Microsoft .NET Framework Version 3.0](http://go.microsoft.com/fwlink/?LinkId=96739).</span></span>  
+>  <span data-ttu-id="2e570-105">자세한 내용은 설치 하는 방법, 배포 및 Microsoft.NET Framework 검색에서 참조 [배포 Microsoft.NET Framework 버전 3.0](http://go.microsoft.com/fwlink/?LinkId=96739)합니다.</span><span class="sxs-lookup"><span data-stu-id="2e570-105">For more detailed information on installing, deploying, and detecting the Microsoft .NET Framework, see the discussion in [Deploying Microsoft .NET Framework Version 3.0](http://go.microsoft.com/fwlink/?LinkId=96739).</span></span>  
   
 <a name="content_expiration"></a>   
-## <a name="detect-the-net-clr-user-agent-string"></a><span data-ttu-id="6b119-106">".NET CLR" 사용자 에이전트 문자열 검색</span><span class="sxs-lookup"><span data-stu-id="6b119-106">Detect the ".NET CLR" User-Agent String</span></span>  
- <span data-ttu-id="6b119-107">때 [!INCLUDE[TLA2#tla_avalonwinfx](../../../../includes/tla2sharptla-avalonwinfx-md.md)] 가 설치 된 MSI ".NET CLR" 및 버전 번호를 추가 UserAgent 문자열입니다.</span><span class="sxs-lookup"><span data-stu-id="6b119-107">When [!INCLUDE[TLA2#tla_avalonwinfx](../../../../includes/tla2sharptla-avalonwinfx-md.md)] is installed, the MSI adds ".NET CLR" and the version number to the UserAgent string.</span></span> <span data-ttu-id="6b119-108">다음 예제에서는 간단한 HTML 페이지에 포함 된 스크립트를 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="6b119-108">The following example shows a script embedded in a simple HTML page.</span></span> <span data-ttu-id="6b119-109">확인 하려면 UserAgent 문자열을 검색 하는 스크립트 여부 [!INCLUDE[TLA2#tla_avalonwinfx](../../../../includes/tla2sharptla-avalonwinfx-md.md)] 설치 되 고 검색 결과에 상태 메시지를 표시 합니다.</span><span class="sxs-lookup"><span data-stu-id="6b119-109">The script searches the UserAgent string to determine whether [!INCLUDE[TLA2#tla_avalonwinfx](../../../../includes/tla2sharptla-avalonwinfx-md.md)] is installed, and displays a status message on the results of the search.</span></span>  
+## <a name="detect-the-net-clr-user-agent-string"></a><span data-ttu-id="2e570-106">".NET CLR" 사용자 에이전트 문자열 검색</span><span class="sxs-lookup"><span data-stu-id="2e570-106">Detect the ".NET CLR" User-Agent String</span></span>  
+ <span data-ttu-id="2e570-107">.NET Framework 설치 되 면 MSI ".NET CLR" 및 버전 번호는 UserAgent 문자열에 추가 합니다.</span><span class="sxs-lookup"><span data-stu-id="2e570-107">When .NET Framework is installed, the MSI adds ".NET CLR" and the version number to the UserAgent string.</span></span> <span data-ttu-id="2e570-108">다음 예제에서는 간단한 HTML 페이지에 포함 된 스크립트를 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="2e570-108">The following example shows a script embedded in a simple HTML page.</span></span> <span data-ttu-id="2e570-109">.NET Framework가 설치 되어 있는지 확인 하는 검색 결과에 상태 메시지를 표시 하려면 UserAgent 문자열을 검색 하는 스크립트입니다.</span><span class="sxs-lookup"><span data-stu-id="2e570-109">The script searches the UserAgent string to determine whether .NET Framework is installed, and displays a status message on the results of the search.</span></span>  
   
 ```  
 <HTML>  
@@ -126,13 +126,13 @@ ms.lasthandoff: 04/26/2018
 </HTML>  
 ```  
   
- <span data-ttu-id="6b119-110">".NET CLR" 버전에 대 한 검색 되 면 다음과 같은 유형의 상태 메시지가 나타납니다.</span><span class="sxs-lookup"><span data-stu-id="6b119-110">If the search for the ".NET CLR " version is successful, the following type of status message appears:</span></span>  
+ <span data-ttu-id="2e570-110">".NET CLR" 버전에 대 한 검색 되 면 다음과 같은 유형의 상태 메시지가 나타납니다.</span><span class="sxs-lookup"><span data-stu-id="2e570-110">If the search for the ".NET CLR " version is successful, the following type of status message appears:</span></span>  
   
  `This machine has the correct version of the .NET Framework 3.0: 3.0.04425.00`  
   
  `This machine's userAgent string is: Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 5.1; .NET CLR 1.1.4322; InfoPath.1; .NET CLR 2.0.50727; .NET CLR 3.0.04425.00).`  
   
- <span data-ttu-id="6b119-111">그렇지 않으면 다음과 같은 유형의 상태 메시지가 표시 됩니다.</span><span class="sxs-lookup"><span data-stu-id="6b119-111">Otherwise, the following type of status message appears:</span></span>  
+ <span data-ttu-id="2e570-111">그렇지 않으면 다음과 같은 유형의 상태 메시지가 표시 됩니다.</span><span class="sxs-lookup"><span data-stu-id="2e570-111">Otherwise, the following type of status message appears:</span></span>  
   
  `This machine does not have correct version of the .NET Framework 3.0.`  
   

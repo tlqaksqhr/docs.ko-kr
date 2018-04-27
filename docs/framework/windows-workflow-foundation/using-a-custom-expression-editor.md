@@ -14,29 +14,29 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 5388ed3f55d97f3282a710ac59fe36cfb32fa49c
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 6e9481364a70257f6c1711692daf5c81eee9fd88
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
-# <a name="using-a-custom-expression-editor"></a><span data-ttu-id="451f3-102">사용자 지정 식 편집기 사용</span><span class="sxs-lookup"><span data-stu-id="451f3-102">Using a Custom Expression Editor</span></span>
-<span data-ttu-id="451f3-103">사용자 지정 식 편집기를 구현하여 보다 다양하거나 단순한 식 편집 환경을 제공할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="451f3-103">A custom expression editor can be implemented to provide a richer or simpler expression editing experience.</span></span> <span data-ttu-id="451f3-104">사용자 지정 식 편집기는 다음과 같은 경우에 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="451f3-104">There are several scenarios in which you might want to use a custom expression editor:</span></span>  
+# <a name="using-a-custom-expression-editor"></a><span data-ttu-id="3371d-102">사용자 지정 식 편집기 사용</span><span class="sxs-lookup"><span data-stu-id="3371d-102">Using a Custom Expression Editor</span></span>
+<span data-ttu-id="3371d-103">사용자 지정 식 편집기를 구현하여 보다 다양하거나 단순한 식 편집 환경을 제공할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="3371d-103">A custom expression editor can be implemented to provide a richer or simpler expression editing experience.</span></span> <span data-ttu-id="3371d-104">사용자 지정 식 편집기는 다음과 같은 경우에 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="3371d-104">There are several scenarios in which you might want to use a custom expression editor:</span></span>  
   
--   <span data-ttu-id="451f3-105">IntelliSense와 다시 호스트된 Workflow Designer의 다른 다양한 편집 기능을 지원하려는 경우.</span><span class="sxs-lookup"><span data-stu-id="451f3-105">To provide support for IntelliSense and other rich editing features in a rehosted workflow designer.</span></span> <span data-ttu-id="451f3-106">다시 호스트된 응용 프로그램에서는 기본 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 식 편집기를 사용할 수 없으므로 이 기능을 제공해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="451f3-106">This functionality must be provided because the default [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] expression editor cannot be used in rehosted applications.</span></span>  
+-   <span data-ttu-id="3371d-105">IntelliSense와 다시 호스트된 Workflow Designer의 다른 다양한 편집 기능을 지원하려는 경우.</span><span class="sxs-lookup"><span data-stu-id="3371d-105">To provide support for IntelliSense and other rich editing features in a rehosted workflow designer.</span></span> <span data-ttu-id="3371d-106">기본 Visual Studio 식 편집기는 재 호스트 된 응용 프로그램에서 사용할 수 없으므로이 기능을 제공 해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="3371d-106">This functionality must be provided because the default Visual Studio expression editor cannot be used in rehosted applications.</span></span>  
   
--   <span data-ttu-id="451f3-107">, 예를 들어 않아도 됩니다 Visual Basic 살펴보기 또는 Visual Basic 식이 다루기가 식 편집 환경을 비즈니스 분석가 사용자를 위한를 단순화 합니다.</span><span class="sxs-lookup"><span data-stu-id="451f3-107">To simplify the expression editing experience for the business analyst users, so that they are not, for example, required to learn Visual Basic or deal with Visual Basic expressions.</span></span>  
+-   <span data-ttu-id="3371d-107">, 예를 들어 않아도 됩니다 Visual Basic 살펴보기 또는 Visual Basic 식이 다루기가 식 편집 환경을 비즈니스 분석가 사용자를 위한를 단순화 합니다.</span><span class="sxs-lookup"><span data-stu-id="3371d-107">To simplify the expression editing experience for the business analyst users, so that they are not, for example, required to learn Visual Basic or deal with Visual Basic expressions.</span></span>  
   
- <span data-ttu-id="451f3-108">사용자 지정 식 편집기를 구현하는 데는 기본적으로 다음과 같은 세 단계가 필요합니다.</span><span class="sxs-lookup"><span data-stu-id="451f3-108">Three basic steps are needed to implement a custom expression editor:</span></span>  
+ <span data-ttu-id="3371d-108">사용자 지정 식 편집기를 구현하는 데는 기본적으로 다음과 같은 세 단계가 필요합니다.</span><span class="sxs-lookup"><span data-stu-id="3371d-108">Three basic steps are needed to implement a custom expression editor:</span></span>  
   
-1.  <span data-ttu-id="451f3-109"><xref:System.Activities.Presentation.View.IExpressionEditorService> 인터페이스를 구현합니다.</span><span class="sxs-lookup"><span data-stu-id="451f3-109">Implement the <xref:System.Activities.Presentation.View.IExpressionEditorService> interface.</span></span> <span data-ttu-id="451f3-110">이 인터페이스는 식 편집기의 생성과 삭제를 관리합니다.</span><span class="sxs-lookup"><span data-stu-id="451f3-110">This interface manages the creation and destruction of expression editors.</span></span>  
+1.  <span data-ttu-id="3371d-109"><xref:System.Activities.Presentation.View.IExpressionEditorService> 인터페이스를 구현합니다.</span><span class="sxs-lookup"><span data-stu-id="3371d-109">Implement the <xref:System.Activities.Presentation.View.IExpressionEditorService> interface.</span></span> <span data-ttu-id="3371d-110">이 인터페이스는 식 편집기의 생성과 삭제를 관리합니다.</span><span class="sxs-lookup"><span data-stu-id="3371d-110">This interface manages the creation and destruction of expression editors.</span></span>  
   
-2.  <span data-ttu-id="451f3-111"><xref:System.Activities.Presentation.View.IExpressionEditorInstance> 인터페이스를 구현합니다.</span><span class="sxs-lookup"><span data-stu-id="451f3-111">Implement the <xref:System.Activities.Presentation.View.IExpressionEditorInstance> interface.</span></span> <span data-ttu-id="451f3-112">이 인터페이스는 식 편집 UI용 UI를 구현합니다.</span><span class="sxs-lookup"><span data-stu-id="451f3-112">This interface implements the UI for expression editing UI.</span></span>  
+2.  <span data-ttu-id="3371d-111"><xref:System.Activities.Presentation.View.IExpressionEditorInstance> 인터페이스를 구현합니다.</span><span class="sxs-lookup"><span data-stu-id="3371d-111">Implement the <xref:System.Activities.Presentation.View.IExpressionEditorInstance> interface.</span></span> <span data-ttu-id="3371d-112">이 인터페이스는 식 편집 UI용 UI를 구현합니다.</span><span class="sxs-lookup"><span data-stu-id="3371d-112">This interface implements the UI for expression editing UI.</span></span>  
   
-3.  <span data-ttu-id="451f3-113">다시 호스트된 워크플로 응용 프로그램에 <xref:System.Activities.Presentation.View.IExpressionEditorService>를 게시합니다.</span><span class="sxs-lookup"><span data-stu-id="451f3-113">Publish the <xref:System.Activities.Presentation.View.IExpressionEditorService> in your rehosted workflow application.</span></span>  
+3.  <span data-ttu-id="3371d-113">다시 호스트된 워크플로 응용 프로그램에 <xref:System.Activities.Presentation.View.IExpressionEditorService>를 게시합니다.</span><span class="sxs-lookup"><span data-stu-id="3371d-113">Publish the <xref:System.Activities.Presentation.View.IExpressionEditorService> in your rehosted workflow application.</span></span>  
   
-## <a name="implementing-a-custom-expression-editor-in-a-class-library"></a><span data-ttu-id="451f3-114">클래스 라이브러리의 사용자 지정 식 편집기 구현</span><span class="sxs-lookup"><span data-stu-id="451f3-114">Implementing a Custom Expression Editor in a Class Library</span></span>  
- <span data-ttu-id="451f3-115">다음 샘플 코드에서는 MyExpressionEditorService 라이브러리 프로젝트에 포함된 `MyEditorService` 인터페이스를 구현하는 <xref:System.Activities.Presentation.View.IExpressionEditorService> 클래스를 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="451f3-115">Here is a sample of code for a (proof of concept) `MyEditorService` class that implements the <xref:System.Activities.Presentation.View.IExpressionEditorService> interface is contained in a MyExpressionEditorService library project.</span></span>  
+## <a name="implementing-a-custom-expression-editor-in-a-class-library"></a><span data-ttu-id="3371d-114">클래스 라이브러리의 사용자 지정 식 편집기 구현</span><span class="sxs-lookup"><span data-stu-id="3371d-114">Implementing a Custom Expression Editor in a Class Library</span></span>  
+ <span data-ttu-id="3371d-115">다음 샘플 코드에서는 MyExpressionEditorService 라이브러리 프로젝트에 포함된 `MyEditorService` 인터페이스를 구현하는 <xref:System.Activities.Presentation.View.IExpressionEditorService> 클래스를 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="3371d-115">Here is a sample of code for a (proof of concept) `MyEditorService` class that implements the <xref:System.Activities.Presentation.View.IExpressionEditorService> interface is contained in a MyExpressionEditorService library project.</span></span>  
   
 ```  
 using System;  
@@ -82,7 +82,7 @@ namespace MyExpressionEditorService
 }  
 ```  
   
- <span data-ttu-id="451f3-116">다음 `MyExpressionEditorInstance` 인터페이스를 구현하는 <xref:System.Activities.Presentation.View.IExpressionEditorInstance> 클래스의 코드는 MyExpressionEditorService 라이브러리 프로젝트에 있습니다.</span><span class="sxs-lookup"><span data-stu-id="451f3-116">Here is the code for a `MyExpressionEditorInstance` class that implements the <xref:System.Activities.Presentation.View.IExpressionEditorInstance> interface in a MyExpressionEditorService library project.</span></span>  
+ <span data-ttu-id="3371d-116">다음 `MyExpressionEditorInstance` 인터페이스를 구현하는 <xref:System.Activities.Presentation.View.IExpressionEditorInstance> 클래스의 코드는 MyExpressionEditorService 라이브러리 프로젝트에 있습니다.</span><span class="sxs-lookup"><span data-stu-id="3371d-116">Here is the code for a `MyExpressionEditorInstance` class that implements the <xref:System.Activities.Presentation.View.IExpressionEditorInstance> interface in a MyExpressionEditorService library project.</span></span>  
   
 ```  
 using System;  
@@ -232,8 +232,8 @@ namespace MyExpressionEditorService
 }  
 ```  
   
-### <a name="publishing-a-custom-expression-editor-in-a-wpf-project"></a><span data-ttu-id="451f3-117">WPF 프로젝트에서 사용자 지정 식 편집기 게시</span><span class="sxs-lookup"><span data-stu-id="451f3-117">Publishing a Custom Expression Editor in a WPF Project</span></span>  
- <span data-ttu-id="451f3-118">다음 코드에서는 [!INCLUDE[avalon2](../../../includes/avalon2-md.md)] 응용 프로그램에서 디자이너를 다시 호스트하는 방법과 `MyEditorService` 서비스를 만들고 게시하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="451f3-118">Here is the code that shows how to rehost the designer in a [!INCLUDE[avalon2](../../../includes/avalon2-md.md)] application and how to create and publish the `MyEditorService` service.</span></span> <span data-ttu-id="451f3-119">이 코드를 사용하기 전에 avalon2를 포함하는 프로젝트에서 MyExpressionEditorService 라이브러리 프로젝트에 대한 참조를 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="451f3-119">Before using this code, add a reference to the MyExpressionEditorService library project from the project that contains the avalon2 application.</span></span>  
+### <a name="publishing-a-custom-expression-editor-in-a-wpf-project"></a><span data-ttu-id="3371d-117">WPF 프로젝트에서 사용자 지정 식 편집기 게시</span><span class="sxs-lookup"><span data-stu-id="3371d-117">Publishing a Custom Expression Editor in a WPF Project</span></span>  
+ <span data-ttu-id="3371d-118">다음 코드에서는 [!INCLUDE[avalon2](../../../includes/avalon2-md.md)] 응용 프로그램에서 디자이너를 다시 호스트하는 방법과 `MyEditorService` 서비스를 만들고 게시하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="3371d-118">Here is the code that shows how to rehost the designer in a [!INCLUDE[avalon2](../../../includes/avalon2-md.md)] application and how to create and publish the `MyEditorService` service.</span></span> <span data-ttu-id="3371d-119">이 코드를 사용하기 전에 avalon2를 포함하는 프로젝트에서 MyExpressionEditorService 라이브러리 프로젝트에 대한 참조를 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="3371d-119">Before using this code, add a reference to the MyExpressionEditorService library project from the project that contains the avalon2 application.</span></span>  
   
 ```  
 using System.Windows;  
@@ -286,10 +286,10 @@ namespace WpfApplication1
 }  
 ```  
   
-### <a name="notes"></a><span data-ttu-id="451f3-120">노트</span><span class="sxs-lookup"><span data-stu-id="451f3-120">Notes</span></span>  
- <span data-ttu-id="451f3-121">사용 하는 경우는 **ExpressionTextBox** 컨트롤 사용자 지정 활동 디자이너에 필요 없는 만들고 사용 하 여 식 편집기를 제거 하는 <xref:System.Activities.Presentation.View.IExpressionEditorService.CreateExpressionEditor%2A> 및 <xref:System.Activities.Presentation.View.IExpressionEditorService.CloseExpressionEditors%2A> 의 메서드는 <xref:System.Activities.Presentation.View.IExpressionEditorService> 인터페이스입니다.</span><span class="sxs-lookup"><span data-stu-id="451f3-121">If you are using an **ExpressionTextBox** control in a custom activity designer, it is not necessary to create and destroy expression editors using the <xref:System.Activities.Presentation.View.IExpressionEditorService.CreateExpressionEditor%2A> and <xref:System.Activities.Presentation.View.IExpressionEditorService.CloseExpressionEditors%2A> methods of the <xref:System.Activities.Presentation.View.IExpressionEditorService> interface.</span></span> <span data-ttu-id="451f3-122"><xref:System.Activities.Presentation.View.ExpressionTextBox> 클래스가 이 부분을 자동으로 관리합니다.</span><span class="sxs-lookup"><span data-stu-id="451f3-122">The <xref:System.Activities.Presentation.View.ExpressionTextBox> class manages this for you.</span></span>  
+### <a name="notes"></a><span data-ttu-id="3371d-120">노트</span><span class="sxs-lookup"><span data-stu-id="3371d-120">Notes</span></span>  
+ <span data-ttu-id="3371d-121">사용 하는 경우는 **ExpressionTextBox** 컨트롤 사용자 지정 활동 디자이너에 필요 없는 만들고 사용 하 여 식 편집기를 제거 하는 <xref:System.Activities.Presentation.View.IExpressionEditorService.CreateExpressionEditor%2A> 및 <xref:System.Activities.Presentation.View.IExpressionEditorService.CloseExpressionEditors%2A> 의 메서드는 <xref:System.Activities.Presentation.View.IExpressionEditorService> 인터페이스입니다.</span><span class="sxs-lookup"><span data-stu-id="3371d-121">If you are using an **ExpressionTextBox** control in a custom activity designer, it is not necessary to create and destroy expression editors using the <xref:System.Activities.Presentation.View.IExpressionEditorService.CreateExpressionEditor%2A> and <xref:System.Activities.Presentation.View.IExpressionEditorService.CloseExpressionEditors%2A> methods of the <xref:System.Activities.Presentation.View.IExpressionEditorService> interface.</span></span> <span data-ttu-id="3371d-122"><xref:System.Activities.Presentation.View.ExpressionTextBox> 클래스가 이 부분을 자동으로 관리합니다.</span><span class="sxs-lookup"><span data-stu-id="3371d-122">The <xref:System.Activities.Presentation.View.ExpressionTextBox> class manages this for you.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="451f3-123">참고 항목</span><span class="sxs-lookup"><span data-stu-id="451f3-123">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="3371d-123">참고 항목</span><span class="sxs-lookup"><span data-stu-id="3371d-123">See Also</span></span>  
  <xref:System.Activities.Presentation.View.IExpressionEditorService>  
  <xref:System.Activities.Presentation.View.IExpressionEditorInstance>  
- [<span data-ttu-id="451f3-124">사용자 지정 작업 디자이너에서 ExpressionTextBox 사용</span><span class="sxs-lookup"><span data-stu-id="451f3-124">Using the ExpressionTextBox in a Custom Activity Designer</span></span>](../../../docs/framework/windows-workflow-foundation/samples/using-the-expressiontextbox-in-a-custom-activity-designer.md)
+ [<span data-ttu-id="3371d-124">사용자 지정 작업 디자이너에서 ExpressionTextBox 사용</span><span class="sxs-lookup"><span data-stu-id="3371d-124">Using the ExpressionTextBox in a Custom Activity Designer</span></span>](../../../docs/framework/windows-workflow-foundation/samples/using-the-expressiontextbox-in-a-custom-activity-designer.md)

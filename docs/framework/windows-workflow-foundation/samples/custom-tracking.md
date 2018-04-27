@@ -1,51 +1,52 @@
 ---
-title: "사용자 지정 추적"
-ms.custom: 
+title: 사용자 지정 추적
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 2d191c9f-62f4-4c63-92dd-cda917fcf254
-caps.latest.revision: "16"
+caps.latest.revision: 16
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 465da20193245a338143c566d1046c3d2212279e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 71eb3adaae6a474cf4e0766029c549dfe3a08383
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
-# <a name="custom-tracking"></a><span data-ttu-id="e0ddf-102">사용자 지정 추적</span><span class="sxs-lookup"><span data-stu-id="e0ddf-102">Custom Tracking</span></span>
-<span data-ttu-id="e0ddf-103">이 샘플에서는 사용자 지정 추적 참가자를 만들고 추적 데이터의 내용을 콘솔에 쓰는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="e0ddf-103">This sample demonstrates how to create a custom tracking participant and write the contents of the tracking data to console.</span></span> <span data-ttu-id="e0ddf-104">또한 사용자 정의 데이터로 채워진 <xref:System.Activities.Tracking.CustomTrackingRecord> 개체를 내보내는 방법도 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="e0ddf-104">In addition, the sample demonstrates how to emit <xref:System.Activities.Tracking.CustomTrackingRecord> objects populated with user defined data.</span></span> <span data-ttu-id="e0ddf-105">콘솔 기반 추적 참가자는 코드로 만든 추적 프로필 개체를 사용하여 워크플로에서 내보낸 <xref:System.Activities.Tracking.TrackingRecord> 개체를 필터링합니다.</span><span class="sxs-lookup"><span data-stu-id="e0ddf-105">The console-based tracking participant filters the <xref:System.Activities.Tracking.TrackingRecord> objects emitted by the workflow using a tracking profile object created in code.</span></span>  
+# <a name="custom-tracking"></a><span data-ttu-id="c604d-102">사용자 지정 추적</span><span class="sxs-lookup"><span data-stu-id="c604d-102">Custom Tracking</span></span>
+<span data-ttu-id="c604d-103">이 샘플에서는 사용자 지정 추적 참가자를 만들고 추적 데이터의 내용을 콘솔에 쓰는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="c604d-103">This sample demonstrates how to create a custom tracking participant and write the contents of the tracking data to console.</span></span> <span data-ttu-id="c604d-104">또한 사용자 정의 데이터로 채워진 <xref:System.Activities.Tracking.CustomTrackingRecord> 개체를 내보내는 방법도 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="c604d-104">In addition, the sample demonstrates how to emit <xref:System.Activities.Tracking.CustomTrackingRecord> objects populated with user defined data.</span></span> <span data-ttu-id="c604d-105">콘솔 기반 추적 참가자는 코드로 만든 추적 프로필 개체를 사용하여 워크플로에서 내보낸 <xref:System.Activities.Tracking.TrackingRecord> 개체를 필터링합니다.</span><span class="sxs-lookup"><span data-stu-id="c604d-105">The console-based tracking participant filters the <xref:System.Activities.Tracking.TrackingRecord> objects emitted by the workflow using a tracking profile object created in code.</span></span>  
   
-## <a name="sample-details"></a><span data-ttu-id="e0ddf-106">샘플 세부 정보</span><span class="sxs-lookup"><span data-stu-id="e0ddf-106">Sample Details</span></span>  
- [!INCLUDE[wf](../../../../includes/wf-md.md)]<span data-ttu-id="e0ddf-107">는 워크플로 인스턴스 실행을 추적하기 위한 추적 인프라를 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="e0ddf-107"> provides a tracking infrastructure to track execution of a workflow instance.</span></span> <span data-ttu-id="e0ddf-108">추적 런타임은 워크플로 인스턴스를 구현하여 워크플로 수명 주기와 관련된 이벤트, 워크플로 활동의 이벤트 및 사용자 지정 추적 이벤트를 내보냅니다.</span><span class="sxs-lookup"><span data-stu-id="e0ddf-108">The tracking runtime implements a workflow instance to emit events related to the workflow lifecycle, events from workflow activities and custom tracking events.</span></span> <span data-ttu-id="e0ddf-109">다음 표에서는 추적 인프라의 기본 구성 요소에 대해 자세히 설명합니다</span><span class="sxs-lookup"><span data-stu-id="e0ddf-109">The following table details the primary components of the tracking infrastructure.</span></span>  
+## <a name="sample-details"></a><span data-ttu-id="c604d-106">샘플 세부 정보</span><span class="sxs-lookup"><span data-stu-id="c604d-106">Sample Details</span></span>  
+ <span data-ttu-id="c604d-107">Windows WF (Workflow Foundation) 워크플로 인스턴스의 실행을 추적 하기 위한 추적 인프라를 제공 합니다.</span><span class="sxs-lookup"><span data-stu-id="c604d-107">Windows Workflow Foundation (WF) provides a tracking infrastructure to track execution of a workflow instance.</span></span> <span data-ttu-id="c604d-108">추적 런타임은 워크플로 인스턴스를 구현하여 워크플로 수명 주기와 관련된 이벤트, 워크플로 활동의 이벤트 및 사용자 지정 추적 이벤트를 내보냅니다.</span><span class="sxs-lookup"><span data-stu-id="c604d-108">The tracking runtime implements a workflow instance to emit events related to the workflow lifecycle, events from workflow activities and custom tracking events.</span></span> <span data-ttu-id="c604d-109">다음 표에서는 추적 인프라의 기본 구성 요소에 대해 자세히 설명합니다</span><span class="sxs-lookup"><span data-stu-id="c604d-109">The following table details the primary components of the tracking infrastructure.</span></span>  
   
-|<span data-ttu-id="e0ddf-110">구성 요소</span><span class="sxs-lookup"><span data-stu-id="e0ddf-110">Component</span></span>|<span data-ttu-id="e0ddf-111">설명</span><span class="sxs-lookup"><span data-stu-id="e0ddf-111">Description</span></span>|  
+|<span data-ttu-id="c604d-110">구성 요소</span><span class="sxs-lookup"><span data-stu-id="c604d-110">Component</span></span>|<span data-ttu-id="c604d-111">설명</span><span class="sxs-lookup"><span data-stu-id="c604d-111">Description</span></span>|  
 |---------------|-----------------|  
-|<span data-ttu-id="e0ddf-112">추적 런타임</span><span class="sxs-lookup"><span data-stu-id="e0ddf-112">Tracking runtime</span></span>|<span data-ttu-id="e0ddf-113">추적 레코드를 내보낼 인프라를 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="e0ddf-113">Provides the infrastructure to emit tracking records.</span></span>|  
-|<span data-ttu-id="e0ddf-114">추적 참가자</span><span class="sxs-lookup"><span data-stu-id="e0ddf-114">Tracking participants</span></span>|<span data-ttu-id="e0ddf-115">추적 레코드를 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="e0ddf-115">Consumes the tracking records.</span></span> [!INCLUDE[netfx40_short](../../../../includes/netfx40-short-md.md)]<span data-ttu-id="e0ddf-116">에는 추적 레코드를 ETW(Windows용 이벤트 추적) 이벤트로 기록하는 추적 참가자가 제공됩니다.</span><span class="sxs-lookup"><span data-stu-id="e0ddf-116"> ships with a tracking participant that writes tracking records as Event Tracing for Windows (ETW) events.</span></span>|  
-|<span data-ttu-id="e0ddf-117">추적 프로필</span><span class="sxs-lookup"><span data-stu-id="e0ddf-117">Tracking profile</span></span>|<span data-ttu-id="e0ddf-118">추적 참가자가 워크플로 인스턴스에서 내보낸 추적 레코드의 하위 집합을 구독할 수 있도록 하는 필터링 메커니즘입니다.</span><span class="sxs-lookup"><span data-stu-id="e0ddf-118">A filtering mechanism that allows a tracking participant to subscribe for a subset of the tracking records emitted from a workflow instance.</span></span>|  
+|<span data-ttu-id="c604d-112">추적 런타임</span><span class="sxs-lookup"><span data-stu-id="c604d-112">Tracking runtime</span></span>|<span data-ttu-id="c604d-113">추적 레코드를 내보낼 인프라를 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="c604d-113">Provides the infrastructure to emit tracking records.</span></span>|  
+|<span data-ttu-id="c604d-114">추적 참가자</span><span class="sxs-lookup"><span data-stu-id="c604d-114">Tracking participants</span></span>|<span data-ttu-id="c604d-115">추적 레코드를 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="c604d-115">Consumes the tracking records.</span></span> [!INCLUDE[netfx40_short](../../../../includes/netfx40-short-md.md)]<span data-ttu-id="c604d-116">에는 추적 레코드를 ETW(Windows용 이벤트 추적) 이벤트로 기록하는 추적 참가자가 제공됩니다.</span><span class="sxs-lookup"><span data-stu-id="c604d-116"> ships with a tracking participant that writes tracking records as Event Tracing for Windows (ETW) events.</span></span>|  
+|<span data-ttu-id="c604d-117">추적 프로필</span><span class="sxs-lookup"><span data-stu-id="c604d-117">Tracking profile</span></span>|<span data-ttu-id="c604d-118">추적 참가자가 워크플로 인스턴스에서 내보낸 추적 레코드의 하위 집합을 구독할 수 있도록 하는 필터링 메커니즘입니다.</span><span class="sxs-lookup"><span data-stu-id="c604d-118">A filtering mechanism that allows a tracking participant to subscribe for a subset of the tracking records emitted from a workflow instance.</span></span>|  
   
- <span data-ttu-id="e0ddf-119">다음 표에서는 워크플로 런타임에서 내보내는 추적 레코드에 대해 자세히 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="e0ddf-119">The following table details the tracking records that the workflow runtime emits.</span></span>  
+ <span data-ttu-id="c604d-119">다음 표에서는 워크플로 런타임에서 내보내는 추적 레코드에 대해 자세히 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="c604d-119">The following table details the tracking records that the workflow runtime emits.</span></span>  
   
-|<span data-ttu-id="e0ddf-120">추적 레코드</span><span class="sxs-lookup"><span data-stu-id="e0ddf-120">Tracking Record</span></span>|<span data-ttu-id="e0ddf-121">설명</span><span class="sxs-lookup"><span data-stu-id="e0ddf-121">Description</span></span>|  
+|<span data-ttu-id="c604d-120">추적 레코드</span><span class="sxs-lookup"><span data-stu-id="c604d-120">Tracking Record</span></span>|<span data-ttu-id="c604d-121">설명</span><span class="sxs-lookup"><span data-stu-id="c604d-121">Description</span></span>|  
 |---------------------|-----------------|  
-|<span data-ttu-id="e0ddf-122">워크플로 인스턴스 추적 레코드</span><span class="sxs-lookup"><span data-stu-id="e0ddf-122">Workflow instance tracking records.</span></span>|<span data-ttu-id="e0ddf-123">워크플로 인스턴스의 수명 주기에 대해 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="e0ddf-123">Describes the life cycle of the workflow instance.</span></span> <span data-ttu-id="e0ddf-124">예를 들어 워크플로가 시작되거나 완료되면 인스턴스 레코드를 내보냅니다.</span><span class="sxs-lookup"><span data-stu-id="e0ddf-124">For example, an instance record is emitted when the workflow starts or completes.</span></span>|  
-|<span data-ttu-id="e0ddf-125">활동 상태 추적 레코드</span><span class="sxs-lookup"><span data-stu-id="e0ddf-125">Activity state Tracking Records.</span></span>|<span data-ttu-id="e0ddf-126">활동 실행에 대해 자세히 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="e0ddf-126">Details activity execution.</span></span> <span data-ttu-id="e0ddf-127">이러한 레코드는 활동이 예약된 시점, 활동이 완료된 시점, 오류가 throw된 시점 등과 같은 워크플로 활동 상태를 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="e0ddf-127">These records indicate the state of a workflow activity such as when an activity is scheduled or when the activity completes or when a fault is thrown.</span></span>|  
-|<span data-ttu-id="e0ddf-128">책갈피 다시 시작 레코드</span><span class="sxs-lookup"><span data-stu-id="e0ddf-128">Bookmark resumption record.</span></span>|<span data-ttu-id="e0ddf-129">워크플로 인스턴스 내의 책갈피를 다시 시작할 때마다 내보냅니다.</span><span class="sxs-lookup"><span data-stu-id="e0ddf-129">Emitted whenever a bookmark within a workflow instance is resumed.</span></span>|  
-|<span data-ttu-id="e0ddf-130">사용자 지정 추적 레코드</span><span class="sxs-lookup"><span data-stu-id="e0ddf-130">Custom Tracking Records.</span></span>|<span data-ttu-id="e0ddf-131">워크플로 작성자가 사용자 지정 추적 레코드를 만들어 사용자 지정 활동 중에 내보낼 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="e0ddf-131">A workflow author can create Custom Tracking Records and emit them within the custom activity.</span></span>|  
+|<span data-ttu-id="c604d-122">워크플로 인스턴스 추적 레코드</span><span class="sxs-lookup"><span data-stu-id="c604d-122">Workflow instance tracking records.</span></span>|<span data-ttu-id="c604d-123">워크플로 인스턴스의 수명 주기에 대해 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="c604d-123">Describes the life cycle of the workflow instance.</span></span> <span data-ttu-id="c604d-124">예를 들어 워크플로가 시작되거나 완료되면 인스턴스 레코드를 내보냅니다.</span><span class="sxs-lookup"><span data-stu-id="c604d-124">For example, an instance record is emitted when the workflow starts or completes.</span></span>|  
+|<span data-ttu-id="c604d-125">활동 상태 추적 레코드</span><span class="sxs-lookup"><span data-stu-id="c604d-125">Activity state Tracking Records.</span></span>|<span data-ttu-id="c604d-126">활동 실행에 대해 자세히 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="c604d-126">Details activity execution.</span></span> <span data-ttu-id="c604d-127">이러한 레코드는 활동이 예약된 시점, 활동이 완료된 시점, 오류가 throw된 시점 등과 같은 워크플로 활동 상태를 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="c604d-127">These records indicate the state of a workflow activity such as when an activity is scheduled or when the activity completes or when a fault is thrown.</span></span>|  
+|<span data-ttu-id="c604d-128">책갈피 다시 시작 레코드</span><span class="sxs-lookup"><span data-stu-id="c604d-128">Bookmark resumption record.</span></span>|<span data-ttu-id="c604d-129">워크플로 인스턴스 내의 책갈피를 다시 시작할 때마다 내보냅니다.</span><span class="sxs-lookup"><span data-stu-id="c604d-129">Emitted whenever a bookmark within a workflow instance is resumed.</span></span>|  
+|<span data-ttu-id="c604d-130">사용자 지정 추적 레코드</span><span class="sxs-lookup"><span data-stu-id="c604d-130">Custom Tracking Records.</span></span>|<span data-ttu-id="c604d-131">워크플로 작성자가 사용자 지정 추적 레코드를 만들어 사용자 지정 활동 중에 내보낼 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="c604d-131">A workflow author can create Custom Tracking Records and emit them within the custom activity.</span></span>|  
   
- <span data-ttu-id="e0ddf-132">추적 참가자는 추적 프로필을 사용하여 내보낸 <xref:System.Activities.Tracking.TrackingRecord> 개체의 하위 집합을 구독합니다.</span><span class="sxs-lookup"><span data-stu-id="e0ddf-132">The tracking participant subscribes for a subset of the emitted <xref:System.Activities.Tracking.TrackingRecord> objects using tracking profiles.</span></span> <span data-ttu-id="e0ddf-133">추적 프로필에는 특정 추적 레코드 형식을 구독할 수 있도록 허용하는 추적 쿼리가 포함됩니다.</span><span class="sxs-lookup"><span data-stu-id="e0ddf-133">A tracking profile contains tracking queries that allow subscribing for a particular tracking record type.</span></span> <span data-ttu-id="e0ddf-134">추적 프로필은 코드나 구성에 지정할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="e0ddf-134">Tracking profiles can be specified in code or in configuration.</span></span>  
+ <span data-ttu-id="c604d-132">추적 참가자는 추적 프로필을 사용하여 내보낸 <xref:System.Activities.Tracking.TrackingRecord> 개체의 하위 집합을 구독합니다.</span><span class="sxs-lookup"><span data-stu-id="c604d-132">The tracking participant subscribes for a subset of the emitted <xref:System.Activities.Tracking.TrackingRecord> objects using tracking profiles.</span></span> <span data-ttu-id="c604d-133">추적 프로필에는 특정 추적 레코드 형식을 구독할 수 있도록 허용하는 추적 쿼리가 포함됩니다.</span><span class="sxs-lookup"><span data-stu-id="c604d-133">A tracking profile contains tracking queries that allow subscribing for a particular tracking record type.</span></span> <span data-ttu-id="c604d-134">추적 프로필은 코드나 구성에 지정할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="c604d-134">Tracking profiles can be specified in code or in configuration.</span></span>  
   
-### <a name="custom-tracking-participant"></a><span data-ttu-id="e0ddf-135">사용자 지정 추적 참가자</span><span class="sxs-lookup"><span data-stu-id="e0ddf-135">Custom Tracking Participant</span></span>  
- <span data-ttu-id="e0ddf-136">추적 참가자 API를 사용하면 워크플로 런타임에서 내보낸 <xref:System.Activities.Tracking.TrackingRecord> 개체를 처리하기 위한 사용자 지정 논리를 포함할 수 있는 사용자 제공 추적 참가자를 사용하여 추적 런타임을 확장할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="e0ddf-136">The tracking participant API allows extension of the tracking runtime with a user provided tracking participant that can include custom logic to handle <xref:System.Activities.Tracking.TrackingRecord> objects emitted by the workflow runtime.</span></span>  
+### <a name="custom-tracking-participant"></a><span data-ttu-id="c604d-135">사용자 지정 추적 참가자</span><span class="sxs-lookup"><span data-stu-id="c604d-135">Custom Tracking Participant</span></span>  
+ <span data-ttu-id="c604d-136">추적 참가자 API를 사용하면 워크플로 런타임에서 내보낸 <xref:System.Activities.Tracking.TrackingRecord> 개체를 처리하기 위한 사용자 지정 논리를 포함할 수 있는 사용자 제공 추적 참가자를 사용하여 추적 런타임을 확장할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="c604d-136">The tracking participant API allows extension of the tracking runtime with a user provided tracking participant that can include custom logic to handle <xref:System.Activities.Tracking.TrackingRecord> objects emitted by the workflow runtime.</span></span>  
   
- <span data-ttu-id="e0ddf-137">추적 참가자를 기록하려면 사용자가 <xref:System.Activities.Tracking.TrackingParticipant>를 구현해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="e0ddf-137">To write a tracking participant the user must implement <xref:System.Activities.Tracking.TrackingParticipant>.</span></span> <span data-ttu-id="e0ddf-138">특히 사용자 지정 참가자는 <xref:System.Activities.Tracking.TrackingParticipant.Track%2A> 메서드를 구현해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="e0ddf-138">Specifically, the <xref:System.Activities.Tracking.TrackingParticipant.Track%2A> method has to be implemented by the custom participant.</span></span> <span data-ttu-id="e0ddf-139">이 메서드는 워크플로 런타임에서 <xref:System.Activities.Tracking.TrackingRecord>를 내보낼 때 호출됩니다.</span><span class="sxs-lookup"><span data-stu-id="e0ddf-139">This method is called when a <xref:System.Activities.Tracking.TrackingRecord> is emitted by the workflow runtime.</span></span>  
+ <span data-ttu-id="c604d-137">추적 참가자를 기록하려면 사용자가 <xref:System.Activities.Tracking.TrackingParticipant>를 구현해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="c604d-137">To write a tracking participant the user must implement <xref:System.Activities.Tracking.TrackingParticipant>.</span></span> <span data-ttu-id="c604d-138">특히 사용자 지정 참가자는 <xref:System.Activities.Tracking.TrackingParticipant.Track%2A> 메서드를 구현해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="c604d-138">Specifically, the <xref:System.Activities.Tracking.TrackingParticipant.Track%2A> method has to be implemented by the custom participant.</span></span> <span data-ttu-id="c604d-139">이 메서드는 워크플로 런타임에서 <xref:System.Activities.Tracking.TrackingRecord>를 내보낼 때 호출됩니다.</span><span class="sxs-lookup"><span data-stu-id="c604d-139">This method is called when a <xref:System.Activities.Tracking.TrackingRecord> is emitted by the workflow runtime.</span></span>  
   
 ```csharp  
 public abstract class TrackingParticipant  
@@ -57,7 +58,7 @@ public abstract class TrackingParticipant
 }  
 ```  
   
- <span data-ttu-id="e0ddf-140">전체 추적 참가자는 ConsoleTrackingParticipant.cs 파일에서 구현되며, 다음 코드 예제는 사용자 지정 추적 참가자를 위한 <xref:System.Activities.Tracking.TrackingParticipant.Track%2A> 메서드입니다.</span><span class="sxs-lookup"><span data-stu-id="e0ddf-140">The complete tracking participant is implemented in the ConsoleTrackingParticipant.cs file.The following code example is the <xref:System.Activities.Tracking.TrackingParticipant.Track%2A> method for the custom tracking participant.</span></span>  
+ <span data-ttu-id="c604d-140">전체 추적 참가자는 ConsoleTrackingParticipant.cs 파일에서 구현되며, 다음 코드 예제는 사용자 지정 추적 참가자를 위한 <xref:System.Activities.Tracking.TrackingParticipant.Track%2A> 메서드입니다.</span><span class="sxs-lookup"><span data-stu-id="c604d-140">The complete tracking participant is implemented in the ConsoleTrackingParticipant.cs file.The following code example is the <xref:System.Activities.Tracking.TrackingParticipant.Track%2A> method for the custom tracking participant.</span></span>  
   
 ```csharp  
 protected override void Track(TrackingRecord record, TimeSpan timeout)  
@@ -103,7 +104,7 @@ protected override void Track(TrackingRecord record, TimeSpan timeout)
 }  
 ```  
   
- <span data-ttu-id="e0ddf-141">다음 코드 예제에서는 워크플로 호출자에 콘솔 참가자를 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="e0ddf-141">The following code example adds the console participant to the workflow invoker.</span></span>  
+ <span data-ttu-id="c604d-141">다음 코드 예제에서는 워크플로 호출자에 콘솔 참가자를 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="c604d-141">The following code example adds the console participant to the workflow invoker.</span></span>  
   
 ```csharp  
 ConsoleTrackingParticipant customTrackingParticipant = new ConsoleTrackingParticipant()  
@@ -117,14 +118,14 @@ WorkflowInvoker invoker = new WorkflowInvoker(BuildSampleWorkflow());
 invoker.Extensions.Add(customTrackingParticipant);  
 ```  
   
-### <a name="emitting-custom-tracking-records"></a><span data-ttu-id="e0ddf-142">사용자 지정 추적 레코드 내보내기</span><span class="sxs-lookup"><span data-stu-id="e0ddf-142">Emitting Custom Tracking Records</span></span>  
- <span data-ttu-id="e0ddf-143">이 샘플에서는 사용자 지정 워크플로 활동에서 <xref:System.Activities.Tracking.CustomTrackingRecord> 개체를 내보내는 기능도 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="e0ddf-143">This sample also demonstrates the ability to emit <xref:System.Activities.Tracking.CustomTrackingRecord> objects from a custom workflow activity:</span></span>  
+### <a name="emitting-custom-tracking-records"></a><span data-ttu-id="c604d-142">사용자 지정 추적 레코드 내보내기</span><span class="sxs-lookup"><span data-stu-id="c604d-142">Emitting Custom Tracking Records</span></span>  
+ <span data-ttu-id="c604d-143">이 샘플에서는 사용자 지정 워크플로 활동에서 <xref:System.Activities.Tracking.CustomTrackingRecord> 개체를 내보내는 기능도 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="c604d-143">This sample also demonstrates the ability to emit <xref:System.Activities.Tracking.CustomTrackingRecord> objects from a custom workflow activity:</span></span>  
   
--   <span data-ttu-id="e0ddf-144"><xref:System.Activities.Tracking.CustomTrackingRecord> 개체가 만들어지고, 레코드와 함께 내보낼 사용자 정의 데이터로 채워집니다.</span><span class="sxs-lookup"><span data-stu-id="e0ddf-144">The <xref:System.Activities.Tracking.CustomTrackingRecord> objects are created and populated with user-defined data that is desired to be emitted with the record.</span></span>  
+-   <span data-ttu-id="c604d-144"><xref:System.Activities.Tracking.CustomTrackingRecord> 개체가 만들어지고, 레코드와 함께 내보낼 사용자 정의 데이터로 채워집니다.</span><span class="sxs-lookup"><span data-stu-id="c604d-144">The <xref:System.Activities.Tracking.CustomTrackingRecord> objects are created and populated with user-defined data that is desired to be emitted with the record.</span></span>  
   
--   <span data-ttu-id="e0ddf-145"><xref:System.Activities.Tracking.CustomTrackingRecord> 의 추적 메서드를 호출 하 여 내보내집니다는 <xref:System.Activities.ActivityContext>합니다.</span><span class="sxs-lookup"><span data-stu-id="e0ddf-145">The <xref:System.Activities.Tracking.CustomTrackingRecord> is emitted by calling the track method of the <xref:System.Activities.ActivityContext>.</span></span>  
+-   <span data-ttu-id="c604d-145"><xref:System.Activities.Tracking.CustomTrackingRecord> 의 추적 메서드를 호출 하 여 내보내집니다는 <xref:System.Activities.ActivityContext>합니다.</span><span class="sxs-lookup"><span data-stu-id="c604d-145">The <xref:System.Activities.Tracking.CustomTrackingRecord> is emitted by calling the track method of the <xref:System.Activities.ActivityContext>.</span></span>  
   
- <span data-ttu-id="e0ddf-146">다음 예제에서는 사용자 지정 활동에서 <xref:System.Activities.Tracking.CustomTrackingRecord> 개체를 내보내는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="e0ddf-146">The following example demonstrates how to emit <xref:System.Activities.Tracking.CustomTrackingRecord> objects within a custom activity.</span></span>  
+ <span data-ttu-id="c604d-146">다음 예제에서는 사용자 지정 활동에서 <xref:System.Activities.Tracking.CustomTrackingRecord> 개체를 내보내는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="c604d-146">The following example demonstrates how to emit <xref:System.Activities.Tracking.CustomTrackingRecord> objects within a custom activity.</span></span>  
   
 ```csharp  
 // Create the Custom Tracking Record  
@@ -141,22 +142,22 @@ CustomTrackingRecord customRecord = new CustomTrackingRecord("OrderIn")
 context.Track(customRecord);  
 ```  
   
-#### <a name="to-use-this-sample"></a><span data-ttu-id="e0ddf-147">이 샘플을 사용하려면</span><span class="sxs-lookup"><span data-stu-id="e0ddf-147">To use this sample</span></span>  
+#### <a name="to-use-this-sample"></a><span data-ttu-id="c604d-147">이 샘플을 사용하려면</span><span class="sxs-lookup"><span data-stu-id="c604d-147">To use this sample</span></span>  
   
-1.  <span data-ttu-id="e0ddf-148">[!INCLUDE[vs2010](../../../../includes/vs2010-md.md)]을 사용하여 CustomTrackingSample.sln 솔루션 파일을 엽니다.</span><span class="sxs-lookup"><span data-stu-id="e0ddf-148">Using [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)], open the CustomTrackingSample.sln solution file.</span></span>  
+1.  <span data-ttu-id="c604d-148">[!INCLUDE[vs2010](../../../../includes/vs2010-md.md)]을 사용하여 CustomTrackingSample.sln 솔루션 파일을 엽니다.</span><span class="sxs-lookup"><span data-stu-id="c604d-148">Using [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)], open the CustomTrackingSample.sln solution file.</span></span>  
   
-2.  <span data-ttu-id="e0ddf-149">Ctrl+Shift+B를 눌러 솔루션을 빌드합니다.</span><span class="sxs-lookup"><span data-stu-id="e0ddf-149">To build the solution, press CTRL+SHIFT+B.</span></span>  
+2.  <span data-ttu-id="c604d-149">Ctrl+Shift+B를 눌러 솔루션을 빌드합니다.</span><span class="sxs-lookup"><span data-stu-id="c604d-149">To build the solution, press CTRL+SHIFT+B.</span></span>  
   
-3.  <span data-ttu-id="e0ddf-150">Ctrl+F5를 눌러 솔루션을 실행합니다.</span><span class="sxs-lookup"><span data-stu-id="e0ddf-150">To run the solution, press CTRL+F5.</span></span>  
+3.  <span data-ttu-id="c604d-150">Ctrl+F5를 눌러 솔루션을 실행합니다.</span><span class="sxs-lookup"><span data-stu-id="c604d-150">To run the solution, press CTRL+F5.</span></span>  
   
 > [!IMPORTANT]
->  <span data-ttu-id="e0ddf-151">컴퓨터에 이 샘플이 이미 설치되어 있을 수도 있습니다.</span><span class="sxs-lookup"><span data-stu-id="e0ddf-151">The samples may already be installed on your computer.</span></span> <span data-ttu-id="e0ddf-152">계속하기 전에 다음(기본) 디렉터리를 확인하세요.</span><span class="sxs-lookup"><span data-stu-id="e0ddf-152">Check for the following (default) directory before continuing.</span></span>  
+>  <span data-ttu-id="c604d-151">컴퓨터에 이 샘플이 이미 설치되어 있을 수도 있습니다.</span><span class="sxs-lookup"><span data-stu-id="c604d-151">The samples may already be installed on your computer.</span></span> <span data-ttu-id="c604d-152">계속하기 전에 다음(기본) 디렉터리를 확인하세요.</span><span class="sxs-lookup"><span data-stu-id="c604d-152">Check for the following (default) directory before continuing.</span></span>  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  <span data-ttu-id="e0ddf-153">이 디렉터리가 없으면 [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4(.NET Framework 4용 WCF(Windows Communication Foundation) 및 WF(Windows Workflow Foundation) 샘플)](http://go.microsoft.com/fwlink/?LinkId=150780) 로 이동하여 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 및 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플을 모두 다운로드하세요.</span><span class="sxs-lookup"><span data-stu-id="e0ddf-153">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="e0ddf-154">이 샘플은 다음 디렉터리에 있습니다.</span><span class="sxs-lookup"><span data-stu-id="e0ddf-154">This sample is located in the following directory.</span></span>  
+>  <span data-ttu-id="c604d-153">이 디렉터리가 없으면 [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4(.NET Framework 4용 WCF(Windows Communication Foundation) 및 WF(Windows Workflow Foundation) 샘플)](http://go.microsoft.com/fwlink/?LinkId=150780) 로 이동하여 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 및 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플을 모두 다운로드하세요.</span><span class="sxs-lookup"><span data-stu-id="c604d-153">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="c604d-154">이 샘플은 다음 디렉터리에 있습니다.</span><span class="sxs-lookup"><span data-stu-id="c604d-154">This sample is located in the following directory.</span></span>  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Tracking\CustomTracking`  
   
-## <a name="see-also"></a><span data-ttu-id="e0ddf-155">참고 항목</span><span class="sxs-lookup"><span data-stu-id="e0ddf-155">See Also</span></span>  
- [<span data-ttu-id="e0ddf-156">AppFabric 모니터링 샘플</span><span class="sxs-lookup"><span data-stu-id="e0ddf-156">AppFabric Monitoring Samples</span></span>](http://go.microsoft.com/fwlink/?LinkId=193959)
+## <a name="see-also"></a><span data-ttu-id="c604d-155">참고 항목</span><span class="sxs-lookup"><span data-stu-id="c604d-155">See Also</span></span>  
+ [<span data-ttu-id="c604d-156">AppFabric 모니터링 샘플</span><span class="sxs-lookup"><span data-stu-id="c604d-156">AppFabric Monitoring Samples</span></span>](http://go.microsoft.com/fwlink/?LinkId=193959)

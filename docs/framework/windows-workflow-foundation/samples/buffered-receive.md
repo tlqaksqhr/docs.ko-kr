@@ -14,31 +14,31 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 9cd4dfcbfc9d417766615c624905f8bce2c10e54
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: abec64433d10a23dca6186c6c9a553bbed12a017
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
-# <a name="buffered-receive"></a><span data-ttu-id="5551d-102">버퍼링되는 수신</span><span class="sxs-lookup"><span data-stu-id="5551d-102">Buffered Receive</span></span>
-<span data-ttu-id="5551d-103">이 샘플에서는 [!INCLUDE[wf](../../../../includes/wf-md.md)]에서 버퍼링된 수신 기능을 설정하고 구성하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="5551d-103">This sample demonstrates how to set up and configure the buffered receive feature in [!INCLUDE[wf](../../../../includes/wf-md.md)].</span></span> <span data-ttu-id="5551d-104">버퍼링된 수신 기능을 사용하면 워크플로 작성자가 메시지의 수신 순서에 신경을 쓰지 않고 워크플로를 만들 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="5551d-104">Buffered receive allows the workflow author to create a workflow without having to worry about the order in which messages are received.</span></span> <span data-ttu-id="5551d-105">버퍼링된 수신 기능은 메시지를 로컬로 버퍼링하고 워크플로에서 메시지를 받을 준비가 되었을 때 이를 전달하는 역할을 합니다.</span><span class="sxs-lookup"><span data-stu-id="5551d-105">The buffered receive feature buffers messages locally and delivers them when the workflow is ready to receive them.</span></span>  
+# <a name="buffered-receive"></a><span data-ttu-id="71cc7-102">버퍼링되는 수신</span><span class="sxs-lookup"><span data-stu-id="71cc7-102">Buffered Receive</span></span>
+<span data-ttu-id="71cc7-103">이 샘플에는 설정 및의 Windows WF (Workflow Foundation) 버퍼링된 된 수신 기능을 구성 하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="71cc7-103">This sample demonstrates how to set up and configure the buffered receive feature in Windows Workflow Foundation (WF).</span></span> <span data-ttu-id="71cc7-104">버퍼링된 수신 기능을 사용하면 워크플로 작성자가 메시지의 수신 순서에 신경을 쓰지 않고 워크플로를 만들 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="71cc7-104">Buffered receive allows the workflow author to create a workflow without having to worry about the order in which messages are received.</span></span> <span data-ttu-id="71cc7-105">버퍼링된 수신 기능은 메시지를 로컬로 버퍼링하고 워크플로에서 메시지를 받을 준비가 되었을 때 이를 전달하는 역할을 합니다.</span><span class="sxs-lookup"><span data-stu-id="71cc7-105">The buffered receive feature buffers messages locally and delivers them when the workflow is ready to receive them.</span></span>  
   
-## <a name="demonstrates"></a><span data-ttu-id="5551d-106">세부 항목</span><span class="sxs-lookup"><span data-stu-id="5551d-106">Demonstrates</span></span>  
- <span data-ttu-id="5551d-107">메시징 활동에 버퍼링된 수신 기능을 사용하여 순서에 상관없이 메시지 처리</span><span class="sxs-lookup"><span data-stu-id="5551d-107">Out-of-order message processing using buffered receive with messaging activities.</span></span>  
+## <a name="demonstrates"></a><span data-ttu-id="71cc7-106">세부 항목</span><span class="sxs-lookup"><span data-stu-id="71cc7-106">Demonstrates</span></span>  
+ <span data-ttu-id="71cc7-107">메시징 활동에 버퍼링된 수신 기능을 사용하여 순서에 상관없이 메시지 처리</span><span class="sxs-lookup"><span data-stu-id="71cc7-107">Out-of-order message processing using buffered receive with messaging activities.</span></span>  
   
 > [!IMPORTANT]
->  <span data-ttu-id="5551d-108">컴퓨터에 이 샘플이 이미 설치되어 있을 수도 있습니다.</span><span class="sxs-lookup"><span data-stu-id="5551d-108">The samples may already be installed on your machine.</span></span> <span data-ttu-id="5551d-109">계속하기 전에 다음(기본) 디렉터리를 확인하세요.</span><span class="sxs-lookup"><span data-stu-id="5551d-109">Check for the following (default) directory before continuing.</span></span>  
+>  <span data-ttu-id="71cc7-108">컴퓨터에 이 샘플이 이미 설치되어 있을 수도 있습니다.</span><span class="sxs-lookup"><span data-stu-id="71cc7-108">The samples may already be installed on your machine.</span></span> <span data-ttu-id="71cc7-109">계속하기 전에 다음(기본) 디렉터리를 확인하세요.</span><span class="sxs-lookup"><span data-stu-id="71cc7-109">Check for the following (default) directory before continuing.</span></span>  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  <span data-ttu-id="5551d-110">이 디렉터리가 없으면 [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4(.NET Framework 4용 WCF(Windows Communication Foundation) 및 WF(Windows Workflow Foundation) 샘플)](http://go.microsoft.com/fwlink/?LinkId=150780) 로 이동하여 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 및 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플을 모두 다운로드하세요.</span><span class="sxs-lookup"><span data-stu-id="5551d-110">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="5551d-111">이 샘플은 다음 디렉터리에 있습니다.</span><span class="sxs-lookup"><span data-stu-id="5551d-111">This sample is located in the following directory.</span></span>  
+>  <span data-ttu-id="71cc7-110">이 디렉터리가 없으면 [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4(.NET Framework 4용 WCF(Windows Communication Foundation) 및 WF(Windows Workflow Foundation) 샘플)](http://go.microsoft.com/fwlink/?LinkId=150780) 로 이동하여 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 및 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플을 모두 다운로드하세요.</span><span class="sxs-lookup"><span data-stu-id="71cc7-110">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="71cc7-111">이 샘플은 다음 디렉터리에 있습니다.</span><span class="sxs-lookup"><span data-stu-id="71cc7-111">This sample is located in the following directory.</span></span>  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Services\BufferedReceive`  
   
-## <a name="discussion"></a><span data-ttu-id="5551d-112">토론</span><span class="sxs-lookup"><span data-stu-id="5551d-112">Discussion</span></span>  
- <span data-ttu-id="5551d-113">이 샘플에서 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 서비스는 [!INCLUDE[wf1](../../../../includes/wf1-md.md)]에 의해 구현되며 일련의 <xref:System.ServiceModel.Activities.Receive> 활동을 포함합니다.</span><span class="sxs-lookup"><span data-stu-id="5551d-113">In this sample, a [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] service is implemented using [!INCLUDE[wf1](../../../../includes/wf1-md.md)] and has a sequence of <xref:System.ServiceModel.Activities.Receive> activities.</span></span> <span data-ttu-id="5551d-114">이 워크플로는 간단한 대출 승인 프로세스를 모델링하며, 승인 여부를 결정해야 할 대출에 대한 알림 세 건을 받습니다.</span><span class="sxs-lookup"><span data-stu-id="5551d-114">This workflow models a simple loan approval process where the workflow expects three notifications for a loan to be approved.</span></span> <span data-ttu-id="5551d-115">[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 클라이언트 응용 프로그램은 서비스에서 예상하는 순서와는 반대로 대출 관련 알림 세 건을 보냅니다.</span><span class="sxs-lookup"><span data-stu-id="5551d-115">A [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] client application sends three correlated notifications in the reverse order of what the service expects.</span></span> <span data-ttu-id="5551d-116">그러나 이 서비스에서는 버퍼링된 수신 기능을 사용하므로 순서가 맞지 않는 각 메시지를 버퍼링한 후 워크플로에서 해당 메시지를 받을 준비가 되었을 때 이를 처리합니다.</span><span class="sxs-lookup"><span data-stu-id="5551d-116">Because the buffered receive feature is turned on at the service, each out-of-order message is buffered at the service and processed as the workflow becomes ready to receive it.</span></span>  
+## <a name="discussion"></a><span data-ttu-id="71cc7-112">토론</span><span class="sxs-lookup"><span data-stu-id="71cc7-112">Discussion</span></span>  
+ <span data-ttu-id="71cc7-113">이 샘플에서 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 서비스는 [!INCLUDE[wf1](../../../../includes/wf1-md.md)]에 의해 구현되며 일련의 <xref:System.ServiceModel.Activities.Receive> 활동을 포함합니다.</span><span class="sxs-lookup"><span data-stu-id="71cc7-113">In this sample, a [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] service is implemented using [!INCLUDE[wf1](../../../../includes/wf1-md.md)] and has a sequence of <xref:System.ServiceModel.Activities.Receive> activities.</span></span> <span data-ttu-id="71cc7-114">이 워크플로는 간단한 대출 승인 프로세스를 모델링하며, 승인 여부를 결정해야 할 대출에 대한 알림 세 건을 받습니다.</span><span class="sxs-lookup"><span data-stu-id="71cc7-114">This workflow models a simple loan approval process where the workflow expects three notifications for a loan to be approved.</span></span> <span data-ttu-id="71cc7-115">[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 클라이언트 응용 프로그램은 서비스에서 예상하는 순서와는 반대로 대출 관련 알림 세 건을 보냅니다.</span><span class="sxs-lookup"><span data-stu-id="71cc7-115">A [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] client application sends three correlated notifications in the reverse order of what the service expects.</span></span> <span data-ttu-id="71cc7-116">그러나 이 서비스에서는 버퍼링된 수신 기능을 사용하므로 순서가 맞지 않는 각 메시지를 버퍼링한 후 워크플로에서 해당 메시지를 받을 준비가 되었을 때 이를 처리합니다.</span><span class="sxs-lookup"><span data-stu-id="71cc7-116">Because the buffered receive feature is turned on at the service, each out-of-order message is buffered at the service and processed as the workflow becomes ready to receive it.</span></span>  
   
- <span data-ttu-id="5551d-117">버퍼링된 수신 기능을 사용하려면 바인딩을 통해 <xref:System.ServiceModel.Activities.ReceiveContent>가 지원되어야 하므로 이 서비스에서는 <xref:System.ServiceModel.NetMsmqBinding>을 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="5551d-117">The buffered receive feature requires <xref:System.ServiceModel.Activities.ReceiveContent> support from the binding, therefore the service uses <xref:System.ServiceModel.NetMsmqBinding>.</span></span> <span data-ttu-id="5551d-118">이 바인딩에는 특별한 구성이 필요하지 않으므로 기본 설정이 사용됩니다.</span><span class="sxs-lookup"><span data-stu-id="5551d-118">No special configuration is required for the binding, so the defaults are used.</span></span>  
+ <span data-ttu-id="71cc7-117">버퍼링된 수신 기능을 사용하려면 바인딩을 통해 <xref:System.ServiceModel.Activities.ReceiveContent>가 지원되어야 하므로 이 서비스에서는 <xref:System.ServiceModel.NetMsmqBinding>을 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="71cc7-117">The buffered receive feature requires <xref:System.ServiceModel.Activities.ReceiveContent> support from the binding, therefore the service uses <xref:System.ServiceModel.NetMsmqBinding>.</span></span> <span data-ttu-id="71cc7-118">이 바인딩에는 특별한 구성이 필요하지 않으므로 기본 설정이 사용됩니다.</span><span class="sxs-lookup"><span data-stu-id="71cc7-118">No special configuration is required for the binding, so the defaults are used.</span></span>  
   
 ```xml  
 <endpoint address ="net.msmq://localhost/private/LoanService/Service1.xamlx"  
@@ -46,9 +46,9 @@ ms.lasthandoff: 04/26/2018
                   contract="ILoanService"/>  
 ```  
   
- <span data-ttu-id="5551d-119">이 서비스에서는 <xref:System.ServiceModel.Description.ServiceMetadataBehavior>를 사용하여 서비스에 대한 메타데이터도 노출합니다.</span><span class="sxs-lookup"><span data-stu-id="5551d-119">The service also exposes metadata for the service using <xref:System.ServiceModel.Description.ServiceMetadataBehavior>.</span></span>  
+ <span data-ttu-id="71cc7-119">이 서비스에서는 <xref:System.ServiceModel.Description.ServiceMetadataBehavior>를 사용하여 서비스에 대한 메타데이터도 노출합니다.</span><span class="sxs-lookup"><span data-stu-id="71cc7-119">The service also exposes metadata for the service using <xref:System.ServiceModel.Description.ServiceMetadataBehavior>.</span></span>  
   
- <span data-ttu-id="5551d-120">마찬가지로, 클라이언트 끝점은 <xref:System.ServiceModel.NetMsmqBinding>을 사용하여 구성됩니다.</span><span class="sxs-lookup"><span data-stu-id="5551d-120">Similarly, the client endpoint is configured using <xref:System.ServiceModel.NetMsmqBinding>.</span></span> <span data-ttu-id="5551d-121">클라이언트 코드 및 구성을 사용 하 여 생성 되는 **서비스 참조 추가** Visual Studio의 기능입니다.</span><span class="sxs-lookup"><span data-stu-id="5551d-121">The client code and configuration is generated by using the **Add Service Reference** feature of Visual Studio.</span></span> <span data-ttu-id="5551d-122">다음 예제에서는 App.config 파일에 생성된 클라이언트 끝점을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="5551d-122">The following example is the generated client endpoint in the App.config file.</span></span>  
+ <span data-ttu-id="71cc7-120">마찬가지로, 클라이언트 끝점은 <xref:System.ServiceModel.NetMsmqBinding>을 사용하여 구성됩니다.</span><span class="sxs-lookup"><span data-stu-id="71cc7-120">Similarly, the client endpoint is configured using <xref:System.ServiceModel.NetMsmqBinding>.</span></span> <span data-ttu-id="71cc7-121">클라이언트 코드 및 구성을 사용 하 여 생성 되는 **서비스 참조 추가** Visual Studio의 기능입니다.</span><span class="sxs-lookup"><span data-stu-id="71cc7-121">The client code and configuration is generated by using the **Add Service Reference** feature of Visual Studio.</span></span> <span data-ttu-id="71cc7-122">다음 예제에서는 App.config 파일에 생성된 클라이언트 끝점을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="71cc7-122">The following example is the generated client endpoint in the App.config file.</span></span>  
   
 ```xml  
 <endpoint address="net.msmq://localhost/private/LoanService/Service1.xamlx"  
@@ -56,65 +56,65 @@ ms.lasthandoff: 04/26/2018
                 contract="ServiceReference1.ILoanService" name="NetMsmqBinding_ILoanService" />  
 ```  
   
- <span data-ttu-id="5551d-123">이 샘플에는 다음과 같은 Windows 구성 요소를 사용해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="5551d-123">This sample requires that the following Windows components are enabled:</span></span>  
+ <span data-ttu-id="71cc7-123">이 샘플에는 다음과 같은 Windows 구성 요소를 사용해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="71cc7-123">This sample requires that the following Windows components are enabled:</span></span>  
   
 1.  [!INCLUDE[iis60](../../../../includes/iis60-md.md)]  
   
-2.  [!INCLUDE[iis60](../../../../includes/iis60-md.md)]<span data-ttu-id="5551d-124"> 관리 호환성, 메타베이스 및 구성 호환성</span><span class="sxs-lookup"><span data-stu-id="5551d-124"> Management Compatibility, Metabase, and Configuration Compatibility</span></span>  
+2.  [!INCLUDE[iis60](../../../../includes/iis60-md.md)]<span data-ttu-id="71cc7-124"> 관리 호환성, 메타베이스 및 구성 호환성</span><span class="sxs-lookup"><span data-stu-id="71cc7-124"> Management Compatibility, Metabase, and Configuration Compatibility</span></span>  
   
-3.  <span data-ttu-id="5551d-125">World Wide Web 서비스, 응용 프로그램 개발 기능 및 ASP.NET</span><span class="sxs-lookup"><span data-stu-id="5551d-125">World Wide Web Services, Application Development Features, and ASP.NET</span></span>  
+3.  <span data-ttu-id="71cc7-125">World Wide Web 서비스, 응용 프로그램 개발 기능 및 ASP.NET</span><span class="sxs-lookup"><span data-stu-id="71cc7-125">World Wide Web Services, Application Development Features, and ASP.NET</span></span>  
   
-4.  <span data-ttu-id="5551d-126">MSMQ(Microsoft Message Queue) Server</span><span class="sxs-lookup"><span data-stu-id="5551d-126">Microsoft Message Queues (MSMQ) Server</span></span>  
+4.  <span data-ttu-id="71cc7-126">MSMQ(Microsoft Message Queue) Server</span><span class="sxs-lookup"><span data-stu-id="71cc7-126">Microsoft Message Queues (MSMQ) Server</span></span>  
   
-#### <a name="to-set-up-and-build-the-sample"></a><span data-ttu-id="5551d-127">샘플을 설치하고 빌드하려면</span><span class="sxs-lookup"><span data-stu-id="5551d-127">To set up, and build the sample</span></span>  
+#### <a name="to-set-up-and-build-the-sample"></a><span data-ttu-id="71cc7-127">샘플을 설치하고 빌드하려면</span><span class="sxs-lookup"><span data-stu-id="71cc7-127">To set up, and build the sample</span></span>  
   
-1.  <span data-ttu-id="5551d-128">[!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] 명령 프롬프트에서 `aspnet_regiis –I`을 입력하여 ASP.NET을 등록하고 Enter 키를 누릅니다.</span><span class="sxs-lookup"><span data-stu-id="5551d-128">At a [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] command prompt, register ASP.NET by typing `aspnet_regiis –I` and press ENTER.</span></span>  
+1.  <span data-ttu-id="71cc7-128">[!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] 명령 프롬프트에서 `aspnet_regiis –I`을 입력하여 ASP.NET을 등록하고 Enter 키를 누릅니다.</span><span class="sxs-lookup"><span data-stu-id="71cc7-128">At a [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] command prompt, register ASP.NET by typing `aspnet_regiis –I` and press ENTER.</span></span>  
   
-2.  <span data-ttu-id="5551d-129">관리자 권한으로 [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)]을 실행합니다.</span><span class="sxs-lookup"><span data-stu-id="5551d-129">Run [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] as an Administrator.</span></span>  
+2.  <span data-ttu-id="71cc7-129">관리자 권한으로 [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)]을 실행합니다.</span><span class="sxs-lookup"><span data-stu-id="71cc7-129">Run [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] as an Administrator.</span></span>  
   
-3.  <span data-ttu-id="5551d-130">LoanService.sln을 엽니다.</span><span class="sxs-lookup"><span data-stu-id="5551d-130">Open LoanService.sln.</span></span>  
+3.  <span data-ttu-id="71cc7-130">LoanService.sln을 엽니다.</span><span class="sxs-lookup"><span data-stu-id="71cc7-130">Open LoanService.sln.</span></span>  
   
-4.  <span data-ttu-id="5551d-131">LoanService 프로젝트에 대 한 가상 디렉터리를 만드는 원하면 선택 묻는 메시지가 나타나면 **예**합니다.</span><span class="sxs-lookup"><span data-stu-id="5551d-131">When asked if you would like to create the virtual directories for the LoanService project, select **Yes**.</span></span>  
+4.  <span data-ttu-id="71cc7-131">LoanService 프로젝트에 대 한 가상 디렉터리를 만드는 원하면 선택 묻는 메시지가 나타나면 **예**합니다.</span><span class="sxs-lookup"><span data-stu-id="71cc7-131">When asked if you would like to create the virtual directories for the LoanService project, select **Yes**.</span></span>  
   
-#### <a name="to-set-up-the-service-queues"></a><span data-ttu-id="5551d-132">서비스 큐를 설정하려면</span><span class="sxs-lookup"><span data-stu-id="5551d-132">To set up the service queues</span></span>  
+#### <a name="to-set-up-the-service-queues"></a><span data-ttu-id="71cc7-132">서비스 큐를 설정하려면</span><span class="sxs-lookup"><span data-stu-id="71cc7-132">To set up the service queues</span></span>  
   
-1.  <span data-ttu-id="5551d-133">F5 키를 눌러 LoanClient 응용 프로그램을 실행합니다. 이 응용 프로그램은 큐를 만들고 Service1.xamlx에 정의되어 있는 서비스를 활성화하는 역할을 합니다.</span><span class="sxs-lookup"><span data-stu-id="5551d-133">Press F5 to run the LoanClient application that creates the queues and activates the service defined in Service1.xamlx.</span></span>  
+1.  <span data-ttu-id="71cc7-133">F5 키를 눌러 LoanClient 응용 프로그램을 실행합니다. 이 응용 프로그램은 큐를 만들고 Service1.xamlx에 정의되어 있는 서비스를 활성화하는 역할을 합니다.</span><span class="sxs-lookup"><span data-stu-id="71cc7-133">Press F5 to run the LoanClient application that creates the queues and activates the service defined in Service1.xamlx.</span></span>  
   
-2.  <span data-ttu-id="5551d-134">열기는 **컴퓨터 관리** 명령 프롬프트에서 Compmgmt.msc를 실행 하 여 콘솔.</span><span class="sxs-lookup"><span data-stu-id="5551d-134">Open the **Computer Management** console by running Compmgmt.msc from a command prompt.</span></span>  
+2.  <span data-ttu-id="71cc7-134">열기는 **컴퓨터 관리** 명령 프롬프트에서 Compmgmt.msc를 실행 하 여 콘솔.</span><span class="sxs-lookup"><span data-stu-id="71cc7-134">Open the **Computer Management** console by running Compmgmt.msc from a command prompt.</span></span>  
   
-3.  <span data-ttu-id="5551d-135">에 **컴퓨터 관리** 콘솔에서 **서비스**, **응용 프로그램**, **메시지 큐**, **개인 큐** .</span><span class="sxs-lookup"><span data-stu-id="5551d-135">In the **Computer Management** console, expand **Service**, **Applications**, **Message Queuing**, **Private Queues**.</span></span>  
+3.  <span data-ttu-id="71cc7-135">에 **컴퓨터 관리** 콘솔에서 **서비스**, **응용 프로그램**, **메시지 큐**, **개인 큐** .</span><span class="sxs-lookup"><span data-stu-id="71cc7-135">In the **Computer Management** console, expand **Service**, **Applications**, **Message Queuing**, **Private Queues**.</span></span>  
   
-4.  <span data-ttu-id="5551d-136">Loanservice/service1.xamlx 큐를 마우스 오른쪽 단추로 클릭 하 고 선택 **속성**합니다.</span><span class="sxs-lookup"><span data-stu-id="5551d-136">Right-click the loanservice/service1.xamlx queue and select **Properties**.</span></span>  
+4.  <span data-ttu-id="71cc7-136">Loanservice/service1.xamlx 큐를 마우스 오른쪽 단추로 클릭 하 고 선택 **속성**합니다.</span><span class="sxs-lookup"><span data-stu-id="71cc7-136">Right-click the loanservice/service1.xamlx queue and select **Properties**.</span></span>  
   
-5.  <span data-ttu-id="5551d-137">선택 된 **보안** 탭을 추가 **누구나 메시지 받기**, **메시지 보기** 및 **메시지 보내기** 사용 권한.</span><span class="sxs-lookup"><span data-stu-id="5551d-137">Select the **Security** tab, and add **Everyone Receives Message**, **Peek Message** and **Send Message** permissions.</span></span>  
+5.  <span data-ttu-id="71cc7-137">선택 된 **보안** 탭을 추가 **누구나 메시지 받기**, **메시지 보기** 및 **메시지 보내기** 사용 권한.</span><span class="sxs-lookup"><span data-stu-id="71cc7-137">Select the **Security** tab, and add **Everyone Receives Message**, **Peek Message** and **Send Message** permissions.</span></span>  
   
-6.  <span data-ttu-id="5551d-138">[!INCLUDE[iis60](../../../../includes/iis60-md.md)] 관리자를 엽니다.</span><span class="sxs-lookup"><span data-stu-id="5551d-138">Open the [!INCLUDE[iis60](../../../../includes/iis60-md.md)] Manager.</span></span>  
+6.  <span data-ttu-id="71cc7-138">[!INCLUDE[iis60](../../../../includes/iis60-md.md)] 관리자를 엽니다.</span><span class="sxs-lookup"><span data-stu-id="71cc7-138">Open the [!INCLUDE[iis60](../../../../includes/iis60-md.md)] Manager.</span></span>  
   
-7.  <span data-ttu-id="5551d-139">찾아 **서버**, **사이트**, **기본 웹 사이트**, **개인**, **LoanService** 선택 **고급 옵션**</span><span class="sxs-lookup"><span data-stu-id="5551d-139">Browse to **Server**, **Sites**, **Default Web site**, **Private**, **LoanService** and select **Advanced Options**</span></span>  
+7.  <span data-ttu-id="71cc7-139">찾아 **서버**, **사이트**, **기본 웹 사이트**, **개인**, **LoanService** 선택 **고급 옵션**</span><span class="sxs-lookup"><span data-stu-id="71cc7-139">Browse to **Server**, **Sites**, **Default Web site**, **Private**, **LoanService** and select **Advanced Options**</span></span>  
   
-8.  <span data-ttu-id="5551d-140">변경 된 **사용할 수 있는 프로토콜** 되도록 **http**, **net.msmq**합니다.</span><span class="sxs-lookup"><span data-stu-id="5551d-140">Change the **Enabled Protocols** to be **http**, **net.msmq**.</span></span>  
+8.  <span data-ttu-id="71cc7-140">변경 된 **사용할 수 있는 프로토콜** 되도록 **http**, **net.msmq**합니다.</span><span class="sxs-lookup"><span data-stu-id="71cc7-140">Change the **Enabled Protocols** to be **http**, **net.msmq**.</span></span>  
   
-#### <a name="to-run-the-sample"></a><span data-ttu-id="5551d-141">이 샘플을 실행하려면</span><span class="sxs-lookup"><span data-stu-id="5551d-141">To run the sample</span></span>  
+#### <a name="to-run-the-sample"></a><span data-ttu-id="71cc7-141">이 샘플을 실행하려면</span><span class="sxs-lookup"><span data-stu-id="71cc7-141">To run the sample</span></span>  
   
-1.  <span data-ttu-id="5551d-142">찾아 http://localhost/private/loanservice/service1.xamlx 를 서비스가 실행 되 고 있는지 확인 합니다.</span><span class="sxs-lookup"><span data-stu-id="5551d-142">Browse to http://localhost/private/loanservice/service1.xamlx to ensure that the service is running.</span></span>  
+1.  <span data-ttu-id="71cc7-142">찾아 http://localhost/private/loanservice/service1.xamlx 를 서비스가 실행 되 고 있는지 확인 합니다.</span><span class="sxs-lookup"><span data-stu-id="71cc7-142">Browse to http://localhost/private/loanservice/service1.xamlx to ensure that the service is running.</span></span>  
   
-2.  <span data-ttu-id="5551d-143">F5 키를 눌러 LoanClient 응용 프로그램을 실행합니다.</span><span class="sxs-lookup"><span data-stu-id="5551d-143">Press F5 to run the LoanClient application.</span></span> <span data-ttu-id="5551d-144">워크플로를 완료하면 메시지 교환 결과가 포함된 out.txt 파일이 C:\Inbox에 저장됩니다.</span><span class="sxs-lookup"><span data-stu-id="5551d-144">Once the workflow is complete, an out.txt file should be saved to C:\Inbox that contains the result of the message exchange.</span></span>  
+2.  <span data-ttu-id="71cc7-143">F5 키를 눌러 LoanClient 응용 프로그램을 실행합니다.</span><span class="sxs-lookup"><span data-stu-id="71cc7-143">Press F5 to run the LoanClient application.</span></span> <span data-ttu-id="71cc7-144">워크플로를 완료하면 메시지 교환 결과가 포함된 out.txt 파일이 C:\Inbox에 저장됩니다.</span><span class="sxs-lookup"><span data-stu-id="71cc7-144">Once the workflow is complete, an out.txt file should be saved to C:\Inbox that contains the result of the message exchange.</span></span>  
   
-#### <a name="to-clean-up"></a><span data-ttu-id="5551d-145">정리하려면</span><span class="sxs-lookup"><span data-stu-id="5551d-145">To clean up</span></span>  
+#### <a name="to-clean-up"></a><span data-ttu-id="71cc7-145">정리하려면</span><span class="sxs-lookup"><span data-stu-id="71cc7-145">To clean up</span></span>  
   
-1.  <span data-ttu-id="5551d-146">열기는 **컴퓨터 관리** 명령 프롬프트에서 Compmgmt.msc를 실행 하 여 콘솔.</span><span class="sxs-lookup"><span data-stu-id="5551d-146">Open the **Computer Management** console by running Compmgmt.msc from a command prompt.</span></span>  
+1.  <span data-ttu-id="71cc7-146">열기는 **컴퓨터 관리** 명령 프롬프트에서 Compmgmt.msc를 실행 하 여 콘솔.</span><span class="sxs-lookup"><span data-stu-id="71cc7-146">Open the **Computer Management** console by running Compmgmt.msc from a command prompt.</span></span>  
   
-2.  <span data-ttu-id="5551d-147">확장 **서비스** 및 **응용 프로그램**, **메시지 큐**, **개인 큐**합니다.</span><span class="sxs-lookup"><span data-stu-id="5551d-147">Expand **Service** and **Applications**, **Message Queuing**, **Private Queues**.</span></span>  
+2.  <span data-ttu-id="71cc7-147">확장 **서비스** 및 **응용 프로그램**, **메시지 큐**, **개인 큐**합니다.</span><span class="sxs-lookup"><span data-stu-id="71cc7-147">Expand **Service** and **Applications**, **Message Queuing**, **Private Queues**.</span></span>  
   
-3.  <span data-ttu-id="5551d-148">loanservice/service1.xamlx 큐를 삭제합니다.</span><span class="sxs-lookup"><span data-stu-id="5551d-148">Delete the loanservice/service1.xamlx queue.</span></span>  
+3.  <span data-ttu-id="71cc7-148">loanservice/service1.xamlx 큐를 삭제합니다.</span><span class="sxs-lookup"><span data-stu-id="71cc7-148">Delete the loanservice/service1.xamlx queue.</span></span>  
   
-4.  <span data-ttu-id="5551d-149">C:\Inbox 디렉터리를 제거합니다.</span><span class="sxs-lookup"><span data-stu-id="5551d-149">Remove the C:\Inbox directory.</span></span>  
+4.  <span data-ttu-id="71cc7-149">C:\Inbox 디렉터리를 제거합니다.</span><span class="sxs-lookup"><span data-stu-id="71cc7-149">Remove the C:\Inbox directory.</span></span>  
   
 > [!IMPORTANT]
->  <span data-ttu-id="5551d-150">컴퓨터에 이 샘플이 이미 설치되어 있을 수도 있습니다.</span><span class="sxs-lookup"><span data-stu-id="5551d-150">The samples may already be installed on your machine.</span></span> <span data-ttu-id="5551d-151">계속하기 전에 다음(기본) 디렉터리를 확인하세요.</span><span class="sxs-lookup"><span data-stu-id="5551d-151">Check for the following (default) directory before continuing.</span></span>  
+>  <span data-ttu-id="71cc7-150">컴퓨터에 이 샘플이 이미 설치되어 있을 수도 있습니다.</span><span class="sxs-lookup"><span data-stu-id="71cc7-150">The samples may already be installed on your machine.</span></span> <span data-ttu-id="71cc7-151">계속하기 전에 다음(기본) 디렉터리를 확인하세요.</span><span class="sxs-lookup"><span data-stu-id="71cc7-151">Check for the following (default) directory before continuing.</span></span>  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  <span data-ttu-id="5551d-152">이 디렉터리가 없으면 [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4(.NET Framework 4용 WCF(Windows Communication Foundation) 및 WF(Windows Workflow Foundation) 샘플)](http://go.microsoft.com/fwlink/?LinkId=150780) 로 이동하여 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 및 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플을 모두 다운로드하세요.</span><span class="sxs-lookup"><span data-stu-id="5551d-152">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="5551d-153">이 샘플은 다음 디렉터리에 있습니다.</span><span class="sxs-lookup"><span data-stu-id="5551d-153">This sample is located in the following directory.</span></span>  
+>  <span data-ttu-id="71cc7-152">이 디렉터리가 없으면 [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4(.NET Framework 4용 WCF(Windows Communication Foundation) 및 WF(Windows Workflow Foundation) 샘플)](http://go.microsoft.com/fwlink/?LinkId=150780) 로 이동하여 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 및 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플을 모두 다운로드하세요.</span><span class="sxs-lookup"><span data-stu-id="71cc7-152">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="71cc7-153">이 샘플은 다음 디렉터리에 있습니다.</span><span class="sxs-lookup"><span data-stu-id="71cc7-153">This sample is located in the following directory.</span></span>  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Services\BufferedReceive`
