@@ -1,0 +1,11 @@
+### <a name="horizontal-scrolling-and-virtualization"></a>가로 스크롤 및 가상화
+
+|   |   |
+|---|---|
+|설명|이 변경 내용은 주 스크롤 방향의 직각 방향으로 자체 가상화를 수행하는 <xref:System.Windows.Controls.ItemsControl?displayProperty=name>에 적용됩니다(주요 예제는 EnableColumnVirtualization=&quot;True&quot;를 사용하는 <xref:System.Windows.Controls.DataGrid?displayProperty=name>임).  특정 가로 스크롤 작업의 결과는 더 직관적인 결과를 생성하고 세로 작업의 결과와 비교할 때 더 비슷하게 변경되었습니다. 작업에는 가로 스크롤 막대를 마우스 오른쪽 단추로 클릭하여 가져온 메뉴의 이름을 사용하기 위해 &quot;여기로 스크롤&quot; 및 &quot;오른쪽 가장자리&quot;가 포함됩니다.  이러한 항목은 모두 후보 오프셋을 계산하고 <xref:System.Windows.Controls.Primitives.IScrollInfo.SetHorizontalOffset(System.Double)>을 호출합니다. 새롭게 가상화 취소된 콘텐츠가 <xref:System.Windows.Controls.Primitives.IScrollInfo.ExtentWidth?displayProperty=name> 값을 변경했기 때문에 새 오프셋으로 스크롤한 후에 &quot;여기&quot; 또는 &quot;오른쪽 가장자리&quot;라는 개념은 변경될 수 있습니다. .NET 4.6.2 이전에서 스크롤 작업이 더 이상 &quot;여기&quot; 또는 &quot;가장자리&quot; 후보가 아닌 경우에도 오프셋을 사용합니다.  결과적으로 그림과 같은 스크롤 상자 &quot;바운스&quot;와 같은 결과가 나타납니다. <xref:System.Windows.Controls.DataGrid?displayProperty=name>에서 ExtentWidth=1000 및 Width=200이라고 가정합니다.  &quot;오른쪽 가장자리&quot;로 스크롤하면 후보 오프셋 1000 - 200 = 800이 사용됩니다.  해당 오프셋으로 스크롤하는 동안 새 열의 가상화가 취소됩니다. 열이 매우 넓어서 <xref:System.Windows.Controls.Primitives.IScrollInfo.ExtentWidth?displayProperty=name>가 2000으로 변경된다고 가정하겠습니다.  스크롤은 HorizontalOffset=800으로 끝납니다. thumb 스크롤 막대의 가운데(정확히 800/2000 = 40%)에 가깝게 다시 &quot;바운스&quot;됩니다. 변경 내용은 이 상황이 발생하는 경우 새 후보 오프셋을 다시 계산하고 다시 시도하는 것입니다. 세로 스크롤이 작동하는 방법입니다. 이 변경으로 인해 최종 사용자가 오프셋을 더욱 쉽게 예측할 수 있는 직관적인 환경이 생성됩니다. 하지만 가로 스크롤 이후 <xref:System.Windows.Controls.Primitives.IScrollInfo.HorizontalOffset?displayProperty=name>(최종 사용자가 호출하거나 명시적 <xref:System.Windows.Controls.Primitives.IScrollInfo.SetHorizontalOffset(System.Double)> 호출을 통해 호출됨)의 정확한 값에 따라 동작이 달라지는 앱에도 영향을 줄 수 있습니다.|
+|제안 해결 방법|<xref:System.Windows.Controls.Primitives.IScrollInfo.HorizontalOffset?displayProperty=name>의 예측 값을 사용하는 앱의 경우 가상화 취소로 인해 <xref:System.Windows.Controls.Primitives.IScrollInfo.ExtentWidth?displayProperty=name>가 변경될 수 있는 가로 스크롤 이후 실제 값과 <xref:System.Windows.Controls.Primitives.IScrollInfo.ExtentWidth?displayProperty=name>의 값을 페치하도록 변경해야 합니다.|
+|범위|부|
+|버전|4.6.2|
+|형식|런타임|
+|영향을 받는 API|<ul><li><xref:System.Windows.Controls.Primitives.IScrollInfo?displayProperty=nameWithType></li></ul>|
+
