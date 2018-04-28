@@ -1,1 +1,1 @@
-Microsoft 메모장
+<span data-ttu-id="b8ec5-101">Microsoft 메모장</span><span class="sxs-lookup"><span data-stu-id="b8ec5-101">Microsoft Notepad</span></span>

@@ -1,0 +1,10 @@
+### <a name="ipad-should-not-be-used-in-custom-capabilities-file-because-it-is-now-a-browser-capability"></a><span data-ttu-id="1fa5d-101">이제 iPad는 브라우저 기능이므로 사용자 지정 기능 파일에서 사용해서는 안 됩니다.</span><span class="sxs-lookup"><span data-stu-id="1fa5d-101">IPad should not be used in custom capabilities file because it is now a browser capability</span></span>
+
+|   |   |
+|---|---|
+|<span data-ttu-id="1fa5d-102">설명</span><span class="sxs-lookup"><span data-stu-id="1fa5d-102">Details</span></span>|<span data-ttu-id="1fa5d-103">.NET 4.5부터 iPad는 기본 ASP.NET 브라우저 기능 파일의 식별자이므로 사용자 지정 기능 파일에 사용해서는 안 됩니다.</span><span class="sxs-lookup"><span data-stu-id="1fa5d-103">Beginning in .NET 4.5, iPad is an identifier in the default ASP.NET browser capabilities file, so it should not be used in a custom capabilities file</span></span>|
+|<span data-ttu-id="1fa5d-104">제안 해결 방법</span><span class="sxs-lookup"><span data-stu-id="1fa5d-104">Suggestion</span></span>|<span data-ttu-id="1fa5d-105">iPad 관련 기능이 필요한 경우, 사용자 에이전트 일치로 새로운 &quot;IPad&quot; ID를 생성하는 대신 사전 정의된 게이트웨이 refID &quot;IPad&quot;에서 기능을 설정하여 iPad 동작을 수정해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="1fa5d-105">If iPad-specific capabilities are required, it is necessary to modify iPad behavior by setting capabilities on the pre-defined gateway refID &quot;IPad&quot; instead of by generating a new &quot;IPad&quot; ID by user agent matching.</span></span>|
+|<span data-ttu-id="1fa5d-106">범위</span><span class="sxs-lookup"><span data-stu-id="1fa5d-106">Scope</span></span>|<span data-ttu-id="1fa5d-107">Microsoft Edge</span><span class="sxs-lookup"><span data-stu-id="1fa5d-107">Edge</span></span>|
+|<span data-ttu-id="1fa5d-108">버전</span><span class="sxs-lookup"><span data-stu-id="1fa5d-108">Version</span></span>|<span data-ttu-id="1fa5d-109">4.5</span><span class="sxs-lookup"><span data-stu-id="1fa5d-109">4.5</span></span>|
+|<span data-ttu-id="1fa5d-110">형식</span><span class="sxs-lookup"><span data-stu-id="1fa5d-110">Type</span></span>|<span data-ttu-id="1fa5d-111">런타임</span><span class="sxs-lookup"><span data-stu-id="1fa5d-111">Runtime</span></span>|
+

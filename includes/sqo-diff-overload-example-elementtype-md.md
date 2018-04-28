@@ -1,2 +1,2 @@
 > [!NOTE]
->  이 코드 예제에서는 이 항목에서 설명하는 특정 오버로드와는 다른 이 오버로드된 메서드의 오버로드를 사용합니다. 이 항목의 예제를 확장하려면 소스 시퀀스의 요소를 적절한 숫자 형식의 요소로 대체하십시오.
+>  <span data-ttu-id="1f3b4-101">이 코드 예제에서는 이 항목에서 설명하는 특정 오버로드와는 다른 이 오버로드된 메서드의 오버로드를 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="1f3b4-101">This code example uses an overload of this overloaded method that is different from the specific overload that this topic describes.</span></span> <span data-ttu-id="1f3b4-102">이 항목의 예제를 확장하려면 소스 시퀀스의 요소를 적절한 숫자 형식의 요소로 대체하십시오.</span><span class="sxs-lookup"><span data-stu-id="1f3b4-102">To extend the example to this topic, substitute the elements of the source sequence with elements of the appropriate numerical type.</span></span>

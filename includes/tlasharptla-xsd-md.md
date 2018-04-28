@@ -1,1 +1,1 @@
-XSD(XML 스키마 정의)
+<span data-ttu-id="3068a-101">XSD(XML 스키마 정의)</span><span class="sxs-lookup"><span data-stu-id="3068a-101">XML Schema Definition (XSD)</span></span>

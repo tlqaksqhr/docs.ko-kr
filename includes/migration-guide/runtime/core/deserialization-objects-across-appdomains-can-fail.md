@@ -1,0 +1,10 @@
+### <a name="deserialization-of-objects-across-appdomains-can-fail"></a><span data-ttu-id="e3024-101">앱 도메인 간의 개체 역직렬화가 실패할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="e3024-101">Deserialization of objects across appdomains can fail</span></span>
+
+|   |   |
+|---|---|
+|<span data-ttu-id="e3024-102">설명</span><span class="sxs-lookup"><span data-stu-id="e3024-102">Details</span></span>|<span data-ttu-id="e3024-103">경우에 따라, 응용 프로그램 기반이 다른 둘 이상의 앱 도메인이 앱에서 사용되는 경우 앱 도메인 간에 논리 호출 컨텍스트의 개체를 deserialize하려고 하면 예외가 throw됩니다.</span><span class="sxs-lookup"><span data-stu-id="e3024-103">In some cases, when an app uses two or more app domains with different application bases, trying to deserialize objects in the logical call context across app domains throws an exception.</span></span>|
+|<span data-ttu-id="e3024-104">제안 해결 방법</span><span class="sxs-lookup"><span data-stu-id="e3024-104">Suggestion</span></span>|<span data-ttu-id="e3024-105">[완화: 앱 도메인 간 개체의 역직렬화](~/docs/framework/migration-guide/mitigation-deserialization-of-objects-across-app-domains.md) 참조</span><span class="sxs-lookup"><span data-stu-id="e3024-105">See [Mitigation: Deserialization of Objects Across App Domains](~/docs/framework/migration-guide/mitigation-deserialization-of-objects-across-app-domains.md)</span></span>|
+|<span data-ttu-id="e3024-106">범위</span><span class="sxs-lookup"><span data-stu-id="e3024-106">Scope</span></span>|<span data-ttu-id="e3024-107">Microsoft Edge</span><span class="sxs-lookup"><span data-stu-id="e3024-107">Edge</span></span>|
+|<span data-ttu-id="e3024-108">버전</span><span class="sxs-lookup"><span data-stu-id="e3024-108">Version</span></span>|<span data-ttu-id="e3024-109">4.5.1</span><span class="sxs-lookup"><span data-stu-id="e3024-109">4.5.1</span></span>|
+|<span data-ttu-id="e3024-110">형식</span><span class="sxs-lookup"><span data-stu-id="e3024-110">Type</span></span>|<span data-ttu-id="e3024-111">런타임</span><span class="sxs-lookup"><span data-stu-id="e3024-111">Runtime</span></span>|
+

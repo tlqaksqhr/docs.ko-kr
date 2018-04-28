@@ -1,1 +1,1 @@
-OEM
+<span data-ttu-id="a5b78-101">OEM</span><span class="sxs-lookup"><span data-stu-id="a5b78-101">OEM</span></span>

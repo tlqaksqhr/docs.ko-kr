@@ -1,1 +1,1 @@
-ICM(이미지 색 관리)
+<span data-ttu-id="ec904-101">ICM(이미지 색 관리)</span><span class="sxs-lookup"><span data-stu-id="ec904-101">Image Color Management (ICM)</span></span>
