@@ -1,27 +1,29 @@
 ---
-title: "방법: 클라이언트 자격 증명 값 지정"
-ms.custom: 
+title: '방법: 클라이언트 자격 증명 값 지정'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 82293d7f-471a-4549-8f19-0be890e7b074
-caps.latest.revision: "28"
+caps.latest.revision: 28
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: cd818a2342ff5b44e4e8ab1b237f7c657d3bf438
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 35244032a36af8d3d23fd9d88006ea032a99b44b
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="how-to-specify-client-credential-values"></a>방법: 클라이언트 자격 증명 값 지정
 서비스는 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)]를 사용하여 클라이언트가 서비스를 인증하는 방법을 지정할 수 있습니다. 예를 들면 서비스는 클라이언트가 인증서를 사용하여 인증하도록 규정할 수 있습니다.  
@@ -32,7 +34,7 @@ ms.lasthandoff: 12/22/2017
   
 2.  XML 구성 파일을 엽니다. Svcutil.exe 도구를 사용하는 경우 이 파일의 기본 이름은 Output.config입니다.  
   
-3.  찾을  **\<보안 >** 인 요소는 **모드** 특성 (**< 보안 모드 =** `MessageOrTransport`  **>**  여기서 `MessageOrTransport` 보안 모드 중 하나로 설정 됩니다.  
+3.  찾을  **\<보안 >** 인 요소는 **모드** 특성 (**< 보안 모드 =** `MessageOrTransport` **>** 여기서 `MessageOrTransport` 보안 모드 중 하나로 설정 됩니다.  
   
 4.  모드 값과 일치하는 자식 요소를 찾습니다. 예를 들어,는 모드가 설정 되어 있으면 **메시지**, 찾을  **\<메시지 >** 에 포함 된 요소는  **\<보안 >** 요소입니다.  
   
@@ -50,7 +52,7 @@ ms.lasthandoff: 12/22/2017
 ```  
   
 ## <a name="example-tcp-transport-mode-with-certificate-as-client-credential"></a>예제: 인증서를 클라이언트 자격 증명으로 사용하는 TCP Transport 모드  
- 이 예제에서는 보안 모드를 Transport 모드로 설정하고 클라이언트 자격 증명 값을 X.509 인증서로 설정합니다. 다음 절차에서는 코드와 구성에 클라이언트에 대한 클라이언트 자격 증명 값을 설정하는 방법을 보여 줍니다. 이 사용 했다고 가정는 [ServiceModel Metadata 유틸리티 도구 (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) 서비스에서 메타 데이터가 (코드 및 구성)를 반환 합니다. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][하는 방법: 클라이언트 만들기](../../../docs/framework/wcf/how-to-create-a-wcf-client.md)합니다.  
+ 이 예제에서는 보안 모드를 Transport 모드로 설정하고 클라이언트 자격 증명 값을 X.509 인증서로 설정합니다. 다음 절차에서는 코드와 구성에 클라이언트에 대한 클라이언트 자격 증명 값을 설정하는 방법을 보여 줍니다. 이 사용 했다고 가정는 [ServiceModel Metadata 유틸리티 도구 (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) 서비스에서 메타 데이터가 (코드 및 구성)를 반환 합니다. 자세한 내용은 참조 [하는 방법: 클라이언트 만들기](../../../docs/framework/wcf/how-to-create-a-wcf-client.md)합니다.  
   
 #### <a name="to-specify-the-client-credential-value-on-the-client-in-code"></a>코드에 클라이언트에 대한 클라이언트 자격 증명 값을 지정하려면  
   
@@ -73,7 +75,7 @@ ms.lasthandoff: 12/22/2017
   
 3.  추가 [ \<clientCertificate >](../../../docs/framework/configure-apps/file-schema/wcf/clientcertificate-of-servicecredentials.md) 요소는 [ \<clientCredentials >](../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md) 요소입니다.  
   
-4.  다음 코드에서처럼 `storeLocation`, `storeName`, `x509FindType` 및 `findValue` 특성을 적절한 값으로 설정합니다. [!INCLUDE[crabout](../../../includes/crabout-md.md)]인증서 참조 [인증서 작업](../../../docs/framework/wcf/feature-details/working-with-certificates.md)합니다.  
+4.  다음 코드에서처럼 `storeLocation`, `storeName`, `x509FindType` 및 `findValue` 특성을 적절한 값으로 설정합니다. [!INCLUDE[crabout](../../../includes/crabout-md.md)] 인증서 참조 [인증서 작업](../../../docs/framework/wcf/feature-details/working-with-certificates.md)합니다.  
   
     ```xml  
     <behaviors>  
@@ -113,10 +115,10 @@ ms.lasthandoff: 12/22/2017
  [ServiceModel Metadata 유틸리티 도구(Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)  
  [인증서 작업](../../../docs/framework/wcf/feature-details/working-with-certificates.md)  
  [방법: 클라이언트 만들기](../../../docs/framework/wcf/how-to-create-a-wcf-client.md)  
- [\<netTcpBinding >](../../../docs/framework/configure-apps/file-schema/wcf/nettcpbinding.md)  
- [\<보안 >](../../../docs/framework/configure-apps/file-schema/wcf/security-of-nettcpbinding.md)  
- [\<메시지 >](../../../docs/framework/configure-apps/file-schema/wcf/message-element-of-nettcpbinding.md)  
+ [\<netTcpBinding>](../../../docs/framework/configure-apps/file-schema/wcf/nettcpbinding.md)  
+ [\<security>](../../../docs/framework/configure-apps/file-schema/wcf/security-of-nettcpbinding.md)  
+ [\<message>](../../../docs/framework/configure-apps/file-schema/wcf/message-element-of-nettcpbinding.md)  
  [\<동작 >](../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)  
  [\<동작 >](../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md)  
  [\<clientCertificate >](../../../docs/framework/configure-apps/file-schema/wcf/clientcertificate-of-servicecredentials.md)  
- [\<clientCredentials >](../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md)
+ [\<clientCredentials>](../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md)

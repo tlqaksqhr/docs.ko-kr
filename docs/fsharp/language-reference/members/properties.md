@@ -1,20 +1,17 @@
 ---
-title: "속성(F#)"
-description: "F # 속성을 개체에 연결 된 값을 나타내는 멤버에 알아봅니다."
-keywords: "visual f#, f#, 함수형 프로그래밍"
+title: 속성(F#)
+description: 'F # 속성을 개체에 연결 된 값을 나타내는 멤버에 알아봅니다.'
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: 98b363a5-ee6a-4b7b-b8ae-b244f2a0b316
-ms.openlocfilehash: 53b93b20310c557ad9c30226bc08f85cbf2f3010
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 6cad5d0e32958374e080f9b8046f7eb73b6bf615
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="properties"></a>속성
 
@@ -74,7 +71,7 @@ with set parameter =
 
 [!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet3203.fs)]
 
-개인 값 속성에 대 한 데이터 라고 하는 해당 보류 *백업 저장소*합니다. 백업 저장소를 자동으로 만드는 컴파일러를 사용 하 여 키워드 `member val`를 자체 식별자를 생략 한 다음 속성을 초기화 하는 식을 제공 합니다. 속성이 mutable로 이면 포함 `with get, set`합니다. 예를 들어 다음 클래스 형식에는 두 개의 자동으로 구현 된 속성이 포함 됩니다. `Property1`읽기 전용 이므로 기본 생성자에 제공 되는 인수를 초기화 및 `Property2` 는 설정 가능한 속성을 빈 문자열로 초기화 합니다.
+개인 값 속성에 대 한 데이터 라고 하는 해당 보류 *백업 저장소*합니다. 백업 저장소를 자동으로 만드는 컴파일러를 사용 하 여 키워드 `member val`를 자체 식별자를 생략 한 다음 속성을 초기화 하는 식을 제공 합니다. 속성이 mutable로 이면 포함 `with get, set`합니다. 예를 들어 다음 클래스 형식에는 두 개의 자동으로 구현 된 속성이 포함 됩니다. `Property1` 읽기 전용 이므로 기본 생성자에 제공 되는 인수를 초기화 및 `Property2` 는 설정 가능한 속성을 빈 문자열로 초기화 합니다.
 
 ```fsharp
 type MyClass(property1 : int) =

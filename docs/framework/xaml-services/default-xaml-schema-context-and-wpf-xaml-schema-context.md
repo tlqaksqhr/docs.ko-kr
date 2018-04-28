@@ -16,11 +16,11 @@ ms.author: wpickett
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: ec5e29ae9022470f8b583dc1b673a0b93040c862
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: ae7bd21f7dcb60f8cec3e9e4592969c63234cf13
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="default-xaml-schema-context-and-wpf-xaml-schema-context"></a>기본 XAML 스키마 컨텍스트 및 WPF XAML 스키마 컨텍스트
 XAML 스키마 컨텍스트는 특정 XAML 어휘를 사용 하는 XAML 프로덕션 형식 매핑을 확인 하는 방법을, 어셈블리를 로드 하는 방법, 특정 어떻게 판독기 및 작성기를 포함 하 여 동작을 작성 하는 개체 상호 작용 하는 방법을 정규화 하는 개념적 엔터티 설정은 해석 됩니다. 이 항목에서는 CLR 형식 시스템을 기반으로 하는 연결 된 기본 XAML 스키마 컨텍스트 및.NET Framework XAML 서비스의 기능을 설명 합니다. 이 항목에서는 WPF에 사용 되는 XAML 스키마 컨텍스트를 설명 합니다.  
@@ -70,7 +70,7 @@ XAML 스키마 컨텍스트는 특정 XAML 어휘를 사용 하는 XAML 프로�
     -   이름, 매개 변수 매핑에서 정규화 된 경우 호출 <xref:System.Reflection.Assembly.LoadWithPartialName%2A?displayProperty=nameWithType>합니다.  
   
 #### <a name="xamlbuildtask"></a>XamlBuildTask  
- `XamlBuildTask` 에 사용 되 [!INCLUDE[vsindigo](../../../includes/vsindigo-md.md)] , Windows Workflow Foundation 합니다.  
+ `XamlBuildTask` Windows Communication Foundation (WCF), Windows Workflow Foundation에 사용 됩니다.  
   
  어셈블리 참조를 통해 `XamlBuildTask` 는 항상 정규화 합니다.  
   

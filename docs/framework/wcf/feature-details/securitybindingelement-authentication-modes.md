@@ -1,27 +1,29 @@
 ---
-title: "SecurityBindingElement 인증 모드"
-ms.custom: 
+title: SecurityBindingElement 인증 모드
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 12300bf4-c730-4405-9f65-d286f68b5a43
-caps.latest.revision: "13"
+caps.latest.revision: 13
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: 05b44d9972a393b36a97fd5afcb6581229332df9
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 8ca854d6b0431b5fe4972972d9d39de934f64b4d
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="securitybindingelement-authentication-modes"></a>SecurityBindingElement 인증 모드
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]에는 클라이언트와 서버가 서로를 인증하는 데 사용되는 모드가 몇 가지 있습니다. <xref:System.ServiceModel.Channels.SecurityBindingElement> 클래스에 정적 메서드를 사용하거나 구성을 통해 이러한 인증 모드의 보안 바인딩 요소를 만들 수 있습니다. 이 항목에서는 18가지의 인증 모드에 대해 간단히 설명합니다.  
@@ -60,7 +62,7 @@ ms.lasthandoff: 12/22/2017
      [!code-csharp[c_CustomBindingsAuthMode#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_custombindingsauthmode/cs/source.cs#3)]
      [!code-vb[c_CustomBindingsAuthMode#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_custombindingsauthmode/vb/source.vb#3)]  
   
-3.  바인딩 요소를 사용하여 사용자 지정 바인딩을 만듭니다. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][사용자 지정 바인딩을](../../../../docs/framework/wcf/extending/custom-bindings.md)합니다.  
+3.  바인딩 요소를 사용하여 사용자 지정 바인딩을 만듭니다. 자세한 내용은 참조 [사용자 지정 바인딩](../../../../docs/framework/wcf/extending/custom-bindings.md)합니다.  
   
 ## <a name="mode-descriptions"></a>모드 설명  
   
@@ -89,7 +91,7 @@ ms.lasthandoff: 12/22/2017
  이 인증 모드에서는 클라이언트가 Kerberos 티켓을 사용하여 서비스를 인증합니다. 동일한 티켓에서 서버 인증을 제공합니다. 보안 바인딩 요소는 `SymmetricSecurityBindingElement` 메서드에서 반환된 <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateKerberosBindingElement%2A>입니다. 또는 `authenticationMode` 특성을 `Kerberos`로 설정합니다.  
   
 > [!NOTE]
->  이 인증 모드를 사용하려면 서비스 계정이 SPN(서비스 사용자 이름)과 연결되어야 합니다. 이 작업을 수행하려면 NETWORK SERVICE 계정이나 LOCAL SYSTEM 계정에서 서비스를 실행합니다. 또는 SetSpn.exe 도구를 사용하여 서비스 계정의 SPN을 만듭니다. 두 경우 모두 클라이언트에 올바른 SPN을 사용 해야는 [ \<servicePrincipalName >](../../../../docs/framework/configure-apps/file-schema/wcf/serviceprincipalname.md) 요소, 또는 사용 하 여는 <xref:System.ServiceModel.EndpointAddress> 생성자입니다. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Id 및 인증 서비스](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)합니다.  
+>  이 인증 모드를 사용하려면 서비스 계정이 SPN(서비스 사용자 이름)과 연결되어야 합니다. 이 작업을 수행하려면 NETWORK SERVICE 계정이나 LOCAL SYSTEM 계정에서 서비스를 실행합니다. 또는 SetSpn.exe 도구를 사용하여 서비스 계정의 SPN을 만듭니다. 두 경우 모두 클라이언트에 올바른 SPN을 사용 해야는 [ \<servicePrincipalName >](../../../../docs/framework/configure-apps/file-schema/wcf/serviceprincipalname.md) 요소, 또는 사용 하 여는 <xref:System.ServiceModel.EndpointAddress> 생성자입니다. 자세한 내용은 참조 [서비스 Id 및 인증](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)합니다.  
   
 > [!NOTE]
 >  `Kerberos` 인증 모드를 사용하면 <xref:System.Security.Principal.TokenImpersonationLevel.Anonymous> 및 <xref:System.Security.Principal.TokenImpersonationLevel.Delegation> 가장 수준이 지원되지 않습니다.  
@@ -98,7 +100,7 @@ ms.lasthandoff: 12/22/2017
  이 인증 모드에서는 클라이언트가 Kerberos 티켓을 사용하여 서비스를 인증합니다. Kerberos 토큰은 메시지 서명에 서명한 토큰인 보증 지원 토큰으로 SOAP 계층에 표시됩니다. 서비스는 전송 계층에서 X.509 인증서를 사용하여 인증됩니다. 보안 바인딩 요소는 `TransportSecurityBindingElement` 메서드에서 반환된 <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateKerberosOverTransportBindingElement%2A>입니다. 또는 `authenticationMode` 특성을 `KerberosOverTransport`로 설정합니다.  
   
 > [!NOTE]
->  이 인증 모드를 사용하려면 서비스 계정이 SPN과 연결되어야 합니다. 이 작업을 수행하려면 NETWORK SERVICE 계정이나 LOCAL SYSTEM 계정에서 서비스를 실행합니다. 또는 SetSpn.exe 도구를 사용하여 서비스 계정의 SPN을 만듭니다. 두 경우 모두 클라이언트에 올바른 SPN을 사용 해야는 [ \<servicePrincipalName >](../../../../docs/framework/configure-apps/file-schema/wcf/serviceprincipalname.md) 요소, 또는 사용 하 여는 <xref:System.ServiceModel.EndpointAddress> 생성자입니다. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Id 및 인증 서비스](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)합니다.  
+>  이 인증 모드를 사용하려면 서비스 계정이 SPN과 연결되어야 합니다. 이 작업을 수행하려면 NETWORK SERVICE 계정이나 LOCAL SYSTEM 계정에서 서비스를 실행합니다. 또는 SetSpn.exe 도구를 사용하여 서비스 계정의 SPN을 만듭니다. 두 경우 모두 클라이언트에 올바른 SPN을 사용 해야는 [ \<servicePrincipalName >](../../../../docs/framework/configure-apps/file-schema/wcf/serviceprincipalname.md) 요소, 또는 사용 하 여는 <xref:System.ServiceModel.EndpointAddress> 생성자입니다. 자세한 내용은 참조 [서비스 Id 및 인증](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)합니다.  
   
 ### <a name="mutualcertificate"></a>MutualCertificate  
  이 인증 모드에서 클라이언트는 메시지 서명에 서명한 토큰인 보증 지원 토큰으로 SOAP 계층에 표시되는 X.509 인증서를 사용하여 인증합니다. 서비스도 X.509 인증서를 사용하여 인증됩니다. 보안 바인딩 요소는 `SymmetricSecurityBindingElement` 메서드에서 반환된 <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateMutualCertificateBindingElement%2A>입니다. 또는 `authenticationMode` 특성을 `MutualCertificate`로 설정합니다.  

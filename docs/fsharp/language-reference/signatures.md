@@ -1,20 +1,17 @@
 ---
-title: "서명(F#)"
-description: "F # 시그니처 파일을 사용 하 여 형식, 네임 스페이스 및 모듈 등 F # 프로그램 요소를 집합의 공개 서명에 대 한 정보를 보관 하는 방법에 알아봅니다."
-keywords: "visual f#, f#, 함수형 프로그래밍"
+title: 서명(F#)
+description: 'F # 시그니처 파일을 사용 하 여 형식, 네임 스페이스 및 모듈 등 F # 프로그램 요소를 집합의 공개 서명에 대 한 정보를 보관 하는 방법에 알아봅니다.'
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: 76c84a62-b2f6-44ec-8238-e687e2f7d18e
-ms.openlocfilehash: d0f71c6472852268303a2d3af2e4b0a3c256704e
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: c98ac6c62fdcee51532a162596e99309a31802ec
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="signatures"></a>서명
 

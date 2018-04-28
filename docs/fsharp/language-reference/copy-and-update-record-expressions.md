@@ -1,20 +1,17 @@
 ---
-title: "복사 및 업데이트가 레코드 식 (F #)"
-description: "작성 한 '복사 및 업데이트 레코드 식' 복사는 기존 레코드를 업데이트 하는 필드를 지정 및 업데이트 된 레코드를 반환 하는 방법에 알아봅니다."
-keywords: "visual f#, f#, 함수형 프로그래밍"
+title: '복사 및 업데이트가 레코드 식 (F #)'
+description: 작성 한 '복사 및 업데이트 레코드 식' 복사는 기존 레코드를 업데이트 하는 필드를 지정 및 업데이트 된 레코드를 반환 하는 방법에 알아봅니다.
 author: ChrSteinert
 ms.author: phcart
 ms.date: 06/04/2016
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: b5fc4ef0-64eb-4272-96a7-bb4dffbb634a
-ms.openlocfilehash: 2eb51842b678780a1d6da96e237ebb92d1ea5cec
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 98a515b5f053e9339588157185848e8315a580f4
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="copy-and-update-record-expressions"></a>레코드 식 복사 및 업데이트
 

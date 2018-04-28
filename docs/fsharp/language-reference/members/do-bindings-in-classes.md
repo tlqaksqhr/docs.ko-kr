@@ -1,20 +1,17 @@
 ---
-title: "클래스의 do 바인딩(F#)"
+title: 클래스의 do 바인딩(F#)
 description: "F # 'do' 개체가 생성 될 때 유형을 처음 사용할 때 작업을 수행 하는 클래스 정의에서 바인딩을 사용 하는 방법에 알아봅니다."
-keywords: "visual f#, f#, 함수형 프로그래밍"
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: 78987cb8-bdba-46e2-b5b2-994c83fe42c4
-ms.openlocfilehash: f9582338306d87c3dd799425083037cc95b31b1e
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 27c2372328c8b23b91239517271c0d71a672a34d
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="do-bindings-in-classes"></a>클래스의 do 바인딩
 
@@ -60,4 +57,4 @@ Initializing object 1 2 2 4 8 16
 
 [클래스의 `let` 바인딩](let-bindings-in-classes.md)
 
-[`do`바인딩](../functions/do-Bindings.md)
+[`do` 바인딩](../functions/do-Bindings.md)

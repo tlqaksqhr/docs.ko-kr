@@ -1,20 +1,17 @@
 ---
 title: '자습서: 형식 공급자 (F #) 만들기'
 description: '기본 개념을 설명 하기 위해 몇 가지 간단한 형식 공급자를 검사 하 여 F # 3.0에 사용자 고유의 F # 형식 공급자를 만드는 방법을 설명 합니다.'
-keywords: visual f#, f#, 함수형 프로그래밍
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: 82bec076-19d4-470c-979f-6c3a14b7c70a
-ms.openlocfilehash: b2e83218184bd1aef8258378485b99697cc8cf8d
-ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
+ms.openlocfilehash: cea71a2b71f660971c1b2dde702c9b489be48cee
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="tutorial-create-a-type-provider"></a>자습서: 형식 공급자 만들기
 

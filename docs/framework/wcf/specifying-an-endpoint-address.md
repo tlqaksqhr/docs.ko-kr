@@ -1,13 +1,13 @@
 ---
-title: "끝점 주소 지정"
-ms.custom: 
+title: 끝점 주소 지정
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,17 +15,17 @@ dev_langs:
 helpviewer_keywords:
 - endpoints [WCF], addressing
 ms.assetid: ac24f5ad-9558-4298-b168-c473c68e819b
-caps.latest.revision: 
+caps.latest.revision: 41
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 403ff897de4dc9ee95a854d9658bdee344755d59
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 09a3bf2d552b49e36375210e3036e344a9702405
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="specifying-an-endpoint-address"></a>끝점 주소 지정
 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 서비스와의 모든 통신은 해당 통신의 끝점을 통해 수행됩니다. 각 <xref:System.ServiceModel.Description.ServiceEndpoint>에는 <xref:System.ServiceModel.Description.ServiceEndpoint.Address%2A>, <xref:System.ServiceModel.Description.ServiceEndpoint.Binding%2A> 및 <xref:System.ServiceModel.Description.ServiceEndpoint.Contract%2A>가 포함되어 있습니다. 계약은 사용할 수 있는 작업을 지정합니다. 바인딩은 서비스와 통신하는 방법을 지정하고 주소는 서비스를 찾을 위치를 지정합니다. 모든 끝점에는 고유한 주소가 있어야 합니다. 끝점 주소는 서비스 주소를 표시하는 URI(Uniform Resource Identifier)가 포함된 <xref:System.ServiceModel.EndpointAddress> 클래스, 서비스의 보안 ID를 표시하는 <xref:System.ServiceModel.EndpointAddress.Identity%2A> 및 선택적 <xref:System.ServiceModel.EndpointAddress.Headers%2A>의 컬렉션에 의해 표시됩니다. 선택적 헤더는 끝점을 확인하거나 상호 작용하는 데 필요한 자세한 주소 지정 정보를 제공합니다. 예를 들어 헤더는 들어오는 메시지를 처리하는 방법, 끝점이 회신 메시지를 보내야 하는 위치 또는 여러 인스턴스를 사용할 수 있는 경우 특정 사용자의 들어오는 메시지를 처리하는 데 사용할 서비스 인스턴스를 나타낼 수 있습니다.  
@@ -33,7 +33,7 @@ ms.lasthandoff: 01/19/2018
 ## <a name="definition-of-an-endpoint-address"></a>끝점 주소 정의  
  [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]에서 <xref:System.ServiceModel.EndpointAddress>는 WS-Addressing 표준에 정의된 대로 끝점 참조(EPR)를 모델링합니다.  
   
- 대부분 전송 주소 URI에는 네 가지 부분이 있습니다. 예를 들어 URI, "http://www.fabrikam.com:322/mathservice.svc/secureEndpoint"에는 다음과 같이 네 개 부분이 포함됩니다.  
+ 대부분 전송 주소 URI에는 네 가지 부분이 있습니다. 예를 들어이 URI "http://www.fabrikam.com:322/mathservice.svc/secureEndpoint" 다음 네 부분으로 구성 합니다.  
   
 -   스키마: http:  
   
@@ -49,7 +49,7 @@ ms.lasthandoff: 01/19/2018
   
  [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]에서 서비스의 대한 끝점 주소를 지정하기 위한 두 가지 방법이 있습니다. 서비스와 연결된 각 끝점에 대한 절대 주소를 지정하거나 서비스의 <xref:System.ServiceModel.ServiceHost>에 대한 기본 주소를 제공할 수 있으며 그런 다음 이 기본 주소를 기준으로 정의된 이 서비스와 연결된 각 끝점에 대한 주소를 지정할 수 있습니다. 이러한 각 절차를 사용하여 구성 또는 코드에서 서비스에 대한 끝점 주소를 지정할 수 있습니다. 상대 주소를 지정하지 않을 경우 서비스는 기본 주소를 사용합니다. 또한 하나의 서비스에 대해 여러 기본 주소를 사용할 수 있지만 각 서비스는 각 전송에 대해 하나의 기본 주소만 허용됩니다. 여러 끝점을 가진 경우 각 끝점은 서로 다른 바인딩으로 구성되며 해당 주소가 고유해야 합니다. 동일한 바인딩을 사용하지만 서로 다른 계약을 사용하는 끝점은 동일한 주소를 사용할 수 있습니다.  
   
- IIS를 사용하여 호스팅하는 경우 사용자는 <xref:System.ServiceModel.ServiceHost> 인스턴스를 직접 관리하지 않습니다. IIS에서 호스팅하는 경우 기본 주소는 항상 서비스의 .svc 파일에 지정된 주소입니다. 따라서 IIS에서 호스팅되는 서비스 끝점에는 상대 끝점 주소를 사용해야 합니다. 정규화된 끝점 주소를 제공할 경우 서비스 배포 시 오류가 발생할 수 있습니다. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][인터넷 정보 서비스에서 호스팅되는 WCF 서비스 배포](../../../docs/framework/wcf/feature-details/deploying-an-internet-information-services-hosted-wcf-service.md)합니다.  
+ IIS를 사용하여 호스팅하는 경우 사용자는 <xref:System.ServiceModel.ServiceHost> 인스턴스를 직접 관리하지 않습니다. IIS에서 호스팅하는 경우 기본 주소는 항상 서비스의 .svc 파일에 지정된 주소입니다. 따라서 IIS에서 호스팅되는 서비스 끝점에는 상대 끝점 주소를 사용해야 합니다. 정규화된 끝점 주소를 제공할 경우 서비스 배포 시 오류가 발생할 수 있습니다. 자세한 내용은 참조 [인터넷 WCF 서비스 배포](../../../docs/framework/wcf/feature-details/deploying-an-internet-information-services-hosted-wcf-service.md)합니다.  
   
 ## <a name="defining-endpoint-addresses-in-configuration"></a>구성에서 끝점 주소 정의  
  사용 하 여 구성 파일에서 끝점을 정의 하는 [ \<끝점 >](http://msdn.microsoft.com/library/13aa23b7-2f08-4add-8dbf-a99f8127c017) 요소입니다.  
@@ -58,7 +58,7 @@ ms.lasthandoff: 01/19/2018
   
  경우는 <xref:System.ServiceModel.Channels.CommunicationObject.Open%2A> 메서드는 (즉, 호스팅 응용 프로그램 서비스를 시작 하려고 시도), 시스템은 찾습니다는 [ \<서비스 >](../../../docs/framework/configure-apps/file-schema/wcf/service.md) "UE 지정 하는 이름 특성을 가진 요소. Samples.HelloService "입니다. 경우는 [ \<서비스 >](../../../docs/framework/configure-apps/file-schema/wcf/service.md) 요소를 찾을, 시스템 지정된 된 클래스를 로드 하 고 구성 파일에 제공 된 끝점 정의 사용 하 여 끝점을 만듭니다. 이 메커니즘을 통해 두 개의 코드 줄에서 서비스를 로드하고 시작하는 동시에 해당 코드의 바인딩 및 주소 지정 정보를 유지할 수 있습니다. 이 접근 방식의 이점은 응용 프로그램을 다시 컴파일하거나 다시 배포할 필요 없이 이러한 변경 작업을 수행할 수 있다는 점입니다.  
   
- 선택적 헤더에서 선언 되는 [ \<헤더 >](../../../docs/framework/configure-apps/file-schema/wcf/headers-element.md)합니다. 다음은 두 가지 헤더(예: http://tempuri1.org/의 "Gold" 클라이언트 및 http://tempuri2.org/의 "Standard" 클라이언트) 간에 구분되는 구성 파일의 서비스에 대한 끝점을 지정하는 데 사용되는 요소의 예제입니다. 이 서비스를 호출 하는 클라이언트에 적절 한 해야 [ \<헤더 >](../../../docs/framework/configure-apps/file-schema/wcf/headers-element.md) 의 구성 파일에 있습니다.  
+ 선택적 헤더에서 선언 되는 [ \<헤더 >](../../../docs/framework/configure-apps/file-schema/wcf/headers-element.md)합니다. 다음은 두 개의 헤더를 구분 하는 구성 파일에는 서비스에 대 한 끝점을 지정 하는 데 사용 되는 요소의 예: "Gold" 클라이언트 http://tempuri1.org/ 및 "Standard" 클라이언트 http://tempuri2.org/합니다. 이 서비스를 호출 하는 클라이언트에 적절 한 해야 [ \<헤더 >](../../../docs/framework/configure-apps/file-schema/wcf/headers-element.md) 의 구성 파일에 있습니다.  
   
  [!code-xml[S_UEHelloWorld#1](../../../samples/snippets/common/VS_Snippets_CFX/s_uehelloworld/common/serviceapp.config#1)]  
   

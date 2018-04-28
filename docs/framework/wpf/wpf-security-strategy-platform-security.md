@@ -31,11 +31,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: c3c1654bd63d59bf6588b1dc18593ef7a33f37c0
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.openlocfilehash: 61197255c11745c2c3f6f60db084b96dc812cb00
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="wpf-security-strategy---platform-security"></a>WPF 보안 전략 - 플랫폼 보안
 [!INCLUDE[TLA#tla_wpf](../../../includes/tlasharptla-wpf-md.md)]에서는 다양한 보안 서비스를 제공하지만 운영 체제, [!INCLUDE[TLA2#tla_clr](../../../includes/tla2sharptla-clr-md.md)] 및 [!INCLUDE[TLA2#tla_ie](../../../includes/tla2sharptla-ie-md.md)]를 포함하는 내부 플랫폼의 보안 기능도 활용합니다. 이러한 계층이 결합되어 다음 그림과 같이 단일 실패 지점을 방지하는 강력한 심층 방어 보안 모델인 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]를 제공합니다.  
@@ -123,11 +123,11 @@ ms.lasthandoff: 04/27/2018
   
  검증 규칙을 준수하지 않는 관리 코드는 신뢰할 수 있는 코드로 간주되지 않을 경우 실행할 수 없습니다.  
   
- 검증할 수 있는 코드의 이점이 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]가 [!INCLUDE[TLA2#tla_winfx](../../../includes/tla2sharptla-winfx-md.md)]에 빌드되는 주요 이유 중 하나입니다. 검증할 수 있는 코드를 사용하면 가능한 취약성이 악용될 가능성이 훨씬 줄어듭니다.  
+ 안정형 코드의 장점은 주요 이유 이유 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] .NET Framework 기반으로 합니다. 검증할 수 있는 코드를 사용하면 가능한 취약성이 악용될 가능성이 훨씬 줄어듭니다.  
   
 <a name="Code_Access_Security"></a>   
 ### <a name="code-access-security"></a>코드 액세스 보안  
- 클라이언트 컴퓨터는 파일 시스템, 레지스트리, 인쇄 서비스, 사용자 인터페이스, 리플렉션 및 환경 변수를 포함하여 관리되는 응용 프로그램이 액세스할 수 있는 다양한 리소스를 노출합니다. 관리 되는 응용 프로그램의 클라이언트 컴퓨터에서 리소스를 액세스할 수 있습니다, 전에 있어야 [!INCLUDE[TLA2#tla_winfx](../../../includes/tla2sharptla-winfx-md.md)] [!INCLUDE[TLA#tla_cas](../../../includes/tlasharptla-cas-md.md)] 권한이 있습니다. [!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)]의 권한은 <xref:System.Security.CodeAccessPermission>의 서브클래스입니다. [!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)]는 관리되는 응용 프로그램이 액세스할 수 있는 각 리소스에 대해 하나의 서브클래스를 구현합니다.  
+ 클라이언트 컴퓨터는 파일 시스템, 레지스트리, 인쇄 서비스, 사용자 인터페이스, 리플렉션 및 환경 변수를 포함하여 관리되는 응용 프로그램이 액세스할 수 있는 다양한 리소스를 노출합니다. 관리 되는 응용 프로그램의 클라이언트 컴퓨터에서 리소스에 액세스할 수 있습니다, 이렇게 하려면.NET Framework 권한이 있어야 합니다. [!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)]의 권한은 <xref:System.Security.CodeAccessPermission>의 서브클래스입니다. [!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)]는 관리되는 응용 프로그램이 액세스할 수 있는 각 리소스에 대해 하나의 서브클래스를 구현합니다.  
   
  실행을 시작할 때 [!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)]에서 관리되는 응용 프로그램에 부여하는 권한 집합을 권한 집합이라고 하며 응용 프로그램에서 제공하는 증거로 결정됩니다. [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 응용 프로그램의 경우 제공되는 증거는 응용 프로그램이 시작되는 위치 또는 영역입니다. [!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)]는 다음과 같은 영역을 식별합니다.  
   
@@ -187,17 +187,17 @@ ms.lasthandoff: 04/27/2018
   
 <a name="ClickOnce_Deployment"></a>   
 ### <a name="clickonce-deployment"></a>ClickOnce 배포  
- [!INCLUDE[TLA#tla_clickonce](../../../includes/tlasharptla-clickonce-md.md)] 에 포함 된 포괄적인 배포 기술 [!INCLUDE[TLA2#tla_winfx](../../../includes/tla2sharptla-winfx-md.md)]과 통합할 [!INCLUDE[TLA#tla_visualstu](../../../includes/tlasharptla-visualstu-md.md)] (참조 [ClickOnce 배포 개요](http://msdn.microsoft.com/library/142dbbz4.aspx) 자세한 정보에 대 한). 브라우저에서 호스트된 응용 프로그램은 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]로 배포해야 하지만 독립 실행형 [!INCLUDE[TLA#tla_clickonce](../../../includes/tlasharptla-clickonce-md.md)] 응용 프로그램은 [!INCLUDE[TLA2#tla_clickonce](../../../includes/tla2sharptla-clickonce-md.md)]로 배포할 수 있습니다.  
+ [!INCLUDE[TLA#tla_clickonce](../../../includes/tlasharptla-clickonce-md.md)] .NET Framework에 포함 되 고와 통합 하는 포괄적인 배포 기술 [!INCLUDE[TLA#tla_visualstu](../../../includes/tlasharptla-visualstu-md.md)] (참조 [ClickOnce 배포 개요](http://msdn.microsoft.com/library/142dbbz4.aspx) 자세한 정보에 대 한). 브라우저에서 호스트된 응용 프로그램은 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]로 배포해야 하지만 독립 실행형 [!INCLUDE[TLA#tla_clickonce](../../../includes/tlasharptla-clickonce-md.md)] 응용 프로그램은 [!INCLUDE[TLA2#tla_clickonce](../../../includes/tla2sharptla-clickonce-md.md)]로 배포할 수 있습니다.  
   
  [!INCLUDE[TLA2#tla_clickonce](../../../includes/tla2sharptla-clickonce-md.md)]로 배포된 응용 프로그램에는 [!INCLUDE[TLA#tla_cas](../../../includes/tlasharptla-cas-md.md)]보다 높은 추가 보안 계층이 제공됩니다. 기본적으로 [!INCLUDE[TLA#tla_clickonce](../../../includes/tlasharptla-clickonce-md.md)]로 배포된 응용 프로그램이 필요한 권한을 요청합니다. 응용 프로그램이 배포된 소스 영역에 대한 권한 집합을 초과하지 않는 경우에만 해당 권한이 부여됩니다. 시작 영역의 권한 집합에서 제공하는 것보다 작아도 권한 집합을 필요한 권한으로만 줄이면 응용 프로그램이 액세스할 수 있는 리소스 수가 최소한으로 줄어듭니다. 따라서 응용 프로그램을 가로채는 경우 클라이언트 컴퓨터의 손상 가능성이 줄어듭니다.  
   
 <a name="Security_Critical_Methodology"></a>   
 ### <a name="security-critical-methodology"></a>보안에 중요한 방법론  
- 권한을 통해 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 응용 프로그램에 대한 인터넷 영역 샌드박스를 사용할 수 있게 하는 [!INCLUDE[TLA2#tla_winfxwebapp](../../../includes/tla2sharptla-winfxwebapp-md.md)] 코드를 가능한 최고 수준의 보안 감사 및 제어로 유지해야 합니다. 이 요구 사항을 충족하기 쉽도록 [!INCLUDE[TLA2#tla_winfx](../../../includes/tla2sharptla-winfx-md.md)]에서는 권한을 높이는 코드 관리에 대한 새로운 지원을 제공합니다. 특히,는 [!INCLUDE[TLA2#tla_clr](../../../includes/tla2sharptla-clr-md.md)] 권한을 상승 하는 코드를 식별 하 고 사용 하 여 표시할 수 있습니다는 <xref:System.Security.SecurityCriticalAttribute>;으로 표시 되지 않은 모든 코드 <xref:System.Security.SecurityCriticalAttribute> 됩니다 *투명* 이 방법을 사용 하 여 합니다. 반대로, <xref:System.Security.SecurityCriticalAttribute>로 표시되지 않은 관리 코드는 권한을 높일 수 있습니다.  
+ 권한을 통해 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 응용 프로그램에 대한 인터넷 영역 샌드박스를 사용할 수 있게 하는 [!INCLUDE[TLA2#tla_winfxwebapp](../../../includes/tla2sharptla-winfxwebapp-md.md)] 코드를 가능한 최고 수준의 보안 감사 및 제어로 유지해야 합니다. 이를 위해서,.NET Framework는 권한을 상승 하는 코드 관리에 대 한 새로운 지원을 제공 합니다. 특히,는 [!INCLUDE[TLA2#tla_clr](../../../includes/tla2sharptla-clr-md.md)] 권한을 상승 하는 코드를 식별 하 고 사용 하 여 표시할 수 있습니다는 <xref:System.Security.SecurityCriticalAttribute>;으로 표시 되지 않은 모든 코드 <xref:System.Security.SecurityCriticalAttribute> 됩니다 *투명* 이 방법을 사용 하 여 합니다. 반대로, <xref:System.Security.SecurityCriticalAttribute>로 표시되지 않은 관리 코드는 권한을 높일 수 있습니다.  
   
  보안 중요 방법을 사용 하면 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 으로 권한을 상승 하는 코드 *보안에 중요 한 커널*, 투명 하 게 되 고 나머지입니다. 보안에 중요 한 코드를 격리 시키면는 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 표준 보안 사례 물론 보안에 중요 한 커널 추가 보안 분석 및 소스 제어에 집중 엔지니어링 팀 (참조 [WPF 보안 전략 -보안 엔지니어링](../../../docs/framework/wpf/wpf-security-strategy-security-engineering.md)).  
   
- [!INCLUDE[TLA2#tla_winfx](../../../includes/tla2sharptla-winfx-md.md)]에서는 개발자가 [!INCLUDE[TLA2#tla_winfxwebapp](../../../includes/tla2sharptla-winfxwebapp-md.md)](APTCA)로 표시되고 사용자의 GAC(전역 어셈블리 캐시)에 배포된 관리되는 어셈블리를 작성할 수 있게 하여 신뢰할 수 있는 코드가 <xref:System.Security.AllowPartiallyTrustedCallersAttribute> 인터넷 영역 샌드박스를 확장할 수 있도록 허용합니다. 어셈블리에 APTCA로 표시하는 경우 인터넷의 악성 코드를 비롯한 모든 코드에서 해당 어셈블리를 호출할 수 있으므로 중요한 보안 작업입니다. 이 작업을 수행할 때는 주의해서 최선의 방법을 사용해야 하며, 사용자가 해당 소프트웨어를 신뢰해야 설치됩니다.  
+ .NET Framework를 확장 하는 신뢰할 수 있는 코드를 허용 하는지 확인는 [!INCLUDE[TLA2#tla_winfxwebapp](../../../includes/tla2sharptla-winfxwebapp-md.md)] 개발자로 표시 된 관리 되는 어셈블리를 작성할 수 있도록 하 여 인터넷 영역 샌드박스 <xref:System.Security.AllowPartiallyTrustedCallersAttribute> (APTCA)에 사용자의 GAC 전역 어셈블리 캐시 ()를 배포 합니다. 어셈블리에 APTCA로 표시하는 경우 인터넷의 악성 코드를 비롯한 모든 코드에서 해당 어셈블리를 호출할 수 있으므로 중요한 보안 작업입니다. 이 작업을 수행할 때는 주의해서 최선의 방법을 사용해야 하며, 사용자가 해당 소프트웨어를 신뢰해야 설치됩니다.  
   
 <a name="Microsoft_Internet_Explorer_Security"></a>   
 ## <a name="microsoft-internet-explorer-security"></a>Microsoft Internet Explorer 보안  

@@ -1,20 +1,17 @@
 ---
-title: "배열(F#)"
-description: "만들고 F # 프로그래밍 언어의 배열을 사용 하는 방법을 알아봅니다."
-keywords: "visual f#, f#, 함수형 프로그래밍"
+title: 배열(F#)
+description: '만들고 F # 프로그래밍 언어의 배열을 사용 하는 방법을 알아봅니다.'
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: 61fa9084-abdc-4cf5-8213-91ec1211866b
-ms.openlocfilehash: 7c9d8405230f4d765d3afdeaa154ddc598d0d1ec
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 650321e864556ff0ba8591e09ffa34877c8a39b7
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="arrays"></a>배열
 
@@ -68,7 +65,7 @@ API 참조 링크를 통해 MSDN으로 이동됩니다.  docs.microsoft.com API 
 라이브러리 모듈 [ `Microsoft.FSharp.Collections.Array` ](https://msdn.microsoft.com/library/0cda8040-9396-40dd-8dcd-cf48542165a1) 1 차원 배열에 대 한 작업을 지원 합니다. 모듈 `Array2D`, `Array3D`, 및 `Array4D` 지 2, 3 및 4 차원 배열에 대 한 작업을 각각 원하는 함수를 포함 합니다. 배열 차수를 사용 하 여 4 보다 큰 만들 수 있습니다 <xref:System.Array?displayProperty=nameWithType>합니다.
 
 ### <a name="simple-functions"></a>간단한 함수
-[`Array.get`](https://msdn.microsoft.com/library/dd93e85d-7e80-4d76-8de0-b6d45bcf07bc)요소를 가져옵니다. [`Array.length`](https://msdn.microsoft.com/library/0d775b6a-4a8f-4bd1-83e5-843b3251725f)배열 길이 제공합니다. [`Array.set`](https://msdn.microsoft.com/library/847edc0d-4dc5-4a39-98c7-d4320c60e790)요소를 지정 된 값으로 설정합니다. 다음 코드 예제에서는 이러한 함수의 사용을 보여 줍니다.
+[`Array.get`](https://msdn.microsoft.com/library/dd93e85d-7e80-4d76-8de0-b6d45bcf07bc) 요소를 가져옵니다. [`Array.length`](https://msdn.microsoft.com/library/0d775b6a-4a8f-4bd1-83e5-843b3251725f) 배열 길이 제공합니다. [`Array.set`](https://msdn.microsoft.com/library/847edc0d-4dc5-4a39-98c7-d4320c60e790) 요소를 지정 된 값으로 설정합니다. 다음 코드 예제에서는 이러한 함수의 사용을 보여 줍니다.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/arrays/snippet9.fs)]
 
@@ -80,7 +77,7 @@ API 참조 링크를 통해 MSDN으로 이동됩니다.  docs.microsoft.com API 
 
 ### <a name="functions-that-create-arrays"></a>배열을 만드는 함수
 
-여러 함수가 기존 배열이 필요 없이 어레이 작성 합니다. [`Array.empty`](https://msdn.microsoft.com/library/c3694b92-1c16-4c54-9bf2-fe398fadce32)모든 요소를 포함 하지 않는 새 배열을 만듭니다. [`Array.create`](https://msdn.microsoft.com/library/e848c8d6-1142-4080-9727-8dacc26066be)지정된 된 크기의 배열을 만들고 제공 된 값에 있는 모든 요소를 설정 합니다. [`Array.init`](https://msdn.microsoft.com/library/ee898089-63b0-40aa-910c-5ae7e32f6665)배열에 지정한 차원 및 요소를 생성 하는 함수를 만듭니다. [`Array.zeroCreate`](https://msdn.microsoft.com/library/fa5b8e7a-1b5b-411c-8622-b58d7a14d3b2)모든 요소는 배열의 형식에 대 한 값 0으로 초기화 되는 배열을 만듭니다. 다음 코드에서는 이러한 함수를 보여 줍니다.
+여러 함수가 기존 배열이 필요 없이 어레이 작성 합니다. [`Array.empty`](https://msdn.microsoft.com/library/c3694b92-1c16-4c54-9bf2-fe398fadce32) 모든 요소를 포함 하지 않는 새 배열을 만듭니다. [`Array.create`](https://msdn.microsoft.com/library/e848c8d6-1142-4080-9727-8dacc26066be) 지정된 된 크기의 배열을 만들고 제공 된 값에 있는 모든 요소를 설정 합니다. [`Array.init`](https://msdn.microsoft.com/library/ee898089-63b0-40aa-910c-5ae7e32f6665) 배열에 지정한 차원 및 요소를 생성 하는 함수를 만듭니다. [`Array.zeroCreate`](https://msdn.microsoft.com/library/fa5b8e7a-1b5b-411c-8622-b58d7a14d3b2) 모든 요소는 배열의 형식에 대 한 값 0으로 초기화 되는 배열을 만듭니다. 다음 코드에서는 이러한 함수를 보여 줍니다.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/arrays/snippet91.fs)]
 
@@ -92,7 +89,7 @@ Area of floats set to 5.0: [|5.0; 5.0; 5.0; 5.0; 5.0; 5.0; 5.0; 5.0; 5.0; 5.0|]
 Array of squares: [|0; 1; 4; 9; 16; 25; 36; 49; 64; 81|]
 ```
 
-[`Array.copy`](https://msdn.microsoft.com/library/9d0202f1-1ea0-475e-9d66-4f8ccc3c5b5f)기존 배열에서 복사 된 요소가 포함 된 새 배열을 만듭니다. 복사본 요소 형식이 참조 형식인 경우 참조만 복사 함을 의미 하는 단순 복사는, 기본 개체가 아닌 합니다. 다음 코드 예제에서는 그 구체적인 방법을 보여 줍니다.
+[`Array.copy`](https://msdn.microsoft.com/library/9d0202f1-1ea0-475e-9d66-4f8ccc3c5b5f) 기존 배열에서 복사 된 요소가 포함 된 새 배열을 만듭니다. 복사본 요소 형식이 참조 형식인 경우 참조만 복사 함을 의미 하는 단순 복사는, 기본 개체가 아닌 합니다. 다음 코드 예제에서는 그 구체적인 방법을 보여 줍니다.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/arrays/snippet11.fs)]
 
@@ -105,7 +102,7 @@ Array of squares: [|0; 1; 4; 9; 16; 25; 36; 49; 64; 81|]
 
 문자열 `Test1` 새 요소를 만드는 작업에 대 한 참조를 덮어쓰기 때문에 첫 번째 배열에만 표시 `firstArray` 에 남아 있는 빈 문자열에 대 한 원래 참조 영향을 주지 않습니다 되지만 `secondArray`합니다. 문자열 `Test2` 때문에 두 배열에 표시는 `Insert` 에 대 한 작업이 <xref:System.Text.StringBuilder?displayProperty=nameWithType> 형식 내부에 영향을 줍니다. <xref:System.Text.StringBuilder?displayProperty=nameWithType> 두 배열에서 참조 되는 개체입니다.
 
-[`Array.sub`](https://msdn.microsoft.com/library/40fb12ba-41d7-4ef0-b33a-56727deeef9d)배열 하위 범위에서 새 배열을 생성합니다. 시작 하는 인덱스 및 길이 제공 하 여 하위 범위를 지정 합니다. 다음 코드는 `Array.sub`의 사용법을 보여줍니다.
+[`Array.sub`](https://msdn.microsoft.com/library/40fb12ba-41d7-4ef0-b33a-56727deeef9d) 배열 하위 범위에서 새 배열을 생성합니다. 시작 하는 인덱스 및 길이 제공 하 여 하위 범위를 지정 합니다. 다음 코드는 `Array.sub`의 사용법을 보여줍니다.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/arrays/snippet12.fs)]
 
@@ -114,7 +111,7 @@ Array of squares: [|0; 1; 4; 9; 16; 25; 36; 49; 64; 81|]
 ```
 [|5; 6; 7; 8; 9; 10; 11; 12; 13; 14|]
 ```
-[`Array.append`](https://msdn.microsoft.com/library/08836310-5036-4474-b9a2-2c73e2293911)두 개의 기존 배열을 결합 하 여 새 배열을 만듭니다.
+[`Array.append`](https://msdn.microsoft.com/library/08836310-5036-4474-b9a2-2c73e2293911) 두 개의 기존 배열을 결합 하 여 새 배열을 만듭니다.
 
 다음 코드에서는 **Array.append**합니다.
 
@@ -126,7 +123,7 @@ Array of squares: [|0; 1; 4; 9; 16; 25; 36; 49; 64; 81|]
 [|1; 2; 3; 4; 5; 6|]
 ```
 
-[`Array.choose`](https://msdn.microsoft.com/library/f5c8a5e2-637f-44d4-b35c-be96a6618b09)새 배열에 포함할 배열 요소를 선택 합니다. 다음 코드에서는 `Array.choose`합니다. 배열의 요소 형식을 옵션 종류에 반환 된 값의 형식과 일치 하지 않아도 유의 합니다. 이 예에서 요소 형식이 `int` 옵션은 다항식 함수의 결과 `elem*elem - 1`, 부동 소수점 숫자입니다.
+[`Array.choose`](https://msdn.microsoft.com/library/f5c8a5e2-637f-44d4-b35c-be96a6618b09) 새 배열에 포함할 배열 요소를 선택 합니다. 다음 코드에서는 `Array.choose`합니다. 배열의 요소 형식을 옵션 종류에 반환 된 값의 형식과 일치 하지 않아도 유의 합니다. 이 예에서 요소 형식이 `int` 옵션은 다항식 함수의 결과 `elem*elem - 1`, 부동 소수점 숫자입니다.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/arrays/snippet14.fs)]
 
@@ -136,7 +133,7 @@ Array of squares: [|0; 1; 4; 9; 16; 25; 36; 49; 64; 81|]
 [|3.0; 15.0; 35.0; 63.0; 99.0|]
 ```
 
-[`Array.collect`](https://msdn.microsoft.com/library/c3b60c3b-9455-48c9-bc2b-e88f0434342a)기존 배열의 각 배열 요소에 대해 지정 된 함수를 실행 합니다. 그런 다음 해당 함수에 의해 생성 된 요소를 수집 하 고 결합 하 여 새 배열을. 다음 코드에서는 `Array.collect`합니다.
+[`Array.collect`](https://msdn.microsoft.com/library/c3b60c3b-9455-48c9-bc2b-e88f0434342a) 기존 배열의 각 배열 요소에 대해 지정 된 함수를 실행 합니다. 그런 다음 해당 함수에 의해 생성 된 요소를 수집 하 고 결합 하 여 새 배열을. 다음 코드에서는 `Array.collect`합니다.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/arrays/snippet15.fs)]
 
@@ -146,7 +143,7 @@ Array of squares: [|0; 1; 4; 9; 16; 25; 36; 49; 64; 81|]
 [|0; 1; 0; 1; 2; 3; 4; 5; 0; 1; 2; 3; 4; 5; 6; 7; 8; 9; 10|]
 ```
 
-[`Array.concat`](https://msdn.microsoft.com/library/f7219b79-1ec8-4a25-96b1-edbedb358302)배열의 시퀀스 받아서 결합 하 여 단일 배열을 지정 합니다. 다음 코드에서는 `Array.concat`합니다.
+[`Array.concat`](https://msdn.microsoft.com/library/f7219b79-1ec8-4a25-96b1-edbedb358302) 배열의 시퀀스 받아서 결합 하 여 단일 배열을 지정 합니다. 다음 코드에서는 `Array.concat`합니다.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/arrays/snippet16.fs)]
 
@@ -157,7 +154,7 @@ Array of squares: [|0; 1; 4; 9; 16; 25; 36; 49; 64; 81|]
 (3, 2, 6); (3, 3, 9)|]
 ```
 
-[`Array.filter`](https://msdn.microsoft.com/library/b885b214-47fc-4639-9664-b8c183a39ede)부울 조건 함수를 조건이 true 인 입력 배열 요소에만 포함 하는 새 배열을 생성 합니다. 다음 코드에서는 `Array.filter`합니다.
+[`Array.filter`](https://msdn.microsoft.com/library/b885b214-47fc-4639-9664-b8c183a39ede) 부울 조건 함수를 조건이 true 인 입력 배열 요소에만 포함 하는 새 배열을 생성 합니다. 다음 코드에서는 `Array.filter`합니다.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/arrays/snippet17.fs)]
 
@@ -167,7 +164,7 @@ Array of squares: [|0; 1; 4; 9; 16; 25; 36; 49; 64; 81|]
 [|2; 4; 6; 8; 10|]
 ```
 
-[`Array.rev`](https://msdn.microsoft.com/library/1bbf822c-763b-4794-af21-97d2e48ef709)기존 배열의 순서를 반대로 하 여 새 배열을 생성 합니다. 다음 코드에서는 `Array.rev`합니다.
+[`Array.rev`](https://msdn.microsoft.com/library/1bbf822c-763b-4794-af21-97d2e48ef709) 기존 배열의 순서를 반대로 하 여 새 배열을 생성 합니다. 다음 코드에서는 `Array.rev`합니다.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/arrays/snippet18.fs)]  
 
@@ -334,7 +331,7 @@ false
 
 ### <a name="searching-arrays"></a>배열 검색
 
-[`Array.find`](https://msdn.microsoft.com/library/db6d920a-de19-4520-85a4-d83de77c1b33)부울 함수를 사용 하 고 함수가 반환 하는 첫 번째 요소를 반환 `true`, 또는 발생 한 <xref:System.Collections.Generic.KeyNotFoundException?displayProperty=nameWithType> 조건을 충족 하는 요소가 없는 경우. [`Array.findIndex`](https://msdn.microsoft.com/library/5ae3a8f9-7b8f-44ea-a740-d5700f4d899f)비슷합니다 `Array.find`제외 하 고 요소 자체가 아니라 요소의 인덱스를 반환 합니다.
+[`Array.find`](https://msdn.microsoft.com/library/db6d920a-de19-4520-85a4-d83de77c1b33) 부울 함수를 사용 하 고 함수가 반환 하는 첫 번째 요소를 반환 `true`, 또는 발생 한 <xref:System.Collections.Generic.KeyNotFoundException?displayProperty=nameWithType> 조건을 충족 하는 요소가 없는 경우. [`Array.findIndex`](https://msdn.microsoft.com/library/5ae3a8f9-7b8f-44ea-a740-d5700f4d899f) 비슷합니다 `Array.find`제외 하 고 요소 자체가 아니라 요소의 인덱스를 반환 합니다.
 
 다음 코드에서는 `Array.find` 및 `Array.findIndex` 번호는 완전 한 하면서 완벽 한 큐브를 찾습니다.
 
@@ -346,7 +343,7 @@ false
 The first element that is both a square and a cube is 64 and its index is 62.
 ```
 
-[`Array.tryFind`](https://msdn.microsoft.com/library/7bd65f6c-df77-454c-ac3a-6f7baecec9d9)비슷합니다 `Array.find`제외 하 고 해당 결과 옵션 종류 이며 반환 `None` 요소가 없는 경우. `Array.tryFind`대신 사용 해야 `Array.find` 때 알 수 없는 배열에 일치 하는 요소 인지 합니다. 마찬가지로, [ `Array.tryFindIndex` ](https://msdn.microsoft.com/library/da82f7fe-95e9-4fd5-a924-cd3c9d10618a) 비슷합니다 [ `Array.findIndex` ](https://msdn.microsoft.com/library/5ae3a8f9-7b8f-44ea-a740-d5700f4d899f) 옵션 종류는 반환 값입니다. 요소가 없는 경우이 옵션은 `None`합니다.
+[`Array.tryFind`](https://msdn.microsoft.com/library/7bd65f6c-df77-454c-ac3a-6f7baecec9d9) 비슷합니다 `Array.find`제외 하 고 해당 결과 옵션 종류 이며 반환 `None` 요소가 없는 경우. `Array.tryFind` 대신 사용 해야 `Array.find` 때 알 수 없는 배열에 일치 하는 요소 인지 합니다. 마찬가지로, [ `Array.tryFindIndex` ](https://msdn.microsoft.com/library/da82f7fe-95e9-4fd5-a924-cd3c9d10618a) 비슷합니다 [ `Array.findIndex` ](https://msdn.microsoft.com/library/5ae3a8f9-7b8f-44ea-a740-d5700f4d899f) 옵션 종류는 반환 값입니다. 요소가 없는 경우이 옵션은 `None`합니다.
 
 다음 코드는 `Array.tryFind`의 사용법을 보여줍니다. 이 코드는 앞의 코드에 따라 달라 집니다.
 
@@ -380,7 +377,7 @@ Found an element 4096 with square root 64 and cube root 16.
 
 사용 하 여 [ `Array.max` ](https://msdn.microsoft.com/library/f03fbda0-fce6-40e2-a85d-79c9d81f710b) 또는 [ `Array.min` ](https://msdn.microsoft.com/library/d6b3da5f-bac0-4355-9846-4b72d95bc3fd) 요소 형식을 지 원하는 경우 최대 또는 최소 요소를 얻으려고 합니다. 마찬가지로, [ `Array.maxBy` ](https://msdn.microsoft.com/library/18dbe7c5-482e-4766-8e01-12a76f847045) 및 [ `Array.minBy` ](https://msdn.microsoft.com/library/24091583-be78-4cc9-9fab-de6d7506af4f) 먼저 실행할, 비교를 지원 하는 형식 변환에 함수를 허용 합니다.
 
-[`Array.sum`](https://msdn.microsoft.com/library/4ffdb8c8-cd94-4b0b-9e5c-a7c9c17963c2)배열의 요소를 추가 하 고 [ `Array.sumBy` ](https://msdn.microsoft.com/library/41698ba6-1adc-4169-8cc5-7a0e3f8de56b) 각 요소에 대해 함수를 호출 하 고 결과 함께 추가 합니다.
+[`Array.sum`](https://msdn.microsoft.com/library/4ffdb8c8-cd94-4b0b-9e5c-a7c9c17963c2) 배열의 요소를 추가 하 고 [ `Array.sumBy` ](https://msdn.microsoft.com/library/41698ba6-1adc-4169-8cc5-7a0e3f8de56b) 각 요소에 대해 함수를 호출 하 고 결과 함께 추가 합니다.
 
 함수는 배열의 각 요소에 대해 반환 값을 저장 하지 않고를 실행 하려면 사용 하 여 [ `Array.iter` ](https://msdn.microsoft.com/library/94eba0f1-ecd7-459f-b89f-ed2a2923e516)합니다. 길이가 같은 배열 두 함수를 사용 하 여 [ `Array.iter2` ](https://msdn.microsoft.com/library/018aa9b9-f186-4142-be8a-a62462794fdc)합니다. 함수 결과의 배열을 유지 해야 하는 경우 사용 하 여 [ `Array.map` ](https://msdn.microsoft.com/library/38cbe824-0480-47be-85fd-df3afdd97a45) 또는 [ `Array.map2` ](https://msdn.microsoft.com/library/bb7aafe8-4a1f-45b9-92fc-1af9eafbea5c), 한 번에 두 배열에서 작동 하는 합니다.
 
@@ -392,7 +389,7 @@ Found an element 4096 with square root 64 and cube root 16.
 
 ### <a name="modifying-arrays"></a>배열 수정
 
-[`Array.set`](https://msdn.microsoft.com/library/847edc0d-4dc5-4a39-98c7-d4320c60e790)요소를 지정 된 값으로 설정합니다. [`Array.fill`](https://msdn.microsoft.com/library/c83c9886-81d9-44f9-a195-61c7b87f7df2)지정 된 값 배열의 요소 범위를 설정합니다. 다음 코드 예제를 제공 `Array.fill`합니다.
+[`Array.set`](https://msdn.microsoft.com/library/847edc0d-4dc5-4a39-98c7-d4320c60e790) 요소를 지정 된 값으로 설정합니다. [`Array.fill`](https://msdn.microsoft.com/library/c83c9886-81d9-44f9-a195-61c7b87f7df2) 지정 된 값 배열의 요소 범위를 설정합니다. 다음 코드 예제를 제공 `Array.fill`합니다.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/arrays/snippet28.fs)]
 
@@ -406,7 +403,7 @@ Found an element 4096 with square root 64 and cube root 16.
 
 ### <a name="converting-to-and-from-other-types"></a>다른 형식 사이의 변환
 
-[`Array.ofList`](https://msdn.microsoft.com/library/e7225239-f561-45a4-b0b5-69a1cdcae78b)목록에서 배열을 만듭니다. [`Array.ofSeq`](https://msdn.microsoft.com/library/6bedf5e0-4b22-46da-b09c-6aa09eff220c)시퀀스에서 배열을 만듭니다. [`Array.toList`](https://msdn.microsoft.com/library/4deff724-0be4-4688-92e7-9d67a1097786)및 [ `Array.toSeq` ](https://msdn.microsoft.com/library/ac28dbab-406c-4fe0-ab08-c1ce5e247af4) 배열 형식에서 이러한 다른 컬렉션 형식으로 변환 합니다.
+[`Array.ofList`](https://msdn.microsoft.com/library/e7225239-f561-45a4-b0b5-69a1cdcae78b) 목록에서 배열을 만듭니다. [`Array.ofSeq`](https://msdn.microsoft.com/library/6bedf5e0-4b22-46da-b09c-6aa09eff220c) 시퀀스에서 배열을 만듭니다. [`Array.toList`](https://msdn.microsoft.com/library/4deff724-0be4-4688-92e7-9d67a1097786) 및 [ `Array.toSeq` ](https://msdn.microsoft.com/library/ac28dbab-406c-4fe0-ab08-c1ce5e247af4) 배열 형식에서 이러한 다른 컬렉션 형식으로 변환 합니다.
 
 ### <a name="sorting-arrays"></a>배열 정렬
 
@@ -414,7 +411,7 @@ Found an element 4096 with square root 64 and cube root 16.
 
 ### <a name="arrays-and-tuples"></a>배열 및 튜플
 
-함수 [ `Array.zip` ](https://msdn.microsoft.com/library/23e086b8-b266-4db2-8b68-e88e6a8e2187) 및 [ `Array.unzip` ](https://msdn.microsoft.com/library/a529b47c-2e2b-4f79-ad44-c578432d2f48) 튜플 쌍의 배열을 배열의 그 반대의 튜플을 변환 합니다. [`Array.zip3`](https://msdn.microsoft.com/library/1745744a-d2ca-4c3e-b825-3f15d9f4000d)및 [ `Array.unzip3` ](https://msdn.microsoft.com/library/bc3e6db0-f334-444f-8c30-813942880677) 은 요소가 세 또는 세 배열의 튜플을 사용 한다는 점을 제외 하 고 유사 합니다.
+함수 [ `Array.zip` ](https://msdn.microsoft.com/library/23e086b8-b266-4db2-8b68-e88e6a8e2187) 및 [ `Array.unzip` ](https://msdn.microsoft.com/library/a529b47c-2e2b-4f79-ad44-c578432d2f48) 튜플 쌍의 배열을 배열의 그 반대의 튜플을 변환 합니다. [`Array.zip3`](https://msdn.microsoft.com/library/1745744a-d2ca-4c3e-b825-3f15d9f4000d) 및 [ `Array.unzip3` ](https://msdn.microsoft.com/library/bc3e6db0-f334-444f-8c30-813942880677) 은 요소가 세 또는 세 배열의 튜플을 사용 한다는 점을 제외 하 고 유사 합니다.
 
 ## <a name="parallel-computations-on-arrays"></a>배열에 대 한 병렬 계산
 

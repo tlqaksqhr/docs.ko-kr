@@ -1,29 +1,29 @@
 ---
-title: "큰 데이터 및 스트리밍"
-ms.custom: 
+title: 큰 데이터 및 스트리밍
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: ab2851f5-966b-4549-80ab-c94c5c0502d2
-caps.latest.revision: 
+caps.latest.revision: 27
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: e9551fcf4f302be899dcee8737b3bcfad15f1210
-ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
+ms.openlocfilehash: b37af67a3deeed4e55939ff1c1baf73752233e94
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="large-data-and-streaming"></a>큰 데이터 및 스트리밍
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] XML 기반 통신 인프라가입니다. XML 데이터에 정의 된 표준 텍스트 형식으로 인코딩되어 일반적으로 하기 때문에 [XML 1.0 사양](http://go.microsoft.com/fwlink/?LinkId=94838)관계, 설계자 및 시스템 개발자가 일반적으로 염려 하는 전송 된 메시지의 통신 사용 공간 (또는 크기)에서 네트워크 및 XML의 텍스트 기반 인코딩과 이진 데이터의 효율적인 전송을 위한 특별히 고려해 야 할 제기 됩니다.  
+[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]는 XML 기반 통신 인프라입니다. XML 데이터에 정의 된 표준 텍스트 형식으로 인코딩되어 일반적으로 하기 때문에 [XML 1.0 사양](http://go.microsoft.com/fwlink/?LinkId=94838)관계, 설계자 및 시스템 개발자가 일반적으로 염려 하는 전송 된 메시지의 통신 사용 공간 (또는 크기)에서 네트워크 및 XML의 텍스트 기반 인코딩과 이진 데이터의 효율적인 전송을 위한 특별히 고려해 야 할 제기 됩니다.  
   
 ## <a name="basic-considerations"></a>기본 고려 사항  
  [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]의 다음 정보에 대한 배경 정보를 제공하기 위해, 이 단원에서는 연결된 시스템 인프라에 일반적으로 적용되는 인코딩, 이진 데이터 및 스트리밍에 해당되는 일반 고려 사항을 중점적으로 다룹니다.  
@@ -41,7 +41,7 @@ ms.lasthandoff: 02/01/2018
   
  따라서 텍스트와 이진 사이에서 선택할 때 이진 메시지가 항상 XML 텍스트 메시지보다 작을 것이라고 쉽게 가정할 수가 없습니다.  
   
- XML 텍스트 메시지의 분명한 이점은 표준 기반이며 넓은 상호 운용성 옵션 및 플랫폼 지원을 제공한다는 것입니다. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] 이 항목의 뒷부분에 나오는 "인코딩".  
+ XML 텍스트 메시지의 분명한 이점은 표준 기반이며 넓은 상호 운용성 옵션 및 플랫폼 지원을 제공한다는 것입니다. 자세한 내용은이 항목의 뒷부분에 나오는 "인코딩" 섹션을 참조 하십시오.  
   
 ### <a name="binary-content"></a>이진 콘텐츠  
  결과 메시지의 크기 면에서 이진 인코딩이 텍스트 기반 인코딩보다 우수한 영역은 그림, 비디오, 사운드 클립 또는 서비스와 소비자 사이에서 교환해야 하는 기타 형식의 불투명한 이진 데이터입니다. 이러한 형식의 데이터를 XML 텍스트에 넣기 위해 일반적으로 사용하는 방법은 Base64 인코딩을 사용하여 인코딩하는 것입니다.  
@@ -52,7 +52,7 @@ ms.lasthandoff: 02/01/2018
   
  MTOM SOAP 메시지는 해당 MIME 부분을 참조하는 특수 요소 태그가 이진 데이터를 포함하는 메시지에서 원래 요소의 자리를 차지하도록 인코딩되지 않은 버전에서 수정됩니다. 따라서 SOAP 메시지는 함께 전송되는 MIME을 가리키는 방식으로 이진 콘텐츠를 참조하고, 그 외의 경우에는 XML 텍스트 데이터만 전달합니다. 이 모델이 잘 구성된 SMTP 모델과 매우 가깝기 때문에 MTOM 메시지의 인코딩 및 디코딩 도구를 폭 넓게 지원하여 상호 운용성을 극대화하는 플랫폼도 많습니다.  
   
- 하지만 Base64와 마찬가지로, MTOM 역시 MIME 형식에 필요한 몇 가지 오버헤드를 동반하기 때문에 MTOM을 사용하는 경우의 장점은 이진 데이터 요소의 크기가 약 1KB를 넘는 경우에만 실감할 수 있습니다. 이진 페이로드가 이 임계값 아래로만 유지되는 경우에는 오버헤드로 인해 MTOM 인코딩 메시지가 이진 데이터에 Base64 인코딩을 사용하는 메시지보다 커질 수 있습니다. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] 이 항목의 뒷부분에 나오는 "인코딩".  
+ 하지만 Base64와 마찬가지로, MTOM 역시 MIME 형식에 필요한 몇 가지 오버헤드를 동반하기 때문에 MTOM을 사용하는 경우의 장점은 이진 데이터 요소의 크기가 약 1KB를 넘는 경우에만 실감할 수 있습니다. 이진 페이로드가 이 임계값 아래로만 유지되는 경우에는 오버헤드로 인해 MTOM 인코딩 메시지가 이진 데이터에 Base64 인코딩을 사용하는 메시지보다 커질 수 있습니다. 자세한 내용은이 항목의 뒷부분에 나오는 "인코딩" 섹션을 참조 하십시오.  
   
 ### <a name="large-data-content"></a>큰 데이터 콘텐츠  
  와이어 크기를 고려하지 않더라도, 앞에서 언급한 500MB 페이로드는 서비스 및 클라이언트에 큰 로컬 과제를 남깁니다. 기본적으로 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 에 메시지를 처리 *버퍼링된 모드*합니다. 즉, 메시지의 전체 콘텐츠가 보내기 전과 받은 후에 메모리에 보관됩니다. 대부분의 시나리오에서는 좋은 전략이며, 디지털 서명 및 안정적인 배달 등의 메시징 기능에 필수적인 방법이지만, 큰 메시지를 전달하는 경우에는 시스템 리소스가 빠른 속도로 소모될 수 있습니다.  
@@ -67,14 +67,14 @@ ms.lasthandoff: 02/01/2018
   
 -   전송을 시작할 때 전체를 사용할 수 없는 데이터.  
   
- 이러한 제약이 없는 데이터의 경우에는 보통 큰 메시지 하나보다 세션 범위 내의 메시지 시퀀스로 보내는 것이 더 좋습니다. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] 이 항목의 뒷부분에 나오는 "스트리밍 데이터".  
+ 이러한 제약이 없는 데이터의 경우에는 보통 큰 메시지 하나보다 세션 범위 내의 메시지 시퀀스로 보내는 것이 더 좋습니다. 자세한 내용은이 항목의 뒷부분에 나오는 "스트리밍 데이터" 섹션을 참조 합니다.  
   
  많은 양의 데이터를 보낼 때 설정 해야 합니다는 `maxAllowedContentLength` IIS 설정 (자세한 내용은 참조 [IIS 요청 제한 구성](http://go.microsoft.com/fwlink/?LinkId=253165)) 및 `maxReceivedMessageSize` 바인딩 설정을 (예를 들어 [ System.ServiceModel.BasicHttpBinding.MaxReceivedMessageSize](xref:System.ServiceModel.HttpBindingBase.MaxReceivedMessageSize%2A) 또는 <xref:System.ServiceModel.NetTcpBinding.MaxReceivedMessageSize%2A>). `maxAllowedContentLength` 28.6 M 속성의 기본값 및 `maxReceivedMessageSize` 64KB 속성의 기본값입니다.  
   
 ## <a name="encodings"></a>인코딩  
  *인코딩* 통신 중에 메시지를 표시 하는 방법에 대 한 규칙의 집합을 정의 합니다. *인코더* 그러한 인코딩을 구현 하 고는, 보낸 사람 쪽에서는 <xref:System.ServiceModel.Channels.Message> 바이트 스트림 또는 바이트 버퍼 네트워크를 통해 보낼 수 있는 메모리 내 메시지입니다. 받는 쪽에서는 인코더가 바이트 시퀀스를 메모리 내 메시지로 변환합니다.  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 세 명의 인코더가 하 고 필요한 경우 작성 하 여 사용자가 직접 인코더에 연결할 수 있습니다.  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에는 세 개의 인코더가 있으며, 필요한 경우 사용자가 직접 인코더를 작성하여 연결할 수 있습니다.  
   
  각각의 표준 바인딩에는 미리 구성된 인코더가 포함되며, Net* 접두사가 있는 바인딩에서는 이진 인코더를 사용하고(<xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement> 클래스를 포함하는 방법으로) <xref:System.ServiceModel.BasicHttpBinding> 및 <xref:System.ServiceModel.WSHttpBinding> 클래스에서는 기본적으로 텍스트 메시지 인코더(<xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement> 클래스 사용)를 사용합니다.  
   
@@ -246,7 +246,7 @@ public class UploadStreamMessage
   
  따라서 이 경우에는 들어오는 메시지 크기를 제한하는 것만으로는 부족합니다. `MaxBufferSize`에서 버퍼링하는 메모리를 제한하려면 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 속성이 필요합니다. 스트리밍을 수행할 때 이 값을 안전한 값으로 설정하거나 기본값으로 유지하는 것이 중요합니다. 예를 들어, 서비스에서 크기 4GB까지의 파일을 받아 로컬 디스크에 저장해야 하는 경우를 가정할 수 있습니다. 한 번에 64KB까지의 데이터만 버퍼링할 수 있는 방법으로 메모리가 제한된 경우도 가정할 수 있습니다. 그러면 `MaxReceivedMessageSize`는 4GB로 설정하고 `MaxBufferSize`는 64KB로 설정합니다. 또한 서비스 구현에서 64KB 청크의 들어오는 스트림에서만 읽으며 이전 부분이 디스크에 기록된 후 메모리에서 폐기되기 전에는 다음 청크를 읽지 않는지 확인해야 합니다.  
   
- 이 할당량이 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서 수행하는 버퍼링만 제한하며 자체 서비스나 클라이언트 구현에서 수행하는 버퍼링으로부터는 보호할 수 없다는 것도 이해해야 합니다. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]추가 보안 고려 사항 참조 [데이터에 대 한 보안 고려 사항](../../../../docs/framework/wcf/feature-details/security-considerations-for-data.md)합니다.  
+ 이 할당량이 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서 수행하는 버퍼링만 제한하며 자체 서비스나 클라이언트 구현에서 수행하는 버퍼링으로부터는 보호할 수 없다는 것도 이해해야 합니다. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 추가 보안 고려 사항 참조 [데이터에 대 한 보안 고려 사항](../../../../docs/framework/wcf/feature-details/security-considerations-for-data.md)합니다.  
   
 > [!NOTE]
 >  버퍼링 또는 스트리밍 전송 중 어느 것을 사용할 것인지를 결정하는 것은 끝점의 로컬 결정입니다. HTTP 전송의 경우 전송 모드는 연결 전체 또는 프록시 서버 및 다른 매개로 전파되지 않습니다. 서비스 인터페이스의 설명에 전송 모드 설정이 반영되지 않았습니다. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 클라이언트를 서비스에 생성하고 나면 스트리밍 전송에서 모드 설정에 사용할 서비스의 구성 파일을 편집해야 합니다. TCP 및 명명된 파이프 전송의 경우에는 전송 모드가 정책 어설션으로 전파됩니다.  

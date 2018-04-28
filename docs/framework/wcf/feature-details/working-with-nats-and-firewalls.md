@@ -1,27 +1,29 @@
 ---
-title: "NAT 및 방화벽 작업"
-ms.custom: 
+title: NAT 및 방화벽 작업
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - firewalls [WCF]
 - NATs [WCF]
 ms.assetid: 74db0632-1bf0-428b-89c8-bd53b64332e7
-caps.latest.revision: "12"
+caps.latest.revision: 12
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: cae680c8958c86dc57a2aff3c2d567e1fdac981d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: fe74b4bd86a25a8e6b769be1abe5fd81e5ffe5f9
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="working-with-nats-and-firewalls"></a>NAT 및 방화벽 작업
 네트워크 연결의 클라이언트와 서버에 통신을 위한 직접 및 열린 경로가 없는 경우가 자주 발생합니다. 패킷은 네트워크의 중간 컴퓨터와 끝점 컴퓨터 모두에서 필터링, 라우트, 분석 및 변환됩니다. NAT(Network Address Translation) 및 방화벽은 네트워크 통신에 참여할 수 있는 일반적인 중간 응용 프로그램의 예입니다.  
@@ -43,7 +45,7 @@ ms.lasthandoff: 12/22/2017
  개인 사용자 방화벽의 일반적인 구성에서는 나가는 연결이 해당 컴퓨터에서 설정될 때까지 들어오는 연결을 금지합니다. 비즈니스 사용자 방화벽의 일반적인 구성에서는 특별히 식별된 그룹을 제외한 모든 포트에서 들어오는 연결을 금지합니다. 예를 들어, HTTP 및 HTTPS 서비스를 제공하기 위해 포트 80 및 443을 제외한 모든 포트에서 연결을 금지하는 방화벽이 있습니다. 개인 사용자와 비즈니스 사용자 모두에 컴퓨터의 신뢰할 수 있는 사용자 또는 프로세스에서 방화벽 구성을 변경할 수 있도록 허용하는 관리되는 방화벽이 있습니다. 관리되는 방화벽은 네트워크 사용을 제어하는 회사 정책이 없는 개인 사용자에게 더 일반적입니다.  
   
 ## <a name="using-teredo"></a>Teredo 사용  
- Teredo는 NAT 뒤에서 컴퓨터의 주소를 직접 지정할 수 있는 IPv6 전환 기술입니다. Teredo는 잠재적 연결을 광고하기 위해 공개적이고 전역적으로 라우팅될 수 있는 서버를 사용합니다. Teredo 서버는 응용 프로그램 클라이언트와 서버에 연결 정보를 교환할 수 있는 공통 만남 지점을 제공합니다. 컴퓨터는 임시 Teredo 주소를 요청하고 패킷이 기존 네트워크를 통해 터널링됩니다. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서 Teredo를 지원하려면 운영 체제에서 IPv6 및 Teredo가 지원되도록 해야 합니다. [!INCLUDE[wxp](../../../../includes/wxp-md.md)] 이상 운영 체제에서는 Teredo를 지원합니다. [!INCLUDE[wv](../../../../includes/wv-md.md)] 이상 운영 체제에서는 기본적으로 IPv6을 지원하므로 사용자가 Teredo를 사용하도록 설정하기만 하면 됩니다. [!INCLUDE[wxpsp2](../../../../includes/wxpsp2-md.md)] 및 [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)]에서는 IPv6과 Teredo를 모두 사용하도록 설정해야 합니다. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Teredo 개요](http://go.microsoft.com/fwlink/?LinkId=87571)합니다.  
+ Teredo는 NAT 뒤에서 컴퓨터의 주소를 직접 지정할 수 있는 IPv6 전환 기술입니다. Teredo는 잠재적 연결을 광고하기 위해 공개적이고 전역적으로 라우팅될 수 있는 서버를 사용합니다. Teredo 서버는 응용 프로그램 클라이언트와 서버에 연결 정보를 교환할 수 있는 공통 만남 지점을 제공합니다. 컴퓨터는 임시 Teredo 주소를 요청하고 패킷이 기존 네트워크를 통해 터널링됩니다. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서 Teredo를 지원하려면 운영 체제에서 IPv6 및 Teredo가 지원되도록 해야 합니다. [!INCLUDE[wxp](../../../../includes/wxp-md.md)] 이상 운영 체제에서는 Teredo를 지원합니다. [!INCLUDE[wv](../../../../includes/wv-md.md)] 이상 운영 체제에서는 기본적으로 IPv6을 지원하므로 사용자가 Teredo를 사용하도록 설정하기만 하면 됩니다. [!INCLUDE[wxpsp2](../../../../includes/wxpsp2-md.md)] 및 [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)]에서는 IPv6과 Teredo를 모두 사용하도록 설정해야 합니다. 자세한 내용은 참조는 [Teredo 개요](http://go.microsoft.com/fwlink/?LinkId=87571)합니다.  
   
 ## <a name="choosing-a-transport-and-message-exchange-pattern"></a>전송 및 메시지 교환 패턴 선택  
  전송 및 MEP 선택은 3단계 프로세스입니다.  

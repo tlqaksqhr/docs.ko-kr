@@ -1,20 +1,17 @@
 ---
-title: "레코드(F#)"
-description: "F # 레코드 멤버와 필요에 따라 명명 된 값의 간단한 집계를 표시 하는 방법에 대해 알아봅니다."
-keywords: "visual f#, f#, 함수형 프로그래밍"
+title: 레코드(F#)
+description: 'F # 레코드 멤버와 필요에 따라 명명 된 값의 간단한 집계를 표시 하는 방법에 대해 알아봅니다.'
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: 3a3701ea-4308-4fa1-9b5c-b955c470f17a
-ms.openlocfilehash: 478ab74ad32cc6e53daffd1bd6229729149d2a1e
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 1270bf4eaeba99a15b0f81b5477f4c3b98644f66
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="records"></a>레코드
 
@@ -114,7 +111,7 @@ Point is at (10.000000, 0.000000, -1.000000).
 ## <a name="differences-between-records-and-classes"></a>레코드 및 클래스 간의 차이점
 레코드 필드 속성으로 노출 되어 자동으로 생성에 사용 되 고 레코드의 복사 한다는 점에서 클래스에서 다릅니다. 레코드 생성 클래스 생성에서도 다릅니다. 레코드 종류에는 생성자를 정의할 수 없습니다. 대신,이 항목에서 설명한 구문이 적용 됩니다. 클래스는 생성자 매개 변수, 필드 및 속성 간 직접 관계가 있어야 합니다.
 
-공용 구조체 및 구조체 형식 처럼 레코드 구조적 같음 의미 체계를 가져야합니다. 클래스에는 참조 같음 의미 체계입니다. 다음 코드 예제에서는이 보여 줍니다.
+공용 구조체 및 구조체 형식 처럼 레코드 구조적 같음 의미 체계를 가져야합니다. 클래스에는 참조 같음 의미 체계입니다. 다음 코드 예제에서는 이 작업을 보여줍니다.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet1911.fs)]
 
@@ -129,6 +126,6 @@ Point is at (10.000000, 0.000000, -1.000000).
 
 [F# 언어 참조](index.md)
 
-[Reference-Equality](https://msdn.microsoft.com/visualfsharpdocs/conceptual/core.referenceequalityattribute-class-%5bfsharp%5d)
+[참조 같음](https://msdn.microsoft.com/visualfsharpdocs/conceptual/core.referenceequalityattribute-class-%5bfsharp%5d)
 
 [패턴 일치](pattern-matching.md)

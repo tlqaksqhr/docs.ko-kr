@@ -21,11 +21,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: c541c44f0043000ccd4e7edb0d38eba2c66d0844
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.openlocfilehash: 15e958a3bfe4dfdeebfaaad83130a604c56932c7
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="using-the-xmlserializer-class"></a>XmlSerializer 클래스 사용
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]에서는 두 가지 다른 serialization 기술을 사용하여 응용 프로그램의 데이터를 클라이언트와 서비스 간에 전송되는 XML로 바꿀 수 있습니다. 이 프로세스를 serialization이라고 합니다.  
@@ -45,10 +45,10 @@ ms.lasthandoff: 04/27/2018
   
  많은 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 형식은 끝의 두 범주에 해당하므로 serialize할 수 있습니다. serialize할 수 있는 형식의 배열도 serialize할 수 있습니다. 전체 목록을 보려면를 참조 하십시오. [서비스 계약에 데이터 전송 지정](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md)합니다.  
   
- 데이터 계약 형식과 함께 <xref:System.Runtime.Serialization.DataContractSerializer>를 사용하여 새 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 서비스를 작성하는 것이 좋습니다. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [데이터 계약을 사용 하 여](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)합니다.  
+ 데이터 계약 형식과 함께 <xref:System.Runtime.Serialization.DataContractSerializer>를 사용하여 새 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 서비스를 작성하는 것이 좋습니다. 자세한 내용은 참조 [를 사용 하 여 데이터 계약](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)합니다.  
   
 ## <a name="when-to-use-the-xmlserializer-class"></a>XmlSerializer 클래스 사용 시기  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서는 <xref:System.Xml.Serialization.XmlSerializer> 클래스도 지원합니다. <xref:System.Xml.Serialization.XmlSerializer> 클래스는 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서 고유하지 않습니다. 이는 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 웹 서비스에서 사용되는 serialization 엔진과 동일합니다. <xref:System.Xml.Serialization.XmlSerializer> 클래스는 <xref:System.Runtime.Serialization.DataContractSerializer> 클래스보다 훨씬 더 제한된 형식 집합을 지원하지만 결과 XML을 보다 강력하게 제어할 수 있으며 XSD(XML 스키마 정의 언어) 표준의 더 많은 부분을 지원합니다. 또한 이 클래스에는 serialize할 수 있는 형식의 선언적 특성이 필요 없습니다. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 설명서의 XML Serialization 항목 <xref:System.Xml.Serialization.XmlSerializer> 클래스는 데이터 계약 형식을 지원하지 않습니다.  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서는 <xref:System.Xml.Serialization.XmlSerializer> 클래스도 지원합니다. <xref:System.Xml.Serialization.XmlSerializer> 클래스는 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서 고유하지 않습니다. 이는 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 웹 서비스에서 사용되는 serialization 엔진과 동일합니다. <xref:System.Xml.Serialization.XmlSerializer> 클래스는 <xref:System.Runtime.Serialization.DataContractSerializer> 클래스보다 훨씬 더 제한된 형식 집합을 지원하지만 결과 XML을 보다 강력하게 제어할 수 있으며 XSD(XML 스키마 정의 언어) 표준의 더 많은 부분을 지원합니다. 또한 이 클래스에는 serialize할 수 있는 형식의 선언적 특성이 필요 없습니다. 자세한 내용은의 XML Serialization 항목을 참조 하십시오.는 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 설명서입니다. <xref:System.Xml.Serialization.XmlSerializer> 클래스는 데이터 계약 형식을 지원하지 않습니다.  
   
  Svcutil.exe를 사용 하는 경우 또는 **서비스 참조 추가** 기능 제 3 자 서비스에 대 한 클라이언트 코드를 생성 하거나 타사 스키마에 적절 한 serializer를 액세스 하는 Visual Studio에서 자동으로 선택 됩니다. 스키마가 <xref:System.Runtime.Serialization.DataContractSerializer>와 호환되지 않으면 <xref:System.Xml.Serialization.XmlSerializer>가 선택됩니다.  
   
@@ -150,7 +150,7 @@ ms.lasthandoff: 04/27/2018
   
 -   `ReadXml` 구현은 래퍼 요소를 읽어서는 안 됩니다. `WriteXml`에서 생성하는 하나의 요소를 읽습니다.  
   
--   예를 들어 데이터 계약의 데이터 멤버로 정기적으로 요소 형식을 serialize하는 경우 serializer는 콘텐츠 형식과 마찬가지로 `WriteXml`을 호출하기 전에 래퍼 요소를 출력합니다. 그러나 최상위 수준에서 요소 형식을 serialize할 때 serializer는 일반적으로 `WriteXml` 또는 `DataContractSerializer` 생성자에서 serializer를 생성할 때 루트 이름과 네임스페이스를 명시적으로 지정하지 않은 경우 `NetDataContractSerializer`에서 쓰는 요소를 둘러싼 래퍼 요소를 출력하지 않습니다. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [Serialization 및 Deserialization](../../../../docs/framework/wcf/feature-details/serialization-and-deserialization.md)합니다.  
+-   예를 들어 데이터 계약의 데이터 멤버로 정기적으로 요소 형식을 serialize하는 경우 serializer는 콘텐츠 형식과 마찬가지로 `WriteXml`을 호출하기 전에 래퍼 요소를 출력합니다. 그러나 최상위 수준에서 요소 형식을 serialize할 때 serializer는 일반적으로 `WriteXml` 또는 `DataContractSerializer` 생성자에서 serializer를 생성할 때 루트 이름과 네임스페이스를 명시적으로 지정하지 않은 경우 `NetDataContractSerializer`에서 쓰는 요소를 둘러싼 래퍼 요소를 출력하지 않습니다. 자세한 내용은 참조 [Serialization 및 Deserialization](../../../../docs/framework/wcf/feature-details/serialization-and-deserialization.md)합니다.  
   
 -   생성 시 루트 이름과 네임스페이스를 지정하지 않고 최상위 수준에서 요소 형식을 serialize하는 경우 <xref:System.Runtime.Serialization.XmlObjectSerializer.WriteStartObject%2A> 및 <xref:System.Runtime.Serialization.XmlObjectSerializer.WriteEndObject%2A>에서 아무 작업도 수행하지 않으며 <xref:System.Runtime.Serialization.XmlObjectSerializer.WriteObjectContent%2A>는 `WriteXml`을 호출합니다. 이 모드에서 serialize되는 개체는 `null`일 수 없으며 다형적으로 할당할 수 없습니다. 또한 개체 그래프 유지를 활성화할 수 없고 `NetDataContractSerializer`를 사용할 수 없습니다.  
   

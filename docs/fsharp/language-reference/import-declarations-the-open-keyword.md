@@ -1,20 +1,17 @@
 ---
-title: "가져오기 선언: open 키워드(F#)"
-description: "해당 요소를 정규화 된 이름을 사용 하지 않고 참조할 수 F # 가져오기 선언 및 모듈 또는 네임 스페이스 지정 방법에 대해 알아봅니다."
-keywords: "visual f#, f#, 함수형 프로그래밍"
+title: '가져오기 선언: open 키워드(F#)'
+description: '해당 요소를 정규화 된 이름을 사용 하지 않고 참조할 수 F # 가져오기 선언 및 모듈 또는 네임 스페이스 지정 방법에 대해 알아봅니다.'
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: 1e98e48c-52e9-4314-8954-85d5583125f0
-ms.openlocfilehash: a6d79bed3dd202657d06956edf9499a9b21a5f03
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: ddbc1086e2adbe8dae408f4d39fd5af888d7fd5e
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="import-declarations-the-open-keyword"></a>가져오기 선언:는 `open` 키워드
 

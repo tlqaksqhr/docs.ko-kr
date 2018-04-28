@@ -1,20 +1,17 @@
 ---
-title: "인라인 함수(F#)"
-description: "F # 인라인 함수를 호출 하는 코드에 직접 통합을 사용 하는 방법에 알아봅니다."
-keywords: "visual f#, f#, 함수형 프로그래밍"
+title: 인라인 함수(F#)
+description: 'F # 인라인 함수를 호출 하는 코드에 직접 통합을 사용 하는 방법에 알아봅니다.'
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: 3fa31178-08f8-463d-9d41-d29220a90027
-ms.openlocfilehash: 0489d411e2754eaab6a10ff0feb4405491b3b511
-ms.sourcegitcommit: 425524461530f020f9747492b42f8cd72b011ae7
+ms.openlocfilehash: cb0addd1456af1ab97e249b9c5ece4d9f0818fa3
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/25/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="inline-functions"></a>인라인 함수
 

@@ -1,27 +1,29 @@
 ---
-title: "Net.TCP 포트 공유"
-ms.custom: 
+title: Net.TCP 포트 공유
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - port activation [WCF]
 - port sharing [WCF]
 ms.assetid: f13692ee-a179-4439-ae72-50db9534eded
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 013c9e963ca75cc612d869a55b33d69aebbcad33
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: c7abf272cb1d069b0fbdcd561256580de5a82c29
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="nettcp-port-sharing"></a>Net.TCP 포트 공유
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]에서는 고성능 통신을 위한 새로운 TCP 기반 네트워크 프로토콜(net.tcp://)을 제공합니다. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서는 여러 사용자 프로세스 간에 net.tcp 포트를 공유할 수 있는 새 시스템 구성 요소인 Net.TCP Port Sharing Service도 제공합니다.  
@@ -49,12 +51,12 @@ ms.lasthandoff: 12/22/2017
  net.tcp:// 포트 공유를 사용하는 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 서비스가 열릴 때 응용 프로그램 프로세스에서 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] TCP 전송 인프라는 TCP 소켓을 직접 열지 않습니다. 대신 전송 인프라는 서비스의 기본 주소 URI(Uniform Resource Identifier)를 Net.TCP Port Sharing Service를 사용하여 등록하고 포트 공유 서비스가 대신 메시지를 수신 대기하도록 기다립니다.  포트 공유 서비스는 메시지가 도착하면 응용 프로그램 서비스에 주소가 지정된 메시지를 디스패치합니다.  
   
 ## <a name="installing-port-sharing"></a>포트 공유 설치  
- Net.TCP Port Sharing Service는 [!INCLUDE[vstecwinfx](../../../../includes/vstecwinfx-md.md)]을 지원하는 모든 운영 체제에서 사용할 수 있지만 기본적으로 서비스가 활성화되어 있지는 않습니다. 보안 예방 조치로 관리자는 Net.TCP Port Sharing Service를 처음 사용하기 전에 수동으로 활성화해야 합니다. Net.TCP Port Sharing Service는 포트 공유 서비스에서 소유한 네트워크 소켓의 여러 특징을 조작할 수 있는 구성 옵션을 노출합니다. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][하는 방법: Net.TCP Port Sharing Service를 사용 하도록 설정](../../../../docs/framework/wcf/feature-details/how-to-enable-the-net-tcp-port-sharing-service.md)합니다.  
+ Net.TCP Port Sharing Service는 [!INCLUDE[vstecwinfx](../../../../includes/vstecwinfx-md.md)]을 지원하는 모든 운영 체제에서 사용할 수 있지만 기본적으로 서비스가 활성화되어 있지는 않습니다. 보안 예방 조치로 관리자는 Net.TCP Port Sharing Service를 처음 사용하기 전에 수동으로 활성화해야 합니다. Net.TCP Port Sharing Service는 포트 공유 서비스에서 소유한 네트워크 소켓의 여러 특징을 조작할 수 있는 구성 옵션을 노출합니다. 자세한 내용은 참조 [하는 방법: Net.TCP Port Sharing Service를 사용 하도록 설정](../../../../docs/framework/wcf/feature-details/how-to-enable-the-net-tcp-port-sharing-service.md)합니다.  
   
 ## <a name="using-nettcp-port-sharing-in-an-application"></a>응용 프로그램에서 Net.tcp 포트 공유 사용  
  [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 응용 프로그램에서 net.tcp:// 포트 공유를 사용하는 가장 쉬운 방법은 <xref:System.ServiceModel.NetTcpBinding>을 사용하여 서비스를 노출한 다음 <xref:System.ServiceModel.NetTcpBinding.PortSharingEnabled%2A> 속성을 사용하여 Net.TCP Port Sharing Service를 활성화하는 것입니다.  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]이 작업을 수행 하 [하는 방법: WCF 서비스를 사용 하 여 포트 공유 구성](../../../../docs/framework/wcf/feature-details/how-to-configure-a-wcf-service-to-use-port-sharing.md)합니다.  
+ [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 이 작업을 수행 하 [하는 방법: WCF 서비스를 사용 하 여 포트 공유 구성](../../../../docs/framework/wcf/feature-details/how-to-configure-a-wcf-service-to-use-port-sharing.md)합니다.  
   
 ## <a name="security-implications-of-port-sharing"></a>포트 공유 시 보안 관련 문제  
  Net.TCP Port Sharing Service에서는 응용 프로그램과 네트워크 간의 처리 계층을 제공하지만 포트 공유를 사용하는 응용 프로그램의 경우 네트워크에서 직접 수신 대기하고 있는 것처럼 보안이 설정되어 있어야 합니다. 특히 포트 공유를 사용하는 응용 프로그램은 응용 프로그램이 실행되는 프로세스 권한을 평가해야 합니다. 네트워크 통신에 필요한 프로세스 권한의 최소 집합으로 실행되는 기본 제공 Network Service 계정을 사용하여 응용 프로그램을 실행해 보세요.  

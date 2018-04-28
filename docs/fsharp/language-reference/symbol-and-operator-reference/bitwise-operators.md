@@ -1,20 +1,17 @@
 ---
-title: "비트 연산자(F#)"
-description: "F # 프로그래밍 언어에서 사용할 수 있는 비트 연산자에 알아봅니다."
-keywords: "visual f#, f#, 함수형 프로그래밍"
+title: 비트 연산자(F#)
+description: 'F # 프로그래밍 언어에서 사용할 수 있는 비트 연산자에 알아봅니다.'
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: 8a2c87f5-b4c7-47fe-8580-82c956f605e5
-ms.openlocfilehash: 61a8e6bafe97a229480c967a4afb5d2a256474c8
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 4d5abff564a5d1dcbe52b99edf431ca10e442061
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="bitwise-operators"></a>비트 연산자
 
@@ -23,7 +20,7 @@ ms.lasthandoff: 10/18/2017
 ## <a name="summary-of-bitwise-operators"></a>비트 연산자 요약
 다음 표에서 F # 언어에서 정수 계열 형식과 unboxed에 지원 되는 비트 연산자를 설명 합니다.
 
-|연산자|참고|
+|연산자|노트|
 |--------|-----|
 |`&&&`|비트 AND 연산자입니다. 결과 비트의에서 경우에 두 소스 피연산자의 해당 비트는 1이 고 값 1을 갖습니다.|
 |<code>&#124;&#124;&#124;</code>|비트 OR 연산자입니다. 결과 비트는 값 1 경우 원본에 해당 비트의 두 피연산자가 1입니다.|

@@ -1,12 +1,13 @@
 ---
-title: "WPF XAML 브라우저 응용 프로그램 개요"
-ms.custom: 
+title: WPF XAML 브라우저 응용 프로그램 개요
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -17,20 +18,21 @@ helpviewer_keywords:
 - XAML browser applications (XBAP)
 - browser-hosted applications [WPF]
 ms.assetid: 3a7a86a8-75d5-4898-96b9-73da151e5e16
-caps.latest.revision: "47"
+caps.latest.revision: 47
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 0f4f410f0f6c209dbc43642a15ae85a788390f4a
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: 0afdce00cc169a5be9224a7b675e4666c1349bd5
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="wpf-xaml-browser-applications-overview"></a>WPF XAML 브라우저 응용 프로그램 개요
 <a name="introduction"></a>
-[!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)]웹 응용 프로그램과 리치 클라이언트 응용 프로그램의 기능을 결합 합니다. XBAP는 웹 응용 프로그램처럼 웹 서버에 배포할 수 있으며 Internet Explorer 또는 Firefox에서 시작할 수 있습니다. XBAP는 리치 클라이언트 응용 프로그램처럼 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]의 기능을 활용할 수 있습니다. XBAP를 개발하는 것은 리치 클라이언트 개발과도 비슷합니다. 이 항목에서는 XBAP 개발에 대한 간단하고 고급 수준의 소개를 제공하며 XBAP 개발이 표준 리치 클라이언트 개발과 다른 점을 설명합니다.  
+[!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)] 웹 응용 프로그램과 리치 클라이언트 응용 프로그램의 기능을 결합 합니다. XBAP는 웹 응용 프로그램처럼 웹 서버에 배포할 수 있으며 Internet Explorer 또는 Firefox에서 시작할 수 있습니다. XBAP는 리치 클라이언트 응용 프로그램처럼 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]의 기능을 활용할 수 있습니다. XBAP를 개발하는 것은 리치 클라이언트 개발과도 비슷합니다. 이 항목에서는 XBAP 개발에 대한 간단하고 고급 수준의 소개를 제공하며 XBAP 개발이 표준 리치 클라이언트 개발과 다른 점을 설명합니다.  
   
  이 항목에는 다음과 같은 단원이 포함되어 있습니다.  
   
@@ -63,7 +65,7 @@ ms.lasthandoff: 01/19/2018
 |응용 프로그램 매니페스트(.manifest)|응용 프로그램과 연결된 메타데이터가 포함되며 확장명이 .manifest입니다.|  
 |배포 매니페스트(.xbap)|이 파일에는 [!INCLUDE[TLA#tla_clickonce](../../../../includes/tlasharptla-clickonce-md.md)]에서 응용 프로그램을 배포하기 위해 사용하는 정보가 포함되며 확장명이 .xbap입니다.|  
   
- XBAP를 웹 서버에 배포합니다(예: [!INCLUDE[TLA#tla_iis50](../../../../includes/tlasharptla-iis50-md.md)] 이상 버전). 웹 서버에 [!INCLUDE[TLA2#tla_winfx](../../../../includes/tla2sharptla-winfx-md.md)]를 설치할 필요는 없지만 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] [!INCLUDE[TLA#tla_mime](../../../../includes/tlasharptla-mime-md.md)] 형식과 파일 이름 확장명을 등록해야 합니다. 자세한 내용은 [IIS 5.0 및 IIS 6.0을 구성하여 WPF 응용 프로그램 배포](../../../../docs/framework/wpf/app-development/how-to-configure-iis-5-0-and-iis-6-0-to-deploy-wpf-applications.md)를 참조하세요.  
+ XBAP를 웹 서버에 배포합니다(예: [!INCLUDE[TLA#tla_iis50](../../../../includes/tlasharptla-iis50-md.md)] 이상 버전). 웹 서버에.NET Framework를 설치할 필요는 없지만을 등록 해야 하는 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] [!INCLUDE[TLA#tla_mime](../../../../includes/tlasharptla-mime-md.md)] 형식 및 파일 이름 확장명입니다. 자세한 내용은 [IIS 5.0 및 IIS 6.0을 구성하여 WPF 응용 프로그램 배포](../../../../docs/framework/wpf/app-development/how-to-configure-iis-5-0-and-iis-6-0-to-deploy-wpf-applications.md)를 참조하세요.  
   
  배포를 위해 XBAP를 준비하려면 .exe 및 연결된 매니페스트를 웹 서버에 복사합니다. 확장명이 .xbap인 파일인 배포 매니페스트를 여는 하이퍼링크가 포함된 HTML 페이지를 만듭니다. 사용자가 .xbap 파일에 대한 링크를 클릭하면 [!INCLUDE[TLA2#tla_clickonce](../../../../includes/tla2sharptla-clickonce-md.md)]에서 응용 프로그램을 다운로드하여 시작하는 메커니즘을 자동으로 처리합니다. 다음 예제 코드는 XBAP를 가리키는 하이퍼링크가 포함된 HTML 페이지를 보여 줍니다.  
   
@@ -152,7 +154,7 @@ ms.lasthandoff: 01/19/2018
   
 -   WPF 응용 프로그램은 별도의 스레드에서 실행되므로 사용자 지정 ActiveX 컨트롤이 통신하는 데 문제가 있을 수 있습니다.  
   
--   <xref:System.Windows.Interop.HwndHost.MessageHook>때문에 발생 하지 않는 <xref:System.Windows.Interop.HwndHost> 하위 클래스를 다른 스레드 또는 프로세스에서 실행 되는 창 수 없습니다.  
+-   <xref:System.Windows.Interop.HwndHost.MessageHook> 때문에 발생 하지 않는 <xref:System.Windows.Interop.HwndHost> 하위 클래스를 다른 스레드 또는 프로세스에서 실행 되는 창 수 없습니다.  
   
 ### <a name="creating-a-full-trust-xbap"></a>완전 신뢰 XBAP 만들기  
  XBAP에 완전 신뢰가 필요한 경우 이 권한을 사용하도록 프로젝트를 변경할 수 있습니다. 다음 단계는 완전 권한을 설정하는 방법을 설명합니다.  

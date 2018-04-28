@@ -1,20 +1,17 @@
 ---
-title: "Fixed 키워드 (F #)"
+title: 'Fixed 키워드 (F #)'
 description: "고정할 수 있는' ' 하는 방법으로 스택에 F #을 사용 하 여 컬렉션을 방지 하기 위해 로컬 'fixed' 키워드에 알아봅니다."
-keywords: "visual f#, f#, 함수형 프로그래밍"
 author: cartermp
 ms.author: phcart
 ms.date: 04/24/2017
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: 5795ce1f-11bf-4798-9f1f-6e44ffa1477e
-ms.openlocfilehash: 1605603bc35941e21c798600140036fb678869b5
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 8c1d486ec754335dfbaeec439b1eb949494e4241
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="the-fixed-keyword"></a>Fixed 키워드
 
@@ -30,13 +27,13 @@ use ptr = fixed expression
 
 포인터를 추출 하 고 수집 또는 가비지 수집 중 이동 되지 못하게 하는 이름에 바인딩할 수 있도록 하는 식의 구문은 확장 합니다.  
 
-식에서 포인터를 통해 고정 되어는 `fixed` 키워드는 식별자를 통해 바인딩되는 `use` 키워드.  리소스 관리를 통해 이것의 의미 체계가 비슷합니다는 `use` 키워드입니다.  포인터가 범위에가 범위에 속하지는 것은 더 이상 고정 되어 있기 동안 고정 됩니다.  `fixed`컨텍스트 외부에서 사용할 수 없습니다는 `use` 바인딩.  이름으로 포인터를 바인딩해야 `use`합니다.
+식에서 포인터를 통해 고정 되어는 `fixed` 키워드는 식별자를 통해 바인딩되는 `use` 키워드.  리소스 관리를 통해 이것의 의미 체계가 비슷합니다는 `use` 키워드입니다.  포인터가 범위에가 범위에 속하지는 것은 더 이상 고정 되어 있기 동안 고정 됩니다.  `fixed` 컨텍스트 외부에서 사용할 수 없습니다는 `use` 바인딩.  이름으로 포인터를 바인딩해야 `use`합니다.
 
 사용 하 여 `fixed` 함수나 메서드는 식 내에서 발생 해야 합니다.  스크립트 수준 또는 모듈 수준 범위에서 사용할 수 없습니다.
 
 모든 포인터 코드 처럼 안전 하지 않은 기능 이므로 사용 하면 경고를 생성 합니다.
 
-## <a name="example"></a>예
+## <a name="example"></a>예제
 
 ```fsharp
 open Microsoft.FSharp.NativeInterop

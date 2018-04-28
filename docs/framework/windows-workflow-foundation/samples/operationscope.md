@@ -1,32 +1,33 @@
 ---
 title: OperationScope
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 56206a21-1e63-422d-b92a-e5d8b713e707
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 837be2de516f604dd6869449d99df238fb6dbd24
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 3bf92d7a726a53c5d625f31b0386e11c941cdde9
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="operationscope"></a>OperationScope
 이 샘플에서는 메시징 활동, <xref:System.ServiceModel.Activities.Receive> 및 <xref:System.ServiceModel.Activities.SendReply>를 사용하여 기존 사용자 지정 활동을 워크플로 서비스에 작업으로 노출하는 방법을 보여 줍니다. 이 샘플에는 `OperationScope`라는 새 사용자 지정 활동이 포함되어 있습니다. 이 활동을 사용하면 사용자가 작업 본문을 사용자 지정 활동과 별도로 작성한 다음 `OperationScope` 활동을 사용하여 해당 작업을 서비스 작업으로 쉽게 노출할 수 있도록 하여 워크플로 서비스를 쉽게 개발할 수 있습니다. 예를 들어 두 `Add` 인수를 사용하고 하나의 `in` 인수를 반환하는 사용자 지정 `out` 활동을 `Add`로 끌어 놓아 워크플로 서비스에 `OperationScope` 작업으로 노출할 수 있습니다.  
   
  범위는 본문으로 제공된 활동을 검사하는 방식으로 작동합니다. 바인딩되지 않은 `in` 인수는 모두 들어오는 메시지의 입력으로 간주됩니다. 모든 `out` 인수는 바인딩되어 있는지 여부에 관계없이 이후 회신 메시지의 출력으로 간주됩니다. 노출된 작업의 이름은 `OperationScope` 활동의 표시 이름에서 가져온 것입니다. 본문 활동이 활동 인수에 바인딩된 메시지의 매개 변수를 사용하여 <xref:System.ServiceModel.Activities.Receive> 및 <xref:System.ServiceModel.Activities.SendReply>에 래핑되는 것이 최종 결과입니다.  
   
- 이 샘플에서는 HTTP 끝점을 사용하여 워크플로 서비스를 노출합니다. 실행하려면 적절한 URL ACL을 추가해야 합니다. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][HTTP 및 HTTPS 구성](http://go.microsoft.com/fwlink/?LinkId=70353)합니다. 프롬프트에서 다음 명령을 실행 하면 적절 한 Acl을 추가 (도메인과 사용자 이름을 % 도메인 %에 대 한 대체 확인\\% UserName %).  
+ 이 샘플에서는 HTTP 끝점을 사용하여 워크플로 서비스를 노출합니다. 실행하려면 적절한 URL ACL을 추가해야 합니다. 자세한 내용은 참조 [HTTP 및 HTTPS 구성](http://go.microsoft.com/fwlink/?LinkId=70353)합니다. 프롬프트에서 다음 명령을 실행 하면 적절 한 Acl을 추가 (도메인과 사용자 이름을 % 도메인 %에 대 한 대체 확인\\% UserName %).  
   
- **netsh http urlacl url 추가 = http: / / +: 8000 / 사용자 = % 도메인 %\\% UserName %**  
+ **netsh http urlacl url 추가 =http://+:8000/ 사용자 = % 도메인 %\\% UserName %**  
   
 ### <a name="to-run-the-sample"></a>이 샘플을 실행하려면  
   

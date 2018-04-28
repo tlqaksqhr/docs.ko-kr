@@ -1,24 +1,26 @@
 ---
-title: "독립 실행형 JSON Serialization"
-ms.custom: 
+title: 독립 실행형 JSON Serialization
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 312bd7b2-1300-4b12-801e-ebe742bd2287
-caps.latest.revision: "32"
+caps.latest.revision: 32
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 8583ac00f1216e68f95c3d41d8c896b555d0aa8d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 1a0a11d613ffb8f71437edd73a8be64fb5f55a4c
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="stand-alone-json-serialization"></a>독립 실행형 JSON Serialization
 JSON (JavaScript Object Notation)은 브라우저 내의 웹 페이지에서 실행되는 JavaScript 코드에 의해 사용되도록 특별히 디자인된 데이터 형식이며 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]에서 만든 ASP.NET AJAX 서비스에 의해 사용되는 기본 데이터 형식입니다.  
@@ -38,7 +40,7 @@ JSON (JavaScript Object Notation)은 브라우저 내의 웹 페이지에서 실
 |<xref:System.Enum>|수|이 항목의 뒷부분에 있는 "열거 및 JSON"을 참조하십시오.|  
 |<xref:System.Boolean>|부울|--|  
 |<xref:System.String>, <xref:System.Char>|문자열|--|  
-|<xref:System.TimeSpan>, <xref:System.Guid>, <xref:System.Uri>|문자열|이러한 유형의 JSON 형식은 XML의 형식과 동일합니다(기본적으로 ISO 8601 기간 형식의 TimeSpan, "12345678-ABCD-ABCD-ABCD-1234567890AB" 형식의 GUID 및 "http://www.example.com"과 같은 문자열 형식의 URI). 정확한 정보를 참조 하십시오. [데이터 계약 스키마 참조](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md)합니다.|  
+|<xref:System.TimeSpan>, <xref:System.Guid>, <xref:System.Uri>|문자열|이러한 유형의 JSON 형식은 XML 같다는 것 (기본적으로, ISO 8601 기간 형식의 TimeSpan, "12345678-ABCD-ABCD-ABCD-1234567890AB" 형식의 GUID 문자열 형식의에 URI가 같은 및 "http://www.example.com"). 정확한 정보를 참조 하십시오. [데이터 계약 스키마 참조](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md)합니다.|  
 |<xref:System.Xml.XmlQualifiedName>|문자열|형식은 "name:namespace"이며 첫 번째 콜론 앞에 오는 것이 이름입니다. 이름 또는 네임스페이스가 없는 경우도 있습니다. 네임스페이스가 없는 경우 콜론도 생략할 수 있습니다.|  
 |<xref:System.Array>의 <xref:System.Byte> 형식입니다.|숫자 배열|각 숫자는 1바이트 값을 나타냅니다.|  
 |<xref:System.DateTime>|날짜/시간 또는 문자열|이 항목의 뒷부분에 있는 날짜/시간 및 JSON을 참조하십시오.|  
@@ -51,7 +53,7 @@ JSON (JavaScript Object Notation)은 브라우저 내의 웹 페이지에서 실
 |모든 형식에 대해 `Null` 값|Null|Nullable 형식은 nullable이 아닌 형식과 같은 방식으로 지원되고 JSON에 매핑됩니다.|  
   
 ### <a name="enumerations-and-json"></a>열거 및 JSON  
- 열거형 멤버 값은 JSON에서 숫자로 처리되며 이는 열거형 멤버 값이 멤버 이름으로 포함되는 데이터 계약에서의 처리 방식과 다릅니다. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]데이터 처리 계약 참조 [데이터 계약의 열거형 형식](../../../../docs/framework/wcf/feature-details/enumeration-types-in-data-contracts.md)합니다.  
+ 열거형 멤버 값은 JSON에서 숫자로 처리되며 이는 열거형 멤버 값이 멤버 이름으로 포함되는 데이터 계약에서의 처리 방식과 다릅니다. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 데이터 처리 계약 참조 [데이터 계약의 열거형 형식](../../../../docs/framework/wcf/feature-details/enumeration-types-in-data-contracts.md)합니다.  
   
 -   예를 들어, `public enum Color {red, green, blue, yellow, pink}`가 있을 경우 `yellow`를 serialize하면 문자열 "yellow"가 아닌 숫자 3이 생성됩니다.  
   
@@ -117,7 +119,7 @@ JSON (JavaScript Object Notation)은 브라우저 내의 웹 페이지에서 실
  다형 serialization 작동 방식에 대한 자세한 내용 및 다형 serialization 사용 시 고려해야 할 제한 사항에 대한 설명은 이 항목의 뒷부분에 있는 고급 정보 단원을 참조하십시오.  
   
 ### <a name="versioning"></a>버전 관리  
- JSON에서는 <xref:System.Runtime.Serialization.IExtensibleDataObject> 인터페이스를 포함한 데이터 계약 버전 관리 기능이 완벽하게 지원됩니다. 또한 대부분의 경우에 형식을 한 가지 형식(예: XML)으로 deserialize한 다음 다른 형식(예: JSON)으로 serialize할 수 있으며 이 경우 데이터를 <xref:System.Runtime.Serialization.IExtensibleDataObject>에 유지할 수 있습니다. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][이후 버전과 호환 데이터 계약](../../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md)합니다. JSON은 순서가 지정되지 않으므로 순서 정보가 손실됩니다. 또한 JSON은 키 이름이 같은 여러 키/값 쌍을 지원하지 않습니다. 마지막으로, <xref:System.Runtime.Serialization.IExtensibleDataObject>의 모든 작업은 원래 다형적입니다. 즉, 모든 형식의 기본 형식인 <xref:System.Object>에 파생 형식이 할당됩니다.  
+ JSON에서는 <xref:System.Runtime.Serialization.IExtensibleDataObject> 인터페이스를 포함한 데이터 계약 버전 관리 기능이 완벽하게 지원됩니다. 또한 대부분의 경우에 형식을 한 가지 형식(예: XML)으로 deserialize한 다음 다른 형식(예: JSON)으로 serialize할 수 있으며 이 경우 데이터를 <xref:System.Runtime.Serialization.IExtensibleDataObject>에 유지할 수 있습니다. 자세한 내용은 [호환 가능한 데이터 계약](../../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md)을 참조하세요. JSON은 순서가 지정되지 않으므로 순서 정보가 손실됩니다. 또한 JSON은 키 이름이 같은 여러 키/값 쌍을 지원하지 않습니다. 마지막으로, <xref:System.Runtime.Serialization.IExtensibleDataObject>의 모든 작업은 원래 다형적입니다. 즉, 모든 형식의 기본 형식인 <xref:System.Object>에 파생 형식이 할당됩니다.  
   
 ## <a name="json-in-urls"></a>URL의 JSON  
  ASP.NET AJAX 끝점을 <xref:System.ServiceModel.Web.WebGetAttribute> 특성을 사용하는 HTTP GET 동사와 함께 사용하는 경우 요청 URL에 메시지 본문 대신 들어오는 매개 변수가 표시됩니다. JSON 요청 URL에도 사용할 수 있으므로 사용 하는 작업을 사용 하는 경우는 `Int` "number" 라고 및 `Person` URL "p" 라고 하는 복합 형식에 URL이 다음과 유사할 수 있습니다.  
@@ -192,13 +194,13 @@ http://example.com/myservice.svc/MyOperation?number=7&p={"name":"John","age":42}
  형식 암시와 충돌할 수 있으므로 "__type" 데이터 멤버는 사용할 수 없습니다.  
   
 #### <a name="reducing-the-size-of-type-hints"></a>형식 암시 크기 줄이기  
- JSON 메시지의 크기를 줄이기 위해 기본 데이터 계약 네임스페이스 접두사(http://schemas.datacontract.org/2004/07/)가 # 문자로 바뀝니다. (이 대체를 되돌릴 수 있도록 하는 이스케이프 규칙이 사용 됩니다: 네임 스페이스 "#"으로 시작 하는 경우 또는 "\\" 문자를 추가 추가 "\\" 문자)입니다. 따라서 "Circle"이 .NET 네임스페이스 "MyApp.Shapes"의 형식인 경우 해당 기본 데이터 계약 네임스페이스는 http://schemas.datacontract.org/2004/07/MyApp입니다. Shapes와 JSON 표현은 다음과 같습니다.  
+ JSON의 크기를 줄이려면 메시지를 기본 데이터 계약 네임 스페이스 접두사 (http://schemas.datacontract.org/2004/07/) "#" 문자로 바뀝니다. (이 대체를 되돌릴 수 있도록 하는 이스케이프 규칙이 사용 됩니다: 네임 스페이스 "#"으로 시작 하는 경우 또는 "\\" 문자를 추가 추가 "\\" 문자)입니다. 따라서 "Circle"이.NET 네임 스페이스 "myapp.shapes"의 형식인 경우 해당 기본 데이터 계약 네임 스페이스는 http://schemas.datacontract.org/2004/07/MyApp합니다. Shapes와 JSON 표현은 다음과 같습니다.  
   
 ```json  
 {"__type":"Circle:#MyApp.Shapes","x":50,"y":70,"radius":10}  
 ```  
   
- 잘린 이름(#MyApp.Shapes)과 전체 이름(http://schemas.datacontract.org/2004/07/MyApp.Shapes)은 모두 deserialization 시 인식됩니다.  
+ 잘린된 (#MyApp.Shapes)와 전체 (http://schemas.datacontract.org/2004/07/MyApp.Shapes) 이름을 deserialization 시 인식 됩니다.  
   
 #### <a name="type-hint-position-in-json-objects"></a>JSON 개체의 형식 힌트 위치  
  형식 힌트는 JSON 표현에서 맨 처음에 와야 합니다. 이 경우에만 JSON 처리에서 키/값 쌍의 순서가 중요합니다. 예를 들어 다음은 형식 힌트를 지정하는 올바른 방법이 아닙니다.  
@@ -256,7 +258,7 @@ http://example.com/myservice.svc/MyOperation?number=7&p={"name":"John","age":42}
   
  <xref:System.Object>로 다시 deserialize하는 경우:  
   
--   `Shape`알려진 형식 목록에 있어야 합니다. 필요 <xref:System.Collections.Generic.List%601> 형식의 `Shape` 알려진된 형식에 영향을 주지 않습니다. 추가 해야 하는 참고 `Shape` serialization에서 알려진된 형식에이 경우-이 자동으로 수행 됩니다.  
+-   `Shape` 알려진 형식 목록에 있어야 합니다. 필요 <xref:System.Collections.Generic.List%601> 형식의 `Shape` 알려진된 형식에 영향을 주지 않습니다. 추가 해야 하는 참고 `Shape` serialization에서 알려진된 형식에이 경우-이 자동으로 수행 됩니다.  
   
 -   컬렉션으로 deserialize 되는 <xref:System.Array> 형식의 <xref:System.Object> 포함 된 `Shape` 인스턴스.  
   

@@ -16,11 +16,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 90e9d5f3a2cff454ff7892877f012f8679b9ccac
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.openlocfilehash: bfd7c3e36bf28c364adf3cd230522cfc40a9503b
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="workflow-security"></a>워크플로 보안
 Windows WF (Workflow Foundation) 통합 된 Microsoft SQL Server와 같은 여러 가지 서로 다른 기술 및 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)]합니다. 이러한 기술과 잘못 상호 작용하면 워크플로에 보안 문제가 발생할 수 있습니다.  
@@ -41,15 +41,15 @@ Windows WF (Workflow Foundation) 통합 된 Microsoft SQL Server와 같은 여�
   
 -   많은 수의 자식 활동, 위치, 책갈피, 호스트 확장 또는 범위를 사용하거나 매우 큰 페이로드가 있는 책갈피를 사용할 때는 메모리가 부족하거나 유지 중에 과도한 양의 데이터베이스 공간이 할당될 수 있습니다. 개체 수준 및 데이터베이스 수준 보안을 사용하여 이 문제를 완화할 수 있습니다.  
   
--   <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore>를 사용할 때는 인스턴스 저장소를 보호해야 합니다. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [SQL Server에 대 한 유용한 정보](http://go.microsoft.com/fwlink/?LinkId=164972)합니다.  
+-   <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore>를 사용할 때는 인스턴스 저장소를 보호해야 합니다. 자세한 내용은 참조 [SQL Server에 대 한 유용한 정보](http://go.microsoft.com/fwlink/?LinkId=164972)합니다.  
   
--   인스턴스 저장소의 중요 데이터를 암호화해야 합니다. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [SQL 보안 암호화](http://go.microsoft.com/fwlink/?LinkId=164976)합니다.  
+-   인스턴스 저장소의 중요 데이터를 암호화해야 합니다. 자세한 내용은 참조 [SQL 보안 암호화](http://go.microsoft.com/fwlink/?LinkId=164976)합니다.  
   
 -   데이터베이스 연결 문자열은 종종 구성 파일에 포함되기 때문에 Windows 수준 보안(ACL)을 사용하여 구성 파일(대개 Web.Config)이 안전한지, 로그인과 암호 정보가 연결 문자열에 포함되어 있지 않은지 확인해야 합니다. 대신 데이터베이스와 웹 서버 사이에는 Windows 인증을 사용해야 합니다.  
   
 ## <a name="considerations-for-workflowservicehost"></a>WorkflowServiceHost에 대한 고려 사항  
   
--   워크플로에 사용되는 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 끝점을 보호해야 합니다. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [WCF 보안 개요](http://go.microsoft.com/fwlink/?LinkID=164975)합니다.  
+-   워크플로에 사용되는 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 끝점을 보호해야 합니다. 자세한 내용은 참조 [WCF 보안 개요](http://go.microsoft.com/fwlink/?LinkID=164975)합니다.  
   
 -   <xref:System.ServiceModel.ServiceAuthorizationManager>를 사용하여 호스트 수준 권한 부여를 구현할 수 있습니다. 참조 [방법: 서비스에 대 한 사용자 지정 권한 부여 관리자 만들기](http://go.microsoft.com/fwlink/?LinkId=192228) 대 한 자세한 내용은 합니다. 다음 샘플에도 설명 되어: [워크플로 서비스 보안](../../../docs/framework/windows-workflow-foundation/samples/securing-workflow-services.md)합니다.  
   

@@ -1,20 +1,17 @@
 ---
-title: "F# 형식"
-description: "F # 및 F # 형식 어떻게 명명 및 설명 대 한 사용 되는 형식에 알아봅니다."
-keywords: "visual f#, f#, 함수형 프로그래밍"
+title: F# 형식
+description: 'F # 및 F # 형식 어떻게 명명 및 설명 대 한 사용 되는 형식에 알아봅니다.'
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: c7272a0d-5ab6-4eae-bceb-e49af498b917
-ms.openlocfilehash: 9b7235637f301f91ae2cc8fbc59adc27cdfd5bd0
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 42521ed75a76753af81d3bbb9693ec5af29536ad
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="f-types"></a>F# 형식
 
@@ -44,19 +41,19 @@ F # 코드에서는 형식 이름을 작성 해야 하는 경우가 많습니다
 
 |형식|형식 구문|예제|
 |----|-----------|--------|
-|기본 형식|*형식 이름*|`int`<br /><br />`float`<br /><br />`string`|
-|집계 유형 (클래스, 구조체, 공용 구조체, 레코드, 열거형, 및 등)|*형식 이름*|`System.DateTime`<br /><br />`Color`|
+|기본 형식|*type-name*|`int`<br /><br />`float`<br /><br />`string`|
+|집계 유형 (클래스, 구조체, 공용 구조체, 레코드, 열거형, 및 등)|*type-name*|`System.DateTime`<br /><br />`Color`|
 |형식 약어|*형식 약어 이름*|`bigint`|
 |정규화 된 형식|*namespaces.type 이름*<br /><br />또는<br /><br />*modules.type 이름*<br /><br />또는<br /><br />*namespaces.modules.type 이름*|`System.IO.StreamWriter`|
 |array|*형식 이름*또는<br /><br />*형식 이름* 배열|`int[]`<br /><br />`array<int>`<br /><br />`int array`|
 |2 차원 배열|*형식 이름*[,]|`int[,]`<br /><br />`float[,]`|
 |3 차원 배열|*형식 이름*[,]|`float[,,]`|
-|tuple|*형식 name1* &#42; *형식 name2* ...|예를 들어 `(1,'b',3)` 형식이`int * char * int`|
+|tuple|*형식 name1* &#42; *형식 name2* ...|예를 들어 `(1,'b',3)` 형식이 `int * char * int`|
 |제네릭 형식(generic type)|*형식 매개 변수* *제네릭 형식 이름*<br /><br />또는<br /><br />*제네릭 형식 이름을*&lt;*형식 매개 변수 목록*&gt;|`'a list`<br /><br />`list<'a>`<br /><br />`Dictionary<'key, 'value>`|
 |생성 된 형식 (제공 되는 특정 형식 인수가 있는 제네릭 형식)|*형식 인수* *제네릭 형식 이름*<br /><br />또는<br /><br />*제네릭 형식 이름을*&lt;*유형 인수 목록*&gt;|`int option`<br /><br />`string list`<br /><br />`int ref`<br /><br />`option<int>`<br /><br />`list<string>`<br /><br />`ref<int>`<br /><br />`Dictionary<int, string>`|
-|단일 매개 변수가 있는 함수 형식|*매개 변수-type1*  - &gt; *반환 형식*|사용 하는 함수는 `int` 반환는 `string` 형식이`int -> string`|
-|여러 매개 변수가 있는 함수 형식|*매개 변수-type1*  - &gt; *매개 변수 type2*  - &gt; ...-&gt; *반환 형식*|사용 하는 함수는 `int` 및 `float` 반환는 `string` 형식이`int -> float -> string`|
-|매개 변수로 고차 함수|(*함수 형식*)|`List.map`형식이`('a -> 'b) -> 'a list -> 'b list`|
+|단일 매개 변수가 있는 함수 형식|*매개 변수-type1*  - &gt; *반환 형식*|사용 하는 함수는 `int` 반환는 `string` 형식이 `int -> string`|
+|여러 매개 변수가 있는 함수 형식|*매개 변수-type1*  - &gt; *매개 변수 type2*  - &gt; ...-&gt; *반환 형식*|사용 하는 함수는 `int` 및 `float` 반환는 `string` 형식이 `int -> float -> string`|
+|매개 변수로 고차 함수|(*함수 형식*)|`List.map` 형식이 `('a -> 'b) -> 'a list -> 'b list`|
 |대리자(delegate)|위임 *함수 형식*|`delegate of unit -> int`|
 |유연한 형식|#*형식 이름*|`#System.Windows.Forms.Control`<br /><br />`#seq<int>`|
 

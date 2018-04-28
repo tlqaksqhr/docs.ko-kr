@@ -1,20 +1,17 @@
 ---
-title: "모듈(F#)"
-description: "F # 모듈은 F # 코드 값, 형식, F # 프로그램에서 함수 값 등의 그룹화 하는 방법에 대해 알아봅니다."
-keywords: "visual f#, f#, 함수형 프로그래밍"
+title: 모듈(F#)
+description: 'F # 모듈은 F # 코드 값, 형식, F # 프로그램에서 함수 값 등의 그룹화 하는 방법에 대해 알아봅니다.'
 author: cartermp
 ms.author: phcart
 ms.date: 04/24/2017
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: 46de2d18-da51-40fa-a262-92edecada79d
-ms.openlocfilehash: 9b189903511f53d3ecceb30f3d056e189b00511d
-ms.sourcegitcommit: 3a96c706e4dbb4667bf3bf37edac9e1666646f93
+ms.openlocfilehash: fc7ac25902169aa39c3f7c088cd87ab58bcb7296
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="modules"></a>모듈
 

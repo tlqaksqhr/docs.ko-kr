@@ -1,20 +1,17 @@
 ---
-title: "시퀀스(F#)"
-description: "대규모 데이터의 컬렉션을 정렬 되어 있지만 모든 요소를 사용 하려면 반드시 원하지 때 F # 시퀀스를 사용 하는 방법을 알아봅니다."
-keywords: "visual f#, f#, 함수형 프로그래밍"
+title: 시퀀스(F#)
+description: '대규모 데이터의 컬렉션을 정렬 되어 있지만 모든 요소를 사용 하려면 반드시 원하지 때 F # 시퀀스를 사용 하는 방법을 알아봅니다.'
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: 23dc7d75-cd26-4df2-9be3-9d1aba5c4443
-ms.openlocfilehash: b0562a6efbd2398cd8730bb835a1833955fee1c7
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: a3521037112d40998ed00cd6fed376882c2f2c88
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="sequences"></a>시퀀스
 
@@ -90,7 +87,7 @@ A *식 시퀀스* 시퀀스에 계산 되는 식입니다. 시퀀스 식에는 �
 0 10 20 30 40
 ```
 
-사용 하 여 [Seq.ofArray](https://msdn.microsoft.com/library/299cd4d9-be72-4511-aac8-089e1ddaac99) 및 [Seq.ofList &#60;' &#62; 함수](https://msdn.microsoft.com/visualfsharpdocs/conceptual/seq.oflist%5b%27t%5d-function-%5bfsharp%5d), 배열 및 목록에서 순서를 만들 수 있습니다. 그러나 변환할 수도 있습니다 배열과 목록을 시퀀스에는 캐스트 연산자를 사용 하 여 합니다. 두 가지 방법은 모두 다음 코드에 표시 됩니다.
+사용 하 여 [Seq.ofArray](https://msdn.microsoft.com/library/299cd4d9-be72-4511-aac8-089e1ddaac99) 및 [Seq.ofList&#60;' T&#62; 함수](https://msdn.microsoft.com/visualfsharpdocs/conceptual/seq.oflist%5b%27t%5d-function-%5bfsharp%5d), 배열 및 목록에서 순서를 만들 수 있습니다. 그러나 변환할 수도 있습니다 배열과 목록을 시퀀스에는 캐스트 연산자를 사용 하 여 합니다. 두 가지 방법은 모두 다음 코드에 표시 됩니다.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/fssequences/snippet11.fs)]
 
@@ -102,7 +99,7 @@ A *식 시퀀스* 시퀀스에 계산 되는 식입니다. 시퀀스 식에는 �
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/fssequences/snippet13.fs)]
 
-[Seq.unfold](https://msdn.microsoft.com/library/7d9232fc-742e-42bc-bdf7-6f130f0eff21) 계산 함수는 상태를 사용 하는 시퀀스의 각 후속 요소를 만드는 로부터 시퀀스를 생성 합니다. 상태는 각 요소를 계산 하는 데 사용 되 고 각 요소는 계산 된 변경할 수 있는 값 뿐입니다. 두 번째 인수를 `Seq.unfold` 는 시퀀스를 시작 하는 데 사용 되는 초기 값입니다. `Seq.unfold`시퀀스를 반환 하 여 종료를 사용할 수 있는 상태에 대 한 옵션 종류를 사용 하 여 `None` 값입니다. 다음 코드는 시퀀스는 두 가지 예를 보여 줍니다. `seq1` 및 `fib`를 통해 생성 된는 `unfold` 작업 합니다. 첫 번째 `seq1`, 100 까지의 숫자로 이루어진 단순한 시퀀스 됩니다. 두 번째 `fib`, 사용 하 여 `unfold` 피보나치를 계산 합니다. 각 요소는 피보나치에서 이전 두 피보나치 숫자의 합 이기 때문에 상태 값은 시퀀스에서 이전 두 숫자의 구성 된 튜플을 합니다. 초기 값은 `(1,1)`, 시퀀스에서 처음 두 번호입니다.
+[Seq.unfold](https://msdn.microsoft.com/library/7d9232fc-742e-42bc-bdf7-6f130f0eff21) 계산 함수는 상태를 사용 하는 시퀀스의 각 후속 요소를 만드는 로부터 시퀀스를 생성 합니다. 상태는 각 요소를 계산 하는 데 사용 되 고 각 요소는 계산 된 변경할 수 있는 값 뿐입니다. 두 번째 인수를 `Seq.unfold` 는 시퀀스를 시작 하는 데 사용 되는 초기 값입니다. `Seq.unfold` 시퀀스를 반환 하 여 종료를 사용할 수 있는 상태에 대 한 옵션 종류를 사용 하 여 `None` 값입니다. 다음 코드는 시퀀스는 두 가지 예를 보여 줍니다. `seq1` 및 `fib`를 통해 생성 된는 `unfold` 작업 합니다. 첫 번째 `seq1`, 100 까지의 숫자로 이루어진 단순한 시퀀스 됩니다. 두 번째 `fib`, 사용 하 여 `unfold` 피보나치를 계산 합니다. 각 요소는 피보나치에서 이전 두 피보나치 숫자의 합 이기 때문에 상태 값은 시퀀스에서 이전 두 숫자의 구성 된 튜플을 합니다. 초기 값은 `(1,1)`, 시퀀스에서 처음 두 번호입니다.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/fssequences/snippet14.fs)]
 
@@ -198,7 +195,7 @@ Moving average:
 
 이전 코드에서 첫 번째 요소에만 계산 및 조사를 하 고 결과-1입니다.
 
-[Seq.countBy](https://msdn.microsoft.com/library/721702a5-150e-4fe8-81cd-ffbf8476cc1f) 라고 하는 값을 생성 하는 함수는 *키* 각 요소에 대 한 합니다. 각 요소에 대해이 함수를 호출 하 여 각 요소에 대 한 키가 생성 됩니다. `Seq.countBy`키 값 및 키의 각 값을 생성 하는 요소의 수를 포함 하는 시퀀스를 반환 합니다.
+[Seq.countBy](https://msdn.microsoft.com/library/721702a5-150e-4fe8-81cd-ffbf8476cc1f) 라고 하는 값을 생성 하는 함수는 *키* 각 요소에 대 한 합니다. 각 요소에 대해이 함수를 호출 하 여 각 요소에 대 한 키가 생성 됩니다. `Seq.countBy` 키 값 및 키의 각 값을 생성 하는 요소의 수를 포함 하는 시퀀스를 반환 합니다.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/fssequences/snippet201.fs)]
 
@@ -210,7 +207,7 @@ Moving average:
 
 이전 출력 2, 키를 생성 하는 33 값과 0 키를 생성 하는 33 값 1, 키를 생성 하는 원래 시퀀스의 34 요소 했음을 보여 줍니다.
 
-호출 하 여 시퀀스의 요소를 그룹화 할 수 있습니다 [Seq.groupBy](https://msdn.microsoft.com/library/d46a04df-1a42-40cc-a368-058c9c5806fd)합니다. `Seq.groupBy`시퀀스 및 요소에서 키를 생성 하는 함수를 사용 합니다. 함수는 시퀀스의 각 요소에 대해 실행 됩니다. `Seq.groupBy`튜플, 여기서 각 튜플의 첫 번째 요소는 키가 고 두 번째는 해당 키를 생성 하는 요소의 시퀀스의 시퀀스를 반환 합니다.
+호출 하 여 시퀀스의 요소를 그룹화 할 수 있습니다 [Seq.groupBy](https://msdn.microsoft.com/library/d46a04df-1a42-40cc-a368-058c9c5806fd)합니다. `Seq.groupBy` 시퀀스 및 요소에서 키를 생성 하는 함수를 사용 합니다. 함수는 시퀀스의 각 요소에 대해 실행 됩니다. `Seq.groupBy` 튜플, 여기서 각 튜플의 첫 번째 요소는 키가 고 두 번째는 해당 키를 생성 하는 요소의 시퀀스의 시퀀스를 반환 합니다.
 
 다음 코드 예제에서는 사용을 보여 줍니다. `Seq.groupBy` 100부터 1 까지의 숫자 시퀀스 키 값이 각각 0, 1 및 2 3 개의 그룹으로 분할 합니다.
 
@@ -224,7 +221,7 @@ Moving average:
 
 호출 하 여 중복 요소를 제거 하는 시퀀스를 만들 수 [Seq.distinct](https://msdn.microsoft.com/library/99d01014-7e0e-4e7b-9d0a-41a61d93f401)합니다. 사용할 수 있습니다 또는 [Seq.distinctBy](https://msdn.microsoft.com/library/9293293b-9420-49c8-848f-401a9cd49b75), 각 요소에 대해 호출 되는 키 생성 함수입니다. 결과 시퀀스; 고유 키가 원래 시퀀스의 요소를 포함 합니다. 이전 요소에 중복 키를 생성 하는 요소는 무시 됩니다.
 
-다음 코드 예제에서는 `Seq.distinct`합니다. `Seq.distinct`이진 숫자를 나타내는 시퀀스를 생성 한 다음만 고유 요소가 0과 1을 표시 하 여 표시 됩니다.
+다음 코드 예제에서는 `Seq.distinct`합니다. `Seq.distinct` 이진 숫자를 나타내는 시퀀스를 생성 한 다음만 고유 요소가 0과 1을 표시 하 여 표시 됩니다.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/fssequences/snippet22.fs)]
 
@@ -233,7 +230,7 @@ Moving average:
 [!code-fsharp[Main](../../../samples/snippets/fsharp/fssequences/snippet23.fs)]
     
 ## <a name="readonly-and-cached-sequences"></a>읽기 전용 및 캐시 된 시퀀스
-[Seq.readonly](https://msdn.microsoft.com/library/88059cb4-3bb0-4126-9448-fbcd48fe13a7) 시퀀스의 읽기 전용 복사본을 만듭니다. `Seq.readonly`읽기 / 쓰기 컬렉션, 배열 등과 같이 있고 원래 컬렉션을 수정 하지 않을 때 유용 합니다. 이 함수는 데이터 캡슐화를 유지 데 사용할 수 있습니다. 다음 코드 예제에서는 배열이 포함 된 형식이 만들어집니다. 속성을 노출 하 여 배열에 있지만 사용 하 여 배열에서 만든 하는 시퀀스를 반환 배열을 반환 하는 대신 `Seq.readonly`합니다.
+[Seq.readonly](https://msdn.microsoft.com/library/88059cb4-3bb0-4126-9448-fbcd48fe13a7) 시퀀스의 읽기 전용 복사본을 만듭니다. `Seq.readonly` 읽기 / 쓰기 컬렉션, 배열 등과 같이 있고 원래 컬렉션을 수정 하지 않을 때 유용 합니다. 이 함수는 데이터 캡슐화를 유지 데 사용할 수 있습니다. 다음 코드 예제에서는 배열이 포함 된 형식이 만들어집니다. 속성을 노출 하 여 배열에 있지만 사용 하 여 배열에서 만든 하는 시퀀스를 반환 배열을 반환 하는 대신 `Seq.readonly`합니다.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/fssequences/snippet24.fs)]
 

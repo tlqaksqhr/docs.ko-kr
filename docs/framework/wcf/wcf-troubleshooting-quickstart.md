@@ -1,27 +1,29 @@
 ---
-title: "WCF 문제 해결 퀵 스타트"
-ms.custom: 
+title: WCF 문제 해결 퀵 스타트
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - WCF [WCF], troubleshooting
 - Windows Communication Foundation [WCF], troubleshooting
 ms.assetid: a9ea7a53-f31a-46eb-806e-898e465a4992
-caps.latest.revision: "22"
+caps.latest.revision: 22
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: d0bcd7d08a698a2a839094204dcc5f7105ef8f6b
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: 490b756a9beae09b20a36d3fc6a20c85aad76618
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="wcf-troubleshooting-quickstart"></a>WCF 문제 해결 퀵 스타트
 이 항목에서는 WCF 클라이언트 및 서비스를 개발하는 동안 발생하는 몇 가지 알려진 문제점을 나열합니다. 발생하는 문제가 이 목록에 없는 경우 서비스에 대한 추적을 구성하는 것이 좋습니다. 추적을 구성하면 추적 파일 뷰어로 보고 서비스 내에서 발생하는 예외에 대한 자세한 정보를 얻을 수 있는 추적 파일이 생성됩니다. 추적을 구성하는 방법에 대한 자세한 내용은 [Configuring Tracing](../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md)을 참조하십시오. 추적 파일 뷰어에 대한 자세한 내용은 [Service Trace Viewer Tool (SvcTraceViewer.exe)](../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)를 참조하십시오.  
@@ -62,11 +64,11 @@ ms.lasthandoff: 01/19/2018
   
 <a name="BKMK_q1"></a>   
 ## <a name="sometimes-i-receive-a-messagesecurityexception-on-the-second-request-if-my-client-is-idle-for-a-while-after-the-first-request-what-is-happening"></a>첫 번째 요청 이후 클라이언트가 잠시 유휴 상태일 때 가끔씩 두 번째 요청에서 MessageSecurityException이 발생합니다. 이유가 무엇입니까?  
- 두 번째 요청은 주로 (1) 세션 시간 제한이 초과되었거나 (2) 서비스를 호스팅하는 웹 서버가 재활용되는 경우와 같은 두 가지 이유로 인해 실패할 수 있습니다. 첫 번째 경우 세션은 서비스가 시간 제한을 초과할 때까지 유효합니다. 서비스는 서비스의 바인딩(<xref:System.ServiceModel.Channels.Binding.ReceiveTimeout%2A>)에 지정된 시간 내에 클라이언트가 보낸 요청을 받지 못하면 보안 세션을 종료합니다. 이후로 클라이언트 메시지가 전송되면 <xref:System.ServiceModel.Security.MessageSecurityException>이 발생합니다. 클라이언트는 이후로 메시지를 보내거나 상태 저장 보안 컨텍스트 토큰을 사용하려면 서비스와의 보안 세션을 다시 설정해야 합니다. 상태 저장 보안 컨텍스트 토큰을 사용하여 웹 서버가 재생되는 동안 보안 세션이 유지되도록 할 수도 있습니다. [!INCLUDE[crabout](../../../includes/crabout-md.md)]상태 저장 보안 컨텍스트 토큰을 사용 하 여 보안 세션에서 참조 [하는 방법: 보안 세션에 대 한 보안 컨텍스트 토큰 만들기](../../../docs/framework/wcf/feature-details/how-to-create-a-security-context-token-for-a-secure-session.md)합니다. 또는 보안 세션을 사용하지 않도록 설정할 수 있습니다. 사용 하는 경우는 [ \<wsHttpBinding >](../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md) 바인딩을 설정할 수 있습니다는 `establishSecurityContext` 속성을 `false` 를 보안 세션을 사용 하지 않도록 설정 합니다. 다른 바인딩의 보안 세션을 사용하지 않도록 설정하려면 사용자 지정 바인딩을 만들어야 합니다. 사용자 지정 바인딩을 만드는 방법에 대한 자세한 내용은 [How to: Create a Custom Binding Using the SecurityBindingElement](../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)를 참조하십시오. 이러한 옵션을 적용하기 전에 먼저 응용 프로그램의 보안 요구 사항을 이해해야 합니다.  
+ 두 번째 요청은 주로 (1) 세션 시간 제한이 초과되었거나 (2) 서비스를 호스팅하는 웹 서버가 재활용되는 경우와 같은 두 가지 이유로 인해 실패할 수 있습니다. 첫 번째 경우 세션은 서비스가 시간 제한을 초과할 때까지 유효합니다. 서비스는 서비스의 바인딩(<xref:System.ServiceModel.Channels.Binding.ReceiveTimeout%2A>)에 지정된 시간 내에 클라이언트가 보낸 요청을 받지 못하면 보안 세션을 종료합니다. 이후로 클라이언트 메시지가 전송되면 <xref:System.ServiceModel.Security.MessageSecurityException>이 발생합니다. 클라이언트는 이후로 메시지를 보내거나 상태 저장 보안 컨텍스트 토큰을 사용하려면 서비스와의 보안 세션을 다시 설정해야 합니다. 상태 저장 보안 컨텍스트 토큰을 사용하여 웹 서버가 재생되는 동안 보안 세션이 유지되도록 할 수도 있습니다. [!INCLUDE[crabout](../../../includes/crabout-md.md)] 상태 저장 보안 컨텍스트 토큰을 사용 하 여 보안 세션에서 참조 [하는 방법: 보안 세션에 대 한 보안 컨텍스트 토큰 만들기](../../../docs/framework/wcf/feature-details/how-to-create-a-security-context-token-for-a-secure-session.md)합니다. 또는 보안 세션을 사용하지 않도록 설정할 수 있습니다. 사용 하는 경우는 [ \<wsHttpBinding >](../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md) 바인딩을 설정할 수 있습니다는 `establishSecurityContext` 속성을 `false` 를 보안 세션을 사용 하지 않도록 설정 합니다. 다른 바인딩의 보안 세션을 사용하지 않도록 설정하려면 사용자 지정 바인딩을 만들어야 합니다. 사용자 지정 바인딩을 만드는 방법에 대한 자세한 내용은 [How to: Create a Custom Binding Using the SecurityBindingElement](../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)를 참조하십시오. 이러한 옵션을 적용하기 전에 먼저 응용 프로그램의 보안 요구 사항을 이해해야 합니다.  
   
 <a name="BKMK_q2"></a>   
 ## <a name="my-service-starts-to-reject-new-clients-after-about-10-clients-are-interacting-with-it-what-is-happening"></a>서비스와 상호 작용하는 클라이언트의 수가 약 10개를 넘으면 서비스가 새 클라이언트를 거부하기 시작합니다. 이유가 무엇입니까?  
- 기본적으로 서비스는 10개의 동시 세션만 지원할 수 있습니다. 따라서 서비스 바인딩에서 세션을 사용하는 경우 서비스는 이 숫자에 도달할 때까지 새 클라이언트 연결을 수락하고, 그 후에는 현재 세션 중 하나가 끝날 때까지 새 클라이언트 연결을 거부합니다. 여러 가지 방법을 통해 더 많은 클라이언트를 지원할 수 있습니다. 먼저, 서비스에 세션이 필요하지 않은 경우 세션 바인딩을 사용하지 않을 수 있습니다. ([!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [세션을 사용 하 여](../../../docs/framework/wcf/using-sessions.md).) 또 다른 방법으로, <xref:System.ServiceModel.Description.ServiceThrottlingBehavior.MaxConcurrentSessions%2A> 속성의 값을 사용자의 환경에 적절하게 변경하여 세션 제한을 높일 수 있습니다.  
+ 기본적으로 서비스는 10개의 동시 세션만 지원할 수 있습니다. 따라서 서비스 바인딩에서 세션을 사용하는 경우 서비스는 이 숫자에 도달할 때까지 새 클라이언트 연결을 수락하고, 그 후에는 현재 세션 중 하나가 끝날 때까지 새 클라이언트 연결을 거부합니다. 여러 가지 방법을 통해 더 많은 클라이언트를 지원할 수 있습니다. 먼저, 서비스에 세션이 필요하지 않은 경우 세션 바인딩을 사용하지 않을 수 있습니다. (자세한 내용은 참조 [를 사용 하 여 세션](../../../docs/framework/wcf/using-sessions.md).) 또 다른 방법으로, <xref:System.ServiceModel.Description.ServiceThrottlingBehavior.MaxConcurrentSessions%2A> 속성의 값을 사용자의 환경에 적절하게 변경하여 세션 제한을 높일 수 있습니다.  
   
 <a name="BKMK_q3"></a>   
 ## <a name="can-i-load-my-service-configuration-from-somewhere-other-than-the-wcf-applications-configuration-file"></a>WCF 응용 프로그램의 구성 파일이 아닌 다른 위치에서 서비스 구성을 로드할 수 있습니까?  
@@ -159,13 +161,13 @@ public class MyServiceHost : ServiceHost
   
 -   표준 방법으로 serialize하는 예외에 의존할 수 없습니다. <xref:System.Security.SecurityException>과 같이 전혀 serialize할 수 없는 것도 있습니다.  
   
--   내부 구현 세부 정보를 클라이언트에 노출합니다. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][계약 및 서비스에서 오류 지정 및 처리](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)합니다.  
+-   내부 구현 세부 정보를 클라이언트에 노출합니다. 자세한 내용은 참조 [지정 및 계약 및 서비스에서 처리 오류](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)합니다.  
   
  그러나 응용 프로그램을 디버깅하는 경우에는 <xref:System.ServiceModel.Description.ServiceDebugBehavior> 클래스를 사용하여 예외 정보를 serialize하고 클라이언트에 반환할 수 있습니다.  
   
 <a name="BKMK_q6"></a>   
 ## <a name="it-seems-like-one-way-and-request-reply-operations-return-at-roughly-the-same-speed-when-the-reply-contains-no-data-whats-happening"></a>회신에 데이터가 포함되지 않은 경우 단방향 및 요청-회신 작업이 거의 같은 속도로 반환되는 것 같습니다. 이유가 무엇입니까?  
- 작업을 단방향 작업으로 지정한다는 것은 작업 계약이 입력 메시지를 받은 다음 출력 메시지를 반환하지 않는다는 것을 의미할 뿐입니다. [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]에서 모든 클라이언트 호출은 아웃바운드 데이터가 네트워크에 기록되거나 예외가 throw되는 경우 반환됩니다. 단방향 작업도 이와 동일한 방식으로 작동하며, 서비스를 찾을 수 없는 경우 throw되거나 서비스가 네트워크로부터 데이터를 받을 준비가 되지 않은 경우 블로킹될 수 있습니다. 그 결과 보통 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]에서는 단방향 호출이 요청-회신보다 더 빨리 클라이언트에 반환되지만 네트워크를 통해 아웃바운드 데이터를 보내는 속도가 느려지는 상황이 발생하는 경우 요청-회신 작업뿐 아니라 단방향 작업의 속도도 느려집니다. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][단방향 서비스](../../../docs/framework/wcf/feature-details/one-way-services.md) 및 [WCF 클라이언트를 사용 하 여 서비스에 액세스](../../../docs/framework/wcf/feature-details/accessing-services-using-a-client.md)합니다.  
+ 작업을 단방향 작업으로 지정한다는 것은 작업 계약이 입력 메시지를 받은 다음 출력 메시지를 반환하지 않는다는 것을 의미할 뿐입니다. [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]에서 모든 클라이언트 호출은 아웃바운드 데이터가 네트워크에 기록되거나 예외가 throw되는 경우 반환됩니다. 단방향 작업도 이와 동일한 방식으로 작동하며, 서비스를 찾을 수 없는 경우 throw되거나 서비스가 네트워크로부터 데이터를 받을 준비가 되지 않은 경우 블로킹될 수 있습니다. 그 결과 보통 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]에서는 단방향 호출이 요청-회신보다 더 빨리 클라이언트에 반환되지만 네트워크를 통해 아웃바운드 데이터를 보내는 속도가 느려지는 상황이 발생하는 경우 요청-회신 작업뿐 아니라 단방향 작업의 속도도 느려집니다. 자세한 내용은 참조 [단방향 서비스](../../../docs/framework/wcf/feature-details/one-way-services.md) 및 [WCF 클라이언트를 사용 하 여 액세스 서비스](../../../docs/framework/wcf/feature-details/accessing-services-using-a-client.md)합니다.  
   
 <a name="BKMK_q77"></a>   
 ## <a name="im-using-an-x509-certificate-with-my-service-and-i-get-a-systemsecuritycryptographycryptographicexception-whats-happening"></a>서비스에 X.509 인증서를 사용하고 있으며 System.Security.Cryptography.CryptographicException이 발생합니다. 이유가 무엇입니까?  
@@ -248,7 +250,7 @@ public class MyServiceHost : ServiceHost
   
 <a name="BK_MK99"></a>   
 ## <a name="when-calling-a-wcf-web-http-application-from-a-wcf-soap-application-the-service-returns-the-following-error-405-method-not-allowed"></a>WCF SOAP 응용 프로그램에서 WCF 웹 HTTP 응용 프로그램을 호출하면 서비스에서 다음 오류를 반환합니다: 405 메서드가 허용되지 않습니다.  
- WCF 웹 HTTP 응용 프로그램을 호출 (사용 하는 서비스는 <xref:System.ServiceModel.WebHttpBinding> 및 <xref:System.ServiceModel.Description.WebHttpBehavior>) 서비스는 WCF에서 다음과 같은 예외를 생성할 수 있습니다: `Unhandled Exception: System.ServiceModel.FaultException`1[System.ServiceModel.ExceptionDetail]: 원격 서버에서 예기치 않은 응답을 반환 : (405) 메서드가 아닙니다 허용 됨.'이 예외는 나가는 WCF 덮어쓰기 때문에 발생 <xref:System.ServiceModel.OperationContext> 들어오는와 <xref:System.ServiceModel.OperationContext>합니다. 이 문제를 해결하려면 WCF 웹 HTTP 서비스 작업 안에 <xref:System.ServiceModel.OperationContextScope> 을 만듭니다. 예:  
+ WCF 웹 HTTP 응용 프로그램을 호출 (사용 하는 서비스는 <xref:System.ServiceModel.WebHttpBinding> 및 <xref:System.ServiceModel.Description.WebHttpBehavior>) 서비스는 WCF에서 다음과 같은 예외를 생성할 수 있습니다: `Unhandled Exception: System.ServiceModel.FaultException`1[System.ServiceModel.ExceptionDetail]: 원격 서버에서 예기치 않은 응답을 반환 : (405) 메서드가 아닙니다 허용 됨.'이 예외는 나가는 WCF 덮어쓰기 때문에 발생 <xref:System.ServiceModel.OperationContext> 들어오는와 <xref:System.ServiceModel.OperationContext>합니다. 이 문제를 해결하려면 WCF 웹 HTTP 서비스 작업 안에 <xref:System.ServiceModel.OperationContextScope> 을 만듭니다. 예를 들어:  
   
 ```csharp
 public string Echo(string input)  

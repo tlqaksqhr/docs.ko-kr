@@ -1,13 +1,13 @@
 ---
-title: "메시지 계약 사용"
-ms.custom: 
+title: 메시지 계약 사용
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,27 +15,27 @@ dev_langs:
 helpviewer_keywords:
 - message contracts [WCF]
 ms.assetid: 1e19c64a-ae84-4c2f-9155-91c54a77c249
-caps.latest.revision: 
+caps.latest.revision: 46
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: db19b5188c98d157b98d65422ee38d4ed59f733a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: e9f6d0e9d64c510b47b0697d02178f1c0a95f61b
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="using-message-contracts"></a>메시지 계약 사용
-일반적으로 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 응용 프로그램을 빌드할 때 개발자는 데이터 구조 및 serialization 문제에 특히 주의를 기울여야 하지만 데이터가 전달되는 메시지의 구조에 대해서는 주의를 기울이지 않아도 됩니다. 이러한 응용 프로그램의 경우 매개 변수 또는 반환 값에 대한 데이터 계약을 만드는 과정은 간단합니다. ([!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [데이터 전송 서비스 계약에 지정](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md).)  
+일반적으로 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 응용 프로그램을 빌드할 때 개발자는 데이터 구조 및 serialization 문제에 특히 주의를 기울여야 하지만 데이터가 전달되는 메시지의 구조에 대해서는 주의를 기울이지 않아도 됩니다. 이러한 응용 프로그램의 경우 매개 변수 또는 반환 값에 대한 데이터 계약을 만드는 과정은 간단합니다. (자세한 내용은 참조 [서비스 계약에 데이터 전송 지정](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md).)  
   
  그러나 SOAP 메시지의 구조를 완벽하게 제어하는 것이 SOAP 메시지의 내용을 제어하는 것만큼이나 중요한 경우도 있습니다. 특히 상호 운용성이 중요한 경우 또는 메시지나 메시지 부분의 수준에서 보안 문제를 특별히 제어해야 하는 경우에는 더욱 그렇습니다. 이러한 경우에 만들 수는 *메시지 계약* 필요한 정확한 SOAP 메시지의 구조를 지정할 수 있습니다.  
   
  이 항목에서는 다양한 메시지 계약 특성을 사용하여 작업에 대한 특정 메시지 계약을 만드는 방법에 대해 설명합니다.  
   
 ## <a name="using-message-contracts-in-operations"></a>작업에서 메시지 계약 사용  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]중 하나로 모델링 된 작업을 지원는 *원격 프로시저 호출 (RPC) 스타일* 또는 *메시징 스타일*합니다. RPC 스타일 작업에서는 serialize할 수 있는 형식을 모두 사용할 수 있으며, 여러 매개 변수, `ref` 및 `out` 매개 변수와 같은 로컬 호출에 사용 가능한 기능을 사용할 수 있습니다. 이 스타일에서는 선택한 serialization 형식이 기본 메시지의 데이터 구조를 제어하지만 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 런타임에서는 작업을 지원하기 위해 메시지를 만듭니다. 이를 통해 SOAP 및 SOAP 메시지에 익숙하지 않은 개발자도 서비스 응용 프로그램을 빠르고 쉽게 만들고 사용할 수 있습니다.  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 중 하나로 모델링 된 작업을 지원는 *원격 프로시저 호출 (RPC) 스타일* 또는 *메시징 스타일*합니다. RPC 스타일 작업에서는 serialize할 수 있는 형식을 모두 사용할 수 있으며, 여러 매개 변수, `ref` 및 `out` 매개 변수와 같은 로컬 호출에 사용 가능한 기능을 사용할 수 있습니다. 이 스타일에서는 선택한 serialization 형식이 기본 메시지의 데이터 구조를 제어하지만 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 런타임에서는 작업을 지원하기 위해 메시지를 만듭니다. 이를 통해 SOAP 및 SOAP 메시지에 익숙하지 않은 개발자도 서비스 응용 프로그램을 빠르고 쉽게 만들고 사용할 수 있습니다.  
   
  다음 코드 예제에서는 RPC 스타일로 모델링된 서비스 작업을 보여 줍니다.  
   
@@ -44,7 +44,7 @@ ms.lasthandoff: 12/22/2017
 public BankingTransactionResponse PostBankingTransaction(BankingTransaction bt);  
 ```  
   
- 일반적으로 데이터 계약만으로도 메시지에 대한 스키마를 정의할 수 있습니다. 예를 들어 앞의 예제에서 `BankingTransaction` 및 `BankingTransactionResponse`가 기본 SOAP 메시지의 내용을 정의하기 위한 데이터 계약을 가지고 있는 경우, 대부분의 응용 프로그램에서 스키마를 정의할 수 있습니다. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]데이터 계약 참조 [를 사용 하 여 데이터 계약](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)합니다.  
+ 일반적으로 데이터 계약만으로도 메시지에 대한 스키마를 정의할 수 있습니다. 예를 들어 앞의 예제에서 `BankingTransaction` 및 `BankingTransactionResponse`가 기본 SOAP 메시지의 내용을 정의하기 위한 데이터 계약을 가지고 있는 경우, 대부분의 응용 프로그램에서 스키마를 정의할 수 있습니다. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 데이터 계약 참조 [를 사용 하 여 데이터 계약](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)합니다.  
   
  그러나 연결을 통해 SOAP 메시지 구조가 전송되는 방식을 정확하게 제어해야 하는 경우도 있습니다. 이를 위한 가장 일반적인 시나리오는 사용자 지정 SOAP 헤더를 삽입하는 것입니다. 또 다른 일반적인 시나리오는 메시지의 헤더 및 본문에 대한 보안 속성을 정의하는 것, 즉 이러한 요소를 디지털 서명 및 암호화할지 여부를 결정하는 것입니다. 마지막으로, 일부 타사 SOAP 스택에서는 메시지가 특정 형식이어야 합니다. 메시징 스타일 작업에서는 이 컨트롤을 제공합니다.  
   
@@ -167,7 +167,7 @@ public class BankingTransaction
 >  래핑되지 않은 메시지에 메시지 본문 부분이 두 개 이상이면 WS-I Basic Profile 1.1과 호환되지 않으므로, 새 메시지 계약을 디자인할 때는 이러한 경우를 피해야 합니다. 그러나 특정 상호 운용성 시나리오에서는 래핑되지 않은 메시지 본문 부분이 두 개 이상이어야 할 경우도 있습니다. 메시지 본문에서 두 개 이상의 데이터를 전송하려는 경우 기본(래핑된) 모드를 사용하는 것이 좋습니다. 래핑되지 않은 메시지에 메시지 헤더가 두 개 이상 있는 것도 전적으로 허용됩니다.  
   
 ## <a name="using-custom-types-inside-message-contracts"></a>메시지 계약에 사용자 지정 형식 사용  
- 개별 메시지 헤더 및 메시지 본문 부분은 메시지를 사용하는 서비스 계약에 대해 선택한 serialization 엔진을 사용하여 serialize됩니다(XML로 변경됨). 기본 serialization 엔진인 `XmlFormatter`는 데이터 계약을 가지고 있는 모든 형식을 명시적으로(<xref:System.Runtime.Serialization.DataContractAttribute?displayProperty=nameWithType>를 가짐으로써) 또는 암시적으로(<xref:System.SerializableAttribute?displayProperty=nameWithType> 등을 사용하는 기본 형식이 됨으로써) 처리할 수 있습니다. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][데이터 계약을 사용 하 여](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)합니다.  
+ 개별 메시지 헤더 및 메시지 본문 부분은 메시지를 사용하는 서비스 계약에 대해 선택한 serialization 엔진을 사용하여 serialize됩니다(XML로 변경됨). 기본 serialization 엔진인 `XmlFormatter`는 데이터 계약을 가지고 있는 모든 형식을 명시적으로(<xref:System.Runtime.Serialization.DataContractAttribute?displayProperty=nameWithType>를 가짐으로써) 또는 암시적으로(<xref:System.SerializableAttribute?displayProperty=nameWithType> 등을 사용하는 기본 형식이 됨으로써) 처리할 수 있습니다. 자세한 내용은 참조 [를 사용 하 여 데이터 계약](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)합니다.  
   
  앞의 예제에서는 `Operation`이 기본 형식이고 따라서 암시적 데이터 계약을 가지므로 `BankingTransactionData` 및 `transactionDate` 형식은 데이터 계약을 가져야 하며 <xref:System.DateTime>는 serialize할 수 있어야 합니다.  
   
@@ -316,7 +316,7 @@ bt.documentApprover.MustUnderstand = false; // override the static default of 't
  메시지를 받은 다음 다시 보내면 SOAP 특성 설정은 <xref:System.ServiceModel.MessageHeader%601> 형식의 헤더에 대해서 라운드트립만 수행합니다.  
   
 ## <a name="order-of-soap-body-parts"></a>SOAP 본문 부분의 순서  
- 본문 부분의 순서를 제어해야 하는 경우가 있습니다. 기본적으로 본문 요소의 순서는 사전순이지만 <xref:System.ServiceModel.MessageBodyMemberAttribute.Order%2A?displayProperty=nameWithType> 속성을 사용하여 제어할 수 있습니다. 이 속성은 상속 시나리오에서의 동작을 제외하고는 <xref:System.Runtime.Serialization.DataMemberAttribute.Order%2A?displayProperty=nameWithType> 속성과 동일한 의미 체계를 가집니다. 메시지 계약에서는 파생 형식 본문 멤버 앞에 기본 형식 본문 멤버가 정렬되지 않습니다. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][데이터 멤버 순서](../../../../docs/framework/wcf/feature-details/data-member-order.md)합니다.  
+ 본문 부분의 순서를 제어해야 하는 경우가 있습니다. 기본적으로 본문 요소의 순서는 사전순이지만 <xref:System.ServiceModel.MessageBodyMemberAttribute.Order%2A?displayProperty=nameWithType> 속성을 사용하여 제어할 수 있습니다. 이 속성은 상속 시나리오에서의 동작을 제외하고는 <xref:System.Runtime.Serialization.DataMemberAttribute.Order%2A?displayProperty=nameWithType> 속성과 동일한 의미 체계를 가집니다. 메시지 계약에서는 파생 형식 본문 멤버 앞에 기본 형식 본문 멤버가 정렬되지 않습니다. 자세한 내용은 참조 [데이터 멤버 순서](../../../../docs/framework/wcf/feature-details/data-member-order.md)합니다.  
   
  다음 예제에서 `amount`는 사전순으로 처음이기 때문에 일반적인 경우에는 처음에 나와야 합니다. 그러나 이 경우에는 <xref:System.ServiceModel.MessageBodyMemberAttribute.Order%2A> 속성 때문에 세 번째 위치에 옵니다.  
   

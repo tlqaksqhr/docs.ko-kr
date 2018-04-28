@@ -1,30 +1,32 @@
 ---
-title: "방법: 지원하는 자격 증명 만들기"
-ms.custom: 
+title: '방법: 지원하는 자격 증명 만들기'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: d0952919-8bb4-4978-926c-9cc108f89806
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 4afad13300e2eb50a9625a5991bc8cb724c21dd6
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: e74ba51306ba8761d916f580b21de9b3ba9cb7f4
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="how-to-create-a-supporting-credential"></a>방법: 지원하는 자격 증명 만들기
 둘 이상의 자격 증명이 필요한 사용자 지정 보안 체계를 사용할 수 있습니다. 예를 들어 서비스는 클라이언트로부터 사용자 이름과 암호뿐 아니라 클라이언트가 18세 이상임을 입증하는 자격 증명을 요구할 수 있습니다. 두 번째 자격 증명은는 *지원 자격 증명*합니다. 이 항목에서는 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 클라이언트에 이러한 자격 증명을 구현하는 방법에 대해 설명합니다.  
   
 > [!NOTE]
->  지원 자격 증명의 사양은 WS-SecurityPolicy 사양의 일부입니다. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][웹 서비스 보안 사양](http://go.microsoft.com/fwlink/?LinkId=88537)합니다.  
+>  지원 자격 증명의 사양은 WS-SecurityPolicy 사양의 일부입니다. 자세한 내용은 참조 [웹 서비스 보안 사양을](http://go.microsoft.com/fwlink/?LinkId=88537)합니다.  
   
 ## <a name="supporting-tokens"></a>Supporting Tokens  
  간단히 말해서 사용 하는 경우 메시지 보안을 한 *기본 자격 증명* (예: X.509 인증서 또는 Kerberos 티켓) 메시지 보안을 위해 항상 사용 됩니다.  
@@ -46,7 +48,7 @@ ms.lasthandoff: 12/22/2017
 |서명 및 암호화|서명 및 암호화된 지원 토큰은 `wsse:SecurityHeader`에 나타날 때 암호화되는 서명된 지원 토큰입니다.|  
   
 ## <a name="programming-supporting-credentials"></a>지원 자격 증명 프로그래밍  
- 지원 토큰을 만들어야 합니다를 사용 하는 서비스를 만들려면는 [ \<customBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)합니다. ([!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [하는 방법: SecurityBindingElement를 사용 하 여 사용자 지정 바인딩을 만들려면](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md).)  
+ 지원 토큰을 만들어야 합니다를 사용 하는 서비스를 만들려면는 [ \<customBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)합니다. (자세한 내용은 참조 [하는 방법: SecurityBindingElement를 사용자 지정 바인딩을 사용 하 여 만들기](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md).)  
   
  사용자 지정 바인딩을 만들 때의 첫 단계는 다음 세 가지 형식 중 하나일 수 있는 보안 바인딩 요소를 만드는 작업입니다.  
   

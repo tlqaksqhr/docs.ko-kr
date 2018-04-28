@@ -19,11 +19,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: f7716921be5ff97c2353b3b31d841c0c8dc01658
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.openlocfilehash: 95e27941cece3bfb96c4567516d07bcbe07c7490
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="understanding-generated-client-code"></a>생성된 클라이언트 코드 이해
 [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) 는 클라이언트 응용 프로그램을 빌드하는 데 사용할 클라이언트 응용 프로그램 구성 파일과 클라이언트 코드를 생성합니다. 이 항목에서는 표준 서비스 계약 시나리오를 위해 생성된 코드 예제를 간략히 살펴 봅니다. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 는 [WCF Client Overview](../../../../docs/framework/wcf/wcf-client-overview.md)를 참조하세요.  
@@ -52,14 +52,14 @@ ms.lasthandoff: 04/27/2018
   
  [!code-csharp[C_GeneratedCodeFiles#12](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_generatedcodefiles/cs/proxycode.cs#12)]  
   
- 생성된 서비스 계약 인터페이스를 <xref:System.ServiceModel.ChannelFactory?displayProperty=nameWithType> 클래스와 함께 사용하여 서비스 작업을 호출할 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 채널 개체를 만들 수 있습니다. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [방법: ChannelFactory를 사용 하 여](../../../../docs/framework/wcf/feature-details/how-to-use-the-channelfactory.md)합니다.  
+ 생성된 서비스 계약 인터페이스를 <xref:System.ServiceModel.ChannelFactory?displayProperty=nameWithType> 클래스와 함께 사용하여 서비스 작업을 호출할 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 채널 개체를 만들 수 있습니다. 자세한 내용은 참조 [하는 방법: ChannelFactory를 사용 하 여](../../../../docs/framework/wcf/feature-details/how-to-use-the-channelfactory.md)합니다.  
   
 ### <a name="finding-wcf-client-classes"></a>WCF 클라이언트 클래스 찾기  
  사용할 서비스 계약을 구현하는 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 클라이언트 클래스를 찾으려면 형식 매개 변수가 이전에 찾았으며 해당 인터페이스를 확장하는 서비스 계약 인터페이스인 <xref:System.ServiceModel.ClientBase%601?displayProperty=nameWithType>의 확장을 검색합니다. 다음 코드 예제에서는 <xref:System.ServiceModel.ClientBase%601> 형식의 `ISampleService`클래스를 보여 줍니다.  
   
  [!code-csharp[C_GeneratedCodeFiles#14](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_generatedcodefiles/cs/proxycode.cs#14)]  
   
- 새 인스턴스를 만들고 구현하는 메서드를 호출하여 이 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 클라이언트 클래스를 사용할 수 있습니다. 이러한 메서드는 상호 작용하도록 디자인 및 구성된 서비스 작업을 호출합니다. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [WCF 클라이언트 개요](../../../../docs/framework/wcf/wcf-client-overview.md)합니다.  
+ 새 인스턴스를 만들고 구현하는 메서드를 호출하여 이 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 클라이언트 클래스를 사용할 수 있습니다. 이러한 메서드는 상호 작용하도록 디자인 및 구성된 서비스 작업을 호출합니다. 자세한 내용은 참조 [WCF 클라이언트 개요](../../../../docs/framework/wcf/wcf-client-overview.md)합니다.  
   
 > [!NOTE]
 >  SvcUtil.exe는 WCF 클라이언트 클래스를 생성할 때 디버거가 WCF 클라이언트 클래스를 단계별로 실행하지 못하도록 하는 <xref:System.Diagnostics.DebuggerStepThroughAttribute> 를 클라이언트 클래스에 추가합니다.  

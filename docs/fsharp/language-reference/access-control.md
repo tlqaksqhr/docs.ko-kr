@@ -1,20 +1,17 @@
 ---
 title: Access Control(F#)
-description: "형식, 메서드 및 F # 프로그래밍 언어의 함수 같은 프로그래밍 요소에 대 한 액세스를 제어 하는 방법에 알아봅니다."
-keywords: "visual f#, f#, 함수형 프로그래밍"
+description: '형식, 메서드 및 F # 프로그래밍 언어의 함수 같은 프로그래밍 요소에 대 한 액세스를 제어 하는 방법에 알아봅니다.'
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: 955b06fe-d1cd-431d-8db6-93e83b697453
-ms.openlocfilehash: a02e20a585a0456577901f2762a0eeb0e3ecd2f0
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: fee5f719904b61c3082d56f73448defdea39f472
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="access-control"></a>Access Control
 
@@ -25,11 +22,11 @@ ms.lasthandoff: 10/18/2017
 F #에서 액세스 제어 지정자 `public`, `internal`, 및 `private` 모듈, 형식, 메서드, 값 정의 함수, 속성 및 명시적 필드에 적용할 수 있습니다.
 
 
-- `public`모든 호출자가 엔터티를 액세스할 수 있는지를 나타냅니다.
+- `public` 모든 호출자가 엔터티를 액세스할 수 있는지를 나타냅니다.
 
-- `internal`엔터티는 동일한 어셈블리 에서만에서 액세스할 수 있는지를 나타냅니다.
+- `internal` 엔터티는 동일한 어셈블리 에서만에서 액세스할 수 있는지를 나타냅니다.
 
-- `private`엔터티는 바깥쪽 형식 또는 모듈 에서만 액세스할 수 있는지를 나타냅니다.
+- `private` 엔터티는 바깥쪽 형식 또는 모듈 에서만 액세스할 수 있는지를 나타냅니다.
 
 
 >[!NOTE] 

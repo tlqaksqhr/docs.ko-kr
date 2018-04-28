@@ -1,20 +1,17 @@
 ---
-title: "계산 식(F#)"
-description: "제어 흐름 구문 및 바인딩을 사용 하 여 결합 하 고 시퀀스를 지정할 수 있는 F #에서 계산을 작성 하기 위한 편리한 구문을 만드는 방법에 알아봅니다."
-keywords: "visual f#, f#, 함수형 프로그래밍"
+title: 계산 식(F#)
+description: '제어 흐름 구문 및 바인딩을 사용 하 여 결합 하 고 시퀀스를 지정할 수 있는 F #에서 계산을 작성 하기 위한 편리한 구문을 만드는 방법에 알아봅니다.'
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: acabbf5d-fbb8-479f-894c-7251bf16c8c3
-ms.openlocfilehash: c4ff998c65f3a5c458f36312f6887d869569d814
-ms.sourcegitcommit: 96cc82cac4650adfb65ba351506d8a8fbcd17b5c
+ms.openlocfilehash: 990ea509e4fef84d3e3ee37471b28e2b8d019fad
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/19/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="computation-expressions"></a>계산 식
 

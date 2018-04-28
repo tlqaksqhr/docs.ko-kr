@@ -1,20 +1,17 @@
 ---
-title: "정적으로 확인된 형식 매개 변수(F#)"
-description: "F #을 사용 하는 방법을 알아봅니다 런타임이 아닌 컴파일 타임에 실제 형식으로 대체 되는 정적으로 확인 된 형식 매개 변수입니다."
-keywords: "visual f#, f#, 함수형 프로그래밍"
+title: 정적으로 확인된 형식 매개 변수(F#)
+description: 'F #을 사용 하는 방법을 알아봅니다 런타임이 아닌 컴파일 타임에 실제 형식으로 대체 되는 정적으로 확인 된 형식 매개 변수입니다.'
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: b3797415-3e49-4f8a-a8ee-fa614c5721aa
-ms.openlocfilehash: 14c629d6223584113af47636495be61decca02ad
-ms.sourcegitcommit: 96cc82cac4650adfb65ba351506d8a8fbcd17b5c
+ms.openlocfilehash: da730014f1c40b6c79d72e4f46a18ef36f50de36
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/19/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="statically-resolved-type-parameters"></a>정적으로 확인된 형식 매개 변수
 

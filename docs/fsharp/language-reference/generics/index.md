@@ -1,20 +1,17 @@
 ---
 title: 제네릭(F#)
 description: 'F # 제네릭 함수 및 코드를 반복 하지 않고 다양 한 형식 사용 하는 코드를 작성할 수 있도록 하는 형식을 사용 하는 방법에 알아봅니다.'
-keywords: visual f#, f#, 함수형 프로그래밍
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: a9f2e2ee-bcb1-4ce3-8531-850aa183040f
-ms.openlocfilehash: e7a5712fddf4d372d1ada86927f50e394a59a410
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 0e5c7ad59f0e4d278f478e9fd8e6da70a13aba02
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="generics"></a>제네릭
 

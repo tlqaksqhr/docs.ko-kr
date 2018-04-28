@@ -1,12 +1,13 @@
 ---
-title: "방법: 페더레이션 서비스에서 자격 증명 구성"
-ms.custom: 
+title: '방법: 페더레이션 서비스에서 자격 증명 구성'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,25 +16,26 @@ helpviewer_keywords:
 - WCF, federation
 - federation
 ms.assetid: 149ab165-0ef3-490a-83a9-4322a07bd98a
-caps.latest.revision: "21"
+caps.latest.revision: 21
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 243dbd73d60577cbda2d8cf4fad1fd2e510d87ba
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: ffb33ea70f67e209648e470656a2719404dd7f2d
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="how-to-configure-credentials-on-a-federation-service"></a>방법: 페더레이션 서비스에서 자격 증명 구성
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]에서는 다음과 같은 기본 절차를 통해 페더레이션 서비스를 만들 수 있습니다.  
   
-1.  <xref:System.ServiceModel.WSFederationHttpBinding> 또는 유사한 사용자 지정 바인딩을 구성합니다. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]참조는 적절 한 바인딩 만들기 [하는 방법: WSFederationHttpBinding 만들기](../../../../docs/framework/wcf/feature-details/how-to-create-a-wsfederationhttpbinding.md)합니다.  
+1.  <xref:System.ServiceModel.WSFederationHttpBinding> 또는 유사한 사용자 지정 바인딩을 구성합니다. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 참조는 적절 한 바인딩 만들기 [하는 방법: WSFederationHttpBinding 만들기](../../../../docs/framework/wcf/feature-details/how-to-create-a-wsfederationhttpbinding.md)합니다.  
   
 2.  서비스에 제공되는 발급된 토큰에 대한 인증 방법을 제어하는 <xref:System.ServiceModel.Security.IssuedTokenServiceCredential>을 구성합니다.  
   
- 이 항목에서는 두 번째 단계에 대해 자세히 설명합니다. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]페더레이션된 서비스 작동 방식 참조 [페더레이션](../../../../docs/framework/wcf/feature-details/federation.md)합니다.  
+ 이 항목에서는 두 번째 단계에 대해 자세히 설명합니다. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 페더레이션된 서비스 작동 방식 참조 [페더레이션](../../../../docs/framework/wcf/feature-details/federation.md)합니다.  
   
 ### <a name="to-set-the-properties-of-issuedtokenservicecredential-in-code"></a>IssuedTokenServiceCredential의 속성을 코드로 설정하려면  
   
@@ -66,7 +68,7 @@ ms.lasthandoff: 12/22/2017
   
 5.  필요한 경우 설정 합니다는 `samlSerializer` 특성에는 <`issuedTokenAuthentication`> 요소를 사용자 지정의 형식 이름 <xref:System.IdentityModel.Tokens.SamlSerializer> 클래스입니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 예제에서는 <xref:System.ServiceModel.Security.IssuedTokenServiceCredential>의속성을 코드로 설정합니다.  
   
  [!code-csharp[C_FederatedService#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_federatedservice/cs/source.cs#2)]
@@ -78,9 +80,9 @@ ms.lasthandoff: 12/22/2017
   
 -   발급된 토큰의 서명에 X.509 발급자 일련 번호, X.509 주체 키 식별자 또는 X.509 지문 보안 식별자를 사용하는 경우, 발급된 토큰은 <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.KnownCertificates%2A> 클래스의 <xref:System.ServiceModel.Security.IssuedTokenServiceCredential> 속성에 의해 반환된 컬렉션의 인증서를 통해 서명해야 합니다.  
   
--   발급된 토큰을 X.509 인증서를 통해 서명하는 경우에는 해당 인증서가 신뢰하는 상대에게 <xref:System.ServiceModel.Security.X509ServiceCertificateAuthentication.CertificateValidationMode%2A>로 보내졌는지 또는 <xref:System.IdentityModel.Tokens.X509RawDataKeyIdentifierClause> 속성에서 가져온 것인지에 상관없이, 인증서에서는 <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.KnownCertificates%2A> 속성 값으로 지정된 의미 체계별로 유효성을 검사해야 합니다. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]X.509 인증서 유효성 검사 참조 [인증서 작업](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)합니다.  
+-   발급된 토큰을 X.509 인증서를 통해 서명하는 경우에는 해당 인증서가 신뢰하는 상대에게 <xref:System.ServiceModel.Security.X509ServiceCertificateAuthentication.CertificateValidationMode%2A>로 보내졌는지 또는 <xref:System.IdentityModel.Tokens.X509RawDataKeyIdentifierClause> 속성에서 가져온 것인지에 상관없이, 인증서에서는 <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.KnownCertificates%2A> 속성 값으로 지정된 의미 체계별로 유효성을 검사해야 합니다. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] X.509 인증서 유효성 검사 참조 [인증서 작업](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)합니다.  
   
- 예를 들어 <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.CertificateValidationMode%2A>를 <xref:System.ServiceModel.Security.X509CertificateValidationMode.PeerTrust>로 설정하면 서명 인증서가 `TrustedPeople` 인증서 저장소에 있는 발급된 모든 토큰을 인증하게 됩니다. 이 경우 <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.TrustedStoreLocation%2A> 속성을 <xref:System.Security.Cryptography.X509Certificates.StoreLocation.CurrentUser> 또는 <xref:System.Security.Cryptography.X509Certificates.StoreLocation.LocalMachine>으로 설정합니다. <xref:System.ServiceModel.Security.X509CertificateValidationMode.Custom> 등의 다른 모드를 선택할 수도 있습니다. `Custom`을 선택하면 <xref:System.IdentityModel.Selectors.X509CertificateValidator> 클래스의 인스턴스를 <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.CustomCertificateValidator%2A> 속성에 할당해야 합니다. 사용자 지정 유효성 검사기에서 원하는 조건을 사용하여 인증서의 유효성을 검사할 수 있습니다. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][하는 방법: 사용자 지정 인증서 유효성 검사기를 사용 하는 서비스 만들기](../../../../docs/framework/wcf/extending/how-to-create-a-service-that-employs-a-custom-certificate-validator.md)합니다.  
+ 예를 들어 <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.CertificateValidationMode%2A>를 <xref:System.ServiceModel.Security.X509CertificateValidationMode.PeerTrust>로 설정하면 서명 인증서가 `TrustedPeople` 인증서 저장소에 있는 발급된 모든 토큰을 인증하게 됩니다. 이 경우 <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.TrustedStoreLocation%2A> 속성을 <xref:System.Security.Cryptography.X509Certificates.StoreLocation.CurrentUser> 또는 <xref:System.Security.Cryptography.X509Certificates.StoreLocation.LocalMachine>으로 설정합니다. <xref:System.ServiceModel.Security.X509CertificateValidationMode.Custom> 등의 다른 모드를 선택할 수도 있습니다. `Custom`을 선택하면 <xref:System.IdentityModel.Selectors.X509CertificateValidator> 클래스의 인스턴스를 <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.CustomCertificateValidator%2A> 속성에 할당해야 합니다. 사용자 지정 유효성 검사기에서 원하는 조건을 사용하여 인증서의 유효성을 검사할 수 있습니다. 자세한 내용은 참조 [하는 방법: 사용자 지정 인증서 유효성 검사기를 사용 하는 서비스 만들기](../../../../docs/framework/wcf/extending/how-to-create-a-service-that-employs-a-custom-certificate-validator.md)합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [페더레이션](../../../../docs/framework/wcf/feature-details/federation.md)  

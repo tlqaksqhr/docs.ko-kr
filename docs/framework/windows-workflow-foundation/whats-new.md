@@ -17,11 +17,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 605e1401eb2f2fdee7bb39c6636c0245154041a4
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.openlocfilehash: 6604c4fccec50369d83cede58ff2931c2015c5b9
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="what39s-new-in-windows-workflow-foundation"></a>어떤&#39;Windows Workflow Foundation의 새로운 s
 Windows WF (Workflow Foundation)에서 [!INCLUDE[netfx40_long](../../../includes/netfx40-long-md.md)] 이전 버전에서 다른 여러 개발 패러다임을 변경 합니다. 이제 워크플로에서 많은 새로운 기능을 보다 쉽게 작성, 실행, 유지 관리 및 구현할 수 있습니다. [!INCLUDE[crabout](../../../includes/crabout-md.md)] 마이그레이션.NET 3.0 및 최신 버전을 사용 하려면.NET 3.5 워크플로 응용 프로그램 참조 [마이그레이션 지침](../../../docs/framework/windows-workflow-foundation/migration-guidance.md)합니다.  
@@ -44,7 +44,7 @@ Windows WF (Workflow Foundation)에서 [!INCLUDE[netfx40_long](../../../includes
 -   <xref:System.ServiceModel.Activities.SendContent>, <xref:System.ServiceModel.Activities.ReceiveReply> 등의 새로운 메시징 활동  
   
 ## <a name="explicit-activity-data-model"></a>명시적 활동 데이터 모델  
- [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)]에는 데이터 저장 또는 이동을 위한 새로운 옵션이 있습니다. <xref:System.Activities.Variable>을 사용하여 활동에 데이터를 저장할 수 있습니다. 활동 내부 또는 외부에서 데이터를 이동할 때 특수 인수 유형을 사용하여 데이터가 이동하는 방향을 결정합니다. 이러한 유형은 <xref:System.Activities.InArgument>, <xref:System.Activities.InOutArgument> 및 <xref:System.Activities.OutArgument>입니다. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [Windows Workflow Foundation 데이터 모델](../../../docs/framework/windows-workflow-foundation/data-model.md)합니다.  
+ [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)]에는 데이터 저장 또는 이동을 위한 새로운 옵션이 있습니다. <xref:System.Activities.Variable>을 사용하여 활동에 데이터를 저장할 수 있습니다. 활동 내부 또는 외부에서 데이터를 이동할 때 특수 인수 유형을 사용하여 데이터가 이동하는 방향을 결정합니다. 이러한 유형은 <xref:System.Activities.InArgument>, <xref:System.Activities.InOutArgument> 및 <xref:System.Activities.OutArgument>입니다. 자세한 내용은 참조 [Windows Workflow Foundation 데이터 모델](../../../docs/framework/windows-workflow-foundation/data-model.md)합니다.  
   
 ## <a name="enhanced-hosting-persistence-and-tracking-options"></a>향상된 호스팅, 지속성 및 추적 옵션  
  [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)]에서는 지속성이 다음과 같이 향상되었습니다.  
@@ -66,4 +66,4 @@ Windows WF (Workflow Foundation)에서 [!INCLUDE[netfx40_long](../../../includes
 -   이제 보류 중인 워크플로 다시 시작이 <xref:System.Activities.Bookmark> 개체를 사용하여 관리됩니다.  
   
 ## <a name="easier-ability-to-extend-wf-designer-experience"></a>간편한 WF Designer 환경 확장 기능  
- 새 WF Designer는 Windows Presentation Foundation (WPF) 및 Visual Studio 외부에서 WF 디자이너를 다시 호스트할 때 사용할 수 있는 간편한 모델을 제공 만들어지고 또한 사용자 지정 활동 디자이너를 만드는 간편한 메커니즘을 제공 합니다. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [워크플로 디자인 환경 사용자 지정](../../../docs/framework/windows-workflow-foundation/customizing-the-workflow-design-experience.md)합니다.
+ 새 WF Designer는 Windows Presentation Foundation (WPF) 및 Visual Studio 외부에서 WF 디자이너를 다시 호스트할 때 사용할 수 있는 간편한 모델을 제공 만들어지고 또한 사용자 지정 활동 디자이너를 만드는 간편한 메커니즘을 제공 합니다. 자세한 내용은 참조 [워크플로 디자인 환경 사용자 지정](../../../docs/framework/windows-workflow-foundation/customizing-the-workflow-design-experience.md)합니다.

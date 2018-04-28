@@ -10,17 +10,17 @@ ms.technology:
 ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 8d1c5e5a-7928-4a80-95ed-d8da211b8595
-caps.latest.revision: ''
+caps.latest.revision: 29
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 8202c9f715944c6d556c0023444475838cfd5eab
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: 14b3eebb83115617ce32ab0ff45184cd6754e58c
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="poison-message-handling"></a>포이즌 메시지 처리
 A *포이즌 메시지* 를 응용 프로그램에 배달 시도 최대 횟수를 초과한 메시지입니다. 큐 기반 응용 프로그램에서 오류로 인해 메시지를 처리할 수 없는 경우 이러한 상황이 발생할 수 있습니다. 안정성 요청을 충족하려면 대기 중인 응용 프로그램이 트랜잭션에서 메시지를 받습니다. 대기 중인 메시지를 받은 트랜잭션을 중단하면 메시지가 큐에 남으므로 새 트랜잭션에서 해당 메시지가 다시 시도됩니다. 트랜잭션의 중단 문제가 해결되지 않은 경우에는 수신 응용 프로그램이 최대 전달 시도 횟수를 초과할 때까지 같은 메시지를 받고 중단하는 루프에 갇히고, 포이즌 메시지가 발생합니다.  
@@ -75,7 +75,7 @@ A *포이즌 메시지* 를 응용 프로그램에 배달 시도 최대 횟수�
 ## <a name="best-practice-handling-msmqpoisonmessageexception"></a>최선의 방법: MsmqPoisonMessageException 처리  
  서비스에서 메시지가 포이즌임을 확인하면 대기 중인 전송이 포이즌 메시지의 <xref:System.ServiceModel.MsmqPoisonMessageException>를 포함하는 `LookupId`을 throw합니다.  
   
- 수신 응용 프로그램이 <xref:System.ServiceModel.Dispatcher.IErrorHandler> 인터페이스를 구현하여 응용 프로그램에서 요청하는 모든 오류를 처리할 수 있습니다. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [오류 처리 및 보고에 대 한 제어 확장](../../../../docs/framework/wcf/samples/extending-control-over-error-handling-and-reporting.md)합니다.  
+ 수신 응용 프로그램이 <xref:System.ServiceModel.Dispatcher.IErrorHandler> 인터페이스를 구현하여 응용 프로그램에서 요청하는 모든 오류를 처리할 수 있습니다. 자세한 내용은 참조 [확장 제어를 통해 오류를 처리 하 고 보고](../../../../docs/framework/wcf/samples/extending-control-over-error-handling-and-reporting.md)합니다.  
   
  응용 프로그램에서 서비스가 큐의 남은 메시지에 액세스할 수 있도록 포이즌 메시지를 포이즌 메시지 큐로 이동하는 몇 가지 포이즌 메시지 자동 처리 작업이 필요할 수 있습니다. <xref:System.ServiceModel.Configuration.MsmqBindingElementBase.ReceiveErrorHandling%2A> 설정이 <xref:System.ServiceModel.ReceiveErrorHandling.Fault>로 설정된 경우에만 오류 처리 메커니즘을 사용하여 포이즌 메시지 예외를 수신 대기할 수 있습니다. 메시지 큐 3.0의 포이즌 메시지 샘플은 이 동작을 보여 줍니다. 다음에서는 최선의 방법을 포함하여 포이즌 메시지를 처리하는 단계를 간략히 보여 줍니다.  
   

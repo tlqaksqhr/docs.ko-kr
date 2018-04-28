@@ -1,20 +1,17 @@
 ---
-title: "람다 식: fun 키워드(F#)"
+title: '람다 식: fun 키워드(F#)'
 description: "F # 'fun' 키워드를 사용 하 여 익명 함수는 람다 식을 정의 하는 방법에 알아봅니다."
-keywords: "visual f#, f#, 함수형 프로그래밍"
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: e5d3565c-d7cc-433f-a619-886ed92523a7
-ms.openlocfilehash: 09f1c1787bbb4b86ec40f9e973e08104919631aa
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: f2f15a1b482ce3971d0b3d5ffc4f6dcc9ccf1569
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="lambda-expressions-the-fun-keyword-f"></a>람다 식: fun 키워드(F#)
 

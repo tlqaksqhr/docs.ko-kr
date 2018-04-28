@@ -1,24 +1,26 @@
 ---
-title: "WCF의 큐"
-ms.custom: 
+title: WCF의 큐
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: e98d76ba-1acf-42cd-b137-0f8214661112
-caps.latest.revision: "21"
+caps.latest.revision: 21
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 3c50bbc54d56d3fdc7a848af0e77cfbb2c15c9bb
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 01dc36c73d9e668dd98cb5ba8b275d3d5177ba61
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="queuing-in-wcf"></a>WCF의 큐
 이 단원에서는 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]에서 대기 중인 통신을 사용하는 방법에 대해 설명합니다.  
@@ -49,12 +51,12 @@ ms.lasthandoff: 12/22/2017
   
  Active Directory 디렉터리 서비스에 등록된 Windows ID를 사용하여 MSMQ 큐를 보안할 수도 있습니다. MSMQ를 설치할 때 Active Directory 통합을 설치할 수 있습니다. 이 경우 컴퓨터가 Windows 도메인 네트워크에 속해야 합니다.  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]MSMQ, 참조 [설치 메시지 큐 (MSMQ)](../../../../docs/framework/wcf/samples/installing-message-queuing-msmq.md)합니다.  
+ [!INCLUDE[crabout](../../../../includes/crabout-md.md)] MSMQ, 참조 [설치 메시지 큐 (MSMQ)](../../../../docs/framework/wcf/samples/installing-message-queuing-msmq.md)합니다.  
   
 ### <a name="netmsmqbinding"></a>NetMsmqBinding  
  [ \<netMsmqBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/netmsmqbinding.md) 큐에 대기 중인 바인딩을 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 에서는 두 가지 제공 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] MSMQ를 사용 하 여 통신 하는 끝점입니다. 따라서 바인딩은 MSMQ에 특정한 속성을 노출합니다. 그러나 모든 MSMQ 기능과 속성이 `NetMsmqBinding`에 노출되는 것은 아닙니다. 압축 `NetMsmqBinding`은 대부분의 고객에게 적합한 최적의 기능들로 디자인되었습니다.  
   
- `NetMsmqBinding`에서는 여기에서 지금까지 설명한 핵심 큐 개념을 바인딩에 대한 속성의 형태로 나타냅니다. 이러한 속성은 메시지를 전송 및 전달하는 방법을 MSMQ에 알려 줍니다. 속성 범주에 대한 자세한 내용은 다음 단원을 참조하세요. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] 특정 속성을 자세하게 설명하는 개념 항목  
+ `NetMsmqBinding`에서는 여기에서 지금까지 설명한 핵심 큐 개념을 바인딩에 대한 속성의 형태로 나타냅니다. 이러한 속성은 메시지를 전송 및 전달하는 방법을 MSMQ에 알려 줍니다. 속성 범주에 대한 자세한 내용은 다음 단원을 참조하세요. 자세한 내용은 특정 속성을 더욱 완전 하 게 설명 하는 개념 항목을 참조 합니다.  
   
 #### <a name="exactlyonce-and-durable-properties"></a>ExactlyOnce 및 Durable 속성  
  `ExactlyOnce` 및 `Durable` 속성은 큐 사이에서 메시지가 전송되는 방법에 영향을 줍니다.  
@@ -77,17 +79,17 @@ ms.lasthandoff: 12/22/2017
   
  바인딩에는 다음과 같은 두 가지 속성이 필요합니다.  
   
--   `DeadLetterQueue`: 이 속성은 배달 못한 편지 큐가 필요한지 여부를 나타내는 열거형입니다. 요청 시 열거형에는 배달 못 한 편지 큐도 포함됩니다. 값은 `None`, `System` 및 `Custom`입니다. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]이러한 속성에 대 한 해석은 참조 [메시지 전송 오류 처리를 배달 못 한 편지 큐를 사용 하 여](../../../../docs/framework/wcf/feature-details/using-dead-letter-queues-to-handle-message-transfer-failures.md)  
+-   `DeadLetterQueue`: 이 속성은 배달 못한 편지 큐가 필요한지 여부를 나타내는 열거형입니다. 요청 시 열거형에는 배달 못 한 편지 큐도 포함됩니다. 값은 `None`, `System` 및 `Custom`입니다. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 이러한 속성에 대 한 해석은 참조 [메시지 전송 오류 처리를 배달 못 한 편지 큐를 사용 하 여](../../../../docs/framework/wcf/feature-details/using-dead-letter-queues-to-handle-message-transfer-failures.md)  
   
 -   `CustomDeadLetterQueue`: 이 속성은 응용 프로그램별 배달 못한 편지 큐의 URI(Uniform Resource Identifier) 주소입니다. 이 소프트웨어가 필요 `DeadLetterQueue`합니다.`Custom` 선택 됩니다.  
   
 #### <a name="poison-message-handling-properties"></a>포이즌 메시지 처리 속성  
- 서비스에서 트랜잭션의 대상 큐에 있는 메시지를 읽을 때 서비스에서 여러 가지 이유로 메시지를 처리하지 못할 수 있습니다. 그러면 메시지를 큐에 넣고 다시 읽습니다. 반복적으로 실패하는 메시지를 처리하려면 바인딩에서 포이즌 메시지 처리 속성을 구성할 수 있습니다. `ReceiveRetryCount`, `MaxRetryCycles`, `RetryCycleDelay` 및 `ReceiveErrorHandling`의 네 가지 속성이 있습니다. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]이러한 속성 참조 [포이즌 메시지 처리](../../../../docs/framework/wcf/feature-details/poison-message-handling.md)합니다.  
+ 서비스에서 트랜잭션의 대상 큐에 있는 메시지를 읽을 때 서비스에서 여러 가지 이유로 메시지를 처리하지 못할 수 있습니다. 그러면 메시지를 큐에 넣고 다시 읽습니다. 반복적으로 실패하는 메시지를 처리하려면 바인딩에서 포이즌 메시지 처리 속성을 구성할 수 있습니다. `ReceiveRetryCount`, `MaxRetryCycles`, `RetryCycleDelay` 및 `ReceiveErrorHandling`의 네 가지 속성이 있습니다. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 이러한 속성 참조 [포이즌 메시지 처리](../../../../docs/framework/wcf/feature-details/poison-message-handling.md)합니다.  
   
 #### <a name="security-properties"></a>보안 속성  
- MSMQ는 큐의 ACL(액세스 제어 목록) 또는 인증된 메시지 보내기와 같은 고유한 보안 모델을 노출합니다. `NetMsmqBinding`은 이러한 보안 속성을 전송 보안 설정의 일부로 노출합니다. 전송 보안의 바인딩에는 `MsmqAuthenticationMode` 및 `MsmqProtectionLevel`의 두 가지 속성이 있습니다. 이러한 속성의 설정은 MSMQ가 구성되는 방법에 따라 다릅니다. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][전송 보안을 사용 하 여 메시지 보안](../../../../docs/framework/wcf/feature-details/securing-messages-using-transport-security.md)합니다.  
+ MSMQ는 큐의 ACL(액세스 제어 목록) 또는 인증된 메시지 보내기와 같은 고유한 보안 모델을 노출합니다. `NetMsmqBinding`은 이러한 보안 속성을 전송 보안 설정의 일부로 노출합니다. 전송 보안의 바인딩에는 `MsmqAuthenticationMode` 및 `MsmqProtectionLevel`의 두 가지 속성이 있습니다. 이러한 속성의 설정은 MSMQ가 구성되는 방법에 따라 다릅니다. 자세한 내용은 참조 [전송 보안을 사용 하 여 메시지 보안](../../../../docs/framework/wcf/feature-details/securing-messages-using-transport-security.md)합니다.  
   
- 전송 보안 이외에 메시지 보안을 사용하여 실제 SOAP 메시지를 보안할 수 있습니다. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][메시지 보안을 사용 하 여 메시지 보안](../../../../docs/framework/wcf/feature-details/securing-messages-using-message-security.md)합니다.  
+ 전송 보안 이외에 메시지 보안을 사용하여 실제 SOAP 메시지를 보안할 수 있습니다. 자세한 내용은 참조 [메시지 보안을 사용 하 여 메시지 보안](../../../../docs/framework/wcf/feature-details/securing-messages-using-message-security.md)합니다.  
   
  또한 `MsmqTransportSecurity`는 `MsmqEncryptionAlgorithm` 및 `MsmqHashAlgorithm`의 두 가지 속성을 노출합니다. 이러한 속성은 메시지의 큐 간 전송 암호화와 서명 해시에 대해 선택하는 서로 다른 알고리즘의 열거형입니다.  
   
@@ -100,7 +102,7 @@ ms.lasthandoff: 12/22/2017
   
 -   `QueueTransferProtocol`: 큐 간 메시지 전송에 사용할 프로토콜의 열거형입니다. MSMQ는 네이티브 큐 간 전송 프로토콜과 SRMP(SOAP Reliable Messaging Protocol)라는 SOAP 기반 프로토콜을 구현합니다. SRMP는 큐 간 전송에 HTTP 전송을 사용할 때 사용됩니다. SRMP 보안은 큐 간 전송에 HTTPS를 사용할 때 사용됩니다.  
   
--   `UseActiveDirectory`: 큐 주소 확인에 Active Directory를 사용해야 하는지 여부를 나타내는 부울 값입니다. 기본적으로 해제됩니다. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][서비스 끝점 및 큐 주소 지정](../../../../docs/framework/wcf/feature-details/service-endpoints-and-queue-addressing.md)합니다.  
+-   `UseActiveDirectory`: 큐 주소 확인에 Active Directory를 사용해야 하는지 여부를 나타내는 부울 값입니다. 기본적으로 해제됩니다. 자세한 내용은 참조 [서비스 끝점 및 큐 주소 지정](../../../../docs/framework/wcf/feature-details/service-endpoints-and-queue-addressing.md)합니다.  
   
 ### <a name="msmqintegrationbinding"></a>MsmqIntegrationBinding  
  `MsmqIntegrationBinding`은 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 끝점에서 C, C++, COM 또는 System.Messaging API로 작성한 기존 MSMQ 응용 프로그램과 통신하려는 경우에 사용됩니다.  

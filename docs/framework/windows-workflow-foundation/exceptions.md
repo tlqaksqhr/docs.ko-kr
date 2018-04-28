@@ -1,23 +1,24 @@
 ---
-title: "예외"
-ms.custom: 
+title: 예외
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 065205cc-52dd-4f30-9578-b17d8d113136
-caps.latest.revision: "26"
+caps.latest.revision: 26
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: bf2c6e12dac2130a26aa01efc21b8f58f509294a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 9e78546a10e1a8cdff780c44898fd209ca829c6c
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="exceptions"></a>예외
 워크플로에서 <xref:System.Activities.Statements.TryCatch> 활동을 사용하여 워크플로 실행 중에 발생하는 예외를 처리할 수 있습니다. 이러한 예외를 처리하거나 <xref:System.Activities.Statements.Rethrow> 활동을 사용하여 다시 throw할 수 있습니다. <xref:System.Activities.Statements.TryCatch.Finally%2A> 섹션의 활동은 <xref:System.Activities.Statements.TryCatch.Try%2A> 섹션 또는 <xref:System.Activities.Statements.TryCatch.Catches%2A> 섹션이 완료되면 실행됩니다. 워크플로 호스팅하는 <xref:System.Activities.WorkflowApplication> 인스턴스를 사용할 수도 <xref:System.Activities.WorkflowApplication.OnUnhandledException%2A> 이벤트 처리기에서 처리 되지 않은 예외를 처리 하는 <xref:System.Activities.Statements.TryCatch> 활동입니다.  
@@ -58,7 +59,7 @@ ms.lasthandoff: 12/22/2017
 -   예외는 더 높은 수준의 <xref:System.Activities.Statements.TryCatch>에서 처리되며 워크플로 루트를 이스케이프하며 워크플로는 종료하거나 중단하는 대신 취소하도록 구성됩니다. <xref:System.Activities.WorkflowApplication>을 사용하여 호스트된 워크플로는 <xref:System.Activities.WorkflowApplication.OnUnhandledException%2A>을 처리하고 <xref:System.Activities.UnhandledExceptionAction.Cancel>을 반환하여 구성할 수 있습니다. <xref:System.Activities.WorkflowApplication.OnUnhandledException%2A>의 처리 예제는 이 항목에 이전에 제공된 것입니다. <xref:System.ServiceModel.Activities.Description.WorkflowUnhandledExceptionBehavior>을 워크플로 서비스는 사용하고 <xref:System.ServiceModel.Activities.Description.WorkflowUnhandledExceptionAction.Cancel>을 지정하여 구성할 수 있습니다. 구성에 대 한 예제 <xref:System.ServiceModel.Activities.Description.WorkflowUnhandledExceptionBehavior>, 참조 [워크플로 서비스 호스트 확장명](../../../docs/framework/wcf/feature-details/workflow-service-host-extensibility.md)합니다.  
   
 ## <a name="exception-handling-versus-compensation"></a>예외 처리와 보정 비교  
- 예외 처리와 보정의 차이점은 예외 처리는 활동 실행 중에 발생하고, 보정은 활동이 완료된 이후에 발생한다는 점입니다. 예외 처리를 사용하면 활동에서 예외가 발생한 이후에 정리 작업이 가능하고, 보정을 사용하면 이전에 성공적으로 완료된 활동을 실행 취소할 수 있습니다. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][보정](../../../docs/framework/windows-workflow-foundation/compensation.md)합니다.  
+ 예외 처리와 보정의 차이점은 예외 처리는 활동 실행 중에 발생하고, 보정은 활동이 완료된 이후에 발생한다는 점입니다. 예외 처리를 사용하면 활동에서 예외가 발생한 이후에 정리 작업이 가능하고, 보정을 사용하면 이전에 성공적으로 완료된 활동을 실행 취소할 수 있습니다. 자세한 내용은 참조 [보정](../../../docs/framework/windows-workflow-foundation/compensation.md)합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  <xref:System.Activities.Statements.TryCatch>  

@@ -1,31 +1,32 @@
 ---
-title: "방법: 워크플로 및 워크플로 서비스에 SQL 지속성 사용"
-ms.custom: 
+title: '방법: 워크플로 및 워크플로 서비스에 SQL 지속성 사용'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: ca7bf77f-3e5d-4b23-b17a-d0b60f46411d
-caps.latest.revision: "36"
+caps.latest.revision: 36
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 60fac3cba4da35b5146f777abd912ad15f0f29eb
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 5d687c00edd9d495f3b7715474d7eb2e107c23f0
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="how-to-enable-sql-persistence-for-workflows-and-workflow-services"></a>방법: 워크플로 및 워크플로 서비스에 SQL 지속성 사용
 이 항목에서는 프로그래밍 방식과 구성 파일을 사용하여 워크플로 및 워크플로 서비스에 지속성을 사용하도록 SQL 워크플로 인스턴스 저장소 기능을 구성하는 방법을 설명합니다.  
   
- Windows Server AppFabric은 지속성의 구성 프로세스를 단순화합니다. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][App Fabric의 지 속성 구성](http://go.microsoft.com/fwlink/?LinkId=201204)  
+ Windows Server AppFabric은 지속성의 구성 프로세스를 단순화합니다. 자세한 내용은 참조 [App Fabric의 지 속성 구성](http://go.microsoft.com/fwlink/?LinkId=201204)  
   
  SQL 워크플로 인스턴스 저장소 기능을 사용하기 전에 이 기능에서 워크플로 인스턴스를 유지하는 데 사용할 데이터베이스를 만들어야 합니다. [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] 설치 프로그램에서는 SQL 워크플로 인스턴스 저장소 기능과 관련된 SQL 스크립트 파일을 %WINDIR%\Microsoft.NET\Framework\v4.xxx\SQL\EN 폴더에 복사합니다. SQL 워크플로 인스턴스 저장소에서 워크플로 인스턴스를 유지하는 데 사용할 SQL Server 2005 또는 SQL Server 2008 데이터베이스에 대해 이 스크립트 파일을 실행합니다. SqlWorkflowInstanceStoreSchema.sql 파일을 먼저 실행한 다음 SqlWorkflowInstanceStoreLogic.sql 파일을 실행합니다.  
   
@@ -40,7 +41,7 @@ ms.lasthandoff: 12/22/2017
 >   
 >  System.Data.SqlClient.SqlException: 'System.Activities.DurableInstancing.CreateLockOwner' 저장 프로시저를 찾을 수 없습니다.  
   
- 다음 단원에서는 SQL 워크플로 인스턴스 저장소를 사용하여 워크플로 및 워크플로 서비스에 지속성을 사용하는 방법을 설명합니다. [!INCLUDE[crabout](../../../includes/crabout-md.md)]SQL 워크플로 인스턴스 저장소의 속성 참조 [속성의 SQL 워크플로 인스턴스 저장소](../../../docs/framework/windows-workflow-foundation/properties-of-sql-workflow-instance-store.md)합니다.  
+ 다음 단원에서는 SQL 워크플로 인스턴스 저장소를 사용하여 워크플로 및 워크플로 서비스에 지속성을 사용하는 방법을 설명합니다. [!INCLUDE[crabout](../../../includes/crabout-md.md)] SQL 워크플로 인스턴스 저장소의 속성 참조 [속성의 SQL 워크플로 인스턴스 저장소](../../../docs/framework/windows-workflow-foundation/properties-of-sql-workflow-instance-store.md)합니다.  
   
 ## <a name="enabling-persistence-for-self-hosted-workflows-that-use-workflowapplication"></a>WorkflowApplication을 사용하는 자체 호스팅 워크플로에 지속성 사용  
  <xref:System.Activities.WorkflowApplication> 개체 모델을 사용하여 프로그래밍 방식으로 <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore>을 사용하는 자체 호스팅 워크플로에 지속성을 사용할 수 있습니다. 다음 절차에서는 이를 수행하는 단계를 보여 줍니다.  

@@ -1,20 +1,17 @@
 ---
-title: "지연 계산(F#)"
-description: "F # 지연 계산 응용 프로그램 및 라이브러리의 성능이 향상 방법에 대해 알아봅니다."
-keywords: "visual f#, f#, 함수형 프로그래밍"
+title: 지연 계산(F#)
+description: 'F # 지연 계산 응용 프로그램 및 라이브러리의 성능이 향상 방법에 대해 알아봅니다.'
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: 3499293e-1d53-4b02-b764-f687fbdaa7fe
-ms.openlocfilehash: 984c96ab68a8919e2382eefe8260b07f191027dd
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 72dc5a14a845b52ae2512314d730516ca0cf4b9d
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="lazy-computations"></a>지연 계산
 
@@ -32,7 +29,7 @@ let identifier = lazy ( expression )
 
 지연 계산을 사용 하 여 계산을 결과가 필요한 경우에만 실행 하도록 제한 하 여 성능을 향상 시킬 수 있습니다.
 
-메서드를 호출 하면 계산을 강제로 수행할, `Force`합니다. `Force`한 번만 수행 하 고 실행을 하면 됩니다. 에 대 한 후속 호출 `Force` 동일한 결과 실행 하지는 않습니다 모든 코드를 반환 합니다.
+메서드를 호출 하면 계산을 강제로 수행할, `Force`합니다. `Force` 한 번만 수행 하 고 실행을 하면 됩니다. 에 대 한 후속 호출 `Force` 동일한 결과 실행 하지는 않습니다 모든 코드를 반환 합니다.
 
 다음 코드에서는 지연 계산의 사용 및 사용 `Force`합니다. 이 코드의 형식 `result` 은 `Lazy<int>`, 및 `Force` 메서드가 반환 되는 `int`합니다.
 

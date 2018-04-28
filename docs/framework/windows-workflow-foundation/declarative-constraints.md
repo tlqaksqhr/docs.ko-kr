@@ -1,23 +1,24 @@
 ---
-title: "선언적 제약 조건"
-ms.custom: 
+title: 선언적 제약 조건
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 67001ed1-7f4d-4ada-ae57-a31176901a53
-caps.latest.revision: "12"
+caps.latest.revision: 12
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a11c62c7011d7ffb13ed0d0ebf060a3cbeb7d7f8
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: f5ab784498805473830b46962d9e02591fc3eace
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="declarative-constraints"></a>선언적 제약 조건
 선언적 제약 조건은 활동 및 활동과 다른 활동의 관계에 대한 강력한 유효성 검사 메서드를 제공합니다. 제약 조건이 제작 프로세스 중에 활동에 대해 구성되지만, 워크플로 호스트에서 추가 제약 조건을 지정할 수도 있습니다. 이 항목에서는 선언적 제약 조건을 사용하여 작업 유효성 검사를 제공하는 방법에 대해 간략하게 설명합니다.  
@@ -146,7 +147,7 @@ public sealed class CreateState : CodeActivity
 }  
 ```  
   
- [!INCLUDE[crdefault](../../../includes/crdefault-md.md)]Windows Workflow Foundation [유효성 검사](../../../docs/framework/windows-workflow-foundation/samples/validation.md) 샘플입니다.  
+ 자세한 내용은 참조는 Windows Workflow Foundation [유효성 검사](../../../docs/framework/windows-workflow-foundation/samples/validation.md) 샘플입니다.  
   
 ## <a name="additional-constraints"></a>추가 제약 조건  
  워크플로 호스트 작성자는 제약 조건을 만든 후 <xref:System.Activities.Validation.ValidationSettings.AdditionalConstraints%2A> 인스턴스의 <xref:System.Activities.Validation.ValidationSettings> 사전에 추가하여 워크플로의 활동에 대한 추가 유효성 검사 제약 조건을 지정할 수 있습니다. <xref:System.Activities.Validation.ValidationSettings.AdditionalConstraints%2A>의 각 항목에는 제약 조건이 적용되는 활동 유형과 해당 활동 유형에 대한 추가 제약 조건 목록이 포함됩니다. 워크플로에 대한 유효성 검사를 호출하면 파생 클래스를 포함하여 지정된 유형의 각 활동에서 제약 조건을 평가합니다. 이 예제에서는 이전 섹션의 `ActivityDisplayNameIsNotSetWarning` 제약 조건이 워크플로의 모든 작업에 적용됩니다.  
@@ -187,4 +188,4 @@ else
 }  
 ```  
   
- <xref:System.Activities.Validation.ValidationSettings.OnlyUseAdditionalConstraints%2A>의 <xref:System.Activities.Validation.ValidationSettings> 속성이 `true`인 경우 <xref:System.Activities.Validation.ActivityValidationServices.Validate%2A>를 호출하여 유효성 검사를 호출하면 지정된 추가 제약 조건만 평가됩니다. 이 기능은 특정 유효성 검사 구성에 대한 워크플로를 검사할 때 유용합니다. 워크플로를 호출하면 워크플로에 구성된 유효성 검사 논리를 평가하여 통과해야 워크플로가 시작됩니다. [!INCLUDE[crabout](../../../includes/crabout-md.md)]유효성 검사를 호출 참조 [활동 유효성 검사 호출](../../../docs/framework/windows-workflow-foundation/invoking-activity-validation.md)합니다.
+ <xref:System.Activities.Validation.ValidationSettings.OnlyUseAdditionalConstraints%2A>의 <xref:System.Activities.Validation.ValidationSettings> 속성이 `true`인 경우 <xref:System.Activities.Validation.ActivityValidationServices.Validate%2A>를 호출하여 유효성 검사를 호출하면 지정된 추가 제약 조건만 평가됩니다. 이 기능은 특정 유효성 검사 구성에 대한 워크플로를 검사할 때 유용합니다. 워크플로를 호출하면 워크플로에 구성된 유효성 검사 논리를 평가하여 통과해야 워크플로가 시작됩니다. [!INCLUDE[crabout](../../../includes/crabout-md.md)] 유효성 검사를 호출 참조 [활동 유효성 검사 호출](../../../docs/framework/windows-workflow-foundation/invoking-activity-validation.md)합니다.

@@ -1,20 +1,17 @@
 ---
-title: "Visual Studio Code에서 F #으로 시작."
-description: "Visual Studio Code 및 Ionide 플러그 인 suite F #을 사용 하는 방법에 알아봅니다."
-keywords: "visual f #, f #, 함수형 프로그래밍,.NET, Visual Studio Code vscode Ionide"
+title: 'Visual Studio Code에서 F #으로 시작.'
+description: 'Visual Studio Code 및 Ionide 플러그 인 suite F #을 사용 하는 방법에 알아봅니다.'
 author: cartermp
 ms.author: phcart
 ms.date: 02/28/2018
-ms.topic: article
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.topic: conceptual
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: 49775139-082e-442f-b5a2-dd402399b5d2
-ms.openlocfilehash: c452e791b27bc3f32e137a515011d953005344c6
-ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
+ms.openlocfilehash: 43fed76a57bd7749a7f22a2039ad625e3d26d132
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="get-started-with-f-in-visual-studio-code"></a>Visual Studio Code에서 F #으로 시작.
 
@@ -266,7 +263,7 @@ Ionide 개발자 및 F #에서 커뮤니티에서 도움을 요청할 수도 있
 
 F # 및 언어의 기능에 대 한 자세한 내용은 체크 아웃 [둘러보기의 F #](../tour.md)합니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참고자료
 
 [F# 둘러보기](../tour.md)
 

@@ -1,27 +1,29 @@
 ---
-title: "WPF 연습"
-ms.custom: 
+title: WPF 연습
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - walkthroughs [WPF]
 - WPF walkthroughs [WPF]
 ms.assetid: c29bde96-0389-4aff-a9fb-cd678f66b7f7
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a6407ccb093d6bdba4e3953ffa1117cf4b56c119
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: c99d23769e99ea01fe1e1d264361a933228f4c1c
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="wpf-walkthroughs"></a>WPF 연습
 연습에서는 일반 시나리오에 대 한 단계별 지침을 제공 합니다. 제품 또는 특정 기능 영역 파악을 효율적으로 시작할 수 있습니다.  
@@ -52,7 +54,7 @@ ms.lasthandoff: 01/19/2018
 |제목|설명|  
 |-----------|-----------------|  
 |[연습: WPF에서 Windows Forms 컨트롤 호스팅](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-windows-forms-control-in-wpf.md)|Windows Forms를 호스트 하는 방법을 보여 줍니다 <xref:System.Windows.Forms.MaskedTextBox?displayProperty=nameWithType> WPF 응용 프로그램에서 제어 합니다.|  
-|[연습: WPF에서 Windows Forms 복합 컨트롤 호스팅](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-windows-forms-composite-control-in-wpf.md)|호스트 하는 방법을 보여 줍니다.는 [!INCLUDE[TLA2#tla_winforms](../../../../includes/tla2sharptla-winforms-md.md)] 데이터 입력 복합 컨트롤은 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 응용 프로그램입니다.|  
+|[연습: WPF에서 Windows Forms 복합 컨트롤 호스팅](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-windows-forms-composite-control-in-wpf.md)|Windows Forms 데이터 입력 복합 컨트롤을 호스트 하는 방법을 보여 줍니다.는 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 응용 프로그램입니다.|  
 |[연습: Windows Forms에서 WPF 복합 컨트롤 호스팅](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-wpf-composite-control-in-windows-forms.md)|Windows Forms 응용 프로그램에서 WPF 데이터 입력 복합 컨트롤을 호스트 하는 방법을 보여 줍니다.|  
 |[연습: WPF에서 Windows Forms 컨트롤 정렬](../../../../docs/framework/wpf/advanced/walkthrough-arranging-windows-forms-controls-in-wpf.md)|하이브리드 응용 프로그램에서 Windows Forms 컨트롤을 정렬 하려면 WPF 레이아웃 기능을 사용 하는 방법을 보여 줍니다.|  
 |[연습: 혼합 응용 프로그램에서 데이터 바인딩](../../../../docs/framework/wpf/advanced/walkthrough-binding-to-data-in-hybrid-applications.md)|Windows Forms 및 WPF 컨트롤을 포함 하는 하이브리드 응용 프로그램에서 데이터 바인딩을 사용 하는 방법을 보여 줍니다.|  
@@ -61,4 +63,4 @@ ms.lasthandoff: 01/19/2018
   
 |제목|설명|  
 |-----------|-----------------|  
-|[Visual Studio Walkthroughs](http://msdn.microsoft.com/library/f5399a1f-2d3d-42fb-b989-134ccda2159f)|Visual Studio에서 프로그래밍의 모든 영역에 대 한 연습 관련된 목록을 제공합니다.|
+|[Visual Studio 연습](http://msdn.microsoft.com/library/f5399a1f-2d3d-42fb-b989-134ccda2159f)|Visual Studio에서 프로그래밍의 모든 영역에 대 한 연습 관련된 목록을 제공합니다.|

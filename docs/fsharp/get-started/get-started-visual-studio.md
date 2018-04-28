@@ -1,20 +1,17 @@
 ---
-title: "Visual Studio에서 F #으로 시작."
-description: "F # Visual Studio와 함께 사용 하는 방법에 알아봅니다."
-keywords: "visual f#, f#, 함수형 프로그래밍"
+title: 'Visual Studio에서 F #으로 시작.'
+description: 'F # Visual Studio와 함께 사용 하는 방법에 알아봅니다.'
 author: cartermp
 ms.author: phcart
 ms.date: 02/13/2017
-ms.topic: article
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.topic: conceptual
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: 8db75596-19a9-4eda-b20d-a12d517c8cc1
-ms.openlocfilehash: 818bf50507a88e1d765da8d0505ed8da4790b71f
-ms.sourcegitcommit: 655fd4f78741967f80c409cef98347fdcf77857d
+ms.openlocfilehash: 29e24f755e6d97c4b31c0d01b254bf90cf77bf17
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="get-started-with-f-in-visual-studio"></a>Visual Studio에서 F #으로 시작.
 
@@ -44,7 +41,7 @@ Visual Studio에서 가장 기본적인 프로젝트 중 하나는 콘솔 응용
 
 1. 에 **파일** 메뉴에서 **새로**를 선택한 후 **프로젝트**합니다.
 
-2.  새로 만들기 대화 상자에서를 아래에서 프로젝트 **템플릿**, 나타납니다 **Visual F #**합니다.  F # 서식 파일을 표시 하려면이 옵션을 선택 합니다.
+2.  새로 만들기 대화 상자에서를 아래에서 프로젝트 **템플릿**, 나타납니다 **Visual F #** 합니다.  F # 서식 파일을 표시 하려면이 옵션을 선택 합니다.
 
 3. 선택 **.NET Core 콘솔 앱** 또는 **콘솔 응용 프로그램**합니다.
 
@@ -136,7 +133,7 @@ val it : bool = true
 
 아직 하지 않는 경우 체크 아웃의 [둘러보기의 F #](../tour.md)는 F # 언어의 핵심 기능 중 일부에 대해 설명 합니다.  F #의 기능 중 일부에 대 한 개요를 제공 하 고 Visual Studio로 복사 하 고 실행할 수 있는 충분 한 코드 예제를 제공 합니다.  사용할 수는 몇 가지 외부 리소스는 또한에서 보여 줍니다는 [F # 가이드](../index.md)합니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참고자료
  [Visual F#](index.md)  
  [F# 둘러보기](../tour.md)  
  [F # 언어 참조](../language-reference/index.md)  

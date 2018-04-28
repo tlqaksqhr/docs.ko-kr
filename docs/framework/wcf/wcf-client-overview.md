@@ -21,11 +21,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 3669260d34aac0783f2ebd735c79ced91741408a
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.openlocfilehash: b0042d9b90066553d6fc962bba1b7a7b990ca242
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="wcf-client-overview"></a>WCF 클라이언트 개요
 이 단원에서는 클라이언트 응용 프로그램이 수행하는 작업, [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 클라이언트를 구성, 생성 및 사용하는 방법, 그리고 클라이언트 응용 프로그램의 보안을 유지하는 방법에 대해 설명합니다.  
@@ -83,7 +83,7 @@ svcutil /language:vb /out:ClientCode.vb /config:app.config http://computerName/M
   
  생성자 중 하나를 사용하여 이 클래스를 로컬 개체로 만든 다음 구성하여 `ISampleService` 형식 서비스에 연결하는 데 사용할 수 있습니다.  
   
- [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 클라이언트 개체를 먼저 만든 다음 단일 try/catch 블록에서 해당 개체를 사용하고 닫는 것이 좋습니다. 사용 하지 않아야는 `using` 문 (`Using` Visual basic에서) 특정 오류 모드에서 예외를 마스킹할 수 있으므로 합니다. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] 다음 섹션 및 같이 [Using 문과 문제 방지](../../../docs/framework/wcf/samples/avoiding-problems-with-the-using-statement.md)합니다.  
+ [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 클라이언트 개체를 먼저 만든 다음 단일 try/catch 블록에서 해당 개체를 사용하고 닫는 것이 좋습니다. 사용 하지 않아야는 `using` 문 (`Using` Visual basic에서) 특정 오류 모드에서 예외를 마스킹할 수 있으므로 합니다. 자세한 내용은 다음 섹션을 참조와 [Using 문과 문제 방지](../../../docs/framework/wcf/samples/avoiding-problems-with-the-using-statement.md)합니다.  
   
 ### <a name="contracts-bindings-and-addresses"></a>계약, 바인딩 및 주소  
  [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 클라이언트 개체를 만들려면 클라이언트 개체를 구성해야 합니다. 특히 서비스 있어야 *끝점* 사용 하도록 합니다. 끝점은 서비스 계약, 바인딩 및 주소의 조합입니다. ([!INCLUDE[crabout](../../../includes/crabout-md.md)] 끝점, 참조 [끝점: 주소, 바인딩 및 계약](../../../docs/framework/wcf/feature-details/endpoints-addresses-bindings-and-contracts.md).) 이 정보에 일반적으로 [ \<끝점 >](../../../docs/framework/configure-apps/file-schema/wcf/endpoint-of-client.md) Svcutil.exe 도구를 생성 하 고 클라이언트를 만들 때 자동으로 로드 되는 것과 같은 클라이언트 응용 프로그램 구성 파일의 요소 개체입니다. 두 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 클라이언트 형식에는 이 정보를 프로그래밍 방식으로 지정할 수 있게 해주는 오버로드가 있습니다.  
@@ -140,7 +140,7 @@ Namespace Microsoft.ServiceModel.Samples
 End Interface  
 ```  
   
- 다음 코드 예제에 설명된 것처럼 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 클라이언트 개체를 만든 다음 해당 메서드를 호출하여 작업을 호출할 수 있습니다. [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 클라이언트 개체 열기, 호출 및 닫기는 단일 try/catch 블록 내에서 발생합니다. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [WCF 클라이언트를 사용 하 여 서비스에 액세스](../../../docs/framework/wcf/feature-details/accessing-services-using-a-client.md) 및 [Using 문과 문제 방지](../../../docs/framework/wcf/samples/avoiding-problems-with-the-using-statement.md)합니다.  
+ 다음 코드 예제에 설명된 것처럼 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 클라이언트 개체를 만든 다음 해당 메서드를 호출하여 작업을 호출할 수 있습니다. [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 클라이언트 개체 열기, 호출 및 닫기는 단일 try/catch 블록 내에서 발생합니다. 자세한 내용은 참조 [WCF 클라이언트를 사용 하 여 액세스 서비스](../../../docs/framework/wcf/feature-details/accessing-services-using-a-client.md) 및 [Using 문과 문제 방지](../../../docs/framework/wcf/samples/avoiding-problems-with-the-using-statement.md)합니다.  
   
  [!code-csharp[C_GeneratedCodeFiles#20](../../../samples/snippets/csharp/VS_Snippets_CFX/c_generatedcodefiles/cs/proxycode.cs#20)]  
   
@@ -167,7 +167,7 @@ End Interface
   
  이중 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 클라이언트 개체는 콜백 서비스 구성을 포함하여 콜백을 지원하는 데 필요한 기능을 노출한다는 점만 제외하고 비이중 클라이언트 개체와 같은 역할을 합니다.  
   
- 예를 들어, 콜백 클래스에서 <xref:System.ServiceModel.CallbackBehaviorAttribute?displayProperty=nameWithType> 특성의 속성을 사용하여 콜백 개체 런타임 동작을 다양하게 제어할 수 있습니다. 또 다른 예로, <xref:System.ServiceModel.Description.CallbackDebugBehavior?displayProperty=nameWithType> 클래스를 사용하여 콜백 개체를 호출하는 서비스에 예외 정보를 반환할 수 있습니다. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [이중 서비스](../../../docs/framework/wcf/feature-details/duplex-services.md)합니다. 전체 샘플을 참조 하십시오. [이중](../../../docs/framework/wcf/samples/duplex.md)합니다.  
+ 예를 들어, 콜백 클래스에서 <xref:System.ServiceModel.CallbackBehaviorAttribute?displayProperty=nameWithType> 특성의 속성을 사용하여 콜백 개체 런타임 동작을 다양하게 제어할 수 있습니다. 또 다른 예로, <xref:System.ServiceModel.Description.CallbackDebugBehavior?displayProperty=nameWithType> 클래스를 사용하여 콜백 개체를 호출하는 서비스에 예외 정보를 반환할 수 있습니다. 자세한 내용은 참조 [이중 서비스](../../../docs/framework/wcf/feature-details/duplex-services.md)합니다. 전체 샘플을 참조 하십시오. [이중](../../../docs/framework/wcf/samples/duplex.md)합니다.  
   
  IIS(인터넷 정보 서비스) 5.1을 실행하는 Windows XP 컴퓨터에서 이중 클라이언트는 <xref:System.ServiceModel.WSDualHttpBinding?displayProperty=nameWithType> 클래스를 사용하여 클라이언트 기본 주소를 지정해야 합니다. 그렇지 않으면 예외가 throw됩니다. 다음 코드 예제에서는 코드에서 이 작업을 수행하는 방법을 보여 줍니다.  
   
@@ -179,7 +179,7 @@ End Interface
  [!code-csharp[S_DualHttp#134](../../../samples/snippets/csharp/VS_Snippets_CFX/s_dualhttp/cs/program.cs#134)]  
   
 ## <a name="calling-services-asynchronously"></a>비동기적으로 서비스 호출  
- 작업이 호출되는 방법은 클라이언트 개발자에 의해 지정됩니다. 작업을 구성하는 메시지는 관리되는 코드에 표시될 때 동기 메서드나 비동기 메서드에 매핑될 수 있기 때문입니다. 따라서 작업을 비동기적으로 호출하는 클라이언트를 빌드하려면 Svcutil.exe에서 `/async` 옵션을 사용하여 비동기 클라이언트 코드를 생성할 수 있습니다. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [방법: 서비스 작업을 비동기적으로 호출](../../../docs/framework/wcf/feature-details/how-to-call-wcf-service-operations-asynchronously.md)합니다.  
+ 작업이 호출되는 방법은 클라이언트 개발자에 의해 지정됩니다. 작업을 구성하는 메시지는 관리되는 코드에 표시될 때 동기 메서드나 비동기 메서드에 매핑될 수 있기 때문입니다. 따라서 작업을 비동기적으로 호출하는 클라이언트를 빌드하려면 Svcutil.exe에서 `/async` 옵션을 사용하여 비동기 클라이언트 코드를 생성할 수 있습니다. 자세한 내용은 참조 [하는 방법: 비동기적 서비스 작업 호출](../../../docs/framework/wcf/feature-details/how-to-call-wcf-service-operations-asynchronously.md)합니다.  
   
 ## <a name="calling-services-using-wcf-client-channels"></a>WCF 클라이언트 채널을 사용하여 서비스 호출  
  [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 클라이언트 형식은 <xref:System.ServiceModel.ClientBase%601>를 확장합니다. 이 형식은 <xref:System.ServiceModel.IClientChannel?displayProperty=nameWithType> 인터페이스에서 직접 파생되어 기본 채널 시스템을 노출합니다. <xref:System.ServiceModel.ChannelFactory%601?displayProperty=nameWithType> 클래스와의 대상 서비스 계약을 사용하여 서비스를 호출할 수 있습니다. 자세한 내용은 참조 [WCF 클라이언트 아키텍처](../../../docs/framework/wcf/feature-details/client-architecture.md)합니다.  

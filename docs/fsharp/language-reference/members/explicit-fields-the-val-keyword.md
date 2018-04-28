@@ -1,20 +1,17 @@
 ---
-title: "명시적 필드: val 키워드(F#)"
+title: '명시적 필드: val 키워드(F#)'
 description: "F # 'val'에 대 한 자세한 내용은 키워드 형식을 초기화 하지 않고 클래스 또는 구조체 형식의 값을 저장 하는 위치를 선언 하는 데 사용 됩니다."
-keywords: "visual f#, f#, 함수형 프로그래밍"
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: 3bdbc745-436b-407f-bf54-5d11ca829cd0
-ms.openlocfilehash: cee53a48f08aec89b0bdd40189ed331cadee877d
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: dc277680121976c0469b18c77bd84443cd251afb
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="explicit-fields-the-val-keyword"></a>명시적 필드: val 키워드
 
@@ -49,7 +46,7 @@ val [ mutable ] [ access-modifier ] field-name : type-name
 
 
 >[!WARNING] 
-`Note`.NET Framework 네임 스페이스 `System.ComponentModel` 동일한 이름이 있는 특성을 포함 합니다. 이 특성에 대한 자세한 내용은 `System.ComponentModel.DefaultValueAttribute`를 참조하세요.
+`Note` .NET Framework 네임 스페이스 `System.ComponentModel` 동일한 이름이 있는 특성을 포함 합니다. 이 특성에 대한 자세한 내용은 `System.ComponentModel.DefaultValueAttribute`를 참조하세요.
 
 
 다음 코드에서는 기본 생성자가 있는 클래스에 명시적 필드를 사용하는 방법을 보여 주고 이와 비교하기 위해 `let` 바인딩을 사용하는 방법도 보여 줍니다. `let` 바인딩된 필드 `myInt1`은 전용 필드입니다. `let` 바인딩된 필드 `myInt1`을 멤버 메서드에서 참조하는 경우 자체 식별자 `this`가 필요하지 않습니다. 그러나 명시적 필드 `myInt2`와 `myString`을 참조할 때는 자체 식별자가 필요합니다.

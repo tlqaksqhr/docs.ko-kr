@@ -1,24 +1,26 @@
 ---
-title: "상관 관계 문제 해결"
-ms.custom: 
+title: 상관 관계 문제 해결
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 98003875-233d-4512-a688-4b2a1b0b5371
-caps.latest.revision: "11"
+caps.latest.revision: 11
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 76b6178d3190165e711f46af60a6541a82ad0bd7
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 5bdf111e6802692aef893cf9dcae88f0f51aa467
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="troubleshooting-correlation"></a>상관 관계 문제 해결
 상관 관계는 워크플로 서비스 메시지를 서로 연결하거나 올바른 워크플로 인스턴스에 연결하는 데 사용되지만, 제대로 구성되지 않으면 메시지가 수신되지 않고 응용 프로그램이 올바르게 작동하지 않습니다. 이 항목에서는 상관 관계 문제를 해결하기 위한 몇 가지 방법을 간략히 설명하고 상관 관계를 사용할 때 발생할 수 있는 일반적인 문제도 설명합니다.  
@@ -89,7 +91,7 @@ host.WorkflowExtensions.Add(new ConsoleTrackingParticipant());
   
  ConsoleTrackingParticipant와 같은 추적 참가자는 콘솔 창이 있는 자체 호스팅 워크플로 서비스에 유용합니다. 웹 호스팅 서비스에 대 한 영 속 저장소에 추적 정보를 기록 하는 추적 참가자를 사용할지 같은 기본 제공 <xref:System.Activities.Tracking.EtwTrackingParticipant>, 또는 같은 파일에 정보를 기록 하는 사용자 지정 추적 참가자는 `TextWriterTrackingParticpant` 는 에서[ 텍스트 파일을 사용 하 여 추적](../../../../docs/framework/windows-workflow-foundation/samples/tracking-using-a-text-file.md) 샘플.  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]추적 및 웹 호스팅 워크플로 서비스에 대 한 추적을 구성을 참조 [워크플로 추적 및 트레이싱](../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md), [워크플로에 대 한 추적 구성](../../../../docs/framework/windows-workflow-foundation/configuring-tracking-for-a-workflow.md), 및 [추적 &#91; WF 샘플 &#93; ](../../../../docs/framework/windows-workflow-foundation/samples/tracking.md) 샘플입니다.  
+ [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 추적 및 웹 호스팅 워크플로 서비스에 대 한 추적을 구성을 참조 [워크플로 추적 및 트레이싱](../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md), [워크플로에 대 한 추적 구성](../../../../docs/framework/windows-workflow-foundation/configuring-tracking-for-a-workflow.md), 및 [추적 &#91;WF 샘플&#93; ](../../../../docs/framework/windows-workflow-foundation/samples/tracking.md) 샘플입니다.  
   
 ## <a name="use-wcf-tracing"></a>WCF 추적 사용  
  WCF 추적은 워크플로 서비스 간의 메시지 흐름에 대한 추적을 제공합니다. 이 추적 정보는 상관 관계 문제, 특히 내용 기반 상관 관계 문제를 해결하는 데 유용합니다. 추적을 사용하도록 설정하려면 `system.diagnostics` 파일(워크플로 서비스가 웹 호스팅 서비스인 경우) 또는 `web.config` 파일(워크플로 서비스가 자체 호스팅 서비스인 경우)의 `app.config` 섹션에서 원하는 추적 수신기를 지정합니다. 메시지의 내용을 추적 파일에 포함하려면 `true`의 `logEntireMessage` 섹션에 있는 `messageLogging` 요소에서 `diagnostics`에 `system.serviceModel`를 지정합니다. 다음 예제에서는 메시지 내용을 포함한 추적 정보를 `service.svclog`라는 파일에 기록하도록 구성합니다.  
@@ -127,7 +129,7 @@ host.WorkflowExtensions.Add(new ConsoleTrackingParticipant());
 </configuration>  
 ```  
   
- 에 포함 된 추적 정보를 보려면 `service.svclog`, [Service Trace Viewer 도구 (SvcTraceViewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md) 사용 됩니다. 이 도구를 사용하면 메시지 내용을 볼 수 있을 뿐 아니라 내용 기반 상관 관계의 경우 전달되는 정확한 정보와 해당 정보가<xref:System.ServiceModel.CorrelationQuery>와 일치하는지 여부를 확인할 수 있으므로 내용 기반 상관 관계의 문제를 해결하는 데 특히 유용합니다. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]WCF 추적 참조 [Service Trace Viewer 도구 (SvcTraceViewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md), [추적 구성](../../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md), 및 [응용 프로그램 문제 해결에 대 한 추적 사용 하 여](../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)합니다.  
+ 에 포함 된 추적 정보를 보려면 `service.svclog`, [Service Trace Viewer 도구 (SvcTraceViewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md) 사용 됩니다. 이 도구를 사용하면 메시지 내용을 볼 수 있을 뿐 아니라 내용 기반 상관 관계의 경우 전달되는 정확한 정보와 해당 정보가<xref:System.ServiceModel.CorrelationQuery>와 일치하는지 여부를 확인할 수 있으므로 내용 기반 상관 관계의 문제를 해결하는 데 특히 유용합니다. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] WCF 추적 참조 [Service Trace Viewer 도구 (SvcTraceViewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md), [추적 구성](../../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md), 및 [응용 프로그램 문제 해결에 대 한 추적 사용 하 여](../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)합니다.  
   
 ## <a name="common-context-exchange-correlation-issues"></a>일반적인 컨텍스트 교환 상관 관계 문제  
  일부 형식의 상관 관계에서는 특정 형식의 바인딩을 사용해야 상관 관계가 올바르게 작동합니다. 예제에는 <xref:System.ServiceModel.BasicHttpBinding> 같은 양방향 바인딩이 필요한 요청-회신 상관 관계와 <xref:System.ServiceModel.BasicHttpContextBinding> 같은 컨텍스트 기반 바인딩이 필요한 컨텍스트 교환 상관 관계가 포함되어 있습니다. 대부분의 바인딩은 양방향 작업을 지원하므로 요청-회신 상관 관계의 경우에는 이러한 사항이 일반적인 문제가 아니지만, 컨텍스트 기반 바인딩은 <xref:System.ServiceModel.BasicHttpContextBinding>, <xref:System.ServiceModel.WSHttpContextBinding> 및 <xref:System.ServiceModel.NetTcpContextBinding>을 비롯한 일부만 있습니다. 이러한 바인딩 중 하나를 사용하지 않으면 워크플로 서비스에 대한 초기 호출은 성공하지만 후속 호출은 다음 <xref:System.ServiceModel.FaultException>과 함께 실패합니다.  
@@ -141,7 +143,7 @@ supports the context protocol and has a valid context initialized.
   
  컨텍스트 상관 관계에 사용되는 컨텍스트 정보는 <xref:System.ServiceModel.Activities.SendReply>에 의해 컨텍스트 상관 관계를 초기화하는 <xref:System.ServiceModel.Activities.Receive> 활동에 반환되거나(양방향 작업을 사용할 경우) 호출자에 의해 지정될 수 있습니다(단방향 작업을 사용할 경우). 컨텍스트를 호출자가 보내지 않거나 워크플로 서비스에서 반환하지 않는 경우에는 후속 작업이 호출될 때 위에서 설명한 것과 동일한 <xref:System.ServiceModel.FaultException>이 반환됩니다.  
   
- [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][컨텍스트 교환](../../../../docs/framework/wcf/feature-details/context-exchange-correlation.md)합니다.  
+ 자세한 내용은 참조 [컨텍스트 교환](../../../../docs/framework/wcf/feature-details/context-exchange-correlation.md)합니다.  
   
 ## <a name="common-request-reply-correlation-issues"></a>일반적인 요청-회신 상관 관계 문제  
  요청-회신 상관 관계와 함께 사용 되는 <xref:System.ServiceModel.Activities.Receive> / <xref:System.ServiceModel.Activities.SendReply> 쌍 및 워크플로 서비스에서 양방향 작업을 구현 하는 <xref:System.ServiceModel.Activities.Send> / <xref:System.ServiceModel.Activities.ReceiveReply> 다른 웹에서 양방향 작업을 호출 하는 쌍 서비스입니다. WCF 서비스에서 양방향 작업을 호출하는 경우 해당 서비스는 일반적인 명령적 코드 기반의 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 서비스이거나 워크플로 서비스일 수 있습니다. 요청-회신 상관 관계를 사용하려면 <xref:System.ServiceModel.BasicHttpBinding> 같은 양방향 바인딩을 사용해야 하며 작업이 양방향이어야 합니다.  
@@ -176,7 +178,7 @@ SendReply ReplyToStartOrder = new SendReply
   
  지 속성 간에 허용 되지 않습니다는 <xref:System.ServiceModel.Activities.Receive> / <xref:System.ServiceModel.Activities.SendReply> 쌍 또는 <xref:System.ServiceModel.Activities.Send> / <xref:System.ServiceModel.Activities.ReceiveReply> 쌍입니다. 두 활동이 모두 완료될 때까지 유지되는 비지속성 영역이 만들어집니다. 지연 활동과 같은 활동이 이 비지속성 영역에 있고 워크플로가 유휴 상태가 되도록 하는 경우 워크플로가 유휴 상태가 될 때 워크플로를 유지하도록 호스트를 구성한 경우에도 워크플로가 유지되지 않습니다. 유지 활동과 같은 활동이 비지속성 영역에 명시적으로 유지하려고 하는 경우 치명적 예외가 throw되고 워크플로가 중단되며 <xref:System.ServiceModel.FaultException>이 호출자에게 반환됩니다. 치명적 예외 메시지는 "System.InvalidOperationException: 지속성 작업은 비지속성 블록 내에 포함할 수 없습니다."입니다. 이 예외는 호출자에게 반환되지 않지만 추적을 사용하는 경우 나타날 수 있습니다. 호출자에게 반환되는 <xref:System.ServiceModel.FaultException> 메시지는 "WorkflowInstance '5836145b-7da2-49d0-a052-a49162adeab6'이(가) 완료되었으므로 작업을 수행할 수 없습니다."입니다.  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]요청-회신 상관 관계 참조 [요청-회신](../../../../docs/framework/wcf/feature-details/request-reply-correlation.md)합니다.  
+ [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 요청-회신 상관 관계 참조 [요청-회신](../../../../docs/framework/wcf/feature-details/request-reply-correlation.md)합니다.  
   
 ## <a name="common-content-correlation-issues"></a>일반적인 내용 상관 관계 문제  
  내용 기반 상관 관계는 워크플로 서비스에서 여러 개의 메시지를 받으며 교환되는 메시지의 일부 데이터로 원하는 인스턴스를 식별할 수 있는 경우에 사용됩니다. 내용 기반 상관 관계는 메시지에 있는 이 데이터(예: 고객 번호 또는 주문 ID)를 사용하여 메시지를 올바른 워크플로 인스턴스에 라우트합니다. 이 단원에서는 내용 기반 상관 관계를 사용할 때 발생할 수 있는 몇 가지 일반적인 문제를 설명합니다.  
@@ -261,4 +263,4 @@ sm:header()/tempuri:CartId
 </Receive>  
 ```  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]내용 기반 상관 관계 참조 [콘텐츠 기반](../../../../docs/framework/wcf/feature-details/content-based-correlation.md) 및 [상관 관계가 지정 된 계산기](../../../../docs/framework/windows-workflow-foundation/samples/correlated-calculator.md) 샘플.
+ [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 내용 기반 상관 관계 참조 [콘텐츠 기반](../../../../docs/framework/wcf/feature-details/content-based-correlation.md) 및 [상관 관계가 지정 된 계산기](../../../../docs/framework/windows-workflow-foundation/samples/correlated-calculator.md) 샘플.

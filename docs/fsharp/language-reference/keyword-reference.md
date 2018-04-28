@@ -1,20 +1,17 @@
 ---
-title: "키워드 참조(F#)"
-description: "모든 F # 언어 키워드에 대 한 정보 링크를를 찾습니다."
-keywords: "visual f#, f#, 함수형 프로그래밍"
+title: 키워드 참조(F#)
+description: '모든 F # 언어 키워드에 대 한 정보 링크를를 찾습니다.'
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: 5795ce1f-11bf-4798-9f1f-6e44ffa1477e
-ms.openlocfilehash: cdfdd86843acf05a8b33647823f934a161f6d885
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 35a127a38db4874699ef7b43681cb967a139c81e
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="keyword-reference"></a>키워드 참조
 
@@ -27,7 +24,7 @@ ms.lasthandoff: 10/18/2017
 |키워드|링크|설명|
 |-------|----|-----------|
 |`abstract`|[멤버](members/index.md)<br /><br />[추상 클래스](abstract-classes.md)|에는 선언 또는 가상 인지 하 고는 기본 구현을 글꼴로 구현이 없는 메서드를 나타냅니다.|
-|`and`|[`let`바인딩](functions/let-bindings.md)<br /><br />[멤버](members/index.md)<br /><br />[제약 조건](generics/constraints.md)|상호 재귀 바인딩, 속성 선언에서 및 제네릭 매개 변수에 대 한 여러 제약 조건에 사용 합니다.|
+|`and`|[`let` 바인딩](functions/let-bindings.md)<br /><br />[멤버](members/index.md)<br /><br />[제약 조건](generics/constraints.md)|상호 재귀 바인딩, 속성 선언에서 및 제네릭 매개 변수에 대 한 여러 제약 조건에 사용 합니다.|
 |`as`|[클래스](classes.md)<br /><br />[패턴 일치](Pattern-Matching.md)|현재 클래스 개체에는 개체 이름을 지정 하는 데 사용 합니다. 또한 일치 하는 패턴 내의 전체 패턴에 이름을 지정 하는 데 사용 합니다.|
 |`assert`|[어설션](assertions.md)|디버깅 하는 동안 코드를 확인 하는 데 사용 합니다.|
 |`base`|[클래스](classes.md)<br /><br />[상속](inheritance.md)|기본 클래스 개체의 이름으로 사용 합니다.|
@@ -58,7 +55,7 @@ ms.lasthandoff: 10/18/2017
 |`interface`|[인터페이스](interfaces.md)|선언 하 고 인터페이스를 구현 하는 데 사용 합니다.|
 |`internal`|[Access Control](access-control.md)|멤버가 표시 되는지 지정 하는 데 외부가 아니라 어셈블리 내 합니다.|
 |`lazy`|[지연 계산](lazy-computations.md)|계산 결과가 필요한 경우에 수행 하는 것을 지정 하는 데 사용 합니다.|
-|`let`|[`let`바인딩](functions/let-bindings.md)|연결 하거나 값 또는 함수 이름을 바인딩하려면 하는 데 사용 합니다.|
+|`let`|[`let` 바인딩](functions/let-bindings.md)|연결 하거나 값 또는 함수 이름을 바인딩하려면 하는 데 사용 합니다.|
 |`let!`|[비동기 워크플로](asynchronous-workflows.md)<br /><br />[계산 식](computation-expressions.md)|비동기 이름을 비동기 계산의 결과에 바인딩할 워크플로와 또는 결과 계산 하는 형식의 이름을 바인딩하는 데 사용 되는 다른 계산 식를 사용 합니다.|
 |`match`|[일치 식](match-expressions.md)|패턴 값을 비교 하 여 분기 하는 데 사용 합니다.|
 |`member`|[멤버](members/index.md)|속성이 나 메서드가 개체 형식에서 선언 하는 데 사용 합니다.|

@@ -1,26 +1,23 @@
 ---
-title: "리소스 관리: use 키워드(F#)"
+title: '리소스 관리: use 키워드(F#)'
 description: "F # 키워드 'use'와 '사용' 함수를 초기화 및 리소스의 해제를 제어할 수 있는 방법을 알아봅니다."
-keywords: "visual f#, f#, 함수형 프로그래밍"
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: 00c3040e-859f-4dad-a7b5-7b8d44dc232c
-ms.openlocfilehash: d4e8626f07f1c77e52e8fabd5ccc07dbf1fa8ddd
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 0e134bf5b302911324dd224316941fee693b787b
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="resource-management-the-use-keyword"></a>리소스 관리: use 키워드
 
 키워드에 설명 `use` 및 `using` 초기화 및 리소스의 해제를 제어할 수 있는 함수입니다.
 
-## <a name="resources"></a>리소스
+## <a name="resources"></a>자료
 용어 *리소스* 에 여러 가지 방법으로 사용 됩니다. 예, 리소스 문자열, 그래픽, like, 같은 있지만이 컨텍스트에서 응용 프로그램을 사용 하는 데이터 수 *리소스* 그래픽 장치 컨텍스트, 파일 핸들, 네트워크 등의 소프트웨어 또는 운영 체제 리소스에 대 한 참조 와 데이터베이스 연결, 대기 핸들 등과 같은 동시성 개체. 응용 프로그램에서 이러한 리소스의 사용에 운영 체제 또는 다른 응용 프로그램에 제공 될 수 있도록 풀에 리소스의 이후 릴리스 후 다른 리소스 공급자에서 리소스를 확보를 해야 합니다. 문제는 응용 프로그램 일반적인 풀으로 리소스를 해제 하지 않는 경우에 발생 합니다.
 
 ## <a name="managing-resources"></a>리소스 관리
@@ -44,7 +41,7 @@ ms.lasthandoff: 10/18/2017
 ## <a name="using-function"></a>함수를 사용 하 여
 `using` 함수 형식은 다음과 같습니다.
 
-`using`(*expression1*) *람다 또는 함수*
+`using` (*expression1*) *람다 또는 함수*
 
 에 `using` 식 *expression1* 삭제 해야 하는 개체를 만듭니다. 결과 *expression1* (삭제 해야 하는 개체)가 인수, *값*을 *람다 또는 함수*, 단일 필요한 함수 중 하나는 생성 되는 값과 일치 하는 형식의 인수를 남은 *expression1*, 또는 해당 형식의 인수를 예상 하는 람다 식입니다. 함수 실행 끝날 때 런타임에서 호출 `Dispose` 리소스를 해제 하 고 (값이 `null`, Dispose에 대 한 호출 시도 하지는 경우).
 
@@ -56,7 +53,7 @@ ms.lasthandoff: 10/18/2017
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet6303.fs)]
 
-다른 인수가 이미 적용 하는 함수 일 수 있는지 확인 합니다. 다음 코드 예제에서는이 보여 줍니다. 문자열이 포함 된 파일을 만듭니다 `XYZ`합니다.
+다른 인수가 이미 적용 하는 함수 일 수 있는지 확인 합니다. 다음 코드 예제에서는 이 작업을 보여줍니다. 문자열이 포함 된 파일을 만듭니다 `XYZ`합니다.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet6304.fs)]
 

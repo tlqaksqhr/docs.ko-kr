@@ -1,13 +1,13 @@
 ---
-title: "서비스 계약에서 데이터 전송 지정"
-ms.custom: 
+title: 서비스 계약에서 데이터 전송 지정
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,17 +15,17 @@ dev_langs:
 helpviewer_keywords:
 - service contracts [WCF], data transfer
 ms.assetid: 7c5a26c8-89c9-4bcb-a4bc-7131e6d01f0c
-caps.latest.revision: 
+caps.latest.revision: 38
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: c650a59402099e1fe71a0292dd0ccfc409d3448d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: fc64ff14c321bd2053b0a97b3cf1ac075b02e973
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="specifying-data-transfer-in-service-contracts"></a>서비스 계약에서 데이터 전송 지정
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]는 메시징 인프라로 생각할 수 있습니다. 서비스 작업에서는 메시지를 받고 처리한 다음 보낼 수 있습니다. 메시지는 작업 계약을 사용하여 설명됩니다. 다음 계약을 예로 들 수 있습니다.  
@@ -65,7 +65,7 @@ float GetAirfare(string fromCity, string toCity, out string currency);
     Function GetAirfare(fromCity As String, toCity As String) As Double  
 ```  
   
- 또한 참조 매개 변수를 사용하여 요청 및 회신 메시지의 매개 변수 부분을 만들 수 있습니다. 매개 변수는 serialize할 수 있는, 즉 XML로 변환할 수 있는 형식이어야 합니다. 기본적으로 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서는 <xref:System.Runtime.Serialization.DataContractSerializer> 클래스라고 하는 구성 요소를 사용하여 이 변환을 수행합니다. `int`, `string`, `float` 및 `DateTime`과 같은 가장 기본적인 형식이 지원됩니다. 사용자 정의 형식에는 일반적으로 데이터 계약이 있어야 합니다. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][데이터 계약을 사용 하 여](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)합니다.  
+ 또한 참조 매개 변수를 사용하여 요청 및 회신 메시지의 매개 변수 부분을 만들 수 있습니다. 매개 변수는 serialize할 수 있는, 즉 XML로 변환할 수 있는 형식이어야 합니다. 기본적으로 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서는 <xref:System.Runtime.Serialization.DataContractSerializer> 클래스라고 하는 구성 요소를 사용하여 이 변환을 수행합니다. `int`, `string`, `float` 및 `DateTime`과 같은 가장 기본적인 형식이 지원됩니다. 사용자 정의 형식에는 일반적으로 데이터 계약이 있어야 합니다. 자세한 내용은 참조 [를 사용 하 여 데이터 계약](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)합니다.  
   
 ```csharp
 public interface IAirfareQuoteService  
@@ -100,7 +100,7 @@ Public Interface IAirfareQuoteService
 End Interface  
 ```  
   
- `DataContractSerializer`는 사용자의 형식을 serialize하기에 적합하지 않은 경우도 있습니다. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서는 대체 serialization 엔진인 <xref:System.Xml.Serialization.XmlSerializer>를 지원하므로, 이 엔진을 사용하여 매개 변수를 serialize할 수도 있습니다. <xref:System.Xml.Serialization.XmlSerializer>를 통해 `XmlAttributeAttribute`와 같은 특성을 사용하여 결과 XML을 보다 효과적으로 제어할 수 있습니다. 특정 연산이나 전체 서비스에 <xref:System.Xml.Serialization.XmlSerializer>를 사용하려면 <xref:System.ServiceModel.XmlSerializerFormatAttribute> 특성을 연산이나 서비스에 적용합니다. 예:  
+ `DataContractSerializer`는 사용자의 형식을 serialize하기에 적합하지 않은 경우도 있습니다. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서는 대체 serialization 엔진인 <xref:System.Xml.Serialization.XmlSerializer>를 지원하므로, 이 엔진을 사용하여 매개 변수를 serialize할 수도 있습니다. <xref:System.Xml.Serialization.XmlSerializer>를 통해 `XmlAttributeAttribute`와 같은 특성을 사용하여 결과 XML을 보다 효과적으로 제어할 수 있습니다. 특정 연산이나 전체 서비스에 <xref:System.Xml.Serialization.XmlSerializer>를 사용하려면 <xref:System.ServiceModel.XmlSerializerFormatAttribute> 특성을 연산이나 서비스에 적용합니다. 예를 들어:  
   
 ```csharp  
 [ServiceContract]  
@@ -137,7 +137,7 @@ Class Itinerary
 End Class  
 ```  
   
- [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][XmlSerializer 클래스를 사용 하 여](../../../../docs/framework/wcf/feature-details/using-the-xmlserializer-class.md)합니다. 위 항목에 설명된 대로 수동으로 <xref:System.Xml.Serialization.XmlSerializer>로 전환할 특별한 이유가 없는 한 이 예제에서처럼 수동으로 전환하지 않는 것이 좋습니다.  
+ 자세한 내용은 참조 [XmlSerializer 클래스를 사용 하 여](../../../../docs/framework/wcf/feature-details/using-the-xmlserializer-class.md)합니다. 위 항목에 설명된 대로 수동으로 <xref:System.Xml.Serialization.XmlSerializer>로 전환할 특별한 이유가 없는 한 이 예제에서처럼 수동으로 전환하지 않는 것이 좋습니다.  
   
  .NET 매개 변수 이름을 계약 이름으로부터 격리시키려면 <xref:System.ServiceModel.MessageParameterAttribute> 특성을 사용하고, `Name` 속성을 사용하여 계약 이름을 설정합니다. 예를 들면, 다음 작업 계약은 이 항목의 첫 번째 예제에 해당합니다.  
   
@@ -254,7 +254,7 @@ Public Class Itinerary
 End Class  
 ```  
   
- [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][메시지 계약을 사용 하 여](../../../../docs/framework/wcf/feature-details/using-message-contracts.md)합니다.  
+ 자세한 내용은 참조 [메시지 계약을 사용 하 여](../../../../docs/framework/wcf/feature-details/using-message-contracts.md)합니다.  
   
  앞의 예제의 경우 <xref:System.Runtime.Serialization.DataContractSerializer> 클래스가 기본적으로 사용됩니다. <xref:System.Xml.Serialization.XmlSerializer> 클래스는 메시지 계약에 사용할 수도 있습니다. 이 작업을 수행하려면 <xref:System.ServiceModel.XmlSerializerFormatAttribute> 특성을 연산이나 계약에 적용하고 메시지 헤더와 본문 멤버의 <xref:System.Xml.Serialization.XmlSerializer> 클래스와 호환되는 형식을 사용합니다.  
   
@@ -314,7 +314,7 @@ Public Class UploadFileMessage
 End Class  
 ```  
   
- [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][큰 데이터 및 스트리밍](../../../../docs/framework/wcf/feature-details/large-data-and-streaming.md)합니다.  
+ 자세한 내용은 참조 [큰 데이터 및 스트리밍](../../../../docs/framework/wcf/feature-details/large-data-and-streaming.md)합니다.  
   
 ## <a name="using-the-message-class"></a>Message 클래스 사용  
  보내거나 받은 메시지를 프로그래밍 방식으로 완벽하게 제어하려면 다음 예제 코드에서처럼 <xref:System.ServiceModel.Channels.Message> 클래스를 직접 사용하면 됩니다.  
@@ -381,7 +381,7 @@ Public Class
 End Class  
 ```  
   
- 이러한 추가 오류는 해당하는 데이터 계약 형식의 <xref:System.ServiceModel.FaultException%601>을 throw하여 생성될 수 있습니다. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][예외 및 오류 처리](../../../../docs/framework/wcf/extending/handling-exceptions-and-faults.md)합니다.  
+ 이러한 추가 오류는 해당하는 데이터 계약 형식의 <xref:System.ServiceModel.FaultException%601>을 throw하여 생성될 수 있습니다. 자세한 내용은 참조 [예외 처리 및 오류](../../../../docs/framework/wcf/extending/handling-exceptions-and-faults.md)합니다.  
   
  <xref:System.Xml.Serialization.XmlSerializer> 클래스를 사용하여 오류를 설명할 수 없습니다. <xref:System.ServiceModel.XmlSerializerFormatAttribute>는 오류 계약에 영향을 주지 않습니다.  
   
@@ -440,7 +440,7 @@ End Class
   
  <xref:System.Xml.Serialization.XmlIncludeAttribute>를 사용할 때 <xref:System.Xml.Serialization.XmlSerializer> 특성을 사용할 수 있습니다.  
   
- 특정 연산 또는 전체 서비스에 <xref:System.ServiceModel.ServiceKnownTypeAttribute> 특성을 적용할 수 있습니다. 호출할 메서드의 형식이나 이름을 사용하여 <xref:System.Runtime.Serialization.KnownTypeAttribute> 특성과 같은 알려진 형식 목록을 가져옵니다. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][데이터 계약 알려진된 형식](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)합니다.  
+ 특정 연산 또는 전체 서비스에 <xref:System.ServiceModel.ServiceKnownTypeAttribute> 특성을 적용할 수 있습니다. 호출할 메서드의 형식이나 이름을 사용하여 <xref:System.Runtime.Serialization.KnownTypeAttribute> 특성과 같은 알려진 형식 목록을 가져옵니다. 자세한 내용은 참조 [데이터 계약 알려진 형식을](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)합니다.  
   
 ## <a name="specifying-the-use-and-style"></a>사용 및 스타일 지정  
  WSDL(웹 서비스 기술 언어)을 사용하여 서비스를 설명하는 경우 문서 스타일과 RPC(원격 프로시저 호출) 스타일이 일반적으로 사용됩니다. 문서 스타일에서 전체 메시지 본문은 스키마를 사용하여 설명되고 WSDL은 해당 스키마 내의 요소를 참조하여 여러 메시지 본문 부분을 설명합니다. RPC 스타일에서 WSDL은 요소가 아닌 각 메시지 부분의 스키마 형식을 참조합니다. 이 두 스타일 중 하나를 수동으로 선택해야 하는 경우도 있습니다. 둘 중 하나만 수동으로 설정하려면 <xref:System.ServiceModel.DataContractFormatAttribute>가 사용 중인 경우에는 `Style` 특성을 적용한 다음 <xref:System.Runtime.Serialization.DataContractSerializer> 속성을 설정하고, `Style`를 사용하는 경우에는 <xref:System.ServiceModel.XmlSerializerFormatAttribute> 특성에 <xref:System.Xml.Serialization.XmlSerializer>을 설정합니다.  
@@ -453,7 +453,7 @@ End Class
  여러 가지 방법으로 데이터를 serialize하는 방법을 사용자 지정할 수 있습니다.  
   
 ### <a name="changing-server-serialization-settings"></a>서버 Serialization 설정 변경  
- 기본 <xref:System.Runtime.Serialization.DataContractSerializer>가 사용 중인 경우 <xref:System.ServiceModel.ServiceBehaviorAttribute> 특성을 서비스에 적용하여 서비스에서 serialization 프로세스의 몇 가지 특성을 제어할 수 있습니다. 특히 `MaxItemsInObjectGraph` 속성을 사용하여 <xref:System.Runtime.Serialization.DataContractSerializer>가 deserialize하는 개체의 최대 개수를 제한하는 할당량을 설정할 수도 있습니다. `IgnoreExtensionDataObject` 속성을 사용하여 라운드트립 버전 관리 기능을 해제할 수 있습니다. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]할당량, 참조 [데이터에 대 한 보안 고려 사항](../../../../docs/framework/wcf/feature-details/security-considerations-for-data.md)합니다. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]라운드트립에, 참조 [이후 버전과 호환 데이터 계약](../../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md)합니다.  
+ 기본 <xref:System.Runtime.Serialization.DataContractSerializer>가 사용 중인 경우 <xref:System.ServiceModel.ServiceBehaviorAttribute> 특성을 서비스에 적용하여 서비스에서 serialization 프로세스의 몇 가지 특성을 제어할 수 있습니다. 특히 `MaxItemsInObjectGraph` 속성을 사용하여 <xref:System.Runtime.Serialization.DataContractSerializer>가 deserialize하는 개체의 최대 개수를 제한하는 할당량을 설정할 수도 있습니다. `IgnoreExtensionDataObject` 속성을 사용하여 라운드트립 버전 관리 기능을 해제할 수 있습니다. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 할당량, 참조 [데이터에 대 한 보안 고려 사항](../../../../docs/framework/wcf/feature-details/security-considerations-for-data.md)합니다. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 라운드트립에, 참조 [이후 버전과 호환 데이터 계약](../../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md)합니다.  
   
 ```csharp  
 [ServiceBehavior(MaxItemsInObjectGraph=100000)]  
@@ -479,7 +479,7 @@ End Interface
 ### <a name="serialization-behaviors"></a>Serialization 동작  
  serializer가 특정 작업에 사용되고 있는지 여부에 따라 자동으로 연결되는 두 가지 동작, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 및 <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior>를 <xref:System.ServiceModel.Description.XmlSerializerOperationBehavior>에서 사용할 수 있습니다. 이러한 동작은 자동으로 적용되므로 일반적으로 사용자가 알아야 할 필요는 없습니다.  
   
- 그러나 `DataContractSerializerOperationBehavior`에는 serialization 프로세스를 사용자 지정하는 데 사용할 수 있는 `MaxItemsInObjectGraph`, `IgnoreExtensionDataObject` 및 `DataContractSurrogate` 속성이 있습니다. 처음 두 속성은 앞 단원에서 설명한 것과 의미가 같습니다. `DataContractSurrogate` 속성을 사용하여 serialization 프로세스를 사용자 지정하고 확장하는 데 필요한 강력한 메커니즘인 데이터 계약 서로게이트를 사용하도록 설정할 수 있습니다. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][데이터 계약 서로게이트](../../../../docs/framework/wcf/extending/data-contract-surrogates.md)합니다.  
+ 그러나 `DataContractSerializerOperationBehavior`에는 serialization 프로세스를 사용자 지정하는 데 사용할 수 있는 `MaxItemsInObjectGraph`, `IgnoreExtensionDataObject` 및 `DataContractSurrogate` 속성이 있습니다. 처음 두 속성은 앞 단원에서 설명한 것과 의미가 같습니다. `DataContractSurrogate` 속성을 사용하여 serialization 프로세스를 사용자 지정하고 확장하는 데 필요한 강력한 메커니즘인 데이터 계약 서로게이트를 사용하도록 설정할 수 있습니다. 자세한 내용은 참조 [데이터 계약 서로게이트](../../../../docs/framework/wcf/extending/data-contract-surrogates.md)합니다.  
   
  `DataContractSerializerOperationBehavior`를 사용하여 클라이언트와 서버 serialization 모두를 사용자 지정할 수 있습니다. 다음 예제에서는 클라이언트에 `MaxItemsInObjectGraph` 할당량을 늘리는 방법을 보여 줍니다.  
   
@@ -585,7 +585,7 @@ Dim serviceHost As ServiceHost = New ServiceHost(GetType(IDataService))
   
 3.  서비스 호스트를 열거나 클라이언트 채널을 만들기 전에 기존 <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior> 동작을 제거하고 이전 단계에서 만든 사용자 지정 파생 클래스에 연결합니다.  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]고급 serialization 개념, 참조 [Serialization 및 Deserialization](../../../../docs/framework/wcf/feature-details/serialization-and-deserialization.md)합니다.  
+ [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 고급 serialization 개념, 참조 [Serialization 및 Deserialization](../../../../docs/framework/wcf/feature-details/serialization-and-deserialization.md)합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [XmlSerializer 클래스 사용](../../../../docs/framework/wcf/feature-details/using-the-xmlserializer-class.md)  

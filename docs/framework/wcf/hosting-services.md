@@ -1,28 +1,28 @@
 ---
-title: "서비스 호스팅"
-ms.custom: 
+title: 서비스 호스팅
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - hosting services [WCF]
 ms.assetid: 192be927-6be2-4fda-98f0-e513c4881acc
-caps.latest.revision: 
+caps.latest.revision: 31
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: b23dac1db5252d3ce2bd60e4f8525dd89d9127b0
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 8311c558c180de5010850a982dc4cca7576382a3
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="hosting-services"></a>서비스 호스팅
 활성화할 서비스는 서비스를 만들고 컨텍스트와 수명을 제어하는 런타임 환경에 호스팅해야 합니다. [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 서비스는 관리 코드를 지원하는 모든 Windows 프로세스에서 실행할 수 있게 디자인되었습니다.  
@@ -34,12 +34,12 @@ ms.lasthandoff: 12/22/2017
 ## <a name="hosting-options"></a>호스팅 옵션  
   
 #### <a name="self-hosting-in-a-managed-application"></a>관리되는 응용 프로그램에서의 자체 호스팅  
- [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 서비스는 관리되는 응용 프로그램에서 호스팅할 수 있습니다. 이 경우 배포하는 데 있어 최소한의 인프라를 필요하므로 가장 유연한 옵션입니다. 관리되는 응용 프로그램 코드 내에 서비스 코드를 포함시킨 다음 서비스를 사용할 수 있도록 <xref:System.ServiceModel.ServiceHost> 의 인스턴스를 만들고 엽니다. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][하는 방법: 관리 되는 응용 프로그램에서 WCF 서비스 호스팅](../../../docs/framework/wcf/how-to-host-a-wcf-service-in-a-managed-application.md)합니다.  
+ [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 서비스는 관리되는 응용 프로그램에서 호스팅할 수 있습니다. 이 경우 배포하는 데 있어 최소한의 인프라를 필요하므로 가장 유연한 옵션입니다. 관리되는 응용 프로그램 코드 내에 서비스 코드를 포함시킨 다음 서비스를 사용할 수 있도록 <xref:System.ServiceModel.ServiceHost> 의 인스턴스를 만들고 엽니다. 자세한 내용은 참조 [하는 방법: 관리 되는 응용 프로그램에서 WCF 서비스 호스팅](../../../docs/framework/wcf/how-to-host-a-wcf-service-in-a-managed-application.md)합니다.  
   
- 이 옵션을 사용하면 두 가지 일반적인 호스팅 시나리오가 가능합니다. 하나는 콘솔 응용 프로그램 내에서, 다른 하나는 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 또는 WinForms(Windows Forms)를 기반으로 하는 응용 프로그램과 같은 리치 클라이언트 응용 프로그램 내에서 실행되는 [!INCLUDE[avalon1](../../../includes/avalon1-md.md)] 서비스입니다. 일반적으로 콘솔 응용 프로그램 내에서 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 서비스를 호스팅하면 응용 프로그램의 개발 단계에서 유용합니다. 이 경우 쉽게 디버깅을 수행할 수 있으며, 응용 프로그램 내에서 발생하는 상황을 확인하기 위한 추적 정보를 손쉽게 얻을 수 있으며, 새 위치에 서비스를 복사하여 이동하기 용이합니다. 이 호스팅 옵션을 사용하면 리치 클라이언트 응용 프로그램(예: [!INCLUDE[avalon2](../../../includes/avalon2-md.md)] 및 WinForms 응용 프로그램)에서 외부와 쉽게 통신할 수 있습니다. 예를 들면 사용자 인터페이스에 대해 [!INCLUDE[avalon2](../../../includes/avalon2-md.md)] 를 사용하고 또한 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 서비스를 호스팅하여 다른 클라이언트에서 해당 서비스에 연결하여 정보를 공유할 수 있도록 하는 피어 투 피어 공동 작업 클라이언트가 있습니다.  
+ 이 옵션을 사용 하면 두 가지 일반적인 시나리오: [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Windows Presentation Foundation (WPF) 또는 Windows Forms (WinForms)에 기반 하는 콘솔 응용 프로그램과 같은 리치 클라이언트 응용 프로그램 내에서 실행 되는 서비스입니다. 일반적으로 콘솔 응용 프로그램 내에서 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 서비스를 호스팅하면 응용 프로그램의 개발 단계에서 유용합니다. 이 경우 쉽게 디버깅을 수행할 수 있으며, 응용 프로그램 내에서 발생하는 상황을 확인하기 위한 추적 정보를 손쉽게 얻을 수 있으며, 새 위치에 서비스를 복사하여 이동하기 용이합니다. 이 호스팅 옵션을 사용하면 리치 클라이언트 응용 프로그램(예: [!INCLUDE[avalon2](../../../includes/avalon2-md.md)] 및 WinForms 응용 프로그램)에서 외부와 쉽게 통신할 수 있습니다. 예를 들면 사용자 인터페이스에 대해 [!INCLUDE[avalon2](../../../includes/avalon2-md.md)] 를 사용하고 또한 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 서비스를 호스팅하여 다른 클라이언트에서 해당 서비스에 연결하여 정보를 공유할 수 있도록 하는 피어 투 피어 공동 작업 클라이언트가 있습니다.  
   
 #### <a name="managed-windows-services"></a>관리되는 Windows 서비스  
- 이 호스팅 옵션은 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 서비스를 호스팅하는 응용 프로그램 도메인(AppDomain)을 관리되는 Windows 서비스(이전의 NT 서비스)로 등록하여 프로세스 수명이 Windows 서비스의 SCM(서비스 제어 관리자)에 의해 제어되도록 하는 옵션입니다. 자체 호스팅 옵션과 같이 이러한 유형의 호스팅 환경에서는 일부 호스팅 코드를 응용 프로그램의 일부로 작성해야 합니다. 서비스를 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 서비스 계약 인터페이스에서뿐 아니라 <xref:System.ServiceProcess.ServiceBase> 클래스에서 상속시켜 서비스가 Windows 서비스와 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 서비스로 구현됩니다. 그러면 <xref:System.ServiceModel.ServiceHost> 가 만들어지고, 재정의된 <xref:System.ServiceProcess.ServiceBase.OnStart%28System.String%5B%5D%29> 메서드 내에서 열리고 재정의된 <xref:System.ServiceProcess.ServiceBase.OnStop> 메서드 내에서 닫힙니다. Installutil.exe 도구를 사용하여 프로그램을 Windows 서비스로 설치하려면 <xref:System.Configuration.Install.Installer> 에서 상속되는 설치 관리자 클래스를 구현해야 합니다. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][하는 방법: 관리 되는 Windows 서비스에서 WCF 서비스 호스팅](../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-a-managed-windows-service.md)합니다. 관리되는 Windows 서비스 호스팅 옵션을 통해 사용할 수 있는 시나리오는 메시지가 활성화되지 않은 보안 환경의 IIS 외부에서 호스팅되는 장기 실행 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 서비스입니다. 서비스 수명은 대신 운영 체제에 의해 제어됩니다. 모든 버전의 Windows에서 이 호스팅 옵션을 사용할 수 있습니다.  
+ 이 호스팅 옵션은 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 서비스를 호스팅하는 응용 프로그램 도메인(AppDomain)을 관리되는 Windows 서비스(이전의 NT 서비스)로 등록하여 프로세스 수명이 Windows 서비스의 SCM(서비스 제어 관리자)에 의해 제어되도록 하는 옵션입니다. 자체 호스팅 옵션과 같이 이러한 유형의 호스팅 환경에서는 일부 호스팅 코드를 응용 프로그램의 일부로 작성해야 합니다. 서비스를 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 서비스 계약 인터페이스에서뿐 아니라 <xref:System.ServiceProcess.ServiceBase> 클래스에서 상속시켜 서비스가 Windows 서비스와 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 서비스로 구현됩니다. 그러면 <xref:System.ServiceModel.ServiceHost> 가 만들어지고, 재정의된 <xref:System.ServiceProcess.ServiceBase.OnStart%28System.String%5B%5D%29> 메서드 내에서 열리고 재정의된 <xref:System.ServiceProcess.ServiceBase.OnStop> 메서드 내에서 닫힙니다. Installutil.exe 도구를 사용하여 프로그램을 Windows 서비스로 설치하려면 <xref:System.Configuration.Install.Installer> 에서 상속되는 설치 관리자 클래스를 구현해야 합니다. 자세한 내용은 참조 [하는 방법: 관리 되는 Windows 서비스에서 WCF 서비스 호스팅](../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-a-managed-windows-service.md)합니다. 관리되는 Windows 서비스 호스팅 옵션을 통해 사용할 수 있는 시나리오는 메시지가 활성화되지 않은 보안 환경의 IIS 외부에서 호스팅되는 장기 실행 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 서비스입니다. 서비스 수명은 대신 운영 체제에 의해 제어됩니다. 모든 버전의 Windows에서 이 호스팅 옵션을 사용할 수 있습니다.  
   
 #### <a name="internet-information-services-iis"></a>IIS(인터넷 정보 서비스)  
  IIS 호스팅 옵션은 [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] 과 통합되어 있으며, 이러한 기술이 제공하는 프로세스 재활용, 유휴 상태이면 종료, 프로세스 상태 모니터링 및 메시지 기반 활성화 같은 기능을 사용합니다. [!INCLUDE[wxp](../../../includes/wxp-md.md)] 및 [!INCLUDE[ws2003](../../../includes/ws2003-md.md)] 운영 체제에서 이 옵션은 높은 가용성 및 확장성을 필요로 하는 웹 서비스 응용 프로그램을 호스팅하는 기본 솔루션입니다. IIS는 또한 고객이 엔터프라이즈 수준의 서버 제품에서 기대하는 통합된 관리 효율성을 제공합니다. 이 호스팅 옵션을 사용하려면 IIS를 적절히 구성해야 하지만 호스팅 코드를 응용 프로그램의 일부로 작성하지 않아도 됩니다. [!INCLUDE[crabout](../../../includes/crabout-md.md)] 서비스에 대해 IIS 호스팅을 구성하는 방법에 대한 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 는 [How to: Host a WCF Service in IIS](../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-iis.md).  

@@ -1,27 +1,29 @@
 ---
-title: "Message 클래스 사용"
-ms.custom: 
+title: Message 클래스 사용
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: d1d62bfb-2aa3-4170-b6f8-c93d3afdbbed
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 5c3e33f4db403fdc4ad1d4efd14282fe2beac8dc
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: c63a0a88997a1c35b24562bcca3e0fdb40ebfd41
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="using-the-message-class"></a>Message 클래스 사용
 <xref:System.ServiceModel.Channels.Message> 클래스는 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]의 기본 클래스입니다. 클라이언트와 서비스 간의 모든 통신에서 결국 <xref:System.ServiceModel.Channels.Message> 인스턴스의 전송과 수신이 발생합니다.  
@@ -172,7 +174,7 @@ ms.lasthandoff: 12/22/2017
   
  <xref:System.ServiceModel.Channels.MessageHeaders.FindHeader%2A> 메서드를 사용하여 특정 헤더를 검색합니다. 이 메서드는 찾을 헤더의 이름과 네임스페이스를 사용하고 해당 인덱스를 반환합니다. 헤더가 여러 번 발생하는 경우 예외가 throw됩니다. 헤더가 없으면 -1을 반환합니다.  
   
- SOAP 헤더 모델에서는 헤더의 의도된 수신자를 지정하는 `Actor` 값이 헤더에 포함될 수 있습니다. 가장 기본적인 `FindHeader` 오버로드는 메시지의 최종 수신자에 대한 헤더만 검색합니다. 그러나 다른 오버로드를 사용하여 검색에 포함할 `Actor` 값을 지정할 수 있습니다. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] SOAP 사양  
+ SOAP 헤더 모델에서는 헤더의 의도된 수신자를 지정하는 `Actor` 값이 헤더에 포함될 수 있습니다. 가장 기본적인 `FindHeader` 오버로드는 메시지의 최종 수신자에 대한 헤더만 검색합니다. 그러나 다른 오버로드를 사용하여 검색에 포함할 `Actor` 값을 지정할 수 있습니다. 자세한 내용은 SOAP 사양을 참조 하십시오.  
   
  <xref:System.ServiceModel.Channels.MessageHeaders.CopyTo%28System.ServiceModel.Channels.MessageHeaderInfo%5B%5D%2CSystem.Int32%29> 메서드는 <xref:System.ServiceModel.Channels.MessageHeaders> 컬렉션의 헤더를 <xref:System.ServiceModel.Channels.MessageHeaderInfo> 개체의 배열로 복사하기 위해 제공됩니다.  
   

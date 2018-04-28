@@ -1,13 +1,13 @@
 ---
-title: "세션 사용"
-ms.custom: 
+title: 세션 사용
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,17 +15,17 @@ dev_langs:
 helpviewer_keywords:
 - sessions [WCF]
 ms.assetid: 864ba12f-3331-4359-a359-6d6d387f1035
-caps.latest.revision: 
+caps.latest.revision: 32
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: f5f6df22918dedf32738a8cb9d73af2e625923a4
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 9f6a6a819b4667bc60ab0abb575d6fff397d67fe
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="using-sessions"></a>세션 사용
 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 응용 프로그램에서 *세션* 은 메시지 그룹을 대화에 연결합니다. [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 세션은 [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] 응용 프로그램에서 사용할 수 있는 세션 개체와 다르며, 다른 동작을 지원하고 다른 방법으로 제어됩니다. 이 항목에서는 세션이 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 응용 프로그램에서 사용할 수 있는 기능과 그 사용 방법에 대해 설명합니다.  
@@ -75,13 +75,13 @@ ms.lasthandoff: 01/19/2018
   
  [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 에서는 다음 유형의 세션 기반 응용 프로그램 동작을 제공합니다.  
   
--   <xref:System.ServiceModel.Channels.SecurityBindingElement?displayProperty=nameWithType>는 통신의 양쪽 끝에서 특정 보안 대화에 동의한 보안 기반 세션을 지원합니다. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][서비스 보안](../../../docs/framework/wcf/securing-services.md)합니다. 예를 들어, 보안 세션과 신뢰할 수 있는 세션 모두에 대한 지원이 포함된 <xref:System.ServiceModel.WSHttpBinding?displayProperty=nameWithType> 바인딩은 기본적으로 메시지에 대해 암호화 및 디지털 서명을 수행하는 보안 세션만 사용합니다.  
+-   <xref:System.ServiceModel.Channels.SecurityBindingElement?displayProperty=nameWithType>는 통신의 양쪽 끝에서 특정 보안 대화에 동의한 보안 기반 세션을 지원합니다. 자세한 내용은 참조 [Services에 보안 설정](../../../docs/framework/wcf/securing-services.md)합니다. 예를 들어, 보안 세션과 신뢰할 수 있는 세션 모두에 대한 지원이 포함된 <xref:System.ServiceModel.WSHttpBinding?displayProperty=nameWithType> 바인딩은 기본적으로 메시지에 대해 암호화 및 디지털 서명을 수행하는 보안 세션만 사용합니다.  
   
 -   <xref:System.ServiceModel.NetTcpBinding?displayProperty=nameWithType> 바인딩은 모든 메시지가 소켓 수준에서 연결을 통해 상호 연결되도록 TCP/IP 기반 세션을 지원합니다.  
   
--   WS-ReliableMessaging 사양을 구현하는 <xref:System.ServiceModel.Channels.ReliableSessionBindingElement?displayProperty=nameWithType> 요소는 신뢰할 수 있는 세션에 대한 지원을 제공합니다. 신뢰할 수 있는 세션에서는 메시지를 순서대로 정확히 한 번 배달하도록 구성하여 대화 중에 여러 노드에서 메시지가 전달되는 경우에도 메시지가 수신되도록 할 수 있습니다. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][신뢰할 수 있는 세션](../../../docs/framework/wcf/feature-details/reliable-sessions.md)합니다.  
+-   WS-ReliableMessaging 사양을 구현하는 <xref:System.ServiceModel.Channels.ReliableSessionBindingElement?displayProperty=nameWithType> 요소는 신뢰할 수 있는 세션에 대한 지원을 제공합니다. 신뢰할 수 있는 세션에서는 메시지를 순서대로 정확히 한 번 배달하도록 구성하여 대화 중에 여러 노드에서 메시지가 전달되는 경우에도 메시지가 수신되도록 할 수 있습니다. 자세한 내용은 참조 [신뢰할 수 있는 세션](../../../docs/framework/wcf/feature-details/reliable-sessions.md)합니다.  
   
--   <xref:System.ServiceModel.NetMsmqBinding?displayProperty=nameWithType> 바인딩은 MSMQ 데이터그램 세션을 제공합니다. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][WCF의 큐](../../../docs/framework/wcf/feature-details/queues-in-wcf.md)합니다.  
+-   <xref:System.ServiceModel.NetMsmqBinding?displayProperty=nameWithType> 바인딩은 MSMQ 데이터그램 세션을 제공합니다. 자세한 내용은 참조 [WCF의 큐](../../../docs/framework/wcf/feature-details/queues-in-wcf.md)합니다.  
   
  <xref:System.ServiceModel.ServiceContractAttribute.SessionMode%2A> 속성을 설정하면 계약에 필요한 세션 유형을 지정하지 않고 요구만 합니다.  
   
@@ -130,7 +130,7 @@ ms.lasthandoff: 01/19/2018
   
 -   <xref:System.ServiceModel.ICommunicationObject.Open%2A?displayProperty=nameWithType>에 대한 호출을 통해 반환된 채널의 <xref:System.ServiceModel.ChannelFactory%601.CreateChannel%2A?displayProperty=nameWithType>  
   
--   <xref:System.ServiceModel.ClientBase%601.Open%2A?displayProperty=nameWithType>에 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 에 의해 생성 된 클라이언트 개체는 [ServiceModel Metadata 유틸리티 도구 (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)합니다.  
+-   <xref:System.ServiceModel.ClientBase%601.Open%2A?displayProperty=nameWithType> 에 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 에 의해 생성 된 클라이언트 개체는 [ServiceModel Metadata 유틸리티 도구 (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)합니다.  
   
 -   [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 클라이언트 개체 유형에 대한 시작 작업(기본적으로 모든 작업이 시작 작업) 첫 번째 작업을 호출하면 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 클라이언트 개체가 자동으로 채널을 열고 세션을 시작합니다.  
   
@@ -144,10 +144,10 @@ ms.lasthandoff: 01/19/2018
   
  예를 들어, [How to: Create a Service That Requires Sessions](../../../docs/framework/wcf/feature-details/how-to-create-a-service-that-requires-sessions.md) , [Default Service Behavior](../../../docs/framework/wcf/samples/default-service-behavior.md) 및 [Instancing](../../../docs/framework/wcf/samples/instancing.md) 샘플을 참조하십시오.  
   
- [!INCLUDE[crabout](../../../includes/crabout-md.md)]클라이언트 및 세션에 참조 [WCF 클라이언트를 사용 하 여 액세스 서비스](../../../docs/framework/wcf/feature-details/accessing-services-using-a-client.md)합니다.  
+ [!INCLUDE[crabout](../../../includes/crabout-md.md)] 클라이언트 및 세션에 참조 [WCF 클라이언트를 사용 하 여 액세스 서비스](../../../docs/framework/wcf/feature-details/accessing-services-using-a-client.md)합니다.  
   
 ## <a name="sessions-interact-with-instancecontext-settings"></a>세션이 InstanceContext 설정과 상호 작용  
- 계약의 <xref:System.ServiceModel.SessionMode> 열거형과 <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A?displayProperty=nameWithType> 속성 간에 상호 작용이 있으며, 이를 통해 채널과 특정 서비스 개체 간의 연결을 제어합니다. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][세션, 인스턴스 및 동시성](../../../docs/framework/wcf/feature-details/sessions-instancing-and-concurrency.md)합니다.  
+ 계약의 <xref:System.ServiceModel.SessionMode> 열거형과 <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A?displayProperty=nameWithType> 속성 간에 상호 작용이 있으며, 이를 통해 채널과 특정 서비스 개체 간의 연결을 제어합니다. 자세한 내용은 참조 [세션과 Instancing, 동시성](../../../docs/framework/wcf/feature-details/sessions-instancing-and-concurrency.md)합니다.  
   
 ### <a name="sharing-instancecontext-objects"></a>InstanceContext 개체 공유  
  또한 해당 연결을 직접 수행하여 <xref:System.ServiceModel.InstanceContext> 개체와 연결된 세션 기반 채널 또는 호출을 제어할 수도 있습니다. 전체 예제를 참조 하십시오. [InstanceContextSharing](http://msdn.microsoft.com/library/4a6a46d7-b7d7-4bb5-a0dd-03ffa3cbc230)합니다.  

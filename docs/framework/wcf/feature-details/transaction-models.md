@@ -1,24 +1,26 @@
 ---
-title: "트랜잭션 모델"
-ms.custom: 
+title: 트랜잭션 모델
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 48a8bc1b-128b-4cf1-a421-8cc73223c340
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 782a6b5bdb206d285d619b8085993b591785aca5
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: ab3baf8cc0bb6af951f6f3e6396b7545d0c6b301
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="transaction-models"></a>트랜잭션 모델
 이 항목에서는 트랜잭션 프로그래밍 모델 및 Microsoft가 제공하는 인프라 구성 요소 간의 관계에 대해 설명합니다.  
@@ -35,13 +37,13 @@ ms.lasthandoff: 12/22/2017
 ## <a name="systemtransactions-transactions"></a>System.Transactions 트랜잭션  
  <xref:System.Transactions> 네임스페이스는 <xref:System.Transactions.Transaction> 클래스 기반의 명시적 프로그래밍 모델과 <xref:System.Transactions.TransactionScope> 클래스를 사용하는 암시적 프로그래밍 모델을 모두 제공합니다. 후자의 경우 인프라에서 자동으로 트랜잭션을 관리합니다.  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]이러한 두 가지 모델을 사용 하 여 트랜잭션 응용 프로그램 만들기를 참조 하는 방법 [트랜잭션 응용 프로그램을 작성](http://go.microsoft.com/fwlink/?LinkId=94947)합니다.  
+ [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 이러한 두 가지 모델을 사용 하 여 트랜잭션 응용 프로그램 만들기를 참조 하는 방법 [트랜잭션 응용 프로그램을 작성](http://go.microsoft.com/fwlink/?LinkId=94947)합니다.  
   
  [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 서비스 또는 응용 프로그램의 경우 <xref:System.Transactions>은 클라이언트 응용 프로그램 내에서 트랜잭션을 만들고 필요한 경우 서비스 내에서 트랜잭션과 명시적으로 상호 작용하기 위한 프로그래밍 모델을 제공합니다.  
   
 ## <a name="msdtc-transactions"></a>MSDTC 트랜잭션  
  MSDTC(Microsoft Distributed Transaction Coordinator)는 분산 트랜잭션을 지원하는 트랜잭션 관리자입니다.  
   
- [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][DTC 프로그래머 참조](http://go.microsoft.com/fwlink/?LinkId=94948)합니다.  
+ 자세한 내용은 참조는 [DTC 프로그래머 참조](http://go.microsoft.com/fwlink/?LinkId=94948)합니다.  
   
  [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 서비스 또는 응용 프로그램의 경우 MSDTC는 클라이언트 또는 서비스 내에서 만든 트랜잭션의 코디네이션을 위한 인프라를 제공합니다.

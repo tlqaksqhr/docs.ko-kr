@@ -1,24 +1,26 @@
 ---
-title: "지원되지 않는 시나리오"
-ms.custom: 
+title: 지원되지 않는 시나리오
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 72027d0f-146d-40c5-9d72-e94392c8bb40
-caps.latest.revision: "43"
+caps.latest.revision: 43
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 96ae88fd29391bf173da33398dfb41b3a06441ba
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 7738eba66619e8a312ed2f9bd43142dbb097b259
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="unsupported-scenarios"></a>지원되지 않는 시나리오
 여러 가지 이유로 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]에서는 일부 특정 보안 시나리오를 지원하지 않습니다. 예를 들어, [!INCLUDE[wxp](../../../../includes/wxp-md.md)] Home Edition에서는 SSPI 또는 Kerberos 인증 프로토콜을 구현하지 않으므로 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서는 해당 플랫폼에서 Windows 인증을 통한 서비스 실행을 지원하지 않습니다. Windows XP Home Edition에서 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]를 실행할 경우 사용자 이름/암호 및 HTTP/HTTPS 통합 인증과 같은 다른 인증 메커니즘이 지원됩니다.  
@@ -39,7 +41,7 @@ ms.lasthandoff: 12/22/2017
   
 -   상태 기반 SCT(보안 컨텍스트 토큰)가 만들어지는 경우(기본값: 만들기 사용 안 함)  
   
- 상태 기반 SCT는 사용자 지정 바인딩을 통해서만 만들 수 있습니다. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][하는 방법: 보안 컨텍스트를 만들어 보안 세션에 대 한 토큰](../../../../docs/framework/wcf/feature-details/how-to-create-a-security-context-token-for-a-secure-session.md).) 코드에서 <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> 또는 <xref:System.ServiceModel.Channels.AsymmetricSecurityBindingElement> 메서드를 사용하여 보안 바인딩 요소(<xref:System.ServiceModel.Channels.SecurityBindingElement.CreateSspiNegotiationBindingElement%28System.Boolean%29?displayProperty=nameWithType> 또는 <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateSecureConversationBindingElement%28System.ServiceModel.Channels.SecurityBindingElement%2CSystem.Boolean%29?displayProperty=nameWithType>)를 만들고 `requireCancellation` 매개 변수를 `false`로 설정하여 토큰을 사용하도록 설정합니다. 매개 변수는 SCT 캐싱을 참조합니다. 값을 `false`로 설정하면 상태 기반 SCT 기능을 사용할 수 있습니다.  
+ 상태 기반 SCT는 사용자 지정 바인딩을 통해서만 만들 수 있습니다. 자세한 내용은 참조 [하는 방법: 보안 세션에 대 한 보안 컨텍스트 토큰 만들기](../../../../docs/framework/wcf/feature-details/how-to-create-a-security-context-token-for-a-secure-session.md).) 코드에서 <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> 또는 <xref:System.ServiceModel.Channels.AsymmetricSecurityBindingElement> 메서드를 사용하여 보안 바인딩 요소(<xref:System.ServiceModel.Channels.SecurityBindingElement.CreateSspiNegotiationBindingElement%28System.Boolean%29?displayProperty=nameWithType> 또는 <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateSecureConversationBindingElement%28System.ServiceModel.Channels.SecurityBindingElement%2CSystem.Boolean%29?displayProperty=nameWithType>)를 만들고 `requireCancellation` 매개 변수를 `false`로 설정하여 토큰을 사용하도록 설정합니다. 매개 변수는 SCT 캐싱을 참조합니다. 값을 `false`로 설정하면 상태 기반 SCT 기능을 사용할 수 있습니다.  
   
  또는 구성, 토큰은 활성화를 만들어서는 <`customBinding`>, 다음 추가 <`security`> 요소와 설정은 `authenticationMode` 특성을 SecureConversation 및 `requireSecurityContextCancellation` 특성을 `true`합니다.  
   
@@ -53,10 +55,10 @@ ms.lasthandoff: 12/22/2017
  가장 컨텍스트에 어셈블리 로드 액세스 권한이 없고 CLR(공용 언어 런타임)에서 AppDomain에 대한 어셈블리 로드를 처음으로 시도하는 경우 <xref:System.AppDomain>은 오류를 캐시합니다. 가장을 변환한 이후 변환된 컨텍스트에 어셈블리 로드 액세스 권한이 있더라도 후속 어셈블리 로드 시도는 실패합니다. CLR은 사용자 컨텍스트가 변경된 이후에 로드를 다시 시도하지 않기 때문입니다. 오류를 복구하려면 응용 프로그램 도메인을 다시 시작해야 합니다.  
   
 > [!NOTE]
->  <xref:System.ServiceModel.Security.WindowsClientCredential.AllowedImpersonationLevel%2A> 클래스의 <xref:System.ServiceModel.Security.WindowsClientCredential> 속성 기본값은 <xref:System.Security.Principal.TokenImpersonationLevel.Identification>입니다. 대부분의 경우 확인 수준 가장 컨텍스트에는 추가 어셈블리 로드 권한이 없습니다. 이는 기본값이므로 일반적인 조건으로 알아 두어야 합니다. 확인 수준 가장은 가장 프로세스에 `SeImpersonate` 권한이 없는 경우에도 발생합니다. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][위임 및 가장](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md)합니다.  
+>  <xref:System.ServiceModel.Security.WindowsClientCredential.AllowedImpersonationLevel%2A> 클래스의 <xref:System.ServiceModel.Security.WindowsClientCredential> 속성 기본값은 <xref:System.Security.Principal.TokenImpersonationLevel.Identification>입니다. 대부분의 경우 확인 수준 가장 컨텍스트에는 추가 어셈블리 로드 권한이 없습니다. 이는 기본값이므로 일반적인 조건으로 알아 두어야 합니다. 확인 수준 가장은 가장 프로세스에 `SeImpersonate` 권한이 없는 경우에도 발생합니다. 자세한 내용은 참조 [위임 및 가장](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md)합니다.  
   
 ### <a name="delegation-requires-credential-negotiation"></a>위임에 자격 증명 협상 필요  
- Kerberos 인증 프로토콜을 위임과 함께 사용하려면 자격 증명 협상이 포함된 Kerberos 프로토콜(multi-leg 또는 multi-step Kerberos라고도 함)을 구현해야 합니다. 자격 증명 협상이 포함되지 않은 Kerberos 프로토콜(one-shot 또는 single-leg Kerberos라고도 함)을 구현하면 예외가 throw됩니다. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]자격 증명 협상 구현 방법은 참조 [Windows 인증 오류 디버깅](../../../../docs/framework/wcf/feature-details/debugging-windows-authentication-errors.md)합니다.  
+ Kerberos 인증 프로토콜을 위임과 함께 사용하려면 자격 증명 협상이 포함된 Kerberos 프로토콜(multi-leg 또는 multi-step Kerberos라고도 함)을 구현해야 합니다. 자격 증명 협상이 포함되지 않은 Kerberos 프로토콜(one-shot 또는 single-leg Kerberos라고도 함)을 구현하면 예외가 throw됩니다. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 자격 증명 협상 구현 방법은 참조 [Windows 인증 오류 디버깅](../../../../docs/framework/wcf/feature-details/debugging-windows-authentication-errors.md)합니다.  
   
 ## <a name="cryptography"></a>암호화  
   
@@ -81,18 +83,18 @@ ms.lasthandoff: 12/22/2017
   
 -   `p/invoke`에 대해 `CertGetCertificateContextProperty`를 실행하고 반환되는 `dwProvType`에서 `CertGetCertificateContextProperty`이 있는지 확인합니다.  
   
--   사용 하 여 `certutil` 인증서를 쿼리 하기 위한 명령줄에서 명령을 합니다. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][인증서 문제 해결을 위한 Certutil 작업](http://go.microsoft.com/fwlink/?LinkId=120056)합니다.  
+-   사용 하 여 `certutil` 인증서를 쿼리 하기 위한 명령줄에서 명령을 합니다. 자세한 내용은 참조 [인증서 문제 해결을 위한 Certutil 작업](http://go.microsoft.com/fwlink/?LinkId=120056)합니다.  
   
 ## <a name="message-security-fails-if-using-aspnet-impersonation-and-aspnet-compatibility-is-required"></a>ASP.NET 가장 및 ASP.NET 호환성을 사용해야 하는 경우 메시지 보안 실패  
  [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서 다음과 같은 설정은 클라이언트 인증을 방해할 수 있으므로 지원되지 않습니다.  
   
 -   [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 가장이 사용됩니다. 설정 하 여 Web.config 파일에서 이렇게는 `impersonate` 특성에는 <`identity`> 요소를 `true`합니다.  
   
--   [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]호환 모드를 설정 하 여 활성화는 `aspNetCompatibilityEnabled` 특성에는 [ \<serviceHostingEnvironment >](../../../../docs/framework/configure-apps/file-schema/wcf/servicehostingenvironment.md) 를 `true`합니다.  
+-   [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 호환 모드를 설정 하 여 활성화는 `aspNetCompatibilityEnabled` 특성에는 [ \<serviceHostingEnvironment >](../../../../docs/framework/configure-apps/file-schema/wcf/servicehostingenvironment.md) 를 `true`합니다.  
   
 -   메시지 모드 보안이 사용됩니다.  
   
- [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 호환성 모드를 해제하면 문제가 해결됩니다. 또는 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 호환성 모드를 사용해야 하는 경우 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 가장 기능을 사용하지 않도록 설정하고 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 제공 가장을 대신 사용합니다. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][위임 및 가장](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md)합니다.  
+ [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 호환성 모드를 해제하면 문제가 해결됩니다. 또는 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 호환성 모드를 사용해야 하는 경우 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 가장 기능을 사용하지 않도록 설정하고 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 제공 가장을 대신 사용합니다. 자세한 내용은 참조 [위임 및 가장](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md)합니다.  
   
 ## <a name="ipv6-literal-address-failure"></a>IPv6 리터럴 주소 오류  
  클라이언트와 서비스가 동일한 컴퓨터에 있고 IPv6 리터럴 주소가 서비스에 사용되는 경우 보안 요청이 실패합니다.  
@@ -104,11 +106,11 @@ ms.lasthandoff: 12/22/2017
   
  다음과 같은 세 끝점 주소가 있는 서비스를 이러한 상황의 예로 들 수 있습니다.  
   
--   http://localhost/CalculatorService/service(서비스)  
+-   http://localhost/CalculatorService/service (서비스)  
   
--   http://localhost/CalculatorService/issue_ticket(STS)  
+-   http://localhost/CalculatorService/issue_ticket (STS)  
   
--   http://localhost/CalculatorService/mex(메타데이터 끝점)  
+-   http://localhost/CalculatorService/mex (메타 데이터 끝점)  
   
  이 경우 예외가 throw됩니다.  
   

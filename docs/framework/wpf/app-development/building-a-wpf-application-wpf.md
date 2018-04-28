@@ -21,11 +21,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 054f6cd6ae71428aca6b99eb510b2ac34fc6c4b6
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: b7003756e5c805c21fc5f4013deccf64b5ba8811
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="building-a-wpf-application-wpf"></a>WPF 응용 프로그램 빌드(WPF)
 [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] 응용 프로그램을 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 실행 파일(.exe), 라이브러리(.dll) 또는 두 어셈블리 형식의 조합으로 빌드할 수 있습니다. 이 항목에서는 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 응용 프로그램을 빌드하는 방법과 빌드 프로세스의 주요 단계에 대해 설명합니다.  
@@ -51,7 +51,7 @@ ms.lasthandoff: 04/26/2018
 ### <a name="pre-build-initializations"></a>빌드 전 초기화  
  빌드하기 전에 [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)]는 다음과 같은 중요 도구 및 라이브러리의 위치를 결정합니다.  
   
--   [!INCLUDE[TLA2#tla_winfx](../../../../includes/tla2sharptla-winfx-md.md)]  
+-   .NET Framework입니다.  
   
 -   [!INCLUDE[TLA2#tla_wcsdk](../../../../includes/tla2sharptla-wcsdk-md.md)] 디렉터리  
   
@@ -63,7 +63,7 @@ ms.lasthandoff: 04/26/2018
   
 <a name="Resolving_references"></a>   
 ### <a name="resolving-references"></a>참조 확인  
- 빌드 프로세스는 응용 프로그램 프로젝트를 빌드하는 데 필요한 어셈블리를 찾아서 바인딩합니다. 이 논리는 `ResolveAssemblyReference` 작업에 포함되어 있습니다. 프로젝트 파일에서 `Reference`로 선언된 모든 어셈블리는 시스템에 이미 설치된 어셈블리의 메타데이터 및 검색 경로에 대한 정보와 함께 작업에 제공됩니다. 이 작업은 어셈블리를 찾고 설치된 어셈블리의 메타데이터를 사용하여 출력 매니페스트에 표시할 필요 없는 이러한 코어 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 어셈블리를 필터링합니다. 이 작업의 목적은 ClickOnce 매니페스트에서 중복되는 정보를 방지하는 것입니다. 예를 들어 PresentationFramework.dll은 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]용으로 빌드된 응용 프로그램의 대표로 간주될 수 있고 모든 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 어셈블리가 [!INCLUDE[TLA2#tla_winfx](../../../../includes/tla2sharptla-winfx-md.md)]가 설치된 모든 시스템의 동일한 위치에 존재하기 때문에 매니페스트의 모든 [!INCLUDE[TLA2#tla_winfx](../../../../includes/tla2sharptla-winfx-md.md)] 참조 어셈블리에 모든 정보를 포함할 필요가 없습니다.  
+ 빌드 프로세스는 응용 프로그램 프로젝트를 빌드하는 데 필요한 어셈블리를 찾아서 바인딩합니다. 이 논리는 `ResolveAssemblyReference` 작업에 포함되어 있습니다. 프로젝트 파일에서 `Reference`로 선언된 모든 어셈블리는 시스템에 이미 설치된 어셈블리의 메타데이터 및 검색 경로에 대한 정보와 함께 작업에 제공됩니다. 이 작업은 어셈블리를 찾고 설치된 어셈블리의 메타데이터를 사용하여 출력 매니페스트에 표시할 필요 없는 이러한 코어 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 어셈블리를 필터링합니다. 이 작업의 목적은 ClickOnce 매니페스트에서 중복되는 정보를 방지하는 것입니다. 예를 들어 PresentationFramework.dll의 특징으로 간주 될 수 있으므로 응용 프로그램 빌드하는에 대 한는 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 또한 및 모든 이후 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 어셈블리는.NET Framework가 있는 모든 컴퓨터에서 동일한 위치에 존재 설치 매니페스트에 모든.NET Framework 참조 어셈블리에 있는 모든 정보를 포함 하려면 않아도가 됩니다.  
   
 <a name="Markup_Compilation___Pass_1"></a>   
 ### <a name="markup-compilationpass-1"></a>태그 컴파일 - 패스 1  

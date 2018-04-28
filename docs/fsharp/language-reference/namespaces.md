@@ -1,20 +1,17 @@
 ---
-title: "네임스페이스(F#)"
-description: "F # 네임 스페이스는 프로그램 요소의 그룹화에 이름을 연결 하 여 코드의 기능 관련된 영역으로 구성할 수 있습니다 어떻게에 대해 알아봅니다."
-keywords: "visual f#, f#, 함수형 프로그래밍"
+title: 네임스페이스(F#)
+description: 'F # 네임 스페이스는 프로그램 요소의 그룹화에 이름을 연결 하 여 코드의 기능 관련된 영역으로 구성할 수 있습니다 어떻게에 대해 알아봅니다.'
 author: cartermp
 ms.author: phcart
 ms.date: 04/24/2017
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: ea42156f-e1b9-4535-9383-b45f46f3f7ca
-ms.openlocfilehash: f3f73c4fe2197f1f3f2babbe6691ef6662d8f581
-ms.sourcegitcommit: 3a96c706e4dbb4667bf3bf37edac9e1666646f93
+ms.openlocfilehash: 695de3b58b8567da60c8ef86900f8e78ea563e0e
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="namespaces"></a>네임스페이스
 

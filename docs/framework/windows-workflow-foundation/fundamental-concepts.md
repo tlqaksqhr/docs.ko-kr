@@ -1,23 +1,24 @@
 ---
-title: "Fundamental Windows Workflow 개념"
-ms.custom: 
+title: Fundamental Windows Workflow 개념
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 0e930e80-5060-45d2-8a7a-95c0690105d4
-caps.latest.revision: "27"
+caps.latest.revision: 27
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: fca570f661b1867737cc3af295aff5fd8d4cd5ec
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: faeb05045049e9a53babf754f1ec058c6aac2f05
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="fundamental-windows-workflow-concepts"></a>Fundamental Windows Workflow 개념
 [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)]의 워크플로 개발에는 일부 개발자들에게 생소한 개념이 사용됩니다. 이 항목에서는 이러한 몇 가지 개념과 그 구현 방법에 대해 설명합니다.  
@@ -62,7 +63,7 @@ ms.lasthandoff: 12/22/2017
  활동에서는 <xref:System.Activities.ActivityContext> 또는 <xref:System.Activities.NativeActivityContext> 등 적절한 <xref:System.Activities.CodeActivityContext> 파생 클래스를 사용하여 워크플로 런타임 환경에 액세스합니다. 또한 인수 및 변수 확인, 자식 활동 예약 등과 같은 용도로 이 클래스를 사용합니다.  
   
 ## <a name="services"></a>서비스  
- 워크플로는 메시징 활동을 통해 서비스를 구현하고 액세스하는 자연스러운 방법을 제공합니다. 메시지 활동은 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]에 포함되어 있으며 데이터를 워크플로 안으로 가져오거나 밖으로 내보내는 데 사용되는 기본적인 메커니즘입니다. 원하는 메시지 교환 패턴의 종류를 모델링하여 메시징 활동을 함께 구성할 수 있습니다. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)]참조 [메시징 작업](../../../docs/framework/wcf/feature-details/messaging-activities.md)합니다. <xref:System.ServiceModel.Activities.WorkflowServiceHost> 클래스는 워크플로 서비스를 호스트하는 데 사용됩니다. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][호스팅 워크플로 서비스 개요](../../../docs/framework/wcf/feature-details/hosting-workflow-services-overview.md)합니다. [!INCLUDE[crabout](../../../includes/crabout-md.md)]워크플로 서비스 참조 [워크플로 서비스](../../../docs/framework/wcf/feature-details/workflow-services.md)  
+ 워크플로는 메시징 활동을 통해 서비스를 구현하고 액세스하는 자연스러운 방법을 제공합니다. 메시지 활동은 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]에 포함되어 있으며 데이터를 워크플로 안으로 가져오거나 밖으로 내보내는 데 사용되는 기본적인 메커니즘입니다. 원하는 메시지 교환 패턴의 종류를 모델링하여 메시징 활동을 함께 구성할 수 있습니다. 자세한 내용은 참조 하십시오. 참조 [메시징 작업](../../../docs/framework/wcf/feature-details/messaging-activities.md)합니다. <xref:System.ServiceModel.Activities.WorkflowServiceHost> 클래스는 워크플로 서비스를 호스트하는 데 사용됩니다. 자세한 내용은 참조 [호스팅 워크플로 서비스 개요](../../../docs/framework/wcf/feature-details/hosting-workflow-services-overview.md)합니다. [!INCLUDE[crabout](../../../includes/crabout-md.md)] 워크플로 서비스 참조 [워크플로 서비스](../../../docs/framework/wcf/feature-details/workflow-services.md)  
   
 ## <a name="persistence-unloading-and-long-running-workflows"></a>워크플로 유지, 언로드 및 장기 실행  
  Windows Workflow는 다음을 제공하여 장기 실행 대응 프로그램을 쉽게 작성할 수 있도록 해줍니다.  

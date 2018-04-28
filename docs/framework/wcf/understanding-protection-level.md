@@ -1,12 +1,13 @@
 ---
-title: "보호 수준 이해"
-ms.custom: 
+title: 보호 수준 이해
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,16 +16,17 @@ helpviewer_keywords:
 - WCF, security
 - ProtectionLevel property
 ms.assetid: 0c034608-a1ac-4007-8287-b1382eaa8bf2
-caps.latest.revision: "22"
+caps.latest.revision: 22
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: c379cf39f30bf7e75907dba5fb06ba4e3862e299
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 4b079d7f6e22f0c1904433c2822b92da91923ef2
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="understanding-protection-level"></a>보호 수준 이해
 `ProtectionLevel` 및 <xref:System.ServiceModel.ServiceContractAttribute> 클래스와 같은 여러 클래스에서 볼 수 있는 <xref:System.ServiceModel.OperationContractAttribute> 속성은 메시지의 전체나 일부를 보호하는 방법을 제어합니다. 이 항목에서는 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 기능과 작동 방법에 대해 설명합니다.  
@@ -84,7 +86,7 @@ ms.lasthandoff: 12/22/2017
  계층 구조 내 임의의 지점에서 `ProtectionLevel`을 프로그래밍하려면 특성을 적용할 때 속성에 적절한 값을 설정하면 됩니다. 예제를 보려면 [하는 방법: ProtectionLevel 속성 설정](../../../docs/framework/wcf/how-to-set-the-protectionlevel-property.md)합니다.  
   
 > [!NOTE]
->  기본적인 속성과 메시지 계약을 설정하려면 이러한 기능의 작동 방법에 대해 이해해야 합니다. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][하는 방법: ProtectionLevel 속성 설정](../../../docs/framework/wcf/how-to-set-the-protectionlevel-property.md) 및 [메시지 계약을 사용 하 여](../../../docs/framework/wcf/feature-details/using-message-contracts.md)합니다.  
+>  기본적인 속성과 메시지 계약을 설정하려면 이러한 기능의 작동 방법에 대해 이해해야 합니다. 자세한 내용은 참조 [하는 방법: ProtectionLevel 속성 설정](../../../docs/framework/wcf/how-to-set-the-protectionlevel-property.md) 및 [메시지 계약을 사용 하 여](../../../docs/framework/wcf/feature-details/using-message-contracts.md)합니다.  
   
 ## <a name="ws-addressing-dependency"></a>WS-Addressing 종속성  
  사용 하 여 대부분의 경우에서는 [ServiceModel Metadata 유틸리티 도구 (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) 는 클라이언트를 생성 하려면 클라이언트 및 서비스 계약 동일한 지를 확인 합니다. 그러나 표면상 동일한 계약으로 인해 클라이언트에서 예외를 throw할 수 있습니다. 이러한 현상은 바인딩이 WS-Addressing 사양을 지원하지 않고 계약에 여러 수준의 보호가 지정된 경우에 발생합니다. 예를 들어 <xref:System.ServiceModel.BasicHttpBinding> 클래스가 사양을 지원하지 않거나, WS-Addressing을 지원하지 않는 사용자 지정 바인딩을 만드는 경우 등이 있습니다. `ProtectionLevel` 기능에서는 하나의 계약에 여러 개의 보호 수준을 사용할 수 있도록 WS-Addressing 사양을 사용합니다. 바인딩이 WS-Addressing 사양을 지원하지 않으면 모든 단계가 동일한 보호 수준으로 설정됩니다. 계약의 모든 범위에 대해 유효한 보호 수준은 계약에 사용되는 가장 강력한 보호 수준으로 설정됩니다.  

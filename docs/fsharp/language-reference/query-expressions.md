@@ -1,20 +1,17 @@
 ---
-title: "쿼리 식(F#)"
-description: "F # 프로그래밍 언어에서 LINQ에 대 한 쿼리 식 지원에 알아봅니다."
-keywords: "visual f#, f#, 함수형 프로그래밍"
+title: 쿼리 식(F#)
+description: 'F # 프로그래밍 언어에서 LINQ에 대 한 쿼리 식 지원에 알아봅니다.'
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: 35df2d80-e6d2-4873-b2de-9b45b9e9e650
-ms.openlocfilehash: 20ea7ef820dd295497ed996ce10e5a594d021f7e
-ms.sourcegitcommit: 39b65a49271e082add68cb737b48fdbe09d24718
+ms.openlocfilehash: 81b81d25b8c0d8656dedffd2f8ec7a8297ef7191
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/30/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="query-expressions"></a>쿼리 식
 
@@ -680,7 +677,7 @@ query {
 </code></pre>
 
 </td></tr><tr><td>
-<code>IN</code>지정 된 값 집합<br/>
+<code>IN</code> 지정 된 값 집합<br/>
 
 <pre><code class="lang-sql">SELECT *
 FROM Student
@@ -721,7 +718,7 @@ query {
 </code></pre>
 
 </td></tr><tr><td>
-<code>LIKE</code>패턴으로 집합과 일치 합니다.<br/>
+<code>LIKE</code> 패턴으로 집합과 일치 합니다.<br/>
 
 <pre><code class="lang-sql">-- '[abc]%' matches strings where the first character is
 -- 'a', 'b', 'c', 'A', 'B', or 'C'
@@ -738,7 +735,7 @@ WHERE Student.Name LIKE '[abc]%'
 </code></pre>
 
 </td></tr><tr><td>
-<code>LIKE</code>와 배제 패턴 집합입니다.<br/>
+<code>LIKE</code> 와 배제 패턴 집합입니다.<br/>
 
 <pre><code class="lang-sql">-- '[^abc]%' matches strings where the first character is
 -- not 'a', 'b', 'c', 'A', 'B', or 'C'
@@ -757,7 +754,7 @@ query {
 </code></pre>
 
 </td></tr><tr><td>
-<code>LIKE</code>하나에서 필드를 하지만 다른 필드를 선택 합니다.<br/>
+<code>LIKE</code> 하나에서 필드를 하지만 다른 필드를 선택 합니다.<br/>
 
 <pre><code class="lang-sql">SELECT StudentID AS ID FROM Student
 WHERE Student.Name LIKE '[^abc]%'
@@ -807,7 +804,7 @@ query {
 }
 </code></pre>
 
-</td></tr><tr><td><code>LEFT JOIN</code>두 개의 테이블과 합니다.<br/>
+</td></tr><tr><td><code>LEFT JOIN</code> 두 개의 테이블과 합니다.<br/>
 
 <pre><code class="lang-sql">SELECT * FROM Student
 LEFT JOIN CourseSelection
@@ -826,7 +823,7 @@ query {
 }
 </code></pre>
 
-</td></tr><tr><td><code>JOIN</code>사용<code>COUNT</code><br/>
+</td></tr><tr><td><code>JOIN</code> 사용 <code>COUNT</code><br/>
 
 <pre><code class="lang-sql">SELECT COUNT( * ) FROM Student
 JOIN CourseSelection
@@ -909,7 +906,7 @@ query {
 }
 </code></pre>
 
-</td></tr><tr><td><code>OR</code>순서 사용<br/>
+</td></tr><tr><td><code>OR</code> 순서 사용<br/>
 
 <pre><code class="lang-sql">SELECT * FROM Student
 WHERE Student.Age = 12 OR Student.Age = 13
@@ -949,7 +946,7 @@ query {
 }
 </code></pre>
 
-</td></tr><tr><td><code>UNION</code>두 쿼리의 합니다.<br/>
+</td></tr><tr><td><code>UNION</code> 두 쿼리의 합니다.<br/>
 
 <pre><code class="lang-sql">SELECT * FROM Student
 UNION
@@ -998,7 +995,7 @@ let query2 =
 query1.Intersect(query2)
 </code></pre>
 
-</td></tr><tr><td><code>CASE</code>조건입니다.<br/>
+</td></tr><tr><td><code>CASE</code> 조건입니다.<br/>
 
 <pre><code class="lang-sql">SELECT student.StudentID,
 CASE Student.Age

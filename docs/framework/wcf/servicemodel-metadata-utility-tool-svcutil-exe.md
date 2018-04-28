@@ -15,17 +15,17 @@ helpviewer_keywords:
 - Svcutil.exe
 - clients [WCF], consuming services
 ms.assetid: 1abf3d9f-b420-46f1-b628-df238751f308
-caps.latest.revision: ''
+caps.latest.revision: 40
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: ce66f98f064ec5c9460dd1909f8eb7bc44c26f76
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: 6cf6910dd370c32120487681829e72ad2681efbe
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="servicemodel-metadata-utility-tool-svcutilexe"></a>ServiceModel Metadata 유틸리티 도구(Svcutil.exe)
 ServiceModel Metadata 유틸리티 도구는 메타데이터 문서에서 서비스 모델 코드를 생성하고, 서비스 모델 코드에서 메타데이터 문서를 생성하는 데 사용됩니다.  
@@ -74,7 +74,7 @@ ServiceModel Metadata 유틸리티 도구는 메타데이터 문서에서 서비
 ### <a name="code-generation"></a>코드 생성  
  Svcutil.exe를 사용하여 메타데이터 문서에서 서비스 계약, 클라이언트 및 데이터 형식에 대한 코드를 생성할 수 있습니다. 이러한 메타데이터 문서는 지속적인 저장소에 있거나 온라인으로 검색할 수 있습니다. 온라인 검색은 WS-Metadata Exchange 프로토콜이나 DISCO 프로토콜을 따릅니다. 자세한 내용은 메타데이터 다운로드 단원을 참조하십시오.  
   
- SvcUtil.exe 도구를 사용하여 미리 정의된 WSDL 문서를 기반으로 서비스 및 데이터 계약을 생성할 수 있습니다. /serviceContract 스위치를 사용하고 WSDL 문서를 다운로드하거나 찾을 수 있는 URL 또는 파일 위치를 지정합니다. 이렇게 하면 WSDL 문서에 정의된 서비스 및 데이터 계약을 생성하여 불만 서비스를 구현하는 데 사용할 수 있습니다. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [방법: 메타 데이터 검색 및 규격 서비스 구현](../../../docs/framework/wcf/feature-details/how-to-retrieve-metadata-and-implement-a-compliant-service.md)합니다.  
+ SvcUtil.exe 도구를 사용하여 미리 정의된 WSDL 문서를 기반으로 서비스 및 데이터 계약을 생성할 수 있습니다. /serviceContract 스위치를 사용하고 WSDL 문서를 다운로드하거나 찾을 수 있는 URL 또는 파일 위치를 지정합니다. 이렇게 하면 WSDL 문서에 정의된 서비스 및 데이터 계약을 생성하여 불만 서비스를 구현하는 데 사용할 수 있습니다. 자세한 내용은 참조 [하는 방법: 메타 데이터 검색 및 규격 서비스 구현](../../../docs/framework/wcf/feature-details/how-to-retrieve-metadata-and-implement-a-compliant-service.md)합니다.  
   
  BasicHttpContextbinding 끝점이 있는 서비스의 경우 Svcutil.exe는 대신 `allowCookies` 특성이 `true`로 설정된 BasicHttpBinding을 생성합니다. 서버의 컨텍스트에 쿠키가 사용됩니다. 서비스가 쿠키를 사용할 때 클라이언트에서 컨텍스트를 관리하려면 컨텍스트 바인딩을 사용하도록 구성을 수동으로 수정할 수 있습니다.  
   
@@ -102,7 +102,7 @@ ServiceModel Metadata 유틸리티 도구는 메타데이터 문서에서 서비
 |/language:\<language>|코드 생성에 사용할 프로그래밍 언어를 지정합니다. Machine.config 파일에 등록된 언어 이름 또는 <xref:System.CodeDom.Compiler.CodeDomProvider>에서 상속된 클래스의 정규화된 이름을 입력해야 합니다.<br /><br /> 값: c#, cs, csharp, vb, visualbasic, c++, cpp<br /><br /> 기본값: csharp<br /><br /> 약식: `/l` **참고:** 스위치 Visual Studio 2005 s p 1과 함께 제공 되는 코드 공급자에 대 한 c + + 지원 합니다.|  
 |/mergeConfig|기존 파일을 덮어쓰는 대신 생성된 구성을 기존 파일에 병합합니다.|  
 |/messageContract|메시지 계약 형식을 생성합니다.<br /><br /> 약식: `/mc`|  
-|/namespace:\<string,string>|WSDL 또는 XML 스키마 targetNamespace에서 CLR 네임스페이스로의 매핑을 지정합니다. 사용 하 여 '\*'에 targetNamespace 해당 CLR 네임 스페이스에 명시적으로 매핑하지 않고 모든으로 매핑됩니다.<br /><br /> 메시지 계약 이름이 작업 이름과 충돌하지 않도록 하려면 `::`을 사용하여 형식 참조를 한정하거나 이름이 고유한지 확인해야 합니다.<br /><br /> 기본값: 데이터 계약에 대한 스키마 문서의 대상 네임스페이스에서 파생됩니다. 기본 네임스페이스는 생성된 다른 모든 형식에 사용됩니다.<br /><br /> 약식: `/n` **참고:** XmlSerializer를 사용 하는 형식을 생성 하는, 단일 네임 스페이스 매핑을 지원 됩니다. 생성 된 모든 형식으로 지정 된 네임 스페이스 또는 기본 네임 스페이스에서 갖게 됩니다 ' *'입니다.|  
+|/namespace:\<문자열, 문자열 >|WSDL 또는 XML 스키마 targetNamespace에서 CLR 네임스페이스로의 매핑을 지정합니다. 사용 하 여 '\*'에 targetNamespace 해당 CLR 네임 스페이스에 명시적으로 매핑하지 않고 모든으로 매핑됩니다.<br /><br /> 메시지 계약 이름이 작업 이름과 충돌하지 않도록 하려면 `::`을 사용하여 형식 참조를 한정하거나 이름이 고유한지 확인해야 합니다.<br /><br /> 기본값: 데이터 계약에 대한 스키마 문서의 대상 네임스페이스에서 파생됩니다. 기본 네임스페이스는 생성된 다른 모든 형식에 사용됩니다.<br /><br /> 약식: `/n` **참고:** XmlSerializer를 사용 하는 형식을 생성 하는, 단일 네임 스페이스 매핑을 지원 됩니다. 생성 된 모든 형식으로 지정 된 네임 스페이스 또는 기본 네임 스페이스에서 갖게 됩니다 ' *'입니다.|  
 |/noConfig|구성 파일을 생성하지 않습니다.|  
 |/noStdLib|표준 라이브러리를 참조하지 않습니다.<br /><br /> 기본값: Mscorlib.dll 및 System.servicemodel.dll이 참조됩니다.|  
 |/out:\<file>|생성된 코드에 대한 파일 이름을 지정합니다.<br /><br /> 기본값: WSDL 정의 이름, WSDL 서비스 이름 또는 스키마 중 하나의 대상 네임스페이스에서 파생됩니다.<br /><br /> 약식: `/o`|  
@@ -235,7 +235,7 @@ ServiceModel Metadata 유틸리티 도구는 메타데이터 문서에서 서비
 ## <a name="maximum-nametable-character-count-quota"></a>최대 nametable 문자 수 할당량  
  svcutil을 사용하여 서비스에 대해 메타데이터를 생성할 때는 다음 메시지가 나타날 수 있습니다.  
   
- 오류: http://localhost:8000/somesservice/mex에서 메타데이터를 가져올 수 없습니다. XML 데이터를 읽는 동안 최대 nametable 문자 수 할당량(16384)을 초과했습니다. nametable은 XML 처리 도중에 발견된 문자열을 저장하는 데 사용되는 데이터 구조입니다. 반복되지 않는 요소 이름, 특성 이름 및 특성 값을 가지는 긴 XML 문서로 인해 이 할당량이 트리거될 수 있습니다.  XML 판독기를 만들 때 사용되는 XmlDictionaryReaderQuotas 개체에서 MaxNameTableCharCount 속성을 변경하여 이 할당량을 늘릴 수 있습니다.  
+ 오류:에서 메타 데이터를 가져올 수 없습니다 http://localhost:8000/somesservice/mex XML 데이터를 읽는 동안 최대 nametable 문자 수 할당량 (16384)를 초과 합니다. nametable은 XML 처리 도중에 발견된 문자열을 저장하는 데 사용되는 데이터 구조입니다. 반복되지 않는 요소 이름, 특성 이름 및 특성 값을 가지는 긴 XML 문서로 인해 이 할당량이 트리거될 수 있습니다.  XML 판독기를 만들 때 사용되는 XmlDictionaryReaderQuotas 개체에서 MaxNameTableCharCount 속성을 변경하여 이 할당량을 늘릴 수 있습니다.  
   
  이 오류는 큰 WSDL 파일의 메타데이터를 요청하면 해당 파일을 반환하는 서비스에서 발생할 수 있습니다. svcutil.exe 도구에 대한 문자 할당량이 초과되어 문제가 발생합니다. 이 값은 서비스 거부(dos) 공격을 방지하기 위해 설정됩니다. svcutil에 대해 다음 구성 파일을 지정하여 이 할당량을 늘릴 수 있습니다.  
   

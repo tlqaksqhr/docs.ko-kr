@@ -1,12 +1,13 @@
 ---
-title: "방법: 보안 토큰 서비스 만들기"
-ms.custom: 
+title: '방법: 보안 토큰 서비스 만들기'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,33 +16,34 @@ helpviewer_keywords:
 - WCF, federation
 - federation
 ms.assetid: 98e82101-4cff-4bb8-a220-f7abed3556e5
-caps.latest.revision: "12"
+caps.latest.revision: 12
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: 53ae64af0612cb905a2342491761b1e27ef19c06
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: e043b9b9a3b09bec0d7484fb732e33571b5aaf0c
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="how-to-create-a-security-token-service"></a>방법: 보안 토큰 서비스 만들기
 보안 토큰 서비스에서는 WS-Trust 사양에 정의된 프로토콜을 구현합니다. 이 프로토콜은 보안 토큰의 발행, 갱신, 취소 및 유효성 검사를 위한 메시지 형식 및 메시지 교환 패턴을 정의합니다. 지정된 보안 토큰 서비스에서는 하나 이상의 이러한 기능을 제공합니다. 이 항목에서는 가장 일반적인 시나리오인 토큰 발급 구현에 대해 살펴봅니다.  
   
 ## <a name="issuing-tokens"></a>토큰 발급  
- WS-Trust는 `RequestSecurityToken` XSD(XML 스키마 정의 언어) 스키마 요소에 따라 메시지 형식을 정의하고, 토큰 발행을 수행하기 위한 `RequestSecurityTokenResponse` XSD 스키마 요소를 정의합니다. 또한 연결된 동작 URI(Uniform Resource Identifier)도 정의합니다. `RequestSecurityToken` 메시지와 연결된 동작 URI는 http://schemas.xmlsoap.org/ws/2005/02/trust/RST/Issue입니다. `RequestSecurityTokenResponse` 메시지와 연결된 동작 URI는 http://schemas.xmlsoap.org/ws/2005/02/trust/RSTR/Issue입니다.  
+ WS-Trust는 `RequestSecurityToken` XSD(XML 스키마 정의 언어) 스키마 요소에 따라 메시지 형식을 정의하고, 토큰 발행을 수행하기 위한 `RequestSecurityTokenResponse` XSD 스키마 요소를 정의합니다. 또한 연결된 동작 URI(Uniform Resource Identifier)도 정의합니다. URI와 연결 된 작업의 `RequestSecurityToken` 메시지는 http://schemas.xmlsoap.org/ws/2005/02/trust/RST/Issue합니다. URI와 연결 된 작업의 `RequestSecurityTokenResponse` 메시지는 http://schemas.xmlsoap.org/ws/2005/02/trust/RSTR/Issue합니다.  
   
 ### <a name="request-message-structure"></a>요청 메시지 구조  
  일반적으로 발행 요청 메시지 구조는 다음과 같은 항목으로 구성됩니다.  
   
--   http://schemas.xmlsoap.org/ws/2005/02/trust/Issue의 값이 있는 요청 형식 URI  
+-   요청 URI를 값으로 입력 http://schemas.xmlsoap.org/ws/2005/02/trust/Issue합니다.  
   
--   토큰 형식 URI. SAML(Security Assertions Markup Language) 1.1 토큰의 경우 이 URI의 값은 http://docs.oasis-open.org/wss/oasis-wss-saml-token-profile-1.1#SAMLV1.1입니다.  
+-   토큰 형식 URI. 이 URI의 값은 보안 어설션을 Markup Language (SAML) 1.1 토큰에 대 한 http://docs.oasis-open.org/wss/oasis-wss-saml-token-profile-1.1#SAMLV1.1합니다.  
   
 -   발행된 토큰과 연결될 키의 비트 수를 나타내는 키 크기 값  
   
--   키 형식 URI. 대칭 키의 경우 이 URI의 값은 http://schemas.xmlsoap.org/ws/2005/02/trust/SymmetricKey입니다.  
+-   키 형식 URI. 이 URI의 값은 대칭 키에 대 한 http://schemas.xmlsoap.org/ws/2005/02/trust/SymmetricKey합니다.  
   
  또한 다음과 같은 몇 가지 다른 항목이 있을 수 있습니다.  
   
@@ -109,7 +111,7 @@ ms.lasthandoff: 12/22/2017
  [!code-csharp[c_CreateSTS#4](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_creatests/cs/source.cs#4)]
  [!code-vb[c_CreateSTS#4](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_creatests/vb/source.vb#4)]  
   
- [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Federation 샘플](../../../../docs/framework/wcf/samples/federation-sample.md)합니다.  
+ 자세한 내용은 참조 [Federation 샘플](../../../../docs/framework/wcf/samples/federation-sample.md)합니다.  
   
 ## <a name="creating-response-messages"></a>응답 메시지 만들기  
  보안 토큰 서비스에서 발행 요청을 처리하고 증명 키와 함께 발행될 토큰을 만들면 적어도 요청된 토큰, 증명 토큰 및 발행된 토큰 참조를 포함하여 응답 메시지를 만들어야 합니다. 일반적으로 발행된 토큰은 다음 예제에서처럼 <xref:System.IdentityModel.Tokens.SamlSecurityToken>에서 만들어진 <xref:System.IdentityModel.Tokens.SamlAssertion>입니다.  
@@ -122,7 +124,7 @@ ms.lasthandoff: 12/22/2017
  [!code-csharp[c_CreateSTS#6](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_creatests/cs/source.cs#6)]
  [!code-vb[c_CreateSTS#6](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_creatests/vb/source.vb#6)]  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]클라이언트와 보안 토큰 서비스 둘 다 때 증명 토큰을 생성 하는 방법을 제공 키 자료 공유 키에 대 한 참조 하십시오. [Federation 샘플](../../../../docs/framework/wcf/samples/federation-sample.md)합니다.  
+ [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 클라이언트와 보안 토큰 서비스 둘 다 때 증명 토큰을 생성 하는 방법을 제공 키 자료 공유 키에 대 한 참조 하십시오. [Federation 샘플](../../../../docs/framework/wcf/samples/federation-sample.md)합니다.  
   
  <xref:System.IdentityModel.Tokens.SecurityKeyIdentifierClause> 클래스의 인스턴스를 만들어 발행된 토큰 참조를 만듭니다.  
   
@@ -131,7 +133,7 @@ ms.lasthandoff: 12/22/2017
   
  이러한 여러 값은 클라이언트에 반환되는 응답 메시지로 serialize됩니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  보안 토큰 서비스에 대 한 전체 코드를 참조 하십시오. [Federation 샘플](../../../../docs/framework/wcf/samples/federation-sample.md)합니다.  
   
 ## <a name="see-also"></a>참고 항목  

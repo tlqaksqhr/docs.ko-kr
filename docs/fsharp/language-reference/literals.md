@@ -1,20 +1,17 @@
 ---
-title: "리터럴(F#)"
-description: "F # 프로그래밍 언어의 리터럴 형식에 알아봅니다."
-keywords: "visual f#, f#, 함수형 프로그래밍"
+title: 리터럴(F#)
+description: 'F # 프로그래밍 언어의 리터럴 형식에 알아봅니다.'
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: 4b1d6e9d-f933-4cd4-966d-d643152c27e4
-ms.openlocfilehash: 6bb1f233b6846e226c4e73aee00b8cf77735fe2d
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 961d6a10122c5d5c691d394efa8d2b7b31a80453
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="literals"></a>리터럴
 
@@ -47,7 +44,7 @@ ms.lasthandoff: 10/18/2017
 |문자열|유니코드 문자열|없음|`"text\n"`<br /><br />또는<br /><br />`@"c:\filename"`<br /><br />또는<br /><br />`"""<book title="Paradise Lost">"""`<br /><br />또는<br /><br />`"string1" + "string2"`<br /><br />참고 항목 [문자열](Strings.md)합니다.|
 |byte|ASCII 문자|B|`'a'B`|
 |byte[]|ASCII 문자열|B|`"text"B`|
-|String 또는 byte]|축 자 문자열|@ 접두사|`@"\\server\share"`(유니코드)<br /><br />`@"\\server\share"B`(ASCII)|
+|String 또는 byte]|축 자 문자열|@ 접두사|`@"\\server\share"` (유니코드)<br /><br />`@"\\server\share"B` (ASCII)|
 
 ## <a name="remarks"></a>설명
 유니코드 문자열에 명시적 인코딩을 사용 하 여 지정할 수 있는 포함 될 수 있습니다 `\u` 뒤에 16 비트 16 진수 코드 또는 utf-32 인코딩을 사용 하 여 지정할 수 있는 `\U` 뒤에 유니코드를 나타내는 32 비트 16 진수 코드 서로게이트 쌍입니다.

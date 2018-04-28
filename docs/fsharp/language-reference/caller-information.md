@@ -1,20 +1,17 @@
 ---
-title: "호출자 정보 (F #)"
-description: "호출자 정보 인수 특성 메서드에에서 호출자 정보를 사용 하는 방법을 설명 합니다."
-keywords: "visual f#, f#, 함수형 프로그래밍"
+title: '호출자 정보 (F #)'
+description: 호출자 정보 인수 특성 메서드에에서 호출자 정보를 사용 하는 방법을 설명 합니다.
 author: cartermp
 ms.author: phcart
 ms.date: 04/25/2017
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: a3dcc335-433b-4672-ac2d-ae6b11b816f3
-ms.openlocfilehash: 533d2f0429ddb31e6d1dd7efca2f0760069a2945
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 840c6c6308c55fe2a2dbefd52b159a32fb92f787
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="caller-information"></a>호출자 정보
 
@@ -77,7 +74,7 @@ type Tracer() =
 |특성 생성자|특성이 적용되는 멤버의 이름입니다. 특성이 멤버 내에 있는 어떤 요소인 경우(예: 매개 변수, 반환 값 또는 제네릭 형식 매개 변수) 이 결과는 그 요소와 관련된 멤버의 이름입니다.|
 |포함하는 멤버가 없음(예: 어셈블리 수준 또는 형식에 적용되는 특성)|선택적 매개 변수의 기본값입니다.|
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참고자료
  [특성](attributes.md)  
  [명명 된 인수](parameters-and-arguments.md#named-arguments)  
  [선택적 매개 변수](parameters-and-arguments.md#optional-parameters)  

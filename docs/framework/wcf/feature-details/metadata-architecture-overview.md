@@ -1,28 +1,28 @@
 ---
-title: "메타데이터 아키텍처 개요"
-ms.custom: 
+title: 메타데이터 아키텍처 개요
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - metadata [WCF], overview
 ms.assetid: 1d37645e-086d-4d68-a358-f3c5b6e8205e
-caps.latest.revision: 
+caps.latest.revision: 24
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: a8890cc05ec6b0b889dafcb787e216b50a681876
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: bce838d9584480028c7b02d1ba19547fe208bf2c
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="metadata-architecture-overview"></a>메타데이터 아키텍처 개요
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]은 서비스 메타데이터의 내보내기, 게시, 검색 및 가져오기를 위한 풍부한 인프라를 제공합니다. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 서비스는 Svcutil.exe와 같은 도구가 서비스 액세스를 위해 클라이언트 코드에 자동으로 액세스할 수 있도록 메타데이터를 사용하여 서비스의 끝점과 상호 작용하는 방법을 설명합니다.  
@@ -39,7 +39,7 @@ ms.lasthandoff: 12/22/2017
   
 -   <xref:System.ServiceModel.Description.MetadataLocation> 인스턴스입니다.  
   
- <xref:System.ServiceModel.Description.MetadataReference?displayProperty=nameWithType> 인스턴스는 다른 MEX(메타데이터 교환) 끝점을 가리키고 <xref:System.ServiceModel.Description.MetadataLocation?displayProperty=nameWithType> 인스턴스는 HTTP URL을 사용하여 메타데이터 문서를 가리킵니다. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서는 WSDL 문서를 사용하여 서비스에서 구현되는 서비스 끝점, 서비스 계약, 바인딩, 메시지 교환 패턴, 메시지 및 오류 메시지를 설명합니다. 서비스에서 사용된 데이터 형식은 XML 스키마를 사용하여 WSDL 문서에 설명됩니다. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][스키마 가져오기 및 내보내기](../../../../docs/framework/wcf/feature-details/schema-import-and-export.md)합니다. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]를 사용하여 서비스의 기능을 확장하는 서비스 동작, 계약 동작 및 바인딩 요소에 대한 WSDL 확장을 내보내고 가져올 수 있습니다. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][WCF 확장에 대 한 사용자 지정 메타 데이터 내보내기](../../../../docs/framework/wcf/extending/exporting-custom-metadata-for-a-wcf-extension.md)합니다.  
+ <xref:System.ServiceModel.Description.MetadataReference?displayProperty=nameWithType> 인스턴스는 다른 MEX(메타데이터 교환) 끝점을 가리키고 <xref:System.ServiceModel.Description.MetadataLocation?displayProperty=nameWithType> 인스턴스는 HTTP URL을 사용하여 메타데이터 문서를 가리킵니다. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서는 WSDL 문서를 사용하여 서비스에서 구현되는 서비스 끝점, 서비스 계약, 바인딩, 메시지 교환 패턴, 메시지 및 오류 메시지를 설명합니다. 서비스에서 사용된 데이터 형식은 XML 스키마를 사용하여 WSDL 문서에 설명됩니다. 자세한 내용은 참조 [스키마 가져오기 및 내보내기](../../../../docs/framework/wcf/feature-details/schema-import-and-export.md)합니다. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]를 사용하여 서비스의 기능을 확장하는 서비스 동작, 계약 동작 및 바인딩 요소에 대한 WSDL 확장을 내보내고 가져올 수 있습니다. 자세한 내용은 참조 [WCF 확장에 대 한 사용자 지정 메타 데이터 내보내기](../../../../docs/framework/wcf/extending/exporting-custom-metadata-for-a-wcf-extension.md)합니다.  
   
 ## <a name="exporting-service-metadata"></a>서비스 메타데이터 내보내기  
  [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], *메타 데이터 내보내기* 는 서비스 끝점을 설명 하는 및 클라이언트 서비스를 사용 하는 방법을 이해 하는 데 사용할 수 있는 병렬의 표준화 된 표현으로 작업 합니다. <xref:System.ServiceModel.Description.ServiceEndpoint> 인스턴스에서 메타데이터를 내보내려면 <xref:System.ServiceModel.Description.MetadataExporter> 추상 클래스 구현을 사용합니다. <xref:System.ServiceModel.Description.MetadataExporter?displayProperty=nameWithType> 구현에서는 <xref:System.ServiceModel.Description.MetadataSet> 인스턴스에 캡슐화되는 메타데이터를 생성합니다.  
@@ -59,7 +59,7 @@ ms.lasthandoff: 12/22/2017
   
  MEX 프로토콜을 사용 하는 메타 데이터 끝점을 추가 하려면 IMetadataExchange 라는 서비스 계약을 사용 하는 서비스 호스트에 서비스 끝점을 추가 합니다.[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 정의 <xref:System.ServiceModel.Description.IMetadataExchange> 이 서비스 계약 이름을 가진 인터페이스입니다. WS-MetadataExchange 끝점 또는 MEX 끝점은 <xref:System.ServiceModel.Description.MetadataExchangeBindings> 클래스에서 정적 팩터리 메서드에 의해 노출되는 4개의 기본 바인딩 중 하나를 사용하여 Svcutil.exe와 같이 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 도구에서 사용하는 기본 바인딩과 일치시킬 수 있습니다. 또한 사용자 지정 바인딩을 사용하여 MEX 메타데이터 끝점을 구성할 수도 있습니다.  
   
- <xref:System.ServiceModel.Description.ServiceMetadataBehavior>는 <xref:System.ServiceModel.Description.WsdlExporter?displayProperty=nameWithType>를 사용하여 서비스의 모든 서비스 끝점에 대한 메타데이터를 내보냅니다. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]참조는 서비스에서 메타 데이터 내보내기 [내보내기 및 가져오기는 메타 데이터](../../../../docs/framework/wcf/feature-details/exporting-and-importing-metadata.md)합니다.  
+ <xref:System.ServiceModel.Description.ServiceMetadataBehavior>는 <xref:System.ServiceModel.Description.WsdlExporter?displayProperty=nameWithType>를 사용하여 서비스의 모든 서비스 끝점에 대한 메타데이터를 내보냅니다. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 참조는 서비스에서 메타 데이터 내보내기 [내보내기 및 가져오기는 메타 데이터](../../../../docs/framework/wcf/feature-details/exporting-and-importing-metadata.md)합니다.  
   
  <xref:System.ServiceModel.Description.ServiceMetadataBehavior>는 <xref:System.ServiceModel.Description.ServiceMetadataExtension> 인스턴스를 서비스 호스트에 대한 확장으로 추가하여 서비스 호스트를 보완합니다. <xref:System.ServiceModel.Description.ServiceMetadataExtension?displayProperty=nameWithType>은 메타데이터 게시 프로토콜에 대한 구현을 제공합니다. 또한 <xref:System.ServiceModel.Description.ServiceMetadataExtension?displayProperty=nameWithType>을 통해 <xref:System.ServiceModel.Description.ServiceMetadataExtension.Metadata%2A> 속성에 액세스하여 서비스 메타데이터를 런타임에 가져올 수 있습니다.  
   

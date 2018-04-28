@@ -1,12 +1,13 @@
 ---
-title: "보안(WPF)"
-ms.custom: 
+title: 보안(WPF)
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - XAML files [WPF], sandbox behavior
@@ -20,23 +21,24 @@ helpviewer_keywords:
 - XBAP security [WPF]
 - Internet Explorer security settings [WPF]
 ms.assetid: ee1baea0-3611-4e36-9ad6-fcd5205376fb
-caps.latest.revision: "38"
+caps.latest.revision: 38
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: fae5c8553cc395268b1c6afb1b64727014756975
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 134efba11742ab9cc8da2dfab77c233b52f1bcf1
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="security-wpf"></a>보안(WPF)
-<a name="introduction"></a>개발 하는 경우 [!INCLUDE[TLA#tla_wpf](../../../includes/tlasharptla-wpf-md.md)] 독립 실행형 및 브라우저에서 호스팅되는 응용 프로그램 보안 모델은 고려해 야 합니다. [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]독립 실행형 응용 프로그램 무제한 권한으로 실행 ( [!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)] **FullTrust** 사용 권한 집합), Windows Installer (.msi) XCopy를 사용 하 여 배포 인지 여부 또는 [!INCLUDE[TLA2#tla_clickonce](../../../includes/tla2sharptla-clickonce-md.md)]합니다. ClickOnce를 포함한 부분 신뢰, 독립 실행형 WPF 응용 프로그램 배포가 지원되지 않습니다. 그러나 완전 신뢰 호스트 응용 프로그램 부분 신뢰를 만들 수 <xref:System.AppDomain> .NET Framework 추가 기능 모델을 사용 하 여 합니다. 자세한 내용은 참조 [WPF 추가 기능 개요](../../../docs/framework/wpf/app-development/wpf-add-ins-overview.md)합니다.  
+<a name="introduction"></a> 개발 하는 경우 [!INCLUDE[TLA#tla_wpf](../../../includes/tlasharptla-wpf-md.md)] 독립 실행형 및 브라우저에서 호스팅되는 응용 프로그램 보안 모델은 고려해 야 합니다. [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 독립 실행형 응용 프로그램 무제한 권한으로 실행 ( [!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)] **FullTrust** 사용 권한 집합), Windows Installer (.msi) XCopy를 사용 하 여 배포 인지 여부 또는 [!INCLUDE[TLA2#tla_clickonce](../../../includes/tla2sharptla-clickonce-md.md)]합니다. ClickOnce를 포함한 부분 신뢰, 독립 실행형 WPF 응용 프로그램 배포가 지원되지 않습니다. 그러나 완전 신뢰 호스트 응용 프로그램 부분 신뢰를 만들 수 <xref:System.AppDomain> .NET Framework 추가 기능 모델을 사용 하 여 합니다. 자세한 내용은 참조 [WPF 추가 기능 개요](../../../docs/framework/wpf/app-development/wpf-add-ins-overview.md)합니다.  
   
- [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]브라우저에서 호스팅되는 응용 프로그램에서 호스팅되는 [!INCLUDE[TLA#tla_iegeneric](../../../includes/tlasharptla-iegeneric-md.md)] 또는 Firefox 될 수 있습니다 [!INCLUDE[TLA#tla_xbap#plural](../../../includes/tlasharptla-xbapsharpplural-md.md)] 또는 느슨한 [!INCLUDE[TLA#tla_xaml](../../../includes/tlasharptla-xaml-md.md)] 에 대 한 자세한 내용은 문서 참조 [WPF XAML 브라우저 응용 프로그램 개요](../../../docs/framework/wpf/app-development/wpf-xaml-browser-applications-overview.md)합니다.  
+ [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 브라우저에서 호스팅되는 응용 프로그램에서 호스팅되는 [!INCLUDE[TLA#tla_iegeneric](../../../includes/tlasharptla-iegeneric-md.md)] 또는 Firefox 될 수 있습니다 [!INCLUDE[TLA#tla_xbap#plural](../../../includes/tlasharptla-xbapsharpplural-md.md)] 또는 느슨한 [!INCLUDE[TLA#tla_xaml](../../../includes/tlasharptla-xaml-md.md)] 에 대 한 자세한 내용은 문서 참조 [WPF XAML 브라우저 응용 프로그램 개요](../../../docs/framework/wpf/app-development/wpf-xaml-browser-applications-overview.md)합니다.  
   
- [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]브라우저에서 호스팅되는 응용 프로그램 기본 제한 되는 기본적으로 부분 신뢰 보안 샌드박스에서 실행 [!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)] **인터넷** 영역 권한 집합입니다. 이 실제로 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 분리 되어야 하는 일반적인 웹 응용 프로그램 기대 같은 방식으로 클라이언트 컴퓨터에서 브라우저 호스팅되는 응용 프로그램입니다. XBAP는 배포 URL 및 클라이언트의 보안 구성의 보안 영역에 따라 권한을 완전 신뢰까지 높일 수 있습니다. 자세한 내용은 [WPF 부분 신뢰 보안](../../../docs/framework/wpf/wpf-partial-trust-security.md)을 참조하세요.  
+ [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 브라우저에서 호스팅되는 응용 프로그램 기본 제한 되는 기본적으로 부분 신뢰 보안 샌드박스에서 실행 [!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)] **인터넷** 영역 권한 집합입니다. 이 실제로 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 분리 되어야 하는 일반적인 웹 응용 프로그램 기대 같은 방식으로 클라이언트 컴퓨터에서 브라우저 호스팅되는 응용 프로그램입니다. XBAP는 배포 URL 및 클라이언트의 보안 구성의 보안 영역에 따라 권한을 완전 신뢰까지 높일 수 있습니다. 자세한 내용은 [WPF 부분 신뢰 보안](../../../docs/framework/wpf/wpf-partial-trust-security.md)을 참조하세요.  
   
  이 항목에서는 보안 모델에 대 한 설명 [!INCLUDE[TLA#tla_wpf](../../../includes/tlasharptla-wpf-md.md)] 독립 실행형 및 브라우저에서 호스팅되는 응용 프로그램입니다.  
   
@@ -73,7 +75,7 @@ ms.lasthandoff: 12/22/2017
 |리소스|파일의 빌드 형식 사용 하 여 프로젝트에 추가 된 **리소스**합니다.|`pack://application:,,,/MyResourceFile.xaml`|  
 |콘텐츠|파일의 빌드 형식 사용 하 여 프로젝트에 추가 된 **콘텐츠**합니다.|`pack://application:,,,/MyContentFile.xaml`|  
 |원래 사이트|파일의 빌드 형식 사용 하 여 프로젝트에 추가 된 **None**합니다.|`pack://siteoforigin:,,,/MySiteOfOriginFile.xaml`|  
-|응용 프로그램 코드|컴파일된 코드 숨김이 있는 XAML 리소스.<br /><br /> 또는<br /><br /> XAML 파일의 빌드 형식 사용 하 여 프로젝트에 추가 된 **페이지**합니다.|`pack://application:,,,/MyResourceFile` `.xaml`|  
+|응용 프로그램 코드|컴파일된 코드 숨김이 있는 XAML 리소스.<br /><br /> -또는-<br /><br /> XAML 파일의 빌드 형식 사용 하 여 프로젝트에 추가 된 **페이지**합니다.|`pack://application:,,,/MyResourceFile` `.xaml`|  
   
 > [!NOTE]
 >  응용 프로그램 데이터 파일 및 팩에 대 한 자세한 내용은 [!INCLUDE[TLA2#tla_uri#plural](../../../includes/tla2sharptla-urisharpplural-md.md)], 참조 [WPF 응용 프로그램 리소스, 내용 및 데이터 파일](../../../docs/framework/wpf/app-development/wpf-application-resource-content-and-data-files.md)합니다.  
@@ -100,9 +102,9 @@ ms.lasthandoff: 12/22/2017
 ## <a name="web-browsing-software-security-settings"></a>웹 브라우징 소프트웨어 보안 설정  
  컴퓨터의 보안 설정은 웹 브라우징 소프트웨어 권한이 부여된 액세스 권한을 결정합니다. 웹 검색 소프트웨어 정보와 모든 응용 프로그램 또는 구성 요소를 사용 하는 [WinINet](http://go.microsoft.com/fwlink/?LinkId=179379) 또는 [UrlMon](http://go.microsoft.com/fwlink/?LinkId=179383) Api, Internet Explorer 및 PresentationHost.exe 포함 합니다.  
   
- [!INCLUDE[TLA2#tla_iegeneric](../../../includes/tla2sharptla-iegeneric-md.md)]으로 또는에서 실행할 수 있도록 허용 되는 기능을 구성할 수 있는 메커니즘을 제공 [!INCLUDE[TLA2#tla_iegeneric](../../../includes/tla2sharptla-iegeneric-md.md)], 다음을 포함 하 여:  
+ [!INCLUDE[TLA2#tla_iegeneric](../../../includes/tla2sharptla-iegeneric-md.md)] 으로 또는에서 실행할 수 있도록 허용 되는 기능을 구성할 수 있는 메커니즘을 제공 [!INCLUDE[TLA2#tla_iegeneric](../../../includes/tla2sharptla-iegeneric-md.md)], 다음을 포함 하 여:  
   
--   [!INCLUDE[TLA2#tla_winfx](../../../includes/tla2sharptla-winfx-md.md)] 기반 구성 요소  
+-   .NET framework 기반 구성 요소  
   
 -   ActiveX 컨트롤 및 플러그인  
   
@@ -131,7 +133,7 @@ ms.lasthandoff: 12/22/2017
 > [!NOTE]
 >  Internet Explorer에서 인터넷 옵션 대화 상자에 액세스할 수도 있습니다. 클릭 **도구** 클릭 하 고 **인터넷 옵션**합니다.  
   
- 부터는 [!INCLUDE[TLA#tla_ie7](../../../includes/tlasharptla-ie7-md.md)], 특별히 다음과 같은 보안 설정 [!INCLUDE[TLA2#tla_winfx](../../../includes/tla2sharptla-winfx-md.md)] 포함 됩니다.  
+ 부터는 [!INCLUDE[TLA#tla_ie7](../../../includes/tlasharptla-ie7-md.md)], 특히.NET Framework에 대 한 다음 보안 설정이 포함 됩니다.  
   
 -   **느슨한 XAML**. 컨트롤 여부 [!INCLUDE[TLA2#tla_iegeneric](../../../includes/tla2sharptla-iegeneric-md.md)] 탐색 하 여 느슨한 [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] 파일입니다. (설정, 해제 및 확인 옵션).  
   
@@ -231,7 +233,7 @@ ms.lasthandoff: 12/22/2017
   
  그러나는에 설치 된 후 보안 결함을 드러낼 APTCA 어셈블리는 [!INCLUDE[TLA2#tla_gac](../../../includes/tla2sharptla-gac-md.md)]합니다. 보안 결함이 발견되면 어셈블리 게시자는 기존 설치에서 문제를 해결하는 보안 업데이트를 생성할 수 있으며, 문제가 발견된 후 발생할 수 있는 설치를 방지할 수 있습니다. 업데이트에 대한 한 가지 옵션은 어셈블리를 제거하는 것이지만 어셈블리를 사용하는 완전히 신뢰할 수 있는 다른 클라이언트 응용 프로그램이 중단될 수 있습니다.  
   
- [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]기준인 APTCA 어셈블리 수 수에 대 한 비활성화 부분적으로 신뢰할 수 있는 메커니즘을 제공 [!INCLUDE[TLA2#tla_xbap#plural](../../../includes/tla2sharptla-xbapsharpplural-md.md)] APTCA 어셈블리를 제거 하지 않고 있습니다.  
+ [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 기준인 APTCA 어셈블리 수 수에 대 한 비활성화 부분적으로 신뢰할 수 있는 메커니즘을 제공 [!INCLUDE[TLA2#tla_xbap#plural](../../../includes/tla2sharptla-xbapsharpplural-md.md)] APTCA 어셈블리를 제거 하지 않고 있습니다.  
   
  APTCA 어셈블리를 사용하지 않도록 설정하려면 특수한 레지스트리 키를 만들어야 합니다.  
   
@@ -252,7 +254,7 @@ ms.lasthandoff: 12/22/2017
  어셈블리를 부분적으로 신뢰할 수 있는 클라이언트 응용 프로그램에 사용하지 않도록 설정해야 하는 경우, 레지스트리 키와 값을 만드는 업데이트를 작성할 수 있습니다.  
   
 > [!NOTE]
->  코어 [!INCLUDE[TLA2#tla_winfx](../../../includes/tla2sharptla-winfx-md.md)] 어셈블리는 관리 되는 응용 프로그램을 실행 하는 데 필요 하기 때문에 이러한 방식으로 비활성화 하 여 영향을 받지 않습니다. APTCA 어셈블리를 사용하지 않도록 설정하는 것에 대한 지원은 기본적으로 타사 응용 프로그램을 대상으로 합니다.  
+>  핵심.NET Framework 어셈블리는 관리 되는 응용 프로그램을 실행 하는 데 필요 하기 때문에 이러한 방식으로 비활성화 하 여 영향을 받지 않습니다. APTCA 어셈블리를 사용하지 않도록 설정하는 것에 대한 지원은 기본적으로 타사 응용 프로그램을 대상으로 합니다.  
   
 <a name="LooseContentSandboxing"></a>   
 ## <a name="sandbox-behavior-for-loose-xaml-files"></a>느슨한 XAML 파일에 대한 샌드박스 동작  

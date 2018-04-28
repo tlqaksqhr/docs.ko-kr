@@ -1,27 +1,29 @@
 ---
-title: "데이터에 대한 보안 고려 사항"
-ms.custom: 
+title: 데이터에 대한 보안 고려 사항
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: a7eb98da-4a93-4692-8b59-9d670c79ffb2
-caps.latest.revision: "23"
+caps.latest.revision: 23
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: bb7a40bc38a3fdf3f7be2b31e30e768e26be2d15
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: aa0692c130fdfcf3685c152cdcb73a07d041ab9b
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="security-considerations-for-data"></a>데이터에 대한 보안 고려 사항
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]에서 데이터를 처리할 때는 여러 가지 위협 범주를 고려해야 합니다. 다음 표에는 데이터 처리와 관련하여 가장 중요한 위협 클래스가 나열되어 있습니다. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 는 이러한 위협을 완화하는 도구를 제공합니다.  
@@ -44,7 +46,7 @@ ms.lasthandoff: 12/22/2017
   
  다양한 확장 지점에 악의적인 코드가 들어가지 않도록 해야 합니다. 부분 신뢰에서 실행하거나, 부분적으로 신뢰할 수 있는 어셈블리의 형식을 처리하거나, 부분적으로 신뢰할 수 있는 코드에서 사용할 수 있는 구성 요소를 만드는 경우 특히 그렇습니다. 자세한 내용은 뒷부분의 "부분 신뢰 위협"을 참조하십시오.  
   
- 부분 신뢰에서 실행하는 경우 데이터 계약 serialization 인프라에서는 데이터 계약 프로그래밍 모델의 제한된 하위 집합만 지원합니다. 예를 들어 <xref:System.SerializableAttribute> 특성을 사용한 전용 데이터 멤버 또는 형식은 지원되지 않습니다. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][부분 신뢰](../../../../docs/framework/wcf/feature-details/partial-trust.md)합니다.  
+ 부분 신뢰에서 실행하는 경우 데이터 계약 serialization 인프라에서는 데이터 계약 프로그래밍 모델의 제한된 하위 집합만 지원합니다. 예를 들어 <xref:System.SerializableAttribute> 특성을 사용한 전용 데이터 멤버 또는 형식은 지원되지 않습니다. 자세한 내용은 참조 [부분 신뢰](../../../../docs/framework/wcf/feature-details/partial-trust.md)합니다.  
   
 ## <a name="avoiding-unintentional-information-disclosure"></a>의도하지 않은 정보 공개 방지  
  보안을 염두에 두고 serialize 가능 형식을 디자인하는 경우 정보 공개는 고려해야 할 중요한 사항입니다.  
@@ -121,7 +123,7 @@ ms.lasthandoff: 12/22/2017
 ### <a name="slow-stream-attacks"></a>느린 스트림 공격  
  스트리밍 서비스 거부 공격의 범주에는 메모리 소비가 포함되지 않으며, 대신 느린 데이터 발신자 또는 수신자가 포함됩니다. 데이터를 보내거나 받는 작업을 기다리는 동안 스레드 및 사용 가능한 연결 등의 리소스가 소모됩니다. 이러한 상황은 악의적인 공격의 결과로 발생하거나 올바른 발신자/수신자의 네트워크 연결이 느린 경우 발생할 수 있습니다.  
   
- 이러한 공격을 완화하려면 전송 시간 제한을 올바르게 설정합니다. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][전송 할당량](../../../../docs/framework/wcf/feature-details/transport-quotas.md)합니다. 둘째로, `Read` 에서 스트리밍 작업을 할 때 동기 `Write` 또는 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]작업을 사용하지 마십시오.  
+ 이러한 공격을 완화하려면 전송 시간 제한을 올바르게 설정합니다. 자세한 내용은 참조 [전송 할당량](../../../../docs/framework/wcf/feature-details/transport-quotas.md)합니다. 둘째로, `Read` 에서 스트리밍 작업을 할 때 동기 `Write` 또는 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]작업을 사용하지 마십시오.  
   
 ## <a name="using-xml-safely"></a>안전하게 XML 사용  
   
@@ -177,7 +179,7 @@ ms.lasthandoff: 12/22/2017
   
  <xref:System.Xml.XmlDictionaryReaderQuotas.MaxNameTableCharCount%2A>, `MaxStringContentLength`및 `MaxArrayLength` 속성은 메모리 소비만 제한합니다. 보통은 메모리 사용이 이미 `MaxReceivedMessageSize`에 의해 제한되기 때문에 스트리밍을 사용하지 않는 경우 따로 위협을 완화할 필요가 없습니다. 그러나 `MaxReceivedMessageSize` 에서는 확장 전의 바이트 수를 계산합니다. 이진 인코딩을 사용할 때 메모리 소비는 `MaxReceivedMessageSize`를 초과할 수 있으며 <xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement.MaxSessionSize%2A>비율로만 제한됩니다. 따라서 이진 인코딩을 사용하는 경우에는 항상 모든 판독기 할당량(특히 <xref:System.Xml.XmlDictionaryReaderQuotas.MaxStringContentLength%2A>)을 설정하는 것이 중요합니다.  
   
- 이진 인코딩을 <xref:System.Runtime.Serialization.DataContractSerializer>와 함께 사용할 때 `IExtensibleDataObject` 인터페이스를 사전 확장 공격에 악용할 수 있습니다. 이 인터페이스는 기본적으로 계약에 속해 있지 않은 임의의 데이터에 무제한의 저장소를 제공합니다. `MaxSessionSize` 와 `MaxReceivedMessageSize` 를 곱한 값이 문제를 야기하지 않을 정도로 낮은 할당량을 설정한 경우에는 이진 인코딩을 사용할 때 `IExtensibleDataObject` 기능을 비활성화합니다. `IgnoreExtensionDataObject` 특성에서 `true` 속성을 `ServiceBehaviorAttribute` 로 설정합니다. 또는 `IExtensibleDataObject` 인터페이스를 구현하지 않습니다. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][이후 버전과 호환 데이터 계약](../../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md)합니다.  
+ 이진 인코딩을 <xref:System.Runtime.Serialization.DataContractSerializer>와 함께 사용할 때 `IExtensibleDataObject` 인터페이스를 사전 확장 공격에 악용할 수 있습니다. 이 인터페이스는 기본적으로 계약에 속해 있지 않은 임의의 데이터에 무제한의 저장소를 제공합니다. `MaxSessionSize` 와 `MaxReceivedMessageSize` 를 곱한 값이 문제를 야기하지 않을 정도로 낮은 할당량을 설정한 경우에는 이진 인코딩을 사용할 때 `IExtensibleDataObject` 기능을 비활성화합니다. `IgnoreExtensionDataObject` 특성에서 `true` 속성을 `ServiceBehaviorAttribute` 로 설정합니다. 또는 `IExtensibleDataObject` 인터페이스를 구현하지 않습니다. 자세한 내용은 [호환 가능한 데이터 계약](../../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md)을 참조하세요.  
   
 ### <a name="quotas-summary"></a>할당량 요약  
  다음 표에는 할당량에 대한 지침이 요약되어 있습니다.  
@@ -259,7 +261,7 @@ ms.lasthandoff: 12/22/2017
   
 -   <xref:System.Runtime.Serialization.DataContractSerializer> 에서 대부분의 클래스를 deserialize할 때는 생성자가 실행되지 않습니다. 따라서 생성자에서 수행하는 상태 관리를 사용하지 마십시오.  
   
--   콜백을 사용하여 개체가 유효한 상태에 있는지 확인합니다. <xref:System.Runtime.Serialization.OnDeserializedAttribute> 특성으로 표시된 콜백은 deserialization이 완료된 후에 실행되며 전체 상태를 확인하고 수정할 수 있기 때문에 특히 유용합니다. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][버전 독립적 Serialization 콜백](../../../../docs/framework/wcf/feature-details/version-tolerant-serialization-callbacks.md)합니다.  
+-   콜백을 사용하여 개체가 유효한 상태에 있는지 확인합니다. <xref:System.Runtime.Serialization.OnDeserializedAttribute> 특성으로 표시된 콜백은 deserialization이 완료된 후에 실행되며 전체 상태를 확인하고 수정할 수 있기 때문에 특히 유용합니다. 자세한 내용은 참조 [버전 독립적 Serialization 콜백](../../../../docs/framework/wcf/feature-details/version-tolerant-serialization-callbacks.md)합니다.  
   
 -   속성 setter의 특정 호출 순서를 사용하도록 데이터 계약 형식을 디자인하지 마십시오.  
   
@@ -267,10 +269,10 @@ ms.lasthandoff: 12/22/2017
   
 -   상태 안전에 관해서는 데이터의 존재를 보장하기 위해 <xref:System.Runtime.Serialization.DataMemberAttribute.IsRequired%2A> 특성의 `DataMemberAttribute` 속성을 사용하지 마십시오. 데이터는 항상 `null`, `zero` 또는 `invalid`일 수 있습니다.  
   
--   신뢰할 수 없는 데이터 소스에서 deserialize된 개체 그래프를 먼저 검사하지 않고 신뢰해서는 안 됩니다. 각 개체의 상태가 일관되어도 개체 그래프 전체는 그렇지 않을 수 있습니다. 또한 개체 그래프 유지 모드가 사용하지 않도록 설정되어 있더라도 deserialize된 그래프에 같은 개체에 대한 참조가 여러 개 있거나 순환 참조가 있을 수 있습니다. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Serialization 및 Deserialization](../../../../docs/framework/wcf/feature-details/serialization-and-deserialization.md)합니다.  
+-   신뢰할 수 없는 데이터 소스에서 deserialize된 개체 그래프를 먼저 검사하지 않고 신뢰해서는 안 됩니다. 각 개체의 상태가 일관되어도 개체 그래프 전체는 그렇지 않을 수 있습니다. 또한 개체 그래프 유지 모드가 사용하지 않도록 설정되어 있더라도 deserialize된 그래프에 같은 개체에 대한 참조가 여러 개 있거나 순환 참조가 있을 수 있습니다. 자세한 내용은 참조 [Serialization 및 Deserialization](../../../../docs/framework/wcf/feature-details/serialization-and-deserialization.md)합니다.  
   
 ### <a name="using-the-netdatacontractserializer-securely"></a>안전한 NetDataContractSerializer 사용  
- <xref:System.Runtime.Serialization.NetDataContractSerializer> 는 형식에 대한 밀접한 결합을 사용하는 serialization 엔진입니다. 이는 <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> 및 <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter>와 비슷합니다. 즉, 들어오는 데이터로부터 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 어셈블리 및 형식 이름을 읽어 인스턴스화할 형식을 결정합니다. 이 엔진은 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]의 일부이지만 이 serialization 엔진을 넣을 방법이 제공되어 있지는 않기 때문에 사용자 지정 코드를 작성해야 합니다. `NetDataContractSerializer` 는 주로 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 원격에서 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]를 마이그레이션하는 작업을 편하게 수행하기 위해 제공됩니다. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)]에 있는 관련 단원을 [Serialization 및 Deserialization](../../../../docs/framework/wcf/feature-details/serialization-and-deserialization.md)합니다.  
+ <xref:System.Runtime.Serialization.NetDataContractSerializer> 는 형식에 대한 밀접한 결합을 사용하는 serialization 엔진입니다. 이는 <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> 및 <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter>와 비슷합니다. 즉, 들어오는 데이터로부터 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 어셈블리 및 형식 이름을 읽어 인스턴스화할 형식을 결정합니다. 이 엔진은 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]의 일부이지만 이 serialization 엔진을 넣을 방법이 제공되어 있지는 않기 때문에 사용자 지정 코드를 작성해야 합니다. `NetDataContractSerializer` 는 주로 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 원격에서 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]를 마이그레이션하는 작업을 편하게 수행하기 위해 제공됩니다. 자세한 내용은의 관련 섹션을 참조 하십시오. [Serialization 및 Deserialization](../../../../docs/framework/wcf/feature-details/serialization-and-deserialization.md)합니다.  
   
  메시지 자체에서 로드할 형식을 지정할 수 있기 때문에 <xref:System.Runtime.Serialization.NetDataContractSerializer> 메커니즘은 본질적으로 안전하지 않으며 신뢰할 수 있는 데이터에만 사용해야 합니다. 형식을 제한하는 안전한 형식 바인더를 작성하여 안전한 형식만 로드할 수도 있습니다( <xref:System.Runtime.Serialization.NetDataContractSerializer.Binder%2A> 속성 사용).  
   

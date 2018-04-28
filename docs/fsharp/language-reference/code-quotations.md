@@ -1,20 +1,17 @@
 ---
-title: "코드 인용(F#)"
-description: "생성 하 고 프로그래밍 방식으로 F # 코드 식을 사용할 수 있는 언어 기능 F # 코드 인용에 알아봅니다."
-keywords: "visual f#, f#, 함수형 프로그래밍"
+title: 코드 인용(F#)
+description: '생성 하 고 프로그래밍 방식으로 F # 코드 식을 사용할 수 있는 언어 기능 F # 코드 인용에 알아봅니다.'
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: 4559e659-2b04-48bd-8a0b-8527920eec95
-ms.openlocfilehash: f7a08013bc6487b570a62576bb01ca2dd65ce8b1
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: cfa2e4b9a4ad1776315dfa8ea82fb8fc3f13a552
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="code-quotations"></a>코드 인용
 
@@ -88,7 +85,7 @@ let f = fun (x:System.Int32) -> x + 10 in f 10
 ## <a name="example"></a>예제
 
 ### <a name="description"></a>설명
-세 가지 활성 패턴을 사용할 수도 있습니다는 [ExprShape 모듈](https://msdn.microsoft.com/library/7685150e-2432-4d39-9338-57292eff18de) 적은 활성 패턴으로 식 트리를 합니다. 이러한 활성 패턴 트리 이동 하지만 대부분의 노드에서 있는 모든 정보를 불필요 하는 경우 유용할 수 있습니다. F # 식이 다음 세 가지 패턴 중 하 나와 일치 하는 이러한 패턴을 사용 하는 경우: `ShapeVar` 식이 변수에 `ShapeLambda` 식 람다 식의 값 또는 `ShapeCombination` 식이 80 이외 인 경우. 이전 코드 예제와 같이 활성 패턴을 사용 하 여 식 트리를 이동 하는 경우 모든 가능한 F # 식은 형식에 처리 하기 위해 더 많은 패턴을 사용 해야 하 고 코드를 더 복잡 해질 합니다. 자세한 내용은 참조 [ExprShape.ShapeVar &#124; ShapeLambda &#124; ShapeCombination 활성 패턴](https://msdn.microsoft.com/visualfsharpdocs/conceptual/exprshape.shapevarhshapelambdahshapecombination-active-pattern-%5bfsharp%5d)합니다.
+세 가지 활성 패턴을 사용할 수도 있습니다는 [ExprShape 모듈](https://msdn.microsoft.com/library/7685150e-2432-4d39-9338-57292eff18de) 적은 활성 패턴으로 식 트리를 합니다. 이러한 활성 패턴 트리 이동 하지만 대부분의 노드에서 있는 모든 정보를 불필요 하는 경우 유용할 수 있습니다. F # 식이 다음 세 가지 패턴 중 하 나와 일치 하는 이러한 패턴을 사용 하는 경우: `ShapeVar` 식이 변수에 `ShapeLambda` 식 람다 식의 값 또는 `ShapeCombination` 식이 80 이외 인 경우. 이전 코드 예제와 같이 활성 패턴을 사용 하 여 식 트리를 이동 하는 경우 모든 가능한 F # 식은 형식에 처리 하기 위해 더 많은 패턴을 사용 해야 하 고 코드를 더 복잡 해질 합니다. 자세한 내용은 참조 [ExprShape.ShapeVar&#124;ShapeLambda&#124;ShapeCombination 활성 패턴](https://msdn.microsoft.com/visualfsharpdocs/conceptual/exprshape.shapevarhshapelambdahshapecombination-active-pattern-%5bfsharp%5d)합니다.
 
 다음 코드 예제에서는 보다 복잡 한 순회에 대 한 기준으로 사용할 수 있습니다. 이 코드에서는 함수 호출을 포함 하는 식에 대 한 식 트리 만들어집니다 `add`합니다. [SpecificCall](https://msdn.microsoft.com/library/05a77b21-20fe-4b9a-8e07-aa999538198d) 활성 패턴은 한 모든 호출을 검색 하는 데 사용 `add` 식 트리에서 합니다. 이 활성 패턴 할당에 대 한 호출의 인수는 `exprList` 값입니다. 이 경우 많습니다 두 개만 개뿐이므로 이들 및 함수는 인수에 재귀적으로 호출 됩니다. 결과에 대 한 호출을 나타내는 코드 인용에 삽입 됩니다 `mul` 스플라이스 연산자를 사용 하 여 (`%%`). `println` 이전 예제에서 함수는 결과 표시 하는 데 사용 됩니다.
 

@@ -1,24 +1,26 @@
 ---
-title: "WCF에서 사용되는 보안 개념"
-ms.custom: 
+title: WCF에서 사용되는 보안 개념
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 3b9dfcf5-4bf1-4f35-9070-723171c823a1
-caps.latest.revision: "15"
+caps.latest.revision: 15
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: 142de63c3d61ae2ff7f89b1d602f2a48c739f53a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 72712e0934646a39c1e03a38716179384051003a
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="security-concepts-used-in-wcf"></a>WCF에서 사용되는 보안 개념
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 보안은 이미 사용 중인 개념을 기반으로 빌드되고 다양한 보안 인프라에 배포됩니다.  
@@ -31,13 +33,13 @@ ms.lasthandoff: 12/22/2017
 ## <a name="industry-wide-security-specifications"></a>산업 전반 보안 사양  
   
 ### <a name="public-key-infrastructure"></a>공개 키 인프라  
- PKI(공개 키 인프라)는 공개 키 암호화 사용을 통해 전자 트랜잭션에 참여하는 각각의 상대방을 확인하고 인증하는 디지털 인증서, 인증 기관 및 기타 등록 기관의 시스템입니다. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Windows Server 2008 R2 인증서 서비스](http://go.microsoft.com/fwlink/?LinkId=210211)합니다.  
+ PKI(공개 키 인프라)는 공개 키 암호화 사용을 통해 전자 트랜잭션에 참여하는 각각의 상대방을 확인하고 인증하는 디지털 인증서, 인증 기관 및 기타 등록 기관의 시스템입니다. 자세한 내용은 참조 [Windows Server 2008 R2 인증서 서비스](http://go.microsoft.com/fwlink/?LinkId=210211)합니다.  
   
 ### <a name="kerberos-protocol"></a>Kerberos 프로토콜  
- *Kerberos 프로토콜* 는 Windows 도메인에서 사용자를 인증 하는 보안 메커니즘을 만들기에 대 한 사양입니다. 이를 통해 사용자가 도메인 내의 다른 엔터티로 보안 컨텍스트를 설정할 수 있습니다. Windows 2000 이상 플랫폼은 기본적으로 Kerberos 프로토콜을 사용합니다. 인트라넷 클라이언트와 상호 작용할 서비스를 만들 때 시스템의 메커니즘을 이해하는 것이 좋습니다. 또한 이후에 *웹 서비스 보안 Kerberos 바인딩* 이 널리 게시 수는 Kerberos 프로토콜을 사용 하면 인터넷 클라이언트와 통신 (즉, Kerberos 프로토콜은 상호 운용 가능). [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Windows의 Kerberos 프로토콜 구현 되는 경우 참조 [Microsoft Kerberos](http://go.microsoft.com/fwlink/?LinkId=210212)합니다.  
+ *Kerberos 프로토콜* 는 Windows 도메인에서 사용자를 인증 하는 보안 메커니즘을 만들기에 대 한 사양입니다. 이를 통해 사용자가 도메인 내의 다른 엔터티로 보안 컨텍스트를 설정할 수 있습니다. Windows 2000 이상 플랫폼은 기본적으로 Kerberos 프로토콜을 사용합니다. 인트라넷 클라이언트와 상호 작용할 서비스를 만들 때 시스템의 메커니즘을 이해하는 것이 좋습니다. 또한 이후에 *웹 서비스 보안 Kerberos 바인딩* 이 널리 게시 수는 Kerberos 프로토콜을 사용 하면 인터넷 클라이언트와 통신 (즉, Kerberos 프로토콜은 상호 운용 가능). [!INCLUDE[crabout](../../../../includes/crabout-md.md)] Windows의 Kerberos 프로토콜 구현 되는 경우 참조 [Microsoft Kerberos](http://go.microsoft.com/fwlink/?LinkId=210212)합니다.  
   
 ### <a name="x509-certificates"></a>X.509 인증서  
- X.509 인증서는 보안 응용 프로그램에 사용되는 기본 자격 증명 양식입니다. 인증서 참조 X.509 대 한 자세한 내용은 [X.509 공개 키 인증서](http://go.microsoft.com/fwlink/?LinkId=210213)합니다. X.509 인증서는 인증서 저장소 내에 저장됩니다. Windows를 실행하는 컴퓨터에는 여러 종류의 인증서 저장소가 있으며 저장소마다 용도가 다릅니다. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]다른 저장소 참조 [인증서 저장소](http://go.microsoft.com/fwlink/?LinkID=87787)합니다.  
+ X.509 인증서는 보안 응용 프로그램에 사용되는 기본 자격 증명 양식입니다. 인증서 참조 X.509 대 한 자세한 내용은 [X.509 공개 키 인증서](http://go.microsoft.com/fwlink/?LinkId=210213)합니다. X.509 인증서는 인증서 저장소 내에 저장됩니다. Windows를 실행하는 컴퓨터에는 여러 종류의 인증서 저장소가 있으며 저장소마다 용도가 다릅니다. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 다른 저장소 참조 [인증서 저장소](http://go.microsoft.com/fwlink/?LinkID=87787)합니다.  
   
 ## <a name="web-services-security-specifications"></a>웹 서비스 보안 사양  
  시스템 정의 바인딩에서는 일반적으로 많이 사용되는 웹 서비스 보안 사양을 지원합니다. 참조 지 원하는 시스템 제공 바인딩 및 웹 서비스 사양의 전체 목록은: [웹 서비스 프로토콜 바인딩에서 지 원하는 시스템 제공 상호 운용성](../../../../docs/framework/wcf/feature-details/web-services-protocols-supported-by-system-provided-interoperability-bindings.md)  

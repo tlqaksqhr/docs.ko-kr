@@ -1,28 +1,28 @@
 ---
-title: "계약 및 서비스에서 오류 지정 및 처리"
-ms.custom: 
+title: 계약 및 서비스에서 오류 지정 및 처리
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - handling faults [WCF]
 ms.assetid: a9696563-d404-4905-942d-1e0834c26dea
-caps.latest.revision: 
+caps.latest.revision: 22
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 57fc01b77379389ca4d86d241ec8f3d672b519b6
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 70f8c1f89a5570f5b77eaba1bf72c42706d88947
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="specifying-and-handling-faults-in-contracts-and-services"></a>계약 및 서비스에서 오류 지정 및 처리
 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 응용 프로그램은 관리되는 예외 개체를 SOAP 오류 개체에 매핑하고 SOAP 오류 개체를 관리되는 예외 개체에 매핑하여 오류 상황을 처리합니다. 이 단원의 항목에서는 사용자 지정 SOAP 오류와 같은 오류 조건을 노출하도록 계약을 디자인하는 방법, 이러한 오류를 서비스 구현의 일부로 반환하는 방법 및 클라이언트가 이러한 오류를 catch하는 방법에 대해 설명합니다.  
@@ -47,12 +47,12 @@ ms.lasthandoff: 12/22/2017
 ## <a name="map-exceptions-to-soap-faults"></a>SOAP 오류에 예외 매핑  
  오류 조건을 처리하는 작업을 만들기 위한 첫 번째 단계는 클라이언트 응용 프로그램이 오류에 대한 정보를 받아야 하는 조건을 결정하는 것입니다. 일부 작업에는 해당 기능 관련 오류 조건이 포함되어 있습니다. 예를 들어 `PurchaseOrder` 작업에서는 더 이상 구매 주문을 시작하는 것이 허용되지 않는 고객에게 특정 정보가 반환될 수 있습니다. 다른 경우에는 `Calculator` 서비스와 같이 매우 일반적인 `MathFault` SOAP 오류가 전체 서비스에 대한 모든 오류 조건을 설명할 수 있습니다. 서비스의 클라이언트가 오류 조건을 식별하면 사용자 지정 SOAP 오류를 생성할 수 있으며 해당 오류 조건이 발생할 때 사용자 지정 SOAP 오류를 반환하도록 작업을 표시할 수 있습니다.  
   
- [!INCLUDE[crabout](../../../includes/crabout-md.md)]이 단계를 서비스 또는 클라이언트를 개발 참조 [정 및 오류를 지정 하](../../../docs/framework/wcf/defining-and-specifying-faults.md)합니다.  
+ [!INCLUDE[crabout](../../../includes/crabout-md.md)] 이 단계를 서비스 또는 클라이언트를 개발 참조 [정 및 오류를 지정 하](../../../docs/framework/wcf/defining-and-specifying-faults.md)합니다.  
   
 ## <a name="clients-and-services-handle-soap-faults-as-exceptions"></a>클라이언트 및 서비스가 SOAP 오류를 예외로 처리  
  작업 오류 조건 식별, 사용자 지정 SOAP 오류 정의 및 이러한 오류를 반환하는 것으로 해당 작업을 표시하는 것은 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 응용 프로그램에서 오류를 처리하기 위한 첫 번째 단계입니다. 다음 단계는 이러한 오류를 보내고 받는 것을 제대로 구현하는 것입니다. 일반적으로 서비스는 클라이언트 응용 프로그램에게 오류 조건에 대한 정보를 알리기 위해 오류를 보내지만 이중 클라이언트도 SOAP 오류를 서비스에 보낼 수 있습니다.  
   
- [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][오류 보내기 및 받기](../../../docs/framework/wcf/sending-and-receiving-faults.md)합니다.  
+ 자세한 내용은 참조 [송신 및 수신 오류](../../../docs/framework/wcf/sending-and-receiving-faults.md)합니다.  
   
 ## <a name="undeclared-soap-faults-and-debugging"></a>선언되지 않은 SOAP 오류 및 디버깅  
  선언된 SOAP 오류는 강력하고 상호 운용 가능하며 배포된 응용 프로그램에 특히 유용합니다. 그러나 일부 경우에서는 서비스 또는 이중 클라이언트가 해당 작업에 대해 WSDL(웹 서비스 기술 언어)에서 언급되지 않은 오류인 선언되지 않은 SOAP 오류를 보내는 데 유용합니다. 예를 들어 서비스를 개발할 때 클라이언트에게 정보를 다시 보내기 위해 디버깅에 유용하지만 예기치 않은 상황이 발생할 수 있습니다. 또한 <xref:System.ServiceModel.ServiceBehaviorAttribute.IncludeExceptionDetailInFaults%2A?displayProperty=nameWithType> 속성 또는 <xref:System.ServiceModel.Description.ServiceDebugBehavior.IncludeExceptionDetailInFaults%2A?displayProperty=nameWithType> 속성을 `true`로 설정하여 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 클라이언트가 내부 서비스 작업 예외에 대한 정보를 가져올 수 있습니다. 개별 오류 보내기 및 디버깅 동작 속성을 설정 모두에 설명 된 [송신 및 수신 오류](../../../docs/framework/wcf/sending-and-receiving-faults.md)합니다.  

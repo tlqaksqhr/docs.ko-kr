@@ -1,23 +1,24 @@
 ---
-title: ".NET Framework 4 워크플로에서 Interop 활동 사용"
-ms.custom: 
+title: .NET Framework 4 워크플로에서 Interop 활동 사용
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 9bb747f0-eb33-4f70-84cd-317382372dcd
-caps.latest.revision: "20"
+caps.latest.revision: 20
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 0a02d6dbc7c6f6583a174bd10853d8c8070ac273
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: ebef74097d22c9624a29470f4cda231bbb32fe90
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="using-the-interop-activity-in-a-net-framework-4-workflow"></a>.NET Framework 4 워크플로에서 Interop 활동 사용
 [!INCLUDE[vstecwinfx](../../../includes/vstecwinfx-md.md)] 또는 [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)]를 사용하여 만든 활동은 [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] 활동을 통해 <xref:System.Activities.Statements.Interop> 워크플로에서 사용할 수 있습니다. 이 항목에서는 <xref:System.Activities.Statements.Interop> 활동 사용에 대해 간략하게 설명합니다.  
@@ -370,10 +371,10 @@ Rule3: IF this.DiscountPercent > 0
 |규칙 기능|설명서|  
 |-------------------|-------------------|  
 |규칙 개요|[Windows Workflow Foundation 규칙 엔진 소개](http://go.microsoft.com/fwlink/?LinkID=152836)|  
-|RuleSet|[워크플로에서 Ruleset 사용](http://go.microsoft.com/fwlink/?LinkId=178516) 및<xref:System.Workflow.Activities.Rules.RuleSet>|  
+|RuleSet|[워크플로에서 Ruleset 사용](http://go.microsoft.com/fwlink/?LinkId=178516) 및 <xref:System.Workflow.Activities.Rules.RuleSet>|  
 |규칙 확인|[Ruleset의 규칙 평가](http://go.microsoft.com/fwlink/?LinkId=178517)|  
 |규칙 연결|[전방 연결 제어](http://go.microsoft.com/fwlink/?LinkId=178518) 및 [규칙의 전방 연결](http://go.microsoft.com/fwlink/?LinkId=178519)|  
 |규칙에서 컬렉션 처리|[규칙에서 컬렉션 처리](http://go.microsoft.com/fwlink/?LinkId=178520)|  
-|PolicyActivity 사용|[PolicyActivity 활동 사용](http://go.microsoft.com/fwlink/?LinkId=178521) 및<xref:System.Workflow.Activities.PolicyActivity>|  
+|PolicyActivity 사용|[PolicyActivity 활동 사용](http://go.microsoft.com/fwlink/?LinkId=178521) 및 <xref:System.Workflow.Activities.PolicyActivity>|  
   
- [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)]에서 만든 워크플로는 선언적 활동 조건 및 [!INCLUDE[wf1](../../../includes/wf1-md.md)], <xref:System.Workflow.Activities.ConditionedActivityGroup> 등의 조건부 활동과 같은 <xref:System.Workflow.Activities.ReplicatorActivity>에서 제공하는 모든 규칙 기능을 사용하는 것은 아닙니다. 필요할 경우 [!INCLUDE[vstecwinfx](../../../includes/vstecwinfx-md.md)] 및 [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)]를 사용하여 만든 워크플로에 이 기능을 사용할 수 있습니다. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][마이그레이션 지침](../../../docs/framework/windows-workflow-foundation/migration-guidance.md)합니다.
+ [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)]에서 만든 워크플로는 선언적 활동 조건 및 [!INCLUDE[wf1](../../../includes/wf1-md.md)], <xref:System.Workflow.Activities.ConditionedActivityGroup> 등의 조건부 활동과 같은 <xref:System.Workflow.Activities.ReplicatorActivity>에서 제공하는 모든 규칙 기능을 사용하는 것은 아닙니다. 필요할 경우 [!INCLUDE[vstecwinfx](../../../includes/vstecwinfx-md.md)] 및 [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)]를 사용하여 만든 워크플로에 이 기능을 사용할 수 있습니다. 자세한 내용은 참조 [마이그레이션 지침](../../../docs/framework/windows-workflow-foundation/migration-guidance.md)합니다.

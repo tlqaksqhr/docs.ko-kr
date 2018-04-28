@@ -1,20 +1,17 @@
 ---
-title: "매개 변수 및 인수(F#)"
-description: "F # 언어 지원과 매개 변수를 정의 하 고 함수, 메서드 및 속성에 인수를 전달 하기 위한 방법을 알아봅니다."
-keywords: "visual f#, f#, 함수형 프로그래밍"
+title: 매개 변수 및 인수(F#)
+description: 'F # 언어 지원과 매개 변수를 정의 하 고 함수, 메서드 및 속성에 인수를 전달 하기 위한 방법을 알아봅니다.'
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: 9b37a5c4-9263-4513-822a-fbb0d1004254
-ms.openlocfilehash: 50f54bacd9ba7ec20a7151794734f93200df9f2d
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: e146ec4e877bb89f10e2f3daad2d8356c29fa81f
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="parameters-and-arguments"></a>매개 변수 및 인수
 

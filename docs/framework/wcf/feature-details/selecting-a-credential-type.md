@@ -1,26 +1,26 @@
 ---
-title: "자격 증명 형식 선택"
-ms.custom: 
+title: 자격 증명 형식 선택
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: bf707063-3f30-4304-ab53-0e63413728a8
-caps.latest.revision: 
+caps.latest.revision: 25
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 9e6b3d84db619ba1b4b5785b134cfe87d1b15cdc
-ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
+ms.openlocfilehash: 9858475520b949d5b9ee62ecdc0994bbb9398953
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="selecting-a-credential-type"></a>자격 증명 형식 선택
 *자격 증명* 데이터는 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 요구 된 id 또는 기능을 설정 하기 위해 사용 합니다. 예를 들어 여권은 정부에서 국가나 지역의 시민권을 입증하기 위해 발급하는 자격 증명입니다. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서 자격 증명은 사용자 이름 토큰 및 X.509 인증서 같은 여러 형식을 사용할 수 있습니다. 이 항목에서는 자격 증명, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서 자격 증명이 사용되는 방법 및 응용 프로그램에 맞는 자격 증명을 선택하는 방법에 대해 설명합니다.  
@@ -55,7 +55,7 @@ ms.lasthandoff: 02/01/2018
 |Windows|Windows 자격 증명으로 설정된 보안 컨텍스트에서 SOAP 메시지 교환을 수행할 수 있습니다.|  
 |Username|서비스에서 사용자 이름 자격 증명을 사용하여 클라이언트를 인증하도록 요구할 수 있습니다. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서는 사용자 이름을 사용하여 서명 생성, 데이터 암호화 등과 같은 암호화 작업을 수행할 수 없습니다. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서는 사용자 이름 자격 증명을 사용할 때 전송에 보안을 유지합니다.|  
 |인증서|서비스에서 X.509 인증서를 사용하여 클라이언트를 인증하도록 요구할 수 있습니다.|  
-|Issued Token|보안 정책에 따라 구성된 사용자 지정 토큰 형식입니다. 기본 토큰 형식은 SAML(Security Assertions Markup Language)입니다. 토큰은 보안 토큰 서비스에 의해 발급됩니다. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][페더레이션 및 발급 된 토큰](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)합니다.|  
+|Issued Token|보안 정책에 따라 구성된 사용자 지정 토큰 형식입니다. 기본 토큰 형식은 SAML(Security Assertions Markup Language)입니다. 토큰은 보안 토큰 서비스에 의해 발급됩니다. 자세한 내용은 참조 [페더레이션 및 발급 된 토큰](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)합니다.|  
   
 ### <a name="negotiation-model-of-service-credentials"></a>서비스 자격 증명의 협상 모델  
  *협상* 자격 증명을 교환 하 여 클라이언트와 서비스 간의 신뢰를 설정 하는 프로세스입니다. 이 프로세스는 협상 프로세스의 다음 단계에 필요한 정보만 공개하도록 클라이언트와 서비스 간에 반복적으로 수행됩니다. 실제로 최종 결과는 후속 작업에 사용할 서비스의 자격 증명이 클라이언트에 전달됩니다.  
@@ -77,7 +77,7 @@ ms.lasthandoff: 02/01/2018
  서비스 또는 클라이언트를 프로그래밍할지에 따라 자격 증명 값을 설정하는 방법이 약간씩 다릅니다.  
   
 ### <a name="setting-service-credentials"></a>서비스 자격 증명 설정  
- 전송 모드를 사용하고 HTTP를 전송으로 사용하는 경우에는 IIS(인터넷 정보 서비스)를 사용하거나 인증서로 포트를 구성해야 합니다. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][전송 보안 개요](../../../../docs/framework/wcf/feature-details/transport-security-overview.md) 및 [HTTP 전송 보안](../../../../docs/framework/wcf/feature-details/http-transport-security.md)합니다.  
+ 전송 모드를 사용하고 HTTP를 전송으로 사용하는 경우에는 IIS(인터넷 정보 서비스)를 사용하거나 인증서로 포트를 구성해야 합니다. 자세한 내용은 참조 [전송 보안 개요](../../../../docs/framework/wcf/feature-details/transport-security-overview.md) 및 [HTTP 전송 보안](../../../../docs/framework/wcf/feature-details/http-transport-security.md)합니다.  
   
  코드에서 자격 증명으로 서비스를 구축하려면 <xref:System.ServiceModel.ServiceHost> 클래스의 인스턴스를 만들고 <xref:System.ServiceModel.Description.ServiceCredentials> 속성을 통해 액세스하는 <xref:System.ServiceModel.ServiceHostBase.Credentials%2A> 클래스를 사용하여 적절한 자격 증명을 지정합니다.  
   

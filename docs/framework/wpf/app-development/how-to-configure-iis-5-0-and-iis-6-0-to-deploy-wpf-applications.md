@@ -27,11 +27,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 5c1b03cf39608566ed80e2288204480e77994ad7
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: edc4bc985f7117dc66d29053d62a283d67b01a85
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="how-to-configure-iis-50-and-iis-60-to-deploy-wpf-applications"></a>방법: IIS 5.0 및 IIS 6.0을 구성하여 WPF 응용 프로그램 배포
 적절한 [!INCLUDE[TLA#tla_mime](../../../../includes/tlasharptla-mime-md.md)] 형식으로 구성된 경우 대부분의 웹 서버에서 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 응용 프로그램을 배포할 수 있습니다. 기본적으로 [!INCLUDE[TLA#tla_iis70](../../../../includes/tlasharptla-iis70-md.md)]는 이러한 [!INCLUDE[TLA2#tla_mime](../../../../includes/tla2sharptla-mime-md.md)] 형식으로 구성되지만 [!INCLUDE[TLA#tla_iis50](../../../../includes/tlasharptla-iis50-md.md)]과 [!INCLUDE[TLA#tla_iis60](../../../../includes/tlasharptla-iis60-md.md)]은 아닙니다.  
@@ -40,7 +40,7 @@ ms.lasthandoff: 04/26/2018
   
   
 > [!NOTE]
->  레지스트리에서 *UserAgent* 문자열을 확인하여 시스템에 [!INCLUDE[TLA2#tla_winfx](../../../../includes/tla2sharptla-winfx-md.md)]가 설치되었는지 판별할 수 있습니다. *UserAgent* 문자열을 검사하여 [!INCLUDE[TLA2#tla_winfx](../../../../includes/tla2sharptla-winfx-md.md)]가 시스템에 설치되었는지 판별하는 스크립트 및 자세한 내용은 [.NET Framework 3.0 설치 여부 확인](../../../../docs/framework/wpf/app-development/how-to-detect-whether-the-net-framework-3-0-is-installed.md)을 참조하세요.  
+>  확인할 수 있습니다는 *UserAgent* 시스템에.NET Framework가 설치 되어 있는지 확인 하려면 레지스트리에서 문자열입니다. 자세한 내용 및 검사 하는 스크립트는 *UserAgent* .NET Framework 시스템에 설치 되어 있는지 확인 하려면 참조 문자열 [검색 the.NET Framework 3.0이 설치 되어 있는지](../../../../docs/framework/wpf/app-development/how-to-detect-whether-the-net-framework-3-0-is-installed.md)합니다.  
   
 <a name="content_expiration"></a>   
 ## <a name="adjust-the-content-expiration-setting"></a>콘텐츠 만료 설정 조정  

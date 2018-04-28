@@ -14,11 +14,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 90999867ee1dd678e279832d73d7ecaaa416fe7b
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.openlocfilehash: af520c1520f605d34076e6ecabdf84deb52fbfd0
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="using-workflowinvoker-and-workflowapplication"></a>WorkflowInvoker 및 WorkflowApplication 사용
 Windows WF (Workflow Foundation) 워크플로 호스트 하는 여러 가지 방법을 제공 합니다. <xref:System.Activities.WorkflowInvoker> 는 메서드 호출과 같은 방식으로 워크플로를 호출하기 위한 간단한 방법을 제공하며, 지속성을 사용하지 않는 워크플로에만 사용될 수 있습니다. <xref:System.Activities.WorkflowApplication>은 수명 주기 이벤트 알림, 실행 제어, 책갈피 다시 시작 및 지속성을 비롯한 다양한 워크플로 실행 모델을 제공합니다. <xref:System.ServiceModel.Activities.WorkflowServiceHost>는 메시징 활동에 대한 지원을 제공하며 주로 워크플로 서비스에 사용됩니다. 이 항목에서는 <xref:System.Activities.WorkflowInvoker> 및 <xref:System.Activities.WorkflowApplication>을 사용하는 워크플로 호스팅을 소개합니다. [!INCLUDE[crabout](../../../includes/crabout-md.md)] 사용 하 여 워크플로 호스팅 <xref:System.ServiceModel.Activities.WorkflowServiceHost>, 참조 [워크플로 서비스](../../../docs/framework/wcf/feature-details/workflow-services.md) 및 [호스팅 워크플로 서비스 개요](../../../docs/framework/wcf/feature-details/hosting-workflow-services-overview.md)합니다.  
@@ -35,7 +35,7 @@ Windows WF (Workflow Foundation) 워크플로 호스트 하는 여러 가지 방
 > [!NOTE]
 >  <xref:System.TimeoutException>은 시간 제한 간격이 경과하고 실행 시 워크플로가 유휴 상태가 되는 경우에만 throw됩니다. 완료하는 데 지정한 시간 제한 간격보다 오래 걸리는 워크플로는 해당 워크플로가 유효 상태가 되지 않는 경우에 성공적으로 완료됩니다.  
   
- <xref:System.Activities.WorkflowInvoker>는 호출 메서드의 비동기 버전도 제공합니다. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] <xref:System.Activities.WorkflowInvoker.InvokeAsync%2A> 및 <xref:System.Activities.WorkflowInvoker.BeginInvoke%2A>합니다.  
+ <xref:System.Activities.WorkflowInvoker>는 호출 메서드의 비동기 버전도 제공합니다. 자세한 내용은 <xref:System.Activities.WorkflowInvoker.InvokeAsync%2A> 및 <xref:System.Activities.WorkflowInvoker.BeginInvoke%2A>를 참조하세요.  
   
 ### <a name="setting-input-arguments-of-a-workflow"></a>워크플로의 입력 인수 설정  
  워크플로의 입력 인수에 매핑되는 인수 이름으로 키가 지정된 입력 매개 변수 사전을 사용하여 워크플로에 데이터를 전달할 수 있습니다. 이 예제에서는 <xref:System.Activities.Statements.WriteLine>을 호출하고 입력 매개 변수 사전을 사용하여 해당 <xref:System.Activities.Statements.WriteLine.Text%2A> 인수의 값을 지정합니다.  

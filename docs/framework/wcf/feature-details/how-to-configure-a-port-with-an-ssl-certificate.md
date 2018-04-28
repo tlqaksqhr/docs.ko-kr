@@ -1,12 +1,13 @@
 ---
-title: "방법: SSL 인증서를 사용하여 포트 구성"
-ms.custom: 
+title: '방법: SSL 인증서를 사용하여 포트 구성'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -16,23 +17,24 @@ helpviewer_keywords:
 - WCF, security mode
 - WCF, security
 ms.assetid: b8abcc8e-a5f5-4317-aca5-01e3c40ab24d
-caps.latest.revision: "18"
+caps.latest.revision: 18
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 3fbd3b640e90ecf0ff5857bd33465e8c60135eac
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: bbf3d4b9888d07a89d1b6a8225a7f7415e8c67cc
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="how-to-configure-a-port-with-an-ssl-certificate"></a>방법: SSL 인증서를 사용하여 포트 구성
-전송 보안을 사용하는 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 클래스에 자체 호스트된 <xref:System.ServiceModel.WSHttpBinding> 서비스를 만드는 경우에는 X.509 인증서로 포트도 구성해야 합니다. 자체 호스트된 서비스를 만들지 않는 경우에는 IIS(인터넷 정보 서비스)에서 서비스를 호스트할 수 있습니다. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][HTTP 전송 보안](../../../../docs/framework/wcf/feature-details/http-transport-security.md)합니다.  
+전송 보안을 사용하는 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 클래스에 자체 호스트된 <xref:System.ServiceModel.WSHttpBinding> 서비스를 만드는 경우에는 X.509 인증서로 포트도 구성해야 합니다. 자체 호스트된 서비스를 만들지 않는 경우에는 IIS(인터넷 정보 서비스)에서 서비스를 호스트할 수 있습니다. 자세한 내용은 참조 [HTTP 전송 보안](../../../../docs/framework/wcf/feature-details/http-transport-security.md)합니다.  
   
  포트를 구성하려면 컴퓨터에서 실행하는 운영 체제에 따라 다른 도구를 사용해야 합니다.  
   
- [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] 또는 [!INCLUDE[wxp](../../../../includes/wxp-md.md)]를 실행하는 경우 HttpCfg.exe 도구를 사용합니다. [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)]에는 이 도구가 함께 설치됩니다. 와 [!INCLUDE[wxp](../../../../includes/wxp-md.md)]에서 도구를 다운로드할 수 있습니다 [Windows XP 서비스 팩 2 지원 도구](http://go.microsoft.com/fwlink/?LinkId=88606)합니다. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Httpcfg 개요](http://go.microsoft.com/fwlink/?LinkId=88605)합니다. [Windows 지원 도구 설명서](http://go.microsoft.com/fwlink/?LinkId=94840) Httpcfg.exe 도구에 대 한 구문에 설명 합니다.  
+ [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] 또는 [!INCLUDE[wxp](../../../../includes/wxp-md.md)]를 실행하는 경우 HttpCfg.exe 도구를 사용합니다. [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)]에는 이 도구가 함께 설치됩니다. 와 [!INCLUDE[wxp](../../../../includes/wxp-md.md)]에서 도구를 다운로드할 수 있습니다 [Windows XP 서비스 팩 2 지원 도구](http://go.microsoft.com/fwlink/?LinkId=88606)합니다. 자세한 내용은 참조 [Httpcfg 개요](http://go.microsoft.com/fwlink/?LinkId=88605)합니다. [Windows 지원 도구 설명서](http://go.microsoft.com/fwlink/?LinkId=94840) Httpcfg.exe 도구에 대 한 구문에 설명 합니다.  
   
  [!INCLUDE[wv](../../../../includes/wv-md.md)]를 실행하는 경우 이미 설치되어 있는 Netsh.exe 도구를 사용합니다.  
   
@@ -66,9 +68,9 @@ ms.lasthandoff: 12/22/2017
   
 ### <a name="to-get-a-certificates-thumbprint"></a>인증서의 지문을 가져오려면  
   
-1.  인증서 MMC 스냅인을 사용하여 클라이언트 인증 용도의 X.509 인증서를 찾습니다. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][하는 방법: MMC 스냅인을 사용 하 여 인증서 보기](../../../../docs/framework/wcf/feature-details/how-to-view-certificates-with-the-mmc-snap-in.md)합니다.  
+1.  인증서 MMC 스냅인을 사용하여 클라이언트 인증 용도의 X.509 인증서를 찾습니다. 자세한 내용은 참조 [하는 방법: MMC 스냅인을 사용 하 여 보기 인증서](../../../../docs/framework/wcf/feature-details/how-to-view-certificates-with-the-mmc-snap-in.md)합니다.  
   
-2.  인증서의 지문에 액세스합니다. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][하는 방법: 인증서의 지문을 검색](../../../../docs/framework/wcf/feature-details/how-to-retrieve-the-thumbprint-of-a-certificate.md)합니다.  
+2.  인증서의 지문에 액세스합니다. 자세한 내용은 참조 [하는 방법: 인증서의 지문을 검색](../../../../docs/framework/wcf/feature-details/how-to-retrieve-the-thumbprint-of-a-certificate.md)합니다.  
   
 3.  인증서의 지문을 메모장 등의 텍스트 편집기에 복사합니다.  
   
@@ -134,7 +136,7 @@ ms.lasthandoff: 12/22/2017
     Netsh http delete sslcert ipport=0.0.0.0:8005  
     ```  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 코드에서는 전송 보안에 설정된 <xref:System.ServiceModel.WSHttpBinding> 클래스를 사용하여 자체 호스트된 서비스를 만드는 방법을 보여 줍니다. 응용 프로그램을 만들 때에는 주소에 포트 번호를 지정합니다.  
   
  [!code-csharp[c_WsHttpService#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_wshttpservice/cs/source.cs#3)]

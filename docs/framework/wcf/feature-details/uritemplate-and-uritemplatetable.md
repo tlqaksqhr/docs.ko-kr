@@ -10,17 +10,17 @@ ms.technology:
 ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 5cbbe03f-4a9e-4d44-9e02-c5773239cf52
-caps.latest.revision: ''
+caps.latest.revision: 24
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: ac77fe2c83828d2cc9473417d2b29b2d2e540923
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: b0fedb812cee5cfa1e4c2ff921a78beb2a6c1beb
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="uritemplate-and-uritemplatetable"></a>UriTemplate 및 UriTemplateTable
 웹 개발자는 서비스가 응답하는 URI의 셰이프 및 레이아웃을 설명할 수 있어야 합니다. [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]에는 개발자가 URI를 제어할 수 있는 두 가지 새 클래스가 추가되었습니다. <xref:System.UriTemplate> 및 <xref:System.UriTemplateTable>은 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서 URI 기반 디스패치 엔진의 기초를 형성합니다. 이러한 클래스를 자체적으로 사용하면 개발자가 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 서비스를 구현하지 않고도 URI 매핑 메커니즘과 템플릿을 활용할 수 있습니다.  
@@ -51,7 +51,7 @@ ms.lasthandoff: 03/26/2018
   
  <xref:System.UriTemplate.PathSegmentVariableNames%2A> 속성은 템플릿 문자열의 경로 세그먼트에 사용되는 변수 이름 컬렉션을 포함합니다.  
   
- <xref:System.UriTemplate.IsEquivalentTo%28System.UriTemplate%29>는 <xref:System.UriTemplate>을 매개 변수로 사용하고 두 템플릿이 일치하는지 여부를 지정하는 부울 값을 반환합니다. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] 이 항목의 뒷부분에 나오는 템플릿 동등성.  
+ <xref:System.UriTemplate.IsEquivalentTo%28System.UriTemplate%29>는 <xref:System.UriTemplate>을 매개 변수로 사용하고 두 템플릿이 일치하는지 여부를 지정하는 부울 값을 반환합니다. 자세한 내용은이 항목의 뒷부분에 나오는 템플릿 동등성 섹션을 참조 하십시오.  
   
  <xref:System.UriTemplate>은 HTTP URI 문법을 따르는 모든 URI 구성표와 함께 사용되도록 만들어졌습니다. 다음은 지원되는 URI 구성표의 예입니다.  
   
@@ -94,7 +94,7 @@ ms.lasthandoff: 03/26/2018
   
 -   "{shoe}/boat"  
   
--   "{shoe}/{boat}/bed/{quilt}"  
+-   "{shoe} / {보트} /bed/ {quilt}"  
   
 -   "shoe / {보트}"  
   
@@ -102,7 +102,7 @@ ms.lasthandoff: 03/26/2018
   
 -   "shoe/보트? x = 2"  
   
--   "shoe/{boat}?x={bed}"  
+-   "shoe / {보트}? x = {평판}"  
   
 -   "shoe/{boat}?x={bed}&y=band"  
   
@@ -137,7 +137,7 @@ ms.lasthandoff: 03/26/2018
   
  다음은 잘못된 경로 세그먼트의 예입니다.  
   
--   /{} - 변수의 이름을 지정해야 합니다.  
+-   /{} -변수 이름을 지정 해야 합니다.  
   
 -   /{shoe}{boat} - 변수를 리터럴로 구분해야 합니다.  
   
@@ -202,7 +202,7 @@ foreach (string key in m1.BoundVariables.AllKeys)
 ```  
   
 > [!NOTE]
->  http://localhost:8000///과 같은 URI는 위의 코드에 나열된 템플릿과 일치하지 않지만 http://localhost:8000/과 같은 URI는 일치합니다.  
+>  그러나와 같은 URI http://localhost:8000/// 앞의 코드에 나열 된 템플릿과 일치 하지 않는와 같은 URI http://localhost:8000/ 않습니다.  
   
  다음 코드에서는 템플릿을 사용하여 URI를 만들 때 기본 변수 값을 처리하는 방법을 보여 줍니다.  
   

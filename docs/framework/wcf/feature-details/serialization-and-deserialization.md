@@ -1,27 +1,29 @@
 ---
-title: "Serialization 및 Deserialization"
-ms.custom: 
+title: Serialization 및 Deserialization
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 3d71814c-bda7-424b-85b7-15084ff9377a
-caps.latest.revision: "13"
+caps.latest.revision: 13
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a73fa30f1ebae805abd6f3e7e397d005d5b7130d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 4d5caa913a49205c387c22a615b2b8da2dba0a77
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="serialization-and-deserialization"></a>Serialization 및 Deserialization
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 에는 새로운 serialization 엔진인 <xref:System.Runtime.Serialization.DataContractSerializer>가 포함되어 있습니다. <xref:System.Runtime.Serialization.DataContractSerializer> 는 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 개체를 XML로, XML을 .NET Framework 개체로 변환합니다. 이 항목에서는 serializer가 작동하는 방식에 대해 설명합니다.  
@@ -85,12 +87,12 @@ ms.lasthandoff: 12/22/2017
  이러한 값은 <xref:System.Xml.XmlDictionaryString> 클래스의 인스턴스나 문자열로 전달하여, 이진 XML 형식을 통해 최적화할 수 있습니다.  
   
 ### <a name="setting-the-maximum-objects-quota"></a>최대 개체 할당량 설정  
- 일부 `DataContractSerializer` 생성자 오버로드에는 `maxItemsInObjectGraph` 매개 변수가 있습니다. 이 매개 변수는 serializer가 단일 <xref:System.Runtime.Serialization.XmlObjectSerializer.ReadObject%2A> 메서드 호출에서 serialize하거나 deserialize하는 최대 개체 수를 결정합니다. 이 메서드는 항상 하나의 루트 개체를 읽지만 이 개체의 데이터 멤버에 다른 개체가 있을 수 있으며, 마찬가지로 그러한 개체에도 다른 개체가 있을 수 있습니다. 기본값은 65536입니다. 배열을 serialize하거나 deserialize할 때 모든 배열 항목은 개별 개체로 계산됩니다. 또한 일부 개체에는 큰 메모리 표현이 있을 수 있으므로 서비스 거부 공격을 방지하기에 이 할당량만으로 충분하지 않을 수 있습니다. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][데이터에 대 한 보안 고려 사항](../../../../docs/framework/wcf/feature-details/security-considerations-for-data.md)합니다. 이 할당량을 기본값보다 크게 늘려야 할 경우 데이터를 읽고 쓸 때 보내는 측(serialize)과 받는 측(deserialize)에 모두 적용되므로 양측에서 값을 늘려야 합니다.  
+ 일부 `DataContractSerializer` 생성자 오버로드에는 `maxItemsInObjectGraph` 매개 변수가 있습니다. 이 매개 변수는 serializer가 단일 <xref:System.Runtime.Serialization.XmlObjectSerializer.ReadObject%2A> 메서드 호출에서 serialize하거나 deserialize하는 최대 개체 수를 결정합니다. 이 메서드는 항상 하나의 루트 개체를 읽지만 이 개체의 데이터 멤버에 다른 개체가 있을 수 있으며, 마찬가지로 그러한 개체에도 다른 개체가 있을 수 있습니다. 기본값은 65536입니다. 배열을 serialize하거나 deserialize할 때 모든 배열 항목은 개별 개체로 계산됩니다. 또한 일부 개체에는 큰 메모리 표현이 있을 수 있으므로 서비스 거부 공격을 방지하기에 이 할당량만으로 충분하지 않을 수 있습니다. 자세한 내용은 참조 [데이터에 대 한 보안 고려 사항](../../../../docs/framework/wcf/feature-details/security-considerations-for-data.md)합니다. 이 할당량을 기본값보다 크게 늘려야 할 경우 데이터를 읽고 쓸 때 보내는 측(serialize)과 받는 측(deserialize)에 모두 적용되므로 양측에서 값을 늘려야 합니다.  
   
 ### <a name="round-trips"></a>라운드트립  
  *라운드트립* 은 개체가 한 번에 deserialize 및 다시 serialize될 때 발생합니다. 예를 들면 XML에서 개체 인스턴스로 이동하고 다시 XML 스트림으로 이동합니다.  
   
- 일부 `DataContractSerializer` 생성자 오버로드에는 기본적으로 `ignoreExtensionDataObject` 로 설정된 `false` 매개 변수가 있습니다. 이 기본 모드에서는 데이터 계약에서 <xref:System.Runtime.Serialization.IExtensibleDataObject> 인터페이스를 구현하는 한, 라운드트립 시 이전 버전을 통해 최신 버전의 데이터 계약에서 다시 이 최신 버전으로 데이터 손실 없이 데이터를 보낼 수 있습니다. 예를 들어 `Person` 데이터 계약의 버전 1에 `Name` 및 `PhoneNumber` 데이터 멤버가 들어 있고 버전 2에서 `Nickname` 멤버를 추가한다고 가정합니다. `IExtensibleDataObject` 가 구현되면 버전 2에서 버전 1로 정보를 보낼 때 `Nickname` 데이터가 저장된 다음 다시 serialize될 때 다시 내보내집니다. 따라서 라운드트립 시 데이터가 손실되지 않습니다. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][이후 버전과 호환 데이터 계약](../../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md) 및 [데이터 계약 버전 관리](../../../../docs/framework/wcf/feature-details/data-contract-versioning.md)합니다.  
+ 일부 `DataContractSerializer` 생성자 오버로드에는 기본적으로 `ignoreExtensionDataObject` 로 설정된 `false` 매개 변수가 있습니다. 이 기본 모드에서는 데이터 계약에서 <xref:System.Runtime.Serialization.IExtensibleDataObject> 인터페이스를 구현하는 한, 라운드트립 시 이전 버전을 통해 최신 버전의 데이터 계약에서 다시 이 최신 버전으로 데이터 손실 없이 데이터를 보낼 수 있습니다. 예를 들어 `Person` 데이터 계약의 버전 1에 `Name` 및 `PhoneNumber` 데이터 멤버가 들어 있고 버전 2에서 `Nickname` 멤버를 추가한다고 가정합니다. `IExtensibleDataObject` 가 구현되면 버전 2에서 버전 1로 정보를 보낼 때 `Nickname` 데이터가 저장된 다음 다시 serialize될 때 다시 내보내집니다. 따라서 라운드트립 시 데이터가 손실되지 않습니다. 자세한 내용은 참조 [이후 버전과 호환 데이터 계약](../../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md) 및 [데이터 계약 버전 관리](../../../../docs/framework/wcf/feature-details/data-contract-versioning.md)합니다.  
   
 #### <a name="security-and-schema-validity-concerns-with-round-trips"></a>라운드트립과 관련된 보안 및 스키마 유효성 검사 문제  
  라운드트립 시 보안 관련 문제가 있을 수 있습니다. 예를 들어 잘못 사용된 엄청난 양의 데이터를 deserialize하고 저장하면 보안상 위험이 따를 수 있습니다. 특히 디지털 서명이 포함된 경우 확인할 방법이 없는 이러한 데이터를 다시 내보낼 경우 보안 문제가 있을 수 있습니다. 예를 들면 이전 시나리오의 경우 버전 1 끝점에서 악의적인 데이터가 포함된 `Nickname` 값을 서명할 수 있습니다. 마지막으로 스키마 유효성 검사 문제가 있을 수 있는데, 끝점에서 명시된 계약을 엄격히 준수하는 데이터를 항상 내보내고 다른 값은 내보내지 않을 수 있습니다. 이전 예제의 경우 버전 1 끝점 계약에는 `Name` 및 `PhoneNumber`만 내보낸다고 명시되어 있는데, 스키마 유효성 검사를 사용 중일 때 추가 `Nickname` 값을 내보내면 유효성 검사에 실패하게 됩니다.  
@@ -135,7 +137,7 @@ ms.lasthandoff: 12/22/2017
 </PurchaseOrder>  
 ```  
   
- "ser" 네임스페이스는 표준 serialization 네임스페이스(http://schemas.microsoft.com/2003/10/Serialization/)를 참조합니다. 각 데이터 부분은 단 한 번만 serialize되고 이 데이터에 ID 번호가 제공됩니다. 이후 사용에서는 이미 serialize된 데이터를 참조하게 됩니다.  
+ "Ser" 네임 스페이스 표준 serialization 네임 스페이스를 가리키는 http://schemas.microsoft.com/2003/10/Serialization/합니다. 각 데이터 부분은 단 한 번만 serialize되고 이 데이터에 ID 번호가 제공됩니다. 이후 사용에서는 이미 serialize된 데이터를 참조하게 됩니다.  
   
 > [!IMPORTANT]
 >  데이터 계약 `XMLElement`에 "id" 및 "ref" 특성이 모두 있으면 "ref" 특성이 적용되는 "id" 특성은 무시됩니다.  
@@ -152,7 +154,7 @@ ms.lasthandoff: 12/22/2017
 >  `preserveObjectReferences` 모드를 사용하는 경우, `maxItemsInObjectGraph` 값을 올바른 할당량으로 설정하는 것이 특히 중요합니다. 이 모드에서 배열이 처리되는 방식 때문에, 공격자가 `maxItemsInObjectGraph` 할당량에 의해서만 제한되는 과다한 메모리 소비를 일으키는 작은 악의적인 메시지를 쉽게 작성할 수 있습니다.  
   
 ### <a name="specifying-a-data-contract-surrogate"></a>데이터 계약 서로게이트 지정  
- 일부 `DataContractSerializer` 생성자 오버로드에는 `dataContractSurrogate` 로 설정될 수 있는 `null`매개 변수가 있습니다. 그렇지 않으면 이 오버로드를 사용하여 *인터페이스를 구현하는 형식인*데이터 계약 서로게이트 <xref:System.Runtime.Serialization.IDataContractSurrogate> 를 지정할 수 있습니다. 그러면 인터페이스를 사용하여 serialization 및 deserialization 프로세스를 사용자 지정할 수 있습니다. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][데이터 계약 서로게이트](../../../../docs/framework/wcf/extending/data-contract-surrogates.md)합니다.  
+ 일부 `DataContractSerializer` 생성자 오버로드에는 `dataContractSurrogate` 로 설정될 수 있는 `null`매개 변수가 있습니다. 그렇지 않으면 이 오버로드를 사용하여 *인터페이스를 구현하는 형식인*데이터 계약 서로게이트 <xref:System.Runtime.Serialization.IDataContractSurrogate> 를 지정할 수 있습니다. 그러면 인터페이스를 사용하여 serialization 및 deserialization 프로세스를 사용자 지정할 수 있습니다. 자세한 내용은 참조 [데이터 계약 서로게이트](../../../../docs/framework/wcf/extending/data-contract-surrogates.md)합니다.  
   
 ## <a name="serialization"></a>Serialization  
  다음과 같은 정보는 <xref:System.Runtime.Serialization.XmlObjectSerializer>및 <xref:System.Runtime.Serialization.DataContractSerializer> 클래스를 포함하여, <xref:System.Runtime.Serialization.NetDataContractSerializer> 에서 상속되는 모든 클래스에 적용됩니다.  
@@ -265,7 +267,7 @@ ms.lasthandoff: 12/22/2017
   
 -   <xref:System.Runtime.Serialization.NetDataContractSerializer.Serialize%2A> 및 <xref:System.Runtime.Serialization.NetDataContractSerializer.Deserialize%2A> 메서드는 <xref:System.Runtime.Serialization.XmlObjectSerializer.WriteObject%2A> 및 <xref:System.Runtime.Serialization.XmlObjectSerializer.ReadObject%2A> 메서드의 별칭입니다. 이러한 메서드는 이진 또는 SOAP serialization에 보다 일관된 프로그래밍 모델을 제공하기 위해 존재합니다.  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]이러한 기능은 참조 [이진 Serialization](../../../../docs/standard/serialization/binary-serialization.md)합니다.  
+ [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 이러한 기능은 참조 [이진 Serialization](../../../../docs/standard/serialization/binary-serialization.md)합니다.  
   
  `NetDataContractSerializer` 및 `DataContractSerializer` 에서 사용하는 XML 형식은 일반적으로 호환되지 않습니다. 즉, 이러한 serializer 중 하나로 serialize하고 다른 serializer로 deserialize를 시도할 수 없습니다.  
   

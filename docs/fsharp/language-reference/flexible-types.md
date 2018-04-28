@@ -1,20 +1,17 @@
 ---
-title: "유연한 형식(F#)"
-description: "F # 유연한 형식의 주석을 매개 변수, 변수 또는 값에는 지정 된 형식과 호환 되는 형식을 사용 하는 방법에 알아봅니다."
-keywords: "visual f#, f#, 함수형 프로그래밍"
+title: 유연한 형식(F#)
+description: 'F # 유연한 형식의 주석을 매개 변수, 변수 또는 값에는 지정 된 형식과 호환 되는 형식을 사용 하는 방법에 알아봅니다.'
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: c8b510f2-3405-4cc9-b55b-e47b35e2b15b
-ms.openlocfilehash: 7c5e4eb97791b9c6c56fe2847755866e8240e038
-ms.sourcegitcommit: a19548e5167cbe7e9e58df4ffd8c3b23f17d5c7a
+ms.openlocfilehash: bee2364a6c30b1fbdc09aa0aac2249e3f0c295e8
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/02/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="flexible-types"></a>유연한 형식
 

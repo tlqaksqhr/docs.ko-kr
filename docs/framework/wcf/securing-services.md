@@ -1,28 +1,30 @@
 ---
-title: "서비스에 보안 설정"
-ms.custom: 
+title: 서비스에 보안 설정
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - configuration [WCF], securing services
 - WCF security
 - WCF, security
 ms.assetid: f0ecc6f7-f4b5-42a4-9cb1-b02e28e26620
-caps.latest.revision: "28"
+caps.latest.revision: 28
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: 2b8e84fe75f812cdcb97dcc24a0edad2d238515b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: d5fed0e842abd815d0483e26e1e1f350899d1506
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="securing-services"></a>서비스에 보안 설정
 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 서비스 보안은 전송 보안과 인증의 두 가지 주요 요구 사항으로 구성됩니다. (한 세 번째 요구 사항인 보안 이벤트 감사에 대 한 자세한 내용은 [감사](../../../docs/framework/wcf/feature-details/auditing-security-events.md).) 간단히 말해서 전송 보안은 인증(서비스와 클라이언트 모두에 대해 ID 확인), 기밀성(메시지 암호화) 및 무결성(변조 확인을 위한 디지털 서명)을 포함합니다. 권한 부여는 리소스에 대한 액세스 제어입니다. 예를 들어, 권한 있는 사용자에게만 파일 읽기를 허용합니다. [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]의 기능을 사용하면 두 가지 주요 요구 사항이 쉽게 구현됩니다.  
@@ -52,10 +54,10 @@ ms.lasthandoff: 12/22/2017
  Windows 도메인에서 단독으로 실행되는 응용 프로그램을 보안하려면 <xref:System.ServiceModel.WSHttpBinding> 또는 <xref:System.ServiceModel.NetTcpBinding> 바인딩의 기본 보안 설정을 사용할 수 있습니다. 기본적으로 동일한 Windows 도메인의 모든 사용자가 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 서비스에 액세스할 수 있습니다. 이러한 사용자는 네트워크에 로그온되어 있기 때문에 신뢰됩니다. 서비스와 클라이언트 사이의 메시지는 기밀성을 위해 암호화되고 무결성을 위해 서명됩니다. [!INCLUDE[crabout](../../../includes/crabout-md.md)] 는 [How to: Secure a Service with Windows Credentials](../../../docs/framework/wcf/how-to-secure-a-service-with-windows-credentials.md)에 의존합니다.  
   
 ### <a name="authorization-using-the-principalpermissionattribute-class"></a>PrincipalPermissionAttribute 클래스를 사용하여 권한 부여  
- 컴퓨터에서 리소스 액세스를 제한해야 하는 경우에 가장 쉬운 방법은 <xref:System.Security.Permissions.PrincipalPermissionAttribute> 클래스를 사용하는 것입니다. 이 특성을 사용하면 사용자가 지정된 Windows 그룹이나 역할에 속하는지 또는 특정 사용자인지를 확인하여 서비스 작업 호출을 제한할 수 있습니다. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][하는 방법: PrincipalPermissionAttribute 클래스를 사용 하 여 액세스를 제한](../../../docs/framework/wcf/how-to-restrict-access-with-the-principalpermissionattribute-class.md)합니다.  
+ 컴퓨터에서 리소스 액세스를 제한해야 하는 경우에 가장 쉬운 방법은 <xref:System.Security.Permissions.PrincipalPermissionAttribute> 클래스를 사용하는 것입니다. 이 특성을 사용하면 사용자가 지정된 Windows 그룹이나 역할에 속하는지 또는 특정 사용자인지를 확인하여 서비스 작업 호출을 제한할 수 있습니다. 자세한 내용은 참조 [하는 방법: PrincipalPermissionAttribute 클래스에 대 한 액세스 제한](../../../docs/framework/wcf/how-to-restrict-access-with-the-principalpermissionattribute-class.md)합니다.  
   
 ### <a name="impersonation"></a>가장  
- 가장은 리소스에 대한 액세스를 제어하는 데 사용할 수 있는 다른 메커니즘입니다. 기본적으로 IIS가 호스트하는 서비스는 ASPNET 계정의 ID로 실행됩니다. ASPNET 계정은 권한이 있는 리소스에만 액세스할 수 있습니다. ASPNET 서비스 계정을 제외하도록 폴더에 대한 ACL을 설정하고 특정한 다른 ID에 해당 폴더에 대한 액세스를 허용할 수 있습니다. ASPNET 계정에서 폴더에 액세스할 수 없는 경우 사용자에게 폴더에 대한 액세스를 허용하는 방법이 문제가 됩니다. 이 경우 가장을 사용하면 됩니다. 가장을 사용하면 서비스에서 클라이언트의 자격 증명을 사용하여 특정 리소스에 액세스할 수 있습니다. 다른 예로는 특정 사용자에게만 권한이 있는 SQL Server 데이터베이스에 액세스하는 경우가 있습니다. [!INCLUDE[crabout](../../../includes/crabout-md.md)]가장을 사용 하 여 참조 [하는 방법: 서비스에서 클라이언트 가장](../../../docs/framework/wcf/how-to-impersonate-a-client-on-a-service.md) 및 [위임 및 가장](../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md)합니다.  
+ 가장은 리소스에 대한 액세스를 제어하는 데 사용할 수 있는 다른 메커니즘입니다. 기본적으로 IIS가 호스트하는 서비스는 ASPNET 계정의 ID로 실행됩니다. ASPNET 계정은 권한이 있는 리소스에만 액세스할 수 있습니다. ASPNET 서비스 계정을 제외하도록 폴더에 대한 ACL을 설정하고 특정한 다른 ID에 해당 폴더에 대한 액세스를 허용할 수 있습니다. ASPNET 계정에서 폴더에 액세스할 수 없는 경우 사용자에게 폴더에 대한 액세스를 허용하는 방법이 문제가 됩니다. 이 경우 가장을 사용하면 됩니다. 가장을 사용하면 서비스에서 클라이언트의 자격 증명을 사용하여 특정 리소스에 액세스할 수 있습니다. 다른 예로는 특정 사용자에게만 권한이 있는 SQL Server 데이터베이스에 액세스하는 경우가 있습니다. [!INCLUDE[crabout](../../../includes/crabout-md.md)] 가장을 사용 하 여 참조 [하는 방법: 서비스에서 클라이언트 가장](../../../docs/framework/wcf/how-to-impersonate-a-client-on-a-service.md) 및 [위임 및 가장](../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md)합니다.  
   
 ## <a name="security-on-the-internet"></a>인터넷 보안  
  인터넷 보안은 인트라넷 보안과 동일한 요구 사항으로 구성됩니다. 서비스는 자격 증명을 제공하여 인증서를 증명하고, 클라이언트는 서비스에 대한 ID를 증명해야 합니다. 클라이언트의 ID가 증명되면 서비스는 클라이언트가 리소스에 대해 갖는 액세스 권한을 제어할 수 있습니다. 그러나 인터넷의 특성이 서로 다르기 때문에 제공되는 자격 증명이 Windows 도메인에 사용된 자격 증명과 다릅니다. Kerberos 컨트롤러는 자격 증명에 대한 티켓을 사용하여 도메인에서 사용자 인증을 처리하지만, 인터넷에서는 서비스와 클라이언트가 다양한 방법 중 하나를 사용하여 자격 증명을 제공합니다. 이 항목에서는 인터넷에서 액세스할 수 있는 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 서비스를 만들 수 있는 일반적인 방법에 대해 알아 봅니다.  
@@ -69,7 +71,7 @@ ms.lasthandoff: 12/22/2017
 ### <a name="credentials-used-by-iis"></a>IIS에 사용되는 자격 증명  
  Kerberos 컨트롤러에서 지원하는 Windows 도메인과 달리 인터넷은 시간에 관계없이 로그인하는 수백만 명의 사용자를 단일의 컨트롤러에서 관리할 수 없는 환경입니다. 대신 대부분의 인터넷에는 Secure Sockets Layer(또는 SSL) 인증서라고도 하는 X.509 형태의 자격 증명이 있습니다. 이러한 인증서는 일반적으로 *인증 기관*에 의해 발급되며, 인증 기관은 인증서의 신뢰성과 발급 받은 사람을 보증하는 타사일 수 있습니다. 인터넷에서 서비스를 노출하려면 그런 신뢰할 수 있는 인증서를 제공하여 서비스를 인증해야 합니다.  
   
- 여기서 인증서를 어떻게 발급 받는지에 대한 질문이 발생합니다. Authenticode 또는 VeriSign과 같은 타사 인증 기관으로 이동하여 서비스를 배포할 준비가 되면 서비스에 대한 인증서를 구매합니다. [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 에서 개발 단계를 진행 중이지만 아직 인증서를 구매하지 않은 경우 프로덕션 배포를 시뮬레이션하는 데 사용할 수 있는 X.509 인증서를 만드는 도구와 기술이 있습니다. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][인증서 작업](../../../docs/framework/wcf/feature-details/working-with-certificates.md)합니다.  
+ 여기서 인증서를 어떻게 발급 받는지에 대한 질문이 발생합니다. Authenticode 또는 VeriSign과 같은 타사 인증 기관으로 이동하여 서비스를 배포할 준비가 되면 서비스에 대한 인증서를 구매합니다. [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 에서 개발 단계를 진행 중이지만 아직 인증서를 구매하지 않은 경우 프로덕션 배포를 시뮬레이션하는 데 사용할 수 있는 X.509 인증서를 만드는 도구와 기술이 있습니다. 자세한 내용은 참조 [인증서 작업](../../../docs/framework/wcf/feature-details/working-with-certificates.md)합니다.  
   
 ## <a name="security-modes"></a>보안 모드  
  [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 보안을 프로그래밍할 경우 몇 가지 중요 사항을 결정해야 합니다. 가장 기본적인 사항 중 하나로 *보안 모드*를 선택합니다. *전송 모드* 와 *메시지 모드*의 두 가지 주요 보안 모드가 있습니다.  
@@ -102,12 +104,12 @@ ms.lasthandoff: 12/22/2017
  *자격 증명 값* 은 서비스에 사용되는 실제 자격 증명입니다. 자격 증명 형식을 지정한 경우 실제 자격 증명을 사용하여 서비스를 구성해야 할 수도 있습니다. Windows를 선택하고 서비스가 Windows 도메인에서 실행되는 경우에는 실제 자격 증명 값을 지정하지 않습니다.  
   
 ## <a name="identity"></a>클레임  
- [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]에서 용어 *ID* 는 서버와 클라이언트에서 서로 다른 의미로 사용됩니다. 간략하게 말해서 서비스를 실행할 때 ID는 인증 후에 보안 컨텍스트에 할당됩니다. 실제 ID를 보려면 <xref:System.ServiceModel.ServiceSecurityContext.WindowsIdentity%2A> 클래스의 <xref:System.ServiceModel.ServiceSecurityContext.PrimaryIdentity%2A> 및 <xref:System.ServiceModel.ServiceSecurityContext> 속성을 확인합니다. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][하는 방법: 보안 컨텍스트 검사](../../../docs/framework/wcf/how-to-examine-the-security-context.md)합니다.  
+ [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]에서 용어 *ID* 는 서버와 클라이언트에서 서로 다른 의미로 사용됩니다. 간략하게 말해서 서비스를 실행할 때 ID는 인증 후에 보안 컨텍스트에 할당됩니다. 실제 ID를 보려면 <xref:System.ServiceModel.ServiceSecurityContext.WindowsIdentity%2A> 클래스의 <xref:System.ServiceModel.ServiceSecurityContext.PrimaryIdentity%2A> 및 <xref:System.ServiceModel.ServiceSecurityContext> 속성을 확인합니다. 자세한 내용은 참조 [하는 방법: 보안 컨텍스트 검사](../../../docs/framework/wcf/how-to-examine-the-security-context.md)합니다.  
   
- 반대로 클라이언트에서는 ID가 서비스의 유효성을 검사하는 데 사용됩니다. 디자인 타임에 클라이언트 개발자 설정할 수는 [ \<identity >](../../../docs/framework/configure-apps/file-schema/wcf/identity.md) 요소는 서비스에서 가져온 값입니다. 런타임에 클라이언트는 서비스의 실제 ID와 비교하여 요소 값을 확인합니다. 확인에 실패하면 클라이언트는 통신을 종료합니다. 값은 서비스가 특정 사용자의 ID로 실행되는 경우 UPN(User Principal Name)이고, 서비스가 컴퓨터 계정에서 실행되는 경우 SPN(서비스 사용자 이름)입니다. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][Id 및 인증 서비스](../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)합니다. 자격 증명은 인증서이거나 인증서를 식별하는 인증서에 있는 필드일 수 있습니다.  
+ 반대로 클라이언트에서는 ID가 서비스의 유효성을 검사하는 데 사용됩니다. 디자인 타임에 클라이언트 개발자 설정할 수는 [ \<identity >](../../../docs/framework/configure-apps/file-schema/wcf/identity.md) 요소는 서비스에서 가져온 값입니다. 런타임에 클라이언트는 서비스의 실제 ID와 비교하여 요소 값을 확인합니다. 확인에 실패하면 클라이언트는 통신을 종료합니다. 값은 서비스가 특정 사용자의 ID로 실행되는 경우 UPN(User Principal Name)이고, 서비스가 컴퓨터 계정에서 실행되는 경우 SPN(서비스 사용자 이름)입니다. 자세한 내용은 참조 [서비스 Id 및 인증](../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)합니다. 자격 증명은 인증서이거나 인증서를 식별하는 인증서에 있는 필드일 수 있습니다.  
   
 ## <a name="protection-levels"></a>보호 수준  
- `ProtectionLevel` 속성은 여러 특성 클래스(예: <xref:System.ServiceModel.ServiceContractAttribute> 및 <xref:System.ServiceModel.OperationContractAttribute> 클래스)에서 발생됩니다. 보호 수준은 서비스를 지원하는 메시지(또는 메시지 부분)가 서명되어 있는지, 서명 및 암호화되어 있는지 또는 서명이나 암호화 없이 보내졌는지를 지정하는 값입니다. [!INCLUDE[crabout](../../../includes/crabout-md.md)]속성 참조 [이해 보호 수준을](../../../docs/framework/wcf/understanding-protection-level.md), 프로그래밍 예제에 대 한 참조 및 [하는 방법: ProtectionLevel 속성 설정](../../../docs/framework/wcf/how-to-set-the-protectionlevel-property.md)합니다. [!INCLUDE[crabout](../../../includes/crabout-md.md)] 을 사용한 서비스 계정 디자인 `ProtectionLevel` , [Designing Service Contracts](../../../docs/framework/wcf/designing-service-contracts.md)에 의존합니다.  
+ `ProtectionLevel` 속성은 여러 특성 클래스(예: <xref:System.ServiceModel.ServiceContractAttribute> 및 <xref:System.ServiceModel.OperationContractAttribute> 클래스)에서 발생됩니다. 보호 수준은 서비스를 지원하는 메시지(또는 메시지 부분)가 서명되어 있는지, 서명 및 암호화되어 있는지 또는 서명이나 암호화 없이 보내졌는지를 지정하는 값입니다. [!INCLUDE[crabout](../../../includes/crabout-md.md)] 속성 참조 [이해 보호 수준을](../../../docs/framework/wcf/understanding-protection-level.md), 프로그래밍 예제에 대 한 참조 및 [하는 방법: ProtectionLevel 속성 설정](../../../docs/framework/wcf/how-to-set-the-protectionlevel-property.md)합니다. [!INCLUDE[crabout](../../../includes/crabout-md.md)] 을 사용한 서비스 계정 디자인 `ProtectionLevel` , [Designing Service Contracts](../../../docs/framework/wcf/designing-service-contracts.md)에 의존합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  <xref:System.ServiceModel>  

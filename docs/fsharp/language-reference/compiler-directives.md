@@ -1,20 +1,17 @@
 ---
-title: "컴파일러 지시문(F#)"
-description: "F # 언어 전처리기 지시문, 조건부 컴파일 지시문, line 지시문과 컴파일러 지시문에 알아봅니다."
-keywords: "visual f#, f#, 함수형 프로그래밍"
+title: 컴파일러 지시문(F#)
+description: 'F # 언어 전처리기 지시문, 조건부 컴파일 지시문, line 지시문과 컴파일러 지시문에 알아봅니다.'
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: 93aef07a-6747-4ce4-a10f-a05168978af6
-ms.openlocfilehash: c7ec056f407f3af34528205a5abb1cdef7d43fef
-ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
+ms.openlocfilehash: 03fe3598f04025cf6dfaf2424b9fcb33ed4b3859
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="compiler-directives"></a>컴파일러 지시문
 
@@ -33,7 +30,7 @@ ms.lasthandoff: 03/15/2018
 |`#else`|조건부 컴파일을 지원합니다. 위의 `#if`와 함께 사용되는 기호를 정의하지 않은 경우 포함할 코드 섹션을 표시합니다.|
 |`#endif`|조건부 컴파일을 지원합니다. 코드의 조건부 섹션이 끝나는 지점을 표시합니다.|
 |`#`[line] *int*,<br/>`#`[line] *int* *string*,<br/>`#`[line] *int* *verbatim-string*|디버깅을 위해 원본 소스 코드 줄과 파일 이름을 표시합니다. 이 기능은 F# 소스 코드를 생성하는 도구에서 사용할 수 있습니다.|
-|`#nowarn` *warningcode*|컴파일러 경고를 해제합니다. 경고를 해제하려면 컴파일러 출력에서 해당 번호를 찾아 따옴표에 포함합니다. "FS" 접두사를 생략합니다. 같은 줄에서 여러 경고 번호를 해제하려면 각 번호를 따옴표에 포함하고 각 문자열을 공백으로 구분합니다. 예:
+|`#nowarn` *warningcode*|컴파일러 경고를 해제합니다. 경고를 해제하려면 컴파일러 출력에서 해당 번호를 찾아 따옴표에 포함합니다. "FS" 접두사를 생략합니다. 같은 줄에서 여러 경고 번호를 해제하려면 각 번호를 따옴표에 포함하고 각 문자열을 공백으로 구분합니다. 예를 들어:
 
 `#nowarn "9" "40"`
 

@@ -1,12 +1,13 @@
 ---
-title: "방법: 페더레이션 클라이언트 만들기"
-ms.custom: 
+title: '방법: 페더레이션 클라이언트 만들기'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,21 +16,22 @@ helpviewer_keywords:
 - WCF, federation
 - federation
 ms.assetid: 56ece47e-98bf-4346-b92b-fda1fc3b4d9c
-caps.latest.revision: "21"
+caps.latest.revision: 21
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 7fda534d591ae5142fb732607c7e248ef3cc71bc
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 38436a83bf58c4903a931ecafebf922800d230c1
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="how-to-create-a-federated-client"></a>방법: 페더레이션 클라이언트 만들기
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]에 대 한 클라이언트 만들기는 *페더레이션 서비스* 세 개의 주요 단계로 구성 됩니다.  
   
-1.  구성 된 [ \<wsFederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md) 또는 유사한 사용자 지정 바인딩을 합니다. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]참조는 적절 한 바인딩 만들기 [하는 방법: WSFederationHttpBinding 만들기](../../../../docs/framework/wcf/feature-details/how-to-create-a-wsfederationhttpbinding.md)합니다. 또는 실행 하는 [ServiceModel Metadata 유틸리티 도구 (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) 페더레이션된 서비스와 하나 이상의와 통신 하기 위한 구성 파일을 생성 하는 페더레이션된 서비스의 메타 데이터 끝점에 대해 보안 토큰 서비스를 시작 합니다.  
+1.  구성 된 [ \<wsFederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md) 또는 유사한 사용자 지정 바인딩을 합니다. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 참조는 적절 한 바인딩 만들기 [하는 방법: WSFederationHttpBinding 만들기](../../../../docs/framework/wcf/feature-details/how-to-create-a-wsfederationhttpbinding.md)합니다. 또는 실행 하는 [ServiceModel Metadata 유틸리티 도구 (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) 페더레이션된 서비스와 하나 이상의와 통신 하기 위한 구성 파일을 생성 하는 페더레이션된 서비스의 메타 데이터 끝점에 대해 보안 토큰 서비스를 시작 합니다.  
   
 2.  보안 토큰 서비스와 클라이언트의 상호 작용에 대한 다양한 측면을 제어하는 <xref:System.ServiceModel.Security.IssuedTokenClientCredential>의 속성을 설정합니다.  
   
@@ -38,7 +40,7 @@ ms.lasthandoff: 12/22/2017
 > [!NOTE]
 >  클라이언트가 가장된 자격 증명, <xref:System.Security.Cryptography.CryptographicException> 바인딩 또는 사용자 지정 발급 토큰 및 비대칭 키를 사용할 때 <xref:System.ServiceModel.WSFederationHttpBinding>이 throw될 수 있습니다. 비대칭 키는 <xref:System.ServiceModel.WSFederationHttpBinding> 및 <xref:System.ServiceModel.FederatedMessageSecurityOverHttp.IssuedKeyType%2A> 속성이 각각 <xref:System.ServiceModel.Security.Tokens.IssuedSecurityTokenParameters.KeyType%2A>로 설정된 경우 <xref:System.IdentityModel.Tokens.SecurityKeyType.AsymmetricKey> 바인딩 및 사용자 지정 발급 토큰과 함께 사용됩니다. 클라이언트가 메시지를 보내려고 할 때 및 클라이언트가 가장하고 있는 ID에 대해 사용자 프로필이 없을 때 <xref:System.Security.Cryptography.CryptographicException>이 throw됩니다. 이 문제를 완화하려면 메시지를 보내기 전에 클라이언트 컴퓨터에 로그온하거나 `LoadUserProfile`을 호출합니다.  
   
- 이 항목에서는 이러한 절차에 대해 자세히 설명합니다. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]참조는 적절 한 바인딩 만들기 [하는 방법: WSFederationHttpBinding 만들기](../../../../docs/framework/wcf/feature-details/how-to-create-a-wsfederationhttpbinding.md)합니다. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]페더레이션된 서비스 작동 방식 참조 [페더레이션](../../../../docs/framework/wcf/feature-details/federation.md)합니다.  
+ 이 항목에서는 이러한 절차에 대해 자세히 설명합니다. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 참조는 적절 한 바인딩 만들기 [하는 방법: WSFederationHttpBinding 만들기](../../../../docs/framework/wcf/feature-details/how-to-create-a-wsfederationhttpbinding.md)합니다. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 페더레이션된 서비스 작동 방식 참조 [페더레이션](../../../../docs/framework/wcf/feature-details/federation.md)합니다.  
   
 ### <a name="to-generate-and-examine-the-configuration-for-a-federated-service"></a>페더레이션 서비스에 대한 구성을 생성하고 검사하려면  
   
@@ -95,7 +97,7 @@ ms.lasthandoff: 12/22/2017
   
 2.  토큰 캐싱이 필요 하지 않은 경우에 설정 된 `cacheIssuedTokens` 특성 (의 <`issuedToken`> 요소)를 `false`합니다.  
   
-3.  제한 시간에 캐시 된 토큰에 필요한 경우 설정의 `maxIssuedTokenCachingTime` 특성에 <`issuedToken`> 요소를 적절 한 값입니다. 예:  
+3.  제한 시간에 캐시 된 토큰에 필요한 경우 설정의 `maxIssuedTokenCachingTime` 특성에 <`issuedToken`> 요소를 적절 한 값입니다. 예를 들어:  
     `<issuedToken maxIssuedTokenCachingTime='00:10:00' />`  
   
 4.  기본값 이외의 값 이면 기본 설정의 `issuedTokenRenewalThresholdPercentage` 특성에 <`issuedToken`> 요소, 예를 들어 적절 한 값:  
@@ -151,7 +153,7 @@ ms.lasthandoff: 12/22/2017
     </scopedCertificates>  
     ```  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 코드 샘플에서는 코드에 <xref:System.ServiceModel.Security.IssuedTokenClientCredential> 클래스의 인스턴스를 구성합니다.  
   
  [!code-csharp[c_FederatedClient#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_federatedclient/cs/source.cs#2)]
@@ -163,13 +165,13 @@ ms.lasthandoff: 12/22/2017
 ## <a name="localissuer-required"></a>필수 LocalIssuer  
  클라이언트가 항상 로컬 발급자를 사용해야 하는 경우, 체인의 두 번째에서 마지막까지의 보안 토큰 서비스가 발급자 주소나 발급자 메타데이터 주소를 지정하면 Svcutil.exe의 기본 출력으로 인해 로컬 발급자가 사용되지 않는다는 사실을 알아야 합니다.  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]설정의 <xref:System.ServiceModel.Security.IssuedTokenClientCredential.LocalIssuerAddress%2A>, <xref:System.ServiceModel.Security.IssuedTokenClientCredential.LocalIssuerBinding%2A>, 및 <xref:System.ServiceModel.Security.IssuedTokenClientCredential.LocalIssuerChannelBehaviors%2A> 의 속성은 <xref:System.ServiceModel.Security.IssuedTokenClientCredential> 클래스를 참조 하십시오 [하는 방법: 로컬 발급자 구성](../../../../docs/framework/wcf/feature-details/how-to-configure-a-local-issuer.md)합니다.  
+ [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 설정의 <xref:System.ServiceModel.Security.IssuedTokenClientCredential.LocalIssuerAddress%2A>, <xref:System.ServiceModel.Security.IssuedTokenClientCredential.LocalIssuerBinding%2A>, 및 <xref:System.ServiceModel.Security.IssuedTokenClientCredential.LocalIssuerChannelBehaviors%2A> 의 속성은 <xref:System.ServiceModel.Security.IssuedTokenClientCredential> 클래스를 참조 하십시오 [하는 방법: 로컬 발급자 구성](../../../../docs/framework/wcf/feature-details/how-to-configure-a-local-issuer.md)합니다.  
   
 ## <a name="scoped-certificates"></a>범위가 지정된 인증서  
  보안 토큰 서비스와 통신할 서비스 인증서를 지정해야 하는 경우 일반적으로 인증서 협상이 사용되지 않으므로 <xref:System.ServiceModel.Security.X509CertificateRecipientClientCredential.ScopedCertificates%2A> 클래스의 <xref:System.ServiceModel.Security.X509CertificateRecipientClientCredential> 속성을 사용하여 지정할 수 있습니다. <xref:System.ServiceModel.Security.X509CertificateRecipientClientCredential.SetDefaultCertificate%2A> 메서드는 <xref:System.Uri> 및 <xref:System.Security.Cryptography.X509Certificates.X509Certificate2>를 매개 변수로 사용합니다. 지정한 인증서는 지정한 URI에서 끝점과 통신할 때 사용됩니다. 또는 <xref:System.ServiceModel.Security.X509CertificateRecipientClientCredential.SetScopedCertificate%2A> 메서드를 사용하여 <xref:System.ServiceModel.Security.X509CertificateRecipientClientCredential.ScopedCertificates%2A> 속성에서 반환된 컬렉션에 인증서를 추가할 수 있습니다.  
   
 > [!NOTE]
->  제공된 URI로 범위가 지정된 인증서에 대한 클라이언트 개념은 이러한 URI에서 끝점을 노출하는 서비스로 아웃바운드 호출하는 응용 프로그램에만 적용됩니다. 서버에서 반환 된 컬렉션에 구성 된 발급 된 토큰에 서명 하는 데 사용 되는 인증서에는 적용 되지 않습니다는 <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.KnownCertificates%2A> 의 <xref:System.ServiceModel.Security.IssuedTokenServiceCredential> 클래스입니다. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][하는 방법: 페더레이션 서비스에서 자격 증명 구성](../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)합니다.  
+>  제공된 URI로 범위가 지정된 인증서에 대한 클라이언트 개념은 이러한 URI에서 끝점을 노출하는 서비스로 아웃바운드 호출하는 응용 프로그램에만 적용됩니다. 서버에서 반환 된 컬렉션에 구성 된 발급 된 토큰에 서명 하는 데 사용 되는 인증서에는 적용 되지 않습니다는 <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.KnownCertificates%2A> 의 <xref:System.ServiceModel.Security.IssuedTokenServiceCredential> 클래스입니다. 자세한 내용은 참조 [하는 방법: 페더레이션 서비스에서 자격 증명 구성](../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [페더레이션 샘플](../../../../docs/framework/wcf/samples/federation-sample.md)  

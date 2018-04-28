@@ -1,20 +1,17 @@
 ---
-title: "예외: try...finally 식(F#)"
+title: '예외: try...finally 식(F#)'
 description: "자세한 내용은 어떻게 F # ' try … 마지막 ' 코드 블록에서 예외가 발생 하는 경우에 정리 코드를 실행할 수 있습니다."
-keywords: "visual f#, f#, 함수형 프로그래밍"
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: af06b20c-8d87-4496-a0aa-6fdfe8b3a786
-ms.openlocfilehash: 2e2445c42bf8129ea81beef56cb725ac0e37d202
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 588e4edb4d25c6d25ef103ba724613db997f68d7
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="exceptions-the-tryfinally-expression"></a>예외: try...finally 식
 

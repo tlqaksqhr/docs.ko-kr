@@ -1,20 +1,17 @@
 ---
-title: "F# 컬렉션 형식"
-description: "F # 컬렉션 형식 및.NET Framework에서 컬렉션 형식에서 서로 어떻게 알아봅니다."
-keywords: "visual f#, f#, 함수형 프로그래밍"
+title: F# 컬렉션 형식
+description: 'F # 컬렉션 형식 및.NET Framework에서 컬렉션 형식에서 서로 어떻게 알아봅니다.'
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: cdf6a7e6-6b3d-4c44-b7b6-773a2b700331
-ms.openlocfilehash: c22178641a88c304e0f666b07aca94e620161071
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 0baad5bdf88e8f381240b822a3f6132898dc9ff9
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="f-collection-types"></a>F# 컬렉션 형식
 
@@ -32,7 +29,7 @@ ms.lasthandoff: 10/18/2017
 |----|-----------|-------------|
 |[목록](https://msdn.microsoft.com/library/c627b668-477b-4409-91ed-06d7f1b3e4a7)|동일한 형식의 요소 정렬 되 고 변경할 수 없는 일련입니다. 연결된 된 목록으로 구현 됩니다.|[목록](lists.md)<br /><br />[List 모듈](https://msdn.microsoft.com/library/a2264ba3-2d45-40dd-9040-4f7aa2ad9788)|
 |[배열](https://msdn.microsoft.com/library/0cda8040-9396-40dd-8dcd-cf48542165a1)|사용 약관은 모두 같은 유형의 연속적인 데이터 요소의 고정 된 크기, 0부터 시작, 변경할 수 있는 컬렉션입니다.|[배열](arrays.md)<br /><br />[Array 모듈](https://msdn.microsoft.com/library/0cda8040-9396-40dd-8dcd-cf48542165a1)<br /><br />[Array2D 모듈](https://msdn.microsoft.com/library/ae1a9746-7817-4430-bcdb-a79c2411bbd3)<br /><br />[Array3D 모듈](https://msdn.microsoft.com/library/c8355e2d-add8-48a4-8aa6-1c57ae74c560)|
-|[seq](https://msdn.microsoft.com/library/2f0c87c6-8a0d-4d33-92a6-10d1d037ce75)|논리 하는 일련의 사용 약관은 모두 한 종류의 요소입니다. 시퀀스는는 대형 데이터의 컬렉션을 정렬 되어 있지만 반드시 원하지 모든 요소를 사용 하는 경우에 특히 유용 합니다. 모든 요소를 사용 그렇지 않으면 시퀀스 목록을 보다 더 나은 수행할 수 있도록 요소로만 계산 되는 개별 시퀀스 필요 합니다. 시퀀스도 표시 됩니다는 `seq<'T>` 별칭 형식에 대 한 `IEnumerable<T>`합니다. 따라서 구현 하는.NET Framework 형식 `System.Collections.Generic.IEnumerable<'T>` 시퀀스도 사용할 수 있습니다.|[시퀀스](sequences.md)<br /><br />[Seq 모듈](https://msdn.microsoft.com/library/54e8f059-ca52-4632-9ae9-49685ee9b684)|
+|[Seq](https://msdn.microsoft.com/library/2f0c87c6-8a0d-4d33-92a6-10d1d037ce75)|논리 하는 일련의 사용 약관은 모두 한 종류의 요소입니다. 시퀀스는는 대형 데이터의 컬렉션을 정렬 되어 있지만 반드시 원하지 모든 요소를 사용 하는 경우에 특히 유용 합니다. 모든 요소를 사용 그렇지 않으면 시퀀스 목록을 보다 더 나은 수행할 수 있도록 요소로만 계산 되는 개별 시퀀스 필요 합니다. 시퀀스도 표시 됩니다는 `seq<'T>` 별칭 형식에 대 한 `IEnumerable<T>`합니다. 따라서 구현 하는.NET Framework 형식 `System.Collections.Generic.IEnumerable<'T>` 시퀀스도 사용할 수 있습니다.|[시퀀스](sequences.md)<br /><br />[Seq 모듈](https://msdn.microsoft.com/library/54e8f059-ca52-4632-9ae9-49685ee9b684)|
 |[맵](https://msdn.microsoft.com/library/975316ea-55e3-4987-9994-90897ad45664)|요소는 변경할 수 없는 사전입니다. 요소 키에 액세스 합니다.|[Map 모듈](https://msdn.microsoft.com/library/bfe61ead-f16c-416f-af98-56dbcbe23e4f)|
 |[Set](https://msdn.microsoft.com/library/50cebdce-0cd7-4c5c-8ebc-f3a9e90b38d8)|비교는 F # 구조 비교 함수 이며 구현의 잠재적으로 사용 하 여 이진 트리를 기반으로 하는 변경할 수 없는 집합에서 `System.IComparable` 키 값에 대 한 인터페이스입니다.|[모듈 설정](https://msdn.microsoft.com/library/61efa732-d55d-4c32-993f-628e2f98e6a0)|
 
@@ -62,9 +59,9 @@ ms.lasthandoff: 10/18/2017
 |만들기|O (N)|-|-|-|-|지정된 된 값은 모두 처음부터 전체 요소의 배열을 만듭니다.|
 |지연|-|-|O (1)|-|-|시퀀스의 지정된 된 지연된 사양에서 작성 되는 시퀀스를 반환 합니다.|
 |차이점|-|-|-|-|O (M &#42; log N)|첫 번째 집합에서 제거 하는 두 번째 집합의 요소가 포함 된 새 집합을 반환 합니다.|
-|Distinct|||O (1) &#42;|||항목에 대 한 제네릭 해시 및 같음 비교에 따라 중복 항목이 없는지를 포함 하는 시퀀스를 반환 합니다. 요소에 시퀀스에서 여러 번 발생 하는 경우 나중에 나타나는 삭제 됩니다.|
-|distinctBy|||O (1) &#42;|||지정된 된 키 생성 함수를 반환 하는 키에 대 한 제네릭 해시 및 같음 비교에 따라 중복 항목이 없는지를 포함 하는 시퀀스를 반환 합니다. 요소에 시퀀스에서 여러 번 발생 하는 경우 나중에 나타나는 삭제 됩니다.|
-|empty|O (1)|O (1)|O (1)|O (1)|O (1)|빈 컬렉션을 만듭니다.|
+|Distinct|||O (1)&AMP;#42;|||항목에 대 한 제네릭 해시 및 같음 비교에 따라 중복 항목이 없는지를 포함 하는 시퀀스를 반환 합니다. 요소에 시퀀스에서 여러 번 발생 하는 경우 나중에 나타나는 삭제 됩니다.|
+|distinctBy|||O (1)&AMP;#42;|||지정된 된 키 생성 함수를 반환 하는 키에 대 한 제네릭 해시 및 같음 비교에 따라 중복 항목이 없는지를 포함 하는 시퀀스를 반환 합니다. 요소에 시퀀스에서 여러 번 발생 하는 경우 나중에 나타나는 삭제 됩니다.|
+|비어 있음|O (1)|O (1)|O (1)|O (1)|O (1)|빈 컬렉션을 만듭니다.|
 |exists|O (N)|O (N)|O (N)|O (N)|O (N)|지정된 된 조건자를 만족 하는 시퀀스의 요소가 있는지 테스트 합니다.|
 |exists2|O(min(N,M))|-|O(min(N,M))|||입력된 시퀀스의 해당 요소 쌍으로 된 지정된 된 조건자를 충족 하는지 여부를 테스트 합니다.|
 |fill|O (N)|||||지정된 된 값에는 배열의 요소 범위를 설정합니다.|
@@ -82,8 +79,8 @@ ms.lasthandoff: 10/18/2017
 |head|-|O (1)|O (1)|-|-|컬렉션의 첫 번째 요소를 반환합니다.|
 |init|O (N)|O (N)|O (1)|-|-|지정 된 차원과 생성기 함수를 계산 요소 컬렉션을 만듭니다.|
 |initInfinite|-|-|O (1)|-|-|시퀀스를 생성 하는, 반복 시 지정된 된 함수를 호출 하 여 연속 요소를 반환 합니다.|
-|교차|-|-|-|-|O (N 로그 &#42; 로그 M)|두 집합의 교집합을 계산합니다.|
-|intersectMany|-|-|-|-|O (N 1 &#42; N2...)|집합 시퀀스의 교집합을 계산 합니다. 시퀀스는 비워둘 수 없습니다.|
+|교차|-|-|-|-|O (로그 N &#42; 로그 M)|두 집합의 교집합을 계산합니다.|
+|intersectMany|-|-|-|-|O (N1 &AMP;#42; N2...)|집합 시퀀스의 교집합을 계산 합니다. 시퀀스는 비워둘 수 없습니다.|
 |IsEmpty|O (1)|O (1)|O (1)|O (1)|-|반환 `true` 컬렉션이 비어 있는 경우.|
 |isProperSubset|-|-|-|-|O (M &#42; log N)|반환 `true` 첫 번째 집합의 모든 요소가 두 번째 집합에 있으며 하나 이상의 요소가 두 번째 집합의 첫 번째 집합에 없는 경우.|
 |isProperSuperset|-|-|-|-|O (M &#42; log N)|반환 `true` 두 번째 집합의 모든 요소는 첫 번째 집합에 있으며 하나 이상의 요소를 첫 번째 집합의 두 번째 집합에 없는 경우.|
@@ -102,7 +99,7 @@ ms.lasthandoff: 10/18/2017
 |max|O (N)|O (N)|O (N)|-|-|수행 하 여 컬렉션의 가장 큰 요소를 반환 된 [max](https://msdn.microsoft.com/library/9a988328-00e9-467b-8dfa-e7a6990f6cce) 연산자입니다.|
 |maxBy|O (N)|O (N)|O (N)|-|-|수행 하 여 컬렉션의 가장 큰 요소를 반환 [max](https://msdn.microsoft.com/library/9a988328-00e9-467b-8dfa-e7a6990f6cce) 함수 결과에 있습니다.|
 |maxElement|-|-|-|-|O (N)|집합에 사용 되는 순서에 따라 집합의 가장 큰 요소를 반환 합니다.|
-|min|O (N)|O (N)|O (N)|-|-|수행 하 여 컬렉션의 최소 요소를 반환 된 [min](https://msdn.microsoft.com/library/adea4fd7-bfad-4834-989c-7878aca81fed) 연산자입니다.|
+|분|O (N)|O (N)|O (N)|-|-|수행 하 여 컬렉션의 최소 요소를 반환 된 [min](https://msdn.microsoft.com/library/adea4fd7-bfad-4834-989c-7878aca81fed) 연산자입니다.|
 |minBy|O (N)|O (N)|O (N)|-|-|수행 하 여 컬렉션의 최소 요소를 반환 된 [min](https://msdn.microsoft.com/library/adea4fd7-bfad-4834-989c-7878aca81fed) 함수 결과에 연산자입니다.|
 |minElement|-|-|-|-|O (N)|집합에 사용 되는 순서에 따라 집합의 최하위 요소를 반환 합니다.|
 |ofArray|-|O (N)|O (1)|O (N)|O (N)|동일한 지정된 된 배열 요소를 포함 하는 컬렉션을 만듭니다.|
@@ -146,7 +143,7 @@ ms.lasthandoff: 10/18/2017
 |tryPick|O (N)|O (N)|O (N)|O (N)|-|지정된 된 함수를 함수가 반환 첫 번째 결과 반환 하는 연속 요소에 적용 `Some` 일부 값에 대 한 합니다. 작업에서 반환 하는 경우 이러한 요소가 없을, `None`합니다.|
 |펼침|-|-|O (N)|-|-|지정된 된 계산을 생성 하는 요소를 포함 하는 시퀀스를 반환 합니다.|
 |union|-|-|-|-|O (M &#42; log N)|두 집합의 합집합을 계산합니다.|
-|unionMany|-|-|-|-|O (N 1 &#42; N2...)|집합 시퀀스의 합집합을 계산 합니다.|
+|unionMany|-|-|-|-|O (N1 &AMP;#42; N2...)|집합 시퀀스의 합집합을 계산 합니다.|
 |unzip|O (N)|O (N)|O (N)|-|-|쌍의 목록을 두 개의 목록으로 분할 합니다.|
 |unzip3|O (N)|O (N)|O (N)|-|-|삼중 쌍의 목록을 목록으로 분할 합니다.|
 |기간 이동|-|-|O (N)|-|-|입력된 시퀀스에서 가져온 요소가 들어 있는의 슬라이딩 윈도우를 생성 하는 시퀀스를 반환 합니다. 각 창 최신 배열로 반환 됩니다.|

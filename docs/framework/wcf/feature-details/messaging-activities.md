@@ -1,24 +1,26 @@
 ---
-title: "메시징 활동"
-ms.custom: 
+title: 메시징 활동
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 8498f215-1823-4aba-a6e1-391407f8c273
-caps.latest.revision: "13"
+caps.latest.revision: 13
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 8ba5d49f357fe1cf56a45f733e91c1dbc2208736
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 8db31e8559d22e35f0d754a44ce425e144487296
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="messaging-activities"></a>메시징 활동
 메시징 작업을 사용하면 워크플로를 통해 WCF 메시지를 보내고 받을 수 있습니다. 워크플로에 메시징 작업을 추가하면 훨씬 더 복잡한 MEP(메시지 교환 패턴)를 모델링할 수 있습니다.  
@@ -48,7 +50,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="messaging-activities-and-message-exchange-patterns"></a>메시징 활동 및 메시지 교환 패턴  
  데이터그램 MEP는 메시지를 보내는 클라이언트와 메시지를 받는 서비스로 구성됩니다. 클라이언트가 워크플로이면 <xref:System.ServiceModel.Activities.Send> 작업을 사용하여 메시지를 보냅니다. 워크플로에서 이 메시지를 받으려면 <xref:System.ServiceModel.Activities.Receive> 작업을 사용합니다. <xref:System.ServiceModel.Activities.Send> 및 <xref:System.ServiceModel.Activities.Receive> 작업에는 `Content`라는 속성이 있습니다. 이 속성에는 보내거나 받는 데이터가 포함됩니다. 요청-응답 MEP를 구현하는 경우 클라이언트와 서비스 둘 다 활동 쌍을 사용합니다. 클라이언트는 <xref:System.ServiceModel.Activities.Send> 활동을 사용하여 메시지를 보내고 <xref:System.ServiceModel.Activities.ReceiveReply> 활동을 사용하여 서비스의 응답을 받습니다. 이러한 두 활동은 <xref:System.ServiceModel.Activities.ReceiveReply.Request%2A> 속성을 통해 서로 연결됩니다. 이 속성은 원본 메시지를 보낸 <xref:System.ServiceModel.Activities.Send> 활동으로 설정됩니다. 서비스도 마찬가지로 연결된 활동 쌍인 <xref:System.ServiceModel.Activities.Receive>와 <xref:System.ServiceModel.Activities.SendReply>를 사용합니다. 이러한 두 활동은 <xref:System.ServiceModel.Activities.SendReply.Request%2A> 속성을 통해 연결됩니다. 이 속성은 원본 메시지를 받은 <xref:System.ServiceModel.Activities.Receive> 활동으로 설정됩니다. <xref:System.ServiceModel.Activities.ReceiveReply> 및 <xref:System.ServiceModel.Activities.SendReply>와 마찬가지로 <xref:System.ServiceModel.Activities.Send> 및 <xref:System.ServiceModel.Activities.Receive> 활동을 사용하면 <xref:System.ServiceModel.Channels.Message> 인스턴스나 메시지 계약 형식을 보낼 수 있습니다.  
   
- 워크플로의 장기 실행 특성 때문에 이중 패턴의 통신도 장기 실행 대화를 지원해야 합니다. 장기 실행 대화를 지원하려면 대화를 시작하는 클라이언트가 나중에 데이터가 사용 가능하게 될 때 해당 대화를 다시 호출할 수 있는 기회를 서비스에 제공해야 합니다. 예를 들어 구매 주문 요청이 관리자의 승인을 얻기 위해 전송되었지만 하루, 일주일, 심지어 일 년 동안 처리되지 않을 수 있습니다. 따라서 구매 주문 승인을 관리하는 워크플로는 승인을 얻은 후 다시 시작되어야 합니다. 이 패턴의 이중 통신은 상관 관계를 사용하는 워크플로에서 지원됩니다. 이중 패턴을 구현하려면 <xref:System.ServiceModel.Activities.Send> 및 <xref:System.ServiceModel.Activities.Receive> 활동을 사용합니다. 에 <xref:System.ServiceModel.Activities.Receive> 활동의 특수 키 값을 사용 하 여 상관 관계를 초기화 <!--zz <xref:System.ServiceModel.Activities.CorrelationHandle.CallbackHandleName%2A>--> `System.ServiceModel.Activities.CorrelationHandle.CallbackHandleName`합니다. <xref:System.ServiceModel.Activities.Send> 작업에서는 이 상관 관계의 핸들을 <xref:System.ServiceModel.Activities.Send.CorrelatesWith%2A> 속성 값으로 설정합니다. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][영 속 이중](../../../../docs/framework/wcf/feature-details/durable-duplex-correlation.md)합니다.  
+ 워크플로의 장기 실행 특성 때문에 이중 패턴의 통신도 장기 실행 대화를 지원해야 합니다. 장기 실행 대화를 지원하려면 대화를 시작하는 클라이언트가 나중에 데이터가 사용 가능하게 될 때 해당 대화를 다시 호출할 수 있는 기회를 서비스에 제공해야 합니다. 예를 들어 구매 주문 요청이 관리자의 승인을 얻기 위해 전송되었지만 하루, 일주일, 심지어 일 년 동안 처리되지 않을 수 있습니다. 따라서 구매 주문 승인을 관리하는 워크플로는 승인을 얻은 후 다시 시작되어야 합니다. 이 패턴의 이중 통신은 상관 관계를 사용하는 워크플로에서 지원됩니다. 이중 패턴을 구현하려면 <xref:System.ServiceModel.Activities.Send> 및 <xref:System.ServiceModel.Activities.Receive> 활동을 사용합니다. 에 <xref:System.ServiceModel.Activities.Receive> 활동의 특수 키 값을 사용 하 여 상관 관계를 초기화 <!--zz <xref:System.ServiceModel.Activities.CorrelationHandle.CallbackHandleName%2A>--> `System.ServiceModel.Activities.CorrelationHandle.CallbackHandleName`합니다. <xref:System.ServiceModel.Activities.Send> 작업에서는 이 상관 관계의 핸들을 <xref:System.ServiceModel.Activities.Send.CorrelatesWith%2A> 속성 값으로 설정합니다. 자세한 내용은 참조 [영 속 이중](../../../../docs/framework/wcf/feature-details/durable-duplex-correlation.md)합니다.  
   
 > [!NOTE]
 >  워크플로 구현 되는 이중 콜백 상관 관계 ("영 속 이중")를 사용 하 여 장기 실행 대화를 위한 것입니다. 대화가 단기 실행(채널의 수명)이고 콜백 계약이 있는 WCF 이중과 다릅니다.  
@@ -112,7 +114,7 @@ Request = rcv
  To make setting up a request/response MEP on the client and service easier, [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] provides two messaging activity templates. <xref:System.ServiceModel.Activities.Design.ReceiveAndSendReply> is used on the service and <xref:System.ServiceModel.Activities.Design.SendAndReceiveReply> is used on the client. In both cases the templates add the appropriate messaging activities to your workflow. On the service, the <xref:System.ServiceModel.Activities.Design.ReceiveAndSendReply> adds a <xref:System.ServiceModel.Activities.Receive> activity followed by a <xref:System.ServiceModel.Activities.SendReply> activity. The <xref:System.ServiceModel.Activities.SendReply.Request> property is automatically set to the <xref:System.ServiceModel.Activities.Receive> activity. On the client, the <xref:System.ServiceModel.Activities.Design.SendAndReceiveReply> adds a <xref:System.ServiceModel.Activities.Send> activity followed by a <xref:System.ServiceModel.Activities.ReceiveReply>. The <xref:System.ServiceModel.Activities.ReceiveReply.Request%2A> property is automatically set to the <xref:System.ServiceModel.Activities.Send> activity. To use these templates, just drag and drop the appropriate template onto your workflow.  
 -->
 ## <a name="messaging-activities-and-transactions"></a>메시징 작업 및 트랜잭션  
- 워크플로 서비스가 호출되면 트랜잭션을 서비스 작업에 전달할 수 있습니다. 이 작업을 수행하려면 <xref:System.ServiceModel.Activities.Receive> 작업 안에 <xref:System.ServiceModel.Activities.TransactedReceiveScope> 작업을 배치합니다. <xref:System.ServiceModel.Activities.TransactedReceiveScope> 작업은 `Receive` 작업과 본문을 포함합니다. 서비스에 전달된 트랜잭션은 <xref:System.ServiceModel.Activities.TransactedReceiveScope>의 본문이 실행되는 동안 앰비언트 상태로 유지됩니다. 본문이 실행을 마치면 트랜잭션이 완료됩니다. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]워크플로 및 트랜잭션을 참조 [워크플로 트랜잭션을](../../../../docs/framework/windows-workflow-foundation/workflow-transactions.md)합니다.  
+ 워크플로 서비스가 호출되면 트랜잭션을 서비스 작업에 전달할 수 있습니다. 이 작업을 수행하려면 <xref:System.ServiceModel.Activities.Receive> 작업 안에 <xref:System.ServiceModel.Activities.TransactedReceiveScope> 작업을 배치합니다. <xref:System.ServiceModel.Activities.TransactedReceiveScope> 작업은 `Receive` 작업과 본문을 포함합니다. 서비스에 전달된 트랜잭션은 <xref:System.ServiceModel.Activities.TransactedReceiveScope>의 본문이 실행되는 동안 앰비언트 상태로 유지됩니다. 본문이 실행을 마치면 트랜잭션이 완료됩니다. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 워크플로 및 트랜잭션을 참조 [워크플로 트랜잭션을](../../../../docs/framework/windows-workflow-foundation/workflow-transactions.md)합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [워크플로 서비스에서 오류를 송수신 하는 방법](http://go.microsoft.com/fwlink/?LinkId=189151)  

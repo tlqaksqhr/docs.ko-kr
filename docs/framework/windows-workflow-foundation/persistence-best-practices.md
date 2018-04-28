@@ -1,23 +1,24 @@
 ---
-title: "지속성 최선의 구현 방법"
-ms.custom: 
+title: 지속성 최선의 구현 방법
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 6974c5a4-1af8-4732-ab53-7d694608a3a0
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 408257d9ec51e9d60cb899c16cbef3a26cdc609f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: cfea5b8728774a4e788f3f0d866c6741d5b0bbe9
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="persistence-best-practices"></a>지속성 최선의 구현 방법
 이 문서에서는 워크플로 지속성과 관련된 워크플로 디자인 및 구성에 대한 최상의 방법을 설명합니다.  
@@ -31,7 +32,7 @@ ms.lasthandoff: 12/22/2017
   
  워크플로가 오랫동안 작업을 수행하는 경우 작업 중인 기간 동안 워크플로 인스턴스를 주기적으로 유지하는 것이 좋습니다. 이렇게 하려면 워크플로 인스턴스가 계속 작업을 수행하도록 하는 일련의 활동 전반에서 <xref:System.Activities.Statements.Persist> 활동을 추가하면 됩니다. 이에 따라 응용 프로그램 도메인 재활용, 호스트 오류 또는 컴퓨터 오류가 발생해도 시스템이 작업 중인 기간의 시작으로 롤백되지 않습니다. <xref:System.Activities.Statements.Persist> 활동을 워크플로에 추가하면 성능이 저하될 수 있으므로 주의하세요.  
   
- Windows Server AppFabric은 지속성의 구성과 사용을 크게 단순화합니다. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][Windows Server App Fabric 지 속성](http://go.microsoft.com/fwlink/?LinkID=201200&clcid=0x409)  
+ Windows Server AppFabric은 지속성의 구성과 사용을 크게 단순화합니다. 자세한 내용은 참조 [Windows Server App Fabric의 지 속성](http://go.microsoft.com/fwlink/?LinkID=201200&clcid=0x409)  
   
 ## <a name="configuration-of-scalability-parameters"></a>확장성 매개 변수의 구성  
  확장성 및 성능 요구 사항에 따라 다음 매개 변수의 설정이 결정됩니다.  

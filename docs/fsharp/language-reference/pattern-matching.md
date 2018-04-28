@@ -1,20 +1,17 @@
 ---
-title: "패턴 일치(F#)"
-description: "F #에서는 논리 구조를 사용 하 여 데이터를 비교, 데이터를 구성 부분으로 분해 하거나 데이터에서 정보를 추출할 패턴을 사용 하는 방법에 대해 알아봅니다."
-keywords: "visual f#, f#, 함수형 프로그래밍"
+title: 패턴 일치(F#)
+description: 'F #에서는 논리 구조를 사용 하 여 데이터를 비교, 데이터를 구성 부분으로 분해 하거나 데이터에서 정보를 추출할 패턴을 사용 하는 방법에 대해 알아봅니다.'
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: 5562ee98-e2f1-4dcd-8e2f-16ae27baaade
-ms.openlocfilehash: 7c7a3110a8f34c0c96c12d4584010a9ac4b485fa
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 31a5b321e5daecdc3add9a205d60b63b2c00ccd2
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="pattern-matching"></a>패턴 일치
 
@@ -41,7 +38,7 @@ match expression with
 |상수 패턴|모든 숫자, 문자 또는 문자열 리터럴, 열거형 상수, 또는 정의 된 리터럴 식별자|`1.0`, `"test"`, `30`, `Color.Red`|
 |식별자 패턴|구별된 된 공용 구조체, 예외 레이블 또는 활성 패턴 케이스의 case 값|`Some(x)`<br /><br />`Failure(msg)`|
 |가변 패턴|*identifier*|`a`|
-|`as`패턴|*패턴* 으로 *식별자*|`(a, b) as tuple1`|
+|`as` 패턴|*패턴* 으로 *식별자*|`(a, b) as tuple1`|
 |또는 패턴|*pattern1* &#124; *pattern2*|<code>([h] &#124; [h; _])</code>|
 |및 패턴|*pattern1* &amp; *pattern2*|`(a, b) & (_, "test")`|
 |Cons 패턴|*식별자* :: *목록 id*|`h :: t`|

@@ -1,12 +1,13 @@
 ---
-title: "스키마 가져오기 및 내보내기"
-ms.custom: 
+title: 스키마 가져오기 및 내보내기
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -16,16 +17,17 @@ helpviewer_keywords:
 - XsdDataContractExporter class
 - XsdDataContractImporter class
 ms.assetid: 0da32b50-ccd9-463a-844c-7fe803d3bf44
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 79ca0be932f473c99f8e9aeb64635e4bcd4397bb
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 8489c0bf20d3d62501db269c5a72de657bcbbc97
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="schema-import-and-export"></a>스키마 가져오기 및 내보내기
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 에는 새로운 serialization 엔진인 <xref:System.Runtime.Serialization.DataContractSerializer>가 포함되어 있습니다. `DataContractSerializer`는 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 개체와 XML을 양방향으로 변환합니다. 이 serializer 이외에도, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에는 관련 스키마를 가져오고 내보내는 메커니즘이 있습니다. *스키마* serializer 생성 하거나 deserializer가 액세스할 수 있는 XML 형태에, 정규화 되 고 컴퓨터가 읽을 수 있는 설명입니다. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서는 여러 타사 플랫폼과 상호 운용할 수 있는 W3C(World Wide Web 컨소시엄) XSD(XML 스키마 정의 언어)를 스키마 표현으로 사용합니다.  
@@ -44,7 +46,7 @@ ms.lasthandoff: 12/22/2017
   
  생성 된 형식을 따르는지 몇 가지 데이터 계약 모범 사례를 참고 (에 [모범 사례: 데이터 계약 버전 관리](../../../../docs/framework/wcf/best-practices-data-contract-versioning.md)):  
   
--   이 형식은 <xref:System.Runtime.Serialization.IExtensibleDataObject> 인터페이스를 구현합니다. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][이후 버전과 호환 데이터 계약](../../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md)합니다.  
+-   이 형식은 <xref:System.Runtime.Serialization.IExtensibleDataObject> 인터페이스를 구현합니다. 자세한 내용은 [호환 가능한 데이터 계약](../../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md)을 참조하세요.  
   
 -   데이터 멤버는 private 필드를 래핑하는 public 속성으로 구현됩니다.  
   
@@ -62,13 +64,13 @@ ms.lasthandoff: 12/22/2017
   
  [!code-xml[c_SchemaImportExport#9](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_schemaimportexport/common/source.config#9)]  
   
- [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][데이터 계약 스키마 참조](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md)합니다. 스키마가 데이터 계약 규칙을 따르지 않으면 다른 serialization 엔진을 사용합니다. 예를 들어 <xref:System.Xml.Serialization.XmlSerializer>는 별도의 자체 스키마 가져오기 메커니즘을 사용합니다. 또한 지원되는 스키마 범위가 확장되는 특별한 가져오기 모드도 있습니다. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)]생성에 대 한 섹션 <xref:System.Xml.Serialization.IXmlSerializable> 의 형식은 [스키마 클래스 생성를 가져와서](../../../../docs/framework/wcf/feature-details/importing-schema-to-generate-classes.md)합니다.  
+ 자세한 내용은 참조 [데이터 계약 스키마 참조](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md)합니다. 스키마가 데이터 계약 규칙을 따르지 않으면 다른 serialization 엔진을 사용합니다. 예를 들어 <xref:System.Xml.Serialization.XmlSerializer>는 별도의 자체 스키마 가져오기 메커니즘을 사용합니다. 또한 지원되는 스키마 범위가 확장되는 특별한 가져오기 모드도 있습니다. 자세한 내용은 생성에 대 한 섹션을 참조 하십시오. <xref:System.Xml.Serialization.IXmlSerializable> 의 형식은 [스키마 클래스 생성를 가져와서](../../../../docs/framework/wcf/feature-details/importing-schema-to-generate-classes.md)합니다.  
   
- `XsdDataContractExporter`는 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]로 serialize할 수 있는 모든 `DataContractSerializer` 형식을 지원합니다. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][데이터 계약 Serializer에서 지 원하는 형식](../../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md)합니다. `XsdDataContractExporter`를 사용하여 스키마를 생성하지 않는 이상, `XsdDataContractImporter`를 통해 생성된 스키마는 일반적으로 <xref:System.Xml.Serialization.XmlSchemaProviderAttribute>가 사용할 수 있는 유효한 데이터가 됩니다.  
+ `XsdDataContractExporter`는 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]로 serialize할 수 있는 모든 `DataContractSerializer` 형식을 지원합니다. 자세한 내용은 참조 [데이터 계약 Serializer에서 지 원하는 유형](../../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md)합니다. `XsdDataContractExporter`를 사용하여 스키마를 생성하지 않는 이상, `XsdDataContractImporter`를 통해 생성된 스키마는 일반적으로 <xref:System.Xml.Serialization.XmlSchemaProviderAttribute>가 사용할 수 있는 유효한 데이터가 됩니다.  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]사용 하는 <xref:System.Runtime.Serialization.XsdDataContractImporter>, 참조 [스키마 클래스 생성를 가져와서](../../../../docs/framework/wcf/feature-details/importing-schema-to-generate-classes.md)합니다.  
+ [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 사용 하는 <xref:System.Runtime.Serialization.XsdDataContractImporter>, 참조 [스키마 클래스 생성를 가져와서](../../../../docs/framework/wcf/feature-details/importing-schema-to-generate-classes.md)합니다.  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]사용 하는 <xref:System.Runtime.Serialization.XsdDataContractExporter>, 참조 [클래스에서 스키마 내보내기](../../../../docs/framework/wcf/feature-details/exporting-schemas-from-classes.md)합니다.  
+ [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 사용 하는 <xref:System.Runtime.Serialization.XsdDataContractExporter>, 참조 [클래스에서 스키마 내보내기](../../../../docs/framework/wcf/feature-details/exporting-schemas-from-classes.md)합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  <xref:System.Runtime.Serialization.DataContractSerializer>  

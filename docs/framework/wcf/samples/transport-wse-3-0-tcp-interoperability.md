@@ -1,24 +1,26 @@
 ---
 title: 'Transport: WSE 3.0 TCP Interoperability'
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 5f7c3708-acad-4eb3-acb9-d232c77d1486
-caps.latest.revision: "18"
+caps.latest.revision: 18
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 63641f7a99b7c567e871d6a67dd72380f0c077ed
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 510d523cea78aa16a16adc8572c839e95059c068
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="transport-wse-30-tcp-interoperability"></a>Transport: WSE 3.0 TCP Interoperability
 WSE 3.0 TCP Interoperability Transport 샘플에서는 TCP 이중 세션을 사용자 지정 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 전송으로 구현하는 방법을 보여 줍니다. 또한 채널 계층의 확장성을 사용하여 연결을 통해 기존에 배포된 시스템과 상호 작용할 수 있는 방법도 보여 줍니다. 다음 단계에서는 이 사용자 지정 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 전송을 빌드하는 방법을 설명합니다.  
@@ -31,7 +33,7 @@ WSE 3.0 TCP Interoperability Transport 샘플에서는 TCP 이중 세션을 사�
   
 4.  네트워크 관련 예외가 <xref:System.ServiceModel.CommunicationException>의 적절한 파생 클래스로 정규화되는지 확인합니다.  
   
-5.  사용자 지정 전송을 채널 스택에 추가하는 바인딩 요소를 추가합니다. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][바인딩 요소 추가].  
+5.  사용자 지정 전송을 채널 스택에 추가하는 바인딩 요소를 추가합니다. 자세한 내용은 [는 바인딩 요소 추가]를 참조 하십시오.  
   
 ## <a name="creating-iduplexsessionchannel"></a>IDuplexSessionChannel 만들기  
  WSE 3.0 TCP 상호 운용성 전송을 작성하는 첫 번째 단계는 <xref:System.ServiceModel.Channels.IDuplexSessionChannel> 위에 <xref:System.Net.Sockets.Socket>의 구현을 만드는 것입니다. `WseTcpDuplexSessionChannel`은 <xref:System.ServiceModel.Channels.ChannelBase>로부터 파생됩니다. 메시지를 보내는 논리는 (1) 메시지를 바이트로 인코딩한 다음 (2) 이러한 바이트를 프레이밍하여 연결을 통해 보내는 두 가지 주요 작업으로 구성됩니다.  
@@ -63,7 +65,7 @@ WSE 3.0 TCP Interoperability Transport 샘플에서는 TCP 이중 세션을 사�
 ## <a name="channel-factory"></a>채널 팩터리  
  TCP 전송을 작성하는 다음 단계는 클라이언트 채널을 위한 <xref:System.ServiceModel.Channels.IChannelFactory>의 구현을 만드는 것입니다.  
   
--   `WseTcpChannelFactory`파생 <xref:System.ServiceModel.Channels.ChannelFactoryBase> \<IDuplexSessionChannel > 합니다. 이는 `OnCreateChannel`을 재정의하여 클라이언트 채널을 생성하는 팩터리입니다.  
+-   `WseTcpChannelFactory` 파생 <xref:System.ServiceModel.Channels.ChannelFactoryBase> \<IDuplexSessionChannel > 합니다. 이는 `OnCreateChannel`을 재정의하여 클라이언트 채널을 생성하는 팩터리입니다.  
   
  `protected override IDuplexSessionChannel OnCreateChannel(EndpointAddress remoteAddress, Uri via)`  
   
@@ -73,7 +75,7 @@ WSE 3.0 TCP Interoperability Transport 샘플에서는 TCP 이중 세션을 사�
   
  `}`  
   
--   `ClientWseTcpDuplexSessionChannel`논리 정보를 추가 `WseTcpDuplexSessionChannel` 에 TCP 서버에 연결할 `channel.Open` 시간입니다. 다음 코드에 나온 것처럼 먼저 호스트 이름이 IP 주소로 확인됩니다.  
+-   `ClientWseTcpDuplexSessionChannel` 논리 정보를 추가 `WseTcpDuplexSessionChannel` 에 TCP 서버에 연결할 `channel.Open` 시간입니다. 다음 코드에 나온 것처럼 먼저 호스트 이름이 IP 주소로 확인됩니다.  
   
  `hostEntry = Dns.GetHostEntry(Via.Host);`  
   
@@ -90,7 +92,7 @@ WSE 3.0 TCP Interoperability Transport 샘플에서는 TCP 이중 세션을 사�
 ## <a name="channel-listener"></a>채널 수신기  
  TCP 전송을 작성하는 다음 단계는 서버 채널을 수락하기 위한 <xref:System.ServiceModel.Channels.IChannelListener>의 구현을 만드는 것입니다.  
   
--   `WseTcpChannelListener`파생 <xref:System.ServiceModel.Channels.ChannelListenerBase> \<IDuplexSessionChannel > 하며 재정의에 [Begin] Open 및 On [Begin]는에 근접 하 여 수신 소켓의 수명을 제어 합니다. OnOpen에서는 IP_ANY를 수신 대기하는 소켓이 만들어집니다. 더 고급 구현에서는 IPv6을 수신 대기하는 두 번째 소켓도 만들 수 있습니다. 또한 호스트 이름에 IP 주소를 지정할 수도 있습니다.  
+-   `WseTcpChannelListener` 파생 <xref:System.ServiceModel.Channels.ChannelListenerBase> \<IDuplexSessionChannel > 하며 재정의에 [Begin] Open 및 On [Begin]는에 근접 하 여 수신 소켓의 수명을 제어 합니다. OnOpen에서는 IP_ANY를 수신 대기하는 소켓이 만들어집니다. 더 고급 구현에서는 IPv6을 수신 대기하는 두 번째 소켓도 만들 수 있습니다. 또한 호스트 이름에 IP 주소를 지정할 수도 있습니다.  
   
  `IPEndPoint localEndpoint = new IPEndPoint(IPAddress.Any, uri.Port);`  
   

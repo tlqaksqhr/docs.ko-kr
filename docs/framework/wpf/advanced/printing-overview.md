@@ -29,11 +29,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 8694c646cabfd6637325035e563298b0619dac14
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.openlocfilehash: 639e1bbac049e4186faa2b243200f7ef544add38
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="printing-overview"></a>인쇄 개요
 Microsoft.NET Framework를 사용 하 여 응용 프로그램 개발자와 [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] 인쇄 및 인쇄 시스템 관리의 새로운 풍부한이 [!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)]합니다. 
@@ -64,8 +64,7 @@ Microsoft.NET Framework를 사용 하 여 응용 프로그램 개발자와 [!INC
   
 -   32bpc(채널당 비트), CMYK, 명명된 색, n-잉크 및 투명도와 그라데이션 기본 지원을 포함하는 고급 색 프로필에 대한 기본 지원입니다.  
   
--   
-          [!INCLUDE[TLA2#tla_winfx](../../../../includes/tla2sharptla-winfx-md.md)] 및 [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] 기반 응용 프로그램 둘 다에 대한 인쇄 성능 향상  
+-   두.NET Framework에 대 한 인쇄 성능 향상 및 [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] 기반 응용 프로그램입니다.  
   
 -   산업 표준 [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] 형식  
   
@@ -79,7 +78,7 @@ Microsoft.NET Framework를 사용 하 여 응용 프로그램 개발자와 [!INC
           [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] 프린터 드라이버(XPSDrv) 필터 파이프라인은 [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] 문서의 직접 인쇄와 확장 가능한 인쇄를 둘 다 사용할 수 있도록 설계되었습니다. (에 조회 "XPSDrv"는 [Windows 드라이버 키트](https://msdn.microsoft.com/library/windows/hardware/ff557573.aspx).)  
   
 ### <a name="print-path-architecture"></a>인쇄 경로 아키텍처  
- 둘 다 하는 동안 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 및 [!INCLUDE[TLA2#tla_winfx](../../../../includes/tla2sharptla-winfx-md.md)] 응용 프로그램이 지 원하는 [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)], [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] Windows Forms 응용 프로그램을 사용 하 고는 [!INCLUDE[TLA2#tla_gdi](../../../../includes/tla2sharptla-gdi-md.md)] 를 [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] 을 만들기 위해 변환 [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] 는 에대한콘텐츠형식[!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] 프린터 드라이버 (XPSDrv). 이러한 응용 프로그램은 [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] 인쇄 경로를 사용할 필요가 없으며 [!INCLUDE[TLA#tla_emf](../../../../includes/tlasharptla-emf-md.md)] 기반 인쇄를 계속 사용할 수 있습니다. 그러나 대부분의 [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] 기능과 향상된 기능은 [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] 인쇄 경로를 대상으로 하는 응용 프로그램만 사용할 수 있습니다.  
+ 하지만 둘 다 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 및.NET Framework 응용 프로그램 지원 [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)], [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] Windows Forms 응용 프로그램을 사용 하 고는 [!INCLUDE[TLA2#tla_gdi](../../../../includes/tla2sharptla-gdi-md.md)] 를 [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] 을 만들기 위해 변환 [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] 는 에대한콘텐츠형식이지정[!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)]프린터 드라이버 (XPSDrv). 이러한 응용 프로그램은 [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] 인쇄 경로를 사용할 필요가 없으며 [!INCLUDE[TLA#tla_emf](../../../../includes/tlasharptla-emf-md.md)] 기반 인쇄를 계속 사용할 수 있습니다. 그러나 대부분의 [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] 기능과 향상된 기능은 [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] 인쇄 경로를 대상으로 하는 응용 프로그램만 사용할 수 있습니다.  
   
  XPSDrv 기반 프린터에서 사용할 수 있도록 하려면 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 및 Windows Forms 응용 프로그램의 [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] 프린터 드라이버 (XPSDrv)의 변환을 지원 [!INCLUDE[TLA2#tla_gdi](../../../../includes/tla2sharptla-gdi-md.md)] 를 [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] 형식입니다. XPSDrv 모델은 [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] 응용 프로그램에서 [!INCLUDE[TLA2#tla_gdi](../../../../includes/tla2sharptla-gdi-md.md)] 문서를 인쇄할 수 있도록 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]-[!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] 형식 변환기도 제공합니다. 에 대 한 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 응용 프로그램, 변환 [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] 를 [!INCLUDE[TLA2#tla_gdi](../../../../includes/tla2sharptla-gdi-md.md)] 형식을 자동으로 수행 됩니다는 <xref:System.Windows.Xps.XpsDocumentWriter.Write%2A> 및 <xref:System.Windows.Xps.XpsDocumentWriter.WriteAsync%2A> 의 메서드는 <xref:System.Windows.Xps.XpsDocumentWriter> 쓰기 작업의 대상 인쇄 큐에 없는 때마다 클래스 XPSDrv 드라이버입니다. (Windows Forms 응용 프로그램에서 인쇄할 수 없는 [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] 문서입니다.)  
   

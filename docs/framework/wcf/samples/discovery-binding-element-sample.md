@@ -1,24 +1,26 @@
 ---
-title: "Discovery 바인딩 Element 샘플"
-ms.custom: 
+title: Discovery 바인딩 Element 샘플
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: af513015-85bf-417b-8729-1bdff77ff6d6
-caps.latest.revision: "12"
+caps.latest.revision: 12
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: dbbaefbd32048924434342dc3f902c99a3c2448c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 624209221dc8c2745afa6b4db20df6e47c7374f1
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="discovery-binding-element-sample"></a>Discovery 바인딩 Element 샘플
 이 샘플에서는 검색 클라이언트 바인딩 요소를 사용하여 서비스를 검색하는 방법을 보여 줍니다. 개발자는 이 기능을 사용하여 기존 클라이언트 채널 스택에 검색 클라이언트 채널을 추가할 수 있으므로 프로그래밍 모델을 매우 직관적으로 만들 수 있습니다. 연결된 채널이 열리면 검색을 사용하여 서비스의 주소가 확인됩니다. 이 샘플은 다음 프로젝트로 구성되어 있습니다.  
@@ -93,7 +95,7 @@ static CustomBinding CreateCustomBindingWithDiscoveryElement()
             return customBinding; }  
 ```  
   
- <xref:System.ServiceModel.Discovery.DiscoveryClientBindingElement>가 인스턴스화된 후 개발자는 서비스를 검색할 때 사용할 조건을 지정합니다. 이 경우 검색 찾기 조건은 `ICalculatorService` 형식입니다. 또한 개발자는 서비스를 찾을 위치를 지정하는 <xref:System.ServiceModel.Discovery.DiscoveryEndpointProvider>를 반환하는 <xref:System.ServiceModel.Discovery.DiscoveryEndpoint>를 지정합니다. <xref:System.ServiceModel.Discovery.DiscoveryEndpointProvider>는 새 <xref:System.ServiceModel.Discovery.DiscoveryEndpoint> 인스턴스를 반환합니다. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][검색 클라이언트 채널을 사용 하 여 사용자 지정 바인딩을 사용](../../../../docs/framework/wcf/feature-details/using-a-custom-binding-with-the-discovery-client-channel.md)합니다.  
+ <xref:System.ServiceModel.Discovery.DiscoveryClientBindingElement>가 인스턴스화된 후 개발자는 서비스를 검색할 때 사용할 조건을 지정합니다. 이 경우 검색 찾기 조건은 `ICalculatorService` 형식입니다. 또한 개발자는 서비스를 찾을 위치를 지정하는 <xref:System.ServiceModel.Discovery.DiscoveryEndpointProvider>를 반환하는 <xref:System.ServiceModel.Discovery.DiscoveryEndpoint>를 지정합니다. <xref:System.ServiceModel.Discovery.DiscoveryEndpointProvider>는 새 <xref:System.ServiceModel.Discovery.DiscoveryEndpoint> 인스턴스를 반환합니다. 자세한 내용은 참조 [사용자 지정 바인딩을 사용 하 여 검색 클라이언트 채널](../../../../docs/framework/wcf/feature-details/using-a-custom-binding-with-the-discovery-client-channel.md)합니다.  
   
 ```  
 // Extend DiscoveryEndpointProvider class to change the default DiscoveryEndpoint  

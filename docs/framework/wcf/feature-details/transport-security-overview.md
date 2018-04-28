@@ -13,17 +13,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 00959326-aa9d-44d0-af61-54933d4adc7f
-caps.latest.revision: ''
+caps.latest.revision: 23
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
 ms.workload:
 - dotnet
-ms.openlocfilehash: 71325089f2c72f6f01b2179bd150d21a98b3a8e2
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: 5619041ccf4ce4d899f3c9a478d125a1a2d8d32a
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="transport-security-overview"></a>전송 보안 개요
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]의 전송 보안 메커니즘은 사용 중인 바인딩과 전송에 따라 결정됩니다. 예를 들어 <xref:System.ServiceModel.WSHttpBinding> 클래스를 사용할 경우 전송은 HTTP이며, 전송 보안을 위한 기본 메커니즘은 HTTPS라고 알려진 HTTP를 통한 SSL(Secure Sockets Layer)입니다. 이 항목에서는 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 시스템 제공 바인딩에 사용되는 주요 전송 보안 메커니즘에 대해 설명합니다.  
@@ -72,10 +72,10 @@ ms.lasthandoff: 03/26/2018
  IIS의 Windows 통합 인증입니다. 이 값으로 설정하는 경우 도메인 컨트롤러가 Kerberos 프로토콜인 Windows 도메인에 서버가 있어야 합니다. 서버가 Kerberos 기반 도메인에 있지 않거나 Kerberos 시스템에 오류가 있는 경우에는 다음 단원에 설명되어 있는 NTLM(NT LAN Manager) 값을 사용할 수 있습니다. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] [!INCLUDE[iis601](../../../../includes/iis601-md.md)]을 참조 [IIS 6.0에서 Windows 통합 인증](http://go.microsoft.com/fwlink/?LinkId=88597)합니다. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] [!INCLUDE[iisver](../../../../includes/iisver-md.md)]을 참조 [IIS 7.0 베타: IIS 7.0에서 서버 인증서 구성](http://go.microsoft.com/fwlink/?LinkId=88595)합니다.  
   
 #### <a name="ntlm"></a>NTLM  
- Kerberos 프로토콜에 오류가 있는 경우 이를 통해 서버가 인증에 NTLM을 사용할 수 있습니다. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] IIS 구성 [!INCLUDE[iis601](../../../../includes/iis601-md.md)], 참조 [NTLM 인증 강제 설정](http://go.microsoft.com/fwlink/?LinkId=88598)합니다. [!INCLUDE[iisver](../../../../includes/iisver-md.md)]의 경우 Windows 인증에 NTLM 인증이 포함됩니다. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [IIS 7.0 베타: IIS 7.0에서에서 서버 인증서 구성](http://go.microsoft.com/fwlink/?LinkID=88595)합니다.  
+ Kerberos 프로토콜에 오류가 있는 경우 이를 통해 서버가 인증에 NTLM을 사용할 수 있습니다. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] IIS 구성 [!INCLUDE[iis601](../../../../includes/iis601-md.md)], 참조 [NTLM 인증 강제 설정](http://go.microsoft.com/fwlink/?LinkId=88598)합니다. [!INCLUDE[iisver](../../../../includes/iisver-md.md)]의 경우 Windows 인증에 NTLM 인증이 포함됩니다. 자세한 내용은 참조 [IIS 7.0 베타: IIS 7.0에서 서버 인증서 구성](http://go.microsoft.com/fwlink/?LinkID=88595)합니다.  
   
 ## <a name="wshttpbinding"></a>WsHttpBinding  
- <xref:System.ServiceModel.WSHttpBinding> 클래스는 WS-* 사양을 구현하는 서비스와 상호 운용하도록 디자인되었습니다. 이 바인딩의 전송 보안은 HTTP 또는 SSL(Secure Sockets Layer) over HTTP입니다. SSL을 사용하는 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 응용 프로그램을 만들려면 IIS를 사용하여 응용 프로그램을 호스팅합니다. 또는 자체 호스팅 응용 프로그램을 만들려면 HttpCfg.exe 도구를 사용하여 X.509 인증서를 컴퓨터의 특정 포트에 바인딩합니다. 포트 번호는 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 응용 프로그램의 일부인 끝점 주소로 지정되어 있습니다. 전송 모드 사용 시 끝점 주소에 HTTPS 프로토콜이 포함되어야 하고, 그렇지 않으면 런타임에 예외가 throw됩니다. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [HTTP 전송 보안](../../../../docs/framework/wcf/feature-details/http-transport-security.md)합니다.  
+ <xref:System.ServiceModel.WSHttpBinding> 클래스는 WS-* 사양을 구현하는 서비스와 상호 운용하도록 디자인되었습니다. 이 바인딩의 전송 보안은 HTTP 또는 SSL(Secure Sockets Layer) over HTTP입니다. SSL을 사용하는 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 응용 프로그램을 만들려면 IIS를 사용하여 응용 프로그램을 호스팅합니다. 또는 자체 호스팅 응용 프로그램을 만들려면 HttpCfg.exe 도구를 사용하여 X.509 인증서를 컴퓨터의 특정 포트에 바인딩합니다. 포트 번호는 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 응용 프로그램의 일부인 끝점 주소로 지정되어 있습니다. 전송 모드 사용 시 끝점 주소에 HTTPS 프로토콜이 포함되어야 하고, 그렇지 않으면 런타임에 예외가 throw됩니다. 자세한 내용은 참조 [HTTP 전송 보안](../../../../docs/framework/wcf/feature-details/http-transport-security.md)합니다.  
   
  클라이언트 인증의 경우 <xref:System.ServiceModel.HttpTransportSecurity.ClientCredentialType%2A> 클래스의 <xref:System.ServiceModel.HttpTransportSecurity> 속성을 <xref:System.ServiceModel.HttpClientCredentialType> 열거형 값 중 하나로 설정합니다. 열거형 값은 <xref:System.ServiceModel.BasicHttpBinding>에 대한 클라이언트 자격 증명 형식과 같으며 IIS 서비스와 호스팅되도록 디자인되었습니다.  
   

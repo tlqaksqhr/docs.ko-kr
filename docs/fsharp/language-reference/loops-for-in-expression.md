@@ -1,20 +1,17 @@
 ---
-title: "루프: for...in 식(F#)"
-description: "참조 방식을 F # >for.. 식에 구문 반복 하는 데 열거 가능한 컬렉션 패턴 일치 하는 항목을 반복 합니다."
-keywords: "visual f#, f#, 함수형 프로그래밍"
+title: '루프: for...in 식(F#)'
+description: '참조 방식을 F # >for.. 식에 구문 반복 하는 데 열거 가능한 컬렉션 패턴 일치 하는 항목을 반복 합니다.'
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: f54e3228-4aec-4d0a-ae37-bc3376508284
-ms.openlocfilehash: d86aeb3bdd975261e59004d636354a740bd95c47
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: eaf0f4fc6419d8e0bff46795120ee5e42c4efe1d
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="loops-forin-expression"></a>루프: for...in 식
 
@@ -138,7 +135,7 @@ a b c d e f g h i j k l m n o p q r s t u v w x y z
 Number of elements in list1: 5
 ```
 
-`Note`사용할 수 있습니다 `for...in` 시퀀스 식 및 다른 계산 식, 사용자 지정된 된 버전의 경우는 `for...in` 식이 사용 됩니다. 자세한 내용은 참조 [시퀀스](sequences.md), [비동기 워크플로](asynchronous-workflows.md), 및 [계산 식](computation-expressions.md)합니다.
+`Note` 사용할 수 있습니다 `for...in` 시퀀스 식 및 다른 계산 식, 사용자 지정된 된 버전의 경우는 `for...in` 식이 사용 됩니다. 자세한 내용은 참조 [시퀀스](sequences.md), [비동기 워크플로](asynchronous-workflows.md), 및 [계산 식](computation-expressions.md)합니다.
 
 
 ## <a name="see-also"></a>참고 항목

@@ -1,20 +1,17 @@
 ---
-title: "소스 줄, 파일 및 경로 식별자(F#)"
-description: "기본 제공 F # 식별자 값을 사용 하면 소스 줄 번호, 디렉터리 및 파일 이름을 코드에서 액세스할 수를 사용 하는 방법에 알아봅니다."
-keywords: "visual f#, f#, 함수형 프로그래밍"
+title: 소스 줄, 파일 및 경로 식별자(F#)
+description: '기본 제공 F # 식별자 값을 사용 하면 소스 줄 번호, 디렉터리 및 파일 이름을 코드에서 액세스할 수를 사용 하는 방법에 알아봅니다.'
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: 4cfe7439-275c-4d08-980b-784e240bbf29
-ms.openlocfilehash: 44cc0914226c120f2b877ce3decd25caa6817eec
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 18a26f0aa0a0c1f9c0b448ec46eaebd540391324
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="source-line-file-and-path-identifiers"></a>소스 줄, 파일 및 경로 식별자
 

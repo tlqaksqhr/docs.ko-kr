@@ -1,20 +1,17 @@
 ---
-title: "기본 형식(F#)"
-description: "F # 언어에 사용 되는 기본 기본 형식을 검색 합니다."
-keywords: "visual f#, f#, 함수형 프로그래밍"
+title: 기본 형식(F#)
+description: 'F # 언어에 사용 되는 기본 기본 형식을 검색 합니다.'
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: 2f23d98b-551b-4fd2-9f4f-0fd7254288ed
-ms.openlocfilehash: b493cdf7116d94f66940d03b86e584bcecbbb0f1
-ms.sourcegitcommit: 5fb6646b5ee3769ffb214e672041833ea4ceeb26
+ms.openlocfilehash: 7832151ee211f56547ecad98fc31f1454cb18870
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/08/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="primitive-types"></a>기본 형식
 
@@ -45,7 +42,7 @@ ms.lasthandoff: 11/08/2017
 |`float, double`|`System.Double`|64 비트 부동 소수점 형식입니다.|
 
 >[!NOTE]
-64 비트 정수 형식에 대 한 너무 큰 정수를 계산 하는 데 사용 하 여 수행할 수 있습니다는 [bigint](https://msdn.microsoft.com/library/dc8be18d-4042-46c4-b136-2f21a84f6efa) 유형입니다. `bigint`기본 형식; 간주 되지 않습니다. 에 대 한 약어 `System.Numerics.BigInteger`합니다.
+64 비트 정수 형식에 대 한 너무 큰 정수를 계산 하는 데 사용 하 여 수행할 수 있습니다는 [bigint](https://msdn.microsoft.com/library/dc8be18d-4042-46c4-b136-2f21a84f6efa) 유형입니다. `bigint` 기본 형식; 간주 되지 않습니다. 에 대 한 약어 `System.Numerics.BigInteger`합니다.
 
 ## <a name="see-also"></a>참고 항목
 [F# 언어 참조](index.md)

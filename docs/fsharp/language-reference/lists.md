@@ -1,20 +1,17 @@
 ---
-title: "목록(F#)"
-description: "F # 목록, 동일한 형식의 요소는 정렬 되 고 변경할 수 없는 계열에 알아봅니다."
-keywords: "visual f#, f#, 함수형 프로그래밍"
+title: 목록(F#)
+description: 'F # 목록, 동일한 형식의 요소는 정렬 되 고 변경할 수 없는 계열에 알아봅니다.'
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: a1a6075f-064d-4aee-8222-2b59ff16cc12
-ms.openlocfilehash: 5802a5a1c48ad05c1765c4c0fa2e8a81a92dee8d
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: e29dbdac5e920c009bf7758fd2cc1ad486041cad
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="lists"></a>목록
 
@@ -411,7 +408,7 @@ List.iteri2: element 2 of list1 is 3; element 2 of list2 is 6
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lists/snippet28.fs)]
 
-`List.fold`및 [List.scan](https://msdn.microsoft.com/library/21f636db-885c-4a72-970e-e3841f33a1b8) 한다는 점에서 차이가 `List.fold` 은 추가 매개 변수의 최종 값을 반환 하지만 `List.scan` 의 추가 매개 변수의 최종 값) (함께 중간 값의 목록을 반환 합니다.
+`List.fold` 및 [List.scan](https://msdn.microsoft.com/library/21f636db-885c-4a72-970e-e3841f33a1b8) 한다는 점에서 차이가 `List.fold` 은 추가 매개 변수의 최종 값을 반환 하지만 `List.scan` 의 추가 매개 변수의 최종 값) (함께 중간 값의 목록을 반환 합니다.
 
 예를 들어 같은 역방향 변형을 포함 되어 이러한 각 함수 [List.foldBack](https://msdn.microsoft.com/library/b9a58e66-efe1-445f-a90c-ac9ffb9d40c7)를 순서 대로 다른는 목록 트래버스 순서와 인수 순서가 합니다. 또한 `List.fold` 및 `List.foldBack` 변형이 [List.fold2](https://msdn.microsoft.com/library/6cfcd043-a65d-4423-805a-2ab234cb5343) 및 [List.foldBack2](https://msdn.microsoft.com/library/56371d3e-5271-4183-9e8c-15a02eda9aa2), 길이가 같은 두 목록을 합니다. 각 요소에 대해 실행되는 함수는 두 목록의 해당 요소를 사용하여 일부 작업을 수행할 수 있습니다. 다음 예에서와 같이 두 목록의 요소 형식은 다를 수 있습니다. 여기서 한 목록은 은행 계좌의 거래 금액을 포함하고 다른 목록은 거래 형식(입금 또는 출금)을 포함합니다.
 

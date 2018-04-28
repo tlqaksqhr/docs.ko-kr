@@ -21,11 +21,11 @@ ms.author: bruceper
 manager: mbaldwin
 ms.workload:
 - dotnet
-ms.openlocfilehash: cbe29ed57a7eee3a74166dabd2b8931e73cd2860
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: c754a4ec57751b2ca5a809c771b2fb5235ec0510
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="how-to-secure-a-service-with-windows-credentials"></a>방법: Windows 자격 증명을 사용하여 서비스에 보안 설정
 이 항목에서는 전송 보안에서 사용 하도록 설정 하는 방법을 보여 줍니다.는 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 서비스를 Windows 도메인에 있으며 동일한 도메인에 클라이언트에서 호출 됩니다. [!INCLUDE[crabout](../../../includes/crabout-md.md)] 이 시나리오에서는 참조 [Windows 인증과 함께 전송 보안](../../../docs/framework/wcf/feature-details/transport-security-with-windows-authentication.md)합니다. 샘플 응용 프로그램에 대 한 참조는 [WSHttpBinding](../../../docs/framework/wcf/samples/wshttpbinding.md) 샘플.  
@@ -87,7 +87,7 @@ ms.lasthandoff: 04/26/2018
   
 ##### <a name="to-use-a-binding-in-a-client-with-code"></a>코드를 통해 클라이언트에 바인딩을 사용하려면  
   
-1.  SvcUtil.exe 도구를 사용하여 서비스의 메타데이터에서 프록시 코드를 생성합니다. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [방법: 클라이언트 만들기](../../../docs/framework/wcf/how-to-create-a-wcf-client.md)합니다. 생성된 프록시 코드는 <xref:System.ServiceModel.ClientBase%601> 클래스에서 상속되어 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 서비스와 통신하는 데 필요한 생성자, 메서드 및 속성이 모든 클라이언트에 있도록 합니다. 이 예제에서 생성된 코드에는 `CalculatorClient` 인터페이스를 구현하는 `ICalculator` 클래스가 포함되어 서비스 코드와의 호환성을 지원합니다.  
+1.  SvcUtil.exe 도구를 사용하여 서비스의 메타데이터에서 프록시 코드를 생성합니다. 자세한 내용은 참조 [하는 방법: 클라이언트 만들기](../../../docs/framework/wcf/how-to-create-a-wcf-client.md)합니다. 생성된 프록시 코드는 <xref:System.ServiceModel.ClientBase%601> 클래스에서 상속되어 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 서비스와 통신하는 데 필요한 생성자, 메서드 및 속성이 모든 클라이언트에 있도록 합니다. 이 예제에서 생성된 코드에는 `CalculatorClient` 인터페이스를 구현하는 `ICalculator` 클래스가 포함되어 서비스 코드와의 호환성을 지원합니다.  
   
 2.  이 프로시저의 코드는 클라이언트 프로그램에 대한 `Main` 메서드의 시작 부분에 삽입됩니다.  
   
@@ -140,7 +140,7 @@ ms.lasthandoff: 04/26/2018
   
 ##### <a name="to-use-a-binding-in-a-client-with-configuration"></a>구성을 통해 클라이언트에 바인딩을 사용하려면  
   
-1.  SvcUtil.exe 도구를 사용하여 서비스의 메타데이터에서 프록시 코드 및 구성 파일을 생성합니다. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [방법: 클라이언트 만들기](../../../docs/framework/wcf/how-to-create-a-wcf-client.md)합니다.  
+1.  SvcUtil.exe 도구를 사용하여 서비스의 메타데이터에서 프록시 코드 및 구성 파일을 생성합니다. 자세한 내용은 참조 [하는 방법: 클라이언트 만들기](../../../docs/framework/wcf/how-to-create-a-wcf-client.md)합니다.  
   
 2.  대체는 [ \<바인딩 >](../../../docs/framework/configure-apps/file-schema/wcf/bindings.md) 구성 코드는 이전 섹션에서 사용 하 여 생성 된 구성 파일의 섹션입니다.  
   

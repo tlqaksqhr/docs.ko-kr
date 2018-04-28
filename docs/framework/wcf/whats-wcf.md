@@ -20,11 +20,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 2fa6efdc61620647d5c6318746e61e09cdde7a46
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.openlocfilehash: d9650fd6a4fa40cb425c9f15d4a12e6c73d8c599
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="what-is-windows-communication-foundation"></a>Windows Communication Foundation 정의
 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 는 서비스 지향 응용 프로그램을 만드는 데 사용되는 프레임워크입니다. [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]를 사용하면 데이터를 비동기 메시지로 서비스 끝점 간에 전송할 수 있습니다. 서비스 끝점은 IIS에서 호스팅하는 계속 사용 가능한 서비스의 일부분일 수도 있고 응용 프로그램에서 호스팅되는 서비스일 수도 있습니다. 또한 끝점은 서비스 끝점에서 데이터를 요청하는 서비스의 클라이언트일 수 있습니다. 메시지는 XML로 전송되는 한 문자나 단어처럼 간단할 수도 있고 이진 데이터 스트림처럼 복잡할 수도 있습니다. 다음은 몇 가지 샘플 시나리오입니다.  
@@ -44,7 +44,7 @@ ms.lasthandoff: 04/27/2018
  [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]가 도입되기 전에도 이러한 응용 프로그램을 만들 수는 있었지만, [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 를 사용하면 끝점을 매우 쉽게 개발할 수 있습니다. 즉, [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 는 간편한 방식으로 웹 서비스와 웹 서비스 클라이언트를 만들 수 있도록 디자인되었습니다.  
   
 ## <a name="features-of-wcf"></a>WCF의 기능  
- [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 에는 다음과 같은 기능 집합이 포함됩니다. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [WCF Feature Details](../../../docs/framework/wcf/feature-details/index.md).  
+ [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 에는 다음과 같은 기능 집합이 포함됩니다. 자세한 내용은 참조 [WCF 기능 정보](../../../docs/framework/wcf/feature-details/index.md)합니다.  
   
 -   **서비스 지향성**  
   
@@ -60,15 +60,15 @@ ms.lasthandoff: 04/27/2018
   
 -   **서비스 메타데이터**  
   
-     [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 에서는 WSDL, XML 스키마, WS-Policy 등 업계 표준으로 지정된 형식을 사용하여 서비스 메타데이터를 게시할 수 있습니다. 이 메타데이터를 사용하여 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 서비스에 액세스하기 위한 클라이언트를 자동으로 생성하고 구성할 수 있습니다. 메타데이터는 HTTP 및 HTTPS를 통해 게시하거나 웹 서비스 메타데이터 교환 표준을 사용하여 게시할 수 있습니다. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [Metadata](../../../docs/framework/wcf/feature-details/metadata.md).  
+     [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 에서는 WSDL, XML 스키마, WS-Policy 등 업계 표준으로 지정된 형식을 사용하여 서비스 메타데이터를 게시할 수 있습니다. 이 메타데이터를 사용하여 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 서비스에 액세스하기 위한 클라이언트를 자동으로 생성하고 구성할 수 있습니다. 메타데이터는 HTTP 및 HTTPS를 통해 게시하거나 웹 서비스 메타데이터 교환 표준을 사용하여 게시할 수 있습니다. 자세한 내용은 참조 [메타 데이터](../../../docs/framework/wcf/feature-details/metadata.md)합니다.  
   
 -   **데이터 계약**  
   
-     [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 는 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]를 사용하여 작성되었으므로 적용할 계약을 코드에 적합한 방식으로 제공하는 방법도 포함하고 있습니다. 널리 사용되는 계약 유형 중 하나는 데이터 계약입니다. 기본적으로 Visual C# 또는 Visual Basic을 사용하여 서비스 코드를 작성할 때 데이터를 가장 쉽게 처리하는 방법은 데이터 엔터티에 속하는 속성을 사용하여 해당 데이터 엔터티를 나타내는 클래스를 만드는 것입니다. [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 에는 이와 같이 손쉬운 방식으로 데이터를 사용할 수 있는 포괄적인 시스템이 포함되어 있습니다. 데이터를 나타내는 클래스를 만들면 서비스에서 메타데이터를 자동으로 생성하며, 이 메타데이터는 클라이언트가 사용자가 디자인한 데이터 형식을 준수할 수 있도록 합니다. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [Using Data Contracts](../../../docs/framework/wcf/feature-details/using-data-contracts.md)  
+     [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 는 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]를 사용하여 작성되었으므로 적용할 계약을 코드에 적합한 방식으로 제공하는 방법도 포함하고 있습니다. 널리 사용되는 계약 유형 중 하나는 데이터 계약입니다. 기본적으로 Visual C# 또는 Visual Basic을 사용하여 서비스 코드를 작성할 때 데이터를 가장 쉽게 처리하는 방법은 데이터 엔터티에 속하는 속성을 사용하여 해당 데이터 엔터티를 나타내는 클래스를 만드는 것입니다. [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 에는 이와 같이 손쉬운 방식으로 데이터를 사용할 수 있는 포괄적인 시스템이 포함되어 있습니다. 데이터를 나타내는 클래스를 만들면 서비스에서 메타데이터를 자동으로 생성하며, 이 메타데이터는 클라이언트가 사용자가 디자인한 데이터 형식을 준수할 수 있도록 합니다. 자세한 내용은 참조 [를 사용 하 여 데이터 계약](../../../docs/framework/wcf/feature-details/using-data-contracts.md)  
   
 -   **보안**  
   
-     개인 정보를 보호하기 위해 메시지를 암호화할 수 있으며, 사용자가 인증을 해야 메시지를 받을 수 있도록 지정할 수 있습니다. SSL 또는 WS-SecureConversation 등의 널리 알려진 표준을 사용하여 보안을 구현할 수 있습니다. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [보안](../../../docs/framework/wcf/feature-details/security.md).  
+     개인 정보를 보호하기 위해 메시지를 암호화할 수 있으며, 사용자가 인증을 해야 메시지를 받을 수 있도록 지정할 수 있습니다. SSL 또는 WS-SecureConversation 등의 널리 알려진 표준을 사용하여 보안을 구현할 수 있습니다. 자세한 내용은 [보안](../../../docs/framework/wcf/feature-details/security.md)을 참조하세요.  
   
 -   **다양한 전송 및 인코딩**  
   
@@ -80,7 +80,7 @@ ms.lasthandoff: 04/27/2018
   
 -   **지속적 메시지**  
   
-     지속적 메시지는 통신이 중단되어도 손실되지 않는 메시지입니다. 지속적 메시지 패턴의 메시지는 항상 데이터베이스에 저장됩니다. 통신이 중단되는 경우 연결이 복원되면 데이터베이스가 메시지 교환을 다시 시작할 수 있도록 해 줍니다. Windows WF (Workflow Foundation)를 사용 하 여 지속적 메시지를 만들 수 있습니다. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [Workflow Services](../../../docs/framework/wcf/feature-details/workflow-services.md).  
+     지속적 메시지는 통신이 중단되어도 손실되지 않는 메시지입니다. 지속적 메시지 패턴의 메시지는 항상 데이터베이스에 저장됩니다. 통신이 중단되는 경우 연결이 복원되면 데이터베이스가 메시지 교환을 다시 시작할 수 있도록 해 줍니다. Windows WF (Workflow Foundation)를 사용 하 여 지속적 메시지를 만들 수 있습니다. 자세한 내용은 참조 [워크플로 서비스](../../../docs/framework/wcf/feature-details/workflow-services.md)합니다.  
   
 -   **트랜잭션**  
   

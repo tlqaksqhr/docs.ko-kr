@@ -1,20 +1,17 @@
 ---
-title: "활성 패턴(F#)"
-description: "F # 프로그래밍 언어의 입력된 데이터를 분할 하는 명명 된 파티션을 정의 하려면 활성 패턴을 사용 하는 방법에 알아봅니다."
-keywords: "visual f#, f#, 함수형 프로그래밍"
+title: 활성 패턴(F#)
+description: 'F # 프로그래밍 언어의 입력된 데이터를 분할 하는 명명 된 파티션을 정의 하려면 활성 패턴을 사용 하는 방법에 알아봅니다.'
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: 11a724ff-f9ff-4056-b5e0-87e9ed986f4a
-ms.openlocfilehash: 845184e6150cf0b93393038ca3d39f0e6d898a2e
-ms.sourcegitcommit: a53799f81351ad9afb3007cd68846ce6aeeb10cb
+ms.openlocfilehash: 66e1e39c4822ec7262642d301ceb1deea17fcb8c
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="active-patterns"></a>활성 패턴
 

@@ -1,20 +1,17 @@
 ---
-title: "추상 클래스(F#)"
-description: "다양 한 개체 유형 집합의 공통 기능을 나타내는 및 F # 추상 클래스에 구현 되지 않았으며 일부 또는 모든 멤버가 둡니다 알아보십시오."
-keywords: "visual f#, f#, 함수형 프로그래밍"
+title: 추상 클래스(F#)
+description: '다양 한 개체 유형 집합의 공통 기능을 나타내는 및 F # 추상 클래스에 구현 되지 않았으며 일부 또는 모든 멤버가 둡니다 알아보십시오.'
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: a3dcc335-433b-4672-ac2d-ae6b11b816f3
-ms.openlocfilehash: 209bcca70318db59506011b1f2bb74a09bf3814a
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 0d7ca996de89c44a5cfb9197c1b515741a2303df
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="abstract-classes"></a>추상 클래스
 

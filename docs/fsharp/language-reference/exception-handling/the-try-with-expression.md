@@ -1,20 +1,17 @@
 ---
-title: "예외: try...with 식(F#)"
+title: '예외: try...with 식(F#)'
 description: "예외 처리에 대 한 F # 'try...with' 식을 사용 하는 방법을 알아봅니다."
-keywords: "visual f#, f#, 함수형 프로그래밍"
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: 36721076-95cd-4636-ae43-79dd512bee6c
-ms.openlocfilehash: 163dfab49d4aaf23123800246fae2cad33e2257c
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 06e40b79fc1958918dc0615ce9d1004e0a6e74a5
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="exceptions-the-trywith-expression"></a>예외: try...with 식
 
@@ -44,12 +41,12 @@ with
 예외 유형 및 기타 조건;에 대해 필터링 하는 다양 한 패턴을 사용할 수 있습니다. 옵션은 다음 표에 요약 되어 있습니다.
 
 
-|패턴|설명|
+|무늬|설명|
 |-------|-----------|
 |:? *예외 형식*|지정된 된.NET 예외 형식과 일치 합니다.|
 |:? *예외 형식* 으로 *식별자*|지정된 된.NET 예외 형식과 일치 하지만 예외 명명된 된 값을 제공 합니다.|
 |*예외 이름을*(*인수*)|F # 예외 형식과 일치 하 고 인수를 바인딩합니다.|
-|*identifier*|모든 예외에 일치 하 고 예외 개체에 이름을 바인딩합니다. 에 해당 **:? System.Exception으로***식별자*|
+|*identifier*|모든 예외에 일치 하 고 예외 개체에 이름을 바인딩합니다. 에 해당 하는 **:? System.Exception으로 * * * 식별자*|
 |*식별자* 때 *조건*|조건이 true 인 경우 모든 예외를 일치 시킵니다.|
 
 ## <a name="examples"></a>예제

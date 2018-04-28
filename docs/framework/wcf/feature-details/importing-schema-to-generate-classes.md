@@ -22,11 +22,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 43eaa4ffe562cf1dde5abd7e7540125dcf383732
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.openlocfilehash: 4d7988630e2eba3e6d5ebdc8b15b23aeb280a66f
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="importing-schema-to-generate-classes"></a>스키마를 가져와 클래스 생성
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]에서 사용할 수 있는 스키마에서 클래스를 생성하려면 <xref:System.Runtime.Serialization.XsdDataContractImporter> 클래스를 사용합니다. 이 항목에서는 프로세스와 변형에 대해 설명합니다.  
@@ -114,7 +114,7 @@ ms.lasthandoff: 04/27/2018
  [!code-xml[C_SchemaImportExport#12](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_schemaimportexport/common/source.config#12)]  
   
 > [!NOTE]
->  모든 연결을 목록으로 간주할 수도 있습니다. 예를 들어 앞의 연결을 두 개의 필드(문자열 필드 및 정수 필드)가 있는 복잡한 `city` 개체 목록으로 간주할 수 있습니다. 두 패턴은 모두 XSD 스키마에서 하나로 표현됩니다. 목록과 연결을 구분할 수 없으므로 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에 관련된 특별한 주석이 스키마에 없으면 해당 패턴은 항상 목록으로 처리됩니다. 주석은 지정된 패턴이 연결을 나타냄을 가리킵니다. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [데이터 계약 스키마 참조](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md)합니다.  
+>  모든 연결을 목록으로 간주할 수도 있습니다. 예를 들어 앞의 연결을 두 개의 필드(문자열 필드 및 정수 필드)가 있는 복잡한 `city` 개체 목록으로 간주할 수 있습니다. 두 패턴은 모두 XSD 스키마에서 하나로 표현됩니다. 목록과 연결을 구분할 수 없으므로 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에 관련된 특별한 주석이 스키마에 없으면 해당 패턴은 항상 목록으로 처리됩니다. 주석은 지정된 패턴이 연결을 나타냄을 가리킵니다. 자세한 내용은 참조 [데이터 계약 스키마 참조](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md)합니다.  
   
  일반적으로 목록은 스키마가 컬렉션의 표준 명명 패턴을 따르는지 여부에 따라 제네릭 목록에서 파생된 컬렉션 데이터 계약이나 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 배열로 가져옵니다. 이 내용이에 보다 자세히 설명 되어 [데이터 계약의 컬렉션 형식](../../../../docs/framework/wcf/feature-details/collection-types-in-data-contracts.md)합니다. 연결은 일반적으로 <xref:System.Collections.Generic.Dictionary%602> 또는 사전 개체에서 파생된 컬렉션 데이터 계약으로 가져옵니다. 예를 들어 다음 스키마를 생각해 볼 수 있습니다.  
   
@@ -161,7 +161,7 @@ ms.lasthandoff: 04/27/2018
   
 ##### <a name="design-considerations"></a>디자인 고려 사항  
   
--   약한 형식의 XML 표현을 직접 사용하기 어려울 수도 있습니다. <xref:System.Xml.Serialization.XmlSerializer> 같은 대체 serialization 엔진을 사용하여 강력한 형식의 데이터 계약과 호환되지 않는 스키마 작업을 수행해 보세요. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [XmlSerializer 클래스를 사용 하 여](../../../../docs/framework/wcf/feature-details/using-the-xmlserializer-class.md)합니다.  
+-   약한 형식의 XML 표현을 직접 사용하기 어려울 수도 있습니다. <xref:System.Xml.Serialization.XmlSerializer> 같은 대체 serialization 엔진을 사용하여 강력한 형식의 데이터 계약과 호환되지 않는 스키마 작업을 수행해 보세요. 자세한 내용은 참조 [XmlSerializer 클래스를 사용 하 여](../../../../docs/framework/wcf/feature-details/using-the-xmlserializer-class.md)합니다.  
   
 -   <xref:System.Runtime.Serialization.XsdDataContractImporter> 속성이 <xref:System.Runtime.Serialization.ImportOptions.ImportXmlType%2A>로 설정되어 있어도 일부 스키마 구문은 `true`로 가져올 수 없습니다. 이 경우에도 <xref:System.Xml.Serialization.XmlSerializer>를 사용해 보세요.  
   
@@ -190,7 +190,7 @@ ms.lasthandoff: 04/27/2018
   
 -   <xref:System.Runtime.Serialization.ImportOptions.CodeProvider%2A> 속성. 생성된 클래스에 대한 코드를 생성하는 데 사용할 <xref:System.CodeDom.Compiler.CodeDomProvider>를 지정합니다. 가져오기 메커니즘은 <xref:System.CodeDom.Compiler.CodeDomProvider>에서 지원하지 않는 기능을 피하려고 합니다. <xref:System.Runtime.Serialization.ImportOptions.CodeProvider%2A>를 설정하지 않으면 전체 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 기능 집합이 제한 없이 사용됩니다.  
   
--   <xref:System.Runtime.Serialization.ImportOptions.DataContractSurrogate%2A> 속성. 이 속성을 사용하여 <xref:System.Runtime.Serialization.IDataContractSurrogate> 구현을 지정할 수 있습니다. <xref:System.Runtime.Serialization.IDataContractSurrogate>는 가져오기 프로세스를 사용자 지정합니다. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [데이터 계약 서로게이트](../../../../docs/framework/wcf/extending/data-contract-surrogates.md)합니다. 기본적으로 서로게이트는 사용되지 않습니다.  
+-   <xref:System.Runtime.Serialization.ImportOptions.DataContractSurrogate%2A> 속성. 이 속성을 사용하여 <xref:System.Runtime.Serialization.IDataContractSurrogate> 구현을 지정할 수 있습니다. <xref:System.Runtime.Serialization.IDataContractSurrogate>는 가져오기 프로세스를 사용자 지정합니다. 자세한 내용은 참조 [데이터 계약 서로게이트](../../../../docs/framework/wcf/extending/data-contract-surrogates.md)합니다. 기본적으로 서로게이트는 사용되지 않습니다.  
   
 ## <a name="see-also"></a>참고 항목  
  <xref:System.Runtime.Serialization.DataContractSerializer>  

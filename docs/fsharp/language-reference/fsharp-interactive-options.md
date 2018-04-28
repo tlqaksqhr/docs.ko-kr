@@ -1,20 +1,17 @@
 ---
-title: "F# Interactive 옵션"
-description: "F # Interactive에서 지 원하는 명령줄 옵션에 대 한 자세한 내용은 fsi.exe 합니다."
-keywords: "visual f#, f#, 함수형 프로그래밍"
+title: F# Interactive 옵션
+description: 'F # Interactive에서 지 원하는 명령줄 옵션에 대 한 자세한 내용은 fsi.exe 합니다.'
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: f9f3e39b-ce6c-41ff-991f-0625f46441ae
-ms.openlocfilehash: f0a8893abca0435307907aa9c169646bf3dec2d5
-ms.sourcegitcommit: adcf9bdafeaa6bc243af7bf70b45f3df954f256a
+ms.openlocfilehash: 45ed12e63a440ce176947cbfca189781c8675e10
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="f-interactive-options"></a>F# Interactive 옵션
 
@@ -52,7 +49,7 @@ F # Interactive 옵션 인수에 목록이, 목록 요소는 세미콜론으로 
 |**--gui**[**+**&#124;**-**]|Windows Forms 이벤트 루프를 사용 하지 않도록 설정 하거나 사용 합니다. 기본값은 사용입니다.|
 |**--help**<br /><br />**-?**|명령줄 구문 및 각 옵션에 대 한 간략 한 설명을 표시 하는 데 사용 합니다.|
 |**--lib:&lt;folder-list&gt;**<br /><br />**-I:&lt;folder-list&gt;**|와 동일는 **fsc.exe** 컴파일러 옵션입니다. 자세한 내용은 [컴파일러 옵션](compiler-options.md)을 참조하세요.|
-|**--load:&lt;filename&gt;**|시작 시 지정 된 소스 코드 컴파일하고 컴파일된 F # 구문 세션으로 로드 합니다. 대상 소스와 같은 스크립트 지시문을 포함 하는 경우 **#use** 또는 **#load**를 사용 해야 합니다 **-사용 하 여** 또는 **#use** 대신**-로드할** 또는 **#load**합니다.|
+|**--load:&lt;filename&gt;**|시작 시 지정 된 소스 코드 컴파일하고 컴파일된 F # 구문 세션으로 로드 합니다. 대상 소스와 같은 스크립트 지시문을 포함 하는 경우 **#use** 또는 **#load**를 사용 해야 합니다 **-사용 하 여** 또는 **#use** 대신 **-로드할** 또는 **#load**합니다.|
 |**--mlcompatibility**|와 동일는 **fsc.exe** 컴파일러 옵션입니다. 자세한 내용은 [컴파일러 옵션](compiler-options.md)을 참조하세요.|
 |**--noframework**|와 동일는 **fsc.exe** 컴파일러 옵션입니다. 자세한 내용은 참조 [컴파일러 옵션](compiler-options.md)|
 |**--nologo**|와 동일는 **fsc.exe** 컴파일러 옵션입니다. 자세한 내용은 [컴파일러 옵션](compiler-options.md)을 참조하세요.|
@@ -62,12 +59,12 @@ F # Interactive 옵션 인수에 목록이, 목록 요소는 세미콜론으로 
 |**--quiet**|F # Interactive의 출력을 표시 하지 않는 **stdout** 스트림 합니다.|
 |**--quotations-debug**|F # 따옴표로 묶인 리터럴을에서 파생 된 및 정의 반영 하는 식에 대 한 추가 정보를 디버깅 내보낼 수를 지정 합니다. 디버그 정보는 F # 식 트리 노드에 대 한 사용자 지정 특성으로 추가 됩니다. 참조 [코드 인용](code-quotations.md) 및 [Expr.CustomAttributes](https://msdn.microsoft.com/library/eb89943f-5f5b-474e-b125-030ca412edb3)합니다.|
 |**--readline**[**+**&#124;**-**]|대화형 모드에서 탭 완성 기능을 사용 하지 않도록 설정 하거나 사용 합니다.|
-|**--reference:&lt;filename&gt;**<br /><br />**-r:&lt;filename&gt;**|와 동일는 **fsc.exe** 컴파일러 옵션입니다. 자세한 내용은 [컴파일러 옵션](compiler-options.md)을 참조하세요.|
+|**--reference:&lt;filename&gt;**<br /><br />**-r:&lt;파일 이름&gt;**|와 동일는 **fsc.exe** 컴파일러 옵션입니다. 자세한 내용은 [컴파일러 옵션](compiler-options.md)을 참조하세요.|
 |**--shadowcopyreferences**[**+**&#124;**-**]|F # Interactive 프로세스에 의해 잠겨 있는 참조를 방지 합니다.|
 |**--simpleresolution**|MSBuild 확인이 아니라 디렉터리 기반의 규칙을 사용 하 여 어셈블리 참조를 확인 합니다.|
 |**--tailcalls**[**+**&#124;**-**]|스택 프레임을 마무리 재귀 함수에 대 한 다시 사용할 수는 꼬리 IL 명령 사용 하지 않도록 설정 하거나 사용 합니다. 기본적으로 이 옵션은 사용하도록 설정됩니다.|
 |**--targetprofile:&lt;string&gt;**|이 어셈블리의 대상 프레임 워크 프로필을 지정합니다. 유효한 값은 mscorlib, netcore 또는 netstandard입니다.  기본값은 mscorlib입니다.|
-|**--use:&lt;filename&gt;**|인터프리터 초기 입력으로 시작할 때 지정된 된 파일을 사용 하도록 지시 합니다.|
+|**-사용:&lt;파일 이름&gt;**|인터프리터 초기 입력으로 시작할 때 지정된 된 파일을 사용 하도록 지시 합니다.|
 |**--utf8output**|Fsc.exe 컴파일러 옵션와 동일 합니다. 자세한 내용은 [컴파일러 옵션](compiler-options.md)을 참조하세요.|
 |**--warn:&lt;warning-level&gt;**|와 동일는 **fsc.exe** 컴파일러 옵션입니다. 자세한 내용은 [컴파일러 옵션](compiler-options.md)을 참조하세요.|
 |**--warnaserror**[**+**&#124;**-**]|와 동일는 **fsc.exe** 컴파일러 옵션입니다. 자세한 내용은 [컴파일러 옵션](compiler-options.md)을 참조하세요.|

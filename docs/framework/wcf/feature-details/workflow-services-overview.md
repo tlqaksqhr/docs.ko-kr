@@ -1,27 +1,29 @@
 ---
-title: "워크플로 서비스 개요"
-ms.custom: 
+title: 워크플로 서비스 개요
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: e536dda3-e286-441e-99a7-49ddc004b646
-caps.latest.revision: "30"
+caps.latest.revision: 30
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 0c38abe8ab0ac99a7e5bd0499ff826a00730b211
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: b0c59c0688fca53a7c7623330f3fdba4f5defd88
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="workflow-services-overview"></a>워크플로 서비스 개요
-워크플로 서비스는 워크플로를 사용하여 구현되는 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 기반 서비스입니다. 워크플로 서비스는 메시징 작업을 사용하여 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 메시지를 보내고 받는 워크플로입니다. .NET Framework 4.5에서는 워크플로 내에서 메시지를 보내고 받을 수 있는 다양한 메시징 작업을 제공합니다. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]메시징 활동 및 다른 메시지 교환 패턴을 구현 하는 수 방법 참조 [메시징 작업](../../../../docs/framework/wcf/feature-details/messaging-activities.md)합니다.  
+워크플로 서비스는 워크플로를 사용하여 구현되는 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 기반 서비스입니다. 워크플로 서비스는 메시징 작업을 사용하여 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 메시지를 보내고 받는 워크플로입니다. .NET Framework 4.5에서는 워크플로 내에서 메시지를 보내고 받을 수 있는 다양한 메시징 작업을 제공합니다. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 메시징 활동 및 다른 메시지 교환 패턴을 구현 하는 수 방법 참조 [메시징 작업](../../../../docs/framework/wcf/feature-details/messaging-activities.md)합니다.  
   
 ## <a name="benefits-of-using-workflow-services"></a>워크플로 서비스 사용의 이점  
  분산 응용 프로그램이 점점 더 많아지면서 개별 서비스가 작업 로드를 줄이기 위해 다른 서비스를 호출하는 경우도 많아졌습니다. 이러한 호출을 비동기 작업으로 구현하면 코드가 더 복잡해집니다. 오류 처리는 예외 처리와 자세한 추적 정보 제공이라는 형태로 코드에 복잡성을 더합니다. 일부 서비스는 종종 오랫동안 실행되며 입력을 기다리면서 중요한 시스템 리소스를 차지할 수 있습니다. 이러한 문제 때문에 일반적으로 분산 응용 프로그램은 작성하고 유지 관리하기가 매우 복잡하고 어렵습니다. 워크플로를 사용하면 외부 서비스 호출과 같은 비동기 작업의 코디네이션을 자연스럽게 표현할 수 있습니다. 또한 워크플로를 사용하면 장기 실행 비즈니스 프로세스를 효율적으로 표현할 수도 있습니다. 이러한 특성 때문에 워크플로는 분산 환경에서 서비스를 빌드하는 데 유용하게 사용됩니다.  
@@ -69,7 +71,7 @@ ms.lasthandoff: 12/22/2017
   
  관리되는 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 응용 프로그램 또는 관리되는 Windows 서비스에서 호스트되는 워크플로 서비스는 <xref:System.ServiceModel.Activities.WorkflowServiceHost> 클래스의 인스턴스를 만들어 <xref:System.ServiceModel.Activities.WorkflowService> 속성 내의 워크플로 정의를 포함하는 <xref:System.ServiceModel.Activities.WorkflowService.Body%2A>의 인스턴스에 전달합니다. 메시징 작업을 포함하는 워크플로 정의는 워크플로 서비스로 노출됩니다.  
   
- IIS 또는 WAS에서 워크플로 서비스를 호스트하려면 워크플로 서비스 정의를 포함하는 .xamlx 파일을 가상 디렉터리에 저장합니다. 기본 끝점 (사용 하 여 <xref:System.ServiceModel.BasicHttpBinding>) 자동으로 만들어집니다 [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [단순화 된 구성](../../../../docs/framework/wcf/simplified-configuration.md)합니다. 또한 Web.config 파일을 가상 디렉터리에 저장하여 사용자 고유의 끝점을 지정할 수도 있습니다. 워크플로 정의가 어셈블리에 있을 경우 가상 디렉터리와 App_Code 디렉터리에 각각 .svc 파일과 워크플로 어셈블리를 저장할 수 있습니다. .svc 파일에서는 서비스 호스트 팩터리를 지정하고 워크플로 서비스를 구현하는 클래스도 지정해야 합니다. 다음 예제에서는 서비스 호스트 팩터리를 지정하고 워크플로 서비스를 구현하는 클래스도 지정하는 방법을 보여 줍니다.  
+ IIS 또는 WAS에서 워크플로 서비스를 호스트하려면 워크플로 서비스 정의를 포함하는 .xamlx 파일을 가상 디렉터리에 저장합니다. 기본 끝점 (사용 하 여 <xref:System.ServiceModel.BasicHttpBinding>)는 참조에 대 한 자세한 내용은 자동으로 만들 [단순화 된 구성](../../../../docs/framework/wcf/simplified-configuration.md)합니다. 또한 Web.config 파일을 가상 디렉터리에 저장하여 사용자 고유의 끝점을 지정할 수도 있습니다. 워크플로 정의가 어셈블리에 있을 경우 가상 디렉터리와 App_Code 디렉터리에 각각 .svc 파일과 워크플로 어셈블리를 저장할 수 있습니다. .svc 파일에서는 서비스 호스트 팩터리를 지정하고 워크플로 서비스를 구현하는 클래스도 지정해야 합니다. 다음 예제에서는 서비스 호스트 팩터리를 지정하고 워크플로 서비스를 구현하는 클래스도 지정하는 방법을 보여 줍니다.  
   
 ```  
 <%@ServiceHost Factory=" System.ServiceModel.Activities.Activation.WorkflowServiceHostFactory  
