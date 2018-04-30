@@ -14,11 +14,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: ae5bf1088ec03229eb996b0e43b3d3395497571a
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 4db761d2e6ba0231cb83d4ef5d1ee663c99178c5
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="windows-workflow-foundation-4-performance"></a>Windows Workflow Foundation 4 성능
 Dustin Metzgar  
@@ -32,7 +32,7 @@ Dustin Metzgar
  개별 워크플로 구성 요소 성능은 WF3과 WF4 사이에 몇 배나 증가했습니다.  이에 비해 직접 코딩된 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 서비스와 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 워크플로 서비스 간의 차이는 매우 적은 편입니다.  WF4에서는 워크플로 대기 시간이 훨씬 줄었습니다.  지속성 성능은 2.5-3.0의 비율로 증가했습니다.  워크플로 추적을 통한 상태 모니터링의 오버헤드가 훨씬 줄었습니다.  이러한 특성은 응용 프로그램에서 WF4로 마이그레이션하거나 채택하는 강력한 이유가 됩니다.  
   
 ## <a name="terminology"></a>용어  
- 이 항목의 나머지 부분에서는 [!INCLUDE[wf1](../../../includes/wf1-md.md)]에 도입된 [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] 버전을 WF4라고 지칭합니다.  [!INCLUDE[wf1](../../../includes/wf1-md.md)]은 .Net 3.0에서 도입되었고 [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] SP1을 통해 몇 가지 작은 수정이 있었습니다. 이 항목의 나머지 부분에서는 Workflow Foundation의 [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] 버전을 WF3이라고 지칭합니다. WF3은 WF4와 함께 [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)]에 포함되어 있습니다. [!INCLUDE[crabout](../../../includes/crabout-md.md)] WF3 아티팩트를 w f 4로 마이그레이션하 참조: [Windows Workflow Foundation 4 마이그레이션 지침](http://go.microsoft.com/fwlink/?LinkID=153313)  
+ 이 항목의 나머지 부분에서는 [!INCLUDE[wf1](../../../includes/wf1-md.md)]에 도입된 [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] 버전을 WF4라고 지칭합니다.  [!INCLUDE[wf1](../../../includes/wf1-md.md)]은 .Net 3.0에서 도입되었고 [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] SP1을 통해 몇 가지 작은 수정이 있었습니다. 이 항목의 나머지 부분에서는 Workflow Foundation의 [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] 버전을 WF3이라고 지칭합니다. WF3은 WF4와 함께 [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)]에 포함되어 있습니다. WF3 아티팩트를 w f 4로 마이그레이션하는 방법에 대 한 자세한 내용은 참조: [Windows Workflow Foundation 4 마이그레이션 지침](http://go.microsoft.com/fwlink/?LinkID=153313)  
   
  [!INCLUDE[indigo1](../../../includes/indigo1-md.md)]은 서비스 기반 응용 프로그램을 빌드하기 위한 Microsoft의 통합 프로그래밍 모델이며, WF3과 함께 .NET 3.0의 일부로 처음 도입되었고 현재 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]의 주요 구성 요소 중 하나입니다.  
   
@@ -218,13 +218,13 @@ public sealed class CompensableActivityEmptyCompensation : CodeActivity
  ![대기 시간 및 처리량 테스트를 위한 환경 설정](../../../docs/framework/windows-workflow-foundation/media/latencyandthroughputenvironment.gif "LatencyAndThroughputEnvironment")  
   
 ##### <a name="test-setup"></a>테스트 설치  
- 이 시나리오에서는 클라이언트 컴퓨터가 컨텍스트 기반 상관 관계를 사용하여 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 워크플로 서비스에 연결합니다.  컨텍스트 상관 관계에는 특수 컨텍스트 바인딩이 필요하며 컨텍스트 헤더나 쿠키를 사용하여 메시지를 올바른 워크플로 인스턴스에 연결합니다.  상관 관계 ID가 메시지 헤더에 있으므로 메시지 본문을 구문 분석할 필요가 없다는 점에서 성능 이점이 있습니다. [!INCLUDE[crabout](../../../includes/crabout-md.md)] 컨텍스트 상관 관계 참조 [컨텍스트 교환 상관 관계](../../../docs/framework/wcf/feature-details/context-exchange-correlation.md)  
+ 이 시나리오에서는 클라이언트 컴퓨터가 컨텍스트 기반 상관 관계를 사용하여 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 워크플로 서비스에 연결합니다.  컨텍스트 상관 관계에는 특수 컨텍스트 바인딩이 필요하며 컨텍스트 헤더나 쿠키를 사용하여 메시지를 올바른 워크플로 인스턴스에 연결합니다.  상관 관계 ID가 메시지 헤더에 있으므로 메시지 본문을 구문 분석할 필요가 없다는 점에서 성능 이점이 있습니다. 컨텍스트 상관 관계에 대 한 자세한 내용은 참조 하십시오. [컨텍스트 교환 상관 관계](../../../docs/framework/wcf/feature-details/context-exchange-correlation.md)  
   
  서비스는 요청을 사용하여 새 워크플로를 만들고 즉각적인 응답을 보내어 대기 시간 측정에 워크플로 실행 시간이 포함되지 않도록 합니다.  WF3 워크플로는 코드 숨김이 있는 XOML이고 WF4 워크플로는 완전히 XAML입니다.  WF4 워크플로는 다음과 같습니다.  
   
  ![WF 4 상관 관계 범위](../../../docs/framework/windows-workflow-foundation/media/correlationscopeworkflow.gif "CorrelationScopeWorkflow")  
   
- <xref:System.ServiceModel.Activities.Receive> 작업은 워크플로 인스턴스를 만듭니다.  받은 메시지에 전달된 값은 회신 메시지에서 에코됩니다.  회신 후의 시퀀스에는 워크플로의 나머지 부분이 포함됩니다.  위의 사례에서는 주석 작업 한 개만 표시됩니다.  주석 작업 수가 워크플로 복잡성을 시뮬레이션하기 위해 변경됩니다.  주석 작업은 아무 작업도 수행하지 않는 WF3 <xref:System.Workflow.Activities.CodeActivity>에 해당합니다. [!INCLUDE[crabout](../../../includes/crabout-md.md)] 주석 작업이이 문서의 앞부분에서 "구성 요소 수준 성능 비교" 섹션을 참조 하세요.  
+ <xref:System.ServiceModel.Activities.Receive> 작업은 워크플로 인스턴스를 만듭니다.  받은 메시지에 전달된 값은 회신 메시지에서 에코됩니다.  회신 후의 시퀀스에는 워크플로의 나머지 부분이 포함됩니다.  위의 사례에서는 주석 작업 한 개만 표시됩니다.  주석 작업 수가 워크플로 복잡성을 시뮬레이션하기 위해 변경됩니다.  주석 작업은 아무 작업도 수행하지 않는 WF3 <xref:System.Workflow.Activities.CodeActivity>에 해당합니다. 주석 작업에 대 한 자세한 내용은이 문서의 앞부분에서 "구성 요소 수준 성능 비교" 섹션을 참조 합니다.  
   
 ##### <a name="test-results"></a>테스트 결과  
  ![대기 시간 결과](../../../docs/framework/windows-workflow-foundation/media/latencyresultsgraph.gif "LatencyResultsGraph")  
@@ -234,7 +234,7 @@ public sealed class CompensableActivityEmptyCompensation : CodeActivity
  위의 그래프에서 콜드는 지정된 워크플로에 대한 기존 <xref:System.ServiceModel.WorkflowServiceHost>가 없는 경우를 나타냅니다.  즉, 콜드 대기 시간은 워크플로가 처음 사용되고 있으며 XOML 또는 XAML을 컴파일해야 하는 경우입니다.  웜 대기 시간은 워크플로 형식이 이미 컴파일된 경우 새 워크플로 인스턴스를 만드는 시간입니다.  WF4 사례에서는 워크플로 복잡성에 거의 차이가 없지만 WF3 사례에서는 선형으로 진행합니다.  
   
 #### <a name="correlation-throughput"></a>상관 관계 처리량  
- WF4에서는 콘텐츠 기반의 새 상관 관계 기능이 도입되었습니다.  WF3은 컨텍스트 기반 상관 관계만 제공했습니다.  컨텍스트 기반 상관 관계는 특정 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 채널 바인딩을 통해서만 수행할 수 있었습니다.  이러한 바인딩을 사용하는 경우 메시지 헤더에 워크플로 ID가 삽입됩니다.  WF3 런타임은 워크플로를 해당 ID로만 식별할 수 있었습니다.  내용 기반 상관 관계는 워크플로 작성자가 계정 번호, 고객 id와 같이 데이터에 관련 정보가에서 상관 관계 키를 만들 수 있습니다 [!INCLUDE[crabout](../../../includes/crabout-md.md)] 내용 기반 상관 관계 참조 [콘텐츠 기반 상관 관계](../../../docs/framework/wcf/feature-details/content-based-correlation.md)합니다.  
+ WF4에서는 콘텐츠 기반의 새 상관 관계 기능이 도입되었습니다.  WF3은 컨텍스트 기반 상관 관계만 제공했습니다.  컨텍스트 기반 상관 관계는 특정 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 채널 바인딩을 통해서만 수행할 수 있었습니다.  이러한 바인딩을 사용하는 경우 메시지 헤더에 워크플로 ID가 삽입됩니다.  WF3 런타임은 워크플로를 해당 ID로만 식별할 수 있었습니다.  내용 기반 상관 관계를 사용하면 워크플로 작성자가 계정 번호, 고객 ID 등의 관련 데이터 부분에서 상관 관계 키를 만들 수 있습니다. 내용 기반 상관 관계에 대 한 자세한 내용은 참조 [콘텐츠 기반 상관 관계](../../../docs/framework/wcf/feature-details/content-based-correlation.md)합니다.  
   
  컨텍스트 기반 상관 관계는 상관 관계 키가 메시지 헤더에 있다는 점에서 성능 이점이 있습니다.  deserialization/메시지 복사 없이 메시지에서 키를 읽을 수 있습니다.  콘텐츠 기반 상관 관계에서는 상관 관계 키가 메시지 본문에 저장됩니다.  XPath 식을 사용하여 키를 찾습니다.  이 추가 처리 비용은 메시지 크기, 본문에서 키의 깊이 및 키 개수에 따라 달라집니다.  이 테스트에서는 컨텍스트 및 콘텐츠 기반 상관 관계를 비교하고 여러 키를 사용할 때의 성능 저하를 보여 줍니다.  
   
@@ -435,7 +435,7 @@ public class Workflow1 : Activity
   
  WF4에는 SQL 추적 공급자가 없지만 AppFabric에는 있습니다.  AppFabric의 SQL 추적 방법은 이벤트를 일괄 처리하고 빠른 삽입용으로 디자인된 SQL 테이블에 쓰는 Windows 서비스를 사용하여 ETW 이벤트를 구독하는 것입니다.  별도의 작업이 이 테이블에서 데이터를 드레이닝한 후 AppFabric 대시보드에서 볼 수 있는 보고 테이블로 개정합니다.  즉, 추적 이벤트의 일괄 처리는 원본 워크플로에 독립적으로 처리되므로 기록되기 전에 지속성 지점을 기다릴 필요가 없습니다.  
   
- logman 또는 xperf와 같은 도구를 사용하여 ETW 이벤트를 기록할 수 있습니다.  xperfview 등의 도구로 압축 ETL 파일을 볼 수 있거나 tracerpt를 사용하여 보다 읽기 쉬운 XML 등의 형식으로 변환할 수 있습니다.  WF3에서 SQL 데이터베이스 없이 추적 이벤트를 가져오는 유일한 옵션은 사용자 지정 추적 서비스를 만드는 것입니다. [!INCLUDE[crabout](../../../includes/crabout-md.md)] ETW에 참조 [WCF 서비스와 Windows 용 이벤트 추적](../../../docs/framework/wcf/samples/wcf-services-and-event-tracing-for-windows.md) 및 [Windows 용 이벤트 추적](http://msdn.microsoft.com/library/ff190903.aspx\))합니다.  
+ logman 또는 xperf와 같은 도구를 사용하여 ETW 이벤트를 기록할 수 있습니다.  xperfview 등의 도구로 압축 ETL 파일을 볼 수 있거나 tracerpt를 사용하여 보다 읽기 쉬운 XML 등의 형식으로 변환할 수 있습니다.  WF3에서 SQL 데이터베이스 없이 추적 이벤트를 가져오는 유일한 옵션은 사용자 지정 추적 서비스를 만드는 것입니다. ETW에 대 한 자세한 내용은 참조 [WCF 서비스와 Windows 용 이벤트 추적](../../../docs/framework/wcf/samples/wcf-services-and-event-tracing-for-windows.md) 및 [Windows 용 이벤트 추적](http://msdn.microsoft.com/library/ff190903.aspx\))합니다.  
   
  워크플로 추적을 사용하도록 설정하면 다양한 수준으로 성능에 영향을 주게 됩니다.  아래 벤치마크에서는 logman 도구를 통해 ETW 추적 이벤트를 사용하고 ETL 파일에 기록합니다.  AppFabric에서의 SQL 추적 비용은 이 문서의 범위를 벗어납니다.  이 벤치마크에는 역시 AppFabric에서 사용된 기본 추적 프로필이 표시됩니다.  상태 모니터링 이벤트만 추적하는 비용도 포함되어 있습니다.  이러한 이벤트는 문제를 해결하고 시스템의 평균 처리량을 확인하는 데 유용합니다.  
   
@@ -448,7 +448,7 @@ public class Workflow1 : Activity
  상태 모니터링은 처리량에 대략 3% 영향을 줍니다.  기본 프로필 비용은 약 8%입니다.  
   
 ## <a name="interop"></a>Interop  
- WF4는 [!INCLUDE[wf1](../../../includes/wf1-md.md)]에서 거의 완전히 다시 작성되었으므로 WF3 워크플로와 작업은 WF4와 직접 호환되지 않습니다.  W f 3에 대 한 사내 또는 타사 워크플로 정 및 사용자 지정 활동을 초기 Windows Workflow Foundation를 채택한 많은 고객 갖습니다.  WF4로 간단하게 전환하는 방법 중 하나는 WF4 워크플로 내에서 WF3 작업을 실행할 수 있는 Interop 작업을 사용하는 것입니다.  필요한 경우 <xref:System.Activities.Statements.Interop> 작업만 사용하는 것이 좋습니다. [!INCLUDE[crabout](../../../includes/crabout-md.md)] 체크 아웃 w f 4로 마이그레이션하는 [WF4 마이그레이션 지침](http://go.microsoft.com/fwlink/?LinkID=153313)합니다.  
+ WF4는 [!INCLUDE[wf1](../../../includes/wf1-md.md)]에서 거의 완전히 다시 작성되었으므로 WF3 워크플로와 작업은 WF4와 직접 호환되지 않습니다.  W f 3에 대 한 사내 또는 타사 워크플로 정 및 사용자 지정 활동을 초기 Windows Workflow Foundation를 채택한 많은 고객 갖습니다.  WF4로 간단하게 전환하는 방법 중 하나는 WF4 워크플로 내에서 WF3 작업을 실행할 수 있는 Interop 작업을 사용하는 것입니다.  필요한 경우 <xref:System.Activities.Statements.Interop> 작업만 사용하는 것이 좋습니다. W f 4로 마이그레이션에 대 한 자세한 내용은 체크 아웃 된 [WF4 마이그레이션 지침](http://go.microsoft.com/fwlink/?LinkID=153313)합니다.  
   
 ### <a name="environment-setup"></a>환경 설치  
  ![워크플로 성능 테스트 환경](../../../docs/framework/windows-workflow-foundation/media/wfperfenvironment.gif "WFPerfEnvironment")  

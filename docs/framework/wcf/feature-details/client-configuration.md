@@ -16,11 +16,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 19d1f7630c96f557791f0682fbc0c5d7286c7eb7
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: c2c0d17c7274cc9fdaf1b5080950ddb4f69f539a
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="client-configuration"></a>클라이언트 구성
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 클라이언트 구성을 사용하여 클라이언트에서 서비스 끝점에 연결하는 데 사용하는 클라이언트 끝점의 "ABC" 속성인 계약, 바인딩 동작 및 주소를 지정할 수 있습니다. [ \<클라이언트 >](../../../../docs/framework/configure-apps/file-schema/wcf/client.md) 요소에는 [ \<끝점 >](http://msdn.microsoft.com/library/13aa23b7-2f08-4add-8dbf-a99f8127c017) 해당 특성이 끝점 Abc를 구성 하는 데는 요소입니다. 이러한 특성에 대해서는 이 항목의 "끝점 구성" 단원에 설명되어 있습니다.  
@@ -97,14 +97,14 @@ ms.lasthandoff: 04/28/2018
   
  모든 끝점에는 해당 끝점을 찾아서 식별할 수 있는 연결된 주소가 있어야 합니다. `address` 특성을 사용하면 끝점의 위치를 제공하는 URL을 지정할 수 있습니다. URI(Uniform Resource Identifier)를 만든 다음 <xref:System.ServiceModel.ServiceHost> 메서드 중 하나를 사용하여 <xref:System.ServiceModel.ServiceHost.AddServiceEndpoint%2A>에 추가하여 서비스 끝점의 주소를 코드로 지정할 수도 있습니다. 자세한 내용은 참조 [주소](../../../../docs/framework/wcf/feature-details/endpoint-addresses.md)합니다. 소개에 표시 된 대로 [ \<헤더 >](../../../../docs/framework/configure-apps/file-schema/wcf/headers.md) 및 [ \<identity >](../../../../docs/framework/configure-apps/file-schema/wcf/identity.md) 의 일부인 요소는 <xref:System.ServiceModel.EndpointAddress> 에서도 설명 하 고는 [ 주소](../../../../docs/framework/wcf/feature-details/endpoint-addresses.md) 항목입니다.  
   
- `binding` 특성은 서비스에 연결할 때 사용할 끝점 바인딩 형식을 나타냅니다. 형식에 등록된 구성 섹션이 있어야 형식을 참조할 수 있습니다. 이 이전 예에서 [ \<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md) 나타냅니다 끝점을 사용 하는 섹션은 <xref:System.ServiceModel.WSHttpBinding>합니다. 그러나 끝점에서 사용할 수 있는 지정된 형식의 바인딩이 여러 개 있을 수도 있습니다. 이러한 각 항목에 자체 [ \<바인딩 >](../../../../docs/framework/misc/binding.md) 요소 (바인딩) 형식 요소입니다. `bindingconfiguration` 특성은 동일한 형식의 바인딩을 구분하는 데 사용됩니다. 해당 값과 일치는 `name` 특성에는 [ \<바인딩 >](../../../../docs/framework/misc/binding.md) 요소입니다. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 클라이언트를 구성 하는 방법 참조 구성을 사용 하 여 바인딩 [하는 방법: 구성에서 클라이언트 바인딩 지정](../../../../docs/framework/wcf/how-to-specify-a-client-binding-in-configuration.md)합니다.  
+ `binding` 특성은 서비스에 연결할 때 사용할 끝점 바인딩 형식을 나타냅니다. 형식에 등록된 구성 섹션이 있어야 형식을 참조할 수 있습니다. 이 이전 예에서 [ \<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md) 나타냅니다 끝점을 사용 하는 섹션은 <xref:System.ServiceModel.WSHttpBinding>합니다. 그러나 끝점에서 사용할 수 있는 지정된 형식의 바인딩이 여러 개 있을 수도 있습니다. 이러한 각 항목에 자체 [ \<바인딩 >](../../../../docs/framework/misc/binding.md) 요소 (바인딩) 형식 요소입니다. `bindingconfiguration` 특성은 동일한 형식의 바인딩을 구분하는 데 사용됩니다. 해당 값과 일치는 `name` 특성에는 [ \<바인딩 >](../../../../docs/framework/misc/binding.md) 요소입니다. 클라이언트를 구성 하는 방법에 대 한 자세한 내용은 참조 구성을 사용 하 여 바인딩 [하는 방법: 구성에서 클라이언트 바인딩 지정](../../../../docs/framework/wcf/how-to-specify-a-client-binding-in-configuration.md)합니다.  
   
  `behaviorConfiguration` 특성을 지정 합니다. 사용 [ \<동작 >](../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md) 의 [ \<endpointBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/endpointbehaviors.md) 끝점에서 사용 해야 합니다. 해당 값과 일치는 `name` 특성에는 [ \<동작 >](../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md) 요소입니다. 구성을 사용 하 여 클라이언트 동작을 지정 하는 예제를 보려면 [클라이언트 동작 구성](../../../../docs/framework/wcf/configuring-client-behaviors.md)합니다.  
   
  `contract` 특성은 끝점이 공개하는 계약을 지정합니다. 이 값은 <xref:System.ServiceModel.ServiceContractAttribute.ConfigurationName%2A>의 <xref:System.ServiceModel.ServiceContractAttribute>에 매핑됩니다. 기본값은 서비스를 구현하는 클래스의 전체 형식 이름입니다.  
   
 ### <a name="configuring-metadata"></a>메타데이터 구성  
- [ \<메타 데이터 >](../../../../docs/framework/configure-apps/file-schema/wcf/metadata.md) 메타 데이터를 등록 하는 데 사용 되는 설정을 가져오기 확장을 지정 하려면 요소를 사용 합니다. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 참조 메타 데이터 시스템 확장[메타 데이터 시스템 확장](../../../../docs/framework/wcf/extending/extending-the-metadata-system.md)합니다.  
+ [ \<메타 데이터 >](../../../../docs/framework/configure-apps/file-schema/wcf/metadata.md) 메타 데이터를 등록 하는 데 사용 되는 설정을 가져오기 확장을 지정 하려면 요소를 사용 합니다. 메타 데이터 시스템 확장에 대 한 자세한 내용은 참조[메타 데이터 시스템 확장](../../../../docs/framework/wcf/extending/extending-the-metadata-system.md)합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [끝점: 주소, 바인딩 및 계약](../../../../docs/framework/wcf/feature-details/endpoints-addresses-bindings-and-contracts.md)  

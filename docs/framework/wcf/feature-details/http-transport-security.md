@@ -1,24 +1,26 @@
 ---
-title: "HTTP 전송 보안"
-ms.custom: 
+title: HTTP 전송 보안
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: d3439262-c58e-4d30-9f2b-a160170582bb
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: f81a95546d593cd5a0acb6a89edf2f6c763f07df
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 2787c38603fd0f88878596a809d7e3c5cfdfb350
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="http-transport-security"></a>HTTP 전송 보안
 HTTP를 전송으로 사용하는 경우 SSL(Secure Sockets Layer) 구현에서 보안을 제공합니다. SSL은 서비스를 클라이언트에 인증한 다음 채널에 기밀성(암호화)을 제공하기 위해 인터넷에서 널리 사용됩니다. 이 항목에서는 SSL 작동 방식 및 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]에서 SSL을 구현하는 방법에 대해 설명합니다.  
@@ -61,7 +63,7 @@ HTTP를 전송으로 사용하는 경우 SSL(Secure Sockets Layer) 구현에서 
 ### <a name="using-httpcfg-for-ssl"></a>SSL에 HttpCfg 사용  
  자체 호스팅 만들면 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 응용 프로그램에서 사용 가능한 HttpCfg.exe 도구를 다운로드는 [Windows XP 서비스 팩 2 지원 도구 사이트](http://go.microsoft.com/fwlink/?LinkId=29002)합니다.  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]참조는 X.509 인증서로 포트를 설정 하려면 HttpCfg.exe 도구를 사용 하 여 [하는 방법: SSL 인증서로 포트 구성](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md)합니다.  
+ HttpCfg.exe 도구를 사용 하 여 X.509 인증서로 포트를 설정 하는 방법에 대 한 자세한 내용은 참조 [하는 방법: SSL 인증서로 포트 구성](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md)합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [전송 보안](../../../../docs/framework/wcf/feature-details/transport-security.md)  

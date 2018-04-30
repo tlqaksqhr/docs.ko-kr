@@ -16,14 +16,14 @@ ms.author: bruceper
 manager: mbaldwin
 ms.workload:
 - dotnet
-ms.openlocfilehash: 98323b4d29b68d57d3c01e9a007b5f0f9fc08377
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: bb10d98eb96213029ae43533935312c6f1cf09c7
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="security-behaviors-in-wcf"></a>WCF의 보안 동작
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]에서 동작은 런타임 동작을 서비스 수준 또는 끝점 수준에서 수정합니다. ([!INCLUDE[crabout](../../../../includes/crabout-md.md)] 동작 일반적으로 참조 [서비스 런타임 동작 지정](../../../../docs/framework/wcf/specifying-service-run-time-behavior.md).) *보안 동작* 감사 로그 및 자격 증명, 인증, 권한 부여에 대 한 제어를 허용 합니다. 프로그래밍 또는 구성을 통해 동작을 사용할 수 있습니다. 이 항목에서는 보안 기능과 관련된 다음 동작의 구성에 대해 중점적으로 설명합니다.  
+[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]에서 동작은 런타임 동작을 서비스 수준 또는 끝점 수준에서 수정합니다. (일반적으로 참조 동작에 대 한 자세한 내용은 [서비스 런타임 동작 지정](../../../../docs/framework/wcf/specifying-service-run-time-behavior.md).) *보안 동작* 감사 로그 및 자격 증명, 인증, 권한 부여에 대 한 제어를 허용 합니다. 프로그래밍 또는 구성을 통해 동작을 사용할 수 있습니다. 이 항목에서는 보안 기능과 관련된 다음 동작의 구성에 대해 중점적으로 설명합니다.  
   
 -   [\<serviceCredentials >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecredentials.md)합니다.  
   
@@ -38,7 +38,7 @@ ms.lasthandoff: 04/28/2018
 ## <a name="setting-credentials-with-behaviors"></a>동작을 통한 자격 증명 설정  
  사용 하 여는 [ \<serviceCredentials >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecredentials.md) 및 [ \<clientCredentials >](../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md) 서비스 또는 클라이언트에 대 한 자격 증명 값을 설정 합니다. 기본 바인딩 구성은 자격 증명을 설정해야 할지 여부를 결정합니다. 예를 들어, 보안 모드가 `None`으로 설정된 경우 클라이언트 및 서비스 둘 다 서로 간에 인증되지 않으며 모든 형식의 자격 증명이 필요하지 않습니다.  
   
- 반면에 서비스 바인딩의 경우 클라이언트 자격 증명 형식이 필요할 수 있습니다. 이러한 경우, 동작을 사용하여 자격 증명 값을 설정해야 합니다. ([!INCLUDE[crabout](../../../../includes/crabout-md.md)] 가능한 자격 증명의 형식이 참조 [자격 증명 유형을 선택 하면](../../../../docs/framework/wcf/feature-details/selecting-a-credential-type.md).) Windows 자격 증명을 사용하여 인증하는 것과 같은 일부의 경우, 환경에서 자동으로 실제 자격 증명 값을 설정하기 때문에 다른 자격 증명 집합을 지정하려고 하지 않는 한 자격 증명 값을 명시적으로 설정할 필요가 없습니다.  
+ 반면에 서비스 바인딩의 경우 클라이언트 자격 증명 형식이 필요할 수 있습니다. 이러한 경우, 동작을 사용하여 자격 증명 값을 설정해야 합니다. (가능한 유형의 자격 증명에 대 한 자세한 내용은 참조 [자격 증명 유형을 선택 하면](../../../../docs/framework/wcf/feature-details/selecting-a-credential-type.md).) Windows 자격 증명을 사용하여 인증하는 것과 같은 일부의 경우, 환경에서 자동으로 실제 자격 증명 값을 설정하기 때문에 다른 자격 증명 집합을 지정하려고 하지 않는 한 자격 증명 값을 명시적으로 설정할 필요가 없습니다.  
   
  모든 서비스 자격 증명의 자식 요소로 발견 되는 [ \<serviceBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/servicebehaviors.md)합니다. 다음 예제에서는 서비스 자격 증명으로 사용되는 인증서를 보여 줍니다.  
   
@@ -66,10 +66,10 @@ ms.lasthandoff: 04/28/2018
 ### <a name="servicecertificate-element"></a>\<serviceCertificate > 요소  
  이 요소를 사용하여 메시지 보안 모드를 사용하는 클라이언트에 대한 서비스를 인증하는 데 사용할 X.509 인증서를 지정합니다. 주기적으로 갱신되는 인증서를 사용하는 경우 지문이 변경됩니다. 이러한 경우 인증서를 동일한 주체 이름으로 다시 발급할 수 있기 때문에 주체 이름으로 `X509FindType`을 사용합니다.  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 참조 된 요소를 사용 하 여 [하는 방법: 클라이언트 자격 증명 값 지정](../../../../docs/framework/wcf/how-to-specify-client-credential-values.md)합니다.  
+ 요소를 사용 하는 방법에 대 한 자세한 내용은 참조 [하는 방법: 클라이언트 자격 증명 값 지정](../../../../docs/framework/wcf/how-to-specify-client-credential-values.md)합니다.  
   
 ### <a name="certificate-of-clientcertificate-element"></a>\<인증서 >의 \<clientCertificate > 요소  
- 사용 하 여는 [ \<인증서 >](../../../../docs/framework/configure-apps/file-schema/wcf/certificate-of-clientcertificate-element.md) 요소는 서비스는 클라이언트와 안전 하 게 통신 하기 위해 클라이언트의 인증서가 필요한 경우. 이는 양방향 통신 패턴을 사용하는 경우 발생합니다. 대부분의 일반적인 요청-회신 패턴의 경우, 클라이언트는 요청 시 서비스가 클라이언트에게 해당 응답을 안전하게 보내기 위해 사용하는 인증서를 포함합니다. 그러나 양방향 통신 패턴에는 요청 및 회신이 없습니다. 서비스는 통신에서 클라이언트의 인증서를 유추할 수 없기 때문에 서비스는 클라이언트에 대해 메시지 보안을 유지하기 위해 클라이언트 인증서를 필요로 합니다. 클라이언트 인증서를 out-of-band 방식으로 가져와서 이 요소를 사용하여 인증서를 지정해야 합니다. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 이중 서비스 참조 [하는 방법: 이중 계약 만들기](../../../../docs/framework/wcf/feature-details/how-to-create-a-duplex-contract.md)합니다.  
+ 사용 하 여는 [ \<인증서 >](../../../../docs/framework/configure-apps/file-schema/wcf/certificate-of-clientcertificate-element.md) 요소는 서비스는 클라이언트와 안전 하 게 통신 하기 위해 클라이언트의 인증서가 필요한 경우. 이는 양방향 통신 패턴을 사용하는 경우 발생합니다. 대부분의 일반적인 요청-회신 패턴의 경우, 클라이언트는 요청 시 서비스가 클라이언트에게 해당 응답을 안전하게 보내기 위해 사용하는 인증서를 포함합니다. 그러나 양방향 통신 패턴에는 요청 및 회신이 없습니다. 서비스는 통신에서 클라이언트의 인증서를 유추할 수 없기 때문에 서비스는 클라이언트에 대해 메시지 보안을 유지하기 위해 클라이언트 인증서를 필요로 합니다. 클라이언트 인증서를 out-of-band 방식으로 가져와서 이 요소를 사용하여 인증서를 지정해야 합니다. 이중 서비스에 대 한 자세한 내용은 참조 [하는 방법: 이중 계약 만들기](../../../../docs/framework/wcf/feature-details/how-to-create-a-duplex-contract.md)합니다.  
   
 ### <a name="authentication-of-clientcertificate-element"></a>\<인증 >의 \<clientCertificate > 요소  
  [ \<인증 >](../../../../docs/framework/configure-apps/file-schema/wcf/authentication-of-clientcertificate-element.md) 요소를 사용 하면 클라이언트의 인증 방법을 사용자 지정할 수 있습니다. `CertificateValidationMode` 특성을 `None`, `ChainTrust`, `PeerOrChainTrust`, `PeerTrust` 또는 `Custom`으로 설정할 수 있습니다. 기본적으로 수준 설정 `ChainTrust`에 종료 되는 인증서의 계층 구조에서 각 인증서를 찾을 수 있어야를 지정 하는 한 *루트 기관* 체인의 맨 위쪽에 합니다. 이 모드가 가장 안전한 모드입니다. 또한 값을 `PeerOrChainTrust`로 설정할 수 있으며, 이는 자체 발급된 인증서(신뢰 피어)가 신뢰 체인에 있는 인증서와 함께 수락됨을 지정합니다. 자체 발급 인증서를 신뢰할 수 있는 기관에서 구입할 필요 없기 때문에 클라이언트 및 서비스를 개발 및 디버깅하는 경우 이 값이 사용됩니다. 클라이언트를 배포하는 경우 `ChainTrust` 값을 대신 사용합니다. 또한 값을 `Custom`으로 설정할 수도 있습니다. `Custom` 값으로 설정할 경우 `CustomCertificateValidatorType` 특성도 인증서 유효성을 검사하는 데 사용되는 어셈블리 및 형식으로 설정해야 합니다. 사용자 지정 유효성 검사기를 만들려면 추상 <xref:System.IdentityModel.Selectors.X509CertificateValidator> 클래스에서 상속해야 합니다.  
@@ -97,7 +97,7 @@ ms.lasthandoff: 04/28/2018
   
  자세한 내용은 <xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator>을 참조하세요.  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 이 구성 요소를 사용 하 여 참조 [하는 방법: 페더레이션 서비스에서 자격 증명 구성](../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)합니다.  
+ 이 구성 요소를 사용 하는 방법에 대 한 자세한 내용은 참조 [하는 방법: 페더레이션 서비스에서 자격 증명 구성](../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)합니다.  
   
 #### <a name="allowing-anonymous-cardspace-users"></a>익명 CardSpace 사용자 허용  
  `AllowUntrustedRsaIssuers` 요소의 `<IssuedTokenAuthentication>` 특성을 `true`로 설정하면 명시적으로 클라이언트가 임의 RSA 키 쌍으로 서명된 자체 발급 토큰을 제공할 수 있습니다. 발급자가 *신뢰할 수 없는* 키에 연결 된 발급자 데이터가 없기 때문에 있습니다. [!INCLUDE[infocard](../../../../includes/infocard-md.md)] 사용자는 ID에 대해 자체 제공 클레임이 포함된 자체 발급 카드를 만들 수 있습니다. 이 기능은 주의하여 사용하십시오. 이 기능을 사용하려면 사용자 이름과 함께 데이터베이스에 저장되어야 하는 보다 안전한 암호로 RSA 공개 키를 설정합니다. 클라이언트가 서비스에 액세스하도록 허용하기 전에 클라이언트에서 제공하는 RSA 공개 키를 제공된 사용자 이름에 대해 저장된 공개 키와 비교하여 확인합니다. 이것은 사용자가 사용자 이름을 등록하고 자체 발급된 RSA 공개 키와 연결할 수 있는 등록 프로세스를 설정한 것으로 간주합니다.  
@@ -105,7 +105,7 @@ ms.lasthandoff: 04/28/2018
 ## <a name="client-credentials"></a>클라이언트 자격 증명  
  클라이언트 자격 증명은 상호 인증이 필요한 경우 서비스에 대해 클라이언트를 인증하는 데 사용됩니다. 또한 클라이언트가 서비스 인증서를 사용하여 서비스에 대한 메시지 보안을 유지해야 하는 경우 서비스 인증서를 지정하는 데 사용할 수 있습니다.  
   
- 보안 토큰 서비스 또는 토큰 로컬 발급자로부터 발급된 토큰을 사용하도록 클라이언트를 페더레이션 시나리오의 일부로 구성할 수 있습니다. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 페더레이션된 시나리오 참조 [페더레이션 및 발급 된 토큰](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)합니다. 모든 클라이언트 자격 증명에서 발견 되는 [ \<endpointBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/endpointbehaviors.md)다음 코드에 나온 것 처럼 합니다.  
+ 보안 토큰 서비스 또는 토큰 로컬 발급자로부터 발급된 토큰을 사용하도록 클라이언트를 페더레이션 시나리오의 일부로 구성할 수 있습니다. 페더레이션된 시나리오에 대 한 자세한 내용은 참조 [페더레이션 및 발급 된 토큰](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)합니다. 모든 클라이언트 자격 증명에서 발견 되는 [ \<endpointBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/endpointbehaviors.md)다음 코드에 나온 것 처럼 합니다.  
   
 ```xml  
 <behaviors>  

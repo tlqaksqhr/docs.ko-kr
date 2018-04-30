@@ -1,32 +1,34 @@
 ---
-title: "분산 응용 프로그램 보안"
-ms.custom: 
+title: 분산 응용 프로그램 보안
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - distributed application security [WCF]
 - security [WCF], transfer
 ms.assetid: 53928a10-e474-46d0-ab90-5f98f8d7b668
-caps.latest.revision: "32"
+caps.latest.revision: 32
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: 1e67c5da534e7b35d4d27c0164d9389c8afe252b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 8b5bc311262aae1110f7d0249be60135e318785e
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="distributed-application-security"></a>분산 응용 프로그램 보안
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 보안은 전송 보안, 액세스 제어 및 감사의 세 가지 주 기능 영역으로 분류됩니다. 전송 보안은 무결성, 기밀성 및 인증을 제공합니다. 전송 보안은 전송 보안, 메시지 보안, `TransportWithMessageCredential` 중 하나를 통해 제공됩니다.  
   
- 에 대 한 개요 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 메시지 보안, 참조 [보안 개요](../../../../docs/framework/wcf/feature-details/security-overview.md)합니다. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]다른 두 부분이 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 보안 참조 [권한 부여](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md) 및 [감사](../../../../docs/framework/wcf/feature-details/auditing-security-events.md)합니다.  
+ 에 대 한 개요 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 메시지 보안, 참조 [보안 개요](../../../../docs/framework/wcf/feature-details/security-overview.md)합니다. 두 부분에 대 한 자세한 내용은 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 보안 참조 [권한 부여](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md) 및 [감사](../../../../docs/framework/wcf/feature-details/auditing-security-events.md)합니다.  
   
 ## <a name="transfer-security-scenarios"></a>전송 보안 시나리오  
  [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 전송 보안을 사용하는 일반적인 시나리오는 다음과 같습니다.  
@@ -68,7 +70,7 @@ ms.lasthandoff: 12/22/2017
   
  인증서 자격 증명에서는 주체 이름, 주체 대체 이름 또는 인증서 내의 특정 필드를 사용하여 클레임 ID 및/또는 기능을 나타낼 수 있습니다. 자격 증명의 데이터 소유 증명은 연결된 개인 키로 서명을 생성하여 설정됩니다.  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]자격 증명을 지정 하 고 전송 보안 프로그래밍 참조 [바인딩 및 보안](../../../../docs/framework/wcf/feature-details/bindings-and-security.md) 및 [보안 동작](../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)합니다.  
+ 프로그래밍에 대 한 자세한 내용은 전송 보안 및 자격 증명을 지정할 [바인딩 및 보안](../../../../docs/framework/wcf/feature-details/bindings-and-security.md) 및 [보안 동작](../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)합니다.  
   
 ### <a name="transport-client-credential-types"></a>전송 클라이언트 자격 증명 형식  
  다음 표에서는 전송 보안을 사용하는 응용 프로그램을 만들 때 사용할 수 있는 값을 보여 줍니다. 이러한 값은 코드 또는 바인딩 설정에 사용할 수 있습니다.  

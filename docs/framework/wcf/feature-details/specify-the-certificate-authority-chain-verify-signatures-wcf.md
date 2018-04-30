@@ -1,27 +1,29 @@
 ---
-title: "방법: 서명을 확인하는 데 사용되는 인증 기관 인증서 체인 지정(WCF)"
-ms.custom: 
+title: '방법: 서명을 확인하는 데 사용되는 인증 기관 인증서 체인 지정(WCF)'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - certificates [WCF], specifying the certificate authority certificate chain
 - certificates [WCF], verifying signatures
 ms.assetid: 7c719355-aa41-4567-80d0-5115a8cf73fd
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: f0ea15e8fe9580f561eedf048ed2aaf2e2ed248f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 29637ea7f0a1e533a6735ebfa6f428fe20039e48
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="how-to-specify-the-certificate-authority-certificate-chain-used-to-verify-signatures-wcf"></a>방법: 서명을 확인하는 데 사용되는 인증 기관 인증서 체인 지정(WCF)
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]는 X.509 인증서를 사용하여 서명된 SOAP 메시지를 받으면 기본적으로 X.509 인증서가 신뢰할 수 있는 인증 기관에서 발급된 것인지 확인합니다. 이렇게 하려면 인증서 저장소를 찾고 해당 인증 기관의 인증서가 신뢰할 수 있는 것으로 지정되었는지 확인합니다. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서 이러한 결정을 하려면 올바른 인증서 저장소에 인증 기관 인증서 체인을 설치해야 합니다.  
@@ -42,7 +44,7 @@ ms.lasthandoff: 12/22/2017
   
          MMC(Microsoft Management Console)에서 인증서 스냅인을 엽니다. 인증서에 대 한 저장소를 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 선택에서 X.509 인증서를 검색 하도록 구성 된는 **신뢰할 수 있는 루트** **인증 기관**폴더입니다. 아래는 **신뢰할 수 있는 루트 인증 기관** 폴더를 마우스 오른쪽 단추로 클릭는 **인증서**폴더를 가리키도록 **모든 작업**, 클릭 하 고 **가져오기** . a 단계에서 내보낸 파일을 제공합니다.  
   
-         [!INCLUDE[crabout](../../../../includes/crabout-md.md)]인증서 스냅인 mmc를 사용 하 여 참조 [하는 방법: MMC 스냅인을 사용 하 여 보기 인증서](../../../../docs/framework/wcf/feature-details/how-to-view-certificates-with-the-mmc-snap-in.md)합니다.  
+         Mmc 인증서 스냅인을 사용 하는 방법에 대 한 자세한 내용은 참조 [하는 방법: MMC 스냅인을 사용 하 여 보기 인증서](../../../../docs/framework/wcf/feature-details/how-to-view-certificates-with-the-mmc-snap-in.md)합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [인증서 작업](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)

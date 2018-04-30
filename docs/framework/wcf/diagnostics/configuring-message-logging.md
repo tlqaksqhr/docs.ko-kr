@@ -18,11 +18,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 63bdbc68851ace71b3afef30e274b9821ed1ad5f
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 6e2d45e7b8769ee525835ad3dc50262a03a5a7b6
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="configuring-message-logging"></a>메시지 로깅 구성
 이 항목에서는 다양한 시나리오에서 메시지 로깅을 구성하는 방법에 대해 설명합니다.  
@@ -58,7 +58,7 @@ ms.lasthandoff: 04/28/2018
 </system.serviceModel>  
 ```  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 메시지 로깅 설정을 참조 하십시오. [추적 및 메시지 로깅에 대 한 권장 설정](../../../../docs/framework/wcf/diagnostics/tracing/recommended-settings-for-tracing-and-message-logging.md)합니다.  
+ 메시지 로깅 설정에 대 한 자세한 내용은 참조 [추적 및 메시지 로깅에 대 한 권장 설정](../../../../docs/framework/wcf/diagnostics/tracing/recommended-settings-for-tracing-and-message-logging.md)합니다.  
   
  `add`를 사용하여 사용할 수신기의 이름과 형식을 지정할 수 있습니다. 예제 구성에서는 수신기 이름을 "messages"로 지정하고 표준 .NET Framework 추적 수신기(`System.Diagnostics.XmlWriterTraceListener`)를 사용할 형식으로 추가합니다. `System.Diagnostics.XmlWriterTraceListener`를 사용하려면 출력 파일의 위치와 이름을 구성 파일에 지정해야 합니다. 이 작업을 수행하려면 `initializeData`를 로그 파일의 이름으로 설정합니다. 그렇지 않으면 시스템에서 예외가 throw됩니다. 로그를 기본 파일에 내보내는 사용자 지정 수신기를 구현할 수도 있습니다.  
   
@@ -73,7 +73,7 @@ ms.lasthandoff: 04/28/2018
 <source name="System.ServiceModel.MessageLogging" switchValue="Verbose">  
 ```  
   
- 추적 소스를 비활성화하려면 대신에 `logMessagesAtServiceLevel` 요소의 `logMalformedMessages`, `logMessagesAtTransportLevel` 및 `messageLogging` 특성을 사용하고, 이러한 모든 특성을 `false`로 설정해야 합니다. 이 작업은 구성 편집기 UI 인터페이스나 WMI를 통해 이전 코드 예제의 구성 파일을 사용하여 수행할 수 있습니다. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] Configuration Editor 도구 참조 [Configuration Editor 도구 (SvcConfigEditor.exe)](../../../../docs/framework/wcf/configuration-editor-tool-svcconfigeditor-exe.md)합니다. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] WMI, 참조 [진단에 대 한 Windows Management Instrumentation를 사용 하 여](../../../../docs/framework/wcf/diagnostics/wmi/index.md)합니다.  
+ 추적 소스를 비활성화하려면 대신에 `logMessagesAtServiceLevel` 요소의 `logMalformedMessages`, `logMessagesAtTransportLevel` 및 `messageLogging` 특성을 사용하고, 이러한 모든 특성을 `false`로 설정해야 합니다. 이 작업은 구성 편집기 UI 인터페이스나 WMI를 통해 이전 코드 예제의 구성 파일을 사용하여 수행할 수 있습니다. 구성 편집기 도구에 대 한 자세한 내용은 참조 [Configuration Editor 도구 (SvcConfigEditor.exe)](../../../../docs/framework/wcf/configuration-editor-tool-svcconfigeditor-exe.md)합니다. WMI에 대 한 자세한 내용은 참조 [진단에 대 한 Windows Management Instrumentation를 사용 하 여](../../../../docs/framework/wcf/diagnostics/wmi/index.md)합니다.  
   
 ## <a name="logging-levels-and-options"></a>로깅 수준 및 옵션  
  들어오는 메시지의 경우 로깅은 메시지가 형성된 직후, 메시지가 서비스 수준에서 사용자 코드에 도달하기 직전 그리고 잘못된 형식의 메시지가 감지될 때 발생합니다.  
@@ -91,7 +91,7 @@ ms.lasthandoff: 04/28/2018
  이 계층에서 기록된 메시지는 통신 전송 동안 또는 그 이후에 인코딩이나 디코딩할 수 있습니다. 필터가 정의된 경우에는 해당 필터에 맞는 메시지만 기록되며 그 이외에는 전송 계층의 모든 메시지가 기록됩니다. 신뢰할 수 있는 메시징 메시지를 포함한 모든 인프라 메시지도 이 계층에서 기록됩니다. 스트리밍된 메시지의 경우는 헤더만 기록됩니다. 또한 보안 메시지는 이 수준에서 암호화된 채로 기록되는데 HTTPS와 같은 보안 전송이 사용되는 경우는 예외입니다.  
   
 ### <a name="malformed-level"></a>잘못된 형식의 수준  
- 잘못된 형식의 메시지란 모든 처리 단계에서 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 스택에 의해 거부된 메시지를 말합니다. 이러한 잘못된 형식의 메시지는 암호화된 상태라면 암호화된 상태로, 적절하지 않은 XML로 된 상태라면 그 상태 그대로 기록됩니다. `maxSizeOfMessageToLog`는 CDATA로 기록될 메시지 크기를 정의합니다. 기본적으로 `maxSizeOfMessageToLog`는256K입니다. 이 특성에 대한 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]는 기타 옵션 단원을 참조하십시오.  
+ 잘못된 형식의 메시지란 모든 처리 단계에서 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 스택에 의해 거부된 메시지를 말합니다. 이러한 잘못된 형식의 메시지는 암호화된 상태라면 암호화된 상태로, 적절하지 않은 XML로 된 상태라면 그 상태 그대로 기록됩니다. `maxSizeOfMessageToLog`는 CDATA로 기록될 메시지 크기를 정의합니다. 기본적으로 `maxSizeOfMessageToLog`는256K입니다. 이 특성에 대 한 자세한 내용은 기타 옵션 단원을 참조 하십시오.  
   
 ### <a name="other-options"></a>기타 옵션  
  로깅 수준 이외에 다음과 같은 옵션을 지정할 수 있습니다.  

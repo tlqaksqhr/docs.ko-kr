@@ -1,33 +1,35 @@
 ---
-title: "POX 응용 프로그램과의 상호 운용성"
-ms.custom: 
+title: POX 응용 프로그램과의 상호 운용성
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 449276b8-4633-46f0-85c9-81f01d127636
-caps.latest.revision: "15"
+caps.latest.revision: 15
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 8cb7e209397e593ae1fd81c2bc2552e54a32adf0
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 42f6bbb1a5605bd0a604f5cfe31ce5ea48d9bb10
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="interoperability-with-pox-applications"></a>POX 응용 프로그램과의 상호 운용성
 "Plain Old XML" (POX) 응용 프로그램은 SOAP 봉투 내에 포함 되지 않은 XML 응용 프로그램 데이터만 포함 하는 원시 HTTP 메시지를 교환 하 여 통신 합니다. [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]는 POX 메시지를 사용하는 서비스 및 클라이언트 모두를 제공할 수 있습니다. 서비스의 경우 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]를 사용하여 POX 메시지를 보내고 받는 스크립팅 언어 및 웹 브라우저와 같은 클라이언트에 끝점을 노출하는 서비스를 구현할 수 있습니다. 클라이언트의 경우 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 프로그래밍 모델을 사용하여 POX 기반 서비스와 통신하는 클라이언트를 구현할 수 있습니다.  
   
 > [!NOTE]
->  이 문서는 원래 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 3.0용으로 작성되었습니다.  [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 3.5는 POX 응용 프로그램 작업에 대한 지원을 기본적으로 제공합니다. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]참조 [WCF 웹 HTTP 프로그래밍 모델](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)  
+>  이 문서는 원래 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 3.0용으로 작성되었습니다.  [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 3.5는 POX 응용 프로그램 작업에 대한 지원을 기본적으로 제공합니다. 참조에 대 한 자세한 내용은 [WCF 웹 HTTP 프로그래밍 모델](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)  
   
 ## <a name="pox-programming-with-wcf"></a>WCF를 사용한 POX 프로그래밍  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]POX 메시지를 사용 하 여 HTTP를 통해 통신 하는 서비스는 [ \<customBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)합니다.  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] POX 메시지를 사용 하 여 HTTP를 통해 통신 하는 서비스는 [ \<customBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)합니다.  
   
 ```xml  
 <customBinding>  
@@ -67,7 +69,7 @@ private static Binding CreatePoxBinding()
   
 -   <xref:System.ServiceModel.Channels.HttpResponseMessageProperty>, 여기에는 HTTP 응답 헤더뿐만 아니라 HTTP 상태 코드 및 상태 설명과 같은 HTTP 응답에 대한 정보가 포함됩니다.  
   
- 다음 코드 예제에서는 http://localhost:8100/customers 주소로 지정된 HTTP GET 요청 메시지를 만드는 방법을 보여 줍니다.  
+ 다음 코드 예제에서는 주소가 지정 된 HTTP GET 요청 메시지를 만드는 방법을 보여 줍니다. http://localhost:8100/customers합니다.  
   
 ```  
 Message request = Message.CreateMessage( MessageVersion.None, String.Empty );  

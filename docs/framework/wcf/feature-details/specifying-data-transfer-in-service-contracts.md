@@ -21,11 +21,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: fc64ff14c321bd2053b0a97b3cf1ac075b02e973
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 852519dc1edc499511652f4027f4cd4eed6eef98
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="specifying-data-transfer-in-service-contracts"></a>서비스 계약에서 데이터 전송 지정
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]는 메시징 인프라로 생각할 수 있습니다. 서비스 작업에서는 메시지를 받고 처리한 다음 보낼 수 있습니다. 메시지는 작업 계약을 사용하여 설명됩니다. 다음 계약을 예로 들 수 있습니다.  
@@ -453,7 +453,7 @@ End Class
  여러 가지 방법으로 데이터를 serialize하는 방법을 사용자 지정할 수 있습니다.  
   
 ### <a name="changing-server-serialization-settings"></a>서버 Serialization 설정 변경  
- 기본 <xref:System.Runtime.Serialization.DataContractSerializer>가 사용 중인 경우 <xref:System.ServiceModel.ServiceBehaviorAttribute> 특성을 서비스에 적용하여 서비스에서 serialization 프로세스의 몇 가지 특성을 제어할 수 있습니다. 특히 `MaxItemsInObjectGraph` 속성을 사용하여 <xref:System.Runtime.Serialization.DataContractSerializer>가 deserialize하는 개체의 최대 개수를 제한하는 할당량을 설정할 수도 있습니다. `IgnoreExtensionDataObject` 속성을 사용하여 라운드트립 버전 관리 기능을 해제할 수 있습니다. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 할당량, 참조 [데이터에 대 한 보안 고려 사항](../../../../docs/framework/wcf/feature-details/security-considerations-for-data.md)합니다. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 라운드트립에, 참조 [이후 버전과 호환 데이터 계약](../../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md)합니다.  
+ 기본 <xref:System.Runtime.Serialization.DataContractSerializer>가 사용 중인 경우 <xref:System.ServiceModel.ServiceBehaviorAttribute> 특성을 서비스에 적용하여 서비스에서 serialization 프로세스의 몇 가지 특성을 제어할 수 있습니다. 특히 `MaxItemsInObjectGraph` 속성을 사용하여 <xref:System.Runtime.Serialization.DataContractSerializer>가 deserialize하는 개체의 최대 개수를 제한하는 할당량을 설정할 수도 있습니다. `IgnoreExtensionDataObject` 속성을 사용하여 라운드트립 버전 관리 기능을 해제할 수 있습니다. 할당량에 대 한 자세한 내용은 참조 [데이터에 대 한 보안 고려 사항](../../../../docs/framework/wcf/feature-details/security-considerations-for-data.md)합니다. 라운드트립에 대 한 자세한 내용은 참조 하십시오. [이후 버전과 호환 데이터 계약](../../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md)합니다.  
   
 ```csharp  
 [ServiceBehavior(MaxItemsInObjectGraph=100000)]  
@@ -585,7 +585,7 @@ Dim serviceHost As ServiceHost = New ServiceHost(GetType(IDataService))
   
 3.  서비스 호스트를 열거나 클라이언트 채널을 만들기 전에 기존 <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior> 동작을 제거하고 이전 단계에서 만든 사용자 지정 파생 클래스에 연결합니다.  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 고급 serialization 개념, 참조 [Serialization 및 Deserialization](../../../../docs/framework/wcf/feature-details/serialization-and-deserialization.md)합니다.  
+ 고급 serialization 개념에 대 한 자세한 내용은 참조 [Serialization 및 Deserialization](../../../../docs/framework/wcf/feature-details/serialization-and-deserialization.md)합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [XmlSerializer 클래스 사용](../../../../docs/framework/wcf/feature-details/using-the-xmlserializer-class.md)  

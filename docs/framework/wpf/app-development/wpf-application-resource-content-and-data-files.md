@@ -1,12 +1,13 @@
 ---
-title: "WPF 응용 프로그램 리소스, 콘텐츠 및 데이터 파일"
-ms.custom: 
+title: WPF 응용 프로그램 리소스, 콘텐츠 및 데이터 파일
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -24,19 +25,20 @@ helpviewer_keywords:
 - application development [WPF], files
 - application management [WPF]
 ms.assetid: 7ad2943b-3961-41d3-8fc6-1582d43f5d99
-caps.latest.revision: "25"
+caps.latest.revision: 25
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 284c3b6788fd43a10d65cfa8bd6c032e4b1e1cd6
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: bcf0a725b7b3467a50a9f51850709dd972da217d
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="wpf-application-resource-content-and-data-files"></a>WPF 응용 프로그램 리소스, 콘텐츠 및 데이터 파일
-[!INCLUDE[TLA#tla_win](../../../../includes/tlasharptla-win-md.md)]응용 프로그램은 종종 실행 파일이 아닌 데이터와 같은 포함 된 파일 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)], 이미지, 비디오 및 오디오 합니다. [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)]에서는 응용 프로그램 데이터 파일이라고 하는 이러한 유형의 데이터 파일을 구성하고, 식별하고, 사용할 수 있도록 하는 특별한 지원을 제공합니다. 이러한 지원에는 다음을 포함한 특정 응용 프로그램 데이터 파일 형식 집합이 포함됩니다.  
+[!INCLUDE[TLA#tla_win](../../../../includes/tlasharptla-win-md.md)] 응용 프로그램은 종종 실행 파일이 아닌 데이터와 같은 포함 된 파일 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)], 이미지, 비디오 및 오디오 합니다. Windows Presentation Foundation (WPF)를 구성 하 고 식별 하 고, 이러한 종류의 응용 프로그램 데이터 파일 이라고 하는 데이터 파일을 사용 하 여 특별 한 지원을 제공 합니다. 이러한 지원에는 다음을 포함한 특정 응용 프로그램 데이터 파일 형식 집합이 포함됩니다.  
   
 -   **리소스 파일**: 실행 파일 또는 라이브러리에 컴파일되는 데이터 파일 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 어셈블리입니다.  
   
@@ -46,7 +48,7 @@ ms.lasthandoff: 12/22/2017
   
  이 세 가지 파일 형식을 구분하는 한 가지 중요한 차이점은 리소스 파일과 콘텐츠 파일은 빌드할 때 인식된다는 점입니다. 어셈블리는 명시적으로 이 파일을 인식합니다. 그러나 원본 사이트에 대 한 어셈블리 있을 수 알지 전혀 또는 팩을 통해 암시적으로 인식 [!INCLUDE[TLA#tla_uri](../../../../includes/tlasharptla-uri-md.md)] 참조입니다; 두 번째의 경우 원본 파일의 참조 된 사이트 실제로 있는지는 보장 되지 않습니다.  
   
- 응용 프로그램 데이터 파일을 참조 하려면 [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] 에서 팩을 사용 하 여 [!INCLUDE[TLA#tla_uri](../../../../includes/tlasharptla-uri-md.md)] 에서 자세히 설명 된 체계 [WPF의 Pack Uri](../../../../docs/framework/wpf/app-development/pack-uris-in-wpf.md)).  
+ Windows Presentation Foundation (WPF) 응용 프로그램 데이터 파일을 참조 하려면 해당 팩을 사용 하 [!INCLUDE[TLA#tla_uri](../../../../includes/tlasharptla-uri-md.md)] 에서 자세히 설명 된 체계 [WPF의 Pack Uri](../../../../docs/framework/wpf/app-development/pack-uris-in-wpf.md)).  
   
  이 항목에서는 응용 프로그램 데이터 파일을 구성하고 사용하는 방법을 설명합니다.  
   
@@ -85,7 +87,7 @@ ms.lasthandoff: 12/22/2017
  프로젝트를 빌드할 때 [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] 리소스에서 어셈블리를 컴파일합니다.  
   
 ### <a name="using-resource-files"></a>리소스 파일 사용  
- 리소스 파일을 로드 하려면 호출할 수 있습니다는 <xref:System.Windows.Application.GetResourceStream%2A> 의 메서드는 <xref:System.Windows.Application> 팩을 전달 하는 클래스, [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] 원하는 리소스 파일을 나타내는입니다. <xref:System.Windows.Application.GetResourceStream%2A>반환는 <xref:System.Windows.Resources.StreamResourceInfo> 으로 리소스 파일을 노출 하는 개체는 <xref:System.IO.Stream> 고 해당 콘텐츠 형식을 설명 합니다.  
+ 리소스 파일을 로드 하려면 호출할 수 있습니다는 <xref:System.Windows.Application.GetResourceStream%2A> 의 메서드는 <xref:System.Windows.Application> 팩을 전달 하는 클래스, [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] 원하는 리소스 파일을 나타내는입니다. <xref:System.Windows.Application.GetResourceStream%2A> 반환는 <xref:System.Windows.Resources.StreamResourceInfo> 으로 리소스 파일을 노출 하는 개체는 <xref:System.IO.Stream> 고 해당 콘텐츠 형식을 설명 합니다.  
   
  예를 들어, 다음 코드를 사용 하는 방법을 보여 줍니다 <xref:System.Windows.Application.GetResourceStream%2A> 로드 하는 <xref:System.Windows.Controls.Page> 리소스 파일의 내용으로 설정 하 고는 <xref:System.Windows.Controls.Frame> (`pageFrame`):  
   
@@ -165,7 +167,7 @@ ms.lasthandoff: 12/22/2017
  <xref:System.Windows.Resources.AssemblyAssociatedContentFileAttribute> 값의 빌드 출력 폴더의 콘텐츠 파일에 대 한 경로의 값 이기도 합니다.  
   
 ### <a name="using-content-files"></a>콘텐츠 파일 사용  
- 콘텐츠 파일을 로드 하려면 호출할 수 있습니다는 <xref:System.Windows.Application.GetContentStream%2A> 의 메서드는 <xref:System.Windows.Application> 팩을 전달 하는 클래스, [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] 원하는 콘텐츠 파일을 식별 하는 합니다. <xref:System.Windows.Application.GetContentStream%2A>반환는 <xref:System.Windows.Resources.StreamResourceInfo> 으로 콘텐츠 파일을 노출 하는 개체는 <xref:System.IO.Stream> 고 해당 콘텐츠 형식을 설명 합니다.  
+ 콘텐츠 파일을 로드 하려면 호출할 수 있습니다는 <xref:System.Windows.Application.GetContentStream%2A> 의 메서드는 <xref:System.Windows.Application> 팩을 전달 하는 클래스, [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] 원하는 콘텐츠 파일을 식별 하는 합니다. <xref:System.Windows.Application.GetContentStream%2A> 반환는 <xref:System.Windows.Resources.StreamResourceInfo> 으로 콘텐츠 파일을 노출 하는 개체는 <xref:System.IO.Stream> 고 해당 콘텐츠 형식을 설명 합니다.  
   
  예를 들어, 다음 코드를 사용 하는 방법을 보여 줍니다 <xref:System.Windows.Application.GetContentStream%2A> 로드 하는 <xref:System.Windows.Controls.Page> 콘텐츠 파일의 내용으로 설정 하 고는 <xref:System.Windows.Controls.Frame> (`pageFrame`).  
   
@@ -227,7 +229,7 @@ ms.lasthandoff: 12/22/2017
  프로젝트를 빌드할 때 [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] 빌드 출력 폴더에 지정 된 파일을 복사 합니다.  
   
 ### <a name="using-site-of-origin-files"></a>원본 사이트 파일 사용  
- 사이트 원본 파일을 로드 하려면 호출할 수 있습니다는 <xref:System.Windows.Application.GetRemoteStream%2A> 의 메서드는 <xref:System.Windows.Application> 팩을 전달 하는 클래스, [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] 원본 파일의 원하는 사이트를 식별 하는 합니다. <xref:System.Windows.Application.GetRemoteStream%2A>반환는 <xref:System.Windows.Resources.StreamResourceInfo> 사이트의 원본 파일을 노출 하는 개체는 <xref:System.IO.Stream> 고 해당 콘텐츠 형식을 설명 합니다.  
+ 사이트 원본 파일을 로드 하려면 호출할 수 있습니다는 <xref:System.Windows.Application.GetRemoteStream%2A> 의 메서드는 <xref:System.Windows.Application> 팩을 전달 하는 클래스, [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] 원본 파일의 원하는 사이트를 식별 하는 합니다. <xref:System.Windows.Application.GetRemoteStream%2A> 반환는 <xref:System.Windows.Resources.StreamResourceInfo> 사이트의 원본 파일을 노출 하는 개체는 <xref:System.IO.Stream> 고 해당 콘텐츠 형식을 설명 합니다.  
   
  예를 들어, 다음 코드를 사용 하는 방법을 보여 줍니다 <xref:System.Windows.Application.GetRemoteStream%2A> 로드 하는 <xref:System.Windows.Controls.Page> 원본 사이트의 내용으로 설정 하 고 파일는 <xref:System.Windows.Controls.Frame> (`pageFrame`).  
   

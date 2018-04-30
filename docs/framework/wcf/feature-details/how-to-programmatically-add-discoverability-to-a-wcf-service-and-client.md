@@ -1,24 +1,26 @@
 ---
-title: "방법: 프로그래밍 방식으로 WCF 서비스 및 클라이언트에 검색 기능 추가"
-ms.custom: 
+title: '방법: 프로그래밍 방식으로 WCF 서비스 및 클라이언트에 검색 기능 추가'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 4f7ae7ab-6fc8-4769-9730-c14d43f7b9b1
-caps.latest.revision: "13"
+caps.latest.revision: 13
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a0a59788544a32b78e75ac25e787dcbae478451e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 3c0da3598b115df4f135ac3fab516447df85e258
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="how-to-programmatically-add-discoverability-to-a-wcf-service-and-client"></a>방법: 프로그래밍 방식으로 WCF 서비스 및 클라이언트에 검색 기능 추가
 이 항목에서는 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 서비스를 검색 가능하게 만드는 방법에 대해 설명하며, 에 기반 하는 고 [자체 호스트](http://go.microsoft.com/fwlink/?LinkId=145523) 샘플.  
@@ -230,8 +232,8 @@ ms.lasthandoff: 12/22/2017
     Press <ENTER> to exit.  
     ```  
   
-## <a name="example"></a>예  
- 다음은 이 샘플의 코드 목록입니다. 이 코드에 기반 하므로 [자체 호스트](http://go.microsoft.com/fwlink/?LinkId=145523) 샘플에 변경 된 파일이 나열 됩니다. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]자체 호스팅 샘플 참조 [설치 지침은](http://go.microsoft.com/fwlink/?LinkId=145522)합니다.  
+## <a name="example"></a>예제  
+ 다음은 이 샘플의 코드 목록입니다. 이 코드에 기반 하므로 [자체 호스트](http://go.microsoft.com/fwlink/?LinkId=145523) 샘플에 변경 된 파일이 나열 됩니다. 자체 호스팅 샘플에 대 한 자세한 내용은 참조 [설치 지침은](http://go.microsoft.com/fwlink/?LinkId=145522)합니다.  
   
 ```csharp  
 // Service.cs  

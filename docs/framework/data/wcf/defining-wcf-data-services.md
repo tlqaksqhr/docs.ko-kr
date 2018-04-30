@@ -1,31 +1,31 @@
 ---
-title: "WCF Data Services 정의"
-ms.custom: 
+title: WCF Data Services 정의
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework-oob
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - WCF Data Services, configuring
 ms.assetid: 05006ff3-02dc-410e-831e-54ec3e7e24ef
-caps.latest.revision: 
+caps.latest.revision: 5
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 61b04be25f54ef22511f45b5752c3ccfa90d94ac
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 569f2e16cca7ec6dbfbe83cce5a597be37bce8e0
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="defining-wcf-data-services"></a>WCF Data Services 정의
-이 섹션을 만들고 구성 하는 방법을 설명 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 으로 데이터를 노출 하는 [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] 피드입니다. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]참조 데이터 서비스를 만드는 데 필요한 기본 단계 [서비스로 데이터 노출](../../../../docs/framework/data/wcf/exposing-your-data-as-a-service-wcf-data-services.md)합니다.  
+이 섹션을 만들고 구성 하는 방법을 설명 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 으로 데이터를 노출 하는 [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] 피드입니다. 참조 데이터 서비스를 만드는 데 필요한 기본 단계에 대 한 자세한 내용은 [서비스로 데이터 노출](../../../../docs/framework/data/wcf/exposing-your-data-as-a-service-wcf-data-services.md)합니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
  [데이터 서비스 구성](../../../../docs/framework/data/wcf/configuring-the-data-service-wcf-data-services.md)  

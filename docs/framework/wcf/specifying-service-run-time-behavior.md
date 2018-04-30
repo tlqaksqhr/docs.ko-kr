@@ -1,35 +1,37 @@
 ---
-title: "서비스 런타임 동작 지정"
-ms.custom: 
+title: 서비스 런타임 동작 지정
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 5c5450ea-6af1-4b75-a267-613d0ac54707
-caps.latest.revision: "12"
+caps.latest.revision: 12
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: c2c1534b161f81fa90dce52c825b0417dc8fd35d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: e45c35d0b19833b6fd43c7fd5794ecf8bd3a9769
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="specifying-service-run-time-behavior"></a>서비스 런타임 동작 지정
-서비스 계약을 디자인([Designing Service Contracts](../../../docs/framework/wcf/designing-service-contracts.md)) 서비스 계약을 구현([Implementing Service Contracts](../../../docs/framework/wcf/implementing-service-contracts.md))했으면 서비스 런타임의 작업 동작을 구성할 수 있습니다. 이 항목에서는 시스템 제공 서비스와 작업 동작에 대해 설명하고, 새 동작을 만들기 위해 추가 정보를 찾을 수 있는 위치에 대해 설명합니다. 일부 동작은 특성으로 적용되지만 대부분은 응용 프로그램 구성 파일을 사용하여 적용되거나 프로그래밍 방식으로 적용됩니다. [!INCLUDE[crabout](../../../includes/crabout-md.md)] 는 [Configuring Services](../../../docs/framework/wcf/configuring-services.md)를 참조하세요.  
+서비스 계약을 디자인([Designing Service Contracts](../../../docs/framework/wcf/designing-service-contracts.md)) 서비스 계약을 구현([Implementing Service Contracts](../../../docs/framework/wcf/implementing-service-contracts.md))했으면 서비스 런타임의 작업 동작을 구성할 수 있습니다. 이 항목에서는 시스템 제공 서비스와 작업 동작에 대해 설명하고, 새 동작을 만들기 위해 추가 정보를 찾을 수 있는 위치에 대해 설명합니다. 일부 동작은 특성으로 적용되지만 대부분은 응용 프로그램 구성 파일을 사용하여 적용되거나 프로그래밍 방식으로 적용됩니다. 서비스 응용 프로그램을 구성 하는 방법에 대 한 자세한 내용은 참조 [서비스 구성](../../../docs/framework/wcf/configuring-services.md)합니다.  
   
 ## <a name="overview"></a>개요  
  계약은 해당 형식의 서비스 입력, 출력, 데이터 형식 및 기능을 정의합니다. 서비스 계약을 구현하면 주소에서 바인딩으로 구성된 경우 구현한 계약을 이행하는 클래스가 만들어집니다. 클라이언트에서는 계약, 바인딩 및 주소 정보를 모두 알고 있습니다. 이러한 정보가 없으면 클라이언트는 서비스를 사용할 수 없습니다.  
   
- 그러나 스레딩 문제 또는 인스턴스 관리와 같은 특정 작업은 클라이언트에 불분명합니다. 서비스 계약을 구현한 경우에는 *동작*을 사용하여 여러 개의 작업 특징을 구성할 수 있습니다. 동작은 런타임 속성을 설정하거나 사용자 지정 형식을 런타임에 삽입하여 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 런타임을 수정하는 개체입니다. [!INCLUDE[crabout](../../../includes/crabout-md.md)] 는 [Extending ServiceHost and the Service Model Layer](../../../docs/framework/wcf/extending/extending-servicehost-and-the-service-model-layer.md)를 참조하세요.  
+ 그러나 스레딩 문제 또는 인스턴스 관리와 같은 특정 작업은 클라이언트에 불분명합니다. 서비스 계약을 구현한 경우에는 *동작*을 사용하여 여러 개의 작업 특징을 구성할 수 있습니다. 동작은 런타임 속성을 설정하거나 사용자 지정 형식을 런타임에 삽입하여 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 런타임을 수정하는 개체입니다. 사용자 정의 동작을 만들어 런타임에 수정 하는 방법에 대 한 자세한 내용은 참조 [확장 ServiceHost 및 서비스 모델 계층](../../../docs/framework/wcf/extending/extending-servicehost-and-the-service-model-layer.md)합니다.  
   
  <xref:System.ServiceModel.ServiceBehaviorAttribute?displayProperty=nameWithType> 및 <xref:System.ServiceModel.OperationBehaviorAttribute?displayProperty=nameWithType> 특성은 가장 널리 쓰이는 유용한 동작이며, 가장 일반적으로 요청되는 작업 기능을 노출합니다. 이들은 특성이기 때문에 서비스 또는 작업 구현에 적용합니다. <xref:System.ServiceModel.Description.ServiceMetadataBehavior?displayProperty=nameWithType> 또는 <xref:System.ServiceModel.Description.ServiceDebugBehavior?displayProperty=nameWithType> 등의 다른 동작은 프로그래밍 방식으로 사용될 수 있긴 하지만 일반적으로 응용 프로그램 구성 파일을 사용하여 적용됩니다.  
   

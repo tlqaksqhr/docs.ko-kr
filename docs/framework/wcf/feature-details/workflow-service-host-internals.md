@@ -1,24 +1,26 @@
 ---
-title: "워크플로 서비스 호스트 내부 기능"
-ms.custom: 
+title: 워크플로 서비스 호스트 내부 기능
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: af44596f-bf6a-4149-9f04-08d8e8f45250
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 6761c044f166105a2e463d0f89ed0b3813d4b97a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 84bd0c5b93984e126019699caf64a61183c08f13
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="workflow-service-host-internals"></a>워크플로 서비스 호스트 내부 기능
 <xref:System.ServiceModel.WorkflowServiceHost>에서는 워크플로 서비스에 대한 호스트를 제공합니다. 들어오는 메시지를 수신 대기하여 적절한 워크플로 서비스 인스턴스로 라우팅하고 유휴 워크플로의 언로드 및 유지를 제어하는 등의 작업을 담당합니다. 이 항목에서는 WorkflowServiceHost가 들어오는 메시지를 처리하는 방법을 설명합니다.  
@@ -37,7 +39,7 @@ ms.lasthandoff: 12/22/2017
   
  ![워크플로 서비스 호스트 메시지 흐름](../../../../docs/framework/wcf/feature-details/media/wfshmessageflow.gif "WFSHMessageFlow")  
   
- 이 다이어그램에서는 세 가지 끝점인 응용 프로그램 끝점, 워크플로 제어 끝점 및 워크플로 호스팅 끝점을 보여 줍니다. 응용 프로그램 끝점은 특정 워크플로 인스턴스에 바인딩된 메시지를 받습니다. 워크플로 제어 끝점은 제어 작업을 수신 대기합니다. 워크플로 호스팅 끝점은 <xref:System.ServiceModel.WorkflowServiceHost>가 서비스가 아닌 워크플로를 로드하고 실행하도록 하는 메시지를 수신 대기합니다. 다이어그램에 나와 있듯이 모든 메시지는 WCF 런타임을 통해 처리됩니다.  워크플로 서비스 인스턴스 제한은 <xref:System.ServiceModel.Description.ServiceThrottlingBehavior.MaxConcurrentInstances%2A> 속성을 사용하여 구현됩니다. 이 속성은 동시 워크플로 서비스 인스턴스 수를 제한합니다. 이 제한을 초과하면 새 워크플로 서비스 인스턴스에 대한 추가 요청이나 지속형 워크플로 인스턴스 활성화 요청이 큐에 저장됩니다. 큐에 대기 중인 요청은 새 인스턴스에 대한 요청인지, 실행 중인 지속형 인스턴스에 대한 요청인지에 관계없이 FIFO 순서대로 처리됩니다. 처리되지 않은 예외가 처리되는 방법과 유휴 워크플로 서비스가 언로드되고 지속되는 방법을 결정하는 호스트 정책 정보가 로드됩니다. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]이러한 항목을 참조 [하는 방법: 워크플로 처리 되지 않은 예외 동작 구성 WorkflowServiceHost로](../../../../docs/framework/wcf/feature-details/config-workflow-unhandled-exception-workflowservicehost.md) 및 [하는 방법: WorkflowServiceHost로 유휴 동작 구성](../../../../docs/framework/wcf/feature-details/how-to-configure-idle-behavior-with-workflowservicehost.md)합니다. 워크플로 인스턴스는 호스트 정책에 따라 유지되고 필요한 경우 다시 로드됩니다. 워크플로 지 속성에 대 한 자세한 내용은 참조: [하는 방법: WorkflowServiceHost로 지 속성 구성](../../../../docs/framework/wcf/feature-details/how-to-configure-persistence-with-workflowservicehost.md), [장기 실행 워크플로 서비스를 만드는](../../../../docs/framework/wcf/feature-details/creating-a-long-running-workflow-service.md), 및 [워크플로 지 속성 ](../../../../docs/framework/windows-workflow-foundation/workflow-persistence.md).  
+ 이 다이어그램에서는 세 가지 끝점인 응용 프로그램 끝점, 워크플로 제어 끝점 및 워크플로 호스팅 끝점을 보여 줍니다. 응용 프로그램 끝점은 특정 워크플로 인스턴스에 바인딩된 메시지를 받습니다. 워크플로 제어 끝점은 제어 작업을 수신 대기합니다. 워크플로 호스팅 끝점은 <xref:System.ServiceModel.WorkflowServiceHost>가 서비스가 아닌 워크플로를 로드하고 실행하도록 하는 메시지를 수신 대기합니다. 다이어그램에 나와 있듯이 모든 메시지는 WCF 런타임을 통해 처리됩니다.  워크플로 서비스 인스턴스 제한은 <xref:System.ServiceModel.Description.ServiceThrottlingBehavior.MaxConcurrentInstances%2A> 속성을 사용하여 구현됩니다. 이 속성은 동시 워크플로 서비스 인스턴스 수를 제한합니다. 이 제한을 초과하면 새 워크플로 서비스 인스턴스에 대한 추가 요청이나 지속형 워크플로 인스턴스 활성화 요청이 큐에 저장됩니다. 큐에 대기 중인 요청은 새 인스턴스에 대한 요청인지, 실행 중인 지속형 인스턴스에 대한 요청인지에 관계없이 FIFO 순서대로 처리됩니다. 처리되지 않은 예외가 처리되는 방법과 유휴 워크플로 서비스가 언로드되고 지속되는 방법을 결정하는 호스트 정책 정보가 로드됩니다. 이러한 항목에 대 한 자세한 내용은 참조 [하는 방법: 워크플로 처리 되지 않은 예외 동작 구성 WorkflowServiceHost로](../../../../docs/framework/wcf/feature-details/config-workflow-unhandled-exception-workflowservicehost.md) 및 [하는 방법: WorkflowServiceHost로 유휴 동작 구성](../../../../docs/framework/wcf/feature-details/how-to-configure-idle-behavior-with-workflowservicehost.md)합니다. 워크플로 인스턴스는 호스트 정책에 따라 유지되고 필요한 경우 다시 로드됩니다. 워크플로 지 속성에 대 한 자세한 내용은 참조: [하는 방법: WorkflowServiceHost로 지 속성 구성](../../../../docs/framework/wcf/feature-details/how-to-configure-persistence-with-workflowservicehost.md), [장기 실행 워크플로 서비스를 만드는](../../../../docs/framework/wcf/feature-details/creating-a-long-running-workflow-service.md), 및 [워크플로 지 속성 ](../../../../docs/framework/windows-workflow-foundation/workflow-persistence.md).  
   
  다음 그림에서는 WorkflowServiceHost.Open이 호출될 때 일어나는 상황을 보여 줍니다.  
   

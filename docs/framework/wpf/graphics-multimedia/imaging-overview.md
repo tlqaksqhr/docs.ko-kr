@@ -1,12 +1,13 @@
 ---
-title: "이미징 개요"
-ms.custom: 
+title: 이미징 개요
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -28,16 +29,17 @@ helpviewer_keywords:
 - decoding image formats [WPF]
 - rotating images [WPF]
 ms.assetid: 72aad87a-e6f3-4937-94cd-a18b7766e990
-caps.latest.revision: "32"
+caps.latest.revision: 32
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: c7d0a880dd30fe737a1bd4d1368dde16ed0df1e3
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 8715f04f6cdec84e74d53213c0a5a5ff360c7d28
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="imaging-overview"></a>이미징 개요
 이 항목에서는 [!INCLUDE[TLA#tla_wic](../../../../includes/tlasharptla-wic-md.md)]를 소개합니다. [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)]를 사용하여 개발자는 이미지를 표시 및 변환하고 서식을 지정할 수 있습니다.  
@@ -61,7 +63,7 @@ ms.lasthandoff: 12/22/2017
   
 -   파일 내 독점 메타데이터에 대한 지원  
   
--   관리되는 구성 요소는 관리되지 않는 인프라를 활용하여 [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)], 애니메이션 및 그래픽 등의 기타 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 기능에 이미지를 원활하게 통합할 수 있도록 합니다. 또한 관리되는 구성 요소는 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 응용 프로그램에서 새 이미지를 자동으로 인식할 수 있도록 하는 [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] 이미징 코덱 확장성 모델을 활용합니다.  
+-   관리되는 구성 요소는 관리되지 않는 인프라를 활용하여 [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)], 애니메이션 및 그래픽 등의 기타 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 기능에 이미지를 원활하게 통합할 수 있도록 합니다. 관리 되는 구성 요소는 Windows Presentation Foundation (WPF) 이미징 코덱에 확장성 모델을 자동으로 새로운 이미지 형식 인식에서 점은 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 응용 프로그램입니다.  
   
  대부분의 관리 되는 [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)] [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] 에 <xref:System.Windows.Media.Imaging?displayProperty=nameWithType> 네임 스페이스와 같은 몇 가지 중요 한 형식은 있지만 <xref:System.Windows.Media.ImageBrush> 및 <xref:System.Windows.Media.ImageDrawing> 에 <xref:System.Windows.Media?displayProperty=nameWithType> 네임 스페이스 및 <xref:System.Windows.Controls.Image> 는 에있는<xref:System.Windows.Controls?displayProperty=nameWithType> 네임 스페이스입니다.  
   
@@ -71,7 +73,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="wpf-image-formats"></a>WPF 이미지 형식  
  코덱은 특정 미디어 형식을 인코딩하거나 디코딩하는 데 사용됩니다. [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)]는 [!INCLUDE[TLA2#tla_bmp](../../../../includes/tla2sharptla-bmp-md.md)], [!INCLUDE[TLA2#tla_jpeg](../../../../includes/tla2sharptla-jpeg-md.md)], [!INCLUDE[TLA2#tla_png](../../../../includes/tla2sharptla-png-md.md)], [!INCLUDE[TLA2#tla_tiff](../../../../includes/tla2sharptla-tiff-md.md)], [!INCLUDE[TLA2#tla_wdp](../../../../includes/tla2sharptla-wdp-md.md)], [!INCLUDE[TLA2#tla_gif](../../../../includes/tla2sharptla-gif-md.md)] 및 ICON 이미지 형식에 대한 코덱을 포함합니다. 이러한 각 코덱을 사용하여 응용 프로그램은 ICON을 제외한 해당 이미지 형식을 디코딩 및 인코딩할 수 있습니다.  
   
- <xref:System.Windows.Media.Imaging.BitmapSource>중요 한 클래스 디코딩 및 인코딩 이미지에 사용 됩니다. [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)] 파이프라인의 기본 구성 요소이며 픽셀의 단일 상수 집합을 특정 크기 및 해상도로 나타냅니다. A <xref:System.Windows.Media.Imaging.BitmapSource> 개별 프레임의 다중 프레임 이미지 될 수 있습니다 또는에서 수행 된 변환의 결과 수는 <xref:System.Windows.Media.Imaging.BitmapSource>합니다. 많은에 사용 되는 기본 클래스의 부모인 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 같은 이미징 <xref:System.Windows.Media.Imaging.BitmapFrame>합니다.  
+ <xref:System.Windows.Media.Imaging.BitmapSource> 중요 한 클래스 디코딩 및 인코딩 이미지에 사용 됩니다. [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)] 파이프라인의 기본 구성 요소이며 픽셀의 단일 상수 집합을 특정 크기 및 해상도로 나타냅니다. A <xref:System.Windows.Media.Imaging.BitmapSource> 개별 프레임의 다중 프레임 이미지 될 수 있습니다 또는에서 수행 된 변환의 결과 수는 <xref:System.Windows.Media.Imaging.BitmapSource>합니다. 많은에 사용 되는 기본 클래스의 부모인 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 같은 이미징 <xref:System.Windows.Media.Imaging.BitmapFrame>합니다.  
   
  A <xref:System.Windows.Media.Imaging.BitmapFrame> 이미지 형식의 실제 비트맵 데이터를 저장 하는 데 사용 됩니다. 다양 한 이미지 형식에는 단일만 지원 <xref:System.Windows.Media.Imaging.BitmapFrame>하지만, 같은 형식 [!INCLUDE[TLA2#tla_gif](../../../../includes/tla2sharptla-gif-md.md)] 및 [!INCLUDE[TLA2#tla_tiff](../../../../includes/tla2sharptla-tiff-md.md)] 이미지 당 여러 프레임을 지원 합니다. 프레임은 디코더에서 입력 데이터로 사용되고 이미지 파일을 만들기 위해 인코더에 전달됩니다.  
   
@@ -100,25 +102,25 @@ ms.lasthandoff: 12/22/2017
   
 <a name="_displayingimages"></a>   
 ## <a name="displaying-images-in-wpf"></a>WPF로 이미지 표시  
- [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] 응용 프로그램에서 이미지를 표시하는 방법에는 몇 가지가 있습니다. 사용 하 여 이미지를 표시할 수 있습니다는 <xref:System.Windows.Controls.Image> 컨트롤을 사용 하는 visual에 그릴는 <xref:System.Windows.Media.ImageBrush>, 또는 사용 하 여 그린는 <xref:System.Windows.Media.ImageDrawing>합니다.  
+ Windows Presentation Foundation (WPF) 응용 프로그램에서 이미지를 표시 하는 방법은 여러 가지가 있습니다. 사용 하 여 이미지를 표시할 수 있습니다는 <xref:System.Windows.Controls.Image> 컨트롤을 사용 하는 visual에 그릴는 <xref:System.Windows.Media.ImageBrush>, 또는 사용 하 여 그린는 <xref:System.Windows.Media.ImageDrawing>합니다.  
   
 ### <a name="using-the-image-control"></a>Image 컨트롤 사용  
- <xref:System.Windows.Controls.Image>프레임 워크 요소 및 응용 프로그램에서 이미지를 표시 하는 기본적인 방법은 됩니다. [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], <xref:System.Windows.Controls.Image> 두 가지 방법으로; 특성 구문 또는 속성 구문을 사용할 수 있습니다. 다음 예제에서는 특성 구문 및 속성 태그 구문 둘 다를 사용하여 200픽셀 너비의 이미지를 렌더링하는 방법을 보여 줍니다. 특성 구문 및 속성 구문에 대한 자세한 내용은 [종속성 속성 개요](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)를 참조하세요.  
+ <xref:System.Windows.Controls.Image> 프레임 워크 요소 및 응용 프로그램에서 이미지를 표시 하는 기본적인 방법은 됩니다. [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], <xref:System.Windows.Controls.Image> 두 가지 방법으로; 특성 구문 또는 속성 구문을 사용할 수 있습니다. 다음 예제에서는 특성 구문 및 속성 태그 구문 둘 다를 사용하여 200픽셀 너비의 이미지를 렌더링하는 방법을 보여 줍니다. 특성 구문 및 속성 구문에 대한 자세한 내용은 [종속성 속성 개요](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)를 참조하세요.  
   
  [!code-xaml[ImageElementExample_snip#ImageSimpleExampleInlineMarkup](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ImageElementExample_snip/CSharp/ImageSimpleExample.xaml#imagesimpleexampleinlinemarkup)]  
   
- 많은 예제를 사용 하는 <xref:System.Windows.Media.Imaging.BitmapImage> 이미지 파일을 참조할 개체입니다. <xref:System.Windows.Media.Imaging.BitmapImage>특수화 된 <xref:System.Windows.Media.Imaging.BitmapSource> 에 최적화 되 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] 로드 및 이미지를 표시 하는 쉬운 방법은 <xref:System.Windows.Controls.Image.Source%2A> 의 <xref:System.Windows.Controls.Image> 제어 합니다.  
+ 많은 예제를 사용 하는 <xref:System.Windows.Media.Imaging.BitmapImage> 이미지 파일을 참조할 개체입니다. <xref:System.Windows.Media.Imaging.BitmapImage> 특수화 된 <xref:System.Windows.Media.Imaging.BitmapSource> 에 최적화 되 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] 로드 및 이미지를 표시 하는 쉬운 방법은 <xref:System.Windows.Controls.Image.Source%2A> 의 <xref:System.Windows.Controls.Image> 제어 합니다.  
   
  다음 예제에서는 코드를 사용하여 200픽셀 너비의 이미지를 렌더링하는 방법을 보여 줍니다.  
   
 > [!NOTE]
->  <xref:System.Windows.Media.Imaging.BitmapImage>구현 하는 <xref:System.ComponentModel.ISupportInitialize> 여러 속성에 대 한 초기화를 최적화 하는 인터페이스입니다. 개체 초기화 동안에만 속성 변경이 발생할 수 있습니다. 호출 <xref:System.Windows.Media.Imaging.BitmapImage.BeginInit%2A> 신호를 보내 해당 초기화가 시작 하 고 <xref:System.Windows.Media.Imaging.BitmapImage.EndInit%2A> 신호를 보내 해당 초기화가 완료 합니다. 일단 초기화되면 속성 변경은 무시됩니다.  
+>  <xref:System.Windows.Media.Imaging.BitmapImage> 구현 하는 <xref:System.ComponentModel.ISupportInitialize> 여러 속성에 대 한 초기화를 최적화 하는 인터페이스입니다. 개체 초기화 동안에만 속성 변경이 발생할 수 있습니다. 호출 <xref:System.Windows.Media.Imaging.BitmapImage.BeginInit%2A> 신호를 보내 해당 초기화가 시작 하 고 <xref:System.Windows.Media.Imaging.BitmapImage.EndInit%2A> 신호를 보내 해당 초기화가 완료 합니다. 일단 초기화되면 속성 변경은 무시됩니다.  
   
  [!code-csharp[ImageElementExample_snip#ImageSimpleExampleInlineCode1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ImageElementExample_snip/CSharp/ImageSimpleExample.xaml.cs#imagesimpleexampleinlinecode1)]
  [!code-vb[ImageElementExample_snip#ImageSimpleExampleInlineCode1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ImageElementExample_snip/VB/ImageSimpleExample.xaml.vb#imagesimpleexampleinlinecode1)]  
   
 #### <a name="rotating-converting-and-cropping-images"></a>이미지 회전, 변환 및 자르기  
- [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]사용자가 속성을 사용 하 여 이미지를 변형할 수 있도록 <xref:System.Windows.Media.Imaging.BitmapImage> 또는 추가 사용 하 여 <xref:System.Windows.Media.Imaging.BitmapSource> 와 같은 개체 <xref:System.Windows.Media.Imaging.CroppedBitmap> 또는 <xref:System.Windows.Media.Imaging.FormatConvertedBitmap>합니다. 이러한 이미지 변환은 이미지 크기를 조정 또는 이미지를 회전하거나, 이미지의 픽셀 형식을 변경하거나, 이미지를 잘라낼 수 있습니다.  
+ [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 사용자가 속성을 사용 하 여 이미지를 변형할 수 있도록 <xref:System.Windows.Media.Imaging.BitmapImage> 또는 추가 사용 하 여 <xref:System.Windows.Media.Imaging.BitmapSource> 와 같은 개체 <xref:System.Windows.Media.Imaging.CroppedBitmap> 또는 <xref:System.Windows.Media.Imaging.FormatConvertedBitmap>합니다. 이러한 이미지 변환은 이미지 크기를 조정 또는 이미지를 회전하거나, 이미지의 픽셀 형식을 변경하거나, 이미지를 잘라낼 수 있습니다.  
   
  이미지 회전 사용 하 여 수행 되는 <xref:System.Windows.Media.Imaging.BitmapImage.Rotation%2A> 속성 <xref:System.Windows.Media.Imaging.BitmapImage>합니다. 회전은 90도 단위로만 수행할 수 있습니다. 다음 예제에서 이미지는 90도 회전됩니다.  
   
@@ -177,15 +179,15 @@ ms.lasthandoff: 12/22/2017
 ## <a name="image-metadata"></a>이미지 메타데이터  
  일부 이미지 파일에는 파일의 콘텐츠나 특성을 설명하는 메타데이터가 포함되어 있습니다. 예를 들어 대부분의 디지털 카메라는 이미지를 캡처하는 데 사용되는 카메라의 제조업체와 모델에 대한 메타데이터를 포함하는 이미지를 만듭니다. 각 이미지 형식은 메타데이터를 다르게 처리하지만 [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)]에서는 지원되는 각 이미지 형식에 대한 메타데이터를 저장하고 검색하는 일관된 방법을 제공합니다.  
   
- 메타 데이터에 대 한 액세스를 통해 제공 됩니다는 <xref:System.Windows.Media.Imaging.BitmapSource.Metadata%2A> 의 속성을 <xref:System.Windows.Media.Imaging.BitmapSource> 개체입니다. <xref:System.Windows.Media.Imaging.BitmapSource.Metadata%2A>반환 된 <xref:System.Windows.Media.Imaging.BitmapMetadata> 이미지에 포함 된 모든 메타 데이터를 포함 하는 개체입니다. 이 데이터는 하나의 메타데이터 스키마이거나 여러 다른 스키마의 조합일 수 있습니다. [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)]에서는 [!INCLUDE[TLA#tla_exif](../../../../includes/tlasharptla-exif-md.md)], tEXt(PNG 텍스트 데이터), [!INCLUDE[TLA#tla_ifd](../../../../includes/tlasharptla-ifd-md.md)], [!INCLUDE[TLA#tla_iptc](../../../../includes/tlasharptla-iptc-md.md)] 및 [!INCLUDE[TLA#tla_xmp](../../../../includes/tlasharptla-xmp-md.md)]의 이미지 메타데이터 스키마를 지원합니다.  
+ 메타 데이터에 대 한 액세스를 통해 제공 됩니다는 <xref:System.Windows.Media.Imaging.BitmapSource.Metadata%2A> 의 속성을 <xref:System.Windows.Media.Imaging.BitmapSource> 개체입니다. <xref:System.Windows.Media.Imaging.BitmapSource.Metadata%2A> 반환 된 <xref:System.Windows.Media.Imaging.BitmapMetadata> 이미지에 포함 된 모든 메타 데이터를 포함 하는 개체입니다. 이 데이터는 하나의 메타데이터 스키마이거나 여러 다른 스키마의 조합일 수 있습니다. [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)]에서는 [!INCLUDE[TLA#tla_exif](../../../../includes/tlasharptla-exif-md.md)], tEXt(PNG 텍스트 데이터), [!INCLUDE[TLA#tla_ifd](../../../../includes/tlasharptla-ifd-md.md)], [!INCLUDE[TLA#tla_iptc](../../../../includes/tlasharptla-iptc-md.md)] 및 [!INCLUDE[TLA#tla_xmp](../../../../includes/tlasharptla-xmp-md.md)]의 이미지 메타데이터 스키마를 지원합니다.  
   
- 메타 데이터를 읽는 프로세스를 간소화 하기 위해 <xref:System.Windows.Media.Imaging.BitmapMetadata> 쉽게 액세스할 수와 같은 여러 명명 된 속성을 제공 <xref:System.Windows.Media.Imaging.BitmapMetadata.Author%2A>, <xref:System.Windows.Media.Imaging.BitmapMetadata.Title%2A>, 및 <xref:System.Windows.Media.Imaging.BitmapMetadata.CameraModel%2A>합니다. 이러한 명명된 속성 중 대부분은 메타데이터를 작성하는 데도 사용할 수 있습니다. 메타데이터 읽기에 대한 추가 지원이 메타데이터 쿼리 판독기를 통해 제공됩니다. <xref:System.Windows.Media.Imaging.BitmapMetadata.GetQuery%2A> 메서드를 사용 하는 메타 데이터 쿼리 판독기와 같은 문자열 쿼리를 제공 하 여 검색 *"/ app1/exif /"*합니다. 다음 예에서 <xref:System.Windows.Media.Imaging.BitmapMetadata.GetQuery%2A> 에 저장 된 텍스트를 가져오기 위해 사용 하는 *"/ 텍스트/설명이"* 위치 합니다.  
+ 메타 데이터를 읽는 프로세스를 간소화 하기 위해 <xref:System.Windows.Media.Imaging.BitmapMetadata> 쉽게 액세스할 수와 같은 여러 명명 된 속성을 제공 <xref:System.Windows.Media.Imaging.BitmapMetadata.Author%2A>, <xref:System.Windows.Media.Imaging.BitmapMetadata.Title%2A>, 및 <xref:System.Windows.Media.Imaging.BitmapMetadata.CameraModel%2A>합니다. 이러한 명명된 속성 중 대부분은 메타데이터를 작성하는 데도 사용할 수 있습니다. 메타데이터 읽기에 대한 추가 지원이 메타데이터 쿼리 판독기를 통해 제공됩니다. <xref:System.Windows.Media.Imaging.BitmapMetadata.GetQuery%2A> 메서드를 사용 하는 메타 데이터 쿼리 판독기와 같은 문자열 쿼리를 제공 하 여 검색 *"/ app1/exif /"* 합니다. 다음 예에서 <xref:System.Windows.Media.Imaging.BitmapMetadata.GetQuery%2A> 에 저장 된 텍스트를 가져오기 위해 사용 하는 *"/ 텍스트/설명이"* 위치 합니다.  
   
  [!code-cpp[BitmapMetadata#GetQuery](../../../../samples/snippets/cpp/VS_Snippets_Wpf/BitMapMetadata/CPP/BitmapMetadata.cpp#getquery)]
  [!code-csharp[BitmapMetadata#GetQuery](../../../../samples/snippets/csharp/VS_Snippets_Wpf/BitMapMetadata/CSharp/BitmapMetadata.cs#getquery)]
  [!code-vb[BitmapMetadata#GetQuery](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/BitMapMetadata/VB/BitmapMetadata.vb#getquery)]  
   
- 메타데이터를 작성하기 위해 메타데이터 쿼리 작성기가 사용됩니다. <xref:System.Windows.Media.Imaging.BitmapMetadata.SetQuery%2A>쿼리 작성기를 가져오고 원하는 값을 설정 합니다. 다음 예에서 <xref:System.Windows.Media.Imaging.BitmapMetadata.SetQuery%2A> 에 저장 된 텍스트를 쓰는 데 사용 되는 *"/ 텍스트/설명이"* 위치 합니다.  
+ 메타데이터를 작성하기 위해 메타데이터 쿼리 작성기가 사용됩니다. <xref:System.Windows.Media.Imaging.BitmapMetadata.SetQuery%2A> 쿼리 작성기를 가져오고 원하는 값을 설정 합니다. 다음 예에서 <xref:System.Windows.Media.Imaging.BitmapMetadata.SetQuery%2A> 에 저장 된 텍스트를 쓰는 데 사용 되는 *"/ 텍스트/설명이"* 위치 합니다.  
   
  [!code-cpp[BitmapMetadata#SetQuery](../../../../samples/snippets/cpp/VS_Snippets_Wpf/BitMapMetadata/CPP/BitmapMetadata.cpp#setquery)]
  [!code-csharp[BitmapMetadata#SetQuery](../../../../samples/snippets/csharp/VS_Snippets_Wpf/BitMapMetadata/CSharp/BitmapMetadata.cs#setquery)]

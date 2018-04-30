@@ -20,11 +20,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 754915d5ba596b5121c47be3533ee679b4f9594b
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 998920e4c1d7e0524da1c9843378e92517f4ee96
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="web-services-protocols-supported-by-system-provided-interoperability-bindings"></a>시스템 제공 상호 운용성 바인딩에서 지원하는 웹 서비스 프로토콜
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]는 웹 서비스 사양으로 알려진 일련의 사양을 지원하는 웹 서비스와 상호 운용되도록 만들어졌습니다. 최선의 상호 운용성 방법을 위해 서비스 구성을 단순화하기 위해 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서는 상호 운용 가능한 시스템 제공 바인딩인 <xref:System.ServiceModel.BasicHttpBinding?displayProperty=nameWithType>, <xref:System.ServiceModel.WSHttpBinding?displayProperty=nameWithType> 및 <xref:System.ServiceModel.WSDualHttpBinding?displayProperty=nameWithType>을 도입했습니다. OASIS(Organization for the Advancement of Structured Information Standards) 표준과의 상호 운용성을 위해 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에는 <xref:System.ServiceModel.WS2007HttpBinding?displayProperty=nameWithType>이라는 하나의 상호 운용 가능한 시스템 제공 바인딩이 포함되어 있습니다. 메타 데이터 게시에 대 한 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 두 개의 상호 운용 가능한 시스템 제공 바인딩이 포함 되어 있습니다: [ \<mexHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/mexhttpbinding.md) 및 [ \<mexHttpsBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/mexhttpsbinding.md)합니다. 이 항목에서는 시스템에서 제공하는 상호 운용 가능한 바인딩이 지원하는 사양을 나열합니다.  
@@ -102,7 +102,7 @@ ms.lasthandoff: 04/28/2018
  다음 표에서는 <xref:System.ServiceModel.Description.MetadataExchangeBindings?displayProperty=nameWithType> 클래스에 의해 노출된, 시스템에서 제공하는 상호 운용 가능 메타데이터 바인딩에서 지원하는 프로토콜에 대해 설명합니다.  
   
 ### <a name="mexhttpbinding"></a>mexHttpBinding  
- [ \<mexHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/mexhttpbinding.md) 바인딩은 다음과 같은 프로토콜을 지원 합니다. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 이 바인딩을 사용 하 여 참조 [메타 데이터 게시](../../../../docs/framework/wcf/feature-details/publishing-metadata.md)합니다.  
+ [ \<mexHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/mexhttpbinding.md) 바인딩은 다음과 같은 프로토콜을 지원 합니다. 이 바인딩을 사용 하는 방법에 대 한 자세한 내용은 참조 [메타 데이터 게시](../../../../docs/framework/wcf/feature-details/publishing-metadata.md)합니다.  
   
 |범주|프로토콜|사양 및 사용|  
 |--------------|--------------|-----------------------------|  
@@ -112,7 +112,7 @@ ms.lasthandoff: 04/28/2018
 |메타데이터|WS-MetadataExchange|[WS-MetadataExchange](http://go.microsoft.com/fwlink/?LinkId=94868)<br /><br /> [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서는 WS-MetadataExchange를 구현하여 XML 스키마, WSDL 및 WS-Policy를 검색합니다.|  
   
 ### <a name="mexhttpsbinding"></a>mexHttpsBinding  
- [\<mexHttpsBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/mexhttpsbinding.md) 다음 프로토콜을 지원 합니다. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 이 바인딩을 사용 하 여 참조 [메타 데이터 게시](../../../../docs/framework/wcf/feature-details/publishing-metadata.md)합니다.  
+ [\<mexHttpsBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/mexhttpsbinding.md) 다음 프로토콜을 지원 합니다. 이 바인딩을 사용 하는 방법에 대 한 자세한 내용은 참조 [메타 데이터 게시](../../../../docs/framework/wcf/feature-details/publishing-metadata.md)합니다.  
   
 |범주|프로토콜|사양 및 사용|  
 |--------------|--------------|-----------------------------|  

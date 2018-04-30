@@ -14,11 +14,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 09eb22c0c4bfaf549bd18cccae0c84957e730aa6
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: ce7d7812eadea2d9472a62bd007d2eca6ae07891
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="consuming-odata-feeds-from-a-workflow"></a>워크플로에서 OData 피드 사용
 WCF Data Services는 REST(Representational State Transfer)의 의미 체계를 사용하여 웹 또는 인트라넷을 통해 데이터를 노출하고 사용하기 위해 Open Data Protocol(OData)을 사용하는 서비스를 만들 수 있도록 하는 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 의 구성 요소입니다. OData는 URI로 주소를 지정할 수 있는 리소스로 데이터를 노출합니다. HTTP 요청을 보내고 데이터 서비스에서 반환하는 OData 피드를 처리할 수 있는 응용 프로그램은 모두 OData 기반 데이터 서비스와 상호 작용할 수 있습니다. 또한 WCF Data Services에는 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 응용 프로그램에서 OData 피드를 사용할 때 보다 다양한 기능을 갖춘 프로그래밍 환경을 제공하는 클라이언트 라이브러리가 포함되어 있습니다. 이 항목에서는 클라이언트 라이브러리를 사용하거나 사용하지 않고 워크플로에서 OData 피드를 사용하는 방법에 대해 간략하게 설명합니다.  
@@ -78,7 +78,7 @@ WCF Data Services는 REST(Representational State Transfer)의 의미 체계를 �
  다음 예제에서는 `ListCustomers` 활동을 정의합니다. 이 활동은 샘플 Northwind 데이터 서비스를 쿼리하고 Northwind 데이터베이스의 모든 고객이 포함된 `List<Customer>` 를 반환합니다. 비동기 작업은 `GetCustomers` 메서드에서 수행됩니다. 이 메서드는 서비스에서 모든 고객을 쿼리하여 `List<Customer>`에 복사합니다. 그런 다음 결과가 페이징되는지 확인하고 페이징되면 서비스에서 결과의 다음 페이지를 쿼리하여 목록에 추가하고 모든 고객 데이터가 검색될 때까지 계속합니다.  
   
 > [!NOTE]
->  [!INCLUDE[crabout](../../../includes/crabout-md.md)] WCF Data Services의 페이징 작업을 참조 하세요. [방법: 페이지 단위 결과 로드(WCF Data Services)](http://go.microsoft.com/fwlink/?LinkId=193452).  
+>  WCF Data Services의 페이징 하는 방법에 대 한 자세한 내용은 다음을 참조 합니다. [방법: 페이지 단위 결과 로드(WCF Data Services)](http://go.microsoft.com/fwlink/?LinkId=193452).  
   
  모든 고객이 추가되면 목록이 반환됩니다. `GetCustomers` 메서드는 활동의 <xref:System.Activities.AsyncCodeActivity.BeginExecute%2A> 재정의에 지정됩니다. 메서드에 반환 값이 있으므로 `Func<string, List<Customer>>` 가 메서드를 지정하기 위해 만들어집니다.  
   
@@ -143,4 +143,4 @@ WCF Data Services는 REST(Representational State Transfer)의 의미 체계를 �
  **\<연결 rel = "edit" title = "Order" href="Orders(10643)" / >**  
  **\<연결 rel = "http://schemas.microsoft.com/ado/2007/08/dataservices/related/Customer"**  
  **형식 = "응용 프로그램/atom + xml; 입력 = 항목" 제목 = "고객" href = "(10643) / Customer Orders" / >**  
-**...**  이 예제에서는 워크플로 응용 프로그램 작성자가 OData 서비스에서 반환된 원시 데이터를 사용하는 데 사용할 수 있는 한 가지 방법을 제공합니다. URI를 사용하는 WCF Data Services에 액세스하는 방법에 대한[!INCLUDE[crabout](../../../includes/crabout-md.md)] 는 [데이터 서비스 리소스 액세스(WCF Data Services)](http://go.microsoft.com/fwlink/?LinkId=193397) 및 [OData: URI 규칙](http://go.microsoft.com/fwlink/?LinkId=185564)을 참조하세요.
+**...**  이 예제에서는 워크플로 응용 프로그램 작성자가 OData 서비스에서 반환된 원시 데이터를 사용하는 데 사용할 수 있는 한 가지 방법을 제공합니다. Uri를 사용 하는 WCF 데이터 서비스에 액세스 하는 방법에 대 한 자세한 내용은 참조 [에 액세스할 데이터 서비스 리소스 (WCF Data Services)](http://go.microsoft.com/fwlink/?LinkId=193397) 및 [OData: URI 규칙](http://go.microsoft.com/fwlink/?LinkId=185564)합니다.

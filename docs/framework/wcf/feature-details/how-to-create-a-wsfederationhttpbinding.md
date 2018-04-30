@@ -22,11 +22,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 8962564bbefc3f43261a2979ae9765369b211f15
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: f43b95df73b35b7dc7c34c2e16364dfa7bbdbee4
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="how-to-create-a-wsfederationhttpbinding"></a>방법: WSFederationHttpBinding 만들기
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], <xref:System.ServiceModel.WSFederationHttpBinding> 클래스 ([\<wsFederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md) 구성에서) 페더레이션된 서비스를 노출 하기 위한 메커니즘을 제공 합니다. 즉, 보안 토큰 서비스에서 발급된 보안 토큰을 사용하여 클라이언트가 인증해야 하는 서비스입니다. 이 항목에서는 코드와 구성 둘 다에서 <xref:System.ServiceModel.WSFederationHttpBinding>을 설정하는 방법을 보여 줍니다. 바인딩을 만들고 나면 해당 바인딩을 사용하도록 끝점을 설정할 수 있습니다.  
@@ -48,7 +48,7 @@ ms.lasthandoff: 04/28/2018
   
      SAML 1.1 토큰에 대 한 URI는 "http://docs.oasis-open.org/wss/oasis-wss-saml-token-profile-1.1#SAMLV1.1"입니다.  
   
-4.  선택 사항입니다. 연합 서비스에서는 <xref:System.ServiceModel.FederatedMessageSecurityOverHttp.IssuerMetadataAddress%2A> 속성을 보안 토큰 서비스의 메타데이터 URL로 설정합니다. 서비스의 클라이언트는 서비스가 메타데이터를 게시하도록 구성된 경우 메타데이터 끝점을 사용하여 적절한 바인딩/끝점 쌍을 선택할 수 있습니다. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 참조 메타 데이터를 게시 [메타 데이터 게시](../../../../docs/framework/wcf/feature-details/publishing-metadata.md)합니다.  
+4.  선택 사항입니다. 연합 서비스에서는 <xref:System.ServiceModel.FederatedMessageSecurityOverHttp.IssuerMetadataAddress%2A> 속성을 보안 토큰 서비스의 메타데이터 URL로 설정합니다. 서비스의 클라이언트는 서비스가 메타데이터를 게시하도록 구성된 경우 메타데이터 끝점을 사용하여 적절한 바인딩/끝점 쌍을 선택할 수 있습니다. 메타 데이터를 게시 하는 방법에 대 한 자세한 내용은 참조 [메타 데이터 게시](../../../../docs/framework/wcf/feature-details/publishing-metadata.md)합니다.  
   
  발급된 토큰에서 증명 키로 사용되는 키의 형식, 클라이언트와 서비스 간에 사용할 알고리즘 모음, 서비스 자격 증명을 협상할지 또는 명시적으로 지정할지 여부, 서비스에서 발급된 토큰에 포함되어 있다고 예상하는 특정 클레임, 클라이언트가 보안 토큰 서비스에 보내는 요청에 추가해야 하는 추가 XML 요소 등의 다른 속성을 설정할 수도 있습니다.  
   
@@ -103,7 +103,7 @@ ms.lasthandoff: 04/28/2018
   
 12. 자세한 내용은 참조 [서비스 Id 및 인증](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)합니다.  
   
-13. 로컬 발급자가 지정되지 않은 경우 클라이언트에서는 필수적 요소이고 서비스에서는 사용되지 않습니다. 만들기는 [ \<바인딩 >](../../../../docs/framework/misc/binding.md) 보안 토큰 서비스와 통신 하는 데 사용할 수 있는 바인딩 섹션에 있는 요소입니다. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 참조는 바인딩을 만드는 [하는 방법: 구성에서 서비스 바인딩 지정](../../../../docs/framework/wcf/how-to-specify-a-service-binding-in-configuration.md)합니다.  
+13. 로컬 발급자가 지정되지 않은 경우 클라이언트에서는 필수적 요소이고 서비스에서는 사용되지 않습니다. 만들기는 [ \<바인딩 >](../../../../docs/framework/misc/binding.md) 보안 토큰 서비스와 통신 하는 데 사용할 수 있는 바인딩 섹션에 있는 요소입니다. 바인딩을 만드는 방법에 대 한 자세한 내용은 참조 [하는 방법: 구성에서 서비스 바인딩 지정](../../../../docs/framework/wcf/how-to-specify-a-service-binding-in-configuration.md)합니다.  
   
 14. `binding` 요소의 `bindingConfiguration` 및 `<issuer>` 특성을 설정하여 이전 단계에서 만든 바인딩을 지정합니다.  
   

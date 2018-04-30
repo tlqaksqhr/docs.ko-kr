@@ -1,24 +1,26 @@
 ---
-title: "스트리밍 메시지 전송"
-ms.custom: 
+title: 스트리밍 메시지 전송
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 72a47a51-e5e7-4b76-b24a-299d51e0ae5a
-caps.latest.revision: "13"
+caps.latest.revision: 13
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a751245f0a933fda649d5919bab86abf2969dbf6
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: ed2aa57e044910ab9fd9c60dfd47eb7aaa0ce75e
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="streaming-message-transfer"></a>스트리밍 메시지 전송
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 전송에서는 다음과 같은 두 가지 메시지 전송 모드를 지원합니다.  
@@ -52,7 +54,7 @@ ms.lasthandoff: 12/22/2017
   
  신뢰할 수 있는 메시징, 트랜잭션 및 SOAP 메시지 수준 보안과 같은 일부 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 기능은 버퍼링 메시지를 사용하여 전송합니다. 이러한 기능을 사용하면 스트리밍을 통해 얻는 성능 이점이 감소되거나 제거될 수 있습니다. 스트리밍 전송을 보안하려면 전송 수준 보안만 사용하거나 전송 수준 보안과 인증 전용 메시지 보안을 함께 사용합니다.  
   
- SOAP 헤더는 전송 모드가 스트리밍으로 설정되어 있더라도 항상 버퍼링됩니다. 메시지 헤더는 `MaxBufferSize` 전송 할당량 크기를 초과할 수 없습니다. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]이 참조 설정을 [전송 할당량](../../../../docs/framework/wcf/feature-details/transport-quotas.md)합니다.  
+ SOAP 헤더는 전송 모드가 스트리밍으로 설정되어 있더라도 항상 버퍼링됩니다. 메시지 헤더는 `MaxBufferSize` 전송 할당량 크기를 초과할 수 없습니다. 이 설정에 대 한 자세한 내용은 참조 [전송 할당량](../../../../docs/framework/wcf/feature-details/transport-quotas.md)합니다.  
   
 ## <a name="differences-between-buffered-and-streamed-transfers"></a>버퍼링 전송과 스트리밍 전송 사이의 차이점  
  전송 모드를 버퍼링 전송에서 스트리밍 전송으로 변경하면 TCP 및 명명된 파이프 전송의 기본 채널 셰이프도 함께 변경됩니다. 버퍼링 전송의 기본 채널 셰이프는 <xref:System.ServiceModel.Channels.IDuplexSessionChannel>입니다. 스트리밍 전송의 기본 채널은 <xref:System.ServiceModel.Channels.IRequestChannel> 및 <xref:System.ServiceModel.Channels.IReplyChannel>입니다. 서비스 계약을 통하지 않고 이러한 전송을 직접 사용하는 기존 응용 프로그램에서 전송 모드를 변경하려면 채널 팩터리 및 수신기에 대한 예상 채널 셰이프를 변경해야 합니다.  

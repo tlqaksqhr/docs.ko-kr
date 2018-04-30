@@ -1,24 +1,26 @@
 ---
-title: "WCF의 메시지 보안"
-ms.custom: 
+title: WCF의 메시지 보안
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: a80efb59-591a-4a37-bb3c-8fffa6ca0b7d
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 92422e40742909dbf338ec2660e5494ffcdd31cc
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 3ef96dd25903076fedc59ad1507674dd40dcfcc5
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="message-security-in-wcf"></a>WCF의 메시지 보안
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]에는 보안을 제공하는 두 가지 주요 모드(`Transport` 및 `Message`)와 그 둘을 조합하는 세 번째 모드(`TransportWithMessageCredential`)가 있습니다. 이 항목에서는 메시지 보안과 메시지 보안을 사용하는 이유에 대해 설명합니다.  
@@ -37,7 +39,7 @@ ms.lasthandoff: 12/22/2017
   
 -   다중 전송 지원. 명명된 파이프 및 TCP 등의 서로 다른 여러 전송을 통해 보안 프로토콜에 의존하지 않고도 보안 메시지를 보낼 수 있습니다. 전송 수준 보안을 사용하면 모든 보안 정보가 특정 전송 연결 하나로 범위 지정되며 메시지 콘텐츠 자체에서는 사용할 수 없게 됩니다. 메시지 보안은 메시지 전송에 사용되는 전송 방법에 관계없이 메시지를 보호하며 보안 컨텍스트는 메시지 내부에 직접 포함됩니다.  
   
--   광범위한 자격 증명 및 클레임 지원. 메시지 보안은 SOAP 메시지 내에 모든 형식의 클레임을 전송할 수 있는 확장 가능 프레임워크인 WS-Security 사양을 따릅니다. 전송 보안과 달리, 사용할 수 있는 인증 메커니즘 또는 클레임 집합이 전송 기능에 따라 제한되지 않습니다. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 메시지 보안에는 여러 인증 및 클레임 전송 형식이 포함되어 있으며 필요에 따라 이를 확장하여 추가 형식을 지원할 수 있습니다. 그렇기 때문에 예를 들어 메시지 보안 없이는 페더레이션 자격 증명 시나리오를 수행할 수 없습니다. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]WCF 원하는 페더레이션 시나리오, 참조 [페더레이션 및 발급 된 토큰](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)합니다.  
+-   광범위한 자격 증명 및 클레임 지원. 메시지 보안은 SOAP 메시지 내에 모든 형식의 클레임을 전송할 수 있는 확장 가능 프레임워크인 WS-Security 사양을 따릅니다. 전송 보안과 달리, 사용할 수 있는 인증 메커니즘 또는 클레임 집합이 전송 기능에 따라 제한되지 않습니다. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 메시지 보안에는 여러 인증 및 클레임 전송 형식이 포함되어 있으며 필요에 따라 이를 확장하여 추가 형식을 지원할 수 있습니다. 그렇기 때문에 예를 들어 메시지 보안 없이는 페더레이션 자격 증명 시나리오를 수행할 수 없습니다. 페더레이션 시나리오의 WCF 지원에 대 한 자세한 내용은 참조 [페더레이션 및 발급 된 토큰](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)합니다.  
   
 ## <a name="how-message-and-transport-security-compare"></a>메시지 보안과 전송 보안 비교  
   

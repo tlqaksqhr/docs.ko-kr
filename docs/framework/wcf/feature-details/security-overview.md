@@ -19,11 +19,11 @@ ms.author: bruceper
 manager: mbaldwin
 ms.workload:
 - dotnet
-ms.openlocfilehash: a50b3d3ec2a99d53bc7d5817f3ed530ef92d474b
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 1475891cf83c05552da247ffb04a866d80a396ea
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="security-overview"></a>보안 개요
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]는 SOAP 메시지 기반의 분산 프로그래밍 플랫폼이므로 데이터 보호를 위해서는 클라이언트와 서비스 간의 메시지 보안을 설정해야 합니다. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]는 기존 보안 인프라와 SOAP 메시지의 승인 보안 표준에 기반하여 보안 메시지를 교환할 수 있는 융통성과 상호 운용성을 모두 갖춘 플랫폼을 제공합니다.  
@@ -98,7 +98,7 @@ ms.lasthandoff: 04/28/2018
   
 -   *메시지 보안 모드*반면, Ws-security를 사용 하 여 (및 기타 사양을) 전송 보안을 구현 합니다. 메시지 보안은 SOAP 메시지에 직접 적용되고 SOAP 봉투에 응용 프로그램 데이터와 함께 포함되기 때문에 전송 프로토콜에 독립적이고, 확장성이 뛰어나며, 종단 간 보안(지점 간과 비교)을 보장한다는 이점이 있습니다. 반면 SOAP 메시지의 XML 특성을 처리해야 하기 때문에 전송 보안 모드보다 몇 배 더 느리다는 단점이 있습니다.  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 이러한 차이 참조 [보안 서비스와 클라이언트](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)합니다.  
+ 이러한 차이점에 대 한 자세한 내용은 참조 [보안 서비스와 클라이언트](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)합니다.  
   
  세 번째 보안 모드는 위 두 가지 모드를 모두 사용하며 두 모드의 이점을 모두 갖추고 있습니다. 이 모드를 `TransportWithMessageCredential`이라고 합니다. 이 모드에서는 클라이언트를 인증하는 데 메시지 보안을 사용하고 서버를 인증하고 메시지 기밀성과 무결성을 제공하는 데 전송 보안을 사용합니다. 이로 인해 `TransportWithMessageCredential` 보안 모드는 전송 보안 모드만큼 빠른 속도를 제공하면서 메시지 보안과 같은 방식으로 클라이언트 인증 확장성을 지원합니다. 반면 메시지 보안 모드와는 달리 완벽한 종단 간 보안은 제공하지 않습니다.  
   

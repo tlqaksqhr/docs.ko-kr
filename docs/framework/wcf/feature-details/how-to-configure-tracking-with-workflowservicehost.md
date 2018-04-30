@@ -16,11 +16,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 7cf4b9055334d68337e6414f25f30561b990c732
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: e1de3349bb9766beeee95b9934fc1ca11fc7006f
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="how-to-configure-tracking-with-workflowservicehost"></a>방법: WorkflowServiceHost를 사용하여 추적 구성
 이 항목에서는 [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]에서 호스트되는 <xref:System.ServiceModel.Activities.WorkflowServiceHost> 워크플로에 대해 추적을 구성하는 방법에 대해 설명합니다. 이러한 추적 기능은 Web.config 파일에서 서비스 동작을 지정하여 구성됩니다.  
@@ -63,9 +63,9 @@ ms.lasthandoff: 04/28/2018
     </system.serviceModel>  
     ```  
   
-     [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 참조 추적 프로필을 [추적 프로필](../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)합니다.  
+     추적 프로필에 대 한 자세한 내용은 참조 [추적 프로필](../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)합니다.  
   
-     [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 일반적으로 추적 참조 [워크플로 추적 및 트레이싱](../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)합니다.  
+     일반적으로 추적 하는 방법에 대 한 자세한 내용은 참조 [워크플로 추적 및 트레이싱](../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)합니다.  
   
 ### <a name="configure-tracking-in-code"></a>코드에서 추적 구성  
   
@@ -77,9 +77,9 @@ ms.lasthandoff: 04/28/2018
   
      위의 코드 샘플에서는 <xref:System.Activities.Tracking.EtwTrackingParticipant>를 추가하고 추적 프로필 이름을 지정합니다. 추적 프로필은 이전 단원에 표시된 것과 같이 <`trackingProfile`> 요소 내의 <`tracking`> 요소에 만들어집니다.  
   
-     [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 참조 추적 프로필을 [추적 프로필](../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)합니다.  
+     추적 프로필에 대 한 자세한 내용은 참조 [추적 프로필](../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)합니다.  
   
-     [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 일반적으로 추적 참조 [워크플로 추적 및 트레이싱](../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)합니다. 프로그래밍 방식으로 추적 구성의 예에 대 한 참조 [워크플로에 대 한 추적 구성](../../../../docs/framework/windows-workflow-foundation/configuring-tracking-for-a-workflow.md)합니다.  
+     일반적으로 추적 하는 방법에 대 한 자세한 내용은 참조 [워크플로 추적 및 트레이싱](../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)합니다. 프로그래밍 방식으로 추적 구성의 예에 대 한 참조 [워크플로에 대 한 추적 구성](../../../../docs/framework/windows-workflow-foundation/configuring-tracking-for-a-workflow.md)합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [WCF 서비스를 위한 단순화된 구성](../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md)  

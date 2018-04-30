@@ -1,23 +1,24 @@
 ---
-title: "정책을 사용한 주문 처리"
-ms.custom: 
+title: 정책을 사용한 주문 처리
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 66833724-dc36-4fad-86b0-59ffeaa3ba6a
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: d86c7890af651ba9f0ee0ec2a1763f9c579bac89
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: f99db44a636a5255990f734d34266b3b2e4a678b
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="order-processing-with-policy"></a>정책을 사용한 주문 처리
 Order Processing Policy 샘플에서는 Windows WF(Workflow Foundation )의 [!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)]에 도입된 몇 가지 주요 기능을 보여 줍니다. 다음은 WF 규칙 엔진에 새로 추가된 기능입니다.  
@@ -34,7 +35,7 @@ Order Processing Policy 샘플에서는 Windows WF(Workflow Foundation )의 [!IN
  이 샘플에서는 번호가 매겨진 사용 가능한 항목 목록으로 구성된 고객 주문과 우편 번호를 입력하는 `OrderProcessingPolicy` 프로젝트를 보여 줍니다. 두 항목이 모두 올바르면 주문이 성공적으로 처리되고, 그렇지 않으면 정책에서 오버로드된 `+` 연산자와 미리 정의된 확장 메서드를 사용하여 사용자에게 오류를 알리는 오류 개체를 만듭니다.  
   
 > [!NOTE]
->  [!INCLUDE[crabout](../../../../includes/crabout-md.md)]확장 메서드 참조 [C# 버전 3.0 사양](http://go.microsoft.com/fwlink/?LinkId=95402)합니다.  
+>  확장 메서드에 대 한 자세한 내용은 참조 [C# 버전 3.0 사양](http://go.microsoft.com/fwlink/?LinkId=95402)합니다.  
   
  이 샘플은 다음과 같은 프로젝트로 구성됩니다.  
   

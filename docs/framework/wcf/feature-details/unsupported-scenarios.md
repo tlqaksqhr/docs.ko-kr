@@ -16,11 +16,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 7738eba66619e8a312ed2f9bd43142dbb097b259
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: cfeca11f7d78e8aa2d201238e3a485576b3e0c82
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="unsupported-scenarios"></a>지원되지 않는 시나리오
 여러 가지 이유로 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]에서는 일부 특정 보안 시나리오를 지원하지 않습니다. 예를 들어, [!INCLUDE[wxp](../../../../includes/wxp-md.md)] Home Edition에서는 SSPI 또는 Kerberos 인증 프로토콜을 구현하지 않으므로 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서는 해당 플랫폼에서 Windows 인증을 통한 서비스 실행을 지원하지 않습니다. Windows XP Home Edition에서 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]를 실행할 경우 사용자 이름/암호 및 HTTP/HTTPS 통합 인증과 같은 다른 인증 메커니즘이 지원됩니다.  
@@ -58,7 +58,7 @@ ms.lasthandoff: 04/28/2018
 >  <xref:System.ServiceModel.Security.WindowsClientCredential.AllowedImpersonationLevel%2A> 클래스의 <xref:System.ServiceModel.Security.WindowsClientCredential> 속성 기본값은 <xref:System.Security.Principal.TokenImpersonationLevel.Identification>입니다. 대부분의 경우 확인 수준 가장 컨텍스트에는 추가 어셈블리 로드 권한이 없습니다. 이는 기본값이므로 일반적인 조건으로 알아 두어야 합니다. 확인 수준 가장은 가장 프로세스에 `SeImpersonate` 권한이 없는 경우에도 발생합니다. 자세한 내용은 참조 [위임 및 가장](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md)합니다.  
   
 ### <a name="delegation-requires-credential-negotiation"></a>위임에 자격 증명 협상 필요  
- Kerberos 인증 프로토콜을 위임과 함께 사용하려면 자격 증명 협상이 포함된 Kerberos 프로토콜(multi-leg 또는 multi-step Kerberos라고도 함)을 구현해야 합니다. 자격 증명 협상이 포함되지 않은 Kerberos 프로토콜(one-shot 또는 single-leg Kerberos라고도 함)을 구현하면 예외가 throw됩니다. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 자격 증명 협상 구현 방법은 참조 [Windows 인증 오류 디버깅](../../../../docs/framework/wcf/feature-details/debugging-windows-authentication-errors.md)합니다.  
+ Kerberos 인증 프로토콜을 위임과 함께 사용하려면 자격 증명 협상이 포함된 Kerberos 프로토콜(multi-leg 또는 multi-step Kerberos라고도 함)을 구현해야 합니다. 자격 증명 협상이 포함되지 않은 Kerberos 프로토콜(one-shot 또는 single-leg Kerberos라고도 함)을 구현하면 예외가 throw됩니다. 자격 증명 협상을 구현 하는 방법에 대 한 자세한 내용은 참조 [Windows 인증 오류 디버깅](../../../../docs/framework/wcf/feature-details/debugging-windows-authentication-errors.md)합니다.  
   
 ## <a name="cryptography"></a>암호화  
   

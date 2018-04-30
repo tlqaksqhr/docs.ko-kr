@@ -14,11 +14,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 9a215be76002b9e8fca8ac4a9073885b3b30a97b
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: a36b8a6bdf1a024f4ddee91bd937afac516e391f
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="serializing-workflows-and-activities-to-and-from-xaml"></a>워크플로 및 활동과 XAML 간 serialize
 어셈블리에 포함되어 있는 형식으로 컴파일하는 것 외에 워크플로 정의를 XAML로 serialize할 수도 있습니다. serialize된 이 정의를 다시 로드하여 편집 또는 검사하거나, 빌드 시스템에 전달하여 컴파일하거나, 로드 및 호출할 수 있습니다. 이 항목에서는 워크플로 정의의 serialize와 XAML 워크플로 정의의 사용에 대해 간략하게 설명합니다.  
@@ -84,7 +84,7 @@ sw.Close();
  **25 + 15**  
 **40**    
 > [!NOTE]
->  [!INCLUDE[crabout](../../../includes/crabout-md.md)] 참조 입력 및 출력 인수를 사용 하는 워크플로 호출 [를 사용 하 여 WorkflowInvoker 및 WorkflowApplication](../../../docs/framework/windows-workflow-foundation/using-workflowinvoker-and-workflowapplication.md) 및 <xref:System.Activities.WorkflowInvoker.Invoke%2A>합니다.  
+>  입력 및 출력 인수를 사용 하는 워크플로 호출 하는 방법에 대 한 자세한 내용은 참조 [를 사용 하 여 WorkflowInvoker 및 WorkflowApplication](../../../docs/framework/windows-workflow-foundation/using-workflowinvoker-and-workflowapplication.md) 및 <xref:System.Activities.WorkflowInvoker.Invoke%2A>합니다.  
   
  Serialize 된 워크플로에 C# 식이 있을 경우 아니라면 <xref:System.Activities.XamlIntegration.ActivityXamlServicesSettings> 인스턴스를 함께 해당 <xref:System.Activities.XamlIntegration.ActivityXamlServicesSettings.CompileExpressions%2A> 속성이로 설정 `true` 에 대 한 매개 변수로 전달 되어야 합니다 <xref:System.Activities.XamlIntegration.ActivityXamlServices.Load%2A?displayProperty=nameWithType>, 그렇지 않으면는 <xref:System.NotSupportedException> 와 비슷한 오류 메시지가 throw 됩니다는 다음: `Expression Activity type 'CSharpValue`1' 컴파일 실행 하는 데 필요 합니다.  워크플로가 컴파일 되었는지 확인 하십시오.'  
   

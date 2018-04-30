@@ -21,11 +21,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: d20d4c39a6cca744ac981d1a143d2847d9b20e5a
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: bc962b328f2321d1cfb016b78a53307b43fac30d
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="developing-and-deploying-wcf-data-services"></a>WCF Data Services 개발 및 배포
 이 항목에서는 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]의 개발 및 배포에 대한 정보를 제공합니다. 에 대 한 자세한 기본 정보에 대 한 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)], 참조 [시작](../../../../docs/framework/data/wcf/getting-started-with-wcf-data-services.md) 및 [개요](../../../../docs/framework/data/wcf/wcf-data-services-overview.md)합니다.  
@@ -80,7 +80,7 @@ ms.lasthandoff: 04/28/2018
   
 3.  **Microsoft Azure 개발 환경**  
   
-     Windows Azure Tools for Visual Studio는 통합 된 Visual Studio에서 Windows Azure 서비스를 개발 하기 위한 도구 집합이 포함 되어 있습니다. 이 도구를 사용하면 Microsoft Azure에 배포할 수 있는 데이터 서비스를 개발하고, 배포하기 전에 로컬 컴퓨터에서 데이터 서비스를 테스트할 수 있습니다. Visual Studio를 사용 하 여 Windows Azure 플랫폼에서 실행 되는 데이터 서비스를 개발할 때 이러한 도구를 사용 합니다. Windows Azure Tools for Visual Studio에서 다운로드할 수 있습니다는 [Microsoft 다운로드 센터](http://go.microsoft.com/fwlink/?LinkID=201848)합니다. Windows Azure에서 실행되는 데이터 서비스 개발[!INCLUDE[crabout](../../../../includes/crabout-md.md)] 은 [Windows Azure에서 OData 서비스 배포](http://go.microsoft.com/fwlink/?LinkId=201847)게시물을 참조하십시오.  
+     Windows Azure Tools for Visual Studio는 통합 된 Visual Studio에서 Windows Azure 서비스를 개발 하기 위한 도구 집합이 포함 되어 있습니다. 이 도구를 사용하면 Microsoft Azure에 배포할 수 있는 데이터 서비스를 개발하고, 배포하기 전에 로컬 컴퓨터에서 데이터 서비스를 테스트할 수 있습니다. Visual Studio를 사용 하 여 Windows Azure 플랫폼에서 실행 되는 데이터 서비스를 개발할 때 이러한 도구를 사용 합니다. Windows Azure Tools for Visual Studio에서 다운로드할 수 있습니다는 [Microsoft 다운로드 센터](http://go.microsoft.com/fwlink/?LinkID=201848)합니다. Windows Azure에서 실행 되는 데이터 서비스를 개발 하는 방법에 대 한 자세한 내용은 게시물을 참조 하십시오. [Windows Azure에서 OData 서비스 배포](http://go.microsoft.com/fwlink/?LinkId=201847)합니다.  
   
 ### <a name="development-tips"></a>개발 팁  
  데이터 서비스를 개발할 때 다음 사항을 고려해야 합니다.  
@@ -116,21 +116,21 @@ ms.lasthandoff: 04/28/2018
   
         -   [XCopy](http://msdn.microsoft.com/library/4312c651-2119-49be-bbeb-ee28bdbfe71e)  
   
-     [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 배포 옵션에 대 한 프로그램 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 응용 프로그램 참조 [Visual Studio 및 ASP.NET에 대 한 웹 배포 개요](http://msdn.microsoft.com/library/99bd1927-b59f-4e02-87b4-55c6ba2adbc3)합니다.  
+     에 대 한 배포 옵션에 대 한 자세한 내용은 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 응용 프로그램 참조 [Visual Studio 및 ASP.NET에 대 한 웹 배포 개요](http://msdn.microsoft.com/library/99bd1927-b59f-4e02-87b4-55c6ba2adbc3)합니다.  
   
     > [!TIP]
     >  데이터 서비스를 IIS에 배포하기 전에 IIS가 실행 중인 웹 서버로의 배포를 테스트했는지 확인해야 합니다. 자세한 내용은 [방법: IIS에서 실행되는 WCF Data Services 개발](../../../../docs/framework/data/wcf/how-to-develop-a-wcf-data-service-running-on-iis.md)을 참조하십시오.  
   
 -   **Windows Azure**  
   
-     Visual Studio 용 Windows Azure Tools를 사용 하 여 Windows Azure에 데이터 서비스를 배포할 수 있습니다. Windows Azure Tools for Visual Studio에서 다운로드할 수 있습니다는 [Microsoft 다운로드 센터](http://go.microsoft.com/fwlink/?LinkID=201848)합니다. Windows Azure에 데이터 서비스를 배포하는[!INCLUDE[crabout](../../../../includes/crabout-md.md)] 은 [Windows Azure에서 OData 서비스 배포](http://go.microsoft.com/fwlink/?LinkId=201847)를 참조하세요.  
+     Visual Studio 용 Windows Azure Tools를 사용 하 여 Windows Azure에 데이터 서비스를 배포할 수 있습니다. Windows Azure Tools for Visual Studio에서 다운로드할 수 있습니다는 [Microsoft 다운로드 센터](http://go.microsoft.com/fwlink/?LinkID=201848)합니다. Windows Azure에 데이터 서비스를 배포 하는 방법에 대 한 자세한 내용은 게시물을 참조 하십시오. [Windows Azure에서 OData 서비스 배포](http://go.microsoft.com/fwlink/?LinkId=201847)합니다.  
   
 ### <a name="deployment-considerations"></a>배포 고려 사항  
  데이터 서비스를 배포할 때 다음 사항을 고려해야 합니다.  
   
 -   [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] 공급자를 사용하는 데이터 서비스를 배포하여 SQL Server 데이터베이스에 액세스하는 경우 데이터 서비스 배포와 함께 데이터 구조, 데이터 또는 둘 다를 전파해야 할 수 있습니다. Visual Studio는 자동으로 대상 데이터베이스에서이 작업을 수행 하기 위해 스크립트 (.sql 파일)를 만들고 이러한 스크립트의 웹 배포 패키지에 포함 될 수는 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 응용 프로그램입니다. 자세한 내용은 참조 [NIB: 방법:는 데이터베이스와 웹 응용 프로그램 프로젝트를 배포](http://msdn.microsoft.com/library/683b33f1-8a3d-45cf-af6e-61ab50fc518b)합니다. 에 대 한는 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 웹 사이트를 할 수 있는이 하 여 사용 하 여 **데이터베이스 게시 마법사** Visual Studio에서. 자세한 내용은 [데이터베이스 게시 마법사를 사용 하 여 데이터베이스 배포](http://msdn.microsoft.com/library/1e3682e7-8b57-4da6-a393-af9640ccf8b7)을 참조하세요.  
   
--   [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 에는 기본 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 구현이 포함되기 때문에 Windows Server AppFabric을 사용하여 Windows Server에서 실행되는 IIS에 배포된 데이터 서비스를 모니터링할 수 있습니다. Windows Server AppFabric을 사용하여 데이터 서비스를 모니터링[!INCLUDE[crabout](../../../../includes/crabout-md.md)] 은 [Windows Server AppFabric으로 WCF Data Services 추적](http://go.microsoft.com/fwlink/?LinkID=202005)게시물을 참조하십시오.  
+-   [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 에는 기본 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 구현이 포함되기 때문에 Windows Server AppFabric을 사용하여 Windows Server에서 실행되는 IIS에 배포된 데이터 서비스를 모니터링할 수 있습니다. Windows Server AppFabric을 사용 하 여 데이터 서비스를 모니터링 하는 방법에 대 한 자세한 내용은 게시물을 참조 하십시오. [Windows Server AppFabric로 WCF Data Services 추적](http://go.microsoft.com/fwlink/?LinkID=202005)합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [데이터 서비스 호스팅](../../../../docs/framework/data/wcf/hosting-the-data-service-wcf-data-services.md)  

@@ -1,12 +1,13 @@
 ---
-title: "방법: ProtectionLevel 속성 설정"
-ms.custom: 
+title: '방법: ProtectionLevel 속성 설정'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,19 +16,20 @@ helpviewer_keywords:
 - WCF, security
 - ProtectionLevel property
 ms.assetid: 3d4e8f80-0f9e-4a26-9899-beb6584e78df
-caps.latest.revision: "10"
+caps.latest.revision: 10
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a9b90df85259dfe48f071ca2b4b8404cfe8e673e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: abb1d3cc64b7992b9983e81c5f8a5c30c2343f30
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="how-to-set-the-protectionlevel-property"></a>방법: ProtectionLevel 속성 설정
-적절한 특성을 적용하고 속성을 설정하여 보호 수준을 설정할 수 있습니다. 각 메시지의 모든 부분에 영향을 주도록 서비스 수준에서 보호를 설정하거나 메서드에서 메시지 부분으로 점차 세부적인 수준에서 보호를 설정할 수 있습니다. [!INCLUDE[crabout](../../../includes/crabout-md.md)]`ProtectionLevel` 속성 참조 [보호 수준 이해](../../../docs/framework/wcf/understanding-protection-level.md)합니다.  
+적절한 특성을 적용하고 속성을 설정하여 보호 수준을 설정할 수 있습니다. 각 메시지의 모든 부분에 영향을 주도록 서비스 수준에서 보호를 설정하거나 메서드에서 메시지 부분으로 점차 세부적인 수준에서 보호를 설정할 수 있습니다. 에 대 한 자세한 내용은 `ProtectionLevel` 속성 참조 [보호 수준 이해](../../../docs/framework/wcf/understanding-protection-level.md)합니다.  
   
 > [!NOTE]
 >  구성이 아닌 코드에서만 보호 수준을 설정할 수 있습니다.  
@@ -53,7 +55,7 @@ ms.lasthandoff: 12/22/2017
      [!code-vb[C_ProtectionLevel#2](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_protectionlevel/vb/source.vb#2)]  
   
 ## <a name="protecting-fault-messages"></a>오류 메시지 보호  
- 서비스에서 throw된 예외는 클라이언트에 SOAP 오류로 전송될 수 있습니다. [!INCLUDE[crabout](../../../includes/crabout-md.md)]강력한 형식의 만들고 오류를 참조 하십시오. [지정 및 계약 및 서비스에서 오류 처리](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md) 및 [하는 방법: 서비스 계약에 선언 오류](../../../docs/framework/wcf/how-to-declare-faults-in-service-contracts.md)합니다.  
+ 서비스에서 throw된 예외는 클라이언트에 SOAP 오류로 전송될 수 있습니다. 강력 하 게 만들기에 대 한 자세한 내용은 입력 오류에 대 한 참조 [지정 및 계약 및 서비스에서 처리 오류](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md) 및 [하는 방법: 서비스 계약에 선언 오류](../../../docs/framework/wcf/how-to-declare-faults-in-service-contracts.md)합니다.  
   
 #### <a name="to-protect-a-fault-message"></a>오류 메시지를 보호하려면  
   
@@ -72,7 +74,7 @@ ms.lasthandoff: 12/22/2017
      [!code-vb[C_ProtectionLevel#4](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_protectionlevel/vb/source.vb#4)]  
   
 ## <a name="protecting-message-parts"></a>메시지 부분 보호  
- 메시지 계약을 사용하여 메시지의 일부분을 보호합니다. [!INCLUDE[crabout](../../../includes/crabout-md.md)]메시지 계약과, 참조 [메시지 계약을 사용 하 여](../../../docs/framework/wcf/feature-details/using-message-contracts.md)합니다.  
+ 메시지 계약을 사용하여 메시지의 일부분을 보호합니다. 메시지 계약에 대 한 자세한 내용은 참조 [메시지 계약을 사용 하 여](../../../docs/framework/wcf/feature-details/using-message-contracts.md)합니다.  
   
 #### <a name="to-protect-a-message-body"></a>메시지 본문을 보호하려면  
   
@@ -87,7 +89,7 @@ ms.lasthandoff: 12/22/2017
      [!code-csharp[C_ProtectionLevel#5](../../../samples/snippets/csharp/VS_Snippets_CFX/c_protectionlevel/cs/source.cs#5)]
      [!code-vb[C_ProtectionLevel#5](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_protectionlevel/vb/source.vb#5)]  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 예제에서는 서비스의 다양한 위치에서 여러 특성 클래스의 `ProtectionLevel` 속성을 설정합니다.  
   
  [!code-csharp[C_ProtectionLevel#6](../../../samples/snippets/csharp/VS_Snippets_CFX/c_protectionlevel/cs/source.cs#6)]

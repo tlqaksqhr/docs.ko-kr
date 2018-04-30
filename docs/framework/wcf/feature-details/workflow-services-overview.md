@@ -16,14 +16,14 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: b0c59c0688fca53a7c7623330f3fdba4f5defd88
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 6eb5381438aa082eae8b4252bbd1cf343ba0ebf7
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="workflow-services-overview"></a>워크플로 서비스 개요
-워크플로 서비스는 워크플로를 사용하여 구현되는 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 기반 서비스입니다. 워크플로 서비스는 메시징 작업을 사용하여 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 메시지를 보내고 받는 워크플로입니다. .NET Framework 4.5에서는 워크플로 내에서 메시지를 보내고 받을 수 있는 다양한 메시징 작업을 제공합니다. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 메시징 활동 및 다른 메시지 교환 패턴을 구현 하는 수 방법 참조 [메시징 작업](../../../../docs/framework/wcf/feature-details/messaging-activities.md)합니다.  
+워크플로 서비스는 워크플로를 사용하여 구현되는 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 기반 서비스입니다. 워크플로 서비스는 메시징 작업을 사용하여 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 메시지를 보내고 받는 워크플로입니다. .NET Framework 4.5에서는 워크플로 내에서 메시지를 보내고 받을 수 있는 다양한 메시징 작업을 제공합니다. 메시징 활동 및 다른 메시지 교환 패턴을 구현 하는 수 방법에 대 한 자세한 내용은 참조 [메시징 작업](../../../../docs/framework/wcf/feature-details/messaging-activities.md)합니다.  
   
 ## <a name="benefits-of-using-workflow-services"></a>워크플로 서비스 사용의 이점  
  분산 응용 프로그램이 점점 더 많아지면서 개별 서비스가 작업 로드를 줄이기 위해 다른 서비스를 호출하는 경우도 많아졌습니다. 이러한 호출을 비동기 작업으로 구현하면 코드가 더 복잡해집니다. 오류 처리는 예외 처리와 자세한 추적 정보 제공이라는 형태로 코드에 복잡성을 더합니다. 일부 서비스는 종종 오랫동안 실행되며 입력을 기다리면서 중요한 시스템 리소스를 차지할 수 있습니다. 이러한 문제 때문에 일반적으로 분산 응용 프로그램은 작성하고 유지 관리하기가 매우 복잡하고 어렵습니다. 워크플로를 사용하면 외부 서비스 호출과 같은 비동기 작업의 코디네이션을 자연스럽게 표현할 수 있습니다. 또한 워크플로를 사용하면 장기 실행 비즈니스 프로세스를 효율적으로 표현할 수도 있습니다. 이러한 특성 때문에 워크플로는 분산 환경에서 서비스를 빌드하는 데 유용하게 사용됩니다.  

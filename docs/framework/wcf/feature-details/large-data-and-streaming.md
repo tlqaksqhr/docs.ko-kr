@@ -16,11 +16,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: b37af67a3deeed4e55939ff1c1baf73752233e94
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: e367c11b48e6f4034afb1f42ded3498d748848a7
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="large-data-and-streaming"></a>큰 데이터 및 스트리밍
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]는 XML 기반 통신 인프라입니다. XML 데이터에 정의 된 표준 텍스트 형식으로 인코딩되어 일반적으로 하기 때문에 [XML 1.0 사양](http://go.microsoft.com/fwlink/?LinkId=94838)관계, 설계자 및 시스템 개발자가 일반적으로 염려 하는 전송 된 메시지의 통신 사용 공간 (또는 크기)에서 네트워크 및 XML의 텍스트 기반 인코딩과 이진 데이터의 효율적인 전송을 위한 특별히 고려해 야 할 제기 됩니다.  
@@ -246,7 +246,7 @@ public class UploadStreamMessage
   
  따라서 이 경우에는 들어오는 메시지 크기를 제한하는 것만으로는 부족합니다. `MaxBufferSize`에서 버퍼링하는 메모리를 제한하려면 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 속성이 필요합니다. 스트리밍을 수행할 때 이 값을 안전한 값으로 설정하거나 기본값으로 유지하는 것이 중요합니다. 예를 들어, 서비스에서 크기 4GB까지의 파일을 받아 로컬 디스크에 저장해야 하는 경우를 가정할 수 있습니다. 한 번에 64KB까지의 데이터만 버퍼링할 수 있는 방법으로 메모리가 제한된 경우도 가정할 수 있습니다. 그러면 `MaxReceivedMessageSize`는 4GB로 설정하고 `MaxBufferSize`는 64KB로 설정합니다. 또한 서비스 구현에서 64KB 청크의 들어오는 스트림에서만 읽으며 이전 부분이 디스크에 기록된 후 메모리에서 폐기되기 전에는 다음 청크를 읽지 않는지 확인해야 합니다.  
   
- 이 할당량이 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서 수행하는 버퍼링만 제한하며 자체 서비스나 클라이언트 구현에서 수행하는 버퍼링으로부터는 보호할 수 없다는 것도 이해해야 합니다. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 추가 보안 고려 사항 참조 [데이터에 대 한 보안 고려 사항](../../../../docs/framework/wcf/feature-details/security-considerations-for-data.md)합니다.  
+ 이 할당량이 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서 수행하는 버퍼링만 제한하며 자체 서비스나 클라이언트 구현에서 수행하는 버퍼링으로부터는 보호할 수 없다는 것도 이해해야 합니다. 추가 보안 고려 사항에 대 한 자세한 내용은 참조 [데이터에 대 한 보안 고려 사항](../../../../docs/framework/wcf/feature-details/security-considerations-for-data.md)합니다.  
   
 > [!NOTE]
 >  버퍼링 또는 스트리밍 전송 중 어느 것을 사용할 것인지를 결정하는 것은 끝점의 로컬 결정입니다. HTTP 전송의 경우 전송 모드는 연결 전체 또는 프록시 서버 및 다른 매개로 전파되지 않습니다. 서비스 인터페이스의 설명에 전송 모드 설정이 반영되지 않았습니다. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 클라이언트를 서비스에 생성하고 나면 스트리밍 전송에서 모드 설정에 사용할 서비스의 구성 파일을 편집해야 합니다. TCP 및 명명된 파이프 전송의 경우에는 전송 모드가 정책 어설션으로 전파됩니다.  

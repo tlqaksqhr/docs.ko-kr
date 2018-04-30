@@ -1,24 +1,26 @@
 ---
-title: "구성 파일에서 검색 구성"
-ms.custom: 
+title: 구성 파일에서 검색 구성
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: b9884c11-8011-4763-bc2c-c526b80175d0
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 43344fc5411236fbb7420fd4d58526b3e0351d4f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 4ba224bbf27e5a61168040c944bb940c3e6b0d8c
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="configuring-discovery-in-a-configuration-file"></a>구성 파일에서 검색 구성
 검색에 사용되는 구성 설정에는 네 가지 기본 그룹이 있습니다. 이 항목에서는 각 그룹에 대해 간략하게 설명하고 이러한 그룹을 구성하는 방법을 보여 줍니다. 아래에 나오는 각 단원은 각 영역에 대해 보다 자세히 설명하는 문서로 연결됩니다.  
@@ -148,7 +150,7 @@ ms.lasthandoff: 12/22/2017
 </behavior>  
 ```  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]<xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior> 및 <xref:System.ServiceModel.Discovery.EndpointDiscoveryBehavior> 참조 [WCF Discovery 개요](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md)합니다.  
+ 에 대 한 자세한 내용은 <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior> 및 <xref:System.ServiceModel.Discovery.EndpointDiscoveryBehavior> 참조 [WCF Discovery 개요](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md)합니다.  
   
 ## <a name="binding-element-configuration"></a>바인딩 요소 구성  
  바인딩 요소 구성은 클라이언트측에서 가장 흥미로운 부분입니다. 구성을 사용하면 WCF 클라이언트 응용 프로그램에서 서비스를 검색하는 데 사용되는 찾기 조건을 지정할 수 있습니다.  다음 예제에서는 <xref:System.ServiceModel.Discovery.DiscoveryClient> 채널을 사용하여 사용자 지정 바인딩을 만들고 형식과 범위가 포함된 찾기 조건을 지정합니다. 또한 이 예제에서는 <xref:System.ServiceModel.Discovery.FindCriteria.Duration%2A> 및 <xref:System.ServiceModel.Discovery.FindCriteria.MaxResults%2A> 속성의 값도 지정합니다.  
@@ -188,7 +190,7 @@ ms.lasthandoff: 12/22/2017
     </client>  
 ```  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]찾기 조건 참조 [검색 찾기 및 FindCriteria](../../../../docs/framework/wcf/feature-details/discovery-find-and-findcriteria.md)합니다. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]검색 및 바인딩 요소 참조 [WCF Discovery 개요](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md)  
+ 찾기 조건에 대 한 자세한 내용은 참조 [검색 찾기 및 FindCriteria](../../../../docs/framework/wcf/feature-details/discovery-find-and-findcriteria.md)합니다. 검색 및 바인딩 요소 참조 하는 방법에 대 한 자세한 내용은 [WCF Discovery 개요](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md)  
   
 ## <a name="standard-endpoint-configuration"></a>표준 끝점 구성  
  표준 끝점은 하나 이상의 속성(주소, 바인딩 또는 계약)에 대한 기본값이나 변경할 수 없는 하나 이상의 속성 값이 있는 미리 정의된 끝점입니다. .NET 4에는 세 개의 검색 관련 표준 끝점인 <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint>, <xref:System.ServiceModel.Discovery.UdpAnnouncementEndpoint> 및 <xref:System.ServiceModel.Discovery.DynamicEndpoint>가 제공됩니다.  <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint>는 UDP 멀티캐스트 바인딩을 통한 검색 작업에 대해 미리 구성된 표준 끝점입니다. <xref:System.ServiceModel.Discovery.UdpAnnouncementEndpoint>는 UDP 바인딩을 통해 알림 메시지를 보내기 위해 미리 구성된 표준 끝점입니다. <xref:System.ServiceModel.Discovery.DynamicEndpoint>는 런타임에 동적으로 검색을 사용하여 검색된 서비스의 끝점 주소를 찾는 데 사용되는 표준 끝점입니다.  표준 바인딩은 추가할 표준 끝점의 형식을 지정하는 kind 특성이 포함된 <`endpoint`> 요소를 사용하여 지정됩니다. 다음 예제에서는 <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> 및 <xref:System.ServiceModel.Discovery.UdpAnnouncementEndpoint>를 추가하는 방법을 보여 줍니다.  
@@ -280,4 +282,4 @@ ms.lasthandoff: 12/22/2017
 </system.ServiceModel>  
 ```  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]표준 끝점 참조 [표준 끝점](../../../../docs/framework/wcf/feature-details/standard-endpoints.md)
+ 표준 끝점에 대 한 자세한 내용은 참조 [표준 끝점](../../../../docs/framework/wcf/feature-details/standard-endpoints.md)

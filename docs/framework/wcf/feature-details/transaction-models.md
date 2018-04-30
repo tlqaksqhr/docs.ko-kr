@@ -16,11 +16,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: ab3baf8cc0bb6af951f6f3e6396b7545d0c6b301
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 3c68a23e9ee86050a9db4c63c8c97d017794bce8
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="transaction-models"></a>트랜잭션 모델
 이 항목에서는 트랜잭션 프로그래밍 모델 및 Microsoft가 제공하는 인프라 구성 요소 간의 관계에 대해 설명합니다.  
@@ -37,7 +37,7 @@ ms.lasthandoff: 04/28/2018
 ## <a name="systemtransactions-transactions"></a>System.Transactions 트랜잭션  
  <xref:System.Transactions> 네임스페이스는 <xref:System.Transactions.Transaction> 클래스 기반의 명시적 프로그래밍 모델과 <xref:System.Transactions.TransactionScope> 클래스를 사용하는 암시적 프로그래밍 모델을 모두 제공합니다. 후자의 경우 인프라에서 자동으로 트랜잭션을 관리합니다.  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 이러한 두 가지 모델을 사용 하 여 트랜잭션 응용 프로그램 만들기를 참조 하는 방법 [트랜잭션 응용 프로그램을 작성](http://go.microsoft.com/fwlink/?LinkId=94947)합니다.  
+ 이러한 두 가지 모델을 사용 하 여 트랜잭션 응용 프로그램을 만드는 방법에 대 한 자세한 내용은 참조 [트랜잭션 응용 프로그램을 작성](http://go.microsoft.com/fwlink/?LinkId=94947)합니다.  
   
  [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 서비스 또는 응용 프로그램의 경우 <xref:System.Transactions>은 클라이언트 응용 프로그램 내에서 트랜잭션을 만들고 필요한 경우 서비스 내에서 트랜잭션과 명시적으로 상호 작용하기 위한 프로그래밍 모델을 제공합니다.  
   

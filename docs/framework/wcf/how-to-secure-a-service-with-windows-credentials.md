@@ -21,14 +21,14 @@ ms.author: bruceper
 manager: mbaldwin
 ms.workload:
 - dotnet
-ms.openlocfilehash: c754a4ec57751b2ca5a809c771b2fb5235ec0510
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 2828b6b9df313bab5a904712ad4e97cc7062f387
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="how-to-secure-a-service-with-windows-credentials"></a>방법: Windows 자격 증명을 사용하여 서비스에 보안 설정
-이 항목에서는 전송 보안에서 사용 하도록 설정 하는 방법을 보여 줍니다.는 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 서비스를 Windows 도메인에 있으며 동일한 도메인에 클라이언트에서 호출 됩니다. [!INCLUDE[crabout](../../../includes/crabout-md.md)] 이 시나리오에서는 참조 [Windows 인증과 함께 전송 보안](../../../docs/framework/wcf/feature-details/transport-security-with-windows-authentication.md)합니다. 샘플 응용 프로그램에 대 한 참조는 [WSHttpBinding](../../../docs/framework/wcf/samples/wshttpbinding.md) 샘플.  
+이 항목에서는 전송 보안에서 사용 하도록 설정 하는 방법을 보여 줍니다.는 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 서비스를 Windows 도메인에 있으며 동일한 도메인에 클라이언트에서 호출 됩니다. 이 시나리오에 대 한 자세한 내용은 참조 [Windows 인증과 함께 전송 보안](../../../docs/framework/wcf/feature-details/transport-security-with-windows-authentication.md)합니다. 샘플 응용 프로그램에 대 한 참조는 [WSHttpBinding](../../../docs/framework/wcf/samples/wshttpbinding.md) 샘플.  
   
  이 항목에서는 사용자의 기존 계약 인터페이스 및 구현이 이미 정의되어 있다고 가정하고 여기에 더 추가합니다. 사용자는 기존 서비스 및 클라이언트를 수정할 수도 있습니다.  
   
@@ -57,7 +57,7 @@ ms.lasthandoff: 04/28/2018
      [!code-vb[c_SecureWindowsService#1](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securewindowsservice/vb/secureservice.vb#1)]  
   
 ### <a name="using-the-binding-in-a-service"></a>서비스에 바인딩 사용  
- 이는 두 번째 프로시저로, 자체 호스트된 서비스에 바인딩을 사용하는 방법을 보여 줍니다. [!INCLUDE[crabout](../../../includes/crabout-md.md)] 호스팅 서비스 참조 [호스팅 서비스](../../../docs/framework/wcf/hosting-services.md)합니다.  
+ 이는 두 번째 프로시저로, 자체 호스트된 서비스에 바인딩을 사용하는 방법을 보여 줍니다. 서비스를 호스트 하는 방법에 대 한 자세한 내용은 참조 [호스팅 서비스](../../../docs/framework/wcf/hosting-services.md)합니다.  
   
 ##### <a name="to-use-a-binding-in-a-service"></a>서비스에 바인딩을 사용하려면  
   

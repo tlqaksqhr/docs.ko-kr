@@ -21,11 +21,11 @@ ms.author: mhopkins
 manager: markl
 ms.workload:
 - dotnet
-ms.openlocfilehash: 2028f312433e3a4cf8c90f2e6809ed29288d7819
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 581fe3272808da84fcf31667f8191f3cc6322033
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="ui-automation-and-microsoft-active-accessibility"></a>UI 자동화 및 Microsoft Active Accessibility
 > [!NOTE]
@@ -41,7 +41,7 @@ ms.lasthandoff: 04/26/2018
   
 <a name="Support_in_Windows_Presentation_Foundation_"></a>   
 ## <a name="support-in-windows-presentation-foundation"></a>Windows Presentation Foundation에서의 지원  
- [!INCLUDE[TLA#tla_wpf](../../../includes/tlasharptla-wpf-md.md)] 는 사용자 인터페이스를 만들기 위한 새 모델입니다. [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 요소에는 [!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)]에 대한 기본 지원이 포함되지 않습니다. 하지만 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]클라이언트에 대한 브리징 지원이 포함된 [!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)] 을 지원합니다. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 에 대해 특별히 작성된 클라이언트만 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]의 접근성 기능(예: 다양한 텍스트 지원)을 활용할 수 있습니다.  
+ Windows Presentation Foundation (WPF)은 사용자 인터페이스를 만들기 위한 새 모델입니다. [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 요소에는 [!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)]에 대한 기본 지원이 포함되지 않습니다. 하지만 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]클라이언트에 대한 브리징 지원이 포함된 [!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)] 을 지원합니다. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 에 대해 특별히 작성된 클라이언트만 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]의 접근성 기능(예: 다양한 텍스트 지원)을 활용할 수 있습니다.  
   
 <a name="Servers_and_Clients_compare"></a>   
 ## <a name="servers-and-clients"></a>서버 및 클라이언트  

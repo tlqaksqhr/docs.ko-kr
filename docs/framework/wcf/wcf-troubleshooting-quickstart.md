@@ -19,11 +19,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 490b756a9beae09b20a36d3fc6a20c85aad76618
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 24ca6899e6ac2bb316c0543932d70abc13626aa2
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="wcf-troubleshooting-quickstart"></a>WCF 문제 해결 퀵 스타트
 이 항목에서는 WCF 클라이언트 및 서비스를 개발하는 동안 발생하는 몇 가지 알려진 문제점을 나열합니다. 발생하는 문제가 이 목록에 없는 경우 서비스에 대한 추적을 구성하는 것이 좋습니다. 추적을 구성하면 추적 파일 뷰어로 보고 서비스 내에서 발생하는 예외에 대한 자세한 정보를 얻을 수 있는 추적 파일이 생성됩니다. 추적을 구성하는 방법에 대한 자세한 내용은 [Configuring Tracing](../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md)을 참조하십시오. 추적 파일 뷰어에 대한 자세한 내용은 [Service Trace Viewer Tool (SvcTraceViewer.exe)](../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)를 참조하십시오.  
@@ -64,7 +64,7 @@ ms.lasthandoff: 04/28/2018
   
 <a name="BKMK_q1"></a>   
 ## <a name="sometimes-i-receive-a-messagesecurityexception-on-the-second-request-if-my-client-is-idle-for-a-while-after-the-first-request-what-is-happening"></a>첫 번째 요청 이후 클라이언트가 잠시 유휴 상태일 때 가끔씩 두 번째 요청에서 MessageSecurityException이 발생합니다. 이유가 무엇입니까?  
- 두 번째 요청은 주로 (1) 세션 시간 제한이 초과되었거나 (2) 서비스를 호스팅하는 웹 서버가 재활용되는 경우와 같은 두 가지 이유로 인해 실패할 수 있습니다. 첫 번째 경우 세션은 서비스가 시간 제한을 초과할 때까지 유효합니다. 서비스는 서비스의 바인딩(<xref:System.ServiceModel.Channels.Binding.ReceiveTimeout%2A>)에 지정된 시간 내에 클라이언트가 보낸 요청을 받지 못하면 보안 세션을 종료합니다. 이후로 클라이언트 메시지가 전송되면 <xref:System.ServiceModel.Security.MessageSecurityException>이 발생합니다. 클라이언트는 이후로 메시지를 보내거나 상태 저장 보안 컨텍스트 토큰을 사용하려면 서비스와의 보안 세션을 다시 설정해야 합니다. 상태 저장 보안 컨텍스트 토큰을 사용하여 웹 서버가 재생되는 동안 보안 세션이 유지되도록 할 수도 있습니다. [!INCLUDE[crabout](../../../includes/crabout-md.md)] 상태 저장 보안 컨텍스트 토큰을 사용 하 여 보안 세션에서 참조 [하는 방법: 보안 세션에 대 한 보안 컨텍스트 토큰 만들기](../../../docs/framework/wcf/feature-details/how-to-create-a-security-context-token-for-a-secure-session.md)합니다. 또는 보안 세션을 사용하지 않도록 설정할 수 있습니다. 사용 하는 경우는 [ \<wsHttpBinding >](../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md) 바인딩을 설정할 수 있습니다는 `establishSecurityContext` 속성을 `false` 를 보안 세션을 사용 하지 않도록 설정 합니다. 다른 바인딩의 보안 세션을 사용하지 않도록 설정하려면 사용자 지정 바인딩을 만들어야 합니다. 사용자 지정 바인딩을 만드는 방법에 대한 자세한 내용은 [How to: Create a Custom Binding Using the SecurityBindingElement](../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)를 참조하십시오. 이러한 옵션을 적용하기 전에 먼저 응용 프로그램의 보안 요구 사항을 이해해야 합니다.  
+ 두 번째 요청은 주로 (1) 세션 시간 제한이 초과되었거나 (2) 서비스를 호스팅하는 웹 서버가 재활용되는 경우와 같은 두 가지 이유로 인해 실패할 수 있습니다. 첫 번째 경우 세션은 서비스가 시간 제한을 초과할 때까지 유효합니다. 서비스는 서비스의 바인딩(<xref:System.ServiceModel.Channels.Binding.ReceiveTimeout%2A>)에 지정된 시간 내에 클라이언트가 보낸 요청을 받지 못하면 보안 세션을 종료합니다. 이후로 클라이언트 메시지가 전송되면 <xref:System.ServiceModel.Security.MessageSecurityException>이 발생합니다. 클라이언트는 이후로 메시지를 보내거나 상태 저장 보안 컨텍스트 토큰을 사용하려면 서비스와의 보안 세션을 다시 설정해야 합니다. 상태 저장 보안 컨텍스트 토큰을 사용하여 웹 서버가 재생되는 동안 보안 세션이 유지되도록 할 수도 있습니다. 보안 세션에서 상태 저장 보안 컨텍스트 토큰을 사용 하는 방법에 대 한 자세한 내용은 참조 [하는 방법: 보안 세션에 대 한 보안 컨텍스트 토큰 만들기](../../../docs/framework/wcf/feature-details/how-to-create-a-security-context-token-for-a-secure-session.md)합니다. 또는 보안 세션을 사용하지 않도록 설정할 수 있습니다. 사용 하는 경우는 [ \<wsHttpBinding >](../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md) 바인딩을 설정할 수 있습니다는 `establishSecurityContext` 속성을 `false` 를 보안 세션을 사용 하지 않도록 설정 합니다. 다른 바인딩의 보안 세션을 사용하지 않도록 설정하려면 사용자 지정 바인딩을 만들어야 합니다. 사용자 지정 바인딩을 만드는 방법에 대한 자세한 내용은 [How to: Create a Custom Binding Using the SecurityBindingElement](../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)를 참조하십시오. 이러한 옵션을 적용하기 전에 먼저 응용 프로그램의 보안 요구 사항을 이해해야 합니다.  
   
 <a name="BKMK_q2"></a>   
 ## <a name="my-service-starts-to-reject-new-clients-after-about-10-clients-are-interacting-with-it-what-is-happening"></a>서비스와 상호 작용하는 클라이언트의 수가 약 10개를 넘으면 서비스가 새 클라이언트를 거부하기 시작합니다. 이유가 무엇입니까?  
@@ -145,7 +145,7 @@ public class MyServiceHost : ServiceHost
   
     4.  SetSPN을 사용하여 도메인에 새 SPN을 등록합니다. 이 작업을 수행하려면 도메인 관리자여야 합니다.  
   
- [!INCLUDE[crabout](../../../includes/crabout-md.md)] 는 [Security Concepts Used in WCF](../../../docs/framework/wcf/feature-details/security-concepts-used-in-wcf.md) 및 다음 항목을 참조하십시오.  
+ Kerberos 프로토콜에 대 한 자세한 내용은 참조 [WCF에서 보안 개념 사용](../../../docs/framework/wcf/feature-details/security-concepts-used-in-wcf.md) 및:  
   
 -   [Windows 인증 오류 디버깅](../../../docs/framework/wcf/feature-details/debugging-windows-authentication-errors.md)  
   
@@ -175,7 +175,7 @@ public class MyServiceHost : ServiceHost
   
  이 경우에는 개인 키가 포함된 파일에 대한 프로세스 계정에 읽기 권한을 부여해야 합니다. 예를 들어, IIS 작업자 프로세스가 밥 계정에서 실행되는 경우 밥에게 개인 키가 포함된 파일에 대한 읽기 권한을 부여해야 합니다.  
   
- [!INCLUDE[crabout](../../../includes/crabout-md.md)] , [How to: Make X.509 Certificates Accessible to WCF](../../../docs/framework/wcf/feature-details/how-to-make-x-509-certificates-accessible-to-wcf.md)을 참조하십시오.  
+ 특정 X.509 인증서에 대 한 개인 키가 포함 된 파일에 올바른 사용자 계정 액세스를 제공 하는 방법에 대 한 자세한 내용은 참조 [하는 방법: X.509 인증서 액세스 가능 wcf](../../../docs/framework/wcf/feature-details/how-to-make-x-509-certificates-accessible-to-wcf.md)합니다.  
   
 <a name="BKMK_q88"></a>   
 ## <a name="i-changed-the-first-parameter-of-an-operation-from-uppercase-to-lowercase-now-my-client-throws-an-exception-whats-happening"></a>작업의 첫 번째 매개 변수를 대문자에서 소문자로 변경한 다음에 클라이언트에서 예외가 throw됩니다. 이유가 무엇입니까?  

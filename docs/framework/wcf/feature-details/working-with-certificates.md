@@ -21,16 +21,16 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: e731fd31f2a247466891abbf75d67a61dba7f286
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 3c023b27ace10919c51aa13e2635040d9d5b812b
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="working-with-certificates"></a>인증서 작업
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 보안을 프로그래밍하려면 일반적으로 X.509 디지털 인증서를 사용하여 클라이언트 및 서버를 인증하고, 암호화하고, 메시지에 디지털 서명합니다. 이 항목에서는 X.509 디지털 인증서 기능과 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서 인증서 기능을 사용하는 방법을 간략하게 설명하며, 이러한 개념을 자세히 설명하거나 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 및 인증서를 사용하여 일반 작업을 수행하는 방법을 보여 주는 항목에 대한 링크를 제공합니다.  
   
- 간단히 말해서 디지털 인증서는의 일부는 *공개 키 인프라* (PKI) 하는 디지털 인증서, 인증 기관 및 기타 등록 기관의 확인 하 고 인증의 유효성을 검사 하는 시스템 각 당사자 공개 키 암호화 사용을 통해 전자 트랜잭션에 참여 합니다. 인증 기관 인증서를 발급 하며 각 인증서와 같은 데이터를 포함 하는 필드 집합이 *주체* (인증서가 발급 엔터티), 유효 날짜 (때 인증서가 유효), (의 발급자 엔터티는 인증서를 발급 한), 및 공개 키입니다. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서 이러한 각 속성은 <xref:System.IdentityModel.Claims.Claim>으로 처리되며, 각 클레임은 ID와 권한의 두 가지 형식으로 세분화됩니다. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] X.509 인증서 참조 [X.509 공개 키 인증서](http://go.microsoft.com/fwlink/?LinkId=209952) [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 클레임 및 권한 부여 WCF의 참조 [관리 클레임 및 권한 부여 Id 모델](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md)합니다. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 참조는 PKI를 구현 [Windows Server 2008 R2 인증서 서비스](http://go.microsoft.com/fwlink/?LinkId=209949)합니다.  
+ 간단히 말해서 디지털 인증서는의 일부는 *공개 키 인프라* (PKI) 하는 디지털 인증서, 인증 기관 및 기타 등록 기관의 확인 하 고 인증의 유효성을 검사 하는 시스템 각 당사자 공개 키 암호화 사용을 통해 전자 트랜잭션에 참여 합니다. 인증 기관 인증서를 발급 하며 각 인증서와 같은 데이터를 포함 하는 필드 집합이 *주체* (인증서가 발급 엔터티), 유효 날짜 (때 인증서가 유효), (의 발급자 엔터티는 인증서를 발급 한), 및 공개 키입니다. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서 이러한 각 속성은 <xref:System.IdentityModel.Claims.Claim>으로 처리되며, 각 클레임은 ID와 권한의 두 가지 형식으로 세분화됩니다. 인증서 참조 X.509에 대 한 자세한 내용은 [X.509 공개 키 인증서](http://go.microsoft.com/fwlink/?LinkId=209952)WCF 참조에 클레임 및 권한 부여에 대 한 자세한 내용은 [관리 클레임 및 권한 부여 Id 모델](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md). PKI를 구현 하는 방법에 대 한 자세한 내용은 참조 [Windows Server 2008 R2 인증서 서비스](http://go.microsoft.com/fwlink/?LinkId=209949)합니다.  
   
  인증서의 기본 기능은 인증서 소유자의 ID를 다른 엔터티에 인증하는 것입니다. 포함 된 인증서는 *공개 키* 소유자는 개인 키를 유지 하는 동안 해당 소유자의 합니다. 공개 키를 사용하여 인증서 소유자에게 보내는 메시지를 암호화할 수 있습니다. 소유자만 개인 키에 액세스할 수 있으므로 소유자만이 해당 메시지를 해독할 수 있습니다.  
   
@@ -55,7 +55,7 @@ ms.lasthandoff: 04/28/2018
   
 -   **개인**합니다. 이 저장소는 컴퓨터 사용과 연관된 인증서에 사용됩니다. 일반적으로 이 저장소는 신뢰할 수 있는 루트 인증 기관 저장소에 있는 인증 기관 인증서 중 하나에서 발급한 인증서에 사용됩니다. 또한 여기에 있는 인증서는 응용 프로그램에서 자체 발급하고 신뢰할 수 있습니다.  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 인증서 저장소를 참조 하십시오. [인증서 저장소](http://go.microsoft.com/fwlink/?LinkId=88912)합니다.  
+ 인증서 저장소에 대 한 자세한 내용은 참조 [인증서 저장소](http://go.microsoft.com/fwlink/?LinkId=88912)합니다.  
   
 ### <a name="selecting-a-store"></a>저장소 선택  
  인증서를 저장할 위치는 서비스 또는 클라이언트가 실행되는 방법과 시기에 따라 달라집니다. 다음과 같은 일반 규칙이 적용됩니다.  
@@ -65,12 +65,12 @@ ms.lasthandoff: 04/28/2018
 -   서비스 또는 클라이언트는 사용자 계정으로 실행 하는 응용 프로그램을 사용 하 여는 **현재 사용자** 저장 합니다.  
   
 ### <a name="accessing-stores"></a>저장소 액세스  
- 저장소는 컴퓨터에 있는 폴더처럼 ACL(액세스 제어 목록)에 의해 보호됩니다. IIS(인터넷 정보 서비스)에 의해 호스팅되는 서비스를 만들 경우 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 프로세스가 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 계정에서 실행됩니다. 이 계정은 서비스에 사용되는 인증서가 들어 있는 저장소에 대한 액세스 권한이 있어야 합니다. 각각의 주 저장소는 기본 액세스 목록으로 보호되지만, 목록을 수정할 수 있습니다. 저장소 액세스를 위한 개별 역할을 만들 경우 해당 역할에 액세스 권한을 부여해야 합니다. WinHttpCertConfig.exe 도구를 사용 하 여 액세스 목록을 수정 하는 방법을 알아보려면 참조 [하는 방법: 개발 중 사용할 임시 인증서 만들기](../../../../docs/framework/wcf/feature-details/how-to-create-temporary-certificates-for-use-during-development.md)합니다. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 클라이언트 인증서를 사용 하 여 iis, 참조 [ASP.NET 웹 응용 프로그램에서 인증을 위해 클라이언트 인증서를 사용 하 여 웹 서비스를 호출 하는 방법을](http://go.microsoft.com/fwlink/?LinkId=88914)합니다.  
+ 저장소는 컴퓨터에 있는 폴더처럼 ACL(액세스 제어 목록)에 의해 보호됩니다. IIS(인터넷 정보 서비스)에 의해 호스팅되는 서비스를 만들 경우 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 프로세스가 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 계정에서 실행됩니다. 이 계정은 서비스에 사용되는 인증서가 들어 있는 저장소에 대한 액세스 권한이 있어야 합니다. 각각의 주 저장소는 기본 액세스 목록으로 보호되지만, 목록을 수정할 수 있습니다. 저장소 액세스를 위한 개별 역할을 만들 경우 해당 역할에 액세스 권한을 부여해야 합니다. WinHttpCertConfig.exe 도구를 사용 하 여 액세스 목록을 수정 하는 방법을 알아보려면 참조 [하는 방법: 개발 중 사용할 임시 인증서 만들기](../../../../docs/framework/wcf/feature-details/how-to-create-temporary-certificates-for-use-during-development.md)합니다. IIS 클라이언트 인증서를 사용 하는 방법에 대 한 자세한 내용은 참조 [ASP.NET 웹 응용 프로그램에서 인증을 위해 클라이언트 인증서를 사용 하 여 웹 서비스를 호출 하는 방법을](http://go.microsoft.com/fwlink/?LinkId=88914)합니다.  
   
 ## <a name="chain-trust-and-certificate-authorities"></a>신뢰 체인 및 인증 기관  
  인증서는 개별 인증서가 인증서를 발급한 CA에 연결되는 계층 구조에 만들어집니다. 이 링크는 CA의 인증서로 연결됩니다. CA 인증서는 원래 CA의 인증서를 발급한 CA로 연결됩니다. 이 프로세스는 루트 CA의 인증서에 도달할 때까지 반복됩니다. 루트 CA의 인증서는 본질적으로 신뢰할 수 있는 인증서입니다.  
   
- 디지털 인증서는이 계층 구조를 사용 하 여 엔터티를 인증 하는 데는 *신뢰 체인을*합니다. MMC 스냅인을 사용 하 여 인증서를 두 번 클릭 한 다음 클릭 하 여 인증서의 체인을 볼 수는 **인증서 경로** 탭 [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 참조에대한인증기관인증서체인을가져오는[하는 방법: 서명을 확인 하는 데 사용 하는 인증 기관 인증서 체인 지정](../../../../docs/framework/wcf/feature-details/specify-the-certificate-authority-chain-verify-signatures-wcf.md)합니다.  
+ 디지털 인증서는이 계층 구조를 사용 하 여 엔터티를 인증 하는 데는 *신뢰 체인을*합니다. MMC 스냅인을 사용 하 여 인증서를 두 번 클릭 한 다음 클릭 하 여 인증서의 체인을 볼 수는 **인증서 경로** 탭 합니다. 인증 기관에 대 한 인증서 체인을 가져오기에 대 한 자세한 내용은 참조 [하는 방법: 지정 된 인증서 기관 인증서 체인 데 서명을 확인](../../../../docs/framework/wcf/feature-details/specify-the-certificate-authority-chain-verify-signatures-wcf.md)합니다.  
   
 > [!NOTE]
 >  신뢰할 수 있는 루트 기관 인증서 저장소에 발급자의 인증서를 넣어 발급자를 신뢰할 수 있는 루트 기관으로 지정할 수 있습니다.  
@@ -159,9 +159,9 @@ ms.lasthandoff: 04/28/2018
  구성을 사용하여 인증서를 설정할 수도 있습니다. 자격 증명, 인증서를 비롯 한 아래 지정 된 서비스를 만들 경우는 [ \<serviceBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/servicebehaviors.md)합니다. 아래 지정 된 인증서는 클라이언트를 프로그래밍 하는 경우는 [ \<endpointBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/endpointbehaviors.md)합니다.  
   
 ## <a name="mapping-a-certificate-to-a-user-account"></a>사용자 계정에 인증서 매핑  
- IIS 및 Active Directory에는 Windows 사용자 계정에 인증서를 매핑하는 기능이 있습니다. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 기능 참조 [사용자 계정에 인증서에 매핑할](http://go.microsoft.com/fwlink/?LinkId=88917)합니다.  
+ IIS 및 Active Directory에는 Windows 사용자 계정에 인증서를 매핑하는 기능이 있습니다. 기능에 대 한 자세한 내용은 참조 [사용자 계정에 인증서에 매핑할](http://go.microsoft.com/fwlink/?LinkId=88917)합니다.  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)] Active Directory 매핑을 사용 하 여, 참조 [디렉터리 서비스 매핑을 사용 하 여 클라이언트 인증서 매핑](http://go.microsoft.com/fwlink/?LinkId=88918)합니다.  
+ Active Directory 매핑을 사용 하는 방법에 대 한 자세한 내용은 참조 [디렉터리 서비스 매핑을 사용 하 여 클라이언트 인증서 매핑](http://go.microsoft.com/fwlink/?LinkId=88918)합니다.  
   
  이 기능을 사용하여 <xref:System.ServiceModel.Security.X509ClientCertificateAuthentication.MapClientCertificateToWindowsAccount%2A> 클래스의 <xref:System.ServiceModel.Security.X509ClientCertificateAuthentication> 속성을 `true`로 설정할 수 있습니다. 구성에서 설정할 수 있습니다는 `mapClientCertificateToWindowsAccount` 특성에는 [ \<인증 >](../../../../docs/framework/configure-apps/file-schema/wcf/authentication-of-servicecertificate-element.md) 요소를 `true`다음 코드에 나온 것 처럼 합니다.  
   

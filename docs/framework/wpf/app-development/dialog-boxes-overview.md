@@ -1,12 +1,13 @@
 ---
-title: "대화 상자 개요"
-ms.custom: 
+title: 대화 상자 개요
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -17,16 +18,17 @@ helpviewer_keywords:
 - message boxes [WPF]
 - modal dialog boxes [WPF]
 ms.assetid: 0d23d544-a393-4a02-a3aa-d8cd5d3d6511
-caps.latest.revision: "25"
+caps.latest.revision: 25
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 112a9badaf9a64b2c6d3f73d64c27fbc36ec48a3
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: dfe22dec0827f0ceb880b9410b64668f219a422f
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="dialog-boxes-overview"></a>대화 상자 개요
 독립 실행형 응용 프로그램에는 일반적으로는 응용 프로그램이 작동 하 고를 통해 해당 데이터를 처리 하는 기능을 노출 합니다. 기본 데이터를 표시 하는 주 창이 있는 [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] 메뉴 모음, 도구 모음 및 상태 표시줄 등의 메커니즘입니다. 특수 응용 프로그램에는 다음을 수행하는 추가 창이 표시될 수도 있습니다.  
@@ -43,7 +45,7 @@ ms.lasthandoff: 12/22/2017
   
  A *모덜리스* 대화 상자, 반면에 때도 사용자에서 열려 있는 동안 다른 창을 활성화 합니다. 예를 들어, 사용자가 문서에서 특정 단어를 찾으려고 할 때 주 창에서 사용자가 찾으려는 단어를 입력할 대화 상자를 열 때가 많습니다. 단어를 찾는다고 해서 사용자가 문서를 편집하지 못하게 되는 것은 아니기 때문에 대화 상자를 모덜로 설정할 필요가 없습니다. 모덜리스 대화 상자 제공 이상는 **닫습니다** 대화 상자를 닫으려면 단추 그리고와 같은 특정 기능을 실행 하기 위해 추가 단추가 제공할 수 있습니다는 **다음 찾기** 단추는 다음 찾기를 단어를 단어 검색의 찾기 기준과 일치합니다.  
   
- [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)]를 사용하면 메시지 상자, 일반 대화 상자, 사용자 지정 대화 상자와 같은 몇 가지 유형의 대화 상자를 만들 수 있습니다. 이 항목에서는 각, 설명 및 [대화 상자 샘플](http://go.microsoft.com/fwlink/?LinkID=159984) 일치 하는 예제를 제공 합니다.  
+ Windows Presentation Foundation (WPF)를 사용 하면 여러 유형의 메시지 상자, 일반 대화 상자 및 사용자 지정 대화 상자를 비롯 하 여 대화 상자를 만들 수 있습니다. 이 항목에서는 각, 설명 및 [대화 상자 샘플](http://go.microsoft.com/fwlink/?LinkID=159984) 일치 하는 예제를 제공 합니다.  
   
  
   
@@ -53,7 +55,7 @@ ms.lasthandoff: 12/22/2017
   
  ![워드 프로세서 대화 상자](../../../../docs/framework/wpf/app-development/media/dialogboxesoverviewfigure1.png "DialogBoxesOverviewFigure1")  
   
- 메시지 상자를 만들려면 사용 하 여 <xref:System.Windows.MessageBox> 클래스. <xref:System.Windows.MessageBox>메시지 상자 텍스트, 제목, 아이콘 및 단추, 다음과 같은 코드를 사용 하 여 구성할 수 있습니다.  
+ 메시지 상자를 만들려면 사용 하 여 <xref:System.Windows.MessageBox> 클래스. <xref:System.Windows.MessageBox> 메시지 상자 텍스트, 제목, 아이콘 및 단추, 다음과 같은 코드를 사용 하 여 구성할 수 있습니다.  
   
  [!code-csharp[DialogBoxesOverviewSnippets#MsgBoxConfigureCODEBEHIND](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DialogBoxesOverviewSnippets/CSharp/Window1.xaml.cs#msgboxconfigurecodebehind)]
  [!code-vb[DialogBoxesOverviewSnippets#MsgBoxConfigureCODEBEHIND](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DialogBoxesOverviewSnippets/VisualBasic/window1.xaml.vb#msgboxconfigurecodebehind)]  
@@ -72,13 +74,13 @@ ms.lasthandoff: 12/22/2017
   
  하지만 <xref:System.Windows.MessageBox> 간단한 대화 상자 사용자 환경, 사용 시의 이점은 제공할 수 있습니다 <xref:System.Windows.MessageBox> 하는 창 부분 신뢰 보안 샌드박스 내에서 실행 되는 응용 프로그램에서 표시할 수 있는 유일한 종류는 (참조 [보안](../../../../docs/framework/wpf/security-wpf.md)), 같은 [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)]합니다.  
   
- 대부분의 대화 상자는 텍스트, 선택(확인란), 상호 배타적인 선택(라디오 단추), 목록 선택(목록 상자, 콤보 상자, 드롭다운 목록 상자)과 같이 메시지 상자의 결과보다 복잡한 데이터를 표시하고 수집합니다. 이러한 경우를 위해 [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] 몇 가지 일반 대화 상자를 제공 하 고 사용 하는 완전 신뢰로 실행 되는 응용 프로그램으로 제한 되지만 사용자가 고유한 대화 상자를 만들 수 있습니다.  
+ 대부분의 대화 상자는 텍스트, 선택(확인란), 상호 배타적인 선택(라디오 단추), 목록 선택(목록 상자, 콤보 상자, 드롭다운 목록 상자)과 같이 메시지 상자의 결과보다 복잡한 데이터를 표시하고 수집합니다. 이러한 경우를 위해 Windows Presentation Foundation (WPF) 몇 가지 일반 대화 상자를 제공 하 고 사용 하는 완전 신뢰로 실행 되는 응용 프로그램으로 제한 되지만 사용자가 고유한 대화 상자를 만들 수 있습니다.  
   
 <a name="Common_Dialogs"></a>   
 ## <a name="common-dialog-boxes"></a>일반 대화 상자  
  [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)]에서는 파일을 열고, 파일을 저장하고, 인쇄하는 등의 용도로 사용되는 대화 상자를 비롯하여 모든 응용 프로그램에서 공통되는, 다양한 재사용 가능 대화 상자를 구현합니다. 이러한 대화 상자는 운영 체제에서 구현되므로 운영 체제에서 실행되는 모든 응용 프로그램에서 공유할 수 있어 사용자 경험의 일관성에 도움이 됩니다. 운영 체제에서 제공되는 대화 상자를 사용자가 한 응용 프로그램에서 익히고 나면 다른 응용 프로그램에서 대화 상자의 사용 방법을 다시 익힐 필요가 없습니다. 이러한 대화 상자는 모든 응용 프로그램에 사용할 수 있고 라고 일관 된 사용자 환경을 제공할 수 있기 때문에 *일반 대화 상자*합니다.  
   
- [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)]에서는 파일 열기, 파일 저장 및 인쇄 일반 대화 상자를 캡슐화하여 독립 실행형 응용 프로그램에서 사용할 수 있는 관리되는 클래스로 노출합니다. 이 항목에서는 각각의 개요를 간략하게 제공합니다.  
+ Windows Presentation Foundation (WPF) 열린 파일을 캡슐화, 파일을 저장 하 고 일반 대화 상자를 인쇄 한 독립 실행형 응용 프로그램에서 사용할 수 있는 관리 되는 클래스를 제공 합니다. 이 항목에서는 각각의 개요를 간략하게 제공합니다.  
   
 <a name="Open_File_Dialog"></a>   
 ### <a name="open-file-dialog"></a>파일 열기 대화 상자  
@@ -94,7 +96,7 @@ ms.lasthandoff: 12/22/2017
  파일 열기 대화 상자에 대 한 자세한 내용은 참조 하십시오. <xref:Microsoft.Win32.OpenFileDialog?displayProperty=nameWithType>합니다.  
   
 > [!NOTE]
->  <xref:Microsoft.Win32.OpenFileDialog>부분 신뢰로 실행 중인 응용 프로그램에서 안전 하 게 파일 이름을 검색 하기 위해 사용할 수 (참조 [보안](../../../../docs/framework/wpf/security-wpf.md)).  
+>  <xref:Microsoft.Win32.OpenFileDialog> 부분 신뢰로 실행 중인 응용 프로그램에서 안전 하 게 파일 이름을 검색 하기 위해 사용할 수 (참조 [보안](../../../../docs/framework/wpf/security-wpf.md)).  
   
 <a name="Save_File_Dialog"></a>   
 ### <a name="save-file-dialog-box"></a>파일 저장 대화 상자  
@@ -124,7 +126,7 @@ ms.lasthandoff: 12/22/2017
   
 <a name="Custom_Dialog_Boxes"></a>   
 ## <a name="custom-dialog-boxes"></a>사용자 지정 대화 상자  
- 일반 대화 상자는 유용하며 가능한 경우 사용하는 편이 좋지만, 도메인별 대화 상자의 요구 사항은 지원하지 않습니다. 이러한 경우 사용자가 직접 대화 상자를 만들어야 합니다. 살펴보겠지만, 대화 상자는 특별한 동작이 있는 창입니다. <xref:System.Windows.Window>이러한 동작을 구현 및 사용 하는 결과적 <xref:System.Windows.Window> 사용자 지정 모달 및 모덜리스 대화 상자를 만들어야 합니다.  
+ 일반 대화 상자는 유용하며 가능한 경우 사용하는 편이 좋지만, 도메인별 대화 상자의 요구 사항은 지원하지 않습니다. 이러한 경우 사용자가 직접 대화 상자를 만들어야 합니다. 살펴보겠지만, 대화 상자는 특별한 동작이 있는 창입니다. <xref:System.Windows.Window> 이러한 동작을 구현 및 사용 하는 결과적 <xref:System.Windows.Window> 사용자 지정 모달 및 모덜리스 대화 상자를 만들어야 합니다.  
   
 <a name="Creating_a_Modal_Custom_Dialog_Box"></a>   
 ### <a name="creating-a-modal-custom-dialog-box"></a>모달 사용자 지정 대화 상자 만들기  
@@ -307,7 +309,7 @@ ms.lasthandoff: 12/22/2017
  와 달리 <xref:System.Windows.Window.ShowDialog%2A>, <xref:System.Windows.Window.Show%2A> 즉시 반환 합니다. 따라서 호출하는 창에서는 모덜리스 대화 상자가 닫히는 시기를 알 수 없기 때문에 대화 상자의 결과를 검사하거나 대화 상자에서 더 처리할 데이터를 가져올 시기를 알 수가 없습니다. 대신, 대화 상자에서 호출한 창에 처리할 데이터를 반환할 다른 방법을 만들어야 합니다.  
   
 #### <a name="processing-data-returned-from-a-modeless-dialog-box"></a>모덜리스 대화 상자에서 반환된 데이터 처리  
- 이 예제는 `FindDialogBox` 하나 이상의 찾기 없이 특정 빈도 검색 되는 텍스트에 따라 주 창에 결과 반환할 수 있습니다. 모달 대화 상자와 마찬가지로, 모덜리스 대화 상자에서도 속성을 사용하여 결과를 반환할 수 있습니다. 그러나 대화 상자를 소유한 창에서 해당 속성을 검사할 시기를 알아야 합니다. 한 가지 방법은 대화 상자에서 텍스트를 찾을 때마다 발생하는 이벤트를 구현하는 것입니다. `FindDialogBox`구현 하는 `TextFoundEvent` 는 먼저가이 용도 대 한 대리자를 요구 합니다.  
+ 이 예제는 `FindDialogBox` 하나 이상의 찾기 없이 특정 빈도 검색 되는 텍스트에 따라 주 창에 결과 반환할 수 있습니다. 모달 대화 상자와 마찬가지로, 모덜리스 대화 상자에서도 속성을 사용하여 결과를 반환할 수 있습니다. 그러나 대화 상자를 소유한 창에서 해당 속성을 검사할 시기를 알아야 합니다. 한 가지 방법은 대화 상자에서 텍스트를 찾을 때마다 발생하는 이벤트를 구현하는 것입니다. `FindDialogBox` 구현 하는 `TextFoundEvent` 는 먼저가이 용도 대 한 대리자를 요구 합니다.  
   
  [!code-csharp[DialogBoxSample#TextFoundEventHandlerCODE](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DialogBoxSample/CSharp/TextFoundEventHandler.cs#textfoundeventhandlercode)]
  [!code-vb[DialogBoxSample#TextFoundEventHandlerCODE](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DialogBoxSample/VisualBasic/TextFoundEventHandler.vb#textfoundeventhandlercode)]  

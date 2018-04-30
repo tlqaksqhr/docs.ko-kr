@@ -21,11 +21,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 9d4463a04ac2113778d9ea0d315beeef7d564764
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: aebd21186f7d038dfa5d7c3c65f833d41f4a1f71
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="data-contract-equivalence"></a>데이터 계약 동등성
 클라이언트가 서비스에 특정 형식의 데이터를 성공적으로 보내거나, 서비스에서 클라이언트에 데이터를 성공적으로 보내기 위해, 보낸 형식이 받는 측에 반드시 있어야 하는 것은 아닙니다. 두 형식의 데이터 계약이 일치하기만 하면 됩니다. (경우에 따라서는 완벽히 일치 하는 필수는에 설명 된 대로 [데이터 계약 버전 관리](../../../../docs/framework/wcf/feature-details/data-contract-versioning.md).)  
@@ -37,7 +37,7 @@ ms.lasthandoff: 04/28/2018
 > [!NOTE]
 >  데이터 계약 이름 및 네임스페이스와 데이터 멤버 이름은 대/소문자를 구분합니다.  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 참조 되는 데이터 멤버 이름 뿐만 아니라 데이터 계약 이름 및 네임 스페이스, [데이터 계약 이름을](../../../../docs/framework/wcf/feature-details/data-contract-names.md)합니다.  
+ 데이터 멤버 이름 뿐만 아니라 데이터 계약 이름 및 네임 스페이스에 대 한 자세한 내용은 참조 하십시오. [데이터 계약 이름을](../../../../docs/framework/wcf/feature-details/data-contract-names.md)합니다.  
   
  같은 쪽(발신자 또는 수신자)에 두 가지 형식이 있고 해당 데이터 계약이 다른 경우(예: 데이터 멤버가 서로 다른 경우) 동일한 이름과 네임스페이스를 지정하지 않아야 합니다. 그렇게 하면 예외가 throw될 수 있습니다.  
   

@@ -27,20 +27,20 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 134efba11742ab9cc8da2dfab77c233b52f1bcf1
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 51b940d4a2463be7aaea9d0ff8e48e2b9f47363a
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="security-wpf"></a>보안(WPF)
-<a name="introduction"></a> 개발 하는 경우 [!INCLUDE[TLA#tla_wpf](../../../includes/tlasharptla-wpf-md.md)] 독립 실행형 및 브라우저에서 호스팅되는 응용 프로그램 보안 모델은 고려해 야 합니다. [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 독립 실행형 응용 프로그램 무제한 권한으로 실행 ( [!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)] **FullTrust** 사용 권한 집합), Windows Installer (.msi) XCopy를 사용 하 여 배포 인지 여부 또는 [!INCLUDE[TLA2#tla_clickonce](../../../includes/tla2sharptla-clickonce-md.md)]합니다. ClickOnce를 포함한 부분 신뢰, 독립 실행형 WPF 응용 프로그램 배포가 지원되지 않습니다. 그러나 완전 신뢰 호스트 응용 프로그램 부분 신뢰를 만들 수 <xref:System.AppDomain> .NET Framework 추가 기능 모델을 사용 하 여 합니다. 자세한 내용은 참조 [WPF 추가 기능 개요](../../../docs/framework/wpf/app-development/wpf-add-ins-overview.md)합니다.  
+<a name="introduction"></a> Windows Presentation Foundation (WPF) 독립 실행형 및 브라우저에서 호스팅되는 응용 프로그램을 개발할 때는 보안 모델을 고려해 야 합니다. [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 독립 실행형 응용 프로그램 무제한 권한으로 실행 ( [!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)] **FullTrust** 사용 권한 집합), Windows Installer (.msi) XCopy를 사용 하 여 배포 인지 여부 또는 [!INCLUDE[TLA2#tla_clickonce](../../../includes/tla2sharptla-clickonce-md.md)]합니다. ClickOnce를 포함한 부분 신뢰, 독립 실행형 WPF 응용 프로그램 배포가 지원되지 않습니다. 그러나 완전 신뢰 호스트 응용 프로그램 부분 신뢰를 만들 수 <xref:System.AppDomain> .NET Framework 추가 기능 모델을 사용 하 여 합니다. 자세한 내용은 참조 [WPF 추가 기능 개요](../../../docs/framework/wpf/app-development/wpf-add-ins-overview.md)합니다.  
   
  [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 브라우저에서 호스팅되는 응용 프로그램에서 호스팅되는 [!INCLUDE[TLA#tla_iegeneric](../../../includes/tlasharptla-iegeneric-md.md)] 또는 Firefox 될 수 있습니다 [!INCLUDE[TLA#tla_xbap#plural](../../../includes/tlasharptla-xbapsharpplural-md.md)] 또는 느슨한 [!INCLUDE[TLA#tla_xaml](../../../includes/tlasharptla-xaml-md.md)] 에 대 한 자세한 내용은 문서 참조 [WPF XAML 브라우저 응용 프로그램 개요](../../../docs/framework/wpf/app-development/wpf-xaml-browser-applications-overview.md)합니다.  
   
  [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 브라우저에서 호스팅되는 응용 프로그램 기본 제한 되는 기본적으로 부분 신뢰 보안 샌드박스에서 실행 [!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)] **인터넷** 영역 권한 집합입니다. 이 실제로 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 분리 되어야 하는 일반적인 웹 응용 프로그램 기대 같은 방식으로 클라이언트 컴퓨터에서 브라우저 호스팅되는 응용 프로그램입니다. XBAP는 배포 URL 및 클라이언트의 보안 구성의 보안 영역에 따라 권한을 완전 신뢰까지 높일 수 있습니다. 자세한 내용은 [WPF 부분 신뢰 보안](../../../docs/framework/wpf/wpf-partial-trust-security.md)을 참조하세요.  
   
- 이 항목에서는 보안 모델에 대 한 설명 [!INCLUDE[TLA#tla_wpf](../../../includes/tlasharptla-wpf-md.md)] 독립 실행형 및 브라우저에서 호스팅되는 응용 프로그램입니다.  
+ 이 항목에서는 Windows Presentation Foundation (WPF) 독립 실행형 및 브라우저에서 호스팅되는 응용 프로그램에 대 한 보안 모델에 설명 합니다.  
   
  이 항목에는 다음과 같은 단원이 포함되어 있습니다.  
   

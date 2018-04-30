@@ -1,12 +1,13 @@
 ---
-title: "Drawing 개체 개요"
-ms.custom: 
+title: Drawing 개체 개요
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - ImageDrawing objects [WPF]
@@ -16,16 +17,17 @@ helpviewer_keywords:
 - Drawing objects [WPF]
 - DrawingGroup objects [WPF]
 ms.assetid: 9b5ce5c0-e204-4320-a7a8-0b2210d62f88
-caps.latest.revision: "25"
+caps.latest.revision: 25
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: c9b77b47a3f3ade27f2ba86304b1868a8d388482
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: 3672e4b1deacd8fb50a5318270854daae9c74761
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="drawing-objects-overview"></a>Drawing 개체 개요
 이 항목에서는 소개 <xref:System.Windows.Media.Drawing> 개체를 효율적으로 셰이프, 비트맵, 텍스트 및 미디어를 그리는 데 사용 하는 방법에 설명 합니다. 사용 하 여 <xref:System.Windows.Media.Drawing> 개체 클립 아트를 만들 때 사용 하 여 페인트는 <xref:System.Windows.Media.DrawingBrush>, 사용 또는 <xref:System.Windows.Media.Visual> 개체입니다.  
@@ -36,17 +38,17 @@ ms.lasthandoff: 01/19/2018
 ## <a name="what-is-a-drawing-object"></a>그리기 개체란?  
  A <xref:System.Windows.Media.Drawing> 셰이프, 비트맵, 비디오 또는 텍스트 줄을 등의 내용이 표시 개체에 설명 합니다. 그리기 형식마다 다른 콘텐츠 형식을 설명합니다. 다음은 여러 그리기 개체 형식을 보여 주는 목록입니다.  
   
--   <xref:System.Windows.Media.GeometryDrawing>-도형을 그립니다.  
+-   <xref:System.Windows.Media.GeometryDrawing> -도형을 그립니다.  
   
--   <xref:System.Windows.Media.ImageDrawing>– 이미지를 그립니다.  
+-   <xref:System.Windows.Media.ImageDrawing> – 이미지를 그립니다.  
   
--   <xref:System.Windows.Media.GlyphRunDrawing>-텍스트를 그립니다.  
+-   <xref:System.Windows.Media.GlyphRunDrawing> -텍스트를 그립니다.  
   
--   <xref:System.Windows.Media.VideoDrawing>-오디오 또는 비디오 파일을 재생 됩니다.  
+-   <xref:System.Windows.Media.VideoDrawing> -오디오 또는 비디오 파일을 재생 됩니다.  
   
--   <xref:System.Windows.Media.DrawingGroup>-다른 도면을 그립니다. 다른 그리기를 단일 합성 그리기로 결합하려면 그리기 그룹을 사용합니다.  
+-   <xref:System.Windows.Media.DrawingGroup> -다른 도면을 그립니다. 다른 그리기를 단일 합성 그리기로 결합하려면 그리기 그룹을 사용합니다.  
   
- <xref:System.Windows.Media.Drawing>개체는 다목적입니다. 여러 가지 방법으로 사용할 수는 <xref:System.Windows.Media.Drawing> 개체입니다.  
+ <xref:System.Windows.Media.Drawing> 개체는 다목적입니다. 여러 가지 방법으로 사용할 수는 <xref:System.Windows.Media.Drawing> 개체입니다.  
   
 -   사용 하 여 이미지 형식으로 표시할 수 있습니다는 <xref:System.Windows.Media.DrawingImage> 및 <xref:System.Windows.Controls.Image> 제어 합니다.  
   
@@ -86,7 +88,7 @@ GeometryDrawing
   
  다음 예제에서는 (75,75)에 있는 사각형에 100 x 100픽셀 이미지를 그립니다. 다음 그림에서는 <xref:System.Windows.Media.ImageDrawing> 예제에서 만든 합니다. 회색 테두리의 범위를 표시 하기 위해 추가 되었습니다는 <xref:System.Windows.Media.ImageDrawing>합니다.  
   
- ![100으로 100 ImageDrawing 그립니다 &#40; 75, 75 &#41; ] (../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-simple-imagedrawing-offset.png "graphicsmm_simple_imagedrawing_offset")  
+ ![100으로 100 ImageDrawing 그립니다 &#40;75, 75&#41;](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-simple-imagedrawing-offset.png "graphicsmm_simple_imagedrawing_offset")  
 100 x 100 ImageDrawing  
   
  [!code-csharp[DrawingMiscSnippets_snip#ImageDrawing100by100Inline](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DrawingMiscSnippets_snip/CSharp/ImageDrawingExample.cs#imagedrawing100by100inline)]
@@ -180,7 +182,7 @@ GeometryDrawing
  [!code-csharp[DrawingMiscSnippets_snip#GraphicsMMSimpleDrawingGroupExample](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DrawingMiscSnippets_snip/CSharp/DrawingGroupExample.cs#graphicsmmsimpledrawinggroupexample)]
  [!code-xaml[DrawingMiscSnippets_snip#GraphicsMMSimpleDrawingGroupExample](../../../../samples/snippets/xaml/VS_Snippets_Wpf/DrawingMiscSnippets_snip/XAML/DrawingGroupExample.xaml#graphicsmmsimpledrawinggroupexample)]  
   
- A <xref:System.Windows.Media.DrawingGroup> 를 내용 불투명 마스크, 변환, 비트맵 효과 및 기타 작업을 적용할 수 있습니다. <xref:System.Windows.Media.DrawingGroup>작업은 다음과 같은 순서로 적용 됩니다: <xref:System.Windows.Media.DrawingGroup.OpacityMask%2A>, <xref:System.Windows.Media.DrawingGroup.Opacity%2A>, <xref:System.Windows.Media.DrawingGroup.BitmapEffect%2A>, <xref:System.Windows.Media.DrawingGroup.ClipGeometry%2A>, <xref:System.Windows.Media.DrawingGroup.GuidelineSet%2A>, 차례로 <xref:System.Windows.Media.DrawingGroup.Transform%2A>합니다.  
+ A <xref:System.Windows.Media.DrawingGroup> 를 내용 불투명 마스크, 변환, 비트맵 효과 및 기타 작업을 적용할 수 있습니다. <xref:System.Windows.Media.DrawingGroup> 작업은 다음과 같은 순서로 적용 됩니다: <xref:System.Windows.Media.DrawingGroup.OpacityMask%2A>, <xref:System.Windows.Media.DrawingGroup.Opacity%2A>, <xref:System.Windows.Media.DrawingGroup.BitmapEffect%2A>, <xref:System.Windows.Media.DrawingGroup.ClipGeometry%2A>, <xref:System.Windows.Media.DrawingGroup.GuidelineSet%2A>, 차례로 <xref:System.Windows.Media.DrawingGroup.Transform%2A>합니다.  
   
  다음 그림에서는 순서는 <xref:System.Windows.Media.DrawingGroup> 작업이 적용 됩니다.  
   
@@ -232,7 +234,7 @@ DrawingBrush에 GeometryDrawing 사용
 ## <a name="drawingcontext-objects"></a>DrawingContext 개체  
  <xref:System.Windows.Media.DrawingContext> 클래스 채울 수 있습니다는 <xref:System.Windows.Media.Visual> 또는 <xref:System.Windows.Media.Drawing> 시각적 콘텐츠를 사용 합니다. 이러한 많은 하위 그래픽 개체를 사용 하 여 한 <xref:System.Windows.Media.DrawingContext> 그래픽 콘텐츠 매우 효율적으로 설명 하므로 합니다.  
   
- 하지만 <xref:System.Windows.Media.DrawingContext> 그리기 메서드 그리기 메서드와 비슷합니다는 <xref:System.Drawing.Graphics?displayProperty=nameWithType> 유형, 것은 실제로 매우 다릅니다. <xref:System.Windows.Media.DrawingContext>유지 모드 그래픽 시스템을 사용 하는 동안는 <xref:System.Drawing.Graphics?displayProperty=nameWithType> 직접 실행 모드 그래픽 시스템 형식이 사용 되었습니다. 사용 하는 경우는 <xref:System.Windows.Media.DrawingContext> 개체의 명령, 실제로 렌더링 명령 집합을 저장 하는 (정확한 저장소 메커니즘을 제공 하는 개체의 형식에 따라 다르지만 <xref:System.Windows.Media.DrawingContext>) 하는 나중에 사용할 그래픽으로; 시스템 개체의 형식에 따라 달라 집니다. [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] 그래픽 시스템의 작동 방식에 대한 자세한 내용은 [WPF 그래픽 렌더링 개요](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)를 참조하세요.  
+ 하지만 <xref:System.Windows.Media.DrawingContext> 그리기 메서드 그리기 메서드와 비슷합니다는 <xref:System.Drawing.Graphics?displayProperty=nameWithType> 유형, 것은 실제로 매우 다릅니다. <xref:System.Windows.Media.DrawingContext> 유지 모드 그래픽 시스템을 사용 하는 동안는 <xref:System.Drawing.Graphics?displayProperty=nameWithType> 직접 실행 모드 그래픽 시스템 형식이 사용 되었습니다. 사용 하는 경우는 <xref:System.Windows.Media.DrawingContext> 개체의 명령, 실제로 렌더링 명령 집합을 저장 하는 (정확한 저장소 메커니즘을 제공 하는 개체의 형식에 따라 다르지만 <xref:System.Windows.Media.DrawingContext>) 하는 나중에 사용할 그래픽으로; 시스템 개체의 형식에 따라 달라 집니다. Windows Presentation Foundation (WPF) 그래픽 시스템의 작동 방식에 대 한 자세한 내용은 참조는 [WPF 그래픽 렌더링 개요](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)합니다.  
   
  그러나 직접 인스턴스화는 <xref:System.Windows.Media.DrawingContext>; 얻을 수 있습니다, 특정 메서드를 직접와 같은 <xref:System.Windows.Media.DrawingGroup.Open%2A?displayProperty=nameWithType> 및 <xref:System.Windows.Media.DrawingVisual.RenderOpen%2A?displayProperty=nameWithType>합니다.  
   

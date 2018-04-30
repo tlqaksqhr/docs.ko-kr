@@ -1,33 +1,33 @@
 ---
-title: "사용자 정의 바인딩 만들기"
-ms.custom: 
+title: 사용자 정의 바인딩 만들기
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - user-defined bindings [WCF]
 ms.assetid: c4960675-d701-4bc9-b400-36a752fdd08b
-caps.latest.revision: 
+caps.latest.revision: 19
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: fe9be6ed74569875fd26f9a4913756e0366d757a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 05476adccca0deb5fd82b62f99f06939664cc876
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="creating-user-defined-bindings"></a>사용자 정의 바인딩 만들기
 시스템에서 제공하지 않는 바인딩은 다음과 같은 여러 가지 방법으로 만들 수 있습니다.  
   
--   바인딩 요소로 채워지는 컨테이너인 <xref:System.ServiceModel.Channels.CustomBinding> 클래스에 따라 사용자 지정 바인딩을 만듭니다. 그런 다음 사용자 지정 바인딩을 서비스 끝점에 추가합니다. 프로그램 방식이나 응용 프로그램 구성 파일을 통해 사용자 지정 바인딩을 만들 수 있습니다. 응용 프로그램 구성 파일에서 바인딩 요소를 사용하려면 바인딩 요소가 <xref:System.ServiceModel.Configuration.BindingElementExtensionElement>를 확장해야 합니다. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]사용자 지정 바인딩을 참조 [사용자 지정 바인딩을](../../../../docs/framework/wcf/extending/custom-bindings.md) 및 <xref:System.ServiceModel.Channels.CustomBinding>합니다.  
+-   바인딩 요소로 채워지는 컨테이너인 <xref:System.ServiceModel.Channels.CustomBinding> 클래스에 따라 사용자 지정 바인딩을 만듭니다. 그런 다음 사용자 지정 바인딩을 서비스 끝점에 추가합니다. 프로그램 방식이나 응용 프로그램 구성 파일을 통해 사용자 지정 바인딩을 만들 수 있습니다. 응용 프로그램 구성 파일에서 바인딩 요소를 사용하려면 바인딩 요소가 <xref:System.ServiceModel.Configuration.BindingElementExtensionElement>를 확장해야 합니다. 사용자 지정 바인딩에 대 한 자세한 내용은 참조 하십시오. [사용자 지정 바인딩을](../../../../docs/framework/wcf/extending/custom-bindings.md) 및 <xref:System.ServiceModel.Channels.CustomBinding>합니다.  
   
 -   표준 바인딩에서 파생되는 클래스를 만들 수 있습니다. 예를 들어, <xref:System.ServiceModel.WSHttpBinding>에서 클래스를 파생하고 <xref:System.ServiceModel.Channels.CustomBinding.CreateBindingElements%2A> 메서드를 재정의하여 바인딩 요소를 가져온 후 사용자 지정 바인딩 요소를 삽입하거나 특정 보안 값을 설정할 수 있습니다.  
   

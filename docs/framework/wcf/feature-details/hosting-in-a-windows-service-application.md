@@ -1,27 +1,29 @@
 ---
-title: "Windows 서비스 응용 프로그램에서의 호스팅"
-ms.custom: 
+title: Windows 서비스 응용 프로그램에서의 호스팅
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: f4199998-27f3-4dd9-aee4-0a4addfa9f24
-caps.latest.revision: "12"
+caps.latest.revision: 12
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: d1a39162097c21f20c0dd04f3911442602871436
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: c1f0d2336c2682bd525a66c6e5b12ce2d17ad219
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="hosting-in-a-windows-service-application"></a>Windows 서비스 응용 프로그램에서의 호스팅
-Windows 서비스(이전의 Windows NT 서비스)에서는 장기 실행되는 실행 파일에 있어야 하는 응용 프로그램에 특히 적합한 프로세스 모델을 제공하지만 사용자 인터페이스 폼을 표시하지 않습니다. Windows 서비스 응용 프로그램의 프로세스 수명은 Windows 서비스 응용 프로그램을 시작, 중지 및 일지 중지할 수 있도록 해 주는 SCM(서비스 제어 관리자)이 관리합니다. Windows 서비스 프로세스가 "항상" 응용 프로그램에 적합 한 호스팅 환경을 만들 컴퓨터를 시작할 때 자동으로 시작 되도록 구성할 수 있습니다. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Windows 서비스 응용 프로그램 참조 [Windows 서비스 응용 프로그램](http://go.microsoft.com/fwlink/?LinkId=89450)합니다.  
+Windows 서비스(이전의 Windows NT 서비스)에서는 장기 실행되는 실행 파일에 있어야 하는 응용 프로그램에 특히 적합한 프로세스 모델을 제공하지만 사용자 인터페이스 폼을 표시하지 않습니다. Windows 서비스 응용 프로그램의 프로세스 수명은 Windows 서비스 응용 프로그램을 시작, 중지 및 일지 중지할 수 있도록 해 주는 SCM(서비스 제어 관리자)이 관리합니다. Windows 서비스 프로세스가 "항상" 응용 프로그램에 적합 한 호스팅 환경을 만들 컴퓨터를 시작할 때 자동으로 시작 되도록 구성할 수 있습니다. Windows 서비스 응용 프로그램에 대 한 자세한 내용은 참조 [Windows 서비스 응용 프로그램](http://go.microsoft.com/fwlink/?LinkId=89450)합니다.  
   
  장기 실행 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 서비스를 호스트하는 응용 프로그램은 Windows 서비스와 함께 여러 특징을 공유합니다. 특히 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 서비스는 사용자와 직접 상호 작용하지 않는 장기 실행 서버 실행 파일이므로 사용자 인터페이스의 폼을 구현하지 않습니다. 따라서 Windows 서비스 내에서 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 서비스를 호스트하는 것은 강력한 장기 실행 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 응용 프로그램을 빌드하기 위한 옵션 중 하나입니다.  
   

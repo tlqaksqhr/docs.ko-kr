@@ -1,24 +1,26 @@
 ---
-title: "Windows Communication Foundation 샘플의 일회 설치 절차"
-ms.custom: 
+title: Windows Communication Foundation 샘플의 일회 설치 절차
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: a5848ffd-3eb5-432d-812e-bd948ccb6bca
-caps.latest.revision: "83"
+caps.latest.revision: 83
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: bab723e4e52db9936e635f1348dff86d75de274d
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: acb89c8c1819024ebdb77720654ab7280333e456
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="one-time-setup-procedure-for-the-windows-communication-foundation-samples"></a>Windows Communication Foundation 샘플의 일회 설치 절차
 대부분의 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 샘플은 IIS(인터넷 정보 서비스)에서 호스팅되고 공용 가상 디렉터리에서 실행됩니다. 이 일회 설치 절차에서는 디스크; 폴더를 만듭니다. 명명 된 iis 가상 디렉터리 추가 **ServiceModelSamples**합니다.  
@@ -30,7 +32,7 @@ ms.lasthandoff: 01/19/2018
   
 ### <a name="one-time-setup-procedure-for-wcf-samples"></a>WCF 샘플의 일회 설치 절차  
   
-1.  [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]이 설치되어 있는지 확인합니다. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]설정 하는 방법 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)], 참조 [인터넷 정보 서비스 호스팅 지침](../../../../docs/framework/wcf/samples/internet-information-service-hosting-instructions.md)합니다.  
+1.  [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]이 설치되어 있는지 확인합니다. 설정 하는 방법에 대 한 자세한 내용은 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)], 참조 [인터넷 정보 서비스 호스팅 지침](../../../../docs/framework/wcf/samples/internet-information-service-hosting-instructions.md)합니다.  
   
 2.  [!INCLUDE[netfx40_long](../../../../includes/netfx40-long-md.md)]이 설치되어 있는지 확인합니다. V 4.0에 대 한 디렉터리 (또는 이후 버전)에서 다음 검색: **\Windows\Microsoft.NET\Framework**  
   
@@ -88,7 +90,7 @@ ms.lasthandoff: 01/19/2018
     > [!NOTE]
     >  보안을 위해 샘플 사용이 끝나면 Cleanupvroot.bat라는 배치 파일을 실행하여 설치 단계에서 부여된 가상 디렉터리 정의와 사용 권한을 제거해야 합니다.  
   
-13. IIS에서 호스팅되지 않고 자체 호스팅되는 샘플의 경우 수신 대기를 위해 컴퓨터에서 HTTP 주소를 등록할 수 있는 권한이 필요합니다. HTTP 네임스페이스 예약을 위한 사용 권한은 샘플을 실행하는 데 사용되는 사용자 계정에서 제공됩니다. 기본적으로 관리자 계정에는 모든 HTTP 주소를 등록할 수 있는 사용 권한이 있습니다. 관리자 이외의 계정에는 샘플에 사용되는 HTTP 네임스페이스에 대한 권한을 부여해야 합니다. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]네임 스페이스 예약을 구성을 참조 하는 방법 [HTTP 및 HTTPS 구성](../../../../docs/framework/wcf/feature-details/configuring-http-and-https.md)합니다.  
+13. IIS에서 호스팅되지 않고 자체 호스팅되는 샘플의 경우 수신 대기를 위해 컴퓨터에서 HTTP 주소를 등록할 수 있는 권한이 필요합니다. HTTP 네임스페이스 예약을 위한 사용 권한은 샘플을 실행하는 데 사용되는 사용자 계정에서 제공됩니다. 기본적으로 관리자 계정에는 모든 HTTP 주소를 등록할 수 있는 사용 권한이 있습니다. 관리자 이외의 계정에는 샘플에 사용되는 HTTP 네임스페이스에 대한 권한을 부여해야 합니다. 네임 스페이스 예약을 구성 하는 방법에 대 한 자세한 내용은 참조 [HTTP 및 HTTPS 구성](../../../../docs/framework/wcf/feature-details/configuring-http-and-https.md)합니다.  
   
 14. 일부 샘플에는 메시지 큐가 필요합니다. 참조 [설치 메시지 큐 (MSMQ)](../../../../docs/framework/wcf/samples/installing-message-queuing-msmq.md) 설치 지침에 대 한 합니다.  
   

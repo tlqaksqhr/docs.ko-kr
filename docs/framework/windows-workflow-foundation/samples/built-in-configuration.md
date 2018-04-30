@@ -1,23 +1,24 @@
 ---
-title: "기본 제공 구성"
-ms.custom: 
+title: 기본 제공 구성
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 34e85c9b-088d-4347-816c-0f77cb73ef2f
-caps.latest.revision: "15"
+caps.latest.revision: 15
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 3ddf9b316074a69a88f08a0d7f519533f2db0002
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 0c414f34da0cd4bbf484c0a439f8832f02a5ae58
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="built-in-configuration"></a>기본 제공 구성
 이 샘플에서는 SQL 워크플로 인스턴스 저장소를 사용하고 구성하는 방법을 보여 줍니다. SQL 워크플로 인스턴스 저장소는 인스턴스 저장소의 SQL 기반 구현이며, 이 저장소를 사용하면 인스턴스가 SQL Server 또는 SQL Server Express 데이터베이스 간에 인스턴스 상태를 저장하고 로드할 수 있습니다.  
@@ -36,7 +37,7 @@ ms.lasthandoff: 12/22/2017
   
  계산 워크플로는 워크플로 서비스 호스트에서 자체 호스트합니다. 프로그램의 `Main` 메서드는 계산 워크플로를 호스트하는 워크플로 서비스 호스트의 인스턴스를 만들고, 계산 워크플로가 도달할 수 있는 끝점을 정의합니다. 그런 다음 SQL 워크플로 인스턴스 저장소를 구성하는 데 사용되는 SQL 워크플로 인스턴스 저장소 동작을 정의합니다. 그런 다음 프로그램은 계산 워크플로의 시작 메서드를 호출하는 클라이언트를 만듭니다.  
   
- 프로그램을 시작하면 카운터가 자동으로 계산을 시작합니다. 인스턴스를 로드하고 SQL 워크플로 인스턴스 저장소를 구성하는 데는 몇 초 정도 걸릴 수 있습니다. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]워크플로 인스턴스 저장소에서 참조 [SQL 워크플로 인스턴스 저장소](../../../../docs/framework/windows-workflow-foundation/sql-workflow-instance-store.md)합니다.  
+ 프로그램을 시작하면 카운터가 자동으로 계산을 시작합니다. 인스턴스를 로드하고 SQL 워크플로 인스턴스 저장소를 구성하는 데는 몇 초 정도 걸릴 수 있습니다. 워크플로 인스턴스 저장소에 대 한 자세한 내용은 참조 [SQL 워크플로 인스턴스 저장소](../../../../docs/framework/windows-workflow-foundation/sql-workflow-instance-store.md)합니다.  
   
  이 샘플은 두 부분으로 구성되어 있습니다.  
   

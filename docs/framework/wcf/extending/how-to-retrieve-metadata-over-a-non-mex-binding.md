@@ -1,24 +1,26 @@
 ---
-title: "방법: MEX가 아닌 바인딩을 통해 메타데이터 검색"
-ms.custom: 
+title: '방법: MEX가 아닌 바인딩을 통해 메타데이터 검색'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 2292e124-81b2-4317-b881-ce9c1ec66ecb
-caps.latest.revision: "10"
+caps.latest.revision: 10
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 6879694c0c6490de5f591f9aed82075c539fbc1f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: b469a08ad9759a2d5213f13256ec2def96107acc
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="how-to-retrieve-metadata-over-a-non-mex-binding"></a>방법: MEX가 아닌 바인딩을 통해 메타데이터 검색
 이 항목에서는 MEX가 아닌 바인딩을 통해 MEX 끝점으로부터 메타데이터를 검색하는 방법에 대해 설명합니다. 이 샘플의 코드 기반는 [메타 데이터 끝점을 보호 하는 사용자 지정](../../../../docs/framework/wcf/samples/custom-secure-metadata-endpoint.md) 샘플.  
@@ -132,7 +134,7 @@ ms.lasthandoff: 12/22/2017
     ServiceEndpointCollection endpoints = importer.ImportAllEndpoints();  
     ```  
   
-5.  이제 서비스 끝점의 컬렉션을 가지게 됩니다. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]참조 메타 데이터를 가져오는 [하는 방법: 서비스 끝점으로 메타 데이터 가져오기](../../../../docs/framework/wcf/feature-details/how-to-import-metadata-into-service-endpoints.md)합니다.  
+5.  이제 서비스 끝점의 컬렉션을 가지게 됩니다. 메타 데이터 가져오기에 대 한 자세한 내용은 참조 [하는 방법: 서비스 끝점으로 메타 데이터 가져오기](../../../../docs/framework/wcf/feature-details/how-to-import-metadata-into-service-endpoints.md)합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [메타데이터](../../../../docs/framework/wcf/feature-details/metadata.md)

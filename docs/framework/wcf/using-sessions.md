@@ -21,11 +21,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 9f6a6a819b4667bc60ab0abb575d6fff397d67fe
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 172ef71bd3ae09e3c9f15cb0bdb48728a587605e
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="using-sessions"></a>세션 사용
 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 응용 프로그램에서 *세션* 은 메시지 그룹을 대화에 연결합니다. [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 세션은 [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] 응용 프로그램에서 사용할 수 있는 세션 개체와 다르며, 다른 동작을 지원하고 다른 방법으로 제어됩니다. 이 항목에서는 세션이 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 응용 프로그램에서 사용할 수 있는 기능과 그 사용 방법에 대해 설명합니다.  
@@ -144,7 +144,7 @@ ms.lasthandoff: 04/28/2018
   
  예를 들어, [How to: Create a Service That Requires Sessions](../../../docs/framework/wcf/feature-details/how-to-create-a-service-that-requires-sessions.md) , [Default Service Behavior](../../../docs/framework/wcf/samples/default-service-behavior.md) 및 [Instancing](../../../docs/framework/wcf/samples/instancing.md) 샘플을 참조하십시오.  
   
- [!INCLUDE[crabout](../../../includes/crabout-md.md)] 클라이언트 및 세션에 참조 [WCF 클라이언트를 사용 하 여 액세스 서비스](../../../docs/framework/wcf/feature-details/accessing-services-using-a-client.md)합니다.  
+ 클라이언트 및 세션에 대 한 자세한 내용은 참조 [WCF 클라이언트를 사용 하 여 액세스 서비스](../../../docs/framework/wcf/feature-details/accessing-services-using-a-client.md)합니다.  
   
 ## <a name="sessions-interact-with-instancecontext-settings"></a>세션이 InstanceContext 설정과 상호 작용  
  계약의 <xref:System.ServiceModel.SessionMode> 열거형과 <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A?displayProperty=nameWithType> 속성 간에 상호 작용이 있으며, 이를 통해 채널과 특정 서비스 개체 간의 연결을 제어합니다. 자세한 내용은 참조 [세션과 Instancing, 동시성](../../../docs/framework/wcf/feature-details/sessions-instancing-and-concurrency.md)합니다.  

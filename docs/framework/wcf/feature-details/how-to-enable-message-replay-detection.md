@@ -24,16 +24,16 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 55cd4b928c640f506e058f6a441189842bc9b8a3
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: cada24098f5800f56d7dd50119c3fe3394ba14cd
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="how-to-enable-message-replay-detection"></a>방법: 메시지 재생을 검색하도록 설정
 공격자가 두 당사자 간에 메시지 스트림을 복사하고 하나 이상의 당사자에게 스트림을 재생하는 경우 재생 공격이 발생합니다. 완화되지 않은 경우 공격을 받기 쉬운 컴퓨터는 스트림을 올바른 메시지로 처리하여 항목에 대한 중복 주문과 같은 잘못된 결과의 범위에 있게 됩니다.  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 재생 검색 메시지를 참조 [메시지 재생 검색](http://go.microsoft.com/fwlink/?LinkId=88536)합니다.  
+ 메시지 재생을 검색 하는 방법에 대 한 자세한 내용은 참조 [메시지 재생 검색](http://go.microsoft.com/fwlink/?LinkId=88536)합니다.  
   
  다음 프로시저에서는 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]를 사용하여 재생 검색을 제어하는 데 사용할 수 있는 여러 가지 속성을 보여 줍니다.  
   

@@ -1,31 +1,33 @@
 ---
-title: "대기 중인 응용 프로그램 웹 호스팅"
-ms.custom: 
+title: 대기 중인 응용 프로그램 웹 호스팅
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: c7a539fa-e442-4c08-a7f1-17b7f5a03e88
-caps.latest.revision: "18"
+caps.latest.revision: 18
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a12348c3c49c29812530bc568bb5873ec53f7eb5
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 7b7168d5283a0dbe1001631f855e493335576a80
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="web-hosting-a-queued-application"></a>대기 중인 응용 프로그램 웹 호스팅
 WAS(Windows Process Activation Service)는 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 서비스를 호스트하는 응용 프로그램이 포함된 작업자 프로세스의 활성화 및 수명을 관리합니다. WAS 프로세스 모델은 HTTP에 대한 종속성을 제거하여 HTTP 서버의 [!INCLUDE[iis601](../../../../includes/iis601-md.md)] 프로세스 모델을 일반화합니다. 이렇게 하면 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 서비스가 메시지 기반 활성화를 지원하고 지정된 컴퓨터에서 많은 응용 프로그램을 호스트하는 기능을 제공하는 호스팅 환경에서 HTTP 및 비-HTTP 프로토콜(예: net.msmq 및 msmq.formatname)을 모두 사용할 수 있습니다.  
   
  WAS에는 대기 중인 응용 프로그램에 사용된 큐 중 하나에 하나 이상의 메시지가 있을 경우 해당 응용 프로그램을 활성화하는 MSMQ(메시지 큐) 활성화 서비스가 포함됩니다. MSMQ 활성화 서비스는 기본적으로 자동 시작되는 NT 서비스입니다.  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]WAS와 그 이점을 참조 [Windows Process Activation Service에서의 호스팅](../../../../docs/framework/wcf/feature-details/hosting-in-windows-process-activation-service.md)합니다. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]MSMQ, 참조 [큐 개요](../../../../docs/framework/wcf/feature-details/queues-overview.md)  
+ WAS 및 그 이점에 대 한 자세한 내용은 참조 [Windows Process Activation Service에서의 호스팅](../../../../docs/framework/wcf/feature-details/hosting-in-windows-process-activation-service.md)합니다. MSMQ에 대 한 자세한 내용은 참조 하십시오. [큐 개요](../../../../docs/framework/wcf/feature-details/queues-overview.md)  
   
 ## <a name="queue-addressing-in-was"></a>WAS의 큐 주소 지정  
  WAS 응용 프로그램에는 URI(Uniform Resource Identifier) 주소가 있습니다. 응용 프로그램 주소는 기본 URI 접두사와 응용 프로그램별 상대 주소(경로)로 이루어집니다. 이 두 부분은 함께 결합될 경우 응용 프로그램의 외부 주소를 제공합니다. 기본 URI 접두사는 사이트 바인딩에서 생성 하 고 예를 들어 ": net.msmq: //localhost", "msmq.formatname: //localhost" 또는 "net.tcp: //localhost" 사이트의 모든 응용 프로그램에 사용 됩니다. 응용 프로그램 주소는 응용 프로그램별 경로 부분을 수행 하 여 생성 됩니다 (예: "/ applicationOne")을 기본 URI 접두사에 추가 하 여 전체 응용 프로그램 URI, 예를 들어 ": net.msmq: //localhost/applicationone" 및 합니다.  

@@ -1,37 +1,37 @@
 ---
-title: "클라이언트에 보안 설정"
-ms.custom: 
+title: 클라이언트에 보안 설정
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - clients [WCF], security considerations
 ms.assetid: 44c8578c-9a5b-4acd-8168-1c30a027c4c5
-caps.latest.revision: 
+caps.latest.revision: 22
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
 ms.workload:
 - dotnet
-ms.openlocfilehash: 611272f9d0369a89d401315e9b6379d2e8cd27c0
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 7d06df1a9c4ef5a7cb64f71d2f7afc77c41a0e6f
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="securing-clients"></a>클라이언트에 보안 설정
-[!INCLUDE[indigo1](../../../includes/indigo1-md.md)]에서 서비스가 클라이언트에 대한 보안 요구 사항을 지시합니다. 즉, 서비스는 사용할 보안 모드 및 클라이언트가 자격 증명을 제공해야 하는지 여부를 지정합니다. 따라서 클라이언트 보안 설정 프로세스는 간단합니다. 서비스에서 가져온 메타데이터를 사용하여(게시된 경우) 클라이언트를 빌드하면 됩니다. 메타데이터는 클라이언트를 구성하는 방법을 지정합니다. 서비스에서 클라이언트가 자격 증명을 제공해야 하는 경우 요구 사항에 맞는 자격 증명을 가져와야 합니다. 이 항목에서는 이 과정을 자세히 설명합니다. [!INCLUDE[crabout](../../../includes/crabout-md.md)]참조는 보안 서비스를 만드는 [Services에 보안 설정](../../../docs/framework/wcf/securing-services.md)합니다.  
+[!INCLUDE[indigo1](../../../includes/indigo1-md.md)]에서 서비스가 클라이언트에 대한 보안 요구 사항을 지시합니다. 즉, 서비스는 사용할 보안 모드 및 클라이언트가 자격 증명을 제공해야 하는지 여부를 지정합니다. 따라서 클라이언트 보안 설정 프로세스는 간단합니다. 서비스에서 가져온 메타데이터를 사용하여(게시된 경우) 클라이언트를 빌드하면 됩니다. 메타데이터는 클라이언트를 구성하는 방법을 지정합니다. 서비스에서 클라이언트가 자격 증명을 제공해야 하는 경우 요구 사항에 맞는 자격 증명을 가져와야 합니다. 이 항목에서는 이 과정을 자세히 설명합니다. 보안 서비스를 만드는 방법에 대 한 자세한 내용은 참조 [Services에 보안 설정](../../../docs/framework/wcf/securing-services.md)합니다.  
   
 ## <a name="the-service-specifies-security"></a>서비스에서 보안 지정  
  기본적으로 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 바인딩에는 보안 기능이 활성화되어 있습니다. <xref:System.ServiceModel.BasicHttpBinding>은 예외입니다. 따라서 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]를 사용하여 서비스를 만든 경우 인증, 기밀성 및 무결성을 보장하도록 보안을 구현할 가능성이 높습니다. 이러한 경우 서비스가 제공하는 메타데이터는 보안 통신 채널을 설정하는 데 필요한 사항을 표시합니다. 서비스 메타데이터에 보안 요구 사항이 없는 경우 서비스에 SSL(Secure Sockets Layer) over HTTP와 같은 보안 스키마를 적용할 수 없습니다. 그러나 서비스에서 클라이언트가 자격 증명을 제공해야 하는 경우 클라이언트 개발자, 배포자 또는 관리자는 클라이언트가 서비스에게 자신을 인증하는 데 사용할 실제 자격 증명을 제공해야 합니다.  
   
 ## <a name="obtaining-metadata"></a>메타데이터 가져오기  
- 클라이언트를 만들 때 첫 번째 단계는 클라이언트가 통신할 서비스에 대한 메타데이터를 가져오는 것입니다. 이 작업은 다음 두 가지 방법으로 수행할 수 있습니다. 먼저, 서비스 메타 데이터 교환 (MEX) 끝점을 게시 하거나 HTTP 또는 HTTPS를 통해 해당 메타 데이터를 사용할 수 있도록를 다운로드할 수 있습니다를 사용 하 여 메타 데이터는 [ServiceModel Metadata 유틸리티 도구 (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md), 둘 다 생성 구성 파일 뿐만 아니라 클라이언트에 대 한 코드 파일. ([!INCLUDE[crabout](../../../includes/crabout-md.md)] 참조 도구를 사용 하 여 [WCF 클라이언트를 사용 하 여 액세스 서비스](../../../docs/framework/wcf/accessing-services-using-a-wcf-client.md).) 서비스가 MEX 끝점을 게시하지 않고 또한 HTTP 또는 HTTPS를 통해 메타데이터를 사용할 수 있도록 하지 않은 경우, 보안 요구 사항 및 메타데이터를 설명하는 설명서에 대한 서비스 작성자에게 문의해야 합니다.  
+ 클라이언트를 만들 때 첫 번째 단계는 클라이언트가 통신할 서비스에 대한 메타데이터를 가져오는 것입니다. 이 작업은 다음 두 가지 방법으로 수행할 수 있습니다. 먼저, 서비스 메타 데이터 교환 (MEX) 끝점을 게시 하거나 HTTP 또는 HTTPS를 통해 해당 메타 데이터를 사용할 수 있도록를 다운로드할 수 있습니다를 사용 하 여 메타 데이터는 [ServiceModel Metadata 유틸리티 도구 (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md), 둘 다 생성 구성 파일 뿐만 아니라 클라이언트에 대 한 코드 파일. (도구를 사용 하는 방법에 대 한 자세한 내용은 참조 [WCF 클라이언트를 사용 하 여 액세스 서비스](../../../docs/framework/wcf/accessing-services-using-a-wcf-client.md).) 서비스가 MEX 끝점을 게시하지 않고 또한 HTTP 또는 HTTPS를 통해 메타데이터를 사용할 수 있도록 하지 않은 경우, 보안 요구 사항 및 메타데이터를 설명하는 설명서에 대한 서비스 작성자에게 문의해야 합니다.  
   
 > [!IMPORTANT]
 >  메타데이터는 신뢰할 수 있는 소스에서 가져오고 변경하지 않는 것이 좋습니다. HTTP 프로토콜을 사용하여 검색한 메타데이터는 일반 텍스트로 전송되며 변경할 수 있습니다. 서비스가 <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpsGetEnabled%2A> 및 <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpsGetUrl%2A> 속성을 사용하는 경우 서비스 작성자가 제공하는 URL을 통해 HTTPS 프로토콜을 사용하여 데이터를 다운로드합니다.  
@@ -147,7 +147,7 @@ ms.lasthandoff: 01/19/2018
 > [!NOTE]
 >  예를 들어 사용자 이름 및 암호 또는 Windows 사용자 및 암호 값과 같은 일부 클라이언트 자격 증명 값은 응용 프로그램 구성 파일을 사용하여 설정할 수 없습니다. 이러한 자격 증명 값은 코드에서만 지정할 수 있습니다.  
   
- [!INCLUDE[crabout](../../../includes/crabout-md.md)]클라이언트 자격 증명 설정, 참조 [하는 방법: 클라이언트 자격 증명 값 지정](../../../docs/framework/wcf/how-to-specify-client-credential-values.md)합니다.  
+ 클라이언트 자격 증명을 설정 하는 방법에 대 한 자세한 내용은 참조 [하는 방법: 클라이언트 자격 증명 값 지정](../../../docs/framework/wcf/how-to-specify-client-credential-values.md)합니다.  
   
 > [!NOTE]
 >  다음 예제 구성과 같이 `ClientCredentialType`가 `SecurityMode`로 설정된 경우 `"TransportWithMessageCredential",`은 무시됩니다.  

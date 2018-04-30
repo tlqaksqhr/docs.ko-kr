@@ -1,28 +1,28 @@
 ---
-title: "Windows Communication Foundation 서비스에 대한 바인딩 구성"
-ms.custom: 
+title: Windows Communication Foundation 서비스에 대한 바인딩 구성
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - binding configuration [WCF]
 ms.assetid: 99a85fd8-f7eb-4a84-a93e-7721b37d415c
-caps.latest.revision: 
+caps.latest.revision: 36
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: b11810e0a39c5b6091a63ef33e5abfccb95b7555
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: f98d7c7b7d816687487a652f0527886300f0ee86
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="configuring-bindings-for-windows-communication-foundation-services"></a>Windows Communication Foundation 서비스에 대한 바인딩 구성
 응용 프로그램을 만들 때 응용 프로그램의 배포 후 관리자에게 결정을 맡겨야 할 경우가 있습니다. 예를 들어, 서비스 주소 또는 URI(Uniform Resource Identifier)가 무엇인지 미리 알 수 없는 경우가 있습니다. 주소를 하드 코딩하는 대신 관리자가 서비스를 작성한 후에 이를 수행하도록 하는 것이 좋습니다. 이러한 유연성은 구성을 통해 수행됩니다.  
@@ -47,13 +47,13 @@ ms.lasthandoff: 12/22/2017
 ```  
   
 ### <a name="servicemodel-elements"></a>ServiceModel Elements  
- 에 의해 제한 섹션을 사용할 수 있습니다는 `system.ServiceModel` 서비스 종류를 하나 이상의 끝점 뿐만 아니라 서비스에 대 한 설정을 구성 하는 요소입니다. 각 끝점은 주소, 계약 및 바인딩과 함께 구성할 수 있습니다. [!INCLUDE[crabout](../../../includes/crabout-md.md)]끝점, 참조 [끝점 만들기 개요](../../../docs/framework/wcf/endpoint-creation-overview.md)합니다. 끝점이 지정되지 않으면 런타임에서 기본 끝점을 추가합니다. [!INCLUDE[crabout](../../../includes/crabout-md.md)] , [Simplified Configuration](../../../docs/framework/wcf/simplified-configuration.md) 및 [Simplified Configuration for WCF Services](../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).  
+ 에 의해 제한 섹션을 사용할 수 있습니다는 `system.ServiceModel` 서비스 종류를 하나 이상의 끝점 뿐만 아니라 서비스에 대 한 설정을 구성 하는 요소입니다. 각 끝점은 주소, 계약 및 바인딩과 함께 구성할 수 있습니다. 끝점에 대 한 자세한 내용은 참조 [끝점 만들기 개요](../../../docs/framework/wcf/endpoint-creation-overview.md)합니다. 끝점이 지정되지 않으면 런타임에서 기본 끝점을 추가합니다. 기본 끝점, 바인딩 및 동작에 대 한 자세한 내용은 참조 [단순화 된 구성](../../../docs/framework/wcf/simplified-configuration.md) 및 [WCF 서비스에 대 한 구성을 단순화](../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md)합니다.  
   
  바인딩은 전송(HTTP, TCP, 파이프, 메시지 큐) 및 프로토콜(보안, 안전성, 트랜잭션 흐름)을 지정하며, 끝점이 외부와 통신하는 방법을 지정하는 각각의 바인딩 요소로 구성됩니다.  
   
  예를 들어 지정 하는 [ \<basicHttpBinding >](../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md) 요소는 끝점에 대 한 HTTP를 전송으로 사용 하도록 나타냅니다. 이 끝점을 사용하는 서비스가 열려 있는 경우 이 요소는 런타임에 끝점을 연결하는 데 사용됩니다.  
   
- 바인딩에는 미리 정의된 바인딩 및 사용자 지정 바인딩의 두 종류가 있습니다. 미리 정의된 바인딩에는 일반적인 시나리오에서 사용되는 유용한 요소의 조합이 있습니다. 미리 정의 된 바인딩 목록을 형식에 대해 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 제공 참조 [시스템 제공 바인딩](../../../docs/framework/wcf/system-provided-bindings.md)합니다. 서비스 응용 프로그램에서 필요로 하는 올바른 기능의 조합을 가진 미리 정의된 바인딩 컬렉션이 없는 경우 사용자 지정 바인딩을 만들어 응용 프로그램의 요구 사항을 충족시킬 수 있습니다. [!INCLUDE[crabout](../../../includes/crabout-md.md)]사용자 지정 바인딩을 참조 [ \<customBinding >](../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)합니다.  
+ 바인딩에는 미리 정의된 바인딩 및 사용자 지정 바인딩의 두 종류가 있습니다. 미리 정의된 바인딩에는 일반적인 시나리오에서 사용되는 유용한 요소의 조합이 있습니다. 미리 정의 된 바인딩 목록을 형식에 대해 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 제공 참조 [시스템 제공 바인딩](../../../docs/framework/wcf/system-provided-bindings.md)합니다. 서비스 응용 프로그램에서 필요로 하는 올바른 기능의 조합을 가진 미리 정의된 바인딩 컬렉션이 없는 경우 사용자 지정 바인딩을 만들어 응용 프로그램의 요구 사항을 충족시킬 수 있습니다. 사용자 지정 바인딩에 대 한 자세한 내용은 참조 하십시오. [ \<customBinding >](../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)합니다.  
   
  다음 4개의 예제에서는 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 서비스를 설정하는 데 사용되는 가장 일반적인 바인딩 구성을 보여 줍니다.  
   

@@ -1,33 +1,33 @@
 ---
-title: "Windows Process Activation Service에서의 호스팅"
-ms.custom: 
+title: Windows Process Activation Service에서의 호스팅
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - hosting services [WCF], WAS
 ms.assetid: d2b9d226-15b7-41fc-8c9a-cb651ac20ecd
-caps.latest.revision: 
+caps.latest.revision: 16
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 40122670c84f87590a31b79f39695e9626ea9883
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: a31d66cd4b4430ec838b34fcd77d712698f9e1dc
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="hosting-in-windows-process-activation-service"></a>Windows Process Activation Service에서의 호스팅
 WAS(Windows Process Activation Service)는 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 서비스를 호스트하는 응용 프로그램이 포함된 작업자 프로세스의 활성화 및 수명을 관리합니다. WAS 프로세스 모델은 HTTP에 대한 종속성을 제거하여 HTTP 서버의 [!INCLUDE[iis601](../../../../includes/iis601-md.md)] 프로세스 모델을 일반화합니다. 이렇게 하면 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 서비스가 메시지 기반 활성화를 지원하고 지정된 컴퓨터에서 여러 응용 프로그램을 호스트하는 기능을 제공하는 호스팅 환경에서 Net.TCP와 같은 HTTP 프로토콜 및 HTTP가 아닌 프로토콜을 모두 사용할 수 있습니다.  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]작성 한 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 호스팅 환경에는 WAS에서 실행 되는 서비스 참조 [하는 방법: WAS에서 WCF 서비스 호스팅](../../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-was.md)합니다.  
+ 빌드에 대 한 자세한 내용은 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 호스팅 환경에는 WAS에서 실행 되는 서비스 참조 [하는 방법: WAS에서 WCF 서비스 호스팅](../../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-was.md)합니다.  
   
  WAS 프로세스 모델에서는 보다 강력하고, 보다 집중적으로 관리할 수 있으며, 리소스를 효율적으로 사용하는 방식으로 응용 프로그램을 호스트할 수 있도록 여러 기능을 제공합니다.  
   
@@ -39,7 +39,7 @@ WAS(Windows Process Activation Service)는 [!INCLUDE[indigo1](../../../../includ
   
 -   전체 IIS 설치를 위한 배포 공간 없이도 응용 프로그램에서 IIS 프로세스 모델 사용 가능  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]WAS 기능 참조 [IIS 7.0 베타: IIS 7.0 웹 관리](../../../../docs/framework/wcf/feature-details/hosting-in-windows-process-activation-service.md)합니다.  
+ WAS 기능에 대 한 자세한 내용은 참조 [IIS 7.0 베타: IIS 7.0 웹 관리](../../../../docs/framework/wcf/feature-details/hosting-in-windows-process-activation-service.md)합니다.  
   
  [Windows Server AppFabric](http://go.microsoft.com/fwlink/?LinkId=196496) 연동 [!INCLUDE[iisver](../../../../includes/iisver-md.md)] 및 WAS Windows Process Activation Service ()는 응용 프로그램 호스팅 NET4 WCF 및 WF 서비스에 대 한 환경을 제공 하기. 이러한 기능에는 프로세스 수명 주기 관리, 프로세스 재활용, 공유 호스팅, 빠른 오류 보호, 프로세스 분리, 요청 시 활성화, 상태 모니터링 등이 포함됩니다. 자세한 내용은 참조 [AppFabric 호스팅 기능](http://go.microsoft.com/fwlink/?LinkId=196494) 및 [AppFabric 호스팅 개념](http://go.microsoft.com/fwlink/?LinkId=196495)합니다.  
   

@@ -1,28 +1,28 @@
 ---
-title: "바인딩을 사용하여 서비스 및 클라이언트 구성"
-ms.custom: 
+title: 바인딩을 사용하여 서비스 및 클라이언트 구성
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - bindings [WCF], using
 ms.assetid: c39479c3-0766-4a17-ba4c-97a74607f392
-caps.latest.revision: 
+caps.latest.revision: 33
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: e63bb0b44e19ec9186096a819801ea05195b5523
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 68c8c2c93ce29147247c332848025fd931bf7854
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="using-bindings-to-configure-services-and-clients"></a>바인딩을 사용하여 서비스 및 클라이언트 구성
 바인딩은 끝점에 연결하는 데 필요한 통신 세부 사항을 지정하는 개체입니다. 보다 구체적으로, 바인딩에는 해당 끝점이나 클라이언트 채널에 사용할 전송, 통신 형식(메시지 인코딩) 및 프로토콜의 고유 정보를 정의하여 클라이언트 또는 서비스 런타임을 만드는 데 사용되는 구성 정보가 들어 있습니다. 작동하는 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 서비스를 만들려면 서비스의 각 끝점에 바인딩이 필요합니다. 이 항목에서는 바인딩 정의, 바인딩이 정의되는 방법 및 끝점에 대해 특정 바인딩이 지정되는 방법에 대해 설명합니다.  
@@ -53,7 +53,7 @@ ms.lasthandoff: 12/22/2017
  설명 된 시스템 제공 바인딩에의 전체 목록을 참조 하십시오. [시스템 제공 바인딩](../../../docs/framework/wcf/system-provided-bindings.md)합니다.  
   
 ## <a name="custom-bindings"></a>사용자 지정 바인딩  
- 시스템 제공 바인딩 컬렉션에 서비스 응용 프로그램에서 필요로 하는 기능의 올바른 조합이 포함되지 않은 경우 <xref:System.ServiceModel.Channels.CustomBinding> 바인딩을 만들 수 있습니다. [!INCLUDE[crabout](../../../includes/crabout-md.md)]요소는 <xref:System.ServiceModel.Channels.CustomBinding> 참조 바인딩 [ \<customBinding >](../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md) 및 [사용자 지정 바인딩](../../../docs/framework/wcf/extending/custom-bindings.md)합니다.  
+ 시스템 제공 바인딩 컬렉션에 서비스 응용 프로그램에서 필요로 하는 기능의 올바른 조합이 포함되지 않은 경우 <xref:System.ServiceModel.Channels.CustomBinding> 바인딩을 만들 수 있습니다. 요소에 대 한 자세한 내용은 <xref:System.ServiceModel.Channels.CustomBinding> 참조 바인딩 [ \<customBinding >](../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md) 및 [사용자 지정 바인딩](../../../docs/framework/wcf/extending/custom-bindings.md)합니다.  
   
 ## <a name="using-bindings"></a>바인딩 사용  
  바인딩 사용은 다음 두 가지 기본 단계로 이루어집니다.  

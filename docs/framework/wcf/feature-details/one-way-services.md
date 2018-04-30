@@ -1,28 +1,30 @@
 ---
-title: "단방향 서비스"
-ms.custom: 
+title: 단방향 서비스
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Windows Communication Foundation [WCF], one-way service contracts
 - WCF [WCF], one-way service contracts
 - service contracts [WCF], defining one-way
 ms.assetid: 19053a36-4492-45a3-bfe6-0365ee0205a3
-caps.latest.revision: "18"
+caps.latest.revision: 18
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 0d023d3623777a93cf72715410aed87fe8a63ee5
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 380f6a10994c7eb69f4a59b222aa2d422151f247
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="one-way-services"></a>단방향 서비스
 서비스 작업의 기본 동작은 요청-회신 패턴입니다. 요청-회신 패턴의 경우 서비스 작업이 `void` 메서드로 코드에 표현된 경우에도 클라이언트에서 회신 메시지를 기다립니다. 단방향 작업을 사용하는 경우 하나의 메시지만 전송됩니다. 수신자는 회신 메시지를 보내지 않으며 발신자도 메시지를 기다리지 않습니다.  
@@ -31,7 +33,7 @@ ms.lasthandoff: 12/22/2017
   
 -   클라이언트가 작업을 호출해야 하며 작업 수준에서 작업 결과에 영향을 받지 않는 경우.  
   
--   <xref:System.ServiceModel.NetMsmqBinding> 또는 <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding> 클래스를 사용하는 경우. ([!INCLUDE[crabout](../../../../includes/crabout-md.md)] 이 시나리오에서는 참조 [WCF의 큐](../../../../docs/framework/wcf/feature-details/queues-in-wcf.md).)  
+-   <xref:System.ServiceModel.NetMsmqBinding> 또는 <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding> 클래스를 사용하는 경우. (이 시나리오에 대 한 자세한 내용은 참조 [WCF의 큐](../../../../docs/framework/wcf/feature-details/queues-in-wcf.md).)  
   
  단방향 작업의 경우 오류 정보를 클라이언트로 전달하는 응답 메시지가 없습니다. 신뢰할 수 있는 세션과 같은 기본 바인딩의 기능을 사용하거나 두 개의 단방향 작업(하나는 서비스 작업을 호출하기 위한 클라이언트에서 서비스로의 단방향 계약이며, 다른 하나는 서비스가 클라이언트에서 구현하는 콜백을 사용하여 오류를 다시 클라이언트에 전달할 수 있는 서비스와 클라이언트 간 단방향 계약)을 사용하는 이중 서비스 계약을 디자인하여 오류 상태를 검색할 수 있습니다.  
   

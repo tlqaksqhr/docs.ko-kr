@@ -1,28 +1,28 @@
 ---
-title: "Windows Communication Foundation 바인딩 개요"
-ms.custom: 
+title: Windows Communication Foundation 바인딩 개요
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - bindings [WCF], overview
 ms.assetid: cfb5842f-e0f9-4c56-a015-f2b33f258232
-caps.latest.revision: 
+caps.latest.revision: 16
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 4bc4fc7559872a808c2de87e4926075614351030
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 58b3691c186dc6a33c94d9f8a1af96be488d67df
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="windows-communication-foundation-bindings-overview"></a>Windows Communication Foundation 바인딩 개요
 바인딩은 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 서비스의 끝점에 연결하기 위해 필요한 통신 세부 사항을 지정하는 데 사용되는 개체입니다. [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 서비스의 각 끝점에 대해 바인딩을 올바로 지정해야 합니다. 이 항목에서는 바인딩이 정의하는 통신 세부 사항의 형식, 바인딩의 요소, [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]에 포함되는 바인딩 및 끝점에 대해 바인딩을 지정할 수 있는 방법을 간략하게 설명합니다.  
@@ -40,7 +40,7 @@ ms.lasthandoff: 12/22/2017
  사용할 내부 전송 프로토콜(예: TCP 또는 HTTP)을 결정합니다.  
   
 ## <a name="the-elements-of-a-binding"></a>바인딩의 요소입니다.  
- 바인딩은 기본적으로 순서가 지정된 바인딩 요소 스택으로 구성됩니다. 각 바인딩 요소는 서비스 끝점에 연결하는 데 필요한 통신 정보의 일부를 지정합니다. 스택의 가장 낮은 두 계층은 모두 필수입니다. 스택 맨 아래에는 전송 바인딩 요소가 있고 바로 위에 메시지 인코딩 사양을 포함하는 요소가 있습니다. 다른 통신 프로토콜을 지정하는 선택적 바인딩 요소는 이 두 개의 필수 요소 위의 계층에 있습니다. [!INCLUDE[crabout](../../../includes/crabout-md.md)]이러한 바인딩 요소 및 해당 올바른 순서로 참조 [사용자 지정 바인딩](../../../docs/framework/wcf/extending/custom-bindings.md)합니다.  
+ 바인딩은 기본적으로 순서가 지정된 바인딩 요소 스택으로 구성됩니다. 각 바인딩 요소는 서비스 끝점에 연결하는 데 필요한 통신 정보의 일부를 지정합니다. 스택의 가장 낮은 두 계층은 모두 필수입니다. 스택 맨 아래에는 전송 바인딩 요소가 있고 바로 위에 메시지 인코딩 사양을 포함하는 요소가 있습니다. 다른 통신 프로토콜을 지정하는 선택적 바인딩 요소는 이 두 개의 필수 요소 위의 계층에 있습니다. 이러한 바인딩 요소 및 올바른 순서에 대 한 자세한 내용은 참조 [사용자 지정 바인딩](../../../docs/framework/wcf/extending/custom-bindings.md)합니다.  
   
 ## <a name="system-provided-bindings"></a>시스템 제공 바인딩  
  바인딩의 정보는 복잡할 수 있으며 일부 설정이 다른 설정과 호환되지 않을 수 있습니다. 이런 이유로 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]에는 시스템 제공 바인딩 집합이 포함되어 있습니다. 이러한 바인딩은 대부분의 응용 프로그램 요구 사항을 처리합니다. 다음 클래스는 시스템 제공 바인딩의 몇 가지 예를 나타냅니다.  
@@ -56,7 +56,7 @@ ms.lasthandoff: 12/22/2017
  모든 설명이 포함 된 전체 목록은 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]-바인딩 참조 제공 [시스템 제공 바인딩](../../../docs/framework/wcf/system-provided-bindings.md)합니다.  
   
 ## <a name="using-your-own-bindings"></a>고유한 바인딩 사용  
- 포함된 시스템 제공 바인딩에 서비스 응용 프로그램에 필요한 올바른 기능 조합이 없는 경우 고유한 바인딩을 만들 수 있습니다. 이렇게 하는 데는 두 가지 방법이 있습니다. <xref:System.ServiceModel.Channels.CustomBinding> 개체를 사용하여 기존의 바인딩 요소에서 새 바인딩을 만들거나 <xref:System.ServiceModel.Channels.Binding> 바인딩에서 파생하여 완전한 사용자 지정 바인딩을 만들 수 있습니다. [!INCLUDE[crabout](../../../includes/crabout-md.md)]이러한 두 방법을 사용 하 여 바인딩 참조를 만들어 [사용자 지정 바인딩](../../../docs/framework/wcf/extending/custom-bindings.md) 및 [Creating User-Defined 바인딩](../../../docs/framework/wcf/extending/creating-user-defined-bindings.md)합니다.  
+ 포함된 시스템 제공 바인딩에 서비스 응용 프로그램에 필요한 올바른 기능 조합이 없는 경우 고유한 바인딩을 만들 수 있습니다. 이렇게 하는 데는 두 가지 방법이 있습니다. <xref:System.ServiceModel.Channels.CustomBinding> 개체를 사용하여 기존의 바인딩 요소에서 새 바인딩을 만들거나 <xref:System.ServiceModel.Channels.Binding> 바인딩에서 파생하여 완전한 사용자 지정 바인딩을 만들 수 있습니다. 이러한 두 방법을 사용 하 여 사용자 고유의 바인딩을 만드는 방법에 대 한 자세한 내용은 참조 [사용자 지정 바인딩](../../../docs/framework/wcf/extending/custom-bindings.md) 및 [Creating User-Defined 바인딩](../../../docs/framework/wcf/extending/creating-user-defined-bindings.md)합니다.  
   
 ## <a name="using-bindings"></a>바인딩 사용  
  바인딩 사용은 다음 두 가지 기본 단계로 이루어집니다.  

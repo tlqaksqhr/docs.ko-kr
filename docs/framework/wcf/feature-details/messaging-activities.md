@@ -16,11 +16,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 8db31e8559d22e35f0d754a44ce425e144487296
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: bbc9fdfff5b5c6ab6e56af12269061f06bb79404
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="messaging-activities"></a>메시징 활동
 메시징 작업을 사용하면 워크플로를 통해 WCF 메시지를 보내고 받을 수 있습니다. 워크플로에 메시징 작업을 추가하면 훨씬 더 복잡한 MEP(메시지 교환 패턴)를 모델링할 수 있습니다.  
@@ -114,7 +114,7 @@ Request = rcv
  To make setting up a request/response MEP on the client and service easier, [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] provides two messaging activity templates. <xref:System.ServiceModel.Activities.Design.ReceiveAndSendReply> is used on the service and <xref:System.ServiceModel.Activities.Design.SendAndReceiveReply> is used on the client. In both cases the templates add the appropriate messaging activities to your workflow. On the service, the <xref:System.ServiceModel.Activities.Design.ReceiveAndSendReply> adds a <xref:System.ServiceModel.Activities.Receive> activity followed by a <xref:System.ServiceModel.Activities.SendReply> activity. The <xref:System.ServiceModel.Activities.SendReply.Request> property is automatically set to the <xref:System.ServiceModel.Activities.Receive> activity. On the client, the <xref:System.ServiceModel.Activities.Design.SendAndReceiveReply> adds a <xref:System.ServiceModel.Activities.Send> activity followed by a <xref:System.ServiceModel.Activities.ReceiveReply>. The <xref:System.ServiceModel.Activities.ReceiveReply.Request%2A> property is automatically set to the <xref:System.ServiceModel.Activities.Send> activity. To use these templates, just drag and drop the appropriate template onto your workflow.  
 -->
 ## <a name="messaging-activities-and-transactions"></a>메시징 작업 및 트랜잭션  
- 워크플로 서비스가 호출되면 트랜잭션을 서비스 작업에 전달할 수 있습니다. 이 작업을 수행하려면 <xref:System.ServiceModel.Activities.Receive> 작업 안에 <xref:System.ServiceModel.Activities.TransactedReceiveScope> 작업을 배치합니다. <xref:System.ServiceModel.Activities.TransactedReceiveScope> 작업은 `Receive` 작업과 본문을 포함합니다. 서비스에 전달된 트랜잭션은 <xref:System.ServiceModel.Activities.TransactedReceiveScope>의 본문이 실행되는 동안 앰비언트 상태로 유지됩니다. 본문이 실행을 마치면 트랜잭션이 완료됩니다. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 워크플로 및 트랜잭션을 참조 [워크플로 트랜잭션을](../../../../docs/framework/windows-workflow-foundation/workflow-transactions.md)합니다.  
+ 워크플로 서비스가 호출되면 트랜잭션을 서비스 작업에 전달할 수 있습니다. 이 작업을 수행하려면 <xref:System.ServiceModel.Activities.Receive> 작업 안에 <xref:System.ServiceModel.Activities.TransactedReceiveScope> 작업을 배치합니다. <xref:System.ServiceModel.Activities.TransactedReceiveScope> 작업은 `Receive` 작업과 본문을 포함합니다. 서비스에 전달된 트랜잭션은 <xref:System.ServiceModel.Activities.TransactedReceiveScope>의 본문이 실행되는 동안 앰비언트 상태로 유지됩니다. 본문이 실행을 마치면 트랜잭션이 완료됩니다. 워크플로 및 트랜잭션에 대 한 자세한 내용은 참조 [워크플로 트랜잭션을](../../../../docs/framework/windows-workflow-foundation/workflow-transactions.md)합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [워크플로 서비스에서 오류를 송수신 하는 방법](http://go.microsoft.com/fwlink/?LinkId=189151)  

@@ -14,17 +14,17 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 09c3f7656284dd73dd5f50c4ef9f77cd5adcbfe7
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: c7c28d8c2edbda5a42a290786b0ff40e3ab6dd5b
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="how-to-create-a-workflow-service-that-consumes-an-existing-service-contract"></a>방법: 기존 서비스 계약을 사용하는 워크플로 서비스 만들기
 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]는 계약 중심 워크플로 개발의 형태로 웹 서비스와 워크플로 간에 보다 우수한 통합 성능을 제공합니다. 계약 중심 워크플로 개발 도구를 사용하면 코드에서 계약을 먼저 디자인할 수 있습니다. 그러면 이 도구는 계약의 작업을 위해 도구 상자에 활동 템플릿을 자동으로 생성합니다.  
   
 > [!NOTE]
->  이 항목에서는 계약 중심 워크플로 서비스를 만들기 위한 단계별 지침을 제공합니다. [!INCLUDE[crabout](../../../includes/crabout-md.md)] 계약 중심 워크플로 서비스 개발, 참조 [계약 중심 워크플로 서비스 개발](../../../docs/framework/windows-workflow-foundation/contract-first-workflow-service-development.md)합니다.  
+>  이 항목에서는 계약 중심 워크플로 서비스를 만들기 위한 단계별 지침을 제공합니다. 계약 중심 워크플로 서비스 개발에 대 한 자세한 내용은 참조 [계약 중심 워크플로 서비스 개발](../../../docs/framework/windows-workflow-foundation/contract-first-workflow-service-development.md)합니다.  
   
 ### <a name="creating-the-workflow-project"></a>워크플로 프로젝트 만들기  
   

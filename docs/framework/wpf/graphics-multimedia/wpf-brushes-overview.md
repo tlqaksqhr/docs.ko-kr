@@ -1,13 +1,13 @@
 ---
-title: "WPF 브러시 개요"
-ms.custom: 
+title: WPF 브러시 개요
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-wpf
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,17 +15,17 @@ dev_langs:
 helpviewer_keywords:
 - brushes [WPF], about brushes
 ms.assetid: ecea1955-420b-45c6-bf43-c1404c072c41
-caps.latest.revision: 
+caps.latest.revision: 12
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: ec7e566e6f56c215bbaeafdfb5c5e97cc0add0bf
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 1ef53da1febd6a49af8404e5889a728a1b7c649b
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="wpf-brushes-overview"></a>WPF 브러시 개요
 모든 화면에 표시 되는 브러시 그려 졌 기 때문에 표시 됩니다. 예를 들어, 단추, 텍스트의 전경색 및 도형의 채우기의 배경을 설명 하는 브러시 사용 됩니다. 이 항목으로 그리기의 개념을 소개 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 브러시 및 예제를 제공 합니다. 브러시를 사용하여 간단한 단색부터 복잡한 패턴 및 이미지 집합에 이르는 모든 방식으로 [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] 개체를 그릴 수 있습니다.  
@@ -142,7 +142,7 @@ VisualBrush를 사용 하 여 그린 사각형
   
 <a name="paintwithpredefinedbrushesandsystemcolors"></a>   
 ## <a name="paint-using-predefined-and-system-brushes"></a>미리 정의 된 및 시스템 브러시를 사용 하 여 그리기  
- 편의 위해 [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] 미리 정의 된 집합 및 시스템 개체를 그리는 데 사용할 수 있는 브러시를 제공 합니다.  
+ Windows Presentation Foundation (WPF) 편의 위해 미리 정의 된 집합 및 시스템 개체를 그리는 데 사용할 수 있는 브러시를 제공 합니다.  
   
 -   사용 가능한 미리 정의 된 브러시의 목록에 대 한 참조는 <xref:System.Windows.Media.Brushes> 클래스입니다. 미리 정의 된 브러시를 사용 하는 방법을 보여 주는 예제를 참조 하십시오. [를 단색으로 영역 그리기](../../../../docs/framework/wpf/graphics-multimedia/how-to-paint-an-area-with-a-solid-color.md)합니다.  
   
@@ -150,7 +150,7 @@ VisualBrush를 사용 하 여 그린 사각형
   
 <a name="commonbrushfeatures"></a>   
 ## <a name="common-brush-features"></a>일반적인 브러시 기능  
- <xref:System.Windows.Media.Brush>개체를 제공는 <xref:System.Windows.Media.Brush.Opacity%2A> 투명 하 게 또는 반투명 브러시를 만드는 데 사용할 수 있는 속성입니다. <xref:System.Windows.Media.Brush.Opacity%2A> 값이 0 이면 브러시를 하는 동안 완전히 투명 한 <xref:System.Windows.Media.Brush.Opacity%2A> 값이 1 이면 브러시가 완전히 불투명 합니다. 다음 예제에서는 <xref:System.Windows.Media.Brush.Opacity%2A> 속성을 한 <xref:System.Windows.Media.SolidColorBrush> 25%로 만듭니다.  
+ <xref:System.Windows.Media.Brush> 개체를 제공는 <xref:System.Windows.Media.Brush.Opacity%2A> 투명 하 게 또는 반투명 브러시를 만드는 데 사용할 수 있는 속성입니다. <xref:System.Windows.Media.Brush.Opacity%2A> 값이 0 이면 브러시를 하는 동안 완전히 투명 한 <xref:System.Windows.Media.Brush.Opacity%2A> 값이 1 이면 브러시가 완전히 불투명 합니다. 다음 예제에서는 <xref:System.Windows.Media.Brush.Opacity%2A> 속성을 한 <xref:System.Windows.Media.SolidColorBrush> 25%로 만듭니다.  
   
  [!code-xaml[BrushOverviewExamples_snip#OpacityExample1XAML](../../../../samples/snippets/xaml/VS_Snippets_Wpf/BrushOverviewExamples_snip/XAML/OpacityExample.xaml#opacityexample1xaml)]  
   

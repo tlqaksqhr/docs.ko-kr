@@ -1,33 +1,33 @@
 ---
-title: "AJAX 통합 및 JSON 지원"
-ms.custom: 
+title: AJAX 통합 및 JSON 지원
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - AJAX integration and JSON support [WCF]
 ms.assetid: 3851a8fc-d861-4ac1-873c-96af0343d3a7
-caps.latest.revision: 
+caps.latest.revision: 17
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: cd5c84250349f4adaaac68a302d771280328a4e1
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 0d62da8cf67fb8f996f341018c39146b51e308c3
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="ajax-integration-and-json-support"></a>AJAX 통합 및 JSON 지원
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]는 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 서비스에서 AJAX 클라이언트에 작업을 노출할 수 있도록 ASP.NET AJAX(Asynchronous JavaScript and XML) 및 JSON(JavaScript Object Notation) 데이터 형식을 지원합니다. AJAX 클라이언트는 JavaScript 코드를 실행하고, HTTP 요청을 사용하여 이러한 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 서비스에 액세스하는 웹 페이지입니다. 이 단원의 항목에서는 이러한 지원에 대한 정보와 이러한 지원을 구현하는 방법에 대한 정보를 제공합니다.  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]ASP.NET AJAX와의 통합을 ASP.NET 2.0과 함께 참조 [ASP.NET AJAX 개요](http://go.microsoft.com/fwlink/?LinkId=96725)합니다.  
+ ASP.NET AJAX에 대 한 자세한 내용 및 ASP.NET 2.0와의 통합에 대 한 참조 [ASP.NET AJAX 개요](http://go.microsoft.com/fwlink/?LinkId=96725)합니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
  [ASP.NET AJAX용 WCF 서비스 만들기](../../../../docs/framework/wcf/feature-details/creating-wcf-services-for-aspnet-ajax.md)  

@@ -1,34 +1,36 @@
 ---
-title: "WS-AtomicTransaction 구성 MMC 스냅인"
-ms.custom: 
+title: WS-AtomicTransaction 구성 MMC 스냅인
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 23592973-1d51-44cc-b887-bf8b0d801e9e
-caps.latest.revision: "17"
+caps.latest.revision: 17
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 73db4b201aba6e07891803aa86c56403f135f863
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 2e8b127e0d3c241a1e37ac2161d9fadcea990425
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="ws-atomictransaction-configuration-mmc-snap-in"></a>WS-AtomicTransaction 구성 MMC 스냅인
 WS-AtomicTransaction 구성 MMC 스냅인은 로컬 및 원격 시스템에서 WS-AtomicTransaction 설정의 일부분을 구성하는 데 사용됩니다.  
   
 ## <a name="remarks"></a>설명  
- 실행 하는 경우 [!INCLUDE[wxp](../../../includes/wxp-md.md)] 또는 [!INCLUDE[ws2003](../../../includes/ws2003-md.md)]로 이동 하 여 MMC 스냅인을 사용 하 여 찾을 수 **컨트롤 제어판/관리 도구/구성 요소 서비스 /**단추로 클릭 한 다음, **내 컴퓨터**, 및 선택 하면 **속성**합니다. 이 위치는 MSDTC를 구성할 수 있는 위치와 동일합니다. 구성에 대해 사용할 수 있는 옵션 아래에 그룹화 되는 **WS-AT** 탭 합니다.  
+ 실행 하는 경우 [!INCLUDE[wxp](../../../includes/wxp-md.md)] 또는 [!INCLUDE[ws2003](../../../includes/ws2003-md.md)]로 이동 하 여 MMC 스냅인을 사용 하 여 찾을 수 **컨트롤 제어판/관리 도구/구성 요소 서비스 /** 단추로 클릭 한 다음, **내 컴퓨터**, 및 선택 하면 **속성**합니다. 이 위치는 MSDTC를 구성할 수 있는 위치와 동일합니다. 구성에 대해 사용할 수 있는 옵션 아래에 그룹화 되는 **WS-AT** 탭 합니다.  
   
  Windows Vista를 실행 하는 경우 또는 [!INCLUDE[lserver](../../../includes/lserver-md.md)], 클릭 하 여 MMC 스냅인에서 찾을 수는 **시작** 단추를 선택한에 입력 `dcomcnfg.exe` 에 **검색** 상자. MMC가 열리면로 이동 된 **내 Computer\Distributed Transaction Coordinator\Local DTC** 노드를 마우스 오른쪽 단추로 클릭 하 고 선택 **속성**합니다. 구성에 대해 사용할 수 있는 옵션 아래에 그룹화 되는 **WS-AT** 탭 합니다.  
   
- 앞의 단계는 로컬 컴퓨터를 구성하기 위한 스냅인을 시작하는 데 사용됩니다. 원격 컴퓨터를 구성 하려면 원격 컴퓨터의 이름을 찾아야 **컨트롤 제어판/관리 도구/구성 요소 서비스 /**를 실행 하는 경우 비슷한 단계를 수행 하 고 [!INCLUDE[wxp](../../../includes/wxp-md.md)] 또는 [!INCLUDE[ws2003](../../../includes/ws2003-md.md)]합니다. Windows Vista를 실행 하는 경우 또는 [!INCLUDE[lserver](../../../includes/lserver-md.md)], vista 이전 단계를 수행 하 고 [!INCLUDE[lserver](../../../includes/lserver-md.md)], 사용 하지만 **DTC Distributed Transaction Coordinator\Local** 원격 컴퓨터의 노드 아래에 노드.  
+ 앞의 단계는 로컬 컴퓨터를 구성하기 위한 스냅인을 시작하는 데 사용됩니다. 원격 컴퓨터를 구성 하려면 원격 컴퓨터의 이름을 찾아야 **컨트롤 제어판/관리 도구/구성 요소 서비스 /** 를 실행 하는 경우 비슷한 단계를 수행 하 고 [!INCLUDE[wxp](../../../includes/wxp-md.md)] 또는 [!INCLUDE[ws2003](../../../includes/ws2003-md.md)]합니다. Windows Vista를 실행 하는 경우 또는 [!INCLUDE[lserver](../../../includes/lserver-md.md)], vista 이전 단계를 수행 하 고 [!INCLUDE[lserver](../../../includes/lserver-md.md)], 사용 하지만 **DTC Distributed Transaction Coordinator\Local** 원격 컴퓨터의 노드 아래에 노드.  
   
  도구의 사용자 인터페이스를 사용하려면 다음 경로에 있는 WsatUI.dll 파일을 등록해야 합니다.  
   
@@ -42,9 +44,9 @@ regasm.exe /codebase WsatUI.dll
   
  이 도구를 사용하여 기본 WS-AtomicTransaction 설정을 수정할 수 있습니다. 예를 들어, WS-AtomicTransaction 활성화 및 비활성화하고, WS-AT에 대해 HTTP 포트를 구성하고, SSL 인증서를 HTTP 포트에 바인딩하고, 인증서 주체 이름을 지정하여 인증서를 구성하고, 추적 모드를 선택하고, 기본 및 최대 시간 제한을 설정할 수 있습니다.  
   
- 로컬 컴퓨터에서만 WS-AtomicTransaction 지원을 구성해야 하는 경우 이 도구의 명령줄 버전을 사용할 수 있습니다. [!INCLUDE[crabout](../../../includes/crabout-md.md)]명령줄 도구 참조는 [Ws-atomictransaction 구성 유틸리티 (wsatConfig.exe)](../../../docs/framework/wcf/ws-atomictransaction-configuration-utility-wsatconfig-exe.md) 항목입니다.  
+ 로컬 컴퓨터에서만 WS-AtomicTransaction 지원을 구성해야 하는 경우 이 도구의 명령줄 버전을 사용할 수 있습니다. 명령줄 도구에 대 한 자세한 내용은 참조는 [Ws-atomictransaction 구성 유틸리티 (wsatConfig.exe)](../../../docs/framework/wcf/ws-atomictransaction-configuration-utility-wsatconfig-exe.md) 항목입니다.  
   
- MMC 스냅인과 명령줄 도구 모두 일부 WS-AT 설정 구성을 지원하지 않습니다. 이러한 설정은 레지스트리를 직접 수정해야지만 편집할 수 있습니다. [!INCLUDE[crabout](../../../includes/crabout-md.md)]이러한 레지스트리 설정을 참조 [Ws-atomic Transaction 지원 구성](../../../docs/framework/wcf/feature-details/configuring-ws-atomic-transaction-support.md)합니다.  
+ MMC 스냅인과 명령줄 도구 모두 일부 WS-AT 설정 구성을 지원하지 않습니다. 이러한 설정은 레지스트리를 직접 수정해야지만 편집할 수 있습니다. 이러한 레지스트리 설정에 대 한 자세한 내용은 참조 [Ws-atomic Transaction 지원 구성](../../../docs/framework/wcf/feature-details/configuring-ws-atomic-transaction-support.md)합니다.  
   
 ### <a name="user-interface-description"></a>사용자 인터페이스 설명  
  **Ws-atomic Transaction 네트워크 지원 사용**:  
@@ -95,7 +97,7 @@ regasm.exe /codebase WsatUI.dll
 > [!NOTE]
 >  다른 추적 소비자가 WS-AT 추적 공급자를 사용 중인 경우 추적 이벤트에 새 로깅 세션을 만들 수 없습니다. 이 시간 동안 로깅을 구성하려고 시도하면 "공급자를 사용하지 못했습니다. 오류 코드: 1" 오류 메시지가 표시됩니다.  
   
- [!INCLUDE[crabout](../../../includes/crabout-md.md)]추적 및 로깅, 참조 [관리 및 진단](../../../docs/framework/wcf/diagnostics/index.md)합니다.  
+ 추적 및 로깅에 대 한 자세한 내용은 참조 [관리 및 진단](../../../docs/framework/wcf/diagnostics/index.md)합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [WS-Atomic Transaction 지원 구성](../../../docs/framework/wcf/feature-details/configuring-ws-atomic-transaction-support.md)  

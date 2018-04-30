@@ -1,23 +1,24 @@
 ---
-title: "워크플로의 취소 동작 모델링"
-ms.custom: 
+title: 워크플로의 취소 동작 모델링
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: d48f6cf3-cdde-4dd3-8265-a665acf32a03
-caps.latest.revision: "11"
+caps.latest.revision: 11
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 94a3cb69e2e897e992a05a19325630ca9bb1ae3a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: e455bf4d74f77c6cd87301dc9a21f56117777ecf
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="modeling-cancellation-behavior-in-workflows"></a>워크플로의 취소 동작 모델링
 워크플로 내에서 활동을 취소할 수도 있고(예: <xref:System.Activities.Statements.Parallel>의 평가 결과가 <xref:System.Activities.Statements.Parallel.CompletionCondition%2A>일 때 완료되지 않은 분기를 `true` 활동을 사용하여 취소하는 경우), 호스트가  <xref:System.Activities.WorkflowApplication.Cancel%2A>을 호출하는 경우에는 워크플로 외부에서 활동을 취소할 수도 있습니다. 취소 처리를 위해 워크플로 작성자는 <xref:System.Activities.Statements.CancellationScope> 활동 또는 <xref:System.Activities.Statements.CompensableActivity> 활동을 사용하거나 취소 논리를 제공하는 사용자 지정 활동을 만들 수 있습니다. 이 항목에서는 워크플로의 취소에 대해 간략하게 설명합니다.  
@@ -26,7 +27,7 @@ ms.lasthandoff: 12/22/2017
  응용 프로그램에 트랜잭션을 사용하면 트랜잭션 프로세스의 일부에서 오류가 발생하는 경우 트랜잭션 내에서 실행된 모든 변경 내용을 중단(롤백)할 수 있습니다. 그러나 취소하거나 실행을 취소해야 하는 작업 중에는 장기 실행 작업이나 트랜잭션 리소스가 관련되지 않은 작업처럼 트랜잭션에 적합하지 않은 작업도 있습니다. 보정은 워크플로에서 오류가 발생할 경우 이전에 완료된 비트랜잭션 작업의 실행을 취소하는 모델을 제공합니다. 취소는 워크플로 및 활동 작성자가 완료되지 않은 비트랜잭션 작업을 처리하는 모델을 제공합니다. 활동의 실행이 완료되지 않은 상태에서 활동을 취소한 경우 적용 가능한 취소 논리가 있으면 해당 논리가 호출됩니다.  
   
 > [!NOTE]
->  [!INCLUDE[crabout](../../../includes/crabout-md.md)]트랜잭션 및 보정 참조 [트랜잭션을](../../../docs/framework/windows-workflow-foundation/workflow-transactions.md) 및 [보정](../../../docs/framework/windows-workflow-foundation/compensation.md)합니다.  
+>  트랜잭션 및 보정 하는 방법에 대 한 자세한 내용은 참조 [트랜잭션을](../../../docs/framework/windows-workflow-foundation/workflow-transactions.md) 및 [보정](../../../docs/framework/windows-workflow-foundation/compensation.md)합니다.  
   
 ## <a name="using-cancellationscope"></a>CancellationScope 사용  
  <xref:System.Activities.Statements.CancellationScope> 활동에는 자식 활동을 포함할 수 있는 <xref:System.Activities.Statements.CancellationScope.Body%2A>와 <xref:System.Activities.Statements.CancellationScope.CancellationHandler%2A>라는 두 개의 섹션이 있습니다. <xref:System.Activities.Statements.CancellationScope.Body%2A>는 활동의 논리를 구성하는 자식 활동이 포함되는 위치이며, <xref:System.Activities.Statements.CancellationScope.CancellationHandler%2A>는 활동에 대한 취소 논리를 제공하는 자식 활동이 포함되는 위치입니다. 활동은 완료되지 않은 경우에만 취소할 수 있습니다. <xref:System.Activities.Statements.CancellationScope> 활동의 경우 완료란 <xref:System.Activities.Statements.CancellationScope.Body%2A>에 포함된 활동이 완료되었음을 의미합니다. 취소 요청이 예약되어 있고 <xref:System.Activities.Statements.CancellationScope.Body%2A>의 활동이 완료되지 않은 경우 <xref:System.Activities.Statements.CancellationScope>가 <xref:System.Activities.ActivityInstanceState.Canceled>로 표시되고 <xref:System.Activities.Statements.CancellationScope.CancellationHandler%2A> 활동이 실행됩니다.  

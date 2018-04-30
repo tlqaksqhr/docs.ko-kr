@@ -1,28 +1,30 @@
 ---
-title: "주석 스키마"
-ms.custom: 
+title: 주석 스키마
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - XML schema definition (XSD)
 - Microsoft Annotations Framework [WPF]
 - documents [WPF], annotations
 ms.assetid: a893442b-e220-4603-bf6a-b01fefcb4b37
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 7989269e8076eda1deef6384b7efdb51c2d279ec
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: a78e287065fb714878d4d97b037d44440d063a5a
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="annotations-schema"></a>주석 스키마
 이 항목에서는 사용자 주석 데이터를 저장하고 검색하기 위해 Microsoft Annotations Framework에서 사용하는 XSD(XML 스키마 정의)에 대해 설명합니다.  
@@ -37,7 +39,7 @@ ms.lasthandoff: 12/22/2017
   
  기본 XML 구조를 정의 하는 Core 스키마는 <xref:System.Windows.Annotations.Annotation>합니다.  형식에 해당 하는 대부분의 핵심 스키마에 정의 된 XML 요소는 <xref:System.Windows.Annotations> 네임 스페이스입니다.  코어 스키마는 응용 프로그램이 자체 XML 데이터를 추가할 수 있는 세 개의 확장 지점을 제공합니다.  이러한 확장 지점에 포함 된 <xref:System.Windows.Annotations.Annotation.Authors%2A>, <xref:System.Windows.Annotations.ContentLocatorPart>, "콘텐츠" 및 합니다.  (의 형태로 제공 요소의 콘텐츠는 <xref:System.Xml.XmlElement> 목록입니다.)  
   
- 이 항목에서 설명 하는 기본 스키마에 대 한 확장을 정의 <xref:System.Windows.Annotations.Annotation.Authors%2A>, <xref:System.Windows.Annotations.ContentLocatorPart>, 콘텐츠는 초기에 포함 된 형식 및 [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] 해제 합니다.  
+ 이 항목에서 설명 하는 기본 스키마에 대 한 확장을 정의 <xref:System.Windows.Annotations.Annotation.Authors%2A>, <xref:System.Windows.Annotations.ContentLocatorPart>, 및 콘텐츠 초기 Windows Presentation Foundation (WPF) 릴리스에 포함 된 형식입니다.  
   
 <a name="CoreSchema"></a>   
 ## <a name="annotations-xml-core-schema"></a>주석 XML 코어 스키마  

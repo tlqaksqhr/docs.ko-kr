@@ -19,11 +19,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 2138a412af30812b4ff443963604dda52eafea11
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 209d10f9545be65870f584fa79444f7fab90211a
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="accessing-services-using-a-client"></a>클라이언트를 사용하여 서비스 액세스
 클라이언트 응용 프로그램은 서비스와 통신할 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 클라이언트 또는 채널 개체를 만들고 구성 및 사용해야 합니다. [WCF 클라이언트 개요](../../../../docs/framework/wcf/wcf-client-overview.md) 항목에서는 개체 및 기본 클라이언트 및 채널 개체 만들기 및 사용에 관련 된 단계에 대 한 개요를 제공 합니다.  
@@ -76,7 +76,7 @@ ms.lasthandoff: 04/28/2018
   
  데이터그램 채널은 닫을 때 예외가 발생하는 경우에도 실패하지 않습니다. 또한 보안 대화를 사용하여 인증할 수 없는 비이중 클라이언트는 일반적으로 <xref:System.ServiceModel.Security.MessageSecurityException?displayProperty=nameWithType>을 throw합니다. 그러나 보안 대화를 사용하는 이중 클라이언트가 인증할 수 없는 경우 클라이언트는 대신 <xref:System.TimeoutException?displayProperty=nameWithType>을 수신합니다.  
   
- 응용 프로그램 수준에서 오류 정보로 작업 하는 방법에 대 한 자세한 정보를 참조 하십시오. [지정 및 계약 및 서비스에서 처리 오류](../../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)합니다. [예상 되는 오류](../../../../docs/framework/wcf/samples/expected-exceptions.md) 예상 되는 예외를 설명 하 고 처리 하는 방법을 보여 줍니다. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 채널 개발 하는 경우 오류 처리를 참조 하는 방법 [예외 처리 및 오류](../../../../docs/framework/wcf/extending/handling-exceptions-and-faults.md)합니다.  
+ 응용 프로그램 수준에서 오류 정보로 작업 하는 방법에 대 한 자세한 정보를 참조 하십시오. [지정 및 계약 및 서비스에서 처리 오류](../../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)합니다. [예상 되는 오류](../../../../docs/framework/wcf/samples/expected-exceptions.md) 예상 되는 예외를 설명 하 고 처리 하는 방법을 보여 줍니다. 채널 개발 하는 경우 오류를 처리 하는 방법에 대 한 자세한 내용은 참조 [예외 처리 및 오류](../../../../docs/framework/wcf/extending/handling-exceptions-and-faults.md)합니다.  
   
 ### <a name="client-blocking-and-performance"></a>클라이언트 차단 및 성능  
  응용 프로그램에서 동기적으로 request-reply 작업을 호출하는 경우 클라이언트는 반환 값이 수신되거나 <xref:System.TimeoutException?displayProperty=nameWithType> 같은 예외가 throw될 때까지 차단됩니다. 이 동작은 로컬 동작과 유사합니다. 응용 프로그램이 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 클라이언트 개체나 채널에서 동기적으로 작업을 호출하는 경우 클라이언트는 채널 계층이 데이터를 네트워크에 쓸 수 있을 때까지 또는 예외가 throw될 때까지 반환되지 않습니다. <xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A?displayProperty=nameWithType>를 `true`로 설정하여 작업을 표시함으로써 지정된 단방향 메시지 교환 패턴은 일부 클라이언트의 응답을 향상시키지만 바인딩 및 이미 전송된 메시지에 따라 단방향 작업이 차단될 수도 있습니다. 단방향 작업은 메시지 교환에만 사용됩니다. 자세한 내용은 참조 [단방향 서비스](../../../../docs/framework/wcf/feature-details/one-way-services.md)합니다.  
@@ -85,7 +85,7 @@ ms.lasthandoff: 04/28/2018
   
  작업이 완료되는 동안 응용 프로그램에서 추가 작업을 수행해야 하는 경우 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 클라이언트가 구현하는 서비스 계약 인터페이스에 비동기 메서드 쌍을 만들어야 합니다. 이 작업을 수행 하는 가장 쉬운 방법은 사용 하는 `/async` 스위치에 [ServiceModel Metadata 유틸리티 도구 (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)합니다. 예를 들어 참조 [하는 방법: 비동기적 서비스 작업 호출](../../../../docs/framework/wcf/feature-details/how-to-call-wcf-service-operations-asynchronously.md)합니다.  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 클라이언트 성능을 향상 시키는 참조 [중간 계층 클라이언트 응용 프로그램](../../../../docs/framework/wcf/feature-details/middle-tier-client-applications.md)합니다.  
+ 증가 클라이언트 성능에 대 한 자세한 내용은 참조 [중간 계층 클라이언트 응용 프로그램](../../../../docs/framework/wcf/feature-details/middle-tier-client-applications.md)합니다.  
   
 ### <a name="enabling-the-user-to-select-credentials-dynamically"></a>사용자가 동적으로 자격 증명을 선택할 수 있도록 설정  
  <xref:System.ServiceModel.Dispatcher.IInteractiveChannelInitializer> 인터페이스를 사용하면 응용 프로그램이 시간 제한 타이머가 시작되기 전에 채널을 만드는 데 사용할 자격 증명을 사용자가 선택할 수 있도록 하는 사용자 인터페이스를 표시할 수 있습니다.  

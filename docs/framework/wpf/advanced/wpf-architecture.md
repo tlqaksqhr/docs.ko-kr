@@ -1,12 +1,13 @@
 ---
-title: "WPF 아키텍처"
-ms.custom: 
+title: WPF 아키텍처
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - properties [WPF], attached
@@ -23,19 +24,20 @@ helpviewer_keywords:
 - data templates [WPF]
 - thread [WPF], affinity
 ms.assetid: 8579c10b-76ab-4c52-9691-195ce02333c8
-caps.latest.revision: "17"
+caps.latest.revision: 17
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 4d688bb460b01c0b3fe4d7571916b887cd485b87
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 29c8e2d632c37a299389b1bdc7f3f19f7df2f7e7
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="wpf-architecture"></a>WPF 아키텍처
-이 항목에서는 [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] 클래스 계층의 둘러보기를 제공합니다. 이 항목은 대부분의 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 주요 하위 시스템을 다루며 이들이 어떻게 상호 작용하는지를 설명하고, [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]의 설계자가 선택한 몇 가지 사항에 대해서 자세히 설명합니다.  
+이 항목에서는 Windows Presentation Foundation (WPF) 클래스 계층을 안내 합니다. 이 항목은 대부분의 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 주요 하위 시스템을 다루며 이들이 어떻게 상호 작용하는지를 설명하고, [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]의 설계자가 선택한 몇 가지 사항에 대해서 자세히 설명합니다.  
   
   
 <a name="System_Object"></a>   
@@ -64,7 +66,7 @@ ms.lasthandoff: 12/22/2017
   
  시스템에서 더 많은 부분을 속성에서 제어할 수 있게 만들기 위해 [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)]이 제공하는 것보다 다양한 속성 시스템이 필요했습니다. 간단한 예로 변경 알림을 들 수 있습니다. 양방향 바인딩을 사용하기 위해서는 바인드의 양쪽이 변경 알림을 지원해야 합니다. 동작이 속성 값에 연결되려면 속성 값이 변경될 때 알림을 받아야 합니다. [!INCLUDE[TLA#tla_netframewk](../../../../includes/tlasharptla-netframewk-md.md)]에는 개체가 변경 알림을 게시할 수 있는 **INotifyPropertyChange** 인터페이스가 있습니다. 하지만 이 인터페이스는 선택 사항입니다.  
   
- [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]파생 된 다양 한 속성 시스템에 제공 된 <xref:System.Windows.DependencyObject> 유형입니다. 속성 시스템은 속성 식 간의 종속성을 추적하고 종속성이 변경될 때 속성 값의 유효성을 자동으로 다시 검사하는 면에서 진정한 "종속성" 속성 시스템입니다. 예를 들어, 상속 하는 속성이 있는 경우 (같은 <xref:System.Windows.Controls.Control.FontSize%2A>), 시스템 속성 값이 상속 되는 요소의 부모에 속성이 변경 되 면 자동으로 업데이트 됩니다.  
+ [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 파생 된 다양 한 속성 시스템에 제공 된 <xref:System.Windows.DependencyObject> 유형입니다. 속성 시스템은 속성 식 간의 종속성을 추적하고 종속성이 변경될 때 속성 값의 유효성을 자동으로 다시 검사하는 면에서 진정한 "종속성" 속성 시스템입니다. 예를 들어, 상속 하는 속성이 있는 경우 (같은 <xref:System.Windows.Controls.Control.FontSize%2A>), 시스템 속성 값이 상속 되는 요소의 부모에 속성이 변경 되 면 자동으로 업데이트 됩니다.  
   
  [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 속성 시스템의 기반은 속성 식의 개념입니다. 이 첫 릴리스의 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]에서는 속성 식 시스템이 닫혀 있고 식이 모두 프레임워크의 일부로 제공됩니다. 속성 시스템에 하드 코드된 상속, 스타일 설정 또는 데이터 바인딩이 없고 대신 프레임워크 내의 이후 계층에 의해 제공되는 이유는 식 때문입니다.  
   
@@ -74,9 +76,9 @@ ms.lasthandoff: 12/22/2017
   
 <a name="System_Windows_Media_Visual"></a>   
 ## <a name="systemwindowsmediavisual"></a>System.Windows.Media.Visual  
- 시스템이 정의되면 다음 단계는 화면에서 픽셀을 그리는 것입니다. <xref:System.Windows.Media.Visual> 그리기 명령과 해당 명령을 (클리핑, 변환 등) 렌더링 하는 방법에 대 한 메타 데이터를 선택적으로 포함 된 각 시각적 개체의 트리를 작성 하기 위한 클래스를 제공 합니다. <xref:System.Windows.Media.Visual>대부분의 기능은 public 갖도록 되도록 매우 간단 하 고 유연 하 게 설계 [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] 노출 및 보호 되는 콜백 함수에 크게 의존 합니다.  
+ 시스템이 정의되면 다음 단계는 화면에서 픽셀을 그리는 것입니다. <xref:System.Windows.Media.Visual> 그리기 명령과 해당 명령을 (클리핑, 변환 등) 렌더링 하는 방법에 대 한 메타 데이터를 선택적으로 포함 된 각 시각적 개체의 트리를 작성 하기 위한 클래스를 제공 합니다. <xref:System.Windows.Media.Visual> 대부분의 기능은 public 갖도록 되도록 매우 간단 하 고 유연 하 게 설계 [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] 노출 및 보호 되는 콜백 함수에 크게 의존 합니다.  
   
- <xref:System.Windows.Media.Visual>에 대 한 진입점은 실제로 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 조합 시스템입니다. <xref:System.Windows.Media.Visual>관리 되는 이러한 두 하위 간의 연결 지점이 [!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)] 및 관리 되지 않는 milcore 합니다.  
+ <xref:System.Windows.Media.Visual> 에 대 한 진입점은 실제로 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 조합 시스템입니다. <xref:System.Windows.Media.Visual> 관리 되는 이러한 두 하위 간의 연결 지점이 [!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)] 및 관리 되지 않는 milcore 합니다.  
   
  [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]는 milcore에 의해 관리되는 관리되지 않는 데이터 구조를 이동하여 데이터를 표시합니다. 컴포지션 노드라고 하는 이 구조는 각 노드에 렌더링 명령이 있는 계층적 디스플레이 트리를 나타냅니다. 아래 그림의 오른쪽에 있는 이 트리에는 메시징 프로토콜을 통해서만 액세스할 수 있습니다.  
   
@@ -100,11 +102,11 @@ ms.lasthandoff: 12/22/2017
   
 <a name="System_Windows_UIElement"></a>   
 ## <a name="systemwindowsuielement"></a>System.Windows.UIElement  
- <xref:System.Windows.UIElement>레이아웃, 입력 및 이벤트를 포함 하 여 핵심 하위 시스템을 정의 합니다.  
+ <xref:System.Windows.UIElement> 레이아웃, 입력 및 이벤트를 포함 하 여 핵심 하위 시스템을 정의 합니다.  
   
  레이아웃은 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]의 핵심 개념입니다. 대부분의 시스템에는 고정된 레이아웃 모델 집합(HTML은 세 가지 레이아웃 모델인 흐름, 절대 및 테이블을 지원함)이 있거나 레이아웃 모델이 아예 없습니다(User32는 실제로 절대 위치 지정만 지원함). [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]는 개발자 및 디자이너가 명령적 논리 대신 속성 값을 중심으로 운영될 수 있는 유연하고 확장 가능한 레이아웃 모델을 원한다는 가정에서 출발했습니다. 에 <xref:System.Windows.UIElement> 레이아웃에 대 한 기본 계약 수준으로 도입 된 – 2 단계를 사용 하 여 모델 <xref:System.Windows.UIElement.Measure%2A> 및 <xref:System.Windows.UIElement.Arrange%2A> 전달 합니다.  
   
- <xref:System.Windows.UIElement.Measure%2A>수행 하려는 얼마나 크기를 결정 하는 구성 요소를 허용 합니다. 이것이에서 별도 단계 <xref:System.Windows.UIElement.Arrange%2A> 사용 되므로 대부분의 경우 부모 요소의 자식으로 최적의 위치 및 크기를 결정 하는 여러 번 측정 묻는 메시지가 표시 됩니다. 부모 요소가 자식 요소에게 측정을 요구한다는 사실은 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]의 또 다른 주요 방법인 콘텐츠에 맞는 크기를 나타냅니다. [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 내에 있는 모든 컨트롤은 콘텐츠의 기본 크기에 맞게 크기가 조정되는 기능을 지원합니다. 이에 따라 지역화가 훨씬 간단해지고 크기 조정에 따른 요소의 동적 레이아웃이 가능합니다. <xref:System.Windows.UIElement.Arrange%2A> 단계를 통해 부모를 배치 하 고 각 자식 항목의 최종 크기를 결정 합니다.  
+ <xref:System.Windows.UIElement.Measure%2A> 수행 하려는 얼마나 크기를 결정 하는 구성 요소를 허용 합니다. 이것이에서 별도 단계 <xref:System.Windows.UIElement.Arrange%2A> 사용 되므로 대부분의 경우 부모 요소의 자식으로 최적의 위치 및 크기를 결정 하는 여러 번 측정 묻는 메시지가 표시 됩니다. 부모 요소가 자식 요소에게 측정을 요구한다는 사실은 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]의 또 다른 주요 방법인 콘텐츠에 맞는 크기를 나타냅니다. [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 내에 있는 모든 컨트롤은 콘텐츠의 기본 크기에 맞게 크기가 조정되는 기능을 지원합니다. 이에 따라 지역화가 훨씬 간단해지고 크기 조정에 따른 요소의 동적 레이아웃이 가능합니다. <xref:System.Windows.UIElement.Arrange%2A> 단계를 통해 부모를 배치 하 고 각 자식 항목의 최종 크기를 결정 합니다.  
   
  시간이 많이 종종 할애 하 여의 출력 측에 대 한 설명 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] – <xref:System.Windows.Media.Visual> 및 관련 개체입니다. 입력 측면에도 새로운 내용이 매우 많습니다. [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]의 입력 모델에서 가장 근본적인 변화는 입력 이벤트가 시스템을 통해 라우트되는 일관된 모델입니다.  
   
@@ -120,11 +122,11 @@ ms.lasthandoff: 12/22/2017
   
 <a name="System_Windows_FrameworkElement"></a>   
 ## <a name="systemwindowsframeworkelement"></a>System.Windows.FrameworkElement  
- <xref:System.Windows.FrameworkElement>두 가지 방법으로 찾을 수 있습니다. [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]의 낮은 계층에 도입되는 하위 시스템에 대한 정책 및 사용자 지정 집합을 소개한다는 것이며, 다른 한 가지는 새로운 하위 시스템 집합을 소개한다는 것입니다.  
+ <xref:System.Windows.FrameworkElement> 두 가지 방법으로 찾을 수 있습니다. [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]의 낮은 계층에 도입되는 하위 시스템에 대한 정책 및 사용자 지정 집합을 소개한다는 것이며, 다른 한 가지는 새로운 하위 시스템 집합을 소개한다는 것입니다.  
   
- 도입 된 기본 정책은 <xref:System.Windows.FrameworkElement> 응용 프로그램 레이아웃 주위 합니다. <xref:System.Windows.FrameworkElement>빌드에 의해 정의 된 기본 레이아웃 계약에 <xref:System.Windows.UIElement> 레이아웃 레이아웃 작성자가 레이아웃 의미 체계를 구동 하는 속성의 일관성 있는 집합을 보다 쉽게 "슬롯"의 개념을 추가 합니다. 같은 속성 <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A>, <xref:System.Windows.FrameworkElement.VerticalAlignment%2A>, <xref:System.Windows.FrameworkElement.MinWidth%2A>, 및 <xref:System.Windows.FrameworkElement.Margin%2A> (을)에서 파생 된 모든 구성 요소를 제공 <xref:System.Windows.FrameworkElement> 레이아웃 컨테이너 내의 일관 된 동작입니다.  
+ 도입 된 기본 정책은 <xref:System.Windows.FrameworkElement> 응용 프로그램 레이아웃 주위 합니다. <xref:System.Windows.FrameworkElement> 빌드에 의해 정의 된 기본 레이아웃 계약에 <xref:System.Windows.UIElement> 레이아웃 레이아웃 작성자가 레이아웃 의미 체계를 구동 하는 속성의 일관성 있는 집합을 보다 쉽게 "슬롯"의 개념을 추가 합니다. 같은 속성 <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A>, <xref:System.Windows.FrameworkElement.VerticalAlignment%2A>, <xref:System.Windows.FrameworkElement.MinWidth%2A>, 및 <xref:System.Windows.FrameworkElement.Margin%2A> (을)에서 파생 된 모든 구성 요소를 제공 <xref:System.Windows.FrameworkElement> 레이아웃 컨테이너 내의 일관 된 동작입니다.  
   
- <xref:System.Windows.FrameworkElement>또한 쉽게 제공 [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] 의 핵심 계층에 있는 다양 한 기능에 대 한 노출을 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]합니다. 예를 들어 <xref:System.Windows.FrameworkElement> 통해 애니메이션에 직접 액세스할 수는 <xref:System.Windows.FrameworkElement.BeginStoryboard%2A> 메서드. A <xref:System.Windows.Media.Animation.Storyboard> 여러 애니메이션 속성의 집합에 대해 스크립팅할 수 있는 방법을 제공 합니다.  
+ <xref:System.Windows.FrameworkElement> 또한 쉽게 제공 [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] 의 핵심 계층에 있는 다양 한 기능에 대 한 노출을 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]합니다. 예를 들어 <xref:System.Windows.FrameworkElement> 통해 애니메이션에 직접 액세스할 수는 <xref:System.Windows.FrameworkElement.BeginStoryboard%2A> 메서드. A <xref:System.Windows.Media.Animation.Storyboard> 여러 애니메이션 속성의 집합에 대해 스크립팅할 수 있는 방법을 제공 합니다.  
   
  두 가지 가장 중요 한 항목 있는 <xref:System.Windows.FrameworkElement> 소개 된 데이터 바인딩 및 스타일.  
   
@@ -138,7 +140,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="systemwindowscontrolscontrol"></a>System.Windows.Controls.Control  
  컨트롤의 가장 중요한 기능은 템플릿 설정입니다. WPF의 컴퍼지션 시스템을 유지된 모드 렌더링 시스템으로 생각하는 경우에는 템플릿 설정을 통해 컨트롤이 매개 변수가 있는 선언적 방식으로 렌더링되고 있음을 설명할 수 있습니다. A <xref:System.Windows.Controls.ControlTemplate> 실제로 컨트롤에서 제공 하는 속성에 대 한 바인딩을 사용 하는 일련의 자식 요소를 만드는 데 필요한 스크립트 뿐입니다.  
   
- <xref:System.Windows.Controls.Control>스톡 속성 집합이 제공 <xref:System.Windows.Controls.Control.Foreground%2A>, <xref:System.Windows.Controls.Control.Background%2A>, <xref:System.Windows.Controls.Control.Padding%2A>, 서식 파일 작성자는 컨트롤의 표시를 사용자 지정 하는 데 사용할 수 있는 몇 가지 이름을 지정 합니다. 컨트롤 구현은 데이터 모델 및 상호 작용 모델을 제공합니다. 상호 작용 모델은 명령 집합(예: 창 닫기)과 입력 제스처에 대한 바인딩(예: 창의 위쪽 모서리에 있는 빨간색 X 클릭)을 정의합니다. 데이터 모델은 상호 작용 모델을 사용자 지정하거나 디스플레이를 사용자 지정하기 위한 속성 집합을 제공합니다. 사용자 지정 대상은 템플릿에 의해 결정됩니다.  
+ <xref:System.Windows.Controls.Control> 스톡 속성 집합이 제공 <xref:System.Windows.Controls.Control.Foreground%2A>, <xref:System.Windows.Controls.Control.Background%2A>, <xref:System.Windows.Controls.Control.Padding%2A>, 서식 파일 작성자는 컨트롤의 표시를 사용자 지정 하는 데 사용할 수 있는 몇 가지 이름을 지정 합니다. 컨트롤 구현은 데이터 모델 및 상호 작용 모델을 제공합니다. 상호 작용 모델은 명령 집합(예: 창 닫기)과 입력 제스처에 대한 바인딩(예: 창의 위쪽 모서리에 있는 빨간색 X 클릭)을 정의합니다. 데이터 모델은 상호 작용 모델을 사용자 지정하거나 디스플레이를 사용자 지정하기 위한 속성 집합을 제공합니다. 사용자 지정 대상은 템플릿에 의해 결정됩니다.  
   
  데이터 모델(속성), 상호 작용 모델(명령 및 이벤트) 및 디스플레이 모델(템플릿)이 이렇게 구분됨에 따라 컨트롤의 모양 및 동작을 완전히 사용자 지정할 수 있습니다.  
   

@@ -18,11 +18,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 2a9c34f67de6f4f8b4a8d22dac7e8bf1c9555498
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 5e477b11893d2b74ebe1674225e05b13cb9f67ca
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="implementing-service-contracts"></a>서비스 계약 구현
 서비스는 클라이언트에서 사용할 수 있는 기능을 하나 이상의 끝점에 노출하는 클래스입니다. 서비스를 만들려면 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 계약을 구현하는 클래스를 작성합니다. 이 작업은 두 가지 방법 중 한 가지로 수행할 수 있습니다. 계약을 인터페이스로 따로 정의한 다음 해당 인터페이스를 구현하는 클래스를 만들 수 있습니다. 또는 클래스 자체에 <xref:System.ServiceModel.ServiceContractAttribute> 특성을 두고 서비스 클라이언트에서 사용할 수 있는 메서드에 <xref:System.ServiceModel.OperationContractAttribute> 특성을 두어 클래스와 계약을 직접 만들 수도 있습니다.  
@@ -68,7 +68,7 @@ class MathService
   
  서비스 및 작업 구현 수준에서 동시성 및 인스턴스 등을 설정할 수 있습니다. 자세한 내용은 참조 [서비스 디자인 및 구현](../../../docs/framework/wcf/designing-and-implementing-services.md)합니다.  
   
- 서비스 계약을 구현하고 나면 서비스에 하나 이상의 끝점을 만들어야 합니다. 자세한 내용은 참조 [끝점 만들기 개요](../../../docs/framework/wcf/endpoint-creation-overview.md)합니다. [!INCLUDE[crabout](../../../includes/crabout-md.md)] 서비스를 실행 하 [호스팅 서비스](../../../docs/framework/wcf/hosting-services.md)합니다.  
+ 서비스 계약을 구현하고 나면 서비스에 하나 이상의 끝점을 만들어야 합니다. 자세한 내용은 참조 [끝점 만들기 개요](../../../docs/framework/wcf/endpoint-creation-overview.md)합니다. 서비스를 실행 하는 방법에 대 한 자세한 내용은 참조 [호스팅 서비스](../../../docs/framework/wcf/hosting-services.md)합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [서비스 디자인 및 구현](../../../docs/framework/wcf/designing-and-implementing-services.md)  

@@ -21,11 +21,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: e9f6d0e9d64c510b47b0697d02178f1c0a95f61b
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 600d938b8981ddfabcb79028ae66b5b9d02107b7
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="using-message-contracts"></a>메시지 계약 사용
 일반적으로 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 응용 프로그램을 빌드할 때 개발자는 데이터 구조 및 serialization 문제에 특히 주의를 기울여야 하지만 데이터가 전달되는 메시지의 구조에 대해서는 주의를 기울이지 않아도 됩니다. 이러한 응용 프로그램의 경우 매개 변수 또는 반환 값에 대한 데이터 계약을 만드는 과정은 간단합니다. (자세한 내용은 참조 [서비스 계약에 데이터 전송 지정](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md).)  
@@ -44,7 +44,7 @@ ms.lasthandoff: 04/28/2018
 public BankingTransactionResponse PostBankingTransaction(BankingTransaction bt);  
 ```  
   
- 일반적으로 데이터 계약만으로도 메시지에 대한 스키마를 정의할 수 있습니다. 예를 들어 앞의 예제에서 `BankingTransaction` 및 `BankingTransactionResponse`가 기본 SOAP 메시지의 내용을 정의하기 위한 데이터 계약을 가지고 있는 경우, 대부분의 응용 프로그램에서 스키마를 정의할 수 있습니다. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 데이터 계약 참조 [를 사용 하 여 데이터 계약](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)합니다.  
+ 일반적으로 데이터 계약만으로도 메시지에 대한 스키마를 정의할 수 있습니다. 예를 들어 앞의 예제에서 `BankingTransaction` 및 `BankingTransactionResponse`가 기본 SOAP 메시지의 내용을 정의하기 위한 데이터 계약을 가지고 있는 경우, 대부분의 응용 프로그램에서 스키마를 정의할 수 있습니다. 데이터 계약에 대 한 자세한 내용은 참조 [를 사용 하 여 데이터 계약](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)합니다.  
   
  그러나 연결을 통해 SOAP 메시지 구조가 전송되는 방식을 정확하게 제어해야 하는 경우도 있습니다. 이를 위한 가장 일반적인 시나리오는 사용자 지정 SOAP 헤더를 삽입하는 것입니다. 또 다른 일반적인 시나리오는 메시지의 헤더 및 본문에 대한 보안 속성을 정의하는 것, 즉 이러한 요소를 디지털 서명 및 암호화할지 여부를 결정하는 것입니다. 마지막으로, 일부 타사 SOAP 스택에서는 메시지가 특정 형식이어야 합니다. 메시징 스타일 작업에서는 이 컨트롤을 제공합니다.  
   

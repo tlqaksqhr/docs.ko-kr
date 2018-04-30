@@ -1,12 +1,13 @@
 ---
-title: "스타일 지정 및 템플릿"
-ms.custom: 
+title: 스타일 지정 및 템플릿
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -22,16 +23,17 @@ helpviewer_keywords:
 - styles [WPF], triggers
 - styles [WPF], event triggers
 ms.assetid: 481765e5-5467-4a75-9f7b-e10e2ac410d9
-caps.latest.revision: "34"
+caps.latest.revision: 34
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: c33739d0e753146ffdc8b825d88c6ca7ba63fa1a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 7aafd709bfc1da63d11a56ada59aedf0ada12f3a
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="styling-and-templating"></a>스타일 지정 및 템플릿
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 스타일 지정 및 템플릿은 개발자와 디자이너가 시각적으로 눈에 띄는 효과를 만들고 제품에 대한 일관된 모양을 만들 수 있는 기능 모음(스타일, 템플릿, 트리거 및 스토리보드)을 나타냅니다. 개발자 및/또는 디자이너는 응용 프로그램에 따라 모양을 광범위하게 사용자 지정할 수 있지만 응용 프로그램 내에서 또는 응용 프로그램 간에 모양을 유지 관리 및 공유하려면 강력한 스타일 지정 및 템플릿 모델이 필요합니다. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]에서 이 모델을 제공합니다.  
@@ -181,15 +183,15 @@ ms.lasthandoff: 12/22/2017
  ![스타일 지정 샘플 스크린샷](../../../../docs/framework/wpf/controls/media/stylingintro-eventtriggers.png "StylingIntro_EventTriggers")  
   
 ### <a name="multitriggers-datatriggers-and-multidatatriggers"></a>MultiTrigger, DataTrigger 및 MultiDataTrigger  
- 외에 <xref:System.Windows.Trigger> 및 <xref:System.Windows.EventTrigger>, 트리거의 다른 형식이 있습니다. <xref:System.Windows.MultiTrigger>여러 조건에 따라 속성 값을 설정할 수 있습니다. 사용 하면 <xref:System.Windows.DataTrigger> 및 <xref:System.Windows.MultiDataTrigger> 조건의 속성 데이터 바인딩된 경우입니다.  
+ 외에 <xref:System.Windows.Trigger> 및 <xref:System.Windows.EventTrigger>, 트리거의 다른 형식이 있습니다. <xref:System.Windows.MultiTrigger> 여러 조건에 따라 속성 값을 설정할 수 있습니다. 사용 하면 <xref:System.Windows.DataTrigger> 및 <xref:System.Windows.MultiDataTrigger> 조건의 속성 데이터 바인딩된 경우입니다.  
   
 <a name="styling_themes"></a>   
 ## <a name="shared-resources-and-themes"></a>공유 리소스 및 테마  
- 일반적인 [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] 응용 프로그램에는 전체 응용 프로그램에 적용되는 여러 가지 UI(사용자 인터페이스)가 있을 수 있습니다. 전체적으로 이 리소스 집합을 응용 프로그램에 대한 테마로 간주할 수 있습니다. [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)]지원 패키징 사용자에 대 한 인터페이스 (UI) 리소스 테마를 사용 하 여 제공으로 캡슐화 하는 리소스 사전이 <xref:System.Windows.ResourceDictionary> 클래스입니다.  
+ 일반적인 Windows Presentation Foundation (WPF) 응용 프로그램에는 응용 프로그램에 걸쳐 적용 되는 여러 사용자 인터페이스 (UI) 리소스 할 수 있습니다. 전체적으로 이 리소스 집합을 응용 프로그램에 대한 테마로 간주할 수 있습니다. Windows Presentation Foundation (WPF) 지원 패키징 사용자에 대 한 인터페이스 (UI) 리소스 테마를 사용 하 여 제공으로 캡슐화 하는 리소스 사전이 <xref:System.Windows.ResourceDictionary> 클래스입니다.  
   
- [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] 테마는 [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)]가 요소의 시각 효과를 사용자 지정하기 위해 표시하는 스타일 지정 및 템플릿 메커니즘을 통해 정의됩니다.  
+ Windows Presentation Foundation (WPF) 테마 요소의 시각화를 사용자 지정에 대 한 스타일 지정 및 Windows Presentation Foundation (WPF)을 노출 하는 템플릿 메커니즘을 사용 하 여 정의 됩니다.  
   
- [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] 테마 리소스는 포함된 리소스 사전에 저장됩니다. 이러한 리소스 사전은 서명된 어셈블리에 포함되어야 하고 같은 어셈블리에 코드 자체로 포함되거나 side-by-side 어셈블리에 포함될 수 있습니다. [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] 컨트롤이 포함된 어셈블리인 PresentationFramework.dll의 경우 테마 리소스는 일련의 side-by-side 어셈블리에 포함됩니다.  
+ Windows Presentation Foundation (WPF) 테마 리소스가 포함 된 리소스 사전에 저장 됩니다. 이러한 리소스 사전은 서명된 어셈블리에 포함되어야 하고 같은 어셈블리에 코드 자체로 포함되거나 side-by-side 어셈블리에 포함될 수 있습니다. PresentationFramework.dll, Windows Presentation Foundation (WPF) 컨트롤을 포함 하는 어셈블리의 경우 테마 리소스는 일련의 side-by-side-어셈블리입니다.  
   
  테마는 요소의 스타일을 검색할 때 보이는 마지막 위치가 됩니다. 일반적으로 적절한 리소스를 검색할 때 요소 트리에서 위로 이동하면 검색이 시작되고 응용 프로그램 리소스 컬렉션을 확인하고 마지막으로 시스템을 쿼리합니다. 이를 통해 응용 프로그램 개발자는 테마에 도달하기 전에 트리 또는 응용 프로그램 수준에서 개체에 대한 스타일을 다시 정의할 수 있습니다.  
   

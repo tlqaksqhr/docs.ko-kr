@@ -22,11 +22,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: e6efcb5097729ac5f096e78883e9bc49598c9a37
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 39c033d45488b827a4aee7439904db8094795db4
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="debugging-windows-authentication-errors"></a>Windows 인증 오류 디버깅
 Windows 인증을 보안 메커니즘으로 사용하면 SSPI(보안 지원 공급자 인터페이스)에서 보안 프로세스를 처리합니다. SSPI 계층에 보안 오류가 발생하면 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]에 표시됩니다. 이 항목에서는 오류 진단에 도움이 되는 프레임워크 및 일련의 질문을 제공합니다.  
@@ -75,7 +75,7 @@ Windows 인증을 보안 메커니즘으로 사용하면 SSPI(보안 지원 공�
 ### <a name="kerberos-protocol"></a>Kerberos 프로토콜  
   
 #### <a name="spnupn-problems-with-the-kerberos-protocol"></a>Kerberos 프로토콜에 대한 SPN/UPN 문제  
- Windows 인증을 사용할 때 Kerberos 프로토콜을 사용하거나 SSPI 협상을 수행하는 경우, 클라이언트 끝점에 사용되는 URL은 서비스 URL 내에 있는 서비스 호스트의 정규화된 도메인 이름을 포함해야 합니다. 이 가정 아래에 있는 서비스를 실행 하 여 가장 일반적으로 수행 되는 Active Directory 도메인에 컴퓨터 추가 될 때 만들어지는 컴퓨터 (기본값) 서비스 사용자 이름 (SPN) 키에 대 한 액세스 서비스가 실행 중인 계정에는 네트워크 서비스 계정입니다. 서비스에 시스템 SPN 키에 대한 액세스 권한이 없는 경우 클라이언트의 끝점 ID로 서비스가 실행 중인 계정의 올바른 SPN 또는 UPN(User Principal Name)을 제공해야 합니다. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 어떻게 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] SPN 및 UPN을 사용 하 여 참조 [서비스 Id 및 인증](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)합니다.  
+ Windows 인증을 사용할 때 Kerberos 프로토콜을 사용하거나 SSPI 협상을 수행하는 경우, 클라이언트 끝점에 사용되는 URL은 서비스 URL 내에 있는 서비스 호스트의 정규화된 도메인 이름을 포함해야 합니다. 이 가정 아래에 있는 서비스를 실행 하 여 가장 일반적으로 수행 되는 Active Directory 도메인에 컴퓨터 추가 될 때 만들어지는 컴퓨터 (기본값) 서비스 사용자 이름 (SPN) 키에 대 한 액세스 서비스가 실행 중인 계정에는 네트워크 서비스 계정입니다. 서비스에 시스템 SPN 키에 대한 액세스 권한이 없는 경우 클라이언트의 끝점 ID로 서비스가 실행 중인 계정의 올바른 SPN 또는 UPN(User Principal Name)을 제공해야 합니다. 방법에 대 한 자세한 내용은 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] SPN 및 UPN을 사용 하 여 참조 [서비스 Id 및 인증](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)합니다.  
   
  웹 팜 또는 웹 가든과 같은 부하 분산 시나리오에서는 각 응용 프로그램에 대해 고유한 계정을 정의하고, 해당 계정에 SPN을 할당하고, 응용 프로그램의 모든 서비스가 해당 계정으로 실행되도록 하는 것이 일반적입니다.  
   
@@ -134,7 +134,7 @@ Windows 인증을 보안 메커니즘으로 사용하면 SSPI(보안 지원 공�
  [!code-csharp[C_DebuggingWindowsAuth#6](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_debuggingwindowsauth/cs/source.cs#6)]
  [!code-vb[C_DebuggingWindowsAuth#6](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_debuggingwindowsauth/vb/source.vb#6)]  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 가장을 사용 하면 참조 [위임 및 가장](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md)합니다.  
+ 가장에 대 한 자세한 내용은 참조 [위임 및 가장](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md)합니다.  
   
  또는 기본 제공 계정인 SYSTEM을 사용하여 클라이언트를 Windows 서비스로 실행합니다.  
   

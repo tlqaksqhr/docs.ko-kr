@@ -19,14 +19,14 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 5a2ca8d6ce6cf907538c534f97300e418f5e825f
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 14059ebc3efe57a38a093faed9cfbd254c372920
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="how-to-expose-a-feed-as-both-atom-and-rss"></a>방법: Atom 및 RSS로 피드 공개
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]에서는 배포 피드를 노출하는 서비스를 만들 수 있습니다. 이 항목에서는 Atom 1.0 및 RSS 2.0을 사용하여 배포 피드를 노출하는 배포 서비스를 만드는 방법을 설명합니다. 이 서비스는 배포 형식 중 하나를 반환할 수 있는 하나의 끝점을 노출합니다. 편의를 위해 이 샘플에서 사용되는 서비스는 자체 호스트됩니다. 프로덕션 환경에서 이 형식의 서비스는 IIS 또는 WAS에서 호스트됩니다. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 서로 다른 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 참조 호스팅 옵션을 [호스팅](../../../../docs/framework/wcf/feature-details/hosting.md)합니다.  
+[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]에서는 배포 피드를 노출하는 서비스를 만들 수 있습니다. 이 항목에서는 Atom 1.0 및 RSS 2.0을 사용하여 배포 피드를 노출하는 배포 서비스를 만드는 방법을 설명합니다. 이 서비스는 배포 형식 중 하나를 반환할 수 있는 하나의 끝점을 노출합니다. 편의를 위해 이 샘플에서 사용되는 서비스는 자체 호스트됩니다. 프로덕션 환경에서 이 형식의 서비스는 IIS 또는 WAS에서 호스트됩니다. 여러 가지 방법에 대 한 자세한 내용은 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 참조 호스팅 옵션을 [호스팅](../../../../docs/framework/wcf/feature-details/hosting.md)합니다.  
   
 ### <a name="to-create-a-basic-syndication-service"></a>기본 배포 서비스를 만들려면  
   

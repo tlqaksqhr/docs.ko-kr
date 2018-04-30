@@ -1,28 +1,28 @@
 ---
-title: "WS-Atomic Transaction 지원 구성"
-ms.custom: 
+title: WS-Atomic Transaction 지원 구성
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - WS-AT protocol [WCF], configuring WS-Atomic Transaction
 ms.assetid: cb9f1c9c-1439-4172-b9bc-b01c3e09ac48
-caps.latest.revision: 
+caps.latest.revision: 31
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 922b2048a262e722a11ee77c41e96dddec411326
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: b2d94c96b8cc225344300540d9fc406a4742db2a
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="configuring-ws-atomic-transaction-support"></a>WS-Atomic Transaction 지원 구성
 이 항목에서는 WS-AT 구성 유틸리티를 사용하여 WS-AT(WS-AtomicTransaction) 지원을 구성하는 방법에 대해 설명합니다.  
@@ -34,11 +34,11 @@ ms.lasthandoff: 12/22/2017
   
  명령줄 창은 Windows SDK 설치 위치 "%WINDIR%\Microsoft.NET\Framework\v3.0\Windows Communication Foundation"에서 액세스할 수 있습니다.  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]명령줄 도구 참조 [Ws-atomictransaction 구성 유틸리티 (wsatConfig.exe)](../../../../docs/framework/wcf/ws-atomictransaction-configuration-utility-wsatconfig-exe.md)합니다.  
+ 명령줄 도구에 대 한 자세한 내용은 참조 [Ws-atomictransaction 구성 유틸리티 (wsatConfig.exe)](../../../../docs/framework/wcf/ws-atomictransaction-configuration-utility-wsatconfig-exe.md)합니다.  
   
  실행 하는 경우 [!INCLUDE[wxp](../../../../includes/wxp-md.md)] 또는 [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)]로 이동 하 여 MMC 스냅인을 액세스할 수 있습니다 **제어판/관리 도구/구성 요소 서비스**단추로 클릭 한 다음, **내 컴퓨터**, 및 선택 하면 **속성**합니다. 동일한 위치에서 MSDTC(Microsoft Distributed Transaction Coordinator)를 구성할 수 있습니다. 구성에 대해 사용할 수 있는 옵션 아래에 그룹화 되는 **WS-AT** 탭 합니다. Windows Vista를 실행 하는 경우 또는 [!INCLUDE[lserver](../../../../includes/lserver-md.md)]를 클릭 하 여 MMC 스냅인을 사용 하 여 찾을 수는 **시작** 단추 및 입력 `dcomcnfg.exe` 에 **검색** 상자입니다. MMC가 열리면로 이동 된 **내 Computer\Distributed Transaction Coordinator\Local DTC** 노드를 마우스 오른쪽 단추로 클릭 하 고 선택 **속성**합니다. 구성에 대해 사용할 수 있는 옵션 아래에 그룹화 되는 **WS-AT** 탭 합니다.  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]스냅인 참조는 [Ws-atomictransaction 구성 MMC 스냅인](../../../../docs/framework/wcf/ws-atomictransaction-configuration-mmc-snap-in.md)합니다.  
+ 스냅인에 대 한 자세한 내용은 참조는 [Ws-atomictransaction 구성 MMC 스냅인](../../../../docs/framework/wcf/ws-atomictransaction-configuration-mmc-snap-in.md)합니다.  
   
  도구의 사용자 인터페이스를 사용하려면 먼저 다음 경로에 있는 WsatUI.dll 파일을 등록해야 합니다.  
   
@@ -88,7 +88,7 @@ ms.lasthandoff: 12/22/2017
 ### <a name="configuring-msdtc-to-use-certificates"></a>인증서를 사용하도록 MSDTC 구성  
  WS-AT 프로토콜 서비스는 클라이언트와 서버로 모두 작동하므로 들어오는 연결을 수신 대기하고 보내는 연결을 시작해야 합니다. 따라서 외부 당사자와 통신할 때 사용할 인증서와 들어오는 통신을 수락할 때 권한을 부여할 인증서를 알 수 있도록 MSDTC를 구성해야 합니다.  
   
- MMC WS-AT 스냅인을 사용하여 이 작업을 구성할 수 있습니다. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]이 도구를 참조는 [Ws-atomictransaction 구성 MMC 스냅인](../../../../docs/framework/wcf/ws-atomictransaction-configuration-mmc-snap-in.md) 항목입니다. 다음 단계에서는 MSDTC를 실행하는 두 컴퓨터 간에 트러스트를 설정하는 방법에 대해 설명합니다.  
+ MMC WS-AT 스냅인을 사용하여 이 작업을 구성할 수 있습니다. 이 도구에 대 한 자세한 내용은 참조는 [Ws-atomictransaction 구성 MMC 스냅인](../../../../docs/framework/wcf/ws-atomictransaction-configuration-mmc-snap-in.md) 항목입니다. 다음 단계에서는 MSDTC를 실행하는 두 컴퓨터 간에 트러스트를 설정하는 방법에 대해 설명합니다.  
   
 1.  컴퓨터 A의 설정을 구성합니다. "끝점 인증서" certA를 선택 합니다. "허가 된 인증서" certB를 선택 합니다.  
   

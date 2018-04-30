@@ -1,27 +1,29 @@
 ---
-title: "찾기 및 FindCriteria"
-ms.custom: 
+title: 찾기 및 FindCriteria
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 99016fa4-1778-495b-b4cc-0e22fbec42c6
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 470fb0788aa3407fff14d1e4df4a89180c5e079d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 17ca5e12390e33525f0223917e4c72556a2a2ec7
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="discovery-find-and-findcriteria"></a>찾기 및 FindCriteria
-찾기 작업은 하나 이상의 서비스를 검색하는 클라이언트에 의해 시작되며 검색 작업의 주요 동작 중 하나입니다. 찾기를 수행하면 네트워크를 통해 WS-Discovery Probe 메시지가 보내집니다. 지정된 조건과 일치하는 서비스는 WS-Discovery ProbeMatch 메시지를 사용하여 응답합니다. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]검색 메시지 참조는 [Ws-discovery 사양의](http://go.microsoft.com/fwlink/?LinkID=122347)합니다.  
+찾기 작업은 하나 이상의 서비스를 검색하는 클라이언트에 의해 시작되며 검색 작업의 주요 동작 중 하나입니다. 찾기를 수행하면 네트워크를 통해 WS-Discovery Probe 메시지가 보내집니다. 지정된 조건과 일치하는 서비스는 WS-Discovery ProbeMatch 메시지를 사용하여 응답합니다. 검색 메시지에 대 한 자세한 내용은 참조는 [Ws-discovery 사양의](http://go.microsoft.com/fwlink/?LinkID=122347)합니다.  
   
 ## <a name="discoveryclient"></a>DiscoveryClient  
  <xref:System.ServiceModel.Discovery.DiscoveryClient> 클래스는 찾기 작업을 수행하는 메커니즘을 제공하고 검색 클라이언트 작업을 손쉽게 수행할 수 있게 합니다. 여기에는 동기(블로킹) 찾기를 수행하는 <xref:System.ServiceModel.Discovery.DiscoveryClient.Find%2A> 메서드와 비동기(비블로킹) 찾기를 시작하는 <xref:System.ServiceModel.Discovery.DiscoveryClient.FindAsync%2A> 메서드가 포함됩니다. 두 메서드는 모두 <xref:System.ServiceModel.Discovery.FindCriteria> 매개 변수를 사용하며 <xref:System.ServiceModel.Discovery.FindResponse> 개체를 통해 결과를 사용자에게 제공합니다.  
@@ -39,7 +41,7 @@ ms.lasthandoff: 12/22/2017
   
     -   <xref:System.ServiceModel.Discovery.FindCriteria.ScopeMatchByExact?displayProperty=nameWithType>는 기본 대/소문자 구분 문자열 비교를 수행합니다.  
   
-    -   <xref:System.ServiceModel.Discovery.FindCriteria.ScopeMatchByPrefix?displayProperty=nameWithType>일치 항목 세그먼트로 구분 하 여 "/"입니다. 예를 들어 http://contoso/building1을 검색하면 범위가 http://contoso/building/floor1인 서비스가 일치하는 항목으로 검색됩니다. http://contoso/building100은 마지막 두 세그먼트가 일치하지 않으므로 일치하는 항목으로 검색되지 않습니다.  
+    -   <xref:System.ServiceModel.Discovery.FindCriteria.ScopeMatchByPrefix?displayProperty=nameWithType> 일치 항목 세그먼트로 구분 하 여 "/"입니다. 에 대 한 검색 http://contoso/building1 범위를 가진 서비스 이름과 일치 http://contoso/building/floor1합니다. 일치 하지 않는 참고 http://contoso/building100 마지막 두 세그먼트가 일치 하지 않습니다.  
   
     -   <xref:System.ServiceModel.Discovery.FindCriteria.ScopeMatchByLdap?displayProperty=nameWithType>는 LDAP URL을 사용하여 세그먼트별로 범위를 일치시킵니다.  
   

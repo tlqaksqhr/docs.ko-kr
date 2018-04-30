@@ -1,24 +1,26 @@
 ---
-title: "내용 기반 상관 관계"
-ms.custom: 
+title: 내용 기반 상관 관계
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: f46a2b68-8d24-4122-bbee-9573fc3f9fb4
-caps.latest.revision: "17"
+caps.latest.revision: 17
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 72c7233a1c667b7ee3a1f00cc2fdf3c78f58e789
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 4b4ebd49fbed12f1e8120e67f32496cd782531da
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="content-based-correlation"></a>내용 기반 상관 관계
 워크플로 서비스가 클라이언트 및 기타 서비스와 통신할 때 교환되는 메시지에는 해당 메시지를 특정 인스턴스와 고유하게 연결하는 데 사용할 수 있는 데이터가 있을 수 있습니다. 내용 기반 상관 관계는 메시지에 있는 이 데이터(예: 고객 번호 또는 주문 ID)를 사용하여 메시지를 적절한 워크플로 인스턴스에 라우트합니다. 이 항목에서는 워크플로에서 내용 기반 상관 관계를 사용하는 방법에 대해 설명합니다.  
@@ -27,7 +29,7 @@ ms.lasthandoff: 12/22/2017
  내용 기반 상관 관계는 워크플로 서비스에 단일 클라이언트가 액세스하는 메서드가 여러 개 있고 교환되는 메시지의 일부 데이터로 원하는 인스턴스를 식별할 수 있는 경우에 사용됩니다.  
   
 > [!NOTE]
->  내용 기반 상관 관계는 지원되는 컨텍스트 교환 바인딩이 없어 컨텍스트 상관 관계를 사용할 수 없는 경우에 유용합니다. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]컨텍스트 상관 관계 참조 [컨텍스트 교환](../../../../docs/framework/wcf/feature-details/context-exchange-correlation.md)합니다.  
+>  내용 기반 상관 관계는 지원되는 컨텍스트 교환 바인딩이 없어 컨텍스트 상관 관계를 사용할 수 없는 경우에 유용합니다. 컨텍스트 상관 관계에 대 한 자세한 내용은 참조 [컨텍스트 교환](../../../../docs/framework/wcf/feature-details/context-exchange-correlation.md)합니다.  
   
  이러한 통신에 사용되는 각 메시징 작업은 메시지에서 인스턴스를 고유하게 식별하는 데이터가 있는 위치를 지정해야 합니다. 이 작업은 <xref:System.ServiceModel.MessageQuerySet> 또는 <xref:System.ServiceModel.Activities.QueryCorrelationInitializer>을 통해 메시지에서 인스턴스를 고유하게 식별하는 데이터를 쿼리하는 <xref:System.ServiceModel.Activities.Receive.CorrelatesOn%2A>을 제공하여 수행됩니다.  
   

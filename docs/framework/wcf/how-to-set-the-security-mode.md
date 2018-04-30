@@ -23,18 +23,18 @@ ms.author: bruceper
 manager: mbaldwin
 ms.workload:
 - dotnet
-ms.openlocfilehash: 34c53389694aa48742becfd713796feb8111d888
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: bdfd273f7a541cac4f1fd8a03a976d73e997b718
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="how-to-set-the-security-mode"></a>방법: 보안 모드 설정
 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 보안에는 대부분의 미리 정의된 바인딩에서 발견되는 전송, 메시지, "메시지 자격 증명을 사용한 전송"의 세 가지 일반 보안 모드가 있습니다. 두 개의 추가 모드는 두 바인딩에만 해당됩니다. 즉, "전송-자격 증명만" 모드는 <xref:System.ServiceModel.BasicHttpBinding>에서 사용되고, "모두" 모드는 <xref:System.ServiceModel.NetMsmqBinding>에서 사용됩니다. 그러나 이 항목에서는 세 가지 일반 보안 모드(<xref:System.ServiceModel.SecurityMode.Transport>, <xref:System.ServiceModel.SecurityMode.Message>, <xref:System.ServiceModel.SecurityMode.TransportWithMessageCredential>)에 대해 중점적으로 설명합니다.  
   
  모든 미리 정의된 바인딩이 이러한 모드를 모두 지원하는 것은 아닙니다. 이 항목에서는 <xref:System.ServiceModel.WSHttpBinding> 및 <xref:System.ServiceModel.NetTcpBinding> 클래스를 사용하여 모드를 설정하고 프로그래밍 방식과 구성을 통한 모드 설정 방법에 대해 설명합니다.  
   
- 자세한 내용은 참조 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 보안 참조 [보안 개요](../../../docs/framework/wcf/feature-details/security-overview.md), [Services에 보안 설정](../../../docs/framework/wcf/securing-services.md), 및 [보안 서비스와 클라이언트](../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)합니다. [!INCLUDE[crabout](../../../includes/crabout-md.md)] 모드 및 메시지 전송, 참조 [전송 보안](../../../docs/framework/wcf/feature-details/transport-security.md) 및 [메시지 보안](../../../docs/framework/wcf/feature-details/message-security-in-wcf.md)합니다.  
+ 자세한 내용은 참조 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 보안 참조 [보안 개요](../../../docs/framework/wcf/feature-details/security-overview.md), [Services에 보안 설정](../../../docs/framework/wcf/securing-services.md), 및 [보안 서비스와 클라이언트](../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)합니다. 전송 모드 및 메시지에 대 한 자세한 내용은 참조 [전송 보안](../../../docs/framework/wcf/feature-details/transport-security.md) 및 [메시지 보안](../../../docs/framework/wcf/feature-details/message-security-in-wcf.md)합니다.  
   
 ### <a name="to-set-the-security-mode-in-code"></a>코드에서 보안 모드를 설정하려면  
   

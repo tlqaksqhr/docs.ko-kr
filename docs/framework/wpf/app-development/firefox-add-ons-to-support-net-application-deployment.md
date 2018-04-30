@@ -1,12 +1,13 @@
 ---
-title: ".NET 응용 프로그램 배포를 지원하기 위한 Firefox 추가 기능"
-ms.custom: 
+title: .NET 응용 프로그램 배포를 지원하기 위한 Firefox 추가 기능
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Firefox add-ons for .NET application deployment
@@ -14,19 +15,20 @@ helpviewer_keywords:
 - .NET application deployment [WPF], deploying with Firefox add-ons
 - .NET Framework Assistant for Firefox
 ms.assetid: 2403403b-9b14-48e9-b70d-fa288a3c9081
-caps.latest.revision: "22"
+caps.latest.revision: 22
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: b5734d58d0cce15c52da6b7242b28ffc8d574060
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 1066332b8c5b98b5cca45e7ffbea83bd8cee8775
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="firefox-add-ons-to-support-net-application-deployment"></a>.NET 응용 프로그램 배포를 지원하기 위한 Firefox 추가 기능
-[!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] Firefox 및 Firefox 사용에 대 한.NET Framework 길잡이 대 한 플러그 인 [!INCLUDE[TLA#tla_winfxwebapp#plural](../../../../includes/tlasharptla-winfxwebappsharpplural-md.md)]느슨한, [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], Mozilla Firefox 브라우저에서 실행 되도록 ClickOnce 응용 프로그램 및입니다.  
+WPF Windows Presentation Foundation () Firefox 및 Firefox에 대 한.NET Framework 길잡이 대 한 플러그 인을 사용 하도록 설정 [!INCLUDE[TLA#tla_winfxwebapp#plural](../../../../includes/tlasharptla-winfxwebappsharpplural-md.md)]느슨한, [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], Mozilla Firefox 브라우저에서 실행 되도록 ClickOnce 응용 프로그램 및입니다.  
   
 ## <a name="wpf-plug-in-for-firefox"></a>WPF Firefox에 대 한 플러그 인  
  Firefox에 대 한 플러그 인 WPF를 통해 [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] 및 느슨한 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 파일을 탐색 하 고 최상위 수준에서 또는 Firefox 브라우저에서 HTML IFRAME에 실행 합니다. [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] 는 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 지원 되는 브라우저 응용 프로그램을 웹 서버에 게시할 수 있고 내에서 시작 됩니다. 느슨한 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 탐색 및 XML 파일과 같은 훨씬 지원 되는 브라우저에 표시 될 수 있는 XAML 전용 파일입니다.  

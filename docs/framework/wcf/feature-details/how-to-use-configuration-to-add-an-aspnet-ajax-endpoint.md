@@ -1,31 +1,33 @@
 ---
-title: "방법: 구성을 사용하여 ASP.NET AJAX 끝점 추가"
-ms.custom: 
+title: '방법: 구성을 사용하여 ASP.NET AJAX 끝점 추가'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 7cd0099e-dc3a-47e4-a38c-6e10f997f6ea
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: e1b46239366c38b54a38e3ce62b59c81eeb3316c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 28051dbed626dc0073a38e72f2cdc21ea108a32e
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="how-to-use-configuration-to-add-an-aspnet-ajax-endpoint"></a>방법: 구성을 사용하여 ASP.NET AJAX 끝점 추가
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]를 통해 클라이언트 웹 사이트의 JavaScript에서 호출할 수 있는 ASP.NET AJAX 사용 끝점을 사용할 수 있는 서비스를 만들 수 있습니다. 이와 같은 끝점을 만들려면 다른 모든 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 끝점에서처럼 구성 파일을 사용하거나 구성 요소가 필요하지 않은 메서드를 사용할 수 있습니다. 이 항목에서는 구성 방법을 보여 줍니다.  
   
  서비스 끝점이 ASP.NET AJAX 사용 될 수 있도록 하는 절차의 일부 끝점이 사용 하 여 구성으로 이루어집니다는 <xref:System.ServiceModel.WebHttpBinding> 을 추가 하는 [ \<enableWebScript >](../../../../docs/framework/configure-apps/file-schema/wcf/enablewebscript.md) 끝점 동작. 끝점을 구성한 후에 서비스를 구현하고 호스팅하는 단계는 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 서비스에서 사용하는 단계와 비슷합니다. 작업 예제를 참조 하십시오.는 [AJAX Service Using HTTP POST](../../../../docs/framework/wcf/samples/ajax-service-using-http-post.md)합니다.  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]구성을 사용 하지 않고 ASP.NET AJAX 끝점을 구성을 참조 하는 방법 [하는 방법: ASP.NET AJAX 끝점 하지 않고 사용 하 여 구성을 추가](../../../../docs/framework/wcf/feature-details/how-to-add-an-aspnet-ajax-endpoint-without-using-configuration.md)합니다.  
+ 구성을 사용 하지 않고 ASP.NET AJAX 끝점을 구성 하는 방법에 대 한 자세한 내용은 참조 [하는 방법: ASP.NET AJAX 끝점 하지 않고 사용 하 여 구성을 추가](../../../../docs/framework/wcf/feature-details/how-to-add-an-aspnet-ajax-endpoint-without-using-configuration.md)합니다.  
   
 ### <a name="to-create-a-basic-wcf-service"></a>기본 WCF 서비스를 만들려면  
   
@@ -109,7 +111,7 @@ ms.lasthandoff: 12/22/2017
     %>  
     ```  
   
-2.  [!INCLUDE[crabout](../../../../includes/crabout-md.md)]IIS에서 호스팅 참조 [하는 방법: IIS에서 WCF 서비스 호스팅](../../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-iis.md)합니다.  
+2.  IIS에서 호스팅하는 방법에 대 한 자세한 내용은 참조 [하는 방법: IIS에서 WCF 서비스 호스팅](../../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-iis.md)합니다.  
   
 ### <a name="to-call-the-service"></a>서비스를 호출하려면  
   

@@ -16,11 +16,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: ca37e8b3f59875ed912c02d0a8237a040bf79518
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 49ee6091b18dfcf2a5b46c173490b317fe770554
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="deploying-an-internet-information-services-hosted-wcf-service"></a>인터넷 정보 서비스에서 호스트하는 WCF 서비스 배포
 IIS(인터넷 정보 서비스)에서 호스팅되는 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 서비스의 개발 및 배포는 다음과 같은 작업으로 구성됩니다.  
@@ -38,7 +38,7 @@ IIS(인터넷 정보 서비스)에서 호스팅되는 [!INCLUDE[indigo1](../../.
  IIS에서 호스팅되는 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 서비스를 만드는 자세한 연습은 [How to: Host a WCF Service in IIS](../../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-iis.md)을 참조하십시오.  
   
 ## <a name="ensure-that-iis-aspnet-and-wcf-are-correctly-installed-and-registered"></a>IIS, ASP.NET 및 WCF가 제대로 설치되고 등록되었는지 확인  
- IIS에서 호스팅되는[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]서비스가 제대로 작동하려면 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] , IIS 및 ASP.NET이 설치되어 있어야 합니다. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 설치 절차( [!INCLUDE[vstecwinfx](../../../../includes/vstecwinfx-md.md)]의 일부), ASP.NET 및 IIS는 사용하고 있는 운영 체제에 따라 달라집니다. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 및 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 설치 [!INCLUDE[vstecwinfx](../../../../includes/vstecwinfx-md.md)] [Microsoft .NET Framework 4 웹 설치 관리자](http://go.microsoft.com/fwlink/?LinkId=201185)를 참조하세요. IIS 설치 지침은 [Installing IIS(IIS 설치)](http://go.microsoft.com/fwlink/?LinkId=201188)에서 확인할 수 있습니다.  
+ IIS에서 호스팅되는[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]서비스가 제대로 작동하려면 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] , IIS 및 ASP.NET이 설치되어 있어야 합니다. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 설치 절차( [!INCLUDE[vstecwinfx](../../../../includes/vstecwinfx-md.md)]의 일부), ASP.NET 및 IIS는 사용하고 있는 운영 체제에 따라 달라집니다. 설치에 대 한 자세한 내용은 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 및 [!INCLUDE[vstecwinfx](../../../../includes/vstecwinfx-md.md)], 참조 [MICROSOFT.NET Framework 4 웹 설치 관리자](http://go.microsoft.com/fwlink/?LinkId=201185)합니다. IIS 설치 지침은 [Installing IIS(IIS 설치)](http://go.microsoft.com/fwlink/?LinkId=201188)에서 확인할 수 있습니다.  
   
  [!INCLUDE[vstecwinfx](../../../../includes/vstecwinfx-md.md)] 를 설치할 때 IIS가 이미 설치되어 있으면 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 가 IIS에 자동으로 등록됩니다. IIS가 [!INCLUDE[vstecwinfx](../../../../includes/vstecwinfx-md.md)]다음에 설치되는 경우에는 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 를 IIS 및 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]에 등록하는 추가 단계가 필요합니다. 이러한 작업을 수행하려면 운영 체제에 따라 다음과 같이 하십시오.  
   
@@ -51,9 +51,9 @@ IIS(인터넷 정보 서비스)에서 호스팅되는 [!INCLUDE[indigo1](../../.
  마지막으로 ASP.NET이 .NET Framework 버전 4를 사용하도록 구성되었는지 확인해야 합니다. ASPNET_Regiis 도구를 –i 옵션과 함께 실행하여 이를 확인할 수 있습니다. 자세한 내용은 참조 [ASP.NET IIS 등록 도구](http://go.microsoft.com/fwlink/?LinkId=201186)  
   
 ## <a name="create-a-new-iis-application-or-reuse-an-existing-aspnet-application"></a>새 IIS 응용 프로그램을 만들거나 기존 ASP.NET 응용 프로그램을 다시 사용  
- IIS에서 호스팅되는 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 서비스는 IIS 응용 프로그램의 내부에 있어야 합니다. 새 IIS 응용 프로그램을 만들어 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 서비스를 단독으로 호스팅할 수 있습니다. 또는 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 서비스를 [!INCLUDE[vstecasplong](../../../../includes/vstecasplong-md.md)] 콘텐츠(.aspx 페이지 및 ASP.NET 웹 서비스 [ASMX])를 이미 호스팅하고 있는 기존 응용 프로그램으로 배포할 수 있습니다. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 이러한 옵션은 "호스팅 WCF--와 함께 ASP.NET" 참조의 "호스팅 WCF 서비스에서 ASP.NET 호환성 모드" 섹션 [WCF 서비스 및 ASP.NET](../../../../docs/framework/wcf/feature-details/wcf-services-and-aspnet.md)합니다.  
+ IIS에서 호스팅되는 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 서비스는 IIS 응용 프로그램의 내부에 있어야 합니다. 새 IIS 응용 프로그램을 만들어 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 서비스를 단독으로 호스팅할 수 있습니다. 또는 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 서비스를 [!INCLUDE[vstecasplong](../../../../includes/vstecasplong-md.md)] 콘텐츠(.aspx 페이지 및 ASP.NET 웹 서비스 [ASMX])를 이미 호스팅하고 있는 기존 응용 프로그램으로 배포할 수 있습니다. 이러한 옵션에 대 한 자세한 내용은 참조는 "호스팅 WCF--와 함께 ASP.NET" 및 "ASP.NET 호환 모드에서 WCF 서비스 호스팅" 섹션 [WCF 서비스 및 ASP.NET](../../../../docs/framework/wcf/feature-details/wcf-services-and-aspnet.md)합니다.  
   
- [!INCLUDE[iis601](../../../../includes/iis601-md.md)] 이상 버전은 격리된 개체 지향 프로그래밍 응용 프로그램을 정기적으로 다시 시작합니다. 기본값은 1740분입니다. 지원되는 최대값은 71,582분입니다. 다시 시작은 사용할 수 없습니다. 이 속성에[!INCLUDE[crabout](../../../../includes/crabout-md.md)]  [PeriodicRestartTime](http://go.microsoft.com/fwlink/?LinkId=109968)을 참조하세요.  
+ [!INCLUDE[iis601](../../../../includes/iis601-md.md)] 이상 버전은 격리된 개체 지향 프로그래밍 응용 프로그램을 정기적으로 다시 시작합니다. 기본값은 1740분입니다. 지원되는 최대값은 71,582분입니다. 다시 시작은 사용할 수 없습니다. 이 속성에 대 한 자세한 내용은 참조는 [PeriodicRestartTime](http://go.microsoft.com/fwlink/?LinkId=109968)합니다.  
   
 ## <a name="create-an-svc-file-for-the-wcf-service"></a>WCF 서비스에 대한 .svc 파일 만들기  
  IIS에서 호스팅되는[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 서비스는 IIS 응용 프로그램 내에서 특수한 콘텐츠 파일(.svc 파일)로 표시됩니다. 이 모델은 ASMX 페이지가 IIS 응용 프로그램 내에서 .asmx 파일로 표시되는 방식과 비슷합니다. .svc 파일에는 들어오는 메시지에 대한 응답으로 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]호스팅 인프라에서 호스티드 서비스를 활성화할 수 있는[@ServiceHost](../../../../docs/framework/configure-apps/file-schema/wcf-directive/servicehost.md)특정 처리 지시문( [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] )이 포함되어 있습니다. .svc 파일의 가장 일반적인 구문은 다음 문에서 볼 수 있습니다.  
@@ -70,7 +70,7 @@ new ServiceHost( typeof( MyNamespace.MyServiceImplementationTypeName ) );
   
  서비스의 기본 주소 목록을 만드는 것과 같은 추가 호스팅 구성 작업을 수행할 수도 있습니다. 사용자 지정 <xref:System.ServiceModel.Activation.ServiceHostFactory> 를 사용하여 사용자 지정 호스팅 솔루션에 사용할 지시문을 확장할 수도 있습니다. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 서비스를 호스팅하는 IIS 응용 프로그램은 <xref:System.ServiceModel.ServiceHost> 인스턴스의 만들기 및 수명을 관리하지 않습니다. 관리되는 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 호스팅 인프라는 .svc 파일에 대한 첫 번째 요청을 받으면 필요한 <xref:System.ServiceModel.ServiceHost> 인스턴스를 동적으로 만듭니다. 이 인스턴스는 코드에서 명시적으로 닫거나 응용 프로그램이 재활용될 때까지 해제되지 않습니다.  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]  [@ServiceHost](../../../../docs/framework/configure-apps/file-schema/wcf-directive/servicehost.md)를 참조하세요.  
+ .Svc 파일에 대 한 구문에 대 한 자세한 내용은 참조 [ @ServiceHost ](../../../../docs/framework/configure-apps/file-schema/wcf-directive/servicehost.md)합니다.  
   
 ## <a name="deploy-the-service-implementation-to-the-iis-application"></a>IIS 응용 프로그램에 서비스 구현 배포  
  IIS에서 호스팅되는[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 서비스에서는 [!INCLUDE[vstecasplong](../../../../includes/vstecasplong-md.md)]과 동일한 동적 컴파일 모델을 사용합니다. [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]과 마찬가지로 IIS에서 호스팅되는 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 서비스에 대한 구현 코드를 다음과 같이 여러 위치에 다양한 방법으로 배포할 수 있습니다.  
@@ -81,7 +81,7 @@ new ServiceHost( typeof( MyNamespace.MyServiceImplementationTypeName ) );
   
 -   .svc 파일에 직접 배치된 컴파일되지 않은 코드로 배포합니다. 구현 코드 후 서비스의.svc 파일에서 인라인으로 찾을된 수도 있습니다는 @ServiceHost 지시문입니다. 인라인 코드를 변경하면 다음 요청을 받았을 때 응용 프로그램이 재활용되고 다시 컴파일됩니다.  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 컴파일 모델에 [!INCLUDE[vstecasplong](../../../../includes/vstecasplong-md.md)] [ASP.NET 컴파일 개요](http://go.microsoft.com/fwlink/?LinkId=94773)를 참조하세요.  
+ 에 대 한 자세한 내용은 [!INCLUDE[vstecasplong](../../../../includes/vstecasplong-md.md)] 컴파일 모델 참조 [ASP.NET 컴파일 개요](http://go.microsoft.com/fwlink/?LinkId=94773)합니다.  
   
 ## <a name="configure-the-wcf-service"></a>WCF 서비스 구성  
  IIS에서 호스팅되는 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 서비스는 해당 구성을 응용 프로그램 Web.config 파일에 저장합니다. IIS에서 호스팅되는 서비스는 IIS 외부에서 호스팅된 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 서비스와 같은 구성 요소 및 구문을 사용합니다. 그러나 다음 제약 조건은 IIS 호스팅 환경에만 적용됩니다.  

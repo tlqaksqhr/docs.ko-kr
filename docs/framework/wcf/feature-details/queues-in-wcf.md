@@ -1,28 +1,28 @@
 ---
-title: "Windows Communication Foundation의 큐"
-ms.custom: 
+title: Windows Communication Foundation의 큐
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - queues [WCF]
 ms.assetid: 43008409-1bb4-4bd4-85d7-862c8f10ae20
-caps.latest.revision: 
+caps.latest.revision: 17
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 4dfc78d355db4bd8c9d43541545e6fac35086b39
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 82eb421b86f57cfe7c9a23de3ab24de2d4c470cb
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="queues-in-windows-communication-foundation"></a>Windows Communication Foundation의 큐
 이 단원의 항목에서는 큐에 대한 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 지원에 대해 설명합니다. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]는 Microsoft Message Queuing(이전에 MSMQ라고 함)을 전송으로 사용하여 큐에 대한 지원을 제공하고 다음 시나리오를 사용합니다.  
@@ -35,7 +35,7 @@ ms.lasthandoff: 01/19/2018
   
 -   연결이 끊긴 작업. 송신, 수신 및 처리 작업은 모바일 장치의 경우처럼 대기 시간이 긴 네트워크 또는 가용성이 제한된 네트워크에서 통신하는 경우 연결이 끊어질 수 있습니다. 큐를 사용하면 끝점의 연결이 끊어지더라도 이러한 작업을 계속 수행할 수 있습니다. 다시 연결이 되면 큐가 메시지를 수신 응용 프로그램으로 전달합니다.  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 응용 프로그램에서 큐 기능을 사용하기 위해 표준 바인딩 중 하나를 사용하거나 표준 바인딩 중 하나가 요구 사항을 충족하지 못하는 경우 사용자 지정 바인딩을 만들 수 있습니다. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]하나를 선택 하는 방법 및 관련 된 표준 바인딩 참조 [하는 방법: WCF 끝점 및 메시지 큐 응용 프로그램과 메시지를 교환](../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md)합니다. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]사용자 지정 바인딩을 만들 참조 [사용자 지정 바인딩을](../../../../docs/framework/wcf/extending/custom-bindings.md)합니다.  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 응용 프로그램에서 큐 기능을 사용하기 위해 표준 바인딩 중 하나를 사용하거나 표준 바인딩 중 하나가 요구 사항을 충족하지 못하는 경우 사용자 지정 바인딩을 만들 수 있습니다. 관련 된 표준 바인딩 및 하나를 선택 하는 방법에 대 한 자세한 내용은 참조 [하는 방법: WCF 끝점 및 메시지 큐 응용 프로그램과 메시지를 교환](../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md)합니다. 사용자 지정 바인딩 만들기에 대 한 자세한 내용은 참조 [사용자 지정 바인딩을](../../../../docs/framework/wcf/extending/custom-bindings.md)합니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
  [큐 개요](../../../../docs/framework/wcf/feature-details/queues-overview.md)  

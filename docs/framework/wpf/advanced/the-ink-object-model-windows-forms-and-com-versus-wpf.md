@@ -1,8 +1,9 @@
 ---
-title: "잉크 개체 모델: Windows Forms 및 COM과 WPF"
+title: '잉크 개체 모델: Windows Forms 및 COM과 WPF'
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.technology: dotnet-wpf
+ms.technology:
+- dotnet-wpf
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,20 +16,21 @@ helpviewer_keywords:
 - ink [WPF], enabling
 - events [WPF], tablet pen
 ms.assetid: 577835be-b145-4226-8570-1d309e9b3901
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 38c7692d433fb91584718984ef2ad81e563517db
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 06a2c2049ec7fe7046bd6dae2711fe8e46592fcf
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="the-ink-object-model-windows-forms-and-com-versus-wpf"></a>잉크 개체 모델: Windows Forms 및 COM과 WPF
 
-디지털 잉크를 지 원하는 세 플랫폼 기본적으로: Tablet PC Windows Forms 플랫폼, 태블릿 PC COM 플랫폼 및 [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] 플랫폼입니다.  에 대 한 개체 모델은 비슷한 있지만 개체 모델에서 Windows Forms 및 COM 플랫폼 공유는 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 플랫폼은 크게 다릅니다.  이 항목을 얻을 수 있는 하나의 개체 모델을 개발자가 더 잘 이해할 수 다른 고급 수준에서 차이점을 설명 합니다.  
+디지털 잉크를 지 원하는 세 플랫폼 기본적으로: Tablet PC Windows Forms 플랫폼, 태블릿 PC COM 플랫폼 및 Windows Presentation Foundation (WPF) 플랫폼입니다.  에 대 한 개체 모델은 비슷한 있지만 개체 모델에서 Windows Forms 및 COM 플랫폼 공유는 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 플랫폼은 크게 다릅니다.  이 항목을 얻을 수 있는 하나의 개체 모델을 개발자가 더 잘 이해할 수 다른 고급 수준에서 차이점을 설명 합니다.  
   
 ## <a name="enabling-ink-in-an-application"></a>잉크 응용 프로그램에서 사용  
  세 플랫폼 모두 개체 및이 태블릿 펜의 입력을 받는 응용 프로그램을 사용할 수 있는 컨트롤을 제공 합니다.  와 함께 제공 하는 Windows Forms 및 COM 플랫폼 [Microsoft.Ink.InkPicture](https://msdn.microsoft.com/library/aa514604.aspx), [Microsoft.Ink.InkEdit](https://msdn.microsoft.com/library/ms835842.aspx), [Microsoft.Ink.InkOverlay](https://msdn.microsoft.com/library/ms833057.aspx) 및 [ Microsoft.Ink.InkCollector](https://msdn.microsoft.com/library/ms836493.aspx) 클래스입니다.  [Microsoft.Ink.InkPicture](https://msdn.microsoft.com/library/aa514604.aspx) 및 [Microsoft.Ink.InkEdit](https://msdn.microsoft.com/library/ms835842.aspx) 컨트롤을 추가할 수 있는 잉크 수집 하도록 응용 프로그램에 있습니다.  [Microsoft.Ink.InkOverlay](https://msdn.microsoft.com/library/ms833057.aspx) 및 [Microsoft.Ink.InkCollector](https://msdn.microsoft.com/library/ms836493.aspx) 기존 창 잉크 가능 창 및 사용자 지정 컨트롤에 연결할 수 있습니다.  
@@ -49,7 +51,7 @@ ms.lasthandoff: 12/22/2017
   
  다음 두 그림 잉크 데이터 개체 모델을 비교합니다.  Windows Forms 및 COM 플랫폼에서는 [Microsoft.Ink.Ink](https://msdn.microsoft.com/library/aa515768.aspx?displayProperty=nameWithType) 개체의 수명을 제한 하는 [Microsoft.Ink.Stroke](https://msdn.microsoft.com/library/ms827842.aspx?displayProperty=nameWithType) 개체 및 스타일러스 패킷을 개별 스트로크에 속해야 합니다.  둘 이상의 스트로크가 동일 참조할 수 [Microsoft.Ink.DrawingAttributes](https://msdn.microsoft.com/library/ms837931.aspx?displayProperty=nameWithType) 다음 그림에 나와 있는 것 처럼 개체입니다.  
   
- ![COM &#47;에 대 한 잉크 개체 모델의 다이어그램 Winforms 합니다. ] (../../../../docs/framework/wpf/advanced/media/ink-inkownsstrokes.png "Ink_InkOwnsStrokes")  
+ ![COM에 대 한 잉크 개체 모델의 다이어그램&#47;Winforms 합니다. ] (../../../../docs/framework/wpf/advanced/media/ink-inkownsstrokes.png "Ink_InkOwnsStrokes")  
   
  에 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], 각 <xref:System.Windows.Ink.Stroke?displayProperty=nameWithType> 공용 언어 런타임 개체에 대 한 참조에으로 존재 하는 합니다.  각 <xref:System.Windows.Ink.Stroke> 참조는 <xref:System.Windows.Input.StylusPointCollection> 및 <xref:System.Windows.Ink.DrawingAttributes?displayProperty=nameWithType> 개체는 또한 공용 언어 런타임 개체입니다.  
   
@@ -64,7 +66,7 @@ ms.lasthandoff: 12/22/2017
 |적중된 테스트|<xref:System.Windows.Ink.StrokeCollection.HitTest%2A>|[Microsoft.Ink.Ink.HitTest](https://msdn.microsoft.com/library/aa515934.aspx)|  
 |잉크 복사|<xref:System.Windows.Controls.InkCanvas.CopySelection%2A>|[Microsoft.Ink.Ink.ClipboardCopy](https://msdn.microsoft.com/library/microsoft.ink.ink.clipboardcopy(v=vs.100).aspx)|  
 |잉크를 붙여 넣습니다.|<xref:System.Windows.Controls.InkCanvas.Paste%2A>|[Microsoft.Ink.Ink.ClipboardPaste](https://msdn.microsoft.com/library/microsoft.ink.ink.clipboardpaste(v=vs.100).aspx)|  
-|스트로크의 컬렉션에 사용자 지정 속성 액세스|<xref:System.Windows.Ink.StrokeCollection.AddPropertyData%2A>(속성은 내부적으로 저장 하 고 통해 액세스 <xref:System.Windows.Ink.StrokeCollection.AddPropertyData%2A>, <xref:System.Windows.Ink.StrokeCollection.RemovePropertyData%2A>, 및 <xref:System.Windows.Ink.StrokeCollection.ContainsPropertyData%2A>)|사용 하 여 [Microsoft.Ink.Ink.ExtendedProperties](https://msdn.microsoft.com/library/microsoft.ink.ink.extendedproperties(v=vs.100).aspx)|  
+|스트로크의 컬렉션에 사용자 지정 속성 액세스|<xref:System.Windows.Ink.StrokeCollection.AddPropertyData%2A> (속성은 내부적으로 저장 하 고 통해 액세스 <xref:System.Windows.Ink.StrokeCollection.AddPropertyData%2A>, <xref:System.Windows.Ink.StrokeCollection.RemovePropertyData%2A>, 및 <xref:System.Windows.Ink.StrokeCollection.ContainsPropertyData%2A>)|사용 하 여 [Microsoft.Ink.Ink.ExtendedProperties](https://msdn.microsoft.com/library/microsoft.ink.ink.extendedproperties(v=vs.100).aspx)|  
   
 ### <a name="sharing-ink-between-platforms"></a>플랫폼 간 잉크 공유  
  플랫폼은 잉크 데이터에 대 한 다양 한 개체 모델, 플랫폼 사이의 데이터를 공유 하는 매우 쉽습니다. 다음 예에서는 Windows Forms 응용 프로그램에서 잉크를 저장 하 고 Windows Presentation Foundation 응용 프로그램에 잉크를 로드 합니다.  

@@ -1,32 +1,34 @@
 ---
-title: "방법: WCF 클라이언트를 사용하여 WSE 3.0 서비스에 액세스"
-ms.custom: 
+title: '방법: WCF 클라이언트를 사용하여 WSE 3.0 서비스에 액세스'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 1f9bcd9b-8f8f-47fa-8f1e-0d47236eb800
-caps.latest.revision: "12"
+caps.latest.revision: 12
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 49ff6378bcd35ab2d4e2adf3783a1c4e73025d3a
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: 382762917e790d54dca31158f2b7ffde560c1427
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="how-to-access-a-wse-30-service-with-a-wcf-client"></a>방법: WCF 클라이언트를 사용하여 WSE 3.0 서비스에 액세스
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 클라이언트는 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 클라이언트가 2004년 8월 버전의 WS-Addressing 사양을 사용하도록 구성된 경우 Microsoft .NET 서비스용 WSE(Web Services Enhancements) 3.0과 유선 수준으로 호환됩니다. 그러나 WSE 3.0 서비스 지원 하지 않습니다 메타 데이터 교환 (MEX) 프로토콜은 지금 사용 하는 경우는 [ServiceModel Metadata 유틸리티 도구 (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) 만들려는 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 클라이언트 클래스를 보안 설정이 적용 되지 않습니다 생성 된 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 클라이언트입니다. 그러므로 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 클라이언트가 생성된 후에 WSE 3.0 서비스를 사용하도록 보안 설정을 지정해야 합니다.  
   
- 사용자 지정 바인딩을 사용하여 이러한 보안 설정을 적용함으로써 WSE 3.0 서비스와 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 클라이언트 간의 상호 운용 가능한 요구 사항 및 WSE 3.0 서비스의 요구 사항을 고려할 수 있습니다. 이러한 상호 운용성 요구 사항에는 앞에서 말한 August 2004 WS-Addressing 사양 및 WSE 3.0의 <xref:System.ServiceModel.Security.MessageProtectionOrder.SignBeforeEncrypt> 기본 메시지 보호를 사용하는 것이 포함됩니다. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에 대한 기본 메시지 보호는 <xref:System.ServiceModel.Security.MessageProtectionOrder.SignBeforeEncryptAndEncryptSignature>입니다. 이 항목에서는 WSE 3.0 서비스와 상호 운용되는 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 바인딩을 만드는 방법에 대해 자세히 설명합니다. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서는 이 바인딩을 통합하는 샘플도 제공합니다. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]이 샘플에서는 참조 [ASMX 웹 서비스와의 상호 운용](../../../../docs/framework/wcf/samples/interoperating-with-asmx-web-services.md)합니다.  
+ 사용자 지정 바인딩을 사용하여 이러한 보안 설정을 적용함으로써 WSE 3.0 서비스와 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 클라이언트 간의 상호 운용 가능한 요구 사항 및 WSE 3.0 서비스의 요구 사항을 고려할 수 있습니다. 이러한 상호 운용성 요구 사항에는 앞에서 말한 August 2004 WS-Addressing 사양 및 WSE 3.0의 <xref:System.ServiceModel.Security.MessageProtectionOrder.SignBeforeEncrypt> 기본 메시지 보호를 사용하는 것이 포함됩니다. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에 대한 기본 메시지 보호는 <xref:System.ServiceModel.Security.MessageProtectionOrder.SignBeforeEncryptAndEncryptSignature>입니다. 이 항목에서는 WSE 3.0 서비스와 상호 운용되는 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 바인딩을 만드는 방법에 대해 자세히 설명합니다. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서는 이 바인딩을 통합하는 샘플도 제공합니다. 이 샘플에 대 한 자세한 내용은 참조 [ASMX 웹 서비스와의 상호 운용](../../../../docs/framework/wcf/samples/interoperating-with-asmx-web-services.md)합니다.  
   
 ### <a name="to-access-a-wse-30-web-service-with-a-wcf-client"></a>WCF 클라이언트를 사용하여 WSE 3.0 웹 서비스에 액세스하려면  
   
@@ -34,7 +36,7 @@ ms.lasthandoff: 01/19/2018
   
      WSE 3.0 웹 서비스의 경우 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 클라이언트가 만들어집니다. WSE 3.0이 MEX 프로토콜을 지원하지 않으므로 해당 도구를 사용하여 웹 서비스에 대한 보안 요구 사항을 검색할 수 없습니다. 응용 프로그램 개발자는 해당 클라이언트에 대한 보안 설정을 추가해야 합니다.  
   
-     [!INCLUDE[crabout](../../../../includes/crabout-md.md)]만들기는 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 클라이언트 참조는 [하는 방법: 클라이언트 만들기](../../../../docs/framework/wcf/how-to-create-a-wcf-client.md)합니다.  
+     만들기에 대 한 자세한 내용은 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 클라이언트 참조는 [하는 방법: 클라이언트 만들기](../../../../docs/framework/wcf/how-to-create-a-wcf-client.md)합니다.  
   
 2.  WSE 3.0 웹 서비스와 통신할 수 있는 바인딩을 나타내는 클래스를 만듭니다.  
   
@@ -68,7 +70,7 @@ ms.lasthandoff: 01/19/2018
      [!code-csharp[c_WCFClientToWSEService#4](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_wcfclienttowseservice/cs/client.cs#4)]
      [!code-vb[c_WCFClientToWSEService#4](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_wcfclienttowseservice/vb/client.vb#4)]  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 코드 예제에서는 WSE 3.0 턴키 보안 어설션의 속성에 해당하는 속성을 노출하는 사용자 지정 바인딩을 정의합니다. 그러면 WSSecurityAnonymous WSE 3.0 QuickStart 샘플과 통신하는 `WseHttpBinding` 클라이언트에 대한 바인딩 속성을 지정하는 데 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]이라는 사용자 지정 바인딩이 사용됩니다.  
   
   

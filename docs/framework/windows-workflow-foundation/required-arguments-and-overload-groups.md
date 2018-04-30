@@ -1,23 +1,24 @@
 ---
-title: "필수 인수 및 오버로드 그룹"
-ms.custom: 
+title: 필수 인수 및 오버로드 그룹
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 4ca3ed06-b9af-4b85-8b70-88c2186aefa3
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 8b6025fb65c5e2d4d0683d302638f8a1d2803662
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 47e94c65ff722d3b4f98b026d69ecd31bc02b934
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="required-arguments-and-overload-groups"></a>필수 인수 및 오버로드 그룹
 활동을 실행하기 위해 특정 인수를 바인딩하도록 활동을 구성할 수 있습니다. `RequiredArgument` 특성은 활동의 특정 인수가 필수 인수임을 나타내고 `OverloadGroup` 특성은 필수 인수 범주를 그룹화하는 데 사용됩니다. 활동 작성자는 특성을 사용하여 단순 활동 유효성 검사 구성 또는 복합 활동 유효성 검사 구성을 제공할 수 있습니다.  
@@ -73,7 +74,7 @@ public sealed class Add : CodeActivity<int>
   
  **필수 작업 인수 'Operand1'에 대 한 값을 제공 하지 않았습니다.**  
 > [!NOTE]
->  [!INCLUDE[crabout](../../../includes/crabout-md.md)]확인 하 고 유효성 검사 오류 및 경고 처리에 대 한 참조 [활동 유효성 검사 호출](../../../docs/framework/windows-workflow-foundation/invoking-activity-validation.md)합니다.  
+>  에 대 한 검사 및 유효성 검사 오류 및 경고 처리에 대 한 자세한 내용은 참조 [활동 유효성 검사 호출](../../../docs/framework/windows-workflow-foundation/invoking-activity-validation.md)합니다.  
   
 ## <a name="using-overload-groups"></a>오버로드 그룹 사용  
  오버로드 그룹은 활동에서 유효한 인수 조합을 나타내는 메서드를 제공합니다. 인수는 <xref:System.Activities.OverloadGroupAttribute>를 사용하여 그룹화됩니다. 각 그룹에는 <xref:System.Activities.OverloadGroupAttribute>에 의해 지정되는 이름이 주어집니다. 활동은 오버로드 그룹의 인수 집합 하나만 바인딩되는 경우에 유효합니다. 다음 예제에서에서 가져온는 [OverloadGroups](../../../docs/framework/windows-workflow-foundation/samples/overloadgroups.md) 샘플에서는 한 `CreateLocation` 클래스가 정의 되어 있습니다.  

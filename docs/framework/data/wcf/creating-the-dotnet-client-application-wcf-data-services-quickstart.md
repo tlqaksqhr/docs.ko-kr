@@ -1,27 +1,29 @@
 ---
-title: ".NET Framework 클라이언트 응용 프로그램 만들기(WCF Data Services 빠른 시작)"
-ms.custom: 
+title: .NET Framework 클라이언트 응용 프로그램 만들기(WCF Data Services 빠른 시작)
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework-oob
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 41ade767-eeab-437d-9121-9797e8fb8045
-caps.latest.revision: "3"
+caps.latest.revision: 3
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 563d08a5907c8248a74ba992de17ac3dd0679827
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 0bdbb88cc3070c68c540a09ab0d6ce41f790d1c3
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="creating-the-net-framework-client-application-wcf-data-services-quickstart"></a>.NET Framework 클라이언트 응용 프로그램 만들기(WCF Data Services 빠른 시작)
 이것은의 마지막 작업은 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 빠른 시작 합니다. 이 작업에서는 솔루션에 콘솔 응용 프로그램을 추가에 대 한 참조를 추가 합니다는 [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] 이 새 클라이언트 응용 프로그램 및 액세스에 공급 된 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 생성 된 클라이언트 데이터 서비스 클래스와 클라이언트를 사용 하 여 클라이언트 응용 프로그램에서 피드 라이브러리입니다.  
@@ -89,7 +91,7 @@ ms.lasthandoff: 12/22/2017
     >  이 버전의 NorthwindClient 응용 프로그램은 엔터티의 추가와 삭제를 지원하지 않습니다.  
   
 ## <a name="next-steps"></a>다음 단계  
- 샘플 Northwind [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 피드에 액세스하는 클라이언트 응용 프로그램을 성공적으로 만들었으며 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 퀵 스타트도 완료했습니다. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]에 액세스 하는 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 에서 공급 한 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 응용 프로그램 참조 [WCF Data Services 클라이언트 라이브러리](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)합니다.  
+ 샘플 Northwind [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 피드에 액세스하는 클라이언트 응용 프로그램을 성공적으로 만들었으며 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 퀵 스타트도 완료했습니다. 에 액세스 하는 방법에 대 한 자세한 내용은 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 에서 공급 한 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 응용 프로그램 참조 [WCF Data Services 클라이언트 라이브러리](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [시작](../../../../docs/framework/data/wcf/getting-started-with-wcf-data-services.md)  

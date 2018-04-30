@@ -1,27 +1,29 @@
 ---
-title: "인증을 위해 서비스 ID 재정의"
-ms.custom: 
+title: 인증을 위해 서비스 ID 재정의
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: d613a22b-07d7-41a4-bada-1adc653b9b5d
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: e1f8f6bd4d8661393bc849405a8668341f65f8d5
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: f5383a1d241134318ce48c8c0c9f39f831396730
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="overriding-the-identity-of-a-service-for-authentication"></a>인증을 위해 서비스 ID 재정의
 일반적으로 선택한 클라이언트 자격 증명 형식에 따라 서비스 메타데이터에 노출되는 ID 형식이 결정되므로 서비스에 ID를 설정할 필요가 없습니다. 예를 들어 다음 구성 코드에서는 [ \<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md) 요소 및 집합은 `clientCredentialType` 특성을 Windows로 합니다.  
@@ -32,12 +34,12 @@ ms.lasthandoff: 12/22/2017
   
   
   
- 참조 id 설정이 보여 주는 샘플 응용 프로그램, [Service Identity 샘플](../../../../docs/framework/wcf/samples/service-identity-sample.md)합니다. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]서비스 id, 참조 [서비스 Id 및 인증](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)합니다.  
+ 참조 id 설정이 보여 주는 샘플 응용 프로그램, [Service Identity 샘플](../../../../docs/framework/wcf/samples/service-identity-sample.md)합니다. 서비스 id에 대 한 자세한 내용은 참조 [서비스 Id 및 인증](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)합니다.  
   
 ## <a name="kerberos-authentication-and-identity"></a>Kerberos 인증 및 ID  
  서비스는 Windows 자격 증명을 사용 하도록 구성 된 경우 기본적으로는 [ \<identity >](../../../../docs/framework/configure-apps/file-schema/wcf/identity.md) 요소를 포함 하는 [ \<userPrincipalName >](../../../../docs/framework/configure-apps/file-schema/wcf/userprincipalname.md) 또는 [ \<servicePrincipalName >](../../../../docs/framework/configure-apps/file-schema/wcf/serviceprincipalname.md) 요소가 WSDL에서 생성 됩니다. 서비스를 실행 하는 경우는 `LocalSystem`, `LocalService`, 또는 `NetworkService` 계정, 사용자 이름 (SPN)의 형태로 기본적으로 생성 되는 서비스 `host/` \< *hostname*> 때문에 이러한 계정은 컴퓨터의 SPN 데이터에 대 한 액세스를 권한이 있습니다. 서비스는 서로 다른 계정으로 실행 중인 경우 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 의 형태로 UPN을 생성 \< *username*>@<*domainName*`>`합니다. Kerberos 인증에서 서비스를 인증하려면 UPN 또는 SPN을 클라이언트에 제공해야 하므로 이 작업이 수행됩니다.  
   
- Setspn.exe 도구를 사용하여 도메인의 서비스 계정으로 추가 SPN을 등록할 수도 있습니다. 그런 다음 SPN을 서비스 ID로 사용할 수 있습니다. 이 도구를 다운로드 하려면 [Windows 2000 리소스 키트 도구: Setspn.exe](http://go.microsoft.com/fwlink/?LinkId=91752)합니다. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]도구 참조 [Setspn 개요](http://go.microsoft.com/fwlink/?LinkId=61374)합니다.  
+ Setspn.exe 도구를 사용하여 도메인의 서비스 계정으로 추가 SPN을 등록할 수도 있습니다. 그런 다음 SPN을 서비스 ID로 사용할 수 있습니다. 이 도구를 다운로드 하려면 [Windows 2000 리소스 키트 도구: Setspn.exe](http://go.microsoft.com/fwlink/?LinkId=91752)합니다. 이 도구에 대 한 자세한 내용은 참조 [Setspn 개요](http://go.microsoft.com/fwlink/?LinkId=61374)합니다.  
   
 > [!NOTE]
 >  Windows 자격 증명 형식을 협상 없이 사용하려면 서비스의 사용자 계정이 Active Directory 도메인에 등록된 SPN에 대한 액세스 권한이 있어야 합니다. 다음과 같은 방법으로 이 작업을 수행할 수 있습니다.  
@@ -46,7 +48,7 @@ ms.lasthandoff: 12/22/2017
   
 -   임의의 Active Directory 도메인 계정을 사용하여 서비스를 실행합니다. 이 경우 해당 도메인 계정의 SPN을 설정합니다. Setspn.exe 유틸리티 도구를 사용하여 이 작업을 수행할 수 있습니다. 서비스 계정의 SPN을 만들고 나면 메타데이터(WSDL)를 통해 서비스 클라이언트에 SPN을 게시하도록 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]를 구성합니다. 이 작업은 응용 프로그램 구성 파일이나 코드를 통해 노출된 끝점에 대한 끝점 ID를 설정하여 수행합니다.  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Spn, Kerberos 프로토콜 및 Active Directory 참조 [Windows Kerberos 기술 자료에 대 한](http://go.microsoft.com/fwlink/?LinkId=88330)합니다.  
+ Spn에 대 한 자세한 내용은, Kerberos 프로토콜 및 Active Directory에 대 한 참조 [Windows Kerberos 기술 자료에 대 한](http://go.microsoft.com/fwlink/?LinkId=88330)합니다.  
   
 ### <a name="when-spn-or-upn-equals-the-empty-string"></a>SPN 또는 UPN이 빈 문자열인 경우  
  SPN 또는 UPN을 빈 문자열과 같게 설정하면 사용되는 보안 수준과 인증 모드에 따라 다른 많은 작업이 수행됩니다.  

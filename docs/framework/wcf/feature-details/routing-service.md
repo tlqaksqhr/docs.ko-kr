@@ -1,24 +1,26 @@
 ---
-title: "라우팅 서비스"
-ms.custom: 
+title: 라우팅 서비스
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: ca7c216a-5141-4132-8193-102c181d2eba
-caps.latest.revision: "13"
+caps.latest.revision: 13
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a7214a14b11ae1f91906c8d2140bc82836988390
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 8ff2a99bc06ab0de2aedce98ea029f484e47053f
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="routing-service"></a>라우팅 서비스
 라우팅 서비스는 메시지 라우터 역할을 하는 제네릭 SOAP 매개자입니다. 라우팅 서비스의 핵심 기능은 메시지 내용을 기반으로 메시지를 라우트할 수 있는, 즉 메시지 헤더나 메시지 본문 같은 메시지 자체에 포함된 값을 기반으로 메시지를 클라이언트 끝점에 전달할 수 있는 기능입니다.  
@@ -48,7 +50,7 @@ ms.lasthandoff: 12/22/2017
  라우팅 서비스는 동적으로 구성 가능한 플러그형 제네릭 SOAP 매개자를 제공합니다. 이 매개자는 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 서비스 및 채널 모델과 호환되고 SOAP 기반 메시지의 내용 기반 라우팅을 수행하는 데 사용됩니다.  
   
 > [!NOTE]
->  라우팅 서비스는 현재 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] REST 서비스의 라우팅을 지원하지 않습니다.  REST 호출을 라우트하려면 사용해 보십시오 <xref:System.Web.Routing> 또는 [응용 프로그램 요청 라우팅](http://go.microsoft.com/fwlink/?LinkId=164589) (http://go.microsoft.com/fwlink/?LinkId=164589).  
+>  라우팅 서비스는 현재 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] REST 서비스의 라우팅을 지원하지 않습니다.  REST 호출을 라우트하려면 사용해 보십시오 <xref:System.Web.Routing> 또는 [응용 프로그램 요청 라우팅](http://go.microsoft.com/fwlink/?LinkId=164589) (http://go.microsoft.com/fwlink/?LinkId=164589)합니다.  
   
 ## <a name="content-based-routing"></a>내용 기반 라우팅  
  내용 기반 라우팅은 메시지에 들어 있는 하나 이상의 값을 기반으로 메시지를 라우트할 수 있는 기능입니다. 라우팅 서비스는 각 메시지를 검사하고 메시지 내용과 사용자 제공 라우팅 논리를 기반으로 메시지를 대상 끝점에 라우트합니다. 내용 기반 라우팅은 서비스 집계, 서비스 버전 관리 및 우선 순위 라우팅에 대한 기초를 제공합니다.  
@@ -98,12 +100,12 @@ ms.lasthandoff: 12/22/2017
   
  라우팅 서비스에서 메시지를 보내려고 시도하는 중에 <xref:System.ServiceModel.CommunicationException>이 발생하면 오류 처리가 수행됩니다.  일반적으로 이러한 예외는 정의된 클라이언트 끝점과 통신을 시도하는 중에 문제가 발생했음을 나타냅니다(예: <xref:System.ServiceModel.EndpointNotFoundException>, <xref:System.ServiceModel.ServerTooBusyException> 또는 <xref:System.ServiceModel.CommunicationObjectFaultedException>).  오류 처리 코드는 또한 catch 하 고 때 보내기를 재시도 합니다는 **TimeoutException** 발생에서 파생 되지 않은 또 다른 일반적인 예외인 **CommunicationException**합니다.  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]오류 처리, 참조 [라우팅 소개](../../../../docs/framework/wcf/feature-details/routing-introduction.md)합니다.  
+ 오류 처리에 대 한 자세한 내용은 참조 [라우팅 소개](../../../../docs/framework/wcf/feature-details/routing-introduction.md)합니다.  
   
 ## <a name="backup-endpoints"></a>백업 끝점  
  필터 테이블의 각 필터 정의와 연결된 대상 클라이언트 끝점 외에도 전송 실패 시 메시지를 라우트할 백업 끝점의 목록을 만들 수도 있습니다. 오류가 발생할 경우 필터 항목에 대해 정의된 백업 목록이 있으면 라우팅 서비스는 이 목록에 정의되어 있는 첫 번째 끝점에 메시지를 보내려고 시도합니다. 이 전송 시도가 실패하면 라우팅 서비스는 다음 끝점에 메시지를 보내려고 시도하고 전송 시도가 성공하거나 전송과 관련 없는 오류가 반환되거나 백업 목록에 있는 모든 끝점에서 전송 오류가 반환될 때까지 이 작업을 계속 수행합니다.  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]백업 끝점, 참조 [라우팅 소개](../../../../docs/framework/wcf/feature-details/routing-introduction.md) 및 [메시지 필터](../../../../docs/framework/wcf/feature-details/message-filters.md)합니다.  
+ 백업 끝점에 대 한 자세한 내용은 참조 [라우팅 소개](../../../../docs/framework/wcf/feature-details/routing-introduction.md) 및 [메시지 필터](../../../../docs/framework/wcf/feature-details/message-filters.md)합니다.  
   
 ## <a name="streaming"></a>스트리밍  
  스트리밍을 지원하도록 바인딩을 설정하는 경우 라우팅 서비스는 성공적으로 메시지를 스트리밍할 수 있습니다.  그러나 메시지를 버퍼링해야 할 수 있는 경우도 있습니다.  

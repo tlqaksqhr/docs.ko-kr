@@ -22,11 +22,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 123186dd5f0d63693c04c0857709292ce122f918
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: c626699dc5291f4d4f6d432e89708661b233f16d
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="synchronous-and-asynchronous-operations"></a>동기 및 비동기 작업
 이 항목에서는 비동기 서비스 작업의 구현 및 호출에 대해 설명합니다.  
@@ -51,7 +51,7 @@ ms.lasthandoff: 04/26/2018
   
 -   다음과 같은 경우에는 클라이언트 또는 호출 응용 프로그램에서 비동기 접근 방법을 사용하세요.  
   
--   중간 계층 응용 프로그램에서 작업을 호출하는 경우. ([!INCLUDE[crabout](../../../includes/crabout-md.md)] 이러한 시나리오 참조 [중간 계층 클라이언트 응용 프로그램](../../../docs/framework/wcf/feature-details/middle-tier-client-applications.md).)  
+-   중간 계층 응용 프로그램에서 작업을 호출하는 경우. (이러한 시나리오에 대 한 자세한 내용은 참조 [중간 계층 클라이언트 응용 프로그램](../../../docs/framework/wcf/feature-details/middle-tier-client-applications.md).)  
   
 -   ASP.NET 페이지 내에서 작업을 호출하는 경우에는 비동기 페이지를 사용하세요.  
   

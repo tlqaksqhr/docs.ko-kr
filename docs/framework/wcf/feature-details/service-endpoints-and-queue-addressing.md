@@ -1,24 +1,26 @@
 ---
-title: "서비스 끝점 및 큐 주소 지정"
-ms.custom: 
+title: 서비스 끝점 및 큐 주소 지정
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 7d2d59d7-f08b-44ed-bd31-913908b83d97
-caps.latest.revision: "18"
+caps.latest.revision: 18
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 8488e802ee191c261b65388d48bd26aa37d18206
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: f2244ccb1637f944f9e3349cf0d94caa2f6676bf
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="service-endpoints-and-queue-addressing"></a>서비스 끝점 및 큐 주소 지정
 이 항목에서는 클라이언트가 큐에서 읽는 서비스에 주소를 지정하는 방법 및 서비스 끝점이 큐에 매핑되는 방법을 설명합니다. 다음 그림은 기본 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]의 대기 중인 응용 프로그램 배포를 보여 줍니다.  
@@ -32,7 +34,7 @@ ms.lasthandoff: 01/19/2018
   
  경로 이름이 "formatnames" 라우팅 및 큐 관리자 전송 프로토콜을 포함 하 여 주소의 측면을 확인할에 매핑됩니다. 큐 관리자는 기본 MSMQ 프로토콜과 SRMP(SOAP Reliable Messaging Protocol)의 두 가지 전송 프로토콜을 지원합니다.  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]MSMQ 경로 형식 이름 참조 [메시지 큐에 대 한](http://go.microsoft.com/fwlink/?LinkId=94837)합니다.  
+ MSMQ 경로 형식 이름에 대 한 자세한 내용은 참조 [메시지 큐에 대 한](http://go.microsoft.com/fwlink/?LinkId=94837)합니다.  
   
 ## <a name="netmsmqbinding-and-service-addressing"></a>NetMsmqBinding 및 서비스 주소 지정  
  서비스로 메시지 주소를 지정할 때 URI의 체계는 통신에 사용되는 전송에 따라 선택됩니다. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]의 각 전송에는 고유한 체계가 있습니다. 체계는 통신에 사용되는 전송의 특성을 반영해야 합니다. 예를 들어 net.tcp, net.pipe, HTTP 등입니다.  
@@ -49,7 +51,7 @@ ms.lasthandoff: 01/19/2018
   
 -   [private]는 선택 사항입니다. 개인 큐인 대상 큐에 주소를 지정할 때 사용됩니다. 공개 큐에 주소를 지정하려면 private를 지정하지 않아야 합니다. MSMQ 경로와 달리 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] URI 형식에는 "$"가 없습니다.  
   
--   \<*큐 이름은*> 큐의 이름입니다. 큐 이름은 하위 큐를 참조할 수도 있습니다. Thus, \<*queue-name*> = \<*name-of-queue*>[;*sub-queue-name*].  
+-   \<*큐 이름은*> 큐의 이름입니다. 큐 이름은 하위 큐를 참조할 수도 있습니다. 따라서 \< *큐 이름*> = \< *큐 이름*> [; *queue 이름 하위*].  
   
  예제 1: abc atadatum.com 컴퓨터에서 호스팅된 개인 큐 PurchaseOrders에 주소를 지정하는 경우 URI는 net.msmq://abc.adatum.com/private/PurchaseOrders입니다.  
   
@@ -84,7 +86,7 @@ ms.lasthandoff: 01/19/2018
 |WCF URI 기반 큐 주소|Active Directory 속성 사용|큐 전송 프로토콜 속성|결과 MSMQ 형식 이름|  
 |----------------------------------|-----------------------------------|--------------------------------------|---------------------------------|  
 |Net.msmq://\<machine-name>/private/abc|False(기본값)|Native(기본값)|DIRECT=OS:machine-name\private$\abc|  
-|Net.msmq://\<machine-name>/private/abc|False|SRMP|DIRECT=http://machine/msmq/private$/abc|  
+|Net.msmq://\<machine-name>/private/abc|False|SRMP|DIRECT =http://machine/msmq/private$/abc|  
 |Net.msmq://\<machine-name>/private/abc|True|네이티브|PUBLIC=some-guid(큐의 GUID)|  
   
 ### <a name="reading-messages-from-the-dead-letter-queue-or-the-poison-message-queue"></a>배달 못 한 편지 큐 또는 포이즌 메시지 큐에서 메시지 읽기  
@@ -111,7 +113,7 @@ ms.lasthandoff: 01/19/2018
   
  `MsmqIntegrationBinding`을 사용하여 큐에서 메시지를 받을 때 직접 형식 이름, 공개 및 개인 형식 이름만 사용할 수 있습니다(Active Directory 통합 필요). 그러나 직접 형식 이름을 사용하는 것이 좋습니다. 예를 들어 [!INCLUDE[wv](../../../../includes/wv-md.md)]에서 다른 형식 이름을 사용하면 시스템이 직접 형식 이름으로만 열 수 있는 하위 큐를 열려고 하므로 오류가 발생합니다.  
   
- `MsmqIntegrationBinding`을 사용하여 SRMP에 주소를 지정할 때 IIS(인터넷 정보 서비스)가 디스패치할 수 있도록 직접 형식 이름에 /msmq/를 추가하지 않아도 됩니다. 예를 들면, DIRECT=http://adatum.com/msmq/private$/abc 대신 SRMP 프로토콜을 사용하여 큐 abc에 주소를 지정할 때 DIRECT=http://adatum.com/private$/abc를 사용해야 합니다.  
+ `MsmqIntegrationBinding`을 사용하여 SRMP에 주소를 지정할 때 IIS(인터넷 정보 서비스)가 디스패치할 수 있도록 직접 형식 이름에 /msmq/를 추가하지 않아도 됩니다. 예를 들어: abc는 SRMP를 사용 하 여 프로토콜을 직접 대신 큐 주소를 지정할 때 =http://adatum.com/msmq/private$/abc를 사용 해야 DIRECT =http://adatum.com/private$/abc 합니다.  
   
  `MsmqIntegrationBinding`과 함께 net.msmq:// 주소 지정을 사용할 수 없습니다. `MsmqIntegrationBinding`이 자유 형식의 MSMQ 형식 이름 주소 지정을 지원하므로 이 바인딩을 통해 MSMQ의 멀티캐스트 및 메일 그룹 기능을 사용하는 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 서비스를 사용할 수 있습니다. 한 가지 예외의 경우는 `CustomDeadLetterQueue`을 사용할 때 `MsmqIntegrationBinding`를 지정하는 것입니다. 이 경우 net.msmq:// 형식이어야 하며, `NetMsmqBinding`을 사용하여 지정하는 방법과 비슷합니다.  
   

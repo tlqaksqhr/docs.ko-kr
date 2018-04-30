@@ -16,11 +16,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 24dfd6c7eb2c1df6605d03bfb99cc82c0a489377
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 1eb5d8e0b19bc32ea5158d1614447b76f4924440
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="streaming-feeds-sample"></a>스트리밍 피드 샘플
 이 샘플에서는 많은 수의 항목이 포함된 배포 피드를 관리하는 방법을 보여 줍니다. 서버에서 이 샘플은 항목을 네트워크 스트림에 쓰기 바로 전까지 피드 내에 개별 <xref:System.ServiceModel.Syndication.SyndicationItem> 개체를 만드는 동작을 지연시키는 방법을 보여 줍니다.  
@@ -29,7 +29,7 @@ ms.lasthandoff: 04/26/2018
   
  배포 API의 스트리밍 기능을 가장 잘 보여 주기 위해 이 샘플에서는 서버가 매우 많은 수의 항목이 포함된 피드를 노출하는 경우와 같이 실제로 드문 시나리오를 사용합니다. 이 경우 서버는 클라이언트가 피드에서 지정된 수의 항목(기본값: 10개)을 읽었다고 확인할 때까지 계속해서 피드에 새 항목을 생성합니다. 단순성을 위해 클라이언트와 서버는 모두 동일한 프로세스로 구현되며 공유 `ItemCounter` 개체를 사용하여 클라이언트가 생성한 항목의 수를 추적합니다. `ItemCounter` 형식은 샘플 시나리오를 간단히 종료할 목적으로만 사용되며 설명하려는 패턴의 핵심 요소는 아닙니다.  
   
- Visual C#의 사용를 시연할 반복기 (사용 하는 `yield``return` 키워드 구문). 반복기에 대한 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]는 MSDN의 "반복기 사용" 항목을 참조하십시오.  
+ Visual C#의 사용를 시연할 반복기 (사용 하는 `yield``return` 키워드 구문). 반복기에 대 한 자세한 내용은 MSDN의 "반복기 사용" 항목을 참조 하십시오.  
   
 ## <a name="service"></a>서비스  
  이 서비스는 다음 코드에서와 같이 하나의 작업으로 구성된 기본 <xref:System.ServiceModel.Web.WebGetAttribute> 계약을 구현합니다.  

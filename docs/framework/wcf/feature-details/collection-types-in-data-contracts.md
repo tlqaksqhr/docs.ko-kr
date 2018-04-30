@@ -23,11 +23,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 528c1661b99ff5f50d42bb7a42371c302e335c90
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: c771d78c5e78feabcfe883934ed7ea3589c938d2
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="collection-types-in-data-contracts"></a>데이터 계약의 컬렉션 형식
 *컬렉션* 은 특정 형식의 항목으로 구성된 목록입니다. [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]의 경우 이러한 목록은 배열이나 여러 형식(제네릭 목록, 제네릭 <xref:System.ComponentModel.BindingList%601>, <xref:System.Collections.Specialized.StringCollection>또는 <xref:System.Collections.ArrayList>)을 사용하여 나타낼 수 있습니다. 예를 들어, 컬렉션은 지정된 고객에 대한 주소 목록을 보유할 수 있습니다. 실제 형식에 관계없이 이러한 컬렉션을 *목록 컬렉션*이라고 합니다.  
@@ -42,7 +42,7 @@ ms.lasthandoff: 04/28/2018
   
  컬렉션에 포함된 형식은 데이터 계약 형식이거나 serialize할 수 있어야 합니다. 자세한 내용은 참조 [데이터 계약 Serializer에서 지 원하는 유형](../../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md)합니다.  
   
- 유효한 것으로 간주되는 컬렉션과 그렇지 않은 컬렉션 그리고 컬렉션을 serialize하는 방법[!INCLUDE[crabout](../../../../includes/crabout-md.md)] 이 항목에 있는 "고급 컬렉션 규칙" 단원의 컬렉션 serialize에 대한 내용을 참조하십시오.  
+ 컬렉션을 serialize 하는 방법에 대 한 뿐만 아니라 란 무엇이 고 간주 되는 하지 유효한 컬렉션에 대 한 자세한 내용은이 항목의 "고급 컬렉션 규칙" 섹션에서 직렬화 컬렉션에 대 한 정보를 참조 하세요.  
   
 ## <a name="interchangeable-collections"></a>교환 가능 컬렉션  
  동일한 형식의 모든 목록 컬렉션은 이 항목 뒷부분에서 설명하는 것처럼 <xref:System.Runtime.Serialization.CollectionDataContractAttribute> 특성을 사용하여 사용자 지정되지 않는 한 동일한 데이터 계약을 가지는 것으로 간주됩니다. 예를 들어, 다음 데이터 계약은 동일합니다.  
@@ -91,7 +91,7 @@ ms.lasthandoff: 04/28/2018
 ## <a name="customizing-collection-types"></a>컬렉션 형식 사용자 지정  
  여러 용도로 사용되는 <xref:System.Runtime.Serialization.CollectionDataContractAttribute> 특성을 사용하여 컬렉션 형식을 사용자 지정할 수 있습니다.  
   
- 컬렉션 형식을 사용자 지정하면 컬렉션 교환 가능성이 낮아지므로 가능하면 이 특성을 적용하지 않는 것이 좋습니다. 이 문제에 대한[!INCLUDE[crabout](../../../../includes/crabout-md.md)] 는 이 항목의 뒷부분에 있는 "고급 컬렉션 규칙" 단원을 참조하십시오.  
+ 컬렉션 형식을 사용자 지정하면 컬렉션 교환 가능성이 낮아지므로 가능하면 이 특성을 적용하지 않는 것이 좋습니다. 이 문제에 대 한 자세한 내용은이 항목의 뒷부분에 나오는 "고급 컬렉션 규칙" 단원을 참조 하십시오.  
   
 ### <a name="collection-data-contract-naming"></a>컬렉션 데이터 계약 명명  
  컬렉션 형식의 명명 규칙은 [Data Contract Names](../../../../docs/framework/wcf/feature-details/data-contract-names.md)에서 설명한 대로 일반 데이터 계약 형식의 명명 규칙과 유사하지만, 다음과 같은 중요한 차이점이 몇 개 있습니다.  
@@ -203,7 +203,7 @@ ms.lasthandoff: 04/28/2018
 </CountriesOrRegionsWithCapitals>  
 ```  
   
- 사전 컬렉션에 대한[!INCLUDE[crabout](../../../../includes/crabout-md.md)] 는 이 항목의 뒷부분에 있는 "고급 컬렉션 규칙" 단원을 참조하십시오.  
+ 사전 컬렉션에 대 한 자세한 내용은이 항목의 뒷부분에 나오는 "고급 컬렉션 규칙" 단원을 참조 하십시오.  
   
 ## <a name="collections-and-known-types"></a>컬렉션 및 알려진 형식  
  컬렉션 형식을 다른 컬렉션이나 컬렉션 인터페이스 대신 다형적으로 사용하는 경우 알려진 형식에 추가할 필요는 없습니다. 예를 들어, <xref:System.Collections.IEnumerable> 형식의 데이터 멤버를 선언하고 이를 사용하여 <xref:System.Collections.ArrayList>의 인스턴스를 보내는 경우 <xref:System.Collections.ArrayList> 를 알려진 형식에 추가할 필요가 없습니다.  
@@ -318,7 +318,7 @@ svcutil.exe MyService.wsdl MyServiceSchema.xsd /r:C:\full_path_to_system_dll\Sys
   
 -   컬렉션의 컬렉션이 있는 컬렉션 형식의 결합이 허용됩니다. 가변 배열은 컬렉션의 컬렉션으로 처리됩니다. 다차원 배열은 지원되지 않습니다.  
   
--   바이트의 배열 및 <xref:System.Xml.XmlNode> 의 배열은 컬렉션이 아닌 기본 형식으로 처리되는 특수 배열 형식입니다. 바이트의 배열을 serialize하면 각 바이트에 대한 별도의 요소 대신 Base64 인코딩된 데이터의 청크가 포함된 하나의 XML 요소가 됩니다. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 배열의 처리 방법에 대한 <xref:System.Xml.XmlNode> 는 [XML and ADO.NET Types in Data Contracts](../../../../docs/framework/wcf/feature-details/xml-and-ado-net-types-in-data-contracts.md). 물론 이러한 특수 형식은 컬렉션에 참여할 수 있습니다. 바이트 배열의 배열은 여러 XML 요소가 되며 각 요소는 Base64 인코딩된 데이터의 청크를 포함합니다.  
+-   바이트의 배열 및 <xref:System.Xml.XmlNode> 의 배열은 컬렉션이 아닌 기본 형식으로 처리되는 특수 배열 형식입니다. 바이트의 배열을 serialize하면 각 바이트에 대한 별도의 요소 대신 Base64 인코딩된 데이터의 청크가 포함된 하나의 XML 요소가 됩니다. 방법에 대 한 자세한 내용은 배열을 <xref:System.Xml.XmlNode> 은 참조 처리 [XML 및 ADO.NET 형식 데이터 계약의](../../../../docs/framework/wcf/feature-details/xml-and-ado-net-types-in-data-contracts.md)합니다. 물론 이러한 특수 형식은 컬렉션에 참여할 수 있습니다. 바이트 배열의 배열은 여러 XML 요소가 되며 각 요소는 Base64 인코딩된 데이터의 청크를 포함합니다.  
   
 -   <xref:System.Runtime.Serialization.DataContractAttribute> 특성이 컬렉션 형식에 적용되는 경우 해당 형식은 컬렉션이 아닌 일반 데이터 계약 형식으로 처리됩니다.  
   
@@ -361,7 +361,7 @@ svcutil.exe MyService.wsdl MyServiceSchema.xsd /r:C:\full_path_to_system_dll\Sys
   
 -   목록 컬렉션 데이터 계약의 기본 이름은 Name을 사용하여 재정의되지 않는 한 컬렉션에 포함된 형식의 데이터 계약 이름과 결합된 문자열인 "ArrayOf"입니다. 예를 들어, 정수의 제네릭 목록에 대한 데이터 계약 이름은 "ArrayOfint"입니다. `Object` 의 데이터 계약 이름은 "anyType"이므로 <xref:System.Collections.ArrayList> 와 같은 제네릭이 아닌 목록의 데이터 계약 이름은 "ArrayOfanyType"입니다.  
   
- 사전 컬렉션 데이터 계약의 기본 이름은 `Name`을 사용하여 재정의되지 않는 한 값 형식의 데이터 계약 이름 앞에 나오는 키 형식의 데이터 계약 이름과 결합된 문자열 "ArrayOfKeyValueOf"입니다. 예를 들어, 문자열 및 정수의 제네릭 사전에 대한 데이터 계약 이름은 "ArrayOfKeyValueOfstringint"입니다. 또한 키 또는 값 형식 중 하나가 기본 형식이 아닌 경우 키 및 값 형식의 데이터 계약 네임스페이스의 네임스페이스 해시가 이름에 추가됩니다. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 는 [Data Contract Names](../../../../docs/framework/wcf/feature-details/data-contract-names.md).  
+ 사전 컬렉션 데이터 계약의 기본 이름은 `Name`을 사용하여 재정의되지 않는 한 값 형식의 데이터 계약 이름 앞에 나오는 키 형식의 데이터 계약 이름과 결합된 문자열 "ArrayOfKeyValueOf"입니다. 예를 들어, 문자열 및 정수의 제네릭 사전에 대한 데이터 계약 이름은 "ArrayOfKeyValueOfstringint"입니다. 또한 키 또는 값 형식 중 하나가 기본 형식이 아닌 경우 키 및 값 형식의 데이터 계약 네임스페이스의 네임스페이스 해시가 이름에 추가됩니다. 네임 스페이스 해시에 대 한 자세한 내용은 참조 [데이터 계약 이름을](../../../../docs/framework/wcf/feature-details/data-contract-names.md)합니다.  
   
  각 사전 컬렉션 데이터 계약에는 사전에 있는 하나의 항목을 나타내는 도우미 데이터 계약이 있습니다. 이 계약의 이름은 "ArrayOf" 접두사를 제외하고 사전 데이터 계약과 동일하며 네임스페이스는 사전 데이터 계약과 동일합니다. 예를 들어, "ArrayOfKeyValueOfstringint" 사전 데이터 계약의 경우 "KeyValueofstringint" 데이터 계약은 사전에 있는 하나의 항목을 나타냅니다. 다음 단원에서 설명한 대로 `ItemName` 속성을 사용하여 이 데이터 계약의 이름을 사용자 지정할 수 있습니다.  
   

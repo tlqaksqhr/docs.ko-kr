@@ -16,11 +16,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 14b3eebb83115617ce32ab0ff45184cd6754e58c
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 6fa35209b2dafc088605848a0dc96a53a2813dfd
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="poison-message-handling"></a>포이즌 메시지 처리
 A *포이즌 메시지* 를 응용 프로그램에 배달 시도 최대 횟수를 초과한 메시지입니다. 큐 기반 응용 프로그램에서 오류로 인해 메시지를 처리할 수 없는 경우 이러한 상황이 발생할 수 있습니다. 안정성 요청을 충족하려면 대기 중인 응용 프로그램이 트랜잭션에서 메시지를 받습니다. 대기 중인 메시지를 받은 트랜잭션을 중단하면 메시지가 큐에 남으므로 새 트랜잭션에서 해당 메시지가 다시 시도됩니다. 트랜잭션의 중단 문제가 해결되지 않은 경우에는 수신 응용 프로그램이 최대 전달 시도 횟수를 초과할 때까지 같은 메시지를 받고 중단하는 루프에 갇히고, 포이즌 메시지가 발생합니다.  
@@ -104,7 +104,7 @@ A *포이즌 메시지* 를 응용 프로그램에 배달 시도 최대 횟수�
  세션에서는 단일 메시지와 같은 재시도와 포이즌 메시지 처리 프로시저를 거칩니다. 포이즌 메시지에 대해 위에 나열된 속성은 전체 세션에 적용됩니다. 즉, 메시지가 거부되면 전체 세션이 다시 시도되고 최종 포이즌 메시지 큐나 발신자의 배달 못한 편지 큐로 이동합니다.  
   
 ## <a name="batching-and-poison-messages"></a>일괄 처리 및 포이즌 메시지  
- 메시지가 포이즌 메시지가 되고 일괄 처리에 포함되면 전체 일괄 처리가 롤백되고 채널이 한 번에 하나의 메시지를 반환합니다. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 일괄 처리 참조 [트랜잭션에서 메시지 일괄 처리](../../../../docs/framework/wcf/feature-details/batching-messages-in-a-transaction.md)  
+ 메시지가 포이즌 메시지가 되고 일괄 처리에 포함되면 전체 일괄 처리가 롤백되고 채널이 한 번에 하나의 메시지를 반환합니다. 일괄 처리 하는 방법에 대 한 자세한 내용은 참조 [트랜잭션에서 메시지 일괄 처리](../../../../docs/framework/wcf/feature-details/batching-messages-in-a-transaction.md)  
   
 ## <a name="poison-message-handling-for-messages-in-a-poison-queue"></a>포이즌 큐의 메시지에 대한 포이즌 메시지 처리  
  메시지가 포이즌 메시지 큐에 놓이면 포이즌 메시지 처리가 종료되지 않습니다. 포이즌 메시지 큐의 메시지를 읽고 처리해야 합니다. 최종 포이즌 하위 큐에서 메시지를 읽을 때 포이즌 메시지 처리 설정의 하위 집합을 사용할 수 있습니다. `ReceiveRetryCount` 및 `ReceiveErrorHandling` 설정을 적용할 수 있습니다. `ReceiveErrorHandling`은 Drop, Reject 또는 Fault로 설정할 수 있습니다. `MaxRetryCycles`이 Move로 설정되면 `ReceiveErrorHandling`가 무시되고 예외가 throw됩니다.  

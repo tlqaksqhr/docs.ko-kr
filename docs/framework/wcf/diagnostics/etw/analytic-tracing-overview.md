@@ -18,16 +18,16 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: c29065ebe03617e288d7ebde3dc6b42cbfcf6061
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 530f6ce3d253cfc50818c82fc70e401382b50b85
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="analytic-tracing-overview"></a>분석 추적 개요
 [!INCLUDE[netfx_current_long](../../../../../includes/netfx-current-long-md.md)] 의 분석 추적은 ETW(Event Tracing for Windows)를 기반으로 하는 고성능의 간단한 추적 기능 집합입니다. ETW는 커널 수준에서 실행되기 때문에 추적 작업의 오버헤드를 크게 줄이며, 사용자 및 커널 모드 이벤트를 효율적으로 버퍼링하고 서비스를 다시 시작하지 않고도 동적으로 로깅을 사용하도록 설정할 수 있습니다. 추적 데이터는 내보내기와 받기 과정을 거친 후 이벤트 로그에 제공됩니다.  
   
- ETW에 대한[!INCLUDE[crabout](../../../../../includes/crabout-md.md)] 는 [ETW를 사용한 디버깅 및 성능 조정 개선](http://go.microsoft.com/fwlink/?LinkId=164781)을 참조하십시오.  
+ ETW에 대 한 자세한 내용은 참조 [디버깅 개선 및 ETW를 사용한 성능 조정](http://go.microsoft.com/fwlink/?LinkId=164781)합니다.  
   
  [!INCLUDE[wv](../../../../../includes/wv-md.md)] 및 [!INCLUDE[lserver](../../../../../includes/lserver-md.md)] 에서는 Windows 시스템, 보안 및 응용 프로그램 이벤트 로그를 사용하여 응용 프로그램을 분석할 뿐 아니라 응용 프로그램 및 서비스 로그 최상위 노드 아래에 추가 로그를 제공합니다. 이러한 새 로그의 목적은 보안 이벤트 로그에 기록될 수 있는 이벤트 형식처럼 시스템 전체에 영향을 주는 전역 이벤트가 아니라 특정 응용 프로그램이나 구성 요소에 대한 이벤트를 저장하기 위한 것입니다. [!INCLUDE[netfx_current_short](../../../../../includes/netfx-current-short-md.md)] 에서는 [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 추적 이벤트, [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 메시지 로그 및 [!INCLUDE[wf1](../../../../../includes/wf1-md.md)] 추적 레코드의 로깅을 응용 프로그램 및 서비스 로그와 통합하고 서로 관련시킵니다.  
   
@@ -57,7 +57,7 @@ ms.lasthandoff: 04/28/2018
  ETW 인프라를 사용하면 표준 Windows 도구를 사용하여 동적으로 추적을 사용하도록 설정하고 구성할 수 있습니다. 자세한 내용은 참조 [동적으로 사용 하면 분석 추적](../../../../../docs/framework/wcf/diagnostics/etw/dynamically-enabling-analytic-tracing.md)합니다.  
   
 ### <a name="message-flow-tracing"></a>메시지 흐름 추적  
- [!INCLUDE[crabout](../../../../../includes/crabout-md.md)] 는 [Configuring Message Flow Tracing](../../../../../docs/framework/wcf/diagnostics/etw/configuring-message-flow-tracing.md)을 참조하십시오.  
+ 메시지 흐름 추적을 사용 하도록 설정 하는 방법에 대 한 자세한 내용은 참조 [메시지 흐름 추적 구성](../../../../../docs/framework/wcf/diagnostics/etw/configuring-message-flow-tracing.md)합니다.  
   
 ### <a name="keywords"></a>키워드  
  키워드는 추적 메시지를 필터링하고 이벤트를 내보낸 [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] 구성 요소를 정의하는 데 사용됩니다. 자세한 내용은 참조 [동적으로 사용 하면 분석 추적](../../../../../docs/framework/wcf/diagnostics/etw/dynamically-enabling-analytic-tracing.md)합니다.

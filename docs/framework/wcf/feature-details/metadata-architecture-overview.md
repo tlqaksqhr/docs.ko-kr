@@ -18,11 +18,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: bce838d9584480028c7b02d1ba19547fe208bf2c
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: df603da0f4feedeacc59198c156322c78fd2f388
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="metadata-architecture-overview"></a>메타데이터 아키텍처 개요
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]은 서비스 메타데이터의 내보내기, 게시, 검색 및 가져오기를 위한 풍부한 인프라를 제공합니다. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 서비스는 Svcutil.exe와 같은 도구가 서비스 액세스를 위해 클라이언트 코드에 자동으로 액세스할 수 있도록 메타데이터를 사용하여 서비스의 끝점과 상호 작용하는 방법을 설명합니다.  
@@ -59,7 +59,7 @@ ms.lasthandoff: 04/28/2018
   
  MEX 프로토콜을 사용 하는 메타 데이터 끝점을 추가 하려면 IMetadataExchange 라는 서비스 계약을 사용 하는 서비스 호스트에 서비스 끝점을 추가 합니다.[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 정의 <xref:System.ServiceModel.Description.IMetadataExchange> 이 서비스 계약 이름을 가진 인터페이스입니다. WS-MetadataExchange 끝점 또는 MEX 끝점은 <xref:System.ServiceModel.Description.MetadataExchangeBindings> 클래스에서 정적 팩터리 메서드에 의해 노출되는 4개의 기본 바인딩 중 하나를 사용하여 Svcutil.exe와 같이 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 도구에서 사용하는 기본 바인딩과 일치시킬 수 있습니다. 또한 사용자 지정 바인딩을 사용하여 MEX 메타데이터 끝점을 구성할 수도 있습니다.  
   
- <xref:System.ServiceModel.Description.ServiceMetadataBehavior>는 <xref:System.ServiceModel.Description.WsdlExporter?displayProperty=nameWithType>를 사용하여 서비스의 모든 서비스 끝점에 대한 메타데이터를 내보냅니다. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 참조는 서비스에서 메타 데이터 내보내기 [내보내기 및 가져오기는 메타 데이터](../../../../docs/framework/wcf/feature-details/exporting-and-importing-metadata.md)합니다.  
+ <xref:System.ServiceModel.Description.ServiceMetadataBehavior>는 <xref:System.ServiceModel.Description.WsdlExporter?displayProperty=nameWithType>를 사용하여 서비스의 모든 서비스 끝점에 대한 메타데이터를 내보냅니다. 서비스에서 메타 데이터 내보내기에 대 한 자세한 내용은 참조 [내보내기 및 가져오기는 메타 데이터](../../../../docs/framework/wcf/feature-details/exporting-and-importing-metadata.md)합니다.  
   
  <xref:System.ServiceModel.Description.ServiceMetadataBehavior>는 <xref:System.ServiceModel.Description.ServiceMetadataExtension> 인스턴스를 서비스 호스트에 대한 확장으로 추가하여 서비스 호스트를 보완합니다. <xref:System.ServiceModel.Description.ServiceMetadataExtension?displayProperty=nameWithType>은 메타데이터 게시 프로토콜에 대한 구현을 제공합니다. 또한 <xref:System.ServiceModel.Description.ServiceMetadataExtension?displayProperty=nameWithType>을 통해 <xref:System.ServiceModel.Description.ServiceMetadataExtension.Metadata%2A> 속성에 액세스하여 서비스 메타데이터를 런타임에 가져올 수 있습니다.  
   

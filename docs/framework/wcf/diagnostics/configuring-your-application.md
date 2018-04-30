@@ -16,22 +16,22 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 922b9c5c53e04719f3ed48d0ff6386f21bf83e99
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 170583239ed357904e723aebdaef9809938b5123
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="configuring-your-application"></a>응용 프로그램 구성
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]에서는 .NET 구성 시스템이 사용되며 컴퓨터와 응용 프로그램 범위 모두에서 서비스를 구성할 수 있습니다.  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서 정의한 구성 설정은 `<system.serviceModel>` 섹션 그룹에 있습니다. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 서비스를 구성하는 방법에 대한 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]는 다음 항목을 참조하십시오.  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서 정의한 구성 설정은 `<system.serviceModel>` 섹션 그룹에 있습니다. 구성 하는 방법에 대 한 자세한 내용은 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 서비스는 다음 항목을 참조 하십시오.  
   
 -   [서비스 구성](../../../../docs/framework/wcf/configuring-services.md)  
   
 -   [\<system.serviceModel>](../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md)  
   
- 응용 프로그램에서 정의한 구성 설정은 `<appSettings>` 섹션 그룹에 정의되어 있습니다. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] .NET 구성 파일에서 응용 프로그램 설정, 참조 [ \<g s >](http://go.microsoft.com/fwlink/?LinkId=95159)합니다.  
+ 응용 프로그램에서 정의한 구성 설정은 `<appSettings>` 섹션 그룹에 정의되어 있습니다. .NET 구성 파일에서 응용 프로그램 설정에 대 한 자세한 내용은 참조 [ \<g s >](http://go.microsoft.com/fwlink/?LinkId=95159)합니다.  
   
 ## <a name="using-the-configuration-editor"></a>Configuration Editor 사용  
  [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] [Configuration Editor 도구 (SvcConfigEditor.exe)](../../../../docs/framework/wcf/configuration-editor-tool-svcconfigeditor-exe.md) 관리자와 개발자가 생성 및 구성 설정을 수정할 수 있습니다 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 그래픽 사용자 인터페이스를 사용 하 여 서비스입니다. 이 도구를 사용하면 XML 구성 파일을 직접 수정하지 않고도 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 바인딩, 동작, 서비스 및 진단에 대한 설정을 관리할 수 있습니다.  

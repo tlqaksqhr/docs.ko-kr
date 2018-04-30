@@ -1,33 +1,35 @@
 ---
-title: "Windows Communication Foundation 보안"
-ms.custom: 
+title: Windows Communication Foundation 보안
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Windows Communication Foundation, programming
 - security [WCF]
 - Windows Communication Foundation, security
 ms.assetid: 7ea87fcb-dcfb-4a4a-8b03-6b954575d45b
-caps.latest.revision: "21"
+caps.latest.revision: 21
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: 2f2314c8def27bac9e64685d2af3cdd7639332f8
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 6b93bfff2cd97e10d9c0dba4373839337f36aacb
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="windows-communication-foundation-security"></a>Windows Communication Foundation 보안
 이 단원의 항목에서는 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 보안 기능과 이러한 보안 기능을 사용하여 메시지의 보안을 유지하는 방법에 대해 설명합니다.  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Windows Server AppFabric과 보안을 참조 하십시오. [Windows Server AppFabric 보안 모델](http://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)  
+ Windows Server AppFabric 및 보안에 대 한 자세한 내용은 참조 [Windows Server AppFabric 보안 모델](http://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)  
   
 ## <a name="in-this-section"></a>섹션 내용  
  [보안 개요](../../../../docs/framework/wcf/feature-details/security-overview.md)  

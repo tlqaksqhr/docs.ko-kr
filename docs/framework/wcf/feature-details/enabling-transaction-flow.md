@@ -1,28 +1,28 @@
 ---
-title: "트랜잭션 흐름 사용"
-ms.custom: 
+title: 트랜잭션 흐름 사용
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - transactions [WCF], enabling flow
 ms.assetid: a03f5041-5049-43f4-897c-e0292d4718f7
-caps.latest.revision: 
+caps.latest.revision: 17
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 814df9ff4fb11b0aa59270ac251b5dbd9ed7fe96
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ffc7a1af9c9a021e93c0fca14c0d7d2826f8af6a
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="enabling-transaction-flow"></a>트랜잭션 흐름 사용
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]에서는 트랜잭션 흐름을 제어하기 위한 매우 유연성 있는 옵션을 제공합니다. 특성 및 구성을 조합하여 서비스의 트랜잭션 흐름 설정을 나타낼 수 있습니다.  
@@ -78,7 +78,7 @@ ms.lasthandoff: 12/22/2017
   
  바인딩에서 트랜잭션 흐름을 사용하지 않지만 서비스 계약의 작업 중 하나에 들어오는 트랜잭션이 필요한 경우 서비스 시작 시 유효성 검사 예외가 throw됩니다.  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서 제공하는 대부분의 독립 바인딩에는 `transactionFlow` 및 `transactionProtocol` 특성이 포함되어 있어 들어오는 트랜잭션을 특정 바인딩에서 허용하도록 구성할 수 있습니다. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]구성 요소를 설정, 참조 [ \<바인딩 >](../../../../docs/framework/misc/binding.md)합니다.  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서 제공하는 대부분의 독립 바인딩에는 `transactionFlow` 및 `transactionProtocol` 특성이 포함되어 있어 들어오는 트랜잭션을 특정 바인딩에서 허용하도록 구성할 수 있습니다. 구성 요소를 설정 하는 방법에 대 한 자세한 내용은 참조 [ \<바인딩 >](../../../../docs/framework/misc/binding.md)합니다.  
   
  관리자나 배포자는 구성 파일을 사용하여 배포 시 트랜잭션 흐름 요구 사항이나 제약 조건을 구성하는 데 끝점 수준의 트랜잭션 흐름을 사용할 수 있습니다.  
   

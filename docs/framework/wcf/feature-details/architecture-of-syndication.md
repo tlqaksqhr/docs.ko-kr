@@ -16,11 +16,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: bcb64a4e03cae5e6186754dacb87e17a22d13001
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 2516a80f8d92b4e64372be140d2ee3d5db4c7b54
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="architecture-of-syndication"></a>배포 아키텍처
 배포 API는 네트워크에서 배포된 콘텐츠를 다양한 형식으로 작성할 수 있는 형식 중립적 프로그래밍 모델을 제공하기 위해 디자인되었습니다. 추상 데이터 모델은 다음 클래스로 구성됩니다.  
@@ -43,7 +43,7 @@ ms.lasthandoff: 04/28/2018
   
  [!code-csharp[S_UE_SyndicationBoth#0](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_ue_syndicationboth/cs/service.cs#0)]  
   
- 배포 지원은 피드를 서비스로 사용할 수 있도록 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]와 함께 사용되는 <xref:System.ServiceModel.WebHttpBinding> 바인딩을 정의하는 <xref:System.ServiceModel.Description.WebHttpBehavior> REST 프로그래밍 모델을 기반으로 빌드됩니다. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] REST 프로그래밍 모델 참조 [WCF 웹 HTTP 프로그래밍 모델 개요](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model-overview.md)합니다.  
+ 배포 지원은 피드를 서비스로 사용할 수 있도록 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]와 함께 사용되는 <xref:System.ServiceModel.WebHttpBinding> 바인딩을 정의하는 <xref:System.ServiceModel.Description.WebHttpBehavior> REST 프로그래밍 모델을 기반으로 빌드됩니다. 에 대 한 자세한 내용은 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] REST 프로그래밍 모델 참조 [WCF 웹 HTTP 프로그래밍 모델 개요](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model-overview.md)합니다.  
   
 > [!NOTE]
 >  Atom 1.0 사양에 따라 날짜 구문에 소수로 표시된 초를 지정할 수 있습니다. serialize 및 deserialize할 때 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 구현은 소수로 표시된 초를 무시합니다.  

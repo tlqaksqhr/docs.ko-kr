@@ -1,24 +1,24 @@
 ---
-title: "SendMail 사용자 지정 활동"
-ms.custom: 
+title: SendMail 사용자 지정 활동
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 947a9ae6-379c-43a3-9cd5-87f573a5739f
-caps.latest.revision: 
+caps.latest.revision: 11
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 6086ca0ccb31603874feda6df1384b9346adb49d
-ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
+ms.openlocfilehash: 46038466233e7039229890b15b0ad6ca9d1a717f
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="sendmail-custom-activity"></a>SendMail 사용자 지정 활동
 이 샘플에서는 워크플로 응용 프로그램 내에서 사용하기 위해 <xref:System.Activities.AsyncCodeActivity>로부터 파생되는 사용자 지정 활동을 만들어 SMTP를 사용하여 메일을 보내는 방법을 보여 줍니다. 사용자 지정 활동의 기능을 사용 하 여 <xref:System.Net.Mail.SmtpClient> 전자 메일을 비동기적으로 전송 하 고 인증 된 메일을 보냅니다. 또한 테스트 모드, 토큰 바꾸기, 파일 템플릿 및 테스트 드롭 경로와 같은 몇 가지 최종 사용자 기능도 제공합니다.  
@@ -39,7 +39,7 @@ ms.lasthandoff: 02/01/2018
 |대상|<xref:System.Activities.InArgument%601>\<<xref:System.Net.Mail.MailAddressCollection>>|이 전자 메일 메시지의 받는 사람이 들어 있는 주소 컬렉션입니다.|  
 |CC|<xref:System.Activities.InArgument%601>\<<xref:System.Net.Mail.MailAddressCollection>>|이 전자 메일 메시지에 대 한 (cc) 받는 사람이 들어 있는 컬렉션에 주소입니다.|  
 |BCC|<xref:System.Activities.InArgument%601>\<<xref:System.Net.Mail.MailAddressCollection>>|이 전자 메일 메시지의 bcc (숨은 참조) 받는 사람이 들어 있는 주소 컬렉션입니다.|  
-|토큰|<xref:System.Activities.InArgument%601><IDictionary\<string, string>>|본문에서 바꿀 토큰입니다. 사용자는 이 기능을 통해 나중에 이 속성을 사용하여 제공된 토큰으로 바꿀 수 있는 일부 값을 본문에 지정할 수 있습니다.|  
+|토큰|<xref:System.Activities.InArgument%601>< IDictionary\<문자열, 문자열 >>|본문에서 바꿀 토큰입니다. 사용자는 이 기능을 통해 나중에 이 속성을 사용하여 제공된 토큰으로 바꿀 수 있는 일부 값을 본문에 지정할 수 있습니다.|  
 |BodyTemplateFilePath|문자열|본문에 대한 템플릿의 경로입니다. `SendMail` 활동은 이 파일의 내용을 본문 속성에 복사합니다.<br /><br /> 템플릿에는 토큰 속성의 내용으로 바뀌는 토큰이 포함될 수 있습니다.|  
 |TestMailTo|<xref:System.Net.Mail.MailAddress>|이 속성을 설정 하는 경우 모든 전자 메일에 지정 된 주소로 전송 됩니다.<br /><br /> 이 속성은 워크플로를 테스트할 때 사용할 수 있습니다. 예를 들어 있는지 확인 하려는 경우 실제 받는 사람에 게 보내지는 않고 모든 전자 메일이 전송 됩니다.|  
 |TestDropPath|문자열|이 속성을 설정 하는 경우 모든 전자 메일이 지정된 된 파일에도 저장 됩니다.<br /><br /> 이 속성 테스트 하거나 보내는 전자 메일의 내용과 형식 적절 한지 되도록 하려면 워크플로 디버깅 하는 경우에 사용 됩니다.|  
@@ -116,7 +116,7 @@ new SendMail
 ## <a name="set-up-instructions"></a>설치 지침  
  이 샘플을 실행하려면 SMTP 서버에 액세스해야 합니다.  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 다음 링크를 참조에 SMTP 서버를 설정 합니다.  
+ SMTP 서버 설정에 대 한 자세한 내용은 다음 링크를 참조 합니다.  
   
 -   [Microsoft Technet](http://go.microsoft.com/fwlink/?LinkId=166060)  
   

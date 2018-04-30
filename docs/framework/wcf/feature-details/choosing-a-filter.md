@@ -10,17 +10,17 @@ ms.technology:
 ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 67ab5af9-b9d9-4300-b3b1-41abb5a1fd10
-caps.latest.revision: ''
+caps.latest.revision: 8
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: e81af51be3e281faa94bcea17ff75b41341abb33
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: 653013de37278f051f37fdda52e68fc3d84c2cbb
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="choosing-a-filter"></a>필터 선택
 라우팅 서비스를 구성할 때는 올바른 메시지 필터를 선택하고 수신하는 메시지와 정확히 일치하도록 메시지 필터를 구성해야 합니다. 선택한 필터가 과도하게 광범위하거나 올바르게 구성되지 않은 경우 메시지가 잘못 라우트됩니다. 필터가 너무 제한적인 경우에는 일부 메시지에 유효한 경로가 제공되지 않을 수 있습니다.  
@@ -29,7 +29,7 @@ ms.lasthandoff: 03/26/2018
  라우팅 서비스에 사용되는 필터를 선택할 때는 각 필터가 작동하는 방식뿐 아니라 들어오는 메시지의 일부로 제공되는 정보도 알고 있어야 합니다. 예를 들어 모든 메시지를 동일한 끝점을 통해 받는 경우 Address 및 EndpointName 필터는 유용하지 않습니다. 이는 모든 메시지가 이러한 필터와 일치하기 때문입니다.  
   
 ### <a name="action"></a>작업  
- Action 필터는 <xref:System.ServiceModel.Channels.MessageHeaders.Action%2A> 속성을 검사합니다. 메시지에 있는 Action 헤더의 내용이 필터 구성에 지정된 필터 데이터 값과 일치하면 이 필터는 `true`를 반환합니다. 다음 예제에서는 정의 `FilterElement` 하는 작업 필터를 사용 하 여 "http://namespace/contract/operation/" 값이 있는 action 헤더와 메시지를 일치 시킵니다.  
+ Action 필터는 <xref:System.ServiceModel.Channels.MessageHeaders.Action%2A> 속성을 검사합니다. 메시지에 있는 Action 헤더의 내용이 필터 구성에 지정된 필터 데이터 값과 일치하면 이 필터는 `true`를 반환합니다. 다음 예제에서는 정의 `FilterElement` 작업 필터의 값이 있는 action 헤더와 메시지를 일치를 사용 하 여 "http://namespace/contract/operation/"입니다.  
   
 ```xml  
 <filter name="action1" filterType="Action" filterData="http://namespace/contract/operation/" />  
@@ -144,9 +144,9 @@ XPathMessageFilter xpath1=new XPathMessageFilter("//ns:element");
   
  이 필터는 수신하는 메시지에 특정 값이 포함되어 있다는 것을 알고 있는 경우에 유용합니다. 예를 들어 동일한 서비스의 두 버전을 호스팅하는 경우 더 새 버전의 서비스로 주소가 지정된 메시지에 고유한 사용자 지정 헤더 값이 포함되어 있다는 것을 알고 있으면 XPath를 사용하여 이 헤더를 찾아서 이 헤더에 있는 값을 파일 구성에 제공된 다른 값과 비교하여 필터가 일치하는지 확인할 수 있습니다.  
   
- XPath 쿼리에는 종종 길거나 복잡한 문자열 값인 고유한 네임스페이스가 포함되어 있기 때문에 XPath 필터를 사용하면 네임스페이스 테이블을 통해 네임스페이스에 대한 고유한 접두사를 정의할 수 있습니다. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 네임 스페이스 테이블 참조 [메시지 필터](../../../../docs/framework/wcf/feature-details/message-filters.md)합니다.  
+ XPath 쿼리에는 종종 길거나 복잡한 문자열 값인 고유한 네임스페이스가 포함되어 있기 때문에 XPath 필터를 사용하면 네임스페이스 테이블을 통해 네임스페이스에 대한 고유한 접두사를 정의할 수 있습니다. 네임 스페이스 테이블에 대 한 자세한 내용은 참조 [메시지 필터](../../../../docs/framework/wcf/feature-details/message-filters.md)합니다.  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)] XPath 쿼리를 디자인, 참조 [XPath 구문을](http://go.microsoft.com/fwlink/?LinkId=164592)합니다.  
+ XPath 쿼리를 디자인 하는 방법에 대 한 자세한 내용은 참조 [XPath 구문을](http://go.microsoft.com/fwlink/?LinkId=164592)합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [메시지 필터](../../../../docs/framework/wcf/feature-details/message-filters.md)  

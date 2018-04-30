@@ -20,11 +20,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 331e71f26b1c703f7df27086d943e799b4eb13e2
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 991c3879990fd5b6562a2270c65e1560efadc022
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="introduction-to-extensibility"></a>확장성 소개
 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 응용 프로그램 모델은 분산 응용 프로그램의 대부분의 통신 요구 사항을 해결할 수 있도록 디자인되었습니다. 그러나 기본 응용 프로그램 모델과 시스템 제공 구현이 지원되지 않습니다. [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 확장성 모델은 전체 응용 프로그램 모델을 대체하는 지점을 비롯해서 모든 수준에서 시스템 동작을 수정할 수 있도록 허용하여 사용자 지정 시나리오를 지원합니다. 이 항목에서는 다양한 확장 영역에 대해 간략하게 설명하고 각 영역에 대한 자세한 내용을 제공합니다.  
@@ -43,7 +43,7 @@ ms.lasthandoff: 04/28/2018
   
  응용 프로그램 메시지는 사용자 또는 사용자의 고객이 만든 클라이언트 또는 서비스 작업을 대상으로 하는 데이터를 포함합니다. 이러한 메시지는 응용 프로그램 수준 확장 시스템에서 필요에 따라 메시지 또는 개체 형태로 사용할 수 있습니다.  
   
- 모든 메시지는 채널 시스템을 통해 전달되고, 응용 프로그램 메시지만 채널 시스템에서 응용 프로그램으로 전달됩니다. 새 채널 수준 기능을 만들려면 채널 시스템을 확장해야 합니다. 새 응용 프로그램 수준 기능을 만들려면 서비스 또는 클라이언트 런타임(각각 디스패처 및 채널 팩터리)을 확장해야 합니다. [!INCLUDE[crabout](../../../includes/crabout-md.md)] 응용 프로그램 런타임 확장 참조 [확장 ServiceHost 및 서비스 모델 계층](../../../docs/framework/wcf/extending/extending-servicehost-and-the-service-model-layer.md)합니다.  
+ 모든 메시지는 채널 시스템을 통해 전달되고, 응용 프로그램 메시지만 채널 시스템에서 응용 프로그램으로 전달됩니다. 새 채널 수준 기능을 만들려면 채널 시스템을 확장해야 합니다. 새 응용 프로그램 수준 기능을 만들려면 서비스 또는 클라이언트 런타임(각각 디스패처 및 채널 팩터리)을 확장해야 합니다. 응용 프로그램 런타임 확장에 대 한 자세한 내용은 참조 [확장 ServiceHost 및 서비스 모델 계층](../../../docs/framework/wcf/extending/extending-servicehost-and-the-service-model-layer.md)합니다.  
   
 #### <a name="extending-security"></a>보안 확장  
  토큰 및 자격 증명과 같은 사용자 지정 보안 메커니즘을 빌드하려면 보안 시스템을 확장해야 합니다. 자세한 내용은 참조 [확장 보안](../../../docs/framework/wcf/extending/extending-security.md)합니다.  

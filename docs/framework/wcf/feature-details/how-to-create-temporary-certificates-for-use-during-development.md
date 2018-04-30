@@ -19,11 +19,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: ccbc8c6fa638c674dea28c312b2dedbc9d41968a
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: f5a096fd6e052fc744af5cee1ab0d322e1daafe6
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="how-to-create-temporary-certificates-for-use-during-development"></a>방법: 개발 중 사용할 임시 인증서 만들기
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]를 사용하여 보안 서비스 또는 클라이언트를 개발하는 경우 자격 증명으로 사용할 X.509 인증서를 제공해야 할 수도 있습니다. 일반적으로 인증서는 루트 인증 기관이 컴퓨터의 신뢰할 수 있는 루트 인증 기관 저장소에 있는 인증서 체인의 일부입니다. 인증서 체인을 사용하면 일반적으로 루트 인증 기관이 조직 또는 비즈니스 사업부에 있는 인증서 집합의 범위를 지정할 수 있습니다. 개발 시 이를 에뮬레이트하려면 보안 요구 사항에 맞는 두 개의 인증서를 만듭니다. 첫 번째 인증서는 신뢰할 수 있는 루트 인증 기관 저장소에 있는 자체 서명된 인증서이고, 두 번째 인증서는 첫 번째 인증서에서 만들어지고 로컬 컴퓨터 위치의 개인 저장소나 현재 사용자 위치의 개인 저장소에 있습니다. 이 항목에서는 [SDK에서 제공하는](http://go.microsoft.com/fwlink/?LinkId=248185)인증서 작성 도구(MakeCert.exe) [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 를 사용하여 이러한 두 인증서를 만드는 단계를 안내합니다.  
@@ -33,7 +33,7 @@ ms.lasthandoff: 04/28/2018
 >   
 >  기본적으로는 [Makecert.exe (인증서 작성 도구)](http://msdn.microsoft.com/library/b0343f8e-9c41-4852-a85c-f8a0c408cf0d) 해당 루트 기관 라고 하는 인증서를 만들며 "루트 에이전시 **."** 라고 하는 인증서를 만듭니다. "루트 에이전시"는 신뢰할 수 있는 루트 인증 기관 저장소에 없으므로 해당 인증서를 신뢰할 수 없습니다. 신뢰할 수 있는 루트 인증 기관 저장소에 배치되는 자체 서명된 인증서를 만들면 배포 환경을 보다 근접하게 시뮬레이션하는 개발 환경을 만들 수 있습니다.  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 는 [Working with Certificates](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)을 참조하세요. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 는 [Securing Services and Clients](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)을 참조하세요. Microsoft Authenticode 기술을 사용하는 방법에 대한 자습서는 [Authenticode Overviews and Tutorials](http://go.microsoft.com/fwlink/?LinkId=88919)를 참조하십시오.  
+ 만들기 및 인증서를 사용 하는 방법에 대 한 자세한 내용은 참조 [인증서 작업](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)합니다. 자격 증명으로 인증서를 사용 하는 방법에 대 한 자세한 내용은 참조 [보안 서비스와 클라이언트](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)합니다. Microsoft Authenticode 기술을 사용하는 방법에 대한 자습서는 [Authenticode Overviews and Tutorials](http://go.microsoft.com/fwlink/?LinkId=88919)를 참조하십시오.  
   
 ### <a name="to-create-a-self-signed-root-authority-certificate-and-export-the-private-key"></a>자체 서명된 루트 인증 기관 인증서를 만들고 개인 키를 내보내려면  
   

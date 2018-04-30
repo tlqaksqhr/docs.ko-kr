@@ -1,27 +1,29 @@
 ---
-title: "클라이언트 아키텍처"
-ms.custom: 
+title: 클라이언트 아키텍처
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 02624403-0d77-41cb-9a86-ab55e98c7966
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 6418c3b5c82ac42fb7e6d3ce85913896a3f76442
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 12db0d4f5717287439b66810e6354b12a4c68b77
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="client-architecture"></a>클라이언트 아키텍처
-응용 프로그램은 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 클라이언트 개체를 사용하여 서비스 작업을 호출합니다. 이 항목에서는 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 클라이언트 개체, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 클라이언트 채널 및 이러한 요소와 기본 채널 아키텍처와의 관계에 대해 설명합니다. 기본적인 개요에 대 한 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 클라이언트 개체 참조 [WCF 클라이언트 개요](../../../../docs/framework/wcf/wcf-client-overview.md)합니다. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]채널 계층 참조 [채널 계층 확장](../../../../docs/framework/wcf/extending/extending-the-channel-layer.md)합니다.  
+응용 프로그램은 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 클라이언트 개체를 사용하여 서비스 작업을 호출합니다. 이 항목에서는 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 클라이언트 개체, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 클라이언트 채널 및 이러한 요소와 기본 채널 아키텍처와의 관계에 대해 설명합니다. 기본적인 개요에 대 한 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 클라이언트 개체 참조 [WCF 클라이언트 개요](../../../../docs/framework/wcf/wcf-client-overview.md)합니다. 채널 계층에 대 한 자세한 내용은 참조 [채널 계층 확장](../../../../docs/framework/wcf/extending/extending-the-channel-layer.md)합니다.  
   
 ## <a name="overview"></a>개요  
  서비스 모델 런타임에서는 다음과 같은 항목으로 구성되는[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 클라이언트를 만듭니다.  
@@ -48,7 +50,7 @@ ms.lasthandoff: 12/22/2017
   
  채널 팩터리가 <xref:System.ServiceModel.ChannelFactory%601.CreateChannel%2A?displayProperty=nameWithType>을 호출하기 전에, 채널 팩터리에 제공된 구성에 대해 클라이언트 채널의 새 인스턴스를 만든다는 점이 중요합니다. <xref:System.ServiceModel.ChannelFactory%601.CreateChannel%2A>(또는 <xref:System.ServiceModel.ClientBase%601.Open%2A?displayProperty=nameWithType>, <xref:System.ServiceModel.ClientBase%601.CreateChannel%2A?displayProperty=nameWithType> 또는 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 클라이언트 개체에 대한 작업)을 호출한 후에는, 단지 대상 끝점 주소를 변경하려는 경우라도 채널 팩터리를 수정할 수 없으며 채널을 다른 서비스 인스턴스로 가져올 수 없습니다. 다른 구성을 사용하는 클라이언트 채널이나 클라이언트 개체를 만들려면 새로운 채널 팩터리를 먼저 만들어야 합니다.  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]사용 하 여 다양 한 문제 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 클라이언트 개체 및 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 클라이언트 채널 참조 [WCF 클라이언트를 사용 하 여 액세스 서비스](../../../../docs/framework/wcf/feature-details/accessing-services-using-a-client.md)합니다.  
+ 사용 하 여 다양 한 문제에 대 한 자세한 내용은 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 클라이언트 개체 및 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 클라이언트 채널 참조 [WCF 클라이언트를 사용 하 여 액세스 서비스](../../../../docs/framework/wcf/feature-details/accessing-services-using-a-client.md)합니다.  
   
  다음의 두 단원에서는 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 클라이언트 채널 개체의 생성 및 사용에 대해 설명합니다.  
   

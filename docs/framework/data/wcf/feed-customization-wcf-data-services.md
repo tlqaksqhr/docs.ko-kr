@@ -1,12 +1,13 @@
 ---
-title: "피드 사용자 지정(WCF Data Services)"
-ms.custom: 
+title: 피드 사용자 지정(WCF Data Services)
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework-oob
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -17,19 +18,20 @@ helpviewer_keywords:
 - Atom Publishing Protocol [WCF Data Services]
 - WCF Data Services, customizing feeds
 ms.assetid: 0d1a39bc-6462-4683-bd7d-e74e0fd28a85
-caps.latest.revision: "11"
+caps.latest.revision: 11
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 2c5e33490a94346880986fdf66a4c5907084c8cd
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: c59bfdd22125f10b8a35afc8c264b6b2869a3998
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="feed-customization-wcf-data-services"></a>피드 사용자 지정(WCF Data Services)
-[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]사용 하 여는 [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] 데이터 피드로 노출할 수 있습니다. [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]데이터 피드의 Atom 및 JSON JavaScript Object Notation () 형식을 지원합니다. Atom 피드를 사용 하는 경우 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 엔터티 및 HTTP 메시지의 본문에 포함 될 수 있는 XML 형식으로의 관계와 같은 데이터를 직렬화 하는 표준 방법을 제공 합니다. [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]엔터티에 포함 된 데이터 및 Atom 요소 간의 기본 엔터티 속성 매핑을 정의 합니다. 자세한 내용은 참조 [OData: 원자 형식](http://go.microsoft.com/fwlink/?LinkID=185794)합니다.  
+[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 사용 하 여는 [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] 데이터 피드로 노출할 수 있습니다. [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 데이터 피드의 Atom 및 JSON JavaScript Object Notation () 형식을 지원합니다. Atom 피드를 사용 하는 경우 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 엔터티 및 HTTP 메시지의 본문에 포함 될 수 있는 XML 형식으로의 관계와 같은 데이터를 직렬화 하는 표준 방법을 제공 합니다. [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 엔터티에 포함 된 데이터 및 Atom 요소 간의 기본 엔터티 속성 매핑을 정의 합니다. 자세한 내용은 참조 [OData: 원자 형식](http://go.microsoft.com/fwlink/?LinkID=185794)합니다.  
   
  데이터 서비스에서 반환된 속성 데이터를 표준 피드 형식이 아니라 사용자 지정 방식으로 serialize(직렬화)해야 하는 응용 프로그램 시나리오가 있을 수도 있습니다. 와 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)], 엔터티 속성을 사용 하지 않는 요소와 특성의 항목 또는 피드에 있는 항목의 사용자 지정 요소에 매핑될 수 있습니다 수 있도록 하는 데이터 피드의 serialization을 사용자 지정할 수 있습니다.  
   
@@ -53,19 +55,19 @@ ms.lasthandoff: 01/19/2018
  자세한 내용은 참조 [하는 방법: Entity Framework 공급자를 사용한 피드 사용자 지정](../../../../docs/framework/data/wcf/how-to-customize-feeds-with-ef-provider-wcf-data-services.md)합니다.  
   
 > [!NOTE]
->  Entity Designer에서 데이터 모델 확장을 지원하지 않으므로 데이터 모델이 포함된 XML 파일을 수동으로 수정해야 합니다. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]에 의해 생성 된.edmx 파일의 [!INCLUDE[adonet_edm](../../../../includes/adonet-edm-md.md)] 도구, 참조 [.edmx 파일 개요](http://msdn.microsoft.com/library/f4c8e7ce-1db6-417e-9759-15f8b55155d4)합니다.  
+>  Entity Designer에서 데이터 모델 확장을 지원하지 않으므로 데이터 모델이 포함된 XML 파일을 수동으로 수정해야 합니다. 에 의해 생성 된.edmx 파일에 대 한 자세한 내용은 [!INCLUDE[adonet_edm](../../../../includes/adonet-edm-md.md)] 도구, 참조 [.edmx 파일 개요](http://msdn.microsoft.com/library/f4c8e7ce-1db6-417e-9759-15f8b55155d4)합니다.  
   
 ### <a name="custom-feed-attributes"></a>사용자 지정 피드 특성  
  다음 표에서는 데이터 모델을 정의하는 CSDL(개념 스키마 정의 언어)에 추가할 수 있는 피드를 사용자 지정하는 XML 특성을 보여 줍니다. 이러한 특성은 리플렉션 공급자와 함께 사용되는 <xref:System.Data.Services.Common.EntityPropertyMappingAttribute>의 속성과 같습니다.  
   
 |특성 이름|설명|  
 |--------------------|-----------------|  
-|`FC_ContentKind`|콘텐츠의 형식을 나타냅니다. 다음 키워드는 배포 콘텐츠 형식을 정의합니다.<br /><br /> `text:`속성 값은 피드에 텍스트로 표시 됩니다.<br /><br /> `html:`속성 값은 피드에 HTML로 표시 됩니다.<br /><br /> `xhtml:`속성 값은 피드에 XML 형식의 HTML로 표시 됩니다.<br /><br /> 이러한 키워드는 리플렉션 공급자와 함께 사용되는 <xref:System.Data.Services.Common.SyndicationTextContentKind> 열거 값과 같습니다.<br /><br /> `FC_NsPrefix` 및 `FC_NsUri` 특성을 사용하는 경우 이 특성은 지원되지 않습니다.<br /><br /> `xhtml` 특성의 `FC_ContentKind` 값을 지정하는 경우 속성 값에 올바른 형식의 XML이 포함되도록 해야 합니다. 데이터 서비스는 변환을 수행하지 않고 값을 반환합니다. 반환된 XML의 모든 XML 요소 접두사에 매핑된 피드에 정의된 네임스페이스 URI 및 접두사가 있는지도 확인해야 합니다.|  
+|`FC_ContentKind`|콘텐츠의 형식을 나타냅니다. 다음 키워드는 배포 콘텐츠 형식을 정의합니다.<br /><br /> `text:` 속성 값은 피드에 텍스트로 표시 됩니다.<br /><br /> `html:` 속성 값은 피드에 HTML로 표시 됩니다.<br /><br /> `xhtml:` 속성 값은 피드에 XML 형식의 HTML로 표시 됩니다.<br /><br /> 이러한 키워드는 리플렉션 공급자와 함께 사용되는 <xref:System.Data.Services.Common.SyndicationTextContentKind> 열거 값과 같습니다.<br /><br /> `FC_NsPrefix` 및 `FC_NsUri` 특성을 사용하는 경우 이 특성은 지원되지 않습니다.<br /><br /> `xhtml` 특성의 `FC_ContentKind` 값을 지정하는 경우 속성 값에 올바른 형식의 XML이 포함되도록 해야 합니다. 데이터 서비스는 변환을 수행하지 않고 값을 반환합니다. 반환된 XML의 모든 XML 요소 접두사에 매핑된 피드에 정의된 네임스페이스 URI 및 접두사가 있는지도 확인해야 합니다.|  
 |`FC_KeepInContent`|참조된 속성 값이 피드의 콘텐츠 섹션과 매핑 대상 위치에 모두 포함되어야 함을 나타냅니다. 유효한 값은 `true` 및 `false`입니다. 결과 피드가 이전 버전의 이전 버전과 호환 되도록 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)], 값을 지정 `true` 를 피드의 콘텐츠 섹션에 값이 포함 되어 있는지 확인 합니다.|  
 |`FC_NsPrefix`|배포 이외의 매핑에서 XML 요소의 네임스페이스 접두사입니다. 이 특성은 `FC_NsUri` 특성과 함께 사용해야 하며, `FC_ContentKind` 특성과 함께 사용할 수는 없습니다.|  
 |`FC_NsUri`|배포 이외의 매핑에서 XML 요소의 네임스페이스 URI입니다. 이 특성은 `FC_NsPrefix` 특성과 함께 사용해야 하며, `FC_ContentKind` 특성과 함께 사용할 수는 없습니다.|  
 |`FC_SourcePath`|이 피드 매핑 규칙이 적용되는 엔터티의 속성 경로입니다. 이 특성은 `EntityType` 요소와 함께 사용하는 경우에만 지원됩니다.<br /><br /> <xref:System.Data.Services.Common.EntityPropertyMappingAttribute.SourcePath%2A> 속성은 복합 형식을 직접 참조할 수 없습니다. 복합 형식의 경우 속성 이름이 백슬래시(`/`) 문자로 구분되는 경로 식을 사용해야 합니다. 엔터티 형식에 대 한 다음 값은 허용 하는 예를 들어 `Person` 정수 속성이 있는 `Age` 복합 속성<br /><br /> `Address`:<br /><br /> `Age`<br /><br /> `Address/Street`<br /><br /> <xref:System.Data.Services.Common.EntityPropertyMappingAttribute.SourcePath%2A> 속성은 공백이나 속성 이름에 사용할 수 없는 다른 문자가 포함된 값으로 설정할 수 없습니다.|  
-|`FC_TargetPath`|속성을 매핑할 결과 피드의 대상 요소 이름입니다. 이 요소는 Atom 사양에 정의된 요소나 사용자 지정 요소일 수 있습니다.<br /><br /> 다음 키워드는 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 피드의 특정 위치를 가리키는 미리 정의된 배포 대상 경로 값입니다.<br /><br /> `SyndicationAuthorEmail:``atom:email` 의 자식 요소는 `atom:author` 요소입니다.<br /><br /> `SyndicationAuthorName:``atom:name` 의 자식 요소는 `atom:author` 요소입니다.<br /><br /> `SyndicationAuthorUri:``atom:uri` 의 자식 요소는 `atom:author` 요소입니다.<br /><br /> `SyndicationContributorEmail:``atom:email` 의 자식 요소는 `atom:contributor` 요소입니다.<br /><br /> `SyndicationContributorName:``atom:name` 의 자식 요소는 `atom:contributor` 요소입니다.<br /><br /> `SyndicationContributorUri:``atom:uri` 의 자식 요소는 `atom:contributor` 요소입니다.<br /><br /> `SyndicationCustomProperty:`사용자 지정 속성 요소입니다. 사용자 지정 요소에 매핑되는 경우 대상은 중첩된 요소가 백슬래시(`/`)로 구분되고 특성이 앰퍼샌드(`@`)로 지정되는 경로 식이어야 합니다. 다음 예제에서 `UnitsInStock/@ReorderLevel` 문자열은 루트 항목 요소의 자식 요소 `ReorderLevel`에 대한 `UnitsInStock` 특성에 속성 값을 매핑합니다.<br /><br /> `<Property Name="ReorderLevel" Type="Int16"               m:FC_TargetPath="UnitsInStock/@ReorderLevel"               m:FC_NsPrefix="Northwind"               m:FC_NsUri="http://schemas.examples.microsoft.com/dataservices"               m:FC_KeepInContent="false"               />`<br /><br /> 대상이 사용자 지정 요소 이름인 경우 `FC_NsPrefix` 및 `FC_NsUri` 특성도 지정해야 합니다.<br /><br /> `SyndicationPublished:``atom:published` 요소입니다.<br /><br /> `SyndicationRights:``atom:rights` 요소입니다.<br /><br /> `SyndicationSummary:``atom:summary` 요소입니다.<br /><br /> `SyndicationTitle:``atom:title` 요소입니다.<br /><br /> `SyndicationUpdated:``atom:updated` 요소입니다.<br /><br /> 이러한 키워드는 리플렉션 공급자와 함께 사용되는 <xref:System.Data.Services.Common.SyndicationItemProperty> 열거 값과 같습니다.|  
+|`FC_TargetPath`|속성을 매핑할 결과 피드의 대상 요소 이름입니다. 이 요소는 Atom 사양에 정의된 요소나 사용자 지정 요소일 수 있습니다.<br /><br /> 다음 키워드는 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 피드의 특정 위치를 가리키는 미리 정의된 배포 대상 경로 값입니다.<br /><br /> `SyndicationAuthorEmail:` `atom:email` 의 자식 요소는 `atom:author` 요소입니다.<br /><br /> `SyndicationAuthorName:` `atom:name` 의 자식 요소는 `atom:author` 요소입니다.<br /><br /> `SyndicationAuthorUri:` `atom:uri` 의 자식 요소는 `atom:author` 요소입니다.<br /><br /> `SyndicationContributorEmail:` `atom:email` 의 자식 요소는 `atom:contributor` 요소입니다.<br /><br /> `SyndicationContributorName:` `atom:name` 의 자식 요소는 `atom:contributor` 요소입니다.<br /><br /> `SyndicationContributorUri:` `atom:uri` 의 자식 요소는 `atom:contributor` 요소입니다.<br /><br /> `SyndicationCustomProperty:` 사용자 지정 속성 요소입니다. 사용자 지정 요소에 매핑되는 경우 대상은 중첩된 요소가 백슬래시(`/`)로 구분되고 특성이 앰퍼샌드(`@`)로 지정되는 경로 식이어야 합니다. 다음 예제에서 `UnitsInStock/@ReorderLevel` 문자열은 루트 항목 요소의 자식 요소 `ReorderLevel`에 대한 `UnitsInStock` 특성에 속성 값을 매핑합니다.<br /><br /> `<Property Name="ReorderLevel" Type="Int16"               m:FC_TargetPath="UnitsInStock/@ReorderLevel"               m:FC_NsPrefix="Northwind"               m:FC_NsUri="http://schemas.examples.microsoft.com/dataservices"               m:FC_KeepInContent="false"               />`<br /><br /> 대상이 사용자 지정 요소 이름인 경우 `FC_NsPrefix` 및 `FC_NsUri` 특성도 지정해야 합니다.<br /><br /> `SyndicationPublished:` `atom:published` 요소입니다.<br /><br /> `SyndicationRights:` `atom:rights` 요소입니다.<br /><br /> `SyndicationSummary:` `atom:summary` 요소입니다.<br /><br /> `SyndicationTitle:` `atom:title` 요소입니다.<br /><br /> `SyndicationUpdated:` `atom:updated` 요소입니다.<br /><br /> 이러한 키워드는 리플렉션 공급자와 함께 사용되는 <xref:System.Data.Services.Common.SyndicationItemProperty> 열거 값과 같습니다.|  
   
 > [!NOTE]
 >  특성 이름과 값은 대/소문자를 구분합니다. `EntityType` 요소나 하나 이상의 `Property` 요소에 특성을 적용할 수 있지만 둘 다에 적용할 수는 없습니다.  

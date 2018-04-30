@@ -16,11 +16,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: d7de2912029efb61135d5329f186ed2c1ca95840
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 1342f2383e7cf2aa15ea60be03c93044e4332612
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="troubleshooting-queued-messaging"></a>대기 중인 메시지 문제 해결
 이 단원에는 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]에서 큐를 사용하는 경우에 관한 일반적인 질문과 문제 해결 도움말이 있습니다.  
@@ -125,7 +125,7 @@ ms.lasthandoff: 04/28/2018
   
  **Q:** MSMQ에 대 한 일반적인 질문에 답변은 어디서 찾을 수 있습니까?  
   
- **A:** [!INCLUDE[crabout](../../../../includes/crabout-md.md)] MSMQ 참조 [Microsoft 메시지 큐](http://go.microsoft.com/fwlink/?LinkId=87810)합니다.  
+ **A:** MSMQ에 대 한 자세한 내용은 참조 [Microsoft 메시지 큐](http://go.microsoft.com/fwlink/?LinkId=87810)합니다.  
   
  **Q:** 내 서비스 throw 되는 이유는 `ProtocolException` 모두 포함 된 큐에서 읽는 대기 중인 세션 메시지와 대기 중인 데이터 그램 메시지 때?  
   

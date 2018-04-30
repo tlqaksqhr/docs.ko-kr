@@ -1,29 +1,31 @@
 ---
-title: "장기 실행 워크플로 서비스 만들기"
-ms.custom: 
+title: 장기 실행 워크플로 서비스 만들기
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 4c39bd04-5b8a-4562-a343-2c63c2821345
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 94a62a54fb138e394d8e9fa944e49e6526ae7152
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 1cd7cc70c50ac2aa56d8cca55037769aa0b6a64a
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="creating-a-long-running-workflow-service"></a>장기 실행 워크플로 서비스 만들기
 이 항목에서는 장기 실행 워크플로 서비스를 만드는 방법에 대해 설명합니다. 장기 실행 워크플로 서비스는 장기간 실행될 수 있습니다. 특정 지점에서 워크플로는 추가 정보를 기다리며 유휴 상태가 될 수 있습니다. 이 경우 워크플로는 SQL 데이터베이스에 유지되고 메모리에서 제거됩니다. 추가 정보를 사용할 수 있으면 워크플로 인스턴스가 다시 메모리에 로드되어 계속 실행됩니다.  이 시나리오에서는 매우 간단한 주문 시스템을 구현합니다.  클라이언트가 워크플로 서비스에 초기 메시지를 보내 주문을 시작하고, 워크플로 서비스는 주문 ID를 클라이언트에 반환합니다. 이 시점에서 워크플로 서비스가 클라이언트에서 다른 메시지를 기다리며 유휴 상태가 되고 SQL Server 데이터베이스에 유지됩니다.  클라이언트가 품목을 주문하기 위해 다음 메시지를 보내면 워크플로 서비스는 메모리에 다시 로드되고 주문 처리를 마칩니다. 코드 샘플에서 워크플로 서비스는 품목이 주문에 추가되었음을 나타내는 문자열을 반환합니다. 코드 샘플은 이 기술의 실제 응용 프로그램이라기보다는 장기 실행 워크플로 서비스를 보여 주는 간단한 샘플입니다. 이 항목에서는 [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] 프로젝트 및 솔루션을 만드는 방법을 알고 있다고 가정합니다.  
   
-## <a name="prerequisites"></a>필수 구성 요소  
+## <a name="prerequisites"></a>전제 조건  
  이 연습을 사용하려면 다음 소프트웨어를 설치해야 합니다.  
   
 1.  Microsoft SQL Server 2008  
@@ -82,7 +84,7 @@ ms.lasthandoff: 12/22/2017
   
          ![Receive 활동 속성 설정](../../../../docs/framework/wcf/feature-details/media/setreceiveproperties.png "SetReceiveProperties")  
   
-         DisplayName 속성은 디자이너에서 표시되는 Receive 활동의 이름을 설정합니다. ServiceContractName 및 OperationName 속성은 Receive 활동으로 구현되는 서비스 계약 및 작업의 이름을 지정합니다. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]서비스 계약 워크플로에서 사용 되는 방법을 참조 하십시오 [워크플로에서 계약 사용 하 여](../../../../docs/framework/wcf/feature-details/using-contracts-in-workflow.md)합니다.  
+         DisplayName 속성은 디자이너에서 표시되는 Receive 활동의 이름을 설정합니다. ServiceContractName 및 OperationName 속성은 Receive 활동으로 구현되는 서비스 계약 및 작업의 이름을 지정합니다. 워크플로 서비스의 계약 사용 방법에 대 한 자세한 내용은 참조 [워크플로에서 계약 사용 하 여](../../../../docs/framework/wcf/feature-details/using-contracts-in-workflow.md)합니다.  
   
     2.  클릭는 **정의...**  연결에 **ReceiveStartOrder** 작업 하 고 다음 그림에 나와 있는 속성을 설정 합니다.  다음에 유의 **매개 변수** 라디오 단추를 선택 하면 매개 변수 이름 `p_customerName` 에 바인딩된는 `customerName` 변수입니다. 이렇게 하면 구성 된 **수신** 일부 데이터를 받아 해당 데이터를 로컬 변수에 바인딩하는 작업입니다.  
   
@@ -120,13 +122,13 @@ ms.lasthandoff: 12/22/2017
   
          ![두 번째 매개 변수를 받도록](../../../../docs/framework/wcf/feature-details/media/addreceive2parameters.png "AddReceive2Parameters")  
   
-    4.  클릭는 **CorrelateOn** 줄임표 단추를 선택한 입력 `orderIdHandle`합니다. 아래 **XPath 쿼리**를 드롭다운 화살표를 클릭 하 고 `p_orderId`합니다. 이렇게 하면 두 번째 Receive 활동에 대한 상관 관계가 구성됩니다. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]상관 관계 참조 [상관 관계](../../../../docs/framework/wcf/feature-details/correlation.md)합니다.  
+    4.  클릭는 **CorrelateOn** 줄임표 단추를 선택한 입력 `orderIdHandle`합니다. 아래 **XPath 쿼리**를 드롭다운 화살표를 클릭 하 고 `p_orderId`합니다. 이렇게 하면 두 번째 Receive 활동에 대한 상관 관계가 구성됩니다. 상관 관계에 대 한 자세한 내용은 참조 [상관 관계](../../../../docs/framework/wcf/feature-details/correlation.md)합니다.  
   
          ![CorrelatesOn 속성 설정](../../../../docs/framework/wcf/feature-details/media/correlateson.png "CorrelatesOn")  
   
     5.  끌어서 놓기는 **경우** 작업 바로 뒤의 **ReceiveAddItem** 활동입니다. 이 활동은 if 문처럼 작동합니다.  
   
-        1.  설정의 **조건** 속성을`itemId=="Zune HD" (itemId="Zune HD" for Visual Basic)`  
+        1.  설정의 **조건** 속성을 `itemId=="Zune HD" (itemId="Zune HD" for Visual Basic)`  
   
         2.  끌어서 놓기는 **할당** 활동을는 **다음** 섹션과에 다른는 **Else** 의 속성을 설정 하는 섹션에서 **할당** 다음 그림과 같이 작업 합니다.  
   

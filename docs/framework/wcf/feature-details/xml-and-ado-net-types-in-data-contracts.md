@@ -19,11 +19,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 3a1fceb1017c5225b4e1de6891d6609c9ad5062e
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 7efef63668bb78bdc9a7d66654c9e33ef6c0138c
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="xml-and-adonet-types-in-data-contracts"></a>데이터 계약의 XML 및 ADO.NET 형식
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 데이터 계약 모델은 XML을 직접 표시하는 일부 형식을 지원합니다. 이러한 형식이 XML에 serialize되면 serializer는 추가 처리 없이 이러한 형식의 XML 콘텐츠를 씁니다. 지원되는 형식에는 <xref:System.Xml.XmlElement>을 구현하는 형식, <xref:System.Xml.XmlNode> 및 `XmlNode`의 배열이 있습니다. 단, <xref:System.Xml.Serialization.IXmlSerializable> 형식 자체는 지원되지 않습니다. <xref:System.Data.DataSet> 및 <xref:System.Data.DataTable> 형식은 형식화된 데이터 집합과 마찬가지로 데이터베이스 프로그래밍에 자주 사용됩니다. 이러한 형식은 `IXmlSerializable` 인터페이스를 구현하므로 데이터 계약 모델에서 serialize할 수 있습니다. 이러한 형식에 대한 몇 가지 특별한 고려 사항은 이 항목의 끝부분에 나와 있습니다.  
@@ -48,7 +48,7 @@ ms.lasthandoff: 04/28/2018
 </MyDataContract>  
 ```  
   
- 래퍼 데이터 멤버 요소 `<myDataMember>`가 여전히 있음을 알 수 있습니다. 데이터 계약 모델에서 이 요소를 제거할 수 있는 방법은 없으며, 이 모델을 처리하는 serializer(<xref:System.Runtime.Serialization.DataContractSerializer> 및 <xref:System.Runtime.Serialization.NetDataContractSerializer>)가 특수 특성을 이 래퍼 요소로 내보낼 수 있습니다. 이러한 특성에는 표준 XML 스키마 인스턴스 "nil" 특성(`XmlElement`가 `null`인 경우 허용) 및 "type" 특성(`XmlElement`가 다형적으로 사용되는 경우 허용)이 포함됩니다. 또한 "Id", "Ref", "Type" 및 "Assembly" 등의 XML 특성은 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]와 관련이 있습니다. 이러한 특성을 내보내서 개체 그래프 유지 모드가 활성화된 상태로 또는 `XmlElement`로 <xref:System.Runtime.Serialization.NetDataContractSerializer> 사용을 지원할 수 있습니다. ([!INCLUDE[crabout](../../../../includes/crabout-md.md)] 개체 그래프 유지 모드가 참조 [Serialization 및 Deserialization](../../../../docs/framework/wcf/feature-details/serialization-and-deserialization.md).)  
+ 래퍼 데이터 멤버 요소 `<myDataMember>`가 여전히 있음을 알 수 있습니다. 데이터 계약 모델에서 이 요소를 제거할 수 있는 방법은 없으며, 이 모델을 처리하는 serializer(<xref:System.Runtime.Serialization.DataContractSerializer> 및 <xref:System.Runtime.Serialization.NetDataContractSerializer>)가 특수 특성을 이 래퍼 요소로 내보낼 수 있습니다. 이러한 특성에는 표준 XML 스키마 인스턴스 "nil" 특성(`XmlElement`가 `null`인 경우 허용) 및 "type" 특성(`XmlElement`가 다형적으로 사용되는 경우 허용)이 포함됩니다. 또한 "Id", "Ref", "Type" 및 "Assembly" 등의 XML 특성은 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]와 관련이 있습니다. 이러한 특성을 내보내서 개체 그래프 유지 모드가 활성화된 상태로 또는 `XmlElement`로 <xref:System.Runtime.Serialization.NetDataContractSerializer> 사용을 지원할 수 있습니다. (개체 그래프 유지 모드가 대 한 자세한 내용은 참조 [Serialization 및 Deserialization](../../../../docs/framework/wcf/feature-details/serialization-and-deserialization.md).)  
   
  `XmlElement`의 배열 또는 컬렉션이 허용되며 다른 배열이나 컬렉션과 같이 처리됩니다. 즉, 전체 컬렉션에 대한 래퍼 요소와 배열의 각 `<myDataMember>`에 대한 개별 래퍼 요소(이전 예제의 `XmlElement`와 유사)가 있습니다.  
   
@@ -150,7 +150,7 @@ ms.lasthandoff: 04/28/2018
 ### <a name="schema-considerations-for-ixmlserializable-content-types"></a>IXmlSerializable 콘텐츠 형식의 스키마 고려 사항  
  스키마를 `IXmlSerializable` 콘텐츠 형식으로 내보내면 스키마 공급자 메서드가 호출됩니다. <xref:System.Xml.Schema.XmlSchemaSet>가 스키마 공급자 메서드로 전달됩니다. 메서드는 유효한 스키마를 모두 스키마 집합에 추가할 수 있습니다. 스키마 집합에는 스키마를 내보낼 때 이미 알려진 스키마가 포함됩니다. 스키마 공급자 메서드는 스키마 집합에 항목을 추가해야 하는 경우 해당 네임스페이스를 가진 <xref:System.Xml.Schema.XmlSchema>가 집합에 이미 있는지 확인해야 합니다. 이미 있으면 스키마 공급자 메서드는 기존 `XmlSchema`에 새 항목을 추가해야 합니다. 없는 경우에는 새 `XmlSchema` 인스턴스를 만들어야 합니다. 이 기능은 `IXmlSerializable` 형식의 배열을 사용하는 경우에 중요합니다. 예를 들어 "B" 네임스페이스에 "A" 형식으로 내보내지는 `IXmlSerializable` 형식이 있는 경우 스키마 공급자 메서드가 호출될 때까지 스키마 집합에 "ArrayOfA" 형식을 보유할 "B"의 스키마가 이미 포함될 수 있습니다.  
   
- <xref:System.Xml.Schema.XmlSchemaSet>에 형식을 추가하는 것 외에 콘텐츠 형식의 스키마 공급자 메서드는 null이 아닌 값을 반환해야 합니다. 이 메서드는 지정된 <xref:System.Xml.XmlQualifiedName> 형식에 사용할 스키마 형식의 이름을 지정하는 `IXmlSerializable`을 반환할 수 있습니다. 이 정규화된 이름은 형식의 데이터 계약 이름과 네임스페이스로도 사용됩니다. 스키마 공급자 메서드가 반환될 때 즉시 스키마 집합에 없는 형식을 반환할 수 있습니다. 그러나 관련된 모든 형식을 내보낼 때까지, 즉 <xref:System.Runtime.Serialization.XsdDataContractExporter.Export%2A>의 모든 관련 형식에 대해 <xref:System.Runtime.Serialization.XsdDataContractExporter> 메서드가 호출되고 <xref:System.Runtime.Serialization.XsdDataContractExporter.Schemas%2A> 속성에 액세스할 때까지 형식은 스키마 집합에 있습니다. 관련된 `Schemas` 호출을 수행하기 전에 `Export` 속성에 액세스하면 <xref:System.Xml.Schema.XmlSchemaException>이 발생할 수 있습니다. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 내보내기 프로세스 참조 [클래스에서 스키마 내보내기](../../../../docs/framework/wcf/feature-details/exporting-schemas-from-classes.md)합니다.  
+ <xref:System.Xml.Schema.XmlSchemaSet>에 형식을 추가하는 것 외에 콘텐츠 형식의 스키마 공급자 메서드는 null이 아닌 값을 반환해야 합니다. 이 메서드는 지정된 <xref:System.Xml.XmlQualifiedName> 형식에 사용할 스키마 형식의 이름을 지정하는 `IXmlSerializable`을 반환할 수 있습니다. 이 정규화된 이름은 형식의 데이터 계약 이름과 네임스페이스로도 사용됩니다. 스키마 공급자 메서드가 반환될 때 즉시 스키마 집합에 없는 형식을 반환할 수 있습니다. 그러나 관련된 모든 형식을 내보낼 때까지, 즉 <xref:System.Runtime.Serialization.XsdDataContractExporter.Export%2A>의 모든 관련 형식에 대해 <xref:System.Runtime.Serialization.XsdDataContractExporter> 메서드가 호출되고 <xref:System.Runtime.Serialization.XsdDataContractExporter.Schemas%2A> 속성에 액세스할 때까지 형식은 스키마 집합에 있습니다. 관련된 `Schemas` 호출을 수행하기 전에 `Export` 속성에 액세스하면 <xref:System.Xml.Schema.XmlSchemaException>이 발생할 수 있습니다. 내보내기 프로세스에 대 한 자세한 내용은 참조 [클래스에서 스키마 내보내기](../../../../docs/framework/wcf/feature-details/exporting-schemas-from-classes.md)합니다.  
   
  스키마 공급자 메서드는 또한 사용할 <xref:System.Xml.Schema.XmlSchemaType>을 반환할 수도 있습니다. 형식은 익명이거나 익명이 아닐 수 있습니다. 익명인 경우 `IXmlSerializable` 형식을 데이터 멤버로 사용할 때마다 `IXmlSerializable` 형식의 스키마가 익명 형식으로 내보내집니다. `IXmlSerializable` 형식에 여전히 데이터 계약 이름과 네임스페이스가 있습니다. (에 설명 된 대로이 확인할 [데이터 계약 이름을](../../../../docs/framework/wcf/feature-details/data-contract-names.md) 점을 제외 하 고는 <xref:System.Runtime.Serialization.DataContractAttribute> 특성을 사용 하 여 이름을 사용자 지정할 수 없습니다.) 익명이 아닌 경우 `XmlSchemaSet`의 형식 중 하나여야 합니다. 이 경우는 형식의 `XmlQualifiedName`을 반환하는 것과 같습니다.  
   
@@ -211,7 +211,7 @@ ms.lasthandoff: 04/28/2018
   
 -   이 형식에 대한 스키마(특히 <xref:System.Data.DataSet> 및 해당 형식화된 파생 클래스)는 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 이외의 플랫폼과 상호 운용되지 않을 수 있으며 이러한 플랫폼과 함께 사용할 때 유용성이 저하될 수도 있습니다. 또한 `DataSet` 형식을 사용하면 성능에 영향을 줄 수도 있습니다. 마지막으로 이후에 응용 프로그램의 버전 관리가 더 어려워질 수 있습니다. 계약에 `DataSet` 형식 대신 명시적으로 정의된 데이터 계약 형식을 사용하세요.  
   
--   `DataSet` 또는 `DataTable` 스키마를 가져올 때는 이러한 형식을 참조하는 것이 중요합니다. Svcutil.exe 명령줄 도구로이 위해서는 System.Data.dll 어셈블리 이름을 전달 하 여는 `/reference` 전환 합니다. 형식화된 데이터 집합 스키마를 가져오는 경우 형식화된 데이터 집합의 형식을 참조해야 합니다. Svcutil.exe를 전달 하는 형식화 된 데이터 집합의 어셈블리의 위치는 `/reference` 전환 합니다. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 참조 형식, 참조는 [스키마 클래스 생성를 가져와서](../../../../docs/framework/wcf/feature-details/importing-schema-to-generate-classes.md)합니다.  
+-   `DataSet` 또는 `DataTable` 스키마를 가져올 때는 이러한 형식을 참조하는 것이 중요합니다. Svcutil.exe 명령줄 도구로이 위해서는 System.Data.dll 어셈블리 이름을 전달 하 여는 `/reference` 전환 합니다. 형식화된 데이터 집합 스키마를 가져오는 경우 형식화된 데이터 집합의 형식을 참조해야 합니다. Svcutil.exe를 전달 하는 형식화 된 데이터 집합의 어셈블리의 위치는 `/reference` 전환 합니다. 형식 참조 하는 방법에 대 한 자세한 내용은 참조는 [스키마 클래스 생성를 가져와서](../../../../docs/framework/wcf/feature-details/importing-schema-to-generate-classes.md)합니다.  
   
  데이터 계약 모델에서 형식화된 데이터 집합에 대한 지원은 제한되어 있습니다. 형식화된 데이터 집합은 serialize 및 deserialize할 수 있으며 스키마를 내보낼 수 있습니다. 하지만 데이터 계약 스키마 가져오기에서는 스키마로부터 형식화된 데이터 집합 형식을 새로 생성할 수 없고 기존 형식을 다시 사용할 수만 있습니다. Svcutil.exe에 `/r` 스위치를 사용하면 형식화된 기존 데이터 집합을 가리킬 수 있습니다. 형식화된 데이터 집합을 사용하는 서비스에서 `/r` 스위치 없이 Svcutil.exe를 사용하려 하면 대체 serializer(XmlSerializer)가 자동으로 선택됩니다. DataContractSerializer를 사용해야 하며 스키마에서 데이터 집합을 생성해야 하는 경우에는 다음 절차를 사용할 수 있습니다. 서비스에서 `/d` 스위치와 함께 Xsd.exe 도구를 사용하여 형식화된 데이터 집합 형식을 생성한 다음 Svcutil.exe에서 `/r` 스위치를 사용하여 가리킵니다.  
   

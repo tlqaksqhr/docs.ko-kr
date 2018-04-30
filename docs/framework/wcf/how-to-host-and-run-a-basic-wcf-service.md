@@ -17,11 +17,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: a13e5a0044c51700acce6b123688868443f635ae
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: d8c9fdefd286e32b169b96065e6164a236941133
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="how-to-host-and-run-a-basic-windows-communication-foundation-service"></a>방법: 기본 Windows Communication Foundation 서비스 호스트 및 실행
 이 작업은 기본 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 응용 프로그램을 만드는 데 필요한 6가지 작업 중 세 번째 작업입니다. 모든 6 가지 작업의 개요를 참조 하십시오.는 [초보자를 위한 자습서](../../../docs/framework/wcf/getting-started-tutorial.md) 항목입니다.  
@@ -159,10 +159,10 @@ ms.lasthandoff: 04/26/2018
   
     2.  2단계 - 서비스를 호스팅할 <xref:System.ServiceModel.ServiceHost> 클래스의 인스턴스를 만듭니다. 생성자는 서비스 계약을 구현하는 클래스 형식과 서비스의 기본 주소, 두 가지 매개 변수를 사용합니다.  
   
-    3.  3 단계-만듭니다는 <!--zz <xref:System.ServiceModel.ServiceEndpoint>--> ` System.ServiceModel.ServiceEndpoint` 인스턴스. 서비스 끝점은 주소, 바인딩 및 서비스 계약으로 구성되어 있습니다. <!--zz <xref:System.ServiceModel.ServiceEndpoint>--> ` System.ServiceModel.ServiceEndpoint` 생성자 따라서 서비스 계약 인터페이스 형식, 바인딩 및 주소를 사용 합니다. 서비스 계약은 사용자가 정의한 `ICalculator`이며 서비스 형식에 구현합니다. 이 예제에 사용된 바인딩은 WS-* 사양을 따르는 끝점에 연결하는 데 사용되는 기본 바인딩인 <xref:System.ServiceModel.WSHttpBinding>입니다. WCF 바인딩에 대 한 자세한 내용은 참조 하십시오. [WCF 바인딩 개요](../../../docs/framework/wcf/bindings-overview.md)합니다. 끝점을 식별하기 위해 주소가 기본 주소에 추가됩니다. 이 코드에 지정 된 주소는 "CalculatorService" 끝점에 대 한 정규화 된 주소 이므로 `"http://localhost:8000/GettingStarted/CalculatorService"` .NET Framework 4.0을 사용 하는 경우 선택적 이상을 서비스 끝점을 추가 합니다. 이러한 버전에서 코드 또는 구성에 끝점이 추가되지 않으면 WCF가 기본 주소의 각 결합에 기본 끝점 하나씩을 추가하고 서비스에서 구현한 계약을 추가합니다. 기본에 대 한 자세한 내용은 끝점 참조 [끝점 주소 지정](../../../docs/framework/wcf/specifying-an-endpoint-address.md)합니다. [!INCLUDE[crabout](../../../includes/crabout-md.md)] , [Simplified Configuration](../../../docs/framework/wcf/simplified-configuration.md) 및 [Simplified Configuration for WCF Services](../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).  
+    3.  3 단계-만듭니다는 <!--zz <xref:System.ServiceModel.ServiceEndpoint>--> ` System.ServiceModel.ServiceEndpoint` 인스턴스. 서비스 끝점은 주소, 바인딩 및 서비스 계약으로 구성되어 있습니다. <!--zz <xref:System.ServiceModel.ServiceEndpoint>--> ` System.ServiceModel.ServiceEndpoint` 생성자 따라서 서비스 계약 인터페이스 형식, 바인딩 및 주소를 사용 합니다. 서비스 계약은 사용자가 정의한 `ICalculator`이며 서비스 형식에 구현합니다. 이 예제에 사용된 바인딩은 WS-* 사양을 따르는 끝점에 연결하는 데 사용되는 기본 바인딩인 <xref:System.ServiceModel.WSHttpBinding>입니다. WCF 바인딩에 대 한 자세한 내용은 참조 하십시오. [WCF 바인딩 개요](../../../docs/framework/wcf/bindings-overview.md)합니다. 끝점을 식별하기 위해 주소가 기본 주소에 추가됩니다. 이 코드에 지정 된 주소는 "CalculatorService" 끝점에 대 한 정규화 된 주소 이므로 `"http://localhost:8000/GettingStarted/CalculatorService"` .NET Framework 4.0을 사용 하는 경우 선택적 이상을 서비스 끝점을 추가 합니다. 이러한 버전에서 코드 또는 구성에 끝점이 추가되지 않으면 WCF가 기본 주소의 각 결합에 기본 끝점 하나씩을 추가하고 서비스에서 구현한 계약을 추가합니다. 기본에 대 한 자세한 내용은 끝점 참조 [끝점 주소 지정](../../../docs/framework/wcf/specifying-an-endpoint-address.md)합니다. 기본 끝점, 바인딩 및 동작에 대 한 자세한 내용은 참조 [단순화 된 구성](../../../docs/framework/wcf/simplified-configuration.md) 및 [WCF 서비스에 대 한 구성을 단순화](../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md)합니다.  
   
         > [!IMPORTANT]
-        >  .NET Framework 4 이상을 사용할 때 서비스 끝점 추가는 선택 사항입니다. 이러한 버전에서 코드 또는 구성에 끝점이 추가되지 않으면 WCF가 기본 주소의 각 결합에 기본 끝점 하나씩을 추가하고 서비스에서 구현한 계약을 추가합니다. 기본에 대 한 자세한 내용은 끝점 참조 [끝점 주소 지정](../../../docs/framework/wcf/specifying-an-endpoint-address.md)합니다. [!INCLUDE[crabout](../../../includes/crabout-md.md)] , [Simplified Configuration](../../../docs/framework/wcf/simplified-configuration.md) 및 [Simplified Configuration for WCF Services](../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).  
+        >  .NET Framework 4 이상을 사용할 때 서비스 끝점 추가는 선택 사항입니다. 이러한 버전에서 코드 또는 구성에 끝점이 추가되지 않으면 WCF가 기본 주소의 각 결합에 기본 끝점 하나씩을 추가하고 서비스에서 구현한 계약을 추가합니다. 기본에 대 한 자세한 내용은 끝점 참조 [끝점 주소 지정](../../../docs/framework/wcf/specifying-an-endpoint-address.md)합니다. 기본 끝점, 바인딩 및 동작에 대 한 자세한 내용은 참조 [단순화 된 구성](../../../docs/framework/wcf/simplified-configuration.md) 및 [WCF 서비스에 대 한 구성을 단순화](../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md)합니다.  
   
     4.  4단계 - 메타데이터 교환을 사용하도록 설정합니다. 클라이언트는 메타데이터 교환을 사용하여 서비스 작업을 호출하는 데 사용되는 프록시를 생성합니다. 메타 데이터 교환을 만들 수 있도록는 <xref:System.ServiceModel.Description.ServiceMetadataBehavior> 인스턴스를 설정의 <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpGetEnabled%2A> 속성을 `true`, 동작을 추가 하 고는 <!--zz <xref:System.ServiceModel.ServiceHost.Behaviors%2A>  --> `System.ServiceModel.ServiceHost.Behaviors%2A` 의 컬렉션은 <xref:System.ServiceModel.ServiceHost> 인스턴스.  
   
@@ -424,7 +424,7 @@ End Module
 ```  
   
 > [!NOTE]
->  이러한 서비스에는 수신 대기를 위해 시스템에 HTTP 주소를 등록할 권한이 있어야 합니다. 관리자 계정에는 이 권한이 있지만, 관리자 이외의 계정에는 HTTP 네임스페이스에 대한 권한을 부여해야 합니다. [!INCLUDE[crabout](../../../includes/crabout-md.md)] 네임 스페이스 예약을 구성을 참조 하는 방법 [HTTP 및 HTTPS 구성](../../../docs/framework/wcf/feature-details/configuring-http-and-https.md)합니다. Visual Studio에서 실행 하는 경우 service.exe는 관리자 권한으로 실행 되어야 합니다.  
+>  이러한 서비스에는 수신 대기를 위해 시스템에 HTTP 주소를 등록할 권한이 있어야 합니다. 관리자 계정에는 이 권한이 있지만, 관리자 이외의 계정에는 HTTP 네임스페이스에 대한 권한을 부여해야 합니다. 네임 스페이스 예약을 구성 하는 방법에 대 한 자세한 내용은 참조 [HTTP 및 HTTPS 구성](../../../docs/framework/wcf/feature-details/configuring-http-and-https.md)합니다. Visual Studio에서 실행 하는 경우 service.exe는 관리자 권한으로 실행 되어야 합니다.  
   
  서비스가 실행되고 있습니다. 진행 [하는 방법: 클라이언트 만들기](../../../docs/framework/wcf/how-to-create-a-wcf-client.md)합니다. 문제 해결 정보를 참조 하세요. [초보자를 위한 자습서 문제 해결](../../../docs/framework/wcf/troubleshooting-the-getting-started-tutorial.md)합니다.  
   

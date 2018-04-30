@@ -21,11 +21,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: b0042d9b90066553d6fc962bba1b7a7b990ca242
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 7f083ea44b9bdbd9bf85d65c42d663d87af8d812
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="wcf-client-overview"></a>WCF 클라이언트 개요
 이 단원에서는 클라이언트 응용 프로그램이 수행하는 작업, [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 클라이언트를 구성, 생성 및 사용하는 방법, 그리고 클라이언트 응용 프로그램의 보안을 유지하는 방법에 대해 설명합니다.  
@@ -86,13 +86,13 @@ svcutil /language:vb /out:ClientCode.vb /config:app.config http://computerName/M
  [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 클라이언트 개체를 먼저 만든 다음 단일 try/catch 블록에서 해당 개체를 사용하고 닫는 것이 좋습니다. 사용 하지 않아야는 `using` 문 (`Using` Visual basic에서) 특정 오류 모드에서 예외를 마스킹할 수 있으므로 합니다. 자세한 내용은 다음 섹션을 참조와 [Using 문과 문제 방지](../../../docs/framework/wcf/samples/avoiding-problems-with-the-using-statement.md)합니다.  
   
 ### <a name="contracts-bindings-and-addresses"></a>계약, 바인딩 및 주소  
- [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 클라이언트 개체를 만들려면 클라이언트 개체를 구성해야 합니다. 특히 서비스 있어야 *끝점* 사용 하도록 합니다. 끝점은 서비스 계약, 바인딩 및 주소의 조합입니다. ([!INCLUDE[crabout](../../../includes/crabout-md.md)] 끝점, 참조 [끝점: 주소, 바인딩 및 계약](../../../docs/framework/wcf/feature-details/endpoints-addresses-bindings-and-contracts.md).) 이 정보에 일반적으로 [ \<끝점 >](../../../docs/framework/configure-apps/file-schema/wcf/endpoint-of-client.md) Svcutil.exe 도구를 생성 하 고 클라이언트를 만들 때 자동으로 로드 되는 것과 같은 클라이언트 응용 프로그램 구성 파일의 요소 개체입니다. 두 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 클라이언트 형식에는 이 정보를 프로그래밍 방식으로 지정할 수 있게 해주는 오버로드가 있습니다.  
+ [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 클라이언트 개체를 만들려면 클라이언트 개체를 구성해야 합니다. 특히 서비스 있어야 *끝점* 사용 하도록 합니다. 끝점은 서비스 계약, 바인딩 및 주소의 조합입니다. (끝점에 대 한 자세한 내용은 참조 [끝점: 주소, 바인딩 및 계약](../../../docs/framework/wcf/feature-details/endpoints-addresses-bindings-and-contracts.md).) 이 정보에 일반적으로 [ \<끝점 >](../../../docs/framework/configure-apps/file-schema/wcf/endpoint-of-client.md) Svcutil.exe 도구를 생성 하 고 클라이언트를 만들 때 자동으로 로드 되는 것과 같은 클라이언트 응용 프로그램 구성 파일의 요소 개체입니다. 두 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 클라이언트 형식에는 이 정보를 프로그래밍 방식으로 지정할 수 있게 해주는 오버로드가 있습니다.  
   
  예를 들어, 이전 예제에 사용된 `ISampleService`에 대해 생성된 구성 파일에는 다음과 같은 끝점 정보가 포함되어 있습니다.  
   
  [!code-xml[C_GeneratedCodeFiles#19](../../../samples/snippets/csharp/VS_Snippets_CFX/c_generatedcodefiles/common/client.exe.config#19)]  
   
- 이 구성 파일은 `<client>` 요소에서 대상 끝점을 지정합니다. 여러 대상 끝점을 사용하는 방법에 대한 [!INCLUDE[crabout](../../../includes/crabout-md.md)]는 <xref:System.ServiceModel.ClientBase%601.%23ctor%2A?displayProperty=nameWithType> 또는 <xref:System.ServiceModel.ChannelFactory%601.%23ctor%2A?displayProperty=nameWithType> 생성자를 참조하세요.  
+ 이 구성 파일은 `<client>` 요소에서 대상 끝점을 지정합니다. 여러 대상 끝점을 사용 하는 방법에 대 한 자세한 내용은 참조는 <xref:System.ServiceModel.ClientBase%601.%23ctor%2A?displayProperty=nameWithType> 또는 <xref:System.ServiceModel.ChannelFactory%601.%23ctor%2A?displayProperty=nameWithType> 생성자입니다.  
   
 ## <a name="calling-operations"></a>작업 호출  
  클라이언트 개체를 만들어 구성한 후 try/catch 블록을 만들고 로컬 개체에 대해서와 같은 방법으로 작업을 호출한 다음 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 클라이언트 개체를 닫습니다. 클라이언트 응용 프로그램이 첫 번째 작업을 호출하면 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]에서 기본 채널을 자동으로 엽니다. 개체가 재생되면 기본 채널이 닫힙니다. 또는 다른 작업을 호출하기 이전 또는 이후에 채널을 명시적으로 열었다가 닫을 수 있습니다.  
@@ -145,14 +145,14 @@ End Interface
  [!code-csharp[C_GeneratedCodeFiles#20](../../../samples/snippets/csharp/VS_Snippets_CFX/c_generatedcodefiles/cs/proxycode.cs#20)]  
   
 ## <a name="handling-errors"></a>오류 처리  
- 기본 클라이언트 채널을 명시적으로 열거나 작업을 호출하여 자동으로 열 때, 클라이언트 또는 채널 개체를 사용하여 작업을 호출할 경우 또는 기본 클라이언트 채널을 닫을 때 클라이언트 응용 프로그램에서 예외가 발생할 수 있습니다. 적어도 응용 프로그램에서 가능한 <xref:System.TimeoutException?displayProperty=nameWithType> 및 <xref:System.ServiceModel.CommunicationException?displayProperty=nameWithType> 예외를 비롯하여 작업에서 반환되는 SOAP 오류로 인해 throw되는 <xref:System.ServiceModel.FaultException?displayProperty=nameWithType> 개체를 처리하도록 하는 것이 좋습니다. 작업 계약에 지정된 SOAP 오류는 형식 매개 변수가 SOAP 오류의 세부 유형인 <xref:System.ServiceModel.FaultException%601?displayProperty=nameWithType>으로, 클라이언트 응용 프로그램에서 발생됩니다. [!INCLUDE[crabout](../../../includes/crabout-md.md)] 클라이언트 응용 프로그램에서 오류 조건을 처리, 참조 [송신 및 수신 오류](../../../docs/framework/wcf/sending-and-receiving-faults.md)합니다. 전체 샘플은 클라이언트에서 오류를 처리 하는 방법, 참조 [예상 예외](../../../docs/framework/wcf/samples/expected-exceptions.md)합니다.  
+ 기본 클라이언트 채널을 명시적으로 열거나 작업을 호출하여 자동으로 열 때, 클라이언트 또는 채널 개체를 사용하여 작업을 호출할 경우 또는 기본 클라이언트 채널을 닫을 때 클라이언트 응용 프로그램에서 예외가 발생할 수 있습니다. 적어도 응용 프로그램에서 가능한 <xref:System.TimeoutException?displayProperty=nameWithType> 및 <xref:System.ServiceModel.CommunicationException?displayProperty=nameWithType> 예외를 비롯하여 작업에서 반환되는 SOAP 오류로 인해 throw되는 <xref:System.ServiceModel.FaultException?displayProperty=nameWithType> 개체를 처리하도록 하는 것이 좋습니다. 작업 계약에 지정된 SOAP 오류는 형식 매개 변수가 SOAP 오류의 세부 유형인 <xref:System.ServiceModel.FaultException%601?displayProperty=nameWithType>으로, 클라이언트 응용 프로그램에서 발생됩니다. 클라이언트 응용 프로그램에서 오류 조건을 처리 하는 방법에 대 한 자세한 내용은 참조 [송신 및 수신 오류](../../../docs/framework/wcf/sending-and-receiving-faults.md)합니다. 전체 샘플은 클라이언트에서 오류를 처리 하는 방법, 참조 [예상 예외](../../../docs/framework/wcf/samples/expected-exceptions.md)합니다.  
   
 ## <a name="configuring-and-securing-clients"></a>클라이언트 구성 및 보안  
  클라이언트를 구성하려면 클라이언트 생성자와 속성을 사용하여 클라이언트 또는 채널 개체에 대한 대상 끝점 정보를 프로그래밍 방식으로 로드할 수도 있지만, 일반적으로 구성 파일에서 이 정보를 로드해야 합니다. 그러나 다양한 보안 시나리오에 대해 특정 클라이언트 동작을 활성화하는 추가 구성 단계를 수행해야 합니다.  
   
  예를 들어, 서비스 계약에 대한 보안 요구 사항이 서비스 계약 인터페이스에 선언되어 있고, Svcutil.exe에서 구성 파일을 만든 경우 해당 파일에는 일반적으로 서비스의 보안 요구 사항을 지원할 수 있는 바인딩이 포함되어 있습니다. 그러나, 클라이언트 자격 증명 구성처럼 추가 보안 구성이 필요한 경우도 있습니다. 에 대 한 보안 구성에 대 한 자세한 내용은 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 클라이언트 참조 [클라이언트 보안](../../../docs/framework/wcf/securing-clients.md)합니다.  
   
- 또한 클라이언트 응용 프로그램에서 사용자 지정 런타임 동작과 같은 사용자 지정 수정을 사용할 수 있는 경우도 있습니다. [!INCLUDE[crabout](../../../includes/crabout-md.md)] 사용자 지정 클라이언트 동작을 구성을 참조 하는 방법 [클라이언트 동작 구성](../../../docs/framework/wcf/configuring-client-behaviors.md)합니다.  
+ 또한 클라이언트 응용 프로그램에서 사용자 지정 런타임 동작과 같은 사용자 지정 수정을 사용할 수 있는 경우도 있습니다. 사용자 지정 클라이언트 동작을 구성 하는 방법에 대 한 자세한 내용은 참조 [클라이언트 동작 구성](../../../docs/framework/wcf/configuring-client-behaviors.md)합니다.  
   
 ## <a name="creating-callback-objects-for-duplex-services"></a>이중 서비스에 대한 콜백 개체 만들기  
  이중 서비스는 계약 요구 사항에 따라 서비스를 호출하도록 콜백 개체를 제공하기 위해 클라이언트 응용 프로그램에서 구현해야 하는 콜백 계약을 지정합니다. 콜백 개체는 정식 서비스가 아니지만(예를 들어, 콜백 개체를 사용하여 채널을 시작할 수 없음) 구현 및 구성을 위해 일종의 서비스로 간주될 수 있습니다.  

@@ -19,16 +19,16 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: c99d23769e99ea01fe1e1d264361a933228f4c1c
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.openlocfilehash: b177517b809adfbfa4afdc292f98f949a68101bb
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="wpf-walkthroughs"></a>WPF 연습
 연습에서는 일반 시나리오에 대 한 단계별 지침을 제공 합니다. 제품 또는 특정 기능 영역 파악을 효율적으로 시작할 수 있습니다.  
   
- 이 항목의 링크를 포함 [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] 연습 합니다.  
+ 이 항목에는 Windows Presentation Foundation (WPF) 연습의 링크를 포함합니다.  
   
 ## <a name="wpf-designer-walkthroughs"></a>WPF 디자이너 연습  
   

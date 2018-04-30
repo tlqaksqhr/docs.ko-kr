@@ -16,11 +16,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: a730daeadbed0f7453b8312612c096846d4e2cda
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 5b8171f382812480078b76588089871233bdf9ca
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="diagnosing-transactional-applications"></a>트랜잭션 응용 프로그램 진단
 이 항목에서는 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 관리 및 진단 기능을 사용하여 트랜잭션 응용 프로그램 문제를 해결하는 방법에 대해 설명합니다.  
@@ -58,7 +58,7 @@ ms.lasthandoff: 04/28/2018
 |Transactions Flowed Per Second|이 끝점에서 작업에 적용된 초당 트랜잭션의 수입니다. 끝점에 전송된 메시지에 트랜잭션이 있을 때마다 이 카운터가 증가합니다.|  
   
 ## <a name="windows-management-instrumentation"></a>Windows Management Instrumentation  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]는 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] WMI(Windows Management Instrumentation) 공급자를 통해 런타임으로 서비스 검사 데이터를 노출합니다. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] WMI 데이터를 액세스, 참조 [진단에 대 한 Windows Management Instrumentation를 사용 하 여](../../../../docs/framework/wcf/diagnostics/wmi/index.md)합니다.  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]는 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] WMI(Windows Management Instrumentation) 공급자를 통해 런타임으로 서비스 검사 데이터를 노출합니다. WMI 데이터에 액세스 하는 방법에 대 한 자세한 내용은 참조 [진단에 대 한 Windows Management Instrumentation를 사용 하 여](../../../../docs/framework/wcf/diagnostics/wmi/index.md)합니다.  
   
  다양한 읽기 전용 WMI 속성이 서비스에 대해 적용된 트랜잭션 설정을 나타냅니다. 다음 표에서는 이러한 모든 설정을 보여 줍니다.  
   

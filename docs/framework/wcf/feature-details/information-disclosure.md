@@ -16,11 +16,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: c603032e175fd8390abea2db625321d3e3558c1a
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 1b3da2dc36dca913c638ce269213903c2a024a04
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="information-disclosure"></a>정보 공개
 정보 공개를 사용하여 공격자가 시스템에 대해 유용한 정보를 얻을 수 있습니다. 따라서 항상 노출하려는 정보의 내용과 악의가 있는 사용자가 사용해도 되는지 여부를 고려합니다. 다음은 가능한 정보 공개 공격을 나열하고 각 공격에 대한 완화 방안을 제공합니다.  
@@ -29,7 +29,7 @@ ms.lasthandoff: 04/28/2018
  HTTP 전송 계층을 통해 메시지 수준 보안을 사용하는 경우 메시지 수준 보안이 HTTP 헤더를 보호하지 않습니다. HTTP 헤더를 보호하기 위한 유일한 방법은 HTTP 대신 HTTPS 전송을 사용하는 것입니다. HTTPS 전송은 HTTP 헤더를 포함한 전체 메시지를 SSL(Secure Sockets Layer) 프로토콜을 사용하여 암호화합니다.  
   
 ## <a name="policy-information"></a>정책 정보  
- 민감한 발급된 토큰 요구 사항 또는 토큰 발급자 정보가 정책에 노출되는 페더레이션 시나리오의 경우 특히 정책 보안 유지가 중요합니다. 이러한 경우 페더레이션 서비스 정책 끝점의 보안을 유지하여 발급된 토큰에 삽입할 클레임 형식 또는 악의적인 토큰 발급자에게 클라이언트 리디렉션과 같이 공격자가 서비스에 대한 정보를 가져오지 못하도록 하는 것이 좋습니다. 예를 들어, 공격자가 메시지 가로채기(man-in-the-middle) 공격을 실행한 발급자로 끝나도록 페더레이션 신뢰 체인을 다시 구성하여 사용자 이름/암호 쌍을 검색할 수 있습니다. 또한 정책 검색을 통해 바인딩을 가져오는 페더레이션 클라이언트가 가져온 페더레이션 신뢰 체인의 발급자를 신뢰하는지 확인하는 것이 좋습니다. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 페더레이션 시나리오 참조 [페더레이션](../../../../docs/framework/wcf/feature-details/federation.md)합니다.  
+ 민감한 발급된 토큰 요구 사항 또는 토큰 발급자 정보가 정책에 노출되는 페더레이션 시나리오의 경우 특히 정책 보안 유지가 중요합니다. 이러한 경우 페더레이션 서비스 정책 끝점의 보안을 유지하여 발급된 토큰에 삽입할 클레임 형식 또는 악의적인 토큰 발급자에게 클라이언트 리디렉션과 같이 공격자가 서비스에 대한 정보를 가져오지 못하도록 하는 것이 좋습니다. 예를 들어, 공격자가 메시지 가로채기(man-in-the-middle) 공격을 실행한 발급자로 끝나도록 페더레이션 신뢰 체인을 다시 구성하여 사용자 이름/암호 쌍을 검색할 수 있습니다. 또한 정책 검색을 통해 바인딩을 가져오는 페더레이션 클라이언트가 가져온 페더레이션 신뢰 체인의 발급자를 신뢰하는지 확인하는 것이 좋습니다. 페더레이션 시나리오에 대 한 자세한 내용은 참조 [페더레이션](../../../../docs/framework/wcf/feature-details/federation.md)합니다.  
   
 ## <a name="memory-dumps-can-reveal-claim-information"></a>메모리 덤프가 클레임 정보를 노출할 수 있음  
  응용 프로그램이 실패할 경우 예를 들어 Dr. Watson씨가 작성한 파일과 같이 로그 파일에 클레임 정보를 포함할 수 있습니다. 이 정보는 지원 팀과 같은 다른 엔터티에 내보내지 않아야 합니다. 그렇지 않을 경우 개인 데이터가 포함된 클레임 정보도 내보내집니다. 로그 파일을 알 수 없는 엔터티에 보내지 않으면 이러한 문제를 줄일 수 있습니다. 자세한 내용은 참조 [Windows Server 2003](http://go.microsoft.com/fwlink/?LinkId=89160)합니다.  
@@ -67,7 +67,7 @@ MyChannelFactory.Credentials.Windows.ClientCredential = new System.Net.NetworkCr
   
  코드가 도메인 이름을 지정하지 않기 때문에 NTLM이 사용됩니다.  
   
- 도메인을 지정했지만 끝점 ID 기능을 사용하여 잘못된 서비스 사용자 이름을 지정하는 경우 NTLM이 사용됩니다. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 끝점 id를 지정 하는 방법 참조 [서비스 Id 및 인증](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)합니다.  
+ 도메인을 지정했지만 끝점 ID 기능을 사용하여 잘못된 서비스 사용자 이름을 지정하는 경우 NTLM이 사용됩니다. 끝점 id가 지정 하는 방법에 대 한 자세한 내용은 참조 [서비스 Id 및 인증](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [보안 고려 사항](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md)  

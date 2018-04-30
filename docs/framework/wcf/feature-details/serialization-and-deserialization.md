@@ -19,11 +19,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 4d5caa913a49205c387c22a615b2b8da2dba0a77
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 2343ebe5a2a029ddb40da98d28f5c442aa7b6962
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="serialization-and-deserialization"></a>Serialization 및 Deserialization
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 에는 새로운 serialization 엔진인 <xref:System.Runtime.Serialization.DataContractSerializer>가 포함되어 있습니다. <xref:System.Runtime.Serialization.DataContractSerializer> 는 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 개체를 XML로, XML을 .NET Framework 개체로 변환합니다. 이 항목에서는 serializer가 작동하는 방식에 대해 설명합니다.  
@@ -54,7 +54,7 @@ ms.lasthandoff: 04/28/2018
  [!code-vb[c_StandaloneDataContractSerializer#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_standalonedatacontractserializer/vb/source.vb#2)]  
   
 ### <a name="specifying-known-types"></a>알려진 형식 지정  
- Serialize되는 형식 중 <xref:System.Runtime.Serialization.KnownTypeAttribute> 특성이나 일부 다른 메커니즘을 사용하여 아직 처리되지 않은 형식에 다형성이 포함되는 경우, 알려진 가능한 형식 목록을 `knownTypes` 매개 변수를 사용하여 serializer의 생성자에게 전달해야 합니다. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 는 [Data Contract Known Types](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)가 포함되어 있습니다.  
+ Serialize되는 형식 중 <xref:System.Runtime.Serialization.KnownTypeAttribute> 특성이나 일부 다른 메커니즘을 사용하여 아직 처리되지 않은 형식에 다형성이 포함되는 경우, 알려진 가능한 형식 목록을 `knownTypes` 매개 변수를 사용하여 serializer의 생성자에게 전달해야 합니다. 알려진된 형식에 대 한 자세한 내용은 참조 [데이터 계약 알려진 형식을](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)합니다.  
   
  다음 예제에서는 특정 형식의 컬렉션인 `LibraryPatron`이 포함된 클래스 `LibraryItem`을 보여 줍니다. 두 번째 클래스는 `LibraryItem` 형식을 정의합니다. 세 번째와 네 번째 클래스인`Book` 및 `Newspaper`는 `LibraryItem` 클래스에서 상속됩니다.  
   
@@ -267,7 +267,7 @@ ms.lasthandoff: 04/28/2018
   
 -   <xref:System.Runtime.Serialization.NetDataContractSerializer.Serialize%2A> 및 <xref:System.Runtime.Serialization.NetDataContractSerializer.Deserialize%2A> 메서드는 <xref:System.Runtime.Serialization.XmlObjectSerializer.WriteObject%2A> 및 <xref:System.Runtime.Serialization.XmlObjectSerializer.ReadObject%2A> 메서드의 별칭입니다. 이러한 메서드는 이진 또는 SOAP serialization에 보다 일관된 프로그래밍 모델을 제공하기 위해 존재합니다.  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 이러한 기능은 참조 [이진 Serialization](../../../../docs/standard/serialization/binary-serialization.md)합니다.  
+ 이러한 기능에 대 한 자세한 내용은 참조 [이진 Serialization](../../../../docs/standard/serialization/binary-serialization.md)합니다.  
   
  `NetDataContractSerializer` 및 `DataContractSerializer` 에서 사용하는 XML 형식은 일반적으로 호환되지 않습니다. 즉, 이러한 serializer 중 하나로 serialize하고 다른 serializer로 deserialize를 시도할 수 없습니다.  
   

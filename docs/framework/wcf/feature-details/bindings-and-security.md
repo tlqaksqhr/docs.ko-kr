@@ -21,23 +21,23 @@ ms.author: bruceper
 manager: mbaldwin
 ms.workload:
 - dotnet
-ms.openlocfilehash: 5eb1019694f6228edbe3656849b85dfa7611ef18
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 440bbcf03eef8f32a28073bfc9f5aeeb824a50fd
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="bindings-and-security"></a>바인딩 및 보안
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]에 포함된 시스템 제공 바인딩은 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 응용 프로그램을 신속하게 프로그래밍하기 위한 방법을 제공합니다. 한 가지 예외를 통해 모든 바인딩의 기본 보안 스키마가 활성화됩니다. 이 항목은 보안 요구 사항에 적합한 바인딩을 선택하는 데 도움을 줍니다.  
   
- 에 대 한 개요 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 보안 참조 [보안 개요](../../../../docs/framework/wcf/feature-details/security-overview.md)합니다. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 프로그래밍 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 바인딩을 사용 하 여, 참조 [WCF 보안 프로그래밍](../../../../docs/framework/wcf/feature-details/programming-wcf-security.md)합니다.  
+ 에 대 한 개요 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 보안 참조 [보안 개요](../../../../docs/framework/wcf/feature-details/security-overview.md)합니다. 프로그래밍에 대 한 자세한 내용은 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 바인딩을 사용 하 여, 참조 [WCF 보안 프로그래밍](../../../../docs/framework/wcf/feature-details/programming-wcf-security.md)합니다.  
   
  연결에서 보안 된 런타임 동작에 대 한 자세한 내용을 확인할 수 이미 바인딩을 선택 하는 경우 [보안 동작](../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)합니다.  
   
  일부 보안 기능은 시스템 제공 바인딩을 사용하여 프로그래밍할 수 없습니다. 사용자 지정 바인딩을 사용 하 여 더 많은 컨트롤에 대 한 참조 [사용자 지정 바인딩을 사용 하는 보안 기능](../../../../docs/framework/wcf/feature-details/security-capabilities-with-custom-bindings.md)합니다.  
   
 ## <a name="security-functions-of-bindings"></a>바인딩의 보안 기능  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에는 대부분의 요구 사항을 충족하는 여러 시스템 제공 바인딩이 포함되어 있습니다. 또한 특정 바인딩이 요구 사항을 충족하지 않는 경우, 사용자 지정 바인딩을 만들 수도 있습니다. 시스템 제공 바인딩 목록, 참조 [시스템 제공 바인딩](../../../../docs/framework/wcf/system-provided-bindings.md)합니다. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 사용자 지정 바인딩을 참조 [사용자 지정 바인딩을](../../../../docs/framework/wcf/extending/custom-bindings.md)합니다.  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에는 대부분의 요구 사항을 충족하는 여러 시스템 제공 바인딩이 포함되어 있습니다. 또한 특정 바인딩이 요구 사항을 충족하지 않는 경우, 사용자 지정 바인딩을 만들 수도 있습니다. 시스템 제공 바인딩 목록, 참조 [시스템 제공 바인딩](../../../../docs/framework/wcf/system-provided-bindings.md)합니다. 사용자 지정 바인딩에 대 한 자세한 내용은 참조 하십시오. [사용자 지정 바인딩을](../../../../docs/framework/wcf/extending/custom-bindings.md)합니다.  
   
  [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]의 모든 바인딩에는 두 가지 양식 즉, 구성 파일에서 사용되는 XML 요소 및 API가 있습니다. 예를 들어는 `WSHttpBinding` (API) 해당 하는 도구에는 [ \<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md)합니다.  
   

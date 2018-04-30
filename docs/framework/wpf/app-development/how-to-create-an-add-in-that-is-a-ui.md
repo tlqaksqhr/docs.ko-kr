@@ -1,12 +1,13 @@
 ---
-title: "방법: UI인 추가 기능 만들기"
-ms.custom: 
+title: '방법: UI인 추가 기능 만들기'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - creating an add-in that is a UI [WPF]
@@ -16,19 +17,20 @@ helpviewer_keywords:
 - implementing UI add-ins [WPF]
 - pipeline segments [WPF], creating add-ins
 ms.assetid: 86375525-282b-4039-8352-8680051a10ea
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: fea1c718eedb12d49eced9964e4f9045badf07ed
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: cadb992a68f4ee9f06ad37adf71856cdc4f46503
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="how-to-create-an-add-in-that-is-a-ui"></a>방법: UI인 추가 기능 만들기
-에 있는 추가 기능을 만드는 방법을 보여 주는이 예제는 [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] 에서 호스팅되는 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 독립 실행형 응용 프로그램입니다.  
+이 예제는 WPF Windows Presentation Foundation ()가 있는 추가 기능을 만드는 방법을 보여 줍니다는 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 독립 실행형 응용 프로그램입니다.  
   
  추가 기능에 한 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 즉는 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 사용자 정의 컨트롤입니다. 이 사용자 정의 컨트롤의 콘텐츠는 클릭했을 때 메시지 상자를 표시하는 하나의 단추입니다. [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 독립 실행형 응용 프로그램에서 추가 기능을 호스트 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 주 응용 프로그램 창 내용으로 합니다.  
   
@@ -40,7 +42,7 @@ ms.lasthandoff: 12/22/2017
   
 -   기술 자료는 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 에 대 한 확장은 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 추가 기능에서 모델을 찾아볼 수 있습니다: [WPF 추가 기능 개요](../../../../docs/framework/wpf/app-development/wpf-add-ins-overview.md)합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  에 있는 추가 기능을 만드는 한 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 각 파이프라인 세그먼트에서 추가 기능을 하 고 호스트 응용 프로그램에 대 한 특정 코드가 필요 합니다.  
     
   
@@ -64,7 +66,7 @@ ms.lasthandoff: 12/22/2017
   
  [!code-csharp[SimpleAddInIsAUISample#AddInSideAdapterCode](../../../../samples/snippets/csharp/VS_Snippets_Wpf/SimpleAddInIsAUISample/CSharp/AddInSideAdapters/WPFAddIn_ViewToContractAddInSideAdapter.cs#addinsideadaptercode)]  
   
- 모델 추가에서 추가 기능을 반환 하는 위치는 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] (참조 [UI는 추가 기능을 반환 하는지 만들](../../../../docs/framework/wpf/app-development/how-to-create-an-add-in-that-returns-a-ui.md)), 추가 기능 어댑터 변환는 <xref:System.Windows.FrameworkElement> 에 <xref:System.AddIn.Contract.INativeHandleContract> 호출 하 여 <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A>합니다. <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A>도 호출 해야이 모델에는 메서드를 호출 하기 위한 코드를 쓸 수 있는를 구현 해야 합니다. 재정의 하 여이 작업을 수행 <xref:System.AddIn.Pipeline.ContractBase.QueryContract%2A> 호출 하는 코드를 구현 하 고 <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A> 경우 호출 하는 코드 <xref:System.AddIn.Pipeline.ContractBase.QueryContract%2A> 예상는 <xref:System.AddIn.Contract.INativeHandleContract>합니다. 이 경우 호출자가 호스트 쪽 어댑터가 됩니다. 이에 대해서는 이후의 하위 단원에서 설명합니다.  
+ 모델 추가에서 추가 기능을 반환 하는 위치는 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] (참조 [UI는 추가 기능을 반환 하는지 만들](../../../../docs/framework/wpf/app-development/how-to-create-an-add-in-that-returns-a-ui.md)), 추가 기능 어댑터 변환는 <xref:System.Windows.FrameworkElement> 에 <xref:System.AddIn.Contract.INativeHandleContract> 호출 하 여 <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A>합니다. <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A> 도 호출 해야이 모델에는 메서드를 호출 하기 위한 코드를 쓸 수 있는를 구현 해야 합니다. 재정의 하 여이 작업을 수행 <xref:System.AddIn.Pipeline.ContractBase.QueryContract%2A> 호출 하는 코드를 구현 하 고 <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A> 경우 호출 하는 코드 <xref:System.AddIn.Pipeline.ContractBase.QueryContract%2A> 예상는 <xref:System.AddIn.Contract.INativeHandleContract>합니다. 이 경우 호출자가 호스트 쪽 어댑터가 됩니다. 이에 대해서는 이후의 하위 단원에서 설명합니다.  
   
 > [!NOTE]
 >  재정의 해야 <xref:System.AddIn.Pipeline.ContractBase.QueryContract%2A> 호스트 응용 프로그램 간 탭 이동 사용 하도록 설정 하려면이 모델에 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 및 추가 기능 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]합니다. 자세한 내용은의 "WPF 추가 기능을 제한 사항" 참조 [WPF 추가 기능 개요](../../../../docs/framework/wpf/app-development/wpf-add-ins-overview.md)합니다.  

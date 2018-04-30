@@ -21,14 +21,14 @@ ms.author: bruceper
 manager: mbaldwin
 ms.workload:
 - dotnet
-ms.openlocfilehash: 19bb6d4a172568611f73e3a50d0c526016c65aac
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 0545ff40247b7ff86cb6227fa8cf4af8666c3629
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="best-practices-for-security-in-wcf"></a>WCF 보안을 위한 최선의 방법
-다음 단원에는 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]를 사용하여 보안 응용 프로그램을 만들 때 고려할 최선의 방법이 나열되어 있습니다. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 보안 참조 [보안 고려 사항](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md), [데이터에 대 한 보안 고려 사항](../../../../docs/framework/wcf/feature-details/security-considerations-for-data.md), 및 [메타 데이터의 보안 고려 사항](../../../../docs/framework/wcf/feature-details/security-considerations-with-metadata.md)합니다.  
+다음 단원에는 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]를 사용하여 보안 응용 프로그램을 만들 때 고려할 최선의 방법이 나열되어 있습니다. 보안에 대 한 자세한 내용은 참조 [보안 고려 사항](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md), [데이터에 대 한 보안 고려 사항](../../../../docs/framework/wcf/feature-details/security-considerations-for-data.md), 및 [메타 데이터의 보안 고려 사항](../../../../docs/framework/wcf/feature-details/security-considerations-with-metadata.md)합니다.  
   
 ## <a name="identify-services-performing-windows-authentication-with-spns"></a>SPN을 사용하여 Windows 인증을 수행하는 서비스 식별  
  UPN(User Principal Name) 또는 SPN(서비스 사용자 이름)을 사용하여 서비스를 식별할 수 있습니다. 네트워크 서비스와 같은 컴퓨터 계정으로 실행되는 서비스에는 실행 중인 컴퓨터에 해당하는 SPN ID가 있습니다. 사용자 계정으로 실행되는 서비스에는 실행 중인 사용자에 해당하는 UPN ID가 있지만 `setspn` 도구를 사용하여 사용자 계정에 SPN을 할당할 수 있습니다. SPN을 통해 식별될 수 있도록 서비스를 구성하고 서비스에 연결하는 클라이언트가 SPN을 사용하도록 구성하면 특정 공격이 발생할 가능성이 줄어듭니다. 이 지침은 Kerberos 또는 SSPI 협상을 사용하는 바인딩에 적용됩니다.  클라이언트는 SSPI가 NTLM으로 대체되는 경우에 대비해 SPN을 계속 지정해야 합니다.  
@@ -66,7 +66,7 @@ ms.lasthandoff: 04/28/2018
  지정된 바인딩에 발급자 주소와 바인딩을 지정하면 해당 바인딩을 사용하는 끝점에는 로컬 발급자가 사용되지 않습니다. 로컬 발급자를 항상 사용해야 하는 클라이언트는 이러한 바인딩을 사용하지 않도록 하거나 발급자 주소가 null이 되도록 바인딩을 수정해야 합니다.  
   
 ## <a name="saml-token-size-quotas"></a>SAML 토큰 크기 할당량  
- SAML(Security Assertions Markup Language) 토큰이 메시지에 serialize될 때 STS(보안 토큰 서비스)에서 해당 토큰을 발급하거나 클라이언트에서 인증의 일부로 해당 토큰을 서비스에 제공하는 경우, 최대 메시지 크기 할당량은 SAML 토큰 및 다른 메시지 부분을 수용할 수 있도록 충분히 커야 합니다. 일반적으로 기본 메시지 크기 할당량이면 충분합니다. 그러나 SAML 토큰에 수백 개의 클레임이 포함되어 있어 SAML 토큰이 큰 경우에는 serialize된 토큰을 수용할 수 있도록 할당량을 늘려야 합니다. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 할당량, 참조 [데이터에 대 한 보안 고려 사항](../../../../docs/framework/wcf/feature-details/security-considerations-for-data.md)합니다.  
+ SAML(Security Assertions Markup Language) 토큰이 메시지에 serialize될 때 STS(보안 토큰 서비스)에서 해당 토큰을 발급하거나 클라이언트에서 인증의 일부로 해당 토큰을 서비스에 제공하는 경우, 최대 메시지 크기 할당량은 SAML 토큰 및 다른 메시지 부분을 수용할 수 있도록 충분히 커야 합니다. 일반적으로 기본 메시지 크기 할당량이면 충분합니다. 그러나 SAML 토큰에 수백 개의 클레임이 포함되어 있어 SAML 토큰이 큰 경우에는 serialize된 토큰을 수용할 수 있도록 할당량을 늘려야 합니다. 할당량에 대 한 자세한 내용은 참조 [데이터에 대 한 보안 고려 사항](../../../../docs/framework/wcf/feature-details/security-considerations-for-data.md)합니다.  
   
 ## <a name="set-securitybindingelementincludetimestamp-to-true-on-custom-bindings"></a>사용자 지정 바인딩에서 SecurityBindingElement.IncludeTimestamp를 True로 설정  
  사용자 지정 바인딩을 만들 때는 <xref:System.ServiceModel.Channels.SecurityBindingElement.IncludeTimestamp%2A>를 `true`로 설정해야 합니다. 그렇지 않을 경우 <xref:System.ServiceModel.Channels.SecurityBindingElement.IncludeTimestamp%2A>가 `false`로 설정되어 있고 클라이언트가 X509 인증서와 같은 비동기 키 기반 토큰을 사용하는 경우 메시지가 서명되지 않습니다.  

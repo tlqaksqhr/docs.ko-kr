@@ -18,11 +18,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 2ad8a3a79967c42b8e8afdd9b9d796a7a1dfdd79
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 23dbf9808976496686dfe9d595487110da41730b
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="configuring-tracing"></a>추적 구성
 이 항목에서는 추적을 사용하고, 추적을 내보내도록 추적 소스를 구성하고, 추적 수준을 설정하고, 종단 간 추적 상관 관계를 지원하도록 동작 추적 및 전파를 설정하고, 추적에 액세스하도록 추적 수신기를 설정하는 방법에 대해 설명합니다.  
@@ -146,7 +146,7 @@ ms.lasthandoff: 04/28/2018
 </system.diagnostics>  
 ```  
   
- [!INCLUDE[crabout](../../../../../includes/crabout-md.md)] 만드는 사용자 정의 추적 소스, 참조 [추적 확장](../../../../../docs/framework/wcf/samples/extending-tracing.md)합니다.  
+ 사용자 정의 추적 소스를 만드는 방법에 대 한 자세한 내용은 참조 [추적 확장](../../../../../docs/framework/wcf/samples/extending-tracing.md)합니다.  
   
 ## <a name="configuring-trace-listeners-to-consume-traces"></a>추적을 사용하도록 추적 수신기 구성  
  런타임 시 [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)]는 데이터를 처리하는 수신기에 추적 데이터를 공급합니다. [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)]는 <xref:System.Diagnostics>(출력에 사용하는 형식은 다를 수 있음)에 대해 사전 정의된 몇 가지 수신기를 제공합니다. 사용자 지정 수신기 형식을 추가할 수도 있습니다.  
@@ -187,7 +187,7 @@ ms.lasthandoff: 04/28/2018
   
  `propagateActivity` 특성은 동작을 메시지 교환에 참여하는 다른 끝점에 전파해야 하는지 여부를 나타냅니다. 이 값을 `true`로 설정하여 두 끝점에서 생성된 추적 파일을 가져오고 한 끝점의 추적 집합이 다른 끝점의 추적 집합으로 이동한 방법을 확인할 수 있습니다.  
   
- [!INCLUDE[crabout](../../../../../includes/crabout-md.md)] 동작 추적 및 전파 참조 [전파](../../../../../docs/framework/wcf/diagnostics/tracing/propagation.md)합니다.  
+ 동작 추적 및 전파 하는 방법에 대 한 자세한 내용은 참조 [전파](../../../../../docs/framework/wcf/diagnostics/tracing/propagation.md)합니다.  
   
  둘 다 `propagateActivity` 및 `ActivityTracing` 부울 값 System.ServiceModel TraceSource에 적용 합니다. `ActivityTracing` 모든 추적 소스에도 적용 됩니다 값 포함 하 여 [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 또는 사용자 정의 합니다.  
   

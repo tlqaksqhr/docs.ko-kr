@@ -19,14 +19,14 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 95e27941cece3bfb96c4567516d07bcbe07c7490
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 8cd3e7f5ac8f129e29ed080cbf510dfe106edfb7
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="understanding-generated-client-code"></a>생성된 클라이언트 코드 이해
-[ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) 는 클라이언트 응용 프로그램을 빌드하는 데 사용할 클라이언트 응용 프로그램 구성 파일과 클라이언트 코드를 생성합니다. 이 항목에서는 표준 서비스 계약 시나리오를 위해 생성된 코드 예제를 간략히 살펴 봅니다. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 는 [WCF Client Overview](../../../../docs/framework/wcf/wcf-client-overview.md)를 참조하세요.  
+[ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) 는 클라이언트 응용 프로그램을 빌드하는 데 사용할 클라이언트 응용 프로그램 구성 파일과 클라이언트 코드를 생성합니다. 이 항목에서는 표준 서비스 계약 시나리오를 위해 생성된 코드 예제를 간략히 살펴 봅니다. 생성된 된 코드를 사용 하 여 클라이언트 응용 프로그램을 작성 하는 방법에 대 한 자세한 내용은 참조 [WCF 클라이언트 개요](../../../../docs/framework/wcf/wcf-client-overview.md)합니다.  
   
 ## <a name="overview"></a>개요  
  Visual Studio를 사용 하 여 생성 하는 경우 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 프로젝트에 대 한 클라이언트 유형, 일반적으로 불필요 생성 된 클라이언트 코드를 검사 합니다. 동일한 서비스를 수행하는 개발 환경을 사용하지 않는 경우 Svcutil.exe 같은 도구를 사용하여 클라이언트 코드를 생성한 다음 해당 코드를 사용하여 클라이언트 응용 프로그램을 개발할 수 있습니다.  
@@ -73,10 +73,10 @@ ms.lasthandoff: 04/28/2018
   
  [!code-csharp[C_GeneratedCodeFiles#30](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_generatedcodefiles/cs/proxycode.cs#30)]  
   
- 이 경우 데이터 형식은 클라이언트의 특정 예외인 <xref:System.ServiceModel.FaultException%601> 에서 throw되는 세부 유형이며, 여기서 세부 유형 매개 변수는 `microsoft.wcf.documentation.SampleFault`입니다. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 는 [Specifying Data Transfer in Service Contracts](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md)를 참조하세요. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 는 [Sending and Receiving Faults](../../../../docs/framework/wcf/sending-and-receiving-faults.md)를 참조하세요.  
+ 이 경우 데이터 형식은 클라이언트의 특정 예외인 <xref:System.ServiceModel.FaultException%601> 에서 throw되는 세부 유형이며, 여기서 세부 유형 매개 변수는 `microsoft.wcf.documentation.SampleFault`입니다. 데이터 형식에 대 한 자세한 내용은 참조 [서비스 계약에 데이터 전송 지정](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md)합니다. 클라이언트에서 예외를 처리 하는 방법에 대 한 자세한 내용은 참조 [송신 및 수신 오류](../../../../docs/framework/wcf/sending-and-receiving-faults.md)합니다.  
   
 ### <a name="finding-callback-contracts-for-duplex-services"></a>이중 서비스에 대한 콜백 계약 찾기  
- 계약 인터페이스가 <xref:System.ServiceModel.ServiceContractAttribute.CallbackContract%2A?displayProperty=nameWithType> 속성 값을 지정하는 서비스 계약을 찾으면 해당 계약이 이중 계약을 지정합니다. 이중 계약에서는 클라이언트 응용 프로그램이 콜백 계약을 구현하는 콜백 클래스를 만들고 해당 클래스의 인스턴스를 서비스와의 통신에 사용되는 <xref:System.ServiceModel.DuplexClientBase%601?displayProperty=nameWithType> 또는 <xref:System.ServiceModel.DuplexChannelFactory%601?displayProperty=nameWithType>로 전달해야 합니다. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 이중 클라이언트 참조 [하는 방법: 이중 계약와 함께 Access Services](../../../../docs/framework/wcf/feature-details/how-to-access-services-with-a-duplex-contract.md)합니다.  
+ 계약 인터페이스가 <xref:System.ServiceModel.ServiceContractAttribute.CallbackContract%2A?displayProperty=nameWithType> 속성 값을 지정하는 서비스 계약을 찾으면 해당 계약이 이중 계약을 지정합니다. 이중 계약에서는 클라이언트 응용 프로그램이 콜백 계약을 구현하는 콜백 클래스를 만들고 해당 클래스의 인스턴스를 서비스와의 통신에 사용되는 <xref:System.ServiceModel.DuplexClientBase%601?displayProperty=nameWithType> 또는 <xref:System.ServiceModel.DuplexChannelFactory%601?displayProperty=nameWithType>로 전달해야 합니다. 이중 클라이언트에 대 한 자세한 내용은 참조 [하는 방법: 이중 계약와 함께 Access Services](../../../../docs/framework/wcf/feature-details/how-to-access-services-with-a-duplex-contract.md)합니다.  
   
  다음 계약에서는 `SampleDuplexHelloCallback`형식의 콜백 계약을 지정합니다.  
   

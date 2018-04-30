@@ -1,30 +1,32 @@
 ---
-title: "Federation 샘플"
-ms.custom: 
+title: Federation 샘플
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 7e9da0ca-e925-4644-aa96-8bfaf649d4bb
-caps.latest.revision: "26"
+caps.latest.revision: 26
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 6c87984b08a073f37dcf155a39fab0f5e580e985
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 58a8ab012682d5acb04b201c36d931276426ffe8
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="federation-sample"></a>Federation 샘플
 이 샘플에서는 연결된 보안을 보여 줍니다.  
   
 ## <a name="sample-details"></a>샘플 세부 정보  
- [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]에서는 `wsFederationHttpBinding`을 통해 연결된 보안 아키텍처의 배포를 지원합니다. `wsFederationHttpBinding`에서는 요청/회신 통신의 기본 전송 메커니즘으로 HTTP를 사용하고, 인코딩 통신 형식으로 텍스트/XML을 사용하는, 안전하고 안정적이며 상호 운용 가능한 바인딩을 제공합니다. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]페더레이션에 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], 참조 [페더레이션](../../../../docs/framework/wcf/feature-details/federation.md)합니다.  
+ [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]에서는 `wsFederationHttpBinding`을 통해 연결된 보안 아키텍처의 배포를 지원합니다. `wsFederationHttpBinding`에서는 요청/회신 통신의 기본 전송 메커니즘으로 HTTP를 사용하고, 인코딩 통신 형식으로 텍스트/XML을 사용하는, 안전하고 안정적이며 상호 운용 가능한 바인딩을 제공합니다. 페더레이션에 대 한 자세한 내용은 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], 참조 [페더레이션](../../../../docs/framework/wcf/feature-details/federation.md)합니다.  
   
  이 시나리오는 네 부분으로 구성되어 있습니다.  
   

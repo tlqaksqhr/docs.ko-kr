@@ -1,45 +1,47 @@
 ---
-title: "WCF 분석 추적"
-ms.custom: 
+title: WCF 분석 추적
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 6029c7c7-3515-4d36-9d43-13e8f4971790
-caps.latest.revision: "21"
+caps.latest.revision: 21
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 37dea97db8816f68f0331580cfa21daed7f69914
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 57e3ee18848031bce8ffbb54d26353fe36ee1def
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="wcf-analytic-tracing"></a>WCF 분석 추적
 이 샘플에서는 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]에서 [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]의 ETW에 기록하는 분석 추적 스트림에 추적 이벤트를 추가하는 방법을 보여 줍니다. 분석 추적은 성능을 크게 저하시키지 않으면서 서비스를 쉽게 확인할 수 있도록 하기 위한 것입니다. 이 샘플에서는 <xref:System.Diagnostics.Eventing?displayProperty=nameWithType> API를 사용하여 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 서비스와 통합되는 이벤트를 기록하는 방법을 보여 줍니다.  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)] API에 대한 <xref:System.Diagnostics.Eventing?displayProperty=nameWithType>는 <xref:System.Diagnostics.Eventing?displayProperty=nameWithType>을 참조하십시오.  
+ 에 대 한 자세한 내용은 <xref:System.Diagnostics.Eventing?displayProperty=nameWithType> Api 참조 <xref:System.Diagnostics.Eventing?displayProperty=nameWithType>합니다.  
   
  Windows에서 이벤트 추적에 대 한 자세한 참조 [디버깅 개선 및 ETW를 사용한 성능 조정](http://go.microsoft.com/fwlink/?LinkId=166488)합니다.  
   
 ## <a name="disposing-eventprovider"></a>EventProvider 삭제  
- 이 샘플에서는 <xref:System.Diagnostics.Eventing.EventProvider?displayProperty=nameWithType>을 구현하는 <xref:System.IDisposable?displayProperty=nameWithType> 클래스를 사용합니다. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 서비스에 대한 추적을 구현할 경우 서비스의 수명 동안 <xref:System.Diagnostics.Eventing.EventProvider>의 리소스를 사용할 수 있습니다. 이러한 이유로, 또한 읽기 쉽게 하려는 목적으로 이 샘플에서는 래핑된 <xref:System.Diagnostics.Eventing.EventProvider>를 삭제하지 않습니다. 어떤 이유로 서비스에 다른 추적 요구 사항이 있으며 이 리소스를 삭제해야 하는 경우 관리되지 않는 리소스를 삭제하기 위한 최선의 방법에 따라 이 샘플을 수정해야 합니다. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]관리 되지 않는 리소스를 삭제, 참조 [Dispose 메서드를 구현](http://go.microsoft.com/fwlink/?LinkId=166436)합니다.  
+ 이 샘플에서는 <xref:System.Diagnostics.Eventing.EventProvider?displayProperty=nameWithType>을 구현하는 <xref:System.IDisposable?displayProperty=nameWithType> 클래스를 사용합니다. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 서비스에 대한 추적을 구현할 경우 서비스의 수명 동안 <xref:System.Diagnostics.Eventing.EventProvider>의 리소스를 사용할 수 있습니다. 이러한 이유로, 또한 읽기 쉽게 하려는 목적으로 이 샘플에서는 래핑된 <xref:System.Diagnostics.Eventing.EventProvider>를 삭제하지 않습니다. 어떤 이유로 서비스에 다른 추적 요구 사항이 있으며 이 리소스를 삭제해야 하는 경우 관리되지 않는 리소스를 삭제하기 위한 최선의 방법에 따라 이 샘플을 수정해야 합니다. 관리 되지 않는 리소스를 삭제 하는 방법에 대 한 자세한 내용은 참조 [Dispose 메서드를 구현](http://go.microsoft.com/fwlink/?LinkId=166436)합니다.  
   
 ## <a name="self-hosting-vs-web-hosting"></a>자체 호스팅 및 웹 호스팅  
- 웹 호스팅 서비스에 대 한 WCF의 분석 추적에서는 추적을 내보내는 서비스를 식별 하는 데 사용 되는 "hostreference" 필드를 제공 합니다. 확장 가능한 사용자 추적이 이 모델에 관여할 수 있으며 이 샘플에서는 이 작업을 수행하기 위한 최선의 방법을 보여 줍니다. 경우 참조는 웹 호스트 형식은 파이프 ' &#124;' 문자는 결과에 실제로 표시 문자열에는 다음 중 하나가 될 수 있습니다.  
+ 웹 호스팅 서비스에 대 한 WCF의 분석 추적에서는 추적을 내보내는 서비스를 식별 하는 데 사용 되는 "hostreference" 필드를 제공 합니다. 확장 가능한 사용자 추적이 이 모델에 관여할 수 있으며 이 샘플에서는 이 작업을 수행하기 위한 최선의 방법을 보여 줍니다. 경우 참조는 웹 호스트 형식은 파이프 '&#124;' 문자는 결과에 실제로 표시 문자열에는 다음 중 하나가 될 수 있습니다.  
   
 -   응용 프로그램이 루트에 없는 경우  
   
-     \<사이트 이름 >\<ApplicationVirtualPath > &#124;\< ServiceVirtualPath > &#124; \<ServiceName >  
+     \<사이트 이름 >\<ApplicationVirtualPath >&#124;\<ServiceVirtualPath >&#124;\<ServiceName >  
   
 -   응용 프로그램이 루트에 있는 경우  
   
-     \<사이트 이름 > &#124; \<ServiceVirtualPath > &#124; \<ServiceName >  
+     \<사이트 이름 >&#124;\<ServiceVirtualPath >&#124;\<ServiceName >  
   
  자체 호스팅된 서비스에 대 한 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]의 분석 추석 "에서는 HostReference" 필드를 채우지 않습니다. 이 샘플의 `WCFUserEventProvider` 클래스는 자체 호스팅 서비스에서 사용될 때 일관성 있게 동작합니다.  
   

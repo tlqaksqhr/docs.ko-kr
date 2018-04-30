@@ -1,24 +1,26 @@
 ---
-title: "고급 포맷 선택"
-ms.custom: 
+title: 고급 포맷 선택
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: e02d9082-4d55-41d8-9329-98f6d1c77f06
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 124bf59f29ff04e643200edf686f79f573937a03
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 93d7fe0742e16abd92682094ca20d51488516e6e
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="advanced-format-selection"></a>고급 포맷 선택
 이 샘플에서는 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] REST 프로그래밍 모델을 확장하여 나가는 응답의 새로운 형식을 지원하는 방법을 보여 줍니다. 또한 이 샘플에서는 T4 템플릿을 사용하여 응답을 XHTML 페이지로 반환하고, 뷰 스타일 프로그래밍 모델을 구현하는 방법을 보여 줍니다.  
@@ -32,7 +34,7 @@ ms.lasthandoff: 12/22/2017
   
  작업의 반환 형식에 주목해야 합니다. 작업에서 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 이외의 형식을 반환하는 경우 <xref:System.ServiceModel.Channels.Message> REST 프로그래밍 모델에서는 기본적으로 XML 및 JSON 응답 형식만 지원합니다. 그러나 <xref:System.ServiceModel.Channels.Message>를 반환 형식으로 사용하는 경우 개발자가 메시지 내용의 서식이 지정되는 방식을 완전히 제어할 수 있습니다.  
   
- 이 샘플에서는 <xref:System.ServiceModel.Web.WebOperationContext.CreateXmlResponse%2A>, <xref:System.ServiceModel.Web.WebOperationContext.CreateJsonResponse%2A> 및 <xref:System.ServiceModel.Web.WebOperationContext.CreateAtom10Response%2A> 메서드를 사용하여 문자열 목록을 각각 XML, JSON 및 ATOM 메시지로 serialize합니다. jpeg 응답 형식의 경우 <xref:System.ServiceModel.Web.WebOperationContext.CreateStreamResponse%2A> 메서드가 사용되고 이미지가 스트림에 저장됩니다. XHTML 응답의 경우 <xref:System.ServiceModel.Web.WebOperationContext.CreateTextResponse%2A>이 전처리된 T4 템플릿과 함께 사용됩니다. 전처리된 T4 템플릿은 .tt 파일과 자동 생성된 .cs 파일로 구성되어 있습니다. 개발자는 .tt 파일을 사용하여 변수 및 제어 구조가 포함된 템플릿 폼에 응답을 쓸 수 있습니다. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]T4 참조 [생성 아티팩트 템플릿을 사용 하 여 텍스트](http://go.microsoft.com/fwlink/?LinkId=166023)합니다.  
+ 이 샘플에서는 <xref:System.ServiceModel.Web.WebOperationContext.CreateXmlResponse%2A>, <xref:System.ServiceModel.Web.WebOperationContext.CreateJsonResponse%2A> 및 <xref:System.ServiceModel.Web.WebOperationContext.CreateAtom10Response%2A> 메서드를 사용하여 문자열 목록을 각각 XML, JSON 및 ATOM 메시지로 serialize합니다. jpeg 응답 형식의 경우 <xref:System.ServiceModel.Web.WebOperationContext.CreateStreamResponse%2A> 메서드가 사용되고 이미지가 스트림에 저장됩니다. XHTML 응답의 경우 <xref:System.ServiceModel.Web.WebOperationContext.CreateTextResponse%2A>이 전처리된 T4 템플릿과 함께 사용됩니다. 전처리된 T4 템플릿은 .tt 파일과 자동 생성된 .cs 파일로 구성되어 있습니다. 개발자는 .tt 파일을 사용하여 변수 및 제어 구조가 포함된 템플릿 폼에 응답을 쓸 수 있습니다. T4에 대 한 자세한 내용은 참조 [생성 아티팩트 템플릿을 사용 하 여 텍스트](http://go.microsoft.com/fwlink/?LinkId=166023)합니다.  
   
  이 샘플은 자체 호스팅 서비스와 콘솔 응용 프로그램 내에서 실행되는 클라이언트로 구성되어 있습니다. 콘솔 응용 프로그램이 실행되면 클라이언트에서는 서비스로 요청을 보내고 응답의 관련 정보를 콘솔 창에 씁니다.  
   

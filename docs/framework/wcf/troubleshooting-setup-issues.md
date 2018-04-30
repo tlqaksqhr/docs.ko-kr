@@ -1,24 +1,26 @@
 ---
-title: "설치 문제 해결"
-ms.custom: 
+title: 설치 문제 해결
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 1644f885-c408-4d5f-a5c7-a1a907bc8acd
-caps.latest.revision: "15"
+caps.latest.revision: 15
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 284805f8ca1fb9778dc6bccd9807fa86dc7e2d77
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 9238c1a1c9092e6806ee941bd7c992071cf98e09
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="troubleshooting-setup-issues"></a>설치 문제 해결
 이 항목에서는 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 설치 문제를 해결하는 방법을 설명합니다.  
@@ -63,7 +65,7 @@ ms.lasthandoff: 12/22/2017
   
  위에 설명한 문제를 해결하려면 다음 단계를 수행해야 합니다.  
   
-1.  실행 [WMI 진단 유틸리티의 버전 2.0](http://go.microsoft.com/fwlink/?LinkId=94685) WMI 서비스를 복구 합니다. [!INCLUDE[crabout](../../../includes/crabout-md.md)]이 도구를 사용 하 여 참조는 [WMI 진단 유틸리티](http://go.microsoft.com/fwlink/?LinkId=94686) 항목입니다.  
+1.  실행 [WMI 진단 유틸리티의 버전 2.0](http://go.microsoft.com/fwlink/?LinkId=94685) WMI 서비스를 복구 합니다. 이 도구를 사용 하는 방법에 대 한 자세한 내용은 참조는 [WMI 진단 유틸리티](http://go.microsoft.com/fwlink/?LinkId=94686) 항목입니다.  
   
  사용 하 여.NET Framework 3.0 설치를 복구는 **프로그램 추가/제거** 에 애플릿을 **제어판**,.NET Framework 3.0를 제거/다시 설치 하 합니다.  
   

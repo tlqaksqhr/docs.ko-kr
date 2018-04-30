@@ -19,11 +19,11 @@ ms.author: mhopkins
 manager: markl
 ms.workload:
 - dotnet
-ms.openlocfilehash: 5bbd54d4e1e8a6a1eae52f50696aecddd1f8bd8a
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 2db81007b745a1c3ee8434b400ab92a01aeeb6e2
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="caching-in-ui-automation-clients"></a>UI 자동화 클라이언트의 캐싱
 > [!NOTE]
@@ -33,7 +33,7 @@ ms.lasthandoff: 04/26/2018
   
  [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]에서, 캐싱은 데이터의 프리페치를 의미합니다. 이렇게 하면 추가 크로스 프로세스와 통신하지 않고도 데이터에 액세스할 수 있습니다. 캐싱은 일반적으로 UI 자동화 클라이언트 응용 프로그램에서 속성 및 컨트롤 패턴을 일괄적으로 검색하는 데 사용됩니다. 필요에 따라 캐시에서 정보가 검색됩니다. 응용 프로그램은 일반적으로 [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] 에서 변경된 사항이 있음을 나타내는 이벤트에 대한 응답으로 캐시를 주기적으로 업데이트합니다.  
   
- 캐싱의 효율성은 [!INCLUDE[TLA#tla_wpf](../../../includes/tlasharptla-wpf-md.md)] 컨트롤과 서버 쪽 UI 자동화 공급자가 있는 사용자 지정 컨트롤에서 가장 확실하게 확인할 수 있습니다. [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] 컨트롤의 기본 공급자와 같은 클라이언트 쪽 공급자에 액세스할 때는 캐싱의 효율성이 떨어집니다.  
+ 캐싱의 효율성 Windows Presentation Foundation (wpf) 및 서버 쪽 UI 자동화 공급자가 사용자 지정 컨트롤에 가장 두드러지게 합니다. [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] 컨트롤의 기본 공급자와 같은 클라이언트 쪽 공급자에 액세스할 때는 캐싱의 효율성이 떨어집니다.  
   
  캐싱은 응용 프로그램이 <xref:System.Windows.Automation.CacheRequest> 를 활성화한 다음 <xref:System.Windows.Automation.AutomationElement>를 반환하는 메서드 또는 속성을 사용하는 경우에 발생합니다. 예: <xref:System.Windows.Automation.AutomationElement.FindFirst%2A>, <xref:System.Windows.Automation.AutomationElement.FindAll%2A> 메서드는 <xref:System.Windows.Automation.TreeWalker> 캐싱은 할 경우에; 클래스는 예외는 <xref:System.Windows.Automation.CacheRequest> 매개 변수로 지정 (예를 들어 <xref:System.Windows.Automation.TreeWalker.GetFirstChild%28System.Windows.Automation.AutomationElement%2CSystem.Windows.Automation.CacheRequest%29?displayProperty=nameWithType>합니다.  
   

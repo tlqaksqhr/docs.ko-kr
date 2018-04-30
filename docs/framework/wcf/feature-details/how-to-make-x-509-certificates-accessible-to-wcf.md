@@ -1,12 +1,13 @@
 ---
-title: "방법: WCF에서 X.509 인증서에 액세스할 수 있도록 설정"
-ms.custom: 
+title: '방법: WCF에서 X.509 인증서에 액세스할 수 있도록 설정'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -16,16 +17,17 @@ helpviewer_keywords:
 - certificates [WCF], making X.509 certificates accessible to WCF
 - X.509 certificates [WCF], making accessible to WCF
 ms.assetid: a54e407c-c2b5-4319-a648-60e43413664b
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: b95ee7c28c67ff861dc401d1405306c78b9663de
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 77ee21074b6f1bb5a2f5bd4ee653100d3534075d
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="how-to-make-x509-certificates-accessible-to-wcf"></a>방법: WCF에서 X.509 인증서에 액세스할 수 있도록 설정
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]에서 X.509 인증서에 액세스할 수 있게 만들려면 응용 프로그램 코드에서 인증서 저장소 이름과 위치를 지정해야 합니다. 상황에 따라, X.509 인증서와 연결된 개인 키를 포함하는 파일에 대한 액세스가 프로세스 ID에 필요할 수 있습니다. 인증서 저장소에서 X.509 인증서와 연결된 개인 키를 가져오려면 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에 해당 권한이 있어야 합니다. 기본적으로 소유자와 시스템 계정에서만 인증서의 개인 키에 액세스할 수 있습니다.  
@@ -54,7 +56,7 @@ ms.lasthandoff: 12/22/2017
   
     3.  사용 하 여 개인 키 인증서에 대 한 컴퓨터에 있는 위치 결정는 [FindPrivateKey](../../../../docs/framework/wcf/samples/findprivatekey.md) 도구입니다.  
   
-         [FindPrivateKey](../../../../docs/framework/wcf/samples/findprivatekey.md) 도구에 필요한 인증서 저장소 이름, 인증서 저장소 위치 및 인증서를 고유 하 게 식별 하는 것입니다. 도구에서는 인증서의 제목 이름이나 지문을 고유 식별자로 사용합니다. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]인증서 지문을 확인을 참조 하는 방법 [하는 방법: 인증서의 지문을 검색](../../../../docs/framework/wcf/feature-details/how-to-retrieve-the-thumbprint-of-a-certificate.md)합니다.  
+         [FindPrivateKey](../../../../docs/framework/wcf/samples/findprivatekey.md) 도구에 필요한 인증서 저장소 이름, 인증서 저장소 위치 및 인증서를 고유 하 게 식별 하는 것입니다. 도구에서는 인증서의 제목 이름이나 지문을 고유 식별자로 사용합니다. 인증서의 지문을 확인 하는 방법에 대 한 자세한 내용은 참조 [하는 방법: 인증서의 지문을 검색](../../../../docs/framework/wcf/feature-details/how-to-retrieve-the-thumbprint-of-a-certificate.md)합니다.  
   
          다음 코드 예제에서는 [FindPrivateKey](../../../../docs/framework/wcf/samples/findprivatekey.md) 에서 인증서 개인 키의 위치를 확인 하는 도구는 `My` 에 저장할 `CurrentUser` 지문이 있는 `46 dd 0e 7a ed 0b 7a 31 9b 02 a3 a0 43 7a d8 3f 60 40 92 9d`합니다.  
   

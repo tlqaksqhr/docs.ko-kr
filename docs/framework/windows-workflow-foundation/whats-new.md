@@ -17,14 +17,14 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 6604c4fccec50369d83cede58ff2931c2015c5b9
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 73f4364d92c366dc6750144668f722fea93bca2b
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="what39s-new-in-windows-workflow-foundation"></a>어떤&#39;Windows Workflow Foundation의 새로운 s
-Windows WF (Workflow Foundation)에서 [!INCLUDE[netfx40_long](../../../includes/netfx40-long-md.md)] 이전 버전에서 다른 여러 개발 패러다임을 변경 합니다. 이제 워크플로에서 많은 새로운 기능을 보다 쉽게 작성, 실행, 유지 관리 및 구현할 수 있습니다. [!INCLUDE[crabout](../../../includes/crabout-md.md)] 마이그레이션.NET 3.0 및 최신 버전을 사용 하려면.NET 3.5 워크플로 응용 프로그램 참조 [마이그레이션 지침](../../../docs/framework/windows-workflow-foundation/migration-guidance.md)합니다.  
+Windows WF (Workflow Foundation)에서 [!INCLUDE[netfx40_long](../../../includes/netfx40-long-md.md)] 이전 버전에서 다른 여러 개발 패러다임을 변경 합니다. 이제 워크플로에서 많은 새로운 기능을 보다 쉽게 작성, 실행, 유지 관리 및 구현할 수 있습니다. 마이그레이션.NET 3.0 및.NET 3.5 워크플로 응용 프로그램을 최신 버전을 사용 하는 방법에 대 한 자세한 내용은 참조 [마이그레이션 지침](../../../docs/framework/windows-workflow-foundation/migration-guidance.md)합니다.  
   
 ## <a name="workflow-activity-model"></a>워크플로 활동 모델  
  이제 <xref:System.Workflow.Activities.SequentialWorkflowActivity> 또는 <xref:System.Workflow.Activities.StateMachineWorkflowActivity> 클래스를 사용하는 대신 활동이 워크플로를 만드는 기본 단위로 사용됩니다. <xref:System.Activities.Activity> 클래스는 워크플로 동작에 대한 기본 추상화를 제공합니다. 활동 작성자는 기본 사용자 지정 활동 기능에 대해 <xref:System.Activities.CodeActivity>를 구현하거나 다양한 런타임을 사용하는 사용자 지정 활동 기능에 대해 <xref:System.Activities.NativeActivity>를 구현할 수 있습니다. <xref:System.Activities.Activity> 활동 작성자가 다른 측면에서 선언적으로 새로운 동작을 표현 하는 데 사용 되는 클래스 <xref:System.Activities.NativeActivity>, <xref:System.Activities.CodeActivity>, <xref:System.Activities.AsyncCodeActivity>, 또는 <xref:System.Activities.DynamicActivity> 개체를 사용자 지정 개발 또는에 포함 된 [기본 제공 활동 라이브러리](../../../docs/framework/windows-workflow-foundation/net-framework-4-5-built-in-activity-library.md)합니다.  

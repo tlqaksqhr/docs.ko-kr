@@ -1,31 +1,31 @@
 ---
-title: "트랜잭션에서 메시지 일괄 처리"
-ms.custom: 
+title: 트랜잭션에서 메시지 일괄 처리
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - batching messages [WCF]
 ms.assetid: 53305392-e82e-4e89-aedc-3efb6ebcd28c
-caps.latest.revision: 
+caps.latest.revision: 19
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 0587624dd3b9bc12c6e421343ad2cdc1da6b970f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 17d9bd3b58e8320bfe1f62ac56aff59ba52f4374
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="batching-messages-in-a-transaction"></a>트랜잭션에서 메시지 일괄 처리
-대기 중인 응용 프로그램은 트랜잭션을 사용하여 정확하고 안정적인 메시지 배달을 수행합니다. 트랜잭션은 비용이 많이 드는 작업이나 메시지 처리량을 상당히 줄일 수 있습니다. 메시지 처리량을 향상시키기 위한 한가지 방법은 응용 프로그램이 단일 트랜잭션 내에서 여러 메시지를 읽고 처리하는 것입니다. 성능이 좋아질수록 복구 작업도 늘어납니다. 즉, 일괄 처리하는 메시지 수가 증가하면 트랜잭션이 롤백 되는 경우 필요한 복구 작업의 크기도 증가합니다. 트랜잭션 및 세션에서 일괄 처리하는 메시지 사이에는 차이가 있습니다. A *세션* 은 단일 응용 프로그램에 의해 처리 되 고 하나의 단위로 커밋되는 관련된 메시지의 그룹화 합니다. 세션은 일반적으로 관련 메시지 그룹을 함께 처리해야 하는 경우 사용됩니다. 이러한 예로 온라인 쇼핑 웹 사이트를 들 수 있습니다. *일괄 처리* 관련 없는 메시지를 메시지 처리량을 증가 하는 방법, 여러 처리 하는 데 사용 됩니다. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]세션은 참조 [세션의 대기 중인 메시지 그룹화](../../../../docs/framework/wcf/feature-details/grouping-queued-messages-in-a-session.md)합니다. 또한 일괄 처리하는 메시지는 하나의 응용 프로그램에 의해 처리되고 하나의 단위로 커밋되지만 일괄 처리하는 메시지 간에 관계가 없을 수 있습니다. 한 트랜잭션의 메시지를 일괄 처리하는 것이 응용 프로그램이 실행되는 방법을 변경하지 않는 가장 적절한 방법입니다.  
+대기 중인 응용 프로그램은 트랜잭션을 사용하여 정확하고 안정적인 메시지 배달을 수행합니다. 트랜잭션은 비용이 많이 드는 작업이나 메시지 처리량을 상당히 줄일 수 있습니다. 메시지 처리량을 향상시키기 위한 한가지 방법은 응용 프로그램이 단일 트랜잭션 내에서 여러 메시지를 읽고 처리하는 것입니다. 성능이 좋아질수록 복구 작업도 늘어납니다. 즉, 일괄 처리하는 메시지 수가 증가하면 트랜잭션이 롤백 되는 경우 필요한 복구 작업의 크기도 증가합니다. 트랜잭션 및 세션에서 일괄 처리하는 메시지 사이에는 차이가 있습니다. A *세션* 은 단일 응용 프로그램에 의해 처리 되 고 하나의 단위로 커밋되는 관련된 메시지의 그룹화 합니다. 세션은 일반적으로 관련 메시지 그룹을 함께 처리해야 하는 경우 사용됩니다. 이러한 예로 온라인 쇼핑 웹 사이트를 들 수 있습니다. *일괄 처리* 관련 없는 메시지를 메시지 처리량을 증가 하는 방법, 여러 처리 하는 데 사용 됩니다. 세션에 대 한 자세한 내용은 참조 [세션의 대기 중인 메시지 그룹화](../../../../docs/framework/wcf/feature-details/grouping-queued-messages-in-a-session.md)합니다. 또한 일괄 처리하는 메시지는 하나의 응용 프로그램에 의해 처리되고 하나의 단위로 커밋되지만 일괄 처리하는 메시지 간에 관계가 없을 수 있습니다. 한 트랜잭션의 메시지를 일괄 처리하는 것이 응용 프로그램이 실행되는 방법을 변경하지 않는 가장 적절한 방법입니다.  
   
 ## <a name="entering-batching-mode"></a>일괄 처리 모드 시작  
  <xref:System.ServiceModel.Description.TransactedBatchingBehavior> 끝점 동작은 일괄 처리를 제어합니다. 이 끝점 동작을 서비스 끝점에 추가하면 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]가 하나의 트랜잭션에서 메시지를 일괄 처리하도록 합니다. 트랜잭션이 필요한 메시지만 일괄 처리에 배치 됩니다 일부 메시지에 트랜잭션이 필요 하 고로 표시 된 작업에서 보낸 메시지만 `TransactionScopeRequired`  =  `true` 및 `TransactionAutoComplete`  =  `true` 됩니다 일괄 처리에 대 한 것으로 간주 합니다. 경우에 서비스 계약에 대 한 모든 작업으로 표시 되어 `TransactionScopeRequired`  =  `false` 및 `TransactionAutoComplete`  =  `false`, 다음 일괄 처리 모드 시작 되지 않습니다.  
@@ -61,7 +61,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="batching-and-multiple-endpoints"></a>일괄 처리 및 여러 끝점  
  끝점은 주소 및 계약으로 구성됩니다. 동일한 바인딩을 공유하는 여러 끝점이 있을 수 있습니다. 두 개의 끝점이 동일한 바인딩을 공유하고 URI(Uniform Resource Identifier) 또는 큐 주소를 수신 대기할 수 있습니다. 두 개의 끝점을 동일한 큐에서 읽는 경우, 트랜잭션된 일괄 처리 동작이 양쪽 끝점에 추가되고 지정된 일괄 처리 크기 간에 충돌될 수 있습니다. 이러한 동작은 두 개의 트랜잭션된 일괄 처리 동작 간에 지정된 최소 일괄 처리 크기로 일괄 처리를 구현하여 확인합니다. 이 시나리오에서 끝점 중 하나가 트랜잭션된 일괄 처리를 지정하지 않은 경우, 양쪽 끝점 모두 일괄 처리를 사용하지 않습니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 예제에서는 구성 파일에서 `TransactedBatchingBehavior`를 지정하는 방법을 보여 줍니다.  
   
 ```xml  

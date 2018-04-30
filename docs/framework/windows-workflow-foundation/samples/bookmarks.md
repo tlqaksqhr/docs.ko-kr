@@ -1,26 +1,27 @@
 ---
 title: Bookmarks2
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 035fadb2-49fa-4ac7-b398-daf138f66e87
-caps.latest.revision: "11"
+caps.latest.revision: 11
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 3b06ab0e3b80fded2abf3a27d9cf08e499267902
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 7c7a1ac8848bd5eff4e79e7a5e3b058720e7a12c
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="bookmarks"></a>책갈피
-이 샘플에서는 책갈피를 만들어 외부 입력을 받는 사용자 지정 활동을 작성하는 방법을 보여 줍니다. 이 샘플에는 워크플로에서 사용자 지정 활동을 사용하며 실행 중인 워크플로 인스턴스와 연결된 책갈피를 검색하고 다시 시작하는 방법을 보여 주는 기본적인 콘솔 응용 프로그램도 포함되어 있습니다. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]책갈피, 참조 [책갈피](../../../../docs/framework/windows-workflow-foundation/bookmarks.md)합니다.  
+이 샘플에서는 책갈피를 만들어 외부 입력을 받는 사용자 지정 활동을 작성하는 방법을 보여 줍니다. 이 샘플에는 워크플로에서 사용자 지정 활동을 사용하며 실행 중인 워크플로 인스턴스와 연결된 책갈피를 검색하고 다시 시작하는 방법을 보여 주는 기본적인 콘솔 응용 프로그램도 포함되어 있습니다. 책갈피에 대 한 자세한 내용은 참조 [책갈피](../../../../docs/framework/windows-workflow-foundation/bookmarks.md)합니다.  
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>샘플을 설치, 빌드 및 실행하려면  
   

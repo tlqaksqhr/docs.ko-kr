@@ -20,14 +20,14 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 2aa8adc0ce197c3776b8314009fcaa061bed884d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 91b22cbcabba95d8cc91ffbc0b74b51e61dae393
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="wcf-feature-details"></a>WCF 기능 정보
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]를 사용하면 응용 프로그램의 메시징 기능을 제어할 수 있습니다. 이 섹션의 항목에서는 사용 가능한 기능에 대해 자세히 설명합니다. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]기본 프로그래밍, 참조 [기본 WCF 프로그래밍](../../../../docs/framework/wcf/basic-wcf-programming.md)합니다.  
+[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]를 사용하면 응용 프로그램의 메시징 기능을 제어할 수 있습니다. 이 섹션의 항목에서는 사용 가능한 기능에 대해 자세히 설명합니다. 기본 프로그래밍에 대 한 자세한 내용은 참조 [기본 WCF 프로그래밍](../../../../docs/framework/wcf/basic-wcf-programming.md)합니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
  [워크플로 서비스](../../../../docs/framework/wcf/feature-details/workflow-services.md)  

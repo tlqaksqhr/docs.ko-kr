@@ -1,27 +1,29 @@
 ---
-title: "배달 못 한 편지 큐를 사용하여 메시지 전송 오류 처리"
-ms.custom: 
+title: 배달 못 한 편지 큐를 사용하여 메시지 전송 오류 처리
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 9e891c6a-d960-45ea-904f-1a00e202d61a
-caps.latest.revision: "19"
+caps.latest.revision: 19
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 9f10b3895fcdea0c3ab80617acd9874953b7665e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: b51999b1984dedf1baf23e41c1592382849c431b
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="using-dead-letter-queues-to-handle-message-transfer-failures"></a>배달 못 한 편지 큐를 사용하여 메시지 전송 오류 처리
 대기 중인 메시지를 배달하지 못할 수 있습니다. 이러한 실패 메시지는 배달 못 한 편지 큐에 기록됩니다. 네트워크 오류, 삭제된 큐, 꽉 찬 큐, 인증 오류 또는 정시 배달 실패와 같은 이유로 인해 배달 실패가 발생할 수 있습니다.  
@@ -54,7 +56,7 @@ ms.lasthandoff: 12/22/2017
   
 -   양식: net.msmq://localhost/private/의 사용자 지정 배달 못 한 편지 큐에서 메시지를 알아보려면 URI 여야 합니다\<*사용자 지정 dlq가 이름*> 여기서 *사용자 지정 dlq가 이름* 사용자 지정의 이름 배달 못 한 편지 큐입니다.  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]큐 주소를 참조 하는 방법 [서비스 끝점 및 큐 주소 지정](../../../../docs/framework/wcf/feature-details/service-endpoints-and-queue-addressing.md)합니다.  
+ 주소 큐 하는 방법에 대 한 자세한 내용은 참조 [서비스 끝점 및 큐 주소 지정](../../../../docs/framework/wcf/feature-details/service-endpoints-and-queue-addressing.md)합니다.  
   
  수신자의 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 스택에서는 서비스가 수신 대기하는 주소와 메시지의 주소가 일치합니다. 주소가 일치하면 메시지가 디스패치되고, 그렇지 않으면 메시지가 디스패치되지 않습니다. 일반적으로 배달 못 한 편지 큐에 있는 메시지는 배달 못 한 편지 큐 서비스가 아닌 서비스에 주소가 지정되기 때문에 배달 못 한 편지 큐에서 메시지를 읽을 때 문제가 발생할 수 있습니다. 따라서 배달 못 한 편지 큐에서 메시지를 읽는 서비스는 수신자와 관계없이 큐의 모든 메시지를 일치시키도록 스택에 지시하는 주소 필터 `ServiceBehavior`를 설치해야 합니다. 특히 `ServiceBehavior`를 <xref:System.ServiceModel.AddressFilterMode.Any> 매개 변수와 함께 배달 못 한 편지 큐에서 메시지를 읽는 서비스에 추가해야 합니다.  
   
@@ -63,7 +65,7 @@ ms.lasthandoff: 12/22/2017
   
  `ReceiveErrorHandling`이 `Reject`로 설정된 경우 사용자 지정 배달 못 한 편지 큐에서 메시지를 읽으면 포이즌 메시지가 배달 못 한 시스템 큐에 저장됩니다. 배달 못 한 시스템 큐에서 메시지를 읽는 경우 메시지가 손실/삭제됩니다. MSMQ에서 배달 못 한 시스템 큐의 거부로 인해 메시지가 손실/삭제됩니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 예제에서는 배달 못 한 편지 큐를 만드는 방법 및 이를 사용하여 만료된 메시지를 처리하는 방법을 보여 줍니다. 예제를 기반으로 하는 예제 [하는 방법: WCF 끝점으로 메시지 큐에 대기를 교환](../../../../docs/framework/wcf/feature-details/how-to-exchange-queued-messages-with-wcf-endpoints.md)합니다. 다음 예제에서는 각 응용 프로그램의 배달 못 한 편지 큐를 사용하는 주문 처리 서비스에 클라이언트 코드를 작성하는 방법을 보여 줍니다. 또한 예제에서는 배달 못 한 편지 큐에서 메시지를 처리하는 방법을 보여 줍니다.  
   
  다음은 각 응용 프로그램의 배달 못 한 편지 큐를 지정하는 클라이언트의 코드입니다.  

@@ -1,27 +1,29 @@
 ---
-title: "연습: 사용자 지정 클라이언트 및 서비스 자격 증명 만들기"
-ms.custom: 
+title: '연습: 사용자 지정 클라이언트 및 서비스 자격 증명 만들기'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 2b5ba5c3-0c6c-48e9-9e46-54acaec443ba
-caps.latest.revision: "13"
+caps.latest.revision: 13
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 99ee624ef6198ed67141d3d92e63fb9ba815c4fd
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: cf9f6c1ad5be3a2d63140f03f74713809624e277
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="walkthrough-creating-custom-client-and-service-credentials"></a>연습: 사용자 지정 클라이언트 및 서비스 자격 증명 만들기
 이 항목에서는 사용자 지정 클라이언트와 서비스 자격 증명을 구현하는 방법 및 응용 프로그램 코드로부터 사용자 지정 자격 증명을 사용하는 방법을 보여 줍니다.  
@@ -35,7 +37,7 @@ ms.lasthandoff: 01/19/2018
   
  <xref:System.ServiceModel.Description.ClientCredentials> 및 <xref:System.ServiceModel.Description.ServiceCredentials> 클래스는 모두 <xref:System.ServiceModel.Security.SecurityCredentialsManager> 반환에 대한 계약을 정의하는 추상 <xref:System.IdentityModel.Selectors.SecurityTokenManager> 클래스로부터 상속됩니다.  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]에 적합 하 게 하 고 자격 증명 클래스는 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 보안 아키텍처 참조 [보안 아키텍처](http://msdn.microsoft.com/library/16593476-d36a-408d-808c-ae6fd483e28f)합니다.  
+ 자격 증명 클래스와에 적합 하 게 하는 방법에 대 한 자세한 내용은 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 보안 아키텍처 참조 [보안 아키텍처](http://msdn.microsoft.com/library/16593476-d36a-408d-808c-ae6fd483e28f)합니다.  
   
  [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서 제공되는 기본 구현은 시스템 제공 자격 증명 형식을 지원하고, 이러한 자격 증명 형식을 처리할 수 있는 보안 토큰 관리자를 만듭니다.  
   
@@ -81,11 +83,11 @@ ms.lasthandoff: 01/19/2018
   
 1.  <xref:System.ServiceModel.ClientCredentialsSecurityTokenManager>에서 파생된 새 클래스를 정의합니다.  
   
-2.  선택 사항입니다. 사용자 지정 <xref:System.IdentityModel.Selectors.SecurityTokenManager.CreateSecurityTokenProvider%28System.IdentityModel.Selectors.SecurityTokenRequirement%29> 구현을 만들어야 하는 경우 <xref:System.IdentityModel.Selectors.SecurityTokenProvider> 메서드를 재정의합니다. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]사용자 지정 보안 토큰 공급자 참조 [하는 방법: 사용자 지정 보안 토큰 공급자 만들기](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-provider.md)합니다.  
+2.  선택 사항입니다. 사용자 지정 <xref:System.IdentityModel.Selectors.SecurityTokenManager.CreateSecurityTokenProvider%28System.IdentityModel.Selectors.SecurityTokenRequirement%29> 구현을 만들어야 하는 경우 <xref:System.IdentityModel.Selectors.SecurityTokenProvider> 메서드를 재정의합니다. 사용자 지정 보안 토큰 공급자에 대 한 자세한 내용은 참조 [하는 방법: 사용자 지정 보안 토큰 공급자 만들기](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-provider.md)합니다.  
   
-3.  선택 사항입니다. 사용자 지정 <xref:System.IdentityModel.Selectors.SecurityTokenManager.CreateSecurityTokenAuthenticator%28System.IdentityModel.Selectors.SecurityTokenRequirement%2CSystem.IdentityModel.Selectors.SecurityTokenResolver%40%29> 구현을 만들어야 하는 경우 <xref:System.IdentityModel.Selectors.SecurityTokenAuthenticator> 메서드를 재정의합니다. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]사용자 지정 보안 토큰 인증자 참조 [하는 방법: 사용자 지정 보안 토큰 인증자를 만들](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-authenticator.md)합니다.  
+3.  선택 사항입니다. 사용자 지정 <xref:System.IdentityModel.Selectors.SecurityTokenManager.CreateSecurityTokenAuthenticator%28System.IdentityModel.Selectors.SecurityTokenRequirement%2CSystem.IdentityModel.Selectors.SecurityTokenResolver%40%29> 구현을 만들어야 하는 경우 <xref:System.IdentityModel.Selectors.SecurityTokenAuthenticator> 메서드를 재정의합니다. 사용자 지정 보안 토큰 인증자에 대 한 자세한 내용은 참조 [하는 방법: 사용자 지정 보안 토큰 인증자를 만들](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-authenticator.md)합니다.  
   
-4.  선택 사항입니다. 사용자 지정 <xref:System.IdentityModel.Selectors.SecurityTokenManager.CreateSecurityTokenSerializer%2A>를 만들어야 하는 경우 <xref:System.IdentityModel.Selectors.SecurityTokenSerializer> 메서드를 재정의합니다. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]사용자 지정 보안 토큰 및 사용자 지정 보안 토큰 serializer 참조 [하는 방법: 사용자 지정 토큰 만들기](../../../../docs/framework/wcf/extending/how-to-create-a-custom-token.md)합니다.  
+4.  선택 사항입니다. 사용자 지정 <xref:System.IdentityModel.Selectors.SecurityTokenManager.CreateSecurityTokenSerializer%2A>를 만들어야 하는 경우 <xref:System.IdentityModel.Selectors.SecurityTokenSerializer> 메서드를 재정의합니다. 사용자 지정 보안 토큰 및 사용자 지정 보안 토큰 serializer에 대 한 자세한 내용은 참조 [하는 방법: 사용자 지정 토큰 만들기](../../../../docs/framework/wcf/extending/how-to-create-a-custom-token.md)합니다.  
   
      [!code-csharp[c_CustomCredentials#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customcredentials/cs/source.cs#2)]
      [!code-vb[c_CustomCredentials#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customcredentials/vb/client/client.vb#2)]  
@@ -169,11 +171,11 @@ ms.lasthandoff: 01/19/2018
   
 1.  <xref:System.ServiceModel.Security.ServiceCredentialsSecurityTokenManager> 클래스에서 파생된 새 클래스를 정의합니다.  
   
-2.  선택 사항입니다. 사용자 지정 <xref:System.IdentityModel.Selectors.SecurityTokenManager.CreateSecurityTokenProvider%2A> 구현을 만들어야 하는 경우 <xref:System.IdentityModel.Selectors.SecurityTokenProvider> 메서드를 재정의합니다. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]사용자 지정 보안 토큰 공급자 참조 [하는 방법: 사용자 지정 보안 토큰 공급자 만들기](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-provider.md)합니다.  
+2.  선택 사항입니다. 사용자 지정 <xref:System.IdentityModel.Selectors.SecurityTokenManager.CreateSecurityTokenProvider%2A> 구현을 만들어야 하는 경우 <xref:System.IdentityModel.Selectors.SecurityTokenProvider> 메서드를 재정의합니다. 사용자 지정 보안 토큰 공급자에 대 한 자세한 내용은 참조 [하는 방법: 사용자 지정 보안 토큰 공급자 만들기](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-provider.md)합니다.  
   
-3.  선택 사항입니다. 사용자 지정 <xref:System.IdentityModel.Selectors.SecurityTokenManager.CreateSecurityTokenAuthenticator%2A> 구현을 만들어야 하는 경우 <xref:System.IdentityModel.Selectors.SecurityTokenAuthenticator> 메서드를 재정의합니다. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]사용자 지정 보안 토큰 인증자 참조 [하는 방법: 사용자 지정 보안 토큰 인증자를 만들](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-authenticator.md) 항목입니다.  
+3.  선택 사항입니다. 사용자 지정 <xref:System.IdentityModel.Selectors.SecurityTokenManager.CreateSecurityTokenAuthenticator%2A> 구현을 만들어야 하는 경우 <xref:System.IdentityModel.Selectors.SecurityTokenAuthenticator> 메서드를 재정의합니다. 사용자 지정 보안 토큰 인증자에 대 한 자세한 내용은 참조 [하는 방법: 사용자 지정 보안 토큰 인증자를 만들](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-authenticator.md) 항목입니다.  
   
-4.  선택 사항입니다. 사용자 지정 <xref:System.IdentityModel.Selectors.SecurityTokenManager.CreateSecurityTokenSerializer%28System.IdentityModel.Selectors.SecurityTokenVersion%29>를 만들어야 하는 경우 <xref:System.IdentityModel.Selectors.SecurityTokenSerializer> 메서드를 재정의합니다. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]사용자 지정 보안 토큰 및 사용자 지정 보안 토큰 serializer 참조 [하는 방법: 사용자 지정 토큰 만들기](../../../../docs/framework/wcf/extending/how-to-create-a-custom-token.md)합니다.  
+4.  선택 사항입니다. 사용자 지정 <xref:System.IdentityModel.Selectors.SecurityTokenManager.CreateSecurityTokenSerializer%28System.IdentityModel.Selectors.SecurityTokenVersion%29>를 만들어야 하는 경우 <xref:System.IdentityModel.Selectors.SecurityTokenSerializer> 메서드를 재정의합니다. 사용자 지정 보안 토큰 및 사용자 지정 보안 토큰 serializer에 대 한 자세한 내용은 참조 [하는 방법: 사용자 지정 토큰 만들기](../../../../docs/framework/wcf/extending/how-to-create-a-custom-token.md)합니다.  
   
      [!code-csharp[c_CustomCredentials#5](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customcredentials/cs/source.cs#5)]
      [!code-vb[c_CustomCredentials#5](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customcredentials/vb/service/service.vb#5)]  

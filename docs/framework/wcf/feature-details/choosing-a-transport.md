@@ -18,11 +18,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 7b051cdeebf83b34b6e503d8d9cb54a38a46a2a6
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 989ae3d70bce2a4cb374904ee6b2f30f770ccf8a
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="choosing-a-transport"></a>전송 선택
 이 항목에서는 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]에 포함된 3개의 주요 전송인 HTTP, TCP 및 명명된 파이프 사이의 선택 기준에 대해 설명합니다. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에는 MSMQ라고도 하는 메시지 큐 전송도 포함되지만, 이 문서에서는 메시지 큐에 대해 설명하지 않습니다.  
@@ -39,7 +39,7 @@ ms.lasthandoff: 04/28/2018
  이 단원에서는 3개의 주요 전송 중에서 하나를 선택하는 데 대한 주된 이유를 자세한 의사 결정 차트와 함께 설명합니다.  
   
 ### <a name="when-to-use-http-transport"></a>HTTP 전송을 사용해야 하는 경우  
- HTTP는 클라이언트와 서버 사이의 요청/응답 프로토콜입니다. 가장 일반적인 응용 프로그램은 웹 서버와 통신하는 웹 브라우저 클라이언트로 구성됩니다. 클라이언트에서 서버로 요청을 보내면 서버에서 클라이언트 요청 메시지를 수신 대기합니다. 서버에서 요청을 받으면 요청 상태가 포함된 응답을 반환합니다. 성공적인 경우 웹 페이지, 오류 메시지 또는 기타 정보와 같은 선택적인 데이터가 반환됩니다. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] HTTP 프로토콜 참조 [HTTP-Hypertext Transfer Protocol](http://go.microsoft.com/fwlink/?LinkId=94858)합니다.  
+ HTTP는 클라이언트와 서버 사이의 요청/응답 프로토콜입니다. 가장 일반적인 응용 프로그램은 웹 서버와 통신하는 웹 브라우저 클라이언트로 구성됩니다. 클라이언트에서 서버로 요청을 보내면 서버에서 클라이언트 요청 메시지를 수신 대기합니다. 서버에서 요청을 받으면 요청 상태가 포함된 응답을 반환합니다. 성공적인 경우 웹 페이지, 오류 메시지 또는 기타 정보와 같은 선택적인 데이터가 반환됩니다. HTTP 프로토콜에 대 한 자세한 내용은 참조 [HTTP-Hypertext Transfer Protocol](http://go.microsoft.com/fwlink/?LinkId=94858)합니다.  
   
  HTTP 프로토콜은 연결 기반이 아닙니다. 응답을 보내고 나면 상태가 유지되지 않습니다. 여러 페이지로 된 트랜잭션을 처리하려면 응용 프로그램에서 모든 필요한 상태를 유지해야 합니다.  
   

@@ -16,11 +16,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 9858475520b949d5b9ee62ecdc0994bbb9398953
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: ae5eb9a10f438f1bb76c51c3c9da68273d94ab57
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="selecting-a-credential-type"></a>자격 증명 형식 선택
 *자격 증명* 데이터는 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 요구 된 id 또는 기능을 설정 하기 위해 사용 합니다. 예를 들어 여권은 정부에서 국가나 지역의 시민권을 입증하기 위해 발급하는 자격 증명입니다. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서 자격 증명은 사용자 이름 토큰 및 X.509 인증서 같은 여러 형식을 사용할 수 있습니다. 이 항목에서는 자격 증명, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서 자격 증명이 사용되는 방법 및 응용 프로그램에 맞는 자격 증명을 선택하는 방법에 대해 설명합니다.  
@@ -108,7 +108,7 @@ ms.lasthandoff: 04/28/2018
 > [!IMPORTANT]
 >  ID를 전환할 수 없을 때(보안 컨텍스트 설정이 켜진 경우의 기본 동작) 주의해야 할 경우가 있습니다. 두 번째 서비스와 통신하는 서비스를 만드는 경우 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 클라이언트를 두 번째 서비스에 여는 데 사용되는 ID를 변경할 수 없습니다. 여러 클라이언트가 첫 번째 서비스를 사용할 수 있고 두 번째 서비스에 액세스할 때 서비스가 클라이언트를 가장하는 경우 이것이 문제가 됩니다. 서비스가 모든 호출자에 대해 동일한 클라이언트를 다시 사용하는 경우 두 번째 서비스에 대한 모든 호출은 클라이언트를 두 번째 서비스에 여는 데 사용된 첫 번째 호출자의 ID로 수행됩니다. 즉, 서비스는 모든 클라이언트에 대해 첫 번째 클라이언트의 ID를 사용하여 두 번째 서비스와 통신합니다. 이 경우 권한 상승이 발생할 수 있습니다. 원하는 서비스 동작이 아닌 경우 각 호출자를 추적하여 각 호출자와 관련해서 두 번째 서비스에 대해 새 클라이언트를 만들고 서비스가 올바른 호출자에 대해 올바른 클라이언트만 사용하여 두 번째 서비스와 통신하도록 해야 합니다.  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 자격 증명 및 보안 세션 참조 [보안 세션에 대 한 보안 고려 사항](../../../../docs/framework/wcf/feature-details/security-considerations-for-secure-sessions.md)합니다.  
+ 자격 증명 및 보안 세션에 대 한 자세한 내용은 참조 [보안 세션에 대 한 보안 고려 사항](../../../../docs/framework/wcf/feature-details/security-considerations-for-secure-sessions.md)합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  <xref:System.ServiceModel.ClientBase%601?displayProperty=nameWithType>  

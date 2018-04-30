@@ -20,11 +20,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: d9650fd6a4fa40cb425c9f15d4a12e6c73d8c599
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: c182cf5e5cc9346645f15293060671a0a0ce1caf
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="what-is-windows-communication-foundation"></a>Windows Communication Foundation 정의
 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 는 서비스 지향 응용 프로그램을 만드는 데 사용되는 프레임워크입니다. [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]를 사용하면 데이터를 비동기 메시지로 서비스 끝점 간에 전송할 수 있습니다. 서비스 끝점은 IIS에서 호스팅하는 계속 사용 가능한 서비스의 일부분일 수도 있고 응용 프로그램에서 호스팅되는 서비스일 수도 있습니다. 또한 끝점은 서비스 끝점에서 데이터를 요청하는 서비스의 클라이언트일 수 있습니다. 메시지는 XML로 전송되는 한 문자나 단어처럼 간단할 수도 있고 이진 데이터 스트림처럼 복잡할 수도 있습니다. 다음은 몇 가지 샘플 시나리오입니다.  
@@ -52,11 +52,11 @@ ms.lasthandoff: 04/28/2018
   
 -   **상호 운용성**  
   
-     [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 는 웹 서비스 상호 운용성을 위한 최신 업계 표준을 구현합니다. [!INCLUDE[crabout](../../../includes/crabout-md.md)] 는 [Interoperability and Integration](../../../docs/framework/wcf/feature-details/interoperability-and-integration.md).  
+     [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 는 웹 서비스 상호 운용성을 위한 최신 업계 표준을 구현합니다. 지원 되는 표준에 대 한 자세한 내용은 참조 [상호 운용성 및 통합](../../../docs/framework/wcf/feature-details/interoperability-and-integration.md)합니다.  
   
 -   **다양한 메시지 패턴**  
   
-     메시지가 교환되는 패턴에는 여러 가지가 있습니다. 그 중에서 가장 일반적인 패턴인 요청/회신 패턴에서는 한 끝점에서 두 번째 끝점의 데이터를 요청합니다. 그러면 두 번째 끝점에서 회신을 합니다. 또한 단일 끝점에서 회신을 기대하지 않고 메시지를 보내는 단방향 메시지와 같은 패턴도 있습니다. 보다 복잡한 패턴인 이중 교환 패턴은 두 끝점이 하나의 연결을 설정하여 데이터를 주고 받는 것으로, 인스턴트 메시징 프로그램과 유사합니다. [!INCLUDE[crabout](../../../includes/crabout-md.md)] 를 사용하여 다양한 메시지 교환 패턴을 구현하는 방법에 대한 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 는 [Contracts](../../../docs/framework/wcf/feature-details/contracts.md).  
+     메시지가 교환되는 패턴에는 여러 가지가 있습니다. 그 중에서 가장 일반적인 패턴인 요청/회신 패턴에서는 한 끝점에서 두 번째 끝점의 데이터를 요청합니다. 그러면 두 번째 끝점에서 회신을 합니다. 또한 단일 끝점에서 회신을 기대하지 않고 메시지를 보내는 단방향 메시지와 같은 패턴도 있습니다. 보다 복잡한 패턴인 이중 교환 패턴은 두 끝점이 하나의 연결을 설정하여 데이터를 주고 받는 것으로, 인스턴트 메시징 프로그램과 유사합니다. 사용 하 여 서로 다른 메시지 교환 패턴을 구현 하는 방법에 대 한 자세한 내용은 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 참조 [계약](../../../docs/framework/wcf/feature-details/contracts.md)합니다.  
   
 -   **서비스 메타데이터**  
   
@@ -72,11 +72,11 @@ ms.lasthandoff: 04/28/2018
   
 -   **다양한 전송 및 인코딩**  
   
-     기본 제공되는 여러 전송 프로토콜 및 인코딩 중 원하는 항목을 사용하여 메시지를 전송할 수 있습니다. 가장 일반적인 프로토콜 및 인코딩 텍스트 인코딩된 하이퍼텍스트 전송 프로토콜 (HTTP)를 사용 하 여 World Wide Web에는 사용 하기 위해 SOAP 메시지를 보내기 위한 것입니다. [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 에서는 TCP, 명명된 파이프 또는 MSMQ를 사용하여 메시지를 보낼 수도 있습니다. 이러한 메시지는 텍스트로 인코딩할 수도 있고 최적화된 이진 형식을 사용하여 인코딩할 수도 있습니다.  이진 데이터는 MTOM 표준을 사용하여 보내는 것이 효율적입니다. 제공되는 전송 또는 인코딩 중에서 요구 사항에 적합한 항목이 없는 경우에는 사용자 지정 전송 또는 인코딩을 직접 만들 수 있습니다. [!INCLUDE[crabout](../../../includes/crabout-md.md)] 전송 및 인코딩에서 지 원하는 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 참조 [전송](../../../docs/framework/wcf/feature-details/transports.md)합니다.  
+     기본 제공되는 여러 전송 프로토콜 및 인코딩 중 원하는 항목을 사용하여 메시지를 전송할 수 있습니다. 가장 일반적인 프로토콜 및 인코딩 텍스트 인코딩된 하이퍼텍스트 전송 프로토콜 (HTTP)를 사용 하 여 World Wide Web에는 사용 하기 위해 SOAP 메시지를 보내기 위한 것입니다. [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 에서는 TCP, 명명된 파이프 또는 MSMQ를 사용하여 메시지를 보낼 수도 있습니다. 이러한 메시지는 텍스트로 인코딩할 수도 있고 최적화된 이진 형식을 사용하여 인코딩할 수도 있습니다.  이진 데이터는 MTOM 표준을 사용하여 보내는 것이 효율적입니다. 제공되는 전송 또는 인코딩 중에서 요구 사항에 적합한 항목이 없는 경우에는 사용자 지정 전송 또는 인코딩을 직접 만들 수 있습니다. 전송 및 인코딩 지원에 대 한 자세한 내용은 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 참조 [전송](../../../docs/framework/wcf/feature-details/transports.md)합니다.  
   
 -   **신뢰할 수 있는 메시지 및 대기 중인 메시지**  
   
-     [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 에서는 WS-Reliable Messaging을 통해 구현되는 신뢰할 수 있는 세션과 MSMQ를 사용하여 메시지를 신뢰할 수 있는 방식으로 교환할 수 있습니다. [!INCLUDE[crabout](../../../includes/crabout-md.md)] 에서 지원되는 신뢰할 수 있는 메시징 및 대기 중인 메시징에 대한 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 는 [Queues and Reliable Sessions](../../../docs/framework/wcf/feature-details/queues-and-reliable-sessions.md).  
+     [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 에서는 WS-Reliable Messaging을 통해 구현되는 신뢰할 수 있는 세션과 MSMQ를 사용하여 메시지를 신뢰할 수 있는 방식으로 교환할 수 있습니다. 지원에 안정적이 고 큐에 대기 중인 메시징에 대 한 자세한 내용은 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 참조 [큐 및 신뢰할 수 있는 세션](../../../docs/framework/wcf/feature-details/queues-and-reliable-sessions.md)합니다.  
   
 -   **지속적 메시지**  
   
@@ -84,7 +84,7 @@ ms.lasthandoff: 04/28/2018
   
 -   **트랜잭션**  
   
-     WCF는 WS-AtomicTtransactions, <xref:System.Transactions> 네임스페이스의 API 및 Microsoft Distributed Transaction Coordinator의 세 가지 트랜잭션 모델 중 하나를 사용하는 트랜잭션도 지원합니다. [!INCLUDE[crabout](../../../includes/crabout-md.md)] 의 트랜잭션 지원에 대한 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 는 [트랜잭션](../../../docs/framework/wcf/feature-details/transactions-in-wcf.md).  
+     WCF는 WS-AtomicTtransactions, <xref:System.Transactions> 네임스페이스의 API 및 Microsoft Distributed Transaction Coordinator의 세 가지 트랜잭션 모델 중 하나를 사용하는 트랜잭션도 지원합니다. 지원 트랜잭션에 대 한 자세한 내용은 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 참조 [트랜잭션을](../../../docs/framework/wcf/feature-details/transactions-in-wcf.md)합니다.  
   
 -   **AJAX 및 REST 지원**  
   
@@ -92,7 +92,7 @@ ms.lasthandoff: 04/28/2018
   
 -   **확장성**  
   
-     [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 아키텍처에는 다양한 확장성 지점이 있습니다. 추가적인 기능이 필요한 경우에는 여러 진입점을 통해 서비스 동작을 사용자 지정할 수 있습니다. [!INCLUDE[crabout](../../../includes/crabout-md.md)] 사용 가능한 확장성 지점 참조 [WCF 확장](../../../docs/framework/wcf/extending/index.md)합니다.  
+     [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 아키텍처에는 다양한 확장성 지점이 있습니다. 추가적인 기능이 필요한 경우에는 여러 진입점을 통해 서비스 동작을 사용자 지정할 수 있습니다. 사용 가능한 확장에 대 한 자세한 내용은 포인트 참조 [WCF 확장](../../../docs/framework/wcf/extending/index.md)합니다.  
   
 ## <a name="wcf-integration-with-other-microsoft-technologies"></a>WCF와 다른 Microsoft 기술의 통합  
  [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 는 유동적인 플랫폼입니다. 이와 같이 뛰어난 유연성으로 인해 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 는 다른 여러 Microsoft 제품에서도 사용됩니다. [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]의 기본 사항을 이해하면 이러한 제품을 사용할 때 해당 기능을 즉시 활용할 수 있습니다.  

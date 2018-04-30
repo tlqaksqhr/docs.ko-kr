@@ -1,24 +1,26 @@
 ---
-title: "폼 게시"
-ms.custom: 
+title: 폼 게시
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: fa6f84f9-2e07-4e3c-92d0-a245308b7dff
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: fe1be9177f3e811a3037377360f46f42904d5af3
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 31d2ebbdb6f899390d7b3af485c1583fb80ae6dc
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="form-post"></a>폼 게시
 이 샘플에서는 WCF REST 프로그래밍 모델을 확장하여 들어오는 요청의 새로운 형식을 지원하는 방법을 보여 줍니다. 이 샘플에는 HTML 폼 게시의 요청을 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 형식으로 deserialize할 수 있는 포맷터의 구현도 포함되어 있습니다. 또한 이 샘플에서는 T4 템플릿을 사용하여 사용자가 다시 WCF REST 서비스에 게시할 수 있는 HTML 폼을 제공하는 HTML 페이지를 반환합니다.  
@@ -38,7 +40,7 @@ ms.lasthandoff: 12/22/2017
   
  이 콘솔 응용 프로그램 프로젝트에서 확장 된 [Basic Resource Service](../../../../docs/framework/wcf/samples/basic-resource-service.md) 샘플. Basic Resource Service 샘플에서는 WCF REST 프로그래밍 모델을 사용하는 방식으로 리소스를 노출하는 방법을 보여 줍니다. Basic Resource Service 샘플에서는 고객 컬렉션 리소스가 노출되므로 컬렉션의 고객을 만들고, 검색하고, 업데이트하고, 삭제할 수 있습니다. Basic Resource Service 샘플에서는 기본적으로 지원되는 들어오는 요청 형식인 XML과 JSON만 사용합니다.  
   
- 이 Form Post 샘플의 콘솔 응용 프로그램에서는 HtmlFormProcessing 라이브러리의 사용자 지정 포맷터를 사용합니다. 이 사용자 지정 포맷터를 사용하면 사용자가 브라우저를 사용하여 HTML 폼 게시에서 요청을 보내는 방법으로 고객을 만들 수 있습니다. 이 콘솔 응용 프로그램에서는 서비스에 다시 게시할 폼이 포함된 HTML 페이지를 반환하는 작업도 추가합니다. 이 HTML 페이지는 .tt 파일과 자동 생성된 .cs 파일로 구성된 전처리된 T4 템플릿을 사용하여 생성됩니다. 개발자는 .tt 파일을 사용하여 변수 및 제어 구조가 포함된 템플릿 폼에 응답을 쓸 수 있습니다. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]T4 참조 [생성 아티팩트 템플릿을 사용 하 여 텍스트](http://go.microsoft.com/fwlink/?LinkId=178139)합니다.  
+ 이 Form Post 샘플의 콘솔 응용 프로그램에서는 HtmlFormProcessing 라이브러리의 사용자 지정 포맷터를 사용합니다. 이 사용자 지정 포맷터를 사용하면 사용자가 브라우저를 사용하여 HTML 폼 게시에서 요청을 보내는 방법으로 고객을 만들 수 있습니다. 이 콘솔 응용 프로그램에서는 서비스에 다시 게시할 폼이 포함된 HTML 페이지를 반환하는 작업도 추가합니다. 이 HTML 페이지는 .tt 파일과 자동 생성된 .cs 파일로 구성된 전처리된 T4 템플릿을 사용하여 생성됩니다. 개발자는 .tt 파일을 사용하여 변수 및 제어 구조가 포함된 템플릿 폼에 응답을 쓸 수 있습니다. T4에 대 한 자세한 내용은 참조 [생성 아티팩트 템플릿을 사용 하 여 텍스트](http://go.microsoft.com/fwlink/?LinkId=178139)합니다.  
   
 #### <a name="to-run-the-sample"></a>이 샘플을 실행하려면  
   

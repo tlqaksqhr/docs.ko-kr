@@ -1,34 +1,36 @@
 ---
-title: "인쇄 방법 항목"
-ms.custom: 
+title: 인쇄 방법 항목
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - printing [WPF]
 - print system management [WPF]
 ms.assetid: 5f3d391a-4afd-49ee-ad99-ceb737c0c8a8
-caps.latest.revision: "10"
+caps.latest.revision: 10
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 9647ce04528df390620dba67619a538d96aa7068
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: 0865e0f2d28ec44647882c030050638144fa715d
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="printing-how-to-topics"></a>인쇄 방법 항목
 이 섹션의 항목에는 인쇄를 사용 하는 방법을 보여 줍니다 및에 포함 된 인쇄 시스템 관리 기능 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 및 새로운 [!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)] 인쇄 경로입니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
  [인쇄 대화 상자 호출](../../../../docs/framework/wpf/advanced/how-to-invoke-a-print-dialog.md)  
- XAML 태그를 선언에 대 한 지침을 [!INCLUDE[TLA#tla_win](../../../../includes/tlasharptla-win-md.md)] 인쇄 대화 상자 개체 및 코드를 사용 하 여 대화 상자 내에서 호출는 [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] 응용 프로그램입니다.  
+ XAML 태그를 선언에 대 한 지침을 [!INCLUDE[TLA#tla_win](../../../../includes/tlasharptla-win-md.md)] 인쇄 대화 상자 개체 및 코드를 사용 하 여 Windows Presentation Foundation (WPF) 응용 프로그램 내에서 대화 상자를 호출 합니다.  
   
  [프린터 복제](../../../../docs/framework/wpf/advanced/how-to-clone-a-printer.md)  
  큐를 인쇄 하는 기존 정확히 동일한 속성을 가진 두 번째 인쇄 큐를 설치 하는 방법에 대 한 지침입니다.  

@@ -1,24 +1,26 @@
 ---
-title: "사용자 지정 인코더"
-ms.custom: 
+title: 사용자 지정 인코더
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: fa0e1d7f-af36-4bf4-aac9-cd4eab95bc4f
-caps.latest.revision: "15"
+caps.latest.revision: 15
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: f1c8223ea7900ba0a89ee2c5c48895a1782d18a0
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 90926fd334eb5ccef3a63f637d5273c408c0c13e
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="custom-encoders"></a>사용자 지정 인코더
 이 항목에서는 사용자 지정 인코더를 만드는 방법을 설명합니다.  
@@ -34,7 +36,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="system-provided-encoders"></a>시스템 제공 인코더  
  [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]는 가장 일반적인 응용 프로그램 시나리오를 다루도록 고안된 여러 개의 시스템 제공 바인딩을 제공합니다. 이러한 각 바인딩은 전송, 메시지 인코더 및 기타 옵션(예: 보안)을 결합합니다. 이 항목에서는 `Text`에 포함된 `Binary`, `MTOM` 및 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 메시지 인코더를 확장하거나 고유의 사용자 지정 인코더를 만드는 방법에 대해 설명합니다. 텍스트 메시지 인코더는 일반 XML 인코딩뿐 아니라 SOAP 인코딩을 모두 지원합니다. 텍스트 메시지 인코더의 일반 XML 인코딩 모드는 텍스트 기반 SOAP 인코딩과 구별하기 위해 POX("Plain Old Xml") 인코더라고 합니다.  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]해당 섹션을 참조 하는 바인딩 요소에서 시스템 제공 바인딩이 제공 하는 방법을 [전송 선택](../../../../docs/framework/wcf/feature-details/choosing-a-transport.md)합니다.  
+ 시스템 제공 바인딩에 의해 제공 된 바인딩 요소의 조합에 대 한 자세한 내용은의 해당 섹션을 참조 하십시오. [전송 선택](../../../../docs/framework/wcf/feature-details/choosing-a-transport.md)합니다.  
   
 ## <a name="how-to-work-with-system-provided-encoders"></a>시스템 제공 인코더 작업 방법  
  인코딩은 <xref:System.ServiceModel.Channels.MessageEncodingBindingElement>에서 파생된 클래스를 사용하여 바인딩에 추가됩니다.  
@@ -45,7 +47,7 @@ ms.lasthandoff: 12/22/2017
   
 -   <xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement>: 이진 기반 XML 메시지에 사용되는 문자 인코딩 및 메시지 버전 관리를 지정하는 바인딩 요소를 나타냅니다. 가장 효율적인 인코딩 옵션인 반면 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 끝점에서만 지원하기 때문에 상호 운용성이 가장 낮습니다.  
   
--   <<!--zz xref:System.ServiceModel.Channels.MTOMMessageEncodingBindingElement -->`System.ServiceModel.Channels.MTOMMessageEncodingBindingElement`>: 메시지 전송 MTOM (Optimization Mechanism) 인코딩을 사용 하 여 메시지에 사용 되는 메시지 버전 관리 및 문자 인코딩을 지정 하는 바인딩 요소를 나타냅니다. MTOM은 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 메시지의 이진 데이터를 효율적으로 전송하는 기술입니다. MTOM 인코더는 효율성과 호환성 간의 균형을 유지하려고 합니다. MTOM 인코딩은 대부분의 XML을 텍스트 형식으로 전송하지만, 큰 이진 데이터 블록의 경우에는 텍스트로 변환하지 않고 있는 그대로 전송하여 최적화합니다.  
+-   <<!--zz xref:System.ServiceModel.Channels.MTOMMessageEncodingBindingElement --> `System.ServiceModel.Channels.MTOMMessageEncodingBindingElement`>: 메시지 전송 MTOM (Optimization Mechanism) 인코딩을 사용 하 여 메시지에 사용 되는 메시지 버전 관리 및 문자 인코딩을 지정 하는 바인딩 요소를 나타냅니다. MTOM은 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 메시지의 이진 데이터를 효율적으로 전송하는 기술입니다. MTOM 인코더는 효율성과 호환성 간의 균형을 유지하려고 합니다. MTOM 인코딩은 대부분의 XML을 텍스트 형식으로 전송하지만, 큰 이진 데이터 블록의 경우에는 텍스트로 변환하지 않고 있는 그대로 전송하여 최적화합니다.  
   
  바인딩 요소는 이진, MTOM 또는 텍스트 <xref:System.ServiceModel.Channels.MessageEncoderFactory>를 만듭니다. 팩터리는 이진, MTOM 또는 텍스트 <xref:System.ServiceModel.Channels.MessageEncoderFactory> 인스턴스를 만듭니다. 일반적으로 인스턴스는 하나만 있습니다. 그러나 세션을 사용하는 경우에는 세션마다 다른 인코더가 제공될 수 있습니다. 이진 인코더는 이를 사용하여 동적 사전을 조정합니다(XML 인프라 참조).  
   
