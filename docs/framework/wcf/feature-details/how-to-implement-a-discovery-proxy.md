@@ -1,56 +1,58 @@
 ---
-title: "방법: 검색 프록시 구현"
-ms.custom: 
+title: '방법: 검색 프록시 구현'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 78d70e0a-f6c3-4cfb-a7ca-f66ebddadde0
-caps.latest.revision: "19"
+caps.latest.revision: 19
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 25db6b46758e11c194952fbca03286891a5914d9
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 2e984a55137aec0042f8de0d69aa1310ed43a0df
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
-# <a name="how-to-implement-a-discovery-proxy"></a><span data-ttu-id="46db3-102">방법: 검색 프록시 구현</span><span class="sxs-lookup"><span data-stu-id="46db3-102">How to: Implement a Discovery Proxy</span></span>
-<span data-ttu-id="46db3-103">이 항목에서는 검색 프록시를 구현하는 방법을 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="46db3-103">This topic explains how to implement a discovery proxy.</span></span> [!INCLUDE[crabout](../../../../includes/crabout-md.md)]<span data-ttu-id="46db3-104">검색 기능을 사용 하 여 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], 참조 [WCF Discovery 개요](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="46db3-104"> the discovery feature in [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], see [WCF Discovery Overview](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md).</span></span> <span data-ttu-id="46db3-105">검색 프록시는 <xref:System.ServiceModel.Discovery.DiscoveryProxy> 추상 클래스를 확장하는 클래스를 만들어 구현할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="46db3-105">A discovery proxy can be implemented by creating a class that extends the <xref:System.ServiceModel.Discovery.DiscoveryProxy> abstract class.</span></span> <span data-ttu-id="46db3-106">이 샘플에서는 많은 다른 지원 클래스가 정의되고 사용됩니다.</span><span class="sxs-lookup"><span data-stu-id="46db3-106">There are a number of other support classes defined and used in this sample.</span></span> <span data-ttu-id="46db3-107">`OnResolveAsyncResult`, `OnFindAsyncResult` 및 `AsyncResult`</span><span class="sxs-lookup"><span data-stu-id="46db3-107">`OnResolveAsyncResult`, `OnFindAsyncResult`, and `AsyncResult`.</span></span> <span data-ttu-id="46db3-108">이러한 클래스는 <xref:System.IAsyncResult> 인터페이스를 구현합니다.</span><span class="sxs-lookup"><span data-stu-id="46db3-108">These classes implement the <xref:System.IAsyncResult> interface.</span></span> [!INCLUDE[crabout](../../../../includes/crabout-md.md)]<span data-ttu-id="46db3-109"><xref:System.IAsyncResult> 참조 [System.IAsyncResult 인터페이스](xref:System.IAsyncResult)합니다.</span><span class="sxs-lookup"><span data-stu-id="46db3-109"> <xref:System.IAsyncResult> see [System.IAsyncResult interface](xref:System.IAsyncResult).</span></span>
+# <a name="how-to-implement-a-discovery-proxy"></a><span data-ttu-id="4bb4c-102">방법: 검색 프록시 구현</span><span class="sxs-lookup"><span data-stu-id="4bb4c-102">How to: Implement a Discovery Proxy</span></span>
+<span data-ttu-id="4bb4c-103">이 항목에서는 검색 프록시를 구현하는 방법을 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="4bb4c-103">This topic explains how to implement a discovery proxy.</span></span> <span data-ttu-id="4bb4c-104">검색 기능에 대 한 자세한 내용은 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], 참조 [WCF Discovery 개요](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="4bb4c-104">For more information about the discovery feature in [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], see [WCF Discovery Overview](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md).</span></span> <span data-ttu-id="4bb4c-105">검색 프록시는 <xref:System.ServiceModel.Discovery.DiscoveryProxy> 추상 클래스를 확장하는 클래스를 만들어 구현할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="4bb4c-105">A discovery proxy can be implemented by creating a class that extends the <xref:System.ServiceModel.Discovery.DiscoveryProxy> abstract class.</span></span> <span data-ttu-id="4bb4c-106">이 샘플에서는 많은 다른 지원 클래스가 정의되고 사용됩니다.</span><span class="sxs-lookup"><span data-stu-id="4bb4c-106">There are a number of other support classes defined and used in this sample.</span></span> <span data-ttu-id="4bb4c-107">`OnResolveAsyncResult`, `OnFindAsyncResult` 및 `AsyncResult`</span><span class="sxs-lookup"><span data-stu-id="4bb4c-107">`OnResolveAsyncResult`, `OnFindAsyncResult`, and `AsyncResult`.</span></span> <span data-ttu-id="4bb4c-108">이러한 클래스는 <xref:System.IAsyncResult> 인터페이스를 구현합니다.</span><span class="sxs-lookup"><span data-stu-id="4bb4c-108">These classes implement the <xref:System.IAsyncResult> interface.</span></span> <span data-ttu-id="4bb4c-109">에 대 한 자세한 내용은 <xref:System.IAsyncResult> 참조 [System.IAsyncResult 인터페이스](xref:System.IAsyncResult)합니다.</span><span class="sxs-lookup"><span data-stu-id="4bb4c-109">For more information about <xref:System.IAsyncResult> see [System.IAsyncResult interface](xref:System.IAsyncResult).</span></span>
   
- <span data-ttu-id="46db3-110">이 항목에서는 검색 프록시 구현을 크게 다음 세 부분으로 나누어서 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="46db3-110">Implementing a discovery proxy is broken down into three main parts in this topic:</span></span>  
+ <span data-ttu-id="4bb4c-110">이 항목에서는 검색 프록시 구현을 크게 다음 세 부분으로 나누어서 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="4bb4c-110">Implementing a discovery proxy is broken down into three main parts in this topic:</span></span>  
   
--   <span data-ttu-id="46db3-111">데이터 저장소를 포함하고 <xref:System.ServiceModel.Discovery.DiscoveryProxy> 추상 클래스를 확장하는 클래스 정의</span><span class="sxs-lookup"><span data-stu-id="46db3-111">Define a class that contains a data store and extends the abstract <xref:System.ServiceModel.Discovery.DiscoveryProxy> class.</span></span>  
+-   <span data-ttu-id="4bb4c-111">데이터 저장소를 포함하고 <xref:System.ServiceModel.Discovery.DiscoveryProxy> 추상 클래스를 확장하는 클래스 정의</span><span class="sxs-lookup"><span data-stu-id="4bb4c-111">Define a class that contains a data store and extends the abstract <xref:System.ServiceModel.Discovery.DiscoveryProxy> class.</span></span>  
   
--   <span data-ttu-id="46db3-112">`AsyncResult` 도우미 클래스 구현</span><span class="sxs-lookup"><span data-stu-id="46db3-112">Implement the helper `AsyncResult` class.</span></span>  
+-   <span data-ttu-id="4bb4c-112">`AsyncResult` 도우미 클래스 구현</span><span class="sxs-lookup"><span data-stu-id="4bb4c-112">Implement the helper `AsyncResult` class.</span></span>  
   
--   <span data-ttu-id="46db3-113">검색 프록시 호스팅</span><span class="sxs-lookup"><span data-stu-id="46db3-113">Host the Discovery Proxy.</span></span>  
+-   <span data-ttu-id="4bb4c-113">검색 프록시 호스팅</span><span class="sxs-lookup"><span data-stu-id="4bb4c-113">Host the Discovery Proxy.</span></span>  
   
-### <a name="to-create-a-new-console-application-project"></a><span data-ttu-id="46db3-114">새 콘솔 응용 프로그램 프로젝트를 만들려면</span><span class="sxs-lookup"><span data-stu-id="46db3-114">To create a new console application project</span></span>  
+### <a name="to-create-a-new-console-application-project"></a><span data-ttu-id="4bb4c-114">새 콘솔 응용 프로그램 프로젝트를 만들려면</span><span class="sxs-lookup"><span data-stu-id="4bb4c-114">To create a new console application project</span></span>  
   
-1.  <span data-ttu-id="46db3-115">[!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)]를 시작합니다.</span><span class="sxs-lookup"><span data-stu-id="46db3-115">Start [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)].</span></span>  
+1.  <span data-ttu-id="4bb4c-115">[!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)]를 시작합니다.</span><span class="sxs-lookup"><span data-stu-id="4bb4c-115">Start [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)].</span></span>  
   
-2.  <span data-ttu-id="46db3-116">콘솔 응용 프로그램 프로젝트를 새로 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="46db3-116">Create a new console application project.</span></span> <span data-ttu-id="46db3-117">프로젝트 이름을 `DiscoveryProxy`로 지정하고 솔루션 이름을 `DiscoveryProxyExample`로 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="46db3-117">Name the project `DiscoveryProxy` and the name the solution `DiscoveryProxyExample`.</span></span>  
+2.  <span data-ttu-id="4bb4c-116">콘솔 응용 프로그램 프로젝트를 새로 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="4bb4c-116">Create a new console application project.</span></span> <span data-ttu-id="4bb4c-117">프로젝트 이름을 `DiscoveryProxy`로 지정하고 솔루션 이름을 `DiscoveryProxyExample`로 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="4bb4c-117">Name the project `DiscoveryProxy` and the name the solution `DiscoveryProxyExample`.</span></span>  
   
-3.  <span data-ttu-id="46db3-118">프로젝트에 대한 다음 참조를 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="46db3-118">Add the following references to the project</span></span>  
+3.  <span data-ttu-id="4bb4c-118">프로젝트에 대한 다음 참조를 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="4bb4c-118">Add the following references to the project</span></span>  
   
-    1.  <span data-ttu-id="46db3-119">System.ServiceModel.dll</span><span class="sxs-lookup"><span data-stu-id="46db3-119">System.ServiceModel.dll</span></span>  
+    1.  <span data-ttu-id="4bb4c-119">System.ServiceModel.dll</span><span class="sxs-lookup"><span data-stu-id="4bb4c-119">System.ServiceModel.dll</span></span>  
   
-    2.  <span data-ttu-id="46db3-120">System.Servicemodel.Discovery.dll</span><span class="sxs-lookup"><span data-stu-id="46db3-120">System.Servicemodel.Discovery.dll</span></span>  
+    2.  <span data-ttu-id="4bb4c-120">System.Servicemodel.Discovery.dll</span><span class="sxs-lookup"><span data-stu-id="4bb4c-120">System.Servicemodel.Discovery.dll</span></span>  
   
     > [!CAUTION]
-    >  <span data-ttu-id="46db3-121">이러한 어셈블리는 4.0 이상 버전이어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="46db3-121">Ensure that you reference version 4.0 or greater of these assemblies.</span></span>  
+    >  <span data-ttu-id="4bb4c-121">이러한 어셈블리는 4.0 이상 버전이어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="4bb4c-121">Ensure that you reference version 4.0 or greater of these assemblies.</span></span>  
   
-### <a name="to-implement-the-proxydiscoveryservice-class"></a><span data-ttu-id="46db3-122">ProxyDiscoveryService 클래스를 구현하려면</span><span class="sxs-lookup"><span data-stu-id="46db3-122">To implement the ProxyDiscoveryService class</span></span>  
+### <a name="to-implement-the-proxydiscoveryservice-class"></a><span data-ttu-id="4bb4c-122">ProxyDiscoveryService 클래스를 구현하려면</span><span class="sxs-lookup"><span data-stu-id="4bb4c-122">To implement the ProxyDiscoveryService class</span></span>  
   
-1.  <span data-ttu-id="46db3-123">프로젝트에 새 코드 파일을 추가하고 이름을 DiscoveryProxy.cs로 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="46db3-123">Add a new code file to your project and name it DiscoveryProxy.cs.</span></span>  
+1.  <span data-ttu-id="4bb4c-123">프로젝트에 새 코드 파일을 추가하고 이름을 DiscoveryProxy.cs로 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="4bb4c-123">Add a new code file to your project and name it DiscoveryProxy.cs.</span></span>  
   
-2.  <span data-ttu-id="46db3-124">DiscoveryProxy.cs에 다음 `using` 문을 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="46db3-124">Add the following `using` statements to DiscoveryProxy.cs.</span></span>  
+2.  <span data-ttu-id="4bb4c-124">DiscoveryProxy.cs에 다음 `using` 문을 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="4bb4c-124">Add the following `using` statements to DiscoveryProxy.cs.</span></span>  
   
     ```  
     using System;  
@@ -60,7 +62,7 @@ ms.lasthandoff: 12/22/2017
     using System.Xml;  
     ```  
   
-3.  <span data-ttu-id="46db3-125">`DiscoveryProxyService`에서 <xref:System.ServiceModel.Discovery.DiscoveryProxy>를 파생시킵니다.</span><span class="sxs-lookup"><span data-stu-id="46db3-125">Derive the `DiscoveryProxyService` from <xref:System.ServiceModel.Discovery.DiscoveryProxy>.</span></span> <span data-ttu-id="46db3-126">다음 예제와 같이 이 클래스에 `ServiceBehavior` 특성을 적용합니다.</span><span class="sxs-lookup"><span data-stu-id="46db3-126">Apply the `ServiceBehavior` attribute to the class as shown in the following example.</span></span>  
+3.  <span data-ttu-id="4bb4c-125">`DiscoveryProxyService`에서 <xref:System.ServiceModel.Discovery.DiscoveryProxy>를 파생시킵니다.</span><span class="sxs-lookup"><span data-stu-id="4bb4c-125">Derive the `DiscoveryProxyService` from <xref:System.ServiceModel.Discovery.DiscoveryProxy>.</span></span> <span data-ttu-id="4bb4c-126">다음 예제와 같이 이 클래스에 `ServiceBehavior` 특성을 적용합니다.</span><span class="sxs-lookup"><span data-stu-id="4bb4c-126">Apply the `ServiceBehavior` attribute to the class as shown in the following example.</span></span>  
   
     ```  
     // Implement DiscoveryProxy by extending the DiscoveryProxy class and overriding the abstract methods  
@@ -70,14 +72,14 @@ ms.lasthandoff: 12/22/2017
     }  
     ```  
   
-4.  <span data-ttu-id="46db3-127">`DiscoveryProxy` 클래스 내에서 등록된 서비스를 저장할 사전을 정의합니다.</span><span class="sxs-lookup"><span data-stu-id="46db3-127">Inside the `DiscoveryProxy` class define a dictionary to hold the registered services.</span></span>  
+4.  <span data-ttu-id="4bb4c-127">`DiscoveryProxy` 클래스 내에서 등록된 서비스를 저장할 사전을 정의합니다.</span><span class="sxs-lookup"><span data-stu-id="4bb4c-127">Inside the `DiscoveryProxy` class define a dictionary to hold the registered services.</span></span>  
   
     ```  
     // Repository to store EndpointDiscoveryMetadata.   
     Dictionary<EndpointAddress, EndpointDiscoveryMetadata> onlineServices;  
     ```  
   
-5.  <span data-ttu-id="46db3-128">사전을 초기화하는 생성자를 정의합니다.</span><span class="sxs-lookup"><span data-stu-id="46db3-128">Define a constructor that initializes the dictionary.</span></span>  
+5.  <span data-ttu-id="4bb4c-128">사전을 초기화하는 생성자를 정의합니다.</span><span class="sxs-lookup"><span data-stu-id="4bb4c-128">Define a constructor that initializes the dictionary.</span></span>  
   
     ```  
     public DiscoveryProxyService()  
@@ -86,9 +88,9 @@ ms.lasthandoff: 12/22/2017
             }  
     ```  
   
-### <a name="to-define-the-methods-used-to-update-the-discovery-proxy-cache"></a><span data-ttu-id="46db3-129">검색 프록시 캐시를 업데이트하는 데 사용되는 메서드를 정의하려면</span><span class="sxs-lookup"><span data-stu-id="46db3-129">To define the methods used to update the discovery proxy cache</span></span>  
+### <a name="to-define-the-methods-used-to-update-the-discovery-proxy-cache"></a><span data-ttu-id="4bb4c-129">검색 프록시 캐시를 업데이트하는 데 사용되는 메서드를 정의하려면</span><span class="sxs-lookup"><span data-stu-id="4bb4c-129">To define the methods used to update the discovery proxy cache</span></span>  
   
-1.  <span data-ttu-id="46db3-130">`AddOnlineservice` 메서드를 구현하여 캐시에 서비스를 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="46db3-130">Implement the `AddOnlineservice` method to add services to the cache.</span></span> <span data-ttu-id="46db3-131">이 메서드는 프록시가 알림 메시지를 받을 때마다 호출됩니다.</span><span class="sxs-lookup"><span data-stu-id="46db3-131">This is called every time the proxy receives an announcement message.</span></span>  
+1.  <span data-ttu-id="4bb4c-130">`AddOnlineservice` 메서드를 구현하여 캐시에 서비스를 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="4bb4c-130">Implement the `AddOnlineservice` method to add services to the cache.</span></span> <span data-ttu-id="4bb4c-131">이 메서드는 프록시가 알림 메시지를 받을 때마다 호출됩니다.</span><span class="sxs-lookup"><span data-stu-id="4bb4c-131">This is called every time the proxy receives an announcement message.</span></span>  
   
     ```  
     void AddOnlineService(EndpointDiscoveryMetadata endpointDiscoveryMetadata)  
@@ -102,7 +104,7 @@ ms.lasthandoff: 12/22/2017
             }  
     ```  
   
-2.  <span data-ttu-id="46db3-132">캐시에서 서비스를 제거하는 데 사용되는 `RemoveOnlineService` 메서드를 구현합니다.</span><span class="sxs-lookup"><span data-stu-id="46db3-132">Implement the `RemoveOnlineService` method that is used to remove services from the cache.</span></span>  
+2.  <span data-ttu-id="4bb4c-132">캐시에서 서비스를 제거하는 데 사용되는 `RemoveOnlineService` 메서드를 구현합니다.</span><span class="sxs-lookup"><span data-stu-id="4bb4c-132">Implement the `RemoveOnlineService` method that is used to remove services from the cache.</span></span>  
   
     ```  
     void RemoveOnlineService(EndpointDiscoveryMetadata endpointDiscoveryMetadata)  
@@ -119,7 +121,7 @@ ms.lasthandoff: 12/22/2017
             }  
     ```  
   
-3.  <span data-ttu-id="46db3-133">서비스와 사전의 서비스를 일치시킬 `MatchFromOnlineService` 메서드를 구현합니다.</span><span class="sxs-lookup"><span data-stu-id="46db3-133">Implement the `MatchFromOnlineService` methods that attempt to match a service with a service in the dictionary.</span></span>  
+3.  <span data-ttu-id="4bb4c-133">서비스와 사전의 서비스를 일치시킬 `MatchFromOnlineService` 메서드를 구현합니다.</span><span class="sxs-lookup"><span data-stu-id="4bb4c-133">Implement the `MatchFromOnlineService` methods that attempt to match a service with a service in the dictionary.</span></span>  
   
     ```  
     void MatchFromOnlineService(FindRequestContext findRequestContext)  
@@ -155,7 +157,7 @@ ms.lasthandoff: 12/22/2017
             }  
     ```  
   
-4.  <span data-ttu-id="46db3-134">검색 프록시가 수행하는 작업을 콘솔에 텍스트로 출력하는 `PrintDiscoveryMetadata` 메서드를 구현합니다.</span><span class="sxs-lookup"><span data-stu-id="46db3-134">Implement the `PrintDiscoveryMetadata` method that provides the user with console text output of what the discovery proxy is doing.</span></span>  
+4.  <span data-ttu-id="4bb4c-134">검색 프록시가 수행하는 작업을 콘솔에 텍스트로 출력하는 `PrintDiscoveryMetadata` 메서드를 구현합니다.</span><span class="sxs-lookup"><span data-stu-id="4bb4c-134">Implement the `PrintDiscoveryMetadata` method that provides the user with console text output of what the discovery proxy is doing.</span></span>  
   
     ```  
     void PrintDiscoveryMetadata(EndpointDiscoveryMetadata endpointDiscoveryMetadata, string verb)  
@@ -170,7 +172,7 @@ ms.lasthandoff: 12/22/2017
             }  
     ```  
   
-5.  <span data-ttu-id="46db3-135">DiscoveryProxyService에 다음 AsyncResult 클래스를 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="46db3-135">Add the following AsyncResult classes to the DiscoveryProxyService.</span></span> <span data-ttu-id="46db3-136">이러한 클래스는 다양한 비동기 작업 결과를 구별하는 데 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="46db3-136">These classes are used to differentiate between the different asynchronous operation results.</span></span>  
+5.  <span data-ttu-id="4bb4c-135">DiscoveryProxyService에 다음 AsyncResult 클래스를 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="4bb4c-135">Add the following AsyncResult classes to the DiscoveryProxyService.</span></span> <span data-ttu-id="4bb4c-136">이러한 클래스는 다양한 비동기 작업 결과를 구별하는 데 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="4bb4c-136">These classes are used to differentiate between the different asynchronous operation results.</span></span>  
   
     ```  
     sealed class OnOnlineAnnouncementAsyncResult : AsyncResult  
@@ -234,9 +236,9 @@ ms.lasthandoff: 12/22/2017
             }  
     ```  
   
-### <a name="to-define-the-methods-that-implement-the-discovery-proxy-functionality"></a><span data-ttu-id="46db3-137">검색 프록시 기능을 구현하는 메서드를 정의하려면</span><span class="sxs-lookup"><span data-stu-id="46db3-137">To define the methods that implement the discovery proxy functionality</span></span>  
+### <a name="to-define-the-methods-that-implement-the-discovery-proxy-functionality"></a><span data-ttu-id="4bb4c-137">검색 프록시 기능을 구현하는 메서드를 정의하려면</span><span class="sxs-lookup"><span data-stu-id="4bb4c-137">To define the methods that implement the discovery proxy functionality</span></span>  
   
-1.  <span data-ttu-id="46db3-138"><xref:System.ServiceModel.Discovery.DiscoveryProxy.OnBeginOnlineAnnouncement%2A?displayProperty=nameWithType> 메서드를 재정의합니다.</span><span class="sxs-lookup"><span data-stu-id="46db3-138">Override the <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnBeginOnlineAnnouncement%2A?displayProperty=nameWithType> method.</span></span> <span data-ttu-id="46db3-139">이 메서드는 검색 프록시가 온라인 알림 메시지를 받을 때 호출됩니다.</span><span class="sxs-lookup"><span data-stu-id="46db3-139">This method is called when the discovery proxy receives an online announcement message.</span></span>  
+1.  <span data-ttu-id="4bb4c-138"><xref:System.ServiceModel.Discovery.DiscoveryProxy.OnBeginOnlineAnnouncement%2A?displayProperty=nameWithType> 메서드를 재정의합니다.</span><span class="sxs-lookup"><span data-stu-id="4bb4c-138">Override the <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnBeginOnlineAnnouncement%2A?displayProperty=nameWithType> method.</span></span> <span data-ttu-id="4bb4c-139">이 메서드는 검색 프록시가 온라인 알림 메시지를 받을 때 호출됩니다.</span><span class="sxs-lookup"><span data-stu-id="4bb4c-139">This method is called when the discovery proxy receives an online announcement message.</span></span>  
   
     ```  
     // OnBeginOnlineAnnouncement method is called when a Hello message is received by the Proxy  
@@ -247,7 +249,7 @@ ms.lasthandoff: 12/22/2017
             }  
     ```  
   
-2.  <span data-ttu-id="46db3-140"><xref:System.ServiceModel.Discovery.DiscoveryProxy.OnEndOnlineAnnouncement%2A?displayProperty=nameWithType> 메서드를 재정의합니다.</span><span class="sxs-lookup"><span data-stu-id="46db3-140">Override the <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnEndOnlineAnnouncement%2A?displayProperty=nameWithType> method.</span></span> <span data-ttu-id="46db3-141">이 메서드는 검색 프록시가 알림 메시지 처리를 완료할 때 호출됩니다.</span><span class="sxs-lookup"><span data-stu-id="46db3-141">This method is called when the discovery proxy finishes processing an announcement message.</span></span>  
+2.  <span data-ttu-id="4bb4c-140"><xref:System.ServiceModel.Discovery.DiscoveryProxy.OnEndOnlineAnnouncement%2A?displayProperty=nameWithType> 메서드를 재정의합니다.</span><span class="sxs-lookup"><span data-stu-id="4bb4c-140">Override the <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnEndOnlineAnnouncement%2A?displayProperty=nameWithType> method.</span></span> <span data-ttu-id="4bb4c-141">이 메서드는 검색 프록시가 알림 메시지 처리를 완료할 때 호출됩니다.</span><span class="sxs-lookup"><span data-stu-id="4bb4c-141">This method is called when the discovery proxy finishes processing an announcement message.</span></span>  
   
     ```  
     protected override void OnEndOnlineAnnouncement(IAsyncResult result)  
@@ -256,7 +258,7 @@ ms.lasthandoff: 12/22/2017
             }  
     ```  
   
-3.  <span data-ttu-id="46db3-142"><xref:System.ServiceModel.Discovery.DiscoveryProxy.OnBeginOfflineAnnouncement%2A?displayProperty=nameWithType> 메서드를 재정의합니다.</span><span class="sxs-lookup"><span data-stu-id="46db3-142">Override the <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnBeginOfflineAnnouncement%2A?displayProperty=nameWithType> method.</span></span> <span data-ttu-id="46db3-143">이 메서드는 검색 프록시가 오프라인 알림 메시지를 받을 때 호출됩니다.</span><span class="sxs-lookup"><span data-stu-id="46db3-143">This method is called with the discovery proxy receives an offline announcement message.</span></span>  
+3.  <span data-ttu-id="4bb4c-142"><xref:System.ServiceModel.Discovery.DiscoveryProxy.OnBeginOfflineAnnouncement%2A?displayProperty=nameWithType> 메서드를 재정의합니다.</span><span class="sxs-lookup"><span data-stu-id="4bb4c-142">Override the <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnBeginOfflineAnnouncement%2A?displayProperty=nameWithType> method.</span></span> <span data-ttu-id="4bb4c-143">이 메서드는 검색 프록시가 오프라인 알림 메시지를 받을 때 호출됩니다.</span><span class="sxs-lookup"><span data-stu-id="4bb4c-143">This method is called with the discovery proxy receives an offline announcement message.</span></span>  
   
     ```  
     // OnBeginOfflineAnnouncement method is called when a Bye message is received by the Proxy  
@@ -267,7 +269,7 @@ ms.lasthandoff: 12/22/2017
             }  
     ```  
   
-4.  <span data-ttu-id="46db3-144"><xref:System.ServiceModel.Discovery.DiscoveryProxy.OnEndOfflineAnnouncement%2A?displayProperty=nameWithType> 메서드를 재정의합니다.</span><span class="sxs-lookup"><span data-stu-id="46db3-144">Override the <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnEndOfflineAnnouncement%2A?displayProperty=nameWithType> method.</span></span> <span data-ttu-id="46db3-145">이 메서드는 검색 프록시가 오프라인 알림 메시지 처리를 완료할 때 호출됩니다.</span><span class="sxs-lookup"><span data-stu-id="46db3-145">This method is called when the discovery proxy finishes processing an offline announcement message.</span></span>  
+4.  <span data-ttu-id="4bb4c-144"><xref:System.ServiceModel.Discovery.DiscoveryProxy.OnEndOfflineAnnouncement%2A?displayProperty=nameWithType> 메서드를 재정의합니다.</span><span class="sxs-lookup"><span data-stu-id="4bb4c-144">Override the <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnEndOfflineAnnouncement%2A?displayProperty=nameWithType> method.</span></span> <span data-ttu-id="4bb4c-145">이 메서드는 검색 프록시가 오프라인 알림 메시지 처리를 완료할 때 호출됩니다.</span><span class="sxs-lookup"><span data-stu-id="4bb4c-145">This method is called when the discovery proxy finishes processing an offline announcement message.</span></span>  
   
     ```  
     protected override void OnEndOfflineAnnouncement(IAsyncResult result)  
@@ -276,7 +278,7 @@ ms.lasthandoff: 12/22/2017
             }  
     ```  
   
-5.  <span data-ttu-id="46db3-146"><xref:System.ServiceModel.Discovery.DiscoveryProxy.OnBeginFind%2A?displayProperty=nameWithType> 메서드를 재정의합니다.</span><span class="sxs-lookup"><span data-stu-id="46db3-146">Override the <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnBeginFind%2A?displayProperty=nameWithType> method.</span></span> <span data-ttu-id="46db3-147">이 메서드는 검색 프록시가 찾기 요청을 받을 때 호출됩니다.</span><span class="sxs-lookup"><span data-stu-id="46db3-147">This method is called when the discovery proxy receives a find request.</span></span>  
+5.  <span data-ttu-id="4bb4c-146"><xref:System.ServiceModel.Discovery.DiscoveryProxy.OnBeginFind%2A?displayProperty=nameWithType> 메서드를 재정의합니다.</span><span class="sxs-lookup"><span data-stu-id="4bb4c-146">Override the <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnBeginFind%2A?displayProperty=nameWithType> method.</span></span> <span data-ttu-id="4bb4c-147">이 메서드는 검색 프록시가 찾기 요청을 받을 때 호출됩니다.</span><span class="sxs-lookup"><span data-stu-id="4bb4c-147">This method is called when the discovery proxy receives a find request.</span></span>  
   
     ```  
     // OnBeginFind method is called when a Probe request message is received by the Proxy  
@@ -295,7 +297,7 @@ ms.lasthandoff: 12/22/2017
     }  
     ```  
   
-6.  <span data-ttu-id="46db3-148"><xref:System.ServiceModel.Discovery.DiscoveryProxy.OnEndFind%2A?displayProperty=nameWithType> 메서드를 재정의합니다.</span><span class="sxs-lookup"><span data-stu-id="46db3-148">Override the <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnEndFind%2A?displayProperty=nameWithType> method.</span></span> <span data-ttu-id="46db3-149">이 메서드는 검색 프록시가 찾기 요청 처리를 완료할 때 호출됩니다.</span><span class="sxs-lookup"><span data-stu-id="46db3-149">This method is called when the discovery proxy finishes processing a find request.</span></span>  
+6.  <span data-ttu-id="4bb4c-148"><xref:System.ServiceModel.Discovery.DiscoveryProxy.OnEndFind%2A?displayProperty=nameWithType> 메서드를 재정의합니다.</span><span class="sxs-lookup"><span data-stu-id="4bb4c-148">Override the <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnEndFind%2A?displayProperty=nameWithType> method.</span></span> <span data-ttu-id="4bb4c-149">이 메서드는 검색 프록시가 찾기 요청 처리를 완료할 때 호출됩니다.</span><span class="sxs-lookup"><span data-stu-id="4bb4c-149">This method is called when the discovery proxy finishes processing a find request.</span></span>  
   
     ```  
     protected override void OnEndFind(IAsyncResult result)  
@@ -304,7 +306,7 @@ ms.lasthandoff: 12/22/2017
             }  
     ```  
   
-7.  <span data-ttu-id="46db3-150"><xref:System.ServiceModel.Discovery.DiscoveryProxy.OnBeginResolve%2A?displayProperty=nameWithType> 메서드를 재정의합니다.</span><span class="sxs-lookup"><span data-stu-id="46db3-150">Override the <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnBeginResolve%2A?displayProperty=nameWithType> method.</span></span> <span data-ttu-id="46db3-151">이 메서드는 검색 프록시가 확인 메시지를 받을 때 호출됩니다.</span><span class="sxs-lookup"><span data-stu-id="46db3-151">This method is called when the discovery proxy receives a resolve message.</span></span>  
+7.  <span data-ttu-id="4bb4c-150"><xref:System.ServiceModel.Discovery.DiscoveryProxy.OnBeginResolve%2A?displayProperty=nameWithType> 메서드를 재정의합니다.</span><span class="sxs-lookup"><span data-stu-id="4bb4c-150">Override the <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnBeginResolve%2A?displayProperty=nameWithType> method.</span></span> <span data-ttu-id="4bb4c-151">이 메서드는 검색 프록시가 확인 메시지를 받을 때 호출됩니다.</span><span class="sxs-lookup"><span data-stu-id="4bb4c-151">This method is called when the discovery proxy receives a resolve message.</span></span>  
   
     ```  
     // OnBeginFind method is called when a Resolve request message is received by the Proxy  
@@ -321,7 +323,7 @@ ms.lasthandoff: 12/22/2017
     }  
     ```  
   
-8.  <span data-ttu-id="46db3-152"><xref:System.ServiceModel.Discovery.DiscoveryProxy.OnEndResolve%2A?displayProperty=nameWithType> 메서드를 재정의합니다.</span><span class="sxs-lookup"><span data-stu-id="46db3-152">Override the <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnEndResolve%2A?displayProperty=nameWithType> method.</span></span> <span data-ttu-id="46db3-153">이 메서드는 검색 프록시가 확인 메시지 처리를 완료할 때 호출됩니다.</span><span class="sxs-lookup"><span data-stu-id="46db3-153">This method is called when the discovery proxy finishes processing a resolve message.</span></span>  
+8.  <span data-ttu-id="4bb4c-152"><xref:System.ServiceModel.Discovery.DiscoveryProxy.OnEndResolve%2A?displayProperty=nameWithType> 메서드를 재정의합니다.</span><span class="sxs-lookup"><span data-stu-id="4bb4c-152">Override the <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnEndResolve%2A?displayProperty=nameWithType> method.</span></span> <span data-ttu-id="4bb4c-153">이 메서드는 검색 프록시가 확인 메시지 처리를 완료할 때 호출됩니다.</span><span class="sxs-lookup"><span data-stu-id="4bb4c-153">This method is called when the discovery proxy finishes processing a resolve message.</span></span>  
   
     ```  
     protected override EndpointDiscoveryMetadata OnEndResolve(IAsyncResult result)  
@@ -330,22 +332,22 @@ ms.lasthandoff: 12/22/2017
     }  
     ```  
   
- <span data-ttu-id="46db3-154">OnBegin.</span><span class="sxs-lookup"><span data-stu-id="46db3-154">The OnBegin..</span></span> <span data-ttu-id="46db3-155">/ OnEnd.</span><span class="sxs-lookup"><span data-stu-id="46db3-155">/ OnEnd..</span></span> <span data-ttu-id="46db3-156">메서드는 후속 검색 작업에 대한 논리를 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="46db3-156">methods provide the logic for the subsequent discovery operations.</span></span> <span data-ttu-id="46db3-157">예를 들어 <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnBeginFind%2A> 및 <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnEndFind%2A> 메서드는 검색 프록시에 대한 찾기 논리를 구현합니다.</span><span class="sxs-lookup"><span data-stu-id="46db3-157">For example the <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnBeginFind%2A> and <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnEndFind%2A> methods implement the find logic for discovery proxy.</span></span> <span data-ttu-id="46db3-158">검색 프록시가 프로브 메시지를 받으면 클라이언트에 응답을 보내기 위해 이러한 메서드가 실행됩니다.</span><span class="sxs-lookup"><span data-stu-id="46db3-158">When the discovery proxy receives a probe message these methods are executed to send a response back to the client.</span></span> <span data-ttu-id="46db3-159">찾기 논리는 원하는 대로 수정할 수 있습니다. 예를 들어 찾기 작업의 일부로 알고리즘 또는 응용 프로그램별 XML 메타데이터 구문 분석을 통해 사용자 지정 범위 일치를 통합할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="46db3-159">You may modify the find logic as you wish, for example you can incorporate custom scope matching by algorithms or application specific XML metadata parsing as part of your find operation.</span></span>  
+ <span data-ttu-id="4bb4c-154">OnBegin.</span><span class="sxs-lookup"><span data-stu-id="4bb4c-154">The OnBegin..</span></span> <span data-ttu-id="4bb4c-155">/ OnEnd.</span><span class="sxs-lookup"><span data-stu-id="4bb4c-155">/ OnEnd..</span></span> <span data-ttu-id="4bb4c-156">메서드는 후속 검색 작업에 대한 논리를 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="4bb4c-156">methods provide the logic for the subsequent discovery operations.</span></span> <span data-ttu-id="4bb4c-157">예를 들어 <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnBeginFind%2A> 및 <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnEndFind%2A> 메서드는 검색 프록시에 대한 찾기 논리를 구현합니다.</span><span class="sxs-lookup"><span data-stu-id="4bb4c-157">For example the <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnBeginFind%2A> and <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnEndFind%2A> methods implement the find logic for discovery proxy.</span></span> <span data-ttu-id="4bb4c-158">검색 프록시가 프로브 메시지를 받으면 클라이언트에 응답을 보내기 위해 이러한 메서드가 실행됩니다.</span><span class="sxs-lookup"><span data-stu-id="4bb4c-158">When the discovery proxy receives a probe message these methods are executed to send a response back to the client.</span></span> <span data-ttu-id="4bb4c-159">찾기 논리는 원하는 대로 수정할 수 있습니다. 예를 들어 찾기 작업의 일부로 알고리즘 또는 응용 프로그램별 XML 메타데이터 구문 분석을 통해 사용자 지정 범위 일치를 통합할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="4bb4c-159">You may modify the find logic as you wish, for example you can incorporate custom scope matching by algorithms or application specific XML metadata parsing as part of your find operation.</span></span>  
   
-### <a name="to-implement-the-asyncresult-class"></a><span data-ttu-id="46db3-160">AsyncResult 클래스를 구현하려면</span><span class="sxs-lookup"><span data-stu-id="46db3-160">To implement the AsyncResult class</span></span>  
+### <a name="to-implement-the-asyncresult-class"></a><span data-ttu-id="4bb4c-160">AsyncResult 클래스를 구현하려면</span><span class="sxs-lookup"><span data-stu-id="4bb4c-160">To implement the AsyncResult class</span></span>  
   
-1.  <span data-ttu-id="46db3-161">다양한 비동기 결과 클래스를 파생시키는 데 사용되는 추상 기본 클래스 AsyncResult를 정의합니다.</span><span class="sxs-lookup"><span data-stu-id="46db3-161">Define the abstract base class AsyncResult which is used to derive the various async result classes.</span></span>  
+1.  <span data-ttu-id="4bb4c-161">다양한 비동기 결과 클래스를 파생시키는 데 사용되는 추상 기본 클래스 AsyncResult를 정의합니다.</span><span class="sxs-lookup"><span data-stu-id="4bb4c-161">Define the abstract base class AsyncResult which is used to derive the various async result classes.</span></span>  
   
-2.  <span data-ttu-id="46db3-162">AsyncResult.cs라는 새 코드 파일을 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="46db3-162">Create a new code file called AsyncResult.cs.</span></span>  
+2.  <span data-ttu-id="4bb4c-162">AsyncResult.cs라는 새 코드 파일을 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="4bb4c-162">Create a new code file called AsyncResult.cs.</span></span>  
   
-3.  <span data-ttu-id="46db3-163">AsyncResult.cs에 다음 `using` 문을 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="46db3-163">Add the following `using` statements to AsyncResult.cs.</span></span>  
+3.  <span data-ttu-id="4bb4c-163">AsyncResult.cs에 다음 `using` 문을 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="4bb4c-163">Add the following `using` statements to AsyncResult.cs.</span></span>  
   
     ```  
     using System;  
     using System.Threading;  
     ```  
   
-4.  <span data-ttu-id="46db3-164">다음 AsyncResult 클래스를 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="46db3-164">Add the following AsyncResult class.</span></span>  
+4.  <span data-ttu-id="4bb4c-164">다음 AsyncResult 클래스를 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="4bb4c-164">Add the following AsyncResult class.</span></span>  
   
     ```  
     abstract class AsyncResult : IAsyncResult  
@@ -496,11 +498,11 @@ ms.lasthandoff: 12/22/2017
         }  
     ```  
   
-### <a name="to-host-the-discoveryproxy"></a><span data-ttu-id="46db3-165">DiscoveryProxy를 호스팅하려면</span><span class="sxs-lookup"><span data-stu-id="46db3-165">To host the DiscoveryProxy</span></span>  
+### <a name="to-host-the-discoveryproxy"></a><span data-ttu-id="4bb4c-165">DiscoveryProxy를 호스팅하려면</span><span class="sxs-lookup"><span data-stu-id="4bb4c-165">To host the DiscoveryProxy</span></span>  
   
-1.  <span data-ttu-id="46db3-166">DiscoveryProxyExample 프로젝트에서 Program.cs 파일을 엽니다.</span><span class="sxs-lookup"><span data-stu-id="46db3-166">Open the Program.cs file in the DiscoveryProxyExample project.</span></span>  
+1.  <span data-ttu-id="4bb4c-166">DiscoveryProxyExample 프로젝트에서 Program.cs 파일을 엽니다.</span><span class="sxs-lookup"><span data-stu-id="4bb4c-166">Open the Program.cs file in the DiscoveryProxyExample project.</span></span>  
   
-2.  <span data-ttu-id="46db3-167">다음 `using` 문을 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="46db3-167">Add the following `using` statements.</span></span>  
+2.  <span data-ttu-id="4bb4c-167">다음 `using` 문을 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="4bb4c-167">Add the following `using` statements.</span></span>  
   
     ```  
     using System;  
@@ -508,7 +510,7 @@ ms.lasthandoff: 12/22/2017
     using System.ServiceModel.Discovery;  
     ```  
   
-3.  <span data-ttu-id="46db3-168">`Main()` 메서드 안에서 다음 코드를 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="46db3-168">Within the `Main()` method, add the following code.</span></span> <span data-ttu-id="46db3-169">그러면 `DiscoveryProxy` 클래스의 인스턴스가 만들어집니다.</span><span class="sxs-lookup"><span data-stu-id="46db3-169">This creates an instance of the `DiscoveryProxy` class.</span></span>  
+3.  <span data-ttu-id="4bb4c-168">`Main()` 메서드 안에서 다음 코드를 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="4bb4c-168">Within the `Main()` method, add the following code.</span></span> <span data-ttu-id="4bb4c-169">그러면 `DiscoveryProxy` 클래스의 인스턴스가 만들어집니다.</span><span class="sxs-lookup"><span data-stu-id="4bb4c-169">This creates an instance of the `DiscoveryProxy` class.</span></span>  
   
     ```  
     Uri probeEndpointAddress = new Uri("net.tcp://localhost:8001/Probe");  
@@ -518,7 +520,7 @@ ms.lasthandoff: 12/22/2017
                 ServiceHost proxyServiceHost = new ServiceHost(new DiscoveryProxyService());  
     ```  
   
-4.  <span data-ttu-id="46db3-170">다음 코드를 추가하여 검색 끝점 및 알림 끝점을 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="46db3-170">Next add the following code to add a discovery endpoint and an announcement endpoint.</span></span>  
+4.  <span data-ttu-id="4bb4c-170">다음 코드를 추가하여 검색 끝점 및 알림 끝점을 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="4bb4c-170">Next add the following code to add a discovery endpoint and an announcement endpoint.</span></span>  
   
     ```  
     try  
@@ -559,10 +561,10 @@ ms.lasthandoff: 12/22/2017
               }  
     ```  
   
- <span data-ttu-id="46db3-171">검색 프록시의 구현을 완료했습니다.</span><span class="sxs-lookup"><span data-stu-id="46db3-171">You have completed implementing the discovery proxy.</span></span> <span data-ttu-id="46db3-172">계속 진행 하 [하는 방법: 검색 프록시에 등록 하는 검색 가능한 서비스 구현](../../../../docs/framework/wcf/feature-details/discoverable-service-that-registers-with-the-discovery-proxy.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="46db3-172">Continue on to [How to: Implement a Discoverable Service that Registers with the Discovery Proxy](../../../../docs/framework/wcf/feature-details/discoverable-service-that-registers-with-the-discovery-proxy.md).</span></span>  
+ <span data-ttu-id="4bb4c-171">검색 프록시의 구현을 완료했습니다.</span><span class="sxs-lookup"><span data-stu-id="4bb4c-171">You have completed implementing the discovery proxy.</span></span> <span data-ttu-id="4bb4c-172">계속 진행 하 [하는 방법: 검색 프록시에 등록 하는 검색 가능한 서비스 구현](../../../../docs/framework/wcf/feature-details/discoverable-service-that-registers-with-the-discovery-proxy.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="4bb4c-172">Continue on to [How to: Implement a Discoverable Service that Registers with the Discovery Proxy](../../../../docs/framework/wcf/feature-details/discoverable-service-that-registers-with-the-discovery-proxy.md).</span></span>  
   
-## <a name="example"></a><span data-ttu-id="46db3-173">예</span><span class="sxs-lookup"><span data-stu-id="46db3-173">Example</span></span>  
- <span data-ttu-id="46db3-174">다음은 이 항목에서 사용되는 전체 코드 목록입니다.</span><span class="sxs-lookup"><span data-stu-id="46db3-174">This is the full listing of the code used in this topic.</span></span>  
+## <a name="example"></a><span data-ttu-id="4bb4c-173">예제</span><span class="sxs-lookup"><span data-stu-id="4bb4c-173">Example</span></span>  
+ <span data-ttu-id="4bb4c-174">다음은 이 항목에서 사용되는 전체 코드 목록입니다.</span><span class="sxs-lookup"><span data-stu-id="4bb4c-174">This is the full listing of the code used in this topic.</span></span>  
   
 ```  
 // DiscoveryProxy.cs  
@@ -988,8 +990,8 @@ namespace Microsoft.Samples.Discovery
 }  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="46db3-175">참고 항목</span><span class="sxs-lookup"><span data-stu-id="46db3-175">See Also</span></span>  
- [<span data-ttu-id="46db3-176">WCF 검색 개요</span><span class="sxs-lookup"><span data-stu-id="46db3-176">WCF Discovery Overview</span></span>](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md)  
- [<span data-ttu-id="46db3-177">방법: 검색 프록시에 등록할 검색 가능한 서비스 구현</span><span class="sxs-lookup"><span data-stu-id="46db3-177">How to: Implement a Discoverable Service that Registers with the Discovery Proxy</span></span>](../../../../docs/framework/wcf/feature-details/discoverable-service-that-registers-with-the-discovery-proxy.md)  
- [<span data-ttu-id="46db3-178">방법: 검색 프록시를 사용하여 서비스를 찾는 클라이언트 응용 프로그램 구현</span><span class="sxs-lookup"><span data-stu-id="46db3-178">How to: Implement a Client Application that Uses the Discovery Proxy to Find a Service</span></span>](../../../../docs/framework/wcf/feature-details/client-app-discovery-proxy-to-find-a-service.md)  
- [<span data-ttu-id="46db3-179">방법: 검색 프록시 테스트</span><span class="sxs-lookup"><span data-stu-id="46db3-179">How to: Test the Discovery Proxy</span></span>](../../../../docs/framework/wcf/feature-details/how-to-test-the-discovery-proxy.md)
+## <a name="see-also"></a><span data-ttu-id="4bb4c-175">참고 항목</span><span class="sxs-lookup"><span data-stu-id="4bb4c-175">See Also</span></span>  
+ [<span data-ttu-id="4bb4c-176">WCF 검색 개요</span><span class="sxs-lookup"><span data-stu-id="4bb4c-176">WCF Discovery Overview</span></span>](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md)  
+ [<span data-ttu-id="4bb4c-177">방법: 검색 프록시에 등록할 검색 가능한 서비스 구현</span><span class="sxs-lookup"><span data-stu-id="4bb4c-177">How to: Implement a Discoverable Service that Registers with the Discovery Proxy</span></span>](../../../../docs/framework/wcf/feature-details/discoverable-service-that-registers-with-the-discovery-proxy.md)  
+ [<span data-ttu-id="4bb4c-178">방법: 검색 프록시를 사용하여 서비스를 찾는 클라이언트 응용 프로그램 구현</span><span class="sxs-lookup"><span data-stu-id="4bb4c-178">How to: Implement a Client Application that Uses the Discovery Proxy to Find a Service</span></span>](../../../../docs/framework/wcf/feature-details/client-app-discovery-proxy-to-find-a-service.md)  
+ [<span data-ttu-id="4bb4c-179">방법: 검색 프록시 테스트</span><span class="sxs-lookup"><span data-stu-id="4bb4c-179">How to: Test the Discovery Proxy</span></span>](../../../../docs/framework/wcf/feature-details/how-to-test-the-discovery-proxy.md)

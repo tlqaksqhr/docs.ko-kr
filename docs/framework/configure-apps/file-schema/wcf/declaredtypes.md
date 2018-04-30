@@ -1,12 +1,13 @@
 ---
 title: '&lt;declaredTypes&gt;'
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - dataContractSerializer element
@@ -15,27 +16,28 @@ helpviewer_keywords:
 - KnownTypes
 - <declaredTypes> element
 ms.assetid: f35184e4-9d9e-4d37-8fb4-d5b58220eb3e
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 3066ee9247e69c746c28251b975bb80425ccbc8f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: a1cd7d446b0d86e1f38e38afeee03161278afed7
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
-# <a name="ltdeclaredtypesgt"></a><span data-ttu-id="bf349-102">&lt;declaredTypes&gt;</span><span class="sxs-lookup"><span data-stu-id="bf349-102">&lt;declaredTypes&gt;</span></span>
-<span data-ttu-id="bf349-103">deserialize할 때 <xref:System.Runtime.Serialization.DataContractSerializer>에서 사용하는 알려진 형식을 포함합니다.</span><span class="sxs-lookup"><span data-stu-id="bf349-103">Contains the known types that the <xref:System.Runtime.Serialization.DataContractSerializer> uses when deserializing.</span></span>  
+# <a name="ltdeclaredtypesgt"></a><span data-ttu-id="cb3d7-102">&lt;declaredTypes&gt;</span><span class="sxs-lookup"><span data-stu-id="cb3d7-102">&lt;declaredTypes&gt;</span></span>
+<span data-ttu-id="cb3d7-103">deserialize할 때 <xref:System.Runtime.Serialization.DataContractSerializer>에서 사용하는 알려진 형식을 포함합니다.</span><span class="sxs-lookup"><span data-stu-id="cb3d7-103">Contains the known types that the <xref:System.Runtime.Serialization.DataContractSerializer> uses when deserializing.</span></span>  
   
- <span data-ttu-id="bf349-104">데이터 계약 및 알려진된 형식에 대 한 자세한 내용은 참조 [데이터 계약 알려진 형식을](../../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="bf349-104">For more information about data contracts and known types, see [Data Contract Known Types](../../../../../docs/framework/wcf/feature-details/data-contract-known-types.md).</span></span>  
+ <span data-ttu-id="cb3d7-104">데이터 계약 및 알려진된 형식에 대 한 자세한 내용은 참조 [데이터 계약 알려진 형식을](../../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="cb3d7-104">For more information about data contracts and known types, see [Data Contract Known Types](../../../../../docs/framework/wcf/feature-details/data-contract-known-types.md).</span></span>  
   
- <span data-ttu-id="bf349-105">system.runtime.serialization</span><span class="sxs-lookup"><span data-stu-id="bf349-105">system.runtime.serialization</span></span>  
-<span data-ttu-id="bf349-106">\<dataContractSerializer ></span><span class="sxs-lookup"><span data-stu-id="bf349-106">\<dataContractSerializer></span></span>  
-<span data-ttu-id="bf349-107">\<declaredTypes ></span><span class="sxs-lookup"><span data-stu-id="bf349-107">\<declaredTypes></span></span>  
+ <span data-ttu-id="cb3d7-105">system.runtime.serialization</span><span class="sxs-lookup"><span data-stu-id="cb3d7-105">system.runtime.serialization</span></span>  
+<span data-ttu-id="cb3d7-106">\<dataContractSerializer ></span><span class="sxs-lookup"><span data-stu-id="cb3d7-106">\<dataContractSerializer></span></span>  
+<span data-ttu-id="cb3d7-107">\<declaredTypes ></span><span class="sxs-lookup"><span data-stu-id="cb3d7-107">\<declaredTypes></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="bf349-108">구문</span><span class="sxs-lookup"><span data-stu-id="bf349-108">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="cb3d7-108">구문</span><span class="sxs-lookup"><span data-stu-id="cb3d7-108">Syntax</span></span>  
   
 ```xml  
 <configuration>  
@@ -53,29 +55,29 @@ ms.lasthandoff: 12/22/2017
 </configuration>  
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="bf349-109">특성 및 요소</span><span class="sxs-lookup"><span data-stu-id="bf349-109">Attributes and Elements</span></span>  
- <span data-ttu-id="bf349-110">다음 단원에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="bf349-110">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="cb3d7-109">특성 및 요소</span><span class="sxs-lookup"><span data-stu-id="cb3d7-109">Attributes and Elements</span></span>  
+ <span data-ttu-id="cb3d7-110">다음 섹션에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="cb3d7-110">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="bf349-111">특성</span><span class="sxs-lookup"><span data-stu-id="bf349-111">Attributes</span></span>  
- <span data-ttu-id="bf349-112">없음</span><span class="sxs-lookup"><span data-stu-id="bf349-112">None.</span></span>  
+### <a name="attributes"></a><span data-ttu-id="cb3d7-111">특성</span><span class="sxs-lookup"><span data-stu-id="cb3d7-111">Attributes</span></span>  
+ <span data-ttu-id="cb3d7-112">없음</span><span class="sxs-lookup"><span data-stu-id="cb3d7-112">None.</span></span>  
   
-### <a name="child-elements"></a><span data-ttu-id="bf349-113">자식 요소</span><span class="sxs-lookup"><span data-stu-id="bf349-113">Child Elements</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="cb3d7-113">자식 요소</span><span class="sxs-lookup"><span data-stu-id="cb3d7-113">Child Elements</span></span>  
   
-|<span data-ttu-id="bf349-114">요소</span><span class="sxs-lookup"><span data-stu-id="bf349-114">Element</span></span>|<span data-ttu-id="bf349-115">설명</span><span class="sxs-lookup"><span data-stu-id="bf349-115">Description</span></span>|  
+|<span data-ttu-id="cb3d7-114">요소</span><span class="sxs-lookup"><span data-stu-id="cb3d7-114">Element</span></span>|<span data-ttu-id="cb3d7-115">설명</span><span class="sxs-lookup"><span data-stu-id="cb3d7-115">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="bf349-116">\<add></span><span class="sxs-lookup"><span data-stu-id="bf349-116">\<add></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/add-of-declaredtypes-element.md)|<span data-ttu-id="bf349-117">알려진 형식을 필요로 하는 형식을 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="bf349-117">Adds types that require known types.</span></span>|  
+|[<span data-ttu-id="cb3d7-116">\<add></span><span class="sxs-lookup"><span data-stu-id="cb3d7-116">\<add></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/add-of-declaredtypes-element.md)|<span data-ttu-id="cb3d7-117">알려진 형식을 필요로 하는 형식을 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="cb3d7-117">Adds types that require known types.</span></span>|  
   
-### <a name="parent-elements"></a><span data-ttu-id="bf349-118">부모 요소</span><span class="sxs-lookup"><span data-stu-id="bf349-118">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="cb3d7-118">부모 요소</span><span class="sxs-lookup"><span data-stu-id="cb3d7-118">Parent Elements</span></span>  
   
-|<span data-ttu-id="bf349-119">요소</span><span class="sxs-lookup"><span data-stu-id="bf349-119">Element</span></span>|<span data-ttu-id="bf349-120">설명</span><span class="sxs-lookup"><span data-stu-id="bf349-120">Description</span></span>|  
+|<span data-ttu-id="cb3d7-119">요소</span><span class="sxs-lookup"><span data-stu-id="cb3d7-119">Element</span></span>|<span data-ttu-id="cb3d7-120">설명</span><span class="sxs-lookup"><span data-stu-id="cb3d7-120">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="bf349-121">\<dataContractSerializer ></span><span class="sxs-lookup"><span data-stu-id="bf349-121">\<dataContractSerializer></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/datacontractserializer-of-system-runtime-serialization.md)|<span data-ttu-id="bf349-122"><xref:System.Runtime.Serialization.DataContractSerializer>에 대한 구성 데이터를 포함합니다.</span><span class="sxs-lookup"><span data-stu-id="bf349-122">Contains configuration data for the <xref:System.Runtime.Serialization.DataContractSerializer>.</span></span>|  
+|[<span data-ttu-id="cb3d7-121">\<dataContractSerializer ></span><span class="sxs-lookup"><span data-stu-id="cb3d7-121">\<dataContractSerializer></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/datacontractserializer-of-system-runtime-serialization.md)|<span data-ttu-id="cb3d7-122"><xref:System.Runtime.Serialization.DataContractSerializer>에 대한 구성 데이터를 포함합니다.</span><span class="sxs-lookup"><span data-stu-id="cb3d7-122">Contains configuration data for the <xref:System.Runtime.Serialization.DataContractSerializer>.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="bf349-123">설명</span><span class="sxs-lookup"><span data-stu-id="bf349-123">Remarks</span></span>  
- [!INCLUDE[crabout](../../../../../includes/crabout-md.md)]<span data-ttu-id="bf349-124">알려진 형식, 참조 [데이터 계약 알려진 형식을](../../../../../docs/framework/wcf/feature-details/data-contract-known-types.md) 및 <xref:System.Runtime.Serialization.DataContractSerializer>합니다.</span><span class="sxs-lookup"><span data-stu-id="bf349-124"> known types, see [Data Contract Known Types](../../../../../docs/framework/wcf/feature-details/data-contract-known-types.md) and <xref:System.Runtime.Serialization.DataContractSerializer>.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="cb3d7-123">설명</span><span class="sxs-lookup"><span data-stu-id="cb3d7-123">Remarks</span></span>  
+ <span data-ttu-id="cb3d7-124">알려진된 형식에 대 한 자세한 내용은 참조 [데이터 계약 알려진 형식을](../../../../../docs/framework/wcf/feature-details/data-contract-known-types.md) 및 <xref:System.Runtime.Serialization.DataContractSerializer>합니다.</span><span class="sxs-lookup"><span data-stu-id="cb3d7-124">For more information about known types, see [Data Contract Known Types](../../../../../docs/framework/wcf/feature-details/data-contract-known-types.md) and <xref:System.Runtime.Serialization.DataContractSerializer>.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="bf349-125">예</span><span class="sxs-lookup"><span data-stu-id="bf349-125">Example</span></span>  
- <span data-ttu-id="bf349-126">다음 XML 코드에서는 선언 된 형식 및 알려진된 형식에 추가 `DataContractSerializer` 요소입니다.</span><span class="sxs-lookup"><span data-stu-id="bf349-126">The following XML code shows declared types and known types added to a `DataContractSerializer` element.</span></span> <span data-ttu-id="bf349-127">예제에서는 추가되는 세 가지 형식을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="bf349-127">The example shows three types being added.</span></span> <span data-ttu-id="bf349-128">첫 번째는 "Item"이라는 알려진 형식을 사용하는 "Orders"라는 사용자 지정 형식입니다.</span><span class="sxs-lookup"><span data-stu-id="bf349-128">The first is a custom type named "Orders" that uses a known type named "Item".</span></span> <span data-ttu-id="bf349-129">두 번째 선언된 형식은 <xref:System.Collections.Generic.List%601>을 알려진 형식으로 사용하는 `Item`입니다.</span><span class="sxs-lookup"><span data-stu-id="bf349-129">The second declared type is a <xref:System.Collections.Generic.List%601> that uses `Item` as a known type.</span></span> <span data-ttu-id="bf349-130">마지막으로 세 번째 선언된 형식은 <xref:System.Collections.Generic.Dictionary%602>입니다.</span><span class="sxs-lookup"><span data-stu-id="bf349-130">Finally the third declared type is a <xref:System.Collections.Generic.Dictionary%602>.</span></span> <span data-ttu-id="bf349-131"><xref:System.Collections.Generic.Dictionary%602> 클래스 형식은 두 개의 형식 매개 변수가 있는 제네릭 형식입니다.</span><span class="sxs-lookup"><span data-stu-id="bf349-131">The <xref:System.Collections.Generic.Dictionary%602> class type is a generic type, with two type parameters.</span></span> <span data-ttu-id="bf349-132">첫 번째는 키를 나타내고 두 번째는 값을 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="bf349-132">The first represents the key and the second represents the value.</span></span> <span data-ttu-id="bf349-133">다음 예제에서는 알려진 형식 목록에 두 번째 형식(값)의 <xref:System.Collections.Generic.List%601>을 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="bf349-133">The following example adds a <xref:System.Collections.Generic.List%601> of the second type (the value) to the list of known types.</span></span> <span data-ttu-id="bf349-134">`index` 특성을 사용하여 알려진 형식에 사용할 형식 매개 변수를 지정해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="bf349-134">You must use the `index` attribute to specify which type parameter to use in the known type.</span></span> <span data-ttu-id="bf349-135">이 경우 값 형식은 "1"로 설정된 index 특성으로 표시됩니다(컬렉션은 0부터 시작).</span><span class="sxs-lookup"><span data-stu-id="bf349-135">In this case, the value type is indicated by the index attribute set to "1" (the collection is zero-based).</span></span>  
+## <a name="example"></a><span data-ttu-id="cb3d7-125">예제</span><span class="sxs-lookup"><span data-stu-id="cb3d7-125">Example</span></span>  
+ <span data-ttu-id="cb3d7-126">다음 XML 코드에서는 선언 된 형식 및 알려진된 형식에 추가 `DataContractSerializer` 요소입니다.</span><span class="sxs-lookup"><span data-stu-id="cb3d7-126">The following XML code shows declared types and known types added to a `DataContractSerializer` element.</span></span> <span data-ttu-id="cb3d7-127">예제에서는 추가되는 세 가지 형식을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="cb3d7-127">The example shows three types being added.</span></span> <span data-ttu-id="cb3d7-128">첫 번째는 "Item"이라는 알려진 형식을 사용하는 "Orders"라는 사용자 지정 형식입니다.</span><span class="sxs-lookup"><span data-stu-id="cb3d7-128">The first is a custom type named "Orders" that uses a known type named "Item".</span></span> <span data-ttu-id="cb3d7-129">두 번째 선언된 형식은 <xref:System.Collections.Generic.List%601>을 알려진 형식으로 사용하는 `Item`입니다.</span><span class="sxs-lookup"><span data-stu-id="cb3d7-129">The second declared type is a <xref:System.Collections.Generic.List%601> that uses `Item` as a known type.</span></span> <span data-ttu-id="cb3d7-130">마지막으로 세 번째 선언된 형식은 <xref:System.Collections.Generic.Dictionary%602>입니다.</span><span class="sxs-lookup"><span data-stu-id="cb3d7-130">Finally the third declared type is a <xref:System.Collections.Generic.Dictionary%602>.</span></span> <span data-ttu-id="cb3d7-131"><xref:System.Collections.Generic.Dictionary%602> 클래스 형식은 두 개의 형식 매개 변수가 있는 제네릭 형식입니다.</span><span class="sxs-lookup"><span data-stu-id="cb3d7-131">The <xref:System.Collections.Generic.Dictionary%602> class type is a generic type, with two type parameters.</span></span> <span data-ttu-id="cb3d7-132">첫 번째는 키를 나타내고 두 번째는 값을 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="cb3d7-132">The first represents the key and the second represents the value.</span></span> <span data-ttu-id="cb3d7-133">다음 예제에서는 알려진 형식 목록에 두 번째 형식(값)의 <xref:System.Collections.Generic.List%601>을 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="cb3d7-133">The following example adds a <xref:System.Collections.Generic.List%601> of the second type (the value) to the list of known types.</span></span> <span data-ttu-id="cb3d7-134">`index` 특성을 사용하여 알려진 형식에 사용할 형식 매개 변수를 지정해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="cb3d7-134">You must use the `index` attribute to specify which type parameter to use in the known type.</span></span> <span data-ttu-id="cb3d7-135">이 경우 값 형식은 "1"로 설정된 index 특성으로 표시됩니다(컬렉션은 0부터 시작).</span><span class="sxs-lookup"><span data-stu-id="cb3d7-135">In this case, the value type is indicated by the index attribute set to "1" (the collection is zero-based).</span></span>  
   
 ```xml  
 <configuration>  
@@ -99,8 +101,8 @@ ms.lasthandoff: 12/22/2017
 </configuration>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="bf349-136">참고 항목</span><span class="sxs-lookup"><span data-stu-id="bf349-136">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="cb3d7-136">참고 항목</span><span class="sxs-lookup"><span data-stu-id="cb3d7-136">See Also</span></span>  
  <xref:System.Runtime.Serialization.DataContractSerializer>  
- [<span data-ttu-id="bf349-137">\<dataContractSerializer ></span><span class="sxs-lookup"><span data-stu-id="bf349-137">\<dataContractSerializer></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/datacontractserializer-element.md)  
- [<span data-ttu-id="bf349-138">데이터 계약 알려진 형식</span><span class="sxs-lookup"><span data-stu-id="bf349-138">Data Contract Known Types</span></span>](../../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)  
- [<span data-ttu-id="bf349-139">\<add></span><span class="sxs-lookup"><span data-stu-id="bf349-139">\<add></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/add-of-declaredtypes-element.md)
+ [<span data-ttu-id="cb3d7-137">\<dataContractSerializer ></span><span class="sxs-lookup"><span data-stu-id="cb3d7-137">\<dataContractSerializer></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/datacontractserializer-element.md)  
+ [<span data-ttu-id="cb3d7-138">데이터 계약 알려진 형식</span><span class="sxs-lookup"><span data-stu-id="cb3d7-138">Data Contract Known Types</span></span>](../../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)  
+ [<span data-ttu-id="cb3d7-139">\<add></span><span class="sxs-lookup"><span data-stu-id="cb3d7-139">\<add></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/add-of-declaredtypes-element.md)
