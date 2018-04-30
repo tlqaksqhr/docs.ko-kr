@@ -21,11 +21,11 @@ ms.author: bruceper
 manager: mbaldwin
 ms.workload:
 - dotnet
-ms.openlocfilehash: 7416f8429f347d0b8dc6227415ad366b3ff63986
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 19bb6d4a172568611f73e3a50d0c526016c65aac
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="best-practices-for-security-in-wcf"></a>WCF 보안을 위한 최선의 방법
 다음 단원에는 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]를 사용하여 보안 응용 프로그램을 만들 때 고려할 최선의 방법이 나열되어 있습니다. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 보안 참조 [보안 고려 사항](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md), [데이터에 대 한 보안 고려 사항](../../../../docs/framework/wcf/feature-details/security-considerations-for-data.md), 및 [메타 데이터의 보안 고려 사항](../../../../docs/framework/wcf/feature-details/security-considerations-with-metadata.md)합니다.  
@@ -60,7 +60,7 @@ ms.lasthandoff: 04/26/2018
  메타데이터의 원본을 신뢰할 수 있는지, 다른 사람이 메타데이터를 훼손하지는 않았는지 확인합니다. HTTP 프로토콜을 사용하여 검색한 메타데이터는 일반 텍스트로 전송되며 변경할 수 있습니다. 서비스가 <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpsGetEnabled%2A> 및 <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpsGetUrl%2A> 속성을 사용하는 경우 서비스 작성자가 제공하는 URL을 통해 HTTPS 프로토콜을 사용하여 데이터를 다운로드합니다.  
   
 ## <a name="publish-metadata-using-security"></a>보안을 사용하여 메타데이터 게시  
- 서비스의 게시된 메타데이터가 훼손되지 않게 하려면 전송 또는 메시지 수준 보안을 사용하여 메타데이터 교환 끝점의 보안을 설정합니다. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [메타 데이터 끝점 게시](../../../../docs/framework/wcf/publishing-metadata-endpoints.md) 및 [하는 방법: 코드를 사용 하 여 서비스에 대 한 메타 데이터를 게시](../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-code.md)합니다.  
+ 서비스의 게시된 메타데이터가 훼손되지 않게 하려면 전송 또는 메시지 수준 보안을 사용하여 메타데이터 교환 끝점의 보안을 설정합니다. 자세한 내용은 참조 [메타 데이터 끝점 게시](../../../../docs/framework/wcf/publishing-metadata-endpoints.md) 및 [하는 방법: 서비스를 사용 하 여 코드에 대 한 메타 데이터 게시](../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-code.md)합니다.  
   
 ## <a name="ensure-use-of-local-issuer"></a>로컬 발급자 사용  
  지정된 바인딩에 발급자 주소와 바인딩을 지정하면 해당 바인딩을 사용하는 끝점에는 로컬 발급자가 사용되지 않습니다. 로컬 발급자를 항상 사용해야 하는 클라이언트는 이러한 바인딩을 사용하지 않도록 하거나 발급자 주소가 null이 되도록 바인딩을 수정해야 합니다.  

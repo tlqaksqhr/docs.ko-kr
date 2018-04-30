@@ -1,26 +1,25 @@
 ---
-title: "Visual Studio 2017을 사용하여 Windows에서 완전한 .NET Core 솔루션 구축"
-description: "Windows의 Visual Studio 2017에서 완전한 .NET Core 솔루션을 구축하는 방법에 관해 알아봅니다."
-keywords: .NET, .NET Core
+title: Visual Studio 2017을 사용하여 Windows에서 완전한 .NET Core 솔루션 구축
+description: Windows의 Visual Studio 2017에서 완전한 .NET Core 솔루션을 구축하는 방법에 관해 알아봅니다.
 author: bleroy
 ms.author: mairaw
 ms.date: 11/16/2016
-ms.topic: article
-ms.prod: .net-core
+ms.topic: conceptual
+ms.prod: dotnet-core
 ms.devlang: dotnet
-ms.assetid: ba7e082c-a7c8-431e-a342-f67734b660f6
-ms.workload: dotnetcore
-ms.openlocfilehash: e922a2c91fab5c513f5c560920d37d77da2d6f84
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.workload:
+- dotnetcore
+ms.openlocfilehash: 8e37eb578f9c4ac63fbc120e6227098ea69d169d
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="building-a-complete-net-core-solution-on-windows-using-visual-studio-2017"></a>Visual Studio 2017을 사용하여 Windows에서 완전한 .NET Core 솔루션 구축
 
 Visual Studio 2017은 .NET Core 응용 프로그램 개발을 위해 필요한 모든 기능을 갖춘 개발 환경을 제공합니다. 이 문서의 절차에서는 재사용 가능한 라이브러리, 테스트 및 타사 라이브러리 사용을 비롯하여 일반적인 .NET Core 솔루션을 빌드하는 데 필요한 단계를 설명합니다. 
 
-## <a name="prerequisites"></a>필수 구성 요소
+## <a name="prerequisites"></a>전제 조건
 
 [필수 조건 페이지](../windows-prerequisites.md)의 지침에 따라 환경을 업데이트합니다.
 
@@ -28,7 +27,7 @@ Visual Studio 2017은 .NET Core 응용 프로그램 개발을 위해 필요한 �
 
 ### <a name="writing-the-library"></a>라이브러리 작성
 
-1. Visual Studio에서 **파일**, **새로 만들기**, **프로젝트**를 선택합니다. **새 프로젝트** 대화 상자에서 **Visual C#** 노드를 확장하고 **.NET Standard** 노드를 선택한 다음 **클래스 라이브러리(.NET Standard)**를 선택합니다. 
+1. Visual Studio에서 **파일**, **새로 만들기**, **프로젝트**를 선택합니다. **새 프로젝트** 대화 상자에서 **Visual C#** 노드를 확장하고 **.NET Standard** 노드를 선택한 다음 **클래스 라이브러리(.NET Standard)** 를 선택합니다. 
 
 2. 프로젝트 이름을 "Library", 솔루션 이름을 "Golden"으로 지정합니다. **솔루션용 디렉터리 만들기** 확인란을 선택한 상태로 둡니다. **확인**을 클릭합니다.
 
@@ -44,7 +43,7 @@ Visual Studio 2017은 .NET Core 응용 프로그램 개발을 위해 필요한 �
 
 ### <a name="writing-the-test-project"></a>테스트 프로젝트 작성
 
-1. 솔루션 탐색기에서 **솔루션** 노드의 상황에 맞는 메뉴를 열고 **추가**, **새 프로젝트**를 차례로 선택합니다. **새 프로젝트** 대화 상자에서 **Visual C# / .NET Core**를 선택하고 **단위 테스트 프로젝트(.NET Core)**를 선택합니다. 이름을 "TestLibrary"로 지정하고 [확인]을 클릭합니다. 
+1. 솔루션 탐색기에서 **솔루션** 노드의 상황에 맞는 메뉴를 열고 **추가**, **새 프로젝트**를 차례로 선택합니다. **새 프로젝트** 대화 상자에서 **Visual C# / .NET Core**를 선택하고 **단위 테스트 프로젝트(.NET Core)** 를 선택합니다. 이름을 "TestLibrary"로 지정하고 [확인]을 클릭합니다. 
 
 2. **TestLibrary** 프로젝트에서 **종속성** 노드의 상황에 맞는 메뉴를 열고 **참조 추가**를 선택합니다. **프로젝트**를 클릭한 다음 라이브러리 프로젝트를 확인한 후 [확인]을 클릭합니다. 이렇게 하면 테스트 프로젝트에 라이브러리에 대한 참조가 추가됩니다.
 

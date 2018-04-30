@@ -1,27 +1,29 @@
 ---
-title: "방법: 보안 세션에 대한 보안 컨텍스트 토큰 만들기"
-ms.custom: 
+title: '방법: 보안 세션에 대한 보안 컨텍스트 토큰 만들기'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 640676b6-c75a-4ff7-aea4-b1a1524d71b2
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: 3dc0e44e7f561e39128e32d3af5fbd495316fdd3
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 579a980d8d71b5fe3e21e49e84a602b3be37eff1
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="how-to-create-a-security-context-token-for-a-secure-session"></a>방법: 보안 세션에 대한 보안 컨텍스트 토큰 만들기
 보안 세션에서 상태 저장 SCT(보안 컨텍스트 토큰)을 사용하면 세션에서 서비스 재활용의 영향을 받지 않을 수 있습니다. 예를 들어, 상태 비저장 SCT를 보안 세션에서 사용할 때 IIS(인터넷 정보 서비스)를 다시 설정하면 서비스와 연결된 세션 데이터가 손실됩니다. 이 세션 데이터에는 SCT 토큰 캐시가 포함되어 있습니다. 따라서 클라이언트가 서비스에 상태 비저장 SCT를 다음에 보낼 때 SCT와 연결된 키를 검색할 수 없기 때문에 오류가 반환됩니다. 그러나 상태 저장 SCT를 사용하는 경우에는 SCT와 연결된 키가 SCT에 포함됩니다. 키가 SCT에 포함되어 메시지에 포함되므로 서비스 재활용이 보안 세션에 영향을 주지 않습니다. 기본적으로 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]에서는 보안 세션에서 상태 비저장 SCT를 사용합니다. 이 항목에서는 보안 세션에서 상태 저장 SCT를 사용하는 방법에 대해 자세히 설명합니다.  
@@ -33,7 +35,7 @@ ms.lasthandoff: 12/22/2017
 >  보안 세션에서 상태 저장 SCT를 사용하는 응용 프로그램의 경우 서비스의 스레드 ID는 연결된 사용자 프로필이 있는 사용자 계정이어야 합니다. `Local Service`처럼 사용자 프로필이 없는 계정으로 서비스를 실행하면 예외가 throw될 수 있습니다.  
   
 > [!NOTE]
->  Windows XP에서 가장이 필요한 경우 상태 저장 SCT 없이 보안 세션을 사용합니다. 상태 저장 SCT가 가장과 함께 사용되는 경우 <xref:System.InvalidOperationException>이 throw됩니다. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][지원 되지 않는 시나리오](../../../../docs/framework/wcf/feature-details/unsupported-scenarios.md)합니다.  
+>  Windows XP에서 가장이 필요한 경우 상태 저장 SCT 없이 보안 세션을 사용합니다. 상태 저장 SCT가 가장과 함께 사용되는 경우 <xref:System.InvalidOperationException>이 throw됩니다. 자세한 내용은 참조 [지원 되지 않는 시나리오](../../../../docs/framework/wcf/feature-details/unsupported-scenarios.md)합니다.  
   
 ### <a name="to-use-stateful-scts-in-a-secure-session"></a>보안 세션에서 상태 저장 SCT를 사용하려면  
   
@@ -97,7 +99,7 @@ ms.lasthandoff: 12/22/2017
     </customBinding>  
     ```  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 코드 예제에서는 <xref:System.ServiceModel.Configuration.AuthenticationMode.MutualCertificate> 인증 모드를 사용하여 보안 세션을 부트스트랩하는 사용자 지정 바인딩을 만듭니다.  
   
  [!code-csharp[c_CreateStatefulSCT#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_createstatefulsct/cs/secureservice.cs#2)]
@@ -121,4 +123,4 @@ ms.lasthandoff: 12/22/2017
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [\<customBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)
+ [\<customBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)

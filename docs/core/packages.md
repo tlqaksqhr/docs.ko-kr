@@ -1,21 +1,19 @@
 ---
 title: 패키지, 메타패키지 및 프레임워크
 description: 패키지, 메타패키지 및 프레임워크 용어에 관해 알아봅니다.
-keywords: .NET, .NET Core
 author: richlander
 ms.author: mairaw
 ms.date: 06/20/2016
-ms.topic: article
-ms.prod: .net-core
+ms.topic: conceptual
+ms.prod: dotnet-core
 ms.devlang: dotnet
-ms.assetid: 609b0845-49e7-4864-957b-21ffe1b93bf2
 ms.workload:
 - dotnetcore
-ms.openlocfilehash: f9b98fb38390e91c7a144ff5585c0a26824303dc
-ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
+ms.openlocfilehash: d70c474f7ac8a033362ff08b28fae0ad403bf372
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="packages-metapackages-and-frameworks"></a>패키지, 메타패키지 및 프레임워크
 

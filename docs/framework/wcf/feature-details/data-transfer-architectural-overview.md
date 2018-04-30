@@ -1,13 +1,13 @@
 ---
-title: "데이터 전송 아키텍처 개요"
-ms.custom: 
+title: 데이터 전송 아키텍처 개요
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,17 +15,17 @@ dev_langs:
 helpviewer_keywords:
 - data transfer [WCF], architectural overview
 ms.assetid: 343c2ca2-af53-4936-a28c-c186b3524ee9
-caps.latest.revision: 
+caps.latest.revision: 14
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 829635bd7fd73b58004c59862f4d589e95f67f9b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: cb64b871b8e4ba3036d70f3b84e2fde1667f4529
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="data-transfer-architectural-overview"></a>데이터 전송 아키텍처 개요
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 는 일종의 메시징 인프라입니다. WCF는 메시지를 받고, 처리하고, 추가 작업을 위해 사용자 코드로 디스패치하거나, 사용자 코드에서 제공된 데이터로부터 메시지를 생성하고 이 메시지를 대상에 전달할 수 있습니다. 고급 개발자를 대상으로 한 이 항목에서는 메시지 및 포함된 데이터를 처리하기 위한 아키텍처에 대해 설명합니다. 데이터를 주고 받는 방법을 보다 간단하게, 작업에 초점을 두고 설명하는 내용은 [Specifying Data Transfer in Service Contracts](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md)을 참조하십시오.  
@@ -97,14 +97,14 @@ ms.lasthandoff: 12/22/2017
 |스트리밍 채널 스택에서 들어오는 메시지|네트워크를 통해 `Stream` 와 함께 들어오는 데이터를 나타내는 <xref:System.Xml.XmlReader> 개체|`XmlReader`를 사용하여 저장된 `WriteNode`로부터 콘텐츠 작성|저장된 `XmlReader`반환|  
 |스트리밍되지 않은 채널 스택에서 들어오는 메시지|`XmlReader` 와 함께 본문 데이터가 포함된 버퍼|`XmlReader` 를 사용하여 저장된 `WriteNode`로부터 콘텐츠를 작성합니다.|저장된 lang 반환|  
   
- \*이 항목에서 직접 구현 되지 않습니다 `Message` 하위 클래스의 서브 클래스에는 <xref:System.ServiceModel.Channels.BodyWriter> 클래스입니다. 에 대 한 자세한 내용은 <xref:System.ServiceModel.Channels.BodyWriter>, 참조 [메시지 클래스를 사용 하 여](../../../../docs/framework/wcf/feature-details/using-the-message-class.md)합니다.  
+ \* 이 항목에서 직접 구현 되지 않습니다 `Message` 하위 클래스의 서브 클래스에는 <xref:System.ServiceModel.Channels.BodyWriter> 클래스입니다. 에 대 한 자세한 내용은 <xref:System.ServiceModel.Channels.BodyWriter>, 참조 [메시지 클래스를 사용 하 여](../../../../docs/framework/wcf/feature-details/using-the-message-class.md)합니다.  
   
 ## <a name="message-headers"></a>메시지 헤더  
  메시지에는 헤더가 포함될 수 있습니다. 헤더는 논리적으로 이름, 네임스페이스 및 다른 속성과 연관된 XML Infoset으로 구성됩니다. `Headers` 의 <xref:System.ServiceModel.Channels.Message>속성을 사용하여 메시지 헤더에 액세스합니다. 각 헤더는 <xref:System.ServiceModel.Channels.MessageHeader> 클래스로 표현됩니다. 일반적으로 메시지 헤더는 SOAP 메시지를 사용하기 위해 구성된 채널 스택을 사용할 때 SOAP 메시지 헤더로 매핑됩니다.  
   
  메시지 헤더로 정보를 가져오고, 메시지 헤더에서 정보를 추출하는 것은 메시지 본문을 사용하는 것과 비슷합니다. 스트리밍이 지원되지 않으므로 프로세스가 다소 간단합니다. 동일한 헤더의 콘텐츠에 두 번 이상 액세스할 수 있으며, 헤더가 항상 버퍼링되도록 하여 임의의 순서로 액세스할 수 있습니다. 헤더를 통해 XML 판독기를 가져오기 위해 사용할 수 있는 일반 용도의 메커니즘은 없지만 `MessageHeader` 의 내부에 이러한 기능을 통해 읽을 수 있는 헤더를 나타내는 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 서브클래스는 있습니다. 이 `MessageHeader` 형식은 사용자 지정 응용 프로그램 헤더가 포함된 메시지가 들어올 경우 채널 스택에 의해 생성됩니다. 그러면 서비스 프레임워크에서 <xref:System.Runtime.Serialization.DataContractSerializer>와 같은 deserialization 엔진을 사용하여 이러한 헤더를 해석할 수 있습니다.  
   
- [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [Using the Message Class](../../../../docs/framework/wcf/feature-details/using-the-message-class.md)을 참조하십시오.  
+ 자세한 내용은 참조 [메시지 클래스를 사용 하 여](../../../../docs/framework/wcf/feature-details/using-the-message-class.md)합니다.  
   
 ## <a name="message-properties"></a>메시지 속성  
  메시지에는 속성이 포함될 수 있습니다. *속성* 은 문자열 이름과 관련된 모든 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 개체입니다. `Properties` 의 `Message`속성을 통해 속성에 액세스합니다.  
@@ -113,7 +113,7 @@ ms.lasthandoff: 12/22/2017
   
  예를 들어 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 의 일부로 포함된 HTTP 전송 채널은 클라이언트로 응답을 보낼 때 "404(찾을 수 없음)", "500(내부 서버 오류)" 등의 다양한 HTTP 상태 코드를 만들 수 있습니다. 확인 하는 회신 메시지를 보내기 전에 여부는 `Properties` 의 `Message` 형식의 개체가 포함 된 "httpResponse" 라는 속성이 포함 되어 <xref:System.ServiceModel.Channels.HttpResponseMessageProperty>합니다. 이러한 속성이 있으면 <xref:System.ServiceModel.Channels.HttpResponseMessageProperty.StatusCode%2A> 속성을 살펴보고 해당 상태 코드를 사용합니다. 이러한 속성이 없으면 기본 "200(확인)" 코드를 사용합니다.  
   
- [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [Using the Message Class](../../../../docs/framework/wcf/feature-details/using-the-message-class.md)을 참조하십시오.  
+ 자세한 내용은 참조 [메시지 클래스를 사용 하 여](../../../../docs/framework/wcf/feature-details/using-the-message-class.md)합니다.  
   
 ### <a name="the-message-as-a-whole"></a>메시지 전체  
  지금까지 메시지의 여러 부분에 각각 액세스하는 데 사용되는 메서드를 살펴보았습니다. 그러나 <xref:System.ServiceModel.Channels.Message> 클래스는 메시지 전체를 대상으로 작동하는 메서드도 제공합니다. 예를 들어 `WriteMessage` 메서드는 XML 작성기에 전체 메시지를 작성합니다.  
@@ -240,7 +240,7 @@ ms.lasthandoff: 12/22/2017
  [!code-csharp[C_DataArchitecture#9](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_dataarchitecture/cs/source.cs#9)]
  [!code-vb[C_DataArchitecture#9](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_dataarchitecture/vb/source.vb#9)]  
   
- <xref:System.ServiceModel.MessageBodyMemberAttribute>, <xref:System.ServiceModel.MessageHeaderAttribute>또는 기타 관련 특성과 함께 serialize하도록 표시된 항목이 serialize 가능해야 메시지 계약에 참여할 수 있습니다. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] 이 항목의 뒷부분에 나오는 "Serialization".  
+ <xref:System.ServiceModel.MessageBodyMemberAttribute>, <xref:System.ServiceModel.MessageHeaderAttribute>또는 기타 관련 특성과 함께 serialize하도록 표시된 항목이 serialize 가능해야 메시지 계약에 참여할 수 있습니다. 자세한 내용은이 항목의 뒷부분에 나오는 "Serialization" 섹션을 참조 하십시오.  
   
 ### <a name="4-parameters"></a>4. 매개 변수  
  여러 데이터에 대해 작동하는 작업을 설명하려는 개발자는 종종 메시지 계약이 제공하는 일정 정도의 제어를 필요로 하지 않습니다. 예를 들어 새 서비스를 만들 때 사용자는 보통 bare-wrapped 모드나 래퍼 요소 이름을 결정하지 않으려고 합니다. 이러한 결정을 내리려면 웹 서비스와 SOAP에 대해 잘 알고 있어야 합니다.  
@@ -255,7 +255,7 @@ ms.lasthandoff: 12/22/2017
  보다 복잡한 메시지 계약 또는 `Message` 기반 프로그래밍 모델로 이동해야 하는 특별한 이유가 없다면 작업 계약 매개 변수의 간단한 목록으로 보내거나 받을 정보를 설명하는 것이 좋습니다.  
   
 ### <a name="5-stream"></a>5. 스트림  
- 메시지 계약의 단독 메시지 본문 부분으로 또는 작업 계약에서 `Stream`(또는 해당 서브클래스 중 하나)을 사용하는 것은 위에서 설명한 항목과 별도의 프로그래밍 모델로 고려될 수 있습니다. 이 방법으로 `Stream` 을 사용하면 사용자의 자체 스트리밍 호환 가능 `Message` 서브클래스를 간결하게 작성할 수 있으므로, 사용자의 계약을 스트리밍 방식으로 유일하게 사용할 수 있습니다. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][큰 데이터 및 스트리밍](../../../../docs/framework/wcf/feature-details/large-data-and-streaming.md)합니다.  
+ 메시지 계약의 단독 메시지 본문 부분으로 또는 작업 계약에서 `Stream`(또는 해당 서브클래스 중 하나)을 사용하는 것은 위에서 설명한 항목과 별도의 프로그래밍 모델로 고려될 수 있습니다. 이 방법으로 `Stream` 을 사용하면 사용자의 자체 스트리밍 호환 가능 `Message` 서브클래스를 간결하게 작성할 수 있으므로, 사용자의 계약을 스트리밍 방식으로 유일하게 사용할 수 있습니다. 자세한 내용은 참조 [큰 데이터 및 스트리밍](../../../../docs/framework/wcf/feature-details/large-data-and-streaming.md)합니다.  
   
  `Stream` 또는 해당 서브클래스 중 하나를 이 방법으로 사용할 때는 serializer가 호출되지 않습니다. 나가는 메시지의 경우 특별한 스트리밍 `Message` 서브클래스가 만들어지고, <xref:System.Xml.IStreamProvider> 인터페이스의 단원에서 설명한 대로 스트림이 작성됩니다. 들어오는 메시지의 경우 서비스 프레임워크가 들어오는 메시지에 대해 `Stream` 서브클래스를 만들고 이를 해당 작업에 제공합니다.  
   

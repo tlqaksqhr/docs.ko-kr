@@ -19,11 +19,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 3834f48c407f799fc5fede17182f47652f49747f
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 082fa083dbba601cefc00e40bad7b91e14a45d44
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="best-practices-for-queued-communication"></a>대기 중인 통신을 위한 최선의 방법
 이 항목에서는 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]에서 대기 중인 통신에 대해 권장되는 방법을 제공합니다. 다음 단원에서는 시나리오 측면에서 권장되는 방법에 대해 설명합니다.  
@@ -33,7 +33,7 @@ ms.lasthandoff: 04/26/2018
   
  또한 <xref:System.ServiceModel.MsmqBindingBase.Durable%2A> 속성을 `false`로 설정하여 디스크 쓰기 비용이 발생하지 않도록 선택할 수 있습니다.  
   
- 보안 작업은 성능에 영향을 줍니다. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [성능 고려 사항](../../../../docs/framework/wcf/feature-details/performance-considerations.md)합니다.  
+ 보안 작업은 성능에 영향을 줍니다. 자세한 내용은 참조 [성능 고려 사항](../../../../docs/framework/wcf/feature-details/performance-considerations.md)합니다.  
   
 ## <a name="reliable-end-to-end-queued-messaging"></a>신뢰할 수 있는 종단 간 대기 중인 메시징  
  다음 단원에서는 종단 간 신뢰할 수 있는 메시징이 필요한 시나리오에 대해 권장되는 방법을 설명합니다.  
@@ -49,21 +49,21 @@ ms.lasthandoff: 04/26/2018
   
  종단 간 신뢰할 수 있는 통신에 대해 배달 못 한 편지 큐 기능을 끄지 않는 것이 좋습니다.  
   
- [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [배달 못 한 편지 큐를 사용 하 여 메시지 전송 오류 처리](../../../../docs/framework/wcf/feature-details/using-dead-letter-queues-to-handle-message-transfer-failures.md)합니다.  
+ 자세한 내용은 참조 [메시지 전송 오류 처리를 배달 못 한 편지 큐를 사용 하 여](../../../../docs/framework/wcf/feature-details/using-dead-letter-queues-to-handle-message-transfer-failures.md)합니다.  
   
 ### <a name="use-of-poison-message-handling"></a>포이즌 메시지 처리 사용  
  포이즌 메시지 처리는 오류를 복구하여 메시지를 처리하는 기능을 제공합니다.  
   
  포이즌 메시지 처리 기능을 사용하는 경우 <xref:System.ServiceModel.MsmqBindingBase.ReceiveErrorHandling%2A> 속성이 적절한 값으로 설정되어 있는지 확인합니다. <xref:System.ServiceModel.ReceiveErrorHandling.Drop>으로 설정할 경우 데이터가 손실됩니다. 반면에 <xref:System.ServiceModel.ReceiveErrorHandling.Fault>로 설정하면 포이즌 메시지를 감지할 때 서비스 호스트에 오류가 발생합니다. MSMQ 3.0을 사용하는 경우 <xref:System.ServiceModel.ReceiveErrorHandling.Fault>가 데이터 손실을 방지하고 포이즌 메시지를 제거하기 위한 최상의 옵션입니다. MSMQ 4.0을 사용하는 경우 <xref:System.ServiceModel.ReceiveErrorHandling.Move> 방식을 권장합니다. <xref:System.ServiceModel.ReceiveErrorHandling.Move>는 큐에서 포이즌 메시지를 제거하여 서비스가 계속해서 새 메시지를 처리할 수 있도록 합니다. 그러면 포이즌 메시지 서비스가 포이즌 메시지를 개별적으로 처리할 수 있습니다.  
   
- [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [포이즌 메시지 처리](../../../../docs/framework/wcf/feature-details/poison-message-handling.md)합니다.  
+ 자세한 내용은 참조 [포이즌 메시지 처리](../../../../docs/framework/wcf/feature-details/poison-message-handling.md)합니다.  
   
 ## <a name="achieving-high-throughput"></a>높은 처리량 달성  
  단일 끝점에서 높은 처리량을 달성하려면 다음을 사용합니다.  
   
--   트랜잭션된 일괄 처리. 트랜잭션된 일괄처리를 사용하면 많은 메시지를 단일 트랜잭션으로 읽을 수 있습니다. 이를 통해 트랜잭션 커밋이 최적화되어 전체 성능이 향상됩니다. 일괄 처리 비용은 일괄 처리 내의 단일 메시지에 오류가 발생하는 경우 발생하며 이러한 경우 전체 일괄 처리가 롤백되고, 일괄 처리가 다시 안전할 때까지 메시지를 한 번에 하나씩 처리해야 합니다. 대부분의 경우 포이즌 메시지가 발생하는 경우는 드물기 때문에 일괄 처리는 특히 트랜잭션에 참여하는 다른 리소스 관리자가 있는 경우 시스템 성능 향상을 위한 기본적인 방법입니다. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [트랜잭션에서 메시지 일괄 처리](../../../../docs/framework/wcf/feature-details/batching-messages-in-a-transaction.md)합니다.  
+-   트랜잭션된 일괄 처리. 트랜잭션된 일괄처리를 사용하면 많은 메시지를 단일 트랜잭션으로 읽을 수 있습니다. 이를 통해 트랜잭션 커밋이 최적화되어 전체 성능이 향상됩니다. 일괄 처리 비용은 일괄 처리 내의 단일 메시지에 오류가 발생하는 경우 발생하며 이러한 경우 전체 일괄 처리가 롤백되고, 일괄 처리가 다시 안전할 때까지 메시지를 한 번에 하나씩 처리해야 합니다. 대부분의 경우 포이즌 메시지가 발생하는 경우는 드물기 때문에 일괄 처리는 특히 트랜잭션에 참여하는 다른 리소스 관리자가 있는 경우 시스템 성능 향상을 위한 기본적인 방법입니다. 자세한 내용은 참조 [트랜잭션에서 메시지 일괄 처리](../../../../docs/framework/wcf/feature-details/batching-messages-in-a-transaction.md)합니다.  
   
--   동시성. 동시성은 처리량을 증가시키지만 또한 공유 리소스를 사용하는 데 영향을 줍니다. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [동시성](../../../../docs/framework/wcf/samples/concurrency.md)합니다.  
+-   동시성. 동시성은 처리량을 증가시키지만 또한 공유 리소스를 사용하는 데 영향을 줍니다. 자세한 내용은 참조 [동시성](../../../../docs/framework/wcf/samples/concurrency.md)합니다.  
   
 -   스로틀. 최적의 성능을 위해 디스패처 파이프라인의 메시지 수를 조절합니다. 이 작업을 수행 하는 방법의 예제를 보려면 [제한](../../../../docs/framework/wcf/samples/throttling.md)합니다.  
   
@@ -73,12 +73,12 @@ ms.lasthandoff: 04/26/2018
   
  MSMQ 3.0에서 팜을 사용하는 경우 트랜잭션된 원격 읽기를 지원하지 않습니다. MSMQ 4.0은 트랜잭션된 원격 읽기를 지원합니다.  
   
- [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [트랜잭션에서 메시지 일괄 처리](../../../../docs/framework/wcf/feature-details/batching-messages-in-a-transaction.md) 및 [Windows Vista, Windows Server 2003 및 Windows XP에서 큐 기능의 차이점](../../../../docs/framework/wcf/feature-details/diff-in-queue-in-vista-server-2003-windows-xp.md)합니다.  
+ 자세한 내용은 참조 [트랜잭션에서 메시지 일괄 처리](../../../../docs/framework/wcf/feature-details/batching-messages-in-a-transaction.md) 및 [Windows Vista, Windows Server 2003 및 Windows XP의 큐 기능 차이점](../../../../docs/framework/wcf/feature-details/diff-in-queue-in-vista-server-2003-windows-xp.md)합니다.  
   
 ## <a name="queuing-with-unit-of-work-semantics"></a>작업 단위 의미 체계를 사용한 큐  
  일부 시나리오의 경우 큐에서 메시지 그룹이 관련될 수 있기 때문에 이러한 메시지의 순서 지정이 중요합니다. 이러한 시나리오에서는 관련 메시지 그룹을 단일 단위로 함께 처리합니다. 즉, 모든 메시지가 성공적으로 처리되거나 모두 처리되지 않습니다. 이러한 동작을 구현하려면 큐가 있는 세션을 사용하십시오.  
   
- [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [세션에서 대기 중인된 메시지 그룹화](../../../../docs/framework/wcf/feature-details/grouping-queued-messages-in-a-session.md)합니다.  
+ 자세한 내용은 참조 [세션의 대기 중인 메시지 그룹화](../../../../docs/framework/wcf/feature-details/grouping-queued-messages-in-a-session.md)합니다.  
   
 ## <a name="correlating-request-reply-messages"></a>요청-회신 메시지 상호 연결  
  일반적으로 큐는 단방향이지만 일부 시나리오에서는 수신한 회신을 이전에 보낸 요청과 상호 연결해야 하는 경우가 있습니다. 이러한 상호 연결이 필요한 경우 메시지에 상호 연결 정보가 포함된 자체 SOAP 메시지 헤더를 적용하는 것이 좋습니다. 일반적으로 보낸 사람은 이 헤더를 메시지에 첨부하고 받는 사람은 메시지 처리 및 회신 큐에 새 메시지로 다시 회신할 때 상호 연결 정보가 포함된 보낸 사람의 메시지 헤더를 첨부하여 보낸 사람이 요청 메시지를 통해 회신 메시지를 식별할 수 있도록 합니다.  

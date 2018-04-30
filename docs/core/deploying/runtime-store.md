@@ -1,20 +1,19 @@
 ---
-title: "런타임 패키지 저장소"
-description: "이 항목에서는 .NET Core에서 사용되는 런타임 패키지 저장소 및 대상 매니페스트에 대해 설명합니다."
-keywords: ".NET, .NET Core, dotnet store, 런타임 패키지 저장소"
+title: 런타임 패키지 저장소
+description: 이 항목에서는 .NET Core에서 사용되는 런타임 패키지 저장소 및 대상 매니페스트에 대해 설명합니다.
 author: bleroy
 ms.author: mairaw
 ms.date: 08/12/2017
-ms.topic: article
-ms.prod: .net-core
+ms.topic: conceptual
+ms.prod: dotnet-core
 ms.devlang: dotnet
-ms.assetid: 9521d8b4-25fc-412b-a65b-4c975ebf6bfd
-ms.workload: dotnetcore
-ms.openlocfilehash: de1aa4d29abae6bc6c26c0686bafe9bd9cc10ee1
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.workload:
+- dotnetcore
+ms.openlocfilehash: 8fa3d309b16bd0c3b2b872f6447b7e99956abd81
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="runtime-package-store"></a>런타임 패키지 저장소
 
@@ -129,7 +128,7 @@ dotnet publish --manifest manifest.xml
 
 런타임 패키지 저장소는 .NET Core SDK가 설치될 때 호스트에 설치됩니다. 다른 설치 관리자에서는 .NET Core SDK, `apt-get`, Red Hat Yum, .NET Core Windows Server 호스팅 번들의 Zip/tarball 설치와 수동 런타임 패키지 저장소 설치를 포함한 런타임 패키지 저장소를 제공할 수 있습니다.
 
-[FDD(프레임워크 종속 배포)](index.md#framework-dependent-deployments-fdd) 앱을 배포할 경우 대상 환경에 .NET Core SDK가 설치되어 있는지 확인합니다. ASP.NET Core가 포함되지 않은 환경에 앱을 배포할 경우 다음 예제와 같이 프로젝트 파일에서 **\<PublishWithAspNetCoreTargetManifest>**를 `false`로 지정하여 암시적 저장소를 옵트아웃(opt out)할 수 있습니다.
+[FDD(프레임워크 종속 배포)](index.md#framework-dependent-deployments-fdd) 앱을 배포할 경우 대상 환경에 .NET Core SDK가 설치되어 있는지 확인합니다. ASP.NET Core가 포함되지 않은 환경에 앱을 배포할 경우 다음 예제와 같이 프로젝트 파일에서 **\<PublishWithAspNetCoreTargetManifest>** 를 `false`로 지정하여 암시적 저장소를 옵트아웃(opt out)할 수 있습니다.
 
 ```xml
 <PropertyGroup>
@@ -138,7 +137,7 @@ dotnet publish --manifest manifest.xml
 ```
 
 > [!NOTE] 
-> [SCD(자체 포함된 배포)](index.md#self-contained-deployments-scd) 앱의 경우 대상 시스템에 필수 매니페스트 패키지가 없어도 되는 것으로 가정합니다. 따라서 SCD 앱의 경우 **\<PublishWithAspNetCoreTargetManifest>**는 `true`로 설정될 수 없습니다.
+> [SCD(자체 포함된 배포)](index.md#self-contained-deployments-scd) 앱의 경우 대상 시스템에 필수 매니페스트 패키지가 없어도 되는 것으로 가정합니다. 따라서 SCD 앱의 경우 **\<PublishWithAspNetCoreTargetManifest>** 는 `true`로 설정될 수 없습니다.
 
 배포에 포함되지 않은 매니페스트 종속성을 사용하여 응용 프로그램을 배포할 경우(어셈블리가 *bin* 폴더에 있음) 해당 어셈블리의 호스트에서 런타임 패키지 저장소가 *사용되지 않습니다*. *bin* 폴더 어셈블리는 호스트의 런타임 패키지 저장소에 어셈블리가 있는지에 관계없이 사용됩니다.
 

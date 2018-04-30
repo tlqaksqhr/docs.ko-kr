@@ -1,19 +1,19 @@
 ---
-title: "dotnet run 명령 - .NET Core CLI"
-description: "dotnet run 명령은 소스 코드에서 응용 프로그램을 실행하는 편리한 옵션을 제공합니다."
+title: dotnet run 명령 - .NET Core CLI
+description: dotnet run 명령은 소스 코드에서 응용 프로그램을 실행하는 편리한 옵션을 제공합니다.
 author: mairaw
 ms.author: mairaw
 ms.date: 03/10/2018
-ms.topic: article
-ms.prod: .net-core
+ms.topic: conceptual
+ms.prod: dotnet-core
 ms.technology: dotnet-cli
 ms.workload:
 - dotnetcore
-ms.openlocfilehash: 251aca6dcd3edb17fe86dc03ea8f5c6d7d699d48
-ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
+ms.openlocfilehash: 18ceb395ed025fa562f295fc2facd00c67a75536
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="dotnet-run"></a>dotnet run
 

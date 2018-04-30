@@ -1,13 +1,13 @@
 ---
-title: "데이터 서비스 구성(WCF Data Services)"
-ms.custom: 
+title: 데이터 서비스 구성(WCF Data Services)
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework-oob
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,20 +15,20 @@ dev_langs:
 helpviewer_keywords:
 - WCF Data Services, configuring
 ms.assetid: 59efd4c8-cc7a-4800-a0a4-d3f8abe6c55c
-caps.latest.revision: 
+caps.latest.revision: 10
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: d9dd82926385ee97b05694d954b94d7821a1e638
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 7c3c82e1e4460e82dd7e6bd88771eae96f132c8e
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="configuring-the-data-service-wcf-data-services"></a>데이터 서비스 구성(WCF Data Services)
-와 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]를 노출 하는 데이터 서비스를 만들 수 있습니다 [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] 피드입니다. 이러한 피드의 데이터는 다양한 데이터 소스에서 제공될 수 있습니다. [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]데이터 공급자를 사용 하 여이 데이터를 노출 하는 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 피드입니다. 이러한 공급자에는 [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] 공급자, 리플렉션 공급자 및 사용자 지정 데이터 서비스 공급자 인터페이스의 집합이 포함됩니다. 공급자 구현은 서비스에 대한 데이터 모델을 정의합니다. 자세한 내용은 참조 [데이터 서비스 공급자](../../../../docs/framework/data/wcf/data-services-providers-wcf-data-services.md)합니다.  
+와 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]를 노출 하는 데이터 서비스를 만들 수 있습니다 [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] 피드입니다. 이러한 피드의 데이터는 다양한 데이터 소스에서 제공될 수 있습니다. [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 데이터 공급자를 사용 하 여이 데이터를 노출 하는 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 피드입니다. 이러한 공급자에는 [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] 공급자, 리플렉션 공급자 및 사용자 지정 데이터 서비스 공급자 인터페이스의 집합이 포함됩니다. 공급자 구현은 서비스에 대한 데이터 모델을 정의합니다. 자세한 내용은 참조 [데이터 서비스 공급자](../../../../docs/framework/data/wcf/data-services-providers-wcf-data-services.md)합니다.  
   
  [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]에서 데이터 서비스는 데이터 서비스 형식이 데이터 모델의 엔터티 컨테이너인 <xref:System.Data.Services.DataService%601> 클래스에서 상속하는 클래스입니다. 이 엔터티 컨테이너에는 데이터 모델의 엔터티 집합에 액세스하는 데 사용되는 <xref:System.Linq.IQueryable%601>을 반환하는 속성이 하나 이상 들어 있습니다.  
   
@@ -49,10 +49,10 @@ ms.lasthandoff: 01/19/2018
 |<xref:System.Data.Services.DataServiceBehavior.InvokeInterceptorsOnLinkDelete%2A>|두 엔터티 간의 관계 링크가 삭제될 때 관련 엔터티에 대해 등록된 변경 인터셉터를 호출할지 여부를 지정할 수 있습니다.|  
 |<xref:System.Data.Services.DataServiceConfiguration.MaxBatchCount%2A>|단일 일괄 처리에서 허용되는 변경 집합과 쿼리 작업 수를 제한할 수 있습니다. 자세한 내용은 참조 [OData: 일괄 처리](http://go.microsoft.com/fwlink/?LinkId=185602) 및 [일괄 처리 작업](../../../../docs/framework/data/wcf/batching-operations-wcf-data-services.md)합니다.|  
 |<xref:System.Data.Services.DataServiceConfiguration.MaxChangesetCount%2A>|단일 변경 집합에 포함할 수 있는 변경 수를 제한할 수 있습니다. 자세한 내용은 참조 [하는 방법: 사용 하도록 설정 페이징의 데이터 서비스 결과](../../../../docs/framework/data/wcf/how-to-enable-paging-of-data-service-results-wcf-data-services.md)합니다.|  
-|<xref:System.Data.Services.DataServiceConfiguration.MaxExpandCount%2A>|`$expand` 쿼리 연산자로 단일 요청에 포함할 수 있는 관련 엔터티 수를 제한하여 응답 크기를 제한할 수 있습니다. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)]참조 [OData: URI 규칙](http://go.microsoft.com/fwlink/?LinkId=185564) 및 [지연 콘텐츠 로드](../../../../docs/framework/data/wcf/loading-deferred-content-wcf-data-services.md)합니다.|  
-|<xref:System.Data.Services.DataServiceConfiguration.MaxExpandDepth%2A>|`$expand` 쿼리 연산자로 단일 요청에 포함할 수 있는 관련 엔터티의 그래프 깊이를 제한하여 응답 크기를 제한할 수 있습니다. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)]참조 [OData: URI 규칙](http://go.microsoft.com/fwlink/?LinkId=185564) 및 [지연 콘텐츠 로드](../../../../docs/framework/data/wcf/loading-deferred-content-wcf-data-services.md)합니다.|  
+|<xref:System.Data.Services.DataServiceConfiguration.MaxExpandCount%2A>|`$expand` 쿼리 연산자로 단일 요청에 포함할 수 있는 관련 엔터티 수를 제한하여 응답 크기를 제한할 수 있습니다. 자세한 내용은 참조 하십시오. 참조 [OData: URI 규칙](http://go.microsoft.com/fwlink/?LinkId=185564) 및 [지연 콘텐츠 로드](../../../../docs/framework/data/wcf/loading-deferred-content-wcf-data-services.md)합니다.|  
+|<xref:System.Data.Services.DataServiceConfiguration.MaxExpandDepth%2A>|`$expand` 쿼리 연산자로 단일 요청에 포함할 수 있는 관련 엔터티의 그래프 깊이를 제한하여 응답 크기를 제한할 수 있습니다. 자세한 내용은 참조 하십시오. 참조 [OData: URI 규칙](http://go.microsoft.com/fwlink/?LinkId=185564) 및 [지연 콘텐츠 로드](../../../../docs/framework/data/wcf/loading-deferred-content-wcf-data-services.md)합니다.|  
 |<xref:System.Data.Services.DataServiceConfiguration.MaxObjectCountOnInsert%2A>|단일 POST 요청에 포함할 수 있는 삽입할 엔터티 수를 제한할 수 있습니다.|  
-|<xref:System.Data.Services.DataServiceBehavior.MaxProtocolVersion%2A>|데이터 서비스에 사용되는 Atom 프로토콜의 버전을 정의합니다. <xref:System.Data.Services.DataServiceBehavior.MaxProtocolVersion%2A> 값을 <xref:System.Data.Services.Common.DataServiceProtocolVersion>의 최대값보다 작은 값으로 설정하면 데이터 서비스에 액세스하는 클라이언트가 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]의 최신 기능을 사용할 수 없습니다. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][데이터 서비스 버전 관리](../../../../docs/framework/data/wcf/data-service-versioning-wcf-data-services.md)합니다.|  
+|<xref:System.Data.Services.DataServiceBehavior.MaxProtocolVersion%2A>|데이터 서비스에 사용되는 Atom 프로토콜의 버전을 정의합니다. <xref:System.Data.Services.DataServiceBehavior.MaxProtocolVersion%2A> 값을 <xref:System.Data.Services.Common.DataServiceProtocolVersion>의 최대값보다 작은 값으로 설정하면 데이터 서비스에 액세스하는 클라이언트가 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]의 최신 기능을 사용할 수 없습니다. 자세한 내용은 참조 [데이터 서비스 버전 관리](../../../../docs/framework/data/wcf/data-service-versioning-wcf-data-services.md)합니다.|  
 |<xref:System.Data.Services.DataServiceConfiguration.MaxResultsPerCollection%2A>|데이터 피드로 반환되는 각 엔터티 집합의 엔터티 수를 제한하여 응답 크기를 제한할 수 있습니다.|  
 |<xref:System.Data.Services.DataServiceConfiguration.RegisterKnownType%2A>|데이터 서비스에서 인식하는 형식 목록에 데이터 형식을 추가합니다.|  
 |<xref:System.Data.Services.DataServiceConfiguration.SetEntitySetAccessRule%2A>|데이터 서비스에서 사용할 수 있는 엔터티 집합 리소스에 대한 액세스 권한을 설정합니다. 이름 매개 변수에 별표(`*`) 값을 제공하여 나머지 모든 엔터티 집합에 대한 액세스를 같은 수준으로 설정할 수 있습니다. 클라이언트 응용 프로그램에 필요한 데이터 서비스 리소스에 대한 최소 권한 액세스를 제공하도록 엔터티 집합에 대한 액세스를 설정하는 것이 좋습니다. 자세한 내용은 [Securing WCF Data Services](../../../../docs/framework/data/wcf/securing-wcf-data-services.md)을 참조하세요. 지정된 된 URI 및 HTTP 동작에 필요한 최소 액세스 권한의 예에 테이블 참조는 [최소 리소스 액세스 요구 사항](../../../../docs/framework/data/wcf/configuring-the-data-service-wcf-data-services.md#accessRequirements) 섹션.|  
@@ -68,7 +68,7 @@ ms.lasthandoff: 01/19/2018
 |------------------|-----------|--------------|-------------|------------|-----------|  
 |`/Customers`|<xref:System.Data.Services.EntitySetRights.ReadMultiple>|지원 안 함|지원 안 함|<xref:System.Data.Services.EntitySetRights.WriteAppend>|지원 안 함|  
 |`/Customers('ALFKI')`|<xref:System.Data.Services.EntitySetRights.ReadSingle>|<xref:System.Data.Services.EntitySetRights.ReadSingle> 및 <xref:System.Data.Services.EntitySetRights.WriteDelete>|<xref:System.Data.Services.EntitySetRights.ReadSingle> 및 <xref:System.Data.Services.EntitySetRights.WriteMerge>|N/A|<xref:System.Data.Services.EntitySetRights.ReadSingle> 및 <xref:System.Data.Services.EntitySetRights.WriteReplace>|  
-|`/Customers('ALFKI')/Orders`|`Customers`: <xref:System.Data.Services.EntitySetRights.ReadSingle><br /><br /> 및<br /><br /> `Orders`: <xref:System.Data.Services.EntitySetRights.ReadMultiple>|지원 안 함|지원 안 함|`Customers`: <xref:System.Data.Services.EntitySetRights.ReadSingle> 및 <xref:System.Data.Services.EntitySetRights.WriteMerge> 또는 <xref:System.Data.Services.EntitySetRights.WriteReplace><br /><br /> 및<br /><br /> `Orders``:` 및<xref:System.Data.Services.EntitySetRights.WriteAppend>|지원 안 함|  
+|`/Customers('ALFKI')/Orders`|`Customers`: <xref:System.Data.Services.EntitySetRights.ReadSingle><br /><br /> 및<br /><br /> `Orders`: <xref:System.Data.Services.EntitySetRights.ReadMultiple>|지원 안 함|지원 안 함|`Customers`: <xref:System.Data.Services.EntitySetRights.ReadSingle> 및 <xref:System.Data.Services.EntitySetRights.WriteMerge> 또는 <xref:System.Data.Services.EntitySetRights.WriteReplace><br /><br /> 및<br /><br /> `Orders` `:` 및 <xref:System.Data.Services.EntitySetRights.WriteAppend>|지원 안 함|  
 |`/Customers('ALFKI')/Orders(10643)`|`Customers`: <xref:System.Data.Services.EntitySetRights.ReadSingle><br /><br /> 및<br /><br /> `Orders`: <xref:System.Data.Services.EntitySetRights.ReadSingle>|`Customers`: <xref:System.Data.Services.EntitySetRights.ReadSingle><br /><br /> 및<br /><br /> `Orders`: <xref:System.Data.Services.EntitySetRights.ReadSingle> 및 <xref:System.Data.Services.EntitySetRights.WriteDelete>|`Customers`: <xref:System.Data.Services.EntitySetRights.ReadSingle><br /><br /> 및<br /><br /> `Orders`: <xref:System.Data.Services.EntitySetRights.ReadSingle> 및 <xref:System.Data.Services.EntitySetRights.WriteMerge>|지원 안 함|`Customers`: <xref:System.Data.Services.EntitySetRights.ReadSingle><br /><br /> 및<br /><br /> `Orders`: <xref:System.Data.Services.EntitySetRights.ReadSingle> 및 <xref:System.Data.Services.EntitySetRights.WriteReplace>|  
 |`/Orders(10643)/Customer`|`Customers`: <xref:System.Data.Services.EntitySetRights.ReadSingle><br /><br /> 및<br /><br /> `Orders`: <xref:System.Data.Services.EntitySetRights.ReadSingle>|`Customers`: <xref:System.Data.Services.EntitySetRights.ReadSingle> 및 <xref:System.Data.Services.EntitySetRights.WriteDelete><br /><br /> 및<br /><br /> `Orders`: <xref:System.Data.Services.EntitySetRights.ReadSingle>|`Customers`: <xref:System.Data.Services.EntitySetRights.ReadSingle> 및 <xref:System.Data.Services.EntitySetRights.WriteMerge><br /><br /> 및<br /><br /> `Orders`: <xref:System.Data.Services.EntitySetRights.ReadSingle>|`Customers`: <xref:System.Data.Services.EntitySetRights.WriteAppend><br /><br /> 및<br /><br /> `Orders`: <xref:System.Data.Services.EntitySetRights.WriteAppend> 및 <xref:System.Data.Services.EntitySetRights.ReadSingle>|지원 안 함|  
 |`/Customers('ALFKI')/$links/Orders`|`Customers`: <xref:System.Data.Services.EntitySetRights.ReadSingle><br /><br /> 및<br /><br /> `Orders`: <xref:System.Data.Services.EntitySetRights.ReadMultiple>|지원 안 함|지원 안 함|`Customers`: <xref:System.Data.Services.EntitySetRights.ReadSingle> 및 <xref:System.Data.Services.EntitySetRights.WriteMerge> 또는 <xref:System.Data.Services.EntitySetRights.WriteReplace><br /><br /> 및<br /><br /> `Orders`: <xref:System.Data.Services.EntitySetRights.ReadSingle>|지원 안 함|  

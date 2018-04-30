@@ -1,24 +1,26 @@
 ---
-title: "사용자 지정 바인딩을 통해 메타데이터 게시 및 검색"
-ms.custom: 
+title: 사용자 지정 바인딩을 통해 메타데이터 게시 및 검색
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 904e11b4-d90e-45c6-9ee5-c3472c90008c
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 88495e42a57790b75c096235cda65cbedbf86a23
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: f6226f01a284a9a24593c1be4fed2f96f3eae730
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="publishing-and-retrieving-metadata-over-a-custom-binding"></a>사용자 지정 바인딩을 통해 메타데이터 게시 및 검색
 <xref:System.ServiceModel.Description.ServiceMetadataBehavior?displayProperty=nameWithType>에서는 메타데이터 끝점을 서비스에 추가할 수 있도록 지원합니다. 이러한 메타 데이터 끝점에서 URL HTTP GET 요청에 응답할 수는 `?wsdl` querystring 및 Ws-metadataexchange (MEX) 사양에 정의 된 대로 Ws-transfer GET 요청을 합니다. MEX 끝점은 <xref:System.ServiceModel.Description.IMetadataExchange?displayProperty=nameWithType> 계약을 구현합니다.  
@@ -31,7 +33,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="retrieving-metadata-over-a-custom-binding"></a>사용자 지정 바인딩을 통해 메타데이터 검색  
  표준 HTTP 또는 HTTPS GET 요청을 사용하여 HTTP Get 및 HTTPS Get 메타데이터 끝점에서 메타데이터를 검색할 수 있습니다.  
   
- MEX 메타데이터 끝점에서 메타데이터를 검색하기 위해 일반적으로 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서 지원하는 표준 MEX 바인딩 중 하나를 사용할 수 있습니다. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] <xref:System.ServiceModel.Description.MetadataExchangeBindings?displayProperty=nameWithType>을 참조하십시오. <xref:System.ServiceModel.Description.MetadataExchangeClient?displayProperty=nameWithType> 형식 및 Svcutil.exe 도구에서는 지정된 메타데이터 끝점의 주소에 따라 이러한 표준 MEX 바인딩 중 하나를 자동으로 선택합니다.  
+ MEX 메타데이터 끝점에서 메타데이터를 검색하기 위해 일반적으로 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서 지원하는 표준 MEX 바인딩 중 하나를 사용할 수 있습니다. 자세한 내용은 <xref:System.ServiceModel.Description.MetadataExchangeBindings?displayProperty=nameWithType>을 참조하세요. <xref:System.ServiceModel.Description.MetadataExchangeClient?displayProperty=nameWithType> 형식 및 Svcutil.exe 도구에서는 지정된 메타데이터 끝점의 주소에 따라 이러한 표준 MEX 바인딩 중 하나를 자동으로 선택합니다.  
   
  MEX 메타데이터 끝점에서 표준 MEX 바인딩과 다른 바인딩을 사용하는 경우 코드를 사용하거나 <xref:System.ServiceModel.Description.MetadataExchangeClient> 클라이언트 끝점 구성을 제공하여 <xref:System.ServiceModel.Description.IMetadataExchange>에서 사용하는 바인딩을 구성할 수 있습니다. Svcutil.exe 도구는 메타데이터 끝점 주소의 URI 스키마와 이름이 같은 <xref:System.ServiceModel.Description.IMetadataExchange> 클라이언트 끝점 구성을 구성 파일에서 자동으로 로드합니다.  
   

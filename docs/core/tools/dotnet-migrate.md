@@ -1,18 +1,19 @@
 ---
-title: "dotnet migrate 명령 - .NET Core CLI"
-description: "dotnet migrate 명령은 프로젝트와 모든 종속성을 마이그레이션합니다."
+title: dotnet migrate 명령 - .NET Core CLI
+description: dotnet migrate 명령은 프로젝트와 모든 종속성을 마이그레이션합니다.
 author: mairaw
 ms.author: mairaw
 ms.date: 08/14/2017
-ms.topic: article
-ms.prod: .net-core
+ms.topic: conceptual
+ms.prod: dotnet-core
 ms.technology: dotnet-cli
-ms.workload: dotnetcore
-ms.openlocfilehash: 7fad6bf67dfe7b0d6f70ce527a153080aa17d888
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.workload:
+- dotnetcore
+ms.openlocfilehash: 796a241fea2c85fb03729a9cb0ed79682ac0dcee
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="dotnet-migrate"></a>dotnet 마이그레이션
 

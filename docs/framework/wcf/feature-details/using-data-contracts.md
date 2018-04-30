@@ -1,12 +1,13 @@
 ---
-title: "데이터 계약 사용"
-ms.custom: 
+title: 데이터 계약 사용
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -16,16 +17,17 @@ helpviewer_keywords:
 - WCF, data
 - data contracts [WCF]
 ms.assetid: a3ae7b21-c15c-4c05-abd8-f483bcbf31af
-caps.latest.revision: "38"
+caps.latest.revision: 38
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 7541f04279bbe9d85b7e2ecca841d9f5a14fc9a3
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 839227e9a67d904ea4613f841deac5a9a3f6f9ea
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="using-data-contracts"></a>데이터 계약 사용
 *데이터 계약* 은 서비스와 클라이언트 사이에서 교환할 데이터를 추상적으로 설명한 공식 계약입니다. 즉, 클라이언트와 서비스가 같은 형식을 공유하지 않고 같은 데이터 계약만 공유해도 통신이 가능합니다. 데이터 계약에서는 각 매개 변수 또는 반환 형식에 대해 교환을 위해 serialize(XML로 변환)해야 할 데이터를 세밀하게 정의합니다.  
@@ -33,9 +35,9 @@ ms.lasthandoff: 12/22/2017
 ## <a name="data-contract-basics"></a>데이터 계약 기본 사항  
  [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 에서는 기본적으로 데이터 계약 serializer라는 serialization 엔진을 사용하여 데이터를 serialize 및 deserialize(XML로 변환 및 변환 해제)합니다. 정수 및 문자열과 같은 모든 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 기본 형식 외에도 <xref:System.DateTime> 및 <xref:System.Xml.XmlElement>와 같이 기본 형식으로 취급되는 일부 형식을 별도의 준비 없이 serialize할 수 있으며 기본 데이터 계약이 있는 것으로 간주할 수 있습니다. [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 형식에도 기존 데이터 계약이 있는 것이 많습니다. 모든 serialize 가능 형식의 목록은 [Types Supported by the Data Contract Serializer](../../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md)을 참조하십시오.  
   
- 새로 만든 복합 형식을 serialize하려면 데이터 계약이 정의되어 있어야 합니다. 기본적으로 <xref:System.Runtime.Serialization.DataContractSerializer> 는 데이터 계약을 유추하고 모든 공개 형식을 serialize합니다. 이 경우 형식의 모든 공개 읽기/쓰기 속성과 필드가 serialize됩니다. <xref:System.Runtime.Serialization.IgnoreDataMemberAttribute>를 사용하여 멤버의 serialization을 취소할 수 있습니다. 또한 <xref:System.Runtime.Serialization.DataContractAttribute> 및 <xref:System.Runtime.Serialization.DataMemberAttribute> 특성을 사용하여 데이터 계약을 명시적으로 만들 수도 있습니다. 보통은 형식에 <xref:System.Runtime.Serialization.DataContractAttribute> 특성을 적용하면 됩니다. 이 특성을 클래스, 구조 및 열거에 적용할 수 있습니다. 그런 다음 데이터 계약 형식의 각 멤버에 <xref:System.Runtime.Serialization.DataMemberAttribute> 특성을 적용하여 *데이터 멤버*이며 serialize되어야 한다는 것을 나타내야 합니다. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Serializable 형식](../../../../docs/framework/wcf/feature-details/serializable-types.md)합니다.  
+ 새로 만든 복합 형식을 serialize하려면 데이터 계약이 정의되어 있어야 합니다. 기본적으로 <xref:System.Runtime.Serialization.DataContractSerializer> 는 데이터 계약을 유추하고 모든 공개 형식을 serialize합니다. 이 경우 형식의 모든 공개 읽기/쓰기 속성과 필드가 serialize됩니다. <xref:System.Runtime.Serialization.IgnoreDataMemberAttribute>를 사용하여 멤버의 serialization을 취소할 수 있습니다. 또한 <xref:System.Runtime.Serialization.DataContractAttribute> 및 <xref:System.Runtime.Serialization.DataMemberAttribute> 특성을 사용하여 데이터 계약을 명시적으로 만들 수도 있습니다. 보통은 형식에 <xref:System.Runtime.Serialization.DataContractAttribute> 특성을 적용하면 됩니다. 이 특성을 클래스, 구조 및 열거에 적용할 수 있습니다. 그런 다음 데이터 계약 형식의 각 멤버에 <xref:System.Runtime.Serialization.DataMemberAttribute> 특성을 적용하여 *데이터 멤버*이며 serialize되어야 한다는 것을 나타내야 합니다. 자세한 내용은 참조 [Serializable 형식](../../../../docs/framework/wcf/feature-details/serializable-types.md)합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  다음 예제에서는 <xref:System.ServiceModel.ServiceContractAttribute> 및 <xref:System.ServiceModel.OperationContractAttribute> 특성이 명시적으로 적용된 서비스 계약(인터페이스)을 보여 줍니다. 이 예제는 기본 형식에는 데이터 계약이 필요 없지만 복합 형식에는 필요하다는 것을 보여 줍니다.  
   
  [!code-csharp[C_DataContract#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_datacontract/cs/source.cs#1)]

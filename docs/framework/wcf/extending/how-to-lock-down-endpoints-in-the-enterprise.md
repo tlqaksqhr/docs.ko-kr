@@ -1,29 +1,31 @@
 ---
-title: "방법: 엔터프라이즈에서 끝점 잠그기"
-ms.custom: 
+title: '방법: 엔터프라이즈에서 끝점 잠그기'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 1b7eaab7-da60-4cf7-9d6a-ec02709cf75d
-caps.latest.revision: "21"
+caps.latest.revision: 21
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 5b6fa36a269dec4a191417813ec9c4ee26b699ee
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: e5b10665e9a820c7057231c684769bddf9cb0c79
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="how-to-lock-down-endpoints-in-the-enterprise"></a>방법: 엔터프라이즈에서 끝점 잠그기
 대형 엔터프라이즈에서는 응용 프로그램을 엔터프라이즈 보안 정책에 따라 개발해야 하는 경우가 종종 있습니다. 다음 항목에서는 컴퓨터에 설치된 모든 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 클라이언트 응용 프로그램의 유효성을 확인할 수 있는 클라이언트 끝점 유효성 검사기를 개발하고 설치하는 방법에 대해 설명합니다.  
   
- 이 끝점 동작은 클라이언트에 추가 되기 때문에 유효성 검사기는 클라이언트 유효성 검사기가이 경우 [ \<c o m m >](../../../../docs/framework/configure-apps/file-schema/wcf/commonbehaviors.md) machine.config 파일의 섹션입니다. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]는 클라이언트 응용 프로그램 전용의 공통 끝점 동작을 로드하고 서비스 응용 프로그램 전용의 공통 서비스 동작을 로드합니다. 서비스 응용 프로그램에 동일한 유효성 검사기를 설치하려면 유효성 검사기가 서비스 동작이어야 합니다. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][ \<c o m m >](../../../../docs/framework/configure-apps/file-schema/wcf/commonbehaviors.md) 섹션.  
+ 이 끝점 동작은 클라이언트에 추가 되기 때문에 유효성 검사기는 클라이언트 유효성 검사기가이 경우 [ \<c o m m >](../../../../docs/framework/configure-apps/file-schema/wcf/commonbehaviors.md) machine.config 파일의 섹션입니다. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]는 클라이언트 응용 프로그램 전용의 공통 끝점 동작을 로드하고 서비스 응용 프로그램 전용의 공통 서비스 동작을 로드합니다. 서비스 응용 프로그램에 동일한 유효성 검사기를 설치하려면 유효성 검사기가 서비스 동작이어야 합니다. 자세한 내용은 참조는 [ \<c o m m >](../../../../docs/framework/configure-apps/file-schema/wcf/commonbehaviors.md) 섹션.  
   
 > [!IMPORTANT]
 >  서비스 또는 끝점 동작으로 표시 되어 있지는 <xref:System.Security.AllowPartiallyTrustedCallersAttribute> 특성 (APTCA)에 추가 되는 [ \<c o m m >](../../../../docs/framework/configure-apps/file-schema/wcf/commonbehaviors.md) 구성 파일의 섹션에는 응용 프로그램이 부분 신뢰에서 실행 될 때 실행 되지 않습니다 이 경우 환경과 예외가 throw 됩니다. 유효성 검사기와 같은 일반 동작을 실행하려면 다음을 수행해야 합니다.  
@@ -66,7 +68,7 @@ ms.lasthandoff: 12/22/2017
   
          [!code-csharp[LockdownValidation#7](../../../../samples/snippets/csharp/VS_Snippets_CFX/lockdownvalidation/cs/hostapplication.cs#7)]  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 코드 예제에서는 일반 동작을 machine.config 파일에 추가하고 복사본을 디스크에 저장하는 방법을 보여 줍니다. `InternetClientValidatorBehavior` 에서 가져온 것은 [보안 유효성 검사](../../../../docs/framework/wcf/samples/security-validation.md) 샘플.  
   
  [!code-csharp[LockdownValidation#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/lockdownvalidation/cs/hostapplication.cs#1)]  

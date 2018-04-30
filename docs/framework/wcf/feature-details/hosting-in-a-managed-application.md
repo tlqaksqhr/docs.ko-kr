@@ -16,16 +16,16 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 1e81a8eb27725edeccf3e5c7489109ba47b70dec
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 4e2afa9e868c1f561aed699a2bdf7d09c17898b3
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="hosting-in-a-managed-application"></a>관리되는 응용 프로그램에서의 호스팅
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 서비스는 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 응용 프로그램에서 호스팅할 수 있습니다. 자체 호스팅 서비스는 배포하는 데 최소한의 인프라를 필요로 하기 때문에 가장 유연한 호스팅 옵션입니다. 그러나 관리되는 응용 프로그램이 IIS(인터넷 정보 서비스) 및 Windows 서비스와 같은 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]의 다른 호스팅 옵션에 대한 고급 호스팅 및 관리 기능을 제공하지 않기 때문에 가장 약한 호스팅 옵션이기도 합니다.  
   
- 자체 호스팅 서비스를 만들려면 <xref:System.ServiceModel.ServiceHost>의 인스턴스를 만들고 열어, 여기서 서비스의 메시지 수신 대기를 시작합니다. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [방법: 관리 되는 응용 프로그램에서 WCF 서비스 호스팅](../../../../docs/framework/wcf/how-to-host-a-wcf-service-in-a-managed-application.md)합니다.  
+ 자체 호스팅 서비스를 만들려면 <xref:System.ServiceModel.ServiceHost>의 인스턴스를 만들고 열어, 여기서 서비스의 메시지 수신 대기를 시작합니다. 자세한 내용은 참조 [하는 방법: 관리 되는 응용 프로그램에서 WCF 서비스 호스팅](../../../../docs/framework/wcf/how-to-host-a-wcf-service-in-a-managed-application.md)합니다.  
   
  계약을 정의 계약을 구현 및 관리 되는 응용 프로그램 내에 서비스를 호스트 하는 방법에는 전체 예제에 대 한 참조는 [초보자를 위한 자습서](../../../../docs/framework/wcf/getting-started-tutorial.md) 및 [자체 호스트](../../../../docs/framework/wcf/samples/self-host.md)합니다.  
   

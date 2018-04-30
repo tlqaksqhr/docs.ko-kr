@@ -1,20 +1,19 @@
 ---
-title: "dotnet restore 명령 - .NET Core CLI"
-description: "dotnet restore 명령을 사용하여 종속성 및 프로젝트 관련 도구를 복원하는 방법을 알아봅니다."
-keywords: "dotnet-restore, CLI, CLI 명령, .NET Core"
+title: dotnet restore 명령 - .NET Core CLI
+description: dotnet restore 명령을 사용하여 종속성 및 프로젝트 관련 도구를 복원하는 방법을 알아봅니다.
 author: mairaw
 ms.author: mairaw
 ms.date: 11/30/2017
-ms.topic: article
-ms.prod: .net-core
+ms.topic: conceptual
+ms.prod: dotnet-core
 ms.technology: dotnet-cli
 ms.workload:
 - dotnetcore
-ms.openlocfilehash: 50e8d5c335386c41e36a490263a4f4ebd2bd39ba
-ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
+ms.openlocfilehash: b20d9e72fcc754a7538e9c54677a86a1c9bbc2d1
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="dotnet-restore"></a>dotnet restore
 

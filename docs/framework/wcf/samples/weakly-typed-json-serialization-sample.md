@@ -1,24 +1,26 @@
 ---
-title: "약한형 JSON Serialization 샘플"
-ms.custom: 
+title: 약한형 JSON Serialization 샘플
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 0b30e501-4ef5-474d-9fad-a9d559cf9c52
-caps.latest.revision: "13"
+caps.latest.revision: 13
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: dedf1188afd886c44d897aa1d93ffa226e906ada
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 4cc75ff1078c35c177f0809d25cd32ca3b2b8e16
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="weakly-typed-json-serialization-sample"></a>약한형 JSON Serialization 샘플
 사용자 정의 형식을 지정된 통신 형식으로 serialize하거나 통신 형식을 사용자 정의 형식으로 다시 deserialize할 경우 서비스와 클라이언트 모두에서 지정된 사용자 정의 형식을 사용할 수 있어야 합니다. 보통 이렇게 하기 위해 이 사용자 정의 형식에 <xref:System.Runtime.Serialization.DataContractAttribute> 특성을 적용하고 해당 멤버에 <xref:System.Runtime.Serialization.DataMemberAttribute> 특성을 적용합니다. 이 메커니즘은 [How to: Serialize and Deserialize JSON Data](../../../../docs/framework/wcf/feature-details/how-to-serialize-and-deserialize-json-data.md)항목에 설명된 대로 JSON(JavaScript Object Notation) 개체로 작업하는 경우에도 적용됩니다.  
@@ -121,7 +123,7 @@ XmlDictionaryReader reader = channel.GetMemberProfile().GetReaderAtBodyContents(
 JsonObject json = new JsonObject(reader);  
 ```  
   
- `JsonObject` 생성자는 <xref:System.Xml.XmlDictionaryReader>메서드를 통해 얻을 수 있는 <xref:System.ServiceModel.Channels.Message.GetReaderAtBodyContents%2A> 를 받습니다. 판독기에는 클라이언트에서 받는 JSON 메시지의 XML 표현이 포함되어 있습니다. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] 는 [Mapping Between JSON and XML](../../../../docs/framework/wcf/feature-details/mapping-between-json-and-xml.md)항목에 설명된 대로 JSON(JavaScript Object Notation) 개체로 작업하는 경우에도 적용됩니다.  
+ `JsonObject` 생성자는 <xref:System.Xml.XmlDictionaryReader>메서드를 통해 얻을 수 있는 <xref:System.ServiceModel.Channels.Message.GetReaderAtBodyContents%2A> 를 받습니다. 판독기에는 클라이언트에서 받는 JSON 메시지의 XML 표현이 포함되어 있습니다. 자세한 내용은 항목을 참조 하십시오. [JSON 간 매핑 및 XML](../../../../docs/framework/wcf/feature-details/mapping-between-json-and-xml.md)합니다.  
   
  프로그램에서는 다음이 출력됩니다.  
   

@@ -1,30 +1,32 @@
 ---
-title: "보안 세션"
-ms.custom: 
+title: 보안 세션
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 7b50602f-d7b5-42e9-8e92-1f0413df0d8b
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: 65a54c06efffb2e3167c77bd109a50a31b971add
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 9506e791cf4da947eaadaff1669e5f2f975431c8
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="secure-sessions"></a>보안 세션
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]의 기능은 메시지를 보낸 순서로 받았음을 보장하는 신뢰할 수 있는 세션입니다. 이 단원의 항목에서는 신뢰할 수 있는 세션을 만들 때 고려해야 할 보안 관련 문제에 대해 설명합니다. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]신뢰할 수 있는 세션 참조 [를 사용 하 여 세션](../../../../docs/framework/wcf/using-sessions.md)합니다.  
+[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]의 기능은 메시지를 보낸 순서로 받았음을 보장하는 신뢰할 수 있는 세션입니다. 이 단원의 항목에서는 신뢰할 수 있는 세션을 만들 때 고려해야 할 보안 관련 문제에 대해 설명합니다. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 신뢰할 수 있는 세션 참조 [를 사용 하 여 세션](../../../../docs/framework/wcf/using-sessions.md)합니다.  
   
 > [!NOTE]
->  Windows XP에서 가장이 필요한 경우 상태 저장 SCT(보안 컨텍스트 토큰) 없이 보안 세션을 사용합니다. 상태 저장 SCT가 가장과 함께 사용되는 경우 <xref:System.InvalidOperationException>이 throw됩니다. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][지원 되지 않는 시나리오](../../../../docs/framework/wcf/feature-details/unsupported-scenarios.md)합니다.  
+>  Windows XP에서 가장이 필요한 경우 상태 저장 SCT(보안 컨텍스트 토큰) 없이 보안 세션을 사용합니다. 상태 저장 SCT가 가장과 함께 사용되는 경우 <xref:System.InvalidOperationException>이 throw됩니다. 자세한 내용은 참조 [지원 되지 않는 시나리오](../../../../docs/framework/wcf/feature-details/unsupported-scenarios.md)합니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
   

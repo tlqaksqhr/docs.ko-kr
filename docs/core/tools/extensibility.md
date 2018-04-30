@@ -1,22 +1,20 @@
 ---
 title: .NET Core CLI 확장성 모델
 description: CLI(명령줄 인터페이스) 도구를 확장할 수 있는 방법을 알아봅니다.
-keywords: CLI, 확장성, 사용자 지정 명령, .NET Core
 author: blackdwarf
 ms.author: mairaw
 ms.date: 04/12/2017
-ms.topic: article
-ms.prod: .net-core
+ms.topic: conceptual
+ms.prod: dotnet-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
-ms.assetid: fffc3400-aeb9-4c07-9fea-83bc8dbdcbf3
 ms.workload:
 - dotnetcore
-ms.openlocfilehash: 53329c302066891c240a234156c2572acc66e7ab
-ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
+ms.openlocfilehash: 11cf9843f5c10ed7114d45a8c6be0ffeff2b6bad
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="net-core-cli-tools-extensibility-model"></a>.NET Core CLI 도구 확장성 모델
 

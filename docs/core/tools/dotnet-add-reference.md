@@ -1,18 +1,19 @@
 ---
-title: "dotnet-add reference 명령 - .NET Core CLI"
-description: "dotnet add reference 명령은 프로젝트 간 참조를 추가하는 편리한 옵션을 제공합니다."
+title: dotnet-add reference 명령 - .NET Core CLI
+description: dotnet add reference 명령은 프로젝트 간 참조를 추가하는 편리한 옵션을 제공합니다.
 author: mairaw
 ms.author: mairaw
 ms.date: 09/19/2017
-ms.topic: article
-ms.prod: .net-core
+ms.topic: conceptual
+ms.prod: dotnet-core
 ms.technology: dotnet-cli
-ms.workload: dotnetcore
-ms.openlocfilehash: 9a79468168979a7c89efe48e11175f926e39cf4f
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.workload:
+- dotnetcore
+ms.openlocfilehash: c82696eee2fbe4bbad86e59cf5de1c2e74d048f6
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="dotnet-add-reference"></a>dotnet-add reference
 

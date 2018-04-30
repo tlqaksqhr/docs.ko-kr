@@ -12,23 +12,23 @@ ms.topic: article
 helpviewer_keywords:
 - data contracts [WCF], schema reference
 ms.assetid: 9ebb0ebe-8166-4c93-980a-7c8f1f38f7c0
-caps.latest.revision: ''
+caps.latest.revision: 24
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 57ccc812aab5df0a9acd99bdcde327d56e4bad8d
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: 739046945a019541f279b15d2d1b945f526861fb
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/23/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="data-contract-schema-reference"></a>데이터 계약 스키마 참조
 이 항목에서는 XML serialization에 대한 CLR(공용 언어 런타임) 형식을 설명하기 위해 <xref:System.Runtime.Serialization.DataContractSerializer> 에서 사용하는 XSD(XML 스키마) 하위 집합에 대해 설명합니다.  
   
 ## <a name="datacontractserializer-mappings"></a>DataContractSerializer 매핑  
- 또한 WSDL(웹 서비스 기술 언어) 또는 XSD 문서에 액세스하여 서비스 또는 클라이언트에 대한 데이터 계약을 생성하기 위해 Svcutil.exe를 사용하는 경우 `DataContractSerializer` 는 메타데이터 끝점 또는 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 를 사용하여 [indigo1](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)서비스에서 메타데이터를 내보낼 때 CLR 형식을 XSD에 매핑합니다. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [데이터 계약 Serializer](../../../../docs/framework/wcf/feature-details/data-contract-serializer.md)합니다.  
+ 또한 WSDL(웹 서비스 기술 언어) 또는 XSD 문서에 액세스하여 서비스 또는 클라이언트에 대한 데이터 계약을 생성하기 위해 Svcutil.exe를 사용하는 경우 `DataContractSerializer` 는 메타데이터 끝점 또는 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 를 사용하여 [indigo1](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)서비스에서 메타데이터를 내보낼 때 CLR 형식을 XSD에 매핑합니다. 자세한 내용은 참조 [데이터 계약 Serializer](../../../../docs/framework/wcf/feature-details/data-contract-serializer.md)합니다.  
   
  또한 WSDL(웹 서비스 기술 언어) 또는 XSD 문서에 액세스하여 서비스 또는 클라이언트에 대한 데이터 계약을 생성하기 위해 Svcutil.exe를 사용하는 경우 `DataContractSerializer` 는 XSD를 CLR 형식에 매핑합니다.  
   
@@ -231,7 +231,7 @@ ms.lasthandoff: 03/23/2018
 |`id`|무시됩니다.|  
 |`name`|지원되며 데이터 계약 이름에 매핑됩니다.|  
   
-### <a name="xssimpletype-contents"></a>\<xs:simpleType>: contents  
+### <a name="xssimpletype-contents"></a>\<xs:simpleType >: 콘텐츠  
   
 |목차|스키마|  
 |--------------|------------|  

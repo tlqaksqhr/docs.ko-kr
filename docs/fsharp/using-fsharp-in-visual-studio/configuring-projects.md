@@ -1,20 +1,17 @@
 ---
-title: "프로젝트 구성 (F #)"
-description: "Visual Studio에서 F # 프로젝트에서 작업할 때 프로젝트 디자이너를 사용 하는 방법에 알아봅니다."
-keywords: "visual f#, f#, 함수형 프로그래밍"
+title: '프로젝트 구성 (F #)'
+description: 'Visual Studio에서 F # 프로젝트에서 작업할 때 프로젝트 디자이너를 사용 하는 방법에 알아봅니다.'
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: 8b2ed206-34e4-4256-a6ce-0c2499561165
-ms.openlocfilehash: f56fed1e16b4de1d97766f37cb1c72297d5502d5
-ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
+ms.openlocfilehash: eac5b61d6b61d2aa1cb7b1606d60995a0355e975
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/09/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="configuring-projects-in-visual-studio"></a>Visual Studio에서 프로젝트 구성
 
@@ -28,9 +25,9 @@ ms.lasthandoff: 12/09/2017
 
 |프로젝트 디자이너 페이지|관련된 링크|설명|
 |---------------------|-------------|-----------|
-|`Application`|[응용 프로그램 페이지, 프로젝트 디자이너 &#40; C# 35; &#41;](https://msdn.microsoft.com/library/ms247046.aspx)|응용 프로그램 수준 설정 및 작성 하는 경우 라이브러리 또는 실행 파일, 응용 프로그램의 대상.NET Framework의 버전, 및 리소스 파일을 하는 방법에 대 한 정보 등의 속성을 지정할 수 있도록 응용 프로그램 사용 하 여 저장 됩니다.|
-|`Build`|[빌드 페이지, 프로젝트 디자이너 &#40; C# 35; &#41;](https://msdn.microsoft.com/library/kb4wyys2.aspx)|코드 컴파일 방식을 제어할 수 있습니다.|
-|`Build Events`|[빌드 이벤트 페이지, 프로젝트 디자이너 &#40; C# 35; &#41;](https://msdn.microsoft.com/library/kb4wyys2.aspx)|이전 또는 이후에 컴파일 실행할 명령을 지정할 수 있습니다.|
+|`Application`|[응용 프로그램 페이지, 프로젝트 디자이너 &#40;C&#35;&#41;](https://msdn.microsoft.com/library/ms247046.aspx)|응용 프로그램 수준 설정 및 작성 하는 경우 라이브러리 또는 실행 파일, 응용 프로그램의 대상.NET Framework의 버전, 및 리소스 파일을 하는 방법에 대 한 정보 등의 속성을 지정할 수 있도록 응용 프로그램 사용 하 여 저장 됩니다.|
+|`Build`|[프로젝트 디자이너, 빌드 페이지 &#40;C&#35;&#41;](https://msdn.microsoft.com/library/kb4wyys2.aspx)|코드 컴파일 방식을 제어할 수 있습니다.|
+|`Build Events`|[프로젝트 디자이너, 빌드 이벤트 페이지 &#40;C&#35;&#41;](https://msdn.microsoft.com/library/kb4wyys2.aspx)|이전 또는 이후에 컴파일 실행할 명령을 지정할 수 있습니다.|
 |`Debug`|[프로젝트 디자이너, 디버그 페이지](https://msdn.microsoft.com/library/2wcdezs5.aspx)|디버깅 하는 동안 응용 프로그램을 실행 하는 방법을 제어할 수 있습니다. 이 포함 및 사용 하 여 응용 프로그램의 시작 디렉터리 무엇 인지 명령줄과 특수 디버깅 네이티브 코드 및 SQL과 같이 활성화 하 시겠습니까 모드입니다.|
 |`Reference Paths`|[프로젝트의 참조 관리](/visualstudio/ide/managing-references-in-a-project)|코드에 종속 된 어셈블리를 검색할 위치를 지정할 수 있습니다.|
 

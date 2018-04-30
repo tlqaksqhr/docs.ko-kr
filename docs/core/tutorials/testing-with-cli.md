@@ -1,22 +1,20 @@
 ---
 title: .NET Core 명령줄을 사용하여 프로젝트 구성 및 테스트
 description: 이 자습서에서는 명령줄에서 .NET Core 프로젝트를 구성하고 테스트하는 방법을 설명합니다.
-keywords: .NET, .NET Core, 유닛 테스트, .NET Core CLI, xUnit
 author: cartermp
 ms.author: mairaw
 ms.date: 05/16/2017
-ms.topic: article
-ms.prod: .net-core
+ms.topic: conceptual
+ms.prod: dotnet-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
-ms.assetid: 52ff1be3-d92e-4477-9c84-8c1771e87ab5
 ms.workload:
 - dotnetcore
-ms.openlocfilehash: c68b7cb7dac069093e2e849543c5b5c21b4ffe3a
-ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
+ms.openlocfilehash: 718f60d6321c1d24670ac177de64725d88bdd148
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="organizing-and-testing-projects-with-the-net-core-command-line"></a>.NET Core 명령줄을 사용하여 프로젝트 구성 및 테스트
 

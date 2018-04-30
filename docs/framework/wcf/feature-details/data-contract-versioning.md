@@ -1,12 +1,13 @@
 ---
-title: "데이터 계약 버전 관리"
-ms.custom: 
+title: 데이터 계약 버전 관리
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -16,16 +17,17 @@ helpviewer_keywords:
 - versioning [WCF]
 - data contracts [WCF], versioning
 ms.assetid: 4a0700cb-5f5f-4137-8705-3a3ecf06461f
-caps.latest.revision: "35"
+caps.latest.revision: 35
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: e9773725a0d4626a8488249ead6440ad67a2a14a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: f232cb1cf98fe01aa0542c2a4b459fb7fc7b5089
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="data-contract-versioning"></a>데이터 계약 버전 관리
 응용 프로그램이 발전하면서 서비스가 사용하는 데이터 계약을 변경해야 할 수도 있습니다. 이 항목에서는 데이터 계약의 버전 관리 방법에 대해 설명합니다. 이 항목에서는 데이터 계약 버전 관리 메커니즘에 대해 설명합니다. 전체 개요 및 규정적 버전 관리 지침에 대 한 참조 [모범 사례: 데이터 계약 버전 관리](../../../../docs/framework/wcf/best-practices-data-contract-versioning.md)합니다.  
@@ -114,16 +116,16 @@ ms.lasthandoff: 12/22/2017
   
  주요 변경이 아닌 것으로 판단되는 많은 변경 사항은 스키마를 엄격하게 적용해야 하는 경우 실제 주요 변경 사항이 됩니다. 이전 예제에서 `CarV1` 요소만 있는 `Model` 인스턴스는 `CarV2` 스키마(`Model` 및 `Horsepower`를 둘 다 포함하지만 모두 선택 사항)에 대해 유효성을 검사합니다. 그러나 그 반대는 성립하지 않습니다. `CarV2` 인스턴스는 `CarV1` 스키마에 대한 유효성 검사에 실패합니다.  
   
- 라운드트립에서는 또한 몇 가지 추가로 고려해야 할 사항이 있습니다. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)]"스키마 고려 사항" 섹션 [이후 버전과 호환 데이터 계약](../../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md)합니다.  
+ 라운드트립에서는 또한 몇 가지 추가로 고려해야 할 사항이 있습니다. 자세한 내용은의 "스키마 고려 사항" 섹션을 참조 하십시오. [이후 버전과 호환 데이터 계약](../../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md)합니다.  
   
 ### <a name="other-permitted-changes"></a>기타 허용된 변경 사항  
- <xref:System.Runtime.Serialization.IExtensibleDataObject> 인터페이스 구현은 주요 변경에 해당하지 않습니다. 그러나 <xref:System.Runtime.Serialization.IExtensibleDataObject>를 구현한 버전보다 이전 형식의 버전에는 라운드트립이 지원되지 않습니다. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][이후 버전과 호환 데이터 계약](../../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md)합니다.  
+ <xref:System.Runtime.Serialization.IExtensibleDataObject> 인터페이스 구현은 주요 변경에 해당하지 않습니다. 그러나 <xref:System.Runtime.Serialization.IExtensibleDataObject>를 구현한 버전보다 이전 형식의 버전에는 라운드트립이 지원되지 않습니다. 자세한 내용은 [호환 가능한 데이터 계약](../../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md)을 참조하세요.  
   
 ## <a name="enumerations"></a>열거형  
- 열거형 멤버 추가 또는 제거는 주요 변경 사항입니다. 열거형 멤버 이름 변경은 `EnumMemberAtttribute` 특성을 사용하여 계약 이름을 이전 버전과 동일하게 유지하지 않는 한 주요 변경 사항입니다. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][데이터 계약의 열거형 형식](../../../../docs/framework/wcf/feature-details/enumeration-types-in-data-contracts.md)합니다.  
+ 열거형 멤버 추가 또는 제거는 주요 변경 사항입니다. 열거형 멤버 이름 변경은 `EnumMemberAtttribute` 특성을 사용하여 계약 이름을 이전 버전과 동일하게 유지하지 않는 한 주요 변경 사항입니다. 자세한 내용은 참조 [데이터 계약의 열거형 형식](../../../../docs/framework/wcf/feature-details/enumeration-types-in-data-contracts.md)합니다.  
   
 ## <a name="collections"></a>컬렉션  
- 대부분의 컬렉션 형식이 데이터 계약 모델에서 서로 간에 상호 변경이 가능하기 때문에 대부분의 컬렉션 변경은 주요 변경 사항이 아닙니다. 그러나 사용자 지정되지 않은 컬렉션을 사용자 지정하거나 그 반대로 할 경우 주요 변경 사항이 됩니다. 또한 컬렉션의 사용자 지정 설정 변경은 주요 변경 사항입니다. 즉, 데이터 계약 이름 및 네임스페이스 변경, 요소 이름, 주요 요소 이름 및 값 요소 이름 반복은 주요 변경 사항입니다. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]컬렉션 사용자 지정 참조 [데이터 계약의 컬렉션 형식](../../../../docs/framework/wcf/feature-details/collection-types-in-data-contracts.md)합니다.  
+ 대부분의 컬렉션 형식이 데이터 계약 모델에서 서로 간에 상호 변경이 가능하기 때문에 대부분의 컬렉션 변경은 주요 변경 사항이 아닙니다. 그러나 사용자 지정되지 않은 컬렉션을 사용자 지정하거나 그 반대로 할 경우 주요 변경 사항이 됩니다. 또한 컬렉션의 사용자 지정 설정 변경은 주요 변경 사항입니다. 즉, 데이터 계약 이름 및 네임스페이스 변경, 요소 이름, 주요 요소 이름 및 값 요소 이름 반복은 주요 변경 사항입니다. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 컬렉션 사용자 지정 참조 [데이터 계약의 컬렉션 형식](../../../../docs/framework/wcf/feature-details/collection-types-in-data-contracts.md)합니다.  
 기본적으로 컬렉션 콘텐츠 중 데이터 계약 변경(예: 정수 목록에서 문자열 목록으로 변경)은 주요 변경 사항입니다.  
   
 ## <a name="see-also"></a>참고 항목  

@@ -1,18 +1,18 @@
 ---
-title: ".NET Core로 이식 - Windows 호환 기능 팩 사용"
-description: "Windows 호환 기능 팩 및 이를 사용하여 기존 .NET Framework 코드를 .NET Core로 이식하는 방법에 대해 알아보기"
-keywords: ".NET, .NET Core, Windows, 호환성"
+title: .NET Core로 이식 - Windows 호환 기능 팩 사용
+description: Windows 호환 기능 팩 및 이를 사용하여 기존 .NET Framework 코드를 .NET Core로 이식하는 방법에 대해 알아보기
 author: terrajobst
 ms.author: mairaw
 ms.date: 11/13/2017
-ms.topic: article
-ms.prod: .net-core
-ms.workload: dotnetcore
-ms.openlocfilehash: 3b1fe02aad4f78499158ecb7fa9b8521cb7d992e
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.topic: conceptual
+ms.prod: dotnet-core
+ms.workload:
+- dotnetcore
+ms.openlocfilehash: 4ef7d9c847d48ae7bbb2d553b1c05cb90a1c5a7a
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="using-the-windows-compatibility-pack"></a>Windows 호환 기능 팩 사용
 

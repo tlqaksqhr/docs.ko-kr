@@ -1,28 +1,28 @@
 ---
-title: "데이터 계약 서로게이트"
-ms.custom: 
+title: 데이터 계약 서로게이트
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - data contracts [WCF], surrogates
 ms.assetid: 8c31134c-46c5-4ed7-94af-bab0ac0dfce5
-caps.latest.revision: 
+caps.latest.revision: 8
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: f6fcae1989b75a668fd6ff38596b06feca7be9e8
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: e6b372b998d7b3a91189032947a9ad8c68074b5d
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="data-contract-surrogates"></a>데이터 계약 서로게이트
 데이터 계약 *서로게이트* 데이터 계약 모델을 기반으로 하는 고급 기능입니다. 이 기능은 사용자가 형식을 메타데이터에 나타내거나 serialize 또는 deserialize하는 방식을 변경하려는 경우 형식 사용자 지정 및 대체에 사용하도록 디자인되었습니다. 서로게이트는 데이터 계약이 형식에 대해 지정되지 않은 경우, 필드와 속성에 <xref:System.Runtime.Serialization.DataMemberAttribute> 특성이 표시되지 않은 경우 또는 사용자가 스키마 변형을 동적으로 만들려는 경우 사용할 수 있습니다.  
@@ -46,7 +46,7 @@ ms.lasthandoff: 12/22/2017
 ### <a name="getdatacontracttype"></a>GetDataContractType  
  <xref:System.Runtime.Serialization.IDataContractSurrogate.GetDataContractType%2A> 메서드는 특정 형식을 다른 형식에 매핑합니다. 이 메서드는 serialization, deserialization, 가져오기 및 내보내기에 필요합니다.  
   
- 첫 번째 작업은 다른 형식에 매핑할 형식을 정의하는 것입니다. 예:  
+ 첫 번째 작업은 다른 형식에 매핑할 형식을 정의하는 것입니다. 예를 들어:  
   
  [!code-csharp[C_IDataContractSurrogate#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_idatacontractsurrogate/cs/source.cs#3)]  
   
@@ -67,7 +67,7 @@ ms.lasthandoff: 12/22/2017
 ### <a name="getobjecttoserialize-method"></a>GetObjectToSerialize 메서드  
  <xref:System.Runtime.Serialization.IDataContractSurrogate.GetObjectToSerialize%2A> 메서드는 원래 형식 인스턴스를 서로게이트된 형식 인스턴스로 변환합니다. 이 메서드는 serialization에 필요합니다.  
   
- 다음 단계는 <xref:System.Runtime.Serialization.IDataContractSurrogate.GetObjectToSerialize%2A> 메서드를 구현하여 물리적 데이터를 원래 인스턴스에서 서로게이트에 매핑하는 방식을 정의하는 것입니다. 예:  
+ 다음 단계는 <xref:System.Runtime.Serialization.IDataContractSurrogate.GetObjectToSerialize%2A> 메서드를 구현하여 물리적 데이터를 원래 인스턴스에서 서로게이트에 매핑하는 방식을 정의하는 것입니다. 예를 들어:  
   
  [!code-csharp[C_IDataContractSurrogate#4](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_idatacontractsurrogate/cs/source.cs#4)]  
   
@@ -75,7 +75,7 @@ ms.lasthandoff: 12/22/2017
   
  `targetType` 매개 변수는 멤버의 선언된 형식을 참조합니다. 이 매개 변수는 <xref:System.Runtime.Serialization.IDataContractSurrogate.GetDataContractType%2A> 메서드에서 반환되는 서로게이트된 형식입니다. serializer는 반환된 개체를 이 형식에 할당할 수 있도록 지정하지 않습니다. `obj` 매개 변수는 개체를 serialize 하는 데 필요한 경우 해당 서로게이트로 변환 됩니다. 이 메서드는 서로게이트된 메서드가 입력 개체를 처리하지 않을 경우 해당 입력 개체를 반환해야 합니다. 그렇지 않으면 새 서로게이트 개체가 반환됩니다. 서로게이트는 개체가 null이면 호출되지 않습니다. 이 메서드 내에 다른 인스턴스에 대한 서로게이트 매핑을 여러 개 정의할 수 있습니다.  
   
- <xref:System.Runtime.Serialization.DataContractSerializer>를 만들 때 개체 참조를 유지하도록 지시할 수 있습니다. ([!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [Serialization 및 Deserialization](../../../../docs/framework/wcf/feature-details/serialization-and-deserialization.md).) 이 작업을 수행하려면 해당 생성자의 `preserveObjectReferences` 매개 변수를 `true`로 설정합니다. 이 경우 이후의 모든 serialization이 스트림에 참조를 작성하므로 서로게이트는 개체에 대해 한 번만 호출됩니다. `preserveObjectReferences`가 `false`로 설정된 경우 인스턴스가 나타날 때마다 서로게이트가 호출됩니다.  
+ <xref:System.Runtime.Serialization.DataContractSerializer>를 만들 때 개체 참조를 유지하도록 지시할 수 있습니다. (자세한 내용은 참조 [Serialization 및 Deserialization](../../../../docs/framework/wcf/feature-details/serialization-and-deserialization.md).) 이 작업을 수행하려면 해당 생성자의 `preserveObjectReferences` 매개 변수를 `true`로 설정합니다. 이 경우 이후의 모든 serialization이 스트림에 참조를 작성하므로 서로게이트는 개체에 대해 한 번만 호출됩니다. `preserveObjectReferences`가 `false`로 설정된 경우 인스턴스가 나타날 때마다 서로게이트가 호출됩니다.  
   
  serialize된 인스턴스의 형식이 선언된 형식과 다르면 형식 정보가 스트림에 작성됩니다. 예를 들어 `xsi:type`을 사용하면 다른 쪽 끝에서 인스턴스를 deserialize할 수 있습니다. 이 프로세스는 개체가 서로게이트되는지 여부에 따라 발생합니다.  
   
@@ -84,7 +84,7 @@ ms.lasthandoff: 12/22/2017
 ### <a name="getdeserializedobject-method"></a>GetDeserializedObject 메서드  
  <xref:System.Runtime.Serialization.IDataContractSurrogate.GetDeserializedObject%2A> 메서드는 서로게이트된 형식 인스턴스를 원래 형식 인스턴스로 변환합니다. 이 메서드는 deserialization에 필요합니다.  
   
- 다음 작업은 물리적 데이터를 서로게이트 인스턴스에서 원래 인스턴스에 매핑하는 방식을 정의하는 것입니다. 예:  
+ 다음 작업은 물리적 데이터를 서로게이트 인스턴스에서 원래 인스턴스에 매핑하는 방식을 정의하는 것입니다. 예를 들어:  
   
  [!code-csharp[C_IDataContractSurrogate#5](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_idatacontractsurrogate/cs/source.cs#5)]  
   
@@ -97,7 +97,7 @@ ms.lasthandoff: 12/22/2017
  앞의 예제에서는 `InventorySurrogated`형식의 개체를 다시 초기 형식 `Inventory`로 변환합니다. 이 경우 데이터는 다시 `InventorySurrogated`에서 `Inventory`의 해당 필드로 직접 전송됩니다. 데이터의 조작된 사항이 없기 때문에 각 멤버 필드에 serialization 전과 같은 값이 포함됩니다.  
   
 ### <a name="getcustomdatatoexport-method"></a>GetCustomDataToExport 메서드  
- 스키마를 내보낼 때 <xref:System.Runtime.Serialization.IDataContractSurrogate.GetCustomDataToExport%2A> 메서드는 선택 사항입니다. 해당 메서드는 내보낸 스키마에 추가 데이터나 힌트를 삽입하는 데 사용됩니다. 추가 데이터는 멤버 수준 또는 형식 수준에서 삽입될 수 있습니다. 예:  
+ 스키마를 내보낼 때 <xref:System.Runtime.Serialization.IDataContractSurrogate.GetCustomDataToExport%2A> 메서드는 선택 사항입니다. 해당 메서드는 내보낸 스키마에 추가 데이터나 힌트를 삽입하는 데 사용됩니다. 추가 데이터는 멤버 수준 또는 형식 수준에서 삽입될 수 있습니다. 예를 들어:  
   
  [!code-csharp[C_IDataContractSurrogate#6](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_idatacontractsurrogate/cs/source.cs#6)]  
   
@@ -129,7 +129,7 @@ ms.lasthandoff: 12/22/2017
 ### <a name="processimportedtype-method"></a>ProcessImportedType 메서드  
  <xref:System.Runtime.Serialization.IDataContractSurrogate.ProcessImportedType%2A> 메서드는 스키마 가져오기에서 만들어진 모든 형식을 사용자 지정합니다. 이 메서드는 선택 사항입니다.  
   
- 스키마를 가져올 때 이 메서드를 사용하면 가져온 형식 및 컴파일 정보를 사용자 지정할 수 있습니다. 예:  
+ 스키마를 가져올 때 이 메서드를 사용하면 가져온 형식 및 컴파일 정보를 사용자 지정할 수 있습니다. 예를 들어:  
   
  [!code-csharp[C_IDataContractSurrogate#7](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_idatacontractsurrogate/cs/source.cs#7)]  
   
@@ -144,7 +144,7 @@ ms.lasthandoff: 12/22/2017
 ### <a name="getknowncustomdatatypes-method"></a>GetKnownCustomDataTypes 메서드  
  이 메서드는 스키마에서 정의된 사용자 지정 데이터 형식을 가져옵니다. 스키마 가져오기에서 이 메서드는 선택 사항입니다.  
   
- 해당 메서드는 스키마 내보내기 및 가져오기를 시작할 때 호출됩니다. 이 메서드는 내보내거나 가져온 스키마에 사용되는 사용자 지정 데이터 형식을 반환합니다. 이 메서드는 형식의 컬렉션인 <xref:System.Collections.ObjectModel.Collection%601>(`customDataTypes` 매개 변수)에 전달됩니다. 메서드는 알려진 추가 형식을 이 컬렉션에 추가해야 합니다. 알려진 사용자 지정 데이터 형식은 <xref:System.Runtime.Serialization.DataContractSerializer>를 사용하여 사용자 지정 데이터의 serialization 및 deserialization을 활성화하는 데 필요합니다. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][데이터 계약 알려진된 형식](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)합니다.  
+ 해당 메서드는 스키마 내보내기 및 가져오기를 시작할 때 호출됩니다. 이 메서드는 내보내거나 가져온 스키마에 사용되는 사용자 지정 데이터 형식을 반환합니다. 이 메서드는 형식의 컬렉션인 <xref:System.Collections.ObjectModel.Collection%601>(`customDataTypes` 매개 변수)에 전달됩니다. 메서드는 알려진 추가 형식을 이 컬렉션에 추가해야 합니다. 알려진 사용자 지정 데이터 형식은 <xref:System.Runtime.Serialization.DataContractSerializer>를 사용하여 사용자 지정 데이터의 serialization 및 deserialization을 활성화하는 데 필요합니다. 자세한 내용은 참조 [데이터 계약 알려진 형식을](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)합니다.  
   
 ## <a name="implementing-a-surrogate"></a>서로게이트 구현  
  [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 내에서 데이터 계약 서로게이트를 사용하려면 몇 가지 특수한 프로시저를 수행해야 합니다.  

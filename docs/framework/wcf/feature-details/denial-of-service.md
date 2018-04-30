@@ -1,28 +1,28 @@
 ---
-title: "서비스 거부"
-ms.custom: 
+title: 서비스 거부
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - denial of service [WCF]
 ms.assetid: dfb150f3-d598-4697-a5e6-6779e4f9b600
-caps.latest.revision: 
+caps.latest.revision: 12
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 5d5f67790abad5dcf6311de1817b4ea093e703d9
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: fb9f542d931f5febc2c04d1b0e093cc20f487c57
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="denial-of-service"></a>서비스 거부
 서비스 거부는 시스템을 가득 채워 메시지를 처리할 수 없거나 메시지가 매우 느리게 처리되는 경우에 발생합니다.  
@@ -57,7 +57,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="auditing-event-log-can-be-filled"></a>감사 이벤트 로그가 채워질 수 있음  
  악의적인 사용자가 감사가 설정된 사실을 알고 있다면 잘못된 메시지를 보내 감사 항목이 기록되게 할 수 있습니다. 이런 식으로 감사 로그가 채워지면 감사 시스템이 실패합니다.  
   
- 이 문제를 완화하려면 <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior.SuppressAuditFailure%2A> 속성을 `true`로 설정하고 이벤트 뷰어의 속성을 사용하여 감사 동작을 제어합니다. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]참조를 보고 하 여 이벤트 로그 관리 이벤트 뷰어를 사용 하 여 [이벤트 뷰어](http://go.microsoft.com/fwlink/?LinkId=186123)합니다. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][감사](../../../../docs/framework/wcf/feature-details/auditing-security-events.md)합니다.  
+ 이 문제를 완화하려면 <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior.SuppressAuditFailure%2A> 속성을 `true`로 설정하고 이벤트 뷰어의 속성을 사용하여 감사 동작을 제어합니다. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 참조를 보고 하 여 이벤트 로그 관리 이벤트 뷰어를 사용 하 여 [이벤트 뷰어](http://go.microsoft.com/fwlink/?LinkId=186123)합니다. 자세한 내용은 참조 [감사](../../../../docs/framework/wcf/feature-details/auditing-security-events.md)합니다.  
   
 ## <a name="invalid-implementations-of-iauthorizationpolicy-can-cause-service-hangs"></a>IAuthorizationPolicy의 잘못된 구현으로 인해 서비스가 중단될 수 있음  
  <xref:System.IdentityModel.Policy.IAuthorizationPolicy.Evaluate%2A> 인터페이스의 잘못된 구현에서 <xref:System.IdentityModel.Policy.IAuthorizationPolicy> 메서드를 호출하면 서비스가 중단될 수 있습니다.  
@@ -74,7 +74,7 @@ ms.lasthandoff: 12/22/2017
   
  이 완화 하려면 보다 정확 하 게 검색 조건에 사용 하 여 사용할 인증서를 정확히 참조는 [ \<serviceCredentials >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecredentials.md)합니다. 예를 들어 <xref:System.Security.Cryptography.X509Certificates.X509FindType.FindByThumbprint> 옵션을 사용하고 고유한 지문(해시)으로 인증서를 지정합니다.  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]자동 등록 기능 참조 [Windows Server 2003의 인증서 자동 등록](http://go.microsoft.com/fwlink/?LinkId=95166)합니다.  
+ [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 자동 등록 기능 참조 [Windows Server 2003의 인증서 자동 등록](http://go.microsoft.com/fwlink/?LinkId=95166)합니다.  
   
 ## <a name="last-of-multiple-alternative-subject-names-used-for-authorization"></a>권한 부여에 사용되는 여러 개의 대체 주체 이름 중 마지막  
  드물지만 X.509 인증서에 여러 개의 대체 주체 이름이 포함된 경우 대체 주체 이름을 사용하여 권한을 부여하면 권한 부여가 실패할 수도 있습니다.  
@@ -88,7 +88,7 @@ ms.lasthandoff: 12/22/2017
  서비스에서 성공적으로 클라이언트를 인증하고 서비스와의 보안 세션이 설정된 경우 서비스는 클라이언트가 세션을 취소하거나 세션이 만료될 때까지 세션을 추적합니다. 설정된 각 세션은 서비스에 대해 허용되는 동시 활성 세션의 최대 개수 제한에 계산됩니다. 이 제한에 도달하면 하나 이상의 활성 세션이 만료되거나 클라이언트에 의해 취소될 때까지 해당 서비스와 새 세션을 만들려고 시도하는 클라이언트가 거부됩니다. 클라이언트는 서비스와 여러 세션을 만들 수 있으며, 이러한 세션의 각각이 제한에 계산됩니다.  
   
 > [!NOTE]
->  상태 저장 세션을 사용하는 경우 이전 단락의 내용이 적용되지 않습니다. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]상태 저장 세션 참조 [하는 방법: 보안 세션에 대 한 보안 컨텍스트 토큰 만들기](../../../../docs/framework/wcf/feature-details/how-to-create-a-security-context-token-for-a-secure-session.md)합니다.  
+>  상태 저장 세션을 사용하는 경우 이전 단락의 내용이 적용되지 않습니다. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 상태 저장 세션 참조 [하는 방법: 보안 세션에 대 한 보안 컨텍스트 토큰 만들기](../../../../docs/framework/wcf/feature-details/how-to-create-a-security-context-token-for-a-secure-session.md)합니다.  
   
  이 문제를 완화하려면 <xref:System.ServiceModel.Channels.SecurityBindingElement> 클래스의 <xref:System.ServiceModel.Channels.SecurityBindingElement> 속성을 설정하여 활성 세션의 최대 개수와 세션의 최대 수명에 대해 제한을 설정합니다.  
   

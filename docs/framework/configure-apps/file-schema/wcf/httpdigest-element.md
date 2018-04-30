@@ -1,33 +1,35 @@
 ---
-title: "&lt;httpDigest&gt; 요소"
-ms.custom: 
+title: '&lt;httpDigest&gt; 요소'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 3da4f276-dfd9-4247-8c07-01d83618727c
-caps.latest.revision: "12"
+caps.latest.revision: 12
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 95e6a7d31949bd7a6badb029e3f768a63fbaf924
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 75579a583b774896f43099d3cc30f1679b10a889
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="lthttpdigestgt-element"></a>&lt;httpDigest&gt; 요소
 서비스에게 클라이언트를 인증하는 데 사용되는 다이제스트 형식 자격 증명을 지정합니다.  
   
- \<시스템입니다. ServiceModel >  
+ \<system.ServiceModel>  
 \<동작 >  
-\<endpointBehaviors >  
+\<endpointBehaviors>  
 \<동작 >  
-\<clientCredentials >  
+\<clientCredentials>  
 \<httpDigest >  
   
 ## <a name="syntax"></a>구문  
@@ -37,7 +39,7 @@ ms.lasthandoff: 12/22/2017
 ```  
   
 ## <a name="attributes-and-elements"></a>특성 및 요소  
- 다음 단원에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
+ 다음 섹션에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
   
 ### <a name="attributes"></a>특성  
   
@@ -52,12 +54,12 @@ ms.lasthandoff: 12/22/2017
   
 |요소|설명|  
 |-------------|-----------------|  
-|[\<clientCredentials >](../../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md)|클라이언트를 서비스에 인증할 때 사용되는 자격 증명을 지정합니다.|  
+|[\<clientCredentials>](../../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md)|클라이언트를 서비스에 인증할 때 사용되는 자격 증명을 지정합니다.|  
   
 ## <a name="remarks"></a>설명  
  다이제스트는 알고리즘과 입력 집합을 통해 확인되는 해시입니다. 인증자 및 인증된 사용자는 알고리즘에 동의하고 입력으로 사용된 데이터를 교환합니다. 클라이언트는 해시를 계산하여 서비스로 보냅니다. 서비스에서도 해시를 계산하여 값을 비교합니다. 값이 일치하면 클라이언트가 확인됩니다.  
   
- 이 기능은 Windows 및 IIS(인터넷 정보 서비스)의 Active Directory를 통해 사용해야 합니다. [!INCLUDE[crdefault](../../../../../includes/crdefault-md.md)][다이제스트 인증 IIS 6.0에서에서](http://go.microsoft.com/fwlink/?LinkId=88443)합니다.  
+ 이 기능은 Windows 및 IIS(인터넷 정보 서비스)의 Active Directory를 통해 사용해야 합니다. 자세한 내용은 참조 [IIS 6.0의 다이제스트 인증](http://go.microsoft.com/fwlink/?LinkId=88443)합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  <xref:System.ServiceModel.Configuration.ClientCredentialsElement>  

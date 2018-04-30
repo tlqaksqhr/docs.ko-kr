@@ -1,20 +1,17 @@
 ---
-title: "F# 개발 환경 기능"
-description: "F #에서 지 원하는 Visual Studio 2012의 기능에 알아봅니다."
-keywords: "visual f#, f#, 함수형 프로그래밍"
+title: F# 개발 환경 기능
+description: 'F #에서 지 원하는 Visual Studio 2012의 기능에 알아봅니다.'
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: 809e9a34-b271-4c87-8356-2426b44f4721
-ms.openlocfilehash: 05727bf11eccfd64f823dd280b1a19210815ca5a
-ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
+ms.openlocfilehash: dd5c3165a73bd4f821a26d183094829dab7eaeae
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/09/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="visual-f-development-environment-features"></a>Visual F# 개발 환경 기능
 

@@ -1,20 +1,17 @@
 ---
 title: 'F #을 사용 하 여 Azure Blob 저장소 시작'
 description: Azure Blob 저장소와 함께 클라우드에 구조화 되지 않은 데이터를 저장 합니다.
-keywords: 'visual f #, f #, 기능 프로그래밍,.NET,.NET Core를 Azure'
 author: sylvanc
 ms.author: phcart
 ms.date: 09/20/2016
-ms.topic: article
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.topic: conceptual
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: c5b74a4f-dcd1-4849-930c-904b6c8a04e1
-ms.openlocfilehash: 14ccba36638c724536793a6a589cf1c0a6186eeb
-ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
+ms.openlocfilehash: 0414f0ca4aa2c2b75e80b3fd6531be74924fb60f
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="get-started-with-azure-blob-storage-using-f"></a>F #을 사용 하 여 Azure Blob 저장소 시작 #
 

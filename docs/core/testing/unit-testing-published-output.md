@@ -1,17 +1,18 @@
 ---
-title: "dotnet vstest로 게시된 출력 테스트"
-description: "dotnet vstest 명령을 사용하여 게시된 출력에 대해 테스트를 실행하는 방법을 알아봅니다."
+title: dotnet vstest로 게시된 출력 테스트
+description: dotnet vstest 명령을 사용하여 게시된 출력에 대해 테스트를 실행하는 방법을 알아봅니다.
 author: kendrahavens
 ms.author: kehavens
 ms.date: 10/18/2017
-ms.topic: article
-ms.prod: .net-core
-ms.workload: dotnetcore
-ms.openlocfilehash: 373c557d3fc640ed9071a732bba9f082ca6a4d33
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.topic: conceptual
+ms.prod: dotnet-core
+ms.workload:
+- dotnetcore
+ms.openlocfilehash: 2f750a8bb0907069691c4a4491beeb4b1733df29
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="test-published-output-with-dotnet-vstest"></a>dotnet vstest로 게시된 출력 테스트
 

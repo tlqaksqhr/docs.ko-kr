@@ -1,12 +1,13 @@
 ---
-title: "데이터 계약 알려진 형식"
-ms.custom: 
+title: 데이터 계약 알려진 형식
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -16,23 +17,24 @@ helpviewer_keywords:
 - KnownTypeAttribute [WCF]
 - KnownTypes [WCF]
 ms.assetid: 1a0baea1-27b7-470d-9136-5bbad86c4337
-caps.latest.revision: "42"
+caps.latest.revision: 42
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 24d26358c0bf0440b2fbba143629a0e4bda21cec
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: c9c180a0f1544fa187ddb53ec79a47f908c298d7
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="data-contract-known-types"></a>데이터 계약 알려진 형식
 <xref:System.Runtime.Serialization.KnownTypeAttribute> 클래스를 사용하면 고려 사항에 포함해야 하는 형식을 deserialization을 수행하는 동안 미리 지정할 수 있습니다. 작업 예제는 [Known Types](../../../../docs/framework/wcf/samples/known-types.md) 예제를 참조하십시오.  
   
  일반적으로 클라이언트와 서비스 간에 매개 변수와 반환 값을 전달할 때 두 끝점은 전송할 데이터의 모든 데이터 계약을 공유합니다. 그러나 다음과 같은 경우는 그렇지 않습니다.  
   
--   보낸 데이터 계약은 필요한 데이터 계약에서 파생됩니다. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)]상속에 대 한 섹션 [데이터 계약 동등성](../../../../docs/framework/wcf/feature-details/data-contract-equivalence.md)). 이 경우 전송한 데이터에는 수신하는 끝점에서 필요한 것과 동일한 데이터 계약이 없습니다.  
+-   보낸 데이터 계약은 필요한 데이터 계약에서 파생됩니다. 자세한 내용은의 상속에 대 한 섹션을 참조 하십시오. [데이터 계약 동등성](../../../../docs/framework/wcf/feature-details/data-contract-equivalence.md)). 이 경우 전송한 데이터에는 수신하는 끝점에서 필요한 것과 동일한 데이터 계약이 없습니다.  
   
 -   전송할 정보에 대해 선언된 형식은 클래스, 구조체 또는 열거형이 아니라 인터페이스입니다. 따라서 인터페이스를 구현하는 형식을 실제로 보냈는지 미리 알 수 없으므로 수신하는 끝점에서 전송된 데이터에 대한 데이터 계약을 미리 확인할 수 없습니다.  
   

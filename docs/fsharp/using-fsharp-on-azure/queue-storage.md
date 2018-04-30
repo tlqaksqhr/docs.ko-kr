@@ -1,20 +1,17 @@
 ---
-title: "F #을 사용 하 여 Azure 큐 저장소 시작"
-description: "Azure 큐는 안정적이 고 비동기 응용 프로그램 구성 요소 간의 메시징을 제공 합니다. 메시징 사용 독립적으로 확장할 응용 프로그램 구성 요소를 클라우드입니다."
-keywords: "visual f #, f #, 기능 프로그래밍,.NET,.NET Core를 Azure"
+title: 'F #을 사용 하 여 Azure 큐 저장소 시작'
+description: Azure 큐는 안정적이 고 비동기 응용 프로그램 구성 요소 간의 메시징을 제공 합니다. 메시징 사용 독립적으로 확장할 응용 프로그램 구성 요소를 클라우드입니다.
 author: sylvanc
 ms.author: phcart
 ms.date: 09/20/2016
-ms.topic: article
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.topic: conceptual
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: 70dc554c-8f4d-42a7-8e2a-6438657d012a
-ms.openlocfilehash: 50b2d69a1753add688aa14c3314a0ca2df9f03a4
-ms.sourcegitcommit: 655fd4f78741967f80c409cef98347fdcf77857d
+ms.openlocfilehash: bd49fd0f0e8d91449443051ab9a4ffc2d2638e11
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="get-started-with-azure-queue-storage-using-f"></a>F #을 사용 하 여 Azure 큐 저장소 시작 #
 
@@ -26,7 +23,7 @@ Azure 큐 저장소는 클라우드 응용 프로그램 구성 요소 간에 메
 
 큐 저장소의 개념적인 개요를 참조 하십시오 [큐 저장소에 대 한.NET 가이드](/azure/storage/storage-dotnet-how-to-use-queues)합니다.
 
-## <a name="prerequisites"></a>필수 구성 요소
+## <a name="prerequisites"></a>전제 조건
 
 이 가이드를 사용 하려면 먼저 [Azure 저장소 계정 만들기](/azure/storage/storage-create-storage-account)합니다.
 또한이 계정에 대 한 저장소 액세스 키를 해야 합니다.

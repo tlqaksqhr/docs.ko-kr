@@ -1,21 +1,19 @@
 ---
 title: Visual Studio for Mac을 사용하여 macOS에서 완전한 .NET Core 솔루션 빌드
 description: 이 항목에서는 재사용 가능한 라이브러리 및 단위 테스트를 포함하는 .NET Core 솔루션을 빌드하는 과정을 안내합니다.
-keywords: .NET, .NET Core, macOS, Mac
 author: guardrex
 ms.author: mairaw
 ms.date: 06/12/2017
-ms.topic: article
-ms.prod: .net-core
+ms.topic: conceptual
+ms.prod: dotnet-core
 ms.devlang: dotnet
-ms.assetid: 6945bedf-5bf3-4955-8588-83fb87511b79
 ms.workload:
 - dotnetcore
-ms.openlocfilehash: 6d8f89af14167e57b7f1b3b1d6ddce5cae8f6446
-ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
+ms.openlocfilehash: 01b73fb3ec815440aaf6225f6e7c2894db3d24f2
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="building-a-complete-net-core-solution-on-macos-using-visual-studio-for-mac"></a>Visual Studio for Mac을 사용하여 macOS에서 완전한 .NET Core 솔루션 빌드
 
@@ -42,7 +40,7 @@ Visual Studio for Mac은 .NET Core 응용 프로그램 개발을 위해 필요�
 
    ![새 프로젝트 대화 상자](./media/using-on-mac-vs-full-solution/vsmacfull01.png)
 
-1. 프로젝트의 이름을 "TextUtils"("텍스트 유틸리티"의 약식 이름)로, 솔루션 이름을 "WordCounter"로 지정합니다. **솔루션 디렉터리 내에 프로젝트 디렉터리를 만드세요.**를 선택한 상태로 둡니다. **만들기**를 선택합니다.
+1. 프로젝트의 이름을 "TextUtils"("텍스트 유틸리티"의 약식 이름)로, 솔루션 이름을 "WordCounter"로 지정합니다. **솔루션 디렉터리 내에 프로젝트 디렉터리를 만드세요.** 를 선택한 상태로 둡니다. **만들기**를 선택합니다.
 
    ![새 프로젝트 대화 상자](./media/using-on-mac-vs-full-solution/vsmacfull02.png)
 

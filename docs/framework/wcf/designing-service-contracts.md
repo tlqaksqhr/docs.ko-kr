@@ -21,11 +21,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 94ff361e89693f53c8d1baedcac749cf5178086e
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: df3e207cdca3a40bb0cfaff1890f6e010bd0790c
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="designing-service-contracts"></a>서비스 계약 디자인
 이 항목에서는 서비스 계약의 정의, 서비스 계약을 정의하는 방법, 사용 가능한 작업(및 기본 메시지 교환에 미치는 영향), 사용되는 데이터 형식 및 시나리오 요구 사항을 만족하는 작업을 디자인하는 데 도움이 되는 기타 문제에 대해 설명합니다.  
@@ -65,7 +65,7 @@ ms.lasthandoff: 04/26/2018
   
  인터페이스를 사용 하 여 서비스 계약을 만드는 예제를 보려면 [하는 방법: 서비스 계약 인터페이스와 함께 만들기](../../../docs/framework/wcf/feature-details/how-to-create-a-service-with-a-contract-interface.md)합니다.  
   
- 하지만 클래스를 사용하여 서비스 계약을 정의하고 그 계약을 구현할 수도 있습니다. <xref:System.ServiceModel.ServiceContractAttribute> 및 <xref:System.ServiceModel.OperationContractAttribute>를 클래스와 클래스의 메서드에 각각 직접 적용하여 서비스를 만들면 빠르고 간편하다는 장점이 있습니다. 단점은 관리되는 클래스가 여러 상속을 지원하지 않으므로 따라서 한 번에 하나의 서비스 계약만 구현할 수 있다는 것입니다. 또한 클래스 또는 메서드 서명을 수정하면 해당 서비스에 대한 공용 계약이 수정되므로 수정되지 않은 클라이언트는 서비스를 사용할 수 없습니다. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [서비스 계약 구현](../../../docs/framework/wcf/implementing-service-contracts.md)합니다.  
+ 하지만 클래스를 사용하여 서비스 계약을 정의하고 그 계약을 구현할 수도 있습니다. <xref:System.ServiceModel.ServiceContractAttribute> 및 <xref:System.ServiceModel.OperationContractAttribute>를 클래스와 클래스의 메서드에 각각 직접 적용하여 서비스를 만들면 빠르고 간편하다는 장점이 있습니다. 단점은 관리되는 클래스가 여러 상속을 지원하지 않으므로 따라서 한 번에 하나의 서비스 계약만 구현할 수 있다는 것입니다. 또한 클래스 또는 메서드 서명을 수정하면 해당 서비스에 대한 공용 계약이 수정되므로 수정되지 않은 클라이언트는 서비스를 사용할 수 없습니다. 자세한 내용은 참조 [서비스 계약 구현](../../../docs/framework/wcf/implementing-service-contracts.md)합니다.  
   
  서비스 계약을 만드는 클래스를 사용 하 고 동시에 구현 하는 예제를 보려면 [하는 방법: 서비스 계약 클래스와 함께 만들기](../../../docs/framework/wcf/feature-details/how-to-create-a-wcf-contract-with-a-class.md)합니다.  
   
@@ -193,7 +193,7 @@ End Interface
  보호 수준은 서비스를 지원하는 메시지(또는 메시지 부분)가 서명되어 있는지, 서명 및 암호화되어 있는지 또는 서명이나 암호화 없이 보내졌는지를 지정하는 값입니다. 보호 수준은 여러 범위에서 설정될 수 있습니다. 서비스 수준에서는 특정 작업, 해당 작업 내의 메시지 또는 메시지 부분에 대해 설정할 수 있습니다. 한 범위에 설정된 값은 명시적으로 재정의되지 않는 한 더 작은 범위의 기본값이 됩니다. 바인딩 구성에서 계약에 필요한 최소 보호 수준을 제공할 수 없으면 예외가 throw됩니다. 또한 보호 수준 값이 계약에 명시적으로 설정되어 있지 않을 때 바인딩에 메시지 보안이 있는 경우에는 바인딩 구성이 모든 메시지에 대한 보호 수준을 제어합니다. 이것은 기본적인 동작입니다.  
   
 > [!IMPORTANT]
->  계약의 여러 범위를 명시적으로 <xref:System.Net.Security.ProtectionLevel.EncryptAndSign?displayProperty=nameWithType>의 전체 보호 수준보다 낮게 설정할 것인지를 결정하는 것은 일반적으로 향상된 성능의 보안 정도를 절충하는 결정입니다. 이러한 경우 사용자는 작업과 관련된 사항을 확인하고 작업에서 교환하는 데이터 값을 확인해야 합니다. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [서비스 보안](../../../docs/framework/wcf/securing-services.md)합니다.  
+>  계약의 여러 범위를 명시적으로 <xref:System.Net.Security.ProtectionLevel.EncryptAndSign?displayProperty=nameWithType>의 전체 보호 수준보다 낮게 설정할 것인지를 결정하는 것은 일반적으로 향상된 성능의 보안 정도를 절충하는 결정입니다. 이러한 경우 사용자는 작업과 관련된 사항을 확인하고 작업에서 교환하는 데이터 값을 확인해야 합니다. 자세한 내용은 참조 [Services에 보안 설정](../../../docs/framework/wcf/securing-services.md)합니다.  
   
  예를 들어, 다음 코드 예제는 <xref:System.ServiceModel.ServiceContractAttribute.ProtectionLevel%2A> 또는 <xref:System.ServiceModel.OperationContractAttribute.ProtectionLevel%2A> 속성을 계약에 설정하지 않습니다.  
   
@@ -273,7 +273,7 @@ End Interface
  [!INCLUDE[crabout](../../../includes/crabout-md.md)] 보호 수준 및를 사용 하는 방법 참조 [보호 수준 이해](../../../docs/framework/wcf/understanding-protection-level.md)합니다. [!INCLUDE[crabout](../../../includes/crabout-md.md)] 보안 참조 [Services에 보안 설정](../../../docs/framework/wcf/securing-services.md)합니다.  
   
 ##### <a name="other-operation-signature-requirements"></a>기타 작업 서명 요구 사항  
- 일부 응용 프로그램 기능에는 특정한 종류의 작업 서명이 필요합니다. 예를 들어, <xref:System.ServiceModel.NetMsmqBinding> 바인딩은 응용 프로그램이 통신 중에 다시 시작할 수 있으며 메시지를 누락하지 않고 중지된 지점을 선택할 수 있는 영속 서비스 및 클라이언트를 지원합니다. ([!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [WCF의 큐](../../../docs/framework/wcf/feature-details/queues-in-wcf.md).) 그러나 영속 작업에서는 하나의 `in` 매개 변수만 사용하고 반환 값이 없어야 합니다.  
+ 일부 응용 프로그램 기능에는 특정한 종류의 작업 서명이 필요합니다. 예를 들어, <xref:System.ServiceModel.NetMsmqBinding> 바인딩은 응용 프로그램이 통신 중에 다시 시작할 수 있으며 메시지를 누락하지 않고 중지된 지점을 선택할 수 있는 영속 서비스 및 클라이언트를 지원합니다. (자세한 내용은 참조 [WCF의 큐](../../../docs/framework/wcf/feature-details/queues-in-wcf.md).) 그러나 영속 작업에서는 하나의 `in` 매개 변수만 사용하고 반환 값이 없어야 합니다.  
   
  또 다른 예제는 작업에 <xref:System.IO.Stream> 형식을 사용하는 것입니다. <xref:System.IO.Stream> 매개 변수에 전체 메시지 본문이 포함되므로 입력 또는 출력(`ref` 매개 변수, `out` 매개 변수 또는 반환 값)이 <xref:System.IO.Stream> 형식이면 작업에 지정된 입력 또는 출력이어야 합니다. 또한 매개 변수나 반환 형식이 <xref:System.IO.Stream>, <xref:System.ServiceModel.Channels.Message?displayProperty=nameWithType> 또는 <xref:System.Xml.Serialization.IXmlSerializable?displayProperty=nameWithType>이어야 합니다. [!INCLUDE[crabout](../../../includes/crabout-md.md)] 스트림, 참조 [큰 데이터 및 스트리밍](../../../docs/framework/wcf/feature-details/large-data-and-streaming.md)합니다.  
   

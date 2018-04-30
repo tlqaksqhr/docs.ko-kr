@@ -1,28 +1,28 @@
 ---
-title: "기본 프로그래밍 수명 주기"
-ms.custom: 
+title: 기본 프로그래밍 수명 주기
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - service creation [WCF]
 ms.assetid: 7cf21bfe-23bd-46aa-8033-609f851dbf76
-caps.latest.revision: 
+caps.latest.revision: 36
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 4f5c45cad0b1e4ae1aa6b1963e9acdab47cd9203
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ff735a8caf1fbaff636f94eee366b20c33d8f331
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="basic-programming-lifecycle"></a>기본 프로그래밍 수명 주기
 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)]를 사용하면 응용 프로그램들이 같은 컴퓨터에 있든지, 인터넷을 통해 연결되어 있든지 아니면 서로 다른 응용 프로그램 플랫폼에 있든지 상관없이 통신할 수 있습니다. 이 항목에서는 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 응용 프로그램을 빌드하는 데 필요한 작업에 대해 간략하게 설명합니다. 작업 샘플 응용 프로그램에 대 한 참조 [초보자를 위한 자습서](../../../docs/framework/wcf/getting-started-tutorial.md)합니다.  
@@ -30,15 +30,15 @@ ms.lasthandoff: 12/22/2017
 ## <a name="the-basic-tasks"></a>기본 작업  
  수행할 기본 작업 순서는 다음과 같습니다.  
   
-1.  서비스 계약을 정의합니다. 서비스 계약은 서비스 서명, 서비스 교환 날짜 및 계약에 필요한 기타 데이터를 지정합니다. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][서비스 계약을 디자인](../../../docs/framework/wcf/designing-service-contracts.md)합니다.  
+1.  서비스 계약을 정의합니다. 서비스 계약은 서비스 서명, 서비스 교환 날짜 및 계약에 필요한 기타 데이터를 지정합니다. 자세한 내용은 참조 [서비스 계약 디자인](../../../docs/framework/wcf/designing-service-contracts.md)합니다.  
   
-2.  계약을 구현합니다. 서비스 계약을 구현하려면 계약을 구현하는 클래스를 만들고 런타임에 필요한 사용자 지정 동작을 지정합니다. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][서비스 계약 구현](../../../docs/framework/wcf/implementing-service-contracts.md)합니다.  
+2.  계약을 구현합니다. 서비스 계약을 구현하려면 계약을 구현하는 클래스를 만들고 런타임에 필요한 사용자 지정 동작을 지정합니다. 자세한 내용은 참조 [서비스 계약 구현](../../../docs/framework/wcf/implementing-service-contracts.md)합니다.  
   
-3.  끝점 및 기타 동작 정보를 지정하여 서비스를 구성합니다. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][서비스 구성](../../../docs/framework/wcf/configuring-services.md)합니다.  
+3.  끝점 및 기타 동작 정보를 지정하여 서비스를 구성합니다. 자세한 내용은 참조 [서비스 구성](../../../docs/framework/wcf/configuring-services.md)합니다.  
   
-4.  서비스를 호스트합니다. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][호스팅 서비스](../../../docs/framework/wcf/hosting-services.md)합니다.  
+4.  서비스를 호스트합니다. 자세한 내용은 참조 [호스팅 서비스](../../../docs/framework/wcf/hosting-services.md)합니다.  
   
-5.  클라이언트 응용 프로그램을 빌드합니다. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][클라이언트 빌드](../../../docs/framework/wcf/building-clients.md)합니다.  
+5.  클라이언트 응용 프로그램을 빌드합니다. 자세한 내용은 참조 [클라이언트 빌드](../../../docs/framework/wcf/building-clients.md)합니다.  
   
  이 단원의 항목은 이 순서를 따르지만 일부 시나리오에서는 첫 번째 단계부터 시작하지 않는 경우도 있습니다. 예를 들어 기존 서비스에 대한 클라이언트를 빌드하려면 5단계에서 시작합니다. 다른 사용자가 사용할 서비스를 빌드하는 경우 5단계를 건너뜁니다.  
   

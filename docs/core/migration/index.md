@@ -1,21 +1,19 @@
 ---
 title: csproj 형식으로 .NET Core 마이그레이션
 description: .NET Core project.json을 csproj로 마이그레이션
-keywords: .NET, .NET Core, .NET Core 마이그레이션
 author: blackdwarf
 ms.author: mairaw
 ms.date: 07/19/2017
-ms.topic: article
-ms.prod: .net-core
+ms.topic: conceptual
+ms.prod: dotnet-core
 ms.devlang: dotnet
-ms.assetid: 1feadf3d-3cfc-41dd-abb5-a4fc303a7b53
 ms.workload:
 - dotnetcore
-ms.openlocfilehash: 46373d1d100a71cbc43fcdfe6ce16a7ecd796573
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 102b875072ed77a328bdb6a62ed6cc98612ff059
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="migrating-net-core-projects-to-the-csproj-format"></a>.csproj 형식으로 .NET Core 프로젝트 마이그레이션
 

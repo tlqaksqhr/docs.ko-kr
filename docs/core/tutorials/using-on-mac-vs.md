@@ -1,20 +1,19 @@
 ---
-title: "Visual Studio for Mac을 사용하여 macOS에서 .NET Core 시작"
-description: "이 항목에서는 Mac 및 .NET Core용 Visual Studio를 사용하여 간단한 콘솔 응용 프로그램을 빌드하는 과정을 안내합니다."
-keywords: .NET, .NET Core, macOS, Mac
+title: Visual Studio for Mac을 사용하여 macOS에서 .NET Core 시작
+description: 이 항목에서는 Mac 및 .NET Core용 Visual Studio를 사용하여 간단한 콘솔 응용 프로그램을 빌드하는 과정을 안내합니다.
 author: guardrex
 ms.author: mairaw
 ms.date: 06/12/2017
 ms.topic: get-started-article
-ms.prod: .net-core
+ms.prod: dotnet-core
 ms.devlang: dotnet
-ms.assetid: 8902e849-dd17-42c0-8264-cc7ae3927a0c
-ms.workload: dotnetcore
-ms.openlocfilehash: dad4a66fc943f4232806f7512705fc96decd1904
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.workload:
+- dotnetcore
+ms.openlocfilehash: 97a9c62280f09f244028c066a04350a59dd0400d
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="getting-started-with-net-core-on-macos-using-visual-studio-for-mac"></a>Visual Studio for Mac을 사용하여 macOS에서 .NET Core 시작
 
@@ -25,7 +24,7 @@ Visual Studio for Mac은 .NET Core 응용 프로그램 개발을 위해 필요�
 > * Mac용 Visual Studio의 메뉴에서 **도움말** > **문제 보고**를 선택하거나 시작 화면에서 **문제 보고**를 선택하면 버그 보고서를 작성하기 위한 창이 열립니다. [Developer Community](https://developercommunity.visualstudio.com/spaces/8/index.html)(개발자 커뮤니티) 포털에서 의견을 추적할 수 있습니다.
 > * 제안하려면 메뉴에서 **도움말** > **제안하기**를 선택하거나 시작 화면에서 **제안하기**를 선택합니다. 그러면 [Mac용 Visual Studio UserVoice 웹 페이지](https://visualstudio.uservoice.com/forums/563332-visual-studio-for-mac)로 이동됩니다.
 
-## <a name="prerequisites"></a>필수 구성 요소
+## <a name="prerequisites"></a>전제 조건
 
 [Mac에서 .NET Core의 필수 구성 요소](../../core/macos-prerequisites.md) 항목을 참조하세요.
 

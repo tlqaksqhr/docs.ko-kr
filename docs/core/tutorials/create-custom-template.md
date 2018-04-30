@@ -1,21 +1,19 @@
 ---
 title: dotnet new에 대한 사용자 지정 템플릿 만들기
 description: 이 재미있는 자습서에서 dotnet new 명령에 대한 사용자 지정 템플릿을 만드는 방법을 알아봅니다.
-keywords: .NET, .NET Core, 템플릿, 템플릿 지정, 자습서, dotnet new
 author: guardrex
 ms.author: mairaw
 ms.date: 08/12/2017
-ms.topic: article
-ms.prod: .net-core
+ms.topic: conceptual
+ms.prod: dotnet-core
 ms.devlang: dotnet
-ms.assetid: 519b910a-6efe-4394-9b81-0546aa3e7462
 ms.workload:
 - dotnetcore
-ms.openlocfilehash: 7830a437b46d2080efc65f43f9112503add4c305
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
-ms.translationtype: MT
+ms.openlocfilehash: 9ff58634daa6d51c10df9a3c9a1af0fd6420c69c
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="create-a-custom-template-for-dotnet-new"></a>dotnet new에 대한 사용자 지정 템플릿 만들기
 
@@ -41,7 +39,7 @@ ms.lasthandoff: 03/26/2018
 
 ## <a name="create-a-template-from-a-project"></a>프로젝트에서 템플릿 만들기
 
-컴파일 및 실행되는 것으로 확인한 기존 프로젝트를 사용하거나 하드 드라이브의 폴더에서 새 콘솔 앱 프로젝트를 만듭니다. 이 자습서에서는 프로젝트 폴더 이름은 사용자 프로필의 *Documents\Templates*에 저장된 *GarciaSoftware.ConsoleTemplate.CSharp*입니다. 이 자습서의 프로젝트 템플릿 이름은 *\<회사 이름>.\<템플릿 형식>.\<프로그래밍 언어>*이지만, 프로젝트와 템플릿에 원하는 이름을 지정할 수 있습니다.
+컴파일 및 실행되는 것으로 확인한 기존 프로젝트를 사용하거나 하드 드라이브의 폴더에서 새 콘솔 앱 프로젝트를 만듭니다. 이 자습서에서는 프로젝트 폴더 이름은 사용자 프로필의 *Documents\Templates*에 저장된 *GarciaSoftware.ConsoleTemplate.CSharp*입니다. 이 자습서의 프로젝트 템플릿 이름은 *\<회사 이름>.\<템플릿 형식>.\<프로그래밍 언어>* 이지만, 프로젝트와 템플릿에 원하는 이름을 지정할 수 있습니다.
 
 1. 프로젝트의 루트에 *.template.config*라는 폴더를 추가합니다.
 1. *.template.config* 폴더 내부에서 *template.json* 파일을 만들어 템플릿을 구성합니다. 에 대 한 자세한 정보와 멤버 정의 대 한는 *template.json* 파일, 참조는 [새 dotnet 용 사용자 지정 템플릿](../tools/custom-templates.md#templatejson) 항목 및 [ *template.json* JSON 스키마 저장소에서 스키마](http://json.schemastore.org/template)합니다.
@@ -213,7 +211,7 @@ dotnet new -u C:\Users\<USER>\Documents\Templates\GarciaSoftware.ConsoleTemplate
 > 로컬 파일 시스템에서 템플릿을 제거하려면 경로를 정규화해야 합니다. 예를 들어 *C:\Users\\\<USER>\Documents\Templates\GarciaSoftware.ConsoleTemplate.CSharp* will work, but *./GarciaSoftware.ConsoleTemplate.CSharp*는 작동하지 않습니다.
 > 마지막의 종료하는 디렉터리 슬래시도 템플릿 경로에 포함하지 마세요.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [dotnet/templating GitHub repo Wiki](https://github.com/dotnet/templating/wiki)(dotnet/templating GitHub 리포지토리 Wiki)  
 [dotnet/dotnet-template-samples GitHub repo](https://github.com/dotnet/dotnet-template-samples)(dotnet/dotnet-template-samples GitHub 리포지토리)  

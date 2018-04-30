@@ -1,20 +1,17 @@
 ---
 title: Azure에서 F# 사용
 description: 'F #을 사용한 Azure 서비스를 사용 하 여 안내 합니다.'
-keywords: Azure, 클라우드, visual f#, f#, 함수형 프로그래밍, .NET, .NET Core
 author: sylvanc
 ms.author: phcart
 ms.date: 09/22/2016
-ms.topic: article
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.topic: conceptual
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: FAD4D11E-703A-42D4-9F72-893D9E0F569B
-ms.openlocfilehash: fdb2378a731a13894cf71356a2713c62a5c2064e
-ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
+ms.openlocfilehash: 7e11ec533c6b1fc535e26024a97ac056dff29bb1
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="using-f-on-azure"></a>Azure에서 F# 사용
 
@@ -27,9 +24,9 @@ F#은 클라우드 프로그래밍의 뛰어난 언어이며 웹 응용 프로�
 
 ## <a name="using-azure-virtual-machines-with-f"></a>Azure 가상 컴퓨터를 사용 하 여 F # #
 
-Azure는 다양한 VM(가상 컴퓨터) 구성을 지원합니다. [Linux 및 Azure Virtual Machines](https://azure.microsoft.com/services/virtual-machines/)를 참조하세요.
+Azure는 다양한 VM(가상 머신) 구성을 지원합니다. [Linux 및 Azure Virtual Machines](https://azure.microsoft.com/services/virtual-machines/)를 참조하세요.
 
-가상 컴퓨터에서 F#을 실행하고 컴파일하거나 스크립팅하도록 설치하려면 [Using F# on Linux](http://fsharp.org/use/linux)(Linux에서 F# 사용) 및 [Using F# on Windows](http://fsharp.org/use/windows)(Windows에서 F# 사용)를 참조하세요.
+가상 머신에서 F#을 실행하고 컴파일하거나 스크립팅하도록 설치하려면 [Using F# on Linux](http://fsharp.org/use/linux)(Linux에서 F# 사용) 및 [Using F# on Windows](http://fsharp.org/use/windows)(Windows에서 F# 사용)를 참조하세요.
 
 
 ## <a name="using-azure-functions-with-f"></a>F #을 사용한 Azure 기능을 사용 하 여 #

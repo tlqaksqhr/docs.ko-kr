@@ -1,24 +1,26 @@
 ---
-title: "DiscoveryClient 및 DynamicEndpoint"
-ms.custom: 
+title: DiscoveryClient 및 DynamicEndpoint
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 7cd418f0-0eab-48d1-a493-7eb907867ec3
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 6e3ac334d53480ba8b63cc8e8f117dd74315963c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: c652e58b20a6fe836e647ed07c6a84328ee4631e
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="discoveryclient-and-dynamicendpoint"></a>DiscoveryClient 및 DynamicEndpoint
 <xref:System.ServiceModel.Discovery.DiscoveryClient> 및 <xref:System.ServiceModel.Discovery.DynamicEndpoint>는 클라이언트 측에서 서비스를 검색하는 데 사용되는 두 클래스입니다. <xref:System.ServiceModel.Discovery.DiscoveryClient>는 특정 조건 집합과 일치하는 서비스 목록을 제공하며 이를 통해 서비스에 연결할 수 있습니다. <xref:System.ServiceModel.Discovery.DynamicEndpoint>는 동일한 작업을 수행하는 것 이외에도 검색된 서비스 중 하나에 자동으로 연결합니다. 모든 끝점을 <xref:System.ServiceModel.Discovery.DynamicEndpoint>로 만들 수 있고 구성을 통해 검색 조건을 추가할 수 있으므로 <xref:System.ServiceModel.Discovery.DynamicEndpoint>는 솔루션에서 검색을 수행해야 하지만 클라이언트 논리는 수정하지 않으려는 경우, 즉 끝점만 수정해야 하는 경우에 유용합니다. 반면에 <xref:System.ServiceModel.Discovery.DiscoveryClient>는 검색 작업을 보다 세부적으로 제어하는 데 사용할 수 있습니다. 각 클래스의 사용 방법과 이점은 아래에 자세히 설명되어 있습니다.  
@@ -90,7 +92,7 @@ static void discoveryClient_FindCompleted(object sender, FindCompletedEventArgs 
         }  
 ```  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]비동기 호출을 찾을 참조 [비동기 찾기](../../../../docs/framework/wcf/samples/asynchronous-find-sample.md)합니다.  
+ [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 비동기 호출을 찾을 참조 [비동기 찾기](../../../../docs/framework/wcf/samples/asynchronous-find-sample.md)합니다.  
   
  <xref:System.ServiceModel.Discovery.DiscoveryClient.Resolve%2A> 및 <xref:System.ServiceModel.Discovery.DiscoveryClient.ResolveAsync%28System.ServiceModel.Discovery.ResolveCriteria%29> 메서드를 사용하면 끝점 주소를 기반으로 서비스를 찾을 수 있습니다. 이는 네트워크를 통해 끝점 주소에 액세스할 수 없는 경우에 유용합니다. Resolve 메서드는 <xref:System.ServiceModel.Discovery.ResolveCriteria>의 인스턴스를 사용하므로 확인할 서비스의 끝점 주소, 확인 작업의 최대 기간 및 확장 집합을 지정할 수 있습니다. 다음 예제에서는 <xref:System.ServiceModel.Discovery.DiscoveryClient.Resolve%2A> 메서드를 사용하여 서비스를 확인하는 방법을 보여 줍니다.  
   
@@ -102,7 +104,7 @@ EndpointAddress newEp = response.EndpointDiscoveryMetadata.Address;
 ```  
   
 ## <a name="dynamicendpoint"></a>DynamicEndpoint  
- <xref:System.ServiceModel.Discovery.DynamicEndpoint>표준 끝점 ([!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [표준 끝점](../../../../docs/framework/wcf/feature-details/standard-endpoints.md)) 검색을 수행 하 고 자동으로 일치 하는 서비스를 선택 합니다. 검색할 계약과 사용할 바인딩을 전달하여 <xref:System.ServiceModel.Discovery.DynamicEndpoint>를 만들고 <xref:System.ServiceModel.Discovery.DynamicEndpoint> 인스턴스를 WCF 클라이언트에 전달합니다. 다음 예제에서는 <xref:System.ServiceModel.Discovery.DynamicEndpoint>를 만들고 사용하여 계산기 서비스를 호출하는 방법을 보여 줍니다. 검색은 클라이언트가 열릴 때마다 수행됩니다. 구성에 정의 된 끝점으로 변환할 수도 있습니다는 <xref:System.ServiceModel.Discovery.DynamicEndpoint> 추가 하 여는 `kind ="dynamicEndpoint"` 끝점 구성 요소에 특성입니다.  
+ <xref:System.ServiceModel.Discovery.DynamicEndpoint> 표준 끝점입니다 (자세한 내용은 참조 [표준 끝점](../../../../docs/framework/wcf/feature-details/standard-endpoints.md)) 검색을 수행 하 고 자동으로 일치 하는 서비스를 선택 합니다. 검색할 계약과 사용할 바인딩을 전달하여 <xref:System.ServiceModel.Discovery.DynamicEndpoint>를 만들고 <xref:System.ServiceModel.Discovery.DynamicEndpoint> 인스턴스를 WCF 클라이언트에 전달합니다. 다음 예제에서는 <xref:System.ServiceModel.Discovery.DynamicEndpoint>를 만들고 사용하여 계산기 서비스를 호출하는 방법을 보여 줍니다. 검색은 클라이언트가 열릴 때마다 수행됩니다. 구성에 정의 된 끝점으로 변환할 수도 있습니다는 <xref:System.ServiceModel.Discovery.DynamicEndpoint> 추가 하 여는 `kind ="dynamicEndpoint"` 끝점 구성 요소에 특성입니다.  
   
 ```  
 DynamicEndpoint dynamicEndpoint = new DynamicEndpoint(ContractDescription.GetContract(typeof(ICalculatorService)), new WSHttpBinding());  

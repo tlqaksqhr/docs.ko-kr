@@ -1,23 +1,22 @@
 ---
-title: ".NET Core와 Docker 기본 사항 알아보기"
-description: "Docker 및 .NET Core 기본 자습서"
-keywords: ".NET, .NET Core, Docker, 자습서"
+title: .NET Core와 Docker 기본 사항 알아보기
+description: Docker 및 .NET Core 기본 자습서
 author: jralexander
 ms.author: johalex
 ms.date: 11/06/2017
 ms.topic: tutorial
-ms.prod: .net-core
+ms.prod: dotnet-core
 ms.technology: dotnet-docker
 ms.devlang: dotnet
-ms.assetid: 03c28597-7e73-46d6-a9c3-f9cb55642739
 ms.custom: mvc
 manager: wpickett
-ms.workload: dotnetcore
-ms.openlocfilehash: 79ded2ce5de5100c18301127a2654f8791b8ed76
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.workload:
+- dotnetcore
+ms.openlocfilehash: 085ddb58aae78737fae642e7334e7f0139f0cfec
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="learn-docker-basics-with-net-core"></a>.NET Core와 Docker 기본 사항 알아보기
 
@@ -40,7 +39,7 @@ Docker 이미지를 만들기 전에 컨테이너화할 응용 프로그램이 �
 
 ## <a name="your-first-net-core-docker-app"></a>첫 번째 .NET Core Docker 앱
 
-### <a name="prerequisites"></a>필수 구성 요소
+### <a name="prerequisites"></a>전제 조건
 
 이 자습서를 완료하려면 다음이 필요합니다.
 

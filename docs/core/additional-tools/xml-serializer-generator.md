@@ -1,18 +1,20 @@
 ---
-title: ".NET Core에서 Microsoft XML Serializer Generator 사용"
-description: "Microsoft XML Serializer Generator에 대한 개요입니다."
+title: .NET Core에서 Microsoft XML Serializer Generator 사용
+description: Microsoft XML Serializer Generator에 대한 개요입니다.
 author: mlacouture
 manager: wpickett
 ms.author: johalex
 ms.date: 01/19/2017
 ms.topic: tutorial
-ms.prod: .net-core
+ms.prod: dotnet-core
 ms.custom: mvc
-ms.openlocfilehash: b2f52a068d128b2eb978c9e086508bd87e103ebc
-ms.sourcegitcommit: dd6ea7f0e581ac84e0a90d9b23c463fcf1ec3ce7
+ms.workload:
+- dotnetcore
+ms.openlocfilehash: d7332546cf7643ff808a29c83d13050571447666
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="using-microsoft-xml-serializer-generator-on-net-core"></a>.NET Core에서 Microsoft XML Serializer Generator 사용
 
@@ -27,7 +29,7 @@ ms.lasthandoff: 01/23/2018
 
 .NET Framework용 [Xml Serializer Generator(sgen.exe)](../../standard/serialization/xml-serializer-generator-tool-sgen-exe.md)와 마찬가지로, [Microsoft.XmlSerializer.Generator NuGet 패키지](https://www.nuget.org/packages/Microsoft.XmlSerializer.Generator)는 .NET Core 및 .NET Standard 프로젝트와 동일합니다. <xref:System.Xml.Serialization.XmlSerializer>를 사용하여 해당 형식의 개체를 직렬화하거나 역직렬화할 때 XML serialization의 시작 성능을 향상시키기 위해 어셈블리에 포함된 형식의 XML serialization 어셈블리를 만듭니다.
 
-## <a name="prerequisites"></a>필수 구성 요소
+## <a name="prerequisites"></a>전제 조건
 
 이 자습서를 완료하려면 다음이 필요합니다.
 

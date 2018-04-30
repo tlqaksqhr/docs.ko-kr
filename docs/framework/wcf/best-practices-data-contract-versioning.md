@@ -1,12 +1,13 @@
 ---
-title: "최선의 방법: 데이터 계약 버전 관리"
-ms.custom: 
+title: '최선의 방법: 데이터 계약 버전 관리'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - data contracts
@@ -14,19 +15,20 @@ helpviewer_keywords:
 - best practices [WCF], data contract versioning
 - Windows Communication Foundation, data contracts
 ms.assetid: bf0ab338-4d36-4e12-8002-8ebfdeb346cb
-caps.latest.revision: "24"
+caps.latest.revision: 24
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 78373d482aaaa0121a6c2708f543188d9cc9464d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: dfb3d781a570db6a929a7d984aa45c224dda66bd
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="best-practices-data-contract-versioning"></a>최선의 방법: 데이터 계약 버전 관리
-이 항목에서는 시간 경과에 따라 쉽게 발전할 수 있는 데이터 계약을 만드는 최선의 방법을 보여 줍니다. [!INCLUDE[crabout](../../../includes/crabout-md.md)]항목을 참조 하는 데이터 계약 [를 사용 하 여 데이터 계약](../../../docs/framework/wcf/feature-details/using-data-contracts.md)합니다.  
+이 항목에서는 시간 경과에 따라 쉽게 발전할 수 있는 데이터 계약을 만드는 최선의 방법을 보여 줍니다. [!INCLUDE[crabout](../../../includes/crabout-md.md)] 항목을 참조 하는 데이터 계약 [를 사용 하 여 데이터 계약](../../../docs/framework/wcf/feature-details/using-data-contracts.md)합니다.  
   
 ## <a name="note-on-schema-validation"></a>스키마 유효성 검사에 대한 참고  
  데이터 계약 버전 관리를 설명할 때는 기본적으로 요소가 옵션으로 표시된다는 사실을 제외하고 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)]에서 내보낸 데이터 계약 스키마에 버전 관리 지원이 없음을 확인하는 것이 중요합니다.  
@@ -46,7 +48,7 @@ ms.lasthandoff: 12/22/2017
   
  이러한 예제에서는 "2"를 추가하여 이름이 변경되지만 버전 번호나 날짜가 포함된 새 네임스페이스를 추가하여 이름 대신 네임스페이스를 변경하는 것이 좋습니다. 예를 들어 `http://schemas.contoso.com/2005/05/21/PurchaseOrder` 데이터 계약은 `http://schemas.contoso.com/2005/10/14/PurchaseOrder` 데이터 계약으로 변경됩니다.  
   
- [!INCLUDE[crdefault](../../../includes/crdefault-md.md)]최선의 구현 방법: [서비스 버전 관리](../../../docs/framework/wcf/service-versioning.md)합니다.  
+ 자세한 내용은 유용한 정보를 참조 하십시오.: [서비스 버전 관리](../../../docs/framework/wcf/service-versioning.md)합니다.  
   
  경우에 따라 응용 프로그램이 보낸 메시지에서 엄격한 스키마 준수를 보장해야 하지만 들어오는 메시지가 엄격하게 스키마를 준수한다고 확신할 수 없습니다. 이 경우 들어오는 메시지에 잘못 사용된 데이터가 포함될 위험이 있습니다. 잘못 사용된 값이 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]에서 저장되고 및 반환되므로 스키마에 맞지 않는 메시지가 전송됩니다. 이 문제를 방지하려면 왕복 기능을 해제해야 합니다. 이렇게 하는 데는 두 가지 방법이 있습니다.  
   
@@ -54,7 +56,7 @@ ms.lasthandoff: 12/22/2017
   
 -   <xref:System.ServiceModel.ServiceBehaviorAttribute> 속성을 <xref:System.ServiceModel.ServiceBehaviorAttribute.IgnoreExtensionDataObject%2A>로 설정하여 `true` 특성을 서비스 계약에 적용합니다.  
   
- [!INCLUDE[crabout](../../../includes/crabout-md.md)]라운드트립에, 참조 [이후 버전과 호환 데이터 계약](../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md)합니다.  
+ [!INCLUDE[crabout](../../../includes/crabout-md.md)] 라운드트립에, 참조 [이후 버전과 호환 데이터 계약](../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md)합니다.  
   
 ## <a name="versioning-when-schema-validation-is-not-required"></a>스키마 유효성 검사가 필요하지 않은 경우의 버전 관리  
  엄격한 스키마 준수는 거의 필요하지 않습니다. 많은 플랫폼에서 스키마가 설명하지 않는 추가 요소를 허용합니다. 기능의 전체 집합에 설명 된이 허용할 것인지,으로 [데이터 계약 버전 관리](../../../docs/framework/wcf/feature-details/data-contract-versioning.md) 및 [이후 버전과 호환 데이터 계약](../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md) 사용할 수 있습니다. 다음 지침을 따르는 것이 좋습니다.  
@@ -65,9 +67,9 @@ ms.lasthandoff: 12/22/2017
   
 2.  상속이 버전 관리 메커니즘으로 사용되지 않으며 특정 규칙을 따르는 경우 데이터 계약에 상속을 사용할 수 있습니다. 형식이 특정 기본 형식에서 파생되는 경우 동일한 데이터 계약이 없으면 이후 버전에서 해당 형식이 다른 기본 형식에서 파생되게 하지 마세요. 단, 한 가지 예외가 있습니다. 데이터 계약 형식과 기본 형식 간의 계층 구조에 형식을 삽입할 수 있지만 계층 구조에 있는 가능한 모든 다른 형식 버전의 다른 멤버와 동일한 이름을 가진 데이터 멤버가 포함되지 않은 경우에만 삽입할 수 있습니다. 일반적으로 동일한 상속 계층 구조의 여러 수준에서 동일한 이름을 가진 데이터 멤버를 사용하면 심각한 버전 관리 문제가 발생할 수 있으므로 사용하지 않도록 해야 합니다.  
   
-3.  데이터 계약의 첫 번째 버전부터 시작하여 항상 <xref:System.Runtime.Serialization.IExtensibleDataObject>를 구현하여 라운드트립을 활성화합니다. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][이후 버전과 호환 데이터 계약](../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md)합니다. 이 인터페이스를 구현하지 않고 형식의 버전을 하나 이상 해제한 경우 형식의 다음 버전에서 구현합니다.  
+3.  데이터 계약의 첫 번째 버전부터 시작하여 항상 <xref:System.Runtime.Serialization.IExtensibleDataObject>를 구현하여 라운드트립을 활성화합니다. 자세한 내용은 [호환 가능한 데이터 계약](../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md)을 참조하세요. 이 인터페이스를 구현하지 않고 형식의 버전을 하나 이상 해제한 경우 형식의 다음 버전에서 구현합니다.  
   
-4.  이후 버전에서 데이터 계약 이름이나 네임스페이스를 변경하지 마세요. 데이터 계약의 원본으로 사용되는 형식의 이름이나 네임스페이스를 변경하는 경우 <xref:System.Runtime.Serialization.DataContractAttribute.Name%2A>의 <xref:System.Runtime.Serialization.DataContractAttribute> 속성 같은 적절한 메커니즘을 사용하여 데이터 계약 이름과 네임스페이스를 유지해야 합니다. [!INCLUDE[crabout](../../../includes/crabout-md.md)]참조 이름을 지정 [데이터 계약 이름을](../../../docs/framework/wcf/feature-details/data-contract-names.md)합니다.  
+4.  이후 버전에서 데이터 계약 이름이나 네임스페이스를 변경하지 마세요. 데이터 계약의 원본으로 사용되는 형식의 이름이나 네임스페이스를 변경하는 경우 <xref:System.Runtime.Serialization.DataContractAttribute.Name%2A>의 <xref:System.Runtime.Serialization.DataContractAttribute> 속성 같은 적절한 메커니즘을 사용하여 데이터 계약 이름과 네임스페이스를 유지해야 합니다. [!INCLUDE[crabout](../../../includes/crabout-md.md)] 참조 이름을 지정 [데이터 계약 이름을](../../../docs/framework/wcf/feature-details/data-contract-names.md)합니다.  
   
 5.  이후 버전에서 데이터 멤버의 이름을 변경하지 마세요. 데이터 멤버의 원본으로 사용되는 필드, 속성 또는 이벤트의 이름을 변경하는 경우 `Name`의 <xref:System.Runtime.Serialization.DataMemberAttribute> 속성을 사용하여 기존 데이터 멤버 이름을 유지합니다.  
   
@@ -79,7 +81,7 @@ ms.lasthandoff: 12/22/2017
   
     1.  <xref:System.Runtime.Serialization.DataMemberAttribute.IsRequired%2A> 속성은 항상 기본값 `false`로 유지되어야 합니다.  
   
-    2.  멤버에 대해 기본값 `null` 또는 0을 허용할 수 없는 경우 <xref:System.Runtime.Serialization.OnDeserializingAttribute>로 콜백 메서드를 제공하여 들어오는 스트림에 멤버가 없는 경우 적절한 기본값을 제공해야 합니다. [!INCLUDE[crabout](../../../includes/crabout-md.md)]콜백 참조 [버전 독립적 Serialization 콜백](../../../docs/framework/wcf/feature-details/version-tolerant-serialization-callbacks.md)합니다.  
+    2.  멤버에 대해 기본값 `null` 또는 0을 허용할 수 없는 경우 <xref:System.Runtime.Serialization.OnDeserializingAttribute>로 콜백 메서드를 제공하여 들어오는 스트림에 멤버가 없는 경우 적절한 기본값을 제공해야 합니다. [!INCLUDE[crabout](../../../includes/crabout-md.md)] 콜백 참조 [버전 독립적 Serialization 콜백](../../../docs/framework/wcf/feature-details/version-tolerant-serialization-callbacks.md)합니다.  
   
     3.  `Order`의 `DataMemberAttribute` 속성을 사용하여 새로 추가한 모든 데이터 멤버가 기존 데이터 멤버 뒤에 나타나도록 해야 합니다. 이렇게 하려면 데이터 계약의 첫 번째 버전에서 데이터 멤버의 `Order` 속성을 설정하지 않도록 해야 합니다. 데이터 계약의 버전 2에서 추가된 모든 데이터 멤버의 `Order` 속성을 2로 설정해야 하며 데이터 계약의 버전 3에서 추가된 모든 데이터 멤버의 `Order` 속성을 3으로 설정해야 합니다. 둘 이상의 데이터 멤버를 동일한 `Order` 번호로 설정해도 됩니다.  
   

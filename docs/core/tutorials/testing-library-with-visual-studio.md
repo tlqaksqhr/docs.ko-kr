@@ -1,24 +1,23 @@
 ---
-title: "Visual Studio 2017에서 .NET Core로 클래스 라이브러리 테스트"
-description: "Visual Studio 2017을 사용하여 C#으로 작성된 클래스 라이브러리를 테스트하는 방법 알아보기"
-keywords: ".NET Core, .NET Standard 클래스 라이브러리, Visual Studio 2017, 단위 테스트"
+title: Visual Studio 2017에서 .NET Core로 클래스 라이브러리 테스트
+description: Visual Studio 2017을 사용하여 C#으로 작성된 클래스 라이브러리를 테스트하는 방법 알아보기
 author: BillWagner
 ms.author: wiwagn
 ms.date: 08/07/2017
-ms.topic: article
-ms.prod: .net-core
+ms.topic: conceptual
+ms.prod: dotnet-core
 ms.technology: devlang-csharp
 ms.devlang: csharp
-ms.assetid: 069ad711-3eaa-45c6-94d7-b40249cc8b99
 dev_langs:
 - csharp
 - vb
-ms.workload: dotnetcore
-ms.openlocfilehash: fb5a23ccdcacadd70a58ec6c9a35fbee86af667b
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.workload:
+- dotnetcore
+ms.openlocfilehash: 0356ea286238f4b722a42795c9456f7532766f7d
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="testing-a-class-library-with-net-core-in-visual-studio-2017"></a>Visual Studio 2017에서 .NET Core로 클래스 라이브러리 테스트
 

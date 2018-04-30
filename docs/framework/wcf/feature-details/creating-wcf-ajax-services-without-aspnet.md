@@ -1,24 +1,26 @@
 ---
-title: "ASP.NET을 사용하지 않고 WCF AJAX 서비스 만들기"
-ms.custom: 
+title: ASP.NET을 사용하지 않고 WCF AJAX 서비스 만들기
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: ba4a7d1b-e277-4978-9f62-37684e6dc934
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a9e321a3ea972208bb136c76e52168d89da8d162
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: b652bcd522a8eea81b3d1218fbd054ee0b2caea8
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="creating-wcf-ajax-services-without-aspnet"></a>ASP.NET을 사용하지 않고 WCF AJAX 서비스 만들기
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] AJAX 서비스는 ASP.NET AJAX가 없어도 모든 JavaScript 사용 웹 페이지에서 액세스할 수 있습니다. 이 항목에서는 이런 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 서비스를 만드는 방법에 대해 설명합니다.  
@@ -82,7 +84,7 @@ string[] GetCities(string firstLetters);
   
  이 작업은 HTTP POST를 사용 하 여 액세스할 `http://serviceaddress/endpointaddress/GetCities` XML 메시지를 반환 합니다.  
   
- 전체 웹 프로그래밍 모델을 사용하여 이러한 기본 측면을 사용자 지정할 수 있습니다. 예를 들어 <xref:System.ServiceModel.Web.WebGetAttribute> 또는 <xref:System.ServiceModel.Web.WebInvokeAttribute> 특성을 사용하여 작업이 응답하는 HTTP 동사를 제어하거나 이러한 각 특성의 `UriTemplate` 속성을 사용하여 사용자 지정 URI를 지정할 수 있습니다. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][WCF 웹 HTTP 프로그래밍 모델](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md) 항목입니다.  
+ 전체 웹 프로그래밍 모델을 사용하여 이러한 기본 측면을 사용자 지정할 수 있습니다. 예를 들어 <xref:System.ServiceModel.Web.WebGetAttribute> 또는 <xref:System.ServiceModel.Web.WebInvokeAttribute> 특성을 사용하여 작업이 응답하는 HTTP 동사를 제어하거나 이러한 각 특성의 `UriTemplate` 속성을 사용하여 사용자 지정 URI를 지정할 수 있습니다. 자세한 내용은 참조는 [WCF 웹 HTTP 프로그래밍 모델](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md) 항목입니다.  
   
  JSON 데이터 형식은 AJAX 서비스에서 주로 사용됩니다. XML 대신 JSON을 반환하는 작업을 만들려면 <xref:System.ServiceModel.Web.WebGetAttribute.ResponseFormat%2A> (또는 <xref:System.ServiceModel.Web.WebInvokeAttribute.ResponseFormat%2A>) 속성을 <xref:System.ServiceModel.Web.WebMessageFormat.Json>으로 설정합니다. [독립 실행형 JSON Serialization](../../../../docs/framework/wcf/feature-details/stand-alone-json-serialization.md) 항목에서는 JSON에 어떻게 기본 제공.NET 유형 및 데이터 계약 형식 지도 보여 줍니다.  
   

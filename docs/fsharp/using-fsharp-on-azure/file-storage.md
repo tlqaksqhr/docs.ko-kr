@@ -1,20 +1,17 @@
 ---
-title: "F #을 사용 하 여 Azure 파일 저장소 시작"
-description: "클라우드 Azure 파일 저장소에 파일 데이터를 저장 및 Azure 가상 컴퓨터 (VM)에서 클라우드 파일 공유를 탑재 또는 온-프레미스 응용 프로그램에서 Windows를 실행 합니다."
-keywords: "visual f #, f #, 기능 프로그래밍,.NET,.NET Core를 Azure"
+title: 'F #을 사용 하 여 Azure 파일 저장소 시작'
+description: 클라우드 Azure 파일 저장소에 파일 데이터를 저장 및 Azure 가상 컴퓨터 (VM)에서 클라우드 파일 공유를 탑재 또는 온-프레미스 응용 프로그램에서 Windows를 실행 합니다.
 author: sylvanc
 ms.author: phcart
 ms.date: 09/20/2016
-ms.topic: article
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.topic: conceptual
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: 5c26a0aa-186e-476c-9f87-e0191754579e
-ms.openlocfilehash: 5e1f6914acad5ae8c7148a7238e2d1d6a8ca5867
-ms.sourcegitcommit: 655fd4f78741967f80c409cef98347fdcf77857d
+ms.openlocfilehash: f4eb02bc3e4aca0653a4fa991c1593f988f1d1af
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="get-started-with-azure-file-storage-using-f"></a>F #을 사용 하 여 Azure 파일 저장소 시작 #
 
@@ -22,7 +19,7 @@ Azure 파일 저장소 파일 공유는 표준을 사용 하 여 클라우드를
 
 파일 저장소의 개념적인 개요를 참조 하십시오 [파일 저장소에 대 한.NET 가이드](/azure/storage/storage-dotnet-how-to-use-files)합니다.
 
-## <a name="prerequisites"></a>필수 구성 요소
+## <a name="prerequisites"></a>전제 조건
 
 이 가이드를 사용 하려면 먼저 [Azure 저장소 계정 만들기](/azure/storage/storage-create-storage-account)합니다.
 또한이 계정에 대 한 저장소 액세스 키를 해야 합니다.

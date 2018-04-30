@@ -1,21 +1,19 @@
 ---
-title: ".NET Core 시작"
-description: "Windows, Linux 및 macOS에서 .NET Core 응용 프로그램을 빌드하는 방법을 알아볼 수 있는 리소스를 찾아보세요."
-keywords: .NET, .NET Core
+title: .NET Core 시작
+description: Windows, Linux 및 macOS에서 .NET Core 응용 프로그램을 빌드하는 방법을 알아볼 수 있는 리소스를 찾아보세요.
 author: johalex
 ms.author: johalex
 ms.date: 09/14/2017
-ms.topic: article
-ms.prod: .net-core
+ms.topic: conceptual
+ms.prod: dotnet-core
 ms.devlang: dotnet
-ms.assetid: d1453a0d-317c-4da6-b68e-422a2c0bfe49
 ms.workload:
 - dotnetcore
-ms.openlocfilehash: 0428f93d4044fa0dd65a6f48ee425948fe052697
-ms.sourcegitcommit: 655fd4f78741967f80c409cef98347fdcf77857d
+ms.openlocfilehash: ba4e010f81cea00122fd450f02a75598bb7293b8
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="get-started-with-net-core"></a>.NET Core 시작
 

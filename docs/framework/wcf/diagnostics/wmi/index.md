@@ -16,11 +16,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 3df15e80a550857adbfbf30ebf8b6ef902426a1a
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: e8fd88edd711513d1b143029d8088401c9945d13
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="using-windows-management-instrumentation-for-diagnostics"></a>진단에 Windows Management Instrumentation 사용
 [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)]는 [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] WMI(Windows Management Instrumentation) 공급자를 통해 런타임으로 서비스 검사 데이터를 노출합니다.  
@@ -160,7 +160,7 @@ ms.lasthandoff: 04/26/2018
 Whoami /user  
 ```  
   
- 그러면 현재 사용자의 SID가 제공되기는 하지만, 이 방법을 통해 모든 임의 사용자의 SID를 가져올 수는 없습니다. SID를 가져오는 다른 방법을 사용 하는 것은 [getsid.exe](http://go.microsoft.com/fwlink/?LinkId=186467) 에서 도구는 [관리 작업에 대 한 Windows 2000 Resource Kit 도구](http://go.microsoft.com/fwlink/?LinkId=178660)합니다. 이 도구는 두 사용자(로컬 또는 도메인)의 SID를 비교하는데, 두 SID를 명령줄에 인쇄한다는 단점이 있습니다. [!INCLUDE[crdefault](../../../../../includes/crdefault-md.md)] [잘 알려진 Sid](http://go.microsoft.com/fwlink/?LinkId=186468)합니다.  
+ 그러면 현재 사용자의 SID가 제공되기는 하지만, 이 방법을 통해 모든 임의 사용자의 SID를 가져올 수는 없습니다. SID를 가져오는 다른 방법을 사용 하는 것은 [getsid.exe](http://go.microsoft.com/fwlink/?LinkId=186467) 에서 도구는 [관리 작업에 대 한 Windows 2000 Resource Kit 도구](http://go.microsoft.com/fwlink/?LinkId=178660)합니다. 이 도구는 두 사용자(로컬 또는 도메인)의 SID를 비교하는데, 두 SID를 명령줄에 인쇄한다는 단점이 있습니다. 자세한 내용은 참조 [잘 알려진 Sid](http://go.microsoft.com/fwlink/?LinkId=186468)합니다.  
   
 ## <a name="accessing-remote-wmi-object-instances"></a>원격 WMI 개체 인스턴스 액세스  
  원격 시스템에서 [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] WMI 인스턴스에 액세스해야 하는 경우 액세스하는 데 사용할 도구에서 패킷 개인 정보를 활성화해야 합니다. 다음 단원에서는 WMI CIM Studio, Windows Management Instrumentation Tester 및 .NET SDK 2.0을 사용하여 이러한 작업을 수행하는 방법에 대해 설명합니다.  

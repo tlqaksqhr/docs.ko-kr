@@ -18,11 +18,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: b7b9590096789af609e83d1a5ed736cf18e27700
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 2ad8a3a79967c42b8e8afdd9b9d796a7a1dfdd79
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="configuring-tracing"></a>추적 구성
 이 항목에서는 추적을 사용하고, 추적을 내보내도록 추적 소스를 구성하고, 추적 수준을 설정하고, 종단 간 추적 상관 관계를 지원하도록 동작 추적 및 전파를 설정하고, 추적에 액세스하도록 추적 수신기를 설정하는 방법에 대해 설명합니다.  
@@ -155,7 +155,7 @@ ms.lasthandoff: 04/26/2018
   
  원격 데이터베이스와 같은 연결을 통해 추적을 보내도록 사용자 지정 추적 수신기를 구성할 수 있습니다. 응용 프로그램 배포자인 경우 원격 컴퓨터의 추적 로그에 적절한 액세스 제어를 적용해야 합니다.  
   
- 추적 수신기를 프로그래밍 방식으로 구성할 수도 있습니다. [!INCLUDE[crdefault](../../../../../includes/crdefault-md.md)] [방법: 추적 수신기 만들기 및 초기화](http://go.microsoft.com/fwlink/?LinkId=94648) 및 [만드는 사용자 지정 TraceListener](http://go.microsoft.com/fwlink/?LinkId=96239)합니다.  
+ 추적 수신기를 프로그래밍 방식으로 구성할 수도 있습니다. 자세한 내용은 참조 [하는 방법: 추적 수신기 만들기 및 초기화](http://go.microsoft.com/fwlink/?LinkId=94648) 및 [만드는 사용자 지정 TraceListener](http://go.microsoft.com/fwlink/?LinkId=96239)합니다.  
   
 > [!CAUTION]
 >  `System.Diagnostics.XmlWriterTraceListener`는 스레드로부터 안전하지 않으므로 추적을 출력할 때 추적 소스가 리소스를 단독으로 잠글 수도 있습니다. 여러 스레드에서 이 수신기를 사용하도록 구성된 추적 소스로 추적을 출력하면 리소스 경합이 발생할 수 있으며, 이로 인해 성능이 크게 저하될 수 있습니다. 이 문제를 해결하려면 스레드로부터 안전한 사용자 지정 수신기를 구현해야 합니다.  

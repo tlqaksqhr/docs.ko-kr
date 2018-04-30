@@ -1,21 +1,19 @@
 ---
 title: MSTest 및 .NET Core를 사용한 C# 유닛 테스트
 description: dotnet test 및 MSTest를 사용하여 샘플 솔루션을 단계별로 빌드하는 대화형 환경을 통해 C# 및 .NET Core의 단위 테스트 개념을 알아봅니다.
-keywords: MSTest, .NET, .NET Core
 author: ncarandini
 ms.author: wiwagn
 ms.date: 09/08/2017
-ms.topic: article
-ms.prod: .net-core
+ms.topic: conceptual
+ms.prod: dotnet-core
 ms.devlang: dotnet
-ms.assetid: ed447641-3e85-4e50-b7ed-004630048a3e
 ms.workload:
 - dotnetcore
-ms.openlocfilehash: 742e0f5707580f70ed068fff18faa7b5e2fd8625
-ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
+ms.openlocfilehash: fcc64bbbe00231442927023beff7dda670a3c567
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="unit-testing-c-with-mstest-and-net-core"></a>MSTest 및 .NET Core를 사용한 C# 유닛 테스트
 

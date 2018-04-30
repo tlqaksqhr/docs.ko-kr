@@ -1,25 +1,25 @@
 ---
-title: "C# 및 Visual Studio Code 시작 - C# 가이드"
-description: "Visual Studio Code를 사용하여 C#에서 첫 번째 .NET Core 응용 프로그램을 만들고 디버그하는 방법을 알아봅니다."
+title: C# 및 Visual Studio Code 시작 - C# 가이드
+description: Visual Studio Code를 사용하여 C#에서 첫 번째 .NET Core 응용 프로그램을 만들고 디버그하는 방법을 알아봅니다.
 author: kendrahavens
 ms.author: mairaw
 ms.date: 09/27/2017
-ms.topic: article
+ms.topic: conceptual
 ms.prod: .net
 ms.technology: devlang-csharp
 ms.workload:
 - dotnetcore
-ms.openlocfilehash: 0c37040220bb7f38cdd75176bb9ed2a2199b7096
-ms.sourcegitcommit: 099aa20d9b6450d1b7452d782a55771a6ad8ff35
+ms.openlocfilehash: d4ee1c9ef66ef61156453786f65d16470d7a5ea2
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/05/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="get-started-with-c-and-visual-studio-code"></a>C# 및 Visual Studio Code 시작
 
 .NET Core는 Windows, Linux 및 macOS에서 실행되는 응용 프로그램을 만들기 위한 빠른 모듈식 플랫폼을 제공합니다. C# 확장이 있는 Visual Studio Code를 사용하면 C# IntelliSense(스마트 코드 완성) 및 디버깅을 완벽하게 지원하는 강력한 편집 환경이 구현됩니다.
 
-## <a name="prerequisites"></a>필수 구성 요소
+## <a name="prerequisites"></a>전제 조건
 
 1. [Visual Studio Code](https://code.visualstudio.com/)를 설치합니다.
 2. [.NET Core SDK](https://www.microsoft.com/net/download/core)를 설치합니다.

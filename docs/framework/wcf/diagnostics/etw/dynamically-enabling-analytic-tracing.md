@@ -1,35 +1,37 @@
 ---
-title: "동적으로 분석 추적을 사용하도록 설정"
-ms.custom: 
+title: 동적으로 분석 추적을 사용하도록 설정
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 58b63cfc-307a-427d-b69d-9917ff9f44ac
-caps.latest.revision: "12"
+caps.latest.revision: 12
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 18dda3f63a12a9f9a2320f413137943e5864ad27
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: d070c66eebbf1a067254c38c6e5bfc7f40742863
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="dynamically-enabling-analytic-tracing"></a>동적으로 분석 추적을 사용하도록 설정
 Windows 운영 체제에 포함된 도구와 함께 ETW(Event Tracing for Windows)를 사용하여 추적을 동적으로 사용하거나 사용하지 않도록 설정할 수 있습니다. 모든 [!INCLUDE[netfx_current_long](../../../../../includes/netfx-current-long-md.md)] [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] 서비스의 경우 응용 프로그램의 Web.config 파일을 수정하거나 서비스를 다시 시작하지 않고도 분석 추적을 동적으로 사용하거나 사용하지 않도록 설정할 수 있습니다. 그러면 응용 프로그램을 중지하지 않고도 추적 이벤트를 내보낼 수 있습니다.  
   
  [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 추적 옵션도 이와 비슷한 방식으로 구성할 수 있습니다. 예를 들어 응용 프로그램을 중지하지 않고도 심각도 수준을 **Error** 에서 **Information** 으로 변경할 수 있습니다. 이 작업은 다음과 같은 도구를 사용하여 수행할 수 있습니다.  
   
--   **Logman** – 추적 데이터를 구성, 제어 및 쿼리하기 위한 명령줄 도구입니다. [!INCLUDE[crdefault](../../../../../includes/crdefault-md.md)][Logman 추적을 만들](http://go.microsoft.com/fwlink/?LinkId=165426) 및 [Logman Update Trace](http://go.microsoft.com/fwlink/?LinkId=165427)합니다.  
+-   **Logman** – 추적 데이터를 구성, 제어 및 쿼리하기 위한 명령줄 도구입니다. 자세한 내용은 참조 [Logman 만들 추적](http://go.microsoft.com/fwlink/?LinkId=165426) 및 [Logman Update Trace](http://go.microsoft.com/fwlink/?LinkId=165427)합니다.  
   
--   **EventViewer** - 추적 결과를 보기 위한 Windows 그래픽 관리 도구입니다. [!INCLUDE[crdefault](../../../../../includes/crdefault-md.md)][WCF 서비스와 Windows 용 이벤트 추적](../../../../../docs/framework/wcf/samples/wcf-services-and-event-tracing-for-windows.md) 및 [이벤트 뷰어](http://go.microsoft.com/fwlink/?LinkId=165428)합니다.  
+-   **EventViewer** - 추적 결과를 보기 위한 Windows 그래픽 관리 도구입니다. 자세한 내용은 참조 [WCF 서비스와 Windows 용 이벤트 추적](../../../../../docs/framework/wcf/samples/wcf-services-and-event-tracing-for-windows.md) 및 [이벤트 뷰어](http://go.microsoft.com/fwlink/?LinkId=165428)합니다.  
   
--   **Perfmon** – 카운터를 사용하여 추적이 시스템 성능에 미치는 영향과 추적 카운터를 모니터링하는 Windows 그래픽 관리 도구입니다. [!INCLUDE[crdefault](../../../../../includes/crdefault-md.md)][수동으로 데이터 수집기 집합 만들기](http://go.microsoft.com/fwlink/?LinkId=165429)합니다.  
+-   **Perfmon** – 카운터를 사용하여 추적이 시스템 성능에 미치는 영향과 추적 카운터를 모니터링하는 Windows 그래픽 관리 도구입니다. 자세한 내용은 참조 [는 데이터 수집기 집합을 수동으로 만들](http://go.microsoft.com/fwlink/?LinkId=165429)합니다.  
   
 ### <a name="keywords"></a>키워드  
  일반적으로 <xref:System.ServiceModel.Activation.Configuration.ServiceModelActivationSectionGroup.Diagnostics%2A> 클래스를 사용하는 경우 .NET Framework 추적 메시지가 심각도 수준(예: Error, Warning 및 Information)을 기준으로 필터링됩니다. ETW는 이러한 심각도 수준 개념을 지원할 뿐 아니라 키워드를 사용하는 새롭고 유연한 필터 메커니즘도 지원합니다. 키워드는 추적 이벤트를 통해 각 이벤트가 무엇을 의미하는지에 대한 추가 컨텍스트를 제공하는 데 사용할 수 있는 임의의 텍스트 값입니다.  

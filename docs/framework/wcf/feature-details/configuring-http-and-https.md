@@ -1,28 +1,28 @@
 ---
-title: "HTTP 및 HTTPS 구성"
-ms.custom: 
+title: HTTP 및 HTTPS 구성
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - configuring HTTP [WCF]
 ms.assetid: b0c29a86-bc0c-41b3-bc1e-4eb5bb5714d4
-caps.latest.revision: 
+caps.latest.revision: 17
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 50d4f92273a3e105fb83705bc138b06350910ccf
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 8d3317cd4bba7c9935bd7555f16599dc94725fbd
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="configuring-http-and-https"></a>HTTP 및 HTTPS 구성
 WCF 서비스 및 클라이언트는 HTTP 및 HTTPS를 통해 통신할 수 있습니다. HTTP/HTTPS 설정은 IIS(인터넷 정보 서비스)나 명령줄 도구를 사용하여 구성합니다. WCF 서비스가 IIS 아래에서 호스팅되거나 IIS에서 inetmgr.exe 도구를 사용하여 HTTP 또는 HTTPS 설정을 구성할 수 있는 경우입니다. WCF 서비스가 자체 호스팅되는 경우 HTTP 또는 HTTPS 설정은 명령줄 도구를 사용하여 구성됩니다.  
@@ -31,7 +31,7 @@ WCF 서비스 및 클라이언트는 HTTP 및 HTTPS를 통해 통신할 수 있�
   
  HTTP 설정 구성에 사용하는 도구는 컴퓨터에서 실행되고 있는 운영 체제에 따라 다릅니다.  
   
- 실행 하는 경우 [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] 또는 [!INCLUDE[wxp](../../../../includes/wxp-md.md)]를 HttpCfg.exe 도구를 사용 합니다. [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)]이 도구를 자동으로 설치합니다. 실행 하는 경우 [!INCLUDE[wxp](../../../../includes/wxp-md.md)]에서 도구를 다운로드할 수 있습니다 [Windows XP 서비스 팩 2 지원 도구](http://go.microsoft.com/fwlink/?LinkId=88606)합니다. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Httpcfg 개요](http://go.microsoft.com/fwlink/?LinkId=88605)합니다.  
+ 실행 하는 경우 [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] 또는 [!INCLUDE[wxp](../../../../includes/wxp-md.md)]를 HttpCfg.exe 도구를 사용 합니다. [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)]이 도구를 자동으로 설치합니다. 실행 하는 경우 [!INCLUDE[wxp](../../../../includes/wxp-md.md)]에서 도구를 다운로드할 수 있습니다 [Windows XP 서비스 팩 2 지원 도구](http://go.microsoft.com/fwlink/?LinkId=88606)합니다. 자세한 내용은 참조 [Httpcfg 개요](http://go.microsoft.com/fwlink/?LinkId=88605)합니다.  
   
  [!INCLUDE[wv](../../../../includes/wv-md.md)] 또는 Windows 7을 실행하는 경우에는 Netsh.exe 도구를 사용하여 이러한 설정을 구성합니다.  
   

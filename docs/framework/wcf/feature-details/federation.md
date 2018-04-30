@@ -1,12 +1,13 @@
 ---
-title: "페더레이션"
-ms.custom: 
+title: 페더레이션
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,16 +16,17 @@ helpviewer_keywords:
 - WCF, federation
 - federation [WCF]
 ms.assetid: 2f1e646f-8361-48d4-9d5d-1b961f31ede4
-caps.latest.revision: "26"
+caps.latest.revision: 26
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 3c87fa08a698350d601f72d5d19ef353bd4257a9
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 0e7aef1f53675089ee311aa79a54abf60441b728
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="federation"></a>페더레이션
 이 항목에서는 페더레이션 보안의 개념에 대한 간략한 개요를 제공합니다. 또한 페더레이션 보안 아키텍처 배포를 위한 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 지원에 대해 설명합니다. 페더레이션을 보여 주는 샘플 응용 프로그램을 참조 하십시오. [Federation 샘플](../../../../docs/framework/wcf/samples/federation-sample.md)합니다.  
@@ -71,14 +73,14 @@ ms.lasthandoff: 12/22/2017
   
  페더레이션 보안 아키텍처에서, 조직 A의 사용자는 조직 B의 STS에서 발급된 유효한 보안 토큰(특정 서비스에 대한 액세스 권한을 부여하고 인증)을 제공해야 하는 조직 B의 웹 서비스에 액세스할지 여부를 알고 있습니다.  
   
- 사용자는 STS B에 연결하여 STS와 관련된 정책으로부터 다른 수준의 간접 참조를 받습니다. STS A(클라이언트 신뢰 영역)에서 발급한 유효한 보안 토큰을 제공해야 STS B가 보안 토큰을 발급할 수 있습니다. 이는 두 조직 간에 자연스럽게 구축된 신뢰 관계이며, 조직 B가 조직 A의 사용자 ID를 관리할 필요가 없음을 의미합니다. 사실상 STS B에는 일반적으로 null `issuerAddress`와 `issuerMetadataAddress`가 있습니다. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][하는 방법: 로컬 발급자 구성](../../../../docs/framework/wcf/feature-details/how-to-configure-a-local-issuer.md)합니다. 클라이언트를 STS A. 찾을 로컬 정책을 확인 하는 경우 이 구성을 라고 *홈 영역 페더레이션* STS B 1. STS에 대 한 정보를 유지 관리할 필요가 없기 때문에 확장 성능이 보다 우수 하 고  
+ 사용자는 STS B에 연결하여 STS와 관련된 정책으로부터 다른 수준의 간접 참조를 받습니다. STS A(클라이언트 신뢰 영역)에서 발급한 유효한 보안 토큰을 제공해야 STS B가 보안 토큰을 발급할 수 있습니다. 이는 두 조직 간에 자연스럽게 구축된 신뢰 관계이며, 조직 B가 조직 A의 사용자 ID를 관리할 필요가 없음을 의미합니다. 사실상 STS B에는 일반적으로 null `issuerAddress`와 `issuerMetadataAddress`가 있습니다. 자세한 내용은 참조 [하는 방법: 로컬 발급자 구성](../../../../docs/framework/wcf/feature-details/how-to-configure-a-local-issuer.md)합니다. 클라이언트를 STS A. 찾을 로컬 정책을 확인 하는 경우 이 구성을 라고 *홈 영역 페더레이션* STS B 1. STS에 대 한 정보를 유지 관리할 필요가 없기 때문에 확장 성능이 보다 우수 하 고  
   
  그런 다음 사용자는 조직 A의 STS에 연결하고, 조직 A 내의 기타 리소스에 대한 액세스 권한을 얻기 위해 일반적으로 사용하는 인증 자격 증명을 제공함으로써 보안 토큰을 가져옵니다. 이는 또한 사용자가 여러 자격 증명 집합을 유지 관리해야 하거나 여러 서비스 사이트에서 동일한 자격 증명 집합을 사용하는 문제를 줄여줍니다.  
   
  사용자는 STS A로부터 가져온 보안 토큰을 STS B에 제공합니다. 조직 B에서는 사용자 요청에 대한 권한 부여를 수행하고, 자체 보안 토큰 집합으로부터 사용자에게 보안 토큰을 발급합니다. 그런 다음 사용자는 토큰을 조직 B의 리소스에 제공하고 서비스에 액세스합니다.  
   
 ## <a name="support-for-federated-security-in-wcf"></a>WCF의 페더레이션 보안을 위한 지원  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]페더레이션된 보안 아키텍처를 통해를 배포 하기 위한 턴키 지원 제공는 [ \<wsFederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md)합니다.  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 페더레이션된 보안 아키텍처를 통해를 배포 하기 위한 턴키 지원 제공는 [ \<wsFederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md)합니다.  
   
  [ \<wsFederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md) 요소에 대 한 HTTP 요청-회신 통신 스타일에 대 한 기본 전송 메커니즘으로 사용 해야 하는 보안성, 안정성, 상호 운용 가능한 바인딩을 제공 텍스트 및 XML 인코딩 통신 형식으로 사용 합니다.  
   
@@ -159,7 +161,7 @@ operationRequirementType="FederationSample.MyServiceOperationRequirement, MyServ
 ```  
   
 > [!NOTE]
->  `MyService`에서 필요로 하는 클레임에 대해 미세한 지점이 언급되어야 합니다. 두 번째 그림에서는 `MyService`에는 `accessAuthorized` 클레임과 함께 SAML 토큰이 필요함을 나타냅니다. 좀 더 구체적으로 설명하면 이는 `MyService`에서 필요로 하는 클레임 형식을 지정합니다. 이 클레임 형식의 정규화된 이름은 http://tempuri.org:accessAuthorized(연관 네임스페이스 포함)이며, 서비스 구성 파일에서 사용합니다. 이 클레임의 값은 이 클레임의 존재를 표시하고, STS B에 의해 `true`로 설정된다고 가정합니다.  
+>  `MyService`에서 필요로 하는 클레임에 대해 미세한 지점이 언급되어야 합니다. 두 번째 그림에서는 `MyService`에는 `accessAuthorized` 클레임과 함께 SAML 토큰이 필요함을 나타냅니다. 좀 더 구체적으로 설명하면 이는 `MyService`에서 필요로 하는 클레임 형식을 지정합니다. 이 클레임 형식의 정규화 된 이름은 http://tempuri.org:accessAuthorized (연관된 네임 스페이스 포함)을 함께 사용 되는 서비스 구성 파일입니다. 이 클레임의 값은 이 클레임의 존재를 표시하고, STS B에 의해 `true`로 설정된다고 가정합니다.  
   
  런타임에 이 정책은 `MyServiceOperationRequirement`의 일부로 구현되는 `MyService` 클래스에 의해 적용됩니다.  
   
@@ -218,7 +220,7 @@ operationRequirementType="FederationSample.MyServiceOperationRequirement, MyServ
 ```  
   
 > [!NOTE]
->  또한 `userAuthenticated` 클레임은 STS B에서 필요로 하는 클레임 형식입니다. 이 클레임 형식의 정규화된 이름은 http://tempuri.org:userAuthenticated(연관 네임스페이스 포함)이며, STS 구성 파일에서 사용합니다. 이 클레임의 값은 이 클레임의 존재를 표시하고 STS A에 의해 `true`로 설정된다고 가정합니다.  
+>  다시,는 `userAuthenticated` 클레임은 STS B.에 필요한 클레임 형식 이 클레임 형식의 정규화 된 이름은 http://tempuri.org:userAuthenticated (연관된 네임 스페이스 포함)을 함께 사용 되는 STS 구성 파일입니다. 이 클레임의 값은 이 클레임의 존재를 표시하고 STS A에 의해 `true`로 설정된다고 가정합니다.  
   
  런타임에 `STS_B_OperationRequirement` 클래스는 STS B의 일부로 구현되는 이 정책을 적용합니다.  
   

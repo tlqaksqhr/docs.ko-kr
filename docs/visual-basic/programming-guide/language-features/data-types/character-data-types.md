@@ -1,10 +1,7 @@
 ---
 title: 문자 데이터 형식(Visual Basic)
-ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - devlang-visual-basic
 ms.topic: article
@@ -15,14 +12,13 @@ helpviewer_keywords:
 - Char data type [Visual Basic], character data types
 - data types [Visual Basic], choosing
 ms.assetid: 902479ef-1679-47fc-9911-0c1c5008226c
-caps.latest.revision: 23
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: dca9cde0af08c4113ea9a4644efa40a721b4d9b1
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: afd368c00444f136c6d69b02a733c82f0c8eafe0
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="character-data-types-visual-basic"></a>문자 데이터 형식(Visual Basic)
 Visual Basic에서는 *문자 데이터 형식과* 를 인쇄 하거나 표시할 수 있는 문자를 처리 합니다. 유니코드 문자는 모두 처리 하는 동안 `Char` 반면은 단일 문자를 `String` 불특정 개수의 문자를 포함 합니다.  
@@ -32,7 +28,7 @@ Visual Basic에서는 *문자 데이터 형식과* 를 인쇄 하거나 표시�
 ## <a name="char-type"></a>Char 형식  
  `Char` 데이터 형식은 2 바이트 (16 비트) 단일 유니코드 문자입니다. 변수는 항상 정확히 한 문자를 저장, 하는 경우로 선언 `Char`합니다. 예를 들어:  
   
- [!code-vb[VbVbalrCharTypes#1](../../../../visual-basic/programming-guide/language-features/data-types/codesnippet/VisualBasic/character-data-types_1.vb)]  
+ [!code-vb[VbVbalrCharTypes#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbvbalrchartypes/vb/module1.vb#1)]
   
  가능한 각 값에는 `Char` 또는 `String` 변수가 *코드 포인트*, 또는 유니코드 문자 집합에서 문자 코드입니다. 유니코드 문자 등이 기본 ASCII 문자 집합, 다양 한 다른 알파벳 글자, 악센트, 통화 기호, 분수, 분음 기호, 수학 및 기술 기호 있습니다.  
   
@@ -44,7 +40,7 @@ Visual Basic에서는 *문자 데이터 형식과* 를 인쇄 하거나 표시�
 ## <a name="string-type"></a>문자열 형식  
  `String` 데이터 형식은 0 개 이상의 2 바이트 (16 비트) 유니코드 문자 시퀀스입니다. 변수에서 불특정 개수의 문자를 포함할 수 있으면로 선언 `String`합니다. 예를 들어:  
   
- [!code-vb[VbVbalrCharTypes#2](../../../../visual-basic/programming-guide/language-features/data-types/codesnippet/VisualBasic/character-data-types_2.vb)]  
+ [!code-vb[VbVbalrCharTypes#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbvbalrchartypes/vb/module1.vb#2)]
   
  자세한 내용은 참조 [문자열 데이터 형식](../../../../visual-basic/language-reference/data-types/string-data-type.md)합니다.  
   

@@ -1,27 +1,26 @@
 ---
-title: "플랫폼 간 도구로 라이브러리 개발"
-description: ".NET Core CLI 도구를 사용하여 .NET용 라이브러리를 만드는 방법에 관해 알아봅니다."
-keywords: .NET, .NET Core
+title: 플랫폼 간 도구로 라이브러리 개발
+description: .NET Core CLI 도구를 사용하여 .NET용 라이브러리를 만드는 방법에 관해 알아봅니다.
 author: cartermp
 ms.author: mairaw
 ms.date: 05/01/2017
-ms.topic: article
-ms.prod: .net-core
+ms.topic: conceptual
+ms.prod: dotnet-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
-ms.assetid: 9f6e8679-bd7e-4317-b3f9-7255a260d9cf
-ms.workload: dotnetcore
-ms.openlocfilehash: 8b809fbe73dfd382d568aba5d0f074915d727546
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.workload:
+- dotnetcore
+ms.openlocfilehash: 6bdb5b11a54ce23c676d10ef6e440fa46ea12f72
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="developing-libraries-with-cross-platform-tools"></a>플랫폼 간 도구로 라이브러리 개발
 
 이 문서에서는 플랫폼 간 CLI 도구를 사용하여 .NET용 라이브러리를 작성하는 방법을 다룹니다. CLI는 지원되는 운영 체제에서 작동하는 효율적인 하위 수준 환경을 제공합니다. Visual Studio로 라이브러리를 빌드할 수 있습니다. 그러한 환경을 선호하는 경우 [Visual Studio 설명서를 참조하세요](libraries-with-vs.md).
 
-## <a name="prerequisites"></a>필수 구성 요소
+## <a name="prerequisites"></a>전제 조건
 
 컴퓨터에 [.NET Core SDK 및 CLI](https://www.microsoft.com/net/core)를 설치해야 합니다.
 

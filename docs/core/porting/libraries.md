@@ -1,27 +1,25 @@
 ---
-title: ".NET Core로 이식 - 라이브러리"
-description: ".NET Framework에서 .NET Core로 라이브러리 프로젝트를 이식하는 방법에 관해 알아봅니다."
-keywords: .NET, .NET Core
+title: .NET Core로 이식 - 라이브러리
+description: .NET Framework에서 .NET Core로 라이브러리 프로젝트를 이식하는 방법에 관해 알아봅니다.
 author: cartermp
 ms.author: mairaw
 ms.date: 07/14/2017
-ms.topic: article
-ms.prod: .net-core
+ms.topic: conceptual
+ms.prod: dotnet-core
 ms.devlang: dotnet
-ms.assetid: a0fd860d-d6b6-4659-b325-8a6e6f5fa4a1
 ms.workload:
 - dotnetcore
-ms.openlocfilehash: 24c74f0396dd7bfdf19fc0e11a29110fdbf27173
-ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
+ms.openlocfilehash: ca71ed4b2423846db4b2c2fc0ba87c49330b7d14
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="porting-to-net-core---libraries"></a>.NET Core로 이식 - 라이브러리
 
 이 문서에서는 플랫폼 간에 실행되도록 .NET Core에 라이브러리 코드를 이식하는 방법에 관해 설명합니다.
 
-## <a name="prerequisites"></a>필수 구성 요소
+## <a name="prerequisites"></a>전제 조건
 
 이 문서에서는 다음을 전제로 합니다.
 

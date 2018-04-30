@@ -21,11 +21,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 6fbfd28931f484c5b643dad278b358e7ac2a2945
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: d20d4c39a6cca744ac981d1a143d2847d9b20e5a
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="developing-and-deploying-wcf-data-services"></a>WCF Data Services 개발 및 배포
 이 항목에서는 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]의 개발 및 배포에 대한 정보를 제공합니다. 에 대 한 자세한 기본 정보에 대 한 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)], 참조 [시작](../../../../docs/framework/data/wcf/getting-started-with-wcf-data-services.md) 및 [개요](../../../../docs/framework/data/wcf/wcf-data-services-overview.md)합니다.  
@@ -89,7 +89,7 @@ ms.lasthandoff: 04/26/2018
   
 -   HTTP 검사 프로그램은 요청 및 응답 메시지의 내용을 검사할 수 있도록 하여 데이터 서비스를 디버깅할 때 아주 유용할 수 있습니다. 원시 패킷을 표시할 수 있는 네트워크 패킷 분석기를 사용하여 데이터 서비스와 주고받는 HTTP 요청 및 응답을 검사할 수 있습니다.  
   
--   일반적인 작업을 수행할 때보다 데이터 서비스를 디버깅할 때 데이터 서비스에서 발생하는 오류에 대한 자세한 정보가 필요할 수 있습니다. <xref:System.Data.Services.DataServiceConfiguration.UseVerboseErrors%2A> 에서 <xref:System.Data.Services.DataServiceConfiguration> 속성을 `true` 로 설정하고 데이터 서비스 클래스에서 <xref:System.ServiceModel.Description.ServiceDebugBehavior.IncludeExceptionDetailInFaults%2A> 특성의 <xref:System.ServiceModel.Description.ServiceDebugBehavior> 속성을 `true`로 설정하여 데이터 서비스에서 추가 오류 정보를 가져올 수 있습니다. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] 은 [WCF Data Services 디버깅](http://go.microsoft.com/fwlink/?LinkId=201868)게시물을 참조하세요. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 에서 추적 기능을 설정하여 HTTP 메시징 계층에서 발생하는 예외를 확인할 수도 있습니다. 자세한 내용은 [Configuring Tracing](../../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md)을 참조하세요.  
+-   일반적인 작업을 수행할 때보다 데이터 서비스를 디버깅할 때 데이터 서비스에서 발생하는 오류에 대한 자세한 정보가 필요할 수 있습니다. <xref:System.Data.Services.DataServiceConfiguration.UseVerboseErrors%2A> 에서 <xref:System.Data.Services.DataServiceConfiguration> 속성을 `true` 로 설정하고 데이터 서비스 클래스에서 <xref:System.ServiceModel.Description.ServiceDebugBehavior.IncludeExceptionDetailInFaults%2A> 특성의 <xref:System.ServiceModel.Description.ServiceDebugBehavior> 속성을 `true`로 설정하여 데이터 서비스에서 추가 오류 정보를 가져올 수 있습니다. 자세한 내용은 게시물을 참조 하십시오. [WCF Data Services 디버깅](http://go.microsoft.com/fwlink/?LinkId=201868)합니다. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 에서 추적 기능을 설정하여 HTTP 메시징 계층에서 발생하는 예외를 확인할 수도 있습니다. 자세한 내용은 [Configuring Tracing](../../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md)을 참조하세요.  
   
 -   데이터 서비스는 일반적으로 개발 된 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 있지만 응용 프로그램 프로젝트를 만들 수도로 데이터 서비스는 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Visual Studio에서 웹 사이트 프로젝트입니다. 두 가지 프로젝트 유형의 차이점에 대 한 정보를 참조 하십시오. [NIB: 웹 응용 프로그램 프로젝트와 Visual Studio에서 웹 사이트 프로젝트 비교](http://msdn.microsoft.com/library/2861815e-f5a2-4378-a2f8-b8a86dc012f5)합니다.  
   

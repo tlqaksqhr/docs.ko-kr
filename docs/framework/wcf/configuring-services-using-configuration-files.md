@@ -18,18 +18,18 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 5f1c7449372ad012280b360c09017a15733fb95b
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.openlocfilehash: 46bafbb0063f72b56f647caaa9dd0fa2944f3298
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="configuring-services-using-configuration-files"></a>구성 파일을 사용하여 서비스 구성
 구성 파일을 사용하여 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 서비스를 구성하면 디자인 타임 대신 배포 시 끝점 및 서비스 동작 데이터를 제공할 수 있습니다. 이 항목에서는 사용할 수 있는 기본 기술에 대해 간략하게 설명합니다.  
   
  [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 서비스는 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 구성 기술을 사용하여 구성할 수 있습니다. 가장 일반적으로 XML 요소는 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 서비스를 호스트하는 IIS(인터넷 정보 서비스) 사이트의 Web.config 파일에 추가됩니다. 이 요소를 사용하여 끝점 주소(서비스와의 통신에 사용되는 실제 주소)와 같은 세부 사항을 컴퓨터별로 변경할 수 있습니다. 또한 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 에는 서비스의 가장 기본적인 기능들을 빠르게 선택할 수 있는 여러 시스템 제공 요소가 포함되어 있습니다. [!INCLUDE[netfx40_long](../../../includes/netfx40-long-md.md)]부터 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 에서는 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 구성 요구 사항을 간소화하는 새로운 기본 구성 모델이 함께 제공됩니다. 특정 서비스에 대해 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 구성을 제공하지 않으면 런타임이 일부 표준 끝점 및 기본 바인딩/동작을 사용해 서비스를 자동으로 구성합니다. 실제로 구성 작성은 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 응용 프로그램을 프로그래밍하는 과정의 주요 부분입니다.  
   
- [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [서비스에 대 한 바인딩 구성](../../../docs/framework/wcf/configuring-bindings-for-wcf-services.md)합니다. 가장의 목록이 요소에 일반적으로 사용 되는 경우 참조 [시스템 제공 바인딩](../../../docs/framework/wcf/system-provided-bindings.md)합니다. [!INCLUDE[crabout](../../../includes/crabout-md.md)] , [Simplified Configuration](../../../docs/framework/wcf/simplified-configuration.md) 및 [Simplified Configuration for WCF Services](../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).  
+ 자세한 내용은 참조 [서비스에 대 한 바인딩을 구성](../../../docs/framework/wcf/configuring-bindings-for-wcf-services.md)합니다. 가장의 목록이 요소에 일반적으로 사용 되는 경우 참조 [시스템 제공 바인딩](../../../docs/framework/wcf/system-provided-bindings.md)합니다. [!INCLUDE[crabout](../../../includes/crabout-md.md)] , [Simplified Configuration](../../../docs/framework/wcf/simplified-configuration.md) 및 [Simplified Configuration for WCF Services](../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).  
   
 > [!IMPORTANT]
 >  서로 다른 두 버전의 서비스가 배포되는 병렬 배포 시나리오에서는 구성 파일에서 참조되는 어셈블리의 부분 이름을 지정해야 합니다. 이는 구성 파일이 모든 버전의 서비스에서 공유되며 이러한 서비스가 여러 가지 버전의 .NET Framework에서 실행될 수 있기 때문입니다.  

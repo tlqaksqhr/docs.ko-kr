@@ -1,20 +1,17 @@
 ---
-title: "F #을 사용한 패키지 관리를 사용 하 여 Azure에 대 한"
-description: "F # Azure 종속성을 관리 하려면 Paket 또는 Nuget 사용"
-keywords: "visual f #, f #, 기능 프로그래밍,.NET,.NET Core를 Azure"
+title: 'F #을 사용한 패키지 관리를 사용 하 여 Azure에 대 한'
+description: 'F # Azure 종속성을 관리 하려면 Paket 또는 Nuget 사용'
 author: sylvanc
 ms.author: phcart
 ms.date: 09/20/2016
-ms.topic: article
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.topic: conceptual
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: dd32ef9c-5416-467e-9fa3-c9ee3bb08456
-ms.openlocfilehash: d1a807053f5c4c45492f206739922aacdf6d4122
-ms.sourcegitcommit: 655fd4f78741967f80c409cef98347fdcf77857d
+ms.openlocfilehash: da6938c6ee29292571f4269c68a9148c13738422
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="package-management-for-f-azure-dependencies"></a>F# Azure 종속성에 대한 패키지 관리
 
@@ -22,7 +19,7 @@ Azure 개발에 대 한 패키지를 가져오는 패키지 관리자를 사용 
 
 ## <a name="using-paket"></a>Paket를 사용 하 여
 
-사용 중인 경우 [Paket](https://fsprojects.github.io/Paket/) 종속성 관리자를 사용 하 여는 `paket.exe` Azure 종속성을 추가 하는 도구입니다. 예:
+사용 중인 경우 [Paket](https://fsprojects.github.io/Paket/) 종속성 관리자를 사용 하 여는 `paket.exe` Azure 종속성을 추가 하는 도구입니다. 예를 들어:
 
     > paket add nuget WindowsAzure.Storage
 
@@ -48,7 +45,7 @@ Azure 개발에 대 한 패키지를 가져오는 패키지 관리자를 사용 
 
 ## <a name="using-nuget"></a>Nuget을 사용 하 여
 
-사용 중인 경우 [NuGet](https://www.nuget.org/) 종속성 관리자를 사용 하 여는 `nuget.exe` Azure 종속성을 추가 하는 도구입니다. 예:
+사용 중인 경우 [NuGet](https://www.nuget.org/) 종속성 관리자를 사용 하 여는 `nuget.exe` Azure 종속성을 추가 하는 도구입니다. 예를 들어:
 
     > nuget install WindowsAzure.Storage -ExcludeVersion
 
@@ -74,7 +71,7 @@ Azure 개발에 대 한 패키지를 가져오는 패키지 관리자를 사용 
 
 ## <a name="referencing-assemblies"></a>어셈블리 참조
 
-F # 스크립트에 패키지를 사용 하기 위해 사용 하 여 패키지에 포함 된 어셈블리를 참조 해야는 `#r` 지시문입니다. 예:
+F # 스크립트에 패키지를 사용 하기 위해 사용 하 여 패키지에 포함 된 어셈블리를 참조 해야는 `#r` 지시문입니다. 예를 들어:
 
     > #r "packages/WindowsAzure.Storage/lib/net40/Microsoft.WindowsAzure.Storage.dll"
 

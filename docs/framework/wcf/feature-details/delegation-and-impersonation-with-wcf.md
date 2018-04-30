@@ -22,11 +22,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 5c1acfdfdbac2660fd4de7ec391c94b39890f669
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 885faab43b620cf347c1780d445a72361cb5cdb4
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="delegation-and-impersonation-with-wcf"></a>WCF를 통한 위임 및 가장
 *가장* 은 서비스에서 서비스 도메인 리소스에 대한 클라이언트 액세스를 제한하는 데 사용하는 일반적인 기술 서비스입니다. 서비스 도메인 리소스는 로컬 파일(가장)과 같은 시스템 리소스이거나 파일 공유(위임)와 같은 다른 시스템의 리소스일 수 있습니다. 샘플 응용 프로그램을 보려면 [Impersonating the Client](../../../../docs/framework/wcf/samples/impersonating-the-client.md)을 참조하세요. 가장을 사용하는 방법에 대한 예제는 [How to: Impersonate a Client on a Service](../../../../docs/framework/wcf/how-to-impersonate-a-client-on-a-service.md)을 참조하십시오.  
@@ -84,7 +84,7 @@ ms.lasthandoff: 04/26/2018
  [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 인프라에서는 호출자가 Windows 사용자 계정에 매핑될 수 있는 자격 증명으로 인증된 경우에만 호출자를 가장할 수 있습니다. Windows 계정에 매핑될 수 없는 자격 증명을 통해 인증하도록 서비스를 구성한 경우에는 서비스 메서드가 실행되지 않습니다.  
   
 > [!NOTE]
->  [!INCLUDE[wxp](../../../../includes/wxp-md.md)]에서는 상태 저장 SCT가 만들어지면 가장이 실패하여 <xref:System.InvalidOperationException>이 발생합니다. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [지원 되지 않는 시나리오](../../../../docs/framework/wcf/feature-details/unsupported-scenarios.md)합니다.  
+>  [!INCLUDE[wxp](../../../../includes/wxp-md.md)]에서는 상태 저장 SCT가 만들어지면 가장이 실패하여 <xref:System.InvalidOperationException>이 발생합니다. 자세한 내용은 참조 [지원 되지 않는 시나리오](../../../../docs/framework/wcf/feature-details/unsupported-scenarios.md)합니다.  
   
 ## <a name="impersonation-in-a-service-method-imperative-model"></a>서비스 메서드에서의 가장: 명령적 모델  
  작동하는 전체 서비스 메서드가 아닌 그 중 일부만 호출자가 가장해야 하는 경우가 있습니다. 이 경우에는 서비스 메서드 내의 호출자 Windows ID를 가져와 명령적 방식으로 가장을 수행합니다. 이 작업은 <xref:System.ServiceModel.ServiceSecurityContext.WindowsIdentity%2A> 클래스의 인스턴스를 반환하도록 <xref:System.ServiceModel.ServiceSecurityContext> 의 <xref:System.Security.Principal.WindowsIdentity> 속성을 사용하고 해당 인스턴스를 사용하기 전에 <xref:System.Security.Principal.WindowsIdentity.Impersonate%2A> 메서드를 호출하여 수행합니다.  

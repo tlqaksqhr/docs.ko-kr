@@ -4,17 +4,17 @@ description: dotnet test 및 xUnit을 사용하여 샘플 Visual Basic 솔루션
 author: billwagner
 ms.author: wiwagn
 ms.date: 09/01/2017
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - vb
-ms.prod: .net-core
+ms.prod: dotnet-core
 ms.workload:
 - dotnetcore
-ms.openlocfilehash: 863854bde4a7ae4fab7c182fa9ac273d545b6e0b
-ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
+ms.openlocfilehash: 3402ac1f159dd6764dfd72da9d5ae09e946a4c88
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="unit-testing-visual-basic-net-core-libraries-using-dotnet-test-and-xunit"></a>dotnet test 및 xUnit을 사용하여 Visual Basic .NET Core 라이브러리 유닛 테스트
 

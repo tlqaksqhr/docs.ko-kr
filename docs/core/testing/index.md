@@ -1,21 +1,19 @@
 ---
 title: .NET Core의 단위 테스트
 description: 유닛 테스트가 아주 쉬워졌습니다. .NET Core 및 .NET Standard 프로젝트에서 유닛 테스트를 사용하는 방법을 참조하세요.
-keywords: .NET, .NET Core, .NET Standard, 유닛 테스트
 author: ardalis
 ms.author: wiwagn
 ms.date: 08/30/2017
-ms.topic: article
-ms.prod: .net-core
+ms.topic: conceptual
+ms.prod: dotnet-core
 ms.devlang: dotnet
-ms.assetid: 815ac74c-4bd9-4a94-a87c-78288b27c0e2
 ms.workload:
 - dotnetcore
-ms.openlocfilehash: cb78a66a3a6a7158a86a76d62e5230c75b51a416
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 652378bc6518218d25d2db1b5d1eceb60e53cde5
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="unit-testing-in-net-core-and-net-standard"></a>.NET Core 및 .NET Standard의 유닛 테스트
 
@@ -40,12 +38,12 @@ ms.lasthandoff: 12/23/2017
 
 다음 연습에서 이러한 조합에 관해 알아볼 수 있습니다.
 
-* .NET Core CLI와 함께 [*XUnit* 및 *C#*을 사용하여 단위 테스트 만들기](unit-testing-with-dotnet-test.md)
-* .NET Core CLI와 함께 [*NUnit* 및 *C#*을 사용하여 단위 테스트 만들기](unit-testing-with-nunit.md)
-* .NET Core CLI와 함께 [*MSTest* 및 *C#*을 사용하여 단위 테스트 만들기](unit-testing-with-mstest.md)
-* .NET Core CLI와 함께 [*XUnit* 및 *F#*을 사용하여 단위 테스트 만들기](unit-testing-fsharp-with-dotnet-test.md)
-* .NET Core CLI와 함께 [*NUnit* 및 *F#*을 사용하여 단위 테스트 만들기](unit-testing-fsharp-with-nunit.md)
-* .NET Core CLI와 함께 [*MSTest* 및 *F#*을 사용하여 단위 테스트 만들기](unit-testing-fsharp-with-mstest.md)
+* .NET Core CLI와 함께 [*XUnit* 및 *C#* 을 사용하여 단위 테스트 만들기](unit-testing-with-dotnet-test.md)
+* .NET Core CLI와 함께 [*NUnit* 및 *C#* 을 사용하여 단위 테스트 만들기](unit-testing-with-nunit.md)
+* .NET Core CLI와 함께 [*MSTest* 및 *C#* 을 사용하여 단위 테스트 만들기](unit-testing-with-mstest.md)
+* .NET Core CLI와 함께 [*XUnit* 및 *F#* 을 사용하여 단위 테스트 만들기](unit-testing-fsharp-with-dotnet-test.md)
+* .NET Core CLI와 함께 [*NUnit* 및 *F#* 을 사용하여 단위 테스트 만들기](unit-testing-fsharp-with-nunit.md)
+* .NET Core CLI와 함께 [*MSTest* 및 *F#* 을 사용하여 단위 테스트 만들기](unit-testing-fsharp-with-mstest.md)
 * .NET Core CLI와 함께 [*XUnit* 및 *Visual Basic*을 사용하여 단위 테스트 만들기](unit-testing-visual-basic-with-dotnet-test.md)
 * .NET Core CLI와 함께 [*NUnit* 및 *Visual Basic*을 사용하여 단위 테스트 만들기](unit-testing-visual-basic-with-nunit.md)
 * .NET Core CLI와 함께 [*MSTest* 및 *Visual Basic*을 사용하여 단위 테스트 만들기](unit-testing-visual-basic-with-mstest.md)

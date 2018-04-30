@@ -1,27 +1,29 @@
 ---
-title: "방법: 서비스 모니커 등록 및 구성"
-ms.custom: 
+title: '방법: 서비스 모니커 등록 및 구성'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - COM [WCF], configure service monikers
 - COM [WCF], register service monikers
 ms.assetid: e5e16c80-8a8e-4eef-af53-564933b651ef
-caps.latest.revision: "20"
+caps.latest.revision: 20
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 6e5c57927a455b5d2a253becac35b1bf9033933f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 52b3ec27560ca2dc47b7951cb209f33f307fa7ea
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="how-to-register-and-configure-a-service-moniker"></a>방법: 서비스 모니커 등록 및 구성
 형식화된 계약이 있는 COM 응용 프로그램 내에서 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 서비스 모니커를 사용하려면 먼저 필요한 특성을 사용하는 형식을 COM에 등록하고 필요한 바인딩 구성을 사용하여 COM 응용 프로그램과 모니커를 구성해야 합니다.  
@@ -36,7 +38,7 @@ ms.lasthandoff: 12/22/2017
     [assembly: ComVisible(true)]  
     ```  
   
-3.  관리되는 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 클라이언트를 강력한 이름의 어셈블리로 컴파일합니다. 이렇게 하려면 암호화된 키 쌍으로 서명해야 합니다. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][강력한 이름으로 어셈블리 서명](http://go.microsoft.com/fwlink/?LinkId=94874) .NET 개발자 가이드에서.  
+3.  관리되는 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 클라이언트를 강력한 이름의 어셈블리로 컴파일합니다. 이렇게 하려면 암호화된 키 쌍으로 서명해야 합니다. 자세한 내용은 참조 [강력한 이름으로 어셈블리 서명](http://go.microsoft.com/fwlink/?LinkId=94874) .NET 개발자 가이드에서.  
   
 4.  어셈블리 등록(Regasm.exe) 도구에 `/tlb` 옵션을 사용하여 어셈블리의 형식을 COM에 등록합니다.  
   

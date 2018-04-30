@@ -4,17 +4,16 @@ description: .NET Core 버전 관리의 작동 방식을 이해합니다.
 author: bleroy
 ms.author: mairaw
 ms.date: 02/13/2018
-ms.topic: article
-ms.prod: .net-core
+ms.topic: conceptual
+ms.prod: dotnet-core
 ms.devlang: dotnet
-ms.assetid: f6f684b1-1d2c-4105-8376-7c1959e23803
 ms.workload:
 - dotnetcore
-ms.openlocfilehash: 70c7f179f3451e51d5ab383cde80959a69f959a1
-ms.sourcegitcommit: 96cc82cac4650adfb65ba351506d8a8fbcd17b5c
+ms.openlocfilehash: 437bea33f26c9ae445cf412657f4d23fcce18873
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/19/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="net-core-versioning"></a>.NET Core 버전 관리
 

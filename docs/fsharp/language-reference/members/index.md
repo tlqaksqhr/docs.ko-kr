@@ -1,27 +1,24 @@
 ---
 title: 멤버(F#)
 description: 'F # 프로그래밍 언어의 개체 멤버에 알아봅니다.'
-keywords: visual f#, f#, 함수형 프로그래밍
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: e472f50a-4939-4e62-abbc-471f8f265790
-ms.openlocfilehash: ca34c8d073594791ec268a85ad56f50cc6d9e435
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: a37f14d138cc017cf78e3a0ff1d5b5bba2f09020
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="members"></a>멤버
 
 이 섹션에서는 F# 개체 형식의 멤버에 대해 설명합니다.
 
 
-## <a name="remarks"></a>주의
+## <a name="remarks"></a>설명
 *멤버*는 형식 정의의 일부인 기능이며 `member` 키워드로 선언됩니다. 레코드, 클래스, 구분된 공용 구조체, 인터페이스, 구조체와 같은 F# 개체 형식에서는 멤버를 지원합니다. 자세한 내용은 [레코드](../records.md), [클래스](../classes.md), [구분된 공용 구조체](../discriminated-Unions.md), [인터페이스](../interfaces.md), 및 [구조체](../structures.md)를 참조하세요.
 
 멤버는 일반적으로 특정 형식의 공용 인터페이스를 구성합니다. 이것이 달리 지정된 경우가 아니라면 멤버가 public인 이유입니다. 멤버는 private 또는 internal로 선언될 수도 있습니다. 자세한 내용은 [액세스 제어](../access-Control.md)를 참조하세요. 형식에 대한 시그니처는 특정 형식의 특정 멤버를 노출하거나 노출하지 않는 데에도 사용할 수 있습니다. 자세한 내용은 [시그니처](../signatures.md)를 참조하세요.

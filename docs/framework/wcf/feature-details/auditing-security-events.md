@@ -1,35 +1,35 @@
 ---
-title: "보안 이벤트 감사"
-ms.custom: 
+title: 보안 이벤트 감사
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - auditing security events [WCF]
 ms.assetid: 5633f61c-a3c9-40dd-8070-1c373b66a716
-caps.latest.revision: 
+caps.latest.revision: 27
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
 ms.workload:
 - dotnet
-ms.openlocfilehash: cb8f112c71c743fd6650baf04b8db55ceaeef4ae
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 948ff11cf1b7ecacc6f9f5fdebfc3a0cbd1ef5b1
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="auditing-security-events"></a>보안 이벤트 감사
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]에서 만든 응용 프로그램은 감사 기능을 사용하여 보안 이벤트(성공, 실패 또는 둘 다)를 기록할 수 있습니다. 이벤트는 Windows의 시스템 이벤트 로그에 기록되며 이벤트 뷰어를 사용하여 검사할 수 있습니다.  
   
  관리자는 감사를 사용하여 이미 발생했거나 진행 중인 공격을 검색할 수 있습니다. 또한 감사는 개발자가 보안 관련 문제를 디버깅하는 데 도움이 됩니다. 예를 들어, 정책 검사 또는 권한 부여 구성 오류로 인해 실수로 권한 있는 사용자의 액세스가 거부될 경우 개발자는 이벤트 로그를 검사하여 오류의 원인을 신속하게 찾아서 격리시킬 수 있습니다.  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)][!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 보안 참조 [보안 개요](../../../../docs/framework/wcf/feature-details/security-overview.md)합니다. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]프로그래밍 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], 참조 [기본 WCF 프로그래밍](../../../../docs/framework/wcf/basic-wcf-programming.md)합니다.  
+ [!INCLUDE[crabout](../../../../includes/crabout-md.md)] [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 보안 참조 [보안 개요](../../../../docs/framework/wcf/feature-details/security-overview.md)합니다. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 프로그래밍 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], 참조 [기본 WCF 프로그래밍](../../../../docs/framework/wcf/basic-wcf-programming.md)합니다.  
   
 ## <a name="audit-level-and-behavior"></a>감사 수준 및 동작  
  보안 감사에는 다음과 같은 두 가지 수준이 있습니다.  
@@ -41,7 +41,7 @@ ms.lasthandoff: 12/22/2017
  감사 성공 또는 실패 라고 하는 수준 모두를 확인할 수 있습니다는 *감사 동작*합니다.  
   
 ## <a name="audit-log-location"></a>감사 로그 위치  
- 감사 수준과 동작을 결정한 후 사용자 또는 관리자가 감사 로그의 위치를 지정할 수 있습니다. 기본값, 응용 프로그램, 보안의 세 가지 옵션 중에서 선택할 수 있습니다. 기본값을 지정한 경우 실제 로그는 사용 중인 시스템과 시스템에서 보안 로그 기록을 지원하는지 여부에 따라 달라집니다. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] 이 항목의 뒷부분에 나오는 "운영 체제".  
+ 감사 수준과 동작을 결정한 후 사용자 또는 관리자가 감사 로그의 위치를 지정할 수 있습니다. 기본값, 응용 프로그램, 보안의 세 가지 옵션 중에서 선택할 수 있습니다. 기본값을 지정한 경우 실제 로그는 사용 중인 시스템과 시스템에서 보안 로그 기록을 지원하는지 여부에 따라 달라집니다. 자세한 내용은이 항목의 뒷부분에 나오는 "운영 체제" 섹션을 참조 합니다.  
   
  보안 로그에 기록하려면 `SeAuditPrivilege`가 필요합니다. 기본적으로 로컬 시스템 및 네트워크 서비스 계정에만 이 권한이 있습니다. 보안 로그 기능 `read` 및 `delete`를 관리하려면 `SeSecurityPrivilege`가 필요합니다. 기본적으로 관리자만 이 권한을 가집니다.  
   
@@ -86,10 +86,10 @@ ms.lasthandoff: 12/22/2017
 </configuration>  
 ```  
   
- 감사가 설정되어 있지만 `auditLogLocation`이 지정되어 있지 않으면 보안 로그 기록을 지원하는 플랫폼의 기본 로그 이름은 "Security" 로그이고, 그렇지 않으면 "Application" 로그입니다. [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] 및 [!INCLUDE[wv](../../../../includes/wv-md.md)] 운영 체제만 보안 로그에 쓰기를 지원합니다. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] 이 항목의 뒷부분에 나오는 "운영 체제".  
+ 감사가 설정되어 있지만 `auditLogLocation`이 지정되어 있지 않으면 보안 로그 기록을 지원하는 플랫폼의 기본 로그 이름은 "Security" 로그이고, 그렇지 않으면 "Application" 로그입니다. [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] 및 [!INCLUDE[wv](../../../../includes/wv-md.md)] 운영 체제만 보안 로그에 쓰기를 지원합니다. 자세한 내용은이 항목의 뒷부분에 나오는 "운영 체제" 섹션을 참조 합니다.  
   
 ## <a name="security-considerations"></a>보안 고려 사항  
- 악의적인 사용자가 감사가 설정된 사실을 알고 있다면 잘못된 메시지를 보내 감사 항목을 기록할 수 있습니다. 이런 식으로 감사 로그가 채워지면 감사 시스템이 실패합니다. 이 문제를 완화하려면 <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior.SuppressAuditFailure%2A> 속성을 `true`로 설정하고 이벤트 뷰어의 속성을 사용하여 감사 동작을 제어합니다. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)]Microsoft 지원 문서 보기 및에서 사용할 수 있는 Windows XP에서 이벤트 뷰어를 사용 하 여 이벤트 로그 관리에 [보고 Windows XP에서 이벤트 뷰어에서 이벤트 로그를 관리 하는 방법을](http://go.microsoft.com/fwlink/?LinkId=89150)합니다.  
+ 악의적인 사용자가 감사가 설정된 사실을 알고 있다면 잘못된 메시지를 보내 감사 항목을 기록할 수 있습니다. 이런 식으로 감사 로그가 채워지면 감사 시스템이 실패합니다. 이 문제를 완화하려면 <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior.SuppressAuditFailure%2A> 속성을 `true`로 설정하고 이벤트 뷰어의 속성을 사용하여 감사 동작을 제어합니다. 자세한 내용은 Microsoft 지원 문서 보기 및에서 사용할 수 있는 Windows XP에서 이벤트 뷰어를 사용 하 여 이벤트 로그 관리에 참조 [보고 Windows XP에서 이벤트 뷰어에서 이벤트 로그를 관리 하는 방법을](http://go.microsoft.com/fwlink/?LinkId=89150)합니다.  
   
  [!INCLUDE[wxp](../../../../includes/wxp-md.md)]에서 응용 프로그램 로그에 기록되는 감사 이벤트는 모든 인증된 사용자가 볼 수 있습니다.  
   
