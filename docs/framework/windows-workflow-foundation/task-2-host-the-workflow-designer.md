@@ -14,11 +14,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 15fa4372f4a110577f055d0e3c22977d0f5417bb
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: d4cc95041e96f5f4bb2d6b50e150c99a57404208
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="task-2-host-the-workflow-designer"></a>작업 2: 워크플로 디자이너 호스팅
 이 항목의 인스턴스를 호스트 하는 절차에 설명 된 [!INCLUDE[wfd1](../../../includes/wfd1-md.md)] Windows Presentation Foundation (WPF) 응용 프로그램에서 합니다.  
@@ -108,7 +108,7 @@ ms.lasthandoff: 04/26/2018
         }  
         ```  
   
-         [!INCLUDE[crabout](../../../includes/crabout-md.md)] 참조 활동 디자이너를 등록 [하는 방법: 사용자 지정 활동 디자이너를 만드는](../../../docs/framework/windows-workflow-foundation/how-to-create-a-custom-activity-designer.md)합니다.  
+         활동 디자이너를 등록 하는 방법에 대 한 자세한 내용은 참조 [하는 방법: 사용자 지정 활동 디자이너를 만드는](../../../docs/framework/windows-workflow-foundation/how-to-create-a-custom-activity-designer.md)합니다.  
   
     5.  `MainWindow` 클래스 생성자에서 앞에서 선언한 메서드에 호출을 추가하여 디자이너 지원을 위한 메타데이터를 등록하고 <xref:System.Activities.Presentation.WorkflowDesigner>를 만듭니다.  
   
