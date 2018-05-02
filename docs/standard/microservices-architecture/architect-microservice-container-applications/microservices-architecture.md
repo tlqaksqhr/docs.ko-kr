@@ -1,7 +1,7 @@
 ---
-title: "마이크로 서비스 아키텍처"
-description: "컨테이너화된 .NET 응용 프로그램을 위한 .NET 마이크로 서비스 아키텍처 | 마이크로 서비스 아키텍처"
-keywords: "Docker, 마이크로 서비스, ASP.NET, 컨테이너"
+title: 마이크로 서비스 아키텍처
+description: 컨테이너화된 .NET 응용 프로그램을 위한 .NET 마이크로 서비스 아키텍처 | 마이크로 서비스 아키텍처
+keywords: Docker, 마이크로 서비스, ASP.NET, 컨테이너
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
@@ -11,11 +11,11 @@ ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 453f8a22157eee9601f2586d49d872d90634bb61
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 78d3903e7ed4abf27e78812de87ccbcb9f733663
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="microservices-architecture"></a>마이크로 서비스 아키텍처
 
@@ -49,16 +49,16 @@ ms.lasthandoff: 12/23/2017
 
 이 중에서 처음 3개만을 이 가이드에서 다루거나 소개합니다. 응용 프로그램 수명 주기와 관련된 마지막 두 가지는 추가 [Microsoft 플랫폼 및 도구를 사용하여 컨테이너화된 Docker 응용 프로그램 수명 주기](https://aka.ms/dockerlifecycleebook) 전자책에서 다룹니다.
 
-## <a name="additional-resources"></a>추가 리소스
+## <a name="additional-resources"></a>추가 자료
 
--   **Mark Russinovich 마이크로 서비스: 클라우드에서 제공하는 응용 프로그램 혁명**
+-   **Mark Russinovich 마이크로 서비스: 클라우드 기반의 응용 프로그램 혁명**
     [*https://azure.microsoft.com/blog/microservices-an-application-revolution-powered-by-the-cloud/*](https://azure.microsoft.com/blog/microservices-an-application-revolution-powered-by-the-cloud/)
 
 -   **Martin Fowler. 마이크로 서비스**
-    [*http://www.martinfowler.com/articles/microservices.html*](http://www.martinfowler.com/articles/microservices.html)
+    [*https://www.martinfowler.com/articles/microservices.html*](https://www.martinfowler.com/articles/microservices.html)
 
 -   **Martin Fowler. 마이크로 서비스 필수 구성 요소**
-    [*http://martinfowler.com/bliki/MicroservicePrerequisites.html*](http://martinfowler.com/bliki/MicroservicePrerequisites.html)
+    [*https://martinfowler.com/bliki/MicroservicePrerequisites.html*](https://martinfowler.com/bliki/MicroservicePrerequisites.html)
 
 -   **Jimmy Nilsson. 청크 클라우드 컴퓨팅**
     [*https://www.infoq.com/articles/CCC-Jimmy-Nilsson*](https://www.infoq.com/articles/CCC-Jimmy-Nilsson)

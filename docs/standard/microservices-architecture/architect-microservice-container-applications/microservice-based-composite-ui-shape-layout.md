@@ -1,7 +1,7 @@
 ---
-title: "여러 마이크로 서비스에서 생성된 시각적 UI 셰이프 및 레이아웃을 포함하여 마이크로 서비스를 기반으로 복합 UI 만들기"
-description: "컨테이너화된 .NET 응용 프로그램의 .NET 마이크로 서비스 아키텍처 | 여러 마이크로 서비스에서 생성된 시각적 UI 셰이프 및 레이아웃을 포함하여 마이크로 서비스를 기반으로 복합 UI 만들기"
-keywords: "Docker, 마이크로 서비스, ASP.NET, 컨테이너"
+title: 여러 마이크로 서비스에서 생성된 시각적 UI 셰이프 및 레이아웃을 포함하여 마이크로 서비스를 기반으로 복합 UI 만들기
+description: 컨테이너화된 .NET 응용 프로그램의 .NET 마이크로 서비스 아키텍처 | 여러 마이크로 서비스에서 생성된 시각적 UI 셰이프 및 레이아웃을 포함하여 마이크로 서비스를 기반으로 복합 UI 만들기
+keywords: Docker, 마이크로 서비스, ASP.NET, 컨테이너
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
@@ -11,11 +11,11 @@ ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 12b170e9d4c46fbb697f988596af6566d33099a4
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 55b643fa6f87e5e2b1f49ba201032df655195b46
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="creating-composite-ui-based-on-microservices-including-visual-ui-shape-and-layout-generated-by-multiple-microservices"></a>여러 마이크로 서비스에서 생성된 시각적 UI 셰이프 및 레이아웃을 포함하여 마이크로 서비스를 기반으로 복합 UI 만들기
 
@@ -45,22 +45,22 @@ ms.lasthandoff: 12/23/2017
 
 그러나 다음 참조를 사용하여 마이크로 서비스를 기반으로 하는 복합 UI에 대해 자세히 알아봅니다.
 
-## <a name="additional-resources"></a>추가 리소스
+## <a name="additional-resources"></a>추가 자료
 
--   **ASP.NET을 사용하는 복합 UI(특정 워크샵)**
+-   **ASP.NET을 사용한 복합 UI(특정 워크샵)**
     [*http://go.particular.net/workshop-composite-ui-demo*](http://go.particular.net/workshop-composite-ui-demo)
 
 -   **Ruben Oostinga 마이크로 서비스 아키텍처의 모놀리식 프런트 엔드**
     [*http://blog.xebia.com/the-monolithic-frontend-in-the-microservices-architecture/*](http://blog.xebia.com/the-monolithic-frontend-in-the-microservices-architecture/)
 
--   **Mauro Servienti UI 컴포지션 개선 방법**
+-   **Mauro Servienti 뛰어난 UI 구성의 비결**
     [*https://particular.net/blog/secret-of-better-ui-composition*](https://particular.net/blog/secret-of-better-ui-composition)
 
--   **Viktor Farcic 마이크로 서비스에 대한 프런트 엔드 구성 요소 포함**
+-   **Viktor Farcic 마이크로 서비스에 프런트 엔드 웹 구성 요소 포함하기**
     [*https://technologyconversations.com/2015/08/09/including-front-end-web-components-into-microservices/*](https://technologyconversations.com/2015/08/09/including-front-end-web-components-into-microservices/)
 
 -   **마이크로 서비스 아키텍처에서 프런트 엔드 관리**\
-    [*http://allegro.tech/2016/03/Managing-Frontend-in-the-microservices-architecture.html*](http://allegro.tech/2016/03/Managing-Frontend-in-the-microservices-architecture.html)
+    [*https://allegro.tech/2016/03/Managing-Frontend-in-the-microservices-architecture.html*](https://allegro.tech/2016/03/Managing-Frontend-in-the-microservices-architecture.html)
 
 
 >[!div class="step-by-step"]

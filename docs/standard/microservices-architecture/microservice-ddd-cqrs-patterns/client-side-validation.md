@@ -11,11 +11,11 @@ ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 273aa0a8ceb7f683999f1074faae0a6aa303f9be
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
-ms.translationtype: MT
+ms.openlocfilehash: 2057609c7f5c26668eac49cecce522135545e7dd
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="client-side-validation-validation-in-the-presentation-layers"></a>클라이언트 쪽 유효성 검사(프레젠테이션 레이어의 유효성 검사)
 
@@ -35,8 +35,8 @@ ms.lasthandoff: 03/26/2018
 
 ### <a name="validation-in-xamarin-mobile-apps"></a>Xamarin 모바일 앱의 유효성 검사
 
--   **텍스트 입력 및 표시 한 오류를 유효성 검사**
-    [*https://developer.xamarin.com/recipes/ios/standard\_컨트롤/텍스트\_필드/유효성 검사\_입력 /*](https://developer.xamarin.com/recipes/ios/standard_controls/text_field/validate_input/)
+-   **텍스트 입력 유효성 검사 및 오류 표시**
+    [*https://developer.xamarin.com/recipes/ios/standard\_컨트롤/텍스트\_필드/유효성 검사\_입력/*](https://developer.xamarin.com/recipes/ios/standard_controls/text_field/validate_input/)
 
 -   **유효성 검사 콜백**
     [*https://developer.xamarin.com/samples/xamarin-forms/XAML/ValidationCallback/*](https://developer.xamarin.com/samples/xamarin-forms/XAML/ValidationCallback/)
@@ -48,14 +48,14 @@ ms.lasthandoff: 03/26/2018
 
 ### <a name="validation-in-spa-web-apps-angular-2-typescript-javascript"></a>SPA 웹앱의 유효성 검사(Angular 2, TypeScript, JavaScript)
 
--   **Ado Kukic. Angular 2 폼 유효성 검사** **
+-   **Ado Kukic. Angular 2 양식 유효성 검사** **
     **[*https://scotch.io/tutorials/angular-2-form-validation*](https://scotch.io/tutorials/angular-2-form-validation)
 
--   **폼 유효성 검사**
+-   **양식 유효성 검사**
     [*https://angular.io/docs/ts/latest/cookbook/form-validation.html*](https://angular.io/docs/ts/latest/cookbook/form-validation.html)
 
 -   **유효성 검사** Breeze 설명서
-    [*http://breeze.github.io/doc-js/validation.html*](http://breeze.github.io/doc-js/validation.html)
+    [*https://breeze.github.io/doc-js/validation.html*](https://breeze.github.io/doc-js/validation.html)
 
 요약하면 유효성 검사에 관해 가장 중요한 개념은 다음과 같습니다.
 
