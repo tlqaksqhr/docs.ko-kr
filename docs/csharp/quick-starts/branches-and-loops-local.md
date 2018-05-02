@@ -1,6 +1,6 @@
 ---
-title: "분기 및 루프 자습서 - C# 로컬 빠른 시작"
-description: "분기 및 루프에 관한 이 빠른 시작에서는 C# 코드를 작성하여 문을 반복적으로 실행하기 위한 조건부 분기 및 루프를 지원하는 언어 구문을 살펴봅니다."
+title: 분기 및 루프 자습서 - C# 로컬 빠른 시작
+description: 분기 및 루프에 관한 이 빠른 시작에서는 C# 코드를 작성하여 문을 반복적으로 실행하기 위한 조건부 분기 및 루프를 지원하는 언어 구문을 살펴봅니다.
 author: billwagner
 ms.author: wiwagn
 ms.date: 10/31/2017
@@ -9,11 +9,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.custom: mvc
-ms.openlocfilehash: 7d69b2b9bb02e2999bcd785da653bd4a13ed947c
-ms.sourcegitcommit: d2da0142247ef42a219a5d2907f153e62dc6ea0d
+ms.openlocfilehash: ea9fb2322202dfa19344e6119e748827535b0739
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="branches-and-loops"></a>분기 및 루프
 
@@ -47,7 +47,7 @@ int b = 3;
 > [!TIP]
 > C# (또는 다른 프로그래밍 언어)를 살펴보면서 코드를 작성할 때 실수를 하게 될 것입니다. 컴파일러가 오류를 찾아 보고합니다. 오류 출력 및 오류를 생성한 코드를 자세히 살펴봅니다. 일반적으로 컴파일러 오류는 문제를 찾는 데 도움이 될 수 있습니다.
 
-이 첫 번째 샘플에서는 `if`의 기능과 부울 형식을 보여줍니다. *부울*은 `true` 또는 `false`의 두 값 중 하나를 가질 수 있는 변수입니다. C#은 부울 변수에 대한 특수 형식 `bool`을 정의합니다. `if` 문은 `bool`의 값을 확인합니다. 값이 `true`인 경우 `if` 뒤의 문이 실행됩니다. 그러하지 않으면 건너뜁니다.
+이 첫 번째 샘플에서는 `if`의 기능과 부울 형식을 보여 줍니다. *부울*은 `true` 또는 `false`의 두 값 중 하나를 가질 수 있는 변수입니다. C#은 부울 변수에 대한 특수 형식 `bool`을 정의합니다. `if` 문은 `bool`의 값을 확인합니다. 값이 `true`인 경우 `if` 뒤의 문이 실행됩니다. 그러하지 않으면 건너뜁니다.
 
 조건을 확인하고 해당 조건에 따라 문을 실행하는 이 프로세스는 아주 강력합니다.
 
@@ -104,7 +104,7 @@ else
 }
 ```
 
-`&&`는 “and”를 나타냅니다. true 분기에서 문을 실행하려면 두 조건이 모두 true여야 합니다.  이러한 예제에서는 `{` 및 `}`로 문을 묶으면 각 조건부 분기에 여러 문을 가질 수 있음도 보여줍니다.
+`&&`는 “and”를 나타냅니다. true 분기에서 문을 실행하려면 두 조건이 모두 true여야 합니다.  이러한 예제에서는 `{` 및 `}`로 문을 묶으면 각 조건부 분기에 여러 문을 가질 수 있음도 보여 줍니다.
 
 `||`을 사용하여 “or”를 나타낼 수도 있습니다. 지금까지 작성한 코드 뒤에 다음 코드를 추가합니다.
 
@@ -249,11 +249,11 @@ for(int index = 0; index < 10; index++)
 - `if` 문은 숫자가 합계의 일부여야 하는지를 확인하는 조건을 제공합니다.
 - `for` 루프는 1에서 20까지의 모든 숫자에 대해 일련의 단계를 반복하는 데 도움이 됩니다.
 
-직접 시도해 보세요. 그런 다음 어떻게 했는지 확인하세요. 답으로 63을 받아야 합니다. [GitHub에서 완성된 코드를 보고](https://github.com/dotnet/docs/tree/master/samples/csharp/branches-quickstart/Program.cs#L46-L54) 가능한 한 가지 답을 확인할 수 있습니다.
+직접 시도해 보세요. 그런 다음 어떻게 했는지 확인하세요. 답으로 63을 받아야 합니다. [GitHub에서 완성된 코드를 보고](https://github.com/dotnet/samples/tree/master/csharp/branches-quickstart/Program.cs#L46-L54) 가능한 한 가지 답을 확인할 수 있습니다.
 
 “분기 및 루프” 빠른 시작을 완료했습니다.
 
-자체 개발 환경에서 [보간된 문자열](interpolated-strings-local.md) 빠른 시작을 계속할 수 있습니다.
+자체 개발 환경에서 [문자열 보간](interpolated-strings-local.md) 빠른 시작을 계속할 수 있습니다.
 
 다음 항목에서는 해당 개념에 대해 더 자세히 알아볼 수 있습니다.
 

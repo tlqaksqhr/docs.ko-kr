@@ -1,7 +1,7 @@
 ---
-title: "마이크로 서비스 API 및 계약 만들기, 개선 및 버전 관리"
-description: "컨테이너화된 .NET 응용 프로그램을 위한 .NET 마이크로 서비스 아키텍처 | 마이크로 서비스 API 및 계약 만들기, 개선 및 버전 관리"
-keywords: "Docker, 마이크로 서비스, ASP.NET, 컨테이너"
+title: 마이크로 서비스 API 및 계약 만들기, 개선 및 버전 관리
+description: 컨테이너화된 .NET 응용 프로그램을 위한 .NET 마이크로 서비스 아키텍처 | 마이크로 서비스 API 및 계약 만들기, 개선 및 버전 관리
+keywords: Docker, 마이크로 서비스, ASP.NET, 컨테이너
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
@@ -11,11 +11,11 @@ ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 3aaa7eaa8bc535874369cf08414f2211cae1bed9
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 7a80405f0a206cfaa0462392eddfc95878353cd7
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="creating-evolving-and-versioning-microservice-apis-and-contracts"></a>마이크로 서비스 API 및 계약 만들기, 개선 및 버전 관리
 
@@ -31,12 +31,12 @@ API에 특성이나 매개 변수를 추가하는 경우처럼 API 변경이 작
 
 마지막으로 REST 아키텍처를 사용할 경우 서비스 버전 관리와 확대 가능한 API를 위해서 [하이퍼미디어](https://www.infoq.com/articles/mark-baker-hypermedia)가 가장 좋은 방법입니다.
 
-## <a name="additional-resources"></a>추가 리소스
+## <a name="additional-resources"></a>추가 자료
 
--   **Scott Hanselman. 간편한 ASP.NET Core RESTful Web API 버전 관리**
-    <http://www.hanselman.com/blog/ASPNETCoreRESTfulWebAPIVersioningMadeEasy.aspx>
+-   **Scott Hanselman. 쉬워진 ASP.NET Core RESTful Web API 버전 관리**
+    <https://www.hanselman.com/blog/ASPNETCoreRESTfulWebAPIVersioningMadeEasy.aspx>
 
--   **RESTful web API 버전 관리**
+-   **RESTful Web API 버전 관리**
     [*https://docs.microsoft.com/azure/architecture/best-practices/api-design#versioning-a-restful-web-api*](https://docs.microsoft.com/azure/architecture/best-practices/api-design#versioning-a-restful-web-api)
 
 -   **Roy Fielding. 버전 관리, 하이퍼미디어 및 REST**

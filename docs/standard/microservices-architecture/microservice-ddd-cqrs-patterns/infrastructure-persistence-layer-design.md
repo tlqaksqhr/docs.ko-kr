@@ -11,15 +11,15 @@ ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 76db5388c75d4eb3b5cc23c1e57cc391a15f2934
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
-ms.translationtype: MT
+ms.openlocfilehash: cab12426308be258134e0385c5a6eb6cdb5d544b
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="designing-the-infrastructure-persistence-layer"></a>인프라 지속성 계층 디자인
 
-데이터 지속성 구성 요소는 마이크로 서비스(즉, 마이크로 서비스의 데이터베이스)의 경계 내에서 호스팅된 데이터에 대한 액세스를 제공합니다. 이 구성 요소에는 사용자 지정 EF DBContexts 같은 [작업 단위](http://martinfowler.com/eaaCatalog/unitOfWork.html) 클래스 및 리포지토리 등의 구성 요소의 실제 구현을 포함합니다.
+데이터 지속성 구성 요소는 마이크로 서비스(즉, 마이크로 서비스의 데이터베이스)의 경계 내에서 호스팅된 데이터에 대한 액세스를 제공합니다. 이 구성 요소에는 사용자 지정 EF DBContexts 같은 [작업 단위](https://martinfowler.com/eaaCatalog/unitOfWork.html) 클래스 및 리포지토리 등의 구성 요소의 실제 구현을 포함합니다.
 
 ## <a name="the-repository-pattern"></a>리포지토리 패턴
 
@@ -90,7 +90,7 @@ public interface IOrderRepository : IRepository<Order>
 
 작업 단위는 다중 삽입, 업데이트, 삭제 작업과 관련된 단일 트랜잭션이라고도 합니다. 간단히 말해 특정 사용자 작업(예를 들어, 웹사이트 등록)의 경우 모든 삽입, 업데이트 및 삭제 트랜잭션은 단일 트랜잭션으로 처리된다는 의미입니다. 단일 트랜잭션 처리는 복잡한 방식으로 다중 데이터베이스 트랜잭션을 처리하는 것보다 더 효율적입니다.
 
-이러한 다중 지속성 작업은 응용 프로그램 계층에서 해당 코드가 명령을 내리는 경우 나중에 단일 작업으로 수행됩니다. 실제 데이터베이스 저장소에 메모리 내 변경을 적용은 일반적으로 [작업 단위 패턴](http://martinfowler.com/eaaCatalog/unitOfWork.html)에 기반을 두고 결정됩니다. EF에서, 작업 단위 패턴은 DBContext로서 구현됩니다.
+이러한 다중 지속성 작업은 응용 프로그램 계층에서 해당 코드가 명령을 내리는 경우 나중에 단일 작업으로 수행됩니다. 실제 데이터베이스 저장소에 메모리 내 변경을 적용은 일반적으로 [작업 단위 패턴](https://martinfowler.com/eaaCatalog/unitOfWork.html)에 기반을 두고 결정됩니다. EF에서, 작업 단위 패턴은 DBContext로서 구현됩니다.
 
 대부분의 경우, 저장소에 작업을 적용하는 방식이나 패턴은 응용 프로그램 성능을 향상시키고 불일치 가능성을 줄일 수 있습니다. 또한, 의도된 모든 작업은 한 트랜잭션의 일부로서 커밋되기 때문에 데이터베이스 테이블에서 트랜잭션 차단을 줄여줍니다. 이 방법은 데이터베이스에 대해 많은 격리된 작업 실행에 비해 더 효율적입니다. 따라서 선택한 ORM은 많은 소형 및 별도 트랜잭션 실행과 대조적으로 동일한 트랜잭션 내에서 여러 가지 업데이트 작업을 그룹화하여 데이터베이스에서의 실행을 최적화할 수 있습니다.
 
@@ -138,21 +138,21 @@ public interface ISpecification<T>
 
 ### <a name="the-repository-pattern"></a>리포지토리 패턴
 
--   **Edward Hieatt와 Rob Mee. 리포지토리 패턴입니다.**
-    [*http://martinfowler.com/eaaCatalog/repository.html*](http://martinfowler.com/eaaCatalog/repository.html)
+-   **Edward Hieatt와 Rob Mee. 리포지토리 패턴.**
+    [*https://martinfowler.com/eaaCatalog/repository.html*](https://martinfowler.com/eaaCatalog/repository.html)
 
 -   **리포지토리 패턴**
     [*https://msdn.microsoft.com/library/ff649690.aspx*](https://msdn.microsoft.com/library/ff649690.aspx)
 
--   **리포지토리 패턴: 데이터 지 속성 추상화**
+-   **리포지토리 패턴: 데이터 지속성 추상화**
     [*http://deviq.com/repository-pattern/*](http://deviq.com/repository-pattern/)
 
--   **Eric Evans. 도메인 기반 디자인: 소프트웨어 핵심에서 복잡성 처리.** (예약; 리포지토리 패턴에 대 한 설명이 포함) [*https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/*](https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/)
+-   **Eric Evans. 도메인 기반 디자인: 소프트웨어 핵심에서 복잡성 처리.** (서적, 리포지토리 패턴 논의 포함) [*https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/*](https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/)
 
 ### <a name="unit-of-work-pattern"></a>작업 단위 패턴
 
--   **Martin Fowler. 단위 작업 패턴입니다.**
-    [*http://martinfowler.com/eaaCatalog/unitOfWork.html*](http://martinfowler.com/eaaCatalog/unitOfWork.html)
+-   **Martin Fowler. 작업 단위 패턴.**
+    [*https://martinfowler.com/eaaCatalog/unitOfWork.html*](https://martinfowler.com/eaaCatalog/unitOfWork.html)
 
 <!-- -->
 
@@ -161,7 +161,7 @@ public interface ISpecification<T>
 
 ### <a name="the-specification-pattern"></a>사양 패턴
 
--   **사양 패턴입니다.**
+-   **사양 패턴.**
     [*http://deviq.com/specification-pattern/*](http://deviq.com/specification-pattern/)
 
 -   **Evans, Eric(2004). 도메인 기반 디자인. Addison-Wesley. p. 224.**

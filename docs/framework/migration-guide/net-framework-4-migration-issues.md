@@ -1,22 +1,24 @@
 ---
-title: ".NET Framework 4 마이그레이션 문제"
+title: .NET Framework 4 마이그레이션 문제
 ms.date: 05/02/2017
 ms.prod: .net-framework
-ms.technology: dotnet-clr
+ms.technology:
+- dotnet-clr
 ms.topic: article
 helpviewer_keywords:
 - .NET Framework 4, migration
 - application compatibility
 ms.assetid: df478548-8c05-4de2-8ba7-adcdbe1c2a60
 author: rpetrusha
-ms.author: mariaw
+ms.author: ronpet
 manager: wpickett
-ms.workload: mariaw
-ms.openlocfilehash: b92299279e57a0662f7438cad7c6009d53bda9ee
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- mariaw
+ms.openlocfilehash: 05c86759b16fa4e1cbf31b7409601cb6b91cd08e
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="net-framework-4-migration-issues"></a>.NET Framework 4 마이그레이션 문제
 

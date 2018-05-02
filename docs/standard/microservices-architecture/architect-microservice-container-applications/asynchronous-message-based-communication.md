@@ -1,7 +1,7 @@
 ---
-title: "비동기 메시지 기반 통신"
-description: "컨테이너화된 .NET 응용 프로그램을 위한 .NET 마이크로 서비스 아키텍처 | 비동기 메시지 기반 통신"
-keywords: "Docker, 마이크로 서비스, ASP.NET, 컨테이너"
+title: 비동기 메시지 기반 통신
+description: 컨테이너화된 .NET 응용 프로그램을 위한 .NET 마이크로 서비스 아키텍처 | 비동기 메시지 기반 통신
+keywords: Docker, 마이크로 서비스, ASP.NET, 컨테이너
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
@@ -11,11 +11,11 @@ ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 7469c41afa16bf96bc81a36c571e3e005c50d904
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 7c216dba3b763c310fe17e6294ae5f2b091f71f9
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="asynchronous-message-based-communication"></a>비동기 메시지 기반 통신
 
@@ -59,7 +59,7 @@ ms.lasthandoff: 01/19/2018
 
 앞서 [분산 데이터 관리의 문제 및 솔루션](#challenges-and-solutions-for-distributed-data-management) 섹션에서 설명한 것 처럼 여러 마이크로 서비스에 걸쳐 있는 비즈니스 작업을 구현하기 위해 통합 이벤트를 사용할 수 있습니다. 따라서 해당 서비스 간의 최종 일관성을 유지해야 합니다. 결국 일관된 트랜잭션은 분산된 작업의 컬렉션으로 구성돼 있습니다. 각 작업에서 관련 마이크로 서비스는 도메인 엔터티를 업데이트 하고, 같은 종단 간 비즈니스 작업 내에서 다음 작업을 발생시키는 또 다른 통합 이벤트를 게시합니다.
 
-중요한 점은 동일한 이벤트를 구독하는 다양한 마이크로 서비스와 통신하고자 하는 것입니다. 이렇게 하기 위해 그림 4-19에 보이는 것처럼 이벤트 기반 통신에 기초해 메시지를 게시/구독할 수 있습니다. 이 게시/구독 메커니즘은 마이크로 서비스 아키텍처에만 적용되지 않습니다. 이는 DDD에서 [바운딩된 컨텍스트](http://martinfowler.com/bliki/BoundedContext.html)가 통신하는 방식이나 [명령 및 쿼리 역할 구분(CQRS)](http://martinfowler.com/bliki/CQRS.html) 아키텍처 패턴에서 쓰기 데이터베이스에서 읽기 데이터베이스로 업데이트하는 방식과 유사합니다. 목표는 분산된 시스템에 걸쳐 여러 데이터 원본 간의 최종 일관성을 유지하는 것입니다.
+중요한 점은 동일한 이벤트를 구독하는 다양한 마이크로 서비스와 통신하고자 하는 것입니다. 이렇게 하기 위해 그림 4-19에 보이는 것처럼 이벤트 기반 통신에 기초해 메시지를 게시/구독할 수 있습니다. 이 게시/구독 메커니즘은 마이크로 서비스 아키텍처에만 적용되지 않습니다. 이는 DDD에서 [바운딩된 컨텍스트](https://martinfowler.com/bliki/BoundedContext.html)가 통신하는 방식이나 [명령 및 쿼리 역할 구분(CQRS)](https://martinfowler.com/bliki/CQRS.html) 아키텍처 패턴에서 쓰기 데이터베이스에서 읽기 데이터베이스로 업데이트하는 방식과 유사합니다. 목표는 분산된 시스템에 걸쳐 여러 데이터 원본 간의 최종 일관성을 유지하는 것입니다.
 
 ![](./media/image19.png)
 
@@ -81,7 +81,7 @@ ms.lasthandoff: 01/19/2018
 
 -   MSMQ와 같은 트랜잭션(DTC 기반) 큐를 사용합니다. (다만, 이는 레거시 방식입니다.)
 
--   [트랜잭션 로그 마이닝](http://www.scoop.it/t/sql-server-transaction-log-mining)을 사용합니다.
+-   [트랜잭션 로그 마이닝](https://www.scoop.it/t/sql-server-transaction-log-mining)을 사용합니다.
 
 -   전체 [이벤트 소싱](https://msdn.microsoft.com/library/dn589792.aspx) 패턴을 사용합니다.
 
@@ -89,10 +89,10 @@ ms.lasthandoff: 01/19/2018
 
 비동기 통신을 사용할 때 고려해야 할 추가 토픽은 메시지 idempotence 및 메시지 중복입니다. 이들 토픽은 이 가이드의 뒷부분에 나오는 [마이크로 서비스(통합 이벤트) 간 이벤트 기반 통신 구현](#implementing_event_based_comms_microserv) 섹션에서 다룹니다.
 
-## <a name="additional-resources"></a>추가 리소스
+## <a name="additional-resources"></a>추가 자료
 
 -   **이벤트 기반 메시징**
-    [*http://soapatterns.org/design\_patterns/event\_driven\_messaging*](http://soapatterns.org/design_patterns/event_driven_messaging)
+    [*http://soapatterns.org/design\_패턴/이벤트\_기반\_메시징*](http://soapatterns.org/design_patterns/event_driven_messaging)
 
 -   **게시/구독 채널**
     [*http://www.enterpriseintegrationpatterns.com/patterns/messaging/PublishSubscribeChannel.html*](http://www.enterpriseintegrationpatterns.com/patterns/messaging/PublishSubscribeChannel.html)
@@ -100,14 +100,14 @@ ms.lasthandoff: 01/19/2018
 -   **Udi Dahan. 명확한 CQRS**
     [*http://udidahan.com/2009/12/09/clarified-cqrs/*](http://udidahan.com/2009/12/09/clarified-cqrs/)
 
--   **명령 및 쿼리 역할 구분(CQRS)**
+-   **CQRS(명령과 쿼리의 역할 구분)**
     [*https://docs.microsoft.com/azure/architecture/patterns/cqrs*](https://docs.microsoft.com/azure/architecture/patterns/cqrs)
 
 -   **바인딩된 컨텍스트 간 통신**
     [*https://msdn.microsoft.com/library/jj591572.aspx*](https://msdn.microsoft.com/library/jj591572.aspx)
 
 -   **최종 일관성**
-    [*https://en.wikipedia.org/wiki/Eventual\_consistency*](https://en.wikipedia.org/wiki/Eventual_consistency)
+    [*https://en.wikipedia.org/wiki/Eventual\_일관성*](https://en.wikipedia.org/wiki/Eventual_consistency)
 
 -   **Jimmy Bogard. 복원력에 대한 리팩터링: 결합 평가**
     [*https://jimmybogard.com/refactoring-towards-resilience-evaluating-coupling/*](https://jimmybogard.com/refactoring-towards-resilience-evaluating-coupling/)

@@ -1,7 +1,7 @@
 ---
-title: "높은 확장성 및 가용성을 위한 마이크로 서비스 및 다중 컨테이너 응용 프로그램 오케스트레이션"
-description: "컨테이너화된 .NET 응용 프로그램용 .NET 마이크로 서비스 아키텍처 | 높은 확장성 및 가용성을 위한 마이크로 서비스 및 다중 컨테이너 응용 프로그램 오케스트레이션"
-keywords: "Docker, 마이크로 서비스, ASP.NET, 컨테이너"
+title: 높은 확장성 및 가용성을 위한 마이크로 서비스 및 다중 컨테이너 응용 프로그램 오케스트레이션
+description: 컨테이너화된 .NET 응용 프로그램용 .NET 마이크로 서비스 아키텍처 | 높은 확장성 및 가용성을 위한 마이크로 서비스 및 다중 컨테이너 응용 프로그램 오케스트레이션
+keywords: Docker, 마이크로 서비스, ASP.NET, 컨테이너
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/18/2017
@@ -11,11 +11,11 @@ ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: ff524c6d61c6ce51a1a3e831cd666a3b61ac849e
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: c484372c0b5626fc20c8991a432e62353baa7a4c
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="orchestrating-microservices-and-multi-container-applications-for-high-scalability-and-availability"></a>높은 확장성 및 가용성을 위한 마이크로 서비스 및 다중 컨테이너 응용 프로그램 오케스트레이션
 
@@ -122,9 +122,9 @@ Azure Container Service의 사용을 시작하려면 Azure Resource Manager 템�
 
 ACS는 현재 Azure의 표준 A, D, DS, G 및 GS 시리즈 Linux 가상 머신에서 사용할 수 있습니다. 선택한 계산 인스턴스 및 사용되는 다른 기본 인프라 리소스(예: 저장소 및 네트워킹)에 대해서만 요금이 청구됩니다. ACS 자체에 대한 추가 비용은 없습니다.
 
-## <a name="additional-resources"></a>추가 리소스
+## <a name="additional-resources"></a>추가 자료
 
--   **Azure Container Service를 사용하는 Docker 컨테이너 호스팅 솔루션 소개**
+-   **Azure Container Service를 사용한 Docker 컨테이너 호스팅 솔루션 소개**
     [*https://docs.microsoft.com/azure/container-service/container-service-intro*](https://docs.microsoft.com/azure/container-service/container-service-intro)
 
 -   **Docker Swarm 개요**
@@ -137,7 +137,7 @@ ACS는 현재 Azure의 표준 A, D, DS, G 및 GS 시리즈 Linux 가상 머신�
     [*https://docs.mesosphere.com/1.7/overview/*](https://docs.mesosphere.com/1.7/overview/)
 
 -   **Kubernetes.** 공식 사이트는 다음과 같습니다.
-    [*http://kubernetes.io/*](http://kubernetes.io/)
+    [*https://kubernetes.io/*](https://kubernetes.io/)
 
 
 >[!div class="step-by-step"]

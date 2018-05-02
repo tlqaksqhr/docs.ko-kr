@@ -6,14 +6,15 @@ ms.author: wiwagn
 ms.date: 10/06/2017
 ms.prod: .net-core
 ms.technology: dotnet-docker
+ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: bdb215d64253fb7d22ae2c5648030336850006b5
-ms.sourcegitcommit: f28752eab00d2bd97e971542c0f49ce63cfbc239
+ms.openlocfilehash: f4f52bd3438ef9b2e0b74ee91831947a4dd6869d
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/29/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="architectural-principles"></a>아키텍처 원칙
 
@@ -81,7 +82,7 @@ ms.lasthandoff: 01/29/2018
 
 ### <a name="persistence-ignorance"></a>지속성 무시
 
-**PI(지속성 무시)**는 지속되어야 하는 형식을 참조하지만, 그 코드는 선택하는 지속성 기술의 영향을 받지 않습니다. .NET에서는 이러한 형식을 POCO(Plain Old CLR Object)라고 부르기도 합니다. 특정 기본 클래스에서 상속하거나 특정 인터페이스를 구현할 필요가 없기 때문입니다. 지속성 무시는 동일한 비즈니스 모델을 여러 가지 방식으로 지속할 수 있도록 허용하여 응용 프로그램의 유연성을 향상하므로 유용합니다. 지속성 선택은 시간에 따라 한 데이터베이스 기술에서 다른 데이터베이스 기술로 달라질 수 있으며, 응용 프로그램이 시작된 형식(예를 들어 관계형 데이터베이스 외에도 Redis 캐시 또는 Azure DocumentDb 사용) 외에도 추가적인 지속성 형식이 필요할 수 있습니다.
+**PI(지속성 무시)** 는 지속되어야 하는 형식을 참조하지만, 그 코드는 선택하는 지속성 기술의 영향을 받지 않습니다. .NET에서는 이러한 형식을 POCO(Plain Old CLR Object)라고 부르기도 합니다. 특정 기본 클래스에서 상속하거나 특정 인터페이스를 구현할 필요가 없기 때문입니다. 지속성 무시는 동일한 비즈니스 모델을 여러 가지 방식으로 지속할 수 있도록 허용하여 응용 프로그램의 유연성을 향상하므로 유용합니다. 지속성 선택은 시간에 따라 한 데이터베이스 기술에서 다른 데이터베이스 기술로 달라질 수 있으며, 응용 프로그램이 시작된 형식(예를 들어 관계형 데이터베이스 외에도 Redis 캐시 또는 Azure DocumentDb 사용) 외에도 추가적인 지속성 형식이 필요할 수 있습니다.
 
 다음은 이 원칙에 위배되는 몇 가지 예입니다.
 

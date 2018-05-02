@@ -11,11 +11,11 @@ ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 7538c760d396349fe9b1e93a21839e3e59d7f046
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
-ms.translationtype: MT
+ms.openlocfilehash: 279dd4ea2ffb36e13a22f366ece145174918b759
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="subscribing-to-events"></a>이벤트 구독
 
@@ -112,7 +112,7 @@ CQRS 방식을 사용하는 경우와 같은 고급 마이크로 서비스의 �
 
 -   [전체 이벤트 소싱](https://msdn.microsoft.com/library/dn589792.aspx) 패턴 사용.
 
--   [트랜잭션 로그 마이닝](http://www.scoop.it/t/sql-server-transaction-log-mining) 사용.
+-   [트랜잭션 로그 마이닝](https://www.scoop.it/t/sql-server-transaction-log-mining) 사용.
 
 -   [아웃박스 패턴](http://gistlabs.com/2014/05/the-outbox/) 사용. 이 트랜잭션 테이블에는 통합 이벤트를 저장합니다(로컬 트랜잭션 확장).
 
@@ -302,7 +302,7 @@ namespace Microsoft.eShopOnContainers.Services.Basket.API.IntegrationEvents.Even
 
 ### <a name="additional-resources"></a>추가 자료
 
--   **메시지 멱을 구분 하지 않고** (이 페이지에 부제목) [*https://msdn.microsoft.com/library/jj591565.aspx*](https://msdn.microsoft.com/library/jj591565.aspx)
+-   **메시지 멱등성 준수**(이 페이지의 부제목) [*https://msdn.microsoft.com/library/jj591565.aspx*](https://msdn.microsoft.com/library/jj591565.aspx)
 
 ## <a name="deduplicating-integration-event-messages"></a>통합 이벤트 메시지 중복 제거
 
@@ -322,32 +322,32 @@ namespace Microsoft.eShopOnContainers.Services.Basket.API.IntegrationEvents.Even
 
 ### <a name="additional-resources"></a>추가 자료
 
--   **분기 eShopOnContainers NServiceBus (특정 소프트웨어)을 사용 하 여**
+-   **NServiceBus를 사용하여 포크된 eShopOnContainers(특정 소프트웨어)**
     [*http://go.particular.net/eShopOnContainers*](http://go.particular.net/eShopOnContainers)
 
--   **이벤트 구동 메시징**
-    [*http://soapatterns.org/design\_패턴/이벤트\_구동\_메시징*](http://soapatterns.org/design_patterns/event_driven_messaging)
+-   **이벤트 기반 메시징**
+    [*http://soapatterns.org/design\_패턴/이벤트\_기반\_메시징*](http://soapatterns.org/design_patterns/event_driven_messaging)
 
--   **Jimmy Bogard. 결합 평가 복원 력으로 리팩터링:**
+-   **Jimmy Bogard. 복원력에 대한 리팩터링: 결합 평가**
     [*https://jimmybogard.com/refactoring-towards-resilience-evaluating-coupling/*](https://jimmybogard.com/refactoring-towards-resilience-evaluating-coupling/)
 
 -   **게시-구독 채널**
     [*http://www.enterpriseintegrationpatterns.com/patterns/messaging/PublishSubscribeChannel.html*](http://www.enterpriseintegrationpatterns.com/patterns/messaging/PublishSubscribeChannel.html)
 
--   **Bounded 컨텍스트 간 통신**
+-   **바인딩된 컨텍스트 간 통신**
     [*https://msdn.microsoft.com/library/jj591572.aspx*](https://msdn.microsoft.com/library/jj591572.aspx)
 
--   **결과적 일관성**
+-   **최종 일관성**
     [*https://en.wikipedia.org/wiki/Eventual\_일관성*](https://en.wikipedia.org/wiki/Eventual_consistency)
 
--   **Philip Brown. 통합 하기 위한 전략 컨텍스트 제한**
+-   **Philip Brown. 바인딩된 컨텍스트 통합 전략**
     [*http://culttt.com/2014/11/26/strategies-integrating-bounded-contexts/*](http://culttt.com/2014/11/26/strategies-integrating-bounded-contexts/)
 
--   **Chris Richardson. 집계, 이벤트 소싱 및 CQRS-2 부를 사용 하 여 트랜잭션 Microservices 개발**
+-   **Chris Richardson. 집계, 이벤트 소싱 및 CQRS를 사용한 트랜잭션 마이크로 서비스 개발 - 2부**
     [*https://www.infoq.com/articles/microservices-aggregates-events-cqrs-part-2-richardson*](https://www.infoq.com/articles/microservices-aggregates-events-cqrs-part-2-richardson)
 
 -   **Chris Richardson. 이벤트 소싱 패턴**
-    [*http://microservices.io/patterns/data/event-sourcing.html*](http://microservices.io/patterns/data/event-sourcing.html)
+    [*https://microservices.io/patterns/data/event-sourcing.html*](https://microservices.io/patterns/data/event-sourcing.html)
 
 -   **이벤트 소싱 소개**
     [*https://msdn.microsoft.com/library/jj591559.aspx*](https://msdn.microsoft.com/library/jj591559.aspx)
@@ -355,30 +355,30 @@ namespace Microsoft.eShopOnContainers.Services.Basket.API.IntegrationEvents.Even
 -   **Event Store database**. 공식 사이트입니다.
     [*https://geteventstore.com/*](https://geteventstore.com/)
 
--   **Patrick Nommensen. Microservices에 대 한 이벤트 기반 데이터 관리**
+-   **Patrick Nommensen. 마이크로 서비스를 위한 이벤트 기반 데이터 관리**
     *<https://dzone.com/articles/event-driven-data-management-for-microservices-1> *
 
--   **단면 정리**
-    [*https://en.wikipedia.org/wiki/CAP\_정리*](https://en.wikipedia.org/wiki/CAP_theorem)
+-   **CAP 원리**
+    [*https://en.wikipedia.org/wiki/CAP\_원리*](https://en.wikipedia.org/wiki/CAP_theorem)
 
--   **단면 정리 이란?**
+-   **CAP 원리란?**
     [*https://www.quora.com/What-Is-CAP-Theorem-1*](https://www.quora.com/What-Is-CAP-Theorem-1)
 
--   **데이터 일관성 입문**
+-   **데이터 일관성 입문서**
     [*https://msdn.microsoft.com/library/dn589800.aspx*](https://msdn.microsoft.com/library/dn589800.aspx)
 
--   **Rick Saling. 단면 정리: 때문에 "모든 항목은 다르게 지정" 된 클라우드 및 인터넷**
+-   **Rick Saling. CAP 원리: 클라우드와 인터넷의 "모든 것이 다른" 이유**
     [*https://blogs.msdn.microsoft.com/rickatmicrosoft/2013/01/03/the-cap-theorem-why-everything-is-different-with-the-cloud-and-internet/*](https://blogs.msdn.microsoft.com/rickatmicrosoft/2013/01/03/the-cap-theorem-why-everything-is-different-with-the-cloud-and-internet/)
 
--   **Eric Brewer. 단면 12 년간 나중: "규칙" 변경 방법**
+-   **Eric Brewer. CAP 12년 후: "규칙"이 변경되는 방식**
     [*https://www.infoq.com/articles/cap-twelve-years-later-how-the-rules-have-changed*](https://www.infoq.com/articles/cap-twelve-years-later-how-the-rules-have-changed)
 
--   **외부 (DTC) 트랜잭션에 참여** (MSMQ) [  *https://msdn.microsoft.com/library/ms978430.aspx \#bdadotnetasync2\_topic3c*](https://msdn.microsoft.com/library/ms978430.aspx%23bdadotnetasync2_topic3c)
+-   **외부(DTC) 트랜잭션에 참여**(MSMQ) [*https://msdn.microsoft.com/library/ms978430.aspx\#bdadotnetasync2\_topic3c*](https://msdn.microsoft.com/library/ms978430.aspx%23bdadotnetasync2_topic3c)
 
--   **Azure Service Bus. 중복 검색 조정 된 메시징:**
+-   **Azure Service Bus. 조정된 메시징: 중복 검색**
     [*https://code.msdn.microsoft.com/Brokered-Messaging-c0acea25*](https://code.msdn.microsoft.com/Brokered-Messaging-c0acea25)
 
--   **안정성 가이드** (RabbitMQ 설명서) [  *https://www.rabbitmq.com/reliability.html \#소비자*](https://www.rabbitmq.com/reliability.html%23consumer)
+-   **안정성 가이드**(RabbitMQ 설명서) [*https://www.rabbitmq.com/reliability.html\#소비자*](https://www.rabbitmq.com/reliability.html%23consumer)
 
 
 

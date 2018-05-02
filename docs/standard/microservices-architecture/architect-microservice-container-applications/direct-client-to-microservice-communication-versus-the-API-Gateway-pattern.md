@@ -1,7 +1,7 @@
 ---
-title: "클라이언트-마이크로 서비스 간 직접 통신과 API 게이트웨이 패턴 비교"
-description: "컨테이너화된 .NET 응용 프로그램에 대한 .NET 마이크로 서비스 아키텍처 | 클라이언트-마이크로 서비스 간 통신과 API 게이트웨이 패턴 비교"
-keywords: "Docker, 마이크로 서비스, ASP.NET, 컨테이너, API 게이트웨이"
+title: 클라이언트-마이크로 서비스 간 직접 통신과 API 게이트웨이 패턴 비교
+description: 컨테이너화된 .NET 응용 프로그램에 대한 .NET 마이크로 서비스 아키텍처 | 클라이언트-마이크로 서비스 간 통신과 API 게이트웨이 패턴 비교
+keywords: Docker, 마이크로 서비스, ASP.NET, 컨테이너, API 게이트웨이
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/18/2017
@@ -11,11 +11,11 @@ ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 96a02958ef5750aec7a92ff0dd145edc15a5953a
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: fa3f4bb97cf942ee7698b1efa1dcd09b3f2ca571
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="direct-client-to-microservice-communication-versus-the-api-gateway-pattern"></a>클라이언트-마이크로 서비스 간 직접 통신과 API 게이트웨이 패턴 비교
 
@@ -57,7 +57,7 @@ ms.lasthandoff: 12/23/2017
 
 ## <a name="using-an-api-gateway"></a>API 게이트웨이 사용
 
-여러 클라이언트 앱이 있는 대규모 또는 복잡한 마이크로 서비스 기반 응용 프로그램을 디자인하고 빌드하는 경우 [API 게이트웨이](http://microservices.io/patterns/apigateway.html)가 고려할 좋은 방법일 수 있습니다. 이는 마이크로 서비스의 특정 그룹에 단일 진입점을 제공하는 서비스입니다. 개체 지향 디자인의 [외관 패턴](https://en.wikipedia.org/wiki/Facade_pattern)과 유사하지만, 이 경우 분산된 시스템의 일부입니다. 또한 클라이언트 앱의 요구 사항을 고려하면서 빌드하였기 때문에 API 게이트웨이 패턴을 “[BFF](http://samnewman.io/patterns/architectural/bff/)(프런트 엔드를 위한 백 엔드)”라고도 합니다.
+여러 클라이언트 앱이 있는 대규모 또는 복잡한 마이크로 서비스 기반 응용 프로그램을 디자인하고 빌드하는 경우 [API 게이트웨이](https://microservices.io/patterns/apigateway.html)가 고려할 좋은 방법일 수 있습니다. 이는 마이크로 서비스의 특정 그룹에 단일 진입점을 제공하는 서비스입니다. 개체 지향 디자인의 [외관 패턴](https://en.wikipedia.org/wiki/Facade_pattern)과 유사하지만, 이 경우 분산된 시스템의 일부입니다. 또한 클라이언트 앱의 요구 사항을 고려하면서 빌드하였기 때문에 API 게이트웨이 패턴을 “[BFF](https://samnewman.io/patterns/architectural/bff/)(프런트 엔드를 위한 백 엔드)”라고도 합니다.
 
 그림 4-13에 사용자 지정 API 게이트웨이가 어떻게 마이크로 서비스 기반 아키텍처에 적합한지가 나와 있습니다.
 해당 다이어그램에서 여러 다른 클라이언트 앱에 직면하는 단일 사용자 지정 API 게이트웨이 서비스를 사용한다는 점을 강조하는 게 중요합니다. 사용자의 API 게이트웨이 서비스는 클라이언트 앱의 다양하고 많은 요구 사항을 기반으로 늘어나고 진화하므로 그러한 사실은 중요한 위험입니다. 결국 이러한 다른 요구 사항으로 인해 너무 커지면 사실상 모놀리식 응용 프로그램 또는 모놀리식 서비스와 상당히 비슷할 수 있습니다. 그래서 예를 들어 폼 팩터 형식당 하나와 같이 API 게이트웨이를 여러 서비스 또는 더 작은 여러 API 게이트웨이로 분할하는 것이 강력히 권장됩니다.
@@ -108,10 +108,10 @@ Azure API Management를 통해 키, 토큰 및 IP 필터링을 사용하여 API�
 
 -   API 게이트웨이가 단일 팀에서 개발된 경우 개발 병목 상태가 있을 수 있습니다. 이것이 다양한 클라이언트 요구 사항에 응답하는 세분화된 API 게이트웨이가 여러 개인 것이 더 나은 방법인 또 다른 이유입니다. 또한 내부 마이크로 서비스에서 작업 중인 다른 팀에서 소유하는 여러 영역 또는 레이어로 API 게이트웨이를 내부적으로 구분할 수도 있습니다.
 
-## <a name="additional-resources"></a>추가 리소스
+## <a name="additional-resources"></a>추가 자료
 
--   **Charles Richardson. 패턴: API 게이트웨이 / 프런트 엔드를 위한 백 엔드**
-    [*http://microservices.io/patterns/apigateway.html*](http://microservices.io/patterns/apigateway.html)
+-   **Charles Richardson. 패턴: 프런트 엔드용 API 게이트웨이/백 엔드**
+    [*https://microservices.io/patterns/apigateway.html*](https://microservices.io/patterns/apigateway.html)
 
 -   **Azure API Management**
     [*https://azure.microsoft.com/services/api-management/*](https://azure.microsoft.com/services/api-management/)
@@ -119,7 +119,7 @@ Azure API Management를 통해 키, 토큰 및 IP 필터링을 사용하여 API�
 -   **Udi Dahan. 서비스 지향 컴퍼지션**\
     [*http://udidahan.com/2014/07/30/service-oriented-composition-with-video/*](http://udidahan.com/2014/07/30/service-oriented-composition-with-video/)
 
--   **Clemens Vasters. GOTO 2016에서의 메시징 및 마이크로 서비스**(비디오) [*https://www.youtube.com/watch?v=rXi5CLjIQ9k*](https://www.youtube.com/watch?v=rXi5CLjIQ9k)
+-   **Clemens Vasters. GOTO 2016의 메시징 및 마이크로 서비스**(비디오) [*https://www.youtube.com/watch?v=rXi5CLjIQ9k*](https://www.youtube.com/watch?v=rXi5CLjIQ9k)
 
 
 >[!div class="step-by-step"]

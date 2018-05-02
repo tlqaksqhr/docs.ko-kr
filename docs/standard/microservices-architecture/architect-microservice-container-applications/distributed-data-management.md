@@ -1,7 +1,7 @@
 ---
-title: "분산 데이터 관리를 위한 과제 및 해결 방법"
-description: "컨테이너화된 .NET 응용 프로그램용 .NET 마이크로 서비스 아키텍처 | 분산 데이터 관리를 위한 과제 및 해결 방법"
-keywords: "Docker, 마이크로 서비스, ASP.NET, 컨테이너"
+title: 분산 데이터 관리를 위한 과제 및 해결 방법
+description: 컨테이너화된 .NET 응용 프로그램용 .NET 마이크로 서비스 아키텍처 | 분산 데이터 관리를 위한 과제 및 해결 방법
+keywords: Docker, 마이크로 서비스, ASP.NET, 컨테이너
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
@@ -11,11 +11,11 @@ ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: b0252586a508c059099885991b87c79346e0d809
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: a26f4243acee52e493a10f13ff18899823fd03ba
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="challenges-and-solutions-for-distributed-data-management"></a>분산 데이터 관리를 위한 과제 및 해결 방법
 
@@ -87,30 +87,30 @@ ACID 방식 또는 2단계 커밋 트랜잭션은 마이크로 서비스 원칙�
 
 비동기 통신 사용에 대한 자세한 내용은 이 가이드의 뒷부분에 나오는 [비동기식 마이크로 서비스 통합에서 마이크로 서비스 자율성 적용](#asynchronous-microservice-integration-enforce-microservices-autonomy) 및 [비동기 메시지 기반 통신](#asynchronous-message-based-communication) 섹션에서 설명합니다.
 
-## <a name="additional-resources"></a>추가 리소스
+## <a name="additional-resources"></a>추가 자료
 
--   **CAP 정리**
-    [*https://en.wikipedia.org/wiki/CAP\_theorem*](https://en.wikipedia.org/wiki/CAP_theorem)
+-   **CAP 원리**
+    [*https://en.wikipedia.org/wiki/CAP\_원리*](https://en.wikipedia.org/wiki/CAP_theorem)
 
 -   **최종 일관성**
-    [*https://en.wikipedia.org/wiki/Eventual\_consistency*](https://en.wikipedia.org/wiki/Eventual_consistency)
+    [*https://en.wikipedia.org/wiki/Eventual\_일관성*](https://en.wikipedia.org/wiki/Eventual_consistency)
 
 -   **데이터 일관성 입문서**
     [*https://msdn.microsoft.com/library/dn589800.aspx*](https://msdn.microsoft.com/library/dn589800.aspx)
 
--   **Martin Fowler. CQRS(명령과 쿼리의 역할 분리)**
-    [*http://martinfowler.com/bliki/CQRS.html*](http://martinfowler.com/bliki/CQRS.html)
+-   **Martin Fowler. CQRS(명령과 쿼리의 역할 구분)**
+    [*https://martinfowler.com/bliki/CQRS.html*](https://martinfowler.com/bliki/CQRS.html)
 
 -   **구체화된 뷰**
     [*https://docs.microsoft.com/azure/architecture/patterns/materialized-view*](https://docs.microsoft.com/azure/architecture/patterns/materialized-view)
 
--   **Charles Row 작성, ACID 및 BASE: 데이터베이스 트랜잭션 처리의 pH 이동**
+-   **Charles Row 작성, ACID 및 베이스: 데이터베이스 트랜잭션 처리의 pH 이동**
     [*http://www.dataversity.net/acid-vs-base-the-shifting-ph-of-database-transaction-processing/*](http://www.dataversity.net/acid-vs-base-the-shifting-ph-of-database-transaction-processing/)
 
 -   **보상 트랜잭션**
     [*https://docs.microsoft.com/azure/architecture/patterns/compensating-transaction*](https://docs.microsoft.com/azure/architecture/patterns/compensating-transaction)
 
--   **Udi Dahan 작성, 서비스 지향 구성 요소**
+-   **Udi Dahan. 서비스 지향 컴퍼지션**
     [*http://udidahan.com/2014/07/30/service-oriented-composition-with-video/*](http://udidahan.com/2014/07/30/service-oriented-composition-with-video/)
 
 

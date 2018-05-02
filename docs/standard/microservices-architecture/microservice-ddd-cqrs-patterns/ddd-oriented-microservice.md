@@ -1,7 +1,7 @@
 ---
-title: "DDD 중심 마이크로 서비스 설계"
-description: "컨테이너화된 .NET 응용 프로그램을 위한 .NET 마이크로 서비스 아키텍처 | DDD 중심 마이크로 서비스 설계"
-keywords: "Docker, 마이크로 서비스, ASP.NET, 컨테이너"
+title: DDD 중심 마이크로 서비스 설계
+description: 컨테이너화된 .NET 응용 프로그램을 위한 .NET 마이크로 서비스 아키텍처 | DDD 중심 마이크로 서비스 설계
+keywords: Docker, 마이크로 서비스, ASP.NET, 컨테이너
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 11/06/2017
@@ -11,11 +11,11 @@ ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 38b65bc6752dd8b6ed4083c0bc5a5eccabcffbcc
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: d2d07abe55f30e0b12a7f0cba937abd1b7e32629
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="designing-a-ddd-oriented-microservice"></a>DDD 중심 마이크로 서비스 설계
 
@@ -57,7 +57,7 @@ DDD(도메인 기반 설계)는 사용 사례와 관련하여 현실의 비즈�
 
 ### <a name="the-domain-model-layer"></a>도메인 모델 계층
 
-Eric Evans는 훌륭한 저서인 [Domain Driven Design](http://domainlanguage.com/ddd/)에서 도메인 모델 게층과 응용 프로그램 계층을 따르는 것에 대해 설명한 바 있습니다.
+Eric Evans는 훌륭한 저서인 [Domain Driven Design](https://domainlanguage.com/ddd/)에서 도메인 모델 게층과 응용 프로그램 계층을 따르는 것에 대해 설명한 바 있습니다.
 
 **도메인 모델 계층**: 비즈니스 개념, 비즈니스 상황 정보, 비즈니스 규칙을 나타내는 작업을 담당합니다. 저장을 위한 기술 세부 정보는 인프라에 위임되지만 비즈니스 상황을 반영한 상태가 여기서 제어 및 사용됩니다. 이 계층은 비즈니스 소프트웨어의 핵심입니다.
 
@@ -75,7 +75,7 @@ Entity Framework Core와 같은 대부분의 최신 ORM 프레임워크에서는
 
 ### <a name="the-application-layer"></a>응용 프로그램 계층
 
-응용 프로그램 계층을 시작하면서 Eric Evans의 저서 [Domain Driven Design](http://domainlanguage.com/ddd/)을 다시 한 번 살펴보겠습니다.
+응용 프로그램 계층을 시작하면서 Eric Evans의 저서 [Domain Driven Design](https://domainlanguage.com/ddd/)을 다시 한 번 살펴보겠습니다.
 
 **응용 프로그램 계층:** 소프트웨어가 수행할 작업을 정의하고 표현적 도메인 개체가 문제를 해결하도록 지시합니다. 이 계층은이 담당하는 작업은 비즈니스에 유의미하거나, 다른 시스템의 응용 프로그램 계층과의 상호 작용에 필요합니다. 이 계층은 씬으로 유지됩니다. 비즈니스 규칙이나 지식은 포함하지 않으며 작업을 조정하고 다음 하위 계층에서 도메인 계층의 협력을 위해 업무를 위임하기만 합니다. 비비즈니스 상환을 반영하는 상태를 갖지 않지만 사용자 또는 프로그램에 대해 작업의 진행 상황을 반영하는 상태는 가질 수 있습니다.
 
@@ -99,7 +99,7 @@ Entity Framework Core와 같은 대부분의 최신 ORM 프레임워크에서는
 
 이 계층 설계는 각각의 마이크로 서비스마다 독립적입니다. 앞서 언급한 것처럼 DDD 패턴에 따라 가장 복잡한 마이크로 서비스를 구현할 수 있고 더 간단한 데이터 중심 마이크로 서비스(단일 계층의 간단한 CRUD)는 더 간단한 방법으로 구현합니다.
 
-#### <a name="additional-resources"></a>추가 리소스
+#### <a name="additional-resources"></a>추가 자료
 
 -   **DevIQ. 지속성 무시 원칙**
     [*http://deviq.com/persistence-ignorance/*](http://deviq.com/persistence-ignorance/)
@@ -107,7 +107,7 @@ Entity Framework Core와 같은 대부분의 최신 ORM 프레임워크에서는
 -   **Oren Eini. 인프라 무시**
     [*https://ayende.com/blog/3137/infrastructure-ignorance*](https://ayende.com/blog/3137/infrastructure-ignorance)
 
--   **Angel Lopez. 도메인 중심 설계의 계층화된 아키텍처**
+-   **Angel Lopez. 도메인 기반 디자인의 계층화된 아키텍처**
     [*https://ajlopez.wordpress.com/2008/09/12/layered-architecture-in-domain-driven-design/*](https://ajlopez.wordpress.com/2008/09/12/layered-architecture-in-domain-driven-design/)
 
 

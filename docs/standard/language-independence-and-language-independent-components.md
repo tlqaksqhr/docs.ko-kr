@@ -1,12 +1,12 @@
 ---
-title: "언어 독립성 및 언어 독립적 구성 요소"
-ms.custom: 
+title: 언어 독립성 및 언어 독립적 구성 요소
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -19,18 +19,18 @@ helpviewer_keywords:
 - runtime, language interoperability
 - common language runtime, language interoperability
 ms.assetid: 4f0b77d0-4844-464f-af73-6e06bedeafc6
-caps.latest.revision: 
+caps.latest.revision: 35
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 81ccf70482c8b7f4acb0b18381ed4cf07edc06af
-ms.sourcegitcommit: 96cc82cac4650adfb65ba351506d8a8fbcd17b5c
+ms.openlocfilehash: 1d588768f53bf5850a0fa7cc825c5ffa1114ec6f
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/19/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="language-independence-and-language-independent-components"></a>언어 독립성 및 언어 독립적 구성 요소
 .NET Framework는 언어에 국한되지 않습니다. 즉, 개발자로서 .NET Framework를 대상으로 하는 많은 언어 중 하나로 개발할 수 있습니다(예: C#, C++/CLI, Eiffel, F#, IronPython, IronRuby, PowerBuilder, Visual Basic, Visual COBOL 및 Windows PowerShell). 원래 작성된 언어를 모르거나 원래의 언어 규칙을 따르지 않고도 .NET Framework를 위해 개발된 클래스 라이브러리의 형식과 멤버에 액세스할 수 있습니다. 사용자가 구성 요소 개발자일 경우 언어와 상관없이 모든 .NET Framework 응용 프로그램에서 구성 요소를 액세스할 수 있습니다.  
@@ -38,7 +38,7 @@ ms.lasthandoff: 02/19/2018
 > [!NOTE]
 >  이 문서의 첫 부분에서는 언어 독립 구성 요소를 만드는 방법에 대해 설명합니다. 즉, 이러한 구성 요소는 어떠한 언어로 작성된 앱에서도 사용할 수 있습니다. 여러 언어로 작성된 소스 코드에서 구성 요소나 앱을 하나 만들 수도 있습니다. 이 문서의 두 번째 부분에서 [언어 간 상호 운용성](#CrossLang)을 참조하세요.  
   
- 어떠한 언어로 작성된 다른 개체와도 완전하게 상호 작용하려면 개체는 모든 언어에 공통적인 기능만 호출자에게 노출해야 합니다. 기능의 공통 집합은 생성된 어셈블리에 적용되는 규칙 집합인 CLS(공용 언어 사양)에서 정의됩니다. 공용 언어 사양은 [ECMA-335 Standard: Common Language Infrastructure](http://go.microsoft.com/fwlink/?LinkID=116487)에서 Partition I, Clauses 7~11에 정의되어 있습니다.  
+ 어떠한 언어로 작성된 다른 개체와도 완전하게 상호 작용하려면 개체는 모든 언어에 공통적인 기능만 호출자에게 노출해야 합니다. 기능의 공통 집합은 생성된 어셈블리에 적용되는 규칙 집합인 CLS(공용 언어 사양)에서 정의됩니다. 공용 언어 사양은 [ECMA-335 Standard: Common Language Infrastructure](https://www.ecma-international.org/publications/standards/Ecma-335.htm)에서 Partition I, Clauses 7~11에 정의되어 있습니다.  
   
  구성 요소가 공용 언어 사양을 따르는 경우, 이 구성 요소는 CLS 규격임이 보장되고 CLS를 지원하는 모든 프로그래밍 언어로 작성된 어셈블리 코드에서 액세스할 수 있습니다. <xref:System.CLSCompliantAttribute> 특성을 소스 코드에 적용하여 구성 요소가 컴파일 타임에 공용 언어 사양을 준수하는지 여부를 결정할 수 있습니다. 자세한 내용은 [CLSCompliantAttribute 특성](#CLSAttribute)을 참조하세요.  
   
@@ -82,7 +82,7 @@ ms.lasthandoff: 02/19/2018
   
 <a name="Rules"></a>   
 ## <a name="cls-compliance-rules"></a>CLS 규격 규칙  
- 이 섹션에서는 CLS 규격 구성 요소를 만드는 규칙을 설명합니다. 규칙의 전체 목록은 [ECMA-335 Standard: Common Language Infrastructure](http://go.microsoft.com/fwlink/?LinkID=116487)에서 Partition I, Clause 11을 참조하세요.  
+ 이 섹션에서는 CLS 규격 구성 요소를 만드는 규칙을 설명합니다. 규칙의 전체 목록은 [ECMA-335 Standard: Common Language Infrastructure](https://www.ecma-international.org/publications/standards/Ecma-335.htm)에서 Partition I, Clause 11을 참조하세요.  
   
 > [!NOTE]
 >  공용 언어 사양에서는 소비자(CLS 규격인 구성 요소를 프로그래밍 방식으로 액세스하는 개발자), 프레임워크(언어 컴파일러를 사용하여 CLS 규격 라이브러리를 만드는 개발자) 및 extender(CLS 규격 구성 요소를 생성하는 언어 컴파일러 또는 코드 파서 등의 도구를 만드는 개발자)에게 적용되는 CLS 규격에 대한 각 규칙을 설명합니다. 이 문서에서는 프레임워크에 적용되는 규칙에 초점을 맞춥니다. 그러나 extender에 적용되는 규칙 중 일부를 Reflection.Emit을 사용하여 만든 어셈블리에도 적용할 수 있습니다.  
@@ -110,7 +110,7 @@ ms.lasthandoff: 02/19/2018
   
 -   공용 클래스의 공용 메서드에 대한 매개 변수 및 반환 형식, 파생 클래스에서 액세스할 수 있는 메서드에 대한 매개 변수 및 반환 형식  
   
- CLS 규격의 규칙은 다음 표에 나와 있습니다. 규칙 텍스트는 [ECMA-335 Standard: Common Language Infrastructure](http://go.microsoft.com/fwlink/?LinkID=116487)에서 그대로 가져온 것으로, Copyright 2012 by Ecma International입니다. 이러한 규칙에 대한 보다 자세한 내용은 다음 섹션에서 찾을 수 있습니다.  
+ CLS 규격의 규칙은 다음 표에 나와 있습니다. 규칙 텍스트는 [ECMA-335 Standard: Common Language Infrastructure](https://www.ecma-international.org/publications/standards/Ecma-335.htm)에서 그대로 가져온 것으로, Copyright 2012 by Ecma International입니다. 이러한 규칙에 대한 보다 자세한 내용은 다음 섹션에서 찾을 수 있습니다.  
   
 |범주|보기|규칙|규칙 번호|  
 |--------------|---------|----------|-----------------|  
@@ -144,7 +144,7 @@ ms.lasthandoff: 02/19/2018
 |멤버|[형식 멤버 일반 사항](#members)|전역 정적 필드 및 메서드는 CLS 규격입니다.|36|  
 |멤버|--|리터럴 정적 값은 필드 초기화 메타데이터를 사용하여 지정됩니다. CLS 규격 리터럴에는 리터럴(또는 해당 리터럴이 `enum`인 경우 기본 형식)과 정확히 같은 형식인 필드 초기화 메타데이터에 지정된 값이 있어야 합니다.|13|  
 |멤버|[형식 멤버 일반 사항](#members)|vararg 제약 조건은 CLS의 일부가 아니며, CLS에서는 관리되는 표준 호출 규칙만 지원합니다.|15|  
-|명명 규칙|[명명 규칙](#naming)|어셈블리는 권한이 부여된 문자 집합을 관리하는 유니코드 표준 3.0 기술 보고서의 부록 7을 준수해야 하며, http://www.unicode.org/unicode/reports/tr15/tr15-18.html에서 온라인으로 제공되는 식별자에 포함되어야 합니다. 식별자는 유니코드 정규화 형식 C에서 정의된 정규 형식입니다. CLS에서 소문자 매핑(유니코드 로캘 비구분으로 지정된, 일 대 일 소문자 매핑)이 같은 두 개의 식별자는 서로 같습니다. 즉, 두 식별자가 CLS에서 서로 다른 것으로 간주되는 경우 단순히 대/소문자 이상의 차이가 있어야 합니다. 그러나 상속된 정의를 재정의하기 위해서는 CLI가 원래 선언에 정확한 인코딩을 사용해야 합니다.|4|  
+|명명 규칙|[명명 규칙](#naming)|어셈블리는 시작하고 식별자에 포함할 수 있는 문자 집합을 규정하는 유니코드 표준 3.0 기술 보고서 15의 부록 7을 준수합니다. http://www.unicode.org/unicode/reports/tr15/tr15-18.html에서 온라인으로 확인할 수 있습니다. 식별자는 유니코드 정규화 형식 C에서 정의된 정규 형식입니다. CLS에서 소문자 매핑(유니코드 로캘 비구분으로 지정된, 일 대 일 소문자 매핑)이 같은 두 개의 식별자는 서로 같습니다. 즉, 두 식별자가 CLS에서 서로 다른 것으로 간주되는 경우 단순히 대/소문자 이상의 차이가 있어야 합니다. 그러나 상속된 정의를 재정의하기 위해서는 CLI가 원래 선언에 정확한 인코딩을 사용해야 합니다.|4|  
 |오버로딩|[명명 규칙](#naming)|CLS 규격 범위에 소개된 모든 이름은 오버로드를 통해 확인되고 이름이 동일한 경우를 제외하고는 독립적이고 고유한 이름이어야 합니다. 즉, CTS에서는 메서드 및 필드에 동일한 이름을 사용하는 단일 형식이 허용되지만, CLS에서는 그렇지 않습니다.|5|  
 |오버로딩|[명명 규칙](#naming)|CTS로 고유 시그니처가 구분될 수 있지만 필드 및 중첩 형식은 식별자 비교만으로 구분됩니다. 식별자를 비교했을 때 CLS 규칙 39에 지정된 것을 제외하고 동일한 이름을 갖는 메서드, 속성 및 이벤트는 반환 형식 그 이상의 차이점이 있어야 합니다.|6|  
 |오버로딩|[오버로드](#overloads)|속성 및 메서드만 오버로드될 수 있습니다.|37|  
@@ -236,7 +236,7 @@ ms.lasthandoff: 02/19/2018
   
  [!code-csharp[Conceptual.CLSCompliant#16](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/naming1.cs#16)]  
   
- 네임스페이스, 형식 및 멤버의 이름과 같은 언어 식별자 프로그래밍은 [유니코드 표준 3.0, 기술 보고서 15, 부록 7](http://www.unicode.org/reports/tr15/tr15-18.html)을 준수해야 합니다. 이는 다음을 의미합니다.  
+ 네임스페이스, 형식 및 멤버의 이름과 같은 언어 식별자 프로그래밍은 [유니코드 표준 3.0, 기술 보고서 15, 부록 7](https://www.unicode.org/reports/tr15/tr15-18.html)을 준수해야 합니다. 이는 다음을 의미합니다.  
   
 -   식별자의 첫 문자로는 유니코드 대문자, 소문자, 제목 대/소문자, 한정자 문자, 기타 문자 또는 문자 숫자가 올 수 있습니다. 유니코드 문자 범주에 대한 자세한 내용은 <xref:System.Globalization.UnicodeCategory?displayProperty=nameWithType> 열거형을 참조하세요.  
   
@@ -372,7 +372,7 @@ ms.lasthandoff: 02/19/2018
  [!code-csharp[Conceptual.CLSCompliant#29](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/nestedgenerics2.cs#29)]
  [!code-vb[Conceptual.CLSCompliant#29](../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.clscompliant/vb/nestedgenerics2.vb#29)]  
   
- 제네릭 형식 이름을 *name\`n* 형식으로 인코드합니다. 여기서 *name*은 형식 이름, \`는 문자 리터럴, *n*은 이 형식에서 선언된 매개 변수 개수 또는 중첩된 제네릭 형식의 경우 새로 도입된 형식 매개 변수 개수입니다. 제네릭 형식 이름의 이러한 인코딩은 라이브러리에서 CLS 규격 제네릭 형식에 액세스하기 위해 리플렉션을 사용하는 개발자들에게 주로 유용합니다.  
+ 제네릭 형식 이름을 *name\`n* 형식으로 인코딩합니다. 여기서 *name*은 형식 이름, \`는 문자 리터럴, *n*은 이 형식에서 선언된 매개 변수의 개수 또는 중첩된 제네릭 형식의 경우 새로 도입된 형식 매개 변수의 개수입니다. 제네릭 형식 이름의 이러한 인코딩은 라이브러리에서 CLS 규격 제네릭 형식에 액세스하기 위해 리플렉션을 사용하는 개발자들에게 주로 유용합니다.  
   
  제약 조건이 제네릭 형식에 적용될 경우 제약 조건으로 사용되는 모든 형식도 CLS 규격이어야 합니다. 다음 예제에서는 CLS 규격 및 `BaseClass` 제네릭 클래스가 아닌 이름이 `BaseCollection`인 클래스를 정의합니다. 해당 형식 매개 변수는 `BaseClass`에서 파생되어야 합니다. 하지만 `BaseClass`는 CLS 규격이 아니므로 컴파일러에서 경고를 발생시킵니다.  
   
@@ -572,7 +572,7 @@ csc /t:module NumberUtil.cs
   
  C# 컴파일러의 명령줄 구문에 대한 자세한 내용은 [csc.exe를 사용한 명령줄 빌드](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)를 참조하세요.  
   
- 그런 다음 [링크 도구(Link.exe)](http://msdn.microsoft.com/library/c1d51b8a-bd23-416d-81e4-900e02b2c129)를 사용하여 두 모듈을 하나의 어셈블리로 컴파일합니다.  
+ 그런 다음 [링크 도구(Link.exe)](https://msdn.microsoft.com/library/c1d51b8a-bd23-416d-81e4-900e02b2c129)를 사용하여 두 모듈을 하나의 어셈블리로 컴파일합니다.  
   
 ```  
 link numberutil.netmodule stringutil.netmodule /out:UtilityLib.dll /dll   

@@ -1,18 +1,20 @@
 ---
-title: "Microsoft WCF Web Service Reference Provider 도구"
-description: ".NET Framework 프로젝트용 서비스 참조 추가와 유사하게, .NET Core 및 ASP.NET Core 프로젝트 기능을 추가하는 Microsoft WCF Web Service Reference Provider 도구에 대한 개요입니다."
+title: Microsoft WCF Web Service Reference Provider 도구
+description: .NET Framework 프로젝트용 서비스 참조 추가와 유사하게, .NET Core 및 ASP.NET Core 프로젝트 기능을 추가하는 Microsoft WCF Web Service Reference Provider 도구에 대한 개요입니다.
 author: mlacouture
 manager: wpickett
 ms.author: johalex
-ms.date: 01/19/2018
-ms.topic: article
-ms.prod: .net-core
+ms.date: 04/19/2018
+ms.topic: conceptual
+ms.prod: dotnet-core
 ms.custom: mvc
-ms.openlocfilehash: e445361f9f4a858f4b34ca1008670fadc62b8b3c
-ms.sourcegitcommit: dd6ea7f0e581ac84e0a90d9b23c463fcf1ec3ce7
+ms.workload:
+- dotnetcore
+ms.openlocfilehash: 34d46130e25af6f264ea842072b96bbb6d46cc78
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="microsoft-wcf-web-service-reference-provider-tool"></a>Microsoft WCF Web Service Reference Provider 도구
 
@@ -20,6 +22,10 @@ ms.lasthandoff: 01/23/2018
 
 > [!IMPORTANT]
 > 신뢰할 수 있는 원본의 서비스만 참조해야 합니다. 신뢰할 수 없는 원본에서 참조를 추가하면 보안이 손상될 수 있습니다. 
+
+## <a name="prerequisites"></a>전제 조건
+
+* [Visual Studio 2017 15.5](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs) 이상 버전
 
 ## <a name="how-to-use-the-extension"></a>확장을 사용하는 방법
 

@@ -1,7 +1,7 @@
 ---
-title: "마이크로 서비스별 데이터 주권"
-description: "컨테이너화된 .NET 응용 프로그램을 위한 .NET 마이크로 서비스 아키텍처 | 마이크로 서비스별 데이터 주권"
-keywords: "Docker, 마이크로 서비스, ASP.NET, 컨테이너"
+title: 마이크로 서비스별 데이터 주권
+description: 컨테이너화된 .NET 응용 프로그램을 위한 .NET 마이크로 서비스 아키텍처 | 마이크로 서비스별 데이터 주권
+keywords: Docker, 마이크로 서비스, ASP.NET, 컨테이너
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
@@ -11,11 +11,11 @@ ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 76265490d7cb0d53686b43b88cb797cf887d578a
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: f5d782a70123a66c1579a64a37bc612ccda9c1a4
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="data-sovereignty-per-microservice"></a>마이크로 서비스별 데이터 주권
 
@@ -37,13 +37,13 @@ ms.lasthandoff: 12/23/2017
 
 그러나 마이크로 서비스 아키텍처로 전환하면 데이터 액세스가 점점 더 복잡해집니다. 마이크로 서비스 또는 경계가 지정된 컨텍스트 내에서 ACID 트랜잭션을 사용할 수 있거나 사용해야 하는 경우에도 각 마이크로 서비스 소유의 데이터는 해당 마이크로 서비스 전용이며 해당 마이크로 서비스 API를 통해서만 액세스할 수 있습니다. 데이터를 캡슐화하면 마이크로 서비스가 느슨하게 결합되므로 서로 독립적으로 발전할 수 있습니다. 여러 서비스가 동일한 데이터에 액세스하는 경우 스키마를 업데이트하려면 모든 서비스에 대한 조정된 업데이트가 필요합니다. 이렇게 하면 마이크로 서비스 수명 주기 자율성이 손상됩니다. 하지만 분산 데이터 구조는 마이크로 서비스에 단일 ACID 트랜잭션을 만들 수 없습니다. 다시 말해서, 비즈니스 프로세스가 여러 마이크로 서비스에 걸쳐 있는 경우 최종 일관성을 사용해야 합니다. 간단한 SQL 조인보다 구현하기가 훨씬 어려우며, 마찬가지로 다른 여러 관계형 데이터베이스 기능을 여러 마이크로 서비스에서 사용할 수 없습니다.
 
-좀 더 깊이 들어가자면, 종종 다양한 마이크로 서비스에서 다양한 *종류의* 데이터베이스를 사용합니다. 최신 응용 프로그램은 다양한 종류의 데이터를 저장 및 처리하며, 따라서 관계형 데이터베이스가 언제나 좋은 선택은 아닙니다. 일부 사용 사례에서는 Azure DocumentDB 또는 MongoDB 같은 NoSQL 데이터베이스가 SQL Server 또는 Azure SQL Database 같은 SQL 데이터베이스보다 편리한 데이터 모델과 우수한 성능 및 확장성을 제공할 수도 있습니다. 그 외에는 여전히 관계형 데이터베이스가 가장 좋은 방법입니다. 이러한 이유로 마이크로 서비스 기반 응용 프로그램에서는 SQL 및 NoSQL 데이터베이스를 혼합해서 사용하는 경우가 많으며, 이를 [다국어 지속성](http://martinfowler.com/bliki/PolyglotPersistence.html) 접근 방식이라고도 합니다.
+좀 더 깊이 들어가자면, 종종 다양한 마이크로 서비스에서 다양한 *종류의* 데이터베이스를 사용합니다. 최신 응용 프로그램은 다양한 종류의 데이터를 저장 및 처리하며, 따라서 관계형 데이터베이스가 언제나 좋은 선택은 아닙니다. 일부 사용 사례에서는 Azure DocumentDB 또는 MongoDB 같은 NoSQL 데이터베이스가 SQL Server 또는 Azure SQL Database 같은 SQL 데이터베이스보다 편리한 데이터 모델과 우수한 성능 및 확장성을 제공할 수도 있습니다. 그 외에는 여전히 관계형 데이터베이스가 가장 좋은 방법입니다. 이러한 이유로 마이크로 서비스 기반 응용 프로그램에서는 SQL 및 NoSQL 데이터베이스를 혼합해서 사용하는 경우가 많으며, 이를 [다국어 지속성](https://martinfowler.com/bliki/PolyglotPersistence.html) 접근 방식이라고도 합니다.
 
 데이터 저장소에 사용되는 분할된 다국어 아키텍처는 여러 가지 이점이 있습니다. 느슨한 결합과 더 우수한 성능, 확장성, 비용 및 관리성을 예로 들 수 있습니다. 하지만 분산 데이터 관리가 어려울 수 있으며, 이에 대한 내용은 이 챕터의 뒷부분에 나오는 "[도메인 모델 경계 식별](#identifying-domain-model-boundaries-for-each-microservice)"에서 다루겠습니다.
 
 ## <a name="the-relationship-between-microservices-and-the-bounded-context-pattern"></a>마이크로 서비스와 경계가 지정된 컨텍스트 패턴 사이의 관계
 
-마이크로 서비스의 개념은 [DDD(도메인 기반 디자인)](https://en.wikipedia.org/wiki/Domain-driven_design)의 [BC(경계가 지정된 컨텍스트) 패턴](http://martinfowler.com/bliki/BoundedContext.html)에서 파생됩니다. DDD는 대형 모델을 여러 BC로 분할하고 경계에 대해 명시적으로 만드는 방식으로 대형 모델을 처리합니다. 각 마이크로 서비스에 자체적인 관련 데이터가 있듯이, 각 BC에도 자체적인 모델 및 데이터베이스가 있어야 합니다. 또한 일반적으로 각 BC에는 소프트웨어 개발자와 도메인 전문가 간의 통신을 도와주기 위한 자체적인 [유비쿼터스 언어](http://martinfowler.com/bliki/UbiquitousLanguage.html)가 있습니다.
+마이크로 서비스의 개념은 [DDD(도메인 기반 디자인)](https://en.wikipedia.org/wiki/Domain-driven_design)의 [BC(경계가 지정된 컨텍스트) 패턴](https://martinfowler.com/bliki/BoundedContext.html)에서 파생됩니다. DDD는 대형 모델을 여러 BC로 분할하고 경계에 대해 명시적으로 만드는 방식으로 대형 모델을 처리합니다. 각 마이크로 서비스에 자체적인 관련 데이터가 있듯이, 각 BC에도 자체적인 모델 및 데이터베이스가 있어야 합니다. 또한 일반적으로 각 BC에는 소프트웨어 개발자와 도메인 전문가 간의 통신을 도와주기 위한 자체적인 [유비쿼터스 언어](https://martinfowler.com/bliki/UbiquitousLanguage.html)가 있습니다.
 
 유비쿼터스 언어에서 이러한 용어(주로 도메인 엔터티)는 심지어 여러 도메인 엔터티가 동일한 ID(즉, 저장소에서 엔터티를 읽는 데 사용되는 고유의 ID)를 공유하는 경우에도 경계가 지정된 다른 컨텍스트에서 다른 이름을 가질 수 있습니다. 예를 들어 사용자 프로필 경계가 지정된 컨텍스트에서, 사용자 도메인 엔터티는 주문 경계가 지정된 컨텍스트의 구매자 도메인 엔터티와 ID를 공유할 수 있습니다.
 
@@ -53,18 +53,18 @@ ms.lasthandoff: 12/23/2017
 
 DDD는 실제 경계를 분산된 마이크로 서비스의 형태로 가져오는 마이크로 서비스의 이점을 활용합니다. 하지만 마이크로 서비스 간에 모델을 공유하지 않는 아이디어는 경계가 지정된 컨텍스트에도 사용할 수 있습니다.
 
-### <a name="additional-resources"></a>추가 리소스
+### <a name="additional-resources"></a>추가 자료
 
 -   **Chris Richardson. 패턴: 서비스별 데이터베이스**
-    [*http://microservices.io/patterns/data/database-per-service.html*](http://microservices.io/patterns/data/database-per-service.html)
+    [*https://microservices.io/patterns/data/database-per-service.html*](https://microservices.io/patterns/data/database-per-service.html)
 
 -   **Martin Fowler. BoundedContext**
-    [*http://martinfowler.com/bliki/BoundedContext.html*](http://martinfowler.com/bliki/BoundedContext.html)
+    [*https://martinfowler.com/bliki/BoundedContext.html*](https://martinfowler.com/bliki/BoundedContext.html)
 
 -   **Martin Fowler. PolyglotPersistence**
-    [*http://martinfowler.com/bliki/PolyglotPersistence.html*](http://martinfowler.com/bliki/PolyglotPersistence.html)
+    [*https://martinfowler.com/bliki/PolyglotPersistence.html*](https://martinfowler.com/bliki/PolyglotPersistence.html)
 
--   **Alberto Brandolini. 컨텍스트 매핑을 사용한 전략적 도메인 기반 디자인**
+-   **Alberto Brandolini. 컨텍스트 매핑을 통한 전략적인 도메인 기반 디자인**
     [*https://www.infoq.com/articles/ddd-contextmapping*](https://www.infoq.com/articles/ddd-contextmapping)
 
 

@@ -11,11 +11,11 @@ ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: af6a6b73c790577cebf301075f2ff7e90960ea62
-ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
+ms.openlocfilehash: bec1341df85f86d5f2aa15753a11a9c4a2d0173f
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="domain-events-design-and-implementation"></a>도메인 이벤트: 디자인 및 구현
 
@@ -76,7 +76,7 @@ ms.lasthandoff: 03/28/2018
 
 **그림 9-15**. 도메인당 여러 동작 처리
 
-이벤트 처리기는 일반적으로 응용 프로그램 계층에 있는데, 리포지토리나 응용 프로그램 API와 같은 인프라 개체를 마이크로 서비스의 동작에 사용하기 때문입니다. 이런 의미에서 이벤트 처리기는 명령 처리기와 유사하기 때문에 두 가지 모두 응용 프로그램 계층의 일부입니다. 중요한 차이는 명령은 한 번만 처리되어야 한다는 점입니다. 도메인 이벤트는 0번 또는 *n*번 처리될 수 있습니다. If가 각 처리기마다 다른 목적으로 여러 수신자 또는 이벤트 처리기에서 수신될 수 있기 때문입니다.
+이벤트 처리기는 일반적으로 응용 프로그램 계층에 있는데, 리포지토리나 응용 프로그램 API와 같은 인프라 개체를 마이크로 서비스의 동작에 사용하기 때문입니다. 이런 의미에서 이벤트 처리기는 명령 처리기와 유사하기 때문에 두 가지 모두 응용 프로그램 계층의 일부입니다. 중요한 차이는 명령은 한 번만 처리되어야 한다는 점입니다. 도메인 이벤트는 0번 또는 *n*번 처리될 수 있습니다. 각 처리기마다 다른 목적으로 여러 수신자 또는 이벤트 처리기에서 수신될 수 있기 때문입니다.
 
 도메인당 처리기의 수가 변화할 수 있으면 현재 코드에 영향을 미치지 않으면서 훨씬 더 많은 도메인 규칙을 추가할 수 있습니다. 예를 들어 이벤트 바로 뒤에 발생해야 하는 다음 비즈니스 규칙을 적용하는 것은 이벤트 처리기를 몇 개(또는 한 개만) 추가하는 것만큼 쉬울 수 있습니다.
 
@@ -209,7 +209,7 @@ public class OrderingContext : DbContext, IUnitOfWork
 
 집합체에 걸쳐있는 규칙은 항상 최신 상태가 유지될 것으로 예상되지 않습니다. 이벤트 처리, 일괄 처리 또는 기타 업데이트 메커니즘을 통해 다른 종속성이 특정 시간 내에 확인될 수 있습니다. (128페이지)
 
-Vaughn Vernon은 [Effective Aggregate Design. Part II: Making Aggregates Work Together](http://dddcommunity.org/wp-content/uploads/files/pdf_articles/Vernon_2011_2.pdf)(효과적인 집계 설계: 집합체가 함께 작동하도록 만들기)에서 다음과 같이 언급하고 있습니다.
+Vaughn Vernon은 [Effective Aggregate Design. Part II: Making Aggregates Work Together](https://dddcommunity.org/wp-content/uploads/files/pdf_articles/Vernon_2011_2.pdf)(효과적인 집계 설계: 집합체가 함께 작동하도록 만들기)에서 다음과 같이 언급하고 있습니다.
 
 따라서 하나의 집계 인스턴스에서 명령을 실행하는 경우 하나 이상의 집합체에서 추가적인 비즈니스 규칙을 실행해야 하며, 최종 일관성을 사용하여 \[...\] DDD 모델에서 최종 일관성을 지원하는 실용적인 방법이 있습니다. 집계 메서드는 하나 이상의 비동기 구독자에게 제 시간에 배달되는 도메인 이벤트를 게시합니다.
 
@@ -347,13 +347,13 @@ public class ValidateOrAddBuyerAggregateWhenOrderStartedDomainEventHandler
     [*https://lostechies.com/jimmybogard/2014/05/13/a-better-domain-events-pattern/*](https://lostechies.com/jimmybogard/2014/05/13/a-better-domain-events-pattern/)
 
 -   **Vaughn Vernon. 효과적인 집계 디자인 2부: 집계 연동하기**
-    [*http://dddcommunity.org/wp-content/uploads/files/pdf\_아티클/Vernon\_2011\_2.pdf*](http://dddcommunity.org/wp-content/uploads/files/pdf_articles/Vernon_2011_2.pdf)
+    [*http://dddcommunity.org/wp-content/uploads/files/pdf\_아티클/Vernon\_2011\_2.pdf*](https://dddcommunity.org/wp-content/uploads/files/pdf_articles/Vernon_2011_2.pdf)
 
 -   **Jimmy Bogard. 도메인 강화: 도메인 이벤트**
     *<https://lostechies.com/jimmybogard/2010/04/08/strengthening-your-domain-domain-events/> *
 
 -   **Tony Truong. 도메인 이벤트 패턴 예제**
-    [*http://www.tonytruong.net/domain-events-pattern-example/*](http://www.tonytruong.net/domain-events-pattern-example/)
+    [*https://www.tonytruong.net/domain-events-pattern-example/*](https://www.tonytruong.net/domain-events-pattern-example/)
 
 -   **Udi Dahan. 완벽하게 캡슐화된 도메인 모델을 만드는 방법**
     [*http://udidahan.com/2008/02/29/how-to-create-fully-encapsulated-domain-models/*](http://udidahan.com/2008/02/29/how-to-create-fully-encapsulated-domain-models/)
