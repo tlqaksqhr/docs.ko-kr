@@ -1,24 +1,12 @@
 ---
-title: "EDM 생성기(EdmGen.exe)"
-ms.custom: 
+title: EDM 생성기(EdmGen.exe)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: fe8297a1-1fc3-48ce-8eeb-f70f63f857aa
-caps.latest.revision: "6"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 8d310786a12aa538a8a820c1c05788f30fe28c44
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 90d67af0d2ba3ff04ee5c78b7d0a3f061a69bc1d
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="edm-generator-edmgenexe"></a>EDM 생성기(EdmGen.exe)
 EdmGen.exe는 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] 모델 및 매핑 파일 작업에 사용되는 명령줄 도구입니다. EdmGen.exe 도구를 사용하여 다음을 수행할 수 있습니다.  

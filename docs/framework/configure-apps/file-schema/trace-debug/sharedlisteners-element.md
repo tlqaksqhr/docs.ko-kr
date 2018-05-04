@@ -1,13 +1,6 @@
 ---
-title: "&lt;sharedListeners&gt; 요소"
-ms.custom: 
+title: '&lt;sharedListeners&gt; 요소'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#sharedListeners
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/sharedListeners
@@ -18,16 +11,14 @@ helpviewer_keywords:
 - trace listeners, <sharedListeners> element
 - sharedListeners element
 ms.assetid: de200534-19dd-4156-86cf-c50521802c4c
-caps.latest.revision: "10"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: aef29e6107a2f441d8c1a6826b16f0f0c0b56973
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 57927d09f10e84e73c3da424c283846bd79b5044
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltsharedlistenersgt-element"></a>&lt;sharedListeners&gt; 요소
 소스 또는 추적 요소가 참조할 수 있는 수신기가 포함되어 있습니다.  기본적으로이 수신기에 설치 된 모든 수신 하지 않음 하 고 런타임 시 이러한 수신기를 검색할 수 없으면입니다. 공유 수신기로 식별 된 수신기 이름으로 원본 또는 추적에 추가할 수 있습니다.  
@@ -45,7 +36,7 @@ ms.lasthandoff: 12/22/2017
 ```  
   
 ## <a name="attributes-and-elements"></a>특성 및 요소  
- 다음 단원에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
+ 다음 섹션에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
   
 ### <a name="attributes"></a>특성  
  없음  
@@ -68,7 +59,7 @@ ms.lasthandoff: 12/22/2017
   
  이 요소는 응용 프로그램 구성 파일 및 컴퓨터 구성 파일 (Machine.config)에서 사용할 수 있습니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  사용 하는 방법을 보여 주는 다음 예제는 `<sharedListeners>` 수신기에 추가할 요소의 `console` 에 `Listeners` 컬렉션 모두에 대 한는 <xref:System.Diagnostics.TraceSource> 및 <xref:System.Diagnostics.Trace> 클래스입니다. 콘솔 추적 수신기에 대 한 호출을 통해 콘솔에 추적 정보를 쓰는 <xref:System.Diagnostics.TraceSource> 또는 <xref:System.Diagnostics.Trace>합니다.  
   
 ```xml  

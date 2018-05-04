@@ -1,31 +1,19 @@
 ---
 title: .NET Framework 도구
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - command line, .NET Framework tools
 - .NET Framework, tools
 - tools [.NET Framework]
 - running .NET Framework tools
 ms.assetid: a2ca532d-91f7-426a-9303-417c2ee1247c
-caps.latest.revision: 65
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 2615c7b8c75f7736bbf8334512790d0a5c43c8d1
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 65614d906abc2dec5dc5891b16b595cf9ef9d56f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="net-framework-tools"></a>.NET Framework 도구
 .NET Framework 도구를 사용하면 .NET Framework를 대상으로 하는 응용 프로그램 및 구성 요소를 보다 쉽게 만들고 배포하고 관리할 수 있습니다.  

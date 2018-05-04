@@ -15,11 +15,11 @@ ms.assetid: 16f14f09-b2ce-42c7-a875-e4eca5d50674
 caps.latest.revision: 52
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 2ddbd0f7268dd5dae4095d661cf800b5b481cbbd
-ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
+ms.openlocfilehash: 50b22ea94e8079e29c1e2ba2a595544ce23bd216
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="async-c-reference"></a>async(C# 참조)
 `async` 한정자를 사용하여 메서드, [람다 식](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md) 또는 [무명 메서드](../../../csharp/programming-guide/statements-expressions-operators/anonymous-methods.md)를 비동기로 지정합니다. 메서드 또는 식에 이 한정자를 사용하면 *비동기 메서드*라고 합니다. 다음 예제에서는 `ExampleMethodAsync`라는 비동기 메서드를 정의합니다. 
@@ -76,7 +76,7 @@ Visual Studio에서 이 코드를 WPF(Windows Presentation Foundation) 앱 또�
 - <xref:System.Threading.Tasks.Task>
 - <xref:System.Threading.Tasks.Task%601>
 - 이벤트 처리기에만 사용해야 하는 [void](../../../csharp/language-reference/keywords/void.md).
-- C# 7부터 액세스 가능한 `GetAwaiter` 메서드가 있는 모든 형식. `System.Threading.Tasks.ValueTask<TResult>` 형식은 이러한 구현 중 하나입니다. NuGet 패키지 `System.Threading.Tasks.Extensions`를 추가하면 사용할 수 있습니다. 
+- C# 7.0부터 액세스 가능한 `GetAwaiter` 메서드가 있는 모든 형식. `System.Threading.Tasks.ValueTask<TResult>` 형식은 이러한 구현 중 하나입니다. NuGet 패키지 `System.Threading.Tasks.Extensions`를 추가하면 사용할 수 있습니다. 
 
 비동기 메서드는 모든 [in](../../../csharp/language-reference/keywords/in-parameter-modifier.md), [ref](../../../csharp/language-reference/keywords/ref.md) 또는 [out](../../../csharp/language-reference/keywords/out-parameter-modifier.md) 매개 변수를 선언할 수 없고 [참조 반환 값](../../programming-guide/classes-and-structs/ref-returns.md)을 가질 수도 없지만, 이러한 매개 변수가 있는 메서드를 호출할 수는 있습니다.  
   
@@ -84,7 +84,7 @@ Visual Studio에서 이 코드를 WPF(Windows Presentation Foundation) 앱 또�
   
 `void` 반환 형식은 주로 해당 반환 형식이 필요한 이벤트 처리기를 정의할 때 사용합니다. `void` 반환 비동기 메서드의 호출자는 기다릴 수 없으므로 메서드가 throw하는 예외를 catch할 수 없습니다.  
 
-C# 7부터 `GetAwaiter` 메서드가 있는 다른 형식(일반적으로 값 형식)을 반환하여 성능이 중요한 코드 섹션에서 메모리 할당을 최소화합니다. 
+C# 7.0부터 `GetAwaiter` 메서드가 있는 다른 형식(일반적으로 값 형식)을 반환하여 성능이 중요한 코드 섹션에서 메모리 할당을 최소화합니다. 
 
 자세한 내용과 예제는 [비동기 반환 형식](../../../csharp/programming-guide/concepts/async/async-return-types.md)을 참조하세요.  
   

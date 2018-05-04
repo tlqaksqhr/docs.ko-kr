@@ -1,33 +1,21 @@
 ---
-title: "&lt;scopedCertificates&gt; 요소의 &lt;add&gt;"
-ms.custom: 
+title: '&lt;scopedCertificates&gt; 요소의 &lt;add&gt;'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: e21c1ef8-d6d6-4bca-ac5a-6fbf4bd77412
-caps.latest.revision: "8"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: eff535f7eb779a69c2368f3ad815f1eb124946ff
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 0eb2f116fc0a2c7d59b90cea71150c7b46ee39fa
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltaddgt-of-ltscopedcertificatesgt-element"></a>&lt;scopedCertificates&gt; 요소의 &lt;add&gt;
 범위가 지정된 인증서 컬렉션에 X.509 인증서를 추가합니다.  
   
- \<시스템입니다. ServiceModel >  
+ \<system.ServiceModel>  
 \<동작 >  
 endpointBehaviors 섹션  
 \<동작 >  
-\<clientCredentials >  
+\<clientCredentials>  
 \<serviceCertificate >  
 \<scopedCertificates >  
 \<추가 > 요소에 대 한 \<scopedCertificates >  
@@ -96,7 +84,7 @@ endpointBehaviors 섹션
   
  자세한 내용은의 "범위가 지정 된 인증서" 섹션을 참조 하십시오. [하는 방법: 페더레이션 클라이언트 만들기](../../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 예제에서는 컬렉션에 X.509 인증서를 추가합니다.  
   
 ```xml  

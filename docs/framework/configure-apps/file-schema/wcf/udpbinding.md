@@ -1,30 +1,18 @@
 ---
 title: '&lt;udpBinding&gt;'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: fa291901-8340-45c6-9c44-5d9281c70bc3
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a476a2a6f3b5814803323ca5cb3072f16aa7041e
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 1d9535f60bca101e53b678da25915ac9afb41aab
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltudpbindinggt"></a>&lt;udpBinding&gt;
 <xref:System.ServiceModel.UdpBinding> 바인딩을 구성하는 데 사용되는 구성 요소입니다.  
   
  \<system.ServiceModel>  
-\<bindings>  
+\<바인딩 >  
 \<udpBinding>  
   
 ## <a name="syntax"></a>구문  
@@ -89,7 +77,7 @@ ms.lasthandoff: 01/19/2018
 ## <a name="remarks"></a>설명  
  UdpBinding을 사용하면 WCF 서비스가 UDP 전송을 통해 통신할 수 있습니다. 여기서는 클라이언트는 서비스에 메시지를 보냅니다 응답을 기대 하지 다시 "fire and forget" 메시지 교환에 있습니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 예제에서는 <<xref:System.ServiceModel.UdpBinding>> 요소를 사용하여 `udpBinding`을 구성하는 방법을 보여 줍니다.  
   
 ```xml  

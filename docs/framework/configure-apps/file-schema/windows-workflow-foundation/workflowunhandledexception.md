@@ -1,30 +1,20 @@
 ---
 title: '&lt;workflowUnhandledException&gt;'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: 57adeab5-f06a-44b2-916b-0e177cf0f4a6
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 4266eb6480c98c7ea1b96f2325a018b0fdcba041
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: d9db6ecc2e95e0d1ec5738f1d2f4a09a89c57f21
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltworkflowunhandledexceptiongt"></a>&lt;workflowUnhandledException&gt;
 워크플로 서비스 내에서 처리되지 않은 예외가 발생할 때 수행할 동작을 지정할 수 있는 서비스 동작입니다.  
   
-\<시스템입니다. ServiceModel >  
+\<system.ServiceModel>  
 \<동작 >  
-\<serviceBehaviors >  
+\<serviceBehaviors>  
 \<동작 >  
 \<workflowUnhandledException >  
   
@@ -41,7 +31,7 @@ ms.lasthandoff: 12/22/2017
 ```  
   
 ## <a name="attributes-and-elements"></a>특성 및 요소  
- 다음 단원에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
+ 다음 섹션에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
   
 ### <a name="attributes"></a>특성  
   

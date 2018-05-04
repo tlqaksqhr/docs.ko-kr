@@ -1,13 +1,6 @@
 ---
-title: "&lt;disableCachingBindingFailures&gt; 요소"
-ms.custom: 
+title: '&lt;disableCachingBindingFailures&gt; 요소'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#disableCachingBindingFailures
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/runtime/disableCachingBindingFailures
@@ -17,16 +10,13 @@ helpviewer_keywords:
 - <disableCachingBindingFailures> element
 - disableCachingBindingFailures element
 ms.assetid: bf598873-83b7-48de-8955-00b0504fbad0
-caps.latest.revision: "14"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: dd86bc2f58bc216f741c32a51925d3f4f8ef47df
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 422888a595e8fdea01f9cb9d256830467d6822ac
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltdisablecachingbindingfailuresgt-element"></a>&lt;disableCachingBindingFailures&gt; 요소
 바인딩 실패를 검색 하 여 어셈블리를 찾지 못했기 때문에 발생 하는 캐싱을 사용 하지 않도록 지정 합니다.  
@@ -42,7 +32,7 @@ ms.lasthandoff: 12/22/2017
 ```  
   
 ## <a name="attributes-and-elements"></a>특성 및 요소  
- 다음 단원에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
+ 다음 섹션에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
   
 ### <a name="attributes"></a>특성  
   
@@ -78,7 +68,7 @@ ms.lasthandoff: 12/22/2017
   
 -   하나 이상의 버전을 로드 하려고 하는 어셈블리의 검색 경로에 있지만 요청 하는 특정 버전 그 안에 없는 경우, 올바른 버전 검색 경로로 이동 하는 경우에 이후에 해당 버전을 로드 하는 데 실패 합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 예제에서는 검색 하 여 어셈블리를 찾지 못했기 때문에 발생 하는 어셈블리 바인딩 실패 캐싱은 해제 하는 방법을 보여 줍니다.  
   
 ```xml  

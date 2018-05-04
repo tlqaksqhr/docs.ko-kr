@@ -1,13 +1,6 @@
 ---
-title: "&lt;필터&gt; 요소에 대 한 &lt;추가&gt; 에 대 한 &lt;수신기&gt; 에 대 한 &lt;소스&gt;"
-ms.custom: 
+title: '&lt;필터&gt; 요소에 대 한 &lt;추가&gt; 에 대 한 &lt;수신기&gt; 에 대 한 &lt;소스&gt;'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#filter
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/sources/source/listeners/add/filter
@@ -16,16 +9,14 @@ helpviewer_keywords:
 - <filter> element for <add> for <listeners> for <source>
 - filter element for <add> for <listeners> for <source>
 ms.assetid: 15808b80-4579-4c25-b385-178cfdf154ba
-caps.latest.revision: "7"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: ff5acf8edcda68979c04f5e62237464ee6f040a0
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 763d15a1391d8c9539d5fb92d4ad50132c17c065
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltfiltergt-element-for-ltaddgt-for-ltlistenersgt-for-ltsourcegt"></a>&lt;필터&gt; 요소에 대 한 &lt;추가&gt; 에 대 한 &lt;수신기&gt; 에 대 한 &lt;소스&gt;
 추적 소스의 `Listeners` 컬렉션에 있는 수신기에 필터를 추가합니다.  
@@ -47,7 +38,7 @@ ms.lasthandoff: 12/22/2017
 ```  
   
 ## <a name="attributes-and-elements"></a>특성 및 요소  
- 다음 단원에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
+ 다음 섹션에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
   
 ### <a name="attributes"></a>특성  
   
@@ -75,7 +66,7 @@ ms.lasthandoff: 12/22/2017
   
  이 요소는 응용 프로그램 구성 파일 및 컴퓨터 구성 파일 (Machine.config)에서 사용할 수 있습니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  사용 하는 방법을 보여 주는 다음 예제는 `<filter>` 수신기에 필터를 추가 하는 요소 `console` 에 `Listeners` 추적 소스에 대 한 컬렉션 `myTraceSource`, 필터 이벤트 수준으로 지정 `Error`합니다.  
   
 ```xml  

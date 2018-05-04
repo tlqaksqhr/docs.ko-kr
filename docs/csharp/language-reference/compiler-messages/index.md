@@ -1,23 +1,16 @@
 ---
 title: C# 컴파일러 오류
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: error-reference
 helpviewer_keywords:
 - C# language, compiler errors
 - Visual C# compiler, errors
 - errors [C#]
 ms.assetid: 57262ab1-6c50-4f9c-81ad-9fba48477416
-caps.latest.revision: 23
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 2253183c0dc99ff56d06698420c9f0f8acf8dfef
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: e67e568b67400807ba7a1668acb6b3a36b4c7f22
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="c-compiler-errors"></a>C# 컴파일러 오류
 일부 C# 컴파일러 오류는 오류가 생성된 이유 및 경우에 따라 오류 수정 방법을 설명하는 항목이 있습니다. 특정 오류 메시지에 대해 도움말을 사용할 수 있는지 여부를 확인하려면 다음 단계 중 하나를 사용합니다.  

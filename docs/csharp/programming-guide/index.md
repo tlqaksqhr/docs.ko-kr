@@ -1,10 +1,6 @@
 ---
 title: C# 프로그래밍 가이드
 ms.date: 05/02/2017
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 f1_keywords:
 - cs.langref
 helpviewer_keywords:
@@ -13,14 +9,11 @@ helpviewer_keywords:
 - Visual C#, programming concepts
 - C# language, concepts
 ms.assetid: ac0f23a2-6bf3-4077-be99-538ae5fd3bc5
-caps.latest.revision: 45
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: bd22abedc8fc43fd2bd0ea77e1506394400fbfbb
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 62aacdafb5c257a8824bc8c8241ead7a274c2e2f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="c-programming-guide"></a>C# 프로그래밍 가이드
 이 섹션에서는 핵심 C# 언어 기능과 .NET Framework를 통해 C#에서 액세스할 수 있는 기능에 대한 자세한 정보를 제공합니다.  

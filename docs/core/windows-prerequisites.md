@@ -1,18 +1,18 @@
 ---
-title: "Windows에서 .NET Core의 필수 구성 요소"
-description: "Windows 컴퓨터에서 .NET Core 응용프로그램을 개발 및 실행하기 위해 필요한 종속성이 무엇인지 살펴보세요."
+title: Windows에서 .NET Core의 필수 구성 요소
+description: Windows 컴퓨터에서 .NET Core 응용프로그램을 개발 및 실행하기 위해 필요한 종속성이 무엇인지 살펴보세요.
 author: JRAlexander
 ms.author: johalex
-ms.date: 03/02/2018
-ms.topic: article
-ms.prod: .net-core
+ms.date: 04/24/2018
+ms.topic: conceptual
+ms.prod: dotnet-core
 ms.workload:
 - dotnetcore
-ms.openlocfilehash: 48102f3fb7fa6e93238eefff0e7f1ecbed4d8409
-ms.sourcegitcommit: d3cfda0943364aaf6ccd574f55f584576c8a4fee
+ms.openlocfilehash: 6f2ba8540a38f8e30d3d968f5e2c891c850053aa
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="prerequisites-for-net-core-on-windows"></a>Windows에서 .NET Core의 필수 구성 요소
 
@@ -50,7 +50,7 @@ ms.lasthandoff: 03/08/2018
 * *.zip* 파일을 통해 .NET Core 설치. 여기에는 빌드/CI/CD 서버가 포함될 수 있습니다.
 
 > [!NOTE]
-> *Windows 7 및 Windows Server 2008 컴퓨터만 해당:* 설치된 Windows가 최신 버전이며 Windows 업데이트를 통해 설치된 핫픽스 [KB2533623](https://support.microsoft.com/help/2533623)이 포함되어 있는지 확인하세요.
+> *Windows 8.1 및 이전 버전 또는 Windows Server 2012 R2 및 이전 버전의 경우:* Windows 설치가 최신 상태인지 그리고 Windows Update를 통해 설치할 수 있는 [KB2999226](https://support.microsoft.com/en-us/help/2999226/update-for-universal-c-runtime-in-windows)이 포함되어 있는지 확인합니다. 이 업데이트를 설치하지 않는 경우 .NET Core 응용 프로그램을 시작할 때 다음 `The program can't start because api-ms-win-crt-runtime-1-1-0.dll is missing from your computer. Try reinstalling the program to fix this problem.`과 같은 오류가 표시됩니다.
 
 ## <a name="prerequisites-with-visual-studio-2017"></a>Visual Studio 2017 필수 구성 요소
 

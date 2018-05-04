@@ -1,32 +1,22 @@
 ---
-title: "&lt;webHttpBinding&gt;의 &lt;security&gt;"
-ms.custom: 
+title: '&lt;webHttpBinding&gt;의 &lt;security&gt;'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 727cf3d2-6f56-48ad-a59f-ba423edb9c83
-caps.latest.revision: "9"
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: dc7edf528f509c725672036329989f9b7a9bfec2
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
-ms.translationtype: MT
+ms.openlocfilehash: dd65b488a2d3f18f2e19191f143243204c4303d4
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltsecuritygt-of-ltwebhttpbindinggt"></a>&lt;webHttpBinding&gt;의 &lt;security&gt;
 구성 된 끝점에 대 한 보안 요구 사항을 지정는 [ \<wsHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md)합니다.  
   
  \<system.ServiceModel>  
-\<bindings>  
+\<바인딩 >  
 \<webHttpBinding>  
-\<binding>  
+\<바인딩 >  
 \<security>  
   
 ## <a name="syntax"></a>구문  
@@ -74,7 +64,7 @@ ms.lasthandoff: 01/19/2018
   
 |요소|설명|  
 |-------------|-----------------|  
-|[\<webHttpBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/webhttpbinding.md)|SOAP 메시지 대신 HTTP 요청에 응답하는 [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] 웹 서비스에 대한 끝점을 구성하는 데 사용되는 바인딩 요소입니다.|  
+|[\<webHttpBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/webhttpbinding.md)|Windows Communication Foundation (WCF) 웹 서비스 SOAP 메시지 대신 HTTP 요청에 응답 하는 끝점을 구성 하는 데 사용 되는 바인딩 요소입니다.|  
   
 ## <a name="see-also"></a>참고 항목  
  <xref:System.ServiceModel.Configuration.WebHttpBindingElement>  

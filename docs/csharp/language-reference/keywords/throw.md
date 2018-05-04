@@ -1,8 +1,9 @@
 ---
-title: "throw(C# 참조)"
+title: throw(C# 참조)
 ms.date: 03/02/2015
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 f1_keywords:
 - throw
@@ -12,19 +13,19 @@ helpviewer_keywords:
 - throw expression [C#]
 - throw keyword [C#]
 ms.assetid: 5ac4feef-4b1a-4c61-aeb4-61d549e5dd42
-caps.latest.revision: "22"
+caps.latest.revision: 22
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e56bd8f8b6bfcc7c8f1eb2df6ac157e28adac331
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 088a8e70c5aaaae6f833f12cad1052c30fbb6bfa
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="throw-c-reference"></a>throw(C# 참조)
 프로그램 실행 중 예외 발생 신호를 보냅니다.  
   
-## <a name="remarks"></a>주의
+## <a name="remarks"></a>설명
 
 `throw`의 구문은 다음과 같습니다.
 
@@ -50,9 +51,9 @@ throw [e]
  
 ## <a name="the-throw-expression"></a>`throw` 식
 
-C# 7부터 `throw`를 문뿐만 아니라 식으로 사용할 수 있습니다. 이렇게 하면 이전에 지원되지 않은 상황에서 예외를 throw할 수 있습니다. 여기에는 다음이 포함됩니다.
+C# 7.0부터 `throw`를 명령문뿐만 아니라 식으로도 사용할 수 있습니다. 이렇게 하면 이전에 지원되지 않은 상황에서 예외를 throw할 수 있습니다. 여기에는 다음이 포함됩니다.
 
-- [조건 연산자](../operators/conditional-operator.md). 다음 예제에서는 `throw` 식을 사용하여 메서드에 빈 문자열 배열이 전달된 경우 <xref:System.ArgumentException>을 throw합니다. C# 7 이전에는 이 논리가 `if`/`else` 문에 표시되어야 합니다.
+- [조건 연산자](../operators/conditional-operator.md). 다음 예제에서는 `throw` 식을 사용하여 메서드에 빈 문자열 배열이 전달된 경우 <xref:System.ArgumentException>을 throw합니다. C# 7.0 이전에는 이 논리가 `if`/`else` 문에 표시되어야 합니다.
 
    [!code-csharp[csrefKeyword#4](../../../../samples/snippets/csharp/language-reference/keywords/throw/conditional.cs#1)]  
   
@@ -72,7 +73,7 @@ C# 7부터 `throw`를 문뿐만 아니라 식으로 사용할 수 있습니다. 
  [C# 참조](../../../csharp/language-reference/index.md)  
  [C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)  
  [try-catch](../../../csharp/language-reference/keywords/try-catch.md)  
- [Try, catch 및 throw 문 c + +](../../../csharp/language-reference/keywords/try-catch.md)  
+ [C++의 try, catch 및 throw 문](../../../csharp/language-reference/keywords/try-catch.md)  
  [C# 키워드](../../../csharp/language-reference/keywords/index.md)  
  [예외 처리 문](../../../csharp/language-reference/keywords/exception-handling-statements.md)  
  [방법: 명시적으로 예외 Throw](../../../standard/exceptions/how-to-explicitly-throw-exceptions.md)

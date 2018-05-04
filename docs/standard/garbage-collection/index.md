@@ -1,13 +1,7 @@
 ---
 title: 가비지 컬렉션
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - memory, garbage collection
 - garbage collection, automatic memory management
@@ -24,18 +18,13 @@ helpviewer_keywords:
 - runtime, garbage collection
 - garbage collection, about
 ms.assetid: 22b6cb97-0c80-4eeb-a2cf-5ed7655e37f9
-caps.latest.revision: 36
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: c8288473b25b3f3cd75666e1da0611dec37c3127
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 0d820783b931195bf62b75ea76d7d0573289bab8
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="garbage-collection"></a>가비지 컬렉션
 .NET의 가비지 수집기는 응용 프로그램의 메모리 할당 및 해제를 관리합니다. 새 개체를 만들 때마다 공용 언어 런타임이 관리되는 힙에서 개체에 대해 메모리를 할당합니다. 관리되는 힙에서 주소 공간을 사용할 수 있다면 런타임은 계속해서 새 개체에 공간을 할당합니다. 그러나 메모리는 무한하지 않습니다. 결국 가비지 수집기는 메모리를 확보하기 위해 수집을 수행해야 합니다. 가비지 수집기의 최적화 엔진은 수행 중인 할당에 따라 수집을 수행하기에 가장 적합한 시간을 결정합니다. 가비지 수집기는 수집을 수행할 때 응용 프로그램에서 더 이상 사용하고 있지 않은 관리되는 힙에 있는 개체를 확인하고 해당 메모리를 회수하는 데 필요한 작업을 수행합니다.  

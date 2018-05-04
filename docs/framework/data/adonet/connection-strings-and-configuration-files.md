@@ -1,27 +1,15 @@
 ---
-title: "연결 문자열 및 구성 파일"
-ms.custom: 
+title: 연결 문자열 및 구성 파일
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 37df2641-661e-407a-a3fb-7bf9540f01e8
-caps.latest.revision: "4"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 447b2d6c0e5eeafeaff89aa1d6430eec72d59a4d
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: a4876d3b794282852b364f58cc84b58546567d80
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="connection-strings-and-configuration-files"></a>연결 문자열 및 구성 파일
 응용 프로그램 코드에 연결 문자열을 포함하면 보안상 취약한 부분이 생기고 유지 관리상의 문제가 발생할 수 있습니다. 사용 하 여 컴파일된 응용 프로그램의 소스 코드에는 암호화 되지 않은 연결 문자열을 볼 수는 [Ildasm.exe (IL 디스어셈블러)](../../../../docs/framework/tools/ildasm-exe-il-disassembler.md) 도구입니다. 뿐만 아니라 연결 문자열이 계속해서 변경되는 경우에는 응용 프로그램을 다시 컴파일해야 합니다. 이와 같은 여러 가지 이유로 연결 문자열은 응용 프로그램 구성 파일에 저장하는 것이 좋습니다.  
@@ -153,7 +141,7 @@ ms.lasthandoff: 01/19/2018
  두 공급자 모두 강력한 데이터 암호화를 제공합니다. 그러나 웹 팜과 같이 여러 서버에서 동일한 암호화 구성 파일을 사용하려는 경우 데이터를 암호화하는 데 사용되는 암호화 키를 내보내고 다른 서버에서 가져오도록 하려면 `RsaProtectedConfigurationProvider`를 사용해야 합니다. 자세한 내용은 참조 [가져오기 및 내보내기 보호 구성 RSA 키 컨테이너](http://msdn.microsoft.com/library/f3022b39-f17f-48c1-b067-025eab0ce8bc)합니다.  
   
 ### <a name="using-the-configuration-classes"></a>구성 클래스 사용  
- <xref:System.Configuration> 네임스페이스에서는 프로그래밍 방식으로 구성을 설정하는 클래스를 제공합니다. <xref:System.Configuration.ConfigurationManager> 클래스에서는 시스템, 응용 프로그램 및 사용자 구성 파일에 대한 액세스를 제공합니다. ASP.NET 응용 프로그램을 만드는 경우 사용할 수 있습니다는 <xref:System.Web.Configuration.WebConfigurationManager> 클래스에 있는 같은 ASP.NET 응용 프로그램에 고유한 설정에 액세스할 수 있도록 하는 동안 동일한 기능을 제공 하는  **\< system.web >**합니다.  
+ <xref:System.Configuration> 네임스페이스에서는 프로그래밍 방식으로 구성을 설정하는 클래스를 제공합니다. <xref:System.Configuration.ConfigurationManager> 클래스에서는 시스템, 응용 프로그램 및 사용자 구성 파일에 대한 액세스를 제공합니다. ASP.NET 응용 프로그램을 만드는 경우 사용할 수 있습니다는 <xref:System.Web.Configuration.WebConfigurationManager> 클래스에 있는 같은 ASP.NET 응용 프로그램에 고유한 설정에 액세스할 수 있도록 하는 동안 동일한 기능을 제공 하는  **\< system.web >** 합니다.  
   
 > [!NOTE]
 >  <xref:System.Security.Cryptography> 네임스페이스에는 데이터를 암호화하고 해독하는 추가 옵션을 제공하는 클래스가 들어 있습니다. 보호되는 구성을 사용하여 처리할 수 없는 암호화 서비스가 필요한 경우 이러한 클래스를 사용합니다. 이러한 클래스 중 일부는 관리되지 않는 Microsoft CryptoAPI에 대한 래퍼이지만 나머지는 완전하게 관리되는 구현 클래스입니다. 자세한 내용은 [암호화 서비스](http://msdn.microsoft.com/library/68a1e844-c63c-44af-9247-f6716eb23781)를 참조하세요.  

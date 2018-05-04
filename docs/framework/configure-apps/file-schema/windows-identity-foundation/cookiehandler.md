@@ -1,24 +1,14 @@
 ---
 title: '&lt;cookieHandler&gt;'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: bfdc127f-8d94-4566-8bef-f583c6ae7398
-caps.latest.revision: "5"
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: 302ccb3d95fc982ec7950dc7808dce61b263c481
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 7fcdf1e89c3b68daa36ee80fe7234737c61a5a3c
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltcookiehandlergt"></a>&lt;cookieHandler&gt;
 구성에서 <xref:System.IdentityModel.Services.CookieHandler> 하는 <xref:System.IdentityModel.Services.SessionAuthenticationModule> (SAM) 읽기 / 쓰기 쿠키를 사용 하 여 합니다.  
@@ -47,7 +37,7 @@ ms.lasthandoff: 12/22/2017
 ```  
   
 ## <a name="attributes-and-elements"></a>특성 및 요소  
- 다음 단원에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
+ 다음 섹션에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
   
 ### <a name="attributes"></a>특성  
   
@@ -83,7 +73,7 @@ ms.lasthandoff: 12/22/2017
   
  `<cookieHandler>` 에서 요소가 표시 되는 <xref:System.IdentityModel.Services.CookieHandlerElement> 클래스입니다. 구성에 지정 된 쿠키 처리기는에서 사용할 수는 <xref:System.IdentityModel.Services.Configuration.FederationConfiguration.CookieHandler%2A> 의 속성은 <xref:System.IdentityModel.Services.Configuration.FederationConfiguration> 에 설정 하는 개체는 <xref:System.IdentityModel.Services.FederatedAuthentication.FederationConfiguration%2A?displayProperty=nameWithType> 속성.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  XML은 다음 한 `<cookieHandler>` 요소입니다. 이 예제에서는 때문에 `mode` 특성 지정 하지 않으면, 기본 쿠키 처리기 SAM에서 사용 됩니다. 인스턴스는 <xref:System.IdentityModel.Services.ChunkedCookieHandler> 클래스입니다. 때문에 `<chunkedCookieHandler>` 자식 요소를 지정 하지 않으면, 기본 청크 크기 사용 됩니다. HTTPS 됩니다 필요 하기 때문에 `requireSsl` 특성이 설정 되어 `false`합니다.  
   
 > [!WARNING]

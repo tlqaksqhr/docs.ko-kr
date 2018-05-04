@@ -15,11 +15,11 @@ ms.assetid: d7e97396-7f42-4873-a81c-4ebcc4b6ca02
 caps.latest.revision: 145
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4641041657e99fa64bf1b7eb5317a43660ac7e2b
-ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
+ms.openlocfilehash: 34c7e7147ce7ae43926de1796bee433667f08331
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="whats-new-for-visual-basic"></a>Visual Basic의 새로운 기능
 
@@ -129,7 +129,7 @@ Visual Basic의 튜플 지원을 사용하면 튜플을 신속하게 정의하�
 
 **C# 참조 반환 값 지원**
 
-C# 7부터 C#에서 참조 반환 값을 지원합니다. 즉, 호출하는 메서드가 참조로 반환된 값을 받을 때 참조 값을 변경할 수 있습니다. Visual Basic에서 참조 반환 값이 있는 메서드를 작성할 수는 없지만 참조 반환 값을 사용하고 수정할 수 있습니다.
+C# 7.0부터 C#에서 참조 반환 값을 지원합니다. 즉, 호출하는 메서드가 참조로 반환된 값을 받을 때 참조 값을 변경할 수 있습니다. Visual Basic에서 참조 반환 값이 있는 메서드를 작성할 수는 없지만 참조 반환 값을 사용하고 수정할 수 있습니다.
 
 예를 들어 C#으로 작성된 다음 `Sentence` 클래스에는 문장 내에서 지정한 하위 문자열로 시작하는 다음 단어를 찾는 `FindNext` 메서드가 포함되어 있습니다. 문자열은 참조 반환 값으로 반환되며, 메서드에 참조로 전달된 `Boolean` 변수는 검색에 성공했는지 여부를 나타냅니다. 즉, 호출자는 반환된 값을 읽을 수 있을 뿐만 아니라 수정할 수도 있으며, 수정 내용이 `Sentence` 클래스에 반영됩니다.
 

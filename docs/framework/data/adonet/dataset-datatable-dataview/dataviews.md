@@ -1,24 +1,12 @@
 ---
-title: "데이터 보기"
-ms.custom: 
+title: 데이터 보기
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 0fe5dfa2-c1cd-435f-90b6-b4dd2e3ef34b
-caps.latest.revision: "4"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 5b79461a6fc3314ca4178e0f9b1cff1c468cc3e6
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: f3e5d047496785c34c1fe242853829ae0110dc2a
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="dataviews"></a>데이터 보기
 <xref:System.Data.DataView>는 데이터 바인딩 응용 프로그램에서 자주 사용되는 기능으로, 이 기능을 사용하면 <xref:System.Data.DataTable>에 저장되어 있는 데이터에 대해 서로 다른 뷰를 만들 수 있습니다. 사용 하는 **DataView**를 여러 정렬 순서로 테이블의 데이터를 노출할 수 있습니다 및 행 상태 또는 필터 식을 기준으로 데이터를 필터링 할 수 있습니다.  

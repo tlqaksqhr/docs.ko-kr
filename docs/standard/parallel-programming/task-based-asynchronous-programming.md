@@ -21,11 +21,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: c0782498743f857afac4af073fb0a0cb8fc4d55a
-ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
+ms.openlocfilehash: 87c49eb1cb2b8cef7057e73eca19f74e818b043e
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="task-based-asynchronous-programming"></a>작업 기반 비동기 프로그래밍
 TPL(작업 병렬 라이브러리)은 *작업*이란 개념을 기반으로 하며 비동기 작업을 나타냅니다. 몇 가지 점에서 작업은 스레드 또는 <xref:System.Threading.ThreadPool> 작업 항목과 비슷하지만 추상화 수준은 더 높습니다. *작업 병렬 처리*는 동시에 실행되는 하나 이상의 독립적인 작업을 의미합니다. 작업을 사용할 때의 주된 이점 두 가지는 다음과 같습니다.  
@@ -191,7 +191,7 @@ TPL(작업 병렬 라이브러리)은 *작업*이란 개념을 기반으로 하�
  작업을 대기할 때는 암시적으로 <xref:System.Threading.Tasks.TaskCreationOptions.AttachedToParent?displayProperty=nameWithType> 옵션의 사용으로 생성된 해당 작업의 모든 자식 작업을 대기합니다. <xref:System.Threading.Tasks.Task.Wait%2A?displayProperty=nameWithType>는 작업이 이미 완료되었는지 여부를 즉시 반환합니다. 작업에서 발생한 예외는 모두 <xref:System.Threading.Tasks.Task.Wait%2A?displayProperty=nameWithType> 메서드에 의해 throw됩니다. 이는 <xref:System.Threading.Tasks.Task.Wait%2A?displayProperty=nameWithType> 메서드가 작업 완료 후 호출된 경우에도 해당됩니다.  
   
 ## <a name="composing-tasks"></a>작업 작성  
- <xref:System.Threading.Tasks.Task> 및 <xref:System.Threading.Tasks.Task%601> 클래스는 공통 패턴을 구현하고 C#, [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] 및 F#에서 제공하는 비동기 언어 기능을 더욱 효율적으로 사용하도록 여러 작업을 구성할 수 있는 여러 메서드를 제공합니다. 이 단원에서는 <xref:System.Threading.Tasks.Task.WhenAll%2A>, <xref:System.Threading.Tasks.Task.WhenAny%2A>, <xref:System.Threading.Tasks.Task.Delay%2A> 및 <xref:System.Threading.Tasks.Task.FromResult%2A> 메서드에 대해 설명합니다.  
+ <xref:System.Threading.Tasks.Task> 및 <xref:System.Threading.Tasks.Task%601> 클래스는 공통 패턴을 구현하고 C#, Visual Basic 및 F#에서 제공하는 비동기 언어 기능을 더욱 효율적으로 사용하도록 여러 작업을 구성할 수 있는 여러 메서드를 제공합니다. 이 단원에서는 <xref:System.Threading.Tasks.Task.WhenAll%2A>, <xref:System.Threading.Tasks.Task.WhenAny%2A>, <xref:System.Threading.Tasks.Task.Delay%2A> 및 <xref:System.Threading.Tasks.Task.FromResult%2A> 메서드에 대해 설명합니다.  
   
 ### <a name="taskwhenall"></a>Task.WhenAll  
  <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType> 메서드는 여러 <xref:System.Threading.Tasks.Task> 또는 <xref:System.Threading.Tasks.Task%601> 개체가 완료될 때까지 비동기적으로 대기합니다. 균일하지 않은 작업 집합에 대해 대기할 수 있는 오버로드된 버전을 제공합니다. 예를 들어, 여러 <xref:System.Threading.Tasks.Task> 및 <xref:System.Threading.Tasks.Task%601> 개체가 한 메서드 호출에서 완료되기를 기다릴 수 있습니다.  

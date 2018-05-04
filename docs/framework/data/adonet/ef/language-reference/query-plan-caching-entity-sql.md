@@ -1,24 +1,12 @@
 ---
-title: "쿼리 계획 캐싱(Entity SQL)"
-ms.custom: 
+title: 쿼리 계획 캐싱(Entity SQL)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 90b0c685-5ef2-461b-98b4-c3c0a2b253c7
-caps.latest.revision: "2"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: f3ff908102671e2b22cb3ebb5af55e86bd791c43
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 0e00d7f9382fca2af630a8e1d50a5cde5178da05
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="query-plan-caching-entity-sql"></a>쿼리 계획 캐싱(Entity SQL)
 쿼리 실행 시도가 있으면 쿼리 파이프라인에서는 항상 해당 쿼리가 이미 컴파일되어 사용 가능한지 알아보기 위해 쿼리 계획 캐시를 확인합니다. 사용 가능한 쿼리가 있으면 새 쿼리를 작성하지 않고 캐시된 계획을 재사용합니다. 쿼리 계획 캐시에 일치 항목이 없을 경우에는 쿼리를 컴파일하고 캐시합니다. 쿼리는 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 텍스트 및 매개 변수 컬렉션(이름과 형식)으로 식별됩니다. 모든 텍스트 비교에서는 대/소문자가 구별됩니다.  

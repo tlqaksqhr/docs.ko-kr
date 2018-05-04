@@ -1,29 +1,17 @@
 ---
-title: "&lt;서비스&gt;"
-ms.custom: 
+title: '&lt;서비스&gt;'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 80d76ba9-2058-48ad-9b91-5e4be7e5c113
-caps.latest.revision: "7"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 46a2e0d810068db6409bc7b0fd1443a41c3d3ec3
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 789fc52f628174ef61a9c7169cb0cae0f1ba8e31
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltservicesgt"></a>&lt;서비스&gt;
 서비스는 구성 파일의 `services` 섹션에 정의됩니다. 서비스별로 해당 `service` 구성 섹션이 있습니다.  
   
- \<시스템입니다. ServiceModel >  
+ \<system.ServiceModel>  
   
 ## <a name="syntax"></a>구문  
   
@@ -37,7 +25,7 @@ ms.lasthandoff: 12/22/2017
 ```  
   
 ## <a name="attributes-and-elements"></a>특성 및 요소  
- 다음 단원에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
+ 다음 섹션에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
   
 ### <a name="attributes"></a>특성  
  없음  
@@ -46,7 +34,7 @@ ms.lasthandoff: 12/22/2017
   
 |요소|설명|  
 |-------------|-----------------|  
-|[\<서비스 >](../../../../../docs/framework/configure-apps/file-schema/wcf/service.md)|특정 서비스의 서비스 계약, 동작 및 끝점을 정의합니다.|  
+|[\<service>](../../../../../docs/framework/configure-apps/file-schema/wcf/service.md)|특정 서비스의 서비스 계약, 동작 및 끝점을 정의합니다.|  
   
 ### <a name="parent-elements"></a>부모 요소  
   

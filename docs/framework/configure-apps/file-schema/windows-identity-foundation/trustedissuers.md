@@ -1,31 +1,21 @@
 ---
 title: '&lt;trustedIssuers&gt;'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: d818c917-07b4-40db-9801-8676561859fd
-caps.latest.revision: "7"
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: 26f3d4f0b272168083bed2bbe249532181a6db67
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: f9daea7d6b78e2f6790050b35dde62db6058c60b
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="lttrustedissuersgt"></a>&lt;trustedIssuers&gt;
 구성 기반 발급자 이름 레지스트리에서 사용 하는 신뢰할 수 있는 발급자 인증서 목록 구성 (<xref:System.IdentityModel.Tokens.ConfigurationBasedIssuerNameRegistry>).  
   
- \<system.identityModel >  
-\<identityConfiguration >  
-\<securityTokenHandlers >  
+ \<system.identityModel>  
+\<identityConfiguration>  
+\<securityTokenHandlers>  
 \<securityTokenHandlerConfiguration >  
 \<issuerNameRegistry >  
 \<r s >  
@@ -51,7 +41,7 @@ ms.lasthandoff: 12/22/2017
 ```  
   
 ## <a name="attributes-and-elements"></a>특성 및 요소  
- 다음 단원에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
+ 다음 섹션에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
   
 ### <a name="attributes"></a>특성  
  없음  
@@ -75,7 +65,7 @@ ms.lasthandoff: 12/22/2017
   
  `type` 특성의는 `<issuerNameRegistry>` 요소를 참조 해야 합니다는 <xref:System.IdentityModel.Tokens.ConfigurationBasedIssuerNameRegistry> 에 대 한 클래스는 `<trustedIssuers>` 요소 유효 합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 XML 기반 구성 발급자를 지정 하는 방법을 이름 레지스트리를 보여 줍니다.  
   
 ```xml  

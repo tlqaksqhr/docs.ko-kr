@@ -1,27 +1,15 @@
 ---
-title: "방법: 복합 형식을 반환하는 쿼리 실행"
-ms.custom: 
+title: '방법: 복합 형식을 반환하는 쿼리 실행'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: c2209fdb-70ef-4dea-8bb8-097fe96f5563
-caps.latest.revision: "3"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: cae0cc50b18641634fc8109fb29eeb30e9cf7cd8
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: b999033046eb251400f033314ae7eb197a8f110a
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="how-to-execute-a-query-that-returns-complex-types"></a>방법: 복합 형식을 반환하는 쿼리 실행
 이 항목에서는 복합 형식의 속성이 포함된 엔터티 형식 개체를 반환하는 [!INCLUDE[esql](../../../../../includes/esql-md.md)] 쿼리를 실행하는 방법을 보여 줍니다.  
@@ -41,7 +29,7 @@ ms.lasthandoff: 01/19/2018
   
      만들기 및 엔터티 데이터 모델 마법사를 사용 하 여 복합 형식을 수정 하는 방법에 대 한 정보를 참조 하십시오. [하는 방법: 복합 형식 속성에 기존 속성 리팩터링](http://msdn.microsoft.com/library/5b2eb3b3-693d-42cb-b43a-405812d677eb) 및 [하는 방법: 만들기 및 수정 복합 형식](http://msdn.microsoft.com/library/afb8e206-0ffe-4597-b6d4-6ab566897e1d).  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 예제에서는 컬렉션을 반환 하는 쿼리를 실행 `Contact` 개체의 두 속성을 표시 하 고는 `Contact` 개체: `ContactID` 의 및 값이는 `EmailPhoneComplexType` 복합 형식입니다.  
   
  [!code-csharp[DP EntityServices Concepts#ComplexTypeWithEntityCommand](../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/source.cs#complextypewithentitycommand)]

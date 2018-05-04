@@ -1,27 +1,15 @@
 ---
-title: "코드 액세스 보안 및 ADO.NET"
-ms.custom: 
+title: 코드 액세스 보안 및 ADO.NET
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 93e099eb-daa1-4f1e-b031-c1e10a996f88
-caps.latest.revision: "6"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: e69073f757c07c5dd262900d4d8f7ad2cc83cdc4
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: ea5dbcc128f97ebbec72273378adb042bbe34e1e
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="code-access-security-and-adonet"></a>코드 액세스 보안 및 ADO.NET
 .NET Framework는 역할 기반 보안과 CAS(코드 액세스 보안)를 제공합니다. 두 보안 기능 모두 CLR(공용 언어 런타임)이 제공하는 공용 인프라를 사용하여 구현되었습니다. 비관리 코드의 경우 대부분의 응용 프로그램은 사용자 또는 보안 주체 권한으로 실행됩니다. 결과적으로 높은 권한을 가진 사용자가 악의적이거나 오류가 많은 소프트웨어를 실행하면 컴퓨터 시스템과 개인 데이터가 손상될 수 있습니다.  
@@ -83,7 +71,7 @@ ms.lasthandoff: 01/19/2018
 |`Action`|보안 동작을 가져오거나 설정합니다. <xref:System.Security.Permissions.SecurityAttribute>에서 상속됩니다.|  
 |`AllowBlankPassword`|연결 문자열에서 빈 암호 사용을 활성화하거나 비활성화합니다. 빈 암호 사용을 활성화하는 `true`와 빈 암호 사용을 비활성화하는 `false`를 값으로 사용할 수 있습니다. <xref:System.Data.Common.DBDataPermissionAttribute>에서 상속됩니다.|  
 |`ConnectionString`|허용되는 연결 문자열을 지정합니다. 여러 개의 연결 문자열을 식별할 수 있습니다. **참고:** 연결 문자열에 사용자 ID 또는 암호를 포함 하지 마십시오. 이번 릴리스에서는 .NET Framework 구성 도구를 사용하여 연결 문자열 제한을 변경할 수 없습니다. <br /><br /> <xref:System.Data.Common.DBDataPermissionAttribute>에서 상속됩니다.|  
-|`KeyRestrictions`|허용되거나 허용되지 않는 연결 문자열 매개 변수를 식별합니다. 연결 문자열 매개 변수 형식으로 식별 된  *\<매개 변수 이름 > =*합니다. 여러 매개 변수를 세미콜론(;)으로 구분하여 지정할 수 있습니다. **참고:** 지정 하지 않으면 `KeyRestrictions`, 있지만 설정할 `KeyRestrictionBehavior` 속성을 `AllowOnly` 또는 `PreventUsage`, 추가 연결 문자열 매개 변수가 허용 됩니다. <xref:System.Data.Common.DBDataPermissionAttribute>에서 상속됩니다.|  
+|`KeyRestrictions`|허용되거나 허용되지 않는 연결 문자열 매개 변수를 식별합니다. 연결 문자열 매개 변수 형식으로 식별 된  *\<매개 변수 이름 > =* 합니다. 여러 매개 변수를 세미콜론(;)으로 구분하여 지정할 수 있습니다. **참고:** 지정 하지 않으면 `KeyRestrictions`, 있지만 설정할 `KeyRestrictionBehavior` 속성을 `AllowOnly` 또는 `PreventUsage`, 추가 연결 문자열 매개 변수가 허용 됩니다. <xref:System.Data.Common.DBDataPermissionAttribute>에서 상속됩니다.|  
 |`KeyRestrictionBehavior`|연결 문자열 매개 변수를 허용되는 유일한 추가 매개 변수(`AllowOnly`)로 식별하거나 허용되지 않는 추가 매개 변수(`PreventUsage`)로 식별합니다. 기본값은 `AllowOnly`입니다. <xref:System.Data.Common.DBDataPermissionAttribute>에서 상속됩니다.|  
 |`TypeID`|파생 클래스에서 구현될 때 이 특성의 고유 식별자를 가져옵니다. <xref:System.Attribute>에서 상속됩니다.|  
 |`Unrestricted`|리소스에 무제한 권한이 선언되었는지 여부를 나타냅니다. <xref:System.Security.Permissions.SecurityAttribute>에서 상속됩니다.|  
@@ -173,7 +161,7 @@ AllowBlankPassword="False">
 ## <a name="verifying-adonet-code-access-using-security-permissions"></a>보안 권한을 사용하여 ADO.NET 코드 액세스 확인  
  부분 신뢰 권한의 경우 <xref:System.Data.SqlClient.SqlClientPermissionAttribute>를 지정하여 코드의 특정 메서드에 대해 CAS 권한을 요구할 수 있습니다. 제한된 보안 정책의 적용으로 이 권한이 허용되지 않는 경우 코드가 실행되기 전에 예외가 throw됩니다. 보안 정책에 대 한 자세한 내용은 참조 하십시오. [NIB: 보안 정책 관리](http://msdn.microsoft.com/library/d754e05d-29dc-4d3a-a2c2-95eaaf1b82b9) 및 [NIB: 보안 정책에 대 한 유용한 정보](http://msdn.microsoft.com/library/d49bc4d5-efb7-4caa-a2fe-e4d3cec63c05)합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  다음 예제에서는 특정 연결 문자열을 필요로 하는 코드를 작성하는 방법을 보여 줍니다. 또한 이 예제에서는 시스템 관리자가 실제로 CAS 정책을 사용하여 구현하는 <xref:System.Data.SqlClient>에 대한 무제한 권한을 거부하는 것을 시뮬레이션합니다.  
   
 > [!IMPORTANT]

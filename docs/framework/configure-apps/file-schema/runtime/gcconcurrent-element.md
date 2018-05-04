@@ -1,13 +1,6 @@
 ---
-title: "&lt;gcConcurrent&gt; 요소"
-ms.custom: 
+title: '&lt;gcConcurrent&gt; 요소'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/runtime/gcConcurrent
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#gcConcurrent
@@ -16,22 +9,19 @@ helpviewer_keywords:
 - gcConcurrent element
 - <gcConcurrent> element
 ms.assetid: 503f55ba-26ed-45ac-a2ea-caf994da04cd
-caps.latest.revision: "18"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 254b3be8f270a9186377b264094c919314efb27f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ee00c3a307523d2cae831274630ad6828cd9daf6
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltgcconcurrentgt-element"></a>&lt;gcConcurrent&gt; 요소
 공용 언어 런타임이 별도 스레드에서 가비지 컬렉션을 실행하는지 여부를 지정합니다.  
   
  \<configuration>  
-\<런타임 >  
+\<runtime>  
 \<gcConcurrent >  
   
 ## <a name="syntax"></a>구문  
@@ -42,7 +32,7 @@ ms.lasthandoff: 12/22/2017
 ```  
   
 ## <a name="attributes-and-elements"></a>특성 및 요소  
- 다음 단원에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
+ 다음 섹션에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
   
 ### <a name="attributes"></a>특성  
   
@@ -87,7 +77,7 @@ ms.lasthandoff: 12/22/2017
   
  자세한 동시에 대 한 정보 및 백그라운드 가비지 수집의 "동시 가비지 수집" 섹션을 참조는 [가비지 수집 기본 사항](../../../../../docs/standard/garbage-collection/fundamentals.md) 항목입니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 예제에서는 동시 가비지 컬렉션을 사용하도록 설정합니다.  
   
 ```xml  

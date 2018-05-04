@@ -1,27 +1,15 @@
 ---
-title: "형식 생성(Entity SQL)"
-ms.custom: 
+title: 형식 생성(Entity SQL)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 41fa7bde-8d20-4a3f-a3d2-fb791e128010
-caps.latest.revision: "2"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 8a6ae2334c879733e964014716c2b67e77f271d5
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 91ed123132965353ff354282f6850e9ef9cba3d0
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="constructing-types-entity-sql"></a>형식 생성(Entity SQL)
-[!INCLUDE[esql](../../../../../../includes/esql-md.md)]세 가지 종류의 생성자를 제공: 행 생성자, 명명 된 형식 생성자 및 컬렉션 생성자입니다.  
+[!INCLUDE[esql](../../../../../../includes/esql-md.md)] 세 가지 종류의 생성자를 제공: 행 생성자, 명명 된 형식 생성자 및 컬렉션 생성자입니다.  
   
 ## <a name="row-constructors"></a>행 생성자  
  [!INCLUDE[esql](../../../../../../includes/esql-md.md)]의 행 생성자를 사용하여 값 하나 이상을 기반으로 구조적으로 형식화된 익명 레코드를 생성합니다. 행 생성자의 결과 형식은 필드 형식이 행 생성에 사용된 값의 형식과 동일한 행 형식입니다. 예를 들어 다음 식은 `Record(a int, b string, c int)` 형식의 값을 생성합니다.  

@@ -1,27 +1,15 @@
 ---
-title: "방법: EntityCommand를 사용하여 매개 변수가 있는 Entity SQL 쿼리 실행"
-ms.custom: 
+title: '방법: EntityCommand를 사용하여 매개 변수가 있는 Entity SQL 쿼리 실행'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: e93fea43-7e03-4d7d-9fee-2517b8b88cba
-caps.latest.revision: "3"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: d43be857e4f920a1ce36625d9be207b9025ff423
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: c8469f8f13178a09c636d33070fd5ad4cbb912aa
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="how-to-execute-a-parameterized-entity-sql-query-using-entitycommand"></a>방법: EntityCommand를 사용하여 매개 변수가 있는 Entity SQL 쿼리 실행
 이 항목에서는 실행 하는 방법을 보여 줍니다.는 [!INCLUDE[esql](../../../../../includes/esql-md.md)] 를 사용 하 여 매개 변수가 있는 쿼리는 <xref:System.Data.EntityClient.EntityCommand> 개체입니다.  
@@ -35,7 +23,7 @@ ms.lasthandoff: 01/19/2018
      [!code-csharp[DP EntityServices Concepts#Namespaces](../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/source.cs#namespaces)]
      [!code-vb[DP EntityServices Concepts#Namespaces](../../../../../samples/snippets/visualbasic/VS_Snippets_Data/dp entityservices concepts/vb/source.vb#namespaces)]  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 예제에서는 두 개의 매개 변수가 있는 쿼리 문자열을 생성하는 방법을 보여 줍니다. 그런 다음 <xref:System.Data.EntityClient.EntityCommand>를 만들고 두 매개 변수를 이 <xref:System.Data.EntityClient.EntityParameter>의 <xref:System.Data.EntityClient.EntityCommand> 컬렉션에 추가한 후 `Contact` 항목 컬렉션을 반복합니다.  
   
  [!code-csharp[DP EntityServices Concepts#ParameterizedQueryWithEntityCommand](../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/source.cs#parameterizedquerywithentitycommand)]

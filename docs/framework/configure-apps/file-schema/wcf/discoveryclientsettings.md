@@ -1,29 +1,17 @@
 ---
 title: '&lt;discoveryClientSettings&gt;'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 02e1b823-a8bb-4074-90d5-8599f71e8f9d
-caps.latest.revision: "2"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 0bcd70df9809288987636f7766d6d4887dec84d8
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: e9723aed1aa8fbcbf5c4e84080c0ba991ea3fd60
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltdiscoveryclientsettingsgt"></a>&lt;discoveryClientSettings&gt;
 응용 프로그램에서 서비스 검색 프로세스에 클라이언트로 참여하기 위해 필요한 설정이 포함됩니다.  
   
-\<시스템입니다. ServiceModel >  
+\<system.ServiceModel>  
 \<d a r d >  
   
 ## <a name="syntax"></a>구문  
@@ -53,7 +41,7 @@ ms.lasthandoff: 12/22/2017
 ```  
   
 ## <a name="attributes-and-elements"></a>특성 및 요소  
- 다음 단원에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
+ 다음 섹션에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
   
 ### <a name="attributes"></a>특성  
   

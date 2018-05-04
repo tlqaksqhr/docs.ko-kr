@@ -1,33 +1,21 @@
 ---
-title: "&lt;useLegacyJit&gt; 요소"
-ms.custom: 
+title: '&lt;useLegacyJit&gt; 요소'
 ms.date: 04/26/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-bcl
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: c2cf97f0-9262-4f1f-a754-5568b51110ad
-caps.latest.revision: "4"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 9d2a71e44db2d6e85ae730f4603bf191f54525c2
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: fd0ae1a44b41ddcae2149bcf685871a37dd01b06
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltuselegacyjitgt-element"></a>&lt;useLegacyJit&gt; 요소
 
 공용 언어 런타임이 Just-In-Time 컴파일에 레거시 64비트 JIT 컴파일러를 사용할지를 결정합니다.  
   
 \<configuration>  
-\<런타임 >  
+\<runtime>  
 \<useLegacyJit >
   
 ## <a name="syntax"></a>구문  
@@ -91,7 +79,7 @@ ms.lasthandoff: 12/22/2017
   
   에 값을 추가 하는 `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\.NETFramework` 키 컴퓨터에서 실행 되는 모든 앱에 영향을 줍니다. 에 값을 추가 하는 `HKEY_CURRENT_USER\SOFTWARE\Microsoft\.NETFramework` 키 현재 사용자가을 실행 하는 모든 앱에 영향을 줍니다. 컴퓨터를 여러 사용자 계정으로 구성 된 경우 현재 사용자가을 실행 하는 앱만 영향을 받는 값으로 다른 사용자에 대 한 레지스트리 키에 추가 하지 않으면 합니다. 추가 `<useLegacyJit>` 요소 구성 파일에 있는 경우 레지스트리 설정을 재정의 합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
 
 다음 구성 파일 새 64 비트 JIT 컴파일러는 컴파일을 사용 하지 않도록 설정 하 고 대신 레거시 64 비트 JIT 컴파일러를 사용 하 여 합니다.  
   
@@ -104,7 +92,7 @@ ms.lasthandoff: 12/22/2017
 </configuration>  
 ```  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참고자료
 
 [\<런타임 > 요소](../../../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md)   
 [\<구성 > 요소](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)   

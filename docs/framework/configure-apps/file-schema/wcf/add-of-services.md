@@ -1,27 +1,15 @@
 ---
-title: "&lt;services&gt;의 &lt;add&gt;"
-ms.custom: 
+title: '&lt;services&gt;의 &lt;add&gt;'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 6bdc4590-aa9c-4ec8-9345-879d780cd141
-caps.latest.revision: "4"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 040db3b350ebacfc3aff76d90e87e65206701069
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 709636f0b9667a431838b463c05cfd00f6521f6b
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltaddgt-of-ltservicesgt"></a>&lt;services&gt;의 &lt;add&gt;
-워크플로 기반 <xref:System.Workflow.Runtime.WorkflowRuntime> 서비스를 호스트하기 위해 [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)]의 인스턴스에 대한 설정을 지정합니다. 이 요소는 <xref:System.Workflow.Runtime.Configuration.WorkflowRuntimeServiceElement> 형식입니다.  
+인스턴스에 대 한 설정을 지정 <xref:System.Workflow.Runtime.WorkflowRuntime> 호스팅 워크플로 기반 Windows Communication Foundation (WCF) 서비스입니다. 이 요소는 <xref:System.Workflow.Runtime.Configuration.WorkflowRuntimeServiceElement> 형식입니다.  
   
  \<system.ServiceModel>  
 \<동작 >  
@@ -61,7 +49,7 @@ ms.lasthandoff: 01/19/2018
 ## <a name="remarks"></a>설명  
  이 요소에 지정된 서비스는 워크플로 런타임 엔진에 의해 초기화되며 해당 <xref:System.Workflow.Runtime.WorkflowRuntime> 생성자를 호출할 때 서비스에 추가됩니다. 따라서 지정된 서비스는 생성자의 시그니처에 대한 특정 규칙을 따라야 합니다. 자세한 내용은 <xref:System.Workflow.Runtime.Configuration.WorkflowRuntimeServiceElement>를 참조하세요.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
   
 ```xml  
 <serviceBehaviors>  

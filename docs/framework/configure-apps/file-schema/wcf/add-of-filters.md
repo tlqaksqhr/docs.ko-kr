@@ -1,29 +1,17 @@
 ---
-title: "&lt;filters&gt;의 &lt;add&gt;"
-ms.custom: 
+title: '&lt;filters&gt;의 &lt;add&gt;'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: e3bf437c-dd99-49f3-9792-9a8721e6eaad
-caps.latest.revision: "4"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: b1ca0d5ae73d01e5bbb719f7bcc9a3f5a19fc291
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 2a26a94c01fdb04b8a9e2d381a28cc909bbdac8f
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltaddgt-of-ltfiltersgt"></a>&lt;filters&gt;의 &lt;add&gt;
 로깅할 메시지 종류를 지정하는 XPath 필터입니다.  
   
- \<시스템입니다. ServiceModel >  
+ \<system.ServiceModel>  
 \<진단 >  
 \<메시지 로깅 >  
 \<필터 >  
@@ -38,7 +26,7 @@ ms.lasthandoff: 12/22/2017
 ```  
   
 ## <a name="attributes-and-elements"></a>특성 및 요소  
- 다음 단원에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
+ 다음 섹션에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
   
 ### <a name="attributes"></a>특성  
   
@@ -64,7 +52,7 @@ ms.lasthandoff: 12/22/2017
   
  다음은 SOAP 헤더 섹션이 있는 메시지만 기록하는 필터 구성 방법에 대한 예제입니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음은 SOAP 헤더 섹션이 있는 메시지만 기록하는 필터 구성 방법에 대한 예제입니다.  
   
 ```xml  

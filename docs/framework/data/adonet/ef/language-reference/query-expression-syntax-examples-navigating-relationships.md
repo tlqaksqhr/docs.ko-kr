@@ -1,27 +1,15 @@
 ---
-title: "쿼리 식 구문 예제: 관계 탐색"
-ms.custom: 
+title: '쿼리 식 구문 예제: 관계 탐색'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 0d4a7f41-c758-4059-8f83-d2e9c2745593
-caps.latest.revision: "2"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: c029ce130e0bc8a6f959c6c27d863422794c22e5
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: e4297400bd7e76ca6202748d8f14d478364c1275
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="query-expression-syntax-examples-navigating-relationships"></a>쿼리 식 구문 예제: 관계 탐색
 [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)]의 탐색 속성은 연결의 End에서 엔터티를 찾는 데 사용되는 바로 가기 속성입니다. 탐색 속성을 사용하면 엔터티 간에 탐색하거나 연결 집합을 통해 관련 엔터티 간에 탐색할 수 있습니다. 이 항목에서는 [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] 쿼리에서 탐색 속성을 통해 관계를 탐색하는 방법을 보여 주는 쿼리 식 구문 예제를 제공합니다.  
@@ -33,7 +21,7 @@ ms.lasthandoff: 01/17/2018
  [!code-csharp[DP L2E Examples#ImportsUsing](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Examples/CS/Program.cs#importsusing)]
  [!code-vb[DP L2E Examples#ImportsUsing](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Examples/VB/Module1.vb#importsusing)]  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 예제에서는 <xref:System.Linq.Queryable.Select%2A> 메서드를 사용하여 성이 "Zhou"인 각 연락처에 대한 총 주문 금액의 합계와 연락처 ID를 모두 가져옵니다. `Contact.SalesOrderHeader` 탐색 속성을 사용하여 각 연락처의 `SalesOrderHeader` 개체 컬렉션을 가져옵니다. `Sum` 메서드는 `Contact.SalesOrderHeader` 탐색 속성을 사용하여 각 연락처의 모든 주문에 대한 총 금액을 더합니다.  
   
  [!code-csharp[DP L2E Examples#SelectEachContactsOrders2](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Examples/CS/Program.cs#selecteachcontactsorders2)]

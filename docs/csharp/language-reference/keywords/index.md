@@ -1,10 +1,6 @@
 ---
 title: C# 키워드
 ms.date: 03/07/2017
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 f1_keywords:
 - cs.keywords
 helpviewer_keywords:
@@ -13,14 +9,11 @@ helpviewer_keywords:
 - Visual C#, keywords
 - '@ keyword'
 ms.assetid: e929b0f2-4b92-4d37-8060-23d323b098ad
-caps.latest.revision: 22
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 60833d372bc54c83c1f491f1f779b597b3ab97dc
-ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
+ms.openlocfilehash: f14cac08a2f110d97b8f9f660eb3dd1e664165c3
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="c-keywords"></a>C# 키워드
 키워드는 컴파일러에 대해 특별한 의미를 갖는, 미리 정의되어 있는 예약된 식별자입니다. 키워드는 프로그램에서 식별자로 사용되려면 접두어로 `@`을 포함해야 합니다. 예를 들어 `@if`는 올바른 식별자이지만 `if`는 `if`가 키워드이므로 식별자로 적절하지 않습니다.  

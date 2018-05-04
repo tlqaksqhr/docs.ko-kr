@@ -1,10 +1,6 @@
 ---
 title: C# 연산자
 ms.date: 04/04/2018
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 f1_keywords:
 - cs.operators
 helpviewer_keywords:
@@ -22,14 +18,11 @@ helpviewer_keywords:
 - keywords [C#], operators
 - arithmetic operators [C#]
 ms.assetid: 0301e31f-22ad-49af-ac3c-d5eae7f0ac43
-caps.latest.revision: 40
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: a52fad2755c8c255d9489cd7148b0d279c0e1a5e
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: d4b570c93b4bf5f612a74de80fc2cceea2063cc0
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="c-operators"></a>C# 연산자
 C#에서는 많은 연산자를 제공하며, 이러한 연산자는 식에서 수행할 연산(수학, 인덱싱, 함수 호출 등)을 지정하는 기호입니다. 많은 연산자를 [오버로드](../../../csharp/programming-guide/statements-expressions-operators/overloadable-operators.md)하여 사용자 정의 형식에 적용되는 경우의 의미를 변경할 수 있습니다.  

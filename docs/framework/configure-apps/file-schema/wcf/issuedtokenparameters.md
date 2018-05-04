@@ -1,33 +1,21 @@
 ---
 title: '&lt;r s&gt;'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 120b3f37-7331-4816-b712-d6aab39655a4
-caps.latest.revision: "10"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: bac725e0c4fe590623ac82ec45bcf669a2e57179
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 550b3412b193b996b8de800856d6833369fc4bc7
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltissuedtokenparametersgt"></a>&lt;r s&gt;
 페더레이션 보안 시나리오에서 발급된 보안 토큰에 대한 매개 변수를 지정합니다.  
   
- \<system.serviceModel >  
+ \<system.serviceModel>  
 \<바인딩 >  
-\<customBinding >  
+\<customBinding>  
 \<바인딩 >  
-\<보안 >  
+\<security>  
 \<r s >  
   
 ## <a name="syntax"></a>구문  
@@ -54,7 +42,7 @@ ms.lasthandoff: 12/22/2017
  `Type`  
   
 ## <a name="attributes-and-elements"></a>특성 및 요소  
- 다음 단원에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
+ 다음 섹션에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
   
 ### <a name="attributes"></a>특성  
   
@@ -71,16 +59,16 @@ ms.lasthandoff: 12/22/2017
 |요소|설명|  
 |-------------|-----------------|  
 |[\<additionalRequestParameters >](../../../../../docs/framework/configure-apps/file-schema/wcf/additionalrequestparameters-element.md)|추가 요청 매개 변수를 지정하는 구성 요소 컬렉션입니다.|  
-|[\<claimTypeRequirements >](../../../../../docs/framework/configure-apps/file-schema/wcf/claimtyperequirements-element.md)|필요한 클레임 형식의 컬렉션을 지정합니다.<br /><br /> 페더레이션 시나리오에서 서비스는 들어오는 자격 증명에 대한 요구 사항을 기술합니다. 예를 들어, 들어오는 자격 증명은 특정 집합의 클레임 형식이어야 합니다. 이 컬렉션의 각 요소는 페더레이션 자격 증명에 표시되어야 하는 필수 클레임 및 선택적 클레임의 형식을 지정합니다.|  
-|[\<발급자 >](../../../../../docs/framework/configure-apps/file-schema/wcf/issuer-of-issuedtokenparameters.md)|현재 토큰을 발급하는 끝점을 지정하는 구성 요소입니다.|  
-|[\<issuerMetadata >](../../../../../docs/framework/configure-apps/file-schema/wcf/issuermetadata-of-issuedtokenparameters.md)|토큰 발급자의 메타데이터의 끝점 주소를 지정하는 구성 요소입니다.|  
+|[\<claimTypeRequirements>](../../../../../docs/framework/configure-apps/file-schema/wcf/claimtyperequirements-element.md)|필요한 클레임 형식의 컬렉션을 지정합니다.<br /><br /> 페더레이션 시나리오에서 서비스는 들어오는 자격 증명에 대한 요구 사항을 기술합니다. 예를 들어, 들어오는 자격 증명은 특정 집합의 클레임 형식이어야 합니다. 이 컬렉션의 각 요소는 페더레이션 자격 증명에 표시되어야 하는 필수 클레임 및 선택적 클레임의 형식을 지정합니다.|  
+|[\<issuer>](../../../../../docs/framework/configure-apps/file-schema/wcf/issuer-of-issuedtokenparameters.md)|현재 토큰을 발급하는 끝점을 지정하는 구성 요소입니다.|  
+|[\<issuerMetadata>](../../../../../docs/framework/configure-apps/file-schema/wcf/issuermetadata-of-issuedtokenparameters.md)|토큰 발급자의 메타데이터의 끝점 주소를 지정하는 구성 요소입니다.|  
   
 ### <a name="parent-elements"></a>부모 요소  
   
 |요소|설명|  
 |-------------|-----------------|  
 |[\<secureConversationBootstrap >](../../../../../docs/framework/configure-apps/file-schema/wcf/secureconversationbootstrap.md)|보안 대화 서비스 개시에 사용되는 기본값을 지정합니다.|  
-|[\<보안 >](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md)|사용자 지정 바인딩에 대한 보안 옵션을 지정합니다.|  
+|[\<security>](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md)|사용자 지정 바인딩에 대한 보안 옵션을 지정합니다.|  
   
 ## <a name="see-also"></a>참고 항목  
  <xref:System.ServiceModel.Security.Tokens.IssuedSecurityTokenParameters>  
@@ -90,7 +78,7 @@ ms.lasthandoff: 12/22/2017
  [바인딩](../../../../../docs/framework/wcf/bindings.md)  
  [바인딩 확장](../../../../../docs/framework/wcf/extending/extending-bindings.md)  
  [사용자 지정 바인딩](../../../../../docs/framework/wcf/extending/custom-bindings.md)  
- [\<customBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)  
+ [\<customBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)  
  [방법: SecurityBindingElement를 사용하여 사용자 지정 바인딩 만들기](../../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)  
  [사용자 지정 바인딩 보안](../../../../../docs/framework/wcf/samples/custom-binding-security.md)  
  [서비스 ID 및 인증](../../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)  

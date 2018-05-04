@@ -1,26 +1,12 @@
 ---
 title: '&lt;serviceMetadata&gt;'
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 2b4c3b4c-31d4-4908-a9b7-5bb411c221f2
-caps.latest.revision: 28
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: b0b98c637c98c75aab5009f9a2f35b8ce6b90012
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 3c59a47f8a45fbccb05eb1f385215fe2aa739836
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltservicemetadatagt"></a>&lt;serviceMetadata&gt;
 서비스 메타데이터 및 관련 정보의 게시를 지정합니다.  
@@ -74,7 +60,7 @@ ms.lasthandoff: 04/28/2018
 |[\<동작 >](../../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)|동작 요소를 지정합니다.|  
   
 ## <a name="remarks"></a>설명  
- 이 구성 요소를 사용하면 서비스의 메타데이터 게시 기능을 제어할 수 있습니다. 중요한 서비스 메타데이터를 실수로 공개하지 않도록 [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] 서비스의 기본 구성에서는 메타데이터 게시를 사용하지 않도록 설정합니다. 이 동작은 기본적으로 안전하지만 구성에서 서비스의 메타데이터 게시 동작이 명시적으로 사용하도록 설정되어 있지 않은 경우 Svcutil.exe 등의 메타데이터 가져오기 도구를 사용하여 서비스를 호출하는 데 필요한 클라이언트 코드를 생성할 수 없습니다. 이 구성 요소를 사용하면 서비스에 대해 이 게시 동작을 사용하도록 설정할 수 있습니다.  
+ 이 구성 요소를 사용하면 서비스의 메타데이터 게시 기능을 제어할 수 있습니다. Windows Communication Foundation (WCF) 서비스에 대 한 기본 구성으로 잠재적으로 중요 한 서비스 메타 데이터가 실수로 공개를 방지 하려면 메타 데이터 게시를 해제 합니다. 이 동작은 기본적으로 안전하지만 구성에서 서비스의 메타데이터 게시 동작이 명시적으로 사용하도록 설정되어 있지 않은 경우 Svcutil.exe 등의 메타데이터 가져오기 도구를 사용하여 서비스를 호출하는 데 필요한 클라이언트 코드를 생성할 수 없습니다. 이 구성 요소를 사용하면 서비스에 대해 이 게시 동작을 사용하도록 설정할 수 있습니다.  
   
  이 동작 구성의 자세한 예제를 보려면 [메타 데이터 게시 동작이](../../../../../docs/framework/wcf/samples/metadata-publishing-behavior.md)합니다.  
   

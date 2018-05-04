@@ -1,31 +1,21 @@
 ---
 title: '&lt;securityTokenHandlerConfiguration&gt;'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 28724cc6-020c-4a06-9a1f-d7594f315019
-caps.latest.revision: "8"
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: ac7284fa418c1540582c40bd744e913ba31aa881
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 168bdc4fbf640b201ebc61462d04727c23f838f2
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltsecuritytokenhandlerconfigurationgt"></a>&lt;securityTokenHandlerConfiguration&gt;
 토큰 처리기의 컬렉션에 대 한 구성을 제공합니다.  
   
- \<system.identityModel >  
-\<identityConfiguration >  
-\<securityTokenHandlers >  
+ \<system.identityModel>  
+\<identityConfiguration>  
+\<securityTokenHandlers>  
 \<securityTokenHandlerConfiguration >  
   
 ## <a name="syntax"></a>구문  
@@ -43,7 +33,7 @@ ms.lasthandoff: 12/22/2017
 ```  
   
 ## <a name="attributes-and-elements"></a>특성 및 요소  
- 다음 단원에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
+ 다음 섹션에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
   
 ### <a name="attributes"></a>특성  
   
@@ -68,12 +58,12 @@ ms.lasthandoff: 12/22/2017
   
 |요소|설명|  
 |-------------|-----------------|  
-|[\<securityTokenHandlers >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/securitytokenhandlers.md)|보안 토큰 처리기에 등록 된 끝점의 컬렉션을 지정 합니다.|  
+|[\<securityTokenHandlers>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/securitytokenhandlers.md)|보안 토큰 처리기에 등록 된 끝점의 컬렉션을 지정 합니다.|  
   
 ## <a name="remarks"></a>설명  
  이 섹션에서는 속성 값에 대 한는 <xref:System.IdentityModel.Tokens.SecurityTokenHandlerConfiguration> 개체입니다. 서비스에 구성 된이 섹션에 구성 된 설정을 재정의 합니다. 이러한 설정 중 일부 처리기는 보안 토큰 처리기 컬렉션에 추가 될 때 지정 된 설정으로 재정의할 차례로 수 있습니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
   
 ```xml  
 <system.identityModel>  

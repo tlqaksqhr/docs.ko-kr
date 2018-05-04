@@ -6,14 +6,15 @@ ms.author: wiwagn
 ms.date: 10/07/2017
 ms.prod: .net-core
 ms.technology: dotnet-docker
+ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: c10bf66dd37f0d99c038db7f95999d84986152fa
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 1a97bd393a4df080d9e2f9fc049165e4efbff852
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="develop-aspnet-core-mvc-apps"></a>ASP.NET Core MVC 앱 개발
 
@@ -81,7 +82,7 @@ public class ProductsController : Controller
 
 ## <a name="working-with-dependencies"></a>종속성 사용
 
-ASP.NET Core에는 [종속성 주입](https://docs.microsoft.com/aspnet/core/fundamentals/dependency-injection)이라는 기술이 기본적으로 지원되며 내부적으로 사용됩니다. 종속성 주입은 응용 프로그램의 여러 부분 간에 느슨한 결합을 사용할 수 있게 하는 기술입니다. 느슨한 결합은 응용 프로그램의 일부를 쉽게 격리하여 테스트하거나 대체할 수 있기 때문에 바람직합니다. 또한 응용 프로그램의 한 부분을 변경하는 경우 응용 프로그램의 다른 부분에 예기치 않은 영향을 줄 가능성을 낮춥니다. 종속성 주입은 종속성 반전 원칙을 기반으로 하며, 종종 열기/닫기 원칙을 구현하는 데 중요합니다. 응용 프로그램에서 종속성을 사용하는 방식을 평가할 때 [static cling](http://deviq.com/static-cling/)(정적 집착) 코드 냄새에 주의하고 "[new is glue](http://ardalis.com/new-is-glue)(접착제로서의 new)"라는 경구를 명심하세요.
+ASP.NET Core에는 [종속성 주입](https://docs.microsoft.com/aspnet/core/fundamentals/dependency-injection)이라는 기술이 기본적으로 지원되며 내부적으로 사용됩니다. 종속성 주입은 응용 프로그램의 여러 부분 간에 느슨한 결합을 사용할 수 있게 하는 기술입니다. 느슨한 결합은 응용 프로그램의 일부를 쉽게 격리하여 테스트하거나 대체할 수 있기 때문에 바람직합니다. 또한 응용 프로그램의 한 부분을 변경하는 경우 응용 프로그램의 다른 부분에 예기치 않은 영향을 줄 가능성을 낮춥니다. 종속성 주입은 종속성 반전 원칙을 기반으로 하며, 종종 열기/닫기 원칙을 구현하는 데 중요합니다. 응용 프로그램에서 종속성을 사용하는 방식을 평가할 때 [static cling](http://deviq.com/static-cling/)(정적 집착) 코드 냄새에 주의하고 "[new is glue](https://ardalis.com/new-is-glue)(접착제로서의 new)"라는 경구를 명심하세요.
 
 정적 집착은 클래스에서 정적 메서드를 호출하거나 인프라에 부작용이나 종속성이 있는 정적 속성에 액세스할 때 발생합니다. 예를 들어 정적 메서드를 호출하는 메서드가 있고 이에 따라 데이터베이스에 쓰는 경우 메서드는 데이터베이스와 밀접하게 결합됩니다. 데이터베이스 호출을 중단하는 모든 것이 메서드를 손상시킵니다. 이러한 테스트는 상용 모의 라이브러리에서 정적 호출을 모의해야 하거나 표준 테스트 데이터베이스에서만 테스트할 수 있으므로 이러한 메서드를 테스트하기가 어렵습니다. 인프라에 종속되지 않는 정적 호출, 특히 완전한 상태 비저장인 호출은 호출하기에 괜찮지만, 결합 또는 테스트 용이성(정적 호출 자체에 코드를 결합하는 것 이상)에는 영향을 주지 않습니다.
 
@@ -134,7 +135,7 @@ Startup 클래스는 컨트롤러에서 미들웨어, 필터, 자체의 서비�
 
 지속성을 수행하는 방법 또는 사용자에게 알림을 보내는 방법과 같은 구현 세부 정보는 인프라 프로젝트에 보관됩니다. 이 프로젝트는 Entity Framework Core와 같은 구현별 패키지를 참조하지만 프로젝트 외부에서 이러한 구현에 대한 세부 정보를 노출하지 않아야 합니다. 인프라 서비스 및 리포지토리는 ApplicationCore 프로젝트에 정의된 인터페이스를 구현해야 하며, 해당 지속성 구현은 ApplicationCore에 정의된 엔터티를 검색하고 저장해야 합니다.
 
-ASP.NET Core 프로젝트 자체는 모든 UI 수준의 문제를 담당하지만 비즈니스 논리 또는 인프라 세부 정보를 포함하지 않아야 합니다. 실제로 인프라 프로젝트에 대한 종속성이 없어야 하며, 이 경우 두 프로젝트 간의 종속성이 실수로 도입되지 않도록 하는 데 도움이 됩니다. 이는 StructureMap과 같은 타사 DI 컨테이너를 사용하여 수행할 수 있습니다. 이 컨테이너를 사용하면 각 프로젝트의 레지스트리 클래스에서 DI 규칙을 정의할 수 있습니다.
+ASP.NET Core UI 프로젝트는 모든 UI 수준의 문제를 담당하지만 비즈니스 논리 또는 인프라 세부 정보를 포함하지 않아야 합니다. 실제로 인프라 프로젝트에 대한 종속성이 없어야 하며, 이 경우 두 프로젝트 간의 종속성이 실수로 도입되지 않도록 하는 데 도움이 됩니다. 이는 StructureMap과 같은 타사 DI 컨테이너를 사용하여 수행할 수 있습니다. 이 컨테이너를 사용하면 각 프로젝트의 레지스트리 클래스에서 DI 규칙을 정의할 수 있습니다.
 
 응용 프로그램을 구현 세부 정보와 분리하는 또 다른 방법은 응용 프로그램에서 개별 Docker 컨테이너에 배포된 마이크로 서비스를 호출하게 하는 것입니다. 이는 두 프로젝트 간에 DI를 활용하는 것보다 훨씬 더 많은 문제와 분리를 제공하지만 추가적인 복잡성이 있습니다.
 
@@ -283,7 +284,7 @@ public async Task<IActionResult> Put(int id, [FromBody]Author author)
 > ### <a name="references--structuring-applications"></a>참고 자료 - 응용 프로그램 구성
 > - **영역**  
 > <https://docs.microsoft.com/aspnet/core/mvc/controllers/areas>
-> - **MSDN – ASP.NET Core MVC용 기능 분할 영역**
+> - **MSDN – ASP.NET Core MVC용 기능 분할**
 >  <https://msdn.microsoft.com/magazine/mt763233.aspx>
 > - **필터**  
 > <https://docs.microsoft.com/aspnet/core/mvc/controllers/filters>
@@ -400,7 +401,7 @@ public void ConfigureServices(IServiceCollection services)
 
 ## <a name="client-communication"></a>클라이언트 통신
 
-ASP.NET Core 앱은 페이지를 제공하고 웹 API를 통해 데이터에 대한 요청에 응답하는 것 외에도, 연결된 클라이언트와 직접 통신할 수 있습니다. 이 아웃바운드 통신에는 다양한 전송 기술이 사용될 수 있으며, WebSockets가 가장 일반적인 기술입니다. ASP.NET Core SignalR은 응용 프로그램에 대한 실시간 서버-클라이언트 통신 기능을 간단하게 수행하는 라이브러리입니다. SignalR은 WebSockets를 포함한 다양한 전송 기술을 지원하며 개발자의 다양한 구현 세부 정보를 추상화합니다.
+ASP.NET Core 앱은 페이지를 제공하고 웹 API를 통해 데이터에 대한 요청에 응답하는 것 외에도, 연결된 클라이언트와 직접 통신할 수 있습니다. 이 아웃바운드 통신에는 다양한 전송 기술이 사용될 수 있으며, WebSockets가 가장 일반적인 기술입니다. ASP.NET Core SignalR은 응용 프로그램에 실시간 서버-클라이언트 통신 기능을 간단하게 추가할 수 있게 해 주는 라이브러리입니다. SignalR은 WebSockets를 포함한 다양한 전송 기술을 지원하며 개발자의 다양한 구현 세부 정보를 추상화합니다.
 
 ASP.NET Core SignalR은 현재 개발 중이며 ASP.NET Core의 다음 릴리스에서 사용할 수 있습니다. 그러나 다른 [오픈 소스 WebSockets 라이브러리](https://github.com/radu-matei/websocket-manager)는 현재 사용할 수 있습니다.
 

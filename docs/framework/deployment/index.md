@@ -1,14 +1,6 @@
 ---
 title: .NET Framework 및 응용 프로그램 배포
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - deploying applications [.NET Framework], packaging
 - deploying applications [.NET Framework]
@@ -17,17 +9,13 @@ helpviewer_keywords:
 - .NET Framework, deploying
 - .NET Framework application deployment
 ms.assetid: 238d8284-6042-4a38-a7f6-1ee8efd719da
-caps.latest.revision: 56
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: c88aabf046ac720d14db3e68c8e04092188a7ef1
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 2686d0db966192606656167d6e505f34ded333f6
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="deploying-the-net-framework-and-applications"></a>.NET Framework 및 응용 프로그램 배포
 이 문서는 응용 프로그램과 함께 .NET Framework 배포를 시작하는 데 도움이 됩니다. 대부분의 정보는 개발자, OEM 및 엔터프라이즈 관리자를 위한 것입니다. 컴퓨터에 .NET Framework를 설치하려는 사용자는 [.NET Framework 설치](~/docs/framework/install/index.md)를 읽어야 합니다.  
@@ -73,7 +61,7 @@ ms.lasthandoff: 12/22/2017
   
     -   [관리자 가이드](../../../docs/framework/deployment/guide-for-administrators.md)  
   
-  **서비스**  
+ **서비스**  
   
 -   일반적인 내용은 [.NET Framework 블로그](http://go.microsoft.com/fwlink/p/?LinkId=254977)를 참조하세요.  
   

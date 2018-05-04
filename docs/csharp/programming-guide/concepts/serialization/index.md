@@ -1,22 +1,12 @@
 ---
 title: Serialization(C# )
-ms.custom: ''
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-csharp
-ms.topic: article
 ms.assetid: 704ff2bf-02ab-4fea-94ea-594107825645
-caps.latest.revision: 3
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: b045f092bef837d1345b5f3b31df0a5ec22fc010
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 1f1b7fde18b59133088d83e3bf948e26b7a7b6aa
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="serialization-c-"></a>Serialization(C# )
 Serialization은 개체를 저장하거나 메모리, 데이터베이스 또는 파일로 전송하기 위해 개체를 바이트 스트림으로 변환하는 프로세스입니다. 주 목적은 필요할 때 다시 만들 수 있도록 개체의 상태를 저장하는 것입니다. 역 프로세스를 deserialization이라고 합니다.  

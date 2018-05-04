@@ -1,27 +1,15 @@
 ---
-title: "DataTable 제약 조건"
-ms.custom: 
+title: DataTable 제약 조건
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 27c9f2fd-f64d-4b4e-bbf6-1d24f47067cb
-caps.latest.revision: "4"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 500dad1699843bae04aea6d5c16a1ccf53bb102a
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 95bbba30bc9cd75d1694d7d8062bc9a6e6105084
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="datatable-constraints"></a>DataTable 제약 조건
 제약 조건을 사용하여 <xref:System.Data.DataTable>의 데이터를 제한함으로써 데이터 무결성을 유지할 수 있습니다. 제약 조건은 자동 규칙이기 때문에 행 값이 조금이라도 변경되면 열 또는 관련 열에 적용되어 작업 과정을 결정합니다. 제약 조건이 적용 됩니다 때는 `System.Data.DataSet.EnforceConstraints` 의 속성은 <xref:System.Data.DataSet> 은 **true**합니다. `EnforceConstraints` 속성을 설정하는 방법을 보여 주는 코드 예제는 <xref:System.Data.DataSet.EnforceConstraints%2A> 참조 항목을 참조하세요.  
@@ -35,7 +23,7 @@ ms.lasthandoff: 01/17/2018
   
 |규칙 설정|설명|  
 |------------------|-----------------|  
-|**Cascade**|관련 행을 삭제하거나 업데이트합니다.|  
+|**계단식 배열**|관련 행을 삭제하거나 업데이트합니다.|  
 |**SetNull**|에 관련된 행의 값을 설정 **DBNull**합니다.|  
 |**SetDefault**|관련 행의 값을 기본값으로 설정합니다.|  
 |**없음**|관련 행에 대해 아무 동작도 수행하지 않습니다. 이 값이 기본값입니다.|  
@@ -71,7 +59,7 @@ custDS.Tables["OrdersTable"].Constraints.Add(custOrderFK);
   
 |규칙 설정|설명|  
 |------------------|-----------------|  
-|**Cascade**|자식 행의 변경을 승인하거나 거부합니다.|  
+|**계단식 배열**|자식 행의 변경을 승인하거나 거부합니다.|  
 |**없음**|자식 행에 대해 아무 동작도 수행하지 않습니다. 이 값이 기본값입니다.|  
   
 ### <a name="example"></a>예제  

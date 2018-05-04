@@ -1,22 +1,15 @@
 ---
 title: 인터페이스(C# 프로그래밍 가이드)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - interfaces [C#]
 - C# language, interfaces
 ms.assetid: 2feda177-ce11-432d-81b4-d50f5f35fd37
-caps.latest.revision: 45
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: f14d4bf48d117558a4019a8f016e194af27a9ebf
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 6ef872876e800674a58b440e0e4001b86b0f8244
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="interfaces-c-programming-guide"></a>인터페이스(C# 프로그래밍 가이드)
 인터페이스에는 [클래스](../../../csharp/language-reference/keywords/class.md) 또는[ 구조체](../../../csharp/language-reference/keywords/struct.md)에서 구현할 수 있는 관련 기능 그룹에 대한 정의가 포함되어 있습니다.  
@@ -62,7 +55,7 @@ ms.lasthandoff: 11/21/2017
   
 -   클래스 또는 구조체는 여러 인터페이스를 구현할 수 있습니다. 클래스는 기본 클래스를 상속할 수 있으며 하나 이상의 인터페이스를 제공할 수도 있습니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [명시적 인터페이스 구현](../../../csharp/programming-guide/interfaces/explicit-interface-implementation.md)  
  인터페이스와 관련된 클래스 멤버를 만드는 방법에 대해 설명합니다.  
   

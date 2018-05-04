@@ -1,29 +1,29 @@
 ---
-title: "가비지 컬렉션 및 성능"
-ms.custom: 
+title: 가비지 컬렉션 및 성능
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - garbage collection, troubleshooting
 - garbage collection, performance
 ms.assetid: c203467b-e95c-4ccf-b30b-953eb3463134
-caps.latest.revision: 
+caps.latest.revision: 35
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: e1cf3475ded3582cdf0754e68d13c97bd87b06a8
-ms.sourcegitcommit: 91691981897cf8451033cb01071d8f5d94017f97
+ms.openlocfilehash: daf70cdb7344f895059d0bc8b986edddbf7d53bc
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="garbage-collection-and-performance"></a>가비지 컬렉션 및 성능
 <a name="top"></a> 이 항목에서는 가비지 컬렉션 및 메모리 사용과 관련된 문제를 설명합니다. 관리되는 힙과 관련된 문제를 해결하고 응용 프로그램에 미치는 가비지 컬렉션의 영향을 최소화하는 방법을 설명합니다. 각 문제에는 문제를 조사하는 데 사용할 수 있는 절차 링크가 있습니다.  
@@ -48,9 +48,9 @@ ms.lasthandoff: 01/09/2018
   
 <a name="sos"></a>   
 ### <a name="debugging-with-sos"></a>SOS를 사용한 디버깅  
- [Windows 디버거(WinDbg)](/windows-hardware/drivers/debugger/index)를 사용하여 관리되는 힙의 개체를 검사할 수 있습니다.  
-  
- WinDbg를 설치하려면 [WDK 및 개발자 도구 웹 사이트](http://go.microsoft.com/fwlink/?LinkID=103787)에서 Debugging Tools for Windows를 설치합니다.  
+ [Windows 디버거(WinDbg)](/windows-hardware/drivers/debugger/index)를 사용하여 관리되는 힙의 개체를 검사할 수 있습니다.
+ 
+ WinDbg를 설치하려면 [Debugging Tools for Windows 다운로드](/windows-hardware/drivers/debugger/debugger-download-tools) 페이지에서 Debugging Tools for Windows를 설치합니다.
   
 <a name="etw"></a>   
 ### <a name="garbage-collection-etw-events"></a>가비지 컬렉션 ETW 이벤트  
@@ -356,7 +356,7 @@ ms.lasthandoff: 01/09/2018
   
 1.  Windows 작업 관리자를 시작합니다.  
   
-2.  **성능** 탭에서 커밋된 값을 확인합니다. Windows 7에서는 **시스템 그룹**의 **커밋(KB)**을 확인합니다.  
+2.  **성능** 탭에서 커밋된 값을 확인합니다. Windows 7에서는 **시스템 그룹**의 **커밋(KB)** 을 확인합니다.  
   
      **합계**가 **제한**에 가까우면 실제 메모리가 부족한 것입니다.  
   

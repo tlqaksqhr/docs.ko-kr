@@ -1,22 +1,15 @@
 ---
 title: 네임스페이스(C# 프로그래밍 가이드)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - C# language, namespaces
 - namespaces [C#]
 ms.assetid: b1c4ab46-3fad-4ffa-9deb-dd50a2d8c65a
-caps.latest.revision: 27
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 3eb645f5beb61d3cec97a70a54e660c65be52091
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 60e4c6e98ca9e71d1a095a0c7ee1df6be6d13f4b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="namespaces-c-programming-guide"></a>네임스페이스(C# 프로그래밍 가이드)
 네임스페이스는 C# 프로그래밍에서 두 가지 방법으로 많이 사용됩니다. 첫째, .NET Framework는 네임스페이스를 사용하여 다음과 같이 많은 클래스를 구성합니다.  

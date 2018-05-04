@@ -1,24 +1,12 @@
 ---
-title: "&lt;바인딩&gt;"
-ms.custom: 
+title: '&lt;바인딩&gt;'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: b62cd369-5409-4030-8490-9759a462dd3a
-caps.latest.revision: "10"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 3d89fc465c1e82fab638b57dbf712f1396385f80
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 76ebd7c317bf5f0aa1ec02d4014235df232314f0
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltbindingsgt"></a>&lt;바인딩&gt;
 이 섹션에는 표준 및 사용자 지정 바인딩 컬렉션이 포함됩니다. 각 항목은 고유한 `binding`으로 식별될 수 있는 `name` 요소입니다. 서비스에서는 `name`을 통해 바인딩을 연결하여 바인딩을 사용합니다. [!INCLUDE[netfx40_short](../../../../../includes/netfx40-short-md.md)]부터는 바인딩 및 동작에 이름이 필요하지 않습니다. 기본 구성 및 이름이 없는 바인딩 및 동작에 대 한 자세한 내용은 참조 [단순화 된 구성](../../../../../docs/framework/wcf/simplified-configuration.md) 및 [WCF 서비스에 대 한 구성을 단순화](../../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md)합니다.  
@@ -55,5 +43,5 @@ ms.lasthandoff: 12/22/2017
  <xref:System.ServiceModel.Channels.BindingElement>  
  [바인딩](../../../../../docs/framework/wcf/bindings.md)  
  [사용자 지정 바인딩](../../../../../docs/framework/wcf/extending/custom-bindings.md)  
- [\<customBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)  
- [\<바인딩 >](../../../../../docs/framework/misc/binding.md)
+ [\<customBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)  
+ [\<binding>](../../../../../docs/framework/misc/binding.md)

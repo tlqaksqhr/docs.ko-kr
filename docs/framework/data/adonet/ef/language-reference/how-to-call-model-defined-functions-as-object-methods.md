@@ -1,27 +1,15 @@
 ---
-title: "방법: 개체 메서드로 모델 정의 함수 호출"
-ms.custom: 
+title: '방법: 개체 메서드로 모델 정의 함수 호출'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 33bae8a8-4ed8-4a1f-85d1-c62ff288cc61
-caps.latest.revision: "3"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 81b9f8099f98915ec0b0f83dbe0f90e506cb2a79
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 055b77697a525fd2d94192ff5b1586c885b22f94
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="how-to-call-model-defined-functions-as-object-methods"></a>방법: 개체 메서드로 모델 정의 함수 호출
 이 항목에서는 모델 정의 함수를 <xref:System.Data.Objects.ObjectContext> 개체의 메서드 또는 사용자 지정 클래스의 정적 메서드로 호출하는 방법에 대해 설명합니다. A *모델 정의 함수* 는 개념적 모델에 정의 된 함수입니다. 이 항목의 절차에서는 이러한 함수를 LINQ to Entities 쿼리에서 호출하는 대신 직접 호출하는 방법에 대해 설명합니다. Linq에서 to Entities 쿼리에서 모델 정의 함수를 호출 하는 방법에 대 한 정보를 참조 하십시오. [하는 방법: 쿼리에 Call Model-Defined 함수](../../../../../../docs/framework/data/adonet/ef/language-reference/how-to-call-model-defined-functions-in-queries.md)합니다.  
@@ -54,7 +42,7 @@ ms.lasthandoff: 01/19/2018
   
 2.  메서드를 사용자 지정 클래스의 정적 메서드 멤버로 호출합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  **모델 정의 함수를 ObjectContext 개체의 메서드로 호출**  
   
  다음 예제에서는 모델 정의 함수를 <xref:System.Data.Objects.ObjectContext> 개체의 메서드로 호출하는 방법에 대해 설명합니다. 이 예제에서는 사용 된 [AdventureWorks Sales 모델](http://msdn.microsoft.com/library/f16cd988-673f-4376-b034-129ca93c7832)합니다.  
@@ -63,36 +51,36 @@ ms.lasthandoff: 01/19/2018
   
  [!code-xml[DP L2E Methods on ObjectContext#4](../../../../../../samples/snippets/xml/VS_Snippets_Data/dp l2e methods on objectcontext/xml/adventureworks.edmx#4)]  
 
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 코드에서는 위의 개념적 모델 함수로 매핑되는 `AdventureWorksEntities` 클래스에 메서드를 추가합니다.  
   
  [!code-csharp[DP L2E Methods on ObjectContext#2](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp l2e methods on objectcontext/cs/program.cs#2)]
  [!code-vb[DP L2E Methods on ObjectContext#2](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/dp l2e methods on objectcontext/vb/class1.vb#2)]  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 코드에서는 위의 메서드를 호출하여 지정된 제품의 제품 수익을 표시합니다.  
   
  [!code-csharp[DP L2E Methods on ObjectContext#3](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp l2e methods on objectcontext/cs/program.cs#3)]
  [!code-vb[DP L2E Methods on ObjectContext#3](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/dp l2e methods on objectcontext/vb/module1.vb#3)]  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 예제에서는 컬렉션을 반환하는 모델 정의 함수를 <xref:System.Linq.IQueryable%601> 개체로 호출하는 방법에 대해 설명합니다. 제공된 제품 ID의 모든 `SalesOrderDetails`를 반환하는 다음 개념적 모델 함수를 살펴보세요.  
   
  [!code-xml[DP L2E Methods on ObjectContext#7](../../../../../../samples/snippets/xml/VS_Snippets_Data/dp l2e methods on objectcontext/xml/adventureworks.edmx#7)]  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 코드에서는 위의 개념적 모델 함수로 매핑되는 `AdventureWorksEntities` 클래스에 메서드를 추가합니다.  
   
  [!code-csharp[DP L2E Methods on ObjectContext#8](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp l2e methods on objectcontext/cs/program.cs#8)]
  [!code-vb[DP L2E Methods on ObjectContext#8](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/dp l2e methods on objectcontext/vb/class1.vb#8)]  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 코드에서는 메서드를 호출합니다. 반환된 <xref:System.Linq.IQueryable%601> 쿼리는 각 `SalesOrderDetail`의 품목 합계를 반환하도록 보다 구체화됩니다.  
   
  [!code-csharp[DP L2E Methods on ObjectContext#9](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp l2e methods on objectcontext/cs/program.cs#9)]
  [!code-vb[DP L2E Methods on ObjectContext#9](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/dp l2e methods on objectcontext/vb/module1.vb#9)]  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  **사용자 지정 클래스의 정적 메서드로 모델 정의 함수를 호출합니다.**  
   
  다음 예제에서는 모델 정의 함수를 사용자 지정 클래스의 정적 메서드로 호출하는 방법에 대해 설명합니다. 이 예제에서는 사용 된 [AdventureWorks Sales 모델](http://msdn.microsoft.com/library/f16cd988-673f-4376-b034-129ca93c7832)합니다.  
@@ -104,13 +92,13 @@ ms.lasthandoff: 01/19/2018
   
  [!code-xml[DP L2E Methods on ObjectContext#1](../../../../../../samples/snippets/xml/VS_Snippets_Data/dp l2e methods on objectcontext/xml/adventureworks.edmx#1)]
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 코드에서는 위의 개념적 모델 함수로 매핑되는 정적 메서드가 포함된 응용 프로그램에 클래스를 추가합니다.  
   
  [!code-csharp[DP L2E Methods on ObjectContext#5](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp l2e methods on objectcontext/cs/program.cs#5)]
  [!code-vb[DP L2E Methods on ObjectContext#5](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/dp l2e methods on objectcontext/vb/class1.vb#5)]  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 코드에서는 위의 메서드를 호출하여 SalesOrderDetail 컬렉션의 제품 수익을 표시합니다.  
   
  [!code-csharp[DP L2E Methods on ObjectContext#6](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp l2e methods on objectcontext/cs/program.cs#6)]

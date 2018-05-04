@@ -1,24 +1,12 @@
 ---
-title: "열 유추"
-ms.custom: 
+title: 열 유추
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 0e022699-c922-454c-93e2-957dd7e7247a
-caps.latest.revision: "4"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 858a23fb8fec7b7f2eee95a1365d16e846beb548
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: da98bcbc4537e08a6f8565b36f8b84b476efd027
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="inferring-columns"></a>열 유추
 ADO.NET에서 XML 문서로부터 <xref:System.Data.DataSet>의 테이블로 유추할 요소를 결정한 후에는 해당 테이블의 열을 유추합니다. ADO.NET 2.0에는 각각에 대해 강력한 형식의 데이터 형식을 유추 하는 새로운 스키마 유추 엔진이 도입 **simpleType** 요소입니다. 유추 된 데이터 형식이 이전 버전에서는 **simpleType** 요소가 항상 **xsd: string**합니다.  

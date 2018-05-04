@@ -1,33 +1,21 @@
 ---
-title: "&lt;allowedAudienceUris&gt;의 &lt;add&gt;"
-ms.custom: 
+title: '&lt;allowedAudienceUris&gt;의 &lt;add&gt;'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 4e7b7637-e0ea-4a91-988f-6b6ef28d9fc3
-caps.latest.revision: "6"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 8b10a0ef5718197464ffa40126f0a013d82256dc
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: cfd18d6af5248e680b9520069fb34c412ee12b3f
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltaddgt-of-ltallowedaudienceurisgt"></a>&lt;allowedAudienceUris&gt;의 &lt;add&gt;
 <xref:System.IdentityModel.Tokens.SamlSecurityToken> 인스턴스에서 유효한 대상으로 지정할 수 있는 <xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator> 보안 토큰의 대상 URI를 추가합니다.  
   
- \<시스템입니다. ServiceModel >  
+ \<system.ServiceModel>  
 \<동작 >  
-\<serviceBehaviors >  
+\<serviceBehaviors>  
 \<동작 >  
-\<serviceCredentials >  
+\<serviceCredentials>  
 \<u t h >  
 \<a d d >  
 \<추가 > 요소에 대 한 \<a d d >  
@@ -41,7 +29,7 @@ ms.lasthandoff: 12/22/2017
 ```  
   
 ## <a name="attributes-and-elements"></a>특성 및 요소  
- 다음 단원에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
+ 다음 섹션에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
   
 ### <a name="attributes"></a>특성  
   

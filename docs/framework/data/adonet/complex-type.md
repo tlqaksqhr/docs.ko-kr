@@ -1,24 +1,12 @@
 ---
-title: "복합 형식"
-ms.custom: 
+title: 복합 형식
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 63efbd23-11d4-4871-bc88-ad01b9837553
-caps.latest.revision: "2"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 6a7fbdace6403d2f1037beff8fe28d7c934d3174
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 8daeac8309434b3c4e090d8e75f2de02d63e8b11
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="complex-type"></a>복합 형식
 A *복합 형식* 는 다양 한 구조적된 속성을 정의 하기 위한 서식 파일 [엔터티 형식](../../../../docs/framework/data/adonet/entity-type.md) 또는 다른 복합 형식의 합니다. 각 템플릿에는 다음 정보가 들어 있습니다.  
@@ -39,7 +27,7 @@ A *복합 형식* 는 다양 한 구조적된 속성을 정의 하기 위한 서
   
 -   복합 형식에 참여할 수 없는 [연결](../../../../docs/framework/data/adonet/association-type.md)합니다. 연결의 어느 end도 복합 형식을 수 있으므로 [탐색 속성](../../../../docs/framework/data/adonet/navigation-property.md) 복합 형식에 정의할 수 없습니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  [ADO.NET Entity Framework](../../../../docs/framework/data/adonet/ef/index.md) 개념 스키마 정의 언어를 호출 하는 도메인 특정 언어 DSL ()를 사용 하 여 ([CSDL](../../../../docs/framework/data/adonet/ef/language-reference/csdl-specification.md)) 개념적 모델을 정의 합니다. 다음 CSDL에서는 기본 형식 속성 `StreetAddress`, `City`, `StateOrProvince`, `Country` 및 `PostalCode`가 있는 복합 형식 Address를 정의합니다.  
   
  [!code-xml[EDM_Example_Model#ComplexTypeExample](../../../../samples/snippets/xml/VS_Snippets_Data/edm_example_model/xml/books2.edmx#complextypeexample)]  

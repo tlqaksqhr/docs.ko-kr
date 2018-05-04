@@ -1,27 +1,15 @@
 ---
-title: "XML에서 데이터 집합 스키마 정보 로드"
-ms.custom: 
+title: XML에서 데이터 집합 스키마 정보 로드
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 43dfb23b-5cef-46f2-8d87-78f0fba1eb8c
-caps.latest.revision: "4"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 8b814715782710994f18163ccfcd3db342199145
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 4b212a7233e6eec93cdce3e521b58e08745e35e0
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="loading-dataset-schema-information-from-xml"></a>XML에서 데이터 집합 스키마 정보 로드
 스키마는 <xref:System.Data.DataSet> (해당 테이블, 열, 관계 및 제약 조건) 정의할 수 있습니다, 프로그래밍 방식으로 개발한는 **채우기** 또는 **FillSchema** 의 메서드는 <xref:System.Data.Common.DataAdapter>, 또는에서 로드 된 프로그램 XML 문서입니다. 로드할 **데이터 집합** 스키마 정보는 XML 문서에서 사용할 수 있습니다는 **ReadXmlSchema** 또는 **InferXmlSchema** 의 메서드는 **데이터집합**. **ReadXmlSchema** 로드 하거나 유추할 수 있습니다 **DataSet** XML 스키마 정의 언어 (XSD) 스키마 또는 인라인 XML 스키마는 XML 문서를 포함 하는 문서에서 스키마 정보입니다. **InferXmlSchema** 지정한 특정 XML 네임 스페이스를 무시 하는 동안 XML 문서에서 스키마를 유추할 수 있습니다.  
@@ -65,7 +53,7 @@ xmlStream.Close();
 ```  
   
 ## <a name="inferxmlschema"></a>InferXmlSchema  
- 지시할 수 있습니다는 **DataSet** 사용 하 여 XML 문서에서 해당 스키마를 유추 하는 **InferXmlSchema** 의 메서드는 **데이터 집합**합니다. **InferXmlSchema** 둘 다 수행과 동일한 함수가 **ReadXml** 와 **XmlReadMode** 의 **InferSchema** (데이터 로드으로 스키마를 유추) 및  **ReadXmlSchema** 읽는 중인 문서에 인라인 스키마가 없습니다. 그러나 **InferXmlSchema** 하면 스키마를 유추할 때 무시할 특정 XML 네임 스페이스를 지정할 수 있도록의 추가 기능을 제공 합니다. **InferXmlSchema** 는 두 개의 필수 인수: 스트림, 파일 이름으로 지정 된 XML 문서의 위치 또는 **XmlReader**; 및 해당 작업에서 무시 될 XML 네임 스페이스의 문자열 배열입니다.  
+ 지시할 수 있습니다는 **DataSet** 사용 하 여 XML 문서에서 해당 스키마를 유추 하는 **InferXmlSchema** 의 메서드는 **데이터 집합**합니다. **InferXmlSchema** 둘 다 수행과 동일한 함수가 **ReadXml** 와 **XmlReadMode** 의 **InferSchema** (데이터 로드으로 스키마를 유추) 및 **ReadXmlSchema** 읽는 중인 문서에 인라인 스키마가 없습니다. 그러나 **InferXmlSchema** 하면 스키마를 유추할 때 무시할 특정 XML 네임 스페이스를 지정할 수 있도록의 추가 기능을 제공 합니다. **InferXmlSchema** 는 두 개의 필수 인수: 스트림, 파일 이름으로 지정 된 XML 문서의 위치 또는 **XmlReader**; 및 해당 작업에서 무시 될 XML 네임 스페이스의 문자열 배열입니다.  
   
  예를 들어, 다음과 같은 XML을 가정해 봅시다.  
   

@@ -1,14 +1,6 @@
 ---
-title: "&lt;필터&gt; 요소에 대 한 &lt;추가&gt; 에 대 한 &lt;sharedListeners&gt;"
-ms.custom: 
+title: '&lt;필터&gt; 요소에 대 한 &lt;추가&gt; 에 대 한 &lt;sharedListeners&gt;'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/sharedListeners/add/filter
 helpviewer_keywords:
@@ -18,17 +10,14 @@ helpviewer_keywords:
 - filters, trace listeners
 - trace listeners, filters
 ms.assetid: 7d4e7faa-2e4e-4379-ac76-f6cd7f2f8fac
-caps.latest.revision: 
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload:
-- dotnet
-ms.openlocfilehash: bc3f97619c8ec28a61a9a51b431581383558a7d1
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 3bbba1c805c6b300f7cf7b3d9112cde9df7607a8
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltfiltergt-element-for-ltaddgt-for-ltsharedlistenersgt"></a>&lt;필터&gt; 요소에 대 한 &lt;추가&gt; 에 대 한 &lt;sharedListeners&gt;
 `sharedListeners` 컬렉션에 있는 수신기에 필터를 추가합니다.  
@@ -47,7 +36,7 @@ ms.lasthandoff: 12/22/2017
 ```  
   
 ## <a name="attributes-and-elements"></a>특성 및 요소  
- 다음 단원에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
+ 다음 섹션에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
   
 ### <a name="attributes"></a>특성  
   
@@ -73,7 +62,7 @@ ms.lasthandoff: 12/22/2017
   
  이 요소는 응용 프로그램 구성 파일 및 컴퓨터 구성 파일 (Machine.config)에서 사용할 수 있습니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  사용 하는 방법을 보여 주는 다음 예제는 `<filter>` 추적 수신기에 필터를 추가 하는 요소 `console` 에 `sharedListeners` 컬렉션입니다.  
   
 ```xml  

@@ -1,26 +1,15 @@
 ---
 title: XML 문서 및 데이터
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: e695047f-3c0f-4045-8708-5baea91cc380
-caps.latest.revision: 9
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 0da27afc5509af6db510b5e622ffde461ae2e0a1
-ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
+ms.openlocfilehash: 5f286d0f64478bfc46ca207086e4a6b918ee47b5
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="xml-documents-and-data"></a>XML 문서 및 데이터
 .NET Framework에서 XML 인식 응용 프로그램을 쉽게 작성할 수 있도록 하는 종합적이고 통합된 클래스 집합을 제공합니다. 다음 네임스페이스의 클래스에서는 XML 구문 분석 및 작성, 메모리에서의 XML 데이터 편집, 데이터 유효성 검사 및 XSLT 변형을 지원합니다.  

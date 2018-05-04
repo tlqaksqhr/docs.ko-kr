@@ -21,11 +21,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 1148d2b245d67304071d8dd23bb1a88bdc020b8d
-ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
+ms.openlocfilehash: 24541b681844a2023df8d4d05f13b53d55375b80
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="introduction-to-plinq"></a>PLINQ 소개
 ## <a name="what-is-a-parallel-query"></a>병렬 쿼리는 무엇입니까?  
@@ -93,10 +93,10 @@ ms.lasthandoff: 04/18/2018
  일부 작업에서는 원본 데이터가 순차적으로 전달되어야 합니다. <xref:System.Linq.ParallelEnumerable> 쿼리 연산자는 필요할 때 자동으로 순차 모드로 되돌립니다. 순차적 실행이 필요한 사용자 정의 쿼리 연산자 및 사용자 대리자의 경우 PLINQ는 <xref:System.Linq.ParallelEnumerable.AsSequential%2A> 메서드를 제공합니다. <xref:System.Linq.ParallelEnumerable.AsSequential%2A>을 사용하는 경우 쿼리에서 모든 후속 연산자는 <xref:System.Linq.ParallelEnumerable.AsParallel%2A>이 다시 호출될 때까지 순차적으로 실행됩니다. 자세한 내용은 [방법: 병렬 및 순차적 LINQ 쿼리 결합](../../../docs/standard/parallel-programming/how-to-combine-parallel-and-sequential-linq-queries.md)을 참조하세요.  
   
 ## <a name="options-for-merging-query-results"></a>쿼리 결과 병합에 대한 옵션  
- PLINQ 쿼리가 병렬로 실행되는 경우 각 작업자 스레드의 해당 결과는 `foreach` 반복([!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]에서 `For Each`) 또는 목록 또는 배열로 삽입으로 소비에 대한 주 스레드로 다시 병합되어야 합니다. 일부 경우에서 특정 종류의 병합 작업을 지정하는 것이 도움이 될 수도 있습니다(예: 보다 신속하게 결과 생성을 시작하도록). 이를 위해 PLINQ는 <xref:System.Linq.ParallelEnumerable.WithMergeOptions%2A> 메서드 및 <xref:System.Linq.ParallelMergeOptions> 열거형을 지원합니다. 자세한 내용은 [PLINQ의 병합 옵션](../../../docs/standard/parallel-programming/merge-options-in-plinq.md)을 참조하세요.  
+ PLINQ 쿼리가 병렬로 실행되는 경우 각 작업자 스레드의 해당 결과는 `foreach` 반복(Visual Basic에서 `For Each`) 또는 목록 또는 배열로 삽입으로 소비에 대한 주 스레드로 다시 병합되어야 합니다. 일부 경우에서 특정 종류의 병합 작업을 지정하는 것이 도움이 될 수도 있습니다(예: 보다 신속하게 결과 생성을 시작하도록). 이를 위해 PLINQ는 <xref:System.Linq.ParallelEnumerable.WithMergeOptions%2A> 메서드 및 <xref:System.Linq.ParallelMergeOptions> 열거형을 지원합니다. 자세한 내용은 [PLINQ의 병합 옵션](../../../docs/standard/parallel-programming/merge-options-in-plinq.md)을 참조하세요.  
   
 ## <a name="the-forall-operator"></a>ForAll 연산자  
- 순차적 [!INCLUDE[vbteclinq](../../../includes/vbteclinq-md.md)] 쿼리에서 실행은 쿼리가 `foreach`([!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]에서 `For Each`) 루프에서 또는 <xref:System.Linq.ParallelEnumerable.ToList%2A>, <xref:System.Linq.ParallelEnumerable.ToArray%2A> 또는 <xref:System.Linq.ParallelEnumerable.ToDictionary%2A>와 같은 메서드를 호출하여 열거될 때까지 지연됩니다. PLINQ에서 `foreach`를 사용하여 쿼리를 실행하고 결과를 반복할 수도 있습니다. 그러나 `foreach` 자체는 병렬로 실행되지 않으므로 모든 병렬 작업의 출력은 반복이 실행되는 스레드로 다시 병합되어야 합니다. PLINQ에서 쿼리 결과의 최종 순서 지정을 유지해야 하는 경우 및 각 요소에 대해 `Console.WriteLine`을 호출하는 경우와 같이 직렬 방식으로 결과를 처리할 때마다 `foreach`를 사용할 수 있습니다. 빠른 쿼리 실행을 위해 순서 유지가 필요하지 않은 경우 및 결과 처리 자체가 병렬로 처리될 수 있는 경우 <xref:System.Linq.ParallelEnumerable.ForAll%2A> 메서드를 사용하여 PLINQ 쿼리를 실행합니다. <xref:System.Linq.ParallelEnumerable.ForAll%2A>은 이 최종 병합 단계를 수행하지 않습니다. 다음 코드 예제에서는 <xref:System.Linq.ParallelEnumerable.ForAll%2A> 메서드를 사용하는 방법을 보여 줍니다. <xref:System.Collections.Concurrent.ConcurrentBag%601?displayProperty=nameWithType>은 여러 스레드에 대해 항목 제거를 시도하지 않고 동시 추가에 최적화되었기 때문에 여기에서 사용됩니다.  
+ 순차적 [!INCLUDE[vbteclinq](../../../includes/vbteclinq-md.md)] 쿼리에서 실행은 쿼리가 `foreach`(Visual Basic에서 `For Each`) 루프에서 또는 <xref:System.Linq.ParallelEnumerable.ToList%2A>, <xref:System.Linq.ParallelEnumerable.ToArray%2A> 또는 <xref:System.Linq.ParallelEnumerable.ToDictionary%2A>과 같은 메서드를 호출하여 열거될 때까지 지연됩니다. PLINQ에서 `foreach`를 사용하여 쿼리를 실행하고 결과를 반복할 수도 있습니다. 그러나 `foreach` 자체는 병렬로 실행되지 않으므로 모든 병렬 작업의 출력은 반복이 실행되는 스레드로 다시 병합되어야 합니다. PLINQ에서 쿼리 결과의 최종 순서 지정을 유지해야 하는 경우 및 각 요소에 대해 `Console.WriteLine`을 호출하는 경우와 같이 직렬 방식으로 결과를 처리할 때마다 `foreach`를 사용할 수 있습니다. 빠른 쿼리 실행을 위해 순서 유지가 필요하지 않은 경우 및 결과 처리 자체가 병렬로 처리될 수 있는 경우 <xref:System.Linq.ParallelEnumerable.ForAll%2A> 메서드를 사용하여 PLINQ 쿼리를 실행합니다. <xref:System.Linq.ParallelEnumerable.ForAll%2A>은 이 최종 병합 단계를 수행하지 않습니다. 다음 코드 예제에서는 <xref:System.Linq.ParallelEnumerable.ForAll%2A> 메서드를 사용하는 방법을 보여 줍니다. <xref:System.Collections.Concurrent.ConcurrentBag%601?displayProperty=nameWithType>은 여러 스레드에 대해 항목 제거를 시도하지 않고 동시 추가에 최적화되었기 때문에 여기에서 사용됩니다.  
   
  [!code-csharp[PLINQ#4](../../../samples/snippets/csharp/VS_Snippets_Misc/plinq/cs/plinq2_cs.cs#4)]
  [!code-vb[PLINQ#4](../../../samples/snippets/visualbasic/VS_Snippets_Misc/plinq/vb/plinq2_vb.vb#4)]  

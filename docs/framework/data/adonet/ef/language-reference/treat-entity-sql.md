@@ -1,24 +1,12 @@
 ---
 title: TREAT(Entity SQL)
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 5b77f156-55de-4cb4-8154-87f707d4c635
-caps.latest.revision: "4"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 248ea49bd66300e0cf000bee4861b9556ff081bb
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 932f335bf6a502b031dcf09b8050e278a0bbe9f8
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="treat-entity-sql"></a>TREAT(Entity SQL)
 특정 기본 형식의 개체를 지정된 파생 형식의 개체로 처리합니다.  
@@ -72,7 +60,7 @@ WHERE p IS OF (NamespaceName.Employee)
 |`TREAT (ComplexType AS ComplexType)`|예외를 throw합니다.|  
 |`TREAT (RowType AS RowType)`|예외를 throw합니다.|  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 쿼리에서는 TREAT 연산자를 사용하여 Course 형식의 개체를 OnsiteCourse 형식의 개체 컬렉션으로 변환합니다. 쿼리 기반는 [School 모델](http://msdn.microsoft.com/library/859a9587-81ea-4a45-9bc0-f8d330e1adac)합니다.  
   
  [!code-csharp[DP EntityServices Concepts 2#TREAT_ISOF](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#treat_isof)]  

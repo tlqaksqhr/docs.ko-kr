@@ -1,26 +1,16 @@
 ---
 title: '&lt;workflow&gt;'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: 560aa9b6-9cf3-460e-b798-f87d14b1d2de
-caps.latest.revision: "5"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 7130a918f5a0d879fa07e0d6c055aa600e1635c6
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: dc7c693fb2d8b47c0b968eb51cc59327fe43bcc0
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltworkflowgt"></a>&lt;workflow&gt;
-로 식별 되는 특정 워크플로에 대 한 모든 쿼리를 포함 하는 구성 요소는 **"http://msdn.microsoft.com/library/ 하이퍼링크 system.servicemodel.activities.tracking.configuration.profileworkflowelement.activitydefinitionid (VS.100).aspx"ctivityDefinitionId** 속성입니다.  
+로 식별 되는 특정 워크플로에 대 한 모든 쿼리를 포함 하는 구성 요소는 **하이퍼링크 "http://msdn.microsoft.com/library/system.servicemodel.activities.tracking.configuration.profileworkflowelement.activitydefinitionid(VS.100).aspx" ctivityDefinitionId** 속성입니다.  
   
  워크플로 추적 및 해당 구성에 대 한 자세한 내용은 참조 하십시오. [워크플로 추적 및 트레이싱](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md) 및 [추적 프로필](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)합니다.  
   

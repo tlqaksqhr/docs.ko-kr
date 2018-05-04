@@ -1,5 +1,5 @@
 ---
-title: "-win32manifest(C# 컴파일러 옵션)"
+title: -win32manifest(C# 컴파일러 옵션)
 ms.date: 07/20/2015
 ms.prod: .net
 ms.technology:
@@ -12,14 +12,14 @@ helpviewer_keywords:
 - win32manifest compiler option [C#]
 - -win32manifest compiler option [C#]
 ms.assetid: 9460ea1b-6c9f-44b8-8f73-301b30a01de1
-caps.latest.revision: 
+caps.latest.revision: 13
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 36a16f1ee037a1379399c7ee2e2c67427eb9d1b2
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 8631477f7067870ca1d8a62513489cdbbbe43f33
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="-win32manifest-c-compiler-options"></a>-win32manifest(C# 컴파일러 옵션)
 프로젝트의 PE(포팅 가능한 실행 파일) 파일에 포함할 사용자 정의 Win32 응용 프로그램 매니페스트 파일을 식별하려면 **-win32manifest** 옵션을 사용합니다.  
@@ -35,7 +35,7 @@ ms.lasthandoff: 01/19/2018
  사용자 지정 매니페스트 파일의 이름 및 위치입니다.  
   
 ## <a name="remarks"></a>설명  
- 기본적으로 [!INCLUDE[csharp_current_short](~/includes/csharp-current-short-md.md)] 컴파일러는 "asInvoker"의 요청된 실행 수준을 지정하는 응용 프로그램 매니페스트를 포함합니다. 실행 파일이 작성되는 폴더에 매니페스트가 생성됩니다. Visual Studio를 사용하는 경우 대개 bin\Debug 또는 bin\Release 폴더입니다. 예를 들어 "highestAvailable" 또는 "requireAdministrator"의 요청된 실행 수준을 지정하기 위해 사용자 지정 매니페스트를 제공하려면 이 옵션을 사용하여 파일 이름을 지정합니다.  
+ 기본적으로 Visual C# 컴파일러는 "asInvoker"의 요청된 실행 수준을 지정하는 응용 프로그램 매니페스트를 포함합니다. 실행 파일이 작성되는 폴더에 매니페스트가 생성됩니다. Visual Studio를 사용하는 경우 대개 bin\Debug 또는 bin\Release 폴더입니다. 예를 들어 "highestAvailable" 또는 "requireAdministrator"의 요청된 실행 수준을 지정하기 위해 사용자 지정 매니페스트를 제공하려면 이 옵션을 사용하여 파일 이름을 지정합니다.  
   
 > [!NOTE]
 >  이 옵션과 [-win32res(C# 컴파일러 옵션)](../../../csharp/language-reference/compiler-options/win32res-compiler-option.md) 옵션은 함께 사용할 수 없습니다. 같은 명령줄에서 두 옵션을 모두 사용하려고 하면 빌드 오류가 발생합니다.  
@@ -48,7 +48,7 @@ ms.lasthandoff: 01/19/2018
   
 -   요청한 실행 수준을 지정하지 않는 사용자 지정 매니페스트를 제공합니다.  
   
- [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)]는 기본 .manifest 파일을 만들고 이를 실행 파일과 함께 debug 및 release 디렉터리에 저장합니다. 텍스트 편집기에서 파일을 만들고 프로젝트에 파일을 추가하여 사용자 지정 매니페스트를 추가할 수 있습니다. 또는 **솔루션 탐색기**에서 **프로젝트** 아이콘을 마우스 오른쪽 단추로 클릭하고, **새 항목 추가**와 **응용 프로그램 매니페스트 파일**을 차례로 클릭합니다. 신규 또는 기존 매니페스트 파일을 추가하면 **매니페스트** 드롭다운 목록에 나타납니다. 자세한 내용은 [프로젝트 디자이너, 응용 프로그램 페이지(C#)](/visualstudio/ide/reference/application-page-project-designer-csharp)를 참조하세요.  
+ Visual Studio는 기본 .manifest 파일을 만들고 이를 실행 파일과 함께 debug 및 release 디렉터리에 저장합니다. 텍스트 편집기에서 파일을 만들고 프로젝트에 파일을 추가하여 사용자 지정 매니페스트를 추가할 수 있습니다. 또는 **솔루션 탐색기**에서 **프로젝트** 아이콘을 마우스 오른쪽 단추로 클릭하고, **새 항목 추가**와 **응용 프로그램 매니페스트 파일**을 차례로 클릭합니다. 신규 또는 기존 매니페스트 파일을 추가하면 **매니페스트** 드롭다운 목록에 나타납니다. 자세한 내용은 [프로젝트 디자이너, 응용 프로그램 페이지(C#)](/visualstudio/ide/reference/application-page-project-designer-csharp)를 참조하세요.  
   
  [/nowin32manifest(C# 컴파일러 옵션)](../../../csharp/language-reference/compiler-options/nowin32manifest-compiler-option.md) 옵션을 사용하여 응용 프로그램 매니페스트를 사용자 지정 빌드 후 단계 또는 Win32 리소스 파일의 일부로 제공할 수 있습니다. 응용 프로그램이 Windows Vista에서 파일 또는 레지스트리 가상화의 적용을 받도록 하려면 동일한 옵션을 사용합니다. 이렇게 하면 컴파일러가 PE(이식 가능한 실행 파일) 파일에 기본 매니페스트를 만들고 포함할 수 없습니다.  
   

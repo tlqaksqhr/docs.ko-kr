@@ -1,21 +1,22 @@
 ---
-title: "비동기 반환 형식(C#)"
-ms.custom: 
+title: 비동기 반환 형식(C#)
+ms.custom: ''
 ms.date: 05/29/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-csharp
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-csharp
 ms.topic: article
 ms.assetid: ddb2539c-c898-48c1-ad92-245e4a996df8
-caps.latest.revision: "3"
+caps.latest.revision: 3
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 7aee1ebdf24a2ac564268e1f36d3aac707dea463
-ms.sourcegitcommit: 7e99f66ef09d2903e22c789c67ff5a10aa953b2f
+ms.openlocfilehash: 4927d6324b6bda5a897ce81928fc13cae303a99a
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="async-return-types-c"></a>비동기 반환 형식(C#)
 비동기 메서드의 반환 형식은 다음과 같을 수 있습니다.
@@ -26,7 +27,7 @@ ms.lasthandoff: 11/18/2017
 
 - `void` - 이벤트 처리기의 경우 
 
-- C# 7부터 액세스 가능한 `GetAwaiter` 메서드가 있는 모든 형식. `GetAwaiter` 메서드에서 반환된 개체는 <xref:System.Runtime.CompilerServices.ICriticalNotifyCompletion?displayProperty=nameWithType> 인터페이스를 구현해야 합니다.
+- C# 7.0부터 액세스 가능한 `GetAwaiter` 메서드가 있는 모든 형식. `GetAwaiter` 메서드에서 반환된 개체는 <xref:System.Runtime.CompilerServices.ICriticalNotifyCompletion?displayProperty=nameWithType> 인터페이스를 구현해야 합니다.
   
 비동기 메서드에 대한 자세한 내용은 [async 및 await를 사용한 비동기 프로그래밍(C#)](../../../../csharp/programming-guide/concepts/async/index.md)을 참조하세요.  
   
@@ -76,7 +77,7 @@ void를 반환하는 비동기 메서드의 호출자는 메서드에서 throw�
  
 ## <a name="generalized-async-return-types-and-valuetaskt"></a>일반화된 비동기 반환 형식 및 ValueTask<T>
 
-C# 7부터 비동기 메서드는 액세스 가능한 `GetAwaiter` 메서드가 있는 모든 형식을 반환할 수 있습니다.
+C# 7.0부터 비동기 메서드는 액세스 가능한 `GetAwaiter` 메서드가 있는 모든 형식을 반환할 수 있습니다.
  
 <xref:System.Threading.Tasks.Task> 및 <xref:System.Threading.Tasks.Task%601>는 참조 형식이므로 특히 타이트 루프에서 할당이 발생하는 경우 성능이 중요한 경로의 메모리 할당으로 인해 성능이 저하될 수 있습니다. 일반화된 반환 형식이 지원되면 추가 메모리 할당을 방지하기 위해 참조 형식 대신 간단한 값 형식을 반환할 수 있습니다. 
 

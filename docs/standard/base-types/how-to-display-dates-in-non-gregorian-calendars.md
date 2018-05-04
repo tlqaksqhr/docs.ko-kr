@@ -1,12 +1,12 @@
 ---
-title: "방법: 그레고리오력이 아닌 달력의 날짜 표시"
-ms.custom: 
+title: '방법: 그레고리오력이 아닌 달력의 날짜 표시'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -17,21 +17,21 @@ helpviewer_keywords:
 - calendars [.NET Framework], displaying dates
 - displaying date and time data
 ms.assetid: ed324eff-4aff-4a76-b6c0-04e6c0d8f5a9
-caps.latest.revision: 
+caps.latest.revision: 7
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 1a9e45fe43e38be3c618df37a639d63a6a0a5349
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 8b0af7aad0efc63518291292b0d0b4ca4872956c
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="how-to-display-dates-in-non-gregorian-calendars"></a>방법: 그레고리오력이 아닌 달력의 날짜 표시
-<xref:System.DateTime> 및 <xref:System.DateTimeOffset> 형식은 양력을 기본 달력으로 사용합니다. 즉, 날짜 및 시간 값의 `ToString` 메서드를 호출하면 해당 날짜 및 시간이 다른 달력을 사용하여 생성된 경우에도 해당 날짜 및 시간의 문자열 표현을 양력 달력으로 표시합니다. 이 내용은 두 가지 방법을 사용하여 페르시아력으로 날짜 및 시간 값을 만들지만 <xref:System.DateTime.ToString%2A> 메서드를 호출할 때 해당 날짜 및 시간 값을 여전히 양력으로 표시하는 다음 예제에 설명되어 있습니다. 이 예제에서는 특정 달력의 날짜를 표시하기 위해 자주 사용되지만 잘못된 두 가지 방법을 보여줍니다.  
+<xref:System.DateTime> 및 <xref:System.DateTimeOffset> 형식은 양력을 기본 달력으로 사용합니다. 즉, 날짜 및 시간 값의 `ToString` 메서드를 호출하면 해당 날짜 및 시간이 다른 달력을 사용하여 생성된 경우에도 해당 날짜 및 시간의 문자열 표현을 양력 달력으로 표시합니다. 이 내용은 두 가지 방법을 사용하여 페르시아력으로 날짜 및 시간 값을 만들지만 <xref:System.DateTime.ToString%2A> 메서드를 호출할 때 해당 날짜 및 시간 값을 여전히 양력으로 표시하는 다음 예제에 설명되어 있습니다. 이 예제에서는 특정 달력의 날짜를 표시하기 위해 자주 사용되지만 잘못된 두 가지 방법을 보여 줍니다.  
   
  [!code-csharp[Formatting.HowTo.Calendar#1](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.HowTo.Calendar/cs/Calendar1.cs#1)]
  [!code-vb[Formatting.HowTo.Calendar#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.HowTo.Calendar/vb/Calendar1.vb#1)]  
@@ -98,7 +98,7 @@ ms.lasthandoff: 12/23/2017
 ## <a name="compiling-the-code"></a>코드 컴파일  
  이 예제에서는 System.Core.dll에 대한 참조가 필요합니다.  
   
- csc.exe 또는 vb.exe를 사용하여 명령줄에서 코드를 컴파일합니다. [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]에서 코드를 컴파일하려면 콘솔 응용 프로그램 프로젝트 템플릿에 배치합니다.  
+ csc.exe 또는 vb.exe를 사용하여 명령줄에서 코드를 컴파일합니다. Visual Studio에서 코드를 컴파일하려면 해당 코드를 콘솔 응용 프로그램 프로젝트 템플릿에 배치합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [서식 지정 작업 수행](../../../docs/standard/base-types/performing-formatting-operations.md)

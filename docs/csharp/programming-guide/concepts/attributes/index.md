@@ -1,22 +1,12 @@
 ---
 title: 특성(C#)
-ms.custom: ''
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-csharp
-ms.topic: article
 ms.assetid: f148f13f-a0d5-4f22-9c87-4b73d5dde270
-caps.latest.revision: 3
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: f9fc23cf7afbd28f0c9ae438cbce298cbf362fbd
-ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
+ms.openlocfilehash: a7e64c29ab8ca56a47ec6554ebc316f4922d3aca
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/09/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="attributes-c"></a>특성(C#)
 특성은 메타데이터 또는 선언적 정보를 코드(어셈블리, 형식, 메서드, 속성 등)에 연결하는 강력한 방법을 제공합니다. 특성이 프로그램 엔터티와 연결되면 *리플렉션*이라는 기법을 사용하여 런타임에 특성이 쿼리될 수 있습니다. 자세한 내용은 [리플렉션(C#)](../../../../csharp/programming-guide/concepts/reflection.md)을 참조하세요.  
@@ -107,7 +97,7 @@ void TraceMethod()
 |`assembly`|전체 어셈블리|  
 |`module`|현재 어셈블리 모듈|  
 |`field`|클래스 또는 구조체의 필드|  
-|`event`|이벤트|  
+|`event`|이벤트(event)|  
 |`method`|메서드 또는 `get` 및 `set` 속성 접근자|  
 |`param`|메서드 매개 변수 또는 `set` 속성 접근자 매개 변수|  
 |`property`|속성|  
@@ -145,9 +135,9 @@ int Method3() { return 0; }
 ## <a name="common-uses-for-attributes"></a>특성의 일반적인 용도  
  다음 목록에는 코드에서 특성이 사용되는 일반적인 경우가 나와 있습니다.  
   
--   SOAP 프로토콜을 통해 메서드를 호출할 수 있음을 나타내기 위해 웹 서비스에서 `WebMethod` 특성을 사용하여 메서드에 표시. 자세한 내용은 <xref:System.Web.Services.WebMethodAttribute>을 참조하십시오.  
+-   SOAP 프로토콜을 통해 메서드를 호출할 수 있음을 나타내기 위해 웹 서비스에서 `WebMethod` 특성을 사용하여 메서드에 표시. 자세한 내용은 <xref:System.Web.Services.WebMethodAttribute>을 참조하세요.  
   
--   네이티브 코드와 상호 운용될 경우 메서드 매개 변수를 마샬링하는 방법 설명. 자세한 내용은 <xref:System.Runtime.InteropServices.MarshalAsAttribute>을 참조하십시오.  
+-   네이티브 코드와 상호 운용될 경우 메서드 매개 변수를 마샬링하는 방법 설명. 자세한 내용은 <xref:System.Runtime.InteropServices.MarshalAsAttribute>을 참조하세요.  
   
 -   클래스, 메서드 및 인터페이스에 대한 COM 속성 설명  
   

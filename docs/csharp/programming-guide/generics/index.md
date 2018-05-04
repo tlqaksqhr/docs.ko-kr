@@ -1,22 +1,15 @@
 ---
 title: 제네릭(C# 프로그래밍 가이드)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - C# language, generics
 - generics [C#]
 ms.assetid: 75ea8509-a4ea-4e7a-a2b3-cf72482e9282
-caps.latest.revision: 23
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 026b8350a75794cf1101bef69d1bf15f474f103d
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 8f412366072c81b8aaca94829e0aa214f356200d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="generics-c-programming-guide"></a>제네릭(C# 프로그래밍 가이드)
 제네릭이 C# 언어 및 CLR(공용 언어 런타임)의 버전 2.0에 추가되었습니다. 제네릭은 .NET Framework에 클라이언트 코드에서 클래스 또는 메서드를 선언하고 인스턴스화할 때까지 하나 이상의 형식 사양을 따르는 클래스 및 메서드를 디자인할 수 있도록 만드는 형식 매개 변수 개념을 도입합니다. 예를 들어 제네릭 형식 매개 변수 T를 사용하여 여기에 표시된 것처럼, 다른 클라이언트 코드에서 런타임 캐스팅 또는 boxing 작업에 대한 비용이나 위험을 발생하지 않고 사용할 수 있는 단일 클래스를 작성할 수 있습니다.  

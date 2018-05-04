@@ -1,11 +1,12 @@
 ---
-title: "방법: Visual Basic에서 사용할 수 있는 직렬 포트 표시"
-ms.custom: 
+title: '방법: Visual Basic에서 사용할 수 있는 직렬 포트 표시'
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - serial ports, availability
@@ -13,21 +14,21 @@ helpviewer_keywords:
 - My.Computer.Ports object
 - ports, serial port availability
 ms.assetid: eaf2ee5a-8103-4e10-a205-ed1d4db120ba
-caps.latest.revision: "20"
+caps.latest.revision: 20
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 1dc12d8ad4c27eff346ccb6a7f5fd2ae3bd76701
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: cda98e8261669b2f20045e51b5ccef2e5db98a72
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-show-available-serial-ports-in-visual-basic"></a>방법: Visual Basic에서 사용할 수 있는 직렬 포트 표시
-이 항목에서는 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]에서 `My.Computer.Ports`를 사용하여 컴퓨터에서 사용 가능한 직렬 포트를 보여 주는 방법을 설명합니다.  
+이 항목에서는 Visual Basic에서 `My.Computer.Ports`를 사용하여 컴퓨터에서 사용 가능한 직렬 포트를 보여 주는 방법을 설명합니다.  
   
  사용자가 사용할 포트를 선택할 수 있도록 직렬 포트의 이름이 <xref:System.Windows.Forms.ListBox>에 배치됩니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  이 예제에서는 `My.Computer.Ports.SerialPortNames` 속성이 반환하는 모든 문자열을 반복합니다. 이러한 문자열은 컴퓨터에서 사용할 수 있는 직렬 포트의 이름입니다.  
   
  일반적으로 사용자는 사용 가능한 포트 목록에서 응용 프로그램이 사용해야 하는 직렬 포트를 선택합니다. 이 예제에서 직렬 포트 이름은 <xref:System.Windows.Forms.ListBox> 컨트롤에 저장됩니다. 자세한 내용은 [ListBox 컨트롤](../../../../framework/winforms/controls/listbox-control-windows-forms.md)을 참조하세요.  

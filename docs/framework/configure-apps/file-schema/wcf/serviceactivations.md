@@ -1,30 +1,18 @@
 ---
 title: '&lt;serviceActivations&gt;'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 97e665b6-1c51-410b-928a-9bb42c954ddb
-caps.latest.revision: "4"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 47a7d0984a5fafa7f03a589570e2a1aa2546dd8b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: c62f2bd1a34aca31ea9f9d5de17840f2967b269c
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltserviceactivationsgt"></a>&lt;serviceActivations&gt;
-[!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] 서비스 형식에 매핑되는 가상 서비스 활성화 설정을 정의하는 설정을 추가할 수 있는 구성 요소입니다. .svc 파일 없이도 WAS/IIS에서 호스트되는 서비스를 활성화할 수 있습니다.  
+Windows Communication Foundation (WCF) 서비스 형식에 매핑되 가상 서비스 활성화 설정을 정의 하는 설정을 추가할 수 있는 구성 요소입니다. .svc 파일 없이도 WAS/IIS에서 호스트되는 서비스를 활성화할 수 있습니다.  
   
- \<시스템입니다. ServiceModel >  
-\<serviceHostingEnvironment >  
+ \<system.ServiceModel>  
+\<ServiceHostingEnvironment >  
 \<serviceActivations >  
   
 ## <a name="syntax"></a>구문  
@@ -39,7 +27,7 @@ ms.lasthandoff: 12/22/2017
 ```  
   
 ## <a name="attributes-and-elements"></a>특성 및 요소  
- 다음 단원에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
+ 다음 섹션에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
   
 ### <a name="attributes"></a>특성  
  없음  
@@ -54,7 +42,7 @@ ms.lasthandoff: 12/22/2017
   
 |요소|설명|  
 |-------------|-----------------|  
-|[\<serviceHostingEnvironment >](../../../../../docs/framework/configure-apps/file-schema/wcf/servicehostingenvironment.md)|특정 전송을 위해 서비스 호스팅 환경에서 인스턴스화하는 형식을 정의합니다.|  
+|[\<ServiceHostingEnvironment >](../../../../../docs/framework/configure-apps/file-schema/wcf/servicehostingenvironment.md)|특정 전송을 위해 서비스 호스팅 환경에서 인스턴스화하는 형식을 정의합니다.|  
   
 ## <a name="remarks"></a>설명  
  다음 예제에서는 web.config 파일 내에서 활성화 설정을 구성하는 방법을 보여 줍니다.  

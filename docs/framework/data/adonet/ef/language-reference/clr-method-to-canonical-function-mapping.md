@@ -1,24 +1,12 @@
 ---
-title: "정식 함수 매핑에 대한 CLR 메서드"
-ms.custom: 
+title: 정식 함수 매핑에 대한 CLR 메서드
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: e3363261-2cb8-4b54-9555-2870be99b929
-caps.latest.revision: "2"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 29f0c8e663dad2eaa849137e1d02d24b9cef398b
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 07d488eb8caba8309857ef7fba42e67e155363e2
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="clr-method-to-canonical-function-mapping"></a>정식 함수 매핑에 대한 CLR 메서드
 Entity Framework에서는 문자열 조작 및 수식 함수와 같이 다수의 데이터베이스 시스템이 공통적으로 가지고 있는 기능을 구현하는 일련의 정식 함수를 제공합니다. 따라서 개발자는 다양한 데이터베이스 시스템을 대상으로 작업할 수 있습니다. 이러한 정식 함수는 LINQ to Entities와 같은 쿼리 기술에서 호출하면 사용 중인 공급자에 해당하는 올바른 저장소 함수로 변환됩니다. 그러면 함수 호출이 다양한 데이터 소스에서 공통적인 형태로 표현될 수 있으며, 따라서 다수의 데이터 소스에서 일관적인 쿼리를 사용할 수 있습니다. 피연산자가 숫자 형식인 경우 비트 AND, OR, NOT 및 XOR 연산자도 정식 함수에 매핑됩니다. 부울 피연산자의 경우 비트 AND, OR, NOT 및 XOR 연산자는 피연산자의 논리 AND, OR, NOT 및 XOR 연산을 계산합니다. 자세한 내용은 참조 [정식 함수](../../../../../../docs/framework/data/adonet/ef/language-reference/canonical-functions.md)합니다.  
@@ -57,10 +45,10 @@ Entity Framework에서는 문자열 조작 및 수식 함수와 같이 다수의
 |Int32 IndexOf(String `value`)|IndexOf(`this`, `value`) - 1||  
 |System.String Insert(Int32 `startIndex`, String `value`)|Concat(Concat(Substring(`this`, 1, `startIndex`), `value`), Substring(`this`, `startIndex`+1, Length(`this`) - `startIndex`))||  
 |System.String Remove(Int32 `startIndex`)|Substring(`this`, 1, `startIndex`)||  
-|System.String Remove(Int32 `startIndex`, Int32 `count`)|Concat(Substring(`this`, 1, `startIndex`) , Substring(`this`, `startIndex` + `count` +1, Length(`this`) - (`startIndex` + `count`)))|Remove(`startIndex`, `count`)는 `count`가 0 이상의 정수인 경우에만 지원됩니다.|  
+|System.String Remove(Int32 `startIndex`, Int32 `count`)|Concat (부분 문자열 (`this`, 1, `startIndex`), Substring (`this`, `startIndex`  +  `count` 길이 + 1 (`this`)-(`startIndex` + `count`)))|Remove(`startIndex`, `count`)는 `count`가 0 이상의 정수인 경우에만 지원됩니다.|  
 ystem 합니다. 바꾸기 문자열 (문자열 `oldValue`, 문자열 `newValue`)|Replace(`this`, `oldValue`, `newValue`)||  
 |System.String Substring(Int32 `startIndex`)|Substring(`this`, `startIndex` +1, Length(`this`) - `startIndex`)||  
-|System.String Substring(Int32 `startIndex`, Int32 `length`)|Substring(`this`, `startIndex` +1, `length`)||  
+|System.String Substring(Int32 `startIndex`, Int32 `length`)|Substring (`this`, `startIndex` + 1 `length`)||  
 |System.String ToLower()|ToLower(`this`)||  
 |System.String ToUpper()|ToUpper(`this`)||  
 |System.String Trim()|Trim(`this`)||  
@@ -79,9 +67,9 @@ ystem 합니다. 바꾸기 문자열 (문자열 `oldValue`, 문자열 `newValue`
 |Boolean op_GreaterThan(DateTime `t1`, DateTime `t2`)|> 연산자||  
 |Boolean op_GreaterThanOrEqual(DateTime `t1`, DateTime `t2`)|>= 연산자||  
 |Boolean op_Inequality(DateTime `t1`, DateTime `t2`)|!= 연산자||  
-|Boolean op_LessThan(DateTime `t1`, DateTime `t2`)|< 연산자||  
+|부울 op_LessThan (DateTime `t1`, DateTime `t2`)|< 연산자||  
 |Boolean op_LessThanOrEqual(DateTime `t1`, DateTime `t2`)|<= 연산자||  
-|Microsoft.VisualBasic.DateAndTime.DatePart( _<br /><br /> ByVal `Interval` As DateInterval, \_<br /><br /> ByVal `DateValue` 날짜/시간으로\_<br /><br /> 선택적 ByVal `FirstDayOfWeekValue` FirstDayOfWeek으로 = 식,\_<br /><br /> 선택적 ByVal `FirstWeekOfYearValue` FirstWeekOfYear로 VbFirstJan1 =\_<br /><br /> ) As Integer||자세한 내용은 DatePart 함수 단원을 참조하세요.|  
+|Microsoft.VisualBasic.DateAndTime.DatePart( _<br /><br /> ByVal `Interval` DateInterval,으로 \_<br /><br /> ByVal `DateValue` 날짜/시간으로 \_<br /><br /> 선택적 ByVal `FirstDayOfWeekValue` FirstDayOfWeek으로 = 식, \_<br /><br /> 선택적 ByVal `FirstWeekOfYearValue` FirstWeekOfYear로 VbFirstJan1 = \_<br /><br /> ) As Integer||자세한 내용은 DatePart 함수 단원을 참조하세요.|  
 |Microsoft.VisualBasic.DateAndTime.Now|CurrentDateTime()||  
 |Microsoft.VisualBasic.DateAndTime.Year(DateTime `TimeValue`)|Year()||  
 |Microsoft.VisualBasic.DateAndTime.Month(DateTime `TimeValue`)|Month()||  

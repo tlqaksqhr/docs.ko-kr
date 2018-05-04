@@ -1,17 +1,12 @@
 ---
 title: 방법 문서(C# 가이드)
 description: 유용한 팁 및 간단하고 집중된 코드 샘플의 컬렉션
-author: billwagner
-ms.author: wiwagn
 ms.date: 12/20/2017
-ms.topic: article
-ms.prod: .net
-ms.devlang: devlang-csharp
-ms.openlocfilehash: dfb90870233acbe3898e8863f060cd15dd22c3c7
-ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
+ms.openlocfilehash: b8164abd84647fc9118acc6e0b84e7fd46838fe9
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-c"></a>방법(C#)
 

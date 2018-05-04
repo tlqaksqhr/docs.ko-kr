@@ -1,11 +1,12 @@
 ---
-title: ".NET Framework 파일 I/O 및 파일 시스템의 기본 사항(Visual Basic)"
-ms.custom: 
+title: .NET Framework 파일 I/O 및 파일 시스템의 기본 사항(Visual Basic)
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - file access, file I/O in Visual Basic
@@ -15,14 +16,14 @@ helpviewer_keywords:
 - streams
 - streams, definition
 ms.assetid: 49d837c0-cf28-416f-8606-4d83d7b479ef
-caps.latest.revision: "30"
+caps.latest.revision: 30
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: d6cfdb939bd4bf84fafbffceefccd5cd522018c2
-ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
+ms.openlocfilehash: 02eaa98b8a52a2b9efa2b273b2a58158a5848b86
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="basics-of-net-framework-file-io-and-the-file-system-visual-basic"></a>.NET Framework 파일 I/O 및 파일 시스템의 기본 사항(Visual Basic)
 <xref:System.IO> 네임스페이스의 클래스는 드라이브, 파일 및 디렉터리 작업에 사용됩니다.  
@@ -30,7 +31,7 @@ ms.lasthandoff: 12/21/2017
  <xref:System.IO> 네임스페이스는 <xref:System.IO.File> 및 <xref:System.IO.Directory> 클래스를 포함하며, 이러한 클래스는 파일 및 디렉터리를 조작하는 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 기능을 제공합니다. 이러한 개체의 메서드는 정적 멤버 또는 공유 멤버이므로, 먼저 클래스의 인스턴스를 만들지 않고 직접 사용할 수 있습니다. `My` 기능의 사용자에게 익숙한 <xref:System.IO.FileInfo> 및 <xref:System.IO.DirectoryInfo> 클래스가 이러한 클래스와 연관되어 있습니다. 이러한 클래스를 사용하려면 이름을 정규화하거나, 영향받는 코드의 시작 부분에 `Imports` 문을 포함하여 적절한 네임스페이스를 가져와야 합니다. 자세한 내용은 [Imports 문(.NET 네임스페이스 및 형식)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)을 참조하세요.  
   
 > [!NOTE]
->  이 섹션의 다른 항목은 드라이브, 파일 및 디렉터리 작업에 `My.Computer.FileSystem` 클래스 대신 `System.IO` 개체를 사용합니다. `My.Computer.FileSystem` 개체의 주요 용도는 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 프로그램에서 사용하는 것입니다. `System.IO` 클래스는 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]을 포함하여 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]를 지원하는 모든 언어에서 사용할 수 있습니다.  
+>  이 섹션의 다른 항목은 드라이브, 파일 및 디렉터리 작업에 `My.Computer.FileSystem` 클래스 대신 `System.IO` 개체를 사용합니다. `My.Computer.FileSystem` 개체의 주요 용도는 Visual Basic 프로그램에서 사용하는 것입니다. `System.IO` 클래스는 Visual Basic을 포함하여 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]를 지원하는 모든 언어에서 사용할 수 있습니다.  
   
 ## <a name="definition-of-a-stream"></a>스트림 정의  
  [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 는 스트림을 사용하여 파일의 읽기와 쓰기를 지원합니다. 스트림은 연속 데이터의 1차원 집합이라고 생각할 수 있습니다. 여기에는 시작과 끝이 있고 커서가 스트림에서 현재 위치를 나타냅니다.  

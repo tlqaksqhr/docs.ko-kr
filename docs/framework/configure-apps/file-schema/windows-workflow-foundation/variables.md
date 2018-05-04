@@ -1,33 +1,23 @@
 ---
-title: "&lt;변수&gt;"
-ms.custom: 
+title: '&lt;변수&gt;'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: da0fd144-dda9-4613-b650-fe6325076513
-caps.latest.revision: "5"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 49255241e7adc187c2df68407cae05573fc3d4d3
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: d0dc83951bdf894d0061971ae4b79854a7c8bcd8
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltvariablesgt"></a>&lt;변수&gt;
 이 활동 쿼리와 연결된 변수의 컬렉션을 나타냅니다.  
   
  추적 프로필 쿼리에 대 한 자세한 내용은 참조 하십시오. [추적 프로필](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)합니다.  
   
-\<system.serviceModel >  
-\<추적 >  
-\<trackingProfile >  
-\<워크플로 >  
+\<system.serviceModel>  
+\<tracking>  
+\<trackingProfile>  
+\<workflow>  
 \<activityStateQueries >  
 \<activityStateQuery >  
 \<변수 >  
@@ -50,7 +40,7 @@ ms.lasthandoff: 12/22/2017
 ```  
   
 ## <a name="attributes-and-elements"></a>특성 및 요소  
- 다음 단원에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
+ 다음 섹션에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
   
 ### <a name="attributes"></a>특성  
  없음  

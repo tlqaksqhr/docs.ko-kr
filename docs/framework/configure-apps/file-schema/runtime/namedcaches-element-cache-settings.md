@@ -1,35 +1,26 @@
 ---
-title: "&lt;namedCaches&gt; 요소 (캐시 설정)"
-ms.custom: 
+title: '&lt;namedCaches&gt; 요소 (캐시 설정)'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - namedCaches element
 - caching [.NET Framework], configuration
 - <namedCaches> element
 ms.assetid: 6bd4fbc5-55a6-4dc4-998b-cdcc7e023330
-caps.latest.revision: "14"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: 7c25f0039f75ba1c736cff946dbaaff9252dc93e
-ms.sourcegitcommit: 2142a4732bb4ff519b9817db4c24a237b9810d4b
+ms.openlocfilehash: fac50aedbb11eba40482fab71c912f587d85f855
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/05/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltnamedcachesgt-element-cache-settings"></a>&lt;namedCaches&gt; 요소 (캐시 설정)
 명명 된 구성 설정의 컬렉션을 지정 <xref:System.Runtime.Caching.MemoryCache> 인스턴스. <xref:System.Runtime.Caching.Configuration.MemoryCacheSection.NamedCaches%2A> 속성 구성 설정의 컬렉션을 하나 이상에서 참조 `namedCaches` 구성 파일의 요소입니다.  
   
  \<configuration>  
-\<system.runtime.caching >  
-\<memoryCache >  
+\< system.runtime.caching >  
+\<memoryCache>  
 \<namedCaches >  
   
 ## <a name="syntax"></a>구문  
@@ -76,7 +67,7 @@ ms.lasthandoff: 01/05/2018
   
  Name 특성을 "기본값"으로 설정 하면 요소의 기본 메모리 캐시 인스턴스를 사용 합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 예제에서는 설정 하 여 기본 캐시 항목 이름에는 캐시의 이름을 설정 하는 `name` 특성을 "default"입니다.  
   
  `cacheMemoryLimitMegabytes` 특성 및 `physicalMemoryPercentage` 특성은 0으로 설정됩니다. 이러한 특성을 0으로 설정 됨을 의미의 크기 자동 조정 추론은 <xref:System.Runtime.Caching.MemoryCache> 클래스 사용 됩니다. 캐시를 구현 하는 2 분 마다 절대 곡선과 백분율을 기준으로 메모리 제한에 대 한 현재 메모리 로드를 비교합니다.  
