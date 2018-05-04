@@ -1,1 +1,0 @@
-.NET Framework 4.7부터 이 메서드는 <xref:System.Security.Authentication.SslProtocols.None>을 통해 인증하여 운영 체제가 최상의 프로토콜을 선택하여 사용하고 안전하지 않은 프로토콜을 차단할 수 있도록 합니다. .NET Framework 4.6(및 최신 보안 패치가 설치된 .NET Framework 4.5)에서 허용된 TLS / SSL 프로토콜 버전은 1.2, 1.1 및 1.0입니다(Windows 레지스트리를 편집하여 강력한 암호화를 비활성화한 경우 제외).

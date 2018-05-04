@@ -1,1 +1,0 @@
-행렬 변환의 경우 <xref:System.Numerics.Vector2>, <xref:System.Numerics.Vector3> 및 <xref:System.Numerics.Vector4> 인스턴스가 행으로 표시됩니다. 즉, 벡터 *v*는 *M*과 *vM*을 곱한 행렬로 변환됩니다.
