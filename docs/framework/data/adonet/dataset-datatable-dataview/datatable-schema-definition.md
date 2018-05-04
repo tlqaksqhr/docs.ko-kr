@@ -1,31 +1,19 @@
 ---
-title: "DataTable 스키마 정의"
-ms.custom: 
+title: DataTable 스키마 정의
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: efbcdda4-f5a9-421d-8be2-4c194c74552f
-caps.latest.revision: "4"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: ae4d5af0238108d0f309ae311e172450bf226c23
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 81da3937b709d4ef046eb1c470546f168bde4132
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="datatable-schema-definition"></a>DataTable 스키마 정의
 테이블의 스키마나 구조는 열이나 제약 조건에 의해 표시됩니다. <xref:System.Data.DataTable>의 스키마는 <xref:System.Data.DataColumn> 개체를 비롯하여 <xref:System.Data.ForeignKeyConstraint> 및 <xref:System.Data.UniqueConstraint> 개체를 사용하여 정의합니다. 테이블 열은 데이터 소스 열에 매핑될 수 있습니다. 또한 이 열은 식에서 계산된 값을 포함하며 값을 자동으로 증가시키고 기본 키 값을 포함할 수 있습니다.  
   
- 테이블의 열, 관계 및 제약 조건을 이름에 따라 참조하는 경우 대/소문자를 구분합니다. 따라서 이름이 동일한 열, 관계 또는 제약 조건이 테이블에 두 개 이상 존재할 수 있지만, 대/소문자는 다르게 표기됩니다. 예를 들어 할 수 있습니다 **Col1** 및 **col1**합니다. 이러한 경우 이름에 따라 열을 참조하려면 열 이름의 대/소문자가 정확하게 일치해야 하며, 그렇지 않으면 예외가 throw됩니다. 예를 들어 경우 테이블 **myTable** 열이 포함 **Col1** 및 **col1**, 참조할 **Col1** 를 이름으로  **myTable.Columns["Col1"]**, 및 **col1** 으로 **myTable.Columns["col1"]**합니다. 으로 열 중 하나를 참조 하려고 **myTable.Columns["COL1"]** 하면 예외가 발생 합니다.  
+ 테이블의 열, 관계 및 제약 조건을 이름에 따라 참조하는 경우 대/소문자를 구분합니다. 따라서 이름이 동일한 열, 관계 또는 제약 조건이 테이블에 두 개 이상 존재할 수 있지만, 대/소문자는 다르게 표기됩니다. 예를 들어 할 수 있습니다 **Col1** 및 **col1**합니다. 이러한 경우 이름에 따라 열을 참조하려면 열 이름의 대/소문자가 정확하게 일치해야 하며, 그렇지 않으면 예외가 throw됩니다. 예를 들어 경우 테이블 **myTable** 열이 포함 **Col1** 및 **col1**, 참조할 **Col1** 를 이름으로  **myTable.Columns["Col1"]**, 및 **col1** 으로 **myTable.Columns["col1"]** 합니다. 으로 열 중 하나를 참조 하려고 **myTable.Columns["COL1"]** 하면 예외가 발생 합니다.  
   
- 특정 이름의 열, 관계 또는 제약 조건이 하나만 있으면 대/소문자 구분 규칙이 적용되지 않습니다. 즉, 테이블에 있는 기타 열, 관계 또는 제약 조건 개체의 이름이 특정한 열, 관계 또는 제약 조건 개체의 이름과 일치하지 않더라도 이름에 따라 대/소문자 구분 없이 해당 개체를 참조할 수 있으며, 예외가 throw되지 않습니다. 예를 들어 테이블에만 **Col1**를 사용 하 여 참조할 수 **내 합니다. 열 ["COL1"]**합니다.  
+ 특정 이름의 열, 관계 또는 제약 조건이 하나만 있으면 대/소문자 구분 규칙이 적용되지 않습니다. 즉, 테이블에 있는 기타 열, 관계 또는 제약 조건 개체의 이름이 특정한 열, 관계 또는 제약 조건 개체의 이름과 일치하지 않더라도 이름에 따라 대/소문자 구분 없이 해당 개체를 참조할 수 있으며, 예외가 throw되지 않습니다. 예를 들어 테이블에만 **Col1**를 사용 하 여 참조할 수 **내 합니다. 열 ["COL1"]** 합니다.  
   
 > [!NOTE]
 >  <xref:System.Data.DataTable.CaseSensitive%2A> 의 속성은 **DataTable** 이 동작에 영향을 주지 않습니다. **CaseSensitive** 속성이 데이터 테이블 및 영향을 줌 정렬, 검색, 필터링, 제약 조건 및 등을 강제 적용에 속하지만 열, 관계 및 제약 조건에 대 한 참조에 적용 됩니다.  

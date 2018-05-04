@@ -1,12 +1,12 @@
 ---
-title: "이벤트 기반 비동기 패턴 구현 시기 결정"
-ms.custom: 
+title: 이벤트 기반 비동기 패턴 구현 시기 결정
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Event-based Asynchronous Pattern
@@ -18,18 +18,18 @@ helpviewer_keywords:
 - AsyncOperation class
 - AsyncCompletedEventArgs class
 ms.assetid: a00046aa-785d-4f7f-a8e5-d06475ea50da
-caps.latest.revision: 
+caps.latest.revision: 8
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 111aaaa86877368ccbd0c9c11a26dff47b065698
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 330dc5ec76fe33a7f6165857334a367f578840ef
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="deciding-when-to-implement-the-event-based-asynchronous-pattern"></a>이벤트 기반 비동기 패턴 구현 시기 결정
 이벤트 기반 비동기 패턴은 클래스의 비동기 동작을 표시하기 위한 패턴을 제공합니다. 이 패턴의 도입에 따라 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]는 비동기 동작을 표시하기 위한 두 가지 패턴 즉, <xref:System.IAsyncResult?displayProperty=nameWithType> 인터페이스를 기반으로 하는 비동기 패턴 및 이벤트 기반 패턴을 정의합니다. 이 항목에서는 두 패턴을 모두 구현하는 것이 적절한 경우에 대해 설명합니다.  
@@ -63,7 +63,7 @@ ms.lasthandoff: 12/23/2017
   
     -   결과 개체 모델의 복잡성이 구현을 분리하는 이점보다 더 큰 경우 이벤트 기반 패턴 및 <xref:System.IAsyncResult> 패턴을 동일한 클래스에 표시합니다. 이벤트 기반 패턴 표시를 피하는 것보다 단일 클래스에 두 패턴을 모두 표시하는 것이 더 좋습니다.  
   
-    -   이벤트 기반 패턴과 <xref:System.IAsyncResult> 패턴을 모두 단일 클래스에 표시해야 하는 경우 <xref:System.ComponentModel.EditorBrowsableState.Advanced>로 설정된 <xref:System.ComponentModel.EditorBrowsableAttribute>를 사용하여 <xref:System.IAsyncResult> 패턴 구현을 고급 기능으로 표시합니다. 이는 <xref:System.IAsyncResult> 속성 및 메서드의 표시가 아니라 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] IntelliSense와 같은 환경의 디자인을 나타냅니다. 이러한 속성 및 메서드는 여전히 완벽하게 사용할 수 있지만, IntelliSense를 통해 작업하는 개발자는 API를 더욱 명확하게 볼 수 있습니다.  
+    -   이벤트 기반 패턴과 <xref:System.IAsyncResult> 패턴을 모두 단일 클래스에 표시해야 하는 경우 <xref:System.ComponentModel.EditorBrowsableState.Advanced>로 설정된 <xref:System.ComponentModel.EditorBrowsableAttribute>를 사용하여 <xref:System.IAsyncResult> 패턴 구현을 고급 기능으로 표시합니다. 이는 Visual Studio IntelliSense와 같은 환경에서 <xref:System.IAsyncResult> 속성 및 메서드를 표시하지 않도록 설계한다는 것을 나타냅니다. 이러한 속성 및 메서드는 여전히 완벽하게 사용할 수 있지만, IntelliSense를 통해 작업하는 개발자는 API를 더욱 명확하게 볼 수 있습니다.  
   
 ## <a name="criteria-for-exposing-the-iasyncresult-pattern-in-addition-to-the-event-based-pattern"></a>이벤트 기반 패턴 외에도 IAsyncResult 패턴을 표시하기 위한 조건  
  이벤트 기반 비동기 패턴은 앞서 언급한 시나리오에 따른 많은 이점이 있지만, 성능이 가장 중요한 요구 사항인 경우 알고 있어야 하는 몇 가지 단점이 있습니다.  

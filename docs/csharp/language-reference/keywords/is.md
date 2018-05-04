@@ -15,15 +15,15 @@ ms.assetid: bc62316a-d41f-4f90-8300-c6f4f0556e43
 caps.latest.revision: 20
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 9f0242439caa21268a6c314409f41587890c4126
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 44c15eb9d65adf10904f8777847b0653ff1dbc99
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="is-c-reference"></a>is(C# 참조) #
 
-개체가 지정된 형식과 호환되는지 확인하거나 C# 7부터는 패턴에 대해 식을 테스트합니다.
+개체가 지정된 형식과 호환되는지 확인하거나 (C# 7.0부터는) 패턴에 대해 식을 테스트합니다.
 
 ## <a name="testing-for-type-compatibility"></a>형식 호환성 테스트 ##
 
@@ -60,11 +60,11 @@ ms.lasthandoff: 11/21/2017
 `expr`은 무명 메서드 및 람다 식을 제외하고 값을 반환하는 모든 식이 될 수 있습니다. 다음 예제에서는 `is`를 사용하여 메서드 호출의 반환 값을 평가합니다.   
 [!code-csharp[is#4](../../../../samples/snippets/csharp/language-reference/keywords/is/is4.cs#4)]
 
-C# 7부터는 [형식 패턴](#type)을 사용한 패턴 일치를 통해 `is` 문을 사용하는 보다 간결한 코드를 작성할 수 있습니다.
+C# 7.0부터는 [형식 패턴](#type)을 사용한 패턴 일치를 통해 `is` 문을 사용하는 보다 간결한 코드를 작성할 수 있습니다.
 
 ## <a name="pattern-matching-with-is"></a>`is`를 사용한 패턴 일치 ##
 
-C# 7부터는 `is` 및 [switch](../../../csharp/language-reference/keywords/switch.md) 문에서 패턴 일치를 지원합니다. `is` 키워드는 다음과 같은 패턴을 지원합니다.
+C# 7.0부터는 `is` 및 [switch](../../../csharp/language-reference/keywords/switch.md) 문에서 패턴 일치를 지원합니다. `is` 키워드는 다음과 같은 패턴을 지원합니다.
 
 - [형식 패턴](#type) - 식을 지정된 형식으로 변환할 수 있는지 여부를 테스트하고, 변환할 수 있으면 해당 형식의 변수로 캐스트합니다.
 
@@ -112,7 +112,7 @@ C# 7부터는 `is` 및 [switch](../../../csharp/language-reference/keywords/swit
 
 ### <a name="a-nameconstant--constant-pattern"></a><a name="constant" /> 상수 패턴 ###
 
-상수 패턴을 사용한 패턴 일치를 수행하는 경우 `is`는 식이 지정된 상수와 같은지 여부를 테스트합니다. C# 6 이전 버전에서는 상수 패턴이 [switch](switch.md) 문에서 지원됩니다. C# 7부터는 `is` 문에서도 지원됩니다. 사용되는 구문은 다음과 같습니다.
+상수 패턴을 사용한 패턴 일치를 수행하는 경우 `is`는 식이 지정된 상수와 같은지 여부를 테스트합니다. C# 6 이전 버전에서는 상수 패턴이 [switch](switch.md) 문에서 지원됩니다. C# 7.0부터는 `is` 문에서도 지원됩니다. 사용되는 구문은 다음과 같습니다.
 
 ```csharp
    expr is constant

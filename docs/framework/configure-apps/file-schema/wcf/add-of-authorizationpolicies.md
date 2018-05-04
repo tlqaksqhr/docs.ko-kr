@@ -1,29 +1,17 @@
 ---
-title: "&lt;authorizationPolicies&gt;의 &lt;add&gt;"
-ms.custom: 
+title: '&lt;authorizationPolicies&gt;의 &lt;add&gt;'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 613a03d8-4384-4556-bce2-8c23286c0bb0
-caps.latest.revision: "8"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 72af0529cea2e6810bdb7a518874a313e3ceab40
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 008f465134860141293776130ebd75cd39120f5e
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltaddgt-of-ltauthorizationpoliciesgt"></a>&lt;authorizationPolicies&gt;의 &lt;add&gt;
 클레임 변형에 대한 권한 부여 정책을 지정합니다.  
   
- \<시스템입니다. ServiceModel >  
+ \<system.ServiceModel>  
 \<동작 >  
 \<동작 >  
 \<serviceAuthorization >  
@@ -42,13 +30,13 @@ ms.lasthandoff: 12/22/2017
  `Type`  
   
 ## <a name="attributes-and-elements"></a>특성 및 요소  
- 다음 단원에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
+ 다음 섹션에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
   
 ### <a name="attributes"></a>특성  
   
 |특성|설명|  
 |---------------|-----------------|  
-|`policyType`|필수 String 특성입니다.<br /><br /> [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] 액세스 제어 모델은 권한 부여 정책 집합을 형식으로 제공할 수 있습니다. 이 특성은 한 입력 클레임 집합을 다른 클레임 집합으로 변환할 수 있도록 하는 권한 부여 정책을 지정합니다. 그에 따라 액세스 제어가 부여되거나 거부됩니다.|  
+|`policyType`|필수 String 특성입니다.<br /><br /> Windows Communication Foundation (WCF) 액세스 제어 모델의 형식으로 권한 부여 정책 집합을 프로 비전을 지원 합니다. 이 특성은 한 입력 클레임 집합을 다른 클레임 집합으로 변형할 수 있도록 하는 권한 부여 정책을 지정합니다. 그에 따라 액세스 제어가 부여되거나 거부됩니다.|  
   
 ### <a name="child-elements"></a>자식 요소  
  없음  

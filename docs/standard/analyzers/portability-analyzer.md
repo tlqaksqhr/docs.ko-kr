@@ -1,6 +1,6 @@
 ---
-title: ".NET 이식성 분석기 - .NET"
-description: ".NET 이식성 분석기 도구를 사용하여 .NET Core, .NET Standard, UWP 및 Xamarin을 비롯한 다양한 .NET 구현에서 코드가 얼마나 이식성이 있는지 평가하는 방법을 알아봅니다."
+title: .NET 이식성 분석기 - .NET
+description: .NET 이식성 분석기 도구를 사용하여 .NET Core, .NET Standard, UWP 및 Xamarin을 비롯한 다양한 .NET 구현에서 코드가 얼마나 이식성이 있는지 평가하는 방법을 알아봅니다.
 keywords: .NET, .NET Core
 author: blackdwarf
 ms.author: mairaw
@@ -13,27 +13,27 @@ ms.assetid: 0375250f-5704-4993-a6d5-e21c499cea1e
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: b4e19734bc1b7f394864a44ca0489c669cd63a61
-ms.sourcegitcommit: f28752eab00d2bd97e971542c0f49ce63cfbc239
+ms.openlocfilehash: 3d813292a821c2ebfa7b40ee873cf36e71104ebf
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="the-net-portability-analyzer"></a>.NET 이식성 분석기
 
-라이브러리를 다중 플랫폼으로 만들고 싶으세요? 응용 프로그램이 iOS, Android 및 Mac용 .NET Core, .NET Standard, UWP 및 Xamarin을 비롯한 다른 .NET 구현 및 프로필과 호환되도록 하는 데 필요한 작업량을 확인하고 싶으세요? [.NET 이식성 분석기](http://go.microsoft.com/fwlink/?LinkID=507467)는 어셈블리를 분석하여 프로그램이 .NET 구현에서 얼마나 유연한지에 대한 자세한 보고서를 제공하는 도구입니다. 이식성 분석기는 Visual Studio 확장 및 콘솔 앱으로 제공됩니다.
+라이브러리를 다중 플랫폼으로 만들고 싶으세요? 응용 프로그램이 iOS, Android 및 Mac용 .NET Core, .NET Standard, UWP 및 Xamarin을 비롯한 다른 .NET 구현 및 프로필과 호환되도록 하는 데 필요한 작업량을 확인하고 싶으세요? [.NET 이식성 분석기](https://marketplace.visualstudio.com/items?itemName=ConnieYau.NETPortabilityAnalyzer)는 어셈블리를 분석하여 프로그램이 .NET 구현에서 얼마나 유연한지에 대한 자세한 보고서를 제공하는 도구입니다. 이식성 분석기는 Visual Studio 확장 및 콘솔 앱으로 제공됩니다.
 
 ## <a name="new-targets"></a>새 대상
 
-* [.NET Core](https://dotnetfoundation.org/net-core): 모듈형 디자인을 포함하고, Side-by-Side를 이용하며, 플랫폼 간 시나리오를 대상으로 합니다. Side-by-Side를 사용하면 다른 앱을 중단하지 않고 새로운 .NET Core 버전을 채택할 수 있습니다.
-* [ASP.NET Core](https://dotnetfoundation.org/asp-net-core): .NET Core를 기반으로 하는 최신 웹 프레임워크이므로 개발자에게 동일한 혜택을 제공합니다.
+* [.NET Core](../../core/index.md): 모듈형 디자인을 포함하고, Side-by-Side를 이용하며, 플랫폼 간 시나리오를 대상으로 합니다. Side-by-Side를 사용하면 다른 앱을 중단하지 않고 새로운 .NET Core 버전을 채택할 수 있습니다.
+* [ASP.NET Core](/aspnet/core): .NET Core를 기반으로 하는 최신 웹 프레임워크이므로 개발자에게 동일한 혜택을 제공합니다.
 * [유니버설 Windows 플랫폼](https://blogs.msdn.microsoft.com/dotnet/2014/04/24/net-native-performance): .NET 네이티브의 정적 컴파일을 사용하여 x64 및 ARM 컴퓨터에서 실행되는 Windows 스토어 앱의 성능을 향상합니다. 
 * .NET Core + 플랫폼 확장: .NET Core API뿐만 아니라 WCF, ASP.NET Core, FSharp 및 Azure 같은 .NET 에코시스템의 다른 API도 포함합니다.
 * .NET Standard + 플랫폼 확장: .NET Standard API뿐만 아니라 WCF, ASP.NET Core, FSharp 및 Azure 같은 다른 .NET 에코시스템도 포함합니다.
 
 ## <a name="how-to-use-portability-analyzer"></a>이식성 분석기를 사용하는 방법
 
-.NET 이식성 분석기 사용을 시작하려면 먼저 [Visual Studio 갤러리](http://go.microsoft.com/fwlink/?LinkID=507467)에서 확장을 다운로드하고 설치해야 합니다. Visual Studio 2015 및 Visual Studio 2017에서 작동합니다. Visual Studio에서 **분석** > **Portability Analyzer Settings**(이식성 분석기 설정)를 통해 구성하고 대상 플랫폼을 선택할 수 있습니다.
+.NET 이식성 분석기 사용을 시작하려면 먼저 [Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=ConnieYau.NETPortabilityAnalyzer)에서 확장을 다운로드하고 설치해야 합니다. Visual Studio 2015 및 Visual Studio 2017에서 작동합니다. Visual Studio에서 **분석** > **Portability Analyzer Settings**(이식성 분석기 설정)를 통해 구성하고 대상 플랫폼을 선택할 수 있습니다.
 
 ![이식성 스크린샷](./media/portability-analyzer/portability-screenshot.png)
 

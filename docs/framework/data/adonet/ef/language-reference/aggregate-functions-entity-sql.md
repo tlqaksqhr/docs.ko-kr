@@ -1,35 +1,23 @@
 ---
-title: "집계 함수(Entity SQL)"
-ms.custom: 
+title: 집계 함수(Entity SQL)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: acfd3149-f519-4c6e-8fe1-b21d243a0e58
-caps.latest.revision: "2"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: e1ed9a7532269a149f6f522e8fe9c6161e1aae27
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 63e366f323b38a24c4d067681b47d8a8b96125b2
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="aggregate-functions-entity-sql"></a>집계 함수(Entity SQL)
 집계는 컬렉션을 그룹 작업의 일부분인 스칼라로 압축하는 언어 구문입니다. [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 집계의 형식은 다음 두 가지입니다.  
   
--   [!INCLUDE[esql](../../../../../../includes/esql-md.md)]식의 어디서 나 사용할 수 있는 컬렉션 함수. 이 함수는 프로젝션의 집계 함수를 사용하며 컬렉션에 대한 해당 동작을 예측합니다. 컬렉션 함수는 [!INCLUDE[esql](../../../../../../includes/esql-md.md)]에서 집계를 지정하는 데 주로 사용되는 모드입니다.  
+-   [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 식의 어디서 나 사용할 수 있는 컬렉션 함수. 이 함수는 프로젝션의 집계 함수를 사용하며 컬렉션에 대한 해당 동작을 예측합니다. 컬렉션 함수는 [!INCLUDE[esql](../../../../../../includes/esql-md.md)]에서 집계를 지정하는 데 주로 사용되는 모드입니다.  
   
 -   GROUP BY 절을 포함하는 쿼리 식의 그룹 집계. [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)]에서와 같이 그룹 집계는 DISTINCT 및 ALL을 집계 입력에 대한 한정자로 받아들입니다.  
   
- [!INCLUDE[esql](../../../../../../includes/esql-md.md)]먼저 식을 컬렉션 함수로 해석 하려고 하는 경우 식이 SELECT 식 컨텍스트에 이것으로 그룹 집계로 해석 합니다.  
+ [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 먼저 식을 컬렉션 함수로 해석 하려고 하는 경우 식이 SELECT 식 컨텍스트에 이것으로 그룹 집계로 해석 합니다.  
   
- [!INCLUDE[esql](../../../../../../includes/esql-md.md)]호출 하는 특수 집계 연산자 정의 [GROUPPARTITION](../../../../../../docs/framework/data/adonet/ef/language-reference/grouppartition-entity-sql.md)합니다. 이 연산자를 사용 하면 그룹화 된 입력된 집합에 대 한 참조를 가져올 수 있습니다. 이를 통해 보다 고급 기능의 그룹화 쿼리를 사용할 수 있습니다. 이 경우 GROUP BY 절의 결과는 그룹 집계 또는 컬렉션 함수 이외의 장소에 사용될 수 있습니다.  
+ [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 호출 하는 특수 집계 연산자 정의 [GROUPPARTITION](../../../../../../docs/framework/data/adonet/ef/language-reference/grouppartition-entity-sql.md)합니다. 이 연산자를 사용 하면 그룹화 된 입력된 집합에 대 한 참조를 가져올 수 있습니다. 이를 통해 보다 고급 기능의 그룹화 쿼리를 사용할 수 있습니다. 이 경우 GROUP BY 절의 결과는 그룹 집계 또는 컬렉션 함수 이외의 장소에 사용될 수 있습니다.  
   
 ## <a name="collection-functions"></a>컬렉션 함수  
  컬렉션 함수는 컬렉션에 대해 작업을 수행하고 스칼라 값을 반환합니다. 예를 들어, `orders`가 모든 `orders`의 컬렉션인 경우 다음 식을 사용하여 가장 빠른 운송 날짜를 계산할 수 있습니다.  

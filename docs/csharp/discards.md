@@ -1,6 +1,6 @@
 ---
-title: "무시 항목 - C# 가이드"
-description: "할당되지 않은 무시 가능한 변수인 무시 항목에 대한 C#의 지원과 무시 항목을 사용할 수 있는 방법에 관해 설명합니다."
+title: 무시 항목 - C# 가이드
+description: 할당되지 않은 무시 가능한 변수인 무시 항목에 대한 C#의 지원과 무시 항목을 사용할 수 있는 방법에 관해 설명합니다.
 keywords: .NET,.NET Core
 author: rpetrusha
 ms.author: ronpet
@@ -9,23 +9,23 @@ ms.topic: article
 ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
-ms.openlocfilehash: 800a27d2d186c738dceb6838aa669377a0c07b01
-ms.sourcegitcommit: 882e02b086d7cb9c75f748494cf7a8d3377c5874
+ms.openlocfilehash: 94badd78485ee4d3928b170d81a80743bf84102f
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="discards---c-guide"></a>무시 항목 - C# 가이드
 
-C# 7부터 C#에서는 응용 프로그램 코드에서 의도적으로 사용되지 않는 임시 더미 변수인 무시 항목을 지원합니다. 무시 항목은 할당되지 않은 변수에 해당하므로 값을 가지지 않습니다. 무시 항목 변수는 하나만 있고 할당된 저장소가 아닐 수도 있으므로 무시 항목은 메모리 할당을 줄일 수 있습니다. 코드의 의도를 명확하게 만들므로 코드의 가독성과 유지 관리 편의성을 향상합니다.
+C# 7.0부터 C#에서는 응용 프로그램 코드에서 의도적으로 사용되지 않는 임시 더미 변수인 무시 항목을 지원합니다. 무시 항목은 할당되지 않은 변수에 해당하므로 값을 가지지 않습니다. 무시 항목 변수는 하나만 있고 할당된 저장소가 아닐 수도 있으므로 무시 항목은 메모리 할당을 줄일 수 있습니다. 코드의 의도를 명확하게 만들므로 코드의 가독성과 유지 관리 편의성을 향상합니다.
 
-변수가 무시 항목임을 지정하려면 변수에 밑줄(`_`)을 이름으로 할당합니다. 다음 메서드 호출이 첫 번째 및 두 번째 값은 삭제 수는 3-튜플을 반환 하는 예를 들어 및 *영역* 를 이전에 선언 된 하는 변수에서 반환 된 해당 세 번째 구성 요소에 설정할  *GetCityInformation*:
+변수가 무시 항목임을 지정하려면 변수에 밑줄(`_`)을 이름으로 할당합니다. 예를 들어 다음 메서드 호출은 첫 번째 및 두 번째 값이 무시 항목이고 *영역*이 *GetCityInformation*에서 반환한 해당 세 번째 구성 요소로 설정된 이전에 선언된 변수인 3-튜플을 반환합니다.
 
 ```csharp
 (_, _, area) = city.GetCityInformation(cityName);
 ```
 
-C# 7에서 무시 항목은 다음 컨텍스트의 할당에서 지원됩니다.
+C# 7.0에서 무시 항목은 다음 컨텍스트의 할당에서 지원됩니다.
 
 - 튜플 및 개체 [분해](deconstruct.md)
 - [is](language-reference/keywords/is.md) 및 [switch](language-reference/keywords/switch.md)를 사용한 패턴 일치

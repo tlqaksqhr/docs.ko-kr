@@ -1,31 +1,22 @@
 ---
-title: "&lt;httpListener&gt; 요소 (네트워크 설정)"
-ms.custom: 
+title: '&lt;httpListener&gt; 요소 (네트워크 설정)'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 62f121fd-3f2e-4033-bb39-48ae996bfbd9
-caps.latest.revision: "7"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: 8d880583016e6ccc0ae57fea10c35cb32726c93e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: a327f757f26c815d5b2cffe179af68bbe3d152eb
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="lthttplistenergt-element-network-settings"></a>&lt;httpListener&gt; 요소 (네트워크 설정)
 사용 하는 매개 변수를 사용자 지정은 <xref:System.Net.HttpListener> 클래스입니다.  
   
  \<configuration>  
-\<system.net >  
-\<설정 >  
+\<system.net>  
+\<settings>  
 \<httpListener >  
   
 ## <a name="syntax"></a>구문  
@@ -39,7 +30,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="type"></a>형식  
   
 ## <a name="attributes-and-elements"></a>특성 및 요소  
- 다음 단원에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
+ 다음 섹션에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
   
 ### <a name="attributes"></a>특성  
   
@@ -54,7 +45,7 @@ ms.lasthandoff: 12/22/2017
   
 |**요소**|**설명**|  
 |-----------------|---------------------|  
-|[설정](../../../../../docs/framework/configure-apps/file-schema/network/settings-element-network-settings.md)|<xref:System.Net> 네임스페이스에 대한 기본 네트워크 옵션을 구성합니다.|  
+|[settings](../../../../../docs/framework/configure-apps/file-schema/network/settings-element-network-settings.md)|<xref:System.Net> 네임스페이스에 대한 기본 네트워크 옵션을 구성합니다.|  
   
 ## <a name="remarks"></a>설명  
  **unescapeRequestUrl** 특성을 나타내는 경우 <xref:System.Net.HttpListener> 모든 퍼센트 인코딩 값이 변환 되 고 다른 정규화 단계가 수행 되는 변환된 URI 대신 원시 언 이스케이프 된 URI를 사용 합니다.  
@@ -124,7 +115,7 @@ ms.lasthandoff: 12/22/2017
   
  <xref:System.Net.Configuration.HttpListenerElement.UnescapeRequestUrl%2A> 속성의 현재 값을 가져오는 데 사용할 수는 **unescapeRequestUrl** 해당 구성 파일에서 특성입니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  구성 하는 방법을 보여 주는 다음 예제는 <xref:System.Net.HttpListener> 대신 변환 된 URI에서 원시 URI를 사용 하는 요청을 받을 때 클래스 `http.sys` 대 한 입력으로 <xref:System.Net.HttpListenerRequest.Url%2A> 속성입니다.  
   
 ```xml  

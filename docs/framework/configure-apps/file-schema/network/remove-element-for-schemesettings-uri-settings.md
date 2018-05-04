@@ -1,24 +1,15 @@
 ---
-title: "&lt;제거&gt; schemeSettings (Uri 설정)에 대 한 요소"
-ms.custom: 
+title: '&lt;제거&gt; schemeSettings (Uri 설정)에 대 한 요소'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 4095ba51-de20-4f87-b562-018abe422c91
-caps.latest.revision: "5"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: 7ab053937587d9cfd9353fe53fa759e58859e3da
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 8e01f82a476286e27129e4b1a47fefc1ac77c2b5
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltremovegt-element-for-schemesettings-uri-settings"></a>&lt;제거&gt; schemeSettings (Uri 설정)에 대 한 요소
 체계 이름에 대 한 스키마 설정을 제거합니다.  
@@ -26,7 +17,7 @@ ms.lasthandoff: 12/22/2017
  \<configuration>  
 \<uri >  
 \<schemeSettings >  
-\<제거 >  
+\<remove>  
   
 ## <a name="syntax"></a>구문  
   
@@ -37,7 +28,7 @@ ms.lasthandoff: 12/22/2017
 ```  
   
 ## <a name="attributes-and-elements"></a>특성 및 요소  
- 다음 단원에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
+ 다음 섹션에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
   
 ### <a name="attributes"></a>특성  
   
@@ -72,7 +63,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="configuration-files"></a>구성 파일  
  이 요소는 응용 프로그램 구성 파일 또는 컴퓨터 구성 파일(Machine.config)에서 사용할 수 있습니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 예제에서 사용 되는 구성을 <xref:System.Uri> http 체계에 대 한 한 스키마 설정을 제거 하는 클래스입니다.  
   
 ```xml  

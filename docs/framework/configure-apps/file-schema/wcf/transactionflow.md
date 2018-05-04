@@ -1,31 +1,19 @@
 ---
 title: '&lt;transactionFlow&gt;'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 8c7b4c5b-ace3-4fe3-89ff-7b13c9aacd13
-caps.latest.revision: "11"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 3720294ac937c6aa7ce99ab687efa76b2e860abb
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: c708098676e5634281e29c17639304a1a9cf5afe
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="lttransactionflowgt"></a>&lt;transactionFlow&gt;
 사용자 지정 바인딩에 대한 트랜잭션 흐름 지원을 지정합니다.  
   
- \<system.serviceModel >  
+ \<system.serviceModel>  
 \<바인딩 >  
-\<customBinding >  
+\<customBinding>  
 \<바인딩 >  
 \<transactionFlow >  
   
@@ -36,13 +24,13 @@ ms.lasthandoff: 12/22/2017
 ```  
   
 ## <a name="attributes-and-elements"></a>특성 및 요소  
- 다음 단원에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
+ 다음 섹션에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
   
 ### <a name="attributes"></a>특성  
   
 |특성|설명|  
 |---------------|-----------------|  
-|transactionProtocol|사용할 트랜잭션 프로토콜을 지정합니다. 유효한 값은 다음과 같습니다.<br /><br /> -OleTransactions<br />-WSAtomicTransactionOctober2004<br /><br /> 기본값은 OleTransactions입니다.<br /><br /> 이 특성은 <xref:System.ServiceModel.TransactionProtocol> 형식입니다.|  
+|transactionProtocol|사용할 트랜잭션 프로토콜을 지정합니다. 유효한 값은 다음과 같습니다.<br /><br /> -OleTransactions<br />-   WSAtomicTransactionOctober2004<br /><br /> 기본값은 OleTransactions입니다.<br /><br /> 이 특성은 <xref:System.ServiceModel.TransactionProtocol> 형식입니다.|  
   
 ### <a name="child-elements"></a>자식 요소  
  없음  
@@ -51,7 +39,7 @@ ms.lasthandoff: 12/22/2017
   
 |요소|설명|  
 |-------------|-----------------|  
-|[\<바인딩 >](../../../../../docs/framework/misc/binding.md)|사용자 지정 바인딩의 모든 바인딩 기능을 정의합니다.|  
+|[\<binding>](../../../../../docs/framework/misc/binding.md)|사용자 지정 바인딩의 모든 바인딩 기능을 정의합니다.|  
   
 ## <a name="remarks"></a>설명  
  이 요소를 사용하면 끝점의 바인딩 설정에 들어오는 트랜잭션 흐름을 사용하거나 사용하지 않도록 설정할 수 있을 뿐 아니라 들어오는 트랜잭션에 대해 원하는 프로토콜 형식을 지정할 수 있습니다. 이 구성 요소를 사용 하 여에 대 한 자세한 내용은 참조 하십시오. [ServiceModel 트랜잭션 구성](../../../../../docs/framework/wcf/feature-details/servicemodel-transaction-configuration.md) 및 [트랜잭션 흐름을 사용 하도록 설정](../../../../../docs/framework/wcf/feature-details/enabling-transaction-flow.md)합니다.  
@@ -68,4 +56,4 @@ ms.lasthandoff: 12/22/2017
  [바인딩](../../../../../docs/framework/wcf/bindings.md)  
  [바인딩 확장](../../../../../docs/framework/wcf/extending/extending-bindings.md)  
  [사용자 지정 바인딩](../../../../../docs/framework/wcf/extending/custom-bindings.md)  
- [\<customBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)
+ [\<customBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)

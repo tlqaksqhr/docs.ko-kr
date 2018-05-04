@@ -1,12 +1,8 @@
 ---
-title: .NET Framework의 제네릭
-ms.custom: ''
+title: .NET의 제네릭
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -39,16 +35,17 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: d06c2ae074045ae750c079383f43c3d6aa6f726c
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: ba9149da420b7b7bdad01e1376793c64adaf1c8d
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/28/2018
 ---
-# <a name="generics-in-the-net-framework"></a>.NET Framework의 제네릭
+# <a name="generics-in-net"></a>.NET의 제네릭
+
 <a name="top"></a> 제네릭을 사용하면 메서드, 클래스, 구조체 또는 인터페이스를 사용 대상인 정확한 데이터 형식에 맞게 조정할 수 있습니다. 예를 들어 모든 형식의 키와 값을 허용하는 <xref:System.Collections.Hashtable> 클래스를 사용하는 대신 <xref:System.Collections.Generic.Dictionary%602> 제네릭 클래스를 사용하고 키에 허용되는 형식과 값에 허용되는 형식을 지정할 수 있습니다. 제네릭의 이점으로는 향상된 코드 다시 사용 가능성과 형식 안전성 등이 있습니다.  
   
- 이 항목에서는.NET Framework 제네릭에 대해 간략하게 설명하고 제네릭 형식이나 메서드의 요약을 제공합니다. 여기에는 다음 단원이 포함되어 있습니다.  
+ 이 항목에서는 .NET 제네릭에 대해 간략하게 설명하고 제네릭 형식이나 메서드의 요약을 제공합니다. 여기에는 다음 단원이 포함되어 있습니다.  
   
 -   [제네릭 정의 및 사용](#defining_and_using_generics)  
   
@@ -78,7 +75,7 @@ ms.lasthandoff: 12/23/2017
   
 <a name="generics_terminology"></a>   
 ### <a name="generics-terminology"></a>제네릭 관련 용어  
- .NET Framework에서 제네릭을 설명하는 데 사용되는 용어는 다음과 같습니다.  
+ .NET에서 제네릭을 설명하는 데 사용되는 용어는 다음과 같습니다.  
   
 -   *제네릭 형식 정의* 는 포함하거나 사용할 수 있는 형식에 대한 자리 표시자를 포함하며 템플릿으로 작동하는 클래스, 구조체 또는 인터페이스 선언입니다. 예를 들어 <xref:System.Collections.Generic.Dictionary%602?displayProperty=nameWithType> 클래스는 키와 값의 두 형식을 포함할 수 있습니다. 제네릭 형식 정의는 템플릿일 뿐이므로 제네릭 형식 정의인 클래스, 구조체 또는 인터페이스의 인스턴스를 만들 수는 없습니다.  
   
@@ -90,7 +87,7 @@ ms.lasthandoff: 12/23/2017
   
 -   일반 용어인 *제네릭 형식* 에는 생성된 형식과 제네릭 형식 정의가 모두 포함됩니다.  
   
--   제네릭 형식 매개 변수의*공 분산(covariance)* 및 *반공변성(contravariance)* of generic type parameters enable you to use constructed generic types whose type arguments are more derived (covariance) or less derived (반공변성(contravariance)) than a target constructed type. 공 분산과 반공 분산을 통칭하여 *가변성(variance)*이라고 합니다. 자세한 내용은 [공변성(Covariance) 및 반공변성(Contravariance)](../../../docs/standard/generics/covariance-and-contravariance.md)을 참조하세요.  
+-   제네릭 형식 매개 변수의*공 분산(covariance)* 및 *반공변성(contravariance)* of generic type parameters enable you to use constructed generic types whose type arguments are more derived (covariance) or less derived (반공변성(contravariance)) than a target constructed type. 공 분산과 반공 분산을 통칭하여 *가변성(variance)* 이라고 합니다. 자세한 내용은 [공변성(Covariance) 및 반공변성(Contravariance)](../../../docs/standard/generics/covariance-and-contravariance.md)을 참조하세요.  
   
 -   *제약 조건*은 제네릭 형식 매개 변수에 대해 적용되는 제한 사항입니다. 예를 들어 형식 인스턴스의 순서를 지정할 수 있도록 <xref:System.Collections.Generic.IComparer%601?displayProperty=nameWithType> 제네릭 인터페이스를 구현하는 형식으로 형식 매개 변수를 제한할 수 있습니다. 또한 참조 형식 또는 값 형식이거나 특정 기본 클래스 또는 기본 생성자를 포함하는 형식으로 형식 매개 변수를 제한할 수도 있습니다. 제네릭 형식의 사용자는 제약 조건을 충족하지 않는 형식 인수를 대체할 수 없습니다.  
   
@@ -145,11 +142,11 @@ ms.lasthandoff: 12/23/2017
   
 <a name="class_library_and_language_support"></a>   
 ## <a name="class-library-and-language-support"></a>클래스 라이브러리 및 언어 지원  
- .NET Framework에서는 다음 네임스페이스에서 다양한 제네릭 컬렉션 클래스를 제공합니다.  
+ .NET에서는 다음 네임스페이스에서 다양한 제네릭 컬렉션 클래스를 제공합니다.  
   
--   <xref:System.Collections.Generic> 네임스페이스에는 <xref:System.Collections.Generic.List%601> 및 <xref:System.Collections.Generic.Dictionary%602> 제네릭 클래스와 같이 .NET Framework에서 제공하는 대부분의 제네릭 컬렉션 형식이 카탈로그로 포함되어 있습니다.  
+-   <xref:System.Collections.Generic> 네임스페이스에는 <xref:System.Collections.Generic.List%601> 및 <xref:System.Collections.Generic.Dictionary%602> 제네릭 클래스와 같이 .NET에서 제공하는 대부분의 제네릭 컬렉션 형식이 포함되어 있습니다.  
   
--   <xref:System.Collections.ObjectModel> 네임스페이스에는 클래스 사용자에게 개체 모델을 노출하는 데 유용한 <xref:System.Collections.ObjectModel.ReadOnlyCollection%601> 제네릭 클래스와 같은 추가 제네릭 컬렉션 형식이 카탈로그로 포함되어 있습니다.  
+-   <xref:System.Collections.ObjectModel> 네임스페이스에는 클래스 사용자에게 개체 모델을 노출하는 데 유용한 <xref:System.Collections.ObjectModel.ReadOnlyCollection%601> 제네릭 클래스와 같은 추가 제네릭 컬렉션 형식이 포함되어 있습니다.  
   
  정렬 및 같음 비교를 구현하는 제네릭 인터페이스는 이벤트 처리기, 변환 및 검색 조건자용 제네릭 대리자 형식과 함께 <xref:System> 네임스페이스에서 제공됩니다.  
   
@@ -172,11 +169,11 @@ ms.lasthandoff: 12/23/2017
   
 |제목|설명|  
 |-----------|-----------------|  
-|[.NET Framework의 제네릭 컬렉션](../../../docs/standard/generics/collections.md)|.NET Framework의 제네릭 컬렉션 클래스 및 기타 제네릭 형식에 대해 설명합니다.|  
+|[.NET의 제네릭 컬렉션](../../../docs/standard/generics/collections.md)|.NET의 제네릭 컬렉션 클래스 및 기타 제네릭 형식에 대해 설명합니다.|  
 |[배열과 목록을 조작하기 위한 제네릭 대리자](../../../docs/standard/generics/delegates-for-manipulating-arrays-and-lists.md)|배열 또는 컬렉션의 요소에 대해 수행할 작업, 검색 조건자 및 변환을 위한 제네릭 대리자에 대해 설명합니다.|  
 |[제네릭 인터페이스](../../../docs/standard/generics/interfaces.md)|여러 제네릭 형식 패밀리에 대해 공통 기능을 제공하는 제네릭 인터페이스에 대해 설명합니다.|  
 |[공 분산 및 반공 분산](../../../docs/standard/generics/covariance-and-contravariance.md)|제네릭 형식 매개 변수의 공 분산(covariance) 및 반공변성(contravariance)에 대해 설명합니다.|  
-|[일반적으로 사용되는 컬렉션 형식](../../../docs/standard/collections/commonly-used-collection-types.md)|제네릭 형식을 비롯하여 .NET Framework의 컬렉션 형식 특성과 사용 시나리오에 대한 요약 정보를 제공합니다.|  
+|[일반적으로 사용되는 컬렉션 형식](../../../docs/standard/collections/commonly-used-collection-types.md)|제네릭 형식을 비롯하여 .NET의 컬렉션 형식 특성과 사용 시나리오에 대한 요약 정보를 제공합니다.|  
 |[제네릭 컬렉션 사용 기준](../../../docs/standard/collections/when-to-use-generic-collections.md)|제네릭 컬렉션 형식의 사용 시기를 결정하기 위한 일반 규칙을 설명합니다.|  
 |[방법: 리플렉션 내보내기를 사용하여 제네릭 형식 정의](../../../docs/framework/reflection-and-codedom/how-to-define-a-generic-type-with-reflection-emit.md)|제네릭 형식과 메서드가 포함된 동적 어셈블리를 생성하는 방법을 설명합니다.|  
 |[Generic Types in Visual Basic](~/docs/visual-basic/programming-guide/language-features/data-types/generic-types.md)|제네릭 형식 사용 및 정의에 대한 방법 항목을 포함하여 Visual Basic 사용자를 위한 제네릭 기능에 대해 설명합니다.|  

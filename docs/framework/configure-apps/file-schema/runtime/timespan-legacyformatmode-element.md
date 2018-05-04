@@ -1,13 +1,6 @@
 ---
-title: "&lt;TimeSpan_LegacyFormatMode&gt; 요소"
-ms.custom: 
+title: '&lt;TimeSpan_LegacyFormatMode&gt; 요소'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -15,22 +8,19 @@ helpviewer_keywords:
 - <TimeSpan_LegacyFormatMode> element
 - TimeSpan_LegacyFormatMode element
 ms.assetid: 865e7207-d050-4442-b574-57ea29d5e2d6
-caps.latest.revision: "8"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: be4b26cdc79cef0854221172b8dea0bcc0f50981
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 0faf2876680ef5ec3fc7373cae9f81eb091f47a1
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="lttimespanlegacyformatmodegt-element"></a>&lt;TimeSpan_LegacyFormatMode&gt; 요소
 런타임에서 사용 하는 작업 서식 지정에 레거시 동작을 유지할지 여부를 결정 <xref:System.TimeSpan?displayProperty=nameWithType> 값입니다.  
   
  \<configuration>  
-\<런타임 >  
+\<runtime>  
 < TimeSpan_LegacyFormatMode >  
   
 ## <a name="syntax"></a>구문  
@@ -41,7 +31,7 @@ ms.lasthandoff: 12/22/2017
 ```  
   
 ## <a name="attributes-and-elements"></a>특성 및 요소  
- 다음 단원에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
+ 다음 섹션에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
   
 ### <a name="attributes"></a>특성  
   
@@ -73,7 +63,7 @@ ms.lasthandoff: 12/22/2017
   
  사용할 수 있는 레거시 코드는 합성 형식 지정 메서드와 잘못 된 형식 문자열을 전달 하 고 해당 코드를 다시 컴파일할 수 없는 경우에는 `<TimeSpan_LegacyFormatMode>` 레거시를 복원 하는 요소 <xref:System.TimeSpan> 동작 합니다. 설정 하는 경우는 `enabled` 이 요소의 특성 `true`, 복합 형식 지정 메서드를 호출 <xref:System.TimeSpan.ToString?displayProperty=nameWithType> 대신 <xref:System.TimeSpan.ToString%28System.String%2CSystem.IFormatProvider%29?displayProperty=nameWithType>, 및 <xref:System.FormatException> throw 되지 않습니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 예제는 <xref:System.TimeSpan> 개체와 사용 하 여 서식을 지정 하려는 시도 <xref:System.String.Format%28System.String%2CSystem.Object%29?displayProperty=nameWithType> 메서드는 지원 되지 않는 표준 형식 문자열을 사용 하 여 합니다.  
   
  [!code-csharp[TimeSpan.BreakingChanges#1](../../../../../samples/snippets/csharp/VS_Snippets_CLR/timespan.breakingchanges/cs/legacyformatmode1.cs#1)]

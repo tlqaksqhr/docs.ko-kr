@@ -1,27 +1,15 @@
 ---
-title: "XML에서 데이터 집합 로드"
-ms.custom: 
+title: XML에서 데이터 집합 로드
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 49c083b7-a5ed-41cf-aabc-5aaba96f00e6
-caps.latest.revision: "4"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 1d17bb97811bb3a2ae979e5a05b8d39baf2b9c63
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 0b74480209c8d06f38ea39e7a89741fc5a89512b
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="loading-a-dataset-from-xml"></a>XML에서 데이터 집합 로드
 ADO.NET <xref:System.Data.DataSet>의 내용은 XML 스트림이나 문서로부터 만들 수 있습니다. 또한, .NET Framework를 사용하면 XML로부터 로드할 정보와 <xref:System.Data.DataSet>의 스키마나 관계형 구조를 만드는 방법을 매우 융통성 있게 선택할 수 있습니다.  
@@ -111,7 +99,7 @@ foreach (DataTable dataTable in dataSet.Tables)
 ```  
   
 > [!NOTE]
->  경우에 대 한 XSD 스키마 프로그램 <xref:System.Data.DataSet> 포함 한 **targetNamespace**, 데이터를 읽을 수 있습니다, 그리고 및를 호출할 때 예외가 발생할 수 있습니다 **ReadXml** 로드 하는 <xref:System.Data.DataSet> 포함 된 xml을 정규화 네임 스페이스가 없는 요소입니다. 이 경우 비 정규화 된 요소를 읽을 수 설정 **elementFormDefault** XSD 스키마에 같은를 "qualified"입니다. 예:  
+>  경우에 대 한 XSD 스키마 프로그램 <xref:System.Data.DataSet> 포함 한 **targetNamespace**, 데이터를 읽을 수 있습니다, 그리고 및를 호출할 때 예외가 발생할 수 있습니다 **ReadXml** 로드 하는 <xref:System.Data.DataSet> 포함 된 xml을 정규화 네임 스페이스가 없는 요소입니다. 이 경우 비 정규화 된 요소를 읽을 수 설정 **elementFormDefault** XSD 스키마에 같은를 "qualified"입니다. 예를 들어:  
   
 ```xml  
 <xsd:schema id="customDataSet"   

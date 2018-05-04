@@ -1,7 +1,7 @@
 ---
-title: "C# 7의 새로운 기능 - C# 가이드"
-description: "C# 언어의 새 버전 7에서 제공되는 새로운 기능을 간단히 살펴봅니다."
-keywords: "C#, .NET, .NET Core, 최신 기능, 새로운 기능"
+title: C# 7.0의 새로운 기능 - C# 가이드
+description: C# 언어의 새 버전 7에서 제공되는 새로운 기능을 간단히 살펴봅니다.
+keywords: C#, .NET, .NET Core, 최신 기능, 새로운 기능
 author: BillWagner
 ms.author: wiwagn
 ms.date: 12/21/2016
@@ -10,15 +10,15 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: fd41596d-d0c2-4816-b94d-c4d00a5d0243
-ms.openlocfilehash: 374ac9917464a7e83566440abab10eda8a9c8683
-ms.sourcegitcommit: 32172ca05d5dcce7ef3d327b9c8639c736e0fe2b
+ms.openlocfilehash: 1951c60ee11d0d5c4856f5f92eee8ba690b11f8d
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/20/2018
+ms.lasthandoff: 04/26/2018
 ---
-# <a name="whats-new-in-c-7"></a>C# 7의 새로운 기능
+# <a name="whats-new-in-c-70"></a>C# 7.0의 새로운 기능
 
-C# 7에서는 C# 언어에 많은 새로운 기능을 추가합니다.
+C# 7.0에서는 C# 언어에 많은 새로운 기능을 추가합니다.
 * [`out` 변수](#out-variables)
     - `out` 값을 사용되는 메서드에 대한 인수로 인라인으로 선언할 수 있습니다.
 * [튜플](#tuples)
@@ -88,8 +88,8 @@ C#에서는 디자인 의도를 설명하는 데 사용되는 클래스 및 구�
 필드는 유효성이 검사되지 않고 자체 메서드를 정의할 수 없습니다.
 
 > [!NOTE]
-> 튜플은 C# 7 이전부터 사용할 수 있었지만 비효율적이었고 언어 지원이 없었습니다.
-> 즉, 튜플 요소는 `Item1`, `Item2` 등으로만 참조될 수 있었습니다. C# 7은 새롭고 보다 효율적인 튜플 유형을 사용하여 튜플의 필드에 대해 의미론적 이름을 사용할 수 있는 튜플에 대한 언어 지원을 소개합니다.
+> 튜플은 C# 7.0 이전부터 사용할 수 있었지만 비효율적이었고 언어 지원이 없었습니다.
+> 즉, 튜플 요소는 `Item1`, `Item2` 등으로만 참조될 수 있었습니다. C# 7.0은 새롭고 보다 효율적인 튜플 유형을 사용하여 튜플의 필드에 대해 의미론적 이름을 사용할 수 있는 튜플에 대한 언어 지원을 소개합니다.
 
 각 멤버를 값에 할당하여 튜플을 만들 수 있습니다.
 
@@ -131,9 +131,6 @@ C#에서는 디자인 의도를 설명하는 데 사용되는 클래스 및 구�
 메서드에서 반환된 튜플의 멤버를 패키지 해제하려는 경우가 있을 수 있습니다.  이 작업을 수행하려면 튜플에서 각 값에 대한 개별 변수를 선언합니다. 이 작업을 튜플 *분해*라고 합니다.
 
 [!code-csharp[CallingWithDeconstructor](../../../samples/snippets/csharp/new-in-7/program.cs#10_CallingWithDeconstructor "Deconstructing a tuple")]
-
-<!-- Add wildcards here, if they are in C# 7
--->
 
 .NET에 있는 형식에 대한 비슷한 분해를 제공할 수도 있습니다. 이 작업을 수행하려면 `Deconstruct` 메서드를 클래스의 멤버로 작성합니다. 해당 `Deconstruct` 메서드는 추출하려는 각 속성에 대한 `out` 인수 집합을 제공합니다. `X` 및 `Y` 좌표를 추출하는 분해자 메서드를 제공하는 이 `Point` 클래스를 살펴봅니다.
 
@@ -327,7 +324,7 @@ public API 메서드 내부에서 `alphabetSubsetImplementation`을 로컬 함�
 
 ## <a name="more-expression-bodied-members"></a>추가 식 본문 멤버
 
-C# 6에서는 멤버 함수의 [식 본문 멤버](csharp-6.md#expression-bodied-function-members) 및 읽기 전용 속성을 추가했습니다. C# 7에서는 식으로 구현될 수 있는 허용 멤버를 확장합니다. C# 7에서는 *속성* 및 *인덱서*에 대한 *생성자*, *종료자* 및 `get`/`set` 접근자를 구현할 수 있습니다. 다음 코드는 각각에 대한 예제를 보여 줍니다.
+C# 6에서는 멤버 함수의 [식 본문 멤버](csharp-6.md#expression-bodied-function-members) 및 읽기 전용 속성을 추가했습니다. C# 7.0에서는 식으로 구현될 수 있는 허용 멤버를 확장합니다. C# 7.0에서는 *속성* 및 *인덱서*에 대한 *생성자*, *종료자* 및 `get`/`set` 접근자를 구현할 수 있습니다. 다음 코드는 각각에 대한 예제를 보여 줍니다.
 
 [!code-csharp[ExpressionBodiedMembers](../../../samples/snippets/csharp/new-in-7/expressionmembers.cs#36_ExpressionBodiedEverything "new expression-bodied members")]
 
@@ -338,7 +335,7 @@ C# 6에서는 멤버 함수의 [식 본문 멤버](csharp-6.md#expression-bodied
 
 ## <a name="throw-expressions"></a>Throw 식
 
-C#에서 `throw`는 항상 문이었습니다. `throw`는 식이 아닌 문이므로 이 문을 사용할 수 없는 C# 구문이 있었습니다. 이러한 구문에는 조건식, null 병합 식 및 몇몇 람다 식이 포함되었습니다. 식 본문 멤버가 추가됨에 따라 `throw` 식이 유용할 수 있는 추가 위치도 추가됩니다. 이러한 구문을 작성할 수 있도록 C# 7에서는 *throw 식*을 추가합니다.
+C#에서 `throw`는 항상 문이었습니다. `throw`는 식이 아닌 문이므로 이 문을 사용할 수 없는 C# 구문이 있었습니다. 이러한 구문에는 조건식, null 병합 식 및 몇몇 람다 식이 포함되었습니다. 식 본문 멤버가 추가됨에 따라 `throw` 식이 유용할 수 있는 추가 위치도 추가됩니다. 이러한 구문을 작성할 수 있도록 C# 7.0에서는 *throw 식*을 추가합니다.
 
 구문은 항상 `throw` 문에 사용하던 것과 같습니다. 유일한 차이점은 이제 이러한 구문을 조건식과 같은 새 위치에 배치할 수 있다는 것입니다.
 
@@ -376,7 +373,7 @@ C#에서 `throw`는 항상 문이었습니다. `throw`는 식이 아닌 문이�
 
 ## <a name="numeric-literal-syntax-improvements"></a>숫자 리터럴 구문 개선 사항
 
-숫자 상수를 잘못 읽으면 코드를 처음 읽을 때 이해하기가 더 어려울 수 있습니다. 이 문제는 일반적으로 해당 숫자가 숫자 값이 아닌 비트 마스크나 다른 기호로 사용될 경우 발생합니다. C# 7에는 의도한 용도에 맞게 가장 읽기 쉬운 방식으로 숫자를 더 쉽게 작성할 수 있는 두 가지 새로운 기능인 *이진 리터럴* 및 *숫자 구분 기호*가 포함됩니다.
+숫자 상수를 잘못 읽으면 코드를 처음 읽을 때 이해하기가 더 어려울 수 있습니다. 이 문제는 일반적으로 해당 숫자가 숫자 값이 아닌 비트 마스크나 다른 기호로 사용될 경우 발생합니다. C# 7.0에는 의도한 용도에 맞게 가장 읽기 쉬운 방식으로 숫자를 더 쉽게 작성할 수 있는 두 가지 새로운 기능인 *이진 리터럴* 및 *숫자 구분 기호*가 포함됩니다.
 
 비트 마스크를 만들 경우 또는 숫자의 이진 표현이 가장 읽기 쉬운 코드를 만들 때마다 해당 숫자를 이진으로 작성하세요.
 

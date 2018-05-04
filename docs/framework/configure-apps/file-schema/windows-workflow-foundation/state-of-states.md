@@ -1,33 +1,23 @@
 ---
-title: "&lt;states&gt;의 &lt;state&gt;"
-ms.custom: 
+title: '&lt;states&gt;의 &lt;state&gt;'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: ab483c7f-a091-4933-ba6b-708d96846d38
-caps.latest.revision: "5"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 13ae0e8cc59adec0b4e4bd9f2cf4c7ea31811602
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 8893f6acfc7ec4d6989be2c647b0584093a534a1
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltstategt-of-ltstatesgt"></a>&lt;states&gt;의 &lt;state&gt;
 추적 레코드를 내보내야 할 구독된 활동의 상태를 포함하는 구성 요소입니다.  
   
  추적 프로필 쿼리에 대 한 자세한 내용은 참조 하십시오. [추적 프로필](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)합니다.  
   
-\<system.serviceModel >  
-\<추적 >  
-\<trackingProfile >  
-\<워크플로 >  
+\<system.serviceModel>  
+\<tracking>  
+\<trackingProfile>  
+\<workflow>  
 \<activityStateQueries >  
 \<activityStateQuery >  
 \<상태 >  
@@ -51,7 +41,7 @@ ms.lasthandoff: 12/22/2017
 ```  
   
 ## <a name="attributes-and-elements"></a>특성 및 요소  
- 다음 단원에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
+ 다음 섹션에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
   
 ### <a name="attributes"></a>특성  
   

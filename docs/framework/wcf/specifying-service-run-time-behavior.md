@@ -19,11 +19,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: e45c35d0b19833b6fd43c7fd5794ecf8bd3a9769
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
-ms.translationtype: MT
+ms.openlocfilehash: 9733bb29701e4d1b46cc08c14b91e0357c935b42
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="specifying-service-run-time-behavior"></a>서비스 런타임 동작 지정
 서비스 계약을 디자인([Designing Service Contracts](../../../docs/framework/wcf/designing-service-contracts.md)) 서비스 계약을 구현([Implementing Service Contracts](../../../docs/framework/wcf/implementing-service-contracts.md))했으면 서비스 런타임의 작업 동작을 구성할 수 있습니다. 이 항목에서는 시스템 제공 서비스와 작업 동작에 대해 설명하고, 새 동작을 만들기 위해 추가 정보를 찾을 수 있는 위치에 대해 설명합니다. 일부 동작은 특성으로 적용되지만 대부분은 응용 프로그램 구성 파일을 사용하여 적용되거나 프로그래밍 방식으로 적용됩니다. 서비스 응용 프로그램을 구성 하는 방법에 대 한 자세한 내용은 참조 [서비스 구성](../../../docs/framework/wcf/configuring-services.md)합니다.  
@@ -31,7 +31,7 @@ ms.lasthandoff: 04/30/2018
 ## <a name="overview"></a>개요  
  계약은 해당 형식의 서비스 입력, 출력, 데이터 형식 및 기능을 정의합니다. 서비스 계약을 구현하면 주소에서 바인딩으로 구성된 경우 구현한 계약을 이행하는 클래스가 만들어집니다. 클라이언트에서는 계약, 바인딩 및 주소 정보를 모두 알고 있습니다. 이러한 정보가 없으면 클라이언트는 서비스를 사용할 수 없습니다.  
   
- 그러나 스레딩 문제 또는 인스턴스 관리와 같은 특정 작업은 클라이언트에 불분명합니다. 서비스 계약을 구현한 경우에는 *동작*을 사용하여 여러 개의 작업 특징을 구성할 수 있습니다. 동작은 런타임 속성을 설정하거나 사용자 지정 형식을 런타임에 삽입하여 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 런타임을 수정하는 개체입니다. 사용자 정의 동작을 만들어 런타임에 수정 하는 방법에 대 한 자세한 내용은 참조 [확장 ServiceHost 및 서비스 모델 계층](../../../docs/framework/wcf/extending/extending-servicehost-and-the-service-model-layer.md)합니다.  
+ 그러나 스레딩 문제 또는 인스턴스 관리와 같은 특정 작업은 클라이언트에 불분명합니다. 서비스 계약을 구현한 경우에는 *동작*을 사용하여 여러 개의 작업 특징을 구성할 수 있습니다. 동작은은 런타임 속성을 설정 하거나 또는 사용자 지정 형식을 런타임에 삽입 하 여 Windows Communication Foundation (WCF) 런타임을 수정 하는 개체는. 사용자 정의 동작을 만들어 런타임에 수정 하는 방법에 대 한 자세한 내용은 참조 [확장 ServiceHost 및 서비스 모델 계층](../../../docs/framework/wcf/extending/extending-servicehost-and-the-service-model-layer.md)합니다.  
   
  <xref:System.ServiceModel.ServiceBehaviorAttribute?displayProperty=nameWithType> 및 <xref:System.ServiceModel.OperationBehaviorAttribute?displayProperty=nameWithType> 특성은 가장 널리 쓰이는 유용한 동작이며, 가장 일반적으로 요청되는 작업 기능을 노출합니다. 이들은 특성이기 때문에 서비스 또는 작업 구현에 적용합니다. <xref:System.ServiceModel.Description.ServiceMetadataBehavior?displayProperty=nameWithType> 또는 <xref:System.ServiceModel.Description.ServiceDebugBehavior?displayProperty=nameWithType> 등의 다른 동작은 프로그래밍 방식으로 사용될 수 있긴 하지만 일반적으로 응용 프로그램 구성 파일을 사용하여 적용됩니다.  
   
@@ -74,7 +74,7 @@ ms.lasthandoff: 04/30/2018
   
  <xref:System.ServiceModel.ServiceHost.%23ctor%28System.Object%2CSystem.Uri%5B%5D%29?displayProperty=nameWithType> 생성자를 사용하여 이러한 서비스를 만듭니다. singleton 서비스에서 사용할 특정 개체 인스턴스를 제공하려면 사용자 지정 <xref:System.ServiceModel.Dispatcher.IInstanceContextInitializer?displayProperty=nameWithType>를 구현하는 대신 제공합니다. 예를 들어 매개 변수가 없는 기본 public 생성자를 구현하지 않는 경우와 같이 서비스 구현 형식을 생성하기 어려운 경우 이 오버로드를 사용할 수 있습니다.  
   
- 이 생성자에 개체가 제공되면 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 인스턴스 만들기 동작과 관련된 일부 기능이 다르게 작동합니다. 예를 들어 잘 알려진 개체 인스턴스를 제공하는 경우 <xref:System.ServiceModel.InstanceContext.ReleaseServiceInstance%2A?displayProperty=nameWithType> 호출은 아무런 효과가 없습니다. 마찬가지로 다른 인스턴스 해제 메커니즘도 무시됩니다. <xref:System.ServiceModel.ServiceHost> 클래스는 항상 모든 작업에 대해 <xref:System.ServiceModel.OperationBehaviorAttribute.ReleaseInstanceMode%2A?displayProperty=nameWithType> 속성이 <xref:System.ServiceModel.ReleaseInstanceMode.None?displayProperty=nameWithType>으로 설정된 것처럼 동작합니다.  
+ Note는 개체는이 생성자에 제공 되는, 인스턴스 만들기 동작 Windows Communication Foundation (WCF)에 관련 된 일부 기능이 다르게 작동 합니다. 예를 들어 잘 알려진 개체 인스턴스를 제공하는 경우 <xref:System.ServiceModel.InstanceContext.ReleaseServiceInstance%2A?displayProperty=nameWithType> 호출은 아무런 효과가 없습니다. 마찬가지로 다른 인스턴스 해제 메커니즘도 무시됩니다. <xref:System.ServiceModel.ServiceHost> 클래스는 항상 모든 작업에 대해 <xref:System.ServiceModel.OperationBehaviorAttribute.ReleaseInstanceMode%2A?displayProperty=nameWithType> 속성이 <xref:System.ServiceModel.ReleaseInstanceMode.None?displayProperty=nameWithType>으로 설정된 것처럼 동작합니다.  
   
 ## <a name="other-service-endpoint-contract-and-operation-behaviors"></a>기타 서비스, 끝점, 계약 및 작업 동작  
  <xref:System.ServiceModel.ServiceBehaviorAttribute> 특성과 같은 서비스 동작은 전체 서비스에서 작동합니다. 예를 들어 <xref:System.ServiceModel.ServiceBehaviorAttribute.ConcurrencyMode%2A?displayProperty=nameWithType> 속성을 <xref:System.ServiceModel.ConcurrencyMode.Multiple?displayProperty=nameWithType>로 설정하는 경우 해당 서비스의 각 작업 내에서 스레드 동기화 문제를 직접 처리해야 합니다. 끝점 동작은 끝점에서 작동합니다. 대부분의 시스템 제공 끝점 동작은 클라이언트 기능에 대한 것입니다. 계약 동작은 계약 수준에서 작동하고 작업 동작은 작업 배달을 수정합니다.  

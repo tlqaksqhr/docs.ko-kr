@@ -1,24 +1,12 @@
 ---
-title: "아키텍처 및 디자인"
-ms.custom: 
+title: 아키텍처 및 디자인
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: bd738d39-00e2-4bab-b387-90aac1a014bd
-caps.latest.revision: "3"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: ce16e89e697a7865a65d86b408e49b5ad671bae1
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: c2e8ff5f21a2941d75b21915552e6935a1423978
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="architecture-and-design"></a>아키텍처 및 디자인
 SQL 생성 모듈은 [샘플 공급자](http://go.microsoft.com/fwlink/?LinkId=180616) 명령 트리를 나타내는 식 트리 방문자로 구현 됩니다. 생성은 식 트리에 대한 단일 패스로 수행됩니다.  
@@ -63,7 +51,7 @@ internal sealed class SqlBuilder : ISqlFragment {
 ```  
   
 #### <a name="sqlselectstatement"></a>SqlSelectStatement  
- Sqlselectstatement는 "SELECT... 모양의 정식 SQL SELECT 문 FROM  .. WHERE... 기준으로 그룹화 하는 중... ORDER BY "입니다.  
+ Sqlselectstatement는 "SELECT... 모양의 정식 SQL SELECT 문 보낸 사람.. WHERE... 기준으로 그룹화 하는 중... ORDER BY "입니다.  
   
  각 SQL 절은 StringBuilder에 의해 표현됩니다. 또한 Distinct가 지정되었는지 여부와 문이 맨 위에 있는지 여부를 추적합니다. 문이 맨 위에 없는 경우 문에 TOP 절이 없으면 ORDER BY 절이 생략됩니다.  
   

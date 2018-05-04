@@ -1,24 +1,12 @@
 ---
 title: HAVING (Entity SQL)
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: b5d52d97-8372-4335-beac-2d0b79dc3707
-caps.latest.revision: "3"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: bfa8b49b486b2bc20009874562c42ec92aa538d1
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 75f30c19fb54d66be0e460ab64b61d283d650005
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="having-entity-sql"></a>HAVING (Entity SQL)
 그룹이나 집계에 대한 검색 조건을 지정합니다.  
@@ -48,7 +36,7 @@ HAVING SUM(o.Quantity) > 1
   
  위 예에서는 제품 두 개 이상이 포함된 그룹으로만 제한되었습니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 Entity SQL 쿼리에서는 HAVING 및 GROUP BY 연산자를 사용하여 그룹이나 집계에 대한 검색 조건을 지정합니다. 쿼리는 AdventureWorks Sales 모델을 기반으로 합니다. 이 쿼리를 컴파일하고 실행하려면 다음 단계를 수행하세요.  
   
 1.  절차에 따라 [하는 방법: PrimitiveType 결과 반환 하는 쿼리 실행](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-primitivetype-results.md)합니다.  

@@ -1,27 +1,17 @@
 ---
-title: "&lt;UseSmallInternalThreadStacks&gt; 요소"
-ms.custom: 
+title: '&lt;UseSmallInternalThreadStacks&gt; 요소'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - UseSmallInternalThreadStacks element
 - <UseSmallInternalThreadStacks> element
 ms.assetid: 1e3f6ec0-1cac-4e1c-9c81-17d948ae5874
-caps.latest.revision: "8"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: c96537cad59034578d1284f7dc432e5775f3730b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: a11b9a008878e716e9b3d8cd54abe5eb4169672a
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltusesmallinternalthreadstacksgt-element"></a>&lt;UseSmallInternalThreadStacks&gt; 요소
 요청을 공용 언어 런타임 (CLR) 메모리를 줄이지 이러한 스레드에 대 한 기본 스택 크기를 사용 하는 대신 내부적으로 사용 하는 특정 스레드를 만들 때에 명시적 스택 크기를 지정 하 여 사용 합니다.  
@@ -37,7 +27,7 @@ ms.lasthandoff: 12/22/2017
 ```  
   
 ## <a name="attributes-and-elements"></a>특성 및 요소  
- 다음 단원에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
+ 다음 섹션에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
   
 ### <a name="attributes"></a>특성  
   
@@ -50,7 +40,7 @@ ms.lasthandoff: 12/22/2017
 |값|설명|  
 |-----------|-----------------|  
 |true|명시적 스택 크기를 요청 합니다.|  
-|false|기본 스택 크기를 사용 합니다. 에 대 한 기본값은 [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)]합니다.|  
+|False|기본 스택 크기를 사용 합니다. 에 대 한 기본값은 [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)]합니다.|  
   
 ### <a name="child-elements"></a>자식 요소  
  없음  
@@ -70,7 +60,7 @@ ms.lasthandoff: 12/22/2017
   
  이 구성 요소 거래 작은 가상 메모리 사용에 대 한 안정성 CLR 요청을 인식 하는 경우 스택 크기가 작은 스택 만들 수 있으므로 지정 오버플로가 발생할 가능성이 더 합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 예에서는 CLR 사용 하 여 명시적 스택 크기가 특정 내부적으로 사용 하는 스레드를 요청 하는 방법을 보여 줍니다.  
   
 ```xml  

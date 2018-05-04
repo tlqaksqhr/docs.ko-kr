@@ -1,31 +1,19 @@
 ---
-title: "&lt;범위&gt;"
-ms.custom: 
+title: '&lt;범위&gt;'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 9a0dd3ce-e383-4ac3-b7be-7d604388304a
-caps.latest.revision: "2"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: f0a2309bb19b30f6927d5e9cd3047950936dff08
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 7e2dda0d0def4d1f90bf1b4dbf54f18983355222
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltscopesgt"></a>&lt;범위&gt;
 쿼리 중에 서비스 끝점을 필터링하기 위해 사용할 수 있는 사용자 지정 범위 URI를 지정하는 구성 요소의 컬렉션을 포함합니다.  
   
-\<시스템입니다. ServiceModel >  
+\<system.ServiceModel>  
 \<동작 >  
-\<endpointBehaviors >  
+\<endpointBehaviors>  
 \<동작 >  
 \<endpointDiscovery >  
 \<범위 >  
@@ -47,7 +35,7 @@ ms.lasthandoff: 12/22/2017
 ```  
   
 ## <a name="attributes-and-elements"></a>특성 및 요소  
- 다음 단원에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
+ 다음 섹션에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
   
 ### <a name="attributes"></a>특성  
  없음  

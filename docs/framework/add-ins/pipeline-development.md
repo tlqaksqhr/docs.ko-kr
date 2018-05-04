@@ -1,13 +1,6 @@
 ---
-title: "파이프라인 개발"
-ms.custom: 
+title: 파이프라인 개발
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - add-in pipeline [.NET Framework], segments
 - activation path for add-ins [.NET Framework]
@@ -16,23 +9,20 @@ helpviewer_keywords:
 - add-in pipeline [.NET Framework], about
 - add-ins [.NET Framework], pipeline development
 ms.assetid: 932788f2-b87d-44cf-82f9-04492a8b2722
-caps.latest.revision: "31"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 33646bbd7b0043cb5fc036b9b11aa4cf37cd537f
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 2d889b7de4bc766deda9b91877ceefb4aebfc551
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="pipeline-development"></a>파이프라인 개발
 추가 기능 파이프라인에는 서로 통신 하는 호스트 응용 프로그램 및 해당 추가 기능을 사용 해야 하는 파이프라인 세그먼트의 경로입니다.  
   
  다음 그림에서는 통신 파이프라인 및 해당 세그먼트를 보여 줍니다.  
   
- ![추가 &#45; 파이프라인 모델입니다. ] (../../../docs/framework/add-ins/media/addin1.png "AddIn1")  
+ ![추가&#45;파이프라인 모델에 있습니다. ] (../../../docs/framework/add-ins/media/addin1.png "AddIn1")  
 추가 기능 파이프라인  
   
  호스트 응용 프로그램 파이프라인의 한쪽 끝에 있고 다른 쪽 end에는 추가 기능에 있습니다. 한쪽 끝에서 시작 하 고 가운데 방향으로 이동, 호스트 응용 프로그램과 추가 기능을 모두 공유 하는 개체 모델의 뷰를 정의 하는 추상 기본 클래스가 있어야 합니다. 이러한 형식 (클래스)은 보기에서 추가 기능 파이프라인 세그먼트 및 추가 기능 파이프라인 세그먼트의 [호스트] 보기를 구성 합니다. 뷰 추가 기능 파이프라인 세그먼트 종종 둘 이상의 추상 클래스를 포함 하지만 클래스에서 상속 되는 추가 기능에 추가 기능 기본 라고 합니다.  
@@ -45,7 +35,7 @@ ms.lasthandoff: 01/19/2018
   
  다음 그림은 파이프라인 세그먼트를 구성 하는 형식을 나타냅니다. 그림에 표시 된 형식의 이름이 임의적 이지만 정보 저장소를 생성 하는 방법으로 검색할 수 있도록 호스트와 호스트를 제외 하 고 모든 형식 보기 특성이 추가 기능에 필요 합니다.  
   
- ![추가 &#45; 형식에 대 한 필수 특성이 있는 모델. ] (../../../docs/framework/add-ins/media/addin-model.png "AddIn_Model")  
+ ![추가&#45;형식에 대 한 필수 특성이 있는 모델에 있습니다. ] (../../../docs/framework/add-ins/media/addin-model.png "AddIn_Model")  
 추가 기능 파이프라인 형식  
   
  다음 표에서 추가 기능을 활성화 하는 데 파이프라인 세그먼트에 설명 합니다. 이러한 세그먼트에 대 한 자세한 내용은 참조 [계약, 뷰 및 어댑터](http://msdn.microsoft.com/library/a6460173-9507-4b87-8c07-d4ee245d715c)합니다.  
@@ -63,7 +53,7 @@ ms.lasthandoff: 01/19/2018
 ## <a name="pipeline-activation-path"></a>파이프라인 활성화 경로  
  다음 그림에서는 추가 기능을 활성화 될 때 형식의 활성화를 보여 줍니다. 또한 개체를 전달 하는 계산 또는 개체의 컬렉션 결과 등 호스트를 보여 줍니다. 가장 일반적인 시나리오입니다.  
   
- ![추가 &#45; 모델 활성화 경로 사용 합니다. ] (../../../docs/framework/add-ins/media/addin6.png "AddIn6")  
+ ![추가&#45;활성화 경로 사용 하 여 모델에 있습니다. ] (../../../docs/framework/add-ins/media/addin6.png "AddIn6")  
 호스트에 추가 기능에서 활성화 경로  
   
  파이프라인의 활성화 경로 다음과 같이 발생합니다.  

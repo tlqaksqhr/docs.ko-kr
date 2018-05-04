@@ -1,26 +1,14 @@
 ---
 title: '&lt;add&gt;'
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 4712a888-f154-4395-8887-ef14a88a6497
-caps.latest.revision: 7
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload:
-- dotnet
-ms.openlocfilehash: d863a0fc2b575aceef12370a57f7f7807261cb5a
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 6ee6403fcfe741d3e38bf44eddb1cf52cf856ec8
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltaddgt"></a>&lt;add&gt;
 토큰 처리기 컬렉션에 지정 된 보안 토큰 처리기를 추가합니다.  
@@ -88,7 +76,7 @@ public class CustomTokenHandler : Microsoft.IdentityModel.Tokens.SecurityTokenHa
   
  처리기에 지정 된 설정은 아래에 토큰 처리기 컬렉션에 지정 된 해당 설정은 재정의 [ \<securityTokenHandlerConfiguration >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/securitytokenhandlerconfiguration.md) 에서 서비스 수준에서 지정 된 및 요소 [ \<identityConfiguration >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/identityconfiguration.md) 요소입니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 XML에서는 `<add>` 및 `<remove>` 요소를 사용자 지정 세션 토큰 처리기의 기본 세션 토큰 처리기를 바꿉니다. XML에서 가져온 것은 `ClaimsAwareWebFarm` 샘플.  
   
 ```xml  

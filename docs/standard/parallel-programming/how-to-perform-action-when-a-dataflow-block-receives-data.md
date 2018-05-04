@@ -1,5 +1,5 @@
 ---
-title: "방법: 데이터 흐름 블록에서 데이터를 받을 경우 작업 수행"
+title: '방법: 데이터 흐름 블록에서 데이터를 받을 경우 작업 수행'
 ms.date: 03/30/2017
 ms.prod: .net
 ms.technology: dotnet-standard
@@ -17,14 +17,14 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 4aee0462e641e755830b63d3d708bf51b22cd797
-ms.sourcegitcommit: 6a9030eb5bd0f00e1d144f81958adb195cfb1f6f
+ms.openlocfilehash: 99f2f7184f869902f89eb0ac0fc8427533978cc3
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-perform-action-when-a-dataflow-block-receives-data"></a>방법: 데이터 흐름 블록에서 데이터를 받을 경우 작업 수행
-*실행 데이터 흐름 블록* 형식은 데이터를 받을 때 사용자가 제공한 대리자를 호출합니다. <xref:System.Threading.Tasks.Dataflow.ActionBlock%601?displayProperty=nameWithType>, <xref:System.Threading.Tasks.Dataflow.TransformBlock%602?displayProperty=nameWithType> 및 <xref:System.Threading.Tasks.Dataflow.TransformManyBlock%602?displayProperty=nameWithType> 클래스는 실행 데이터 흐름 블록 형식입니다. 실행 데이터 흐름 블록에 작업 함수를 제공할 때 `delegate`(`Sub`에서는 [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]) 키워드, <xref:System.Action%601>, <xref:System.Func%602> 또는 람다 식을 사용할 수 있습니다. 이 문서에서는 <xref:System.Func%602> 및 람다 식을 사용하여 실행 블록에서 작업을 수행하는 방법을 설명합니다.  
+*실행 데이터 흐름 블록* 형식은 데이터를 받을 때 사용자가 제공한 대리자를 호출합니다. <xref:System.Threading.Tasks.Dataflow.ActionBlock%601?displayProperty=nameWithType>, <xref:System.Threading.Tasks.Dataflow.TransformBlock%602?displayProperty=nameWithType> 및 <xref:System.Threading.Tasks.Dataflow.TransformManyBlock%602?displayProperty=nameWithType> 클래스는 실행 데이터 흐름 블록 형식입니다. 실행 데이터 흐름 블록에 작업 함수를 제공할 때 `delegate`(Visual Basic에서는 `Sub`) 키워드, <xref:System.Action%601>, <xref:System.Func%602> 또는 람다 식을 사용할 수 있습니다. 이 문서에서는 <xref:System.Func%602> 및 람다 식을 사용하여 실행 블록에서 작업을 수행하는 방법을 설명합니다.  
 
 [!INCLUDE [tpl-install-instructions](../../../includes/tpl-install-instructions.md)]
 
@@ -39,18 +39,18 @@ ms.lasthandoff: 01/10/2018
  [데이터 흐름](../../../docs/standard/parallel-programming/dataflow-task-parallel-library.md) 문서의 대리자 형식 요약 섹션에서는 <xref:System.Threading.Tasks.Dataflow.ActionBlock%601>, <xref:System.Threading.Tasks.Dataflow.TransformBlock%602> 및 <xref:System.Threading.Tasks.Dataflow.TransformManyBlock%602> 개체에 제공할 수 있는 대리자 형식을 요약합니다. 또한 대리자 형식이 동기적으로 작동하는지, 아니면 비동기적으로 작동하는지를 지정합니다.  
   
 ## <a name="compiling-the-code"></a>코드 컴파일  
- 예제 코드를 복사하여 Visual Studio 프로젝트에 붙여넣거나, `DataflowExecutionBlocks.cs`([!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]의 경우 `DataflowExecutionBlocks.vb`) 파일에 붙여넣은 후 Visual Studio 명령 프롬프트 창에서 다음 명령을 실행합니다.  
+ 예제 코드를 복사하여 Visual Studio 프로젝트에 붙여넣거나, `DataflowExecutionBlocks.cs`(Visual Basic의 경우 `DataflowExecutionBlocks.vb`) 파일에 붙여넣은 후 Visual Studio 명령 프롬프트 창에서 다음 명령을 실행합니다.  
   
- [!INCLUDE[csprcs](../../../includes/csprcs-md.md)]  
+ Visual C#  
   
  **csc.exe /r:System.Threading.Tasks.Dataflow.dll DataflowExecutionBlocks.cs**  
   
- [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]  
+ Visual Basic  
   
  **vbc.exe /r:System.Threading.Tasks.Dataflow.dll DataflowExecutionBlocks.vb**  
   
 ## <a name="robust-programming"></a>강력한 프로그래밍  
- 이 예제에서는 <xref:System.Func%602> 형식의 대리자를 <xref:System.Threading.Tasks.Dataflow.TransformBlock%602> 개체에 제공하여 데이터 흐름 블록의 작업을 동기적으로 수행합니다. 데이터 흐름 블록이 비동기적으로 동작할 수 있도록 하려면 <xref:System.Func%601> 형식의 대리자를 데이터 흐름 블록에 제공합니다. 데이터 흐름 블록이 비동기적으로 동작하는 경우 데이터 흐름 블록의 작업은 반환된 <xref:System.Threading.Tasks.Task%601> 개체가 완료될 때만 완료됩니다. 다음 예제에서는 `CountBytes` 메서드를 수정하고 [async](~/docs/csharp/language-reference/keywords/async.md) 및 [await](~/docs/csharp/language-reference/keywords/await.md)([!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]에서는 [Async](~/docs/visual-basic/language-reference/modifiers/async.md) 및 [Await](~/docs/visual-basic/language-reference/operators/await-operator.md)) 연산자를 사용하여 제공된 파일에서 크기가 영인 바이트의 총 수를 비동기적으로 계산합니다. <xref:System.IO.FileStream.ReadAsync%2A> 메서드는 비동기적으로 파일 읽기 작업을 수행합니다.  
+ 이 예제에서는 <xref:System.Func%602> 형식의 대리자를 <xref:System.Threading.Tasks.Dataflow.TransformBlock%602> 개체에 제공하여 데이터 흐름 블록의 작업을 동기적으로 수행합니다. 데이터 흐름 블록이 비동기적으로 동작할 수 있도록 하려면 <xref:System.Func%601> 형식의 대리자를 데이터 흐름 블록에 제공합니다. 데이터 흐름 블록이 비동기적으로 동작하는 경우 데이터 흐름 블록의 작업은 반환된 <xref:System.Threading.Tasks.Task%601> 개체가 완료될 때만 완료됩니다. 다음 예제에서는 `CountBytes` 메서드를 수정하고 [async](~/docs/csharp/language-reference/keywords/async.md) 및 [await](~/docs/csharp/language-reference/keywords/await.md)(Visual Basic에서는 [Async](~/docs/visual-basic/language-reference/modifiers/async.md) 및 [Await](~/docs/visual-basic/language-reference/operators/await-operator.md)) 연산자를 사용하여 제공된 파일에서 크기가 0인 바이트의 총 수를 비동기적으로 계산합니다. <xref:System.IO.FileStream.ReadAsync%2A> 메서드는 비동기적으로 파일 읽기 작업을 수행합니다.  
   
  [!code-csharp[TPLDataflow_ExecutionBlocks#2](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_executionblocks/cs/dataflowexecutionblocks.cs#2)]
  [!code-vb[TPLDataflow_ExecutionBlocks#2](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpldataflow_executionblocks/vb/dataflowexecutionblocks.vb#2)]  

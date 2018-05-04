@@ -1,11 +1,12 @@
 ---
-title: ".NET Framework 메서드를 사용하여 파일 조작(Visual Basic)"
-ms.custom: 
+title: .NET Framework 메서드를 사용하여 파일 조작(Visual Basic)
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - I/O [Visual Basic], walkthroughs
@@ -21,14 +22,14 @@ helpviewer_keywords:
 - text files [Visual Basic], reading
 - I/O [Visual Basic], reading text from files
 ms.assetid: 7d2109eb-f98a-4389-b43d-30f384aaa7d5
-caps.latest.revision: "18"
+caps.latest.revision: 18
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: bc42dee640271ef84d35ceeb039d98741d296c5e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: ed363efeeef008927f2c34b393de66ca4ccbb0bb
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="walkthrough-manipulating-files-by-using-net-framework-methods-visual-basic"></a>연습: .NET Framework 메서드를 사용하여 파일 조작(Visual Basic)
 이 연습에서는 <xref:System.IO.StreamReader> 클래스를 사용하여 파일을 열고 읽는 방법, 파일이 액세스되고 있는지 확인하는 방법, <xref:System.IO.StreamReader> 클래스의 인스턴스로 파일 읽기 내에서 문자열을 검색하는 방법, <xref:System.IO.StreamWriter> 클래스를 사용하여 파일에 쓰는 방법을 보여 줍니다.  
@@ -36,7 +37,7 @@ ms.lasthandoff: 11/21/2017
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
 ## <a name="creating-the-application"></a>응용 프로그램 작성  
- [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)]를 시작하고 사용자가 지정된 파일에 기록하기 위해 사용할 수 있는 양식을 만들어 프로젝트를 시작합니다.  
+ Visual Studio를 시작하고, 사용자가 지정된 파일에 작성하는 데 사용할 수 있는 양식을 만들어 프로젝트를 시작합니다.  
   
 #### <a name="to-create-the-project"></a>프로젝트를 만들려면  
   
@@ -46,15 +47,15 @@ ms.lasthandoff: 11/21/2017
   
 3.  **이름** 상자에 `MyDiary`를 입력한 다음 **확인**을 클릭합니다.  
   
-     [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)]에서 **솔루션 탐색기**에 프로젝트를 추가하면 **Windows Forms 디자이너**가 열립니다.  
+     Visual Studio에서 **솔루션 탐색기**에 프로젝트를 추가합니다. 그러면 **Windows Forms 디자이너**가 열립니다.  
   
 4.  다음 표의 컨트롤을 양식에 추가하고 속성의 해당 값을 설정합니다.  
   
-|**개체**|**속성**|**Value**|  
+|**개체**|**속성**|**값**|  
 |---|---|---|   
-|<xref:System.Windows.Forms.Button>|**Name**<br /><br /> **Text**|`Submit`<br /><br /> **항목 제출**|  
-|<xref:System.Windows.Forms.Button>|**Name**<br /><br /> **Text**|`Clear`<br /><br /> **항목 지우기**|  
-|<xref:System.Windows.Forms.TextBox>|**Name**<br /><br /> **Text**<br /><br /> **Multiline**|`Entry`<br /><br /> **내용을 입력하세요.**<br /><br /> `False`|  
+|<xref:System.Windows.Forms.Button>|**이름**<br /><br /> **텍스트**|`Submit`<br /><br /> **항목 제출**|  
+|<xref:System.Windows.Forms.Button>|**이름**<br /><br /> **텍스트**|`Clear`<br /><br /> **항목 지우기**|  
+|<xref:System.Windows.Forms.TextBox>|**이름**<br /><br /> **텍스트**<br /><br /> **Multiline**|`Entry`<br /><br /> **내용을 입력하세요.**<br /><br /> `False`|  
   
 ## <a name="writing-to-the-file"></a>파일에 쓰기  
  응용 프로그램을 통해 파일에 쓰는 기능을 추가하려면 <xref:System.IO.StreamWriter> 클래스를 사용합니다. <xref:System.IO.StreamWriter>는 특정 인코딩에서 문자 출력용으로 설계된 반면, <xref:System.IO.Stream> 클래스는 바이트 입력 및 출력용으로 설계되었습니다. 표준 텍스트 파일에 정보의 줄을 쓰려면 <xref:System.IO.StreamWriter>를 사용합니다. <xref:System.IO.StreamWriter> 클래스에 대한 자세한 내용은 <xref:System.IO.StreamWriter>을 참조하세요.  
@@ -97,12 +98,12 @@ ms.lasthandoff: 11/21/2017
   
  이 연습의 이 섹션에서는 다음 표의 컨트롤을 양식에 추가하고 각 속성의 해당 값을 설정합니다.  
   
-|컨트롤|속성|값|  
+|Control|속성|값|  
 |-------------|----------------|------------|  
-|<xref:System.Windows.Forms.TextBox>|**Name**<br /><br /> **Visible**<br /><br /> **Size**<br /><br /> **Multiline**|`DisplayEntry`<br /><br /> `False`<br /><br /> `120,60`<br /><br /> `True`|  
-|<xref:System.Windows.Forms.Button>|**Name**<br /><br /> **Text**|`Display`<br /><br /> **표시**|  
-|<xref:System.Windows.Forms.Button>|**Name**<br /><br /> **Text**|`GetEntries`<br /><br /> **항목 가져오기**|  
-|<xref:System.Windows.Forms.ComboBox>|**Name**<br /><br /> **Text**<br /><br /> **Enabled**|`PickEntries`<br /><br /> **항목 선택**<br /><br /> `False`|  
+|<xref:System.Windows.Forms.TextBox>|**이름**<br /><br /> **표시**<br /><br /> **Size**<br /><br /> **Multiline**|`DisplayEntry`<br /><br /> `False`<br /><br /> `120,60`<br /><br /> `True`|  
+|<xref:System.Windows.Forms.Button>|**이름**<br /><br /> **텍스트**|`Display`<br /><br /> **표시**|  
+|<xref:System.Windows.Forms.Button>|**이름**<br /><br /> **Text**|`GetEntries`<br /><br /> **항목 가져오기**|  
+|<xref:System.Windows.Forms.ComboBox>|**이름**<br /><br /> **텍스트**<br /><br /> **사용**|`PickEntries`<br /><br /> **항목 선택**<br /><br /> `False`|  
   
 #### <a name="to-populate-the-combo-box"></a>콤보 상자를 채우려면  
   
@@ -125,11 +126,11 @@ ms.lasthandoff: 11/21/2017
   
  다음 표의 컨트롤을 양식에 추가하고 속성의 해당 값을 설정합니다.  
   
-|컨트롤|속성|값|  
+|Control|속성|값|  
 |-------------|----------------|------------|  
-|<xref:System.Windows.Forms.Button>|**Name**<br /><br /> **Text**<br /><br /> **Enabled**|`DeleteEntry`<br /><br /> **항목 삭제**<br /><br /> `False`|  
-|<xref:System.Windows.Forms.Button>|**Name**<br /><br /> **Text**<br /><br /> **Enabled**|`EditEntry`<br /><br /> **항목 편집**<br /><br /> `False`|  
-|<xref:System.Windows.Forms.Button>|**Name**<br /><br /> **Text**<br /><br /> **Enabled**|`SubmitEdit`<br /><br /> **편집 제출**<br /><br /> `False`|  
+|<xref:System.Windows.Forms.Button>|**이름**<br /><br /> **텍스트**<br /><br /> **사용**|`DeleteEntry`<br /><br /> **항목 삭제**<br /><br /> `False`|  
+|<xref:System.Windows.Forms.Button>|**이름**<br /><br /> **텍스트**<br /><br /> **사용**|`EditEntry`<br /><br /> **항목 편집**<br /><br /> `False`|  
+|<xref:System.Windows.Forms.Button>|**이름**<br /><br /> **텍스트**<br /><br /> **Enabled**|`SubmitEdit`<br /><br /> **편집 제출**<br /><br /> `False`|  
   
 #### <a name="to-enable-deletion-and-modification-of-entries"></a>항목을 삭제 및 수정하도록 설정하려면  
   

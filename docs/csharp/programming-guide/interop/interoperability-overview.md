@@ -1,5 +1,5 @@
 ---
-title: "상호 운용성 개요(C# 프로그래밍 가이드)"
+title: 상호 운용성 개요(C# 프로그래밍 가이드)
 ms.date: 07/20/2015
 ms.prod: .net
 ms.technology:
@@ -12,14 +12,14 @@ helpviewer_keywords:
 - interoperability, about interoperability
 - platform invoke
 ms.assetid: c025b2e0-2357-4c27-8461-118f0090aeff
-caps.latest.revision: 
+caps.latest.revision: 43
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 5ebdd2d58f2fe502dbeb14148c303487774f531b
-ms.sourcegitcommit: 099aa20d9b6450d1b7452d782a55771a6ad8ff35
+ms.openlocfilehash: 51a92f89415fd3750d8d2e1880be0d9c2867600d
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/05/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="interoperability-overview-c-programming-guide"></a>상호 운용성 개요(C# 프로그래밍 가이드)
 이 항목에서는 C# 관리 코드와 비관리 코드 간의 상호 운용성을 사용하도록 설정하는 방법을 설명합니다.  
@@ -42,7 +42,7 @@ ms.lasthandoff: 02/05/2018
   
 2.  COM 구성 요소 또는 형식 라이브러리에 대한 참조를 프로젝트에 추가합니다.  
   
-     참조를 추가하면 [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)]에서 형식 라이브러리를 입력으로 사용하는 [Tlbimp.exe(형식 라이브러리 가져오기)](../../../../docs/framework/tools/tlbimp-exe-type-library-importer.md)를 통해 .NET Framework interop 어셈블리를 출력합니다. RCW(런타임 호출 가능 래퍼)라고도 하는 어셈블리는 형식 라이브러리에 있는 인터페이스 및 COM 클래스를 래핑하는 인터페이스 및 관리되는 클래스를 포함합니다. [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)]에서 생성된 어셈블리에 대한 참조를 프로젝트에 추가합니다.  
+     참조를 추가하면 Visual Studio에서는 형식 라이브러리를 입력으로 사용하는 [Tlbimp.exe(형식 라이브러리 가져오기)](../../../../docs/framework/tools/tlbimp-exe-type-library-importer.md)를 통해 .NET Framework interop 어셈블리를 출력합니다. RCW(런타임 호출 가능 래퍼)라고도 하는 어셈블리는 형식 라이브러리에 있는 인터페이스 및 COM 클래스를 래핑하는 인터페이스 및 관리되는 클래스를 포함합니다. Visual Studio에서는 생성된 어셈블리에 대한 참조를 프로젝트에 추가합니다.  
   
 3.  RCW에서 정의된 클래스의 인스턴스를 만듭니다. 그러면 COM 개체의 인스턴스가 생성됩니다.  
   
@@ -55,11 +55,11 @@ ms.lasthandoff: 02/05/2018
   
 1.  C# 프로젝트에서 Interop 특성을 추가합니다.  
   
-     [!INCLUDE[csprcs](~/includes/csprcs-md.md)] 프로젝트 속성을 수정하여 어셈블리 COM이 표시되도록 설정할 수 있습니다. 자세한 내용은 [어셈블리 정보 대화 상자](/visualstudio/ide/reference/assembly-information-dialog-box)를 참조하세요.  
+     Visual C# 프로젝트 속성을 수정하여 어셈블리 COM이 표시되도록 설정할 수 있습니다. 자세한 내용은 [어셈블리 정보 대화 상자](/visualstudio/ide/reference/assembly-information-dialog-box)를 참조하세요.  
   
 2.  COM 형식 라이브러리를 생성하고 COM 사용을 위해 등록합니다.  
   
-     COM interop에 대해 C# 어셈블리를 자동으로 등록하도록 [!INCLUDE[csprcs](~/includes/csprcs-md.md)] 프로젝트 속성을 수정할 수 있습니다. [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)]에서는 [Regasm.exe(어셈블리 등록 도구)](../../../../docs/framework/tools/regasm-exe-assembly-registration-tool.md)를 사용하며, 관리되는 어셈블리를 입력으로 사용하는 `/tlb` 명령줄 스위치를 통해 형식 라이브러리를 생성합니다. 이 형식 라이브러리는 어셈블리의 `public` 형식을 설명하고, COM 클라이언트가 관리되는 클래스를 만들 수 있도록 레지스트리 항목을 추가합니다.  
+     COM interop에 대해 C# 어셈블리를 자동으로 등록하도록 Visual C# 프로젝트 속성을 수정할 수 있습니다. Visual Studio에서는 [Regasm.exe(어셈블리 등록 도구)](../../../../docs/framework/tools/regasm-exe-assembly-registration-tool.md)를 사용하며, 관리되는 어셈블리를 입력으로 사용하는 `/tlb` 명령줄 스위치를 통해 형식 라이브러리를 생성합니다. 이 형식 라이브러리는 어셈블리의 `public` 형식을 설명하고, COM 클라이언트가 관리되는 클래스를 만들 수 있도록 레지스트리 항목을 추가합니다.  
   
  자세한 내용은 [.NET Framework 구성 요소를 COM에 노출](../../../../docs/framework/interop/exposing-dotnet-components-to-com.md) 및 [예제 COM 클래스](../../../csharp/programming-guide/interop/example-com-class.md)를 참조하세요.  
   

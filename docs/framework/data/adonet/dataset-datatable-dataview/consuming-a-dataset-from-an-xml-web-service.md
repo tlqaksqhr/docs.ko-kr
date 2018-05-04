@@ -1,29 +1,15 @@
 ---
 title: XML Web Service에서 데이터 집합 사용
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-ado
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 9edd6b71-0fa5-4649-ae1d-ac1c12541019
-caps.latest.revision: ''
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload:
-- dotnet
-ms.openlocfilehash: 9bfcd4d8dca38c9438c072c143cf7ba0eafd6ecf
-ms.sourcegitcommit: 498799639937c89de777361aab74261efe7b79ea
+ms.openlocfilehash: da3eca875df9b80f66241a2ecb72c5ba5c1df309
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="consuming-a-dataset-from-an-xml-web-service"></a>XML Web Service에서 데이터 집합 사용
 <xref:System.Data.DataSet>은 인터넷에서 데이터 전송을 쉽게 할 수 있도록 비연결 디자인으로 설계되었습니다. **DataSet** 는 "직렬화"에 대 한 입력으로 지정할 수 있습니다 되거나의 콘텐츠를 스트리밍하는 데 필요한 추가 코딩 없이 XML 웹 서비스에서 출력 된 **데이터 집합** XML 웹 서비스에서 클라이언트와 백에. **데이터 집합** DiffGram 형식을 사용 하 여 XML 스트림을으로 암시적으로 변환, 네트워크를 통해 보내고 다음으로 XML 스트림에서 재구성는 **데이터 집합** 수신측에 있습니다. 이렇게 하여 간단하고 융통성 있는 방법으로 XML Web services를 사용하여 관계형 데이터를 전송하고 반환할 수 있습니다. DiffGram 형식에 대 한 자세한 내용은 참조 [Diffgram](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/diffgrams.md)합니다.  
@@ -176,7 +162,7 @@ ms.lasthandoff: 03/22/2018
   
      XML Web services의 클라이언트는 SOAP 프록시가 있어야 노출된 메서드를 사용할 수 있습니다. Visual Studio로 이 프록시를 생성할 수 있습니다. 웹 참조를 Visual Studio 내의 기존 웹 서비스로 설정하면 이 단계에 기술된 모든 동작이 투명하게 일어납니다. 프록시 클래스를 직접 만들려면 추가 설명이 필요합니다. 그러나 대부분의 경우에는 Visual Studio를 사용하여 클라이언트 응용 프로그램용 프록시 클래스를 만드는 것으로 충분합니다.  
   
-     프록시는 웹 서비스 설명 언어 도구를 사용하여 만들 수 있습니다. 예를 들어, XML 웹 서비스 URL http://myserver/data/DataSetSample.asmx에 노출 되는 경우의 네임 스페이스를 사용 하 여 Visual Basic.NET 프록시를 만들려면 다음과 같은 명령을 실행 **WebData.DSSample** 파일에 저장 하 고 sample.vb 합니다.  
+     프록시는 웹 서비스 설명 언어 도구를 사용하여 만들 수 있습니다. 예를 들어, XML 웹 서비스 URL에 노출 되는 경우 http://myserver/data/DataSetSample.asmx의 네임 스페이스를 사용 하 여 Visual Basic.NET 프록시를 만들려면 다음과 같은 명령을 **WebData.DSSample** sample.vb 파일에에서 저장 합니다.  
   
     ```console
     wsdl /l:VB -out:sample.vb http://myserver/data/DataSetSample.asmx /n:WebData.DSSample  

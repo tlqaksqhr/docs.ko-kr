@@ -1,10 +1,6 @@
 ---
-title: "&lt;선택을 취소&gt; 요소에 대 한 &lt;configSections&gt;"
+title: '&lt;선택을 취소&gt; 요소에 대 한 &lt;configSections&gt;'
 ms.date: 05/01/2017
-ms.prod: .net-framework
-ms.technology:
-- dotnet-clr
-ms.topic: article
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/configSections/clear
 helpviewer_keywords:
@@ -13,14 +9,11 @@ helpviewer_keywords:
 ms.assetid: 77f1d761-ff45-4001-8f36-3a3e5c41fa63
 author: guardrex
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: e48887cf7e227f463b92edd50f69746bbd8abd0a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 42a44d66a3f70d0572484adf4c8dd946edf2297f
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="clear-element-for-configsections"></a>\<지우기 > 요소에 대 한 \<configSections >
 
@@ -54,9 +47,9 @@ ms.lasthandoff: 12/22/2017
 
 ## <a name="remarks"></a>설명
 
- **\<지우기 >** 요소 또는 구성 파일 계층 구조에서 더 높은 수준에서 현재 구성 파일에서 이전 정의 된 응용 프로그램에서 모든 섹션 및 섹션 그룹을 제거 합니다.
+**\<지우기 >** 요소 또는 구성 파일 계층 구조에서 더 높은 수준에서 현재 구성 파일에서 이전 정의 된 응용 프로그램에서 모든 섹션 및 섹션 그룹을 제거 합니다.
 
-## <a name="example"></a>예
+## <a name="example"></a>예제
 
 이 예제에서는 컴퓨터 구성 파일 및 응용 프로그램 구성 파일을 정의 하 고 사용 하는 방법을 보여 줍니다.는  **\<지우기 >** 에 이전에 정의 된 섹션을 정리 하는 응용 프로그램 구성 파일의 요소는 컴퓨터 구성 파일입니다.
 
@@ -97,6 +90,6 @@ ms.lasthandoff: 12/22/2017
 
 이 요소는 응용 프로그램 구성 파일을 컴퓨터 구성 파일에 사용할 수 있습니다 (*Machine.config*), 및 *Web.config* 응용 프로그램 디렉터리 수준에서 포함 되지 않은 파일입니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참고자료
 
 [.NET Framework에 대 한 구성 파일 스키마](~/docs/framework/configure-apps/file-schema/index.md)

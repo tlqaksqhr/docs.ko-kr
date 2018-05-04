@@ -1,27 +1,15 @@
 ---
-title: "데이터 집합 콘텐츠를 XML 데이터로 작성"
-ms.custom: 
+title: 데이터 집합 콘텐츠를 XML 데이터로 작성
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: fd15f8a5-3b4c-46d0-a561-4559ab2a4705
-caps.latest.revision: "5"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 9b1250d616ad5835fccd1a3acbf0b8a759c34181
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 44afa79d715ef62bcbd1c242a533876d911345c8
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="writing-dataset-contents-as-xml-data"></a>데이터 집합 콘텐츠를 XML 데이터로 작성
 ADO.NET에서는 해당 스키마의 사용 여부와 관계없이 <xref:System.Data.DataSet>을 XML 표현으로 작성할 수 있습니다. 스키마 정보가 XML과 함께 인라인에 포함된 경우에는 XSD(XML 스키마 정의 언어)를 사용하여 작성됩니다. 이 스키마에는 <xref:System.Data.DataSet>의 테이블 정의와 관계 및 제약 조건 정의가 포함됩니다.  
@@ -79,10 +67,10 @@ xmlSW.Close();
   
 |MappingType 값|설명|  
 |-----------------------|-----------------|  
-|**요소**|이 값이 기본값입니다. 열이 XML 요소로 작성되며, 이 때 ColumnName이 요소의 이름이 되고 열의 내용은 요소의 텍스트로 작성됩니다. 예:<br /><br /> `<ColumnName>Column Contents</ColumnName>`|  
-|**특성**|열이 현재 행에 대한 XML 요소의 XML 특성으로 작성되며, 이 때 특성의 이름은 ColumnName이며 열의 내용은 특성의 값으로 작성됩니다. 예:<br /><br /> `<RowElement ColumnName="Column Contents" />`|  
-|**SimpleContent**|열의 내용이 현재 행에 대한 XML 요소의 텍스트로 작성됩니다. 예:<br /><br /> `<RowElement>Column Contents</RowElement>`<br /><br /> **SimpleContent** 가 있는 테이블의 열에 대해 설정할 수 없습니다 **요소** 열 또는 중첩된 관계입니다.|  
-|**Hidden**|열이 XML 출력으로 작성되지 않습니다.|  
+|**요소**|이 값이 기본값입니다. 열이 XML 요소로 작성되며, 이 때 ColumnName이 요소의 이름이 되고 열의 내용은 요소의 텍스트로 작성됩니다. 예를 들어:<br /><br /> `<ColumnName>Column Contents</ColumnName>`|  
+|**특성**|열이 현재 행에 대한 XML 요소의 XML 특성으로 작성되며, 이 때 특성의 이름은 ColumnName이며 열의 내용은 특성의 값으로 작성됩니다. 예를 들어:<br /><br /> `<RowElement ColumnName="Column Contents" />`|  
+|**SimpleContent**|열의 내용이 현재 행에 대한 XML 요소의 텍스트로 작성됩니다. 예를 들어:<br /><br /> `<RowElement>Column Contents</RowElement>`<br /><br /> **SimpleContent** 가 있는 테이블의 열에 대해 설정할 수 없습니다 **요소** 열 또는 중첩된 관계입니다.|  
+|**숨김**|열이 XML 출력으로 작성되지 않습니다.|  
   
 ## <a name="see-also"></a>참고 항목  
  [데이터 집합에서 XML 사용](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md)  

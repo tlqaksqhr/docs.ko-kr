@@ -1,13 +1,6 @@
 ---
-title: "&lt;assemblyIdentity&gt; 요소에 대 한 &lt;런타임&gt;"
-ms.custom: 
+title: '&lt;assemblyIdentity&gt; 요소에 대 한 &lt;런타임&gt;'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/runtime/assemblyBinding/dependentAssembly/assemblyIdentity
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#assemblyIdentity
@@ -16,23 +9,21 @@ helpviewer_keywords:
 - container tags, <assemblyIdentity> element
 - assemblyIdentity element
 ms.assetid: cea4d187-6398-4da4-af09-c1abc6a349c1
-caps.latest.revision: "17"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: 0dadf0e07f5e3a9f9152ae7cd57c62721402bff0
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 5d985d1620b7dec324c0113bcd5652cede044950
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltassemblyidentitygt-element-for-ltruntimegt"></a>&lt;assemblyIdentity&gt; 요소에 대 한 &lt;런타임&gt;
 어셈블리에 대 한 식별 정보를 포함합니다.  
   
  \<configuration>  
-\<런타임 >  
-\<assemblyBinding >  
+\<runtime>  
+\<assemblyBinding>  
 \<dependentAssembly >  
 \<assemblyIdentity >  
   
@@ -46,7 +37,7 @@ culture="assembly culture"/>
 ```  
   
 ## <a name="attributes-and-elements"></a>특성 및 요소  
- 다음 단원에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
+ 다음 섹션에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
   
 ### <a name="attributes"></a>특성  
   
@@ -112,7 +103,7 @@ culture="assembly culture"/>
   
  구성 파일에 포함 하는 경우는 `<assemblyIdentity>` 없는 요소에 `processorArchitecture` 특성과 없이 요소 플랫폼과 일치 하는 요소가 포함 되지 않습니다는 `processorArchitecture` 특성을 사용 합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 예제에서는 어셈블리에 대 한 정보를 제공 하는 방법을 보여 줍니다.  
   
 ```xml  

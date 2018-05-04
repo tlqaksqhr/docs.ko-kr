@@ -1,6 +1,6 @@
 ---
-title: "튜플 및 기타 형식 분해"
-description: "튜플 및 기타 형식을 분해하는 방법을 알아봅니다."
+title: 튜플 및 기타 형식 분해
+description: 튜플 및 기타 형식을 분해하는 방법을 알아봅니다.
 keywords: .NET, .NET Core, C#
 author: rpetrusha
 ms-author: ronpet
@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 0b0c4b0f-4a47-4f66-9b8e-f5c63b195960
-ms.openlocfilehash: e626eeb1f3de2716e1ffe4fcbec1c16558e5bf0e
-ms.sourcegitcommit: a3ba258f7a8cab5c6d19a3743dd95e904ecebc44
+ms.openlocfilehash: 5a119f935b1cc80fe5cf738f03057c68c7eb5ba5
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="deconstructing-tuples-and-other-types"></a>튜플 및 기타 형식 분해 #
 
@@ -24,7 +24,7 @@ ms.lasthandoff: 11/27/2017
 
 개체에서 여러 필드 및 속성 값을 검색하는 작업도 똑같이 번거로울 수 있습니다. 멤버별로 변수에 필드 또는 속성 값을 할당해야 하기 때문입니다. 
 
-C# 7부터는 한 번의 *분해* 작업으로 튜플에서 여러 요소를 검색하거나 개체에서 여러 필드, 속성 및 계산 값을 검색할 수 있습니다. 튜플을 분해할 때는 튜플 요소를 개별 변수에 할당하고, 개체를 분해할 때는 선택한 값을 개별 변수에 할당합니다. 
+C# 7.0부터는 한 번의 *분해* 작업으로 튜플에서 여러 요소를 검색하거나 개체에서 여러 필드, 속성 및 계산 값을 검색할 수 있습니다. 튜플을 분해할 때는 튜플 요소를 개별 변수에 할당하고, 개체를 분해할 때는 선택한 값을 개별 변수에 할당합니다. 
 
 ## <a name="deconstructing-a-tuple"></a>튜플 분해
 
@@ -34,7 +34,7 @@ C#에서는 튜플 분해를 기본적으로 지원하므로 한 작업에서 �
 var (name, address, city, zip) = contact.GetAddressInfo();
 ```
 
-튜플을 분해 하기 위해 세 가지가 있습니다.
+다음과 같은 세 가지 방법으로 튜플을 분해합니다.
 
 - 괄호 안에 각 필드의 형식을 명시적으로 선언할 수 있습니다. 다음 예제에서는 이 방법을 사용하여 `QueryCityData` 메서드에서 반환된 3 튜플을 분해합니다.
 
@@ -50,7 +50,7 @@ var (name, address, city, zip) = contact.GetAddressInfo();
 
     이 방법은 번거로우므로 사용하지 않는 것이 좋습니다.
 
-- 마지막으로, 이미 선언 하는 변수로 튜플의 해체 될 수 있습니다.
+- 마지막으로, 튜플을 이미 선언된 변수로 분해할 수 있습니다.
 
     [!code-csharp[Deconstruction-Declared](../../samples/snippets/csharp/programming-guide/deconstructing-tuples/deconstruct-tuple5.cs#1)]
 
@@ -58,11 +58,11 @@ var (name, address, city, zip) = contact.GetAddressInfo();
 
 튜플의 각 요소도 변수에 할당해야 합니다. 생략하는 요소가 있으면 컴파일러에서 CS8132 오류, “‘x’ 요소의 튜플을 ‘y’ 변수로 분해할 수 없습니다.”가 생성됩니다.
 
-참고 선언 및 왼쪽에 있는 기존 변수를 할당 한 제거를 함께 사용할 수 없습니다. 컴파일러 오류 "는 제거 혼합할 수 없습니다 선언 및 왼쪽 hand-양쪽 식입니다." CS8184를 생성 합니다. 때 멤버 새로 선언 하 고 기존 변수를 포함 합니다.
+분해의 왼쪽에 있는 기존 변수에 할당 및 선언을 혼합할 수 없습니다. 컴파일러가 “분해는 왼쪽에 선언과 식을 혼합할 수 없습니다”라는 오류 CS8184를 생성합니다. 구성원이 새로 선언된 변수 및 기존 변수를 포함할 경우.
 
 ## <a name="deconstructing-tuple-elements-with-discards"></a>무시 항목을 사용한 튜플 요소 분해
 
-튜플을 분해할 때 일부 요소 값에만 관심이 있는 경우가 종종 있습니다. C# 7부터는 C#에서 지원하는 *무시 항목* 즉, 무시하도록 선택한 값을 갖는 쓰기 전용 변수를 활용할 수 있습니다. 무시 항목은 할당에서 밑줄 문자(“\_”)로 지정됩니다. 원하는 수의 값을 모두 하나의 무시 항목 `_`로 표시하여 무시할 수 있습니다.
+튜플을 분해할 때 일부 요소 값에만 관심이 있는 경우가 종종 있습니다. C# 7.0부터는 C#에서 지원하는 *무시 항목* 즉, 무시하도록 선택한 값을 갖는 쓰기 전용 변수를 활용할 수 있습니다. 무시 항목은 할당에서 밑줄 문자(“\_”)로 지정됩니다. 원하는 수의 값을 모두 하나의 무시 항목 `_`로 표시하여 무시할 수 있습니다.
 
 다음 예제에서는 무시 항목과 함께 튜플을 사용하는 방법을 보여 줍니다. `QueryCityDataForYears` 메서드는 도시의 이름, 도시의 면적, 연도, 해당 연도의 도시 인구, 두 번째 연도, 해당 두 번째 연도의 도구 인구를 포함하는 6 튜플을 반환합니다. 이 예제는 이러한 두 연도 사이의 인구 변화를 보여 줍니다. 튜플에서 사용 가능한 데이터 중 도시 면적에는 관심이 없고 디자인 타임에 도시 이름과 두 날짜를 알고 있습니다. 따라서 튜플에 저장된 두 가지 인구 값에만 관심이 있고 나머지 값은 무시 항목으로 처리할 수 있습니다.  
 

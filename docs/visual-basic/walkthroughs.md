@@ -1,8 +1,9 @@
 ---
-title: "Visual Basic 언어 연습"
+title: Visual Basic 언어 연습
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-visual-basic
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - Visual Basic, walkthroughs
@@ -10,14 +11,14 @@ helpviewer_keywords:
 - Visual Basic code, walkthroughs
 - walkthroughs [Visual Basic]
 ms.assetid: e4e1f849-e1ce-4cf7-8483-d9b4c4887a8e
-caps.latest.revision: "18"
+caps.latest.revision: 18
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: c57ee0b94e5aafb6b1287707b10977e86ee631f1
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: b34c513e54ba41bf845abaa59dd630b6877d9bbd
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="visual-basic-language-walkthroughs"></a>Visual Basic 언어 연습
 연습에서는 일반 시나리오에 대한 단계별 지침을 제공하므로 제품 또는 특정 기능 영역 파악을 효율적으로 시작할 수 있습니다.  
@@ -26,13 +27,13 @@ ms.lasthandoff: 10/18/2017
  [Async](../visual-basic/language-reference/modifiers/async.md) 및 [Await](../visual-basic/language-reference/operators/await-operator.md)를 사용하여 비동기 솔루션을 만드는 방법을 보여 줍니다.  
   
  [이벤트 선언 및 발생](../visual-basic/programming-guide/language-features/events/walkthrough-declaring-and-raising-events.md)  
- [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]에서 이벤트가 선언되고 발생하는 방법을 보여 줍니다.  
+ Visual Basic에서 이벤트가 선언되고 발생하는 방법을 보여 줍니다.  
   
  [이벤트 처리](../visual-basic/programming-guide/language-features/events/walkthrough-handling-events.md)  
  표준 `WithEvents` 키워드 또는 새 `AddHandler`/`RemoveHandler` 키워드를 사용하여 이벤트를 처리하는 방법을 보여 줍니다.  
   
  [인터페이스 만들기 및 구현](../visual-basic/programming-guide/language-features/interfaces/walkthrough-creating-and-implementing-interfaces.md)  
- [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]에서 인터페이스를 선언 및 구현하는 방법을 보여 줍니다.  
+ Visual Basic에서 인터페이스를 선언 및 구현하는 방법을 보여 줍니다.  
   
  [클래스 정의](../visual-basic/programming-guide/language-features/objects-and-classes/walkthrough-defining-classes.md)  
  클래스와 해당 필드, 속성, 메서드, 이벤트를 선언하는 방법을 설명합니다.  
@@ -47,10 +48,10 @@ ms.lasthandoff: 10/18/2017
  `Declare` 문을 사용하여 Windows API를 호출하는 방법을 설명합니다. 특성을 사용하여 API 호출의 마샬링을 제어하는 방법과 API 호출을 클래스의 메서드로 노출하는 방법에 대한 정보를 포함합니다.  
   
  [Visual Basic을 사용하여 COM 개체 만들기](../visual-basic/programming-guide/com-interop/walkthrough-creating-com-objects.md)  
- COM 클래스 템플릿을 사용하거나 사용하지 않고 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]에서 COM 개체를 만드는 방법을 보여 줍니다.  
+ COM 클래스 템플릿을 사용하거나 사용하지 않고 Visual Basic에서 COM 개체를 만드는 방법을 보여 줍니다.  
   
  [COM 개체를 사용한 상속 구현](../visual-basic/programming-guide/com-interop/walkthrough-implementing-inheritance-with-com-objects.md)  
- [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 6.0을 사용하여 클래스가 포함된 COM 개체를 만든 다음 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]의 기본 클래스로 사용하는 방법을 보여 줍니다.  
+ Visual Basic 6.0을 사용하여 클래스가 포함된 COM 개체를 만든 다음, Visual Basic의 기본 클래스로 사용하는 방법을 보여 줍니다.  
   
  [다중 스레딩](http://msdn.microsoft.com/library/2cbf5116-8499-4af9-818c-6f7c1c2ad2c9)  
  텍스트 파일에서 단어를 검색하는 다중 스레드 응용 프로그램을 만드는 방법을 보여 줍니다.  
@@ -77,7 +78,7 @@ ms.lasthandoff: 10/18/2017
  <xref:System.Security.Cryptography.DESCryptoServiceProvider> 클래스를 사용하여 문자열을 암호화하고 암호 해독하는 방법을 보여 줍니다.  
   
  [Visual Basic에서 파일 및 폴더 조작](../visual-basic/developing-apps/programming/drives-directories-files/walkthrough-manipulating-files-and-directories.md)  
- [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 함수를 사용하여 파일에 대한 정보를 확인하고, 파일에서 문자열을 검색하고, 파일에 쓰는 방법을 보여 줍니다.  
+ Visual Basic 함수를 사용하여 파일에 대한 정보를 확인하고, 파일에서 문자열을 검색하고, 파일에 쓰는 방법을 보여 줍니다.  
   
  [.NET Framework 메서드를 사용하여 파일 조작](../visual-basic/developing-apps/programming/drives-directories-files/walkthrough-manipulating-files-by-using-net-framework-methods.md)  
  [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 메서드를 사용하여 파일에 대한 정보를 확인하고, 파일에서 문자열을 검색하고, 파일에 쓰는 방법을 보여 줍니다.  

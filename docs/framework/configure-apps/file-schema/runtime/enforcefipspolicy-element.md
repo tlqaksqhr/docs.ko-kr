@@ -1,29 +1,19 @@
 ---
-title: "&lt;enforceFIPSPolicy&gt; 요소"
-ms.custom: 
+title: '&lt;enforceFIPSPolicy&gt; 요소'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - enforceFIPSPolicy element
 - FIPS
 - <enforceFIPSPolicy> element
 - Federal Information Processing Standards (FIPS)
 ms.assetid: c35509c4-35cf-43c0-bb47-75e4208aa24e
-caps.latest.revision: "7"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: fb8cb1ea4d011eb25aee14ddd53d3dc882f75d8e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 9040bf2548964cf6df5f4fd87ee9f6d979c7df1e
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltenforcefipspolicygt-element"></a>&lt;enforceFIPSPolicy&gt; 요소
 암호화 알고리즘이 FIPS(Federal Information Processing Standards)를 준수해야 하는 컴퓨터 구성 요구 사항을 적용할지를 지정합니다.  
@@ -39,7 +29,7 @@ ms.lasthandoff: 12/22/2017
 ```  
   
 ## <a name="attributes-and-elements"></a>특성 및 요소  
- 다음 단원에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
+ 다음 섹션에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
   
 ### <a name="attributes"></a>특성  
   
@@ -69,7 +59,7 @@ ms.lasthandoff: 12/22/2017
   
  경우 응용 프로그램이 해당 구성을 사용 해야 하는 컴퓨터에서 실행 응용 프로그램을 사용 하 여 FIPS와 호환 되지 않는 알고리즘을 사용할 수 있습니다이 요소 프로그램 구성 파일에서에서 공용 언어 런타임 (CLR)을 방지 하기 위해 FIPS 준수를 강제 적용 합니다. 에 도입 된이 요소는 [!INCLUDE[net_v20SP1_long](../../../../../includes/net-v20sp1-long-md.md)]합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 예제에는 CLR FIPS 준수를 강제 적용 하지 못하도록 하는 방법을 보여 줍니다.  
   
 ```xml  

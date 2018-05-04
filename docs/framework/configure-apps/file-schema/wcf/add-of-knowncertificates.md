@@ -1,33 +1,21 @@
 ---
-title: "&lt;knownCertificates&gt;의 &lt;add&gt;"
-ms.custom: 
+title: '&lt;knownCertificates&gt;의 &lt;add&gt;'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 128aaabe-3f1a-4c3b-b59f-898d0f02910f
-caps.latest.revision: "14"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 91a7174f98de2e2a5dd7eea738f51c3c6b9a1371
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 0192c14d5ebc0c84859878b35770e03843b2dd50
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltaddgt-of-ltknowncertificatesgt"></a>&lt;knownCertificates&gt;의 &lt;add&gt;
 알려진 인증서 컬렉션에 X.509 인증서를 추가합니다.  
   
- \<시스템입니다. ServiceModel >  
+ \<system.ServiceModel>  
 \<동작 >  
-\<serviceBehaviors >  
+\<serviceBehaviors>  
 \<동작 >  
-\<serviceCredentials >  
+\<serviceCredentials>  
 \<u t h >  
 \<knownCertificates >  
 \<add>  
@@ -44,7 +32,7 @@ ms.lasthandoff: 12/22/2017
 ```  
   
 ## <a name="attributes-and-elements"></a>특성 및 요소  
- 다음 단원에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
+ 다음 섹션에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
   
 ### <a name="attributes"></a>특성  
   
@@ -107,7 +95,7 @@ ms.lasthandoff: 12/22/2017
   
  이 구성 요소를 사용 하는 자세한 방법은 뿐만 아니라 페더레이션된 서비스에서 인증에 대 한 클라이언트에 필요한 조건, 참조 [하는 방법: 페더레이션 서비스에서 자격 증명 구성](../../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)합니다. 페더레이션된 시나리오에 대 한 자세한 내용은 참조 [페더레이션 및 발급 된 토큰](../../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 예제에서는 모든 STS 인증서에 대해 리포지토리에 인증서를 추가합니다.  
   
 ```xml  

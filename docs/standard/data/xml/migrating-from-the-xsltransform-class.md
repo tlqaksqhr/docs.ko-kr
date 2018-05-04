@@ -19,11 +19,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 09d982105d8cf1297a53bd755003e3ef2b089293
-ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
+ms.openlocfilehash: 07b90baf64ad00509cf5cadea4b9a3008237759b
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="migrating-from-the-xsltransform-class"></a>XslTransform 클래스에서 마이그레이션
 XSLT 아키텍처는 [!INCLUDE[vsprvslong](../../../../includes/vsprvslong-md.md)] 릴리스에서 다시 디자인되었습니다. <xref:System.Xml.Xsl.XslTransform> 클래스는 <xref:System.Xml.Xsl.XslCompiledTransform> 클래스로 대체되었습니다.  
@@ -73,7 +73,7 @@ writer.Close();
 ```  
   
 ### <a name="debug-option"></a>디버그 옵션  
- <xref:System.Xml.Xsl.XslCompiledTransform> 클래스에서는 디버그 정보를 생성하여 Microsoft [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] Debugger에서 스타일시트를 디버그할 수 있도록 합니다. 자세한 내용은 <xref:System.Xml.Xsl.XslCompiledTransform.%23ctor%28System.Boolean%29>를 참조하세요.  
+ <xref:System.Xml.Xsl.XslCompiledTransform> 클래스는 Microsoft Visual Studio Debugger에서 스타일시트를 디버그할 수 있는 디버그 정보를 생성합니다. 자세한 내용은 <xref:System.Xml.Xsl.XslCompiledTransform.%23ctor%28System.Boolean%29>를 참조하세요.  
   
 ## <a name="behavioral-differences"></a>동작 차이점  
   

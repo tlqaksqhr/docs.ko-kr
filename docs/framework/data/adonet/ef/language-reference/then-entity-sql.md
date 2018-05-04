@@ -1,24 +1,12 @@
 ---
 title: THEN(Entity SQL)
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 54222642-23c6-4f61-9861-67caca53ac5f
-caps.latest.revision: "3"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: d7a669cc87c14e4213d702b639a1956f04cb485d
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 5f0bbb0cadd736d476077685e08ba1a03b9c4001
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="then-entity-sql"></a>THEN(Entity SQL)
 WHEN 절이 `true`로 계산될 때의 결과입니다.  
@@ -41,7 +29,7 @@ WHEN when_expression THEN then_expression
   
  예를 들어 참조 [대/소문자](../../../../../../docs/framework/data/adonet/ef/language-reference/case-entity-sql.md)합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 Entity SQL 쿼리에서는 CASE 식을 사용하여 일련의 `Boolean` 식을 계산합니다. 쿼리는 AdventureWorks Sales 모델을 기반으로 합니다. 이 쿼리를 컴파일하고 실행하려면 다음 단계를 수행하세요.  
   
 1.  절차에 따라 [하는 방법: PrimitiveType 결과 반환 하는 쿼리 실행](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-primitivetype-results.md)합니다.  

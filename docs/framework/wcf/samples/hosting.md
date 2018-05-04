@@ -1,27 +1,29 @@
 ---
 title: Hosting1
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 8a6ec5d4-d191-49cc-bb0f-a07639dc60d4
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 6b270125ae5acc63094c3aa6be6e93e46f9433a8
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.workload:
+- dotnet
+ms.openlocfilehash: 404c2d92b90822c20649c250e8ead8d162c4c085
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="hosting"></a>호스팅
-이 단원에는 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 서비스의 호스팅 방법을 보여 주는 샘플이 포함되어 있습니다.  
+이 섹션에는 호스팅 Windows Communication Foundation (WCF) 서비스를 보여 주는 샘플이 들어 있습니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
  [Windows 프로세스 활성화](../../../../docs/framework/wcf/samples/windows-process-activation.md)  

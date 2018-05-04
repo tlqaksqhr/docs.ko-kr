@@ -1,30 +1,20 @@
 ---
 title: '&lt;tokenReplayCache&gt;'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 1572ab23-6933-41b5-bfb4-0c4548145500
-caps.latest.revision: "8"
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: f388369d4dc2e590473ad98189ade70b77551b10
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 79022319944c4042c6f62a7521784b826b90d4ce
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="lttokenreplaycachegt"></a>&lt;tokenReplayCache&gt;
 토큰 재생 캐시는 서비스 또는 보안 토큰 처리기 컬렉션에 등록합니다.  
   
- \<system.identityModel >  
-\<identityConfiguration >  
+ \<system.identityModel>  
+\<identityConfiguration>  
 \<캐시 >  
 \<tokenReplayCache >  
   
@@ -42,7 +32,7 @@ ms.lasthandoff: 12/22/2017
 ```  
   
 ## <a name="attributes-and-elements"></a>특성 및 요소  
- 다음 단원에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
+ 다음 섹션에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
   
 ### <a name="attributes"></a>특성  
   
@@ -62,7 +52,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="remarks"></a>설명  
  토큰 재생 캐시가 재생 된 토큰을 검색 하는 데 사용 됩니다. 토큰 재생 검색으로 사용 되는 [ \<tokenReplayDetection >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/tokenreplaydetection.md) 또한 토큰에 대 한 최대 만료 시간을 지정 하는 요소입니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 XML에서는 토큰 재생된 검색에 대 한 사용자 지정 캐시의 구성을 보여 줍니다.  
   
 ```xml  

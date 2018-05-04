@@ -1,14 +1,6 @@
 ---
-title: "&lt;추가&gt; 요소에 대 한 &lt;수신기&gt; 에 대 한 &lt;소스&gt;"
-ms.custom: 
+title: '&lt;추가&gt; 요소에 대 한 &lt;수신기&gt; 에 대 한 &lt;소스&gt;'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/sources/source/listeners/add
 helpviewer_keywords:
@@ -16,17 +8,14 @@ helpviewer_keywords:
 - add element for <listeners> for <source>
 - <add> element for <listeners> for <source>
 ms.assetid: 4ce36ac1-81ef-48e8-b8b2-b5a5b0e2adcb
-caps.latest.revision: 
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload:
-- dotnet
-ms.openlocfilehash: 86177010d8ed70302b51ec9c416a3295009e7394
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ba8ff652003a9167ec370643797ac9300b83889a
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltaddgt-element-for-ltlistenersgt-for-ltsourcegt"></a>&lt;추가&gt; 요소에 대 한 &lt;수신기&gt; 에 대 한 &lt;소스&gt;
 추적 소스의 `Listeners` 컬렉션에 수신기를 추가합니다.  
@@ -47,7 +36,7 @@ ms.lasthandoff: 12/22/2017
 ```  
   
 ## <a name="attributes-and-elements"></a>특성 및 요소  
- 다음 단원에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
+ 다음 섹션에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
   
 ### <a name="attributes"></a>특성  
   
@@ -57,7 +46,7 @@ ms.lasthandoff: 12/22/2017
 |`initializeData`|선택적 특성입니다.<br /><br /> 지정된 된 클래스에 대 한 생성자에 전달 된 문자열입니다. A <xref:System.Configuration.ConfigurationException> 클래스에는 문자열을 사용 하는 생성자가 없는 경우 throw 됩니다.|  
 |`name`|선택적 특성입니다.<br /><br /> 수신기의 이름을 지정합니다.|  
 |`traceOutputOptions`|선택적 특성입니다.<br /><br /> 지정 된 <xref:System.Diagnostics.TraceListener.TraceOutputOptions%2A> 추적 수신기에 대 한 속성 값입니다.|  
-|[사용자 지정 특성]|선택적 특성입니다.<br /><br /> 으로 식별 된 수신기 별 특성에 대 한 값을 지정 된 <xref:System.Diagnostics.TraceListener.GetSupportedAttributes%2A> 해당 수신기에 대 한 메서드. <xref:System.Diagnostics.DelimitedListTraceListener.Delimiter%2A>추가 특성의 예에 고유한는 <xref:System.Diagnostics.DelimitedListTraceListener> 클래스입니다.|  
+|[사용자 지정 특성]|선택적 특성입니다.<br /><br /> 으로 식별 된 수신기 별 특성에 대 한 값을 지정 된 <xref:System.Diagnostics.TraceListener.GetSupportedAttributes%2A> 해당 수신기에 대 한 메서드. <xref:System.Diagnostics.DelimitedListTraceListener.Delimiter%2A> 추가 특성의 예에 고유한는 <xref:System.Diagnostics.DelimitedListTraceListener> 클래스입니다.|  
   
 ### <a name="child-elements"></a>자식 요소  
   
@@ -102,7 +91,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="configuration-file"></a>구성 파일  
  이 요소는 응용 프로그램 구성 파일 및 컴퓨터 구성 파일 (Machine.config)에서 사용할 수 있습니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 예제에서는 사용 하는 방법을 보여 줍니다. `<add>` 요소를 추가 하는 수신기 `console` 및 `textListener` 에 `Listeners` 추적 소스에 대 한 컬렉션 `TraceSourceApp`합니다. `textListener` 수신기에 추적 출력 파일 myListener.log을 씁니다.  
   
 ```xml  

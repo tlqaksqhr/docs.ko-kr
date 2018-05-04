@@ -1,32 +1,18 @@
 ---
 title: '&lt;wsHttpContextBinding&gt;'
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 1e40b5c9-0df2-4d66-afc5-a99d0e4ae7a4
-caps.latest.revision: ''
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: dbc1ab595931d363d0cb3c65839d26a8ad5a7519
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: 89ee0df05828ae258ff2c4b2e925ed2bc10f8fbb
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltwshttpcontextbindinggt"></a>&lt;wsHttpContextBinding&gt;
 보호 수준을 서명해야 하는 <xref:System.ServiceModel.WSHttpBinding>의 컨텍스트를 제공합니다.  
   
 \<system.serviceModel>  
-\<bindings>  
+\<바인딩 >  
 \<wsHttpContextBinding>  
   
 ## <a name="syntax"></a>구문  
@@ -93,7 +79,7 @@ ms.lasthandoff: 03/26/2018
 |proxyAddress|HTTP 프록시의 주소를 지정하는 URI입니다. `useSystemWebProxy`가 `true`일 경우 이 설정은 `null`이어야 합니다. 기본값은 `null`입니다.|  
 |receiveTimeout|받기 작업을 완료하기 위해 제공된 시간 간격을 지정하는 <xref:System.TimeSpan> 값입니다. 이 값은 <xref:System.TimeSpan.Zero>보다 크거나 같아야 합니다. 기본값은 00:01:00입니다.|  
 |sendTimeout|보내기 작업을 완료하기 위해 제공된 시간 간격을 지정하는 <xref:System.TimeSpan> 값입니다. 이 값은 <xref:System.TimeSpan.Zero>보다 크거나 같아야 합니다. 기본값은 00:01:00입니다.|  
-|textEncoding|바인딩에서 메시지를 내보내는 데 사용되는 문자 집합 인코딩을 지정합니다. 유효한 값은 다음과 같습니다.<br /><br /> -UnicodeFffeTextEncoding: 유니코드 BigEndian 인코딩입니다.<br />-   Utf16TextEncoding: 16-bit encoding.<br />-   Utf8TextEncoding: 8-bit encoding.<br /><br /> 기본값은 Utf8TextEncoding입니다.<br /><br /> 이 특성은 <xref:System.Text.Encoding> 형식입니다.|  
+|textEncoding|바인딩에서 메시지를 내보내는 데 사용되는 문자 집합 인코딩을 지정합니다. 유효한 값은 다음과 같습니다.<br /><br /> -UnicodeFffeTextEncoding: 유니코드 BigEndian 인코딩입니다.<br />-Utf16TextEncoding: 16 비트 인코딩입니다.<br />-Utf8TextEncoding: 8 비트 인코딩입니다.<br /><br /> 기본값은 Utf8TextEncoding입니다.<br /><br /> 이 특성은 <xref:System.Text.Encoding> 형식입니다.|  
 |transactionFlow|바인딩에서 WS-Transactions 이동을 지원할지 여부를 지정하는 부울 값입니다. 기본값은 `false`입니다.|  
 |useDefaultWebProxy|시스템의 자동 구성된 HTTP 프록시 사용 여부를 지정하는 부울 값입니다. 기본값은 `true`입니다.|  
   

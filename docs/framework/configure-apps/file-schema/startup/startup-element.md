@@ -1,13 +1,6 @@
 ---
-title: "&lt;시작&gt; 요소"
-ms.custom: 
+title: '&lt;시작&gt; 요소'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/startup
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#startup
@@ -16,16 +9,14 @@ helpviewer_keywords:
 - <startup> element
 - startup element
 ms.assetid: 536acfd8-f827-452f-838a-e14fa3b87621
-caps.latest.revision: "19"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: 4299775cd23162839ab9846adc7d2c64cc18a404
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 60699f0335bb35589341558800cfd64503d0aa0a
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltstartupgt-element"></a>&lt;시작&gt; 요소
 공용 언어 런타임 시작 정보를 지정합니다.  
@@ -49,7 +40,7 @@ ms.lasthandoff: 01/19/2018
 |---------------|-----------------|  
 |`useLegacyV2RuntimeActivationPolicy`|선택적 특성입니다.<br /><br /> 사용 여부를 지정 된 [!INCLUDE[dnprdnext](../../../../../includes/dnprdnext-md.md)] 런타임 정품 인증 정책 사용 하는 [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)] 정품 인증 정책.|  
   
-## <a name="uselegacyv2runtimeactivationpolicy-attribute"></a>useLegacyV2RuntimeActivationPolicy Attribute  
+## <a name="uselegacyv2runtimeactivationpolicy-attribute"></a>useLegacyV2RuntimeActivationPolicy 특성  
   
 |값|설명|  
 |-----------|-----------------|  
@@ -80,7 +71,7 @@ ms.lasthandoff: 01/19/2018
 > [!NOTE]
 >  특성을 설정 `true` CLR 버전 1.1 또는 CLR 버전 2.0 효과적으로 프로세스에서-side-by-side 기능을 해제 하면 동일한 프로세스에 로드에서 방지 하 고 (참조 [COM Interop에 대 한-병렬 실행](http://msdn.microsoft.com/library/4302318c-3586-49bf-8620-b9a39cdf4a32)).  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 예제에서는 구성 파일에서 런타임 버전을 지정 하는 방법을 보여 줍니다.  
   
 ```xml  

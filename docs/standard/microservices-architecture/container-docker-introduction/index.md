@@ -1,21 +1,14 @@
 ---
 title: 컨테이너 및 Docker 소개
 description: 컨테이너화된 .NET 응용 프로그램을 위한 .NET 마이크로 서비스 아키텍처 | 컨테이너 및 Docker 소개
-keywords: Docker, 마이크로 서비스, ASP.NET, 컨테이너
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.prod: .net-core
-ms.technology: dotnet-docker
-ms.topic: article
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 8809ae41609ff0e2d2fc969d412cb5edc8939653
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: c1f78a8904270123188367a01bddbcac3f7f1b7f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="introduction-to-containers-and-docker"></a>컨테이너 및 Docker 소개
 
@@ -23,7 +16,7 @@ ms.lasthandoff: 12/23/2017
 
 배송 컨테이너를 사용하여 컨테이너 안에 들어있는 화물에 상관없이 상품을 배, 기차 또는 트럭으로 운반하듯이 소프트웨어 컨테이너도 다양한 코드 및 종속성을 포함할 수 있는 소프트웨어의 표준 단위 역할을 합니다. 이러한 방식의 소프트웨어 컨테이너화를 통해 개발자와 IT 전문가는 수정 과정을 거의 거치지 않고 모든 환경에서 응용 프로그램을 배포할 수 있습니다.
 
-또한 컨테이너는 공유 OS에서 응용 프로그램을 서로 격리합니다. 컨테이너화된 응용 프로그램은 OS(Linux 또는 Windows)에서 차례대로 실행되는 컨테이너 호스트의 맨 위에서 실행됩니다. 따라서 컨테이너의 공간은 VM(가상 컴퓨터) 이미지보다 훨씬 작습니다.
+또한 컨테이너는 공유 OS에서 응용 프로그램을 서로 격리합니다. 컨테이너화된 응용 프로그램은 OS(Linux 또는 Windows)에서 차례대로 실행되는 컨테이너 호스트의 맨 위에서 실행됩니다. 따라서 컨테이너의 공간은 VM(가상 머신) 이미지보다 훨씬 작습니다.
 
 그림 2-1에 표시된 것처럼 각 컨테이너는 전체 웹 응용 프로그램 또는 서비스를 실행할 수 있습니다. 이 예제에서는 Docker 호스트가 컨테이너 호스트이며 앱 1, 앱 2, Svc 1, Svc 2가 컨테이너화된 응용 프로그램 또는 서비스입니다.
 

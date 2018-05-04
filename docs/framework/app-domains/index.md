@@ -1,31 +1,19 @@
 ---
 title: 응용 프로그램 도메인 및 어셈블리를 사용한 프로그래밍
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-bcl
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - assemblies [.NET Framework], programming
 - programming assemblies
 - application domains, programming
 - programming application domains
 ms.assetid: 96d3b8e3-bef8-4da0-9a81-9841e23a94e9
-caps.latest.revision: 11
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 216766a8d8f120594c7d6dd1fd192f90b775c1d7
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 7124b6b234601e3afc27109ac318f47e3fe40c35
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="programming-with-application-domains-and-assemblies"></a>응용 프로그램 도메인 및 어셈블리를 사용한 프로그래밍
 Microsoft Internet Explorer, ASP.NET 및 Windows 셸과 같은 호스트는 프로세스에 공용 언어 런타임을 로드하고, 해당 프로세스에서 [응용 프로그램 도메인](../../../docs/framework/app-domains/application-domains.md)을 만든 다음 .NET Framework 응용 프로그램을 실행할 때 해당 응용 프로그램 도메인에서 사용자 코드를 로드한 후 실행합니다. 대부분의 경우 런타임 호스트가 알아서 작업을 진행하므로 응용 프로그램 도메인 만들기 및 어셈블리 로드에 대해 걱정할 필요가 없습니다.  

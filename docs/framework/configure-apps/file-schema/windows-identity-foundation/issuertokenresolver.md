@@ -1,31 +1,21 @@
 ---
 title: '&lt;issuerTokenResolver&gt;'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: f74392f6-3f5b-4880-bd8a-3a9130d31e65
-caps.latest.revision: "9"
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: e859f99768eae5c931618d5902caf40dfad95d54
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 646833f277c3ef4675a835ca0af3daf647e01224
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltissuertokenresolvergt"></a>&lt;issuerTokenResolver&gt;
 토큰 처리기 컬렉션에 대 한 처리기가 사용 되는 발급자 토큰 확인자를 등록 합니다. 발급자 토큰 확인 자가 들어오는 토큰 및 메시지에 서명 토큰을 확인 하는 데 사용 됩니다.  
   
- \<system.identityModel >  
-\<identityConfiguration >  
-\<securityTokenHandlers >  
+ \<system.identityModel>  
+\<identityConfiguration>  
+\<securityTokenHandlers>  
 \<securityTokenHandlerConfiguration >  
 \<issuerTokenResolver >  
   
@@ -45,7 +35,7 @@ ms.lasthandoff: 12/22/2017
 ```  
   
 ## <a name="attributes-and-elements"></a>특성 및 요소  
- 다음 단원에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
+ 다음 섹션에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
   
 ### <a name="attributes"></a>특성  
   
@@ -70,7 +60,7 @@ ms.lasthandoff: 12/22/2017
 > [!NOTE]
 >  지정 하는 `<issuerTokenResolver>` 의 자식 요소로 요소는 [ \<identityConfiguration >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/identityconfiguration.md) 요소, 되지 않지만 이전 버전과 호환성을 위해 계속 지원 됩니다. 설정에는 `<securityTokenHandlerConfiguration>` 요소에서 재정의 된 `<identityConfiguration>` 요소입니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 XML에서 파생 되는 사용자 지정 클래스를 기반으로 하는 발급자 토큰 확인자에 대 한 구성을 보여 줍니다 <xref:System.IdentityModel.Tokens.IssuerTokenResolver>합니다. 토큰 확인 자가 사용자 지정 구성 요소에서 초기화 된 대상 그룹 키 쌍의 사전 유지 관리 (`<AddAudienceKeyPair>`) 클래스에 정의 합니다. 클래스 재정의 <xref:System.IdentityModel.Selectors.SecurityTokenResolver.LoadCustomConfiguration%2A> 이 요소를 처리 하기 위해 메서드. 재정의 다음 예에서 같습니다. 그러나 간단히 하기 위해 호출 하는 메서드 표시 되지 않습니다. 전체 예제를 참조 하십시오.는 `CustomToken` 샘플.  
   
 ```xml  
@@ -79,7 +69,7 @@ ms.lasthandoff: 12/22/2017
 </issuerTokenResolver>  
 ```  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
   
 ```  
 public override void LoadCustomConfiguration(System.Xml.XmlNodeList nodelist)  

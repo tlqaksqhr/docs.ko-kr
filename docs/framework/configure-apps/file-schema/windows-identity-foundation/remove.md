@@ -1,26 +1,14 @@
 ---
 title: '&lt;remove&gt;'
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 4058e2f1-7db4-4d1a-84dd-1b52836f2ae6
-caps.latest.revision: 5
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload:
-- dotnet
-ms.openlocfilehash: fb62bbe8b52032708dddd62dd895e61ba8c1c5e9
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: dfea0b0eb4b133308f10b523a659cc00f87252b8
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltremovegt"></a>&lt;remove&gt;
 토큰 처리기 컬렉션에서 지정 된 보안 토큰 처리기를 제거합니다.  
@@ -61,7 +49,7 @@ ms.lasthandoff: 01/19/2018
 |-------------|-----------------|  
 |[\<securityTokenHandlers>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/securitytokenhandlers.md)|보안 토큰 처리기에 등록 된 끝점의 컬렉션을 지정 합니다.|  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 XML에서는 `<add>` 및 `<remove>` 요소를 사용자 지정 세션 토큰 처리기의 기본 세션 토큰 처리기를 바꿉니다. XML에서 가져온 것은 `ClaimsAwareWebFarm` 샘플.  
   
 ```xml  

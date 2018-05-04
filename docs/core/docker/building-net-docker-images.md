@@ -1,24 +1,22 @@
 ---
-title: ".NET Core Docker 이미지 작성"
-description: "Docker 이미지 및 .NET Core 이해"
-keywords: .NET, .NET Core, Docker
+title: .NET Core Docker 이미지 작성
+description: Docker 이미지 및 .NET Core 이해
 author: jralexander
 ms.author: johalex
 ms.date: 11/06/2017
 ms.topic: tutorial
-ms.prod: .net-core
+ms.prod: dotnet-core
 ms.technology: dotnet-docker
 ms.devlang: dotnet
-ms.assetid: 03c28597-7e73-46d6-a9c3-f9cb55642739
 ms.custom: mvc
 manager: wpickett
 ms.workload:
 - dotnetcore
-ms.openlocfilehash: d5631bdbc0334640b290c08df17cba0bfe99fe85
-ms.sourcegitcommit: c3957fdb990060559d73cca44ab3e2c7b4d049c0
+ms.openlocfilehash: c1983be59b4a961cabd94915852e0cab7811682c
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="building-docker-images-for-net-core-applications"></a>.NET Core 응용 프로그램에 대한 Docker 이미지 작성
 
@@ -105,7 +103,7 @@ ms.lasthandoff: 03/05/2018
 > [!NOTE]
 > 빌드 이미지는 응용 프로그램을 빌드하는 데 필요한 도구를 포함하는 반면 런타임 이미지는 그렇지 않습니다.
 
-### <a name="prerequisites"></a>필수 구성 요소
+### <a name="prerequisites"></a>전제 조건
 
 빌드하고 실행하려면 다음 항목을 설치합니다.
 
@@ -191,7 +189,7 @@ docker run -it --rm --name aspnetcore_sample aspnetapp
 ```
 
 > [!IMPORTANT]
-> Windows 컨테이너를 사용하는 경우 브라우저에서 **컨테이너 IP 주소**(http://localhost와 반대로)로 이동해야 합니다. 다음 단계를 사용하여 컨테이너의 IP 주소를 가져올 수 있습니다.
+> Windows 컨테이너를 사용하는 경우 브라우저에서 **컨테이너 IP 주소**(http://localhost)와 반대로)로 이동해야 합니다. 다음 단계를 사용하여 컨테이너의 IP 주소를 가져올 수 있습니다.
 
 * 다른 명령 프롬프트를 엽니다.
 * `docker ps`를 실행하여 실행 중인 컨테이너를 봅니다. "aspnetcore_sample" 컨테이너가 있어야 합니다.

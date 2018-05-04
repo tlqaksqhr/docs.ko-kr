@@ -1,27 +1,15 @@
 ---
-title: "행 오류 정보"
-ms.custom: 
+title: 행 오류 정보
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 8b1f9070-d032-48c7-b030-bd8fbb2ca59a
-caps.latest.revision: "4"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 3e8b2e486f33cbe3851b0d24911f5976a1a4b3c6
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 6f3f332d4b9bd0be9934c7bf7722e8ff71c4eb2f
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="row-error-information"></a>행 오류 정보
 <xref:System.Data.DataTable>에서 값을 편집하면서 행 오류에 응답하지 않으려면 나중에 사용할 수 있도록 오류 정보를 행에 추가합니다. <xref:System.Data.DataRow> 개체는 이를 위해 행마다 <xref:System.Data.DataRow.RowError%2A> 속성을 제공합니다. 에 데이터 추가 **RowError** 속성의는 **DataRow** 설정는 <xref:System.Data.DataRow.HasErrors%2A> 속성의는 **DataRow** 를 **true**합니다. 경우는 **DataRow** 의 일부는 **DataTable**, 및 **DataRow.HasErrors** 은 **true**, **DataTable.HasErrors** 속성도 **true**합니다. 에 적용 됩니다는 **데이터 집합** 입니다는 **DataTable** 속해 있습니다. 오류를 테스트 하는 경우 확인할 수 있습니다는 **HasErrors** 속성을 오류 정보가 특정 행에 추가 되었는지 확인 합니다. 경우 **HasErrors** 은 **true**를 사용할 수 있습니다는 <xref:System.Data.DataTable.GetErrors%2A> 의 메서드는 **DataTable** 돌아간 다음 예제와 같이 오류가 있는 행만 검사 합니다.  

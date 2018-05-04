@@ -1,34 +1,20 @@
 ---
 title: '&lt;wsFederationHttpBinding&gt;'
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - wsFederationBinding element
 ms.assetid: 9c3312b4-2137-4e71-bf3f-de1cf8e9be79
-caps.latest.revision: ''
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: f5d4e55f7ad2d4a347d51c3cd79647c070c11e2d
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: d89d0aeb68aed91b28ca7358a6140e171d3b36b2
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltwsfederationhttpbindinggt"></a>&lt;wsFederationHttpBinding&gt;
 WS-Federation을 지원하는 바인딩을 정의합니다.  
   
  \<system.ServiceModel>  
-\<bindings>  
+\<바인딩 >  
 wsFederationBinding 요소  
   
 ## <a name="syntax"></a>구문  
@@ -150,9 +136,9 @@ wsFederationBinding 요소
 |[\<bindings>](../../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)|이 요소는 표준 및 사용자 지정 바인딩의 컬렉션을 보유합니다.|  
   
 ## <a name="remarks"></a>설명  
- 페더레이션은 인증 및 권한 부여를 위해 여러 시스템에서 ID를 공유하는 기능입니다. 이러한 ID는 사용자나 시스템을 가리킬 수 있습니다. 페더레이션 HTTP는 SOAP 보안과 혼합 모드 보안을 모두 지원하지만 전송 보안만을 사용하여 지원하지는 않습니다. 이 바인딩은 [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)]에 WS-Federation 프로토콜에 대한 지원을 제공합니다. 이 바인딩으로 구성된 서비스는 HTTP 전송을 사용해야 합니다.  
+ 페더레이션은 인증 및 권한 부여를 위해 여러 시스템에서 ID를 공유하는 기능입니다. 이러한 ID는 사용자나 시스템을 가리킬 수 있습니다. 페더레이션 HTTP는 SOAP 보안과 혼합 모드 보안을 모두 지원하지만 전송 보안만을 사용하여 지원하지는 않습니다. 이 바인딩은 WS-페더레이션 프로토콜에 대 한 Windows Communication Foundation (WCF) 지원을 합니다. 이 바인딩으로 구성된 서비스는 HTTP 전송을 사용해야 합니다.  
   
- 바인딩은 바인딩 요소의 스택으로 구성됩니다. 가 기본값인 로 설정된 경우  
+ 바인딩은 바인딩 요소의 스택으로 구성됩니다.  가 기본값인 로 설정된 경우  
   
  `wsFederationHttpBinding`에 있는 바인딩 요소의 스택은`wsHttpBinding`  
   

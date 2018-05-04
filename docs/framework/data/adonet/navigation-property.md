@@ -1,24 +1,12 @@
 ---
-title: "탐색 속성(navigation property)"
-ms.custom: 
+title: 탐색 속성(navigation property)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: d0bf1a6a-1d84-484c-b7c3-b410fd8dc0b1
-caps.latest.revision: "3"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: f5af52532dc534d793e7e8ce72a08c2f7229569b
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 149aefe84c9d04fab1786b99c2ac8c5060bccd87
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="navigation-property"></a>탐색 속성(navigation property)
 A *탐색 속성* 은 선택적 속성에는 [엔터티 형식](../../../../docs/framework/data/adonet/entity-type.md) 하나씩 탐색할 수 있게 해 주는 [끝](../../../../docs/framework/data/adonet/association-end.md) 의 [연결](../../../../docs/framework/data/adonet/association-type.md) 를 다른 쪽 끝입니다. 다른 달리 [속성](../../../../docs/framework/data/adonet/property.md), 탐색 속성은 데이터를 전달 하지 않습니다.  

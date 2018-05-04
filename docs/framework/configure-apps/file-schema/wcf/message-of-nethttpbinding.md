@@ -1,32 +1,20 @@
 ---
-title: "&lt;netHttpBinding&gt;의 &lt;message&gt;"
-ms.custom: 
+title: '&lt;netHttpBinding&gt;의 &lt;message&gt;'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 9def5a35-475d-40d6-b716-ccdbd93863c7
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 17a0043188c36a31dc4ee35e8f5889240b9b7407
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
-ms.translationtype: MT
+ms.openlocfilehash: 6e4cd2c000d577e26b54e09f24279e0fd74afcf1
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltmessagegt-of-ltnethttpbindinggt"></a>&lt;netHttpBinding&gt;의 &lt;message&gt;
 메시지 수준 보안 설정을 정의 [ \<basicHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md)합니다.  
   
  \<system.ServiceModel>  
-\<bindings>  
+\<바인딩 >  
 \<netHttpBinding>  
-\<binding>  
+\<바인딩 >  
 \<security>  
 \<message>  
   
@@ -52,7 +40,7 @@ ms.lasthandoff: 01/19/2018
   
 |값|설명|  
 |-----------|-----------------|  
-|UserName|-UserName 자격 증명으로 서버에 클라이언트를 인증 하도록 해야 합니다. 이 자격 증명은 <`clientCredentials`> 요소를 사용하여 지정해야 합니다.<br />-   [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)]암호 다이제스트를 보내거나 암호를 사용 하 고 메시지 보안에 이러한 키를 사용 하 여 키를 파생 하는 지원 하지 않습니다. 따라서 [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)]에서는 UserName 자격 증명을 사용할 때 전송에 보안을 적용합니다. `basicHttpBinding`의 경우 SSL 채널을 설정해야 합니다.|  
+|UserName|-UserName 자격 증명으로 서버에 클라이언트를 인증 하도록 해야 합니다. 이 자격 증명은 <`clientCredentials`> 요소를 사용하여 지정해야 합니다.<br />-   [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 암호 다이제스트를 보내거나 암호를 사용 하 고 메시지 보안에 이러한 키를 사용 하 여 키를 파생 하는 지원 하지 않습니다. 따라서 [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)]에서는 UserName 자격 증명을 사용할 때 전송에 보안을 적용합니다. `basicHttpBinding`의 경우 SSL 채널을 설정해야 합니다.|  
 |인증서|클라이언트가 인증서를 사용하여 서버의 인증을 받도록 요구합니다. 이 경우 <`clientCredentials`> 및 <`clientCertificate`>를 사용하여 클라이언트 자격 증명을 지정해야 합니다. 또한 메시지 보안 모드를 사용하는 경우 서비스 인증서를 사용하여 클라이언트를 구축해야 합니다. 서비스 자격 증명을이 예에서 사용 하 여 지정 해야 <xref:System.ServiceModel.Description.ClientCredentials> 클래스 또는 `ClientCredentials` 동작 요소는 서비스를 지정 하 고 인증서를 사용 하는 \<serviceCertificate > serviceCredentials의 요소입니다.|  
   
 ### <a name="child-elements"></a>자식 요소  
@@ -64,7 +52,7 @@ ms.lasthandoff: 01/19/2018
 |-------------|-----------------|  
 |<`security`> 요소의 <`netHttpBinding`>|<`netHttpBinding`> 요소의 보안 기능을 정의합니다.|  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  이 샘플에서는 basicHttpBinding 및 메시지 보안을 사용하는 응용 프로그램을 구현하는 방법을 보여 줍니다. 다음 서비스 구성 예제에서 끝점 정의는 basicHttpBinding을 지정하고 `Binding1`이라는 바인딩 구성을 참조합니다. 서비스가 클라이언트에게 자신을 인증하는 데 사용하는 인증서는 구성 파일의 `behaviors` 섹션에 있는 `serviceCredentials` 요소 아래에 설정됩니다. 클라이언트가 서비스에 자신을 인증하는 데 사용하는 인증서에 적용되는 유효성 검사 모드 또한 `behaviors` 섹션에서 `clientCertificate` 요소 아래에 설정됩니다.  
   
  동일한 바인딩 및 보안 세부 정보가 클라이언트 구성 파일에 지정됩니다.  

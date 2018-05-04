@@ -1,27 +1,15 @@
 ---
-title: "쿼리 식 구문 예제: 프로젝션"
-ms.custom: 
+title: '쿼리 식 구문 예제: 프로젝션'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 079926c5-e6b5-4fb9-b4cf-9c63886dd626
-caps.latest.revision: "3"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: d6ed78cd18ab83d900647722ba0f9efe7293818d
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 69c807bdc052dda9e62216aa1611b4a6b2155a27
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="query-expression-syntax-examples-projection"></a>쿼리 식 구문 예제: 프로젝션
 이 항목의 예제에 사용 하는 방법을 보여 주기는 `Select` 메서드 및 `From … From …` 키워드를는 [AdventureWorks Sales 모델](http://msdn.microsoft.com/library/f16cd988-673f-4376-b034-129ca93c7832) 쿼리 식 구문을 사용 합니다. `From … From …`은 `SelectMany` 메서드에 해당하는 쿼리 기반 키워드입니다. 이 예제에서 사용하는 AdventureWorks Sales 모델에서는 AdventureWorks 샘플 데이터베이스의 Contact, Address, Product, SalesOrderHeader 및 SalesOrderDetail 테이블을 사용합니다.  
@@ -53,7 +41,7 @@ ms.lasthandoff: 01/19/2018
   
 ## <a name="from--from--selectmany"></a>보낸 사람... 보낸 사람... (SelectMany)  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  다음 예제에서는 `From … From …`(<xref:System.Linq.Enumerable.SelectMany%2A> 메서드와 같음)을 사용하여 `TotalDue`가 500.00보다 작은 모든 주문을 선택합니다.  
   
  [!code-csharp[DP L2E Examples#SelectManyCompoundFrom](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Examples/CS/Program.cs#selectmanycompoundfrom)]

@@ -1,14 +1,6 @@
 ---
-title: "&lt;추가&gt; 요소에 대 한 &lt;수신기&gt; 에 대 한 &lt;추적&gt;"
-ms.custom: 
+title: '&lt;추가&gt; 요소에 대 한 &lt;수신기&gt; 에 대 한 &lt;추적&gt;'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/trace/listeners/add
 helpviewer_keywords:
@@ -16,17 +8,14 @@ helpviewer_keywords:
 - <add> element for <listeners>
 - add element for <listeners>
 ms.assetid: 81e804a3-ef11-4d39-bbde-bfa012c179e2
-caps.latest.revision: 
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload:
-- dotnet
-ms.openlocfilehash: eb624052c3638cb49abe143ebd4173a5ee85a054
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: e27187c05b49b7f73ef19243a3286e8c1de71579
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltaddgt-element-for-ltlistenersgt-for-lttracegt"></a>&lt;추가&gt; 요소에 대 한 &lt;수신기&gt; 에 대 한 &lt;추적&gt;
 수신기를 추가 **수신기** 컬렉션입니다.  
@@ -46,7 +35,7 @@ ms.lasthandoff: 12/22/2017
 ```  
   
 ## <a name="attributes-and-elements"></a>특성 및 요소  
- 다음 단원에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
+ 다음 섹션에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
   
 ### <a name="attributes"></a>특성  
   
@@ -95,8 +84,8 @@ ms.lasthandoff: 12/22/2017
 |<xref:System.Diagnostics.TextWriterTraceListener?displayProperty=nameWithType>|파일의 이름 하 여 <xref:System.Diagnostics.TextWriterTraceListener> 를 씁니다.|  
 |<xref:System.Diagnostics.XmlWriterTraceListener?displayProperty=nameWithType>|파일의 이름 하 여 <xref:System.Diagnostics.XmlWriterTraceListener> 를 씁니다.|  
   
-## <a name="example"></a>예  
- 다음 예제에서는 사용 하는 방법을 보여 줍니다.  **\<추가 >** 요소를 추가 하는 수신기 `MyListener` 및 `MyEventListener` 에 **수신기** 컬렉션입니다. `MyListener`라는 파일을 만들어 `MyListener.log` 출력 파일에 씁니다. `MyEventListener`이벤트 로그에 항목을 만듭니다.  
+## <a name="example"></a>예제  
+ 다음 예제에서는 사용 하는 방법을 보여 줍니다.  **\<추가 >** 요소를 추가 하는 수신기 `MyListener` 및 `MyEventListener` 에 **수신기** 컬렉션입니다. `MyListener` 라는 파일을 만들어 `MyListener.log` 출력 파일에 씁니다. `MyEventListener` 이벤트 로그에 항목을 만듭니다.  
   
 ```xml  
 <configuration>  

@@ -1,24 +1,12 @@
 ---
-title: "수정 SQL 생성"
-ms.custom: 
+title: 수정 SQL 생성
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 2188a39d-46ed-4a8b-906a-c9f15e6fefd1
-caps.latest.revision: "3"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 6696d80246d61cc2eac47266837d79661141b9b0
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: b7bb390fd4e221c70d5ed8da5873c557fcde3c98
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="modification-sql-generation"></a>수정 SQL 생성
 이 단원에서는 SQL:1999 규격 데이터베이스 공급자에 대한 수정 SQL 생성 모듈을 개발하는 방법에 대해 설명합니다. 이 모듈은 수정 명령 트리를 적절한 SQL INSERT, UPDATE 또는 DELETE 문으로 변환하는 작업을 담당합니다.  
@@ -115,7 +103,7 @@ The elements of the list are specified as type DbModificationClause, which speci
 ## <a name="generating-an-insert-sql-command"></a>INSERT SQL 명령 생성  
  샘플 공급자에서 지정된 DbInsertCommandTree의 경우 생성된 INSERT 명령은 아래의 두 삽입 템플릿 중 하나를 따릅니다.  
   
- 첫 번째 템플릿에는 SetClauses 목록의 값에 따라 삽입을 수행하는 명령과 Returning 속성이 null이 아닌 경우 삽입된 행의 Returning 속성에 지정된 속성을 반환하는 SELECT 문이 있습니다. 조건자 요소 "@@ROWCOUNT > 0" 행이 삽입 되 면 true입니다. 조건자 요소 "keyMemberI = keyValueI &#124; scope_identity () "는" keyMemberI = scope_identity () "scope_identity () id (저장소 생성) 열에 삽입 된 마지막 id 값을 반환 하기 때문에 keyMemeberI이 저장소 생성 키를 하는 경우에 합니다.  
+ 첫 번째 템플릿에는 SetClauses 목록의 값에 따라 삽입을 수행하는 명령과 Returning 속성이 null이 아닌 경우 삽입된 행의 Returning 속성에 지정된 속성을 반환하는 SELECT 문이 있습니다. 조건자 요소 "@@ROWCOUNT > 0" 행이 삽입 되 면 true입니다. 조건자 요소 "keyMemberI = keyValueI &#124; scope_identity ()"는 "keyMemberI = scope_identity ()" scope_identity ()에는 identity (삽입 된 마지막 id 값을 반환 하기 때문에 keyMemeberI이 저장소 생성 키를 하는 경우에 저장소 생성) 열입니다.  
   
 ```  
 -- first insert Template  

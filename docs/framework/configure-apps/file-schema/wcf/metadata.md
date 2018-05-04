@@ -1,30 +1,18 @@
 ---
-title: "&lt;메타 데이터&gt;"
-ms.custom: 
+title: '&lt;메타 데이터&gt;'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: d09653eb-e355-4c73-b87b-28f93d56480d
-caps.latest.revision: "8"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: e1da05ebd48a3fff7c35510db4093d56831a8fcd
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 7e314ae56ed7a1b532bb8946fbb28802e72d3e20
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltmetadatagt"></a>&lt;메타 데이터&gt;
 서비스 메타데이터를 처리할 수 있는 방법을 지정합니다.  
   
- \<시스템입니다. ServiceModel >  
-\<클라이언트 >  
+ \<system.ServiceModel>  
+\<client>  
   
 ## <a name="syntax"></a>구문  
   
@@ -44,7 +32,7 @@ ms.lasthandoff: 12/22/2017
 ```  
   
 ## <a name="attributes-and-elements"></a>특성 및 요소  
- 다음 단원에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
+ 다음 섹션에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
   
 ### <a name="attributes"></a>특성  
  없음  

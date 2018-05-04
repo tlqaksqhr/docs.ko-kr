@@ -1,27 +1,15 @@
 ---
-title: "데이터 집합 및 XmlDataDocument 동기화"
-ms.custom: 
+title: 데이터 집합 및 XmlDataDocument 동기화
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 0ce3793d-54b2-47e4-8cf7-b0591cc4dd21
-caps.latest.revision: "5"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 9cdfdf01b950d13ba77f76b126fe6d2ff430ef07
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: cb16d4fae5dc153361fe2cb31cfd6af9b4b83c68
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="dataset-and-xmldatadocument-synchronization"></a>데이터 집합 및 XmlDataDocument 동기화
 ADO.NET <xref:System.Data.DataSet>으로 데이터의 관계형 표현을 사용할 수 있습니다. 계층적으로 데이터에 액세스하기 위해 .NET Framework에서 사용 가능한 XML 클래스를 사용할 수 있습니다. 지금까지는 데이터의 이와 같은 두 가지 표현이 별도로 사용되어 왔습니다. 그러나.NET Framework에서는 통해 데이터의 관계형 및 계층적 표현에 대 한 실시간으로 동시 액세스는 **데이터 집합** 개체 및 <xref:System.Xml.XmlDataDocument> 개체를 각각.  
@@ -30,7 +18,7 @@ ADO.NET <xref:System.Data.DataSet>으로 데이터의 관계형 표현을 사용
   
  동기화 할 수 있는 여러 가지는 **DataSet** 와 **XmlDataDocument**합니다. 다음과 같은 작업을 수행할 수 있습니다.  
   
--   채우기는 **데이터 집합** 스키마 (즉, 관계형 구조) 및 데이터를 새 동기화 하십시오 **XmlDataDocument**합니다. 이렇게 하면 기존 관계형 데이터를 계층적으로 표시할 수 있습니다. 예:  
+-   채우기는 **데이터 집합** 스키마 (즉, 관계형 구조) 및 데이터를 새 동기화 하십시오 **XmlDataDocument**합니다. 이렇게 하면 기존 관계형 데이터를 계층적으로 표시할 수 있습니다. 예를 들어:  
   
     ```vb  
     Dim dataSet As DataSet = New DataSet  

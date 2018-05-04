@@ -1,9 +1,6 @@
 ---
-title: "ConnectionGroup.m_ConnectionList 필드"
+title: ConnectionGroup.m_ConnectionList 필드
 ms.date: 05/01/2017
-ms.prod: .net-framework
-ms.technology: 
-ms.topic: reference
 topic_type:
 - apiref
 api_name:
@@ -15,18 +12,15 @@ api_type:
 ms.assetid: 186083cf-8dff-4600-a2ab-6fed4b4de6af
 author: guardrex
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 6b89a621e5a438e2385f07bcaf910d799a49d32d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 5844f8d63aa5646bfd7860dc0407528fb2eaf329
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="connectiongroupmconnectionlist-field"></a>ConnectionGroup.m\_ConnectionList 필드
 
-`ConnectionGroup.m_ConnectionList`이 <xref:System.Collections.ArrayList> 동일한 URI 및 공유를 사용 하는 연결 개체의 일부 다른 속성에 대 한 동일한 값 만료 및 인증을 선택 합니다.
+`ConnectionGroup.m_ConnectionList` 이 <xref:System.Collections.ArrayList> 동일한 URI 및 공유를 사용 하는 연결 개체의 일부 다른 속성에 대 한 동일한 값 만료 및 인증을 선택 합니다.
 
 ## <a name="syntax"></a>구문
   
@@ -41,7 +35,7 @@ private ArrayList m_ConnectionList
 
 ## <a name="requirements"></a>요구 사항
 
-**Namespace:**<xref:System.Net>
+**Namespace:** <xref:System.Net>
 
 **어셈블리:** 시스템 (System.dll)
 

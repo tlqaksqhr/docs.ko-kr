@@ -1,35 +1,26 @@
 ---
-title: "&lt;제거&gt; 요소에 대 한 &lt;namedCaches&gt;"
-ms.custom: 
+title: '&lt;제거&gt; 요소에 대 한 &lt;namedCaches&gt;'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - remove element for namedCaches
 - <remove> element for namedCaches
 ms.assetid: 24211ea5-163e-4fe5-aed8-004d8499760c
-caps.latest.revision: "10"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: 4b360b206586b263627ab6f6b7e0309f3055f38a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 6ffaea24910a6b8f4a120d6b72219bff592fab17
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltremovegt-element-for-ltnamedcachesgt"></a>&lt;제거&gt; 요소에 대 한 &lt;namedCaches&gt;
 메모리 캐시용으로 명명된 캐시 항목을 `namedCaches` 컬렉션에서 제거합니다.  
   
- \<system.runtime.caching >  
-\<memoryCache >  
+ \<system.runtime.caching>  
+\<memoryCache>  
 \<namedCaches >  
-\<제거 >  
+\<remove>  
   
 ## <a name="syntax"></a>구문  
   
@@ -44,7 +35,7 @@ ms.lasthandoff: 12/22/2017
  `None`  
   
 ## <a name="attributes-and-elements"></a>특성 및 요소  
- 다음 단원에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
+ 다음 섹션에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
   
 ### <a name="attributes"></a>특성  
  `None`  

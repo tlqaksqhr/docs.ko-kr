@@ -1,30 +1,18 @@
 ---
-title: "&lt;호스트&gt;"
-ms.custom: 
+title: '&lt;호스트&gt;'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: be566d55-9d50-4b2e-985d-52a5cc26cbbb
-caps.latest.revision: "7"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 7177c62af8501258ad8709bff88cb85488b56727
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 9c48fff7473449192887bfd8cc201dd87cb4e7f7
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="lthostgt"></a>&lt;호스트&gt;
 서비스 호스트의 설정을 지정합니다.  
   
- \<시스템입니다. ServiceModel >  
-\<서비스 >  
+ \<system.ServiceModel>  
+\<services>  
 \<서비스 >  
 \<호스트 >  
   
@@ -44,7 +32,7 @@ ms.lasthandoff: 12/22/2017
  `Type`  
   
 ## <a name="attributes-and-elements"></a>특성 및 요소  
- 다음 단원에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
+ 다음 섹션에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
   
 ### <a name="attributes"></a>특성  
  없음  
@@ -60,7 +48,7 @@ ms.lasthandoff: 12/22/2017
   
 |요소|설명|  
 |-------------|-----------------|  
-|[\<서비스 >](../../../../../docs/framework/configure-apps/file-schema/wcf/service.md)|[!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] 서비스의 설정을 지정합니다.|  
+|[\<service>](../../../../../docs/framework/configure-apps/file-schema/wcf/service.md)|Windows Communication Foundation (WCF) 서비스에 대 한 설정을 지정합니다.|  
   
 ## <a name="see-also"></a>참고 항목  
  <xref:System.ServiceModel.Configuration.HostElement>  

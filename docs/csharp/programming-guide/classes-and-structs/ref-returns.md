@@ -8,15 +8,15 @@ ms.topic: article
 ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
-ms.openlocfilehash: 57fa8f52320b30a1cb228b41e3f5e6655c235561
-ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
+ms.openlocfilehash: 98c58d083cb806a92e28c1c9d27effa1124fd153
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="ref-returns-and-ref-locals"></a>참조 반환 및 참조 로컬
 
-C# 7부터 C#에서 참조 반환 값(ref return)을 지원합니다. 참조 반환 값을 사용하면 메서드가 값이 아니라 변수 참조를 호출자에게 다시 반환할 수 있습니다. 그러면 호출자는 반환된 변수를 마치 값이나 참조로 반환된 것처럼 처리하도록 선택할 수 있습니다. 호출자는 참조 로컬이라고 하는, 반환된 값에 대한 참조 자체인 새 변수를 만들 수 있습니다.
+C# 7.0부터 C#에서 참조 반환 값(ref return)을 지원합니다. 참조 반환 값을 사용하면 메서드가 값이 아니라 변수 참조를 호출자에게 다시 반환할 수 있습니다. 그러면 호출자는 반환된 변수를 마치 값이나 참조로 반환된 것처럼 처리하도록 선택할 수 있습니다. 호출자는 참조 로컬이라고 하는, 반환된 값에 대한 참조 자체인 새 변수를 만들 수 있습니다.
 
 ## <a name="what-is-a-reference-return-value"></a>참조 반환 값이란?
 

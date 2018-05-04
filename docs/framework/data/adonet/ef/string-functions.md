@@ -1,24 +1,12 @@
 ---
-title: "문자열 함수"
-ms.custom: 
+title: 문자열 함수
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 338f0c26-8aee-43eb-bd1a-ec0849a376b9
-caps.latest.revision: "4"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: ba371840cf5c3b19ee232be0934557d87e7c343f
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 0faac7eb37a1405c38137ce9887cf7de4c36df3a
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="string-functions"></a>문자열 함수
 .NET Framework Data Provider for SQL Server(SqlClient)에서는 입력 `String`에 대해 연산을 수행하고 `String` 또는 숫자 값 결과를 반환하는 `String` 함수를 제공합니다. 이 함수는 SqlClient를 사용할 때 사용 가능한 SqlServer 네임스페이스에 있습니다. 공급자의 네임스페이스 속성이 있으면 특정 구문(예: 형식 및 함수)에 대해 이 공급자가 사용하는 접두사를 Entity Framework에서 찾을 수 있습니다.  
@@ -46,7 +34,7 @@ ms.lasthandoff: 01/17/2018
 |`SOUNDEX(expression)`|두 문자열의 유사성을 평가 하는 4 자 (SOUNDEX) 코드를 반환 합니다. **인수**<br /><br /> `expression`: 유니코드 또는 ASCII String 형식입니다.<br /><br /> **반환 값**<br /><br /> ASCII `String`입니다. 4자(SOUNDEX) 코드는 두 문자열의 유사성을 계산하는 문자열입니다.<br /><br /> **예제**<br /><br /> `Select SqlServer.SOUNDEX('Smith'), SqlServer.SOUNDEX('Smythe') FROM {1}`<br /><br /> **반환**<br /><br /> `----- -----  S530  S530`|  
 |`SPACE(int_expression)`|반복되는 공백으로 구성된 ASCII `String`을 반환합니다.<br /><br /> **인수**<br /><br /> `int_expression`: 공백 수를 나타내는 `Int64`(SQL Server 2000에서는 반환되지 않음) 또는 `Int32`입니다.<br /><br /> **반환 값**<br /><br /> ASCII `String`입니다.<br /><br /> **예제**<br /><br /> `SqlServer.SPACE(2)`|  
 |`STR(float_expression [, length [, decimal]])`|숫자 데이터에서 변환된 ASCII `String`을 반환합니다.<br /><br /> **인수**<br /><br /> `float _expression`: 소수점이 있는 근사치(`Double`) 데이터 형식의 식입니다.<br /><br /> `length`: (선택 사항) 전체 길이를 나타내는 `Int32`입니다. 소수점, 부호, 숫자 및 공백을 포함한 길이입니다. 기본값은 10입니다.<br /><br /> `decimal`: (선택 사항)는 `Int32` 소수점 오른쪽 자릿수를 나타내는입니다. decimal은 16 이하여야 합니다. decimal이 16을 초과할 경우 결과가 소수점 이하 16자릿수에서 잘립니다.<br /><br /> **반환 값**<br /><br /> ASCII `String`입니다.<br /><br /> **예제**<br /><br /> `SqlServer.STR(212.0)`|  
-|`STUFF(str_expression, start, length, str_expression_to_insert)`|문자열 식에서 지정된 시작점부터 지정된 길이만큼 문자를 삭제하고 다른 문자 집합을 삽입합니다.<br /><br /> **인수**<br /><br /> `str_expression`: 유니코드 또는 ASCII `String`입니다.<br /><br /> `start:``Int64` (SQL Server 2000에서는 반환 되지 않음) 또는 `Int32` 삭제 및 삽입 시작 위치를 지정 하는 값입니다.<br /><br /> `length`: 삭제할 문자 수를 지정하는 `Int64`(SQL Server 2000에서는 반환되지 않음) 또는 `Int32` 값입니다.<br /><br /> `str_expression_to_insert`: 유니코드 또는 ASCII `String`입니다.<br /><br /> **반환 값**<br /><br /> 유니코드 또는 ASCII `String`입니다.<br /><br /> **예제**<br /><br /> `SqlServer.STUFF('abcd', 2, 2, 'zz')`|  
+|`STUFF(str_expression, start, length, str_expression_to_insert)`|문자열 식에서 지정된 시작점부터 지정된 길이만큼 문자를 삭제하고 다른 문자 집합을 삽입합니다.<br /><br /> **인수**<br /><br /> `str_expression`: 유니코드 또는 ASCII `String`입니다.<br /><br /> `start:` `Int64` (SQL Server 2000에서는 반환 되지 않음) 또는 `Int32` 삭제 및 삽입 시작 위치를 지정 하는 값입니다.<br /><br /> `length`: 삭제할 문자 수를 지정하는 `Int64`(SQL Server 2000에서는 반환되지 않음) 또는 `Int32` 값입니다.<br /><br /> `str_expression_to_insert`: 유니코드 또는 ASCII `String`입니다.<br /><br /> **반환 값**<br /><br /> 유니코드 또는 ASCII `String`입니다.<br /><br /> **예제**<br /><br /> `SqlServer.STUFF('abcd', 2, 2, 'zz')`|  
 |`SUBSTRING(str_expression, start, length)`|`String` 식의 일부를 반환합니다.<br /><br /> **인수**<br /><br /> `str_expression`: `String`(유니코드 또는 ASCII) 형식 또는 `Binary` 형식의 식입니다.<br /><br /> `start`: 부분 문자열이 시작되는 위치를 지정하는 `Int64`(SQL Server 2000에서는 반환되지 않음) 또는 `Int32`입니다. 1은 문자열의 첫 번째 문자를 가리킵니다.<br /><br /> `length`: 식에서 반환할 문자 수를 지정하는 `Int64`(SQL Server 2000에서는 반환되지 않음) 또는 `Int32`입니다.<br /><br /> **반환 값**<br /><br /> `String`(ASCII 또는 유니코드) 형식 또는 `Binary` 형식입니다.<br /><br /> **예제**<br /><br /> `SqlServer.SUBSTRING('abcd', 2, 2)`|  
 |`UNICODE(expression)`|유니코드 표준의 정의에 따라 입력 식에 있는 첫 문자의 정수 값을 반환합니다.<br /><br /> **인수**<br /><br /> `expression`: 유니코드 `String`입니다.<br /><br /> **반환 값**<br /><br /> `Int32`입니다.<br /><br /> **예제**<br /><br /> `SqlServer.UNICODE('a')`|  
 |`UPPER(expression)`|소문자 데이터를 대문자로 변환한 후 `String` 식을 반환합니다.<br /><br /> **인수**<br /><br /> `expression`: ASCII 또는 유니코드 String 형식의 식입니다.<br /><br /> **반환 값**<br /><br /> ASCII 또는 유니코드 `String` 형식입니다.<br /><br /> **예제**<br /><br /> `SqlServer.UPPER('AbB')`|  

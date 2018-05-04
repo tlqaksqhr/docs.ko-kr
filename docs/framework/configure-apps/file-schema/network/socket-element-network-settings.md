@@ -1,13 +1,6 @@
 ---
-title: "&lt;소켓&gt; 요소 (네트워크 설정)"
-ms.custom: 
+title: '&lt;소켓&gt; 요소 (네트워크 설정)'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/settings/socket
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#socket
@@ -15,23 +8,21 @@ helpviewer_keywords:
 - <socket> element
 - socket element
 ms.assetid: 366c634c-7d16-478f-aedf-053eda94a1a0
-caps.latest.revision: "21"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: fefb8e119d428d86501e1c8cdd5eec5ef0809cbd
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 995a89dd67664fd6a408f88f20f6837d2dbaaad4
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltsocketgt-element-network-settings"></a>&lt;소켓&gt; 요소 (네트워크 설정)
 소켓 작업 완료 포트를 사용 하는지 여부를 지정 합니다.  
   
  \<configuration>  
-\<system.net >  
-\<설정 >  
+\<system.net>  
+\<settings>  
 \<소켓 >  
   
 ## <a name="syntax"></a>구문  
@@ -45,7 +36,7 @@ ms.lasthandoff: 12/22/2017
 ```  
   
 ## <a name="attributes-and-elements"></a>특성 및 요소  
- 다음 단원에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
+ 다음 섹션에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
   
 ### <a name="attributes"></a>특성  
   
@@ -62,7 +53,7 @@ ms.lasthandoff: 12/22/2017
   
 |**요소**|**설명**|  
 |-----------------|---------------------|  
-|[설정](../../../../../docs/framework/configure-apps/file-schema/network/settings-element-network-settings.md)|<xref:System.Net> 네임스페이스에 대한 기본 네트워크 옵션을 구성합니다.|  
+|[settings](../../../../../docs/framework/configure-apps/file-schema/network/settings-element-network-settings.md)|<xref:System.Net> 네임스페이스에 대한 기본 네트워크 옵션을 구성합니다.|  
   
 ## <a name="remarks"></a>설명  
  `alwaysUseCompletionPortsForAccept` 및 `alwaysUseCompletionPortsForConnect` 특성이 <xref:System.Net.Sockets?displayProperty=nameWithType> 네임스페이스에 있는 클래스에 의해 완료 포트의 사용과 관련된 기본 동작을 지정하는 데 사용됩니다. 완료 포트는 고성능 서버 응용 프로그램에 권장 됩니다.  
@@ -97,7 +88,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="configuration-files"></a>구성 파일  
  이 요소는 응용 프로그램 구성 파일 또는 컴퓨터 구성 파일(Machine.config)에서 사용할 수 있습니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 예제에서는 완료 포트를 사용 해야 함을 지정 하는 방법을 지정 하 고 있는 기본 <xref:System.Net.Sockets.IPProtectionLevel?displayProperty=nameWithType> 제한 해야 합니다.  
   
 ```xml  

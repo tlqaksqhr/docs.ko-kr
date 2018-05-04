@@ -1,11 +1,12 @@
 ---
-title: "Visual Basic을 사용한 파일 액세스"
-ms.custom: 
+title: Visual Basic을 사용한 파일 액세스
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - file access
@@ -20,19 +21,19 @@ helpviewer_keywords:
 - I/O [Visual Basic]
 - sequential access
 ms.assetid: 231533bf-d049-4345-befa-3fb78fe6517d
-caps.latest.revision: "17"
+caps.latest.revision: 17
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 9929061feeccee31028056bc93f0f0a2f119eb4e
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.openlocfilehash: 2aabea79e3c7a6dabf47647c7e27b072738ba363
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="file-access-with-visual-basic"></a>Visual Basic을 사용한 파일 액세스
-`My.Computer.FileSystem` 개체는 파일 및 폴더로 작업하기 위한 도구를 제공합니다. 해당 속성, 메서드 및 이벤트를 사용하여 파일 및 폴더를 만들고 복사, 이동, 조사 및 삭제할 수 있습니다. `My.Computer.FileSystem`은 이전 버전과의 호환성을 위해 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]에서 제공하는 레거시 함수(`FileOpen`, `FileClose`, `Input`, `InputString`, `LineInput` 등)보다 뛰어난 성능을 제공합니다.  
+`My.Computer.FileSystem` 개체는 파일 및 폴더로 작업하기 위한 도구를 제공합니다. 해당 속성, 메서드 및 이벤트를 사용하여 파일 및 폴더를 만들고 복사, 이동, 조사 및 삭제할 수 있습니다. `My.Computer.FileSystem`은 이전 버전과의 호환성을 위해 Visual Basic에서 제공하는 레거시 함수(`FileOpen`, `FileClose`, `Input`, `InputString`, `LineInput` 등)보다 뛰어난 성능을 제공합니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [파일 읽기](../../../../visual-basic/developing-apps/programming/drives-directories-files/reading-from-files.md)  
  `My.Computer.FileSystem` 개체를 사용하여 파일에서 읽기에 대한 항목을 나열합니다.  
   

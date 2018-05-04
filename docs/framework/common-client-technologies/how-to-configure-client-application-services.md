@@ -1,31 +1,31 @@
 ---
-title: "방법: 클라이언트 응용 프로그램 서비스 구성"
-ms.custom: 
+title: '방법: 클라이언트 응용 프로그램 서비스 구성'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - client application services, configuring
 ms.assetid: 34a8688a-a32c-40d3-94be-c8e610c6a4e8
-caps.latest.revision: 
+caps.latest.revision: 23
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: bac21a0c9535326becfe94610db33869da89c471
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: f8a6c6be6874c1a90c9e40b5b82d833aeaa9b63a
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="how-to-configure-client-application-services"></a>방법: 클라이언트 응용 프로그램 서비스 구성
-이 항목에서는 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] **프로젝트 디자이너**를 사용하여 클라이언트 응용 프로그램 서비스를 사용하도록 설정하고 구성하는 방법을 설명합니다. 클라이언트 응용 프로그램 서비스를 사용하면 기존 [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)] 응용 프로그램 서비스에서 사용자의 유효성을 검사하고 사용자 역할과 설정을 검색할 수 있습니다. 구성 후에는 [클라이언트 응용 프로그램 서비스 개요](../../../docs/framework/common-client-technologies/client-application-services-overview.md)의 설명에 따라 응용 프로그램 코드에서 사용하도록 설정된 서비스에 액세스할 수 있습니다. [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)] 응용 프로그램 서비스에 대한 자세한 내용은 [ASP.NET 응용 프로그램 서비스 개요](http://msdn.microsoft.com/library/1162e529-0d70-44b2-b3ab-83e60c695013)를 참조하세요.  
+이 항목에서는 Visual Studio **프로젝트 디자이너**를 사용하여 클라이언트 응용 프로그램 서비스를 사용하도록 설정하고 구성하는 방법을 설명합니다. 클라이언트 응용 프로그램 서비스를 사용하면 기존 [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)] 응용 프로그램 서비스에서 사용자의 유효성을 검사하고 사용자 역할과 설정을 검색할 수 있습니다. 구성 후에는 [클라이언트 응용 프로그램 서비스 개요](../../../docs/framework/common-client-technologies/client-application-services-overview.md)의 설명에 따라 응용 프로그램 코드에서 사용하도록 설정된 서비스에 액세스할 수 있습니다. [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)] 응용 프로그램 서비스에 대한 자세한 내용은 [ASP.NET 응용 프로그램 서비스 개요](http://msdn.microsoft.com/library/1162e529-0d70-44b2-b3ab-83e60c695013)를 참조하세요.  
   
  **프로젝트 디자이너**의 **서비스** 페이지에서 클라이언트 응용 프로그램 서비스를 사용하도록 설정하고 구성할 수 있습니다. **서비스** 페이지에서 프로젝트 App.config 파일의 값을 업데이트합니다. **프로젝트 디자이너**에 액세스하려면 **프로젝트** 메뉴의 **속성** 명령을 사용합니다. **서비스** 페이지에 대한 자세한 내용은 [프로젝트 디자이너, 서비스 페이지](https://msdn.microsoft.com/library/bb398109)를 참조하세요.  
   
@@ -100,7 +100,7 @@ ms.lasthandoff: 01/19/2018
   
      기본값인 `Data Source = |SQL/CE|`가 텍스트 상자에 나타납니다.  
   
-3.  SQL Server Compact 데이터베이스를 생성 및 사용하려면 기본 연결 문자열 값을 유지합니다. [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]에서 데이터베이스 파일을 생성하고 <xref:System.Windows.Forms.Application.UserAppDataPath%2A?displayProperty=nameWithType> 속성에 지정된 디렉터리에 넣습니다.  
+3.  SQL Server Compact 데이터베이스를 생성 및 사용하려면 기본 연결 문자열 값을 유지합니다. Visual Studio에서 데이터베이스 파일을 생성하고 <xref:System.Windows.Forms.Application.UserAppDataPath%2A?displayProperty=nameWithType> 속성에 지정된 디렉터리에 넣습니다.  
   
 4.  암호화된 [!INCLUDE[ssEW](../../../includes/ssew-md.md)] 데이터베이스를 생성 및 사용하려면 다음 예제에 나와 있는 것처럼 `password` 및 `encrypt database` 값을 연결 문자열에 추가합니다.  
   
@@ -111,7 +111,7 @@ ms.lasthandoff: 01/19/2018
     Data Source = |SQL/CE|;password=<password>;encrypt database=true  
     ```  
   
-5.  고유한 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 데이터베이스를 사용하려면 연결 문자열을 직접 지정합니다. 유효한 연결 문자열 형식에 대한 자세한 내용은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 설명서를 참조하세요. 이 데이터베이스는 자동으로 생성되지 않습니다. 연결 문자열은 다음 SQL 문을 사용하여 만들 수 있는 기존 데이터베이스를 참조해야 합니다.  
+5.  고유한 SQL Server 데이터베이스를 사용하려면 연결 문자열을 직접 지정합니다. 유효한 연결 문자열 형식에 대한 자세한 내용은 SQL Server 설명서를 참조하세요. 이 데이터베이스는 자동으로 생성되지 않습니다. 연결 문자열은 다음 SQL 문을 사용하여 만들 수 있는 기존 데이터베이스를 참조해야 합니다.  
   
     ```  
     CREATE TABLE ApplicationProperties (PropertyName nvarchar(256),  
@@ -127,7 +127,7 @@ ms.lasthandoff: 01/19/2018
 ## <a name="using-custom-providers"></a>사용자 지정 공급자 사용  
  기본적으로 클라이언트 응용 프로그램 서비스 기능은 <xref:System.Web.ClientServices.Providers?displayProperty=nameWithType> 네임스페이스의 공급자를 사용합니다. **프로젝트 디자이너**의 **서비스** 페이지를 사용하여 응용 프로그램을 구성할 때는 이러한 공급자에 대한 참조가 App.config 파일에 추가됩니다. 이러한 기본 공급자는 서버의 해당 공급자에 액세스합니다. 웹 서비스는 <xref:System.Web.Security.SqlMembershipProvider>, <xref:System.Web.Security.SqlRoleProvider> 등의 공급자를 통해 사용자 데이터에 액세스하도록 구성되는 경우가 많습니다.  
   
- 사용자 지정 서비스 공급자를 사용하려면 일반적으로 서버에 액세스하는 모든 클라이언트 응용 프로그램에 변경 내용이 적용되도록 서버 쪽에서 공급자를 변경합니다. 그러나 클라이언트 쪽에서 기본값이 아닌 공급자를 사용하는 옵션도 있습니다. 다음 절차에 나와 있는 대로 프로젝트의 App.config 파일에서 사용자 지정 인증 또는 역할 공급자를 지정할 수 있습니다. 사용자 지정 인증 및 역할 공급자를 만드는 방법에 대한 자세한 내용은 [멤버 자격 공급자 구현](http://msdn.microsoft.com/library/d8658b8e-c962-4f64-95e1-4acce35e4582) 및 [역할 공급자 구현](http://msdn.microsoft.com/library/851671ce-bf9b-43f2-aba4-bc9d28b11c7d)을 참조하세요. 프로젝트의 `Settings` 클래스(C#에서는 `Properties.Settings.Default`로, `My.Settings`에서는 [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]로 액세스함)를 수정하여 사용자 지정 설정 공급자를 사용할 수도 있습니다. 자세한 내용은 [응용 프로그램 설정 아키텍처](../../../docs/framework/winforms/advanced/application-settings-architecture.md)를 참조하세요.  
+ 사용자 지정 서비스 공급자를 사용하려면 일반적으로 서버에 액세스하는 모든 클라이언트 응용 프로그램에 변경 내용이 적용되도록 서버 쪽에서 공급자를 변경합니다. 그러나 클라이언트 쪽에서 기본값이 아닌 공급자를 사용하는 옵션도 있습니다. 다음 절차에 나와 있는 대로 프로젝트의 App.config 파일에서 사용자 지정 인증 또는 역할 공급자를 지정할 수 있습니다. 사용자 지정 인증 및 역할 공급자를 만드는 방법에 대한 자세한 내용은 [멤버 자격 공급자 구현](http://msdn.microsoft.com/library/d8658b8e-c962-4f64-95e1-4acce35e4582) 및 [역할 공급자 구현](http://msdn.microsoft.com/library/851671ce-bf9b-43f2-aba4-bc9d28b11c7d)을 참조하세요. 프로젝트의 `Settings` 클래스(C#에서는 `Properties.Settings.Default`로, Visual Basic에서는 `My.Settings`로 액세스함)를 수정하여 사용자 지정 설정 공급자를 사용할 수도 있습니다. 자세한 내용은 [응용 프로그램 설정 아키텍처](../../../docs/framework/winforms/advanced/application-settings-architecture.md)를 참조하세요.  
   
 #### <a name="to-configure-client-application-services-to-use-non-default-providers"></a>기본값이 아닌 공급자를 사용하여 클라이언트 응용 프로그램 서비스를 구성하려면  
   

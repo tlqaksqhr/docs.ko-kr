@@ -1,31 +1,19 @@
 ---
-title: "&lt;client&gt;의 &lt;endpoint&gt;"
-ms.custom: 
+title: '&lt;client&gt;의 &lt;endpoint&gt;'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: de6238ae-bbf8-48e9-a1b5-e24c0bea8afa
-caps.latest.revision: "22"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 351f49c346cb8126cdd9d540a4db382bf5f4e721
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: f9a69483ab058823fd419edc84868e801b91d2c9
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltendpointgt-of-ltclientgt"></a>&lt;client&gt;의 &lt;endpoint&gt;
 클라이언트에서 서버의 서비스 끝점과 연결하는 데 사용하는 채널 끝점의 contract, 바인딩 및 address 속성을 지정합니다.  
   
- \<시스템입니다. ServiceModel >  
-\<클라이언트 >  
-\<끝점 >  
+ \<system.ServiceModel>  
+\<client>  
+\<endpoint>  
   
 ## <a name="syntax"></a>구문  
   
@@ -40,7 +28,7 @@ ms.lasthandoff: 12/22/2017
 ```  
   
 ## <a name="attributes-and-elements"></a>특성 및 요소  
- 다음 단원에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
+ 다음 섹션에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
   
 ### <a name="attributes"></a>특성  
   
@@ -59,8 +47,8 @@ ms.lasthandoff: 12/22/2017
   
 |요소|설명|  
 |-------------|-----------------|  
-|[\<헤더 >](../../../../../docs/framework/configure-apps/file-schema/wcf/headers.md)|주소 헤더 컬렉션입니다.|  
-|[\<identity >](../../../../../docs/framework/configure-apps/file-schema/wcf/identity.md)|한 끝점에서 다른 끝점과 메시지를 교환할 때 상대 끝점을 인증할 수 있도록 하는 ID입니다.|  
+|[\<headers>](../../../../../docs/framework/configure-apps/file-schema/wcf/headers.md)|주소 헤더 컬렉션입니다.|  
+|[\<identity>](../../../../../docs/framework/configure-apps/file-schema/wcf/identity.md)|한 끝점에서 다른 끝점과 메시지를 교환할 때 상대 끝점을 인증할 수 있도록 하는 ID입니다.|  
   
 ### <a name="parent-elements"></a>부모 요소  
   
@@ -68,7 +56,7 @@ ms.lasthandoff: 12/22/2017
 |-------------|-----------------|  
 |[\<클라이언트 >](../../../../../docs/framework/configure-apps/file-schema/wcf/client.md)|클라이언트가 연결할 수 있는 끝점의 목록을 정의하는 구성 섹션입니다.|  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  이것은 채널 끝점 구성의 예제입니다.  
   
 ```xml  

@@ -1,24 +1,12 @@
 ---
-title: "명령 트리의 모양"
-ms.custom: 
+title: 명령 트리의 모양
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 2215585e-ca47-45f8-98d4-8cb982f8c1d3
-caps.latest.revision: "2"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: d7e2b25788b088d9da49bad206f8f2f11d0104a2
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 9084e2616ac4ea540bdf755afd011d67a5c991fa
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="the-shape-of-the-command-trees"></a>명령 트리의 모양
 SQL 생성 모듈은 지정된 입력 쿼리 명령 트리 식을 기반으로 특정 백엔드 SQL 쿼리를 생성하는 작업을 담당합니다. 이 단원에서는 쿼리 명령 트리의 특성, 속성 및 구조에 대해 설명합니다.  
@@ -82,7 +70,7 @@ SQL 생성 모듈은 지정된 입력 쿼리 명령 트리 식을 기반으로 �
   
  정식 함수 (참조 [정식 함수](../../../../../docs/framework/data/adonet/ef/language-reference/canonical-functions.md) 자세한 내용은)의 일부로 지정는 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)], 공급자는 이러한 사양을 기반으로 하는 정식 함수에 대 한 구현을 제공 해야 합니다. 저장소 함수는 해당 공급자 매니페스트에 지정된 사항을 기반으로 합니다. 사용자 정의 함수는 SSDL에서 지정된 사항을 기반으로 합니다.  
   
- 또한 NiladicFunction 특성이 있는 함수에는 인수가 없으며 끝에 괄호 없이 변환되어야 합니다.  즉,  *\<functionName >* 대신  *\<functionName > ()*합니다.  
+ 또한 NiladicFunction 특성이 있는 함수에는 인수가 없으며 끝에 괄호 없이 변환되어야 합니다.  즉,  *\<functionName >* 대신  *\<functionName > ()* 합니다.  
   
 #### <a name="dbnewinstanceexpression"></a>DbNewInstanceExpression  
  DbNewInstanceExpression은 다음 두 경우에만 발생할 수 있습니다.  

@@ -1,24 +1,12 @@
 ---
-title: "엔터티 데이터 모델의 주요 개념"
-ms.custom: 
+title: 엔터티 데이터 모델의 주요 개념
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: c635a16d-6674-45aa-9344-dcb7df992bab
-caps.latest.revision: "3"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: f75a4fc0e529b602aca91aa3cfd2dff35e4fe640
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: d92d2a99562c7eac6fef0ba76cd00241d600c265
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="entity-data-model-key-concepts"></a>엔터티 데이터 모델의 주요 개념
 (EDM (엔터티 데이터 모델) 세 가지 주요 개념을 사용 하 여 데이터의 구조를 설명할: *엔터티 형식*, *연결 형식*, 및 *속성*합니다. 이는 모든 EDM 구현의 데이터 구조 설명에 가장 중요한 개념입니다.  

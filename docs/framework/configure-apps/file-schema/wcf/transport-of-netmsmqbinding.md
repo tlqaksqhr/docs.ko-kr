@@ -1,32 +1,20 @@
 ---
-title: "&lt;netMsmqBinding&gt;의 &lt;transport&gt;"
-ms.custom: 
+title: '&lt;netMsmqBinding&gt;의 &lt;transport&gt;'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 72e1b338-39f0-4af1-a5d9-7a2fb79f6a0b
-caps.latest.revision: "10"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 611d6730695c2e353782d11cb74d391107c02c35
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 513c8658760af1ba37f294281f046e1355c3a6ef
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="lttransportgt-of-ltnetmsmqbindinggt"></a>&lt;netMsmqBinding&gt;의 &lt;transport&gt;
 전송 보안 설정을 정의합니다.  
   
  \<system.ServiceModel>  
-\<bindings>  
+\<바인딩 >  
 \<netMsmqBinding>  
-\<binding>  
+\<바인딩 >  
 \<security>  
 \<transport>  
   

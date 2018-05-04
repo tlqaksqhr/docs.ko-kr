@@ -1,31 +1,19 @@
 ---
-title: "&lt;시간 제한&gt;"
-ms.custom: 
+title: '&lt;시간 제한&gt;'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 7fccd436-b326-48ec-8de1-c16817a09e0d
-caps.latest.revision: "8"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 04003584cf12355116d32cccffdcb2b9990b1b85
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 1f0638f85177d2acb6f61e3246a1a5ee9a4e2f5c
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="lttimeoutsgt"></a>&lt;시간 제한&gt;
 서비스 호스트가 열리거나 닫히는 데 허용되는 시간 간격을 지정하는 구성 요소를 나타냅니다.  
   
- \<시스템입니다. ServiceModel >  
-\<클라이언트 >  
-\<끝점 >  
+ \<system.ServiceModel>  
+\<client>  
+\<endpoint>  
 \<호스트 >  
 \<제한 시간 >  
   
@@ -37,7 +25,7 @@ ms.lasthandoff: 12/22/2017
 ```  
   
 ## <a name="attributes-and-elements"></a>특성 및 요소  
- 다음 단원에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
+ 다음 섹션에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
   
 ### <a name="attributes"></a>특성  
   

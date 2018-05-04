@@ -1,30 +1,18 @@
 ---
 title: '&lt;customBinding&gt;'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 9da4f960-f64e-4d8a-894d-2b09eba5ce4b
-caps.latest.revision: "24"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: e5a95d677588beaa41e94f12550ba8647202ffe3
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 5d423a29430284c904bcfe8eb11ec470a62ecf57
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltcustombindinggt"></a>&lt;customBinding&gt;
 사용자에게 메시징 스택에 대한 모든 권한을 제공합니다.  
   
  \<system.serviceModel>  
-\<bindings>  
+\<바인딩 >  
 \<customBinding>  
   
 ## <a name="syntax"></a>구문  
@@ -241,7 +229,7 @@ ms.lasthandoff: 01/19/2018
   
 -   다음에는 WS-ReliableMessaging 사양에서 정의된 세션 및 순서 지정 메커니즘을 제공하는 선택적 <xref:System.ServiceModel.Channels.ReliableSessionBindingElement>가 있습니다. 이 세션 개념은 SOAP 매개자 및 전송 매개자에 적용될 수 있습니다.  
   
--   다음에는 권한 부여, 인증, 보호, 기밀성과 같은 보안 기능을 제공하는 선택적 보안 바인딩 요소가 있습니다. 다음과 같은 보안 바인딩 요소가 [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)]에서 제공됩니다.  
+-   다음에는 권한 부여, 인증, 보호, 기밀성과 같은 보안 기능을 제공하는 선택적 보안 바인딩 요소가 있습니다. 다음 보안 바인딩 요소는 Windows Communication Foundation (WCF)에서 제공 됩니다.  
   
     -   <xref:System.ServiceModel.Channels.SecurityBindingElement>  
   
@@ -271,7 +259,7 @@ ms.lasthandoff: 01/19/2018
   
     -   <xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement>  
   
--   맨 아래에는 필수 전송 요소가 있습니다. 고유의 전송을 사용하거나 [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)]에서 제공된 전송 바인딩 요소 중 하나를 사용할 수 있습니다.  
+-   맨 아래에는 필수 전송 요소가 있습니다. 고유의 전송을 사용 하거나 전송 바인딩 Windows Communication Foundation (WCF)에서 제공 하는 요소 중 하나를 사용할 수 있습니다.  
   
     -   <xref:System.ServiceModel.Channels.TcpTransportBindingElement>  
   

@@ -1,24 +1,12 @@
 ---
-title: "중첩된 스키마 요소 사이에 암시적 관계 매핑"
-ms.custom: 
+title: 중첩된 스키마 요소 사이에 암시적 관계 매핑
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 6b25002a-352e-4d9b-bae3-15129458a355
-caps.latest.revision: "4"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 740d45c47f46c311ed703fa11ec86a9739930944
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 1bce0c2815ac94787055794942807777232df295
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="map-implicit-relations-between-nested-schema-elements"></a>중첩된 스키마 요소 사이에 암시적 관계 매핑
 XSD(XML 스키마 정의 언어) 스키마에는 다른 형식 내부에 중첩된 복합 형식이 포함될 수 있습니다. 이 경우 매핑 프로세스에서는 기본 매핑을 적용하며 <xref:System.Data.DataSet>에 다음 항목을 만듭니다.  
@@ -27,7 +15,7 @@ XSD(XML 스키마 정의 언어) 스키마에는 다른 형식 내부에 중첩�
   
 -   기본 키 열이 하나 더 각 테이블 정의 명명 된 부모에 unique 제약 조건이 없는 있으면 *TableName*_Id 여기서 *TableName* 부모 테이블의 이름입니다.  
   
--   기본 키로 추가 열을 식별 하는 부모 테이블에 기본 키 제약 조건 (설정 하 여는 **IsPrimaryKey** 속성을 **True**). 제약 조건으로 명명 되며 *#*  여기서  *#*  1, 2, 3, 및 등이 있습니다. 예를 들어, 첫 번째 제약 조건의 기본 이름은 Constraint1입니다.  
+-   기본 키로 추가 열을 식별 하는 부모 테이블에 기본 키 제약 조건 (설정 하 여는 **IsPrimaryKey** 속성을 **True**). 제약 조건으로 명명 되며*#* 여기서 *#* 1, 2, 3, 및 등이 있습니다. 예를 들어, 첫 번째 제약 조건의 기본 이름은 Constraint1입니다.  
   
 -   추가 열을 부모 테이블의 기본 키를 참조하는 외래 키로 식별하는 외래 키 제약 조건을 자식 테이블에 만듭니다. 으로 명명 되며 *ParentTable_ChildTable* 여기서 *ParentTable* 부모 테이블의 이름 및 *ChildTable* 자식 테이블의 이름입니다.  
   

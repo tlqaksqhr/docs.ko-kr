@@ -1,10 +1,6 @@
 ---
-title: "&lt;제거&gt; 요소에 대 한 &lt;appSettings&gt;"
+title: '&lt;제거&gt; 요소에 대 한 &lt;appSettings&gt;'
 ms.date: 05/01/2017
-ms.prod: .net-framework
-ms.technology:
-- dotnet-clr
-ms.topic: article
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/appSettings/remove
 helpviewer_keywords:
@@ -13,14 +9,11 @@ helpviewer_keywords:
 ms.assetid: 218c4464-e007-4539-803f-7c8b0a909fd8
 author: guardrex
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 2e803561ef20bb17ed7c637eb487027466b65077
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 21fedf064596979dbfb4190d9956da616295af3c
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="remove-element-for-appsettings"></a>\<제거 > 요소에 대 한 \<g s >
 
@@ -54,7 +47,7 @@ ms.lasthandoff: 12/22/2017
 
 없음
 
-## <a name="example"></a>예
+## <a name="example"></a>예제
 
 다음 예제에 대 한 사용자 지정 구성 설정을 제거 하는 방법을 보여 줍니다 `ApplicationName`:
 
@@ -64,6 +57,6 @@ ms.lasthandoff: 12/22/2017
 </appSettings>
 ```
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참고자료
 
 [.NET Framework에 대 한 구성 파일 스키마](~/docs/framework/configure-apps/file-schema/index.md)

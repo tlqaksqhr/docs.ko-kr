@@ -1,12 +1,13 @@
 ---
-title: "Aximp.exe (Windows Forms ActiveX 컨트롤 가져오기)"
-ms.custom: 
+title: Aximp.exe (Windows Forms ActiveX 컨트롤 가져오기)
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - ActiveX controls, hosting in Windows Forms
@@ -15,16 +16,17 @@ helpviewer_keywords:
 - Aximp.exe
 - Windows Forms ActiveX Control Importer
 ms.assetid: 482c0d83-7144-4497-b626-87d2351b78d0
-caps.latest.revision: "13"
+caps.latest.revision: 13
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ebde5bd48b02c20f7d607ebcda2b18ed0830c569
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 8098a44c9275be0a40ec8e067d33ac8a00654ec1
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="aximpexe-windows-forms-activex-control-importer"></a>Aximp.exe (Windows Forms ActiveX 컨트롤 가져오기)
 ActiveX 컨트롤 가져오기를 사용하면 ActiveX 컨트롤에 대한 COM 형식 라이브러리의 형식 정의를 Windows Forms 컨트롤로 변환할 수 있습니다.  
@@ -79,7 +81,7 @@ aximp [options]{file.dll | file.ocx}
   
  shdocvw.dll을 대상으로 Aximp.exe를 실행하면 도구가 실행되는 디렉터리에 shdocvw.dll이라는 다른 파일이 만들어집니다. 이렇게 생성된 파일이 Documents 및 Settings 디렉터리에 있으면 Microsoft Internet Explorer 및 Windows 탐색기에 문제가 발생합니다. 컴퓨터가 다시 부팅되면 Windows는 system32 디렉터리보다 Documents and Settings 디렉터리에서 먼저 shdocvw.dll 복사본을 찾습니다. 그러면 Documents and Settings의 복사본을 사용하여 관리되는 래퍼를 로드하려고 시도합니다. Internet Explorer 및 Windows 탐색기는 system32 디렉터리에 있는 shdocvw.dll 버전의 렌더링 엔진에 따라 작동하므로 이 경우 제대로 작동하지 않게 됩니다. 이러한 문제가 발생하면 Documents and Settings 디렉터리에 있는 shdocvw.dll 복사본을 삭제한 다음 컴퓨터를 다시 부팅합니다.  
   
- shdocvw.dll과 함께 Aximp.exe를 사용하여 응용 프로그램 개발에 사용할 .NET 어셈블리를 만드는 경우에도 문제가 발생할 수 있습니다. 이러한 경우 응용 프로그램에서 shdocvw.dll의 시스템 버전과 생성된 버전을 모두 로드하고 시스템 버전을 우선 적용하게 됩니다. 이때 WebBrowser ActiveX 컬렉션 내에서 웹 페이지를 로드하려고 하면 사용자에게 열기/저장 대화 상자가 표시될 수 있습니다. 사용자가 **열기**를 클릭하면 웹 페이지가 Internet Explorer에서 열립니다. 이 문제는 Internet Explorer 버전 6 또는 이전 버전을 실행하는 컴퓨터에서만 발생합니다. 이 문제를 방지하려면 관리되는 <xref:System.Windows.Forms.WebBrowser> 컨트롤을 사용하거나 [방법: 형식 라이브러리에 참조 추가](../../../docs/framework/interop/how-to-add-references-to-type-libraries.md)의 설명에 따라 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]를 사용하여 관리되는 shdocvw.dll을 생성합니다.  
+ shdocvw.dll과 함께 Aximp.exe를 사용하여 응용 프로그램 개발에 사용할 .NET 어셈블리를 만드는 경우에도 문제가 발생할 수 있습니다. 이러한 경우 응용 프로그램에서 shdocvw.dll의 시스템 버전과 생성된 버전을 모두 로드하고 시스템 버전을 우선 적용하게 됩니다. 이때 WebBrowser ActiveX 컬렉션 내에서 웹 페이지를 로드하려고 하면 사용자에게 열기/저장 대화 상자가 표시될 수 있습니다. 사용자가 **열기**를 클릭하면 웹 페이지가 Internet Explorer에서 열립니다. 이 문제는 Internet Explorer 버전 6 또는 이전 버전을 실행하는 컴퓨터에서만 발생합니다. 이 문제를 방지하려면 관리되는 <xref:System.Windows.Forms.WebBrowser> 컨트롤을 사용하거나 [방법: 형식 라이브러리에 참조 추가](../../../docs/framework/interop/how-to-add-references-to-type-libraries.md)에서 설명한 대로 Visual Studio를 사용하여 관리되는 shdocvw.dll을 생성합니다.  
   
 ## <a name="example"></a>예  
  다음 명령을 사용하여 Media Player 컨트롤 `msdxm.ocx`를 위한 MediaPlayer.dll 및 AxMediaPlayer.dll을 생성합니다.  

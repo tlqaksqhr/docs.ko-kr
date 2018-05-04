@@ -1,13 +1,6 @@
 ---
-title: "&lt;system.Net&gt; 요소 (네트워크 설정)"
-ms.custom: 
+title: '&lt;system.Net&gt; 요소 (네트워크 설정)'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#system.Net
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.Net
@@ -15,22 +8,20 @@ helpviewer_keywords:
 - system.Net element
 - <system.Net> element
 ms.assetid: 52de4d6c-b24d-44aa-ba7d-6b5061f1357e
-caps.latest.revision: "14"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: 6140a5a66d39cbee3c2a8477dcab88aaa717e745
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: f9098ce379cbaf12f589270729018da399f282b0
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltsystemnetgt-element-network-settings"></a>&lt;system.Net&gt; 요소 (네트워크 설정)
 .NET Framework의 네트워크 연결 방법을 지정하는 설정을 포함합니다.  
   
  \<configuration>  
-\<system.net >  
+\<system.net>  
   
 ## <a name="syntax"></a>구문  
   
@@ -40,7 +31,7 @@ ms.lasthandoff: 12/22/2017
 ```  
   
 ## <a name="attributes-and-elements"></a>특성 및 요소  
- 다음 단원에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
+ 다음 섹션에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
   
 ### <a name="attributes"></a>특성  
  없음  
@@ -54,7 +45,7 @@ ms.lasthandoff: 12/22/2017
 |[defaultProxy](../../../../../docs/framework/configure-apps/file-schema/network/defaultproxy-element-network-settings.md)|HTTP(Hypertext Transfer Protocol) 프록시 서버를 구성합니다.|  
 |[mailSettings](../../../../../docs/framework/configure-apps/file-schema/network/mailsettings-element-network-settings.md)|전송 프로토콜 SMTP (Simple Mail) 메일 보내기 옵션을 구성 합니다.|  
 |[requestCaching](../../../../../docs/framework/configure-apps/file-schema/network/requestcaching-element-network-settings.md)|네트워크 요청에 대 한 캐싱 메커니즘을 제어합니다.|  
-|[설정](../../../../../docs/framework/configure-apps/file-schema/network/settings-element-network-settings.md)|클래스에 대 한 기본 네트워크 옵션을 구성 된 <xref:System.Net> 및 관련 자식 네임 스페이스입니다.|  
+|[settings](../../../../../docs/framework/configure-apps/file-schema/network/settings-element-network-settings.md)|클래스에 대 한 기본 네트워크 옵션을 구성 된 <xref:System.Net> 및 관련 자식 네임 스페이스입니다.|  
 |[webRequestModules](../../../../../docs/framework/configure-apps/file-schema/network/webrequestmodules-element-network-settings.md)|인터넷 호스트에서 정보를 요청 하는 데는 모듈을 지정 합니다.|  
   
 ### <a name="parent-elements"></a>부모 요소  
@@ -66,7 +57,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="remarks"></a>설명  
  [ \<system.net >](../../../../../docs/framework/configure-apps/file-schema/network/system-net-element-network-settings.md) 요소 클래스에 대 한 설정이 포함 되어는 <xref:System.Net> 및 관련 자식 네임 스페이스입니다. 설정을 인증 모듈, 연결 관리, 메일 설정, 프록시 서버 및 인터넷 호스트에서 정보를 받는 데 인터넷 요청 모듈을 구성합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 예제에서 사용 하는 일반적인 구성에서는 <xref:System.Net> 클래스입니다.  
   
 ```xml  

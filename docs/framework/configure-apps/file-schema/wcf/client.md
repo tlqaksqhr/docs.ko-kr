@@ -1,33 +1,21 @@
 ---
-title: "&lt;클라이언트&gt;"
-ms.custom: 
+title: '&lt;클라이언트&gt;'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.ServiceModel/client
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#client
 ms.assetid: bf0f7031-76c8-4e7e-a6c6-9ad9119134be
-caps.latest.revision: "18"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a7d52d74c36ea1b1d722d781f554f8cc6691d53e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: b8a006d3dee4149569b3f5b573d9d765504b0d65
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltclientgt"></a>&lt;클라이언트&gt;
 `client` 요소는 클라이언트가 연결할 수 있는 끝점 목록을 정의합니다.  
   
- \<시스템입니다. ServiceModel >  
-\<클라이언트 >  
+ \<system.ServiceModel>  
+\<client>  
   
 ## <a name="syntax"></a>구문  
   
@@ -43,7 +31,7 @@ ms.lasthandoff: 12/22/2017
 ```  
   
 ## <a name="attributes-and-elements"></a>특성 및 요소  
- 다음 단원에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
+ 다음 섹션에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
   
 ### <a name="attributes"></a>특성  
  없음  
@@ -52,7 +40,7 @@ ms.lasthandoff: 12/22/2017
   
 |요소|설명|  
 |-------------|-----------------|  
-|[\<끝점 >](../../../../../docs/framework/configure-apps/file-schema/wcf/endpoint-of-client.md)|이 클라이언트가 연결할 수 있는 끝점을 지정하는 끝점 요소 컬렉션을 포함합니다.|  
+|[\<endpoint>](../../../../../docs/framework/configure-apps/file-schema/wcf/endpoint-of-client.md)|이 클라이언트가 연결할 수 있는 끝점을 지정하는 끝점 요소 컬렉션을 포함합니다.|  
 |[\<메타 데이터 >](../../../../../docs/framework/configure-apps/file-schema/wcf/metadata.md)|메타데이터 처리를 위한 설정을 포함합니다.|  
   
 ### <a name="parent-elements"></a>부모 요소  
@@ -66,7 +54,7 @@ ms.lasthandoff: 12/22/2017
   
  또한 이 섹션에서는 메타데이터 처리를 위한 설정도 지정합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
   
 ```xml  
 <client>  

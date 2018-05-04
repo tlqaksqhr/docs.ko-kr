@@ -1,32 +1,20 @@
 ---
 title: '&lt;custom&gt;'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: a6f65a00-bd1a-4d4a-955a-fe009ec02ab8
-caps.latest.revision: "14"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 9ba9c8f6fa5bf574bdcaa9cb46b6c666e7117a9a
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 19f960c14b6171557ec0f353dae34f26d7a7686c
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltcustomgt"></a>&lt;custom&gt;
 사용자 지정 피어 확인자 서비스의 설정을 지정합니다.  
   
 \<system.serviceModel>  
-\<bindings>  
+\<바인딩 >  
 \<netPeerBinding>  
-\<binding>  
+\<바인딩 >  
 \<resolver>  
 \<custom>  
   

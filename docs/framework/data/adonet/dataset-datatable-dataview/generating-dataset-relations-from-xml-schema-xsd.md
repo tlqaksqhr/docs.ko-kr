@@ -1,24 +1,12 @@
 ---
-title: "XSD(XML 스키마)에서 데이터 집합 관계 생성"
-ms.custom: 
+title: XSD(XML 스키마)에서 데이터 집합 관계 생성
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 1c9a1413-c0d2-4447-88ba-9a2b0cbc0aa8
-caps.latest.revision: "4"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 4634e54c620fdd206582af94b825210331d11c14
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: fdf22c311ef7b4267f4a4da8566e4ea59504b103
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="generating-dataset-relations-from-xml-schema-xsd"></a>XSD(XML 스키마)에서 데이터 집합 관계 생성
 <xref:System.Data.DataSet>에서는 부모-자식 관계를 만들어 둘 이상의 열을 연결시킵니다. 세 가지 방법으로 나타내는 데는 **DataSet** XML 스키마 정의 언어 (XSD) 스키마 내에서 관계:  
@@ -44,7 +32,7 @@ ms.lasthandoff: 01/17/2018
 </xs:element>  
 ```  
   
- XML 스키마 매핑 프로세스에 테이블을 만듭니다는 **DataSet** 스키마에서 중첩된 된 복합 형식에 해당 하는 합니다. 또한 부모도 사용 되는 추가 열을 만듭니다**-**생성된 된 테이블에 대 한 자식 열입니다. 이러한 부모는**-**자식 열에서는 되지 않는 기본 키/외래 키 제약 조건을 지정할 때와 동일한 관계를 지정 합니다.  
+ XML 스키마 매핑 프로세스에 테이블을 만듭니다는 **DataSet** 스키마에서 중첩된 된 복합 형식에 해당 하는 합니다. 또한 부모도 사용 되는 추가 열을 만듭니다**-** 생성된 된 테이블에 대 한 자식 열입니다. 이러한 부모는**-** 자식 열에서는 되지 않는 기본 키/외래 키 제약 조건을 지정할 때와 동일한 관계를 지정 합니다.  
   
 ## <a name="msdatarelationship-annotation"></a>msdata:Relationship 주석  
  **msdata: relationship** 주석 명시적으로 중첩 되지 않은 스키마의 요소 간의 부모-자식 관계를 지정할 수 있습니다. 다음 예제에서는의 구조는 **관계** 요소입니다.  

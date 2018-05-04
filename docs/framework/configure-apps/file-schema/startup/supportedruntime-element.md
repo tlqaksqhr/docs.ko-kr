@@ -1,9 +1,6 @@
 ---
-title: "&lt;supportedRuntime&gt; 요소"
-ms.date: 10/17/2017
-ms.prod: .net-framework
-ms.technology: dotnet-clr
-ms.topic: article
+title: '&lt;supportedRuntime&gt; 요소'
+ms.date: 04/10/2018
 ms.custom: updateeachrelease
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#supportedRuntime
@@ -15,12 +12,11 @@ ms.assetid: 1ae16e23-afbe-4de4-b413-bc457f37b69f
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: 4b0967790f2bbf8fa9a889c56fa9c5168f7523bd
-ms.sourcegitcommit: 8bde7a3432f30fc771079744955c75c58c4eb393
+ms.openlocfilehash: 544aaf5a58b743c437b42764bdea3c6b7eea7c74
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/20/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltsupportedruntimegt-element"></a>&lt;supportedRuntime&gt; 요소
 
@@ -70,7 +66,7 @@ ms.lasthandoff: 01/20/2018
 |2.0|"v2.0.50727"|  
 |3.0|"v2.0.50727"|  
 |3.5|"v2.0.50727"|  
-|4.0-4.7.1|"v4.0"|  
+|4.0 4.7.2|"v4.0"|  
 
 <a name="sku"></a>   
 ## <a name="sku-id-values"></a>"sku id" 값
@@ -95,8 +91,9 @@ ms.lasthandoff: 01/20/2018
 |4.6.2|".NETFramework,Version=v4.6.2"|  
 |4.7|".NETFramework,Version=v4.7"|
 |4.7.1|".NETFramework,Version=v4.7.1"|
+|4.7.2|". NETFramework, Version = v4.7.2 "|
 
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 예제에서는 구성 파일에 지원되는 런타임 버전을 지정하는 방법을 보여줍니다. 구성 파일은 응용 프로그램에.NET Framework 4.7 대상으로 지정 함을 나타냅니다.  
   
 ```xml  
@@ -111,7 +108,7 @@ ms.lasthandoff: 01/20/2018
 
 이 요소는 응용 프로그램 구성 파일에 사용할 수 있습니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참고자료
 
  [시작 설정 스키마](../../../../../docs/framework/configure-apps/file-schema/startup/index.md)  
  [구성 파일 스키마](../../../../../docs/framework/configure-apps/file-schema/index.md)  

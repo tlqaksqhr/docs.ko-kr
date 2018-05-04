@@ -1,32 +1,20 @@
 ---
-title: "&lt;wsHttpBinding&gt;의 &lt;message&gt;"
-ms.custom: 
+title: '&lt;wsHttpBinding&gt;의 &lt;message&gt;'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 621abbde-590b-454d-90ac-68dc3c69c720
-caps.latest.revision: "22"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: e81271faeffd3c168fb65bdb67a9140f1b74cd04
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
-ms.translationtype: MT
+ms.openlocfilehash: 9535ec87e8769f7d2c9139a3f9be4c0bf2a07fb9
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltmessagegt-of-ltwshttpbindinggt"></a>&lt;wsHttpBinding&gt;의 &lt;message&gt;
 메시지 수준 보안 설정을 정의 [ \<wsHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md)합니다.  
   
  \<system.ServiceModel>  
-\<bindings>  
+\<바인딩 >  
 \<wsHttpBinding>  
-\<binding>  
+\<바인딩 >  
 \<security>  
 \<message>  
   

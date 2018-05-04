@@ -1,34 +1,20 @@
 ---
 title: '&lt;msmqIntegrationBinding&gt;'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - msmqIntegrationBinding Element
 ms.assetid: edf277f3-e3bf-4ed8-9f55-83b5788430a7
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 0715952077db755386a0381f68ccc6e33705a031
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: bae6b4e6bd11074b47c55bf310215f296394c90d
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltmsmqintegrationbindinggt"></a>&lt;msmqIntegrationBinding&gt;
 MSMQ를 통해 메시지를 라우팅하여 큐 지원을 제공하는 바인딩을 정의합니다.  
   
  \<system.ServiceModel>  
-\<bindings>  
+\<바인딩 >  
 msmqIntegrationBinding  
   
 ## <a name="syntax"></a>구문  
@@ -110,7 +96,7 @@ msmqIntegrationBinding
 ## <a name="remarks"></a>설명  
  Windows Communication Foundation (WCF) 응용 프로그램이 메시지를 전송 하 고 COM, MSMQ 네이티브 Api 또는에 정의 된 형식을 사용 하는 기존 MSMQ 응용 프로그램에서 메시지를 받을 수 있도록 하 여이 바인딩 요소를 사용할 수는 <xref:System.Messaging?displayProperty=nameWithType> 네임 스페이스 있습니다 이 구성 요소 메시지 영구 저장, 큐, 전송 보증을 해결할 수 있는 방법을 지정할 수 및 메시지를 보호 및 인증 방법을 사용할 수 있습니다. 자세한 내용은 참조 [하는 방법: WCF 끝점 및 메시지 큐 응용 프로그램과 메시지를 교환](../../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md)합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
   
 ```xml  
 <configuration>  

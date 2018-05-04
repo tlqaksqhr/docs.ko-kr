@@ -1,5 +1,5 @@
 ---
-title: "연습: 데이터 흐름 파이프라인 만들기"
+title: '연습: 데이터 흐름 파이프라인 만들기'
 ms.date: 03/30/2017
 ms.prod: .net
 ms.technology: dotnet-standard
@@ -18,11 +18,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 2d0c886a443263897330dbd46a7f6f194bb20857
-ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
+ms.openlocfilehash: ce5af6f31a10f23703b761e041b21f08b71952b9
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="walkthrough-creating-a-dataflow-pipeline"></a>연습: 데이터 흐름 파이프라인 만들기
 <xref:System.Threading.Tasks.Dataflow.DataflowBlock.Receive%2A?displayProperty=nameWithType>, <xref:System.Threading.Tasks.Dataflow.DataflowBlock.ReceiveAsync%2A?displayProperty=nameWithType> 및 <xref:System.Threading.Tasks.Dataflow.DataflowBlock.TryReceive%2A?displayProperty=nameWithType> 메서드를 사용하여 소스 블록에서 메시지를 받을 수 있지만 메시지 블록을 연결하여 *데이터 흐름 파이프라인*을 만들 수도 있습니다. 데이터 흐름 파이프라인은 일련의 구성 요소 또는 *데이터 흐름 블록*으로, 각 구성 요소는 보다 큰 목표를 위해 특정 작업을 수행합니다. 데이터 흐름 파이프라인의 모든 데이터 흐름 블록은 다른 데이터 흐름 블록에서 메시지를 받으면 작업을 수행합니다. 이는 자동차 제조 조립 라인에 비유될 수 있습니다. 각 자동차가 조립 라인을 통과할 때 한 작업장에서는 프레임을 조립하고 다음 작업장에서는 엔진을 장착하는 식입니다. 조립 라인에서는 여러 대의 자동차를 동시에 조립할 수 있기 때문에 한 번에 자동차 전체를 조립하는 경우보다 처리량이 향상됩니다.
@@ -41,11 +41,11 @@ ms.lasthandoff: 02/01/2018
   
 6.  파이프라인에서 모든 작업을 완료할 때까지 기다립니다.  
   
-## <a name="prerequisites"></a>필수 구성 요소  
+## <a name="prerequisites"></a>전제 조건  
  이 연습을 시작하기 전에 [데이터 흐름](../../../docs/standard/parallel-programming/dataflow-task-parallel-library.md)을 읽어 보세요.  
   
 ## <a name="creating-a-console-application"></a>콘솔 응용 프로그램 만들기  
- [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]에서 [!INCLUDE[csprcs](../../../includes/csprcs-md.md)] 또는 [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] 콘솔 응용 프로그램 프로젝트를 만듭니다. System.Threading.Tasks.Dataflow NuGet 패키지를 설치합니다.
+ Visual Studio에서 Visual C# 또는 Visual Basic 콘솔 응용 프로그램 프로젝트를 만듭니다. System.Threading.Tasks.Dataflow NuGet 패키지를 설치합니다.
 
 [!INCLUDE [tpl-install-instructions](../../../includes/tpl-install-instructions.md)]
 
@@ -111,9 +111,9 @@ ms.lasthandoff: 02/01/2018
 ## <a name="next-steps"></a>다음 단계  
  이 예제에서는 처리할 URL을 데이터 흐름 파이프라인을 통해 보냅니다. 파이프라인을 통해 둘 이상의 입력 값을 보내는 경우, 부품들이 자동차 공장에서 이동할 수 있는 방법과 유사한 형태의 병렬 처리를 응용 프로그램에 적용할 수 있습니다. 파이프라인의 첫 번째 구성원이 결과를 두 번째 구성원에 보내는 경우, 두 번째 구성원이 첫 번째 결과를 처리할 때 첫 번째 구성원은 다른 항목을 병렬로 처리할 수 있습니다.  
   
- 데이터 흐름 파이프라인을 사용하여 실현되는 병렬 처리는 일반적으로 더 적은 수의 보다 큰 작업으로 구성되어 있기 때문에 ‘정교하지 않은 병렬 처리’라고 합니다. 데이터 흐름 파이프라인에서 보다 작고 짧게 실행되는 작업의 ‘세부적인 병렬 처리’를 더 많이 사용할 수도 있습니다. 이 예제에서 파이프라인의 `findReversedWords` 멤버는 [PLINQ](parallel-linq-plinq.md)를 사용하여 작업 목록의 여러 항목을 병렬로 처리합니다. 정교하지 않은 파이프라인에서 세분화된 병렬 처리를 사용하면 전반적인 처리량이 향상될 수 있습니다.  
+ 데이터 흐름 파이프라인을 사용하여 실현되는 병렬 처리는 일반적으로 더 적은 수의 보다 큰 작업으로 구성되어 있기 때문에 *정교하지 않은 병렬 처리*라고 합니다. 데이터 흐름 파이프라인에서 보다 작고 짧게 실행되는 작업의 *세부적인 병렬 처리*를 더 많이 사용할 수도 있습니다. 이 예제에서 파이프라인의 `findReversedWords` 구성원은 [PLINQ](parallel-linq-plinq.md)를 사용하여 작업 목록의 여러 항목을 병렬로 처리합니다. 정교하지 않은 파이프라인에서 세분화된 병렬 처리를 사용하면 전반적인 처리량이 향상될 수 있습니다.  
   
- 또한 소스 데이터 흐름 블록을 여러 대상 블록에 연결하여 ‘데이터 흐름 네트워크’를 만들 수도 있습니다. <xref:System.Threading.Tasks.Dataflow.DataflowBlock.LinkTo%2A> 메서드의 오버로드된 버전은 대상 블록이 값을 기준으로 각 메시지를 수락하는지 여부를 정의하는 <xref:System.Predicate%601> 개체를 사용합니다. 소스 역할을 하는 대부분의 데이터 흐름 블록 형식은 블록 중 하나가 메시지를 수락할 때까지 연결된 모든 대상 블록에 연결순으로 메시지를 제공합니다. 이 필터링 메커니즘을 사용하여 특정 데이터를 한 경로로 보내고 다른 데이터는 또 다른 경로로 보내는 연결된 데이터 흐름 블록의 시스템을 만들 수 있습니다. 필터링을 사용하여 데이터 흐름 네트워크를 만드는 예제는 [연습: Windows Forms 응용 프로그램에서 데이터 흐름 사용](../../../docs/standard/parallel-programming/walkthrough-using-dataflow-in-a-windows-forms-application.md)을 참조하세요.  
+ 또한 소스 데이터 흐름 블록을 여러 대상 블록에 연결하여 *데이터 흐름 네트워크*를 만들 수도 있습니다. <xref:System.Threading.Tasks.Dataflow.DataflowBlock.LinkTo%2A> 메서드의 오버로드된 버전은 대상 블록이 값을 기준으로 각 메시지를 수락하는지 여부를 정의하는 <xref:System.Predicate%601> 개체를 사용합니다. 소스 역할을 하는 대부분의 데이터 흐름 블록 형식은 블록 중 하나가 메시지를 수락할 때까지 연결된 모든 대상 블록에 연결순으로 메시지를 제공합니다. 이 필터링 메커니즘을 사용하여 특정 데이터를 한 경로로 보내고 다른 데이터는 또 다른 경로로 보내는 연결된 데이터 흐름 블록의 시스템을 만들 수 있습니다. 필터링을 사용하여 데이터 흐름 네트워크를 만드는 예제는 [연습: Windows Forms 응용 프로그램에서 데이터 흐름 사용](../../../docs/standard/parallel-programming/walkthrough-using-dataflow-in-a-windows-forms-application.md)을 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
  [데이터 흐름](../../../docs/standard/parallel-programming/dataflow-task-parallel-library.md)

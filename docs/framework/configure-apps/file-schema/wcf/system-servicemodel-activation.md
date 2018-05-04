@@ -1,24 +1,12 @@
 ---
 title: '&lt;system.serviceModel.activation&gt;'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: c0cae85f-56cb-4030-8807-6f96edff8d2d
-caps.latest.revision: "9"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ae6fb19fe956d819337c7c06a0c5b58ac70c8327
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 7d4ad87e9ad9f0bc4cb3c5157666b098dd0b0243
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltsystemservicemodelactivationgt"></a>&lt;system.serviceModel.activation&gt;
 이 구성 섹션은 SMSvcHost.exe 도구에 대한 구성 설정을 나타냅니다. 해당 구성 요소는 SMSvcHost.exe.config 파일에서 구성할 수 있습니다. 특히 여기에는 구성해야 하는 모든 시스템 수준의 설정이 포함됩니다.  

@@ -1,13 +1,13 @@
 ---
-title: "연습: 클라이언트 응용 프로그램 서비스 사용"
-ms.custom: 
+title: '연습: 클라이언트 응용 프로그램 서비스 사용'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -16,24 +16,24 @@ helpviewer_keywords:
 - application services host [client application services]
 - client application services, walkthroughs
 ms.assetid: bb7c8950-4517-4dae-b705-b74a14059b26
-caps.latest.revision: 
+caps.latest.revision: 47
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 71eac85d07ac54cf15edcfcc3a86de58afef5004
-ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
+ms.openlocfilehash: e67d4297ca0fe7028380b6d862f9f86c93bcaa61
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="walkthrough-using-client-application-services"></a>연습: 클라이언트 응용 프로그램 서비스 사용
 이 항목에서는 클라이언트 응용 프로그램 서비스를 사용하여 사용자를 인증하고 사용자 역할 및 설정을 검색하는 Windows 응용 프로그램을 만드는 방법을 설명합니다.  
   
  이 연습에서는 다음 작업을 수행합니다.  
   
--   Windows Forms 응용 프로그램을 만들고 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 프로젝트 디자이너를 통해 클라이언트 응용 프로그램 서비스를 사용하도록 설정 및 구성합니다.  
+-   Windows Forms 응용 프로그램을 만들고 Visual Studio 프로젝트 디자이너를 통해 클라이언트 응용 프로그램 서비스를 사용하도록 설정 및 구성합니다.  
   
 -   응용 프로그램 서비스를 호스트하고 클라이언트 구성을 테스트할 단순한 ASP.NET 웹 서비스 응용 프로그램을 만듭니다.  
   
@@ -47,17 +47,17 @@ ms.lasthandoff: 02/01/2018
   
 -   오프라인 모드를 사용하도록 설정합니다. 사용자가 연결 상태를 지정할 수 있도록 확인란을 제공합니다. 그런 다음 이 값을 사용하여 클라이언트 응용 프로그램 서비스 공급자가 해당 웹 서비스에 액세스하는 대신 로컬에 캐시된 데이터를 사용할지 여부를 지정합니다. 끝으로, 응용 프로그램이 온라인 모드로 돌아가면 현재 사용자를 다시 인증합니다.  
   
-## <a name="prerequisites"></a>필수 구성 요소  
+## <a name="prerequisites"></a>전제 조건  
  이 연습을 완료하려면 다음 구성 요소가 필요합니다.  
   
--   [!INCLUDE[vs_orcas_long](../../../includes/vs-orcas-long-md.md)]이어야 합니다.  
+-   [!INCLUDE[vs_orcas_long](../../../includes/vs-orcas-long-md.md)].  
   
 ## <a name="creating-the-client-application"></a>클라이언트 응용 프로그램 만들기  
  먼저 Windows Forms 프로젝트를 만듭니다. 이 연습에서는 익숙한 사용자가 더 많기 때문에 Windows Forms를 사용하지만 WPF(Windows Presentation Foundation) 프로젝트에 대한 프로세스는 유사합니다.  
   
 #### <a name="to-create-a-client-application-and-enable-client-application-services"></a>클라이언트 응용 프로그램을 만들고 클라이언트 응용 프로그램 서비스를 사용하도록 설정하려면  
   
-1.  [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]에서 **파일 &#124; 새로 만들기 &#124; 프로젝트** 메뉴 옵션을 선택합니다.  
+1.  Visual Studio에서 **파일 &#124; 새로 만들기 &#124; 프로젝트** 메뉴 옵션을 선택합니다.  
   
 2.  **새 프로젝트** 대화 상자의 **프로젝트 형식** 창에서 **Visual Basic** 또는 **Visual C#** 노드를 확장하고 **Windows** 프로젝트 형식을 선택합니다.  
   
@@ -65,7 +65,7 @@ ms.lasthandoff: 02/01/2018
   
 4.  프로젝트 **이름** 을 `ClientAppServicesDemo`로 변경하고 **확인**을 클릭합니다.  
   
-     새 Windows Forms 프로젝트가 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]에서 열립니다.  
+     새 Windows Forms 프로젝트가 Visual Studio에서 열립니다.  
   
 5.  **프로젝트** 메뉴에서 **ClientAppServicesDemo 속성**을 선택합니다.  
   
@@ -75,7 +75,7 @@ ms.lasthandoff: 02/01/2018
   
 7.  **폼 인증 사용** 이 선택되었는지 확인하고 **인증 서비스 위치**, **역할 서비스 위치**및 **웹 설정 서비스 위치** 를 `http://localhost:55555/AppServices`로 설정합니다.  
   
-8.  [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]의 경우 **응용 프로그램** 탭에서 **인증 모드** 를 **응용 프로그램 정의**로 설정합니다.  
+8.  Visual Basic의 경우 **응용 프로그램** 탭에서 **인증 모드** 를 **응용 프로그램 정의**로 설정합니다.  
   
  디자이너가 응용 프로그램의 app.config 파일에 지정된 설정을 저장합니다.  
   
@@ -194,7 +194,7 @@ ms.lasthandoff: 02/01/2018
   	|**암호**|`manager!`|  
   	|**암호 확인**|`manager!`|  
   	|**전자 메일**|`manager@contoso.com`|  
-  	|**본인 확인 질문**|`manager`|  
+  	|**보안 질문**|`manager`|  
   	|**보안 대답**|`manager`|  
   
 12. **사용자 만들기**를 클릭합니다.  
@@ -216,7 +216,7 @@ ms.lasthandoff: 02/01/2018
   	|**암호**|`employee!`|  
   	|**암호 확인**|`employee!`|  
   	|**전자 메일**|`employee@contoso.com`|  
-  	|**본인 확인 질문**|`Employee`|  
+  	|**보안 질문**|`Employee`|  
   	|**보안 대답**|`employee`|  
   
 15. **사용자 만들기**를 클릭합니다.  
@@ -250,7 +250,7 @@ ms.lasthandoff: 02/01/2018
   
 1.  **솔루션 탐색기**에서 ClientAppServicesDemo 프로젝트에 System.Web 어셈블리에 대한 참조를 추가합니다.  
   
-2.  Form1 파일을 선택한 다음 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 주 메뉴에서 **보기 &#124; 코드**를 선택합니다.  
+2.  Form1 파일을 선택한 다음, Visual Studio 주 메뉴에서 **보기 &#124; 코드**를 선택합니다.  
   
 3.  코드 편집기에서 Form1 파일의 맨 위에 다음 문을 추가합니다.  
   
@@ -315,7 +315,7 @@ ms.lasthandoff: 02/01/2018
 ### <a name="creating-a-login-form"></a>로그인 폼 만들기  
  자격 증명 공급자는 <xref:System.Web.ClientServices.Providers.IClientFormsAuthenticationCredentialsProvider> 인터페이스를 구현하는 클래스입니다. 이 인터페이스에는 <xref:System.Web.ClientServices.Providers.IClientFormsAuthenticationCredentialsProvider.GetCredentials%2A> 개체를 반환하는 <xref:System.Web.ClientServices.Providers.ClientFormsAuthenticationCredentials> 라는 단일 메서드가 있습니다. 다음 절차에서는 표시를 위해 <xref:System.Web.ClientServices.Providers.IClientFormsAuthenticationCredentialsProvider.GetCredentials%2A> 를 구현하는 로그인 대화 상자를 만들고 사용자 지정 자격 증명을 반환합니다.  
   
- [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] 에서는 [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] 로그인 폼 **템플릿을 제공하므로** 및 C#의 경우 별도 절차가 제공됩니다. 이렇게 하면 시간과 코딩 활동을 줄일 수 있습니다.  
+ Visual Basic에서는 **로그인 폼** 템플릿을 제공하므로 Visual Basic 및 C#의 경우 별도 절차가 제공됩니다. 이렇게 하면 시간과 코딩 활동을 줄일 수 있습니다.  
   
 ##### <a name="to-create-a-login-dialog-box-as-a-credentials-provider-in-visual-basic"></a>Visual Basic에서 자격 증명 공급자로 로그인 대화 상자를 만들려면  
   
@@ -331,7 +331,7 @@ ms.lasthandoff: 02/01/2018
   
 5.  **속성** 창에서 **(이름)** 값으로 `rememberMeCheckBox`를 지정하고 **텍스트** 값으로 `&Remember me`를 지정합니다.  
   
-6.  [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 주 메뉴에서 **보기 &#124; 코드**를 선택합니다.  
+6.  Visual Studio 주 메뉴에서 **보기 &#124; 코드**를 선택합니다.  
   
 7.  코드 편집기에서 파일의 맨 위에 다음 코드를 추가합니다.  
   
@@ -371,7 +371,7 @@ ms.lasthandoff: 02/01/2018
   
 #### <a name="to-change-the-user-interface-based-on-user-role"></a>사용자 역할에 따라 사용자 인터페이스를 변경하려면  
   
-1.  **솔루션 탐색기**에서 ClientAppServicesDemo 프로젝트의 Form1을 선택한 다음 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 주 메뉴에서 **보기 &#124; 디자이너**를 선택합니다.  
+1.  **솔루션 탐색기**에서 ClientAppServicesDemo 프로젝트의 Form1을 선택한 다음, Visual Studio 주 메뉴에서 **보기 &#124; 디자이너**를 선택합니다.  
   
 2.  디자이너에서 **도구 상자**의 <xref:System.Windows.Forms.Button> 컨트롤을 폼에 추가합니다.  
   
@@ -407,7 +407,7 @@ ms.lasthandoff: 02/01/2018
  이제 응용 프로그램을 실행하고 employee로 로그인하여 단추가 표시되지 않는 것을 확인한 다음 manager로 로그인하여 단추를 표시할 수 있습니다.  
   
 ## <a name="accessing-web-settings"></a>웹 설정 액세스  
- 다음 절차에서는 폼에 텍스트 상자를 추가하고 웹 설정에 바인딩합니다. 인증 및 역할을 사용하는 이전 코드와 마찬가지로 설정 코드는 설정 공급자에 직접 액세스하지 않습니다. 대신, `Settings` 에서 프로젝트에 대해 생성된 강력한 형식의 `Properties.Settings.Default` 클래스(C#에서 `My.Settings` 로 액세스, [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]에서 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]로 액세스)를 사용합니다.  
+ 다음 절차에서는 폼에 텍스트 상자를 추가하고 웹 설정에 바인딩합니다. 인증 및 역할을 사용하는 이전 코드와 마찬가지로 설정 코드는 설정 공급자에 직접 액세스하지 않습니다. 대신, Visual Studio에서 프로젝트에 대해 생성한 강력한 형식의 `Settings` 클래스(C#에서는 `Properties.Settings.Default`로 액세스되고 Visual Basic에서는 `My.Settings`로 액세스됨)를 사용합니다.  
   
 #### <a name="to-use-web-settings-in-your-user-interface"></a>사용자 인터페이스에서 웹 설정을 사용하려면  
   
@@ -425,7 +425,7 @@ ms.lasthandoff: 02/01/2018
   
      `WebSettingsTestText` 설정이 기본값 `DefaultText`로 디자이너에 표시됩니다. 또한 `WebSettingsTestText` 속성을 포함하는 `Settings` 클래스가 프로젝트에 대해 생성됩니다.  
   
-5.  **솔루션 탐색기**에서 ClientAppServicesDemo 프로젝트의 Form1을 선택한 다음 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 주 메뉴에서 **보기 &#124; 디자이너**를 선택합니다.  
+5.  **솔루션 탐색기**에서 ClientAppServicesDemo 프로젝트의 Form1을 선택한 다음, Visual Studio 주 메뉴에서 **보기 &#124; 디자이너**를 선택합니다.  
   
 6.  디자이너에서 <xref:System.Windows.Forms.TextBox> 컨트롤을 폼에 추가합니다.  
   
@@ -510,7 +510,7 @@ ms.lasthandoff: 02/01/2018
   
 #### <a name="to-enable-offline-mode-in-your-application"></a>응용 프로그램에서 오프라인 모드를 사용하도록 설정하려면  
   
-1.  **솔루션 탐색기**에서 ClientAppServicesDemo 프로젝트의 Form1을 선택한 다음 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 주 메뉴에서 **보기 &#124; 디자이너**를 선택합니다.  
+1.  **솔루션 탐색기**에서 ClientAppServicesDemo 프로젝트의 Form1을 선택한 다음, Visual Studio 주 메뉴에서 **보기 &#124; 디자이너**를 선택합니다.  
   
 2.  디자이너에서 <xref:System.Windows.Forms.CheckBox> 컨트롤을 폼에 추가합니다.  
   
@@ -527,7 +527,7 @@ ms.lasthandoff: 02/01/2018
     > [!NOTE]
     >  <xref:System.Web.ClientServices.ClientFormsIdentity.RevalidateUser%2A> 메서드는 편의상의 목적으로만 사용됩니다. 반환 값이 없기 때문에 유효성 재검사가 실패했는지 여부를 나타낼 수 없습니다. 예를 들어 서버에서 사용자 자격 증명이 변경된 경우 유효성 재검사가 실패할 수 있습니다. 이 경우 서비스 호출이 실패한 후 명시적으로 사용자의 유효성을 검사하는 코드를 포함하는 것이 좋습니다. 자세한 내용은 이 연습의 앞부분에 있는 웹 설정 액세스 섹션을 참조하세요.  
   
-     유효성 재검사 후에 이 코드는 이전에 추가한 `SaveSettings` 메서드를 호출하여 변경 내용을 로컬 웹 설정에 저장합니다. 그런 다음 프로젝트 <xref:System.Configuration.ApplicationSettingsBase.Reload%2A> 클래스의 `Settings` 메서드(C#에서는 `Properties.Settings.Default` 로 액세스, `My.Settings` 에서는 [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]로 액세스)를 호출하여 서버에서 새 값을 검색합니다.  
+     유효성 재검사 후에 이 코드는 이전에 추가한 `SaveSettings` 메서드를 호출하여 변경 내용을 로컬 웹 설정에 저장합니다. 그런 다음, 프로젝트 <xref:System.Configuration.ApplicationSettingsBase.Reload%2A> 클래스의 `Settings` 메서드(C#에서는 `Properties.Settings.Default`로 액세스, Visual Basic에서는 `My.Settings`로 액세스)를 호출하여 서버에서 새 값을 검색합니다.  
   
      [!code-csharp[ClientApplicationServices#080](../../../samples/snippets/csharp/VS_Snippets_Winforms/ClientApplicationServices/CS/Form1.cs#080)]
      [!code-vb[ClientApplicationServices#080](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/ClientApplicationServices/VB/Form1.vb#080)]  

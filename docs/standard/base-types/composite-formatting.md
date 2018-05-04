@@ -26,11 +26,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 156ef0f063219f5e78084dd664b64699d33e6593
-ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
+ms.openlocfilehash: 473669b4aaa0782fec32fb0e2d89875c4ab7a838
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="composite-formatting"></a>복합 형식 지정
 .NET의 복합 형식 지정 기능에는 개체 목록과 복합 형식 문자열이 입력으로 사용됩니다. 합성 서식 문자열은 고정 텍스트와 목록의 개체에 해당하는 인덱싱된 자리 표시자(서식 항목이라고 함)가 결합된 형태로 구성됩니다. 서식 지정 작업을 통해 원래의 고정 텍스트와 목록에 있는 개체의 문자열 표현이 결합된 형태의 결과 문자열을 얻을 수 있습니다.  
@@ -74,12 +74,12 @@ ms.lasthandoff: 03/28/2018
  [!code-csharp[Formatting.Composite#7](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Composite/cs/index1.cs#7)]
  [!code-vb[Formatting.Composite#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Composite/vb/index1.vb#7)]  
   
- 동일한 매개 변수 지정자를 지정하여 여러 서식 항목이 개체 목록의 동일한 요소를 참조하도록 할 수 있습니다. 예를 들어 다음 예제와 같이 복합 형식 문자열을 "0x{0:X} {0:E} {0:N}"과 같이 지정하여 동일한 숫자 값을 16진수, 지수 및 숫자 형식으로 지정할 수 있습니다.  
+ 동일한 매개 변수 지정자를 지정하여 여러 서식 항목이 개체 목록의 동일한 요소를 참조하도록 할 수 있습니다. 예를 들어 다음 예제와 같이 복합 형식 문자열을 “0x{0:X} {0:E} {0:N}”처럼 지정하여 동일한 숫자 값을 16진수, 지수 및 숫자 형식으로 지정할 수 있습니다.  
   
  [!code-csharp[Formatting.Composite#10](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Composite/cs/index1.cs#10)]
  [!code-vb[Formatting.Composite#10](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Composite/vb/index1.vb#10)]  
   
- 각 서식 항목은 목록의 어떤 개체나 참조할 수 있습니다. 예를 들어, 세 개의 개체가 있을 경우 "{1} {0} {2}"와 같이 복합 서식 문자열을 지정하여 둘째, 첫째 및 셋째 개체의 서식을 지정할 수 있습니다. 서식 항목에서 참조하지 않는 개체는 무시됩니다. 매개 변수 지정자가 개체 목록 범위를 벗어나는 항목을 지정하면 런타임에 <xref:System.FormatException>이 발생합니다.  
+ 각 서식 항목은 목록의 어떤 개체나 참조할 수 있습니다. 예를 들어, 세 개의 개체가 있을 경우 “{1} {0} {2}”와 같이 복합 형식 문자열을 지정하여 둘째, 첫째, 셋째 개체의 서식을 지정할 수 있습니다. 서식 항목에서 참조하지 않는 개체는 무시됩니다. 매개 변수 지정자가 개체 목록 범위를 벗어나는 항목을 지정하면 런타임에 <xref:System.FormatException>이 발생합니다.  
   
 ### <a name="alignment-component"></a>Alignment 구성 요소  
  선택적인 *alignment* 구성 요소는 기본 형식의 필드 너비를 나타내는 부호 있는 정수입니다. *alignment* 값이 형식이 지정된 문자열보다 작으면 *alignment*는 무시되고 형식이 지정된 문자열의 길이가 필드 너비로 사용됩니다. *alignment*가 양수이면 필드에서 형식이 지정된 데이터가 오른쪽 맞춤되고 *alignment*가 음수이면 왼쪽 맞춤됩니다. 채우기가 필요하면 공백이 사용됩니다. *alignment*를 지정하는 경우 쉼표가 필요합니다.  
@@ -105,7 +105,7 @@ ms.lasthandoff: 03/28/2018
 ### <a name="escaping-braces"></a>이스케이프 중괄호  
  여는 중괄호와 닫는 중괄호는 서식 항목의 시작과 끝으로 해석됩니다. 따라서 리터럴 여는 중괄호나 닫는 중괄호를 표시하려면 이스케이프 시퀀스를 사용해야 합니다. 고정 텍스트에서 여는 중괄호 2개("{{")를 사용하면 여는 중괄호 1개("{")가, 닫는 중괄호 2개("}}")를 사용하면 닫는 중괄호 1개("}")가 표시됩니다. 서식 항목에서 중괄호는 나타나는 순서대로 해석됩니다. 중첩 중괄호 해석은 지원되지 않습니다.  
   
- 이스케이프된 중괄호가 해석되는 방식에 따라 예기치 않은 결과가 나올 수도 있습니다. 예를 들어 여는 중괄호, 10진수로 서식 지정된 숫자 값 및 닫는 중괄호를 표시하기 위해 서식 항목 "{{{0:D}}}"를 사용했다고 가정해 봅시다. 그러나 이 서식 항목은 다음과 같이 해석됩니다.  
+ 이스케이프된 중괄호가 해석되는 방식에 따라 예기치 않은 결과가 나올 수도 있습니다. 예를 들어 여는 중괄호, 10진수로 서식 지정된 숫자 값 및 닫는 중괄호를 표시하기 위해 서식 항목 “{{{0:D}}}”를 사용했다고 가정해 봅시다. 그러나 이 서식 항목은 다음과 같이 해석됩니다.  
   
 1.  맨 처음 여는 중괄호 2개("{{")는 이스케이프되어 여는 중괄호 1개가 됩니다.  
   
@@ -137,7 +137,7 @@ ms.lasthandoff: 03/28/2018
   
     -   날짜 및 시간 값의 경우, null이 아닌 <xref:System.IFormatProvider> 인수가 있는 합성 서식 지정 메서드가 호출되면 런타임이 <xref:System.Globalization.DateTimeFormatInfo> 메서드에서 <xref:System.IFormatProvider.GetFormat%2A?displayProperty=nameWithType> 개체를 요청합니다. 값을 제공할 수 없거나, 인수 값이 `null`이거나, 합성 서식 지정 메서드에 <xref:System.IFormatProvider> 매개 변수가 없는 경우, 현재 스레드 문화권에 대한 <xref:System.Globalization.DateTimeFormatInfo> 개체가 사용됩니다.  
   
-    -   다른 형식의 개체에 대해, 합성 서식 지정이 <xref:System.IFormatProvider> 인수와 함께 호출되는 경우 그 값(아무런 `null` 개체도 제공되지 않는 경우 <xref:System.IFormatProvider> 포함)은 <xref:System.IFormattable.ToString%2A?displayProperty=nameWithType> 구현으로 직접 전달됩니다.  그러지 않은 경우, 현재 스레드 문화권을 나타내는 <xref:System.Globalization.CultureInfo> 개체가 <xref:System.IFormattable.ToString%2A?displayProperty=nameWithType> 구현으로 전달됩니다.  
+    -   다른 형식의 개체에 대해, 복합 형식 지정 메서드가 <xref:System.IFormatProvider> 인수와 함께 호출되는 경우 그 값은 <xref:System.IFormattable.ToString%2A?displayProperty=nameWithType> 구현으로 직접 전달됩니다. 그렇지 않으면 `null`이 <xref:System.IFormattable.ToString%2A?displayProperty=nameWithType> 구현으로 전달됩니다.  
   
 4.  `ToString`을 재정의하거나 기본 클래스의 동작을 상속하는, 형식의 매개 변수 없는 <xref:System.Object.ToString?displayProperty=nameWithType> 메서드가 호출됩니다. 이 경우, 형식 항목에서 *formatString* 구성 요소로 지정된 형식 문자열(있는 경우)은 무시됩니다.  
   

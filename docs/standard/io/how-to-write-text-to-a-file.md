@@ -1,12 +1,12 @@
 ---
-title: "방법: 파일에 텍스트 쓰기"
-ms.custom: 
+title: '방법: 파일에 텍스트 쓰기'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -17,18 +17,18 @@ helpviewer_keywords:
 - streams, writing text to files
 - data streams, writing text to files
 ms.assetid: 060cbe06-2adf-4337-9e7b-961a5c840208
-caps.latest.revision: 
+caps.latest.revision: 29
 author: mairaw
 ms.author: mairaw
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: ea0ff0d79762ba47214217a261a325aad9f5eaf6
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 926dfe1ea254fdb6460c835f58721f54609ddc90
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-write-text-to-a-file"></a>방법: 파일에 텍스트 쓰기
 이 항목에서는 .NET Framework 응용 프로그램 또는 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 앱을 위해 파일에 텍스트를 쓸 수 있는 여러 가지 방법을 보여 줍니다. 파일에 텍스트를 쓸 때는 일반적으로 다음 클래스 및 메서드가 사용됩니다.  
@@ -38,7 +38,10 @@ ms.lasthandoff: 12/23/2017
 -   <xref:System.IO.File> - .NET Framework 응용 프로그램과 함께 사용됩니다. <xref:System.IO.File.WriteAllLines%2A> 및 <xref:System.IO.File.WriteAllText%2A>등 파일에 텍스트를 쓰거나 파일에 텍스트를 추가(<xref:System.IO.File.AppendAllLines%2A>, <xref:System.IO.File.AppendAllText%2A> 또는 <xref:System.IO.File.AppendText%2A>)하는 정적 메서드를 제공합니다.  
   
 -   [FileIO](https://msdn.microsoft.com/library/windows/apps/windows.storage.fileio.aspx) - [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 앱과 함께 사용됩니다. 파일에 텍스트를 쓰거나([WriteLinesAsync](https://msdn.microsoft.com/library/windows/apps/windows.storage.fileio.writelinesasync.aspx) 또는 [WriteTextAsync](https://msdn.microsoft.com/library/windows/apps/windows.storage.fileio.writetextasync.aspx)) 파일에 텍스트를 추가([AppendLinesAsync](https://msdn.microsoft.com/library/windows/apps/windows.storage.fileio.appendlinesasync.aspx) 또는 [AppendTextAsync](https://msdn.microsoft.com/library/windows/apps/windows.storage.fileio.appendtextasync.aspx))하는 비동기 메서드가 포함됩니다.  
-  
+
+- <xref:System.IO.Path> - 파일이나 디렉터리 경로 정보가 포함된 문자열에서 사용됩니다. 파일이나 디렉터리 경로를 빌드하려면 문자열의 연결을 허용하는 <xref:System.IO.Path.Combine%2A> 메서드를 포함합니다.
+
+
  수행 중인 작업에 집중할 수 있도록 간단한 샘플이 포함되었습니다. 이러한 이유로 샘플은 최소한의 오류 검사 및 예외 처리(있는 경우)를 수행합니다. 실제 응용 프로그램은 일반적으로 더 강력한 오류 검사 및 예외 처리 기능을 제공합니다.  
   
 ## <a name="example"></a>예  
@@ -95,6 +98,7 @@ ms.lasthandoff: 12/23/2017
   
 ## <a name="see-also"></a>참고 항목  
  <xref:System.IO.StreamWriter>  
+ <xref:System.IO.Path>  
  <xref:System.IO.File.CreateText%2A?displayProperty=nameWithType>  
  [방법: 디렉터리 및 파일 열거](../../../docs/standard/io/how-to-enumerate-directories-and-files.md)  
  [방법: 새로 만든 데이터 파일 읽기 및 쓰기](../../../docs/standard/io/how-to-read-and-write-to-a-newly-created-data-file.md)  

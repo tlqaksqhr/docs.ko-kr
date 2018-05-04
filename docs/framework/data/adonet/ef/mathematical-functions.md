@@ -1,24 +1,12 @@
 ---
-title: "수학 함수"
-ms.custom: 
+title: 수학 함수
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: b040c7cb-156d-40f2-9152-61065b18148c
-caps.latest.revision: "2"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 9b4ef03a2a517b9ce53954bc4576b655afdafc03
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 9dfd1faf9bdab995b19c38e32f64a88ed67cb280
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="mathematical-functions"></a>수학 함수
 .NET Framework Data Provider for SQL Server(SqlClient)에서는 인수로 제공된 입력 값에 대해 계산을 수행한 다음 숫자 값으로 된 결과를 반환하는 수치 연산 함수를 제공합니다. 이 함수는 SqlClient를 사용할 때 사용 가능한 SqlServer 네임스페이스에 있습니다. 공급자의 네임스페이스 속성이 있으면 특정 구문(예: 형식 및 함수)에 대해 이 공급자가 사용하는 접두사를 Entity Framework에서 찾을 수 있습니다. 다음 표에서는 SqlClient 수치 함수에 대해 설명합니다.  
@@ -42,7 +30,7 @@ ms.lasthandoff: 01/17/2018
 |`LOG10(` `expression` `)`|지정한 `Double` 식의 상용 로그를 반환합니다.<br /><br /> **인수**<br /><br /> `expression`: `Double`입니다.<br /><br /> **반환 값**<br /><br /> `Double`<br /><br /> **예제**<br /><br /> `SqlServer.LOG10(100)`|  
 |`PI()`|파이의 상수 값을 `Double`로 반환합니다.<br /><br /> **반환 값**<br /><br /> `Double`<br /><br /> **예제**<br /><br /> `SqlServer.PI()`|  
 |`POWER(` `numeric_expression, power_expression` `)`|지정한 숫자 식의 지정된 거듭제곱 값을 계산합니다.<br /><br /> **인수**<br /><br /> `numeric_expression`: `Int32`, `Int64`, `Double` 또는 `Decimal`입니다.<br /><br /> `power_expression`: `Double`에 대해 계산할 거듭제곱을 나타내는 `numeric_expression`입니다.<br /><br /> **반환 값**<br /><br /> 지정한 `numeric_expression`에 지정한 `power_expression`을 거듭제곱한 값입니다.<br /><br /> **예제**<br /><br /> `SqlServer.POWER(2,7)`|  
-|`RADIANS(` `expression` `)`|각도를 라디안으로 변환합니다.<br /><br /> **인수**<br /><br /> `expression`: `Int32`, `Int64`, `Double` 또는 `Decimal`입니다.<br /><br /> **반환 값**<br /><br /> An `Int32`, `Int64`,<br /><br /> `Double` 또는<br /><br /> `Decimal`.<br /><br /> **예제**<br /><br /> `SqlServer.RADIANS(360.0)`|  
+|`RADIANS(` `expression` `)`|각도를 라디안으로 변환합니다.<br /><br /> **인수**<br /><br /> `expression`: `Int32`, `Int64`, `Double` 또는 `Decimal`입니다.<br /><br /> **반환 값**<br /><br /> `Int32`, `Int64`,<br /><br /> `Double` 또는<br /><br /> `Decimal`.<br /><br /> **예제**<br /><br /> `SqlServer.RADIANS(360.0)`|  
 |`RAND(`[seed]`)`|0에서 1 사이의 임의 값을 반환합니다.<br /><br /> **인수**<br /><br /> 시드 값을 `Int32`로 반환합니다. 시드를 지정하지 않으면 SQL Server 데이터베이스 엔진에서 시드 값을 임의로 할당합니다. 지정된 특정 시드 값에 대해 반환되는 결과는 항상 동일합니다.<br /><br /> **반환 값**<br /><br /> 0에서 1 사이의 임의 `Double` 값입니다.<br /><br /> **예제**<br /><br /> `SqlServer.RAND()`|  
 |`ROUND(` `numeric_expression, length` [ ,`function` ]`)`|숫자 식을 지정한 길이나 전체 자릿수로 반올림하여 반환합니다.<br /><br /> **인수**<br /><br /> `numeric_expression`: `Int32`, `Int64`, `Double` 또는 `Decimal`입니다.<br /><br /> `length`: `Int32`을 반올림할 전체 자릿수를 나타내는 `numeric_expression`입니다. `length`가 양수일 경우 `numeric_expression`은 `length`에서 지정한 소수 자릿수로 반올림됩니다. `length`가 음수일 경우 `numeric_expression`은 `length`에서 지정한 대로 소수점의 왼쪽에서 반올림됩니다.<br /><br /> `function`: (선택 사항)는 `Int32` 수행할 작업의 형식을 나타내는입니다. 함수를 생략 하거나 값 0 (기본값) 이면 때 `numeric_expression` 반올림 됩니다. 이외의 값 0을 지정 하면 `numeric_expression` 잘립니다.<br /><br /> **반환 값**<br /><br /> 지정한 `numeric_expression`에 지정한 `power_expression`을 거듭제곱한 값입니다.<br /><br /> **예제**<br /><br /> `SqlServer.ROUND(748.58, -3)`|  
 |`SIGN(` `expression` `)`|지정한 식의 양수(+1), 0 또는 음수(-1) 부호를 반환합니다.<br /><br /> **인수**<br /><br /> `expression`: `Int32`, `Int64`, `Double` 또는 `Decimal`<br /><br /> **반환 값**<br /><br /> `Int32`, `Int64`, `Double`, 또는 `Decimal`합니다.<br /><br /> **예제**<br /><br /> `SqlServer.SIGN(-10)`|  

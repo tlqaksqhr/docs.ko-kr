@@ -11,11 +11,11 @@ ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: bdb080369c26a3d7ffab97f93ba3419d6bd84754
-ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
+ms.openlocfilehash: b960636863ae1dcb0c955d96875d499b54b04105
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="implementing-the-microservice-application-layer-using-the-web-api"></a>Web API를 사용하여 마이크로 서비스 응용 프로그램 계층 구현
 
@@ -158,7 +158,7 @@ public class ApplicationModule : Autofac.Module
 }
 ```
 
-등록 프로세스와 개념은 내장 ASP.NET Core iOS 컨테이너로 형식을 등록하는 방식과 매우 유사하지만 Autofac을 사용하는 경우에는 구문이 조금 다릅니다.
+등록 프로세스와 개념은 내장 ASP.NET Core IoC 컨테이너로 형식을 등록하는 방식과 매우 유사하지만 Autofac을 사용하는 경우에는 구문이 조금 다릅니다.
 
 예제 코드에서 추상화 IOrderRepository는 구현 클래스 OrderRepository와 함께 등록됩니다. 즉, 생성자가 IOrderRepository 추상화 또는 인터페이스를 통해 종속성을 선언할 때마다 IoC 컨테이너는 OrderRepository 클래스의 인스턴스를 주입합니다.
 

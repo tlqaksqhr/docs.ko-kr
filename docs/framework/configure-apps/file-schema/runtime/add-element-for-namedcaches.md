@@ -1,33 +1,24 @@
 ---
-title: "&lt;추가&gt; 요소에 대 한 &lt;namedCaches&gt;"
-ms.custom: 
+title: '&lt;추가&gt; 요소에 대 한 &lt;namedCaches&gt;'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - add element for <namedCaches>
 - <add> element for <namedCaches>
 ms.assetid: ce2a63a8-c829-4742-a6ea-72ee5d89f169
-caps.latest.revision: "11"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: 0000e92c89920b05e0ffc93fab58fb0bd6ea6b13
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: d65dfd9a1560f2657f48b327277b64ab77014b47
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltaddgt-element-for-ltnamedcachesgt"></a>&lt;추가&gt; 요소에 대 한 &lt;namedCaches&gt;
 추가 `namedCache` 항목에는 `namedCaches` 메모리 내 캐시에 대 한 컬렉션입니다.  
   
- \<system.runtime.caching >  
-\<memoryCache >  
+ \<system.runtime.caching>  
+\<memoryCache>  
 \<namedCaches >  
 \<add>  
   
@@ -44,7 +35,7 @@ ms.lasthandoff: 12/22/2017
  `None`  
   
 ## <a name="attributes-and-elements"></a>특성 및 요소  
- 다음 단원에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
+ 다음 섹션에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
   
 ### <a name="attributes"></a>특성  
   
@@ -67,7 +58,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="remarks"></a>설명  
  `add` 에 항목을 추가 하는 요소는 `namedCaches` 메모리 내 캐시에 대 한 컬렉션입니다. 사용할 수는 [지우기](../../../../../docs/framework/configure-apps/file-schema/runtime/clear-element-for-namedcaches.md) 요소를 사용 하기 전에 `add` 요소를 분명히 다른 수의 명명 된 캐시는 컬렉션입니다. 이 요소는 Web.config 파일 및 machine.config 파일에서 사용할 수 있습니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 예제에서는 기본값에 대 한 설정을 정의 하는 방법을 보여 줍니다. `namedCache` 항목을는 `namedCaches` 메모리 내 캐시에 대 한 컬렉션입니다.  
   
 ```xml  

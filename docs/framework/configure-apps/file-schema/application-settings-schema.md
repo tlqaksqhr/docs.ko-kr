@@ -1,29 +1,20 @@
 ---
-title: "응용 프로그램 설정 스키마"
-ms.custom: 
+title: 응용 프로그램 설정 스키마
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - schema application settings
 - application settings, schema [Windows Forms]
 - Windows Forms, application settings schema
 - configuration schema [.NET Framework], application settings
 ms.assetid: 5797fcff-6081-4e8c-bebf-63d9c70cf14b
-caps.latest.revision: "3"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: 3581c8079132de5f1faad4a01e6b43c8e4833316
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 7af6342e9c05fc4e6c1bf4daac59db14ccdf22c7
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="application-settings-schema"></a>응용 프로그램 설정 스키마
 
@@ -37,8 +28,8 @@ Windows Forms 응용 프로그램에서 응용 프로그램 설정을 사용 하
 | -------------------------- | ------------------------------------------------------------------------------------- |
 | **\<applicationSettings >** | 모든 포함  **\<설정 >** 태그 응용 프로그램에 특정 합니다.                         |
 | **\<g s >**        | 모든 포함  **\<설정 >** 현재 사용자에 게 특정 태그입니다.                        |
-| **\<설정 >**             | 설정을 정의합니다. 자식 요소  **\<applicationSettings >** 또는  **\<g s >**합니다. |
-| **\<value>**               | 설정 값을 정의합니다. 자식  **\<설정 >**합니다.                                   |
+| **\<설정 >**             | 설정을 정의합니다. 자식 요소  **\<applicationSettings >** 또는  **\<g s >** 합니다. |
+| **\<value>**               | 설정 값을 정의합니다. 자식  **\<설정 >** 합니다.                                   |
 
 ## <a name="applicationsettings-element"></a>\<applicationSettings > 요소
 
@@ -61,7 +52,7 @@ Windows Forms 응용 프로그램에서 응용 프로그램 설정을 사용 하
 
 이 요소는 설정의 값을 포함합니다.
 
-## <a name="example"></a>예
+## <a name="example"></a>예제
 
 다음 예제에서는 두 개의 응용 프로그램 범위 설정 및 두 개의 사용자 범위 설정을 정의 하는 응용 프로그램 설정 파일을 보여 줍니다.
 
@@ -99,7 +90,7 @@ Windows Forms 응용 프로그램에서 응용 프로그램 설정을 사용 하
 </configuration>
 ```
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참고자료
 
 [응용 프로그램 설정 개요](~/docs/framework/winforms/advanced/application-settings-overview.md)   
 [응용 프로그램 설정 아키텍처](~/docs/framework/winforms/advanced/application-settings-architecture.md)

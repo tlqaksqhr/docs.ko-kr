@@ -1,26 +1,14 @@
 ---
 title: '&lt;serviceSecurityAudit&gt;'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: ba517369-a034-4f8e-a2c4-66517716062b
-caps.latest.revision: 
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload:
-- dotnet
-ms.openlocfilehash: 25355acfd7bc82ccff33f68a690f3f02d1235438
-ms.sourcegitcommit: d3cfda0943364aaf6ccd574f55f584576c8a4fee
+ms.openlocfilehash: 293cd3118ace2e073933e4c124664c775902e7d8
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltservicesecurityauditgt"></a>&lt;serviceSecurityAudit&gt;
 서비스 작업 중에 보안 이벤트의 감사를 사용하도록 하는 설정을 지정합니다.  
@@ -60,10 +48,10 @@ ms.lasthandoff: 03/08/2018
   
 |요소|설명|  
 |-------------|-----------------|  
-|[\<behavior>](../../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)|동작 요소를 지정합니다.|  
+|[\<동작 >](../../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)|동작 요소를 지정합니다.|  
   
 ## <a name="remarks"></a>설명  
- 이 구성 요소는 [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] 인증 이벤트를 감사하는 데 사용됩니다. 감사 기능을 사용하도록 설정하면 성공한 인증 시도나 실패한 인증 시도 또는 둘 모두를 감사할 수 있습니다. 이벤트는 운영 체제 버전의 응용 프로그램 로그, 보안 로그 또는 기본 로그의 세 가지 이벤트 로그 중 하나에 기록됩니다. 이벤트 로그는 Windows 이벤트 뷰어를 사용하여 볼 수 있습니다.  
+ 이 구성 요소는 Windows Communication Foundation (WCF) 인증 이벤트 감사에 사용 됩니다. 감사 기능을 사용하도록 설정하면 성공한 인증 시도나 실패한 인증 시도 또는 둘 모두를 감사할 수 있습니다. 이벤트는 운영 체제 버전의 응용 프로그램 로그, 보안 로그 또는 기본 로그의 세 가지 이벤트 로그 중 하나에 기록됩니다. 이벤트 로그는 Windows 이벤트 뷰어를 사용하여 볼 수 있습니다.  
   
  이 구성 요소를 사용 하 여의 자세한 예제를 보려면 [서비스 감사 동작](../../../../../docs/framework/wcf/samples/service-auditing-behavior.md)합니다.  
   
@@ -75,7 +63,7 @@ ms.lasthandoff: 03/08/2018
   
  서비스 권한 부여 감사 이벤트는 서비스 권한 부여 관리자가 내린 권한 부여 결정을 포함합니다. 권한 부여의 성공 여부에 대 한 정보를 제공 하거나 클라이언트의 id와 함께 실패, 메시지가 보내진 끝점에서 생성 된 권한 부여 컨텍스트의 식별자 메시지와 관련 된 작업에는 들어오는 메시지 및 액세스 결정을 내린 권한 부여 관리자의 형식입니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
   
 ```xml  
 <system.serviceModel>  

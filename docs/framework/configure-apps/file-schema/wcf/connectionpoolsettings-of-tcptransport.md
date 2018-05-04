@@ -1,33 +1,21 @@
 ---
-title: "&lt;tcpTransport&gt;의 &lt;connectionPoolSettings&gt;"
-ms.custom: 
+title: '&lt;tcpTransport&gt;의 &lt;connectionPoolSettings&gt;'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 2fbc3aa7-fcc9-4193-99a3-85d31d60d3f7
-caps.latest.revision: "5"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: f0e9c4d34caa16f41e874b7a3880325a6585c230
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 1fbc4e179fa5f59a903dad51728638a1e182b23e
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltconnectionpoolsettingsgt-of-lttcptransportgt"></a>&lt;tcpTransport&gt;의 &lt;connectionPoolSettings&gt;
 TCP 전송에 대한 추가 연결 풀 설정을 지정합니다.  
   
- \<system.serviceModel >  
+ \<system.serviceModel>  
 \<바인딩 >  
-\<customBinding >  
+\<customBinding>  
 \<바인딩 >  
-\<tcpTransport >  
+\<tcpTransport>  
 \<connectionPoolSettings >  
   
 ## <a name="syntax"></a>구문  
@@ -41,7 +29,7 @@ TCP 전송에 대한 추가 연결 풀 설정을 지정합니다.
 ```  
   
 ## <a name="attributes-and-elements"></a>특성 및 요소  
- 다음 단원에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
+ 다음 섹션에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
   
 ### <a name="attributes"></a>특성  
   
@@ -72,4 +60,4 @@ TCP 전송에 대한 추가 연결 풀 설정을 지정합니다.
  [바인딩](../../../../../docs/framework/wcf/bindings.md)  
  [바인딩 확장](../../../../../docs/framework/wcf/extending/extending-bindings.md)  
  [사용자 지정 바인딩](../../../../../docs/framework/wcf/extending/custom-bindings.md)  
- [\<customBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)
+ [\<customBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)

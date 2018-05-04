@@ -1,30 +1,18 @@
 ---
 title: '&lt;discoveryEndpoint&gt;'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: fae2f48b-a635-4e4b-859d-a1432ac37e1c
-caps.latest.revision: "4"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 51caf46f85e7edd1f8e4b9a08ab6a1198ccd9c79
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 6a352fbfced08001f76dceaff283d6bca25f56f9
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltdiscoveryendpointgt"></a>&lt;discoveryEndpoint&gt;
 
 이 구성 요소는 고정 검색 계약이 있는 표준 끝점을 정의합니다. 서비스 구성에 추가되면 검색 메시지를 수신하는 위치를 지정합니다. 클라이언트 구성에 추가되면 검색 쿼리를 보내는 위치를 지정합니다.  
   
-\<system.serviceModel >  
+\<system.serviceModel>  
 \<d a r d >  
   
 ## <a name="syntax"></a>구문
@@ -65,7 +53,7 @@ ms.lasthandoff: 12/22/2017
 | ------- | ----------- |  
 | [\<d a r d >](../../../../../docs/framework/configure-apps/file-schema/wcf/standardendpoints.md) | 하나 이상의 속성(주소, 바인딩, 계약)이 고정된 미리 정의된 끝점인 표준 끝점의 컬렉션입니다. |  
   
-## <a name="example"></a>예
+## <a name="example"></a>예제
 
 다음 예제에서는 피어 넷 멀티캐스트 전송을 통해 검색 메시지를 수신하는 서비스를 보여 줍니다. 이 예제에서는 WS-Discovery April 2005 버전을 명시적으로 지정합니다.  
   
@@ -94,6 +82,6 @@ ms.lasthandoff: 12/22/2017
 </standardEndpoints>  
 ```  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참고자료
 
 <xref:System.ServiceModel.Discovery.DiscoveryEndpoint>

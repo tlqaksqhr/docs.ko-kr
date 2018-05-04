@@ -1,24 +1,12 @@
 ---
-title: "CSDL 사양"
-ms.custom: 
+title: CSDL 사양
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 6bb94c37-87da-447a-8dfd-83d1c4b5a2d2
-caps.latest.revision: "5"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: c62e34e3e509e48d90688d9894ec5378b251447c
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 9c9145929416667e8ac2b5d810303a7bfff2eb81
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="csdl-specification"></a>CSDL 사양
 [msdn.microsoft.com/data/ef](http://msdn.microsoft.com/data/ef) Entity Framework 콘텐츠의 기본 위치는 이제 사이트가 됩니다.  

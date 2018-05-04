@@ -1,40 +1,42 @@
 ---
-title: "클라이언트 응용 프로그램 서비스 개요"
-ms.custom: 
+title: 클라이언트 응용 프로그램 서비스 개요
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - client application services, classes
 - client application services, about client application services
 ms.assetid: f0a2da13-e282-4fd7-88a1-f9102c9aeab1
-caps.latest.revision: "25"
+caps.latest.revision: 25
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 55b4ab154f9f3a9b17274697c30ca826218322ab
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: b166dc273eed83660565d9b3bc6a70ffc85547fa
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="client-application-services-overview"></a>클라이언트 응용 프로그램 서비스 개요
 클라이언트 응용 프로그램 서비스를 통해 Windows Forms 및 WPF(Windows Presentation Foundation) 응용 프로그램에서 [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)] 로그인, 역할 및 프로필 서비스에 간편하게 액세스할 수 있습니다. [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)] 응용 프로그램 서비스는 [!INCLUDE[vs_orcas_long](../../../includes/vs-orcas-long-md.md)] 및 [!INCLUDE[net_v35_long](../../../includes/net-v35-long-md.md)]에 포함된 Microsoft ASP.NET 2.0 AJAX 확장에 들어 있습니다. 이 서비스를 통해 여러 웹 응용 프로그램과 Windows 기반 응용 프로그램이 단일 서버에서 사용자 정보와 사용자 관리 기능을 공유할 수 있습니다.  
   
  클라이언트 응용 프로그램 서비스에는 Windows 기반 응용 프로그램에서 다음 기능을 사용할 수 있도록 웹 서비스 확장성 모델에 연결하는 클라이언트 서비스 공급자가 포함됩니다.  
   
--   단일 클라이언트 구성. [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 프로젝트 디자이너를 사용하거나 프로젝트의 App.config 파일에서 클라이언트 서비스 공급자를 지정하여 로그인, 역할 및 프로필 서비스를 사용하도록 설정하고 구성할 수 있습니다. 자세한 내용은 [방법: 클라이언트 응용 프로그램 서비스 구성](../../../docs/framework/common-client-technologies/how-to-configure-client-application-services.md)을 참조하세요.  
+-   단일 클라이언트 구성. Visual Studio 프로젝트 디자이너를 사용하거나 프로젝트의 App.config 파일에서 클라이언트 서비스 공급자를 지정하여 로그인, 역할 및 프로필 서비스를 사용하도록 설정하고 구성할 수 있습니다. 자세한 내용은 [방법: 클라이언트 응용 프로그램 서비스 구성](../../../docs/framework/common-client-technologies/how-to-configure-client-application-services.md)을 참조하세요.  
   
 -   단순한 프로그래밍. 클라이언트 응용 프로그램 서비스를 사용하도록 설정하고 구성하면 기존 [!INCLUDE[dnprdnlong](../../../includes/dnprdnlong-md.md)] 멤버 자격, 역할 및 응용 프로그램 설정 클래스를 통해 간접적으로 서비스 공급자에 액세스할 수 있습니다. 클라이언트 응용 프로그램 서비스를 구현하는 [!INCLUDE[net_v35_long](../../../includes/net-v35-long-md.md)] 클래스에 직접 액세스할 수도 있습니다. 그러나 대부분의 경우 직접 액세스할 필요는 없습니다. 클라이언트 응용 프로그램 서비스 클래스에 대한 자세한 내용은 이 항목의 "클라이언트 응용 프로그램 서비스 클래스" 섹션을 참조하세요.  
   
 -   오프라인 지원. Windows 기반 응용 프로그램이 간헐적으로 연결되는 환경에서 작동해야 하는 경우도 많습니다. 응용 프로그램이 온라인 상태인 경우 클라이언트 서비스 공급자는 응용 프로그램이 오프라인 상태일 때 사용하기 위해 서버에서 검색된 값을 캐시합니다.  
   
--   [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 응용 프로그램 설정 디자이너와의 통합. [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]에서 프로젝트에 설정을 추가할 때 클라이언트 설정 서비스 공급자를 통해 액세스할 설정을 지정할 수 있습니다.  
+-   Visual Studio 응용 프로그램 설정 디자이너와의 통합. Visual Studio에서 프로젝트에 설정을 추가할 때 클라이언트 설정 서비스 공급자를 통해 액세스할 설정을 지정할 수 있습니다.  
   
  다음 섹션에서는 이러한 기능에 대해 자세히 설명합니다. [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)] 응용 프로그램 서비스에 대한 자세한 내용은 [ASP.NET 응용 프로그램 서비스 개요](http://msdn.microsoft.com/library/1162e529-0d70-44b2-b3ab-83e60c695013)를 참조하세요.  
   
@@ -59,9 +61,9 @@ ms.lasthandoff: 12/22/2017
  [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)] 역할 서비스를 설정하는 방법에 대한 자세한 내용은 [ASP.NET AJAX와 함께 역할 정보 사용](http://msdn.microsoft.com/library/280f6ad9-ba1a-4fc9-b0cc-22e39e54a82d)을 참조하세요.  
   
 ## <a name="settings"></a>설정  
- 클라이언트 응용 프로그램 서비스를 사용하여 기존의 [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)] 프로필 서비스에서 사용자 응용 프로그램 설정을 검색할 수 있습니다. 클라이언트 응용 프로그램 서비스 웹 설정 기능은 [!INCLUDE[dnprdnlong](../../../includes/dnprdnlong-md.md)]에서 제공하는 응용 프로그램 설정 기능과 통합됩니다. 웹 설정을 검색하려면 먼저 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 프로젝트 디자이너의 **설정** 탭을 사용하여 프로젝트에 대한 `Settings` 클래스(C#에서는 `Properties.Settings.Default`로 액세스되고 [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]에서는 `My.Settings`로 액세스됨)를 생성합니다. **설정** 탭에서 **웹 설정 로드 단추**를 사용하여 웹 설정을 검색하고 생성된 `Settings` 클래스에 추가할 수 있습니다. 모든 인증된 사용자가 사용하거나 모든 익명 사용자가 사용하도록 구성된 웹 설정을 사용할 수 있습니다.  
+ 클라이언트 응용 프로그램 서비스를 사용하여 기존의 [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)] 프로필 서비스에서 사용자 응용 프로그램 설정을 검색할 수 있습니다. 클라이언트 응용 프로그램 서비스 웹 설정 기능은 [!INCLUDE[dnprdnlong](../../../includes/dnprdnlong-md.md)]에서 제공하는 응용 프로그램 설정 기능과 통합됩니다. 웹 설정을 검색하려면 먼저 Visual Studio 프로젝트 디자이너의 **설정** 탭을 사용하여 프로젝트에 대한 `Settings` 클래스(C#에서는 `Properties.Settings.Default`로 액세스되고 Visual Basic에서는 `My.Settings`로 액세스됨)를 생성합니다. **설정** 탭에서 **웹 설정 로드 단추**를 사용하여 웹 설정을 검색하고 생성된 `Settings` 클래스에 추가할 수 있습니다. 모든 인증된 사용자가 사용하거나 모든 익명 사용자가 사용하도록 구성된 웹 설정을 사용할 수 있습니다.  
   
- 응용 프로그램 설정에 대한 자세한 내용은 [응용 프로그램 설정 개요](../../../docs/framework/winforms/advanced/application-settings-overview.md)를 참조하세요. [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]에서 설정 클래스를 생성하는 대신 고유한 설정 클래스를 구현하는 방법에 대한 자세한 내용은 [방법: 응용 프로그램 설정 만들](../../../docs/framework/winforms/advanced/how-to-create-application-settings.md)를 참조하세요. [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)] 프로필 서비스를 설정하는 방법에 대한 자세한 내용은 [ASP.NET AJAX와 함께 프로필 정보 사용](http://msdn.microsoft.com/library/91239ae6-d01c-4f4e-a433-eb9040dbed61)을 참조하세요.  
+ 응용 프로그램 설정에 대한 자세한 내용은 [응용 프로그램 설정 개요](../../../docs/framework/winforms/advanced/application-settings-overview.md)를 참조하세요. Visual Studio에서 설정 클래스를 생성하는 대신 고유한 설정 클래스를 구현하는 방법에 대한 자세한 내용은 [방법: 응용 프로그램 설정 만들기](../../../docs/framework/winforms/advanced/how-to-create-application-settings.md)를 참조하세요. [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)] 프로필 서비스를 설정하는 방법에 대한 자세한 내용은 [ASP.NET AJAX와 함께 프로필 정보 사용](http://msdn.microsoft.com/library/91239ae6-d01c-4f4e-a433-eb9040dbed61)을 참조하세요.  
   
 ## <a name="client-application-services-classes"></a>클라이언트 응용 프로그램 서비스 클래스  
  다음 표에서는 클라이언트 응용 프로그램 서비스 기능을 구현하는 클래스에 대해 설명합니다.  

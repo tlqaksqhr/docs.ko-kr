@@ -1,13 +1,6 @@
 ---
-title: "&lt;코드 베이스&gt; 요소"
-ms.custom: 
+title: '&lt;코드 베이스&gt; 요소'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#codeBase
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/runtime/assemblyBinding/dependentAssembly/codeBase
@@ -16,23 +9,21 @@ helpviewer_keywords:
 - container tags, <codeBase> element
 - codeBase element
 ms.assetid: d48a3983-2297-43ff-a14d-1f29d3995822
-caps.latest.revision: "10"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: 272a4262295b5dd67414dd0ef6523f90b2125836
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 3b614546e8ed23cc1a5e169a33fb5878695037ae
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltcodebasegt-element"></a>&lt;코드 베이스&gt; 요소
 공용 언어 런타임에서 어셈블리를 찾을 수를 지정 합니다.  
   
  \<configuration>  
-\<런타임 >  
-\<assemblyBinding >  
+\<runtime>  
+\<assemblyBinding>  
 \<dependentAssembly >  
 \<s e >  
   
@@ -45,7 +36,7 @@ href="URL of assembly"/>
 ```  
   
 ## <a name="attributes-and-elements"></a>특성 및 요소  
- 다음 단원에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
+ 다음 섹션에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
   
 ### <a name="attributes"></a>특성  
   
@@ -79,7 +70,7 @@ href="URL of assembly"/>
   
  강력한 이름 없이 어셈블리의 경우 버전이 무시 되 고 로더 사용에서 처음 나오는 \<s e > 내 \<dependentAssembly > 합니다. 다른 어셈블리에 바인딩 리디렉션하는 응용 프로그램 구성 파일에 항목이 있으면 리디렉션 어셈블리 버전 바인딩 요청과 일치 하지 않는 경우에 우선을 적용 됩니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 예제에서는 런타임에 어셈블리를 찾을 수를 지정 하는 방법을 보여 줍니다.  
   
 ```xml  

@@ -1,27 +1,15 @@
 ---
-title: "제네릭 Field 및 SetField 메서드(LINQ to DataSet)"
-ms.custom: 
+title: 제네릭 Field 및 SetField 메서드(LINQ to DataSet)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 1883365f-9d6c-4ccb-9187-df309f47706d
-caps.latest.revision: "2"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 6281f2fdd00f210f09c97861d2ea723d259af004
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 2f7d5cc5689914db2107febadf60bee6da1c2b72
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="generic-field-and-setfield-methods-linq-to-dataset"></a>제네릭 Field 및 SetField 메서드(LINQ to DataSet)
 [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]은 열 값에 액세스할 수 있도록 확장 메서드인 <xref:System.Data.DataRow> 및 <xref:System.Data.DataRowExtensions.Field%2A> 메서드를 <xref:System.Data.DataRowExtensions.SetField%2A> 클래스에 제공합니다. 개발자는 이러한 메서드를 사용하여 열 값에 쉽게 액세스할 수 있으며, 특히 null 값과 관련된 작업을 쉽게 수행할 수 있습니다. <xref:System.Data.DataSet>은 <xref:System.DBNull.Value>를 사용하여 null 값을 나타내는 반면 [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)]에서는 [!INCLUDE[dnprdnlong](../../../../includes/dnprdnlong-md.md)]에서 도입된 nullable 형식 지원을 사용합니다. <xref:System.Data.DataRow>의 기존 열 접근자를 사용하려면 반환 개체를 적절한 형식으로 캐스팅해야 합니다. 반환된 <xref:System.Data.DataRow>가 암시적으로 다른 형식으로 캐스팅되면 <xref:System.DBNull.Value>이 throw되므로 <xref:System.InvalidCastException>의 특정 필드가 null일 가능성이 있는 경우 명시적으로 null 값을 확인해야 합니다. 다음 예제에서 <xref:System.Data.DataRow.IsNull%2A> 메서드를 사용하여 null 값을 확인하지 않으면 인덱서에서 <xref:System.DBNull.Value>를 반환하면서 <xref:System.String>으로 캐스팅할 때 예외가 throw됩니다.  

@@ -1,27 +1,15 @@
 ---
-title: "XSLT 변형을 DataSet에 적용"
-ms.custom: 
+title: XSLT 변형을 DataSet에 적용
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 09f2e4ee-1d08-4ba8-8936-83394fee319d
-caps.latest.revision: "4"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 0c2f5c50054be6254c472b8c161c4f9493132da7
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 05894431f819b968877a4a971027850efe37126a
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="applying-an-xslt-transform-to-a-dataset"></a>XSLT 변형을 DataSet에 적용
 **WriteXml** 의 메서드는 <xref:System.Data.DataSet> 의 내용을 쓸 수 있습니다는 **DataSet** XML 데이터로 합니다. 그런 다음에는 XSLT(XSL transformations)를 사용하여 해당 XML을 다른 형식으로 변형하는 공통적인 작업이 수행됩니다. 그러나 동기화는 **DataSet** 와 <xref:System.Xml.XmlDataDocument> 의 내용에 XSLT 스타일 시트를 적용할 수 있습니다는 **데이터 집합** 먼저의 콘텐츠를 작성 하지 않고도  **데이터 집합** 사용 하 여 XML 데이터 **WriteXml**합니다.  

@@ -1,9 +1,6 @@
 ---
-title: "&lt;소스&gt; 요소"
+title: '&lt;소스&gt; 요소'
 ms.date: 09/29/2017
-ms.prod: .net-framework
-ms.technology: dotnet-clr
-ms.topic: article
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/sources/source
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#source
@@ -13,12 +10,11 @@ helpviewer_keywords:
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: d6c5c65be8a540fdbba64d5a604c0963f9797e0a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: b7c2a71b129a0ad7d1c2a72b18b8a69a111f9495
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltsourcegt-element"></a>&lt;소스&gt; 요소
 추적 메시지를 시작하는 추적 소스를 지정합니다.  
@@ -37,7 +33,7 @@ ms.lasthandoff: 12/22/2017
 ```  
   
 ## <a name="attributes-and-elements"></a>특성 및 요소  
- 다음 단원에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
+ 다음 섹션에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
   
 ### <a name="attributes"></a>특성  
   
@@ -65,7 +61,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="remarks"></a>설명  
  이 요소는 응용 프로그램 구성 파일 및 컴퓨터 구성 파일 (Machine.config)에서 사용할 수 있습니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  사용 하는 방법을 보여 주는 다음 예제는 `<source>` 추적 소스를 추가할 요소의 `mySource` 명명 된 소스 스위치에 대 한 수준을 설정 하 고 `sourceSwitch`합니다. 콘솔 추적 수신기는 추적 정보를 콘솔에 작성 하는 추가 됩니다.  
   
 ```xml  

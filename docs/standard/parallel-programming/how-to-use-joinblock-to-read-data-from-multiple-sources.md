@@ -1,5 +1,5 @@
 ---
-title: "방법: JoinBlock을 사용하여 여러 소스에서 데이터 읽기"
+title: '방법: JoinBlock을 사용하여 여러 소스에서 데이터 읽기'
 ms.date: 03/30/2017
 ms.prod: .net
 ms.technology: dotnet-standard
@@ -18,14 +18,14 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: f7d4e552404f99580bceafe7f900db4607201c3d
-ms.sourcegitcommit: 6a9030eb5bd0f00e1d144f81958adb195cfb1f6f
+ms.openlocfilehash: ba353a34306b06e0f1df4696af5545799e7a5b37
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-use-joinblock-to-read-data-from-multiple-sources"></a>방법: JoinBlock을 사용하여 여러 소스에서 데이터 읽기
-이 문서에서는 <xref:System.Threading.Tasks.Dataflow.JoinBlock%602> 클래스를 사용하여 여러 소스에서 데이터를 사용할 수 있는 경우 작업을 수행하는 방법을 설명합니다. 또한 non-greedy 모드를 사용하여 여러 조인 블록이 데이터 소스를 보다 효율적으로 공유할 수 있도록 하는 방법을 보여줍니다.
+이 문서에서는 <xref:System.Threading.Tasks.Dataflow.JoinBlock%602> 클래스를 사용하여 여러 소스에서 데이터를 사용할 수 있는 경우 작업을 수행하는 방법을 설명합니다. 또한 non-greedy 모드를 사용하여 여러 조인 블록이 데이터 소스를 보다 효율적으로 공유할 수 있도록 하는 방법을 보여 줍니다.
 
 [!INCLUDE [tpl-install-instructions](../../../includes/tpl-install-instructions.md)]
 
@@ -38,13 +38,13 @@ ms.lasthandoff: 01/10/2018
  `MemoryResource` 개체의 공유 풀을 효율적으로 사용할 수 있도록 하기 위해 이 예제에서는 <xref:System.Threading.Tasks.Dataflow.GroupingDataflowBlockOptions> 속성이 <xref:System.Threading.Tasks.Dataflow.GroupingDataflowBlockOptions.Greedy%2A>로 설정된 `False` 개체를 지정하여 non-greedy 모드에서 작동하는 <xref:System.Threading.Tasks.Dataflow.JoinBlock%602> 개체를 만듭니다. non-greedy 조인 블록은 각 소스에서 메시지를 사용할 수 있을 때까지 들어오는 메시지를 모두 연기합니다. 연기된 메시지 중 하나라도 다른 블록에서 수락된 경우 조인 블록은 프로세스를 다시 시작합니다. non-greedy 모드에서 하나 이상의 소스 블록을 공유하는 조인 블록은 다른 블록이 데이터를 기다릴 때 작업을 진행할 수 있습니다. 이 예제에서 `MemoryResource` 개체가 `memoryResources` 풀에 추가되는 경우 두 번째 데이터 소스를 받을 첫 번째 조인 블록은 작업을 진행할 수 있습니다. 이 예제에서 기본값인 greedy 모드를 사용한다면 한 조인 블록이 `MemoryResource` 개체를 사용하고 두 번째 리소스를 사용할 수 있을 때까지 기다릴 수도 있습니다. 그러나 다른 조인 블록이 두 번째 데이터 소스를 사용할 수 있는 경우 `MemoryResource` 개체가 또 다른 조인 블록에서 사용되었기 때문에 작업을 진행할 수 없습니다.  
   
 ## <a name="compiling-the-code"></a>코드 컴파일  
- 예제 코드를 복사하여 Visual Studio 프로젝트에 붙여넣거나, `DataflowNonGreedyJoin.cs`([!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]의 경우 `DataflowNonGreedyJoin.vb`) 파일에 붙여넣은 후 Visual Studio 명령 프롬프트 창에서 다음 명령을 실행합니다.  
+ 예제 코드를 복사하여 Visual Studio 프로젝트에 붙여넣거나, `DataflowNonGreedyJoin.cs`(Visual Basic의 경우 `DataflowNonGreedyJoin.vb`) 파일에 붙여넣은 후 Visual Studio 명령 프롬프트 창에서 다음 명령을 실행합니다.  
   
- [!INCLUDE[csprcs](../../../includes/csprcs-md.md)]  
+ Visual C#  
   
  **csc.exe /r:System.Threading.Tasks.Dataflow.dll DataflowNonGreedyJoin.cs**  
   
- [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]  
+ Visual Basic  
   
  **vbc.exe /r:System.Threading.Tasks.Dataflow.dll DataflowNonGreedyJoin.vb**  
   

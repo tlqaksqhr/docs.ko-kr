@@ -1,29 +1,19 @@
 ---
-title: '&lt;loadFromRemoteSources&gt; Element'
-ms.custom: 
+title: '&lt;loadFromRemoteSources&gt; 요소'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - loadFromRemoteSources element
 - <loadFromRemoteSources> element
 ms.assetid: 006d1280-2ac3-4db6-a984-a3d4e275046a
-caps.latest.revision: "31"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 13b42405a0faf721c46476aadaa0cff8163883c1
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: f0d442f71a0e2fc7deacd9aaa02cfba7b66f2349
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/03/2018
 ---
-# <a name="ltloadfromremotesourcesgt-element"></a>&lt;loadFromRemoteSources&gt; Element
+# <a name="ltloadfromremotesourcesgt-element"></a>&lt;loadFromRemoteSources&gt; 요소
 부여할지 여부를 원격 원본에서 어셈블리가 완전 신뢰를 지정 합니다.  
   
 > [!NOTE]
@@ -96,7 +86,7 @@ ms.lasthandoff: 01/19/2018
 ## <a name="configuration-file"></a>구성 파일  
  이 요소는 일반적으로 응용 프로그램 구성 파일에서 사용하지만 컨텍스트에 따라 다른 구성 파일에서도 사용할 수 있습니다. 자세한 내용은 문서 참조 [자세한 암시적 사용의 CAS 정책: loadFromRemoteSources](http://go.microsoft.com/fwlink/p/?LinkId=266839) .NET 보안 블로그에서.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 예에서는 원격 원본에서 응용 프로그램에 완전 신뢰를 부여 하는 방법을 보여 줍니다.  
   
 ```xml  

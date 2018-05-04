@@ -1,10 +1,6 @@
 ---
 title: 앱 설정 스키마
 ms.date: 05/01/2017
-ms.prod: .net-framework
-ms.technology:
-- dotnet-clr
-ms.topic: article
 helpviewer_keywords:
 - schema app settings
 - app settings, schema [Windows Forms]
@@ -13,14 +9,11 @@ helpviewer_keywords:
 ms.assetid: 99347d62-3ea5-40b6-bfec-c31431011422
 author: guardrex
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 028fdbeb90a1499459803f24f3aa62923452edba
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 154f38880225fb420f9944f336ff885bd116e2c3
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="app-settings-schema"></a>앱 설정 스키마
 
@@ -35,9 +28,9 @@ ms.lasthandoff: 12/22/2017
 | 요소 | 설명 |
 | ------- | ----------- |
 | [**\<appSettings>**](~/docs/framework/configure-apps/file-schema/appsettings/appsettings-element-for-configuration.md) | 응용 프로그램 설정을 제어하기 위한 **\<add>**, **\<clear>** 및 **\<remove>** 태그가 포함되어 있습니다. 선택적 **파일** 특성이 있습니다. |
-| [**\<add>**](~/docs/framework/configure-apps/file-schema/appsettings/add-element-for-appsettings.md) | 설정을 정의합니다. **\<appSettings>**의 자식 요소입니다. **키** 및 **값** 특성이 필요합니다. |
-| [**\<clear>**](~/docs/framework/configure-apps/file-schema/appsettings/clear-element-for-appsettings.md) | 모든 설정을 지웁니다. **\<appSettings>**의 자식 요소입니다. 특성이 없습니다. |
-| [**\<remove>**](~/docs/framework/configure-apps/file-schema/appsettings/remove-element-for-appsettings.md) | 설정을 제거합니다. **\<appSettings>**의 자식 요소입니다. **키** 특성이 필요합니다. |
+| [**\<add>**](~/docs/framework/configure-apps/file-schema/appsettings/add-element-for-appsettings.md) | 설정을 정의합니다. **\<appSettings>** 의 자식 요소입니다. **키** 및 **값** 특성이 필요합니다. |
+| [**\<clear>**](~/docs/framework/configure-apps/file-schema/appsettings/clear-element-for-appsettings.md) | 모든 설정을 지웁니다. **\<appSettings>** 의 자식 요소입니다. 특성이 없습니다. |
+| [**\<remove>**](~/docs/framework/configure-apps/file-schema/appsettings/remove-element-for-appsettings.md) | 설정을 제거합니다. **\<appSettings>** 의 자식 요소입니다. **키** 특성이 필요합니다. |
 
 ## <a name="appsettings-element"></a>\<appSettings> 요소
 
@@ -55,7 +48,7 @@ ms.lasthandoff: 12/22/2017
 
 상속된 사용자 지정 응용 프로그램 설정에 대한 참조를 응용 프로그램 설정 컬렉션에서 제거합니다. **키**에 대한 특성을 정의합니다.
 
-## <a name="example"></a>예
+## <a name="example"></a>예제
 
 다음 예제에서는 사용자 지정 응용 프로그램 설정을 정의하는 외부 응용 프로그램 설정 파일(*custom.config*)을 보여 줍니다.
 
@@ -76,7 +69,7 @@ ms.lasthandoff: 12/22/2017
 </configuration>
 ```
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참고자료
 
 [응용 프로그램 설정 개요](~/docs/framework/winforms/advanced/application-settings-overview.md)   
 [응용 프로그램 설정 아키텍처](~/docs/framework/winforms/advanced/application-settings-architecture.md)

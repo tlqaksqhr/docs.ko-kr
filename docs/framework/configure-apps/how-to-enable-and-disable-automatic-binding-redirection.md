@@ -1,27 +1,18 @@
 ---
-title: "방법: 자동 바인딩 리디렉션 사용 설정 및 해제"
-ms.custom: 
+title: '방법: 자동 바인딩 리디렉션 사용 설정 및 해제'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - side-by-side execution, assembly binding redirection
 - assemblies [.NET Framework], binding redirection
 ms.assetid: 5fca42f3-bdce-4b81-a704-61e42c89d3ba
-caps.latest.revision: "17"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: b6887706aeef3855c1e02c8b1379856022cdac04
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 2d71da1b48938f9f98221d86f0f9badee3a17919
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="how-to-enable-and-disable-automatic-binding-redirection"></a>방법: 자동 바인딩 리디렉션 사용 설정 및 해제
 [!INCLUDE[vs_dev12](../../../includes/vs-dev12-md.md)]부터 [!INCLUDE[net_v451](../../../includes/net-v451-md.md)]을 대상으로 하는 응용 프로그램을 컴파일할 때, 바인딩 리디렉션이 어셈블리 통합을 재정의하기 위한 응용 프로그램 구성 파일에 자동으로 추가될 수 있습니다. 수동으로 바인딩 리디렉션을 응용 프로그램의 구성 파일에 지정할 지라도 응용 프로그램 또는 해당 구성 요소가 동일 어셈블리의 두 개 이상의 버전을 참조할 경우 바인딩 리디렉션을 추가합니다. 자동 바인딩 리디렉션 기능은 [!INCLUDE[net_v451](../../../includes/net-v451-md.md)]을 적용 대상으로 하는 전통적인 데스크톱 응용 프로그램 및 웹 응용 프로그램에 영향을 줍니다. 웹 응용 프로그램에서는 동작이 약간 달라집니다. 이전 버전의 .NET Framework를 대상으로 하는 기존 응용 프로그램이 있는 경우 자동 바인딩 리디렉션을 사용할 수 있으며, 수동으로 작성되는 바인딩 리디렉션을 유지하려는 경우에는 이 기능을 비활성화할 수 있습니다.  

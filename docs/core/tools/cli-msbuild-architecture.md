@@ -1,19 +1,19 @@
 ---
-title: ".NET Core 명령줄 도구 아키텍처"
-description: ".NET Core 도구 레이어 및 최신 버전의 변경 내용에 대해 알아봅니다."
-keywords: ".NET Core, MSBuild, 아키텍처"
+title: .NET Core 명령줄 도구 아키텍처
+description: .NET Core 도구 레이어 및 최신 버전의 변경 내용에 대해 알아봅니다.
 author: blackdwarf
 ms.date: 03/06/2017
-ms.topic: article
-ms.prod: .net-core
+ms.topic: conceptual
+ms.prod: dotnet-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
-ms.assetid: 7fff0f61-ac23-42f0-9661-72a7240a4456
-ms.openlocfilehash: ad34faa0c2577bd5e3a0ba339b19a9ad387e015a
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnetcore
+ms.openlocfilehash: 909e3ba088a3eabededf008fa07a51ac7d677fa2
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="high-level-overview-of-changes-in-the-net-core-tools"></a>.NET Core 도구의 변경 내용에 대한 대략적인 개요
 
@@ -22,7 +22,7 @@ ms.lasthandoff: 10/18/2017
 ## <a name="moving-away-from-projectjson"></a>project.json로부터의 이동
 .NET Core용 도구의 가장 큰 변화는 프로젝트 시스템이 [project.json에서 csproj로 전환](https://blogs.msdn.microsoft.com/dotnet/2016/05/23/changes-to-project-json/)되었다는 점입니다. 최신 버전의 명령줄 도구는 *project.json* 파일을 지원하지 않습니다. 즉, project.json 기반 응용 프로그램 및 라이브러리를 빌드, 실행 또는 게시하는 데 사용할 수 없습니다. 이 버전의 도구를 사용하려면 기존 프로젝트를 마이그레이션하거나 새 프로젝트를 시작해야 합니다. 
 
-이러한 흐름에 포함되어 project.json 프로젝트를 빌드하기 위해 개발된 사용자 지정 빌드 엔진이 전문적이고 완전한 기능의 빌드 엔진인 [MSBuild](https://github.com/Microsoft/msbuild)로 바뀌었습니다. MSBuild는.NET 커뮤니티에서 잘 알려진 엔진으로 플랫폼의 첫 번째 릴리스 이후 핵심 기술로 부상하였습니다. 물론 .NET Core 응용 프로그램을 구축해야 하므로 MSBuild는 .NET Core로 이식되었으며, .NET Core에서 실행하는 모든 플랫폼에서 사용할 수 있습니다. NET Core의 주요 기능 중 하나는 플랫폼 간 개발 스택에 대한 것으로 이 이동으로 인해 이 기능이 없어지진 않습니다.
+이러한 흐름에 포함되어 project.json 프로젝트를 빌드하기 위해 개발된 사용자 지정 빌드 엔진이 전문적이고 완전한 기능의 빌드 엔진인 [MSBuild](https://github.com/Microsoft/msbuild)로 바뀌었습니다. MSBuild는.NET 커뮤니티에서 잘 알려진 엔진으로 플랫폼의 첫 번째 릴리스 이후 핵심 기술로 부상하였습니다. 물론 .NET Core 응용 프로그램을 구축해야 하므로 MSBuild는 .NET Core로 이식되었으며, .NET Core에서 실행하는 모든 플랫폼에서 사용할 수 있습니다. .NET Core의 주요 기능 중 하나는 플랫폼 간 개발 스택에 대한 것으로 이 이동으로 인해 이 기능이 없어지진 않습니다.
 
 > [!NOTE]
 > 처음 MSBuild를 사용하는 경우 자세한 내용을 보려면 [MSBuild 개념](/visualstudio/msbuild/msbuild-concepts) 문서를 읽어 시작할 수 있습니다. 
@@ -34,7 +34,7 @@ ms.lasthandoff: 10/18/2017
 
 ![Preview 2 도구에 대한 상위 수준 아키텍처](media/cli-msbuild-architecture/p2-arch.png)
 
-도구 계층은 매우 간단합니다. 맨 아래 기본으로 .NET Core 명령줄 도구가 있습니다. Visual Studio 또는 Visual Studio Code와 같은 높은 수준의 다른 도구는 모두 프로젝트 빌드와 종속성 복원을 위해 CLI를 사용합니다. 즉, 즉, 예를 들어 Visual Studio를 복원 작업을 수행 하 려가 호출 됩니다.에 `dotnet restore` ([참고 참조](#dotnet-restore-note)) CLI 명령을 합니다. 
+도구 계층은 매우 간단합니다. 맨 아래 기본으로 .NET Core 명령줄 도구가 있습니다. Visual Studio 또는 Visual Studio Code와 같은 높은 수준의 다른 도구는 모두 프로젝트 빌드와 종속성 복원을 위해 CLI를 사용합니다. 다시 말하면 예를 들어 Visual Studio에서 복원 작업을 수행하려면 CLI에서 `dotnet restore`([참고 참조](#dotnet-restore-note)) 명령을 호출합니다. 
 
 새 프로젝트 시스템으로의 이전으로 이전 다이어그램이 다음과 같이 변경됩니다. 
 
@@ -45,7 +45,7 @@ ms.lasthandoff: 10/18/2017
 > [!NOTE]
 > "대상"은 MSBuild에서 호출할 수 있는 명명된 작업을 나타내는 MSBuild 용어입니다. 일반적으로 대상에서 구현되는 로직을 실행하는 하나 이상의 작업과 함께 사용됩니다. MSBuild는 `Copy` 또는 `Execute`와 같이 바로 사용할 수 있는 많은 대상을 지원합니다. 또한 이를 통해 사용자는 관리되는 코드를 사용하여 고유한 작업을 기록하고 대상을 정의하여 이러한 작업을 실행할 수 있습니다. 자세한 내용은 [MSBuild 작업](/visualstudio/msbuild/msbuild-tasks)을 참조하세요. 
 
-이제 모든 도구 집합은 CLI를 비롯하여 공유된 SDK 구성 요소와 대상을 사용합니다. 예를 들어 다음 버전의 Visual Studio를 호출 하지 것입니다 `dotnet restore` ([참고](#dotnet-restore-note)).NET Core 프로젝트에 대 한 종속성을 복원 하려면 명령에서 직접 "Restore" 대상 사용 합니다. 이는 MSBuild 대상이므로, 원시 MSBuild를 사용하여 [dotnet msbuild](dotnet-msbuild.md) 명령을 통해 실행할 수도 있습니다. 
+이제 모든 도구 집합은 CLI를 비롯하여 공유된 SDK 구성 요소와 대상을 사용합니다. 예를 들어 Visual Studio의 다음 버전에서 .NET Core 프로젝트용 종속성 복원을 위해 `dotnet restore`([참고 참조](#dotnet-restore-note)) 명령을 호출하지 않는다면, 직접 “복원” 대상을 사용합니다. 이는 MSBuild 대상이므로, 원시 MSBuild를 사용하여 [dotnet msbuild](dotnet-msbuild.md) 명령을 통해 실행할 수도 있습니다. 
 
 ### <a name="cli-commands"></a>CLI 명령
 공유된 SDK 구성 요소는 대부분의 기존 CLI 명령들이 MSBuild 작업 및 대상으로 다시 구현되었음을 의미합니다. CLI 명령 및 도구 집합의 경우 어떤 의미가 있을까요? 

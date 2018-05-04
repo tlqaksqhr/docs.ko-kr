@@ -1,12 +1,13 @@
 ---
-title: "연습: 부분 신뢰 시나리오에서 코드 내보내기"
-ms.custom: 
+title: '연습: 부분 신뢰 시나리오에서 코드 내보내기'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -21,16 +22,17 @@ helpviewer_keywords:
 - reflection emit, dynamic methods
 - dynamic methods
 ms.assetid: c45be261-2a9d-4c4e-9bd6-27f0931b7d25
-caps.latest.revision: "15"
+caps.latest.revision: 15
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 835483d740b60f98c3170a590edbfbfbe970d783
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: cbdbf8a391235fc03140e032b35eb674a74dc88a
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="walkthrough-emitting-code-in-partial-trust-scenarios"></a>연습: 부분 신뢰 시나리오에서 코드 내보내기
 리플렉션 내보내기에는 완전 또는 부분 신뢰에서 동일한 API 집합이 사용되지만 일부 기능의 경우 부분적으로 신뢰할 수 있는 코드에 특수 권한이 필요합니다. 또한 리플렉션 내보내기에는 부분 신뢰와 함께 보안 투명 어셈블리에서 사용되도록 디자인된 익명으로 호스트되는 동적 메서드의 기능이 있습니다.  
@@ -144,7 +146,7 @@ ms.lasthandoff: 12/22/2017
      <xref:System.AppDomain.CreateInstanceAndUnwrap%2A> 메서드는 대상 응용 프로그램 도메인에서 개체를 만들고 개체의 속성과 메서드를 호출하는 데 사용될 수 있는 프록시를 반환합니다.  
   
     > [!NOTE]
-    >  [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]에서 이 코드를 사용할 경우에는 네임스페이스를 포함하도록 클래스의 이름을 변경해야 합니다. 기본적으로 네임스페이스는 프로젝트의 이름입니다. 예를 들어 프로젝트가 "PartialTrust"이면 클래스 이름은 "PartialTrust.Worker"입니다.  
+    >  Visual Studio에서 이 코드를 사용하는 경우 네임스페이스를 포함하도록 클래스의 이름을 변경해야 합니다. 기본적으로 네임스페이스는 프로젝트의 이름입니다. 예를 들어 프로젝트가 "PartialTrust"이면 클래스 이름은 "PartialTrust.Worker"입니다.  
   
 6.  `SimpleEmitDemo` 메서드를 호출하는 코드를 추가합니다. 호출은 응용 프로그램 도메인 경계에서 마샬링되고 코드는 샌드박스가 적용된 응용 프로그램 도메인에서 실행됩니다.  
   
@@ -218,7 +220,7 @@ ms.lasthandoff: 12/22/2017
   
 ## <a name="compiling-the-code"></a>코드 컴파일  
   
--   [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]에서 이 코드 예제를 빌드할 경우 클래스를 <xref:System.AppDomain.CreateInstanceAndUnwrap%2A> 메서드에 전달할 때 네임스페이스를 포함하려면 클래스 이름을 변경해야 합니다. 기본적으로 네임스페이스는 프로젝트의 이름입니다. 예를 들어 프로젝트가 "PartialTrust"이면 클래스 이름은 "PartialTrust.Worker"입니다.  
+-   Visual Studio에서 이 코드 예제를 빌드하는 경우 <xref:System.AppDomain.CreateInstanceAndUnwrap%2A> 메서드에 클래스를 전달할 때 네임스페이스를 포함하도록 해당 클래스의 이름을 변경해야 합니다. 기본적으로 네임스페이스는 프로젝트의 이름입니다. 예를 들어 프로젝트가 "PartialTrust"이면 클래스 이름은 "PartialTrust.Worker"입니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [리플렉션 내보내기의 보안 문제점](../../../docs/framework/reflection-and-codedom/security-issues-in-reflection-emit.md)  

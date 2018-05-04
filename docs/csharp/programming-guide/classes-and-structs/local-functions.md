@@ -1,5 +1,5 @@
 ---
-title: "로컬 함수(C# 프로그래밍 가이드)"
+title: 로컬 함수(C# 프로그래밍 가이드)
 ms.date: 06/14/2017
 ms.prod: .net
 ms.technology:
@@ -9,15 +9,15 @@ helpviewer_keywords:
 - local functions [C#]
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2b4e95d48e451038f0f7004d0901f329b2c57fe5
-ms.sourcegitcommit: 7e99f66ef09d2903e22c789c67ff5a10aa953b2f
+ms.openlocfilehash: ac18aa57f443f28f55779ff9c92a5349b9b39fd7
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="local-functions-c-programming-guide"></a>로컬 함수(C# 프로그래밍 가이드)
 
-C# 7부터 C#에서는 *로컬 함수*를 지원합니다. 로컬 함수는 다른 멤버에 중첩된 형식의 private 메서드입니다. 포함하는 멤버에서만 호출할 수 있습니다. 로컬 함수는 다음에서 선언하고 호출할 수 있습니다.
+C# 7.0부터 C#에서는 *로컬 함수*를 지원합니다. 로컬 함수는 다른 멤버에 중첩된 형식의 private 메서드입니다. 포함하는 멤버에서만 호출할 수 있습니다. 로컬 함수는 다음에서 선언하고 호출할 수 있습니다.
 
 - 메서드, 특히 반복기 메서드 및 비동기 메서드
 - 생성자

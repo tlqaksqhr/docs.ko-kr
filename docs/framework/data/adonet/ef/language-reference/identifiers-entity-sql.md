@@ -1,27 +1,15 @@
 ---
-title: "식별자(Entity SQL)"
-ms.custom: 
+title: 식별자(Entity SQL)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: d58a5edd-7b5c-48e1-b5d7-a326ff426aa4
-caps.latest.revision: "2"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 18bfb654a6f116f87ae7eeb6059fe994b9084c19
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 55b9ac101c7849c5b348ba8e48c695c0fa328105
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="identifiers-entity-sql"></a>식별자(Entity SQL)
-식별자는 [!INCLUDE[esql](../../../../../../includes/esql-md.md)]에서 쿼리 식 별칭, 변수 참조, 개체 속성, 함수 등을 나타내는 데 사용됩니다. [!INCLUDE[esql](../../../../../../includes/esql-md.md)]두 종류의 식별자를 제공: 단순 식별자와 따옴표 붙은 식별자입니다.  
+식별자는 [!INCLUDE[esql](../../../../../../includes/esql-md.md)]에서 쿼리 식 별칭, 변수 참조, 개체 속성, 함수 등을 나타내는 데 사용됩니다. [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 두 종류의 식별자를 제공: 단순 식별자와 따옴표 붙은 식별자입니다.  
   
 ## <a name="simple-identifiers"></a>단순 식별자  
  [!INCLUDE[esql](../../../../../../includes/esql-md.md)]의 단순 식별자는 영숫자와 밑줄 문자의 시퀀스입니다. 식별자의 첫 문자는 영문자(a-z 또는 A-Z)여야 합니다.  
@@ -125,7 +113,7 @@ SELECT 1 AS X, 2 AS X …
 -   SELECT 식 내 절의 평가 순서에 따라 이름이 범위에 제공되는 순서가 결정됩니다. FROM 절이 가장 먼저 평가되며 그 다음에는 WHERE 절, GROUP BY 절, HAVING 절, SELECT 절 그리고 마지막으로 ORDER BY 절의 순서입니다.  
   
 ### <a name="aggregate-handling"></a>집계 처리  
- [!INCLUDE[esql](../../../../../../includes/esql-md.md)]두 가지 형태의 집계가 지원: 컬렉션 기반 집계와 그룹 기반 집계 합니다. 컬렉션 기반 집계는 [!INCLUDE[esql](../../../../../../includes/esql-md.md)]에서 선호하는 구문이며, 그룹 기반 집계는 SQL 호환성을 위해 지원됩니다.  
+ [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 두 가지 형태의 집계가 지원: 컬렉션 기반 집계와 그룹 기반 집계 합니다. 컬렉션 기반 집계는 [!INCLUDE[esql](../../../../../../includes/esql-md.md)]에서 선호하는 구문이며, 그룹 기반 집계는 SQL 호환성을 위해 지원됩니다.  
   
  집계를 확인할 때 [!INCLUDE[esql](../../../../../../includes/esql-md.md)]에서는 먼저 집계를 컬렉션 기반 집계로 처리하려고 시도합니다. 이 처리에 실패하면 [!INCLUDE[esql](../../../../../../includes/esql-md.md)]에서는 다음 예제에서 보여 주는 것처럼 집계 입력을 중첩 집계 참조로 변환하고 새 식을 확인합니다.  
   

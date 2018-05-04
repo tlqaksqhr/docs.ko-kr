@@ -1,29 +1,17 @@
 ---
 title: '&lt;serviceHostingEnvironment&gt;'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 4f8a7c4f-e735-4987-979a-b74fcdae2652
-caps.latest.revision: "24"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a08df7c620065bb483d276e3ead2c179040f1c9a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: e6c69e06b691e40b6b2c39a54be83d7bdbe3a650
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltservicehostingenvironmentgt"></a>&lt;serviceHostingEnvironment&gt;
 이 요소는 특정 전송을 위해 서비스 호스팅 환경에서 인스턴스화하는 형식을 정의합니다. 이 요소가 비어 있으면 기본 형식이 사용됩니다. 이 요소는 응용 프로그램이나 컴퓨터 수준 구성 파일에서만 사용할 수 있습니다.  
   
- \<시스템입니다. ServiceModel >  
+ \<system.ServiceModel>  
 \<ServiceHostingEnvironment >  
   
 ## <a name="syntax"></a>구문  
@@ -45,15 +33,15 @@ ms.lasthandoff: 12/22/2017
 ```  
   
 ## <a name="attributes-and-elements"></a>특성 및 요소  
- 다음 단원에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
+ 다음 섹션에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
   
 ### <a name="attributes"></a>특성  
   
 |특성|설명|  
 |---------------|-----------------|  
-|aspNetCompatibilityEnabled|현재 응용 프로그램에 ASP.NET 호환 모드를 설정했는지 여부를 나타내는 부울 값입니다. 기본값은 `false`입니다.<br /><br /> 이 특성이 `true`로 설정되면 [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] 서비스에 대한 요청이 ASP.NET HTTP 파이프라인을 통해 전달되며 HTTP가 아닌 프로토콜을 통한 통신이 허용되지 않습니다. 자세한 내용은 참조 [WCF 서비스 및 ASP.NET](../../../../../docs/framework/wcf/feature-details/wcf-services-and-aspnet.md)합니다.|  
+|aspNetCompatibilityEnabled|현재 응용 프로그램에 ASP.NET 호환 모드를 설정했는지 여부를 나타내는 부울 값입니다. 기본값은 `false`입니다.<br /><br /> 이 특성이로 설정 되 면 `true`, ASP.NET HTTP 파이프라인을 통해 Windows Communication Foundation (WCF) 서비스에 대 한 요청 흐름 및 HTTP가 아닌 프로토콜을 통한 통신이 허용 되지 않습니다. 자세한 내용은 참조 [WCF 서비스 및 ASP.NET](../../../../../docs/framework/wcf/feature-details/wcf-services-and-aspnet.md)합니다.|  
 |minFreeMemoryPercentageToActivateService|[!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 서비스를 활성화하기 전에 시스템에서 사용할 수 있는 최소 메모리를 지정하는 정수입니다. **주의:** 의 web.config 파일에서 부분 신뢰와 함께이 특성을 지정 하는 [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 서비스 됩니다는 <xref:System.Security.SecurityException> 서비스가 실행 되는 경우.|  
-|multipleSiteBindingsEnabled|사이트별로 여러 IIS 바인딩을 사용할 수 있는지 여부를 지정하는 부울 값입니다.<br /><br /> IIS는 가상 디렉터리를 포함하는 가상 응용 프로그램의 컨테이너인 웹 사이트로 구성됩니다. 사이트의 응용 프로그램은 하나 이상의 IIS 바인딩을 통해 액세스될 수 있습니다. 하나의 IIS 바인딩은 바인딩 프로토콜과 바인딩 정보라는 두 가지 정보를 제공합니다. 바인딩 프로토콜은 통신이 이루어지는 체계를 정의하며, 바인딩 정보는 사이트에 액세스하는 데 사용되는 정보입니다. 바인딩 프로토콜의 예로는 HTTP가 있으며 바인딩 정보에는 IP 주소, 포트, 호스트 헤더 등이 포함될 수 있습니다.<br /><br /> IIS에서는 사이트별로 여러 개의 IIS 바인딩을 지정할 수 있으므로, 체계별로 여러 개의 기본 주소가 생성됩니다. 하지만 사이트에서 호스트되는 [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] 서비스에서는 체계별로 하나의 baseAddress에만 바인딩할 수 있습니다.<br /><br /> [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] 서비스에 대해 사이트별로 여러 IIS 바인딩을 사용할 수 있도록 하려면 이 특성을 `true`로 설정합니다. 여러 사이트 바인딩은 HTTP 프로토콜에 대해서만 지원됩니다. 구성 파일의 끝점 주소는 전체 URI여야 합니다.|  
+|multipleSiteBindingsEnabled|사이트별로 여러 IIS 바인딩을 사용할 수 있는지 여부를 지정하는 부울 값입니다.<br /><br /> IIS는 가상 디렉터리를 포함하는 가상 응용 프로그램의 컨테이너인 웹 사이트로 구성됩니다. 사이트의 응용 프로그램은 하나 이상의 IIS 바인딩을 통해 액세스될 수 있습니다. 하나의 IIS 바인딩은 바인딩 프로토콜과 바인딩 정보라는 두 가지 정보를 제공합니다. 바인딩 프로토콜은 통신이 이루어지는 체계를 정의하며, 바인딩 정보는 사이트에 액세스하는 데 사용되는 정보입니다. 바인딩 프로토콜의 예로는 HTTP가 있으며 바인딩 정보에는 IP 주소, 포트, 호스트 헤더 등이 포함될 수 있습니다.<br /><br /> IIS에서는 사이트별로 여러 개의 IIS 바인딩을 지정할 수 있으므로, 체계별로 여러 개의 기본 주소가 생성됩니다. 그러나 사이트에서 호스트 되는 Windows Communication Foundation (WCF) 서비스는 체계 별로 하나의 baseAddress에 바인딩할을 수 있습니다.<br /><br /> Windows Communication Foundation (WCF) 서비스에 대 한 사이트 마다 여러 개의 IIS 바인딩을 사용할 수 있도록,이 특성을 설정 `true`합니다. 여러 사이트 바인딩은 HTTP 프로토콜에 대해서만 지원됩니다. 구성 파일의 끝점 주소는 전체 URI여야 합니다.|  
   
 ### <a name="child-elements"></a>자식 요소  
   

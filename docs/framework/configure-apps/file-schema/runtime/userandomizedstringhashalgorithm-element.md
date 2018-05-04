@@ -1,13 +1,6 @@
 ---
-title: "&lt;UseRandomizedStringHashAlgorithm&gt; 요소"
-ms.custom: 
+title: '&lt;UseRandomizedStringHashAlgorithm&gt; 요소'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -15,22 +8,19 @@ helpviewer_keywords:
 - UseRandomizedStringHashAlgorithm element
 - <UseRandomizedStringHashAlgorithm> element
 ms.assetid: c08125d6-56cc-4b23-b482-813ff85dc630
-caps.latest.revision: "12"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: b6231f362a30f4766ccf5a43d33fa0dc7257ad57
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: a515c3011905c4f5c18ed9d3e8edf489428c04d8
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltuserandomizedstringhashalgorithmgt-element"></a>&lt;UseRandomizedStringHashAlgorithm&gt; 요소
 공용 언어 런타임에서 문자열에 대 한 해시 코드를 계산할지 여부를 결정 한 응용 프로그램 도메인 단위로.  
   
  \<configuration>  
-\<런타임 >  
+\<runtime>  
 \<UseRandomizedStringHashAlgorithm >  
   
 ## <a name="syntax"></a>구문  
@@ -41,7 +31,7 @@ ms.lasthandoff: 12/22/2017
 ```  
   
 ## <a name="attributes-and-elements"></a>특성 및 요소  
- 다음 단원에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
+ 다음 섹션에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
   
 ### <a name="attributes"></a>특성  
   
@@ -73,7 +63,7 @@ ms.lasthandoff: 12/22/2017
   
  문자열 조회는 해시 테이블에서 일반적으로 o (1) 연산입니다. 그러나 많은 수의 충돌이 발생 하는 경우 조회 될 수 있습니다는 O (n<sup>2</sup>) 작업입니다. 사용할 수는 `<UseRandomizedStringHashAlgorithm>` 다시 해시 코드 계산 되는 키 데이터 입력에 기반 하는 경우에 특히 잠재적 충돌 수를 제한 하는 응용 프로그램 도메인, 임의의 해시 알고리즘을 생성 하는 구성 요소 사용자가 있습니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 예제에서는 정의 `DisplayString` 개인 문자열 상수를 포함 하는 클래스 `s`, 해당 값은 "는 문자열입니다." 또한 포함는 `ShowStringHashCode` 문자열 값 및 메서드가 실행 되는 응용 프로그램 도메인의 이름과 함께 해시 코드를 표시 하는 메서드입니다.  
   
  [!code-csharp[System.String.GetHashCode#2](../../../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.String.GetHashCode/CS/perdomain.cs#2)]

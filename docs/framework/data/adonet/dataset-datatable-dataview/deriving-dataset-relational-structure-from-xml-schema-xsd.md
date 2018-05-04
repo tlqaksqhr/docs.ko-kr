@@ -1,29 +1,17 @@
 ---
-title: "XML 스키마에서 데이터 집합 관계형 구조 파생(XSD)"
-ms.custom: 
+title: XML 스키마에서 데이터 집합 관계형 구조 파생(XSD)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 8f6cd04d-6197-4bc4-9096-8c51c7e4acae
-caps.latest.revision: "5"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: eb4f6e3a63c901ec69ca5572a6f79d2f0ac4adfc
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 7599577c4e0f485e336e7f79a6c3bd17f0f0c316
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="deriving-dataset-relational-structure-from-xml-schema-xsd"></a>XML 스키마에서 데이터 집합 관계형 구조 파생(XSD)
 이 단원에서는 XSD(XML 스키마 정의 언어) 스키마 문서에서 `DataSet`의 관계형 스키마를 빌드하는 방법을 간략하게 설명합니다. 일반적으로 각각에 대해 `complexType` 스키마 요소의 자식 요소를 테이블에 생성 됩니다는 `DataSet`합니다. 테이블 구조는 복합 형식의 정의에 의해 결정됩니다. 테이블에서 생성 됩니다는 `DataSet` 스키마의 최상위 요소에 대 한 합니다. 그러나 테이블에만 만들어집니다 최상위 수준에 대 한 `complexType` 요소 때는 `complexType` 안에 다른 요소가 중첩 되어 `complexType` 는 요소인 경우 중첩 된 `complexType` 요소는에 매핑됩니다는 `DataTable` 내는 `DataSet`합니다.  
   
- XSD에 대 한 자세한 내용은 World Wide Web Consortium (W3C) XML 스키마 파트 0 참조: 프라이 머 권장 사항, XML 스키마 1 부: 구조 권장 사항 및 XML 스키마 파트 2: Datatypes 권장 사항을에 있는 [http:// www.w3.org/](http://www.w3.org/TR/)합니다.  
+ XSD에 대 한 자세한 내용은 World Wide Web Consortium (W3C) XML 스키마 파트 0 참조: 프라이 머 권장 사항, XML 스키마 1 부: 구조 권장 사항 및 XML 스키마 파트 2: Datatypes 권장 사항을에 있는 [ http://www.w3.org/ ](http://www.w3.org/TR/).  
   
  다음 예제에서는 XML 스키마를 보여 줍니다. 여기서 `customers` 의 자식 요소는 `MyDataSet` 요소인은 **데이터 집합** 요소 합니다.  
   

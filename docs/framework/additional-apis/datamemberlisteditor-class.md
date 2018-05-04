@@ -1,14 +1,8 @@
 ---
-title: "DataMemberListEditor 클래스"
-ms.custom: 
+title: DataMemberListEditor 클래스
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 api_name:
 - System.Windows.Forms.Design.DataMemberListEditor
 api_location:
@@ -18,17 +12,13 @@ api_type:
 ms.assetid: c11d5231-78f2-45a7-9210-3b2d0969370e
 topic_type:
 - apiref
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: a630a7b09915ca7c6207d432c5e30530a2e1f004
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ade78154e9911dfe8c837c8667eaca7d3a366431
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="datamemberlisteditor-class"></a>DataMemberListEditor 클래스
 
@@ -47,12 +37,12 @@ internal class DataMemberListEditor : UITypeEditor
   
 ## <a name="requirements"></a>요구 사항
 
-**Namespace:**<xref:System.Windows.Forms.Design?displayProperty=nameWithType>  
+**Namespace:** <xref:System.Windows.Forms.Design?displayProperty=nameWithType>  
   
 **어셈블리:** System.Design (에서 System.Design.dll)  
   
 **.NET framework 버전:** 2.0부터 사용 가능 합니다.  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참고자료
 
 <xref:System.Windows.Forms.Design?displayProperty=nameWithType>

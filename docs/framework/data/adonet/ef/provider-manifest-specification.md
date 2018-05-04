@@ -1,24 +1,12 @@
 ---
-title: "공급자 매니페스트 지정"
-ms.custom: 
+title: 공급자 매니페스트 지정
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: bb450b47-8951-4f99-9350-26f05a4d4e46
-caps.latest.revision: "4"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 85096406ae8996713d4861c805d75af42d8c1813
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 02faee9ad69bd75f4df608b9a4767560945c7bb3
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="provider-manifest-specification"></a>공급자 매니페스트 지정
 이 단원에서는 데이터 저장소 공급자가 데이터 저장소의 형식 및 함수를 지원하는 방법에 대해 설명합니다.  
@@ -273,9 +261,9 @@ public DbProviderManifest GetProviderManifest(string manifestToken);
 |ReturnType|문자열|아니요|Void|함수의 EDM 반환 형식입니다.|  
 |Aggregate|Boolean|아니요|False|함수가 집계 함수인 경우 True입니다.|  
 |BuiltIn|Boolean|아니요|True|함수가 데이터 저장소에 기본 제공되는 경우 True입니다.|  
-|StoreFunctionName|문자열|아니요|\<Name>|데이터 저장소의 함수 이름입니다.  함수 이름의 리디렉션 수준을 허용합니다.|  
+|StoreFunctionName|문자열|아니요|\<이름 >|데이터 저장소의 함수 이름입니다.  함수 이름의 리디렉션 수준을 허용합니다.|  
 |NiladicFunction|Boolean|아니요|False|함수가 매개 변수를 필요로 하지 않고 매개 변수 없이 호출되는 경우 True입니다.|  
-|ParameterType<br /><br /> 의미 체계|ParameterSemantics|아니요|AllowImplicit<br /><br /> 변환|쿼리 파이프라인에서 매개 변수 형식 대체를 처리할 방법에 대한 선택 항목:<br /><br /> -   ExactMatchOnly<br />-   AllowImplicitPromotion<br />-   AllowImplicitConversion|  
+|ParameterType<br /><br /> 의미 체계|ParameterSemantics|아니요|AllowImplicit<br /><br /> 변환|쿼리 파이프라인에서 매개 변수 형식 대체를 처리할 방법에 대한 선택 항목:<br /><br /> -   ExactMatchOnly<br />-   AllowImplicitPromotion<br />-AllowImplicitConversion|  
   
  **매개 변수 노드**  
   
@@ -285,7 +273,7 @@ public DbProviderManifest GetProviderManifest(string manifestToken);
 |--------------------|---------------|--------------|-------------------|-----------------|  
 |이름|문자열|예|해당 없음|매개 변수의 식별자/이름입니다.|  
 |형식|문자열|예|해당 없음|매개 변수의 EDM 형식입니다.|  
-|모드|매개 변수<br /><br /> 방향|예|해당 없음|매개 변수의 방향:<br /><br /> -   in<br />-out<br />-   inout|  
+|모드|매개 변수<br /><br /> 방향|예|해당 없음|매개 변수의 방향:<br /><br /> -에서<br />-out<br />-inout|  
   
 ##### <a name="namespace-attribute"></a>Namespace 특성  
  각 데이터 저장소 공급자는 매니페스트에서 정의된 정보에 대한 네임스페이스 또는 네임스페이스 그룹을 정의해야 합니다. 이 네임스페이스를 Entity SQL 쿼리에서 사용하여 함수 및 형식의 이름을 확인할 수 있습니다(예: SqlServer). 해당 네임스페이스는 Entity SQL 쿼리에서 표준 함수를 지원할 수 있도록 엔터티 서비스에서 정의하는 정식 네임스페이스인 EDM과 달라야 합니다.  

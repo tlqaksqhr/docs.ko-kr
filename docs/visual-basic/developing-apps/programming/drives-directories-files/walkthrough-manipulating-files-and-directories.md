@@ -1,11 +1,12 @@
 ---
-title: "Visual Basic에서 파일과 디렉터리 조작"
-ms.custom: 
+title: Visual Basic에서 파일과 디렉터리 조작
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - files [Visual Basic], reading text
@@ -21,19 +22,19 @@ helpviewer_keywords:
 - writing to files [Visual Basic], walkthroughs
 - I/O [Visual Basic], reading text from files
 ms.assetid: cae77565-9f78-4e46-8e42-eb2f9f8e1ffd
-caps.latest.revision: "49"
+caps.latest.revision: 49
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: bd1e61503394741e7943d30d383f2e7c5ea35f68
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 12461cc99ec03ed87924c894e23740f9d76385ed
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="walkthrough-manipulating-files-and-directories-in-visual-basic"></a>연습: Visual Basic에서 파일과 디렉터리 조작
-이 연습에서는 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]에서 파일 I/O의 기본 개념을 소개합니다. 디렉터리에 텍스트 파일을 나열하고 검사하는 작은 응용 프로그램을 만드는 방법을 설명합니다. 선택한 각 텍스트 파일에 대해 응용 프로그램은 파일 특성 및 내용의 첫 줄을 제공합니다. 로그 파일에 정보를 기록하는 옵션이 있습니다.  
+이 연습에서는 Visual Basic에서 파일 I/O의 기본 개념을 소개합니다. 디렉터리에 텍스트 파일을 나열하고 검사하는 작은 응용 프로그램을 만드는 방법을 설명합니다. 선택한 각 텍스트 파일에 대해 응용 프로그램은 파일 특성 및 내용의 첫 줄을 제공합니다. 로그 파일에 정보를 기록하는 옵션이 있습니다.  
   
- 이 연습에서는 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]에서 사용 가능한 `My.Computer.FileSystem Object`의 멤버를 사용합니다. 자세한 내용은 <xref:Microsoft.VisualBasic.FileIO.FileSystem>를 참조하세요. 연습의 끝 부분에서 <xref:System.IO> 네임스페이스의 클래스를 사용하는 동등한 예제가 제공됩니다.  
+ 이 연습에서는 Visual Basic에서 사용 가능한 `My.Computer.FileSystem Object`의 멤버를 사용합니다. 자세한 내용은 <xref:Microsoft.VisualBasic.FileIO.FileSystem>를 참조하세요. 연습의 끝 부분에서 <xref:System.IO> 네임스페이스의 클래스를 사용하는 동등한 예제가 제공됩니다.  
   
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
@@ -47,17 +48,17 @@ ms.lasthandoff: 11/21/2017
   
 3.  **이름** 상자에 `FileExplorer`를 입력하여 프로젝트 이름을 설정한 다음 **확인**을 클릭합니다.  
   
-     [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)]에서 **솔루션 탐색기**에 프로젝트를 추가하면 Windows Forms 디자이너가 열립니다.  
+     Visual Studio에서 **솔루션 탐색기**에 프로젝트를 추가합니다. 그러면 Windows Forms 디자이너가 열립니다.  
   
 4.  다음 표의 컨트롤을 양식에 추가하고 속성의 해당 값을 설정합니다.  
   
-    |컨트롤|속성|값|  
+    |Control|속성|값|  
     |-------------|--------------|-----------|  
-    |**ListBox**|**Name**|`filesListBox`|  
-    |**Button**|**Name**<br /><br /> **Text**|`browseButton`<br /><br /> **찾아보기**|  
-    |**Button**|**Name**<br /><br /> **Text**|`examineButton`<br /><br /> **검사**|  
-    |**CheckBox**|**Name**<br /><br /> **Text**|`saveCheckBox`<br /><br /> **결과 저장**|  
-    |**FolderBrowserDialog**|**Name**|`FolderBrowserDialog1`|  
+    |**ListBox**|**이름**|`filesListBox`|  
+    |**Button**|**이름**<br /><br /> **텍스트**|`browseButton`<br /><br /> **찾아보기**|  
+    |**Button**|**이름**<br /><br /> **텍스트**|`examineButton`<br /><br /> **검사**|  
+    |**CheckBox**|**이름**<br /><br /> **텍스트**|`saveCheckBox`<br /><br /> **결과 저장**|  
+    |**FolderBrowserDialog**|**이름**|`FolderBrowserDialog1`|  
   
 ### <a name="to-select-a-folder-and-list-files-in-a-folder"></a>폴더를 선택하고 폴더에 파일을 나열하려면  
   

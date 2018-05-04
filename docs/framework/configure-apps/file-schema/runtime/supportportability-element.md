@@ -1,27 +1,17 @@
 ---
-title: "&lt;되어 supportPortability&gt; 요소"
-ms.custom: 
+title: '&lt;되어 supportPortability&gt; 요소'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - supportPortability element
 - <supportPortability> element
 ms.assetid: 6453ef66-19b4-41f3-b712-52d0c2abc9ca
-caps.latest.revision: "9"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 52ef9cce9ee28c6329f688bb9ac751f0f9016657
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 0a8a454919a195a0f0c03ed6890e51b2723f64fb
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltsupportportabilitygt-element"></a>&lt;되어 supportPortability&gt; 요소
 응용 프로그램 이식성을 위해 어셈블리를 동일하게 간주하는 기본 동작을 사용하지 않도록 설정함으로써, 응용 프로그램이 .NET Framework의 서로 다른 두 구현에서 같은 어셈블리를 참조할 수 있도록 지정합니다.  
@@ -73,7 +63,7 @@ ms.lasthandoff: 01/19/2018
 > [!IMPORTANT]
 >  정보를 전달 하는 공용 언어 런타임의 어셈블리 바인딩 논리를 컴파일러에 대 한 순서를 사용 해야 하는 `/appconfig` 컴파일러 옵션을이 요소를 포함 하는 app.config 파일의 위치를 지정 합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 예에서는 응용 프로그램을.NET Framework 구현은 두 구현 모두에 존재 하는.NET Framework 어셈블리의 Silverlight 구현에 대 한.NET Framework에 대 한 참조가 있습니다. `/appconfig` 이 app.config 파일의 위치를 지정 컴파일러 옵션을 사용 해야 합니다.  
   
 ```xml  

@@ -1,9 +1,6 @@
 ---
-title: "&lt;섹션&gt; 요소"
+title: '&lt;섹션&gt; 요소'
 ms.date: 05/01/2017
-ms.prod: .net-framework
-ms.technology: dotnet-clr
-ms.topic: article
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/configSections/section
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/configSections/sectionGroup/section
@@ -13,13 +10,11 @@ helpviewer_keywords:
 ms.assetid: ec7d4110-2403-47ac-8218-499bfe9d5ddb
 author: guardrex
 ms.author: mairaw
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 4e7de6e5ce6415c58deeca14df74c26e24957054
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 17b44ca93efc26f4732f5fe2926f894257d8f984
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="section-element"></a>\<섹션 > 요소
 
@@ -79,7 +74,7 @@ ms.lasthandoff: 12/22/2017
 
 선언에 구성 섹션 처리기는 *Machine.config* 파일을 사용 하면 해당 컴퓨터에서 모든 응용 프로그램 구성 파일에서 구성 섹션을 사용할 수 있는 경우가 아니면는 **allowDefinition**특성 그렇지 않도록 지정 합니다.
 
-## <a name="example"></a>예
+## <a name="example"></a>예제
 
 다음 예제에서는 구성 섹션을 정의 하 고 해당 섹션에 대 한 설정을 정의 하는 방법을 보여 줍니다.
 
@@ -100,6 +95,6 @@ ms.lasthandoff: 12/22/2017
 
 이 요소는 응용 프로그램 구성 파일을 컴퓨터 구성 파일에 사용할 수 있습니다 (*Machine.config*), 및 *Web.config* 응용 프로그램 디렉터리 수준에서 포함 되지 않은 파일입니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참고자료
 
 [.NET Framework에 대 한 구성 파일 스키마](~/docs/framework/configure-apps/file-schema/index.md)

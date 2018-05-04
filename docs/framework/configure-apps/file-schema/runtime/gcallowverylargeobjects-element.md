@@ -1,27 +1,17 @@
 ---
-title: "&lt;gcAllowVeryLargeObjects&gt; 요소"
-ms.custom: 
+title: '&lt;gcAllowVeryLargeObjects&gt; 요소'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - gcAllowVeryLargeObjects element
 - <gcAllowVeryLargeObjects> element
 ms.assetid: 5c7ea24a-39ac-4e5f-83b7-b9f9a1b556ab
-caps.latest.revision: "10"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: b5db777f147e2eca7644d5b5f1a4bc18c8401ca8
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 750b0dbc925ec484dd80e1796ba991435e354709
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltgcallowverylargeobjectsgt-element"></a>&lt;gcAllowVeryLargeObjects&gt; 요소
 64비트 플랫폼에서 총 크기가 2GB보다 큰 배열을 사용하도록 설정합니다.  
@@ -38,7 +28,7 @@ ms.lasthandoff: 12/22/2017
 ```  
   
 ## <a name="attributes-and-elements"></a>특성 및 요소  
- 다음 단원에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
+ 다음 섹션에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
   
 ### <a name="attributes"></a>특성  
   
@@ -75,7 +65,7 @@ ms.lasthandoff: 12/22/2017
 > [!CAUTION]
 >  이 기능을 사용 하기 전에 응용 프로그램 모든 배열이 크기가 2GB 보다 작은 가정 하는 안전 하지 않은 코드를 포함 하지 않습니다 확인 합니다. 예를 들어 배열 2GB를 초과 하지 것입니다 가정에 작성 된 경우 버퍼도 배열을 사용 하는 안전 하지 않은 코드 버퍼 오버런에 취약 수 있습니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 예제에서는 응용 프로그램에 대 한이 기능을 사용 하는 방법을 보여 줍니다.  
   
 ```xml  

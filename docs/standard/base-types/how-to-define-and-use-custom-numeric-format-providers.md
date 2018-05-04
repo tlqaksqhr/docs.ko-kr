@@ -1,12 +1,12 @@
 ---
-title: "방법: 사용자 지정 숫자 형식 공급자 정의 및 사용"
-ms.custom: 
+title: '방법: 사용자 지정 숫자 형식 공급자 정의 및 사용'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -21,18 +21,18 @@ helpviewer_keywords:
 - format providers [.NET Framework]
 - custom format strings
 ms.assetid: a281bfbf-6596-45ed-a2d6-3782d535ada2
-caps.latest.revision: 
+caps.latest.revision: 11
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: f8f06335d96b3e71f14b3df6b40ef3691c0915f1
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: eb578b18b3d3ab7ae617873a33745f36e0e8cacb
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="how-to-define-and-use-custom-numeric-format-providers"></a>방법: 사용자 지정 숫자 형식 공급자 정의 및 사용
 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]에서는 숫자 값의 문자열 표현을 광범위하게 제어할 수 있습니다. 숫자 값의 형식을 사용자 지정하기 위한 다음과 같은 기능을 지원합니다.  
@@ -81,12 +81,12 @@ ms.lasthandoff: 12/23/2017
   
  사용자 지정 숫자 형식 공급자는 <xref:System.String.Format%28System.IFormatProvider%2CSystem.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> 메서드에서만 사용할 수 있습니다. <xref:System.IFormatProvider> 형식의 매개 변수가 있는 숫자 서식 지정 메서드의 다른 오버로드(예: `ToString`)는 모두 <xref:System.Globalization.NumberFormatInfo> 형식을 나타내는 <xref:System.Type> 개체를 <xref:System.IFormatProvider.GetFormat%2A?displayProperty=nameWithType> 구현에 전달합니다. 반환 시 메서드가 <xref:System.Globalization.NumberFormatInfo> 개체를 반환할 것으로 예상합니다. 반환하지 않을 경우 사용자 지정 숫자 형식 공급자는 무시되고 현재 문화권에 대한 <xref:System.Globalization.NumberFormatInfo> 개체가 대신 사용됩니다. 예제에서 `TelephoneFormatter.GetFormat` 메서드는 메서드 매개 변수를 검사하고 <xref:System.ICustomFormatter> 이외의 다른 형식을 나타내는 경우 `null`을 반환하여 숫자 서식 지정 메서드에 부적절하게 전달될 수 있는 가능성을 처리합니다.  
   
- 사용자 지정 숫자 형식 공급자가 형식 지정자 집합을 지원하는 경우 <xref:System.String.Format%28System.IFormatProvider%2CSystem.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> 메서드 호출에 사용된 형식 항목에 형식 지정자가 제공되지 않은 경우의 기본 동작을 제공해야 합니다. 예제에서는 "N"이 기본 형식 지정자입니다. 이렇게 하면 명시적 형식 지정자를 제공하여 숫자를 형식이 지정된 전화 번호로 변환할 수 있습니다. 다음 예제에서는 이러한 메서드 호출을 보여줍니다.  
+ 사용자 지정 숫자 형식 공급자가 형식 지정자 집합을 지원하는 경우 <xref:System.String.Format%28System.IFormatProvider%2CSystem.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> 메서드 호출에 사용된 형식 항목에 형식 지정자가 제공되지 않은 경우의 기본 동작을 제공해야 합니다. 예제에서는 "N"이 기본 형식 지정자입니다. 이렇게 하면 명시적 형식 지정자를 제공하여 숫자를 형식이 지정된 전화 번호로 변환할 수 있습니다. 다음 예제에서는 이러한 메서드 호출을 보여 줍니다.  
   
  [!code-csharp[Formatting.HowTo.NumericValue#2](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.HowTo.NumericValue/cs/Telephone1.cs#2)]
  [!code-vb[Formatting.HowTo.NumericValue#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.HowTo.NumericValue/vb/Telephone1.vb#2)]  
   
- 그러나 형식 지정자가 없는 경우에도 변환을 수행할 수 있습니다. 다음 예제에서는 이러한 메서드 호출을 보여줍니다.  
+ 그러나 형식 지정자가 없는 경우에도 변환을 수행할 수 있습니다. 다음 예제에서는 이러한 메서드 호출을 보여 줍니다.  
   
  [!code-csharp[Formatting.HowTo.NumericValue#3](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.HowTo.NumericValue/cs/Telephone1.cs#3)]
  [!code-vb[Formatting.HowTo.NumericValue#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.HowTo.NumericValue/vb/Telephone1.vb#3)]  
@@ -99,7 +99,7 @@ ms.lasthandoff: 12/23/2017
  이 예제의 경우 <xref:System.ICustomFormatter.Format%2A?displayProperty=nameWithType>을 구현하는 메서드는 <xref:System.String.Format%28System.IFormatProvider%2CSystem.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> 메서드에 대한 콜백 메서드 역할을 하기 위한 것입니다. 따라서 이 메서드는 `formatProvider` 매개 변수를 검사하여 현재 `TelephoneFormatter` 개체에 대한 참조가 있는지 여부를 확인합니다. 그러나 코드에서 메서드를 직접 호출할 수도 있습니다. 이 경우 `formatProvider` 매개 변수를 사용하여 문화권별 서식 지정 정보를 제공하는 <xref:System.Globalization.CultureInfo> 또는 <xref:System.Globalization.NumberFormatInfo> 개체를 제공할 수 있습니다.  
   
 ## <a name="compiling-the-code"></a>코드 컴파일  
- csc.exe 또는 vb.exe를 사용하여 명령줄에서 코드를 컴파일합니다. [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]에서 코드를 컴파일하려면 콘솔 응용 프로그램 프로젝트 템플릿에 배치합니다.  
+ csc.exe 또는 vb.exe를 사용하여 명령줄에서 코드를 컴파일합니다. Visual Studio에서 코드를 컴파일하려면 해당 코드를 콘솔 응용 프로그램 프로젝트 템플릿에 배치합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [서식 지정 작업 수행](../../../docs/standard/base-types/performing-formatting-operations.md)

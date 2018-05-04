@@ -1,13 +1,6 @@
 ---
-title: "&lt;추적&gt; 요소"
-ms.custom: 
+title: '&lt;추적&gt; 요소'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/trace
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#trace
@@ -17,16 +10,14 @@ helpviewer_keywords:
 - trace element
 - trace listener, <trace> element
 ms.assetid: 7931c942-63c1-47c3-a045-9d9de3cacdbf
-caps.latest.revision: "13"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: d7ddcbdbdbbc2924d4f725d2fd401f873a4cfb0b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 59d5083632630513d2afc1f8d78400310451e46f
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="lttracegt-element"></a>&lt;추적&gt; 요소
 추적 메시지를 수집하고 저장하고 라우팅하는 수신기가 포함되어 있습니다.  
@@ -44,7 +35,7 @@ ms.lasthandoff: 12/22/2017
 ```  
   
 ## <a name="attributes-and-elements"></a>특성 및 요소  
- 다음 단원에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
+ 다음 섹션에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
   
 ### <a name="attributes"></a>특성  
   
@@ -81,8 +72,8 @@ ms.lasthandoff: 12/22/2017
 |`configuration`|공용 언어 런타임 및 .NET Framework 응용 프로그램에서 사용하는 모든 구성 파일의 루트 요소입니다.|  
 |`system.diagnostics`|메시지를 수집하고 저장하고 라우팅하는 추적 수신기를 지정하며, 추적 스위치가 설정되는 수준을 지정합니다.|  
   
-## <a name="example"></a>예  
- 사용 하는 방법을 보여 주는 다음 예제는 `<trace>` 수신기에 추가할 요소의 `MyListener` 에 `Listeners` 컬렉션입니다. `MyListener`명명 된 파일을 만듭니다. `MyListener.log` 출력 파일에 씁니다. `useGlobalLock` 특성이로 설정 된 `false`, 추적 수신기가 스레드로부터 안전 하 게 보호 하는 경우 사용할 필요가 없는 전역 잠금에 이르게 됩니다. `autoflush` 특성이로 설정 된 `true`, 여부에 관계 없이 파일에 쓸 추적 수신기에 이르게는 <xref:System.Diagnostics.Trace.Flush%2A?displayProperty=nameWithType> 메서드를 호출 합니다. `indentsize` 특성이 하면 들여쓰기 0 공간 수신기 0 (영)으로 설정 된 경우는 <xref:System.Diagnostics.Trace.Indent%2A?displayProperty=nameWithType> 메서드를 호출 합니다.  
+## <a name="example"></a>예제  
+ 사용 하는 방법을 보여 주는 다음 예제는 `<trace>` 수신기에 추가할 요소의 `MyListener` 에 `Listeners` 컬렉션입니다. `MyListener` 명명 된 파일을 만듭니다. `MyListener.log` 출력 파일에 씁니다. `useGlobalLock` 특성이로 설정 된 `false`, 추적 수신기가 스레드로부터 안전 하 게 보호 하는 경우 사용할 필요가 없는 전역 잠금에 이르게 됩니다. `autoflush` 특성이로 설정 된 `true`, 여부에 관계 없이 파일에 쓸 추적 수신기에 이르게는 <xref:System.Diagnostics.Trace.Flush%2A?displayProperty=nameWithType> 메서드를 호출 합니다. `indentsize` 특성이 하면 들여쓰기 0 공간 수신기 0 (영)으로 설정 된 경우는 <xref:System.Diagnostics.Trace.Indent%2A?displayProperty=nameWithType> 메서드를 호출 합니다.  
   
 ```xml  
 <configuration>  

@@ -1,24 +1,12 @@
 ---
-title: "&lt;clientCredentials&gt; 요소의 &lt;peer&gt;"
-ms.custom: 
+title: '&lt;clientCredentials&gt; 요소의 &lt;peer&gt;'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 505bd987-0042-4622-b68e-94f439729d53
-caps.latest.revision: "10"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: c3479b52c6e06b7b9ebd69d46780e8dca70d2ef7
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 9d64f682f67dcc7c4f0c0f1600938f8ff9ac0dd6
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltpeergt-of-ltclientcredentialsgt-element"></a>&lt;clientCredentials&gt; 요소의 &lt;peer&gt;
 피어 투 피어 클라이언트를 인증할 때 사용하는 자격 증명을 지정합니다.  

@@ -1,5 +1,5 @@
 ---
-title: "연습: 동적 개체 만들기 및 사용(C# 및 Visual Basic)"
+title: '연습: 동적 개체 만들기 및 사용(C# 및 Visual Basic)'
 ms.date: 07/20/2015
 ms.prod: .net
 ms.technology:
@@ -13,14 +13,14 @@ helpviewer_keywords:
 - dynamic objects
 - dynamic objects [C#]
 ms.assetid: 568f1645-1305-4906-8625-5d77af81e04f
-caps.latest.revision: 
+caps.latest.revision: 22
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: eca6da96d3bf9c5c25216e442999be77a332b5c9
-ms.sourcegitcommit: 70dcc89737127e4d5f20500242409b687e51b07e
+ms.openlocfilehash: 16c08ff42ce77b3901f5909571c528394d139e03
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="walkthrough-creating-and-using-dynamic-objects-c-and-visual-basic"></a>연습: 동적 개체 만들기 및 사용(C# 및 Visual Basic)
 
@@ -28,7 +28,7 @@ ms.lasthandoff: 02/11/2018
   
  동적 개체를 사용하면 IronPython 및 IronRuby와 같은 동적 언어에 편리하게 액세스할 수 있습니다. 동적 개체를 사용하면 런타임에 해석되는 동적 스크립트를 참조할 수 있습니다.  
   
- 런타임에 바인딩을 사용하여 동적 개체를 참조합니다. C#에서는 런타임에 바인딩된 개체의 형식을 `dynamic`으로 지정합니다. [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]에서는 런타임에 바인딩된 개체의 형식을 `Object`로 지정합니다. 자세한 내용은 [dynamic](../../../csharp/language-reference/keywords/dynamic.md) 및 [초기 바인딩 및 런타임에 바인딩](../../../visual-basic/programming-guide/language-features/early-late-binding/index.md)을 참조하세요.  
+ 런타임에 바인딩을 사용하여 동적 개체를 참조합니다. C#에서는 런타임에 바인딩된 개체의 형식을 `dynamic`으로 지정합니다. Visual Basic에서는 런타임에 바인딩된 개체의 형식을 `Object`으로 지정합니다. 자세한 내용은 [dynamic](../../../csharp/language-reference/keywords/dynamic.md) 및 [초기 바인딩 및 런타임에 바인딩](../../../visual-basic/programming-guide/language-features/early-late-binding/index.md)을 참조하세요.  
   
  <xref:System.Dynamic?displayProperty=nameWithType> 네임스페이스의 클래스를 사용하여 사용자 지정 동적 개체를 만들 수 있습니다. 예를 들어 <xref:System.Dynamic.ExpandoObject>를 만들고 해당 개체의 멤버를 런타임에 지정할 수 있습니다. <xref:System.Dynamic.DynamicObject> 클래스를 상속하는 고유한 형식을 만들 수도 있습니다. 그런 다음 런타임 동적 기능을 제공하도록 <xref:System.Dynamic.DynamicObject> 클래스의 멤버를 재정의할 수 있습니다.  
   
@@ -38,7 +38,7 @@ ms.lasthandoff: 02/11/2018
   
 -   `IronPython` 라이브러리를 사용하는 프로젝트를 만듭니다.  
   
-## <a name="prerequisites"></a>필수 구성 요소  
+## <a name="prerequisites"></a>전제 조건  
 이 연습을 완료하려면 .NET용 [IronPython](http://ironpython.net/)이 필요합니다. [다운로드 페이지](http://ironpython.net/download/)로 이동하여 최신 버전을 다운로드하세요.
   
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
@@ -48,7 +48,7 @@ ms.lasthandoff: 02/11/2018
   
 #### <a name="to-create-a-custom-dynamic-class"></a>사용자 지정 동적 클래스를 만들려면  
   
-1.  [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)]를 시작합니다.  
+1.  Visual Studio를 시작합니다.  
   
 2.  **파일** 메뉴에서 **새로 만들기** 를 가리킨 다음 **프로젝트**를 클릭합니다.  
   
@@ -127,7 +127,7 @@ ms.lasthandoff: 02/11/2018
   
 #### <a name="to-create-a-sample-application-that-uses-the-custom-dynamic-object"></a>사용자 지정 동적 개체를 사용하는 샘플 응용 프로그램을 만들려면  
   
-1.  **솔루션 탐색기**에서, [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]을 사용 중인 경우 Module1.vb 파일, Visual C#을 사용 중인 경우 Program.cs 파일을 두 번 클릭합니다.  
+1.  **솔루션 탐색기**에서, Visual Basic을 사용 중인 경우 Module1.vb 파일, Visual C#을 사용 중인 경우 Program.cs 파일을 두 번 클릭합니다.  
   
 2.  Main 프로시저에 다음 코드를 추가하여 TextFile1.txt 파일에 대한 `ReadOnlyFile` 클래스의 인스턴스를 만듭니다. 코드는 런타임에 바인딩을 사용하여 동적 멤버를 호출하고 "Customer" 문자열이 포함된 텍스트의 줄을 검색합니다.  
   
@@ -143,15 +143,15 @@ ms.lasthandoff: 02/11/2018
   
 #### <a name="to-create-a-custom-dynamic-class"></a>사용자 지정 동적 클래스를 만들려면  
   
-1.  [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)]의 **파일** 메뉴에서 **새로 만들기**를 가리킨 다음 **프로젝트**를 클릭합니다.  
+1.  Visual Studio의 **파일** 메뉴에서 **새로 만들기**를 가리킨 다음 **프로젝트**를 클릭합니다.  
   
 2.  **새 프로젝트** 대화 상자의 **프로젝트 형식** 창에서 **Windows**가 선택되었는지 확인합니다. **템플릿** 창에서 **콘솔 응용 프로그램**을 선택합니다. **이름** 상자에 `DynamicIronPythonSample`를 입력한 다음 **확인**을 클릭합니다. 새 프로젝트가 만들어집니다.  
   
-3.  [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]을 사용 중인 경우 DynamicIronPythonSample 프로젝트를 마우스 오른쪽 단추로 클릭하고 **속성**을 클릭합니다. **참조** 탭을 클릭합니다. **추가** 단추를 클릭합니다. Visual C#을 사용 중인 경우 **솔루션 탐색기**에서 **References** 폴더를 마우스 오른쪽 단추로 클릭한 다음 **참조 추가**를 클릭합니다.  
+3.  Visual Basic을 사용 중인 경우 DynamicIronPythonSample 프로젝트를 마우스 오른쪽 단추로 클릭하고 **속성**을 클릭합니다. **참조** 탭을 클릭합니다. **추가** 단추를 클릭합니다. Visual C#을 사용 중인 경우 **솔루션 탐색기**에서 **References** 폴더를 마우스 오른쪽 단추로 클릭한 다음 **참조 추가**를 클릭합니다.  
   
 4.  **찾아보기** 탭에서 IronPython 라이브러리가 설치된 폴더로 이동합니다. 예를 들어 .NET 4.0의 경우 C:\Program Files\IronPython 2.6입니다. **IronPython.dll**, **IronPython.Modules.dll**, **Microsoft.Scripting.dll** 및 **Microsoft.Dynamic.dll** 라이브러리를 선택합니다. **확인**을 클릭합니다.  
   
-5.  [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]을 사용 중인 경우 Module1.vb 파일을 편집합니다. Visual C#을 사용 중인 경우 Program.cs 파일을 편집합니다.  
+5.  Visual Basic을 사용 중인 경우 Module1.vb 파일을 편집합니다. Visual C#을 사용 중인 경우 Program.cs 파일을 편집합니다.  
   
 6.  파일 맨 위에 다음 코드를 추가하여 IronPython 라이브러리에서 `Microsoft.Scripting.Hosting` 및 `IronPython.Hosting` 네임스페이스를 가져옵니다.  
   

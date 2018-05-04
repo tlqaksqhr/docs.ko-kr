@@ -1,24 +1,14 @@
 ---
 title: '&lt;federationConfiguration&gt;'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 8b14054c-6d07-46ab-ab58-03f14beac0f2
-caps.latest.revision: "9"
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: 0014e0224221cd5143709ba0a5b38f10e457b494
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 44014d620dcd03e055eb58b50a1428b8e1b41186
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltfederationconfigurationgt"></a>&lt;federationConfiguration&gt;
 구성에서 <xref:System.IdentityModel.Services.WSFederationAuthenticationModule> (WSFAM) 및 <xref:System.IdentityModel.Services.SessionAuthenticationModule> (SAM)를 사용 하 여 Ws-federation 프로토콜을 통해 인증을 페더레이션 합니다. 구성에서 <xref:System.Security.Claims.ClaimsAuthorizationManager> 사용 하는 경우는 <xref:System.IdentityModel.Services.ClaimsPrincipalPermission> 또는 <xref:System.IdentityModel.Services.ClaimsPrincipalPermissionAttribute> 클레임 기반 액세스 제어를 제공 하는 클래스입니다.  
@@ -36,7 +26,7 @@ ms.lasthandoff: 12/22/2017
 ```  
   
 ## <a name="attributes-and-elements"></a>특성 및 요소  
- 다음 단원에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
+ 다음 섹션에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
   
 ### <a name="attributes"></a>특성  
   
@@ -76,11 +66,11 @@ ms.lasthandoff: 12/22/2017
   
 4.  여러 명명 된 `<federationConfiguration>` 요소가 존재 하 고 명명 되지 `<federationConfiguration>` 요소, 예외가 throw 됩니다.  
   
- 일반적으로 단일 `<federationConfiguration>` 섹션에서 정의 됩니다. 이 섹션에는 기본 페더레이션 구성입니다. 고유 하 게 명명 된 여러를 지정할 수 있습니다 `<federationConfiguration>` 요소; 그러나이 경우 이름 없는 것과 다른 페더레이션 구성을 로드 하려는 경우 제공 해야에 대 한 처리기는 합니다. <xref:System.IdentityModel.Services.FederatedAuthentication.FederationConfigurationCreated>이벤트 집합과 <xref:System.IdentityModel.Services.Configuration.FederationConfigurationCreatedEventArgs.FederationConfiguration%2A?displayProperty=nameWithType> 속성 처리기를 내는 <xref:System.IdentityModel.Services.Configuration.FederationConfiguration> 적절 한 값으로 초기화 된 개체 `<federationConfiguration>` 구성 파일의 요소입니다.  
+ 일반적으로 단일 `<federationConfiguration>` 섹션에서 정의 됩니다. 이 섹션에는 기본 페더레이션 구성입니다. 고유 하 게 명명 된 여러를 지정할 수 있습니다 `<federationConfiguration>` 요소; 그러나이 경우 이름 없는 것과 다른 페더레이션 구성을 로드 하려는 경우 제공 해야에 대 한 처리기는 합니다. <xref:System.IdentityModel.Services.FederatedAuthentication.FederationConfigurationCreated> 이벤트 집합과 <xref:System.IdentityModel.Services.Configuration.FederationConfigurationCreatedEventArgs.FederationConfiguration%2A?displayProperty=nameWithType> 속성 처리기를 내는 <xref:System.IdentityModel.Services.Configuration.FederationConfiguration> 적절 한 값으로 초기화 된 개체 `<federationConfiguration>` 구성 파일의 요소입니다.  
   
  `<federationConfiguration>` 에서 요소가 표시 되는 <xref:System.IdentityModel.Services.Configuration.FederationConfigurationElement> 클래스입니다. 자체 구성 개체도 표시 됩니다는 <xref:System.IdentityModel.Services.Configuration.FederationConfiguration> 클래스입니다. 단일 <xref:System.IdentityModel.Services.Configuration.FederationConfiguration> 에 설정 된 인스턴스는 <xref:System.IdentityModel.Services.FederatedAuthentication.FederationConfiguration%2A?displayProperty=nameWithType> 속성 하 고 응용 프로그램에 대 한 페더레이션된 구성을 제공 합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  에서는 다음 XML는 `<federationConfiguration>` 요소는 WSFAM에 대 한 설정을 지정 하 고 지정 하는 기본 쿠키 처리기 (의 인스턴스는 <xref:System.IdentityModel.Services.ChunkedCookieHandler> 클래스) SAM에서 사용할 수 있습니다.  
   
 > [!WARNING]

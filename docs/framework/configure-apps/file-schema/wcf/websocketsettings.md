@@ -1,30 +1,18 @@
 ---
 title: '&lt;webSocketSettings&gt;'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: bbf97e02-8dd1-4922-acac-3cd33397b249
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 01bc858aeeff750baa3f54e813dea5c9779143f8
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 84aee31b6c15beb32732f89eae7c3d176f57971d
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltwebsocketsettingsgt"></a>&lt;webSocketSettings&gt;
 WebSocket 설정을 지정하는 데 사용되는 구성 요소입니다.  
   
 \<system.ServiceModel>  
-\<bindings>  
+\<바인딩 >  
 \<netHttpBinding>  
   
 ## <a name="syntax"></a>구문  
@@ -77,7 +65,7 @@ WebSocket 설정을 지정하는 데 사용되는 구성 요소입니다.
 |-------------|-----------------|  
 |\<netHttpBinding>|NetHttpBinding을 지정합니다.|  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  사용 하는 방법을 보여 주는 다음 예제는 \<webSocketSettings > 요소입니다.  
   
 ```xml  

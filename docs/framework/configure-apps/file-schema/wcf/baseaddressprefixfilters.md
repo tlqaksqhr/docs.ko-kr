@@ -1,32 +1,20 @@
 ---
 title: '&lt;baseAddressPrefixFilters&gt;'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 8cab2a9a-c51f-4283-bb60-2ad0c274fd46
-caps.latest.revision: "10"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 0a1c2e5e887ceaadf3db6f51991d53c3db8fb6ba
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 8fffcd02b1c08172b184225f13a1852414cf429a
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltbaseaddressprefixfiltersgt"></a>&lt;baseAddressPrefixFilters&gt;
-IIS에서 [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] 응용 프로그램을 호스트할 때 적합한 IIS(인터넷 정보 서비스) 바인딩을 선택하기 위한 메커니즘을 제공할 통과 필터를 지정하는 구성 요소의 컬렉션을 나타냅니다.  
+IIS에서 Windows Communication Foundation (WCF) 응용 프로그램을 호스트할 때 적합 한 인터넷 정보 서비스 (IIS) 바인딩을 선택 하기 위한 메커니즘을 제공 하는 필터를 지정 하는 요소 전달 구성의 컬렉션을 나타냅니다.  
   
 > [!WARNING]
 >  \<baseAddressPrefixFilters > 대신 정규화 된 컴퓨터 이름을 사용 하 여, "localhost"를 인식 하지 않습니다.  
   
- \<시스템입니다. ServiceModel >  
+ \<system.ServiceModel>  
 \<ServiceHostingEnvironment >  
   
 ## <a name="syntax"></a>구문  
@@ -40,7 +28,7 @@ IIS에서 [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] 응용 프�
 ```  
   
 ## <a name="attributes-and-elements"></a>특성 및 요소  
- 다음 단원에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
+ 다음 섹션에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
   
 ### <a name="attributes"></a>특성  
  없음  
@@ -55,7 +43,7 @@ IIS에서 [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] 응용 프�
   
 |요소|설명|  
 |-------------|-----------------|  
-|[\<serviceHostingEnvironment >](../../../../../docs/framework/configure-apps/file-schema/wcf/servicehostingenvironment.md)|특정 전송을 위해 서비스 호스팅 환경에서 인스턴스화하는 형식을 정의합니다.|  
+|[\<ServiceHostingEnvironment >](../../../../../docs/framework/configure-apps/file-schema/wcf/servicehostingenvironment.md)|특정 전송을 위해 서비스 호스팅 환경에서 인스턴스화하는 형식을 정의합니다.|  
   
 ## <a name="remarks"></a>설명  
  접두사 필터는 공유 호스팅 공급자가 서비스에 사용될 URI를 지정하는 방법을 제공합니다. 이 방법을 사용하면 공유 호스트가 동일한 사이트의 동일한 체계에 대해 기본 주소가 다른 여러 응용 프로그램을 호스트할 수 있습니다.  

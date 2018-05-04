@@ -1,24 +1,12 @@
 ---
-title: "Oracle 스키마 컬렉션"
-ms.custom: 
+title: Oracle 스키마 컬렉션
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 89a75de8-dee8-45e2-a97f-254d7e62e7e1
-caps.latest.revision: "3"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 4f199a0fc0939bd5fae4fefb7440c46bd471e4b6
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: b86de542e425d6fdc56f238f90063988bee95ffa
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="oracle-schema-collections"></a>Oracle 스키마 컬렉션
 Microsoft .NET Framework Data Provider for Oracle에서는 공통 스키마 컬렉션을 비롯하여 다음과 같은 특정 스키마 컬렉션을 지원합니다.  
@@ -112,10 +100,10 @@ Microsoft .NET Framework Data Provider for Oracle에서는 공통 스키마 컬�
 |LAST_ANALYZED|DateTime|이 인덱스를 가장 최근에 분석한 날짜입니다.|  
 |DEGREE|문자열|인덱스를 스캔할 인스턴스당 스레드 수입니다.|  
 |INSTANCES|문자열|인덱스를 스캔할 인스턴스의 수입니다.|  
-|PARTITIONED|문자열|이 인덱스가 구분 되었는지 여부입니다 (예 &#124; 아니요)입니다.|  
+|PARTITIONED|문자열|이 인덱스가 구분 되었는지 여부입니다 (예 &#124; 아니요).|  
 |TEMPORARY|문자열|인덱스가 임시 테이블에 있는지 여부입니다.|  
-|GENERATED|문자열|(Y &#124; 생성 된 인덱스의 이름이 시스템 인지 여부를 N)입니다.|  
-|SECONDARY|문자열|Oracle9i 데이터 카트리지의 ODCIIndexCreate 메서드에서 만든 보조 개체 인지 여부 (Y &#124; N)입니다.|  
+|GENERATED|문자열|인덱스의 이름을 시스템 생성 인지 (Y&#124;N).|  
+|SECONDARY|문자열|Oracle9i 데이터 카트리지의 ODCIIndexCreate 메서드에서 만든 보조 개체 인지 여부 (Y&#124;N).|  
 |BUFFER_POOL|문자열|인덱스 블록에 사용할 기본 버퍼 풀의 이름입니다.|  
 |USER_STATS|문자열|사용자가 직접 통계를 입력했는지 여부입니다.|  
 |DURATION|문자열|임시 테이블의 지속 시간을 나타냅니다. 1)SYS$SESSION: 세션 지속 시간 동안 행이 유지됩니다. 2) SYS$TRANSACTION: COMMIT 이후에 행이 삭제됩니다. 3) 영구 테이블인 경우 Null입니다.|  
@@ -156,8 +144,8 @@ Microsoft .NET Framework Data Provider for Oracle에서는 공통 스키마 컬�
 |TIMESTAMP|문자열|개체(문자 데이터)의 사양에 대한 타임스탬프입니다.|  
 |STATUS|문자열|개체의 상태(VALID, INVALID 또는 N/A)입니다.|  
 |TEMPORARY|문자열|임시 개체인지 여부입니다. 임시 개체일 경우 현재 세션은 이 개체 내에 위치하는 데이터만 볼 수 있습니다.|  
-|GENERATED|문자열|이 개체 시스템의 이름이 생성되었습니까? (Y &#124; N)입니다.|  
-|SECONDARY|문자열|Oracle9i 데이터 카트리지의 ODCIIndexCreate 메서드에서 만든 보조 개체 인지 여부를 (Y &#124; N)입니다.|  
+|GENERATED|문자열|이 개체 시스템의 이름이 생성되었습니까? (Y &AMP;#124; N).|  
+|SECONDARY|문자열|Oracle9i 데이터 카트리지의 ODCIIndexCreate 메서드에서 만든 보조 개체 인지 여부를 (Y &#124; N).|  
 |CREATED|DateTime|개체가 만들어진 날짜입니다.|  
   
 ## <a name="sequences"></a>시퀀스  
@@ -231,8 +219,8 @@ Microsoft .NET Framework Data Provider for Oracle에서는 공통 스키마 컬�
 |TIMESTAMP|문자열|개체(문자 데이터)의 사양에 대한 타임스탬프입니다.|  
 |STATUS|문자열|개체의 상태(VALID, INVALID 또는 N/A)입니다.|  
 |TEMPORARY|문자열|임시 개체인지 여부입니다. 임시 개체일 경우 현재 세션은 이 개체 내에 위치하는 데이터만 볼 수 있습니다.|  
-|GENERATED|문자열|이 개체 시스템의 이름이 생성되었습니까? (Y &#124; N)입니다.|  
-|SECONDARY|문자열|Oracle9i 데이터 카트리지의 ODCIIndexCreate 메서드에서 만든 보조 개체 인지 여부를 (Y &#124; N)입니다.|  
+|GENERATED|문자열|이 개체 시스템의 이름이 생성되었습니까? (Y &AMP;#124; N).|  
+|SECONDARY|문자열|Oracle9i 데이터 카트리지의 ODCIIndexCreate 메서드에서 만든 보조 개체 인지 여부를 (Y &#124; N).|  
   
 ## <a name="packages"></a>패키지  
   
@@ -247,8 +235,8 @@ Microsoft .NET Framework Data Provider for Oracle에서는 공통 스키마 컬�
 |TIMESTAMP|문자열|개체(문자 데이터)의 사양에 대한 타임스탬프입니다.|  
 |STATUS|문자열|개체의 상태(VALID, INVALID 또는 N/A)입니다.|  
 |TEMPORARY|문자열|임시 개체인지 여부입니다. 임시 개체일 경우 현재 세션은 이 개체 내에 위치하는 데이터만 볼 수 있습니다.|  
-|GENERATED|문자열|이 개체 시스템의 이름이 생성되었습니까? (Y &#124; N)입니다.|  
-|SECONDARY|문자열|Oracle9i 데이터 카트리지의 ODCIIndexCreate 메서드에서 만든 보조 개체 인지 여부를 (Y &#124; N)입니다.|  
+|GENERATED|문자열|이 개체 시스템의 이름이 생성되었습니까? (Y &AMP;#124; N).|  
+|SECONDARY|문자열|Oracle9i 데이터 카트리지의 ODCIIndexCreate 메서드에서 만든 보조 개체 인지 여부를 (Y &#124; N).|  
 |CREATED|DateTime|개체가 만들어진 날짜입니다.|  
   
 ## <a name="packagebodies"></a>PackageBodies  
@@ -264,8 +252,8 @@ Microsoft .NET Framework Data Provider for Oracle에서는 공통 스키마 컬�
 |TIMESTAMP|문자열|개체(문자 데이터)의 사양에 대한 타임스탬프입니다.|  
 |STATUS|문자열|개체의 상태(VALID, INVALID 또는 N/A)입니다.|  
 |TEMPORARY|문자열|임시 개체인지 여부입니다. 임시 개체일 경우 현재 세션은 이 개체 내에 위치하는 데이터만 볼 수 있습니다.|  
-|GENERATED|문자열|이 개체 시스템의 이름이 생성되었습니까? (Y &#124; N)입니다.|  
-|SECONDARY|문자열|Oracle9i 데이터 카트리지의 ODCIIndexCreate 메서드에서 만든 보조 개체 인지 여부를 (Y &#124; N)입니다.|  
+|GENERATED|문자열|이 개체 시스템의 이름이 생성되었습니까? (Y &AMP;#124; N).|  
+|SECONDARY|문자열|Oracle9i 데이터 카트리지의 ODCIIndexCreate 메서드에서 만든 보조 개체 인지 여부를 (Y &#124; N).|  
 |CREATED|DateTime|개체가 만들어진 날짜입니다.|  
   
 ## <a name="arguments"></a>인수  

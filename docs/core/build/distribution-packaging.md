@@ -1,21 +1,19 @@
 ---
-title: ".NET Core 배포 패키징"
-description: "배포를 위해 .NET Core를 패키지하고 이름과 버전을 지정하는 방법에 관해 알아봅니다."
-keywords: ".NET, .NET Core, 소스, 빌드"
+title: .NET Core 배포 패키징
+description: 배포를 위해 .NET Core를 패키지하고 이름과 버전을 지정하는 방법에 관해 알아봅니다.
 author: bleroy
 ms.author: mairaw
 ms.date: 06/28/2017
-ms.topic: article
-ms.prod: .net-core
+ms.topic: conceptual
+ms.prod: dotnet-core
 ms.devlang: dotnet
-ms.assetid: 71b9d722-c5a8-4271-9ce1-d87e7ae2494d
 ms.workload:
 - dotnetcore
-ms.openlocfilehash: e511ea13c578ab44c65a5ba78f666cce1ab6a0c4
-ms.sourcegitcommit: c3957fdb990060559d73cca44ab3e2c7b4d049c0
+ms.openlocfilehash: 63ff542dbde30f8ff72a2d257a16a18b2a9e71b8
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="net-core-distribution-packaging"></a>.NET Core 배포 패키징
 
@@ -54,7 +52,7 @@ ms.lasthandoff: 03/05/2018
 
 단일 호스트가 있지만 다른 구성 요소는 대부분 버전이 지정된 디렉터리(2,3,5,6)에 있습니다. 즉, 여러 버전이 나란히 설치되므로 시스템에 표시될 수 있습니다.
 
-- (2) **host/fxr/\<fxr 버전>**에는 호스트에서 사용하는 프레임워크 확인 논리가 포함됩니다. 호스트는 설치된 최신 hostfxr을 사용합니다. hostfxr는 .NET Core 응용 프로그램을 실행할 때 적합한 런타임을 선택하는 일을 담당합니다. 예를 들어 .NET Core 2.0.0에 대해 빌드된 응용 프로그램을 사용할 수 있는 경우 2.0.5 런타임을 사용합니다. 마찬가지로 hostfxr은 개발 중에 적절한 SDK를 선택합니다.
+- (2) **host/fxr/\<fxr 버전>** 에는 호스트에서 사용하는 프레임워크 확인 논리가 포함됩니다. 호스트는 설치된 최신 hostfxr을 사용합니다. hostfxr는 .NET Core 응용 프로그램을 실행할 때 적합한 런타임을 선택하는 일을 담당합니다. 예를 들어 .NET Core 2.0.0에 대해 빌드된 응용 프로그램을 사용할 수 있는 경우 2.0.5 런타임을 사용합니다. 마찬가지로 hostfxr은 개발 중에 적절한 SDK를 선택합니다.
 
 - (3) **sdk/\<sdk version>** SDK("도구"라고도 함)는 .NET Core 라이브러리 및 응용 프로그램을 작성하고 빌드하는 데 사용할 수 있는 관리되는 도구 집합입니다. SDK에는 CLI, Roslyn 컴파일러, MSBuild, 관련 빌드 작업 및 대상, NuGet, 새 프로젝트 템플릿 등이 포함됩니다.
 
@@ -64,7 +62,7 @@ ms.lasthandoff: 03/05/2018
 
 - (5) **shared/Microsoft.NETCore.App/\<runtime 버전>** 이 프레임워크에는 지원되는 .NET Core 런타임 및 관리 라이브러리가 포함됩니다.
 
-- (6,7) **shared/Microsoft.AspNetCore.{App,All}/\<aspnetcore 버전>**에는 ASP.NET Core 라이브러리가 포함됩니다. `Microsoft.AspNetCore.App`에서 라이브러리를 개발하고 .NET Core 프로젝트의 일부로 지원합니다. `Microsoft.AspNetCore.All`에서 라이브러리는 타사 라이브러리도 포함되는 하위 집합입니다.
+- (6,7) **shared/Microsoft.AspNetCore.{App,All}/\<aspnetcore 버전>** 에는 ASP.NET Core 라이브러리가 포함됩니다. `Microsoft.AspNetCore.App`에서 라이브러리를 개발하고 .NET Core 프로젝트의 일부로 지원합니다. `Microsoft.AspNetCore.All`에서 라이브러리는 타사 라이브러리도 포함되는 하위 집합입니다.
 
 - (8) **LICENSE.txt,ThirdPartyNotices.txt**는 .NET Core에서 사용되는 .NET Core 라이선스 및 타사 라이브러리의 라이선스입니다.
 
@@ -126,4 +124,4 @@ SDK 버전은 동일한 `[major].[minor]`를 사용하고, SDK의 기능 및 패
 
 ## <a name="building-packages"></a>패키지 빌드
 
-https://github.com/dotnet/source-build 리포지토리는 .NET Core SDK 및 모든 해당 구성 요소의 원본 Tarball을 빌드하는 방법에 대한 지침을 제공합니다. 원본 빌드 리포지토리의 출력은 이 아티클의 첫 번째 섹션에 설명된 레이아웃과 일치합니다.
+https://github.com/dotnet/source-build 리포지토리는 .NET Core SDK 및 모든 해당 구성 요소의 소스 tarball을 빌드하는 방법에 대한 지침을 제공합니다. 원본 빌드 리포지토리의 출력은 이 아티클의 첫 번째 섹션에 설명된 레이아웃과 일치합니다.

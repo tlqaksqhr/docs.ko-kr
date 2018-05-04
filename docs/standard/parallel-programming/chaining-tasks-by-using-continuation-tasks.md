@@ -21,11 +21,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 64a6fd2f5cbaee17ac35d7b4bd6f08326eafac64
-ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
+ms.openlocfilehash: ff475259d1835a048d6260cabf4f1d46d2436954
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="chaining-tasks-by-using-continuation-tasks"></a>연속 작업을 사용하여 작업 연결
 비동기 프로그래밍에서는 한 비동기 작업이 완료 시 두 번째 작업을 호출하고 해당 작업에 데이터를 전달하는 것이 일반적입니다. 일반적으로 이 작업은 콜백 메서드를 통해 수행되었습니다. 작업 병렬 라이브러리에서는 *연속 작업*이 동일한 기능을 제공합니다. 연속 작업(연속이라고도 함)은 선행 작업이 완료될 때 다른 작업( *선행*이라고 함)이 호출하는 비동기 작업입니다.  
@@ -130,7 +130,7 @@ ms.lasthandoff: 04/18/2018
   
  연속 상태는 [APM(비동기 프로그래밍 모델)](../../../docs/standard/asynchronous-programming-patterns/asynchronous-programming-model-apm.md) 을 사용하는 기존 코드를 TPL을 사용하도록 변환하는 경우에 유용합니다. APM에서는 일반적으로 **Begin***Method* 메서드에 개체 상태를 제공하고 나중에 <xref:System.IAsyncResult.AsyncState%2A?displayProperty=nameWithType> 속성을 통해 해당 상태에 액세스합니다. <xref:System.Threading.Tasks.Task.ContinueWith%2A> 메서드를 사용하면 APM을 사용하는 코드를 TPL을 사용하도록 변환할 때 이 상태를 보존할 수 있습니다.  
   
- 연속 상태는 <xref:System.Threading.Tasks.Task> 디버거에서 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 개체로 작업할 때도 유용할 수 있습니다. 예를 들어 **병렬 작업** 창의 **작업** 열에는 각 작업에 대한 상태 개체의 문자열 표현이 표시됩니다. **병렬 작업** 창에 대한 자세한 내용은 [작업 창 사용](/visualstudio/debugger/using-the-tasks-window)을 참조하세요.  
+ Visual Studio 디버거에서 <xref:System.Threading.Tasks.Task> 개체로 작업하는 경우에도 연속 상태가 유용할 수 있습니다. 예를 들어 **병렬 작업** 창의 **작업** 열에는 각 작업에 대한 상태 개체의 문자열 표현이 표시됩니다. **병렬 작업** 창에 대한 자세한 내용은 [작업 창 사용](/visualstudio/debugger/using-the-tasks-window)을 참조하세요.  
   
  다음 예제에서는 연속 상태를 사용하는 방법을 보여 줍니다. 연속 작업 체인을 만듭니다. 각 작업은 <xref:System.DateTime> 메서드의 `state` 매개 변수에 대해 현재 시간인 <xref:System.Threading.Tasks.Task.ContinueWith%2A> 개체를 제공합니다. 각 <xref:System.DateTime> 개체는 연속 작업이 만들어진 시간을 나타냅니다. 각 작업은 작업 완료 시간을 나타내는 두 번째 <xref:System.DateTime> 개체를 결과로 생성합니다. 이 예제에서는 모든 작업이 완료된 후 만든 시간과 각 연속 작업의 완료 시간이 표시됩니다.  
   

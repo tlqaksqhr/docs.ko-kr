@@ -1,12 +1,13 @@
 ---
-title: "클라이언트 응용 프로그램 서비스"
-ms.custom: 
+title: 클라이언트 응용 프로그램 서비스
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - role-based security [.NET Framework], client application services
@@ -24,16 +25,17 @@ helpviewer_keywords:
 - roles [.NET Framework], client application services
 - client application services, about client application services
 ms.assetid: 1487d8df-089e-4f21-abfb-a791a652b58e
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 597b2d4d37d76ca722ddcebf9fcfeae532f67a00
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 9532594f5f243faed28229388b9a6d597be57a7d
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="client-application-services"></a>클라이언트 응용 프로그램 서비스
 클라이언트 응용 프로그램 서비스를 통해 Microsoft ASP.NET 2.0 AJAX 확장에 포함된 [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)] 로그인, 역할 및 프로필 응용 프로그램 서비스를 사용하는 Windows 기반 응용 프로그램을 쉽게 만들 수 있습니다. 이 서비스를 통해 여러 웹 응용 프로그램과 Windows 기반 응용 프로그램이 단일 서버에서 사용자 정보와 사용자 관리 기능을 공유할 수 있습니다. 예를 들어 이 서비스를 통해 다음 작업을 수행할 수 있습니다.  
@@ -53,7 +55,7 @@ ms.lasthandoff: 12/22/2017
  클라이언트 응용 프로그램 서비스 공급자를 통해 제공되는 기능을 설명합니다.  
   
  [방법: 클라이언트 응용 프로그램 서비스 구성](../../../docs/framework/common-client-technologies/how-to-configure-client-application-services.md)  
- [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 프로젝트 디자이너를 사용하여 응용 프로그램 서비스를 사용하도록 설정하고 구성하는 방법을 설명합니다. 또한 App.config 파일에 대한 해당 변경 내용을 설명합니다.  
+ Visual Studio 프로젝트 디자이너를 사용하여 응용 프로그램 서비스를 사용하도록 설정하고 구성하는 방법을 설명합니다. 또한 App.config 파일에 대한 해당 변경 내용을 설명합니다.  
   
  [방법: 클라이언트 응용 프로그램 서비스에서 사용자 로그인 구현](../../../docs/framework/common-client-technologies/how-to-implement-user-login-with-client-application-services.md)  
  응용 프로그램이 클라이언트 인증 서비스 공급자를 사용하도록 구성된 경우 사용자의 유효성을 검사하는 방법을 설명합니다.  

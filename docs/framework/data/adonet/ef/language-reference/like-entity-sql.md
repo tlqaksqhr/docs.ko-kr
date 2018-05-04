@@ -1,24 +1,12 @@
 ---
 title: LIKE(Entity SQL)
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 8300e6d2-875b-481e-9ef4-e1e7c12d46fa
-caps.latest.revision: "4"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 021a999e79239e3da5c874cb459ac7f03fdb5661
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: f2d06b364c577b581bb64af0436c133ca830bb2b
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="like-entity-sql"></a>LIKE(Entity SQL)
 특정 문자 `String`이 지정된 패턴과 일치하는지 여부를 결정합니다.  
@@ -50,9 +38,9 @@ match [NOT] LIKE pattern [ESCAPE escape]
   
  다음 표에서는 패턴 `string`의 구문을 설명합니다.  
   
-|와일드카드 문자|설명|예|  
+|와일드카드 문자|설명|예제|  
 |------------------------|-----------------|-------------|  
-|%|문자 0개 이상으로 이루어진 임의의 `string`입니다.|`title like '%computer%'`단어 포함 된 모든 제목을 찾습니다 `"computer"` 는 제목에 있습니다.|  
+|%|문자 0개 이상으로 이루어진 임의의 `string`입니다.|`title like '%computer%'` 단어 포함 된 모든 제목을 찾습니다 `"computer"` 는 제목에 있습니다.|  
 |_(밑줄)|임의의 단일 문자입니다.|`firstname like '_ean'`은 Dean이나 Sean처럼 `"ean`"으로 끝나면서 4문자로 이루어진 이름을 찾습니다.|  
 |[ ]|지정된 범위([a-f]) 또는 집합([abcdef]) 내의 임의의 단일 문자입니다.|`lastname like '[C-P]arsen'`은 Carsen이나 Larsen처럼 C와 P 사이의 단일 문자로 시작되고 "arsen"으로 끝나는 성을 찾습니다.|  
 |[^]|지정된 범위([^a-f]) 또는 집합([^abcdef])에 속하지 않는 임의의 단일 문자입니다.|`lastname like 'de[^l]%'`는 "de"로 시작되고 그 다음 문자에 "l"이 포함되지 않는 성을 모두 찾습니다.|  
@@ -76,7 +64,7 @@ match [NOT] LIKE pattern [ESCAPE escape]
   
  이 검색 식에서 느낌표(!) 문자 바로 다음에 나오는 백분율(%) 와일드카드 문자는 와일드카드 문자가 아니라 리터럴로 취급됩니다. [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 와일드카드 문자 및 대괄호(`[ ]`) 문자를 제외한 모든 문자를 이스케이프 문자로 사용할 수 있습니다. 이전의 예제에서 느낌표(!) 문자가 이스케이프 문자입니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 두 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 쿼리에서는 LIKE 및 ESCAPE 연산자를 사용하여 특정 문자열이 지정된 패턴과 일치하는지 여부를 결정합니다. 첫 번째 쿼리는 `Name`이라는 문자로 시작되는 `Down_`을 검색합니다. 이 쿼리에서는 밑줄(`_`)이 와일드카드 문자이므로 ESCAPE 옵션이 사용되었습니다. ESCAPE 옵션이 지정 하지 않고 쿼리 검색할 것 `Name` 단어로 시작 하는 값 `Down` 밑줄 문자를 제외한 모든 단일 문자입니다. 쿼리는 AdventureWorks Sales 모델을 기반으로 합니다. 이 쿼리를 컴파일하고 실행하려면 다음 단계를 수행하세요.  
   
 1.  절차에 따라 [하는 방법: PrimitiveType 결과 반환 하는 쿼리 실행](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-primitivetype-results.md)합니다.  

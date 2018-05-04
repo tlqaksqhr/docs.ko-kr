@@ -1,14 +1,6 @@
 ---
-title: "&lt;컴파일러&gt; 요소"
-ms.custom: 
+title: '&lt;컴파일러&gt; 요소'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#compiler
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.codedom/compilers/compiler
@@ -18,17 +10,14 @@ helpviewer_keywords:
 - compiler configuration attributes
 - compiler element
 ms.assetid: 7a151659-b803-4c27-b5ce-1c4aa0d5a823
-caps.latest.revision: 
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload:
-- dotnet
-ms.openlocfilehash: 242a4780443026e751d76c7e80dd9a77cbbbddc7
-ms.sourcegitcommit: ba765893e3efcece67d99fd6d5ce0074b050d1d9
+ms.openlocfilehash: b033e26d64f23398a4da6842bb4688cc94627d68
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/02/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltcompilergt-element"></a>&lt;컴파일러&gt; 요소
 언어 공급자에 대한 컴파일러 구성 특성을 지정합니다.  
@@ -87,7 +76,7 @@ ms.lasthandoff: 03/02/2018
 ## <a name="configuration-file"></a>구성 파일  
  컴퓨터 구성 파일 및 응용 프로그램 구성 파일에서이 요소를 사용할 수 있습니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 예제는 일반적인 컴파일러 구성 요소를 보여 줍니다.  
   
 ```xml  

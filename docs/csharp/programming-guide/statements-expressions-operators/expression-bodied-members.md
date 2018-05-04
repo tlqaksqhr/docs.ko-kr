@@ -1,19 +1,20 @@
 ---
-title: "식 본문 멤버(C# 프로그래밍 가이드)"
+title: 식 본문 멤버(C# 프로그래밍 가이드)
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 helpviewer_keywords:
 - expression-bodied members[C#]
 - C# language, expresion-bodied members
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ead1e474fe87bd9fbd0f972bc0f2fc4fefc12ecf
-ms.sourcegitcommit: 7e99f66ef09d2903e22c789c67ff5a10aa953b2f
+ms.openlocfilehash: 5690a2ddb9127bb0c9b06d3607e3d105fca9a2e8
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="expression-bodied-members-c-programming-guide"></a>식 본문 멤버(C# 프로그래밍 가이드)
 식 본문 정의를 사용하면 간결하고 읽을 수 있는 형식으로 멤버 구현을 제공할 수 있습니다. 메서드 또는 속성과 같은 지원되는 멤버에 대한 논리가 단일 식으로 구성된 경우 식 본문 정의를 사용할 수 있습니다. 식 본문 정의의 일반 구문은 다음과 같습니다.
@@ -24,16 +25,16 @@ member => expression;
 
 여기서 *expression*은 유효한 식입니다. 
 
-C# 6에서는 메서드 및 속성 가져오기 접근자에 대해 식 본문 정의 지원이 도입되었으며 C# 7에서는 지원이 확장되었습니다. 다음 표에 나열된 형식 멤버와 함께 식 본문 정의를 사용할 수 있습니다. 
+C# 6에서는 메서드 및 속성 가져오기 접근자에 대해 식 본문 정의 지원이 도입되었으며 C# 7.0에서는 지원이 확장되었습니다. 다음 표에 나열된 형식 멤버와 함께 식 본문 정의를 사용할 수 있습니다. 
 
 |멤버  |지원 버전 |
 |---------|---------|
 |[메서드](#methods)  |C# 6 |
-|[생성자](#constructors)   |C# 7 |
-|[종료자](#finalizers)     |C# 7 |
+|[생성자](#constructors)   |C# 7.0 |
+|[종료자](#finalizers)     |C# 7.0 |
 |[속성 가져오기](#property-get-statements)  |C# 6 |
-|[속성 설정](#property-set-statements)  |C# 7 |
-|[인덱서](#indexers)       |C# 7 |
+|[속성 설정](#property-set-statements)  |C# 7.0 |
+|[인덱서](#indexers)       |C# 7.0 |
 
 ## <a name="methods"></a>메서드
 

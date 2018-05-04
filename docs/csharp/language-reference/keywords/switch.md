@@ -1,8 +1,9 @@
 ---
-title: "switch 키워드(C# 참조)"
+title: switch 키워드(C# 참조)
 ms.date: 03/07/2017
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 f1_keywords:
 - switch_CSharpKeyword
@@ -15,14 +16,14 @@ helpviewer_keywords:
 - case statement [C#]
 - default keyword [C#]
 ms.assetid: 44bae8b8-8841-4d85-826b-8a94277daecb
-caps.latest.revision: "47"
+caps.latest.revision: 47
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 1c345d0c6c935271600a386752e18c19a25cc389
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 6506278edb782f61b83cecfccba3126282c0ecf8
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="switch-c-reference"></a>switch(C# 참조)
 `switch`는 *일치 식*을 사용한 패턴 일치를 기반으로 하여 후보 목록에서 실행할 *switch 섹션* 하나를 선택하는 선택 문입니다. 
@@ -53,7 +54,7 @@ C# 6에서 일치 식은 다음 형식의 값을 반환하는 식이어야 합�
 - [int](int.md) 또는 [long](long.md)과 같은 정수 계열 값
 - [enum](enum.md) 값
 
-C# 7부터 일치 식은 null이 아닌 모든 식일 수 있습니다.
+C# 7.0부터 일치 식은 null이 아닌 모든 식일 수 있습니다.
  
 ## <a name="the-switch-section"></a>switch 섹션
  
@@ -91,7 +92,7 @@ switch (caseSwitch)
 
  C# 6에서 상수 패턴만 지원하고 상수 값의 반복을 허용하지 않는 경우 case 레이블은 상호 배타적인 값을 정의하며 하나의 패턴만 일치 식과 일치할 수 있습니다. 따라서 `case` 문이 표시되는 순서는 중요하지 않습니다.
 
- 그러나 C# 7에서는 다른 패턴도 지원되므로 case 레이블에서 상호 배타적인 값을 정의할 필요가 없으며 여러 패턴이 일치 식과 일치할 수 있습니다. 첫 번째 일치 패턴을 포함하는 switch 섹션의 문만 실행되기 때문에 이제 `case` 문이 나타나는 순서가 중요합니다. C#에서 case 문이 이전 문과 같거나 이전 문의 하위 집합인 switch 섹션을 검색할 경우 컴파일러 오류, CS8120, "Switch case가 이전 case에서 이미 처리되었습니다."를 생성합니다. 
+ 그러나 C# 7.0에서는 다른 패턴도 지원되므로 case 레이블에서 상호 배타적인 값을 정의할 필요가 없으며 여러 패턴이 일치 식과 일치할 수 있습니다. 첫 번째 일치 패턴을 포함하는 switch 섹션의 문만 실행되기 때문에 이제 `case` 문이 나타나는 순서가 중요합니다. C#에서 case 문이 이전 문과 같거나 이전 문의 하위 집합인 switch 섹션을 검색할 경우 컴파일러 오류, CS8120, "Switch case가 이전 case에서 이미 처리되었습니다."를 생성합니다. 
 
  다음 예제에서는 상호 배타적이 아닌 다양한 패턴을 사용하는 `switch` 문을 보여 줍니다. 더 이상 `switch` 문의 첫 번째 섹션이 아니도록 `case 0:` switch 섹션을 이동하는 경우 해당 값이 0인 정수는 `case int val` 문에 정의된 패턴인 모든 정수의 하위 집합이므로 C#에서 컴파일러 오류를 생성합니다.
 
@@ -111,7 +112,7 @@ switch (caseSwitch)
 
 ## <a name="a-namepattern--pattern-matching-with-the-switch-statement"></a>`switch` 문을 사용한 <a name="pattern" /> 패턴 일치
   
-각 `case` 문은 일치 식과 일치할 경우 포함하는 switch 섹션이 실행되는 패턴을 정의합니다. 상수 패턴은 모든 버전의 C#에서 지원됩니다. 나머지 패턴은 C# 7부터 지원됩니다. 
+각 `case` 문은 일치 식과 일치할 경우 포함하는 switch 섹션이 실행되는 패턴을 정의합니다. 상수 패턴은 모든 버전의 C#에서 지원됩니다. 나머지 패턴은 C# 7.0부터 지원됩니다. 
   
 ### <a name="constant-pattern"></a>상수 패턴 
 
@@ -181,7 +182,7 @@ case null:
 
 ## <a name="the-case-statement-and-the-when-clause"></a>`case` 문과 `when` 절
 
-C# 7부터 case 문이 상호 배타적일 필요가 없으므로 `when` 절을 사용하여 case 문이 true로 평가되기 위해 충족해야 하는 추가 조건을 지정할 수 있습니다. `when` 절은 부울 값을 반환하는 모든 식일 수 있습니다. `when` 절의 보다 일반적인 사용 중 하나는 일치 식의 값이 `null`일 때 switch 섹션이 실행되지 않도록 하는 것입니다. 
+C# 7.0부터 case 문이 상호 배타적일 필요가 없으므로 `when` 절을 사용하여 case 문이 true로 평가되기 위해 충족해야 하는 추가 조건을 지정할 수 있습니다. `when` 절은 부울 값을 반환하는 모든 식일 수 있습니다. `when` 절의 보다 일반적인 사용 중 하나는 일치 식의 값이 `null`일 때 switch 섹션이 실행되지 않도록 하는 것입니다. 
 
  다음 예제에서는 기본 `Shape` 클래스, `Shape`에서 파생된 `Rectangle` 클래스 및 `Rectangle`에서 파생된 `Square` 클래스를 정의합니다. `when` 절을 사용하여 `ShowShapeInfo`에서 `Square` 개체로 인스턴스화되지 않은 경우에도 동일한 길이 및 너비가 할당된 `Rectangle` 개체를 `Square`로 처리하도록 합니다. 이 메서드는 `null`인 개체나 면적이 0인 도형에 대한 정보를 표시하지 않습니다. 
 

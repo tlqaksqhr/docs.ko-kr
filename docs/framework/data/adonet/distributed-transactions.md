@@ -1,24 +1,12 @@
 ---
-title: "분산 트랜잭션"
-ms.custom: 
+title: 분산 트랜잭션
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 718b257c-bcb2-408e-b004-a7b0adb1c176
-caps.latest.revision: "7"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: c2de777dbd8bf6ac18db95a1cf647d259a252f8d
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 7792a719a73ca5183d57bcecc5d346153d824570
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="distributed-transactions"></a>분산 트랜잭션
 트랜잭션은 하나의 단위로 성공(커밋)하거나 실패(중단)한 관련 작업의 집합입니다. A *분산 트랜잭션을* 은 여러 리소스에 영향을 주는 트랜잭션입니다. 분산 트랜잭션을 커밋하는 경우 모든 참가자는 데이터의 모든 변경 내용이 영구적으로 유지된다는 것을 보증해야 합니다. 시스템 작동이 중단되거나 다른 예측할 수 없는 이벤트가 발생해도 변경 내용이 지속되어야 합니다. 참가자 중 하나라도 이러한 보증을 이행하지 못하면 전체 트랜잭션이 실패하게 되며 트랜잭션 범위 내의 모든 데이터 변경 내용이 롤백됩니다.  
@@ -44,7 +32,7 @@ ms.lasthandoff: 01/17/2018
   
  분산 트랜잭션 인리스트먼트는 특히 비즈니스 개체를 풀링할 때 적용할 수 있습니다. 비즈니스 개체가 열린 연결로 풀링되는 경우 해당 연결이 열리면 자동 트랜잭션 인리스트먼트만 발생합니다. 풀링된 비즈니스 개체를 사용하여 여러 트랜잭션을 수행하는 경우 해당 개체에 대해 열린 연결은 새로 초기화된 트랜잭션에 자동으로 인리스트먼트하지 않습니다. 이 경우 연결에 대해 자동 트랜잭션 인리스트먼트를 비활성화한 다음 `EnlistTransaction`을 사용하여 연결을 트랜잭션에 인리스트먼트할 수 있습니다.  
   
- `EnlistTransaction`형식의 단일 인수를 사용 <xref:System.Transactions.Transaction> 기존 트랜잭션에 대 한 참조입니다. 연결의 `EnlistTransaction` 메서드를 호출한 후에는 해당 연결을 통해 데이터 소스에서 수정된 모든 내용이 트랜잭션에 포함됩니다. null 값을 전달하면 현재 분산 트랜잭션 인리스트먼트에서 연결의 인리스트먼트가 취소됩니다. 연결은 `EnlistTransaction`을 호출하기 전에 열려야 합니다.  
+ `EnlistTransaction` 형식의 단일 인수를 사용 <xref:System.Transactions.Transaction> 기존 트랜잭션에 대 한 참조입니다. 연결의 `EnlistTransaction` 메서드를 호출한 후에는 해당 연결을 통해 데이터 소스에서 수정된 모든 내용이 트랜잭션에 포함됩니다. null 값을 전달하면 현재 분산 트랜잭션 인리스트먼트에서 연결의 인리스트먼트가 취소됩니다. 연결은 `EnlistTransaction`을 호출하기 전에 열려야 합니다.  
   
 > [!NOTE]
 >  트랜잭션에 연결을 명시적으로 인리스트먼트하면 첫 번째 트랜잭션이 종료될 때까지 인리스트먼트를 취소하거나 다른 트랜잭션에 인리스트먼트할 수 없습니다.  
