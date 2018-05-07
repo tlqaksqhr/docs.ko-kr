@@ -1,24 +1,14 @@
 ---
-title: "내 첫 번째 클레임 인식 ASP.NET 웹 응용 프로그램 구축"
-ms.custom: 
+title: 내 첫 번째 클레임 인식 ASP.NET 웹 응용 프로그램 구축
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 3ee8ee7f-caba-4267-9343-e313fae2876d
-caps.latest.revision: "5"
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: 182f7c1646e112026852efcb5bb110607fe19360
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 7e36ec5b824f60057ce7b1f18c695607cf9b88a3
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="building-my-first-claims-aware-aspnet-web-application"></a>내 첫 번째 클레임 인식 ASP.NET 웹 응용 프로그램 구축
 ## <a name="applies-to"></a>적용 대상  
@@ -43,11 +33,11 @@ ms.lasthandoff: 12/22/2017
   
  STS는 성공적으로 인증되면 토큰을 발급하는 서비스입니다. Microsoft는 다음과 같은 두 가지 업계 표준 STS를 제공합니다.  
   
--   [AD FS(Active Directory Federation Services) 2.0](http://go.microsoft.com/fwlink/?LinkID=247516)(http://go.microsoft.com/fwlink/?LinkID=247516)  
+-   [Active Directory Federation Services (AD FS) 2.0](http://go.microsoft.com/fwlink/?LinkID=247516) 드 (http://go.microsoft.com/fwlink/?LinkID=247516)  
   
--   [Microsoft Azure ACS(Access Control Service)](http://go.microsoft.com/fwlink/?LinkID=247517)(http://go.microsoft.com/fwlink/?LinkID=247517).  
+-   [Windows Azure 액세스 제어 서비스 (ACS)](http://go.microsoft.com/fwlink/?LinkID=247517) (http://go.microsoft.com/fwlink/?LinkID=247517)합니다.  
   
- ADFS 2.0은 Windows Server R2에 속하며, 온-프레미스 시나리오의 STS로 사용할 수 있습니다. ACS는 Microsoft Azure 플랫폼의 일부로 제공되는 클라우드 서비스입니다. 테스트 또는 교육용으로 클레임 인식 응용 프로그램을 작성하기 위해 다른 STS를 사용할 수도 있습니다. 예를 들어, 온라인에서 무료로 제공되는 [Visual Studio용 ID 및 액세스 도구](http://go.microsoft.com/fwlink/?LinkID=245849)(http://go.microsoft.com/fwlink/?LinkID=245849)에 속하는 로컬 개발 STS를 사용할 수 있습니다.  
+ ADFS 2.0은 Windows Server R2에 속하며, 온-프레미스 시나리오의 STS로 사용할 수 있습니다. ACS는 Microsoft Azure 플랫폼의 일부로 제공되는 클라우드 서비스입니다. 테스트 또는 교육용으로 클레임 인식 응용 프로그램을 작성하기 위해 다른 STS를 사용할 수도 있습니다. 예를 들어의 일부인 로컬 개발 STS를 사용할 수 있습니다는 [Id 및 액세스 도구 Visual Studio 용](http://go.microsoft.com/fwlink/?LinkID=245849) (http://go.microsoft.com/fwlink/?LinkID=245849) 온라인 무료로 제공 되 합니다.  
   
  WIF를 사용하여 첫 번째 클레임 인식 ASP.NET 응용 프로그램을 작성하려면 다음 중 하나의 지침을 따르십시오.  
   

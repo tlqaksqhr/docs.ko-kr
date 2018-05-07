@@ -1,12 +1,13 @@
 ---
-title: "쿼리 작업의 형식 관계(Visual Basic)"
-ms.custom: 
+title: 쿼리 작업의 형식 관계(Visual Basic)
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - variable relationships [LINQ in Visual Basic]
@@ -18,14 +19,14 @@ helpviewer_keywords:
 - inferring type information [LINQ in Visual Basic]
 - relationships [LINQ in Visual Basic]
 ms.assetid: b5ff4da5-f3fd-4a8e-aaac-1cbf52fa16f6
-caps.latest.revision: "34"
+caps.latest.revision: 34
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 1b93188475dd2bb00aea044ff178028eb87e00d4
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
-ms.translationtype: MT
+ms.openlocfilehash: e38f51d77869dcca8a81fdcbc70aed32c4146935
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="type-relationships-in-query-operations-visual-basic"></a>쿼리 작업의 형식 관계(Visual Basic)
 사용 되는 변수 [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] 쿼리 작업에는 강력한 형식이 며 서로 호환 되어야 합니다. 강력한 형식 지정 데이터 원본, 쿼리 자체 및 쿼리 실행에 사용 됩니다. 다음 그림에 설명 하는 데 사용 되는 용어를 식별 한 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 쿼리 합니다. 쿼리 부분에 대 한 자세한 내용은 참조 [기본 쿼리 작업 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/basic-query-operations.md)합니다.  
@@ -35,7 +36,7 @@ LINQ 쿼리
   
  쿼리에서 범위 변수의 종류는 데이터 원본에 있는 요소의 형식과 호환 되어야 합니다. 쿼리 변수의 형식에 정의 된 시퀀스 요소와 호환 되어야 합니다는 `Select` 절. 마지막으로 시퀀스 요소의 형식과 호환 되어야 합니다에 사용 되는 루프 제어 변수의 형식을 `For Each` 쿼리를 실행 하는 문입니다. 이 강력한 형식 지정 컴파일 시 형식 오류 식별을 용이 하 게 합니다.  
   
- [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]하면 강력한 형식 지정 편리 함 지역 형식 유추를 구현 하 여 *암시적 형식을*합니다. 기능 이전 예제에서 사용 하 고 전체에서 사용 되는 것을 보게는 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 예제 및 설명서입니다. Visual Basic에서 지역 형식 유추를 그대로 사용 하 여 수행 됩니다는 `Dim` 문을 없이 `As` 절. 다음 예에서 `city` 강력한 형식의 문자열입니다.  
+ Visual Basic 하면 강력한 형식 지정 편리 함 지역 형식 유추를 구현 하 여 *암시적 형식을*합니다. 기능 이전 예제에서 사용 하 고 전체에서 사용 되는 것을 보게는 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 예제 및 설명서입니다. Visual Basic에서 지역 형식 유추를 그대로 사용 하 여 수행 됩니다는 `Dim` 문을 없이 `As` 절. 다음 예에서 `city` 강력한 형식의 문자열입니다.  
   
  [!code-vb[VbLINQTypeRels#1](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/type-relationships-in-query-operations_1.vb)]  
   
@@ -118,7 +119,7 @@ For Each custInfo In nameCityQuery
 Next  
 ```  
   
- 이전 예제에서 모든 변수에 대 한 형식을 지정 하려면 가능한 경우에 관계.  
+ 이전 예제에서 모든 변수에 대 한 형식을 지정 하려면 가능한 경우에 관계 ֿ ´ .  
   
 1.  데이터 원본에 있는 요소의 형식은 쿼리에서 범위 변수의 형식을 다시 합니다. 이 예제에서는 `cust` 의 인스턴스가 `Customer`합니다.  
   

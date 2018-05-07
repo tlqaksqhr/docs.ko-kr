@@ -1,27 +1,15 @@
 ---
-title: "숫자 시퀀스에서 평균 값 반환"
-ms.custom: 
+title: 숫자 시퀀스에서 평균 값 반환
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: ee3b8673-a2e7-4b2d-9b5c-4972ff9e665d
-caps.latest.revision: "2"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: e7c53eafdc8805dce07ccde6b0cf01438fbd3ccf
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 3e808b836183a23fa6bd80faeb0d3cfc5921f4cb
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="return-the-average-value-from-a-numeric-sequence"></a>숫자 시퀀스에서 평균 값 반환
 <xref:System.Linq.Enumerable.Average%2A> 연산자는 숫자 값 시퀀스의 평균을 계산합니다.  
@@ -29,7 +17,7 @@ ms.lasthandoff: 01/17/2018
 > [!NOTE]
 >  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]에서 정수 값의 `Average`를 변환하면 두 자리가 아닌 정수로 계산됩니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 예제에서는 `Freight` 테이블에서 `Orders` 값의 평균을 반환합니다.  
   
  샘플 Northwind 데이터베이스의 결과는 `78.2442`입니다.  
@@ -37,7 +25,7 @@ ms.lasthandoff: 01/17/2018
  [!code-csharp[DLinqQueryExamples#1](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryExamples/cs/Program.cs#1)]
  [!code-vb[DLinqQueryExamples#1](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#1)]  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 예제에서는 `Products` 테이블에 있는 모든 `Products` 단가의 평균을 반환합니다.  
   
  샘플 Northwind 데이터베이스의 결과는 `28.8663`입니다.  
@@ -45,7 +33,7 @@ ms.lasthandoff: 01/17/2018
  [!code-csharp[DLinqQueryExamples#2](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryExamples/cs/Program.cs#2)]
  [!code-vb[DLinqQueryExamples#2](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#2)]  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 예제에서는 `Average` 연산자를 사용하여 제품의 단가가 제품 범주가 속한 단가의 평균보다 비싼 `Products`를 찾습니다. 그룹으로 결과가 표시됩니다.  
   
  이 예제는 반환 형식이 익명이기에 C#에서는 `var` 키워드를 사용해야 합니다.  

@@ -1,29 +1,15 @@
 ---
 title: .NET Framework 클라이언트 응용 프로그램 만들기(WCF Data Services 빠른 시작)
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework-oob
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 41ade767-eeab-437d-9121-9797e8fb8045
-caps.latest.revision: 3
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 0bdbb88cc3070c68c540a09ab0d6ce41f790d1c3
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 09981a7aee2db24d8464bbc7412b82a57ec8115b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="creating-the-net-framework-client-application-wcf-data-services-quickstart"></a>.NET Framework 클라이언트 응용 프로그램 만들기(WCF Data Services 빠른 시작)
 이것은의 마지막 작업은 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 빠른 시작 합니다. 이 작업에서는 솔루션에 콘솔 응용 프로그램을 추가에 대 한 참조를 추가 합니다는 [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] 이 새 클라이언트 응용 프로그램 및 액세스에 공급 된 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 생성 된 클라이언트 데이터 서비스 클래스와 클라이언트를 사용 하 여 클라이언트 응용 프로그램에서 피드 라이브러리입니다.  
