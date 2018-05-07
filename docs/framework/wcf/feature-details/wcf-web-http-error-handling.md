@@ -1,29 +1,15 @@
 ---
 title: WCF 웹 HTTP 오류 처리
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 02891563-0fce-4c32-84dc-d794b1a5c040
-caps.latest.revision: 8
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: bcd0e6d1e6318404eb47741dc61ccf2ff9358b47
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 228f8cdbe5ddde63f2b6afd82a27055f2241e058
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="wcf-web-http-error-handling"></a>WCF 웹 HTTP 오류 처리
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 웹 HTTP 오류 처리를 사용하면 HTTP 상태 코드를 지정하고 작업과 동일한 형식(예: XML 또는 JSON)을 사용하여 오류 정보를 반환하는 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 웹 HTTP 서비스에서 오류를 반환할 수 있습니다.  
+Windows Communication Foundation (WCF) 웹 HTTP 오류 처리를 사용 하면 WCF 웹 HTTP 서비스는 HTTP 상태 코드를 지정 하 고 작업 (예를 들어, XML 또는 JSON)으로 같은 형식을 사용 하 여 오류 정보를 반환 하는 오류를 반환할 수 있습니다.  
   
 ## <a name="wcf-web-http-error-handling"></a>WCF 웹 HTTP 오류 처리  
  <xref:System.ServiceModel.Web.WebFaultException> 클래스는 HTTP 상태 코드를 지정할 수 있도록 하는 생성자를 정의합니다. 이 상태 코드는 나중에 클라이언트에 반환됩니다. <xref:System.ServiceModel.Web.WebFaultException> 클래스의 제네릭 버전인 <xref:System.ServiceModel.Web.WebFaultException%601>을 사용하면 발생한 오류에 대한 정보가 들어 있는 사용자 정의 형식을 반환할 수 있습니다. 이 사용자 지정 개체는 작업에 지정된 형식을 사용하여 serialize되고 클라이언트에 반환됩니다. 다음 예제에서는 HTTP 상태 코드를 반환하는 방법을 보여 줍니다.  

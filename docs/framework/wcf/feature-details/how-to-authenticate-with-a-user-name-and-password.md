@@ -1,27 +1,18 @@
 ---
-title: "방법: 사용자 이름 및 암호를 사용하여 인증"
+title: '방법: 사용자 이름 및 암호를 사용하여 인증'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.technology:
-- dotnet-clr
-ms.topic: article
 helpviewer_keywords:
 - authentication [WCF], user name and password
 ms.assetid: a5415be2-0ef3-464c-9f76-c255cb8165a4
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 194a84ef7c2af3bfce6af3625eabf07d4d0b06fb
-ms.sourcegitcommit: 15316053918995cc1380163a7d7e7edd5c44e6d7
+ms.openlocfilehash: b37d296312be4c7694a2db55d85dd618e3252f14
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-authenticate-with-a-user-name-and-password"></a>방법: 사용자 이름 및 암호를 사용하여 인증
 
-이 항목에서는 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 서비스를 활성화하여 Windows 도메인 사용자 이름 및 암호로 클라이언트를 인증하는 방법을 소개합니다. 여기에서는 실행 중이면서 자체 호스팅된 서비스가 있는 것으로 가정합니다. 기본 자체 호스팅된 WCF 서비스 참조를 만드는 예제를 보려면 [초보자를 위한 자습서](../../../../docs/framework/wcf/getting-started-tutorial.md)합니다. 이 항목은 코드에 서비스가 구성된 것으로 가정합니다. 확인 하려는 경우 구성 파일을 사용 하 여 비슷한 서비스 구성의 예 참조 [메시지 보안 사용자 이름](../../../../docs/framework/wcf/samples/message-security-user-name.md)  
+이 항목에는 Windows 도메인 사용자 이름 및 암호를 사용 하 여 클라이언트를 인증 하는 Windows Communication Foundation (WCF) 서비스를 활성화 하는 방법을 보여 줍니다. 여기에서는 실행 중이면서 자체 호스팅된 서비스가 있는 것으로 가정합니다. 기본 자체 호스팅된 WCF 서비스 참조를 만드는 예제를 보려면 [초보자를 위한 자습서](../../../../docs/framework/wcf/getting-started-tutorial.md)합니다. 이 항목은 코드에 서비스가 구성된 것으로 가정합니다. 확인 하려는 경우 구성 파일을 사용 하 여 비슷한 서비스 구성의 예 참조 [메시지 보안 사용자 이름](../../../../docs/framework/wcf/samples/message-security-user-name.md)  
   
  Windows 도메인 사용자 이름 및 암호를 사용하여 클라이언트를 인증하는 서비스를 구성하려면 <xref:System.ServiceModel.WSHttpBinding>을 사용하고 해당 `Security.Mode` 속성을 `Message`로 설정합니다. 또한 사용자 이름과 암호가 클라이언트에서 서비스로 전송되므로 사용자 이름과 암호를 암호화하는 데 사용할 X509 인증서를 지정해야 합니다.  
   

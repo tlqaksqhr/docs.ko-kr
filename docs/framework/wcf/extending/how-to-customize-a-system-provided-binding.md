@@ -1,32 +1,18 @@
 ---
 title: '방법: 시스템 제공 바인딩 사용자 지정'
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: f8b97862-e8bb-470d-8b96-07733c21fe26
-caps.latest.revision: 10
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 1d70a4c4234047e7410ae4f631e48595a0859f37
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
-ms.translationtype: MT
+ms.openlocfilehash: 40efa49836561351dc14c2cb49d906a6d344a5bc
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-customize-a-system-provided-binding"></a>방법: 시스템 제공 바인딩 사용자 지정
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]에는 여러 시스템 제공 바인딩이 포함되어 있습니다. 이러한 바인딩을 사용하면 기본 바인딩 요소의 일부 속성을 구성할 수 있습니다. 이 항목에서는 바인딩 요소의 속성을 설정하여 사용자 지정 바인딩을 만드는 방법을 보여 줍니다.  
+Windows Communication Foundation (WCF)에 기본 바인딩 요소의 속성 중 일부에 속성을 구성할 수 있도록 여러 시스템 제공 바인딩이 포함 되어 있습니다. 이 항목에서는 바인딩 요소의 속성을 설정하여 사용자 지정 바인딩을 만드는 방법을 보여 줍니다.  
   
  직접 만들고 시스템 제공 바인딩을 사용 하지 않고 바인딩 요소를 구성 하는 방법에 대 한 자세한 내용은 참조 [사용자 지정 바인딩](../../../../docs/framework/wcf/extending/custom-bindings.md)합니다.  
   

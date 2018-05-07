@@ -1,44 +1,32 @@
 ---
 title: 메시지 보안을 사용하여 메시지에 보안 설정
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: a17ebe67-836b-4c52-9a81-2c3d58e225ee
-caps.latest.revision: 16
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload:
-- dotnet
-ms.openlocfilehash: 088b01151d0471527bbfc2ffa04b5b5064700081
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 1ebe2526e564ef24d20f1602fd5824b44e2e2bbd
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="securing-messages-using-message-security"></a>메시지 보안을 사용하여 메시지에 보안 설정
-이 절에서는 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]을 사용하는 경우의 <xref:System.ServiceModel.NetMsmqBinding> 메시지 보안에 대해 설명합니다  
+사용 하는 경우이 섹션에서는 WCF 메시지 보안 <xref:System.ServiceModel.NetMsmqBinding>합니다.  
   
 > [!NOTE]
 >  이 항목을 읽기 전에 것이 좋습니다 읽어 [보안 개념](../../../../docs/framework/wcf/feature-details/security-concepts.md)합니다.  
   
- 다음 그림에서는 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서 사용하는 대기 중인 통신의 개념적 모델을 제공합니다. 이 그림과 용어는 전송 보안 개념을  
+ 다음 그림은 WCF를 사용 하 여 대기 중인된 통신의 개념적 모델을 제공 합니다. 이 그림과 용어는 전송 보안 개념을  
   
  설명하는 데 사용됩니다.  
   
  ![응용 프로그램 다이어그램 큐에 대기](../../../../docs/framework/wcf/feature-details/media/distributed-queue-figure.jpg "분산-큐-그림")  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]를 사용하여 대기 중인 메시지를 보내는 경우 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 메시지는 MSMQ(Message Queuing) 메시지의 본문으로 첨부됩니다. 전송 보안은 MSMQ 메시지 전체를 보호하지만, 메시지(또는 SOAP) 보안은 MSMQ 메시지의 본문만 보호합니다.  
+ 대기 중인 WCF를 사용 하 여 메시지를 보내는, WCF 메시지는 MSMQ (메시지 큐) 메시지의 본문으로 첨부 됩니다. 전송 보안은 MSMQ 메시지 전체를 보호하지만, 메시지(또는 SOAP) 보안은 MSMQ 메시지의 본문만 보호합니다.  
   
- 클라이언트에서 대상 큐의 메시지를 보호하는 전송 보안과 달리, 메시지 보안의 핵심 개념은 클라이언트에서 받는 응용 프로그램(서비스)의 메시지를 보호하는 것입니다. 따라서 메시지 보안을 사용하여 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 메시지를 보호하는 경우에는 MSMQ가 활용되지 않습니다.  
+ 클라이언트에서 대상 큐의 메시지를 보호하는 전송 보안과 달리, 메시지 보안의 핵심 개념은 클라이언트에서 받는 응용 프로그램(서비스)의 메시지를 보호하는 것입니다. 따라서 메시지 보안을 사용 하 여 WCF 메시지를 보호할 때 MSMQ가 활용 되지 않습니다.  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 메시지 보안에서는 인증서 또는 Kerberos 프로토콜 등의 기존 보안 인프라와 통합되는 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 메시지에 보안 헤더를 추가합니다.  
+ WCF 메시지 보안 인증서 또는 Kerberos 프로토콜 등의 기존 보안 인프라와 통합 되는 WCF 메시지를 보안 헤더를 추가 합니다.  
   
 ## <a name="message-credential-type"></a>메시지 자격 증명 형식  
  메시지 보안을 사용하면 서비스 및 클라이언트에서 서로 자격 증명을 제출하여 인증할 수 있습니다. <xref:System.ServiceModel.NetMsmqBinding.Security%2A> 모드를 `Message` 또는 `Both`(즉, 전송 보안과 메시지 보안 모두 사용)로 설정하면 메시지 보안을 선택할 수 있습니다.  

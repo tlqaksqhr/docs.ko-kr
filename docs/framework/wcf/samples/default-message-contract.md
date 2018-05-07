@@ -1,28 +1,14 @@
 ---
-title: "기본 메시지 계약"
-ms.custom: 
+title: 기본 메시지 계약
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - Message Contract
 ms.assetid: 5a200b78-1a46-4104-b7fb-da6dbab33893
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: d1219f2c1a173f454827c7450e66d90a500d87e6
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 29bfb88d638f68b2f9a3ba983a5c38fe49edb9a4
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="default-message-contract"></a>기본 메시지 계약
 Default Message Contract 샘플에서는 사용자 지정 사용자 정의 메시지를 서비스 작업에 전달하고 전달받는 서비스를 보여 줍니다. 이 샘플에 따라는 [시작](../../../../docs/framework/wcf/samples/getting-started-sample.md) 계산기 인터페이스는 형식화 되지 않은 서비스를 구현 하는 합니다. 더하기, 빼기, 곱하기 및 나누기에서 사용에 대 한 개별 서비스 작업 대신는 [시작](../../../../docs/framework/wcf/samples/getting-started-sample.md),이 샘플에는 피연산자와 연산자를 모두 포함 하 고 반환 하는 사용자 지정 메시지 전달 산술 계산의 결과입니다.  
@@ -192,7 +178,7 @@ Press <ENTER> to terminate client.
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  이 디렉터리가 없으면 [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4(.NET Framework 4용 WCF(Windows Communication Foundation) 및 WF(Windows Workflow Foundation) 샘플)](http://go.microsoft.com/fwlink/?LinkId=150780) 로 이동하여 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 및 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플을 모두 다운로드하세요. 이 샘플은 다음 디렉터리에 있습니다.  
+>  이 디렉터리가로 이동 [Windows Communication Foundation (WCF) 및.NET Framework 4에 대 한 Windows WF (Workflow Foundation) 샘플](http://go.microsoft.com/fwlink/?LinkId=150780) 모든 Windows Communication Foundation (WCF)를 다운로드 하 고 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플. 이 샘플은 다음 디렉터리에 있습니다.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Contract\Message\Default`  
   

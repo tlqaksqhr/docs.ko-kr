@@ -1,31 +1,19 @@
 ---
 title: Client Validation
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: f0c1f805-1a81-4d0d-a112-bf5e2e87a631
-caps.latest.revision: "15"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: bd9c698962bbca04ac05473265d95fc00517b039
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
-ms.translationtype: MT
+ms.openlocfilehash: a5c1c5f907a797bff3dff490cbc953879ab69718
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="client-validation"></a>Client Validation
 서비스는 메타데이터를 자주 게시하여 클라이언트 프록시 형식의 자동 생성 및 구성을 활성화합니다. 서비스를 신뢰할 수 없으면 클라이언트 응용 프로그램에서 메타데이터가 보안, 트랜잭션, 서비스 계약 형식 등에 대한 클라이언트 응용 프로그램의 정책을 준수하는지 확인해야 합니다. 다음 샘플에서는 서비스 끝점을 안전하게 사용할 수 있도록 서비스 끝점의 유효성을 검사하는 클라이언트 끝점 동작 기록 방법을 보여 줍니다.  
   
  서비스는 네 개의 서비스 끝점을 노출합니다. 첫 번째 끝점은 WSDualHttpBinding을, 두 번째 끝점은 NTLM 인증을, 세 번째 끝점은 트랜잭션 흐름을, 네 번째 끝점은 인증서 기반 인증을 사용합니다.  
   
- 클라이언트는 <xref:System.ServiceModel.Description.MetadataResolver> 클래스를 사용하여 서비스에 대한 메타데이터를 검색합니다. 클라이언트에서는 이중 바인딩 방지, NTLM 인증 및 유효성 검사 동작을 사용하는 트랜잭션 흐름에 대한 정책을 적용합니다. 클라이언트 응용 프로그램은 서비스의 메타데이터에서 가져온 각 <xref:System.ServiceModel.Description.ServiceEndpoint> 인스턴스에 대해 `InternetClientValidatorBehavior` 끝점 동작의 인스턴스를 <xref:System.ServiceModel.Description.ServiceEndpoint>에 추가한 다음 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 클라이언트를 사용하여 끝점에 연결합니다. 동작의 `Validate` 메서드는 서비스의 작업이 호출되기 전에 실행되고 `InvalidOperationExceptions`를 throw하여 클라이언트의 정책을 적용합니다.  
+ 클라이언트는 <xref:System.ServiceModel.Description.MetadataResolver> 클래스를 사용하여 서비스에 대한 메타데이터를 검색합니다. 클라이언트에서는 이중 바인딩 방지, NTLM 인증 및 유효성 검사 동작을 사용하는 트랜잭션 흐름에 대한 정책을 적용합니다. 각 <xref:System.ServiceModel.Description.ServiceEndpoint> 의 인스턴스를 추가 하는 서비스의 메타 데이터를 클라이언트 응용 프로그램에서 가져온 인스턴스는 `InternetClientValidatorBehavior` 끝점 동작을는 <xref:System.ServiceModel.Description.ServiceEndpoint> 에 연결할 Windows Communication Foundation (WCF) 클라이언트를 사용 하기 전에 끝점입니다. 동작의 `Validate` 메서드는 서비스의 작업이 호출되기 전에 실행되고 `InvalidOperationExceptions`를 throw하여 클라이언트의 정책을 적용합니다.  
   
 ### <a name="to-build-the-sample"></a>이 샘플을 빌드하려면  
   

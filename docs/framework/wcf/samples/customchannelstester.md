@@ -1,24 +1,12 @@
 ---
 title: CustomChannelsTester
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: ee1fa307-98b1-4647-8860-2e9217ba6082
-caps.latest.revision: "12"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 92de7f168ce323a0d84975863564389ff389d680
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: eebe4f15095c7cefbd32971fd2f3ee308e9916b5
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="customchannelstester"></a>CustomChannelsTester
 `CustomChannelsTester`는 미리 정의된 서비스 계약 집합에 대해 사용자 지정 채널 구현을 테스트하는 데 사용할 수 있는 도구입니다. 서비스 계약 집합을 선택한 다음 XML 파일을 사용하여 이 도구에 전달할 수 있습니다. 그러면 이 도구는 메시지 교환 중에 사용자 지정 채널 구현을 연습하는 서비스와 클라이언트를 생성합니다.  
@@ -39,7 +27,7 @@ ms.lasthandoff: 12/22/2017
   
      `/binding` 옵션은 필수적 요소입니다.  
   
-     "바인딩"이 `/dll`에서 제공하는 시스템 제공 바인딩이 아닌 경우 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]은 필수적 요소입니다.  
+     `/dll` 가 "바인딩" Windows Communication Foundation (WCF)에서 제공 하는 시스템 제공 바인딩이 아닌 경우에 필요 합니다.  
   
      `/testspec`는 선택적 요소입니다.  
   

@@ -1,26 +1,12 @@
 ---
 title: SQL Server에서 동적 보안 SQL 작성
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-ado
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: df5512b0-c249-40d2-82f9-f9a2ce6665bc
-caps.latest.revision: 9
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload:
-- dotnet
-ms.openlocfilehash: 5fdf41353e1772eab46e2e6b8f16ad7bfdf7a72f
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 0dc372b4e5554623d51a4add9a43f33d4a320f18
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="writing-secure-dynamic-sql-in-sql-server"></a>SQL Server에서 동적 보안 SQL 작성
 SQL 삽입은 악의적 사용자가 유효한 입력 대신 Transact-SQL 문을 입력하는 데 사용하는 프로세스입니다. 이러한 공격으로 인해 입력이 유효성 검사를 거치지 않고 서버로 직접 전달되고 응용 프로그램이 삽입된 코드를 실행하면 데이터가 손상되거나 파괴될 수 있습니다.  

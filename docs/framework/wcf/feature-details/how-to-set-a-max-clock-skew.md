@@ -1,13 +1,6 @@
 ---
-title: "방법: 최대 클럭 오차 설정"
-ms.custom: 
+title: '방법: 최대 클럭 오차 설정'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -15,16 +8,11 @@ helpviewer_keywords:
 - MaxClockSkew property
 - WCF, custom bindings
 ms.assetid: 491d1705-eb29-43c2-a44c-c0cf996f74eb
-caps.latest.revision: "13"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: e186043a6cb32eaf5ed6bac6be3eaf50cb1ea32b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: dca675b8d5774948bffd936d146cb0e1dd9aa62d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-set-a-max-clock-skew"></a>방법: 최대 클럭 오차 설정
 두 개의 컴퓨터에서 클록 설정이 서로 다른 경우 시간 중심 기능이 비활성화될 수 있습니다. 이 가능성을 줄이기 위해 `MaxClockSkew` 설정을 <xref:System.TimeSpan>으로 설정할 수 있습니다. 이 속성은 다음 두 개의 클래스에서 사용할 수 있습니다.  

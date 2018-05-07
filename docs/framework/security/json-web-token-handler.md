@@ -1,24 +1,12 @@
 ---
-title: "JSON 웹 토큰 처리기"
-ms.custom: 
+title: JSON 웹 토큰 처리기
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 9968f12e-e05d-4e6a-9b65-6896c0e31ab1
-caps.latest.revision: "5"
-author: wadepickett
-ms.author: wpickett
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 8a822e87f03c4fa7e1ce7449f09efd178b87cc99
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 27c01a3d0ce0f2891b00ad28526d4753b9be4ce0
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="json-web-token-handler"></a>JSON 웹 토큰 처리기
 Windows Identity Foundation의 JSON 웹 토큰 처리기 확장을 사용하면 응용 프로그램에서 JWT(JSON 웹 토큰)를 만들고 유효성을 검사할 수 있습니다. JWT 토큰 처리기는 다른 내장 보안 토큰 처리기와 같이 WIF 파이프라인에서 실행하도록 구성할 수 있습니다. 그러나 독립적으로 사용하여 경량형 응용 프로그램에서 토큰의 유효성 검사를 수행할 수도 있습니다. JWT 토큰 처리기는 Microsoft Azure Active Directory 인증과 같이 OAuth 2.0 전달자 토큰 체계를 사용하는 경우 특히 유용합니다.  

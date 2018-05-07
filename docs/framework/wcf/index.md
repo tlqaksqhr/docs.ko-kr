@@ -1,25 +1,15 @@
 ---
 title: Windows Communication Foundation
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.technology:
-- dotnet-clr
-ms.topic: article
 helpviewer_keywords:
 - Windows Communication Foundation [WCF]
 - WCF [WCF]
 ms.assetid: 149348a6-bf82-4ccc-9604-fa7cc88c0749
-caps.latest.revision: 10
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 0e7ef1702718d24580694a3d0d4c72e41dc314b4
-ms.sourcegitcommit: 08684dd61444c2f072b89b926370f750e456fca1
-ms.translationtype: MT
+ms.openlocfilehash: f3b8abb2a8e0079dc18624c5ac0408a2738f06b6
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="developing-service-oriented-applications-with-wcf"></a>WCF를 사용하여 서비스 기반 응용 프로그램 개발
 설명서의 이 섹션에서는 서비스 지향 응용 프로그램 빌드를 위한 통합 프로그래밍 모델인 WCF(Windows Communication Foundation)에 대한 정보를 제공합니다. 이를 통해 개발자는 플랫폼 간에 통합되고 기존 투자와 상호 운용할 수 있는 안정적인 보안 트랜잭션된 솔루션을 빌드할 수 있습니다.
@@ -77,7 +67,7 @@ ms.lasthandoff: 02/14/2018
  Windows Communication Foundation의 다양한 측면에 대한 지침을 제공하는 샘플  
   
  [Windows Communication Foundation 용어](../../../docs/framework/wcf/glossary.md)  
- 용어 목록이에 표시 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]  
+ [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]과 관련된 용어의 목록을 보여 줍니다.  
   
  [일반 참조](../../../docs/framework/wcf/general-reference.md)  
  이 단원에서는 Windows Communication Foundation 클라이언트 및 서비스 구성에 사용되는 요소에 대해 설명합니다.  

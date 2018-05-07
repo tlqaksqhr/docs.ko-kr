@@ -1,32 +1,20 @@
 ---
 title: 익명 클라이언트를 사용하는 메시지 보안
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: cad53e1a-b7c9-4064-bc87-508c3d1dce49
-caps.latest.revision: 15
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload:
-- dotnet
-ms.openlocfilehash: 25c184d32c6cedf893c79f15d77ba93ec5e9461e
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: b8cab1762a8c8c672d557c7bcccc2f339cbaefe9
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="message-security-with-an-anonymous-client"></a>익명 클라이언트를 사용하는 메시지 보안
-다음 시나리오에서는 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 메시지 보안에 의해 보호되는 클라이언트와 서비스를 보여 줍니다. 이 디자인은 전송 보안 대신 메시지 보안을 사용하여 나중에 보다 다양한 클레임 기반 모델을 지원할 수 있도록 하는 것을 목적으로 합니다. 권한 부여에 대 한 다양 한 클레임을 사용 하는 방법에 대 한 자세한 내용은 참조 [관리 클레임 및 권한 부여 Id 모델](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md)합니다.  
+다음 시나리오에서는 클라이언트와 서비스는 Windows Communication Foundation (WCF) 메시지 보안 적용을 보여 줍니다. 이 디자인은 전송 보안 대신 메시지 보안을 사용하여 나중에 보다 다양한 클레임 기반 모델을 지원할 수 있도록 하는 것을 목적으로 합니다. 권한 부여에 대 한 다양 한 클레임을 사용 하는 방법에 대 한 자세한 내용은 참조 [관리 클레임 및 권한 부여 Id 모델](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md)합니다.  
   
  샘플 응용 프로그램에 대 한 참조 [Message Security Anonymous](../../../../docs/framework/wcf/samples/message-security-anonymous.md)합니다.  
   
@@ -35,7 +23,7 @@ ms.lasthandoff: 04/30/2018
 |특성|설명|  
 |--------------------|-----------------|  
 |보안 모드|메시지|  
-|상호 운용성|[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에만 해당|  
+|상호 운용성|WCF만|  
 |인증(서버)|초기 협상에 서버 인증이 필요하지만 클라이언트 인증은 필요하지 않습니다.|  
 |인증(클라이언트)|없음|  
 |무결성|예, 공유 보안 컨텍스트 사용|  

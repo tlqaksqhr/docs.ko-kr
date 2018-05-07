@@ -1,28 +1,16 @@
 ---
-title: "라우팅"
-ms.custom: 
+title: 라우팅
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - routing [WCF]
 - WCF [WCF], routing
 - Windows communication Foundation [WCF], routing
 ms.assetid: bd56516c-420d-4c4e-97f9-f72d28d149a9
-caps.latest.revision: "7"
-author: wadepickett
-ms.author: wpickett
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 638c768e4abd199aa52bc85582305ffaf405fe87
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 108e65f733100cd07e23e6436285463e9138dbcf
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="routing"></a>라우팅
 이 단원의 항목에서는 라우팅 서비스에 대해 설명합니다. 라우팅 서비스는 내용 기반 라우팅을 구성하고, 프로토콜 브리징을 설정하고, 통신 오류를 처리하고, 런타임에 라우팅 논리를 동적으로 업데이트하는 데 사용할 수 있는 구성 가능한 제네릭 SOAP 매개자입니다.  

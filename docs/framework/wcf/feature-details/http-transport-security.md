@@ -1,29 +1,17 @@
 ---
 title: HTTP 전송 보안
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: d3439262-c58e-4d30-9f2b-a160170582bb
-caps.latest.revision: 14
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload:
-- dotnet
-ms.openlocfilehash: 2787c38603fd0f88878596a809d7e3c5cfdfb350
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: cc284f82f974d9b34ff1cf6732d2ee7b95528c44
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="http-transport-security"></a>HTTP 전송 보안
-HTTP를 전송으로 사용하는 경우 SSL(Secure Sockets Layer) 구현에서 보안을 제공합니다. SSL은 서비스를 클라이언트에 인증한 다음 채널에 기밀성(암호화)을 제공하기 위해 인터넷에서 널리 사용됩니다. 이 항목에서는 SSL 작동 방식 및 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]에서 SSL을 구현하는 방법에 대해 설명합니다.  
+HTTP를 전송으로 사용하는 경우 SSL(Secure Sockets Layer) 구현에서 보안을 제공합니다. SSL은 서비스를 클라이언트에 인증한 다음 채널에 기밀성(암호화)을 제공하기 위해 인터넷에서 널리 사용됩니다. 이 항목에서는 SSL 작동 방식 및 Windows Communication Foundation (WCF)에서 구현 하는 방법을 설명 합니다.  
   
 ## <a name="basic-ssl"></a>기본 SSL  
  SSL 작동 방식은 일반적인 시나리오, 이 경우 은행 웹 사이트를 통해 가장 효과적으로 설명됩니다. 이 사이트에서는 고객이 사용자 이름과 암호를 사용하여 로그온할 수 있습니다. 인증된 후 사용자는 계좌 잔고 보기, 청구서 지급, 다른 계좌로 자금 이체 등의 트랜잭션을 수행할 수 있습니다.  
@@ -42,11 +30,11 @@ HTTP를 전송으로 사용하는 경우 SSL(Secure Sockets Layer) 구현에서 
  모든 인증서에 두 개의 키, 개인 키와 공개 키 및 두 라고는 *교환 키 쌍*합니다. 간단히 말해서 개인 키는 인증서의 소유자에게만 알려지고 공개 키는 인증서에서 읽을 수 있습니다. 한 키를 사용하여 다이제스트, 해시 또는 다른 키를 암호화하거나 해독할 수 있지만 반대 작업으로만 사용할 수 있습니다. 예를 들어 클라이언트가 공개 키로 암호화되는 경우에만 사이트에서 개인 키를 사용하여 메시지를 해독할 수 있습니다. 마찬가지로 사이트가 개인 키로 암호화되는 경우 클라이언트는 공개 키를 사용하여 해독할 수 있습니다. 이 경우 개인 키로 암호화된 메시지만 공개 키로 해독할 수 있으므로 개인 키의 소유자하고만 메시지가 교환된다는 것을 클라이언트에 보증할 수 있습니다. 사이트는 공개 키를 사용하여 암호화한 클라이언트와 메시지를 교환합니다. 그러나 이 교환은 초기 핸드셰이크에 대해서만 보안이 유지되며, 이 때문에 실제 대칭 키를 만들기 위해 훨씬 더 많은 작업이 수행됩니다. 그렇지만 모든 통신을 수행하려면 서비스에 올바른 SSL 인증서가 있어야 합니다.  
   
 ## <a name="implementing-ssl-with-wcf"></a>WCF를 사용하여 SSL 구현  
- HTTP 전송 보안(또는 SSL)은 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에 외부적으로 제공됩니다. 다음 두 가지 방법 중 하나로 SSL을 구현할 수 있습니다. 결정 요인은 응용 프로그램 호스팅 방법입니다.  
+ HTTP 전송 보안 (또는 SSL) WCF 외부에서 제공 됩니다. 다음 두 가지 방법 중 하나로 SSL을 구현할 수 있습니다. 결정 요인은 응용 프로그램 호스팅 방법입니다.  
   
--   IIS(인터넷 정보 서비스)를 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 호스트로 사용하는 경우 IIS 인프라를 사용하여 SSL 서비스를 설정합니다.  
+-   인터넷 정보 서비스 (IIS) WCF 호스트를 사용 하는 IIS 인프라를 사용 하 여 SSL 서비스를 설정 합니다.  
   
--   자체 호스트된 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 응용 프로그램을 만드는 경우 HttpCfg.exe 도구를 사용하여 SSL 인증서를 주소에 바인딩할 수 있습니다.  
+-   자체 호스팅된 WCF 응용 프로그램을 만드는 경우 HttpCfg.exe 도구를 사용 하 여 주소에 SSL 인증서를 바인딩할 수 있습니다.  
   
 ### <a name="using-iis-for-transport-security"></a>전송 보안에 IIS 사용  
   
@@ -61,7 +49,7 @@ HTTP를 전송으로 사용하는 경우 SSL(Secure Sockets Layer) 구현에서 
  사용할 인증서를 구성 하려면 [!INCLUDE[iis601](../../../../includes/iis601-md.md)], 참조 [Certificates_IIS_SP1_Ops](http://go.microsoft.com/fwlink/?LinkId=88602)합니다.  
   
 ### <a name="using-httpcfg-for-ssl"></a>SSL에 HttpCfg 사용  
- 자체 호스팅 만들면 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 응용 프로그램에서 사용 가능한 HttpCfg.exe 도구를 다운로드는 [Windows XP 서비스 팩 2 지원 도구 사이트](http://go.microsoft.com/fwlink/?LinkId=29002)합니다.  
+ 자체 호스팅된 WCF 응용 프로그램을 만드는 경우 HttpCfg.exe 도구에 사용할 수 있는 다운로드는 [Windows XP 서비스 팩 2 지원 도구 사이트](http://go.microsoft.com/fwlink/?LinkId=29002)합니다.  
   
  HttpCfg.exe 도구를 사용 하 여 X.509 인증서로 포트를 설정 하는 방법에 대 한 자세한 내용은 참조 [하는 방법: SSL 인증서로 포트 구성](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md)합니다.  
   

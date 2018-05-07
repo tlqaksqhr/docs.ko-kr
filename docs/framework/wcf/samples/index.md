@@ -1,29 +1,15 @@
 ---
 title: WCF(Windows Communication Foundation) 샘플
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 89d4efce-7832-4dd5-82a8-0e574b3302f9
-caps.latest.revision: 17
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: b27547189692ac6f83b1c41d5f88fac35c7925c0
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
-ms.translationtype: MT
+ms.openlocfilehash: 519f8e844fa26db32d91705af3db2eda81e8b993
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="windows-communication-foundation-wcf-samples"></a>WCF(Windows Communication Foundation) 샘플
-이 샘플에서는 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]의 다양한 측면에 대한 지침을 제공합니다.  
+이러한 샘플 Windows Communication Foundation (WCF)의 다양 한 측면에 대 한 지침을 제공 합니다.  
   
 -   C# 버전의 샘플로 이동 [Windows Communication Foundation (WCF) 및.NET Framework 4에 대 한 Windows WF (Workflow Foundation) 샘플](http://go.microsoft.com/fwlink/?LinkId=150780)합니다.  
   

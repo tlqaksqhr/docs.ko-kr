@@ -1,28 +1,14 @@
 ---
 title: 사용자 정의 바인딩 만들기
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - user-defined bindings [WCF]
 ms.assetid: c4960675-d701-4bc9-b400-36a752fdd08b
-caps.latest.revision: 19
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 05476adccca0deb5fd82b62f99f06939664cc876
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
-ms.translationtype: MT
+ms.openlocfilehash: 82fe3baada73b89291311a891069c6ee3f19cf20
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="creating-user-defined-bindings"></a>사용자 정의 바인딩 만들기
 시스템에서 제공하지 않는 바인딩은 다음과 같은 여러 가지 방법으로 만들 수 있습니다.  
@@ -38,7 +24,7 @@ ms.lasthandoff: 04/30/2018
   
  프로토콜 바인딩 요소, 인코딩 바인딩 요소 및 전송 바인딩 요소의 세 가지 주요 바인딩 요소 형식이 있습니다.  
   
- 프로토콜 바인딩 요소 – 이 요소는 메시지에 대해 수행하는 높은 수준의 처리 단계를 나타냅니다. 이러한 바인딩 요소로 만들어진 채널 및 수신기는 메시지 내용을 추가, 제거 또는 수정할 수 있습니다. 제공된 바인딩에는 임의의 개수의 프로토콜 바인딩 요소가 포함될 수 있으며 각 요소는 <xref:System.ServiceModel.Channels.BindingElement>에서 상속됩니다. [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]에는 <xref:System.ServiceModel.Channels.ReliableSessionBindingElement> 및 <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement>를 비롯한 여러 프로토콜 바인딩 요소가 있습니다.  
+ 프로토콜 바인딩 요소 – 이 요소는 메시지에 대해 수행하는 높은 수준의 처리 단계를 나타냅니다. 이러한 바인딩 요소로 만들어진 채널 및 수신기는 메시지 내용을 추가, 제거 또는 수정할 수 있습니다. 제공된 바인딩에는 임의의 개수의 프로토콜 바인딩 요소가 포함될 수 있으며 각 요소는 <xref:System.ServiceModel.Channels.BindingElement>에서 상속됩니다. Windows Communication Foundation (WCF) 등의 여러 프로토콜 바인딩 요소가 포함 된 <xref:System.ServiceModel.Channels.ReliableSessionBindingElement> 및 <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement>합니다.  
   
  인코딩 바인딩 요소 – 이 요소는 네트워크에서 전송 대기 중인 메시지와 인코딩 간의 변환을 나타냅니다. 일반적인 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 바인딩에는 하나의 인코딩 바인딩 요소만 포함됩니다. 인코딩 바인딩 요소의 예로는 <xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement>, <xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement> 및 <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>가 있습니다. 바인딩에 대해 인코딩 바인딩 요소를 지정하지 않으면 기본 인코딩이 사용됩니다. 기본값은 HTTP 전송이면 텍스트이고, 그렇지 않으면 이진입니다.  
   

@@ -1,27 +1,15 @@
 ---
-title: "Windows 폼 클라이언트 내 데이터 바인딩"
-ms.custom: 
+title: Windows 폼 클라이언트 내 데이터 바인딩
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: a2a30b37-d6e2-4552-820e-e60b2bbe8829
-caps.latest.revision: "9"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: b78cfbd63687fc7288c945ebcbec790150efed61
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: a84aeedba89cc7a5c267a0fd1f6c4f604fe80d43
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="data-binding-in-a-windows-forms-client"></a>Windows 폼 클라이언트 내 데이터 바인딩
-이 샘플에서는 Windows Forms 응용 프로그램에서 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 서비스에 의해 반환되는 데이터에 바인딩하는 방법을 보여 줍니다.  
+이 샘플에는 Windows Communication Foundation (WCF)에서 서비스는 Windows Forms 응용 프로그램에 의해 반환 된 데이터에 바인딩하는 방법을 보여 줍니다.  
   
 > [!NOTE]
 >  이 샘플의 설치 절차 및 빌드 지침은 이 문서의 끝부분에 나와 있습니다.  
@@ -45,7 +33,7 @@ ms.lasthandoff: 12/22/2017
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  이 디렉터리가 없으면 [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4(.NET Framework 4용 WCF(Windows Communication Foundation) 및 WF(Windows Workflow Foundation) 샘플)](http://go.microsoft.com/fwlink/?LinkId=150780) 로 이동하여 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 및 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플을 모두 다운로드하세요. 이 샘플은 다음 디렉터리에 있습니다.  
+>  이 디렉터리가로 이동 [Windows Communication Foundation (WCF) 및.NET Framework 4에 대 한 Windows WF (Workflow Foundation) 샘플](http://go.microsoft.com/fwlink/?LinkId=150780) 모든 Windows Communication Foundation (WCF)를 다운로드 하 고 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플. 이 샘플은 다음 디렉터리에 있습니다.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Scenario\DataBinding\WindowsForms`  
   

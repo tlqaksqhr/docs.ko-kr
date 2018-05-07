@@ -1,26 +1,14 @@
 ---
 title: Windows 스토어 앱을 .NET 네이티브로 마이그레이션
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 4153aa18-6f56-4a0a-865b-d3da743a1d05
-caps.latest.revision: ''
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: ce23d66f79f94af74250cff137499f6c8b1582ac
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: a316cd8ed82f9833b23fe313b8f4c4903bd0a433
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="migrating-your-windows-store-app-to-net-native"></a>Windows 스토어 앱을 .NET 네이티브로 마이그레이션
 [!INCLUDE[net_native](../../../includes/net-native-md.md)] 는 Windows 스토어 또는 개발자 컴퓨터에서 앱을 정적으로 컴파일하는 기능을 제공합니다. 이 기능은 장치의 [네이티브 이미지 생성기(Ngen.exe)](../../../docs/framework/tools/ngen-exe-native-image-generator.md) 또는 JIT(Just-In-Time) 컴파일러가 Windows 스토어 앱에 대해 수행하는 동적 컴파일과는 다릅니다. 이처럼 컴파일 방식이 다르기는 하지만 [!INCLUDE[net_native](../../../includes/net-native-md.md)] 는 [Windows 스토어 앱용 .NET](http://msdn.microsoft.com/library/windows/apps/br230302.aspx)과의 호환성을 유지하려고 합니다. 대부분의 경우 Windows 스토어 앱용 .NET에서 작동하는 기능은 [!INCLUDE[net_native](../../../includes/net-native-md.md)]에서도 작동합니다.  그러나 동작이 변경되는 경우도 있습니다. 이 문서에서는 다음과 같은 영역에서 Windows 스토어 앱용 표준 .NET과 [!INCLUDE[net_native](../../../includes/net-native-md.md)] 간의 이러한 차이점에 대해 설명합니다.  

@@ -1,30 +1,18 @@
 ---
-title: "방법: 포트 공유를 사용하도록 Windows Communication Foundation 서비스 구성"
-ms.custom: 
+title: '방법: 포트 공유를 사용하도록 Windows Communication Foundation 서비스 구성'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 6400bc71-a858-4ac2-8d5a-caa72d3b5482
-caps.latest.revision: "11"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: c0086e145ca2aab325764467742a4ff2e6e3c0b5
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 0a3aca2bac546c9142137afc025133bc1154ff90
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-configure-a-windows-communication-foundation-service-to-use-port-sharing"></a>방법: 포트 공유를 사용하도록 Windows Communication Foundation 서비스 구성
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 응용 프로그램에서 net.tcp:// 포트 공유를 사용하는 가장 쉬운 방법은 <xref:System.ServiceModel.NetTcpBinding>을 사용하여 서비스를 노출하는 것입니다.  
+Windows Communication Foundation (WCF) 응용 프로그램에서 공유 net.tcp:// 포트를 사용 하는 가장 쉬운 방법은 사용 하 여 서비스를 노출 하는 <xref:System.ServiceModel.NetTcpBinding>합니다.  
   
  이 바인딩에서는 이 바인딩을 사용하여 구성하는 서비스에 대해 net.tcp:// 포트 공유를 사용할지 여부를 제어하는 <xref:System.ServiceModel.NetTcpBinding.PortSharingEnabled%2A> 속성을 제공합니다.  
   

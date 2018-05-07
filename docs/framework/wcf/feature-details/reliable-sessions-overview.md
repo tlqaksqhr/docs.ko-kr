@@ -1,36 +1,24 @@
 ---
-title: "신뢰할 수 있는 세션 개요"
-ms.custom: 
+title: 신뢰할 수 있는 세션 개요
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: a7fc4146-ee2c-444c-82d4-ef6faffccc2d
-caps.latest.revision: "30"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 1d2749188214f3f68ee3ed5df87fc0aa7cac604d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 1c5344c2804cf4c17fdc46a7fea5a4a360122b6e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="reliable-sessions-overview"></a>신뢰할 수 있는 세션 개요
 
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] SOAP 신뢰할 수 있는 메시징은 SOAP 끝점 사이에서 종단 간 메시지 전송 안전성을 제공합니다. 전송 오류 및 SOAP 메시지 수준 오류를 극복하여 신뢰할 수 없는 네트워크에서 이를 구현합니다. 특히 SOAP 또는 전송 매개자를 통해 보낸 메시지에 대해 세션 기반, 단일 및 필요에 따라 순서가 지정된 배달을 제공합니다. 세션 기반 배달은 선택적 메시지 순서 지정 된 세션에서 메시지를 그룹화를 제공 합니다.
+Windows Communication Foundation (WCF) SOAP 신뢰할 수 있는 메시징은 SOAP 끝점 사이 종단 간 메시지 전송 안전성을 제공합니다. 전송 오류 및 SOAP 메시지 수준 오류를 극복하여 신뢰할 수 없는 네트워크에서 이를 구현합니다. 특히 SOAP 또는 전송 매개자를 통해 보낸 메시지에 대해 세션 기반, 단일 및 필요에 따라 순서가 지정된 배달을 제공합니다. 세션 기반 배달은 선택적 메시지 순서 지정 된 세션에서 메시지를 그룹화를 제공 합니다.
 
 이 항목에서는 신뢰할 수 있는 세션을 어떻게 설명 및 사용 방법과 시기에 보안을 설정 합니다.
 
 ## <a name="wcf-reliable-sessions"></a>WCF 신뢰할 수 있는 세션
 
-[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 신뢰할 수 있는 세션은 WS-ReliableMessaging 프로토콜에 정의된 대로 SOAP 신뢰할 수 있는 메시징의 구현입니다.
+WCF 신뢰할 수 있는 세션은 Ws-reliablemessaging 프로토콜에 정의 된 대로 메시징 신뢰할 수 있는 soap는 구현입니다.
 
-[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] SOAP 신뢰할 수 있는 메시징은 메시징 끝점을 구분하는 매개자의 수 또는 형식과 관계없이 두 개의 끝점 사이에 종단 간 신뢰할 수 있는 세션을 제공합니다. 여기에 포함 됩니다 (예: HTTP 프록시) SOAP을 사용 하지 않는 전송 매개자 또는 끝점 간의 메시지 흐름에 필요한 SOAP (예를 들어 SOAP 기반 라우터나 브리지)를 사용 하는 매개자입니다. 신뢰할 수 있는 세션 채널은 지원 *대화형* 통신 이러한 채널에 의해 연결 된 서비스가 동시에 실행 하 고 짧은 대기 시간 조건, 즉,에서 메시지를 교환 하 고 처리할 내에서 상대적으로 짧은 있도록 시간 간격입니다. 이 결합 서로 격리 안 함 이므로 이러한 구성 요소가 함께 진행 되거나 함께 실패를 의미 합니다.
+WCF SOAP 신뢰할 수 있는 메시징은 메시징 끝점을 분리 하는 매개 자의 형식이 나 개수에 관계 없이 두 개의 끝점 사이 종단 간 신뢰할 수 있는 세션을 제공 합니다. 여기에 포함 됩니다 (예: HTTP 프록시) SOAP을 사용 하지 않는 전송 매개자 또는 끝점 간의 메시지 흐름에 필요한 SOAP (예를 들어 SOAP 기반 라우터나 브리지)를 사용 하는 매개자입니다. 신뢰할 수 있는 세션 채널은 지원 *대화형* 통신 이러한 채널에 의해 연결 된 서비스가 동시에 실행 하 고 짧은 대기 시간 조건, 즉,에서 메시지를 교환 하 고 처리할 내에서 상대적으로 짧은 있도록 시간 간격입니다. 이 결합 서로 격리 안 함 이므로 이러한 구성 요소가 함께 진행 되거나 함께 실패를 의미 합니다.
 
 신뢰할 수 있는 세션에서는 다음 두 가지 유형의 오류를 마스킹합니다.
 
@@ -52,7 +40,7 @@ ms.lasthandoff: 12/22/2017
 
 ## <a name="reliable-sessions-and-bindings"></a>신뢰할 수 있는 세션 및 바인딩
 
-앞서 언급 했 듯이 신뢰할 수 있는 세션은 전송 중립적입니다. 또한, 요청-회신 또는 이중과 같은 여러 메시지 교환 패턴을 통해 신뢰할 수 있는 세션을 설정할 수 있습니다. A [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 신뢰할 수 있는 세션은 바인딩 집합의 속성으로 노출 됩니다.
+앞서 언급 했 듯이 신뢰할 수 있는 세션은 전송 중립적입니다. 또한, 요청-회신 또는 이중과 같은 여러 메시지 교환 패턴을 통해 신뢰할 수 있는 세션을 설정할 수 있습니다. WCF 신뢰할 수 있는 세션 바인딩 집합의 속성으로 노출 됩니다.
 
 사용 하는 끝점에서 신뢰할 수 있는 세션을 사용 합니다.
 
@@ -74,23 +62,23 @@ ms.lasthandoff: 12/22/2017
 
 다른 기본 채널 형식에 신뢰할 수 있는 세션 누적 할 수 있습니다 하 고 결과적으로 신뢰할 수 있는 세션 채널 모양이 달라 집니다. 클라이언트와 서버 모두에서 지원 되는 신뢰할 수 있는 세션 채널의 유형을 사용 하는 기본 채널 형식에 따라 다릅니다. 다음 표에서는 기본 채널 형식의 기능으로서 클라이언트에서 지원되는 세션 채널 형식에 대해 설명합니다.
 
-| 지원 되는 신뢰할 수 있는 세션 채널 형식 &#8224; | `IRequestChannel` | `IRequestSessionChannel` | `IDuplexChannel` | `IDuplexSessionChannel` |
+| 지원 되는 신뢰할 수 있는 세션 채널 형식입니다.&#8224; | `IRequestChannel` | `IRequestSessionChannel` | `IDuplexChannel` | `IDuplexSessionChannel` |
 | ----------------------------------------------- | :---------------: | :----------------------: | :--------------: | :---------------------: |
 | `IOutputSessionChannel`                         | 예               | 예                      | 예              | 예                     |
 | `IRequestSessionChannel`                        | 예               | 예                      | 아니요               | 아니요                      |
 | `IDuplexSessionChannel`                         | 아니요                | 아니요                       | 예              | 예                     |
 
-&#8224; 지원 되는 채널 형식은 원본에 대해 사용할 수 있는 값 `TChannel` 매개 변수 값으로 전달 되는 <xref:System.ServiceModel.Channels.ReliableSessionBindingElement.BuildChannelFactory%60%601%28System.ServiceModel.Channels.BindingContext%29> 메서드.
+&#8224;지원 되는 채널 형식은 원본에 대해 사용할 수 있는 값 `TChannel` 매개 변수 값으로 전달 되는 <xref:System.ServiceModel.Channels.ReliableSessionBindingElement.BuildChannelFactory%60%601%28System.ServiceModel.Channels.BindingContext%29> 메서드.
 
 다음 표에서는 기본 채널 형식의 기능으로서 서버에서 지원되는 세션 채널 형식에 대해 설명합니다.
 
-| 지원 되는 신뢰할 수 있는 세션 채널 형식 &#8225; | `IReplyChannel` | `IReplySessionChannel` | `IDuplexChannel` | `IDuplexSessionChannel` |
+| 지원 되는 신뢰할 수 있는 세션 채널 형식입니다.&#8225; | `IReplyChannel` | `IReplySessionChannel` | `IDuplexChannel` | `IDuplexSessionChannel` |
 | ----------------------------------------------- | :-------------: | :--------------------: | :--------------: | :---------------------: |
 | `IInputSessionChannel`                          | 예             | 예                    | 예              | 예                     |
 | `IReplySessionChannel`                          | 예             | 예                    | 아니요               | 아니요                      |
 | `IDuplexSessionChannel`                         | 아니요              | 아니요                     | 예              | 예                     |
 
-&#8225; 지원 되는 채널 형식은 원본에 대해 사용할 수 있는 값 `TChannel` 매개 변수 값으로 전달 되는 <xref:System.ServiceModel.Channels.ReliableSessionBindingElement.BuildChannelListener%60%601%28System.ServiceModel.Channels.BindingContext%29> 메서드.
+&#8225;지원 되는 채널 형식은 원본에 대해 사용할 수 있는 값 `TChannel` 매개 변수 값으로 전달 되는 <xref:System.ServiceModel.Channels.ReliableSessionBindingElement.BuildChannelListener%60%601%28System.ServiceModel.Channels.BindingContext%29> 메서드.
 
 ## <a name="reliable-sessions-and-security"></a>신뢰할 수 있는 세션 및 보안
 
@@ -102,7 +90,7 @@ HTTPS를 사용하는 경우에만 예외입니다. (SECURE Sockets Layer) 세�
 
 ## <a name="using-reliable-sessions"></a>신뢰할 수 있는 세션을 사용 하 여
 
-[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 신뢰할 수 있는 세션을 사용하려면 신뢰할 수 있는 세션을 지원하는 바인딩으로 끝점을 만듭니다. 시스템 제공 바인딩 중 하나를 사용 하는 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 신뢰할 수 있는 세션이 활성화 된 상태를 제공 하거나이 작업을 수행 하는 사용자 고유의 사용자 지정 바인딩을 만듭니다.
+WCF 신뢰할 수 있는 세션을 사용 하려면 신뢰할 수 있는 세션을 지 원하는 바인딩으로 끝점을 만듭니다. WCF 신뢰할 수 있는 세션을 제공 하는 시스템 제공 바인딩 중 하나 사용 하 여 사용할 수 없거나이 작업을 수행 하는 사용자 고유의 사용자 지정 바인딩을 만듭니다.
 
 기본적으로 신뢰할 수 있는 세션을 지원하고 사용하도록 설정하는 시스템 정의 바인딩은 다음과 같습니다.
 
@@ -118,11 +106,11 @@ HTTPS를 사용하는 경우에만 예외입니다. (SECURE Sockets Layer) 세�
 
 사용자 지정 바인딩을 만드는 방법의 예제를 보려면 [하는 방법: HTTPS로 신뢰할 수 있는 사용자 지정 세션 바인딩 만들기](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-reliable-session-binding-with-https.md)합니다.
 
-설명은 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 신뢰할 수 있는 세션을 지 원하는 바인딩을 참조 [시스템 제공 바인딩](../../../../docs/framework/wcf/system-provided-bindings.md)합니다.
+신뢰할 수 있는 세션을 지 원하는 WCF 바인딩에의 논의 알려면 [시스템 제공 바인딩](../../../../docs/framework/wcf/system-provided-bindings.md)합니다.
 
 ## <a name="when-to-use-reliable-sessions"></a>신뢰할 수 있는 세션을 사용 하는 경우
 
-응용 프로그램에서 신뢰할 수 있는 세션을 사용 하는 경우를 이해 하는 것이 유용 합니다. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서는 동시에 활성화되어 작동하는 끝점 간에 신뢰할 수 있는 세션을 지원합니다. 응용 프로그램 끝점 중 하나에 필요한 시간 동안 사용할 수 없게 다음 큐를 사용 하 여 안정성을 유지 합니다.
+응용 프로그램에서 신뢰할 수 있는 세션을 사용 하는 경우를 이해 하는 것이 유용 합니다. WCF 활성화 되어 작동 동시에 끝점 간에 신뢰할 수 있는 세션을 지원 합니다. 응용 프로그램 끝점 중 하나에 필요한 시간 동안 사용할 수 없게 다음 큐를 사용 하 여 안정성을 유지 합니다.
 
 이 시나리오에서 TCP를 통해 연결 된 두 개의 끝점을 필요한 경우 TCP 신뢰할 수 있는 메시지 교환을 제공 하기에 충분할 수 있습니다. TCP를 사용 하면 신뢰할 수 있는 세션을 사용할 필요가 없습니다 되지만 패킷이 순서와 한 번만 도착 합니다.
 
@@ -136,7 +124,7 @@ HTTPS를 사용하는 경우에만 예외입니다. (SECURE Sockets Layer) 세�
 
 - HTTP 통한 세션
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참고자료
 
 [바인딩을 사용 하 여 서비스 및 클라이언트 구성](../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)   
 [WS 신뢰할 수 있는 세션](../../../../docs/framework/wcf/samples/ws-reliable-session.md)

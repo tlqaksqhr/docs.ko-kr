@@ -1,27 +1,15 @@
 ---
-title: "방법: 단방향 및 요청-회신 계약을 사용하여 WCF 서비스 액세스"
-ms.custom: 
+title: '방법: 단방향 및 요청-회신 계약을 사용하여 WCF 서비스 액세스'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 7e10d3a5-fcf4-4a4b-a8d6-92ee2c988b3b
-caps.latest.revision: "8"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 2ae2153ef7246194774535fd399d03dd109a221a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 7a60d11432e95f56e8479d853e31895ba3fb266b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-access-wcf-services-with-one-way-and-request-reply-contracts"></a>방법: 단방향 및 요청-회신 계약을 사용하여 WCF 서비스 액세스
-다음 절차에서는 단방향 계약 및 요청-회신 계약을 정의하고 이중 통신 패턴을 사용하지 않는 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 서비스에 액세스하는 방법에 대해 설명합니다.  
+다음 절차는 Windows Communication Foundation (WCF) 서비스에 액세스 하는 단방향 계약 및 요청-회신 계약을 정의 하 고 이중 통신 패턴을 사용 하지 않는 방법을 설명 합니다.  
   
 ### <a name="to-define-the-service"></a>서비스를 정의하려면  
   
@@ -257,7 +245,7 @@ ms.lasthandoff: 12/22/2017
     client.Close();  
     ```  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음은 이 항목에서 사용되는 전체 코드 목록입니다.  
   
 ```csharp  

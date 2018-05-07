@@ -1,14 +1,6 @@
 ---
-title: "CLR_DEBUGGING_VERSION 구조체"
-ms.custom: 
+title: CLR_DEBUGGING_VERSION 구조체
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - CLR_DEBUGGING_VERSION
 api_location:
@@ -22,17 +14,13 @@ helpviewer_keywords:
 ms.assetid: 4d821186-3ddf-405a-ac44-d79438a9f7f3
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 092024f3f4e6fc1bc923ae2a299c5d9c21f1b1b8
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 4be232ab557d582f3521b8775108c004b5a3dd78
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="clrdebuggingversion-structure"></a>CLR_DEBUGGING_VERSION 구조체
 디버깅용 CLR(공용 언어 런타임)의 제품 버전을 정의합니다.  
@@ -70,7 +58,7 @@ WORD wRevision;
   
  **라이브러리:** CorGuids.lib  
   
- **.NET framework 버전:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET framework 버전:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>참고 항목  
  [디버깅 구조체](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)  

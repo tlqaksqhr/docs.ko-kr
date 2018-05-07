@@ -1,24 +1,12 @@
 ---
-title: "스트림"
-ms.custom: 
+title: 스트림
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 58a3db81-20ab-4627-bf31-39d30b70b4fe
-caps.latest.revision: "22"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ab56dd7938f2c7594627b54b4cb61b4e0f6b28fe
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 96b77d0135a4dac1dcb8406a1b9a1372d0c4a35d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="stream"></a>스트림
 Stream 샘플에서는 스트리밍 전송 모드 통신의 사용 방법을 보여 줍니다. 이 서비스는 스트림을 보내고 받는 몇 가지 작업을 노출합니다. 이 샘플은 자체 호스팅됩니다. 클라이언트와 서버는 모두 콘솔 프로그램입니다.  
@@ -26,7 +14,7 @@ Stream 샘플에서는 스트리밍 전송 모드 통신의 사용 방법을 보
 > [!NOTE]
 >  이 샘플의 설치 절차 및 빌드 지침은 이 항목의 끝부분에 나와 있습니다.  
   
- [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]는 버퍼링 모드와 스트리밍 모드의 두 가지 전송 모드로 통신할 수 있습니다. 기본 설정인 버퍼링 전송 모드에서는 메시지가 완전히 전달되어야 수신자가 읽을 수 있습니다. 스트리밍 전송 모드에서는 메시지가 완전히 전달되기 전에 수신자가 메시지 처리를 시작할 수 있습니다. 전달되는 정보가 길고 순차적으로 처리 가능한 경우 스트리밍 모드가 유용합니다. 또한 전체를 버퍼링하기에는 메시지가 너무 큰 경우에도 스트리밍 모드가 효과적입니다.  
+ Windows Communication Foundation (WCF)는 두 가지 전송 모드로 통신할 수-버퍼링 또는 스트리밍. 기본 설정인 버퍼링 전송 모드에서는 메시지가 완전히 전달되어야 수신자가 읽을 수 있습니다. 스트리밍 전송 모드에서는 메시지가 완전히 전달되기 전에 수신자가 메시지 처리를 시작할 수 있습니다. 전달되는 정보가 길고 순차적으로 처리 가능한 경우 스트리밍 모드가 유용합니다. 또한 전체를 버퍼링하기에는 메시지가 너무 큰 경우에도 스트리밍 모드가 효과적입니다.  
   
 ## <a name="streaming-and-service-contracts"></a>스트리밍 및 서비스 계약  
  스트리밍은 서비스 계약을 설계할 때 고려할 사항입니다. 어떤 작업에서 많은 양의 데이터를 수신하거나 반환할 경우 입출력 메시지의 버퍼링 때문에 지나치게 많은 메모리가 사용되지 않도록 이 데이터를 스트리밍하는 것을 고려할 필요가 있습니다. 데이터를 스트리밍하려면 그 데이터를 포함하는 매개 변수가 메시지에서 유일한 매개 변수가 되어야 합니다. 예를 들어, 입력 메시지를 스트리밍할 경우 해당 작업은 단 하나의 입력 매개 변수만 가져야 합니다. 마찬가지로, 출력 메시지를 스트리밍할 경우 해당 작업에는 출력 매개 변수 또는 반환 값이 하나만 있어야 합니다. 두 경우 모두 매개 변수 또는 반환 값 형식은 `Stream`, `Message` 또는 `IXmlSerializable`이어야 합니다. 다음은 이 스트리밍 샘플에서 사용된 서비스 계약입니다.  
@@ -192,7 +180,7 @@ Press <ENTER> to terminate client.
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  이 디렉터리가 없으면 [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4(.NET Framework 4용 WCF(Windows Communication Foundation) 및 WF(Windows Workflow Foundation) 샘플)](http://go.microsoft.com/fwlink/?LinkId=150780) 로 이동하여 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 및 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플을 모두 다운로드하세요. 이 샘플은 다음 디렉터리에 있습니다.  
+>  이 디렉터리가로 이동 [Windows Communication Foundation (WCF) 및.NET Framework 4에 대 한 Windows WF (Workflow Foundation) 샘플](http://go.microsoft.com/fwlink/?LinkId=150780) 모든 Windows Communication Foundation (WCF)를 다운로드 하 고 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플. 이 샘플은 다음 디렉터리에 있습니다.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Contract\Service\Stream`  
   

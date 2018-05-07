@@ -1,38 +1,24 @@
 ---
 title: Serialization 및 Deserialization
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 3d71814c-bda7-424b-85b7-15084ff9377a
-caps.latest.revision: 13
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 2343ebe5a2a029ddb40da98d28f5c442aa7b6962
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 754b09b3b90399c242ddbaf968242f969cb27b8b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="serialization-and-deserialization"></a>Serialization 및 Deserialization
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 에는 새로운 serialization 엔진인 <xref:System.Runtime.Serialization.DataContractSerializer>가 포함되어 있습니다. <xref:System.Runtime.Serialization.DataContractSerializer> 는 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 개체를 XML로, XML을 .NET Framework 개체로 변환합니다. 이 항목에서는 serializer가 작동하는 방식에 대해 설명합니다.  
+Windows Communication Foundation (WCF)는 새로운 serialization 엔진인 포함 된 <xref:System.Runtime.Serialization.DataContractSerializer>합니다. <xref:System.Runtime.Serialization.DataContractSerializer> 는 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 개체를 XML로, XML을 .NET Framework 개체로 변환합니다. 이 항목에서는 serializer가 작동하는 방식에 대해 설명합니다.  
   
  [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 개체를 serialize할 때 serializer에서는 새 *데이터 계약* 모델을 포함하여 다양한 serialization 프로그래밍 모델을 인식합니다. 지원되는 형식의 전체 목록은 [Types Supported by the Data Contract Serializer](../../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md)을 참조하십시오. 데이터 계약에 대한 소개는 [Using Data Contracts](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)을 참조하십시오.  
   
- XML을 deserialize할 때 serializer에서는 <xref:System.Xml.XmlReader> 및 <xref:System.Xml.XmlWriter> 클래스를 사용합니다. 또한 <xref:System.Xml.XmlDictionaryReader> 및 <xref:System.Xml.XmlDictionaryWriter> 클래스를 지원하여 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 이진 XML 형식을 사용하는 경우와 같은 일부 경우에 최적화된 XML을 생성할 수 있습니다.  
+ XML을 deserialize할 때 serializer에서는 <xref:System.Xml.XmlReader> 및 <xref:System.Xml.XmlWriter> 클래스를 사용합니다. 또한 지원는 <xref:System.Xml.XmlDictionaryReader> 및 <xref:System.Xml.XmlDictionaryWriter> WCF 이진 XML을 사용 하 여이 형식을 지정 하는 경우에 최적화 된 XML을 생성 하기 위해 사용할 수 있도록 하는 클래스입니다.  
   
- 또한[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 에는 도우미 serializer인 <xref:System.Runtime.Serialization.NetDataContractSerializer>가 있습니다. <xref:System.Runtime.Serialization.NetDataContractSerializer> 는 <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> 형식 이름을 serialize된 데이터의 일부로 내보내므로 <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter> 및 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] serializer와 유사합니다. 그리고 serialize 측과 deserialize 측에서 동일한 형식을 공유할 때 사용됩니다. <xref:System.Runtime.Serialization.DataContractSerializer> 및 <xref:System.Runtime.Serialization.NetDataContractSerializer> 는 모두 공통 기본 클래스인 <xref:System.Runtime.Serialization.XmlObjectSerializer>에서 파생됩니다.  
+ WCF에는 도우미 serializer도 포함 되어는 <xref:System.Runtime.Serialization.NetDataContractSerializer>합니다. <xref:System.Runtime.Serialization.NetDataContractSerializer> 는 <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> 형식 이름을 serialize된 데이터의 일부로 내보내므로 <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter> 및 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] serializer와 유사합니다. 그리고 serialize 측과 deserialize 측에서 동일한 형식을 공유할 때 사용됩니다. <xref:System.Runtime.Serialization.DataContractSerializer> 및 <xref:System.Runtime.Serialization.NetDataContractSerializer> 는 모두 공통 기본 클래스인 <xref:System.Runtime.Serialization.XmlObjectSerializer>에서 파생됩니다.  
   
 > [!WARNING]
 >  <xref:System.Runtime.Serialization.DataContractSerializer> 는 20 미만의 16진수 값이 있는 제어 문자를 포함하는 문자열을 XML 엔터티로 serialize합니다. WCF 서비스에 이러한 데이터를 보낼 때이 아닌 WCF 클라이언트에 문제가 인해 수 있습니다.  
@@ -128,7 +114,7 @@ ms.lasthandoff: 04/30/2018
   
 -   의미. 경우에 따라 두 개의 참조가 똑같은 두 개의 개체로 이루어지는 것이 아니라, 하나의 동일한 개체로 이루어지도록 하는 것이 중요합니다.  
   
- 이러한 이유로 인해, 일부 `DataContractSerializer` 생성자 오버로드에는 기본값이 `preserveObjectReferences` 인 `false`매개 변수가 있습니다. 이 매개 변수를 `true`로 설정하면, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 에서만 인식하는 개체 참조를 인코딩하는 특수한 방법이 사용됩니다. `true`로 설정된 경우 XML 코드 예제는 이제 다음과 유사합니다.  
+ 이러한 이유로 인해, 일부 `DataContractSerializer` 생성자 오버로드에는 기본값이 `preserveObjectReferences` 인 `false`매개 변수가 있습니다. 이 매개 변수로 설정 되 면 `true`, 인코딩만 WCF 이해 하는 개체 참조 하는 특수 한 방법이 사용 됩니다. `true`로 설정된 경우 XML 코드 예제는 이제 다음과 유사합니다.  
   
 ```xml  
 <PurchaseOrder ser:id="1">  

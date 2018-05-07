@@ -1,30 +1,18 @@
 ---
-title: "방법: 스트리밍 사용"
-ms.custom: 
+title: '방법: 스트리밍 사용'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 6ca2cf4b-c7a1-49d8-a79b-843a90556ba4
-caps.latest.revision: "13"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: b75fe67d99fa611f248c8d5dbb779f47e2bc717d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: b28764c4bad88511096ab09fd71cc2a73c735096
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-enable-streaming"></a>방법: 스트리밍 사용
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]에서는 버퍼링된 전송 또는 스트리밍 전송을 사용하여 메시지를 보낼 수 있습니다. 기본 설정인 버퍼링된 전송 모드에서는 메시지가 완전히 전달되어야 수신자가 읽을 수 있습니다. 스트리밍 전송 모드에서는 메시지가 완전히 전달되기 전에 수신자가 메시지 처리를 시작할 수 있습니다. 전달되는 정보가 길고 순차적으로 처리 가능한 경우 스트리밍 모드가 유용합니다. 또한 전체를 버퍼링하기에는 메시지가 너무 큰 경우에도 스트리밍 모드가 효과적입니다.  
+Windows Communication Foundation (WCF) 버퍼링 또는 스트리밍 전송 사용 하 여 메시지를 보낼 수 있습니다. 기본 설정인 버퍼링된 전송 모드에서는 메시지가 완전히 전달되어야 수신자가 읽을 수 있습니다. 스트리밍 전송 모드에서는 메시지가 완전히 전달되기 전에 수신자가 메시지 처리를 시작할 수 있습니다. 전달되는 정보가 길고 순차적으로 처리 가능한 경우 스트리밍 모드가 유용합니다. 또한 전체를 버퍼링하기에는 메시지가 너무 큰 경우에도 스트리밍 모드가 효과적입니다.  
   
  스트리밍을 사용하려면 `OperationContract`를 적절히 정의하고 전송 수준에서 스트리밍을 사용합니다.  
   

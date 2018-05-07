@@ -1,28 +1,16 @@
 ---
 title: 인증서 인증을 사용하는 전송 보안
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - vb
 ms.assetid: 3d726b71-4d8b-4581-a3bb-02b9af51d11b
-caps.latest.revision: 20
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload:
-- dotnet
-ms.openlocfilehash: 19b54739d82fe7363319211d3f753416e0966aed
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: a4f29d9ac34437431a95a247ef1e7aa5c9084c36
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="transport-security-with-certificate-authentication"></a>인증서 인증을 사용하는 전송 보안
 이 항목에서는 전송 보안을 사용할 때 서버 및 클라이언트 인증에 X.509 인증서를 사용하는 방법에 대해 설명합니다. 인증서 참조 X.509에 대 한 자세한 내용은 [X.509 공개 키 인증서](http://msdn.microsoft.com/library/bb540819\(VS.85\).aspx)합니다. 인증서는 인증서의 타사 발급자 자주 변경 되는 인증 기관에서 발급 되어야 합니다. Windows Server 도메인의 경우 Active Directory 인증서 서비스를 사용하여 도메인에서 클라이언트 컴퓨터에 인증서를 발급할 수 있습니다. 자세한 내용은 참조 [Windows 2008 R2 인증서 서비스](http://go.microsoft.com/fwlink/?LinkID=209949&clcid=0x409)합니다. 이 시나리오에서는 SSL(Secure Sockets Layer)을 사용하여 구성된 IIS(인터넷 정보 서비스)에서 서비스가 호스팅됩니다. 서비스는 클라이언트에서 서버의 ID를 확인할 수 있도록 SSL(X.509) 인증서를 사용하여 구성됩니다. 클라이언트도 서비스에서 클라이언트의 ID를 확인할 수 있는 X.509 인증서를 사용하여 구성됩니다. 서버 인증서는 클라이언트에 의해 신뢰되어야 하며 클라이언트 인증서는 서버에 의해 신뢰되어야 합니다. 서비스와 클라이언트가 서로 ID를 확인하는 방법의 실제 메커니즘은 이 항목에서 다루지 않습니다. 자세한 내용은 참조 [Wikipedia에서 디지털 서명을](http://go.microsoft.com/fwlink/?LinkId=253157)합니다.  

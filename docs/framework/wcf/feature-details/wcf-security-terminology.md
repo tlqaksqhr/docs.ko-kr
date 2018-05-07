@@ -1,35 +1,23 @@
 ---
 title: WCF 보안 용어
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - security [WCF], terminology
 - security glossary [WCF]
 - security terms [WCF]
 ms.assetid: 68dde024-8e51-40ba-804f-ec52d85e9ca9
-caps.latest.revision: 14
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload:
-- dotnet
-ms.openlocfilehash: 46f70ad623d852e051ff69fb68690114f8c39381
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 8024abdab01b2df151a6c0c2f5760e85ae119fd4
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="wcf-security-terminology"></a>WCF 보안 용어
 보안을 설명할 때 사용되는 일부 용어는 생소할 수 있습니다. 이 항목에서는 일부 보안 용어에 대해 간략하게 설명하며, 모든 항목을 포괄적으로 설명하지는 않습니다.  
   
- 에 사용 된 용어에 대 한 자세한 내용은 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 설명서 참조 [기본적인 Windows Communication Foundation 개념](../../../../docs/framework/wcf/fundamental-concepts.md)합니다.  
+ Windows Communication Foundation (WCF) 설명서에서 사용 되는 용어에 대 한 자세한 내용은 참조 [기본적인 Windows Communication Foundation 개념](../../../../docs/framework/wcf/fundamental-concepts.md)합니다.  
   
  ACL(액세스 제어 목록 - Access Control List)  
  개체에 적용되는 보안 보호 목록입니다. 개체는 파일, 프로세스 또는 이벤트이거나 보안 설명자를 가진 모든 대상을 가리킵니다. ACL의 항목은 ACE(액세스 제어 항목)이며 임의 ACL과 시스템 ACL의 두 가지 종류가 있습니다.  
@@ -189,7 +177,7 @@ ms.lasthandoff: 04/30/2018
  사용자 계정 이름 (라고도 *사용자 로그온 이름*) 및 사용자 계정이 있는 도메인을 식별 하는 도메인 이름입니다. Windows 도메인에 로그온하는 표준 사용법입니다. 형식은: someone@example.com (경우와 전자 메일 주소).  
   
 > [!NOTE]
->  표준 UPN 형식 이외에 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서는 cohowinery.com\someone과 같은 하위 수준의 UPN 형식을 적용합니다.  
+>  표준 UPN 형식 외에 WCF cohowinery.com\someone 예를 들어 하위 형태로 Upn을 허용합니다.  
   
  X.509  
  필수 부분을 정의하는 인증서에 대한 국제 승인 표준입니다.  

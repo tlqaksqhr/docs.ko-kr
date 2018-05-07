@@ -1,34 +1,20 @@
 ---
 title: '방법: 대기 중인 메시지와 WCF 끝점 교환'
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 938e7825-f63a-4c3d-b603-63772fabfdb3
-caps.latest.revision: 18
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 2f44f3a58e0a8283753cb682f25cf2f167450724
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: ab6ca46fad8ee1ededef5cc14a9654b79b2e6a8e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-exchange-queued-messages-with-wcf-endpoints"></a>방법: 대기 중인 메시지와 WCF 끝점 교환
-큐를 사용하면 통신하는 동안 서비스를 사용할 수 없는 경우에도 클라이언트와 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 서비스 간의 메시징을 신뢰할 수 있는지 확인할 수 있습니다. 다음 절차에서는 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 서비스를 구현할 때 대기 중인 표준 바인딩을 사용하여 클라이언트와 서비스 간의 통신을 지속하는 방법을 보여 줍니다.  
+큐는 서비스의 통신 시 사용할 수 없는 경우에 신뢰할 수 있는 메시징 클라이언트와 Windows Communication Foundation (WCF) 서비스 간에 발생할 수 없음을 확인 합니다. 다음 절차에는 클라이언트와 표준을 사용 하 여 서비스 간의 통신을 지 속하는 WCF 서비스를 구현 하는 경우에 대기 중인 바인딩을 확인 하는 방법을 보여 줍니다.  
   
- 이 단원에서는 <xref:System.ServiceModel.NetMsmqBinding> 클라이언트와 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 서비스 간의 대기 중인 통신에 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]을 사용하는 방법에 대해 설명합니다.  
+ 이 섹션에서는 사용 하는 방법을 설명 <xref:System.ServiceModel.NetMsmqBinding> WCF 클라이언트와 WCF 서비스 간의 대기 중인된 통신에 대 한 합니다.  
   
 ### <a name="to-use-queuing-in-a-wcf-service"></a>WCF 서비스에서 큐를 사용하려면  
   
@@ -54,7 +40,7 @@ ms.lasthandoff: 04/30/2018
      [!code-csharp[S_Msmq_Transacted#4](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_msmq_transacted/cs/hostapp.cs#4)]
      [!code-vb[S_Msmq_Transacted#4](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/s_msmq_transacted/vb/hostapp.vb#4)]  
   
-5.  서비스 주소를 지정하고 표준 <xref:System.ServiceModel.Description.ServiceEndpoint> 바인딩을 사용하는 구성에 <xref:System.ServiceModel.NetMsmqBinding>를 정의합니다. 사용에 대 한 자세한 내용은 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 구성을 참조 [Windows Communication Foundation 응용 프로그램 구성](http://msdn.microsoft.com/library/13cb368e-88d4-4c61-8eed-2af0361c6d7a)합니다.  
+5.  서비스 주소를 지정하고 표준 <xref:System.ServiceModel.Description.ServiceEndpoint> 바인딩을 사용하는 구성에 <xref:System.ServiceModel.NetMsmqBinding>를 정의합니다. WCF 구성을 사용 하는 방법에 대 한 자세한 내용은 참조 [Windows Communication Foundation 응용 프로그램 구성](http://msdn.microsoft.com/library/13cb368e-88d4-4c61-8eed-2af0361c6d7a)합니다.  
   
   
   
@@ -65,7 +51,7 @@ ms.lasthandoff: 04/30/2018
   
 ### <a name="to-create-a-client-for-the-queued-service"></a>대기 중인 서비스의 클라이언트를 만들려면  
   
-1.  다음 예제에서는 호스팅 응용 프로그램을 실행하고 Svcutil.exe 도구를 사용해 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 클라이언트를 만드는 방법을 보여 줍니다.  
+1.  다음 예제에서는 호스팅 응용 프로그램을 실행 하 고 Svcutil.exe 도구를 사용 하 여 WCF 클라이언트를 만드는 방법을 보여 줍니다.  
   
     ```  
     svcutil http://localhost:8000/ServiceModelSamples/service  
@@ -75,7 +61,7 @@ ms.lasthandoff: 04/30/2018
   
   
   
-3.  다음예제와 같이 트랜잭션 큐에 쓸 트랜잭션 범위를 만들고 `SubmitPurchaseOrder` 작업을 호출한 다음 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 클라이언트를 닫습니다.  
+3.  호출, 트랜잭션 큐에 쓸 트랜잭션 범위를 만들는 `SubmitPurchaseOrder` 작업과 다음 예제에 나와 있는 것 처럼 WCF 클라이언트를 닫습니다.  
   
      [!code-csharp[S_Msmq_Transacted#8](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_msmq_transacted/cs/client.cs#8)]
      [!code-vb[S_Msmq_Transacted#8](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/s_msmq_transacted/vb/client.vb#8)]  

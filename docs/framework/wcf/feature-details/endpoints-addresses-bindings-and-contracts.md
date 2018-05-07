@@ -1,33 +1,19 @@
 ---
 title: '끝점: 주소, 바인딩 및 계약'
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - endpoints [WCF]
 - Windows Communication Foundation [WCF], endpoints
 - WCF [WCF], endpoints
 ms.assetid: 9ddc46ee-1883-4291-9926-28848c57e858
-caps.latest.revision: 14
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 477c23facd846580bac698ce6e61d02e11afe430
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 0909d1d10ab8932f27f7ca6cba6207d57fa4f4cc
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="endpoints-addresses-bindings-and-contracts"></a>끝점: 주소, 바인딩 및 계약
-와 모든 통신은 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 서비스를 통해 발생 된 *끝점* 서비스의 합니다. 끝점은 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 서비스에서 제공하는 기능에 대한 클라이언트 액세스를 제공합니다.  
+Windows Communication Foundation (WCF) 서비스와 모든 통신을 통해 발생 된 *끝점* 서비스의 합니다. 끝점 클라이언트는 WCF 서비스에서 제공 하는 기능에 대 한 액세스를 제공 합니다.  
   
  각 끝점은 다음 네 가지 속성으로 구성됩니다.  
   
@@ -39,12 +25,12 @@ ms.lasthandoff: 04/28/2018
   
 -   끝점의 로컬 구현 세부 정보를 지정하는 동작 집합  
   
- 이 항목에서는 이 끝점 구조 및 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 개체 모델에서 끝점 구조가 표현되는 방법에 대해 설명합니다.  
+ 이 항목에서는이 끝점 구조에 설명 하 고 WCF 개체 모델에서 표현 되는 방법에 대해 설명 합니다.  
   
 ## <a name="the-structure-of-an-endpoint"></a>끝점의 구조  
  각 끝점은 다음으로 구성됩니다.  
   
--   주소: 주소는 끝점을 고유하게 식별하고 잠재 고객에게 서비스가 있는 위치를 알려 줍니다. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 개체 모델에서 <xref:System.ServiceModel.EndpointAddress> 클래스로 표현됩니다. <xref:System.ServiceModel.EndpointAddress> 클래스에는 다음이 포함됩니다.  
+-   주소: 주소는 끝점을 고유하게 식별하고 잠재 고객에게 서비스가 있는 위치를 알려 줍니다. WCF 개체 모델에서 표시 됩니다는 <xref:System.ServiceModel.EndpointAddress> 클래스입니다. <xref:System.ServiceModel.EndpointAddress> 클래스에는 다음이 포함됩니다.  
   
     -   서비스의 주소를 나타내는 <xref:System.ServiceModel.EndpointAddress.Uri%2A> 속성.  
   
@@ -60,7 +46,7 @@ ms.lasthandoff: 04/28/2018
   
     -   필요한 보안 요구 사항(예: SSL 또는 SOAP 메시지 보안)  
   
-     자세한 내용은 참조 [WCF 바인딩 개요](../../../../docs/framework/wcf/bindings-overview.md)합니다. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 개체 모델에서 바인딩은 추상 기본 클래스 <xref:System.ServiceModel.Channels.Binding>으로 표현됩니다. 대부분의 시나리오의 경우 사용자는 시스템 제공 바인딩 중 하나를 사용할 수 있습니다. 자세한 내용은 참조 [시스템 제공 바인딩](../../../../docs/framework/wcf/system-provided-bindings.md)합니다.  
+     자세한 내용은 참조 [WCF 바인딩 개요](../../../../docs/framework/wcf/bindings-overview.md)합니다. 바인딩을 WCF 개체 모델 추상 기본 클래스에 의해 표현 됩니다 <xref:System.ServiceModel.Channels.Binding>합니다. 대부분의 시나리오의 경우 사용자는 시스템 제공 바인딩 중 하나를 사용할 수 있습니다. 자세한 내용은 참조 [시스템 제공 바인딩](../../../../docs/framework/wcf/system-provided-bindings.md)합니다.  
   
 -   계약: 계약에서는 끝점이 클라이언트에 노출하는 기능을 간략하게 설명합니다. 계약에서는 다음을 지정합니다.  
   
@@ -74,7 +60,7 @@ ms.lasthandoff: 04/28/2018
   
      계약을 정의 하는 방법에 대 한 자세한 내용은 참조 [서비스 계약 디자인](../../../../docs/framework/wcf/designing-service-contracts.md)합니다.  
   
--   동작: 끝점 동작을 사용하여 서비스 끝점의 로컬 동작을 사용자 지정할 수 있습니다. 끝점 동작은 빌드 프로세스에 참여 하 여이 수행할는 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]런타임. 끝점 동작의 예는 <xref:System.ServiceModel.Description.ServiceEndpoint.ListenUri%2A> 속성이며, 이 속성을 사용하여 SOAP 또는 WSDL(웹 서비스 기술 언어) 주소 이외의 다른 수신 대기 주소를 지정할 수 있습니다. 자세한 내용은 참조 [ClientViaBehavior](../../../../docs/framework/wcf/diagnostics/wmi/clientviabehavior.md)합니다.  
+-   동작: 끝점 동작을 사용하여 서비스 끝점의 로컬 동작을 사용자 지정할 수 있습니다. 끝점 동작을 WCFruntime를 작성 하는 과정에 참여 하 여이 작업을 수행 합니다. 끝점 동작의 예는 <xref:System.ServiceModel.Description.ServiceEndpoint.ListenUri%2A> 속성이며, 이 속성을 사용하여 SOAP 또는 WSDL(웹 서비스 기술 언어) 주소 이외의 다른 수신 대기 주소를 지정할 수 있습니다. 자세한 내용은 참조 [ClientViaBehavior](../../../../docs/framework/wcf/diagnostics/wmi/clientviabehavior.md)합니다.  
   
 ## <a name="defining-endpoints"></a>끝점 정의  
  구성을 통해 코드를 명령적으로 또는 선언적으로 사용하여 서비스의 끝점을 지정할 수 있습니다. 자세한 내용은 참조 [하는 방법: 구성에서 서비스 끝점을 만드는](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-configuration.md) 및 [하는 방법: 코드에서 서비스 끝점을 만드는](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-code.md)합니다.  
@@ -83,7 +69,7 @@ ms.lasthandoff: 04/28/2018
  이 단원에서는 바인딩, 끝점 및 주소의 용도에 대해 설명하고 바인딩 및 끝점을 구성하는 방법과 `ClientVia` 동작 및 `ListenUri` 속성을 사용하는 방법을 보여 줍니다.  
   
  [주소](../../../../docs/framework/wcf/feature-details/endpoint-addresses.md)  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서 끝점의 주소를 지정하는 방법에 대해 설명합니다.  
+ WCF에서 끝점 주소를 지정 하는 방법을 설명 합니다.  
   
  [바인딩](../../../../docs/framework/wcf/feature-details/bindings.md)  
  바인딩을 사용하여 클라이언트와 서비스 간에 통신하는 데 필요한 전송, 인코딩 및 프로토콜 세부 정보를 지정하는 방법에 대해 설명합니다.  

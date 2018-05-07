@@ -2,11 +2,11 @@
 title: '&lt;d a r d&gt;'
 ms.date: 03/30/2017
 ms.assetid: d62153d7-a6e6-462a-a784-cca61e9c2ba1
-ms.openlocfilehash: 14967fc6f5fe26a34c56c43b3dce1efd21cefb0b
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
-ms.translationtype: HT
+ms.openlocfilehash: 689ed041304d5ae84218dde2575d7bbd0440490d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ltstandardendpointsgt"></a>&lt;d a r d&gt;
 이 구성 섹션에서는 다시 사용할 수 있는 미리 구성된 끝점인 표준 끝점의 컬렉션을 정의할 수 있습니다. 표준 끝점에는 고정 값으로 설정된 하나 이상의 주소, 바인딩 및 계약 특성이 있습니다. 예를 들어 검색 끝점에서는 계약이 고정됩니다. 표준 끝점을 사용자 지정 바인딩 정의와 유사한 새 속성과 함께 사용하여 서비스 끝점을 확장할 수도 있습니다.  
@@ -32,7 +32,7 @@ ms.lasthandoff: 05/03/2018
   
 |요소|설명|  
 |-------------|-----------------|  
-|[\<announcementEndpoint >](../../../../../docs/framework/configure-apps/file-schema/wcf/announcementendpoint.md)|고정 알림 계약이 있는 표준 끝점을 정의합니다. 서비스에서는 선택적으로 서비스가 열리거나 닫힐 때 각각 온라인 및 오프라인 알림 메시지를 보내 가용성을 알릴 수 있습니다. Windows Communication Foundation (WCF) 서비스에서 알림 끝점을 지정 된 [ \<serviceDiscovery >](../../../../../docs/framework/configure-apps/file-schema/wcf/servicediscovery.md) 공지를 수행 하려면 AnnouncementClient 사용 하 여 요소입니다. 다른 서비스에서 알림 역할을 실제로 수신 하려는 클라이언트는 [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] ; 서비스를 해당 클라이언트에 대 한 알림 끝점을 구성 해야 하므로 [ \<서비스 >](../../../../../docs/framework/configure-apps/file-schema/wcf/services.md) 섹션.|  
+|[\<announcementEndpoint >](../../../../../docs/framework/configure-apps/file-schema/wcf/announcementendpoint.md)|고정 알림 계약이 있는 표준 끝점을 정의합니다. 서비스에서는 선택적으로 서비스가 열리거나 닫힐 때 각각 온라인 및 오프라인 알림 메시지를 보내 가용성을 알릴 수 있습니다. Windows Communication Foundation (WCF) 서비스에서 알림 끝점을 지정 된 [ \<serviceDiscovery >](../../../../../docs/framework/configure-apps/file-schema/wcf/servicediscovery.md) 공지를 수행 하려면 AnnouncementClient 사용 하 여 요소입니다. 다른 서비스에서 알림 수신 하려는 클라이언트를 WCF 서비스로; 실제로 역 따라서 해당 클라이언트에 대 한 알림 끝점을 구성할 필요가 [ \<서비스 >](../../../../../docs/framework/configure-apps/file-schema/wcf/services.md) 섹션.|  
 |[\<discoveryEndpoint >](../../../../../docs/framework/configure-apps/file-schema/wcf/discoveryendpoint.md)|고정 검색 계약이 있는 표준 끝점을 정의합니다. 서비스 구성에 추가되면 검색 메시지를 수신하는 위치를 지정합니다. 클라이언트 구성에 추가되면 검색 쿼리를 보내는 위치를 지정합니다.|  
 |[\<dynamicEndpoint >](../../../../../docs/framework/configure-apps/file-schema/wcf/dynamicendpoint.md)|이 구성 요소는 응용 프로그램이 런타임에 끝점 주소를 동적으로 찾을 수 있는 클라이언트 프로그램으로 기능하도록 설정하기 위한 정보를 포함하는 표준 끝점을 정의합니다.|  
 |[\<mexEndpoint >](../../../../../docs/framework/configure-apps/file-schema/wcf/mexendpoint.md)|고정 IMetadataExchange 계약이 있는 표준 끝점을 정의합니다. 모든 메타데이터 교환 끝점이 IMetadataExchange를 계약으로 지정하므로 고유의 끝점을 정의하는 대신 이 표준 지점을 사용할 수 있습니다.|  

@@ -1,10 +1,6 @@
 ---
 title: '방법: 형식 라이브러리에 참조 추가'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.technology:
-- dotnet-clr
-ms.topic: article
 helpviewer_keywords:
 - importing type library
 - interop assemblies, generating
@@ -13,14 +9,11 @@ helpviewer_keywords:
 ms.assetid: f5cfa6ba-cc25-4017-82cd-ba7391859113
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 561e05c82c1882ad5e495ddb3dc1a17356522514
-ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
+ms.openlocfilehash: 03c05e7399e9378751f803ae56dfaf664490e6d8
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-add-references-to-type-libraries"></a>방법: 형식 라이브러리에 참조 추가
 Visual Studio에서는 형식 라이브러리에 참조를 추가하면 메타데이터가 포함된 interop 어셈블리를 생성합니다. 주 interop 어셈블리를 사용할 수 있는 경우 Visual Studio는 새 interop 어셈블리를 생성하기 전에 기존 어셈블리를 사용합니다.  

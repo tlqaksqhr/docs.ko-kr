@@ -1,14 +1,6 @@
 ---
-title: "Silverlight용 CreateDebuggingInterfaceFromVersion 함수"
-ms.custom: 
+title: Silverlight용 CreateDebuggingInterfaceFromVersion 함수
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 f1_keywords:
 - CreateDebuggingInterfaceFromVersion
 helpviewer_keywords:
@@ -16,17 +8,13 @@ helpviewer_keywords:
 - debugging API [Silverlight]
 - Silverlight, debugging
 ms.assetid: 35c7a18f-133a-4584-bd25-bb338568b0c6
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: c38171c5887bb207b3692e9fa92aa2be2bc72a27
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 53571268391011cc1dc0ff112d484e1fa140057f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="createdebugginginterfacefromversion-function-for-silverlight"></a>Silverlight용 CreateDebuggingInterfaceFromVersion 함수
 반환 되는 공용 언어 런타임 (CLR) 버전 문자열을 수락는 [CreateVersionStringFromModule 함수](../../../../docs/framework/unmanaged-api/debugging/createversionstringfrommodule-function.md), 해당 디버거 인터페이스를 반환 하 고 (일반적으로 [ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)).  
@@ -49,7 +37,7 @@ HRESULT CreateDebuggingInterfaceFromVersion (
   
 ## <a name="return-value"></a>반환 값  
  S_OK  
- `ppCordb`구현 하는 유효한 개체 참조는 [ICorDebug 인터페이스](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md) 인터페이스입니다.  
+ `ppCordb` 구현 하는 유효한 개체 참조는 [ICorDebug 인터페이스](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md) 인터페이스입니다.  
   
  E_INVALIDARG  
  `szDebuggeeVersion` 또는 `ppCordb`가 null입니다.  

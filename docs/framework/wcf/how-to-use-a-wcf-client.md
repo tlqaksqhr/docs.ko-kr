@@ -1,33 +1,19 @@
 ---
-title: "방법: Windows Communication Foundation 클라이언트 사용"
-ms.custom: 
+title: '방법: Windows Communication Foundation 클라이언트 사용'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - WCF clients [WCF], using
 ms.assetid: 190349fc-0573-49c7-bb85-8e316df7f31f
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 0330c386730c6b0436196bb5b85162bc4621c214
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 6667a8e9862054d7d8d5b20e70dfbe699de02eab
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-use-a-windows-communication-foundation-client"></a>방법: Windows Communication Foundation 클라이언트 사용
-이 작업은 기본 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 응용 프로그램을 만드는 데 필요한 6가지 작업 중 마지막 작업입니다. 모든 6 가지 작업의 개요를 참조 하십시오.는 [초보자를 위한 자습서](../../../docs/framework/wcf/getting-started-tutorial.md) 항목입니다.  
+이 기본 Windows Communication Foundation (WCF) 응용 프로그램을 만드는 데 필요한 6 가지 작업 중 마지막 작업입니다. 모든 6 가지 작업의 개요를 참조 하십시오.는 [초보자를 위한 자습서](../../../docs/framework/wcf/getting-started-tutorial.md) 항목입니다.  
   
- [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 프록시를 만들고 구성한 후에는 클라이언트 인스턴스를 만들고 클라이언트 응용 프로그램을 컴파일하여 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 서비스와 통신하는 데 사용할 수 있습니다. 이 항목에서는 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 클라이언트를 인스턴스화하고 사용하는 절차에 대해 설명합니다. 이 절차에서는 다음과 같은 세 작업을 수행합니다.  
+ Windows Communication Foundation (WCF) 프록시를 만들고 구성, 클라이언트 인스턴스를 만들 수 있으며 클라이언트 응용 프로그램 이름이 컴파일되고와 통신 하는 데 사용 되 면는 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 서비스입니다. 이 항목에서는 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 클라이언트를 인스턴스화하고 사용하는 절차에 대해 설명합니다. 이 절차에서는 다음과 같은 세 작업을 수행합니다.  
   
 1.  [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 클라이언트를 인스턴스화합니다.  
   

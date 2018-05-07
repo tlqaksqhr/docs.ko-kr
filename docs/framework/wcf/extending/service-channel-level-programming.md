@@ -1,30 +1,18 @@
 ---
-title: "서비스 채널 수준 프로그래밍"
-ms.custom: 
+title: 서비스 채널 수준 프로그래밍
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 8d8dcd85-0a05-4c44-8861-4a0b3b90cca9
-caps.latest.revision: "9"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 0a1a6ef03b3ee0cc68809ec6ba80a7eadbc44cb1
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: e48c519f6e10be4521d75345845eb5c019ec342c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="service-channel-level-programming"></a>서비스 채널 수준 프로그래밍
-이 항목에서는 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 및 관련 개체 모델을 사용하지 않고 <xref:System.ServiceModel.ServiceHost?displayProperty=nameWithType> 서비스 응용 프로그램을 작성하는 방법에 대해 설명합니다.  
+이 항목에서는 사용 하지 않고 Windows Communication Foundation (WCF) 서비스 응용 프로그램을 작성 하는 방법을 설명는 <xref:System.ServiceModel.ServiceHost?displayProperty=nameWithType> 및 관련된 개체 모델입니다.  
   
 ## <a name="receiving-messages"></a>메시지 받기  
  메시지를 받은 다음 처리할 준비를 하려면 다음 단계가 필요합니다.  

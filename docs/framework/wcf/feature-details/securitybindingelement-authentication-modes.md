@@ -1,32 +1,20 @@
 ---
 title: SecurityBindingElement 인증 모드
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 12300bf4-c730-4405-9f65-d286f68b5a43
-caps.latest.revision: 13
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload:
-- dotnet
-ms.openlocfilehash: 8ca854d6b0431b5fe4972972d9d39de934f64b4d
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 715c813015fdb4b52444efca0bdcfc99acc92c21
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="securitybindingelement-authentication-modes"></a>SecurityBindingElement 인증 모드
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]에는 클라이언트와 서버가 서로를 인증하는 데 사용되는 모드가 몇 가지 있습니다. <xref:System.ServiceModel.Channels.SecurityBindingElement> 클래스에 정적 메서드를 사용하거나 구성을 통해 이러한 인증 모드의 보안 바인딩 요소를 만들 수 있습니다. 이 항목에서는 18가지의 인증 모드에 대해 간단히 설명합니다.  
+Windows Communication Foundation (WCF)는 클라이언트 및 서비스 인증 하는 데 다른 몇 가지 모드를 제공 합니다. <xref:System.ServiceModel.Channels.SecurityBindingElement> 클래스에 정적 메서드를 사용하거나 구성을 통해 이러한 인증 모드의 보안 바인딩 요소를 만들 수 있습니다. 이 항목에서는 18가지의 인증 모드에 대해 간단히 설명합니다.  
   
  요소를 사용 하 여 인증 모드 중 하나에 대 한 예제를 보려면 [하는 방법: 지정 된 인증 모드에 대 한 SecurityBindingElement 만들기](../../../../docs/framework/wcf/feature-details/how-to-create-a-securitybindingelement-for-a-specified-authentication-mode.md)합니다.  
   

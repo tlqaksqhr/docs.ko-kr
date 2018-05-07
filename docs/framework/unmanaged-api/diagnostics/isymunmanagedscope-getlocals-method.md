@@ -1,14 +1,6 @@
 ---
-title: "ISymUnmanagedScope::GetLocals 메서드"
-ms.custom: 
+title: ISymUnmanagedScope::GetLocals 메서드
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ISymUnmanagedScope.GetLocals
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: 17c45f15-8c44-44da-b070-f902077b36e4
 topic_type:
 - apiref
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 07d42423d284da39d40268727de13b4605221b5a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 781111db30ae664c9dd45744f88387e161f2716f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="isymunmanagedscopegetlocals-method"></a>ISymUnmanagedScope::GetLocals 메서드
 이 범위 내에 정의 된 지역 변수를 가져옵니다.  
@@ -62,7 +50,7 @@ HRESULT GetLocals(
  메서드가 성공 하면 s_ok이 고 그렇지 않으면 E_FAIL 또는 일부 기타 오류 코드입니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **헤더:** CorSym.idl, CorSym.h  
+ **Header:** CorSym.idl, CorSym.h  
   
 ## <a name="see-also"></a>참고 항목  
  [ISymUnmanagedScope 인터페이스](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope-interface.md)

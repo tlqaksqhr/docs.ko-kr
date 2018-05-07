@@ -1,31 +1,17 @@
 ---
 title: 부하 분산
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - load balancing [WCF]
 ms.assetid: 148e0168-c08d-4886-8769-776d0953b80f
-caps.latest.revision: 7
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: fe13c4aee41cd7af188ccaea77b3c0af07603e2c
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
-ms.translationtype: MT
+ms.openlocfilehash: 9ad9c9c569137534addfa3b91f412fb0c0a4b808
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="load-balancing"></a>부하 분산
-[!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 응용 프로그램의 용량을 높이는 한 가지 방법은 이러한 응용 프로그램을 부하가 분산된 서버 팜에 배포하여 확장하는 것입니다. [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 응용 프로그램에서는 Windows 네트워크 부하 분산과 같은 소프트웨어 부하 분산 장치와 하드웨어 기반의 부하 분산 장치 등 표준 부하 분산 기술을 사용하여 부하를 분산할 수 있습니다.  
+하나의 Windows Communication Foundation (WCF) 응용 프로그램의 용량을 늘리려면 방법은 부하 분산 된 서버 팜으로 배포를 확장할 수입니다. [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 응용 프로그램에서는 Windows 네트워크 부하 분산과 같은 소프트웨어 부하 분산 장치와 하드웨어 기반의 부하 분산 장치 등 표준 부하 분산 기술을 사용하여 부하를 분산할 수 있습니다.  
   
  다음 단원에서는 여러 가지 시스템 제공 바인딩을 사용하여 부하 분산 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 응용 프로그램을 빌드할 때의 고려 사항에 대해 설명합니다.  
   

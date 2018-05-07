@@ -1,14 +1,6 @@
 ---
-title: "ImportFile2 메서드"
-ms.custom: 
+title: ImportFile2 메서드
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - IALink.ImportFile2
 api_location:
@@ -22,17 +14,13 @@ helpviewer_keywords:
 ms.assetid: 9a6be861-c260-4a35-acea-3372ea515a0f
 topic_type:
 - apiref
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: ce7433745bb76a6c12e60e11e02cd1e7ef156614
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 61bc7783823408164ae2b073e097a0e85e193be6
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="importfile2-method"></a>ImportFile2 메서드
 어셈블리 및 바인딩되지 않은 모듈을 가져옵니다. 이 방법은 [ImportFile 메서드](../../../../docs/framework/unmanaged-api/alink/importfile-method.md), 하지만 가져오는 파일이 디스크에 존재 하지 않는 경우에 작동 합니다.  

@@ -1,14 +1,6 @@
 ---
 title: 피드 사용자 지정(WCF Data Services)
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework-oob
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -18,17 +10,11 @@ helpviewer_keywords:
 - Atom Publishing Protocol [WCF Data Services]
 - WCF Data Services, customizing feeds
 ms.assetid: 0d1a39bc-6462-4683-bd7d-e74e0fd28a85
-caps.latest.revision: 11
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: c59bfdd22125f10b8a35afc8c264b6b2869a3998
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: c398162b033fcdcb5a885fb961ca7be98a88d2f3
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="feed-customization-wcf-data-services"></a>피드 사용자 지정(WCF Data Services)
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 사용 하 여는 [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] 데이터 피드로 노출할 수 있습니다. [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 데이터 피드의 Atom 및 JSON JavaScript Object Notation () 형식을 지원합니다. Atom 피드를 사용 하는 경우 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 엔터티 및 HTTP 메시지의 본문에 포함 될 수 있는 XML 형식으로의 관계와 같은 데이터를 직렬화 하는 표준 방법을 제공 합니다. [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 엔터티에 포함 된 데이터 및 Atom 요소 간의 기본 엔터티 속성 매핑을 정의 합니다. 자세한 내용은 참조 [OData: 원자 형식](http://go.microsoft.com/fwlink/?LinkID=185794)합니다.  

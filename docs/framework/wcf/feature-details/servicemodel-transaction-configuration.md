@@ -1,34 +1,20 @@
 ---
 title: ServiceModel 트랜잭션 구성
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - transactions [WCF], ServiceModel configuration
 ms.assetid: 5636067a-7fbd-4485-aaa2-8141c502acf3
-caps.latest.revision: 8
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 96cf83be06949160cf3efa73344e4a7680d24e09
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 2c724e3f67bbf6554abffb44f101d2f28f748023
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="servicemodel-transaction-configuration"></a>ServiceModel 트랜잭션 구성
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]에서는 `transactionFlow`, `transactionProtocol` 및 `transactionTimeout` 서비스의 트랜잭션을 구성하기 위한 세 가지 특성을 제공합니다.  
+Windows Communication Foundation (WCF) 서비스의 트랜잭션을 구성 하기 위한 세 가지 특성을 제공: `transactionFlow`, `transactionProtocol`, 및 `transactionTimeout`합니다.  
   
 ## <a name="configuring-transactionflow"></a>transactionFlow 구성  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서 제공하는 대부분의 미리 정의된 바인딩에는 `transactionFlow` 및 `transactionProtocol` 특성이 포함되어 있으므로, 특정 트랜잭션 흐름 프로토콜을 사용하여 특정 끝점에 대해 들어오는 트랜잭션을 허용하도록 바인딩을 구성할 수 있습니다. 또한 `transactionFlow` 요소와 해당 `transactionProtocol` 특성을 사용하여 고유의 사용자 지정 바인딩을 만들 수 있습니다. 구성 요소를 설정 하는 방법에 대 한 자세한 내용은 참조 [ \<바인딩 >](../../../../docs/framework/misc/binding.md) 및 [WCF 구성 스키마](../../../../docs/framework/configure-apps/file-schema/wcf/index.md)합니다.  
+ 대부분의 WCF 포함 제공 미리 정의 된 바인딩에 `transactionFlow` 및 `transactionProtocol` 특성이 있는 경우 특정 트랜잭션 흐름 프로토콜을 사용 하 여 특정 끝점에 대해 들어오는 트랜잭션을 허용 하도록 바인딩을 구성할 수 있도록 합니다. 또한 `transactionFlow` 요소와 해당 `transactionProtocol` 특성을 사용하여 고유의 사용자 지정 바인딩을 만들 수 있습니다. 구성 요소를 설정 하는 방법에 대 한 자세한 내용은 참조 [ \<바인딩 >](../../../../docs/framework/misc/binding.md) 및 [WCF 구성 스키마](../../../../docs/framework/configure-apps/file-schema/wcf/index.md)합니다.  
   
  `transactionFlow` 특성은 바인딩을 사용하는 서비스 끝점에 대해 트랜잭션 흐름을 사용할지 여부를 지정합니다.  
   
@@ -55,7 +41,7 @@ ms.lasthandoff: 04/30/2018
 ```  
   
 ## <a name="configuring-transactiontimeout"></a>transactionTimeout 구성  
- 구성 파일의 `transactionTimeout` 요소에서 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 서비스에 대한 `behavior` 특성을 구성할 수 있습니다. 다음 코드에서는 이 작업을 수행하는 방법에 대해 설명합니다.  
+ 구성할 수는 `transactionTimeout` 에서 WCF 서비스에 대 한 특성은 `behavior` 구성 파일의 요소입니다. 다음 코드에서는 이 작업을 수행하는 방법에 대해 설명합니다.  
   
 ```xml  
 <configuration>  

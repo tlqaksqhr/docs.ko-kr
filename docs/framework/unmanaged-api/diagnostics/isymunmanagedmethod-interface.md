@@ -1,14 +1,6 @@
 ---
-title: "ISymUnmanagedMethod 인터페이스"
-ms.custom: 
+title: ISymUnmanagedMethod 인터페이스
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ISymUnmanagedMethod
 api_location:
@@ -22,17 +14,13 @@ helpviewer_keywords:
 ms.assetid: f204d74c-cc79-4092-83bb-60654be95649
 topic_type:
 - apiref
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: b6305625c3d02dbd126a284287e19b319e21eeba
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 728acc09f739fe567fca4a2571cbabf1ba8838a2
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="isymunmanagedmethod-interface"></a>ISymUnmanagedMethod 인터페이스
 기호 저장소 내의 메서드를 나타냅니다. 이 인터페이스는만 형식 관련 특성 대신 메서드의 기호 관련 특성에 대 한 액세스를 제공 합니다.  
@@ -53,7 +41,7 @@ ms.lasthandoff: 12/22/2017
 |[GetToken 메서드](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-gettoken-method.md)|이 메서드에 대 한 메타 데이터 토큰을 반환합니다.|  
   
 ## <a name="requirements"></a>요구 사항  
- **헤더:** CorSym.idl, CorSym.h  
+ **Header:** CorSym.idl, CorSym.h  
   
 ## <a name="see-also"></a>참고 항목  
  [진단 기호 저장소 인터페이스](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)

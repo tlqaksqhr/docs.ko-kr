@@ -1,33 +1,19 @@
 ---
-title: "끝점 주소"
-ms.custom: 
+title: 끝점 주소
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - addresses [WCF]
 - Windows Communication Foundation [WCF], addresses
 - WCF [WCF], addresses
 ms.assetid: 13f269e3-ebb1-433c-86cf-54fbd866a627
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 58e6d383856d57e95a1ea5bd2658af2ec0b22ed5
-ms.sourcegitcommit: 15316053918995cc1380163a7d7e7edd5c44e6d7
+ms.openlocfilehash: 46278e35c6966e473f5a800f7e99814efd7b943c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="endpoint-addresses"></a>끝점 주소
-모든 끝점에는 해당 끝점을 찾아서 식별하는 데 사용되는 연결된 주소가 있습니다. 이 주소는 주로 끝점의 위치를 지정하는 URI(Uniform Resource Identifier)로 구성됩니다. 끝점 주소는 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 프로그래밍 모델에 <xref:System.ServiceModel.EndpointAddress> 클래스로 표시됩니다. 이 클래스에는 한 끝점에서 다른 끝점과 메시지를 교환할 때 상대 끝점을 인증할 수 있도록 하는 선택적 <xref:System.ServiceModel.EndpointAddress.Identity%2A> 속성과 서비스에 연결하는 데 필요한 다른 SOAP 헤더를 정의하는 선택적 <xref:System.ServiceModel.EndpointAddress.Headers%2A> 속성 집합이 포함되어 있습니다. 선택적 헤더는 서비스 끝점을 확인하거나 상호 작용하는 데 필요한 추가적인 자세한 주소 지정 정보를 제공합니다. 끝점 주소는 통신 중에 WS-Addressing EPR(끝점 참조)로 표시됩니다.  
+모든 끝점에는 해당 끝점을 찾아서 식별하는 데 사용되는 연결된 주소가 있습니다. 이 주소는 주로 끝점의 위치를 지정하는 URI(Uniform Resource Identifier)로 구성됩니다. 하 여 Windows Communication Foundation (WCF) 프로그래밍 모델에서 끝점 주소는 표시 된 <xref:System.ServiceModel.EndpointAddress> 선택적 들어 있는 클래스 <xref:System.ServiceModel.EndpointAddress.Identity%2A> 다른 끝점에서 끝점을 인증할 수 있는 속성입니다 교환, 메시지 및 선택적 집합이 <xref:System.ServiceModel.EndpointAddress.Headers%2A> 서비스에 전달 하는 데 필요한 다른 SOAP 헤더를 정의 하는 속성입니다. 선택적 헤더는 서비스 끝점을 확인하거나 상호 작용하는 데 필요한 추가적인 자세한 주소 지정 정보를 제공합니다. 끝점 주소는 통신 중에 WS-Addressing EPR(끝점 참조)로 표시됩니다.  
   
 ## <a name="uri-structure-of-an-address"></a>주소의 URI 구조  
  대부분 전송 주소 URI에는 네 가지 부분이 있습니다. 예를 들어 URI의 네 부분 http://www.fabrikam.com:322/mathservice.svc/secureEndpoint 다음과 같이 항목별로 수 있습니다.  
@@ -63,7 +49,7 @@ ms.lasthandoff: 03/19/2018
   
 -   바인딩 정보: IP 주소, 포트, 호스트 헤더  
   
- IIS에서는 각 사이트에 대해 여러 개의 바인딩을 지정할 수 있으므로, 각 스키마에 대해 여러 개의 기본 주소가 생성됩니다. [!INCLUDE[netfx35_short](../../../../includes/netfx35-short-md.md)] 이전에 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]는 한 개의 스키마에 대해 여러 개의 주소를 지원하지 않았으며, 여러 개의 주소가 지정된 경우 활성화 중에 <xref:System.ArgumentException>을 throw했습니다.  
+ IIS에서는 각 사이트에 대해 여러 개의 바인딩을 지정할 수 있으므로, 각 스키마에 대해 여러 개의 기본 주소가 생성됩니다. 이전에 [!INCLUDE[netfx35_short](../../../../includes/netfx35-short-md.md)], WCF 스키마에 대 한 여러 주소를 지원 하지 않았습니다 고, 지정 된 경우 발생 했습니다는 <xref:System.ArgumentException> 활성화 중입니다.  
   
  [!INCLUDE[netfx35_short](../../../../includes/netfx35-short-md.md)]를 사용하면 인터넷 서비스 공급자가 동일한 사이트의 동일한 스키마에 대해 기본 주소가 다른 여러 응용 프로그램을 호스팅할 수 있습니다.  
   
@@ -111,7 +97,7 @@ ms.lasthandoff: 03/19/2018
  세부 정보 및 예제 참조 [여러 IIS 사이트 바인딩 지원](../../../../docs/framework/wcf/feature-details/supporting-multiple-iis-site-bindings.md) 및 <xref:System.ServiceModel.ServiceHostingEnvironment.MultipleSiteBindingsEnabled%2A>합니다.  
   
 ## <a name="extending-addressing-in-wcf-services"></a>WCF 서비스에서 주소 확장  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 서비스의 기본 주소 지정 모델은 다음과 같은 용도로 끝점 주소 URI를 사용합니다.  
+ 주소 지정 모델 WCF 서비스의 기본은 다음과 같은 용도로 끝점 주소 URI를 사용 합니다.  
   
 -   끝점이 메시지를 수신 대기하는 위치인 서비스 수신 대기 주소 지정  
   

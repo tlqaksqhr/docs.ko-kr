@@ -1,28 +1,16 @@
 ---
-title: "일반 참조"
-ms.custom: 
+title: 일반 참조
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - general reference [WCF]
 - Windows Communication Foundation, general reference
 - WCF, general reference
 ms.assetid: b1a21e93-4700-46e6-88ca-bd7a50e19a16
-caps.latest.revision: "6"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a73f1aa4e55181bb52bfe2d389feec2a0464cd6a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 5494716f52c3d604fb010c602389930c71a8ea40
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="general-reference"></a>일반 참조
-섹션 [ \<system.serviceModel >](../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md) 구성 하는 데 사용 되는 요소를 설명 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 클라이언트와 서비스입니다.
+섹션 [ \<system.serviceModel >](../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md) Windows Communication Foundation (WCF) 클라이언트와 서비스를 구성 하는 데 사용 되는 요소에 설명 합니다.

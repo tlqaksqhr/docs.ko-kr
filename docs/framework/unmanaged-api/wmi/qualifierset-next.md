@@ -1,11 +1,7 @@
 ---
-title: "QualifierSet_Next 함수 (관리 되지 않는 API 참조)"
-description: "QualifierSet_Next 함수에는 다음 한정자는 열거형에는 검색합니다."
+title: QualifierSet_Next 함수 (관리 되지 않는 API 참조)
+description: QualifierSet_Next 함수에는 다음 한정자는 열거형에는 검색합니다.
 ms.date: 11/06/2017
-ms.prod: .net-framework
-ms.technology:
-- dotnet-clr
-ms.topic: reference
 api_name:
 - QualifierSet_Next
 api_location:
@@ -20,14 +16,11 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 01a9c9d162039547849597aaa9c8a6fa38a31455
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: a8232691c697c51b5a480a68c6d952f294a63460
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="qualifiersetnext-function"></a>QualifierSet_Next 함수
 다음 한정자에 대 한 호출을 시작 하는 열거형에는 검색 된 [QualifierSet_BeginEnumeration](qualifierset-beginenumeration.md) 함수입니다.   
@@ -92,7 +85,7 @@ HRESULT QualifierSet_Next (
   
  **헤더:** WMINet_Utils.idl  
   
- **.NET framework 버전:**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **.NET framework 버전:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>참고자료  
 [WMI 및 성능 카운터 (관리 되지 않는 API 참조)](index.md)

@@ -1,33 +1,19 @@
 ---
 title: Windows Process Activation Service에서의 호스팅
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - hosting services [WCF], WAS
 ms.assetid: d2b9d226-15b7-41fc-8c9a-cb651ac20ecd
-caps.latest.revision: 16
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: a31d66cd4b4430ec838b34fcd77d712698f9e1dc
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 5cd2244c4b44592e436dfd983985dca3c1a50144
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="hosting-in-windows-process-activation-service"></a>Windows Process Activation Service에서의 호스팅
-WAS(Windows Process Activation Service)는 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 서비스를 호스트하는 응용 프로그램이 포함된 작업자 프로세스의 활성화 및 수명을 관리합니다. WAS 프로세스 모델은 HTTP에 대한 종속성을 제거하여 HTTP 서버의 [!INCLUDE[iis601](../../../../includes/iis601-md.md)] 프로세스 모델을 일반화합니다. 이렇게 하면 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 서비스가 메시지 기반 활성화를 지원하고 지정된 컴퓨터에서 여러 응용 프로그램을 호스트하는 기능을 제공하는 호스팅 환경에서 Net.TCP와 같은 HTTP 프로토콜 및 HTTP가 아닌 프로토콜을 모두 사용할 수 있습니다.  
+Windows 프로세스 활성화 서비스 (WAS) 정품 인증 및 Windows Communication Foundation (WCF) 서비스를 호스트 응용 프로그램을 포함 하는 작업자 프로세스의 수명을 관리 합니다. WAS 프로세스 모델은 HTTP에 대한 종속성을 제거하여 HTTP 서버의 [!INCLUDE[iis601](../../../../includes/iis601-md.md)] 프로세스 모델을 일반화합니다. WCF 서비스가 HTTP 및 메시지 기반 활성화를 지원 하 고 많은 수의 지정된 된 컴퓨터에서 응용 프로그램을 호스트 하는 기능을 제공 하는 호스팅 환경에서 Net.TCP와 같은 비-HTTP 프로토콜을 모두 사용할 수 있습니다.  
   
- 빌드에 대 한 자세한 내용은 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 호스팅 환경에는 WAS에서 실행 되는 서비스 참조 [하는 방법: WAS에서 WCF 서비스 호스팅](../../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-was.md)합니다.  
+ WAS 호스팅 환경에서 실행 되는 WCF 서비스를 구축 하는 방법에 대 한 자세한 내용은 참조 [하는 방법: WAS에서 WCF 서비스 호스팅](../../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-was.md)합니다.  
   
  WAS 프로세스 모델에서는 보다 강력하고, 보다 집중적으로 관리할 수 있으며, 리소스를 효율적으로 사용하는 방식으로 응용 프로그램을 호스트할 수 있도록 여러 기능을 제공합니다.  
   

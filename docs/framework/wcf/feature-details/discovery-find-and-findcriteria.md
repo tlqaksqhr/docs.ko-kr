@@ -1,26 +1,12 @@
 ---
 title: 찾기 및 FindCriteria
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 99016fa4-1778-495b-b4cc-0e22fbec42c6
-caps.latest.revision: 6
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 17ca5e12390e33525f0223917e4c72556a2a2ec7
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 70739647ac5904159b71121e86aa98e92981d4ab
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="discovery-find-and-findcriteria"></a>찾기 및 FindCriteria
 찾기 작업은 하나 이상의 서비스를 검색하는 클라이언트에 의해 시작되며 검색 작업의 주요 동작 중 하나입니다. 찾기를 수행하면 네트워크를 통해 WS-Discovery Probe 메시지가 보내집니다. 지정된 조건과 일치하는 서비스는 WS-Discovery ProbeMatch 메시지를 사용하여 응답합니다. 검색 메시지에 대 한 자세한 내용은 참조는 [Ws-discovery 사양의](http://go.microsoft.com/fwlink/?LinkID=122347)합니다.  
@@ -33,7 +19,7 @@ ms.lasthandoff: 04/30/2018
   
  검색 조건은 다음과 같습니다.  
   
--   <xref:System.ServiceModel.Discovery.Configuration.ContractTypeNameElement> - 선택적 요소로서, 검색할 서비스의 계약 이름이거나 서비스를 검색할 때 일반적으로 사용되는 조건입니다. 둘 이상의 계약 이름이 지정되면 모든 계약과 일치하는 서비스 끝점만 응답합니다. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서는 하나의 끝점이 하나의 계약만 지원할 수 있습니다.  
+-   <xref:System.ServiceModel.Discovery.Configuration.ContractTypeNameElement> - 선택적 요소로서, 검색할 서비스의 계약 이름이거나 서비스를 검색할 때 일반적으로 사용되는 조건입니다. 둘 이상의 계약 이름이 지정되면 모든 계약과 일치하는 서비스 끝점만 응답합니다. wcf에서 끝점 수 하나의 계약만 지원할 참고 합니다.  
   
 -   <xref:System.ServiceModel.Discovery.Configuration.ScopeElement> - 선택적 요소로서, 개별 서비스 끝점을 분류하는 데 사용되는 절대 URI입니다. 여러 끝점이 동일한 계약을 노출하는 상태에서 끝점의 하위 집합을 검색하려는 경우 이 조건을 사용할 수 있습니다. 둘 이상의 범위가 지정되면 모든 범위와 일치하는 서비스 끝점만 응답합니다.  
   

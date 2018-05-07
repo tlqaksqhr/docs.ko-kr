@@ -1,24 +1,12 @@
 ---
-title: "인터넷 정보 서비스 호스팅 지침"
-ms.custom: 
+title: 인터넷 정보 서비스 호스팅 지침
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 959a21c8-9d9d-4757-b255-4e57793ae9d6
-caps.latest.revision: "30"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: de7dc897aa435d62c04c2e6a3ca82adf3a637a2a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 5d315fa482e423461eab171a19746b6ea792aac5
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="internet-information-service-hosting-instructions"></a>인터넷 정보 서비스 호스팅 지침
 IIS(인터넷 정보 서비스)에서 호스팅하는 샘플을 실행하려면 IIS가 올바르게 설치되어 있고 실행 중인지 확인해야 합니다.  

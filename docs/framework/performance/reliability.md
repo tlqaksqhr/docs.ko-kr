@@ -1,13 +1,6 @@
 ---
-title: "안정성"
-ms.custom: 
+title: 안정성
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - SQL Server [.NET Framework]
 - managed code, reliability
@@ -15,16 +8,13 @@ helpviewer_keywords:
 - writing reliable code
 - code, reliability
 ms.assetid: 294aa306-0afe-4cbe-b397-86ba9f1860f8
-caps.latest.revision: "9"
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 3329bff14d2ab395fecfde0f26942b7cb1b9640e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 3b00ba0fdf732a864fb4fb757c6012a3d36740b2
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="reliability"></a>안정성
 SQL Server와 같은 서버 환경에서 실행되는 코드를 비동기 예외로부터 보호하는 것이 중요합니다. 여기에서 설명한 대로 안정성은 SQL Server에는 특별하지 않지만 .NET Framework 버전 2.0 환경에서 실행되는 모든 호스트용으로 신뢰할 수 있는 코드를 작성할 때는 중요합니다. 그러나 SQL Server는 버전 2.0의 새로운 안정성 기능을 광범위하게 이용하는 첫 번째 서비스이므로 예제로 사용됩니다.  

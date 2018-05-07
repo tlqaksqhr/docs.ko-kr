@@ -1,30 +1,18 @@
 ---
-title: "개념적 개요"
-ms.custom: 
+title: 개념적 개요
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - WCF [WCF], concepts
 - Windows Communication Foundation [WCF], concepts
 ms.assetid: 503fae4b-014c-44df-a9c7-c76ec4ed4229
-caps.latest.revision: "24"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 837ba9cbc5885c5d586ee1d65627b2d1424b4924
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 93c0411c8d261e40bd4e8f1cd11d8a51d4f0edb4
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="conceptual-overview"></a>개념적 개요
-이 항목에서는 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 메시징 시스템에 대한 정보와 이 시스템을 사용할 수 있도록 지원하는 클래스에 대한 정보를 요약하여 설명합니다.  
+이 항목에서는 메시징 시스템 및 클래스를 사용할 수 있도록 Windows Communication Foundation (WCF)에 대 한 정보를 요약 합니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
  [Windows Communication Foundation 정의](../../../docs/framework/wcf/whats-wcf.md)  

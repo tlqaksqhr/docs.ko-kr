@@ -1,14 +1,6 @@
 ---
-title: "ICorProfilerInfo4 인터페이스"
-ms.custom: 
+title: ICorProfilerInfo4 인터페이스
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICorProfilerInfo4
 api_location:
@@ -22,17 +14,13 @@ helpviewer_keywords:
 ms.assetid: 80a5308e-c22f-4201-ba89-31cc8562515b
 topic_type:
 - apiref
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 83629d0fc8288d118ec31c38473cb63335bb1d48
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: f452a3324365fb23e1affc11dbdb2ede15346010
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="icorprofilerinfo4-interface"></a>ICorProfilerInfo4 인터페이스
 코드 프로파일러가 사용 하는 공용 언어 런타임 (CLR) 이벤트 모니터링을 제어 하 고 요청 정보와 통신 하는 메서드를 제공 합니다. 이어야 합니다. `ICorProfilerInfo4` 인터페이스는 다른 형식의 확장 `ICorProfilerInfo` 인터페이스입니다. 에 추가 된 시간 (JIT) 다시 컴파일이 지원 하기 위해 새로운 메서드를 제공는 [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)]합니다.  
@@ -62,7 +50,7 @@ ms.lasthandoff: 12/22/2017
   
  **라이브러리:** CorGuids.lib  
   
- **.NET framework 버전:**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **.NET framework 버전:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
 ## <a name="see-also"></a>참고 항목  
  [프로파일링 인터페이스](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)  

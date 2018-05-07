@@ -1,24 +1,12 @@
 ---
-title: "TCP 활성화"
-ms.custom: 
+title: TCP 활성화
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: bf8c215c-0228-4f4f-85c2-e33794ec09a7
-caps.latest.revision: "34"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: e12f6df86e5ee24152fe0ec7835301c100e4ba19
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 3627307c74604f30c77927067d302baf41b1c536
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tcp-activation"></a>TCP 활성화
 이 샘플에서는 net.tcp 프로토콜을 통해 통신하는 서비스를 활성화하기 위해 WAS(Windows Process Activation Service)를 사용하는 서비스를 호스트하는 방법을 보여 줍니다. 이 샘플에 따라는 [시작](../../../../docs/framework/wcf/samples/getting-started-sample.md)합니다.  
@@ -31,7 +19,7 @@ ms.lasthandoff: 12/22/2017
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  이 디렉터리가 없으면 [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4(.NET Framework 4용 WCF(Windows Communication Foundation) 및 WF(Windows Workflow Foundation) 샘플)](http://go.microsoft.com/fwlink/?LinkId=150780) 로 이동하여 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 및 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플을 모두 다운로드하세요. 이 샘플은 다음 디렉터리에 있습니다.  
+>  이 디렉터리가로 이동 [Windows Communication Foundation (WCF) 및.NET Framework 4에 대 한 Windows WF (Workflow Foundation) 샘플](http://go.microsoft.com/fwlink/?LinkId=150780) 모든 Windows Communication Foundation (WCF)를 다운로드 하 고 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플. 이 샘플은 다음 디렉터리에 있습니다.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\Hosting\WASHost\TCPActivation`  
   
@@ -186,7 +174,7 @@ Press <ENTER> to terminate client.
         ```  
   
         > [!NOTE]
-        >  이 명령은 줄 바꿈 없이 한 줄로 입력해야 합니다. 이 명령을 실행하면 http://localhost/servicemodelsamples와 net.tcp://localhost/servicemodelsamples를 모두 사용하여 /servicemodelsamples 응용 프로그램에 액세스할 수 있습니다.  
+        >  이 명령은 줄 바꿈 없이 한 줄로 입력해야 합니다. 이 명령은 /servicemodelsamples 응용 프로그램에 모두 사용 하 여 액세스를 활성화 http://localhost/servicemodelsamples 및 net.tcp://localhost/servicemodelsamples 합니다.  
   
 4.  C# 또는 Visual Basic .NET 버전의 솔루션을 빌드하려면 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)의 지침을 따릅니다.  
   

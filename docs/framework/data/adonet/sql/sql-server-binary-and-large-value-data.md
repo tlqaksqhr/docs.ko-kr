@@ -1,24 +1,12 @@
 ---
-title: "SQL Server 이진 및 큰 값 데이터"
-ms.custom: 
+title: SQL Server 이진 및 큰 값 데이터
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: e00827b3-7511-4b2d-91d7-851ca86cc6b5
-caps.latest.revision: "5"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 5ce85e61ac001ec07c14cebbc8d07e6c031498fc
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: c0202f6dc17d36fafb28206e17b71fc6d68d88c5
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="sql-server-binary-and-large-value-data"></a>SQL Server 이진 및 큰 값 데이터
 SQL Server에서는 `max`, `varchar` 및 `nvarchar` 데이터 형식의 저장소 용량을 확장하는 `varbinary` 지정자를 지원합니다. `varchar(max)``nvarchar(max)`, 및 `varbinary(max)` 이라고 *큰 값 데이터 형식*합니다. 큰 값 데이터 형식을 사용하면 데이터를 최대 2^31-1바이트까지 저장할 수 있습니다.  

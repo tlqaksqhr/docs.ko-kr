@@ -1,14 +1,6 @@
 ---
 title: 런타임 프로파일링
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - performance counters
 - common language runtime, profiling
@@ -19,17 +11,13 @@ helpviewer_keywords:
 - profiling applications
 - Performance Console
 ms.assetid: ccd68284-f3a8-47b8-bc3f-92e5fe3a1640
-caps.latest.revision: ''
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 4a8f3af4878e0f6911fcc55ec76b26649d517b3b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: fec1fb5a2dc3d6589f49d4a5864dabfb03a5477c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="runtime-profiling"></a>런타임 프로파일링
 프로파일링은 모든 개발 또는 배포 시나리오에서 성능 데이터를 수집하는 방법입니다. 이 섹션은 응용 프로그램 성능에 대한 정보를 수집하려는 개발자 및 시스템 관리자를 위한 것입니다.  
@@ -51,9 +39,9 @@ ms.lasthandoff: 12/22/2017
   
 5.  보려는 성능 카운터를 클릭합니다.  
   
-6.  **선택한 개체의 인스턴스** 목록 상자에서 **\<All instances>**를 클릭하여 공용 언어 런타임에 대한 성능 카운터를 전역적으로(시스템 전체에서) 모니터링하도록 지정합니다.  
+6.  **선택한 개체의 인스턴스** 목록 상자에서 **\<All instances>** 를 클릭하여 공용 언어 런타임에 대한 성능 카운터를 전역적으로(시스템 전체에서) 모니터링하도록 지정합니다.  
   
-     또는  
+     -또는-  
   
      **선택한 개체의 인스턴스** 목록 상자에서 응용 프로그램 이름을 클릭하여 해당 응용 프로그램에 대한 성능 카운터를 모니터링합니다.  
   

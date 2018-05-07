@@ -1,33 +1,19 @@
 ---
 title: WCF 기능 정보
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - features [WCF]
 - WCF, features
 - Windows Communication Foundation, features
 ms.assetid: 9b4368ca-0bd3-40dc-a539-bcd5779cee5f
-caps.latest.revision: 22
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 91b22cbcabba95d8cc91ffbc0b74b51e61dae393
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: c97bd891f0bbb58f8b267296b9b53e00a5486622
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="wcf-feature-details"></a>WCF 기능 정보
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]를 사용하면 응용 프로그램의 메시징 기능을 제어할 수 있습니다. 이 섹션의 항목에서는 사용 가능한 기능에 대해 자세히 설명합니다. 기본 프로그래밍에 대 한 자세한 내용은 참조 [기본 WCF 프로그래밍](../../../../docs/framework/wcf/basic-wcf-programming.md)합니다.  
+Windows Communication Foundation (WCF) 응용 프로그램의 메시징 기능을 제어할 수 있습니다. 이 섹션의 항목에서는 사용 가능한 기능에 대해 자세히 설명합니다. 기본 프로그래밍에 대 한 자세한 내용은 참조 [기본 WCF 프로그래밍](../../../../docs/framework/wcf/basic-wcf-programming.md)합니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
  [워크플로 서비스](../../../../docs/framework/wcf/feature-details/workflow-services.md)  
@@ -40,7 +26,7 @@ ms.lasthandoff: 04/30/2018
  상호 운용성 및 향후 호환성에 맞게 데이터의 serialization을 수행할 수 있는 방법에 대해 설명합니다.  
   
  [세션, 인스턴스 및 동시성](../../../../docs/framework/wcf/feature-details/sessions-instancing-and-concurrency.md)  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]의 인스턴스 만들기 및 세션 모드와 응용 프로그램에 적합한 모드를 선택하는 방법에 대해 설명합니다.  
+ WCF 및 응용 프로그램에 적합 한 모드를 선택 하는 방법의 인스턴스 만들기 및 세션 모드에 설명 합니다.  
   
  [전송](../../../../docs/framework/wcf/feature-details/transports.md)  
  채널 스택의 가장 낮은 수준인 전송 수준을 구성하는 방법에 대해 설명합니다.  
@@ -52,7 +38,7 @@ ms.lasthandoff: 04/30/2018
  필요한 경우 롤백할 수 있는 트랜잭션 처리된 작업을 만드는 방법에 대해 설명합니다.  
   
  [보안](../../../../docs/framework/wcf/feature-details/security.md)  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 보안을 통해 기밀성 및 무결성이 있는 응용 프로그램을 만드는 방법에 대해 설명합니다. 또한 감사 기능인 인증 및 권한 부여를 사용할 수 있습니다.  
+ WCF 보안 기밀성과 무결성이 있는 응용 프로그램을 만들 수 있습니다 방법을 설명 합니다. 또한 감사 기능인 인증 및 권한 부여를 사용할 수 있습니다.  
   
  [피어 투 피어 네트워킹](../../../../docs/framework/wcf/feature-details/peer-to-peer-networking.md)  
  피어 서비스 및 클라이언트를 만드는 방법에 대해 설명합니다.  
@@ -67,16 +53,16 @@ ms.lasthandoff: 04/30/2018
  호스팅에 대해 설명합니다. 서비스는 다른 응용 프로그램에 의해 호스팅되거나 자체적으로 호스팅될 수 있습니다.  
   
  [상호 운용성 및 통합](../../../../docs/framework/wcf/feature-details/interoperability-and-integration.md)  
- COM+에서 호스팅되는 구성 요소 기반 응용 프로그램 논리에 상당한 노력을 기울인 경우 기존 논리를 다시 작성하지 않고 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]를 사용하여 기존 논리를 확장하는 방법에 대해 설명합니다.  
+ 확장 하 여 기존 논리는 COM +에서 호스팅되는 구성 요소 기반 응용 프로그램 논리에 상당한 투자 한 경우 다시 작성 하지 WCF를 사용 하는 방법을 설명 합니다.  
   
  [WCF 웹 HTTP 프로그래밍 모델](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)  
- 개발자가 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 서비스 작업을 비SOAP 끝점에 노출할 수 있는 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 웹 프로그래밍 모델에 대해 설명합니다.  
+ WCF 웹 프로그래밍 모델 개발자가 WCF 서비스 작업을 비 SOAP 끝점을 노출할 수 있는 설명 합니다.  
   
  [WCF 배포](../../../../docs/framework/wcf/feature-details/wcf-syndication.md)  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 서비스에서 배포 피드를 손쉽게 노출하기 위한 지원에 대해 설명합니다.  
+ 쉽게 WCF 서비스에서 배포 피드를 노출 하는 지원을 설명 합니다.  
   
  [AJAX 통합 및 JSON 지원](../../../../docs/framework/wcf/feature-details/ajax-integration-and-json-support.md)  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 서비스에서 AJAX 클라이언트에 작업을 노출할 수 있도록 ASP.NET AJAX(Asynchronous JavaScript and XML) 및 JSON(JavaScript Object Notation) 데이터 형식에 대한 지원을 설명합니다.  
+ ASP.NET Asynchronous JavaScript, XML (AJAX) 및 개체 JSON (JavaScript Notation) 데이터 형식을 WCF 서비스를 허용 하도록 AJAX 클라이언트에 작업을 노출할 수에 대 한 지원을 설명 합니다.  
   
  [WCF 검색](../../../../docs/framework/wcf/feature-details/wcf-discovery.md)  
  WS-Discovery 프로토콜을 사용하여 런타임에 상호 운용 가능한 방식으로 서비스를 검색할 수 있도록 하는 지원 기능에 대해 설명합니다.  

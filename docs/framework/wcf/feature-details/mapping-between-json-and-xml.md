@@ -1,35 +1,23 @@
 ---
-title: "JSON과 XML 간의 매핑"
-ms.custom: 
+title: JSON과 XML 간의 매핑
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 22ee1f52-c708-4024-bbf0-572e0dae64af
-caps.latest.revision: "10"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 770be9ea5327b32286de64207a3cf07bca7449c6
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: db34161ad3e2f7d2c9737e6a456b27bd70c5ebfb
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="mapping-between-json-and-xml"></a>JSON과 XML 간의 매핑
-<xref:System.Runtime.Serialization.Json.JsonReaderWriterFactory>에서 생성된 판독기 및 작성기는 JSON(JavaScript Object Notation) 콘텐츠를 통해 XML API를 제공합니다. JSON은 JavaScript 개체 리터럴의 하위 집합을 사용하여 데이터를 인코딩합니다. 이 팩터리에서 생성된 판독기와 작성기는 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 또는 <xref:System.ServiceModel.Channels.WebMessageEncodingBindingElement>을 사용하여 <xref:System.ServiceModel.WebHttpBinding> 응용 프로그램에서 JSON 콘텐츠를 보내고 받을 때도 사용됩니다.  
+<xref:System.Runtime.Serialization.Json.JsonReaderWriterFactory>에서 생성된 판독기 및 작성기는 JSON(JavaScript Object Notation) 콘텐츠를 통해 XML API를 제공합니다. JSON은 JavaScript 개체 리터럴의 하위 집합을 사용하여 데이터를 인코딩합니다. 판독기와 작성기가 팩터리에서 생성 된 JSON 콘텐츠를 하는 경우에 사용 됩니다 사용 하 여 Windows Communication Foundation (WCF) 응용 프로그램에서 보내거나 받는 <xref:System.ServiceModel.Channels.WebMessageEncodingBindingElement> 또는 <xref:System.ServiceModel.WebHttpBinding>합니다.  
   
  JSON 판독기는 JSON 콘텐츠를 사용하여 초기화될 때 텍스트 XML 판독기가 XML의 인스턴스에 대해 수행하는 방식과 같은 방식으로 동작합니다. JSON 작성기는 텍스트 XML 판독기에서 특정 XML 인스턴스를 생성하는 호출 시퀀스가 제공될 때 JSON 콘텐츠를 작성합니다. 고급 시나리오에서 사용할 XML의 이 인스턴스와 JSON 콘텐츠 간 매핑은 이 항목에서 설명합니다.  
   
- 내부적으로 JSON은 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서 처리되면 XML infoset으로 표시됩니다. 일반적으로 매핑은 논리적인 표현일 뿐이므로 이러한 내부 표현에 관여할 필요가 없습니다. JSON은 실제로 메모리의 XML로 변환되거나 XML에서 JSON으로 변환되지 않습니다. 매핑이란 XML API를 사용하여 JSON 콘텐츠에 액세스하는 것을 의미합니다.  
+ 내부적으로 JSON WCF에 의해 처리 될 때 XML infoset으로 표현 됩니다. 일반적으로 매핑은 논리적인 표현일 뿐이므로 이러한 내부 표현에 관여할 필요가 없습니다. JSON은 실제로 메모리의 XML로 변환되거나 XML에서 JSON으로 변환되지 않습니다. 매핑이란 XML API를 사용하여 JSON 콘텐츠에 액세스하는 것을 의미합니다.  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서 JSON을 사용하는 경우 일반적인 시나리오는 <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>가 <xref:System.ServiceModel.Description.WebScriptEnablingBehavior> 동작이나 <xref:System.ServiceModel.Description.WebHttpBehavior> 동작에 의해 적절히 자동으로 연결되는 경우입니다. <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>는 JSON과 XML infoset 간 매핑을 이해하고 직접 JSON을 처리하는 역할을 합니다. XML이 다음 매핑을 따른다는 이해를 바탕으로 XML 판독기나 작성기에 <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>를 사용할 수 있습니다.  
+ 일반적인 시나리오는 WCF에서 JSON을 사용 하는 <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> 하 여 자동으로 연결는 <xref:System.ServiceModel.Description.WebScriptEnablingBehavior> 동작 또는 <xref:System.ServiceModel.Description.WebHttpBehavior> 적절 한 경우의 동작입니다. <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>는 JSON과 XML infoset 간 매핑을 이해하고 직접 JSON을 처리하는 역할을 합니다. XML이 다음 매핑을 따른다는 이해를 바탕으로 XML 판독기나 작성기에 <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>를 사용할 수 있습니다.  
   
- 고급 시나리오에서 다음 매핑에 직접 액세스해야 할 수 있습니다. 이러한 경우는 <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>를 사용하지 않고 사용자 지정 방식으로 JSON을 serialize 및 deserialize하거나 JSON이 포함된 메시지의 <xref:System.ServiceModel.Channels.Message> 형식을 직접 처리할 때 발생합니다. JSON-XML 매핑은 메시지 로깅에도 사용됩니다. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서 메시지 로깅 기능을 사용할 때 JSON 메시지는 다음 단원에 설명된 매핑에 따라 XML로 기록됩니다.  
+ 고급 시나리오에서 다음 매핑에 직접 액세스해야 할 수 있습니다. 이러한 경우는 <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>를 사용하지 않고 사용자 지정 방식으로 JSON을 serialize 및 deserialize하거나 JSON이 포함된 메시지의 <xref:System.ServiceModel.Channels.Message> 형식을 직접 처리할 때 발생합니다. JSON-XML 매핑은 메시지 로깅에도 사용됩니다. Wcf에서 메시지 로깅 기능을 사용할 때 JSON 메시지는 다음 섹션에 설명 된 매핑에 따라 XML로 기록 됩니다.  
   
  매핑에 대한 개념을 명확히 하기 위해 다음 예제가 JSON 문서에 포함되어 있습니다.  
   
@@ -46,7 +34,7 @@ ms.lasthandoff: 12/22/2017
 </root>  
 ```  
   
- 또한 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서 예제의 JSON 메시지를 받고 기록한 경우에는 앞의 로그에서 XML 조각을 확인할 수 있습니다.  
+ 또한 예제의 JSON 메시지를 WCF에서 수신 하 고 기록 하는 경우에 앞의 로그에서 XML 조각을 볼 수 있습니다.  
   
 ## <a name="mapping-between-json-and-the-xml-infoset"></a>JSON과 XML Infoset 간의 매핑  
  공식적으로, 간에 매핑이 일어납니다 JSON에 설명 된 대로 [RFC 4627](http://go.microsoft.com/fwlink/?LinkId=98808) (있는 경우 제외 특정 제한 사항을 완화 하 고 특정 추가 기타 제한 사항) 및 XML infoset (및 하지 텍스트 XML)으로 설명 된 [XML 정보 설정](http://go.microsoft.com/fwlink/?LinkId=98809) 합니다. 이 항목의 정의 대 한 참조 *정보 항목* 및 [대괄호] 안에 있는 필드입니다.  
@@ -105,7 +93,7 @@ ms.lasthandoff: 12/22/2017
   
 -   아래에 설명된 데이터 계약 이름 특성("__type"). 이 특성은 JSON 형식 특성도 있고 해당 [normalized value]가 "object"인 경우에만 표시될 수 있습니다. 이 특성은 파생 형식이 serialize되고 기본 형식이 필요한 다형 사례처럼 `DataContractJsonSerializer`에서 데이터 계약 형식 정보를 유지하는 데 사용됩니다. `DataContractJsonSerializer`로 작업하지 않는 경우 대부분 이 특성이 무시됩니다.  
   
--   [in-scope namespaces]에는 infoset 사양에 지정된 대로 "http://www.w3.org/XML/1998/namespace"에 대한 "xml" 바인딩이 포함되어 있습니다.  
+-   [범위 내의 네임 스페이스]로 한 "xml" 바인딩이 포함 "http://www.w3.org/XML/1998/namespace"는 infoset 사양에 지정 된 대로 합니다.  
   
 -   [children], [attributes] 및 [in-scope namespaces]에는 앞에서 지정한 것 이외의 항목이 없어야 하고, [namespace attributes]에는 멤버가 없어야 하지만 JSON에서 매핑된 XML을 읽을 때는 이러한 사항을 고려하지 마십시오.  
   
@@ -209,7 +197,7 @@ ms.lasthandoff: 12/22/2017
  `{"myLocalName1":"myValue1","myLocalName2":2,"myLocalName3":{"myNestedName1":true,"myNestedName2":null}}`  
   
 > [!NOTE]
->  앞의 매핑에는 XML 인코딩 단계가 없습니다. 따라서 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]는 키 이름의 모든 문자가 XML 요소 이름에서 유효한 문자인 JSON 문서만 지원합니다. 예를 들어 JSON 문서 {"<":"a"}는 <가 XML 요소에 유효한 이름이 아니므로 지원되지 않습니다.  
+>  앞의 매핑에는 XML 인코딩 단계가 없습니다. 따라서 WCF 여기서 키 이름의 모든 문자는 XML 요소 이름에 사용할 수 있는 문자 JSON 문서만 지원 합니다. 예를 들어 JSON 문서 {"<":"a"}는 <가 XML 요소에 유효한 이름이 아니므로 지원되지 않습니다.  
   
  반대 상황(XML에서 유효하지만 JSON에서는 유효하지 않은 문자)의 경우 앞의 매핑에 JSON 이스케이프/이스케이프 취소 단계가 포함되므로 문제가 발생하지 않습니다.  
   

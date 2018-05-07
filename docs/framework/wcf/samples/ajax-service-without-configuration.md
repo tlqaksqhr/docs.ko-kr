@@ -1,29 +1,15 @@
 ---
 title: 구성을 사용하지 않고 AJAX 서비스 만들기
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: e6db7acd-5679-45d4-b98a-8449c6873838
-caps.latest.revision: 23
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: ae16dc38c5508eac4a94d464e818f0b97d3b9e3b
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
-ms.translationtype: MT
+ms.openlocfilehash: 9e3ddd451bffc4135f236164a74fe68a63a243a8
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ajax-service-without-configuration"></a>구성을 사용하지 않고 AJAX 서비스 만들기
-이 샘플에서는 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]를 사용하여 어떠한 구성 설정도 없이 ASP.NET AJAX(Asynchronous JavaScript and XML) 서비스(웹 브라우저 클라이언트에서 JavaScript 코드를 사용하여 액세스할 수 있는 서비스)를 만드는 방법을 보여 줍니다. 이 서비스는 .svc 파일의 특수한 구문을 사용하여 AJAX 끝점을 사용하도록 자동으로 설정합니다.  
+이 샘플에서는 구성을 사용 하지 않고 기본 ASP.NET Asynchronous JavaScript and XML (AJAX) 서비스 (웹 브라우저 클라이언트에서 JavaScript 코드를 사용 하 여 액세스할 수 있는 서비스)를 만들려면 Windows Communication Foundation (WCF)를 사용 하는 방법을 보여 줍니다. 설정. 이 서비스는 .svc 파일의 특수한 구문을 사용하여 AJAX 끝점을 사용하도록 자동으로 설정합니다.  
   
  [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]의 AJAX 지원은 `ScriptManager` 컨트롤을 통해 ASP.NET AJAX와 함께 사용되도록 최적화되었습니다. 사용 하는 예제에 대 한 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] ASP.NET AJAX와 함께 참조는 [Ajax 샘플과](http://msdn.microsoft.com/library/f3fa45b3-44d5-4926-8cc4-a13c30a3bf3e)합니다.  
   
@@ -48,7 +34,7 @@ ms.lasthandoff: 04/27/2018
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  이 디렉터리가 없으면 [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4(.NET Framework 4용 WCF(Windows Communication Foundation) 및 WF(Windows Workflow Foundation) 샘플)](http://go.microsoft.com/fwlink/?LinkId=150780) 로 이동하여 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 및 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플을 모두 다운로드하세요. 이 샘플은 다음 디렉터리에 있습니다.  
+>  이 디렉터리가로 이동 [Windows Communication Foundation (WCF) 및.NET Framework 4에 대 한 Windows WF (Workflow Foundation) 샘플](http://go.microsoft.com/fwlink/?LinkId=150780) 모든 Windows Communication Foundation (WCF)를 다운로드 하 고 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플. 이 샘플은 다음 디렉터리에 있습니다.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Ajax\ConfigFreeAjaxService`  
   

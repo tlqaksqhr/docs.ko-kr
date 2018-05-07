@@ -1,23 +1,12 @@
 ---
-title: "리소스 관리자 구현"
-ms.custom: 
+title: 리소스 관리자 구현
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: d5c153f6-4419-49e3-a5f1-a50ae4c81bf3
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 25a45626564bb58950b251ae5e9041609d96a207
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: f3e29dae095fbe56181cf7b67787c1044efa07ae
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="implementing-a-resource-manager"></a>리소스 관리자 구현
 트랜잭션에 사용되는 각 리소스는 리소스 관리자에 의해 관리되고, RM의 작업은 트랜잭션 관리자에 의해 조정됩니다. 리소스 관리자는 트랜잭션 관리자와 함께 작업하여 응용 프로그램에 원자성 및 격리를 보장합니다. Microsoft SQL Server, 지속적인 메시지 큐, 메모리 내 해시 테이블 등이 모두 리소스 관리자의 예입니다.  

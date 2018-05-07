@@ -1,24 +1,12 @@
 ---
-title: "알려진 유형"
-ms.custom: 
+title: 알려진 유형
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 88d83720-ca38-4b2c-86a6-f149ed1d89ec
-caps.latest.revision: "20"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: e0359e3094b86e3433cebee7c835c7eecec16fe0
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 003f2e39804bb393c9d8c54a6fc208fdd1b22e97
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="known-types"></a>알려진 유형
 이 샘플에서는 파생 형식에 대한 정보를 데이터 계약에서 지정하는 방법을 보여 줍니다. 데이터 계약을 사용하면 서비스와 구조적 데이터를 주고 받을 수 있습니다. 개체 지향 프로그래밍에서는 다른 형식에서 상속되는 형식을 원래 형식 대신에 사용할 수 있습니다. 서비스 지향 프로그래밍에서는 형식이 아닌 스키마가 전달되므로 형식 간의 관계가 유지되지 않습니다. <xref:System.Runtime.Serialization.KnownTypeAttribute> 특성을 사용하면 파생 형식에 대한 정보를 데이터 계약에 포함할 수 있습니다. 이 메커니즘이 사용되지 않을 경우 기본 형식이 필요한 곳에서 파생 형식을 주고 받을 수 없습니다.  
@@ -178,7 +166,7 @@ No magnitude was sent from the service
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  이 디렉터리가 없으면 [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4(.NET Framework 4용 WCF(Windows Communication Foundation) 및 WF(Windows Workflow Foundation) 샘플)](http://go.microsoft.com/fwlink/?LinkId=150780) 로 이동하여 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 및 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플을 모두 다운로드하세요. 이 샘플은 다음 디렉터리에 있습니다.  
+>  이 디렉터리가로 이동 [Windows Communication Foundation (WCF) 및.NET Framework 4에 대 한 Windows WF (Workflow Foundation) 샘플](http://go.microsoft.com/fwlink/?LinkId=150780) 모든 Windows Communication Foundation (WCF)를 다운로드 하 고 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플. 이 샘플은 다음 디렉터리에 있습니다.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Contract\Data\KnownTypes`  
   

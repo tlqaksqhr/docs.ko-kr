@@ -1,27 +1,15 @@
 ---
-title: "기본 HTTP 서비스"
-ms.custom: 
+title: 기본 HTTP 서비스
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 27048b43-8a54-4f2a-9952-594bbfab10ad
-caps.latest.revision: "9"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 687eba2a346b3f554c8a7618bebe2e9c04f4d5b5
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 0d00ee21fa328c32549f89d8d5fc4c767f64582c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="basic-http-service"></a>기본 HTTP 서비스
-이 샘플에는 HTTP 및 RPC 기반 서비스-일반적으로 "POX" (Plain Old XML) 서비스 라고 하를 사용 하 여 구현 하는 방법을 보여 줍니다는 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] REST 프로그래밍 모델입니다. 이 샘플은 자체 호스팅되는 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] HTTP 서비스(Service.cs)와 서비스를 만들고 호출하는 콘솔 응용 프로그램(Program.cs)의 두 구성 요소로 구성되어 있습니다.  
+이 샘플에는 많이 Windows Communication Foundation (WCF) REST 프로그래밍 모델을 사용 하 여 "POX" (Plain Old XML) 서비스 라고 하는 HTTP 기반, RPC 기반 서비스를 구현 하는 방법을 보여 줍니다. 이 샘플은 자체 호스팅되는 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] HTTP 서비스(Service.cs)와 서비스를 만들고 호출하는 콘솔 응용 프로그램(Program.cs)의 두 구성 요소로 구성되어 있습니다.  
   
 ## <a name="sample-details"></a>샘플 세부 정보  
  [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 서비스에서는 `EchoWithGet` 및 `EchoWithPost`라는 두 작업을 노출하며 두 번째 작업은 입력으로 전달된 문자열을 반환합니다.  
@@ -49,7 +37,7 @@ ms.lasthandoff: 12/22/2017
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  이 디렉터리가 없으면 [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4(.NET Framework 4용 WCF(Windows Communication Foundation) 및 WF(Windows Workflow Foundation) 샘플)](http://go.microsoft.com/fwlink/?LinkId=150780) 로 이동하여 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 및 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플을 모두 다운로드하세요. 이 샘플은 다음 디렉터리에 있습니다.  
+>  이 디렉터리가로 이동 [Windows Communication Foundation (WCF) 및.NET Framework 4에 대 한 Windows WF (Workflow Foundation) 샘플](http://go.microsoft.com/fwlink/?LinkId=150780) 모든 Windows Communication Foundation (WCF)를 다운로드 하 고 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플. 이 샘플은 다음 디렉터리에 있습니다.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Web\BasicHttpService`  
   

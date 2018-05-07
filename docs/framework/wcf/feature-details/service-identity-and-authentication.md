@@ -1,31 +1,17 @@
 ---
 title: 서비스 ID 및 인증
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - authentication [WCF], specifying the identity of a service
 ms.assetid: a4c8f52c-5b30-45c4-a545-63244aba82be
-caps.latest.revision: 32
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 5bd550b7408e9db00daf7793cd0a7f1261e21ccf
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 21184098f90be3b64cfccd5ab98a1824cee50e48
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="service-identity-and-authentication"></a>서비스 ID 및 인증
 서비스의 *끝점 id*서비스 설명 언어 WSDL (웹 서비스)에서 생성 된 값입니다. 모든 클라이언트에 전파되는 이 값은 서비스를 인증하는 데 사용합니다. 클라이언트가 끝점에 대한 통신을 시작하고 서비스가 클라이언트에 대해 인증되면 클라이언트는 끝점 ID 값과 끝점 인증 프로세스에서 반환된 실제 값을 비교합니다. 두 값이 일치하는 경우 클라이언트는 예상 서비스 끝점에 연결됩니다. 이 역할에 대 한 보호 *피싱* 하면 클라이언트가 악성 서비스에서 호스팅된 끝점에 리디렉션되지 않도록 하 여 합니다.  
@@ -35,7 +21,7 @@ ms.lasthandoff: 04/30/2018
 > [!NOTE]
 >  인증을 위해 NTLM(NT LanMan)을 사용하는 경우 NTLM에서 클라이언트는 서버를 인증할 수 없기 때문에 서비스 ID가 확인되지 않습니다. NTLM은 컴퓨터가 Windows 작업 그룹의 일부이거나 Kerberos 인증을 지원하지 않는 이전 버전의 Windows를 실해하는 경우 사용됩니다.  
   
- 클라이언트가 보안 채널을 시작하여 이를 통해 메시지를 서비스에 보낼 때 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 인프라는 서비스를 인증하고 서비스 ID가 클라이언트가 사용하는 끝점 주소에 지정된 ID와 일치하는 경우에만 메시지를 보냅니다.  
+ Windows Communication Foundation (WCF) 인프라는 서비스를 인증 하 고 서비스 id에는 끝점에 지정 된 id와 일치 하는 경우에 메시지를 보냅니다 클라이언트에서 시작 하는 보안 채널을 통해 해당 서비스에 메시지를 보낼 때 클라이언트가 사용 하는 주소입니다.  
   
  다음 단계를 통해 ID 처리를 수행합니다.  
   
@@ -45,7 +31,7 @@ ms.lasthandoff: 04/30/2018
   
  클라이언트에서의 ID 처리 작업은 서비스에 대한 클라이언트 인증과 유사합니다. 보안 서비스는 클라이언트의 자격 증명이 인증될 때까지 코드를 실행하지 않습니다. 마찬가지로 서비스 메타데이터에서 미리 알려진 정보에 따라 서비스의 자격 증명이 인증될 때까지 클라이언트에서 메시지를 서비스로 보내지 않습니다.  
   
- <xref:System.ServiceModel.EndpointAddress.Identity%2A> 클래스의 <xref:System.ServiceModel.EndpointAddress> 속성은 클라이언트에서 호출한 서비스의 ID를 나타냅니다. 서비스는 메타데이터에 <xref:System.ServiceModel.EndpointAddress.Identity%2A>를 게시합니다. 클라이언트 개발자가 실행 하는 경우는 [ServiceModel Metadata 유틸리티 도구 (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) 서비스 끝점에 대해 생성 된 구성에는 서비스의 값이 포함 된 <xref:System.ServiceModel.EndpointAddress.Identity%2A> 속성입니다. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 인프라는 보안이 설정된 상태로 구성된 경우 서비스가 지정된 ID를 소유하는지 확인합니다.  
+ <xref:System.ServiceModel.EndpointAddress.Identity%2A> 클래스의 <xref:System.ServiceModel.EndpointAddress> 속성은 클라이언트에서 호출한 서비스의 ID를 나타냅니다. 서비스는 메타데이터에 <xref:System.ServiceModel.EndpointAddress.Identity%2A>를 게시합니다. 클라이언트 개발자가 실행 하는 경우는 [ServiceModel Metadata 유틸리티 도구 (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) 서비스 끝점에 대해 생성 된 구성에는 서비스의 값이 포함 된 <xref:System.ServiceModel.EndpointAddress.Identity%2A> 속성입니다. (보안 구성) 하는 경우 WCF 인프라 서비스 id를 지정 하 고 있는지 확인 합니다.  
   
 > [!IMPORTANT]
 >  메타데이터에는 서비스의 예상 ID가 포함되어 있기 때문에 서비스에 대한 HTTPS 끝점을 만드는 것과 같이 보안을 설정하여 서비스 메타데이터를 노출하는 것이 좋습니다. 자세한 내용은 참조 [하는 방법: 메타 데이터 끝점 보안](../../../../docs/framework/wcf/feature-details/how-to-secure-metadata-endpoints.md)합니다.  
@@ -75,7 +61,7 @@ ms.lasthandoff: 04/30/2018
   
   
 ## <a name="setting-identity-programmatically"></a>프로그래밍 방식으로 ID 설정  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서 자동으로 확인하므로 서비스가 명시적으로 ID를 지정할 필요는 없습니다. 그러나 필요한 경우 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서 끝점에 ID를 지정할 수 있습니다. 다음 코드에서는 특정 DNS ID를 사용하여 새 서비스 끝점을 추가합니다.  
+ 서비스 없는 id에 명시적으로 지정 하려면 WCF가 자동으로 결정 하기 때문에 있습니다. 그러나 WCF에서는 필요한 경우 끝점에 대 한 id를 지정할 수 있습니다. 다음 코드에서는 특정 DNS ID를 사용하여 새 서비스 끝점을 추가합니다.  
   
  [!code-csharp[C_Identity#5](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_identity/cs/source.cs#5)]
  [!code-vb[C_Identity#5](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_identity/vb/source.vb#5)]  
@@ -99,13 +85,13 @@ ms.lasthandoff: 04/30/2018
   
  채널이 인증을 위해 X.509 인증서를 사용하여 메시지 수준 또는 전송 수준의 SSL(Secure Sockets Layer)을 인증하도록 구성된 경우 다음 ID 값이 유효합니다.  
   
--   DNS. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]는 SSL 핸드셰이크 중에 제공된 인증서에 DNS가 포함되어 있거나 `CommonName`(CN) 특성이 클라이언트의 DNS ID에 지정된 값과 같은지 확인합니다. 이러한 검사는 서버 인증서 유효성 검사 확인 작업 이외에 추가로 수행됩니다. 기본적으로 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]는 서버 인증서가 신뢰할 수 있는 루트 기관에서 발급되었는지 확인합니다.  
+-   DNS. WCF를 사용 하면 SSL 핸드셰이크 중에 제공 된 인증서에 DNS가 포함 되어 있는지 또는 `CommonName` (CN) 특성이 클라이언트의 DNS id에 지정 된 값과 동일 합니다. 이러한 검사는 서버 인증서 유효성 검사 확인 작업 이외에 추가로 수행됩니다. 기본적으로 WCF 신뢰할 수 있는 루트 인증 기관에서 서버 인증서가 발급 있는지 확인 합니다.  
   
--   인증서. SSL 핸드셰이크 중에 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]는 원격 끝점이 ID에 지정된 정확한 인증서 값을 제공하는지 확인합니다.  
+-   인증서. SSL 핸드셰이크 중 WCF 원격 끝점이 id에 지정 된 정확한 인증서 값을 제공 하는지 확인 합니다.  
   
 -   인증서 참조. 인증서와 동일합니다.  
   
--   RSA. SSL 핸드셰이크 중에 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]는 원격 끝점이 ID에 지정된 정확한 RSA 키를 제공하는지 확인합니다.  
+-   RSA. SSL 핸드셰이크 중 WCF 원격 끝점이 id에 지정 된 정확한 RSA 키를 제공 하는지 확인 합니다.  
   
  서비스가 인증을 목적으로 Windows 자격 증명을 통해 메시지 또는 전송 수준 SSL을 사용하여 인증하고 자격 증명을 협상하는 경우 다음 ID 값이 유효합니다.  
   

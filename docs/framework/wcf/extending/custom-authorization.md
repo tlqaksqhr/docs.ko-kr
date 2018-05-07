@@ -1,24 +1,12 @@
 ---
-title: "사용자 지정 권한 부여"
-ms.custom: 
+title: 사용자 지정 권한 부여
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 4f90311a-2593-462e-9174-2f7ac78217b9
-caps.latest.revision: "9"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 35994b76498d9287f5f0c22c024afc176d1f9260
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: f89fb3c14735417f2688890eb335e9700fb99d6f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="custom-authorization"></a>사용자 지정 권한 부여
 권한 부여는 리소스 및 작업에 대한 액세스를 제어하는 프로세스입니다. 이 단원의 항목을 참조하여 서로 다른 클레임 형식 또는 정책을 구현하도록 만들 수 있습니다.  

@@ -1,33 +1,19 @@
 ---
 title: Tutorial1 시작
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - WCF [WCF], getting started
 - Windows Communication Foundation [WCF], getting started
 - getting started [WCF]
 ms.assetid: df939177-73cb-4440-bd95-092a421516a1
-caps.latest.revision: 47
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 2dbf3ddb903600df6094c8486fda7183eac2abe7
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
-ms.translationtype: MT
+ms.openlocfilehash: 4a095e5391f3b532211b82a190c7010f41283e31
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="getting-started-tutorial"></a>초보자를 위한 자습서
-이 단원에 포함된 항목에서는 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 프로그래밍 기능에 대해 간략하게 설명합니다. 이 항목 아래쪽에 나열된 순서대로 진행하세요. 이 자습서를 수행하면 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 서비스 및 클라이언트 응용 프로그램을 만드는 데 필요한 단계에 대한 기초적인 이해를 할 수 있습니다. 서비스는 하나 이상의 끝점을 노출하며 각 끝점은 하나 이상의 서비스 작업을 노출합니다. *끝점* 서비스의 서비스를 찾을 수 있는, 클라이언트는 서비스 및 기능을 정의 하는 계약와 통신 하는 방법을 설명 하는 정보를 포함 하는 바인딩을 주소를 지정 합니다. 클라이언트에 서비스에서 제공 합니다.  
+이 섹션에 포함 된 항목은 빠른 노출 하는 WCF Windows Communication Foundation () 프로그래밍 기능을 제공 하는 데 사용 됩니다. 이 항목 아래쪽에 나열된 순서대로 진행하세요. 이 자습서를 수행하면 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 서비스 및 클라이언트 응용 프로그램을 만드는 데 필요한 단계에 대한 기초적인 이해를 할 수 있습니다. 서비스는 하나 이상의 끝점을 노출하며 각 끝점은 하나 이상의 서비스 작업을 노출합니다. *끝점* 서비스의 서비스를 찾을 수 있는, 클라이언트는 서비스 및 기능을 정의 하는 계약와 통신 하는 방법을 설명 하는 정보를 포함 하는 바인딩을 주소를 지정 합니다. 클라이언트에 서비스에서 제공 합니다.  
   
  이 자습서의 항목을 순서대로 수행하면 서비스를 실행하고 클라이언트에서 서비스를 호출할 수 있습니다. 첫 번째 세 개 항목에서는 서비스 계약을 정의하는 방법, 서비스 계약을 구현하는 방법 및 서비스를 호스트하는 방법을 설명합니다. 만들어진 서비스는 콘솔 응용 프로그램 내에서 자체 호스트됩니다. IIS(인터넷 정보 서비스)에서 서비스를 호스트할 수도 있습니다. 이 작업을 수행 하는 방법에 대 한 자세한 내용은 참조 하십시오. [하는 방법: IIS에서 WCF 서비스 호스팅](../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-iis.md)합니다. 서비스는 코드로 구성하지만 구성 파일 내에 서비스를 구성할 수도 있습니다. 구성 파일을 사용 하는 방법에 대 한 자세한 내용은 참조 [구성 서비스를 사용 하 여 구성 파일](../../../docs/framework/wcf/configuring-services-using-configuration-files.md)합니다.  
   

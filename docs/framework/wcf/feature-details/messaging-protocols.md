@@ -1,31 +1,17 @@
 ---
-title: "메시징 프로토콜"
-ms.custom: 
+title: 메시징 프로토콜
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 5b20bca7-87b3-4c8f-811b-f215b5987104
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 75a39fa1d0301a48cec7ad61c968ee3fc82d189c
-ms.sourcegitcommit: 15316053918995cc1380163a7d7e7edd5c44e6d7
+ms.openlocfilehash: c900c8fde8b13b4766fb245de2bab46b5601f135
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="messaging-protocols"></a>메시징 프로토콜
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 채널 스택에서는 인코딩 및 전송 채널을 통해 내부 메시지 표현을 통신 형식으로 변환한 후 특정 전송을 사용하여 보냅니다. 웹 서비스 상호 운용성을 위해 사용되는 가장 일반적인 전송은 HTTP이고, 웹 서비스에 사용되는 가장 일반적인 인코딩은 XML 기반 SOAP 1.1, SOAP 1.2 및 MTOM(Message Transmission Optimization Mechanism)입니다.  
+Windows Communication Foundation (WCF) 채널 스택에서 인코딩 및 전송 채널 내부 메시지 표현을 통신 형식으로 변환 하 고 특정 전송을 사용 하 여 보낼을 합니다. 웹 서비스 상호 운용성을 위해 사용되는 가장 일반적인 전송은 HTTP이고, 웹 서비스에 사용되는 가장 일반적인 인코딩은 XML 기반 SOAP 1.1, SOAP 1.2 및 MTOM(Message Transmission Optimization Mechanism)입니다.  
   
- 이 항목에서는 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에 사용되는 다음 프로토콜에 대한 <xref:System.ServiceModel.Channels.HttpTransportBindingElement> 구현 정보에 대해 설명합니다.  
+ 이 항목에서는 WCF 구현 세부 정보에서 다음 프로토콜에 대 한 설명 <xref:System.ServiceModel.Channels.HttpTransportBindingElement>합니다.  
   
 |사양/문서|링크|  
 |-----------------------------|----------|  
@@ -33,7 +19,7 @@ ms.lasthandoff: 03/19/2018
 |SOAP 1.1 HTTP 바인딩|http://www.w3.org/TR/2000/NOTE-SOAP-20000508/섹션 7|  
 |SOAP 1.2 HTTP 바인딩|http://www.w3.org/TR/soap12-part2/섹션 7|  
   
- 이 항목에서는 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 및 <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>에 사용되는 다음 프로토콜에 대한 <xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement> 구현 정보에 대해 설명합니다.  
+ 다음 프로토콜에 대 한이 항목에서는 WCF 구현 세부 정보를 다룹니다 <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement> 및 <xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement> 사용 합니다.  
   
 |사양/문서|링크|  
 |-----------------------------|----------|  
@@ -48,7 +34,7 @@ W3C Web Services Addressing 1.0 - Metadata|http://www.w3.org/TR/ws-addr-metadata
 |WSDL SOAP1.1 바인딩|http://www.w3.org/TR/wsdl/|  
 |WSDL SOAP1.2 바인딩|http://www.w3.org/Submission/wsdl11soap12/|  
   
- 이 항목에서는 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에 사용되는 다음 프로토콜에 대한 <xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement> 구현 정보에 대해 설명합니다.  
+ 다음 프로토콜에 대 한이 항목에서는 WCF 구현 세부 정보를 다룹니다 <xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement> 을 사용 합니다.  
   
 |사양/문서|링크|  
 |-----------------------------|----------|  
@@ -75,41 +61,41 @@ dp|http://schemas.microsoft.com/net/2006/06/duplex|
 ## <a name="soap-11-and-soap-12"></a>SOAP 1.1 및 SOAP 1.2  
   
 ### <a name="envelope-and-processing-model"></a>봉투 및 처리 모델  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서는 BP11(Basic Profile 1.1) 및 SSBP10(Basic Profile 1.0)에 따라 SOAP 1.1 봉투 처리를 구현합니다. SOAP 1.2 봉투 처리는 SOAP12-Part1에 따라 구현됩니다.  
+ WCF는 SOAP 1.1 봉투 처리 Basic Profile 1.1 (에서는 BP11) 및 Basic Profile 1.0 (SSBP10)을 구현 합니다. SOAP 1.2 봉투 처리는 SOAP12-Part1에 따라 구현됩니다.  
   
- 이 단원에서는 BP11 및 SOAP12-Part1과 관련하여 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서 제공되는 특정 구현 선택 항목에 대해 설명합니다.  
+ 이 섹션에서는 BP11 및 SOAP12 1 부와 관련 하 여 WCF에서 특정 구현 선택 항목에 설명 합니다.  
   
 #### <a name="mandatory-header-processing"></a>필수 헤더 처리  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서는 SOAP 1.1 및 SOAP 1.2 사양에 명시된 `mustUnderstand` 헤더 처리 규칙을 다음과 같이 변형하여 따릅니다.  
+ WCF 헤더 처리에 대 한 규칙을 따르는 `mustUnderstand` 변형 하 여 SOAP 1.1과 SOAP 1.2 사양에 설명 합니다.  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 채널 스택에 전달되는 메시지는 텍스트 메시지 인코딩, 보안, 신뢰할 수 있는 메시징, 트랜잭션 등과 같은 관련 바인딩 요소로 구성된 개별 채널에 의해 처리됩니다. 각 채널은 연결된 네임스페이스에서 헤더를 인식한 후 인식된 것으로 표시합니다. 메시지가 디스패처에 전달되면 작업 포맷터는 해당 메시지/작업 계약에 필요한 헤더를 읽고 인식된 것으로 표시합니다. 그런 다음 디스패처는 나머지 헤더가 인식되지 않았지만 `mustUnderstand`로 표시되지 않았는지 확인하고 예외를 throw합니다. 받는 사람을 대상으로 하는 `mustUnderstand` 헤더가 포함된 메시지는 받는 사람 응용 프로그램 코드로 처리되지 않습니다.  
+ 예를 들어 관련된 바인딩 요소로 구성 된 개별 채널, 텍스트 메시지 인코딩, 보안, 신뢰할 수 있는 메시징 및 트랜잭션을 사용 하 고 WCF 채널 스택이 입력 하는 메시지를 처리 합니다. 각 채널은 연결된 네임스페이스에서 헤더를 인식한 후 인식된 것으로 표시합니다. 메시지가 디스패처에 전달되면 작업 포맷터는 해당 메시지/작업 계약에 필요한 헤더를 읽고 인식된 것으로 표시합니다. 그런 다음 디스패처는 나머지 헤더가 인식되지 않았지만 `mustUnderstand`로 표시되지 않았는지 확인하고 예외를 throw합니다. 받는 사람을 대상으로 하는 `mustUnderstand` 헤더가 포함된 메시지는 받는 사람 응용 프로그램 코드로 처리되지 않습니다.  
   
  이러한 계층화된 처리를 사용하면 SOAP 노드의 응용 프로그램 계층과 인프라 계층을 분리할 수 있습니다.  
   
--   B1111: 인식되지 않은 헤더는 메시지가 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 인프라 채널 스택에서 처리되고 나서 응용 프로그램에서 처리되기 전에 감지됩니다.  
+-   B1111: 인식 되지 않는 헤더 검색 메시지를 WCF 인프라 채널 스택에서 처리 나 응용 프로그램에서 처리 되기 전에  
   
      SOAP 1.1과 SOAP 1.2의 `mustUnderstand` 헤더 값은 서로 다릅니다. Basic Profile 1.1에서 SOAP 1.1 메시지의 `mustUnderstand` 값은 0 또는 1이어야 합니다. SOAP 1.2에서는 0, 1, `false` 및 `true`를 값으로 사용할 수 있지만 정식으로 표현된 `xs:boolean` 값(`false`, `true`)을 내보내는 것이 좋습니다.  
   
--   B1112: [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서는 SOAP 1.1과 SOAP 1.2 버전 SOAP 봉투 모두에 대해 `mustUnderstand` 값 0과 1을 내보냅니다. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서는 `xs:boolean` 헤더에 `mustUnderstand`의 전체 값 공간(0, 1, `false`, `true`)을 사용합니다.  
+-   B1112: WCF 내보냅니다 `mustUnderstand` 값 0과 1 SOAP 1.1 및 SOAP 1.2 버전 모두에 대 한 SOAP 봉투의 합니다. 전체 값 공간을 허용 하는 WCF `xs:boolean` 에 대 한는 `mustUnderstand` 헤더 (0, 1, `false`, `true`)  
   
 #### <a name="soap-faults"></a>SOAP 오류  
- 다음은 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 관련 SOAP 오류 구현 목록입니다.  
+ 다음은 WCF 관련 SOAP 오류 구현 목록입니다.  
   
--   B2121: [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] SOAP 1.1 오류 코드는 다음 반환: `s11:mustUnderstand`, `s11:Client`, 및 `s11:Server`합니다.  
+-   B2121: WCF SOAP 1.1 오류 코드는 다음 반환: `s11:mustUnderstand`, `s11:Client`, 및 `s11:Server`합니다.  
   
--   B2122: [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서는 `s12:MustUnderstand`, `s12:Sender` 및 `s12:Receiver`와 같은 SOAP 1.2 오류 코드를 반환합니다.  
+-   B2122: WCF SOAP 1.2 오류 코드는 다음 반환: `s12:MustUnderstand`, `s12:Sender`, 및 `s12:Receiver`합니다.  
   
 ### <a name="http-binding"></a>HTTP 바인딩  
   
 #### <a name="soap-11-http-binding"></a>SOAP 1.1 HTTP 바인딩  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서는 Basic Profile 1.1 사양 단원 3.4에 따라 SOAP1.1 HTTP 바인딩을 다음과 같이 구현합니다.  
+ WCF에서는 Basic Profile 1.1 사양 단원 3.4에 따라 SOAP1.1 HTTP 바인딩을 구현 합니다.  
   
--   B2211: [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 서비스에서는 HTTP POST 요청의 리디렉션을 구현하지 않습니다.  
+-   B2211: WCF 서비스 HTTP POST 요청의 리디렉션을 구현 하지 않습니다.  
   
--   B2212: [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 클라이언트는 3.4.8에 따라 HTTP 쿠키를 지원합니다.  
+-   B2212: WCF 클라이언트 3.4.8에 따라 HTTP 쿠키를 지원합니다.  
   
 #### <a name="soap-12-http-binding"></a>SOAP 1.2 HTTP 바인딩  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서는 SOAP12Part2(SOAP 1.2-part 2) 사양에 설명된 대로 SOAP 1.2 HTTP 바인딩을 다음과 같이 구현합니다.  
+ WCF는 SOAP 1.2-2 (SOAP12Part2) 사양에에 설명 된 대로 SOAP 1.2 HTTP 바인딩을 구현 합니다.  
   
  SOAP 1.2에는 `application/soap+xml` 미디어 유형에 대한 선택적 작업 매개 변수가 추가되었습니다. 이 매개 변수는 WS-Addressing을 사용하지 않을 때 SOAP 메시지 본문을 구문 분석할 필요 없이 메시지 디스패치를 최적화하는 데 유용합니다.  
   
@@ -120,7 +106,7 @@ dp|http://schemas.microsoft.com/net/2006/06/duplex|
  WS-Addressing을 사용하지 않고 들어오는 요청에 작업 매개 변수가 없는 경우 메시지 `Action`이 지정되지 않은 것으로 간주됩니다.  
   
 ## <a name="ws-addressing"></a>WS-Addressing  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서는 다음과 같은 세 가지 버전의 WS-Addressing을 구현합니다.  
+ WCF는 세 가지 버전의 Ws-addressing을 구현합니다.  
   
 -   WS-Addressing 2004/08  
   
@@ -129,21 +115,21 @@ dp|http://schemas.microsoft.com/net/2006/06/duplex|
 -   WS-Addressing 1.0 - Metadata  
   
 ### <a name="endpoint-references"></a>끝점 참조  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서 구현되는 모든 WS-Addressing 버전에서는 끝점 참조를 사용하여 끝점을 설명합니다.  
+ 모든 버전의 Ws-addressing WCF에서 구현 하는 끝점 참조를 사용 하 여 끝점을 설명 합니다.  
   
 #### <a name="endpoint-references-and-ws-addressing-versions"></a>끝점 참조 및 WS-Addressing 버전  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서는 WS-Addressing을 사용하는 많은 인프라 프로토콜을 구현하며 특히, `EndpointReference` 요소 및 `W3C.WsAddressing.EndpointReferenceType` 클래스(예: WS-ReliableMessaging, WS-SecureConversation, WS-Trust)를 구현합니다. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서는 WS-Addressing 버전을 다른 인프라 프로토콜과 함께 사용할 수 있도록 지원합니다. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 끝점은 끝점당 하나의 WS-Addressing 버전을 지원합니다.  
+ WCF Ws-addressing을 사용 하는 인프라 프로토콜의 하며 특히 많은 구현는 `EndpointReference` 요소 및 `W3C.WsAddressing.EndpointReferenceType` 클래스 (예: Ws-reliablemessaging, Ws-secureconversation, 및 WS-트러스트). WCF 다른 인프라 프로토콜과 함께 Ws-addressing의 두 버전의 사용을 지원합니다. WCF 끝점 끝점당 한 버전의 Ws-addressing을 지원합니다.  
   
- R3111에서 `EndpointReference` 끝점과 교환된 메시지에 사용된 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 요소 또는 형식의 네임스페이스는 이 끝점에서 구현된 WS-Addressing 버전과 일치해야 합니다.  
+ 3111,에 대 한 네임 스페이스는 `EndpointReference` 요소 또는 메시지와 WCF 끝점 교환에 사용 되는 형식에는 ws-addressing이 끝점에서 구현 된 버전과 일치 해야 합니다.  
   
- 예를 들어, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 끝점에서 WS-ReliableMessaging을 구현하는 경우 `AcksTo`에서 이러한 끝점에 의해 반환되는 `CreateSequenceResponse` 헤더는 `EncodingBinding` 요소가 이 끝점에 대해 지정하는 WS-Addressing 버전을 사용합니다.  
+ 예를 들어, WCF 끝점에서 Ws-reliablemessaging을 구현 하는 경우는 `AcksTo` 헤더 내의 끝점에서 반환 된 `CreateSequenceResponse` Ws-addressing 버전을 사용 하 여 하는 `EncodingBinding` 이 끝점에 대 한 요소를 지정 합니다.  
   
 #### <a name="endpoint-references-and-metadata"></a>끝점 참조 및 메타데이터  
  대부분의 시나리오에서는 지정된 끝점에 대해 메타데이터 또는 메타데이터 참조를 전달해야 합니다.  
   
- B3121: [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서는 WS-MetadataExchange(MEX) 사양 단원 6에 명시된 메커니즘을 사용하여 값으로 또는 참조로 끝점 참조에 대한 메타데이터를 포함합니다.  
+ B3121: WCF에서는 값 이나 참조로 끝점 참조에 대 한 메타 데이터를 포함 하도록 섹션 6 Ws-metadataexchange (MEX) 사양에서 설명 하는 메커니즘을 사용 합니다.  
   
- 가정해 볼 수 있는 한 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 서비스에서 토큰 발급자가 발급 한 SAML Security Assertions Markup Language () 토큰을 사용 하 여 인증에 필요한 http://sts.fabrikam123.com합니다. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 끝점에서는 토큰 발급자를 가리키는 중첩 `sp:IssuedToken` 어설션과 함께 `sp:Issuer` 어설션을 사용하여 이 인증 요구 사항을 설명합니다. `sp:Issuer` 어설션에 액세스하는 클라이언트 응용 프로그램은 토큰 발급자 끝점과 통신하는 방법을 알고 있어야 합니다. 클라이언트는 토큰 발급자에 대한 메타데이터를 알고 있어야 합니다. MEX에 정의된 끝점 참조 메타데이터 확장을 사용하여 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서는 토큰 발급자 메타데이터에 대한 참조를 제공합니다.  
+ WCF 서비스에서 토큰 발급자가 발급 한 SAML Security Assertions Markup Language () 토큰을 사용 하 여 인증이 필요로 하는 경우를 생각해 볼 http://sts.fabrikam123.com합니다. WCF 끝점 사용 하 여이 인증 요구 사항을 설명 `sp:IssuedToken` 중첩 된와 함께 어설션을 `sp:Issuer` 토큰 발급자를 가리키는 어설션 합니다. `sp:Issuer` 어설션에 액세스하는 클라이언트 응용 프로그램은 토큰 발급자 끝점과 통신하는 방법을 알고 있어야 합니다. 클라이언트는 토큰 발급자에 대한 메타데이터를 알고 있어야 합니다. MEX에 정의 된 끝점 참조 메타 데이터 확장을 사용 하 여 WCF 토큰 발급자 메타 데이터에 대 한 참조를 제공 합니다.  
   
 ```xml  
 <sp:IssuedToken>  
@@ -169,26 +155,26 @@ dp|http://schemas.microsoft.com/net/2006/06/duplex|
 ### <a name="message-addressing-headers"></a>메시지 주소 지정 헤더  
   
 #### <a name="message-headers"></a>메시지 헤더  
- 두 Ws-addressing 버전에 대해 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 사양에 설명 된 대로 다음 메시지 헤더를 사용 하 여 `wsa:To`, `wsa:ReplyTo`, `wsa:Action`, `wsa:MessageID`, 및 `wsa:RelatesTo`합니다.  
+ 두 Ws-addressing 버전에 대해 WCF 사용 하 여 다음과 같은 메시지 헤더 사양에 설명 된 대로 `wsa:To`, `wsa:ReplyTo`, `wsa:Action`, `wsa:MessageID`, 및 `wsa:RelatesTo`합니다.  
   
- B3211: 모든 WS-Addressing 버전에 대해 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서는 WS-Addressing 메시지 헤더인 `wsa:FaultTo` 및 `wsa:From`을 사용하지만 이 헤더를 즉시 생성하지는 않습니다.  
+ B3211: 모든 Ws-addressing 버전에 대 한 WCF 하지만 기본적으로 Ws-addressing 메시지 헤더 생성 하지 않으므로 `wsa:FaultTo` 및 `wsa:From`합니다.  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 응용 프로그램과 상호 작용하는 응용 프로그램은 이러한 메시지 헤더를 추가할 수 있으며 이에 따라 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서 해당 메시지 헤더를 처리합니다.  
+ WCF 응용 프로그램과 응용 프로그램 상호 작용 하는 이러한 메시지 헤더 및 WCF는 적절히 처리를 추가할 수 있습니다.  
   
 #### <a name="reference-parameters-and-properties"></a>참조 매개 변수 및 속성  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서는 끝점 참조 매개 변수 및 참조 속성을  
+ WCF 끝점 참조 매개 변수 및 참조 속성의 처리를 구현합니다.  
   
  해당 사양에 따라 처리합니다.  
   
- B3221: WS-Addressing 2004/08을 사용하도록 구성된 경우 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 끝점은 참조 속성과 참조 매개 변수의 처리를 구분하지 않습니다.  
+ B3221: Ws-addressing 2004/08을 사용 하도록 구성, 참조 속성과 참조 매개 변수 처리 WCF 끝점 구분 하지 않습니다.  
   
 ### <a name="message-exchange-patterns"></a>메시지 교환 패턴  
- 웹 서비스 작업 호출에 관련 된 메시지의 시퀀스 라고는 *메시지 교환 패턴*합니다. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]는 단방향, 요청-회신 및 이중 메시지 교환 패턴을 지원합니다. 이 단원에서는 사용 중인 메시지 교환 패턴에 따른 메시지 처리에 대한 WS-Addressing 요구 사항에 대해 자세히 설명합니다.  
+ 웹 서비스 작업 호출에 관련 된 메시지의 시퀀스 라고는 *메시지 교환 패턴*합니다. WCF에서는 단방향, 요청-회신 및 이중 메시지 교환 패턴을 지원 합니다. 이 단원에서는 사용 중인 메시지 교환 패턴에 따른 메시지 처리에 대한 WS-Addressing 요구 사항에 대해 자세히 설명합니다.  
   
  이 단원에서 요청자는 첫 번째 메시지를 보내고 응답자는 첫 번째 메시지를 받습니다.  
   
 #### <a name="one-way-message"></a>단방향 메시지  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 끝점이 지정된 `Action`을 포함하는 메시지를 지원하도록 구성되어 단방향 패턴을 따르는 경우 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 끝점은 다음과 같은 동작 및 요구 사항을 따릅니다. 별도로 지정하지 않는 한 동작과 규칙은 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서 지원되는 두 WS-Addressing 버전 모두에 적용됩니다.  
+ WCF 끝점을 사용 하 여 메시지를 지원 하도록 구성 된 경우는 주어진 `Action` 단방향 패턴을 따르도록는 WCF 끝점은 다음과 같은 동작 및 요구 사항입니다. 달리 지정 하지 않는 한 동작과 규칙 두 버전의 Ws-addressing WCF에서 지원에 대해 적용 됩니다.  
   
 -   R3311: 요청자는 `wsa:To`, `wsa:Action` 및 끝점 참조에 지정된 모든 참조 매개 변수에 대한 헤더를 포함해야 합니다. WS-Addressing 2004/08을 사용하고 [reference properties]이 끝점 참조에 지정된 경우에도 해당 헤더를 메시지에 추가해야 합니다.  
   
@@ -198,10 +184,10 @@ dp|http://schemas.microsoft.com/net/2006/06/duplex|
   
      HTTP 전송을 사용 중이고 작업 계약에 메시지가 단방향으로 선언되어 있는 경우에도 인프라 메시지를 보내는 데 HTTP 응답을 사용할 수 있습니다. 예를 들어, 신뢰할 수 있는 메시징을 사용하여 HTTP 응답에서 `SequenceAcknowledgement` 메시지를 보낼 수 있습니다.  
   
--   B3314: [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 응답자는 단방향 메시지에 대한 응답으로 오류 메시지를 보내지 않습니다.  
+-   B3314: WCF 응답자는 단방향 메시지에 대 한 응답에서 오류 메시지를 전송 하지 않습니다.  
   
 #### <a name="request-reply"></a>요청-회신  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 끝점이 지정된 `Action`을 포함하는 메시지가 요청-회신 패턴을 따르도록 구성되어 있는 경우 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 끝점은 다음과 같은 동작 및 요구 사항을 따릅니다. 별도로 지정하지 않는 한 동작과 규칙은 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서 지원되는 두 WS-Addressing 버전 모두에 적용됩니다.  
+ WCF 끝점 인 메시지에 대해 구성 된 경우는 주어진 `Action` 요청-회신 패턴을 따르도록 WCF 끝점 동작 및 요구 사항을 따릅니다. 지정 하지 않으면 두 버전의 Ws-addressing wcf에서 지원에 대 한 동작과 규칙 적용 됩니다.  
   
 -   R3321: 요청자는 요청에 포함 해야 `wsa:To`, `wsa:Action`, `wsa:MessageID`, 모든 참조 매개 변수 또는 참조 속성 (또는 둘 다) 끝점 참조에 지정 된에 대 한 헤더입니다.  
   
@@ -212,14 +198,14 @@ dp|http://schemas.microsoft.com/net/2006/06/duplex|
 -   R3324: 요청자 있어야 `wsa:To`, `wsa:Action`, 및 `wsa:RelatesTo` 회신 메시지의 헤더 뿐 아니라 모든 참조 매개 변수 또는 참조 속성 (또는 둘 다)으로 지정 된 헤더는 `ReplyTo` 끝점 참조에는 요청입니다.  
   
 ### <a name="web-services-addressing-faults"></a>Web Services Addressing 오류  
- R3411: [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서는 WS-Addressing 2004/08에 정의된 다음과 같은 오류를 생성합니다.  
+ R3411: WCF Ws-addressing 2004/08에 정의 된 다음 오류를 생성 합니다.  
   
 |코드|원인|  
 |----------|-----------|  
 |wsa:DestinationUnreachable|이 채널에 대해 설정된 회신 주소와 다른 `ReplyTo`를 사용하여 메시지가 도착했습니다. 받는 사람 헤더에 지정된 주소에서 수신 대기하는 끝점이 없습니다.|  
 |wsa:ActionNotSupported|끝점과 연결된 인프라 채널 또는 디스패처가 `Action` 헤더에 지정된 동작을 인식하지 못합니다.|  
   
- R3412: [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서는 WS-Addressing 1.0에 정의된 다음과 같은 오류를 생성합니다.  
+ R3412: WCF Ws-addressing 1.0에 정의 된 다음 오류를 생성 합니다.  
   
 |코드|원인|  
 |----------|-----------|  
@@ -234,7 +220,7 @@ dp|http://schemas.microsoft.com/net/2006/06/duplex|
 ### <a name="wsdl-11-binding-and-ws-policy-assertions"></a>WSDL 1.1 바인딩 및 WS-Policy Assertion  
   
 #### <a name="indicating-use-of-ws-addressing"></a>WS-Addressing 사용 지정  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서는 정책 어설션을 사용하여 특정 WS-Addressing 버전에 대한 끝점 지원을 나타냅니다.  
+ WCF 정책 어설션을 사용 하 여 특정 Ws-addressing 버전에 대 한 끝점 지원을 나타냅니다.  
   
  다음 정책 어설션은 끝점 정책 주체가 [WS-PA]이고 끝점에서 보내거나 받은 메시지가 WS-Addressing 2004/08을 사용해야 함을 나타냅니다.  
   
@@ -278,7 +264,7 @@ dp|http://schemas.microsoft.com/net/2006/06/duplex|
   
  그러나 요청자와 응답자 간에 설정된 두 개의 독립적인 역방향 HTTP 연결을 활용하는 메시지 교환 패턴이 있습니다(예: 응답자가 보낸 원하지 않은 단방향 메시지).  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서는 두 기본 전송 채널에서 복합 이중 채널을 설정하는 데 사용할 수 있는 기능을 제공합니다. 복합 이중 채널에서는 입력 메시지에 하나의 채널이 사용되고 출력 메시지에 나머지 하나의 채널이 사용됩니다. HTTP 전송의 경우 복합 이중 채널은 두 개의 역방향 HTTP 연결을 제공합니다. 요청자가 한 연결을 사용하여 메시지를 응답자에게 보내고, 응답자는 다른 연결을 사용하여 메시지를 요청자에게 다시 보냅니다.  
+ WCF에서는 두 기본 전송 채널 기준인 다른 출력 메시지에 사용 되 고 있는 입력된 메시지에 하나의 채널이 사용 되 고, 복합 이중 채널을 설정할 수 기능을 제공 합니다. HTTP 전송의 경우 복합 이중 채널은 두 개의 역방향 HTTP 연결을 제공합니다. 요청자가 한 연결을 사용하여 메시지를 응답자에게 보내고, 응답자는 다른 연결을 사용하여 메시지를 요청자에게 다시 보냅니다.  
   
  별도의 http 요청을 통해 전송되는 회신의 경우 WS-AM 어설션은 다음과 같습니다.  
   
@@ -317,14 +303,14 @@ dp|http://schemas.microsoft.com/net/2006/06/duplex|
   
  둘 간에는 WS-ADDR의 단원 3.3.2와 WS-ADDR10-WSDL의 단원 4.4.4에 각각 설명된 기본 동작 패턴의 의미 체계만 차이가 있습니다.  
   
- 동일한 `portType` 또는 계약([!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 용어)을 공유하지만 서로 다른 WS-Addressing 버전을 사용하는 두 개의 끝점을 사용하는 것이 바람직합니다. 그러나 동작이 `portType`에 정의되어 있고 `portType`을 구현하는 끝점을 통해 변경되지 않아야 할 경우 두 기본 동작 패턴을 모두 지원할 수 없습니다.  
+ 이 동일한 공유 하는 두 개의 끝점을 바람직합니다 `portType` (또는 계약 WCF 용어로) 하지만 서로 다른 버전의 Ws-addressing을 사용 하 여 합니다. 그러나 동작이 `portType`에 정의되어 있고 `portType`을 구현하는 끝점을 통해 변경되지 않아야 할 경우 두 기본 동작 패턴을 모두 지원할 수 없습니다.  
   
- 이 문제를 해결하기 위해 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서는 단일 버전의 `Action` 특성을 지원합니다.  
+ 이 문제를 해결 하려면 WCF 지원 단일 버전의는 `Action` 특성입니다.  
   
- B3521: [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서는 WS-ADDR10-WSDL에 정의된 대로 `wsaw10:Action` 요소에서 `wsdl:portType/wsdl:operation/[wsdl:input | wsdl:output | wsdl:fault]` 특성을 사용하여 끝점에 사용되는 WS-Addressing 버전에 상관없이 해당 메시지에 대한 `Action` URI를 결정합니다.  
+ B3521: 사용 하 여 WCF는 `wsaw10:Action` 특성을 `wsdl:portType/wsdl:operation/[wsdl:input | wsdl:output | wsdl:fault]` WS-ADDR10-결정 WSDL에 정의 된 대로 요소는 `Action` 끝점에서 사용 되는 Ws-addressing 버전에 관계 없이 해당 메시지에 대 한 URI입니다.  
   
 #### <a name="use-endpoint-reference-inside-wsdl-port"></a>WSDL 포트에서 끝점 참조 사용  
- WS-ADDR10-WSDL 단원 4.1에서는 `wsdl:port` 자식 요소를 포함하도록 `<wsa10:EndpointReference…/>` 요소를 확장하여 WS-Addressing 용어로 끝점을 설명합니다. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서는 WS-Addressing 2004/08에서 이 유틸리티를 확장하여 `<wsa:EndpointReference…/>`를 `wsdl:port`의 자식 요소로 나타낼 수 있게 합니다.  
+ WS-ADDR10-WSDL 단원 4.1에서는 `wsdl:port` 자식 요소를 포함하도록 `<wsa10:EndpointReference…/>` 요소를 확장하여 WS-Addressing 용어로 끝점을 설명합니다. WCF 확장 Ws-addressing 2004/08에서이 유틸리티 허용 `<wsa:EndpointReference…/>` 의 자식 요소로 나타낼 `wsdl:port`합니다.  
   
 -   R3531: 끝점에 `<wsaw10:UsingAddressing/>` 정책 어설션과 연결된 정책 대안이 있는 경우 해당`wsdl:port` 요소는`<wsa10:EndpointReference …/>` 자식 요소를 포함할 수 있습니다.  
   
@@ -389,7 +375,7 @@ Content-Length: 0
 ```  
   
 ## <a name="soap-message-transmission-optimization-mechanism"></a>SOAP MTOM(Message Transmission Optimization Mechanism)  
- 이 단원에서는 HTTP SOAP MTOM에 대한 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 구현 정보에 대해 설명합니다. MTOM 기술은 기존 텍스트/XML 인코딩 또는 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 이진 인코딩과 동일한 클래스의 SOAP 메시지 인코딩 메커니즘입니다. MTOM에는 다음과 같은 내용이 포함됩니다.  
+ 이 섹션에서는 HTTP SOAP MTOM에 대 한 WCF 구현 세부 정보를 설명 합니다. MTOM 기술은 기존 텍스트/x m L 인코딩 또는 WCF 이진 인코딩과 동일한 클래스의 SOAP 메시지 인코딩 메커니즘입니다. MTOM에는 다음과 같은 내용이 포함됩니다.  
   
 -   base64 인코딩된 이진 데이터를 개별 이진 부분으로 포함하는 XML 정보 항목을 최적화하는 [XOP]에 설명된 XML 인코딩 및 패키징 메커니즘  
   
@@ -399,7 +385,7 @@ Content-Length: 0
   
 -   HTTP 전송 바인딩  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서는 HTTP를 사용하지 않는 전송에서 MTOM을 사용할 수 있습니다. 그러나 이 항목에서는 HTTP에 중점을 두어 설명합니다.  
+ WCF와 함께 HTTP 이외의 전송을 사용 MTOM을 사용 하는 것이 불가능 합니다. 그러나 이 항목에서는 HTTP에 중점을 두어 설명합니다.  
   
  MTOM 형식에서는 MTOM 자체와 XOP 및 MIME을 포함한 다양한 사양을 사용합니다. 이 사양의 모듈성으로 인해 형식 및 처리 의미 체계에 대한 정확한 요구 사항을 재구성하기가 다소 어렵습니다. 이 단원에서는 MTOM HTTP 바인딩의 형식 및 처리 요구 사항에 대해 설명합니다.  
   
@@ -457,7 +443,7 @@ Content-Length: 0
     3.  각 항목의 `xop:Include` 속성에 나타나는 `children` 요소 정보 항목을 3b 단계에서 식별된 MIME 부분의 엔터티 본문의 정규 base64 인코딩(XSD-2, 3.2.16 base64Binary 참조)을 나타내는 문자 정보 항목으로 대체합니다. 즉, `xop:Include` 요소 정보 항목을 패키지 부분에서 재구성된 데이터로 효과적으로 대체합니다.  
   
 #### <a name="http-content-type-header"></a>HTTP Content-Type 헤더  
- 다음은 MTOM 및 RFC 2387에서 파생되고 MTOM 사양 자체에 명시된 요구 사항에서 파생된 SOAP 1.x MTOM 인코딩된 메시지의 HTTP Content-Type 헤더 형식에 대한 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]를 구현하는 설명입니다.  
+ SOAP 1.x MTOM 인코딩된 메시지 고 MTOM 사양 자체에 명시 된 요구 사항에서 파생 된의 HTTP Content-type 헤더 형식에 대 한 WCF 설명의 목록은 आ स ा MTOM 및 RFC 2387에서 파생 됩니다.  
   
 -   R4131: HTTP Content-Type 헤더에는 multipart/related(대/소문자 구분 안 함) 값 및 해당 매개 변수가 있어야 합니다. 매개 변수 이름은 대/소문자를 구분하지 않습니다. 매개 변수의 순서는 중요하지 않습니다.  
   
@@ -525,7 +511,7 @@ msg-id    =       [CFWS] "<" id-left "@" id-right ">" [CFWS]
   
  R4143: Infoset MIME 부분의 Content-ID 헤더 값은 `msg-id` 접두사 및 접미사 부분을 생략한 상태의 RFC 2822의 `[CFWS]` 생성을 따라야 합니다.  
   
- 많은 MIME 구현 내에 포함 된 값에 대 한 요구 사항 완화 "\<" 및 ">" 전자 메일 주소를 사용 하 고 `absoluteURI` 묶인 "\<", ">" 전자 메일 주소와 함께 합니다. 이 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 버전에서는 다음과 같은 형식의 Content-ID MIME 헤더 값을 사용합니다.  
+ 많은 MIME 구현 내에 포함 된 값에 대 한 요구 사항 완화 "\<" 및 ">" 전자 메일 주소를 사용 하 고 `absoluteURI` 묶인 "\<", ">" 전자 메일 주소와 함께 합니다. 이 버전의 WCF에서는 형식의 CONTENT-ID MIME 헤더의 값을 사용합니다.  
   
 ```  
 Content-ID: <http://tempuri.org/0>   
@@ -571,12 +557,12 @@ mail-address   =     id-left "@" id-right
   
 -   R4151: base64 인코딩된 데이터를 포함하는 모든 요소 정보 항목이 최적화될 수 있습니다.  
   
--   B4152: [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서는 base64 인코딩된 데이터를 포함하고 길이가 1024바이트를 초과하는 요소 정보 항목을 최적화합니다.  
+-   B4152: WCF base64 인코딩된 데이터를 포함 하 고 길이가 1024 바이트를 초과 하는 요소 정보 항목을 최적화 합니다.  
   
- MTOM을 사용하도록 구성된 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 끝점은 항상 MTOM 인코딩된 메시지를 보냅니다. 필수 조건을 충족하는 부분이 없더라도 MTOM 인코딩된 메시지를 보냅니다. 이 메시지는 단일 MIME 부분에서 SOAP 봉투를 포함하는 MIME 패키지로 serialize됩니다.  
+ MTOM을 사용 하도록 구성 하는 WCF 끝점은 MTOM 인코딩된 메시지를 보내야 합니다. 필수 조건을 충족하는 부분이 없더라도 MTOM 인코딩된 메시지를 보냅니다. 이 메시지는 단일 MIME 부분에서 SOAP 봉투를 포함하는 MIME 패키지로 serialize됩니다.  
   
 ### <a name="ws-policy-assertion-for-mtom"></a>MTOM WS-Policy Assertion  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서는 다음과 같은 정책 어설션을 사용하여 끝점의 MTOM 사용을 나타냅니다.  
+ WCF는 다음 정책 어설션은 사용 하 여 끝점에서 MTOM 사용을 나타냅니다.  
   
 ```xml  
 <wsoma:OptimizedMimeSerialization ... />  
@@ -584,10 +570,10 @@ mail-address   =     id-left "@" id-right
   
 -   R4211: 이전 정책 어설션은 끝점 정책 주체를 포함하고 MTOM을 사용하여 끝점에서 보내거나 받은 모든 메시지를 최적화하도록 지정합니다.  
   
--   B4212: MTOM 최적화를 사용하도록 구성된 경우 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 끝점은 해당 `wsdl:binding`에 연결된 정책에 MTOM 정책 어설션을 추가합니다.  
+-   B4212: MTOM 최적화를 사용 하도록 구성, WCF 끝점 추가 MTOM 정책 어설션을 해당 요소에 연결 된 정책에 `wsdl:binding`합니다.  
   
 ### <a name="composition-with-ws-security"></a>WS-Security를 사용하여 구성  
- MTOM은 `text/xml` 및 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 이진 XML과 비슷한 인코딩 메커니즘입니다. MTOM은 WS-Security 및 기타 WS-* 프로토콜을 사용하여 자연스러운 구성을 제공합니다. WS-Security를 사용하여 보안된 메시지는 MTOM을 사용하여 최적화할 수 있습니다.  
+ MTOM은 비슷한 인코딩 메커니즘 `text/xml` 및 WCF 이진 XML입니다. MTOM은 WS-Security 및 기타 WS-* 프로토콜을 사용하여 자연스러운 구성을 제공합니다. WS-Security를 사용하여 보안된 메시지는 MTOM을 사용하여 최적화할 수 있습니다.  
   
 ### <a name="examples"></a>예제  
   
@@ -625,7 +611,7 @@ Content-Type: application/octet-stream
 ```  
   
 #### <a name="wcf-secure-soap-12-message-encoded-using-mtom"></a>MTOM을 사용하여 인코딩한 WCF Secure SOAP 1.2 메시지  
- 이 예제에서 메시지는 WS-Security를 사용하여 보호된 SOAP 1.2 및 MTOM을 사용하여 인코딩됩니다. 인코딩을 위해 식별되는 이진 부분은 `BinarySecurityToken`의 콘텐츠로서, 암호화된 서명 및 암호화된 본문에 해당하는 `CipherValue`의 `EncryptedData`입니다. `CipherValue`의 `EncryptedKey`는 길이가 1024바이트 미만이므로 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서 최적화하도록 식별되지 않습니다.  
+ 이 예제에서 메시지는 WS-Security를 사용하여 보호된 SOAP 1.2 및 MTOM을 사용하여 인코딩됩니다. 인코딩을 위해 식별되는 이진 부분은 `BinarySecurityToken`의 콘텐츠로서, 암호화된 서명 및 암호화된 본문에 해당하는 `CipherValue`의 `EncryptedData`입니다. `CipherValue` 의 `EncryptedKey` 하지 식별 최적화에 대 한 WCF, 길이가 1024 바이트 미만 이므로 합니다.  
   
 ```  
 POST http://131.107.72.15/Mtom/service.svc/Soap12MtomSecureSignEncrypt HTTP/1.1  

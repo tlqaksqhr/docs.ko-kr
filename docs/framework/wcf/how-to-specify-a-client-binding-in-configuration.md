@@ -1,31 +1,17 @@
 ---
 title: '방법: 구성에서 클라이언트 바인딩 지정'
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 4a7c79aa-50ee-4991-891e-adc0599323a7
-caps.latest.revision: 11
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 2441fd7507c5bb368405685598480650114b76a9
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.openlocfilehash: e2ea5a4b1c2ca9b661be5d4c653a3b5668bd26f5
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-specify-a-client-binding-in-configuration"></a>방법: 구성에서 클라이언트 바인딩 지정
 이 예제에서는 계산기 서비스를 사용할 클라이언트 콘솔 응용 프로그램을 만들고 해당 클라이언트에 대한 바인딩을 구성에 선언적으로 지정합니다. 클라이언트는 `CalculatorService` 인터페이스를 구현하는 `ICalculator`에 액세스하고, 서비스 및 클라이언트 모두 <xref:System.ServiceModel.BasicHttpBinding> 클래스를 사용합니다.  
   
- 설명된 프로시저에서는 계산기 서비스를 실행 중인 것으로 간주합니다. 서비스를 작성 하는 방법에 대 한 정보를 참조 하십시오. [하는 방법: 구성에서 서비스 바인딩 지정](../../../docs/framework/wcf/how-to-specify-a-service-binding-in-configuration.md)합니다. 또한 사용 하 여는 [ServiceModel Metadata 유틸리티 도구 (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) 하 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 클라이언트 구성 요소를 자동으로 생성 하도록 제공 합니다. 도구는 서비스 액세스를 위해 클라이언트 코드 및 구성을 생성합니다.  
+ 설명된 프로시저에서는 계산기 서비스를 실행 중인 것으로 간주합니다. 서비스를 작성 하는 방법에 대 한 정보를 참조 하십시오. [하는 방법: 구성에서 서비스 바인딩 지정](../../../docs/framework/wcf/how-to-specify-a-service-binding-in-configuration.md)합니다. 또한 사용 하 여는 [ServiceModel Metadata 유틸리티 도구 (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) 클라이언트 구성 요소를 자동으로 생성 하도록 Windows Communication Foundation (WCF)에서는 제공 합니다. 도구는 서비스 액세스를 위해 클라이언트 코드 및 구성을 생성합니다.  
   
  클라이언트는 두 가지 부분에 빌드됩니다. Svcutil.exe는 `ClientCalculator` 인터페이스를 구현하는 `ICalculator`를 생성합니다. 그런 다음 `ClientCalculator`의 인스턴스를 생성하여 이 클라이언트 응용 프로그램을 구성합니다.  
   

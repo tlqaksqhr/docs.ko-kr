@@ -1,24 +1,12 @@
 ---
-title: "방법: 프로브 요청의 검색 버전 확인"
-ms.custom: 
+title: '방법: 프로브 요청의 검색 버전 확인'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: b3c4e2e2-2957-4074-ae6a-776a5ca84278
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 0f51f48d6eefcc0f8ae5129526477d6e2a5b2385
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 8ac9804b0fe46ca5fbe580d713ec82a2f9bb0128
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-todetermine-the-discovery-version-of-a-probe-request"></a>방법: 프로브 요청의 검색 버전 확인
 검색 프록시는 여러 검색 버전을 사용하여 검색 끝점을 노출할 수 있습니다. UDP 멀티캐스트 프로브 요청이 프록시에 도달하면 프록시는 멀티캐스트 비표시 오류(Suppression) 메시지로 응답해야 합니다. 이렇게 응답하려면 요청의 검색 버전을 알아야 합니다.  

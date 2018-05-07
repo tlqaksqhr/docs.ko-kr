@@ -1,26 +1,12 @@
 ---
 title: 메시징 활동
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 8498f215-1823-4aba-a6e1-391407f8c273
-caps.latest.revision: 13
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: bbc9fdfff5b5c6ab6e56af12269061f06bb79404
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 1ae03b1671aa5c938bb3897edb919643f795f8a0
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="messaging-activities"></a>메시징 활동
 메시징 작업을 사용하면 워크플로를 통해 WCF 메시지를 보내고 받을 수 있습니다. 워크플로에 메시징 작업을 추가하면 훨씬 더 복잡한 MEP(메시지 교환 패턴)를 모델링할 수 있습니다.  

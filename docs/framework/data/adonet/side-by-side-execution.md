@@ -1,24 +1,12 @@
 ---
-title: "ADO.NET에서 Side-by-Side 실행"
-ms.custom: 
+title: ADO.NET에서 Side-by-Side 실행
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 9f9ba96d-9f89-4f65-bb2f-6860879f4393
-caps.latest.revision: "6"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: bdb12ce6f697bbc42052e35c252c9cad6a5e962e
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 793a48966192326e2a1273c6ea4b9c9eddda76fa
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="side-by-side-execution-in-adonet"></a>ADO.NET에서 Side-by-Side 실행
 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]에서의 side-by-side 실행은 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]의 여러 버전이 설치되어 있는 컴퓨터에서 응용 프로그램을 컴파일한 버전만 사용하여 응용 프로그램을 실행하는 기능입니다. 병렬 실행을 구성 하는 방법에 대 한 자세한 내용은 참조 [-병렬 실행](../../../../docs/framework/deployment/side-by-side-execution.md)합니다.  
@@ -67,7 +55,7 @@ SELECT * FROM dbo.Customers;
   
  <xref:System.Data.SqlClient.SqlCommand.ExecuteReader%2A>의 두 버전 각각에 대한 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]의 동작에 의존하는 경우 이 변경 내용은 응용 프로그램의 다음 버전 및 이전 버전과의 호환성에 모두 영향을 줄 수 있습니다.  
   
- [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]의 이전 버전 및 다음 버전 모두에서 실행되는 응용 프로그램의 경우에는 실행 버전에 관계없이 동일하게 동작하도록 코드를 작성해야 합니다. 명령을 통해 모든 후속 명령에 대한 연결 상태가 수정되도록 하려면 <xref:System.Data.SqlClient.SqlCommand.ExecuteNonQuery%2A>를 사용하여 명령을 실행하는 것이 좋습니다. 명령을 통해 모든 후속 명령에 대한 연결이 수정되지 않도록 하려면 명령에 연결 상태를 다시 설정하는 명령을 포함하는 것이 좋습니다. 예:  
+ [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]의 이전 버전 및 다음 버전 모두에서 실행되는 응용 프로그램의 경우에는 실행 버전에 관계없이 동일하게 동작하도록 코드를 작성해야 합니다. 명령을 통해 모든 후속 명령에 대한 연결 상태가 수정되도록 하려면 <xref:System.Data.SqlClient.SqlCommand.ExecuteNonQuery%2A>를 사용하여 명령을 실행하는 것이 좋습니다. 명령을 통해 모든 후속 명령에 대한 연결이 수정되지 않도록 하려면 명령에 연결 상태를 다시 설정하는 명령을 포함하는 것이 좋습니다. 예를 들어:  
   
 ```  
 SET NOCOUNT ON;  

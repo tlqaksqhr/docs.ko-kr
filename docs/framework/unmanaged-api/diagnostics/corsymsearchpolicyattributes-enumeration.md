@@ -1,14 +1,6 @@
 ---
-title: "CorSymSearchPolicyAttributes 열거형"
-ms.custom: 
+title: CorSymSearchPolicyAttributes 열거형
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - CorSymSearchPolicyAttributes
 api_location:
@@ -22,17 +14,13 @@ helpviewer_keywords:
 ms.assetid: 03abde84-930a-49d3-bac3-23abb34a0184
 topic_type:
 - apiref
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: bc1bef8c393a7778c194b2d4d45c3abdb583fecf
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: a4c3aedea4cc8ce2d8fb8c0c0bf3fead727dcf64
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="corsymsearchpolicyattributes-enumeration"></a>CorSymSearchPolicyAttributes 열거형
 기호 판독기에 대 한 검색을 수행할 때 사용할 정책을 지정 합니다. 이러한 상수는에서 사용 되는 [isymunmanagedbinder2:: Getreaderforfile2](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder2-getreaderforfile2-method.md) 및 [isymunmanagedbinder3:: Getreaderfromcallback](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder3-getreaderfromcallback-method.md) 메서드.  
@@ -62,7 +50,7 @@ typedef enum CorSymSearchPolicyAttributes
 |`AllowReferencePathAccess`|.Exe 파일이 있는 위치에 있는 PDB 검색 합니다.|  
   
 ## <a name="requirements"></a>요구 사항  
- **헤더:** CorSym.idl, CorSym.h  
+ **Header:** CorSym.idl, CorSym.h  
   
 ## <a name="see-also"></a>참고 항목  
  [진단 기호 저장소 열거형](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-enumerations.md)

@@ -1,10 +1,6 @@
 ---
-title: "&lt;추가&gt; NameValueSectionHandler 및 DictionarySectionHandler 요소"
+title: '&lt;추가&gt; NameValueSectionHandler 및 DictionarySectionHandler 요소'
 ms.date: 05/01/2017
-ms.prod: .net-framework
-ms.technology:
-- dotnet-clr
-ms.topic: article
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/sectionName/add
 helpviewer_keywords:
@@ -13,14 +9,11 @@ helpviewer_keywords:
 ms.assetid: 0d4ddb53-eb2b-49c0-9c33-a8dec5c39b46
 author: guardrex
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: e29d0007820bb0218338394fe199e7acfd66344e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: aeb3e3a4be201369ca2df8d231498dd2400d3c07
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="add-element-for-namevaluesectionhandler-and-dictionarysectionhandler"></a>\<추가 > NameValueSectionHandler 및 DictionarySectionHandler 요소
 
@@ -53,7 +46,7 @@ ms.lasthandoff: 12/22/2017
 
 없음
 
-## <a name="example"></a>예
+## <a name="example"></a>예제
 
 사용자 지정 구성 섹션 정의 및 사용 하는 방법을 보여 주는 다음 예제는  **\<추가 >** 요소 섹션으로 설정을 적용 합니다.
 
@@ -72,6 +65,6 @@ ms.lasthandoff: 12/22/2017
 
 이 요소는 응용 프로그램 구성 파일을 컴퓨터 구성 파일에 사용할 수 있습니다 (*Machine.config*), 및 *Web.config* 응용 프로그램 디렉터리 수준에서 포함 되지 않은 파일입니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참고자료
 
 [.NET Framework에 대 한 구성 파일 스키마](~/docs/framework/configure-apps/file-schema/index.md)

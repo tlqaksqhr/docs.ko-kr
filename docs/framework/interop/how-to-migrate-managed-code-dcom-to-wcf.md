@@ -1,24 +1,14 @@
 ---
-title: "방법: 관리 코드 DCOM을 WCF로 마이그레이션"
-ms.custom: 
+title: '방법: 관리 코드 DCOM을 WCF로 마이그레이션'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 52961ffc-d1c7-4f83-832c-786444b951ba
-caps.latest.revision: "6"
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: d97a7d855d6c5ccd0545d8bf95ebe7bcece88656
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 187bff7c75ba2a0887e3c5728a484a9231936511
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-migrate-managed-code-dcom-to-wcf"></a>방법: 관리 코드 DCOM을 WCF로 마이그레이션
 WCF(Windows Communication Foundation)는 분산 환경에서 서버와 클라이언트 간에 관리 코드 호출에 대해 DCOM(Distributed Component Object Model)보다 권장되는 안전한 선택 항목입니다. 이 문서에서는 다음과 같은 시나리오에 대해 코드를 DCOM에서 WCF로 마이그레이션하는 방법을 보여 줍니다.  

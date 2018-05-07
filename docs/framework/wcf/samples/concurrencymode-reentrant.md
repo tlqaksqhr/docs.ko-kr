@@ -1,27 +1,15 @@
 ---
-title: "ConcurrencyMode 재진입"
-ms.custom: 
+title: ConcurrencyMode 재진입
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: b2046c38-53d8-4a6c-a084-d6c7091d92b1
-caps.latest.revision: "12"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 450d47a9cdff709657458ed3fcc4b5948ccb960c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: d0ecd4b0c39c6a736a176a61490f454c2bab2e20
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="concurrencymode-reentrant"></a>ConcurrencyMode 재진입
-이 샘플에서는 서비스 구현에서 ConcurrencyMode.Reentrant 사용의 필요성과 의미를 보여 줍니다. ConcurrencyMode.Reentrant는 서비스나 콜백이 특정 시점에 하나의 메시지만 처리한다는 것을 의미합니다(`ConcurencyMode.Single`과 유사함). 스레드로부터 안전을 보장하기 위해 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]는 다른 메시지를 처리할 수 없도록 메시지를 처리하는 `InstanceContext`를 잠급니다. 재진입 모드의 경우 서비스가 나가는 호출을 수행하기 직전에 `InstanceContext`의 잠금이 해제되므로 이 샘플에 나온 것처럼 재진입할 수 있는 후속 호출은 다음에 서비스에 들어갈 때 잠길 수 있습니다. 이 동작을 설명하기 위해 이 샘플에서는 클라이언트와 서비스가 이중 계약을 사용하여 서로 메시지를 보낼 수 있는 방법을 보여 줍니다.  
+이 샘플에서는 서비스 구현에서 ConcurrencyMode.Reentrant 사용의 필요성과 의미를 보여 줍니다. ConcurrencyMode.Reentrant는 서비스나 콜백이 특정 시점에 하나의 메시지만 처리한다는 것을 의미합니다(`ConcurencyMode.Single`과 유사함). 스레드 보안을 보장 하기 위해 Windows Communication Foundation (WCF) 잠급니다는 `InstanceContext` 다른 메시지를 처리할 수 있도록 메시지를 처리 합니다. 재진입 모드의 경우 서비스가 나가는 호출을 수행하기 직전에 `InstanceContext`의 잠금이 해제되므로 이 샘플에 나온 것처럼 재진입할 수 있는 후속 호출은 다음에 서비스에 들어갈 때 잠길 수 있습니다. 이 동작을 설명하기 위해 이 샘플에서는 클라이언트와 서비스가 이중 계약을 사용하여 서로 메시지를 보낼 수 있는 방법을 보여 줍니다.  
   
  정의된 계약은 서비스에 의해 구현되는 `Ping` 메서드와 클라이언트에 의해 구현되는 콜백 메서드 `Pong`을 가지는 이중 계약입니다. 클라이언트는 서버의 `Ping` 메서드를 틱 수와 함께 호출하여 호출을 시작합니다. 서비스는 틱 수가 0이 아닌지 확인한 다음 틱 수를 줄이는 동안 콜백의 `Pong` 메서드를 호출합니다. 샘플의 다음 코드에서 이 작업을 수행합니다.  
   
@@ -89,7 +77,7 @@ Pong: Ticks = 1
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  이 디렉터리가 없으면 [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4(.NET Framework 4용 WCF(Windows Communication Foundation) 및 WF(Windows Workflow Foundation) 샘플)](http://go.microsoft.com/fwlink/?LinkId=150780) 로 이동하여 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 및 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플을 모두 다운로드하세요. 이 샘플은 다음 디렉터리에 있습니다.  
+>  이 디렉터리가로 이동 [Windows Communication Foundation (WCF) 및.NET Framework 4에 대 한 Windows WF (Workflow Foundation) 샘플](http://go.microsoft.com/fwlink/?LinkId=150780) 모든 Windows Communication Foundation (WCF)를 다운로드 하 고 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플. 이 샘플은 다음 디렉터리에 있습니다.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\Reentrant`  
   

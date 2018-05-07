@@ -1,27 +1,15 @@
 ---
-title: "ASP.NET 클라이언트에서 데이터 바인딩"
-ms.custom: 
+title: ASP.NET 클라이언트에서 데이터 바인딩
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 68b49fa6-94e7-4d4c-a34e-902a2b3770b6
-caps.latest.revision: "23"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 8f7a3c4adb1a72a31029da7f73778a5ed407b2f0
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: c0f3cbb08f0078bf364ef720635f7afda3257611
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="data-binding-in-an-aspnet-client"></a>ASP.NET 클라이언트에서 데이터 바인딩
-이 샘플에서는 Web Forms 응용 프로그램에서 일반적인 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 서비스에 의해 반환된 데이터를 바인딩하는 방법을 보여 줍니다.  
+이 샘플에는 Web Forms 응용 프로그램에서 일반적인 Windows Communication Foundation (WCF) 서비스에서 반환 된 데이터를 바인딩하는 방법을 보여 줍니다.  
   
 > [!NOTE]
 >  이 샘플의 설치 절차 및 빌드 지침은 이 항목의 끝부분에 나와 있습니다.  
@@ -38,14 +26,14 @@ ms.lasthandoff: 12/22/2017
   
 2.  C# 또는 Visual Basic .NET 버전의 솔루션을 빌드하려면 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)의 지침을 따릅니다.  
   
-3.  이 샘플의 클라이언트는 개발 웹 서버에서 실행되는 웹 사이트입니다. 개발 웹 서버를 시작 하려면 명령 프롬프트에서 다음을 입력: "`%SystemDrive%\Program Files\Common Files\Microsoft Shared\DevServer\9.0\WebDev.WebServer.EXE" /port:8000 /path:<WebFormsSamplePath>\CS\client /vpath:/client`합니다. 그런 다음 http://localhost:8000/client로 이동합니다. 이 샘플을 여러 컴퓨터에서 실행하려면 클라이언트의 Web.config 파일에서 `localhost`에 대한 모든 참조를 서버의 컴퓨터 이름으로 바꿉니다.  
+3.  이 샘플의 클라이언트는 개발 웹 서버에서 실행되는 웹 사이트입니다. 개발 웹 서버를 시작 하려면 명령 프롬프트에서 다음을 입력: "`%SystemDrive%\Program Files\Common Files\Microsoft Shared\DevServer\9.0\WebDev.WebServer.EXE" /port:8000 /path:<WebFormsSamplePath>\CS\client /vpath:/client`합니다. 다음 찾습니다 http://localhost:8000/client합니다. 이 샘플을 여러 컴퓨터에서 실행하려면 클라이언트의 Web.config 파일에서 `localhost`에 대한 모든 참조를 서버의 컴퓨터 이름으로 바꿉니다.  
   
 > [!IMPORTANT]
 >  컴퓨터에 이 샘플이 이미 설치되어 있을 수도 있습니다. 계속하기 전에 다음(기본) 디렉터리를 확인하세요.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  이 디렉터리가 없으면 [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4(.NET Framework 4용 WCF(Windows Communication Foundation) 및 WF(Windows Workflow Foundation) 샘플)](http://go.microsoft.com/fwlink/?LinkId=150780) 로 이동하여 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 및 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플을 모두 다운로드하세요. 이 샘플은 다음 디렉터리에 있습니다.  
+>  이 디렉터리가로 이동 [Windows Communication Foundation (WCF) 및.NET Framework 4에 대 한 Windows WF (Workflow Foundation) 샘플](http://go.microsoft.com/fwlink/?LinkId=150780) 모든 Windows Communication Foundation (WCF)를 다운로드 하 고 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플. 이 샘플은 다음 디렉터리에 있습니다.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Scenario\DataBinding\WebForms`  
   

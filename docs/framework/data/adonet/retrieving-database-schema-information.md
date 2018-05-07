@@ -1,24 +1,12 @@
 ---
-title: "데이터베이스 스키마 정보 검색"
-ms.custom: 
+title: 데이터베이스 스키마 정보 검색
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 79038d52-f122-4fd4-9bfb-aaa22d6a114b
-caps.latest.revision: "3"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 09a0ec444801d1fe2caccf9e25a68e3c6ae8f5c2
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 1ac39a556fd7539550b12cb71b701c4bd3224a0b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="retrieving-database-schema-information"></a>데이터베이스 스키마 정보 검색
 데이터베이스에서 스키마 정보를 가져오려면 스키마 검색 프로세스를 사용합니다. 스키마 검색을 사용 하면 응용 프로그램 관리 되는 공급자 찾기 및 데이터베이스 스키마에 대 한 정보를 라고도 반환을 요청 하도록 *메타 데이터*, 지정된 된 데이터베이스의 합니다. 테이블, 열 및 저장 프로시저 같은 다양한 데이터베이스 스키마 요소는 스키마 컬렉션을 통해 노출됩니다. 각 스키마 컬렉션에는 사용하는 공급자와 관련된 다양한 스키마 정보가 들어 있습니다.  

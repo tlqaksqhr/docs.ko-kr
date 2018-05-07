@@ -1,29 +1,15 @@
 ---
 title: 예외 참조
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: adc19950-5f79-4045-8403-bf6310118ee3
-caps.latest.revision: 6
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 7b82c1821362b874f38f9419269708a7f61ab690
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 7034c3bbc25ab7ae6fea1d03c42ecde2e0130ee0
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="exceptions-reference"></a>예외 참조
-이 단원의 다음 영역에서는 [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)]에서 생성되는 모든 예외를 소개합니다.  
+이 섹션에서는 Windows Communication Foundation (WCF)에서 생성 된 다음 영역에서 모든 예외를 나열 합니다.  
   
  [IdentityModel](../../../../../docs/framework/wcf/diagnostics/exceptions-reference/identitymodel-exceptions.md)  
   

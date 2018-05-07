@@ -1,34 +1,20 @@
 ---
 title: 재생 공격
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 7a17e040-93cd-4432-81b9-9f62fec78c8f
-caps.latest.revision: 10
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 4e827c51378b9f75835b9b98280b4995d2cae2fc
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 3139e0ea094f1f7483261ffd10026815e5d12f31
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="replay-attacks"></a>재생 공격
 A *재생 공격* 는 공격자가 두 당사자 간에 메시지 스트림을 복사 하 고 하나 이상의 당사자에 게 스트림을 재생 하는 경우에 발생 합니다. 완화되지 않은 경우 공격을 받기 쉬운 컴퓨터는 스트림을 올바른 메시지로 처리하여 항목에 대한 중복 주문과 같은 잘못된 결과의 범위에 있게 됩니다.  
   
 ## <a name="bindings-may-be-subject-to-reflection-attacks"></a>바인딩이 반사 공격을 받기 쉬운 경우  
- *반사 공격* 회신으로 수신기에서 온 경우 메시지를 보낸 사람에 게 재생 됩니다. 표준 *재생 검색* 에 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 메커니즘 처리 하지 않는 자동으로이 있습니다.  
+ *반사 공격* 회신으로 수신기에서 온 경우 메시지를 보낸 사람에 게 재생 됩니다. 표준 *재생 검색* Windows Communication Foundation (WCF)에서 메커니즘 처리 하지 않는 자동으로이 있습니다.  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 서비스 모델이 서명된 메시지 ID를 요청 메시지에 추가하고 응답 메시지에 서명된 `relates-to` 헤더가 있어야 하므로 반사 공격은 기본적으로 완화됩니다. 따라서 요청 메시지를 응답으로 재생할 수 없습니다. 보안 RM(신뢰할 수 있는 메시지) 시나리오에서 반사 공격은 다음과 같은 이유로 완화됩니다.  
+ WCF 서비스 모델 요청 메시지에 서명된 된 메시지 ID를 추가 하 고 서명 된 예상 하므로 반사 공격은 기본적으로 완화 됩니다 `relates-to` 응답 메시지에 헤더입니다. 따라서 요청 메시지를 응답으로 재생할 수 없습니다. 보안 RM(신뢰할 수 있는 메시지) 시나리오에서 반사 공격은 다음과 같은 이유로 완화됩니다.  
   
 -   시퀀스 만들기 및 시퀀스 만들기 응답 메시지 스키마는 다릅니다.  
   

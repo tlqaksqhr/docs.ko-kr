@@ -1,24 +1,12 @@
 ---
-title: "HTTP 승인 채널"
-ms.custom: 
+title: HTTP 승인 채널
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 469f3056-5ef2-4753-8acf-b574d23d83cf
-caps.latest.revision: "10"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: d07a17c5ed4302657671e0247e44ac0ef6e75518
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: c56b2fbe9d0bac3143ee7d234fd36a75f7b8071c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="http-acknowledgement-channel"></a>HTTP 승인 채널
 HTTP 승인 채널은 서비스에서 들어오는 메시지를 수신할 때 승인을 자동으로 보내지 않고 들어오는 메시지를 승인하거나 거부할 수 있게 단방향 메시지 패턴을 변경하는 계층화된 채널의 예입니다. 또한 HTTP 승인 채널을 사용하면 서비스에서는 메시지가 처리될 것임을 비즈니스 수준에서 보장할 수 있을 때까지 승인을 지연시킬 수 있습니다.  
@@ -54,6 +42,6 @@ HTTP 승인 채널은 서비스에서 들어오는 메시지를 수신할 때 �
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  이 디렉터리가 없으면 [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4(.NET Framework 4용 WCF(Windows Communication Foundation) 및 WF(Windows Workflow Foundation) 샘플)](http://go.microsoft.com/fwlink/?LinkId=150780) 로 이동하여 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 및 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플을 모두 다운로드하세요. 이 샘플은 다음 디렉터리에 있습니다.  
+>  이 디렉터리가로 이동 [Windows Communication Foundation (WCF) 및.NET Framework 4에 대 한 Windows WF (Workflow Foundation) 샘플](http://go.microsoft.com/fwlink/?LinkId=150780) 모든 Windows Communication Foundation (WCF)를 다운로드 하 고 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플. 이 샘플은 다음 디렉터리에 있습니다.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Channels\HttpAckChannel`

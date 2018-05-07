@@ -1,9 +1,6 @@
 ---
-title: "특성을 사용하는 프로그래밍 모델 개요(MEF)"
+title: 특성을 사용하는 프로그래밍 모델 개요(MEF)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.technology: dotnet-clr
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -11,16 +8,13 @@ helpviewer_keywords:
 - MEF, attributed programming model
 - attributed programming model [MEF]
 ms.assetid: 49b787ff-2741-4836-ad51-c3017dc592d4
-caps.latest.revision: "24"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 565cd9384e150f707b2e5e72342579d95c3a096e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: baa66f11404e2cee83b4d4b32ba02544c9438d7f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="attributed-programming-model-overview-mef"></a>특성을 사용하는 프로그래밍 모델 개요(MEF)
 MEF(Managed Extensibility Framework)에서 *프로그래밍 모델* 은 MEF가 작동하는 개념 개체 집합을 정의하는 특정 방법입니다. 이러한 개념 개체에는 파트, 가져오기 및 내보내기가 포함됩니다. MEF에서는 이러한 개체를 사용하지만 이러한 개체를 표현해야 하는 방법을 지정하지는 않습니다. 따라서 사용자 지정 프로그래밍 모델을 비롯한 매우 다양한 프로그래밍 모델이 가능합니다.  

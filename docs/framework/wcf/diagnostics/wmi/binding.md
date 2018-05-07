@@ -1,24 +1,12 @@
 ---
 title: Binding2
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 09511c6c-5749-4bb0-874e-0f0be36bfe04
-caps.latest.revision: "8"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: f6553d1e1c030a30eed74ff81d3e07e28a9f25b7
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 0260b75a0f49e0f6f72d7d1eda642d0a494d2892
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="binding"></a>바인딩
 wmi 바인딩  
@@ -59,7 +47,7 @@ class Binding
   
  닫기 작업을 완료하기 위해 제공된 시간 간격입니다.  
   
-### <a name="name"></a>name  
+### <a name="name"></a>이름  
  데이터 형식: string  
   
  액세스 형식: 읽기 전용  

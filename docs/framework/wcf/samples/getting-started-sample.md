@@ -1,34 +1,20 @@
 ---
-title: "Getting Started 샘플"
-ms.custom: 
+title: Getting Started 샘플
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - basic samples [WCF], getting started
 ms.assetid: 967a3d94-0261-49ff-b85a-20bb07f1af20
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 2f97ad418f3d5ed197e8c35edf9e897eb393ef18
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: dfba7062d4226f3644aa6c4cc0efcd7c5fb9eab8
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="getting-started-sample"></a>Getting Started 샘플
-Getting Started 샘플에서는 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]를 사용하여 일반적인 서비스와 일반적인 클라이언트를 구현하는 방법을 보여 줍니다. 이 샘플은 다른 모든 기본 기술 샘플의 기준이 됩니다.  
+Getting Started 샘플 일반 서비스와 Windows Communication Foundation (WCF)를 사용 하 여 일반 클라이언트를 구현 하는 방법을 보여 줍니다. 이 샘플은 다른 모든 기본 기술 샘플의 기준이 됩니다.  
   
 > [!NOTE]
 >  이 샘플의 설치 절차 및 빌드 지침은 이 항목의 끝부분에 나와 있습니다.  
@@ -38,7 +24,7 @@ Getting Started 샘플에서는 [!INCLUDE[indigo1](../../../../includes/indigo1-
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  이 디렉터리가 없으면 [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4(.NET Framework 4용 WCF(Windows Communication Foundation) 및 WF(Windows Workflow Foundation) 샘플)](http://go.microsoft.com/fwlink/?LinkId=150780) 로 이동하여 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 및 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플을 모두 다운로드하세요. 이 샘플은 다음 디렉터리에 있습니다.  
+>  이 디렉터리가로 이동 [Windows Communication Foundation (WCF) 및.NET Framework 4에 대 한 Windows WF (Workflow Foundation) 샘플](http://go.microsoft.com/fwlink/?LinkId=150780) 모든 Windows Communication Foundation (WCF)를 다운로드 하 고 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플. 이 샘플은 다음 디렉터리에 있습니다.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\GettingStarted\GettingStarted`  
   
@@ -154,9 +140,9 @@ public class CalculatorService : ICalculator
   
  서비스는 IIS 또는 WAS 호스트에서 제공되는 기본 주소에서 끝점을 노출합니다. 바인딩은 표준 <xref:System.ServiceModel.WSHttpBinding>을 사용하여 구성되어 주소 지정 및 보안을 위한 HTTP 통신 및 표준 웹 서비스 프로토콜을 제공합니다. 계약은 서비스에 의해 구현되는 `ICalculator`입니다.  
   
- 구성된 대로 동일한 컴퓨터의 클라이언트는 http://localhost/servicemodelsamples/service.svc에서 서비스에 액세스할 수 있습니다. 원격 컴퓨터의 클라이언트가 서비스에 액세스하려면 localhost 대신 정규화된 도메인 이름을 지정해야 합니다.  
+ 서비스에 액세스할 수 구성 된 대로 http://localhost/servicemodelsamples/service.svc 동일한 컴퓨터에 클라이언트에서. 원격 컴퓨터의 클라이언트가 서비스에 액세스하려면 localhost 대신 정규화된 도메인 이름을 지정해야 합니다.  
   
- 기본적으로 프레임워크에서는 메타데이터를 노출하지 않습니다. 따라서 서비스는 <xref:System.ServiceModel.Description.ServiceMetadataBehavior>를 설정하고 http://localhost/servicemodelsamples/service.svc/mex에서 MEX(메타데이터 교환) 끝점을 노출합니다. 다음 구성에서는 이를 보여 줍니다.  
+ 기본적으로 프레임워크에서는 메타데이터를 노출하지 않습니다. 서비스 설정으로 <xref:System.ServiceModel.Description.ServiceMetadataBehavior> 에서 메타 데이터 교환 (MEX) 끝점을 노출 하 고 http://localhost/servicemodelsamples/service.svc/mex합니다. 다음 구성에서는 이를 보여 줍니다.  
   
 ```xaml  
 <system.serviceModel>  
