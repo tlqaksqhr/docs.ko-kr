@@ -1,28 +1,16 @@
 ---
-title: "기능별 Windows Forms 컨트롤"
-ms.custom: 
+title: 기능별 Windows Forms 컨트롤
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - controls [Windows Forms], by function
 - Windows Forms, controls by function
 - Windows Forms controls, list of
 ms.assetid: 5e65a6c3-5d6f-480d-beb8-b28f865f07e3
-caps.latest.revision: "15"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a48e1e728e3ded58b0045554a81588933027074c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 058a18878b89991bd8124bd69e18476d4f1479d6
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="windows-forms-controls-by-function"></a>기능별 Windows Forms 컨트롤
 Windows Forms 컨트롤 및 다양 한 기능을 수행 하는 구성 요소를 제공 합니다. 다음 표에서 Windows Forms 컨트롤 및 일반 함수에 따라 구성 요소를 나열합니다. 또한 컨트롤이 여러 개 동일한 기능을 제공 하는 있는 권장된 컨트롤 대체 된 컨트롤에 대 한 메모 함께 나열 됩니다. 별도 후속 테이블에서 대체 컨트롤과 권장된 대신 사용할 함께 나열 됩니다.  
@@ -35,7 +23,7 @@ Windows Forms 컨트롤 및 다양 한 기능을 수행 하는 구성 요소를 
 |함수|Control|설명|  
 |--------------|-------------|-----------------|  
 |데이터 표시|<xref:System.Windows.Forms.DataGridView> 컨트롤|<xref:System.Windows.Forms.DataGridView> 컨트롤은 데이터를 표시 하기 위한 사용자 지정 가능한 테이블을 제공 합니다. <xref:System.Windows.Forms.DataGridView> 클래스에는 셀, 행, 열 및 테두리는 사용자 지정할 수 있습니다. **참고:** 는 <xref:System.Windows.Forms.DataGridView> 에 누락 된 다양 한 기본 및 고급 기능을 제공 하는 컨트롤의 <xref:System.Windows.Forms.DataGrid> 제어 합니다. 자세한 내용은 참조 [차이점 Windows Forms DataGridView 컨트롤과 DataGrid 컨트롤](../../../../docs/framework/winforms/controls/differences-between-the-windows-forms-datagridview-and-datagrid-controls.md)|  
-|데이터 바인딩 및 탐색|<xref:System.Windows.Forms.BindingSource>구성 요소|현재 항목 관리, 변경 알림 및 기타 서비스를 제공 하 여 데이터를 폼에 컨트롤 바인딩을 간소화 합니다.|  
+|데이터 바인딩 및 탐색|<xref:System.Windows.Forms.BindingSource> 구성 요소|현재 항목 관리, 변경 알림 및 기타 서비스를 제공 하 여 데이터를 폼에 컨트롤 바인딩을 간소화 합니다.|  
 ||<xref:System.Windows.Forms.BindingNavigator> 컨트롤|탐색 하 고 폼에서 데이터를 조작 하기 위한 도구 모음 유형 인터페이스를 제공 합니다.|  
 |텍스트 편집|<xref:System.Windows.Forms.TextBox> 컨트롤|런타임 시 사용자가 편집 하거나 프로그래밍 방식으로 변경할 수 있는 디자인 타임에 입력 한 텍스트를 표시 합니다.|  
 ||<xref:System.Windows.Forms.RichTextBox> 컨트롤|일반 텍스트 또는 서식 있는 텍스트 형식 (RTF)에 서식이 지정 된 표시 될 텍스트를를 수 있습니다.|  
@@ -53,7 +41,7 @@ Windows Forms 컨트롤 및 다양 한 기능을 수행 하는 구성 요소를 
 ||<xref:System.Windows.Forms.NumericUpDown> 컨트롤|사용자가 위쪽 및 아래쪽 단추를 사용 하 여 스크롤할 수 있는 숫자의 목록을 표시 합니다.|  
 ||<xref:System.Windows.Forms.TreeView> 컨트롤|텍스트 선택 확인란 또는 아이콘을 가진 구성 될 수 있는 노드 개체의 계층적 컬렉션을 표시 합니다.|  
 |그래픽 표시|<xref:System.Windows.Forms.PictureBox> 컨트롤|예: 비트맵 및 아이콘 그래픽 파일 프레임에 표시 됩니다.|  
-|그래픽 저장소|<xref:System.Windows.Forms.ImageList> 컨트롤|이미지에 대 한 리포지토리 역할을 합니다. <xref:System.Windows.Forms.ImageList>한 응용 프로그램에서 다음 컨트롤 및 포함 된 이미지를 재사용할 수 있습니다.|  
+|그래픽 저장소|<xref:System.Windows.Forms.ImageList> 컨트롤|이미지에 대 한 리포지토리 역할을 합니다. <xref:System.Windows.Forms.ImageList> 한 응용 프로그램에서 다음 컨트롤 및 포함 된 이미지를 재사용할 수 있습니다.|  
 |값 설정|<xref:System.Windows.Forms.CheckBox> 컨트롤|확인란 및 텍스트에 대 한 레이블을 표시합니다. 일반적으로 옵션을 설정 하는 데 사용 합니다.|  
 ||<xref:System.Windows.Forms.CheckedListBox> 컨트롤|스크롤할 수 있는 목록이 각 항목의 확인란으로 표시 됩니다.|  
 ||<xref:System.Windows.Forms.RadioButton> 컨트롤|설정 하거나 해제할 수 있는 단추를 표시 합니다.|  
@@ -73,8 +61,8 @@ Windows Forms 컨트롤 및 다양 한 기능을 수행 하는 구성 요소를 
 ||<xref:System.Windows.Forms.LinkLabel> 컨트롤|웹 스타일 링크 텍스트를 표시 하 고 사용자가 특수 한 텍스트를 클릭 하면 이벤트가 발생 합니다. 일반적으로 텍스트 다른 창이 나 웹 사이트에 대 한 링크입니다.|  
 ||<xref:System.Windows.Forms.NotifyIcon> 컨트롤|백그라운드에서 실행 중인 응용 프로그램을 나타내는 작업 표시줄의 상태 알림 영역에 아이콘을 표시 합니다.|  
 ||<xref:System.Windows.Forms.ToolStrip> 컨트롤|Microsoft Windows XP, Microsoft Office, Microsoft Internet Explorer 또는 사용자 지정 디자인으로 또는 테마, 없이 및 오버플로 및 런타임 항목 다시 정렬을 지 원하는 가질 수 있는 도구 모음을 만듭니다. **참고:** 는 <xref:System.Windows.Forms.ToolStrip> 대체 하도록 디자인 된는 <xref:System.Windows.Forms.ToolBar> 제어 합니다.|  
-|사용자 도움말|<xref:System.Windows.Forms.HelpProvider>구성 요소|컨트롤에 대한 팝업 또는 온라인 도움말을 제공합니다.|  
-||<xref:System.Windows.Forms.ToolTip>구성 요소|사용자 컨트롤에 포인터를 놓을 때 컨트롤의 용도에 대 한 간략 한 설명을 표시 하는 팝업 창을 제공 합니다.|  
+|사용자 도움말|<xref:System.Windows.Forms.HelpProvider> 구성 요소|컨트롤에 대한 팝업 또는 온라인 도움말을 제공합니다.|  
+||<xref:System.Windows.Forms.ToolTip> 구성 요소|사용자 컨트롤에 포인터를 놓을 때 컨트롤의 용도에 대 한 간략 한 설명을 표시 하는 팝업 창을 제공 합니다.|  
 |다른 컨트롤 그룹화|<xref:System.Windows.Forms.Panel> 컨트롤|스크롤 가능, 레이블이 지정 되지 않은 프레임에 대 한 컨트롤 집합을 그룹화합니다.|  
 ||<xref:System.Windows.Forms.GroupBox> 컨트롤|레이블이 지정 된, 비스크롤형 프레임에 컨트롤 (예: 라디오 단추)의 집합을 그룹화합니다.|  
 ||<xref:System.Windows.Forms.TabControl> 컨트롤|효율적으로 그룹화 된 개체를 구성 하 고 액세스 하는 탭된 페이지를 제공 합니다.|  

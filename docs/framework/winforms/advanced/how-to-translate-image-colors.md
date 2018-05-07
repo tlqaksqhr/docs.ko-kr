@@ -1,13 +1,6 @@
 ---
-title: "방법: 이미지 색 변환"
-ms.custom: 
+title: '방법: 이미지 색 변환'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -16,16 +9,11 @@ helpviewer_keywords:
 - images [Windows Forms], changing colors
 - image colors [Windows Forms]
 ms.assetid: 2106fb9a-4d60-4dcf-9220-9f189a6c4d19
-caps.latest.revision: "13"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 2a2147b9bc86aa7ec03e8455bb0dc51c89a8b282
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 48f506f76ff6e9ca648822d073b6f6a852b9ca8e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-translate-image-colors"></a>방법: 이미지 색 변환
 번역 네 가지 구성 요소 중 하나 이상에 값을 추가합니다. 다음 표에 번역을 나타내는 색 매트릭스 항목이 제공 됩니다.  
@@ -37,7 +25,7 @@ ms.lasthandoff: 12/22/2017
 |파랑|[4][2]|  
 |알파|[4][3]|  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 구성 예제는 <xref:System.Drawing.Image> ColorBars.bmp 파일에서 개체입니다. 다음 코드는 이미지의 각 픽셀의 빨간색 구성 요소를 0.75를 추가합니다. 변환된 된 이미지와 함께 원본 이미지를 그립니다.  
   
  다음 그림에서는 오른쪽에서 왼쪽의 원래 이미지 및 변형 된 이미지를 보여 줍니다.  

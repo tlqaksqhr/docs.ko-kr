@@ -1,26 +1,17 @@
 ---
 title: 'Win32 리소스를 만드는 동안 오류 발생: &lt;오류 메시지&gt;'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - bc30136
 - vbc30136
 helpviewer_keywords:
 - BC30136
 ms.assetid: 05a813e4-9d65-4ce8-be8f-7ca20bbba2af
-caps.latest.revision: 9
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: ce4cffffb19eeb73ff6300af318f171626d6b44b
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: f667c9c8aba3e4b2cc78e8875ed0cab2c3e34f07
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="error-creating-win32-resources-lterror-messagegt"></a>Win32 리소스를 만드는 동안 오류 발생: &lt;오류 메시지&gt;
 Visual Basic 컴파일러는 매니페스트를 사용해 어셈블리를 생성 하는 어셈블리 링커 (Al.exe, Alink 라고도 함)를 호출 합니다. 링커가 메모리 내 리소스를 만드는 동안 오류를 보고했습니다. 환경에 문제가 있거나 컴퓨터의 메모리가 부족할 수 있습니다.  

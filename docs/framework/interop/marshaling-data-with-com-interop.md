@@ -1,25 +1,16 @@
 ---
-title: "COM Interop를 사용하여 데이터 마샬링"
-ms.custom: 
+title: COM Interop를 사용하여 데이터 마샬링
 ms.date: 09/07/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - COM interop, data marshaling
 - marshaling data, COM interop
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 649936abfe149371445c77802bda2e72f558a41d
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: d0d94223223568efe921af3a340815a966cc6c6f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="marshaling-data-with-com-interop"></a>COM Interop를 사용하여 데이터 마샬링
 COM interop는 관리 코드에서 COM 개체를 사용하고 관리되는 개체를 COM에 노출하는 기능을 모두 지원합니다. COM과의 데이터 마샬링 지원은 광범위하며 거의 항상 올바른 마샬링 동작을 제공합니다.  

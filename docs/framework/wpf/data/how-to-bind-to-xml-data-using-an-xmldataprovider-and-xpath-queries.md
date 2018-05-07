@@ -1,35 +1,23 @@
 ---
-title: "방법: XMLData Provider 및 XPath 쿼리를 사용하여 XML 데이터에 바인딩"
-ms.custom: 
+title: '방법: XMLData Provider 및 XPath 쿼리를 사용하여 XML 데이터에 바인딩'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - XmlDataProvider [WPF], binding to XML data
 - data binding [WPF], binding to XML data using XmlDataProvider queries
 - binding [WPF], to XML data using XmlDataProvider queries
 ms.assetid: 7dcd018f-16aa-4870-8e47-c1b4ea31e574
-caps.latest.revision: "22"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 92037be2280eaa248951ff9bad82b7a1581a4fd9
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: bb8eb727fb6614440721c4d34a7d1828182d2f14
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-bind-to-xml-data-using-an-xmldataprovider-and-xpath-queries"></a>방법: XMLData Provider 및 XPath 쿼리를 사용하여 XML 데이터에 바인딩
 에 바인딩하는 방법을 보여 주는이 예제 [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)] 사용 하 여 데이터는 <xref:System.Windows.Data.XmlDataProvider>합니다.  
   
  와 <xref:System.Windows.Data.XmlDataProvider>, 내부 응용 프로그램에서 데이터 바인딩을 통해 액세스할 수 있는 데이터의 모든 트리 수 [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] 노드. 즉, 한 <xref:System.Windows.Data.XmlDataProvider> 의 모든 트리를 사용 하는 편리한 방법을 제공 [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)] 바인딩 소스로 노드.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 예제에서는 데이터 변수로 직접 포함 되어는 [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] *데이터 아일랜드* 내에서 <xref:System.Windows.FrameworkElement.Resources%2A> 섹션. [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] 데이터 고립 영역은 `<x:XData>` 태그로 래핑되어야 하며, 항상 단일 루트 노드가 있어야 합니다. 이 예에서는 *인벤토리*입니다.  
   
 > [!NOTE]
@@ -55,7 +43,7 @@ ms.lasthandoff: 12/22/2017
   
 -   `XPath="*[position()>3]"`에서는 처음 3개를 제외한 모든 책 요소를 반환합니다.  
   
- 실행 하는 경우는 **XPath** 쿼리 반환는 <xref:System.Xml.XmlNode> XmlNodes 목록이 나 합니다. <xref:System.Xml.XmlNode>이 [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] 개체를 사용할 수 있습니다는 <xref:System.Windows.Data.Binding.Path%2A> 바인딩할 속성은 [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] 속성입니다. 이전 예를 다시 살펴보겠습니다. 이 예제에서는 나머지 그대로 변경 하면는 <xref:System.Windows.Controls.TextBlock> 바인딩을 다음과 같이 나타납니다에 반환된 된 XmlNodes 이름을 <xref:System.Windows.Controls.ListBox>합니다. 이 경우 반환된 모든 노드의 이름은 "*Book*"입니다.  
+ 실행 하는 경우는 **XPath** 쿼리 반환는 <xref:System.Xml.XmlNode> XmlNodes 목록이 나 합니다. <xref:System.Xml.XmlNode> 이 [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] 개체를 사용할 수 있습니다는 <xref:System.Windows.Data.Binding.Path%2A> 바인딩할 속성은 [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] 속성입니다. 이전 예를 다시 살펴보겠습니다. 이 예제에서는 나머지 그대로 변경 하면는 <xref:System.Windows.Controls.TextBlock> 바인딩을 다음과 같이 나타납니다에 반환된 된 XmlNodes 이름을 <xref:System.Windows.Controls.ListBox>합니다. 이 경우 반환된 모든 노드의 이름은 "*Book*"입니다.  
   
  [!code-xaml[XmlDataSourceVariation#XmlNodePath](../../../../samples/snippets/csharp/VS_Snippets_Wpf/XmlDataSourceVariation/CS/Page1.xaml#xmlnodepath)]  
   

@@ -1,27 +1,15 @@
 ---
-title: "데이터 계약"
-ms.custom: 
+title: 데이터 계약
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 941049b6-8e98-497f-ab3f-19848241699f
-caps.latest.revision: "4"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: abc6aafc5b7676a76db3416d8c88b25a836d21ad
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: fa70a725a5e3e9acdd177dbf1816b0bdfada62ff
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="data-contracts"></a>데이터 계약
-이 단원에는 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]의 데이터 계약을 보여 주는 샘플이 포함되어 있습니다.  
+이 섹션에는 Windows Communication Foundation (WCF)에서 데이터 계약을 보여 주는 샘플이 포함 되어 있습니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
  [기본 데이터 계약](../../../../docs/framework/wcf/samples/basic-data-contract.md)  

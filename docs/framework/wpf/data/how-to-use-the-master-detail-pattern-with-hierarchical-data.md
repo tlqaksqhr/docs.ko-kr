@@ -1,32 +1,20 @@
 ---
-title: "방법: 계층적 데이터에 마스터-세부 패턴 사용"
-ms.custom: 
+title: '방법: 계층적 데이터에 마스터-세부 패턴 사용'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - data binding [WPF], Master-Detail data paradigm
 - Master-Detail data paradigm
 ms.assetid: 11429b9e-058d-4084-bfb6-2cf209c8ddf7
-caps.latest.revision: "12"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 2e392b47682d1bf53dc31073920bdf212fb7d997
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 46733b462861bdac3381cdacb8f2fbe0536d12eb
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-use-the-master-detail-pattern-with-hierarchical-data"></a>방법: 계층적 데이터에 마스터-세부 패턴 사용
 이 예에서는 마스터-세부 시나리오를 구현 하는 방법을 보여 줍니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  이 예제에서는 `LeagueList` 의 컬렉션인 `Leagues`합니다. 각 `League` 에 `Name` 의 컬렉션과 `Divisions`, 및 각 `Division` 에 이름 및 컬렉션을 `Teams`합니다. 각 `Team` 팀 이름이 있습니다.  
   
  [!code-xaml[MasterDetail#HowTo1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/MasterDetail/VisualBasic/Page1.xaml#howto1)]  
@@ -34,7 +22,7 @@ ms.lasthandoff: 12/22/2017
   
  예제 스크린샷은 다음과 같습니다. `Divisions` <xref:System.Windows.Controls.ListBox> 선택 항목을 자동으로 추적의 `Leagues` <xref:System.Windows.Controls.ListBox> 해당 데이터를 표시 합니다. `Teams` <xref:System.Windows.Controls.ListBox> 에 다른 두 가지 선택 항목을 추적 <xref:System.Windows.Controls.ListBox> 컨트롤입니다.  
   
- ![마스터 &#45; 세부 예제](../../../../docs/framework/wpf/data/media/databindingmasterdetailsample.png "DataBindingMasterDetailSample")  
+ ![마스터&#45;세부 예제](../../../../docs/framework/wpf/data/media/databindingmasterdetailsample.png "DataBindingMasterDetailSample")  
   
  이 예에서 유념 해야 할 두 가지 사항은 다음과 같습니다.  
   

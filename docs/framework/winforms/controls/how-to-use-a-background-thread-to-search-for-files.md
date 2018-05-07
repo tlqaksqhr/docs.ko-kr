@@ -1,13 +1,6 @@
 ---
-title: "방법: 백그라운드 스레드를 사용하여 파일 검색"
-ms.custom: 
+title: '방법: 백그라운드 스레드를 사용하여 파일 검색'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -17,35 +10,30 @@ helpviewer_keywords:
 - threading [Windows Forms], custom controls
 - custom controls [Windows Forms], samples
 ms.assetid: 7fe3956f-5b8f-4f78-8aae-c9eb0b28f13a
-caps.latest.revision: "14"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ea1f2edf4677e3a04e6dd007dcf0fef9137180fe
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 1034868939837fc43cf7595c819a6109331a2684
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-use-a-background-thread-to-search-for-files"></a>방법: 백그라운드 스레드를 사용하여 파일 검색
 <xref:System.ComponentModel.BackgroundWorker> 대체 하 고 기능을 추가 하는 구성 요소는 <xref:System.Threading> 네임 스페이스 있지만 <xref:System.Threading> 선택 하는 경우 네임 스페이스의 이전 버전과 호환성 및 이후 사용 유지 됩니다. 자세한 내용은 참조 [BackgroundWorker 구성 요소 개요](../../../../docs/framework/winforms/controls/backgroundworker-component-overview.md)합니다.  
   
  Windows Forms로 하기 때문에 Windows Forms 네이티브 Win32 창에는 기본적으로 아파트-스레드는 단일 스레드 아파트 (STA) 모델을 사용 합니다. STA 모델을 의미 모든 스레드에서 창을 만들 수 있지만 한 번 만든 스레드를 전환할 수 없습니다 모든 함수 호출을 만드는 스레드에서 발생 해야 합니다. Windows Forms, 외부.NET Framework의 클래스는 사용 가능한 스레딩 모델을 사용합니다. .NET framework에서 스레딩에 대 한 정보를 참조 하십시오. [스레딩](../../../../docs/standard/threading/index.md)합니다.  
   
- STA 모델을 작성 스레드 컨트롤의 외부에서 호출 되어야 하는 컨트롤에는 메서드 해야 마샬링할 수 (실행)의 경우 컨트롤의 만들기 스레드입니다. 기본 클래스 <xref:System.Windows.Forms.Control> 에서는 여러 가지 방법 (<xref:System.Windows.Forms.Control.Invoke%2A>, <xref:System.Windows.Forms.Control.BeginInvoke%2A>, 및 <xref:System.Windows.Forms.Control.EndInvoke%2A>)이이 목적을 위해 합니다. <xref:System.Windows.Forms.Control.Invoke%2A>동기 메서드를 호출 합니다. <xref:System.Windows.Forms.Control.BeginInvoke%2A> 비동기 메서드를 호출 합니다.  
+ STA 모델을 작성 스레드 컨트롤의 외부에서 호출 되어야 하는 컨트롤에는 메서드 해야 마샬링할 수 (실행)의 경우 컨트롤의 만들기 스레드입니다. 기본 클래스 <xref:System.Windows.Forms.Control> 에서는 여러 가지 방법 (<xref:System.Windows.Forms.Control.Invoke%2A>, <xref:System.Windows.Forms.Control.BeginInvoke%2A>, 및 <xref:System.Windows.Forms.Control.EndInvoke%2A>)이이 목적을 위해 합니다. <xref:System.Windows.Forms.Control.Invoke%2A> 동기 메서드를 호출 합니다. <xref:System.Windows.Forms.Control.BeginInvoke%2A> 비동기 메서드를 호출 합니다.  
   
  사용 하는 경우 다중 스레딩을 리소스를 많이 사용 작업에 대 한 컨트롤에 사용자 인터페이스 수 동안 응답성을 유지 하면 리소스 사용량이 계산 백그라운드 스레드에서 실행 합니다.  
   
  다음 샘플 (`DirectorySearcher`) 지정된 된 검색 문자열과 일치 하는 파일에 대 한 디렉터리를 재귀적으로 검색 하는 백그라운드 스레드를 사용 하 고 다음 검색 결과와 목록 상자를 채웁니다 하는 다중 스레드 Windows Forms 컨트롤을 보여 줍니다. 이 예제에서 설명 하는 주요 개념은 다음과 같습니다.  
   
--   `DirectorySearcher`검색을 수행 하려면 새 스레드를 시작 합니다. 스레드가 실행 하는 `ThreadProcedure` 메서드를 호출 하 여 도우미 `RecurseDirectory` 실제 검색 작업을 수행 하 고 목록 상자를 채우는 메서드. 그러나 목록 상자를 채우는 다음 두 글머리 기호 항목에 설명 된 대로 크로스 스레드 호출을 해야 합니다.  
+-   `DirectorySearcher` 검색을 수행 하려면 새 스레드를 시작 합니다. 스레드가 실행 하는 `ThreadProcedure` 메서드를 호출 하 여 도우미 `RecurseDirectory` 실제 검색 작업을 수행 하 고 목록 상자를 채우는 메서드. 그러나 목록 상자를 채우는 다음 두 글머리 기호 항목에 설명 된 대로 크로스 스레드 호출을 해야 합니다.  
   
--   `DirectorySearcher`그러나 정의 `AddFiles` 목록 상자로; 파일을 추가 하는 방법을 `RecurseDirectory` 직접 호출할 수 없습니다 `AddFiles` 때문에 `AddFiles` 만든 STA 스레드에서만에서 실행할 수 있습니다 `DirectorySearcher`합니다.  
+-   `DirectorySearcher` 그러나 정의 `AddFiles` 목록 상자로; 파일을 추가 하는 방법을 `RecurseDirectory` 직접 호출할 수 없습니다 `AddFiles` 때문에 `AddFiles` 만든 STA 스레드에서만에서 실행할 수 있습니다 `DirectorySearcher`합니다.  
   
--   유일한 방법은 `RecurseDirectory` 호출할 수 `AddFiles` 크로스 스레드 호출을 통해이-즉, 호출 <xref:System.Windows.Forms.Control.Invoke%2A> 또는 <xref:System.Windows.Forms.Control.BeginInvoke%2A> 마샬링하 `AddFiles` 생성 스레드 `DirectorySearcher`합니다. `RecurseDirectory`사용 하 여 <xref:System.Windows.Forms.Control.BeginInvoke%2A> 호출을 비동기식으로 이루어질 수 있도록 합니다.  
+-   유일한 방법은 `RecurseDirectory` 호출할 수 `AddFiles` 크로스 스레드 호출을 통해이-즉, 호출 <xref:System.Windows.Forms.Control.Invoke%2A> 또는 <xref:System.Windows.Forms.Control.BeginInvoke%2A> 마샬링하 `AddFiles` 생성 스레드 `DirectorySearcher`합니다. `RecurseDirectory` 사용 하 여 <xref:System.Windows.Forms.Control.BeginInvoke%2A> 호출을 비동기식으로 이루어질 수 있도록 합니다.  
   
--   메서드를 마샬링하기 함수 포인터 또는 콜백 해당이 필요 합니다. 이.NET Framework의 대리자를 사용 하 여 수행 됩니다. <xref:System.Windows.Forms.Control.BeginInvoke%2A>대리자를 인수로 사용 합니다. `DirectorySearcher`따라서 대리자를 정의 (`FileListDelegate`), 바인딩합니다 `AddFiles` 의 인스턴스로 `FileListDelegate` 을 생성자,이 대리자 인스턴스를 전달 <xref:System.Windows.Forms.Control.BeginInvoke%2A>합니다. `DirectorySearcher`또한 검색이 완료 되 면 마샬링되는 이벤트 대리자를 정의 합니다.  
+-   메서드를 마샬링하기 함수 포인터 또는 콜백 해당이 필요 합니다. 이.NET Framework의 대리자를 사용 하 여 수행 됩니다. <xref:System.Windows.Forms.Control.BeginInvoke%2A> 대리자를 인수로 사용 합니다. `DirectorySearcher` 따라서 대리자를 정의 (`FileListDelegate`), 바인딩합니다 `AddFiles` 의 인스턴스로 `FileListDelegate` 을 생성자,이 대리자 인스턴스를 전달 <xref:System.Windows.Forms.Control.BeginInvoke%2A>합니다. `DirectorySearcher` 또한 검색이 완료 되 면 마샬링되는 이벤트 대리자를 정의 합니다.  
   
 ```vb  
 Option Strict  

@@ -1,27 +1,15 @@
 ---
-title: "서비스 작업 기간 확인"
-ms.custom: 
+title: 서비스 작업 기간 확인
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: e8a93a2c-2c20-48b3-8986-57e90e9aa908
-caps.latest.revision: "5"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 2c96aa6752feca637f89ed309d1a5c87cea4a3a9
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: a7615a4574210ad6e9b5eee2e5d5855365768854
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="determining-service-operation-duration"></a>서비스 작업 기간 확인
-[!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] 응용 프로그램에 분석 추적이 사용하도록 설정되어 있으면 이벤트 로그를 검사하여 서비스 작업의 실행 기간을 손쉽게 확인할 수 있습니다.  이 항목에서는 서비스 작업을 완료하는 데 소요되는 시간을 확인하는 방법을 보여 줍니다.  
+Windows Communication Foundation (WCF) 응용 프로그램에서 분석 추적을 사용 하는 경우 서비스 작업에 대 한 실행 기간 동안 이벤트 로그를 검사 하 여 쉽게 확인할 수 있습니다.  이 항목에서는 서비스 작업을 완료하는 데 소요되는 시간을 확인하는 방법을 보여 줍니다.  
   
 ### <a name="determining-service-operation-execution-duration"></a>서비스 작업 실행 기간 확인  
   

@@ -1,13 +1,6 @@
 ---
-title: "방법: 색 회전"
-ms.custom: 
+title: '방법: 색 회전'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -15,16 +8,11 @@ helpviewer_keywords:
 - colors [Windows Forms], rotating
 - examples [Windows Forms], rotating colors
 ms.assetid: e2e4c300-159c-4f4a-9b56-103b0f7cbc05
-caps.latest.revision: "13"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 81b022011bd5613b8e956aa83482d2836508a4f1
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 258ef9cd5eb8d569b2982614e3087df730a18c57
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-rotate-colors"></a>방법: 색 회전
 4 차원 색 공간에서 회전 시각화 하기 어렵습니다. 동의 고정 색상 구성 요소 중 하나를 유지 하는 것으로 회전 시각화할 쉽게 만들 수 있습니다. 1 자리 알파 구성 요소 (완전히 불투명 함)을 유지 한다고 가정 합니다. 다음 다음 그림에 나와 있는 것 처럼 빨간색, 녹색 및 파란색 축이 있는 3 차원 색 공간을 시각화할 수 했습니다.  
@@ -41,7 +29,7 @@ ms.lasthandoff: 12/22/2017
   
  ![다시 칠하기](../../../../docs/framework/winforms/advanced/media/recoloring05.gif "recoloring05")  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 예제에서는 (1, 0, 0.6) 모두 같은 색 이므로 파란색 축에 대 한 60도 회전을 적용 하는 이미지입니다. 회전 각도 빨간색-녹색 평면과 평행 하는 평면에 이루어집니다.  
   
  다음 그림에서는 왼쪽 및 오른쪽에 있는 색 회전 이미지에 원본 이미지를 보여 줍니다.  

@@ -1,32 +1,20 @@
 ---
-title: "방법: 슬라이더의 틱 사용자 지정"
-ms.custom: 
+title: '방법: 슬라이더의 틱 사용자 지정'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - TickBar [WPF]
 - Slider control [WPF], creating with TickBar
 ms.assetid: 4fa694f2-a620-4b15-be78-5f4286f89361
-caps.latest.revision: "17"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: d21d2950ed228bf588a202419c222ee86dde5b0d
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 667ec5d5504e18449800598f0b14548b7463bdf3
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-customize-the-ticks-on-a-slider"></a>방법: 슬라이더의 틱 사용자 지정
 만드는 방법을 보여 주는이 예제는 <xref:System.Windows.Controls.Slider> 눈금이 있는 컨트롤입니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  <xref:System.Windows.Controls.Primitives.TickBar> 설정 하는 경우 표시는 <xref:System.Windows.Controls.Slider.TickPlacement%2A> 속성 이외의 값을 <xref:System.Windows.Controls.Primitives.TickPlacement.None>은 기본 값입니다.  
   
  만드는 방법을 보여 주는 다음 예제는 <xref:System.Windows.Controls.Slider> 와 <xref:System.Windows.Controls.Primitives.TickBar> 는 눈금을 표시 합니다. <xref:System.Windows.Controls.Slider.TickPlacement%2A> 및 <xref:System.Windows.Controls.Slider.TickFrequency%2A> 속성 눈금 표시와 사이의 간격의 위치를 정의 합니다. 이동 하는 경우는 <xref:System.Windows.Controls.Primitives.Thumb>, 도구 설명의 값을 표시는 <xref:System.Windows.Controls.Slider>합니다. <xref:System.Windows.Controls.Slider.AutoToolTipPlacement%2A> 속성 도구 설명을 수행 하는 위치를 정의 합니다. <xref:System.Windows.Controls.Primitives.Thumb> 있기 때문에 이동 눈금 표시의 위치를 일치 <xref:System.Windows.Controls.Slider.IsSnapToTickEnabled%2A> 로 설정 된 `true`합니다.  

@@ -1,12 +1,6 @@
 ---
-title: "열거형 및 이름 한정(Visual Basic)"
-ms.custom: 
+title: 열거형 및 이름 한정(Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - declarations [Visual Basic], enumerations
 - Imports statement [Visual Basic], namespace declarations
@@ -23,14 +17,11 @@ helpviewer_keywords:
 - naming conventions [Visual Basic], naming conflicts
 - declarations [Visual Basic], namespaces
 ms.assetid: 08ba2738-df52-4140-bc55-f57c871c9b73
-caps.latest.revision: "20"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 3cb97d6a8f4b7e81f2b759010214e200ec63ff21
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: eb1f5653d968e81168833cd57813219e8f049b70
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="enumerations-and-name-qualification-visual-basic"></a>열거형 및 이름 한정(Visual Basic)
 일반적으로 열거형의 멤버를 참조할 때 멤버 이름을 열거형 이름으로 정규화 해야 합니다. 예를 들어, 참조 하는 `Sunday` 소속 프로그램 `Days` 열거형에서 다음 구문을 사용:  

@@ -1,24 +1,12 @@
 ---
-title: "배포 확장성"
-ms.custom: 
+title: 배포 확장성
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 4d941175-74a2-4b15-81b3-086e8a95d25f
-caps.latest.revision: "10"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 5322ff2c79ab5051b3a9aaaeaafe7db6c9c2f683
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 8182aee9d8a526d995ab1266e5c654f29f4af3d8
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="syndication-extensibility"></a>배포 확장성
 배포 API는 네트워크에 배포된 콘텐츠를 다양한 형식으로 작성할 수 있는 형식 중립적 프로그래밍 모델을 제공하기 위해 디자인되었습니다. 추상 데이터 모델은 다음 클래스로 구성됩니다.  
@@ -35,7 +23,7 @@ ms.lasthandoff: 12/22/2017
   
  이러한 클래스는 이름이 다른 경우도 일부 있지만 Atom 1.0 사양에 정의된 구문에 밀접하게 매핑됩니다.  
   
- 배포 프로토콜의 주요 기능은 확장성입니다. Atom 1.0 및 RSS 2.0에서는 사양에 정의되지 않은 배포 피드에 특성 및 요소를 추가합니다. [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 배포 프로그래밍 모델에서는 사용자 지정 특성 및 확장에 사용할 수 있는 새 클래스 파생 및 자유로운 형식의 액세스라는 방식을 제공합니다.  
+ 배포 프로토콜의 주요 기능은 확장성입니다. Atom 1.0 및 RSS 2.0에서는 사양에 정의되지 않은 배포 피드에 특성 및 요소를 추가합니다. Windows Communication Foundation (WCF) 배포 프로그래밍 모델에는 사용자 지정 특성 및 확장, 자유로운 형식의 액세스를 사용 하 고 새 클래스를 파생의 다음과 같은 방법으로 제공 합니다.  
   
 ## <a name="loosely-typed-access"></a>자유로운 형식의 액세스  
  새 클래스를 파생하여 확장을 추가하려면 추가 코드를 작성해야 합니다. 다른 옵션은 자유로운 형식으로 확장에 액세스합니다. 배포 추상 데이터 모델에 정의된 모든 형식에는 `AttributeExtensions` 및 `ElementExtensions`라는 속성이 포함되어 있지만 한 가지 예외가 있습니다. 즉, <xref:System.ServiceModel.Syndication.SyndicationContent>에는 `AttributeExtensions` 속성이 있지만 `ElementExtensions` 속성은 없습니다. 이러한 속성은 각각 `TryParseAttribute` 및 `TryParseElement` 메서드에서 처리하지 않은 확장 컬렉션입니다. <xref:System.ServiceModel.Syndication.SyndicationElementExtensionCollection.ReadElementExtensions%2A?displayProperty=nameWithType>, `ElementExtensions`, <xref:System.ServiceModel.Syndication.SyndicationFeed>, <xref:System.ServiceModel.Syndication.SyndicationItem> 및 <xref:System.ServiceModel.Syndication.SyndicationLink>의 <xref:System.ServiceModel.Syndication.SyndicationPerson> 속성에서 <xref:System.ServiceModel.Syndication.SyndicationCategory>을 호출하여 처리되지 않은 이러한 확장에 액세스할 수 있습니다. 이러한 메서드 집합은 지정된 이름과 네임스페이스가 있는 확장을 모두 찾고, `TExtension`의 인스턴스에 개별적으로 deserialize한 다음 `TExtension` 개체의 컬렉션으로 반환합니다.  

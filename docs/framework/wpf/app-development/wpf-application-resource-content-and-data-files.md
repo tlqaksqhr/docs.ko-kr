@@ -1,14 +1,6 @@
 ---
 title: WPF 응용 프로그램 리소스, 콘텐츠 및 데이터 파일
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-wpf
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -25,17 +17,11 @@ helpviewer_keywords:
 - application development [WPF], files
 - application management [WPF]
 ms.assetid: 7ad2943b-3961-41d3-8fc6-1582d43f5d99
-caps.latest.revision: 25
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: bcf0a725b7b3467a50a9f51850709dd972da217d
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 571b8f71ce233011ae6fc7a6d4d53c5029d27d69
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="wpf-application-resource-content-and-data-files"></a>WPF 응용 프로그램 리소스, 콘텐츠 및 데이터 파일
 [!INCLUDE[TLA#tla_win](../../../../includes/tlasharptla-win-md.md)] 응용 프로그램은 종종 실행 파일이 아닌 데이터와 같은 포함 된 파일 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)], 이미지, 비디오 및 오디오 합니다. Windows Presentation Foundation (WPF)를 구성 하 고 식별 하 고, 이러한 종류의 응용 프로그램 데이터 파일 이라고 하는 데이터 파일을 사용 하 여 특별 한 지원을 제공 합니다. 이러한 지원에는 다음을 포함한 특정 응용 프로그램 데이터 파일 형식 집합이 포함됩니다.  

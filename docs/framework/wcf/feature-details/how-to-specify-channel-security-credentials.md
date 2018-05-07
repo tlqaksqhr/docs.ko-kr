@@ -1,34 +1,22 @@
 ---
 title: '방법: 채널 보안 자격 증명 지정'
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: f8e03f47-9c4f-4dd5-8f85-429e6d876119
-caps.latest.revision: ''
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload:
-- dotnet
-ms.openlocfilehash: e2aedb06ec694f6c7dfb12b70ab919ae23eed17e
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: f25089f7f5ffa16bb46e0833b15b4cbc4a7735ac
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-specify-channel-security-credentials"></a>방법: 채널 보안 자격 증명 지정
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 서비스 모니커를 사용하여 COM 응용 프로그램에서 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 서비스를 호출할 수 있습니다. 대부분의 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 서비스에서는 클라이언트가 인증 및 권한 부여를 위한 자격 증명을 지정해야 합니다. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 클라이언트에서 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 서비스를 호출할 경우 관리되는 코드 또는 응용 프로그램 구성 파일에서 이러한 자격 증명을 지정할 수 있습니다. COM 응용 프로그램에서 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 서비스를 호출할 경우 <xref:System.ServiceModel.ComIntegration.IChannelCredentials> 인터페이스를 사용하여 자격 증명을 지정할 수 있습니다. 이 항목에서는 <xref:System.ServiceModel.ComIntegration.IChannelCredentials> 인터페이스를 사용하여 자격 증명을 지정하는 다양한 방식을 설명합니다.  
+Windows Communication Foundation (WCF) 서비스 모니커 COM 응용 프로그램을을 WCF 서비스를 호출할 수 있습니다. 대부분의 WCF 서비스에 클라이언트 인증 및 권한 부여에 대 한 자격 증명을 지정할 필요 합니다. WCF 클라이언트에서 WCF 서비스를 호출할 때 응용 프로그램 구성 파일에서 또는 관리 코드에서 이러한 자격 증명을 지정할 수 있습니다. COM 응용 프로그램에서 WCF 서비스를 호출할 때 사용할 수 있습니다는 <xref:System.ServiceModel.ComIntegration.IChannelCredentials> 인터페이스 자격 증명을 지정 합니다. 이 항목에서는 <xref:System.ServiceModel.ComIntegration.IChannelCredentials> 인터페이스를 사용하여 자격 증명을 지정하는 다양한 방식을 설명합니다.  
   
 > [!NOTE]
 >  <xref:System.ServiceModel.ComIntegration.IChannelCredentials>는 IDispatch 기반 인터페이스이며 Visual Studio 환경에서는 IntelliSense 기능을 가져오지 않습니다.  
   
- 이 문서 ´ ֲ는 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 에 정의 된 서비스는 [Message Security 샘플](../../../../docs/framework/wcf/samples/message-security-sample.md)합니다.  
+ 이 문서에 정의 된 WCF 서비스를 사용 합니다는 [Message Security 샘플](../../../../docs/framework/wcf/samples/message-security-sample.md)합니다.  
   
 ### <a name="to-specify-a-client-certificate"></a>클라이언트 인증서 지정  
   
@@ -40,7 +28,7 @@ ms.lasthandoff: 03/23/2018
   
 4.  추가 `bindingNamespace=``http://Microsoft.ServiceModel.Samples` 서비스에 대 한 App.config에 있는 끝점 태그입니다.  
   
-5.  메시지 보안 샘플을 빌드하고 Service.exe를 실행합니다. Internet Explorer를 사용하여 서비스의 URI(http://localhost:8000/ServiceModelSamples/Service)를 찾은 다음 서비스가 작동하는지 확인합니다.  
+5.  메시지 보안 샘플을 빌드하고 Service.exe를 실행합니다. Internet Explorer를 사용 하 고 서비스의 URI로 이동 (http://localhost:8000/ServiceModelSamples/Service) 서비스가 작동 되도록 합니다.  
   
 6.  Visual Basic 6.0을 열고 새 표준 .exe 파일을 만듭니다. 폼에 단추를 추가하고 단추를 두 번 클릭하여 다음 코드를 클릭 처리기에 추가합니다.  
   

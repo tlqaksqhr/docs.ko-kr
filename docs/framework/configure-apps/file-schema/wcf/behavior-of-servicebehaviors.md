@@ -2,11 +2,11 @@
 title: '&lt;serviceBehaviors&gt;의 &lt;behavior&gt;'
 ms.date: 03/30/2017
 ms.assetid: 78fc0a08-55de-416a-ac12-a5e6ffc9a987
-ms.openlocfilehash: c8716b7de5b9901683a5c111f66f14f26f7f9923
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
-ms.translationtype: HT
+ms.openlocfilehash: 9cb5676897255d11b502080f4f7f3fb897027917
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ltbehaviorgt-of-ltservicebehaviorsgt"></a>&lt;serviceBehaviors&gt;의 &lt;behavior&gt;
 `behavior` 요소는 서비스의 동작에 대한 설정 컬렉션을 포함합니다. 각 동작은 해당 `name`으로 인덱싱됩니다. 서비스 사용 하 여이 이름을 통해 각 동작에 연결할 수는 `behaviorConfiguration` 특성에는 [ \<끝점 >](../../../../../docs/framework/configure-apps/file-schema/wcf/endpoint-element.md) 요소입니다. 따라서 설정을 다시 정의하지 않고도 끝점에서 일반 동작 구성을 공유할 수 있습니다. [!INCLUDE[netfx40_short](../../../../../includes/netfx40-short-md.md)]부터는 바인딩 및 동작에 이름이 필요하지 않습니다. 기본 구성 및 이름이 없는 바인딩 및 동작에 대 한 자세한 내용은 참조 [단순화 된 구성](../../../../../docs/framework/wcf/simplified-configuration.md) 및 [WCF 서비스에 대 한 구성을 단순화](../../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md)합니다.  
@@ -54,9 +54,9 @@ ms.lasthandoff: 05/03/2018
 |[\<serviceDiscovery >](../../../../../docs/framework/configure-apps/file-schema/wcf/servicediscovery.md)|서비스 끝점의 검색 기능을 지정합니다.|  
 |[\<serviceMetadata >](../../../../../docs/framework/configure-apps/file-schema/wcf/servicemetadata.md)|서비스 메타데이터 및 관련 정보의 게시를 지정합니다.|  
 |[\<serviceSecurityAudit >](../../../../../docs/framework/configure-apps/file-schema/wcf/servicesecurityaudit.md)|서비스 작업 중에 보안 이벤트의 감사를 사용하도록 하는 설정을 지정합니다.|  
-|[\<serviceThrottling >](../../../../../docs/framework/configure-apps/file-schema/wcf/servicethrottling.md)|[!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 서비스의 스로틀 메커니즘을 지정합니다.|  
+|[\<serviceThrottling >](../../../../../docs/framework/configure-apps/file-schema/wcf/servicethrottling.md)|WCF 서비스의 스로틀 메커니즘을 지정합니다.|  
 |[\<serviceTimeouts >](../../../../../docs/framework/configure-apps/file-schema/wcf/servicetimeouts.md)|서비스에 대한 제한 시간을 지정합니다.|  
-|[\<workflowRuntime>](../../../../../docs/framework/configure-apps/file-schema/wcf/workflowruntime.md)|워크플로 기반 [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 서비스를 호스트하기 위해 WorkflowRuntime의 인스턴스에 대한 설정을 지정합니다.|  
+|[\<workflowRuntime>](../../../../../docs/framework/configure-apps/file-schema/wcf/workflowruntime.md)|워크플로 기반 WCF 서비스 호스팅에 대 한 WorkflowRuntime의 인스턴스에 대 한 설정을 지정 합니다.|  
 |[\<useRequestHeadersForMetadataAddress >](../../../../../docs/framework/configure-apps/file-schema/wcf/userequestheadersformetadataaddress.md)|요청 메시지 헤더에서 메타데이터 주소 정보를 검색할 수 있도록 합니다.|  
   
 ### <a name="parent-elements"></a>부모 요소  

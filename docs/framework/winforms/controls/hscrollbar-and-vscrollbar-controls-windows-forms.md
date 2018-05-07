@@ -1,13 +1,6 @@
 ---
-title: "HScrollBar 및 VScrollBar 컨트롤(Windows Forms)"
-ms.custom: 
+title: HScrollBar 및 VScrollBar 컨트롤(Windows Forms)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - scroll bars
 - VScrollBar control [Windows Forms]
@@ -15,16 +8,11 @@ helpviewer_keywords:
 - HScrollBar control [Windows Forms]
 - Scroll Bar control [Windows Forms]
 ms.assetid: f5e9cda7-d8f3-406b-b0e6-bdb4375d6eb0
-caps.latest.revision: "7"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ce11db2d01f8938d0f97a3c0526c65a7c9740fba
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ab2182a92f2fd05d0be69c5e4d2bede5011dde37
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="hscrollbar-and-vscrollbar-controls-windows-forms"></a>HScrollBar 및 VScrollBar 컨트롤(Windows Forms)
 Windows Forms 스크롤 막대 컨트롤을 통해 응용 프로그램 또는 컨트롤 내에서 가로로 또는 세로로 스크롤하여 긴 항목 목록이나 대용량 정보를 쉽게 탐색할 수 있습니다. 스크롤 막대는 Windows 인터페이스의 공통 인터페이스입니다.  

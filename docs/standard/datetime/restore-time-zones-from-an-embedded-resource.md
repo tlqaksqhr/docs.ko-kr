@@ -1,13 +1,7 @@
 ---
-title: "방법: 포함된 리소스에서 표준 시간대 복원"
-ms.custom: 
+title: '방법: 포함된 리소스에서 표준 시간대 복원'
 ms.date: 04/10/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -15,18 +9,13 @@ helpviewer_keywords:
 - time zones [.NET Framework], deserializing
 - time zones [.NET Framework], restoring
 ms.assetid: 6b7b4de9-da07-47e3-8f4c-823f81798ee7
-caps.latest.revision: "6"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: efb133d972427a9619581d0670268cba9fbd3ee6
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 31dd785c419d9a8e11eb23deabd2dfa71c4d6e9c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-restore-time-zones-from-an-embedded-resource"></a>방법: 포함된 리소스에서 표준 시간대 복원
 
@@ -46,7 +35,7 @@ ms.lasthandoff: 12/23/2017
 
 4. 호출 하 여 표준 시간대 데이터를 deserialize는 <xref:System.TimeZoneInfo.FromSerializedString%2A> 메서드.
 
-## <a name="example"></a>예
+## <a name="example"></a>예제
 
 다음 예제에서는 deserialize는 <xref:System.TimeZoneInfo> 포함된 된.NET XML 리소스 파일에 저장 된 개체입니다.
 
@@ -68,7 +57,7 @@ ms.lasthandoff: 12/23/2017
   [!code-csharp[TimeZone2.Serialization#2](../../../samples/snippets/csharp/VS_Snippets_CLR/TimeZone2.Serialization/cs/SerializeTimeZoneData.cs#2)]
   [!code-vb[TimeZone2.Serialization#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/TimeZone2.Serialization/vb/SerializeTimeZoneData.vb#2)]
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참고자료
 
 [날짜, 시간 및 표준 시간대](../../../docs/standard/datetime/index.md)
 [시간대 개요](../../../docs/standard/datetime/time-zone-overview.md)

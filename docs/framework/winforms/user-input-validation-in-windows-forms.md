@@ -1,31 +1,17 @@
 ---
-title: "Windows Forms에서 사용자 입력 유효성 검사"
-ms.custom: 
+title: Windows Forms에서 사용자 입력 유효성 검사
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - Windows Forms, validating user input
 - validation [Windows Forms], Windows Forms user input
 - user input [Windows Forms], validating in Windows Forms
 - validating user input [Windows Forms], Windows Forms
 ms.assetid: 4ec07681-1dee-4bf9-be5e-718f635a33a1
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 1d0e3ec867e44c4f01b239e8e243259d7c951d96
-ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
+ms.openlocfilehash: adc138ad1e277f69f27f9f86fc5c3ea28a8d5cce
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="user-input-validation-in-windows-forms"></a>Windows Forms에서 사용자 입력 유효성 검사
 사용자가 응용 프로그램에 데이터를 입력 하면 응용 프로그램에 사용 하기 전에 데이터가 유효한 지 확인 하는 것이 좋습니다. 특정 텍스트 필드 길이가 0 인 전화 번호 또는 다른 종류의 올바른 형식의 데이터 필드를 지정 하거나, 하거나 문자열에 데이터베이스의 보안을 손상 하기 위해 사용할 수 있는 안전 하지 않은 문자가 포함 되지 않도록 필요할 수 있습니다. Windows Forms 응용 프로그램에서 입력의 유효성을 검사 하는 여러 가지 방법을 제공 합니다.  
@@ -56,7 +42,7 @@ ms.lasthandoff: 02/01/2018
  컨트롤에서 데이터가 데이터 바인딩을 사용 하면 실행 하는 동안 데이터 소스와 동기화 되었는지는 <xref:System.Windows.Forms.Control.Validating> 이벤트입니다. 취소 하는 경우는 <xref:System.Windows.Forms.Control.Validating> 이벤트 데이터를 데이터 소스와 동기화 되지 것입니다.  
   
 > [!IMPORTANT]
->  사용자 지정 유효성 검사 후 발생 하는 경우는 <xref:System.Windows.Forms.Control.Validating> 이벤트는 달라 지지 것입니다 데이터 바인딩. 예를 들어, 코드를 있는 경우는 <xref:System.Windows.Forms.Control.Validated> 데이터 바인딩을 취소 하려고 시도 하는 이벤트, 데이터 바인딩 계속 발생 합니다. 이 경우에서 유효성 검사를 수행 하는 <xref:System.Windows.Forms.Control.Validated> 이벤트를 컨트롤의 변경 **데이터 원본 업데이트 모드** 속성 (**(Databindings)에서**\\**(고급)** )에서 **OnValidation** 를 **Never**, 추가 *제어*`.DataBindings["`*\<YOURFIELD >*  `"].WriteValue()` 유효성 검사 코드에 있습니다.  
+>  사용자 지정 유효성 검사 후 발생 하는 경우는 <xref:System.Windows.Forms.Control.Validating> 이벤트는 달라 지지 것입니다 데이터 바인딩. 예를 들어, 코드를 있는 경우는 <xref:System.Windows.Forms.Control.Validated> 데이터 바인딩을 취소 하려고 시도 하는 이벤트, 데이터 바인딩 계속 발생 합니다. 이 경우에서 유효성 검사를 수행 하는 <xref:System.Windows.Forms.Control.Validated> 이벤트를 컨트롤의 변경 **데이터 원본 업데이트 모드** 속성 (**(Databindings)에서**\\ **(고급)** )에서 **OnValidation** 를 **Never**, 추가 *제어*`.DataBindings["`*\<YOURFIELD >*  `"].WriteValue()` 유효성 검사 코드에 있습니다.  
   
 ### <a name="implicit-and-explicit-validation"></a>암시적 및 명시적 유효성 검사  
  따라서 때는 컨트롤의 데이터 한 유효성 검사를? 사용자, 개발자의 책임입니다. 응용 프로그램의 필요에 따라 암시적 또는 명시적 유효성 검사를 사용할 수 있습니다.  

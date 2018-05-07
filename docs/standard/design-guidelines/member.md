@@ -1,31 +1,20 @@
 ---
 title: 멤버 디자인 지침
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - member design guidelines [.NET Framework], about member design guidelines
 - members [.NET Framework], design guidelines
 - class library design guidelines [.NET Framework], members
 - member design guidelines [.NET Framework]
 ms.assetid: 0ce93180-1d7b-4f8c-9306-f828b2d66b8f
-caps.latest.revision: 14
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 8f4e33735a934b1ac41c34ccb9698c172ada28e1
-ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
+ms.openlocfilehash: 1c04b431224a1d4f03e85397b854a52856e114e6
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="member-design-guidelines"></a>멤버 디자인 지침
 메서드, 속성, 이벤트, 생성자 및 필드 통칭 하 여 멤버 라고 합니다. 멤버는 궁극적으로 기준인 프레임 워크 기능 프레임 워크의 최종 사용자에 게 노출 되는 방법입니다.  

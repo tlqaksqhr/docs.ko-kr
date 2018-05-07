@@ -1,13 +1,6 @@
 ---
-title: "매트릭스에 의한 변형 표시"
-ms.custom: 
+title: 매트릭스에 의한 변형 표시
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -23,16 +16,11 @@ helpviewer_keywords:
 - transformations [Windows Forms], translation
 - affine transformations
 ms.assetid: 0659fe00-9e0c-41c4-9118-016f2404c905
-caps.latest.revision: "14"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: c68a79f2a40117a980cb6206b74d42f885874aa8
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 4c840d8a5abc89493bc684526ce76d34307f4ba1
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="matrix-representation-of-transformations"></a>매트릭스에 의한 변형 표시
 m × n 행렬은 행 m과 n 개의 열으로 정렬 하는 숫자 집합입니다. 다음 그림에서는 몇 가지 매트릭스를 보여 줍니다.  
@@ -90,11 +78,11 @@ m × n 행렬은 행 m과 n 개의 열으로 정렬 하는 숫자 집합입니�
   
  점 (2, 1)으로 시작 하는 경우-행렬 [2 1 1]로 표시-A, B, C, 점 (2, 1)에 나열 된 순서로 세 가지 변환 될 예정 다음 곱하면 합니다.  
   
- [2 1 1] ABC [5 1-2] =  
+ [2 1 1]ABC = [-2 5 1]  
   
  대신 세 개의 별도 행렬에 복합 변환의 세 부분을 저장, A, 곱하기 수 B 및 C 함께 전체 복합 변환을 저장 하는 단일 3 × 3 행렬을 가져옵니다. ABC 가정 = D D를 곱하면 A, B, C 곱하면와 동일한 결과 제공 하는 다음  
   
- [2 1 1] D = [5 1-2]  
+ [2 1 1]D = [-2 5 1]  
   
  다음 그림 A "," B "," C "및" 4. 매트릭스를 보여 줍니다.  
   

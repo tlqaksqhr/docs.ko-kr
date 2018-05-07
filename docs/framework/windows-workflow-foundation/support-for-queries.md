@@ -1,23 +1,12 @@
 ---
-title: "쿼리 지원"
-ms.custom: 
+title: 쿼리 지원
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 093c22f5-3294-4642-857a-5252233d6796
-caps.latest.revision: "11"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: f20e9fbcad31a3924474793d9107d6a3c4aeef27
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 5c46ed5ae2fc2cc2275bfa7251fe5f8fa346c1f4
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="support-for-queries"></a>쿼리 지원
 SQL 워크플로 인스턴스 저장소는 잘 알려진 속성 집합을 저장소에 기록합니다. 사용자는 이러한 속성을 기반으로 인스턴스를 쿼리할 수 있습니다. 다음은 잘 알려진 일부 속성 목록입니다.  
@@ -103,7 +92,7 @@ SQL 워크플로 인스턴스 저장소는 잘 알려진 속성 집합을 저장
 ### <a name="the-instancepromotedproperties-view"></a>InstancePromotedProperties 뷰  
  InstancePromotedProperties 뷰에는 다음 필드가 포함됩니다. 승격 된 속성에 대 한 자세한 내용은 참조는 [저장소 확장성](../../../docs/framework/windows-workflow-foundation/store-extensibility.md) 항목입니다.  
   
-1.  **InstanceId**  
+1.  **instanceId**  
   
 2.  **EncodingOption**  
   

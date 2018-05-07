@@ -1,13 +1,6 @@
 ---
-title: "방법: Windows Forms ColorDialog 구성 요소의 모양 변경"
-ms.custom: 
+title: '방법: Windows Forms ColorDialog 구성 요소의 모양 변경'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -17,16 +10,11 @@ helpviewer_keywords:
 - ColorDialog component [Windows Forms], formatting appearance
 - color dialog box [Windows Forms], configuring appearance
 ms.assetid: bba4e262-1cd7-4f63-89cf-330a36f7b539
-caps.latest.revision: "13"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: af3a9ec6ba301a27a7940bc752ffaf12f345abec
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 816850fa61de97b5f4c251571a74da7e0a70cba8
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-change-the-appearance-of-the-windows-forms-colordialog-component"></a>방법: Windows Forms ColorDialog 구성 요소의 모양 변경
 Windows Forms의 모양을 구성할 수 있습니다 <xref:System.Windows.Forms.ColorDialog> 다양 한 속성이 해당 구성 요소입니다. 대화 상자에 다음 두 섹션이-기본 색을 사용자 지정 색을 정의할 수 있도록 표시 하는 합니다.  

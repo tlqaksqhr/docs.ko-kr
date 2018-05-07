@@ -1,11 +1,7 @@
 ---
-title: "SpawnInstance 함수 (관리 되지 않는 API 참조)"
-description: "SpawnInstance 함수는 클래스의 새 인스턴스를 만듭니다."
+title: SpawnInstance 함수 (관리 되지 않는 API 참조)
+description: SpawnInstance 함수는 클래스의 새 인스턴스를 만듭니다.
 ms.date: 11/06/2017
-ms.prod: .net-framework
-ms.technology:
-- dotnet-clr
-ms.topic: reference
 api_name:
 - SpawnInstance
 api_location:
@@ -20,14 +16,11 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 68508f3000e7f4ac481f940ef4c715366c37125c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 3f8189f0adb62aa32cd0b85ca5a653aa466c7032
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="spawninstance-function"></a>SpawnInstance 함수
 클래스의 새 인스턴스를 만듭니다.    
@@ -64,7 +57,7 @@ HRESULT SpawnInstance (
 
 |상수  |값  |설명  |
 |---------|---------|---------|
-| `WBEM_E_INCOMPLETE_CLASS` | 0x80041020 | `ptr`올바른 클래스 정의 되었으며 새 인스턴스를 생성할 수 없습니다. 완전 하지 않은 또는 등록 되지 않은 Windows Management와 함께 호출 하 여 [PutClassWmi](putclasswmi.md)합니다. |
+| `WBEM_E_INCOMPLETE_CLASS` | 0x80041020 | `ptr` 올바른 클래스 정의 되었으며 새 인스턴스를 생성할 수 없습니다. 완전 하지 않은 또는 등록 되지 않은 Windows Management와 함께 호출 하 여 [PutClassWmi](putclasswmi.md)합니다. |
 | `WBEM_E_OUT_OF_MEMORY` | 0x80041006 | 작업을 완료 하려면 사용할 수 있는 메모리가 충분 하지 않습니다. |
 | `WBEM_E_INVALID_PARAMETER` | 0x80041008 | `ppNewClass`가 `null`인 경우 |
 | `WBEM_S_NO_ERROR` | 0 | 함수 호출이 성공 했습니다.  |
@@ -73,7 +66,7 @@ HRESULT SpawnInstance (
 
 이 함수에 대 한 호출을 래핑하는 [IWbemClassObject::SpawnInstance](https://msdn.microsoft.com/library/aa391458(v=vs.85).aspx) 메서드.
 
-`ptr`클래스 정의에서 가져와야 Windows 관리 합니다. (인스턴스로부터 인스턴스 생성은 지원 하지만 반환 된 인스턴스의 비어 있습니다.) 그런 다음이 클래스 정의 사용 하 여 새 인스턴스를 만듭니다. 에 대 한 호출에서 [PutInstanceWmi](putinstancewmi.md) 함수는 Windows 관리 인스턴스를 작성 하려는 경우에 필요 합니다.
+`ptr` 클래스 정의에서 가져와야 Windows 관리 합니다. (인스턴스로부터 인스턴스 생성은 지원 하지만 반환 된 인스턴스의 비어 있습니다.) 그런 다음이 클래스 정의 사용 하 여 새 인스턴스를 만듭니다. 에 대 한 호출에서 [PutInstanceWmi](putinstancewmi.md) 함수는 Windows 관리 인스턴스를 작성 하려는 경우에 필요 합니다.
 
 
 
@@ -85,7 +78,7 @@ HRESULT SpawnInstance (
   
  **헤더:** WMINet_Utils.idl  
   
- **.NET framework 버전:**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **.NET framework 버전:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>참고자료  
 [WMI 및 성능 카운터 (관리 되지 않는 API 참조)](index.md)

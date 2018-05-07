@@ -1,13 +1,6 @@
 ---
-title: "방법: 색 매핑 변경 테이블 사용"
-ms.custom: 
+title: '방법: 색 매핑 변경 테이블 사용'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -16,16 +9,11 @@ helpviewer_keywords:
 - custom colors [Windows Forms], creating with color remap table
 - color remap tables [Windows Forms], using
 ms.assetid: 977df1ce-8665-42d4-9fb1-ef7f0ff63419
-caps.latest.revision: "14"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 6e208aa9c98c1ca19baee83760cfd0f75972ecfa
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ba763cc7960e71c6fc705d40eefdbde163d06181
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-use-a-color-remap-table"></a>방법: 색 매핑 변경 테이블 사용
 다시 매핑하는 색 다시 매핑 테이블에 따라 이미지의 색을 변환의 프로세스입니다. 색 매핑 변경 테이블은 배열을 <xref:System.Drawing.Imaging.ColorMap> 개체입니다. 각 <xref:System.Drawing.Imaging.ColorMap> 배열의 개체에는 <xref:System.Drawing.Imaging.ColorMap.OldColor%2A> 속성 및 <xref:System.Drawing.Imaging.ColorMap.NewColor%2A> 속성입니다.  
@@ -34,7 +22,7 @@ ms.lasthandoff: 12/22/2017
   
  배열을 초기화할 매핑이 변경된 된 이미지를 그리려면 <xref:System.Drawing.Imaging.ColorMap> 개체입니다. 해당 배열을 전달는 <xref:System.Drawing.Imaging.ImageAttributes.SetRemapTable%2A> 의 메서드는 <xref:System.Drawing.Imaging.ImageAttributes> 개체를 전달 합니다는 <xref:System.Drawing.Imaging.ImageAttributes> 개체는 <xref:System.Drawing.Graphics.DrawImage%2A> 의 메서드는 <xref:System.Drawing.Graphics> 개체입니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 예제에서는 <xref:System.Drawing.Image> RemapInput.bmp 파일에서 개체입니다. 단일 구성 되는 색 다시 매핑 테이블을 만들고 <xref:System.Drawing.Imaging.ColorMap> 개체입니다. <xref:System.Drawing.Imaging.ColorMap.OldColor%2A> 의 속성은 `ColorRemap` 개체는 빨간색, 및 <xref:System.Drawing.Imaging.ColorMap.NewColor%2A> 속성은 파란색입니다. 이미지가 그려지는 한 번 다시 매핑 없이 및 한 번 다시 매핑입니다. 매핑 모든 빨간색 픽셀 파란색을 변경 합니다.  
   
  다음 그림에서는 오른쪽의 왼쪽에 원본 이미지와 매핑이 변경된 된 이미지를 보여 줍니다.  

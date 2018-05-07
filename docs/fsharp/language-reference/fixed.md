@@ -1,17 +1,12 @@
 ---
 title: 'Fixed 키워드 (F #)'
 description: "고정할 수 있는' ' 하는 방법으로 스택에 F #을 사용 하 여 컬렉션을 방지 하기 위해 로컬 'fixed' 키워드에 알아봅니다."
-author: cartermp
-ms.author: phcart
 ms.date: 04/24/2017
-ms.topic: language-reference
-ms.prod: dotnet-fsharp
-ms.devlang: fsharp
-ms.openlocfilehash: 8c1d486ec754335dfbaeec439b1eb949494e4241
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 913ee4d7b0f6b2437793d4788e53556d6be6c4db
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="the-fixed-keyword"></a>Fixed 키워드
 

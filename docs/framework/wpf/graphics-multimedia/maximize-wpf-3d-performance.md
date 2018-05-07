@@ -1,28 +1,14 @@
 ---
-title: "WPF 3D 성능 최대화"
-ms.custom: 
+title: WPF 3D 성능 최대화
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - 3-D graphics [WPF]
 ms.assetid: 4bcf949d-d92f-4d8d-8a9b-1e4c61b25bf6
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 45053762a4782544531a09c92531b26f99663016
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 6677ee3a6d17ea38636d49327d7af22b53bc900e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="maximize-wpf-3d-performance"></a>WPF 3D 성능 최대화
 사용 하는 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 3D 컨트롤을 빌드하고 3D 장면을 응용 프로그램에 포함할 성능 최적화를 고려을 고려해 야 합니다. 이 항목에서는 3D 클래스 및 속성을 사용할 때 성능을 최적화 하기 위한 권장 사항과 함께 응용 프로그램에 대 한 성능 영향을 주는의 목록을 제공 합니다.  
@@ -33,15 +19,15 @@ ms.lasthandoff: 12/22/2017
   
 |속성|권장 사항|  
 |-|-|  
-|<xref:System.Windows.Media.Brush>|브러시 속도 (가장 느린으로):<br /><br /> <xref:System.Windows.Media.SolidColorBrush><br /><br /> <xref:System.Windows.Media.LinearGradientBrush><br /><br /> <xref:System.Windows.Media.ImageBrush><br /><br /> <xref:System.Windows.Media.DrawingBrush>(캐시 됨)<br /><br /> <xref:System.Windows.Media.VisualBrush>(캐시 됨)<br /><br /> <xref:System.Windows.Media.RadialGradientBrush><br /><br /> <xref:System.Windows.Media.DrawingBrush>(캐시 되지 않음)<br /><br /> <xref:System.Windows.Media.VisualBrush>(캐시 되지 않음)|  
-|<xref:System.Windows.UIElement.ClipToBoundsProperty>|설정 `Viewport3D.ClipToBounds` false가 필요할 때마다로 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 명시적으로 콘텐츠를 잘라는 <xref:System.Windows.Controls.Viewport3D> Viewport3D의 사각형에 있습니다. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]앤티 앨리어싱된 클리핑 매우 느려질 수 있습니다 및 `ClipToBounds` 에서 기본적으로 속도가 느립니다 사용 <xref:System.Windows.Controls.Viewport3D>합니다.|  
-|<xref:System.Windows.UIElement.IsHitTestVisible%2A>|설정 `Viewport3D.IsHitTestVisible` 불필요 때마다 false로 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 의 콘텐츠를 고려 하는 <xref:System.Windows.Controls.Viewport3D> 수행 마우스 적중 테스트 하는 경우.  3D 콘텐츠의 적중된 테스트는 소프트웨어에서 수행 되 고 큰 메시 속도가 느려질 수 있습니다. <xref:System.Windows.UIElement.IsHitTestVisible%2A>기본적으로 속도가 느립니다 사용 <xref:System.Windows.Controls.Viewport3D>합니다.|  
+|<xref:System.Windows.Media.Brush>|브러시 속도 (가장 느린으로):<br /><br /> <xref:System.Windows.Media.SolidColorBrush><br /><br /> <xref:System.Windows.Media.LinearGradientBrush><br /><br /> <xref:System.Windows.Media.ImageBrush><br /><br /> <xref:System.Windows.Media.DrawingBrush> (캐시 됨)<br /><br /> <xref:System.Windows.Media.VisualBrush> (캐시 됨)<br /><br /> <xref:System.Windows.Media.RadialGradientBrush><br /><br /> <xref:System.Windows.Media.DrawingBrush> (캐시 되지 않음)<br /><br /> <xref:System.Windows.Media.VisualBrush> (캐시 되지 않음)|  
+|<xref:System.Windows.UIElement.ClipToBoundsProperty>|설정 `Viewport3D.ClipToBounds` false가 필요할 때마다로 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 명시적으로 콘텐츠를 잘라는 <xref:System.Windows.Controls.Viewport3D> Viewport3D의 사각형에 있습니다. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 앤티 앨리어싱된 클리핑 매우 느려질 수 있습니다 및 `ClipToBounds` 에서 기본적으로 속도가 느립니다 사용 <xref:System.Windows.Controls.Viewport3D>합니다.|  
+|<xref:System.Windows.UIElement.IsHitTestVisible%2A>|설정 `Viewport3D.IsHitTestVisible` 불필요 때마다 false로 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 의 콘텐츠를 고려 하는 <xref:System.Windows.Controls.Viewport3D> 수행 마우스 적중 테스트 하는 경우.  3D 콘텐츠의 적중된 테스트는 소프트웨어에서 수행 되 고 큰 메시 속도가 느려질 수 있습니다. <xref:System.Windows.UIElement.IsHitTestVisible%2A> 기본적으로 속도가 느립니다 사용 <xref:System.Windows.Controls.Viewport3D>합니다.|  
 |<xref:System.Windows.Media.Media3D.GeometryModel3D>|다른 재질 또는 변환이 필요한 경우에 다른 모델을 만듭니다.  그렇지 않은 경우 많은 결합 하십시오 <xref:System.Windows.Media.Media3D.GeometryModel3D> 를 소수의 큰 재질 및 변환이 같은 사용 하 여 인스턴스 <xref:System.Windows.Media.Media3D.GeometryModel3D> 및 <xref:System.Windows.Media.Media3D.MeshGeometry3D> 인스턴스.|  
 |<xref:System.Windows.Media.Media3D.MeshGeometry3D>|애니메이션 메시-당 프레임으로 메시의 개별 꼭지점 변경-은 항상 효율적 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]합니다.  파일을 각 꼭 짓 점 수정 될 때 변경 알림의 성능 영향을 최소화 하려면 시각적 트리에서 메시 꼭 짓 점별 수정을 수행 하기 전에 분리 합니다.  메시를 수정한 후 시각적 트리를 다시 연결 합니다.  또한 이러한 방식으로 애니메이션 메시의 크기를 최소화 하려고 합니다.|  
 |3D 앤티 앨리어싱|렌더링 속도를 높이려면 샘플링에 사용 하지 않도록는 <xref:System.Windows.Controls.Viewport3D> 연결 된 속성을 설정 하 여 <xref:System.Windows.Media.RenderOptions.EdgeMode%2A> 를 `Aliased`합니다.  기본적으로 3D 앤티 앨리어싱 사용 되지 않는지에 [!INCLUDE[TLA#tla_winxp](../../../../includes/tlasharptla-winxp-md.md)] 사용 [!INCLUDE[TLA#tla_longhorn](../../../../includes/tlasharptla-longhorn-md.md)] 픽셀 당 4 샘플이 있습니다.|  
 |텍스트|3D 장면에 텍스트를 라이브 (에 있기 때문에 라이브는 <xref:System.Windows.Media.DrawingBrush> 또는 <xref:System.Windows.Media.VisualBrush>) 느려질 수 있습니다. 텍스트의 이미지를 대신 사용 (통해 <xref:System.Windows.Media.Imaging.RenderTargetBitmap>) 텍스트는 변경 하지 않는 한 합니다.|  
 |<xref:System.Windows.Media.TileBrush>|사용 해야 하는 경우는 <xref:System.Windows.Media.VisualBrush> 또는 <xref:System.Windows.Media.DrawingBrush> 3D 장면에 브러시의 내용을 정적 이기 때문에 캐시 해 보십시오 브러시 (연결 된 속성 <xref:System.Windows.Media.RenderOptions.CachingHint%2A> 를 `Cache`).  최소 및 최대 눈금 무효화 임계값을 설정 (연결 된 속성과 함께 <xref:System.Windows.Media.RenderOptions.CacheInvalidationThresholdMinimum%2A> 및 <xref:System.Windows.Media.RenderOptions.CacheInvalidationThresholdMaximum%2A>) 캐시 된 브러시 다시 생성 됩니다 너무 자주 원하는 품질 수준을 그대로 유지 하면서 되도록 합니다.  기본적으로 <xref:System.Windows.Media.DrawingBrush> 및 <xref:System.Windows.Media.VisualBrush> , 캐시 되지 않습니다는 될 때마다 다시 렌더링 되어야 하는 브러시와 그린 것 브러시의 전체 내용이 먼저 다시 렌더링 해야 중간 화면으로 의미 합니다.|  
-|<xref:System.Windows.Media.Effects.BitmapEffect>|<xref:System.Windows.Media.Effects.BitmapEffect>하드웨어 가속 없이 렌더링 해야 하는 모든 영향을 받는 콘텐츠를 강제로 수행 합니다.  최상의 성능을 위해 사용 하지 마십시오 <xref:System.Windows.Media.Effects.BitmapEffect>합니다.|  
+|<xref:System.Windows.Media.Effects.BitmapEffect>|<xref:System.Windows.Media.Effects.BitmapEffect> 하드웨어 가속 없이 렌더링 해야 하는 모든 영향을 받는 콘텐츠를 강제로 수행 합니다.  최상의 성능을 위해 사용 하지 마십시오 <xref:System.Windows.Media.Effects.BitmapEffect>합니다.|  
   
 ## <a name="performance-impact-medium"></a>성능에 미치는 영향: 보통  
   
@@ -58,7 +44,7 @@ ms.lasthandoff: 12/22/2017
 |<xref:System.Windows.Media.Media3D.Light>|밝은 속도 (가장 느린으로):<br /><br /> <xref:System.Windows.Media.Media3D.AmbientLight><br /><br /> <xref:System.Windows.Media.Media3D.DirectionalLight><br /><br /> <xref:System.Windows.Media.Media3D.PointLight><br /><br /> <xref:System.Windows.Media.Media3D.SpotLight>|  
 |<xref:System.Windows.Media.Media3D.MeshGeometry3D>|이러한 제한에서 메시 크기를 유지 하려고 합니다.<br /><br /> <xref:System.Windows.Media.Media3D.MeshGeometry3D.Positions%2A>: 20001 <xref:System.Windows.Media.Media3D.Point3D> 인스턴스<br /><br /> <xref:System.Windows.Media.Media3D.MeshGeometry3D.TriangleIndices%2A>: 60003 <xref:System.Int32> 인스턴스|  
 |<xref:System.Windows.Media.Media3D.Material>|자재 속도 (가장 느린으로):<br /><br /> <xref:System.Windows.Media.Media3D.EmissiveMaterial><br /><br /> <xref:System.Windows.Media.Media3D.DiffuseMaterial><br /><br /> <xref:System.Windows.Media.Media3D.SpecularMaterial>|  
-|<xref:System.Windows.Media.Brush>|[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]3D 일관 된 방식에서 (검정 앰비언트 브러시, 지우기 브러시, 등) 보이지 않는 브러시를 취소 하지 않습니다.  장면에서 이러한 항목을 제거 하는 것이 좋습니다.|  
+|<xref:System.Windows.Media.Brush>|[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 3D 일관 된 방식에서 (검정 앰비언트 브러시, 지우기 브러시, 등) 보이지 않는 브러시를 취소 하지 않습니다.  장면에서 이러한 항목을 제거 하는 것이 좋습니다.|  
 |<xref:System.Windows.Media.Media3D.MaterialGroup>|각 <xref:System.Windows.Media.Media3D.Material> 에 <xref:System.Windows.Media.Media3D.MaterialGroup> 하므로 대부분의 재질을 비롯 한 다른 렌더링 전달, 간단한 재질에도, GPU에 대 한 채우기 요구를 크게 높일 수 있습니다.  자료의 수를 최소화 하면 <xref:System.Windows.Media.Media3D.MaterialGroup>합니다.|  
   
 ## <a name="performance-impact-low"></a>성능에 미치는 영향: 낮음  

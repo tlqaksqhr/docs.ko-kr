@@ -1,27 +1,15 @@
 ---
-title: "방법: 서비스 끝점에서 메타데이터 내보내기"
-ms.custom: 
+title: '방법: 서비스 끝점에서 메타데이터 내보내기'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: b6c4dfd0-f270-43ec-961a-e16eb6af2f2c
-caps.latest.revision: "14"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 14b045ef55ac0b6d76bb06e711b4134d54b3d61f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 9235498956f53d69b3024d1db023f3eb0908d2aa
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-export-metadata-from-service-endpoints"></a>방법: 서비스 끝점에서 메타데이터 내보내기
 이 항목에서는 서비스 끝점으로부터 메타데이터를 내보내는 방법에 대해 설명합니다.  
@@ -57,7 +45,7 @@ ms.lasthandoff: 12/22/2017
   
 7.  이제 <xref:System.ServiceModel.Description.MetadataSet.WriteTo%28System.Xml.XmlWriter%29> 메서드를 호출하여 파일에 쓰는 등의 방식으로 메타데이터를 사용할 수 있습니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음은 이 예제에 해당되는 전체 코드 목록입니다.  
   
  [!code-csharp[S_UEWsdlExporter#0](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_uewsdlexporter/cs/program.cs#0)]

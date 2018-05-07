@@ -1,33 +1,19 @@
 ---
-title: "방법: 끌어 온 GridView 열 머리글의 스타일 만들기"
-ms.custom: 
+title: '방법: 끌어 온 GridView 열 머리글의 스타일 만들기'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - ListView controls [WPF], styling
 ms.assetid: 0b999645-0313-4b33-80b9-19ece08b5459
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 001d0ec45ad990ef366e7fc1216a7370aade9cb7
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 2e57b4cb1b8ddb90e8e6e0abc6db3e7f0b864cfa
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-a-style-for-a-dragged-gridview-column-header"></a>방법: 끌어 온 GridView 열 머리글의 스타일 만들기
 끌어 온의 모양을 변경 하는 방법을 보여 주는이 예제 <xref:System.Windows.Controls.GridViewColumnHeader> 사용자 열 위치를 변경 하는 경우.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  열 머리글의 다른 위치로 끌어 올 때는 <xref:System.Windows.Controls.ListView> 사용 하 여 <xref:System.Windows.Controls.GridView> 보기 모드에 대 한 열을 새 위치로 이동 합니다. 열 머리글을 끄는 동안 부동 머리글의 복사본이 원래 머리글 외에도 나타납니다. 열 머리글에는 <xref:System.Windows.Controls.GridView> 로 표시 됩니다는 <xref:System.Windows.Controls.GridViewColumnHeader> 개체입니다.  
   
  부동 및 원래 머리글의 모양을 사용자 지정 하려면 설정할 수 있습니다 <xref:System.Windows.Controls.ControlTemplate.Triggers%2A> 수정 하는 <xref:System.Windows.Controls.GridViewColumnHeader> <xref:System.Windows.Style>합니다. 이러한 <xref:System.Windows.Controls.ControlTemplate.Triggers%2A> 때 적용 되는 <xref:System.Windows.Controls.Primitives.ButtonBase.IsPressed%2A> 속성 값은 `true` 및 <xref:System.Windows.Controls.GridViewColumnHeader.Role%2A> 속성 값은 <xref:System.Windows.Controls.GridViewColumnHeaderRole.Floating>합니다.  

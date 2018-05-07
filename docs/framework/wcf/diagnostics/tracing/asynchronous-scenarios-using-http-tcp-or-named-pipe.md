@@ -1,24 +1,12 @@
 ---
-title: "HTTP, TCP 또는 명명된 파이프를 사용하는 비동기 시나리오"
-ms.custom: 
+title: HTTP, TCP 또는 명명된 파이프를 사용하는 비동기 시나리오
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: a4d62402-43a4-48a4-9ced-220633ebc4ce
-caps.latest.revision: "12"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 76c4c225b333af6d376fa409a05ea5727ede6e8f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: d08f70186a59b8717c4441167ee720ba1c20b9dc
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="asynchronous-scenarios-using-http-tcp-or-named-pipe"></a>HTTP, TCP 또는 명명된 파이프를 사용하는 비동기 시나리오
 이 항목에서는 HTTP, TCP 또는 명명된 파이프를 사용하는 다중 스레드 요청이 포함된 다양한 비동기 request/reply 시나리오의 작업 및 전송에 대해 설명합니다.  
@@ -44,7 +32,7 @@ ms.lasthandoff: 12/22/2017
 #### <a name="propagation-is-disabled-on-either-sides-using-http"></a>HTTP를 사용하며 한쪽에서 전파가 비활성화  
  경우 `propagateActivity` = `false` 어느 쪽에 ProcessMessage을 전송 목표 ProcessAction 동작 나타내지 않습니다. 따라서 새 임시 ProcessAction 동작이 새 ID로 호출됩니다. 비동기 응답이 ServiceModel 모드에 있는 요청과 일치하는 경우 로컬 컨텍스트에서 작업 ID를 검색할 수 있습니다. 실제 ProcessAction 동작을 해당 ID와 함께 전송할 수 있습니다.  
   
- ![HTTP &#47;를 사용 하는 비동기 시나리오 TCP &#47; 명명 된 파이프](../../../../../docs/framework/wcf/diagnostics/tracing/media/async2.gif "Async2")  
+ ![HTTP를 사용 하는 비동기 시나리오&#47;TCP&#47;명명 된 파이프](../../../../../docs/framework/wcf/diagnostics/tracing/media/async2.gif "Async2")  
   
  그림 2. 비동기 클라이언트, 콜백이 없는 `propagateActivity` = `false` HTTP 양쪽에  
   
@@ -53,7 +41,7 @@ ms.lasthandoff: 12/22/2017
  비동기 클라이언트는 Process Action 동작이 만들어집니다 때 `propagateActivity` = `false` 호출자 나 호출 수신자에서 및 응답 메시지는 동작 헤더가 포함 되지 않습니다.  
   
 #### <a name="propagation-is-enabled-on-both-sides-using-tcp-or-named-pipe"></a>전파는 양쪽 모두에서 TCP 또는 명명된 파이프를 사용하여 활성화됩니다.  
- ![HTTP &#47;를 사용 하는 비동기 시나리오 TCP &#47; 명명 된 파이프](../../../../../docs/framework/wcf/diagnostics/tracing/media/async3.gif "Async3")  
+ ![HTTP를 사용 하는 비동기 시나리오&#47;TCP&#47;명명 된 파이프](../../../../../docs/framework/wcf/diagnostics/tracing/media/async3.gif "Async3")  
   
  그림 3. 비동기 클라이언트, 콜백이 없는 `propagateActivity` = `true` 양쪽 모두, 명명 된 파이프/t c P  
   
@@ -66,7 +54,7 @@ ms.lasthandoff: 12/22/2017
   
  그림 2와 마찬가지로 경우 `propagateActivity` = `false` 어느 쪽에 ProcessMessage을 전송 목표 ProcessAction 동작 나타내지 않습니다. 따라서 새 임시 ProcessAction 동작이 새 ID로 호출됩니다. 비동기 응답이 ServiceModel 모드에 있는 요청과 일치하는 경우 로컬 컨텍스트에서 작업 ID를 검색할 수 있습니다. 실제 ProcessAction 동작을 해당 ID와 함께 전송할 수 있습니다.  
   
- ![HTTP &#47;를 사용 하는 비동기 시나리오 TCP &#47; 명명 된 파이프](../../../../../docs/framework/wcf/diagnostics/tracing/media/async4.gif "Async4")  
+ ![HTTP를 사용 하는 비동기 시나리오&#47;TCP&#47; 명명 된 파이프](../../../../../docs/framework/wcf/diagnostics/tracing/media/async4.gif "Async4")  
   
  그림 4입니다. 비동기 클라이언트, 콜백이 없는 `propagateActivity` = `false` 한쪽에서 명명 된 파이프/t c P  
   
@@ -86,7 +74,7 @@ ms.lasthandoff: 12/22/2017
  그림 6입니다. 콜백이 있는 비동기 클라이언트, 콜백 외부의 `endCall`  
   
 ### <a name="asynchronous-server-with-callback"></a>콜백이 있는 비동기 서버  
- ![HTTP &#47;를 사용 하는 비동기 시나리오 TCP &#47; 명명 된 &#45; 파이프](../../../../../docs/framework/wcf/diagnostics/tracing/media/aynchserver.gif "AynchServer")  
+ ![HTTP를 사용 하는 비동기 시나리오&#47;TCP&#47; 명명 된&#45;파이프](../../../../../docs/framework/wcf/diagnostics/tracing/media/aynchserver.gif "AynchServer")  
   
  그림 7입니다. 콜백이 있는 비동기 서버  
   

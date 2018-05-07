@@ -1,14 +1,6 @@
 ---
-title: "IMetaDataDispenserEx::GetCORSystemDirectory 메서드"
-ms.custom: 
+title: IMetaDataDispenserEx::GetCORSystemDirectory 메서드
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - IMetaDataDispenserEx.GetCORSystemDirectory
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: d9e0f3b6-e106-4820-bada-5bfba34ce360
 topic_type:
 - apiref
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: e93f544e504949b496881369c15905ef43a0d2f6
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: cf580f6d3fb18e729f3eca300aa817036eb61e4f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="imetadatadispenserexgetcorsystemdirectory-method"></a>IMetaDataDispenserEx::GetCORSystemDirectory 메서드
 현재 공용 언어 런타임 (CLR) 저장 하는 디렉터리를 가져옵니다. 이 메서드는 작업 중이 아닌 디버거에서 사용에 대해서만 지원 됩니다. 다른 구성 요소에서 메서드를 호출 하면 E_NOTIMPL이 반환 됩니다.  
@@ -65,7 +53,7 @@ HRESULT GetCORSystemDirectory (
   
  **라이브러리:** MsCorEE.dll에서 리소스로 사용  
   
- **.NET framework 버전:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>참고 항목  
  [IMetaDataDispenserEx 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenserex-interface.md)  

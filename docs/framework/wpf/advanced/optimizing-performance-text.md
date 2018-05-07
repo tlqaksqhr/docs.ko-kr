@@ -1,13 +1,6 @@
 ---
-title: "성능 최적화: 텍스트"
-ms.custom: 
+title: '성능 최적화: 텍스트'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -18,16 +11,11 @@ helpviewer_keywords:
 - text [WPF], performance
 - glyphs [WPF]
 ms.assetid: 66b1b9a7-8618-48db-b616-c57ea4327b98
-caps.latest.revision: "10"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: f345893ca79d820ebb066d920cb49c6c46c47297
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 177f42dfa1c1be2b12d7e9e5283cf57f14c0880c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="optimizing-performance-text"></a>성능 최적화: 텍스트
 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]에서는 다양한 기능의 [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] 컨트롤을 사용하여 텍스트 콘텐츠를 표시할 수 있습니다. 일반적으로 세 가지 계층으로 텍스트 렌더링을 나눌 수 있습니다.  
@@ -43,7 +31,7 @@ ms.lasthandoff: 12/22/2017
   
 <a name="Glyph_Level"></a>   
 ## <a name="rendering-text-at-the-glyph-level"></a>문자 모양 수준에서 텍스트 렌더링  
- [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]에 대 한 직접 액세스를 사용 하 여 문자 모양 수준의 태그를 포함 하 여 고급 텍스트 지원 <xref:System.Windows.Documents.Glyphs> 가로채 고 텍스트를 포맷 한 후 유지 하려는 고객에 대 한 합니다. 이러한 기능을 통해 다음과 같은 각 시나리오의 다양한 텍스트 렌더링 요구 사항을 충족시킬 수 있습니다.  
+ [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 에 대 한 직접 액세스를 사용 하 여 문자 모양 수준의 태그를 포함 하 여 고급 텍스트 지원 <xref:System.Windows.Documents.Glyphs> 가로채 고 텍스트를 포맷 한 후 유지 하려는 고객에 대 한 합니다. 이러한 기능을 통해 다음과 같은 각 시나리오의 다양한 텍스트 렌더링 요구 사항을 충족시킬 수 있습니다.  
   
 -   고정된 형식 문서의 화면 표시  
   
@@ -60,7 +48,7 @@ ms.lasthandoff: 12/22/2017
 -   이전 버전의 [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] 및 기타 컴퓨팅 장치에 대한 클라이언트를 포함하는 고정된 형식 문서 표시  
   
 > [!NOTE]
->  <xref:System.Windows.Documents.Glyphs>및 <xref:System.Windows.Media.GlyphRun> 고정 형식의 문서 표시 및 인쇄 시나리오에 대 한 설계 합니다. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]일반 레이아웃에 대 한 여러 요소를 제공 하 고 [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] 시나리오와 같은 <xref:System.Windows.Controls.Label> 및 <xref:System.Windows.Controls.TextBlock>합니다. 레이아웃 및 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 시나리오에 대한 자세한 내용은 [WPF의 입력 체계](../../../../docs/framework/wpf/advanced/typography-in-wpf.md)를 참조하세요.  
+>  <xref:System.Windows.Documents.Glyphs> 및 <xref:System.Windows.Media.GlyphRun> 고정 형식의 문서 표시 및 인쇄 시나리오에 대 한 설계 합니다. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 일반 레이아웃에 대 한 여러 요소를 제공 하 고 [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] 시나리오와 같은 <xref:System.Windows.Controls.Label> 및 <xref:System.Windows.Controls.TextBlock>합니다. 레이아웃 및 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 시나리오에 대한 자세한 내용은 [WPF의 입력 체계](../../../../docs/framework/wpf/advanced/typography-in-wpf.md)를 참조하세요.  
   
  다음 예제에 대 한 속성을 정의 하는 방법을 보여 줍니다는 <xref:System.Windows.Documents.Glyphs> 개체 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]합니다. <xref:System.Windows.Documents.Glyphs> 개체의 출력을 나타냅니다는 <xref:System.Windows.Media.GlyphRun> 에서 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]합니다. 이 예제에서는 로컬 컴퓨터의 **C:\WINDOWS\Fonts** 폴더에 Arial, Courier New 및 Times New Roman 글꼴이 설치되어 있다고 가정합니다.  
   
@@ -69,7 +57,7 @@ ms.lasthandoff: 12/22/2017
 ### <a name="using-drawglyphrun"></a>DrawGlyphRun 사용  
  사용자 지정 컨트롤 및 문자 모양을 렌더링을 사용 하려는 경우는 <xref:System.Windows.Media.DrawingContext.DrawGlyphRun%2A> 메서드.  
   
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]또한 사용자 지정 텍스트를 사용 하 여 서식 지정에 대 한 하위 수준 서비스를 제공는 <xref:System.Windows.Media.FormattedText> 개체입니다. 텍스트를 렌더링 하는 가장 효율적인 방법은 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 사용 하 여 문자 모양 수준에서 텍스트 콘텐츠를 생성 하는 것 <xref:System.Windows.Documents.Glyphs> 및 <xref:System.Windows.Media.GlyphRun>합니다. 그러나 이러한 효율성 비용은 기본 제공 기능이 있는 사용 하기 쉬운 서식 있는 텍스트 서식 지정이 손실의 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 와 같은 컨트롤 <xref:System.Windows.Controls.TextBlock> 및 <xref:System.Windows.Documents.FlowDocument>합니다.  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 또한 사용자 지정 텍스트를 사용 하 여 서식 지정에 대 한 하위 수준 서비스를 제공는 <xref:System.Windows.Media.FormattedText> 개체입니다. 텍스트를 렌더링 하는 가장 효율적인 방법은 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 사용 하 여 문자 모양 수준에서 텍스트 콘텐츠를 생성 하는 것 <xref:System.Windows.Documents.Glyphs> 및 <xref:System.Windows.Media.GlyphRun>합니다. 그러나 이러한 효율성 비용은 기본 제공 기능이 있는 사용 하기 쉬운 서식 있는 텍스트 서식 지정이 손실의 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 와 같은 컨트롤 <xref:System.Windows.Controls.TextBlock> 및 <xref:System.Windows.Documents.FlowDocument>합니다.  
   
 <a name="FormattedText_Object"></a>   
 ## <a name="formattedtext-object"></a>FormattedText 개체  
@@ -89,7 +77,7 @@ ms.lasthandoff: 12/22/2017
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]에서는 화면에 텍스트를 그리는 데 사용하는 여러 컨트롤이 포함되어 있습니다. 각 컨트롤은 다른 시나리오를 대상으로 하며 고유 기능 및 제한 사항 목록을 가지고 있습니다.  
   
 ### <a name="flowdocument-impacts-performance-more-than-textblock-or-label"></a>FlowDocument가 TextBlock 또는 Label 이외의 성능에 미치는 영향  
- 일반적으로 <xref:System.Windows.Controls.TextBlock> 요소 제한 텍스트 지원에 대 한 간단한 문장을 같이 필요한 경우 사용 되어야 합니다는 [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]합니다. <xref:System.Windows.Controls.Label>텍스트를 최소한 지원이 필요한 경우 사용할 수 있습니다. <xref:System.Windows.Documents.FlowDocument> 요소를 지 원하는 풍부한 콘텐츠를 표시 다시 flowable 문서에 대 한 컨테이너로 사용 되며 따라서 사용 하 여 보다 성능에 큰 영향을에 <xref:System.Windows.Controls.TextBlock> 또는 <xref:System.Windows.Controls.Label> 컨트롤입니다.  
+ 일반적으로 <xref:System.Windows.Controls.TextBlock> 요소 제한 텍스트 지원에 대 한 간단한 문장을 같이 필요한 경우 사용 되어야 합니다는 [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]합니다. <xref:System.Windows.Controls.Label> 텍스트를 최소한 지원이 필요한 경우 사용할 수 있습니다. <xref:System.Windows.Documents.FlowDocument> 요소를 지 원하는 풍부한 콘텐츠를 표시 다시 flowable 문서에 대 한 컨테이너로 사용 되며 따라서 사용 하 여 보다 성능에 큰 영향을에 <xref:System.Windows.Controls.TextBlock> 또는 <xref:System.Windows.Controls.Label> 컨트롤입니다.  
   
  대 한 자세한 내용은 <xref:System.Windows.Documents.FlowDocument>, 참조 [문서 개요 흐름](../../../../docs/framework/wpf/advanced/flow-document-overview.md)합니다.  
   

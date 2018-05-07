@@ -1,10 +1,6 @@
 ---
-title: "방법: LineShape 컨트롤로 선 그리기(Visual Studio)"
+title: '방법: LineShape 컨트롤로 선 그리기(Visual Studio)'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -12,14 +8,11 @@ helpviewer_keywords:
 - LineShape control [Visual Basic]
 - lines, drawing
 ms.assetid: 83e71b4e-aa76-4f9b-b547-8704309fd1e5
-caps.latest.revision: "14"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 42e7f01a57a514ad1dc64e3d4451ce38ea199f93
-ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
+ms.openlocfilehash: 5e1a837578aab4b4609a58ffee46406b022b8f97
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-draw-lines-with-the-lineshape-control-visual-studio"></a>방법: LineShape 컨트롤로 선 그리기(Visual Studio)
 사용할 수 있습니다는 <xref:Microsoft.VisualBasic.PowerPacks.LineShape> 컨트롤을 디자인 타임 및 런타임에 폼 이나 컨테이너에서 가로, 세로 또는 대각선를 그립니다.  

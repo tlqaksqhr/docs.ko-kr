@@ -1,13 +1,7 @@
 ---
-title: "역할 기반 보안"
-ms.custom: 
+title: 역할 기반 보안
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - role-based security, about role-based security
 - user authentication, principals
@@ -17,18 +11,13 @@ helpviewer_keywords:
 - authentication [.NET Framework], principals
 - role-based security, principals
 ms.assetid: 578cc32b-5654-4d8b-9d8c-ebcbc5c75390
-caps.latest.revision: "13"
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 18b2883fd69f5cadf2fce3dc677e5d2b79806d0b
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 596165bfac9c65898448714a4477b7f045bd87d7
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="role-based-security"></a>역할 기반 보안
 역할은 재무 또는 비즈니스 응용 프로그램에서 정책을 적용하는 데 자주 사용됩니다. 예를 들어 요청을 수행하는 사용자가 지정된 역할의 멤버인지 여부에 따라 응용 프로그램이 처리되는 트랜잭션의 크기에 제한을 적용할 수 있습니다. 점원은 지정된 임계값보다 작은 트랜잭션을 처리할 수 있는 권한이 있고, 관리자는 더 높은 한도가 적용될 수 있고, 부사장은 이보다 더 높은 한도(또는 제한 없음)가 적용될 수 있습니다. 응용 프로그램에서 작업을 완료하는 데 여러 승인이 필요한 경우에도 역할 기반 보안을 사용할 수 있습니다. 이러한 경우로 모든 직원이 구매 요청을 생성할 수 있지만 구매 담당자만 해당 요청을 공급자에게 보낼 수 있는 구매 주문으로 변환할 수 있는 구매 시스템이 있습니다.  

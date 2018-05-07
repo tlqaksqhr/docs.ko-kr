@@ -1,14 +1,6 @@
 ---
 title: Windows 인증 오류 디버깅
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -16,31 +8,25 @@ helpviewer_keywords:
 - WCF, authentication
 - WCF, Windows authentication
 ms.assetid: 181be4bd-79b1-4a66-aee2-931887a6d7cc
-caps.latest.revision: 21
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 39c033d45488b827a4aee7439904db8094795db4
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: d9226324b69e5c27738abb35bb155a43964b9127
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="debugging-windows-authentication-errors"></a>Windows 인증 오류 디버깅
-Windows 인증을 보안 메커니즘으로 사용하면 SSPI(보안 지원 공급자 인터페이스)에서 보안 프로세스를 처리합니다. SSPI 계층에 보안 오류가 발생하면 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]에 표시됩니다. 이 항목에서는 오류 진단에 도움이 되는 프레임워크 및 일련의 질문을 제공합니다.  
+Windows 인증을 보안 메커니즘으로 사용하면 SSPI(보안 지원 공급자 인터페이스)에서 보안 프로세스를 처리합니다. SSPI 계층에 보안 오류가 발생 하면 Windows Communication Foundation (WCF)에서 표시 됩니다. 이 항목에서는 오류 진단에 도움이 되는 프레임워크 및 일련의 질문을 제공합니다.  
   
  Kerberos 프로토콜의 개요를 참조 하십시오. [Kerberos 설명](http://go.microsoft.com/fwlink/?LinkID=86946)SSPI의 개요를 참조 하세요. [SSPI](http://go.microsoft.com/fwlink/?LinkId=88941)합니다.  
   
- Windows 인증을 위해 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 일반적으로 사용 하 여는 *Negotiate* 공급자 SSP (Security Support), 클라이언트와 서비스 간의 Kerberos 상호 인증을 수행 하는 합니다. Kerberos 프로토콜을 사용할 수 없는 경우 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서는 기본적으로 NTLM(NT LAN Manager)으로 대체됩니다. 그러나 Kerberos 프로토콜만 사용하고 Kerberos를 사용할 수 없는 경우 예외를 throw하도록 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]를 구성할 수 있습니다. 또한 제한된 형식의 Kerberos 프로토콜을 사용하도록 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]를 구성할 수도 있습니다.  
+ Windows 인증을 위해 WCF 일반적으로 사용 하 여는 *Negotiate* 공급자 SSP (Security Support), 클라이언트와 서비스 간의 Kerberos 상호 인증을 수행 하는 합니다. Kerberos 프로토콜을 사용할 수 없으면 기본적으로 WCF 대신 NT LAN Manager (NTLM)을 합니다. 그러나 Kerberos 프로토콜만 사용 하도록 (및 Kerberos를 사용할 수 없는 경우 예외를 throw 하려면) WCF를 구성할 수 있습니다. 제한 된 형식의 Kerberos 프로토콜을 사용 하는 WCF를 구성할 수 있습니다.  
   
 ## <a name="debugging-methodology"></a>디버깅 방법  
  기본 방법은 다음과 같습니다.  
   
 1.  Windows 인증 사용 여부를 결정합니다. 다른 스키마를 사용할 경우 이 항목이 적용되지 않습니다.  
   
-2.  Windows 인증을 사용하는 경우 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 구성에서 Kerberos를 직접 사용할지 또는 협상을 통해 사용할지 결정합니다.  
+2.  Windows 인증을 사용 하는 경우 WCF 구성 Negotiate 또는 Kerberos 직접 사용 하는지 여부를 결정 합니다.  
   
 3.  구성에서 Kerberos 프로토콜을 사용할지 또는 NTLM을 사용할지 결정한 다음에는 올바른 컨텍스트에서 오류 메시지를 이해할 수 있습니다.  
   
@@ -75,7 +61,7 @@ Windows 인증을 보안 메커니즘으로 사용하면 SSPI(보안 지원 공�
 ### <a name="kerberos-protocol"></a>Kerberos 프로토콜  
   
 #### <a name="spnupn-problems-with-the-kerberos-protocol"></a>Kerberos 프로토콜에 대한 SPN/UPN 문제  
- Windows 인증을 사용할 때 Kerberos 프로토콜을 사용하거나 SSPI 협상을 수행하는 경우, 클라이언트 끝점에 사용되는 URL은 서비스 URL 내에 있는 서비스 호스트의 정규화된 도메인 이름을 포함해야 합니다. 이 가정 아래에 있는 서비스를 실행 하 여 가장 일반적으로 수행 되는 Active Directory 도메인에 컴퓨터 추가 될 때 만들어지는 컴퓨터 (기본값) 서비스 사용자 이름 (SPN) 키에 대 한 액세스 서비스가 실행 중인 계정에는 네트워크 서비스 계정입니다. 서비스에 시스템 SPN 키에 대한 액세스 권한이 없는 경우 클라이언트의 끝점 ID로 서비스가 실행 중인 계정의 올바른 SPN 또는 UPN(User Principal Name)을 제공해야 합니다. 방법에 대 한 자세한 내용은 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] SPN 및 UPN을 사용 하 여 참조 [서비스 Id 및 인증](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)합니다.  
+ Windows 인증을 사용할 때 Kerberos 프로토콜을 사용하거나 SSPI 협상을 수행하는 경우, 클라이언트 끝점에 사용되는 URL은 서비스 URL 내에 있는 서비스 호스트의 정규화된 도메인 이름을 포함해야 합니다. 이 가정 아래에 있는 서비스를 실행 하 여 가장 일반적으로 수행 되는 Active Directory 도메인에 컴퓨터 추가 될 때 만들어지는 컴퓨터 (기본값) 서비스 사용자 이름 (SPN) 키에 대 한 액세스 서비스가 실행 중인 계정에는 네트워크 서비스 계정입니다. 서비스에 시스템 SPN 키에 대한 액세스 권한이 없는 경우 클라이언트의 끝점 ID로 서비스가 실행 중인 계정의 올바른 SPN 또는 UPN(User Principal Name)을 제공해야 합니다. SPN 및 UPN WCF 작동 하는 방법에 대 한 자세한 내용은 참조 [서비스 Id 및 인증](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)합니다.  
   
  웹 팜 또는 웹 가든과 같은 부하 분산 시나리오에서는 각 응용 프로그램에 대해 고유한 계정을 정의하고, 해당 계정에 SPN을 할당하고, 응용 프로그램의 모든 서비스가 해당 계정으로 실행되도록 하는 것이 일반적입니다.  
   
@@ -111,7 +97,7 @@ Windows 인증을 보안 메커니즘으로 사용하면 SSPI(보안 지원 공�
 ### <a name="ntlm-protocol"></a>NTLM 프로토콜  
   
 #### <a name="negotiate-ssp-falls-back-to-ntlm-but-ntlm-is-disabled"></a>협상 SSP가 NTLM으로 대체되어도 NTLM을 사용하지 않도록 설정  
- <xref:System.ServiceModel.Security.WindowsClientCredential.AllowNtlm%2A> 속성이 `false`로 설정되어 있어 NTLM이 사용될 경우 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]에서 예외가 throw됩니다. 이 속성을 `false`로 설정하면 유선을 통해 NTLM 자격 증명을 보낼 수 있습니다.  
+ <xref:System.ServiceModel.Security.WindowsClientCredential.AllowNtlm%2A> 속성이로 설정 되어 `false`, 때문에 WCF Windows Communication Foundation () NTLM을 사용 하는 경우 예외를 throw 하는 최상의 노력에 있도록 합니다. 이 속성을 `false`로 설정하면 유선을 통해 NTLM 자격 증명을 보낼 수 있습니다.  
   
  다음은 NTLM으로 대체되지 않도록 설정하는 방법을 보여 줍니다.  
   

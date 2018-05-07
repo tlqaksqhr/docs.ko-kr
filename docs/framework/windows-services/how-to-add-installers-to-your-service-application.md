@@ -1,13 +1,6 @@
 ---
-title: "방법: 서비스 응용 프로그램에 설치 관리자 추가"
-ms.custom: 
+title: '방법: 서비스 응용 프로그램에 설치 관리자 추가'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - Windows Service applications, deploying
 - installation components, adding to services
@@ -17,16 +10,13 @@ helpviewer_keywords:
 - ServiceInstaller class, adding installers to services
 - ServiceProcessInstaller class, adding installers to services
 ms.assetid: 8b698e9a-b88e-4f44-ae45-e0c5ea0ae5a8
-caps.latest.revision: "14"
 author: ghogen
-ms.author: ghogen
 manager: douge
-ms.workload: dotnet
-ms.openlocfilehash: 15487d4311f896aa09c1c7712292058086a49b50
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: faece1d7ee752e4c17f39027ff8a97fc95ed451b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-add-installers-to-your-service-application"></a>방법: 서비스 응용 프로그램에 설치 관리자 추가
 Visual Studio 리소스에 연결 된 서비스 응용 프로그램을 설치할 수 있는 설치 구성 요소를 제공 합니다. 설치 구성 요소는 시스템을 설치 하는 것와를 서비스가 존재 하는지 확인 하 여 서비스 제어 관리자에서 개별 서비스를 등록 합니다. 서비스 응용 프로그램을 사용할 때 자동으로 프로젝트에 적절 한 설치 관리자를 추가 하려면 속성 창에서 링크를 선택할 수 있습니다.  

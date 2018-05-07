@@ -1,26 +1,12 @@
 ---
 title: 서비스 프레임워크
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 75f60b87-f80e-4377-ba7c-8e6becaa2b28
-caps.latest.revision: ''
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 67e856aff583513fa8a16d289cf5190a9698c52c
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: 859e718a56ab63c8e012e1851c0730f53cb707be
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="service-framework"></a>서비스 프레임워크
 이 항목에서는 서비스 프레임워크 데이터에 의해 생성된 모든 예외를 보여 줍니다.  
@@ -49,8 +35,8 @@ ms.lasthandoff: 03/26/2018
 |channelDoesNotHaveADuplexSession0|현재 채널은 출력 세션 닫기를 지원하지 않습니다. 이 채널 ISessionChannel를 구현 하지 않는\<IDuplexSession > 합니다.|  
 |ClientRuntimeRequiresFormatter0|SerializeRequest 및 DeserializeReply가 둘 다 false는 아니므로 지정된 ClientOperation에 포맷터가 필요합니다.|  
 |CommunicationObjectAborted1|지정된 통신 개체가 중지되었기 때문에 통신에 사용할 수 없습니다.|  
-|CommunicationObjectAbortedStack2|지정된 통신 개체가 중지되었기 때문에 통신에 사용할 수 없습니다. {1}|  
-|CommunicationObjectBaseClassMethodNotCalled|지정된 통신 개체가 가상 함수 {1}을(를) 다시 정의했지만 기본 클래스에 정의된 버전을 호출하지 않습니다.|  
+|CommunicationObjectAbortedStack2|지정 된 통신 개체가 중지 되었기 때문에 통신에 사용할 수 없습니다. {1}|  
+|CommunicationObjectBaseClassMethodNotCalled|지정 된 통신 개체가 가상 함수 재정의 {1} 정의 했지만 기본 클래스에 정의 된 버전을 호출 하지 않습니다.|  
 |ContractIsNotSelfConsistentItHasOneOrMore2|지정된 계약에 하나 이상의 IsTerminating 또는 비-IsInitiating 작업이 있습니다. SessionMode 속성이 SessionMode.Required로 설정되어 있지 않습니다. IsInitiating 및 IsTerminating 특성은 세션 컨텍스트에서만 사용할 수 있습니다.|  
 |CouldnTCreateChannelForChannelType2|지정된 채널 형식이 요청되었지만 지정된 바인딩에서 이를 지원하지 않거나 이를 지원하도록 제대로 구성되지 않았습니다.|  
 |DispatchRuntimeRequiresFormatter0|DeserializeRequest 및 SerializeReply가 둘 다 false가 아니므로 지정된 DispatchOperation에 포맷터가 필요합니다.|  
@@ -158,7 +144,7 @@ ms.lasthandoff: 03/26/2018
 |SFxSchemaDoesNotContainType|지정된 대상 네임스페이스를 가진 스키마에 지정된 이름을 가진 형식이 없습니다.|  
 |SfxServiceContractAttributeNotFound|지정된 계약 형식의 특성이 ServiceContractAttribute가 아닙니다. 유효한 계약을 정의하려면 지정한 형식의 특성이 ServiceContractAttribute여야 합니다. 형식은 계약 인터페이스 또는 서비스 클래스일 수 있습니다.|  
 |SFxServiceContractGeneratorConfigRequired|GenerateServiceEndpoint 메서드를 사용하여 구성 정보를 생성하려면 유효한 구성 개체를 사용하여 ServiceContractGenerator 인스턴스를 초기화해야 합니다.|  
-|SFxServiceHostBaseCannotAddEndpointAfterOpen|ServiceHost가 다음 상태 중 하나가 된 후에는 끝점을 추가할 수 없습니다.<br /><br /> -열<br />-   Faulted<br />-   Terminated<br />닫힘|  
+|SFxServiceHostBaseCannotAddEndpointAfterOpen|ServiceHost가 다음 상태 중 하나가 된 후에는 끝점을 추가할 수 없습니다.<br /><br /> -열<br />오류 처리<br />-종료<br />닫힘|  
 |SFxServiceHostBaseCannotAddEndpointWithoutDescription|Description 속성을 초기화하기 전에는 끝점을 추가할 수 없습니다.|  
 |SFxServiceMetadataBehaviorNoHttpBaseAddress|ServiceMetadataBehavior의 HttpGetEnabled 속성이 true로 설정되어 있고 HttpGetUrl 속성이 상대 주소이지만 HTTP 기본 주소가 없습니다. HTTP 기본 주소를 제공하거나 HttpGetUrl을 절대 주소로 설정합니다.|  
 |SFxServiceMetadataBehaviorNoHttpsBaseAddress|ServiceMetadataBehavior의 HttpsGetEnabled 속성이 true로 설정되어 있고 HttpsGetUrl 속성이 상대 주소이지만 HTTPS 기본 주소가 없습니다. HTTPS 기본 주소를 제공하거나 HttpsGetUrl을 절대 주소로 설정합니다.|  

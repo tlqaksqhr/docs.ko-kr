@@ -1,31 +1,17 @@
 ---
-title: "DateTimePicker 컨트롤 개요(Windows Forms)"
-ms.custom: 
+title: DateTimePicker 컨트롤 개요(Windows Forms)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 f1_keywords:
 - DateTimePicker
 helpviewer_keywords:
 - DateTimePicker control [Windows Forms], about
 - date and time picker controls
 ms.assetid: 501af106-e9fc-4efc-b9b3-c9d8dcaf8c5c
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 0db5e532a2688d7f213fd42772234b9600192390
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: cf44cdff7da06a27921ce5881199a3a88b1096f8
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="datetimepicker-control-overview-windows-forms"></a>DateTimePicker 컨트롤 개요(Windows Forms)
 Windows Forms <xref:System.Windows.Forms.DateTimePicker> 컨트롤 날짜 또는 시간 목록에서 단일 항목을 선택할 수 있습니다. 두 부분으로 표시 되는 날짜를 표시할 때: 텍스트와 목록 옆에서 아래쪽 화살표를 클릭할 때 표시 되는 모눈에 표시 된 날짜와 드롭 다운 목록입니다. 다음과 같은 눈금에서 <xref:System.Windows.Forms.MonthCalendar> 여러 날짜를 선택할 때 사용할 수 있는 컨트롤을 합니다. 대 한 자세한 내용은 <xref:System.Windows.Forms.MonthCalendar> 제어, 참조 [MonthCalendar 컨트롤 개요](../../../../docs/framework/winforms/controls/monthcalendar-control-overview-windows-forms.md)합니다.  

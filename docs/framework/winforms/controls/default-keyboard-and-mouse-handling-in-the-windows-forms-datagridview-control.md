@@ -1,10 +1,6 @@
 ---
-title: "기본 키보드 및 마우스 Windows Forms DataGridView 컨트롤에서 처리"
+title: 기본 키보드 및 마우스 Windows Forms DataGridView 컨트롤에서 처리
 ms.date: 02/13/2018
-ms.prod: .net-framework
-ms.technology:
-- dotnet-winforms
-ms.topic: article
 helpviewer_keywords:
 - data grids [Windows Forms], mouse handling
 - DataGridView control [Windows Forms], navigation keys
@@ -14,16 +10,11 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], mouse handling
 - navigation keys [Windows Forms], DataGridView control
 ms.assetid: 4519b928-bfc8-4e8b-bb9c-b1e76a0ca552
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 29e8afaefd35951288a4d8f5e5df2e3b5fbc4356
-ms.sourcegitcommit: 973a12d1e6962cd9a9c263fbfaad040ec8267fe9
+ms.openlocfilehash: b0ed468fe7d38fbeda90d5347338bce14059b730
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/22/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="default-keyboard-and-mouse-handling-in-the-windows-forms-datagridview-control"></a>기본 키보드 및 마우스 Windows Forms DataGridView 컨트롤에서 처리
 
@@ -122,7 +113,7 @@ ms.lasthandoff: 02/22/2018
   
  경우 <xref:System.Windows.Forms.DataGridView.MultiSelect%2A> 로 설정 된 `true` 및 <xref:System.Windows.Forms.DataGridView.SelectionMode%2A> 로 설정 된 <xref:System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect> 또는 <xref:System.Windows.Forms.DataGridViewSelectionMode.FullColumnSelect>, 해당 경우에 전체 행을 제외 하 고 동일한 방식으로 작동 하며 SHIFT 또는 ctrl 키를 누른 채 셀을 클릭 하면 입력 한 열에 영향을 받습니다.  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참고자료
 
 <xref:System.Windows.Forms.DataGridView>  
  [DataGridView 컨트롤](../../../../docs/framework/winforms/controls/datagridview-control-windows-forms.md)

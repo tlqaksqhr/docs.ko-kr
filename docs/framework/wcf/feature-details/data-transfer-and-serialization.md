@@ -1,30 +1,18 @@
 ---
-title: "데이터 전송 및 Serialization"
-ms.custom: 
+title: 데이터 전송 및 Serialization
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - data serialization [WCF]
 - data transfer [WCF]
 ms.assetid: 0f03c635-f3e7-4c5c-9463-3cb0135e221e
-caps.latest.revision: "12"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 8daadec1eef20e62747cdbfcafd1fd13cfc16093
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 53c1421bf14c598611e116c61353c4ecd465f1aa
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="data-transfer-and-serialization"></a>데이터 전송 및 Serialization
-연결된 시스템에서 서비스 및 클라이언트는 데이터 교환에 의존하여 작업을 수행합니다. 서비스 또는 클라이언트 개발자는 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]에서 데이터 및 데이터 serialization을 처리하는 방식을 알고 있어야 유지 관리가 효율적이고 쉬운 응용 프로그램을 만들 수 있습니다.  
+연결된 시스템에서 서비스 및 클라이언트는 데이터 교환에 의존하여 작업을 수행합니다. 개발자는 서비스 또는 클라이언트의 Windows Communication Foundation (WCF)는 효율적이 고 유지 관리 하기 쉬운 응용 프로그램을 만들기 위해 데이터 및 데이터 serialization을 처리 방법을 알고 있어야 합니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
  [서비스 계약에서 데이터 전송 지정](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md)  
@@ -55,7 +43,7 @@ ms.lasthandoff: 12/22/2017
  데이터 전송 및 serialization을 프로그래밍할 때 알고 있어야 하는 항목에 대해 설명합니다.  
   
  [데이터 전송 아키텍처 개요](../../../../docs/framework/wcf/feature-details/data-transfer-architectural-overview.md)  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서 데이터 전송에 대한 전체적인 설계를 설명합니다.  
+ WCF에서 전송할 데이터의 전체 디자인의 보기를 설명합니다.  
   
 ## <a name="reference"></a>참조  
  <xref:System.ServiceModel>  

@@ -1,14 +1,6 @@
 ---
 title: '방법: 추적 및 디버그를 사용한 조건부 컴파일'
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - trace compiler options
 - trace statements
@@ -18,17 +10,13 @@ helpviewer_keywords:
 - TRACE directive
 - conditional compilation, tracing code
 ms.assetid: 56d051c3-012c-42c1-9a58-7270edc624aa
-caps.latest.revision: ''
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 5e590888a56ed4c325e89eb828349f4f289815cd
-ms.sourcegitcommit: 498799639937c89de777361aab74261efe7b79ea
+ms.openlocfilehash: 45e62fed53999636e23693ad7e61fedf21bc5423
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-compile-conditionally-with-trace-and-debug"></a>방법: 추적 및 디버그를 사용한 조건부 컴파일
 개발 중에 응용 프로그램을 디버그하는 동안 추적 및 디버깅 출력은 둘 다 Visual Studio의 출력 창으로 이동합니다. 그러나 배포된 응용 프로그램에 추적 기능을 포함하려면 **TRACE** 컴파일러 지시문을 사용하도록 설정하여 계측된 응용 프로그램을 컴파일해야 합니다. 이렇게 하면 추적 코드를 응용 프로그램의 릴리스 버전으로 컴파일할 수 있습니다. **TRACE** 지시문을 사용하지 않으면 모든 추적 코드가 컴파일 중에 무시되고 배포할 실행 코드에 포함되지 않습니다.  
@@ -104,7 +92,7 @@ ms.lasthandoff: 03/22/2018
 컴파일러 지시문을 주석으로 처리합니다.  
   
 > [!NOTE]
->  컴파일할 준비가 되면 **빌드** 메뉴에서 **빌드**를 선택하거나, **d:**을 입력하지 않고 명령줄 메서드를 사용하여 조건부 컴파일 기호를 정의합니다.  
+>  컴파일할 준비가 되면 **빌드** 메뉴에서 **빌드**를 선택하거나, **d:** 을 입력하지 않고 명령줄 메서드를 사용하여 조건부 컴파일 기호를 정의합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [응용 프로그램 추적 및 조율](../../../docs/framework/debug-trace-profile/tracing-and-instrumenting-applications.md)  

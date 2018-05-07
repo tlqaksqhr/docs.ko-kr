@@ -1,28 +1,19 @@
 ---
-title: "Window 컨트롤 형식에 대한 UI 자동화 지원"
-ms.custom: 
+title: Window 컨트롤 형식에 대한 UI 자동화 지원
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-bcl
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - UI Automation, Window control type
 - Window control type
 - control types, Window
 ms.assetid: 53be78a6-cdcc-4af3-a464-5927d19c54e8
-caps.latest.revision: "19"
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: 952657584a4e6aea130e59d42f0c3adfc775c01b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: e6e8ed62b73f335828dc53cd580b232219ebeb0a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ui-automation-support-for-the-window-control-type"></a>Window 컨트롤 형식에 대한 UI 자동화 지원
 > [!NOTE]

@@ -1,28 +1,16 @@
 ---
-title: "방법: 배경으로 사용된 이미지의 가로 세로 비율 유지"
-ms.custom: 
+title: '방법: 배경으로 사용된 이미지의 가로 세로 비율 유지'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - aspect ratios of background images [WPF], preserving
 - brushes [WPF], preserving aspect ratios of background images
 - background images [WPF], preserving aspect ratios
 ms.assetid: 28c39478-13d7-4011-80a3-8b9cc3e54478
-caps.latest.revision: "16"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 9716d91a99eb79e38b729424389b2962d1eb6b1c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 906033b43ba657acc873f12a00000189db6796ec
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-preserve-the-aspect-ratio-of-an-image-used-as-a-background"></a>방법: 배경으로 사용된 이미지의 가로 세로 비율 유지
 사용 하는 방법을 보여 주는이 예제는 <xref:System.Windows.Media.TileBrush.Stretch%2A> 속성은 <xref:System.Windows.Media.ImageBrush> 이미지의 가로 세로 비율을 유지 하기 위해 합니다.  
@@ -31,7 +19,7 @@ ms.lasthandoff: 12/22/2017
   
  있도록는 <xref:System.Windows.Media.ImageBrush> 해당 이미지의 가로 세로 비율 유지, 설정 된 <xref:System.Windows.Media.TileBrush.Stretch%2A> 속성을 <xref:System.Windows.Media.Stretch.Uniform> 또는 <xref:System.Windows.Media.Stretch.UniformToFill>합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 예제에서는 두 개의 <xref:System.Windows.Media.ImageBrush> 두 개의 사각형을 그리는 데 개체입니다. 각 사각형은 300 × 150픽셀 크기이며 각각 300 x 300픽셀 이미지를 포함합니다. <xref:System.Windows.Media.TileBrush.Stretch%2A> 첫 번째는 브러시 속성 <xref:System.Windows.Media.Stretch.Uniform>, 및 <xref:System.Windows.Media.TileBrush.Stretch%2A> 두 번째는 브러시 속성 <xref:System.Windows.Media.Stretch.UniformToFill>합니다.  
   
  [!code-csharp[UsingImageBrush_snip#ImageBrushStretchModesExampleWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/UsingImageBrush_snip/CSharp/StretchModes.cs#imagebrushstretchmodesexamplewholepage)]  

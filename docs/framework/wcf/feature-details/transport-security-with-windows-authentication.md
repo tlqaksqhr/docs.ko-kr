@@ -1,32 +1,20 @@
 ---
 title: Windows 인증을 사용하는 전송 보안
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 96dd26e2-46e7-4de0-9a29-4fcb05bf187b
-caps.latest.revision: 17
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload:
-- dotnet
-ms.openlocfilehash: 5effb18435241b00c3036fd23e15ef5ce485b646
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: d291cd3d00f8d0d40e0b8543d5347e1509cb8b90
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="transport-security-with-windows-authentication"></a>Windows 인증을 사용하는 전송 보안
-다음 시나리오에서는 Windows 보안에 의해 보호되는 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 클라이언트와 서비스를 보여 줍니다. 프로그래밍에 대 한 자세한 내용은 참조 [하는 방법: Windows 자격 증명을 사용 하 여 서비스 보안](../../../../docs/framework/wcf/how-to-secure-a-service-with-windows-credentials.md)합니다.  
+다음 시나리오에서는 Windows Communication Foundation (WCF) 클라이언트와 서비스는 Windows 보안 적용을 보여 줍니다. 프로그래밍에 대 한 자세한 내용은 참조 [하는 방법: Windows 자격 증명을 사용 하 여 서비스 보안](../../../../docs/framework/wcf/how-to-secure-a-service-with-windows-credentials.md)합니다.  
   
  인트라넷 웹 서비스는 인사 정보를 표시합니다. 클라이언트는 Windows Form 응용 프로그램입니다. 응용프로그램은 도메인을 보호하는 Kerberos 컨트롤러와 함께 도메인에 배포됩니다.  
   
@@ -35,7 +23,7 @@ ms.lasthandoff: 04/30/2018
 |특성|설명|  
 |--------------------|-----------------|  
 |보안 모드|전송|  
-|상호 운용성|[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에만 해당|  
+|상호 운용성|WCF만|  
 |인증(서버)<br /><br /> 인증(클라이언트)|예, Windows 통합 인증을 사용합니다.<br /><br /> 예, Windows 통합 인증을 사용합니다.|  
 |무결성|예|  
 |기밀성|예|  

@@ -1,13 +1,6 @@
 ---
-title: "방법: GDI를 사용하여 텍스트 그리기"
-ms.custom: 
+title: '방법: GDI를 사용하여 텍스트 그리기'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -17,24 +10,19 @@ helpviewer_keywords:
 - drawing [Windows Forms], text
 - Windows Forms, drawing text with GDI
 ms.assetid: 2a19fe5d-2ace-451c-94db-01cb1118ef7b
-caps.latest.revision: "10"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: c6c7fb4d8c6bd93481935a9f2ef7dd4b34af7e71
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: e18ff96ea97eb636de8ab73aaa094c07b10fd456
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-draw-text-with-gdi"></a>방법: GDI를 사용하여 텍스트 그리기
-와 <xref:System.Windows.Forms.TextRenderer.DrawText%2A> 에서 메서드는 <xref:System.Windows.Forms.TextRenderer> 클래스에 액세스할 수 있습니다 [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] 폼 이나 컨트롤에 텍스트를 그리기 위한 기능입니다. [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)]텍스트 렌더링은 일반적으로 더 나은 성능과 더 정확한 텍스트 보다 측정 제공 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]합니다.  
+와 <xref:System.Windows.Forms.TextRenderer.DrawText%2A> 에서 메서드는 <xref:System.Windows.Forms.TextRenderer> 클래스에 액세스할 수 있습니다 [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] 폼 이나 컨트롤에 텍스트를 그리기 위한 기능입니다. [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] 텍스트 렌더링은 일반적으로 더 나은 성능과 더 정확한 텍스트 보다 측정 제공 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]합니다.  
   
 > [!NOTE]
 >  <xref:System.Windows.Forms.TextRenderer.DrawText%2A> 의 메서드는 <xref:System.Windows.Forms.TextRenderer> 인쇄를 위한 클래스를 사용할 수 없습니다. 인쇄할 때 항상 사용는 <xref:System.Drawing.Graphics.DrawString%2A> 의 메서드는 <xref:System.Drawing.Graphics> 클래스입니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 코드 예제를 사용 하 여 사각형 내에서 여러 줄 텍스트를 그리는 방법을 <xref:System.Windows.Forms.TextRenderer.DrawText%2A> 메서드.  
   
  [!code-csharp[System.Windows.Forms.TextRendererExamples#7](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.TextRendererExamples/CS/Form1.cs#7)]

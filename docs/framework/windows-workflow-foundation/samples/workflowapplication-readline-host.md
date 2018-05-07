@@ -1,23 +1,12 @@
 ---
-title: "WorkflowApplication ReadLine 호스트"
-ms.custom: 
+title: WorkflowApplication ReadLine 호스트
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: f7b362be-cb42-40d7-b9ef-cfc4aed2455b
-caps.latest.revision: "14"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: f8426dd3835f53eeb85711a691c878ce2b877d09
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 8da8a5bb4c80a86fe5ae9e133ea545c00ee17fba
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="workflowapplication-readline-host"></a>WorkflowApplication ReadLine 호스트
 이 샘플은 제네릭 ReadLine 호스트입니다. 포함된 `ReadLine` 활동(또는 문자열을 사용하여 다시 시작된 책갈피에서 데이터를 가져오는 활동과 같은 기타 활동)을 사용하여 워크플로를 로드하고 실행할 수 있습니다. `WriteLine` 활동의 출력이나 <xref:System.Activities.Statements.WriteLine.TextWriter%2A> 확장에 기록하는 내용은 호스트 창에 표시됩니다. 유휴 상태인 인스턴스에 사용할 수 있는 책갈피는 콤보 상자에 나타납니다. 책갈피를 선택하고 텍스트를 입력한 다음 책갈피 다시 시작 단추를 누르면 워크플로 실행이 계속됩니다. 선택한 워크플로를 취소하거나 중단하거나 종료할 수도 있습니다. 기본적으로 지속성이 설정되어 있으므로, 호스트를 종료하고 다시 가져올 수 있으며 인스턴스 목록은 데이터베이스에 저장된 인스턴스로 채워집니다. 추적 기능은 활동 수준에 자세한 추적을 추가하는 옵션을 사용하여 <xref:System.Activities.WorkflowApplication> 수준 이벤트를 호스트에 출력하는 데 사용됩니다.   
@@ -66,6 +55,6 @@ ms.lasthandoff: 12/22/2017
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  이 디렉터리가 없으면 [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4(.NET Framework 4용 WCF(Windows Communication Foundation) 및 WF(Windows Workflow Foundation) 샘플)](http://go.microsoft.com/fwlink/?LinkId=150780) 로 이동하여 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 및 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플을 모두 다운로드하세요. 이 샘플은 다음 디렉터리에 있습니다.  
+>  이 디렉터리가로 이동 [Windows Communication Foundation (WCF) 및.NET Framework 4에 대 한 Windows WF (Workflow Foundation) 샘플](http://go.microsoft.com/fwlink/?LinkId=150780) 모든 Windows Communication Foundation (WCF)를 다운로드 하 고 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플. 이 샘플은 다음 디렉터리에 있습니다.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Execution\ControllingWorkflowApplications`

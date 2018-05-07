@@ -1,32 +1,20 @@
 ---
-title: "방법: 키 프레임을 사용하여 개체에 애니메이션 효과 주기"
-ms.custom: 
+title: '방법: 키 프레임을 사용하여 개체에 애니메이션 효과 주기'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - animation [WPF], objects with key frames
 - key frames [WPF], animating objects with
 ms.assetid: b1f15ba9-cac7-4cea-8699-5c6b55c05c5e
-caps.latest.revision: "8"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 5f513cda540b3337f1510ee0c46419a12023bcb6
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 7dc49bc6b3f9156507cb821bfc32b269365b206c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-animate-an-object-by-using-key-frames"></a>방법: 키 프레임을 사용하여 개체에 애니메이션 효과 주기
 이 예제는 개체에 애니메이션을 적용 하는 방법을 보여 주는이 예제는 <xref:System.Windows.Controls.Page.Background%2A> 속성은 <xref:System.Windows.Controls.Page> 키 프레임을 사용 하 여 제어 합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 예제에서는 <xref:System.Windows.Media.Animation.ObjectAnimationUsingKeyFrames> 색 애니메이션 효과를 클래스에 대 한 변경의 <xref:System.Windows.Controls.Page.Background%2A> 속성의는 <xref:System.Windows.Controls.Page> 제어 합니다. 예제 애니메이션 배경 브러시를 정기적으로 변경합니다. 이 애니메이션에 사용 하 여는 <xref:System.Windows.Media.Animation.DiscreteObjectKeyFrame> 클래스 세 개의 서로 다른 키 프레임을 만듭니다. 애니메이션 키 프레임을 사용 하 여 다음과 같은 방식:  
   
 1.  애니메이션 효과 인스턴스의 첫 번째 초 후에는 <xref:System.Windows.Media.LinearGradientBrush> 클래스입니다. 예제의이 섹션에서는 색을 빨간색 주황색 노랑에서 전환 되도록 배경색에 선형 그라데이션으로 표시할 적용 됩니다.  
@@ -38,7 +26,7 @@ ms.lasthandoff: 12/22/2017
 4.  애니메이션 다시 시작 되 고 무한 반복 합니다.  
   
 > [!NOTE]
->  <xref:System.Windows.Media.Animation.DiscreteObjectKeyFrame>함께 사용할 수 있는 키 프레임의 유일한 종류는 <xref:System.Windows.Media.Animation.ObjectAnimationUsingKeyFrames> 클래스입니다. 같은 키 프레임 <xref:System.Windows.Media.Animation.DiscreteObjectKeyFrame> 즉에서 값을 급격 한 변경과 만들고,이 예에서 색 변경 갑자기 이루어집니다.  
+>  <xref:System.Windows.Media.Animation.DiscreteObjectKeyFrame> 함께 사용할 수 있는 키 프레임의 유일한 종류는 <xref:System.Windows.Media.Animation.ObjectAnimationUsingKeyFrames> 클래스입니다. 같은 키 프레임 <xref:System.Windows.Media.Animation.DiscreteObjectKeyFrame> 즉에서 값을 급격 한 변경과 만들고,이 예에서 색 변경 갑자기 이루어집니다.  
   
  [!code-xaml[keyframes_snip#ObjectAnimationUsingKeyFramesWholePage](../../../../samples/snippets/xaml/VS_Snippets_Wpf/keyframes_snip/XAML/ObjectAnimationUsingKeyFramesExample.xaml#objectanimationusingkeyframeswholepage)]  
   

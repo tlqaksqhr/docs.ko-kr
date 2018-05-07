@@ -1,13 +1,6 @@
 ---
-title: "GDI+의 펜, 선 및 사각형"
-ms.custom: 
+title: GDI+의 펜, 선 및 사각형
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -24,16 +17,11 @@ helpviewer_keywords:
 - examples [Windows Forms], GDI+
 - lines [Windows Forms], dashed
 ms.assetid: 30b25aae-e3eb-4479-bdb8-187cf651fc84
-caps.latest.revision: "14"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 7f21564c800dd960a96dfc024fa2cccc6b27780f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 86cc51006361d5628dc12999588520e28e62f166
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="pens-lines-and-rectangles-in-gdi"></a>GDI+의 펜, 선 및 사각형
 있는 선을 그리려면 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 만들어야 할 한 <xref:System.Drawing.Graphics> 개체 및 <xref:System.Drawing.Pen> 개체입니다. <xref:System.Drawing.Graphics> 드로잉을 실제로 수행 하는 메서드를 제공 하는 개체 및 <xref:System.Drawing.Pen> 개체 선 색, 너비 및 스타일 등의 특성을 저장 합니다.  
@@ -44,7 +32,7 @@ ms.lasthandoff: 12/22/2017
  [!code-csharp[LinesCurvesAndShapes#41](../../../../samples/snippets/csharp/VS_Snippets_Winforms/LinesCurvesAndShapes/CS/Class1.cs#41)]
  [!code-vb[LinesCurvesAndShapes#41](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/LinesCurvesAndShapes/VB/Class1.vb#41)]  
   
- <xref:System.Drawing.Graphics.DrawLine%2A>오버 로드 된 메서드는 <xref:System.Drawing.Graphics> 클래스, 여러 가지 인수를 제공할 수 있습니다. 예를 들어 두 개의 생성할 수 있습니다 <xref:System.Drawing.Point> 개체 및 패스는 <xref:System.Drawing.Point> 개체에 대 한 인수는 <xref:System.Drawing.Graphics.DrawLine%2A> 메서드:  
+ <xref:System.Drawing.Graphics.DrawLine%2A> 오버 로드 된 메서드는 <xref:System.Drawing.Graphics> 클래스, 여러 가지 인수를 제공할 수 있습니다. 예를 들어 두 개의 생성할 수 있습니다 <xref:System.Drawing.Point> 개체 및 패스는 <xref:System.Drawing.Point> 개체에 대 한 인수는 <xref:System.Drawing.Graphics.DrawLine%2A> 메서드:  
   
  [!code-csharp[LinesCurvesAndShapes#42](../../../../samples/snippets/csharp/VS_Snippets_Winforms/LinesCurvesAndShapes/CS/Class1.cs#42)]
  [!code-vb[LinesCurvesAndShapes#42](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/LinesCurvesAndShapes/VB/Class1.vb#42)]  
@@ -71,7 +59,7 @@ ms.lasthandoff: 12/22/2017
  [!code-csharp[LinesCurvesAndShapes#45](../../../../samples/snippets/csharp/VS_Snippets_Winforms/LinesCurvesAndShapes/CS/Class1.cs#45)]
  [!code-vb[LinesCurvesAndShapes#45](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/LinesCurvesAndShapes/VB/Class1.vb#45)]  
   
- <xref:System.Drawing.Graphics.DrawRectangle%2A>오버 로드 된 메서드는 <xref:System.Drawing.Graphics> 클래스, 여러 가지 인수를 제공할 수 있습니다. 예를 들어 생성할 수 있습니다는 <xref:System.Drawing.Rectangle> 개체를 전달는 <xref:System.Drawing.Rectangle> 개체는 <xref:System.Drawing.Graphics.DrawRectangle%2A> 메서드에 인수로:  
+ <xref:System.Drawing.Graphics.DrawRectangle%2A> 오버 로드 된 메서드는 <xref:System.Drawing.Graphics> 클래스, 여러 가지 인수를 제공할 수 있습니다. 예를 들어 생성할 수 있습니다는 <xref:System.Drawing.Rectangle> 개체를 전달는 <xref:System.Drawing.Rectangle> 개체는 <xref:System.Drawing.Graphics.DrawRectangle%2A> 메서드에 인수로:  
   
  [!code-csharp[LinesCurvesAndShapes#46](../../../../samples/snippets/csharp/VS_Snippets_Winforms/LinesCurvesAndShapes/CS/Class1.cs#46)]
  [!code-vb[LinesCurvesAndShapes#46](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/LinesCurvesAndShapes/VB/Class1.vb#46)]  

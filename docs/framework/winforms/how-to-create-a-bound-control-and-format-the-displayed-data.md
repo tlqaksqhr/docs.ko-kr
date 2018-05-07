@@ -1,28 +1,16 @@
 ---
-title: "방법: 바인딩된 컨트롤 만들기 및 표시된 데이터 형식 지정"
-ms.custom: 
+title: '방법: 바인딩된 컨트롤 만들기 및 표시된 데이터 형식 지정'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - data [Windows Forms], formatting
 - bound controls [Windows Forms], creating
 - bound controls [Windows Forms], formatting data
 ms.assetid: d5a56228-899d-41d9-8af8-87b3f4ec2f94
-caps.latest.revision: "10"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 6088048ed27b2021e297494275f4e80f7c0cb681
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 9055ec9c4b646e0c86819e4e72db8ce20086bace
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-a-bound-control-and-format-the-displayed-data"></a>방법: 바인딩된 컨트롤 만들기 및 표시된 데이터 형식 지정
 Windows Forms 데이터 바인딩 사용 하 여 데이터 바인딩된 컨트롤에 표시 되는 데이터의 서식을 지정할 수 있습니다는 **서식 지정 및 고급 바인딩** 대화 상자.  
@@ -61,7 +49,7 @@ Windows Forms 데이터 바인딩 사용 하 여 데이터 바인딩된 컨트�
     |통화|소수 자릿수를 사용 하 여 지정 **소수 자릿수** up-down 컨트롤입니다.|  
     |날짜 시간|에 항목 중 하나를 선택 하 여 날짜 및 시간을 표시할 방법을 선택은 **형식** 선택 상자.|  
     |지수|소수 자릿수를 사용 하 여 지정 **소수 자릿수** up-down 컨트롤입니다.|  
-    |사용자 지정|사용자 지정 서식 문자열 사용을 지정합니다.<br /><br /> 자세한 내용은 참조 [형식 지정](../../../docs/standard/base-types/formatting-types.md)합니다. **참고:** 사용자 지정 형식 문자열은 데이터 소스와 바인딩된 컨트롤 간에 성공적으로 왕복 시간이 보장 되지 않습니다. 대신에 바인딩에 대한 <xref:System.Windows.Forms.Binding.Parse> 또는 <xref:System.Windows.Forms.Binding.Format> 이벤트를 처리하고 이벤트 처리 코드에 사용자 지정 서식 지정을 적용합니다.|  
+    |사용자 지정|사용자 지정 서식 문자열 사용을 지정합니다.<br /><br /> 자세한 내용은 [서식 지정 형식](../../../docs/standard/base-types/formatting-types.md)을 참조하세요. **참고:** 사용자 지정 형식 문자열은 데이터 소스와 바인딩된 컨트롤 간에 성공적으로 왕복 시간이 보장 되지 않습니다. 대신에 바인딩에 대한 <xref:System.Windows.Forms.Binding.Parse> 또는 <xref:System.Windows.Forms.Binding.Format> 이벤트를 처리하고 이벤트 처리 코드에 사용자 지정 서식 지정을 적용합니다.|  
   
 8.  클릭 **확인** 를 닫으려면는 **서식 지정 및 고급 바인딩** 대화 상자 및 속성 창으로 돌아갑니다.  
   

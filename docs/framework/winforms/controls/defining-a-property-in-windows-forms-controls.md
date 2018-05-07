@@ -1,13 +1,6 @@
 ---
-title: "Windows Forms 컨트롤에서 속성 정의"
-ms.custom: 
+title: Windows Forms 컨트롤에서 속성 정의
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -15,23 +8,18 @@ helpviewer_keywords:
 - properties [Windows Forms], defining in code
 - custom controls [Windows Forms], defining properties in code
 ms.assetid: c2eb8277-a842-4d99-89a9-647b901a0434
-caps.latest.revision: "13"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 47b56a4112dc39adb12bb8f7c6db7656352ae930
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: dc47d7152419d55b3e52aec70257e2b39e9aaca0
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="defining-a-property-in-windows-forms-controls"></a>Windows Forms 컨트롤에서 속성 정의
 속성의 개요는 [속성 개요](http://msdn.microsoft.com/library/8f1a1ff1-0f05-40e0-bfdf-80de8fff7d52)를 참조하세요. 속성을 정의할 때 다음과 같은 몇 가지 주요 고려 사항이 있습니다.  
   
 -   정의한 속성에 특성을 적용해야 합니다. 특성은 디자이너가 속성을 표시하는 방법을 지정합니다. 자세한 내용은 [구성 요소의 디자인 타임 특성](http://msdn.microsoft.com/library/12050fe3-9327-4509-9e21-4ee2494b95c3)을 참조하세요.  
   
--   컨트롤의 시각적 표시에 영향을 주는 속성을 변경 하는 경우 호출 된 <xref:System.Windows.Forms.Control.Invalidate%2A> 메서드 (컨트롤에서 상속 되는 <xref:System.Windows.Forms.Control>)에서 `set` 접근자입니다. <xref:System.Windows.Forms.Control.Invalidate%2A>호출 하 여는 <xref:System.Windows.Forms.Control.OnPaint%2A> 메서드에 컨트롤을 다시 그립니다. 여러 번 호출 <xref:System.Windows.Forms.Control.Invalidate%2A> 를 한 번 호출 될 <xref:System.Windows.Forms.Control.OnPaint%2A> 효율성에 대 한 합니다.  
+-   컨트롤의 시각적 표시에 영향을 주는 속성을 변경 하는 경우 호출 된 <xref:System.Windows.Forms.Control.Invalidate%2A> 메서드 (컨트롤에서 상속 되는 <xref:System.Windows.Forms.Control>)에서 `set` 접근자입니다. <xref:System.Windows.Forms.Control.Invalidate%2A> 호출 하 여는 <xref:System.Windows.Forms.Control.OnPaint%2A> 메서드에 컨트롤을 다시 그립니다. 여러 번 호출 <xref:System.Windows.Forms.Control.Invalidate%2A> 를 한 번 호출 될 <xref:System.Windows.Forms.Control.OnPaint%2A> 효율성에 대 한 합니다.  
   
 -   .NET Framework 클래스 라이브러리는 정수, 10진수 숫자, 부울 값 등과 같은 일반적인 데이터 형식에 대해 형식 변환기를 제공합니다. 형식 변환기의 목적은 일반적으로 문자열을 값으로 변환하도록 제공합니다(문자열 데이터에서 다른 데이터 형식으로). 일반적인 데이터 형식은 값을 문자열로 변환하고 문자열을 적절한 데이터 형식으로 변환하는 기본 형식 변환기와 연결됩니다. 사용자 지정(즉, 비표준) 데이터 형식인 속성을 정의하는 경우 형식 변환기를 지정하는 특성을 적용하여 해당 속성과 연결해야 합니다. 특성을 사용하여 사용자 지정 UI 형식 편집기를 속성과 연결할 수 있습니다. UI 형식 편집기는 속성이나 데이터 형식을 편집하는 사용자 인터페이스를 제공합니다. 색 선택은 UI 형식 편집기의 예입니다. 이 항목의 끝에 특성의 예가 제공됩니다.  
   

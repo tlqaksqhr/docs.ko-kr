@@ -1,14 +1,6 @@
 ---
 title: '방법: 사용자 지정 토큰 만들기'
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -18,22 +10,16 @@ helpviewer_keywords:
 - WSSecurityTokenSerializer class
 - SecurityToken class
 ms.assetid: 6d892973-1558-4115-a9e1-696777776125
-caps.latest.revision: 14
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: c270b63586809044f1bb3e56841ae8cf590e7bb1
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
-ms.translationtype: MT
+ms.openlocfilehash: eb227075b1a696216e62e851aa8b10c7511ac93f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-a-custom-token"></a>방법: 사용자 지정 토큰 만들기
 이 항목에서는 <xref:System.IdentityModel.Tokens.SecurityToken> 클래스를 사용하여 사용자 지정 보안 토큰을 만들고 사용자 지정 보안 토큰 공급자 및 인증자를 사용하여 통합하는 방법에 대해 설명합니다. 전체 코드 예제에 대 한 참조는 [사용자 지정 토큰](../../../../docs/framework/wcf/samples/custom-token.md) 샘플.  
   
- A *보안 토큰* 기본적으로에서 사용 되는 XML 요소는 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] SOAP 메시지 안의 발신자에 대 한 클레임을 나타내기 위해 보안 프레임 워크입니다. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 보안은 시스템에서 제공한 인증 모드에 대해 다양한 토큰을 제공합니다. 예를 들면 <xref:System.IdentityModel.Tokens.X509SecurityToken> 클래스에 의해 표시되는 X.509 인증서 보안 토큰과 <xref:System.IdentityModel.Tokens.UserNameSecurityToken> 클래스에 의해 표시되는 사용자 이름 보안 토큰이 있습니다.  
+ A *보안 토큰* 기본적으로 SOAP 메시지 안의 발신자에 대 한 클레임을 나타내기 위해 Windows Communication Foundation (WCF) 보안 프레임 워크에서 사용 하는 XML 요소입니다. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 보안은 시스템에서 제공한 인증 모드에 대해 다양한 토큰을 제공합니다. 예를 들면 <xref:System.IdentityModel.Tokens.X509SecurityToken> 클래스에 의해 표시되는 X.509 인증서 보안 토큰과 <xref:System.IdentityModel.Tokens.UserNameSecurityToken> 클래스에 의해 표시되는 사용자 이름 보안 토큰이 있습니다.  
   
  제공된 형식이 인증 모드나 자격 증명을 지원하지 않는 경우도 있습니다. 그럴 경우 사용자 지정 보안 토큰을 만들어 SOAP 메시지에서 사용자 지정 자격 증명의 XML 표현을 제공해야 합니다.  
   

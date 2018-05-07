@@ -1,13 +1,6 @@
 ---
-title: "방법: 데이터 개체에 데이터 형식이 있는지 확인"
-ms.custom: 
+title: '방법: 데이터 개체에 데이터 형식이 있는지 확인'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -16,21 +9,16 @@ helpviewer_keywords:
 - drag-and-drop [WPF], data formats present
 - data formats [WPF], determining if present
 ms.assetid: e487a454-c9fc-4e53-aeaa-c458d059ad4c
-caps.latest.revision: "6"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: fb7b7bb0436ad00982f48a00b079e1f867922db5
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: e3e2f47df0ae1fdf0fe875827473f2c3a1b53fb5
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-determine-if-a-data-format-is-present-in-a-data-object"></a>방법: 데이터 개체에 데이터 형식이 있는지 확인
 다음 예제에서는 다양 한를 사용 하는 방법을 보여 <xref:System.Windows.DataObject.GetDataPresent%2A> 특정 데이터 형식의 데이터 개체에 있는지 여부를 쿼리 하 메서드 오버 로드 합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
   
 ### <a name="description"></a>설명  
  다음 예제 코드를 사용 하 여는 <xref:System.Windows.DataObject.GetDataPresent%28System.String%29> 설명자 문자열에서 특정 데이터 형식의 존재를 쿼리 하는 오버 로드 합니다.  

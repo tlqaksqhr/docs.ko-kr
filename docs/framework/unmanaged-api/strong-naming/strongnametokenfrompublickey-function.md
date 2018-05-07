@@ -1,14 +1,6 @@
 ---
-title: "StrongNameTokenFromPublicKey 함수"
-ms.custom: 
+title: StrongNameTokenFromPublicKey 함수
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - StrongNameTokenFromPublicKey
 api_location:
@@ -26,17 +18,13 @@ helpviewer_keywords:
 ms.assetid: 997e9e57-abb2-4217-bf20-1df621a75add
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 0cb649f43bfea2e11c986aa3fff5a702e2b58c25
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: eb8ff76da288975ef291d226bb1f205e73a64252
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="strongnametokenfrompublickey-function"></a>StrongNameTokenFromPublicKey 함수
 공개 키를 나타내는 토큰을 가져옵니다. 강력한 이름 토큰에는 공개 키의 축약 된 형식입니다.  
@@ -68,7 +56,7 @@ BOOLEANStrongNameTokenFromPublicKey (
  [out] 반환 된 강력한 이름 토큰의 바이트 크기입니다.  
   
 ## <a name="return-value"></a>반환 값  
- `true`성공적으로 완료 됩니다. 그렇지 않으면 `false`합니다.  
+ `true` 성공적으로 완료 됩니다. 그렇지 않으면 `false`합니다.  
   
 ## <a name="remarks"></a>설명  
  강력한 이름 토큰에는 간단한 형식의 메타 데이터에 키 정보를 저장할 때 공간 절약을 위해 사용 되는 공개 키입니다. 특히, 강력한 이름 토큰 종속 어셈블리를 참조 하려면 어셈블리 참조에 사용 됩니다.  
@@ -82,7 +70,7 @@ BOOLEANStrongNameTokenFromPublicKey (
   
  **라이브러리:** mscoree.dll에 리소스로 포함  
   
- **.NET framework 버전:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>참고 항목  
  [StrongNameTokenFromPublicKey 메서드](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnametokenfrompublickey-method.md)  

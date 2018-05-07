@@ -1,13 +1,6 @@
 ---
-title: "mc:Ignorable 특성"
-ms.custom: 
+title: mc:Ignorable 특성
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - mc XML namespace prefix [WPF]
 - mc:Ignorable attribute
@@ -16,16 +9,11 @@ helpviewer_keywords:
 - mc:ProcessContent attribute
 - XAML [WPF], mc:ProcessContent attribute
 ms.assetid: acd9a6ef-b7ca-4146-abb6-60f3b366e9ec
-caps.latest.revision: "8"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 9767b721321b34030a2f276a90c618c658645207
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 7b8a2ef6e27bc6b25776157e59bef04b883fcb1a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="mcignorable-attribute"></a>mc:Ignorable 특성
 지정 [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] 마크업 파일에서 발생 하는 네임 스페이스 접두사가 무시 되는 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 프로세서. `mc:Ignorable` 특성에 대 한 및 사용자 지정 네임 스페이스 매핑에 대 한 태그 호환성 지원 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 버전 관리 합니다.  
@@ -66,7 +54,7 @@ ms.lasthandoff: 12/22/2017
   
  요소 또는 특성으로 요소 이름의 접두사 부분은 표시 되는 위치 `mc:Ignorable` 에서 처리 될 때 오류가 발생 하지 것입니다는 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 프로세서. 해당 특성을 내부 형식 또는 프로그래밍 구문에 확인할 수 없는, 해당 요소가 무시 됩니다. 그러나 note 무시 요소는 처리 되지 않고 해당 요소의 부작용이 추가적인 요소 요구 사항에 대 한 추가 구문 분석 오류를 생성할 여전히 수 있습니다. 예를 들어, 특정 요소 콘텐츠 모델 지정한 자식 요소가 닫힌 경우 하지만 자식 요소가 하나만 필요할는 `mc:Ignorable` 접두사 및 지정된 된 자식 요소 확인할 수 없는 형식에는 다음 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 프로세서 수 오류가 발생 합니다.  
   
- `mc:Ignorable`네임 스페이스 매핑을 식별자 문자열에만 적용 됩니다. `mc:Ignorable`지정 하는 어셈블리에 네임 스페이스 매핑을에 적용 되지 않습니다는 [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] 네임 스페이스 및 어셈블리 (또는 기본적으로 어셈블리는 현재 실행 파일).  
+ `mc:Ignorable` 네임 스페이스 매핑을 식별자 문자열에만 적용 됩니다. `mc:Ignorable` 지정 하는 어셈블리에 네임 스페이스 매핑을에 적용 되지 않습니다는 [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] 네임 스페이스 및 어셈블리 (또는 기본적으로 어셈블리는 현재 실행 파일).  
   
  구현 하는 경우는 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 프로세서, 프로세서 구현 해야 발생 시 키 지 처리 모든 요소 또는 특성으로 식별 되는 접두사에 의해 한정 됩니다에 대 한 형식 변환 오류 또는 구문 `mc:Ignorable`합니다. 하지만 프로세서 구현 로드 또는 위의 한 자식 요소가 예제와 같은 처리에 실패 하는 요소 중 보조 결과 예외를 발생 시킬 수 있습니다.  
   

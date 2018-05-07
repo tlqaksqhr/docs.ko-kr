@@ -1,24 +1,12 @@
 ---
-title: "피어 확인자"
-ms.custom: 
+title: 피어 확인자
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: d86d12a1-7358-450f-9727-b6afb95adb9c
-caps.latest.revision: "11"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 79c26ca9e167455dfbd664ea96e574c130cdc3d2
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 760011dda4a3059a217dcfbfc3fddaa67edc9995
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="peer-resolvers"></a>피어 확인자
 메시에 연결하려면 피어 노드에 다른 노드의 IP 주소가 필요합니다. IP 주소를 가져오려면 메시 ID를 사용하고 해당 메시 ID로 등록된 노드에 해당하는 주소 목록을 반환하는 확인자 서비스에 연결합니다. 확인자는 메시의 각 노드가 서비스에 등록되게 하여 만드는 등록된 주소 목록을 유지합니다.  
@@ -28,7 +16,7 @@ ms.lasthandoff: 01/19/2018
 ## <a name="supported-peer-resolvers"></a>지원되는 피어 확인자  
  피어 채널은 두 가지 확인자 형식인 PNRP(피어 이름 확인 프로토콜)와 사용자 지정 확인자 서비스를 지원합니다.  
   
- 기본적으로 피어 채널은 PNRP 피어 확인자 서비스를 사용하여 메시의 피어 및 인접한 환경을 검색합니다. PNRP를 사용할 수 없거나 PNRP가 적합하지 않은 상황/플랫폼에서는 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]에서 제공하는 서버 기반 검색 서비스인 <xref:System.ServiceModel.PeerResolvers.CustomPeerResolverService>를 대신 사용할 수 있습니다. <xref:System.ServiceModel.PeerResolvers.IPeerResolverContract> 인터페이스를 구현하는 클래스를 작성하여 사용자 지정 확인자 서비스를 명시적으로 정의할 수도 있습니다.  
+ 기본적으로 피어 채널은 PNRP 피어 확인자 서비스를 사용하여 메시의 피어 및 인접한 환경을 검색합니다. 여기서 PNRP 사용할 수 없거나 가능한 상황/플랫폼에 대 한 Windows Communication Foundation (WCF) 제공 대체, 서버 기반 검색 서비스-는 <xref:System.ServiceModel.PeerResolvers.CustomPeerResolverService>합니다. <xref:System.ServiceModel.PeerResolvers.IPeerResolverContract> 인터페이스를 구현하는 클래스를 작성하여 사용자 지정 확인자 서비스를 명시적으로 정의할 수도 있습니다.  
   
 ### <a name="peer-name-resolution-protocol-pnrp"></a>PNRP(피어 이름 확인 프로토콜)  
  [!INCLUDE[wv](../../../../includes/wv-md.md)]의 기본 확인자인 PNRP는 서버가 없는 분산 이름 확인자 서비스입니다. 고급 네트워킹 팩을 설치하여 [!INCLUDE[wxpsp2](../../../../includes/wxpsp2-md.md)]에서 PNRP를 사용할 수도 있습니다. 동일한 버전의 PNRP를 실행하는 두 개의 클라이언트는 개입하는 회사 방화벽 없음 등 특정 조건을 만족할 경우 이 프로토콜을 사용하여 서로를 찾을 수 있습니다. [!INCLUDE[wv](../../../../includes/wv-md.md)]에 포함된 PNRP 버전이 고급 네트워킹 팩에 포함된 버전보다 최신 버전입니다. Microsoft 다운로드 센터에서 [!INCLUDE[wxpsp2](../../../../includes/wxpsp2-md.md)]용 PNRP 업데이트를 확인하세요.  

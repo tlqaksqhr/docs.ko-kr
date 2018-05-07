@@ -1,14 +1,6 @@
 ---
-title: "StrongNameGetBlob 함수"
-ms.custom: 
+title: StrongNameGetBlob 함수
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - StrongNameGetBlob
 api_location:
@@ -22,17 +14,13 @@ helpviewer_keywords:
 ms.assetid: 15d09166-be00-4696-913f-2c1fbc7ac2e1
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: b1948a0d8a8536ebe9b0531eecaf3df446252b0a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 7892f87e4e4001dc6ba66a00becb0e7af2dc9cb6
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="strongnamegetblob-function"></a>StrongNameGetBlob 함수
 지정된 된 주소에서 실행 파일의 이진 표현으로 지정된 된 버퍼를 채웁니다.  
@@ -60,7 +48,7 @@ BOOLEAN StrongNameGetBlob (
  [out에서] 최대 크기를 바이트, 요청 된 `pbBlob`합니다. 반환 되 면 실제 크기를 바이트 단위로 `pbBlob`합니다.  
   
 ## <a name="return-value"></a>반환 값  
- `true`성공적으로 완료 됩니다. 그렇지 않으면 `false`합니다.  
+ `true` 성공적으로 완료 됩니다. 그렇지 않으면 `false`합니다.  
   
 ## <a name="remarks"></a>설명  
  경우는 `StrongNameGetBlob` 함수는 성공적으로 완료를 호출 하지는 [StrongNameErrorInfo](../../../../docs/framework/unmanaged-api/strong-naming/strongnameerrorinfo-function.md) 함수를 마지막으로 생성 된 오류를 검색 합니다.  
@@ -72,7 +60,7 @@ BOOLEAN StrongNameGetBlob (
   
  **라이브러리:** MsCorEE.dll에 리소스로 포함  
   
- **.NET framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>참고 항목  
  [StrongNameGetBlob 메서드](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamegetblob-method.md)  

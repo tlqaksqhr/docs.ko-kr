@@ -1,13 +1,6 @@
 ---
-title: "데이터 템플릿 개요"
-ms.custom: 
+title: 데이터 템플릿 개요
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -17,25 +10,20 @@ helpviewer_keywords:
 - templates [WPF], data
 - data templates [WPF]
 ms.assetid: 0f4d9f8c-0230-4013-bd7b-e8e7fed01b4a
-caps.latest.revision: "25"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: b3f1efefa4d32e3512b0dda6eca237a5e4938bf7
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: feed791ac876c13dbd637f0455d3cfdd83a86e05
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="data-templating-overview"></a>데이터 템플릿 개요
 WPF 데이터 템플릿 모델을 사용하면 데이터 표시를 매우 유연하게 정의할 수 있습니다. WPF 컨트롤에는 데이터 표시의 사용자 지정을 지원하는 기본 제공 기능이 있습니다. 이 항목에는 먼저 정의 하는 방법을 보여 줍니다는 <xref:System.Windows.DataTemplate> 하 고 다음 사용자 지정 논리 및 계층적 데이터의 표시에 대 한 지원에 따라 템플릿 선택과 같은 다른 데이터 템플릿 기능을 소개 합니다.  
   
 <a name="Prerequisites"></a>   
-## <a name="prerequisites"></a>필수 구성 요소  
+## <a name="prerequisites"></a>전제 조건  
  이 항목에서는 데이터 템플릿 기능을 집중적으로 살펴보고 데이터 바인딩 개념은 소개하지 않습니다. 기본 데이터 바인딩 개념에 대한 자세한 내용은 [데이터 바인딩 개요](../../../../docs/framework/wpf/data/data-binding-overview.md)를 참조하세요.  
   
- <xref:System.Windows.DataTemplate>에 대 한 데이터의 표현을 이며 WPF 스타일 및 템플릿 모델에서 제공 하는 많은 기능 중 하나입니다. 대 한 WPF 스타일 및 템플릿 등 모델을 사용 하는 방법의 개요는 <xref:System.Windows.Style> 컨트롤에서 속성을 설정 하려면 참조는 [스타일 및 템플릿](../../../../docs/framework/wpf/controls/styling-and-templating.md) 항목입니다.  
+ <xref:System.Windows.DataTemplate> 에 대 한 데이터의 표현을 이며 WPF 스타일 및 템플릿 모델에서 제공 하는 많은 기능 중 하나입니다. 대 한 WPF 스타일 및 템플릿 등 모델을 사용 하는 방법의 개요는 <xref:System.Windows.Style> 컨트롤에서 속성을 설정 하려면 참조는 [스타일 및 템플릿](../../../../docs/framework/wpf/controls/styling-and-templating.md) 항목입니다.  
   
  또한 이해 하는 `Resources`, 하는 기본적으로 개체와 같은 있게 <xref:System.Windows.Style> 및 <xref:System.Windows.DataTemplate> 재사용 가능 합니다. 리소스에 대한 자세한 내용은 [XAML 리소스](../../../../docs/framework/wpf/advanced/xaml-resources.md)를 참조하세요.  
   
@@ -144,7 +132,7 @@ WPF 데이터 템플릿 모델을 사용하면 데이터 표시를 매우 유연
   
 <a name="what_belongs_in_datatemplate"></a>   
 ### <a name="what-belongs-in-a-datatemplate"></a>DataTemplate은 무엇으로 구성되나요?  
- 앞의 예에서 트리거 내에서 배치는 <xref:System.Windows.DataTemplate> 를 사용 하는 <xref:System.Windows.DataTemplate>.<xref:System.Windows.DataTemplate.Triggers%2A> 속성입니다. <xref:System.Windows.Setter> 트리거의 요소 속성의 값을 설정 (의 <xref:System.Windows.Controls.Border> 요소) 내에서 <xref:System.Windows.DataTemplate>합니다. 그러나 경우 속성 하는 프로그램 `Setters` 고려 하는 현재 내에 있는 요소의 속성 <xref:System.Windows.DataTemplate>, 사용 하 여 속성을 설정 하려면 더 적합할 수 있습니다는 <xref:System.Windows.Style> 위한는 <xref:System.Windows.Controls.ListBoxItem> 클래스 (하는 경우는 바인딩할 컨트롤은 한 <xref:System.Windows.Controls.ListBox>). 예를 들어, 원하는 프로그램 <xref:System.Windows.Trigger> 애니메이션 효과를 줄의 <xref:System.Windows.UIElement.Opacity%2A> 값 항목의 마우스의 항목을 가리킬 때 트리거를 정의 내에서 <xref:System.Windows.Controls.ListBoxItem> 스타일입니다. 예제를 보려면 [Introduction to Styling and Templating Sample](http://go.microsoft.com/fwlink/?LinkID=160010)(스타일 지정 및 템플릿 샘플 소개)을 참조하세요.  
+ 앞의 예에서 트리거 내에서 배치는 <xref:System.Windows.DataTemplate> 를 사용 하는 <xref:System.Windows.DataTemplate>합니다.<xref:System.Windows.DataTemplate.Triggers%2A> 속성입니다. <xref:System.Windows.Setter> 트리거의 요소 속성의 값을 설정 (의 <xref:System.Windows.Controls.Border> 요소) 내에서 <xref:System.Windows.DataTemplate>합니다. 그러나 경우 속성 하는 프로그램 `Setters` 고려 하는 현재 내에 있는 요소의 속성 <xref:System.Windows.DataTemplate>, 사용 하 여 속성을 설정 하려면 더 적합할 수 있습니다는 <xref:System.Windows.Style> 위한는 <xref:System.Windows.Controls.ListBoxItem> 클래스 (하는 경우는 바인딩할 컨트롤은 한 <xref:System.Windows.Controls.ListBox>). 예를 들어, 원하는 프로그램 <xref:System.Windows.Trigger> 애니메이션 효과를 줄의 <xref:System.Windows.UIElement.Opacity%2A> 값 항목의 마우스의 항목을 가리킬 때 트리거를 정의 내에서 <xref:System.Windows.Controls.ListBoxItem> 스타일입니다. 예제를 보려면 [Introduction to Styling and Templating Sample](http://go.microsoft.com/fwlink/?LinkID=160010)(스타일 지정 및 템플릿 샘플 소개)을 참조하세요.  
   
  일반적으로 한다는 점에 유의 하는 <xref:System.Windows.DataTemplate> 생성 된 각 적용 되 고 <xref:System.Windows.Controls.ListBoxItem> (적용 실제로 방법과 위치에 대 한 자세한 내용은 참조는 <xref:System.Windows.Controls.ItemsControl.ItemTemplate%2A> 페이지입니다.). 프로그램 <xref:System.Windows.DataTemplate> 프레젠테이션 및 데이터 개체의 모양을 관련 됩니다. 대부분의 경우 어떤 항목이 같은 표현의 다른 모든 측면 같이 선택 방법을 <xref:System.Windows.Controls.ListBox> 에 항목이 배치의 정의에 속하지 않는 <xref:System.Windows.DataTemplate>합니다. 예제를 보려면 [ItemsControl 스타일 지정 및 템플릿 만들기](#DataTemplating_ItemsControl) 섹션을 참조하세요.  
   
@@ -156,7 +144,7 @@ WPF 데이터 템플릿 모델을 사용하면 데이터 표시를 매우 유연
   
  [!code-xaml[DataTemplatingIntro_snip#ImportantTemplate](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DataTemplatingIntro_snip/CSharp/Window1.xaml#importanttemplate)]  
   
- 이 예제에서는 <xref:System.Windows.DataTemplate>.<xref:System.Windows.FrameworkTemplate.Resources%2A> 속성입니다. 내의 요소에서 공유 섹션에 정의 된 리소스는 <xref:System.Windows.DataTemplate>합니다.  
+ 이 예제에서는 <xref:System.Windows.DataTemplate>합니다.<xref:System.Windows.FrameworkTemplate.Resources%2A> 속성입니다. 내의 요소에서 공유 섹션에 정의 된 리소스는 <xref:System.Windows.DataTemplate>합니다.  
   
  선택할 수는 논리를 제공 <xref:System.Windows.DataTemplate> 에 따라 사용 하는 `Priority` 값 데이터 개체의 서브 클래스를 만든 <xref:System.Windows.Controls.DataTemplateSelector> 재정의 <xref:System.Windows.Controls.DataTemplateSelector.SelectTemplate%2A> 메서드. 다음 예제에서는 <xref:System.Windows.Controls.DataTemplateSelector.SelectTemplate%2A> 의 값에 따라 적절 한 템플릿을 반환 하는 논리를 제공 하는 메서드는 `Priority` 속성입니다. 반환할 템플릿의 상위 리소스 참조는 <xref:System.Windows.Window> 요소입니다.  
   

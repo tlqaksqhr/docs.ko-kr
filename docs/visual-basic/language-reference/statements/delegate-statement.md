@@ -1,24 +1,17 @@
 ---
 title: Delegate 문
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.Delegate
 helpviewer_keywords:
 - delegate keyword [Visual Basic]
 - Delegate statement [Visual Basic]
 ms.assetid: f799c518-0817-40cc-ad0b-4da846fdba57
-caps.latest.revision: 27
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 7e79a261f74cbc7aa067af63629e31bedf65d163
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: fb9d8b2c2647ba8fd3b7cee4781f1574b6679b0f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="delegate-statement"></a>Delegate 문
 대리자를 선언 하는 데 사용 합니다. 대리자는 참조 형식 참조 하는 `Shared` 메서드는 형식 또는 개체의 인스턴스 메서드. 매개 변수 및 반환 형식을 일치 하는 프로시저가 대리자 클래스의 인스턴스를 만드는 데 사용할 수 있습니다. 다음 대리자 인스턴스를 통해 프로시저에 나중에 호출 수 있습니다.  
@@ -39,7 +32,7 @@ ms.lasthandoff: 11/21/2017
 |`Shadows`|선택 사항입니다. 이 대리자는 같은 이름의 프로그래밍 요소 또는 기본 클래스에서 오버 로드 된 요소 집합을 다시 선언 하 고 숨김을 나타냅니다. 모든 종류의 선언된 요소를 다른 종류로 섀도잉할 수 있습니다.<br /><br /> 섀도잉된 요소는 섀도잉 요소에 액세스할 수 없는 위치를 제외하고 해당 요소를 섀도잉하는 파생 클래스 내에서 사용할 수 없습니다. 예를 들어 경우는 `Private` 요소 기본 클래스 요소를 액세스할 수 있는 권한이 없는 코드를 숨기는 `Private` 요소 기본 클래스 요소에 대신 액세스 합니다.|  
 |`Sub`|선택적 `Sub` 또는 `Function` 나타나야 합니다. 대리자로이 프로시저를 선언 `Sub` 값을 반환 하지 않는 프로시저입니다.|  
 |`Function`|선택적 `Sub` 또는 `Function` 나타나야 합니다. 대리자로이 프로시저를 선언 `Function` 값을 반환 하는 프로시저입니다.|  
-|`name`|필수 요소. 대리자 형식의 이름 표준 변수 명명 규칙을 따릅니다.|  
+|`name`|필수. 대리자 형식의 이름 표준 변수 명명 규칙을 따릅니다.|  
 |`typeparamlist`|선택 사항입니다. 이 대리자에 대 한 형식 매개 변수 목록입니다. 여러 형식 매개 변수는 쉼표로 구분 됩니다. 필요에 따라 각 형식 매개 변수에 선언할 수 변형을 사용 하 여 `In` 및 `Out` 제네릭 한정자입니다. 묶어야는 [유형 목록](../../../visual-basic/language-reference/statements/type-list.md) 괄호 안에 사용 하 여 정의 하 고는 `Of` 키워드입니다.|  
 |`parameterlist`|선택 사항입니다. 호출 될 때 프로시저에 전달 되는 매개 변수 목록. 묶어야는 [매개 변수 목록](../../../visual-basic/language-reference/statements/parameter-list.md) 괄호 안에 있습니다.|  
 |`type`|반드시 지정할 필요는 `Function` 프로시저입니다. 반환 값의 데이터 형식입니다.|  

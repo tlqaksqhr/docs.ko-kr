@@ -1,14 +1,6 @@
 ---
-title: "Windows 서비스 응용 프로그램 소개"
-ms.custom: 
+title: Windows 서비스 응용 프로그램 소개
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 f1_keywords:
 - ServiceController
 helpviewer_keywords:
@@ -29,17 +21,13 @@ helpviewer_keywords:
 - Win32ShareProcess service type
 - Windows Service applications, lifetime
 ms.assetid: 1b1b5e67-3ff3-40c0-8154-322cfd6ef0ae
-caps.latest.revision: 
 author: ghogen
-ms.author: ghogen
 manager: douge
-ms.workload:
-- dotnet
-ms.openlocfilehash: 613107a13820ad71b854dcba93f21c41f2a5fa5f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: e0720b90d89e5117cbac15ce7e38a41071f1c13e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="introduction-to-windows-service-applications"></a>Windows 서비스 응용 프로그램 소개
 Microsoft Windows 서비스, 이전의 NT 서비스를 사용 하 여 자신의 Windows 세션에서 실행 되 긴 실행 가능한 응용 프로그램을 만들 수 있습니다. 이러한 서비스 자동으로 시작 되는 컴퓨터를 부팅할 때 일시 중지 및 다시 시작 하 고 사용자 인터페이스를 표시 하지 않습니다. 이러한 기능은 동일한 컴퓨터에서 작업 하는 다른 사용자와 방해 하지 않는 장기 실행 기능이 필요할 때마다 또는 서버에서 사용 하기에 적합 서비스를 확인 합니다. 로그온 한 사용자와에서 다른 특정 사용자 계정 또는 기본 컴퓨터 계정의 보안 컨텍스트에서 서비스를 실행할 수 있습니다. 서비스 및 Windows 세션에 대 한 자세한 내용은 Windows SDK 설명서를 참조 합니다.  

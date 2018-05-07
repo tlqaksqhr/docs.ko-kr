@@ -1,13 +1,6 @@
 ---
-title: "방법: 선택키가 있고 텍스트 줄 바꿈을 사용하는 컨트롤 만들기"
-ms.custom: 
+title: '방법: 선택키가 있고 텍스트 줄 바꿈을 사용하는 컨트롤 만들기'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - access keys [WPF], control for
 - controls [WPF], text wrapping
@@ -16,21 +9,16 @@ helpviewer_keywords:
 - controls [WPF], access keys
 - text wrapping [WPF]
 ms.assetid: 205099d9-2551-4302-a25e-a15af9f67e04
-caps.latest.revision: "22"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: c8ef62b06e97e5db22fde0085e21d7a998bfdf22
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 8343c660ddeb5487f46e87534e555936d1b86371
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-a-control-that-has-an-access-key-and-text-wrapping"></a>방법: 선택키가 있고 텍스트 줄 바꿈을 사용하는 컨트롤 만들기
 이 예제에서는 선택키가 있고 텍스트 배치를 지원하는 컨트롤을 만드는 방법을 보여 줍니다. 이 예제에서는 사용는 <xref:System.Windows.Controls.Label> 컨트롤을 이러한 개념을 설명 합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  **레이블에 텍스트 배치 추가**  
   
  <xref:System.Windows.Controls.Label> 컨트롤에 텍스트 줄 바꿈을 사용할 수 없습니다. 여러 줄로 줄 바꿈되는 레이블이 필요한 경우 텍스트 배치를 지원하는 다른 요소를 중첩시키고 해당 요소를 레이블 내부에 배치할 수 있습니다. 사용 하는 방법을 보여 주는 다음 예제는 <xref:System.Windows.Controls.TextBlock> 여러 줄의 텍스트를 래핑하는 레이블 수 있도록 합니다.  

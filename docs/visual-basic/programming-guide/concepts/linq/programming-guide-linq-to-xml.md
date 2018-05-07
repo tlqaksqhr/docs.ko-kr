@@ -1,22 +1,12 @@
 ---
-title: "프로그래밍 가이드 (LINQ to XML) (Visual Basic)"
-ms.custom: 
+title: 프로그래밍 가이드 (LINQ to XML) (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: f1f942bf-3404-4354-b4c5-4fe35e37a02b
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: a68c72dd30059063c86dc79be0dfd5a470b9d72c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 70c169cecc8ca4ede30216bc832a8518766cd1a5
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="programming-guide-linq-to-xml-visual-basic"></a>프로그래밍 가이드 (LINQ to XML) (Visual Basic)
 이 단원에서는 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]을 사용한 프로그래밍의 개념과 방법에 대해 설명합니다.  
@@ -28,7 +18,7 @@ ms.lasthandoff: 11/21/2017
   
  [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]은 제네릭 클래스에 크게 의존하므로 따라서이 제네릭 형식 및 클래스의 사용을 이해 하는 매우 중요 합니다. 자세한 내용은 참조 [Visual Basic의 제네릭 형식](../../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)합니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
   
 |항목|설명|  
 |-----------|-----------------|  

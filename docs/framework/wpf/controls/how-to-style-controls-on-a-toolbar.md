@@ -1,28 +1,16 @@
 ---
-title: "방법: ToolBar 컨트롤의 스타일 지정"
-ms.custom: 
+title: '방법: ToolBar 컨트롤의 스타일 지정'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - styling controls on toolbar [WPF]
 - toolbars [WPF]
 - customizing controls on toolbar [WPF]
 ms.assetid: ba6ae056-d6a9-4c24-90f8-467ab0bc0b1a
-caps.latest.revision: "4"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: fa6c2373a9372947b1093c4dcca31f563c2a8bf9
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: cc5ac9dd64072c34ff999255a27dd92f311cda0f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-style-controls-on-a-toolbar"></a>방법: ToolBar 컨트롤의 스타일 지정
 <xref:System.Windows.Controls.ToolBar> 정의 <xref:System.Windows.ResourceKey> 개체 내에서 컨트롤의 스타일을 지정 하는 <xref:System.Windows.Controls.ToolBar>합니다.  컨트롤에 스타일을 지정 하는 <xref:System.Windows.Controls.ToolBar>설정는 `x:key` 스타일의 특성을 <xref:System.Windows.ResourceKey> 에 정의 된 <xref:System.Windows.Controls.ToolBar>합니다.  
@@ -45,7 +33,7 @@ ms.lasthandoff: 12/22/2017
   
 -   <xref:System.Windows.Controls.ToolBar.ToggleButtonStyleKey%2A>  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 예제에서는 정의 내에서 컨트롤에 대 한 스타일은 <xref:System.Windows.Controls.ToolBar>합니다.  
   
  [!code-xaml[ToolBar_snip#ToolBarAllStyles](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ToolBar_snip/CS/pane1.xaml#toolbarallstyles)]  

@@ -1,28 +1,16 @@
 ---
-title: "x:Arguments 지시문"
-ms.custom: 
+title: x:Arguments 지시문
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - x:Arguments directive [XAML Services]
 - Arguments directive in XAML [XAML Services]
 - XAML [XAML Services], x:Arguments directive
 ms.assetid: 87cc10b0-b610-4025-b6b0-ab27ca27c92e
-caps.latest.revision: "12"
-author: wadepickett
-ms.author: wpickett
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: bb1f5986a0d9f9eb69ade0228925ec06164cee4d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: e0e7f380ec176e80d2422878a2e676d64985d660
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="xarguments-directive"></a>x:Arguments 지시문
 패키지 생성 인수 XAML에서 기본값이 아닌 생성자 개체 요소 선언에 대 한 또는 팩터리 메서드 개체 선언에 대 한 합니다.  
@@ -55,7 +43,7 @@ ms.lasthandoff: 12/22/2017
 |`methodName`|처리 해야 하는 팩터리 메서드 이름 `x:Arguments` 인수입니다.|  
   
 ## <a name="dependencies"></a>종속성  
- `x:FactoryMethod`범위 및 동작을 수정할 수 있는 `x:Arguments` 적용 됩니다.  
+ `x:FactoryMethod` 범위 및 동작을 수정할 수 있는 `x:Arguments` 적용 됩니다.  
   
  없는 경우 `x:FactoryMethod` 지정 된 `x:Arguments` 지원 생성자의 대체 (비기본) 시그니처에 적용 됩니다.  
   
@@ -66,7 +54,7 @@ ms.lasthandoff: 12/22/2017
   
  `x:Arguments` 지시문 태그가 포함 된 개체 요소 형식을 참조 하지 않기 때문에 XAML 사용은 일반적으로 속성 요소 사용 되지 않습니다. 와 같은 기타 지시문과 더 비슷합니다는 `x:Code` 요소는 자식 내용에 대 한 기본값 이외의 다른 태그를 해석 하는 범위 기본값과입니다. 각 개체 요소의 XAML 형식을 특정 생성자 팩터리 메서드 서명을 확인 하려면 XAML 파서가에 사용 되는 인수 형식에 대 한 정보를 전달 하는 경우에 `x:Arguments` 사용은 참조 하려고 합니다.  
   
- `x:Arguments`개체 요소에 대해 생성 되 고 앞에 야 다른 속성 요소, 콘텐츠, 내부 텍스트 또는 object 요소의 초기화 문자열입니다. 내에서 개체 요소 `x:Arguments` XAML 형식 및 해당 지원 생성자 또는 팩터리 메서드에에 허용 된 대로 특성 및 초기화 문자열을 포함할 수 있습니다. 개체 또는 인수에 대 한 사용자 지정 XAML 형식 또는 벗어나는 기본 XAML 네임 스페이스 설정 된 접두사 매핑을 참조 하 여 XAML 형식을 지정할 수 있습니다.  
+ `x:Arguments` 개체 요소에 대해 생성 되 고 앞에 야 다른 속성 요소, 콘텐츠, 내부 텍스트 또는 object 요소의 초기화 문자열입니다. 내에서 개체 요소 `x:Arguments` XAML 형식 및 해당 지원 생성자 또는 팩터리 메서드에에 허용 된 대로 특성 및 초기화 문자열을 포함할 수 있습니다. 개체 또는 인수에 대 한 사용자 지정 XAML 형식 또는 벗어나는 기본 XAML 네임 스페이스 설정 된 접두사 매핑을 참조 하 여 XAML 형식을 지정할 수 있습니다.  
   
  인수에 지정 하는 방법을 확인 하려면 다음 지침을 사용 하는 XAML 프로세서 `x:Arguments` 개체를 생성 하는 데 사용 해야 합니다. 경우 `x:FactoryMethod` 정보를 비교 하는 지정 된 지정 된 `x:FactoryMethod` (사항에 유의 값 `x:FactoryMethod` 메서드 이름 및 명명 된 메서드 오버 로드를 가질 수 있습니다. 경우 `x:FactoryMethod` 를 지정 하지 않으면 정보 개체의 모든 public 생성자 오버 로드 집합이 비교 합니다. 다음 XAML 처리 논리 매개 변수 개수를 비교 하 고 일치 하는 인자 수를 갖는 오버 로드를 선택 합니다. 둘 이상의 일치 하는 XAML 프로세서는 유형의 제공 된 개체 요소의 XAML 유형을 기반으로 하는 매개 변수를 비교 해야 합니다. 여전히 둘 이상의 일치 하는 XAML 프로세서 동작이 정의 되지 않습니다. 경우는 `x:FactoryMethod` 지정는 메서드를 확인할 수 있지만, XAML 프로세서에서 예외를 throw 해야 합니다.  
   

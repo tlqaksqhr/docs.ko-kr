@@ -1,11 +1,7 @@
 ---
-title: "QualifierSet_Put 함수 (관리 되지 않는 API 참조)"
-description: "QualifierSet_Put 함수는 명명된 된 한정자 및 값을 씁니다."
+title: QualifierSet_Put 함수 (관리 되지 않는 API 참조)
+description: QualifierSet_Put 함수는 명명된 된 한정자 및 값을 씁니다.
 ms.date: 11/06/2017
-ms.prod: .net-framework
-ms.technology:
-- dotnet-clr
-ms.topic: reference
 api_name:
 - QualifierSet_Put
 api_location:
@@ -20,14 +16,11 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 1bf5c6dbf0f707942d58f4d7cf155636f0532724
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 7ccb0aef0e998ffccd7526f9f0554bceb892001b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="qualifiersetput-function"></a>QualifierSet_Put 함수
 명명 된 한정자 및 값을 씁니다. 새 한정자 이름이 동일한 이전 값을 덮어씁니다. 한정자가 없는 경우 자동으로 만들어집니다. 
@@ -57,9 +50,9 @@ HRESULT QualifierSet_Put (
 `wszName`   
 [in] 쓸 한정자의 이름입니다.
 
-`pVal`[in] 에 대 한 포인터를 올바른 `VARIANT` 쓰려고 한정자를 포함 하 합니다. 이 매개 변수 여야 `null`합니다.
+`pVal` [in] 에 대 한 포인터를 올바른 `VARIANT` 쓰려고 한정자를 포함 하 합니다. 이 매개 변수 여야 `null`합니다.
 
-`lFlavor`[in] 이 한정자에 대 한 원하는 한정자 버전을 정의 하는 다음 상수 중 하나입니다. 기본값은 `WBEM_FLAVOR_OVERRIDABLE` (0).
+`lFlavor` [in] 이 한정자에 대 한 원하는 한정자 버전을 정의 하는 다음 상수 중 하나입니다. 기본값은 `WBEM_FLAVOR_OVERRIDABLE` (0).
 
 |상수  |값  |설명  |
 |---------|---------|---------|
@@ -90,7 +83,7 @@ HRESULT QualifierSet_Put (
   
  **헤더:** WMINet_Utils.idl  
   
- **.NET framework 버전:**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **.NET framework 버전:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>참고자료  
 [WMI 및 성능 카운터 (관리 되지 않는 API 참조)](index.md)

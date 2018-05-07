@@ -1,27 +1,15 @@
 ---
-title: "DataGridView 컨트롤 기술 요약(Windows Forms)"
-ms.custom: 
+title: DataGridView 컨트롤 기술 요약(Windows Forms)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - DataGridView control [Windows Forms], about DataGridView control
 - data grids [Windows Forms], about data grids
 ms.assetid: 094498c3-a126-4a3f-83fe-f69e96c7717b
-caps.latest.revision: "17"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: e074229e4fe344633d277b77b6f7db881c154d8b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: cafd832e7105540ae684dd1feb4b33ab74f72836
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="datagridview-control-technology-summary-windows-forms"></a>DataGridView 컨트롤 기술 요약(Windows Forms)
 이 항목에서는 `DataGridView` 제어 및 이를 사용하도록 지원하는 클래스에 대한 정보를 요약하여 설명합니다.  
@@ -63,8 +51,8 @@ ms.lasthandoff: 12/22/2017
 |기술 영역|클래스/인터페이스/구성 요소|  
 |---------------------|-------------------------------------------------|  
 |데이터 바인딩|<xref:System.Windows.Forms.BindingSource>|  
-|데이터 표시|<xref:System.Windows.Forms.DataGridView><br /><br /> <xref:System.Windows.Forms.DataGridViewCell>클래스와 파생된 클래스<br /><br /> <xref:System.Windows.Forms.DataGridViewRow>클래스와 파생된 클래스<br /><br /> <xref:System.Windows.Forms.DataGridViewColumn>클래스와 파생된 클래스<br /><br /> <xref:System.Windows.Forms.DataGridViewCellStyle>|  
-|<xref:System.Windows.Forms.DataGridView>확장성|<xref:System.Windows.Forms.DataGridViewCell>클래스와 파생된 클래스<br /><br /> <xref:System.Windows.Forms.DataGridViewColumn>클래스와 파생된 클래스<br /><br /> <xref:System.Windows.Forms.IDataGridViewEditingCell><br /><br /> <xref:System.Windows.Forms.IDataGridViewEditingControl>|  
+|데이터 표시|<xref:System.Windows.Forms.DataGridView><br /><br /> <xref:System.Windows.Forms.DataGridViewCell> 클래스와 파생된 클래스<br /><br /> <xref:System.Windows.Forms.DataGridViewRow> 클래스와 파생된 클래스<br /><br /> <xref:System.Windows.Forms.DataGridViewColumn> 클래스와 파생된 클래스<br /><br /> <xref:System.Windows.Forms.DataGridViewCellStyle>|  
+|<xref:System.Windows.Forms.DataGridView> 확장성|<xref:System.Windows.Forms.DataGridViewCell> 클래스와 파생된 클래스<br /><br /> <xref:System.Windows.Forms.DataGridViewColumn> 클래스와 파생된 클래스<br /><br /> <xref:System.Windows.Forms.IDataGridViewEditingCell><br /><br /> <xref:System.Windows.Forms.IDataGridViewEditingControl>|  
   
 ## <a name="whats-new"></a>새로운 기능  
  <xref:System.Windows.Forms.DataGridView> 컨트롤은 Windows Forms를 사용 하 여 테이블 형식 데이터를 표시 하기 위한 완벽 한 솔루션을 되도록 설계 되었습니다. 사용을 고려해 야는 <xref:System.Windows.Forms.DataGridView> 등의 다른 솔루션에 전에 컨트롤 <xref:System.Windows.Forms.DataGrid>새 응용 프로그램을 제작 하는 경우. 자세한 내용은 [Windows Forms DataGridView 및 DataGrid 컨트롤의 차이점](../../../../docs/framework/winforms/controls/differences-between-the-windows-forms-datagridview-and-datagrid-controls.md)을 참조하십시오.  

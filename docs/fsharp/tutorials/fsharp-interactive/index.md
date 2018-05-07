@@ -1,17 +1,12 @@
 ---
 title: F# Interactive(fsi.exe) 참조
 description: 'F # Interactive (fsi.exe) 사용량 콘솔에 F # 코드를 대화형으로 실행 하거나 F # 스크립트를 실행 하에 대해 알아봅니다.'
-author: cartermp
-ms.author: phcart
 ms.date: 05/16/2016
-ms.topic: language-reference
-ms.prod: dotnet-fsharp
-ms.devlang: fsharp
-ms.openlocfilehash: e745562e4165ce6744fcb6d07268b1a5761194aa
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: b16ebcfe361ef50c7c7ba8510f01f6704e62ce3b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="interactive-programming-with-f"></a>F#을 사용한 대화형 프로그래밍 #
 
@@ -88,7 +83,7 @@ printfn "%A" (MyAssembly.myFunction 10 40)
 Command line arguments: 
 file1.fsx
 test
-60
+90
 ```
 
 ## <a name="related-topics"></a>관련 항목

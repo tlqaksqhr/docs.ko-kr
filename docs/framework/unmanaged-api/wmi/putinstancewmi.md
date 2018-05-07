@@ -1,11 +1,7 @@
 ---
-title: "PutInstanceWmi 함수 (관리 되지 않는 API 참조)"
-description: "PutInstanceWmi 함수를 만들거나 기존 클래스의 인스턴스를 업데이트 합니다."
+title: PutInstanceWmi 함수 (관리 되지 않는 API 참조)
+description: PutInstanceWmi 함수를 만들거나 기존 클래스의 인스턴스를 업데이트 합니다.
 ms.date: 11/06/2017
-ms.prod: .net-framework
-ms.technology:
-- dotnet-clr
-ms.topic: reference
 api_name:
 - PutInstanceWmi
 api_location:
@@ -20,14 +16,11 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: b1996103eea87562226537f9aa90dc337c56313c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 0db08ef4938a88ee657e2d65dda70edac09df8ef
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="putinstancewmi-function"></a>PutInstanceWmi 함수
 만들거나 기존 클래스의 인스턴스를 업데이트 합니다. 인스턴스는 WMI 리포지토리에 기록 됩니다. 
@@ -80,7 +73,7 @@ HRESULT PutInstanceWmi (
 | `WBEM_E_INVALID_OBJECT` | 0x8004100f | 지정 된 인스턴스가 올바르지 않습니다. (예를 들어 호출 `PutInstanceWmi` 클래스와 함께이 값을 반환 합니다.) |
 | `WBEM_E_INVALID_PARAMETER` | 0x80041008 | 매개 변수가 올바르지 않습니다. |
 | `WBEM_E_ALREADY_EXISTS` | 0x80041019 | `WBEM_FLAG_CREATE_ONLY` 플래그 지정 했지만 인스턴스가 이미 존재 합니다. |
-| `WBEM_E_NOT_FOUND` | 0x80041002 | `WBEM_FLAG_UPDATE_ONLY`에 지정 된 `lFlags`, 되지만 인스턴스가 존재 하지 않습니다. |
+| `WBEM_E_NOT_FOUND` | 0x80041002 | `WBEM_FLAG_UPDATE_ONLY` 에 지정 된 `lFlags`, 되지만 인스턴스가 존재 하지 않습니다. |
 | `WBEM_E_OUT_OF_MEMORY` | 0x80041006 | 작업을 완료 하려면 사용할 수 있는 메모리가 충분 하지 않습니다. |
 | `WBEM_E_SHUTTING_DOWN` | 0x80041033 | WMI 아마도 중지 및 다시 시작 했습니다. 호출 [ConnectServerWmi](connectserverwmi.md) 다시 합니다. |
 | `WBEM_E_TRANSPORT_FAILURE` | 0x80041015 | 현재 프로세스 사이의 WMI 원격 프로시저 호출 (RPC) 연결 하지 못했습니다. |
@@ -106,7 +99,7 @@ Windows 관리 자식 클래스의 인스턴스 중 하나에 대 한 공급자�
   
  **헤더:** WMINet_Utils.idl  
   
- **.NET framework 버전:**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **.NET framework 버전:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>참고자료  
 [WMI 및 성능 카운터 (관리 되지 않는 API 참조)](index.md)

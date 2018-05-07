@@ -1,28 +1,14 @@
 ---
-title: "TypeConverter 및 XAML"
-ms.custom: 
+title: TypeConverter 및 XAML
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - XAML [WPF], TypeConverter class
 ms.assetid: f6313e4d-e89d-497d-ac87-b43511a1ae4b
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 1b7ee4b3b00a675cfafc884d41079b76656bdf49
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: a6d41b5ad519302016ed7fa1d6a103af0f4f14d2
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="typeconverters-and-xaml"></a>TypeConverter 및 XAML
 이 항목에서는 문자열에서 형식 변환의 용도를 일반 XAML 언어 기능으로 소개합니다. .NET framework에서는 <xref:System.ComponentModel.TypeConverter> 클래스 XAML 특성 사용에서 속성 값으로 사용할 수 있는 관리 되는 사용자 지정 클래스에 대 한 구현의 일환으로 특정 목적을 갖습니다. 사용자 지정 클래스를 작성 하는 경우 XAML 설정할 수 있는 특성 값으로 사용 하려면 클래스의 인스턴스를 원하는 적용 해야 할 수 있습니다는 <xref:System.ComponentModel.TypeConverterAttribute> 클래스에 사용자 지정 작성 <xref:System.ComponentModel.TypeConverter> 클래스 중 하나 또는 둘 다 합니다.  
@@ -69,7 +55,7 @@ ms.lasthandoff: 12/22/2017
  형식 변환기가 아니라 태그 확장이 필요한 일반적인 상황은 이미 존재하는 개체에 대한 참조를 만드는 경우입니다. 기껏해야 상태 비저장 형식 변환기만 새 인스턴스를 생성할 수 있으며, 이는 바람직하지 않을 수 있습니다. 태그 확장에 대한 자세한 내용은 [태그 확장 및 WPF XAML](../../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md)을 참조하세요.  
   
 ### <a name="native-type-converters"></a>네이티브 형식 변환기  
- XAML 파서의 WPF 및 .NET Framework 구현에는 네이티브 형식 변환 처리를 사용하는 특정 형식이 있지만 일반적으로 이 형식은 기본 형식으로 간주되지 않습니다. 이러한 형식의 예로는 <xref:System.DateTime>이 있습니다. 이러한 이유로.NET Framework 아키텍처의 작동 방식에 따라: 유형 <xref:System.DateTime> .NET에서 가장 기본적인 라이브러리인 mscorlib에서 정의 됩니다. <xref:System.DateTime>종속성이 발생 하는 다른 어셈블리에서 제공 하는 특성에 추측할 수 없으며 (<xref:System.ComponentModel.TypeConverterAttribute> 시스템에서 보낸) 되므로 특성을 사용한 일반적인 형식 변환기 검색 메커니즘을 지원할 수 없습니다. 대신 XAML 파서에 이러한 네이티브 처리가 필요한 형식 목록이 있으며 실제 기본 형식이 처리되는 방법과 유사한 방법으로 이러한 형식을 처리합니다. (의 경우 <xref:System.DateTime> 를 호출 합니다이 <xref:System.DateTime.Parse%2A>.)  
+ XAML 파서의 WPF 및 .NET Framework 구현에는 네이티브 형식 변환 처리를 사용하는 특정 형식이 있지만 일반적으로 이 형식은 기본 형식으로 간주되지 않습니다. 이러한 형식의 예로는 <xref:System.DateTime>이 있습니다. 이러한 이유로.NET Framework 아키텍처의 작동 방식에 따라: 유형 <xref:System.DateTime> .NET에서 가장 기본적인 라이브러리인 mscorlib에서 정의 됩니다. <xref:System.DateTime> 종속성이 발생 하는 다른 어셈블리에서 제공 하는 특성에 추측할 수 없으며 (<xref:System.ComponentModel.TypeConverterAttribute> 시스템에서 보낸) 되므로 특성을 사용한 일반적인 형식 변환기 검색 메커니즘을 지원할 수 없습니다. 대신 XAML 파서에 이러한 네이티브 처리가 필요한 형식 목록이 있으며 실제 기본 형식이 처리되는 방법과 유사한 방법으로 이러한 형식을 처리합니다. (의 경우 <xref:System.DateTime> 를 호출 합니다이 <xref:System.DateTime.Parse%2A>.)  
   
 <a name="Implementing_a_Type_Converter"></a>   
 ## <a name="implementing-a-type-converter"></a>형식 변환기 구현  
@@ -77,7 +63,7 @@ ms.lasthandoff: 12/22/2017
 ### <a name="typeconverter"></a>TypeConverter  
  에 <xref:System.Windows.Point> 클래스 이전에 제공 된 예제 <xref:System.Windows.PointConverter> 언급 한 것입니다. XAML의.NET 구현에 대 한 XAML 용도에 사용 되는 모든 형식 변환기는 기본 클래스에서 파생 되는 클래스 <xref:System.ComponentModel.TypeConverter>합니다. <xref:System.ComponentModel.TypeConverter> 클래스 XAML의 존재를 앞에 야 하는.NET Framework의 버전에 있었으며; 비주얼 디자이너에서 속성 대화 상자에 문자열 변환을 제공 된 클래스의 원래 용도 중 하나입니다. XAML의 역할에 대 한 <xref:System.ComponentModel.TypeConverter> 되는 문자열을 특성 값을 구문 분석 하 고 특정 개체 속성의 실행 시간 값에 대 한 문자열에 다시 처리를 사용할 수 있는 to-string 및 문자열에서 변환에 대 한 기본 클래스를 포함 하도록 확장 됩니다 특성으로 직렬화 합니다.  
   
- <xref:System.ComponentModel.TypeConverter>XAML 처리를 위한 문자열 변환과 관련 된 네 가지 멤버를 정의 합니다.  
+ <xref:System.ComponentModel.TypeConverter> XAML 처리를 위한 문자열 변환과 관련 된 네 가지 멤버를 정의 합니다.  
   
 -   <xref:System.ComponentModel.TypeConverter.CanConvertTo%2A>  
   
@@ -125,7 +111,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="applying-the-typeconverterattribute"></a>TypeConverterAttribute 적용  
  사용자 지정 형식 변환기로 사용 하는 순서로 적용 해야 XAML 프로세서에서 사용자 지정 클래스에 대 한 형식 변환기는 [!INCLUDE[TLA#tla_netframewkattr](../../../../includes/tlasharptla-netframewkattr-md.md)] <xref:System.ComponentModel.TypeConverterAttribute> 를 클래스 정의 합니다. 특성을 통해 지정하는 <xref:System.ComponentModel.TypeConverterAttribute.ConverterTypeName%2A> 은 사용자 지정 형식 변환기의 형식 이름이어야 합니다. XAML 프로세서에서 속성 형식이 사용자 지정 클래스 형식을 사용하는 값을 처리할 때 이 특성을 적용하면 문자열을 입력하고 개체 인스턴스를 반환할 수 있습니다.  
   
- 또한 속성별로 형식 변환기를 제공할 수 있습니다. 적용 하는 대신는 [!INCLUDE[TLA#tla_netframewkattr](../../../../includes/tlasharptla-netframewkattr-md.md)] <xref:System.ComponentModel.TypeConverterAttribute> 클래스 정의에 속성 정의에 적용 (기본 정의 하지는 `get` / `set` 구현 내). 속성의 형식은 사용자 지정 형식 변환기에서 처리되는 형식과 일치해야 합니다. XAML 프로세서에서 해당 속성의 값을 처리할 때 이 특성을 적용하면 입력 문자열을 처리하고 개체 인스턴스를 반환할 수 있습니다. 속성별 형식 변환기 기술은 [!INCLUDE[TLA#tla_netframewk](../../../../includes/tlasharptla-netframewk-md.md)] 또는 클래스 정의를 제어할 수 없고 <xref:System.ComponentModel.TypeConverterAttribute>를 적용할 수 없는 일부 다른 라이브러리에서 속성 형식을 사용하도록 선택하는 경우에 특히 유용합니다.  
+ 또한 속성별로 형식 변환기를 제공할 수 있습니다. 적용 하는 대신는 [!INCLUDE[TLA#tla_netframewkattr](../../../../includes/tlasharptla-netframewkattr-md.md)] <xref:System.ComponentModel.TypeConverterAttribute> 클래스 정의에 속성 정의에 적용 (기본 정의 하지는 `get` / `set` 구현 내). 속성의 형식은 사용자 지정 형식 변환기에서 처리되는 형식과 일치해야 합니다. XAML 프로세서에서 해당 속성의 값을 처리할 때 이 특성을 적용하면 입력 문자열을 처리하고 개체 인스턴스를 반환할 수 있습니다. 속성별 형식 변환기 기술은 Microsoft.NET Framework 또는 클래스 정의 제어할 수 없습니다 및 적용할 수 없습니다. 다른 라이브러리에서 속성 형식을 사용 하려는 경우 특히 유용는 <xref:System.ComponentModel.TypeConverterAttribute> 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  
  <xref:System.ComponentModel.TypeConverter>  

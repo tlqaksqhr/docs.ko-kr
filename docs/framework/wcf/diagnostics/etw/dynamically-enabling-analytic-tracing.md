@@ -1,29 +1,15 @@
 ---
 title: 동적으로 분석 추적을 사용하도록 설정
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 58b63cfc-307a-427d-b69d-9917ff9f44ac
-caps.latest.revision: 12
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: d070c66eebbf1a067254c38c6e5bfc7f40742863
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
-ms.translationtype: MT
+ms.openlocfilehash: 46dfba2cb148009ddfd0bbd40e3b7202d774e0b7
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="dynamically-enabling-analytic-tracing"></a>동적으로 분석 추적을 사용하도록 설정
-Windows 운영 체제에 포함된 도구와 함께 ETW(Event Tracing for Windows)를 사용하여 추적을 동적으로 사용하거나 사용하지 않도록 설정할 수 있습니다. 모든 [!INCLUDE[netfx_current_long](../../../../../includes/netfx-current-long-md.md)] [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] 서비스의 경우 응용 프로그램의 Web.config 파일을 수정하거나 서비스를 다시 시작하지 않고도 분석 추적을 동적으로 사용하거나 사용하지 않도록 설정할 수 있습니다. 그러면 응용 프로그램을 중지하지 않고도 추적 이벤트를 내보낼 수 있습니다.  
+Windows 운영 체제에 포함된 도구와 함께 ETW(Event Tracing for Windows)를 사용하여 추적을 동적으로 사용하거나 사용하지 않도록 설정할 수 있습니다. 모든 [!INCLUDE[netfx_current_long](../../../../../includes/netfx-current-long-md.md)] Windows Communication Foundation (WCF) 서비스를 분석 추적 활성화 및 비활성화 하지 않고 동적으로 응용 프로그램의 Web.config 파일을 수정 하거나 서비스를 다시 시작 수 있습니다. 그러면 응용 프로그램을 중지하지 않고도 추적 이벤트를 내보낼 수 있습니다.  
   
  [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 추적 옵션도 이와 비슷한 방식으로 구성할 수 있습니다. 예를 들어 응용 프로그램을 중지하지 않고도 심각도 수준을 **Error** 에서 **Information** 으로 변경할 수 있습니다. 이 작업은 다음과 같은 도구를 사용하여 수행할 수 있습니다.  
   

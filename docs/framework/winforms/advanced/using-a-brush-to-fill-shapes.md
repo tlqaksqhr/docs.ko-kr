@@ -1,31 +1,19 @@
 ---
-title: "브러시를 사용하여 도형 채우기"
-ms.custom: 
+title: 브러시를 사용하여 도형 채우기
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - examples [Windows Forms], brushes
 - shapes [Windows Forms], filling
 - brushes
 ms.assetid: bf8f7fff-5a90-41e8-9051-494449fb2844
-caps.latest.revision: "14"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 15c68f2772357da0828bae367a80f1324b89a5bf
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: dad26479a3790f40e50760ac9e9282aa692a4ea7
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-a-brush-to-fill-shapes"></a>브러시를 사용하여 도형 채우기
-A [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] <xref:System.Drawing.Brush> 개체가 닫힌 도형의 내부를 채우는 데 사용 됩니다. [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]몇 가지 채우기 스타일 정의: 단색, 빗살 무늬, 이미지 질감 및 색 그라데이션을 합니다.  
+A [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] <xref:System.Drawing.Brush> 개체가 닫힌 도형의 내부를 채우는 데 사용 됩니다. [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 몇 가지 채우기 스타일 정의: 단색, 빗살 무늬, 이미지 질감 및 색 그라데이션을 합니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
  [방법: 단색으로 도형 채우기](../../../../docs/framework/winforms/advanced/how-to-fill-a-shape-with-a-solid-color.md)  

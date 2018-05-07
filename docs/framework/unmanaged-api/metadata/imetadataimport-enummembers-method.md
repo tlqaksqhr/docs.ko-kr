@@ -1,14 +1,6 @@
 ---
-title: "IMetaDataImport::EnumMembers 메서드"
-ms.custom: 
+title: IMetaDataImport::EnumMembers 메서드
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - IMetaDataImport.EnumMembers
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: 3fb8e178-342b-4c89-9bcf-f7f834e6cb77
 topic_type:
 - apiref
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: aa7dabad0e555fe965cba4e5cbc69c10c9826b8e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 46ee8c62861a62ac044f295f7da082756d87347b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="imetadataimportenummembers-method"></a>IMetaDataImport::EnumMembers 메서드
 지정한 형식의 멤버를 나타내는 MemberDef 토큰을 열거합니다.  
@@ -70,7 +58,7 @@ HRESULT EnumMembers (
   
 |HRESULT|설명|  
 |-------------|-----------------|  
-|`S_OK`|`EnumMembers`성공적으로 반환 합니다.|  
+|`S_OK`|`EnumMembers` 성공적으로 반환 합니다.|  
 |`S_FALSE`|열거할 MemberDef 토큰이 있습니다. 이 경우 `pcTokens` 은 0입니다.|  
   
 ## <a name="remarks"></a>설명  
@@ -83,7 +71,7 @@ HRESULT EnumMembers (
   
  **라이브러리:** MsCorEE.dll에 리소스로 포함  
   
- **.NET framework 버전:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>참고 항목  
  [IMetaDataImport 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)  

@@ -1,14 +1,6 @@
 ---
-title: "IMetaDataImport::EnumCustomAttributes 메서드"
-ms.custom: 
+title: IMetaDataImport::EnumCustomAttributes 메서드
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - IMetaDataImport.EnumCustomAttributes
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: 798513a0-68b1-4d04-bc5b-782a4445ea68
 topic_type:
 - apiref
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 4e45c15f3d09972d1c83c9b330965c4e8afd21b7
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: b549c6eacad63b165d26c203817f1a2adac57bca
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="imetadataimportenumcustomattributes-method"></a>IMetaDataImport::EnumCustomAttributes 메서드
 지정 된 형식 또는 멤버와 연결 된 사용자 지정 특성 정의 토큰을 열거 합니다.  
@@ -74,7 +62,7 @@ HRESULT EnumCustomAttributes (
   
 |HRESULT|설명|  
 |-------------|-----------------|  
-|`S_OK`|`EnumCustomAttributes`성공적으로 반환 합니다.|  
+|`S_OK`|`EnumCustomAttributes` 성공적으로 반환 합니다.|  
 |`S_FALSE`|열거를 사용자 지정 특성이 없는 합니다. 이 경우 `pcCustomAttributes` 은 0입니다.|  
   
 ## <a name="requirements"></a>요구 사항  
@@ -84,7 +72,7 @@ HRESULT EnumCustomAttributes (
   
  **라이브러리:** MsCorEE.dll에 리소스로 포함  
   
- **.NET framework 버전:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>참고 항목  
  [IMetaDataImport 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)  

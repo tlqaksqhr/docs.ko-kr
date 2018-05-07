@@ -1,17 +1,12 @@
 ---
 title: 'F #에서 비동기 프로그래밍'
 description: '언어 수준 프로그래밍 모델을 사용 하기 편리 하며 자연 언어를 통해 F # 비동기 프로그래밍은 수행 하는 방법을 알아봅니다.'
-author: cartermp
-ms.author: phcart
 ms.date: 06/20/2016
-ms.topic: conceptual
-ms.prod: dotnet-fsharp
-ms.devlang: fsharp
-ms.openlocfilehash: a3047b98637cb4b142f374a2a2b5e7270e850fd6
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 93ecd05efc493489435214dcd7ae78fffcccec1f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="async-programming-in-f"></a>F #에서 비동기 프로그래밍 #
 

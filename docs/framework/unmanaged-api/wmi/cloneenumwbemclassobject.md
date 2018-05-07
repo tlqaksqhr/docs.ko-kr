@@ -1,11 +1,7 @@
 ---
-title: "CloneEnumWbemClassObject 함수 (관리 되지 않는 API 참조)"
-description: "CloneEnumWbemClassObject 함수 열거자의 논리적 복사본을 만듭니다."
+title: CloneEnumWbemClassObject 함수 (관리 되지 않는 API 참조)
+description: CloneEnumWbemClassObject 함수 열거자의 논리적 복사본을 만듭니다.
 ms.date: 11/06/2017
-ms.prod: .net-framework
-ms.technology:
-- dotnet-clr
-ms.topic: reference
 api_name:
 - CloneEnumWbemClassObject
 api_location:
@@ -20,14 +16,11 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 22bcf2731ff682bf538858fc66a7a94be7f5d7df
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 71e881eca541d6a987fa7d27e1d73903f843e26a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cloneenumwbemclassobject-function"></a>CloneEnumWbemClassObject 함수
 열거형의 현재 위치를 유지 하는 열거자의 논리적 복사본을 만듭니다.  
@@ -56,7 +49,7 @@ HRESULT CloneEnumWbemClassObject (
 `authLevel`  
 [in] 권한 부여 수준입니다.
 
-`impLevel`[in] 가장 수준입니다.
+`impLevel` [in] 가장 수준입니다.
 
 `pCurrentEnumWbemClassObject`  
 [out] 에 대 한 포인터는 [IEnumWbemClassObject](https://msdn.microsoft.com/library/aa390857(v=vs.85).aspx) 인스턴스를 복제할 수 있습니다.
@@ -90,7 +83,7 @@ HRESULT CloneEnumWbemClassObject (
 
 함수 호출에 실패 하는 경우 호출 하 여 추가 오류 정보를 얻을 수 있습니다는 [GetErrorInfo](geterrorinfo.md) 함수입니다.
 
-## <a name="example"></a>예
+## <a name="example"></a>예제
 
 예를 들어 참조는 [IEnumWbemClassObject::Clone](https://msdn.microsoft.com/library/aa390859(v=vs.85).aspx) 메서드.
 
@@ -99,7 +92,7 @@ HRESULT CloneEnumWbemClassObject (
   
  **헤더:** WMINet_Utils.idl  
   
- **.NET framework 버전:**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **.NET framework 버전:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>참고자료  
 [WMI 및 성능 카운터 (관리 되지 않는 API 참조)](index.md)

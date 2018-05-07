@@ -1,14 +1,6 @@
 ---
-title: "IMetaDataImport::GetNativeCallConvFromSig 메서드"
-ms.custom: 
+title: IMetaDataImport::GetNativeCallConvFromSig 메서드
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - IMetaDataImport.GetNativeCallConvFromSig
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: 50e04026-4d4a-47d9-96c1-f4677d6d938b
 topic_type:
 - apiref
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 56c67ad76fb3a4ce5ab2d107ff59da7a932835b4
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 963d46aea4ab31e770cb845fe699208f6c8f9ac7
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="imetadataimportgetnativecallconvfromsig-method"></a>IMetaDataImport::GetNativeCallConvFromSig 메서드
 지정한 서명 포인터가 나타내는 메서드에 대한 기본 호출 규칙을 가져옵니다.  
@@ -65,7 +53,7 @@ HRESULT GetNativeCallConvFromSig (
   
  **라이브러리:** MsCorEE.dll에 리소스로 포함  
   
- **.NET framework 버전:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>참고 항목  
  <xref:System.Runtime.InteropServices.CallingConvention>  

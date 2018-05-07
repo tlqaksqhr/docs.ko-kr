@@ -1,11 +1,6 @@
 ---
-title: "런타임에 바인딩 오버 로드 확인에 적용할 수 없습니다 &#39; &lt;procedurename&gt;&#39; 액세스 인스턴스가 인터페이스 형식 이므로"
+title: 런타임에 바인딩 오버 로드 확인에 적용할 수 없습니다 &#39; &lt;procedurename&gt; &#39; 액세스 인스턴스가 인터페이스 형식 이므로
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vbc30933
 - bc30933
@@ -13,16 +8,13 @@ helpviewer_keywords:
 - overload resolution [Visual Basic], with late-bound argument
 - BC30933
 ms.assetid: 8182eea0-dd34-4d6e-9ca0-41d8713e9dc4
-caps.latest.revision: "11"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: fb7f8a9f6eadfc9fd856ea57d362b43d25ff81a1
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: e41cbf30f06547ef39553e31542e4e8b6df49a3b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="latebound-overload-resolution-cannot-be-applied-to-39ltprocedurenamegt39-because-the-accessing-instance-is-an-interface-type"></a>런타임에 바인딩 오버 로드 확인에 적용할 수 없습니다 &#39; &lt;procedurename&gt;&#39; 액세스 인스턴스가 인터페이스 형식 이므로
+# <a name="latebound-overload-resolution-cannot-be-applied-to-39ltprocedurenamegt39-because-the-accessing-instance-is-an-interface-type"></a>런타임에 바인딩 오버 로드 확인에 적용할 수 없습니다 &#39; &lt;procedurename&gt; &#39; 액세스 인스턴스가 인터페이스 형식 이므로
 컴파일러는 오버 로드 된 속성 또는 프로시저에 대 한 참조를 확인 하려고 합니다. 하지만 참조가 인수 형식 이므로 실패 `Object` 참조 하는 개체 인터페이스는 데이터 형식을 갖습니다. `Object` 인수를 사용 하면 컴파일러 바인딩이라고 참조를 확인할 수 있습니다.  
   
  이러한 경우에는 컴파일러 구현 하는 클래스 대신 기본 인터페이스를 통해 통해 오버 로드를 확인합니다. 클래스는 오버 로드 된 버전 중 하나를 이름을 바꾸거나, 컴파일러가 이름과 다르기 때문에 오버 로드 되도록 해당 버전을 고려 하지 않습니다. 이 다시 컴파일러가 참조를 해결 하려면 올바른 선택 되었을 때 이름이 변경 된 버전을 무시 합니다.  

@@ -1,24 +1,16 @@
 ---
-title: "하위 식(Visual Basic)"
+title: 하위 식(Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - lambda expressions [Visual Basic], sub expression
 - Sub Expression [Visual Basic]
 - subroutines [Visual Basic], sub expressions
 ms.assetid: 36b6bfd1-6539-4d8f-a5eb-6541a745ffde
-caps.latest.revision: "6"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 43e35bd0386bc56478603ec36437981785cc8ffb
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 602212e664fa3362742fb1ba0dc033610272d3af
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="sub-expression-visual-basic"></a>하위 식(Visual Basic)
 매개 변수 및 서브루틴 람다 식을 정의 하는 코드를 선언 합니다.  
@@ -38,8 +30,8 @@ End Sub
 |용어|정의|  
 |---|---|  
 |`parameterlist`|선택 사항입니다. 목록 프로시저의 매개 변수를 나타내는 지역 변수 이름입니다. 괄호는 목록이 비어 있는 경우에 있어야 합니다. 자세한 내용은 참조 [매개 변수 목록](../../../visual-basic/language-reference/statements/parameter-list.md)합니다.|  
-|`statement`|필수 요소. 단일 문입니다.|  
-|`statements`|필수 요소. 문 목록입니다.|  
+|`statement`|필수. 단일 문입니다.|  
+|`statements`|필수. 문 목록입니다.|  
   
 ## <a name="remarks"></a>설명  
  A *람다 식을* 이름을 없는 서브루틴은 및 하나 이상의 문을 실행 하는 합니다. 어디 람다 식을 사용할 수는 있습니다으로 사용할 수 대리자 형식을 제외 하 고 인수를 `RemoveHandler`합니다. 대리자 및 대리자와 람다 식 사용 하는 방법에 대 한 자세한 내용은 참조 [대리자 문을](../../../visual-basic/language-reference/statements/delegate-statement.md) 및 [완화 된 대리자 변환](../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md)합니다.  

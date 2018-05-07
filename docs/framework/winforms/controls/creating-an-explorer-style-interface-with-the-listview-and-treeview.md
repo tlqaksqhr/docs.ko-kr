@@ -1,13 +1,6 @@
 ---
-title: "연습: 디자이너를 사용하여 ListView 및 TreeView 컨트롤이 포함된 탐색기 스타일 인터페이스 만들기"
-ms.custom: 
+title: '연습: 디자이너를 사용하여 ListView 및 TreeView 컨트롤이 포함된 탐색기 스타일 인터페이스 만들기'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -20,16 +13,11 @@ helpviewer_keywords:
 - ListView control [Windows Forms], explorer style interface
 - ListView control [Windows Forms], explorer-style interface
 ms.assetid: 9e5e7721-19e2-4890-b273-a43589fe99ff
-caps.latest.revision: "19"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 1d8d7991f706f8098e4ac475ae057771de200197
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 0a0208194bd6cf24f61c58ece88e41b674e924fc
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="walkthrough-creating-an-explorer-style-interface-with-the-listview-and-treeview-controls-using-the-designer"></a>연습: 디자이너를 사용하여 ListView 및 TreeView 컨트롤이 포함된 탐색기 스타일 인터페이스 만들기
 Visual Studio의 이점 중 하나를 짧은 시간 안에 전문적인 Windows Forms 응용 프로그램을 만들 수입니다. 일반적인 시나리오는 만드는 사용자 인터페이스 (UI) <xref:System.Windows.Forms.ListView> 및 <xref:System.Windows.Forms.TreeView> Windows 운영 체제의 Windows 탐색기 기능을 제어 합니다. Windows 탐색기 사용자의 컴퓨터에 파일 및 폴더의 계층 구조를 표시합니다.  
@@ -43,7 +31,7 @@ Visual Studio의 이점 중 하나를 짧은 시간 안에 전문적인 Windows 
   
 2.  에 **새 프로젝트** 대화 상자에서 다음을 수행 합니다.  
   
-    1.  선택 된 범주에 **Visual Basic** 또는 **Visual C#**합니다.  
+    1.  선택 된 범주에 **Visual Basic** 또는 **Visual C#** 합니다.  
   
     2.  템플릿 목록에서 선택 **Windows Forms 응용 프로그램**합니다.  
   

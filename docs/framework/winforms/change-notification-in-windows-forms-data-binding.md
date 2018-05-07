@@ -1,27 +1,15 @@
 ---
-title: "Windows Forms 데이터 바인딩의 변경 알림"
-ms.custom: 
+title: Windows Forms 데이터 바인딩의 변경 알림
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - Windows Forms, data binding
 - Windows Forms, adding change notification for data binding
 ms.assetid: b5b10f90-0585-41d9-a377-409835262a92
-caps.latest.revision: "17"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 827e93ad779dfeb2dd398a2fc031fcb99a77a39c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 79ad52b6db8cb7be7f4e3162b8f726e8cbe22dcf
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="change-notification-in-windows-forms-data-binding"></a>Windows Forms 데이터 바인딩의 변경 알림
 Windows Forms 데이터 바인딩의 가장 중요 한 개념 중 하나인 *변경 알림*합니다. 데이터 소스와 바인딩된 컨트롤 항상 최신 데이터를 갖도록 하려면 데이터 바인딩에 대 한 변경 알림을 추가 해야 합니다. 특히 바인딩된 컨트롤의 데이터 소스에 대 한 변경 내용이 통보 되 있는지 확인 하려는 및 데이터 소스 컨트롤의 바인딩된 속성에 대 한 변경 내용을 알려 줍니다.  

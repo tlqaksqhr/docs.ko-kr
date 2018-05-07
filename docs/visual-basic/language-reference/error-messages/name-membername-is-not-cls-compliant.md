@@ -1,26 +1,17 @@
 ---
-title: "이름 &lt;membername&gt; CLS 규격이 아닙니다"
+title: 이름 &lt;membername&gt; CLS 규격이 아닙니다
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - bc40031
 - vbc40031
 helpviewer_keywords:
 - BC40031
 ms.assetid: e2b885dc-cbf9-49ff-bbbe-531657ea99f7
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: ba0dda520e37b27f9b7ad3c214508ee370162598
-ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
+ms.openlocfilehash: 26ff13de461d5a96724868b7928129a326cdf1d0
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="name-ltmembernamegt-is-not-cls-compliant"></a>이름 &lt;membername&gt; CLS 규격이 아닙니다
 로 어셈블리 표시 되어 `<CLSCompliant(True)>` 밑줄로 시작 하는 이름 가진 멤버를 노출 하지만 (`_`).  

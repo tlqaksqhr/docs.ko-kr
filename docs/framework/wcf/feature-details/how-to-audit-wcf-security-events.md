@@ -1,34 +1,22 @@
 ---
 title: '방법: Windows Communication Foundation 보안 이벤트 감사'
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - security [WCF], auditing events
 ms.assetid: e71e9587-3336-46a2-9a9e-d72a1743ecec
-caps.latest.revision: 19
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload:
-- dotnet
-ms.openlocfilehash: 72eff4af38636577dc9e3b35af1f1155d5ed892c
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: ad1cf3dd598a2ec76302c48ae36b45fd0310d69d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-audit-windows-communication-foundation-security-events"></a>방법: Windows Communication Foundation 보안 이벤트 감사
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]에서는 Windows 이벤트 뷰어를 사용하여 볼 수 있는 Windows 이벤트 로그에 보안 이벤트를 기록할 수 있습니다. 이 항목에서는 보안 이벤트를 기록하도록 응용 프로그램을 설정하는 방법에 대해 설명합니다. 에 대 한 자세한 내용은 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 참조 감사 [감사](../../../../docs/framework/wcf/feature-details/auditing-security-events.md)합니다.  
+Windows Communication Foundation (WCF)를 사용 하면 Windows 이벤트 뷰어를 사용 하 여 볼 수 있는 Windows 이벤트 로그에 보안 이벤트를 기록할 수 있습니다. 이 항목에서는 보안 이벤트를 기록하도록 응용 프로그램을 설정하는 방법에 대해 설명합니다. WCF 감사에 대 한 자세한 내용은 참조 [감사](../../../../docs/framework/wcf/feature-details/auditing-security-events.md)합니다.  
   
 ### <a name="to-audit-security-events-in-code"></a>코드에서 보안 이벤트를 감사하려면  
   

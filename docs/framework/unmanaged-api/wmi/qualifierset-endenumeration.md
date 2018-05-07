@@ -1,11 +1,7 @@
 ---
-title: "QualifierSet_EndEnumeration 함수 (관리 되지 않는 API 참조)"
-description: "QualifierSet_EndEnumeration 함수는 열거형을 종료 합니다."
+title: QualifierSet_EndEnumeration 함수 (관리 되지 않는 API 참조)
+description: QualifierSet_EndEnumeration 함수는 열거형을 종료 합니다.
 ms.date: 11/06/2017
-ms.prod: .net-framework
-ms.technology:
-- dotnet-clr
-ms.topic: reference
 api_name:
 - QualifierSet_EndEnumeration
 api_location:
@@ -20,14 +16,11 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 7d8e6bb24eb471d807af2493f82b6be4f644124f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 0e24acdde486f377cc9187aac088ce7a611cd4eb
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="qualifiersetendenumeration-function"></a>QualifierSet_EndEnumeration 함수
 열거형에 대 한 호출을 시작한 종료는 [QualifierSet_BeginEnumeration](qualifierset-beginenumeration.md) 함수입니다.  
@@ -71,7 +64,7 @@ HRESULT QualifierSet_EndEnumeration (
   
 **헤더:** WMINet_Utils.idl  
   
-**.NET framework 버전:**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+**.NET framework 버전:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>참고자료  
 [WMI 및 성능 카운터 (관리 되지 않는 API 참조)](index.md)

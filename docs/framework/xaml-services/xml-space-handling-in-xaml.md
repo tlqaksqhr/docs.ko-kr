@@ -1,29 +1,17 @@
 ---
-title: "XAML의 xml:space 처리"
-ms.custom: 
+title: XAML의 xml:space 처리
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - XAML [XAML Services], xml:space attribute
 - XAML [XAML Services], whitespace processing
 - xml:space attribute [XAML Services]
 - whitespace processing [XAML Services]
 ms.assetid: 5e1814f0-5b30-43d5-8c88-dede335a89d7
-caps.latest.revision: "15"
-author: wadepickett
-ms.author: wpickett
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 8b8356cdb47b6b834e8d9a6bb84b26445af6d865
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: af971ad9ea74e123b939ff8d8488e4e45c5d4aed
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="xmlspace-handling-in-xaml"></a>XAML의 xml:space 처리
 `xml:space` 특성은 object 요소 내에서 공백 처리 동작을 선언 하는 XML로 정의 된 특성입니다. 이 동작은 요소 내에 포함 된 모든 콘텐츠 (내부 텍스트)와 관련이 있는 `xml:space` 선언 되 고 범위 자식 요소를 합니다.  

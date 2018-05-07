@@ -1,14 +1,6 @@
 ---
-title: "ICLRHostBindingPolicyManager::ModifyApplicationPolicy 메서드"
-ms.custom: 
+title: ICLRHostBindingPolicyManager::ModifyApplicationPolicy 메서드
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICLRHostBindingPolicyManager.ModifyApplicationPolicy
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: d82d633e-cce6-427c-8b02-8227e34e12ba
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 018dc40895a79788a9eef20082d764db0b2265c5
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 7a221b286ada97c3c03387556cb30ee6ddd2c453
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="iclrhostbindingpolicymanagermodifyapplicationpolicy-method"></a>ICLRHostBindingPolicyManager::ModifyApplicationPolicy 메서드
 지정된 된 어셈블리에 대 한 바인딩 정책 수정 하 고 정책의 새 버전을 만듭니다.  
@@ -79,8 +67,8 @@ HRESULT  ModifyApplicationPolicy (
 |HRESULT|설명|  
 |-------------|-----------------|  
 |S_OK|정책이는 성공적으로 수정 되었습니다.|  
-|E_INVALIDARG|`pwzSourceAssemblyIdentity`또는 `pwzTargetAssemblyIdentity` 가 null 참조입니다.|  
-|ERROR_INSUFFICIENT_BUFFER|`pbNewApplicationPolicy`너무 작습니다.|  
+|E_INVALIDARG|`pwzSourceAssemblyIdentity` 또는 `pwzTargetAssemblyIdentity` 가 null 참조입니다.|  
+|ERROR_INSUFFICIENT_BUFFER|`pbNewApplicationPolicy` 너무 작습니다.|  
 |HOST_E_CLRNOTAVAILABLE|공용 언어 런타임 (CLR) 프로세스에 로드 되지 않았습니다 또는 CLR 중인 상태를 관리 코드를 실행 하거나 호출을 처리할 수 없습니다.|  
 |HOST_E_TIMEOUT|호출 시간이 초과 되었습니다.|  
 |HOST_E_NOT_OWNER|호출자에 게 잠금을 소유 하지 않습니다.|  
@@ -97,7 +85,7 @@ HRESULT  ModifyApplicationPolicy (
   
  **라이브러리:** MSCorEE.dll에 리소스로 포함  
   
- **.NET framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>참고 항목  
  [ICLRHostBindingPolicyManager 인터페이스](../../../../docs/framework/unmanaged-api/hosting/iclrhostbindingpolicymanager-interface.md)

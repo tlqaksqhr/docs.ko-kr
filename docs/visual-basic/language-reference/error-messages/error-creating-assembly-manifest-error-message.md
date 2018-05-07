@@ -1,26 +1,17 @@
 ---
 title: '어셈블리 매니페스트를 만드는 동안 오류 발생: &lt;오류 메시지&gt;'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - bc30140
 - vbc30140
 helpviewer_keywords:
 - BC30140
 ms.assetid: 1beb5aa0-7b79-4c85-946b-5c2d0a41d1d2
-caps.latest.revision: 13
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 4032bbcbf9924eb5aad4e2cb1a6e74df9a472eca
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: b3ea5b502abd318c34d957bf7f540602c53c9e6b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="error-creating-assembly-manifest-lterror-messagegt"></a>어셈블리 매니페스트를 만드는 동안 오류 발생: &lt;오류 메시지&gt;
 Visual Basic 컴파일러는 매니페스트를 사용해 어셈블리를 생성 하는 어셈블리 링커 (Al.exe, Alink 라고도 함)를 호출 합니다. 링커가 어셈블리 만들기의 내보내기 전 단계에서 오류를 보고했습니다.  

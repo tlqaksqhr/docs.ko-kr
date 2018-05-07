@@ -1,23 +1,12 @@
 ---
 title: Bookmarks1
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 9b51a346-09ae-455c-a70a-e2264ddeb9e2
-caps.latest.revision: "8"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: bd30abdb158f07724e7acdf172546111e3330713
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 8b7ca9549327087e30d6c72a8b784aa37ad09f3c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="bookmarks"></a>책갈피
 책갈피는 활동이 워크플로 스레드에 그대로 유지되지 않고 입력을 수동적으로 기다릴 수 있도록 하는 메커니즘입니다. 활동에서 자극을 기다리고 있음을 알릴 때 책갈피를 만들 수 있습니다. 이는 현재 실행 중인 메서드(<xref:System.Activities.Bookmark>를 만든 메서드)에서 반환되더라도 활동 실행이 완료된 것으로 간주해서는 안 된다는 것을 런타임에 나타냅니다.  

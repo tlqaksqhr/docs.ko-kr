@@ -1,33 +1,19 @@
 ---
-title: "디스패처 확장"
-ms.custom: 
+title: 디스패처 확장
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - dispatcher extensions [WCF]
 ms.assetid: d0ad15ac-fa12-4f27-80e8-7ac2271e5985
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 4240a19401d97cd0636d13a94fd07ad4ef753388
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: bc700aefc3b50102dc0a3faabbbcd09c1c8fc4bc
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="extending-dispatchers"></a>디스패처 확장
 디스패처는 기본 채널에서 들어오는 메시지를 끌어와서 응용 프로그램 코드에서 이를 메서드 호출로 변환하여 결과를 다시 호출자에게 보내는 역할을 합니다. 디스패처 확장을 사용하여 이 처리를 수정할 수 있습니다.  메시지의 내용 또는 매개 변수를 검사하거나 수정하는 메시지 또는 매개 변수 검사자를 구현할 수 있습니다.  메시지가 작업으로 라우트되는 방식을 변경하거나 일부 다른 기능을 제공할 수 있습니다.  
   
- 이 항목에서는 <xref:System.ServiceModel.Dispatcher.DispatchRuntime> 서비스 응용 프로그램에서 <xref:System.ServiceModel.Dispatcher.DispatchOperation> 및 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 클래스를 사용하여 디스패처의 기본 실행 동작을 수정하는 방법과 메시지, 매개 변수 또는 반환 값을 채널 계층에서 보내거나 검색하기 이전 또는 이후에 이를 가로채거나 수정하는 방법에 대해 설명합니다. 해당 하는 클라이언트 런타임 메시지를 처리 하는 방법에 대 한 자세한 내용은 참조 [클라이언트 확장](../../../../docs/framework/wcf/extending/extending-clients.md)합니다. 역할을 이해 하는 <xref:System.ServiceModel.IExtensibleObject%601> 형식 다양 한 런타임 사용자 지정 개체 사이 공유 상태를 액세스 하는 동안 재생, 참조 [확장 가능한 개체](../../../../docs/framework/wcf/extending/extensible-objects.md)합니다.  
+ 이 항목에서는 사용 하는 방법을 설명는 <xref:System.ServiceModel.Dispatcher.DispatchRuntime> 및 <xref:System.ServiceModel.Dispatcher.DispatchOperation> 클래스 Windows Communication Foundation (WCF)에서 서비스는 디스패처의 기본 실행 동작을 수정 하려면 하거나 가로채 또는 메시지, 매개 변수를 수정 하거나 반환 하 응용 프로그램 이전 또는 이후에 보내거나 채널 계층에서 검색 하기 값입니다. 해당 하는 클라이언트 런타임 메시지를 처리 하는 방법에 대 한 자세한 내용은 참조 [클라이언트 확장](../../../../docs/framework/wcf/extending/extending-clients.md)합니다. 역할을 이해 하는 <xref:System.ServiceModel.IExtensibleObject%601> 형식 다양 한 런타임 사용자 지정 개체 사이 공유 상태를 액세스 하는 동안 재생, 참조 [확장 가능한 개체](../../../../docs/framework/wcf/extending/extensible-objects.md)합니다.  
   
 ## <a name="dispatchers"></a>디스패처  
  일반적으로 채널 계층으로 불리는 서비스 모델 계층을 통해 개발자의 프로그래밍 모델과 기본 메시지 교환 간의 변환이 수행됩니다. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서 채널 및 끝점 디스패처(각각 <xref:System.ServiceModel.Dispatcher.ChannelDispatcher> 및 <xref:System.ServiceModel.Dispatcher.EndpointDispatcher>)는 새로운 채널을 허용하고 메시지, 작업 디스패치 및 호출을 수신하며 응답 처리를 담당하는 서비스 구성 요소입니다. 디스패처 개체는 수신자 개체이지만, 이중 서비스에서의 콜백 계약 구현에서도 검사, 수정 또는 확장을 위해 디스패처 개체를 노출합니다.  

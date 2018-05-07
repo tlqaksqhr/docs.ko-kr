@@ -1,27 +1,17 @@
 ---
-title: "프로젝션 및 변형 (LINQ to XML) (Visual Basic)"
-ms.custom: 
+title: 프로젝션 및 변형 (LINQ to XML) (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 297de224-b625-44cf-8c00-186b6189aa0e
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 92179ce3f1919187038b1bf7be92a82c1b6483ee
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 33be64420eb2c42ed1c8b680985609ceca241b4e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="projections-and-transformations-linq-to-xml-visual-basic"></a>프로젝션 및 변형 (LINQ to XML) (Visual Basic)
 이 섹션에서는 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 프로젝션 및 변환의 예를 제공합니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
   
 |항목|설명|  
 |-----------|-----------------|  

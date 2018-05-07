@@ -1,27 +1,15 @@
 ---
-title: "독립형 진단 피드 샘플"
-ms.custom: 
+title: 독립형 진단 피드 샘플
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: d31c6c1f-292c-4d95-8e23-ed8565970ea5
-caps.latest.revision: "26"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 7cf6bb08dc6607bf6c5b9e283ce449b603cb38d3
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 1edd1c2184dde368fbd16299a836f1811dd24ba6
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="stand-alone-diagnostics-feed-sample"></a>독립형 진단 피드 샘플
-이 샘플에서는 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]를 사용하여 배포를 위한 RSS/ATOM 피드를 만드는 방법을 보여 줍니다. 기본 "Hello World" 프로그램에서는 개체 모델의 기본 사항 및 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 서비스에 이 프로그램을 설정하는 방법을 보여 줍니다.  
+이 샘플에는 RSS/Atom 배포와 Windows Communication Foundation (WCF)에 대 한 피드를 만드는 방법을 보여 줍니다. 개체 모델의 기본 사항 및 Windows Communication Foundation (WCF) 서비스를 설정 하는 방법을 보여 주는 기본 "Hello World" 프로그램은  
   
  [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 모델 배포는 특수 데이터 형식인 <xref:System.ServiceModel.Syndication.SyndicationFeedFormatter>를 반환하는 서비스 작업으로 제공됩니다. <xref:System.ServiceModel.Syndication.SyndicationFeedFormatter>의 인스턴스는 피드를 RSS 2.0 및 ATOM 1.0 형식으로 serialize할 수 있습니다. 다음 샘플 코드에서는 사용된 계약을 보여 줍니다.  
   
@@ -60,7 +48,7 @@ WebServiceHost host = new WebServiceHost(typeof(ProcessService), new Uri("http:/
 <%@ ServiceHost Language="C#|VB" Debug="true" Service="ProcessService" %>  
 ```  
   
- 이 서비스는 표준 HTTP GET을 사용하여 요청을 받기 때문에 RSS 또는 ATOM 인식 클라이언트를 사용하여 서비스에 액세스할 수 있습니다. 예를 들어, Internet Explorer 7과 같은 RSS 인식 브라우저에서 http://localhost:8000/diagnostics/feed/?format=atom 또는 http://localhost:8000/diagnostics/feed/?format=rss로 이동하면 이 서비스의 출력을 볼 수 있습니다.  
+ 이 서비스는 표준 HTTP GET을 사용하여 요청을 받기 때문에 RSS 또는 ATOM 인식 클라이언트를 사용하여 서비스에 액세스할 수 있습니다. 로 이동 하 여이 서비스의 출력을 볼 수는 예를 들어 http://localhost:8000/diagnostics/feed/?format=atom 또는 http://localhost:8000/diagnostics/feed/?format=rss Internet Explorer 7 같은 RSS 인식 브라우저에서.  
   
  사용할 수도 있습니다는 [어떻게 the WCF 배포 개체 모델에 매핑됩니다 Atom 및 RSS](../../../../docs/framework/wcf/feature-details/how-the-wcf-syndication-object-model-maps-to-atom-and-rss.md) 존재 하지 않는 배포 된 데이터를 읽고 명령적 코드를 사용 하 여 처리 합니다.  
   
@@ -93,14 +81,14 @@ foreach (SyndicationItem i in feed.Items)
   
 3.  콘솔 응용 프로그램을 실행합니다.  
   
-4.  콘솔 응용 프로그램을 실행하는 동안 RSS 인식 브라우저를 사용하여 http://localhost:8000/diagnostics/feed/?format=atom 또는 http://localhost:8000/diagnostics/feed/?format=rss로 이동합니다.  
+4.  로 이동 하는 콘솔 응용 프로그램이 실행 되는 동안 http://localhost:8000/diagnostics/feed/?format=atom 또는 http://localhost:8000/diagnostics/feed/?format=rss RSS 인식 브라우저를 사용 하 여 합니다.  
   
 > [!IMPORTANT]
 >  컴퓨터에 이 샘플이 이미 설치되어 있을 수도 있습니다. 계속하기 전에 다음(기본) 디렉터리를 확인하세요.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  이 디렉터리가 없으면 [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4(.NET Framework 4용 WCF(Windows Communication Foundation) 및 WF(Windows Workflow Foundation) 샘플)](http://go.microsoft.com/fwlink/?LinkId=150780) 로 이동하여 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 및 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플을 모두 다운로드하세요. 이 샘플은 다음 디렉터리에 있습니다.  
+>  이 디렉터리가로 이동 [Windows Communication Foundation (WCF) 및.NET Framework 4에 대 한 Windows WF (Workflow Foundation) 샘플](http://go.microsoft.com/fwlink/?LinkId=150780) 모든 Windows Communication Foundation (WCF)를 다운로드 하 고 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플. 이 샘플은 다음 디렉터리에 있습니다.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Syndication\DiagnosticsFeed`  
   

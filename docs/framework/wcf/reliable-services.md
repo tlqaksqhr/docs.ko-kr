@@ -1,14 +1,6 @@
 ---
 title: 신뢰할 수 있는 서비스
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - WCF [WCF], reliable messaging
 - Windows Communication Foundation [WCF], reliable messaging
@@ -16,20 +8,14 @@ helpviewer_keywords:
 - Windows Communication Foundation [WCF], reliable sessions
 - service contracts [WCF], reliable services
 ms.assetid: 07814ed0-0775-47f2-987b-d8134fdd5099
-caps.latest.revision: 8
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: d9cbaef77f4dce609d36ba4b679d8c569b648fa5
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
-ms.translationtype: MT
+ms.openlocfilehash: 02e0b8822c29490462fe74803a34222188afc910
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="reliable-services"></a>신뢰할 수 있는 서비스
-큐 및 신뢰할 수 있는 세션은 신뢰할 수 있는 메시징을 구현하는 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 기능입니다. 이 항목에서는 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]의 신뢰할 수 있는 메시징 기능에 대해 설명합니다.  
+큐 및 신뢰할 수 있는 세션은 신뢰할 수 있는 메시징을 구현 하는 Windows Communication Foundation (WCF) 기능입니다. 이 항목에서는 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]의 신뢰할 수 있는 메시징 기능에 대해 설명합니다.  
   
  *신뢰할 수 있는 메시징* 방법 신뢰할 수 있는 메시징 소스는 (라는 *소스*) 메시지를 안정적으로 신뢰할 수 있는 메시징 대상 전송 (라는 *대상*).  
   

@@ -1,26 +1,12 @@
 ---
-title: "방법: 필터 사용"
-ms.custom: 
+title: '방법: 필터 사용'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: f2c7255f-c376-460e-aa20-14071f1666e5
-caps.latest.revision: 
-author: wadepickett
-ms.author: wpickett
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 94d45537ca3edd5f31f1ed31898857f002312a0b
-ms.sourcegitcommit: 15316053918995cc1380163a7d7e7edd5c44e6d7
+ms.openlocfilehash: 2c8c5519d31d1d57c1c568599964b97043f806a9
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-use-filters"></a>방법: 필터 사용
 이 항목에서는 여러 필터를 사용하는 라우팅 구성을 만드는 데 필요한 기본 단계에 대해 간략하게 설명합니다. 이 예제에서 메시지는 regularCalc와 roundingCalc라는 두 계산기 서비스 구현으로 라우트됩니다. 두 구현 모두 같은 연산을 지원하지만 한 서비스에서 반환 전에 가장 가까운 정수 값으로 모든 계산을 반올림합니다. 클라이언트 응용 프로그램은 서비스의 반올림 버전을 사용할 것인지 여부를 지정해야 합니다. 서비스 기본 설정이 지정되지 않으면 메시지는 두 서비스 사이에서 부하 분산됩니다. 두 서비스에 의해 노출되는 연산은 다음과 같습니다.  
@@ -145,7 +131,7 @@ ms.lasthandoff: 03/19/2018
             filterData="http://localhost/routingservice/router/rounding/"/>  
     ```  
   
-     "Http://localhost/routingservice/router/rounding/"로 시작 하는 주소에서 메시지를 수신 하는 경우이 필터 **true**합니다. 이 끝점과 통신 하는 데 사용 하는 전체 주소는 "http://localhost/이이 구성에서 사용 되는 기본 주소"http://localhost/routingservice/router "이 고 roundingEndpoint에 대해 지정 된 주소" 반올림/calculator "때문에 라우팅 서비스/라우터/반올림/calculator ",이 필터에 일치 하는 합니다.  
+     로 시작 하는 주소에서 메시지를 수신 하는 경우 "http://localhost/routingservice/router/rounding/"이이 필터를 평가 **true**합니다. 이 구성에서 사용 하는 기본 주소는 "http://localhost/routingservice/router"및 "반올림/calculator" roundingEndpoint에 지정 된 주소를이 끝점과 통신 하는 데 전체 주소는 "http://localhost/routingservice/router/rounding/calculator",이 필터와 일치 합니다.  
   
     > [!NOTE]
     >  PrefixEndpointAddress 필터는 일치를 수행할 때 호스트 이름을 평가하지 않습니다. 하나의 호스트가 다양한 호스트 이름을 사용하여 참조될 수 있고, 이러한 다양한 이름은 모두 클라이언트 응용 프로그램에서 호스트를 참조하는 유효한 방법일 수 있기 때문입니다. 예를 들어 다음 항목은 모두 같은 호스트를 참조할 수 있습니다.  

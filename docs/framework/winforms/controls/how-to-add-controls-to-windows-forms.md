@@ -1,13 +1,6 @@
 ---
-title: "방법: Windows Forms에 컨트롤 추가"
-ms.custom: 
+title: '방법: Windows Forms에 컨트롤 추가'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -16,16 +9,11 @@ helpviewer_keywords:
 - Windows Forms controls, adding to form
 - controls [Windows Forms], adding
 ms.assetid: 2af86001-9d62-4154-87fb-66db2c3cd9fd
-caps.latest.revision: "15"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ab92f7a56173ec71642d0cc09f3f81e9859533b4
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 2dd048fb074d1ec5bb7bc0a67f196d5d51281545
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-add-controls-to-windows-forms"></a>방법: Windows Forms에 컨트롤 추가
 대부분의 폼은 폼의 화면에 컨트롤을 추가 하 여 사용자 인터페이스 (UI)를 정의 하도록 설계 되었습니다. A *제어* 폼 정보를 표시 하거나 사용자 입력을 허용 하는 데에 구성 요소입니다. 컨트롤에 대 한 자세한 내용은 참조 [Windows Forms 컨트롤](../../../../docs/framework/winforms/controls/index.md)합니다.  

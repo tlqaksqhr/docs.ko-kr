@@ -1,14 +1,6 @@
 ---
-title: "ICorDebug 인터페이스"
-ms.custom: 
+title: ICorDebug 인터페이스
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICorDebug
 api_location:
@@ -22,17 +14,13 @@ helpviewer_keywords:
 ms.assetid: 33f431d7-ab1a-494d-8af2-20ab15aba194
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 0ed0b3a8b42157f6a4fcbc6b4a05a416da736147
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 74c5036bdc8a4a75e5711c6dc1d34d8f2c21128f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="icordebug-interface"></a>ICorDebug 인터페이스
 공용 언어 런타임 (CLR) 환경에서 응용 프로그램을 디버깅 하는 데 사용할 수 있는 메서드를 제공 합니다.  
@@ -55,7 +43,7 @@ ms.lasthandoff: 12/22/2017
 |[Terminate 메서드](../../../../docs/framework/unmanaged-api/debugging/icordebug-terminate-method.md)|종료는 `ICorDebug` 개체입니다.|  
   
 ## <a name="remarks"></a>설명  
- `ICorDebug`디버거 프로세스에 대 한 이벤트 처리 루프를 나타냅니다. 에 대 한 디버거 기다려야는 [icordebugmanagedcallback:: Exitprocess](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-exitprocess-method.md) 이 인터페이스를 릴리스하기 전에 디버깅 중인 모든 프로세스에서 콜백 합니다.  
+ `ICorDebug` 디버거 프로세스에 대 한 이벤트 처리 루프를 나타냅니다. 에 대 한 디버거 기다려야는 [icordebugmanagedcallback:: Exitprocess](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-exitprocess-method.md) 이 인터페이스를 릴리스하기 전에 디버깅 중인 모든 프로세스에서 콜백 합니다.  
   
  `ICorDebug` 개체는 추가 관리 되는 디버깅을 제어 하는 초기 개체입니다. 이 개체를.NET Framework 버전 1.0 및 1.1에서는 `CoClass` COM에서 만든 개체 .NET Framework 버전 2.0에서에서이 개체는 더 이상는 `CoClass` 개체입니다. 여 생성 되어야 합니다는 [CreateDebuggingInterfaceFromVersion](../../../../docs/framework/unmanaged-api/hosting/createdebugginginterfacefromversion-function.md) 버전 인식 하는 함수입니다. 특정 구현을 가져올 클라이언트를 사용 하는이 새로운 만들기 함수 `ICorDebug`도 디버깅 API의 특정 버전을 에뮬레이트하는 합니다.  
   
@@ -69,7 +57,7 @@ ms.lasthandoff: 12/22/2017
   
  **라이브러리:** CorGuids.lib  
   
- **.NET framework 버전:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>참고 항목  
  [디버깅 인터페이스](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

@@ -1,23 +1,12 @@
 ---
-title: "기본 활동을 사용하는 사용자 지정 복합"
-ms.custom: 
+title: 기본 활동을 사용하는 사용자 지정 복합
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: ef9e739c-8a8a-4d11-9e25-cb42c62e3c76
-caps.latest.revision: "14"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 40a042aeaecd63c9932d7919f54a4cb1b026e988
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 78d00a13bdc018946fa20635a47677b1508c1ed1
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="custom-composite-using-native-activity"></a>기본 활동을 사용하는 사용자 지정 복합
 이 샘플에서는 다른 <xref:System.Activities.NativeActivity> 개체가 워크플로 실행 흐름을 제어하도록 예약하는 <xref:System.Activities.Activity>를 작성하는 방법을 보여 줍니다. 이 샘플에서는 두 개의 일반적인 제어 흐름인 Sequence와 While을 사용하여 이러한 작업 수행 방법을 보여 줍니다.  
@@ -35,7 +24,7 @@ ms.lasthandoff: 12/22/2017
   
  자식 활동이 완료되면 <xref:System.Activities.CompletionCallback>이 실행됩니다. 루프가 맨 위부터 계속됩니다. `Execute`와 마찬가지로 <xref:System.Activities.CompletionCallback>도 <xref:System.Activities.NativeActivityContext>를 사용하여 구현자에게 런타임에 대한 액세스 권한을 제공합니다.  
   
- `MyWhile`와 다른 `MySequence` 단일 예약 <xref:System.Activities.Activity> 반복 해 서 개체를 사용 하는 <xref:System.Activities.Activity%601>< bool\> 라는 `Condition` 이 예약이 발생 해야 하는지 여부를 확인 하려면. `MySequence`와 마찬가지로 `MyWhile`도 `InternalExecute` 메서드를 사용하여 예약 논리를 중앙 집중화합니다. 예약 된 `Condition` <xref:System.Activities.Activity>< bool\> 와 <xref:System.Activities.CompletionCallback%601> \<bool > 라는 `OnEvaluationCompleted`합니다. `Condition`의 실행이 완료되면 <xref:System.Activities.CompletionCallback>라는 강력한 형식의 매개 변수에서 이 `result`을 통해 그 결과를 사용할 수 있습니다. `true`이면 `MyWhile`이 <xref:System.Activities.NativeActivityContext.ScheduleActivity%2A>을 호출하여 `Body`<xref:System.Activities.Activity> 개체와 `InternalExecute`를 <xref:System.Activities.CompletionCallback>으로 전달합니다. `Body`의 실행이 완료되면 `Condition`에서 `InternalExecute`이 다시 예약되어 루프가 다시 시작됩니다. `Condition`에서 `false`를 반환하면 `MyWhile`의 인스턴스는 `Body`를 예약하지 않고 런타임에 제어 권한을 다시 제공하며 런타임은 <xref:System.Activities.ActivityInstanceState.Closed> 상태로 이동됩니다.  
+ `MyWhile` 와 다른 `MySequence` 단일 예약 <xref:System.Activities.Activity> 반복 해 서 개체를 사용 하는 <xref:System.Activities.Activity%601>< bool\> 라는 `Condition` 이 예약이 발생 해야 하는지 여부를 확인 하려면. `MySequence`와 마찬가지로 `MyWhile`도 `InternalExecute` 메서드를 사용하여 예약 논리를 중앙 집중화합니다. 예약 된 `Condition` <xref:System.Activities.Activity>< bool\> 와 <xref:System.Activities.CompletionCallback%601> \<bool > 라는 `OnEvaluationCompleted`합니다. `Condition`의 실행이 완료되면 <xref:System.Activities.CompletionCallback>라는 강력한 형식의 매개 변수에서 이 `result`을 통해 그 결과를 사용할 수 있습니다. `true`이면 `MyWhile`이 <xref:System.Activities.NativeActivityContext.ScheduleActivity%2A>을 호출하여 `Body`<xref:System.Activities.Activity> 개체와 `InternalExecute`를 <xref:System.Activities.CompletionCallback>으로 전달합니다. `Body`의 실행이 완료되면 `Condition`에서 `InternalExecute`이 다시 예약되어 루프가 다시 시작됩니다. `Condition`에서 `false`를 반환하면 `MyWhile`의 인스턴스는 `Body`를 예약하지 않고 런타임에 제어 권한을 다시 제공하며 런타임은 <xref:System.Activities.ActivityInstanceState.Closed> 상태로 이동됩니다.  
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>샘플을 설치, 빌드 및 실행하려면  
   
@@ -48,6 +37,6 @@ ms.lasthandoff: 12/22/2017
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  이 디렉터리가 없으면 [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4(.NET Framework 4용 WCF(Windows Communication Foundation) 및 WF(Windows Workflow Foundation) 샘플)](http://go.microsoft.com/fwlink/?LinkId=150780) 로 이동하여 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 및 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플을 모두 다운로드하세요. 이 샘플은 다음 디렉터리에 있습니다.  
+>  이 디렉터리가로 이동 [Windows Communication Foundation (WCF) 및.NET Framework 4에 대 한 Windows WF (Workflow Foundation) 샘플](http://go.microsoft.com/fwlink/?LinkId=150780) 모든 Windows Communication Foundation (WCF)를 다운로드 하 고 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플. 이 샘플은 다음 디렉터리에 있습니다.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\CustomActivities\Code-Bodied\CustomCompositeNativeActivity`

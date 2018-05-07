@@ -1,11 +1,6 @@
 ---
-title: "ReDim 문(Visual Basic)"
+title: ReDim 문(Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.ReDim
 - vb.Preserve
@@ -31,14 +26,11 @@ helpviewer_keywords:
 - declaration statements [Visual Basic]
 - scalar variables [Visual Basic]
 ms.assetid: ad1c5e07-dcd7-4ae1-a79e-ad3f2dcc2083
-caps.latest.revision: "25"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 8cec66ee33bfd82b3abd623a0130f5635aa3d1d9
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 9536ea8a6274e0b4a2589caf5aefa271a3567d32
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="redim-statement-visual-basic"></a>ReDim 문(Visual Basic)
 배열 변수의 저장 공간을 다시 할당합니다.  
@@ -54,8 +46,8 @@ ReDim [ Preserve ] name(boundlist) [ ,  name(boundlist) [, ... ] ]
 |용어|정의|  
 |----------|----------------|  
 |`Preserve`|선택 사항입니다. 마지막 차원의 크기만 변경한 경우 기존 배열의 데이터를 유지하기 위해 사용되는 한정자입니다.|  
-|`name`|필수 요소. 배열 변수의 이름입니다. 참조 [선언 된 요소 이름](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)합니다.|  
-|`boundlist`|필수 요소. 다시 정의된 배열의 각 차원에 대한 범위 목록입니다.|  
+|`name`|필수. 배열 변수의 이름입니다. 참조 [선언 된 요소 이름](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)합니다.|  
+|`boundlist`|필수. 다시 정의된 배열의 각 차원에 대한 범위 목록입니다.|  
   
 ## <a name="remarks"></a>설명  
  `ReDim` 문을 사용하여 이미 선언된 배열의 차원 중 하나 이상의 크기를 변경할 수 있습니다. 큰 배열이 있고 요소가 더 이상 필요하지 않은 경우 `ReDim`은 배열 크기를 줄여서 메모리를 확보할 수 있습니다. 반면에 배열에 요소가 더 필요한 경우 `ReDim`은 요소를 추가할 수 있습니다.  
@@ -86,7 +78,7 @@ ReDim [ Preserve ] name(boundlist) [ ,  name(boundlist) [, ... ] ]
   
 ## <a name="behavior"></a>동작  
   
--   **배열 대체입니다.** `ReDim`기존 배열을 해제 하 고 고 동일한 차수로 새 배열을 만듭니다. 새 배열은 배열 변수에서 해제된 배열을 대체합니다.  
+-   **배열 대체입니다.** `ReDim` 기존 배열을 해제 하 고 고 동일한 차수로 새 배열을 만듭니다. 새 배열은 배열 변수에서 해제된 배열을 대체합니다.  
   
 -   **Preserve 사용 하지 않는 초기화 합니다.** `Preserve`를 지정하지 않는 경우 `ReDim`은 데이터 형식의 기본값을 사용하여 새 배열의 요소를 초기화합니다.  
   

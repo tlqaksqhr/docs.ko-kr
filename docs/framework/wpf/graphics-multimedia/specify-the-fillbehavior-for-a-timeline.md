@@ -1,32 +1,20 @@
 ---
-title: "방법: 활성 기간이 끝난 Timeline의 FillBehavior 지정"
-ms.custom: 
+title: '방법: 활성 기간이 끝난 Timeline의 FillBehavior 지정'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - FillBehavior property for inactive timelines [WPF]
 - Timelines [WPF], FillBehavior property
 ms.assetid: db805f59-d513-4dac-af15-47005dae3199
-caps.latest.revision: "10"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 4b890d121cf06dc377a3bbc1dc569d9dac7c011b
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 947be09140dc2d1d5e130ccb74472d8dce3408cb
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-specify-the-fillbehavior-for-a-timeline-that-has-reached-the-end-of-its-active-period"></a>방법: 활성 기간이 끝난 Timeline의 FillBehavior 지정
 지정 하는 방법을 보여 주는이 예제는 <xref:System.Windows.Media.Animation.Timeline.FillBehavior%2A> 비활성에 대 한 <xref:System.Windows.Media.Animation.Timeline> 애니메이션된 속성입니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  <xref:System.Windows.Media.Animation.Timeline.FillBehavior%2A> 속성은 <xref:System.Windows.Media.Animation.Timeline> 되 고 있지 않습니다 때 애니메이션된 속성의 값에 수행할 작업을 결정 애니메이션 효과가 적용, 즉, 시기는 <xref:System.Windows.Media.Animation.Timeline> 만 부모 활성화 되지 않은 <xref:System.Windows.Media.Animation.Timeline> 는 활성 또는 보관 기간. 예를 들어 애니메이션된 속성 유지 않는다는 끝에 애니메이션을 종료 하거나 수행 후의 값은 애니메이션 시작 되기 전의 값 되돌아갑니다?  
   
  다음 예제에서는 한 <xref:System.Windows.Media.Animation.DoubleAnimation> 애니메이션 효과를 줄의 <xref:System.Windows.FrameworkElement.Width%2A> 두 개의 사각형의 합니다. 각 사각형을 사용 하 여 다른 <xref:System.Windows.Media.Animation.Timeline> 개체입니다.  

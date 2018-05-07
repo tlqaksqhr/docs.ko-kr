@@ -1,26 +1,12 @@
 ---
 title: '방법: 서비스 끝점으로 메타데이터 가져오기'
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: b69dbe20-92a1-4911-89d8-ffbc3dad4663
-caps.latest.revision: 13
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: b86f31217812767b0fbbd785a0f3ff96c2948854
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 88b48b95a62c000d88b302589ebc489089e77602
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-import-metadata-into-service-endpoints"></a>방법: 서비스 끝점으로 메타데이터 가져오기
 이 항목에 정의 된 서비스를 사용 하 여 서비스 끝점의 컬렉션으로 메타 데이터를 가져오는 방법에 설명 된 [시작](../../../../docs/framework/wcf/samples/getting-started-sample.md)합니다. 이 항목에서는 서비스에서 메타데이터를 가져온 다음 서비스에 `Add` 메서드를 호출하는 클라이언트 응용 프로그램을 만든 방법을 보여 줍니다.  

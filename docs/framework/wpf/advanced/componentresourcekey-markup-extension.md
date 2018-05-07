@@ -1,13 +1,6 @@
 ---
-title: "ComponentResourceKey 태그 확장"
-ms.custom: 
+title: ComponentResourceKey 태그 확장
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 f1_keywords:
 - ComponentResourceKey
 - ComponentResourceKeyExtension
@@ -15,16 +8,11 @@ helpviewer_keywords:
 - ComponentResourceKey markup extension [WPF]
 - XAML [WPF], ComponentResourceKey markup extension
 ms.assetid: d6bcdbe6-61b3-40a7-b381-4e02185b5a85
-caps.latest.revision: "14"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: f4bfaee35ba9f8cf60deb01c52a142433d08021c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: d11c26add084165eaa9fd0b319a375c4b98c7fb9
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="componentresourcekey-markup-extension"></a>ComponentResourceKey 태그 확장
 정의 하 고 외부 어셈블리에서 로드 되는 리소스에 대 한 키를 참조 합니다. 그러면 리소스 조회는 클래스 또는 어셈블리에 명시적 리소스 사전 하지 않고 어셈블리의 대상 형식을 지정할 수 있습니다.  
@@ -67,7 +55,7 @@ ms.lasthandoff: 12/22/2017
   
 -   템플릿을 컨트롤은 있지만 컨트롤의 테마에서 제공 하는 리소스에서 제공 하는 속성 값을 사용 하려면 때 어셈블리에서 테마 리소스에 액세스 합니다.  
   
- 테마에서 제공 하는 구성 요소 리소스 참조에 일반적으로 것을 사용 하는 `{DynamicResource}` 대신 `{StaticResource}`합니다. 이 용도에 표시 됩니다. `{DynamicResource}`사용자가 자체 테마를 변경할 수 있으므로 좋습니다. 구성 요소 리소스를 가장 일치 하는 테마를 지원 하기 위한 컨트롤 작성자의 의도 하려는 경우 동적 구성 요소에서는 리소스 참조를 사용 해야 합니다.  
+ 테마에서 제공 하는 구성 요소 리소스 참조에 일반적으로 것을 사용 하는 `{DynamicResource}` 대신 `{StaticResource}`합니다. 이 용도에 표시 됩니다. `{DynamicResource}` 사용자가 자체 테마를 변경할 수 있으므로 좋습니다. 구성 요소 리소스를 가장 일치 하는 테마를 지원 하기 위한 컨트롤 작성자의 의도 하려는 경우 동적 구성 요소에서는 리소스 참조를 사용 해야 합니다.  
   
  <xref:System.Windows.ComponentResourceKey.TypeInTargetAssembly%2A> 리소스 실제로 정의 된 대상 어셈블리에 존재 하는 형식을 식별 합니다. A `ComponentResourceKey` 정의 하 고 정확히 알고 있으면 별도로 사용할 수 있는 <xref:System.Windows.ComponentResourceKey.TypeInTargetAssembly%2A> 정의 되어 있지만 결국 참조 된 어셈블리를 통해 형식을 확인 해야 합니다.  
   
@@ -79,7 +67,7 @@ ms.lasthandoff: 12/22/2017
   
  에 대 한 값 기술적으로 `targetID` 할 수 있는 개체, 문자열이 될 필요가 없습니다. 그러나 WPF의 가장 일반적인 사용 정렬 하는 것은 `targetID` forms 문자열 있으며 이러한 문자열은에서 유효한 값의 [XamlName 문법](../../../../docs/framework/xaml-services/xamlname-grammar.md)합니다.  
   
- `ComponentResourceKey`개체 요소 구문에서 사용할 수 있습니다. 이 경우 둘 다의 값을 지정 하는 <xref:System.Windows.ComponentResourceKey.TypeInTargetAssembly%2A> 및 <xref:System.Windows.ComponentResourceKey.ResourceId%2A> 속성은 제대로 확장을 초기화 해야 합니다.  
+ `ComponentResourceKey` 개체 요소 구문에서 사용할 수 있습니다. 이 경우 둘 다의 값을 지정 하는 <xref:System.Windows.ComponentResourceKey.TypeInTargetAssembly%2A> 및 <xref:System.Windows.ComponentResourceKey.ResourceId%2A> 속성은 제대로 확장을 초기화 해야 합니다.  
   
  에 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 판독기 구현이 태그 확장에 대 한 처리가 정의한는 <xref:System.Windows.ComponentResourceKey> 클래스입니다.  
   

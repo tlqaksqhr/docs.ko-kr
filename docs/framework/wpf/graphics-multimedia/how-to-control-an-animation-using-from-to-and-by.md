@@ -1,29 +1,17 @@
 ---
-title: "방법: From, To 및 By를 사용하여 애니메이션 제어"
-ms.custom: 
+title: '방법: From, To 및 By를 사용하여 애니메이션 제어'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - animation [WPF], From/to/by
 - basic animation [WPF]
 - animation [WPF], basic animation
 - From/to/by animation
 ms.assetid: 59afba57-6fc1-44c8-987e-8a5f4142adad
-caps.latest.revision: "11"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 17f87c8bcf09022aa389df779e29f5e5affabc20
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: c6f2bfb207163136d79e815e7f910673e8fafade
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-control-an-animation-using-from-to-and-by"></a>방법: From, To 및 By를 사용하여 애니메이션 제어
 "From/하/By" 또는 "기본 애니메이션" 두 대상 값 사이의 전환을 만듭니다 (참조 [애니메이션 개요](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md) 다양 한 유형의 애니메이션에 대 한 소개). 기본 애니메이션의 대상 값을 설정 하려면 해당 <xref:System.Windows.Media.Animation.DoubleAnimation.From%2A>, <xref:System.Windows.Media.Animation.DoubleAnimation.To%2A>, 및 <xref:System.Windows.Media.Animation.DoubleAnimation.By%2A> 속성입니다.  다음 표에서 요약 방법을 <xref:System.Windows.Media.Animation.DoubleAnimation.From%2A>, <xref:System.Windows.Media.Animation.DoubleAnimation.To%2A>, 및 <xref:System.Windows.Media.Animation.DoubleAnimation.By%2A> 속성을 함께 사용할 수 있습니다. 또는 개별적으로 애니메이션의 대상 값을 확인 하 합니다.  
@@ -45,7 +33,7 @@ ms.lasthandoff: 12/22/2017
   
  다음 예제에서는 다양 한 설정의 효과 보여 줍니다. <xref:System.Windows.Media.Animation.DoubleAnimation.To%2A>, <xref:System.Windows.Media.Animation.DoubleAnimation.By%2A>, 및 <xref:System.Windows.Media.Animation.DoubleAnimation.From%2A> 애니메이션 속성입니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  [!code-xaml[BasicAnimations_snippet#AnimationTargetValuesWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/BasicAnimations_snippet/CS/AnimationTargetValuesExample.xaml#animationtargetvalueswholepage)]  
   
 ## <a name="see-also"></a>참고 항목  

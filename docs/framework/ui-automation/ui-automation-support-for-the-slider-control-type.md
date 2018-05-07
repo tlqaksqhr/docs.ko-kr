@@ -1,28 +1,19 @@
 ---
-title: "Slider 컨트롤 형식에 대한 UI 자동화 지원"
-ms.custom: 
+title: Slider 컨트롤 형식에 대한 UI 자동화 지원
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-bcl
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - control types, Slider
 - UI Automation, Slider control type
 - Slider control type
 ms.assetid: 045ea62f-7b50-46cf-a5a9-8eb97704355f
-caps.latest.revision: "18"
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: d5edee3499c5d3e50c0ed359a5afdfbe1d37b376
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 56c18b34ddf960ac053ad2ce8388b74cf68e2500
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ui-automation-support-for-the-slider-control-type"></a>Slider 컨트롤 형식에 대한 UI 자동화 지원
 > [!NOTE]
@@ -63,7 +54,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="required-ui-automation-control-patterns"></a>필요한 UI 자동화 컨트롤 패턴  
  다음 표에서는 모든 슬라이더 컨트롤에서 지원되는 데 필요한 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 컨트롤 패턴을 나열하여 보여 줍니다. 컨트롤 패턴에 대한 자세한 내용은 [UI Automation Control Patterns Overview](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)를 참조하세요.  
   
-|컨트롤 패턴|지원|노트|  
+|컨트롤 패턴|Support(지원)|노트|  
 |---------------------|-------------|-----------|  
 |<xref:System.Windows.Automation.Provider.ISelectionProvider>|종속|콘텐츠가 불연속 옵션 집합의 값 중 하나를 나타내는 경우 슬라이더는 Selection 컨트롤 패턴을 지원해야 합니다. Selection 컨트롤 패턴이 지원되면 해당 선택은 슬라이더의 자식 목록 항목 중 하나 이상으로 노출되어야 합니다.|  
 |<xref:System.Windows.Automation.Provider.IRangeValueProvider>|종속|콘텐츠를 숫자 범위 내에 있는 값으로 설정할 수 있는 경우 슬라이더는 RangeValue 컨트롤 패턴을 지원해야 합니다.|  
@@ -75,7 +66,7 @@ ms.lasthandoff: 12/22/2017
   
  이벤트에 대한 자세한 내용은 [UI Automation Events Overview](../../../docs/framework/ui-automation/ui-automation-events-overview.md)를 참조하세요.  
   
-|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 이벤트|지원|노트|  
+|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 이벤트|Support(지원)|노트|  
 |---------------------------------------------------------------------------------|-------------|-----------|  
 |<xref:System.Windows.Automation.SelectionPatternIdentifiers.InvalidatedEvent>|종속|없음|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty> 속성 변경 이벤트|필수|없음|  

@@ -1,13 +1,6 @@
 ---
-title: "방법: Windows Forms의 ToolStrip 컨트롤에 자동 완성 기능 활성화"
-ms.custom: 
+title: '방법: Windows Forms의 ToolStrip 컨트롤에 자동 완성 기능 활성화'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -19,16 +12,11 @@ helpviewer_keywords:
 - ToolStripComboBox class [Windows Forms], examples
 - ToolStrip control [Windows Forms], AutoComplete
 ms.assetid: fd66d085-1af1-45d4-930a-cde944da2e16
-caps.latest.revision: "13"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 7bbae29cea265fbc4cd92213066198b3f721c01d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: c5836b03ad185d4a31a24dfea46db54214ac54b6
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-enable-autocomplete-in-toolstrip-controls-in-windows-forms"></a>방법: Windows Forms의 ToolStrip 컨트롤에 자동 완성 기능 활성화
 다음 절차에서는 <xref:System.Windows.Forms.ToolStripLabel> 와 <xref:System.Windows.Forms.ToolStripComboBox> 를 삭제할 수 있습니다 방문한 웹 사이트와 같은 최근에 항목 목록이 표시 합니다. 목록의 항목 중 하나의 첫 번째 문자를 일치 하는 문자를 입력 하는 경우의 항목이 즉시 표시 됩니다.  

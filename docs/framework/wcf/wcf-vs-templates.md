@@ -1,29 +1,15 @@
 ---
 title: WCF Visual Studio 템플릿
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 6a608575-3535-4190-89da-911e24c8374f
-caps.latest.revision: 31
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: fceb0f2ab7caa2bf3ab34ff957e3ed5f300e557c
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
-ms.translationtype: MT
+ms.openlocfilehash: 873e728b72529fb5153913c44cac0abd77f1f7c8
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="wcf-visual-studio-templates"></a>WCF Visual Studio 템플릿
-[!INCLUDE[indigo1](../../../includes/indigo1-md.md)] Visual Studio 템플릿은 신속 하 게 빌드할 Visual Studio에서 사용할 수 있는 하는 미리 정의 된 프로젝트 및 항목 템플릿을 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 서비스 및 해당 응용 프로그램입니다.  
+Windows Communication Foundation (WCF) Visual Studio 서식 파일은 Visual Studio에서 사용 하 여 신속 하 게 빌드할 수는 미리 정의 된 프로젝트 및 항목 템플릿 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 서비스 및 해당 응용 프로그램입니다.  
   
 ## <a name="using-the-wcf-templates"></a>WCF 템플릿 사용  
  [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Visual Studio 템플릿 서비스 개발을 위한 기본 클래스 구조를 제공합니다. 특히 이러한 템플릿은 서비스 계약, 데이터 계약, 서비스 구현 및 구성에 대한 기본 정의를 제공합니다. 이러한 템플릿을 사용하여 최소의 코드 상호 작용만으로 간단한 서비스를 만들 수 있을 뿐만 아니라 고급 서비스에 대한 빌딩 블록을 만들 수 있습니다.  

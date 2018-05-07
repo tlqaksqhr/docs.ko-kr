@@ -1,34 +1,20 @@
 ---
-title: "데이터 계약 이름"
-ms.custom: 
+title: 데이터 계약 이름
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - data contracts [WCF], naming
 ms.assetid: 31f87e6c-247b-48f5-8e94-b9e1e33d8d09
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 56744318e6ea29350fd02d1cb35e49e566894a23
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 18ba9aa1f7af3733acd60924d0aa24ceb1b5126c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="data-contract-names"></a>데이터 계약 이름
-때때로 클라이언트와 서비스는 동일한 형식을 공유하지 않습니다. 그래도 양쪽의 데이터 계약이 동일하면 서로 데이터를 전달할 수 있습니다. [데이터 계약 동등성](../../../../docs/framework/wcf/feature-details/data-contract-equivalence.md) 데이터 계약 및 데이터 멤버 이름에 따라 및 따라서 메커니즘은 형식 및 멤버 이름에 매핑할 수 제공 됩니다. 이 항목에서는 이름을 만들 때 데이터 계약의 이름 지정 규칙 및 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 인프라의 기본 동작 규칙에 대해 설명합니다.  
+때때로 클라이언트와 서비스는 동일한 형식을 공유하지 않습니다. 그래도 양쪽의 데이터 계약이 동일하면 서로 데이터를 전달할 수 있습니다. [데이터 계약 동등성](../../../../docs/framework/wcf/feature-details/data-contract-equivalence.md) 데이터 계약 및 데이터 멤버 이름에 따라 및 따라서 메커니즘은 형식 및 멤버 이름에 매핑할 수 제공 됩니다. 이 항목에서는 이름을 만들 경우 Windows Communication Foundation (WCF) 인프라의 기본 동작 뿐만 아니라 데이터 계약 이름 지정에 대 한 규칙을 설명 합니다.  
   
 ## <a name="basic-rules"></a>기본 규칙  
  데이터 계약 이름 지정과 관련된 기본 규칙에는 다음이 포함됩니다.  
@@ -37,15 +23,15 @@ ms.lasthandoff: 12/22/2017
   
 -   데이터 멤버에는 이름만 있으며, 네임스페이스는 없습니다.  
   
--   데이터 계약을 처리할 때 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 인프라는 데이터 계약 및 데이터 멤버의 네임스페이스와 이름 모두에 대해 대/소문자를 구분합니다.  
+-   데이터 계약을 처리할 때에 WCF 인프라는 네임 스페이스와 데이터 계약 및 데이터 멤버의 이름은 대/소문자를 구분 합니다.  
   
 ## <a name="data-contract-namespaces"></a>데이터 계약 네임스페이스  
  데이터 계약 네임스페이스는 URI(Uniform Resource Identifier)의 형식을 사용합니다. 절대 URI나 상대 URI일 수 있습니다. 기본적으로 특정 형식에 대한 데이터 계약은 해당 형식의 CLR(공용 언어 런타임) 네임스페이스로부터 가져오는 네임스페이스에 할당됩니다.  
   
- 기본적으로 모든 주어진된 CLR 네임 스페이스 (형식에서 *Clr.Namespace*) "http://schemas.datacontract.org/2004/07/Clr.Namespace" 네임 스페이스에 매핑됩니다. 이 기본값을 재정의하려면 전체 모듈 또는 어셈블리에 <xref:System.Runtime.Serialization.ContractNamespaceAttribute> 특성을 적용합니다. 또는 각 형식에 대해 데이터 계약 네임스페이스를 제어하려면 <xref:System.Runtime.Serialization.DataContractAttribute.Namespace%2A>의 <xref:System.Runtime.Serialization.DataContractAttribute> 속성을 설정합니다.  
+ 기본적으로 모든 주어진된 CLR 네임 스페이스 (형식에서 *Clr.Namespace*) 네임 스페이스에 매핑된 "http://schemas.datacontract.org/2004/07/Clr.Namespace"입니다. 이 기본값을 재정의하려면 전체 모듈 또는 어셈블리에 <xref:System.Runtime.Serialization.ContractNamespaceAttribute> 특성을 적용합니다. 또는 각 형식에 대해 데이터 계약 네임스페이스를 제어하려면 <xref:System.Runtime.Serialization.DataContractAttribute.Namespace%2A>의 <xref:System.Runtime.Serialization.DataContractAttribute> 속성을 설정합니다.  
   
 > [!NOTE]
->  "http://schemas.microsoft.com/2003/10/Serialization" 네임스페이스가 예약되며, 데이터 계약 네임스페이스로 사용될 수 없습니다.  
+>  "http://schemas.microsoft.com/2003/10/Serialization"네임 스페이스는 예약 되어 있으므로 및 데이터 계약 네임 스페이스도 사용할 수 없습니다.  
   
 > [!NOTE]
 >  `delegate` 선언을 포함하는 데이터 계약 형식에서 기본 네임스페이스를 재정의할 수 없습니다.  

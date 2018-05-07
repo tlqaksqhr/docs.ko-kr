@@ -1,14 +1,6 @@
 ---
-title: "ClearDownloadCache 함수"
-ms.custom: 
+title: ClearDownloadCache 함수
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ClearDownloadCache
 api_location:
@@ -24,17 +16,13 @@ helpviewer_keywords:
 ms.assetid: df7595d1-430f-44b4-8160-4c2ba9df70b1
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: ffd3eb58a471e5685b34aaae634f6d200375b0eb
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 7bb624c0ad3d74fa86c19233cbac303ffffc122c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cleardownloadcache-function"></a>ClearDownloadCache 함수
 다운로드 된 어셈블리의 전역 어셈블리 캐시를 지웁니다.  
@@ -52,7 +40,7 @@ HRESULT ClearDownloadCache ();
   
  **라이브러리:** Fusion.dll 및 Mscorwks.dll 합니다. 올바른 버전의.NET Framework를 대상 하는 데 Mscorwks.dll 대신 Fusion.dll를 사용 합니다.  
   
- **.NET framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>참고 항목  
  [Fusion 전역 정적 함수](../../../../docs/framework/unmanaged-api/fusion/fusion-global-static-functions.md)  

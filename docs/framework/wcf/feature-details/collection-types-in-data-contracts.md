@@ -1,14 +1,6 @@
 ---
 title: 데이터 계약의 컬렉션 형식
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -17,17 +9,11 @@ helpviewer_keywords:
 - data contracts [WCF], collection types
 - collection types [WCF]
 ms.assetid: 9b45b28e-0a82-4ea3-8c33-ec0094aff9d5
-caps.latest.revision: 19
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: c771d78c5e78feabcfe883934ed7ea3589c938d2
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: dccc53f13889e2073579af19e86459fe56b069e7
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="collection-types-in-data-contracts"></a>데이터 계약의 컬렉션 형식
 *컬렉션* 은 특정 형식의 항목으로 구성된 목록입니다. [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]의 경우 이러한 목록은 배열이나 여러 형식(제네릭 목록, 제네릭 <xref:System.ComponentModel.BindingList%601>, <xref:System.Collections.Specialized.StringCollection>또는 <xref:System.Collections.ArrayList>)을 사용하여 나타낼 수 있습니다. 예를 들어, 컬렉션은 지정된 고객에 대한 주소 목록을 보유할 수 있습니다. 실제 형식에 관계없이 이러한 컬렉션을 *목록 컬렉션*이라고 합니다.  
@@ -86,7 +72,7 @@ ms.lasthandoff: 04/30/2018
   
  serialization을 수행하는 동안 선언된 형식이 인터페이스인 경우 사용된 실제 인스턴스 형식은 해당 인터페이스를 구현하는 모든 형식이 될 수 있습니다. 앞에서 설명한 제한 사항(기본 생성자 및 `Add` 메서드를 사용)은 적용되지 않습니다. 예를 들어, 제네릭 <xref:System.Collections.ObjectModel.ReadOnlyCollection%601> 형식의 데이터 멤버를 직접 선언할 수 없는 경우에도 Customer2의 주소를 제네릭 주소 <xref:System.Collections.ObjectModel.ReadOnlyCollection%601>의 인스턴스로 설정할 수 있습니다  
   
- deserialization을 수행하는 동안 선언된 형식이 인터페이스인 경우 serialization 엔진은 선언된 인터페이스를 구현하는 형식을 선택하고, 해당 형식은 인스턴스화됩니다. 알려진 형식 메커니즘은 (에 설명 된 [데이터 계약 알려진 형식을](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)) 아무 효과가 없습니다 선택한 형식 변환은에 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]합니다.  
+ deserialization을 수행하는 동안 선언된 형식이 인터페이스인 경우 serialization 엔진은 선언된 인터페이스를 구현하는 형식을 선택하고, 해당 형식은 인스턴스화됩니다. 알려진 형식 메커니즘은 (에 설명 된 [데이터 계약 알려진 형식을](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)) 아무 효과가 없습니다 선택한 형식 변환은에 WCF 합니다.  
   
 ## <a name="customizing-collection-types"></a>컬렉션 형식 사용자 지정  
  여러 용도로 사용되는 <xref:System.Runtime.Serialization.CollectionDataContractAttribute> 특성을 사용하여 컬렉션 형식을 사용자 지정할 수 있습니다.  
@@ -235,7 +221,7 @@ ms.lasthandoff: 04/30/2018
 ## <a name="collections-and-schema"></a>컬렉션 및 스키마  
  모든 동일한 컬렉션에는 동일한 표현의 XSD(XML 스키마 정의 언어) 스키마가 있습니다. 이 때문에 일반적으로 서버의 컬렉션 형식과 동일한 컬렉션 형식을 생성된 클라이언트 코드에서 얻을 수 없습니다. 예를 들어, 서버에서 정수 데이터 멤버의 제네릭 <xref:System.Collections.Generic.List%601> 와 함께 데이터 계약을 사용할 수 있지만, 생성된 클라이언트 코드에서 동일한 데이터 멤버가 정수 배열이 될 수 있습니다.  
   
- 사전 컬렉션은 사전임을 나타내는 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]관련 스키마 주석으로 표시됩니다. 그렇지 않으면 키 및 값을 가진 항목이 포함된 단순 목록과 사전 컬렉션이 구분될 수 없습니다. 데이터 계약 스키마에서 컬렉션이 표시되는 방법에 대한 정확한 설명은 [Data Contract Schema Reference](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md)를 참조하십시오.  
+ 사전 컬렉션은 사전; 되는지 여부를 나타내는 WCF 관련 스키마 주석으로 표시 됩니다. 그렇지 않으면 키 및 값을 가진 항목이 포함 된 단순 목록과 구분할 수 있습니다. 데이터 계약 스키마에서 컬렉션이 표시되는 방법에 대한 정확한 설명은 [Data Contract Schema Reference](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md)를 참조하십시오.  
   
  기본적으로 가져온 코드의 사용자 지정되지 않은 컬렉션에 대해서는 형식이 생성되지 않습니다. 목록 컬렉션 형식의 데이터 멤버는 배열로 가져오며, 사전 컬렉션 형식의 데이터 멤버는 제네릭 사전으로 가져옵니다.  
   

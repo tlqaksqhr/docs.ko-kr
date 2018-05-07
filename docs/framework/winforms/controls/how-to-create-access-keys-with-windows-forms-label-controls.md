@@ -1,13 +1,6 @@
 ---
-title: "방법: Windows Forms Label 컨트롤을 사용하여 선택키 만들기"
-ms.custom: 
+title: '방법: Windows Forms Label 컨트롤을 사용하여 선택키 만들기'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -24,16 +17,11 @@ helpviewer_keywords:
 - keyboard shortcuts [Windows Forms], creating for controls
 - access keys [Windows Forms], Windows Forms
 ms.assetid: 5ee8f823-80be-4a4f-96a4-412671e2e306
-caps.latest.revision: "11"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 6a856090a76f484c21c1d9982d67e9fdf21e8451
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: fc9592981f3d926b2b5b85b6869da13dc644e7a0
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-access-keys-with-windows-forms-label-controls"></a>방법: Windows Forms Label 컨트롤을 사용하여 선택키 만들기
 Windows Forms <xref:System.Windows.Forms.Label> 다른 컨트롤에 대 한 선택 키를 정의 하려면 컨트롤을 사용할 수 있습니다. 레이블 컨트롤에 선택 키를 정의할 때 사용자 ALT 키와 탭 순서에서 그 다음에 오는 컨트롤에 포커스를 이동 하도록 지정한 문자를 누를 수 있습니다. 레이블 포커스를 받을 수 없는 때문에 포커스가 탭 순서의 다음 컨트롤로 자동으로 이동 합니다. 이 기술을 사용 하 여 액세스 키 입력란, 콤보 상자, 목록 상자 및 데이터 표를 할당 합니다.  
@@ -42,7 +30,7 @@ Windows Forms <xref:System.Windows.Forms.Label> 다른 컨트롤에 대 한 선�
   
 1.  먼저, 레이블을 그린 하 한 다음 다른 컨트롤을 그립니다.  
   
-     또는  
+     -또는-  
   
      순서에 관계 없이 컨트롤을 그리고 설정는 <xref:System.Windows.Forms.Control.TabIndex%2A> 는 다른 컨트롤과 보다 1 작은 레이블의 속성입니다.  
   

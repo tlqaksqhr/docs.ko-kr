@@ -1,13 +1,6 @@
 ---
-title: "방법: RectangleGeometry를 사용하여 사각형 정의"
-ms.custom: 
+title: '방법: RectangleGeometry를 사용하여 사각형 정의'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -15,21 +8,16 @@ helpviewer_keywords:
 - graphics [WPF], rectangles
 - rectangles [WPF], creating with RectangleGeometry class
 ms.assetid: e40b8a8e-54b8-416b-a9f2-be6dca9fdf0b
-caps.latest.revision: "8"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 3a8254bd60da379d006bc50ab3a935cd83b83d0a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 5d2ec6aec1eea8528ea6b43f72f4820b8bc19a37
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-define-a-rectangle-using-a-rectanglegeometry"></a>방법: RectangleGeometry를 사용하여 사각형 정의
 이 예제에 사용 하는 방법에 설명 된 <xref:System.Windows.Media.RectangleGeometry> 사각형을 설명 하는 클래스입니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  만들고 렌더링 하는 방법을 보여 주는 다음 예제는 <xref:System.Windows.Media.RectangleGeometry>합니다.  정의 된 상대적 위치와 사각형의 크기는 <xref:System.Windows.Rect> 구조입니다. 상대적 위치는 `50,50` 고 높이 너비를 모두 `25` 는 정사각형을 만듭니다. 사각형의 내부로 그려집니다는 <xref:System.Windows.Media.Brushes.LemonChiffon%2A> 로 브러시 및 윤곽선을 그리는 <xref:System.Windows.Media.Brushes.Black%2A> 스트로크 두께를 `1`합니다.  
   
  [!code-xaml[GeometryOverviewSamples_snip#GraphicsMMRectangleGeometryExample](../../../../samples/snippets/csharp/VS_Snippets_Wpf/GeometryOverviewSamples_snip/CS/GeometryExamples.xaml#graphicsmmrectanglegeometryexample)]  

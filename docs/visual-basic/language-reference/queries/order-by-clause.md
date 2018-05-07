@@ -1,11 +1,6 @@
 ---
-title: "Order By 절(Visual Basic)"
+title: Order By 절(Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.QueryOrderBy
 - vb.QueryAscending
@@ -15,14 +10,11 @@ helpviewer_keywords:
 - Order By clause [Visual Basic]
 - Order By statement [Visual Basic]
 ms.assetid: fa911282-6b81-44c7-acfa-46b5bb93df75
-caps.latest.revision: "16"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 21ee21942b966668a67b14aba72b8f9fc5ee903c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 7c60156ee81618530b42d5f61dbcac6f59c4f675
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="order-by-clause-visual-basic"></a>Order By 절(Visual Basic)
 쿼리 결과 대 한 정렬 순서를 지정합니다.  
@@ -35,7 +27,7 @@ Order By orderExp1 [ Ascending | Descending ] [, orderExp2 [...] ]
   
 ## <a name="parts"></a>요소  
  `orderExp1`  
- 필수 요소. 하나 이상의 필드에서 현재 쿼리 결과 반환 된 값을 정렬 하는 방법을 식별 하는입니다. 필드 이름은 쉼표 (,)로 구분 되어야 합니다. 오름차순 또는 사용 하 여 순서를 내림차순으로 정렬 되어 각 필드를 식별할 수 있습니다는 `Ascending` 또는 `Descending` 키워드입니다. 없는 경우 `Ascending` 또는 `Descending` 키워드가 지정 되어, 기본 정렬 순서는 오름차순입니다. 정렬 순서 필드에는 우선 순위가 왼쪽에서 오른쪽으로 제공 됩니다.  
+ 필수. 하나 이상의 필드에서 현재 쿼리 결과 반환 된 값을 정렬 하는 방법을 식별 하는입니다. 필드 이름은 쉼표 (,)로 구분 되어야 합니다. 오름차순 또는 사용 하 여 순서를 내림차순으로 정렬 되어 각 필드를 식별할 수 있습니다는 `Ascending` 또는 `Descending` 키워드입니다. 없는 경우 `Ascending` 또는 `Descending` 키워드가 지정 되어, 기본 정렬 순서는 오름차순입니다. 정렬 순서 필드에는 우선 순위가 왼쪽에서 오른쪽으로 제공 됩니다.  
   
 ## <a name="remarks"></a>설명  
  사용할 수는 `Order By` 절을 쿼리의 결과 정렬 합니다. `Order By` 절만 현재 범위에 대 한 범위 변수는 결과 정렬 합니다. 예를 들어는 `Select` 절에는 해당 범위에 대 한 새 반복 변수를 사용 하는 쿼리 식에 새 범위를 소개 합니다. 범위 변수 앞에 정의 된 `Select` 쿼리의 절 뒤에 사용할 수 없는 `Select` 절. 따라서에서 사용할 수 있는 필드를 기준으로 결과 정렬 하려는 경우는 `Select` 두어야 절은 `Order By` 하기 전에 절은 `Select` 절. 한 예는 쿼리 결과의 일부로 반환 되는 필드에서 정렬 하려는 경우이 작업을 수행 해야 하는 경우입니다.  

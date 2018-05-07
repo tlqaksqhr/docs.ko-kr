@@ -1,27 +1,15 @@
 ---
-title: "방법: C#에서 응용 프로그램에 다중 설정 집합 추가"
-ms.custom: 
+title: '방법: C#에서 응용 프로그램에 다중 설정 집합 추가'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - application settings [Windows Forms], multiple sets
 - application settings [Windows Forms], C#
 ms.assetid: 45007ac6-cf07-4be7-bc38-3f0ef962faf9
-caps.latest.revision: "8"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 1d9bd7d0721aae8691fdbca4d7b934f820666536
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 029dffc878c62613e291620a2bd86971f369d15a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-add-multiple-sets-of-settings-to-your-application-in-c"></a>방법: C#에서 응용 프로그램에 다중 설정 집합 추가 #
 경우에 따라 응용 프로그램에 여러 집합의 설정 사용 하도록는 것이 좋습니다. 예를 들어을 개발 하는 응용 프로그램 설정의 특정 그룹 자주 변경 하려면 필요한 경우 수도 있습니다 파일 전체적으로 바뀔 수 수 있도록 단일 파일에 모두 구분할 수 다른 설정은 영향을 주지 않습니다 유지. Visual Studio를 사용 하면 여러 설정 집합을 프로젝트에 추가할 수 있습니다. 설정의 추가 집합 Properties.Settings 개체를 통해 액세스할 수 있습니다.  

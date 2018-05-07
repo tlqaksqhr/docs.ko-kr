@@ -1,13 +1,6 @@
 ---
-title: "방법: 내용에 맞게 Windows Forms Label 컨트롤 크기 조정"
-ms.custom: 
+title: '방법: 내용에 맞게 Windows Forms Label 컨트롤 크기 조정'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - captions [Windows Forms], sizing
 - sizing controls
@@ -15,16 +8,11 @@ helpviewer_keywords:
 - labels [Windows Forms], sizing to fit contents
 - Label control [Windows Forms], sizing to fit contents
 ms.assetid: 99648964-63b2-438c-980e-d24103ad602b
-caps.latest.revision: "7"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a2c34506ca33af80b83f365893e56a5a9d437b89
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: e067966b606d77ceb9d11d2784c0d5f73ad332a0
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-size-a-windows-forms-label-control-to-fit-its-contents"></a>방법: 내용에 맞게 Windows Forms Label 컨트롤 크기 조정
 Windows Forms <xref:System.Windows.Forms.Label> 또는 여러 줄 컨트롤이 될 수 있으며 자동으로 크기를 조정할 수의 캡션을 맞게 자동 하거나 크기에서 고정 될 수 있습니다. <xref:System.Windows.Forms.Label.AutoSize%2A> 속성을 사용 하면를 캡션에 맞게 컨트롤 크기 조정 되는 런타임 시 캡션이 변경 하는 경우에 특히 유용 합니다.  

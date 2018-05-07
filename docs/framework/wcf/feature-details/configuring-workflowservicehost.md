@@ -1,27 +1,15 @@
 ---
-title: "WorkflowServiceHost 구성"
-ms.custom: 
+title: WorkflowServiceHost 구성
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: d8e961cb-0ef5-4f8c-8a25-e76ae6334fed
-caps.latest.revision: "4"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 743a2541552e5378403234675c43a2a0224a1cc4
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 9fed1cc297b0b014d76baf5a870d7f98b421ae48
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="configuring-workflowservicehost"></a>WorkflowServiceHost 구성
-이 섹션에서는 간단한 "방법"는의 여러 기능을 구성 하는 방법에 간략하게 설명 하는 항목은 <xref:System.ServiceModel.Activities.WorkflowServiceHost> 구성에서 클래스입니다. 이러한 항목에서는 워크플로 서비스 관련 구성에 대해 설명합니다. 다른 모든 구성은 일반적인 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 서비스와 동일한 방식으로 수행됩니다.  
+이 섹션에서는 간단한 "방법"는의 여러 기능을 구성 하는 방법에 간략하게 설명 하는 항목은 <xref:System.ServiceModel.Activities.WorkflowServiceHost> 구성에서 클래스입니다. 이러한 항목에서는 워크플로 서비스 관련 구성에 다른 모든 구성은 일반 WCF 서비스와 동일한 방식으로 수행 됩니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
  [방법: WorkflowServiceHost를 사용하여 지속성 구성](../../../../docs/framework/wcf/feature-details/how-to-configure-persistence-with-workflowservicehost.md)  

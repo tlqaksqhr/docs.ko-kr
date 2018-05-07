@@ -1,29 +1,17 @@
 ---
 title: 워크플로 보안
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - programming [WF], workflow security
 ms.assetid: d712a566-f435-44c0-b8c0-49298e84b114
-caps.latest.revision: 13
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: bfd7c3e36bf28c364adf3cd230522cfc40a9503b
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 8acfd0640478cf67309fe53a99707c7d96c5a635
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="workflow-security"></a>워크플로 보안
-Windows WF (Workflow Foundation) 통합 된 Microsoft SQL Server와 같은 여러 가지 서로 다른 기술 및 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)]합니다. 이러한 기술과 잘못 상호 작용하면 워크플로에 보안 문제가 발생할 수 있습니다.  
+Windows WF (Workflow Foundation)는 Microsoft SQL Server 및 Windows Communication Foundation (WCF)와 같은 여러 가지 다른 기술로와 통합 됩니다. 이러한 기술과 잘못 상호 작용하면 워크플로에 보안 문제가 발생할 수 있습니다.  
   
 ## <a name="persistence-security-concerns"></a>지속성 보안 고려 사항  
   
@@ -49,7 +37,7 @@ Windows WF (Workflow Foundation) 통합 된 Microsoft SQL Server와 같은 여�
   
 ## <a name="considerations-for-workflowservicehost"></a>WorkflowServiceHost에 대한 고려 사항  
   
--   워크플로에 사용되는 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 끝점을 보호해야 합니다. 자세한 내용은 참조 [WCF 보안 개요](http://go.microsoft.com/fwlink/?LinkID=164975)합니다.  
+-   워크플로에서 사용 되는 Windows Communication Foundation (WCF) 끝점을 보호 해야 합니다. 자세한 내용은 참조 [WCF 보안 개요](http://go.microsoft.com/fwlink/?LinkID=164975)합니다.  
   
 -   <xref:System.ServiceModel.ServiceAuthorizationManager>를 사용하여 호스트 수준 권한 부여를 구현할 수 있습니다. 참조 [방법: 서비스에 대 한 사용자 지정 권한 부여 관리자 만들기](http://go.microsoft.com/fwlink/?LinkId=192228) 대 한 자세한 내용은 합니다. 다음 샘플에도 설명 되어: [워크플로 서비스 보안](../../../docs/framework/windows-workflow-foundation/samples/securing-workflow-services.md)합니다.  
   

@@ -1,28 +1,16 @@
 ---
-title: "방법: 다른 부모에 기존 컨트롤 다시 할당"
-ms.custom: 
+title: '방법: 다른 부모에 기존 컨트롤 다시 할당'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - container controls [Windows Forms], Windows Forms
 - layout [Windows Forms], resizing
 - layout [Windows Forms], child controls
 ms.assetid: 5a5723ff-34e0-4b6f-a57b-be4ebe35cb34
-caps.latest.revision: "7"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 26998c002591850c0af3c265ae88b10657343787
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: d174492e380130ad35fbc20693e18416c48a50f1
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-reassign-existing-controls-to-a-different-parent"></a>방법: 다른 부모에 기존 컨트롤 다시 할당
 폼에 있는 컨트롤을 새 컨테이너 컨트롤에 할당할 수 있습니다.  

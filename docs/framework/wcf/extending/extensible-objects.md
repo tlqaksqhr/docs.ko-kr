@@ -1,23 +1,14 @@
 ---
-title: "확장 가능한 개체"
+title: 확장 가능한 개체
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.technology:
-- dotnet-clr
-ms.topic: article
 helpviewer_keywords:
 - extensible objects [WCF]
 ms.assetid: bc88cefc-31fb-428e-9447-6d20a7d452af
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: a1bb341d9e164b1ce232f238f8ddf4a0cf807363
-ms.sourcegitcommit: c1904b0437605a90e5aa65b4abd7e048000e349d
-ms.translationtype: MT
+ms.openlocfilehash: 4fdb3ddff6bda21ac7f9538645d92f15e0b443b9
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/24/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="extensible-objects"></a>확장 가능한 개체
 새 기능과 함께 기존 런타임 클래스를 확장하거나 새 상태를 개체에 추가하기 위해 확장명 가능한 개체 패턴이 사용됩니다. 확장명 가능한 개체 중 하나에 연결된 확장은 이 개체에서 액세스할 수 있는 확장명 가능한 일반 개체에 연결된 공유 상태 및 기능에 액세스하는 처리 시에 매우 다른 단계에서 동작을 활성화합니다.  
@@ -57,7 +48,7 @@ where T : IExtensibleObject<T>
  <xref:System.ServiceModel.IExtensionCollection%601> 인터페이스는 <xref:System.ServiceModel.IExtension%601>을 형식별로 검색할 수 있는 <xref:System.ServiceModel.IExtension%601> 개체의 컬렉션입니다. <xref:System.ServiceModel.IExtensionCollection%601.Find%2A?displayProperty=nameWithType>는 해당 형식의 <xref:System.ServiceModel.IExtension%601> 중에서 최근 추가된 개체만 반환합니다.  
   
 ### <a name="extensible-objects-in-windows-communication-foundation"></a>Windows Communication Foundation의 확장 가능한 개체  
- [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]에는 다음과 같은 네 개의 확장 가능한 개체가 있습니다.  
+ Windows Communication Foundation (WCF)에 4 개의 확장 가능한 개체:  
   
 -   <xref:System.ServiceModel.ServiceHostBase> – 서비스 호스트의 기본 클래스입니다.  이 클래스의 확장을 사용하여 <xref:System.ServiceModel.ServiceHostBase> 자체의 동작을 확장하거나 각 서비스의 상태를 저장할 수 있습니다.  
   

@@ -1,11 +1,6 @@
 ---
-title: "OrElse 연산자(Visual Basic)"
+title: OrElse 연산자(Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - OrElse
 - vb.OrElse
@@ -16,14 +11,11 @@ helpviewer_keywords:
 - short-circuit evaluation
 - OrElse operator [Visual Basic]
 ms.assetid: 253803d8-05b0-47d7-b213-abd222847779
-caps.latest.revision: "15"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 47239a1d2b5b20f2b8cacc9b9185a0f95f63dc84
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 1ee3c1a5b6089f44742281eb40e2a7e9cb3e2812
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="orelse-operator-visual-basic"></a>OrElse 연산자(Visual Basic)
 두 식에 포함 논리합 단락 수행 합니다.  
@@ -36,13 +28,13 @@ result = expression1 OrElse expression2
   
 ## <a name="parts"></a>요소  
  `result`  
- 필수 요소. 임의의 `Boolean` 식입니다.  
+ 필수. 임의의 `Boolean` 식입니다.  
   
  `expression1`  
- 필수 요소. 임의의 `Boolean` 식입니다.  
+ 필수. 임의의 `Boolean` 식입니다.  
   
  `expression2`  
- 필수 요소. 임의의 `Boolean` 식입니다.  
+ 필수. 임의의 `Boolean` 식입니다.  
   
 ## <a name="remarks"></a>설명  
  하나의 논리 연산자를 라고 *단락 (short-circuiting)* 컴파일된 코드는 다른 식의 결과 따라 각 식의 평가 건너뛸 수 있는 경우. 작업의 최종 결과 결정 하는 평가 되는 첫 번째 식의 결과가 두 번째 식을 계산할 필요가 없습니다 때문에 최종 결과 변경할 수 없습니다. 단락 (short-circuiting) 건너뛸 식이 복잡 하거나 프로시저 호출이 포함 된 경우 성능을 향상 시킬 수 있습니다.  

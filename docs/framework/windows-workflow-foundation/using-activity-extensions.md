@@ -1,30 +1,19 @@
 ---
-title: "활동 확장명 사용"
-ms.custom: 
+title: 활동 확장명 사용
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 500eb96a-c009-4247-b6b5-b36faffdf715
-caps.latest.revision: "5"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 6bc2e498a4073f6f0881e011b00de6ac89f4f2fe
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 32c465ae42a1f0238fab7bba5ea795486db3b562
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-activity-extensions"></a>활동 확장명 사용
 활동은 호스트에서 워크플로에 명시적으로 모델링되지 않은 추가 기능을 제공할 수 있도록 하는 워크플로 응용 프로그램 확장과 상호 작용할 수 있습니다.  이 항목에서는 활동이 실행되는 횟수를 계산하기 위해 확장을 만들고 사용하는 방법을 설명합니다.  
   
 ### <a name="to-use-an-activity-extension-to-count-executions"></a>활동 확장을 사용하여 실행 횟수를 계산하려면  
   
-1.  [!INCLUDE[vs2010](../../../includes/vs2010-md.md)]를 엽니다. 선택 **새**, **프로젝트**합니다. 아래는 **Visual C#** 노드를 **워크플로**합니다.  선택 **워크플로 콘솔 응용 프로그램** 템플릿 목록에서. 프로젝트 이름을 `Extensions`로 지정합니다. 클릭 **확인** 프로젝트를 만듭니다.  
+1.  [!INCLUDE[vs2010](../../../includes/vs2010-md.md)]를 엽니다. 선택 **새**, **프로젝트**합니다. 아래는 **Visual C#** 노드를 **워크플로**합니다.  선택 **워크플로 콘솔 응용 프로그램** 템플릿 목록에서. 프로젝트 이름을 `Extensions`로 지정합니다. **확인**을 클릭해 프로젝트를 만듭니다.  
   
 2.  추가 `using` 문을 Program.cs 파일에는 **System.Collections.Generic** 네임 스페이스입니다.  
   

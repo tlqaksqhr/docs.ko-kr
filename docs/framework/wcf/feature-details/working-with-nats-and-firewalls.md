@@ -1,34 +1,20 @@
 ---
 title: NAT 및 방화벽 작업
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - firewalls [WCF]
 - NATs [WCF]
 ms.assetid: 74db0632-1bf0-428b-89c8-bd53b64332e7
-caps.latest.revision: 12
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: fe74b4bd86a25a8e6b769be1abe5fd81e5ffe5f9
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 72582af358d363038d09b313632c023f3c054dbe
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="working-with-nats-and-firewalls"></a>NAT 및 방화벽 작업
 네트워크 연결의 클라이언트와 서버에 통신을 위한 직접 및 열린 경로가 없는 경우가 자주 발생합니다. 패킷은 네트워크의 중간 컴퓨터와 끝점 컴퓨터 모두에서 필터링, 라우트, 분석 및 변환됩니다. NAT(Network Address Translation) 및 방화벽은 네트워크 통신에 참여할 수 있는 일반적인 중간 응용 프로그램의 예입니다.  
   
- [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 전송 및 MEP(메시지 교환 패턴)는 NAT와 방화벽의 존재 여부에 따라 다르게 동작합니다. 이 항목에서는 NAT 및 방화벽이 일반 네트워크 토폴로지에서 작동하는 방식에 대해 설명합니다. 네트워크의 NAT 및 방화벽에서 응용 프로그램을 더욱 강력하게 해주는 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 전송 및 MEP 조합에 대해 권장합니다.  
+ Windows Communication Foundation (WCF) 전송 및 메시지 교환 패턴 (Mep) Nat와 방화벽의 존재 여부에 따라 다르게 동작 합니다. 이 항목에서는 NAT 및 방화벽이 일반 네트워크 토폴로지에서 작동하는 방식에 대해 설명합니다. WCF 전송 및 Mep의 특정 조합에 대 한 권장 사항 증명이 Nat 및 방화벽에서 네트워크에 보다 강력한 응용 프로그램을 확인 하는 데 도움이 됩니다.  
   
 ## <a name="how-nats-affect-communication"></a>NAT가 통신에 미치는 영향  
  여러 컴퓨터가 단일의 외부 IP 주소를 공유할 수 있도록 NAT를 만들었습니다. 포트 다시 매핑 NAT는 연결에 사용되는 내부 IP 주소와 포트를 새 포트 번호를 사용하여 외부 IP 주소에 매핑합니다. NAT는 새 포트 번호를 사용하여 반환 트래픽을 원래의 통신에 연결할 수 있습니다. 대부분의 개인 사용자는 개별적으로 라우팅 가능한 IP 주소를 가지고 있으며 NAT를 사용하여 전역 패킷 라우팅을 제공합니다.  
@@ -45,7 +31,7 @@ ms.lasthandoff: 04/28/2018
  개인 사용자 방화벽의 일반적인 구성에서는 나가는 연결이 해당 컴퓨터에서 설정될 때까지 들어오는 연결을 금지합니다. 비즈니스 사용자 방화벽의 일반적인 구성에서는 특별히 식별된 그룹을 제외한 모든 포트에서 들어오는 연결을 금지합니다. 예를 들어, HTTP 및 HTTPS 서비스를 제공하기 위해 포트 80 및 443을 제외한 모든 포트에서 연결을 금지하는 방화벽이 있습니다. 개인 사용자와 비즈니스 사용자 모두에 컴퓨터의 신뢰할 수 있는 사용자 또는 프로세스에서 방화벽 구성을 변경할 수 있도록 허용하는 관리되는 방화벽이 있습니다. 관리되는 방화벽은 네트워크 사용을 제어하는 회사 정책이 없는 개인 사용자에게 더 일반적입니다.  
   
 ## <a name="using-teredo"></a>Teredo 사용  
- Teredo는 NAT 뒤에서 컴퓨터의 주소를 직접 지정할 수 있는 IPv6 전환 기술입니다. Teredo는 잠재적 연결을 광고하기 위해 공개적이고 전역적으로 라우팅될 수 있는 서버를 사용합니다. Teredo 서버는 응용 프로그램 클라이언트와 서버에 연결 정보를 교환할 수 있는 공통 만남 지점을 제공합니다. 컴퓨터는 임시 Teredo 주소를 요청하고 패킷이 기존 네트워크를 통해 터널링됩니다. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서 Teredo를 지원하려면 운영 체제에서 IPv6 및 Teredo가 지원되도록 해야 합니다. [!INCLUDE[wxp](../../../../includes/wxp-md.md)] 이상 운영 체제에서는 Teredo를 지원합니다. [!INCLUDE[wv](../../../../includes/wv-md.md)] 이상 운영 체제에서는 기본적으로 IPv6을 지원하므로 사용자가 Teredo를 사용하도록 설정하기만 하면 됩니다. [!INCLUDE[wxpsp2](../../../../includes/wxpsp2-md.md)] 및 [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)]에서는 IPv6과 Teredo를 모두 사용하도록 설정해야 합니다. 자세한 내용은 참조는 [Teredo 개요](http://go.microsoft.com/fwlink/?LinkId=87571)합니다.  
+ Teredo는 NAT 뒤에서 컴퓨터의 주소를 직접 지정할 수 있는 IPv6 전환 기술입니다. Teredo는 잠재적 연결을 광고하기 위해 공개적이고 전역적으로 라우팅될 수 있는 서버를 사용합니다. Teredo 서버는 응용 프로그램 클라이언트와 서버에 연결 정보를 교환할 수 있는 공통 만남 지점을 제공합니다. 컴퓨터는 임시 Teredo 주소를 요청하고 패킷이 기존 네트워크를 통해 터널링됩니다. WCF에서 teredo를 지원 운영 체제의 지원 IPv6 및 Teredo를 사용 하도록 설정 해야 합니다. [!INCLUDE[wxp](../../../../includes/wxp-md.md)] 이상 운영 체제에서는 Teredo를 지원합니다. [!INCLUDE[wv](../../../../includes/wv-md.md)] 이상 운영 체제에서는 기본적으로 IPv6을 지원하므로 사용자가 Teredo를 사용하도록 설정하기만 하면 됩니다. [!INCLUDE[wxpsp2](../../../../includes/wxpsp2-md.md)] 및 [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)]에서는 IPv6과 Teredo를 모두 사용하도록 설정해야 합니다. 자세한 내용은 참조는 [Teredo 개요](http://go.microsoft.com/fwlink/?LinkId=87571)합니다.  
   
 ## <a name="choosing-a-transport-and-message-exchange-pattern"></a>전송 및 메시지 교환 패턴 선택  
  전송 및 MEP 선택은 3단계 프로세스입니다.  
@@ -64,7 +50,7 @@ ms.lasthandoff: 04/28/2018
   
 -   끝점 등록 또는 트래픽 릴레이를 위해 연결 가능한 서비스를 사용하십시오. Teredo 서버처럼 전역적으로 연결 가능한 연결 서비스를 사용하면 네트워크 토폴로지가 제한적이거나 알 수 없는 경우 연결 성공 가능성이 크게 높아집니다.  
   
- 다음 표에서는 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서의 단방향, 요청-회신 및 이중 MEP를 비롯하여 표준 TCP, Teredo 사용 TCP 및 표준 및 이중 HTTP 전송에 대해 보여 줍니다.  
+ 다음 표에서 단방향, 요청-회신 및 이중 Mep 및 표준 TCP, Teredo 사용 TCP 검토 하 고 표준 및 이중 HTTP 전송에서는 WCF에서 키를 누릅니다.  
   
 |주소 지정 기능|서버에서 직접|서버에서 직접(NAT 통과)|서버 NAT|서버 NAT(NAT 통과)|  
 |--------------------|-------------------|--------------------------------------|----------------|-----------------------------------|  

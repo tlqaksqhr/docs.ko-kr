@@ -1,13 +1,6 @@
 ---
-title: "GDI+의 영역"
-ms.custom: 
+title: GDI+의 영역
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -16,16 +9,11 @@ helpviewer_keywords:
 - drawing [Windows Forms], regions
 - regions
 ms.assetid: 52184f9b-16dd-4bbd-85be-029112644ceb
-caps.latest.revision: "15"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 2d3805c2d67f5241425ef72d3802aba996d33cfb
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: dc7f10571163d447802c90cd61d71b11d0e695d4
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="regions-in-gdi"></a>GDI+의 영역
 영역에는 출력 장치의 표시 영역의 일부입니다. 영역 (단일 사각형) 단순 또는 복합 (다각형 및 폐곡선 조합) 될 수 있습니다. 다음 그림에는 두 개의 영역을 보여 줍니다: 하나는 사각형에서 구현 되 고 다른 경로에서 구성 됩니다.  

@@ -1,27 +1,15 @@
 ---
-title: "방법: 변경 내용 충돌 관리"
-ms.custom: 
+title: '방법: 변경 내용 충돌 관리'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: cd292c51-a3d1-4c6f-8d8e-04323c36054e
-caps.latest.revision: "2"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: caacb4c3b877ce6bf7ba11001f602a76ad7f9734
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 7858dc304d281dfb99755d83eec19b421f63d2ce
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-manage-change-conflicts"></a>방법: 변경 내용 충돌 관리
-[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]검색, 평가 및 동시성 충돌을 해결할 수 있도록 Api의 컬렉션을 제공 합니다.  
+[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 검색, 평가 및 동시성 충돌을 해결할 수 있도록 Api의 컬렉션을 제공 합니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
  [방법: 전송 충돌 검색 및 해결](../../../../../../docs/framework/data/adonet/sql/linq/how-to-detect-and-resolve-conflicting-submissions.md)  

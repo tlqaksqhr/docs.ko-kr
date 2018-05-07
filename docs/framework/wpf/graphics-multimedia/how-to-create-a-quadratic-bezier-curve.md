@@ -1,33 +1,21 @@
 ---
-title: "방법: 정방형 3차원 곡선 만들기"
-ms.custom: 
+title: '방법: 정방형 3차원 곡선 만들기'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - Bezier curves [WPF], creating
 - quadratic Bezier curves [WPF], creating
 - graphics [WPF], quadratic Bezier curves
 ms.assetid: cd8fca4a-504e-4fd8-92ea-2969065a6e02
-caps.latest.revision: "8"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 3cd349ae11a76acda81e44652ca5463b18e1dda8
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 9d389125b6ad09833a16b64cb8f498cc20d4e79c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-a-quadratic-bezier-curve"></a>방법: 정방형 3차원 곡선 만들기
 이 예제에 정방형 3 차원 곡선을 만드는 방법을 보여 줍니다.  정방형 3 차원 곡선을 만들려면 사용는 <xref:System.Windows.Media.PathGeometry>, <xref:System.Windows.Media.PathFigure>, 및 <xref:System.Windows.Media.QuadraticBezierSegment> 클래스입니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 예제에서 정방형 3 차원 곡선을 그립니다 (10100)에서 (300100). 곡선 (200200)의 제어 지점을 있습니다.  
   
  [xaml]  

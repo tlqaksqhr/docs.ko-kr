@@ -1,28 +1,16 @@
 ---
-title: "Windows Forms DataGridView 컨트롤의 데이터 입력"
-ms.custom: 
+title: Windows Forms DataGridView 컨트롤의 데이터 입력
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - DataGridView control [Windows Forms], data entry
 - data entry [Windows Forms], dataGridView control
 - data grids [Windows Forms], data entry
 ms.assetid: 4a6d4676-d4e7-4b0e-9c22-50ce65ffe0d6
-caps.latest.revision: "11"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 399520738c53e149e7a5539a62a5d4599e26a8da
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: f5870b3cedd18d605426c7e27981303adc9beb5e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="data-entry-in-the-windows-forms-datagridview-control"></a>Windows Forms DataGridView 컨트롤의 데이터 입력
 `DataGridView` 컨트롤 사용자가 추가 또는 컨트롤의 데이터를 수정할 방식을 변경할 수 있는 여러 가지 기능을 제공 합니다. 예를 들어 가능 데이터 입력 보다 효율적인 새 행에 대 한 기본 값을 제공 하 고 오류 발생 시 사용자가 경고 하 여 합니다.  

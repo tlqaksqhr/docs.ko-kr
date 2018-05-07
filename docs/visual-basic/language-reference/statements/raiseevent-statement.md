@@ -1,11 +1,6 @@
 ---
-title: "RaiseEvent 문"
+title: RaiseEvent 문
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.RaiseEventMethod
 - vb.RaiseEvent
@@ -15,14 +10,11 @@ helpviewer_keywords:
 - RaiseEvent statement [Visual Basic]
 - event handlers, connecting events to
 ms.assetid: f82e380a-1e6b-4047-bea8-c853f4d2c742
-caps.latest.revision: "19"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: e6ba5ce4b009e0d8c675db07b56b9811c595ae2f
-ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
+ms.openlocfilehash: 19949fbdb1c1c54556876323d839b16fc01608f9
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="raiseevent-statement"></a>RaiseEvent 문
 트리거는 이벤트 클래스, 폼 또는 문서의 모듈 수준에서 선언 되었습니다.  
@@ -57,7 +49,7 @@ RaiseEvent eventname[( argumentlist )]
 > [!NOTE]
 >  사용자 지정 이벤트를 정의 하 여 이벤트의 기본 동작을 변경할 수 있습니다. 사용자 지정 이벤트에는 `RaiseEvent` 문은 이벤트의 호출 `RaiseEvent` 접근자입니다. 사용자 지정 이벤트에 대 한 자세한 내용은 참조 하십시오. [Event 문](../../../visual-basic/language-reference/statements/event-statement.md)합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 예제에서는 이벤트를 사용하여 10초부터 0초까지 카운트 다운합니다. 코드에 나와 있는 일부의 이벤트 관련 메서드, 속성 및 포함 하는 문을 `RaiseEvent` 문.  
   
  이벤트를 발생시키는 클래스는 이벤트 소스이고 이벤트를 처리하는 메서드는 이벤트 처리기입니다. 이벤트 소스는 생성되는 이벤트에 대해 여러 개의 처리기를 사용할 수 있습니다. 클래스에서 이벤트를 발생시키면 해당 이벤트는 개체의 해당 인스턴스에 대해 이벤트를 처리하도록 선택한 모든 클래스에서 발생됩니다.  
@@ -72,7 +64,7 @@ RaiseEvent eventname[( argumentlist )]
   
  [!code-vb[VbVbalrEvents#14](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/raiseevent-statement_2.vb)]  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  `Form1`에 대한 코드에 다음 코드를 추가합니다. 교체와 같은 있을 수 있는 모든 중복 프로시저 `Form_Load`, 또는 `Button_Click`합니다.  
   
  [!code-vb[VbVbalrEvents#15](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/raiseevent-statement_3.vb)]  

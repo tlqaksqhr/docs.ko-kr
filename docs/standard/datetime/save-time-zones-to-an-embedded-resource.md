@@ -1,13 +1,7 @@
 ---
-title: "방법: 포함 된 표준 시간대 저장"
-ms.custom: 
+title: '방법: 포함 된 표준 시간대 저장'
 ms.date: 04/10/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -16,18 +10,13 @@ helpviewer_keywords:
 - time zone objects [.NET Framework], serializing
 - time zone objects [.NET Framework], saving
 ms.assetid: 3c96d83a-a057-4496-abb0-8f4b12712558
-caps.latest.revision: "12"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 93dfc62df1c1d68e09a3734402924bbac1a074cb
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 4dd7e6db78b76d737cb4646c2fad79d96fb60aee
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-save-time-zones-to-an-embedded-resource"></a>방법: 포함 된 표준 시간대 저장
 
@@ -69,7 +58,7 @@ ms.lasthandoff: 12/23/2017
 
 10. 사용 하는 **속성** Visual Studio 창에 표시 되도록.resx 파일의 **빌드 작업** 속성이로 설정 되어 **포함 리소스**합니다.
 
-## <a name="example"></a>예
+## <a name="example"></a>예제
 
 다음 예제에서는 serialize 한 <xref:System.TimeZoneInfo> 중부 표준시를 나타내는 개체와 <xref:System.TimeZoneInfo> SerializedTimeZones.resx 라고 하는.NET XML 리소스 파일에 Palmer 스테이션, 남극 대륙 시간을 나타내는 개체입니다. 레지스트리에; 중부 표준시 정의 일반적으로 Palmer 스테이션 남극 대륙 사용자 지정 표준 시간대입니다.
 
@@ -93,7 +82,7 @@ ms.lasthandoff: 12/23/2017
   [!code-csharp[TimeZone2.Serialization#2](../../../samples/snippets/csharp/VS_Snippets_CLR/TimeZone2.Serialization/cs/SerializeTimeZoneData.cs#2)]
   [!code-vb[TimeZone2.Serialization#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/TimeZone2.Serialization/vb/SerializeTimeZoneData.vb#2)]
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참고자료
 
 [날짜, 시간 및 표준 시간대](../../../docs/standard/datetime/index.md)
 [시간대 개요](../../../docs/standard/datetime/time-zone-overview.md)

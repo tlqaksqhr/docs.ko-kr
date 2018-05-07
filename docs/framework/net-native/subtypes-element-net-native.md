@@ -1,24 +1,14 @@
 ---
-title: "&lt;하위 형식&gt; 요소(.NET 네이티브)"
-ms.custom: 
+title: '&lt;하위 형식&gt; 요소(.NET 네이티브)'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: fb854070-248b-46cf-9dab-c322e2b4d624
-caps.latest.revision: "11"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: d9609027d31e757af93f6a4401a784a68a53cfdb
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: f850ec24530dd9a7d80f826461cacd9c249dd0de
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ltsubtypesgt-element-net-native"></a>&lt;하위 형식&gt; 요소(.NET 네이티브)
 포함 형식에서 상속된 모든 클래스에 런타임 정책을 적용합니다.  
@@ -39,7 +29,7 @@ ms.lasthandoff: 12/22/2017
 ```  
   
 ## <a name="attributes-and-elements"></a>특성 및 요소  
- 다음 단원에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
+ 다음 섹션에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
   
 ### <a name="attributes"></a>특성  
   
@@ -76,7 +66,7 @@ ms.lasthandoff: 12/22/2017
   
  리플렉션, serialization 및 interop 특성은 모두 선택적 항목이지만 하나 이상 있어야 합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 예제에서는 `BaseClass` 클래스와 `Derived1` 하위 클래스를 정의합니다.  
   
  [!code-csharp[ProjectN_Reflection#4](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn_reflection/cs/subtypes.cs#4)]  

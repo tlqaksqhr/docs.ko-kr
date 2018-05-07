@@ -1,29 +1,15 @@
 ---
 title: 워크플로 서비스 호스팅
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 2d55217e-8697-4113-94ce-10b60863342e
-caps.latest.revision: 12
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 21c4ba6a85c2da655b3d0988917165bf84ae64d1
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 02d77b851dcd35108668ee6a42022e9721b84bd8
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="hosting-workflow-services"></a>워크플로 서비스 호스팅
-워크플로 서비스가 들어오는 메시지에 응답하기 위해서는 해당 워크플로 서비스를 호스팅해야 합니다. 워크플로 서비스는 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 메시징 인프라를 사용하기 때문에 비슷한 방식으로 호스팅됩니다. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 서비스와 마찬가지로 워크플로 서비스는 모든 관리되는 응용 프로그램, IIS(인터넷 정보 서비스) 또는 WAS(Windows Process Activation Services)에서 호스팅할 수 있습니다. 또한 워크플로 서비스는 Windows Server AppFabric에서 호스팅할 수 있습니다. Windows Server App Fabric에 대 한 자세한 내용은 참조 [Windows Server App Fabric 설명서](http://go.microsoft.com/fwlink/?LinkId=193037), [AppFabric 호스팅 기능](http://go.microsoft.com/fwlink/?LinkId=196494), 및 [AppFabric 호스팅 개념](http://go.microsoft.com/fwlink/?LinkId=196495)합니다. 호스트에는 다양 한 방법에 대 한 자세한 내용은 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 서비스 참조 [호스팅 서비스](../../../../docs/framework/wcf/hosting-services.md)합니다.  
+워크플로 서비스가 들어오는 메시지에 응답하기 위해서는 해당 워크플로 서비스를 호스팅해야 합니다. 워크플로 서비스는 WCF 메시징 인프라를 사용하기 때문에 WCF 서비스와 비슷한 방식으로 호스팅됩니다. WCF 서비스와 같은 모든 관리 되는 응용 프로그램에서 인터넷 정보 서비스 (IIS), 또는에서 프로세스 활성화 서비스 WAS (Windows)에서 워크플로 서비스를 호스팅할 수 있습니다. 또한 워크플로 서비스는 Windows Server AppFabric에서 호스팅할 수 있습니다. Windows Server App Fabric에 대 한 자세한 내용은 참조 [Windows Server App Fabric 설명서](http://go.microsoft.com/fwlink/?LinkId=193037), [AppFabric 호스팅 기능](http://go.microsoft.com/fwlink/?LinkId=196494), 및 [AppFabric 호스팅 개념](http://go.microsoft.com/fwlink/?LinkId=196495)합니다. 참조를 서비스 하는 WCF 호스트 하는 다양 한 방법에 대 한 자세한 내용은 [호스팅 서비스](../../../../docs/framework/wcf/hosting-services.md)합니다.  
   
 ## <a name="hosting-in-a-managed-application"></a>관리되는 응용 프로그램에서 호스팅  
  관리되는 응용 프로그램에서 워크플로 서비스를 호스팅하려면 <xref:System.ServiceModel.Activities.WorkflowServiceHost> 클래스를 사용합니다. <xref:System.ServiceModel.Activities.WorkflowServiceHost> 생성자를 사용하면 singleton 워크플로 서비스 인스턴스, 워크플로 서비스 정의 또는 워크플로 메시징 작업을 사용하는 작업을 지정할 수 있습니다. 호출 <<!--zz xref:System.ServiceModel.Activities.WorkflowServiceHost.Open%2A--> `System.ServiceModel.Activities.WorkflowServiceHost.Open`> 하면 서비스가 들어오는 메시지를 수신 대기를 시작 합니다.  

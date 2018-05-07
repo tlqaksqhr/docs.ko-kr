@@ -1,35 +1,21 @@
 ---
 title: '연습: 사용자 지정 클라이언트 및 서비스 자격 증명 만들기'
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 2b5ba5c3-0c6c-48e9-9e46-54acaec443ba
-caps.latest.revision: 13
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: cf9f6c1ad5be3a2d63140f03f74713809624e277
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
-ms.translationtype: MT
+ms.openlocfilehash: 8c5608276de935f07dca88e343143112b8fdcc20
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="walkthrough-creating-custom-client-and-service-credentials"></a>연습: 사용자 지정 클라이언트 및 서비스 자격 증명 만들기
 이 항목에서는 사용자 지정 클라이언트와 서비스 자격 증명을 구현하는 방법 및 응용 프로그램 코드로부터 사용자 지정 자격 증명을 사용하는 방법을 보여 줍니다.  
   
 ## <a name="credentials-extensibility-classes"></a>자격 증명 확장성 클래스  
- <xref:System.ServiceModel.Description.ClientCredentials> 및 <xref:System.ServiceModel.Description.ServiceCredentials> 클래스는 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 보안 확장성에 대한 주요 진입점입니다. 이러한 자격 증명 클래스는 API를 제공합니다. 이 API를 통해 응용 프로그램 코드에서는 자격 증명 정보를 설정하고, 자격 증명 형식을 보안 토큰으로 변환할 수 있습니다. (*보안 토큰* 양식 자격 증명 정보를 SOAP 메시지 내부에서 전송 하는 데 사용 됩니다.) 이러한 자격 증명 클래스의 책임은 다음과 같은 두 가지 영역으로 나눠 볼 수 있습니다.  
+ <xref:System.ServiceModel.Description.ClientCredentials> 및 <xref:System.ServiceModel.Description.ServiceCredentials> 클래스는 Windows Communication Foundation (WCF) 보안 확장성 주 진입점입니다. 이러한 자격 증명 클래스는 API를 제공합니다. 이 API를 통해 응용 프로그램 코드에서는 자격 증명 정보를 설정하고, 자격 증명 형식을 보안 토큰으로 변환할 수 있습니다. (*보안 토큰* 양식 자격 증명 정보를 SOAP 메시지 내부에서 전송 하는 데 사용 됩니다.) 이러한 자격 증명 클래스의 책임은 다음과 같은 두 가지 영역으로 나눠 볼 수 있습니다.  
   
 -   응용 프로그램에서 자격 증명 정보를 설정하도록 API 제공  
   

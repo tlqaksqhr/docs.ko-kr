@@ -1,31 +1,17 @@
 ---
 title: 방법:.NET Framework 3.5 설치 여부 검색
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-wpf
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - verifying whether.NET Framework 3.5 is installed [WPF]
 - detecting .NET Framework 3.5 installation [WPF]
 - detecting whether.NET Framework 3.5 is installed [WPF]
 - determining whether.NET Framework 3.5 is installed [WPF]
 ms.assetid: 8556a9d2-1eb8-48ef-919c-5baf22a2a9a2
-caps.latest.revision: 7
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: e4999e3e1a9e402cb8848d030ab483f057428486
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 0d0f99dfa88216d0d768895ea751b0f62eccf701
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-detect-whether-the-net-framework-35-is-installed"></a>방법:.NET Framework 3.5 설치 여부 검색
 관리자를 대상으로 하는 시스템에서 Windows Presentation Foundation (WPF) 응용 프로그램을 배포할 수는 [!INCLUDE[net_v35_short](../../../../includes/net-v35-short-md.md)], 했는지 먼저 확인 해야 하는 [!INCLUDE[net_v35_short](../../../../includes/net-v35-short-md.md)] 런타임이 있는지 합니다. 이 항목에서는 작성 된 스크립트 관리자가 결정 하는 데 사용할 수 있는 HTML/javascript 여부는 [!INCLUDE[net_v35_short](../../../../includes/net-v35-short-md.md)] 는 시스템에 있습니다.  

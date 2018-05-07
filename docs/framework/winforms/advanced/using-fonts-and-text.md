@@ -1,13 +1,6 @@
 ---
-title: "글꼴 및 텍스트 사용"
-ms.custom: 
+title: 글꼴 및 텍스트 사용
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - GDI [Windows Forms], drawing text [Windows Forms]
 - text [Windows Forms], drawing in Windows Forms
@@ -15,16 +8,11 @@ helpviewer_keywords:
 - fonts [Windows Forms], using in Windows Forms
 - strings [Windows Forms], drawing in Windows Forms
 ms.assetid: d43640f3-da94-4df2-a29d-a9d021a1c069
-caps.latest.revision: "16"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: f4febeed6aff2c18b5040020c2c1d3ee6cf59a52
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: d157b51e24009d847dede9ea6a9f81c8898c5b06
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-fonts-and-text"></a>글꼴 및 텍스트 사용
 제공 하는 몇 가지 클래스는 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 및 [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] Windows Forms의 텍스트를 그리기 위한 합니다. [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] <xref:System.Drawing.Graphics> 클래스에 여러 개의 <xref:System.Drawing.Graphics.DrawString%2A> 텍스트, 위치, 사각형, 글꼴 및 서식을 경계 등의 다양 한 기능을 지정할 수 있도록 하는 메서드. 그릴 텍스트를 측정 하는 또한 [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] 정적을 사용 하 여 <xref:System.Windows.Forms.TextRenderer.DrawText%2A> 및 <xref:System.Windows.Forms.TextRenderer.MeasureText%2A> 방법에서 제공 되는 `TextRenderer` 클래스입니다. [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] 메서드 통해서도 위치, 글꼴 및 서식을 지정할 수 있습니다. 그러나 하나를 선택할 수 [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] 또는 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 텍스트 렌더링에 대 한 [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] 제안을 향상 된 성능과 더 정확한 텍스트 측정 일반적으로 합니다. 텍스트 렌더링에 영향을 주는 다른 클래스에는 `FontFamily`, `Font`, <xref:System.Drawing.StringFormat>, 및 `TextFormatFlags`합니다.  

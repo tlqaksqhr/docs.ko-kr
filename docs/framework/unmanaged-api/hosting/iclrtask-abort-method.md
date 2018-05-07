@@ -1,14 +1,6 @@
 ---
-title: "ICLRTask::Abort 메서드"
-ms.custom: 
+title: ICLRTask::Abort 메서드
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICLRTask.Abort
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: b3594b5f-2e41-4e36-9096-3586276a138c
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 0e417e329b38c8f57dedf2926c0d6ff02a0170f4
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 46d60ff6ab64d57ca5c7020877758657b61125ad
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="iclrtaskabort-method"></a>ICLRTask::Abort 메서드
 공용 언어 런타임 (CLR) 작업을 중단 하도록 요청 하는 현재 [ICLRTask](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md) 인스턴스가 나타내는입니다.  
@@ -48,7 +36,7 @@ HRESULT Abort ();
   
 |HRESULT|설명|  
 |-------------|-----------------|  
-|S_OK|`Abort`성공적으로 반환 합니다.|  
+|S_OK|`Abort` 성공적으로 반환 합니다.|  
 |HOST_E_CLRNOTAVAILABLE|CLR은 프로세스에 로드 되지 않았습니다 또는 CLR 중인 상태를 관리 코드를 실행 하거나 호출을 처리할 수 없습니다.|  
 |HOST_E_TIMEOUT|호출 시간이 초과 되었습니다.|  
 |HOST_E_NOT_OWNER|호출자에 게 잠금을 소유 하지 않습니다.|  
@@ -65,7 +53,7 @@ HRESULT Abort ();
   
  **라이브러리:** MSCorEE.dll에 리소스로 포함  
   
- **.NET framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>참고 항목  
  [ICLRTask 인터페이스](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md)  

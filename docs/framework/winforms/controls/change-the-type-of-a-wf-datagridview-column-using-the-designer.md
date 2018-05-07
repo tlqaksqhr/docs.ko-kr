@@ -1,29 +1,17 @@
 ---
-title: "방법: 디자이너를 사용하여 Windows Forms DataGridView 컨트롤의 형식 변경"
-ms.custom: 
+title: '방법: 디자이너를 사용하여 Windows Forms DataGridView 컨트롤의 형식 변경'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - Windows Forms, columns
 - columns [Windows Forms], types
 - DataGridView control [Windows Forms], changing column type
 - data [Windows Forms], displaying
 ms.assetid: 7f994d45-600d-4190-a187-35803214b40c
-caps.latest.revision: "13"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 020eca128300f964614423e3ce371c00cb437ffb
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: b5d395575ac486307625fbdf2f236b6a588cc3ed
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-change-the-type-of-a-windows-forms-datagridview-column-using-the-designer"></a>방법: 디자이너를 사용하여 Windows Forms DataGridView 컨트롤의 형식 변경
 Windows Forms에 이미 추가 된 열의 형식을 변경 하려면 수도 있습니다 <xref:System.Windows.Forms.DataGridView> 제어 합니다. 예를 들어, 다음 유형의 데이터 원본에 컨트롤을 바인딩하는 경우 자동으로 생성 되는 열 중 일부를 수정 하는 것이 좋습니다. 표시 하면 테이블에 열이 관련된 테이블의 행에 외래 키가 포함 된 경우에 유용 합니다. 이 경우 다음 관련된 테이블에서 좀 더 의미 있는 값을 표시 하는 콤보 상자 열으로 이러한 외래 키를 표시 하는 텍스트 상자가 열을 대체 하는 것이 좋습니다.  

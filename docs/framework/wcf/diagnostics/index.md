@@ -1,14 +1,6 @@
 ---
 title: 관리 및 진단
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - Windows Communication Foundation, diagnostics
 - Windows Communication Foundation, administration
@@ -17,20 +9,14 @@ helpviewer_keywords:
 - administration [WCF]
 - WCF, administration
 ms.assetid: 34c81c08-0e0f-4fbc-9ae8-91948640ee43
-caps.latest.revision: 19
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: fa5256f543a99618e00dc88e085dfee4ac76ebab
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
-ms.translationtype: MT
+ms.openlocfilehash: 552ddb842e0a922493feccee1e48e7d5e74291ad
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="administration-and-diagnostics"></a>관리 및 진단
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]에서는 응용 프로그램 수명의 다양한 단계를 모니터링할 수 있도록 도와주는 다양한 기능을 제공합니다. 예를 들어 구성을 사용하여 배포 시 서비스와 클라이언트를 설정할 수 있습니다. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에는 응용 프로그램의 성능을 측정하는 데 도움이 되는 다양한 성능 카운터가 있습니다. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]는 또한 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] WMI(Windows Management Instrumentation) 공급자를 통해 런타임으로 서비스 검사 데이터를 노출합니다. 응용 프로그램이 실패하거나 실행을 잘못 시작할 때 이벤트 로그를 사용하여 중요한 이벤트가 발생했는지 여부를 확인할 수 있습니다. 메시지 로깅 및 추적을 사용하여 응용 프로그램의 종단 간에 발생한 이벤트를 확인할 수도 있습니다. 이러한 기능은 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 응용 프로그램이 올바르게 작동하지 않을 때 개발자 및 IT 전문가가 문제를 해결하는 데 도움이 됩니다.  
+Windows Communication Foundation (WCF)에서는 다양 한 응용 프로그램 수명의 다양 한 단계를 모니터링 하는 데 도움이 되는 기능을 제공 합니다. 예를 들어 구성을 사용하여 배포 시 서비스와 클라이언트를 설정할 수 있습니다. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에는 응용 프로그램의 성능을 측정하는 데 도움이 되는 다양한 성능 카운터가 있습니다. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]는 또한 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] WMI(Windows Management Instrumentation) 공급자를 통해 런타임으로 서비스 검사 데이터를 노출합니다. 응용 프로그램이 실패하거나 실행을 잘못 시작할 때 이벤트 로그를 사용하여 중요한 이벤트가 발생했는지 여부를 확인할 수 있습니다. 메시지 로깅 및 추적을 사용하여 응용 프로그램의 종단 간에 발생한 이벤트를 확인할 수도 있습니다. 이러한 기능은 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 응용 프로그램이 올바르게 작동하지 않을 때 개발자 및 IT 전문가가 문제를 해결하는 데 도움이 됩니다.  
   
 > [!NOTE]
 >  사용 해야 하면 특정 세부 정보 없이 오류를 발생 하는 경우는 `includeExceptionDetailInFaults` 특성에는 [ \<serviceDebug >](../../../../docs/framework/configure-apps/file-schema/wcf/servicedebug.md) 구성 요소입니다. 그러면 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서 예외 세부 정보를 클라이언트에 보내도록 하며, 이를 통해 추가 고급 진단 없이 다양한 일반적인 문제를 발견할 수 있습니다. 자세한 내용은 참조 [송신 및 수신 오류](../../../../docs/framework/wcf/sending-and-receiving-faults.md)합니다.  

@@ -1,12 +1,6 @@
 ---
-title: "Sub 문(Visual Basic)"
+title: Sub 문(Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.Sub
 helpviewer_keywords:
@@ -35,14 +29,11 @@ helpviewer_keywords:
 - ByVal keyword [Visual Basic], Sub statements
 - Visual Basic code, Sub procedures
 ms.assetid: e347d700-d06c-405b-b302-e9b1edb57dfc
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 0a2d0d5ffdca857a3a5ca58cd38b0930f254526f
-ms.sourcegitcommit: 8ed4ebc15b5ef89d06a7507dc9d5e306e30accf7
+ms.openlocfilehash: 9a806f2ec979699f7ccf4012c6477bee11301b0f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/14/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="sub-statement-visual-basic"></a>Sub 문(Visual Basic)
 선언 이름과 매개 변수를 정의 하는 코드는 `Sub` 프로시저입니다.  
@@ -116,7 +107,7 @@ End Sub
   
 -   `name`  
   
-     필수 요소. 프로시저의 이름입니다. 참조 [선언 된 요소 이름](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)합니다. 생성자를 클래스에 대 한 프로시저를 만들려면 설정의 이름을 `Sub` 프로시저에는 `New` 키워드입니다. 자세한 내용은 참조 [개체 수명: 개체가 만들어지고 소멸 되는 하는 방법을](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-lifetime-how-objects-are-created-and-destroyed.md)합니다.  
+     필수. 프로시저의 이름입니다. 참조 [선언 된 요소 이름](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)합니다. 생성자를 클래스에 대 한 프로시저를 만들려면 설정의 이름을 `Sub` 프로시저에는 `New` 키워드입니다. 자세한 내용은 참조 [개체 수명: 개체가 만들어지고 소멸 되는 하는 방법을](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-lifetime-how-objects-are-created-and-destroyed.md)합니다.  
   
 -   `typeparamlist`  
   
@@ -142,8 +133,8 @@ End Sub
   
     |파트|설명|  
     |---|---|  
-    |`interface`|필수 요소. 이 프로시저에 의해 구현 되는 인터페이스의 이름의 클래스 또는 구조체를 포함 합니다.|  
-    |`definedname`|필수 요소. 프로시저가 `interface`에 정의되는 이름입니다.|  
+    |`interface`|필수. 이 프로시저에 의해 구현 되는 인터페이스의 이름의 클래스 또는 구조체를 포함 합니다.|  
+    |`definedname`|필수. 프로시저가 `interface`에 정의되는 이름입니다.|  
   
 -   `Handles`  
   
@@ -161,8 +152,8 @@ End Sub
   
     |파트|설명|  
     |---|---|  
-    |`eventvariable`|필수 요소. 개체 변수는 이벤트를 발생 시키는 구조체 또는 클래스의 데이터 형식으로 선언 합니다.|  
-    |`event`|필수 요소. 이 프로시저에서 처리 하는 이벤트의 이름입니다.|  
+    |`eventvariable`|필수. 개체 변수는 이벤트를 발생 시키는 구조체 또는 클래스의 데이터 형식으로 선언 합니다.|  
+    |`event`|필수. 이 프로시저에서 처리 하는 이벤트의 이름입니다.|  
   
 -   `statements`  
   
@@ -178,7 +169,7 @@ End Sub
 ## <a name="defining-a-sub-procedure"></a>Sub 프로시저를 정의합니다.  
  정의할 수는 `Sub` 모듈 수준에만 프로시저입니다. Sub 프로시저에 대 한 선언 컨텍스트, 따라서 해야를 클래스, 구조체, 모듈 또는 인터페이스 및 소스 파일, 네임 스페이스, 프로시저 또는 블록으로 커야 합니다. 자세한 내용은 [선언 컨텍스트 및 기본 액세스 수준](declaration-contexts-and-default-access-levels.md)을 참조하세요.  
   
- `Sub`프로시저는 기본적으로 공용 액세스 합니다. 액세스 한정자를 사용 하 여 액세스 수준을 조정할 수 있습니다.  
+ `Sub` 프로시저는 기본적으로 공용 액세스 합니다. 액세스 한정자를 사용 하 여 액세스 수준을 조정할 수 있습니다.  
   
  프로시저를 사용 하는 경우는 `Implements` 키워드를 포함 하는 클래스나 구조체 있어야는 `Implements` 바로 뒤에 오는 문을 해당 `Class` 또는 `Structure` 문. `Implements` 문을에 지정 된 각 인터페이스를 포함 해야 `implementslist`합니다. 그러나는 인터페이스를 정의 하 여 이름을 `Sub` (에서 `definedname`)이이 프로시저의 이름과 일치 하지 않아도 (에서 `name`).  
   
@@ -214,7 +205,7 @@ End Sub
   
  표시할 수도 있습니다는 [Function 문을](function-statement.md) 와 `Async` 한정자입니다. `Async` 함수 반환 형식으로 지정할 수 있습니다 <xref:System.Threading.Tasks.Task%601> 또는 <xref:System.Threading.Tasks.Task>합니다. 예로 나중에이 항목에서는 `Async` 의 반환 형식을 가진 함수를 <xref:System.Threading.Tasks.Task%601>합니다.  
   
- `Async``Sub` 프로시저에 주로 사용 됩니다 이벤트 처리기는 값을 반환할 수 없습니다. `Async``Sub` 프로시저 대기할 수 없습니다 및의 호출자는 `Async``Sub` 프로시저 예외를 catch 할 수 없습니다 하는 `Sub` 프로시저 throw 합니다.  
+ `Async` `Sub` 이벤트 처리기에 대 한 프로시저 주로 사용 됩니다이 값을 반환할 수 없습니다. `Async``Sub` 프로시저 대기할 수 없습니다 및의 호출자는 `Async``Sub` 프로시저 예외를 catch 할 수 없습니다 하는 `Sub` 프로시저 throw 합니다.  
   
  `Async` 프로시저 모두를 선언할 수 없습니다 [ByRef](../modifiers/byref.md) 매개 변수입니다.  
   

@@ -1,13 +1,6 @@
 ---
-title: "WPF XAML 이름 범위"
-ms.custom: 
+title: WPF XAML 이름 범위
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - namescopes [WPF]
 - styles [WPF], namescopes in
@@ -17,16 +10,11 @@ helpviewer_keywords:
 - XAML [WPF], namescopes
 - classes [WPF], FrameworkContentElement
 ms.assetid: 52bbf4f2-15fc-40d4-837b-bb4c21ead7d4
-caps.latest.revision: "19"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: c4caaa9453cb3cec76a8606afb5601919eba607a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: c13dba48d21235c57be64d90b6547902e0428a6e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="wpf-xaml-namescopes"></a>WPF XAML 이름 범위
 XAML 이름 범위는 XAML에 정의된 개체를 식별하는 개념입니다. XAML 이름 범위의 이름은 XAML로 정의된 개체 이름과 개체 트리에서 그에 해당하는 인스턴스 간의 관계를 설정하는 데 사용할 수 있습니다. 일반적으로 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 관리 코드의 XAML 이름 범위는 XAML 응용 프로그램의 개별 XAML 페이지 루트를 로드할 때 만들어집니다. 프로그래밍 개체와 XAML 이름 범위에서 정의 된는 <xref:System.Windows.Markup.INameScope> 인터페이스 및 실제 클래스로 구현 됩니다 <xref:System.Windows.NameScope>합니다.  
@@ -47,7 +35,7 @@ XAML 이름 범위는 XAML에 정의된 개체를 식별하는 개념입니다. 
 ### <a name="adding-objects-to-runtime-object-trees"></a>런타임 개체 트리에 개체 추가  
  XAML이 구문 분석되는 시점은 WPF XAML 이름 범위가 만들어지고 정의되는 시점입니다. 개체 트리를 생성한 XAML이 구문 분석된 후에 개체 트리에 개체를 추가할 경우에는 새 개체의 `Name` 또는 `x:Name` 값에 따라 XAML 이름 범위의 정보가 자동으로 업데이트되지 않습니다. 를 추가 하려면 개체 이름을 WPF XAML 이름 범위에 XAML 로드 된 후의 적절 한 구현을 호출 해야 <xref:System.Windows.Markup.INameScope.RegisterName%2A> XAML 이름 범위를 정의 하는 개체에는 일반적으로 XAML 페이지 루트입니다. 이름이 등록 되지 않은 경우 추가 된 개체에서 참조할 수 없습니다 이름 메서드를 통해 같은 <xref:System.Windows.FrameworkElement.FindName%2A>, 애니메이션을 대상으로 하는 것에 대 한 해당 이름을 사용할 수 없습니다.  
   
- 응용 프로그램 개발자를 위한 가장 일반적인 시나리오는 사용 하 여 <xref:System.Windows.FrameworkElement.RegisterName%2A> 현재 페이지의 루트에 XAML 이름 범위에 이름을 등록 합니다. <xref:System.Windows.FrameworkElement.RegisterName%2A>스토리 보드에 대 한 중요 한 시나리오의 일부 개체를 애니메이션 대상입니다. 자세한 내용은 [스토리보드 개요](../../../../docs/framework/wpf/graphics-multimedia/storyboards-overview.md)를 참조하세요.  
+ 응용 프로그램 개발자를 위한 가장 일반적인 시나리오는 사용 하 여 <xref:System.Windows.FrameworkElement.RegisterName%2A> 현재 페이지의 루트에 XAML 이름 범위에 이름을 등록 합니다. <xref:System.Windows.FrameworkElement.RegisterName%2A> 스토리 보드에 대 한 중요 한 시나리오의 일부 개체를 애니메이션 대상입니다. 자세한 내용은 [스토리보드 개요](../../../../docs/framework/wpf/graphics-multimedia/storyboards-overview.md)를 참조하세요.  
   
  호출 하는 경우 <xref:System.Windows.FrameworkElement.RegisterName%2A> XAML 이름 범위를 정의 하는 개체가 아닌 개체에 대 이름이 여전히 등록 되어 호출 하는 개체 내에 유지 되는 XAML 이름 범위에가 호출 하는 <xref:System.Windows.FrameworkElement.RegisterName%2A> 개체를 정의 하는 XAML 이름 범위에 있습니다.  
   
@@ -82,9 +70,9 @@ XAML 이름 범위는 XAML에 정의된 개체를 식별하는 개념입니다. 
   
 <a name="Namescopes_and_Name_related_APIs"></a>   
 ## <a name="xaml-namescopes-and-name-related-apis"></a>XAML 이름 범위 및 이름 관련 API  
- <xref:System.Windows.FrameworkElement>가 <xref:System.Windows.FrameworkElement.FindName%2A>, <xref:System.Windows.FrameworkElement.RegisterName%2A> 및 <xref:System.Windows.FrameworkElement.UnregisterName%2A> 메서드. 이러한 메서드를 호출하는 개체에 고유한 XAML 이름 범위가 있는 경우 이러한 메서드는 관련 XAML 이름 범위의 메서드를 호출합니다. 그렇지 않은 경우에는 부모 요소에 고유한 XAML 이름 범위가 있는지 확인하며, 이 확인 과정은 XAML 이름 범위를 찾을 때까지 재귀적으로 계속됩니다(XAML 프로세서의 동작 때문에 루트에는 반드시 XAML 이름 범위가 있음). <xref:System.Windows.FrameworkContentElement>예외와 유사한 동작에는 없는 <xref:System.Windows.FrameworkContentElement> 는 적이 소유 하 게 XAML 이름 범위입니다. 메서드는 <xref:System.Windows.FrameworkContentElement> 호출 하 여 결국에 전달할 수 있도록는 <xref:System.Windows.FrameworkElement> 부모 요소입니다.  
+ <xref:System.Windows.FrameworkElement> 가 <xref:System.Windows.FrameworkElement.FindName%2A>, <xref:System.Windows.FrameworkElement.RegisterName%2A> 및 <xref:System.Windows.FrameworkElement.UnregisterName%2A> 메서드. 이러한 메서드를 호출하는 개체에 고유한 XAML 이름 범위가 있는 경우 이러한 메서드는 관련 XAML 이름 범위의 메서드를 호출합니다. 그렇지 않은 경우에는 부모 요소에 고유한 XAML 이름 범위가 있는지 확인하며, 이 확인 과정은 XAML 이름 범위를 찾을 때까지 재귀적으로 계속됩니다(XAML 프로세서의 동작 때문에 루트에는 반드시 XAML 이름 범위가 있음). <xref:System.Windows.FrameworkContentElement> 예외와 유사한 동작에는 없는 <xref:System.Windows.FrameworkContentElement> 는 적이 소유 하 게 XAML 이름 범위입니다. 메서드는 <xref:System.Windows.FrameworkContentElement> 호출 하 여 결국에 전달할 수 있도록는 <xref:System.Windows.FrameworkElement> 부모 요소입니다.  
   
- <xref:System.Windows.NameScope.SetNameScope%2A>기존 개체에 새 XAML 이름 범위를 매핑하는 데 사용 됩니다. 호출할 수 있습니다 <xref:System.Windows.NameScope.SetNameScope%2A> 두 번 이상 다시 설정 하거나 XAML의 선택을 취소 하려면 이름 범위는 하지도 일반적으로 사용 합니다. 또한 <xref:System.Windows.NameScope.GetNameScope%2A> 코드에서 일반적으로 사용 되지 않습니다.  
+ <xref:System.Windows.NameScope.SetNameScope%2A> 기존 개체에 새 XAML 이름 범위를 매핑하는 데 사용 됩니다. 호출할 수 있습니다 <xref:System.Windows.NameScope.SetNameScope%2A> 두 번 이상 다시 설정 하거나 XAML의 선택을 취소 하려면 이름 범위는 하지도 일반적으로 사용 합니다. 또한 <xref:System.Windows.NameScope.GetNameScope%2A> 코드에서 일반적으로 사용 되지 않습니다.  
   
 ### <a name="xaml-namescope-implementations"></a>XAML 이름 범위 구현  
  다음 클래스에서는 구현 <xref:System.Windows.Markup.INameScope> 직접:  
@@ -97,9 +85,9 @@ XAML 이름 범위는 XAML에 정의된 개체를 식별하는 개념입니다. 
   
 -   <xref:System.Windows.FrameworkTemplate>  
   
- <xref:System.Windows.ResourceDictionary>XAML 이름 또는 이름 범위; 사용 하지 않는 대신 키를 사용, 사전 구현 이기 때문에 있습니다. 유일한 이유 <xref:System.Windows.ResourceDictionary> 구현 <xref:System.Windows.Markup.INameScope> 방식 및 실제 XAML 이름 범위 간의 차이 명확 하 게 설명 하는 사용자 코드에 예외를 발생 시킬 수 있으므로는 <xref:System.Windows.ResourceDictionary> 키 처리 XAML 이름 범위에 적용 되지 않습니다 보장 하 고는 <xref:System.Windows.ResourceDictionary> 부모 요소에 의해 합니다.  
+ <xref:System.Windows.ResourceDictionary> XAML 이름 또는 이름 범위; 사용 하지 않는 대신 키를 사용, 사전 구현 이기 때문에 있습니다. 유일한 이유 <xref:System.Windows.ResourceDictionary> 구현 <xref:System.Windows.Markup.INameScope> 방식 및 실제 XAML 이름 범위 간의 차이 명확 하 게 설명 하는 사용자 코드에 예외를 발생 시킬 수 있으므로는 <xref:System.Windows.ResourceDictionary> 키 처리 XAML 이름 범위에 적용 되지 않습니다 보장 하 고는 <xref:System.Windows.ResourceDictionary> 부모 요소에 의해 합니다.  
   
- <xref:System.Windows.FrameworkTemplate>및 <xref:System.Windows.Style> 구현 <xref:System.Windows.Markup.INameScope> 명시적 인터페이스 정의 사용 합니다. 명시적 구현을 통해 액세스 되는 경우 일반적으로 동작 하도록 이러한 XAML 이름 범위 허용는 <xref:System.Windows.Markup.INameScope> 인터페이스를 XAML 이름 범위 전달 되는 방법으로 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 내부 프로세스입니다. 명시적 인터페이스 정의의 일부분이 아닌 일반적인 API 화면에 있지만 <xref:System.Windows.FrameworkTemplate> 및 <xref:System.Windows.Style>거의 호출 해야 하기 때문에는 <xref:System.Windows.Markup.INameScope> 에 대 한 메서드 <xref:System.Windows.FrameworkTemplate> 및 <xref:System.Windows.Style> 를 직접 및 대신 다른 API를 사용 합니다 와 같은 <xref:System.Windows.FrameworkElement.GetTemplateChild%2A>합니다.  
+ <xref:System.Windows.FrameworkTemplate> 및 <xref:System.Windows.Style> 구현 <xref:System.Windows.Markup.INameScope> 명시적 인터페이스 정의 사용 합니다. 명시적 구현을 통해 액세스 되는 경우 일반적으로 동작 하도록 이러한 XAML 이름 범위 허용는 <xref:System.Windows.Markup.INameScope> 인터페이스를 XAML 이름 범위 전달 되는 방법으로 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 내부 프로세스입니다. 명시적 인터페이스 정의의 일부분이 아닌 일반적인 API 화면에 있지만 <xref:System.Windows.FrameworkTemplate> 및 <xref:System.Windows.Style>거의 호출 해야 하기 때문에는 <xref:System.Windows.Markup.INameScope> 에 대 한 메서드 <xref:System.Windows.FrameworkTemplate> 및 <xref:System.Windows.Style> 를 직접 및 대신 다른 API를 사용 합니다 와 같은 <xref:System.Windows.FrameworkElement.GetTemplateChild%2A>합니다.  
   
  다음 클래스를 사용 하 여 자신의 XAML 이름 범위를 정의 고 <xref:System.Windows.NameScope?displayProperty=nameWithType> 도우미 클래스 및 연결을 통해 해당 XAML 이름 범위 구현에는 <xref:System.Windows.NameScope.NameScope%2A?displayProperty=nameWithType> 연결 된 속성:  
   

@@ -1,26 +1,17 @@
 ---
 title: 인덱스 수가 인덱싱된 배열의 차수보다 많습니다.
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - bc30106
 - vbc30106
 helpviewer_keywords:
 - BC30106
 ms.assetid: 2c5363e1-62c2-4f5a-b675-c7337aeb363d
-caps.latest.revision: 10
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 8fdf031734d441daca2073925f6d45d6ba9f1f52
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: d40a19aefdca65773d3d8e37a43d99178586fb1c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="number-of-indices-exceeds-the-number-of-dimensions-of-the-indexed-array"></a>인덱스 수가 인덱싱된 배열의 차수보다 많습니다.
 배열 요소에 액세스하는 데 사용하는 인덱스 수는 정확하게 배열의 순위, 즉 배열에 선언된 차원 수와 같아야 합니다.  
@@ -29,7 +20,7 @@ ms.lasthandoff: 10/18/2017
   
 ## <a name="to-correct-this-error"></a>이 오류를 해결하려면  
   
--   첨자의 총 수가 배열의 같아질 때까지 배열 참조에서 아래 첨자를 제거 합니다. 예:  
+-   첨자의 총 수가 배열의 같아질 때까지 배열 참조에서 아래 첨자를 제거 합니다. 예를 들어:  
   
     ```vb  
     Dim gameBoard(3, 3) As String  

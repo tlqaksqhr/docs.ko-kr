@@ -1,27 +1,15 @@
 ---
-title: "방법: 디자인 타임에 새 설정 만들기"
-ms.custom: 
+title: '방법: 디자인 타임에 새 설정 만들기'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - application settings [Windows Forms], design time
 - application settings [Windows Forms], creating
 ms.assetid: c5d60a66-6507-462f-a81f-e3bc0a804e16
-caps.latest.revision: "9"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 04b86579f45c5a357f8759bf36ae41f7a5c6e98b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 618355948578bd8f15e8cf7bec6f599e3169b77a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-a-new-setting-at-design-time"></a>방법: 디자인 타임에 새 설정 만들기
 설정 디자이너를 사용 하 여 디자인 타임에 새 설정을 만들 수 있습니다. 설정 디자이너는 새 설정을 만들고 이러한 설정에 대 한 속성을 지정할 수 있도록 표 스타일 인터페이스입니다. 이름, 값, 유형 및 새 설정에 대 한 범위를 지정 해야 합니다. 설정을 만든 후에 코드에서 액세스할 수 있습니다.  

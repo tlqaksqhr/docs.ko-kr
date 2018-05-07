@@ -1,29 +1,17 @@
 ---
-title: "종속성 속성 메타데이터"
-ms.custom: 
+title: 종속성 속성 메타데이터
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - APIs [WPF], metadata
 - dependency properties [WPF], metadata
 - metadata [WPF], for dependency properties
 - overriding metadata [WPF]
 ms.assetid: d01ed009-b722-41bf-b82f-fe1a8cdc50dd
-caps.latest.revision: "24"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 5b5c4ee554e8a0148c7d8d8044735f66778e7117
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: f0aa1d2962b0bccea7a0901877b29550319aaa3f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="dependency-property-metadata"></a>종속성 속성 메타데이터
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 속성 시스템에는 리플렉션이나 일반적인 [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] 특성을 통해 속성에 대해 보고할 수 있는 수준을 넘어서는 메타데이터 보고 시스템이 포함됩니다. 또한 종속성 속성에 대한 메타데이터는 종속성 속성을 정의하는 클래스에서 고유하게 할당하고, 종속성 속성이 다른 클래스에 추가될 때 변경하며, 정의하는 기본 클래스에서 종속성 속성을 상속하는 모든 파생 클래스에서 구체적으로 재정의할 수 있습니다.  
@@ -31,7 +19,7 @@ ms.lasthandoff: 12/22/2017
  
   
 <a name="prerequisites"></a>   
-## <a name="prerequisites"></a>필수 구성 요소  
+## <a name="prerequisites"></a>전제 조건  
  이 항목에서는 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 클래스에서 기존 종속성 속성의 소비자 관점에서 종속성 속성을 이해하고 [종속성 속성 개요](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)를 읽었다고 가정합니다. 이 항목의 예제를 따르려면 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]을 이해하고 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 응용 프로그램을 작성하는 방법도 알아야 합니다.  
   
 <a name="dp_metadata_contents"></a>   
@@ -48,7 +36,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="metadata-apis"></a>메타데이터 API  
  대부분의 속성 시스템에서 사용 하는 메타 데이터 정보를 보고 된 형식이 고 <xref:System.Windows.PropertyMetadata> 클래스입니다. 메타데이터 인스턴스는 종속성 속성이 속성 시스템에 등록될 때 필요에 따라 지정되며 소유자로 자신을 추가하거나 기본 클래스 종속성 속성 정의에서 상속되는 메타데이터를 재정의하는 추가 형식에 대해 다시 지정할 수 있습니다. (속성을 등록 하는 기본 메타 데이터를 지정 하지 않는 경우 <xref:System.Windows.PropertyMetadata> 해당 클래스에 대 한 기본값을 사용 하 여 만들어집니다.) 로 등록 된 메타 데이터가 반환 되는지 <xref:System.Windows.PropertyMetadata> 다양 한 호출 하는 경우 <xref:System.Windows.DependencyProperty.GetMetadata%2A> 에서 종속성 속성에서 메타 데이터를 가져오기 하는 오버 로드는 <xref:System.Windows.DependencyObject> 인스턴스.  
   
- <xref:System.Windows.PropertyMetadata> 클래스는 다음 아키텍처와 같은 WPF 프레임 워크 수준 클래스에 대 한 보다 구체적인 메타 데이터를 제공 하에서 파생 됩니다. <xref:System.Windows.UIPropertyMetadata>애니메이션을 보고, 추가 및 <xref:System.Windows.FrameworkPropertyMetadata> 이전 섹션에서 언급 한 WPF 프레임 워크 수준 속성을 제공 합니다. 종속성 속성을 등록 하는 경우 이러한에 등록할 수 있습니다 이러한 <xref:System.Windows.PropertyMetadata> 파생 클래스입니다. 메타 데이터를 검사 하는 경우, 기본 <xref:System.Windows.PropertyMetadata> 보다 구체적인 속성을 확인할 수 있도록 유형은 파생된 클래스에 캐스팅 될 수 있습니다.  
+ <xref:System.Windows.PropertyMetadata> 클래스는 다음 아키텍처와 같은 WPF 프레임 워크 수준 클래스에 대 한 보다 구체적인 메타 데이터를 제공 하에서 파생 됩니다. <xref:System.Windows.UIPropertyMetadata> 애니메이션을 보고, 추가 및 <xref:System.Windows.FrameworkPropertyMetadata> 이전 섹션에서 언급 한 WPF 프레임 워크 수준 속성을 제공 합니다. 종속성 속성을 등록 하는 경우 이러한에 등록할 수 있습니다 이러한 <xref:System.Windows.PropertyMetadata> 파생 클래스입니다. 메타 데이터를 검사 하는 경우, 기본 <xref:System.Windows.PropertyMetadata> 보다 구체적인 속성을 확인할 수 있도록 유형은 파생된 클래스에 캐스팅 될 수 있습니다.  
   
 > [!NOTE]
 >  에 지정할 수 있는 속성의 특징 <xref:System.Windows.FrameworkPropertyMetadata> "flags"를 사용 하 여이 설명서에서에 라고도 합니다. 플래그 열거형을 사용 하 여 이러한 값을 지정 만들면 사용 하기 위해 새 메타 데이터 인스턴스가 종속성에서 속성을 등록 하거나 메타 데이터 재정의 <xref:System.Windows.FrameworkPropertyMetadataOptions> 는 열거형의연결된값을제공합니다<xref:System.Windows.FrameworkPropertyMetadata> 생성자입니다. 그러나 생성 된 해당 옵션 특성은 표시 내에서 한 <xref:System.Windows.FrameworkPropertyMetadata> 일련의 생성 하는 열거형 값 보다는 부울 속성입니다. 부울 속성을 사용하면 플래그 열거형 값에 마스크를 적용하여 관심 있는 정보를 가져오는 대신 각 조건을 확인할 수 있습니다. 생성자를 사용 하 여 연결 된 <xref:System.Windows.FrameworkPropertyMetadataOptions> 실제 생성 된 메타 데이터는 보다 직관적인 메타 데이터를 쿼리할 수 있도록 개별 속성을 표시 하는 반면, 적절 한 생성자 서명의 길이 유지 하기 위해.  
@@ -75,13 +63,13 @@ ms.lasthandoff: 12/22/2017
   
  메타데이터를 재정의하는 경우 서로 다른 메타데이터 특성이 병합되거나 대체됩니다.  
   
--   <xref:System.Windows.PropertyMetadata.PropertyChangedCallback%2A>병합 됩니다. 새 추가 하는 경우 <xref:System.Windows.PropertyMetadata.PropertyChangedCallback%2A>, 해당 콜백 메타 데이터에 저장 됩니다. 지정 하지 않는 경우는 <xref:System.Windows.PropertyMetadata.PropertyChangedCallback%2A> 재정의 값에 <xref:System.Windows.PropertyMetadata.PropertyChangedCallback%2A> 메타 데이터에 지정 하는 가장 가까운 상위 항목에서 참조로 승격 됩니다.  
+-   <xref:System.Windows.PropertyMetadata.PropertyChangedCallback%2A> 병합 됩니다. 새 추가 하는 경우 <xref:System.Windows.PropertyMetadata.PropertyChangedCallback%2A>, 해당 콜백 메타 데이터에 저장 됩니다. 지정 하지 않는 경우는 <xref:System.Windows.PropertyMetadata.PropertyChangedCallback%2A> 재정의 값에 <xref:System.Windows.PropertyMetadata.PropertyChangedCallback%2A> 메타 데이터에 지정 하는 가장 가까운 상위 항목에서 참조로 승격 됩니다.  
   
 -   에 대 한 실제 속성 시스템 동작 <xref:System.Windows.PropertyMetadata.PropertyChangedCallback%2A> 계층의 모든 메타 데이터 소유자에 대 한 구현을 유지 되며 가장 많이 파생 된 클래스의 콜백이 먼저 호출 된 속성 시스템에 의해 실행 순서 대로 테이블에 추가 됩니다.  
   
--   <xref:System.Windows.PropertyMetadata.DefaultValue%2A>대체 됩니다. 지정 하지 않는 경우는 <xref:System.Windows.PropertyMetadata.DefaultValue%2A> 재정의 값에 <xref:System.Windows.PropertyMetadata.DefaultValue%2A> 메타 데이터에 지정 하는 가장 가까운 상위 항목에서 제공 합니다.  
+-   <xref:System.Windows.PropertyMetadata.DefaultValue%2A> 대체 됩니다. 지정 하지 않는 경우는 <xref:System.Windows.PropertyMetadata.DefaultValue%2A> 재정의 값에 <xref:System.Windows.PropertyMetadata.DefaultValue%2A> 메타 데이터에 지정 하는 가장 가까운 상위 항목에서 제공 합니다.  
   
--   <xref:System.Windows.PropertyMetadata.CoerceValueCallback%2A>구현이 바뀝니다. 새 추가 하는 경우 <xref:System.Windows.PropertyMetadata.CoerceValueCallback%2A>, 해당 콜백 메타 데이터에 저장 됩니다. 지정 하지 않는 경우는 <xref:System.Windows.PropertyMetadata.CoerceValueCallback%2A> 재정의 값에 <xref:System.Windows.PropertyMetadata.CoerceValueCallback%2A> 메타 데이터에 지정 하는 가장 가까운 상위 항목에서 참조로 승격 됩니다.  
+-   <xref:System.Windows.PropertyMetadata.CoerceValueCallback%2A> 구현이 바뀝니다. 새 추가 하는 경우 <xref:System.Windows.PropertyMetadata.CoerceValueCallback%2A>, 해당 콜백 메타 데이터에 저장 됩니다. 지정 하지 않는 경우는 <xref:System.Windows.PropertyMetadata.CoerceValueCallback%2A> 재정의 값에 <xref:System.Windows.PropertyMetadata.CoerceValueCallback%2A> 메타 데이터에 지정 하는 가장 가까운 상위 항목에서 참조로 승격 됩니다.  
   
 -   속성 시스템 동작은는 <xref:System.Windows.PropertyMetadata.CoerceValueCallback%2A> 즉시 메타 데이터에 호출 됩니다. 다른에 참조가 없는 <xref:System.Windows.PropertyMetadata.CoerceValueCallback%2A> 구현 계층 구조에서 유지 됩니다.  
   

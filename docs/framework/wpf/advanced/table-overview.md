@@ -1,13 +1,6 @@
 ---
-title: "테이블 개요"
-ms.custom: 
+title: 테이블 개요
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -16,19 +9,14 @@ helpviewer_keywords:
 - documents [WPF], tables
 - tables [WPF]
 ms.assetid: 5e1105f4-8fc4-473a-ba55-88c8e71386e6
-caps.latest.revision: "21"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 922faa06456a1aa86ffd0c805ab33577280ccf4f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 631a14ae8eb17713186f7db66700026cc476024e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="table-overview"></a>테이블 개요
-<xref:System.Windows.Documents.Table>유동 문서 콘텐츠 그리드 기반 프레젠테이션을 지 원하는 블록 수준 요소가입니다. 이 요소의 유연성 덕분에 이 요소는 매우 유용하지만 이해하고 제대로 사용하기가 더 복잡합니다.  
+<xref:System.Windows.Documents.Table> 유동 문서 콘텐츠 그리드 기반 프레젠테이션을 지 원하는 블록 수준 요소가입니다. 이 요소의 유연성 덕분에 이 요소는 매우 유용하지만 이해하고 제대로 사용하기가 더 복잡합니다.  
   
  이 항목에는 다음과 같은 섹션이 포함되어 있습니다.  
   
@@ -55,11 +43,11 @@ ms.lasthandoff: 12/22/2017
   
 <a name="table_vs_Grid"></a>   
 ### <a name="how-is-table-different-then-grid"></a>Table은 Grid와 어떻게 다를까요?  
- <xref:System.Windows.Documents.Table>및 <xref:System.Windows.Controls.Grid> 공통 된 기능을 공유 하지만 각는 다양 한 시나리오에 가장 적합 합니다. A <xref:System.Windows.Documents.Table> 유동 콘텐츠 내에서 사용 하도록 설계 되었습니다 (참조 [흐름 문서 개요](../../../../docs/framework/wpf/advanced/flow-document-overview.md) 유동 콘텐츠에 대 한 자세한 내용은). 그리드는 폼 내부에서 사용하는 것이 적합합니다(기본적으로 유동 콘텐츠 외부의 모든 위치). 내에서 한 <xref:System.Windows.Documents.FlowDocument>, <xref:System.Windows.Documents.Table> 지원 유동 콘텐츠 동작 하는 동안 콘텐츠 선택, 페이지 매김 및 열 흐름 변경 등는 <xref:System.Windows.Controls.Grid> 는 그렇지 않습니다. A <xref:System.Windows.Controls.Grid> 반면에 외부에 <xref:System.Windows.Documents.FlowDocument> 비롯 한 여러 가지 이유로 <xref:System.Windows.Controls.Grid> 행 및 열 인덱스에 따라 요소를 추가 <xref:System.Windows.Documents.Table> 는 그렇지 않습니다. <xref:System.Windows.Controls.Grid> 자식 콘텐츠를 단일 "셀"에 존재 하는 요소가 둘 이상 허용 층으로 요소를 사용 하면 <xref:System.Windows.Documents.Table>레이어 링을 지원 하지 않습니다. 자식 요소는 <xref:System.Windows.Controls.Grid> 절대 해당 "셀" 경계 영역을 기준으로 배치 될 수 있습니다. <xref:System.Windows.Documents.Table>이 기능을 지원 하지 않습니다. 마지막으로, 한 <xref:System.Windows.Controls.Grid> 적은 리소스가 필요 없으면 <xref:System.Windows.Documents.Table> 하므로 사용 하 여 것이 좋습니다는 <xref:System.Windows.Controls.Grid> 성능 향상을 위해 합니다.  
+ <xref:System.Windows.Documents.Table> 및 <xref:System.Windows.Controls.Grid> 공통 된 기능을 공유 하지만 각는 다양 한 시나리오에 가장 적합 합니다. A <xref:System.Windows.Documents.Table> 유동 콘텐츠 내에서 사용 하도록 설계 되었습니다 (참조 [흐름 문서 개요](../../../../docs/framework/wpf/advanced/flow-document-overview.md) 유동 콘텐츠에 대 한 자세한 내용은). 그리드는 폼 내부에서 사용하는 것이 적합합니다(기본적으로 유동 콘텐츠 외부의 모든 위치). 내에서 한 <xref:System.Windows.Documents.FlowDocument>, <xref:System.Windows.Documents.Table> 지원 유동 콘텐츠 동작 하는 동안 콘텐츠 선택, 페이지 매김 및 열 흐름 변경 등는 <xref:System.Windows.Controls.Grid> 는 그렇지 않습니다. A <xref:System.Windows.Controls.Grid> 반면에 외부에 <xref:System.Windows.Documents.FlowDocument> 비롯 한 여러 가지 이유로 <xref:System.Windows.Controls.Grid> 행 및 열 인덱스에 따라 요소를 추가 <xref:System.Windows.Documents.Table> 는 그렇지 않습니다. <xref:System.Windows.Controls.Grid> 자식 콘텐츠를 단일 "셀"에 존재 하는 요소가 둘 이상 허용 층으로 요소를 사용 하면 <xref:System.Windows.Documents.Table> 레이어 링을 지원 하지 않습니다. 자식 요소는 <xref:System.Windows.Controls.Grid> 절대 해당 "셀" 경계 영역을 기준으로 배치 될 수 있습니다. <xref:System.Windows.Documents.Table> 이 기능을 지원 하지 않습니다. 마지막으로, 한 <xref:System.Windows.Controls.Grid> 적은 리소스가 필요 없으면 <xref:System.Windows.Documents.Table> 하므로 사용 하 여 것이 좋습니다는 <xref:System.Windows.Controls.Grid> 성능 향상을 위해 합니다.  
   
 <a name="basic_table_structure"></a>   
 ### <a name="basic-table-structure"></a>기본 테이블 구조  
- <xref:System.Windows.Documents.Table>열으로 구성 된 그리드 기반 프레젠테이션을 제공 (나타내는 <xref:System.Windows.Documents.TableColumn> 요소)와 행 (나타내는 <xref:System.Windows.Documents.TableRow> 요소). <xref:System.Windows.Documents.TableColumn>요소 콘텐츠를 호스트 하지 마세요. 단순히 열과 열의 특성을 정의합니다. <xref:System.Windows.Documents.TableRow>요소에서 호스트 되어야 합니다는 <xref:System.Windows.Documents.TableRowGroup> 테이블에 대 한 행의 그룹화를 정의 하는 요소입니다. <xref:System.Windows.Documents.TableCell>테이블에 의해 표시 되는 실제 콘텐츠를 포함 하는 요소에서 호스트 되어야 합니다는 <xref:System.Windows.Documents.TableRow> 요소입니다. <xref:System.Windows.Documents.TableCell>파생 된 요소를 하나만 있습니다 <xref:System.Windows.Documents.Block>합니다.  에 대 한 올바른 자식 요소는 <xref:System.Windows.Documents.TableCell> 포함 합니다.  
+ <xref:System.Windows.Documents.Table> 열으로 구성 된 그리드 기반 프레젠테이션을 제공 (나타내는 <xref:System.Windows.Documents.TableColumn> 요소)와 행 (나타내는 <xref:System.Windows.Documents.TableRow> 요소). <xref:System.Windows.Documents.TableColumn> 요소 콘텐츠를 호스트 하지 마세요. 단순히 열과 열의 특성을 정의합니다. <xref:System.Windows.Documents.TableRow> 요소에서 호스트 되어야 합니다는 <xref:System.Windows.Documents.TableRowGroup> 테이블에 대 한 행의 그룹화를 정의 하는 요소입니다. <xref:System.Windows.Documents.TableCell> 테이블에 의해 표시 되는 실제 콘텐츠를 포함 하는 요소에서 호스트 되어야 합니다는 <xref:System.Windows.Documents.TableRow> 요소입니다. <xref:System.Windows.Documents.TableCell> 파생 된 요소를 하나만 있습니다 <xref:System.Windows.Documents.Block>합니다.  에 대 한 올바른 자식 요소는 <xref:System.Windows.Documents.TableCell> 포함 합니다.  
   
 -   <xref:System.Windows.Documents.BlockUIContainer>  
   
@@ -72,10 +60,10 @@ ms.lasthandoff: 12/22/2017
 -   <xref:System.Windows.Documents.Table>  
   
 > [!NOTE]
->  <xref:System.Windows.Documents.TableCell>요소 직접 텍스트 콘텐츠를 호스팅하지 않을 수도 있습니다. 콘텐츠 요소와 같은 흐름에 대 한 포함 규칙에 대 한 자세한 내용은 <xref:System.Windows.Documents.TableCell>, 참조 [흐름 문서 개요](../../../../docs/framework/wpf/advanced/flow-document-overview.md)합니다.  
+>  <xref:System.Windows.Documents.TableCell> 요소 직접 텍스트 콘텐츠를 호스팅하지 않을 수도 있습니다. 콘텐츠 요소와 같은 흐름에 대 한 포함 규칙에 대 한 자세한 내용은 <xref:System.Windows.Documents.TableCell>, 참조 [흐름 문서 개요](../../../../docs/framework/wpf/advanced/flow-document-overview.md)합니다.  
   
 > [!NOTE]
->  <xref:System.Windows.Documents.Table>비슷합니다는 <xref:System.Windows.Controls.Grid> 요소 하지만 더 많은 기능이 있으며, 따라서 큰 리소스 오버 헤드가 필요 합니다.  
+>  <xref:System.Windows.Documents.Table> 비슷합니다는 <xref:System.Windows.Controls.Grid> 요소 하지만 더 많은 기능이 있으며, 따라서 큰 리소스 오버 헤드가 필요 합니다.  
   
  다음 예제에서는 간단한 2 x 3 테이블에 [!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)]합니다.  
   
@@ -87,7 +75,7 @@ ms.lasthandoff: 12/22/2017
   
 <a name="table_containment"></a>   
 ### <a name="table-containment"></a>테이블 포함  
- <xref:System.Windows.Documents.Table>파생 되는 <xref:System.Windows.Documents.Block> 요소에 대 한 일반적인 규칙을 준수 <xref:System.Windows.Documents.Block> 수준 요소입니다.  A <xref:System.Windows.Documents.Table> 요소 중 다음과 같은 요소가 포함 될 수 있습니다.  
+ <xref:System.Windows.Documents.Table> 파생 되는 <xref:System.Windows.Documents.Block> 요소에 대 한 일반적인 규칙을 준수 <xref:System.Windows.Documents.Block> 수준 요소입니다.  A <xref:System.Windows.Documents.Table> 요소 중 다음과 같은 요소가 포함 될 수 있습니다.  
   
 -   <xref:System.Windows.Documents.FlowDocument>  
   

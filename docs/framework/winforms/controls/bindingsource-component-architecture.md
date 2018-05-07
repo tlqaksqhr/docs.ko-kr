@@ -1,29 +1,17 @@
 ---
-title: "BindingSource 구성 요소 아키텍처"
-ms.custom: 
+title: BindingSource 구성 요소 아키텍처
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - BindingSource component [Windows Forms], architecture
 - Windows Forms, data binding
 - BindingSource component [Windows Forms], about BindingSource component
 - data binding [Windows Forms], BindingSource component
 ms.assetid: 7bc69c90-8a11-48b1-9336-3adab5b41591
-caps.latest.revision: "23"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 25a69f31d8da8638cfc92ff94d8f90dbcb327158
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: b0334bd7a0bc5ff46c43fd7ee549422d98c35efe
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="bindingsource-component-architecture"></a>BindingSource 구성 요소 아키텍처
 와 <xref:System.Windows.Forms.BindingSource> 구성 요소를 데이터 원본에 일반적으로 모든 Windows Forms 컨트롤을 바인딩할 수 있습니다.  
@@ -57,13 +45,13 @@ ms.lasthandoff: 12/22/2017
   
 -   목록으로 데이터 원본입니다.  
   
--   <xref:System.Windows.Forms.BindingSource>로 <xref:System.ComponentModel.IBindingList>합니다.  
+-   <xref:System.Windows.Forms.BindingSource> 로 <xref:System.ComponentModel.IBindingList>합니다.  
   
 -   사용자 지정 항목 만들기  
   
 -   트랜잭션 항목 만들기  
   
--   <xref:System.Collections.IEnumerable>이 옵션을 지원 합니다.  
+-   <xref:System.Collections.IEnumerable> 이 옵션을 지원 합니다.  
   
 -   디자인 타임 지원 합니다.  
   
@@ -120,7 +108,7 @@ ms.lasthandoff: 12/22/2017
 |Null 참조 (`Nothing` Visual basic에서)와 <xref:System.Windows.Forms.BindingSource.DataMember%2A> 설정|지원 되지 않습니다. 발생 <xref:System.ArgumentException>합니다.|  
 |목록이 아닌 형식 또는 "T" 유형의 개체|빈 <xref:System.ComponentModel.IBindingList> "T" 형식입니다.|  
 |배열 인스턴스|<xref:System.ComponentModel.IBindingList> 배열 요소가 들어 있습니다.|  
-|<xref:System.Collections.IEnumerable>인스턴스|<xref:System.ComponentModel.IBindingList> 포함 하는 <xref:System.Collections.IEnumerable> 항목|  
+|<xref:System.Collections.IEnumerable> 인스턴스|<xref:System.ComponentModel.IBindingList> 포함 하는 <xref:System.Collections.IEnumerable> 항목|  
 |"T" 유형이 포함 된 인스턴스를 나열 합니다.|<xref:System.ComponentModel.IBindingList> "T" 형식은 포함 하는 인스턴스.|  
   
  또한 <xref:System.Windows.Forms.BindingSource.DataSource%2A> 와 같은 다른 목록 형식으로 설정할 수 있습니다 <xref:System.ComponentModel.IListSource> 및 <xref:System.ComponentModel.ITypedList>, 및 <xref:System.Windows.Forms.BindingSource> 적절히 처리 됩니다. 이 경우 목록에 포함 된 유형을 기본 생성자가 있어야 합니다.  
@@ -174,7 +162,7 @@ ms.lasthandoff: 12/22/2017
 |멤버|설명|  
 |------------|-----------------|  
 |<xref:System.Windows.Forms.BindingSource.Filter%2A> 속성|데이터 소스가 <xref:System.ComponentModel.IBindingListView>인 경우 표시할 행을 필터링하는 데 사용하는 식을 가져오거나 설정합니다.|  
-|<xref:System.Windows.Forms.BindingSource.Sort%2A> 속성|데이터 소스가 <xref:System.ComponentModel.IBindingList>인 경우 정렬에 사용되는 열 이름과 정렬 순서 정보를 가져오거나 설정합니다.<br /><br /> 또는<br /><br /> 데이터 원본이 경우는 <xref:System.ComponentModel.IBindingListView> 정렬, 고급 지원 가져옵니다 정렬 및 정렬 순서에 사용 되는 여러 열 이름|  
+|<xref:System.Windows.Forms.BindingSource.Sort%2A> 속성|데이터 소스가 <xref:System.ComponentModel.IBindingList>인 경우 정렬에 사용되는 열 이름과 정렬 순서 정보를 가져오거나 설정합니다.<br /><br /> -또는-<br /><br /> 데이터 원본이 경우는 <xref:System.ComponentModel.IBindingListView> 정렬, 고급 지원 가져옵니다 정렬 및 정렬 순서에 사용 되는 여러 열 이름|  
   
 ### <a name="integration-with-bindingnavigator"></a>BindingNavigator와의 통합  
  사용할 수는 <xref:System.Windows.Forms.BindingSource> 데이터 소스에 Windows Forms 컨트롤을 바인딩하는 구성 요소 이지만 <xref:System.Windows.Forms.BindingNavigator> 컨트롤은 작업을 위해 특별히 설계 되었습니다는 <xref:System.Windows.Forms.BindingSource> 구성 요소입니다. <xref:System.Windows.Forms.BindingNavigator> 제어 하기 위한 사용자 인터페이스를 제공 하는 컨트롤의 <xref:System.Windows.Forms.BindingSource> 구성 요소의 현재 항목입니다. 기본적으로는 <xref:System.Windows.Forms.BindingNavigator> 메서드에 해당 하는 탐색에 있는 단추를 제공 하는 컨트롤의 <xref:System.Windows.Forms.BindingSource> 구성 요소입니다. 자세한 내용은 참조 [하는 방법: Windows Forms BindingNavigator 컨트롤을 사용 하 여 데이터 탐색](../../../../docs/framework/winforms/controls/how-to-navigate-data-with-the-windows-forms-bindingnavigator-control.md)합니다.  

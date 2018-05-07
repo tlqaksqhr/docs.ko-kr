@@ -1,28 +1,16 @@
 ---
 title: Impersonating the Client
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - service behaviors, impersonation sample
 - Impersonating the Client Sample [Windows Communication Foundation]
 - impersonation, Windows Communication Foundation sample
 ms.assetid: 8bd974e1-90db-4152-95a3-1d4b1a7734f8
-caps.latest.revision: "25"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a17a3631b781e6a96eb8aec17b20e8ddca52890d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 4c5d911bfbfcd33248e15b9fc822abdc9cf4046c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="impersonating-the-client"></a>Impersonating the Client
 Impersonation 샘플에서는 서비스가 호출자를 대신하여 시스템 리소스에 액세스할 수 있도록 서비스에서 호출자 응용 프로그램을 가장하는 방법을 보여 줍니다.  
@@ -113,7 +101,7 @@ client.ClientCredentials.Windows.AllowedImpersonationLevel = TokenImpersonationL
  샘플을 실행하면 작업 요청 및 응답이 서비스와 클라이언트 콘솔 창 모두에 표시됩니다. 서비스와 클라이언트를 종료하려면 각 콘솔 창에서 Enter 키를 누릅니다.  
   
 > [!NOTE]
->  서비스는 관리 계정으로 실행되거나 http://localhost:8000/ServiceModelSamples URI를 HTTP 계층에 등록할 수 있는 권한이 부여된 계정으로 실행되어야 합니다. 설정 하 여 이러한 권한을 부여할 수는 [Namespace 예약](http://go.microsoft.com/fwlink/?LinkId=95012) 를 사용 하는 [Httpcfg.exe 도구](http://go.microsoft.com/fwlink/?LinkId=95010)합니다.  
+>  관리자 계정 중 하나가 실행 되어야 할 또는에서 실행 되는 계정에 등록 하는 권한을 부여 받아야 합니다는 http://localhost:8000/ServiceModelSamples URI를 HTTP 계층입니다. 설정 하 여 이러한 권한을 부여할 수는 [Namespace 예약](http://go.microsoft.com/fwlink/?LinkId=95012) 를 사용 하는 [Httpcfg.exe 도구](http://go.microsoft.com/fwlink/?LinkId=95010)합니다.  
   
 > [!NOTE]
 >  [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)]을 실행하는 컴퓨터에서는 Host.exe 응용 프로그램에 가장 권한이 있는 경우에만 가장이 지원됩니다. 기본적으로 관리자만 이 사용 권한을 가집니다. 서비스를 실행 하는 계정에이 권한을 추가 하려면로 이동 **관리 도구**개방형 **로컬 보안 정책**개방형 **로컬 정책**, 클릭**사용자 권한 할당**를 선택 하 고 **인증 후 클라이언트 가장** 두 번 클릭 하 고 **속성** 사용자 또는 그룹을 추가 합니다.  

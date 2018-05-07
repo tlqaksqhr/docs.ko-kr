@@ -1,23 +1,16 @@
 ---
-title: "패키징 및 배포 사용자 지정 My 확장명 (Visual Basic)"
+title: 패키징 및 배포 사용자 지정 My 확장명 (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - My namespace [Visual Basic], customizing
 - My namespace
 - My namespace [Visual Basic], extending
 ms.assetid: fd89c54b-0290-4c50-95a3-ff17d4487a21
-caps.latest.revision: "10"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 94a9ea977d0add14ae9f0c9a889b008b94610ee0
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 901d0b80a18d2f4d262cc65eb485dcc628bc6a08
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="packaging-and-deploying-custom-my-extensions-visual-basic"></a>패키징 및 배포 사용자 지정 My 확장명 (Visual Basic)
 Visual Basic에서 사용자 지정을 배포할 수 있는 쉬운 방법을 제공 `My` Visual Studio 템플릿을 사용 하 여 네임 스페이스 확장 합니다. 프로젝트 템플릿을를 만드는 경우 사용자 `My` 확장은 새 프로젝트 형식의 필수적인 부분, 사용자 지정 포함할 수 있습니다 `My` 템플릿을 내보낼 때 프로젝트를 사용 하 여 확장 코드입니다. 프로젝트 템플릿 내보내기에 대 한 자세한 내용은 참조 [하는 방법: 프로젝트 템플릿 만들기](/visualstudio/ide/how-to-create-project-templates)합니다.  
@@ -61,8 +54,8 @@ Visual Basic에서 사용자 지정을 배포할 수 있는 쉬운 방법을 제
   
 |특성|설명|  
 |---|---|  
-|`ID`|필수 요소. 확장에 대 한 고유 식별자입니다. 이 ID를 갖는 확장 프로젝트에 이미 추가 된 경우 사용자 다시 추가 메시지가 표시 되지 않습니다.|  
-|`Version`|필수 요소. 항목 템플릿에 대 한 버전 번호입니다.|  
+|`ID`|필수. 확장에 대 한 고유 식별자입니다. 이 ID를 갖는 확장 프로젝트에 이미 추가 된 경우 사용자 다시 추가 메시지가 표시 되지 않습니다.|  
+|`Version`|필수. 항목 템플릿에 대 한 버전 번호입니다.|  
 |`AssemblyFullName`|선택 사항입니다. 어셈블리 이름입니다. 이 어셈블리에 대 한 참조는 프로젝트에 추가 되 면 사용자 안내가 제공 됩니다 추가 하 여 `My` 항목 템플릿에서이 확장 합니다.|  
   
 ### <a name="add-the-customdatasignature-element-to-the-vstemplate-file"></a>추가 \<CustomDataSignature > 요소를.vstemplate 파일  
@@ -100,8 +93,8 @@ Visual Basic에서 사용자 지정을 배포할 수 있는 쉬운 방법을 제
 ## <a name="install-the-template"></a>서식 파일을 설치  
  서식 파일을 설치 하려면 Visual Basic 항목 템플릿 폴더 (예를 들어 My Documents\Visual Studio 2008\Templates\Item Templates\Visual 기본)에 압축된 폴더 (.zip 파일)를 복사할 수 있습니다. 또는 Visual Studio 설치 관리자 (.vsi) 파일로 서식 파일을 게시할 수 있습니다.  
   
-## <a name="see-also"></a>참고 항목  
- [확장은 Visual Basic에서 My Namespace](../../../visual-basic/developing-apps/customizing-extending-my/extending-the-my-namespace.md)  
+## <a name="see-also"></a>참고자료  
+ [Visual Basic의 내 네임스페이스 확장](../../../visual-basic/developing-apps/customizing-extending-my/extending-the-my-namespace.md)  
  [Visual Basic 응용 프로그램 모델 확장](../../../visual-basic/developing-apps/customizing-extending-my/extending-the-visual-basic-application-model.md)  
  [My에 사용할 수 있는 개체 사용자 지정](../../../visual-basic/developing-apps/customizing-extending-my/customizing-which-objects-are-available-in-my.md)  
  [프로젝트 디자이너, my 확장 페이지](/visualstudio/ide/reference/my-extensions-page-project-designer-visual-basic)

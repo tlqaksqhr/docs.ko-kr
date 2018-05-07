@@ -1,33 +1,19 @@
 ---
-title: "방법: 템플릿을 사용하여 GridView 사용 ListView의 스타일 지정"
-ms.custom: 
+title: '방법: 템플릿을 사용하여 GridView 사용 ListView의 스타일 지정'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - ListView controls [WPF], styling
 ms.assetid: 94bf964b-96c8-4bdf-a0c3-f5271b7cb565
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 9abc19ca14cf512deff898f5f20d23870b8b7847
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 481d92d4301401f8ba87c4912cd44b17c5104b1b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-use-templates-to-style-a-listview-that-uses-gridview"></a>방법: 템플릿을 사용하여 GridView 사용 ListView의 스타일 지정
 사용 하는 방법을 보여 주는이 예제는 <xref:System.Windows.DataTemplate> 및 <xref:System.Windows.Style> 의 모양을 지정 하는 개체는 <xref:System.Windows.Controls.ListView> 컨트롤을 사용 하는 <xref:System.Windows.Controls.GridView> 보기 모드입니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 예제에 나온 <xref:System.Windows.Style> 및 <xref:System.Windows.DataTemplate> 에 대 한 열 머리글의 모양을 사용자 지정 하는 개체는 <xref:System.Windows.Controls.GridViewColumn>합니다.  
   
  [!code-xaml[ListViewTemplate#GridViewHeaderStyle](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ListViewTemplate/CS/window1.xaml#gridviewheaderstyle)]  

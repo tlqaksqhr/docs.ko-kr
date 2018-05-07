@@ -1,13 +1,6 @@
 ---
-title: "방법: 디자이너를 사용하여 Windows Forms 컨트롤에 표시되는 이미지 설정"
-ms.custom: 
+title: '방법: 디자이너를 사용하여 Windows Forms 컨트롤에 표시되는 이미지 설정'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - Button control [Windows Forms], images
 - Windows Forms controls, images
@@ -16,16 +9,11 @@ helpviewer_keywords:
 - examples [Windows Forms], controls
 - setting images [Windows Forms], Windows Forms controls
 ms.assetid: ae80d07a-e469-4251-90ca-df71f5852454
-caps.latest.revision: "5"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a31209968957a6d1890cae66c17b74769bd05dc9
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: b3625510028d5941173848849ab915f56260577a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-set-the-image-displayed-by-a-windows-forms-control-using-the-designer"></a>방법: 디자이너를 사용하여 Windows Forms 컨트롤에 표시되는 이미지 설정
 여러 Windows Forms 컨트롤 이미지를 표시할 수 있습니다. 이미지 디스크 아이콘이 단추를 나타내는 것 처럼 컨트롤의 용도 명확히 하는 아이콘 수는 **저장** 명령입니다. 또한 아이콘 배경 이미지를 원하는 모양을 제어할 수 있습니다.  
@@ -37,7 +25,7 @@ ms.lasthandoff: 01/19/2018
   
 1.  에 **속성** 창의 선택 된 **이미지** 또는 **BackgroundImage** 는 컨트롤의 클릭 줄임표 단추 (  
   
-     ![VisualStudioEllipsesButton screenshot](../../../../docs/framework/winforms/media/vbellipsesbutton.png "vbEllipsesButton")  
+     ![VisualStudioEllipsesButton 스크린 샷](../../../../docs/framework/winforms/media/vbellipsesbutton.png "vbEllipsesButton")  
   
      )를 표시 하는 **리소스 선택** 대화 상자.  
   

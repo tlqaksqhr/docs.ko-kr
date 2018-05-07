@@ -1,11 +1,6 @@
 ---
-title: "Byte 데이터 형식(Visual Basic)"
+title: Byte 데이터 형식(Visual Basic)
 ms.date: 01/31/2018
-ms.prod: .net
-ms.suite: 
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.Byte
 helpviewer_keywords:
@@ -14,11 +9,11 @@ helpviewer_keywords:
 ms.assetid: eed44dff-eaee-4937-a89f-444e418e74f6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 02234afc0dc51a2c1338cdd16d1f97765f64b45e
-ms.sourcegitcommit: d2da0142247ef42a219a5d2907f153e62dc6ea0d
+ms.openlocfilehash: 28189ab4ab1a9be9265d1cca020039b5302fb5d8
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="byte-data-type-visual-basic"></a>Byte 데이터 형식 (Visual Basic)
 값 범위에 있는 0에서 255 까지의 부호 없는 8 비트 (1 바이트) 정수를 보유 합니다.
@@ -44,7 +39,7 @@ Visual Basic 2017 부터는 사용할 수도 있습니다는 밑줄 문자 `_`, 
 
 [!code-vb[Byte](../../../../samples/snippets/visualbasic/language-reference/data-types/numeric-literals.vb#ByteS)]  
 
-Visual Basic 15.5 부터는 사용할 수도 있습니다는 밑줄 문자 (`_`)는 접두사와 16 진수, 이진 또는 8 진수 숫자 사이의 선행 구분 기호로 합니다. 예:
+Visual Basic 15.5 부터는 사용할 수도 있습니다는 밑줄 문자 (`_`)는 접두사와 16 진수, 이진 또는 8 진수 숫자 사이의 선행 구분 기호로 합니다. 예를 들어:
 
 ```vb
 Dim number As Byte = &H_6A
@@ -60,11 +55,11 @@ Dim number As Byte = &H_6A
 
 -   **확대 합니다.** `Byte` 데이터 형식으로 확대 되 `Short`, `UShort`, `Integer`, `UInteger`, `Long`, `ULong`, `Decimal`, `Single`, 또는 `Double`합니다. 즉, 변환할 수 `Byte` 발생 없이 이러한 유형 중 하나로 <xref:System.OverflowException?displayProperty=nameWithType> 오류입니다.
   
--   **형식 문자입니다.** `Byte`에 리터럴 형식 문자 또는 식별자 형식 문자가 없습니다.
+-   **형식 문자입니다.** `Byte` 에 리터럴 형식 문자 또는 식별자 형식 문자가 없습니다.
 
 -   **Framework 형식입니다.** .NET Framework에서 해당하는 형식은 <xref:System.Byte?displayProperty=nameWithType> 구조체입니다.
 
-## <a name="example"></a>예
+## <a name="example"></a>예제
 
  다음 예에서 `b` 는 `Byte` 변수입니다. 문을 변수의 범위와 비트 시프트 연산자의 응용 프로그램을 보여 줍니다.
 

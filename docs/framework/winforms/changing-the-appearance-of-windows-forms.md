@@ -1,28 +1,14 @@
 ---
-title: "Windows Forms의 모양 변경"
-ms.custom: 
+title: Windows Forms의 모양 변경
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - Windows Forms, changing the appearance of
 ms.assetid: 12f35d5b-1587-49cc-ada3-47eec1ff1738
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 47410b2a0259e81e7009d547b0c2d6c742b15f25
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 0b9262611f805cd2e39cc4ca40121998838f2c3d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="changing-the-appearance-of-windows-forms"></a>Windows Forms의 모양 변경
 테두리, 불투명도, 도형, 스타일 변경이나 Windows Forms 응용 프로그램에 대한 배경 이미지 설정과 같은 다양한 방법으로 Windows Forms 응용 프로그램의 모양을 사용자 지정할 수 있습니다.  

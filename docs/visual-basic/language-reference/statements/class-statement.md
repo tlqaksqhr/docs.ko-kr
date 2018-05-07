@@ -1,12 +1,6 @@
 ---
 title: Class 문(Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.Class
 helpviewer_keywords:
@@ -19,14 +13,11 @@ helpviewer_keywords:
 - classes [Visual Basic], data members
 - data members [Visual Basic], of classes
 ms.assetid: f2664f38-eb5a-4d4b-a374-1d041521fb6c
-caps.latest.revision: 29
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: df86ef0eec67d96f2f997dc5dac7ee2357c6362b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 2346823e7b774c21171bd81023cc5b920d34d19a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="class-statement-visual-basic"></a>Class 문(Visual Basic)
 클래스의 이름을 선언 하 고 변수, 속성, 이벤트 및 클래스를 구성 하는 프로시저의 정의 소개 합니다.  
@@ -52,7 +43,7 @@ End Class
 |`MustInherit`|선택 사항입니다. 참조 [MustInherit](../../../visual-basic/language-reference/modifiers/mustinherit.md)합니다.|  
 |`NotInheritable`|선택 사항입니다. 참조 [NotInheritable](../../../visual-basic/language-reference/modifiers/notinheritable.md)합니다.|  
 |`Partial`|선택 사항입니다. 클래스의 부분 정의 나타냅니다. 참조 [부분](../../../visual-basic/language-reference/modifiers/partial.md)합니다.|  
-|`name`|필수 요소. 이 클래스의 이름입니다. 참조 [선언 된 요소 이름](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)합니다.|  
+|`name`|필수. 이 클래스의 이름입니다. 참조 [선언 된 요소 이름](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)합니다.|  
 |`Of`|선택 사항입니다. 제네릭 클래스 임을 지정 합니다.|  
 |`typelist`|사용 하는 경우 필요는 [의](../../../visual-basic/language-reference/statements/of-clause.md) 키워드입니다. 이 클래스에 대 한 형식 매개 변수의 목록입니다. 참조 [목록을 입력](../../../visual-basic/language-reference/statements/type-list.md)합니다.|  
 |`Inherits`|선택 사항입니다. 이 클래스는 다른 클래스의 멤버를 상속 함을 나타냅니다. 참조 [Inherits 문](../../../visual-basic/language-reference/statements/inherits-statement.md)합니다.|  
@@ -60,7 +51,7 @@ End Class
 |`Implements`|선택 사항입니다. 이 클래스의 하나 이상의 인터페이스 멤버를 구현 함을 나타냅니다. 참조 [문을 구현](../../../visual-basic/language-reference/statements/implements-statement.md)합니다.|  
 |`interfacenames`|사용 하는 경우 필요는 `Implements` 문. 이 클래스를 구현 하는 인터페이스의 이름입니다.|  
 |`statements`|선택 사항입니다. 이 클래스의 멤버를 정의 하는 문입니다.|  
-|`End Class`|필수 요소. 종료는 `Class` 정의 합니다.|  
+|`End Class`|필수. 종료는 `Class` 정의 합니다.|  
   
 ## <a name="remarks"></a>설명  
  A `Class` 문은 새 데이터 형식을 정의 합니다. A *클래스* 는 개체 지향 프로그래밍 (OOP)의 기본 빌딩 블록입니다. 자세한 내용은 참조 [개체 및 클래스](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)합니다.  

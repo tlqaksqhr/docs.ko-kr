@@ -1,29 +1,18 @@
 ---
-title: "암호화 체계 만들기"
-ms.custom: 
+title: 암호화 체계 만들기
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - encryption [.NET Framework], creating cryptographic schemes
 - cryptography [.NET Framework], creating cryptographic schemes
 ms.assetid: d40c509f-5a5e-46cc-94cb-a951e9ab6843
-caps.latest.revision: "8"
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: b0aabdc9150aea73ad9078b0e9ee92b2abd03e17
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: b1635276465dd58028c8a5e4b7e69a307664a4c3
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="creating-a-cryptographic-scheme"></a>암호화 체계 만들기
 .NET Framework의 암호화 구성 요소를 결합하여 다양한 체계를 만들고 데이터를 암호화 및 암호 해독할 수 있습니다.  
@@ -40,7 +29,7 @@ ms.lasthandoff: 12/23/2017
   
 5.  양쪽 당사자가 대칭 암호화를 사용하여 대화를 시작합니다.  
   
- 암호화 체계를 만드는 과정은 간단한 작업이 아닙니다. 암호화 사용에 대한 자세한 내용은 http://msdn.microsoft.com/library에 있는 플랫폼 SDK 설명서의 암호화 항목을 참조하세요.  
+ 암호화 체계를 만드는 과정은 간단한 작업이 아닙니다. 암호화 사용에 대 한 자세한 내용은 플랫폼 SDK 설명서에서의 암호화 항목을 참조 하십시오. http://msdn.microsoft.com/library합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [Cryptographic Services](../../../docs/standard/security/cryptographic-services.md)

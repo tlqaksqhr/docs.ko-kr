@@ -1,13 +1,6 @@
 ---
-title: "부분 신뢰 코드에서 라이브러리 사용"
-ms.custom: 
+title: 부분 신뢰 코드에서 라이브러리 사용
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - security [.NET Framework], partially trusted code
 - partially trusted code
@@ -16,16 +9,13 @@ helpviewer_keywords:
 - code access security, partially trusted code
 - APTCA
 ms.assetid: dd66cd4c-b087-415f-9c3e-94e3a1835f74
-caps.latest.revision: "25"
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 00f532e4e93936dbd719f2b8a0c060e54e16425b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 3b2eaf6ccebed38c778e328e34cb6f53177347b2
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-libraries-from-partially-trusted-code"></a>부분 신뢰 코드에서 라이브러리 사용
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  

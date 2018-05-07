@@ -1,27 +1,15 @@
 ---
-title: "ClearType 레지스트리 설정"
-ms.custom: 
+title: ClearType 레지스트리 설정
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - ClearType [WPF], registry settings
 - typography [WPF], ClearType registry settings
 ms.assetid: 56f314bb-b30b-4f67-8492-8b8a9fa432ae
-caps.latest.revision: "18"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: d915af4ee436bb6c661a7b412b0e36702191339a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: cacdc47a35bfd197bcac29edc6f7c780d3b8578f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cleartype-registry-settings"></a>ClearType 레지스트리 설정
 이 항목에 대해 간략하게 설명 된 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA#tla_ct](../../../../includes/tlasharptla-ct-md.md)] 에서 사용 되는 레지스트리 설정이 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 응용 프로그램입니다.  
@@ -29,7 +17,7 @@ ms.lasthandoff: 12/22/2017
   
 <a name="overview"></a>   
 ## <a name="technology-overview"></a>기술 개요  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]디스플레이 장치 사용에 대 한 텍스트를 렌더링 하는 응용 프로그램 [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] 기능 향상된 된 읽기 환경을 제공 합니다. [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)]은 랩톱 화면, Pocket PC 화면, 평면 모니터 등 기존의 LCD(액정 디스플레이)에서 보다 쉽게 텍스트를 읽을 수 있도록 하기 위해 [!INCLUDE[TLA#tla_ms](../../../../includes/tlasharptla-ms-md.md)]에서 개발한 소프트웨어 기술입니다. [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)]은 LCD 화면의 모든 픽셀에 있는 개별 세로 색 스트라이프 요소에 액세스하는 방식으로 작동합니다. 대 한 자세한 내용은 [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)], 참조 [ClearType 개요](../../../../docs/framework/wpf/advanced/cleartype-overview.md)합니다.  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 디스플레이 장치 사용에 대 한 텍스트를 렌더링 하는 응용 프로그램 [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] 기능 향상된 된 읽기 환경을 제공 합니다. [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)]은 랩톱 화면, Pocket PC 화면, 평면 모니터 등 기존의 LCD(액정 디스플레이)에서 보다 쉽게 텍스트를 읽을 수 있도록 하기 위해 [!INCLUDE[TLA#tla_ms](../../../../includes/tlasharptla-ms-md.md)]에서 개발한 소프트웨어 기술입니다. [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)]은 LCD 화면의 모든 픽셀에 있는 개별 세로 색 스트라이프 요소에 액세스하는 방식으로 작동합니다. 대 한 자세한 내용은 [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)], 참조 [ClearType 개요](../../../../docs/framework/wpf/advanced/cleartype-overview.md)합니다.  
   
  텍스트와 함께 렌더링 된 [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] 다양 한 디스플레이 장치에서 크게 다르게 보일 수 있습니다. 파란색, 녹색, 빨강 순서로 색 요소가 아닌 일반적인 빨강, 녹색, 파란색 모니터 수가 적은 구현 하는 예를 들어 ( [!INCLUDE[TLA#tla_rgb](../../../../includes/tlasharptla-rgb-md.md)]) 순서입니다.  
   
@@ -39,7 +27,7 @@ ms.lasthandoff: 12/22/2017
   
 <a name="registry_settings"></a>   
 ## <a name="registry-settings"></a>레지스트리 설정  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]네 가지 레지스트리 설정을 제어 하기 위한 지정 [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] 기능:  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 네 가지 레지스트리 설정을 제어 하기 위한 지정 [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] 기능:  
   
 |설정|설명|  
 |-------------|-----------------|  
@@ -71,7 +59,7 @@ ms.lasthandoff: 12/22/2017
  ![레지스트리 편집기의 ClearType 설정](../../../../docs/framework/wpf/advanced/media/cleartyperegistry01.png "ClearTypeRegistry01")  
   
 > [!NOTE]
->  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]응용 프로그램의 텍스트와 사용 하지 않는 다음 중 하나가 두 가지 모드 중 하나를 렌더링 [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)]합니다. 없이 텍스트를 렌더링 하는 경우 [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)], 회색조 렌더링 라고 합니다.  
+>  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 응용 프로그램의 텍스트와 사용 하지 않는 다음 중 하나가 두 가지 모드 중 하나를 렌더링 [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)]합니다. 없이 텍스트를 렌더링 하는 경우 [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)], 회색조 렌더링 라고 합니다.  
   
 <a name="gamma_level"></a>   
 ## <a name="gamma-level"></a>감마 수준  

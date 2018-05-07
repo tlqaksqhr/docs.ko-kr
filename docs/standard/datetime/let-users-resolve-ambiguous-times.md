@@ -1,29 +1,18 @@
 ---
-title: "방법: 사용자가 모호한 시간 확인"
-ms.custom: 
+title: '방법: 사용자가 모호한 시간 확인'
 ms.date: 04/10/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - time zones [.NET Framework], ambiguous time
 - ambiguous time [.NET Framework]
 ms.assetid: bca874ee-5b68-4654-8bbd-3711220ef332
-caps.latest.revision: "9"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: d0122ca1469b32692fa9c4ef2bd37cda39622bd7
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 4083871dd97a36529351aacbdcd39980bdde74a7
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-let-users-resolve-ambiguous-times"></a>방법: 사용자가 모호한 시간 확인
 
@@ -49,7 +38,7 @@ ms.lasthandoff: 12/23/2017
 
 6. 호출 된 `static` (`Shared` Visual Basic.net에서) <xref:System.DateTime.SpecifyKind%2A> UTC 날짜 및 시간 값의 설정 하는 방법은 <xref:System.DateTime.Kind%2A> 속성을 <xref:System.DateTimeKind.Utc?displayProperty=nameWithType>합니다.
 
-## <a name="example"></a>예
+## <a name="example"></a>예제
 
 다음 예제에서는 날짜와 시간을 입력하라는 메시지가 표시되며 모호한 경우 모호한 시간이 매핑하는 UTC 시간을 사용자가 선택할 수 있습니다.
 
@@ -68,7 +57,7 @@ ms.lasthandoff: 12/23/2017
 
 * <xref:System> 네임 스페이스를 가져올 때는 `using` 문 (C# 코드에 필요).
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참고자료
 
 [날짜, 시간 및 표준 시간대](../../../docs/standard/datetime/index.md)
 [하는 방법: 모호한 시간 확인](../../../docs/standard/datetime/resolve-ambiguous-times.md)

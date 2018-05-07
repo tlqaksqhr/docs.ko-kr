@@ -1,27 +1,15 @@
 ---
-title: "피어 채널"
-ms.custom: 
+title: 피어 채널
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: e06a2efb-8e70-4299-8b0f-bfb37efb074b
-caps.latest.revision: "6"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 7d1ec4c053a93695240276cb8c0aac6216e02ef5
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: f1c0be21614ac59ba512694f981addb2e07e8ec8
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="peer-channel"></a>피어 채널
-이 항목에서는 [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] 피어 채널에 의해 생성된 모든 예외를 보여 줍니다.  
+이 항목에서는 Windows Communication Foundation (WCF) 피어 채널에 의해 생성 된 모든 예외를 보여 줍니다.  
   
 ## <a name="exception-list"></a>예외 목록  
   

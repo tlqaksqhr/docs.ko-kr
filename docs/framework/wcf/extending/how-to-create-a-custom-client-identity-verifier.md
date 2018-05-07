@@ -1,30 +1,18 @@
 ---
-title: "방법: 사용자 지정 클라이언트 ID 검증 도구 만들기"
-ms.custom: 
+title: '방법: 사용자 지정 클라이언트 ID 검증 도구 만들기'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: f2d34e43-fa8b-46d2-91cf-d2960e13e16b
-caps.latest.revision: "15"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: b10dd9be996369385ca323b0409145a9cde46a1e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 99d46b19e744190c50a2ba316fe0f59a8f6cf07b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-a-custom-client-identity-verifier"></a>방법: 사용자 지정 클라이언트 ID 검증 도구 만들기
-*identity* 의 기능 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 클라이언트가 서비스의 예상된 id를 사전에 지정 하는 데 사용 합니다. 서버가 클라이언트에 자신을 인증할 때마다 이 ID와 비교하여 ID가 검사됩니다. (참조에 대 한 id 및 작동 방법 설명은 [서비스 Id 및 인증](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md).)  
+*identity* 기능 Windows Communication Foundation (WCF) 클라이언트는 서비스의 예상된 id를 미리 지정할 수 있습니다. 서버가 클라이언트에 자신을 인증할 때마다 이 ID와 비교하여 ID가 검사됩니다. (참조에 대 한 id 및 작동 방법 설명은 [서비스 Id 및 인증](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md).)  
   
  필요한 경우 사용자 지정 ID 검증 도구를 사용하여 확인을 사용자 지정할 수 있습니다. 예를 들어, 서비스 ID 확인 검사를 추가로 수행할 수 있습니다. 이 예에서 사용자 지정 ID 검증 도구는 서버에서 반환되는 X.509 인증서에서 추가 클레임을 검사합니다. 샘플 응용 프로그램에 대 한 참조 [Service Identity 샘플](../../../../docs/framework/wcf/samples/service-identity-sample.md)합니다.  
   
@@ -80,13 +68,13 @@ ms.lasthandoff: 12/22/2017
      [!code-csharp[c_HowToSetCustomClientIdentity#4](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howtosetcustomclientidentity/cs/source.cs#4)]
      [!code-vb[c_HowToSetCustomClientIdentity#4](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_howtosetcustomclientidentity/vb/source.vb#4)]  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 예제에서는 <xref:System.ServiceModel.Security.IdentityVerifier> 클래스의 전체 구현을 보여 줍니다.  
   
  [!code-csharp[c_HowToSetCustomClientIdentity#5](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howtosetcustomclientidentity/cs/source.cs#5)]
  [!code-vb[c_HowToSetCustomClientIdentity#5](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_howtosetcustomclientidentity/vb/source.vb#5)]  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 예제에서는 <xref:System.ServiceModel.EndpointIdentity> 클래스의 전체 구현을 보여 줍니다.  
   
  [!code-csharp[c_HowToSetCustomClientIdentity#6](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howtosetcustomclientidentity/cs/source.cs#6)]

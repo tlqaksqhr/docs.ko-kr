@@ -1,12 +1,6 @@
 ---
 title: Using 문(Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.using
 helpviewer_keywords:
@@ -15,14 +9,11 @@ helpviewer_keywords:
 - resources [Visual Basic], disposing
 - Using statement [Visual Basic]
 ms.assetid: 665d1580-dd54-4e96-a9a9-6be2a68948f1
-caps.latest.revision: 36
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: ed9cc0d04c89eac1fe342a0924dd89bb1e258a11
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 725eeb42dc5462022ac1a021c537d701929398ba
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-statement-visual-basic"></a>Using 문(Visual Basic)
 시작을 선언는 `Using` 차단 하 고 블록이 제어 되는 시스템 리소스를 선택적으로 가져옵니다.  
@@ -42,13 +33,13 @@ End Using
 |`resourcelist`|지정 하지 않은 경우 필요한 `resourceexpression`합니다. 하나 이상의 시스템 리소스가이 목록 `Using` 쉼표로 구분 하 여 컨트롤을 차단 합니다.|  
 |`resourceexpression`|지정 하지 않은 경우 필요한 `resourcelist`합니다. 참조 변수 또는 시스템 리소스에 대 한이 제어를 참조 하는 식을 `Using` 블록입니다.|  
 |`statements`|선택 사항입니다. 문 블록을 하는 `Using` 블록이 실행 됩니다.|  
-|`End Using`|필수 요소. 정의 종료는 `Using` 블록 및 제어 하는 모든 리소스를 삭제 합니다.|  
+|`End Using`|필수. 정의 종료는 `Using` 블록 및 제어 하는 모든 리소스를 삭제 합니다.|  
   
  각 리소스에는 `resourcelist` 부분은 다음과 같은 구문과 요소가 있습니다.  
   
  `resourcename As New resourcetype [ ( [ arglist ] ) ]`  
   
- 또는  
+ -또는-  
   
  `resourcename As resourcetype = resourceexpression`  
   
@@ -56,11 +47,11 @@ End Using
   
 |용어|정의|  
 |---|---|  
-|`resourcename`|필수 요소. 참조 변수를 시스템 리소스를 참조 하는 `Using` 컨트롤을 차단 합니다.|  
+|`resourcename`|필수. 참조 변수를 시스템 리소스를 참조 하는 `Using` 컨트롤을 차단 합니다.|  
 |`New`|필요한 경우에는 `Using` 문이 리소스를 가져오는 합니다. 이미 리소스를 확보 하는 경우에 두 번째 대체 구문을 사용 합니다.|  
-|`resourcetype`|필수 요소. 리소스의 클래스입니다. 클래스를 구현 해야 합니다는 <xref:System.IDisposable> 인터페이스입니다.|  
+|`resourcetype`|필수. 리소스의 클래스입니다. 클래스를 구현 해야 합니다는 <xref:System.IDisposable> 인터페이스입니다.|  
 |`arglist`|선택 사항입니다. 인스턴스를 만드는 생성자에 전달 하는 인수 목록 `resourcetype`합니다. 참조 [매개 변수 목록](../../../visual-basic/language-reference/statements/parameter-list.md)합니다.|  
-|`resourceexpression`|필수 요소. 변수 또는 식의 요구 사항을 만족 하는 시스템 리소스를 가리키는 `resourcetype`합니다. 컨트롤을 전달 하기 전에 리소스를 획득 해야 두 번째 대체 구문을 사용 하는 경우는 `Using` 문.|  
+|`resourceexpression`|필수. 변수 또는 식의 요구 사항을 만족 하는 시스템 리소스를 가리키는 `resourcetype`합니다. 컨트롤을 전달 하기 전에 리소스를 획득 해야 두 번째 대체 구문을 사용 하는 경우는 `Using` 문.|  
   
 ## <a name="remarks"></a>설명  
  경우에 따라 코드는 열려 있는 파일 핸들, COM 래퍼 SQL 연결 등의 관리 되지 않는 리소스를 필요합니다. A `Using` 블록 코드는 작업을 마칠 때 하나 이상의 이러한 리소스의 삭제를 보장 합니다. 이 사용할 수 있도록 사용 하기 위해 다른 코드입니다.  

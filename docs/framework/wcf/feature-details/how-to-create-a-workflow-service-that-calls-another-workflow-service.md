@@ -1,24 +1,12 @@
 ---
-title: "방법: 다른 워크플로 서비스를 호출하는 워크플로 서비스 만들기"
-ms.custom: 
+title: '방법: 다른 워크플로 서비스를 호출하는 워크플로 서비스 만들기'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 99b3ee3e-aeb7-4e6f-8321-60fe6140eb67
-caps.latest.revision: "7"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: c99748e77f1fccd9512c8915d0f4068d0da51a41
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: fda5a7286c3d20c7cdc2093e58bfe3fbdcf1d1c1
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-a-workflow-service-that-calls-another-workflow-service"></a>방법: 다른 워크플로 서비스를 호출하는 워크플로 서비스 만들기
 워크플로 서비스에서 다른 워크플로 서비스의 정보를 얻어야 하는 경우가 가끔 있습니다.  이 항목에서는 워크플로 서비스 간에 호출하는 방법을 보여 줍니다. 이 항목에서는 두 개의 워크플로 서비스를 만듭니다. 하나는 입력 문자열의 방향을 반대로 바꾸는 메서드가 있는 서비스이고, 다른 하나는 첫 번째 서비스를 사용하는 문자열의 방향을 반대로 바꾼 후 입력 문자열을 대문자로 변환하는 서비스입니다.  
@@ -113,7 +101,7 @@ ms.lasthandoff: 12/22/2017
   
     4.  **TargetType**: NestedServices.StringLibrary  
   
-8.  이제 수정된 문자열에 대해 첫 번째 서비스를 호출합니다. 프로젝트를 마우스 오른쪽 단추로 클릭 하 고 선택 **서비스 참조 추가**합니다. http://localhost/NestedServices/StringReverserService.xamlx에 있는 서비스에 대한 서비스 참조를 추가하고 첫 번째 서비스에 액세스하는 사용자 지정 활동을 만드는 프로젝트를 빌드합니다.  
+8.  이제 수정된 문자열에 대해 첫 번째 서비스를 호출합니다. 프로젝트를 마우스 오른쪽 단추로 클릭 하 고 선택 **서비스 참조 추가**합니다. 서비스에 대 한 서비스 참조 추가 http://localhost/NestedServices/StringReverserService.xamlx 첫 번째 웹 서비스에 액세스 하는 사용자 지정 활동을 만드는 프로젝트를 빌드합니다.  
   
 9. 끌어 새 활동의 인스턴스는 워크플로 간에 **InvokeMethod** 활동 및 **SendReplyToReceive** 활동입니다. 새 활동의 InputString 속성에 StringToReverse 변수를 할당하고 StringToReturn 속성에 StringToReturn 변수를 할당합니다.  
   

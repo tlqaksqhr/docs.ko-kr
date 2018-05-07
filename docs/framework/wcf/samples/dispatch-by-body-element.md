@@ -1,26 +1,12 @@
 ---
 title: 본문 요소에 의한 디스패치
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: f64a3c04-62b4-47b2-91d9-747a3af1659f
-caps.latest.revision: ''
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 4ab8ddccafa8dbf1ecde8afbb07f0a61faa62be5
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: a59f639fc0f1adad48bfda5fd8105340ac004cef
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="dispatch-by-body-element"></a>본문 요소에 의한 디스패치
 이 샘플에서는 들어오는 메시지를 작업에 할당하는 대체 알고리즘을 구현하는 방법을 보여 줍니다.  
@@ -82,7 +68,7 @@ private Message CreateMessageCopy(Message message,
 ```  
   
 ## <a name="adding-an-operation-selector-to-a-service"></a>서비스에 작업 선택기 추가  
- 서비스 디스패치 작업 선택기는 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 디스패처의 확장입니다. 이중 계약의 콜백 채널에서 메서드를 선택하기 위한 클라이언트 작업 선택기도 있습니다. 이 작업 선택기는 여기에서 설명하는 디스패치 작업 선택기와 매우 유사하게 작동하지만 이 샘플에서 명시적으로 설명하지는 않습니다.  
+ 서비스 디스패치 작업 선택기는 Windows Communication Foundation (WCF) 디스패처로 확장 합니다. 이중 계약의 콜백 채널에서 메서드를 선택하기 위한 클라이언트 작업 선택기도 있습니다. 이 작업 선택기는 여기에서 설명하는 디스패치 작업 선택기와 매우 유사하게 작동하지만 이 샘플에서 명시적으로 설명하지는 않습니다.  
   
  대부분의 서비스 모델 확장처럼 디스패치 작업 선택기도 동작을 사용하여 디스패처에 추가됩니다. A *동작* 은 디스패치 런타임이나 (또는 클라이언트 런타임을) 하나 이상의 확장을 추가 하거나 해당 설정을 변경 하는 구성 개체입니다.  
   
@@ -187,7 +173,7 @@ public interface IDispatchedByBody
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  이 디렉터리가 없으면 [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4(.NET Framework 4용 WCF(Windows Communication Foundation) 및 WF(Windows Workflow Foundation) 샘플)](http://go.microsoft.com/fwlink/?LinkId=150780) 로 이동하여 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 및 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플을 모두 다운로드하세요. 이 샘플은 다음 디렉터리에 있습니다.  
+>  이 디렉터리가로 이동 [Windows Communication Foundation (WCF) 및.NET Framework 4에 대 한 Windows WF (Workflow Foundation) 샘플](http://go.microsoft.com/fwlink/?LinkId=150780) 모든 Windows Communication Foundation (WCF)를 다운로드 하 고 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플. 이 샘플은 다음 디렉터리에 있습니다.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Interop\AdvancedDispatchByBody`  
   

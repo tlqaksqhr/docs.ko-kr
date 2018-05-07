@@ -1,13 +1,6 @@
 ---
-title: "방법: 이미지 메타데이터 읽기"
-ms.custom: 
+title: '방법: 이미지 메타데이터 읽기'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -15,21 +8,16 @@ helpviewer_keywords:
 - metadata [Windows Forms], property item
 - metadata [Windows Forms], reading image
 ms.assetid: 72ec0b31-0be7-444a-9575-1dbcb864e0be
-caps.latest.revision: "15"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: b610e499ff980d2e705ad855ae98c1d54ff412e7
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 92ce4eb8d51fbd25f9a129a629dc47bfb9941f34
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-read-image-metadata"></a>방법: 이미지 메타데이터 읽기
 일부 이미지 파일 이미지의 기능을 확인 읽을 수 있는 메타 데이터를 포함 합니다. 예를 들어 디지털 사진 제조업체와 이미지를 캡처하는 데 사용 하는 카메라 모델을 확인 하려면 읽을 수 있는 메타 데이터를 포함 될 수 있습니다. 와 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)], 기존 메타 데이터를 읽을 수 있습니다 및 이미지 파일에 새 메타 데이터를 쓸 수도 있습니다.  
   
- [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]메타 데이터는 개별 부분을 저장 한 <xref:System.Drawing.Imaging.PropertyItem> 개체입니다. 읽을 수는 <xref:System.Drawing.Image.PropertyItems%2A> 속성은 <xref:System.Drawing.Image> 파일에서 모든 메타 데이터를 검색할 개체입니다. <xref:System.Drawing.Image.PropertyItems%2A> 속성의 배열을 반환 <xref:System.Drawing.Imaging.PropertyItem> 개체입니다.  
+ [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 메타 데이터는 개별 부분을 저장 한 <xref:System.Drawing.Imaging.PropertyItem> 개체입니다. 읽을 수는 <xref:System.Drawing.Image.PropertyItems%2A> 속성은 <xref:System.Drawing.Image> 파일에서 모든 메타 데이터를 검색할 개체입니다. <xref:System.Drawing.Image.PropertyItems%2A> 속성의 배열을 반환 <xref:System.Drawing.Imaging.PropertyItem> 개체입니다.  
   
  A <xref:System.Drawing.Imaging.PropertyItem> 개체에는 다음 네 가지 속성이: `Id`, `Value`, `Len`, 및 `Type`합니다.  
   
@@ -62,7 +50,7 @@ ms.lasthandoff: 12/22/2017
 |10|`SLong`|  
 |10|`SRational`|  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
   
 ### <a name="description"></a>설명  
  다음 코드 예제에서는 파일의 일곱 가지 메타 데이터 표시를 읽고 `FakePhoto.jpg`합니다. 목록에서 두 번째 (인덱스 1) 속성 항목에 <xref:System.Drawing.Imaging.PropertyItem.Id%2A> 는 0x010F (주문자) 및 <xref:System.Drawing.Imaging.PropertyItem.Type%2A> 2 (ASCII로 인코딩된 바이트 배열)입니다. 코드 예제에서는 해당 속성 항목의 값을 표시합니다.  

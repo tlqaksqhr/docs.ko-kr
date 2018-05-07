@@ -1,27 +1,15 @@
 ---
-title: "배포"
-ms.custom: 
+title: 배포
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 502c50b2-9982-46af-ac92-53ad9f61d486
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 8a438a16174343c785ecb68bf6d38e95f37af46f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 8c58aee970511f659c192ee8dbf53a4e1579bcd7
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="syndication"></a>배포
-이 단원에는 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 배포를 보여 주는 샘플이 포함되어 있습니다.  
+이 섹션에는 Windows Communication Foundation (WCF) 배포를 보여 주는 샘플이 포함 되어 있습니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
  [독립형 진단 피드](../../../../docs/framework/wcf/samples/stand-alone-diagnostics-feed-sample.md)  

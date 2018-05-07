@@ -1,30 +1,16 @@
 ---
 title: 단방향 서비스
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - Windows Communication Foundation [WCF], one-way service contracts
 - WCF [WCF], one-way service contracts
 - service contracts [WCF], defining one-way
 ms.assetid: 19053a36-4492-45a3-bfe6-0365ee0205a3
-caps.latest.revision: 18
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 380f6a10994c7eb69f4a59b222aa2d422151f247
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 03efc27f2ba54ca22f03e3ece84770fe0dcadbb3
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="one-way-services"></a>단방향 서비스
 서비스 작업의 기본 동작은 요청-회신 패턴입니다. 요청-회신 패턴의 경우 서비스 작업이 `void` 메서드로 코드에 표현된 경우에도 클라이언트에서 회신 메시지를 기다립니다. 단방향 작업을 사용하는 경우 하나의 메시지만 전송됩니다. 수신자는 회신 메시지를 보내지 않으며 발신자도 메시지를 기다리지 않습니다.  
@@ -57,7 +43,7 @@ public interface IOneWayCalculator
  전체 예제에 대 한 참조는 [단방향](../../../../docs/framework/wcf/samples/one-way.md) 샘플.  
   
 ## <a name="clients-blocking-with-one-way-operations"></a>단방향 작업을 사용하여 클라이언트 차단  
- 일부 단방향 응용 프로그램은 아웃바운드 데이터가 네트워크 연결에 쓰여지면 반환되는 반면 몇몇 시나리오의 경우 바인딩 또는 서비스를 구현하면 단방향 작업을 사용하여 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 클라이언트를 차단할 수 있습니다. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 클라이언트 응용 프로그램의 경우 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 클라이언트 개체는 아웃바운드 데이터가 네트워크 연결에 쓰여지기 전에는 반환되지 않습니다. 이는 단방향 작업을 비롯한 모든 메시지 교환 패턴에 적용되며, 전송에 데이터를 쓰는 동안 발생한 문제로 인해 클라이언트가 반환될 수 없음을 의미합니다. 문제에 따라 예외가 발생하거나 메시지를 서비스에 보낼 때 지연될 수 있습니다.  
+ 일부 단방향 응용 프로그램 아웃 바운드 데이터에 기록 됩니다 네트워크 연결을 여러 시나리오에서 바인딩 또는 서비스를 구현 하는 즉시 반환 하는 동안 발생할 수 있습니다는 WCF 클라이언트 단방향 작업을 사용 하 여를 나타내려고 하는 것이 유용 합니다. WCF 클라이언트 응용 프로그램에서 WCF 클라이언트 개체는 아웃 바운드 데이터가 네트워크 연결에 쓰여지기 될 때까지 반환 하지 않습니다. 이는 단방향 작업을 비롯한 모든 메시지 교환 패턴에 적용되며, 전송에 데이터를 쓰는 동안 발생한 문제로 인해 클라이언트가 반환될 수 없음을 의미합니다. 문제에 따라 예외가 발생하거나 메시지를 서비스에 보낼 때 지연될 수 있습니다.  
   
  예를 들어, 전송에서 끝점을 찾을 수 없는 경우 장시간 지연되지 않고 <xref:System.ServiceModel.EndpointNotFoundException?displayProperty=nameWithType> 예외가 throw됩니다. 그러나 다른 이유로 연결이 끊어져 서비스에서 데이터를 읽지 못하게 될 수도 있어 클라이언트 전송의 보내기 작업이 반환될 수 없습니다. 이 경우 클라이언트 전송 바인딩의 <xref:System.ServiceModel.Channels.Binding.SendTimeout%2A?displayProperty=nameWithType> 기간을 초과하면 <xref:System.TimeoutException?displayProperty=nameWithType>이 throw됩니다. 서비스에 너무 많은 메시지가 발생되어 서비스가 특정 지점 이후부터는 메시지를 처리할 수 없을 수도 있습니다. 이 경우에도 서비스가 메시지를 처리할 수 있게 되거나 예외가 throw될 때까지 단방향 클라이언트가 차단됩니다.  
   

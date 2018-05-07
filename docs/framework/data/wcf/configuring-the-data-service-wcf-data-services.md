@@ -1,31 +1,17 @@
 ---
 title: 데이터 서비스 구성(WCF Data Services)
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework-oob
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - WCF Data Services, configuring
 ms.assetid: 59efd4c8-cc7a-4800-a0a4-d3f8abe6c55c
-caps.latest.revision: 10
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 7c3c82e1e4460e82dd7e6bd88771eae96f132c8e
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 4ee0f6c18551a996f4876fe7c7bc333b687f2e3f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="configuring-the-data-service-wcf-data-services"></a>데이터 서비스 구성(WCF Data Services)
 와 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]를 노출 하는 데이터 서비스를 만들 수 있습니다 [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] 피드입니다. 이러한 피드의 데이터는 다양한 데이터 소스에서 제공될 수 있습니다. [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 데이터 공급자를 사용 하 여이 데이터를 노출 하는 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 피드입니다. 이러한 공급자에는 [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] 공급자, 리플렉션 공급자 및 사용자 지정 데이터 서비스 공급자 인터페이스의 집합이 포함됩니다. 공급자 구현은 서비스에 대한 데이터 모델을 정의합니다. 자세한 내용은 참조 [데이터 서비스 공급자](../../../../docs/framework/data/wcf/data-services-providers-wcf-data-services.md)합니다.  

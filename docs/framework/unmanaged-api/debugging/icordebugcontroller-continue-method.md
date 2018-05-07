@@ -1,14 +1,6 @@
 ---
-title: "ICorDebugController::Continue 메서드"
-ms.custom: 
+title: ICorDebugController::Continue 메서드
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICorDebugController.Continue
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: 8684cd06-ad3e-48ef-832e-15320e1f43a2
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: e6a96145801aa8ef6482e30e9c00b763d2501f36
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 529a65285203ac831e1bcab9dc1bea69ac28a282
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="icordebugcontrollercontinue-method"></a>ICorDebugController::Continue 메서드
 관리 되는 스레드를 호출한 후 실행을 계속 [Stop 메서드](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-stop-method.md)합니다.  
@@ -51,7 +39,7 @@ HRESULT Continue (
  [in] 로 설정 `true` 밴드의 범위를 벗어난 이벤트;에서 계속 실행 하는 경우 이렇게 하지 않으면으로 설정 `false`합니다.  
   
 ## <a name="remarks"></a>설명  
- `Continue`호출한 후 프로세스를 계속는 `ICorDebugController::Stop` 메서드.  
+ `Continue` 호출한 후 프로세스를 계속는 `ICorDebugController::Stop` 메서드.  
   
  혼합 모드 디버깅을 수행할 때 호출 하지 않으면 `Continue` Win32에 이벤트 스레드 대역의 이벤트에서 계속 실행 하는 경우가 아니면 합니다.  
   
@@ -66,7 +54,7 @@ HRESULT Continue (
   
  **라이브러리:** CorGuids.lib  
   
- **.NET framework 버전:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>참고 항목  
  

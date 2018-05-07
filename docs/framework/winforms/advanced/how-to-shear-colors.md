@@ -1,13 +1,6 @@
 ---
-title: "방법: 색 전단"
-ms.custom: 
+title: '방법: 색 전단'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -15,21 +8,16 @@ helpviewer_keywords:
 - colors [Windows Forms], transforming with color matrices
 - colors [Windows Forms], shearing
 ms.assetid: 0a424171-5b8b-45c4-afef-e9720a6c3e22
-caps.latest.revision: "13"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 0a32e6c1901f84c276c071402dac641d45566717
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 204f15ce44d5ad688be0ea9ac0fa4a90781b25dd
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-shear-colors"></a>방법: 색 전단
 기울이기 증가 또는 다른 색상 구성 요소에 비례 하는 양을 색상 구성 요소 감소 합니다. 예를 들어 빨강 구성 요소를 1/2 파랑의 값 만큼 늘리는 변환을 사용 하십시오. 이러한 변환에서 (0.7, 0.5, 1) (0.2, 0.5, 1) 색 될 것입니다. 새 빨강 구성은 0.2 + (1/2)(1) 0.7입니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 구성 예제는 <xref:System.Drawing.Image> ColorBars4.bmp 파일에서 개체입니다. 다음 코드는 각 픽셀 이미지에 이전 단락에 설명 된 기울이기 변환을 적용 합니다.  
   
  다음 그림에서는 오른쪽에서 왼쪽의 원래 이미지와 기울이기가 적용 된 이미지를 보여 줍니다.  

@@ -1,24 +1,12 @@
 ---
-title: "상호 운영 가능한 개체 참조"
-ms.custom: 
+title: 상호 운영 가능한 개체 참조
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: cb8da4c8-08ca-4220-a16b-e04c8f527f1b
-caps.latest.revision: "7"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 3d74c54d29f7da085d9d87bf37cc93078726f308
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: eeedd39ec14a6758395aee1f4c3b8ab26a0c2ffd
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="interoperable-object-references"></a>상호 운영 가능한 개체 참조
 기본적으로 <xref:System.Runtime.Serialization.DataContractSerializer>는 개체를 값으로 serialize합니다. <xref:System.Runtime.Serialization.DataContractAttribute.IsReference%2A> 속성을 사용하여 데이터 계약 Serializer에 해당 형식의 개체를 serialize할 때 개체 참조를 유지하도록 지시할 수 있습니다.  

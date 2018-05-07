@@ -1,31 +1,20 @@
 ---
 title: 어셈블리 및 DLL의 이름
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - names [.NET Framework], DLLs
 - names [.NET Framework], assemblies
 - assemblies [.NET Framework], names
 - DLLs, names
 ms.assetid: e800b610-31b4-4949-9c14-cb60e9f254be
-caps.latest.revision: 11
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: ff14d3d804329e591486a7eb2a2ee7ed430f622c
-ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
+ms.openlocfilehash: c6cf175472d68e99598dd56e170bee3d37ae3c2a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="names-of-assemblies-and-dlls"></a>어셈블리 및 DLL의 이름
 어셈블리는 배포 및 관리 코드 프로그램에 대 한 id의 단위입니다. 어셈블리 하나 이상의 파일에 걸쳐 있을 수 있습니다, 있지만 일반적으로 어셈블리가 매핑됩니다 DLL과 일 대 일로 합니다. 따라서이 섹션에서는 다음 어셈블리 명명 규칙으로 매핑할 수 있습니다만 DLL 명명 규칙을 설명 합니다.  

@@ -1,11 +1,6 @@
 ---
-title: "SyncLock 문"
+title: SyncLock 문
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.SyncLock
 - SyncLock
@@ -14,14 +9,11 @@ helpviewer_keywords:
 - SyncLock statement [Visual Basic]
 - locks, threads
 ms.assetid: 14501703-298f-4d43-b139-c4b6366af176
-caps.latest.revision: "17"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: c363b41bb7a409c490a6e07d4a1a4f1bb44c1438
-ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
+ms.openlocfilehash: cf2aad9ec2ba67200d175fbcddfcb49afeac6efc
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="synclock-statement"></a>SyncLock 문
 블록을 실행 하기 전에 문 블록에 대 한 단독 잠금을 가져옵니다.  
@@ -45,7 +37,7 @@ End SyncLock
  종료는 `SyncLock` 블록입니다.  
   
 ## <a name="remarks"></a>설명  
- `SyncLock` 문을 여러 스레드가 동시에 문 블록을 실행 하지 않도록 보장 합니다. `SyncLock`각 스레드가 다른 스레드에서 실행 될 때까지 블록을 입력 하지 않습니다.  
+ `SyncLock` 문을 여러 스레드가 동시에 문 블록을 실행 하지 않도록 보장 합니다. `SyncLock` 각 스레드가 다른 스레드에서 실행 될 때까지 블록을 입력 하지 않습니다.  
   
  가장 일반적인 용도 `SyncLock` 에서 둘 이상의 스레드에서 동시에 업데이트 되 고 데이터를 보호 하는 것입니다. 데이터를 조작 하는 문이 중단 없이 완료도 이동 해야 하는 경우 내에 배치 된 `SyncLock` 블록입니다.  
   

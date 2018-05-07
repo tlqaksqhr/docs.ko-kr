@@ -1,13 +1,6 @@
 ---
-title: "방법: Drawing으로 영역 그리기"
-ms.custom: 
+title: '방법: Drawing으로 영역 그리기'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -16,21 +9,16 @@ helpviewer_keywords:
 - painting [WPF], with drawings
 - drawings [WPF], painting with
 ms.assetid: c10dc4b1-09b1-41e8-ad14-456b5fb377df
-caps.latest.revision: "12"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: fbb7c4aff56fae9b4cc0346f8086bc490269ec8b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 222aa3fbb72ebaf15be3ed7f9804936e7e1187e8
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-paint-an-area-with-a-drawing"></a>방법: Drawing으로 영역 그리기
 이 예제에서는 그리기로 영역을 그리는 방법을 보여 줍니다. 로 드로잉 영역을 그리는 데 사용 하는 <xref:System.Windows.Media.DrawingBrush> 와 하나 이상의 <xref:System.Windows.Media.Drawing> 개체입니다.   다음 예제에서는 한 <xref:System.Windows.Media.DrawingBrush> 그림 두 타원으로 개체를 그리는 합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  [!code-xaml[drawingbrush_snip#DrawingBrushExampleWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/drawingbrush_snip/CS/DrawingBrushExample.xaml#drawingbrushexamplewholepage)]  
   
  [!code-csharp[drawingbrush_procedural_snip#DrawingBrushExampleWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/drawingbrush_procedural_snip/CSharp/DrawingBrushExample.cs#drawingbrushexamplewholepage)]

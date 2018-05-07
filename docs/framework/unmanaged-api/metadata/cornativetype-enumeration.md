@@ -1,14 +1,6 @@
 ---
-title: "CorNativeType 열거형"
-ms.custom: 
+title: CorNativeType 열거형
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - CorNativeType
 api_location:
@@ -22,17 +14,13 @@ helpviewer_keywords:
 ms.assetid: e47a72f1-9609-48ed-bb34-97170d7f6890
 topic_type:
 - apiref
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 6be442dd74f6a71494e140b76357be1bc9e1b747
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: b28fe8e8fd8b602a01b6358f46f60cdf792ced0d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cornativetype-enumeration"></a>CorNativeType 열거형
 관리되지 않는 네이티브 형식을 설명하는 값을 포함합니다.  
@@ -155,7 +143,7 @@ typedef enum CorNativeType {
   
  **헤더:** CorHdr.h  
   
- **.NET framework 버전:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>참고 항목  
  <xref:System.Runtime.InteropServices.UnmanagedType>  

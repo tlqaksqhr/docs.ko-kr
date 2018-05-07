@@ -1,14 +1,6 @@
 ---
 title: 스키마 가져오기 및 내보내기
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -17,20 +9,14 @@ helpviewer_keywords:
 - XsdDataContractExporter class
 - XsdDataContractImporter class
 ms.assetid: 0da32b50-ccd9-463a-844c-7fe803d3bf44
-caps.latest.revision: 14
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: fe4ef5b17013bf1a9abf5fd1ca0807fe4d335df4
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: c9bb0d6df362380a37ae3079694ab91e9577741d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="schema-import-and-export"></a>스키마 가져오기 및 내보내기
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 에는 새로운 serialization 엔진인 <xref:System.Runtime.Serialization.DataContractSerializer>가 포함되어 있습니다. `DataContractSerializer`는 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 개체와 XML을 양방향으로 변환합니다. 이 serializer 이외에도, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에는 관련 스키마를 가져오고 내보내는 메커니즘이 있습니다. *스키마* serializer 생성 하거나 deserializer가 액세스할 수 있는 XML 형태에, 정규화 되 고 컴퓨터가 읽을 수 있는 설명입니다. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서는 여러 타사 플랫폼과 상호 운용할 수 있는 W3C(World Wide Web 컨소시엄) XSD(XML 스키마 정의 언어)를 스키마 표현으로 사용합니다.  
+Windows Communication Foundation (WCF)는 새로운 serialization 엔진인 포함 된 <xref:System.Runtime.Serialization.DataContractSerializer>합니다. `DataContractSerializer`는 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 개체와 XML을 양방향으로 변환합니다. 자체 serializer 이외에 WCF 관련된 스키마를 가져오고 내보내는 메커니즘이 포함 되어 있습니다. *스키마* serializer 생성 하거나 deserializer가 액세스할 수 있는 XML 형태에, 정규화 되 고 컴퓨터가 읽을 수 있는 설명입니다. WCF에서는 여러 타사 플랫폼과 상호 운용할 수 있는 스키마 표현으로 World Wide Web Consortium (W3C) XML 스키마 정의 언어 (XSD)를 사용 합니다.  
   
  스키마 가져오기 구성 요소인 <xref:System.Runtime.Serialization.XsdDataContractImporter>는 XSD 스키마 문서를 사용하고 일반적으로 데이터 계약 클래스인 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 클래스를 생성하므로, serialize된 형태가 해당 스키마에 일치합니다.  
   

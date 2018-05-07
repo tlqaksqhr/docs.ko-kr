@@ -1,23 +1,12 @@
 ---
-title: "추적 레코드"
-ms.custom: 
+title: 추적 레코드
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 51adbda3-bd8b-4892-a8ea-d343186472d2
-caps.latest.revision: "20"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 6c871f019179c091fc022be0bf03ad84fbe66dc1
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: b07175943f85b61024030c1e0251e24d1eb35c86
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tracking-records"></a>추적 레코드
 워크플로 런타임을 계측하여 워크플로 인스턴스 실행을 추적하는 추적 레코드를 내보냅니다.  

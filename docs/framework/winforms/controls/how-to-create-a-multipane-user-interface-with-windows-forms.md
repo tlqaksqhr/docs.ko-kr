@@ -1,14 +1,6 @@
 ---
 title: '방법: Windows Forms으로 다중 창 사용자 인터페이스 만들기'
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-winforms
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -20,17 +12,11 @@ helpviewer_keywords:
 - TreeView control [Windows Forms], examples
 - Splitter control [Windows Forms], examples
 ms.assetid: e79f6bcc-3740-4d1e-b46a-c5594d9b7327
-caps.latest.revision: 20
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 6011eb2d49e537a2f5dfc540611af40a30b3e721
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 4e243191b83149f17f4970150d784dcd7d014b22
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-a-multipane-user-interface-with-windows-forms"></a>방법: Windows Forms으로 다중 창 사용자 인터페이스 만들기
 다음 절차에서는 Microsoft Outlook으로 사용 되는 비슷한 다중 창 사용자 인터페이스 만들어집니다는 **폴더** 목록은 **메시지** 창 및 **미리보기** 창. 이 정렬은 주로 폼에 컨트롤을 도킹을 통해 얻습니다.  

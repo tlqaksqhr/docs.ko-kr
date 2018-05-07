@@ -1,41 +1,27 @@
 ---
 title: 메시지 계약 사용
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - message contracts [WCF]
 ms.assetid: 1e19c64a-ae84-4c2f-9155-91c54a77c249
-caps.latest.revision: 46
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 600d938b8981ddfabcb79028ae66b5b9d02107b7
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: ea0a107a67753e919439a6be2035ab77001641ff
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-message-contracts"></a>메시지 계약 사용
-일반적으로 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 응용 프로그램을 빌드할 때 개발자는 데이터 구조 및 serialization 문제에 특히 주의를 기울여야 하지만 데이터가 전달되는 메시지의 구조에 대해서는 주의를 기울이지 않아도 됩니다. 이러한 응용 프로그램의 경우 매개 변수 또는 반환 값에 대한 데이터 계약을 만드는 과정은 간단합니다. (자세한 내용은 참조 [서비스 계약에 데이터 전송 지정](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md).)  
+일반적으로 Windows Communication Foundation (WCF) 응용 프로그램을 빌드하는 경우 개발자는 데이터 구조 및 serialization 문제에 특히 주의 해야 및 데이터 전달 되는 메시지의 구조 고려할 필요가 없습니다. 이러한 응용 프로그램의 경우 매개 변수 또는 반환 값에 대한 데이터 계약을 만드는 과정은 간단합니다. (자세한 내용은 참조 [서비스 계약에 데이터 전송 지정](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md).)  
   
  그러나 SOAP 메시지의 구조를 완벽하게 제어하는 것이 SOAP 메시지의 내용을 제어하는 것만큼이나 중요한 경우도 있습니다. 특히 상호 운용성이 중요한 경우 또는 메시지나 메시지 부분의 수준에서 보안 문제를 특별히 제어해야 하는 경우에는 더욱 그렇습니다. 이러한 경우에 만들 수는 *메시지 계약* 필요한 정확한 SOAP 메시지의 구조를 지정할 수 있습니다.  
   
  이 항목에서는 다양한 메시지 계약 특성을 사용하여 작업에 대한 특정 메시지 계약을 만드는 방법에 대해 설명합니다.  
   
 ## <a name="using-message-contracts-in-operations"></a>작업에서 메시지 계약 사용  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 중 하나로 모델링 된 작업을 지원는 *원격 프로시저 호출 (RPC) 스타일* 또는 *메시징 스타일*합니다. RPC 스타일 작업에서는 serialize할 수 있는 형식을 모두 사용할 수 있으며, 여러 매개 변수, `ref` 및 `out` 매개 변수와 같은 로컬 호출에 사용 가능한 기능을 사용할 수 있습니다. 이 스타일에서는 선택한 serialization 형식이 기본 메시지의 데이터 구조를 제어하지만 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 런타임에서는 작업을 지원하기 위해 메시지를 만듭니다. 이를 통해 SOAP 및 SOAP 메시지에 익숙하지 않은 개발자도 서비스 응용 프로그램을 빠르고 쉽게 만들고 사용할 수 있습니다.  
+ WCF 지원 중 하나로 모델링 된 작업의 *원격 프로시저 호출 (RPC) 스타일* 또는 *메시징 스타일*합니다. RPC 스타일 작업에서는 serialize할 수 있는 형식을 모두 사용할 수 있으며, 여러 매개 변수, `ref` 및 `out` 매개 변수와 같은 로컬 호출에 사용 가능한 기능을 사용할 수 있습니다. 이 스타일에서는 선택한 serialization 형식이 기본 메시지에 있는 데이터의 구조를 제어 하 고 WCF 런타임 작업을 지원 하기 위해 메시지를 만듭니다. 이를 통해 SOAP 및 SOAP 메시지에 익숙하지 않은 개발자도 서비스 응용 프로그램을 빠르고 쉽게 만들고 사용할 수 있습니다.  
   
  다음 코드 예제에서는 RPC 스타일로 모델링된 서비스 작업을 보여 줍니다.  
   
@@ -263,7 +249,7 @@ public class PatientRecord
   
 -   `Relay`  
   
- `Actor` 또는 `Role` 특성은 지정된 헤더를 사용할 노드의 URI(Uniform Resource Identifier)를 지정합니다. `MustUnderstand` 특성은 헤더에서 노드 처리를 인식해야 하는지 여부를 지정합니다. `Relay` 특성은 헤더를 다운스트림 노드로 릴레이할지 여부를 지정합니다. 이 항목의 나중에 나오는 "메시지 계약 버전 관리" 섹션에 지정된 대로, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서는 `MustUnderstand` 특성을 제외하고 들어오는 메시지에 이러한 특성의 처리를 수행하지 않습니다. 그러나 다음 설명에서와 같이 필요에 따라 이러한 특성을 읽고 쓸 수 있습니다.  
+ `Actor` 또는 `Role` 특성은 지정된 헤더를 사용할 노드의 URI(Uniform Resource Identifier)를 지정합니다. `MustUnderstand` 특성은 헤더에서 노드 처리를 인식해야 하는지 여부를 지정합니다. `Relay` 특성은 헤더를 다운스트림 노드로 릴레이할지 여부를 지정합니다. WCF를 제외 하 고 들어오는 메시지에 이러한 특성의 처리를 수행 하지 않습니다는 `MustUnderstand` 이 항목의 뒷부분에 나오는 "메시지 계약 버전 관리" 섹션에 지정 된 특성입니다. 그러나 다음 설명에서와 같이 필요에 따라 이러한 특성을 읽고 쓸 수 있습니다.  
   
  메시지를 보낼 때 이러한 특성은 기본적으로 내보내지 않습니다. 다음 두 가지 방법으로 이를 변경할 수 있습니다. 첫 번째 방법은 다음 코드 예제에서처럼 <xref:System.ServiceModel.MessageHeaderAttribute.Actor%2A?displayProperty=nameWithType>, <xref:System.ServiceModel.MessageHeaderAttribute.MustUnderstand%2A?displayProperty=nameWithType>, 및 <xref:System.ServiceModel.MessageHeaderAttribute.Relay%2A?displayProperty=nameWithType> 속성을 변경함으로써 원하는 값으로 정적으로 특성을 설정할 수 있습니다. (`Role` 속성은 없으며, <xref:System.ServiceModel.MessageHeaderAttribute.Actor%2A> 속성을 설정하면 SOAP 1.2를 사용할 경우 `Role` 특성을 내보냅니다.)  
   
@@ -336,9 +322,9 @@ public class BankingTransaction
   
  헤더 버전 관리를 위해 다음 규칙을 적용합니다.  
   
--   [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서는 누락된 헤더를 무시하며, 해당 멤버는 자체 기본값으로 유지됩니다.  
+-   WCF 누락 된 헤더에 개체를 수행 하지-해당 멤버는 기본값으로 유지 됩니다.  
   
--   [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서는 예기치 않은 추가 헤더도 무시합니다. 이 규칙에 대한 한 가지 예외는 들어오는 SOAP 메시지에서 추가 헤더가 `MustUnderstand`로 설정된 `true` 특성을 가진 경우입니다. 이 경우 인식되어야 하는 헤더를 처리할 수 없으므로 예외가 throw됩니다.  
+-   WCF에서는 예기치 않은 추가 헤더도 무시 합니다. 이 규칙에 대한 한 가지 예외는 들어오는 SOAP 메시지에서 추가 헤더가 `MustUnderstand`로 설정된 `true` 특성을 가진 경우입니다. 이 경우 인식되어야 하는 헤더를 처리할 수 없으므로 예외가 throw됩니다.  
   
  메시지 본문은 유사한 버전 관리 규칙을 가지며, 누락된 메시지 본문 부분과 추가 메시지 본문 부분은 모두 무시됩니다.  
   
@@ -383,7 +369,7 @@ public class PatientRecord : PersonRecord
 -   여러 작업에서 동일한 메시지 계약을 사용할 때 여러 메시지 유형이 WSDL 문서에서 생성됩니다. 다음에 사용할 때에는 숫자 "2", "3" 등을 추가함으로써 고유한 이름을 만듭니다. WSDL을 다시 가져올 때 여러 메시지 계약 형식이 만들어지며 이름을 제외하고는 동일합니다.  
   
 ## <a name="soap-encoding-considerations"></a>SOAP 인코딩 고려 사항  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서는 XML의 레거시 SOAP 인코딩 스타일을 사용할 수 있지만 사용하지 않는 것이 좋습니다. 이 스타일을 사용할 때(서비스 계약에 적용된 `Use`에서 `Encoded` 속성을 <xref:System.ServiceModel.XmlSerializerFormatAttribute?displayProperty=nameWithType>로 설정), 다음 추가 사항을 고려해야 합니다.  
+ 하지만 WCF 레거시 SOAP 인코딩 스타일 xml을 사용할 수 있습니다 용도 권장 되지 않습니다. 이 스타일을 사용할 때(서비스 계약에 적용된 `Use`에서 `Encoded` 속성을 <xref:System.ServiceModel.XmlSerializerFormatAttribute?displayProperty=nameWithType>로 설정), 다음 추가 사항을 고려해야 합니다.  
   
 -   메시지 헤더는 지원되지 않습니다. 이는 특성 <xref:System.ServiceModel.MessageHeaderAttribute> 및 배열 특성 <xref:System.ServiceModel.MessageHeaderArrayAttribute>가 SOAP 인코딩과 호환되지 않음을 의미합니다.  
   

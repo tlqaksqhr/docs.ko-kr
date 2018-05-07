@@ -1,31 +1,19 @@
 ---
-title: "Windows Communication Foundation 개인 정보 취급 방침"
-ms.custom: 
+title: Windows Communication Foundation 개인 정보 취급 방침
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - Windows Communication Foundation, privacy information
 - WCF, privacy information
 - privacy information [WCF]
 ms.assetid: c9553724-f3e7-45cb-9ea5-450a22d309d9
-caps.latest.revision: "34"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 2d0172b91393e4e9e373a247c33be938a3160e14
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
-ms.translationtype: MT
+ms.openlocfilehash: e9c4130cd4680d4cd68ca8c6ba36c38b5d065f58
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="windows-communication-foundation-privacy-information"></a>Windows Communication Foundation 개인 정보 취급 방침
-Microsoft는 최종 사용자의 개인 정보 보호를 위해 최선을 다할 것을 약속합니다. [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 버전 3.0을 사용하여 응용 프로그램을 빌드하는 경우 응용 프로그램이 최종 사용자의 개인 정보 보호에 영향을 줄 수 있습니다. 예를 들어 응용 프로그램에서 사용자 연락처 정보를 명시적으로 수집하거나, 정보를 요청하거나 인터넷을 통해 정보를 웹 사이트로 보낼 수 있습니다. 응용 프로그램에 Microsoft 기술을 포함하는 경우 해당 기술의 동작이 개인 정보 보호에 영향을 줄 수 있습니다. [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]는 사용자 또는 최종 사용자가 정보 전송을 선택하지 않는 한 아무 정보도 Microsoft로 보내지 않습니다.  
+Microsoft는 최종 사용자의 개인 정보 보호를 위해 최선을 다할 것을 약속합니다. Windows Communication Foundation (WCF), 버전 3.0 사용 하 여 응용 프로그램을 빌드할 때 응용 프로그램에 최종 사용자의 개인 정보를 떨어질 수 있습니다. 예를 들어 응용 프로그램에서 사용자 연락처 정보를 명시적으로 수집하거나, 정보를 요청하거나 인터넷을 통해 정보를 웹 사이트로 보낼 수 있습니다. 응용 프로그램에 Microsoft 기술을 포함하는 경우 해당 기술의 동작이 개인 정보 보호에 영향을 줄 수 있습니다. [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]는 사용자 또는 최종 사용자가 정보 전송을 선택하지 않는 한 아무 정보도 Microsoft로 보내지 않습니다.  
   
 ## <a name="wcf-in-brief"></a>WCF에 대한 간략한 설명  
  [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]는 Microsoft .NET Framework를 사용한 분산 메시징 프레임워크로, 개발자가 분산 응용 프로그램을 빌드할 수 있도록 합니다. 두 응용 프로그램 간에 전달된 메시지에는 헤더 및 본문 정보가 들어 있습니다.  
@@ -138,13 +126,13 @@ Microsoft는 최종 사용자의 개인 정보 보호를 위해 최선을 다할
   
  제거되는 키  
   
- \- For xmlns:wst="http://schemas.xmlsoap.org/ws/2004/04/trust" and xmlns:wst="http://schemas.xmlsoap.org/ws/2005/02/trust"  
+ \- Xmlns: wst = "http://schemas.xmlsoap.org/ws/2004/04/trust" 및 xmlns: wst = "http://schemas.xmlsoap.org/ws/2005/02/trust"  
   
  wst:BinarySecret  
   
  wst:Entropy  
   
- \- For xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.1.xsd" and xmlns:wsse="http://docs.oasis-open.org/wss/2005/xx/oasis-2005xx-wss-wssecurity-secext-1.1.xsd"  
+ \- Xmlns:wsse = "http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.1.xsd" 및 xmlns:wsse = "http://docs.oasis-open.org/wss/2005/xx/oasis-2005xx-wss-wssecurity-secext-1.1.xsd"  
   
  wsse:Password  
   
@@ -152,13 +140,13 @@ Microsoft는 최종 사용자의 개인 정보 보호를 위해 최선을 다할
   
  제거되는 잠재적 개인 정보  
   
- \- For xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.1.xsd" and xmlns:wsse="http://docs.oasis-open.org/wss/2005/xx/oasis-2005xx-wss-wssecurity-secext-1.1.xsd"  
+ \- Xmlns:wsse = "http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.1.xsd" 및 xmlns:wsse = "http://docs.oasis-open.org/wss/2005/xx/oasis-2005xx-wss-wssecurity-secext-1.1.xsd"  
   
  wsse:Username  
   
  wsse:BinarySecurityToken  
   
- \-Xmlns: saml = "urn: oasis: 이름: tc: SAML:1.0:assertion" 항목 굵게 (아래 참조)이 제거 됩니다.  
+ \- Xmlns: saml = "urn: oasis: 이름: tc: SAML:1.0:assertion" 항목 굵게 (아래 참조)이 제거 됩니다.  
   
  \<어설션  
   
@@ -190,9 +178,9 @@ Microsoft는 최종 사용자의 개인 정보 보호를 위해 최선을 다할
   
  -->  
   
- \</Conditions>?  
+ \</ 조건 >?  
   
- \<Advice>  
+ \<조언 >  
   
  \<AssertionIDReference>[ID]\</AssertionIDReference>*  
   
@@ -206,7 +194,7 @@ Microsoft는 최종 사용자의 개인 정보 보호를 위해 최선을 다할
   
  \<문 / > *  
   
- \<SubjectStatement>  
+ \<SubjectStatement >  
   
  \<제목 >  
   
@@ -222,7 +210,7 @@ Microsoft는 최종 사용자의 개인 정보 보호를 위해 최선을 다할
   
  `</NameIdentifier>?`  
   
- \<SubjectConfirmation>  
+ \<SubjectConfirmation >  
   
  \<ConfirmationMethod>[anyUri]\</ConfirmationMethod>+  
   
@@ -268,7 +256,7 @@ Microsoft는 최종 사용자의 개인 정보 보호를 위해 최선을 다할
   
  \</AuthenticationStatement>*  
   
- \<AttributeStatement>  
+ \<요소의 AttributeStatement >  
   
  [Subject]  
   
@@ -315,7 +303,7 @@ Microsoft는 최종 사용자의 개인 정보 보호를 위해 최선을 다할
   
  다음 네임스페이스의 경우  
   
- xmlns:wst="http://schemas.xmlsoap.org/ws/2004/04/trust" 및 xmlns:wst="http://schemas.xmlsoap.org/ws/2005/02/trust"(예를 들어 사용 가능한 작업이 없는 경우)  
+ xmlns: wst = "http://schemas.xmlsoap.org/ws/2004/04/trust" 및 xmlns: wst = "http://schemas.xmlsoap.org/ws/2005/02/trust" (예를 들어 작업이 없는 경우 사용할 수 있는)  
   
  키 교환과 관련된 다음 본문 요소에서 정보가 제거됩니다.  
   

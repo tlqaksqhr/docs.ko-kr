@@ -1,13 +1,6 @@
 ---
-title: "속성 변경 이벤트"
-ms.custom: 
+title: 속성 변경 이벤트
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - dependency properties [WPF], change events
 - property value changes [WPF]
@@ -20,16 +13,11 @@ helpviewer_keywords:
 - identifying changed property events [WPF]
 - property triggers [WPF], definition of
 ms.assetid: 0a7989df-9674-4cc1-bc50-5d8ef5d9c055
-caps.latest.revision: "10"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 46a11b072731daf420e35bc9c9cfd7d4fced1fe5
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ac2a44eb92e384851bbe6ac860fd9b46d3377a06
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="property-change-events"></a>속성 변경 이벤트
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]는 속성 값 변경에 대한 응답으로 발생하는 여러 이벤트를 정의합니다. 일반적으로 속성은 종속성 속성입니다. 이벤트 자체는 라우트된 이벤트인 경우도 있고 표준 [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] 이벤트인 경우도 있습니다. 이벤트 정의는 시나리오에 따라 달라집니다. 일부 속성 변경은 요소 트리를 통해 더 적절하게 라우트되지만 다른 속성 변경은 일반적으로 해당 속성이 변경한 개체에만 영향을 미치기 때문입니다.  
@@ -47,7 +35,7 @@ ms.lasthandoff: 12/22/2017
  속성은 사용자 지정 종속성 속성 이거나 하에 기본 제공 속성 변경 내용을 추적 하기 위한 훨씬 더 나은 메커니즘 인스턴스화 코드 정의 된 파생된 클래스 작업 하는 경우는 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 속성 시스템:는 속성 시스템 콜백 <xref:System.Windows.CoerceValueCallback> 및 <xref:System.Windows.PropertyChangedCallback>합니다. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 속성 시스템을 유효성 검사 및 강제 변환에 사용하는 방법에 대한 자세한 내용은 [종속성 속성 콜백 및 유효성 검사](../../../../docs/framework/wpf/advanced/dependency-property-callbacks-and-validation.md) 및 [사용자 지정 종속성 속성](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md)을 참조하세요.  
   
 ### <a name="dependencypropertychanged-events"></a>DependencyPropertyChanged 이벤트  
- 속성 변경된 이벤트 시나리오의 일부인 형식의 다른 쌍이 <xref:System.Windows.DependencyPropertyChangedEventArgs> 및 <xref:System.Windows.DependencyPropertyChangedEventHandler>합니다. 이러한 속성 변경에 대한 이벤트는 라우트되지 않습니다. 이러한 이벤트는 표준 [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] 이벤트입니다. <xref:System.Windows.DependencyPropertyChangedEventArgs>보고 형식에서 파생 되지 않은 비정상 이벤트 데이터는 <xref:System.EventArgs>; <xref:System.Windows.DependencyPropertyChangedEventArgs> 클래스가 아닌는 구조입니다.  
+ 속성 변경된 이벤트 시나리오의 일부인 형식의 다른 쌍이 <xref:System.Windows.DependencyPropertyChangedEventArgs> 및 <xref:System.Windows.DependencyPropertyChangedEventHandler>합니다. 이러한 속성 변경에 대한 이벤트는 라우트되지 않습니다. 이러한 이벤트는 표준 [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] 이벤트입니다. <xref:System.Windows.DependencyPropertyChangedEventArgs> 보고 형식에서 파생 되지 않은 비정상 이벤트 데이터는 <xref:System.EventArgs>; <xref:System.Windows.DependencyPropertyChangedEventArgs> 클래스가 아닌는 구조입니다.  
   
  사용 하는 이벤트 <xref:System.Windows.DependencyPropertyChangedEventArgs> 및 <xref:System.Windows.DependencyPropertyChangedEventHandler> 보다 약간 더 공통적인 `RoutedPropertyChanged` 이벤트입니다. 이러한 형식을 사용 하는 이벤트의 예로 <xref:System.Windows.UIElement.IsMouseCapturedChanged>합니다.  
   

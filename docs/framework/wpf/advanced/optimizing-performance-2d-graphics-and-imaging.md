@@ -1,13 +1,6 @@
 ---
-title: "성능 최적화: 2D 그래픽 및 이미징"
-ms.custom: 
+title: '성능 최적화: 2D 그래픽 및 이미징'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -19,16 +12,11 @@ helpviewer_keywords:
 - 2-D graphics [WPF]
 - images [WPF], optimizing performance
 ms.assetid: e335601e-28c8-4d64-ba27-778fffd55f72
-caps.latest.revision: "8"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 99fc5e179fe7652868d47d93fbdcabd47bc8cab9
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 4e6b72dae863e89d70ec70c2cb99a5874581e9ea
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="optimizing-performance-2d-graphics-and-imaging"></a>성능 최적화: 2D 그래픽 및 이미징
 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]는 응용 프로그램 요구 사항에 맞게 최적화할 수 있는 다양한 범위의 2D 그래픽 및 이미징 기능을 제공합니다. 이 항목에서는 이러한 영역의 성능 최적화에 대한 정보를 제공합니다.  
@@ -36,23 +24,23 @@ ms.lasthandoff: 12/22/2017
   
 <a name="Drawing_and_Shapes"></a>   
 ## <a name="drawing-and-shapes"></a>그리기 및 도형  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]둘 다 제공 <xref:System.Windows.Media.Drawing> 및 <xref:System.Windows.Shapes.Shape> 그래픽 그리기 콘텐츠를 나타내는 개체를 합니다. 그러나 <xref:System.Windows.Media.Drawing> 개체는 보다 간단한 구문이 <xref:System.Windows.Shapes.Shape> 개체 및 더 나은 성능 특성을 제공 합니다.  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 둘 다 제공 <xref:System.Windows.Media.Drawing> 및 <xref:System.Windows.Shapes.Shape> 그래픽 그리기 콘텐츠를 나타내는 개체를 합니다. 그러나 <xref:System.Windows.Media.Drawing> 개체는 보다 간단한 구문이 <xref:System.Windows.Shapes.Shape> 개체 및 더 나은 성능 특성을 제공 합니다.  
   
  A <xref:System.Windows.Shapes.Shape> 화면에 그래픽 도형을 그릴 수 있습니다. 파생 되기 때문에 <xref:System.Windows.FrameworkElement> 클래스 <xref:System.Windows.Shapes.Shape> 패널 및 대부분의 컨트롤 내 개체를 사용할 수 있습니다.  
   
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]는 그래픽 및 렌더링 서비스에 대한 여러 계층의 액세스를 제공합니다. 최상위 계층 <xref:System.Windows.Shapes.Shape> 개체는 쉽게 사용 하 고 레이아웃 및 이벤트 처리 등의 많은 유용한 기능을 제공 합니다. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]에서는 바로 사용할 수 있는 여러 도형 개체를 제공합니다. 모든 셰이프 개체에서 상속 된 <xref:System.Windows.Shapes.Shape> 클래스입니다. 사용 가능한 도형 개체에는 <xref:System.Windows.Shapes.Ellipse>, <xref:System.Windows.Shapes.Line>, <xref:System.Windows.Shapes.Path>, <xref:System.Windows.Shapes.Polygon>, <xref:System.Windows.Shapes.Polyline>, 및 <xref:System.Windows.Shapes.Rectangle>합니다.  
   
- <xref:System.Windows.Media.Drawing>개체, 반면에에서 파생 되지 않는 <xref:System.Windows.FrameworkElement> 클래스 및 렌더링 도형, 이미지 및 텍스트에 대 한 간단한 구현을 제공 합니다.  
+ <xref:System.Windows.Media.Drawing> 개체, 반면에에서 파생 되지 않는 <xref:System.Windows.FrameworkElement> 클래스 및 렌더링 도형, 이미지 및 텍스트에 대 한 간단한 구현을 제공 합니다.  
   
  네 가지 <xref:System.Windows.Media.Drawing> 개체:  
   
--   <xref:System.Windows.Media.GeometryDrawing>도형을 그립니다.  
+-   <xref:System.Windows.Media.GeometryDrawing> 도형을 그립니다.  
   
--   <xref:System.Windows.Media.ImageDrawing>이미지를 그립니다.  
+-   <xref:System.Windows.Media.ImageDrawing> 이미지를 그립니다.  
   
--   <xref:System.Windows.Media.GlyphRunDrawing>텍스트를 그립니다.  
+-   <xref:System.Windows.Media.GlyphRunDrawing> 텍스트를 그립니다.  
   
--   <xref:System.Windows.Media.DrawingGroup>다른 드로잉을 그립니다. 다른 그리기를 단일 합성 그리기로 결합하려면 그리기 그룹을 사용합니다.  
+-   <xref:System.Windows.Media.DrawingGroup> 다른 드로잉을 그립니다. 다른 그리기를 단일 합성 그리기로 결합하려면 그리기 그룹을 사용합니다.  
   
  <xref:System.Windows.Media.GeometryDrawing> 개체 geometry 콘텐츠를 렌더링 하는 데 사용 됩니다. <xref:System.Windows.Media.Geometry> 클래스와 같은 여기에서 파생 되는 구체적인 클래스 <xref:System.Windows.Media.CombinedGeometry>, <xref:System.Windows.Media.EllipseGeometry>, 및 <xref:System.Windows.Media.PathGeometry>, 2 차원 그래픽 렌더링을는 수단을 제공으로 적중 테스트와 클리핑 지원을 제공 합니다. 기하 도형 개체를 사용하면 컨트롤 영역을 정의하거나 이미지에 적용할 클립 영역을 정의하는 등의 작업을 수행할 수 있습니다. 기하 도형 개체는 사각형 및 원과 같은 단순 영역 또는 둘 이상의 기하 도형 개체에서 만들어진 복합 영역이 될 수 있습니다. 더 복잡 한 기 하 도형 영역은 결합 하 여 만들 수 있습니다 <xref:System.Windows.Media.PathSegment>-파생 개체를와 같은 <xref:System.Windows.Media.ArcSegment>, <xref:System.Windows.Media.BezierSegment>, 및 <xref:System.Windows.Media.QuadraticBezierSegment>합니다.  
   
@@ -64,7 +52,7 @@ ms.lasthandoff: 12/22/2017
   
 <a name="StreamGeometry_Objects"></a>   
 ## <a name="streamgeometry-objects"></a>StreamGeometry 개체  
- <xref:System.Windows.Media.StreamGeometry> 개체는 표준이 하: 대신 사용할 수 있는 <xref:System.Windows.Media.PathGeometry> 기 하 도형 만들기에 대 한 합니다. 사용 하 여 한 <xref:System.Windows.Media.StreamGeometry> 복잡 기 하 도형을 설명 해야 합니다. <xref:System.Windows.Media.StreamGeometry>많은 처리에 대 한 최적화 <xref:System.Windows.Media.PathGeometry> 개체 하 고 여러 개별을 사용 하 여 비교할 때 더 잘 수행 <xref:System.Windows.Media.PathGeometry> 개체입니다.  
+ <xref:System.Windows.Media.StreamGeometry> 개체는 표준이 하: 대신 사용할 수 있는 <xref:System.Windows.Media.PathGeometry> 기 하 도형 만들기에 대 한 합니다. 사용 하 여 한 <xref:System.Windows.Media.StreamGeometry> 복잡 기 하 도형을 설명 해야 합니다. <xref:System.Windows.Media.StreamGeometry> 많은 처리에 대 한 최적화 <xref:System.Windows.Media.PathGeometry> 개체 하 고 여러 개별을 사용 하 여 비교할 때 더 잘 수행 <xref:System.Windows.Media.PathGeometry> 개체입니다.  
   
  다음 예제에서는 특성 구문을 사용 하 여 삼각형을 만들려는 <xref:System.Windows.Media.StreamGeometry> 에서 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]합니다.  
   
@@ -91,7 +79,7 @@ ms.lasthandoff: 12/22/2017
 -   자세한 내용은 [이미징 개요](../../../../docs/framework/wpf/graphics-multimedia/imaging-overview.md)를 참조하세요.  
   
 ### <a name="bitmapscalingmode"></a>BitmapScalingMode  
- 비트맵의 배율에 애니메이션 효과를 주면 기본 고품질 이미지 샘플 다시 만들기 알고리즘에 시스템 리소스가 많이 사용되므로 프레임 속도가 떨어지고 애니메이션이 끊길 수 있습니다. 설정 하 여는 <xref:System.Windows.Media.RenderOptions.BitmapScalingMode%2A> 의 속성은 <xref:System.Windows.Media.RenderOptions> 개체를 <xref:System.Windows.Media.BitmapScalingMode.LowQuality> 비트맵 확장 시 보다 부드러운 애니메이션을 만들 수 있습니다. <xref:System.Windows.Media.BitmapScalingMode.LowQuality>모드 지시는 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 이미지를 처리할 때 속도 액세스에 최적화 된 알고리즘에는 품질 액세스에 최적화 된 알고리즘에서 전환 하려면 렌더링 엔진입니다.  
+ 비트맵의 배율에 애니메이션 효과를 주면 기본 고품질 이미지 샘플 다시 만들기 알고리즘에 시스템 리소스가 많이 사용되므로 프레임 속도가 떨어지고 애니메이션이 끊길 수 있습니다. 설정 하 여는 <xref:System.Windows.Media.RenderOptions.BitmapScalingMode%2A> 의 속성은 <xref:System.Windows.Media.RenderOptions> 개체를 <xref:System.Windows.Media.BitmapScalingMode.LowQuality> 비트맵 확장 시 보다 부드러운 애니메이션을 만들 수 있습니다. <xref:System.Windows.Media.BitmapScalingMode.LowQuality> 모드 지시는 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 이미지를 처리할 때 속도 액세스에 최적화 된 알고리즘에는 품질 액세스에 최적화 된 알고리즘에서 전환 하려면 렌더링 엔진입니다.  
   
  설정 하는 방법을 보여 주는 다음 예제는 <xref:System.Windows.Media.BitmapScalingMode> image 개체에 대 한 합니다.  
   

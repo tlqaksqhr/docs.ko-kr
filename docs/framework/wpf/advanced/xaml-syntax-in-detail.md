@@ -1,13 +1,6 @@
 ---
-title: "XAML 구문 정보"
-ms.custom: 
+title: XAML 구문 정보
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - XML [WPF], namespaces
 - XAML [WPF], parsing of attributes
@@ -36,16 +29,11 @@ helpviewer_keywords:
 - attribute syntax [XAML]
 - XAML [WPF], property element syntax
 ms.assetid: 67cce290-ca26-4c41-a797-b68aabc45479
-caps.latest.revision: "26"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 88e66210fd8066e82a11d07ea0cfeb83808d646c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: d98141c0ad96ef1bd3958ae8d3166aedde76f535
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="xaml-syntax-in-detail"></a>XAML 구문 정보
 이 항목에서는 XAML 구문 요소에 설명 하는 데 사용 되는 용어를 정의 합니다. 이러한 용어는 특히 및 XAML 또는으로 System.Xaml 수준에서 XAML 언어 지원을 사용 하도록 설정 하는 기본 XAML 개념을 사용 하는 다른 프레임 워크에 대 한 WPF 설명서에 대 한이 설명서의 나머지 부분 전체에서 자주 사용 됩니다. 이 항목을 확장 항목에 도입 된 기본 용어 [XAML 개요 (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)합니다.  
@@ -134,7 +122,7 @@ ms.lasthandoff: 12/22/2017
 ...  
 ```  
   
- XAML에서 설정할 수 있는 특성을 원하는 플래그 열거형 wpf에서 드문 경우입니다. 그러나 이러한 열거가 두 개는 <xref:System.Windows.Media.StyleSimulations>합니다. 예를 들어, 쉼표로 구분 된 플래그 특성 구문을 사용 하 여 대 한 설명에서 제공 되는 예제를 수정할 수는 <xref:System.Windows.Documents.Glyphs> 클래스입니다. `StyleSimulations = "BoldSimulation"` 가 될 수 있습니다 `StyleSimulations = "BoldSimulation,ItalicSimulation"`합니다. <xref:System.Windows.Input.KeyBinding.Modifiers%2A?displayProperty=nameWithType>속성이 다른 둘 이상의 열거형 값을 지정할 수 있습니다. 하지만 때문에이 속성 특별 한 경우에 발생는 <xref:System.Windows.Input.ModifierKeys> 열거형 자체 형식 변환기를 지원 합니다. 한정자에 대 한 형식 변환기를 쉼표 (,)가 아닌 구분 기호는 더하기 기호 (+)를 사용합니다. 이 변환에는 "Ctrl + Alt"와 같은 Microsoft Windows 프로그래밍에서 키 조합을 나타내기 위해 더 많은 기존 구문을 지원 합니다.  
+ XAML에서 설정할 수 있는 특성을 원하는 플래그 열거형 wpf에서 드문 경우입니다. 그러나 이러한 열거가 두 개는 <xref:System.Windows.Media.StyleSimulations>합니다. 예를 들어, 쉼표로 구분 된 플래그 특성 구문을 사용 하 여 대 한 설명에서 제공 되는 예제를 수정할 수는 <xref:System.Windows.Documents.Glyphs> 클래스입니다. `StyleSimulations = "BoldSimulation"` 가 될 수 있습니다 `StyleSimulations = "BoldSimulation,ItalicSimulation"`합니다. <xref:System.Windows.Input.KeyBinding.Modifiers%2A?displayProperty=nameWithType> 속성이 다른 둘 이상의 열거형 값을 지정할 수 있습니다. 하지만 때문에이 속성 특별 한 경우에 발생는 <xref:System.Windows.Input.ModifierKeys> 열거형 자체 형식 변환기를 지원 합니다. 한정자에 대 한 형식 변환기를 쉼표 (,)가 아닌 구분 기호는 더하기 기호 (+)를 사용합니다. 이 변환에는 "Ctrl + Alt"와 같은 Microsoft Windows 프로그래밍에서 키 조합을 나타내기 위해 더 많은 기존 구문을 지원 합니다.  
   
 ### <a name="properties-and-event-member-name-references"></a>속성 및 이벤트 멤버 이름 참조  
  특성을 지정할 때 모든 속성이 나 이벤트를 포함 하는 개체 요소에 대해 인스턴스화된 CLR 형식의 멤버를 참조할 수 있습니다.  
@@ -267,7 +255,7 @@ ms.lasthandoff: 12/22/2017
   
  `<Button Style="{StaticResource MyStyle}">My button</Button>`  
   
- 여기에서 `StaticResource` 식별 된 <xref:System.Windows.StaticResourceExtension> 태그 확장 구현에 제공 하는 클래스입니다. 다음 문자열 `MyStyle` 기본값이 아닌에 대 한 입력으로 사용 <xref:System.Windows.StaticResourceExtension> 확장명 문자열에서 가져온 대로 매개 변수 선언에서 요청 된 생성자 <xref:System.Windows.ResourceKey>합니다. `MyStyle`이어야 하는데는 [X:key](../../../../docs/framework/xaml-services/x-key-directive.md) 값은 <xref:System.Windows.Style> 원본으로 정의 합니다. [StaticResource 태그 확장](../../../../docs/framework/wpf/advanced/staticresource-markup-extension.md) 사용 요청 리소스 사용을 제공할 수는 <xref:System.Windows.Style> 로드할 때 정적 리소스 조회 논리를 통해 속성 값입니다.  
+ 여기에서 `StaticResource` 식별 된 <xref:System.Windows.StaticResourceExtension> 태그 확장 구현에 제공 하는 클래스입니다. 다음 문자열 `MyStyle` 기본값이 아닌에 대 한 입력으로 사용 <xref:System.Windows.StaticResourceExtension> 확장명 문자열에서 가져온 대로 매개 변수 선언에서 요청 된 생성자 <xref:System.Windows.ResourceKey>합니다. `MyStyle` 이어야 하는데는 [X:key](../../../../docs/framework/xaml-services/x-key-directive.md) 값은 <xref:System.Windows.Style> 원본으로 정의 합니다. [StaticResource 태그 확장](../../../../docs/framework/wpf/advanced/staticresource-markup-extension.md) 사용 요청 리소스 사용을 제공할 수는 <xref:System.Windows.Style> 로드할 때 정적 리소스 조회 논리를 통해 속성 값입니다.  
   
  태그 확장에 대한 자세한 내용은 [XAML 태그 확장 및 WPF XAML](../../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md)을 참조하세요. 태그 확장 및 다른 XAML 일반.NET XAML 구현에서 사용 하는 기능을 프로그래밍에 대 한 참조를 참조 하십시오. [XAML Namespace (x:) 언어 기능](../../../../docs/framework/xaml-services/xaml-namespace-x-language-features.md)합니다. WPF 관련 태그 확장에 대 한 참조 [WPF XAML 확장](../../../../docs/framework/wpf/advanced/wpf-xaml-extensions.md)합니다.  
   
@@ -309,13 +297,13 @@ ms.lasthandoff: 12/22/2017
   
  [!code-xaml[XAMLOvwSupport#TypeNameProp](../../../../samples/snippets/csharp/VS_Snippets_Wpf/XAMLOvwSupport/CSharp/page8.xaml#typenameprop)]  
   
- `Button.Background`사용 하기 때문에 해당 속성에 대 한 정규화 된 조회 <xref:System.Windows.Controls.Button> 성공 (<xref:System.Windows.Controls.Control.Background%2A> 컨트롤에서 상속 된) 및 <xref:System.Windows.Controls.Button> 개체 요소의 클래스 또는 기본 클래스입니다. `Control.Background`때문에 작동는 <xref:System.Windows.Controls.Control> 클래스 정의 <xref:System.Windows.Controls.Control.Background%2A> 및 <xref:System.Windows.Controls.Control> 는 <xref:System.Windows.Controls.Button> 기본 클래스입니다.  
+ `Button.Background` 사용 하기 때문에 해당 속성에 대 한 정규화 된 조회 <xref:System.Windows.Controls.Button> 성공 (<xref:System.Windows.Controls.Control.Background%2A> 컨트롤에서 상속 된) 및 <xref:System.Windows.Controls.Button> 개체 요소의 클래스 또는 기본 클래스입니다. `Control.Background` 때문에 작동는 <xref:System.Windows.Controls.Control> 클래스 정의 <xref:System.Windows.Controls.Control.Background%2A> 및 <xref:System.Windows.Controls.Control> 는 <xref:System.Windows.Controls.Button> 기본 클래스입니다.  
   
  그러나 다음 *typeName*. *memberName* 양식 예제는 작동 하지 않으며 따라서 주석이 표시 됩니다.  
   
  [!code-xaml[XAMLOvwSupport#TypeNameBadProp](../../../../samples/snippets/csharp/VS_Snippets_Wpf/XAMLOvwSupport/CSharp/page8.xaml#typenamebadprop)]  
   
- <xref:System.Windows.Controls.Label>다른 파생된 클래스의 <xref:System.Windows.Controls.Control>, 및를 지정한 경우 `Label.Background` 내에서 한 <xref:System.Windows.Controls.Label> object 요소가이 사용법은 동작 합니다. 그러나 때문에 <xref:System.Windows.Controls.Label> 클래스 또는 기본 클래스의 <xref:System.Windows.Controls.Button>, 지정한 XAML 프로세서 동작을 처리 하는 것 `Label.Background` 연결된 된 속성으로. `Label.Background`사용 가능한 연결 된 속성을 아니며이 사용법은 실패 합니다.  
+ <xref:System.Windows.Controls.Label> 다른 파생된 클래스의 <xref:System.Windows.Controls.Control>, 및를 지정한 경우 `Label.Background` 내에서 한 <xref:System.Windows.Controls.Label> object 요소가이 사용법은 동작 합니다. 그러나 때문에 <xref:System.Windows.Controls.Label> 클래스 또는 기본 클래스의 <xref:System.Windows.Controls.Button>, 지정한 XAML 프로세서 동작을 처리 하는 것 `Label.Background` 연결된 된 속성으로. `Label.Background` 사용 가능한 연결 된 속성을 아니며이 사용법은 실패 합니다.  
   
 ### <a name="basetypenamemembername-property-elements"></a>baseTypeName.memberName 속성 요소  
  방법을 유사한 방식으로 *typeName*. *memberName* 특성 구문에 대해 작동 하는 폼은 *baseTypeName*. *memberName* 구문에 속성 요소 구문에 대 한 작동 합니다. 예를 들어, 다음 구문은 작동합니다.  

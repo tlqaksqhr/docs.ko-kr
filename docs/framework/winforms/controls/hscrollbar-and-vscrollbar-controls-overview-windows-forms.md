@@ -1,13 +1,6 @@
 ---
-title: "HScrollBar 및 VScrollBar 컨트롤 개요(Windows Forms)"
-ms.custom: 
+title: HScrollBar 및 VScrollBar 컨트롤 개요(Windows Forms)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 f1_keywords:
 - HScrollBar
 - VScrollBar
@@ -18,21 +11,16 @@ helpviewer_keywords:
 - ScrollBar control [Windows Forms], about ScrollBar control
 - scroll bars [Windows Forms], about scroll bars
 ms.assetid: 8b307679-1cae-41d8-99aa-3d1efd207cd6
-caps.latest.revision: "13"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 8fbdb3778959d1691200cde49e485d8a63c6e645
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 572ba9f16d1c78e1825d0c9db7530c6c78175d27
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="hscrollbar-and-vscrollbar-controls-overview-windows-forms"></a>HScrollBar 및 VScrollBar 컨트롤 개요(Windows Forms)
 Windows Forms <xref:System.Windows.Forms.ScrollBar> 컨트롤 가로로 또는 세로로 응용 프로그램 또는 컨트롤 내에서 쉽게 탐색 긴 목록 항목이 나 많은 양의 정보를 제공 하는 데 사용 됩니다. 스크롤 막대는 Windows 인터페이스의 공통 요소 이므로 <xref:System.Windows.Forms.ScrollBar> 컨트롤에서 파생 되지 않는 컨트롤과 대개는 <xref:System.Windows.Forms.ScrollableControl> 클래스입니다. 대부분의 개발자 통합 하도록 선택 하는 마찬가지로,는 <xref:System.Windows.Forms.ScrollBar> 자신의 사용자 컨트롤 작성 하는 시기를 제어 합니다.  
   
- <xref:System.Windows.Forms.HScrollBar> (가로) 및 <xref:System.Windows.Forms.VScrollBar> (세로) 컨트롤 다른 컨트롤에서 독립적으로 작동 하 고 이벤트, 속성 및 메서드 집합이 자신의 합니다. <xref:System.Windows.Forms.ScrollBar>컨트롤 텍스트 상자, 목록 상자 및 콤보 상자, MDI 폼에 연결 되어 있는 기본 제공 스크롤 막대와 동일 하지 않은 (의 <xref:System.Windows.Forms.TextBox> 컨트롤에는 <xref:System.Windows.Forms.TextBox.ScrollBars%2A> 속성을 컨트롤에 연결 되어 있는 스크롤 막대 표시 또는 숨기기).  
+ <xref:System.Windows.Forms.HScrollBar> (가로) 및 <xref:System.Windows.Forms.VScrollBar> (세로) 컨트롤 다른 컨트롤에서 독립적으로 작동 하 고 이벤트, 속성 및 메서드 집합이 자신의 합니다. <xref:System.Windows.Forms.ScrollBar> 컨트롤 텍스트 상자, 목록 상자 및 콤보 상자, MDI 폼에 연결 되어 있는 기본 제공 스크롤 막대와 동일 하지 않은 (의 <xref:System.Windows.Forms.TextBox> 컨트롤에는 <xref:System.Windows.Forms.TextBox.ScrollBars%2A> 속성을 컨트롤에 연결 되어 있는 스크롤 막대 표시 또는 숨기기).  
   
  <xref:System.Windows.Forms.ScrollBar> 사용을 제어는 <xref:System.Windows.Forms.ScrollBar.Scroll> 스크롤 막대를 따라 (엄지 단추 라고도 함) 스크롤 상자의 움직임을 모니터링 하는 이벤트입니다. 사용 하는 <xref:System.Windows.Forms.ScrollBar.Scroll> 이벤트를 끌 때 스크롤 막대의 값에 대 한 액세스를 제공 합니다.  
   

@@ -1,43 +1,31 @@
 ---
 title: 분산 응용 프로그램 보안
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - distributed application security [WCF]
 - security [WCF], transfer
 ms.assetid: 53928a10-e474-46d0-ab90-5f98f8d7b668
-caps.latest.revision: 32
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload:
-- dotnet
-ms.openlocfilehash: 8b5bc311262aae1110f7d0249be60135e318785e
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: d8f34d0c6b0269cc4837313d6613e3cee0eb26c9
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="distributed-application-security"></a>분산 응용 프로그램 보안
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 보안은 전송 보안, 액세스 제어 및 감사의 세 가지 주 기능 영역으로 분류됩니다. 전송 보안은 무결성, 기밀성 및 인증을 제공합니다. 전송 보안은 전송 보안, 메시지 보안, `TransportWithMessageCredential` 중 하나를 통해 제공됩니다.  
+Windows Communication Foundation (WCF) 보안은 세 가지 주요 기능 영역으로 구분 됩니다: 전송 보안, 액세스 제어 및 감사 합니다. 전송 보안은 무결성, 기밀성 및 인증을 제공합니다. 전송 보안은 전송 보안, 메시지 보안, `TransportWithMessageCredential` 중 하나를 통해 제공됩니다.  
   
- 에 대 한 개요 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 메시지 보안, 참조 [보안 개요](../../../../docs/framework/wcf/feature-details/security-overview.md)합니다. 두 부분에 대 한 자세한 내용은 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 보안 참조 [권한 부여](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md) 및 [감사](../../../../docs/framework/wcf/feature-details/auditing-security-events.md)합니다.  
+ WCF 메시지 보안의 개요를 참조 하십시오. [보안 개요](../../../../docs/framework/wcf/feature-details/security-overview.md)합니다. 다른 두 가지 WCF 보안에 대 한 자세한 내용은 참조 [권한 부여](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md) 및 [감사](../../../../docs/framework/wcf/feature-details/auditing-security-events.md)합니다.  
   
 ## <a name="transfer-security-scenarios"></a>전송 보안 시나리오  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 전송 보안을 사용하는 일반적인 시나리오는 다음과 같습니다.  
+ WCF 전송 보안을 사용 하는 일반적인 시나리오는 다음과 같습니다.  
   
--   Windows를 사용하여 전송을 보안합니다. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 클라이언트와 서비스는 Windows 도메인 또는 Windows 포리스트에 배포됩니다. 메시지에 개인 데이터가 포함되므로 클라이언트와 서비스 간의 상호 인증, 메시지 무결성 및 메시지 기밀성이 요구됩니다. 또한 특정 트랜잭션이 발생했다는 증명이 필요합니다. 예를 들어 메시지 수신자가 서명 정보를 기록해야 합니다.  
+-   Windows를 사용하여 전송을 보안합니다. WCF 클라이언트와 서비스는 Windows 도메인 (또는 Windows 포리스트에)에 배포 됩니다. 메시지에 개인 데이터가 포함되므로 클라이언트와 서비스 간의 상호 인증, 메시지 무결성 및 메시지 기밀성이 요구됩니다. 또한 특정 트랜잭션이 발생했다는 증명이 필요합니다. 예를 들어 메시지 수신자가 서명 정보를 기록해야 합니다.  
   
--   `UserName` 및 HTTPS를 사용하여 전송을 보안합니다. 인터넷을 통해 작업하려면 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 클라이언트와 서비스를 개발해야 합니다. 클라이언트 자격 증명은 사용자 이름/암호 쌍 데이터베이스를 기준으로 인증합니다. 서비스는 신뢰할 수 있는 SSL(Secure Sockets Layer) 인증서를 사용하여 HTTPS 주소에 배포됩니다. 메시지가 인터넷을 통해 이동하기 때문에 클라이언트와 서비스를 상호 인증하고 전송 중에 메시지의 기밀성과 무결성을 유지해야 합니다.  
+-   `UserName` 및 HTTPS를 사용하여 전송을 보안합니다. WCF 클라이언트 및 서비스를 인터넷에서 실행 되도록 개발 해야 합니다. 클라이언트 자격 증명은 사용자 이름/암호 쌍 데이터베이스를 기준으로 인증합니다. 서비스는 신뢰할 수 있는 SSL(Secure Sockets Layer) 인증서를 사용하여 HTTPS 주소에 배포됩니다. 메시지가 인터넷을 통해 이동하기 때문에 클라이언트와 서비스를 상호 인증하고 전송 중에 메시지의 기밀성과 무결성을 유지해야 합니다.  
   
--   인증서를 사용하여 전송을 보안합니다. 공용 인터넷을 통해 작업하려면 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 클라이언트와 서비스를 개발해야 합니다. 클라이언트와 서비스에는 모두 메시지를 보안하는 데 사용되는 인증서가 있습니다. 클라이언트와 서비스는 인터넷을 사용하여 서로 통신하고 메시지 무결성, 기밀성 및 상호 인증을 필요로 하는 높은 가치의 트랜잭션을 수행합니다.  
+-   인증서를 사용하여 전송을 보안합니다. WCF 클라이언트와 서비스는 공용 인터넷을 통해 작동 하도록 개발 해야 합니다. 클라이언트와 서비스에는 모두 메시지를 보안하는 데 사용되는 인증서가 있습니다. 클라이언트와 서비스는 인터넷을 사용하여 서로 통신하고 메시지 무결성, 기밀성 및 상호 인증을 필요로 하는 높은 가치의 트랜잭션을 수행합니다.  
   
 ## <a name="integrity-confidentiality-and-authentication"></a>무결성, 기밀성 및 인증  
  세 함수(무결성, 기밀성, 인증)를 총칭하여 전송 보안이라고 합니다. 전송 보안은 분산 응용 프로그램에 대한 위협을 줄이는 데 도움이 되는 함수를 제공합니다. 다음 표에서는 전송 보안을 구성하는 세 함수에 대해 간략하게 설명합니다.  
@@ -49,7 +37,7 @@ ms.lasthandoff: 04/30/2018
 |인증|*인증* 요구 된 id의 확인 합니다. 예를 들어 은행 계좌를 사용할 때는 계좌의 실제 소유자만 예금을 인출할 수 있도록 해야 합니다. 인증은 다양한 방법으로 제공될 수 있습니다. 가장 널리 사용되는 방법은 사용자/암호 시스템입니다. 또한 타사에서 제공하는 X.509 인증서를 사용하는 방법도 있습니다.|  
   
 ## <a name="security-modes"></a>보안 모드  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에는 다양한 전송 보안 모드가 있습니다. 각 전송 보안 모드에 대해서는 다음 표에 설명되어 있습니다.  
+ WCF에는 다음 표에 설명 되어 있는 몇 가지 전송 보안 모드에 있습니다.  
   
 |모드|설명|  
 |----------|-----------------|  
@@ -60,11 +48,11 @@ ms.lasthandoff: 04/30/2018
 |Both|두 수준 모두에서 보호 및 인증을 수행합니다. 이 모드는 에서만 사용할 수는 [ \<netMsmqBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/netmsmqbinding.md) 요소입니다.|  
   
 ## <a name="credentials-and-transfer-security"></a>자격 증명 및 전송 보안  
- A *자격 증명* 요구 된 id 또는 기능을 설정 하 게 표시 되는 데이터입니다. 자격 증명을 제공할 때는 데이터와 데이터 소유 증명을 모두 제공해야 합니다. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서는 전송 보안 수준과 메시지 보안 수준 둘 다에서 다양한 자격 증명 형식을 지원합니다. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 바인딩에 대한 자격 증명 형식을 지정할 수 있습니다.  
+ A *자격 증명* 요구 된 id 또는 기능을 설정 하 게 표시 되는 데이터입니다. 자격 증명을 제공할 때는 데이터와 데이터 소유 증명을 모두 제공해야 합니다. WCF에는 다양 한 전송 및 메시지 보안 수준에서 자격 증명 형식 지원합니다. WCF 바인딩에 대 한 자격 증명의 형식을 지정할 수 있습니다.  
   
  많은 국가나 지역의 운전 면허가 자격 증명의 예입니다. 라이선스에는 사용자의 신분과 능력을 나타내는 데이터가 들어 있습니다. 또한 소유자의 사진 형태로 소유 증명이 포함되어 있습니다. 라이선스는 신뢰할 수 있는 기관(일반적으로 정부 라이선스 부서)에서 발급됩니다. 라이선스에는 날인이 찍히며, 변조 또는 위조되지 않았음을 증명하는 홀로그램이 삽입되어 있을 수 있습니다.  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서 지원되는 두 가지 자격 증명 형식인 사용자 이름 자격 증명과 (X.509) 인증서 자격 증명을 예로 들어 볼 수 있습니다.  
+ 예를 들어, 두 가지 유형의 자격 증명 WCF에서 지 원하는 것이 좋습니다: 사용자 이름 및 (X.509) 인증서 자격 증명입니다.  
   
  사용자 이름 자격 증명에서 사용자 이름은 클레임 ID를 나타내고 암호는 소유 증명을 나타냅니다. 이 경우 신뢰할 수 있는 기관은 사용자 이름과 암호의 유효성을 검사하는 시스템입니다.  
   
@@ -91,16 +79,16 @@ ms.lasthandoff: 04/30/2018
 |-------------|-----------------|  
 |없음|서비스와 익명 클라이언트가 상호 작용할 수 있습니다.|  
 |Windows|Windows 자격 증명의 인증된 컨텍스트에서 SOAP 메시지 교환을 수행할 수 있습니다. SSPI 협상 메커니즘을 사용하여 Kerberos 프로토콜 또는 NTLM을 인증 서비스로 선택합니다.|  
-|Username|서비스에서 사용자 이름 자격 증명을 사용하여 클라이언트를 인증하도록 요구할 수 있습니다. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서는 사용자 이름을 사용하여 서명 생성, 데이터 암호화 등과 같은 암호화 작업을 수행할 수 없습니다. 따라서 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서는 사용자 이름 자격 증명을 사용할 때 전송에 보안을 적용합니다.|  
+|Username|서비스에서 사용자 이름 자격 증명을 사용하여 클라이언트를 인증하도록 요구할 수 있습니다. 참고 WCF 사용자 이름 서명을 생성, 데이터 암호화 등과 같은 암호화 작업을 허용 하지 않습니다. 따라서 WCF 사용자 이름 자격 증명을 사용 하는 경우에 전송 보안을 적용 합니다.|  
 |인증서|서비스에서 인증서를 사용하여 클라이언트를 인증하도록 요구할 수 있습니다.|  
 |[!INCLUDE[infocard](../../../../includes/infocard-md.md)]|서비스에서 [!INCLUDE[infocard](../../../../includes/infocard-md.md)]를 사용하여 클라이언트를 인증하도록 요구할 수 있습니다.|  
   
 ### <a name="programming-credentials"></a>프로그래밍 자격 증명  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 프로그래밍 모델을 사용하면 서비스 동작과 채널 동작을 사용하여 각 클라이언트 자격 증명 형식에 대해 자격 증명 값과 자격 증명 유효성 검사기를 지정할 수 있습니다.  
+ 각 클라이언트 자격 증명 형식에 대 한 WCF 프로그래밍 모델을 사용 하면 서비스 동작과 채널 동작을 사용 하 여 유효성 검사기를 자격 증명 및 자격 증명 값을 지정할 수 있습니다.  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 보안에는 서비스 자격 증명 동작과 채널 자격 증명 동작의 두 가지 자격 증명 형식이 있습니다. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]의 자격 증명 동작은 실제 데이터 즉, 바인딩을 통해 명시된 보안 요구 사항을 충족시키는 데 사용되는 자격 증명을 지정합니다. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서 클라이언트 클래스는 작업 호출과 메시지 간에 변환되는 런타임 구성 요소입니다. 모든 클라이언트는 <xref:System.ServiceModel.ClientBase%601> 클래스에서 상속됩니다. 기본 클래스의 <xref:System.ServiceModel.ClientBase%601.ClientCredentials%2A> 속성을 사용하면 다양한 클라이언트 자격 증명 값을 지정할 수 있습니다.  
+ WCF 보안에 두 가지 유형의 자격 증명: 서비스 자격 증명 동작과 채널 자격 증명 동작 합니다. WCF에서 자격 증명 동작은 실제 데이터 즉, 바인딩을 통해 명시 된 보안 요구 사항을 충족 하는 데 사용 되는 자격 증명을 지정 합니다. WCF 클라이언트 클래스에는 작업 호출과 메시지 간에 변환 하는 런타임 구성 요소는입니다. 모든 클라이언트는 <xref:System.ServiceModel.ClientBase%601> 클래스에서 상속됩니다. 기본 클래스의 <xref:System.ServiceModel.ClientBase%601.ClientCredentials%2A> 속성을 사용하면 다양한 클라이언트 자격 증명 값을 지정할 수 있습니다.  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서 서비스 동작은 서비스를 프로그래밍 방식으로 제어하기 위해 서비스 계약(인터페이스)을 구현하는 클래스에 적용되는 특성입니다. <xref:System.ServiceModel.Description.ServiceCredentials> 클래스를 사용하면 서비스 자격 증명에 대한 인증서와 다양한 클라이언트 자격 증명 형식에 대한 클라이언트 유효성 검사 설정을 지정할 수 있습니다.  
+ Wcf에서는 서비스 동작은 프로그래밍 방식으로 서비스를 제어 하는 서비스 계약 (인터페이스)를 구현 하는 클래스에 적용 되는 특성입니다. <xref:System.ServiceModel.Description.ServiceCredentials> 클래스를 사용하면 서비스 자격 증명에 대한 인증서와 다양한 클라이언트 자격 증명 형식에 대한 클라이언트 유효성 검사 설정을 지정할 수 있습니다.  
   
 ### <a name="negotiation-model-for-message-security"></a>메시지 보안에 대한 협상 모델  
  메시지 보안 모드에서는 대역 외 클라이언트에서 서비스 자격 증명이 구성되도록 전송 보안을 수행할 수 있습니다. 예를 들어 Windows 인증서 저장소에 저장된 인증서를 사용할 경우 MMC(Microsoft Management Console) 스냅인과 같은 도구를 사용해야 합니다.  

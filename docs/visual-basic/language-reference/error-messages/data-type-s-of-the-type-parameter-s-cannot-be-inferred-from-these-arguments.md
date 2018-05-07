@@ -1,11 +1,6 @@
 ---
-title: "이 인수에서 형식 매개 변수의 데이터 형식을 유추할 수 없습니다."
+title: 이 인수에서 형식 매개 변수의 데이터 형식을 유추할 수 없습니다.
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - bc36644
 - bc36647
@@ -15,14 +10,11 @@ helpviewer_keywords:
 - BC36644
 - BC36647
 ms.assetid: 0e0050f2-2039-4311-b260-f0ebfde84189
-caps.latest.revision: "6"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: b290c25286dce2236823919e8287db9abefc0dd7
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 6f84df5c9388220e5ca817d95362753df0920534
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="data-types-of-the-type-parameters-cannot-be-inferred-from-these-arguments"></a>이 인수에서 형식 매개 변수의 데이터 형식을 유추할 수 없습니다.
 이 인수에서 형식 매개 변수의 데이터 형식을 유추할 수 없습니다. 데이터 형식을 명시적으로 지정하면 이 오류를 해결할 수 있습니다.  
@@ -32,7 +24,7 @@ ms.lasthandoff: 11/21/2017
 > [!NOTE]
 >  인수 지정이 옵션이 아닌 경우(예: 쿼리 식의 쿼리 연산자) 두 번째 문장 없이 오류 메시지가 나타납니다.  
   
- 다음 코드에서는  오류를 보여 줍니다.  
+ 다음 코드에서는 오류를 보여 줍니다.  
   
 ```vb  
 Module Module1  

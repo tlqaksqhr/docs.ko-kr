@@ -1,13 +1,6 @@
 ---
-title: "사용자 지정 가능한 모양이 있는 컨트롤 만들기"
-ms.custom: 
+title: 사용자 지정 가능한 모양이 있는 컨트롤 만들기
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -20,20 +13,15 @@ helpviewer_keywords:
 - managing control states [WPF], VisualStateManager
 - VisualStateManager [WPF], best practice
 ms.assetid: 9e356d3d-a3d0-4b01-a25f-2d43e4d53fe5
-caps.latest.revision: "10"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 4da96c3e33c6f7827619b408568fbbfe96c50a11
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 9f539e7dbb105591375857122d738fddd87f6776
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="creating-a-control-that-has-a-customizable-appearance"></a>사용자 지정 가능한 모양이 있는 컨트롤 만들기
 <a name="introduction"></a>
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]해당 모양을 사용자 지정할 수 있는 컨트롤을 만들 수가 있습니다. 예를 들어의 모양을 변경할 수 있습니다는 <xref:System.Windows.Controls.CheckBox> 어떤 설정을 제외 속성 작업을 수행 하려면 새 <xref:System.Windows.Controls.ControlTemplate>합니다. 다음 그림에서는 한 <xref:System.Windows.Controls.CheckBox> 기본값을 사용 하 <xref:System.Windows.Controls.ControlTemplate> 및 <xref:System.Windows.Controls.CheckBox> 사용자 지정을 사용 하 여 <xref:System.Windows.Controls.ControlTemplate>합니다.  
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 해당 모양을 사용자 지정할 수 있는 컨트롤을 만들 수가 있습니다. 예를 들어의 모양을 변경할 수 있습니다는 <xref:System.Windows.Controls.CheckBox> 어떤 설정을 제외 속성 작업을 수행 하려면 새 <xref:System.Windows.Controls.ControlTemplate>합니다. 다음 그림에서는 한 <xref:System.Windows.Controls.CheckBox> 기본값을 사용 하 <xref:System.Windows.Controls.ControlTemplate> 및 <xref:System.Windows.Controls.CheckBox> 사용자 지정을 사용 하 여 <xref:System.Windows.Controls.ControlTemplate>합니다.  
   
  ![기본 컨트롤 템플릿이 있는 확인란을 선택 합니다. ] (../../../../docs/framework/wpf/controls/media/ndp-checkboxdefault.png "NDP_CheckBoxDefault")  
 기본 컨트롤 템플릿을 사용하는 확인란  
@@ -61,7 +49,7 @@ ms.lasthandoff: 12/22/2017
 -   [전체 예제](#complete_example)  
   
 <a name="prerequisites"></a>   
-## <a name="prerequisites"></a>필수 구성 요소  
+## <a name="prerequisites"></a>전제 조건  
  이 항목에서는 새 하는 방법을 알고 있다고 가정 <xref:System.Windows.Controls.ControlTemplate> 는 기존 컨트롤에 대 한 익숙한 컨트롤 계약에서 요소는 내용에 설명 된 개념을 이해 하 고 [하 여 기존 컨트롤의 모양 사용자 지정 만들기는 ControlTemplate](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md)합니다.  
   
 > [!NOTE]
@@ -89,7 +77,7 @@ ms.lasthandoff: 12/22/2017
   
  [!code-xaml[VSMCustomControl#VisualStructure](../../../../samples/snippets/csharp/VS_Snippets_Wpf/vsmcustomcontrol/csharp/window1.xaml#visualstructure)]  
   
- 시각적 동작은 `NumericUpDown` 컨트롤이 음수 값을 빨간색 글꼴로 된다는 점입니다.  변경 하는 경우는 <xref:System.Windows.Controls.TextBlock.Foreground%2A> 의 <xref:System.Windows.Controls.TextBlock> 때 코드에서 `Value` 가 음수 이면는 `NumericUpDown` 빨간색 음수 값을 항상 표시 됩니다. 컨트롤의 시각적 동작을 지정 된 <xref:System.Windows.Controls.ControlTemplate> 추가 하 여 <xref:System.Windows.VisualState> 개체를 <xref:System.Windows.Controls.ControlTemplate>합니다.  다음 예제와 <xref:System.Windows.VisualState> 에 대 한 개체는 `Positive` 및 `Negative` 상태입니다.  `Positive`및 `Negative` (컨트롤은 항상 둘 중 하나)은 상호 배타적 이므로 예제에서는 배치는 <xref:System.Windows.VisualState> 개체를 하나의 <xref:System.Windows.VisualStateGroup>합니다.  컨트롤이 들어갈는 `Negative` 상태는 <xref:System.Windows.Controls.TextBlock.Foreground%2A> 의 <xref:System.Windows.Controls.TextBlock> 빨간색으로 바뀝니다.  이 컨트롤에 있을 때의 `Positive` 상태는 <xref:System.Windows.Controls.TextBlock.Foreground%2A> 를 반환 원래 값입니다.  정의 <xref:System.Windows.VisualState> 개체에 <xref:System.Windows.Controls.ControlTemplate> 에 대해 자세히 설명 [는 ControlTemplate을 만들어 기존 컨트롤의 모양 사용자 지정](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md)합니다.  
+ 시각적 동작은 `NumericUpDown` 컨트롤이 음수 값을 빨간색 글꼴로 된다는 점입니다.  변경 하는 경우는 <xref:System.Windows.Controls.TextBlock.Foreground%2A> 의 <xref:System.Windows.Controls.TextBlock> 때 코드에서 `Value` 가 음수 이면는 `NumericUpDown` 빨간색 음수 값을 항상 표시 됩니다. 컨트롤의 시각적 동작을 지정 된 <xref:System.Windows.Controls.ControlTemplate> 추가 하 여 <xref:System.Windows.VisualState> 개체를 <xref:System.Windows.Controls.ControlTemplate>합니다.  다음 예제와 <xref:System.Windows.VisualState> 에 대 한 개체는 `Positive` 및 `Negative` 상태입니다.  `Positive` 및 `Negative` (컨트롤은 항상 둘 중 하나)은 상호 배타적 이므로 예제에서는 배치는 <xref:System.Windows.VisualState> 개체를 하나의 <xref:System.Windows.VisualStateGroup>합니다.  컨트롤이 들어갈는 `Negative` 상태는 <xref:System.Windows.Controls.TextBlock.Foreground%2A> 의 <xref:System.Windows.Controls.TextBlock> 빨간색으로 바뀝니다.  이 컨트롤에 있을 때의 `Positive` 상태는 <xref:System.Windows.Controls.TextBlock.Foreground%2A> 를 반환 원래 값입니다.  정의 <xref:System.Windows.VisualState> 개체에 <xref:System.Windows.Controls.ControlTemplate> 에 대해 자세히 설명 [는 ControlTemplate을 만들어 기존 컨트롤의 모양 사용자 지정](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md)합니다.  
   
 > [!NOTE]
 >  로 설정 된 <xref:System.Windows.VisualStateManager.VisualStateGroups%2A?displayProperty=nameWithType> 루트에 연결 <xref:System.Windows.FrameworkElement> 의 <xref:System.Windows.Controls.ControlTemplate>합니다.  
@@ -212,17 +200,17 @@ ms.lasthandoff: 12/22/2017
   
 -   A <xref:System.Windows.Controls.Primitives.RepeatButton> 호출 `UpButton`합니다.  
   
--   A <xref:System.Windows.Controls.Primitives.RepeatButton> 호출`DownButton.`  
+-   A <xref:System.Windows.Controls.Primitives.RepeatButton> 호출 `DownButton.`  
   
  컨트롤은 다음과 같은 상태가 될 수 있습니다.  
   
--   안에`ValueStates`<xref:System.Windows.VisualStateGroup>  
+-   안에 `ValueStates`<xref:System.Windows.VisualStateGroup>  
   
     -   `Positive`  
   
     -   `Negative`  
   
--   안에`FocusStates`<xref:System.Windows.VisualStateGroup>  
+-   안에 `FocusStates`<xref:System.Windows.VisualStateGroup>  
   
     -   `Focused`  
   

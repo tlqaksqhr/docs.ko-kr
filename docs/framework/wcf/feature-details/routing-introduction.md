@@ -1,26 +1,12 @@
 ---
-title: "라우팅 소개"
-ms.custom: 
+title: 라우팅 소개
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: bf6ceb38-6622-433b-9ee7-f79bc93497a1
-caps.latest.revision: 
-author: wadepickett
-ms.author: wpickett
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: e0fe14f096ae0914235ea1d23b874f0aea906d9d
-ms.sourcegitcommit: 15316053918995cc1380163a7d7e7edd5c44e6d7
+ms.openlocfilehash: 3ee7ea8271df47354a0897434bf8f203eaf09a51
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="routing-introduction"></a>라우팅 소개
 라우팅 서비스는 메시지 내용에 따라 메시지를 라우트할 수 있는 제네릭 플러그형 SOAP 매개자를 제공합니다. 라우팅 서비스를 사용하면 서비스 집계, 서비스 버전 관리, 우선 순위 라우팅 및 멀티캐스트 라우팅과 같은 시나리오를 구현할 수 있도록 하는 복합적인 라우팅 논리를 만들 수 있습니다. 또한 라우팅 서비스는 오류 처리 기능을 제공하므로 기본 대상 끝점으로 메시지를 보내는 중 오류가 발생할 경우 이 기능을 통해 메시지를 보낼 백업 끝점 목록을 설정할 수 있습니다.  
@@ -111,7 +97,7 @@ serviceHost.Description.Behaviors.Add(
      new RoutingBehavior(rc));  
 ```  
   
- 이 예제에서는 ": //localhost: 8000/라우팅 서비스/라우터" 라우트될 메시지를 수신 하는 데 사용 되는 주소를 가진 단일 끝점을 노출 하도록 라우팅 서비스를 구성 합니다. 메시지는 요청-회신 끝점으로 라우트되므로 서비스 끝점은 <xref:System.ServiceModel.Routing.IRequestReplyRouter> 계약을 사용합니다. 또한이 구성은 ": //localhost: 8000/servicemodelsample/service" 메시지를 라우팅할의 단일 클라이언트 끝점을 정의 합니다. 필터 테이블 (표시 되지 않음) "routingtable1" 메시지를 라우트하는 데 사용 하는 라우팅 논리를 포함 하 고 사용 하 여 서비스 끝점과 연결 된는 **RoutingBehavior** (구성 파일)에 대 한 또는  **RoutingConfiguration** 프로그래밍 방식으로 구성 합니다.  
+ 이 예제에서는 주소는 단일 끝점을 노출 하도록 라우팅 서비스 구성 "http://localhost:8000/routingservice/router", 라우트될 메시지를 수신 하는 데 사용 되는 합니다. 메시지는 요청-회신 끝점으로 라우트되므로 서비스 끝점은 <xref:System.ServiceModel.Routing.IRequestReplyRouter> 계약을 사용합니다. 이 구성의 단일 클라이언트 끝점 정의 "http://localhost:8000/servicemodelsample/service"으로 메시지가 라우팅되도록 합니다. 필터 테이블 (표시 되지 않음) "routingtable1" 메시지를 라우트하는 데 사용 하는 라우팅 논리를 포함 하 고 사용 하 여 서비스 끝점과 연결 된는 **RoutingBehavior** (구성 파일)에 대 한 또는  **RoutingConfiguration** 프로그래밍 방식으로 구성 합니다.  
   
 ### <a name="routing-logic"></a>라우팅 논리  
  메시지를 라우트하는 데 사용되는 라우팅 논리를 정의하려면 들어오는 메시지에 포함된, 고유한 작업 대상이 될 수 있는 데이터를 확인해야 합니다. 예를 들어 라우트하는 모든 대상 끝점이 동일한 SOAP 작업을 공유하는 경우 메시지 내에 포함된 Action 값은 메시지를 라우트해야 할 특정 끝점을 나타내는 지표로 적절하지 않습니다. 하나의 특정 끝점으로 메시지를 고유하게 라우트해야 하는 경우 메시지가 라우트되는 대상 끝점을 고유하게 식별하는 데이터를 대상으로 필터링해야 합니다.  
@@ -165,7 +151,7 @@ rc.FilterTable.Add(new MatchAllMessageFilter(), endpointList);
 > [!NOTE]
 >  기본적으로 라우팅 서비스는 메시지의 헤더만 평가합니다. 필터에서 메시지 본문에 액세스하도록 허용하려면 <xref:System.ServiceModel.Routing.RoutingConfiguration.RouteOnHeadersOnly%2A>를 `false`로 설정해야 합니다.  
   
- **Multicast**  
+ **멀티 캐스트**  
   
  많은 라우팅 서비스 구성에서 하나의 특정 끝점으로만 메시지를 라우트하는 단독 필터 논리를 사용하지만 주어진 메시지를 여러 대상 끝점으로 라우트해야 하는 경우도 있습니다. 메시지를 여러 대상으로 멀티캐스트하려면 다음 조건이 충족되어야 합니다.  
   
@@ -173,7 +159,7 @@ rc.FilterTable.Add(new MatchAllMessageFilter(), endpointList);
   
 -   메시지를 평가할 때 여러 필터에서 `true`를 반환해야 합니다.  
   
- 이러한 조건이 충족되면 `true`를 반환하는 모든 필터의 모든 끝점으로 메시지가 라우트됩니다. 다음 예제에서는 메시지의 끝점 주소가 http://localhost:8000/routingservice/router/rounding인 경우 두 끝점으로 모두 메시지가 라우트되는 라우팅 구성을 정의합니다.  
+ 이러한 조건이 충족되면 `true`를 반환하는 모든 필터의 모든 끝점으로 메시지가 라우트됩니다. 다음 예제에서는 메시지의 끝점 주소는 경우 두 끝점으로 라우팅되는 메시지에서 발생 하는 라우팅 구성을 정의 http://localhost:8000/routingservice/router/rounding합니다.  
   
 ```xml  
 <!--ROUTING SECTION -->  

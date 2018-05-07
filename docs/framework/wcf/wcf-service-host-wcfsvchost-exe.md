@@ -1,29 +1,15 @@
 ---
 title: WCF 서비스 호스트(WcfSvcHost.exe)
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 8643a63d-a357-4c39-bd6c-cdfdf71e370e
-caps.latest.revision: 27
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 1da8d7a08e7887e8ba3fd50a8f809e2ff551a7fd
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
-ms.translationtype: MT
+ms.openlocfilehash: c000ad3ba53f103cb1a24a9a7fbc71049ba707c7
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="wcf-service-host-wcfsvchostexe"></a>WCF 서비스 호스트(WcfSvcHost.exe)
-[!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 서비스 호스트 (WcfSvcHost.exe)를 사용 하면 (F5) 자동으로 호스팅하고 테스트할 구현한 서비스를 Visual Studio 디버거를 시작할 수 있습니다. 그런 다음 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 테스트 클라이언트(WcfTestClient.exe) 또는 자체 클라이언트로 서비스를 테스트하여 잠재적인 오류를 찾아 수정할 수 있습니다.  
+Windows Communication Foundation (WCF) 서비스 호스트 (WcfSvcHost.exe)를 사용 하면 (F5) 자동으로 호스팅하고 테스트할 구현한 서비스를 Visual Studio 디버거를 시작할 수 있습니다. 그런 다음 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 테스트 클라이언트(WcfTestClient.exe) 또는 자체 클라이언트로 서비스를 테스트하여 잠재적인 오류를 찾아 수정할 수 있습니다.  
   
 ## <a name="wcf-service-host"></a>WCF 서비스 호스트  
  [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 서비스 호스트는 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 서비스 프로젝트의 서비스를 열거하고 프로젝트의 구성을 로드하며 찾은 각 서비스에 대한 호스트를 인스턴스화합니다. 이 도구를 통해 Visual Studio에 통합 되어는 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 서비스 템플릿 및 프로젝트 디버깅을 시작할 때 호출 됩니다.  

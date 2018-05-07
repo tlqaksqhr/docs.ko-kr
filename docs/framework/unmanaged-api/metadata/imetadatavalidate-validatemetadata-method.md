@@ -1,14 +1,6 @@
 ---
-title: "IMetaDataValidate::ValidateMetaData 메서드"
-ms.custom: 
+title: IMetaDataValidate::ValidateMetaData 메서드
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - IMetaDataValidate.ValidateMetaData
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: e5ceed11-0f54-4097-8302-883284dddbc1
 topic_type:
 - apiref
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 700913a271efab4370d448046c776ecc13dcee7c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 113c228fd0a160ef6d8dd593891a6f9dd053a28c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="imetadatavalidatevalidatemetadata-method"></a>IMetaDataValidate::ValidateMetaData 메서드
 현재 메타데이터 범위에서 개체에 대한 메타데이터 서명의 유효성을 검사합니다.  
@@ -51,7 +39,7 @@ HRESULT ValidateMetaData ();
   
  **라이브러리:** MsCorEE.dll에서 리소스로 사용  
   
- **.NET framework 버전:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>참고 항목  
  [IMetaDataValidate 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadatavalidate-interface.md)

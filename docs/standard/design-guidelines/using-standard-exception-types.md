@@ -1,31 +1,20 @@
 ---
 title: 표준 예외 형식 사용
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - throwing exceptions, standard types
 - catching exceptions
 - exceptions, catching
 - exceptions, throwing
 ms.assetid: ab22ce03-78f9-4dca-8824-c7ed3bdccc27
-caps.latest.revision: 17
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 54e8b750048a00f7ac2591b464ac4c74cb7591b7
-ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
+ms.openlocfilehash: 81e4047c171e3a58f335821d64390432524b25df
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-standard-exception-types"></a>표준 예외 형식 사용
 이 섹션에서는 프레임 워크 및 사용 세부 정보에서 제공 하는 표준 예외를 설명 합니다. 목록 완전 한 목록이 되지는 않습니다. 다른 프레임 워크 예외 형식의 사용에 대 한.NET Framework 참조 설명서를 참조 하십시오.  

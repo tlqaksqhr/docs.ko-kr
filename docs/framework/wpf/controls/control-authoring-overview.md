@@ -1,13 +1,6 @@
 ---
-title: "컨트롤 제작 개요"
-ms.custom: 
+title: 컨트롤 제작 개요
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -15,16 +8,11 @@ helpviewer_keywords:
 - controls [WPF], authoring overview
 - authoring overview for controls [WPF]
 ms.assetid: 3d864748-cff0-4e63-9b23-d8e5a635b28f
-caps.latest.revision: "32"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: f9290c249ed85ffc1fe98878daf2c2f0777786f5
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: a6c2c796819924cdbd15d6eefffe10a607bad9bc
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="control-authoring-overview"></a>컨트롤 제작 개요
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 컨트롤 모델의 확장성 덕분에 새 컨트롤을 만들 필요성이 상당히 줄어들었습니다. 그러나 어떤 경우에는 여전히 사용자 지정 컨트롤을 만들어야 할 수 있습니다. 이 항목에서는 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]에서 사용자 지정 컨트롤과 다양한 컨트롤 제작 모델을 만들 필요성을 최소화시키는 기능에 대해 설명합니다. 또한 새 컨트롤을 만드는 방법을 설명합니다.  
@@ -83,7 +71,7 @@ ms.lasthandoff: 01/19/2018
 ### <a name="deriving-from-frameworkelement"></a>FrameworkElement에서 파생  
  파생 된 컨트롤 <xref:System.Windows.Controls.UserControl> 또는 <xref:System.Windows.Controls.Control> 기존 요소를 구성에 의존 합니다. 대부분의 시나리오에 적합 한 솔루션, 때문에 이것이에서 상속 하는 모든 개체 <xref:System.Windows.FrameworkElement> 에 있을 수 있습니다는 <xref:System.Windows.Controls.ControlTemplate>합니다. 그러나 컨트롤의 모양이 단순한 요소 컴퍼지션 이상의 기능을 필요로 하는 경우가 있습니다. 이러한 시나리오에 대 한 기반으로 사용 하는 구성 요소 <xref:System.Windows.FrameworkElement> 는 것이 좋습니다.  
   
- 두 가지가 표준 만들기에 대 한 <xref:System.Windows.FrameworkElement>-기반 구성: 렌더링 및 사용자 지정 요소 컴퍼지션 지시 합니다. 직접 렌더링에서는 재정의 <xref:System.Windows.UIElement.OnRender%2A> 방식의 <xref:System.Windows.FrameworkElement> 제공 하 고 <xref:System.Windows.Media.DrawingContext> 구성 요소의 시각적 개체를 명시적으로 정의 하는 작업입니다. 이 사용 하는 방법 <xref:System.Windows.Controls.Image> 및 <xref:System.Windows.Controls.Border>합니다. 형식의 개체를 사용 하 여 사용자 지정 요소 컴퍼지션을 <xref:System.Windows.Media.Visual> 모양의 구성 요소를 작성 하 합니다. 예제는 [DrawingVisual 개체 사용](../../../../docs/framework/wpf/graphics-multimedia/using-drawingvisual-objects.md)을 참조하세요. <xref:System.Windows.Controls.Primitives.Track>컨트롤에 대 한 예로 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 컴퍼지션 사용자 지정 요소를 사용 하 여 합니다. 직접 렌더링과 사용자 지정 요소 컴퍼지션을 같은 컨트롤에서 혼합하여 사용할 수도 있습니다.  
+ 두 가지가 표준 만들기에 대 한 <xref:System.Windows.FrameworkElement>-기반 구성: 렌더링 및 사용자 지정 요소 컴퍼지션 지시 합니다. 직접 렌더링에서는 재정의 <xref:System.Windows.UIElement.OnRender%2A> 방식의 <xref:System.Windows.FrameworkElement> 제공 하 고 <xref:System.Windows.Media.DrawingContext> 구성 요소의 시각적 개체를 명시적으로 정의 하는 작업입니다. 이 사용 하는 방법 <xref:System.Windows.Controls.Image> 및 <xref:System.Windows.Controls.Border>합니다. 형식의 개체를 사용 하 여 사용자 지정 요소 컴퍼지션을 <xref:System.Windows.Media.Visual> 모양의 구성 요소를 작성 하 합니다. 예제는 [DrawingVisual 개체 사용](../../../../docs/framework/wpf/graphics-multimedia/using-drawingvisual-objects.md)을 참조하세요. <xref:System.Windows.Controls.Primitives.Track> 컨트롤에 대 한 예로 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 컴퍼지션 사용자 지정 요소를 사용 하 여 합니다. 직접 렌더링과 사용자 지정 요소 컴퍼지션을 같은 컨트롤에서 혼합하여 사용할 수도 있습니다.  
   
 #### <a name="benefits-of-deriving-from-frameworkelement"></a>FrameworkElement에서 파생하는 이점  
  파생 하는 것이 좋습니다. <xref:System.Windows.FrameworkElement> 경우 다음 중 하나:  
@@ -127,7 +115,7 @@ ms.lasthandoff: 01/19/2018
   
 -   에 대 한 메서드를 정의 고 <xref:System.Windows.CoerceValueCallback> 라는 `CoerceValue`합니다. `CoerceValue`는 `Value`가 `MinValue`보다 크거나 같고 `MaxValue`보다 작거나 같도록 합니다.  
   
--   에 대 한 메서드를 정의 고 <xref:System.Windows.PropertyChangedCallback>명명 된 `OnValueChanged`합니다. `OnValueChanged`만듭니다는 <xref:System.Windows.RoutedPropertyChangedEventArgs%601> 개체를 발생 시킬 준비는 `ValueChanged` 라우트된 이벤트입니다. 라우트된 이벤트는 다음 섹션에서 설명합니다.  
+-   에 대 한 메서드를 정의 고 <xref:System.Windows.PropertyChangedCallback>명명 된 `OnValueChanged`합니다. `OnValueChanged` 만듭니다는 <xref:System.Windows.RoutedPropertyChangedEventArgs%601> 개체를 발생 시킬 준비는 `ValueChanged` 라우트된 이벤트입니다. 라우트된 이벤트는 다음 섹션에서 설명합니다.  
   
  [!code-csharp[UserControlNumericUpDown#DependencyProperty](../../../../samples/snippets/csharp/VS_Snippets_Wpf/UserControlNumericUpDown/CSharp/NumericUpDown.xaml.cs#dependencyproperty)]
  [!code-vb[UserControlNumericUpDown#DependencyProperty](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/UserControlNumericUpDown/visualbasic/numericupdown.xaml.vb#dependencyproperty)]  
@@ -195,7 +183,7 @@ ms.lasthandoff: 01/19/2018
   
 -   `Set`*PropertyName* 및 `Get`*PropertyName*이라는 `public` `static` CLR 메서드 쌍을 구현합니다. 두 방법 모두에서 파생 된 클래스를 허용 해야 <xref:System.Windows.DependencyProperty> 첫 번째 인수로 합니다. `Set`*PropertyName* 메서드는 그 형식이 속성의 등록된 데이터 형식과 일치하는 인수도 수락합니다. `Get`*PropertyName* 메서드는 동일한 형식의 값을 반환해야 합니다. `Set`*PropertyName* 메서드가 누락된 경우 속성이 읽기 전용으로 표시됩니다.  
   
--   `Set`*PropertyName* 및 `Get` *PropertyName* 해야에 직접 라우팅하는 <xref:System.Windows.DependencyObject.GetValue%2A> 및 <xref:System.Windows.DependencyObject.SetValue%2A> 대상 종속성에 대 한 메서드 개체를 각각. 디자이너는 메서드 래퍼를 통해 호출하거나 대상 종속성 개체를 직접 호출하여 연결된 속성에 액세스할 수 있습니다.  
+-   `Set` *PropertyName* 및 `Get` *PropertyName* 해야에 직접 라우팅하는 <xref:System.Windows.DependencyObject.GetValue%2A> 및 <xref:System.Windows.DependencyObject.SetValue%2A> 대상 종속성에 대 한 메서드 개체를 각각. 디자이너는 메서드 래퍼를 통해 호출하거나 대상 종속성 개체를 직접 호출하여 연결된 속성에 액세스할 수 있습니다.  
   
  연결된 속성에 대한 자세한 내용은 [연결된 속성 개요](../../../../docs/framework/wpf/advanced/attached-properties-overview.md)를 참조하세요.  
   

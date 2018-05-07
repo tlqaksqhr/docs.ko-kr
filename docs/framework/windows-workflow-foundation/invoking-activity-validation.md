@@ -1,24 +1,12 @@
 ---
 title: 활동 유효성 검사 호출
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 22bef766-c505-4fd4-ac0f-7b363b238969
-caps.latest.revision: 15
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: c334c13457b3e89e451f75e1ca9ea9e00aae1e21
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 7e8be762e6c5c67687864727dcd4ca1cde9a8e42
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="invoking-activity-validation"></a>활동 유효성 검사 호출
 활동 유효성 검사를 사용하면 활동을 실행하기 이전에 활동 구성 오류를 식별하여 보고할 수 있습니다. Workflow Designer에서 워크플로를 수정하면 유효성 검사가 수행되어 Workflow Designer에 유효성 검사 오류 또는 경고가 표시됩니다. 워크플로를 호출하면 런타임에도 유효성 검사가 수행되며 유효성 검사 오류가 발생할 경우 기본 유효성 검사 논리에 따라 <xref:System.Activities.InvalidWorkflowException>이 throw됩니다. Windows WF (Workflow Foundation)를 제공 된 <xref:System.Activities.Validation.ActivityValidationServices> 명시적으로 활동 유효성을 검사 하 여 워크플로 응용 프로그램 및 도구 개발자 사용할 수 있는 클래스입니다. 이 항목에서는 <xref:System.Activities.Validation.ActivityValidationServices>를 사용하여 활동 유효성 검사를 수행하는 방법에 대해 설명합니다.  

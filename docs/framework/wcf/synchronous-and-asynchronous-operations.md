@@ -1,14 +1,6 @@
 ---
 title: 동기 및 비동기 작업
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -16,22 +8,16 @@ helpviewer_keywords:
 - service contracts [WCF], synchronous operations
 - service contracts [WCF], asynchronous operations
 ms.assetid: db8a51cb-67e6-411b-9035-e5821ed350c9
-caps.latest.revision: 24
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: c626699dc5291f4d4f6d432e89708661b233f16d
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
-ms.translationtype: MT
+ms.openlocfilehash: 0b64d45797babff2da1649fb7469684342e65d47
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="synchronous-and-asynchronous-operations"></a>동기 및 비동기 작업
 이 항목에서는 비동기 서비스 작업의 구현 및 호출에 대해 설명합니다.  
   
- 대부분의 응용 프로그램은 메서드를 비동기적으로 호출합니다. 이렇게 하면 메서드 호출이 실행되는 동안 응용 프로그램이 유용한 작업을 계속할 수 있기 때문입니다. [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 서비스와 클라이언트는 두 개의 다른 응용 프로그램 수준에서 비동기 작업 호출에 참여할 수 있으므로 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 응용 프로그램에서 보다 유연하게 상호 작용과 균형을 맞춰 처리량을 최대화할 수 있습니다.  
+ 대부분의 응용 프로그램은 메서드를 비동기적으로 호출합니다. 이렇게 하면 메서드 호출이 실행되는 동안 응용 프로그램이 유용한 작업을 계속할 수 있기 때문입니다. Windows Communication Foundation (WCF) 서비스와 클라이언트에서 두 가지 고유 수준의 응용 프로그램을 제공 하는 비동기 작업 호출에 참여할 수 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 처리량을 최대화 하기 위해 더 많은 유연성에 대 한 분산 된 응용 프로그램 상호 작용 합니다.  
   
 ## <a name="types-of-asynchronous-operations"></a>비동기 작업 형식  
  [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]의 모든 서비스 계약은 매개 변수 형식 및 반환 값에 관계없이 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 특성을 사용하여 클라이언트와 서비스 간의 특정 메시지 교환 패턴을 지정합니다. [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]에서는 인바운드 및 아웃바운드 메시지를 자동으로 적절한 서비스 작업이나 실행 중인 클라이언트 코드로 라우팅합니다.  

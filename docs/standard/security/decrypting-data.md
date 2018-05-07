@@ -1,13 +1,7 @@
 ---
-title: "데이터 해독"
-ms.custom: 
+title: 데이터 해독
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -17,18 +11,13 @@ helpviewer_keywords:
 - asymmetric decryption
 - decryption
 ms.assetid: 9b266b6c-a9b2-4d20-afd8-b3a0d8fd48a0
-caps.latest.revision: "15"
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: ce442c679425e5d069a0e5e163cbe2ad46702480
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: d0aefcc61a9ce283f1230cd44ffae549725bb15f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="decrypting-data"></a>데이터 해독
 암호 해독은 암호화의 반대 작업입니다. 비밀 키 암호화의 경우 데이터를 암호화하는 데 사용된 키 및 IV를 모두 알고 있어야 합니다. 공개 키 암호화의 경우 공개 키(개인 키를 사용하여 데이터가 암호화된 경우) 또는 개인 키(공개 키를 사용하여 데이터가 암호화된 경우)를 알고 있어야 합니다.  

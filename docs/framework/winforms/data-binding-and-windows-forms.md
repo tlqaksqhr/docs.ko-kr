@@ -1,14 +1,6 @@
 ---
 title: 데이터 바인딩 및 Windows Forms
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-winforms
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - master-details lists
 - data [Windows Forms], data binding
@@ -20,17 +12,11 @@ helpviewer_keywords:
 - Windows Forms controls, data binding
 - data-bound controls [Windows Forms], Windows Forms
 ms.assetid: 419aac5e-819b-4aad-88b0-73a2f8c0bd27
-caps.latest.revision: 20
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: db0e3ad5602d7ee608299bc5b9c5c85b860cab7d
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.openlocfilehash: ab1b712a2c855bc27236b8b8989ba51054e57358
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="data-binding-and-windows-forms"></a>데이터 바인딩 및 Windows Forms
 Windows Forms에서는 기존의 데이터 소스뿐 아니라 데이터를 포함하는 거의 모든 구조에 바인딩할 수 있습니다. 런타임에 계산하거나 파일에서 읽거나 다른 컨트롤의 값에서 파생하는 값 배열에 바인딩할 수 있습니다.  

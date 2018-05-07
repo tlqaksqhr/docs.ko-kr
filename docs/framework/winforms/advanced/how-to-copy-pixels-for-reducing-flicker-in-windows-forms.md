@@ -1,13 +1,6 @@
 ---
-title: "방법: Windows Forms에서 깜빡임을 줄이기 위한 픽셀 복사"
-ms.custom: 
+title: '방법: Windows Forms에서 깜빡임을 줄이기 위한 픽셀 복사'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -20,16 +13,11 @@ helpviewer_keywords:
 - flicker
 - bit-block transfer
 ms.assetid: 33b76910-13a3-4521-be98-5c097341ae3b
-caps.latest.revision: "13"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 17253e21739911d4aa0541fde9ae205b0be1c5a2
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 65428132c885191b62c3b4a76c8937bf8f3f6732
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-copy-pixels-for-reducing-flicker-in-windows-forms"></a>방법: Windows Forms에서 깜빡임을 줄이기 위한 픽셀 복사
 간단한 그래픽, 애니메이션을 적용할 때 발생할 수 깜빡임을 또는 부적합 한 다른 시각 효과가 있습니다. 이 문제는 한 가지 방법은 그래픽에는 "bitblt" 프로세스를 사용 하는 것입니다. Bitblt는는 "비트 블록 전송을"는 색 데이터 픽셀의 원점 사각형에서 대상 사각형을 픽셀입니다.  
@@ -41,7 +29,7 @@ ms.lasthandoff: 12/22/2017
 > [!NOTE]
 >  폼의 설정 <xref:System.Windows.Forms.Control.DoubleBuffered%2A> 속성을 `true` 그래픽 기반 코드의 하면는 <xref:System.Windows.Forms.Control.Paint> 이중 버퍼링 된 이벤트 수입니다. 아래 코드를 사용 하는 경우 모든 큰 성능 향상 수 있게 됩니다, 하는 동안 설정 하는 것 보다 복잡 한 그래픽 조작이 코드로 작업할 때 염두에서에 둬야 합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
   
 ```vb  
 Private Sub Form1_Paint(ByVal sender As Object, ByVal e As _  

@@ -1,23 +1,12 @@
 ---
-title: "진단 추적"
-ms.custom: 
+title: 진단 추적
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 28e77a63-d20d-4b6a-9caf-ddad86550427
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 2cb16bb2d492caca7957e6d58eadddf9bf1568b3
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 56f79fb9140785188996cc413eca4dd530037ccd
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="diagnostic-traces"></a>진단 추적
 추적은 응용 프로그램 실행 중에 생성된 특정 메시지의 게시입니다. 추적을 사용하는 경우 전송된 메시지를 수집 및 기록하는 메커니즘이 있어야 합니다. 수신기가 추적 메시지를 수신합니다. 수신기의 목적은 추적 메시지를 수집, 저장 및 라우팅하는 것입니다. 수신기는 추적 출력을 로그, 창 또는 텍스트 파일과 같은 적절한 대상에 보냅니다.  

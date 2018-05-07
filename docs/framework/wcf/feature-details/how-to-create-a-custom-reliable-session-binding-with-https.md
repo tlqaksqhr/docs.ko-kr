@@ -1,24 +1,12 @@
 ---
-title: "방법: HTTPS를 사용하여 신뢰할 수 있는 사용자 지정 세션 바인딩 만들기"
-ms.custom: 
+title: '방법: HTTPS를 사용하여 신뢰할 수 있는 사용자 지정 세션 바인딩 만들기'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: fa772232-da1f-4c66-8c94-e36c0584b549
-caps.latest.revision: "9"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: e56b54b5d49fcd307821211e7db858299f9f446d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: b3699593f783fff1227ec51194956e0cc8577dd8
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-a-custom-reliable-session-binding-with-https"></a>방법: HTTPS를 사용하여 신뢰할 수 있는 사용자 지정 세션 바인딩 만들기
 
@@ -80,6 +68,6 @@ ms.lasthandoff: 12/22/2017
 
 이 샘플에 사용 된 인증서는 사용 하 여 만든 테스트 인증서 이므로 *Makecert.exe*와 같은 HTTPS 주소에 액세스 하려고 할 때 보안 경고가 나타납니다 `https://localhost/servicemodelsamples/service.svc`, 브라우저에서 합니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참고자료
 
 [신뢰할 수 있는 세션](../../../../docs/framework/wcf/feature-details/reliable-sessions.md)

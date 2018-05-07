@@ -1,13 +1,6 @@
 ---
-title: "Geometry 개요"
-ms.custom: 
+title: Geometry 개요
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -15,16 +8,11 @@ helpviewer_keywords:
 - geometry classes [WPF]
 - graphics [WPF], geometry classes
 ms.assetid: 9fba8934-98b7-4af6-82f6-f4ef887f963a
-caps.latest.revision: "23"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: e58e3ea00a00b24e476fd158beb3b0515e607f9d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 01c460ae18c489a21c860c6d2b10f551e6e68242
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="geometry-overview"></a>Geometry 개요
 이 개요에서는 사용 하는 방법을 설명는 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] <xref:System.Windows.Media.Geometry> 셰이프를 설명 하는 클래스입니다. 이 항목은 또한 간의 차이점을 대조 <xref:System.Windows.Media.Geometry> 개체 및 <xref:System.Windows.Shapes.Shape> 요소입니다.  
@@ -34,7 +22,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="what-is-a-geometry"></a>기하 도형이란?  
  <xref:System.Windows.Media.Geometry> 클래스와 같은 여기에서 파생 되는 클래스 <xref:System.Windows.Media.EllipseGeometry>, <xref:System.Windows.Media.PathGeometry>, 및 <xref:System.Windows.Media.CombinedGeometry>, 2 차원 도형의 기 하 도형을 설명할 수 있도록 합니다. 이러한 기하학적 설명은 화면에 그릴 도형 정의 또는 적중 테스트 및 클립 영역을 정의와 같은 다양한 용도로 사용됩니다. 애니메이션 경로를 정의하는 데도 기하 도형을 사용할 수 있습니다.  
   
- <xref:System.Windows.Media.Geometry>예: 사각형 및 원, 또는 합성 이미지를 두 개 이상의 geometry 개체에서 만든 개체는 단순, 수 있습니다.  더 복잡 한 기 하 도형을 사용 하 여 만들 수 있습니다는 <xref:System.Windows.Media.PathGeometry> 및 <xref:System.Windows.Media.StreamGeometry> 곡선을 설명 하는 수 있는 클래스입니다.  
+ <xref:System.Windows.Media.Geometry> 예: 사각형 및 원, 또는 합성 이미지를 두 개 이상의 geometry 개체에서 만든 개체는 단순, 수 있습니다.  더 복잡 한 기 하 도형을 사용 하 여 만들 수 있습니다는 <xref:System.Windows.Media.PathGeometry> 및 <xref:System.Windows.Media.StreamGeometry> 곡선을 설명 하는 수 있는 클래스입니다.  
   
  때문에 <xref:System.Windows.Media.Geometry> 의 형식인 <xref:System.Windows.Freezable>, <xref:System.Windows.Media.Geometry> 몇 가지 특수 기능을 제공 하는 개체:로 선언할 수 있습니다 [리소스](../../../../docs/framework/wpf/advanced/xaml-resources.md), 복제 성능 향상을 위해 읽기 전용으로 설정 하는 여러 개체 간에 공유 하 고 스레드로부터 안전한 수 있습니다. 제공 하는 다른 기능에 대 한 자세한 내용은 <xref:System.Windows.Freezable> 개체 참조는 [Freezable 개체 개요](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md)합니다.  
   
@@ -123,7 +111,7 @@ Image 컨트롤 클리핑에 사용되는 EllipseGeometry
   
  세그먼트 형식은 다양합니다.  
   
-|세그먼트 형식|설명|예|  
+|세그먼트 형식|설명|예제|  
 |------------------|-----------------|-------------|  
 |<xref:System.Windows.Media.ArcSegment>|두 점 사이에 타원형 호를 만듭니다.|[타원형 원호 만들기](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-an-elliptical-arc.md).|  
 |<xref:System.Windows.Media.BezierSegment>|두 점 사이에 입방형 3차원 곡선을 만듭니다.|[입방형 3차원 곡선 만들기](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-cubic-bezier-curve.md).|  
@@ -187,7 +175,7 @@ PathGeometry
 ## <a name="composite-geometries"></a>복합 기하 도형  
  사용 하 여 복합 기 하 도형 개체를 만들 수 있습니다는 <xref:System.Windows.Media.GeometryGroup>, <xref:System.Windows.Media.CombinedGeometry>, 정적을 호출 하 여 <xref:System.Windows.Media.Geometry> 메서드 <xref:System.Windows.Media.Geometry.Combine%2A>합니다.  
   
--   <xref:System.Windows.Media.CombinedGeometry> 개체 및 <xref:System.Windows.Media.Geometry.Combine%2A> 메서드 두 기 하 도형을 정의 된 영역에 결합 하는 부울 연산을 수행 합니다. <xref:System.Windows.Media.Geometry>영역이 없는 개체는 삭제 됩니다. 두 개의 <xref:System.Windows.Media.Geometry> (하지만, 이러한 두 기 하 도형 또한 복합 기 하 도형이) 개체를 함께 사용할 수 있습니다.  
+-   <xref:System.Windows.Media.CombinedGeometry> 개체 및 <xref:System.Windows.Media.Geometry.Combine%2A> 메서드 두 기 하 도형을 정의 된 영역에 결합 하는 부울 연산을 수행 합니다. <xref:System.Windows.Media.Geometry> 영역이 없는 개체는 삭제 됩니다. 두 개의 <xref:System.Windows.Media.Geometry> (하지만, 이러한 두 기 하 도형 또한 복합 기 하 도형이) 개체를 함께 사용할 수 있습니다.  
   
 -   <xref:System.Windows.Media.GeometryGroup> 클래스가 생성을 결합할 때는 <xref:System.Windows.Media.Geometry> 해당 영역을 결합 하지 않고 포함 된 개체입니다. 개수에 관계 없이 <xref:System.Windows.Media.Geometry> 개체에 추가할 수는 <xref:System.Windows.Media.GeometryGroup>합니다. 예제를 보려면 [복합 도형 만들기](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-composite-shape.md)를 참조하세요.  
   
@@ -219,11 +207,11 @@ PathGeometry
 ## <a name="other-geometry-features"></a>기타 기하 도형 기능  
  <xref:System.Windows.Media.Geometry> 클래스에는 다음과 같은 유용한 유틸리티 메서드를 제공 합니다.  
   
--   <xref:System.Windows.Media.Geometry.GetArea%2A>-의 영역을 가져옵니다는 <xref:System.Windows.Media.Geometry>합니다.  
+-   <xref:System.Windows.Media.Geometry.GetArea%2A> -의 영역을 가져옵니다는 <xref:System.Windows.Media.Geometry>합니다.  
   
--   <xref:System.Windows.Media.Geometry.FillContains%2A>-다른 기 하 도형을 포함 되는지 여부를 결정 <xref:System.Windows.Media.Geometry>합니다.  
+-   <xref:System.Windows.Media.Geometry.FillContains%2A> -다른 기 하 도형을 포함 되는지 여부를 결정 <xref:System.Windows.Media.Geometry>합니다.  
   
--   <xref:System.Windows.Media.Geometry.StrokeContains%2A>-결정 여부의 스트로크는 <xref:System.Windows.Media.Geometry> 지정된 위치를 포함 합니다.  
+-   <xref:System.Windows.Media.Geometry.StrokeContains%2A> -결정 여부의 스트로크는 <xref:System.Windows.Media.Geometry> 지정된 위치를 포함 합니다.  
   
  참조는 <xref:System.Windows.Media.Geometry> 메서드의 전체 목록에 대 한 클래스입니다.  
   

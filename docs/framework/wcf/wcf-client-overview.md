@@ -1,34 +1,20 @@
 ---
 title: WCF 클라이언트 개요
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - clients [WCF], architecture
 ms.assetid: f60d9bc5-8ade-4471-8ecf-5a07a936c82d
-caps.latest.revision: 17
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 7f083ea44b9bdbd9bf85d65c42d663d87af8d812
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
-ms.translationtype: MT
+ms.openlocfilehash: 1aa540d084e9b11cc7a355db02047705f55ea4be
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="wcf-client-overview"></a>WCF 클라이언트 개요
-이 단원에서는 클라이언트 응용 프로그램이 수행하는 작업, [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 클라이언트를 구성, 생성 및 사용하는 방법, 그리고 클라이언트 응용 프로그램의 보안을 유지하는 방법에 대해 설명합니다.  
+이 섹션에서는 클라이언트 응용 프로그램에서 수행 하는 작업, 구성, 생성 및 Windows Communication Foundation (WCF) 클라이언트를 사용 하는 방법 및 클라이언트 응용 프로그램을 보호 하는 방법에 설명 합니다.  
   
 ## <a name="using-wcf-client-objects"></a>WCF 클라이언트 개체 사용  
  클라이언트 응용 프로그램은 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 클라이언트를 사용하여 다른 응용 프로그램과 통신하는, 관리되는 응용 프로그램입니다. [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 서비스에 대한 클라이언트 응용 프로그램을 만들려면 다음 단계를 수행합니다.  

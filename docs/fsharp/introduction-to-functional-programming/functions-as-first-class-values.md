@@ -1,17 +1,12 @@
 ---
 title: 함수를 고급 값으로 상승(F#)
 description: '함수는 F # 프로그래밍 언어에 대 한 고급 상태로 승격 되는 방법에 대해 알아봅니다.'
-author: cartermp
-ms.author: phcart
 ms.date: 05/16/2016
-ms.topic: language-reference
-ms.prod: dotnet-fsharp
-ms.devlang: fsharp
-ms.openlocfilehash: 7db99aa23211ce4a7af5cdfcc809017fafb1d5a1
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: cccff5fcf9de150da26422f80cae032ddf21014c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="functions-as-first-class-values"></a>함수를 고급 값으로 상승
 

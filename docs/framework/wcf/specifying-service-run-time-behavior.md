@@ -1,29 +1,15 @@
 ---
 title: 서비스 런타임 동작 지정
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 5c5450ea-6af1-4b75-a267-613d0ac54707
-caps.latest.revision: 12
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 9733bb29701e4d1b46cc08c14b91e0357c935b42
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 38035230cf4f5e411f7ec769a169528ada130749
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="specifying-service-run-time-behavior"></a>서비스 런타임 동작 지정
 서비스 계약을 디자인([Designing Service Contracts](../../../docs/framework/wcf/designing-service-contracts.md)) 서비스 계약을 구현([Implementing Service Contracts](../../../docs/framework/wcf/implementing-service-contracts.md))했으면 서비스 런타임의 작업 동작을 구성할 수 있습니다. 이 항목에서는 시스템 제공 서비스와 작업 동작에 대해 설명하고, 새 동작을 만들기 위해 추가 정보를 찾을 수 있는 위치에 대해 설명합니다. 일부 동작은 특성으로 적용되지만 대부분은 응용 프로그램 구성 파일을 사용하여 적용되거나 프로그래밍 방식으로 적용됩니다. 서비스 응용 프로그램을 구성 하는 방법에 대 한 자세한 내용은 참조 [서비스 구성](../../../docs/framework/wcf/configuring-services.md)합니다.  

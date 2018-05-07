@@ -1,13 +1,6 @@
 ---
-title: "GDI+의 다각형"
-ms.custom: 
+title: GDI+의 다각형
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -16,16 +9,11 @@ helpviewer_keywords:
 - drawing [Windows Forms], polygons
 - GDI+, polygons
 ms.assetid: a72213d2-d69a-4c2b-a75c-be7b20390c13
-caps.latest.revision: "13"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 26068ab72473a541b1f16aeb2a1f0d43ec7a7313
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 3ac6b9b651e65a45612cf2bd8ff17990c5cfba0f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="polygons-in-gdi"></a>GDI+의 다각형
 다각형은 세 개 이상의 직선 면으로 폐쇄형된 도형입니다. 예를 들어 삼각형 세 면 있는 다각형 사각형은 네 면 있는 다각형 있고, 오각형은 5 면 합니다. 다음 그림에는 여러 다각형과 보여 줍니다.  

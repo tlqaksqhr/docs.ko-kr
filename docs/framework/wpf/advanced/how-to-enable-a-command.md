@@ -1,13 +1,6 @@
 ---
-title: "방법: 명령 사용"
-ms.custom: 
+title: '방법: 명령 사용'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -15,21 +8,16 @@ helpviewer_keywords:
 - CommandBindings [WPF]
 - commanding [WPF]
 ms.assetid: d8016266-58d9-48f7-8298-a86b7ed49fbd
-caps.latest.revision: "14"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: b27f8544a44a252eb1a1afd6e096f303360c14e5
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 81ae2e46c4fdd8b46e2b72b9a1430437ebfe97b2
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-enable-a-command"></a>방법: 명령 사용
 다음 예제에서 명령을 사용 하는 방법을 보여 줍니다 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]합니다.  이 예제에서는 연결 하는 방법을 보여 줍니다는 <xref:System.Windows.Input.RoutedCommand> 에 <xref:System.Windows.Controls.Button>, 만들는 <xref:System.Windows.Input.CommandBinding>, 구현 하는 이벤트 처리기를 만들는 <xref:System.Windows.Input.RoutedCommand>합니다.  명령에 대 한 자세한 내용은 참조는 [명령 실행 개요](../../../../docs/framework/wpf/advanced/commanding-overview.md)합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  코드의 첫 번째 섹션을 만듭니다는 [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)],으로 구성 되는 <xref:System.Windows.Controls.Button> 및 <xref:System.Windows.Controls.StackPanel>, 만듭니다는 <xref:System.Windows.Input.CommandBinding> 명령 처리기와 연결 하는 <xref:System.Windows.Input.RoutedCommand>합니다.  
   
  <xref:System.Windows.Input.ICommandSource.Command%2A> 의 속성은 <xref:System.Windows.Controls.Button> 연결 된는 <xref:System.Windows.Input.ApplicationCommands.Close%2A> 명령입니다.  

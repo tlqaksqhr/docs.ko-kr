@@ -1,28 +1,19 @@
 ---
-title: "Pane 컨트롤 형식에 대한 UI 자동화 지원"
-ms.custom: 
+title: Pane 컨트롤 형식에 대한 UI 자동화 지원
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-bcl
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - UI Automation, Pane control type
 - Pane control type
 - control types, Pane
 ms.assetid: 79761191-4449-4630-899c-9cbdb8867d3f
-caps.latest.revision: "25"
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: f7a0f12070c31c79c0b45213b51cf3bd58596967
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 4a46f29f5e399da446b185aa1226f1baac67f6bf
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ui-automation-support-for-the-pane-control-type"></a>Pane 컨트롤 형식에 대한 UI 자동화 지원
 > [!NOTE]
@@ -65,7 +56,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="required-ui-automation-control-patterns"></a>필요한 UI 자동화 컨트롤 패턴  
  다음 표에서는 모든 창 컨트롤에서 지원되는 데 필요한 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 컨트롤 패턴을 나열하여 보여줍니다. 컨트롤 패턴에 대한 자세한 내용은 [UI Automation Control Patterns Overview](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)를 참조하세요.  
   
-|컨트롤 패턴|지원|노트|  
+|컨트롤 패턴|Support(지원)|노트|  
 |---------------------|-------------|-----------|  
 |<xref:System.Windows.Automation.Provider.ITransformProvider>|종속|창 컨트롤을 화면에서 이동, 크기 조정 또는 회전할 수 있는 경우 이 컨트롤 패턴을 구현합니다.|  
 |<xref:System.Windows.Automation.Provider.IWindowProvider>|Never|이 컨트롤 패턴을 구현해야 하는 경우 해당 컨트롤은 <xref:System.Windows.Automation.ControlType.Window> 컨트롤 형식을 기반으로 해야 합니다.|  

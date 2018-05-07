@@ -1,30 +1,20 @@
 ---
-title: "상호 인증서를 사용하는 메시지 보안"
-ms.custom: 
+title: 상호 인증서를 사용하는 메시지 보안
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 99d7a528-7ae4-4d39-a0f9-3066ea237de0
-caps.latest.revision: "18"
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: a60af220bf962e523a35bc5b8d8abca041a9fd46
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 1407593bf90b28a1890a8c18564b31d0aa67e0cd
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="message-security-with-mutual-certificates"></a>상호 인증서를 사용하는 메시지 보안
-다음 시나리오에서는 메시지 보안 모드를 사용하여 보안하는 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 서비스 및 클라이언트를 보여 줍니다. 클라이언트 및 서비스는 인증서를 사용하여 인증됩니다.  
+다음 시나리오는 Windows Communication Foundation (WCF) 서비스와 클라이언트 메시지 보안 모드를 사용 하 여 보안을 보여 줍니다. 클라이언트 및 서비스는 인증서를 사용하여 인증됩니다.  
   
  이 시나리오는 X.509 인증서 토큰 프로필과 함께 WS-Security를 사용하므로 상호 운용할 수 있습니다.  
   

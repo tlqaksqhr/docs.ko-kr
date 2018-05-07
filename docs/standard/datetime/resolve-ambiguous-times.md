@@ -1,13 +1,7 @@
 ---
-title: "방법: 모호한 시간 확인"
-ms.custom: 
+title: '방법: 모호한 시간 확인'
 ms.date: 04/10/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -15,18 +9,13 @@ helpviewer_keywords:
 - time zones [.NET Framework], ambiguous time
 - ambiguous time [.NET Framework]
 ms.assetid: 2cf5fb25-492c-4875-9245-98cac8348e97
-caps.latest.revision: "10"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 251f1914b131c5deed194ad7f3fb068c1d9b27c5
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: a92081a164d15e5150c582b37c6c688cd15e619e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-resolve-ambiguous-times"></a>방법: 모호한 시간 확인
 
@@ -46,7 +35,7 @@ ms.lasthandoff: 12/23/2017
 
 3. 호출 된 `static` (`Shared` Visual Basic.net에서) <xref:System.DateTime.SpecifyKind%2A> UTC 날짜 및 시간 값의 설정 하는 방법은 <xref:System.DateTime.Kind%2A> 속성을 <xref:System.DateTimeKind.Utc?displayProperty=nameWithType>합니다.
 
-## <a name="example"></a>예
+## <a name="example"></a>예제
 
 다음 예제에는 현지 표준 시간대의 표준 시간을 나타내는 것으로 가정 하 모호한 시간에서 UTC로 변환 하는 방법을 보여 줍니다.
 
@@ -67,7 +56,7 @@ ms.lasthandoff: 12/23/2017
 
 * <xref:System> 네임 스페이스를 가져올 때는 `using` 문 (C# 코드에 필요).
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참고자료
 
 [날짜, 시간 및 표준 시간대](../../../docs/standard/datetime/index.md)
 [하는 방법: 사용자가 모호한 시간 확인](../../../docs/standard/datetime/let-users-resolve-ambiguous-times.md)

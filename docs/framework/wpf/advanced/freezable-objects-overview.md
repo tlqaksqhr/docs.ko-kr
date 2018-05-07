@@ -1,13 +1,6 @@
 ---
-title: "Freezable 개체 개요"
-ms.custom: 
+title: Freezable 개체 개요
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -16,16 +9,11 @@ helpviewer_keywords:
 - unfreezing Freezable objects [WPF]
 - classes [WPF], Freezable
 ms.assetid: 89c71692-4f43-4057-b611-67c6a8a863a2
-caps.latest.revision: "30"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 7390181570c6deeea77e5e76493a62e84107286b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: d3b9f6f7af22b2a846f4ee34e8d4d00bb032fd69
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="freezable-objects-overview"></a>Freezable 개체 개요
 이 항목에서는 효과적으로 사용 하 고 만드는 방법을 설명 <xref:System.Windows.Freezable> 응용 프로그램의 성능을 향상 시킬 수 있는 특별 한 기능을 제공 하는 개체입니다. Freezable 개체의 예로 브러시, 펜, 변환, 기 하 도형 및 애니메이션을 들 수 있습니다.  
@@ -101,7 +89,7 @@ ms.lasthandoff: 12/22/2017
   
  [!code-xaml[FreezableSample#FreezeFromMarkupWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/FreezableSample/CS/FreezeFromMarkupExample.xaml#freezefrommarkupwholepage)]  
   
- 사용 하는 `Freeze` 특성을 매핑해야 옵션 네임 스페이스: `http://schemas.microsoft.com/winfx/2006/xaml/presentation/options`합니다. `PresentationOptions`이 네임 스페이스를 매핑하기 위한 권장된 접두사:  
+ 사용 하는 `Freeze` 특성을 매핑해야 옵션 네임 스페이스: `http://schemas.microsoft.com/winfx/2006/xaml/presentation/options`합니다. `PresentationOptions` 이 네임 스페이스를 매핑하기 위한 권장된 접두사:  
   
 ```  
 xmlns:PresentationOptions="http://schemas.microsoft.com/winfx/2006/xaml/presentation/options"   

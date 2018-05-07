@@ -1,22 +1,12 @@
 ---
-title: "방법: Async를 사용 하 여 병렬로 여러 웹 요청 만들기 및 Await (Visual Basic)"
-ms.custom: 
+title: '방법: Async를 사용 하 여 병렬로 여러 웹 요청 만들기 및 Await (Visual Basic)'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: a894b99b-7cfd-4a38-adfb-20d24f986730
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: a9b96e8acf9f5453ac035769ea7b279c4fedadfb
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 1b98a0f29409fa49af1c9c8f7c91f2170981f7cc
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await-visual-basic"></a>방법: Async를 사용 하 여 병렬로 여러 웹 요청 만들기 및 Await (Visual Basic)
 비동기 메서드에서 작업은 만들어질 때 시작됩니다. [Await](../../../../visual-basic/language-reference/operators/await-operator.md) 연산자를 계속할 수 없습니다 작업이 완료 될 때까지 메서드의 지점에서 작업에 적용 됩니다. 다음 예제와 같이 작업이 생성되는 즉시 대기되는 경우가 많습니다.  

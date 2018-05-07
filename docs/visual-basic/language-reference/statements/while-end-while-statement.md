@@ -1,11 +1,6 @@
 ---
-title: "While...End While 문(Visual Basic)"
+title: While...End While 문(Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.While
 - vb.While...EndWhile
@@ -14,14 +9,11 @@ helpviewer_keywords:
 - While statement [Visual Basic]
 - While...End While statements [Visual Basic]
 ms.assetid: b931d1ce-e8ed-44d8-a13d-92a4f5458a1e
-caps.latest.revision: "22"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 5f831f233eaa4f1c38d56f3a89bda9b0cf1bccaa
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 9f46a6ec65faef4448bdd25e30a6cc0c605cd0f2
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="whileend-while-statement-visual-basic"></a>While...End While 문(Visual Basic)
 지정한 조건이으로 일련의 문 실행 `True`합니다.  
@@ -42,11 +34,11 @@ End While
   
 |용어|정의|  
 |---|---|  
-|`condition`|필수 요소. `Boolean`식입니다. 경우 `condition` 은 `Nothing`, Visual Basic로 처리 `False`합니다.|  
+|`condition`|필수. `Boolean` 식입니다. 경우 `condition` 은 `Nothing`, Visual Basic로 처리 `False`합니다.|  
 |`statements`|선택 사항입니다. 하나 이상의 문 다음 `While`, 때마다 실행 `condition` 은 `True`합니다.|  
 |`Continue While`|선택 사항입니다. 다음 반복으로 제어를 전달는 `While` 블록입니다.|  
 |`Exit While`|선택 사항입니다. 밖으로 제어를 전송에서 `While` 블록입니다.|  
-|`End While`|필수 요소. `While` 블록의 정의를 종료합니다.|  
+|`End While`|필수. `While` 블록의 정의를 종료합니다.|  
   
 ## <a name="remarks"></a>설명  
  사용 하 여 한 `While...End While` 조건이으로 문을 번 무한히 반복 하려는 경우 구조체 `True`합니다. 조건을 테스트 하는 위치 또는 결과 합니다 유연한이 할 것에 대 한 테스트 하려는 경우는 [수행... 문은 루프](../../../visual-basic/language-reference/statements/do-loop-statement.md)합니다. 문을 횟수 만큼 반복 하려는 경우는 [에 대 한... 다음 문](../../../visual-basic/language-reference/statements/for-next-statement.md) 일반적으로 것이 좋습니다.  
@@ -63,7 +55,7 @@ End While
  중첩할 수 `While` 서로 배치 하 여 루프입니다. 또한 다른 종류의 제어 구조를 중첩할 수 있습니다. 자세한 내용은 참조 [중첩 제어 구조](../../../visual-basic/programming-guide/language-features/control-flow/nested-control-structures.md)합니다.  
   
 ## <a name="exit-while"></a>종료 하는 동안  
- [종료 동안](../../../visual-basic/language-reference/statements/exit-statement.md) 문을 종료 하는 다른 방법은 제공할 수는 `While` 루프입니다. `Exit While`바로 뒤에 오는 문으로 제어를 전송에서 `End While` 문.  
+ [종료 동안](../../../visual-basic/language-reference/statements/exit-statement.md) 문을 종료 하는 다른 방법은 제공할 수는 `While` 루프입니다. `Exit While` 바로 뒤에 오는 문으로 제어를 전송에서 `End While` 문.  
   
  일반적으로 사용 `Exit While` 일부 조건이 계산 된 후 (예를 들어 한 `If...Then...Else` 구조). 불필요 하거나 잘못 된 값 이나 종료 요청 같이 계속 반복할 수 있게 해 주는 조건을 발견 하면 루프를 끝낼 할 수 있습니다. 사용할 수 있습니다 `Exit While` 를 일으킬 수 있는 조건에 대 한 테스트는 *무한 루프*, 상태가 매우 크거나 무한도 가능 여러 번 실행 될 수 있는 합니다. 사용할 수 있습니다 `Exit While` 루프를 이스케이프 합니다.  
   

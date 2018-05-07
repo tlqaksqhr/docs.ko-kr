@@ -1,26 +1,12 @@
 ---
 title: '&lt;userPrincipalName&gt;'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 68032f69-149e-4613-bae4-18314d4fd294
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 23e2599920c0ef0ea35569ec9b0b16b0f8735f1a
-ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
+ms.openlocfilehash: 1bb0c8ac4cbe11cdfa31beb16b00b3863acabf92
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ltuserprincipalnamegt"></a>&lt;userPrincipalName&gt;
 클라이언트에서 인증할 서비스의 UPN(User Principal Name)을 지정합니다.  
@@ -55,9 +41,9 @@ ms.lasthandoff: 02/01/2018
 |[\<identity>](../../../../../docs/framework/configure-apps/file-schema/wcf/identity.md)|클라이언트에서 인증할 서비스의 ID를 지정합니다.|  
   
 ## <a name="remarks"></a>설명  
- 이 ID를 가진 끝점과 연결되는 보안 [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] 클라이언트는 이 끝점에 대해 SSPI 인증을 사용할 때 UPN을 사용합니다.  
+ 이 id 가진 끝점과 연결 하는 보안 Windows Communication Foundation (WCF) 클라이언트 끝점과 SSPI 인증을 수행할 때 UPN을 사용 합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 구성 코드는 클라이언트에서 인증할 서비스의 UPN을 지정합니다.  
   
 ```xml  

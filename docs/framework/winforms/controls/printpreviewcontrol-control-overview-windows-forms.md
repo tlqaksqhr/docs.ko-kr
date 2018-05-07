@@ -1,31 +1,17 @@
 ---
-title: "PrintPreviewControl 컨트롤 개요(Windows Forms)"
-ms.custom: 
+title: PrintPreviewControl 컨트롤 개요(Windows Forms)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 f1_keywords:
 - PrintPreviewControl
 helpviewer_keywords:
 - print preview
 - PrintPreviewControl control
 ms.assetid: 4513c6c7-5e9b-4f4c-82ca-00f993a26955
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: d50e772cf870d47314a25347f4909367062ffb94
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 330172a2ccf285cb75432572a558363e71de7ab1
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="printpreviewcontrol-control-overview-windows-forms"></a>PrintPreviewControl 컨트롤 개요(Windows Forms)
 Windows Forms <xref:System.Windows.Forms.PrintPreviewControl> 표시 하는 데 사용 되는 [PrintDocument](../../../../docs/framework/winforms/controls/printdocument-component-windows-forms.md) 표시 됩니다. 이 컨트롤에는 단추나 다른 사용자 인터페이스 요소가 없으므로, 일반적으로 고유한 인쇄 미리 보기 사용자 인터페이스를 작성하려는 경우에만 <xref:System.Windows.Forms.PrintPreviewControl>을 사용합니다. 표준 사용자 인터페이스 사용는 <xref:System.Windows.Forms.PrintPreviewDialog> 제어; 참조 [PrintPreviewDialog 컨트롤 개요](../../../../docs/framework/winforms/controls/printpreviewdialog-control-overview-windows-forms.md) 에 대 한 개요입니다.  

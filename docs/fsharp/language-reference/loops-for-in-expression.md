@@ -1,17 +1,12 @@
 ---
 title: '루프: for...in 식(F#)'
 description: '참조 방식을 F # >for.. 식에 구문 반복 하는 데 열거 가능한 컬렉션 패턴 일치 하는 항목을 반복 합니다.'
-author: cartermp
-ms.author: phcart
 ms.date: 05/16/2016
-ms.topic: language-reference
-ms.prod: dotnet-fsharp
-ms.devlang: fsharp
-ms.openlocfilehash: eaf0f4fc6419d8e0bff46795120ee5e42c4efe1d
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 926f0a9940021b3dc0deefc12ea158c35975e949
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="loops-forin-expression"></a>루프: for...in 식
 

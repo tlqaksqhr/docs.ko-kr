@@ -1,28 +1,16 @@
 ---
-title: "데이터 서비스 클라이언트 라이브러리 생성(WCF Data Services)"
-ms.custom: 
+title: 데이터 서비스 클라이언트 라이브러리 생성(WCF Data Services)
 ms.date: 03/30/2017
-ms.prod: .net-framework-oob
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - client applications, WCF Data Services
 - WCF Data Services, client library
 - Add Service Reference dialog box
 ms.assetid: 314077c1-ac10-47e1-bed4-940b5462359d
-caps.latest.revision: "2"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 72b75451d69e107b78152b301027f902ff77a25d
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 999cbaa98c26d2d00b7e8f319ee87f8b07d7f5c8
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="generating-the-data-service-client-library-wcf-data-services"></a>데이터 서비스 클라이언트 라이브러리 생성(WCF Data Services)
 구현 하는 데이터 서비스는 [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] 의해 노출 된 데이터 모델을 설명 하는 서비스 메타 데이터 문서를 반환할 수 있습니다는 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 피드입니다. 자세한 내용은 참조 [OData: 서비스 메타 데이터 문서](http://go.microsoft.com/fwlink/?LinkId=186070)합니다. 사용할 수는 **서비스 참조 추가** 대화 상자에 대 한 참조를 추가 하려면 Visual Studio에는 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]-기반 서비스입니다. 반환 된 메타 데이터에 대 한 참조를 추가 하려면이 도구를 사용 하면는 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 다음 작업을 수행 클라이언트 프로젝트에서 피드를:  

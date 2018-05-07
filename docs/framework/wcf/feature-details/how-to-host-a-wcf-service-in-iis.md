@@ -1,34 +1,20 @@
 ---
 title: '방법: IIS에서의 WCF 서비스 호스팅'
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: b044b1c9-c1e5-4c9f-84d8-0f02f4537f8b
-caps.latest.revision: 28
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 4699475db18ac84c4379c7bc102d93648060ed3d
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: a1759434d259cdffe1dac6b19a6582bfb83784bb
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-host-a-wcf-service-in-iis"></a>방법: IIS에서의 WCF 서비스 호스팅
-이 항목에서는 IIS(인터넷 정보 서비스)에서 호스팅되는 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 서비스를 만드는 데 필요한 기본 단계에 대해 간략하게 설명합니다. 이 항목에서는 사용자가 IIS에 대해 잘 알고 있으며 IIS 관리 도구를 사용해 IIS 응용 프로그램을 만들고 관리하는 방법을 이해하고 있다고 가정합니다. IIS에 대 한 자세한 내용은 참조 [인터넷 정보 서비스](http://go.microsoft.com/fwlink/?LinkId=132449)합니다. IIS 환경에서 실행되는 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 서비스는 프로세스 재활용, 유휴 상태이면 종료, 프로세스 상태 모니터링 및 메시지 기반 활성화 같은 모든 IIS 기능을 사용합니다. 이 호스팅 옵션을 사용하려면 IIS를 적절히 구성해야 하지만 호스팅 코드를 응용 프로그램의 일부로 작성하지 않아도 됩니다. HTTP 전송을 사용하는 경우에만 IIS 호스팅을 사용할 수 있습니다.  
+이 항목에서는 인터넷 정보 서비스 (IIS)에서 호스팅되는 Windows Communication Foundation (WCF) 서비스를 만드는 데 필요한 기본 단계에 설명 합니다. 이 항목에서는 사용자가 IIS에 대해 잘 알고 있으며 IIS 관리 도구를 사용해 IIS 응용 프로그램을 만들고 관리하는 방법을 이해하고 있다고 가정합니다. IIS에 대 한 자세한 내용은 참조 [인터넷 정보 서비스](http://go.microsoft.com/fwlink/?LinkId=132449)합니다. IIS 환경에서 실행 되는 프로세스 재활용, 같은 IIS 기능을 완전히 활용 하는 WCF 서비스 종료, 프로세스 상태 모니터링 및 메시지 기반 활성화 유휴입니다. 이 호스팅 옵션을 사용하려면 IIS를 적절히 구성해야 하지만 호스팅 코드를 응용 프로그램의 일부로 작성하지 않아도 됩니다. HTTP 전송을 사용하는 경우에만 IIS 호스팅을 사용할 수 있습니다.  
   
- 방법에 대 한 자세한 내용은 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 및 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 상호 작용을 참조 하십시오. [WCF 서비스 및 ASP.NET](../../../../docs/framework/wcf/feature-details/wcf-services-and-aspnet.md)합니다. 보안을 구성 하는 방법에 대 한 자세한 내용은 참조 [보안](../../../../docs/framework/wcf/feature-details/security.md)합니다.  
+ 방법에 대 한 자세한 내용은 WCF 및 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 상호 작용을 참조 하십시오. [WCF 서비스 및 ASP.NET](../../../../docs/framework/wcf/feature-details/wcf-services-and-aspnet.md)합니다. 보안을 구성 하는 방법에 대 한 자세한 내용은 참조 [보안](../../../../docs/framework/wcf/feature-details/security.md)합니다.  
   
  이 예의 원본 사본을 참조 [IIS 호스팅를 사용 하 여 인라인 코드](../../../../docs/framework/wcf/samples/iis-hosting-using-inline-code.md)합니다.  
   
@@ -73,7 +59,7 @@ ms.lasthandoff: 04/30/2018
      [!code-csharp[c_HowTo_HostInIIS#12](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_hostiniis/cs/source.cs#12)]
      [!code-vb[c_HowTo_HostInIIS#12](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_howto_hostiniis/vb/source.vb#12)]  
   
-10. 응용 프로그램 디렉터리에 “Web.config”라는 파일을 만들고 다음 구성 코드를 파일에 추가합니다. 런타임에 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 인프라에서는 이 정보를 사용하여 클라이언트 응용 프로그램이 통신할 수 있는 끝점을 생성합니다.  
+10. 응용 프로그램 디렉터리에 “Web.config”라는 파일을 만들고 다음 구성 코드를 파일에 추가합니다. 런타임 시, WCF 인프라가 클라이언트 응용 프로그램와 통신할 수 있는 끝점을 생성 하는 정보를 사용 합니다.  
   
      [!code-xml[c_HowTo_HostInIIS#100](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_hostiniis/common/web.config#100)]      
   

@@ -1,28 +1,14 @@
 ---
 title: XAML의 제네릭
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-wpf
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - generics [XAML Services]
 ms.assetid: 835bfed7-585c-4216-ae67-b674edab8b92
-caps.latest.revision: 8
-author: wadepickett
-ms.author: wpickett
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: e64224edcb49d5040332b7cef9649c98cf26798b
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: faef74c57ac5ff9e3d4162accfc6552db55715bd
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="generics-in-xaml"></a>XAML의 제네릭
 System.Xaml에 구현 된 대로.NET Framework XAML 서비스 제네릭 CLR 형식 사용에 대 한 지원을 제공 합니다. 이 지원 형식 인수로 제네릭의 제약 조건을 지정 하는 제약 조건을 적절 한 호출 하 여 적용 및 포함 `Add` 방법의 경우 제네릭 컬렉션입니다. 이 항목에서는 사용 하 고 XAML의 제네릭 형식 참조의 측면을 설명 합니다.  

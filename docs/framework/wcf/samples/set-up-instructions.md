@@ -1,30 +1,18 @@
 ---
-title: "설치 지침"
-ms.custom: 
+title: 설치 지침
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - WCF Samples [WCF], setup
 - Windows Communication Foundation Samples [WCF], setup
 ms.assetid: 0be7d232-485b-4f6d-9ed0-b4243c907376
-caps.latest.revision: "19"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 14163ecca60e516f7e88d4e453e8f4addd960340
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
-ms.translationtype: MT
+ms.openlocfilehash: 20f6662289384b1a094c34c0c0c986b754a44ad2
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="set-up-instructions"></a>설치 지침
-이 항목에서는 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 서비스를 실행하는 데 필요한 서비스를 설정하는 방법에 대해 설명합니다.  
+이 항목 집합에서는 Windows Communication Foundation (WCF) 서비스를 실행 하는 데 필요한 서비스를 설정 하는 방법에 설명 합니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
  [Windows Communication Foundation 샘플의 일회 설치 절차](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)  

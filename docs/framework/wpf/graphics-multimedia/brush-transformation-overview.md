@@ -1,13 +1,6 @@
 ---
-title: "브러시 변환 개요"
-ms.custom: 
+title: 브러시 변환 개요
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -16,22 +9,17 @@ helpviewer_keywords:
 - properties [WPF], transformation
 - transformation properties of brushes [WPF]
 ms.assetid: 8b9bfc09-12fd-4cd5-b445-99949f27bc39
-caps.latest.revision: "12"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: aa4a533594c1e89942406e7df0a49215e3885418
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 84a92ef8cab58f6362668cef3274edffa044e1b3
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="brush-transformation-overview"></a>브러시 변환 개요
 두 변환 속성을 제공 하는 브러시 클래스: <xref:System.Windows.Media.Brush.Transform%2A> 및 <xref:System.Windows.Media.Brush.RelativeTransform%2A>합니다. 이러한 속성을 사용하여 브러시의 콘텐츠를 회전, 비율 크기 조정, 기울이기 및 변환할 수 있습니다. 이 항목에서는 이러한 두 속성 간의 차이점을 설명하고 사용 예제를 제공합니다.  
   
 <a name="prerequisites"></a>   
-## <a name="prerequisites"></a>필수 구성 요소  
+## <a name="prerequisites"></a>전제 조건  
  이 항목을 이해하려면 변환하는 브러시의 기능을 이해해야 합니다. 에 대 한 <xref:System.Windows.Media.LinearGradientBrush> 및 <xref:System.Windows.Media.RadialGradientBrush>, 참조는 [단색 및 그라데이션 개요 그리기](../../../../docs/framework/wpf/graphics-multimedia/painting-with-solid-colors-and-gradients-overview.md)합니다. 에 대 한 <xref:System.Windows.Media.ImageBrush>, <xref:System.Windows.Media.DrawingBrush>, 또는 <xref:System.Windows.Media.VisualBrush>, 참조 [이미지, 그리기, 및 시각적 개체를 사용 하 여 그리기](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md)합니다. [변환 개요](../../../../docs/framework/wpf/graphics-multimedia/transforms-overview.md)에 설명된 2D 변환에도 익숙해야 합니다.  
   
 <a name="transformversusrelativetransform"></a>   

@@ -1,23 +1,16 @@
 ---
-title: "인수 &#39; NPer &#39; 0 보다 커야 합니다."
+title: 인수 &#39;NPer&#39; 0 보다 커야 합니다
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vbrRate_NPerMustBeGTZero
 ms.assetid: d49242df-dbd1-4b26-bd8c-ed56d24fdfcd
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: d2e0cf124b4d1fac562e5d1697c53ee7328fa759
-ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
+ms.openlocfilehash: 5939262d2a58a17d8af88ebc0ba0c7597983e4aa
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="argument-39nper39-must-be-greater-than-zero"></a>인수 &#39; NPer &#39; 0 보다 커야 합니다.
+# <a name="argument-39nper39-must-be-greater-than-zero"></a>인수 &#39;NPer&#39; 0 보다 커야 합니다
 일정 기간의 고정 지불액과 고정 이자율을 기준으로 연금의 기간 수를 지정하는 `NPer` 을 반환하는 `Double` 함수에는 0보다 큰 인수가 필요합니다.  
   
 ## <a name="to-correct-this-error"></a>이 오류를 해결하려면  

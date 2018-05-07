@@ -1,13 +1,6 @@
 ---
-title: "스타일러스에서 입력 가로채기"
-ms.custom: 
+title: 스타일러스에서 입력 가로채기
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -17,16 +10,11 @@ helpviewer_keywords:
 - ', '
 - ', '
 ms.assetid: 791bb2f0-4e5c-4569-ac3c-211996808d44
-caps.latest.revision: "11"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: b5fde62e2e1ab17b26c91051f68b7d4225450c60
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 813c5f6060b3a59358b286c93a9077debd41a746
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="intercepting-input-from-the-stylus"></a>스타일러스에서 입력 가로채기
 <xref:System.Windows.Input.StylusPlugIns> 통해 수준이 낮은 제어를 구현 하기 위한 메커니즘을 제공 하는 아키텍처 <xref:System.Windows.Input.Stylus> 입력을 디지털 잉크 만들 <xref:System.Windows.Ink.Stroke> 개체입니다. <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> 클래스는 사용자 지정 동작을 구현 하 고 최적의 성능을 위해 스타일러스 장치에서 가져온 데이터의 스트림에 적용 메커니즘을 제공 합니다.  
@@ -45,7 +33,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="architecture"></a>아키텍처  
  <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> 에서 향상 된는 [StylusInput](http://go.microsoft.com/fwlink/?LinkId=50753&clcid=0x409) 에 설명 된 Api [액세스 및 조작 펜 입력](http://go.microsoft.com/fwlink/?LinkId=50752&clcid=0x409)에 [Microsoft Windows XP Tablet PC Edition 소프트웨어 개발 키트 1.7](http://go.microsoft.com/fwlink/?linkid=11782&clcid=0x409)합니다.  
   
- 각 <xref:System.Windows.UIElement> 에 <xref:System.Windows.UIElement.StylusPlugIns%2A> 않는 속성이 <xref:System.Windows.Input.StylusPlugIns.StylusPlugInCollection>합니다. 추가할 수 있습니다는 <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> 요소를 <xref:System.Windows.UIElement.StylusPlugIns%2A> 조작 하는 속성 <xref:System.Windows.Input.StylusPoint> 그대로 데이터를 생성 합니다. <xref:System.Windows.Input.StylusPoint>데이터를 포함 하 여 시스템 디지타이저에서 지 원하는 모든 속성의 구성에서 <xref:System.Windows.Input.StylusPoint.X%2A> 및 <xref:System.Windows.Input.StylusPoint.Y%2A> 포인트 데이터와 <xref:System.Windows.Input.StylusPoint.PressureFactor%2A> 데이터입니다.  
+ 각 <xref:System.Windows.UIElement> 에 <xref:System.Windows.UIElement.StylusPlugIns%2A> 않는 속성이 <xref:System.Windows.Input.StylusPlugIns.StylusPlugInCollection>합니다. 추가할 수 있습니다는 <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> 요소를 <xref:System.Windows.UIElement.StylusPlugIns%2A> 조작 하는 속성 <xref:System.Windows.Input.StylusPoint> 그대로 데이터를 생성 합니다. <xref:System.Windows.Input.StylusPoint> 데이터를 포함 하 여 시스템 디지타이저에서 지 원하는 모든 속성의 구성에서 <xref:System.Windows.Input.StylusPoint.X%2A> 및 <xref:System.Windows.Input.StylusPoint.Y%2A> 포인트 데이터와 <xref:System.Windows.Input.StylusPoint.PressureFactor%2A> 데이터입니다.  
   
  프로그램 <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> 개체가에서 가져온 데이터의 스트림으로 직접 삽입 되는 <xref:System.Windows.Input.Stylus> 추가할 때 장치는 <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> 에 <xref:System.Windows.UIElement.StylusPlugIns%2A> 속성입니다. 플러그 인에 추가 되는 순서는 <xref:System.Windows.UIElement.StylusPlugIns%2A> 컬렉션 받게 됩니다 순서가 결정 <xref:System.Windows.Input.StylusPoint> 데이터입니다. 예를 들어 특정 지역에 대 한 입력을 제한 하는 필터 플러그 인을 추가 하 고 작성 된 대로 제스처를 인식 하는 플러그 인을 추가 하는 경우 제스처를 인식 하는 플러그 인 받습니다 필터링 된 <xref:System.Windows.Input.StylusPoint> 데이터입니다.  
   

@@ -1,14 +1,6 @@
 ---
-title: "GetALinkMessageDll 함수"
-ms.custom: 
+title: GetALinkMessageDll 함수
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - GetALinkMessageDll
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: 67985a22-88a2-4c54-8d99-4bcde9d6213e
 topic_type:
 - apiref
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 16657c62d66db1570ad379ff5d42a75aaf3ea2a7
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 395dc85ad638e8a790962a4aa38019612c360ce1
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="getalinkmessagedll-function"></a>GetALinkMessageDll 함수
 찾아서 메시지 DLL을 로드 합니다. 0을 반환 메시지 DLL 찾거나 로드할 수 없습니다. 메시지 DLL 이름이 언어 ID, 하위 디렉터리 또는 현재 디렉터리에 이어야 합니다.  

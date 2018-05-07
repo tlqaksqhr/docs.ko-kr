@@ -1,17 +1,12 @@
 ---
 title: 클래스(F#)
 description: 'F # 클래스는 속성, 메서드 및 이벤트를 가질 수 있는 개체를 나타내는 형식 하는 방법에 대해 알아봅니다.'
-author: cartermp
-ms.author: phcart
 ms.date: 05/16/2016
-ms.topic: language-reference
-ms.prod: dotnet-fsharp
-ms.devlang: fsharp
-ms.openlocfilehash: 0bfb45b6481576729bfe8d4bd016fb151757660a
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 67164bd9f91c14f465bf05630259ad70cb8d90e5
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="classes"></a>클래스
 

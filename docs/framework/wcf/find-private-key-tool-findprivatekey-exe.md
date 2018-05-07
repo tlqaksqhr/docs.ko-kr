@@ -1,20 +1,12 @@
 ---
-title: "개인 키 찾기 도구(FindPrivateKey.exe)"
+title: 개인 키 찾기 도구(FindPrivateKey.exe)
 ms.date: 09/11/2017
-ms.prod: .net-framework
-ms.technology: dotnet-clr
-ms.topic: article
 ms.assetid: b8846a95-3fcc-4e8c-b9c0-128d975a6307
-caps.latest.revision: "13"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 4bdfa1a9e45332e8c2acbbc8cd8a09bd2f927fbc
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 8f156cbb2f4fad8d51e356bd4dee2d72d9397ffb
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="find-private-key-tool-findprivatekeyexe"></a>개인 키 찾기 도구(FindPrivateKey.exe)
 
@@ -40,8 +32,8 @@ FindPrivateKey<storeName> <storeLocation> [{ {-n <subjectName>} | {-t <thumbprin
 
 |옵션|설명|
 |------------|-----------------|
-|`/n <`*subjectName*`>`|인증서의 주체 이름을 지정합니다.|
-|`/t <`*지문*`>`|인증서의 지문을 지정합니다. 인증서의 지문을 검색하려면 Certmgr.exe를 사용합니다.|
+|`/n <` *subjectName* `>`|인증서의 주체 이름을 지정합니다.|
+|`/t <` *지문* `>`|인증서의 지문을 지정합니다. 인증서의 지문을 검색하려면 Certmgr.exe를 사용합니다.|
 |`/f`|파일 이름만 출력합니다.|
 |`/d`|디렉터리만 출력합니다.|
 |`/a`|절대 파일 이름을 출력합니다.|

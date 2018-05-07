@@ -1,37 +1,25 @@
 ---
-title: "HTTPS, TCP를 통한 SSL 및 SOAP 보안의 인증서 유효성 검사 차이점"
-ms.custom: 
+title: HTTPS, TCP를 통한 SSL 및 SOAP 보안의 인증서 유효성 검사 차이점
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - certificates [WCF], validation differences
 ms.assetid: 953a219f-4745-4019-9894-c70704f352e6
-caps.latest.revision: 
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload:
-- dotnet
-ms.openlocfilehash: 34be2fbc5b8148d7bfdeb5e5d07e5b73ac89a97e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 744d9208f6be47965b89ddd9555b99feab9e18b7
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="certificate-validation-differences-between-https-ssl-over-tcp-and-soap-security"></a>HTTPS, TCP를 통한 SSL 및 SOAP 보안의 인증서 유효성 검사 차이점
-HTTPS(HTTP를 통한 TLS(전송 계층 보안)) 또는 TCP를 통한 TLS와 함께 메시지 계층(SOAP) 보안이 있는 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]의 인증서를 사용할 수 있습니다. 이 항목에서는 이러한 인증서의 유효성을 검사하는 방법의 차이점에 대해 설명합니다.  
+인증서를 사용할 수 Windows Communication Foundation (WCF) (전송 계층 보안) 외에도 메시지 계층 (SOAP) 보안이 포함 된 HTTP (HTTPS) 또는 TCP를 통한 합니다. 이 항목에서는 이러한 인증서의 유효성을 검사하는 방법의 차이점에 대해 설명합니다.  
   
 ## <a name="validation-of-https-client-certificates"></a>HTTPS 클라이언트 인증서 유효성 검사  
- HTTPS를 사용하여 클라이언트와 서비스 간에 통신하는 경우 클라이언트에서 서비스를 인증하는 데 사용하는 인증서는 신뢰 체인을 지원해야 합니다. 즉, 신뢰할 수 있는 루트 인증 기관에 연결되어야 합니다. 연결되지 않은 경우 HTTP 계층에서 "원격 서버에서 (403) 사용할 수 없음 오류를 반환했습니다."라는 메시지와 함께 <xref:System.Net.WebException>이 발생합니다. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서 이 예외는 <xref:System.ServiceModel.Security.MessageSecurityException>으로 표시됩니다.  
+ HTTPS를 사용하여 클라이언트와 서비스 간에 통신하는 경우 클라이언트에서 서비스를 인증하는 데 사용하는 인증서는 신뢰 체인을 지원해야 합니다. 즉, 신뢰할 수 있는 루트 인증 기관에 연결되어야 합니다. 연결되지 않은 경우 HTTP 계층에서 "원격 서버에서 (403) 사용할 수 없음 오류를 반환했습니다."라는 메시지와 함께 <xref:System.Net.WebException>이 발생합니다. WCF 표면으로이 예외는 <xref:System.ServiceModel.Security.MessageSecurityException>합니다.  
   
 ## <a name="validation-of-https-service-certificates"></a>HTTPS 서비스 인증서 유효성 검사  
  HTTPS를 사용하여 클라이언트와 서비스 간에 통신하는 경우 서버에서 인증하는 데 사용하는 인증서는 신뢰 체인을 기본적으로 지원해야 합니다. 즉, 신뢰할 수 있는 루트 인증 기관에 연결되어야 합니다. 인증서가 해지되었는지 여부를 확인하기 위해 온라인 확인을 수행하지는 않습니다. 다음 코드에서처럼 <xref:System.Net.Security.RemoteCertificateValidationCallback> 콜백을 등록하여 이 동작을 재정의할 수 있습니다.  

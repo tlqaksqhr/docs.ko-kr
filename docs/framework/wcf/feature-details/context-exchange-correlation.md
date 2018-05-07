@@ -1,26 +1,12 @@
 ---
 title: 컨텍스트 교환 상관 관계
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 1e2852be-3601-45ae-b507-ccc465d45c60
-caps.latest.revision: 18
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: bf84dfce2b2164d78bf07f840d66d6089a16ff23
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: da5ab2c89e4e2011c38f5fca99aeb5c2c73801a9
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="context-exchange-correlation"></a>컨텍스트 교환 상관 관계
 컨텍스트 상관 관계에 설명 된 컨텍스트 교환 메커니즘에 따라는 [.NET 컨텍스트 교환 프로토콜 사양](http://go.microsoft.com/fwlink/?LinkId=166059)합니다. 컨텍스트 상관 관계는 잘 알려진 컨텍스트 헤더나 쿠키를 사용하여 메시지를 올바른 인스턴스와 연결합니다. 컨텍스트 상관 관계를 사용하려면 <xref:System.ServiceModel.BasicHttpContextBinding>에 제공된 끝점에서 <xref:System.ServiceModel.WSHttpContextBinding>, <xref:System.ServiceModel.NetTcpContextBinding> 또는 <xref:System.ServiceModel.Activities.WorkflowServiceHost> 같은 컨텍스트 기반 바인딩을 사용해야 합니다. 이 항목에서는 워크플로 서비스의 메시징 작업에 컨텍스트 상관 관계를 사용하는 방법에 대해 설명합니다.  

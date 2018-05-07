@@ -1,13 +1,6 @@
 ---
-title: "방법: Windows Forms에서 개체 계층화"
-ms.custom: 
+title: '방법: Windows Forms에서 개체 계층화'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -19,16 +12,11 @@ helpviewer_keywords:
 - controls [Windows Forms], positioning
 - z-order
 ms.assetid: 1acc4281-2976-4715-86f4-bda68134baaf
-caps.latest.revision: "14"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: d956ae8fb643d616bc0e5dc514f21ca95fa50a48
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 1a2a25f2e7eaa6618c0bf535a34f7dc6a28d51fa
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-layer-objects-on-windows-forms"></a>방법: Windows Forms에서 개체 계층화
 복잡 한 사용자 인터페이스를 만들거나 여러 문서 MDI (인터페이스) 폼을 사용할 때 컨트롤과 보다 복잡 한 UI (사용자 인터페이스) 자식 폼 계층화 하려는 경우가 많습니다. 이동 하 고 컨트롤 및 windows 그룹의 컨텍스트 내에서 한 추적을 z 순서를 조작 합니다. *Z 순서* 폼의 z 축 (깊이)와 함께 폼에 컨트롤의 시각적 계층은 합니다. Z 순서 맨 아래에 있는 창에는 다른 모든 창과 겹칩니다. 다른 모든 창과 z 순서 맨 아래에 있는 창을 위에 표시 합니다.  

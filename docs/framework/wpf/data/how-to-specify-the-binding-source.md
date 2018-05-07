@@ -1,13 +1,6 @@
 ---
-title: "방법: 바인딩 소스 지정"
-ms.custom: 
+title: '방법: 바인딩 소스 지정'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -16,21 +9,16 @@ helpviewer_keywords:
 - data binding [WPF], binding source
 - binding sources [WPF]
 ms.assetid: 55d47757-2648-4a52-987f-b767953f168c
-caps.latest.revision: "16"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 23a4c180eb62dd152f1ed24c01b8103ccf1ec562
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 333a85bc59ded3fd42bef6aff5845c9a6ddeb49b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-specify-the-binding-source"></a>방법: 바인딩 소스 지정
 데이터 바인딩에서 바인딩 소스 개체는 데이터를 가져온 개체를 참조합니다. 이 항목에서는 바인딩 소스를 지정하는 여러 가지 방법을 설명합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  하나의 공용 소스에 여러 개의 속성을 바인딩하는 경우 `DataContext` 속성을 사용할 수 있습니다. 이 속성은 모든 데이터 바인딩된 속성이 공용 소스를 상속받게 되는 범위를 설정하는 편리한 방법을 제공합니다.  
   
  다음 예제에서 데이터 컨텍스트는 응용 프로그램의 루트 요소에 설정됩니다. 따라서 모든 자식 요소가 해당 데이터 컨텍스트를 상속받을 수 있습니다. 바인딩할 데이터는 사용자 지정 데이터 클래스, 즉 매핑과 `incomeDataSource`의 지정한 리소스 키를 통해 직접 참조되는 `NetIncome`에서 옵니다.  

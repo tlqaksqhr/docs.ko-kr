@@ -1,23 +1,12 @@
 ---
-title: "사용자 지정 활동 디자이너 및 템플릿 사용"
-ms.custom: 
+title: 사용자 지정 활동 디자이너 및 템플릿 사용
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 1aab82e7-7f89-4255-be46-526b09ceeb8b
-caps.latest.revision: "8"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 7d83731fcf9bde8642dcdc0291142885068d532b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 674af9fa6f03e78045d7c195f94e7fa23b4d30d0
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-custom-activity-designers-and-templates"></a>사용자 지정 활동 디자이너 및 템플릿 사용
 이 단원의 항목에서는 사용자 지정 활동 디자이너와 사용자 지정 활동 템플릿을 만드는 방법에 대해 설명합니다.  

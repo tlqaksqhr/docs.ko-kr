@@ -1,13 +1,7 @@
 ---
 title: 암호화 서비스
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - cryptography [.NET Framework]
 - pattern of derived class inheritance
@@ -30,18 +24,13 @@ helpviewer_keywords:
 - cryptography [.NET Framework], about
 - random number generation
 ms.assetid: f96284bc-7b73-44b5-ac59-fac613ad09f8
-caps.latest.revision: 34
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 02d399d85c53cd296fc5f49ca0ec4b51b14ad677
-ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
+ms.openlocfilehash: f8193932deac3854b07085cba9faac76e68c4da8
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cryptographic-services"></a>암호화 서비스
 <a name="top"></a> 인터넷과 같은 공용 네트워크에서는 엔터티 간의 보안 통신 수단을 제공하지 않습니다. 이러한 네트워크를 통한 통신은 권한이 없는 제3자가 읽거나 심지어는 수정하기도 쉽습니다. 암호화는 데이터를 볼 수 없도록 보호하며 데이터가 수정되었는지 감지하는 방법을 제공하며 기타 보안상 위험한 채널을 통한 안전한 통신 수단 제공을 지원합니다. 예를 들어 데이터를 암호화된 상태로 전송하고 나중에 의도된 당사자가 해독하는 암호화 알고리즘을 사용하여 데이터를 암호화할 수 있습니다. 제3자가 암호화된 데이터를 가로채는 경우 해독하기 어렵습니다.  

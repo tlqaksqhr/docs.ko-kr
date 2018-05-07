@@ -1,13 +1,6 @@
 ---
-title: "방법: Windows Forms TextBox 컨트롤을 사용하여 암호 텍스트 상자 만들기"
-ms.custom: 
+title: '방법: Windows Forms TextBox 컨트롤을 사용하여 암호 텍스트 상자 만들기'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -19,16 +12,11 @@ helpviewer_keywords:
 - passwords [Windows Forms], input mask
 - passwords [Windows Forms], password text box
 ms.assetid: d105d6b9-3d50-44cd-80d8-2c0e2f486727
-caps.latest.revision: "13"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 2fe8c3c6ac3c0f47f5e78aa7ff3242a0c69c7f78
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 41bfb2bc1a1ead5bb289264c44145b88721efe49
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-a-password-text-box-with-the-windows-forms-textbox-control"></a>방법: Windows Forms TextBox 컨트롤을 사용하여 암호 텍스트 상자 만들기
 암호 상자에는 사용자가 문자열을 입력 하는 동안에 자리 표시자 문자를 표시 하는 Windows Forms 텍스트 상자가입니다.  

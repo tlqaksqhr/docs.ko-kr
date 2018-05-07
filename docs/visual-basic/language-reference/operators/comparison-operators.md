@@ -1,11 +1,6 @@
 ---
-title: "비교 연산자(Visual Basic)"
+title: 비교 연산자(Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.<>
 - vb.>=
@@ -35,29 +30,26 @@ helpviewer_keywords:
 - Is operator [Visual Basic]
 - comparison operators [Visual Basic], Visual Basicl
 ms.assetid: d6cb12a8-e52e-46a7-8aaf-f804d634a825
-caps.latest.revision: "20"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: aa450f7978f46196663c7534b31597b04d80482a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 4e37f55b4c873c3dbea22a8edf0e5e2b58824720
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="comparison-operators-visual-basic"></a>비교 연산자(Visual Basic)
 Visual Basic에서 정의 하는 비교 연산자는 다음과 같습니다.  
   
- `<`연산자  
+ `<` 연산자  
   
- `<=`연산자  
+ `<=` 연산자  
   
- `>`연산자  
+ `>` 연산자  
   
- `>=`연산자  
+ `>=` 연산자  
   
- `=`연산자  
+ `=` 연산자  
   
- `<>`연산자  
+ `<>` 연산자  
   
  [Is 연산자](../../../visual-basic/language-reference/operators/is-operator.md)  
   
@@ -77,34 +69,34 @@ result = string Like pattern
   
 ## <a name="parts"></a>요소  
  `result`  
- 필수 요소. A `Boolean` 비교 결과 나타내는 값입니다.  
+ 필수. A `Boolean` 비교 결과 나타내는 값입니다.  
   
  `expression`  
- 필수 요소. 임의의 식입니다.  
+ 필수. 임의의 식입니다.  
   
  `comparisonoperator`  
- 필수 요소. 모든 관계형 비교 연산자입니다.  
+ 필수. 모든 관계형 비교 연산자입니다.  
   
  `object1`, `object2`  
- 필수 요소. 모든 개체 이름을 참조 합니다.  
+ 필수. 모든 개체 이름을 참조 합니다.  
   
  `string`  
- 필수 요소. 임의의 `String` 식입니다.  
+ 필수. 임의의 `String` 식입니다.  
   
  `pattern`  
- 필수 요소. 모든 `String` 식 또는 문자 범위입니다.  
+ 필수. 모든 `String` 식 또는 문자 범위입니다.  
   
 ## <a name="remarks"></a>설명  
  다음 표에서 관계형 비교 연산자와 결정 하는 조건 목록을 여부 `result` 은 `True` 또는 `False`합니다.  
   
-|연산자|`True`if|`False`if|  
+|연산자|`True` if|`False` if|  
 |--------------|---------------|----------------|  
-|`<`(보다 작음)|`expression1` < `expression2`|`expression1` >= `expression2`|  
-|`<=`(작거나 같음)|`expression1` <= `expression2`|`expression1` > `expression2`|  
-|`>`(보다 큼)|`expression1` > `expression2`|`expression1` <= `expression2`|  
-|`>=`(보다 크거나 같음)|`expression1` >= `expression2`|`expression1` < `expression2`|  
-|`=`(같음)|`expression1` = `expression2`|`expression1` <> `expression2`|  
-|`<>`(같지 않음)|`expression1` <> `expression2`|`expression1` = `expression2`|  
+|`<` (보다 작음)|`expression1` < `expression2`|`expression1` >= `expression2`|  
+|`<=` (작거나 같음)|`expression1` <= `expression2`|`expression1` > `expression2`|  
+|`>` (보다 큼)|`expression1` > `expression2`|`expression1` <= `expression2`|  
+|`>=` (보다 크거나 같음)|`expression1` >= `expression2`|`expression1` < `expression2`|  
+|`=` (같음)|`expression1` = `expression2`|`expression1` <> `expression2`|  
+|`<>` (같지 않음)|`expression1` <> `expression2`|`expression1` = `expression2`|  
   
 > [!NOTE]
 >  [연산자 =](../../../visual-basic/language-reference/operators/assignment-operator.md) 할당 연산자로도 사용 됩니다.  
@@ -122,11 +114,11 @@ result = string Like pattern
 ## <a name="comparing-strings"></a>문자열 비교  
  문자열을 비교할 때 문자열 식이에 따라 달라 지는 사전순 정렬 순서에 따라 평가 되는 `Option Compare` 설정 합니다.  
   
- `Option Compare Binary`문자열을 비교 문자의 내부 이진 표현에서 파생 된 정렬 순서입니다. 정렬 순서는 코드 페이지에 의해 결정 됩니다. 다음 예제에서는 일반적인 이진 정렬 순서를 보여 줍니다.  
+ `Option Compare Binary` 문자열을 비교 문자의 내부 이진 표현에서 파생 된 정렬 순서입니다. 정렬 순서는 코드 페이지에 의해 결정 됩니다. 다음 예제에서는 일반적인 이진 정렬 순서를 보여 줍니다.  
   
  `A < B < E < Z < a < b < e < z < À < Ê < Ø < à < ê < ø`  
   
- `Option Compare Text`응용 프로그램의 로캘에 따라 결정 되는 대/소문자 구분 텍스트 정렬 순서에 대 한 비교 문자열 합니다. 설정 하는 경우 `Option Compare Text` 앞의 예에서 문자를 정렬 하 고, 다음 텍스트 정렬 순서가 적용 됩니다.  
+ `Option Compare Text` 응용 프로그램의 로캘에 따라 결정 되는 대/소문자 구분 텍스트 정렬 순서에 대 한 비교 문자열 합니다. 설정 하는 경우 `Option Compare Text` 앞의 예에서 문자를 정렬 하 고, 다음 텍스트 정렬 순서가 적용 됩니다.  
   
  `(A=a) < (À= à) < (B=b) < (E=e) < (Ê= ê) < (Ø = ø) < (Z=z)`  
   
@@ -138,10 +130,10 @@ result = string Like pattern
   
 |피연산자가|비교는|  
 |---------------------|-------------------|  
-|둘 다`String`|문자열 정렬 특성에 따라 비교를 정렬 합니다.|  
+|둘 다 `String`|문자열 정렬 특성에 따라 비교를 정렬 합니다.|  
 |두 숫자|개체 변환 `Double`, 숫자 비교 합니다.|  
-|한 숫자가 고 하나`String`|`String` 변환 되는 `Double` 숫자 비교가 수행 됩니다. 경우는 `String` 변환할 수 없습니다 `Double`, <xref:System.InvalidCastException> throw 됩니다.|  
-|하나 또는 둘 다가 아닌 다른 참조 형식`String`|<xref:System.InvalidCastException>이 throw됩니다.|  
+|한 숫자가 고 하나 `String`|`String` 변환 되는 `Double` 숫자 비교가 수행 됩니다. 경우는 `String` 변환할 수 없습니다 `Double`, <xref:System.InvalidCastException> throw 됩니다.|  
+|하나 또는 둘 다가 아닌 다른 참조 형식 `String`|<xref:System.InvalidCastException>이 throw됩니다.|  
   
  숫자 비교 처리 `Nothing` 0으로 합니다. 문자열 비교 처리 `Nothing` 으로 `""` (빈 문자열)입니다.  
   

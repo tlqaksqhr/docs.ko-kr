@@ -1,24 +1,12 @@
 ---
 title: 변수 및 인수
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: d03dbe34-5b2e-4f21-8b57-693ee49611b8
-caps.latest.revision: 15
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 66b11dda1b245fa88548cf70268a6ca10ee27708
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 7d4bcbb28ffac0ea0f2f6d4aa238523855570f7c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="variables-and-arguments"></a>변수 및 인수
 Windows WF (Workflow Foundation), 변수 데이터 저장소를 나타내고 인수 및 작업 외부로 데이터 흐름을 나타냅니다. 활동에는 인수 집합이 있으며 인수는 활동의 시그니처를 구성합니다. 또한 활동은 개발자가 워크플로 디자인 중에 변수를 추가하거나 제거할 수 있는 변수 목록을 유지할 수 있습니다. 인수는 값을 반환하는 식을 사용하여 바인딩됩니다.  

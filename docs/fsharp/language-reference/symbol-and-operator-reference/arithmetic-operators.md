@@ -1,17 +1,12 @@
 ---
 title: 산술 연산자(F#)
 description: 'F # 프로그래밍 언어에서 사용할 수 있는 산술 연산자에 알아봅니다.'
-author: cartermp
-ms.author: phcart
 ms.date: 04/04/2018
-ms.topic: language-reference
-ms.prod: dotnet-fsharp
-ms.devlang: fsharp
-ms.openlocfilehash: 147600751ca8f991a7d5af24d1a63beb15ccab10
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: ead0bbd7fdad528b322f99eaf0f73638f060eb51
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="arithmetic-operators"></a>산술 연산자
 

@@ -1,14 +1,6 @@
 ---
 title: 인코딩 및 Windows Forms 전역화
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-winforms
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - ListView control [Windows Forms], lack of Unicode support
 - DateTimePicker control [Windows Forms], lack of Unicode support
@@ -27,17 +19,11 @@ helpviewer_keywords:
 - localization [Windows Forms], character sets
 - globalization [Windows Forms], character sets
 ms.assetid: 22e8965d-a712-42b3-8167-3ee346bd70f9
-caps.latest.revision: 9
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 16e54e1915370549124c202bce6ad09c4aca1a40
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: e610b4fc5506043835377bf9f5750550d8aec694
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="encoding-and-windows-forms-globalization"></a>인코딩 및 Windows Forms 전역화
 Windows Forms 응용 프로그램은 완전히 유니코드를 사용할 수 있으므로 플랫폼, 프로그램 또는 언어에 관계없이 각 문자가 고유한 숫자로 표시됩니다. 유니코드에 대 한 자세한 내용은 참조는 [유니코드 컨소시엄 웹 사이트](http://www.unicode.org)합니다.  

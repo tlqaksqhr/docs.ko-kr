@@ -1,8 +1,6 @@
 ---
-title: "방법: 직렬화된 데이터 청크"
+title: '방법: 직렬화된 데이터 청크'
 ms.date: 03/30/2017
-ms.prod: .net
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -15,18 +13,11 @@ helpviewer_keywords:
 - serialization, examples
 - binary serialization, examples
 ms.assetid: 22f1b818-7e0d-428a-8680-f17d6ebdd185
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 21d03e6f60e9df2af3b14442b14b576f0aee739e
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: ce3d60e6d74594f93be44ae46d36b8ea2212d4bf
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-chunk-serialized-data"></a>방법: 직렬화된 데이터 청크
 
@@ -52,7 +43,7 @@ ms.lasthandoff: 12/23/2017
   
 2.  <xref:System.Xml.Serialization.IXmlSerializable.ReadXml%2A> 메서드를 구현하여 청크된 데이터 스트림을 읽고 바이트를 디스크에 씁니다. 또한 이 구현은 진행률 표시줄 등과 같은 그래픽 컨트롤에서 사용할 수 있는 진행률 이벤트도 발생시킵니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
 다음 코드 예제에서는 ASP.NET 버퍼링을 끄는 클라이언트의 웹 메서드를 보여 줍니다. 또한 <xref:System.Xml.Serialization.IXmlSerializable> 메서드의 데이터를 청크하는 <xref:System.Xml.Serialization.IXmlSerializable.WriteXml%2A> 인터페이스의 클라이언트측 구현도 보여 줍니다.  
   
 [!code-csharp[HowToChunkSerializedData#1](../../../samples/snippets/csharp/VS_Snippets_Remoting/HowToChunkSerializedData/CS/SerializationChunk.cs#1)]
@@ -66,5 +57,5 @@ ms.lasthandoff: 12/23/2017
   
 -   코드에서는 <xref:System>, <xref:System.Runtime.Serialization>, <xref:System.Web.Services>, <xref:System.Web.Services.Protocols>, <xref:System.Xml>, <xref:System.Xml.Serialization> 및 <xref:System.Xml.Schema> 네임스페이스를 사용합니다.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>참고자료  
  [사용자 지정 serialization](custom-serialization.md)

@@ -1,13 +1,6 @@
 ---
-title: "시각적 계층에서 적중 테스트"
-ms.custom: 
+title: 시각적 계층에서 적중 테스트
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -15,16 +8,11 @@ helpviewer_keywords:
 - hit testing functionality [WPF]
 - visual layer [WPF], hit testing functionality
 ms.assetid: b1a64b61-14be-4d75-b89a-5c67bebb2c7b
-caps.latest.revision: "42"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: f1bdecedece4581eaf8a010eddc0974e44fe88ab
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 60da11af51722e86a61c5e3298fafba2221f000b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="hit-testing-in-the-visual-layer"></a>시각적 계층에서 적중 테스트
 이 항목에서는 시각적 계층에서 제공하는 적중 테스트 기능의 개요를 제공합니다. 적중 횟수 테스트 지원 기 하 도형 또는 포인트 값이의 렌더링된 콘텐츠 내에 있는지 확인할 수 있습니다는 <xref:System.Windows.Media.Visual>, 여러 개체를 선택할 선택 영역 직사각형 같은 사용자 인터페이스 동작을 구현할 수 있도록 합니다.  
@@ -61,7 +49,7 @@ ms.lasthandoff: 12/22/2017
   
  다음 그림에서 원 개체는 사각형 및 삼각형 개체 위에 있습니다. 적중 횟수 테스트의 z 좌표 값은 최상위 시각적 개체에에서만 관심이, 반환할 시각적 적중 횟수 테스트 열거형을 설정할 수 있습니다 <xref:System.Windows.Media.HitTestResultBehavior.Stop> 에서 <xref:System.Windows.Media.HitTestResultCallback> 적중 횟수 테스트 통과 첫 번째 항목 후 중지 하 합니다.  
   
- ![Z &#45;다이어그램; 시각적 트리의 순서](../../../../docs/framework/wpf/graphics-multimedia/media/wcpsdk-mmgraphics-visuals-hittest-2.png "wcpsdk_mmgraphics_visuals_hittest_2")  
+ ![Z의 다이어그램&#45;시각적 트리의 순서](../../../../docs/framework/wpf/graphics-multimedia/media/wcpsdk-mmgraphics-visuals-hittest-2.png "wcpsdk_mmgraphics_visuals_hittest_2")  
 시각적 트리의 z 순서 다이어그램  
   
  특정 데이터 요소 또는 기 하 도형에서 모든 시각적 개체를 열거 하려면 반환 <xref:System.Windows.Media.HitTestResultBehavior.Continue> 에서 <xref:System.Windows.Media.HitTestResultCallback>합니다. 즉 전체가 가려진 경우에도 다른 개체 아래에 있는 시각적 개체에 대한 적중 테스트를 수행할 수 있습니다. 자세한 내용은 "적중 테스트 결과 콜백 사용" 섹션의 샘플 코드를 참조하세요.  

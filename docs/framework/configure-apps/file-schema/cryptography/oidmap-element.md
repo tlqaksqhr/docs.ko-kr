@@ -1,13 +1,6 @@
 ---
-title: "&lt;oidMap&gt; 요소"
-ms.custom: 
+title: '&lt;oidMap&gt; 요소'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#oidMap
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/mscorlib/cryptographySettings/oidMap
@@ -15,16 +8,14 @@ helpviewer_keywords:
 - <oidMap> element
 - oidMap element
 ms.assetid: 7f0c2246-c070-4748-b96a-2f66a296c539
-caps.latest.revision: "9"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: 08f7eb8e4531d27586bede11bacf598e472b158f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: db39d7de3566647b5171b71940c78a9a0ab6f5f1
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ltoidmapgt-element"></a>&lt;oidMap&gt; 요소
 클래스에 ASN.1 개체 식별자 (OID) 매핑을 포함합니다.  
@@ -42,7 +33,7 @@ ms.lasthandoff: 12/22/2017
 ```  
   
 ## <a name="attributes-and-elements"></a>특성 및 요소  
- 다음 단원에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
+ 다음 섹션에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
   
 ### <a name="attributes"></a>특성  
  없음  
@@ -61,7 +52,7 @@ ms.lasthandoff: 12/22/2017
 |`cryptographySettings`|암호화 설정이 포함되어 있습니다.|  
 |`mscorlib`|포함 된 `cryptographySettings` 요소입니다.|  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  사용 하는 방법을 보여 주는 다음 예제는  **\<oidMap >** 해당 해시 알고리즘의 구현에 ripemd-160 해시 알고리즘에 대 한 OID의 매핑을 포함 하는 요소입니다.  
   
 ```xml  

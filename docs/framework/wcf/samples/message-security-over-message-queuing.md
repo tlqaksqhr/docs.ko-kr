@@ -1,26 +1,14 @@
 ---
 title: 메시지 큐에 대한 메시지 보안
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 329aea9c-fa80-45c0-b2b9-e37fd7b85b38
-caps.latest.revision: 22
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload:
-- dotnet
-ms.openlocfilehash: aeb0e66c5bad2b2d03a08560e1021b57e793ad55
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.openlocfilehash: 25a06ac7c13f0abe0f1e8bf27fe117aa9cf038bd
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="message-security-over-message-queuing"></a>메시지 큐에 대한 메시지 보안
 이 샘플에서는 클라이언트에 대해 X.509v3 인증서를 통한 WS-Security 인증을 사용하며 MSMQ를 통해 서버의 X.509v3 인증서를 사용한 서버 인증을 수행해야 하는 응용 프로그램의 구현 방법을 보여 줍니다. 메시지 보안에서는 MSMQ 저장소에 있는 메시지의 암호화가 유지되며 응용 프로그램에서 메시지의 자체 인증을 수행할 수 있도록 하는 것이 더 좋습니다.  
@@ -93,7 +81,7 @@ ms.lasthandoff: 04/27/2018
 -   샘플 실행을 완료했으면 샘플 폴더에서 Cleanup.bat를 실행합니다.  
   
     > [!NOTE]
-    >  다중 컴퓨터 구성에서 이 샘플을 실행할 경우에는 이 스크립트로 클라이언트의 서비스 인증서를 제거할 수 없습니다. 다중 컴퓨터 구성의 인증서를 사용하는 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 샘플을 실행한 경우 CurrentUser - TrustedPeople 저장소에 설치된 서비스 인증서를 지워야 합니다. 이를 수행하려면 `certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>` 명령을 사용합니다(예: `certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`).  
+    >  다중 컴퓨터 구성에서 이 샘플을 실행할 경우에는 이 스크립트로 클라이언트의 서비스 인증서를 제거할 수 없습니다. 컴퓨터 인증서를 사용 하는 Windows Communication Foundation (WCF) 샘플을 실행 한 경우 CurrentUser-TrustedPeople 저장소에에서 설치 된 서비스 인증서의 선택을 취소 해야 합니다. 이를 수행하려면 `certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>` 명령을 사용합니다(예: `certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`).  
   
 ## <a name="requirements"></a>요구 사항  
  이 샘플을 실행하려면 MSMQ가 설치되어 실행 중이어야 합니다.  
@@ -101,7 +89,7 @@ ms.lasthandoff: 04/27/2018
 ## <a name="demonstrates"></a>세부 항목  
  클라이언트는 서비스의 공개 키를 사용하여 메시지를 암호화하고 자체 인증서로 메시지에 서명합니다. 큐로부터 메시지를 읽는 서비스는 신뢰할 수 있는 사용자 저장소에 포함된 인증서를 사용하여 클라이언트 인증서를 인증합니다. 그리고 메시지를 해독한 후 서비스 작업에 디스패치합니다.  
   
- [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 메시지가 MSMQ 메시지의 본문에 페이로드로 전달되기 때문에 본문은 MSMQ 저장소에 암호화된 상태로 남습니다. 그러면 원치 않는 노출로부터 메시지를 보호할 수 있습니다. MSMQ 자체에서는 전달하는 메시지의 암호화 여부를 인식하지 못합니다.  
+ Windows Communication Foundation (WCF) 메시지를 MSMQ 메시지의 본문에 페이로드로 수행 하는 때문에 본문은 MSMQ 저장소에 암호화 된 남아 있습니다. 그러면 원치 않는 노출로부터 메시지를 보호할 수 있습니다. MSMQ 자체에서는 전달하는 메시지의 암호화 여부를 인식하지 못합니다.  
   
  샘플에서는 MSMQ에서 메시지 수준의 상호 인증을 사용하는 방법을 보여 줍니다. 인증서는 out-of-band로 교환됩니다. 대기 중인 응용 프로그램의 경우에는 서비스와 클라이언트가 동시에 실행 중이어야 할 필요가 없기 때문에 항상 적용됩니다.  
   
@@ -313,7 +301,7 @@ Processing Purchase Order: 6536e097-da96-4773-9da3-77bab4345b5d
   
 -   서버의 신뢰할 수 있는 인증서 저장소에 클라이언트 인증서 설치.  
   
-     배치 파일의 다음 줄에서는 서버에서 관련된 신뢰 여부를 결정할 수 있도록 서버의 TrustedPeople 저장소에 클라이언트 인증서를 복사합니다. TrustedPeople 저장소에 설치된 인증서를 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 서비스에서 신뢰하려면 클라이언트 인증서 유효성 검사 모드를 `PeerOrChainTrust` 또는 `PeerTrust` 값으로 설정해야 합니다. 구성 파일을 사용하여 이런 작업을 수행하는 방법을 보려면 앞서 소개된 서비스 구성 샘플을 참조하십시오.  
+     배치 파일의 다음 줄에서는 서버에서 관련된 신뢰 여부를 결정할 수 있도록 서버의 TrustedPeople 저장소에 클라이언트 인증서를 복사합니다. Windows Communication Foundation (WCF) 서비스에서 신뢰 하려면 TrustedPeople 저장소에 설치 된 인증서에 대 한 클라이언트 인증서 유효성 검사 모드 설정 해야 `PeerOrChainTrust` 또는 `PeerTrust` 값입니다. 구성 파일을 사용하여 이런 작업을 수행하는 방법을 보려면 앞서 소개된 서비스 구성 샘플을 참조하십시오.  
   
     ```bat
     echo ************  
@@ -354,7 +342,7 @@ Processing Purchase Order: 6536e097-da96-4773-9da3-77bab4345b5d
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  이 디렉터리가 없으면 [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4(.NET Framework 4용 WCF(Windows Communication Foundation) 및 WF(Windows Workflow Foundation) 샘플)](http://go.microsoft.com/fwlink/?LinkId=150780) 로 이동하여 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 및 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플을 모두 다운로드하세요. 이 샘플은 다음 디렉터리에 있습니다.  
+>  이 디렉터리가로 이동 [Windows Communication Foundation (WCF) 및.NET Framework 4에 대 한 Windows WF (Workflow Foundation) 샘플](http://go.microsoft.com/fwlink/?LinkId=150780) 모든 Windows Communication Foundation (WCF)를 다운로드 하 고 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플. 이 샘플은 다음 디렉터리에 있습니다.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\Net\MSMQ\MessageSecurity`  
   

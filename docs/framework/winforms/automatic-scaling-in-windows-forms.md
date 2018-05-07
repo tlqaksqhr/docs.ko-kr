@@ -1,23 +1,15 @@
 ---
-title: "Windows Forms의 자동 크기 조정"
+title: Windows Forms의 자동 크기 조정
 ms.date: 06/15/2017
-ms.prod: .net-framework
-ms.technology: dotnet-winforms
-ms.topic: article
 helpviewer_keywords:
 - scalability [Windows Forms], automatic in Windows Forms
 - Windows Forms, automatic scaling
 ms.assetid: 68fad25b-afbc-44bd-8e1b-966fc43507a4
-caps.latest.revision: "9"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 519053576aac0f55dfbfa4c87dbed6096f45abca
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: e27c56d9a6d745c7d1ff83986e7996aa1bebc879
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="automatic-scaling-in-windows-forms"></a>Windows Forms의 자동 배율 조정
 자동 크기 조정은 한 컴퓨터에서 특정 디스플레이 해상도 또는 시스템 글꼴로 디자인된 폼과 해당 컨트롤이 다른 디스플레이 해상도 또는 시스템 글꼴을 사용하는 다른 컴퓨터에서 제대로 표시될 수 있게 합니다. 이 기능은 사용자 및 다른 개발자 컴퓨터 둘 다의 네이티브 Windows 및 기타 응용 프로그램과 일치하도록 폼과 해당 컨트롤의 크기가 지능적으로 조정되도록 합니다. 자동 크기 조정 및 시각적 스타일에 대한 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]의 지원을 통해 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 응용 프로그램은 각 사용자 컴퓨터의 네이티브 Windows 응용 프로그램과 비교하여 일관된 모양과 느낌을 유지할 수 있습니다.
@@ -108,7 +100,7 @@ ms.lasthandoff: 12/22/2017
 
     - <xref:System.Windows.Forms.Control.ScaleControl%2A> 메서드를 재정의하여 현재 컨트롤에 대한 크기 조정 논리를 변경할 수 있습니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참고자료
  <xref:System.Windows.Forms.ContainerControl.AutoScaleMode%2A>  
  <xref:System.Windows.Forms.Control.Scale%2A>  
  <xref:System.Windows.Forms.ContainerControl.PerformAutoScale%2A>  

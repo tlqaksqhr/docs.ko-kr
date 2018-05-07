@@ -1,28 +1,14 @@
 ---
 title: 메시지 필터
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - routing [WCF], message filters
 ms.assetid: cb33ba49-8b1f-4099-8acb-240404a46d9a
-caps.latest.revision: 8
-author: wadepickett
-ms.author: wpickett
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: bd5019668e865d2fea835b450d992d45b5273ed7
-ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
+ms.openlocfilehash: e129924de53fb0dba61798cc492729c8af69ed94
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="message-filters"></a>메시지 필터
 라우팅 서비스는 내용 기반 라우팅을 구현하기 위해 주소, 끝점 이름 또는 특정 XPath 문과 같은 메시지의 특정 섹션을 검사하는 <xref:System.ServiceModel.Dispatcher.MessageFilter> 구현을 사용합니다. [!INCLUDE[netfx_current_short](../../../../includes/netfx-current-short-md.md)]에 제공되는 메시지 필터 중 요구 사항을 충족하는 필터가 없는 경우 기본 <xref:System.ServiceModel.Dispatcher.MessageFilter> 클래스의 새 구현을 만드는 방법으로 사용자 지정 필터를 만들 수 있습니다.  
@@ -45,7 +31,7 @@ ms.lasthandoff: 04/10/2018
 |사용자 지정|<xref:System.ServiceModel.Dispatcher.MessageFilter> 클래스를 확장하고 문자열을 사용하는 생성자를 포함하는 사용자 정의 형식입니다.|customType 특성은 만들 클래스의 정규화된 형식 이름입니다. filterData는 필터를 만들 때 생성자에 전달할 문자열입니다.|\<filter name="custom1" filterType="Custom" customType="CustomAssembly.CustomMsgFilter, CustomAssembly" filterData="Custom Data" />|  
 |EndpointName|<xref:System.ServiceModel.Dispatcher.EndpointNameMessageFilter> 클래스를 사용하여 메시지가 도착하는 서비스 끝점의 이름을 기반으로 메시지를 일치시킵니다.|서비스 끝점의 이름 예: "serviceEndpoint1"입니다.  이는 라우팅 서비스에서 노출되는 끝점 중 하나여야 합니다.|\<filter name="stock1" filterType="Endpoint" filterData="SvcEndpoint" />|  
 |MatchAll|<xref:System.ServiceModel.Dispatcher.MatchAllMessageFilter> 클래스를 사용합니다. 이 필터는 도착하는 메시지를 모두 일치시킵니다.|filterData는 사용되지 않습니다. 이 필터는 항상 모든 메시지를 일치시킵니다.|\<filter name="matchAll1" filterType="MatchAll" />|  
-|XPath|<xref:System.ServiceModel.Dispatcher.XPathMessageFilter> 클래스를 사용하여 메시지 내의 특정 XPath 쿼리를 일치시킵니다.|메시지를 대조할 때 사용하는 XPath 쿼리입니다.|\<filter name="XPath1" filterType="XPath" filterData="//ns:element" />|  
+|XPath|<xref:System.ServiceModel.Dispatcher.XPathMessageFilter> 클래스를 사용하여 메시지 내의 특정 XPath 쿼리를 일치시킵니다.|메시지를 대조할 때 사용하는 XPath 쿼리입니다.|\<필터 이름 = "XPath1" filterType "XPath" filterData = = "//ns:element" / >|  
   
  다음 예제에서는 XPath, EndpointName 및 PrefixEndpointAddress 메시지 필터를 사용하는 필터 항목을 정의합니다. 이 예제에서는 RoundRobinFilter1 및 RoundRobinFilter2 항목에 대해 사용자 지정 필터를 사용하는 방법도 보여 줍니다.  
   

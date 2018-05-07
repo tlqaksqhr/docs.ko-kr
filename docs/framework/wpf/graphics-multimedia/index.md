@@ -1,14 +1,6 @@
 ---
 title: 그래픽 및 멀티미디어
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-wpf
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -20,21 +12,15 @@ helpviewer_keywords:
 - graphics features [WPF]
 - transition effects [WPF]
 ms.assetid: 1817d9dc-3d6c-46cb-afc8-63b0bae35e37
-caps.latest.revision: 30
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 013ae46e2d90a9eda42d33e95e590812489fa04b
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 74375c468170d58cfa79031ab0030477c29bd445
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="graphics-and-multimedia"></a>그래픽 및 멀티미디어
 <a name="introduction"></a>
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]멀티미디어, 벡터 그래픽, 애니메이션 및 쉽게 흥미로운 사용자 인터페이스 및 콘텐츠를 작성 하는 개발자를 위한 콘텐츠 컴퍼지션에 대 한 지원을 제공 합니다. [!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)]를 사용하여 벡터 그래픽이나 복잡한 애니메이션을 만든 후 미디어를 응용 프로그램에 통합할 수 있습니다.  
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 멀티미디어, 벡터 그래픽, 애니메이션 및 쉽게 흥미로운 사용자 인터페이스 및 콘텐츠를 작성 하는 개발자를 위한 콘텐츠 컴퍼지션에 대 한 지원을 제공 합니다. [!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)]를 사용하여 벡터 그래픽이나 복잡한 애니메이션을 만든 후 미디어를 응용 프로그램에 통합할 수 있습니다.  
   
  이 항목에서는 그래픽, 전환 효과, 소리 및 비디오를 응용 프로그램에 추가할 수 있도록 하는 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]의 그래픽, 애니메이션 및 미디어 기능을 소개합니다.  
   
@@ -154,7 +140,7 @@ End Class
 <MediaElement Source="media\numbers.wmv" Width="450" Height="250" />  
 ```  
   
- <xref:System.Windows.Controls.MediaElement>비디오와 오디오를 재생할 수 이며 사용자 지정은 쉽게 만들 수 있도록 충분히 확장 가능 [!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)]합니다.  
+ <xref:System.Windows.Controls.MediaElement> 비디오와 오디오를 재생할 수 이며 사용자 지정은 쉽게 만들 수 있도록 충분히 확장 가능 [!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)]합니다.  
   
  자세한 내용은 [멀티미디어 개요](../../../../docs/framework/wpf/graphics-multimedia/multimedia-overview.md)를 참조하세요.  
   

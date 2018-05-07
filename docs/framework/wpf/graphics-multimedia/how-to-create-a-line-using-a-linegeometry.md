@@ -1,36 +1,22 @@
 ---
-title: "방법: LineGeometry를 사용하여 선 만들기"
-ms.custom: 
+title: '방법: LineGeometry를 사용하여 선 만들기'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - graphics [WPF], lines
 ms.assetid: 41231b22-1f74-4c26-a8e7-a55b29f8f6bd
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 487a5ffaf952450c6196f5fe0d00fd249177b054
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 8db33fc5c611dcbcae50c71ada1c6b6f9fd9bd29
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-a-line-using-a-linegeometry"></a>방법: LineGeometry를 사용하여 선 만들기
 사용 하는 방법을 보여 주는이 예제는 <xref:System.Windows.Media.LineGeometry> 줄을 설명 하는 클래스입니다. A <xref:System.Windows.Media.LineGeometry> 시작 및 끝 지점을 사용 하 여 정의 됩니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  만들고 렌더링 하는 방법을 보여 주는 다음 예제는 <xref:System.Windows.Media.LineGeometry>합니다.  A <xref:System.Windows.Shapes.Path> 요소를 사용 하는 줄을 렌더링 합니다.  또한 선에 영역이 없는 이후는 <xref:System.Windows.Shapes.Path> 개체의 <xref:System.Windows.Shapes.Shape.Fill%2A> 지정 되지 않았습니다; 대신는 <xref:System.Windows.Shapes.Shape.Stroke%2A> 및 <xref:System.Windows.Shapes.Shape.StrokeThickness%2A> 속성을 사용 합니다.  
   
  [!code-xaml[GeometryOverviewSamples_snip#GraphicsMMLineGeometryExample](../../../../samples/snippets/csharp/VS_Snippets_Wpf/GeometryOverviewSamples_snip/CS/GeometryExamples.xaml#graphicsmmlinegeometryexample)]  

@@ -1,24 +1,14 @@
 ---
-title: "인증에 대한 확장된 보호 ReadMe 샘플"
-ms.custom: 
+title: 인증에 대한 확장된 보호 ReadMe 샘플
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 80bf2e97-398d-4db5-9040-d96478a2ccab
-caps.latest.revision: "3"
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: 78e787c129c0161e8730472124ee4162e2d1ba9d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: d45271180b7f00ba78d106f2a93d5860375da5f1
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="readme-for-extended-protection-authentication-sample"></a>인증에 대한 확장된 보호 ReadMe 샘플
 확장 된 보호는 공격자 (에서 "man에서-들기")는 클라이언트의 자격 증명을 가로채 고 하는 클라이언트의 의도 된 서버에서 보안 리소스에 액세스 하는 데 사용 중간자 개입 (mitm 메시지) 공격 으로부터 보호 하려면 보안 이니셔티브입니다.  

@@ -1,13 +1,6 @@
 ---
-title: "방법: 빗살 무늬로 도형 채우기"
-ms.custom: 
+title: '방법: 빗살 무늬로 도형 채우기'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -16,21 +9,16 @@ helpviewer_keywords:
 - shapes [Windows Forms], filling with patterns
 - brushes [Windows Forms], using hatch brushes
 ms.assetid: 9c8300ff-187b-404f-af1f-ebd499f5b16f
-caps.latest.revision: "16"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: f44289b79812f2330639cc333727bd21b6ef4fe6
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 5b6b5b61b83e5be05999099f2cc6b9e715ca35c7
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-fill-a-shape-with-a-hatch-pattern"></a>방법: 빗살 무늬로 도형 채우기
 빗살 무늬 두 가지 색에서 만들어진: 배경색과 배경 위에 패턴을 형성 하는 줄 하나에 대 한 합니다. 빗살 무늬로 닫힌된 셰이프를 채울를 사용 하 여 한 <xref:System.Drawing.Drawing2D.HatchBrush> 개체입니다. 다음 예제에는 빗살 무늬로 타원을 채우는 방법을 보여 줍니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  <xref:System.Drawing.Drawing2D.HatchBrush.%23ctor%2A> 생성자에는 세 가지 인수: 해치 스타일, 해치 줄의 색 및 배경의 색입니다. 해치 스타일 인수로 사용할 수 있는 모든 값의 <xref:System.Drawing.Drawing2D.HatchStyle> 열거형입니다. 에 50 개 이상의 요소가 <xref:System.Drawing.Drawing2D.HatchStyle> 열거형; 몇 가지 요소는 다음 목록에 표시 됩니다.  
   
 -   <xref:System.Drawing.Drawing2D.HatchStyle.Horizontal>  

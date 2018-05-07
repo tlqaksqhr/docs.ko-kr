@@ -1,31 +1,17 @@
 ---
 title: 서비스 호스팅
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - hosting services [WCF]
 ms.assetid: 192be927-6be2-4fda-98f0-e513c4881acc
-caps.latest.revision: 31
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: ac7de48b801036ac186ffe92117269ae86d14a10
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
-ms.translationtype: MT
+ms.openlocfilehash: 6b7e94bdbec483f32fa41bb60032cca56c5e1593
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="hosting-services"></a>서비스 호스팅
-활성화할 서비스는 서비스를 만들고 컨텍스트와 수명을 제어하는 런타임 환경에 호스팅해야 합니다. [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 서비스는 관리 코드를 지원하는 모든 Windows 프로세스에서 실행할 수 있게 디자인되었습니다.  
+활성화할 서비스는 서비스를 만들고 컨텍스트와 수명을 제어하는 런타임 환경에 호스팅해야 합니다. Windows Communication Foundation (WCF) 서비스는 관리 코드를 지 원하는 모든 Windows 프로세스에서 실행 되도록 설계 되었습니다.  
   
  [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 는 서비스 기반 응용 프로그램을 만드는 데 사용되는 통합 프로그래밍 모델을 제공합니다. 이 프로그래밍 모델은 일관적이며 서비스가 배포되는 런타임 환경에 독립적입니다. 즉, 서비스 코드는 사실상 서비스 호스팅 옵션에 관계없이 거의 동일합니다.  
   

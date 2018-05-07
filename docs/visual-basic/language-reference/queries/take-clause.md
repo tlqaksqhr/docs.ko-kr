@@ -1,12 +1,6 @@
 ---
 title: Take 절(Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.QueryTake
 helpviewer_keywords:
@@ -14,14 +8,11 @@ helpviewer_keywords:
 - queries [Visual Basic], Take
 - Take clause [Visual Basic]
 ms.assetid: 77bf87b2-1476-4456-957f-fee922fbad8c
-caps.latest.revision: 15
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: ee289a24c15226126a526af116ed53b4a9055b35
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 0dddb411af1b4ee269e091c07553a94589d90b2c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="take-clause-visual-basic"></a>Take 절(Visual Basic)
 컬렉션의 시작 위치에서 지정된 수의 연속 요소를 반환합니다.  
@@ -34,7 +25,7 @@ Take count
   
 ## <a name="parts"></a>요소  
  `count`  
- 필수 요소. 값 또는 반환 되는 시퀀스의 요소 수로 계산 되는 식입니다.  
+ 필수. 값 또는 반환 되는 시퀀스의 요소 수로 계산 되는 식입니다.  
   
 ## <a name="remarks"></a>설명  
  `Take` 절로 인해 쿼리를 지정 된 수의 결과 목록에는의 시작 부분부터 연속 요소를 포함 합니다. 요소를 포함 하도록 수가 붙습니다는 `count` 매개 변수입니다.  

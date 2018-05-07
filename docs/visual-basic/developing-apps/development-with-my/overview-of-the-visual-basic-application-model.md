@@ -1,23 +1,15 @@
 ---
 title: Visual Basic 응용 프로그램 모델 개요
 ms.date: 07/20/2015
-ms.prod: .net
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - My.Application object [Visual Basic], Visual Basic application model
 - Visual Basic application model
 ms.assetid: 17538984-84fe-43c9-82c8-724c9529fe8b
-caps.latest.revision: 30
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 74a8fcfe3f49ab042b3bb4775f9f6e84374db0ae
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 5194810574f594e2c117fef8d8998b7ecebbc981
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="overview-of-the-visual-basic-application-model"></a>Visual Basic 응용 프로그램 모델 개요
 Windows Forms 응용 프로그램의 동작을 제어 하기 위한 잘 정의 된 모델을 제공 하는 Visual Basic: Visual Basic 응용 프로그램 모델입니다. 이 모델에는 검색 처리 되지 않은 예외에 대 한 이벤트 뿐만 아니라 응용 프로그램의 시작 및 종료를 처리 하기 위한 이벤트가 포함 됩니다. 단일 인스턴스 응용 프로그램 개발에 대 한 지원 기능을 제공 합니다. 응용 프로그램 모델을 확장할 수 이므로 더 많은 제어가 필요한 개발자는 재정의 가능한 메서드를 사용자 지정할 수 있습니다.  

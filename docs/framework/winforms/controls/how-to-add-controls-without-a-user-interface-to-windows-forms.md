@@ -1,14 +1,6 @@
 ---
 title: '방법: Windows Forms에 사용자 인터페이스가 없는 컨트롤 추가'
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-winforms
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -22,17 +14,11 @@ helpviewer_keywords:
 - Windows Forms controls, nonvisual
 - nonvisual controls [Windows Forms]
 ms.assetid: 52134d9c-cff6-4eed-8e2b-3d5eb3bd494e
-caps.latest.revision: 12
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: e900c1c34f69531a14cfa11803ef5a6afb4783c6
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.openlocfilehash: 0a3e9ab5a048e085b192ffc0eb796caae1e58efe
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-add-controls-without-a-user-interface-to-windows-forms"></a>방법: Windows Forms에 사용자 인터페이스가 없는 컨트롤 추가
 비시각적 컨트롤 (또는 구성 요소) 응용 프로그램에 기능을 제공합니다. 다른 컨트롤과 달리 구성 요소 사용자에 게 사용자 인터페이스를 제공 하지 않는 및 따라서 Windows Forms 디자이너 화면에 표시 될 필요가 없습니다. 구성 요소는 폼에 추가 되 면 Windows Forms 디자이너 구성 요소를 모두 표시 되는 폼의 아래쪽에 크기를 조정할 수 트레이 표시 합니다. 컨트롤에 구성 요소 트레이에 추가 되 면 구성 요소를 선택한 폼에서 다른 컨트롤 처럼 해당 속성을 설정할 수 있습니다.  

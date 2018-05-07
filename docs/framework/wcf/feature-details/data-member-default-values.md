@@ -1,13 +1,6 @@
 ---
-title: "데이터 멤버 기본값"
-ms.custom: 
+title: 데이터 멤버 기본값
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -15,16 +8,11 @@ helpviewer_keywords:
 - data members [WCF], default values
 - data members [WCF]
 ms.assetid: 53a3b505-4b27-444b-b079-0eb84a97cfd8
-caps.latest.revision: "10"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 33f093beb022804bbdbccf1177404e128d198dd1
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 477921069411bb4b7ac32a5e93cc409bc7fbdec2
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="data-member-default-values"></a>데이터 멤버 기본값
 에 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)], 종류의 개념이 *기본값*합니다. 예를 들어 참조 형식의 기본값은 `null`이고 정수 형식의 기본값은 0입니다. 기본값으로 설정할 경우 serialize된 데이터에서 데이터 멤버를 생략하는 것이 좋을 수도 있습니다. 멤버에 기본값이 있기 때문에 실제 값을 serialize할 필요가 없으므로 성능이 향상됩니다.  
@@ -34,7 +22,7 @@ ms.lasthandoff: 12/22/2017
 > [!NOTE]
 >  상호 운용성이나 데이터 크기 축소 등 특별히 필요한 경우에만 <xref:System.Runtime.Serialization.DataMemberAttribute.EmitDefaultValue%2A> 속성을 `false`로 설정해야 합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 코드에는 <xref:System.Runtime.Serialization.DataMemberAttribute.EmitDefaultValue%2A>가 `false`로 설정된 여러 멤버가 있습니다.  
   
  [!code-csharp[DataMemberAttribute#4](../../../../samples/snippets/csharp/VS_Snippets_CFX/datamemberattribute/cs/overview.cs#4)]
@@ -61,11 +49,11 @@ ms.lasthandoff: 12/22/2017
 ### <a name="schema-representation"></a>스키마 표현  
  데이터 멤버의 XML 스키마 정의 언어 (XSD) 스키마 표시의 세부 정보는 경우는 `EmitDefaultValue` 속성이로 설정 되어 `false` 에 대해서는 설명 [데이터 계약 스키마 참조](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md)합니다. 여기서는 개요만 간략하게 설명합니다.  
   
--   <xref:System.Runtime.Serialization.DataMemberAttribute.EmitDefaultValue%2A>가 `false`로 설정되어 있으면 스키마에 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]에 특정한 주석으로 표시됩니다. 이 정보를 나타내는 상호 운용 가능한 방법은 없습니다. 특히 스키마의 "default" 특성은 이 용도로 사용되지 않고, `minOccurs` 특성은 <xref:System.Runtime.Serialization.DataMemberAttribute.IsRequired%2A> 설정의 영향만 받고, `nillable` 특성은 데이터 멤버 형식의 영향만 받습니다.  
+-   경우는 <xref:System.Runtime.Serialization.DataMemberAttribute.EmitDefaultValue%2A> 로 설정 된 `false`, Windows Communication Foundation (WCF)에 특정 한 주석으로 스키마에서 표시 됩니다. 이 정보를 나타내는 상호 운용 가능한 방법은 없습니다. 특히 스키마의 "default" 특성은 이 용도로 사용되지 않고, `minOccurs` 특성은 <xref:System.Runtime.Serialization.DataMemberAttribute.IsRequired%2A> 설정의 영향만 받고, `nillable` 특성은 데이터 멤버 형식의 영향만 받습니다.  
   
 -   사용할 실제 기본값은 스키마에 표시되지 않습니다. 따라서 수신하는 끝점에서 누락된 요소를 적절하게 해석해야 합니다.  
   
- 스키마 가져오기에서는 앞에서 설명한 <xref:System.Runtime.Serialization.DataMemberAttribute.EmitDefaultValue%2A> 관련 주석이 발견될 때마다 `false` 속성이 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]로 자동으로 설정됩니다. 또한 `false` 웹 서비스를 사용할 때 일반적으로 발생하는 특정 상호 운용성 시나리오를 지원하기 위해 `nillable` 속성이 `false`로 설정된 참조 형식 값이 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]로 설정됩니다.  
+ 스키마 가져오기는 <xref:System.Runtime.Serialization.DataMemberAttribute.EmitDefaultValue%2A> 자동으로 속성이 `false` WCF 관련 주석이 언급 된 이전에 검색 될 때마다 합니다. 또한 `false` 웹 서비스를 사용할 때 일반적으로 발생하는 특정 상호 운용성 시나리오를 지원하기 위해 `nillable` 속성이 `false`로 설정된 참조 형식 값이 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]로 설정됩니다.  
   
 ## <a name="see-also"></a>참고 항목  
  <xref:System.Runtime.Serialization.DataMemberAttribute.EmitDefaultValue%2A>  

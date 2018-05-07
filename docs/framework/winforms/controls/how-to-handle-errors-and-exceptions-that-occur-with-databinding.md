@@ -1,14 +1,6 @@
 ---
 title: '방법: 데이터 바인딩에서 발생하는 오류 및 예외 처리'
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-winforms
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -21,17 +13,11 @@ helpviewer_keywords:
 - data binding [Windows Forms], error handling
 - BindingSource component [Windows Forms], handling errors and exceptions
 ms.assetid: eddc5bad-9513-47df-ab28-f02d8dff7892
-caps.latest.revision: 15
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: f23743ecd37e36d2782cc6d6d8ff69448c8d334c
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.openlocfilehash: c7c05eb8d858c1f911e148def1c714e3caf74c95
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-handle-errors-and-exceptions-that-occur-with-databinding"></a>방법: 데이터 바인딩에서 발생하는 오류 및 예외 처리
 기본 비즈니스 개체를 컨트롤에 바인딩할 때 종종 해당 개체에서 예외와 오류가 발생합니다. 이들 오류와 예외를 가로채고 특정 <xref:System.Windows.Forms.Binding>, <xref:System.Windows.Forms.BindingSource> 또는 <xref:System.Windows.Forms.CurrencyManager> 구성 요소에 대한 <xref:System.Windows.Forms.Binding.BindingComplete> 이벤트를 처리하여 오류 정보를 복구하거나 사용자에게 전달할 수 있습니다.  

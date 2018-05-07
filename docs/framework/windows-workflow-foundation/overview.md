@@ -1,24 +1,12 @@
 ---
 title: Windows Workflow 개요
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: fc44adbe-1412-49ae-81af-0298be44aae6
-caps.latest.revision: 17
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: bc1aa65b413b87b27c05e7a12ce607d1cd30b89b
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 568797259087129ab4fc87a1f3523b0cce88eb4b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="windows-workflow-overview"></a>Windows Workflow 개요
 워크플로 이라는 요소 단위의 집합 *활동* 실제 프로세스를 설명 하는 모델로 포함 됩니다. 워크플로를 통해 단기 실행 작업과 장기 실행 작업의 실행 순서와 종속 관계를 설명할 수 있습니다. 이 작업은 모델을 시작부터 끝까지 통과하며 활동은 사람이 실행하거나 시스템 함수로 실행될 수 있습니다.  
@@ -34,7 +22,7 @@ ms.lasthandoff: 04/30/2018
   
  이 클래스는 각각 활동 실행을 담당하는 <xref:System.Activities.ActivityInstance>로 표현되는 코어 활동 런타임을 래핑합니다. 응용 프로그램 도메인 내에는 동시에 실행되는 여러 <xref:System.Activities.ActivityInstance> 개체가 있을 수 있습니다.  
   
- 위의 세 가지 호스트 상호 작용 개체는 각각 워크플로 프로그램이라는 활동 트리에서 만들어집니다. 이 형식을 사용하거나 <xref:System.Activities.ActivityInstance>를 래핑하는 사용자 지정 호스트를 사용하면 콘솔 응용 프로그램, 폼 기반 응용 프로그램, Windows 서비스, [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] 웹 사이트 및 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 서비스를 포함한 모든 Windows 프로세스 내부에서 워크플로를 실행할 수 있습니다.  
+ 위의 세 가지 호스트 상호 작용 개체는 각각 워크플로 프로그램이라는 활동 트리에서 만들어집니다. 이러한 형식은 또는 래핑하는 사용자 지정 호스트를 사용 하 여 <xref:System.Activities.ActivityInstance>, 콘솔 응용 프로그램을 포함 하는 모든 Windows 프로세스 내부 워크플로 실행할 수 폼 기반 응용 프로그램, Windows 서비스 [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] 웹 사이트 및 Windows Communication Foundation ( WCF) 서비스입니다.  
   
  ![호스트 프로세스의 워크플로 구성 요소](../../../docs/framework/windows-workflow-foundation/media/44c79d1d-178b-4487-87ed-3e33015a3842.gif "44c79d1d-178b-4487-87ed-3e33015a3842")  
 호스트 프로세스의 워크플로 구성 요소  

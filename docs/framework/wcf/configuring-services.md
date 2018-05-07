@@ -1,28 +1,14 @@
 ---
-title: "서비스 구성"
-ms.custom: 
+title: 서비스 구성
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - configuration [WCF]
 ms.assetid: beac771e-f28e-4f84-9ff1-ad9251c726d3
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 857ec77e54d6a55bde1a94fd9fd5758ef7a24309
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: dc3aeadafd54bbd8b57a3e8c781e0cced9e7e632
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="configuring-services"></a>서비스 구성
 서비스 계약을 디자인하고 구현했으면 서비스를 구성할 준비가 되었습니다. 여기서 서비스를 찾을 수 있는 주소, 메시지를 보내고 받는 데 사용하는 전송 및 메시지 인코딩, 서비스에 필요한 보안 형식 지정 등 서비스가 클라이언트에 노출되는 방법을 정의하고 사용자 지정할 수 있습니다.  
@@ -34,7 +20,7 @@ ms.lasthandoff: 12/22/2017
  [!INCLUDE[netfx40_long](../../../includes/netfx40-long-md.md)]부터 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 에서는 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 구성 요구 사항을 간소화하는 새로운 기본 구성 모델이 함께 제공됩니다. 특정 서비스에 대해 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 구성을 제공하지 않으면 런타임이 기본 끝점, 바인딩 및 동작을 사용해 서비스를 자동으로 구성합니다.  
   
  [구성 파일을 사용하여 서비스 구성](../../../docs/framework/wcf/configuring-services-using-configuration-files.md)  
- [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 서비스는 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 구성 기술을 사용하여 구성할 수 있습니다. 가장 일반적으로 XML 요소는 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 서비스를 호스트하는 IIS(인터넷 정보 서비스) 사이트의 Web.config 파일에 추가됩니다. 이 요소를 사용하여 끝점 주소(서비스와의 통신에 사용되는 실제 주소) 등의 세부 사항을 컴퓨터별로 변경할 수 있습니다.  
+ Windows Communication Foundation (WCF) 서비스를 사용 하 여 구성할 수는 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 기술을 구성 합니다. 가장 일반적으로 XML 요소는 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 서비스를 호스트하는 IIS(인터넷 정보 서비스) 사이트의 Web.config 파일에 추가됩니다. 이 요소를 사용하여 끝점 주소(서비스와의 통신에 사용되는 실제 주소) 등의 세부 사항을 컴퓨터별로 변경할 수 있습니다.  
   
  [바인딩](../../../docs/framework/wcf/bindings.md)  
  또한 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]에는 사용된 전송, 보안, 메시지 인코딩 등 클라이언트와 서비스가 통신하는 방법에 대한 가장 기본적인 기능을 신속하게 선택할 수 있도록 하는 바인딩 형태로 시스템에서 제공하는 여러 개의 일반 구성이 포함되어 있습니다.  

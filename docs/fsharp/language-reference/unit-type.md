@@ -1,17 +1,12 @@
 ---
 title: 단위 형식(F#)
 description: "값이 필요한 또는 원하는 경우 언어 구문을 사용 하 여 값을 필요한은 위치 하는 데 자주 사용 하는 F # 'unit' 형식이 방법에 대해 알아봅니다."
-author: cartermp
-ms.author: phcart
 ms.date: 05/16/2016
-ms.topic: language-reference
-ms.prod: dotnet-fsharp
-ms.devlang: fsharp
-ms.openlocfilehash: 1a8c8f74e31c5426a9fb6a7143e9d2ac9a7104c0
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: fdd6b62f9d5c6d73407d5326c7d1f66d55780682
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="unit-type"></a>단위 형식
 

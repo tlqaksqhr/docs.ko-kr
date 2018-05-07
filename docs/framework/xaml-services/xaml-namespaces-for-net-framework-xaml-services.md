@@ -1,24 +1,12 @@
 ---
-title: ".NET Framework XAML 서비스의 XAML 네임스페이스"
-ms.custom: 
+title: .NET Framework XAML 서비스의 XAML 네임스페이스
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: e4f15f13-c420-4c1e-aeab-9b6f50212047
-caps.latest.revision: "3"
-author: wadepickett
-ms.author: wpickett
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: e4e94f116fa820d80e5e23833c20382591c5d479
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 842cfb31e21c59bb886ccd266d19c40c64557519
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="xaml-namespaces-for-net-framework-xaml-services"></a>.NET Framework XAML 서비스의 XAML 네임스페이스
 XAML 네임 스페이스는 XML 네임 스페이스 정의 확장 하는 개념입니다. XML 네임 스페이스와 마찬가지로, 정의한 사용 하 여 XAML 네임 스페이스는 `xmlns` 태그에서 특성입니다. XAML 네임 스페이스는 XAML 노드 스트림 및 다른 XAML 서비스 Api에도 표시 합니다. 이 항목 XAML 네임 스페이스 개념을 정의 하 고 XAML 네임 스페이스를 정의할 수 있습니다 및 XAML 스키마 컨텍스트 및.NET Framework XAML 서비스의 다른 측면에서 사용 방법에 대해 설명 합니다.  
@@ -41,9 +29,9 @@ XAML 네임 스페이스는 XML 네임 스페이스 정의 확장 하는 개념�
   
  CLR 네임 스페이스 및 어셈블리 규칙을 사용 하는 식별자의 가장 기본적인 형태는 다음과 같습니다.  
   
- `clr-namespace:`*clrnsName* `; assembly=` *assemblyShortName*  
+ `clr-namespace:` *clrnsName* `; assembly=` *assemblyShortName*  
   
- `clr-namespace:`및 `; assembly=` 리터럴 구문을 구성 합니다.  
+ `clr-namespace:` 및 `; assembly=` 리터럴 구문을 구성 합니다.  
   
  *clrnsName* CLR 네임 스페이스를 식별 하는 문자열 이름입니다. 이 문자열 이름에는 CLR 네임 스페이스와 다른 CLR 네임 스페이스의 관계에 대 한 힌트를 제공 하는 내부 점 문자 (.) 포함 되어 있습니다.  
   
@@ -51,7 +39,7 @@ XAML 네임 스페이스는 XML 네임 스페이스 정의 확장 하는 개념�
   
  CLR 네임 스페이스 및 어셈블리 규칙 보다 완전 한 정의 다음과 같습니다.  
   
- `clr-namespace:`*clrnsName* `; assembly=` *assemblyName*  
+ `clr-namespace:` *clrnsName* `; assembly=` *assemblyName*  
   
  *assemblyName* 으로 유효한 모든 문자열을 나타내는 <xref:System.Reflection.Assembly.Load%28System.String%29?displayProperty=nameWithType> 입력 합니다. 이 문자열은 문화권, 공개 키 또는 버전 정보가 포함 될 수 있습니다 (이러한 개념의 정의 대 한 참조 항목에 정의 된 <xref:System.Reflection.Assembly>). COFF 형식 및 증명 정보 (의 다른 오버 로드에서 사용 되는 <xref:System.Reflection.Assembly.Load%2A>) XAML 어셈블리 로드 목적과;에 대 한 관련 되지 않은 모든 정보를 로드할 string으로 표시 되어야 합니다.  
   
@@ -72,7 +60,7 @@ XAML 네임 스페이스는 XML 네임 스페이스 정의 확장 하는 개념�
   
  XML 네임 스페이스 선언에서 선언 하는 태그에 사용 하려면 XAML 스키마 컨텍스트를 만들려는 경우 XAML 네임 스페이스를 정의 되지 않은 경우에 XAML 네임 스페이스 정보를 채우는 데 필요한 경우 사용할 수 있습니다 기술이 고 <xref:System.Xml.XmlParserContext> 는 에대한<xref:System.Xml.XmlReader>. 사용 하 여 <xref:System.Xml.XmlReader> XAML 판독기 생성자에 대 한 입력으로 또는 <xref:System.Xaml.XamlServices.Load%28System.Xml.XmlReader%29?displayProperty=nameWithType>합니다.  
   
- 특성에는.NET Framework XAML 서비스에서 처리 하는 XAML 네임 스페이스와 관련 된 다른 두 개의 API <xref:System.Windows.Markup.XmlnsDefinitionAttribute> 및 <xref:System.Windows.Markup.XmlnsPrefixAttribute>합니다. 이러한 특성은 어셈블리에 적용 됩니다. <xref:System.Windows.Markup.XmlnsDefinitionAttribute>URI를 포함 하는 XAML 네임 스페이스 선언을 해석 하는 XAML 스키마 컨텍스트에서 사용 됩니다. <xref:System.Windows.Markup.XmlnsPrefixAttribute>예측 가능한 접두사가 포함 된 특정 XAML 네임 스페이스를 serialize 할 수 있도록 XAML을 생성 하는 도구에서 사용 됩니다. 자세한 내용은 참조 [사용자 정의 형식 및 라이브러리에 대 한 CLR 특성 XAML-Related](../../../docs/framework/xaml-services/xaml-related-clr-attributes-for-custom-types-and-libraries.md)합니다.  
+ 특성에는.NET Framework XAML 서비스에서 처리 하는 XAML 네임 스페이스와 관련 된 다른 두 개의 API <xref:System.Windows.Markup.XmlnsDefinitionAttribute> 및 <xref:System.Windows.Markup.XmlnsPrefixAttribute>합니다. 이러한 특성은 어셈블리에 적용 됩니다. <xref:System.Windows.Markup.XmlnsDefinitionAttribute> URI를 포함 하는 XAML 네임 스페이스 선언을 해석 하는 XAML 스키마 컨텍스트에서 사용 됩니다. <xref:System.Windows.Markup.XmlnsPrefixAttribute> 예측 가능한 접두사가 포함 된 특정 XAML 네임 스페이스를 serialize 할 수 있도록 XAML을 생성 하는 도구에서 사용 됩니다. 자세한 내용은 참조 [사용자 정의 형식 및 라이브러리에 대 한 CLR 특성 XAML-Related](../../../docs/framework/xaml-services/xaml-related-clr-attributes-for-custom-types-and-libraries.md)합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [XAML 노드 스트림 구조 및 개념 이해](../../../docs/framework/xaml-services/understanding-xaml-node-stream-structures-and-concepts.md)

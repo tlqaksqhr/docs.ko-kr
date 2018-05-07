@@ -1,13 +1,6 @@
 ---
-title: "방법: Windows Forms 단추 클릭에 응답"
-ms.custom: 
+title: '방법: Windows Forms 단추 클릭에 응답'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -22,16 +15,11 @@ helpviewer_keywords:
 - examples [Windows Forms], controls
 - Click event [Windows Forms], responding to
 ms.assetid: 7a4951bd-369c-4662-b246-28ad83eda484
-caps.latest.revision: "14"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 28b0467c8b589882fe5afd7e884d0de55d8ca564
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 14a880c34f163dc6fece44c24d377822a741b0f2
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-respond-to-windows-forms-button-clicks"></a>방법: Windows Forms 단추 클릭에 응답
 Windows Forms의 가장 기본적인 사용법 <xref:System.Windows.Forms.Button> 컨트롤에서 단추를 클릭할 때 일부 코드를 실행 하는 것입니다.  
@@ -42,7 +30,7 @@ Windows Forms의 가장 기본적인 사용법 <xref:System.Windows.Forms.Button
   
 ### <a name="to-respond-to-a-button-click"></a>단추 클릭에 응답 하려면  
   
--   단추의 `Click` <xref:System.EventHandler> 실행 하는 코드를 작성 합니다. `Button1_Click`컨트롤에 바인딩해야 합니다. 자세한 내용은 참조 [하는 방법: Windows Forms에 대 한 시간 실행에서 이벤트 처리기 만들기](../../../../docs/framework/winforms/how-to-create-event-handlers-at-run-time-for-windows-forms.md)합니다.  
+-   단추의 `Click` <xref:System.EventHandler> 실행 하는 코드를 작성 합니다. `Button1_Click` 컨트롤에 바인딩해야 합니다. 자세한 내용은 참조 [하는 방법: Windows Forms에 대 한 시간 실행에서 이벤트 처리기 만들기](../../../../docs/framework/winforms/how-to-create-event-handlers-at-run-time-for-windows-forms.md)합니다.  
   
     ```vb  
     Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click  

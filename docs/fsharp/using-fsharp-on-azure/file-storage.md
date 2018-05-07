@@ -2,16 +2,12 @@
 title: 'F #을 사용 하 여 Azure 파일 저장소 시작'
 description: 클라우드 Azure 파일 저장소에 파일 데이터를 저장 및 Azure 가상 컴퓨터 (VM)에서 클라우드 파일 공유를 탑재 또는 온-프레미스 응용 프로그램에서 Windows를 실행 합니다.
 author: sylvanc
-ms.author: phcart
 ms.date: 09/20/2016
-ms.topic: conceptual
-ms.prod: dotnet-fsharp
-ms.devlang: fsharp
-ms.openlocfilehash: f4eb02bc3e4aca0653a4fa991c1593f988f1d1af
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: e772da5f81d2e6827295d0dfe150934a415eb3bb
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="get-started-with-azure-file-storage-using-f"></a>F #을 사용 하 여 Azure 파일 저장소 시작 #
 

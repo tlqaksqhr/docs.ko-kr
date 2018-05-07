@@ -1,28 +1,16 @@
 ---
-title: "ColorDialog 구성 요소(Windows Forms)"
-ms.custom: 
+title: ColorDialog 구성 요소(Windows Forms)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - ColorDialog component
 - colors [Windows Forms], dialog box
 - color dialog box
 ms.assetid: 261793e0-8252-47c5-b76c-621857b8da44
-caps.latest.revision: "9"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: b5072b9bd84817d569b0237d702f73ca4e39c9ba
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: b4692b668ed19e6d720e873f374fe6729939dae4
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="colordialog-component-windows-forms"></a>ColorDialog 구성 요소(Windows Forms)
 Windows Forms <xref:System.Windows.Forms.ColorDialog> 구성 요소는 사용자 색상표에서 색을 선택 하 고 해당 색상표에 사용자 지정 색을 추가할 수 있는 미리 구성 된 대화 상자. 이 구성 요소는 다른 Windows 기반 응용 프로그램에서 색상 선택하는 데 사용하는 대화 상자와 동일합니다. 고유한 대화 상자를 구성하는 대신 Windows 기반 응용 프로그램 내에서 간단한 솔루션으로 사용합니다.  

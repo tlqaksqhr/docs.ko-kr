@@ -1,26 +1,15 @@
 ---
-title: "리소스를 트랜잭션에 참가 요소로 등록"
-ms.custom: 
+title: 리소스를 트랜잭션에 참가 요소로 등록
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 786a12c2-d530-49f4-9c59-5c973e15a11d
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 270b3755901e3c5bc95352b5f3d07a338e73a90e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: cf7afb9fd255d9b67f40bc4e8c0685d727939972
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="enlisting-resources-as-participants-in-a-transaction"></a>리소스를 트랜잭션에 참가 요소로 등록
 트랜잭션에 참여하는 각 리소스는 RM(리소스 관리자)에 의해 관리되고, RM의 작업은 TM(트랜잭션 관리자)에 의해 조정됩니다. 코디네이션은 트랜잭션 관리자를 통해 트랜잭션에 참여한 구독자에게 제공되는 알림을 통해 수행됩니다.  

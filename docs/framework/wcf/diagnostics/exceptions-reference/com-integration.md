@@ -1,24 +1,12 @@
 ---
-title: "COM+ 통합"
-ms.custom: 
+title: COM+ 통합
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 6a687c1b-d0be-42fb-8f9b-20fea1317411
-caps.latest.revision: "5"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 2e4aff7c9e350f33d20c82ac3a3c286495a28d60
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 1680a75adbd4cd6e43be5c3aed2f00049447ab35
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="com-integration"></a>COM+ 통합
 이 항목에서는 COM+ 통합에 의해 생성된 모든 예외를 보여 줍니다.  

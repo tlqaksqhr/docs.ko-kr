@@ -1,17 +1,12 @@
 ---
 title: 개체 식(F#)
 description: '명명 된 형식을 추가 코드와 새로 만드는 데 필요한 오버 헤드를 방지 하려면 때 F # 식을 개체를 사용 하는 방법에 알아봅니다.'
-author: cartermp
-ms.author: phcart
 ms.date: 05/16/2016
-ms.topic: language-reference
-ms.prod: dotnet-fsharp
-ms.devlang: fsharp
-ms.openlocfilehash: f5a728823e7abe18aeb604b3991087fd0252698e
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: fed78e2be52838eedf55759b195696f1210a8a20
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="object-expressions"></a>개체 식
 

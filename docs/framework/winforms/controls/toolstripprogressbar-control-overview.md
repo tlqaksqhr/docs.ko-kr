@@ -1,14 +1,6 @@
 ---
-title: "ToolStripProgressBar 컨트롤 개요"
-ms.custom: 
+title: ToolStripProgressBar 컨트롤 개요
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 f1_keywords:
 - ToolStripProgressBar
 helpviewer_keywords:
@@ -16,17 +8,11 @@ helpviewer_keywords:
 - progress controls [Windows Forms]
 - ToolStripProgressBar control [Windows Forms], about ToolStripProgressBar control
 ms.assetid: ec3ab522-5fe4-4b4d-a551-bc19e84f4774
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 3ee73d87a65e9febed6ebd5ad981dcd548fc2404
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 0ce2347be055cc1840341747f202125cbbf678c8
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="toolstripprogressbar-control-overview"></a>ToolStripProgressBar 컨트롤 개요
 <xref:System.Windows.Forms.ToolStripProgressBar> 래프팅 (rafting) 및 모든 렌더링 기능이 결합 <xref:System.Windows.Forms.ToolStrip> 일반적인 프로세스 추적 기능을 사용 하 여 컨트롤입니다. A <xref:System.Windows.Forms.ToolStripProgressBar> 에서 가장 일반적으로 호스트 <xref:System.Windows.Forms.StatusStrip>, 의해서도 자주는 <xref:System.Windows.Forms.ToolStrip>합니다.  
@@ -35,7 +21,7 @@ ms.lasthandoff: 12/22/2017
   
 ### <a name="important-toolstripprogressbar-members"></a>중요 한 ToolStripProgressBar 멤버  
   
-|name|설명|  
+|이름|설명|  
 |----------|-----------------|  
 |<xref:System.Windows.Forms.ToolStripProgressBar.MarqueeAnimationSpeed%2A>|각 간 지연 시간을 나타내는 값을 가져오거나 설정 합니다. <xref:System.Windows.Forms.ProgressBarStyle.Marquee> 밀리초 단위로 표시 업데이트 합니다.|  
 |<xref:System.Windows.Forms.ProgressBar.Maximum%2A>|이 대해 정의 된 범위의 상한 값을 가져오거나 설정 합니다. <xref:System.Windows.Forms.ToolStripProgressBar>합니다.|  

@@ -1,14 +1,6 @@
 ---
-title: "ICorDebugInternalFrame2::IsCloserToLeaf 메서드"
-ms.custom: 
+title: ICorDebugInternalFrame2::IsCloserToLeaf 메서드
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICorDebugInternalFrame2.IsCloserToLeaf Method
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: c1d3d1eb-8370-4f25-8297-3bd262b4740a
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 7b6b769c25e0cd706eb57965b73d0fcfdcf9b9ea
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 6d26d4dc046841a891c8a36530bd579d100b8f5b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="icordebuginternalframe2isclosertoleaf-method"></a>ICorDebugInternalFrame2::IsCloserToLeaf 메서드
 확인 여부는 `this` 내부 프레임 보다 더 가까운 리프에 지정된 된 ICorDebugFrame 개체입니다.  
@@ -62,7 +50,7 @@ HRESULT IsCloserToLeaf([in] ICorDebugFrame * pFrameToCompare,
 |E_INVALIDARG|`pFrameToCompare` 또는 `pIsCloser`이 null입니다.|  
   
 ## <a name="remarks"></a>설명  
- `IsCloserToLeaf`데 사용할 수는 내부 다른 스택 프레임의 프레임 인터리빙에 대 한 정책을 구현 합니다.  
+ `IsCloserToLeaf` 데 사용할 수는 내부 다른 스택 프레임의 프레임 인터리빙에 대 한 정책을 구현 합니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **플랫폼:** 참조 [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)합니다.  
@@ -71,7 +59,7 @@ HRESULT IsCloserToLeaf([in] ICorDebugFrame * pFrameToCompare,
   
  **라이브러리:** CorGuids.lib  
   
- **.NET framework 버전:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET framework 버전:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>참고 항목  
  [ICorDebugInternalFrame2 인터페이스](../../../../docs/framework/unmanaged-api/debugging/icordebuginternalframe2-interface.md)  

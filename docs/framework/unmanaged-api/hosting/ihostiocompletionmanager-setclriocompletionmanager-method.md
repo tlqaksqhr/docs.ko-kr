@@ -1,14 +1,6 @@
 ---
-title: "IHostIoCompletionManager::SetCLRIoCompletionManager 메서드"
-ms.custom: 
+title: IHostIoCompletionManager::SetCLRIoCompletionManager 메서드
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - IHostIoCompletionManager.SetCLRIoCompletionManager
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: 4254bb01-3a14-4f34-a3be-60ff1f5072b5
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 4fde1045fd0f15e7255a163c1f1b041800e85921
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 5da62d8d46b71b1f9eef677d2252ec7b21a3ae4f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ihostiocompletionmanagersetclriocompletionmanager-method"></a>IHostIoCompletionManager::SetCLRIoCompletionManager 메서드
 호스트에 대 한 인터페이스 포인터에 제공 된 [ICLRIoCompletionManager](../../../../docs/framework/unmanaged-api/hosting/iclriocompletionmanager-interface.md) 공용 언어 런타임 (CLR)에 의해 구현 되는 인스턴스.  
@@ -54,7 +42,7 @@ HRESULT SetCLRIoCompletionManager (
   
 |HRESULT|설명|  
 |-------------|-----------------|  
-|S_OK|`SetCLRIoCompletionManager`성공적으로 반환 합니다.|  
+|S_OK|`SetCLRIoCompletionManager` 성공적으로 반환 합니다.|  
 |HOST_E_CLRNOTAVAILABLE|CLR은 프로세스에 로드 되지 않았습니다 또는 CLR 중인 상태를 관리 코드를 실행 하거나 호출을 처리할 수 없습니다.|  
 |HOST_E_TIMEOUT|호출 시간이 초과 되었습니다.|  
 |HOST_E_NOT_OWNER|호출자에 게 잠금을 소유 하지 않습니다.|  
@@ -71,7 +59,7 @@ HRESULT SetCLRIoCompletionManager (
   
  **라이브러리:** MSCorEE.dll에 리소스로 포함  
   
- **.NET framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>참고 항목  
  [ICLRIoCompletionManager 인터페이스](../../../../docs/framework/unmanaged-api/hosting/iclriocompletionmanager-interface.md)  

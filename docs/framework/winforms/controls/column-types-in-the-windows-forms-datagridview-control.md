@@ -1,28 +1,16 @@
 ---
-title: "Windows Forms DataGridView 컨트롤의 열 형식"
-ms.custom: 
+title: Windows Forms DataGridView 컨트롤의 열 형식
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - columns [Windows Forms], types
 - DataGridView control [Windows Forms], column types
 - data grids [Windows Forms], columns
 ms.assetid: f0a0a9f1-8757-4bfd-891f-d7d12870dbed
-caps.latest.revision: "17"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 92c6881fe876bba3fe0224a358a9b12767d53f0b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 6630323b66265f478151ec80ab8b225c0b653917
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="column-types-in-the-windows-forms-datagridview-control"></a>Windows Forms DataGridView 컨트롤의 열 형식
 <xref:System.Windows.Forms.DataGridView> 컨트롤 형식을 사용 하 여 여러 열 해당 정보를 표시 하 고 사용자가 정보를 수정 하거나 추가할 수 있도록 합니다.  
@@ -53,7 +41,7 @@ ms.lasthandoff: 12/22/2017
  셀 값 데이터 형식의 열에 지정 된는 <xref:System.Windows.Forms.DataGridViewColumn.ValueType%2A> 열의 속성입니다.  
   
 ## <a name="datagridviewcheckboxcolumn"></a>DataGridViewCheckBoxColumn  
- <xref:System.Windows.Forms.DataGridViewCheckBoxColumn> 와 함께 사용 되 <xref:System.Boolean> 및 <xref:System.Windows.Forms.CheckState> 값입니다. <xref:System.Boolean>2 단계 또는 3 상 확인란으로, 값에 따라 값이 표시는 <xref:System.Windows.Forms.DataGridViewCheckBoxColumn.ThreeState%2A> 속성입니다. 열에 바인딩된 경우 <xref:System.Windows.Forms.CheckState> 값의 <xref:System.Windows.Forms.DataGridViewCheckBoxColumn.ThreeState%2A> 속성 값은 `true` 기본적으로 합니다.  
+ <xref:System.Windows.Forms.DataGridViewCheckBoxColumn> 와 함께 사용 되 <xref:System.Boolean> 및 <xref:System.Windows.Forms.CheckState> 값입니다. <xref:System.Boolean> 2 단계 또는 3 상 확인란으로, 값에 따라 값이 표시는 <xref:System.Windows.Forms.DataGridViewCheckBoxColumn.ThreeState%2A> 속성입니다. 열에 바인딩된 경우 <xref:System.Windows.Forms.CheckState> 값의 <xref:System.Windows.Forms.DataGridViewCheckBoxColumn.ThreeState%2A> 속성 값은 `true` 기본적으로 합니다.  
   
  일반적으로 확인란 셀 값은 다른 데이터를 저장 하거나 대량 작업을 수행 하기 위한 용도로 사용 합니다. 처리할 수 사용자가 확인란 셀을 클릭 하면 바로 대응 하려는 경우는 <xref:System.Windows.Forms.DataGridView.CellClick> 이벤트, 하지만이 이벤트는 셀 값이 업데이트 되기 전에 발생 합니다. 한 가지 옵션은 됩니다 예상 값을 계산 하 고 클릭 시 새 값이 필요한 경우 현재 값을 기반으로 합니다. 또 다른 방법은 즉시 변경 내용을 커밋하고 처리 하는 <xref:System.Windows.Forms.DataGridView.CellValueChanged> 에 응답 하려면 이벤트입니다. 셀을 클릭할 때의 변경 내용을 커밋하지를 처리 해야 합니다는 <xref:System.Windows.Forms.DataGridView.CurrentCellDirtyStateChanged> 이벤트입니다. 처리기에서 확인란 셀 현재 셀을 사용 하는 경우 호출 된 <xref:System.Windows.Forms.DataGridView.CommitEdit%2A> 메서드와 전달은 <xref:System.Windows.Forms.DataGridViewDataErrorContexts.Commit> 값.  
   

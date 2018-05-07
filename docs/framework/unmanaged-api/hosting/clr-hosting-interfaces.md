@@ -1,28 +1,18 @@
 ---
-title: "CLR 호스팅 인터페이스"
-ms.custom: 
+title: CLR 호스팅 인터페이스
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 helpviewer_keywords:
 - interfaces [.NET Framework hosting], version 2.0
 - hosting interfaces [.NET Framework], version 2.0
 - .NET Framework 2.0, hosting interfaces
 ms.assetid: 703b8381-43db-4a4d-9faa-cca39302d922
-caps.latest.revision: "16"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: fd954419f46313a239ddf5a309a646e3d2f1b9bf
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 03839a2c6e52f9d2dcdd2e0941ff4fdbeb8a3a17
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="clr-hosting-interfaces"></a>CLR 호스팅 인터페이스
 이 섹션에서는 관리 되지 않은 인터페이스 설명 호스트 응용 프로그램에 공용 언어 런타임 (CLR)를 통합 하 사용할 수 있습니다. 정보는.NET Framework 버전 2.0 이상 버전에 적용 됩니다. 이러한 인터페이스는 런타임 버전 1.0 및 1.1에에서 비해 더 많은 요소를 제어 하려면 호스트를 활성화 하 고 CLR 및 호스트의 실행 모델 많은 밀접 하 게 통합을 제공 합니다.  

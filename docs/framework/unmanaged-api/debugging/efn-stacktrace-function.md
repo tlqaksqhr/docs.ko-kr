@@ -1,14 +1,6 @@
 ---
-title: "_EFN_StackTrace 함수"
-ms.custom: 
+title: _EFN_StackTrace 함수
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - _EFN_StackTrace
 api_location:
@@ -22,17 +14,13 @@ helpviewer_keywords:
 ms.assetid: caea7754-867c-4360-a65c-5ced4408fd9d
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 905a44ee3187bc920d9342b043383a1500c28985
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 39a249108d10e5dc382775378e2d6b84bba87356
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="efnstacktrace-function"></a>_EFN_StackTrace 함수
 비관리 코드와 관리 코드 간 각 전환에 대해 하나씩, `CONTEXT` 레코드 배열 및 관리되는 스택 추적의 텍스트 표시를 제공합니다.  
@@ -86,7 +74,7 @@ HRESULT CALLBACK _EFN_StackTrace(
   
 -   경우 `pTransitionContexts` 은 null이 아닌 함수로 처리 길이의 구조의 배열 `puiTransitionContextCount`합니다. 구조 크기 `uiSizeOfContext`의 크기가 [SimpleContext](../../../../docs/framework/unmanaged-api/debugging/stacktrace-simplecontext-structure.md) 또는 `CONTEXT` 아키텍처에 대 한 합니다.  
   
--   `wszTextOut`다음 형식으로 기록 됩니다.  
+-   `wszTextOut` 다음 형식으로 기록 됩니다.  
   
     ```  
     "<ModuleName>!<Function Name>[+<offset in hex>]  
@@ -110,7 +98,7 @@ HRESULT CALLBACK _EFN_StackTrace(
   
  **헤더:** SOS_Stacktrace.h  
   
- **.NET framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>참고 항목  
  [디버깅 전역 정적 함수](../../../../docs/framework/unmanaged-api/debugging/debugging-global-static-functions.md)

@@ -1,31 +1,24 @@
 ---
-title: "Line 및 Shape 컨트롤(Visual Studio)"
+title: Line 및 Shape 컨트롤(Visual Studio)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - RectangleShape control [Visual Basic], topic list
 - OvalShape control [Visual Basic], topic list
 - Shape control [Visual Basic]
 - Line control [Visual Basic], topic list
 ms.assetid: 29ee3a5f-920f-4677-85bc-bd7425ab57e8
-caps.latest.revision: "9"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 000040d31888d42ad9ebf88d882fc75e781a8593
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.openlocfilehash: 6baffe826fa20e17a763b3a5e6fa8476dcb6c220
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="line-and-shape-controls-visual-studio"></a>Line 및 Shape 컨트롤(Visual Studio)
 Visual Basic Power Packs Line 및 Shape 컨트롤은 폼이나 컨테이너에서 수평선, 수직선, 대각선, 사각형, 정사각형, 타원형, 원형, 모서리가 둥근 사각형 및 정사각형을 그리는 데 사용되는 그래픽 컨트롤입니다.  
   
  PowerPack 컨트롤은 Visual Studio에 더 포함되지 않지만 [다운로드 센터](http://www.microsoft.com/en-us/download/details.aspx?id=25169)에서 다운로드할 수 있습니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [Line 및 Shape 컨트롤 소개](../../../visual-basic/developing-apps/windows-forms/introduction-to-the-line-and-shape-controls-visual-studio.md)  
  Line 및 Shape 컨트롤을 소개 및 설명하고 개체 모델에 대해 설명합니다.  
   

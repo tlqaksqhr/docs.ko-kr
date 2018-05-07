@@ -1,25 +1,16 @@
 ---
 title: Const 문(Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.Const
 helpviewer_keywords:
 - Const statement [Visual Basic]
 ms.assetid: 495b318d-b7c5-4198-94f8-0790a541b07a
-caps.latest.revision: 28
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 720a465f1459b663a1fca2a48856f51762328459
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: bb4c524fa5c29efbcbe485fb5e86c8cf0fa432e8
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="const-statement-visual-basic"></a>Const 문(Visual Basic)
 선언 하 고 하나 이상의 상수를 정의 합니다.  
@@ -42,7 +33,7 @@ Const constantlist
  선택 사항입니다. 이 사용 하 여 다시 선언 하 고 기본 클래스에는 프로그래밍 요소를 숨길 수 있습니다. 참조 [그림자](../../../visual-basic/language-reference/modifiers/shadows.md)합니다.  
   
  `constantlist`  
- 필수 요소. 이 문에서 선언 되는 상수 목록입니다.  
+ 필수. 이 문에서 선언 되는 상수 목록입니다.  
   
  `constant` `[ ,` `constant` `... ]`  
   
@@ -52,9 +43,9 @@ Const constantlist
   
 |파트|설명|  
 |----------|-----------------|  
-|`constantname`|필수 요소. 상수의 이름입니다. 참조 [선언 된 요소 이름](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)합니다.|  
+|`constantname`|필수. 상수의 이름입니다. 참조 [선언 된 요소 이름](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)합니다.|  
 |`datatype`|필요한 경우 `Option Strict` 은 `On`합니다. 상수 데이터 형식입니다.|  
-|`initializer`|필수 요소. 컴파일 타임에 계산 되 고 상수에 할당 되는 식입니다.|  
+|`initializer`|필수. 컴파일 타임에 계산 되 고 상수에 할당 되는 식입니다.|  
   
 ## <a name="remarks"></a>설명  
  응용 프로그램에서 변경 되지 않는 값을 설정한 경우에 명명 된 상수를 정의 하 고 리터럴 값 대신 사용할 수 있습니다. 이름은 지정 된 값 보다 기억 하기 더 쉽습니다. 한 번만 상수를 정의 하 고 코드에서이 한 곳에 사용할 수 있습니다. 최신 버전에서 값을 다시 정의 해야 하는 경우는 `Const` 문을 변경 하려면 필요한 유일한 위치입니다.  

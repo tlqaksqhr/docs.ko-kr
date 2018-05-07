@@ -1,33 +1,21 @@
 ---
 title: 서비스에 보안 설정
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - configuration [WCF], securing services
 - WCF security
 - WCF, security
 ms.assetid: f0ecc6f7-f4b5-42a4-9cb1-b02e28e26620
-caps.latest.revision: 28
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload:
-- dotnet
-ms.openlocfilehash: ffc985d528bfdcdd9b62772a8a8ba61823c95e76
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
-ms.translationtype: MT
+ms.openlocfilehash: 6bdac5a65c51ff08cfa170c1a6e556c3532ee7c9
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="securing-services"></a>서비스에 보안 설정
-[!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 서비스 보안은 전송 보안과 인증의 두 가지 주요 요구 사항으로 구성됩니다. (한 세 번째 요구 사항인 보안 이벤트 감사에 대 한 자세한 내용은 [감사](../../../docs/framework/wcf/feature-details/auditing-security-events.md).) 간단히 말해서 전송 보안은 인증(서비스와 클라이언트 모두에 대해 ID 확인), 기밀성(메시지 암호화) 및 무결성(변조 확인을 위한 디지털 서명)을 포함합니다. 권한 부여는 리소스에 대한 액세스 제어입니다. 예를 들어, 권한 있는 사용자에게만 파일 읽기를 허용합니다. [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]의 기능을 사용하면 두 가지 주요 요구 사항이 쉽게 구현됩니다.  
+Windows Communication Foundation (WCF) 서비스의 보안을 두 가지 기본 요구 사항 구성: 전송 보안 및 권한 부여 합니다. (한 세 번째 요구 사항인 보안 이벤트 감사에 대 한 자세한 내용은 [감사](../../../docs/framework/wcf/feature-details/auditing-security-events.md).) 간단히 말해서 전송 보안은 인증(서비스와 클라이언트 모두에 대해 ID 확인), 기밀성(메시지 암호화) 및 무결성(변조 확인을 위한 디지털 서명)을 포함합니다. 권한 부여는 리소스에 대한 액세스 제어입니다. 예를 들어, 권한 있는 사용자에게만 파일 읽기를 허용합니다. [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]의 기능을 사용하면 두 가지 주요 요구 사항이 쉽게 구현됩니다.  
   
  제외 된 <xref:System.ServiceModel.BasicHttpBinding> 클래스 (또는 [ \<basicHttpBinding >](../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md) 구성 요소), 전송 보안은 모든 미리 정의 된 바인딩에 대해 기본적으로 사용 합니다. 이 단원의 항목에서는 IIS(인터넷 정보 서비스)에 호스트되는 인트라넷 서비스에 대한 전송 보안 및 권한 부여 구현, IIS에 호스트되는 서비스에 대한 전송 보안 및 권한 부여 구현의 두 가지 기본 시나리오에 대해 설명합니다.  
   

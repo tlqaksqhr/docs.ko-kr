@@ -1,29 +1,15 @@
 ---
 title: Windows Communication Foundation 샘플 실행
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: db8a83da-95c1-4a21-a9d2-48caeb6398ea
-caps.latest.revision: 26
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 2aca4555277a1b365ddee1c672a6375edfde9f34
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
-ms.translationtype: MT
+ms.openlocfilehash: ee02b6e737e4728a378533ebb5ba89cec9807b33
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="running-the-windows-communication-foundation-samples"></a>Windows Communication Foundation 샘플 실행
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 샘플을 단일 컴퓨터 또는 다중 컴퓨터 구성에서 실행할 수 있습니다. 샘플은 단일 컴퓨터 구성에서 실행할 준비가 된 상태로 제공됩니다. 다중 컴퓨터 구성에서는 샘플의 구성 파일 설정을 수정해야 합니다. 다음 절차에서는 단일 컴퓨터 및 다중 컴퓨터 구성에서 샘플을 실행하는 방법에 대해 설명합니다. IIS(인터넷 정보 서비스) 및 자체 호스팅 샘플에서 호스트되는 서비스에 적용되는 단계가 약간씩 다릅니다. 대부분의 샘플은 IIS에서 호스트됩니다. 이러한 샘플이 호스트되는 방법에 대한 자세한 내용은 샘플 추가 정보를 참조하세요.  
+Windows Communication Foundation (WCF) 샘플 단일 컴퓨터 또는 다중 컴퓨터 구성에서 실행할 수 있습니다. 샘플은 단일 컴퓨터 구성에서 실행할 준비가 된 상태로 제공됩니다. 다중 컴퓨터 구성에서는 샘플의 구성 파일 설정을 수정해야 합니다. 다음 절차에서는 단일 컴퓨터 및 다중 컴퓨터 구성에서 샘플을 실행하는 방법에 대해 설명합니다. IIS(인터넷 정보 서비스) 및 자체 호스팅 샘플에서 호스트되는 서비스에 적용되는 단계가 약간씩 다릅니다. 대부분의 샘플은 IIS에서 호스트됩니다. 이러한 샘플이 호스트되는 방법에 대한 자세한 내용은 샘플 추가 정보를 참조하세요.  
   
  [!INCLUDE[wv](../../../../includes/wv-md.md)]에서는 IIS에서 호스트되지 않는 샘플의 경우 Http.sys에 수신기를 등록하기 위해 상승된 권한이 필요합니다. Httpcfg.exe를 사용하여 서비스가 수신 대기 중인 계정에 서비스의 수신 대기 주소를 등록하거나 관리자 권한으로 실행 중인 명령 프롬프트에서 서비스를 실행합니다.  
   

@@ -1,24 +1,12 @@
 ---
-title: "명령을 사용하여 데이터 수정"
-ms.custom: 
+title: 명령을 사용하여 데이터 수정
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: f4160389-b9ff-4b74-b655-437c76dcd586
-caps.latest.revision: "4"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 70a83453eef990a03515a4860917f3c4d72599c3
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 9f13eb2079df959281a44086edf84c34f3c63a14
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-commands-to-modify-data"></a>명령을 사용하여 데이터 수정
 .NET Framework 데이터 공급자를 사용하여 저장 프로시저나 CREATE TABLE 및 ALTER COLUMN과 같은 데이터 정의 언어 문을 실행하여 데이터베이스 또는 카탈로그의 스키마를 조작할 수 있습니다. 이 명령은 쿼리에서와 같이 행을 반환 하지 않는 하므로 **명령** 개체를 제공는 **ExecuteNonQuery** 처리 하도록 합니다.  

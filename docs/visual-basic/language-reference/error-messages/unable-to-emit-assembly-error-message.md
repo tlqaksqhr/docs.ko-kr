@@ -1,26 +1,17 @@
 ---
 title: '어셈블리를 생성할 수 없습니다: &lt;오류 메시지&gt;'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vbc30145
 - bc30145
 helpviewer_keywords:
 - BC30145
 ms.assetid: 2e7eb2b9-eda6-4bdb-95cc-72c7f0be7528
-caps.latest.revision: 11
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 59288ba7b4cec34cd2266d66aa931e92598e819a
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.openlocfilehash: 8f497069088ad30a3be58d02caa0a32f7f1b21b7
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="unable-to-emit-assembly-lterror-messagegt"></a>어셈블리를 생성할 수 없습니다: &lt;오류 메시지&gt;
 Visual Basic 컴파일러 링커 어셈블리 만들기의 내보내기 단계에서 오류가 보고 어셈블리 링커 (Al.exe, Alink 라고도 함)는 매니페스트를 사용해 어셈블리를 생성 하려면를 호출 합니다.  

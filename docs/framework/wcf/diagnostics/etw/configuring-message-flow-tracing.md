@@ -1,27 +1,15 @@
 ---
-title: "메시지 흐름 추적 구성"
-ms.custom: 
+title: 메시지 흐름 추적 구성
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 15571ca2-bee2-47fb-ba10-fcbc09152ad0
-caps.latest.revision: "8"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 8df32a64c07db8a45dfb41a46e7a65a92fbef434
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 7bfba8ababc6ddc0b2ddd78e879058cfa9e8ebb1
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="configuring-message-flow-tracing"></a>메시지 흐름 추적 구성
-[!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] 작업 추적을 사용하도록 설정하면 [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 스택을 통해 논리 작업에 종단 간 작업 ID가 할당됩니다. [!INCLUDE[netfx_current_short](../../../../../includes/netfx-current-short-md.md)]에는 메시지 흐름 추적이라고 하는 ETW(Event Tracing for Windows)와 함께 작동하는 이 기능의 더 높은 성능 버전이 있습니다. 이 기능을 사용하도록 설정하면 종단 간 작업 ID가 들어오는 메시지에서 가져와 지고(비어 있는 경우 들어오는 메시지에 할당됨) 메시지가 채널을 통해 디코딩된 후 내보내지는 모든 추적 이벤트에 전파됩니다. 이 기능을 사용하면 다른 서비스의 추적 로그를 사용하여 메시지 흐름을 다시 생성할 수 있습니다.  
+종단 간 활동 Id를 통해 논리 작업에 할당 된 Windows Communication Foundation (WCF) 동작 추적이 활성화 될 때는 [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 스택 합니다. [!INCLUDE[netfx_current_short](../../../../../includes/netfx-current-short-md.md)]에는 메시지 흐름 추적이라고 하는 ETW(Event Tracing for Windows)와 함께 작동하는 이 기능의 더 높은 성능 버전이 있습니다. 이 기능을 사용하도록 설정하면 종단 간 작업 ID가 들어오는 메시지에서 가져와 지고(비어 있는 경우 들어오는 메시지에 할당됨) 메시지가 채널을 통해 디코딩된 후 내보내지는 모든 추적 이벤트에 전파됩니다. 이 기능을 사용하면 다른 서비스의 추적 로그를 사용하여 메시지 흐름을 다시 생성할 수 있습니다.  
   
  추적은 응용 프로그램에서 문제가 발견되면 사용하도록 설정했다가 문제가 해결되면 사용하지 않도록 설정할 수 있습니다.  
   

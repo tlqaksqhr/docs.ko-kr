@@ -1,11 +1,6 @@
 ---
 title: Char 데이터 형식(Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.Char
 helpviewer_keywords:
@@ -15,14 +10,11 @@ helpviewer_keywords:
 - data types [Visual Basic], assigning
 - Char data type [Visual Basic], character literals
 ms.assetid: cd7547a9-7855-4e8e-b216-35d74a362657
-caps.latest.revision: 17
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 16ff547fccbf4481d31ca79537962cc7090fc9b0
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: e672402535215ca30d19cc480e39b42b0364f137
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="char-data-type-visual-basic"></a>Char 데이터 형식(Visual Basic)
 값은 0에서 65535 까지의 부호 없는 16 비트 (2 바이트) 코드 포인트를 저장 합니다. 각 *코드 포인트*, 또는 문자 코드 단일 유니코드 문자를 나타냅니다.  
@@ -54,13 +46,13 @@ charVar = "Z"C
   
 ## <a name="programming-tips"></a>프로그래밍 팁  
   
--   **음수입니다.** `Char`부호 없는 형식 및 음수 값을 나타낼 수 없습니다. 사용 하지 않아야 어떤 경우 든, `Char` 숫자 값을 저장 합니다.  
+-   **음수입니다.** `Char` 부호 없는 형식 및 음수 값을 나타낼 수 없습니다. 사용 하지 않아야 어떤 경우 든, `Char` 숫자 값을 저장 합니다.  
   
 -   **Interop 고려 사항입니다.** .NET Framework에 대해 작성 되지 않은 구성 요소와 인터페이스 하는 경우 예제 Automation 또는 COM 개체에 대 한 기억 문자 형식을 다른 데이터 너비 (8 비트) 한지 다른 환경에서 합니다. 이러한 구성 요소에는 8 비트 인수를 전달 하는 경우로 선언 `Byte` 대신 `Char` 새 Visual Basic 코드에서.  
   
 -   **확대 합니다.** `Char` 데이터 형식으로 확대 되 `String`합니다. 즉, 변환할 수 `Char` 를 `String` 발생 없이 <xref:System.OverflowException?displayProperty=nameWithType> 오류입니다.  
   
--   **형식 문자입니다.** 리터럴 형식 문자 추가 `C` 를 단일 문자 문자열 리터럴에 `Char` 데이터 형식입니다. `Char`에 식별자 형식 문자가 없습니다.  
+-   **형식 문자입니다.** 리터럴 형식 문자 추가 `C` 를 단일 문자 문자열 리터럴에 `Char` 데이터 형식입니다. `Char` 에 식별자 형식 문자가 없습니다.  
   
 -   **Framework 형식입니다.** .NET Framework에서 해당하는 형식은 <xref:System.Char?displayProperty=nameWithType> 구조체입니다.  
   
