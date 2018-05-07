@@ -1,11 +1,6 @@
 ---
 title: Widening(Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.widening
 helpviewer_keywords:
@@ -15,14 +10,11 @@ helpviewer_keywords:
 - Widening keyword [Visual Basic]
 - data type conversion [Visual Basic]
 ms.assetid: 646ae263-94d3-40a2-b0cc-64f619292f56
-caps.latest.revision: 15
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 034099397c1d296a42712b8c202e2ac99a0fb43b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 2323aa38c81ce4e027f256d0e29c069f7ec77c00
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="widening-visual-basic"></a>Widening(Visual Basic)
 나타냅니다 변환 연산자 (`CType`) 클래스 또는 구조체를 원래 클래스 또는 구조체의 모든 가능한 값을 보유할 수 있는 형식으로 변환 합니다.  

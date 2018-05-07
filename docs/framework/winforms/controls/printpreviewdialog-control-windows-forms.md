@@ -1,29 +1,17 @@
 ---
-title: "PrintPreviewDialog 컨트롤(Windows Forms)"
-ms.custom: 
+title: PrintPreviewDialog 컨트롤(Windows Forms)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - PrintPreviewDialog control (using designer)
 - PrintPreview control (using designer)
 - printing [Windows Forms], print preview (using designer)
 - print preview [Windows Forms], default interface (using designer)
 ms.assetid: bfb5a3d7-021e-44f4-90f3-d435467f51d6
-caps.latest.revision: "13"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: f0e52a2a569d9b0787b5ba31c20fac176c5f6cd0
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: a6fc2f5127debaa54fe195d935da9b61cdc0902b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="printpreviewdialog-control-windows-forms"></a>PrintPreviewDialog 컨트롤(Windows Forms)
 Windows Forms `PrintPreviewDialog` 컨트롤은 인쇄 시 문서가 어떻게 나타나는지를 표시하는 데 사용되는 미리 구성된 대화 상자입니다. 고유한 대화 상자를 구성하는 대신 Windows 기반 응용 프로그램 내에서 간단한 솔루션으로 사용합니다. 컨트롤에는 인쇄, 확대, 한 페이지 또는 여러 페이지 표시 및 대화 상자 닫기 단추가 포함되어 있습니다.  

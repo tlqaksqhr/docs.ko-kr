@@ -1,35 +1,26 @@
 ---
-title: 변수 &#39; &lt;variablename&gt;&#39; 바깥쪽 블록의 변수를 숨깁니다.
+title: 변수 &#39; &lt;variablename&gt; &#39; 바깥쪽 블록의 변수를 숨깁니다.
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vbc30616
 - bc30616
 helpviewer_keywords:
 - BC30616
 ms.assetid: e7658ebc-da45-451b-a409-a0f8915f0beb
-caps.latest.revision: 8
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 2af570cd002b4be4e15a7c03b0ffc2ff84ba3982
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 58e09caeb477d6b1df7f3be17e0a8ee05be3551e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="variable-39ltvariablenamegt39-hides-a-variable-in-an-enclosing-block"></a>변수 &#39; &lt;variablename&gt;&#39; 바깥쪽 블록의 변수를 숨깁니다.
+# <a name="variable-39ltvariablenamegt39-hides-a-variable-in-an-enclosing-block"></a>변수 &#39; &lt;variablename&gt; &#39; 바깥쪽 블록의 변수를 숨깁니다.
 블록에 포함 된 변수의 동일한 이름으로 다른 지역 변수에 있습니다.  
   
  **오류 ID:** BC30616  
   
 ## <a name="to-correct-this-error"></a>이 오류를 해결하려면  
   
--   블록 내부에서 변수를 이름을 다른 지역 변수와 동일 하지 않습니다. 예:  
+-   블록 내부에서 변수를 이름을 다른 지역 변수와 동일 하지 않습니다. 예를 들어:  
   
     ```  
     Dim a, b, x As Integer  

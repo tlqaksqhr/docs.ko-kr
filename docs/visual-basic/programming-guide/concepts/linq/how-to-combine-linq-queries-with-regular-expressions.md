@@ -1,22 +1,12 @@
 ---
-title: "방법: LINQ 쿼리와 정규식 결합(Visual Basic)"
-ms.custom: 
+title: '방법: LINQ 쿼리와 정규식 결합(Visual Basic)'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 3da1bd10-b0d8-4d5b-a637-966891c13592
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 6cf6ee296f142ce50a9448d80ab961dafe86ab4f
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 8e58e2c65ad8ea0e3d3a8f454b894e556b349428
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-combine-linq-queries-with-regular-expressions-visual-basic"></a>방법: LINQ 쿼리와 정규식 결합(Visual Basic)
 이 예제에서는 <xref:System.Text.RegularExpressions.Regex> 클래스를 사용하여 더 복잡한 텍스트 문자열 일치를 찾는 정규식을 작성하는 방법을 보여 줍니다. LINQ 쿼리를 사용하면 손쉽게 정규식을 통해 검색하려는 파일을 정확히 필터링하고 결과를 구성할 수 있습니다.  

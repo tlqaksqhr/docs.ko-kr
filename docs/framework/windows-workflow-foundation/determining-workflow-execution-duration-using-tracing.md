@@ -1,23 +1,12 @@
 ---
-title: "추적을 사용하여 워크플로 실행 기간 확인"
-ms.custom: 
+title: 추적을 사용하여 워크플로 실행 기간 확인
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: f04ad0fd-edc7-4cbc-8979-356f2a1131c4
-caps.latest.revision: "9"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: f2687d045db28974e99b2f2b6a3222924a520720
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 9f9c65f2c873d54da443db14e7f5797ef1e14174
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="determining-workflow-execution-duration-using-tracing"></a>추적을 사용하여 워크플로 실행 기간 확인
 이 항목에서는 성공적으로 완료된 자체 호스트되는 워크플로가 실행하는 데 걸리는 시간을 워크플로 추적을 사용하여 확인하는 방법을 보여 줍니다.  

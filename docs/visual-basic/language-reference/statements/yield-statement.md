@@ -1,12 +1,6 @@
 ---
-title: "Yield 문(Visual Basic)"
+title: Yield 문(Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.Yield
 helpviewer_keywords:
@@ -14,14 +8,11 @@ helpviewer_keywords:
 - iterators [Visual Basic]
 - Yield statement [Visual Basic]
 ms.assetid: f33126c5-d7c4-43e2-8e36-4ae3f0703d97
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 0bc2f5c2dca1fbd6039f10ddd6204673f60a679d
-ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
+ms.openlocfilehash: f938ad29df54ade6722f3de33e931c851ade8c21
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="yield-statement-visual-basic"></a>Yield 문(Visual Basic)
 컬렉션의 다음 요소로 보냅니다는 `For Each...Next` 문.  
@@ -87,14 +78,14 @@ Next
   
  이후에 `For Each` 루프가 반복될 때마다 중지되었던 위치에서 반복기 본문 실행이 계속되고 `Yield` 문에 도달하면 다시 중지됩니다. `For Each` 루프를 완료 하는 경우 반복기 함수의 끝 또는 `Return` 또는 `Exit Function` 문에 도달 하면 합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 예제에는 `Yield` 문 내에 있는 한 [에 대 한... 다음](../../../visual-basic/language-reference/statements/for-next-statement.md) 루프입니다. 각 반복에서 [각각에 대해](../../../visual-basic/language-reference/statements/for-each-next-statement.md) 문 본문에서 `Main` 에 대 한 호출을 만듭니다는 `Power` 반복기 함수입니다. 반복기 함수를 호출할 때마다 다음에 `Yield` 루프를 반복하는 도중에 `For…Next` 문이 실행됩니다.  
   
  반복기 메서드의 반환 형식이 <xref:System.Collections.Generic.IEnumerable%601>, 반복기 인터페이스 형식이 있습니다. 반복기 메서드가 호출되면 숫자의 거듭제곱이 들어 있는 열거형 개체를 반환합니다.  
   
  [!code-vb[VbVbalrStatements#98](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/yield-statement_1.vb)]  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 예제는 반복기인 `Get` 접근자에 대해 설명합니다. 속성 선언에 포함 되어는 `Iterator` 한정자입니다.  
   
  [!code-vb[VbVbalrStatements#99](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/yield-statement_2.vb)]  

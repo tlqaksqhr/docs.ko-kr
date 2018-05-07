@@ -1,24 +1,17 @@
 ---
-title: "수학 함수(Visual Basic)"
+title: 수학 함수(Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - math functions, Visual Basic
 - arithmetic operations, math functions
 - math routines
 - Atn function
 ms.assetid: 4d2d82e7-6924-42fe-a4a7-b4dd5bebbd0c
-caps.latest.revision: "23"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 4d67df44e5f4ea89475ea34e87fd5041ee6cb44f
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 9c55b48cbc285ab5ed8742a23af43d3a017a35e3
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="math-functions-visual-basic"></a>수학 함수(Visual Basic)
 메서드는 <xref:System.Math?displayProperty=nameWithType> 클래스 삼각, 로그 및 기타 일반 수학 함수를 제공 합니다.  
@@ -166,9 +159,9 @@ End Function
 ```  
   
 ## <a name="requirements"></a>요구 사항  
- **클래스:**<xref:System.Math>  
+ **클래스:** <xref:System.Math>  
   
- **Namespace:**<xref:System>  
+ **Namespace:** <xref:System>  
   
  **어셈블리:** (mscorlib.dll)에 mscorlib  
   

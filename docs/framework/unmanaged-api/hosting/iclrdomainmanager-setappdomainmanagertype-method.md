@@ -1,14 +1,6 @@
 ---
-title: "ICLRDomainManager::SetAppDomainManagerType 메서드"
-ms.custom: 
+title: ICLRDomainManager::SetAppDomainManagerType 메서드
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICLRDomainManager.SetAppDomainManagerType
 api_location:
@@ -21,17 +13,13 @@ helpviewer_keywords:
 - SetAppDomainManagerType method, ICLRDomainManager interface [.NET Framework hosting]
 - ICLRDomainManager::SetAppDomainManagerType method [.NET Framework hosting]
 ms.assetid: ee91abb0-cb74-41dd-927b-e117fb8ffdf4
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 37c94da8295a0ebb96d45e3a8f122d96bc2126c6
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ea10f9b7d23d8ca6a94d05cac6e586b434c000d5
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="iclrdomainmanagersetappdomainmanagertype-method"></a>ICLRDomainManager::SetAppDomainManagerType 메서드
 파생 된 형식을 지정 된 <xref:System.AppDomainManager?displayProperty=nameWithType> 기본 응용 프로그램 도메인을 초기화 하는 데 사용할 응용 프로그램 도메인 관리자의 클래스입니다.  
@@ -79,7 +67,7 @@ HRESULT SetAppDomainManagerType(
   
  **라이브러리:** MSCorEE.dll에 리소스로 포함  
   
- **.NET framework 버전:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET framework 버전:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>참고 항목  
  [호스팅](../../../../docs/framework/unmanaged-api/hosting/index.md)  

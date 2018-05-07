@@ -1,29 +1,15 @@
 ---
 title: AspNetRouteIntegration
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 0638ce0e-d053-47df-a447-688e447a03fb
-caps.latest.revision: 8
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 93d248030c4b32bd7725cf9c6fbbb829a19f7845
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
-ms.translationtype: MT
+ms.openlocfilehash: c2b2a47a0c817e23a06c39d622bca9c649cbadb4
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="aspnetrouteintegration"></a>AspNetRouteIntegration
-이 샘플에서는 ASP.NET 경로를 사용하여 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] REST 서비스를 호스팅하는 방법을 보여 줍니다. [Basic Resource Service](../../../../docs/framework/wcf/samples/basic-resource-service.md) 샘플이이 시나리오의 자체 호스팅된 버전을 표시 하 고 심층에서 서비스 구현에 설명 합니다. 이 항목에서는 ASP.NET 통합 기능을 중점적으로 설명합니다. ASP.NET 라우팅에 대 한 자세한 내용은 참조 <xref:System.Web.Routing>합니다.  
+이 샘플에서는 ASP.NET 경로 사용 하 여 Windows Communication Foundation (WCF) 나머지 서비스를 호스트 하는 방법을 보여 줍니다. [Basic Resource Service](../../../../docs/framework/wcf/samples/basic-resource-service.md) 샘플이이 시나리오의 자체 호스팅된 버전을 표시 하 고 심층에서 서비스 구현에 설명 합니다. 이 항목에서는 ASP.NET 통합 기능을 중점적으로 설명합니다. ASP.NET 라우팅에 대 한 자세한 내용은 참조 <xref:System.Web.Routing>합니다.  
   
 ## <a name="sample-details"></a>샘플 세부 정보  
  [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 서비스는 리소스 지향/REST 방식으로 고객 컬렉션을 노출합니다. SOAP 기반 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 서비스와 마찬가지로 이 서비스는 .svc 파일을 사용하여 ASP.NET에서 호스팅할 수 있습니다. 그러나 서비스에 대한 URL에 .svc를 포함해야 하므로 HTTP 시나리오의 경우에는 이 서비스가 적절하지 않을 수도 있습니다. 또한 .svc 파일을 서비스 라이브러리와 함께 배포해야 합니다. 이 샘플에서와 같이 ASP.NET 경로를 사용하여 서비스를 호스팅하면 이러한 제한을 피할 수 있습니다.  
@@ -70,7 +56,7 @@ ms.lasthandoff: 04/30/2018
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  이 디렉터리가 없으면 [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4(.NET Framework 4용 WCF(Windows Communication Foundation) 및 WF(Windows Workflow Foundation) 샘플)](http://go.microsoft.com/fwlink/?LinkId=150780) 로 이동하여 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 및 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플을 모두 다운로드하세요. 이 샘플은 다음 디렉터리에 있습니다.  
+>  이 디렉터리가로 이동 [Windows Communication Foundation (WCF) 및.NET Framework 4에 대 한 Windows WF (Workflow Foundation) 샘플](http://go.microsoft.com/fwlink/?LinkId=150780) 모든 Windows Communication Foundation (WCF)를 다운로드 하 고 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플. 이 샘플은 다음 디렉터리에 있습니다.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Web\AspNetRouteIntegration`  
   

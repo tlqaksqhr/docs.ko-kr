@@ -1,40 +1,28 @@
 ---
-title: "방법: WCF 끝점 및 메시지 큐 응용 프로그램과 메시지 교환"
-ms.custom: 
+title: '방법: WCF 끝점 및 메시지 큐 응용 프로그램과 메시지 교환'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 62210fd8-a372-4d55-ab9b-c99827d1885e
-caps.latest.revision: "18"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: fa6f9d0b9631420013593cb44903b5451549e8c6
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 807a34ac50ea317ace42ec12eddcd9ec7cf3736b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications"></a>방법: WCF 끝점 및 메시지 큐 응용 프로그램과 메시지 교환
-MSMQ 통합 바인딩을 통해 기존 메시지 큐(MSMQ) 응용 프로그램을 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 응용 프로그램과 통합하여 MSMQ 메시지와 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 메시지를 서로 변환할 수 있습니다. 그러면 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 클라이언트에서 MSMQ 수신자 응용 프로그램을 호출할 수 있을 뿐 아니라 MSMQ 발신자 응용 프로그램에서 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 서비스를 호출할 수 있습니다.  
+와 WCF 메시지에서 MSMQ 메시지를 변환 하는 MSMQ 통합 바인딩을 사용 하 여 Windows Communication Foundation (WCF) 응용 프로그램과 기존 메시지 큐 (MSMQ) 응용 프로그램을 통합할 수 있습니다. 이 옵션을 사용 하면 WCF 클라이언트에서 MSMQ 수신자 응용 프로그램 호출 수 있을 뿐 아니라 MSMQ 발신자 응용 프로그램에서 WCF 서비스를 호출할 수 있습니다.  
   
- 이 단원에서는 (1) System.Messaging을 사용하여 작성된 MSMQ 응용 프로그램 서비스와 <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding> 클라이언트 간 및 (2) MSMQ 응용 프로그램 클라이언트와 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 서비스 간에 대기 중인 통신에 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]을 사용하는 방법에 대해 설명합니다.  
+ 이 섹션에서는 사용 하는 방법을 설명할 <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding> (1)는 WCF 클라이언트와 System.Messaging 및 (2) MSMQ 응용 프로그램 클라이언트와 WCF 서비스를 사용 하 여 작성 된 MSMQ 응용 프로그램 서비스 간의 대기 중인된 통신에 대 한 합니다.  
   
- MSMQ 수신자 응용 프로그램을 호출 하는 방법을 보여 주는 전체 샘플는 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 클라이언트 참조는 [메시지 큐에 Windows Communication Foundation](../../../../docs/framework/wcf/samples/wcf-to-message-queuing.md) 샘플.  
+ WCF 클라이언트에서 MSMQ 수신자 응용 프로그램을 호출 하는 방법을 보여 주는 전체 샘플을 참조 하십시오.는 [메시지 큐에 Windows Communication Foundation](../../../../docs/framework/wcf/samples/wcf-to-message-queuing.md) 샘플.  
   
- 호출 하는 방법을 보여 주는 전체 샘플에 대 한는 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] MSMQ 클라이언트로부터 서비스, 참조는 [Windows Communication Foundation에 메시지 큐](../../../../docs/framework/wcf/samples/message-queuing-to-wcf.md) 샘플.  
+ MSMQ 클라이언트로부터 WCF 서비스를 호출 하는 방법을 보여 주는 전체 샘플을 참조 하십시오.는 [Windows Communication Foundation에 메시지 큐](../../../../docs/framework/wcf/samples/message-queuing-to-wcf.md) 샘플.  
   
 ### <a name="to-create-a-wcf-service-that-receives-messages-from-a-msmq-client"></a>MSMQ 클라이언트로부터 메시지를 수신하는 WCF 서비스를 만들려면  
   
-1.  다음 예제 코드에 표시된 것처럼 MSMQ 발신자 응용 프로그램으로부터 대기 중인 메시지를 수신하는 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 서비스에 대한 서비스 계약을 정의하는 인터페이스를 정의합니다.  
+1.  다음 예제 코드에 나와 있는 것 처럼 MSMQ 발신자 응용 프로그램에서 대기 중인된 메시지를 수신 하는 WCF 서비스에 대 한 서비스 계약을 정의 하는 인터페이스를 정의 합니다.  
   
      [!code-csharp[S_MsmqToWcf#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_msmqtowcf/cs/service.cs#1)]
      [!code-vb[S_MsmqToWcf#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/s_msmqtowcf/vb/service.vb#1)]  
@@ -54,12 +42,12 @@ MSMQ 통합 바인딩을 통해 기존 메시지 큐(MSMQ) 응용 프로그램�
   
 ### <a name="to-create-a-wcf-client-that-sends-messages-to-a-msmq-receiver-application"></a>MSMQ 수신자 응용 프로그램에 메시지를 보내는 WCF 클라이언트를 만들려면  
   
-1.  다음 예제 코드에 표시된 것처럼 대기 중인 메시지를 MSMQ 수신기에 보내는 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 클라이언트에 대한 서비스 계약을 정의하는 인터페이스를 정의합니다.  
+1.  다음 예제 코드와 같이 대기 중인 MSMQ 수신기에 메시지를 전송 하는 WCF 클라이언트에 대 한 서비스 계약을 정의 하는 인터페이스를 정의 합니다.  
   
      [!code-csharp[S_WcfToMsmq#6](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_wcftomsmq/cs/proxy.cs#6)]
      [!code-vb[S_WcfToMsmq#6](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/s_wcftomsmq/vb/proxy.vb#6)]  
   
-2.  [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 클라이언트에서 MSMQ 수신자를 호출하는 데 사용할 클라이언트 클래스를 정의합니다.  
+2.  MSMQ 수신자를 호출 하는 WCF 클라이언트를 사용 하는 클라이언트 클래스를 정의 합니다.  
   
      [!code-csharp[S_WcfToMsmq#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_wcftomsmq/cs/snippets.cs#2)]
      [!code-vb[S_WcfToMsmq#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/s_wcftomsmq/vb/snippets.vb#2)]  

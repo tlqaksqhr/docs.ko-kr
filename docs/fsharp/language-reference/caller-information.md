@@ -1,17 +1,12 @@
 ---
 title: '호출자 정보 (F #)'
 description: 호출자 정보 인수 특성 메서드에에서 호출자 정보를 사용 하는 방법을 설명 합니다.
-author: cartermp
-ms.author: phcart
 ms.date: 04/25/2017
-ms.topic: language-reference
-ms.prod: dotnet-fsharp
-ms.devlang: fsharp
-ms.openlocfilehash: 840c6c6308c55fe2a2dbefd52b159a32fb92f787
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 6fd80213cdaf2c4662fd4c2ed9eaf8949e397efe
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="caller-information"></a>호출자 정보
 

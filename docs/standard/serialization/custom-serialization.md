@@ -1,8 +1,6 @@
 ---
-title: "사용자 지정 serialization"
+title: 사용자 지정 serialization
 ms.date: 03/30/2017
-ms.prod: .net
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -19,18 +17,11 @@ helpviewer_keywords:
 - OnDeserializedAttribute class, custom serialization
 - OnSerializingAttribute class, custom serialization
 ms.assetid: 12ed422d-5280-49b8-9b71-a2ed129c0384
-caps.latest.revision: "11"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 5718f19318121c2025b9d92a5947574289c1f4d0
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 79cb7a2a0706cb06cbd444f4a2e1ae87cb701101
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="custom-serialization"></a>사용자 지정 serialization
 사용자 지정 serialization은 형식의 serialization 및 deserialization을 제어하는 프로세스입니다. serialization을 제어하면 형식의 핵심 기능에 영향을 주지 않고 다양한 형식 사이에 직렬화 및 deserialize할 수 있는 기능인 직렬화 호환성을 유지할 수 있습니다. 예를 들어 첫 번째 버전의 형식에는 두 개의 필드만 있을 수 있습니다. 다음 버전의 형식에는 몇 개의 필드가 더 추가될 수 있습니다. 하지만 응용 프로그램의 두 번째 버전에서는 여전히 두 형식을 모두 serialize 및 deserialize할 수 있어야 합니다. 다음 단원에서는 serialization을 제어하는 방법에 대해 설명합니다.
@@ -192,7 +183,7 @@ End Class
   
  개체는 내부에서 외부로 재생성됩니다. deserialization 도중 메서드를 호출하면 원하지 않는 파생 효과가 발생할 수 있습니다. 호출된 메서드가 호출 시점에서 deserialize되지 않은 개체 참조를 참조할 수 있기 때문입니다. deserialize되는 클래스가 <xref:System.Runtime.Serialization.IDeserializationCallback>을 구현하는 경우 전체 개체 그래프가 deserialize될 때 <xref:System.Runtime.Serialization.IDeserializationCallback.OnDeserialization*> 메서드가 자동으로 호출됩니다. 이 시점에서 참조된 모든 자식 개체가 완전히 복원됩니다. 해시 테이블은 이벤트 수신기를 사용하지 않고 deserialize하기 어려운 클래스의 예입니다. deserialization 도중 키와 값 쌍을 검색하는 것은 쉽지만, 해시 테이블에서 파생된 클래스가 deserialize되었다는 보장이 없기 때문에 해당 개체를 다시 해시 테이블에 추가하면 문제가 발생할 수 있습니다. 따라서 이 단계에서 해시 테이블에 대해 메서드를 호출하지 않는 것이 좋습니다.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>참고자료  
  [이진 serialization](binary-serialization.md)  
  [XML 및 SOAP serialization](xml-and-soap-serialization.md)  
  [보안 및 Serialization](../../../docs/framework/misc/security-and-serialization.md)

@@ -1,11 +1,6 @@
 ---
-title: "Resume 문"
+title: Resume 문
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.Resume
 - vb.ResumeNext
@@ -20,14 +15,11 @@ helpviewer_keywords:
 - execution
 - Resume statement [Visual Basic]
 ms.assetid: e24d058b-1a5c-4274-acb9-7d295d3ea537
-caps.latest.revision: "16"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 3cb4334f302c07c81b6b8a7d0626be08cc69b1ed
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 1d03f631893be51529f29af824de0d684bf43804
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="resume-statement"></a>Resume 문
 오류 처리 루틴 완료 된 후 실행을 다시 시작 합니다.  
@@ -42,7 +34,7 @@ Resume [ Next | line ]
   
 ## <a name="parts"></a>요소  
  `Resume`  
- 필수 요소. 오류 처리기와 같은 프로시저에 오류가 발생 한 경우 오류를 발생 시킨 문으로 실행을 다시 시작 합니다. 호출된 된 프로시저에서 오류가 발생 한 경우 오류 처리 루틴을 포함 하는 프로시저에서 마지막으로 호출한의 문에서 실행이 다시 시작 합니다.  
+ 필수. 오류 처리기와 같은 프로시저에 오류가 발생 한 경우 오류를 발생 시킨 문으로 실행을 다시 시작 합니다. 호출된 된 프로시저에서 오류가 발생 한 경우 오류 처리 루틴을 포함 하는 프로시저에서 마지막으로 호출한의 문에서 실행이 다시 시작 합니다.  
   
  `Next`  
  선택 사항입니다. 오류 처리기와 같은 프로시저에 오류가 발생 한 경우 오류를 발생 시킨 문 바로 다음 문으로 실행을 다시 시작 합니다. 오류 처리 루틴을 포함 하는 프로시저에서 마지막으로 호출 하는 문 바로 다음 문으로 실행을 다시 시작 호출된 된 프로시저에서 오류가 발생 한 경우 (또는 `On Error Resume Next` 문).  

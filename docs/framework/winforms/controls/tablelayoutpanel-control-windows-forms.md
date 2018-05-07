@@ -1,13 +1,6 @@
 ---
-title: "TableLayoutPanel 컨트롤(Windows Forms)"
-ms.custom: 
+title: TableLayoutPanel 컨트롤(Windows Forms)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - TableLayoutPanel control [Windows Forms]
 - layout [Windows Forms]
@@ -16,16 +9,11 @@ helpviewer_keywords:
 - layout [Windows Forms], TableLayoutPanel control
 - automatic sizing
 ms.assetid: f55175c6-424e-4782-a86e-3f79c1550235
-caps.latest.revision: "14"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 4205e39ad8ace594eb6b86c04e45c9685db559cf
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 3615ab1f9a9076b8db0e5fde1e5bd4a1a804f3bf
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tablelayoutpanel-control-windows-forms"></a>TableLayoutPanel 컨트롤(Windows Forms)
 <xref:System.Windows.Forms.TableLayoutPanel> 컨트롤은 해당 내용을 표에 정렬합니다. 레이아웃이 디자인 타임과 런타임에 모두 수행되므로 응용 프로그램 환경이 변경되면 동적으로 변경될 수 있습니다. 따라서 패널의 컨트롤이 비례적으로 크기를 조정할 수 있으므로 지역화로 인한 부모 컨트롤 크기 조정이나 텍스트 길이 변경과 같은 변경 내용에 응답할 수 있습니다.  

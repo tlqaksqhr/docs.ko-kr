@@ -1,17 +1,12 @@
 ---
 title: 코드 인용(F#)
 description: '생성 하 고 프로그래밍 방식으로 F # 코드 식을 사용할 수 있는 언어 기능 F # 코드 인용에 알아봅니다.'
-author: cartermp
-ms.author: phcart
 ms.date: 05/16/2016
-ms.topic: language-reference
-ms.prod: dotnet-fsharp
-ms.devlang: fsharp
-ms.openlocfilehash: cfa2e4b9a4ad1776315dfa8ea82fb8fc3f13a552
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: a6fab0364cadef1f45276267a59c694140b24a9c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="code-quotations"></a>코드 인용
 

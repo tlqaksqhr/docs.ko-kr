@@ -1,13 +1,6 @@
 ---
-title: "방법: 기하학적 경로를 사용하여 개체 회전(매트릭스 애니메이션)"
-ms.custom: 
+title: '방법: 기하학적 경로를 사용하여 개체 회전(매트릭스 애니메이션)'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -16,21 +9,16 @@ helpviewer_keywords:
 - rotating objects by geometric paths [WPF]
 - matrix animation [WPF]
 ms.assetid: 877dc9aa-6bdc-4beb-8772-3efaec32c0f0
-caps.latest.revision: "14"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: c001c0969e42c1eaadad6c029ae86009176b9eb7
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 6deb593ca059d49f744226be313adb6d8781b325
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-rotate-an-object-by-using-a-geometric-path-matrix-animation"></a>방법: 기하학적 경로를 사용하여 개체 회전(매트릭스 애니메이션)
 사용 하는 방법을 보여 주는이 예제는 <xref:System.Windows.Media.Animation.MatrixAnimationUsingPath> 및 <xref:System.Windows.Media.MatrixTransform> (피벗)에 정의 된 기하학적 경로 따라 개체를 회전 하는 <xref:System.Windows.Media.PathGeometry> 개체입니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 예제에서는 <xref:System.Windows.Media.Animation.MatrixAnimationUsingPath> 애니메이션 효과를 줄 개체는 <xref:System.Windows.Media.MatrixTransform.Matrix%2A> 속성은 <xref:System.Windows.Media.MatrixTransform>합니다. <xref:System.Windows.Media.MatrixTransform> 곡선된 경로 따라 이동으로 인해 및 단추에 적용 됩니다. 때문에 <xref:System.Windows.Media.Animation.MatrixAnimationUsingPath.DoesRotateWithTangent%2A> 속성이 `true`, 사각형 경로의 탄젠트를 따라 회전 합니다.  
   
  [!code-xaml[PathAnimationGallery_snippet#MatrixAnimationUsingPathDoesRotateWithTangentWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PathAnimationGallery_snippet/CS/matrixanimationusingpathdoesrotatewithtangentexample.xaml#matrixanimationusingpathdoesrotatewithtangentwholepage)]  

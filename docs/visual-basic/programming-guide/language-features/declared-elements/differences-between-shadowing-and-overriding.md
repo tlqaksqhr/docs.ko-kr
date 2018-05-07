@@ -1,24 +1,15 @@
 ---
-title: "숨기기와 재정의의 차이점(Visual Basic)"
-ms.custom: 
+title: 숨기기와 재정의의 차이점(Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - shadowing, vs. overriding
 - overriding, vs. shadowing
 ms.assetid: 2d014a0b-7630-407d-8f4e-24bd87987923
-caps.latest.revision: "24"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 2d67486d9c6af96d314abad7142ba86779d74f5d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 94ce3e7fe25b7942730e6e89a53654b03d91c42b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="differences-between-shadowing-and-overriding-visual-basic"></a>숨기기와 재정의의 차이점(Visual Basic)
 기본 클래스에서 상속 되는 클래스를 정의할 때 파생된 클래스에서 기본 클래스 요소 중 하나 이상을 재정의 수도 있습니다. 숨기기와 재정의이 목적을 위해 둘 다 사용할 수는 있습니다.  
@@ -36,8 +27,8 @@ ms.lasthandoff: 11/21/2017
 |재정의 요소|선언 된 요소 형식|프로시저 또는 같은 호출 시퀀스를 사용 하 여 속성<sup>1</sup>|  
 |재정의 요소 액세스 수준|모든 액세스 수준|재정의 된 요소 형식의 액세스 수준을 변경할 수 없습니다.|  
 |읽기 및 쓰기 가능성 재정의 요소|모든 조합|또는 쓰기 재정의 된 속성의 가능성을 변경할 수 없습니다.|  
-|재정의 통해 제어|기본 클래스 요소 적용 또는 섀도잉 금지 수 없음|기본 클래스 요소를 지정할 수 `MustOverride`, `NotOverridable`, 또는`Overridable`|  
-|키워드 사용|`Shadows`파생된 클래스에서 권장 `Shadows` 두 가정 `Shadows` 나 `Overrides` 지정<sup>2</sup>|`Overridable`또는 `MustOverride` 기본 클래스;에 필요한 `Overrides` 파생된 클래스에서 필요한|  
+|재정의 통해 제어|기본 클래스 요소 적용 또는 섀도잉 금지 수 없음|기본 클래스 요소를 지정할 수 `MustOverride`, `NotOverridable`, 또는 `Overridable`|  
+|키워드 사용|`Shadows` 파생된 클래스에서 권장 `Shadows` 두 가정 `Shadows` 나 `Overrides` 지정<sup>2</sup>|`Overridable` 또는 `MustOverride` 기본 클래스;에 필요한 `Overrides` 파생된 클래스에서 필요한|  
 |파생된 클래스에서 파생 된 클래스에서 재정의 되는 요소 상속|에 의해 상속 요소 숨김 추가로 파생 되는 클래스입니다. 숨겨진된 요소는 여전히 숨겨져<sup>3</sup>|상속 된 요소를 재정의 추가로 파생 되는 클래스입니다. 재정의 된 요소는 여전히 재정의|  
   
  <sup>1</sup> 는 *호출 시퀀스* 요소 형식으로 이루어져 (`Function`, `Sub`, `Operator`, 또는 `Property`), 이름, 매개 변수 목록 및 반환 형식입니다. 속성 또는 그 반대로 사용 하 여 프로시저를 재정의할 수 없습니다. 한 종류의 프로시저를 재정의할 수 없습니다 (`Function`, `Sub`, 또는 `Operator`)를 다른 종류입니다.  

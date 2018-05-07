@@ -1,24 +1,12 @@
 ---
 title: 어떤&#39;.NET 4.5에서에서 Windows Workflow Foundation의 새로운 s
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 195c43a8-e0a8-43d9-aead-d65a9e6751ec
-caps.latest.revision: 32
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: d862865057f9978a0b815f3026f2ba67c87eac7d
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: bf5da78e55912750b95752c79119fe00e9ae0c78
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="what39s-new-in-windows-workflow-foundation-in-net-45"></a>어떤&#39;.NET 4.5에서에서 Windows Workflow Foundation의 새로운 s
 Windows WF (Workflow Foundation)에서 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 새 활동, 디자이너 기능 및 워크플로 개발 모델과 같은 많은 새로운 기능이 도입 되었습니다. [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]에서 새로 추가된 워크플로 기능 중 다수는 재호스트된 Workflow Designer에서 지원됩니다. 지원 되는 새로운 기능에 대 한 자세한 내용은 참조 하십시오. [다시 호스트 된 워크플로 디자이너에서 새 Workflow Foundation 4.5 기능에 대 한 지원을](../../../docs/framework/windows-workflow-foundation/wf-features-in-the-rehosted-workflow-designer.md)합니다. 마이그레이션.NET 3.0 및.NET 3.5 워크플로 응용 프로그램을 최신 버전을 사용 하는 방법에 대 한 자세한 내용은 참조 [마이그레이션 지침](../../../docs/framework/windows-workflow-foundation/migration-guidance.md)합니다. 이 항목에서는 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]에 새로 추가된 워크플로 기능에 대해 간략하게 설명합니다.  

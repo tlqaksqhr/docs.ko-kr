@@ -1,13 +1,6 @@
 ---
-title: "성능 최적화: 개체 동작"
-ms.custom: 
+title: '성능 최적화: 개체 동작'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -18,16 +11,11 @@ helpviewer_keywords:
 - object performance considerations [WPF]
 - Freezable objects [WPF], performance
 ms.assetid: 73aa2f47-1d73-439a-be1f-78dc4ba2b5bd
-caps.latest.revision: "12"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 12c4dc202ac4db2c21b0a45b61608f5c03c24ac9
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 2e1f56dec87de7a22aa8a0bfefe84222d74ba085
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="optimizing-performance-object-behavior"></a>성능 최적화: 개체 동작
 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 개체의 기본 동작을 이해하면 기능과 성능 간의 균형을 적절하게 조정할 수 있습니다.  
@@ -80,8 +68,8 @@ ms.lasthandoff: 12/22/2017
   
 |**상태**|**Size**|  
 |---------------|--------------|  
-|고정<xref:System.Windows.Media.SolidColorBrush>|212바이트|  
-|고정 되지 않은<xref:System.Windows.Media.SolidColorBrush>|972바이트|  
+|고정 <xref:System.Windows.Media.SolidColorBrush>|212바이트|  
+|고정 되지 않은 <xref:System.Windows.Media.SolidColorBrush>|972바이트|  
   
  다음 코드 샘플에서는 이러한 개념을 보여 줍니다.  
   
@@ -91,7 +79,7 @@ ms.lasthandoff: 12/22/2017
 ### <a name="changed-handlers-on-unfrozen-freezables-may-keep-objects-alive"></a>고정되지 않은 Freezable에 대한 처리기를 변경하면 개체가 활성 상태로 유지될 수 있음  
  에 전달 하는 대리자는 <xref:System.Windows.Freezable> 개체의 <xref:System.Windows.Freezable.Changed> 이벤트는 결과적으로 해당 개체에 대 한 참조입니다. 따라서 <xref:System.Windows.Freezable.Changed> 이벤트 처리기 수 개체가 활성 상태로 유지 예상 보다 더 이상. 수신 하도록 등록 된 하는 개체를 정리 하는 경우는 <xref:System.Windows.Freezable> 개체의 <xref:System.Windows.Freezable.Changed> 대리자를 제거 하면 개체가 해제 하기 전에 반드시 이벤트입니다.  
   
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]또한 후크합니다 <xref:System.Windows.Freezable.Changed> 이벤트 내부적으로 합니다. 예를 들어 모든 종속성 속성 시간은 <xref:System.Windows.Freezable> 값을 수신 하는 대로 <xref:System.Windows.Freezable.Changed> 이벤트 자동으로 합니다. <xref:System.Windows.Shapes.Shape.Fill%2A> 속성을는 <xref:System.Windows.Media.Brush>,이 개념을 보여 줍니다.  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 또한 후크합니다 <xref:System.Windows.Freezable.Changed> 이벤트 내부적으로 합니다. 예를 들어 모든 종속성 속성 시간은 <xref:System.Windows.Freezable> 값을 수신 하는 대로 <xref:System.Windows.Freezable.Changed> 이벤트 자동으로 합니다. <xref:System.Windows.Shapes.Shape.Fill%2A> 속성을는 <xref:System.Windows.Media.Brush>,이 개념을 보여 줍니다.  
   
  [!code-csharp[Performance#PerformanceSnippet4](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Performance/CSharp/Window1.xaml.cs#performancesnippet4)]
  [!code-vb[Performance#PerformanceSnippet4](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/Performance/visualbasic/window1.xaml.vb#performancesnippet4)]  
@@ -110,7 +98,7 @@ ms.lasthandoff: 12/22/2017
   
 <a name="User_Interface_Virtualization"></a>   
 ## <a name="user-interface-virtualization"></a>사용자 인터페이스 가상화  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]또한 변형을 제공는 <xref:System.Windows.Controls.StackPanel> 자동으로 "가상화" 데이터 바인딩된 자식 콘텐츠 요소입니다. 여기서 가상화라는 단어는 화면에 표시되는 항목에 따라 많은 수의 데이터 항목에서 개체의 하위 집합이 생성되는 기술을 가리킵니다. 특정 시점에 화면에 표시되는 것보다 많은 개수의 UI 요소를 생성하는 것은 메모리 및 프로세서 측면에서 비효율적입니다. <xref:System.Windows.Controls.VirtualizingStackPanel>(에서 제공 하는 기능을 통해 <xref:System.Windows.Controls.VirtualizingPanel>) 표시 되는 항목을 계산 하 고 협력 하는 <xref:System.Windows.Controls.ItemContainerGenerator> 에서 <xref:System.Windows.Controls.ItemsControl> (같은 <xref:System.Windows.Controls.ListBox> 또는 <xref:System.Windows.Controls.ListView>)만 표시 되는 항목에 대 한 요소를 만들 합니다.  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 또한 변형을 제공는 <xref:System.Windows.Controls.StackPanel> 자동으로 "가상화" 데이터 바인딩된 자식 콘텐츠 요소입니다. 여기서 가상화라는 단어는 화면에 표시되는 항목에 따라 많은 수의 데이터 항목에서 개체의 하위 집합이 생성되는 기술을 가리킵니다. 특정 시점에 화면에 표시되는 것보다 많은 개수의 UI 요소를 생성하는 것은 메모리 및 프로세서 측면에서 비효율적입니다. <xref:System.Windows.Controls.VirtualizingStackPanel> (에서 제공 하는 기능을 통해 <xref:System.Windows.Controls.VirtualizingPanel>) 표시 되는 항목을 계산 하 고 협력 하는 <xref:System.Windows.Controls.ItemContainerGenerator> 에서 <xref:System.Windows.Controls.ItemsControl> (같은 <xref:System.Windows.Controls.ListBox> 또는 <xref:System.Windows.Controls.ListView>)만 표시 되는 항목에 대 한 요소를 만들 합니다.  
   
  성능을 최적화하기 위해 이러한 항목에 대한 시각적 개체는 화면에 보이는 경우에만 생성되거나 활성 상태를 유지합니다. 컨트롤의 가시 영역에 더 이상 존재하지 않는 시각적 개체는 제거될 수 있습니다. 이는 데이터 개체가 로컬 컬렉션에 전혀 존재하지 않고 필요에 따라 스트리밍되는 데이터 가상화와 혼동해서는 안 됩니다.  
   

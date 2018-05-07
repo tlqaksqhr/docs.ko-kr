@@ -1,39 +1,27 @@
 ---
-title: "ToolBar 개요"
-ms.custom: 
+title: ToolBar 개요
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - controls [WPF], ToolBar
 - ToolBar control [WPF]
 ms.assetid: a8edb32c-118d-4f31-b6e6-8899082b504b
-caps.latest.revision: "28"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: f00597d48ff100325c1fb2884f64169164415a50
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 0c66867ce4d86a11424d7a7a859817d603b4227e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="toolbar-overview"></a>ToolBar 개요
-<xref:System.Windows.Controls.ToolBar>컨트롤은 명령 또는 해당 함수에서 일반적으로 관련이 있는 컨트롤의 그룹에 대 한 컨테이너입니다. A <xref:System.Windows.Controls.ToolBar> 일반적으로 명령을 호출 하는 단추가 포함 되어 있습니다.  
+<xref:System.Windows.Controls.ToolBar> 컨트롤은 명령 또는 해당 함수에서 일반적으로 관련이 있는 컨트롤의 그룹에 대 한 컨테이너입니다. A <xref:System.Windows.Controls.ToolBar> 일반적으로 명령을 호출 하는 단추가 포함 되어 있습니다.  
   
   
 <a name="ToolBarControl"></a>   
 ## <a name="toolbar-control"></a>ToolBar 컨트롤  
- <xref:System.Windows.Controls.ToolBar> 컨트롤 단일 행 이나 열으로 단추 또는 다른 컨트롤의 막대와 비슷한 배열에서 해당 이름을 사용 합니다. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]<xref:System.Windows.Controls.ToolBar> 컨트롤 크기 제한 내에 맞지 않는 모든 항목을 배치 하는 오버플로 메커니즘을 제공 <xref:System.Windows.Controls.ToolBar> 특별 한 넘침 영역에 있습니다. 또한 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Controls.ToolBar> 컨트롤은 일반적으로 사용 하는 관련 된 <xref:System.Windows.Controls.ToolBarTray> 크기 조정 및 컨트롤과 사용자가 시작한 위한 지원 뿐 아니라 특별 한 레이아웃 동작을 제공 하는 컨트롤입니다.  
+ <xref:System.Windows.Controls.ToolBar> 컨트롤 단일 행 이나 열으로 단추 또는 다른 컨트롤의 막대와 비슷한 배열에서 해당 이름을 사용 합니다. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Controls.ToolBar> 컨트롤 크기 제한 내에 맞지 않는 모든 항목을 배치 하는 오버플로 메커니즘을 제공 <xref:System.Windows.Controls.ToolBar> 특별 한 넘침 영역에 있습니다. 또한 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Controls.ToolBar> 컨트롤은 일반적으로 사용 하는 관련 된 <xref:System.Windows.Controls.ToolBarTray> 크기 조정 및 컨트롤과 사용자가 시작한 위한 지원 뿐 아니라 특별 한 레이아웃 동작을 제공 하는 컨트롤입니다.  
   
 <a name="Creating_ToolBars"></a>   
 ## <a name="specifying-the-position-of-toolbars-in-a-toolbartray"></a>ToolBarTray에서 ToolBar 위치 지정  
- 사용 하 여는 <xref:System.Windows.Controls.ToolBar.Band%2A> 및 <xref:System.Windows.Controls.ToolBar.BandIndex%2A> 의 위치를 지정할 속성은 <xref:System.Windows.Controls.ToolBar> 에 <xref:System.Windows.Controls.ToolBarTray>합니다. <xref:System.Windows.Controls.ToolBar.Band%2A>위치를 나타냅니다는 <xref:System.Windows.Controls.ToolBar> 해당 부모 노드에 배치 <xref:System.Windows.Controls.ToolBarTray>합니다. <xref:System.Windows.Controls.ToolBar.BandIndex%2A>순서를 나타냅니다는 <xref:System.Windows.Controls.ToolBar> 해당 대역 내에 배치 됩니다. 다음 예제에서는 배치 하려면이 속성을 사용 방법 <xref:System.Windows.Controls.ToolBar> 컨트롤 내부의 <xref:System.Windows.Controls.ToolBarTray>합니다.  
+ 사용 하 여는 <xref:System.Windows.Controls.ToolBar.Band%2A> 및 <xref:System.Windows.Controls.ToolBar.BandIndex%2A> 의 위치를 지정할 속성은 <xref:System.Windows.Controls.ToolBar> 에 <xref:System.Windows.Controls.ToolBarTray>합니다. <xref:System.Windows.Controls.ToolBar.Band%2A> 위치를 나타냅니다는 <xref:System.Windows.Controls.ToolBar> 해당 부모 노드에 배치 <xref:System.Windows.Controls.ToolBarTray>합니다. <xref:System.Windows.Controls.ToolBar.BandIndex%2A> 순서를 나타냅니다는 <xref:System.Windows.Controls.ToolBar> 해당 대역 내에 배치 됩니다. 다음 예제에서는 배치 하려면이 속성을 사용 방법 <xref:System.Windows.Controls.ToolBar> 컨트롤 내부의 <xref:System.Windows.Controls.ToolBarTray>합니다.  
   
  [!code-xaml[ToolBarExample#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ToolBarExample/CS/Pane1.xaml#2)]  
   

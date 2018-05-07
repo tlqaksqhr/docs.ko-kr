@@ -1,13 +1,6 @@
 ---
-title: "방법: Windows Forms 대화 상자 표시"
-ms.custom: 
+title: '방법: Windows Forms 대화 상자 표시'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -18,16 +11,11 @@ helpviewer_keywords:
 - Windows Forms, calling one form from another
 - dialog boxes [Windows Forms], displaying for Windows Forms
 ms.assetid: aaac1b38-c651-495a-8d3d-5a9bfb32fee3
-caps.latest.revision: "10"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 46e4d019bbd586c0ed46794f55c65da7bcc657f1
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: a25fe86c4dde1fed69e192956d77615bf2a70402
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-display-dialog-boxes-for-windows-forms"></a>방법: Windows Forms 대화 상자 표시
 마찬가지로 응용 프로그램에서 다른 폼을 표시할 때 대화 상자를 표시 합니다. 시작 폼 응용 프로그램이 실행 될 때 자동으로 로드 합니다. 두 번째 폼 또는 대화 상자가 응용 프로그램에 표시 되도록 로드 하 고 표시 하는 코드를 작성 합니다. 마찬가지로, 폼 또는 대화 상자 사라지게 하려면, 언로드 하거나 숨길 수는 코드를 작성 합니다.  

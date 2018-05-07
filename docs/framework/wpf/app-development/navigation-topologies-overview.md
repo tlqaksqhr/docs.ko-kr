@@ -1,13 +1,6 @@
 ---
-title: "탐색 토폴로지 개요"
-ms.custom: 
+title: 탐색 토폴로지 개요
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - linear topology [WPF]
 - fixed hierarchical topology [WPF]
@@ -16,19 +9,14 @@ helpviewer_keywords:
 - navigation topologies [WPF]
 - dynamically-generated topology
 ms.assetid: 5d5ee837-629a-4933-869a-186dc22ac43d
-caps.latest.revision: "20"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: dbe7fe80639537293413d8fb923033909a2451e9
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 8976ba7973e4f53022846b98c47d5613fd6ba158
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="navigation-topologies-overview"></a>탐색 토폴로지 개요
-<a name="introduction"></a>이 개요에서는의 탐색 토폴로지 소개 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]합니다. 세 가지 일반적인 탐색 토폴로지를 샘플과 함께 차례로 설명합니다.  
+<a name="introduction"></a> 이 개요에서는의 탐색 토폴로지 소개 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]합니다. 세 가지 일반적인 탐색 토폴로지를 샘플과 함께 차례로 설명합니다.  
   
 > [!NOTE]
 >  이 항목을 읽기 전에 구조적된 탐색에 대 한 개념을 잘 알고 있어야 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 페이지 함수를 사용 하 여 합니다. 이 항목에 대 한 자세한 내용은 참조 하십시오. [구조적 탐색 개요](../../../../docs/framework/wpf/app-development/structured-navigation-overview.md)합니다.  

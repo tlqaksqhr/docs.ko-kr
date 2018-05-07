@@ -1,29 +1,17 @@
 ---
-title: "Discovery Proxy 샘플"
-ms.custom: 
+title: Discovery Proxy 샘플
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 1dfa02df-15b1-4e97-9c8e-f5f2772711b0
-caps.latest.revision: "14"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 4b6e24c72002c7eef0e03af18f43992cc93b1d5c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: e9cbfcb717f502a849d4d508d13df6c00b95db58
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="discovery-proxy-sample"></a>Discovery Proxy 샘플
 이 샘플에서는 검색 프록시를 구현하여 기존 서비스에 대한 정보를 저장하는 방법과 클라이언트가 해당 프록시에서 정보를 쿼리하는 방법을 보여 줍니다. 이 샘플은 다음의 세 프로젝트로 구성되어 있습니다.  
   
--   **서비스**: 단순 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 검색 프록시에 자체 등록 하는 계산기 서비스입니다.  
+-   **서비스**: 검색 프록시에 자체 등록 하는 간단한 Windows Communication Foundation (WCF) 계산기 서비스입니다.  
   
 -   **검색 프록시**: 검색 프록시 서비스의 구현입니다.  
   
@@ -37,7 +25,7 @@ ms.lasthandoff: 12/22/2017
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  이 디렉터리가 없으면 [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4(.NET Framework 4용 WCF(Windows Communication Foundation) 및 WF(Windows Workflow Foundation) 샘플)](http://go.microsoft.com/fwlink/?LinkId=150780) 로 이동하여 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 및 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플을 모두 다운로드하세요. 이 샘플은 다음 디렉터리에 있습니다.  
+>  이 디렉터리가로 이동 [Windows Communication Foundation (WCF) 및.NET Framework 4에 대 한 Windows WF (Workflow Foundation) 샘플](http://go.microsoft.com/fwlink/?LinkId=150780) 모든 Windows Communication Foundation (WCF)를 다운로드 하 고 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플. 이 샘플은 다음 디렉터리에 있습니다.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Discovery\DiscoveryProxy`  
   

@@ -1,13 +1,6 @@
 ---
-title: "DateTime XAML 구문"
-ms.custom: 
+title: DateTime XAML 구문
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - DateTime XAML syntax [WPF], strings for
 - DateTime XAML syntax [WPF], where used
@@ -16,16 +9,11 @@ helpviewer_keywords:
 - DateTime XAML text [WPF]
 - DateTime XAML syntax [WPF], format strings for
 ms.assetid: 5901710a-609b-40c8-9d65-f0016cd9090b
-caps.latest.revision: "10"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: f3010d3123e78a5e292c5ac78ef4894962fb8f9d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 286117cc0cce9fb54ea2c372360b13865fba77ad
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="datetime-xaml-syntax"></a>DateTime XAML 구문
 와 같은 일부 컨트롤 <xref:System.Windows.Controls.Calendar> 및 <xref:System.Windows.Controls.DatePicker>를 사용 하는 속성이 <xref:System.DateTime> 유형입니다. 일반적으로 런타임에 코드 숨김으로 이러한 컨트롤에 대해 초기 날짜 또는 시간을 지정하지만 XAML로 초기 날짜 또는 시간을 지정할 수 있습니다. WPF XAML 파서에 처리의 구문 분석 <xref:System.DateTime> 기본 제공 XAML 텍스트 구문을 사용 하 여 값입니다. 이 항목의 세부 사항을 설명는 <xref:System.DateTime> XAML 텍스트 구문입니다.  
@@ -36,11 +24,11 @@ ms.lasthandoff: 12/22/2017
  날짜를 항상 XAML로 설정할 필요가 없으며 이 방법이 바람직하지 않을 수도 있습니다. 예를 들어, 사용할 수는 <xref:System.DateTime.Now%2A?displayProperty=nameWithType> 속성을 런타임에, 또는 있습니다 날짜 초기화 코드 숨김에서 사용자 입력에 따라 일정에 대 한 모든 날짜 조정을 수행할 수 있습니다. 그러나 여러 가지로 하드 코딩 날짜를 사용할 수 있는 시나리오는 <xref:System.Windows.Controls.Calendar> 및 <xref:System.Windows.Controls.DatePicker> 제어 템플릿에서 합니다. <xref:System.DateTime> 이러한 시나리오에 대 한 XAML 구문을 사용 해야 합니다.  
   
 ### <a name="datetime-xaml-syntax-is-a-native-behavior"></a>DateTime XAML 구문이 기본 동작임  
- <xref:System.DateTime>CLR의 기본 클래스 라이브러리에 정의 된 클래스입니다. 기본 클래스 라이브러리의 관계는 CLR의 나머지 부분을 때문에 불가능 적용할 <xref:System.ComponentModel.TypeConverterAttribute> 클래스와 사용으로 변환 하 고 XAML에서 문자열을 처리 하는 형식 변환기를 <xref:System.DateTime> 런타임 개체 모델에서. 변환 동작을 제공하는 `DateTimeConverter` 클래스가 없습니다. 이 항목에서 설명하는 변환 동작은 WPF XAML 파서의 기본 동작입니다.  
+ <xref:System.DateTime> CLR의 기본 클래스 라이브러리에 정의 된 클래스입니다. 기본 클래스 라이브러리의 관계는 CLR의 나머지 부분을 때문에 불가능 적용할 <xref:System.ComponentModel.TypeConverterAttribute> 클래스와 사용으로 변환 하 고 XAML에서 문자열을 처리 하는 형식 변환기를 <xref:System.DateTime> 런타임 개체 모델에서. 변환 동작을 제공하는 `DateTimeConverter` 클래스가 없습니다. 이 항목에서 설명하는 변환 동작은 WPF XAML 파서의 기본 동작입니다.  
   
 <a name="format_strings_for_datetime_xaml_syntax"></a>   
 ## <a name="format-strings-for-datetime-xaml-syntax"></a>DateTime XAML 구문의 형식 문자열  
- 형식을 지정할 수 있습니다는 <xref:System.DateTime> 형식 문자열을 사용 합니다. 형식 문자열은 값을 생성하는 데 사용할 수 있는 텍스트 구문을 공식화합니다. <xref:System.DateTime>기존 WPF 컨트롤만 일반적으로 사용 하 여의 날짜 구성 요소에 대해 값 <xref:System.DateTime> 및 시간 구성 요소가 없습니다.  
+ 형식을 지정할 수 있습니다는 <xref:System.DateTime> 형식 문자열을 사용 합니다. 형식 문자열은 값을 생성하는 데 사용할 수 있는 텍스트 구문을 공식화합니다. <xref:System.DateTime> 기존 WPF 컨트롤만 일반적으로 사용 하 여의 날짜 구성 요소에 대해 값 <xref:System.DateTime> 및 시간 구성 요소가 없습니다.  
   
  지정 하는 경우는 <xref:System.DateTime> XAML에서 교대로 사용할 수 있습니다는 형식 문자열 중 하나입니다.  
   

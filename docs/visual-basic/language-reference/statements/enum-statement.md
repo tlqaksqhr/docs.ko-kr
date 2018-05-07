@@ -1,12 +1,6 @@
 ---
 title: Enum 문(Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.Enum
 helpviewer_keywords:
@@ -17,14 +11,11 @@ helpviewer_keywords:
 - variables [Visual Basic], enumeration
 - constants [Visual Basic], enumerated
 ms.assetid: a45e51f1-65ff-48e1-bf32-79130f137377
-caps.latest.revision: 44
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 7a8244318e0be8e50f3384b56cf63e59182b6cda
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 89de51f2551437d102ccdc5a0f1ff5f23b53e47f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="enum-statement-visual-basic"></a>Enum 문(Visual Basic)
 열거형을 선언 하 고 해당 멤버의 값을 정의 합니다.  
@@ -66,7 +57,7 @@ End Enum
   
 -   `enumerationname`  
   
-     필수 요소. 열거형의 이름입니다. 올바른 이름에 대 한 정보를 참조 하십시오. [선언 요소 이름](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)합니다.  
+     필수. 열거형의 이름입니다. 올바른 이름에 대 한 정보를 참조 하십시오. [선언 요소 이름](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)합니다.  
   
 -   `datatype`  
   
@@ -74,13 +65,13 @@ End Enum
   
 -   `memberlist`  
   
-     필수 요소. 이 문에서 선언 되는 멤버 상수 목록입니다. 여러 멤버 개별 소스 코드 줄에 나타납니다.  
+     필수. 이 문에서 선언 되는 멤버 상수 목록입니다. 여러 멤버 개별 소스 코드 줄에 나타납니다.  
   
-     각 `member` 다음 구문과 구성 요소는:`[<attribute list>] member name [ = initializer ]`  
+     각 `member` 다음 구문과 구성 요소는: `[<attribute list>] member name [ = initializer ]`  
   
     |파트|설명|  
     |---|---|  
-    |`membername`|필수 요소. 이 멤버의 이름입니다.|  
+    |`membername`|필수. 이 멤버의 이름입니다.|  
     |`initializer`|선택 사항입니다. 컴파일 타임에 계산 되 고이 멤버에 할당 되는 식입니다.|  
   
 -   `End` `Enum`  

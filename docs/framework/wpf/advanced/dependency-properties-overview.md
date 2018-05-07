@@ -1,10 +1,7 @@
 ---
-title: "종속성 속성 개요"
-description: "WPF 속성 시스템에서 지 원하는 속성을 종속성 속성 이라고 합니다. 이 개요에서는 WPF 속성 시스템 기능 종속성 속성을 설명합니다."
+title: 종속성 속성 개요
+description: WPF 속성 시스템에서 지 원하는 속성을 종속성 속성 이라고 합니다. 이 개요에서는 WPF 속성 시스템 기능 종속성 속성을 설명합니다.
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.technology: dotnet-wpf
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -17,22 +14,17 @@ helpviewer_keywords:
 - dependency properties [WPF]
 - resources [WPF], references to
 ms.assetid: d119d00c-3afb-48d6-87a0-c4da4f83dee5
-caps.latest.revision: "30"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: d90e47c400f24eb10f2d262f9cb0e757ff472f0a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 196e858c52c06c96d652209e86039bfcc81a785a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="dependency-properties-overview"></a>종속성 속성 개요
 
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]에서는 [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] 속성의 기능을 확장하는 데 사용할 수 있는 서비스 집합을 제공합니다. 일반적으로 이러한 서비스를 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 속성 시스템이라고 통칭합니다. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 속성 시스템에서 지원하는 속성을 종속성 속성이라고 합니다. 이 개요에서는 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 속성 시스템 및 종속성 속성의 기능에 대해 설명합니다. XAML 및 코드에서 기존 종속성 속성을 사용하는 방법도 설명합니다. 또한 이 개요에서는 종속성 속성 메타데이터 같은 종속성 속성의 특수한 측면과 사용자 지정 클래스에서 종속성 속성을 직접 만드는 방법을 소개합니다.
 
-## <a name="prerequisites"></a>필수 구성 요소
+## <a name="prerequisites"></a>전제 조건
 이 항목에서는 [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] 및 개체 지향 프로그래밍에 대한 기본 지식이 있다고 가정합니다. 이 항목의 예제를 따르려면 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]을 이해하고 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 응용 프로그램을 작성하는 방법도 알아야 합니다. 자세한 내용은 참조 [연습: 내 첫 WPF 데스크톱 응용 프로그램](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md)합니다.  
   
 ## <a name="dependency-properties-and-clr-properties"></a>종속성 속성 및 CLR 속성
@@ -43,7 +35,7 @@ ms.lasthandoff: 12/22/2017
 SDK 참조에서는 속성에 대한 관리되는 참조 페이지에 [종속성 속성 정보] 섹션이 있는지 여부에 따라 해당 속성이 종속성 속성인지를 식별할 수 있습니다. 종속성 속성 정보 섹션에 대 한 링크는 <xref:System.Windows.DependencyProperty> 식별자 해당 종속성 속성에 대 한 필드 및 해당 속성, 클래스 재정의 정보 및 기타 세부 정보에 대해 설정 된 메타 데이터 옵션의 목록도 포함 됩니다.
 
 ## <a name="dependency-properties-back-clr-properties"></a>종속성 속성 CLR 속성으로 지원
-종속성 속성 및 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 속성 시스템은 private 필드로 속성을 지원하는 표준 패턴에 대한 대체 구현으로 속성을 지원하는 형식을 제공하여 속성 기능을 확장합니다. 이 형식의 이름은 <xref:System.Windows.DependencyProperty>합니다. 정의 하는 다른 중요 한 형식에서 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 속성 시스템은 <xref:System.Windows.DependencyObject>합니다. <xref:System.Windows.DependencyObject>종속성 속성을 소유 하 고 등록할 수 있는 기본 클래스를 정의 합니다.
+종속성 속성 및 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 속성 시스템은 private 필드로 속성을 지원하는 표준 패턴에 대한 대체 구현으로 속성을 지원하는 형식을 제공하여 속성 기능을 확장합니다. 이 형식의 이름은 <xref:System.Windows.DependencyProperty>합니다. 정의 하는 다른 중요 한 형식에서 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 속성 시스템은 <xref:System.Windows.DependencyObject>합니다. <xref:System.Windows.DependencyObject> 종속성 속성을 소유 하 고 등록할 수 있는 기본 클래스를 정의 합니다.
 
 다음은 종속성 속성에 대해 설명할 때 이 [!INCLUDE[TLA#tla_sdk](../../../../includes/tlasharptla-sdk-md.md)] 설명서에서 사용되는 용어에 대한 요약입니다.
 
@@ -106,7 +98,7 @@ XAML은 속성을 설정하는 다양한 구문 형식 지원 특정 속성에 �
 
 - [WPF Designer 통합](#wpf-designer-integration)
 
-### <a name="resources"></a>리소스
+### <a name="resources"></a>자료
 종속성 속성 값은 리소스를 참조하여 설정할 수 있습니다. 일반적으로 리소스는 페이지 루트 요소 또는 응용 프로그램의 `Resources` 속성 값으로 지정됩니다. 이러한 위치를 통해 리소스에 가장 편리하게 액세스할 수 있습니다. 다음 예제에서는 정의 하는 방법을 보여 줍니다.는 <xref:System.Windows.Media.SolidColorBrush> 리소스입니다.
 
 [!code-xaml[PropertiesOvwSupport#ResourcesResource](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PropertiesOvwSupport/CSharp/page2.xaml#resourcesresource)]
@@ -203,7 +195,7 @@ XAML은 속성을 설정하는 다양한 구문 형식 지원 특정 속성에 �
 
 - 일반적으로 종속성 속성은 인스턴스에 액세스할 수 있는 모든 호출자가 액세스할 수 있거나 적어도 검색할 수 있는 public 속성으로 간주되어야 합니다. 자세한 내용은 [종속성 속성 보안](../../../../docs/framework/wpf/advanced/dependency-property-security.md)을 참조하세요.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참고자료
  [사용자 지정 종속성 속성](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md)  
  [읽기 전용 종속성 속성](../../../../docs/framework/wpf/advanced/read-only-dependency-properties.md)  
  [XAML 개요(WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)  

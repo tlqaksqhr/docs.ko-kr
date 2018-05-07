@@ -1,14 +1,6 @@
 ---
-title: "IHostMAlloc::Free 메서드"
-ms.custom: 
+title: IHostMAlloc::Free 메서드
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - IHostMAlloc.Free
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: c89abf5b-1120-4437-8b57-4a99fb3ae7f9
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 4775b6ae00f34d7d046515f8700a35470b2f6650
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: a8bd7b16f06433970d1222dbeaa843e187715faa
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ihostmallocfree-method"></a>IHostMAlloc::Free 메서드
 사용 하 여 할당 된 메모리를 해제는 [Alloc](../../../../docs/framework/unmanaged-api/hosting/ihostmalloc-alloc-method.md) 함수입니다.  
@@ -54,7 +42,7 @@ HRESULT Free (
   
 |HRESULT|설명|  
 |-------------|-----------------|  
-|S_OK|`Free`성공적으로 반환 합니다.|  
+|S_OK|`Free` 성공적으로 반환 합니다.|  
 |HOST_E_CLRNOTAVAILABLE|공용 언어 런타임 (CLR) 프로세스에 로드 되지 않았습니다 또는 CLR 중인 상태를 관리 코드를 실행 하거나 호출을 처리할 수 없습니다.|  
 |HOST_E_TIMEOUT|호출 시간이 초과 되었습니다.|  
 |HOST_E_NOT_OWNER|호출자에 게 잠금을 소유 하지 않습니다.|  
@@ -72,7 +60,7 @@ HRESULT Free (
   
  **라이브러리:** MSCorEE.dll에 리소스로 포함  
   
- **.NET framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>참고 항목  
  [IHostMemoryManager 인터페이스](../../../../docs/framework/unmanaged-api/hosting/ihostmemorymanager-interface.md)  

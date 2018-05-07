@@ -1,23 +1,16 @@
 ---
 title: 상수 및 열거형(Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - enumerations [Visual Basic]
 - constants [Visual Basic]
 - constants [Visual Basic], list of
 ms.assetid: 309c0ad5-83e4-4f96-99ea-83cd95107417
-caps.latest.revision: 18
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: bffbb8dabdd2463633c9d2ca8de3ef120850be3f
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.openlocfilehash: fcc3329d6e02a77bf54b5b9f08fddba1bc95ff54
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="constants-and-enumerations-visual-basic"></a>상수 및 열거형(Visual Basic)
 Visual Basic에서는 다양 한 미리 정의 된 상수와 개발자를 위한 열거형을 제공 합니다. 상수는 응용 프로그램의 실행 되는 동안 일정 하 게 유지 하는 값을 저장 합니다. 열거형은 관련된 상수 집합으로 작업하고 이름과 상수 값을 연결하는 편리한 방법을 제공합니다.  

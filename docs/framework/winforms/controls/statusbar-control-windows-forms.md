@@ -1,33 +1,21 @@
 ---
-title: "StatusBar 컨트롤(Windows Forms)"
-ms.custom: 
+title: StatusBar 컨트롤(Windows Forms)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - StatusBar control [Windows Forms]
 - status bars [Windows Forms], creating
 ms.assetid: 6f543e27-cf78-4b7f-b4d0-6a8030155d48
-caps.latest.revision: "9"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 945d9a658dd3d75dd0edb9f4eaca78334ee4d652
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 66ec834778bd0eeacea642250c5430be8929b732
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="statusbar-control-windows-forms"></a>StatusBar 컨트롤(Windows Forms)
 > [!NOTE]
 >  <xref:System.Windows.Forms.ToolStripStatusLabel> 컨트롤은 <xref:System.Windows.Forms.StatusBar> 컨트롤을 대체하고 여기에 다른 기능을 추가하여 새로 도입된 컨트롤이지만 이전 버전과의 호환성 및 이후 사용 가능성을 고려하여 <xref:System.Windows.Forms.StatusBar> 컨트롤을 계속 유지하도록 선택할 수 있습니다.  
   
- Windows Forms <xref:System.Windows.Forms.StatusBar> 컨트롤은 폼에서 응용 프로그램이 다양한 종류의 상태 정보를 표시할 수 있는, 대개 창 아래쪽에 표시되는 영역으로 사용됩니다. <xref:System.Windows.Forms.StatusBar>컨트롤은 아이콘을 나타내는 상태 또는 일련의 프로세스; 진행 중임 애니메이션 아이콘을 표시 하는 상태 표시줄 패널에 있을 수 있습니다. 예를 들어 있음을 나타내는 Microsoft Word 문서는 저장 됩니다.  
+ Windows Forms <xref:System.Windows.Forms.StatusBar> 컨트롤은 폼에서 응용 프로그램이 다양한 종류의 상태 정보를 표시할 수 있는, 대개 창 아래쪽에 표시되는 영역으로 사용됩니다. <xref:System.Windows.Forms.StatusBar> 컨트롤은 아이콘을 나타내는 상태 또는 일련의 프로세스; 진행 중임 애니메이션 아이콘을 표시 하는 상태 표시줄 패널에 있을 수 있습니다. 예를 들어 있음을 나타내는 Microsoft Word 문서는 저장 됩니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
  [StatusBar 컨트롤 개요](../../../../docs/framework/winforms/controls/statusbar-control-overview-windows-forms.md)  

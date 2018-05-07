@@ -1,13 +1,6 @@
 ---
-title: "경로 애니메이션 개요"
-ms.custom: 
+title: 경로 애니메이션 개요
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -15,22 +8,17 @@ helpviewer_keywords:
 - animation [WPF], paths
 - path animations [WPF]
 ms.assetid: 979c732c-df74-47a6-be96-8e07b3707d53
-caps.latest.revision: "13"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 10f2e27a2f68dd784c6fce66ae63873436923d63
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 466e22a5b40ddb4f3674422ac7620832b44be51d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="path-animations-overview"></a>경로 애니메이션 개요
 <a name="introduction"></a> 이 항목에서는 기하학적 경로를 사용하여 출력 값을 생성할 수 있도록 하는 경로 애니메이션을 소개합니다. 경로 애니메이션은 복잡한 경로를 따라 개체를 이동하고 회전하는 데 유용합니다.  
   
 <a name="prerequisites"></a>   
-## <a name="prerequisites"></a>필수 구성 요소  
+## <a name="prerequisites"></a>전제 조건  
  이 항목을 이해 하려면에 대해 잘 알고 있어야 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 애니메이션 기능입니다. 애니메이션 기능에 대 한 소개를 참조 하십시오.는 [애니메이션 개요](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)합니다.  
   
  사용 하기 때문에 <xref:System.Windows.Media.PathGeometry> 경로 애니메이션을 정의 하는 개체에 잘 알고 있어야도 <xref:System.Windows.Media.PathGeometry> 및 다양 한 유형의 <xref:System.Windows.Media.PathSegment> 개체입니다. 자세한 내용은 참조는 [기 하 도형 개요](../../../../docs/framework/wpf/graphics-multimedia/geometry-overview.md)합니다.  
@@ -58,11 +46,11 @@ ms.lasthandoff: 12/22/2017
   
  *\<Type>* `AnimationUsingPath`  
   
- 여기서 *\<Type>*은 클래스가 애니메이션을 적용하는 값의 형식입니다.  
+ 여기서 *\<Type>* 은 클래스가 애니메이션을 적용하는 값의 형식입니다.  
   
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]에서는 다음 경로 애니메이션 클래스를 제공합니다.  
   
-|속성 형식|해당 경로 애니메이션 클래스|예|  
+|속성 형식|해당 경로 애니메이션 클래스|예제|  
 |-------------------|----------------------------------------|-------------|  
 |<xref:System.Double>|<xref:System.Windows.Media.Animation.DoubleAnimationUsingPath>|[경로를 따라 개체에 애니메이션 효과 주기(Double 애니메이션)](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-an-object-along-a-path-double-animation.md)|  
 |<xref:System.Windows.Media.Matrix>|<xref:System.Windows.Media.Animation.MatrixAnimationUsingPath>|[경로를 따라 개체에 애니메이션 효과 주기(Matrix 애니메이션)](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-an-object-along-a-path-matrix-animation.md)|  

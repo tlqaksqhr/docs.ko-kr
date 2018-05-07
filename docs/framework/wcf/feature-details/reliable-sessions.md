@@ -1,13 +1,6 @@
 ---
-title: "신뢰할 수 있는 세션"
-ms.custom: 
+title: 신뢰할 수 있는 세션
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 f1_keywords:
 - Windows Communication Foundation, sessions and instances
 - WCF, sessions and instances
@@ -16,24 +9,19 @@ helpviewer_keywords:
 - instances [WCF]
 - sessions [WCF]
 ms.assetid: 143951b3-3aa0-4540-b4b7-d33e77e874a1
-caps.latest.revision: "15"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 16480996b96145873b1d1f84d56af6d1aa863710
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 396c76cbdb8eada881a5c87edfc2500dcdab3ad4
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="reliable-sessions"></a>신뢰할 수 있는 세션
 
-이 섹션에서는 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 신뢰할 수 있는 세션은 용도, 방법 및 시기 하나를 사용 하려면 바인딩 구성 속성을 지원 하 고 모범 사례에 대 한 포인터입니다. 다음 표에서는 이 단원의 필수 사항 및 관련 항목에 대한 세부 정보를 요약하여 설명합니다.
+이 섹션에서는 어떤는 Foundation WCF (Windows Communication) 신뢰할 수 있는 세션, 용도, 방법 및 시기 하나를 사용 하려면 바인딩 구성 속성을 지원 하 고 모범 사례에 대 한 포인터를 설명 합니다. 다음 표에서는 이 단원의 필수 사항 및 관련 항목에 대한 세부 정보를 요약하여 설명합니다.
 
-신뢰할 수 있는 세션 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 끝점 간에 전송 되는 메시지 SOAP 또는 전송 매개 자를 통해 전송 되 고 전송 된 순서 대로 한 번만 하 고, 필요에 따라 배달 됩니다 하는 기능을 제공 합니다.
+신뢰할 수 있는 세션 WCF 끝점 간에 전송 되는 메시지 SOAP 또는 전송 매개 자를 통해 전송 되 고 전송 된 순서 대로 한 번만 하 고, 필요에 따라 배달 됩니다 하는 기능을 제공 합니다.
 
-[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 응용 프로그램에서 신뢰할 수 있는 세션을 사용하려면 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서 신뢰할 수 있는 세션을 기본적으로 또는 선택 사항으로 지원하는 시스템 제공 바인딩 중 하나를 사용하거나 이러한 세션을 지원하는 사용자 지정 바인딩을 직접 만듭니다.
+신뢰할 수 있는 세션에서 WCF 응용 프로그램을 사용 하려면 또는 지 원하는 신뢰할 수 있는 세션을 기본적으로 필요에 따라 WCF에서 시스템 제공 바인딩 중 하나를 사용 하거나 세션을 지 원하는 사용자 지정 바인딩을 직접 만듭니다.
 
 ## <a name="in-this-section"></a>섹션 내용
 

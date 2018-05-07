@@ -1,11 +1,6 @@
 ---
 title: String 데이터 형식(Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.String
 helpviewer_keywords:
@@ -23,14 +18,11 @@ helpviewer_keywords:
 - String literals [Visual Basic]
 - identifier type characters [Visual Basic], $
 ms.assetid: 15ac03f5-cabd-42cc-a754-1df3893c25d9
-caps.latest.revision: 19
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 90f126a5cca36969617446e81a8d13434e39df75
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 894638bbe50dad2cae1f74a2f7b7fe006f029d1b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="string-data-type-visual-basic"></a>String 데이터 형식(Visual Basic)
 0에서 65535 까지의 값에서 부호 없는 16 비트 (2 바이트) 코드 포인트의 시퀀스를 범위에 저장 합니다. 각 *코드 포인트*, 또는 문자 코드 단일 유니코드 문자를 나타냅니다. 0에서 약 2 십억 문자열로 포함할 수 있습니다 (2 ^31) 유니코드 문자입니다.  
@@ -81,7 +73,7 @@ S = Microsoft.VisualBasic.Left(S, 4)
   
 -   **Interop 고려 사항입니다.** .NET Framework에 대해 작성 되지 않은 구성 요소와 상호 작용 하는 경우 예제 Automation 또는 COM 개체에 대 한 기억 문자열 문자 다른 데이터 너비 (8 비트)에 있는 다른 환경에서 합니다. 이러한 구성 요소를 8 비트 문자는 문자열 인수를 전달 하는 경우로 선언 `Byte()`, 배열을 `Byte` 요소 대신 `String` 새 Visual Basic 코드에서.  
   
--   **형식 문자입니다.** 식별자 형식 문자 추가 `$` 를 식별자에 리터럴에 `String` 데이터 형식입니다. `String`에 리터럴 형식 문자가 없습니다. 그러나 컴파일러가 처리 따옴표로 묶인 리터럴을 (`" "`)으로 `String`합니다.  
+-   **형식 문자입니다.** 식별자 형식 문자 추가 `$` 를 식별자에 리터럴에 `String` 데이터 형식입니다. `String` 에 리터럴 형식 문자가 없습니다. 그러나 컴파일러가 처리 따옴표로 묶인 리터럴을 (`" "`)으로 `String`합니다.  
   
 -   **Framework 형식입니다.** .NET Framework에 있는 해당 형식이 고 <xref:System.String?displayProperty=nameWithType> 클래스입니다.  
   

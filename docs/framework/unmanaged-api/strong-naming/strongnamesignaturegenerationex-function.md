@@ -1,14 +1,6 @@
 ---
-title: "StrongNameSignatureGenerationEx 함수"
-ms.custom: 
+title: StrongNameSignatureGenerationEx 함수
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - StrongNameSignatureGenerationEx
 api_location:
@@ -22,17 +14,13 @@ helpviewer_keywords:
 ms.assetid: 9a75469e-aa49-4e32-ad48-3bafd5202f09
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 4f68befd145649e6d8921e160d302cdb81000a9a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 8ac2dd50b26137ee4cf06f0545f1f8cf1bfabf80
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="strongnamesignaturegenerationex-function"></a>StrongNameSignatureGenerationEx 함수
 지정된 된 플래그에 따라 지정된 된 어셈블리에 대 한 강력한 이름 서명을 생성합니다.  
@@ -81,12 +69,12 @@ BOOLEAN StrongNameSignatureGenerationEx (
  `dwFlags`  
  [in] 하나 이상의 다음 값 중:  
   
--   `SN_SIGN_ALL_FILES`(0x00000001)-연결 된 모듈에 대 한 모든 해시를 다시 계산 합니다.  
+-   `SN_SIGN_ALL_FILES` (0x00000001)-연결 된 모듈에 대 한 모든 해시를 다시 계산 합니다.  
   
--   `SN_TEST_SIGN`(0x00000002)-테스트 어셈블리를 서명 합니다.  
+-   `SN_TEST_SIGN` (0x00000002)-테스트 어셈블리를 서명 합니다.  
   
 ## <a name="return-value"></a>반환 값  
- `true`성공적으로 완료 됩니다. 그렇지 않으면 `false`합니다.  
+ `true` 성공적으로 완료 됩니다. 그렇지 않으면 `false`합니다.  
   
 ## <a name="remarks"></a>설명  
  Null을 지정 `wszFilePath` 시그니처를 만들지 않고 서명 크기를 계산 하 합니다.  
@@ -106,7 +94,7 @@ BOOLEAN StrongNameSignatureGenerationEx (
   
  **라이브러리:** MsCorEE.dll에 리소스로 포함  
   
- **.NET framework 버전:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>참고 항목  
  [StrongNameSignatureGenerationEx 메서드](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamesignaturegenerationex-method.md)  

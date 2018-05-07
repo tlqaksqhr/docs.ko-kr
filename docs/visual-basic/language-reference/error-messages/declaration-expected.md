@@ -1,26 +1,17 @@
 ---
 title: 선언이 필요합니다.
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vbc30188
 - bc30188
 helpviewer_keywords:
 - BC30188
 ms.assetid: da6b1df3-fe6b-4415-88e6-0977e5189e0b
-caps.latest.revision: 9
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 97bd1701a8a07c39d08a9276cdb929bc9425c1f5
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: c5c9b665b78c7c63c55292e38cc96ee8b2962a61
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="declaration-expected"></a>선언이 필요합니다.
 할당 또는 루프 문과 같은 선언문이 아닌 문을 프로시저 외부에서 발생 합니다. 선언에만 외부 프로시저 허용 됩니다.  

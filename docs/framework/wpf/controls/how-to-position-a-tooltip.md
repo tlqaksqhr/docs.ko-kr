@@ -1,13 +1,6 @@
 ---
-title: "방법: 도구 설명 배치"
-ms.custom: 
+title: '방법: 도구 설명 배치'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -15,26 +8,21 @@ helpviewer_keywords:
 - ToolTip control [WPF], positioning
 - positioning ToolTip controls [WPF]
 ms.assetid: cddf3757-9e5f-4ce3-a6eb-44489cf3804a
-caps.latest.revision: "14"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: cc81fa247f21448a4ccbd62baccb72c0ec14bb31
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 218d8814cf75cd80a63c94397ed00e92c6a9a8fb
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-position-a-tooltip"></a>방법: 도구 설명 배치
 이 예제에서는 화면에 도구 설명의 위치를 지정 하는 방법을 보여 줍니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  도구 설명 모두에서 정의 하는 5 개의 속성 집합이 사용 하 여 배치할 수 있습니다는 <xref:System.Windows.Controls.ToolTip> 및 <xref:System.Windows.Controls.ToolTipService> 클래스입니다. 다음 표에서 이러한 두 속성 집합의 5 개 보여주며, 클래스에 따라 참조 설명서의 링크를 제공 합니다.  
   
 ### <a name="corresponding-tooltip-properties-according-to-class"></a>클래스에 따라 해당 하는 도구 설명 속성  
   
-|<xref:System.Windows.Controls.ToolTip?displayProperty=nameWithType>클래스 속성|<xref:System.Windows.Controls.ToolTipService?displayProperty=nameWithType>클래스 속성|  
+|<xref:System.Windows.Controls.ToolTip?displayProperty=nameWithType> 클래스 속성|<xref:System.Windows.Controls.ToolTipService?displayProperty=nameWithType> 클래스 속성|  
 |--------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------|  
 |<xref:System.Windows.Controls.ToolTip.Placement%2A?displayProperty=nameWithType>|<xref:System.Windows.Controls.ToolTipService.Placement%2A?displayProperty=nameWithType>|  
 |<xref:System.Windows.Controls.ToolTip.PlacementTarget%2A?displayProperty=nameWithType>|<xref:System.Windows.Controls.ToolTipService.PlacementTarget%2A?displayProperty=nameWithType>|  

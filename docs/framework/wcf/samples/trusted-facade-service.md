@@ -1,27 +1,15 @@
 ---
-title: "신뢰된 외관 서비스"
-ms.custom: 
+title: 신뢰된 외관 서비스
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: c34d1a8f-e45e-440b-a201-d143abdbac38
-caps.latest.revision: "14"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 8c0d1d0473a821510ee70e386058a2b3249221dd
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
-ms.translationtype: MT
+ms.openlocfilehash: 08e115d297439910c16601051539a23a5a6bebc9
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="trusted-facade-service"></a>신뢰된 외관 서비스
-이 시나리오 샘플에서는 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 보안 인프라를 사용하여 한 서비스에서 다른 서비스로 호출자의 ID 정보를 이동하는 방법을 보여 줍니다.  
+이 시나리오 샘플에서는 Windows Communication Foundation (WCF)을 사용 하 여 한 서비스에서 호출자의 id 정보를 이동 하는 방법을 보여 줍니다. 보안 인프라입니다.  
   
  서비스에 의해 제공되는 기능을 외관 서비스를 사용하여 공용 네트워크에 노출하는 것은 일반적인 디자인 패턴입니다. 일반적으로 외관 서비스는 DMZ, 완충 지역 및 스크린된 서브넷이라고도 하는 경계 네트워크에 상주하며 비즈니스 논리를 구현하고 내부 데이터에 액세스할 수 있는 백 엔드 서비스와 통신합니다. 외관 서비스와 백 엔드 서비스 간의 통신 채널은 방화벽을 통과하며 일반적으로 단일 용도로만 제한됩니다.  
   
@@ -298,7 +286,7 @@ Press <ENTER> to terminate client.
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  이 디렉터리가 없으면 [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4(.NET Framework 4용 WCF(Windows Communication Foundation) 및 WF(Windows Workflow Foundation) 샘플)](http://go.microsoft.com/fwlink/?LinkId=150780) 로 이동하여 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 및 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플을 모두 다운로드하세요. 이 샘플은 다음 디렉터리에 있습니다.  
+>  이 디렉터리가로 이동 [Windows Communication Foundation (WCF) 및.NET Framework 4에 대 한 Windows WF (Workflow Foundation) 샘플](http://go.microsoft.com/fwlink/?LinkId=150780) 모든 Windows Communication Foundation (WCF)를 다운로드 하 고 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플. 이 샘플은 다음 디렉터리에 있습니다.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Scenario\TrustedFacade`  
   

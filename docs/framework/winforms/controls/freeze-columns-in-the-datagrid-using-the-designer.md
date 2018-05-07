@@ -1,29 +1,17 @@
 ---
-title: "방법: 디자이너를 사용하여 Windows Forms DataGridView 컨트롤에서 열 고정"
-ms.custom: 
+title: '방법: 디자이너를 사용하여 Windows Forms DataGridView 컨트롤에서 열 고정'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - Windows Forms, columns
 - columns [Windows Forms], freezing
 - DataGridView control [Windows Forms], column freezing
 - data [Windows Forms], displaying
 ms.assetid: 87412dd2-478f-4751-af87-dafc591fc215
-caps.latest.revision: "17"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 33606cc30ccc1d63e780d07bcb1757d62b7ebea2
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 3da253369cc70c7757f0119c03012d9d8591d6da
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-freeze-columns-in-the-windows-forms-datagridview-control-using-the-designer"></a>방법: 디자이너를 사용하여 Windows Forms DataGridView 컨트롤에서 열 고정
 사용자가 Windows Forms <xref:System.Windows.Forms.DataGridView> 컨트롤에 표시된 데이터를 볼 때 단일 열이나 열 집합을 자주 참조해야 하는 경우가 있습니다. 예를 들어 많은 열이 포함 된 고객 정보 테이블을 표시할 때 유용 다른 열을 표시 되는 영역 바깥으로 스크롤할 수 있게 하는 동안 항상 고객 이름을 표시할 수 있습니다.  

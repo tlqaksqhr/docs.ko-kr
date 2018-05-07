@@ -1,14 +1,6 @@
 ---
-title: "ICLRStrongName::StrongNameSignatureVerificationFromImage 메서드"
-ms.custom: 
+title: ICLRStrongName::StrongNameSignatureVerificationFromImage 메서드
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICLRStrongName.StrongNameSignatureVerificationFromImage
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: da91c138-ee30-4fd4-a040-464d97d7e41a
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 57c8422d59a07de9ad045f2043594cb8d01f2f74
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 60dbb8d8461015c791a70d6c2617b1c81e5ba17f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="iclrstrongnamestrongnamesignatureverificationfromimage-method"></a>ICLRStrongName::StrongNameSignatureVerificationFromImage 메서드
 연결된 된 공개 키가 이미 메모리에 매핑되어 있는 어셈블리가 올바른지 확인 합니다.  
@@ -59,25 +47,25 @@ HRESULT StrongNameSignatureVerificationFromImage (
  `dwInFlags`  
  [in] 확인 동작에 영향을 주는 플래그입니다. 다음 값이 지원 됩니다.  
   
--   `SN_INFLAG_FORCE_VER`(0x00000001)-강제로 레지스트리 설정을 재정의 해야 하는 경우에 확인 합니다.  
+-   `SN_INFLAG_FORCE_VER` (0x00000001)-강제로 레지스트리 설정을 재정의 해야 하는 경우에 확인 합니다.  
   
--   `SN_INFLAG_INSTALL`(0x00000002)-이 이미지에 수행 된 첫 번째 확인 임을 지정 합니다.  
+-   `SN_INFLAG_INSTALL` (0x00000002)-이 이미지에 수행 된 첫 번째 확인 임을 지정 합니다.  
   
--   `SN_INFLAG_ADMIN_ACCESS`(0x00000004)-캐시 관리 권한이 있는 사용자 에게만 액세스를 사용할 수 있음을 지정 합니다.  
+-   `SN_INFLAG_ADMIN_ACCESS` (0x00000004)-캐시 관리 권한이 있는 사용자 에게만 액세스를 사용할 수 있음을 지정 합니다.  
   
--   `SN_INFLAG_USER_ACCESS`(0x00000008)-어셈블리 현재 사용자에만 액세스할 수 있는지를 지정 합니다.  
+-   `SN_INFLAG_USER_ACCESS` (0x00000008)-어셈블리 현재 사용자에만 액세스할 수 있는지를 지정 합니다.  
   
--   `SN_INFLAG_ALL_ACCESS`(0x00000010)-캐시의 액세스 제한이 않음을 지정 합니다.  
+-   `SN_INFLAG_ALL_ACCESS` (0x00000010)-캐시의 액세스 제한이 않음을 지정 합니다.  
   
--   `SN_INFLAG_RUNTIME`(0x80000000)-내부 디버깅 하기 위해 예약 되어 있습니다.  
+-   `SN_INFLAG_RUNTIME` (0x80000000)-내부 디버깅 하기 위해 예약 되어 있습니다.  
   
  `pdwOutFlags`  
  [out] 출력 추가 정보에 대 한 플래그입니다. 다음 값이 지원 됩니다.  
   
--   `SN_OUTFLAG_WAS_VERIFIED`이 값은로 설정 (0x00000001)- `false` 확인 레지스트리 설정으로 인해 성공 했는지를 지정 하려면.  
+-   `SN_OUTFLAG_WAS_VERIFIED` 이 값은로 설정 (0x00000001)- `false` 확인 레지스트리 설정으로 인해 성공 했는지를 지정 하려면.  
   
 ## <a name="return-value"></a>반환 값  
- `S_OK`메서드가 성공적으로 완료 하는 경우 그렇지 않으면 실패를 나타내는 HRESULT 값 (참조 [일반적인 HRESULT 값](http://go.microsoft.com/fwlink/?LinkId=213878) 목록에 대 한).  
+ `S_OK` 메서드가 성공적으로 완료 하는 경우 그렇지 않으면 실패를 나타내는 HRESULT 값 (참조 [일반적인 HRESULT 값](http://go.microsoft.com/fwlink/?LinkId=213878) 목록에 대 한).  
   
 ## <a name="requirements"></a>요구 사항  
  **플랫폼:** 참조 [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)합니다.  
@@ -86,7 +74,7 @@ HRESULT StrongNameSignatureVerificationFromImage (
   
  **라이브러리:** MSCorEE.dll에 리소스로 포함  
   
- **.NET framework 버전:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET framework 버전:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>참고 항목  
  [ICLRStrongName 인터페이스](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)

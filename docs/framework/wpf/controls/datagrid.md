@@ -1,13 +1,6 @@
 ---
 title: DataGrid
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - DataGrid column types [WPF]
 - DataGrid scenarios [WPF]
@@ -17,16 +10,11 @@ helpviewer_keywords:
 - DataGrid [WPF], customizing the appearance of
 - DataGrid columns [WPF], using
 ms.assetid: bf89ea63-79b6-422b-bc9f-0485ad803216
-caps.latest.revision: "9"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: daea7d382d64e768c9ec681e1c2041c4c80c255e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: a8f267706c1ace02b091329360779711981d01e3
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="datagrid"></a>DataGrid
 <xref:System.Windows.Controls.DataGrid> 컨트롤 표시 하 고 SQL 데이터베이스, LINQ 쿼리 또는 기타 바인딩할 수 있는 데이터 원본에서와 같은 서로 다른 여러 원본의 데이터를 편집할 수 있습니다. 자세한 내용은 [바인딩 소스 개요](../../../../docs/framework/wpf/data/binding-sources-overview.md)를 참조하세요.  
@@ -40,7 +28,7 @@ ms.lasthandoff: 12/22/2017
 |<xref:System.Windows.Controls.DataGridComboBoxColumn>|<xref:System.Enum>|  
 |<xref:System.Windows.Controls.DataGridHyperlinkColumn>|<xref:System.Uri>|  
   
- <xref:System.Windows.Controls.DataGrid>셀 글꼴, 색 및 크기와 같은 모양으로 사용자 지정할 수 있습니다. <xref:System.Windows.Controls.DataGrid>다른 WPF 컨트롤의 모든 스타일 및 템플릿 기능을 지원합니다. <xref:System.Windows.Controls.DataGrid>기본 및 편집, 정렬, 및 유효성 검사에 대 한 사용자 지정 가능한 동작에도 포함 되어 있습니다.  
+ <xref:System.Windows.Controls.DataGrid> 셀 글꼴, 색 및 크기와 같은 모양으로 사용자 지정할 수 있습니다. <xref:System.Windows.Controls.DataGrid> 다른 WPF 컨트롤의 모든 스타일 및 템플릿 기능을 지원합니다. <xref:System.Windows.Controls.DataGrid> 기본 및 편집, 정렬, 및 유효성 검사에 대 한 사용자 지정 가능한 동작에도 포함 되어 있습니다.  
   
  다음 표에서 일반적인 작업에 대 한 <xref:System.Windows.Controls.DataGrid> 방법과 이러한 작업을 수행 합니다. 관련된 API를 확인 하 여 자세한 내용 및 예제 코드를 찾을 수 있습니다.  
   

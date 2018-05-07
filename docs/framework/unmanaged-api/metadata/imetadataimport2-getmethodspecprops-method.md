@@ -1,14 +1,6 @@
 ---
-title: "IMetaDataImport2::GetMethodSpecProps 메서드"
-ms.custom: 
+title: IMetaDataImport2::GetMethodSpecProps 메서드
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - IMetaDataImport2.GetMethodSpecProps
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: 9544b711-e669-4eaf-8630-ee862e5e4489
 topic_type:
 - apiref
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: e6c0e079d32a39589b77e1361756c17bdc8867e8
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 3249ad76c428752c91540e135bc978d3fe835de1
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="imetadataimport2getmethodspecprops-method"></a>IMetaDataImport2::GetMethodSpecProps 메서드
 토큰을 지정 된 MethodSpec 참조 메서드의 메타 데이터 서명을 가져옵니다.  
@@ -69,7 +57,7 @@ HRESULT GetMethodSpecProps (
   
  **라이브러리:** MsCorEE.dll에서 리소스로 사용  
   
- **.NET framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>참고 항목  
  [IMetaDataImport2 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)  

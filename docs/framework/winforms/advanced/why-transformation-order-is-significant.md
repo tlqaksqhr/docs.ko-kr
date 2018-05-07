@@ -1,31 +1,17 @@
 ---
-title: "변형 순서의 중요성"
-ms.custom: 
+title: 변형 순서의 중요성
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - transformations [Windows Forms], order signficance
 ms.assetid: 37d5f9dc-a5cf-4475-aa5d-34d714e808a9
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: cd3363a1afb8658ed3bb27359259cb752464507d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 943bfa73b54a1ac5d68d21d2bb6e271133db595a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="why-transformation-order-is-significant"></a>변형 순서의 중요성
 단일 <xref:System.Drawing.Drawing2D.Matrix> 개체는 단일 변환 또는 일련의 변환 저장할 수 있습니다. 후자 보다 복합 변환을 이라고 합니다. 복합 변환 매트릭스 개별 변환 행렬을 곱하여 구합니다.  
@@ -35,7 +21,7 @@ ms.lasthandoff: 12/22/2017
   
  순서는 중요 한 가지 이유는 회전 및 배율 조정 같은 변환 좌표계의 원점을 기준으로 수행 됩니다. 원본에서 멀리 이동 된 개체를 확장 합니다. 결과 서로 다르게 생성 중심이 원점 하는 개체 크기를 조정 합니다. 마찬가지로, 중심이 원점 있는 개체를 회전 원본에서 멀리 이동 된 개체를 회전 다른 결과 생성 합니다.  
   
- 다음 예제에서는 크기 조정, 회전, 순서 대로) (에서 이동 하는 복합 변환을 결합 합니다. 인수 <xref:System.Drawing.Drawing2D.MatrixOrder.Append> 에 전달 되는 <xref:System.Drawing.Graphics.RotateTransform%2A> 메서드 크기 조정을 회전을 따를 것을 나타냅니다. 마찬가지로, 인수 <xref:System.Drawing.Drawing2D.MatrixOrder.Append> 에 전달 되는 <xref:System.Drawing.Graphics.TranslateTransform%2A> 메서드 변환 회전을 따를 것을 나타냅니다. <xref:System.Drawing.Drawing2D.MatrixOrder.Append>및 <xref:System.Drawing.Drawing2D.MatrixOrder.Prepend> 의 구성원은 <xref:System.Drawing.Drawing2D.MatrixOrder> 열거형입니다.  
+ 다음 예제에서는 크기 조정, 회전, 순서 대로) (에서 이동 하는 복합 변환을 결합 합니다. 인수 <xref:System.Drawing.Drawing2D.MatrixOrder.Append> 에 전달 되는 <xref:System.Drawing.Graphics.RotateTransform%2A> 메서드 크기 조정을 회전을 따를 것을 나타냅니다. 마찬가지로, 인수 <xref:System.Drawing.Drawing2D.MatrixOrder.Append> 에 전달 되는 <xref:System.Drawing.Graphics.TranslateTransform%2A> 메서드 변환 회전을 따를 것을 나타냅니다. <xref:System.Drawing.Drawing2D.MatrixOrder.Append> 및 <xref:System.Drawing.Drawing2D.MatrixOrder.Prepend> 의 구성원은 <xref:System.Drawing.Drawing2D.MatrixOrder> 열거형입니다.  
   
  [!code-csharp[System.Drawing.MiscLegacyTopics#21](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.MiscLegacyTopics/CS/Class1.cs#21)]
  [!code-vb[System.Drawing.MiscLegacyTopics#21](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.MiscLegacyTopics/VB/Class1.vb#21)]  

@@ -1,12 +1,6 @@
 ---
 title: + 연산자 (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.+
 helpviewer_keywords:
@@ -16,14 +10,11 @@ helpviewer_keywords:
 - strings [Visual Basic], concatenating
 - sum operator [Visual Basic]
 ms.assetid: 5694778f-0a2c-4539-8009-f66f318fb46d
-caps.latest.revision: 26
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: fb0d66db2d777c046ccec69acc1f2069d21baf6c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: ccf79c700cf852c0febb9c3f3464cbacdd39296e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="-operator-visual-basic"></a>+ 연산자(Visual Basic)
 두 개의 숫자를 추가 하거나 숫자 식의 양수 값을 반환 합니다. 두 문자열 식을 연결할 사용할 수도 있습니다.  
@@ -40,7 +31,7 @@ ms.lasthandoff: 11/21/2017
   
 |용어|정의|  
 |---|---|  
-|`expression1`|필수 요소. 모든 숫자 또는 문자열 식입니다.|  
+|`expression1`|필수. 모든 숫자 또는 문자열 식입니다.|  
 |`expression2`|필수 하지 않는 경우는 `+` 연산자가 음수 값을 계산 합니다. 모든 숫자 또는 문자열 식입니다.|  
   
 ## <a name="result"></a>결과  
@@ -63,26 +54,26 @@ ms.lasthandoff: 11/21/2017
 |식의 데이터 형식|컴파일러 작업|  
 |---|---|  
 |두 식이 모두 숫자 데이터 형식 (`SByte`, `Byte`, `Short`, `UShort`, `Integer`, `UInteger`, `Long`, `ULong`, `Decimal`, `Single`, 또는 `Double`)|추가 합니다. 결과 데이터 형식이 데이터 형식에 대 한 적합 한 숫자 형식 `expression1` 및 `expression2`합니다. "정수 연산" 표를 참조 하십시오. [연산자 결과의 데이터 형식을](../../../visual-basic/language-reference/operators/data-types-of-operator-results.md)합니다.|  
-|형식의 두 식이 모두`String`|연결 합니다.|  
+|형식의 두 식이 모두 `String`|연결 합니다.|  
 |한 식이 숫자 데이터 형식이 며 다른 하나는 문자열|경우 `Option Strict` 은 `On`, 컴파일러 오류가 발생 합니다.<br /><br /> 경우 `Option Strict` 은 `Off`, 암시적으로 변환의 `String` 를 `Double` 추가 합니다.<br /><br /> 경우는 `String` 변환할 수 없습니다 `Double`, 다음 throw는 <xref:System.InvalidCastException> 예외입니다.|  
 |한 식이 숫자 데이터 형식이 며 다른 하나는 [Nothing](../../../visual-basic/language-reference/nothing.md)|에 추가 된 `Nothing` 값은 0으로 합니다.|  
-|한 식은 문자열을 하 고 다른 하나는`Nothing`|와 concatenate `Nothing` 값으로 ""입니다.|  
+|한 식은 문자열을 하 고 다른 하나는 `Nothing`|와 concatenate `Nothing` 값으로 ""입니다.|  
   
  하나의 식이 `Object` Visual Basic 식에서 다음 동작을 수행 합니다.  
   
 |식의 데이터 형식|컴파일러 작업|  
 |---|---|  
-|`Object`식이 숫자 값이 고 다른 숫자 데이터 형식|경우 `Option Strict` 은 `On`, 컴파일러 오류가 발생 합니다.<br /><br /> 경우 `Option Strict` 은 `Off`를 추가 합니다.|  
-|`Object`식이 숫자 값이 고 다른 형식의`String`|경우 `Option Strict` 은 `On`, 컴파일러 오류가 발생 합니다.<br /><br /> 경우 `Option Strict` 은 `Off`, 암시적으로 변환의 `String` 를 `Double` 추가 합니다.<br /><br /> 경우는 `String` 변환할 수 없습니다 `Double`, 다음 throw는 <xref:System.InvalidCastException> 예외입니다.|  
-|`Object`식이 문자열 고 다른 하나는 숫자 데이터 형식|경우 `Option Strict` 은 `On`, 컴파일러 오류가 발생 합니다.<br /><br /> 경우 `Option Strict` 은 `Off`, 다음 문자열을 암시적으로 변환 `Object` 를 `Double` 추가 합니다.<br /><br /> 경우 문자열 `Object` 변환할 수 없습니다 `Double`, 다음 throw는 <xref:System.InvalidCastException> 예외입니다.|  
-|`Object`식이 문자열 하 고 다른 하나는 형식`String`|경우 `Option Strict` 은 `On`, 컴파일러 오류가 발생 합니다.<br /><br /> 경우 `Option Strict` 은 `Off`, 암시적으로 변환할 `Object` 를 `String` 을 연결 합니다.|  
+|`Object` 식이 숫자 값이 고 다른 숫자 데이터 형식|경우 `Option Strict` 은 `On`, 컴파일러 오류가 발생 합니다.<br /><br /> 경우 `Option Strict` 은 `Off`를 추가 합니다.|  
+|`Object` 식이 숫자 값이 고 다른 형식의 `String`|경우 `Option Strict` 은 `On`, 컴파일러 오류가 발생 합니다.<br /><br /> 경우 `Option Strict` 은 `Off`, 암시적으로 변환의 `String` 를 `Double` 추가 합니다.<br /><br /> 경우는 `String` 변환할 수 없습니다 `Double`, 다음 throw는 <xref:System.InvalidCastException> 예외입니다.|  
+|`Object` 식이 문자열 고 다른 하나는 숫자 데이터 형식|경우 `Option Strict` 은 `On`, 컴파일러 오류가 발생 합니다.<br /><br /> 경우 `Option Strict` 은 `Off`, 다음 문자열을 암시적으로 변환 `Object` 를 `Double` 추가 합니다.<br /><br /> 경우 문자열 `Object` 변환할 수 없습니다 `Double`, 다음 throw는 <xref:System.InvalidCastException> 예외입니다.|  
+|`Object` 식이 문자열 하 고 다른 하나는 형식 `String`|경우 `Option Strict` 은 `On`, 컴파일러 오류가 발생 합니다.<br /><br /> 경우 `Option Strict` 은 `Off`, 암시적으로 변환할 `Object` 를 `String` 을 연결 합니다.|  
   
  두 식이 모두 `Object` 식, Visual Basic은 다음 작업을 수행 (`Option Strict Off` 만).  
   
 |식의 데이터 형식|컴파일러 작업|  
 |---|---|  
 |둘 다 `Object` 숫자 값을 사용 하는 식|추가 합니다.|  
-|둘 다 `Object` 식이란 형식의`String`|연결 합니다.|  
+|둘 다 `Object` 식이란 형식의 `String`|연결 합니다.|  
 |하나의 `Object` 식이 숫자 값 및 다른 식이 문자열|문자열을 암시적으로 변환할 `Object` 를 `Double` 추가 합니다.<br /><br /> 경우 문자열 `Object` throw 한 다음 숫자 값을 변환할 수 없습니다는 <xref:System.InvalidCastException> 예외입니다.|  
   
  경우 `Object` 식이 [Nothing](../../../visual-basic/language-reference/nothing.md) 또는 <xref:System.DBNull>, `+` 연산자도 처리 한 `String` 값이 ""입니다.  

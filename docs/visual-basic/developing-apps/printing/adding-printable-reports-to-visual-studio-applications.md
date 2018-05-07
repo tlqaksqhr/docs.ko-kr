@@ -1,23 +1,15 @@
 ---
-title: "Visual Studio 응용 프로그램에 인쇄 가능한 보고서 추가"
+title: Visual Studio 응용 프로그램에 인쇄 가능한 보고서 추가
 ms.date: 07/20/2015
-ms.prod: .net
-ms.suite: 
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - printing [Visual Studio], reports
 - reports [Visual Basic], printing in Visual Studio
 ms.assetid: 93928405-ef41-495e-bce2-9d43d5a7080a
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 2b0300f31e4c75c72a72590ad22c19441acb7519
-ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
+ms.openlocfilehash: 4a7275a665e0c3290c2b3cd55c1af0c7cf0504f2
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="adding-printable-reports-to-visual-studio-applications"></a>Visual Studio 응용 프로그램에 인쇄 가능한 보고서 추가
 Visual Studio는 다양 한 Visual Basic 응용 프로그램에 보고 하는 풍부한 데이터를 추가할 수 있도록 보고 솔루션을 지원 합니다. 만들 수 있으며 ReportViewer 컨트롤, Crystal Reports 또는 SQL Server Reporting Services를 사용 하 여 보고서를 추가할 수 없습니다.  

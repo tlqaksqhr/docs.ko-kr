@@ -1,26 +1,15 @@
 ---
-title: "WF의 컬렉션 활동"
-ms.custom: 
+title: WF의 컬렉션 활동
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 2680c3e2-9902-4968-b98d-cab776103dbe
-caps.latest.revision: "10"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 52713566419eedbb5a39153541402920479eb500
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 442da07e78ee08b49ad0e023362cace23dcd5b8d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="collection-activities-in-wf"></a>WF의 컬렉션 활동
-컬렉션 활동은 워크플로에서 컬렉션 개체로 작업하는 데 사용됩니다. [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)]에는 컬렉션에서 항목을 추가 및 제거하고, 컬렉션에 항목이 있는지 테스트하고, 컬렉션을 지우는 시스템 제공 활동이 있습니다. `ExistsInCollection`및 `RemoveFromCollection` 가 <xref:System.Activities.OutArgument%601> 형식의 <xref:System.Boolean>, 결과 나타내는입니다.  
+컬렉션 활동은 워크플로에서 컬렉션 개체로 작업하는 데 사용됩니다. [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)]에는 컬렉션에서 항목을 추가 및 제거하고, 컬렉션에 항목이 있는지 테스트하고, 컬렉션을 지우는 시스템 제공 활동이 있습니다. `ExistsInCollection` 및 `RemoveFromCollection` 가 <xref:System.Activities.OutArgument%601> 형식의 <xref:System.Boolean>, 결과 나타내는입니다.  
   
 > [!IMPORTANT]
 >  기본 컬렉션 개체를 설정하기 이전에 컬렉션 활동을 실행하면 <xref:System.InvalidOperationException>이 throw되고 활동 오류가 발생합니다.  

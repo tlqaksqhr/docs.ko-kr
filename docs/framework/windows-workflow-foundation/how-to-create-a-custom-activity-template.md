@@ -1,26 +1,15 @@
 ---
-title: "방법: 사용자 지정 활동 템플릿 만들기"
-ms.custom: 
+title: '방법: 사용자 지정 활동 템플릿 만들기'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 6760a5cc-6eb8-465f-b4fa-f89b39539429
-caps.latest.revision: "4"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 772ad2a7ea56001bf3ecba089e62d6bc0f59e5ba
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: b455f8a763859d31405380e25cd7516856e8da2e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-a-custom-activity-template"></a>방법: 사용자 지정 활동 템플릿 만들기
-사용자 지정 활동 템플릿은 사용자가 각 활동을 개별적으로 만들지 않고 속성 및 기타 설정을 수동으로 구성하지 않아도 되도록 사용자 지정 복합 활동을 비롯한 여러 활동의 구성을 사용자 지정하는 데 사용됩니다. 이러한 사용자 지정 템플릿을 사용할 수 있도록 설정에 **도구 상자** 에 [!INCLUDE[wfd1](../../../includes/wfd1-md.md)] 또는 있는 사용자 수에 미리 구성 된 디자인 화면으로 끌 리호스팅된 된 디자이너에서 합니다. [!INCLUDE[wfd2](../../../includes/wfd2-md.md)]이러한 서식 파일의 좋은 예로와 함께 제공:는 [SendAndReceiveReply 템플릿 디자이너](/visualstudio/workflow-designer/sendandreceivereply-template-designer) 및 [ReceiveAndSendReply 템플릿 디자이너](/visualstudio/workflow-designer/receiveandsendreply-template-designer) 에 [메시징 활동 디자이너](/visualstudio/workflow-designer/messaging-activity-designers) 범주입니다.  
+사용자 지정 활동 템플릿은 사용자가 각 활동을 개별적으로 만들지 않고 속성 및 기타 설정을 수동으로 구성하지 않아도 되도록 사용자 지정 복합 활동을 비롯한 여러 활동의 구성을 사용자 지정하는 데 사용됩니다. 이러한 사용자 지정 템플릿을 사용할 수 있도록 설정에 **도구 상자** 에 [!INCLUDE[wfd1](../../../includes/wfd1-md.md)] 또는 있는 사용자 수에 미리 구성 된 디자인 화면으로 끌 리호스팅된 된 디자이너에서 합니다. [!INCLUDE[wfd2](../../../includes/wfd2-md.md)] 이러한 서식 파일의 좋은 예로와 함께 제공:는 [SendAndReceiveReply 템플릿 디자이너](/visualstudio/workflow-designer/sendandreceivereply-template-designer) 및 [ReceiveAndSendReply 템플릿 디자이너](/visualstudio/workflow-designer/receiveandsendreply-template-designer) 에 [메시징 활동 디자이너](/visualstudio/workflow-designer/messaging-activity-designers) 범주입니다.  
   
  이 항목의 첫 번째 절차에 대 한 사용자 지정 활동 템플릿을 만드는 방법에 설명는 **지연** 활동 및 두 번째 절차에서 사용할 수 있도록 하는 방법을 설명 간단 하 게 한 [!INCLUDE[wfd2](../../../includes/wfd2-md.md)] 사용자 지정 서식 파일에 제대로 작동 하는지 확인 합니다.  
   
@@ -30,7 +19,7 @@ ms.lasthandoff: 12/22/2017
   
 1.  [!INCLUDE[vs2010](../../../includes/vs2010-md.md)]를 시작합니다.  
   
-2.  에 **파일** 메뉴에서 **새로**를 선택한 후 **프로젝트**합니다.  
+2.  **파일** 메뉴에서 **새로 만들기**를 가리킨 다음, **프로젝트**를 선택합니다.  
   
      **새 프로젝트** 대화 상자가 열립니다.  
   
@@ -101,7 +90,7 @@ ms.lasthandoff: 12/22/2017
   
 9. 찾을 **MyDelayActivity** 에서 서식 파일은 **DelayActivityTemplate** 범주입니다. 디자인 화면으로 끌어 옵니다. 확인는 **속성** 창 하는 `Duration` 속성이 10 초로 설정 되어 있습니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  MyDelayActivity.cs 파일에 다음 코드가 들어 있어야 합니다.  
   
 ```  

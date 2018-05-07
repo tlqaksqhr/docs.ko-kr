@@ -1,11 +1,6 @@
 ---
-title: "AddressOf 연산자(Visual Basic)"
+title: AddressOf 연산자(Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - AddressOf
 - vb.AddressOf
@@ -13,14 +8,11 @@ helpviewer_keywords:
 - AddressOf operator [Visual Basic]
 - addresses, passing to API procedures
 ms.assetid: 8105a59d-60d8-4ab5-b221-5899cdfacbf4
-caps.latest.revision: "11"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 52560a2d9071373fd28f7aad2e485da08324656d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 7c229c32a3b295b4dbfe50ca2abc60d4ad5f2145
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="addressof-operator-visual-basic"></a>AddressOf 연산자(Visual Basic)
 특정 프로시저를 참조 하는 프로시저 대리자 인스턴스를 만듭니다.  
@@ -33,7 +25,7 @@ AddressOf procedurename
   
 ## <a name="parts"></a>요소  
  `procedurename`  
- 필수 요소. 새로 만든된 프로시저 대리자가 참조 하는 절차를 지정 합니다.  
+ 필수. 새로 만든된 프로시저 대리자가 참조 하는 절차를 지정 합니다.  
   
 ## <a name="remarks"></a>설명  
  `AddressOf` 연산자에 지정 된 함수를 가리키는 함수 대리자를 만듭니다. `procedurename`합니다. 지정한 프로시저 경우 인스턴스 메서드 이면 함수 대리자는 인스턴스와 메서드를 가리킵니다. 그런 다음 함수 대리자를 호출 하면 지정 된 인스턴스의 지정된 된 메서드 호출 됩니다.  

@@ -1,10 +1,6 @@
 ---
 title: Overridable(Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - Overridable
 - vb.Overridable
@@ -20,14 +16,11 @@ helpviewer_keywords:
 - Overridable keyword [Visual Basic]
 - properties [Visual Basic], overriding
 ms.assetid: 612581e7-8a4c-4a5d-beff-3402fffa6f35
-caps.latest.revision: "17"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: f7d5dd33f8591be1b4305e954e55e035882626c6
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 4844bf7f3ecf23335715b950a96be15e54ebc601
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="overridable-visual-basic"></a>Overridable(Visual Basic)
 속성 또는 프로시저에서는 동일 하 게 명명 된 속성 또는 프로시저가 파생된 클래스에서 재정의 될 수 있다는 것을 지정 합니다.  
@@ -50,7 +43,7 @@ ms.lasthandoff: 11/21/2017
   
  재정의 요소는 암시적으로 재정의할 수 있으므로 `Overridable`과 `Overrides`를 결합할 수 없습니다.  
   
-## <a name="usage"></a>용도  
+## <a name="usage"></a>사용법  
  `Overridable` 한정자는 다음 컨텍스트에서 사용할 수 있습니다.  
   
  [Function 문](../../../visual-basic/language-reference/statements/function-statement.md)  

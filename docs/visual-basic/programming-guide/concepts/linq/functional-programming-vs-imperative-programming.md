@@ -1,22 +1,12 @@
 ---
-title: "함수형 프로그래밍과 명령형 프로그래밍 비교 (Visual Basic)"
-ms.custom: 
+title: 함수형 프로그래밍과 명령형 프로그래밍 비교 (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 6a1f3b57-00e6-447d-9906-74c7c4d5d85c
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 8519ca7fcda63e73e29d33a768c589829aafa0b1
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 63d3801a393b242bce8b497e2c983534a6996c6f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="functional-programming-vs-imperative-programming-visual-basic"></a>함수형 프로그래밍과 명령형 프로그래밍 비교 (Visual Basic)
 이 항목에서는 함수형 프로그래밍을 더욱 일반적인 명령형(절차적) 프로그래밍과 비교하고 대조합니다.  

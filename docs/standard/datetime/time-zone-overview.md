@@ -1,13 +1,7 @@
 ---
-title: "표준 시간대 개요"
-ms.custom: 
+title: 표준 시간대 개요
 ms.date: 04/10/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - time zones [.NET Framework], about time zones
 - transition time [.NET Framework]
@@ -21,18 +15,13 @@ helpviewer_keywords:
 - adjustment rule [.NET Framework]
 - time zones [.NET Framework], terminology
 ms.assetid: c4b7ed01-5e38-4959-a3b6-ef9765d6ccf1
-caps.latest.revision: "11"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: e93eee00983bc2ff1c466b1240629f1193358e96
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 85483e4319b56c0df150558ce6c6a3878a6fa041
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="time-zone-overview"></a>표준 시간대 개요
 
@@ -83,6 +72,6 @@ ms.lasthandoff: 12/23/2017
 
 표준 시간대 간의 시간 변환에 대한 세부 정보는 [표준 시간대 간의 시간 변환](../../../docs/standard/datetime/converting-between-time-zones.md)을 참조하세요.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참고자료
 
 [날짜, 시간 및 표준 시간대](../../../docs/standard/datetime/index.md)

@@ -1,12 +1,6 @@
 ---
 title: Or 연산자(Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.Or
 helpviewer_keywords:
@@ -21,14 +15,11 @@ helpviewer_keywords:
 - logical disjunction
 - disjunction operator [Visual Basic]
 ms.assetid: 41ed6905-bf3d-468a-9e3b-03c10d461891
-caps.latest.revision: 12
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 4c9429eb2bdeb86bfa73786433231fdc22a230d9
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 9e02f619a81ee3c15321dfd44963c1a7d29843ab
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="or-operator-visual-basic"></a>Or 연산자(Visual Basic)
 에 두 논리 분리를 수행 `Boolean` 식 또는 두 숫자 식에 비트 분리 합니다.  
@@ -41,13 +32,13 @@ result = expression1 Or expression2
   
 ## <a name="parts"></a>요소  
  `result`  
- 필수 요소. 모든 `Boolean` 또는 숫자 식입니다. 에 대 한 `Boolean` 반면 `result` 은 2의 포함 논리합 `Boolean` 값입니다. 비트 연산에 대 한 `result` 는 두 개의 숫자 비트 패턴의 비트 포함 논리합을 나타내는 숫자 값입니다.  
+ 필수. 모든 `Boolean` 또는 숫자 식입니다. 에 대 한 `Boolean` 반면 `result` 은 2의 포함 논리합 `Boolean` 값입니다. 비트 연산에 대 한 `result` 는 두 개의 숫자 비트 패턴의 비트 포함 논리합을 나타내는 숫자 값입니다.  
   
  `expression1`  
- 필수 요소. 모든 `Boolean` 또는 숫자 식입니다.  
+ 필수. 모든 `Boolean` 또는 숫자 식입니다.  
   
  `expression2`  
- 필수 요소. 모든 `Boolean` 또는 숫자 식입니다.  
+ 필수. 모든 `Boolean` 또는 숫자 식입니다.  
   
 ## <a name="remarks"></a>설명  
  에 대 한 `Boolean` 반면 `result` 은 `False` 두 경우에 `expression1` 및 `expression2` 로 평가 `False`합니다. 다음 표에서 설명 방법을 `result` 결정 됩니다.  

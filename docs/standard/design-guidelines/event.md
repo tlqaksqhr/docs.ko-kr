@@ -1,13 +1,7 @@
 ---
 title: 이벤트 디자인
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - pre-events
 - events [.NET Framework], design guidelines
@@ -16,18 +10,13 @@ helpviewer_keywords:
 - post-events
 - signatures, event handling
 ms.assetid: 67b3c6e2-6a8f-480d-a78f-ebeeaca1b95a
-caps.latest.revision: 15
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 3d66d4e137c52310710f8b178167ceb3cca042c7
-ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
+ms.openlocfilehash: 48d1ad0f02ae34675c0a910d7651d718c060db60
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="event-design"></a>이벤트 디자인
 이벤트는 자주 사용 하는 형식의 콜백 (사용자 코드를 호출 하기 위해 프레임 워크를 사용할 수 있는 구문). 다른 콜백 메커니즘 대리자, 가상 멤버 및 플러그 인 인터페이스 기반 라인으로 전환 하는 구성원을 포함 합니다. 유용성 연구에서 데이터는 대부분의 개발자가 이벤트를 사용 하 여 다른 콜백 메커니즘을 사용 하는 것 보다 더 친숙 함을 나타냅니다. 이벤트는 Visual Studio 및 많은 언어와 원활 하 게 통합 됩니다.  

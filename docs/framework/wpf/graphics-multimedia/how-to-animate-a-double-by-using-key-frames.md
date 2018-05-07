@@ -1,13 +1,6 @@
 ---
-title: "방법: 키 프레임을 사용하여 Double에 애니메이션 효과 주기"
-ms.custom: 
+title: '방법: 키 프레임을 사용하여 Double에 애니메이션 효과 주기'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -16,21 +9,16 @@ helpviewer_keywords:
 - animation [WPF], Doubles with key frames
 - key frames [WPF], animating Doubles with
 ms.assetid: 3a1a7dba-7694-4907-8a2f-3408baebfa82
-caps.latest.revision: "16"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: e87717f6e2691142efa54a7e363f1038f8b74c1b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 4adeb858ab1b69ef1b00f7bf3b6868dbcbbc4154
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-animate-a-double-by-using-key-frames"></a>방법: 키 프레임을 사용하여 Double에 애니메이션 효과 주기
 사용 하는 속성의 값에 애니메이션을 적용 하는 방법을 보여 주는이 예제는 <xref:System.Double> 키 프레임을 사용 하 여 합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 예제는 화면에서 사각형을 이동합니다. 이 예제에서는 사용는 <xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames> 클래스에 애니메이션 효과를 <xref:System.Windows.Media.TranslateTransform.X%2A> 속성의는 <xref:System.Windows.Media.TranslateTransform> 에 적용 한 <xref:System.Windows.Shapes.Rectangle>합니다. 무제한 반복되는 이 애니메이션은 다음과 같은 방식으로 세 가지 키 프레임을 사용합니다.  
   
 1.  처음 3 초 동안의 인스턴스를 사용 하 여는 <xref:System.Windows.Media.Animation.LinearDoubleKeyFrame> 위치 500 일정 한 비율로 해당 시작 위치에서 경로 따라 사각형을 이동 하는 클래스입니다. 같은 키 프레임 선형 <xref:System.Windows.Media.Animation.LinearDoubleKeyFrame> 값 사이의 부드러운 선형 전환을 만듭니다.  

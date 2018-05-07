@@ -1,11 +1,6 @@
 ---
-title: "TypeOf 연산자(Visual Basic)"
+title: TypeOf 연산자(Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - TypeOf
 - vb.TypeOf
@@ -17,14 +12,11 @@ helpviewer_keywords:
 - TypeOf operator [Visual Basic]
 - compatible data types [Visual Basic]
 ms.assetid: 33f65296-659a-4b9a-9a29-c2a91cff68b2
-caps.latest.revision: "11"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 51bd2af7af28aa229fa62770c5b92d31e461333b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: fe287794423048e993d953c83fc8590a06b7a5e3
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="typeof-operator-visual-basic"></a>TypeOf 연산자(Visual Basic)
 개체 참조 변수를 데이터 형식과 비교합니다.  
@@ -44,10 +36,10 @@ result = TypeOf objectexpression IsNot typename
  반환됨. `Boolean` 값입니다.  
   
  `objectexpression`  
- 필수 요소. 참조 형식으로 계산되는 모든 식입니다.  
+ 필수. 참조 형식으로 계산되는 모든 식입니다.  
   
  `typename`  
- 필수 요소. 모든 데이터 형식 이름입니다.  
+ 필수. 모든 데이터 형식 이름입니다.  
   
 ## <a name="remarks"></a>설명  
  `TypeOf` 연산자는 `objectexpression`의 런타임 형식이 `typename`과 호환되는지 여부를 결정합니다. 호환성은 `typename`의 형식 범주에 따라 달라집니다. 다음 표에서 호환성이 결정되는 방법을 보여 줍니다.  

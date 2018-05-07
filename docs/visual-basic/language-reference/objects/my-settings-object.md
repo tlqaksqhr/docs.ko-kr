@@ -1,25 +1,17 @@
 ---
 title: My.Settings 개체
 ms.date: 07/20/2015
-ms.prod: .net
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - My.MySettingsProperty.Settings
 - My.Settings
 helpviewer_keywords:
 - My.Settings object
 ms.assetid: 41f30dc1-202a-4273-b9b7-5728941f996c
-caps.latest.revision: 16
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 2f744460f8ea6c6c7f5c8c5e1658bd357e910def
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 54176ae6706311b17227c7dc21a5060c9b369753
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="mysettings-object"></a>My.Settings 개체
 응용 프로그램의 설정에 액세스 하기 위한 메서드와 속성을 제공 합니다.  
@@ -52,7 +44,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="tasks"></a>작업  
  다음 표에서 관련 된 작업의 예를 보여 줍니다.는 `My.Settings` 개체입니다.  
   
-|후|참조|  
+|대상|보기|  
 |---|---|  
 |응용 프로그램 설정 읽기|[방법: Visual Basic에서 응용 프로그램 설정 읽기](../../../visual-basic/developing-apps/programming/app-settings/how-to-read-application-settings.md)|  
 |사용자 설정을 변경|[방법: Visual Basic에서 사용자 설정 변경](../../../visual-basic/developing-apps/programming/app-settings/how-to-change-user-settings.md)|  

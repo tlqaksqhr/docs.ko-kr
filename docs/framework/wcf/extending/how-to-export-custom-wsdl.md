@@ -1,24 +1,12 @@
 ---
-title: "방법: 사용자 지정 WSDL 내보내기"
-ms.custom: 
+title: '방법: 사용자 지정 WSDL 내보내기'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 5c1e4b58-b76b-472b-9635-2f80d42a0734
-caps.latest.revision: "13"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: d4b34cc564dea5f189de29c9425c840ec96c80fd
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 82f343d5e2637ff1330570a01b376e83567db4f4
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-export-custom-wsdl"></a>방법: 사용자 지정 WSDL 내보내기
 이 항목에서는 사용자 지정 WSDL 정보를 내보내는 방법에 대해 설명합니다. 이 작업을 수행하려면 서비스에서 생성되는 WSDL에 사용자 지정 정보를 추가할 `WsdlDocumentationAttribute`라는 새 코드 특성을 정의합니다.  
@@ -64,7 +52,7 @@ ms.lasthandoff: 12/22/2017
                 }  
     ```  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 코드 예제에서는 `WsdlDocumentationAttribute` 클래스의 전체 구현을 보여 줍니다.  
   
 ```  

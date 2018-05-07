@@ -1,24 +1,17 @@
 ---
 title: In(제네릭 한정자)(Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.VarianceIn
 helpviewer_keywords:
 - contravariance, In keyword [Visual Basic]
 - In keyword [Visual Basic]
 ms.assetid: 59bb13c5-fe96-42b8-8286-86293d1661c5
-caps.latest.revision: 19
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 83e9aab4fc361754cfd750ae68f04b36dce13d0a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: d1d9209cd583ac96ece59660ad29c76a66d3395a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="in-generic-modifier-visual-basic"></a>In(제네릭 한정자)(Visual Basic)
 제네릭 형식 매개 변수에서 `In` 키워드는 형식 매개 변수를 반공변(contravariant)으로 지정합니다.  
@@ -31,7 +24,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="rules"></a>규칙  
  제네릭 인터페이스 및 대리자에서 `In` 키워드를 사용할 수 있습니다.  
   
- 형식 매개 변수 메서드 인수의 형식 으로만 사용 되며 메서드 반환 형식으로 사용 되지 않습니다 경우 반공 변 제네릭 인터페이스 또는 대리자에서 선언할 수 있습니다. `ByRef`매개 변수는 공변 (covariant) 일 수 없습니다 또는 반공 분산 합니다.  
+ 형식 매개 변수 메서드 인수의 형식 으로만 사용 되며 메서드 반환 형식으로 사용 되지 않습니다 경우 반공 변 제네릭 인터페이스 또는 대리자에서 선언할 수 있습니다. `ByRef` 매개 변수는 공변 (covariant) 일 수 없습니다 또는 반공 분산 합니다.  
   
  공 분산과 반공 분산 참조 형식에 대 한 지원 및 값 형식에 대해 지원 되지 않습니다.  
   

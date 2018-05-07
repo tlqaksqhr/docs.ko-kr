@@ -1,26 +1,17 @@
 ---
 title: XML axis 속성은 런타임 바인딩을 지원하지 않습니다.
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - bc31168
 - vbc31168
 helpviewer_keywords:
 - BC31168
 ms.assetid: 45707363-55e4-4151-892d-d8729106355b
-caps.latest.revision: 6
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 4bc6883751c8cdaca1efc5faa724d95d23cf618e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: a784d305549df1035b60dc8f1585655023ed3406
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="xml-axis-properties-do-not-support-late-binding"></a>XML axis 속성은 런타임 바인딩을 지원하지 않습니다.
 XML 축 속성 형식화 되지 않은 개체에 대 한 참조 되었습니다.  

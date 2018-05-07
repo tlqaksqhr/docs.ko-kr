@@ -1,11 +1,6 @@
 ---
-title: "Long 데이터 형식(Visual Basic)"
+title: Long 데이터 형식(Visual Basic)
 ms.date: 01/31/2018
-ms.prod: .net
-ms.suite: 
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.Long
 helpviewer_keywords:
@@ -27,11 +22,11 @@ helpviewer_keywords:
 ms.assetid: b4770c34-1804-4f8c-b512-c10b0893e516
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 51cf03afc6b2e77ccca74fc26365fc50110e1f71
-ms.sourcegitcommit: d2da0142247ef42a219a5d2907f153e62dc6ea0d
+ms.openlocfilehash: 687c235be76ef522758658fd1c5fe0cb1dbeb414
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="long-data-type-visual-basic"></a>Long 데이터 형식 (Visual Basic)
 
@@ -58,7 +53,7 @@ Visual Basic 2017 부터는 사용할 수도 있습니다는 밑줄 문자 `_`, 
 
 [!code-vb[long](../../../../samples/snippets/visualbasic/language-reference/data-types/numeric-literals.vb#LongS)]
 
-Visual Basic 15.5 부터는 사용할 수도 있습니다는 밑줄 문자 (`_`)는 접두사와 16 진수, 이진 또는 8 진수 숫자 사이의 선행 구분 기호로 합니다. 예:
+Visual Basic 15.5 부터는 사용할 수도 있습니다는 밑줄 문자 (`_`)는 접두사와 16 진수, 이진 또는 8 진수 숫자 사이의 선행 구분 기호로 합니다. 예를 들어:
 
 ```vb
 Dim number As Long = &H_0FAC_0326_1489_D68C
@@ -82,9 +77,10 @@ Dim number = &H_0FAC_0326_1489_D68CL
   
 -   **Framework 형식입니다.** .NET Framework에서 해당하는 형식은 <xref:System.Int64?displayProperty=nameWithType> 구조체입니다.  
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참고자료
 
-<xref:System.Int64>[데이터 형식](../../../visual-basic/language-reference/data-types/data-type-summary.md)   
+<xref:System.Int64>
+[데이터 형식](../../../visual-basic/language-reference/data-types/data-type-summary.md)   
 [Integer 데이터 형식](../../../visual-basic/language-reference/data-types/integer-data-type.md)   
 [Short 데이터 형식](../../../visual-basic/language-reference/data-types/short-data-type.md)   
 [형식 변환 함수](../../../visual-basic/language-reference/functions/type-conversion-functions.md)   

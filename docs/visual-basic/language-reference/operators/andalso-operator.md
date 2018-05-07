@@ -1,11 +1,6 @@
 ---
-title: "AndAlso 연산자(Visual Basic)"
+title: AndAlso 연산자(Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.AndAlso
 - AndAlso
@@ -16,14 +11,11 @@ helpviewer_keywords:
 - operators [Visual Basic], conjunction
 - short-circuit evaluation
 ms.assetid: bbc15191-b374-495b-9b8f-7b8c2f4388eb
-caps.latest.revision: "19"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 5f92f4ed226c2923c3d95a7b80db3872b7ac33dc
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 549d14cc35d285ac2e4a02a37dd201cc669c5627
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="andalso-operator-visual-basic"></a>AndAlso 연산자(Visual Basic)
 두 식에 논리 결합을 단락 (short-circuiting)를 수행 합니다.  
@@ -38,9 +30,9 @@ result = expression1 AndAlso expression2
   
 |용어|정의|  
 |---|---|  
-|`result`|필수 요소. 임의의 `Boolean` 식입니다. 결과는 `Boolean` 두 식의 비교의 결과입니다.|  
-|`expression1`|필수 요소. 임의의 `Boolean` 식입니다.|  
-|`expression2`|필수 요소. 임의의 `Boolean` 식입니다.|  
+|`result`|필수. 임의의 `Boolean` 식입니다. 결과는 `Boolean` 두 식의 비교의 결과입니다.|  
+|`expression1`|필수. 임의의 `Boolean` 식입니다.|  
+|`expression2`|필수. 임의의 `Boolean` 식입니다.|  
   
 ## <a name="remarks"></a>설명  
  하나의 논리 연산자를 라고 *단락 (short-circuiting)* 컴파일된 코드는 다른 식의 결과 따라 각 식의 평가 건너뛸 수 있는 경우. 작업의 최종 결과 결정 하는 평가 되는 첫 번째 식의 결과가 두 번째 식을 계산할 필요가 없습니다 때문에 최종 결과 변경할 수 없습니다. 단락 (short-circuiting) 건너뛸 식이 복잡 하거나 프로시저 호출이 포함 된 경우 성능을 향상 시킬 수 있습니다.  

@@ -1,14 +1,6 @@
 ---
-title: "CorAttributeTargets 열거형"
-ms.custom: 
+title: CorAttributeTargets 열거형
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - CorAttributeTargets
 api_location:
@@ -22,17 +14,13 @@ helpviewer_keywords:
 ms.assetid: 694c0fa0-7011-41a9-9dfd-f0e16ea574b5
 topic_type:
 - apiref
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 4ce701c026b4e977c376b6e6f0f342b031634e38
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 54d239c3091b29424b26fbab4cb4eb9152ff9ad9
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="corattributetargets-enumeration"></a>CorAttributeTargets 열거형
 특성을 적용하는 데 유효한 응용 프로그램 요소를 지정합니다.  
@@ -102,7 +90,7 @@ typedef enum CorAttributeTargets
   
  **헤더:** CorHdr.h  
   
- **.NET framework 버전:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>참고 항목  
  [메타데이터 열거형](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

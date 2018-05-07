@@ -1,29 +1,17 @@
 ---
-title: "Popup 배치 동작"
-ms.custom: 
+title: Popup 배치 동작
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - popups [WPF]
 - Popup control [WPF], placing
 - placing popups [WPF]
 - positioning popups [WPF]
 ms.assetid: fbf642e9-f670-4efd-a7af-a67468a1c8e1
-caps.latest.revision: "14"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: d991895b7c10ee5c210b252855e5affcfcb22a9c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 3aef3d7863bc02aa4164b1fc9ef4464fbe799cb8
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="popup-placement-behavior"></a>Popup 배치 동작
 A <xref:System.Windows.Controls.Primitives.Popup> 컨트롤은 응용 프로그램 위에 배치 되는 별도 창에서 콘텐츠를 표시 합니다. 위치를 지정할 수는 <xref:System.Windows.Controls.Primitives.Popup> 컨트롤, 마우스, 또는 사용 하 여 화면을 기준으로 <xref:System.Windows.Controls.Primitives.Popup.PlacementTarget%2A>, <xref:System.Windows.Controls.Primitives.Popup.Placement%2A>, <xref:System.Windows.Controls.Primitives.Popup.PlacementRectangle%2A>, <xref:System.Windows.Controls.Primitives.Popup.HorizontalOffset%2A>, 및 <xref:System.Windows.Controls.Primitives.Popup.VerticalOffset%2A> 속성입니다.  이러한 속성의 위치를 지정 하는 유연성을 제공 하기 위해 함께 작동는 <xref:System.Windows.Controls.Primitives.Popup>합니다.  
@@ -116,18 +104,18 @@ HorizontalOffset 및 VerticalOffset을 사용한 Popup
   
 |PlacementMode|대상 개체|대상 영역|대상 원점|Popup 맞춤 지점|  
 |-------------------|-------------------|-----------------|-------------------|---------------------------|  
-|<xref:System.Windows.Controls.Primitives.PlacementMode.Absolute>|해당 사항 없음. <xref:System.Windows.Controls.Primitives.Popup.PlacementTarget%2A>무시 됩니다.|화면 또는 <xref:System.Windows.Controls.Primitives.Popup.PlacementRectangle%2A> 설정 된 경우.  <xref:System.Windows.Controls.Primitives.Popup.PlacementRectangle%2A> 화면에 상대적입니다.|대상 영역의 왼쪽 위 모퉁이.|왼쪽 위 모서리는 <xref:System.Windows.Controls.Primitives.Popup>합니다.|  
-|<xref:System.Windows.Controls.Primitives.PlacementMode.AbsolutePoint>|해당 사항 없음. <xref:System.Windows.Controls.Primitives.Popup.PlacementTarget%2A>무시 됩니다.|화면 또는 <xref:System.Windows.Controls.Primitives.Popup.PlacementRectangle%2A> 설정 된 경우.  <xref:System.Windows.Controls.Primitives.Popup.PlacementRectangle%2A> 화면에 상대적입니다.|대상 영역의 왼쪽 위 모퉁이.|왼쪽 위 모서리는 <xref:System.Windows.Controls.Primitives.Popup>합니다.|  
-|<xref:System.Windows.Controls.Primitives.PlacementMode.Bottom>|<xref:System.Windows.Controls.Primitives.Popup.PlacementTarget%2A>또는 부모입니다.|대상 개체 또는 <xref:System.Windows.Controls.Primitives.Popup.PlacementRectangle%2A> 설정 된 경우.  <xref:System.Windows.Controls.Primitives.Popup.PlacementRectangle%2A> 대상 개체에 상대적입니다.|대상 영역의 왼쪽 아래 모퉁이.|왼쪽 위 모서리는 <xref:System.Windows.Controls.Primitives.Popup>합니다.|  
-|<xref:System.Windows.Controls.Primitives.PlacementMode.Center>|<xref:System.Windows.Controls.Primitives.Popup.PlacementTarget%2A>또는 부모입니다.|대상 개체 또는 <xref:System.Windows.Controls.Primitives.Popup.PlacementRectangle%2A> 설정 된 경우.  <xref:System.Windows.Controls.Primitives.Popup.PlacementRectangle%2A> 대상 개체에 상대적입니다.|대상 영역의 가운데.|중심은 <xref:System.Windows.Controls.Primitives.Popup>합니다.|  
-|<xref:System.Windows.Controls.Primitives.PlacementMode.Custom>|<xref:System.Windows.Controls.Primitives.Popup.PlacementTarget%2A>또는 부모입니다.|대상 개체 또는 <xref:System.Windows.Controls.Primitives.Popup.PlacementRectangle%2A> 설정 된 경우.  <xref:System.Windows.Controls.Primitives.Popup.PlacementRectangle%2A> 대상 개체에 상대적입니다.|으로 정의 되는 <xref:System.Windows.Controls.Primitives.CustomPopupPlacementCallback>합니다.|으로 정의 되는 <xref:System.Windows.Controls.Primitives.CustomPopupPlacementCallback>합니다.|  
-|<xref:System.Windows.Controls.Primitives.PlacementMode.Left>|<xref:System.Windows.Controls.Primitives.Popup.PlacementTarget%2A>또는 부모입니다.|대상 개체 또는 <xref:System.Windows.Controls.Primitives.Popup.PlacementRectangle%2A> 설정 된 경우.  <xref:System.Windows.Controls.Primitives.Popup.PlacementRectangle%2A> 대상 개체에 상대적입니다.|대상 영역의 왼쪽 위 모퉁이.|오른쪽 위 모서리는 <xref:System.Windows.Controls.Primitives.Popup>합니다.|  
-|<xref:System.Windows.Controls.Primitives.PlacementMode.Mouse>|해당 사항 없음. <xref:System.Windows.Controls.Primitives.Popup.PlacementTarget%2A>무시 됩니다.|마우스 포인터의 경계. <xref:System.Windows.Controls.Primitives.Popup.PlacementRectangle%2A>무시 됩니다.|대상 영역의 왼쪽 아래 모퉁이.|왼쪽 위 모서리는 <xref:System.Windows.Controls.Primitives.Popup>합니다.|  
-|<xref:System.Windows.Controls.Primitives.PlacementMode.MousePoint>|해당 사항 없음. <xref:System.Windows.Controls.Primitives.Popup.PlacementTarget%2A>무시 됩니다.|마우스 포인터의 경계. <xref:System.Windows.Controls.Primitives.Popup.PlacementRectangle%2A>무시 됩니다.|대상 영역의 왼쪽 위 모퉁이.|왼쪽 위 모서리는 <xref:System.Windows.Controls.Primitives.Popup>합니다.|  
-|<xref:System.Windows.Controls.Primitives.PlacementMode.Relative>|<xref:System.Windows.Controls.Primitives.Popup.PlacementTarget%2A>또는 부모입니다.|대상 개체 또는 <xref:System.Windows.Controls.Primitives.Popup.PlacementRectangle%2A> 설정 된 경우.  <xref:System.Windows.Controls.Primitives.Popup.PlacementRectangle%2A> 대상 개체에 상대적입니다.|대상 영역의 왼쪽 위 모퉁이.|왼쪽 위 모서리는 <xref:System.Windows.Controls.Primitives.Popup>합니다.|  
-|<xref:System.Windows.Controls.Primitives.PlacementMode.RelativePoint>|<xref:System.Windows.Controls.Primitives.Popup.PlacementTarget%2A>또는 부모입니다.|대상 개체 또는 <xref:System.Windows.Controls.Primitives.Popup.PlacementRectangle%2A> 설정 된 경우.  <xref:System.Windows.Controls.Primitives.Popup.PlacementRectangle%2A> 대상 개체에 상대적입니다.|대상 영역의 왼쪽 위 모퉁이.|왼쪽 위 모서리는 <xref:System.Windows.Controls.Primitives.Popup>합니다.|  
-|<xref:System.Windows.Controls.Primitives.PlacementMode.Right>|<xref:System.Windows.Controls.Primitives.Popup.PlacementTarget%2A>또는 부모입니다.|대상 개체 또는 <xref:System.Windows.Controls.Primitives.Popup.PlacementRectangle%2A> 설정 된 경우.  <xref:System.Windows.Controls.Primitives.Popup.PlacementRectangle%2A> 대상 개체에 상대적입니다.|대상 영역의 오른쪽 위 모퉁이.|왼쪽 위 모서리는 <xref:System.Windows.Controls.Primitives.Popup>합니다.|  
-|<xref:System.Windows.Controls.Primitives.PlacementMode.Top>|<xref:System.Windows.Controls.Primitives.Popup.PlacementTarget%2A>또는 부모입니다.|대상 개체 또는 <xref:System.Windows.Controls.Primitives.Popup.PlacementRectangle%2A> 설정 된 경우.  <xref:System.Windows.Controls.Primitives.Popup.PlacementRectangle%2A> 대상 개체에 상대적입니다.|대상 영역의 왼쪽 위 모퉁이.|왼쪽 아래 모서리는 <xref:System.Windows.Controls.Primitives.Popup>합니다.|  
+|<xref:System.Windows.Controls.Primitives.PlacementMode.Absolute>|해당 사항 없음. <xref:System.Windows.Controls.Primitives.Popup.PlacementTarget%2A> 무시 됩니다.|화면 또는 <xref:System.Windows.Controls.Primitives.Popup.PlacementRectangle%2A> 설정 된 경우.  <xref:System.Windows.Controls.Primitives.Popup.PlacementRectangle%2A> 화면에 상대적입니다.|대상 영역의 왼쪽 위 모퉁이.|왼쪽 위 모서리는 <xref:System.Windows.Controls.Primitives.Popup>합니다.|  
+|<xref:System.Windows.Controls.Primitives.PlacementMode.AbsolutePoint>|해당 사항 없음. <xref:System.Windows.Controls.Primitives.Popup.PlacementTarget%2A> 무시 됩니다.|화면 또는 <xref:System.Windows.Controls.Primitives.Popup.PlacementRectangle%2A> 설정 된 경우.  <xref:System.Windows.Controls.Primitives.Popup.PlacementRectangle%2A> 화면에 상대적입니다.|대상 영역의 왼쪽 위 모퉁이.|왼쪽 위 모서리는 <xref:System.Windows.Controls.Primitives.Popup>합니다.|  
+|<xref:System.Windows.Controls.Primitives.PlacementMode.Bottom>|<xref:System.Windows.Controls.Primitives.Popup.PlacementTarget%2A> 또는 부모입니다.|대상 개체 또는 <xref:System.Windows.Controls.Primitives.Popup.PlacementRectangle%2A> 설정 된 경우.  <xref:System.Windows.Controls.Primitives.Popup.PlacementRectangle%2A> 대상 개체에 상대적입니다.|대상 영역의 왼쪽 아래 모퉁이.|왼쪽 위 모서리는 <xref:System.Windows.Controls.Primitives.Popup>합니다.|  
+|<xref:System.Windows.Controls.Primitives.PlacementMode.Center>|<xref:System.Windows.Controls.Primitives.Popup.PlacementTarget%2A> 또는 부모입니다.|대상 개체 또는 <xref:System.Windows.Controls.Primitives.Popup.PlacementRectangle%2A> 설정 된 경우.  <xref:System.Windows.Controls.Primitives.Popup.PlacementRectangle%2A> 대상 개체에 상대적입니다.|대상 영역의 가운데.|중심은 <xref:System.Windows.Controls.Primitives.Popup>합니다.|  
+|<xref:System.Windows.Controls.Primitives.PlacementMode.Custom>|<xref:System.Windows.Controls.Primitives.Popup.PlacementTarget%2A> 또는 부모입니다.|대상 개체 또는 <xref:System.Windows.Controls.Primitives.Popup.PlacementRectangle%2A> 설정 된 경우.  <xref:System.Windows.Controls.Primitives.Popup.PlacementRectangle%2A> 대상 개체에 상대적입니다.|으로 정의 되는 <xref:System.Windows.Controls.Primitives.CustomPopupPlacementCallback>합니다.|으로 정의 되는 <xref:System.Windows.Controls.Primitives.CustomPopupPlacementCallback>합니다.|  
+|<xref:System.Windows.Controls.Primitives.PlacementMode.Left>|<xref:System.Windows.Controls.Primitives.Popup.PlacementTarget%2A> 또는 부모입니다.|대상 개체 또는 <xref:System.Windows.Controls.Primitives.Popup.PlacementRectangle%2A> 설정 된 경우.  <xref:System.Windows.Controls.Primitives.Popup.PlacementRectangle%2A> 대상 개체에 상대적입니다.|대상 영역의 왼쪽 위 모퉁이.|오른쪽 위 모서리는 <xref:System.Windows.Controls.Primitives.Popup>합니다.|  
+|<xref:System.Windows.Controls.Primitives.PlacementMode.Mouse>|해당 사항 없음. <xref:System.Windows.Controls.Primitives.Popup.PlacementTarget%2A> 무시 됩니다.|마우스 포인터의 경계. <xref:System.Windows.Controls.Primitives.Popup.PlacementRectangle%2A> 무시 됩니다.|대상 영역의 왼쪽 아래 모퉁이.|왼쪽 위 모서리는 <xref:System.Windows.Controls.Primitives.Popup>합니다.|  
+|<xref:System.Windows.Controls.Primitives.PlacementMode.MousePoint>|해당 사항 없음. <xref:System.Windows.Controls.Primitives.Popup.PlacementTarget%2A> 무시 됩니다.|마우스 포인터의 경계. <xref:System.Windows.Controls.Primitives.Popup.PlacementRectangle%2A> 무시 됩니다.|대상 영역의 왼쪽 위 모퉁이.|왼쪽 위 모서리는 <xref:System.Windows.Controls.Primitives.Popup>합니다.|  
+|<xref:System.Windows.Controls.Primitives.PlacementMode.Relative>|<xref:System.Windows.Controls.Primitives.Popup.PlacementTarget%2A> 또는 부모입니다.|대상 개체 또는 <xref:System.Windows.Controls.Primitives.Popup.PlacementRectangle%2A> 설정 된 경우.  <xref:System.Windows.Controls.Primitives.Popup.PlacementRectangle%2A> 대상 개체에 상대적입니다.|대상 영역의 왼쪽 위 모퉁이.|왼쪽 위 모서리는 <xref:System.Windows.Controls.Primitives.Popup>합니다.|  
+|<xref:System.Windows.Controls.Primitives.PlacementMode.RelativePoint>|<xref:System.Windows.Controls.Primitives.Popup.PlacementTarget%2A> 또는 부모입니다.|대상 개체 또는 <xref:System.Windows.Controls.Primitives.Popup.PlacementRectangle%2A> 설정 된 경우.  <xref:System.Windows.Controls.Primitives.Popup.PlacementRectangle%2A> 대상 개체에 상대적입니다.|대상 영역의 왼쪽 위 모퉁이.|왼쪽 위 모서리는 <xref:System.Windows.Controls.Primitives.Popup>합니다.|  
+|<xref:System.Windows.Controls.Primitives.PlacementMode.Right>|<xref:System.Windows.Controls.Primitives.Popup.PlacementTarget%2A> 또는 부모입니다.|대상 개체 또는 <xref:System.Windows.Controls.Primitives.Popup.PlacementRectangle%2A> 설정 된 경우.  <xref:System.Windows.Controls.Primitives.Popup.PlacementRectangle%2A> 대상 개체에 상대적입니다.|대상 영역의 오른쪽 위 모퉁이.|왼쪽 위 모서리는 <xref:System.Windows.Controls.Primitives.Popup>합니다.|  
+|<xref:System.Windows.Controls.Primitives.PlacementMode.Top>|<xref:System.Windows.Controls.Primitives.Popup.PlacementTarget%2A> 또는 부모입니다.|대상 개체 또는 <xref:System.Windows.Controls.Primitives.Popup.PlacementRectangle%2A> 설정 된 경우.  <xref:System.Windows.Controls.Primitives.Popup.PlacementRectangle%2A> 대상 개체에 상대적입니다.|대상 영역의 왼쪽 위 모퉁이.|왼쪽 아래 모서리는 <xref:System.Windows.Controls.Primitives.Popup>합니다.|  
   
  다음 그림에 나온은 <xref:System.Windows.Controls.Primitives.Popup>, 각각에 대해 대상 영역, 대상 원점 및 팝업 맞춤 지점 <xref:System.Windows.Controls.Primitives.PlacementMode> 값입니다. 각 도형에 있는 대상 영역은 노란색, 및 <xref:System.Windows.Controls.Primitives.Popup> 는 파란색입니다.  
   

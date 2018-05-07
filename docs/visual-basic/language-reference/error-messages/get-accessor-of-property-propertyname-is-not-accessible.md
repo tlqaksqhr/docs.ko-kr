@@ -1,28 +1,19 @@
 ---
-title: '&#39; Get &#39; 접근자 속성 &#39; &lt;propertyname&gt;&#39; 액세스할 수 없으면'
+title: '&#39;가져오기&#39; 속성의 접근자 &#39; &lt;propertyname&gt; &#39; 는 액세스할 수 없습니다'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vbc31103
 - bc31103
 helpviewer_keywords:
 - BC31103
 ms.assetid: 3c346c32-7669-4b04-841d-7a9df9cb703e
-caps.latest.revision: 9
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 167e040570af1fc78ce48f5e930e54981ba909ae
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 0972c0909f8b07aa1c6700ec32d1a1ca55d00cc1
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="39get39-accessor-of-property-39ltpropertynamegt39-is-not-accessible"></a>&#39; Get &#39; 접근자 속성 &#39; &lt;propertyname&gt;&#39; 액세스할 수 없으면
+# <a name="39get39-accessor-of-property-39ltpropertynamegt39-is-not-accessible"></a>&#39;가져오기&#39; 속성의 접근자 &#39; &lt;propertyname&gt; &#39; 는 액세스할 수 없습니다
 문에서 속성에 대 한 액세스 권한이 없습니다 속성의 값을 검색 하려고 `Get` 프로시저입니다.  
   
  경우는 [Get 문을](../../../visual-basic/language-reference/statements/get-statement.md) 수준 보다 더 제한적인 액세스로 표시 되 해당 [Property 문](../../../visual-basic/language-reference/statements/property-statement.md), 속성 값을 읽지 다음과 같은 경우에 실패할 수 있습니다.  

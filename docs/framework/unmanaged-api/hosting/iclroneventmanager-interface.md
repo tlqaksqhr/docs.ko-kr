@@ -1,14 +1,6 @@
 ---
-title: "ICLROnEventManager 인터페이스"
-ms.custom: 
+title: ICLROnEventManager 인터페이스
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICLROnEventManager
 api_location:
@@ -22,17 +14,13 @@ helpviewer_keywords:
 ms.assetid: 9e15a0c1-8ab6-43d0-ae28-6ec7a4edd913
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 02a19a3daf72cdfa493b09fa984fe7b50865ed30
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: c22dfa99d8069c060a525a9ae2cbef73d6625898
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="iclroneventmanager-interface"></a>ICLROnEventManager 인터페이스
 등록 하 고 공용 언어 런타임 (CLR) 이벤트에 대 한 콜백을 등록을 취소 하기 위해 호스트에 사용할 수 있는 메서드를 제공 합니다.  
@@ -57,7 +45,7 @@ ms.lasthandoff: 12/22/2017
   
  **라이브러리:** MSCorEE.dll에 리소스로 포함  
   
- **.NET framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>참고 항목  
  [EClrEvent 열거형](../../../../docs/framework/unmanaged-api/hosting/eclrevent-enumeration.md)  

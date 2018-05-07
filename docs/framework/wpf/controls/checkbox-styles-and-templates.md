@@ -1,13 +1,6 @@
 ---
-title: "CheckBox 스타일 및 템플릿"
-ms.custom: 
+title: CheckBox 스타일 및 템플릿
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - states [WPF], CheckBox
 - templates [WPF], CheckBox
@@ -16,16 +9,11 @@ helpviewer_keywords:
 - CheckBox [WPF], styles and templates
 - styles [WPF], CheckBox
 ms.assetid: bfdaec96-d101-4d3d-864d-c27e6b621d03
-caps.latest.revision: "18"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 08b37be727c8a124ea7c4955b3eaf23d1bc9a485
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ca7033f3a9f2d8a46c9a19c0b1e4e441efb39c7a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="checkbox-styles-and-templates"></a>CheckBox 스타일 및 템플릿
 이 항목에서는 스타일 및 서식 파일에 대 한 설명의 <xref:System.Windows.Controls.CheckBox> 제어 합니다. 기본값을 수정할 수 <xref:System.Windows.Controls.ControlTemplate> 고유한 모양을 제어할 수 있습니다. 자세한 내용은 [ControlTemplate을 만들어 기존 컨트롤의 모양 사용자 지정](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md)을 참조하세요.  
@@ -46,7 +34,7 @@ ms.lasthandoff: 12/22/2017
 |포커스 없음|FocusStates|컨트롤에 포커스가 없습니다.|  
 |선택한 상태|CheckStates|<xref:System.Windows.Controls.Primitives.ToggleButton.IsChecked%2A>가 `true`인 경우|  
 |선택 취소 되어 있음|CheckStates|<xref:System.Windows.Controls.Primitives.ToggleButton.IsChecked%2A>가 `false`인 경우|  
-|비활성화 상태|CheckStates|<xref:System.Windows.Controls.Primitives.ToggleButton.IsThreeState%2A>`true`, 및 <xref:System.Windows.Controls.Primitives.ToggleButton.IsChecked%2A> 은 `null`합니다.|  
+|비활성화 상태|CheckStates|<xref:System.Windows.Controls.Primitives.ToggleButton.IsThreeState%2A> `true`, 및 <xref:System.Windows.Controls.Primitives.ToggleButton.IsChecked%2A> 은 `null`합니다.|  
 |유효|ValidationStates|컨트롤이 사용 하는 <xref:System.Windows.Controls.Validation> 클래스 및 <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> 연결 된 속성은 `false`합니다.|  
 |InvalidUnfocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> 연결 된 속성을 `true` 가 컨트롤에 포커스가 있습니다.|  
 |InvalidFocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> 연결 된 속성을 `true` 가 컨트롤에 포커스가 없으면 합니다.|  

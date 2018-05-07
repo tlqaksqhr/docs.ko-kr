@@ -1,13 +1,6 @@
 ---
-title: "전역 변형 사용"
-ms.custom: 
+title: 전역 변형 사용
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -15,16 +8,11 @@ helpviewer_keywords:
 - graphics [Windows Forms], world transformation
 - world transformation [Windows Forms], examples
 ms.assetid: 1e717711-1361-448e-aa49-0f3ec43110c9
-caps.latest.revision: "10"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: e8599f2e154e05fd2d43b094041989c4a3a5dbc0
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 6a029e17096222d7ed80dea16f91b83a813039f8
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-the-world-transformation"></a>전역 변형 사용
 월드 변형을의 속성인는 <xref:System.Drawing.Graphics> 클래스입니다. 월드 변형과 지정 하는 숫자는 저장 된 <xref:System.Drawing.Drawing2D.Matrix> 3 × 3 행렬을 나타내는 개체입니다. <xref:System.Drawing.Drawing2D.Matrix> 및 <xref:System.Drawing.Graphics> 클래스에는 여러 가지 방법을 월드 변형 매트릭스에 숫자를 설정 합니다.  

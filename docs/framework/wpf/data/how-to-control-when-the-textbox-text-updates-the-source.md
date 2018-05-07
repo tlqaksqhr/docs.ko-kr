@@ -1,14 +1,6 @@
 ---
-title: "방법: TextBox 텍스트의 소스를 업데이트하는 시점 제어"
-ms.custom: 
+title: '방법: TextBox 텍스트의 소스를 업데이트하는 시점 제어'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -17,23 +9,17 @@ helpviewer_keywords:
 - data binding [WPF], timing of source updates
 - timing of source updates [WPF]
 ms.assetid: ffb7b96a-351d-4c68-81e7-054033781c64
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 00fc64938e6a063ffbda77961f967e08c169ebd7
-ms.sourcegitcommit: 973a12d1e6962cd9a9c263fbfaad040ec8267fe9
+ms.openlocfilehash: 52f3a8d3a5d78a211367722b3042eb50f6ac36d1
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/22/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-control-when-the-textbox-text-updates-the-source"></a>방법: TextBox 텍스트의 소스를 업데이트하는 시점 제어
 이 항목에서는 사용 하는 방법을 설명는 <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A> 바인딩 소스 업데이트의 타이밍을 제어 하는 속성입니다. 항목에서는 사용 된 <xref:System.Windows.Controls.TextBox> 예를 들어 컨트롤입니다.  
   
-## <a name="example"></a>예  
- <xref:System.Windows.Controls.TextBox>.<xref:System.Windows.Controls.TextBox.Text%2A> 속성에는 기본 <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A> 값 <xref:System.Windows.Data.UpdateSourceTrigger.LostFocus>합니다. 즉, 경우에 응용 프로그램에 <xref:System.Windows.Controls.TextBox> 데이터 바인딩된 <xref:System.Windows.Controls.TextBox>.<xref:System.Windows.Controls.TextBox.Text%2A> 속성에 입력 한 텍스트는 <xref:System.Windows.Controls.TextBox> 될 때까지 소스를 업데이트 하지 않습니다는 <xref:System.Windows.Controls.TextBox> 포커스를 잃을 (예를 들어, 클릭는 반대쪽<xref:System.Windows.Controls.TextBox>).  
+## <a name="example"></a>예제  
+ <xref:System.Windows.Controls.TextBox>.<xref:System.Windows.Controls.TextBox.Text%2A> 속성에는 기본 <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A> 값 <xref:System.Windows.Data.UpdateSourceTrigger.LostFocus>합니다. 즉, 경우에 응용 프로그램에 <xref:System.Windows.Controls.TextBox> 데이터 바인딩된 <xref:System.Windows.Controls.TextBox>합니다.<xref:System.Windows.Controls.TextBox.Text%2A> 속성에 입력 한 텍스트는 <xref:System.Windows.Controls.TextBox> 될 때까지 소스를 업데이트 하지 않습니다는 <xref:System.Windows.Controls.TextBox> 포커스를 잃을 (예를 들어, 클릭 하면에서 멀리는 <xref:System.Windows.Controls.TextBox>).  
   
  소스를 입력할 때 자동으로 업데이트할 수 설정는 <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A> 에 대 한 바인딩 <xref:System.Windows.Data.UpdateSourceTrigger.PropertyChanged>합니다. 다음 예제에서는 강조 표시 된 코드 줄을 표시 하는 `Text` 둘 다는 <xref:System.Windows.Controls.TextBox> 및 <xref:System.Windows.Controls.TextBlock> 동일한 소스 속성에 바인딩됩니다. <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A> 의 속성은 <xref:System.Windows.Controls.TextBox> 바인딩으로 설정 된 <xref:System.Windows.Data.UpdateSourceTrigger.PropertyChanged>합니다.  
   

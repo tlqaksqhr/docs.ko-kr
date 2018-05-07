@@ -1,14 +1,6 @@
 ---
-title: "StrongNameKeyDelete 함수"
-ms.custom: 
+title: StrongNameKeyDelete 함수
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - StrongNameKeyDelete
 api_location:
@@ -22,17 +14,13 @@ helpviewer_keywords:
 ms.assetid: 313e71e4-1790-4d2f-b68b-5040ebd1c149
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: d3acd8ae5f330e23642a679962a04ccb4f7e8ec6
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: a35ec4e3c3110616ac20cd31db134371838deda0
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="strongnamekeydelete-function"></a>StrongNameKeyDelete 함수
 지정된 된 키 컨테이너를 삭제합니다.  
@@ -52,7 +40,7 @@ BOOLEAN StrongNameKeyDelete (
  [in] 삭제할 키 컨테이너의 이름입니다.  
   
 ## <a name="return-value"></a>반환 값  
- `true`성공적으로 완료 됩니다. 그렇지 않으면 `false`합니다.  
+ `true` 성공적으로 완료 됩니다. 그렇지 않으면 `false`합니다.  
   
 ## <a name="remarks"></a>설명  
  사용 하 여는 [StrongNameKeyInstall](../../../../docs/framework/unmanaged-api/strong-naming/strongnamekeyinstall-function.md) 컨테이너에 공개/개인 키 쌍을 importa에 작동 합니다.  
@@ -66,7 +54,7 @@ BOOLEAN StrongNameKeyDelete (
   
  **라이브러리:** MsCorEE.dll에 리소스로 포함  
   
- **.NET framework 버전:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>참고 항목  
  [StrongNameKeyDelete 메서드](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamekeydelete-method.md)  

@@ -1,31 +1,17 @@
 ---
-title: "구조적 탐색 개요"
-ms.custom: 
+title: 구조적 탐색 개요
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - structured navigation [WPF]
 ms.assetid: 025d30ef-fec5-436d-ad7a-5d5483331c26
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: f9d20fb5b16fbf44bdf8431ae32afee105af7676
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 9be4e753a229d97f2caf1d74b3b9b8239b99c694
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="structured-navigation-overview"></a>구조적 탐색 개요
 호스팅될 수 있는 콘텐츠는 [!INCLUDE[TLA#tla_xbap](../../../../includes/tlasharptla-xbap-md.md)], <xref:System.Windows.Controls.Frame>, 또는 <xref:System.Windows.Navigation.NavigationWindow> 팩으로 식별할 수 있는 페이지로 구성 됩니다 [!INCLUDE[TLA#tla_uri#plural](../../../../includes/tlasharptla-urisharpplural-md.md)] 하이퍼링크로 탐색할 합니다. 하이퍼링크를 통해 정의되는 페이지 및 페이지 탐색 방법의 구조를 탐색 토폴로지라고 합니다. 이 토폴로지는 다양한 응용 프로그램 형식, 특히 문서를 탐색하는 응용 프로그램에 적합합니다. 해당 응용 프로그램의 경우 한쪽 페이지가 다른 페이지에 대해 아무것도 알 필요 없이 사용자가 페이지 사이에서 이동할 수 있습니다.  
@@ -160,7 +146,7 @@ ms.lasthandoff: 12/22/2017
 [!code-csharp[StructuredNavigationSample#ReturnCODEBEHIND2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/StructuredNavigationSample/CSharp/CalledPageFunction.xaml.cs#returncodebehind2)]
 [!code-vb[StructuredNavigationSample#ReturnCODEBEHIND2](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/StructuredNavigationSample/VisualBasic/CalledPageFunction.xaml.vb#returncodebehind2)]  
   
- 이 예제에서 사용자가 [취소] 단추를 누르면 `null` 값이 호출 페이지로 반환됩니다. [확인] 단추를 누르면 사용자가 제공한 문자열 값이 반환됩니다. <xref:System.Windows.Navigation.PageFunction%601.OnReturn%2A>이 `protected``virtual` 메서드를 호출 하는 페이지에 데이터를 반환 하기 위해 호출 합니다. 데이터 원본이 인스턴스의 패키지할 수 해야 <xref:System.Windows.Navigation.ReturnEventArgs%601> 형식, 형식 인수 유형을 지정 하는 값 <xref:System.Windows.Navigation.ReturnEventArgs%601.Result%2A> 반환 합니다. 이러한 방식으로 선언 하는 경우에 <xref:System.Windows.Navigation.PageFunction%601> 특정 형식 인수를 사용 하는 나타낼 수 있습니다는 <xref:System.Windows.Navigation.PageFunction%601> 형식 인수에 의해 지정 된 형식의 인스턴스를 반환 합니다. 이 예제에서는 형식 인수 및 반환 값은 형식의 <xref:System.String>합니다.  
+ 이 예제에서 사용자가 [취소] 단추를 누르면 `null` 값이 호출 페이지로 반환됩니다. [확인] 단추를 누르면 사용자가 제공한 문자열 값이 반환됩니다. <xref:System.Windows.Navigation.PageFunction%601.OnReturn%2A> 이 `protected``virtual` 메서드를 호출 하는 페이지에 데이터를 반환 하기 위해 호출 합니다. 데이터 원본이 인스턴스의 패키지할 수 해야 <xref:System.Windows.Navigation.ReturnEventArgs%601> 형식, 형식 인수 유형을 지정 하는 값 <xref:System.Windows.Navigation.ReturnEventArgs%601.Result%2A> 반환 합니다. 이러한 방식으로 선언 하는 경우에 <xref:System.Windows.Navigation.PageFunction%601> 특정 형식 인수를 사용 하는 나타낼 수 있습니다는 <xref:System.Windows.Navigation.PageFunction%601> 형식 인수에 의해 지정 된 형식의 인스턴스를 반환 합니다. 이 예제에서는 형식 인수 및 반환 값은 형식의 <xref:System.String>합니다.  
   
  때 <xref:System.Windows.Navigation.PageFunction%601.OnReturn%2A> 호출의 반환 값 어떤 방법으로든 호출 페이지 요구는 <xref:System.Windows.Navigation.PageFunction%601>합니다. 이러한 이유로 <xref:System.Windows.Navigation.PageFunction%601> 구현 하는 <xref:System.Windows.Navigation.PageFunction%601.Return> 이벤트를 처리 하는 페이지를 호출 합니다. 때 <xref:System.Windows.Navigation.PageFunction%601.OnReturn%2A> 가 호출 <xref:System.Windows.Navigation.PageFunction%601.Return> 이 발생 하면 호출 페이지를 등록할 수 있도록 <xref:System.Windows.Navigation.PageFunction%601.Return> 는 알림을 받을 수 있습니다.  
   

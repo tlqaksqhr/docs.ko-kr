@@ -1,14 +1,6 @@
 ---
-title: "ICorDebugProcess5::EnumerateHandles 메서드"
-ms.custom: 
+title: ICorDebugProcess5::EnumerateHandles 메서드
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICorDebugProcess5.EnumerateHandles
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: 7d7fa796-0dc6-4ee8-9d56-40166246d91d
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: c9bf9f1a4d565e0af4f3ee34a2805116407027d8
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 2f2177702c6c5999033d0852a932e52c0725fb8a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="icordebugprocess5enumeratehandles-method"></a>ICorDebugProcess5::EnumerateHandles 메서드
 프로세스에서 개체 핸들에 대 한 열거자를 가져옵니다.  
@@ -53,15 +41,15 @@ HRESULT EnumerateHandles(     [in] CorGCReferenceType types,
  [out] 주소에 대 한 포인터는 [ICorDebugGCReferenceEnum](../../../../docs/framework/unmanaged-api/debugging/icordebuggcreferenceenum-interface.md) 즉 하는 열거자 개체에 대 한 가비지 수집 합니다.  
   
 ## <a name="remarks"></a>설명  
- `EnumerateHandles`핸들 테이블의 검사를 지 원하는 도우미 함수가입니다. 비슷합니다는 [icordebugprocess5:: Enumerategcreferences](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-enumerategcreferences-method.md) 메서드와 비슷하지만 대신 채우기는 [ICorDebugGCReferenceEnum](../../../../docs/framework/unmanaged-api/debugging/icordebuggcreferenceenum-interface.md) 가비지 수집 된 모든 개체를 사용 하 여 컬렉션 것 핸들 테이블의 핸들이 있는 개체에 대해서만 포함 됩니다.  
+ `EnumerateHandles` 핸들 테이블의 검사를 지 원하는 도우미 함수가입니다. 비슷합니다는 [icordebugprocess5:: Enumerategcreferences](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-enumerategcreferences-method.md) 메서드와 비슷하지만 대신 채우기는 [ICorDebugGCReferenceEnum](../../../../docs/framework/unmanaged-api/debugging/icordebuggcreferenceenum-interface.md) 가비지 수집 된 모든 개체를 사용 하 여 컬렉션 것 핸들 테이블의 핸들이 있는 개체에 대해서만 포함 됩니다.  
   
- `types` 매개 변수 컬렉션에 포함할 핸들 유형을 지정 합니다. `types`다음 세 가지 멤버 중 하나일 수 있습니다는 [CorGCReferenceType](../../../../docs/framework/unmanaged-api/debugging/corgcreferencetype-enumeration.md) 열거:  
+ `types` 매개 변수 컬렉션에 포함할 핸들 유형을 지정 합니다. `types` 다음 세 가지 멤버 중 하나일 수 있습니다는 [CorGCReferenceType](../../../../docs/framework/unmanaged-api/debugging/corgcreferencetype-enumeration.md) 열거:  
   
--   `CorHandleStrongOnly`(핸들 강력한 참조에만 해당)입니다.  
+-   `CorHandleStrongOnly` (핸들 강력한 참조에만 해당)입니다.  
   
--   `CorHandleWeakOnly`(핸들 약한 참조에만 해당)입니다.  
+-   `CorHandleWeakOnly` (핸들 약한 참조에만 해당)입니다.  
   
--   `CorHandleAll`(모든 핸들)입니다.  
+-   `CorHandleAll` (모든 핸들)입니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **플랫폼:** 참조 [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)합니다.  
@@ -70,7 +58,7 @@ HRESULT EnumerateHandles(     [in] CorGCReferenceType types,
   
  **라이브러리:** CorGuids.lib  
   
- **.NET framework 버전:**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **.NET framework 버전:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
 ## <a name="see-also"></a>참고 항목  
  [디버깅 구조체](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)  

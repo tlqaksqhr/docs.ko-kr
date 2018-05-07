@@ -1,13 +1,6 @@
 ---
-title: "방법: 디자이너를 사용하여 Windows Forms 컨트롤에 대한 선택키 만들기"
-ms.custom: 
+title: '방법: 디자이너를 사용하여 Windows Forms 컨트롤에 대한 선택키 만들기'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - controls [Windows Forms], access keys
 - Button control [Windows Forms], access keys
@@ -22,16 +15,11 @@ helpviewer_keywords:
 - access keys [Windows Forms], Windows Forms
 - ALT key
 ms.assetid: 4c374c4c-4ca9-4a68-ac96-9dc3ab0f518a
-caps.latest.revision: "5"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ed3bf2aa1e6081ca018f1b4dec98e6304a1aa95c
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 023973e7fa4ab1e8b802d8c7cd8abef8201ed720
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-access-keys-for-windows-forms-controls-using-the-designer"></a>방법: 디자이너를 사용하여 Windows Forms 컨트롤에 대한 선택키 만들기
 *선택 키* 은 메뉴, 메뉴 항목 또는 예: 단추 컨트롤의 레이블 텍스트에 밑줄이 그어진된 문자. "단추를 클릭"는 미리 정의 된 선택 키와 함께에서 ALT 키를 눌러 사용자 수 있습니다. 예를 들어, 단추는 폼을 인쇄 하는 프로시저를 실행 하는 경우 일부 이므로 해당 `Text` "Print" 추가 앰퍼샌드 (&) "P" 하면 문자 "P"에 밑줄이 단추 텍스트의 런타임 시 문자 앞에 속성을 설정 합니다. 사용자는 ALT + P를 눌러 단추와 연결 된 명령을 실행할 수 있습니다. 포커스를 받을 수 없는 컨트롤에 대 한 선택 키를 사용할 수 없습니다.  

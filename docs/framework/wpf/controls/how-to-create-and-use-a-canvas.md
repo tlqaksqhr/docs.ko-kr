@@ -1,13 +1,6 @@
 ---
-title: "방법: 캔버스 만들기 및 사용"
-ms.custom: 
+title: '방법: 캔버스 만들기 및 사용'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -16,21 +9,16 @@ helpviewer_keywords:
 - Canvas control [WPF], creating
 - Canvas control [WPF], using
 ms.assetid: 420b9487-9a15-477c-9489-a22a4dec7779
-caps.latest.revision: "12"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 562531f75d6a800ff93a02709a053b790de52ea2
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: c3ddb5171ca8ded053d56fde26ab86ebc4ae5cb2
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-and-use-a-canvas"></a>방법: 캔버스 만들기 및 사용
 만들고의 인스턴스를 사용 하는 방법을 보여 주는이 예제 <xref:System.Windows.Controls.Canvas>합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 예제에서는 명시적으로 두 개의 배치 <xref:System.Windows.Controls.TextBlock> 요소를 사용 하 여는 <xref:System.Windows.Controls.Canvas.SetTop%2A> 및 <xref:System.Windows.Controls.Canvas.SetLeft%2A> 방식의 <xref:System.Windows.Controls.Canvas>합니다. 이 예에서는 또한 할당 한 <xref:System.Windows.Controls.Control.Background%2A> 의 색 `LightSteelBlue` 에 <xref:System.Windows.Controls.Canvas>합니다.  
   
 > [!NOTE]

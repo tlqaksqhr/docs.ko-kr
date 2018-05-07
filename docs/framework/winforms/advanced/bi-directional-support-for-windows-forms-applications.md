@@ -1,10 +1,6 @@
 ---
 title: Windows Forms 응용 프로그램에 대한 양방향 지원
 ms.date: 09/30/2017
-ms.prod: .net-framework
-ms.technology:
-- dotnet-winforms
-ms.topic: article
 helpviewer_keywords:
 - globalization [Windows Forms], bi-directional support in Windows
 - Windows Forms, international
@@ -13,14 +9,11 @@ helpviewer_keywords:
 - Windows Forms, bi-directional support
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: d670fedb2fe693a871de8f0147b81b97b4958853
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.openlocfilehash: fe1a15477e858a77ee7829f1d4a9d052457cd30f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="bi-directional-support-for-windows-forms-applications"></a>Windows Forms 응용 프로그램에 대한 양방향 지원
 Visual Studio를 사용 하 여 예: 아랍어 및 히브리어 양방향 (오른쪽에서 왼쪽) 언어를 지 원하는 Windows 기반 응용 프로그램을 만들 수 있습니다. 여기에는 표준 폼, 대화 상자, MDI 폼 및 이러한 폼에서 사용할 수 있는 모든 컨트롤(즉, <xref:System.Windows.Forms.Control> 네임스페이스의 모든 개체)이 포함됩니다.  

@@ -1,17 +1,12 @@
 ---
 title: 이벤트(F#)
 description: '어떻게 F # 이벤트를 사용 하면 함수 호출의 GUI 프로그래밍에서에서 중요 한 사용자 작업에 연결할에 대해 알아봅니다.'
-author: cartermp
-ms.author: phcart
 ms.date: 05/16/2016
-ms.topic: language-reference
-ms.prod: dotnet-fsharp
-ms.devlang: fsharp
-ms.openlocfilehash: 5c5f152830d4d91a25c79a09800263cdd85ed8b7
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: e90d3abc5b5222f60c4e08539ee40bf83ac70ec7
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="events"></a>이벤트
 

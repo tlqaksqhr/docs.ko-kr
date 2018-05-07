@@ -1,14 +1,6 @@
 ---
-title: "ICLRStrongName 인터페이스"
-ms.custom: 
+title: ICLRStrongName 인터페이스
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICLRStrongName
 api_location:
@@ -22,17 +14,13 @@ helpviewer_keywords:
 ms.assetid: 2fac66fd-6b3b-4dbd-8baf-86038bd85526
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 9b8859cf507fb81f07b85b055380ba86aae471b5
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 92ae4c2f4a6fb126f5d86cee216e5b2bb6170e66
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="iclrstrongname-interface"></a>ICLRStrongName 인터페이스
 강력한 이름의 어셈블리를 서명 하는 것에 대 한 기본 전역 정적 함수를 제공 합니다. 모든 `ICLRStrongName` 메서드 표준 COM Hresult를 반환 합니다.  
@@ -77,7 +65,7 @@ ms.lasthandoff: 12/22/2017
   
  **라이브러리:** MSCorEE.dll에 리소스로 포함  
   
- **.NET framework 버전:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET framework 버전:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>참고 항목  
  [호스팅 인터페이스](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)  

@@ -1,14 +1,6 @@
 ---
-title: "LockClrVersion 함수"
-ms.custom: 
+title: LockClrVersion 함수
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - LockClrVersion
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: 1318ee37-c43b-40eb-bbe8-88fc46453d74
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: a58d7e99f545026f6f133901ef35a1f9b9fabc7d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 6956d73be0380baef96d94584f007e0683331784
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="lockclrversion-function"></a>LockClrVersion 함수
 호스트가 명시적으로 CLR을 초기화 하기 전에 프로세스에서 사용할 공용 언어 런타임 (CLR)의 버전은 결정할 수 있습니다.  
@@ -69,7 +57,7 @@ HRESULT LockClrVersion (
 |E_INVALIDARG|인수 중 하나 이상이 null입니다.|  
   
 ## <a name="remarks"></a>설명  
- 호스트에서는 `LockClrVersion` CLR을 초기화 하기 전에. `LockClrVersion`모두 형식의 콜백을 세 개의 매개 변수 [FLockClrVersionCallback](../../../../docs/framework/unmanaged-api/hosting/flockclrversioncallback-function-pointer.md)합니다. 이 형식은 다음과 같이 정의 됩니다.  
+ 호스트에서는 `LockClrVersion` CLR을 초기화 하기 전에. `LockClrVersion` 모두 형식의 콜백을 세 개의 매개 변수 [FLockClrVersionCallback](../../../../docs/framework/unmanaged-api/hosting/flockclrversioncallback-function-pointer.md)합니다. 이 형식은 다음과 같이 정의 됩니다.  
   
 ```  
 typedef HRESULT ( __stdcall *FLockClrVersionCallback ) ();  
@@ -85,7 +73,7 @@ typedef HRESULT ( __stdcall *FLockClrVersionCallback ) ();
   
     -   에 지정 된 함수는 `pBeginHostSetup` 매개 변수입니다.  
   
-    -   `CorBindToRuntimeEx`(또는 다른 런타임 초기화 함수)입니다.  
+    -   `CorBindToRuntimeEx` (또는 다른 런타임 초기화 함수)입니다.  
   
     -   [Iclrruntimehost:: Sethostcontrol](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-sethostcontrol-method.md)합니다.  
   
@@ -102,7 +90,7 @@ typedef HRESULT ( __stdcall *FLockClrVersionCallback ) ();
   
  **라이브러리:** MSCorEE.dll  
   
- **.NET framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>참고 항목  
  [사용되지 않는 CLR 호스팅 함수](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)

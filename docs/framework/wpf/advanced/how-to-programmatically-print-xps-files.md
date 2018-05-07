@@ -1,10 +1,6 @@
 ---
 title: '방법: 프로그래밍 방식으로 XPS 파일 인쇄'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.technology:
-- dotnet-wpf
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -12,16 +8,11 @@ helpviewer_keywords:
 - printing XPS files programmatically [WPF]
 - XPS files [WPF], printing programmatically
 ms.assetid: 0b1c0a3f-b19e-43d6-bcc9-eb3ec4e555ad
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 9e461a847e36277cb7d70534249a926693584b1f
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: bb11ece91c1dc8ac27b67e4175c24e480da15812
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-programmatically-print-xps-files"></a>방법: 프로그래밍 방식으로 XPS 파일 인쇄
 한 오버 로드를 사용할 수 있습니다는 <xref:System.Printing.PrintQueue.AddJob%2A> 인쇄 하려면 메서드 [!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)] 는 여는 파일을 <xref:System.Windows.Controls.PrintDialog> 또는 원칙적으로 모든 [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] 전혀 합니다.  

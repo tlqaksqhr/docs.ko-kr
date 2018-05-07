@@ -1,23 +1,12 @@
 ---
-title: "InvokePowerShell 활동 사용"
-ms.custom: 
+title: InvokePowerShell 활동 사용
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 956251a0-31ca-4183-bf76-d277c08585df
-caps.latest.revision: "10"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 4cf7092d6eac4fc2d70c4606f4a76f3a83ed9dcf
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: c5609556af94ed3e372538047ff6309a105975ae
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-the-invokepowershell-activity"></a>InvokePowerShell 활동 사용
 InvokePowerShell 샘플에서는 `InvokePowerShell` 활동을 사용하여 Windows PowerShell 명령을 호출하는 방법을 보여 줍니다.  
@@ -35,7 +24,7 @@ InvokePowerShell 샘플에서는 `InvokePowerShell` 활동을 사용하여 Windo
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  이 디렉터리가 없으면 [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4(.NET Framework 4용 WCF(Windows Communication Foundation) 및 WF(Windows Workflow Foundation) 샘플)](http://go.microsoft.com/fwlink/?LinkId=150780) 로 이동하여 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 및 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플을 모두 다운로드하세요. 이 샘플은 다음 디렉터리에 있습니다.  
+>  이 디렉터리가로 이동 [Windows Communication Foundation (WCF) 및.NET Framework 4에 대 한 Windows WF (Workflow Foundation) 샘플](http://go.microsoft.com/fwlink/?LinkId=150780) 모든 Windows Communication Foundation (WCF)를 다운로드 하 고 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플. 이 샘플은 다음 디렉터리에 있습니다.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Scenario\ActivityLibrary\PowerShell`  
   
@@ -205,7 +194,7 @@ new ForEach<PSObject>
   
 1.  다른 프로젝트의 `InvokePowerShell` 활동 어셈블리 또는 프로젝트를 참조할 때 빌드 오류가 발생하는 경우 새 프로젝트의 .csproj 파일에서 `<SpecificVersion>True</SpecificVersion>`을 참조하는 줄 아래에 `InvokePowerShell` 요소를 수동으로 추가해야 할 수 있습니다.  
   
-2.  Windows PowerShell 설치 되지 않은 경우 다음과 같은 오류 메시지가 추가 되는 즉시 Visual Studio에서 표시 됩니다는 `InvokePowerShell` 활동을 워크플로에:`Workflow Designer encountered problems with your document. Could not load file or assembly ‘System.Management.Automation’ ... or one of its dependencies. The system cannot find the file specified.`  
+2.  Windows PowerShell 설치 되지 않은 경우 다음과 같은 오류 메시지가 추가 되는 즉시 Visual Studio에서 표시 됩니다는 `InvokePowerShell` 활동을 워크플로에: `Workflow Designer encountered problems with your document. Could not load file or assembly ‘System.Management.Automation’ ... or one of its dependencies. The system cannot find the file specified.`  
   
 3.  Windows PowerShell 2.0에서 `$input.MoveNext()`를 프로그래밍 방식으로 호출하면 실패하며 `$input.MoveNext()`를 사용하는 스크립트에서 의도하지 않은 오류 및 결과가 발생합니다. 이 문제를 해결하려면 배열을 반복할 때 `foreach`를 호출하는 대신 PowerShell 동사 `MoveNext()`를 사용해 보세요.  
   
@@ -214,6 +203,6 @@ new ForEach<PSObject>
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  이 디렉터리가 없으면 [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4(.NET Framework 4용 WCF(Windows Communication Foundation) 및 WF(Windows Workflow Foundation) 샘플)](http://go.microsoft.com/fwlink/?LinkId=150780) 로 이동하여 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 및 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플을 모두 다운로드하세요. 이 샘플은 다음 디렉터리에 있습니다.  
+>  이 디렉터리가로 이동 [Windows Communication Foundation (WCF) 및.NET Framework 4에 대 한 Windows WF (Workflow Foundation) 샘플](http://go.microsoft.com/fwlink/?LinkId=150780) 모든 Windows Communication Foundation (WCF)를 다운로드 하 고 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플. 이 샘플은 다음 디렉터리에 있습니다.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Scenario\ActivityLibrary\PowerShell`

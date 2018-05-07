@@ -1,13 +1,6 @@
 ---
-title: "연습: 백그라운드 작업을 사용하는 폼 구현"
-ms.custom: 
+title: '연습: 백그라운드 작업을 사용하는 폼 구현'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -22,16 +15,11 @@ helpviewer_keywords:
 - threading [Windows Forms], background operations
 - background operations
 ms.assetid: 4691b796-9200-471a-89c3-ba4c7cc78c03
-caps.latest.revision: "25"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: aaee6f1d650e6af57ab05ad56b5578e094ee50ef
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 28b1ac924fb9b6b8cbc09db62ee33c6780bee820
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="walkthrough-implementing-a-form-that-uses-a-background-operation"></a>연습: 백그라운드 작업을 사용하는 폼 구현
 완료 하는 데 오랜 시간이 걸리는 작업이 있으며 및 하지 않으려는 경우 사용자 인터페이스 (UI) 응답 하지 않거나 사용할 수 있습니다 "중지"는 <xref:System.ComponentModel.BackgroundWorker> 다른 스레드에서 작업을 실행 하는 클래스입니다.  

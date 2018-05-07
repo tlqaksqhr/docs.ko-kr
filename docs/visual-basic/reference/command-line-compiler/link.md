@@ -1,11 +1,6 @@
 ---
 title: -링크 (Visual Basic)
 ms.date: 03/10/2018
-ms.prod: .net
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - l compiler option [Visual Basic]
 - EmbedInteropTypes
@@ -16,13 +11,11 @@ helpviewer_keywords:
 - -l compiler option [Visual Basic]
 - /l compiler option [Visual Basic]
 ms.assetid: 1885f24a-86f5-486c-a064-9fb7e455ccec
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 4699e3adfd83a35ee81a5c8838e300adf6ecf667
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.openlocfilehash: 95c528c4d686c44d0d77d1f55833be75ab14f8bf
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="-link-visual-basic"></a>-링크 (Visual Basic)
 컴파일러에서 지정된 어셈블리의 COM 형식 정보를 현재 컴파일하고 있는 프로젝트에 사용할 수 있도록 합니다.  
@@ -51,7 +44,7 @@ ms.lasthandoff: 04/27/2018
 > [!NOTE]
 >  코드에서 포함된 COM 형식의 인스턴스를 만드는 경우 적절한 인터페이스를 사용하여 인스턴스를 만들어야 합니다. CoClass를 사용하여 포함된 COM 형식의 인스턴스를 만들려고 하면 오류가 발생합니다.  
   
- 설정 하는 `-link` Visual Studio에서 옵션을 어셈블리 참조를 추가 하 고 설정 된 `Embed Interop Types` 속성을 **true**합니다. `Embed Interop Types` 속성의 기본값은 **false**입니다.  
+ Visual Studio에서 `-link` 옵션을 설정하려면 어셈블리 참조를 추가하고 `Embed Interop Types` 속성을 **true**로 설정합니다. `Embed Interop Types` 속성의 기본값은 **false**입니다.  
   
  COM 어셈블리 자체가 또 다른 COM 어셈블리(어셈블리 B)를 참조하는 COM 어셈블리(어셈블리 A)에 연결하는 경우 다음 중 하나에 해당되면 어셈블리 B에도 연결해야 합니다.  
   

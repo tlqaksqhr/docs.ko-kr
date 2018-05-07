@@ -1,13 +1,6 @@
 ---
-title: "Windows Forms에서 지원하는 데이터 소스"
-ms.custom: 
+title: Windows Forms에서 지원하는 데이터 소스
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - collections [Windows Forms], binding to
 - OLE DB providers [Windows Forms], Windows Forms
@@ -22,16 +15,11 @@ helpviewer_keywords:
 - DataSet class [Windows Forms], binding and Windows Forms
 - data [Windows Forms], data providers
 ms.assetid: 3d2c43f6-462b-4d35-9c86-13e9afe012e1
-caps.latest.revision: "15"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 5a0a4c2bca136377b9c6812008189dae009e195f
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 4705c8a7153e94fa1cd23cf6c2f622d5cd66ec77
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="data-sources-supported-by-windows-forms"></a>Windows Forms에서 지원하는 데이터 소스
 일반적으로 데이터 바인딩을 사용 되었습니다 응용 프로그램 내에서 데이터베이스에 저장 된 데이터를 활용 하려면. Windows Forms 데이터 바인딩, 최소한의 특정 요구를 충족으로 배열 및 컬렉션 등의 다른 구조에 있는 데이터와 데이터베이스에서 데이터를 액세스할 수 있습니다.  
@@ -50,13 +38,13 @@ ms.lasthandoff: 01/19/2018
  배열 또는 컬렉션  
  을 데이터 원본으로 작동 하려면 목록을 구현 해야는 <xref:System.Collections.IList> 하나, 인터페이스 예의 인스턴스가 있는 배열을 것은 <xref:System.Array> 클래스입니다. 배열에 대 한 자세한 내용은 참조 하십시오. [하는 방법: 한 배열의 개체 만들기 (Visual Basic)](http://msdn.microsoft.com/library/6b64e069-0387-400c-9081-3bdc581020c3)합니다.  
   
- 일반적으로 사용 해야 <xref:System.ComponentModel.BindingList%601> 데이터 바인딩에 대 한 개체의 목록을 만들 때. <xref:System.ComponentModel.BindingList%601>제네릭 버전의는 <xref:System.ComponentModel.IBindingList> 인터페이스입니다. <xref:System.ComponentModel.IBindingList> 확장 인터페이스는 <xref:System.Collections.IList> 속성, 메서드 및 양방향 데이터 바인딩을에 필요한 이벤트를 추가 하 여 인터페이스입니다.  
+ 일반적으로 사용 해야 <xref:System.ComponentModel.BindingList%601> 데이터 바인딩에 대 한 개체의 목록을 만들 때. <xref:System.ComponentModel.BindingList%601> 제네릭 버전의는 <xref:System.ComponentModel.IBindingList> 인터페이스입니다. <xref:System.ComponentModel.IBindingList> 확장 인터페이스는 <xref:System.Collections.IList> 속성, 메서드 및 양방향 데이터 바인딩을에 필요한 이벤트를 추가 하 여 인터페이스입니다.  
   
  <xref:System.Collections.IEnumerable>  
  Windows Forms 컨트롤을 지 원하는 데이터 원본에 바인딩될 수는 <xref:System.Collections.IEnumerable> 통해 바인딩된 경우 인터페이스는 <xref:System.Windows.Forms.BindingSource> 구성 요소입니다.  
   
- [!INCLUDE[vstecado](../../../includes/vstecado-md.md)]데이터 개체  
- [!INCLUDE[vstecado](../../../includes/vstecado-md.md)]다양 한 데이터 구조에 대 한 바인딩에 적합 한를 제공 합니다. 각 구조 복잡성에 따라 다릅니다.  
+ [!INCLUDE[vstecado](../../../includes/vstecado-md.md)] 데이터 개체  
+ [!INCLUDE[vstecado](../../../includes/vstecado-md.md)] 다양 한 데이터 구조에 대 한 바인딩에 적합 한를 제공 합니다. 각 구조 복잡성에 따라 다릅니다.  
   
 -   <xref:System.Data.DataColumn>. A <xref:System.Data.DataColumn> 은의 필수 구성 요소는 <xref:System.Data.DataTable>을 열 수를 하나의 테이블을 구성 합니다. 각 <xref:System.Data.DataColumn> 에 <xref:System.Data.DataColumn.DataType%2A> 데이터 열에 저장 (예를 들어, 자동차를 설명 하는 테이블에 있는 자동차의 제조업체)의 종류를 결정 하는 속성입니다. 바인딩할 수 있습니다 단순 컨트롤 (같은 <xref:System.Windows.Forms.TextBox> 컨트롤의 <xref:System.Windows.Forms.Control.Text%2A> 속성) 데이터 테이블 내의 열입니다.  
   

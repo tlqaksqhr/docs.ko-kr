@@ -1,14 +1,6 @@
 ---
-title: "IHostSemaphore::ReleaseSemaphore 메서드"
-ms.custom: 
+title: IHostSemaphore::ReleaseSemaphore 메서드
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - IHostSemaphore.ReleaseSemaphore
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: a343d197-979a-4ac6-ab8c-cb8a05f3120e
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 6828726fe81cc99adc719659a6eb1b15afda84c1
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: bb5d3f28d083574985e28e2c043743989c8b4680
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ihostsemaphorereleasesemaphore-method"></a>IHostSemaphore::ReleaseSemaphore 메서드
 현재 수를 늘립니다 [IHostSemaphore](../../../../docs/framework/unmanaged-api/hosting/ihostsemaphore-interface.md) 인스턴스를 지정 된 크기입니다.  
@@ -58,7 +46,7 @@ HRESULT ReleaseSemaphore (
   
 |HRESULT|설명|  
 |-------------|-----------------|  
-|S_OK|`ReleaseSemaphore`성공적으로 반환 합니다.|  
+|S_OK|`ReleaseSemaphore` 성공적으로 반환 합니다.|  
 |HOST_E_CLRNOTAVAILABLE|공용 언어 런타임 (CLR) 프로세스에 로드 되지 않았습니다 또는 CLR 중인 상태를 관리 코드를 실행 하거나 호출을 처리할 수 없습니다.|  
 |HOST_E_TIMEOUT|호출 시간이 초과 되었습니다.|  
 |HOST_E_NOT_OWNER|호출자에 게 잠금을 소유 하지 않습니다.|  
@@ -75,7 +63,7 @@ HRESULT ReleaseSemaphore (
   
  **라이브러리:** MSCorEE.dll에 리소스로 포함  
   
- **.NET framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>참고 항목  
  [ICLRSyncManager 인터페이스](../../../../docs/framework/unmanaged-api/hosting/iclrsyncmanager-interface.md)  

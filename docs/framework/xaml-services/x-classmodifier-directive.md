@@ -1,14 +1,6 @@
 ---
 title: x:ClassModifier 지시문
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-wpf
-ms.tgt_pltfrm: ''
-ms.topic: article
 f1_keywords:
 - xClassModifier
 - x:ClassModifier
@@ -18,17 +10,11 @@ helpviewer_keywords:
 - x:ClassModifier attribute [XAML Services]
 - ClassModifier attribute in XAML [XAML Services]
 ms.assetid: ef30ab78-d334-4668-917d-c9f66c3b6aea
-caps.latest.revision: 22
-author: wadepickett
-ms.author: wpickett
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: ab6036ecb37bb80588a59b581af0b88fc83230a4
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 67b53a63dbd6e1377d5684d64ed32b0374c84b5a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="xclassmodifier-directive"></a>x:ClassModifier 지시문
 XAML 컴파일 동작을 수정 하는 경우 `x:Class` 도 제공 됩니다. 특히 부분을 만드는 대신 `class` 있는 `Public` 액세스 수준 (기본값), 제공 된 `x:Class` 사용 하 여 만든는 `NotPublic` 액세스 수준입니다. 이 문제는 생성된 된 어셈블리의 클래스에 대 한 액세스 수준을 영향을 줍니다.  

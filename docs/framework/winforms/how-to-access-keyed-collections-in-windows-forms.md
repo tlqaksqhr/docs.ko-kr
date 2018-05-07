@@ -1,13 +1,6 @@
 ---
-title: "방법: Windows Forms에서 키 컬렉션 액세스"
-ms.custom: 
+title: '방법: Windows Forms에서 키 컬렉션 액세스'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -15,16 +8,11 @@ helpviewer_keywords:
 - keyed collections [Windows Forms]
 - collections [Windows Forms], accessing with keys
 ms.assetid: b9b79b8b-d9bf-4f8c-b9d6-9578bc3219d3
-caps.latest.revision: "6"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 852e82aff12dc39adeba6ea2dada5934ae55f951
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 59e5cea29ee520b1f13f8fae98ae4042cc86fef7
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-access-keyed-collections-in-windows-forms"></a>방법: Windows Forms에서 키 컬렉션 액세스
 -   키로 개별 컬렉션 항목에 액세스할 수 있습니다. 이 기능은 Windows Forms 응용 프로그램에서 일반적으로 사용 되는 많은 컬렉션 클래스에 추가 되었습니다. 다음 목록에서는 액세스할 수 있는 키 컬렉션에 있는 컬렉션 클래스 중 일부를 보여 줍니다.  

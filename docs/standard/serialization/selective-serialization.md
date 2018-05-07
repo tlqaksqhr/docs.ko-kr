@@ -1,26 +1,17 @@
 ---
-title: "선택적 serialization"
+title: 선택적 serialization
 ms.date: 08/07/2017
-ms.prod: .net
-ms.topic: article
 dev_langs:
 - CSharp
 helpviewer_keywords:
 - serialization, selective serialization
 - binary serialization, selective serialization
 ms.assetid: 39c56635-95d2-4afd-aff1-b022e7649bb3
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: cb4391e0f78534146ee253f88ad2ae94aa1a11f8
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 6a91501c4c3763250a64c9849694bc4e5fa4829f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="selective-serialization"></a>선택적 serialization
 클래스에는 흔히 직렬화하지 않아야 하는 필드가 있습니다. 예를 들어 클래스가 멤버 변수에 스레드 ID를 저장하는 경우입니다. 클래스가 deserialize되면 클래스가 직렬화된 시점에 대한 ID가 저장된 스레드가 더 이상 실행 중이지 않을 수 있으므로 이 값을 직렬화하는 것은 의미가 없습니다. 다음과 같이 멤버 변수를 [NonSerialized](xref:System.NonSerializedAttribute) 특성으로 표시하여 해당 변수가 직렬화되는 것을 방지할 수 있습니다.  
@@ -39,7 +30,7 @@ public class MyObject
 
 [!INCLUDE [binary-serialization-warning](../../../includes/binary-serialization-warning.md)]
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>참고자료  
  [이진 serialization](binary-serialization.md)  
  [XML 및 SOAP serialization](xml-and-soap-serialization.md)  
  [보안 및 Serialization](../../../docs/framework/misc/security-and-serialization.md)

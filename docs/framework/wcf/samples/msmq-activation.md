@@ -1,26 +1,12 @@
 ---
 title: MSMQ 활성화
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: e3834149-7b8c-4a54-806b-b4296720f31d
-caps.latest.revision: 29
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: e0f8077e425464d5a9f33662366377d573719659
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
-ms.translationtype: MT
+ms.openlocfilehash: ab414cb5535ce2b9062520c9d82e139ebdfc04c4
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="msmq-activation"></a>MSMQ 활성화
 이 샘플에서는 메시지 큐에서 읽은 WAS(Windows Process Activation Service)에서 응용 프로그램을 호스트하는 방법을 보여 줍니다. 이 샘플에서는 `netMsmqBinding` 기반으로 하 고는 [양방향 통신](../../../../docs/framework/wcf/samples/two-way-communication.md) 샘플. 이 경우 서비스는 웹 호스팅 응용 프로그램이고 클라이언트는 자체 호스트되며 전송된 구매 주문의 상태를 확인하기 위해 콘솔에 출력됩니다.  
@@ -33,11 +19,11 @@ ms.lasthandoff: 04/27/2018
 >   
 >  \<InstallDrive>:\WF_WCF_Samples  
 >   
->  이 디렉터리가 이동 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 하이퍼링크 "http://go.microsoft.com/fwlink/?LinkId=150780" \t "_blank" 및 Windows WF (Workflow Foundation) 샘플 [!INCLUDE[netfx40_long](../../../../includes/netfx40-long-md.md)] 모두 다운로드 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 및 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플입니다. 이 샘플은 다음 디렉터리에 있습니다.  
+>  이 디렉터리가 이동 Windows Communication Foundation (WCF) 하이퍼링크에 "http://go.microsoft.com/fwlink/?LinkId=150780" \t "_blank" 및 Windows WF (Workflow Foundation) 샘플 [!INCLUDE[netfx40_long](../../../../includes/netfx40-long-md.md)] 모두 다운로드 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 및 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플입니다. 이 샘플은 다음 디렉터리에 있습니다.  
 >   
 >  \<InstallDrive>:\Samples\WCFWFCardSpace\WCF\Basic\Services\Hosting\WASHost\MsmqActivation.  
   
- [!INCLUDE[lserver](../../../../includes/lserver-md.md)]용의 새 프로세스 활성화 메커니즘인 WAS(Windows Process Activation Service)는 이전에 HTTP 기반 응용 프로그램에만 사용할 수 있었던 IIS와 같은 기능을 HTTP가 아닌 프로토콜을 사용하는 응용 프로그램에 제공합니다. [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]는 수신기 어댑터 인터페이스를 사용하여 TCP, 명명된 파이프, MSMQ 등과 같은 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서 지원하는 HTTP가 아닌 프로토콜을 통해 수신되는 활성화 요청을 통신합니다. HTTP가 아닌 프로토콜을 통해 요청을 수신하는 기능은 SMSvcHost.exe에서 실행되는 관리되는 Windows 서비스에 의해 호스트됩니다.  
+ [!INCLUDE[lserver](../../../../includes/lserver-md.md)]용의 새 프로세스 활성화 메커니즘인 WAS(Windows Process Activation Service)는 이전에 HTTP 기반 응용 프로그램에만 사용할 수 있었던 IIS와 같은 기능을 HTTP가 아닌 프로토콜을 사용하는 응용 프로그램에 제공합니다. Windows Communication Foundation (WCF) 수신기 어댑터 인터페이스를 사용 하 여에서 지 원하는 HTTP가 아닌 프로토콜을 통해 수신 되는 활성화 요청을 통신 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]TCP, 명명 된 파이프, MSMQ 등과 같은 합니다. HTTP가 아닌 프로토콜을 통해 요청을 수신하는 기능은 SMSvcHost.exe에서 실행되는 관리되는 Windows 서비스에 의해 호스트됩니다.  
   
  Net.Msmq Listener Adapter 서비스(NetMsmqActivator)는 큐의 메시지에 기초하여 큐에 대기 중인 응용 프로그램을 활성화합니다.  
   

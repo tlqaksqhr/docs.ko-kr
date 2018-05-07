@@ -1,32 +1,18 @@
 ---
 title: COM+ 응용 프로그램과 통합 개요
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - Windows Communication Foundation, COM+ integration
 - WCF, COM+ integration
 ms.assetid: e481e48f-7096-40eb-9f20-7f0098412941
-caps.latest.revision: 29
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 3c723bda93feac3eef18f302ab0c8ec7c702eb7a
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 155365c72fd3f5915db12104f45a500f3176f67b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="integrating-with-com-applications-overview"></a>COM+ 응용 프로그램과 통합 개요
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]에서는 분산 응용 프로그램을 만들기 위한 다양한 환경을 제공합니다. COM+에서 호스트되는 구성 요소 기반 응용 프로그램 논리를 이미 사용 중이면 기존 논리를 다시 작성하지 않고 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]를 사용하여 기존 논리를 확장할 수 있습니다. 일반 시나리오는 웹 서비스를 통해 기존 COM+ 또는 엔터프라이즈 서비스 비즈니스 논리를 노출하려는 경우입니다.  
+Windows Communication Foundation (WCF)는 분산된 응용 프로그램을 만들기 위한 다양 한 환경을 제공 합니다. COM +에서 호스팅되는 구성 요소 기반 응용 프로그램 논리에 이미 사용 중인 경우에를 확장 하 여 기존 논리는 다시 작성 하지 WCF를 사용할 수 있습니다. 일반 시나리오는 웹 서비스를 통해 기존 COM+ 또는 엔터프라이즈 서비스 비즈니스 논리를 노출하려는 경우입니다.  
   
  COM+ 구성 요소의 인터페이스가 웹 서비스로 노출되는 경우 이러한 서비스의 사양과 계약은 응용 프로그램 초기화 시간에 수행되는 자동 매핑에 의해 결정됩니다. 다음 목록에서는 이 매핑의 개념적 모델을 보여 줍니다.  
   
@@ -84,7 +70,7 @@ ms.lasthandoff: 04/30/2018
  클라이언트 응용 프로그램 내에서 <xref:System.ServiceModel.ComIntegration.PersistStreamTypeWrapper> 개체의 메서드를 사용하여 개체를 서비스로 전달하고 유사하게 개체를 검색할 수 있습니다.  
   
 > [!NOTE]
->  serialization 방법의 사용자 지정 및 플랫폼별 특성 때문에 이 방법은 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 클라이언트와 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 서비스 간에 사용하기에 가장 적합합니다.  
+>  Serialization 방법의 사용자 지정 및 플랫폼별 특성 때문에이 WCF 클라이언트와 WCF 서비스 간에 사용 하기에 적합 합니다.  
   
 ## <a name="selecting-the-hosting-mode"></a>호스팅 모드 선택  
  COM+는 다음 호스팅 모드 중 하나로 웹 서비스를 노출합니다.  
@@ -95,18 +81,18 @@ ms.lasthandoff: 04/30/2018
   
 -   웹 호스팅  
   
-     웹 서비스는 웹 서버 작업자 프로세스 내에 호스트됩니다. 이 모드에서는 초기 요청을 받을 때 COM+가 활성 상태가 아니어도 됩니다. 이 요청을 받을 때 응용 프로그램이 활성 상태가 아니면 요청을 처리하기 전에 자동으로 활성화됩니다. 이 모드에서는 웹 서비스와 DCOM이 모두 서버 응용 프로그램에 액세스할 수 있지만 웹 서비스 요청에 대해 프로세스 홉이 발생합니다. 이 경우 일반적으로 클라이언트가 가장을 사용해야 합니다. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서는 제네릭 <xref:System.ServiceModel.Security.WindowsClientCredential.AllowedImpersonationLevel%2A> 클래스의 속성과 <xref:System.ServiceModel.Security.WindowsClientCredential> 열거형 값으로 액세스되는 <xref:System.ServiceModel.ChannelFactory%601> 클래스의 <xref:System.Security.Principal.TokenImpersonationLevel.Impersonation> 속성을 사용하여 이 작업을 수행할 수 있습니다.  
+     웹 서비스는 웹 서버 작업자 프로세스 내에 호스트됩니다. 이 모드에서는 초기 요청을 받을 때 COM+가 활성 상태가 아니어도 됩니다. 이 요청을 받을 때 응용 프로그램이 활성 상태가 아니면 요청을 처리하기 전에 자동으로 활성화됩니다. 이 모드에서는 웹 서비스와 DCOM이 모두 서버 응용 프로그램에 액세스할 수 있지만 웹 서비스 요청에 대해 프로세스 홉이 발생합니다. 이 경우 일반적으로 클라이언트가 가장을 사용해야 합니다. Wcf에서는으로 수행할 수 있습니다는 <xref:System.ServiceModel.Security.WindowsClientCredential.AllowedImpersonationLevel%2A> 의 속성에서 <xref:System.ServiceModel.Security.WindowsClientCredential> 제네릭의 속성으로 액세스할 수 있는 클래스 <xref:System.ServiceModel.ChannelFactory%601> 클래스도 <xref:System.Security.Principal.TokenImpersonationLevel.Impersonation> 열거형 값입니다.  
   
 -   웹 호스팅 In-Process  
   
      웹 서비스와 COM+ 응용 프로그램 논리는 웹 서버 작업자 프로세스 내에 호스트됩니다. 이 경우 웹 서비스 요청에 대한 프로세스 홉이 발생하지 않고 웹 호스팅 모드가 자동으로 활성화됩니다. DCOM을 통해 서버 응용 프로그램에 액세스할 수 없다는 단점이 있습니다.  
   
 ### <a name="security-considerations"></a>보안 고려 사항  
- 다른 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 서비스와 마찬가지로 노출된 서비스의 보안 설정은 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 채널의 구성 설정을 통해 관리됩니다. 시스템 수준의 DCOM 사용 권한 설정 같은 일반적인 DCOM 보안 설정은 적용되지 않습니다. COM+ 응용 프로그램 역할을 적용하려면 해당 구성 요소에 대해 "구성 요소 수준 액세스 검사" 권한 부여를 사용해야 합니다.  
+ 다른 WCF 서비스와 마찬가지로 노출된 된 서비스에 대 한 보안 설정은 WCF 채널에 대 한 구성 설정을 통해 관리 됩니다. 시스템 수준의 DCOM 사용 권한 설정 같은 일반적인 DCOM 보안 설정은 적용되지 않습니다. COM+ 응용 프로그램 역할을 적용하려면 해당 구성 요소에 대해 "구성 요소 수준 액세스 검사" 권한 부여를 사용해야 합니다.  
   
  보안되지 않은 바인딩을 사용하면 통신 중에 조작되거나 정보가 공개될 수 있습니다. 이를 방지하려면 보안 바인딩을 사용하는 것이 좋습니다.  
   
- COM+ 호스팅 및 웹 호스팅 모드의 경우 클라이언트 응용 프로그램에서 서버 프로세스가 클라이언트 사용자를 가장할 수 있도록 허용해야 합니다. 가장 수준을 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]으로 설정하여 <xref:System.Security.Principal.TokenImpersonationLevel.Impersonation> 클라이언트에서 이 작업을 수행할 수 있습니다.  
+ COM+ 호스팅 및 웹 호스팅 모드의 경우 클라이언트 응용 프로그램에서 서버 프로세스가 클라이언트 사용자를 가장할 수 있도록 허용해야 합니다. 이렇게 WCF 클라이언트에서 가장 수준을 설정 하 여 <xref:System.Security.Principal.TokenImpersonationLevel.Impersonation>합니다.  
   
  IIS(인터넷 정보 서비스) 또는 WAS(Windows Process Activation Service)에서 HTTP 전송을 사용하는 경우 Httpcfg.exe 도구를 사용하여 전송 끝점 주소를 예약할 수 있습니다. 다른 구성에서는 필요한 서비스로 작동하는 Rogue 서비스로부터 보호하는 것이 중요합니다. Rogue 서비스가 원하는 끝점에서 시작되지 않도록 하려면 올바른 서비스가 NT 서비스로 실행되도록 구성할 수 있습니다. 이렇게 하면 올바른 서비스가 Rogue 서비스 전에 끝점 주소를 클레임할 수 있습니다.  
   

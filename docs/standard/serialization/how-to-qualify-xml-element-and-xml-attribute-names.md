@@ -1,12 +1,6 @@
 ---
-title: "방법: XML 요소 및 XML 특성 이름 한정"
-ms.custom: 
+title: '방법: XML 요소 및 XML 특성 이름 한정'
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -15,18 +9,11 @@ helpviewer_keywords:
 - qualifying XML elements
 - XML namespaces, qualifying elements and names in
 ms.assetid: 44719f90-7e15-42e8-a9e2-282287e2b5bf
-caps.latest.revision: "9"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 048bcc587915467f644a2cce695cec352147223a
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 95b99bb093282352b6f8e2b9f04cba773e64259d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-qualify-xml-element-and-xml-attribute-names"></a>방법: XML 요소 및 XML 특성 이름 한정
 [코드 예제](#cpconworkingwithxmlnamespacesanchor1)  
@@ -51,7 +38,7 @@ ms.lasthandoff: 12/23/2017
   
 5.  `XmlSerializerNamespaces`의 `Serialize` 메서드에 `XmlSerializer`를 전달합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 예제에서는 `XmlSerializerNamespaces`를 만들고 두 개의 접두사와 네임스페이스 쌍을 개체에 추가합니다. 코드에서는 `XmlSerializer` 클래스의 인스턴스를 serialize하는 데 사용되는 `Books`를 만듭니다. 코드는 `Serialize`를 사용하여 `XmlSerializerNamespaces` 메서드를 호출하여 XML이 접두사가 지정된 네임스페이스를 포함할 수 있게 됩니다.  
   
 ```vb  

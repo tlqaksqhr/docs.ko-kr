@@ -1,24 +1,15 @@
 ---
-title: "방법: 람다 식 만들기(Visual Basic)"
-ms.custom: 
+title: '방법: 람다 식 만들기(Visual Basic)'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - lambda expressions [Visual Basic]
 - expressions [Visual Basic], lambda
 ms.assetid: 3279bd5c-80f7-410a-a7ba-f7085ed36aa5
-caps.latest.revision: "27"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 16365b64e5430be61c113ac7601154df260e4ca5
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: f437166bc5206b4145d6508aa2131ec94d6eca95
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-a-lambda-expression-visual-basic"></a>방법: 람다 식 만들기(Visual Basic)
 A *람다 식을* 은 함수 또는 서브루틴에 이름이 없습니다입니다. 람다 식은 대리자 형식이 유효한 모든 곳에서 사용할 수 있습니다.  
@@ -27,11 +18,11 @@ A *람다 식을* 은 함수 또는 서브루틴에 이름이 없습니다입니
   
 1.  대리자 형식을 사용할 수 있는 모든 상황에서 키워드를 입력 `Function`다음 예제와 같이,:  
   
-     `Dim add1 =`   `Function`  
+     `Dim add1 =`  `Function`  
   
 2.  괄호로 바로 뒤 `Function`를 함수 매개 변수를 입력 합니다. 뒤에 이름을 지정 하지 않으면 확인 `Function`합니다.  
   
-     `Dim add1 = Function`   `(num As Integer)`  
+     `Dim add1 = Function`  `(num As Integer)`  
   
 3.  매개 변수 목록 다음 함수 본문으로 단일 식을 입력 합니다. 식이 계산 되는 값은 함수에 의해 반환 되는 값입니다. 사용 하지 않는 한 `As` 반환 형식을 지정 하는 절.  
   
@@ -49,11 +40,11 @@ A *람다 식을* 은 함수 또는 서브루틴에 이름이 없습니다입니
   
 1.  대리자 형식을 사용할 수 있는 모든 상황에서 키워드를 입력 `Sub`다음 예제에 나온 것 처럼 합니다.  
   
-     `Dim add1 =`   `Sub`  
+     `Dim add1 =`  `Sub`  
   
 2.  괄호로 바로 뒤 `Sub`, 서브루틴의 매개 변수를 입력 합니다. 뒤에 이름을 지정 하지 않으면 확인 `Sub`합니다.  
   
-     `Dim add1 = Sub`   `(msg As String)`  
+     `Dim add1 = Sub`  `(msg As String)`  
   
 3.  매개 변수 목록 다음 서브루틴의 본문으로 단일 문을 입력 합니다.  
   
@@ -67,11 +58,11 @@ A *람다 식을* 은 함수 또는 서브루틴에 이름이 없습니다입니
   
 1.  대리자 형식을 사용할 수 있는 모든 상황에서 키워드를 입력 `Function`다음 예제에 나온 것 처럼 합니다.  
   
-     `Dim add1 =`   `Function`  
+     `Dim add1 =`  `Function`  
   
 2.  괄호로 바로 뒤 `Function`를 함수 매개 변수를 입력 합니다. 뒤에 이름을 지정 하지 않으면 확인 `Function`합니다.  
   
-     `Dim add1 = Function`   `(index As Integer)`  
+     `Dim add1 = Function`  `(index As Integer)`  
   
 3.  Enter 키를 누릅니다. `End Function` 문이 자동으로 추가 됩니다.  
   
@@ -87,7 +78,7 @@ A *람다 식을* 은 함수 또는 서브루틴에 이름이 없습니다입니
   
 1.  대리자 형식을 사용할 수 있는 모든 상황에서 키워드를 입력 `Sub`다음 예제에 나온 것 처럼:  
   
-     `Dim add1 =`   `Sub`  
+     `Dim add1 =`  `Sub`  
   
 2.  괄호로 바로 뒤 `Sub`, 서브루틴의 매개 변수를 입력 합니다. 뒤에 이름을 지정 하지 않으면 확인 `Sub`합니다.  
   

@@ -1,13 +1,6 @@
 ---
-title: "방법: 도구 모음 단추의 아이콘 정의"
-ms.custom: 
+title: '방법: 도구 모음 단추의 아이콘 정의'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -20,22 +13,17 @@ helpviewer_keywords:
 - icons [Windows Forms], toolbar buttons
 - ToolBar control [Windows Forms], adding icons to buttons
 ms.assetid: 84db98b4-8566-49ce-b2c8-1fd66a5eb3a0
-caps.latest.revision: "14"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: f7550fdc76cb3a025d8233ec538d38f23f9226a7
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 9c396f861307d1c8e722beaf38c6cb914d0630c6
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-define-an-icon-for-a-toolbar-button"></a>방법: 도구 모음 단추의 아이콘 정의
 > [!NOTE]
 >  <xref:System.Windows.Forms.ToolStrip> 컨트롤은 <xref:System.Windows.Forms.ToolBar> 컨트롤을 대체하고 여기에 다른 기능을 추가하여 새로 도입된 컨트롤이지만 이전 버전과의 호환성 및 이후 사용 가능성을 고려하여 <xref:System.Windows.Forms.ToolBar> 컨트롤을 계속 유지하도록 선택할 수 있습니다.  
   
- <xref:System.Windows.Forms.ToolBar>단추는 사용자가 쉽게 식별 하기 위해 그 안에서 아이콘을 표시할 수 있습니다. 이미지에 추가 통해 그렇게는 [ImageList 구성 요소](../../../../docs/framework/winforms/controls/imagelist-component-windows-forms.md) 구성 요소와 연결 하는 방법의 <xref:System.Windows.Forms.ImageList> 구성 요소는 <xref:System.Windows.Forms.ToolBar> 컨트롤.  
+ <xref:System.Windows.Forms.ToolBar> 단추는 사용자가 쉽게 식별 하기 위해 그 안에서 아이콘을 표시할 수 있습니다. 이미지에 추가 통해 그렇게는 [ImageList 구성 요소](../../../../docs/framework/winforms/controls/imagelist-component-windows-forms.md) 구성 요소와 연결 하는 방법의 <xref:System.Windows.Forms.ImageList> 구성 요소는 <xref:System.Windows.Forms.ToolBar> 컨트롤.  
   
 ### <a name="to-set-an-icon-for-a-toolbar-button-programmatically"></a>도구 모음 단추의 아이콘을 프로그래밍 방식으로 설정 하려면  
   

@@ -1,23 +1,16 @@
 ---
-title: "인수 &#39; 수명 &#39; 0 일 수 없습니다."
+title: 인수 &#39;수명&#39; 0 일 수 없습니다
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vbrFinancial_LifeNEZero
 ms.assetid: c402da97-a2b2-4219-a83a-0cebbfdffef2
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 63130405550684a6e5d8c9c7bfcd1aa971045f2b
-ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
+ms.openlocfilehash: 0a8cb22250c798ffa3f3211be88c6086449c1836
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="argument-39life39-cannot-be-zero"></a>인수 &#39; 수명 &#39; 0 일 수 없습니다.
+# <a name="argument-39life39-cannot-be-zero"></a>인수 &#39;수명&#39; 0 일 수 없습니다
 자산의 내용 연수 길이를 지정하는 `Life`이어야 하는 `Double` 에 대한 인수가 잘못되었습니다.  
   
 ## <a name="to-correct-this-error"></a>이 오류를 해결하려면  

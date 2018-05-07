@@ -1,12 +1,6 @@
 ---
-title: "Function 문(Visual Basic)"
+title: Function 문(Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.Function
 helpviewer_keywords:
@@ -34,14 +28,11 @@ helpviewer_keywords:
 - End keyword [Visual Basic], Function statements
 - Handles keyword [Visual Basic], Function statements
 ms.assetid: a4497077-0f46-4ede-a27f-9e8670df52b9
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 52e9210f9e715b6055e6ed199ef1aa4b919c6dd6
-ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
+ms.openlocfilehash: b4a0c33d6d466975ca5dde1bd20ad2e1a9f560e4
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="function-statement-visual-basic"></a>Function 문(Visual Basic)
 선언 이름과 매개 변수를 정의 하는 코드는 `Function` 프로시저입니다.  
@@ -183,7 +174,7 @@ End Function
 ## <a name="defining-a-function"></a>함수를 정의합니다.  
  정의할 수는 `Function` 모듈 수준에만 프로시저입니다. 따라서 함수에 대 한 선언 컨텍스트 클래스, 구조체, 모듈의 경우, 또는 인터페이스 여야 하며 소스 파일, 네임 스페이스, 프로시저 또는 블록 수 없습니다. 자세한 내용은 [선언 컨텍스트 및 기본 액세스 수준](declaration-contexts-and-default-access-levels.md)을 참조하세요.  
   
- `Function`프로시저는 기본적으로 공용 액세스 합니다. 액세스 한정자로 액세스 수준을 조정할 수 있습니다.  
+ `Function` 프로시저는 기본적으로 공용 액세스 합니다. 액세스 한정자로 액세스 수준을 조정할 수 있습니다.  
   
  A `Function` 프로시저는 프로시저에서 반환 하는 값의 데이터 형식을 선언할 수 있습니다. 모든 데이터 형식이 나 열거형, 구조체, 클래스 또는 인터페이스의 이름을 지정할 수 있습니다. 지정 하지 않으면는 `returntype` 매개 변수, 프로시저 반환 `Object`합니다.  
   
@@ -243,17 +234,17 @@ End Function
   
  자세한 내용은 [반복기](../../programming-guide/concepts/iterators.md)를 참조하세요.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 예제에서는 `Function` 이름, 매개 변수, 및의 본문을 형성 하는 코드를 선언 하는 문에 `Function` 프로시저입니다. `ParamArray` 한정자를 통해 함수에 가변 개수의 인수를 수락 합니다.  
   
  [!code-vb[VbVbalrStatements#25](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/function-statement_3.vb)]  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 예제에서는 앞의 예제에서 선언 된 함수를 호출 합니다.  
   
  [!code-vb[VbVbalrStatements#26](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/function-statement_4.vb)]  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 예에서 `DelayAsync` 는 `Async``Function` 의 반환 형식이 있는 <xref:System.Threading.Tasks.Task%601>합니다. `DelayAsync`에는 정수를 반환하는 `Return` 문이 포함됩니다. 따라서 함수 선언의 `DelayAsync` 의 반환 형식이 있어야 `Task(Of Integer)`합니다. 반환 형식이 이기 `Task(Of Integer)`, 평가 `Await` 에 식을 `DoSomethingAsync` 정수가 생성 됩니다. 이 문에서이 확인할: `Dim result As Integer = Await delayTask`합니다.  
   
  `startButton_Click` 절차의 한 예로 `Async Sub` 프로시저입니다. 때문에 `DoSomethingAsync` 는 `Async` 함수, 작업에 대 한 호출에 대 한 `DoSomethingAsync` 기다려야, 다음 문과 같이: `Await DoSomethingAsync()`합니다. `startButton_Click``Sub` 프로시저 함께 정의 되어야 합니다는 `Async` 한정자 있기 때문에 `Await` 식입니다.  

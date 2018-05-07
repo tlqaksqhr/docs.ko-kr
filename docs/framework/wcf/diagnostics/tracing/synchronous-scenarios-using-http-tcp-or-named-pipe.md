@@ -1,24 +1,12 @@
 ---
-title: "HTTP, TCP 또는 명명된 파이프를 사용하는 동기 시나리오"
-ms.custom: 
+title: HTTP, TCP 또는 명명된 파이프를 사용하는 동기 시나리오
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 7e90af1b-f8f6-41b9-a63a-8490ada502b1
-caps.latest.revision: "9"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 428e8852c9b1706e88b1688b4a1f2e36c167fe28
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 03f4fdcaa5fc59efe7e92d2cb900212ed5ebae77
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="synchronous-scenarios-using-http-tcp-or-named-pipe"></a>HTTP, TCP 또는 명명된 파이프를 사용하는 동기 시나리오
 이 항목에서는 HTTP, TCP 또는 명명된 파이프를 사용하는 단일 스레드 클라이언트가 포함된 다양한 동기 요청/회신 시나리오의 작업 및 전송에 대해 설명합니다. 참조 [HTTP, TCP 또는 명명 된 파이프를 사용 하는 비동기 시나리오](../../../../../docs/framework/wcf/diagnostics/tracing/asynchronous-scenarios-using-http-tcp-or-named-pipe.md) 다중 스레드 요청에 대 한 자세한 내용은 합니다.  
@@ -56,7 +44,7 @@ ms.lasthandoff: 12/22/2017
 #### <a name="closing-a-service-host"></a>서비스 호스트 닫기  
  ServiceHost의 닫기 동작(Z)은 앰비언트 동작에서 만들어집니다.  
   
- ![HTTP &#47;를 사용 하는 동기 시나리오 TCP &#47; 명명 된 파이프](../../../../../docs/framework/wcf/diagnostics/tracing/media/sync.gif "동기화")  
+ ![HTTP를 사용 하는 동기 시나리오&#47;TCP&#47; 명명 된 파이프](../../../../../docs/framework/wcf/diagnostics/tracing/media/sync.gif "동기화")  
   
  \<a: 이름 >, `A` 는 이전 텍스트 및 표 3 활동에 설명 하는 바로 가기 기호입니다. `Name`은 동작의 약식 이름입니다.  
   

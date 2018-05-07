@@ -1,22 +1,12 @@
 ---
-title: "방법: LINQ (Visual Basic)를 사용 하 여 ArrayList 쿼리"
-ms.custom: 
+title: '방법: LINQ (Visual Basic)를 사용 하 여 ArrayList 쿼리'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 176358a9-d765-4b57-9557-7feb4428138d
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 6740d8a7c6d4a31ccd3730249695c24c6417785d
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 56533c4453129a676ed6b97e9afcc008d6ce1137
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-query-an-arraylist-with-linq-visual-basic"></a>방법: LINQ (Visual Basic)를 사용 하 여 ArrayList 쿼리
 LINQ를 사용하여 <xref:System.Collections.ArrayList> 등의 제네릭이 아닌 <xref:System.Collections.IEnumerable> 컬렉션을 쿼리하는 경우 컬렉션에 있는 개체의 특정 형식을 반영하도록 범위 변수의 형식을 명시적으로 선언해야 합니다. 예를 들어, 있는 경우는 <xref:System.Collections.ArrayList> 의 `Student` 개체 프로그램 [From 절이](../../../../visual-basic/language-reference/queries/from-clause.md) 다음과 같이 표시 됩니다.  

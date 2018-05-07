@@ -1,17 +1,12 @@
 ---
 title: 생성자(F#)
 description: '정의 하 고 F #에서 생성자를 사용 하 여 만들고 클래스 및 구조체 개체를 초기화 하는 방법을 알아봅니다.'
-author: cartermp
-ms.author: phcart
 ms.date: 05/16/2016
-ms.topic: language-reference
-ms.prod: dotnet-fsharp
-ms.devlang: fsharp
-ms.openlocfilehash: d9062ae747c37bdc14104658ad0ec7d11f5545f0
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 1773c111e0398aa83951afe14979d8a4ebc4907f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="constructors"></a>생성자
 

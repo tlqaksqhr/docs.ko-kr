@@ -1,12 +1,6 @@
 ---
 title: Is 연산자(Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.is
 helpviewer_keywords:
@@ -15,14 +9,11 @@ helpviewer_keywords:
 - TypeOf...Is expression
 - Is operator [Visual Basic]
 ms.assetid: 8045a6c8-2a83-45b6-ad47-d09a704c656d
-caps.latest.revision: 12
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 4b1f3f0fa1fd782550c08c816f47b7541399198e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 8beca1dc8788514224f70cacc5b8ede0974f5230
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="is-operator-visual-basic"></a>Is 연산자(Visual Basic)
 두 개체 참조 변수를 비교합니다.  
@@ -35,18 +26,18 @@ result = object1 Is object2
   
 ## <a name="parts"></a>요소  
  `result`  
- 필수 요소. 모든 `Boolean` 값입니다.  
+ 필수. 모든 `Boolean` 값입니다.  
   
  `object1`  
- 필수 요소. 모든 `Object` 이름입니다.  
+ 필수. 모든 `Object` 이름입니다.  
   
  `object2`  
- 필수 요소. 모든 `Object` 이름입니다.  
+ 필수. 모든 `Object` 이름입니다.  
   
 ## <a name="remarks"></a>설명  
  `Is` 연산자 두 개체 참조가 동일한 개체를 참조 하는지 여부를 결정 합니다. 그러나 값 비교를 수행 하지 않습니다. 경우 `object1` 및 `object2` 정확히 동일한 개체 인스턴스를 둘 다 참조 `result` 은 `True`그렇지 않은 경우 `result` 은 `False`합니다.  
   
- `Is`함께 사용할 수도 `TypeOf` 있도록 키워드는 `TypeOf`... `Is` 개체 변수 데이터 형식과 호환 되는지 여부를 테스트 하는 식입니다.  
+ `Is` 함께 사용할 수도 `TypeOf` 있도록 키워드는 `TypeOf`... `Is` 개체 변수 데이터 형식과 호환 되는지 여부를 테스트 하는 식입니다.  
   
 > [!NOTE]
 >  `Is` 키워드는 또한는 [선택... Case 문](../../../visual-basic/language-reference/statements/select-case-statement.md)합니다.  

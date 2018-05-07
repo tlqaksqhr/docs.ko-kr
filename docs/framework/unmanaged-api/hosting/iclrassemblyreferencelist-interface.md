@@ -1,14 +1,6 @@
 ---
-title: "ICLRAssemblyReferenceList 인터페이스"
-ms.custom: 
+title: ICLRAssemblyReferenceList 인터페이스
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICLRAssemblyReferenceList
 api_location:
@@ -22,17 +14,13 @@ helpviewer_keywords:
 ms.assetid: 5f890fdf-d22a-429e-a35f-135273d1a636
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: eeef0e7f825f4a6ad907d6b17b92afe1807bad12
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 388b26a5559435ea57300751987d14bc5cb9d50c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="iclrassemblyreferencelist-interface"></a>ICLRAssemblyReferenceList 인터페이스
 호스트 아니라 공용 언어 런타임 (CLR)에서 로드 하는 어셈블리 목록을 관리 합니다.  
@@ -54,7 +42,7 @@ ms.lasthandoff: 12/22/2017
   
  **라이브러리:** MSCorEE.dll에 리소스로 포함  
   
- **.NET framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>참고 항목  
  [ICLRAssemblyIdentityManager 인터페이스](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyidentitymanager-interface.md)  

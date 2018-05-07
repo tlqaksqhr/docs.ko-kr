@@ -1,25 +1,16 @@
 ---
 title: 최종 &lt;키워드&gt; 문 (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.EndDefinition
 helpviewer_keywords:
 - End keyword [Visual Basic]
 ms.assetid: 42d6e088-ab0f-4cda-88e8-fdce3e5fcf4f
-caps.latest.revision: 17
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: cf0ac1221f8a85a8a43599d9c5ec210884205e5e
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.openlocfilehash: 8137434bfd8c26144d78b1761b784cdba4894eaf
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="end-ltkeywordgt-statement-visual-basic"></a>최종 &lt;키워드&gt; 문 (Visual Basic)
 추가 키워드 뒤에 나올, 해당 키워드 뒤에 문 블록의 정의 종료 합니다.  
@@ -53,7 +44,7 @@ End With
   
 ## <a name="parts"></a>요소  
  `End`  
- 필수 요소. 프로그래밍 요소의 정의 종료 합니다.  
+ 필수. 프로그래밍 요소의 정의 종료 합니다.  
   
  `AddHandler`  
  종료 하는 데 필요한 프로그램 `AddHandler` 접근자는 일치 하는 시작 `AddHandler` 문을 사용자 지정에서 [Event 문](../../../visual-basic/language-reference/statements/event-statement.md)합니다.  
@@ -127,7 +118,7 @@ End With
  앞에 숫자 기호 (`#`), `End` 키워드는 해당 지시문에 의해 도입 된 전처리 블록을 종료 합니다.  
   
  `#End`  
- 필수 요소. 전처리 블록의 정의 종료 합니다.  
+ 필수. 전처리 블록의 정의 종료 합니다.  
   
  `#ExternalSource`  
  일치 하는 시작 된 외부 소스 블록을 종료 하는 데 필요한 [#ExternalSource 지시문](../../../visual-basic/language-reference/directives/externalsource-directive.md)합니다.  

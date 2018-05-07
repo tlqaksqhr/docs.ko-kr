@@ -1,24 +1,12 @@
 ---
 title: .NET Framework 4 워크플로에서 Interop 활동 사용
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 9bb747f0-eb33-4f70-84cd-317382372dcd
-caps.latest.revision: 20
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: ebef74097d22c9624a29470f4cda231bbb32fe90
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 64e8aef01aefa23dc98b42ab835de097d6c222df
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-the-interop-activity-in-a-net-framework-4-workflow"></a>.NET Framework 4 워크플로에서 Interop 활동 사용
 [!INCLUDE[vstecwinfx](../../../includes/vstecwinfx-md.md)] 또는 [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)]를 사용하여 만든 활동은 [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] 활동을 통해 <xref:System.Activities.Statements.Interop> 워크플로에서 사용할 수 있습니다. 이 항목에서는 <xref:System.Activities.Statements.Interop> 활동 사용에 대해 간략하게 설명합니다.  

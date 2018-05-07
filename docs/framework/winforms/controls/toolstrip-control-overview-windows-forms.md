@@ -1,14 +1,6 @@
 ---
-title: "ToolStrip 컨트롤 개요(Windows Forms)"
-ms.custom: 
+title: ToolStrip 컨트롤 개요(Windows Forms)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 f1_keywords:
 - Toolstrip
 helpviewer_keywords:
@@ -17,20 +9,14 @@ helpviewer_keywords:
 - toolbars [Windows Forms]
 - what's new [Windows Forms], toolbars
 ms.assetid: 81d067ed-297c-4dad-90de-1bcac15336ec
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 45dab820072b3eb0bcc448ce32251e3ff5a3e622
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 3927f180e738541f2f2f8af6d03d281f6a601167
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="toolstrip-control-overview-windows-forms"></a>ToolStrip 컨트롤 개요(Windows Forms)
-Windows Forms <xref:System.Windows.Forms.ToolStrip> 컨트롤과 연결 된 클래스 도구 모음, 상태 표시줄 및 메뉴에 사용자 인터페이스 요소를 결합 하기 위한 공통 프레임 워크를 제공 합니다. <xref:System.Windows.Forms.ToolStrip>컨트롤에 가로 또는 세로 공간을 공유할 수 있는 도구 모음에 내부 활성화 및 편집, 사용자 지정 레이아웃 및 래프팅 (rafting)을 포함 하는 풍부한 디자인 타임 환경을 제공 합니다.  
+Windows Forms <xref:System.Windows.Forms.ToolStrip> 컨트롤과 연결 된 클래스 도구 모음, 상태 표시줄 및 메뉴에 사용자 인터페이스 요소를 결합 하기 위한 공통 프레임 워크를 제공 합니다. <xref:System.Windows.Forms.ToolStrip> 컨트롤에 가로 또는 세로 공간을 공유할 수 있는 도구 모음에 내부 활성화 및 편집, 사용자 지정 레이아웃 및 래프팅 (rafting)을 포함 하는 풍부한 디자인 타임 환경을 제공 합니다.  
   
  하지만 <xref:System.Windows.Forms.ToolStrip> 대체 하 고 이전 버전에서 컨트롤에 기능을 추가 <xref:System.Windows.Forms.ToolBar> 원하는 경우 이전 버전과 호환성을 유지 합니다.  
   
@@ -59,7 +45,7 @@ Windows Forms <xref:System.Windows.Forms.ToolStrip> 컨트롤과 연결 된 클�
   
 ### <a name="important-toolstrip-members"></a>중요 한 ToolStrip 멤버  
   
-|name|설명|  
+|이름|설명|  
 |----------|-----------------|  
 |<xref:System.Windows.Forms.ToolStrip.Dock%2A>|부모 컨테이너의 가장자리를 가져오거나 설정 합니다.는 <xref:System.Windows.Forms.ToolStrip> 에 도킹 합니다.|  
 |<xref:System.Windows.Forms.ToolStrip.AllowItemReorder%2A>|<xref:System.Windows.Forms.ToolStrip> 클래스를 통해 끌어서 놓기와 항목 다시 정렬을 전용으로 처리할지를 나타내는 값을 가져오거나 설정합니다.|  

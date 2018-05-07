@@ -1,32 +1,18 @@
 ---
-title: "설명서에 대한 안내"
-ms.custom: 
+title: 설명서에 대한 안내
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - WCF [WCF], documentation
 - Windows Communication Foundation [WCF], documentation
 ms.assetid: 2aa18c85-a4fd-4bb9-986a-a8249e4f8e0e
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 132cbc6c7c9ba7d8e6c29f477554fc7b3bbab469
-ms.sourcegitcommit: 08684dd61444c2f072b89b926370f750e456fca1
-ms.translationtype: MT
+ms.openlocfilehash: 79a9465c81071a77a6901f21f59036ea88b9cb53
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="guide-to-the-documentation"></a>설명서에 대한 안내
-여기에서는 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 설명서에 대한 참고 자료를 제공합니다. 구체적인 관심사와 지식 수준에 따라 그룹화된 링크 문서부터 보시는 것이 좋습니다.  
+Windows Communication Foundation (WCF) 설명서에 대 한 지침은 다음과 같습니다 제공. 구체적인 관심사와 지식 수준에 따라 그룹화된 링크 문서부터 보시는 것이 좋습니다.  
   
  독립 실행형 버전의 설명서 및 도움말 뷰어를 설치 하려면 다운로드는 [Microsoft Windows SDK v 7.1](http://go.microsoft.com/fwlink/?LinkID=194146&clcid=0x409)합니다.  
   

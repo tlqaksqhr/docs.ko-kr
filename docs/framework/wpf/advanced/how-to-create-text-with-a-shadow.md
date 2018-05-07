@@ -1,36 +1,24 @@
 ---
-title: "방법: 그림자가 적용된 텍스트 만들기"
-ms.custom: 
+title: '방법: 그림자가 적용된 텍스트 만들기'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - typography [WPF], shadow effects
 - shadow effects in text [WPF]
 - text [WPF], shadowed
 ms.assetid: 6ab9c754-6001-4708-b479-5367f2fd1a35
-caps.latest.revision: "22"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: b031b0dce8e1fd06399ded0b6d612a23323ae837
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 1b7740284afcda6eab41fb68be3b4a2f032cc77d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-text-with-a-shadow"></a>방법: 그림자가 적용된 텍스트 만들기
 이 단원의 예제에서는 표시된 텍스트에 대해 그림자 효과를 만드는 방법을 보여 줍니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  <xref:System.Windows.Media.Effects.DropShadowEffect> 개체 다양 한 놓기에 대 한 그림자 효과 만들 수 있습니다 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 개체입니다. 다음 예제에서는 그림자 효과가 적용된 텍스트를 보여 줍니다. 이 경우 그림자는 그림자 색깔이 흐린, 부드러운 그림자입니다.  
   
- ![Softness &#61; 인 텍스트 그림자 0.25](../../../../docs/framework/wpf/advanced/media/shadowtext01.jpg "ShadowText01")  
+ ![Softness 인 텍스트 그림자 &#61; 0.25](../../../../docs/framework/wpf/advanced/media/shadowtext01.jpg "ShadowText01")  
 부드러운 그림자가 적용된 텍스트의 예  
   
  그림자의 너비를 설정 하 여 제어할 수 있습니다는 <xref:System.Windows.Media.Effects.DropShadowEffect.ShadowDepth%2A> 속성입니다. 값이 `4.0` 그림자 높이 인 4 픽셀을 나타냅니다. 부드러운 정도 제어할 수 있습니다 또는 수정 하 여 그림자 흐림 효과 <xref:System.Windows.Media.Effects.DropShadowEffect.BlurRadius%2A> 속성입니다. 값이 `0.0` 없는 흐림 효과 나타냅니다. 다음 코드 예제에서는 부드러운 그림자를 만드는 방법을 보여 줍니다.  
@@ -42,7 +30,7 @@ ms.lasthandoff: 12/22/2017
   
  다음 예제에서는 진한 그림자 효과가 적용된 텍스트를 보여 줍니다. 이 경우 그림자가 흐려지지 않습니다.  
   
- ![Softness &#61; 인 텍스트 그림자 0](../../../../docs/framework/wpf/advanced/media/shadowtext02.jpg "ShadowText02")  
+ ![Softness 인 텍스트 그림자 &#61; 0](../../../../docs/framework/wpf/advanced/media/shadowtext02.jpg "ShadowText02")  
 진한 그림자가 적용된 텍스트의 예  
   
  설정 하 여 하드 그림자를 만들 수는 <xref:System.Windows.Media.Effects.DropShadowEffect.BlurRadius%2A> 속성을 `0.0`는 없는 뜨 리고 사용 해야 함을 나타냅니다. 그림자의 방향을 수정 하 여 제어할 수 있습니다는 <xref:System.Windows.Media.Effects.DropShadowEffect.Direction%2A> 속성입니다. 이 속성의 방향 값도 값으로 설정 간의 `0` 및 `360`합니다. 다음 그림의 방향 값을 보여 줍니다.는 <xref:System.Windows.Media.Effects.DropShadowEffect.Direction%2A> 속성을 설정 합니다.  

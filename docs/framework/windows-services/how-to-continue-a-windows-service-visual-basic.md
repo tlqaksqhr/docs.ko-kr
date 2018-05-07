@@ -1,14 +1,6 @@
 ---
-title: "방법: Windows 서비스 계속(Visual Basic)"
-ms.custom: 
+title: '방법: Windows 서비스 계속(Visual Basic)'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - vb
 f1_keywords:
@@ -17,22 +9,18 @@ helpviewer_keywords:
 - Windows Service applications, pausing
 - pausing Windows Service applications
 ms.assetid: e5d13760-4c83-4b0d-abef-39852677cd7a
-caps.latest.revision: 
 author: ghogen
-ms.author: ghogen
 manager: douge
-ms.workload:
-- dotnet
-ms.openlocfilehash: 73b16a5e5834f7279ae551d4e7efd26cc86c1d07
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 15ef15e0afe43d56db0972a686cd093e22c672dc
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-continue-a-windows-service-visual-basic"></a>방법: Windows 서비스 계속(Visual Basic)
 사용 하 여이 예제는 <xref:System.ServiceProcess.ServiceController> 로컬 컴퓨터에서 IIS 관리 서비스를 계속 하려면 구성 요소입니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  [!code-vb[VbRadconService#11](../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbRadconService/VB/MyNewService.vb#11)]  
 [!code-vb[VbRadconService#13](../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbRadconService/VB/MyNewService.vb#13)]  
   

@@ -1,14 +1,6 @@
 ---
 title: ICorDebugCode Interface1
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICorDebugCode
 api_location:
@@ -22,17 +14,13 @@ helpviewer_keywords:
 ms.assetid: 7bd14fb6-8b54-4484-a891-e3c21859c019
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 86659b624ef01922b6c5d1db9b3ae3697d0128b3
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 37917577c802514fcebc3ea0792cbce9bb8a7345
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="icordebugcode-interface1"></a>ICorDebugCode Interface1
 MSIL(Microsoft Intermediate Language) 코드나 네이티브 코드의 세그먼트를 나타냅니다.  
@@ -52,7 +40,7 @@ MSIL(Microsoft Intermediate Language) 코드나 네이티브 코드의 세그먼
 |[IsIL 메서드](../../../../docs/framework/unmanaged-api/debugging/icordebugcode-isil-method.md)|나타내는 값을 가져옵니다 여부이 `ICorDebugCode` MSIL에 컴파일된 합니다.|  
   
 ## <a name="remarks"></a>설명  
- `ICorDebugCode`MSIL 또는 네이티브 코드를 나타낼 수 있습니다. MSIL 코드를 나타내는 "ICorDebugFunction" 개체는 0 이나 1 점이 `ICorDebugCode` 관련 된 개체입니다. 네이티브 코드를 나타내는 "ICorDebugFunction" 개체 개수에 관계 없이 점이 `ICorDebugCode` 관련 된 개체입니다.  
+ `ICorDebugCode` MSIL 또는 네이티브 코드를 나타낼 수 있습니다. MSIL 코드를 나타내는 "ICorDebugFunction" 개체는 0 이나 1 점이 `ICorDebugCode` 관련 된 개체입니다. 네이티브 코드를 나타내는 "ICorDebugFunction" 개체 개수에 관계 없이 점이 `ICorDebugCode` 관련 된 개체입니다.  
   
 > [!NOTE]
 >  이 인터페이스는 크로스 시스템 또는 크로스 프로세스 원격 호출을 지원하지 않습니다.  
@@ -64,7 +52,7 @@ MSIL(Microsoft Intermediate Language) 코드나 네이티브 코드의 세그먼
   
  **라이브러리:** CorGuids.lib  
   
- **.NET framework 버전:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>참고 항목  
     

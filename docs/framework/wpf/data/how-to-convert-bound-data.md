@@ -1,13 +1,6 @@
 ---
-title: "방법: 바인딩된 데이터 변환"
-ms.custom: 
+title: '방법: 바인딩된 데이터 변환'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -16,23 +9,18 @@ helpviewer_keywords:
 - data binding [WPF], converting bound data
 - binding data [WPF], converting bound data
 ms.assetid: b00aaa19-c6df-4c3b-a9fd-88a0b488df2b
-caps.latest.revision: "11"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 3f4bcde15940e76e1d022658e32ff6ef8676e45e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 526305f32280fb75e95538b9014c34c11ed8bffa
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-convert-bound-data"></a>방법: 바인딩된 데이터 변환
 이 예제에서는 바인딩에 사용 되는 데이터에 변환을 적용 하는 방법을 보여 줍니다.  
   
  데이터 바인딩 중으로 변환 하려면 구현 하는 클래스 만들어야 합니다는 <xref:System.Windows.Data.IValueConverter> 포함 된 인터페이스는 <xref:System.Windows.Data.IValueConverter.Convert%2A> 및 <xref:System.Windows.Data.IValueConverter.ConvertBack%2A> 메서드.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 예제에는 연도, 월 및 일만 표시 되도록에 전달 되는 날짜 값을 변환 하는 날짜 변환기의 구현을 보여 줍니다. 구현 하는 경우는 <xref:System.Windows.Data.IValueConverter> 인터페이스를 사용 하 여 구현을 데코 레이트 하는 것이 좋습니다는는 <xref:System.Windows.Data.ValueConversionAttribute> 개발에 알리기 위해 특성 도구는 다음 예제 에서처럼 변환과 관련 된 데이터 형식:  
   
  [!code-csharp[DataBindingLab#18](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DataBindingLab/CSharp/DateConverter.cs#18)]

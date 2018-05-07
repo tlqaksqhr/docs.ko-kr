@@ -1,27 +1,15 @@
 ---
-title: "방법: Windows Forms 간에 컨트롤 복사"
-ms.custom: 
+title: '방법: Windows Forms 간에 컨트롤 복사'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - Windows Forms controls, copying
 - controls [Windows Forms], copying
 ms.assetid: 106c1eb2-1fba-4f69-b2ec-9ea3fa182f1e
-caps.latest.revision: "8"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 47cae789fb816286a9a22b87a2a86638c7876bda
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: da8ff1ae5abb65683e4f11bed5de328dc37c57a0
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-copy-controls-between-windows-forms"></a>방법: Windows Forms 간에 컨트롤 복사
 컨트롤 같은 양식으로, 프로젝트 내에서 다른 폼으로 또는 다른 솔루션에서 사용 하기 위해 클립보드에 복사할 수 있습니다.  

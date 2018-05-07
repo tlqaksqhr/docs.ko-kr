@@ -1,22 +1,12 @@
 ---
-title: "방법: LINQ to (Visual Basic) XSLT 스타일에서 XML 트리 변형 하려면 주석을 사용"
-ms.custom: 
+title: '방법: LINQ to (Visual Basic) XSLT 스타일에서 XML 트리 변형 하려면 주석을 사용'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 08e91fa2-dac2-4463-9ef1-87b1ac3fa890
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: e2e5fce154d5d59657302deb2ce0be80a3bc3ac6
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: c19d290e5b7acdf2702e24383a176ed06c9c7a1b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-use-annotations-to-transform-linq-to-xml-trees-in-an-xslt-style-visual-basic"></a>방법: LINQ to (Visual Basic) XSLT 스타일에서 XML 트리 변형 하려면 주석을 사용
 주석을 사용하여 XML 트리를 쉽게 변환할 수 있습니다.  

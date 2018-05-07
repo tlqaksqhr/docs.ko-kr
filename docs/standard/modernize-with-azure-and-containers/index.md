@@ -4,16 +4,11 @@ description: 기존 응용 프로그램을 Azure 클라우드 및이 전자책 (
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/26/2017
-ms.prod: .net
-ms.topic: article
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: ac4cd9f14f046a970b6ec41c1b176e9980a960cf
-ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
+ms.openlocfilehash: 3109cac1bd64587bb096a057f6f4ae99b055352a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="modernize-existing-net-applications-with-azure-cloud-and-windows-containers-v10"></a>Azure 클라우드 및 Windows 컨테이너를 사용하여 기존 .NET 응용 프로그램 현대화(v1.0)
 

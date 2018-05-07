@@ -1,28 +1,16 @@
 ---
-title: "방법: TAB 키를 사용하여 ToolStrip 컨트롤 밖으로 이동 가능하도록 설정"
-ms.custom: 
+title: '방법: TAB 키를 사용하여 ToolStrip 컨트롤 밖으로 이동 가능하도록 설정'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - controls [Windows Forms], moving between
 - TAB key [Windows Forms], enabling
 - ToolStrip control [Windows Forms], moving from
 ms.assetid: 40f9e88b-09a3-428e-8da8-c00bb65079c6
-caps.latest.revision: "7"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 38a2e331d9530c42be6b9047b11ea235ae81d58d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 0af6c4c308ac1988b5f1babd80897afd5bf6a4d5
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-enable-the-tab-key-to-move-out-of-a-toolstrip-control"></a>방법: TAB 키를 사용하여 ToolStrip 컨트롤 밖으로 이동 가능하도록 설정
 사용자의 이동 하려면 TAB 키를 사용 하도록 설정 하려면 다음 절차를 사용 하 여 한 <xref:System.Windows.Forms.ToolStrip> 탭 순서의 다음 컨트롤로 합니다.  

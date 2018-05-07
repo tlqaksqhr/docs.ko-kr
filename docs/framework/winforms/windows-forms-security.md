@@ -1,13 +1,6 @@
 ---
-title: "Windows Forms 보안"
-ms.custom: 
+title: Windows Forms 보안
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - designer access security [Windows Forms]
 - permissions [Windows Forms], Windows Forms
@@ -16,16 +9,11 @@ helpviewer_keywords:
 - access control [Windows Forms], Windows Forms
 - security policy [Windows Forms], Windows Forms
 ms.assetid: 932d438a-5285-46d8-a958-8c93d0ad6cae
-caps.latest.revision: "8"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 8bd9b87fdfa54a6f9bf53e4fa897106257b4c625
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 3dc4397319d42760a1886a96377a949da6ae63be
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="windows-forms-security"></a>Windows Forms 보안
 Windows Forms 보안 모델 코드 기반 (보안 수준이 설정 되는 코드를 실행 하는 사용자에 관계 없이 코드에 대 한)을 제공 합니다. 에 컴퓨터 시스템에 이미 있을 수 있는 모든 보안 스키마 외에도입니다. 브라우저 (예: 영역을 기반으로 보안 Internet Explorer에서 사용할 수 있는) 또는 운영 체제 (예: Windows NT의 자격 증명 기반 보안용)를 포함할 수 있습니다 이러한.  

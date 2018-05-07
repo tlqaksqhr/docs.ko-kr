@@ -1,10 +1,6 @@
 ---
-title: "방법: DataRepeater 컨트롤의 레이아웃 변경(Visual Studio)"
+title: '방법: DataRepeater 컨트롤의 레이아웃 변경(Visual Studio)'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -12,14 +8,11 @@ helpviewer_keywords:
 - DataRepeater, changing layout style
 - DataRepeater, changing orientation
 ms.assetid: 33aa8fd5-ac63-4bd0-ba13-8c2ab17e7824
-caps.latest.revision: "10"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 94c5f8f5e83578ca0a82b479ef5ef359738df5f1
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: fa780ee40171143c17b5bdbda4a97179ed5f2151
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-change-the-layout-of-a-datarepeater-control-visual-studio"></a>방법: DataRepeater 컨트롤의 레이아웃 변경(Visual Studio)
 <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> 컨트롤 (가로 스크롤 항목) 가로 또는 세로 방향 (세로 스크롤 항목)에 표시할 수 방향입니다. 디자인 타임 또는 런타임 시 방향을 변경 하 여 변경할 수 있습니다는 <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.LayoutStyle%2A> 속성입니다. 변경 하는 경우는 <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.LayoutStyle%2A> 런타임 시 속성을 할 수 있습니다 크기를 조정 하려면는 <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.ItemTemplate%2A> 고 자식 컨트롤의 위치를 변경 합니다.  

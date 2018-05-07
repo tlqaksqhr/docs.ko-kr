@@ -1,13 +1,6 @@
 ---
-title: "방법: XDocument, XElement 또는 LINQ for XML 쿼리 결과에 바인딩"
-ms.custom: 
+title: '방법: XDocument, XElement 또는 LINQ for XML 쿼리 결과에 바인딩'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -15,21 +8,16 @@ helpviewer_keywords:
 - data binding [WPF], binding to XDocument
 - data binding [WPF], binding to XElement
 ms.assetid: 6a629a49-fe1c-465d-b76a-3dcbf4307b64
-caps.latest.revision: "21"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ceb6023157d487aebeff4fb5335b58c0958f2851
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 7e4f9cc2f5e6815a35b4911f5b4a480161d66ef3
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-bind-to-xdocument-xelement-or-linq-for-xml-query-results"></a>방법: XDocument, XElement 또는 LINQ for XML 쿼리 결과에 바인딩
 XML 데이터를 바인딩하는 방법을 보여 주는이 예제는 <xref:System.Windows.Controls.ItemsControl> 를 사용 하 여 <xref:System.Xml.Linq.XDocument>합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 XAML 코드 정의 <xref:System.Windows.Controls.ItemsControl> 형식의 데이터에 대 한 데이터 템플릿을 포함 `Planet` 에 `http://planetsNS` XML 네임 스페이스입니다. 네임스페이스를 차지하는 XML 데이터 형식은 중괄호에서 네임스페이스를 포함해야 하고 XAML 태그 확장이 표시되는 위치에 표시되는 경우 중괄호 이스케이프 시퀀스를 가진 네임스페이스 앞에 표시되어야 합니다. 이 코드에 해당 하는 동적 속성에 바인딩하는 <xref:System.Xml.Linq.XContainer.Element%2A> 및 <xref:System.Xml.Linq.XElement.Attribute%2A> 의 메서드는 <xref:System.Xml.Linq.XElement> 클래스입니다. 동적 속성을 사용하면 XAML을 메서드의 이름을 공유하는 동적 속성에 바인딩할 수 있습니다. 자세한 내용은 [LINQ to XML 동적 속성](/visualstudio/designers/linq-to-xml-dynamic-properties)을 참조하세요. XML의 기본 네임스페이스 선언이 특성 이름에 적용되지 않는지를 확인합니다.  
   
  [!code-xaml[XLinqExample#StackPanelResources](../../../../samples/snippets/csharp/VS_Snippets_Wpf/XLinqExample/CSharp/Window1.xaml#stackpanelresources)]  

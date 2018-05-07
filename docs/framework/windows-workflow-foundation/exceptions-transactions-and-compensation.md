@@ -1,26 +1,14 @@
 ---
-title: "예외, 트랜잭션 및 보정"
-ms.custom: 
+title: 예외, 트랜잭션 및 보정
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - programming [WF], error handling
 ms.assetid: 694db4f9-7387-4b13-8f9f-b923b18c7490
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: e83661ba66ca6a71f26c11172902d5bc602a2f6e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 346b07cd89c4071088676235d457930637b71549
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="exceptions-transactions-and-compensation"></a>예외, 트랜잭션 및 보정
 [!INCLUDE[wf1](../../../includes/wf1-md.md)]에서는 워크플로에서 런타임 오류 조건을 처리하는 다양한 메커니즘을 제공합니다. 워크플로에서는 예외 처리기, 트랜잭션, 취소 및 보정을 함께 사용하여 오류 조건을 정상적으로 처리 및 복구할 수 있습니다.  

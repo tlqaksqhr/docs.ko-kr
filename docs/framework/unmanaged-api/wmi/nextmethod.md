@@ -1,11 +1,7 @@
 ---
-title: "NextMethod 함수 (관리 되지 않는 API 참조)"
-description: "NextMethod 함수 열거형의 다음 메서드를 검색합니다."
+title: NextMethod 함수 (관리 되지 않는 API 참조)
+description: NextMethod 함수 열거형의 다음 메서드를 검색합니다.
 ms.date: 11/06/2017
-ms.prod: .net-framework
-ms.technology:
-- dotnet-clr
-ms.topic: reference
 api_name:
 - NextMethod
 api_location:
@@ -20,14 +16,11 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 6b886b3ecbd1d5b5b8d212846b2bd8291fa43909
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: cd4559663194cb845fb0cc040e1f6739e38caa0e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="nextmethod-function"></a>NextMethod 함수
 에 대 한 호출으로 시작 하는 열거형의 다음 메서드를 검색 [BeginMethodEnumeration](beginmethodenumeration.md)합니다.  
@@ -83,7 +76,7 @@ HRESULT NextMethod (
 
 호출 하 여 열거형 시퀀스를 시작 하는 호출자에 게는 [BeginMethodEnumeration](beginmethodenumeration.md) 함수 및 함수 반환 될 때까지 다음 [NextMethod] 함수를 호출 `WBEM_S_NO_MORE_DATA`합니다. 호출자가 호출 하 여 시퀀스를 완료 하는 필요에 따라 [EndMethodEnumeration](endmethodenumeration.md)합니다. 호출자에 게 해지할 수 있습니다 열거형 초기 호출 하 여 [EndMethodEnumeration](endmethodenumeration.md) 언제 든 지 합니다.
 
-## <a name="example"></a>예
+## <a name="example"></a>예제
 
 C + + 예제에 대 한 참조는 [IWbemClassObject::NextMethod](https://msdn.microsoft.com/library/aa391454(v=vs.85).aspx) 메서드.
 
@@ -92,7 +85,7 @@ C + + 예제에 대 한 참조는 [IWbemClassObject::NextMethod](https://msdn.mi
   
  **헤더:** WMINet_Utils.idl  
   
- **.NET framework 버전:**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **.NET framework 버전:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>참고자료  
 [WMI 및 성능 카운터 (관리 되지 않는 API 참조)](index.md)

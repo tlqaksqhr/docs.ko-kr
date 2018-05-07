@@ -1,10 +1,6 @@
 ---
-title: "방법: DataRepeater 컨트롤의 데이터 검색(Visual Studio)"
+title: '방법: DataRepeater 컨트롤의 데이터 검색(Visual Studio)'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -12,14 +8,11 @@ helpviewer_keywords:
 - DataRepeater, implementing search
 - DataRepeater, searching data
 ms.assetid: a8ab5d17-b94f-43c4-8dd7-d0450226d73f
-caps.latest.revision: "11"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: a3ed7138c142a83584ecd19ccaebe0e31e421ce3
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 689990ee125c85c3151a4e965b619fde068d220e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-search-data-in-a-datarepeater-control-visual-studio"></a>방법: DataRepeater 컨트롤의 데이터 검색(Visual Studio)
 사용 하는 경우는 <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> 특정 레코드에 대 한 사용자 들은 검색 하려는 경우 많은 레코드를 포함 하는 컨트롤입니다. 컨트롤 자체에 데이터를 검색 하는 대신 기본 쿼리를 통해 검색을 구현할 수 있습니다 <xref:System.Windows.Forms.BindingSource>합니다. 항목이 발견 되는 경우 사용할 수 있습니다는 <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.CurrentItemIndex%2A> 속성을 항목을 선택 하 고을 뷰로 스크롤합니다.  

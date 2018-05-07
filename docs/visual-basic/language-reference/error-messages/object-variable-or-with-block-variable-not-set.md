@@ -1,23 +1,14 @@
 ---
 title: Object 변수 또는 With 블록 변수가 설정되지 않았습니다.
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vbrID91
 ms.assetid: 2f03e611-f0ed-465c-99a2-a816e034faa3
-caps.latest.revision: 9
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 9e1f587e194acf744b6ec9b8f1bede3acef7b753
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: b2bd1be83f57dbdc7a64b407dc1052074e19c74b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="object-variable-or-with-block-variable-not-set"></a>Object 변수 또는 With 블록 변수가 설정되지 않았습니다.
 잘못 된 개체 변수가 참조 하 고 있습니다.   여러 가지 원인에 의해 이런 오류가 발생할 수 있습니다.  
@@ -29,9 +20,9 @@ ms.lasthandoff: 11/21/2017
     > [!TIP]
     >  `Option Strict` 문이 암시적 형식 지정을 허용 하지 않는 한 `Object` 유형입니다. 형식을 생략 하면 컴파일 타임 오류가 발생 합니다. 참조 [Option Strict 문](../../../visual-basic/language-reference/statements/option-strict-statement.md)합니다.  
   
--   으로 설정 되어 있는 개체를 참조 하려고 합니다.`Nothing`  
+-   으로 설정 되어 있는 개체를 참조 하려고 합니다. `Nothing`  
   
-     입니다.  
+     이어야 합니다.  
   
 -   요소를 올바르게 선언 되지 않은 배열 변수에 액세스 하려고 합니다.  
   

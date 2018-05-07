@@ -1,14 +1,6 @@
 ---
 title: '방법: 표준 컨트롤로 키보드 입력 수정'
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-winforms
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -18,17 +10,11 @@ helpviewer_keywords:
 - Windows Forms, modifying keyboard input
 - keyboards [Windows Forms], keyboard input
 ms.assetid: 626d3712-d866-4988-bcda-a2d5b36ec0ba
-caps.latest.revision: 14
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: bc6d9bd6f1d5e1a7472a538b2a579766cee92c93
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.openlocfilehash: 726444e1decb3e03989317431e1f8c4a5fc4a697
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-modify-keyboard-input-to-a-standard-control"></a>방법: 표준 컨트롤로 키보드 입력 수정
 Windows Forms는 키보드 입력을 사용 및 수정할 수 있는 기능을 제공합니다. 키 사용은 메시지 큐 아래의 다른 메서드 및 이벤트가 키 값을 수신하지 않도록 메서드 또는 이벤트 처리기 내에서 키를 처리하는 것을 가리킵니다. 키 수정은 메시지 큐 아래의 메서드 및 이벤트 처리기가 다른 키 값을 수신하도록 키 값을 수정하는 것을 가리킵니다. 이 항목에서는 이러한 작업을 수행하는 방법을 보여 줍니다.  

@@ -1,11 +1,6 @@
 ---
 title: Inherits Statement
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.Inherits
 - Inherits
@@ -13,14 +8,11 @@ helpviewer_keywords:
 - Inherits statement [Visual Basic]
 - Inherits statement [Visual Basic], syntax
 ms.assetid: 9e6fe042-9af3-4341-8093-fc3537770cf2
-caps.latest.revision: "16"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: ae9ba54c3fd1ec3332c9f6260bc19a1293270ad8
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 43a8aa4e9e04ee035cb52e9f829de13e5c022217
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="inherits-statement"></a>Inherits Statement
 현재 클래스 또는 인터페이스가 다른 클래스나 인터페이스 집합에서 특성, 변수, 속성, 프로시저 및 이벤트를 상속 하도록 하면 됩니다.  
@@ -35,7 +27,7 @@ Inherits basetypenames
   
 |용어|정의|  
 |---|---|  
-|`basetypenames`|필수 요소. 이 클래스가 파생 되는 클래스의 이름입니다.<br /><br /> 또는<br /><br /> 이 인터페이스가 파생 되는 인터페이스의 이름입니다. 여러 이름을 구분 하려면 쉼표를 사용 합니다.|  
+|`basetypenames`|필수. 이 클래스가 파생 되는 클래스의 이름입니다.<br /><br /> -또는-<br /><br /> 이 인터페이스가 파생 되는 인터페이스의 이름입니다. 여러 이름을 구분 하려면 쉼표를 사용 합니다.|  
   
 ## <a name="remarks"></a>설명  
  을 사용 하는 경우는 `Inherits` 문은 클래스 또는 인터페이스 정의에서 공백 및 주석이 아닌 첫 번째 줄 이어야 합니다. 다음에 나와야는 `Class` 또는 `Interface` 문.  

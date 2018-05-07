@@ -1,23 +1,12 @@
 ---
-title: "WF에서 비동기 활동 만들기"
-ms.custom: 
+title: WF에서 비동기 활동 만들기
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 497e81ed-5eef-460c-ba55-fae73c05824f
-caps.latest.revision: "9"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 1d06f825b96f66e35bdd30db272b99bb4e2e3e1e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 8df876c9be020ece29683d1c101a4045b1c76322
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="creating-asynchronous-activities-in-wf"></a>WF에서 비동기 활동 만들기
 <xref:System.Activities.AsyncCodeActivity>는 활동 작성자가 파생 활동에서 비동기 실행 논리를 구현하는 데 사용할 수 있는 기본 클래스를 제공합니다. 이 기능은 워크플로 스케줄러 스레드를 유지하지 않고 병렬로 실행 가능한 활동을 차단하지 않으면서 비동기 작업을 수행해야 하는 사용자 지정 활동에 유용합니다. 이 항목에서는 <xref:System.Activities.AsyncCodeActivity>를 사용하여 사용자 지정 비동기 활동을 만드는 방법을 간략하게 설명합니다.  
@@ -26,7 +15,7 @@ ms.lasthandoff: 12/22/2017
  <xref:System.Activities?displayProperty=nameWithType>는 사용자 지정 활동 작성자에게 활동 작성 요구 사항별로 다른 기본 클래스를 제공합니다. 각 클래스는 특정 체계를 따르고 워크플로 작성자 및 활동 런타임에 해당 계약을 제공합니다. <xref:System.Activities.AsyncCodeActivity> 기반 활동은 스케줄러 스레드를 기준으로 비동기 작업을 수행하고 실행 논리가 관리 코드에 표시되는 활동입니다. 비동기 처리로 인해 <xref:System.Activities.AsyncCodeActivity>에서 실행 중에 유휴 지점이 발생할 수 있습니다. 비동기 작업의 일시적 특성으로 인해 <xref:System.Activities.AsyncCodeActivity>는 활동 실행 기간 동안 항상 비지속성 블록을 만듭니다. 따라서 비동기 작업 중에 워크플로 런타임에 워크플로 인스턴스가 유지되지 않을 뿐만 아니라 비동기 코드를 실행하는 동안 워크플로 인스턴스가 언로드되지 않습니다.  
   
 ### <a name="asynccodeactivity-methods"></a>AsyncCodeActivity 메서드  
- <xref:System.Activities.AsyncCodeActivity>에서 파생되는 활동은 사용자 지정 코드로 <xref:System.Activities.AsyncCodeActivity.BeginExecute%2A> 및 <xref:System.Activities.AsyncCodeActivity.EndExecute%2A> 메서드를 재정의하여 비동기 실행 논리를 만들 수 있습니다. 런타임에 의해 호출되면 이러한 메서드가 <xref:System.Activities.AsyncCodeActivityContext>에 전달됩니다. <xref:System.Activities.AsyncCodeActivityContext>공유 상태를 제공할 활동 작성자가 <xref:System.Activities.AsyncCodeActivity.BeginExecute%2A> /  <xref:System.Activities.AsyncCodeActivity.EndExecute%2A> 컨텍스트에서 <xref:System.Activities.AsyncCodeActivityContext.UserState%2A> 속성입니다. 다음 예제에서 `GenerateRandom` 활동은 난수를 비동기적으로 생성합니다.  
+ <xref:System.Activities.AsyncCodeActivity>에서 파생되는 활동은 사용자 지정 코드로 <xref:System.Activities.AsyncCodeActivity.BeginExecute%2A> 및 <xref:System.Activities.AsyncCodeActivity.EndExecute%2A> 메서드를 재정의하여 비동기 실행 논리를 만들 수 있습니다. 런타임에 의해 호출되면 이러한 메서드가 <xref:System.Activities.AsyncCodeActivityContext>에 전달됩니다. <xref:System.Activities.AsyncCodeActivityContext> 공유 상태를 제공할 활동 작성자가 <xref:System.Activities.AsyncCodeActivity.BeginExecute%2A> /  <xref:System.Activities.AsyncCodeActivity.EndExecute%2A> 컨텍스트에서 <xref:System.Activities.AsyncCodeActivityContext.UserState%2A> 속성입니다. 다음 예제에서 `GenerateRandom` 활동은 난수를 비동기적으로 생성합니다.  
   
  [!code-csharp[CFX_ActivityExample#8](../../../samples/snippets/csharp/VS_Snippets_CFX/CFX_ActivityExample/cs/Program.cs#8)]  
   

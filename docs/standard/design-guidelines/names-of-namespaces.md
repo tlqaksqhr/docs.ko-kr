@@ -1,14 +1,6 @@
 ---
 title: 네임스페이스의 이름
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - names [.NET Framework], conflicts
 - names [.NET Framework], namespaces
@@ -16,18 +8,13 @@ helpviewer_keywords:
 - namespaces [.NET Framework], names
 - names [.NET Framework], type names
 ms.assetid: a49058d2-0276-43a7-9502-04adddf857b2
-caps.latest.revision: 12
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: f6a3b90dbc0dab0bb3a6a951dea45f59fc3ea1b8
-ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
+ms.openlocfilehash: 9e0b6c5ac60474cfe984b3802e880eb58b017722
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="names-of-namespaces"></a>네임스페이스의 이름
 으로 다른 이름 지정 지침으로 목표 네임 스페이스의 이름을 지정할 때 만들어지고 충분 한 명확성 즉시 내용을 알 수 네임 스페이스의 내용을 가능성이 프레임 워크를 사용 하 여 프로그래머에 대 한 있습니다. 다음 템플릿 네임 스페이스 이름 지정에 대 한 일반적인 규칙을 지정 합니다.  

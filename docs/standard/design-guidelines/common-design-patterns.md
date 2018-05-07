@@ -1,29 +1,18 @@
 ---
 title: 일반 디자인 패턴
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - design patterns in class libraries
 - class library design guidelines [.NET Framework], design patterns
 ms.assetid: f7bd1361-4ab2-4132-972d-a044b8f197e1
-caps.latest.revision: 8
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 8ce4a80501868bde2082d0ea65ffd033d8783935
-ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
+ms.openlocfilehash: 29dd2e2ab097c38f81143e717e5f76f3ba284f96
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="common-design-patterns"></a>일반 디자인 패턴
 소프트웨어 패턴, 패턴 언어 및 패턴의 매우 광범위 한 주제를 해결 하는 antipatterns에 대 한 다양 한 문서가 있습니다. 따라서이 장에서 지침 및.NET Framework Api의 디자인에 자주 사용 되는 패턴의 매우 제한적인와 관련 된 토론을 제공 합니다.  

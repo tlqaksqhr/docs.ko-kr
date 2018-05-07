@@ -1,41 +1,27 @@
 ---
-title: "방법: Storyboard를 사용하여 애니메이션 효과를 적용한 후 속성 설정"
-ms.custom: 
+title: '방법: Storyboard를 사용하여 애니메이션 효과를 적용한 후 속성 설정'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - animation [WPF], changing property values after
 ms.assetid: 79466556-4dbf-40bd-9c1e-a77613b07077
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 3ffc534549f5b114a07f09326be72c1968d178a8
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: b8e9c08075b13f8d6f701d5ac6ae4f8ea8949184
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-set-a-property-after-animating-it-with-a-storyboard"></a>방법: Storyboard를 사용하여 애니메이션 효과를 적용한 후 속성 설정
 일부 경우 애니메이션이 적용 된 후에 속성의 값을 변경할 수 나타날 수 있습니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 예제에서는 <xref:System.Windows.Media.Animation.Storyboard> 애니메이션의 색을 적용 하는 데 사용 되는 <xref:System.Windows.Media.SolidColorBrush>합니다. 스토리 보드는 단추를 클릭할 때 트리거됩니다. <xref:System.Windows.Media.Animation.Timeline.Completed> 는 프로그램이 알림을 받을 수 있도록 이벤트를 처리 때는 <xref:System.Windows.Media.Animation.ColorAnimation> 완료 합니다.  
   
  [!code-xaml[timingbehaviors_snip#GraphicsMMButton1Declaration](../../../../samples/snippets/csharp/VS_Snippets_Wpf/timingbehaviors_snip/CSharp/AnimateThenSetPropertyExample.xaml#graphicsmmbutton1declaration)]  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  이후에 <xref:System.Windows.Media.Animation.ColorAnimation> 완료 되 면 브러시의 색을 파란색을 변경 하려면 프로그램 시도 합니다.  
   
  [!code-csharp[timingbehaviors_snip#GraphicsMMButton1Handler](../../../../samples/snippets/csharp/VS_Snippets_Wpf/timingbehaviors_snip/CSharp/AnimateThenSetPropertyExample.xaml.cs#graphicsmmbutton1handler)]
@@ -43,7 +29,7 @@ ms.lasthandoff: 12/22/2017
   
  이전 코드가 어떤 작업을 보이지 않으면: 번째 노란색, 브러시 남아 제공한는 <xref:System.Windows.Media.Animation.ColorAnimation> 작업도 합니다. 기본 속성 값 (기본값)은 실제로 파란색으로 변경 됩니다. 그러나 유효 또는 현재, 값은 노란색 때문에 <xref:System.Windows.Media.Animation.ColorAnimation> 여전히 기준 값을 재정의 합니다. 유효한 값을 다시 되도록 기준 값을 원하는 경우 속성에 영향을 주지 애니메이션을 중지 해야 합니다. 스토리 보드 애니메이션이 작업을 수행 하는 방법은 세 가지가 있습니다.  
   
--   애니메이션의 설정 <xref:System.Windows.Media.Animation.Timeline.FillBehavior%2A> 속성을<xref:System.Windows.Media.Animation.FillBehavior.Stop>  
+-   애니메이션의 설정 <xref:System.Windows.Media.Animation.Timeline.FillBehavior%2A> 속성을 <xref:System.Windows.Media.Animation.FillBehavior.Stop>  
   
 -   전체 스토리 보드를 제거 합니다.  
   

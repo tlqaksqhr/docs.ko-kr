@@ -1,13 +1,6 @@
 ---
-title: "방법: 머리글을 클릭할 때 GridView 열 정렬"
-ms.custom: 
+title: '방법: 머리글을 클릭할 때 GridView 열 정렬'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -17,21 +10,16 @@ helpviewer_keywords:
 - ListView controls [WPF], sorting GridView columns
 - GridView controls [WPF], ListView control
 ms.assetid: 4865d720-d147-40ed-83a7-af7587f8aad8
-caps.latest.revision: "18"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 018d5c39efc1459e8883cf67cfc7992860f45318
-ms.sourcegitcommit: c3ebb11a66e85a465c9ba2c42592222630b7ff9e
+ms.openlocfilehash: 30bcbd8b7cdd4c184560aaa4a2799137da51fc8a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-sort-a-gridview-column-when-a-header-is-clicked"></a>방법: 머리글을 클릭할 때 GridView 열 정렬
 만드는 방법을 보여 주는이 예제는 <xref:System.Windows.Controls.ListView> 제어를 구현 하는 <xref:System.Windows.Controls.GridView> 보기 모드와 열 머리글을 클릭할 때 데이터 내용을 정렬 합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 예제에서는 정의 <xref:System.Windows.Controls.GridView> 에 바인딩하는 세 개의 열으로는 <xref:System.DateTime.Year%2A>, <xref:System.DateTime.Month%2A>, 및 <xref:System.DateTime.Day%2A>의 속성은 <xref:System.DateTime> 구조입니다.  
   
 ```xaml  

@@ -1,27 +1,17 @@
 ---
-title: "보안 프로토콜 버전 1.0"
-ms.custom: 
+title: 보안 프로토콜 버전 1.0
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: ee3402d2-1076-410b-a3cb-fae0372bd7af
-caps.latest.revision: "4"
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: ba5ce91f4cb3edd93698f7c0ba028186afdb8111
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 1b1e911b20ac8974dbc8cfa79e03fbd14f9beb17
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="security-protocols-version-10"></a>보안 프로토콜 버전 1.0
-Web Services Security 프로토콜은 모든 기존 엔터프라이즈 메시징 보안 요구 사항을 포함하는 Web Services Security 메커니즘을 제공합니다. 이 단원에서는 다음 Web Services Security 프로토콜에 대한 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 버전 1.0 세부 정보(<xref:System.ServiceModel.Channels.SecurityBindingElement>에서 구현)를 설명합니다.  
+Web Services Security 프로토콜은 모든 기존 엔터프라이즈 메시징 보안 요구 사항을 포함하는 Web Services Security 메커니즘을 제공합니다. 이 섹션에서는 Windows Communication Foundation (WCF) 버전 1.0 세부 정보를 설명 (에서 구현 되는 <xref:System.ServiceModel.Channels.SecurityBindingElement>) 다음 웹 서비스 보안 프로토콜에 대 한 합니다.  
   
 |사양/문서|링크|  
 |-|-|  
@@ -39,9 +29,9 @@ Web Services Security 프로토콜은 모든 기존 엔터프라이즈 메시징
 |응용 프로그램 참고:<br /><br /> WS-Trust for TLS Handshake 사용|게시 예정|  
 |응용 프로그램 참고:<br /><br /> WS-Trust for SPNEGO 사용|게시 예정|  
 |응용 프로그램 참고:<br /><br /> Web Services Addressing 끝점 참조 및 ID|게시 예정|  
-|WS-SecurityPolicy 1.1<br /><br /> (2005/07)|http://msdn.microsoft.com/ws/2005/07/ws-security-policy/<br /><br /> OASIS WS-SX Technical Committee(http://www.oasis-open.org/archives/ws-sx/200512/msg00017.html)에 제출된 오류에 의해 수정됨|  
+|WS-SecurityPolicy 1.1<br /><br /> (2005/07)|http://msdn.microsoft.com/ws/2005/07/ws-security-policy/<br /><br /> OASIS WS-SX Technical Committee에 제출 된 오류 수정 됨 http://www.oasis-open.org/archives/ws-sx/200512/msg00017.html|  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 버전 1에서는 Web Services Security 구성에 기본으로 사용할 수 있는 17가지 인증 모드를 제공합니다. 각 모드는 다음과 같은 공통 배포 요구 사항에 대해 최적화된 것입니다.  
+ WCF, 버전 1에서는 Web services security 구성에 대 한 기준으로 사용할 수 있는 17 가지 인증 모드를 제공 합니다. 각 모드는 다음과 같은 공통 배포 요구 사항에 대해 최적화된 것입니다.  
   
 -   클라이언트와 서비스를 인증하는 데 사용되는 자격 증명  
   
@@ -71,9 +61,9 @@ Web Services Security 프로토콜은 모든 기존 엔터프라이즈 메시징
   
  이러한 인증 모드를 사용하는 끝점에서는 WS-SP(WS-SecurityPolicy)를 사용하여 보안 요구 사항을 나타낼 수 있습니다. 이 문서에서는 각 인증 모드의 보안 헤더 및 인프라 메시지 구조에 대해 설명하고 정책 및 메시지에 대한 예제를 제공합니다.  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서는 WS-SecureConversation을 사용하여 응용 프로그램 간의 다중 메시지 교환 보호를 위한 보안 세션을 지원합니다.  구현에 대한 자세한 내용은 아래의 "보안 세션"을 참조하세요.  
+ WCF 응용 프로그램 간의 다중 메시지 교환을 보호 해 보안 세션 지원을 제공할 수 Ws-secureconversation을 활용 합니다.  구현에 대한 자세한 내용은 아래의 "보안 세션"을 참조하세요.  
   
- 인증 모드 이외에 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서는 서명과 암호화 작업의 순서 비교, 알고리즘 모음, 키 파생 서명 확인 등과 같이 대부분의 메시지 보안 기반 인증 모드에 적용되는 공통 보호 메커니즘을 제어하는 설정을 제공합니다.  
+ 인증 모드 이외에 WCF는 예를 들어 대부분의 메시지 보안 기반 인증 모드에 적용 되는 공통 보호 메커니즘을 제어 하는 설정을 제공: 서명 및 암호화 작업, 알고리즘 모음, 키 파생의 순서 및 서명 확인 합니다.  
   
  이 문서에서는 다음과 같은 접두사와 네임스페이스가 사용됩니다.  
   
@@ -93,18 +83,18 @@ Web Services Security 프로토콜은 모든 기존 엔터프라이즈 메시징
 |mssp|http://schemas.microsoft.com/ws/2005/07/securitypolicy|  
   
 ## <a name="1-token-profiles"></a>1. 토큰 프로필  
- Web Services Security 사양에서는 자격 증명을 보안 토큰으로서 나타냅니다. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서는 다음과 같은 토큰 유형을 지원합니다.  
+ Web Services Security 사양에서는 자격 증명을 보안 토큰으로서 나타냅니다. WCF에서는 다음과 같은 토큰 유형을 지원합니다.  
   
 ### <a name="11-usernametoken"></a>1.1 UsernameToken  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서는 UsernameToken10 및 UsernameToken11 프로필을 따르며 다음과 같은 제약 조건을 적용합니다.  
+ WCF에는 다음과 같은 제약 조건이 있는 UsernameToken10 및 UsernameToken11 프로필 다음과 같습니다.  
   
  UsernameToken\Password 요소의 R1101 PasswordType 특성은 생략되거나 그 값이 #PasswordText(기본값)여야 합니다.  
   
- 확장성을 사용하여 #PasswordDigest를 구현할 수 있습니다. #PasswordDigest가 보안 암호 보호 메커니즘으로 잘못 인식되는 경우가 있습니다. 그러나 #PasswordDigest는 UsernameToken 암호화를 대체할 수 없습니다. #PasswordDigest의 주요 목표는 재생 공격을 방지하는 데 있습니다. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 인증 모드에서 메시지 서명을 사용하면 재생 공격 위협을 줄일 수 있습니다.  
+ 확장성을 사용하여 #PasswordDigest를 구현할 수 있습니다. #PasswordDigest가 보안 암호 보호 메커니즘으로 잘못 인식되는 경우가 있습니다. 그러나 #PasswordDigest는 UsernameToken 암호화를 대체할 수 없습니다. #PasswordDigest의 주요 목표는 재생 공격을 방지하는 데 있습니다. WCF 인증 모드에서는 메시지 서명을 사용 하 여 재생 공격 위협은 완화 하 합니다.  
   
- B1102 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서는 UsernameToken에 대한 Nonce 및 Created 하위 요소를 생성하지 않습니다.  
+ B1102 WCF 하지는 usernametoken Nonce 및 Created 하위 요소를 내보냅니다.  
   
- 이러한 하위 요소는 재생 검색을 돕기 위한 것입니다. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서는 메시지 서명을 대신 사용합니다.  
+ 이러한 하위 요소는 재생 검색을 돕기 위한 것입니다. WCF는 메시지 서명을 대신 사용 됩니다.  
   
  OASIS WSS SOAP Message Security UsernameToken Profile 1.1(UsernameToken11)에서는 암호로부터 키 파생 기능이 추가되었습니다.  
   
@@ -113,13 +103,13 @@ Web Services Security 프로토콜은 모든 기존 엔터프라이즈 메시징
  설명: 암호는 일반적으로 암호화 작업에 사용하기에 너무 약합니다.  
   
 ### <a name="12-x509-token"></a>1.2 X509 토큰  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서는 X509v3 인증서를 자격 증명 형식으로 지원하고 X509TokenProfile1.0 및 X509TokenProfile1.1을 따르며 다음과 같은 제약 조건을 적용합니다.  
+ WCF는에서는 X509v3 인증서를 자격 증명 형식 지원를 다음과 같은 제약 조건이 있는 X509TokenProfile1.0 및 X509TokenProfile1.1 따라가는입니다.  
   
  R1201 BinarySecurityToken 요소의 ValueType 특성은 X509v3 인증서를 포함할 경우 #X509v3 값이 있어야 합니다.  
   
- 또한 WSS X509 Token Profile 1.0 및 1.1은 #X509PKIPathv1 및 #PKCS7을 값 형식으로 정의합니다. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서는 이러한 형식을 지원하지 않습니다.  
+ 또한 WSS X509 Token Profile 1.0 및 1.1은 #X509PKIPathv1 및 #PKCS7을 값 형식으로 정의합니다. WCF에는 이러한 형식을 지원 하지 않습니다.  
   
- R1202 SKI(SubjectKeyIdentifier) 확장이 X509 인증서에 있으면 토큰에 대한 외부 참조로 wsse:KeyIdentifier를 사용해야 합니다. 이 때 ValueType 특성은 #X509SubjectKeyIdentifier이고 해당 내용에 base64 인코딩된 인증서 SKI 확장 값이 있어야 합니다.  
+ R1202 SKI(SubjectKeyIdentifier) 확장이 X509 인증서에 있으면 토큰에 대한 외부 참조로 wsse:KeyIdentifier를 사용해야 합니다. 이 때 ValueType 특성은 #X509SubjectKeyIdentifier이고 해당 내용에 base64 인코딩된 인증서 SKI 확장명 값이 있어야 합니다.  
   
  SKI 참조는 널리 구현되고 있으며 상호 운용성이 높은 외부 참조 형식으로 인정받고 있습니다.  
   
@@ -127,37 +117,37 @@ Web Services Security 프로토콜은 모든 기존 엔터프라이즈 메시징
   
  R1204 X509TokenProfile1.1이 사용 중인 경우 X509 보안 토큰에 대한 외부 참조에는 WS-Security 1.1을 통해 추가된 지문을 사용해야 합니다.  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서는 X509IssuerSerial을 지원합니다. 그러나 X509IssuerSerial과의 상호 운용성 문제가 있습니다. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서는 문자열을 사용하여 X509IssuerSerial의 두 값을 비교합니다. 따라서 주체 이름 구성 요소를 다시 정렬하고 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 서비스에 인증서에 대한 참조를 보낼 경우 참조를 찾지 못할 수도 있습니다.  
+ WCF는에서는 X509IssuerSerial을 지원 합니다. 그러나 X509IssuerSerial와 상호 운용성 문제는: WCF 문자열로 사용 하 여 X509IssuerSerial의 두 값을 비교 합니다. 따라서 주체 이름 구성 요소를 다시 정렬 하 고 인증서에 대 한 참조를 WCF 서비스에 보내는, 하는 경우이 없을 수 있습니다.  
   
 ### <a name="13-kerberos-token"></a>1.3 Kerberos 토큰  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서는 Windows 인증을 위한 KerberosTokenProfile1.1을 지원하며 다음과 같은 제약 조건을 적용합니다.  
+ WCF에서는 다음과 같은 제약 조건으로 Windows 인증을 위해 KerberosTokenProfile1.1를 지원합니다.  
   
  R1301 Kerberos Token은 GSS_API 및 Kerberos 사양에 정의된 GSS 래핑된 Kerberos v4 AP_REQ 값을 사용하고, 값이 #GSS_Kerberosv5_AP_REQ인 ValueType 특성이 있어야 합니다.  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서는 bare AP-REQ가 아니라 GSS 래핑된 Kerberos AP-REQ를 사용합니다. 이는 최선의 보안 방법입니다.  
+ WCF에서는 GSS 래핑된 Kerberos AP-REQ를 하지는 완전 AP-요구 사항 이는 최선의 보안 방법입니다.  
   
 ### <a name="14-saml-v11-token"></a>1.4 SAML v1.1 토큰  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서는 SAML v1.1 토큰용 WSS SAML Token profiles 1.0 및 1.1을 지원합니다. 또한 다른 버전의 SAML 토큰 형식을 구현할 수 있습니다.  
+ WCF는 SAML v1.1 토큰 용 WSS SAML Token profiles 1.0 및 1.1을 지원합니다. 또한 다른 버전의 SAML 토큰 형식을 구현할 수 있습니다.  
   
 ### <a name="15-security-context-token"></a>1.5 보안 컨텍스트 토큰  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서는 SCT(보안 컨텍스트 토큰)가 WS-SecureCoversation에 추가되었습니다. SCT는 아래에 설명하는 이진 협상 프로토콜 TLS 및 SSPI를 비롯하여 SecureConversation에 설정된 보안 컨텍스트를 나타내는 데 사용됩니다.  
+ WCF 보안 컨텍스트 토큰 (SCT) Ws-securecoversation에 도입 된 지원 합니다. SCT는 아래에 설명하는 이진 협상 프로토콜 TLS 및 SSPI를 비롯하여 SecureConversation에 설정된 보안 컨텍스트를 나타내는 데 사용됩니다.  
   
 ## <a name="2-common-message-security-parameters"></a>2. 일반 메시지 보안 매개 변수  
   
 ### <a name="21-timestamp"></a>2.1 타임스탬프  
- 타임스탬프 표시 여부는 <xref:System.ServiceModel.Channels.SecurityBindingElement.IncludeTimestamp%2A> 클래스의 <xref:System.ServiceModel.Channels.SecurityBindingElement> 속성을 사용하여 제어합니다. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서는 wsse:Created 및 wsse:Expires 필드를 사용하여 wsse:TimeStamp를 항상 serialize합니다. wsse:TimeStamp는 서명이 사용될 경우 항상 서명됩니다.  
+ 타임스탬프 표시 여부는 <xref:System.ServiceModel.Channels.SecurityBindingElement.IncludeTimestamp%2A> 클래스의 <xref:System.ServiceModel.Channels.SecurityBindingElement> 속성을 사용하여 제어합니다. WCF에서는 wsse와 wsse: timestamp를 항상 serialize: 생성 및 wsse: Expires 필드입니다. wsse:TimeStamp는 서명이 사용될 경우 항상 서명됩니다.  
   
 ### <a name="22-protection-order"></a>2.2 보호 순서  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서는 "암호화 전 서명" 및 "서명 전 암호화"(Security Policy 1.1)의 두 가지 메시지 보호 순서를 지원합니다. WS-Security 1.1 서명 확인 메커니즘을 사용하지 않을 경우 서명 전 암호화로 보호된 메시지는 서명 대체 공격에 취약하고, 암호화된 내용에 대한 서명으로 인해 감사를 수행하기 더 어려워지므로 "암호화 전 서명"을 사용하는 것이 좋습니다.  
+ WCF는 메시지 보호 순서가 "서명한 하기 전에 암호화" 및 "서명 전 암호화" (Security Policy 1.1)을 지원합니다. WS-Security 1.1 서명 확인 메커니즘을 사용하지 않을 경우 서명 전 암호화로 보호된 메시지는 서명 대체 공격에 취약하고, 암호화된 내용에 대한 서명으로 인해 감사를 수행하기 더 어려워지므로 "암호화 전 서명"을 사용하는 것이 좋습니다.  
   
 ### <a name="23-signature-protection"></a>2.3 서명 보호  
  서명 전 암호화를 사용할 경우, 특히 사용자 지정 토큰을 weak 키 자료와 함께 사용하는 경우에는 암호화된 내용이나 서명 키를 추측하기 위한 무차별 키 대입 공격을 방지해 서명을 보호하는 것이 좋습니다.  
   
 ### <a name="24-algorithm-suite"></a>2.4 알고리즘 모음  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서는 Security Policy 1.1에 나열된 모든 알고리즘 모음을 지원합니다.  
+ WCF는 Security Policy 1.1에 나열 된 모든 알고리즘 모음을 지원 합니다.  
   
 ### <a name="25-key-derivation"></a>2.5 키 파생  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서는 WS-SecureConversation에서 설명된 대로 "대칭 키에 대한 키 파생"을 사용합니다.  
+ WCF는 Ws-secureconversation에 설명 된 대로 "대칭 키에 대 한 키 파생"을 사용 합니다.  
   
 ### <a name="26-signature-confirmation"></a>2.6 서명 확인  
  서명 확인을 사용하여 중개자의 공격으로부터 서명 집합을 보호할 수 있습니다.  
@@ -172,13 +162,13 @@ Web Services Security 프로토콜은 모든 기존 엔터프라이즈 메시징
 |LaxTimestampFirst|보안 헤더의 첫 번째 항목이 wsse:Timestamp여야 한다는 점을 제외하고 Lax와 동일합니다.|  
 |LaxTimestampLast|보안 헤더의 마지막 항목이 wsse:Timestamp여야 한다는 점을 제외하고 lax와 동일합니다.|  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서는 보안 헤더 레이아웃의 네 가지 모드를 모두 지원합니다. 아래에 설명된 인증 모드에 대한 보안 헤더 구조 및 메시지 예제에서는 "Strict" 모드를 따릅니다.  
+ WCF 보안 헤더 레이아웃에 대 한 모든 4 가지 모드를 지원합니다. 아래에 설명된 인증 모드에 대한 보안 헤더 구조 및 메시지 예제에서는 "Strict" 모드를 따릅니다.  
   
 ## <a name="2-common-message-security-parameters"></a>2. 일반 메시지 보안 매개 변수  
  이 단원에서는 클라이언트와 서비스 간에 교환되는 메시지의 보안 헤더 구조를 보여 주는 예제와 함께 각 인증 모드에 대한 예제 정책을 제공합니다.  
   
 ### <a name="61-transport-protection"></a>6.1 전송 보호  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서는 보안 전송을 사용하여 메시지를 보호하는 다섯 가지 인증 모드(UserNameOverTransport, CertificateOverTransport, KerberosOverTransport, IssuedTokenOverTransport, SspiNegotiatedOverTransport)를 제공합니다.  
+ WCF 보안 전송을 사용 하 여; 메시지를 보호 하는 다섯 가지 인증 모드를 제공 합니다. UserNameOverTransport, CertificateOverTransport, KerberosOverTransport, IssuedTokenOverTransport 및 SspiNegotiatedOverTransport 합니다.  
   
  이러한 인증 모드는 SecurityPolicy에 설명된 전송 바인딩을 사용하여 구성됩니다. UserNameOverTransport 인증 모드의 경우 UsernameToken이 서명된 지원 토큰입니다. 다른 인증 모드의 경우 토큰이 서명된 보증 토큰으로 표시됩니다. 보안 헤더 레이아웃에 대해서는 SecurityPolicy의 부록 C.1.2 및 C.1.3에서 자세히 설명합니다. 다음 예제 보안 헤더에서는 지정된 인증 모드에 대한 Strict 레이아웃을 보여 줍니다.  
   
@@ -560,7 +550,7 @@ Namespace='http://www.w3.org/2005/08/addressing' />
 ```  
   
 #### <a name="615-sspinegotiatedovertransport"></a>6.1.5 SspiNegotiatedOverTransport  
- 이 모드에서는 협상 프로토콜을 사용하여 클라이언트 및 서버 인증을 수행합니다. 가능하면 Kerberos를 사용하고, 그렇지 않으면 NTLM을 사용합니다. 결과 SCT는 항상 개시자로부터 수신자로 전송되는 보증 지원 토큰으로 SOAP 계층에 표시됩니다. 서비스는 전송 계층에서 X.509 인증서를 사용하여 추가 인증됩니다. 사용되는 바인딩은 전송 바인딩입니다. "SPNEGO"(협상)에서는 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]가 WS-Trust와 함께 SSPI 이진 협상 프로토콜을 사용하는 방법에 대해 설명합니다. 이 단원의 보안 헤더 예제는 SPNEGO 핸드셰이크를 통해 SCT를 설정한 경우의 보안 헤더입니다.  
+ 이 모드에서는 협상 프로토콜을 사용하여 클라이언트 및 서버 인증을 수행합니다. 가능하면 Kerberos를 사용하고, 그렇지 않으면 NTLM을 사용합니다. 결과 SCT는 항상 개시자로부터 수신자로 전송되는 보증 지원 토큰으로 SOAP 계층에 표시됩니다. 서비스는 전송 계층에서 X.509 인증서를 사용하여 추가 인증됩니다. 사용되는 바인딩은 전송 바인딩입니다. "SPNEGO" (협상) WCF Ws-trust와 함께 SSPI 이진 협상 프로토콜을 사용 하는 방법을 설명 합니다. 이 단원의 보안 헤더 예제는 SPNEGO 핸드셰이크를 통해 SCT를 설정한 경우의 보안 헤더입니다.  
   
  정책  
   

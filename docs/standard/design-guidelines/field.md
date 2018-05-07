@@ -1,30 +1,19 @@
 ---
 title: 필드 디자인
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - fields, design guidelines
 - read-only fields
 - member design guidelines, fields
 ms.assetid: 7cb4b0f3-7a10-4c93-b84d-733f7134fcf8
-caps.latest.revision: 10
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 102c52a125c3f34dc027d01eecd24f13613e20c6
-ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
+ms.openlocfilehash: 2d47934c3fed17f75a97ef5da0397c6ceba53d68
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="field-design"></a>필드 디자인
 캡슐화의 원칙 개체 지향 디자인에서 가장 중요 한 개념 중 하나를입니다. 이 규칙에 따르면 개체 내부에 저장 된 데이터를 해당 개체에만 액세스할 수 여야 합니다.  

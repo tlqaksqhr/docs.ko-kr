@@ -1,13 +1,6 @@
 ---
-title: "연결된 이벤트 개요"
-ms.custom: 
+title: 연결된 이벤트 개요
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -19,16 +12,11 @@ helpviewer_keywords:
 - backing attached events with routed events [WPF]
 - attached events [WPF], definition
 ms.assetid: 2c40eae3-80e4-4a45-ae09-df6c9ab4d91e
-caps.latest.revision: "11"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: fcfe0d97b86a27859d79685e035d8f3f765a965b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ae6d426d671c8bf034ebd86e768352914585d969
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="attached-events-overview"></a>연결된 이벤트 개요
 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]은 *연결된 이벤트*라는 이벤트의 유형 및 언어 구성 요소를 정의합니다. 연결된 이벤트의 개념을 사용하면 실제로 정의하거나 이벤트를 상속하는 요소가 아닌 임의의 요소에 특정 이벤트의 핸들러를 추가할 수 있습니다. 이 경우 이벤트를 잠재적으로 발생시키는 개체나 인스턴스를 처리하는 대상이 정의하지 않으며 또는 그렇지 않으면 이벤트를 "소유"합니다.  
@@ -36,7 +24,7 @@ ms.lasthandoff: 12/22/2017
  
   
 <a name="prerequisites"></a>   
-## <a name="prerequisites"></a>필수 구성 요소  
+## <a name="prerequisites"></a>전제 조건  
  이 항목에서는 [라우트된 이벤트 개요](../../../../docs/framework/wpf/advanced/routed-events-overview.md) 및 [XAML 개요(WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)를 읽었다고 가정합니다.  
   
 <a name="Syntax"></a>   

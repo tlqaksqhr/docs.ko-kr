@@ -1,11 +1,6 @@
 ---
-title: "\\ 연산자(Visual Basic)"
+title: '\ 연산자(Visual Basic)'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.\
 - '\'
@@ -22,14 +17,11 @@ helpviewer_keywords:
 - quotients, integer
 - truncation [Visual Basic], integer division
 ms.assetid: 4b0ee347-950c-45c9-8e23-54bc85df208e
-caps.latest.revision: "17"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 38718b109b4b3865238267039908ea1d51d06229
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: ef3946e871e1dc248b54932e16f6cae6026da08e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="-operator-visual-basic"></a>\ 연산자(Visual Basic)
 두 숫자를 나누고 정수 결과 반환 합니다.  
@@ -42,10 +34,10 @@ expression1 \ expression2
   
 ## <a name="parts"></a>요소  
  `expression1`  
- 필수 요소. 임의의 숫자 식입니다.  
+ 필수. 임의의 숫자 식입니다.  
   
  `expression2`  
- 필수 요소. 임의의 숫자 식입니다.  
+ 필수. 임의의 숫자 식입니다.  
   
 ## <a name="supported-types"></a>지원 형식  
  부호 없는 및 부동 소수점 형식을 포함 한 모든 숫자 형식 및 `Decimal`합니다.  

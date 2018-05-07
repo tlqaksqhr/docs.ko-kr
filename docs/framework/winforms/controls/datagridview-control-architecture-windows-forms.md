@@ -1,28 +1,14 @@
 ---
-title: "DataGridView 컨트롤 아키텍처(Windows Forms)"
-ms.custom: 
+title: DataGridView 컨트롤 아키텍처(Windows Forms)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - DataGridView control [Windows Forms], architecture
 ms.assetid: 1c6cabf0-02ee-4bbc-9574-b54bb7f5b19e
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 3b3e51b87cdd766adcc10aa3f682647b28fbbe4d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: a9fc1707b1691266d1844c411a08e7e8f35514ce
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="datagridview-control-architecture-windows-forms"></a>DataGridView 컨트롤 아키텍처(Windows Forms)
 <xref:System.Windows.Forms.DataGridView> 컨트롤과 관련 된 클래스는 테이블 형식 데이터 표시 및 편집에 대 한 유연 하 고 확장 가능한 시스템 하도록 설계 되었습니다. 이러한 클래스에 포함 된 모든는 <xref:System.Windows.Forms?displayProperty=nameWithType> 네임 스페이스 및 이러한 라는 "DataGridView" 접두사와 함께 합니다.  
@@ -67,9 +53,9 @@ DataGridViewElement 개체 모델
  ![DataGridViewCell 개체 모델](../../../../docs/framework/winforms/controls/media/datagridviewcell.gif "DataGridViewCell")  
 DataGridViewCell 개체 모델  
   
- <xref:System.Windows.Forms.DataGridViewCell> 유형 모든 셀 형식에서 파생 된 추상 기본 클래스입니다. <xref:System.Windows.Forms.DataGridViewCell>및 Windows Forms 컨트롤, 하지만 일부 호스트 Windows Forms 컨트롤 파생된 형식의 되지 않습니다. 셀에서 지원 되는 모든 편집 기능은 호스팅된 컨트롤에서 일반적으로 처리 됩니다.  
+ <xref:System.Windows.Forms.DataGridViewCell> 유형 모든 셀 형식에서 파생 된 추상 기본 클래스입니다. <xref:System.Windows.Forms.DataGridViewCell> 및 Windows Forms 컨트롤, 하지만 일부 호스트 Windows Forms 컨트롤 파생된 형식의 되지 않습니다. 셀에서 지원 되는 모든 편집 기능은 호스팅된 컨트롤에서 일반적으로 처리 됩니다.  
   
- <xref:System.Windows.Forms.DataGridViewCell>개체 제어 하지 않을 자신의 모양 및 그리기 기능 같은 방식으로 Windows Forms 제어 합니다. 대신,는 <xref:System.Windows.Forms.DataGridView> 의 모양에 대 한 책임이 해당 <xref:System.Windows.Forms.DataGridViewCell> 개체입니다. 상호 작용 하 여 모양 및 동작 셀를 크게 저하 될 수는 <xref:System.Windows.Forms.DataGridView> 컨트롤의 속성 및 이벤트입니다. 기능을 초과 하는 사용자 지정에 대 한 특별 한 요구 사항이 있는 경우는 <xref:System.Windows.Forms.DataGridView> 컨트롤에서 파생 되는 고유한 클래스를 구현할 수 있습니다 <xref:System.Windows.Forms.DataGridViewCell> 또는 그 자식 클래스 중 하나입니다.  
+ <xref:System.Windows.Forms.DataGridViewCell> 개체 제어 하지 않을 자신의 모양 및 그리기 기능 같은 방식으로 Windows Forms 제어 합니다. 대신,는 <xref:System.Windows.Forms.DataGridView> 의 모양에 대 한 책임이 해당 <xref:System.Windows.Forms.DataGridViewCell> 개체입니다. 상호 작용 하 여 모양 및 동작 셀를 크게 저하 될 수는 <xref:System.Windows.Forms.DataGridView> 컨트롤의 속성 및 이벤트입니다. 기능을 초과 하는 사용자 지정에 대 한 특별 한 요구 사항이 있는 경우는 <xref:System.Windows.Forms.DataGridView> 컨트롤에서 파생 되는 고유한 클래스를 구현할 수 있습니다 <xref:System.Windows.Forms.DataGridViewCell> 또는 그 자식 클래스 중 하나입니다.  
   
  다음 목록에서 파생 된 클래스를 보여 줍니다. <xref:System.Windows.Forms.DataGridViewCell>:  
   

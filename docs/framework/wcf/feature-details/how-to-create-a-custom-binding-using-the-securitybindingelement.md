@@ -1,40 +1,28 @@
 ---
 title: '방법: SecurityBindingElement를 사용하여 사용자 지정 바인딩 만들기'
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - security [WCF], creating custom bindings
 ms.assetid: 203a9f9e-3a73-427c-87aa-721c56265b29
-caps.latest.revision: 19
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload:
-- dotnet
-ms.openlocfilehash: 80fd6163db1b7b168be4e19b01c8eb9f15865f04
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 1e288daeb717fa9fa041d552cac4ec5d0cd28808
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-a-custom-binding-using-the-securitybindingelement"></a>방법: SecurityBindingElement를 사용하여 사용자 지정 바인딩 만들기
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]에는 구성할 수 있지만 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서 지원하는 모든 보안 옵션을 구성할 때 완벽한 유연성을 제공하지는 않는 여러 시스템 제공 바인딩이 포함되어 있습니다. 이 항목에서는 개별 바인딩 요소에서 직접 사용자 지정 바인딩을 만드는 방법에 대해 설명하고, 이와 같은 바인딩을 만들 때 지정할 수 있는 일부 보안 설정에 대해 강조합니다. 사용자 지정 바인딩 만들기에 대 한 자세한 내용은 참조 [바인딩 확장](../../../../docs/framework/wcf/extending/extending-bindings.md)합니다.  
+Windows Communication Foundation (WCF) 구성할 수 있지만 WCF에서 지 원하는 모든 보안 옵션을 구성할 때 완벽 한 유연성을 제공 하지 않는 여러 시스템 제공 바인딩이 포함 되어 있습니다. 이 항목에서는 개별 바인딩 요소에서 직접 사용자 지정 바인딩을 만드는 방법에 대해 설명하고, 이와 같은 바인딩을 만들 때 지정할 수 있는 일부 보안 설정에 대해 강조합니다. 사용자 지정 바인딩 만들기에 대 한 자세한 내용은 참조 [바인딩 확장](../../../../docs/framework/wcf/extending/extending-bindings.md)합니다.  
   
 > [!WARNING]
 >  <xref:System.ServiceModel.Channels.SecurityBindingElement>는 <xref:System.ServiceModel.Channels.IDuplexSessionChannel>가 <xref:System.ServiceModel.TransferMode>로 설정된 경우 TCP 전송에서 사용하는 기본 채널 셰이프인 <xref:System.ServiceModel.TransferMode.Buffered> 채널 셰이프를 지원하지 않습니다. 이 시나리오에서 <xref:System.ServiceModel.TransferMode>를 사용하려면 <xref:System.ServiceModel.TransferMode.Streamed>를 <xref:System.ServiceModel.Channels.SecurityBindingElement>으로 설정해야 합니다.  
   
 ## <a name="creating-a-custom-binding"></a>사용자 지정 바인딩 만들기  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 모든 바인딩에 이루어져 *바인딩 요소의*합니다. 각 바인딩 요소는 <xref:System.ServiceModel.Channels.BindingElement> 클래스에서 파생됩니다. 표준 시스템 제공 바인딩의 경우 바인딩 요소가 자동으로 생성되어 구성되지만 일부 속성 설정을 사용자 지정할 수 있습니다.  
+ WCF에서 모든 바인딩에 이루어져 *바인딩 요소의*합니다. 각 바인딩 요소는 <xref:System.ServiceModel.Channels.BindingElement> 클래스에서 파생됩니다. 표준 시스템 제공 바인딩의 경우 바인딩 요소가 자동으로 생성되어 구성되지만 일부 속성 설정을 사용자 지정할 수 있습니다.  
   
  이와 달리 사용자 지정 바인딩을 만들려면 바인딩 요소를 만들어 구성하고 바인딩 요소에서 <xref:System.ServiceModel.Channels.CustomBinding>을 만들어야 합니다.  
   

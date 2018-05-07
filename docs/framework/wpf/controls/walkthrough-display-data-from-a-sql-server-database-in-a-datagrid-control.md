@@ -1,13 +1,6 @@
 ---
-title: "연습: DataGrid 컨트롤에서 SQL Server 데이터베이스의 데이터 표시"
-ms.custom: 
+title: '연습: DataGrid 컨트롤에서 SQL Server 데이터베이스의 데이터 표시'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -15,21 +8,16 @@ helpviewer_keywords:
 - DataGrid [WPF], displaying data from SQL Server
 - controls [WPF], DataGrid
 ms.assetid: 6810b048-0a23-4f86-bfa5-97f92b3cfab4
-caps.latest.revision: "13"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 0397206a05ef47a7fc9b130fbd13fa19a0d766fa
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 230d2c6843f9ae80126d9d0a2c949982aae24c76
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="walkthrough-display-data-from-a-sql-server-database-in-a-datagrid-control"></a>연습: DataGrid 컨트롤에서 SQL Server 데이터베이스의 데이터 표시
 이 연습에서는 SQL Server 데이터베이스에서 데이터를 검색 하 고이 해당 데이터를 표시할는 <xref:System.Windows.Controls.DataGrid> 제어 합니다. ADO.NET Entity Framework를 사용 하 여 엔터티 클래스에서 지정된 된 데이터를 검색 하는 쿼리를 작성 하려면 LINQ를 사용 하 여 데이터를 나타내는 엔터티 클래스를 만듭니다.  
   
-## <a name="prerequisites"></a>필수 구성 요소  
+## <a name="prerequisites"></a>전제 조건  
  이 연습을 완료하려면 다음 구성 요소가 필요합니다.  
   
 -   [!INCLUDE[vs_dev11_long](../../../../includes/vs-dev11-long-md.md)].  

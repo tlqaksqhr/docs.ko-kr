@@ -1,17 +1,12 @@
 ---
 title: 'F # 시작'
 description: 'F # 언어.net에서 프로그래밍을 시작 하는 방법을 알아봅니다.'
-author: cartermp
-ms.author: phcart
 ms.date: 09/06/2016
-ms.topic: conceptual
-ms.prod: dotnet-fsharp
-ms.devlang: fsharp
-ms.openlocfilehash: 6aebe56ef942b8341b172227684f12dc029bf7d9
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 6c419ce8f05096566012b7b6a0b8601350c938a8
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="getting-started-with-f"></a>F # 시작 #
 

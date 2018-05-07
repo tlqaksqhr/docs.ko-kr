@@ -1,12 +1,6 @@
 ---
 title: Imports 문(XML 네임스페이스)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.ImportsXmlns
 helpviewer_keywords:
@@ -15,14 +9,11 @@ helpviewer_keywords:
 - Imports statement [Visual Basic]
 - namespaces [Visual Basic], importing
 ms.assetid: 1f4d50a6-08c7-4c2e-8206-ccae35fcd1b4
-caps.latest.revision: 18
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: a0fe6d37c58ead94f2c03736318209abb67cd6dc
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: ba7475416d8a4e2eb3c892d457c03eeb695045eb
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="imports-statement-xml-namespace"></a>Imports 문(XML 네임스페이스)
 XML 리터럴과 XML 축 속성에서 사용 하기 위해 XML 네임 스페이스 접두사를 가져옵니다.  
@@ -38,7 +29,7 @@ Imports <xmlns:xmlNamespacePrefix = "xmlNamespaceName">
  선택 사항입니다. XML 특성과 해당 요소를 참조할 수는 문자열 `xmlNamespaceName`합니다. 하지 않으면 `xmlNamespacePrefix` 은 가져온된 XML 네임 스페이스는 기본 XML 네임 스페이스는 제공 합니다. 유효한 XML 식별자 여야 합니다. 자세한 내용은 참조 [이름을의 선언 된 XML 요소 및 특성](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md)합니다.  
   
  `xmlNamespaceName`  
- 필수 요소. 가져온 XML 네임 스페이스를 식별 하는 문자열입니다.  
+ 필수. 가져온 XML 네임 스페이스를 식별 하는 문자열입니다.  
   
 ## <a name="remarks"></a>설명  
  사용할 수는 `Imports` XML 리터럴과 XML 축 속성 또는에 전달 된 매개 변수로 사용할 수 있는 전역 XML 네임 스페이스를 정의 하는 문에 `GetXmlNamespace` 연산자. (사용 하는 방법에 대 한 정보에 대 한는 `Imports` 코드에서 형식 이름이 사용 되는 위치에 사용할 수 있는 별칭을 가져오려는 문을 참조 [Imports 문 (.NET Namespace 및 형식)](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md).) 사용 하 여 XML 네임 스페이스를 선언 하기 위한 구문에서 `Imports` 문을 XML에서 사용 하는 구문과 동일 합니다. 따라서 네임 스페이스 선언을 XML 파일에서 복사한에서 사용 하 여 프로그램 `Imports` 문.  

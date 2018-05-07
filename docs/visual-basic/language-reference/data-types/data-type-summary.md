@@ -1,10 +1,6 @@
 ---
-title: "데이터 형식 요약(Visual Basic)"
+title: 데이터 형식 요약(Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - Boolean data type [Visual Basic], supported types in Visual Basic
 - storage [Visual Basic], order of storage
@@ -41,14 +37,11 @@ helpviewer_keywords:
 - storage order, controlling in Visual Basic
 - data types [Visual Basic], memory requirements
 ms.assetid: e975cdb6-64d8-4a4a-ae27-f3b3ed198ae0
-caps.latest.revision: "22"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: f69a112718eed7bb7baaff9bdffd110865c21081
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 8afeba3f88c4bfe6e1c9777f950c3b458665e340
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="data-type-summary-visual-basic"></a>데이터 형식 요약(Visual Basic)
 다음 표에서 Visual Basic 데이터 형식, 해당 지 원하는 공용 언어 런타임 형식, 일반 저장소 할당, 및 해당 값 범위를 보여 줍니다.  
@@ -63,11 +56,11 @@ ms.lasthandoff: 11/21/2017
 |[이중](../../../visual-basic/language-reference/data-types/double-data-type.md) (배정밀도 부동 소수점)|<xref:System.Double>|8바이트|-1.79769313486231570 e + 308에서-4.94065645841246544E-324 <sup>†</sup> 음수 값입니다.<br /><br /> 4.94065645841246544E-324 1.79769313486231570 e + 308 <sup>†</sup> 양수 값|  
 |[Integer](../../../visual-basic/language-reference/data-types/integer-data-type.md)|<xref:System.Int32>|4바이트|-2147483648 ~ 2147483647 (부호 있음)|  
 |[긴](../../../visual-basic/language-reference/data-types/long-data-type.md) (long 정수)|<xref:System.Int64>|8바이트|-9223372036854775808에서 9223372036854775807 (9.2... E + 18 <sup>†</sup>) (부호 있음)|  
-|[개체](../../../visual-basic/language-reference/data-types/object-data-type.md)|<xref:System.Object>(클래스)|32 비트 플랫폼에서 4 바이트<br /><br /> 64 비트 플랫폼에서 8 바이트|형식의 변수에 저장할 수 있는 모든 유형에`Object`|  
+|[개체](../../../visual-basic/language-reference/data-types/object-data-type.md)|<xref:System.Object> (클래스)|32 비트 플랫폼에서 4 바이트<br /><br /> 64 비트 플랫폼에서 8 바이트|형식의 변수에 저장할 수 있는 모든 유형에 `Object`|  
 |[SByte](../../../visual-basic/language-reference/data-types/sbyte-data-type.md)|<xref:System.SByte>|1바이트|-128에서 127 (부호 있음)를 통해|  
 |[짧은](../../../visual-basic/language-reference/data-types/short-data-type.md) (short 정수)|<xref:System.Int16>|2바이트|-32, 768 32, 767 (부호 있음)|  
 |[단일](../../../visual-basic/language-reference/data-types/single-data-type.md) (단 정밀도 부동 소수점)|<xref:System.Single>|4바이트|-3.4028235 e + 38에서-1.401298 e-45 <sup>†</sup> 음수 값입니다.<br /><br /> 1.401298 e-45 3.4028235 e + 38 <sup>†</sup> 양수 값|  
-|[문자열](../../../visual-basic/language-reference/data-types/string-data-type.md) (가변 길이)|<xref:System.String>(클래스)|구현 하는 플랫폼에 따라 달라 집니다.|0 ~ 약 2 십억 유니코드 문자입니다.|  
+|[문자열](../../../visual-basic/language-reference/data-types/string-data-type.md) (가변 길이)|<xref:System.String> (클래스)|구현 하는 플랫폼에 따라 달라 집니다.|0 ~ 약 2 십억 유니코드 문자입니다.|  
 |[UInteger](../../../visual-basic/language-reference/data-types/uinteger-data-type.md)|<xref:System.UInt32>|4바이트|0 ~ 4294967295 (부호 없음)|  
 |[ULong](../../../visual-basic/language-reference/data-types/ulong-data-type.md)|<xref:System.UInt64>|8바이트|0에서 18446744073709551615 (1.8 … E + 19 <sup>†</sup>) (부호 없음)|  
 |[사용자 정의](../../../visual-basic/language-reference/data-types/user-defined-data-type.md) (구조)|(에서 상속 <xref:System.ValueType>)|구현 하는 플랫폼에 따라 달라 집니다.|구조체의 각 구성원에 게 해당 데이터 형식, 그리고 다른 멤버의 범위와 무관 결정 범위|  

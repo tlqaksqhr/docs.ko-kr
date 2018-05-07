@@ -1,33 +1,19 @@
 ---
 title: ETW를 사용한 분석 추적
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - diagnostics [WCF], analytic tracing
 - administration [WCF], analytic tracing
 - analytic tracing [WCF]
 ms.assetid: 1d518e47-a38d-41e8-93d7-8c3b361f6a56
-caps.latest.revision: 6
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: a16f66ed8443749764e66d2616ae566ad788d571
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: a0e3e3d27283e588b161e2209c5a682558d18f79
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="analytic-tracing-with-etw"></a>ETW를 사용한 분석 추적
-[!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] 분석 추적을 사용하면 [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 서비스를 실행하는 동안 진단 정보를 캡처할 수 있습니다. 프로덕션 환경에서 [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 서비스 문제를 해결할 수 있도록 [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 스택의 주요 시점에[!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 분석 추적 이벤트를 내보냅니다. 분석 추적은 [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 서비스에 미치는 영향을 최소화는 프로덕션 서버의 성능에 호스팅하는 [!INCLUDE[netfx_current_long](../../../../../includes/netfx-current-long-md.md)] [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 매우 효율적으로 내보내지므로 이벤트 추적에 대 한 ETW (Windows) 세션에 따라 서비스입니다.  
+Windows Communication Foundation (WCF) 분석 추적 하는 실행 하는 동안 진단 정보를 캡처할 수는 [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 서비스입니다. 프로덕션 환경에서 [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 서비스 문제를 해결할 수 있도록 [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 스택의 주요 시점에[!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 분석 추적 이벤트를 내보냅니다. 분석 추적은 [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 서비스에 미치는 영향을 최소화는 프로덕션 서버의 성능에 호스팅하는 [!INCLUDE[netfx_current_long](../../../../../includes/netfx-current-long-md.md)] [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 매우 효율적으로 내보내지므로 이벤트 추적에 대 한 ETW (Windows) 세션에 따라 서비스입니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
  [분석 추적 개요](../../../../../docs/framework/wcf/diagnostics/etw/analytic-tracing-overview.md)  

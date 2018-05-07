@@ -1,23 +1,12 @@
 ---
-title: "방법: 비지속성 인스턴스 쿼리"
-ms.custom: 
+title: '방법: 비지속성 인스턴스 쿼리'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 294019b1-c1a7-4b81-a14f-b47c106cd723
-caps.latest.revision: "5"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: bde3ab1049edf6cb52a221225321f1e505a2491b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 000342013be4380e1a038fb8233050523f6bc758
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-query-for-non-persisted-instances"></a>방법: 비지속성 인스턴스 쿼리
 서비스의 새 인스턴스가 만들어지고 이 서비스에 SQL 워크플로 인스턴스 저장소 동작이 정의되는 경우, 서비스 호스트에서는 인스턴스 저장소에 해당 서비스 인스턴스에 대한 초기 항목을 만듭니다. 이후에 서비스 인스턴스가 처음으로 저장되면 SQL 워크플로 인스턴스 저장소 동작은 활성화, 복구 및 제어에 필요한 추가 데이터와 함께 현재 인스턴스 상태를 저장합니다.  

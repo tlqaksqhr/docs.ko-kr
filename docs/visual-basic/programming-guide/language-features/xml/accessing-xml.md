@@ -1,14 +1,6 @@
 ---
 title: Visual Basic에서 XML에 액세스
-ms.custom: ''
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - LINQ to XML [Visual Basic], accessing XML
 - Visual Basic code, XML
@@ -16,14 +8,11 @@ helpviewer_keywords:
 - XML [Visual Basic], axis properties
 - XML [Visual Basic], accessing
 ms.assetid: c47f88b2-3cbc-4bb1-b4b9-be60f71ffc6a
-caps.latest.revision: 18
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 064e4b224d37172b8f79e57c73164b90186ef922
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: b000b3f6846f800b2a96ce10cdd408a355f78a81
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="accessing-xml-in-visual-basic"></a>Visual Basic에서 XML에 액세스
 Visual Basic에서 XML 축 속성에 액세스 하 고 탐색 하기 위한 제공 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 구조입니다. 이러한 속성에는 XML 이름을 지정 하 여 요소 및 특성에 액세스할 수 있도록 특수 한 구문을 사용 합니다.  

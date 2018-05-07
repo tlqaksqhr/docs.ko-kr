@@ -1,13 +1,6 @@
 ---
-title: "방법: 프로그래밍 방식으로 요소를 텍스트에 삽입"
-ms.custom: 
+title: '방법: 프로그래밍 방식으로 요소를 텍스트에 삽입'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -18,21 +11,16 @@ helpviewer_keywords:
 - TextPointer objects [WPF]
 - text [WPF], inserting elements
 ms.assetid: 97bd950a-25ac-4e42-a311-94b6420d4136
-caps.latest.revision: "8"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: b200489c4b7fb06f2eb98c0ec9c84da42f18a395
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 8eaf0c6a1e3ad3c64800f8611aba555110aa4c97
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-insert-an-element-into-text-programmatically"></a>방법: 프로그래밍 방식으로 요소를 텍스트에 삽입
 다음 예제에서는 두 개를 사용 하는 방법을 보여 줍니다. <xref:System.Windows.Documents.TextPointer> 적용할 텍스트 내에서 범위를 지정 하는 개체는 <xref:System.Windows.Documents.Span> 요소입니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  [!code-csharp[FlowMiscSnippets_procedural_snip#InsertInlineIntoTextExampleWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/FlowMiscSnippets_procedural_snip/CSharp/InsertInlineIntoTextExample.cs#insertinlineintotextexamplewholepage)]
  [!code-vb[FlowMiscSnippets_procedural_snip#InsertInlineIntoTextExampleWholePage](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/FlowMiscSnippets_procedural_snip/VisualBasic/InsertInlineIntoTextExample.vb#insertinlineintotextexamplewholepage)]  
   

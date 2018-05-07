@@ -1,24 +1,12 @@
 ---
 title: 트랜잭션된 큐
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: b1b011dd-5e0b-482c-9bb0-9d8727038f14
-caps.latest.revision: 9
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 628e91589ad32a2646316401c7b2ddb31b13eace
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.openlocfilehash: b125158a113079d87eb6926393d5a2b5fe326824
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="transacted-queues"></a>트랜잭션된 큐
 이 샘플에서는 큐와 트랜잭션을의 Windows WF (Workflow Foundation)를 안정적이 고 확장 가능한 서비스를 만드는 통합 하는 방법을 보여 줍니다. A <!--zz <xref:System.Activities.TransactionScope>--> `System.Activities.TransactionScope` 클라이언트 워크플로에서 사용 하 여 트랜잭션 중인 큐로 메시지를 보내는 데 사용 된 <xref:System.ServiceModel.NetMsmqBinding>합니다. 서버에서는 큐로부터 메시지를 받고 동일한 트랜잭션을 진행 중인 워크플로의 상태를 업데이트하기 위해 <xref:System.ServiceModel.Activities.TransactedReceiveScope>를 사용합니다.  
@@ -46,6 +34,6 @@ ms.lasthandoff: 04/27/2018
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  이 디렉터리가 없으면 [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4(.NET Framework 4용 WCF(Windows Communication Foundation) 및 WF(Windows Workflow Foundation) 샘플)](http://go.microsoft.com/fwlink/?LinkId=150780) 로 이동하여 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 및 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플을 모두 다운로드하세요. 이 샘플은 다음 디렉터리에 있습니다.  
+>  이 디렉터리가로 이동 [Windows Communication Foundation (WCF) 및.NET Framework 4에 대 한 Windows WF (Workflow Foundation) 샘플](http://go.microsoft.com/fwlink/?LinkId=150780) 모든 Windows Communication Foundation (WCF)를 다운로드 하 고 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플. 이 샘플은 다음 디렉터리에 있습니다.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Scenario\Transactions\TransactedQueues`

@@ -1,23 +1,14 @@
 ---
 title: 파일이 너무 많습니다.
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vbrID67
 ms.assetid: 2ff203e2-bba6-43ae-b72f-8e92a881c98f
-caps.latest.revision: 7
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 506f0735956267d51b575cd26b628605e9db38cc
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 8a9d89cc96e5b5875d0286becbf5b20d6895ae34
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="too-many-files"></a>파일이 너무 많습니다.
 운영 체제에서 허용 더 많은 파일이 루트 디렉터리에 생성 하거나 더 많은 파일에 지정 된 숫자 보다 열린는 **파일 =** config입니다. SYS 파일입니다.  

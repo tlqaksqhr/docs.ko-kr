@@ -1,28 +1,14 @@
 ---
-title: "Windows Forms DataGridView 컨트롤의 가상 모드"
-ms.custom: 
+title: Windows Forms DataGridView 컨트롤의 가상 모드
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - DataGridView control [Windows Forms], virtual mode
 ms.assetid: feae5d43-2848-4b1a-8ea7-77085dc415b5
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 06c5bb1d4a36d51bb07d59b48c730f722af23f8c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 2e5724da4442bbfcb0928c864f78744b946acc18
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="virtual-mode-in-the-windows-forms-datagridview-control"></a>Windows Forms DataGridView 컨트롤의 가상 모드
 가상 모드 간의 상호 작용을 관리할 수 있습니다는 <xref:System.Windows.Forms.DataGridView> 제어 및 사용자 지정 데이터 캐시 합니다. 가상 모드를 구현 하려면 설정는 <xref:System.Windows.Forms.DataGridView.VirtualMode%2A> 속성을 `true` 하 고이 항목에서 설명 하는 이벤트 중 하나 이상을 처리 합니다. 일반적으로 처리 합니다 적어도 `CellValueNeeded` 데이터 캐시에서 값 조회 컨트롤 수 있도록 하는 이벤트입니다.  

@@ -1,11 +1,6 @@
 ---
-title: "Option Explicit 문(Visual Basic)"
+title: Option Explicit 문(Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.Explicit
 - vb.OptionExplicit
@@ -16,14 +11,11 @@ helpviewer_keywords:
 - explicit variable declaration
 - Option Explicit statement [Visual Basic]
 ms.assetid: e82ac1ad-2cd3-49b2-b985-8bcf016f3fcc
-caps.latest.revision: "17"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: f3d4c9cd3310e0ec3943c4e2b5e28be5b9a393db
-ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
+ms.openlocfilehash: 3a2d81b1441052c132e4739dfe6045f8c3a026d4
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="option-explicit-statement-visual-basic"></a>Option Explicit 문(Visual Basic)
 모든 변수는 파일에 명시적으로 강제 또는 암시적 선언을 변수의 허용 합니다.  
@@ -66,7 +58,7 @@ Option Explicit { On | Off }
   
 -   포함 된 [/optionexplicit](../../../visual-basic/reference/command-line-compiler/optionexplicit.md) 컴파일러 옵션에는 **vbc** 명령 합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 예제에서는 `Option Explicit` 문을 명시적으로 모든 변수 선언에 있습니다. 선언 되지 않은 변수를 사용 하려고 하면 컴파일 타임에 오류가 발생 합니다.  
   
  [!code-vb[VbVbalrStatements#47](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/option-explicit-statement_1.vb)]  

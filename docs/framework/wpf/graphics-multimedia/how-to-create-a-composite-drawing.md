@@ -1,33 +1,21 @@
 ---
-title: "방법: 합성 그리기 만들기"
-ms.custom: 
+title: '방법: 합성 그리기 만들기'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - drawings [WPF], composite
 - composite drawings [WPF]
 - graphics [WPF], composite drawings
 ms.assetid: 066eb0ab-5f0e-439d-85c6-dca60af269fc
-caps.latest.revision: "9"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 424f77b076344ad86db992614175243d1473886d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: bb222fff11c81b491c0413f174539ff0005d11b8
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-a-composite-drawing"></a>방법: 합성 그리기 만들기
 사용 하는 방법을 보여 주는이 예제는 <xref:System.Windows.Media.DrawingGroup> 다중 결합 하 여 복잡 한 드로잉을 만드는 데 <xref:System.Windows.Media.Drawing> 단일 복합 그리기 개체입니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 예제에서는 한 <xref:System.Windows.Media.DrawingGroup> 합성 그리기를 만들려는 <xref:System.Windows.Media.GeometryDrawing> 및 <xref:System.Windows.Media.ImageDrawing> 개체입니다. 다음 그림에서는 이 예제가 생성하는 출력을 보여 줍니다.  
   
  ![여러 개의 그리기가 있는 DrawingGroup](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-simple.jpg "graphicsmm_simple")  

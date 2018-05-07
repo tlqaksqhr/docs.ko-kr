@@ -1,13 +1,6 @@
 ---
-title: "GDI+에서 이미지 자르기 및 배율 조정"
-ms.custom: 
+title: GDI+에서 이미지 자르기 및 배율 조정
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -22,19 +15,14 @@ helpviewer_keywords:
 - rectangles [Windows Forms], destination
 - images [Windows Forms], compression
 ms.assetid: ad5daf26-005f-45bc-a2af-e0e97777a21a
-caps.latest.revision: "13"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 0bbe7ac4b8c541ea76392f94f538e41816cf5c3f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 84e2e74e71c13593cb013849c07a6e904a4d2c14
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cropping-and-scaling-images-in-gdi"></a>GDI+에서 이미지 자르기 및 배율 조정
-사용할 수 있습니다는 <xref:System.Drawing.Graphics.DrawImage%2A> 의 메서드는 <xref:System.Drawing.Graphics> 클래스를 그리기 및 벡터 이미지 및 래스터 이미지 위치를 지정 합니다. <xref:System.Drawing.Graphics.DrawImage%2A>오버 로드 된 메서드를 이므로 여러 가지 인수를 제공할 수 있습니다.  
+사용할 수 있습니다는 <xref:System.Drawing.Graphics.DrawImage%2A> 의 메서드는 <xref:System.Drawing.Graphics> 클래스를 그리기 및 벡터 이미지 및 래스터 이미지 위치를 지정 합니다. <xref:System.Drawing.Graphics.DrawImage%2A> 오버 로드 된 메서드를 이므로 여러 가지 인수를 제공할 수 있습니다.  
   
 ## <a name="drawimage-variations"></a>DrawImage 변형  
  한 변형 된 개체가 <xref:System.Drawing.Graphics.DrawImage%2A> 메서드 수신는 <xref:System.Drawing.Bitmap> 및 <xref:System.Drawing.Rectangle>합니다. 사각형 그리기 작업;에 대 한 대상 지정 즉, 이미지를 그릴 사각형을 지정 합니다. 대상 사각형의 크기는 원본 이미지의 크기와에서 다른 경우 대상 사각형에 맞게 이미지 배율을 조정 합니다. 다음 코드 예제에는 세 번 동일한 이미지를 그리는 방법을 보여 줍니다: 크기가와 한 번, 확장, 한 번 및를:  

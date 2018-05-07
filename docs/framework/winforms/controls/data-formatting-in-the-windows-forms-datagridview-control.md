@@ -1,28 +1,16 @@
 ---
-title: "Windows Forms DataGridView 컨트롤의 데이터 형식 지정"
-ms.custom: 
+title: Windows Forms DataGridView 컨트롤의 데이터 형식 지정
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - DataGridView control [Windows Forms], formatting data
 - data [Windows Forms], formatting in grids
 - data grids [Windows Forms], formatting data
 ms.assetid: 07bf558d-3748-42ba-8ba0-37fdef924081
-caps.latest.revision: "12"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: f6ff3452a60d9cb80a71dacd5841b120b5efbf82
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ae1947cf7c3825553837fa5f1ee288114988d28f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="data-formatting-in-the-windows-forms-datagridview-control"></a>Windows Forms DataGridView 컨트롤의 데이터 형식 지정
 <xref:System.Windows.Forms.DataGridView> 컨트롤은 셀 값과 부모 열을 표시 하는 데이터 형식 사이의 자동 변환 합니다. 예를 들어 텍스트 상자 열 날짜, 시간, 숫자 및 열거형 값의 문자열 표현을 표시 하 고 사용자가 입력 한 문자열 값을 데이터 저장소에 필요한 형식으로 변환 합니다.  

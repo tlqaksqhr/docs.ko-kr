@@ -1,29 +1,17 @@
 ---
 title: WCF의 보안 동작
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 513232c0-39fd-4409-bda6-5ebd5e0ea7b0
-caps.latest.revision: 23
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload:
-- dotnet
-ms.openlocfilehash: bb10d98eb96213029ae43533935312c6f1cf09c7
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 57bd34c72e98091c4a429d683a0da4ce2d3967c0
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="security-behaviors-in-wcf"></a>WCF의 보안 동작
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]에서 동작은 런타임 동작을 서비스 수준 또는 끝점 수준에서 수정합니다. (일반적으로 참조 동작에 대 한 자세한 내용은 [서비스 런타임 동작 지정](../../../../docs/framework/wcf/specifying-service-run-time-behavior.md).) *보안 동작* 감사 로그 및 자격 증명, 인증, 권한 부여에 대 한 제어를 허용 합니다. 프로그래밍 또는 구성을 통해 동작을 사용할 수 있습니다. 이 항목에서는 보안 기능과 관련된 다음 동작의 구성에 대해 중점적으로 설명합니다.  
+Windows Communication Foundation (WCF), 동작은 서비스 수준 또는 끝점 수준에서 런타임 동작을 수정 합니다. (일반적으로 참조 동작에 대 한 자세한 내용은 [서비스 런타임 동작 지정](../../../../docs/framework/wcf/specifying-service-run-time-behavior.md).) *보안 동작* 감사 로그 및 자격 증명, 인증, 권한 부여에 대 한 제어를 허용 합니다. 프로그래밍 또는 구성을 통해 동작을 사용할 수 있습니다. 이 항목에서는 보안 기능과 관련된 다음 동작의 구성에 대해 중점적으로 설명합니다.  
   
 -   [\<serviceCredentials >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecredentials.md)합니다.  
   
@@ -140,7 +128,7 @@ ms.lasthandoff: 04/30/2018
  기본 보안 토큰 서비스 주소를 지정합니다. 이 옵션은 사용 때는 <xref:System.ServiceModel.WSFederationHttpBinding> 페더레이션 바인딩의 발급자 주소가 때 또는 보안 토큰 서비스에 대 한 URL을 지정 하지 http://schemas.microsoft.com/2005/12/ServiceModel/Addressing/Anonymous 또는 `null`합니다. 이러한 경우 로컬 발급자의 주소와 이 발급자와 통신하는 데 사용할 바인딩을 사용하여 <xref:System.ServiceModel.Description.ClientCredentials>를 구성해야 합니다.  
   
 #### <a name="issuerchannelbehaviors"></a>\<issuerChannelBehaviors >  
- 사용 하 여는 [ \<issuerChannelBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/issuerchannelbehaviors-element.md) 추가할 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 보안 토큰 서비스와 통신할 때 사용 되는 클라이언트 동작입니다. 클라이언트 동작을 정의 [ \<endpointBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/endpointbehaviors.md) 섹션. 정의 된 동작을 사용 하려면 추가 <`add`> 요소에는 `<issuerChannelBehaviors>` 두 특성을 가진 요소입니다. 다음 예제와 같이 `issuerAddress`를 보안 토큰 서비스의 URL로 설정하고 `behaviorConfiguration` 특성을 정의된 끝점 동작 이름으로 설정합니다.  
+ 사용 하 여는 [ \<issuerChannelBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/issuerchannelbehaviors-element.md) 보안 토큰 서비스와 통신할 때 사용 되는 WCF 클라이언트 동작을 추가 합니다. 클라이언트 동작을 정의 [ \<endpointBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/endpointbehaviors.md) 섹션. 정의 된 동작을 사용 하려면 추가 <`add`> 요소에는 `<issuerChannelBehaviors>` 두 특성을 가진 요소입니다. 다음 예제와 같이 `issuerAddress`를 보안 토큰 서비스의 URL로 설정하고 `behaviorConfiguration` 특성을 정의된 끝점 동작 이름으로 설정합니다.  
   
 ```xml  
 <clientCredentials>  

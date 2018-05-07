@@ -1,28 +1,18 @@
 ---
-title: ".NET Framework 4 및 4.5에 추가된 CLR 호스팅 인터페이스"
-ms.custom: 
+title: .NET Framework 4 및 4.5에 추가된 CLR 호스팅 인터페이스
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 helpviewer_keywords:
 - hosting interfaces [.NET Framework], version 4
 - .NET Framework 4, hosting interfaces
 - interfaces [.NET Framework hosting], version 4
 ms.assetid: f6af6116-f5b0-4bda-a276-fffdba70893d
-caps.latest.revision: "26"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 61231715a24978e7fe57b2c9e87e7968dc0fdbc5
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 982f5780a40dd8cbce02ec33f7e6f77589cd3717
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="clr-hosting-interfaces-added-in-the-net-framework-4-and-45"></a>.NET Framework 4 및 4.5에 추가된 CLR 호스팅 인터페이스
 이 섹션에서는 관리 되지 않는 인터페이스를 설명 호스트에 공용 언어 런타임 (CLR)를 통합 하 사용할 수는 [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)], [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)], 응용 프로그램에 이상 버전입니다. 이러한 인터페이스는 런타임 프로세스에 로드 하기 위해 호스트에 대 한 메서드를 제공 합니다.  

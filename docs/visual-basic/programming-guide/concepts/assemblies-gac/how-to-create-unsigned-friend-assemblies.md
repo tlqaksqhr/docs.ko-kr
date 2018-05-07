@@ -1,21 +1,14 @@
 ---
 title: '방법: 서명 되지 않은 Friend 어셈블리 (Visual Basic) 만들기'
-ms.custom: ''
 ms.date: 03/14/2018
-ms.prod: .net
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 5735eb79-9729-4c46-ac1f-537ada3acaa7
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8cc71a27f24c634ebadb060325df4c602b1387b0
-ms.sourcegitcommit: 498799639937c89de777361aab74261efe7b79ea
+ms.openlocfilehash: 873a5bf235b43b4460a1489a964539c4e4c18de3
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-unsigned-friend-assemblies-visual-basic"></a>방법: 서명 되지 않은 Friend 어셈블리 (Visual Basic) 만들기
 이 예제에서는 서명되지 않은 어셈블리와 함께 friend 어셈블리를 사용하는 방법을 보여 줍니다.  

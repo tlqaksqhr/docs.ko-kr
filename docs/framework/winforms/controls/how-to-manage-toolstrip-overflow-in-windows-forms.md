@@ -1,13 +1,6 @@
 ---
-title: "방법: Windows Forms의 ToolStrip 오버플로 관리"
-ms.custom: 
+title: '방법: Windows Forms의 ToolStrip 오버플로 관리'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -17,16 +10,11 @@ helpviewer_keywords:
 - examples [Windows Forms], toolbars
 - CanOverflow property
 ms.assetid: fa10e0ad-4cbf-4c0d-9082-359c2f855d4e
-caps.latest.revision: "14"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 619c4832626693a56280c70af3ade5dbb9e9d4de
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 32bbc06320f0dc7f096a4b9021bebfbefedaf8f7
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-manage-toolstrip-overflow-in-windows-forms"></a>방법: Windows Forms의 ToolStrip 오버플로 관리
 경우에 있는 모든 항목이 <xref:System.Windows.Forms.ToolStrip> 제어 할당된 된 공간에 맞지 않는에서 오버플로 기능을 사용할 수 있습니다는 <xref:System.Windows.Forms.ToolStrip> 특정 오버플로 동작을 결정 하 고 <xref:System.Windows.Forms.ToolStripItem>s입니다.  

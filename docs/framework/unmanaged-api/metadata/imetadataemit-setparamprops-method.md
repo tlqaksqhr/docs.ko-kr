@@ -1,14 +1,6 @@
 ---
 title: IMetaDataEmit::SetParamProps 메서드
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: reference
 api_name:
 - IMetaDataEmit.SetParamProps
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: a95a3908-9f87-4084-937e-8e01ef03ad63
 topic_type:
 - apiref
-caps.latest.revision: ''
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: e8ada9deddf8528321797c1f9bd06b5b775ac4bf
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 61688ed5201a1bb6721c4db70b380c7b8373c2e8
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="imetadataemitsetparamprops-method"></a>IMetaDataEmit::SetParamProps 메서드
 변경 된 기능에 대 한 이전 호출에서 정의 된 메서드의 매개 변수를 설정 하거나 [imetadataemit:: Defineparam](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineparam-method.md)합니다.  
@@ -77,7 +65,7 @@ HRESULT SetParamProps (
   
  **라이브러리:** MSCorEE.dll에서 리소스로 사용  
   
- **.NET framework 버전:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>참고 항목  
  [IMetaDataEmit 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)  

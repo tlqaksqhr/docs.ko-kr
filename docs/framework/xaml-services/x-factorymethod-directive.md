@@ -1,28 +1,16 @@
 ---
-title: "x:FactoryMethod 지시문"
-ms.custom: 
+title: x:FactoryMethod 지시문
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - XAML. x:FactoryMethod directive [XAML Services]
 - FactoryMethod directive in XAML [XAML Services]
 - x:FactoryMethod directive [XAML Services]
 ms.assetid: 829bcbdf-5318-4afb-9a03-c310e0d2f23d
-caps.latest.revision: "8"
-author: wadepickett
-ms.author: wpickett
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 58349c5440d0062c64346933e48b64de6c4c7b60
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 75225e624abdd3dc0862a04fae409da48b3f0d1e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="xfactorymethod-directive"></a>x:FactoryMethod 지시문
 XAML 프로세서는 지원 형식 해결 한 후 개체를 초기화 하는 데 사용 해야 하는 생성자가 아닌 다른 방법을 지정 합니다.  
@@ -61,11 +49,11 @@ XAML 프로세서는 지원 형식 해결 한 후 개체를 초기화 하는 데
   
  팩터리 메서드는 관련 개체에 할당 될 수 있는 인스턴스를 반환 해야 합니다. 팩터리 메서드가 null을 반환 해야 합니다.  
   
- `x:Arguments`팩터리 메서드의 시그니처에 가장 일치 하는 원칙에서 작동합니다. 일치 하는 매개 변수 개수를 먼저 평가 됩니다. 매개 변수 개수에 대 한 가능한 일치 항목을 여러 개 있으면 계산 되 고 가장 일치 하는 다음 매개 변수 유형이입니다. 이 평가 단계 이후에 모호성도 지 XAML 프로세서 동작이 정의 되지 않습니다.  
+ `x:Arguments` 팩터리 메서드의 시그니처에 가장 일치 하는 원칙에서 작동합니다. 일치 하는 매개 변수 개수를 먼저 평가 됩니다. 매개 변수 개수에 대 한 가능한 일치 항목을 여러 개 있으면 계산 되 고 가장 일치 하는 다음 매개 변수 유형이입니다. 이 평가 단계 이후에 모호성도 지 XAML 프로세서 동작이 정의 되지 않습니다.  
   
- `x:FactoryMethod` 지시문 태그가 포함 된 개체 요소 형식을 참조 하지 않기 때문에 요소 사용이 일반적인 의미에서 속성 요소 사용 되지 않습니다. 예상 하지만 해당 요소의 사용 특성 사용 보다 일반적이 지 않습니다. `x:Arguments`(특성 또는 요소 사용)와 함께 사용할 수 있습니다 `x:FactoryMethod` 요소를 사용 하지만이 특별히에 표시 되지 않으면 Usage 섹션.  
+ `x:FactoryMethod` 지시문 태그가 포함 된 개체 요소 형식을 참조 하지 않기 때문에 요소 사용이 일반적인 의미에서 속성 요소 사용 되지 않습니다. 예상 하지만 해당 요소의 사용 특성 사용 보다 일반적이 지 않습니다. `x:Arguments` (특성 또는 요소 사용)와 함께 사용할 수 있습니다 `x:FactoryMethod` 요소를 사용 하지만이 특별히에 표시 되지 않으면 Usage 섹션.  
   
- `x:FactoryMethod`요소는 다른 속성 요소의 앞에 야, 대로 앞에 야 모든 `x:Arguments` 도 요소로 제공 되며 모든 콘텐츠/내부 텍스트/초기화 텍스트 앞에 야 합니다.  
+ `x:FactoryMethod` 요소는 다른 속성 요소의 앞에 야, 대로 앞에 야 모든 `x:Arguments` 도 요소로 제공 되며 모든 콘텐츠/내부 텍스트/초기화 텍스트 앞에 야 합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [x:Arguments 지시문](../../../docs/framework/xaml-services/x-arguments-directive.md)

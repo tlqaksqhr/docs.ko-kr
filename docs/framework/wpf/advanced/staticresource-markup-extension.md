@@ -1,13 +1,6 @@
 ---
-title: "StaticResource 태그 확장"
-ms.custom: 
+title: StaticResource 태그 확장
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 f1_keywords:
 - StaticResource
 - StaticResourceExtension
@@ -15,16 +8,11 @@ helpviewer_keywords:
 - XAML [WPF], StaticResource markup extension
 - StaticResource markup extensions [WPF]
 ms.assetid: 97af044c-71f1-4617-9a94-9064b68185d2
-caps.latest.revision: "13"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 97b83feb9d19760208d9cc103290c5c6293c30c3
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 518a85c158c9a4472689d3c236b84278114cf3ce
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="staticresource-markup-extension"></a>StaticResource 태그 확장
 에 대 한 값을 제공 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 이미 정의 된 리소스에 대 한 참조를 조회 하 여 property 특성입니다. 해당 리소스에 대 한 조회 동작은 현재 태그에서 이전에 로드 된 리소스 로드 시간 조회, 유사 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 페이지와 다른 응용 프로그램 소스 및으로 해당 리소스 값이 생성 되는 런타임 개체에서 속성 값입니다.  
@@ -64,7 +52,7 @@ ms.lasthandoff: 12/22/2017
   
  특성 구문은 이러한 태그 확장에 가장 많이 사용되는 구문입니다. `StaticResource` 식별자 문자열 다음에 나오는 문자열 토큰은 기본 <xref:System.Windows.StaticResourceExtension.ResourceKey%2A> 확장 클래스의 <xref:System.Windows.StaticResourceExtension> 값으로 할당됩니다.  
   
- `StaticResource`개체 요소 구문에서 사용할 수 있습니다. 이 경우의 값을 지정 하는 <xref:System.Windows.StaticResourceExtension.ResourceKey%2A> 속성은 필수입니다.  
+ `StaticResource` 개체 요소 구문에서 사용할 수 있습니다. 이 경우의 값을 지정 하는 <xref:System.Windows.StaticResourceExtension.ResourceKey%2A> 속성은 필수입니다.  
   
  `StaticResource` 속성을 다음과 같이 속성=값 쌍으로 지정하는 자세한 특성 사용 구문에도 <xref:System.Windows.StaticResourceExtension.ResourceKey%2A>을 사용할 수 있습니다.  
   

@@ -1,34 +1,22 @@
 ---
-title: "키 프레임 애니메이션 개요"
-ms.custom: 
+title: 키 프레임 애니메이션 개요
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - animation [WPF], key-frame
 - key frames [WPF], about key-frame animations
 - multiple animation target values [WPF]
 ms.assetid: 10028f97-bb63-41fc-b8ad-663dac7ea203
-caps.latest.revision: "29"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 38f0f6ac030af08039438b7e766c3f0f5bed7534
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 8a18e0637b0fea7a1a960b157123da10819b4687
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="key-frame-animations-overview"></a>키 프레임 애니메이션 개요
 이 항목에서는 키 프레임 애니메이션을 소개합니다. 키 프레임 애니메이션을 사용하면 두 개 이상의 대상 값을 사용하여 애니메이션 효과를 주고 애니메이션의 보간 방법을 제어할 수 있습니다.  
   
 <a name="prerequisites"></a>   
-## <a name="prerequisites"></a>필수 구성 요소  
+## <a name="prerequisites"></a>전제 조건  
  이 개요를 이해하려면 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 애니메이션 및 타임라인을 잘 알고 있어야 입니다. 애니메이션 소개를 보려면 [애니메이션 개요](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)를 참조하세요. From/To/By 애니메이션을 잘 알고 있어도 도움이 됩니다. 자세한 내용은 From/To/By 애니메이션 개요를 참조하세요.  
   
 <a name="whatisakeyframeanimation"></a>   
@@ -59,7 +47,7 @@ ms.lasthandoff: 12/22/2017
   
  *\<Type>* `AnimationUsingKeyFrames`  
   
- 여기서 *\<Type>*은 클래스가 애니메이션을 적용하는 값의 형식입니다.  
+ 여기서 *\<Type>* 은 클래스가 애니메이션을 적용하는 값의 형식입니다.  
   
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]에서는 다음 키 프레임 애니메이션 클래스를 제공합니다.  
   
@@ -92,7 +80,7 @@ ms.lasthandoff: 12/22/2017
   
  *\<InterpolationMethod>\<Type>* `KeyFrame`  
   
- 여기서 *\<InterpolationMethod>*는 키 프레임이 사용하는 보간 방법이고 *\<Type>*은 클래스가 애니메이션 효과를 주는 값의 형식입니다. 세 가지 보간 방법을 모두 지원하는 키 프레임 애니메이션에는 사용할 수 있는 세 가지 키 프레임 형식이 있습니다. 예를 들어 세 개의 키 프레임 형식을 사용할 수 있습니다는 <xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames>: <xref:System.Windows.Media.Animation.DiscreteDoubleKeyFrame>, <xref:System.Windows.Media.Animation.LinearDoubleKeyFrame>, 및 <xref:System.Windows.Media.Animation.SplineDoubleKeyFrame>합니다. (보간 방법은 뒤에 나오는 섹션에 자세히 설명되어 있습니다.)  
+ 여기서 *\<InterpolationMethod>* 는 키 프레임이 사용하는 보간 방법이고 *\<Type>* 은 클래스가 애니메이션 효과를 주는 값의 형식입니다. 세 가지 보간 방법을 모두 지원하는 키 프레임 애니메이션에는 사용할 수 있는 세 가지 키 프레임 형식이 있습니다. 예를 들어 세 개의 키 프레임 형식을 사용할 수 있습니다는 <xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames>: <xref:System.Windows.Media.Animation.DiscreteDoubleKeyFrame>, <xref:System.Windows.Media.Animation.LinearDoubleKeyFrame>, 및 <xref:System.Windows.Media.Animation.SplineDoubleKeyFrame>합니다. (보간 방법은 뒤에 나오는 섹션에 자세히 설명되어 있습니다.)  
   
  키 프레임의 주요 목적은 지정 하는 것을 <xref:System.Windows.Media.Animation.IKeyFrame.KeyTime%2A> 및 <xref:System.Windows.Media.Animation.IKeyFrame.Value%2A>합니다. 모든 키 프레임 형식은 이러한 두 가지 속성을 제공합니다.  
   
@@ -290,7 +278,7 @@ ms.lasthandoff: 12/22/2017
   
 6.  해결 된 <xref:System.Windows.Media.Animation.KeyTime> 된 키 프레임의 값 키 시간을 지정 하지 않으면 해결 된으로 가장 가까운 된 키 프레임을 사용 하 여 <xref:System.Windows.Media.Animation.KeyTime> 값입니다.  
   
-7.  남은 해결 <xref:System.Windows.Media.Animation.KeyTime.Paced%2A> <xref:System.Windows.Media.Animation.KeyTime> 값입니다. <xref:System.Windows.Media.Animation.KeyTime.Paced%2A><xref:System.Windows.Media.Animation.KeyTime> 사용은 <xref:System.Windows.Media.Animation.KeyTime> 는 인접 값 키 프레임의 해결된 시간을 결정 합니다.  이것은 이 키 프레임의 확인된 시간 동안 애니메이션의 속도가 일정한지 확인하기 위한 것입니다.  
+7.  남은 해결 <xref:System.Windows.Media.Animation.KeyTime.Paced%2A> <xref:System.Windows.Media.Animation.KeyTime> 값입니다. <xref:System.Windows.Media.Animation.KeyTime.Paced%2A> <xref:System.Windows.Media.Animation.KeyTime> 사용 하 여는 <xref:System.Windows.Media.Animation.KeyTime> 는 인접 값 키 프레임의 해결된 시간을 결정 합니다.  이것은 이 키 프레임의 확인된 시간 동안 애니메이션의 속도가 일정한지 확인하기 위한 것입니다.  
   
 8.  즉, 해결 된 시간 (기본 키)의 순서 및 (보조 키), 선언 순서 대로 키 프레임 정렬, 확인 된 키 프레임을 기준으로 사용 하 여 안정적인 정렬 <xref:System.Windows.Media.Animation.KeyTime> 값입니다.  
   

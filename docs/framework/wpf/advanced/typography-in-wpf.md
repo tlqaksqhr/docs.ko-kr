@@ -1,28 +1,14 @@
 ---
-title: "WPF의 입력 체계"
-ms.custom: 
+title: WPF의 입력 체계
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - typography [WPF], about typography
 ms.assetid: 06cbf17b-6eff-4fe5-949d-2dd533e4e1f4
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 7cd424dfd936427edb855a92e54921c064c8a8fe
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 45f74a4dd2164f332314ad79a18eab49efb520d6
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="typography-in-wpf"></a>WPF의 입력 체계
 이 항목에서는 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]의 주요 입력 체계 기능을 소개합니다. 이러한 기능에는 텍스트 렌더링의 향상된 품질 및 성능, [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] 입력 체계 지원, 향상된 국가별 텍스트, 향상된 글꼴 지원 및 새 텍스트 API(응용 프로그래밍 인터페이스)가 포함됩니다.  
@@ -33,7 +19,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="improved-quality-and-performance-of-text"></a>텍스트의 향상된 품질 및 성능  
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]의 텍스트는 [!INCLUDE[TLA#tla_ct](../../../../includes/tlasharptla-ct-md.md)]을 사용하여 렌더링되어 텍스트의 명확성 및 가독성이 향상됩니다. [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)]은 랩톱 화면, Pocket PC 화면, 평면 모니터 등 기존의 LCD(액정 디스플레이)에서 보다 쉽게 텍스트를 읽을 수 있도록 하기 위해 [!INCLUDE[TLA#tla_ms](../../../../includes/tlasharptla-ms-md.md)]에서 개발한 소프트웨어 기술입니다. [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)]은 픽셀의 소수 부분에 문자를 맞춰 보다 정밀하게 실제 모양으로 텍스트를 표시할 수 있는 하위 픽셀 렌더링을 사용합니다. 해상도를 더 세밀하게 지원할수록 텍스트의 미세한 부분까지 더 선명하게 표시되므로 오랫동안 더 쉽게 읽을 수 있습니다. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]의 [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)]에서 향상된 또 다른 기능은 y 방향 앤티앨리어싱으로, 텍스트 문자에서 얕은 곡선의 위쪽과 아래쪽을 다듬습니다. [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] 기능에 대한 자세한 내용은 [ClearType 개요](../../../../docs/framework/wpf/advanced/cleartype-overview.md)를 참조하세요.  
   
- ![ClearType y #45; anti 방향 &#45;텍스트 이거나, 이러한 앨리어싱](../../../../docs/framework/wpf/advanced/media/typographyinwpf02.gif "TypographyInWPF02")  
+ ![ClearType y 텍스트&#45;anti 방향&#45;앨리어싱](../../../../docs/framework/wpf/advanced/media/typographyinwpf02.gif "TypographyInWPF02")  
 ClearType y 방향 앤티앨리어싱으로 표시된 텍스트  
   
  컴퓨터가 최소 수준의 하드웨어 요구를 충족하는 경우 전체 텍스트 렌더링 파이프라인은 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]에서 하드웨어 가속일 수 있습니다. 하드웨어를 사용하여 수행할 수 없는 렌더링은 소프트웨어 렌더링으로 대체됩니다. 하드웨어 가속은 개별 문자 모양 저장, 문자 모양을 문자 모양 실행으로 합성, 효과 적용에서 최종 표시된 출력에 [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] 혼합 알고리즘 적용에 이르는 모든 단계의 텍스트 렌더링 파이프라인에 영향을 줍니다. 하드웨어 가속에 대한 자세한 내용은 [그래픽 렌더링 계층](../../../../docs/framework/wpf/advanced/graphics-rendering-tiers.md)을 참조하세요.  
@@ -103,7 +89,7 @@ OpenType 표준 및 선단 장식 문자 모양을 사용하는 텍스트
 #### <a name="using-bitmap-effects-transforms-and-text-effects"></a>비트맵 효과, 변환 및 텍스트 효과 사용  
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]에서는 비트맵 효과, 변환 및 텍스트 효과 같은 기능을 사용하여 시각적으로 흥미로운 텍스트를 만들 수 있습니다. 다음 예제에서는 일반적인 형식의 그림자 효과가 적용된 텍스트를 보여 줍니다.  
   
- ![Softness &#61; 인 텍스트 그림자 0.25](../../../../docs/framework/wpf/advanced/media/shadowtext01.jpg "ShadowText01")  
+ ![Softness 인 텍스트 그림자 &#61; 0.25](../../../../docs/framework/wpf/advanced/media/shadowtext01.jpg "ShadowText01")  
 그림자가 적용된 텍스트  
   
  다음 예제에서는 그림자 효과와 노이즈가 적용된 텍스트를 보여 줍니다.  

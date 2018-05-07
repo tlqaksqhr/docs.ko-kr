@@ -1,12 +1,6 @@
 ---
 title: 배타적 or 연산자(Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.Xor
 helpviewer_keywords:
@@ -20,14 +14,11 @@ helpviewer_keywords:
 - Xor keyword [Visual Basic]
 - bitwise comparison [Visual Basic]
 ms.assetid: 036000a9-3934-4e7f-a9d0-a816de3d84a6
-caps.latest.revision: 17
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: b14f11f2df2df9c29e88e9188390cfe245d2cb58
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 34d317da5d85127e371c2df7229e0f0873972f50
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="xor-operator-visual-basic"></a>배타적 or 연산자(Visual Basic)
 에 두 논리 제외를 수행 `Boolean` 식 또는 두 숫자 식에 비트 제외 합니다.  
@@ -40,13 +31,13 @@ result = expression1 Xor expression2
   
 ## <a name="parts"></a>요소  
  `result`  
- 필수 요소. 모든 `Boolean` 또는 숫자 변수입니다. 부울 비교 `result` 는 두 논리 제외 (배타적 논리합) `Boolean` 값입니다. 비트 연산에 대 한 `result` 는 두 개의 숫자 비트 패턴의 배타적 비트 연산 (배타적 비트 논리합)를 나타내는 숫자 값입니다.  
+ 필수. 모든 `Boolean` 또는 숫자 변수입니다. 부울 비교 `result` 는 두 논리 제외 (배타적 논리합) `Boolean` 값입니다. 비트 연산에 대 한 `result` 는 두 개의 숫자 비트 패턴의 배타적 비트 연산 (배타적 비트 논리합)를 나타내는 숫자 값입니다.  
   
  `expression1`  
- 필수 요소. 모든 `Boolean` 또는 숫자 식입니다.  
+ 필수. 모든 `Boolean` 또는 숫자 식입니다.  
   
  `expression2`  
- 필수 요소. 모든 `Boolean` 또는 숫자 식입니다.  
+ 필수. 모든 `Boolean` 또는 숫자 식입니다.  
   
 ## <a name="remarks"></a>설명  
  부울 비교 `result` 은 `True` 경우에 중 하나만 `expression1` 및 `expression2` 계산 `True`합니다. 즉, 경우에 `expression1` 및 `expression2` 평가 반대 `Boolean` 값입니다. 다음 표에서 설명 방법을 `result` 결정 됩니다.  

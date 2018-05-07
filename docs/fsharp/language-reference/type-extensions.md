@@ -1,17 +1,12 @@
 ---
 title: 형식 확장명(F#)
 description: '이전에 정의 된 개체 형식에 새 멤버를 추가할 F # 형식 확장을 사용 하는 방법에 대해 알아봅니다.'
-author: cartermp
-ms.author: phcart
 ms.date: 05/16/2016
-ms.topic: language-reference
-ms.prod: dotnet-fsharp
-ms.devlang: fsharp
-ms.openlocfilehash: 3399778799fbf0f8eee56e332135656150918a60
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 2181745ea75894fbfe35d5522c130baaf1876455
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="type-extensions"></a>형식 확장명
 

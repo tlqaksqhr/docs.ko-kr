@@ -1,13 +1,6 @@
 ---
-title: "방법: Windows Forms NumericUpDown 컨트롤의 형식 설정"
-ms.custom: 
+title: '방법: Windows Forms NumericUpDown 컨트롤의 형식 설정'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -16,16 +9,11 @@ helpviewer_keywords:
 - NumericUpDown control [Windows Forms], formatting values
 - up-down controls [Windows Forms], formatting numeric values
 ms.assetid: fa7c5557-6bfb-45b2-975d-8887b23b0ba0
-caps.latest.revision: "13"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: b4ff6d8e584e65482285012af351ebd1a669b806
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 1cb8f8b7d2f86125736c08cd9eadf4eee30063bb
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-set-the-format-for-the-windows-forms-numericupdown-control"></a>방법: Windows Forms NumericUpDown 컨트롤의 형식 설정
 Windows Forms에서 값이 표시 되는 방식을 구성할 수 있습니다 <xref:System.Windows.Forms.NumericUpDown> 제어 합니다. <xref:System.Windows.Forms.NumericUpDown.DecimalPlaces%2A> 속성 소수점 뒤 나타나는 숫자의 개수를 결정; 기본값은 0입니다. <xref:System.Windows.Forms.NumericUpDown.ThousandsSeparator%2A> 속성 10 진수 3 자리 마다는 구분 기호를 삽입할지 여부를 결정 있고 기본값은 `false`합니다. 컨트롤 값을 표시할 수 10 진수 형식 대신 16 진수의 경우는 <xref:System.Windows.Forms.NumericUpDown.Hexadecimal%2A> 속성이 `true`; 기본값은 `false`합니다.  

@@ -1,13 +1,6 @@
 ---
-title: "WPF에서 Shape 및 기본 그리기 개요"
-ms.custom: 
+title: WPF에서 Shape 및 기본 그리기 개요
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -19,16 +12,11 @@ helpviewer_keywords:
 - vectors [WPF], drawing
 - Shape objects [WPF]
 ms.assetid: 66d7a6d6-e3b6-47bc-8dfe-8a1b26f7d901
-caps.latest.revision: "19"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 2912215cb8fb0090cef58e0201cc355da1f0bf19
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: adbf982da25ff445d277b7c1b5911217d9825c02
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="shapes-and-basic-drawing-in-wpf-overview"></a>WPF에서 Shape 및 기본 그리기 개요
 이 항목에서는 사용 하 여 그리기 하는 방법의 개요를 제공 <xref:System.Windows.Shapes.Shape> 개체입니다. A <xref:System.Windows.Shapes.Shape> 는 유형의 <xref:System.Windows.UIElement> 화면에 도형을 그릴 수 있습니다. UI 요소 이므로 <xref:System.Windows.Shapes.Shape> 내의 개체를 사용할 수 있습니다 <xref:System.Windows.Controls.Panel> 요소와 대부분의 컨트롤입니다.  
@@ -38,7 +26,7 @@ ms.lasthandoff: 12/22/2017
   
 <a name="shapes"></a>   
 ## <a name="shape-objects"></a>Shape 개체  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]다양 한 즉시 사용 제공 <xref:System.Windows.Shapes.Shape> 개체입니다.  모든 셰이프 개체에서 상속 된 <xref:System.Windows.Shapes.Shape> 클래스입니다. 사용 가능한 도형 개체에는 <xref:System.Windows.Shapes.Ellipse>, <xref:System.Windows.Shapes.Line>, <xref:System.Windows.Shapes.Path>, <xref:System.Windows.Shapes.Polygon>, <xref:System.Windows.Shapes.Polyline>, 및 <xref:System.Windows.Shapes.Rectangle>합니다. <xref:System.Windows.Shapes.Shape>개체는 다음과 같은 공용 속성을 공유합니다.  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 다양 한 즉시 사용 제공 <xref:System.Windows.Shapes.Shape> 개체입니다.  모든 셰이프 개체에서 상속 된 <xref:System.Windows.Shapes.Shape> 클래스입니다. 사용 가능한 도형 개체에는 <xref:System.Windows.Shapes.Ellipse>, <xref:System.Windows.Shapes.Line>, <xref:System.Windows.Shapes.Path>, <xref:System.Windows.Shapes.Polygon>, <xref:System.Windows.Shapes.Polyline>, 및 <xref:System.Windows.Shapes.Rectangle>합니다. <xref:System.Windows.Shapes.Shape> 개체는 다음과 같은 공용 속성을 공유합니다.  
   
 -   <xref:System.Windows.Shapes.Shape.Stroke%2A>: 도형의 윤곽선을 그리는 방법을 설명 합니다.  
   
@@ -83,7 +71,7 @@ ms.lasthandoff: 12/22/2017
   
 <a name="pathgeometry"></a>   
 ### <a name="pathgeometry-and-pathsegments"></a>PathGeometry 및 PathSegments  
- <xref:System.Windows.Media.PathGeometry>하나 이상의 개체 이루어집니다 <xref:System.Windows.Media.PathFigure> 객체; 각 <xref:System.Windows.Media.PathFigure> 다른 "그림" 또는 셰이프를 나타냅니다. 각 <xref:System.Windows.Media.PathFigure> 자체로 이루어진 하나 이상의 <xref:System.Windows.Media.PathSegment> 각각 또는 도형의의 연결 된 부분을 나타내는 개체입니다. 세그먼트 형식은 다음과 같습니다: <xref:System.Windows.Media.LineSegment>, <xref:System.Windows.Media.BezierSegment>, 및 <xref:System.Windows.Media.ArcSegment>합니다.  
+ <xref:System.Windows.Media.PathGeometry> 하나 이상의 개체 이루어집니다 <xref:System.Windows.Media.PathFigure> 객체; 각 <xref:System.Windows.Media.PathFigure> 다른 "그림" 또는 셰이프를 나타냅니다. 각 <xref:System.Windows.Media.PathFigure> 자체로 이루어진 하나 이상의 <xref:System.Windows.Media.PathSegment> 각각 또는 도형의의 연결 된 부분을 나타내는 개체입니다. 세그먼트 형식은 다음과 같습니다: <xref:System.Windows.Media.LineSegment>, <xref:System.Windows.Media.BezierSegment>, 및 <xref:System.Windows.Media.ArcSegment>합니다.  
   
  다음 예제에서는 <xref:System.Windows.Shapes.Path> 정방형 3 차원 곡선을 그리는 데 사용 됩니다.  
   
@@ -108,7 +96,7 @@ Data="M 100,200 C 100,25 400,350 400,175 H 280" />
   
  ![경로 그림](../../../../docs/framework/wpf/graphics-multimedia/media/shape-ovw-path.PNG "shape_ovw_path")  
   
- <xref:System.Windows.Shapes.Path.Data%2A> 특성 문자열 표시 된 M으로의 좌표계에 경로 대 한 시작 지점을 설정 하는 "moveto" 명령으로 시작 된 <xref:System.Windows.Controls.Canvas>합니다. <xref:System.Windows.Shapes.Path>데이터 매개 변수에 대/소문자를 구분 하지 않습니다. 대문자 M 새 현재 요소에 대 한 절대 위치를 나타냅니다. 소문자 m은 상대 좌표를 나타냅니다. 첫 번째 세그먼트는 2개의 제어점 (100,25) 및 (400,350)을 사용하여 그린, (100,200)에서 시작하고 (400,175)에서 끝나는 입방형 3차원 곡선입니다. 이 세그먼트에서 C 명령으로 표시 됩니다는 <xref:System.Windows.Shapes.Path.Data%2A> 문자열 특성. 마찬가지로 대문자 C는 절대 경로를 나타내고 소문자 c는 상대 경로를 나타냅니다.  
+ <xref:System.Windows.Shapes.Path.Data%2A> 특성 문자열 표시 된 M으로의 좌표계에 경로 대 한 시작 지점을 설정 하는 "moveto" 명령으로 시작 된 <xref:System.Windows.Controls.Canvas>합니다. <xref:System.Windows.Shapes.Path> 데이터 매개 변수에 대/소문자를 구분 하지 않습니다. 대문자 M 새 현재 요소에 대 한 절대 위치를 나타냅니다. 소문자 m은 상대 좌표를 나타냅니다. 첫 번째 세그먼트는 2개의 제어점 (100,25) 및 (400,350)을 사용하여 그린, (100,200)에서 시작하고 (400,175)에서 끝나는 입방형 3차원 곡선입니다. 이 세그먼트에서 C 명령으로 표시 됩니다는 <xref:System.Windows.Shapes.Path.Data%2A> 문자열 특성. 마찬가지로 대문자 C는 절대 경로를 나타내고 소문자 c는 상대 경로를 나타냅니다.  
   
  두 번째 세그먼트는 절대 가로 "lineto" 명령 H로 시작합니다. 이 명령은 이전 하위 경로의 끝점(400,175)에서 새 끝점(280,175)까지 그리는 선을 지정합니다. 지정 된 값은 가로 "lineto" 명령 이기 때문에 프로그램 *x*-조정 합니다.  
   
@@ -116,7 +104,7 @@ Data="M 100,200 C 100,25 400,350 400,175 H 280" />
   
 <a name="fillpaint"></a>   
 ## <a name="painting-shapes"></a>도형 그리기  
- <xref:System.Windows.Media.Brush>개체를 사용 하 여 셰이프를 그리는 데 <xref:System.Windows.Shapes.Shape.Stroke%2A> 및 <xref:System.Windows.Shapes.Shape.Fill%2A>합니다. 다음 예에서는, 선 및 채우기의는 <xref:System.Windows.Shapes.Ellipse> 지정 됩니다. 브러시 속성에 대한 유효한 입력은 키워드 또는 16진수 색 값일 수 있습니다. 속성을 사용할 수 있는 색 키워드에 대 한 자세한 내용은 참조는 <xref:System.Windows.Media.Colors> 클래스에 <xref:System.Windows.Media> 네임 스페이스입니다.  
+ <xref:System.Windows.Media.Brush> 개체를 사용 하 여 셰이프를 그리는 데 <xref:System.Windows.Shapes.Shape.Stroke%2A> 및 <xref:System.Windows.Shapes.Shape.Fill%2A>합니다. 다음 예에서는, 선 및 채우기의는 <xref:System.Windows.Shapes.Ellipse> 지정 됩니다. 브러시 속성에 대한 유효한 입력은 키워드 또는 16진수 색 값일 수 있습니다. 속성을 사용할 수 있는 색 키워드에 대 한 자세한 내용은 참조는 <xref:System.Windows.Media.Colors> 클래스에 <xref:System.Windows.Media> 네임 스페이스입니다.  
   
 ```  
 <Canvas Background="LightGray">   
@@ -213,7 +201,7 @@ myPolygon.StrokeThickness = 2;
 ## <a name="transforming-shapes"></a>도형 변환  
  <xref:System.Windows.Media.Transform> 클래스는 2 차원 평면에서 셰이프를 변환 하는 방법을 제공 합니다.  다양 한 유형의 변환에는 회전 (<xref:System.Windows.Media.RotateTransform>), 소수 자릿수 (<xref:System.Windows.Media.ScaleTransform>), 기울이기 (<xref:System.Windows.Media.SkewTransform>), 및 변환 (<xref:System.Windows.Media.TranslateTransform>).  
   
- 도형에 적용하는 일반적인 변환은 회전입니다.  셰이프를 회전 하려면 만듭니다는 <xref:System.Windows.Media.RotateTransform> 지정 하 고 해당 <xref:System.Windows.Media.RotateTransform.Angle%2A>합니다. <xref:System.Windows.Media.RotateTransform.Angle%2A> 45도 회전 하는 요소 45 시계 방향으로; 90 각도 요소 90도 회전 등; 시계 방향으로 회전 합니다. 설정의 <xref:System.Windows.Media.RotateTransform.CenterX%2A> 및 <xref:System.Windows.Media.RotateTransform.CenterY%2A> 속성에 대 한 요소를 회전 하는 지점 제어 하려는 경우. 이러한 속성 값은 변환할 요소의 좌표 공간으로 표현됩니다. <xref:System.Windows.Media.RotateTransform.CenterX%2A>및 <xref:System.Windows.Media.RotateTransform.CenterY%2A> 0의 기본값은입니다. 마지막으로 적용 된 <xref:System.Windows.Media.RotateTransform> 요소에 있습니다. 레이아웃에 영향을 변환을 사용 하지 않으려는 경우 설정 도형의 <xref:System.Windows.UIElement.RenderTransform%2A> 속성입니다.  
+ 도형에 적용하는 일반적인 변환은 회전입니다.  셰이프를 회전 하려면 만듭니다는 <xref:System.Windows.Media.RotateTransform> 지정 하 고 해당 <xref:System.Windows.Media.RotateTransform.Angle%2A>합니다. <xref:System.Windows.Media.RotateTransform.Angle%2A> 45도 회전 하는 요소 45 시계 방향으로; 90 각도 요소 90도 회전 등; 시계 방향으로 회전 합니다. 설정의 <xref:System.Windows.Media.RotateTransform.CenterX%2A> 및 <xref:System.Windows.Media.RotateTransform.CenterY%2A> 속성에 대 한 요소를 회전 하는 지점 제어 하려는 경우. 이러한 속성 값은 변환할 요소의 좌표 공간으로 표현됩니다. <xref:System.Windows.Media.RotateTransform.CenterX%2A> 및 <xref:System.Windows.Media.RotateTransform.CenterY%2A> 0의 기본값은입니다. 마지막으로 적용 된 <xref:System.Windows.Media.RotateTransform> 요소에 있습니다. 레이아웃에 영향을 변환을 사용 하지 않으려는 경우 설정 도형의 <xref:System.Windows.UIElement.RenderTransform%2A> 속성입니다.  
   
  다음 예제에서는 <xref:System.Windows.Media.RotateTransform> 셰이프의 왼쪽된 위 모서리 (0, 0)에 대 한 셰이프 45도 회전 하는 데 사용 됩니다.  
   

@@ -1,28 +1,15 @@
 ---
-title: "&lt;xmlSchemaImporterExtensions&gt;의 요소 &lt;add&gt;"
-ms.custom: 
+title: '&lt;xmlSchemaImporterExtensions&gt;의 요소 &lt;add&gt;'
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - XML serialization, configuration
 - <add> element for <xmlSchemaImporterExtensions> element
 ms.assetid: c828a558-094b-441e-9065-790b87315fa0
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: dc01f0ed6b5b1bac5131e6262db5d3a2847a65ab
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 6e14c478e33c465d2ea3d10158f856dc5ca6c49a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ltaddgt-element-for-ltxmlschemaimporterextensionsgt"></a>&lt;xmlSchemaImporterExtensions&gt;의 요소 &lt;add&gt;
 <xref:System.Xml.Serialization.XmlSchemaImporter>에서 XSD 형식을 .NET Framework 형식으로 매핑하는 데 사용하는 형식을 추가합니다. 구성 파일에 대한 자세한 내용은 [구성 파일 스키마](../../../docs/framework/configure-apps/file-schema/index.md)를 참조하세요.  
@@ -57,7 +44,7 @@ ms.lasthandoff: 12/23/2017
 |-------------|-----------------|  
 |\<xmlSchemaImporterExtensions>|<xref:System.Xml.Serialization.XmlSchemaImporter>에서 사용하는 형식을 포함합니다.|  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 코드 예제에서는 XmlSchemaImporter가 형식을 매핑할 때 사용할 수 있는 확장 형식을 추가합니다.  
   
 ```xml  

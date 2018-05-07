@@ -1,13 +1,6 @@
 ---
-title: "방법: 축소판 이미지 만들기"
-ms.custom: 
+title: '방법: 축소판 이미지 만들기'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -15,21 +8,16 @@ helpviewer_keywords:
 - thumbnail images [Windows Forms], creating
 - images [Windows Forms], creating thumbnails
 ms.assetid: e956242a-1e5b-4217-a3cf-5f3fb45d00ba
-caps.latest.revision: "20"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: b8eeb856fabd895e171c0ad8739ae6a63b5c7065
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 870ea223698e48438bd4dd08597d0a6ab79cec27
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-thumbnail-images"></a>방법: 축소판 이미지 만들기
 미리 보기 이미지는 이미지의 작은 버전. 호출 하 여 미리 보기 이미지를 만들 수는 <xref:System.Drawing.Image.GetThumbnailImage%2A> 의 메서드는 <xref:System.Drawing.Image> 개체입니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 구성 예제는 <xref:System.Drawing.Image> JPG 파일에서 개체입니다. 원본 이미지의 640 픽셀 너비와 479 픽셀의 높이로 있습니다. 코드는 100 픽셀의 너비와 높이가 100 픽셀의 축소판 그림 이미지를 만듭니다.  
   
  다음 그림에서는 미리 보기 이미지를 보여 줍니다.  

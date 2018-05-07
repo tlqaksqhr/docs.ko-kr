@@ -1,13 +1,6 @@
 ---
-title: "방법: Blocks 속성을 통한 유동 콘텐츠 요소 조작"
-ms.custom: 
+title: '방법: Blocks 속성을 통한 유동 콘텐츠 요소 조작'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -17,16 +10,11 @@ helpviewer_keywords:
 - properties [WPF], Blocks [WPF], manipulating flow content elements
 - Blocks property [WPF], manipulating flow content elements
 ms.assetid: aeda4ece-b979-4818-a093-ef938e908751
-caps.latest.revision: "6"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: d995e9a3a50e733a87a203f94b97a937560a0141
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 74710c4a6dd58cf2836cd7671a3e39401a5ea774
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-manipulate-flow-content-elements-through-the-blocks-property"></a>방법: Blocks 속성을 통한 유동 콘텐츠 요소 조작
 이러한 예제를 보여 주는 통해 유동 콘텐츠 요소에서 수행할 수 있는 일반적인 작업 중 몇 가지는 **블록** 속성입니다. 항목 추가 및 제거 하려면이 속성은 사용 <xref:System.Windows.Documents.BlockCollection>합니다. 유동 콘텐츠 요소는 **블록** 속성에 포함 합니다.  
@@ -43,31 +31,31 @@ ms.lasthandoff: 12/22/2017
   
  이러한 예제를 사용 하는 문제가 발생 <xref:System.Windows.Documents.Section> 유동 콘텐츠 요소 없지만 이러한 기술은 유동 콘텐츠 요소 컬렉션을 호스트 하는 모든 요소에 적용 가능 합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 예제에서는 새 <xref:System.Windows.Documents.Section> 다음 사용 하 여는 **추가** 새 단락을 추가 하는 메서드는 **섹션** 내용입니다.  
   
  [!code-csharp[FlowDocumentSnippets#_SectionBlocksAdd](../../../../samples/snippets/csharp/VS_Snippets_Wpf/FlowDocumentSnippets/CSharp/Window1.xaml.cs#_sectionblocksadd)]
  [!code-vb[FlowDocumentSnippets#_SectionBlocksAdd](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/FlowDocumentSnippets/visualbasic/window1.xaml.vb#_sectionblocksadd)]  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 예제에서는 새 <xref:System.Windows.Documents.Paragraph> 요소를 맨 앞에 삽입 하는 <xref:System.Windows.Documents.Section>합니다.  
   
  [!code-csharp[FlowDocumentSnippets#_SectionBlocksInsert](../../../../samples/snippets/csharp/VS_Snippets_Wpf/FlowDocumentSnippets/CSharp/Window1.xaml.cs#_sectionblocksinsert)]
  [!code-vb[FlowDocumentSnippets#_SectionBlocksInsert](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/FlowDocumentSnippets/visualbasic/window1.xaml.vb#_sectionblocksinsert)]  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 예제에서는 최상위의 수를 가져옵니다 <xref:System.Windows.Documents.Block> 에 포함 된 요소는 <xref:System.Windows.Documents.Section>합니다.  
   
  [!code-csharp[FlowDocumentSnippets#_SectionBlocksCount](../../../../samples/snippets/csharp/VS_Snippets_Wpf/FlowDocumentSnippets/CSharp/Window1.xaml.cs#_sectionblockscount)]
  [!code-vb[FlowDocumentSnippets#_SectionBlocksCount](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/FlowDocumentSnippets/visualbasic/window1.xaml.vb#_sectionblockscount)]  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 예에서는 삭제 마지막 <xref:System.Windows.Documents.Block> 요소에는 <xref:System.Windows.Documents.Section>합니다.  
   
  [!code-csharp[FlowDocumentSnippets#_SectionBlocksRemoveLast](../../../../samples/snippets/csharp/VS_Snippets_Wpf/FlowDocumentSnippets/CSharp/Window1.xaml.cs#_sectionblocksremovelast)]
  [!code-vb[FlowDocumentSnippets#_SectionBlocksRemoveLast](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/FlowDocumentSnippets/visualbasic/window1.xaml.vb#_sectionblocksremovelast)]  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 예제에서는 모든 내용을 지웁니다 (<xref:System.Windows.Documents.Block> 요소)에서 고 <xref:System.Windows.Documents.Section>합니다.  
   
  [!code-csharp[FlowDocumentSnippets#_SectionBlocksClear](../../../../samples/snippets/csharp/VS_Snippets_Wpf/FlowDocumentSnippets/CSharp/Window1.xaml.cs#_sectionblocksclear)]

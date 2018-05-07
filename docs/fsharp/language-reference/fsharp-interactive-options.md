@@ -1,17 +1,12 @@
 ---
 title: F# Interactive 옵션
 description: 'F # Interactive에서 지 원하는 명령줄 옵션에 대 한 자세한 내용은 fsi.exe 합니다.'
-author: cartermp
-ms.author: phcart
 ms.date: 05/16/2016
-ms.topic: language-reference
-ms.prod: dotnet-fsharp
-ms.devlang: fsharp
-ms.openlocfilehash: 45ed12e63a440ce176947cbfca189781c8675e10
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: a461dd0eeff2de3d15e557ba37138fbd62ca43ba
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="f-interactive-options"></a>F# Interactive 옵션
 

@@ -1,13 +1,6 @@
 ---
-title: "중첩된 Graphics 컨테이너 사용"
-ms.custom: 
+title: 중첩된 Graphics 컨테이너 사용
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -16,19 +9,14 @@ helpviewer_keywords:
 - graphics [Windows Forms], clipping
 - graphics [Windows Forms], transformations in nested objects
 ms.assetid: a0d9f178-43a4-4323-bb5a-d3e3f77ae6c1
-caps.latest.revision: "13"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 512c8903611f025364a1af2cb6cbaaffc8d759eb
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ba6bba84100a0ddcc87894710a6d3099ab0ccff5
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-nested-graphics-containers"></a>중첩된 Graphics 컨테이너 사용
-[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]일시적으로 바꾸거나의 상태 부분을 확장 하는 데 사용할 수 있는 컨테이너를 제공는 <xref:System.Drawing.Graphics> 개체입니다. 호출 하 여 컨테이너를 만들는 <xref:System.Drawing.Graphics.BeginContainer%2A> 의 메서드는 <xref:System.Drawing.Graphics> 개체입니다. 호출할 수 있습니다 <xref:System.Drawing.Graphics.BeginContainer%2A> 반복 하 여 중첩 된 컨테이너를 형성 합니다. 호출할 때마다 <xref:System.Drawing.Graphics.BeginContainer%2A> 을 호출 하 여 쌍이 되어야 합니다 <xref:System.Drawing.Graphics.EndContainer%2A>합니다.  
+[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 일시적으로 바꾸거나의 상태 부분을 확장 하는 데 사용할 수 있는 컨테이너를 제공는 <xref:System.Drawing.Graphics> 개체입니다. 호출 하 여 컨테이너를 만들는 <xref:System.Drawing.Graphics.BeginContainer%2A> 의 메서드는 <xref:System.Drawing.Graphics> 개체입니다. 호출할 수 있습니다 <xref:System.Drawing.Graphics.BeginContainer%2A> 반복 하 여 중첩 된 컨테이너를 형성 합니다. 호출할 때마다 <xref:System.Drawing.Graphics.BeginContainer%2A> 을 호출 하 여 쌍이 되어야 합니다 <xref:System.Drawing.Graphics.EndContainer%2A>합니다.  
   
 ## <a name="transformations-in-nested-containers"></a>중첩된 컨테이너에서 변환  
  다음 예제에서는 한 <xref:System.Drawing.Graphics> 안에 컨테이너 및 개체 <xref:System.Drawing.Graphics> 개체입니다. 월드 변형과 <xref:System.Drawing.Graphics> 개체는 x 방향으로 100 변환 단위와 y 방향의 80 단위입니다. 컨테이너의 월드 변형과 30도 회전입니다. 코드에서는 호출 `DrawRectangle(pen, -60, -30, 120, 60)` 두 번입니다. 첫 번째 호출 <xref:System.Drawing.Graphics.DrawRectangle%2A> ; 컨테이너 내부 즉, 전에 수행 됩니다에 대 한 호출 <xref:System.Drawing.Graphics.BeginContainer%2A> 및 <xref:System.Drawing.Graphics.EndContainer%2A>합니다. 두 번째 호출으로 <xref:System.Drawing.Graphics.DrawRectangle%2A> 에 대 한 호출 후 <xref:System.Drawing.Graphics.EndContainer%2A>합니다.  

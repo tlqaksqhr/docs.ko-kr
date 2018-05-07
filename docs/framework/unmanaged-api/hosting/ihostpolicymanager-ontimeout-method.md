@@ -1,14 +1,6 @@
 ---
-title: "IHostPolicyManager::OnTimeout 메서드"
-ms.custom: 
+title: IHostPolicyManager::OnTimeout 메서드
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - IHostPolicyManager.OnTimeout
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: 0a313b51-5e4d-4714-a86b-af75cf3902e6
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 6b8c29bc281b64368e8b310e2b13f3fcb1bdc6ff
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 7f6257cdf966850a17d5cf58ef1ac2e6ab7103b0
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ihostpolicymanagerontimeout-method"></a>IHostPolicyManager::OnTimeout 메서드
 공용 언어 런타임 (CLR)를 호출 하 여 지정 된 작업을 수행 하려고 하는 호스트에 알립니다는 [iclrpolicymanager:: Setactionontimeout](../../../../docs/framework/unmanaged-api/hosting/iclrpolicymanager-setactionontimeout-method.md) 메서드가 시간 제한에 대 한 응답에서입니다.  
@@ -58,7 +46,7 @@ HRESULT OnTimeout (
   
 |HRESULT|설명|  
 |-------------|-----------------|  
-|S_OK|`OnTimeout`성공적으로 반환 합니다.|  
+|S_OK|`OnTimeout` 성공적으로 반환 합니다.|  
 |HOST_E_CLRNOTAVAILABLE|CLR은 프로세스에 로드 되지 않았습니다 또는 CLR 중인 상태를 관리 코드를 실행 하거나 호출을 처리할 수 없습니다.|  
 |HOST_E_TIMEOUT|호출 시간이 초과 되었습니다.|  
 |HOST_E_NOT_OWNER|호출자에 게 잠금을 소유 하지 않습니다.|  
@@ -72,7 +60,7 @@ HRESULT OnTimeout (
   
  **라이브러리:** MSCorEE.dll에 리소스로 포함  
   
- **.NET framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>참고 항목  
  [EClrOperation 열거형](../../../../docs/framework/unmanaged-api/hosting/eclroperation-enumeration.md)  

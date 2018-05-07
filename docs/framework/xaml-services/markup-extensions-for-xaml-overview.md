@@ -1,29 +1,15 @@
 ---
 title: XAML 태그 확장명 개요
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-wpf
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - markup extensions [XAML Services], custom
 - XAML [XAML Services], markup extensions
 ms.assetid: 261b2b11-2dc0-462f-8c66-55b8c9c6e436
-caps.latest.revision: 14
-author: wadepickett
-ms.author: wpickett
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 464c5f547089d47906f2e227effe821357196c16
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 6b7c13355fe46d4b768699555bbaf522e3b49c73
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="markup-extensions-for-xaml-overview"></a>XAML 태그 확장명 개요
 태그 확장은 기본 형식이 나 특정 XAML 형식이 아닌 값을 가져오기 위한 XAML 기술입니다. 특성 사용과 관련하여 태그 확장은 여는 중괄호 `{` 의 알려진 문자 시퀀스를 사용하여 태그 확장 범위를 시작하고 닫는 중괄호 `}` 를 사용하여 종료합니다. .NET Framework XAML 서비스를 사용하는 경우 System.Xaml 어셈블리에서 미리 정의된 몇 가지 XAML 언어 태그 확장을 사용할 수 있습니다. System.Xaml에 정의된 <xref:System.Windows.Markup.MarkupExtension> 클래스에서 서브클래싱하고 고유한 태그 확장을 정의할 수도 있습니다. 또는 해당 프레임워크를 이미 참조하고 있는 경우 특정 프레임워크에 의해 정의된 태그 확장을 사용할 수 있습니다.  

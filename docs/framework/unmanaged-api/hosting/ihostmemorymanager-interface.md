@@ -1,14 +1,6 @@
 ---
-title: "IHostMemoryManager 인터페이스"
-ms.custom: 
+title: IHostMemoryManager 인터페이스
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - IHostMemoryManager
 api_location:
@@ -22,17 +14,13 @@ helpviewer_keywords:
 ms.assetid: a945d439-3b34-4aa4-b575-8413dd7806ce
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: b39a43874bc1808928f21e0a35638aae9a99ca8e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: d3edae4cb112f46643734c5f1612d9df36ad47e9
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ihostmemorymanager-interface"></a>IHostMemoryManager 인터페이스
 표준 Win32 가상 메모리 함수를 사용 하는 대신 공용 언어 런타임 (CLR)에서 호스트를 통해 가상 메모리를 요청을 허용 하는 메서드를 제공 합니다.  
@@ -53,7 +41,7 @@ ms.lasthandoff: 12/22/2017
 |[VirtualQuery 메서드](../../../../docs/framework/unmanaged-api/hosting/ihostmemorymanager-virtualquery-method.md)|호출 프로세스의 가상 주소 공간에 있는 페이지의 범위에 대 한 정보를 검색 하는 해당 Win32 함수에 대 한 논리적 래퍼입니다로 사용 됩니다.|  
   
 ## <a name="remarks"></a>설명  
- `IHostMemoryManager`또한 호스트에 의해 보고 되는 힙에서 메모리를 요청 하 고 프로세스의 메모리 압력 수준의 얻을 대 한 포인터를 가져오는를 CLR에 대 한 메서드를 제공 합니다.  
+ `IHostMemoryManager` 또한 호스트에 의해 보고 되는 힙에서 메모리를 요청 하 고 프로세스의 메모리 압력 수준의 얻을 대 한 포인터를 가져오는를 CLR에 대 한 메서드를 제공 합니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **플랫폼:** 참조 [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)합니다.  
@@ -62,7 +50,7 @@ ms.lasthandoff: 12/22/2017
   
  **라이브러리:** MSCorEE.dll에 리소스로 포함  
   
- **.NET framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>참고 항목  
  [IHostMalloc 인터페이스](../../../../docs/framework/unmanaged-api/hosting/ihostmalloc-interface.md)  

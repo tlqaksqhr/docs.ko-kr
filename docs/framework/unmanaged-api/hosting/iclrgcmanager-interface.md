@@ -1,14 +1,6 @@
 ---
-title: "ICLRGCManager 인터페이스"
-ms.custom: 
+title: ICLRGCManager 인터페이스
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICLRGCManager
 api_location:
@@ -22,17 +14,13 @@ helpviewer_keywords:
 ms.assetid: fb511c9b-3fe4-41b0-822a-6ba4a079d1f5
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 6cc6c84d57e4114a28a8b363b99b98f3c4d21410
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 045b924033630ea98d5a532a62f1037a5972df90
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="iclrgcmanager-interface"></a>ICLRGCManager 인터페이스
 공용 언어 런타임의 가비지 수집 시스템과 상호 작용 하는 데 사용 하는 메서드를 제공 합니다.  
@@ -58,7 +46,7 @@ ms.lasthandoff: 12/22/2017
   
  **라이브러리:** MSCorEE.dll에 리소스로 포함  
   
- **.NET framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>참고 항목  
  [자동 메모리 관리](../../../../docs/standard/automatic-memory-management.md)  

@@ -1,13 +1,6 @@
 ---
-title: "이미지, 그림 및 시각적 표시로 그리기"
-ms.custom: 
+title: 이미지, 그림 및 시각적 표시로 그리기
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -19,23 +12,18 @@ helpviewer_keywords:
 - brushes [WPF], painting with images
 - brushes [WPF], painting with visuals
 ms.assetid: 779aac3f-8d41-49d8-8130-768244aa2240
-caps.latest.revision: "28"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 01939eb8735e6764e0f0cba811091c7fdbd6797f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: abb5733ed54ea430ba161db5ea2dcb33e99298ad
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="painting-with-images-drawings-and-visuals"></a>이미지, 그림 및 시각적 표시로 그리기
 이 항목에서는 사용 하는 방법을 설명 <xref:System.Windows.Media.ImageBrush>, <xref:System.Windows.Media.DrawingBrush>, 및 <xref:System.Windows.Media.VisualBrush> 이미지를 영역을 그리는 개체는 <xref:System.Windows.Media.Drawing>, 또는 <xref:System.Windows.Media.Visual>합니다.  
     
   
 <a name="prereqs"></a>   
-## <a name="prerequisites"></a>필수 구성 요소  
+## <a name="prerequisites"></a>전제 조건  
  이 항목을 이해하려면 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]에서 제공하는 다양한 형식의 브러시와 해당 기본 기능에 대해 잘 알고 있어야 합니다. 소개 내용을 보려면 [WPF 브러시 개요](../../../../docs/framework/wpf/graphics-multimedia/wpf-brushes-overview.md)를 참조하세요.  
   
 <a name="image"></a>   
@@ -69,15 +57,15 @@ DrawingBrush로 그린 개체
   
  A <xref:System.Windows.Media.DrawingBrush> 영역을 그리며는 <xref:System.Windows.Media.Drawing> 개체입니다. A <xref:System.Windows.Media.Drawing> 셰이프, 비트맵, 비디오 또는 텍스트 줄을 등의 내용이 표시 개체에 설명 합니다. 그리기 형식마다 다른 콘텐츠 형식을 설명합니다. 다음은 여러 그리기 개체 형식을 보여 주는 목록입니다.  
   
--   <xref:System.Windows.Media.GeometryDrawing>-도형을 그립니다.  
+-   <xref:System.Windows.Media.GeometryDrawing> -도형을 그립니다.  
   
--   <xref:System.Windows.Media.ImageDrawing>– 이미지를 그립니다.  
+-   <xref:System.Windows.Media.ImageDrawing> – 이미지를 그립니다.  
   
--   <xref:System.Windows.Media.GlyphRunDrawing>-텍스트를 그립니다.  
+-   <xref:System.Windows.Media.GlyphRunDrawing> -텍스트를 그립니다.  
   
--   <xref:System.Windows.Media.VideoDrawing>-오디오 또는 비디오 파일을 재생 됩니다.  
+-   <xref:System.Windows.Media.VideoDrawing> -오디오 또는 비디오 파일을 재생 됩니다.  
   
--   <xref:System.Windows.Media.DrawingGroup>-다른 도면을 그립니다. 다른 그리기를 단일 합성 그리기로 결합하려면 그리기 그룹을 사용합니다.  
+-   <xref:System.Windows.Media.DrawingGroup> -다른 도면을 그립니다. 다른 그리기를 단일 합성 그리기로 결합하려면 그리기 그룹을 사용합니다.  
   
  에 대 한 자세한 내용은 <xref:System.Windows.Media.Drawing> 개체 참조는 [그리기 개체 개요](../../../../docs/framework/wpf/graphics-multimedia/drawing-objects-overview.md)합니다.  
   
@@ -133,7 +121,7 @@ DrawingBrush로 그린 개체
   
 <a name="tilebrush"></a>   
 ## <a name="tilebrush-features"></a>TileBrush 기능  
- <xref:System.Windows.Media.ImageBrush><xref:System.Windows.Media.DrawingBrush>, 및 <xref:System.Windows.Media.VisualBrush> 유형의 <xref:System.Windows.Media.TileBrush> 개체입니다. <xref:System.Windows.Media.TileBrush>개체가 있는 다양 한 이미지, 그리기, 또는 시각적 표시로 영역을 그리는 방법에 대 한 제어를 제공 합니다. 예를 들어 늘어난 이미지만으로 영역을 그리기보다, 패턴을 만드는 일련의 이미지 타일을 사용하여 영역을 그릴 수 있습니다.  
+ <xref:System.Windows.Media.ImageBrush><xref:System.Windows.Media.DrawingBrush>, 및 <xref:System.Windows.Media.VisualBrush> 유형의 <xref:System.Windows.Media.TileBrush> 개체입니다. <xref:System.Windows.Media.TileBrush> 개체가 있는 다양 한 이미지, 그리기, 또는 시각적 표시로 영역을 그리는 방법에 대 한 제어를 제공 합니다. 예를 들어 늘어난 이미지만으로 영역을 그리기보다, 패턴을 만드는 일련의 이미지 타일을 사용하여 영역을 그릴 수 있습니다.  
   
  A <xref:System.Windows.Media.TileBrush> 에 세 가지 기본 구성 요소가: 콘텐츠, 타일 및 출력 영역입니다.  
   

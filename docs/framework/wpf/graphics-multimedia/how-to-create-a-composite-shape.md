@@ -1,13 +1,6 @@
 ---
-title: "방법: 복합 도형 만들기"
-ms.custom: 
+title: '방법: 복합 도형 만들기'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -16,21 +9,16 @@ helpviewer_keywords:
 - composite shapes [WPF]
 - graphics [WPF], composite shapes
 ms.assetid: 8e5c7ef4-d7ed-4c43-afc9-ca01325c300b
-caps.latest.revision: "10"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 2ecb4ecdc5c83cbb6f2b4faee9cb3654939bd346
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 6bb2a8a32938682af52343b971b840dbed16bcef
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-a-composite-shape"></a>방법: 복합 도형 만들기
 사용 하 여 복합 셰이프를 만드는 방법을 보여 주는이 예제 <xref:System.Windows.Media.Geometry> 개체 하 고 표시를 사용 하 여는 <xref:System.Windows.Shapes.Path> 요소입니다. 다음 예제에서는 <xref:System.Windows.Media.LineGeometry>, <xref:System.Windows.Media.EllipseGeometry>, 및 <xref:System.Windows.Media.RectangleGeometry> 함께 사용 되는 <xref:System.Windows.Media.GeometryGroup> 복합 셰이프를 만듭니다. 기 하 도형이 다음 사용 하 여 그려집니다는 <xref:System.Windows.Shapes.Path> 요소입니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  [!code-xaml[GeometrySample#19](../../../../samples/snippets/csharp/VS_Snippets_Wpf/GeometrySample/CS/combininggeometriesexample.xaml#19)]  
   
  [!code-csharp[GeometriesMiscSnippets_procedural_snip#CompositeShapeCodeExampleInline1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/GeometriesMiscSnippets_procedural_snip/CSharp/CompositeShapeExample.cs#compositeshapecodeexampleinline1)]

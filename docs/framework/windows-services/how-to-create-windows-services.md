@@ -1,27 +1,17 @@
 ---
-title: "방법: Windows 서비스 만들기"
-ms.custom: 
+title: '방법: Windows 서비스 만들기'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - Windows Service applications, creating
 - templates, Windows Service
 ms.assetid: 0f5e2cbb-d95d-477c-b2b5-4b990e6b86ff
-caps.latest.revision: "18"
 author: ghogen
-ms.author: ghogen
 manager: douge
-ms.workload: dotnet
-ms.openlocfilehash: 7d93f8543b9e6e370827f5a666315d562e28ee76
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 7719af9393bee816665040d6e4ced191419d0855
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-windows-services"></a>방법: Windows 서비스 만들기
 서비스를 만들 때 호출 하는 Visual Studio 프로젝트 템플릿을 사용할 수 있습니다 **Windows 서비스**합니다. 이 템플릿은 적절한 클래스 및 네임스페이스를 참조하고, 서비스의 기본 클래스에서 상속을 설정하고, 개발자가 재정의할 가능성이 높은 여러 메서드를 재정의하여 대부분의 작업을 자동으로 수행합니다.  
@@ -58,7 +48,7 @@ ms.lasthandoff: 12/22/2017
     |<xref:System.ServiceProcess.ServiceBase.CanStop%2A>|서비스가 실행 중지 요청을 수락함을 나타내려면 `True`로 설정하고 서비스 중지를 차단하려면 `false`로 설정합니다.|  
     |<xref:System.ServiceProcess.ServiceBase.CanShutdown%2A>|서비스가 활성화되어 있는 컴퓨터가 종료될 때 서비스에서 알림을 수신하여 `True` 프로시저를 호출할 수 있도록 설정할 것임을 나타내려면 <xref:System.ServiceProcess.ServiceBase.OnShutdown%2A>로 설정합니다.|  
     |<xref:System.ServiceProcess.ServiceBase.CanPauseAndContinue%2A>|서비스가 실행 일시 중지 또는 다시 시작 요청을 수락함을 나타내려면 `True`로 설정하고 서비스 일시 중지 및 다시 시작을 차단하려면 `false`로 설정합니다.|  
-    |<xref:System.ServiceProcess.ServiceBase.CanHandlePowerEvent%2A>|`True`서비스 컴퓨터의 전원 상태에 대 한 변경 통지를 처리할 수 있습니다. `false` 로 설정 하면 서비스에서 이러한 변경 내용이 통보 되 고 있습니다.|  
+    |<xref:System.ServiceProcess.ServiceBase.CanHandlePowerEvent%2A>|`True` 서비스 컴퓨터의 전원 상태에 대 한 변경 통지를 처리할 수 있습니다. `false` 로 설정 하면 서비스에서 이러한 변경 내용이 통보 되 고 있습니다.|  
     |<xref:System.ServiceProcess.ServiceBase.AutoLog%2A>|서비스에서 작업을 수행할 때 응용 프로그램 이벤트 로그에 정보 항목을 기록하려면 `True`로 설정하고 이 기능을 사용하지 않도록 설정하려면 `false`로 설정합니다. 자세한 내용은 참조 [하는 방법: 로그 정보에 대 한 서비스](../../../docs/framework/windows-services/how-to-log-information-about-services.md)합니다. **참고:** 기본적으로 <xref:System.ServiceProcess.ServiceBase.AutoLog%2A> 로 설정 된 `true`합니다.|  
   
     > [!NOTE]

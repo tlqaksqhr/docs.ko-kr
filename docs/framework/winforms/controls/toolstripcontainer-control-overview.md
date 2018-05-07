@@ -1,31 +1,17 @@
 ---
-title: "ToolStripContainer 컨트롤 개요"
-ms.custom: 
+title: ToolStripContainer 컨트롤 개요
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 f1_keywords:
 - ToolStripContainer
 helpviewer_keywords:
 - toolbars [Windows Forms], built-in rafting
 - ToolStripContainer control [Windows Forms], about ToolStripContainer control
 ms.assetid: c7d63bff-64e2-4a63-bd89-d31bc96dacb8
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 3a1a4c9c77e1f347f95c0a5e17ab0d37e0013d6b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 59afb9de3a97545407fe96f5ded60faee9d9f725
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="toolstripcontainer-control-overview"></a>ToolStripContainer 컨트롤 개요
 A <xref:System.Windows.Forms.ToolStripContainer> 왼쪽, 오른쪽, 위쪽 및 아래쪽 면 배치 및 래프팅 할 패널이 있습니다 <xref:System.Windows.Forms.ToolStrip>, <xref:System.Windows.Forms.MenuStrip>, 및 <xref:System.Windows.Forms.StatusStrip> 컨트롤입니다. 왼쪽 또는 오른쪽 <xref:System.Windows.Forms.ToolStripContainer>에 여러 <xref:System.Windows.Forms.ToolStrip> 컨트롤을 배치하면 컨트롤이 세로로 쌓입니다. 위쪽 또는 아래쪽 <xref:System.Windows.Forms.ToolStripContainer>에 배치하면 가로로 쌓입니다. <xref:System.Windows.Forms.ToolStripContainer>의 가운데 <xref:System.Windows.Forms.ToolStripContentPanel>을 사용하여 기존 컨트롤을 폼에 배치할 수 있습니다.  
@@ -34,7 +20,7 @@ A <xref:System.Windows.Forms.ToolStripContainer> 왼쪽, 오른쪽, 위쪽 및 �
   
 ### <a name="important-toolstripcontainer-members"></a>중요 한 ToolStripContainer 멤버  
   
-|name|설명|  
+|이름|설명|  
 |----------|-----------------|  
 |<xref:System.Windows.Forms.ToolStripContainer.BottomToolStripPanel%2A>|아래쪽 패널 가져옵니다는 <xref:System.Windows.Forms.ToolStripContainer>합니다.|  
 |<xref:System.Windows.Forms.ToolStripContainer.BottomToolStripPanelVisible%2A>|나타내는 값을 가져오거나 여부의 아래쪽 패널에서 <xref:System.Windows.Forms.ToolStripContainer> 표시 됩니다.|  

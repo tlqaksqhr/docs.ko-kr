@@ -1,31 +1,17 @@
 ---
-title: "DomainUpDown 컨트롤 개요(Windows Forms)"
-ms.custom: 
+title: DomainUpDown 컨트롤 개요(Windows Forms)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 f1_keywords:
 - DomainUpDown
 helpviewer_keywords:
 - spin button control [Windows Forms], about spin button
 - DomainUpDown control [Windows Forms], about DomainUpDown control
 ms.assetid: 3f40f9c1-20ad-4331-b9b5-b0127eb36eb3
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: e5a86dc6c56c3afff8d8a3a4ca2c5d5efa8eac1a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 21d28caf490b008570cbd6280afff3114b0f4bfc
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="domainupdown-control-overview-windows-forms"></a>DomainUpDown 컨트롤 개요(Windows Forms)
 Windows Forms <xref:System.Windows.Forms.DomainUpDown> 컨트롤은 한 쌍의 목록에서 위로 또는 아래로 이동 단추 및 텍스트 상자의 조합 합니다. 컨트롤은 표시 하거나 선택 목록에서 텍스트 문자열을 설정 합니다. 위쪽 및 아래쪽 목록 사이 이동 하는 단추를 클릭 하 여, 위쪽 및 아래쪽 화살표 키를 누르거나 또는 목록에 있는 항목과 일치 하는 문자열을 입력 하 여 사용자 문자열을 선택할 수입니다. 이름의 사전순으로 정렬된 된 목록에서 항목을 선택 하는이 컨트롤에 대 한 가능한 사용 됩니다.  

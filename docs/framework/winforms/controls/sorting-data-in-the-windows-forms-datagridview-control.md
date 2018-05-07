@@ -1,25 +1,16 @@
 ---
-title: "Windows Forms DataGridView 컨트롤의 데이터 정렬"
+title: Windows Forms DataGridView 컨트롤의 데이터 정렬
 ms.date: 02/13/2018
-ms.prod: .net-framework
-ms.technology:
-- dotnet-winforms
-ms.topic: article
 helpviewer_keywords:
 - data [Windows Forms], sorting in grids
 - data grids [Windows Forms], sorting data
 - DataGridView control [Windows Forms], sorting data
 ms.assetid: c1d4f24c-d961-4181-809d-5a5caa6122e4
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 6ab4ec958a4275ed805ed33ee3eff9ab67fde3dc
-ms.sourcegitcommit: 973a12d1e6962cd9a9c263fbfaad040ec8267fe9
+ms.openlocfilehash: 1cbfb4a19e9bb0db5cbb595a91a254a3a8e3f309
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/22/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="sorting-data-in-the-windows-forms-datagridview-control"></a>Windows Forms DataGridView 컨트롤의 데이터 정렬
 
@@ -50,7 +41,7 @@ ms.lasthandoff: 02/22/2018
 <xref:System.Windows.Forms.DataGridViewColumnSortMode>  
 에 대 한 참조 설명서를 제공는 <xref:System.Windows.Forms.DataGridViewColumnSortMode> 열거형입니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참고자료
 
 [DataGridView 컨트롤](../../../../docs/framework/winforms/controls/datagridview-control-windows-forms.md)  
 [Windows Forms DataGridView 컨트롤의 열 형식](../../../../docs/framework/winforms/controls/column-types-in-the-windows-forms-datagridview-control.md)  

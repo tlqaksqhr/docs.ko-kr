@@ -1,26 +1,17 @@
 ---
 title: GetType 연산자(Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.GetType
 helpviewer_keywords:
 - GetType operator [Visual Basic]
 - GetType keyword [Visual Basic]
 ms.assetid: 4f733297-2503-4607-850c-15eba65fff90
-caps.latest.revision: 17
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 38a984dce44133936f7f163e6afb20f0f336377c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 581f576222eb149aede841a5da7a0e5f38c77b58
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="gettype-operator-visual-basic"></a>GetType 연산자(Visual Basic)
 반환 된 <xref:System.Type> 지정된 된 형식에 대 한 개체입니다. <xref:System.Type> 개체의 속성, 메서드 및 이벤트와 같은 형식에 대 한 정보를 제공 합니다.  
@@ -56,7 +47,7 @@ GetType(typename)
   
  `GetType` 연산자는 다음과 같은 경우에 유용할 수 있습니다.  
   
--   런타임 시 형식에 대 한 메타 데이터에 액세스 해야 합니다. <xref:System.Type> 개체 형식 멤버 및 배포 정보 등의 메타 데이터를 제공 합니다. 해야이 예를 들어 어셈블리를 리플렉션 합니다. 자세한 내용은 <xref:System.Reflection?displayProperty=nameWithType>을 참조하십시오.  
+-   런타임 시 형식에 대 한 메타 데이터에 액세스 해야 합니다. <xref:System.Type> 개체 형식 멤버 및 배포 정보 등의 메타 데이터를 제공 합니다. 해야이 예를 들어 어셈블리를 리플렉션 합니다. 자세한 내용은 <xref:System.Reflection?displayProperty=nameWithType>을 참조하세요.  
   
 -   두 개체 참조가 동일한 형식의 인스턴스를 참조 하는 경우를 확인 하려면 비교 하려고 합니다. 그럴 경우 `GetType` 에 동일한 참조를 반환 <xref:System.Type> 개체입니다.  
   

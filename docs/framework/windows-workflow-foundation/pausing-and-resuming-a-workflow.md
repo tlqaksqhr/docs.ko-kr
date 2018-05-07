@@ -1,23 +1,12 @@
 ---
-title: "워크플로 일시 중지 및 다시 시작"
-ms.custom: 
+title: 워크플로 일시 중지 및 다시 시작
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 11f38339-79c7-4295-b610-24a7223bbf6d
-caps.latest.revision: "4"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: e51235105e9d2cdb1cad3847fb00ad5604061564
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 99455f117e5e8591750565452c3c40b74bf45ba1
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="pausing-and-resuming-a-workflow"></a>워크플로 일시 중지 및 다시 시작
 워크플로는 <xref:System.Activities.Statements.Delay>와 같은 차단 활동과 책갈피에 대한 응답으로 일시 중지되고 다시 시작되지만, 지속성을 사용하여 명시적으로 워크플로를 일시 중지하고 언로드하고 다시 시작할 수도 있습니다.  

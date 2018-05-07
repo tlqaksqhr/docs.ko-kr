@@ -1,13 +1,6 @@
 ---
-title: "응용 프로그램과 함께 글꼴 패키징"
-ms.custom: 
+title: 응용 프로그램과 함께 글꼴 패키징
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -17,16 +10,11 @@ helpviewer_keywords:
 - typography [WPF], packaging fonts with applications
 - packaging fonts with applications [WPF]
 ms.assetid: db15ee48-4d24-49f5-8b9d-a64460865286
-caps.latest.revision: "29"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: d3860aff69b0e4e7a3dc624898cc6b1daa0dd092
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 068a85a5fffd9b7463875695a4b494340ef66cd9
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="packaging-fonts-with-applications"></a>응용 프로그램과 함께 글꼴 패키징
 이 항목은 함께 패키지 글꼴에 방법의 개요를 제공 하면 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 응용 프로그램입니다.  
@@ -40,7 +28,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="introduction-to-packaging-fonts"></a>글꼴 패키징 소개  
  내에서 리소스 그룹으로 쉽게 글꼴을 패키지할 수 있습니다 프로그램 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 사용자 인터페이스 텍스트 및 다른 종류의 텍스트를 표시 하는 응용 프로그램 콘텐츠를 기반으로 합니다. 글꼴은 응용 프로그램의 어셈블리 파일 내에 포함하거나 별도로 저장할 수 있습니다. 리소스 전용 글꼴 라이브러리를 만들어 응용 프로그램에서 이를 참조하도록 할 수도 있습니다.  
   
- [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)]및 [!INCLUDE[TLA#tla_truetype](../../../../includes/tlasharptla-truetype-md.md)] 글꼴 fsType 글꼴 포함 라이선스 글꼴에 대 한 권한을 나타내는 형식 플래그를 포함 합니다. 그러나 이 형식 플래그는 문서에 저장된 포함된 글꼴만 참조하고 응용 프로그램에 포함된 글꼴은 참조하지 않습니다. 글꼴 인 글꼴에 대 한 권한을 만들어 포함을 검색할 수 있습니다는 <xref:System.Windows.Media.GlyphTypeface> 개체 참조와 해당 <xref:System.Windows.Media.GlyphTypeface.EmbeddingRights%2A> 속성입니다. "OS/2 및 Windows 메트릭을" 섹션을 참조는 [OpenType 사양](http://www.microsoft.com/typography/otspec/os2.htm) fsType 플래그에 대 한 자세한 내용은 합니다.  
+ [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] 및 [!INCLUDE[TLA#tla_truetype](../../../../includes/tlasharptla-truetype-md.md)] 글꼴 fsType 글꼴 포함 라이선스 글꼴에 대 한 권한을 나타내는 형식 플래그를 포함 합니다. 그러나 이 형식 플래그는 문서에 저장된 포함된 글꼴만 참조하고 응용 프로그램에 포함된 글꼴은 참조하지 않습니다. 글꼴 인 글꼴에 대 한 권한을 만들어 포함을 검색할 수 있습니다는 <xref:System.Windows.Media.GlyphTypeface> 개체 참조와 해당 <xref:System.Windows.Media.GlyphTypeface.EmbeddingRights%2A> 속성입니다. "OS/2 및 Windows 메트릭을" 섹션을 참조는 [OpenType 사양](http://www.microsoft.com/typography/otspec/os2.htm) fsType 플래그에 대 한 자세한 내용은 합니다.  
   
  [Microsoft 입력 체계](http://www.microsoft.com/typography/links/) 웹 사이트 특정 글꼴 공급 업체를 찾거나 사용자 지정 작업에 대 한 글꼴 공급 업체를 찾을 수 있는 연락처 정보를 포함 합니다.  
   

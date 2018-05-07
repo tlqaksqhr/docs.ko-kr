@@ -1,13 +1,6 @@
 ---
 title: Function 프로시저(Visual Basic)
-ms.custom: ''
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - Function procedures
 - return values [Visual Basic], function procedures
@@ -16,14 +9,11 @@ helpviewer_keywords:
 - procedures [Visual Basic], Function procedures
 - syntax [Visual Basic], function procedures
 ms.assetid: 1b9f632c-553b-4cb6-920a-ded117ead8c0
-caps.latest.revision: 27
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: ad4f55a9dd9fbd68c36dd53a01f97ddb03c2bb9b
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 887c930cb757b012542c97d64a57a62882a2eed3
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="function-procedures-visual-basic"></a>Function 프로시저(Visual Basic)
 A `Function` 절차는 일련의 Visual Basic 문으로 둘러싸인는 `Function` 및 `End Function` 문. `Function` 프로시저는 작업을 수행한 다음 호출 코드에 제어를 반환 합니다. 제어를 반환 하기 호출 코드에도 값을 반환 합니다.  
@@ -92,9 +82,9 @@ End Function
   
  에 대 한 호출에 대 한 구문은 `Function` 절차는 다음과 같습니다.  
   
- *lvalue*`=`*functionname* `[(` *argumentlist*  `)]`  
+ *lvalue*`=`*functionname* `[(` *argumentlist* `)]`  
   
- `If ((` *functionname* `[(` *argumentlist* `)] / 3) <=` *식*  `) Then`  
+ `If ((` *functionname* `[(` *argumentlist* `)] / 3) <=` *식* `) Then`  
   
  호출 하는 경우는 `Function` 프로시저 않아도 해당 반환 값을 사용 하도록 합니다. 이렇게 하지 않으면 함수는 모든 작업이 수행 되었는지, 있지만 반환 값은 무시 됩니다. <xref:Microsoft.VisualBasic.Interaction.MsgBox%2A> 이런이 방식으로 라고도 합니다.  
   

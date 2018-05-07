@@ -1,27 +1,15 @@
 ---
-title: "자동 레이아웃 사용 개요"
-ms.custom: 
+title: 자동 레이아웃 사용 개요
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - layout [WPF], automatic
 - automatic layout [WPF]
 ms.assetid: 6fed9264-18bb-4d05-8867-1fe356c6f687
-caps.latest.revision: "22"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 75066b59d0f3a686c66fdbdd187ba4c18e786e6d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 8693150099559ca09541eb790c134ca3d5277e78
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="use-automatic-layout-overview"></a>자동 레이아웃 사용 개요
 이 항목에서는 개발자가 작성 하는 방법에 대 한 지침을 소개 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 응용 프로그램을 지역화할 수 있는 [!INCLUDE[TLA#tla_ui#plural](../../../../includes/tlasharptla-uisharpplural-md.md)]합니다. 과거의 지역화 된 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 많은 시간이 소요 되었습니다. 각 언어는는 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 픽셀 단위의 조정이 필수 변형 되었습니다. 올바른 디자인 및 코딩 표준, 오른쪽 오늘 [!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)] 지역화 담당자가 크기 및 위치 조정 작업을 보다 적게를 생성할 수 있습니다. 보다 쉽게 크기 및 위치가 변경 될 수 있는 응용 프로그램을 작성 하는 방법을 자동 레이아웃 라고 하며 사용 하 여 구현할 수 있습니다 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 응용 프로그램 디자인.  
@@ -63,7 +51,7 @@ ms.lasthandoff: 12/22/2017
 |----------------------|-----------------|  
 |절대 위치를 사용하지 않습니다.|-사용 마십시오 <xref:System.Windows.Controls.Canvas> 요소를 절대 위치에 배치 하기 때문에 있습니다.<br />-사용 <xref:System.Windows.Controls.DockPanel>, <xref:System.Windows.Controls.StackPanel>, 및 <xref:System.Windows.Controls.Grid> 컨트롤을 배치 합니다.<br />-다양 한 유형의 패널에 대 한 논의 알려면 [패널 개요](../../../../docs/framework/wpf/controls/panels-overview.md)합니다.|  
 |창에 대해 고정 크기를 설정하지 않습니다.|-사용 <xref:System.Windows.Window.SizeToContent%2A>합니다.<br />-   예를 들면 다음과 같습니다.<br /><br /> [!code-xaml[LocalizationGrid#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/LocalizationGrid/CS/Pane1.xaml#2)]|  
-|<xref:System.Windows.FrameworkElement.FlowDirection%2A>를 추가합니다.|<ul><li>추가 <xref:System.Windows.FrameworkElement.FlowDirection%2A> 을 응용 프로그램의 루트 요소입니다.</li><li>[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]는 가로, 양방향 및 세로 레이아웃을 지원하는 편리한 방법을 제공합니다. 프레젠테이션 프레임 워크에는 <xref:System.Windows.FrameworkElement.FlowDirection%2A> 레이아웃을 정의 하려면 속성을 사용할 수 있습니다. 흐름 방향 패턴은 다음과 같습니다.<br /><br /> <ul><li><xref:System.Windows.FlowDirection.LeftToRight>(LrTb)-라틴 문자, 동아시아, 등에 대 한 가로 레이아웃 합니다.</li><li><xref:System.Windows.FlowDirection.RightToLeft>(RlTb)-아랍어, 히브리어, 등을 위한 양방향입니다.</li></ul></li></ul>|  
+|<xref:System.Windows.FrameworkElement.FlowDirection%2A>를 추가합니다.|<ul><li>추가 <xref:System.Windows.FrameworkElement.FlowDirection%2A> 을 응용 프로그램의 루트 요소입니다.</li><li>[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]는 가로, 양방향 및 세로 레이아웃을 지원하는 편리한 방법을 제공합니다. 프레젠테이션 프레임 워크에는 <xref:System.Windows.FrameworkElement.FlowDirection%2A> 레이아웃을 정의 하려면 속성을 사용할 수 있습니다. 흐름 방향 패턴은 다음과 같습니다.<br /><br /> <ul><li><xref:System.Windows.FlowDirection.LeftToRight> (LrTb)-라틴 문자, 동아시아, 등에 대 한 가로 레이아웃 합니다.</li><li><xref:System.Windows.FlowDirection.RightToLeft> (RlTb)-아랍어, 히브리어, 등을 위한 양방향입니다.</li></ul></li></ul>|  
 |실제 글꼴 대신 합성 글꼴을 사용합니다.|<ul><li>합성 글꼴을 사용의 <xref:System.Windows.Controls.Control.FontFamily%2A> 속성이 지역화 될 필요는 없습니다.</li><li>개발자는 다음 글꼴 중 하나를 사용하거나 직접 만들 수 있습니다.<br /><br /> <ul><li>전역 사용자 인터페이스</li><li>전역 San Serif</li><li>전역 Serif</li></ul></li></ul>|  
 |xml:lang를 추가합니다.|-추가 `xml:lang` 특성의 루트 요소에 프로그램 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]와 같은 `xml:lang="en-US"` 영어 응용 프로그램에 대 한 합니다.<br />-합성 글꼴 사용 하므로 `xml:lang` 사용할 글꼴을 알아보려면 다국어 시나리오를 지원 하도록이 속성을 설정 합니다.|  
   

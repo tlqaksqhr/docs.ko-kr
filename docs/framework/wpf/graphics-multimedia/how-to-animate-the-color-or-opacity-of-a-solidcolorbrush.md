@@ -1,13 +1,6 @@
 ---
-title: "방법: SolidColorBrush의 색 또는 불투명도에 애니메이션 효과 적용"
-ms.custom: 
+title: '방법: SolidColorBrush의 색 또는 불투명도에 애니메이션 효과 적용'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - SolidColorBrush [WPF], animating color of
 - colors [WPF], animating
@@ -16,21 +9,16 @@ helpviewer_keywords:
 - animation [WPF], opacity of SolidColorBrush
 - SolidColorBrush [WPF], animating opacity of
 ms.assetid: d9154354-843f-4713-bad1-35bb0ba6eaeb
-caps.latest.revision: "11"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 4bac3ae90fa0fa2229e236f46b8884c942b99bef
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 2457bdb794d81e7c482f735cad4ade34564328e2
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-animate-the-color-or-opacity-of-a-solidcolorbrush"></a>방법: SolidColorBrush의 색 또는 불투명도에 애니메이션 효과 적용
 애니메이션 효과 적용 하는 방법을 보여 주는이 예제는 <xref:System.Windows.Media.SolidColorBrush.Color%2A> 및 <xref:System.Windows.Media.Brush.Opacity%2A> 의 <xref:System.Windows.Media.SolidColorBrush>합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 예제에서는 세 애니메이션을 사용 하 여 애니메이션 효과를 줄의 <xref:System.Windows.Media.SolidColorBrush.Color%2A> 및 <xref:System.Windows.Media.Brush.Opacity%2A> 의 <xref:System.Windows.Media.SolidColorBrush>합니다.  
   
 -   첫 번째 애니메이션은 <xref:System.Windows.Media.Animation.ColorAnimation>, 브러시의 색을 변경 <xref:System.Windows.Media.Colors.Gray%2A> 마우스 사각형 안으로 이동할 때.  

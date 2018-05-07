@@ -1,13 +1,7 @@
 ---
-title: "날짜 및 시간에 대한 산술 연산 수행"
-ms.custom: 
+title: 날짜 및 시간에 대한 산술 연산 수행
 ms.date: 04/10/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -20,18 +14,13 @@ helpviewer_keywords:
 - DateTime structure, arithmetic operations
 - DateTimeOffset structure, arithmetic operations
 ms.assetid: 87c7ddf2-f15e-48af-8602-b3642237e6d0
-caps.latest.revision: "9"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: edad8fc6643b90afc8327b574e19b178270829b3
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 5bbd5afb89d2b992e06583c7427c1a25a5b8f273
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="performing-arithmetic-operations-with-dates-and-times"></a>날짜 및 시간에 대한 산술 연산 수행
 
@@ -46,7 +35,7 @@ ms.lasthandoff: 12/23/2017
 
 <xref:System.DateTime.CompareTo%28System.DateTime%29> 메서드가 현지 시간 보다 이전 인지를 보고 (또는 미만)는 UTC 시간과 빼기 연산을 나타내는 미국에서 UTC와 시스템에 대 한 현지 시간 사이의 차이 태평양 표준 시간대는 7시간입니다. 하지만 이러한 두 개의 값은 시간에서 단일 지점의 다양한 표현을 제공하기 때문에 이 경우에 이 시간 간격이 UTC에서 현지 표준 시간대 오프셋을 발생시키는 것이 명확합니다.
 
-보다 일반적으로 <xref:System.DateTime.Kind%2A?displayProperty=nameWithType> 속성에서 반환 된 결과 영향을 주지 않는 <xref:System.DateTime.Kind> 비교 및 산술 메서드 (나타나듯이 동일한 두 지정 시간 비교) 그 결과 해석에 영향을 줄 수 있지만, 합니다. 예:
+보다 일반적으로 <xref:System.DateTime.Kind%2A?displayProperty=nameWithType> 속성에서 반환 된 결과 영향을 주지 않는 <xref:System.DateTime.Kind> 비교 및 산술 메서드 (나타나듯이 동일한 두 지정 시간 비교) 그 결과 해석에 영향을 줄 수 있지만, 합니다. 예를 들어:
 
 * 두 날짜 및 시간 값에서 모든 산술 연산의 결과 수행 갖는 <xref:System.DateTime.Kind%2A?displayProperty=nameWithType> 속성이 둘 다 <xref:System.DateTimeKind> 두 값 사이의 실제 시간 간격을 반영 합니다. 마찬가지로 이러한 두 개의 날짜 및 시간 값을 비교하면 시간 간의 관계를 정확하게 반영합니다.
 
@@ -95,7 +84,7 @@ A <xref:System.DateTimeOffset> 날짜 및 시간 뿐만 아니라 날짜 및 시
 [!code-csharp[System.DateTimeOffset.Conceptual#5](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual/cs/Conceptual5.cs#5)]
 [!code-vb[System.DateTimeOffset.Conceptual#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual/vb/Conceptual5.vb#5)]
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참고자료
 
 [날짜, 시간 및 표준 시간대](../../../docs/standard/datetime/index.md)
 [하는 방법: 표준 시간대를 사용 하 여 날짜 및 시간 산술 연산](../../../docs/standard/datetime/use-time-zones-in-arithmetic.md)

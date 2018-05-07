@@ -1,24 +1,16 @@
 ---
 title: 문자열 조작 요약(Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - string functions
 - manipulating strings [Visual Basic]
 - strings [Visual Basic], manipulating
 ms.assetid: 5d3197eb-fe66-417e-9e2a-20450660c9c6
-caps.latest.revision: 11
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 53cfaba03ed3616ef17af96d389fd65715bed678
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 350a2b520fbdb3b757975782c40870b8d45166cc
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="string-manipulation-summary-visual-basic"></a>문자열 조작 요약(Visual Basic)
 Visual Basic 언어 키워드 및 런타임 라이브러리 멤버 용도 따라 구성 하 고 사용 합니다.  

@@ -1,28 +1,18 @@
 ---
-title: "프로파일링 인터페이스"
-ms.custom: 
-ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
+title: 프로파일링 인터페이스
+ms.date: 04/10/2018
 helpviewer_keywords:
 - unmanaged interfaces [.NET Framework], profiling
 - profiling interfaces [.NET Framework]
 - interfaces [.NET Framework profiling]
 ms.assetid: d9303db8-e881-4217-91b7-8c7573c8ef9e
-caps.latest.revision: "31"
-author: mairaw
-ms.author: mairaw
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 4f8c2a5ce5e1231c55f598e48d14bec896a4b5f4
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+author: rpetrusha
+ms.author: ronpet
+ms.openlocfilehash: 059fadc5607e76b871083682136fda542ae9bacf
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="profiling-interfaces"></a>프로파일링 인터페이스
 이 섹션에서는 CLR(공용 언어 런타임)에서 실행되는 프로그램을 프로파일링하는 데 사용할 수 있는 관리되지 않는 인터페이스에 대해 설명합니다.  
@@ -54,7 +44,13 @@ ms.lasthandoff: 12/22/2017
   
  [ICorProfilerCallback7 인터페이스](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback7-interface.md)  
  메모리 내 모듈과 연관 된 기호 스트림이 업데이트 되었음을 프로파일러에 알리기 위해 공용 언어 런타임에서 사용 하는 콜백 메서드를 제공 합니다.  
-  
+
+[ICorProfilerCallback8 인터페이스](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback8-interface.md)  
+동적 메서드의 JIT 컴파일 시작 되 고 완료 하는 프로파일러에 알리기 위해 공용 언어 런타임에서 사용 하는 콜백 메서드를 제공 합니다.
+
+[ICorProfilerCallback9 인터페이스](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback9-interface.md)  
+동적 메서드는 가비지 수집 되 고 이후에 언로드된 프로파일러에 알리기 위해 공용 언어 런타임에서 사용 하는 콜백 메서드를 제공 합니다.
+
  [ICorProfilerFunctionControl 인터페이스](../../../../docs/framework/unmanaged-api/profiling/icorprofilerfunctioncontrol-interface.md)  
  코드 프로파일러가 CLR과 통신하여 특정 메서드를 다시 컴파일할 때 JIT 컴파일러가 코드를 생성하는 방법을 제어할 수 있도록 하는 메서드를 제공합니다.  
   

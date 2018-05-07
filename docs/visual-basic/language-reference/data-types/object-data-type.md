@@ -1,10 +1,6 @@
 ---
 title: Object Data Type
 ms.date: 07/20/2015
-ms.prod: .net
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.Object
 - vb.Variant
@@ -14,14 +10,11 @@ helpviewer_keywords:
 - Object data type
 - Object data type [Visual Basic], reference
 ms.assetid: 61ea4a7c-3b3d-48d4-adc4-eacfa91779b2
-caps.latest.revision: "19"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 847f2b50296ad1a1ba6f0009d1d6afced27f9abe
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: e9b1da5a88c12e0d883c3afe63be98c3fa3e9173
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="object-data-type"></a>Object Data Type
 개체를 참조 하는 주소를 저장 합니다. 참조 형식 (문자열, 배열, 클래스 또는 인터페이스)를 할당할 수 있습니다는 `Object` 변수입니다. `Object` 변수 값 형식의 데이터에도 참조할 수 있습니다 (숫자, `Boolean`, `Char`, `Date`, 구조체 또는 열거형)입니다.  
@@ -58,7 +51,7 @@ datTyp = Type.GetTypeCode(myObject.GetType())
   
      그러나 다른 값 형식으로 변환 하는 경우 및 `Object`, 작업을 수행 하는 Visual Basic *boxing* 및 *unboxing*, 실행 속도가 느린 확인입니다.  
   
--   **형식 문자입니다.** `Object`에 리터럴 형식 문자 또는 식별자 형식 문자가 없습니다.  
+-   **형식 문자입니다.** `Object` 에 리터럴 형식 문자 또는 식별자 형식 문자가 없습니다.  
   
 -   **Framework 형식입니다.** .NET Framework에 있는 해당 형식이 고 <xref:System.Object?displayProperty=nameWithType> 클래스입니다.  
   

@@ -1,14 +1,6 @@
 ---
-title: "Button 스타일 및 템플릿"
-ms.custom: 
+title: Button 스타일 및 템플릿
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - states [WPF], Button
 - parts [WPF], Button
@@ -17,17 +9,11 @@ helpviewer_keywords:
 - templates [WPF], Button
 - ControlTemplate [WPF], Button
 ms.assetid: e223c759-f8c4-4717-acfb-b1e40bdf5f3b
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: d783b3141463ca2c74ddd649848ea49e154415b6
-ms.sourcegitcommit: 96cc82cac4650adfb65ba351506d8a8fbcd17b5c
+ms.openlocfilehash: 982a1497748883d55938f975164adb44822216cd
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="button-styles-and-templates"></a>Button 스타일 및 템플릿
 이 항목에서는 스타일 및 서식 파일에 대 한 설명의 <xref:System.Windows.Controls.Button> 제어 합니다. 기본값을 수정할 수 <xref:System.Windows.Controls.ControlTemplate> 고유한 모양을 제어할 수 있습니다. 자세한 내용은 [ControlTemplate을 만들어 기존 컨트롤의 모양 사용자 지정](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md)을 참조하세요.  

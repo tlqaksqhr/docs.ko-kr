@@ -1,13 +1,6 @@
 ---
-title: "WPF 추가 기능 개요"
-ms.custom: 
+title: WPF 추가 기능 개요
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - add-ins and XAML browser applications [WPF]
 - add-ins overview [WPF]
@@ -19,16 +12,11 @@ helpviewer_keywords:
 - add-ins [WPF], architecture
 - add-ins [WPF], limitations
 ms.assetid: 00b4c776-29a8-4dba-b603-280a0cdc2ade
-caps.latest.revision: "36"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ffd45957b41cdfd8488aedd865aa70ef5b2634b2
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 942f5706a83a9f9e9cd969701ed5625c57b76f83
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="wpf-add-ins-overview"></a>WPF 추가 기능 개요
 <a name="Introduction"></a> [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]에는 개발자가 추가 기능 확장성을 지원하는 응용 프로그램을 만드는 데 사용할 수 있는 추가 기능 모델이 포함되어 있습니다. 이 추가 기능 모델을 사용하면 응용 프로그램 기능과 통합하고 이 기능을 확장하는 추가 기능을 만들 수 있습니다. 일부 시나리오에서는 응용 프로그램에서 추가 기능을 통해 제공되는 [!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)]도 표시해야 합니다. 이 항목에서는 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]가 이러한 시나리오를 가능하게 하는 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 추가 기능 모델을 보강하는 방법, 그 기반이 되는 아키텍처, 해당 이점 및 한계를 보여줍니다.  
@@ -36,7 +24,7 @@ ms.lasthandoff: 01/19/2018
 
   
 <a name="Requirements"></a>   
-## <a name="prerequisites"></a>필수 구성 요소  
+## <a name="prerequisites"></a>전제 조건  
  [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 추가 기능 모델에 대해 잘 알고 있어야 합니다. 자세한 내용은 [추가 기능 및 확장성](../../../../docs/framework/add-ins/index.md)을 참조하세요.  
   
 <a name="AddInsOverview"></a>   
@@ -115,7 +103,7 @@ ms.lasthandoff: 01/19/2018
   
  [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 형식은 원격으로 사용할 수 없습니다. 문제점을 해결하기 위해 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]에서는 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 추가 기능 모델을 확장하여 추가 기능을 통해 만들어진 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]를 호스트 응용 프로그램에서 표시할 수 있게 합니다. 이 지원은가 제공 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 두 유형을 통해:는 <xref:System.AddIn.Contract.INativeHandleContract> 인터페이스 및 두 개의 정적 메서드를 구현한는 <xref:System.AddIn.Pipeline.FrameworkElementAdapters> 클래스: <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ContractToViewAdapter%2A> 및 <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A>합니다. 상위 수준에서는 대략적으로 이러한 형식과 메서드가 다음과 같은 방식으로 사용됩니다.  
   
-1.  [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]사용 하려면 [!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)] 제공한 추가 기능에서 직접 또는 간접적으로 파생 된 클래스는 <xref:System.Windows.FrameworkElement>, 셰이프, 컨트롤, 사용자 정의 컨트롤, 레이아웃 패널 및 페이지 등.  
+1.  [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 사용 하려면 [!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)] 제공한 추가 기능에서 직접 또는 간접적으로 파생 된 클래스는 <xref:System.Windows.FrameworkElement>, 셰이프, 컨트롤, 사용자 정의 컨트롤, 레이아웃 패널 및 페이지 등.  
   
 2.  UI를 추가 하 고 호스트 응용 프로그램 간에 전달 되는 선언 하는 계약, 때마다로 선언 되어야 합니다는 <xref:System.AddIn.Contract.INativeHandleContract> (하지는 <xref:System.Windows.FrameworkElement>); <xref:System.AddIn.Contract.INativeHandleContract> 추가 기능에 대 한 원격 가능 표현인 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 격리 경계를 넘어 전달할 수 있습니다.  
   
@@ -202,7 +190,7 @@ ms.lasthandoff: 01/19/2018
   
 1.  [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] 프로젝트를 마우스 오른쪽 단추로 클릭하고, **속성**, **게시** 순으로 클릭한 다음 **응용 프로그램 파일** 단추를 클릭합니다.  
   
-2.  **응용 프로그램 파일** 대화 상자에서 각 파이프라인과 추가 기능 DLL의 **게시 상태**를 **포함(자동)**으로 설정하고 각 파이프라인과 추가 기능 DLL에 대해 **그룹 다운로드**을 **(필수)**로 설정합니다.  
+2.  **응용 프로그램 파일** 대화 상자에서 각 파이프라인과 추가 기능 DLL의 **게시 상태**를 **포함(자동)** 으로 설정하고 각 파이프라인과 추가 기능 DLL에 대해 **그룹 다운로드**을 **(필수)** 로 설정합니다.  
   
 ### <a name="using-the-pipeline-and-add-in-from-the-application-base"></a>응용 프로그램 기준 위치에서 파이프라인과 추가 기능 사용  
  파이프라인 및 추가 기능이 [!INCLUDE[TLA2#tla_clickonce](../../../../includes/tla2sharptla-clickonce-md.md)] 배포용으로 구성되면 [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)]와 동일한 [!INCLUDE[TLA2#tla_clickonce](../../../../includes/tla2sharptla-clickonce-md.md)] 캐시 폴더에 다운로드됩니다. [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)]의 파이프라인과 추가 기능을 사용하려면 [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] 코드를 통해 응용 프로그램 기준 위치에서 가져와야 합니다. 파이프라인과 추가 기능을 사용하기 위한 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 추가 기능 모델의 다양한 형식과 멤버에서 이 시나리오를 위한 특수 지원을 제공합니다. 경로으로 식별 되는 첫째, 고 <xref:System.AddIn.Hosting.PipelineStoreLocation.ApplicationBase> 열거형 값입니다. 다음을 포함하는 파이프라인을 사용하기 위해 관련 추가 기능 멤버의 오버로드와 함께 이 값을 사용합니다.  
@@ -230,7 +218,7 @@ ms.lasthandoff: 01/19/2018
   
 -   호스트 응용 프로그램 쪽에서 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 가져오며는 <xref:System.Windows.Interop.HwndSource> 는 내부 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 에서 파생 된 클래스 <xref:System.Windows.Interop.HwndHost> 소비 및 <xref:System.AddIn.Contract.INativeHandleContract>합니다. 이 클래스의 인스턴스 반환한 <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ContractToViewAdapter%2A> 호스트 응용 프로그램입니다.  
   
- <xref:System.Windows.Interop.HwndHost>표시 하기 위해 존재 [!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)], 창 핸들에서 공백과 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] [!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)]합니다. 자세한 내용은 [WPF 및 Win32 상호 운용성](../../../../docs/framework/wpf/advanced/wpf-and-win32-interoperation.md)을 참조하세요.  
+ <xref:System.Windows.Interop.HwndHost> 표시 하기 위해 존재 [!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)], 창 핸들에서 공백과 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] [!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)]합니다. 자세한 내용은 [WPF 및 Win32 상호 운용성](../../../../docs/framework/wpf/advanced/wpf-and-win32-interoperation.md)을 참조하세요.  
   
  요약 하자면, <xref:System.AddIn.Contract.INativeHandleContract>, <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A>, 및 <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ContractToViewAdapter%2A> 에 대 한 창 핸들을 허용 하기 위해 존재는 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 로 캡슐화 되는 호스트 응용 프로그램에 전달할 추가 기능에서 <xref:System.Windows.Interop.HwndHost> 호스트를 표시 합니다. 응용 프로그램의 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]합니다.  
   

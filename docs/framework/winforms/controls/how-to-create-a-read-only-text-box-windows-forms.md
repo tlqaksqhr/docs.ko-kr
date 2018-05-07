@@ -1,28 +1,16 @@
 ---
-title: "방법: 읽기 전용 텍스트 상자 만들기(Windows Forms)"
-ms.custom: 
+title: '방법: 읽기 전용 텍스트 상자 만들기(Windows Forms)'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - TextBox control [Windows Forms], read-only
 - read-only text boxes
 - text boxes [Windows Forms], read-only
 ms.assetid: 60baa9ab-fa57-44ad-bb7c-61b05aa64296
-caps.latest.revision: "9"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 264ef1a7c1f121f889d57dcb0e36e216610418fe
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 06e03f67bd1f084b30bce85c3d81ad7b8c97a1b2
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-a-read-only-text-box-windows-forms"></a>방법: 읽기 전용 텍스트 상자 만들기(Windows Forms)
 읽기 전용 컨트롤에 있는 편집 가능한 Windows Forms의 텍스트 상자를 변형할 수 있습니다. 예를 들어 텍스트 상자는 일반적으로 편집 되지만 아닐 현재 응용 프로그램의 상태로 인해 하는 값을 표시할 수 있습니다.  

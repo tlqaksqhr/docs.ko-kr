@@ -1,9 +1,6 @@
 ---
-title: "연습: 구성 요소 디자이너에서 Windows 서비스 응용 프로그램 만들기"
+title: '연습: 구성 요소 디자이너에서 Windows 서비스 응용 프로그램 만들기'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.technology: dotnet-clr
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -11,16 +8,13 @@ helpviewer_keywords:
 - Windows Service applications, walkthroughs
 - Windows Service applications, creating
 ms.assetid: e24d8a3d-edc6-485c-b6e0-5672d91fb607
-caps.latest.revision: "57"
 author: ghogen
-ms.author: ghogen
 manager: douge
-ms.workload: dotnet
-ms.openlocfilehash: 42fc5f27f1c78e243ff1d3a705c61a20ff459937
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: c33b8badcacd4e228d70f8e770d4bf27144c29eb
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="walkthrough-creating-a-windows-service-application-in-the-component-designer"></a>연습: 구성 요소 디자이너에서 Windows 서비스 응용 프로그램 만들기
 이 문서에서는 이벤트 로그에 메시지를 쓰는 간단한 Windows 서비스 응용 프로그램을 Visual Studio에서 만드는 방법을 보여 줍니다. 서비스를 만들고 사용하기 위해 수행하는 기본적인 단계는 다음과 같습니다.  

@@ -1,28 +1,19 @@
 ---
-title: 함수 &#39; &lt;procedurename&gt;&#39; 대상이 &#39; t 일부 코드 경로에 값을 반환 합니다.
+title: 함수 &#39; &lt;procedurename&gt; &#39; 대상이&#39;모든 코드 경로 에서만 값을 반환 하는 t
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - bc42105
 - vbc42105
 helpviewer_keywords:
 - BC42105
 ms.assetid: b6929bf4-a365-4a70-8dc9-6b0fc09e1468
-caps.latest.revision: 12
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 5244d97a79f2450f44fe05f63510369914375912
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 4c18c6229eb170e8a688aaa2734ae8fbfa081061
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="function-39ltprocedurenamegt39-doesn39t-return-a-value-on-all-code-paths"></a>함수 &#39; &lt;procedurename&gt;&#39; 대상이 &#39; t 일부 코드 경로에 값을 반환 합니다.
+# <a name="function-39ltprocedurenamegt39-doesn39t-return-a-value-on-all-code-paths"></a>함수 &#39; &lt;procedurename&gt; &#39; 대상이&#39;모든 코드 경로 에서만 값을 반환 하는 t
 함수 '\<procedurename >' 모든 코드 경로 대해서만 값을 반환 합니다. 'Return' 문은 없습니다?  
   
  A `Function` 프로시저 코드 값을 반환 하지 않는 통해 하나 이상의 경로가 있습니다.  

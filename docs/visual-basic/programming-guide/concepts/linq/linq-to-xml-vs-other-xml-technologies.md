@@ -1,23 +1,12 @@
 ---
 title: LINQ to XML과 비교 다른 XML Technologies2
-ms.custom: ''
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 72ce3a82-ffc6-488c-98e7-b9b40f3591ec
-caps.latest.revision: 3
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: fdc9c950be0d0ec573b093a72b1e7f3b0da861b7
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 926f1a1ab49a627331a614ef68790ea289b3dcff
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="linq-to-xml-vs-other-xml-technologies"></a>LINQ to XML과 비교 기타 XML 기술 비교
 이 항목에서는 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)], <xref:System.Xml.XmlReader>, XSLT, MSXML 및 XmlLite와 같은 XML 기술을 비교합니다. 이 정보는 사용할 기술을 결정할 때 유용할 수 있습니다.  
@@ -51,7 +40,7 @@ ms.lasthandoff: 04/26/2018
 ## <a name="linq-to-xml-vs-msxml"></a>LINQ to XML과 비교 MSXML  
  MSXML은 Microsoft Windows에 포함된 XML을 처리할 수 있는 COM 기반 기술입니다. MSXML은 XPath 및 XSLT를 지원하는 DOM의 기본적인 구현을 제공하며 캐시하지 않는 이벤트 기반의 SAX2 파서도 포함하고 있습니다.  
   
- MSXML은 성능이 좋으며 대부분의 시나리오에서 기본적으로 안전합니다. AJAX 스타일의 응용 프로그램에서 클라이언트측 XML 처리를 수행하기 위해 Internet Explorer에서 MSXML에 액세스할 수 있습니다. C + +, JavaScript 및 Visual Basic 6.0을 포함 하 여 COM을 지 원하는 모든 프로그래밍 언어에서 MSXML은 사용할 수 있습니다.  
+ MSXML은 성능이 좋으며 대부분의 시나리오에서 기본적으로 안전합니다. AJAX 스타일의 응용 프로그램에서 클라이언트측 XML 처리를 수행하기 위해 Internet Explorer에서 MSXML에 액세스할 수 있습니다. C++, JavaScript 및 Visual Basic 6.0을 비롯한 COM을 지원하는 모든 프로그래밍 언어에서 MSXML을 사용할 수 있습니다.  
   
  CLR(공용 언어 런타임) 기반의 관리 코드에서는 MSXML을 사용하지 않는 것이 좋습니다.  
   

@@ -1,28 +1,16 @@
 ---
-title: "연습: Windows Forms 컨트롤에서 스마트 태그를 사용하여 일반 작업 수행"
-ms.custom: 
+title: '연습: Windows Forms 컨트롤에서 스마트 태그를 사용하여 일반 작업 수행'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - DesignerAction object model
 - smart tags
 - designer actions
 ms.assetid: cac337e6-00f6-4584-80f4-75728f5ea113
-caps.latest.revision: "15"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: e2fb4e8bf710e55be0a817a4154dfbce114db191
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: a558f6d274f260fc91fd140e9dae2c740b1ae00d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="walkthrough-performing-common-tasks-using-smart-tags-on-windows-forms-controls"></a>연습: Windows Forms 컨트롤에서 스마트 태그를 사용하여 일반 작업 수행
 Windows Forms 응용 프로그램에 대 한 폼과 컨트롤을 구성할 때에 반복 해 서 수행 하는 많은 작업이 있습니다. 일반적으로 수행된 하는 작업 중 일부입니다.  

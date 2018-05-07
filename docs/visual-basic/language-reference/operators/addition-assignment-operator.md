@@ -1,12 +1,6 @@
 ---
 title: += 연산자(Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.+=
 helpviewer_keywords:
@@ -16,14 +10,11 @@ helpviewer_keywords:
 - += operator [Visual Basic], appending strings
 - compound assignment statements [Visual Basic]
 ms.assetid: d3e959f4-85d4-4e47-87c4-77b62335a5b3
-caps.latest.revision: 16
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 4ac8f5679aa90c50c15c33a957cfc75d9ccecde6
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: f12a0560d984f871110c02f1df2c2ec42b68809b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="-operator-visual-basic"></a>+= 연산자(Visual Basic)
 숫자 변수 또는 속성의 값에는 숫자 식의 값을 추가 하 고 변수 또는 속성에는 결과 할당 합니다. 연결을 사용할 수도 있습니다는 `String` 식에는 `String` 변수 또는 속성 및 결과 변수나 속성에 할당 합니다.  
@@ -36,10 +27,10 @@ variableorproperty += expression
   
 ## <a name="parts"></a>요소  
  `variableorproperty`  
- 필수 요소. 모든 숫자 또는 `String` 변수 또는 속성입니다.  
+ 필수. 모든 숫자 또는 `String` 변수 또는 속성입니다.  
   
  `expression`  
- 필수 요소. 모든 숫자 또는 `String` 식입니다.  
+ 필수. 모든 숫자 또는 `String` 식입니다.  
   
 ## <a name="remarks"></a>설명  
  왼쪽에 요소는 `+=` 연산자는 간단한 스칼라 변수, 속성 또는 배열의 요소 될 수 있습니다. 변수 또는 속성 수 없습니다 [ReadOnly](../../../visual-basic/language-reference/modifiers/readonly.md)합니다.  

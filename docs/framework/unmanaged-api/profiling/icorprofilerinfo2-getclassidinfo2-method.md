@@ -1,14 +1,6 @@
 ---
-title: "ICorProfilerInfo2::GetClassIDInfo2 메서드"
-ms.custom: 
+title: ICorProfilerInfo2::GetClassIDInfo2 메서드
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICorProfilerInfo2.GetClassIDInfo2
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: 0141d582-d066-4d49-8d1f-ae82129a1960
 topic_type:
 - apiref
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: e0348462cdbff14486b31e1878f06b7565b47182
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 2af0eacbff8220be7f2286f7f345f14126972261
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="icorprofilerinfo2getclassidinfo2-method"></a>ICorProfilerInfo2::GetClassIDInfo2 메서드
 부모 모듈 및 메타 데이터 지정된 된 클래스의 제네릭 정의 열기에 대 한 토큰 가져옵니다는 `ClassID` , 부모 클래스의 및 `ClassID` 있는 클래스의 경우 각 형식 인수에 대 한 합니다.  
@@ -89,7 +77,7 @@ HRESULT GetClassIDInfo2(
   
  **라이브러리:** CorGuids.lib  
   
- **.NET framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>참고 항목  
  [ICorProfilerInfo 인터페이스](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)  

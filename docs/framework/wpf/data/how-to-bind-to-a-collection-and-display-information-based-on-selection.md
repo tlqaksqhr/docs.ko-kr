@@ -1,13 +1,6 @@
 ---
-title: "방법: 선택에 따라 수집 및 표시 정보에 바인딩"
-ms.custom: 
+title: '방법: 선택에 따라 수집 및 표시 정보에 바인딩'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -17,21 +10,16 @@ helpviewer_keywords:
 - data binding [WPF], selecting data for views
 - data binding [WPF], binding to collections
 ms.assetid: 952a7d76-dd29-49e5-86f5-32c4530e70eb
-caps.latest.revision: "11"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a751025470b566ef1e735e4ddd192cfd8fc354ad
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 154f4b9b6024d064e73d64c44e2398a5da47052c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-bind-to-a-collection-and-display-information-based-on-selection"></a>방법: 선택에 따라 수집 및 표시 정보에 바인딩
 데이터 바인딩된 있는 간단한 마스터-세부 시나리오에서 <xref:System.Windows.Controls.ItemsControl> 와 같은 <xref:System.Windows.Controls.ListBox>합니다. 선택한 항목에 대 한 자세한 정보를 표시할 사용자 선택에 따라 있습니다. 이 예제에서는이 시나리오를 구현 하는 방법을 보여 줍니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  이 예제에서는 `People` 는 <xref:System.Collections.ObjectModel.ObservableCollection%601> 의 `Person` 클래스입니다. 이 `Person` 세 가지 속성을 포함 하는 클래스: `FirstName`, `LastName`, 및 `HomeTown`, 유형의 `string`합니다.  
   
  [!code-xaml[CollectionBinding#Source](../../../../samples/snippets/csharp/VS_Snippets_Wpf/CollectionBinding/CSharp/Window1.xaml#source)]  

@@ -1,13 +1,6 @@
 ---
-title: "방법: 런타임에 그림 설정(Windows Forms)"
-ms.custom: 
+title: '방법: 런타임에 그림 설정(Windows Forms)'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -20,16 +13,11 @@ helpviewer_keywords:
 - images [Windows Forms], adding with PictureBox control [Windows Forms]
 - PictureBox control [Windows Forms], adding pictures
 ms.assetid: 18ca41d0-68a5-4660-985e-a6c1fbc01d76
-caps.latest.revision: "14"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 6fd0e990b494bc0b7a3008f211aa6ded9e04d732
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: fedddf56966c3ab11a1dfb20c1d4cbd8a45fb1a9
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-set-pictures-at-run-time-windows-forms"></a>방법: 런타임에 그림 설정(Windows Forms)
 Windows Forms에 표시 되는 이미지를 프로그래밍 방식으로 설정할 수 있습니다 <xref:System.Windows.Forms.PictureBox> 제어 합니다.  

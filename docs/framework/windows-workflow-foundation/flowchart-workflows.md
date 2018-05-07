@@ -1,23 +1,12 @@
 ---
-title: "순서도 워크플로"
-ms.custom: 
+title: 순서도 워크플로
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: b0a3475c-d22f-49eb-8912-973c960aebf5
-caps.latest.revision: "22"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ddfa98a8b9de0b362a27b55d4cd9a4c02ac8a761
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: dd013e47da881c16d1fa469dfc3e3c4f2a86b6e2
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="flowchart-workflows"></a>순서도 워크플로
 순서도는 잘 알려진 프로그램 설계용 패러다임입니다. Flowchart 활동은 일반적으로 순차적이 아닌 워크플로를 구현하는 데 사용하지만, `FlowDecision` 노드를 사용하지 않는 경우 순차적 워크플로에도 사용할 수 있습니다.  

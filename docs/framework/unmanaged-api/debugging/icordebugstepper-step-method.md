@@ -1,14 +1,6 @@
 ---
-title: "ICorDebugStepper::Step 메서드"
-ms.custom: 
+title: ICorDebugStepper::Step 메서드
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICorDebugStepper.Step
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: 38c1940b-ada1-40ba-8295-4c0833744e1e
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: f921725d6794f08530a537462208264ced1dc089
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: c2d282e27ec5068fa6fe7f58ba95458fdc219972
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="icordebugstepperstep-method"></a>ICorDebugStepper::Step 메서드
 한 단계씩 실행 하려면 필요에 따라 하 고 포함 스레드를 통해이 ICorDebugStepper로 인해 스레드 내에서 호출 된 함수를 통해 단일 단계를 계속 합니다.  
@@ -60,4 +48,4 @@ HRESULT Step (
   
  **라이브러리:** CorGuids.lib  
   
- **.NET framework 버전:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **.NET framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

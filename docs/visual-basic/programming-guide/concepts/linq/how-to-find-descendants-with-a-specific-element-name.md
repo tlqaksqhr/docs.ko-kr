@@ -1,22 +1,12 @@
 ---
-title: "방법: 특정 자식 이름 (Visual Basic)으로 하위 항목 찾기"
-ms.custom: 
+title: '방법: 특정 자식 이름 (Visual Basic)으로 하위 항목 찾기'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 78915518-0d25-4051-ab55-929779989510
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 076a2d6707cf0f09945030cfe75814c195cdd6cd
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: c6f702c121f6a8b9aa5750b4c5ff70c00e681b82
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-find-descendants-with-a-specific-element-name-visual-basic"></a>방법: 특정 자식 이름 (Visual Basic)으로 하위 항목 찾기
 특정 이름을 가진 모든 하위 요소를 찾으려는 경우가 있습니다. 모든 하위 요소를 반복하는 코드를 작성할 수 있지만 <xref:System.Xml.Linq.XContainer.Descendants%2A> 축을 사용하는 것이 더 쉽습니다.  

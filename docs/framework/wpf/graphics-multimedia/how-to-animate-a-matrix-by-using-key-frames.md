@@ -1,33 +1,21 @@
 ---
-title: "방법: 키 프레임을 사용하여 매트릭스에 애니메이션 효과 주기"
-ms.custom: 
+title: '방법: 키 프레임을 사용하여 매트릭스에 애니메이션 효과 주기'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - animation [WPF], Matrix properties with key frames
 - Matrix properties [WPF], animating with key frames
 - key frames [WPF], animating Matrix properties with
 ms.assetid: b851a4c7-ecb1-420e-9203-83e7afd037fd
-caps.latest.revision: "10"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 862e1afdcd823181dff0948fab43b1656b85f721
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: edb7074dffab23810872f4347f5339270af86bd1
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-animate-a-matrix-by-using-key-frames"></a>방법: 키 프레임을 사용하여 매트릭스에 애니메이션 효과 주기
 애니메이션 효과 적용 하는 방법을 보여 주는이 예제는 <xref:System.Windows.Media.MatrixTransform.Matrix%2A> 의 속성을 <xref:System.Windows.Media.MatrixTransform> 키 프레임을 사용 하 여 합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 예제에서는 <xref:System.Windows.Media.Animation.MatrixAnimationUsingKeyFrames> 애니메이션 효과를 줄 클래스는 <xref:System.Windows.Media.MatrixTransform.Matrix%2A> 속성의는 <xref:System.Windows.Media.MatrixTransform>합니다. 이 예제에서는 사용 된 <xref:System.Windows.Media.MatrixTransform> 모양 및 위치를 변환 하는 개체는 <xref:System.Windows.Controls.Button>합니다.  
   
  이 애니메이션에 사용 하 여는 <xref:System.Windows.Media.Animation.DiscreteMatrixKeyFrame> 클래스를 만드는 두 가지 키 프레임 및 된 다음 작업을 수행 합니다.  

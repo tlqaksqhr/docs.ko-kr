@@ -1,53 +1,41 @@
 ---
-title: "방법: 시스템 브러시로 영역 그리기"
-ms.custom: 
+title: '방법: 시스템 브러시로 영역 그리기'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - system brushes [WPF], painting with
 - painting [WPF], with system brushes
 - brushes [WPF], painting with system brushes [WPF]
 ms.assetid: 5141a763-9235-42cb-a6bb-afc75513eac7
-caps.latest.revision: "9"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 87979c16d52262c665e2fb37fdf6d7550c5930c9
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: f8a66ffc283016d65a17b33e98ce28fe4cd1c242
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-paint-an-area-with-a-system-brush"></a>방법: 시스템 브러시로 영역 그리기
 <xref:System.Windows.SystemColors> 클래스와 같은 시스템 브러시, 색에 대 한 액세스를 제공 <xref:System.Windows.SystemColors.ControlBrush%2A>, <xref:System.Windows.SystemColors.ControlBrushKey%2A>, 및 <xref:System.Windows.SystemColors.DesktopBrush%2A>합니다. 시스템 브러시는는 <xref:System.Windows.Media.SolidColorBrush> 개체를 지정된 된 시스템 색으로 영역을 그립니다. 시스템 브러시는 항상 단색을 생성하므로 그라데이션을 만드는 데는 사용할 수 없습니다.  
   
  시스템 브러시는 정적 또는 동적 리소스로 사용할 수 있습니다. 사용자 응용 프로그램이 실행될 때 사용자가 시스템 브러시를 변경하는 경우 브러시가 자동으로 업데이트되게 하려면 동적 리소스를 사용하고, 그렇지 않으면 정적 리소스를 사용합니다. SystemColors 클래스는 엄격한 명명 규칙을 따르는 다양한 정적 속성을 포함합니다.  
   
--   *\<SystemColor>*Brush  
+-   *\<SystemColor>* Brush  
   
      에 대 한 정적 참조는 <xref:System.Windows.Media.SolidColorBrush> 지정된 된 시스템 색의 합니다.  
   
--   *\<SystemColor>*BrushKey  
+-   *\<SystemColor>* BrushKey  
   
      에 대 한 동적 참조는 <xref:System.Windows.Media.SolidColorBrush> 지정된 된 시스템 색의 합니다.  
   
--   *\<SystemColor>*Color  
+-   *\<SystemColor>* Color  
   
      에 대 한 정적 참조는 <xref:System.Windows.Media.Color> 지정된 된 시스템 색의 구조입니다.  
   
--   *\<SystemColor>*ColorKey  
+-   *\<SystemColor>* ColorKey  
   
      에 대 한 동적 참조는 <xref:System.Windows.Media.Color> 지정된 된 시스템 색의 구조입니다.  
   
  시스템 색은는 <xref:System.Windows.Media.Color> 브러시를 구성 하는 데 사용할 수 있는 구조입니다. 예를 들어 그라데이션을 설정 하 여 시스템 색을 사용 하 여 만들 수 있습니다는 <xref:System.Windows.Media.GradientStop.Color%2A> 의 속성을 <xref:System.Windows.Media.LinearGradientBrush> 개체의 그라데이션 중지점 합니다. 예를 들어 참조 [그라데이션에서 시스템 색을 사용 하 여](../../../../docs/framework/wpf/graphics-multimedia/how-to-use-system-colors-in-a-gradient.md)합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 예제에서는 동적 시스템 브러시 참조를 사용하여 단추의 배경색을 설정합니다.  
   
  [!code-xaml[brushsamples_snip#GraphicsMMDynamicSystemColorDesktopBrushKeyExampleWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/brushsamples_snip/CS/DynamicSystemBrushExample.xaml#graphicsmmdynamicsystemcolordesktopbrushkeyexamplewholepage)]  

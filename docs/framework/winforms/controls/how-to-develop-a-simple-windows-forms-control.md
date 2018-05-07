@@ -1,14 +1,6 @@
 ---
 title: '방법: 간단한 Windows Forms 컨트롤 개발'
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-winforms
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -17,17 +9,11 @@ helpviewer_keywords:
 - custom controls [Windows Forms], creating simple controls using code
 - Control class [Windows Forms], Windows Forms
 ms.assetid: 86cbe435-45b7-4cb4-9b5a-47418369758d
-caps.latest.revision: ''
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: ab7fced9237cad3de30d417770f6f1d7f7e7ed6a
-ms.sourcegitcommit: 498799639937c89de777361aab74261efe7b79ea
+ms.openlocfilehash: 04cedc0df60ef95acb79b651ddcbcbb34ae5e920
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-develop-a-simple-windows-forms-control"></a>방법: 간단한 Windows Forms 컨트롤 개발
 이 섹션에서는 사용자 지정 Windows Forms 컨트롤을 작성하는 주요 단계를 설명합니다. 이 연습에서 개발 된 간단한 컨트롤의 맞춤을 사용 하는 <xref:System.Windows.Forms.Control.Text%2A> 변경할 속성입니다. 이벤트를 발생시키거나 처리하지 않습니다.  

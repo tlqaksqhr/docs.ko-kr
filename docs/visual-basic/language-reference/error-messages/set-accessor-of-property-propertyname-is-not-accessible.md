@@ -1,28 +1,19 @@
 ---
-title: '&#39; 설정 &#39; 접근자 속성 &#39; &lt;propertyname&gt;&#39; 액세스할 수 없으면'
+title: '&#39;설정&#39; 속성의 접근자 &#39; &lt;propertyname&gt; &#39; 는 액세스할 수 없습니다'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vbc31102
 - bc31102
 helpviewer_keywords:
 - BC31102
 ms.assetid: 6f7b31b7-3656-4ae1-8851-90f5f4c6950a
-caps.latest.revision: 9
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 9256a09b719ad3890e1d7c2cc23ffb0d40eec62f
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: d047d03755de89d4740482db4845d5db72003ac0
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="39set39-accessor-of-property-39ltpropertynamegt39-is-not-accessible"></a>&#39; 설정 &#39; 접근자 속성 &#39; &lt;propertyname&gt;&#39; 액세스할 수 없으면
+# <a name="39set39-accessor-of-property-39ltpropertynamegt39-is-not-accessible"></a>&#39;설정&#39; 속성의 접근자 &#39; &lt;propertyname&gt; &#39; 는 액세스할 수 없습니다
 문에서 속성에 대 한 액세스 권한이 없습니다 속성의 값을 저장 하려고 `Set` 프로시저입니다.  
   
  경우는 [Set 문을](../../../visual-basic/language-reference/statements/set-statement.md) 수준 보다 더 제한적인 액세스로 표시 되 해당 [Property 문](../../../visual-basic/language-reference/statements/property-statement.md), 속성 값을 설정 하는 다음과 같은 경우에 실패할 수 있습니다.  

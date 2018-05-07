@@ -1,10 +1,6 @@
 ---
-title: "형식 변환 함수(Visual Basic)"
+title: 형식 변환 함수(Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.CUShort
 - vb.csng
@@ -85,14 +81,11 @@ helpviewer_keywords:
 - rounding numbers [Visual Basic], banker's rounding
 - type conversion [Visual Basic], Visual Basic vs. .NET Framework
 ms.assetid: d9d8d165-f967-44ff-a6cd-598e4740a99e
-caps.latest.revision: "22"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 117cd4ce038a533715bbc86558545f0f223dd149
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: c9222bdb31f4fd7c792d5a50c100067e29e9d537
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="type-conversion-functions-visual-basic"></a>형식 변환 함수(Visual Basic)
 이러한 함수는 인라인으로 컴파일됩니다 변환 코드는 식을 계산 하는 코드의 일부입니다. 경우에 따라 성능이 향상 되는 변환을 수행 하는 프로시저에 대 한 호출이 있습니다. 각 함수는 식을 특정 데이터 형식으로 강제 변환합니다.  
@@ -120,7 +113,7 @@ CUShort(expression)
   
 ## <a name="part"></a>파트  
  `expression`  
- 필수 요소. 원본 데이터 형식의 모든 식입니다.  
+ 필수. 원본 데이터 형식의 모든 식입니다.  
   
 ## <a name="return-value-data-type"></a>반환 값 데이터 형식  
  다음 표에 나와 있는 것 처럼 반환 하는 값의 데이터 형식을 결정 하는 함수 이름입니다.  
@@ -159,9 +152,9 @@ CUShort(expression)
   
      소수 부분이 정확 하 게 하는 경우 0.5 정수 변환 함수 반올림 하는 가장 근사한 짝수 정수로 합니다. 예를 들어 0.5 0 및 1.5와 2.5는 2로 반올림을 반올림 합니다. 이 라고도 *banker rounding*와 함께 이러한 많은 숫자를 추가 하는 경우 누적 될 수 있는 편차에 대 한 보정 하기 위한 것입니다.  
   
-     `CInt`및 `CLng` 에서 다는 <xref:Microsoft.VisualBasic.Conversion.Int%2A> 및 <xref:Microsoft.VisualBasic.Conversion.Fix%2A> 숫자의 소수 부분을 반올림 하지 않고, truncate는 함수입니다. 또한 `Fix` 및 `Int` 에서 전달 항상 동일한 데이터 형식의 값을 반환 합니다.  
+     `CInt` 및 `CLng` 에서 다는 <xref:Microsoft.VisualBasic.Conversion.Int%2A> 및 <xref:Microsoft.VisualBasic.Conversion.Fix%2A> 숫자의 소수 부분을 반올림 하지 않고, truncate는 함수입니다. 또한 `Fix` 및 `Int` 에서 전달 항상 동일한 데이터 형식의 값을 반환 합니다.  
   
--   **날짜/시간 변환 합니다.** 사용 된 <xref:Microsoft.VisualBasic.Information.IsDate%2A> 을 날짜 및 시간 값을 변환할 수 있는지 확인 하는 함수입니다. `CDate`리터럴 날짜 및 시간 리터럴 하지만 숫자 값이 아니라 인식합니다. Visual Basic 6.0 변환할 `Date` 값을 한 `Date` Visual Basic 2005에서에서 값 또는 이상 버전을 사용할 수 있습니다는 <xref:System.DateTime.FromOADate%2A?displayProperty=nameWithType> 메서드.  
+-   **날짜/시간 변환 합니다.** 사용 된 <xref:Microsoft.VisualBasic.Information.IsDate%2A> 을 날짜 및 시간 값을 변환할 수 있는지 확인 하는 함수입니다. `CDate` 리터럴 날짜 및 시간 리터럴 하지만 숫자 값이 아니라 인식합니다. Visual Basic 6.0 변환할 `Date` 값을 한 `Date` Visual Basic 2005에서에서 값 또는 이상 버전을 사용할 수 있습니다는 <xref:System.DateTime.FromOADate%2A?displayProperty=nameWithType> 메서드.  
   
 -   **중립 날짜/시간 값입니다.** [Date 데이터 형식](../../../visual-basic/language-reference/data-types/date-data-type.md) 항상 날짜와 시간 정보를 포함 합니다. 형식 변환을 위해 Visual Basic 간주 1/1/0001 (1 1 년 1 월)는 *기본값으로* 시간에 대 한 기본값으로 간주 00시: 00 (자정) 및 날짜,입니다. 변환 하는 경우는 `Date` 값을 문자열로, `CStr` 기본값이 결과 문자열에 포함 되지 않습니다. 예를 들어, 변환 하면 `#January 1, 0001 9:30:00#` 문자열로 결과 "오전 9시 30분: 00" 하 고 날짜 정보는 표시 되지 않습니다. 그러나 날짜 정보에에서는 아직 있는 원래 `Date` 값 및와 같은 함수를 사용 하 여 복구할 수 수 <xref:Microsoft.VisualBasic.DateAndTime.DatePart%2A> 함수입니다.  
   
@@ -194,7 +187,7 @@ CUShort(expression)
  [!code-vb[VbVbalrFunctions#4](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/type-conversion-functions_4.vb)]  
   
 ## <a name="cdate-example"></a>CDate 예제  
- 다음 예제에서는 `CDate` 문자열을 변환 하는 함수 `Date` 값입니다. 일반적으로 하드 코딩 된 날짜 및 시간 문자열 (이 예제 에서처럼)로 권장 되지 않습니다. 날짜 리터럴과 &#1969; #Feb 12, 같은 시간 리터럴을 사용 하 여 및 # 4시 45분: 23 PM #를 대신 합니다.  
+ 다음 예제에서는 `CDate` 문자열을 변환 하는 함수 `Date` 값입니다. 일반적으로 하드 코딩 된 날짜 및 시간 문자열 (이 예제 에서처럼)로 권장 되지 않습니다. 날짜 리터럴과 1969 # #Feb 12, 같은 시간 리터럴을 사용 하 여 및 # 4시 45분: 23 PM #를 대신 합니다.  
   
  [!code-vb[VbVbalrFunctions#5](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/type-conversion-functions_5.vb)]  
   
@@ -245,7 +238,7 @@ CUShort(expression)
   
  [!code-vb[VbVbalrFunctions#15](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/type-conversion-functions_15.vb)]  
   
- `CStr`항상를 렌더링 한 `Date` 예를 들어 현재 로캘에 대 한 표준 짧은 형식 값 "6/15/2003 오후 4시 35분: 47"입니다. 그러나 `CStr` 표시 하지 않습니다는 *중립 값* 의 1/1/0001 한 날짜와 시간에 대 한 00시: 00입니다.  
+ `CStr` 항상를 렌더링 한 `Date` 예를 들어 현재 로캘에 대 한 표준 짧은 형식 값 "6/15/2003 오후 4시 35분: 47"입니다. 그러나 `CStr` 표시 하지 않습니다는 *중립 값* 의 1/1/0001 한 날짜와 시간에 대 한 00시: 00입니다.  
   
  반환 값에 대 한 세부 `CStr`, 참조 [CStr 함수의 반환 값](../../../visual-basic/language-reference/functions/return-values-for-the-cstr-function.md)합니다.  
   

@@ -1,14 +1,6 @@
 ---
 title: WPF 아키텍처
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-wpf
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - properties [WPF], attached
 - attached properties [WPF]
@@ -24,17 +16,11 @@ helpviewer_keywords:
 - data templates [WPF]
 - thread [WPF], affinity
 ms.assetid: 8579c10b-76ab-4c52-9691-195ce02333c8
-caps.latest.revision: 17
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 29c8e2d632c37a299389b1bdc7f3f19f7df2f7e7
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 70afa7e193832837650d72837b25e26e3b64c180
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="wpf-architecture"></a>WPF 아키텍처
 이 항목에서는 Windows Presentation Foundation (WPF) 클래스 계층을 안내 합니다. 이 항목은 대부분의 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 주요 하위 시스템을 다루며 이들이 어떻게 상호 작용하는지를 설명하고, [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]의 설계자가 선택한 몇 가지 사항에 대해서 자세히 설명합니다.  
@@ -64,7 +50,7 @@ ms.lasthandoff: 04/30/2018
 ## <a name="systemwindowsdependencyobject"></a>System.Windows.DependencyObject  
  [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]를 빌드하는 데 사용된 기본 아키텍처 방법 중 하나는 메서드나 이벤트보다 속성을 선호하는 것이었습니다. 속성은 선언적이며 작업 대신 의도를 보다 쉽게 지정할 수 있습니다. 또한 모델 중심 또는 데이터 중심의 시스템을 지원하여 사용자 인터페이스 콘텐츠를 표시했습니다. 이 방법을 통해 응용 프로그램의 동작을 보다 효과적으로 제어하기 위해 사용자가 바인딩할 수 있는 것보다 더 많은 속성을 의도적으로 만들 수 있었습니다.  
   
- 시스템에서 더 많은 부분을 속성에서 제어할 수 있게 만들기 위해 [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)]이 제공하는 것보다 다양한 속성 시스템이 필요했습니다. 간단한 예로 변경 알림을 들 수 있습니다. 양방향 바인딩을 사용하기 위해서는 바인드의 양쪽이 변경 알림을 지원해야 합니다. 동작이 속성 값에 연결되려면 속성 값이 변경될 때 알림을 받아야 합니다. [!INCLUDE[TLA#tla_netframewk](../../../../includes/tlasharptla-netframewk-md.md)]에는 개체가 변경 알림을 게시할 수 있는 **INotifyPropertyChange** 인터페이스가 있습니다. 하지만 이 인터페이스는 선택 사항입니다.  
+ 시스템에서 더 많은 부분을 속성에서 제어할 수 있게 만들기 위해 [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)]이 제공하는 것보다 다양한 속성 시스템이 필요했습니다. 간단한 예로 변경 알림을 들 수 있습니다. 양방향 바인딩을 사용하기 위해서는 바인드의 양쪽이 변경 알림을 지원해야 합니다. 동작이 속성 값에 연결되려면 속성 값이 변경될 때 알림을 받아야 합니다. 하지만 Microsoft.NET Framework 인터페이스에 **INotifyPropertyChange**, 선택 사항이 기는 변경 알림을 게시 하는 개체 수 있습니다.  
   
  [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 파생 된 다양 한 속성 시스템에 제공 된 <xref:System.Windows.DependencyObject> 유형입니다. 속성 시스템은 속성 식 간의 종속성을 추적하고 종속성이 변경될 때 속성 값의 유효성을 자동으로 다시 검사하는 면에서 진정한 "종속성" 속성 시스템입니다. 예를 들어, 상속 하는 속성이 있는 경우 (같은 <xref:System.Windows.Controls.Control.FontSize%2A>), 시스템 속성 값이 상속 되는 요소의 부모에 속성이 변경 되 면 자동으로 업데이트 됩니다.  
   

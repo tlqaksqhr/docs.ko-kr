@@ -1,13 +1,6 @@
 ---
-title: "방법: Storyboard를 사용하여 속성에 애니메이션 효과 주기"
-ms.custom: 
+title: '방법: Storyboard를 사용하여 속성에 애니메이션 효과 주기'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -15,16 +8,11 @@ helpviewer_keywords:
 - animation [WPF], Storyboards
 - Storyboards [WPF], animation
 ms.assetid: f4a314e9-1da2-4367-85fc-1232487efa7a
-caps.latest.revision: "12"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ba6cb3483c983ddbcd3fac2281fe40aef31301b4
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 7e67fb07a05d474999515a678fd72ac6b96953c1
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-animate-a-property-by-using-a-storyboard"></a>방법: Storyboard를 사용하여 속성에 애니메이션 효과 주기
 사용 하는 방법을 보여 주는이 예제는 <xref:System.Windows.Media.Animation.Storyboard> 속성 애니메이션 효과를 합니다. 속성을 사용 하 여 애니메이션 효과를 줄는 <xref:System.Windows.Media.Animation.Storyboard>, 애니메이션 효과 적용 하 고 만들 수도 하려는 각 속성에 대 한 애니메이션을 만들는 <xref:System.Windows.Media.Animation.Storyboard> 애니메이션을 포함 하도록 합니다.  
@@ -35,7 +23,7 @@ ms.lasthandoff: 12/22/2017
   
  다음 예제에서는 <xref:System.Windows.Media.Animation.Storyboard> 두 애니메이션 효과를 줄 개체 <xref:System.Windows.Controls.Button> 컨트롤입니다. 첫 번째 단추의 크기를 변경 하기 위해 해당 <xref:System.Windows.FrameworkElement.Width%2A> 애니메이션 효과가 적용 됩니다. 두 번째 단추의 색을 변경 하기 위해는 <xref:System.Windows.Media.SolidColorBrush.Color%2A> 의 속성에서 <xref:System.Windows.Media.SolidColorBrush> 설정 하는 데 사용 되는 <xref:System.Windows.Controls.Control.Background%2A> 단추에 애니메이션 효과 적용 합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  [!code-xaml[AnimatePropertyStoryboards#1](../../../../samples/snippets/xaml/VS_Snippets_Wpf/AnimatePropertyStoryboards/XAML/StoryboardExample.xaml#1)]  
   
 > [!NOTE]

@@ -1,13 +1,6 @@
 ---
-title: "방법: 선, 곡선 및 도형으로 그림 만들기"
-ms.custom: 
+title: '방법: 선, 곡선 및 도형으로 그림 만들기'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -15,21 +8,16 @@ helpviewer_keywords:
 - figures [Windows Forms], creating from shapes
 - figures [Windows Forms], creating from lines
 ms.assetid: 82fd56c7-b443-4765-9b7c-62ce030656ec
-caps.latest.revision: "14"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 40520f566beafc83075d0563148b5d0f9bd4fe85
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 222245fa4b3b593e0a38752a8cb991a12e469698
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-figures-from-lines-curves-and-shapes"></a>방법: 선, 곡선 및 도형으로 그림 만들기
 그림을 만들려면 하려면를 생성 하는 <xref:System.Drawing.Drawing2D.GraphicsPath>와 같은 메서드를 호출 하 고 <xref:System.Drawing.Drawing2D.GraphicsPath.AddLine%2A> 및 <xref:System.Drawing.Drawing2D.GraphicsPath.AddCurve%2A>경로에 기본 형식에 추가 합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 코드 예제에서는 그림이 포함 된 경로 만듭니다.  
   
 -   첫 번째 예에서는 단일 그림 포함 된 경로 만듭니다. 그림은 단일 호 이루어져 있습니다. 호를 기본 좌표계에서 시계 반대 방향으로 180도 스윕 각도 있습니다.  

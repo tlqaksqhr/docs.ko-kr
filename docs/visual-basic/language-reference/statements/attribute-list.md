@@ -1,23 +1,15 @@
 ---
-title: "특성 목록(Visual Basic)"
+title: 특성 목록(Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - attribute list
 - attributes [Visual Basic], applying
 ms.assetid: 5880073a-68a4-4b6b-8a07-ace32959a4e2
-caps.latest.revision: "18"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: adfb980380bb787280715ca0185950657e174eb1
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 35d031722a5eddd6adce5e32df62b86c500d305b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="attribute-list-visual-basic"></a>특성 목록(Visual Basic)
 선언된 된 프로그래밍 요소에 적용할 특성을 지정 합니다. 여러 특성은 쉼표로 구분합니다. 다음은 하나의 특성에 대 한 구문입니다.  
@@ -33,7 +25,7 @@ ms.lasthandoff: 11/21/2017
  소스 파일의 시작 부분에 적용 되는 특성에 필요 합니다. 수 [어셈블리](../../../visual-basic/language-reference/modifiers/assembly.md) 또는 [모듈](../../../visual-basic/language-reference/modifiers/module-keyword.md)합니다.  
   
  `attributename`  
- 필수 요소. 특성의 이름입니다.  
+ 필수. 특성의 이름입니다.  
   
  `attributearguments`  
  선택 사항입니다. 이 특성에 대 한 위치 인수 목록입니다. 인수가 여러 개이면 쉼표로 구분 됩니다.  
@@ -63,7 +55,7 @@ ms.lasthandoff: 11/21/2017
   
  [!code-vb[VbVbalrStatements#1](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/attribute-list_1.vb)]  
   
- <xref:System.Runtime.InteropServices.DllImportAttribute>특성 사용된 하는 프로시저는 관리 되지 않는 동적 연결 라이브러리 (DLL)의 진입점을 나타낸다는 것을 의미 합니다. 특성에서 DLL 이름으로 위치 인수 및 변수 이니셜라이저로 기타 정보를 제공합니다.  
+ <xref:System.Runtime.InteropServices.DllImportAttribute> 특성 사용된 하는 프로시저는 관리 되지 않는 동적 연결 라이브러리 (DLL)의 진입점을 나타낸다는 것을 의미 합니다. 특성에서 DLL 이름으로 위치 인수 및 변수 이니셜라이저로 기타 정보를 제공합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [어셈블리](../../../visual-basic/language-reference/modifiers/assembly.md)  

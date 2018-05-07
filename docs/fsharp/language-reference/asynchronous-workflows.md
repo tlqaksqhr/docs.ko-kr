@@ -1,17 +1,12 @@
 ---
 title: 비동기 워크플로(F#)
 description: '배울 F # 프로그래밍 계산을 비동기적으로 수행 하는 것에 대 한 언어 지원에 대 한 다른 작업의 실행을 차단 하지 않고 실행 합니다.'
-author: cartermp
-ms.author: phcart
 ms.date: 05/16/2016
-ms.topic: language-reference
-ms.prod: dotnet-fsharp
-ms.devlang: fsharp
-ms.openlocfilehash: 1521ea3719f906a45b11d19a27256e87c5643e28
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 5f7a1a623e143e1bedf51c1a1ed477bb867b280a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="asynchronous-workflows"></a>비동기 워크플로
 

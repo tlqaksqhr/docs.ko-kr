@@ -1,18 +1,12 @@
 ---
-title: "속성 &lt;propertyname&gt; 빈 문자열 이거나 Nothing으로 설정할 수 없습니다"
+title: 속성 &lt;propertyname&gt; 빈 문자열 이거나 Nothing으로 설정할 수 없습니다
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology: devlang-visual-basic
-ms.topic: article
 ms.assetid: c4f6ceb2-cee0-4e79-9cc6-cb20276d24f8
-caps.latest.revision: "9"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: e11a320689b5583282d9de56ed24c350daf76ce6
-ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
+ms.openlocfilehash: 4582423a34ee51d8f8716fb39c5e59a14384e396
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="property-ltpropertynamegt-cannot-be-set-to-an-empty-string-or-nothing"></a>속성 &lt;propertyname&gt; 빈 문자열 이거나 Nothing으로 설정할 수 없습니다
 속성에 빈 문자열("") 또는 `Nothing`이외의 값이 필요합니다. 이는 값을 잘못 계산한 결과일 수 있습니다.  

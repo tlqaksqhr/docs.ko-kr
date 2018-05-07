@@ -1,28 +1,16 @@
 ---
-title: "XAML 노드 스트림 구조 및 개념 이해"
-ms.custom: 
+title: XAML 노드 스트림 구조 및 개념 이해
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - XAML node streams [XAML Services]
 - nodes [XAML Services], XAML node stream
 - XAML [XAML Services], XAML node streams
 ms.assetid: 7c11abec-1075-474c-9d9b-778e5dab21c3
-caps.latest.revision: "14"
-author: wadepickett
-ms.author: wpickett
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: b5bce62b03b97f182d314a379c9532fc05148050
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: fc27426e4d48ae519fc743c8a4f7eb3d1e6a4e81
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="understanding-xaml-node-stream-structures-and-concepts"></a>XAML 노드 스트림 구조 및 개념 이해
 .NET Framework XAML 서비스에 구현된 XAML 판독기와 XAML 작성기는 XAML 노드 스트림의 디자인 개념을 기반으로 합니다. XAML 노드 스트림은 XAML 노드 집합의 개념화입니다. 이 개념화에서 XAML 프로세서는 한 번에 하나씩 XAML의 노드 관계 구조를 처리합니다. 언제든지 하나의 현재 레코드 또는 현재 위치만 열린 XAML 노드 스트림에 있으며 API는 대부분 해당 위치에서 사용할 수 있는 정보만 보고합니다. XAML 노드 스트림의 현재 노드는 개체, 멤버 또는 값으로 설명될 수 있습니다. XAML을 XAML 노드 스트림으로 처리하여 XAML 판독기는 XAML 작성기와 통신하고 XAML을 포함하는 경로 로드 또는 경로 저장 작업 중에 프로그램이 XAML 노드 스트림을 보거나, 상호 작용하거나, 콘텐츠를 변경할 수 있게 할 수 있습니다. XAML 판독기/작성기 API 디자인 및 XAML 노드 스트림 개념은 이전의 관련된 판독기/작성기 디자인 및 개념과 비슷합니다(예: [!INCLUDE[TLA#tla_xmldom](../../../includes/tlasharptla-xmldom-md.md)] , <xref:System.Xml.XmlReader> 및 <xref:System.Xml.XmlWriter> 클래스). 이 항목에서는 XAML 노드 스트림 개념과 XAML 노드 수준에서 XAML 표현과 상호 작용하는 루틴을 작성하는 방법을 설명합니다.  
@@ -211,7 +199,7 @@ public class GameBoard {
   
 -   **알 수 없는 콘텐츠:** 이 멤버 노드의 이름은 `_UnknownContent`입니다. 엄격히 말해서, <xref:System.Xaml.XamlDirective>이며 XAML 언어 XAML 네임스페이스에서 정의됩니다. 이 지시문은 XAML 개체 요소에 소스 XAML의 콘텐츠가 포함되지만 현재 사용할 수 있는 XAML 스키마 컨텍스트에서 콘텐츠 속성을 확인할 수 없는 경우에 대한 센티널로 사용됩니다. XAML 노드 스트림에서 `_UnknownContent`라는 멤버를 확인하여 이러한 경우를 검색할 수 있습니다. 로드 경로 XAML 노드 스트림에서 다른 작업을 수행하지 않는 경우 임의 개체에서 <xref:System.Xaml.XamlObjectWriter> 멤버를 발견하면 시도된 `WriteEndObject` 에서 기본 `_UnknownContent` 가 발생합니다. 기본 <xref:System.Xaml.XamlXmlWriter> 가 발생하지 않고 멤버를 암시적으로 처리합니다. `_UnknownContent` 에서 <xref:System.Xaml.XamlLanguage.UnknownContent%2A>에 대한 정적 엔터티를 가져올 수 있습니다.  
   
--   **컬렉션의 컬렉션 속성:**일반적으로 XAML에 사용되는 컬렉션 클래스의 지원 CLR 형식에는 컬렉션 항목을 포함하는 명명된 전용 속성이 있지만 지원 형식을 확인할 때까지 XAML 형식 시스템에서 해당 속성을 알 수 없습니다. 대신, XAML 노드 스트림은 `Items` 자리 표시자를 컬렉션 XAML 형식의 멤버로 소개합니다. .NET Framework XAML 서비스 구현의 노드 스트림에서 이 지시문/멤버의 이름은 `_Items`입니다. 이 지시문에 대한 상수는 <xref:System.Xaml.XamlLanguage.Items%2A>에서 가져올 수 있습니다.  
+-   **컬렉션의 컬렉션 속성:** 일반적으로 XAML에 사용되는 컬렉션 클래스의 지원 CLR 형식에는 컬렉션 항목을 포함하는 명명된 전용 속성이 있지만 지원 형식을 확인할 때까지 XAML 형식 시스템에서 해당 속성을 알 수 없습니다. 대신, XAML 노드 스트림은 `Items` 자리 표시자를 컬렉션 XAML 형식의 멤버로 소개합니다. .NET Framework XAML 서비스 구현의 노드 스트림에서 이 지시문/멤버의 이름은 `_Items`입니다. 이 지시문에 대한 상수는 <xref:System.Xaml.XamlLanguage.Items%2A>에서 가져올 수 있습니다.  
   
      XAML 노드 스트림에는 지원 형식 확인 및 XAML 스키마 컨텍스트를 기준으로 구문 분석할 수 없는 항목이 있는 Items 속성이 포함될 수 있습니다. 예를 들어 개체에 적용된  
   

@@ -1,14 +1,6 @@
 ---
-title: "ListView 컨트롤 개요(Windows Forms)"
-ms.custom: 
+title: ListView 컨트롤 개요(Windows Forms)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 f1_keywords:
 - ListView
 helpviewer_keywords:
@@ -16,17 +8,11 @@ helpviewer_keywords:
 - ListView control [Windows Forms], about ListView control
 - list views
 ms.assetid: c9ef56c1-3bb1-4101-9f4e-e95e720f2756
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: b79fecb0a537f4c568b4a57e9ce2bfab8d8e1005
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: f92b5f5ae40287c95da10ef96aad0fa764fa00e2
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="listview-control-overview-windows-forms"></a>ListView 컨트롤 개요(Windows Forms)
 Windows Forms <xref:System.Windows.Forms.ListView> 컨트롤은 아이콘이 포함된 항목 목록을 표시합니다. 목록 뷰를 사용하여 Windows 탐색기의 오른쪽 창과 같은 사용자 인터페이스를 만들 수 있습니다. 컨트롤에 4 개의 보기 모드: LargeIcon, SmallIcon, 목록 및 세부 정보입니다.  
@@ -46,17 +32,17 @@ Windows Forms <xref:System.Windows.Forms.ListView> 컨트롤은 아이콘이 포
 |<xref:System.Windows.Forms.ListView.AutoArrange%2A> 속성|<xref:System.Windows.Forms.View.SmallIcon> 또는 <xref:System.Windows.Forms.View.LargeIcon>|  
 |<xref:System.Windows.Forms.ListView.AutoResizeColumn%2A> 메서드|<xref:System.Windows.Forms.View.Details>|  
 |<xref:System.Windows.Forms.ListView.Columns%2A> 속성|<xref:System.Windows.Forms.View.Details> 또는 <xref:System.Windows.Forms.View.Tile>|  
-|<xref:System.Windows.Forms.ListView.DrawSubItem>이벤트|<xref:System.Windows.Forms.View.Details>|  
+|<xref:System.Windows.Forms.ListView.DrawSubItem> 이벤트|<xref:System.Windows.Forms.View.Details>|  
 |<xref:System.Windows.Forms.ListView.FindItemWithText%2A> 메서드|<xref:System.Windows.Forms.View.Details>, <xref:System.Windows.Forms.View.List>또는 <xref:System.Windows.Forms.View.Tile>|  
 |<xref:System.Windows.Forms.ListView.FindNearestItem%2A> 메서드|<xref:System.Windows.Forms.View.SmallIcon> 또는 <xref:System.Windows.Forms.View.LargeIcon>|  
 |<xref:System.Windows.Forms.ListView.GetItemAt%2A> 메서드|<xref:System.Windows.Forms.View.Details> 또는 <xref:System.Windows.Forms.View.Tile>|  
-|<xref:System.Windows.Forms.ListView.Groups%2A> 속성|제외한 모든 보기<xref:System.Windows.Forms.View.List>|  
+|<xref:System.Windows.Forms.ListView.Groups%2A> 속성|제외한 모든 보기 <xref:System.Windows.Forms.View.List>|  
 |<xref:System.Windows.Forms.ListView.HeaderStyle%2A> 속성|<xref:System.Windows.Forms.View.Details>.|  
 |<xref:System.Windows.Forms.ListView.InsertionMark%2A> 속성|<xref:System.Windows.Forms.View.LargeIcon>, <xref:System.Windows.Forms.View.SmallIcon>또는 <xref:System.Windows.Forms.View.Tile>|  
   
  키 속성은 <xref:System.Windows.Forms.ListView> 컨트롤은 <xref:System.Windows.Forms.ListView.Items%2A>를 컨트롤에 의해 표시 되는 항목을 포함 하 합니다. <xref:System.Windows.Forms.ListView.SelectedItems%2A> 속성 컨트롤에서 현재 선택 된 항목의 컬렉션을 포함 합니다. 예를 들어 경우 다른 컨트롤에 한 번에 여러 항목이 끌어서를 여러 항목을 선택할 수는 <xref:System.Windows.Forms.ListView.MultiSelect%2A> 속성이 `true`합니다. <xref:System.Windows.Forms.ListView> 경우 컨트롤에서 항목 옆의 확인란을 표시할 수는 <xref:System.Windows.Forms.ListView.CheckBoxes%2A> 속성이 `true`합니다.  
   
- <xref:System.Windows.Forms.ListView.Activation%2A> 속성 동작 유형을 목록에서 항목을 활성화 하기 위해 사용자를 수행 해야 결정: 옵션은 <xref:System.Windows.Forms.ItemActivation.Standard>, <xref:System.Windows.Forms.ItemActivation.OneClick>, 및 <xref:System.Windows.Forms.ItemActivation.TwoClick>합니다. <xref:System.Windows.Forms.ItemActivation.OneClick>활성화 된 항목을 활성화 하려면 한 번의 클릭이 필요 합니다. <xref:System.Windows.Forms.ItemActivation.TwoClick>정품 인증을 사용 해야; 항목을 활성화 하려면 두 번 클릭 항목 텍스트의 색을 변경 하는 한 번의 클릭 합니다. <xref:System.Windows.Forms.ItemActivation.Standard>활성화 사용자를 두 번 클릭 하면 항목이 활성화를 이어야 하는데 항목의 모양을 변경 되지 않습니다.  
+ <xref:System.Windows.Forms.ListView.Activation%2A> 속성 동작 유형을 목록에서 항목을 활성화 하기 위해 사용자를 수행 해야 결정: 옵션은 <xref:System.Windows.Forms.ItemActivation.Standard>, <xref:System.Windows.Forms.ItemActivation.OneClick>, 및 <xref:System.Windows.Forms.ItemActivation.TwoClick>합니다. <xref:System.Windows.Forms.ItemActivation.OneClick> 활성화 된 항목을 활성화 하려면 한 번의 클릭이 필요 합니다. <xref:System.Windows.Forms.ItemActivation.TwoClick> 정품 인증을 사용 해야; 항목을 활성화 하려면 두 번 클릭 항목 텍스트의 색을 변경 하는 한 번의 클릭 합니다. <xref:System.Windows.Forms.ItemActivation.Standard> 활성화 사용자를 두 번 클릭 하면 항목이 활성화를 이어야 하는데 항목의 모양을 변경 되지 않습니다.  
   
  <xref:System.Windows.Forms.ListView> 그룹화, tile 보기 및 삽입 표시를 포함 하 여 Windows XP 플랫폼에서도 지 원하는 비주얼 스타일 및 기타 기능을 사용할 수 있는 컨트롤입니다. 자세한 내용은 참조 [Windows XP 기능 및 Windows Forms 컨트롤](http://msdn.microsoft.com/library/bc7fab94-fce9-4bf1-a8ad-a5837c91c3c0)합니다.  
   

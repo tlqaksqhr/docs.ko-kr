@@ -1,12 +1,6 @@
 ---
 title: GoTo 문
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.GoTo
 helpviewer_keywords:
@@ -19,14 +13,11 @@ helpviewer_keywords:
 - conditional statements [Visual Basic], GoTo statement
 - GoTo statement [Visual Basic], syntax
 ms.assetid: 313274c2-8ab3-4b9c-9ba3-0fd6798e4f6d
-caps.latest.revision: 19
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 22a6315e69cd6c797d462d0835e85bb1dde67dcc
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 27ebc677bab8b7f61a02408fddb30a6ec21c43cc
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="goto-statement"></a>GoTo 문
 프로시저에 지정된 된 줄으로 무조건 분기 합니다.  
@@ -39,13 +30,13 @@ GoTo line
   
 ## <a name="part"></a>파트  
  `line`  
- 필수 요소. 모든 줄 레이블을 합니다.  
+ 필수. 모든 줄 레이블을 합니다.  
   
 ## <a name="remarks"></a>설명  
  `GoTo` 문은 나타나는 프로시저의 줄에만 분기할 수 있습니다. 줄에 있는 줄 레이블이 있어야 `GoTo` 를 참조할 수 있습니다. 자세한 내용은 참조 [하는 방법: Label 문](../../../visual-basic/programming-guide/program-structure/how-to-label-statements.md)합니다.  
   
 > [!NOTE]
->  `GoTo`문은 코드를 읽고 관리 하기 어려울 수 있습니다. 가능 하면 제어 구조를 대신 사용 합니다. 자세한 내용은 참조 [제어 흐름](../../../visual-basic/programming-guide/language-features/control-flow/index.md)합니다.  
+>  `GoTo` 문은 코드를 읽고 관리 하기 어려울 수 있습니다. 가능 하면 제어 구조를 대신 사용 합니다. 자세한 내용은 참조 [제어 흐름](../../../visual-basic/programming-guide/language-features/control-flow/index.md)합니다.  
   
  사용할 수 없습니다는 `GoTo` 문 외부에서 분기에는 `For`... `Next`, `For Each`... `Next`, `SyncLock`... `End SyncLock`, `Try`... `Catch`... `Finally`, `With`... `End With`, 또는 `Using`... `End Using` 내부의 레이블로 생성 합니다.  
   
@@ -54,9 +45,9 @@ GoTo line
   
 |블록 또는 지역|외부에서 분기|내부에서 외부로 분기|  
 |---------------------|-------------------------------|-------------------------------|  
-|`Try`블록|에서만 `Catch` 동일한 생성의 블록 <sup>1</sup>|에 전체 구문의 외부|  
-|`Catch`블록|사용할 수 없습니다.|에 전체 구문의 외부 또는 `Try` 동일한 생성의 블록 <sup>1</sup>|  
-|`Finally`블록|사용할 수 없습니다.|사용할 수 없습니다.|  
+|`Try` 블록|에서만 `Catch` 동일한 생성의 블록 <sup>1</sup>|에 전체 구문의 외부|  
+|`Catch` 블록|사용할 수 없습니다.|에 전체 구문의 외부 또는 `Try` 동일한 생성의 블록 <sup>1</sup>|  
+|`Finally` 블록|사용할 수 없습니다.|사용할 수 없습니다.|  
   
  <sup>1</sup> 경우 `Try`... `Catch`... `Finally` 생성 다른 안으로 중첩 됩니다는 `Catch` 블록으로 분기할 수는 `Try` 자체 중첩 수준에 포함 되지 않습니다 다른 블록 `Try` 블록입니다. 중첩 된 `Try`... `Catch`... `Finally` 생성에 완전히 포함 되어야 합니다는 `Try` 또는 `Catch` 블록의 중첩 된 생성 합니다.  
   

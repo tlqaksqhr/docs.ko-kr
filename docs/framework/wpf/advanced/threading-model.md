@@ -1,13 +1,6 @@
 ---
-title: "스레딩 모델"
-ms.custom: 
+title: 스레딩 모델
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -25,21 +18,16 @@ helpviewer_keywords:
 - nested message processing [WPF]
 - reentrancy [WPF]
 ms.assetid: 02d8fd00-8d7c-4604-874c-58e40786770b
-caps.latest.revision: "33"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: f598cecef2d0994692f197df09e9befc39a58723
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 15115cc0ed14cb5605100ebe47abd5cd4dc02ec0
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="threading-model"></a>스레딩 모델
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]는 개발자가 스레딩의 어려움을 해결하도록 디자인되어 있습니다. 결과적으로 대부분의 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 개발자를 둘 이상의 스레드를 사용 하는 인터페이스를 작성할 필요가 없습니다. 다중 스레드 프로그램은 복잡하고 디버그하기 어려우므로 단일 스레드 솔루션이 있을 경우 피해야 합니다.  
   
- 그러나에 관계 없이 얼마나 잘 설계, 아니요 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 프레임 워크 됩니다도 모든 종류의 문제에 대 한 단일 스레드 솔루션을 제공할 수 있습니다. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]여러 스레드 향상 시킬 경우 여전히 하지만 [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] 응답성 또는 응용 프로그램 성능입니다. 일부 배경 자료를 설명한 후 이 문서에서는 이러한 상황 중 일부를 살펴보고 몇몇 하위 수준 세부 정보에 대한 설명으로 마무리 짓습니다.  
+ 그러나에 관계 없이 얼마나 잘 설계, 아니요 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 프레임 워크 됩니다도 모든 종류의 문제에 대 한 단일 스레드 솔루션을 제공할 수 있습니다. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 여러 스레드 향상 시킬 경우 여전히 하지만 [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] 응답성 또는 응용 프로그램 성능입니다. 일부 배경 자료를 설명한 후 이 문서에서는 이러한 상황 중 일부를 살펴보고 몇몇 하위 수준 세부 정보에 대한 설명으로 마무리 짓습니다.  
   
 
   
@@ -56,11 +44,11 @@ ms.lasthandoff: 12/22/2017
   
  어떻게 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 큰 작업을 처리 응용 프로그램 할까요? 코드에 큰 계산을 포함하거나 몇몇 원격 서버에서 데이터베이스를 쿼리해야 하면 어떻게 될까요? 큰는 별도 스레드에서 작업을 처리 하도록 대답은 일반적으로 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 스레드가의 항목에는 <xref:System.Windows.Threading.Dispatcher> 큐입니다. 큰 작업이 완료 되 면 해당 결과 보고할 수 있어 다시는 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 디스플레이 대 한 스레드입니다.  
   
- 지금까지 [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] 허용 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 요소를 사용 하는 스레드를 만든만 액세스할 수 있습니다. 즉, 일부 장기 실행 작업을 처리하는 백그라운드 스레드는 작업이 완료될 때 입력란을 업데이트할 수 없습니다. [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)]무결성을 보장 하는 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 구성 요소입니다. 목록 상자의 콘텐츠가 그리는 동안 백그라운드 스레드를 통해 업데이트되면 목록 상자가 이상하게 표시될 수 있습니다.  
+ 지금까지 [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] 허용 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 요소를 사용 하는 스레드를 만든만 액세스할 수 있습니다. 즉, 일부 장기 실행 작업을 처리하는 백그라운드 스레드는 작업이 완료될 때 입력란을 업데이트할 수 없습니다. [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] 무결성을 보장 하는 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 구성 요소입니다. 목록 상자의 콘텐츠가 그리는 동안 백그라운드 스레드를 통해 업데이트되면 목록 상자가 이상하게 표시될 수 있습니다.  
   
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]에는 이 조정을 적용하는 기본 제공 상호 배제 메커니즘이 있습니다. 대부분의 클래스에 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 에서 파생 <xref:System.Windows.Threading.DispatcherObject>합니다. 생성 시는 <xref:System.Windows.Threading.DispatcherObject> 저장에 대 한 참조는 <xref:System.Windows.Threading.Dispatcher> 현재 실행 중인 스레드에 연결 합니다. 실제로 <xref:System.Windows.Threading.DispatcherObject> 을 만든 스레드에 연결 합니다. 프로그램 실행 중 한 <xref:System.Windows.Threading.DispatcherObject> 해당 공용을 호출할 수 <xref:System.Windows.Threading.DispatcherObject.VerifyAccess%2A> 메서드. <xref:System.Windows.Threading.DispatcherObject.VerifyAccess%2A>검사 하는 <xref:System.Windows.Threading.Dispatcher> 현재 스레드와 연결 된 해시와 비교 하 여 <xref:System.Windows.Threading.Dispatcher> 생성 시 저장 된 참조입니다. 일치 하지 않으면 <xref:System.Windows.Threading.DispatcherObject.VerifyAccess%2A> 예외를 throw 합니다. <xref:System.Windows.Threading.DispatcherObject.VerifyAccess%2A>에 속한 모든 메서드의 시작 부분에서 호출 하기 위한 용도가 <xref:System.Windows.Threading.DispatcherObject>합니다.  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]에는 이 조정을 적용하는 기본 제공 상호 배제 메커니즘이 있습니다. 대부분의 클래스에 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 에서 파생 <xref:System.Windows.Threading.DispatcherObject>합니다. 생성 시는 <xref:System.Windows.Threading.DispatcherObject> 저장에 대 한 참조는 <xref:System.Windows.Threading.Dispatcher> 현재 실행 중인 스레드에 연결 합니다. 실제로 <xref:System.Windows.Threading.DispatcherObject> 을 만든 스레드에 연결 합니다. 프로그램 실행 중 한 <xref:System.Windows.Threading.DispatcherObject> 해당 공용을 호출할 수 <xref:System.Windows.Threading.DispatcherObject.VerifyAccess%2A> 메서드. <xref:System.Windows.Threading.DispatcherObject.VerifyAccess%2A> 검사 하는 <xref:System.Windows.Threading.Dispatcher> 현재 스레드와 연결 된 해시와 비교 하 여 <xref:System.Windows.Threading.Dispatcher> 생성 시 저장 된 참조입니다. 일치 하지 않으면 <xref:System.Windows.Threading.DispatcherObject.VerifyAccess%2A> 예외를 throw 합니다. <xref:System.Windows.Threading.DispatcherObject.VerifyAccess%2A> 에 속한 모든 메서드의 시작 부분에서 호출 하기 위한 용도가 <xref:System.Windows.Threading.DispatcherObject>합니다.  
   
- 경우에 하나의 스레드를 수정할 수는 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)], 사용자와 백그라운드 스레드 상호 작용? 백그라운드 스레드를 요청할 수는 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 대신에 대 한 작업을 수행 하는 스레드입니다. 작업 항목을 등록 하 여 수행 된 <xref:System.Windows.Threading.Dispatcher> 의 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 스레드 합니다. <xref:System.Windows.Threading.Dispatcher> 클래스에서는 작업 항목을 등록 하기 위한 두 가지 방법: <xref:System.Windows.Threading.Dispatcher.Invoke%2A> 및 <xref:System.Windows.Threading.Dispatcher.BeginInvoke%2A>합니다. 메서드는 둘 다 대리자 실행을 예약합니다. <xref:System.Windows.Threading.Dispatcher.Invoke%2A>동기 호출 – 즉, 될 때까지 반환 하지 않습니다는 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 스레드가 실제로 대리자를 실행을 완료 합니다. <xref:System.Windows.Threading.Dispatcher.BeginInvoke%2A>비동기 및 즉시 반환 합니다.  
+ 경우에 하나의 스레드를 수정할 수는 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)], 사용자와 백그라운드 스레드 상호 작용? 백그라운드 스레드를 요청할 수는 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 대신에 대 한 작업을 수행 하는 스레드입니다. 작업 항목을 등록 하 여 수행 된 <xref:System.Windows.Threading.Dispatcher> 의 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 스레드 합니다. <xref:System.Windows.Threading.Dispatcher> 클래스에서는 작업 항목을 등록 하기 위한 두 가지 방법: <xref:System.Windows.Threading.Dispatcher.Invoke%2A> 및 <xref:System.Windows.Threading.Dispatcher.BeginInvoke%2A>합니다. 메서드는 둘 다 대리자 실행을 예약합니다. <xref:System.Windows.Threading.Dispatcher.Invoke%2A> 동기 호출 – 즉, 될 때까지 반환 하지 않습니다는 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 스레드가 실제로 대리자를 실행을 완료 합니다. <xref:System.Windows.Threading.Dispatcher.BeginInvoke%2A> 비동기 및 즉시 반환 합니다.  
   
  <xref:System.Windows.Threading.Dispatcher> 우선 순위에 따라 큐에는 요소를 정렬 합니다. 에 요소를 추가 하는 경우에 지정 될 수 있는 10 개의 수준이 고 <xref:System.Windows.Threading.Dispatcher> 큐입니다. 이러한 우선 순위에서 유지 관리는 <xref:System.Windows.Threading.DispatcherPriority> 열거형입니다. 에 대 한 자세한 정보 <xref:System.Windows.Threading.DispatcherPriority> 수준에서 확인할 수 있습니다는 [!INCLUDE[TLA2#tla_winfxsdk](../../../../includes/tla2sharptla-winfxsdk-md.md)] 설명서입니다.  
   
@@ -143,7 +131,7 @@ ms.lasthandoff: 12/22/2017
   
  에 보고 하는 시간 지연 완료 되 면 일기 예보 임의로 선택 하는 경우 이기는 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 스레드입니다. 에 대 한 호출을 예약 하 여 수행 `UpdateUserInterface` 에 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 해당 스레드를 사용 하 여 스레드 <xref:System.Windows.Threading.Dispatcher>합니다. 날씨를 설명하는 문자열을 예약된 메서드 호출에 전달합니다.  
   
--   업데이트는[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]  
+-   업데이트는 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]  
   
      [!code-csharp[ThreadingWeatherForecast#ThreadingWeatherUpdateUI](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ThreadingWeatherForecast/CSharp/Window1.xaml.cs#threadingweatherupdateui)]
      [!code-vb[ThreadingWeatherForecast#ThreadingWeatherUpdateUI](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ThreadingWeatherForecast/visualbasic/window1.xaml.vb#threadingweatherupdateui)]  
@@ -177,13 +165,13 @@ ms.lasthandoff: 12/22/2017
  [!code-csharp[ThreadingMultipleBrowsers#ThreadingMultiBrowserThreadStart](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ThreadingMultipleBrowsers/CSharp/Window1.xaml.cs#threadingmultibrowserthreadstart)]
  [!code-vb[ThreadingMultipleBrowsers#ThreadingMultiBrowserThreadStart](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ThreadingMultipleBrowsers/VisualBasic/Window1.xaml.vb#threadingmultibrowserthreadstart)]  
   
- 이 메서드는 새 스레드의 시작점입니다. 이 스레드의 제어를 기반으로 새 창을 만듭니다. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]에서는 자동으로 새 <xref:System.Windows.Threading.Dispatcher> 새 스레드를 관리할 수 있습니다. 시작 하는 것을 창 기능을 높이기 위해 수행 해야는 <xref:System.Windows.Threading.Dispatcher>합니다.  
+ 이 메서드는 새 스레드의 시작점입니다. 이 스레드의 제어를 기반으로 새 창을 만듭니다. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 에서는 자동으로 새 <xref:System.Windows.Threading.Dispatcher> 새 스레드를 관리할 수 있습니다. 시작 하는 것을 창 기능을 높이기 위해 수행 해야는 <xref:System.Windows.Threading.Dispatcher>합니다.  
   
 <a name="stumbling_points"></a>   
 ## <a name="technical-details-and-stumbling-points"></a>기술 세부 정보 및 주의 사항  
   
 ### <a name="writing-components-using-threading"></a>스레딩을 사용하여 구성 요소 작성  
- [!INCLUDE[TLA#tla_netframewk](../../../../includes/tlasharptla-netframewk-md.md)] 구성 요소 수를 클라이언트에 비동기 동작을 노출 하는 방법에 대 한 패턴을 설명 하는 개발자 가이드 (참조 [이벤트 기반 비동기 패턴 개요](../../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md)). 예를 들어 패키지 주고자는 `FetchWeatherFromServer` 비그래픽, 재사용 가능한 구성 요소를 메서드. 표준 [!INCLUDE[TLA#tla_netframewk](../../../../includes/tlasharptla-netframewk-md.md)] 패턴을 다음과 유사할 것이 있습니다.  
+ 구성 요소 수를 클라이언트에 비동기 동작을 노출 하는 방법에 대 한 패턴을 설명 하는 Microsoft.NET Framework 개발자 가이드 (참조 [이벤트 기반 비동기 패턴 개요](../../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md)). 예를 들어 패키지 주고자는 `FetchWeatherFromServer` 비그래픽, 재사용 가능한 구성 요소를 메서드. 표준 Microsoft.NET Framework 패턴을 따라 다음과 같은 유사할 것이 있습니다.  
   
  [!code-csharp[CommandingOverviewSnippets#ThreadingArticleWeatherComponent1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/CommandingOverviewSnippets/CSharp/Window1.xaml.cs#threadingarticleweathercomponent1)]
  [!code-vb[CommandingOverviewSnippets#ThreadingArticleWeatherComponent1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/CommandingOverviewSnippets/visualbasic/window1.xaml.vb#threadingarticleweathercomponent1)]  
@@ -198,7 +186,7 @@ ms.lasthandoff: 12/22/2017
  [!code-vb[CommandingOverviewSnippets#ThreadingArticleWeatherComponent2](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/CommandingOverviewSnippets/visualbasic/window1.xaml.vb#threadingarticleweathercomponent2)]  
   
 ### <a name="nested-pumping"></a>중첩 펌핑  
- 경우에 따라 적합 하지 않다고 완전히 작동 중지 된 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 스레드입니다. 이제는 <xref:System.Windows.MessageBox.Show%2A> 의 메서드는 <xref:System.Windows.MessageBox> 클래스 합니다. <xref:System.Windows.MessageBox.Show%2A>확인 단추를 클릭할 때까지 반환 하지 않습니다. 하지만 상호 작용하기 위해 메시지 루프를 포함해야 하는 창을 만듭니다. 사용자가 [확인]을 클릭할 때까지 기다리고 있는 동안 원래 응용 프로그램 창은 사용자 입력에 반응하지 않습니다. 하지만 이 창은 그리기 메시지를 계속 처리합니다. 원래 창은 숨겨졌다 표시될 때 자동으로 재배치됩니다.  
+ 경우에 따라 적합 하지 않다고 완전히 작동 중지 된 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 스레드입니다. 이제는 <xref:System.Windows.MessageBox.Show%2A> 의 메서드는 <xref:System.Windows.MessageBox> 클래스 합니다. <xref:System.Windows.MessageBox.Show%2A> 확인 단추를 클릭할 때까지 반환 하지 않습니다. 하지만 상호 작용하기 위해 메시지 루프를 포함해야 하는 창을 만듭니다. 사용자가 [확인]을 클릭할 때까지 기다리고 있는 동안 원래 응용 프로그램 창은 사용자 입력에 반응하지 않습니다. 하지만 이 창은 그리기 메시지를 계속 처리합니다. 원래 창은 숨겨졌다 표시될 때 자동으로 재배치됩니다.  
   
  !["확인" 단추가 있는 MessageBox](../../../../docs/framework/wpf/advanced/media/threadingnestedpumping.png "ThreadingNestedPumping")  
   
@@ -213,7 +201,7 @@ ms.lasthandoff: 12/22/2017
   
  타원 위로 마우스 왼쪽된 단추를 누를 때 `handler2` 실행 됩니다. 후 `handler2` 완료 되 면 이벤트에 전달 됩니다는 <xref:System.Windows.Controls.Canvas> 개체를 사용 하 여 `handler1` 처리 합니다. 이 경우에 발생 `handler2` 에서 명시적으로 표시 하면 이벤트 개체를 처리 합니다.  
   
- 수 있는 `handler2` 상당한이이 이벤트를 처리 하는 시간을 소요 됩니다. `handler2`사용할 수 있습니다 <xref:System.Windows.Threading.Dispatcher.PushFrame%2A> 시간에 대 한 반환 하지 않는 중첩된 메시지 루프를 시작 합니다. 경우 `handler2` 이벤트 처리 되므로이 메시지 루프가 되었을 때 완료 하는 표시 되지 않는는 매우 오래 된 경우에 트리를 이벤트 전달 됩니다.  
+ 수 있는 `handler2` 상당한이이 이벤트를 처리 하는 시간을 소요 됩니다. `handler2` 사용할 수 있습니다 <xref:System.Windows.Threading.Dispatcher.PushFrame%2A> 시간에 대 한 반환 하지 않는 중첩된 메시지 루프를 시작 합니다. 경우 `handler2` 이벤트 처리 되므로이 메시지 루프가 되었을 때 완료 하는 표시 되지 않는는 매우 오래 된 경우에 트리를 이벤트 전달 됩니다.  
   
 ### <a name="reentrancy-and-locking"></a>재입력 및 잠금  
  잠금 메커니즘은 [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] 과 동일 하 게 동작 하지 않습니다 예상한 것; 스레드 잠금을 요청 하는 경우 작업을 완전히 중단할 된다고 예상 합니다. 실제로 스레드는 우선 순위가 높은 메시지를 계속 수신하고 처리합니다. 이를 통해 교착 상태를 방지하고 인터페이스가 최소한으로 응답할 수 있지만 미묘한 버그가 발생할 수 있습니다.  대부분의 시간 드문 경우에는 있지만,이 대 한 어떠한 정보도 알 필요가 없습니다 (일반적으로 관련 된 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 창 메시지 또는 STA COM 구성 요소)이 할 경우도 있습니다.  

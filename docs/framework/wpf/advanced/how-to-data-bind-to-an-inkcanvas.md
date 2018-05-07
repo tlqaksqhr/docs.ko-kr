@@ -1,30 +1,18 @@
 ---
-title: "방법: InkCanvas에 데이터 바인딩"
-ms.custom: 
+title: '방법: InkCanvas에 데이터 바인딩'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - InkCanvas [WPF], binding data to
 - binding data [WPF], to InkCanvas
 ms.assetid: 8d6b4d9e-ea7f-4412-ba83-3feccec5a515
-caps.latest.revision: "4"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 7c8c4f558386edd8da213f8a8af75b6a4c6a98b3
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 4081ae7dd6854934804062cfce60d10106c1e1d3
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-data-bind-to-an-inkcanvas"></a>방법: InkCanvas에 데이터 바인딩
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 예제에서는 바인딩하는 방법을 <xref:System.Windows.Controls.InkCanvas.Strokes%2A> 속성은 <xref:System.Windows.Controls.InkCanvas> 다른 <xref:System.Windows.Controls.InkCanvas>합니다.  
   
  [!code-xaml[InkCanvasBindingSnippet#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/InkCanvasBindingSnippet/CS/Window2.xaml#2)]  

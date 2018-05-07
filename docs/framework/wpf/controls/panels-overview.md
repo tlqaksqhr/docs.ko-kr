@@ -1,14 +1,6 @@
 ---
 title: Panel 개요
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-wpf
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -17,17 +9,11 @@ helpviewer_keywords:
 - Panel control [WPF], about Panel control
 - controls [WPF], Panel
 ms.assetid: f73644af-9941-4611-8754-6d4cef03fc44
-caps.latest.revision: 48
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: dd04413636c7d6182ff01712eecedbbd4ed02761
-ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
+ms.openlocfilehash: 65f5fa9eeffdeb6e7bc869d159b4b33d75fd7570
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="panels-overview"></a>Panel 개요
 <xref:System.Windows.Controls.Panel> 요소는 요소의 렌더링을 제어 하는 구성 요소-크기 및 차원, 위치, 및 자식 콘텐츠를 정렬 합니다. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 다양 한 미리 정의 된 <xref:System.Windows.Controls.Panel> 요소 뿐만 아니라 사용자 지정을 생성 하는 기능 <xref:System.Windows.Controls.Panel> 요소입니다.  
@@ -107,7 +93,7 @@ ms.lasthandoff: 04/09/2018
   
 <a name="Panels_overview_Canvas_subsection"></a>   
 ### <a name="canvas"></a>Canvas  
- <xref:System.Windows.Controls.Canvas> 요소 절대에 따라 콘텐츠 위치를 사용 하면 *x-* 및 *y-*좌표입니다. 요소를 고유한 위치에 그릴 수 있고, 여러 요소가 같은 좌표를 사용하는 경우에는 요소가 태그에 표시되는 순서에 따라 요소를 그리는 순서가 결정됩니다.  
+ <xref:System.Windows.Controls.Canvas> 요소 절대에 따라 콘텐츠 위치를 사용 하면 *x-* 및 *y-* 좌표입니다. 요소를 고유한 위치에 그릴 수 있고, 여러 요소가 같은 좌표를 사용하는 경우에는 요소가 태그에 표시되는 순서에 따라 요소를 그리는 순서가 결정됩니다.  
   
  <xref:System.Windows.Controls.Canvas> 하나는 가장 유연한 레이아웃 지원 제공 <xref:System.Windows.Controls.Panel>합니다. 높이 및 너비 속성은 캔버스의 영역을 정의 하는 데 사용 되 고 내 요소를 부모 영역을 기준으로 절대 좌표를 할당 하는 <xref:System.Windows.Controls.Canvas>합니다. 4 개의 연결 된 속성, <xref:System.Windows.Controls.Canvas.Left%2A?displayProperty=nameWithType>, <xref:System.Windows.Controls.Canvas.Top%2A?displayProperty=nameWithType>, <xref:System.Windows.Controls.Canvas.Right%2A?displayProperty=nameWithType> 및 <xref:System.Windows.Controls.Canvas.Bottom%2A?displayProperty=nameWithType>, 내에서 개체 배치의 세부적으로 제어할 수 있도록는 <xref:System.Windows.Controls.Canvas>를 배치 하 고 화면에 정확 하 게 하는 요소를 정렬 하기 때문에 개발자.  
   
@@ -245,7 +231,7 @@ ms.lasthandoff: 04/09/2018
   
  마찬가지로, 사용자 지정 레이아웃 동작에 따라 파생 클래스 (같은 <xref:System.Windows.Controls.Canvas> 또는 <xref:System.Windows.Controls.Grid>)를 재정의 하 여 정의할 수 있습니다 자신의 <xref:System.Windows.FrameworkElement.ArrangeOverride%2A> 및 <xref:System.Windows.FrameworkElement.MeasureOverride%2A> 메서드.  
   
- 다음 태그에는 사용자 지정을 만드는 방법을 보여 줍니다 <xref:System.Windows.Controls.Panel> 요소입니다. 이 새로운 <xref:System.Windows.Controls.Panel>로 정의 된 `PlotPanel`, 하드 코드를 사용 하 여 자식 요소의 위치를 지원 *x-* 및 *y-*좌표입니다. 이 예제는 <xref:System.Windows.Shapes.Rectangle> 요소 (표시 되지 않음)가 50 그림 지점에 배치 (*x*)에서 50 (*y*).  
+ 다음 태그에는 사용자 지정을 만드는 방법을 보여 줍니다 <xref:System.Windows.Controls.Panel> 요소입니다. 이 새로운 <xref:System.Windows.Controls.Panel>로 정의 된 `PlotPanel`, 하드 코드를 사용 하 여 자식 요소의 위치를 지원 *x-* 및 *y-* 좌표입니다. 이 예제는 <xref:System.Windows.Shapes.Rectangle> 요소 (표시 되지 않음)가 50 그림 지점에 배치 (*x*)에서 50 (*y*).  
   
  [!code-cpp[PlotPanel#1](../../../../samples/snippets/cpp/VS_Snippets_Wpf/PlotPanel/CPP/PlotPanel.cpp#1)]
  [!code-csharp[PlotPanel#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PlotPanel/CSharp/PlotPanel.cs#1)]

@@ -1,11 +1,6 @@
 ---
 title: Declare Statement
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.Declare
 - vb.Lib
@@ -32,14 +27,11 @@ helpviewer_keywords:
 - Visual Basic code, Sub procedures
 - Function procedures [Visual Basic], declaring
 ms.assetid: d3f21fb0-b804-4c99-97ed-583b23894cf1
-caps.latest.revision: "30"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 2560f34a5130ef7453b50ffb4495b67bf1dfa4c8
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: bc6949c7b52e87b7b39dd2690cac915a5f0d15aa
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="declare-statement"></a>Declare Statement
 외부 파일에 구현 된 프로시저에 대 한 참조를 선언 합니다.  
@@ -66,11 +58,11 @@ Declare [ charsetmodifier ] [ Function ] name Lib "libname" _
 |`charsetmodifier`|선택 사항입니다. 문자 집합 및 파일을 지정 정보를 검색 합니다. 다음 중 하나일 수 있습니다.<br /><br /> -   [Ansi](../../../visual-basic/language-reference/modifiers/ansi.md) (기본값)<br />-   [유니코드](../../../visual-basic/language-reference/modifiers/unicode.md)<br />-   [자동](../../../visual-basic/language-reference/modifiers/auto.md)|  
 |`Sub`|선택적 `Sub` 또는 `Function` 나타나야 합니다. 외부 프로시저 값을 반환 하지 않는 것을 나타냅니다.|  
 |`Function`|선택적 `Sub` 또는 `Function` 나타나야 합니다. 외부 프로시저에 값을 반환 했는지를 나타냅니다.|  
-|`name`|필수 요소. 이 외부 참조의 이름입니다. 자세한 내용은 참조 [선언 요소 이름](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)합니다.|  
-|`Lib`|필수 요소. 소개는 `Lib` 절 외부 프로시저를 포함 하는 외부 파일 (DLL 또는 코드 리소스)를 식별 합니다.|  
-|`libname`|필수 요소. 선언된 된 프로시저를 포함 하는 파일의 이름입니다.|  
+|`name`|필수. 이 외부 참조의 이름입니다. 자세한 내용은 참조 [선언 요소 이름](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)합니다.|  
+|`Lib`|필수. 소개는 `Lib` 절 외부 프로시저를 포함 하는 외부 파일 (DLL 또는 코드 리소스)를 식별 합니다.|  
+|`libname`|필수. 선언된 된 프로시저를 포함 하는 파일의 이름입니다.|  
 |`Alias`|선택 사항입니다. 에 지정 된 이름으로 선언 되는 프로시저 파일 내에서 식별할 수 없음을 나타냅니다 `name`합니다. 해당 id를 지정 `aliasname`합니다.|  
-|`aliasname`|사용 하는 경우 필요는 `Alias` 키워드입니다. 두 가지 방법 중 하나에서 프로시저를 식별 하는 문자열:<br /><br /> 따옴표 안에 해당 파일 내에서 프로시저의 진입점 이름 (`""`)<br /><br /> 또는<br /><br /> 숫자 기호 (`#`) 뒤에 해당 파일 내에서 프로시저의 진입점의 서 수를 지정 하는 정수|  
+|`aliasname`|사용 하는 경우 필요는 `Alias` 키워드입니다. 두 가지 방법 중 하나에서 프로시저를 식별 하는 문자열:<br /><br /> 따옴표 안에 해당 파일 내에서 프로시저의 진입점 이름 (`""`)<br /><br /> -또는-<br /><br /> 숫자 기호 (`#`) 뒤에 해당 파일 내에서 프로시저의 진입점의 서 수를 지정 하는 정수|  
 |`parameterlist`|프로시저 매개 변수를 사용 하는 경우 필요 합니다. 참조 [매개 변수 목록](../../../visual-basic/language-reference/statements/parameter-list.md)합니다.|  
 |`returntype`|필요한 경우 `Function` 지정 및 `Option Strict` 은 `On`합니다. 프로시저에서 반환 되는 값의 데이터 형식입니다.|  
   
@@ -125,7 +117,7 @@ Declare [ charsetmodifier ] [ Function ] name Lib "libname" _
   
 -   **문자 집합입니다.** 지정할 수 있습니다 `charsetmodifier` 어떻게 Visual Basic 문자열 마샬링하고 외부 프로시저를 호출할 때입니다. `Ansi` 한정자에는 모든 문자열을 ANSI 값을 마샬링합니다 Visual Basic 하도록 지시 및 `Unicode` 한정자 마샬링해야 하는 모든 문자열을 유니코드 값으로 보냅니다. `Auto` 한정자 Visual Basic.NET Framework에 따라 문자열을 마샬링 하 규칙 외부 참조를 기반 알려 `name`, 또는 `aliasname` 지정 합니다. 기본값은 `Ansi`입니다.  
   
-     `charsetmodifier`또한 Visual Basic 외부 파일 내에서 외부 프로시저를 조회 방법을 지정 합니다. `Ansi`및 `Unicode` 둘 다 직접 Visual Basic로 검색 하는 동안 이름을 수정 하지 않고 조회 합니다. `Auto`Visual Basic 하는 런타임 플랫폼의 기본 문자 집합을 결정 하 고 다음과 같은 외부 프로시저 이름을 수정 하도록 지시 합니다.  
+     `charsetmodifier` 또한 Visual Basic 외부 파일 내에서 외부 프로시저를 조회 방법을 지정 합니다. `Ansi` 및 `Unicode` 둘 다 직접 Visual Basic로 검색 하는 동안 이름을 수정 하지 않고 조회 합니다. `Auto` Visual Basic 하는 런타임 플랫폼의 기본 문자 집합을 결정 하 고 다음과 같은 외부 프로시저 이름을 수정 하도록 지시 합니다.  
   
     -   Windows 95, Windows 98 또는 Windows Millennium Edition 등의 ANSI 플랫폼에서 먼저 외부 프로시저 이름 수정 하지 않을를 찾습니다. 실패할 경우 외부 프로시저 이름의 끝에 "A"를 추가 하 고 다시 조회 합니다.  
   

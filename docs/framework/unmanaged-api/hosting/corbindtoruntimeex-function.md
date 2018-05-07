@@ -1,14 +1,6 @@
 ---
-title: "CorBindToRuntimeEx 함수"
-ms.custom: 
+title: CorBindToRuntimeEx 함수
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - CorBindToRuntimeEx
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: aae9fb17-5d01-41da-9773-1b5b5b642d81
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 7c0080e5a01c8e856c2862182ba06096fdc9385c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 75df07148ddb69ad6a062c80ec9b279e2f36e03e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="corbindtoruntimeex-function"></a>CorBindToRuntimeEx 함수
 관리 되지 않는 호스트 프로세스에 공용 언어 런타임 (CLR)를 로드할 수 있도록 합니다. [CorBindToRuntime](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntime-function.md) 및 `CorBindToRuntimeEx` 함수는 동일한 작업을 수행 하지만 `CorBindToRuntimeEx` 함수는 CLR의 동작을 지정 하는 플래그를 설정할 수 있습니다.  
@@ -148,7 +136,7 @@ HRESULT CorBindToRuntimeEx (
   
  **라이브러리:** MSCorEE.dll  
   
- **.NET framework 버전:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>참고 항목  
  [CorBindToCurrentRuntime 함수](../../../../docs/framework/unmanaged-api/hosting/corbindtocurrentruntime-function.md)  

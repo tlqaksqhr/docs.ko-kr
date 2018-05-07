@@ -1,10 +1,6 @@
 ---
-title: "사용자 정의 데이터 형식"
+title: 사용자 정의 데이터 형식
 ms.date: 07/20/2015
-ms.prod: .net
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - UserDefined
 - UDT
@@ -27,14 +23,11 @@ helpviewer_keywords:
 - user-defined data types
 - types [Visual Basic], user-defined
 ms.assetid: be913dca-a364-4a51-96a1-549a1b390b0a
-caps.latest.revision: "12"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 7e1876d61a2ce89b04c6e5061b868f0be365639f
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 07f04fb111863ca18d4966a7f0f967f11719aeec
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="user-defined-data-type"></a>사용자 정의 데이터 형식
 사용자가 정의한 형식에서 데이터를 저장 합니다. `Structure` 문으로 형식을 정의 합니다.  

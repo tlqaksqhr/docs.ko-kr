@@ -1,14 +1,6 @@
 ---
-title: "ICorProfilerCallback5::ConditionalWeakTableElementReferences 메서드"
-ms.custom: 
+title: ICorProfilerCallback5::ConditionalWeakTableElementReferences 메서드
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICorProfilerCallback5.ConditionalWeakTableReferences
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: 532c7a02-a9de-4cea-bb2b-7f470da594de
 topic_type:
 - apiref
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 8cfe86ac7d0cd5b4a5c6adb9f12ffe9577b6e611
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 4ee3c3302d77bcc7b807c01ccb5bab172153ddda
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="icorprofilercallback5conditionalweaktableelementreferences-method"></a>ICorProfilerCallback5::ConditionalWeakTableElementReferences 메서드
 직접 멤버 필드 참조와 `ConditionalWeakTable` 종속성을 모두 사용하여 루트를 통해 참조되는 개체의 전이적 Closure를 식별합니다.  
@@ -59,7 +47,7 @@ HRESULT ConditionalWeakTableElementReferences(     [in]                     ULON
   
  콜백 자체가 진행되는 동안 `ObjectID` 메서드에서 반환되는 `ConditionalWeakTableElementReferences` 값은 유효하지 않습니다. 가비지 수집기가 이전 위치에서 새 위치로 개체를 이동하는 중일 수 있기 때문입니다. 그러므로 프로파일러는 `ConditionalWeakTableElementReferences` 호출 중에 개체 검사를 시도하지 않아야 합니다. `GarbageCollectionFinished` 시에는 모든 개체가 새 위치로 이동했으므로 검사를 수행해도 됩니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 코드 예제에서는 구현 하는 방법을 보여 줍니다. [ICorProfilerCallback5](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback5-interface.md) 이 방법을 사용 하 여 합니다.  
   
 ```  
@@ -84,14 +72,14 @@ HRESULT Callback5Impl::ConditionalWeakTableElementReferences(
 ```  
   
 ## <a name="remarks"></a>설명  
- 에 대 한 프로파일러는 [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)] 또는 이후 버전 구현 하는 [ICorProfilerCallback5](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback5-interface.md) 인터페이스 및 지정 하는 종속성 레코드는 `ConditionalWeakTableElementReferences` 메서드. `ICorProfilerCallback5`으로 표시 하는 라이브 개체 간의 종속성의 전체 집합을 제공 `ConditionalWeakTable` 항목입니다. 이러한 종속성과 멤버 필드에서 지정 된 참조는 [icorprofilercallback:: Objectreferences](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-objectreferences-method.md) 메서드 라이브 개체의 전체 개체 그래프를 생성 하는 관리 되는 프로파일러를 사용할 수 있습니다.  
+ 에 대 한 프로파일러는 [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)] 또는 이후 버전 구현 하는 [ICorProfilerCallback5](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback5-interface.md) 인터페이스 및 지정 하는 종속성 레코드는 `ConditionalWeakTableElementReferences` 메서드. `ICorProfilerCallback5` 으로 표시 하는 라이브 개체 간의 종속성의 전체 집합을 제공 `ConditionalWeakTable` 항목입니다. 이러한 종속성과 멤버 필드에서 지정 된 참조는 [icorprofilercallback:: Objectreferences](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-objectreferences-method.md) 메서드 라이브 개체의 전체 개체 그래프를 생성 하는 관리 되는 프로파일러를 사용할 수 있습니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **플랫폼:** 참조 [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)합니다.  
   
  **헤더:** CorProf.idl, CorProf.h  
   
- **.NET framework 버전:**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **.NET framework 버전:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
 ## <a name="see-also"></a>참고 항목  
  [ICorProfilerCallback5 인터페이스](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback5-interface.md)

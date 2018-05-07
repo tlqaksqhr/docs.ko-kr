@@ -1,32 +1,20 @@
 ---
-title: "방법: LINQ 쿼리 결과에 바인딩"
-ms.custom: 
+title: '방법: LINQ 쿼리 결과에 바인딩'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - running a LINQ query [WPF], bind to results
 - binding to LINQ query results [WPF]
 ms.assetid: ff2844d9-17ed-4ea6-aab1-5111af0bc684
-caps.latest.revision: "5"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ad4969d80f7bd801ec738fa40e8b2d4ab9deefad
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: d374bb69b6b7e022497403b9591b27e9ad7e2395
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-bind-to-the-results-of-a-linq-query"></a>방법: LINQ 쿼리 결과에 바인딩
 이 예제에서는 LINQ 쿼리를 실행 한 다음 결과에 바인딩할 하는 방법을 보여 줍니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 예에서는 두 개의 목록 상자를 만듭니다. 첫 번째 목록 상자에는 세 가지 목록 항목이 포함 됩니다.  
   
  [!code-xaml[LinqExample#UI](../../../../samples/snippets/csharp/VS_Snippets_Wpf/LinqExample/CSharp/Window1.xaml#ui)]  

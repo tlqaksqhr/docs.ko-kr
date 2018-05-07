@@ -1,13 +1,7 @@
 ---
-title: "방법: 조정 규칙에 표준 시간대 만들기"
-ms.custom: 
+title: '방법: 조정 규칙에 표준 시간대 만들기'
 ms.date: 04/10/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -16,18 +10,13 @@ helpviewer_keywords:
 - time zones [.NET Framework], and adjustment rules
 - adjustment rule [.NET Framework]
 ms.assetid: c52ef192-13a9-435f-8015-3b12eae8c47c
-caps.latest.revision: "9"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: eddc1d400f5f63cb2790fc4c660b70ebfdd0efc1
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: c63b93e0dc587571605edb305979b8f97bf54cb7
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-time-zones-with-adjustment-rules"></a>방법: 조정 규칙에 표준 시간대 만들기
 
@@ -72,7 +61,7 @@ ms.lasthandoff: 12/23/2017
 
 7. 호출 된 <xref:System.TimeZoneInfo.CreateCustomTimeZone%28System.String%2CSystem.TimeSpan%2CSystem.String%2CSystem.String%2CSystem.String%2CSystem.TimeZoneInfo.AdjustmentRule%5B%5D%29?displayProperty=nameWithType> 새 표준 시간대를 인스턴스화하는 방법입니다.
 
-## <a name="example"></a>예
+## <a name="example"></a>예제
 
 다음 예제에서는 다양 한 현재 1918에서 시간 간격에 대 한 조정 규칙을 포함 하는 United States에 대 한 중앙 표준 시간대를 정의 합니다.
 
@@ -103,7 +92,7 @@ ms.lasthandoff: 12/23/2017
   [!code-csharp[System.TimeZone2.CreateTimeZone#6](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.TimeZone2.CreateTimeZone/cs/System.TimeZone2.CreateTimeZone.cs#6)]
   [!code-vb[System.TimeZone2.CreateTimeZone#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.TimeZone2.CreateTimeZone/vb/System.TimeZone2.CreateTimeZone.vb#6)]
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참고자료
 
 [날짜, 시간 및 표준 시간대](../../../docs/standard/datetime/index.md)
 [시간대 개요](../../../docs/standard/datetime/time-zone-overview.md)

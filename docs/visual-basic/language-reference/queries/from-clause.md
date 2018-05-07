@@ -1,11 +1,6 @@
 ---
-title: "From 절(Visual Basic)"
+title: From 절(Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.QueryFrom
 - vb.QueryFromIn
@@ -15,14 +10,11 @@ helpviewer_keywords:
 - From clause [Visual Basic]
 - From statement [Visual Basic]
 ms.assetid: 83e3665e-68a0-4540-a3a3-3d777a0f95d5
-caps.latest.revision: "19"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 0ecdc8b70fb1ae164a6c78998ce11db9938fbb56
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 1f113444efae83de7d299db330593937c7800bb3
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="from-clause-visual-basic"></a>From 절(Visual Basic)
 하나 이상의 범위 변수와 쿼리할 컬렉션을 지정합니다.  
@@ -38,9 +30,9 @@ From element [ As type ] In collection [ _ ]
   
 |용어|정의|  
 |---|---|  
-|`element`|필수 요소. A *범위 변수* 컬렉션의 요소를 반복 하는 데 사용 합니다. 범위 변수는의 각 멤버를 참조 하는 데 사용 되는 `collection` 쿼리 반복으로 `collection`합니다. 열거 가능한 형식 이어야 합니다.|  
+|`element`|필수. A *범위 변수* 컬렉션의 요소를 반복 하는 데 사용 합니다. 범위 변수는의 각 멤버를 참조 하는 데 사용 되는 `collection` 쿼리 반복으로 `collection`합니다. 열거 가능한 형식 이어야 합니다.|  
 |`type`|선택 사항입니다. `element`의 형식입니다. 없는 경우 `type` 지정 된 유형의 `element` 에서 유추 `collection`합니다.|  
-|`collection`|필수 요소. 쿼리할 컬렉션을 나타냅니다. 열거 가능한 형식 이어야 합니다.|  
+|`collection`|필수. 쿼리할 컬렉션을 나타냅니다. 열거 가능한 형식 이어야 합니다.|  
   
 ## <a name="remarks"></a>설명  
  `From` 절을 사용 하는 쿼리 및 소스 컬렉션에서 요소를 참조 하는 데 사용 되는 변수에 대 한 원본 데이터를 확인 합니다. 이러한 변수 라고 *범위 변수*합니다. `From` 절이 필요한 경우를 제외 하 고 쿼리에 대 한는 `Aggregate` 반환 에서만 결과 집계 하는 쿼리를 식별 하려면 절을 사용 합니다. 자세한 내용은 참조 [Aggregate 절](../../../visual-basic/language-reference/queries/aggregate-clause.md)합니다.  

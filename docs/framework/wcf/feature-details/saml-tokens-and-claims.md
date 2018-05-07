@@ -1,14 +1,6 @@
 ---
 title: SAML 토큰 및 클레임
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -18,20 +10,14 @@ helpviewer_keywords:
 - issued tokens
 - SAML token
 ms.assetid: 930b6e34-9eab-4e95-826c-4e06659bb977
-caps.latest.revision: 10
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 9bd10fe663ccb4c78af775baf3e76663ef9a91bd
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 374fde23a1bf8df704f76500b4808c16d142ddd9
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="saml-tokens-and-claims"></a>SAML 토큰 및 클레임
-SAML security Assertions Markup Language () *토큰* 클레임의 XML 표현 됩니다. 기본적으로 SAML 토큰 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 페더레이션된 보안 시나리오에 사용 되는 *발급 된 토큰*합니다.  
+SAML security Assertions Markup Language () *토큰* 클레임의 XML 표현 됩니다. Windows Communication Foundation (WCF) 페더레이션된 보안 시나리오에서 사용 하 여 SAML 토큰에는 기본적으로 *발급 된 토큰*합니다.  
   
  SAML 토큰은 하나의 엔터티에서 다른 엔터티에 대해 만든 클레임 집합인 문을 수행합니다. 예를 들어, 페더레이션 보안 시나리오의 경우 시스템의 사용자에 대한 보안 토큰 서비스에서 문을 작성합니다. 보안 토큰 서비스에서는 토큰에 포함된 문의 정확성을 나타내기 위해 SAML 토큰을 서명합니다. 또한 SAML 토큰은 암호화 키 자료와 연결되어 있으며, 이 때 SAML 토큰의 사용자는 해당 키 자료를 알고 있음을 증명합니다. 이 증명은 신뢰하는 상대에게 SAML 토큰이 실제로 해당 사용자에게 발행되었음을 나타냅니다. 예를 들어, 일반적인 시나리오는 다음과 같습니다.  
   
@@ -44,7 +30,7 @@ SAML security Assertions Markup Language () *토큰* 클레임의 XML 표현 됩
 4.  SAML 토큰을 통한 서명은 신뢰하는 상대에게 보안 토큰 서비스에서 토큰을 발행했음을 나타냅니다. 증명 키를 사용하여 만든 메시지 서명은 신뢰하는 상대에게 토큰이 클라이언트에게 발행되었음을 나타냅니다.  
   
 ## <a name="from-claims-to-samlattributes"></a>클레임에서 SamlAttribute로  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서 SAML 토큰의 문은 <xref:System.IdentityModel.Tokens.SamlAttribute> 개체로 모델링되며, 해당 개체는 <xref:System.IdentityModel.Claims.Claim> 개체에 <xref:System.IdentityModel.Claims.Claim>의 <xref:System.IdentityModel.Claims.Claim.Right%2A> 속성이 있고 <xref:System.IdentityModel.Claims.Rights.PossessProperty%2A> 속성의 형식이 <xref:System.IdentityModel.Claims.Claim.Resource%2A>인 경우 <xref:System.String> 개체에서 직접 채워집니다. 예를 들어:  
+ WCF, SAML 토큰의 문은으로 모델링 되며 <xref:System.IdentityModel.Tokens.SamlAttribute> 에서 직접 채울 수 있는 개체 <xref:System.IdentityModel.Claims.Claim> 제공 하는 개체는 <xref:System.IdentityModel.Claims.Claim> 개체에는 <xref:System.IdentityModel.Claims.Claim.Right%2A> 속성 <xref:System.IdentityModel.Claims.Rights.PossessProperty%2A> 및 <xref:System.IdentityModel.Claims.Claim.Resource%2A> 속성은 형식 <xref:System.String>합니다. 예를 들어:  
   
  [!code-csharp[c_CreateSTS#8](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_creatests/cs/source.cs#8)]
  [!code-vb[c_CreateSTS#8](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_creatests/vb/source.vb#8)]  

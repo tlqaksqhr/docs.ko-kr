@@ -1,23 +1,12 @@
 ---
-title: "활동 트리 검사"
-ms.custom: 
+title: 활동 트리 검사
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 100d00e4-8c1d-4233-8fbb-dd443a01155d
-caps.latest.revision: "10"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: efb7f8f1603de67f21aee7e1746670e324d5e238
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 4f2ca6bff27cfe0e3362e2a3b95cd08a0f8d5297
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="activity-tree-inspection"></a>활동 트리 검사
 활동 트리 검사는 워크플로 응용 프로그램 작성자가 응용 프로그램에서 호스트되는 워크플로를 검사하는 데 사용됩니다. <xref:System.Activities.WorkflowInspectionServices>를 사용하여 워크플로에서 특정 자식 활동을 검색하고, 개별 활동과 속성을 열거하며, 활동에 대한 런타임 메타데이터를 특정 시간에 캐시할 수 있습니다. 이 항목에서는 <xref:System.Activities.WorkflowInspectionServices>와 이를 사용한 활동 트리 검사 방법에 대해 간략하게 설명합니다.  

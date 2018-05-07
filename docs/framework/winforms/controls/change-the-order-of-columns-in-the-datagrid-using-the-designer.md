@@ -1,29 +1,17 @@
 ---
-title: "방법: 디자이너를 사용하여 Windows Forms DataGridView 컨트롤에서 열 순서 변경"
-ms.custom: 
+title: '방법: 디자이너를 사용하여 Windows Forms DataGridView 컨트롤에서 열 순서 변경'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - columns [Windows Forms], order of
 - DataGridView control [Windows Forms], column order
 - Windows Forms, columns
 - data [Windows Forms], displaying
 ms.assetid: 7fe52a98-75d6-448c-97a5-65ca2c568c1a
-caps.latest.revision: "14"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 42167c1391ef0820568fa120125bd973f567f0de
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 78e6b62c626b5981ebfa85972b3eaae638468757
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-change-the-order-of-columns-in-the-windows-forms-datagridview-control-using-the-designer"></a>방법: 디자이너를 사용하여 Windows Forms DataGridView 컨트롤에서 열 순서 변경
 Windows Forms 바인딩하면 <xref:System.Windows.Forms.DataGridView> 컨트롤을 데이터 소스를 자동으로 생성 된 열의 표시 순서는 데이터 원본에 의해 결정 됩니다. 이 순서를 원하는 경우에 디자이너를 사용 하 여 열의 순서를 변경할 수 있습니다. 컨트롤에 바인딩되지 않은 열을 추가 및 표시 순서를 변경할 수도 있습니다. 열 순서를 프로그래밍 방식으로 변경 하는 방법에 대 한 정보를 참조 하십시오. [하는 방법: Windows Forms DataGridView 컨트롤에서 열 순서 변경](../../../../docs/framework/winforms/controls/how-to-change-the-order-of-columns-in-the-windows-forms-datagridview-control.md)합니다.  

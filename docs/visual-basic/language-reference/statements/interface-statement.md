@@ -1,24 +1,17 @@
 ---
 title: Interface 문(Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.Interface
 helpviewer_keywords:
 - interface statement [Visual Basic]
 - interfaces [Visual Basic], interface definition
 ms.assetid: 8997af73-bda3-4f79-bd41-ca396b610260
-caps.latest.revision: 26
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 9418dc86ac6947ae951cb8fb757aed6e092a6668
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: f4282778db2d95f701cadb8bb98ec8ca982ba663
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="interface-statement-visual-basic"></a>Interface 문(Visual Basic)
 인터페이스의 이름을 선언 하 고 인터페이스를 구성 하는 멤버의 정의 소개 합니다.  
@@ -46,7 +39,7 @@ End Interface
 |`attributelist`|선택 사항입니다. 참조 [특성 목록](../../../visual-basic/language-reference/statements/attribute-list.md)합니다.|  
 |`accessmodifier`|선택 사항입니다. 다음 중 하나일 수 있습니다.<br /><br /> -   [공개](../../../visual-basic/language-reference/modifiers/public.md)<br />-   [보호](../../../visual-basic/language-reference/modifiers/protected.md)<br />-   [Friend](../../../visual-basic/language-reference/modifiers/friend.md)<br />-   [개인](../../../visual-basic/language-reference/modifiers/private.md)<br />-   `Protected Friend`<br /><br /> 참조 [액세스 수준을 Visual Basic의](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)합니다.|  
 |`Shadows`|선택 사항입니다. 참조 [그림자](../../../visual-basic/language-reference/modifiers/shadows.md)합니다.|  
-|`name`|필수 요소. 이 인터페이스의 이름입니다. 참조 [선언 된 요소 이름](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)합니다.|  
+|`name`|필수. 이 인터페이스의 이름입니다. 참조 [선언 된 요소 이름](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)합니다.|  
 |`Of`|선택 사항입니다. 제네릭 인터페이스는 임을 지정 합니다.|  
 |`typelist`|사용 하는 경우 필요는 [의](../../../visual-basic/language-reference/statements/of-clause.md) 키워드입니다. 이 인터페이스에 대 한 형식 매개 변수의 목록입니다. 필요에 따라 각 형식 매개 변수에 선언할 수 변형을 사용 하 여 `In` 및 `Out` 제네릭 한정자입니다. 참조 [목록을 입력](../../../visual-basic/language-reference/statements/type-list.md)합니다.|  
 |`Inherits`|선택 사항입니다. 이 인터페이스에서 특성 및 다른 인터페이스 또는 인터페이스의 멤버를 상속 함을 나타냅니다. 참조 [Inherits 문](../../../visual-basic/language-reference/statements/inherits-statement.md)합니다.|  

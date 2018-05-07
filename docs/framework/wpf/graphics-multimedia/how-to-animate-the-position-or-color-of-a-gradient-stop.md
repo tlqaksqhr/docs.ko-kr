@@ -1,13 +1,6 @@
 ---
-title: "방법: 그라데이션 중지점의 위치 또는 색에 애니메이션 효과 적용"
-ms.custom: 
+title: '방법: 그라데이션 중지점의 위치 또는 색에 애니메이션 효과 적용'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -19,21 +12,16 @@ helpviewer_keywords:
 - animation [WPF], color of GradientStop objects
 - GradientStop objects [WPF], animating position of
 ms.assetid: 6f5b8b47-6c32-4b8e-98ee-fdf6515ec843
-caps.latest.revision: "5"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 9c5a72d5df9d7ff9cdd90d6e09a7dab574e2caaf
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 2eb528127c8aa66976788ec1f4e5362ca3a1ef26
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-animate-the-position-or-color-of-a-gradient-stop"></a>방법: 그라데이션 중지점의 위치 또는 색에 애니메이션 효과 적용
 애니메이션 효과 적용 하는 방법을 보여 주는이 예제는 <xref:System.Windows.Media.GradientStop.Color%2A> 및 <xref:System.Windows.Media.GradientStop.Offset%2A> 의 <xref:System.Windows.Media.GradientStop> 개체입니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 예제에서는 세 개의 그라데이션 중지점 내 애니메이션 효과 적용 한 <xref:System.Windows.Media.LinearGradientBrush>합니다. 이 예제에서는 서로 다른 그라데이션 중지점 애니메이션 효과 적용 하며 각 세 애니메이션을 사용 합니다.  
   
 -   첫 번째 애니메이션은 <xref:System.Windows.Media.Animation.DoubleAnimation>, 첫 번째 그라데이션 중지점의 애니메이션 효과 적용 <xref:System.Windows.Media.GradientStop.Offset%2A> 0.0에서 1.0 변환한 다음 다시 0.0으로 합니다. 결과적으로, 첫 번째 사각형의 왼쪽에서 오른쪽으로 왼쪽에서 그라데이션 shifts에서 색을 왼쪽으로 다시 합니다.  

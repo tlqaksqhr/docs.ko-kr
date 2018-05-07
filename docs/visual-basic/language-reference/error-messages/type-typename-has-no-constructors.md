@@ -1,26 +1,17 @@
 ---
 title: 형식 &#39; &lt;typename&gt; &#39; 에 생성자가 없습니다
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - bc30251
 - vbc30251
 helpviewer_keywords:
 - BC30251
 ms.assetid: aff3e1df-abe6-4bc0-9abc-a1e70514c561
-caps.latest.revision: 9
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 03f8c0d958696abdb6043b65f8f1359897dcf5fd
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 16b64365ecd5dcfe592c47745dcb66878c2ee5a0
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="type-39lttypenamegt39-has-no-constructors"></a>형식 &#39; &lt;typename&gt; &#39; 에 생성자가 없습니다
 형식이 `Sub New()` 호출을 지원하지 않습니다. 컴파일러 또는 이진 파일이 손상되었기 때문일 수 있습니다.  

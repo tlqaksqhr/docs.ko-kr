@@ -1,26 +1,17 @@
 ---
 title: '출력 파일에 쓸 수 없습니다 &#39; &lt;filename&gt;&#39;: &lt;오류&gt;'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vbc31019
 - bc31019
 helpviewer_keywords:
 - BC31019
 ms.assetid: 0845b245-11bb-46fd-95ca-f6cef3c318ef
-caps.latest.revision: 10
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: ce97bcb2dd0de774c1a82ae75ef5b83c02467edb
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.openlocfilehash: e8fbfd54782e601595712035827ea346d1dbf500
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="unable-to-write-to-output-file-39ltfilenamegt39-lterrorgt"></a>출력 파일에 쓸 수 없습니다 &#39; &lt;filename&gt;&#39;: &lt;오류&gt;
 파일을 만드는 동안 문제가 발생했습니다.  

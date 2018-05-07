@@ -1,28 +1,16 @@
 ---
-title: "방법: 디자이너를 사용하여 Windows Forms DataGridView 컨트롤에 데이터 바인딩"
-ms.custom: 
+title: '방법: 디자이너를 사용하여 Windows Forms DataGridView 컨트롤에 데이터 바인딩'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - Windows Forms controls, binding to a data source
 - data sources [Windows Forms], binding to Windows Forms controls
 - DataGridView control [Windows Forms], data binding
 ms.assetid: f4f46009-cec2-441b-8668-6b5af057558b
-caps.latest.revision: "23"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 3a3c7422bc83c7ee1f09bac05333799708cd2f2f
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: abed528c9421b878f49817ca60f554cbe3d68a0c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-bind-data-to-the-windows-forms-datagridview-control-using-the-designer"></a>방법: 디자이너를 사용하여 Windows Forms DataGridView 컨트롤에 데이터 바인딩
 디자이너를 사용 하 여 연결할 수는 <xref:System.Windows.Forms.DataGridView> 데이터베이스, 비즈니스 개체 또는 웹 서비스를 포함 하는 여러 다른 종류의 데이터 원본에 대 한 제어 합니다. 컨트롤에 자동으로 바인딩되어 디자이너를 사용 하 여 데이터 소스에 컨트롤을 바인딩하는 경우는 <xref:System.Windows.Forms.BindingSource> 데이터 원본을 나타내는 구성 요소입니다. 또한 열은 데이터 소스에서 제공하는 스키마 정보와 일치하는 컨트롤에 자동으로 생성됩니다.  

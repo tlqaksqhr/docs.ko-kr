@@ -1,24 +1,12 @@
 ---
-title: "방법: XmlSerializer를 사용하여 WCF 클라이언트 응용 프로그램의 시작 시간 개선"
-ms.custom: 
+title: '방법: XmlSerializer를 사용하여 WCF 클라이언트 응용 프로그램의 시작 시간 개선'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 21093451-0bc3-4b1a-9a9d-05f7f71fa7d0
-caps.latest.revision: "13"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: c2ac51a99db002633aaf80070d8820ce6e3144a5
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 6f61c57998cfc21b66f278a1a2381407ec2c39ce
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-improve-the-startup-time-of-wcf-client-applications-using-the-xmlserializer"></a>방법: XmlSerializer를 사용하여 WCF 클라이언트 응용 프로그램의 시작 시간 개선
 <xref:System.Xml.Serialization.XmlSerializer>를 사용하여 serialize할 수 있는 데이터 형식을 사용하는 서비스 및 클라이언트 응용 프로그램은 런타임에 해당 데이터 형식에 대한 serialization 코드를 생성하고 컴파일합니다. 이로 인해 시작 시 성능이 저하될 수 있습니다.  
@@ -90,7 +78,7 @@ ms.lasthandoff: 12/22/2017
   
 6.  클라이언트 앱을 정상적으로 실행 합니다. 미리 생성 된 serialization 어셈블리가 사용 됩니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 명령은 어셈블리의 모든 서비스 계약이 사용하는 `XmlSerializer` 형식에 대해 serialization 형식을 생성합니다.  
   
 ```  

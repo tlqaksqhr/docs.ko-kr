@@ -1,14 +1,6 @@
 ---
-title: "ICorDebugProcess7 인터페이스"
-ms.custom: 
+title: ICorDebugProcess7 인터페이스
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICorDebugProcess7
 api_location:
@@ -18,17 +10,13 @@ api_type:
 ms.assetid: 71aee5f3-5e10-44fa-be69-6d8a475f2c14
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 6eec7f0ceefee88fe20f987d5887c32b284ec8d2
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 1a684a5daa0619b0614ca074b7b1e3b9d0b25882
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="icordebugprocess7-interface"></a>ICorDebugProcess7 인터페이스
 [.NET Framework 4.5.2 이상 버전에서 지원됨]  
@@ -50,7 +38,7 @@ ms.lasthandoff: 12/22/2017
   
  **라이브러리:** CorGuids.lib  
   
- **.NET framework 버전:**[!INCLUDE[net_current_v452plus](../../../../includes/net-current-v452plus-md.md)]  
+ **.NET framework 버전:** [!INCLUDE[net_current_v452plus](../../../../includes/net-current-v452plus-md.md)]  
   
 ## <a name="see-also"></a>참고 항목  
  [디버깅 인터페이스](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)  

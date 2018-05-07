@@ -1,22 +1,12 @@
 ---
-title: "방법: LINQ 쿼리 (Visual Basic)에 대 한 사용자 지정 메서드 추가"
-ms.custom: 
+title: '방법: LINQ 쿼리 (Visual Basic)에 대 한 사용자 지정 메서드 추가'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 099b2e2a-83cd-45c6-aa4d-01b398b5faaf
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: c94973bf9eae0feb2f7690dcc10e839b6b7c060c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 6fa212ff05547e8edd3964a6e1c9f76c11cdbe08
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-add-custom-methods-for-linq-queries-visual-basic"></a>방법: LINQ 쿼리 (Visual Basic)에 대 한 사용자 지정 메서드 추가
 <xref:System.Collections.Generic.IEnumerable%601> 인터페이스에 확장 메서드를 추가하여 LINQ 쿼리에 사용할 수 있는 메서드 집합을 확장할 수 있습니다. 예를 들어 표준 평균 또는 최대 작업 외에 사용자 지정 집계 메서드를 만들어 값 시퀀스에서 단일 값을 계산할 수 있습니다. 값 시퀀스에 대한 특정 데이터 변환 또는 사용자 지정 필터로 작동하고 새 시퀀스를 반환하는 메서드를 만들 수도 있습니다. 이러한 메서드의 예로는 <xref:System.Linq.Enumerable.Distinct%2A>, <xref:System.Linq.Enumerable.Skip%2A> 및 <xref:System.Linq.Enumerable.Reverse%2A>가 있습니다.  

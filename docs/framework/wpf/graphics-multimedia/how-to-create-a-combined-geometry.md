@@ -1,35 +1,23 @@
 ---
-title: "방법: 결합된 기하 도형 만들기"
-ms.custom: 
+title: '방법: 결합된 기하 도형 만들기'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - combining geometries [WPF]
 - graphics [WPF], combining geometries
 - geometries [WPF], combining
 ms.assetid: 54c3277c-6b6e-4b25-91be-fda0bbc706b4
-caps.latest.revision: "8"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ee77da00604b7e4965cc376748606b6bd0e92ad8
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 107e0342b822633ccb4f51f256c121cc80c297f4
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-a-combined-geometry"></a>방법: 결합된 기하 도형 만들기
 이 예제에는 기 하 도형을 결합 하는 방법을 보여 줍니다. 두 기 하 도형을 함께 사용 하려면 사용을 <xref:System.Windows.Media.CombinedGeometry> 개체입니다. 설정의 <xref:System.Windows.Media.CombinedGeometry.Geometry1%2A> 및 <xref:System.Windows.Media.CombinedGeometry.Geometry2%2A> 결합 및 설정 하려면 두 기 하 도형 사용 하 여 속성의 <xref:System.Windows.Media.CombinedGeometry.GeometryCombineMode%2A> 기 하 도형이 함께 결합할 수는 방법을 확인 하는 경우이 속성을 `Union`, `Intersect`, `Exclude`, 또는 `Xor`.  
   
  두 개 이상의 기 하 도형에서 복합 geometry를 만들려면 사용는 <xref:System.Windows.Media.GeometryGroup>합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 예제에서는 <xref:System.Windows.Media.CombinedGeometry> 의 geometry 결합 모드를 사용 하 여 정의 `Exclude`합니다.  둘 다 <xref:System.Windows.Media.CombinedGeometry.Geometry1%2A> 및 <xref:System.Windows.Media.CombinedGeometry.Geometry2%2A> 50 원 반지름 하지만 센터 오프셋으로 정의 됩니다.  
   
  [!code-xaml[GeometrySample#21](../../../../samples/snippets/csharp/VS_Snippets_Wpf/GeometrySample/CS/combininggeometriesexample.xaml#21)]  

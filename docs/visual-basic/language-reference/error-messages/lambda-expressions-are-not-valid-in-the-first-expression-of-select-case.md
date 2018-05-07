@@ -1,28 +1,19 @@
 ---
-title: 람다 식의 첫 번째 식에 유효 하지 않은 &#39; 대/소문자 &#39;를 선택 합니다. 문
+title: 람다 식의 첫 번째 식에 유효 하지 않은 한 &#39;Select Case&#39; 문
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - bc36635
 - vbc36635
 helpviewer_keywords:
 - BC36635
 ms.assetid: 74609979-9c03-4864-bbce-f588aa2e0917
-caps.latest.revision: 6
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: e91401d6891d4e38014bb716a337560885cf73a2
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: c492615850ec089fe35c1ae4eaba90a741e30f42
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="lambda-expressions-are-not-valid-in-the-first-expression-of-a-39select-case39-statement"></a>람다 식의 첫 번째 식에 유효 하지 않은 &#39; 대/소문자 &#39;를 선택 합니다. 문
+# <a name="lambda-expressions-are-not-valid-in-the-first-expression-of-a-39select-case39-statement"></a>람다 식의 첫 번째 식에 유효 하지 않은 한 &#39;Select Case&#39; 문
 테스트 식에 람다 식을 사용할 수 없습니다는 `Select Case` 문. 람다 식 정의는 함수를 테스트 식의 반환을 `Select Case` 문은 기본 데이터 형식 이어야 합니다.  
   
  다음 코드에이 오류가 발생합니다.  

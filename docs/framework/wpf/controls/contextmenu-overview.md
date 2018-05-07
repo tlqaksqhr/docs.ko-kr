@@ -1,13 +1,6 @@
 ---
-title: "ContextMenu 개요"
-ms.custom: 
+title: ContextMenu 개요
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -15,16 +8,11 @@ helpviewer_keywords:
 - controls [WPF], ContextMenu
 - ContextMenu controls [WPF], about ContextMenu controls
 ms.assetid: 16909c42-799a-4561-91e0-7d69dcfeea91
-caps.latest.revision: "25"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 0776e7960aa76a76422d01180af5fd6a089bc98b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: e862f02e736cb8507dde5036700d751f8af0a226
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="contextmenu-overview"></a>ContextMenu 개요
 <xref:System.Windows.Controls.ContextMenu> 클래스 관련 컨텍스트를 사용 하 여 기능을 노출 하는 요소를 나타냅니다. <xref:System.Windows.Controls.Menu>합니다. 일반적으로 사용자 표시의 <xref:System.Windows.Controls.ContextMenu> 에 [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] 마우스 단추를 마우스 오른쪽 단추로 클릭 합니다. 이 항목에서는 소개는 <xref:System.Windows.Controls.ContextMenu> 요소에서 사용 하는 방법의 예제를 제공 하 고 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] 및 코드입니다.  

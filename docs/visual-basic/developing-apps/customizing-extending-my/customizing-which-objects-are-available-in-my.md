@@ -1,22 +1,15 @@
 ---
 title: My에 사용할 수 있는 개체 사용자 지정(Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - My namespace [Visual Basic], customizing
 - My namespace
 ms.assetid: 4e8279c2-ed5b-4681-8903-8a6671874000
-caps.latest.revision: 12
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 669641a2b6ecbf988f6cad68acf52c5561b32515
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.openlocfilehash: b06e71784a4d02bcbcd755d14e57ef88c4322f7c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="customizing-which-objects-are-available-in-my-visual-basic"></a>My에 사용할 수 있는 개체 사용자 지정(Visual Basic)
 이 여기서는를 제어 하는 방법에 대해 설명 `My` 개체는 프로젝트의 설정 하 여 활성화 되어 `_MYTYPE` 조건부 컴파일 상수입니다. Visual Studio 통합 개발 환경 (IDE) 유지는 `_MYTYPE` 동기화 된 프로젝트의 형식을 프로젝트에 대 한 조건부 컴파일 상수입니다.  

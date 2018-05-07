@@ -1,14 +1,6 @@
 ---
-title: "IHostAssemblyManager 인터페이스"
-ms.custom: 
+title: IHostAssemblyManager 인터페이스
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - IHostAssemblyManager
 api_location:
@@ -22,17 +14,13 @@ helpviewer_keywords:
 ms.assetid: dfec05bb-3cd7-4bd5-b396-a4f097c3a636
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 351824c1b915183a8e157f5bb2e01a414027a178
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: c8c8d17723481fc5b41fe5f3006fe8db2c53d1ea
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ihostassemblymanager-interface"></a>IHostAssemblyManager 인터페이스
 공용 언어 런타임 (CLR)에서 또는 호스트에 의해 로드 하는 어셈블리 집합을 지정 하는 데 사용 하는 메서드를 제공 합니다.  
@@ -56,7 +44,7 @@ ms.lasthandoff: 12/22/2017
   
  **라이브러리:** MSCorEE.dll에 리소스로 포함  
   
- **.NET framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>참고 항목  
  [ICLRAssemblyReferenceList 인터페이스](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyreferencelist-interface.md)  

@@ -1,13 +1,7 @@
 ---
-title: "방법: 표준 시간대를 사용 하 여 날짜 및 시간 산술 연산"
-ms.custom: 
+title: '방법: 표준 시간대를 사용 하 여 날짜 및 시간 산술 연산'
 ms.date: 04/10/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -16,18 +10,13 @@ helpviewer_keywords:
 - arithmetic operations [.NET Framework], dates and times
 - dates [.NET Framework], adding and subtracting
 ms.assetid: 83dd898d-1338-415d-8cd6-445377ab7871
-caps.latest.revision: "10"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: bcffc98d763c125ac44c1048a7c89c8f6a1e89f1
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 9f9d326750cdef96be1aa6055d46b4ac08ec7a0f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-use-time-zones-in-date-and-time-arithmetic"></a>방법: 표준 시간대를 사용 하 여 날짜 및 시간 산술 연산
 
@@ -46,7 +35,7 @@ ms.lasthandoff: 12/23/2017
 
 4. 호출 하 여 시간 측정 된 UTC에서 원래 시간 관련된 표준 시간대 변환는 <xref:System.TimeZoneInfo.ConvertTime%28System.DateTime%2CSystem.TimeZoneInfo%29?displayProperty=nameWithType> 메서드.
 
-## <a name="example"></a>예
+## <a name="example"></a>예제
 
 다음 예제에서는 중부 표준시 2008년 3월 9일 오전 1시 30분에 2시간 30분을 추가합니다. 30분 뒤인 2008년 3월 9일 오전 2시에 표준 시간대가 일광 절약 시간으로 전환됩니다. 이 예제에서는 이전 섹션의 네 단계를 수행하므로 결과 시간이 2008년 3월 9일 오전 5시로 올바르게 이전 코드와 유사합니다.
 
@@ -74,7 +63,7 @@ ms.lasthandoff: 12/23/2017
 
 * <xref:System> 네임 스페이스를 가져올 때는 `using` 문 (C# 코드에 필요).
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참고자료
 
 [날짜, 시간 및 표준 시간대](../../../docs/standard/datetime/index.md)
 [날짜 및 시간 산술 연산 수행](../../../docs/standard/datetime/performing-arithmetic-operations.md)

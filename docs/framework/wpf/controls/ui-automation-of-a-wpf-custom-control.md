@@ -1,13 +1,6 @@
 ---
-title: "WPF 사용자 지정 컨트롤의 UI 자동화"
-ms.custom: 
+title: WPF 사용자 지정 컨트롤의 UI 자동화
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -17,16 +10,11 @@ helpviewer_keywords:
 - custom controls [WPF], improving accessibility
 - UI Automation [WPF], using with custom controls
 ms.assetid: 47b310fc-fbd5-4ce2-a606-22d04c6d4911
-caps.latest.revision: "34"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 1a9d17408d6fa03b267c2a22890d2e17c0441389
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: fbd19591c260b0ad160339b45fd762e7a87bbc74
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ui-automation-of-a-wpf-custom-control"></a>WPF 사용자 지정 컨트롤의 UI 자동화
 [!INCLUDE[TLA#tla_uiautomation](../../../../includes/tlasharptla-uiautomation-md.md)]에서는 자동화 클라이언트가 다양한 플랫폼 및 프레임워크의 사용자 인터페이스를 검사하거나 운영하는 데 사용할 수 있는 일반화된 단일 인터페이스를 제공합니다. [!INCLUDE[TLA2#tla_uiautomation](../../../../includes/tla2sharptla-uiautomation-md.md)]를 통해 품질 보증(테스트) 코드 및 화면 읽기 프로그램과 같은 접근성 응용 프로그램은 사용자 인터페이스 요소를 검사하고 다른 코드에서 해당 요소에 대한 사용자 상호 작용을 시뮬레이트할 수 있습니다. 모든 플랫폼에서 [!INCLUDE[TLA2#tla_uiautomation](../../../../includes/tla2sharptla-uiautomation-md.md)]에 대한 자세한 내용은 접근성을 참조하세요.  
@@ -63,7 +51,7 @@ ms.lasthandoff: 12/22/2017
  재정의 <xref:System.Windows.UIElement.OnCreateAutomationPeer%2A> 에서 직접 또는 간접적으로 파생 되어야 하는 공급자 개체를 반환 하도록 사용자 지정 컨트롤에 대 한 메서드 <xref:System.Windows.Automation.Peers.AutomationPeer>합니다.  
   
 ### <a name="override-getpattern"></a>GetPattern 재정의  
- 자동화 피어는 서버 쪽 [!INCLUDE[TLA2#tla_uiautomation](../../../../includes/tla2sharptla-uiautomation-md.md)] 공급자의 몇 가지 구현 측면을 간소화하지만 사용자 지정 컨트롤 자동화 피어는 패턴 인터페이스를 계속 처리해야 합니다. 비 WPF 공급자와 같은 피어에서 인터페이스의 구현을 제공 하 여 컨트롤 패턴을 지원할는 <xref:System.Windows.Automation.Provider?displayProperty=nameWithType> 네임 스페이스와 같은 <xref:System.Windows.Automation.Provider.IInvokeProvider>합니다. 컨트롤 패턴 인터페이스는 피어 자체 또는 다른 개체를 통해 구현할 수 있습니다. 피어의 구현의 <xref:System.Windows.Automation.Peers.AutomationPeer.GetPattern%2A> 지정한 패턴을 지 원하는 개체를 반환 합니다. [!INCLUDE[TLA2#tla_uiautomation](../../../../includes/tla2sharptla-uiautomation-md.md)]호출 코드에서 <xref:System.Windows.Automation.Peers.UIElementAutomationPeer.GetPattern%2A> 메서드를 지정 하 고는 <xref:System.Windows.Automation.Peers.PatternInterface> 열거형 값입니다. 재정의가 <xref:System.Windows.Automation.Peers.UIElementAutomationPeer.GetPattern%2A> 지정된 된 패턴을 구현 하는 개체를 반환 해야 합니다. 컨트롤 패턴의 사용자 지정 구현을 없는 경우의 기본 형식 구현을 호출할 수 있습니다 <xref:System.Windows.Automation.Peers.AutomationPeer.GetPattern%2A> 패턴이 컨트롤 형식에 대해 지원 되지 않는 경우 해당 구현이 나 null 중 하나를 검색할 수 있습니다. NumericUpDown 컨트롤 사용자 지정 된 범위 내의 값으로 설정할 수 있습니다 예를 들어 있으므로 해당 [!INCLUDE[TLA2#tla_uiautomation](../../../../includes/tla2sharptla-uiautomation-md.md)] 피어 구현 합니다는 <xref:System.Windows.Automation.Provider.IRangeValueProvider> 인터페이스입니다. 다음 예제에서는 어떻게 피어의 <xref:System.Windows.Automation.Peers.UIElementAutomationPeer.GetPattern%2A> 메서드의에 응답 하는 <xref:System.Windows.Automation.Peers.PatternInterface.RangeValue?displayProperty=nameWithType> 값입니다.  
+ 자동화 피어는 서버 쪽 [!INCLUDE[TLA2#tla_uiautomation](../../../../includes/tla2sharptla-uiautomation-md.md)] 공급자의 몇 가지 구현 측면을 간소화하지만 사용자 지정 컨트롤 자동화 피어는 패턴 인터페이스를 계속 처리해야 합니다. 비 WPF 공급자와 같은 피어에서 인터페이스의 구현을 제공 하 여 컨트롤 패턴을 지원할는 <xref:System.Windows.Automation.Provider?displayProperty=nameWithType> 네임 스페이스와 같은 <xref:System.Windows.Automation.Provider.IInvokeProvider>합니다. 컨트롤 패턴 인터페이스는 피어 자체 또는 다른 개체를 통해 구현할 수 있습니다. 피어의 구현의 <xref:System.Windows.Automation.Peers.AutomationPeer.GetPattern%2A> 지정한 패턴을 지 원하는 개체를 반환 합니다. [!INCLUDE[TLA2#tla_uiautomation](../../../../includes/tla2sharptla-uiautomation-md.md)] 호출 코드에서 <xref:System.Windows.Automation.Peers.UIElementAutomationPeer.GetPattern%2A> 메서드를 지정 하 고는 <xref:System.Windows.Automation.Peers.PatternInterface> 열거형 값입니다. 재정의가 <xref:System.Windows.Automation.Peers.UIElementAutomationPeer.GetPattern%2A> 지정된 된 패턴을 구현 하는 개체를 반환 해야 합니다. 컨트롤 패턴의 사용자 지정 구현을 없는 경우의 기본 형식 구현을 호출할 수 있습니다 <xref:System.Windows.Automation.Peers.AutomationPeer.GetPattern%2A> 패턴이 컨트롤 형식에 대해 지원 되지 않는 경우 해당 구현이 나 null 중 하나를 검색할 수 있습니다. NumericUpDown 컨트롤 사용자 지정 된 범위 내의 값으로 설정할 수 있습니다 예를 들어 있으므로 해당 [!INCLUDE[TLA2#tla_uiautomation](../../../../includes/tla2sharptla-uiautomation-md.md)] 피어 구현 합니다는 <xref:System.Windows.Automation.Provider.IRangeValueProvider> 인터페이스입니다. 다음 예제에서는 어떻게 피어의 <xref:System.Windows.Automation.Peers.UIElementAutomationPeer.GetPattern%2A> 메서드의에 응답 하는 <xref:System.Windows.Automation.Peers.PatternInterface.RangeValue?displayProperty=nameWithType> 값입니다.  
   
  [!code-csharp[CustomControlNumericUpDown#GetPattern](../../../../samples/snippets/csharp/VS_Snippets_Wpf/CustomControlNumericUpDown/CSharp/CustomControlLibrary/NumericUpDown.cs#getpattern)]
  [!code-vb[CustomControlNumericUpDown#GetPattern](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/CustomControlNumericUpDown/visualbasic/customcontrollibrary/numericupdown.vb#getpattern)]  

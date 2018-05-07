@@ -1,13 +1,7 @@
 ---
-title: "DateTime, DateTimeOffset, TimeSpan 및 TimeZoneInfo 중 선택"
-ms.custom: 
+title: DateTime, DateTimeOffset, TimeSpan 및 TimeZoneInfo 중 선택
 ms.date: 04/10/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -19,18 +13,13 @@ helpviewer_keywords:
 - time zones [.NET Framework], type options
 - DateTime structure
 ms.assetid: 07f17aad-3571-4014-9ef3-b695a86f3800
-caps.latest.revision: "14"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: f9a91f7a00f72917ca5c469f51fd0aa11e24e125
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 368884e7f61f4504c8ca714165c543b19b3a1171
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="choosing-between-datetime-datetimeoffset-timespan-and-timezoneinfo"></a>DateTime, DateTimeOffset, TimeSpan 및 TimeZoneInfo 중 선택
 
@@ -130,6 +119,6 @@ ms.lasthandoff: 12/23/2017
 
 날짜 및 시간 개체를 인스턴스화할 때 날짜 및 시간 값이 속하는 표준 시간대가 알려진 경우에만 .NET의 표준 시간대 지원을 활용할 수 있습니다. 웹 또는 네트워크 응용 프로그램에서는 특히 알 수 없는 경우가 많습니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참고자료
 
 [날짜, 시간 및 표준 시간대](../../../docs/standard/datetime/index.md)

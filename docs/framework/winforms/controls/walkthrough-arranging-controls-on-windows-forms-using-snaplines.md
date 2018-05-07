@@ -1,29 +1,17 @@
 ---
-title: "연습: 맞춤선을 사용하여 Windows Forms에서 컨트롤 정렬"
-ms.custom: 
+title: '연습: 맞춤선을 사용하여 Windows Forms에서 컨트롤 정렬'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - controls [Windows Forms], arranging with snaplines
 - snaplines [Windows Forms], arranging Windows Forms controls
 - SnapLine class [Windows Forms], walkthroughs
 - Windows Forms controls, arranging
 ms.assetid: d5c9edc7-cf30-4a97-8ebe-201d569340f8
-caps.latest.revision: "24"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: bd8bc5e227bd68fc3c5c59d80549322ca742bcf9
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: f8e8122f82bc6a8c4fab17b8b73c07d08bab4d26
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="walkthrough-arranging-controls-on-windows-forms-using-snaplines"></a>연습: 맞춤선을 사용하여 Windows Forms에서 컨트롤 정렬
 폼의 정확한 컨트롤 배치는 많은 응용 프로그램에서 우선 순위가 높습니다. Windows Forms 디자이너가이를 위해 여러 레이아웃 도구를 제공 합니다. 가장 중요 한 중 하나는 <xref:System.Windows.Forms.Design.Behavior.SnapLine> 기능입니다.  

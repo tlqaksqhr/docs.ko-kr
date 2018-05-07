@@ -1,25 +1,17 @@
 ---
 title: My.WebServices 개체
 ms.date: 07/20/2015
-ms.prod: .net
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - My.WebServices
 - My.MyProject.WebServices
 helpviewer_keywords:
 - My.WebServices object
 ms.assetid: f188dc05-2c75-41b6-bb68-122d1c3110a2
-caps.latest.revision: 17
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: a9f2c4017a1df8059f2cc57e7c30a96c474cfda0
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 9519638c7609b9b1d0f5e07397c46975e2696c94
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="mywebservices-object"></a>My.WebServices 개체
 만들고 현재 프로젝트에서 참조 하는 각 XML 웹 서비스의 단일 인스턴스에 액세스 하기 위한 속성을 제공 합니다.  

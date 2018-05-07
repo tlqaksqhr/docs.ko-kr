@@ -1,17 +1,12 @@
 ---
 title: 옵션(F#)
 description: '명명 된 값 또는 변수에 대 한 F # 형식 때 실제 값이 존재 하지 않을 옵션을 사용 하는 방법에 알아봅니다.'
-author: cartermp
-ms.author: phcart
 ms.date: 05/16/2016
-ms.topic: language-reference
-ms.prod: dotnet-fsharp
-ms.devlang: fsharp
-ms.openlocfilehash: ce9be0793c86d8d588fb4f905394bd2383c262e1
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: c813c377af1db758a40efa2bd73de22cbb4c66f5
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="options"></a>옵션
 

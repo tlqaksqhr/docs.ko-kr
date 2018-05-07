@@ -1,28 +1,19 @@
 ---
-title: 값 형식 &#39; type1 &#39; 변환할 수 없습니다 &#39; 유형 2 &#39;
+title: 형식의 값 &#39;type1&#39; 변환할 수 없습니다 &#39;유형 2&#39;
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vbc31194
 - bc31194
 helpviewer_keywords:
 - BC31194
 ms.assetid: 03d50c31-addd-4c90-9c53-725b84f9782e
-caps.latest.revision: 5
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: efa6fcd4d996fb3277cc4cac2af16a86a2d65977
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 9e59d3bc5e2bfca3628248d08ffc475334d4da79
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="value-of-type-39type139-cannot-be-converted-to-39type239"></a>값 형식 &#39; type1 &#39; 변환할 수 없습니다 &#39; 유형 2 &#39;
+# <a name="value-of-type-39type139-cannot-be-converted-to-39type239"></a>형식의 값 &#39;type1&#39; 변환할 수 없습니다 &#39;유형 2&#39;
 'Type1' 형식의 값을 'type2'로 변환할 수 없습니다. 'Value' 속성을 사용 하 여 첫 번째 요소의 문자열 값을 가져올 '\<parentElement >'입니다.  
   
  XML 리터럴을 특정 형식으로 암시적으로 캐스팅하려고 했습니다. XML 리터럴은 지정된 형식으로 암시적으로 캐스팅할 수 없습니다.  

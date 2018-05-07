@@ -1,13 +1,6 @@
 ---
-title: "응용 프로그램 시작 시간"
-ms.custom: 
+title: 응용 프로그램 시작 시간
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - splash screen [WPF], startup time
 - WPF [WPF], startup time
@@ -15,16 +8,11 @@ helpviewer_keywords:
 - application startup [WPF]
 - performance [WPF], startup time
 ms.assetid: f0ec58d8-626f-4d8a-9873-c20f95e08b96
-caps.latest.revision: "11"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: af07e1876666351d72eada56e7af3e787ccc90f6
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 8452c41bc6d60d18fa058966299e3ca2b989604f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="application-startup-time"></a>응용 프로그램 시작 시간
 WPF 응용 프로그램을 시작하는 데 필요한 시간은 크게 다를 수 있습니다. 이 항목에서는 WPF(Windows Presentation Foundation) 응용 프로그램의 체감 시작 시간과 실제 시작 시간을 줄일 수 있는 다양한 기술에 대해 설명합니다.  

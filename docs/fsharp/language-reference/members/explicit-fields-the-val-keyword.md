@@ -1,17 +1,12 @@
 ---
 title: '명시적 필드: val 키워드(F#)'
 description: "F # 'val'에 대 한 자세한 내용은 키워드 형식을 초기화 하지 않고 클래스 또는 구조체 형식의 값을 저장 하는 위치를 선언 하는 데 사용 됩니다."
-author: cartermp
-ms.author: phcart
 ms.date: 05/16/2016
-ms.topic: language-reference
-ms.prod: dotnet-fsharp
-ms.devlang: fsharp
-ms.openlocfilehash: dc277680121976c0469b18c77bd84443cd251afb
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 2bd1aae24a5823ddcd6bb8f121d8110f4a211a6a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="explicit-fields-the-val-keyword"></a>명시적 필드: val 키워드
 

@@ -1,26 +1,17 @@
 ---
-title: "방법: 열거형 멤버 참조(Visual Basic)"
-ms.custom: 
+title: '방법: 열거형 멤버 참조(Visual Basic)'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - enumerations [Visual Basic], referring to
 - values [Visual Basic], associating constant values with names
 - enumeration members
 - constants [Visual Basic], enumerated
 ms.assetid: bbb5c3cc-7cdb-4814-8d6a-a6d91546ed1e
-caps.latest.revision: "13"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: ae4e6eb9c011095c6cf0abe1ee3ac7a68f156f01
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: f995a0ef69c503360a5d709551a7f0ccfd67ce40
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-refer-to-an-enumeration-member-visual-basic"></a>방법: 열거형 멤버 참조(Visual Basic)
 열거형에는 서로 관련된 있는 상수 집합으로 작업 하 고 이름의 상수 값을 연결 하는 편리한 방법을 제공 합니다. 예를 들어 요일과 연결된 정수 상수에 대한 열거형을 선언한 다음, 코드에 정수 값 대신 요일 이름을 사용할 수 있습니다.  

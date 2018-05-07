@@ -1,13 +1,6 @@
 ---
-title: "방법: Windows Forms DataGridView 컨트롤에서 선택한 셀, 행 및 열 가져오기"
-ms.custom: 
+title: '방법: Windows Forms DataGridView 컨트롤에서 선택한 셀, 행 및 열 가져오기'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -16,16 +9,11 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], getting selection
 - getting selection [Windows Forms], DataGridView control [Windows Forms]
 ms.assetid: d93c4b5b-498e-49bc-982a-2229d61778e4
-caps.latest.revision: "17"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 22b44668b403b5a991c03de661b6e680ccde0a44
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: a1d2338250abbced89ef7821d02edc654d26d7fa
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-get-the-selected-cells-rows-and-columns-in-the-windows-forms-datagridview-control"></a>방법: Windows Forms DataGridView 컨트롤에서 선택한 셀, 행 및 열 가져오기
 선택한 셀, 행 또는 열을 가져올 수는 <xref:System.Windows.Forms.DataGridView> 해당 속성을 사용 하 여 컨트롤: <xref:System.Windows.Forms.DataGridView.SelectedCells%2A>, <xref:System.Windows.Forms.DataGridView.SelectedRows%2A>, 및 <xref:System.Windows.Forms.DataGridView.SelectedColumns%2A>합니다. 다음 절차에서 있습니다는 선택한 셀 가져오고 표시에서 해당 행 및 열 인덱스는 <xref:System.Windows.Forms.MessageBox>합니다.  
@@ -57,7 +45,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="compiling-the-code"></a>코드 컴파일  
  이 예제에는 다음 사항이 필요합니다.  
   
--   <xref:System.Windows.Forms.Button>라는 컨트롤 `selectedCellsButton`, `selectedRowsButton`, 및 `selectedColumnsButton`, 각각에 대 한 처리기는 <xref:System.Windows.Forms.Control.Click> 연결 이벤트입니다.  
+-   <xref:System.Windows.Forms.Button> 라는 컨트롤 `selectedCellsButton`, `selectedRowsButton`, 및 `selectedColumnsButton`, 각각에 대 한 처리기는 <xref:System.Windows.Forms.Control.Click> 연결 이벤트입니다.  
   
 -   `dataGridView1`이라는 <xref:System.Windows.Forms.DataGridView> 컨트롤  
   

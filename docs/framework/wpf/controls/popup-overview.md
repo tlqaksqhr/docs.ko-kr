@@ -1,27 +1,15 @@
 ---
-title: "Popup 개요"
-ms.custom: 
+title: Popup 개요
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - controls [WPF], Popup
 - Popup control [WPF], about Popup control
 ms.assetid: 774f53ca-bff8-470e-9ce9-3928b4cf3d4c
-caps.latest.revision: "34"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 0cb20895b5af35fec7274ca4c747740390104355
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: c9261e2151f116b46a0c25d8dc775bf41bf932b7
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="popup-overview"></a>Popup 개요
 <xref:System.Windows.Controls.Primitives.Popup> 컨트롤은 지정 된 요소 또는 화면 좌표를 기준으로 현재 응용 프로그램 창 위에 배치 되는 별도 창에 콘텐츠를 표시 하는 방법을 제공 합니다. 이 항목에서는 소개는 <xref:System.Windows.Controls.Primitives.Popup> 제어 하 고 사용 하는 방법에 대 한 정보를 제공 합니다.  
@@ -81,7 +69,7 @@ ms.lasthandoff: 12/22/2017
 ### <a name="popup-size"></a>Popup 크기  
  기본적으로는 <xref:System.Windows.Controls.Primitives.Popup> 크기가 해당 내용에 자동으로 조정 합니다. 자동 크기 조정 되는 경우 일부 비트맵 효과 숨겨질 수 때문에 대해 정의 된 화면 영역의 기본 크기는 <xref:System.Windows.Controls.Primitives.Popup> 콘텐츠 비트맵 효과를 표시할에 충분 한 공간을 제공 하지 않습니다.  
   
- <xref:System.Windows.Controls.Primitives.Popup>설정 하는 경우에 콘텐츠를 가려질 수는 <xref:System.Windows.UIElement.RenderTransform%2A> 내용에 있습니다. 이 시나리오에서 일부 콘텐츠 숨겨질 수 하는 경우의 변환 된 내용을 <xref:System.Windows.Controls.Primitives.Popup> 원래 영역을 넘어가는 <xref:System.Windows.Controls.Primitives.Popup>합니다. 비트맵 효과 또는 변환 해야 하는 더 많은 공간을 주위에 여백을 정의할 수 있습니다는 <xref:System.Windows.Controls.Primitives.Popup> 콘텐츠 컨트롤에 있는 더 많은 영역을 제공할 수 있도록 합니다.  
+ <xref:System.Windows.Controls.Primitives.Popup> 설정 하는 경우에 콘텐츠를 가려질 수는 <xref:System.Windows.UIElement.RenderTransform%2A> 내용에 있습니다. 이 시나리오에서 일부 콘텐츠 숨겨질 수 하는 경우의 변환 된 내용을 <xref:System.Windows.Controls.Primitives.Popup> 원래 영역을 넘어가는 <xref:System.Windows.Controls.Primitives.Popup>합니다. 비트맵 효과 또는 변환 해야 하는 더 많은 공간을 주위에 여백을 정의할 수 있습니다는 <xref:System.Windows.Controls.Primitives.Popup> 콘텐츠 컨트롤에 있는 더 많은 영역을 제공할 수 있도록 합니다.  
   
 <a name="DefiningPopupPosition"></a>   
 ## <a name="defining-the-popup-position"></a>Popup 위치 정의  

@@ -1,30 +1,18 @@
 ---
 title: 영속 이중
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 4e76d1a1-f3d8-4a0f-8746-4a322cdff6eb
-caps.latest.revision: 10
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 50d0ac9efae8e6d795455a63d793b2e84407b987
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
-ms.translationtype: MT
+ms.openlocfilehash: 91490eb3ee6c11f29bb49d8343b807e74e8d3bc2
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="durable-duplex"></a>영속 이중
 이 샘플에는 설정 및의 Windows WF (Workflow Foundation) 메시징 활동을 사용 하 여 영 속 이중 메시지 교환을 구성 하는 방법을 보여 줍니다. 영속 이중 메시지 교환은 오랜 기간 동안 발생하는 양방향 메시지 교환입니다. 메시지 교환 수명 주기는 통신 채널 수명 주기와 서비스 인스턴스의 메모리 내 수명 주기보다 길 수 있습니다.  
   
 ## <a name="sample-details"></a>샘플 세부 정보  
- 이 샘플에서는 두 개의 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] Windows Workflow Foundation을 사용 하 여 구현 된 서비스는 영 속 이중 메시지 교환이 되도록 구성 합니다. 영 속 이중 메시지 교환은 MSMQ를 통해 전송 하 고 사용 하 여 상관 관계가 지정 된 두 개의 단방향 메시지로 구성 된 [.NET Context Exchange](http://go.microsoft.com/fwlink/?LinkID=166059)합니다. 메시지는 <xref:System.ServiceModel.Activities.Send> 및 <xref:System.ServiceModel.Activities.Receive> 메시징 활동을 사용하여 보냅니다. .NET Context Exchange는 보낸 메시지에 대한 콜백 주소를 지정하는 데 사용됩니다. 두 서비스는 WAS(Windows Process Activation Service)를 사용하여 호스트되고 서비스 인스턴스의 지속성을 사용하도록 구성됩니다.  
+ 이 샘플에서는 Windows Workflow Foundation을 사용 하 여 구현 하는 두 개의 Windows Communication Foundation (WCF) 서비스는 영 속 이중 메시지 교환이 있어야 하도록 구성 됩니다. 영 속 이중 메시지 교환은 MSMQ를 통해 전송 하 고 사용 하 여 상관 관계가 지정 된 두 개의 단방향 메시지로 구성 된 [.NET Context Exchange](http://go.microsoft.com/fwlink/?LinkID=166059)합니다. 메시지는 <xref:System.ServiceModel.Activities.Send> 및 <xref:System.ServiceModel.Activities.Receive> 메시징 활동을 사용하여 보냅니다. .NET Context Exchange는 보낸 메시지에 대한 콜백 주소를 지정하는 데 사용됩니다. 두 서비스는 WAS(Windows Process Activation Service)를 사용하여 호스트되고 서비스 인스턴스의 지속성을 사용하도록 구성됩니다.  
   
  첫 번째 서비스(Service1.xamlx)는 전송 서비스(Service2.xamlx)에 작업을 수행하도록 요청을 보냅니다. 작업이 완료되면 Service2.xamlx가 Service1.xamlx에 작업이 완료되었음을 알립니다. 워크플로 콘솔 응용 프로그램은 서비스가 수신 대기하는 큐를 설정하고 초기 시작 메시지를 보내 Service1.xamlx를 활성화합니다. Service1.xamlx는 Service2.xamlx에서 요청한 작업이 완료되었음을 나타내는 알림을 받은 후 결과를 XML 파일로 저장합니다. Service1.xamlx는 콜백 메시지를 기다리는 동안 기본 <xref:System.ServiceModel.Activities.Description.WorkflowIdleBehavior>를 사용하여 인스턴스 상태를 지속합니다. Service2.xamlx는 Service1.xamlx에서 요청한 작업을 완료하는 과정의 일부로 인스턴스 상태를 지속합니다.  
   
@@ -190,6 +178,6 @@ ms.lasthandoff: 04/27/2018
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  이 디렉터리가 없으면 [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4(.NET Framework 4용 WCF(Windows Communication Foundation) 및 WF(Windows Workflow Foundation) 샘플)](http://go.microsoft.com/fwlink/?LinkId=150780) 로 이동하여 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 및 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플을 모두 다운로드하세요. 이 샘플은 다음 디렉터리에 있습니다.  
+>  이 디렉터리가로 이동 [Windows Communication Foundation (WCF) 및.NET Framework 4에 대 한 Windows WF (Workflow Foundation) 샘플](http://go.microsoft.com/fwlink/?LinkId=150780) 모든 Windows Communication Foundation (WCF)를 다운로드 하 고 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플. 이 샘플은 다음 디렉터리에 있습니다.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Services\DurableDuplex`

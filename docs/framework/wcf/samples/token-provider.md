@@ -1,27 +1,17 @@
 ---
 title: Token Provider
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 947986cf-9946-4987-84e5-a14678d96edb
-caps.latest.revision: "22"
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: bd6b0983dcb4a0f7cdbabc5b391cca2000f9d16d
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
-ms.translationtype: MT
+ms.openlocfilehash: 97602a261f1e86cb70b38f21080c2a2e792605e8
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="token-provider"></a>Token Provider
-이 샘플에서는 사용자 지정 토큰 공급자를 구현하는 방법을 보여 줍니다. [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]의 토큰 공급자는 보안 인프라에 자격 증명을 제공하는 데 사용됩니다. 일반적으로 토큰 공급자는 대상을 검사하고 적절한 자격 증명을 발급하여 보안 인프라에서 메시지의 보안을 유지할 수 있도록 합니다. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서는 기본 자격 증명 관리자 토큰 공급자를 제공합니다. 또한 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]는 [!INCLUDE[infocard](../../../../includes/infocard-md.md)] 토큰 공급자를 제공합니다. 사용자 지정 토큰 공급자는 다음과 같은 경우에 유용합니다.  
+이 샘플에서는 사용자 지정 토큰 공급자를 구현하는 방법을 보여 줍니다. Windows Communication Foundation (WCF)에 토큰 공급자는 보안 인프라에 자격 증명 제공에 사용 됩니다. 일반적으로 토큰 공급자는 대상을 검사하고 적절한 자격 증명을 발급하여 보안 인프라에서 메시지의 보안을 유지할 수 있도록 합니다. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서는 기본 자격 증명 관리자 토큰 공급자를 제공합니다. 또한 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]는 [!INCLUDE[infocard](../../../../includes/infocard-md.md)] 토큰 공급자를 제공합니다. 사용자 지정 토큰 공급자는 다음과 같은 경우에 유용합니다.  
   
 -   이러한 토큰 공급자가 작동되지 않는 자격 증명 저장소가 있는 경우  
   

@@ -1,11 +1,6 @@
 ---
-title: "Structure 문"
+title: Structure 문
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.Structure
 - Structure
@@ -17,14 +12,11 @@ helpviewer_keywords:
 - UDT (user-defined types)
 - types [Visual Basic], user-defined
 ms.assetid: 9bd1deea-2a89-4cdc-812c-6dcbb947c391
-caps.latest.revision: "28"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 43211bb10793acf3bfe0c1d7a35791114170ee7d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 6a3626706b226b0be253fd35fa60b33a71b86007
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="structure-statement"></a>Structure 문
 구조의 이름을 선언 하 고 변수, 속성, 이벤트 및 구조를 구성 하는 프로시저의 정의 소개 합니다.  
@@ -48,14 +40,14 @@ End Structure
 |`accessmodifier`|선택 사항입니다. 다음 중 하나일 수 있습니다.<br /><br /> -   [공개](../../../visual-basic/language-reference/modifiers/public.md)<br />-   [보호](../../../visual-basic/language-reference/modifiers/protected.md)<br />-   [Friend](../../../visual-basic/language-reference/modifiers/friend.md)<br />-   [개인](../../../visual-basic/language-reference/modifiers/private.md)<br />-   `Protected Friend`<br /><br /> 참조 [액세스 수준을 Visual Basic의](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)합니다.|  
 |`Shadows`|선택 사항입니다. 참조 [그림자](../../../visual-basic/language-reference/modifiers/shadows.md)합니다.|  
 |`Partial`|선택 사항입니다. 구조체의 부분 정의 나타냅니다. 참조 [부분](../../../visual-basic/language-reference/modifiers/partial.md)합니다.|  
-|`name`|필수 요소. 이 구조체의 이름입니다. 참조 [선언 된 요소 이름](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)합니다.|  
+|`name`|필수. 이 구조체의 이름입니다. 참조 [선언 된 요소 이름](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)합니다.|  
 |`Of`|선택 사항입니다. 제네릭 구조체 임을 지정 합니다.|  
 |`typelist`|사용 하는 경우 필요는 [의](../../../visual-basic/language-reference/statements/of-clause.md) 키워드입니다. 이 구조에 대 한 형식 매개 변수의 목록입니다. 참조 [목록을 입력](../../../visual-basic/language-reference/statements/type-list.md)합니다.|  
 |`Implements`|선택 사항입니다. 이 구조에 하나 이상의 인터페이스 멤버 구현 함을 나타냅니다. 참조 [문을 구현](../../../visual-basic/language-reference/statements/implements-statement.md)합니다.|  
 |`interfacenames`|사용 하는 경우 필요는 `Implements` 문. 이 구조를 구현 하는 인터페이스의 이름입니다.|  
-|`datamemberdeclarations`|필수 요소. 0 개 이상의 `Const`, `Dim`, `Enum`, 또는 `Event` 선언 문을 *데이터 멤버* 구조입니다.|  
+|`datamemberdeclarations`|필수. 0 개 이상의 `Const`, `Dim`, `Enum`, 또는 `Event` 선언 문을 *데이터 멤버* 구조입니다.|  
 |`methodmemberdeclarations`|선택 사항입니다. 0 개 이상의 선언 `Function`, `Operator`, `Property`, 또는 `Sub` 역할을 하는 프로시저 *메서드 멤버* 구조입니다.|  
-|`End Structure`|필수 요소. 종료는 `Structure` 정의 합니다.|  
+|`End Structure`|필수. 종료는 `Structure` 정의 합니다.|  
   
 ## <a name="remarks"></a>설명  
  `Structure` 문은 사용자 지정할 수 있는 복합 값 형식을 정의 합니다. A *구조* 이전 버전의 Visual Basic의 사용자 정의 형식의 (UDT) 일반화 됩니다. 자세한 내용은 참조 [구조](../../../visual-basic/programming-guide/language-features/data-types/structures.md)합니다.  

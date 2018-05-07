@@ -1,26 +1,12 @@
 ---
 title: 상관 관계 문제 해결
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 98003875-233d-4512-a688-4b2a1b0b5371
-caps.latest.revision: 11
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 2de3a8cac6e12d898173f8181b295c3e2e461cc7
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: c597012a5ff69ecb700c51e00ac7d1218962e9ad
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="troubleshooting-correlation"></a>상관 관계 문제 해결
 상관 관계는 워크플로 서비스 메시지를 서로 연결하거나 올바른 워크플로 인스턴스에 연결하는 데 사용되지만, 제대로 구성되지 않으면 메시지가 수신되지 않고 응용 프로그램이 올바르게 작동하지 않습니다. 이 항목에서는 상관 관계 문제를 해결하기 위한 몇 가지 방법을 간략히 설명하고 상관 관계를 사용할 때 발생할 수 있는 일반적인 문제도 설명합니다.  
@@ -146,7 +132,7 @@ supports the context protocol and has a valid context initialized.
  자세한 내용은 참조 [컨텍스트 교환](../../../../docs/framework/wcf/feature-details/context-exchange-correlation.md)합니다.  
   
 ## <a name="common-request-reply-correlation-issues"></a>일반적인 요청-회신 상관 관계 문제  
- 요청-회신 상관 관계와 함께 사용 되는 <xref:System.ServiceModel.Activities.Receive> / <xref:System.ServiceModel.Activities.SendReply> 쌍 및 워크플로 서비스에서 양방향 작업을 구현 하는 <xref:System.ServiceModel.Activities.Send> / <xref:System.ServiceModel.Activities.ReceiveReply> 다른 웹에서 양방향 작업을 호출 하는 쌍 서비스입니다. WCF 서비스에서 양방향 작업을 호출하는 경우 해당 서비스는 일반적인 명령적 코드 기반의 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 서비스이거나 워크플로 서비스일 수 있습니다. 요청-회신 상관 관계를 사용하려면 <xref:System.ServiceModel.BasicHttpBinding> 같은 양방향 바인딩을 사용해야 하며 작업이 양방향이어야 합니다.  
+ 요청-회신 상관 관계와 함께 사용 되는 <xref:System.ServiceModel.Activities.Receive> / <xref:System.ServiceModel.Activities.SendReply> 쌍 및 워크플로 서비스에서 양방향 작업을 구현 하는 <xref:System.ServiceModel.Activities.Send> / <xref:System.ServiceModel.Activities.ReceiveReply> 다른 웹에서 양방향 작업을 호출 하는 쌍 서비스입니다. WCF 서비스에서 양방향 작업을 호출할 때 서비스는 기존의 될 수 있습니다 명령적 코드 기반 WCF 서비스 이거나 워크플로 서비스 일 수 있습니다. 요청-회신 상관 관계를 사용하려면 <xref:System.ServiceModel.BasicHttpBinding> 같은 양방향 바인딩을 사용해야 하며 작업이 양방향이어야 합니다.  
   
  워크플로 서비스에 양방향 작업이 나란히 있거나 겹치지 <xref:System.ServiceModel.Activities.Receive> / <xref:System.ServiceModel.Activities.SendReply> 또는 <xref:System.ServiceModel.Activities.Send> / <xref:System.ServiceModel.Activities.ReceiveReply> 쌍을 다음 암시적 상관 관계 핸들 에서제공하는관리<xref:System.ServiceModel.Activities.WorkflowServiceHost>특히 스트레스가 높은 시나리오에서에서 충분 한 되지 않을 수 있습니다 및 메시지 올바르게 라우팅 하지 못할 수 있습니다. 이 문제를 방지하려면 요청-회신 상관 관계를 사용할 때 항상 <xref:System.ServiceModel.Activities.CorrelationHandle>을 명시적으로 지정하는 것이 좋습니다. 사용 하는 경우는 **SendAndReceiveReply** 및 **ReceiveAndSendReply** 있는 메시징 섹션에서 템플릿에 **도구 상자** 워크플로 디자이너에서는 <xref:System.ServiceModel.Activities.CorrelationHandle> 기본적으로 명시적으로 구성 됩니다. 코드를 사용하여 워크플로를 바인딩하는 경우 <xref:System.ServiceModel.Activities.CorrelationHandle>은 쌍의 첫 번째 활동에 대한 <xref:System.ServiceModel.Activities.Receive.CorrelationInitializers%2A>에서 지정됩니다. 다음 예제에서는 <xref:System.ServiceModel.Activities.Receive>에 <xref:System.ServiceModel.Activities.CorrelationInitializer.CorrelationHandle%2A>을 명시적으로 지정하여 <xref:System.ServiceModel.Activities.RequestReplyCorrelationInitializer> 활동을 구성합니다.  
   

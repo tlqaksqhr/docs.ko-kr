@@ -1,13 +1,7 @@
 ---
 title: 리소스 이름 지정
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - names [.NET Framework], localized resources
 - localization, naming guidelines
@@ -15,18 +9,13 @@ helpviewer_keywords:
 - global applications, naming guidelines
 - international applications, naming guidelines
 ms.assetid: 8b0e97f3-7877-44fd-bc76-e05d36d5d79c
-caps.latest.revision: 9
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: b100366952b1f536d187eb72c6d80c86bb3e572e
-ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
+ms.openlocfilehash: b7cfda4e6a340d040de02903b9b64f0339751c5c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="naming-resources"></a>리소스 이름 지정
 큐브인 것 처럼 속성에 특정 개체를 통해 지역화 가능한 리소스를 참조할 수 있습니다, 때문에 리소스에 대 한 이름 지정 지침 속성 지침 비슷합니다.  

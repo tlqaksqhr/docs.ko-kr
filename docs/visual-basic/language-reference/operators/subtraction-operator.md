@@ -1,12 +1,6 @@
 ---
 title: '- 연산자 (Visual Basic)'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.Negate
 - vb.-
@@ -23,14 +17,11 @@ helpviewer_keywords:
 - operators [Visual Basic], negation
 - minus operator [Visual Basic]
 ms.assetid: bff2c368-662d-4c92-ac87-1d9bdfd3426a
-caps.latest.revision: 14
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 4ffb7c96fe95e73dc857a15608df94ed8468f9df
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 4df8eb3844ed20fd24ca375f77cea46b9c6cee37
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="--operator-visual-basic"></a>- 연산자(Visual Basic)
 두 숫자 식 또는 숫자 식의 음수 값의 차이 반환합니다.  
@@ -45,7 +36,7 @@ ms.lasthandoff: 11/21/2017
   
 ## <a name="parts"></a>요소  
  `expression1`  
- 필수 요소. 임의의 숫자 식입니다.  
+ 필수. 임의의 숫자 식입니다.  
   
  `expression2`  
  필수 하지 않는 경우는 `–` 연산자가 음수 값을 계산 합니다. 임의의 숫자 식입니다.  

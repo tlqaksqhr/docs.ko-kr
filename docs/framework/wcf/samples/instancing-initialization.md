@@ -1,26 +1,12 @@
 ---
 title: 인스턴싱 초기화
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 154d049f-2140-4696-b494-c7e53f6775ef
-caps.latest.revision: 31
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: f32b1c7159185bb9d4ccd99c916f00c552502748
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 75b8d2a2696d5900fd7bffe42dbaf62b9f6ce694
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="instancing-initialization"></a>인스턴싱 초기화
 이 샘플은 확장는 [풀링](../../../../docs/framework/wcf/samples/pooling.md) 인터페이스를 정의 하 여 샘플 `IObjectControl`, 활성화 및 비활성화 하 여 개체의 초기화를 사용자 지정입니다. 클라이언트에서는 개체를 풀로 반환하는 메서드와 개체를 풀로 반환하지 않는 메서드를 호출합니다.  

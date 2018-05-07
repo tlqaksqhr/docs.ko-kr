@@ -1,13 +1,6 @@
 ---
-title: "Windows Forms 컨트롤 렌더링"
-ms.custom: 
+title: Windows Forms 컨트롤 렌더링
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -17,16 +10,11 @@ helpviewer_keywords:
 - custom controls [Windows Forms], graphics resources
 - custom controls [Windows Forms], invalidation and painting
 ms.assetid: aae8e1e6-4786-432b-a15e-f4c44760d302
-caps.latest.revision: "12"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 587c9c8fb0bf634a2491acb1ae0b2f60979fa899
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: a2d7a02e725e3f8065b80a6b30ea21158be43ea8
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="rendering-a-windows-forms-control"></a>Windows Forms 컨트롤 렌더링
 렌더링은 사용자의 화면에 시각적 표시를 만드는 프로세스를 말합니다. Windows Forms를 사용 하 여 [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] (새 Windows 그래픽 라이브러리) 렌더링 합니다. 에 대 한 액세스를 제공 하는 관리 되는 클래스 [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] 에 <xref:System.Drawing?displayProperty=nameWithType> 네임 스페이스 및 그 하위 네임 스페이스입니다.  
@@ -72,9 +60,9 @@ public System.Drawing.Graphics Graphics {get;}
 }  
 ```  
   
- <xref:System.Drawing.Graphics>그리기 기능을 캡슐화 하는 관리 되는 클래스에 대 한 설명에 설명 된 대로 [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] 이 항목의 뒷부분에 나오는 합니다. <xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A> 의 인스턴스가 <xref:System.Drawing.Rectangle> 구조체이 고 컨트롤을 그릴 수 있는 사용 가능한 영역을 정의 합니다. 컨트롤 개발자를 계산할 수는 <xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A> 를 사용 하는 <xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A> 이 항목의 뒷부분에 나오는 기 하 도형에 대 한 설명에 설명 된 대로 컨트롤의 속성입니다.  
+ <xref:System.Drawing.Graphics> 그리기 기능을 캡슐화 하는 관리 되는 클래스에 대 한 설명에 설명 된 대로 [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] 이 항목의 뒷부분에 나오는 합니다. <xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A> 의 인스턴스가 <xref:System.Drawing.Rectangle> 구조체이 고 컨트롤을 그릴 수 있는 사용 가능한 영역을 정의 합니다. 컨트롤 개발자를 계산할 수는 <xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A> 를 사용 하는 <xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A> 이 항목의 뒷부분에 나오는 기 하 도형에 대 한 설명에 설명 된 대로 컨트롤의 속성입니다.  
   
- 재정의 하 여 컨트롤 렌더링 논리를 제공 해야는 <xref:System.Windows.Forms.Control.OnPaint%2A> 에서 상속 된 메서드 <xref:System.Windows.Forms.Control>합니다. <xref:System.Windows.Forms.Control.OnPaint%2A>그래픽 개체 및 통해 그릴 사각형에 대 한 액세스를 가져옵니다는 <xref:System.Drawing.Design.PaintValueEventArgs.Graphics%2A> 및 <xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A> 의 속성은 <xref:System.Windows.Forms.PaintEventArgs> 인스턴스가 전달 합니다.  
+ 재정의 하 여 컨트롤 렌더링 논리를 제공 해야는 <xref:System.Windows.Forms.Control.OnPaint%2A> 에서 상속 된 메서드 <xref:System.Windows.Forms.Control>합니다. <xref:System.Windows.Forms.Control.OnPaint%2A> 그래픽 개체 및 통해 그릴 사각형에 대 한 액세스를 가져옵니다는 <xref:System.Drawing.Design.PaintValueEventArgs.Graphics%2A> 및 <xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A> 의 속성은 <xref:System.Windows.Forms.PaintEventArgs> 인스턴스가 전달 합니다.  
   
 ```vb  
 Protected Overridable Sub OnPaint(pe As PaintEventArgs)  
@@ -99,7 +87,7 @@ Protected Overridable Sub OnPaintBackground(pevent As PaintEventArgs)
 protected virtual void OnPaintBackground(PaintEventArgs pevent);  
 ```  
   
- <xref:System.Windows.Forms.Control.OnPaintBackground%2A>배경을 칠하는 (있고, 따라서 셰이프) 창 동안 빠른 되도록 보장 하 고 <xref:System.Windows.Forms.Control.OnPaint%2A> 세부 정보를 그리는 및 개별 그리기 요청은 하나에 결합 되므로 느릴 수 <xref:System.Windows.Forms.Control.Paint> 되어야 하는 모든 영역을 검사 하는 이벤트 다시 그려집니다. 호출 하려는 경우는 <xref:System.Windows.Forms.Control.OnPaintBackground%2A> 예를 들어, 컨트롤에 대 한 그라데이션 색 배경을 그리는 하려는 경우.  
+ <xref:System.Windows.Forms.Control.OnPaintBackground%2A> 배경을 칠하는 (있고, 따라서 셰이프) 창 동안 빠른 되도록 보장 하 고 <xref:System.Windows.Forms.Control.OnPaint%2A> 세부 정보를 그리는 및 개별 그리기 요청은 하나에 결합 되므로 느릴 수 <xref:System.Windows.Forms.Control.Paint> 되어야 하는 모든 영역을 검사 하는 이벤트 다시 그려집니다. 호출 하려는 경우는 <xref:System.Windows.Forms.Control.OnPaintBackground%2A> 예를 들어, 컨트롤에 대 한 그라데이션 색 배경을 그리는 하려는 경우.  
   
  반면 <xref:System.Windows.Forms.Control.OnPaintBackground%2A> 이벤트와 비슷한 명명법 개이고으로 동일한 인수를 사용는 `OnPaint` 메서드를 <xref:System.Windows.Forms.Control.OnPaintBackground%2A> true 이벤트 메서드가 아닙니다. 없는 `PaintBackground` 이벤트 및 <xref:System.Windows.Forms.Control.OnPaintBackground%2A> 이벤트 대리자를 호출 하지 않습니다. 재정의 하는 경우는 <xref:System.Windows.Forms.Control.OnPaintBackground%2A> 메서드, 파생된 클래스를 호출 하는 데 필요 하지 않습니다.는 <xref:System.Windows.Forms.Control.OnPaintBackground%2A> 기본 클래스의 메서드.  
   

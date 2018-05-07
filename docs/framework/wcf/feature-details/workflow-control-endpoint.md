@@ -1,26 +1,12 @@
 ---
 title: 워크플로 제어 끝점
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 1b883334-1590-4fbb-b0d6-65197efe0700
-caps.latest.revision: 11
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 3cd72919acd8e6392d809f22ddd87042d00008f6
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 40fec2902598daed178e070b02c1067c308507c9
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="workflow-control-endpoint"></a>워크플로 제어 끝점
 개발자는 워크플로 제어 끝점을 사용하여 <xref:System.ServiceModel.Activities.WorkflowServiceHost>를 사용하여 호스팅되는 워크플로 인스턴스를 원격으로 제어할 수 있는 제어 작업을 호출할 수 있습니다. 이 기능은 일시 중단, 다시 시작 및 종료 같은 제어 작업을 프로그래밍 방식으로 수행하는 데 사용될 수 있습니다.  

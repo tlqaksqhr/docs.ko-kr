@@ -1,24 +1,12 @@
 ---
 title: 보정
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 722e9766-48d7-456c-9496-d7c5c8f0fa76
-caps.latest.revision: 26
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 2ed51d14c56358e283d6c014f036a8aff73d2bfe
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 504c6b9efc3ca238d5cfcaa8bc7b72b4a40a3334
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compensation"></a>보정
 보정에서 Windows WF (Workflow Foundation)는 기준인 이전에 완료 된 작업 실행 취소 하거나 수 (응용 프로그램에 의해 정의 된 논리)에 따라 보정 하는 메커니즘은 이후에 오류가 발생할 경우. 이 단원에서는 워크플로에서 보정을 사용하는 방법에 대해 설명합니다.  

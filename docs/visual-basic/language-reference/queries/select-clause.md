@@ -1,12 +1,6 @@
 ---
 title: Select 절(Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.QuerySelect
 helpviewer_keywords:
@@ -14,14 +8,11 @@ helpviewer_keywords:
 - Select clause [Visual Basic]
 - queries [Visual Basic], Select
 ms.assetid: 27a3f61c-5960-4692-9b91-4d0c4b6178fe
-caps.latest.revision: 21
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: a9d8cabcbd8554ca2aee639eaac8a52f0485a266
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 55c1e79b9e8e26483c1b7374a755bf977129169b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="select-clause-visual-basic"></a>Select 절(Visual Basic)
 쿼리의 결과 정의합니다.  
@@ -37,7 +28,7 @@ Select [ var1 = ] fieldName1 [, [ var2 = ] fieldName2 [...] ]
  선택 사항입니다. 열 식의 결과 참조 하는 데 사용할 수 있는 별칭입니다.  
   
  `fieldName1`  
- 필수 요소. 쿼리 결과에 반환할 필드의 이름입니다.  
+ 필수. 쿼리 결과에 반환할 필드의 이름입니다.  
   
 ## <a name="remarks"></a>설명  
  사용할 수는 `Select` 쿼리에서 반환 하도록 결과 정의 하는 절. 이렇게 하면 쿼리에 의해 만들어진 새 익명 형식의 멤버를 정의 하거나 하거나 쿼리에 의해 반환 되는 명명 된 형식의 멤버를 대상으로 합니다. `Select` 절이 쿼리에 대 한 필요 하지 않습니다. 되지 않은 경우 `Select` 절을 지정 하면 쿼리는 현재 범위에 대 한 식별 된 범위 변수의 모든 멤버를 기준으로 형식을 반환 합니다. 자세한 내용은 [무명 형식](../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)을 참조하세요. 쿼리는 명명 된 형식을 만들면 형식의 결과 반환 합니다 <xref:System.Collections.Generic.IEnumerable%601> 여기서 `T` 생성된 된 형식입니다.  

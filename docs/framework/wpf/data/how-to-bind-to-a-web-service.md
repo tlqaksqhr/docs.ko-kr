@@ -1,13 +1,6 @@
 ---
-title: "방법: 웹 서비스 바인딩"
-ms.custom: 
+title: '방법: 웹 서비스 바인딩'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -16,21 +9,16 @@ helpviewer_keywords:
 - Web service binding [WPF]
 - data binding [WPF], Web service
 ms.assetid: 77e2d373-69ba-4cbd-b6f5-2c83c38fc98b
-caps.latest.revision: "6"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 7b035f5922722a05759ff1e13514cc760a57d668
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 75d9d5b6981f868c7a172edd7f23cf923fedd525
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-bind-to-a-web-service"></a>방법: 웹 서비스 바인딩
 이 예제에는 웹 서비스 메서드 호출에서 반환 된 개체에 바인딩하는 방법을 보여 줍니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  사용 하 여이 예제는 [MSDN/TechNet 게시 시스템 (MTPS) 콘텐츠 서비스](http://go.microsoft.com/fwlink/?LinkId=95677) 지정된 된 문서에서 지 원하는 언어의 목록을 검색할 수 있습니다.  
   
  웹 서비스를 호출 하기 전에 그에 대 한 참조 해야 합니다. 사용 하 여 MTPS 서비스에 대 한 웹 참조를 만들려면 [!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)], 다음 단계를 수행 합니다.  
@@ -39,7 +27,7 @@ ms.lasthandoff: 12/22/2017
   
 2.  **프로젝트** 메뉴를 클릭 하 여 **웹 참조 추가**합니다.  
   
-3.  대화 상자에서 설정 된 **URL** 를 [http://services.msdn.microsoft.com/contentservices/contentservice.asmx?wsdl](http://services.msdn.microsoft.com/contentservices/contentservice.asmx?wsdl)합니다.  
+3.  대화 상자에서 설정 된 **URL** 를 [ http://services.msdn.microsoft.com/contentservices/contentservice.asmx?wsdl ](http://services.msdn.microsoft.com/contentservices/contentservice.asmx?wsdl)합니다.  
   
 4.  키를 눌러 **이동** 차례로 **참조 추가**합니다.  
   

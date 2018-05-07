@@ -1,11 +1,7 @@
 ---
-title: "GetMethodQualifierSet 함수 (관리 되지 않는 API 참조)"
-description: "GetMethodQualifierSet 함수 메서드의 한정자 집합을 검색합니다."
+title: GetMethodQualifierSet 함수 (관리 되지 않는 API 참조)
+description: GetMethodQualifierSet 함수 메서드의 한정자 집합을 검색합니다.
 ms.date: 11/06/2017
-ms.prod: .net-framework
-ms.technology:
-- dotnet-clr
-ms.topic: reference
 api_name:
 - GetMethodQualifierSet
 api_location:
@@ -20,14 +16,11 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 2999bef31576cf2bc025868260c2b1782a9b69f9
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 2b1f73e999738fbb59342aeab391132ac454c8dd
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="getmethodqualifierset-function"></a>GetMethodQualifierSet 함수
 특정 방법에 대해 설정할 한정자를 검색 합니다.
@@ -54,7 +47,7 @@ HRESULT GetMethodQualifierSet (
 [in] 에 대 한 포인터는 [IWbemClassObject](https://msdn.microsoft.com/library/aa391433%28v=vs.85%29.aspx) 인스턴스.
 
 `wszMethod`  
-[in] 메서드 이름입니다. `wszMethod`유효한 가리켜야 `LPCWSTR`합니다. 
+[in] 메서드 이름입니다. `wszMethod` 유효한 가리켜야 `LPCWSTR`합니다. 
 
 `ppQualSet`  
 [out] 메서드의 한정자에 대 한 액세스를 허용 하는 인터페이스 포인터를 받습니다. `ppQualSet`가 `null`이 될 수 없는 경우 오류가 발생 하는 경우 새 개체가 반환 되지 않으면 및 포인터를 가리키도록 설정 되어 `null`합니다. 
@@ -82,7 +75,7 @@ HRESULT GetMethodQualifierSet (
   
  **헤더:** WMINet_Utils.idl  
   
- **.NET framework 버전:**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **.NET framework 버전:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>참고자료  
 [WMI 및 성능 카운터 (관리 되지 않는 API 참조)](index.md)

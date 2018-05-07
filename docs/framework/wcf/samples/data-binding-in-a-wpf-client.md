@@ -1,29 +1,15 @@
 ---
 title: Wndows Presentation Foundation 클라이언트에서 데이터 바인딩
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: bb8c8293-5973-4aef-9b07-afeff5d3293c
-caps.latest.revision: 21
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: d10591866e11bd9e5ae707a0c17c3e293d7f4f71
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 225bdedb67e218092ff3369d4fe742c4fc897fc6
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="data-binding-in-a-windows-presentation-foundation-client"></a>Wndows Presentation Foundation 클라이언트에서 데이터 바인딩
-이 샘플에서는 WPF(Windows Presentation Foundation) 클라이언트에서 데이터 바인딩을 사용하는 방법을 보여 줍니다. 이 샘플에서는 클라이언트에 반환될 앨범 배열을 무작위로 생성하는 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 서비스를 사용합니다. 각 앨범에는 이름, 가격 및 앨범 트랙 목록이 있습니다. 앨범 트랙에는 이름과 기간이 있습니다. 서비스에서 반환 되는 정보는 Windows Presentation Foundation (WPF) 클라이언트에서 제공 하는 사용자 인터페이스 (UI)에 자동으로 바인딩됩니다.  
+이 샘플에서는 WPF(Windows Presentation Foundation) 클라이언트에서 데이터 바인딩을 사용하는 방법을 보여 줍니다. 이 샘플의 클라이언트에 반환 될 앨범 배열을 무작위로 생성 하는 Windows Communication Foundation (WCF) 서비스를 사용 합니다. 각 앨범에는 이름, 가격 및 앨범 트랙 목록이 있습니다. 앨범 트랙에는 이름과 기간이 있습니다. 서비스에서 반환 되는 정보는 Windows Presentation Foundation (WPF) 클라이언트에서 제공 하는 사용자 인터페이스 (UI)에 자동으로 바인딩됩니다.  
   
 > [!NOTE]
 >  이 샘플의 설치 절차 및 빌드 지침은 이 항목의 끝부분에 나와 있습니다.  
@@ -91,7 +77,7 @@ void client_GetAlbumListCompleted(object sender, GetAlbumListCompletedEventArgs 
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  이 디렉터리가 없으면 [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4(.NET Framework 4용 WCF(Windows Communication Foundation) 및 WF(Windows Workflow Foundation) 샘플)](http://go.microsoft.com/fwlink/?LinkId=150780) 로 이동하여 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 및 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플을 모두 다운로드하세요. 이 샘플은 다음 디렉터리에 있습니다.  
+>  이 디렉터리가로 이동 [Windows Communication Foundation (WCF) 및.NET Framework 4에 대 한 Windows WF (Workflow Foundation) 샘플](http://go.microsoft.com/fwlink/?LinkId=150780) 모든 Windows Communication Foundation (WCF)를 다운로드 하 고 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플. 이 샘플은 다음 디렉터리에 있습니다.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Scenario\DataBinding\WPFDataBinding`  
   

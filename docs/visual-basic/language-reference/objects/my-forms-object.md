@@ -1,25 +1,17 @@
 ---
-title: "My.Forms 개체"
+title: My.Forms 개체
 ms.date: 07/20/2015
-ms.prod: .net
-ms.suite: 
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - My.Forms
 - My.MyProject.Forms
 helpviewer_keywords:
 - My.Forms object
 ms.assetid: f6bff4e6-6769-4294-956b-037aa6106d2a
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: fe548caacf2c8e7498e3b7abc814b4f89af9b3d6
-ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
+ms.openlocfilehash: 4d6bb371b13dfb3fb735223b2a6a6a35e1416593
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="myforms-object"></a>My.Forms 개체
 현재 프로젝트에 선언 된 각 Windows form의 인스턴스에 액세스 하기 위한 속성을 제공 합니다.  
@@ -50,7 +42,7 @@ ms.lasthandoff: 12/21/2017
 > [!NOTE]
 >  일반적으로 `Is` 또는 `IsNot` 연산자에는 비교를 수행 하는 속성의 값을 읽을 수 있습니다. 그러나 현재 저장 하는 경우 `Nothing`, 속성 폼의 새 인스턴스를 만들고 다음 해당 인스턴스를 반환 합니다. Visual Basic 컴파일러의 속성을 처리 하는 반면는 `My.Forms` 알리고 다르게 개체는 `Is` 또는 `IsNot` 연산자를 해당 값을 변경 하지 않고 속성의 상태를 확인 합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  이 예제에서는 기본 제목을 변경 `SidebarMenu` 폼입니다.  
   
  [!code-vb[VbVbalrMyForms#2](../../../visual-basic/language-reference/objects/codesnippet/VisualBasic/my-forms-object_1.vb)]  

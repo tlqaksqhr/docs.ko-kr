@@ -1,13 +1,6 @@
 ---
-title: "그래픽 렌더링 계층"
-ms.custom: 
+title: 그래픽 렌더링 계층
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - graphics [WPF], performance
 - rendering graphics [WPF]
@@ -15,16 +8,11 @@ helpviewer_keywords:
 - graphics rendering tiers [WPF]
 - graphics [WPF], rendering tiers
 ms.assetid: 08dd1606-02a2-4122-9351-c0afd2ec3a70
-caps.latest.revision: "44"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 457b7e76b16e42c71d1e2d1986d58b2708396e22
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 4f9de7736851027c9f6b851984953e37b96d456a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="graphics-rendering-tiers"></a>그래픽 렌더링 계층
 렌더링 계층은 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 응용 프로그램을 실행하는 장치의 그래픽 하드웨어 기능과 성능 수준을 정의합니다.  
@@ -98,8 +86,8 @@ ms.lasthandoff: 12/22/2017
 |기능|노트|  
 |-------------|-----------|  
 |인쇄된 콘텐츠|인쇄된 모든 콘텐츠는 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 소프트웨어 파이프라인을 사용하여 렌더링합니다.|  
-|사용 하는 래스터화된 콘텐츠<xref:System.Windows.Media.Imaging.RenderTargetBitmap>|사용 하 여 렌더링 된 모든 콘텐츠에 <xref:System.Windows.Media.Imaging.RenderTargetBitmap.Render%2A> 방식의 <xref:System.Windows.Media.Imaging.RenderTargetBitmap>합니다.|  
-|사용 하는 바둑판식으로 배열 된 콘텐츠<xref:System.Windows.Media.TileBrush>|콘텐츠를 바둑판식으로 배열 된는 <xref:System.Windows.Media.TileBrush.TileMode%2A> 의 속성은 <xref:System.Windows.Media.TileBrush> 로 설정 되어 <xref:System.Windows.Media.TileMode.Tile>합니다.|  
+|사용 하는 래스터화된 콘텐츠 <xref:System.Windows.Media.Imaging.RenderTargetBitmap>|사용 하 여 렌더링 된 모든 콘텐츠에 <xref:System.Windows.Media.Imaging.RenderTargetBitmap.Render%2A> 방식의 <xref:System.Windows.Media.Imaging.RenderTargetBitmap>합니다.|  
+|사용 하는 바둑판식으로 배열 된 콘텐츠 <xref:System.Windows.Media.TileBrush>|콘텐츠를 바둑판식으로 배열 된는 <xref:System.Windows.Media.TileBrush.TileMode%2A> 의 속성은 <xref:System.Windows.Media.TileBrush> 로 설정 되어 <xref:System.Windows.Media.TileMode.Tile>합니다.|  
 |그래픽 하드웨어의 최대 질감 크기를 초과하는 화면|대부분의 그래픽 하드웨어에서 대형 화면의 크기는 2048x2048 또는 4096x4096 픽셀입니다.|  
 |비디오 RAM 요구 사항이 그래픽 하드웨어의 메모리를 초과하는 모든 작업|Windows SDK에서 [WPF 성능 제품군](http://msdn.microsoft.com/library/67cafaad-57ad-4ecb-9c08-57fac144393e)에 포함된 Perforator 도구를 사용하여 응용 프로그램 비디오 RAM 사용량을 모니터링할 수 있습니다.|  
 |계층적 창|계층적 창을 사용하면 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 응용 프로그램에서 직사각형이 아닌 창의 화면에 맞게 콘텐츠를 렌더링할 수 있습니다. [!INCLUDE[TLA2#tla_winvista](../../../../includes/tla2sharptla-winvista-md.md)] 및 [!INCLUDE[win7](../../../../includes/win7-md.md)]와 같은 WDDM(Windows Display Driver Model)을 지원하는 운영 체제에서 계층적 창은 하드웨어 가속됩니다. [!INCLUDE[winxp](../../../../includes/winxp-md.md)]와 같은 다른 시스템에서는 하드웨어 가속이 없는 소프트웨어를 통해 계층적 창을 렌더링합니다.<br /><br /> 계층된 창에서 사용 하도록 설정할 수 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 다음을 설정 하 여 <xref:System.Windows.Window> 속성:<br /><br /> -   <xref:System.Windows.Window.WindowStyle%2A> = <xref:System.Windows.WindowStyle.None><br />-   <xref:System.Windows.Window.AllowsTransparency%2A> = `true`<br />-   <xref:System.Windows.Controls.Control.Background%2A> = <xref:System.Windows.Media.Brushes.Transparent%2A>|  

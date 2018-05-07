@@ -1,14 +1,6 @@
 ---
 title: '방법: 바인딩되지 않은 Windows Forms DataGridView 컨트롤 만들기'
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-winforms
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -17,17 +9,11 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], displaying data without binding to a data source
 - data [Windows Forms], unbound
 ms.assetid: b5d4b47d-9a28-4d88-9dba-0a3c90fba71d
-caps.latest.revision: 17
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: ee05ab225fe8bb4417fe1581b801106b60896f5b
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.openlocfilehash: 6b297b95ee97262ab3ad2d24c539f88bde066099
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-an-unbound-windows-forms-datagridview-control"></a>방법: 바인딩되지 않은 Windows Forms DataGridView 컨트롤 만들기
 다음 코드 예제에서는 데이터 소스에 바인딩하지 않고 프로그래밍 방식으로 <xref:System.Windows.Forms.DataGridView> 컨트롤을 채우는 방법을 보여 줍니다. 적은 양의 데이터를 테이블 형식으로 표시하려는 경우에 유용합니다.  

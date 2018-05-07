@@ -1,13 +1,6 @@
 ---
-title: "방법: 키 프레임을 사용하여 포인트에 애니메이션 효과 주기"
-ms.custom: 
+title: '방법: 키 프레임을 사용하여 포인트에 애니메이션 효과 주기'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -16,21 +9,16 @@ helpviewer_keywords:
 - Points [WPF], animating with key frames
 - animation [WPF], Points with key frames
 ms.assetid: d2e2ef10-0773-4133-856e-d41c09f60ded
-caps.latest.revision: "12"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 4c115d31c6ace26f8fd9dd6cff3fdeead89eea33
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: a59ceb62d7feb33d2cc8a747a7bfb85e551d785c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-animate-a-point-by-using-key-frames"></a>방법: 키 프레임을 사용하여 포인트에 애니메이션 효과 주기
 사용 하는 방법을 보여 주는이 예제는 <xref:System.Windows.Media.Animation.PointAnimationUsingKeyFrames> 애니메이션 효과를 줄 클래스는 <xref:System.Windows.Point>합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 예제에서는 삼각형 경로를 따라 타원을 이동합니다. 이 예제에서는 사용는 <xref:System.Windows.Media.Animation.PointAnimationUsingKeyFrames> 애니메이션 효과를 줄 클래스는 <xref:System.Windows.Media.EllipseGeometry.Center%2A> 속성의는 <xref:System.Windows.Media.EllipseGeometry>합니다. 이 애니메이션은 다음과 같은 방식으로 세 가지 키 프레임을 사용합니다.  
   
 1.  인스턴스를 사용 하 여 첫 번째 0.5 초 동안는 <xref:System.Windows.Media.Animation.LinearPointKeyFrame> 해당 시작 위치에서 일정 한 비율로 타원 경로 따라 이동 하는 클래스입니다. 같은 키 프레임 선형 <xref:System.Windows.Media.Animation.LinearPointKeyFrame> 값 사이의 선형 보간을 부드러운를 만듭니다.  

@@ -1,10 +1,6 @@
 ---
-title: "Boolean 데이터 형식(Visual Basic)"
+title: Boolean 데이터 형식(Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.FALSE
 - vb.TRUE
@@ -16,14 +12,11 @@ helpviewer_keywords:
 - True keyword [Visual Basic]
 - Boolean values [Visual Basic], True keyword
 ms.assetid: 4858e630-4813-4216-a55e-f4d0feb884e4
-caps.latest.revision: "18"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: bdc106f1ec874c1a2165df069d5f3485fe5b2e43
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 00f77fe5e98099868e02d74fe1adc7690cb95cca
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="boolean-data-type-visual-basic"></a>Boolean 데이터 형식(Visual Basic)
 값만 될 수 있는 포함 `True` 또는 `False`합니다. 키워드 `True` 및 `False` 의 두 가지 상태에 해당 `Boolean` 변수입니다.  
@@ -33,7 +26,7 @@ ms.lasthandoff: 11/21/2017
   
  `Boolean`의 기본값은 `False`입니다.  
   
- `Boolean`값이 숫자로 저장 되지 않습니다 및 저장 된 값은 숫자에 해당 되지 않아야 합니다. 해당 하는 숫자 값을 사용 하는 코드를 작성 하지 마십시오 `True` 및 `False`합니다. 용도 제한 해야 가능 하면 항상 `Boolean` 변수도 설계 된 논리 값입니다.  
+ `Boolean` 값이 숫자로 저장 되지 않습니다 및 저장 된 값은 숫자에 해당 되지 않아야 합니다. 해당 하는 숫자 값을 사용 하는 코드를 작성 하지 마십시오 `True` 및 `False`합니다. 용도 제한 해야 가능 하면 항상 `Boolean` 변수도 설계 된 논리 값입니다.  
   
 ## <a name="type-conversions"></a>형식 변환  
  Visual Basic 숫자 데이터 형식 값을 변환 하는 경우 `Boolean`, 0은 `False` 고 다른 모든 값은 `True`합니다. Visual Basic로 변환 하는 경우 `Boolean` 값을 숫자 형식 `False` 0이 되 고 `True` 는-1입니다.  
@@ -42,9 +35,9 @@ ms.lasthandoff: 11/21/2017
   
 ## <a name="programming-tips"></a>프로그래밍 팁  
   
--   **음수입니다.** `Boolean`숫자 형식이 아닌 및 음수 값을 나타낼 수 없습니다. 사용 하지 않아야 어떤 경우 든, `Boolean` 숫자 값을 저장 합니다.  
+-   **음수입니다.** `Boolean` 숫자 형식이 아닌 및 음수 값을 나타낼 수 없습니다. 사용 하지 않아야 어떤 경우 든, `Boolean` 숫자 값을 저장 합니다.  
   
--   **형식 문자입니다.** `Boolean`에 리터럴 형식 문자 또는 식별자 형식 문자가 없습니다.  
+-   **형식 문자입니다.** `Boolean` 에 리터럴 형식 문자 또는 식별자 형식 문자가 없습니다.  
   
 -   **Framework 형식입니다.** .NET Framework에서 해당하는 형식은 <xref:System.Boolean?displayProperty=nameWithType> 구조체입니다.  
   

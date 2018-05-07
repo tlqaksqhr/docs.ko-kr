@@ -1,11 +1,6 @@
 ---
-title: "Group By 절(Visual Basic)"
+title: Group By 절(Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.QueryGroupByInto
 - vb.QueryGroupBy
@@ -17,14 +12,11 @@ helpviewer_keywords:
 - Group By statement [Visual Basic]
 - Group By clause [Visual Basic]
 ms.assetid: b1b5dcea-6654-473b-a2db-01f7e4c265d7
-caps.latest.revision: "20"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: b719bfa2ebe4c324acf82a03e215e481283845fe
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 7cf688dc2e0ccd10c8bfbe5f0308f0aa808fbef0
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="group-by-clause-visual-basic"></a>Group By 절(Visual Basic)
 쿼리 결과의 요소를 그룹화합니다. 각 그룹에 집계 함수를 적용하는 데 사용할 수도 있습니다. 그룹화 작업은 하나 이상의 키를 기반으로 합니다.  
@@ -44,21 +36,21 @@ Group [ listField1 [, listField2 [...] ] By keyExp1 [, keyExp2 [...] ]
   
 -   `keyExp1`  
   
-     필수 요소. 요소 그룹을 결정하는 데 사용할 키를 식별하는 식입니다. 둘 이상의 키를 지정하여 복합 키를 지정할 수 있습니다.  
+     필수. 요소 그룹을 결정하는 데 사용할 키를 식별하는 식입니다. 둘 이상의 키를 지정하여 복합 키를 지정할 수 있습니다.  
   
 -   `keyExp2`  
   
-     선택 사항입니다. 복합 키를 만들기 위해 `keyExp1` 와 결합되는 하나 이상의 추가 키입니다.  
+     선택적 요소. 복합 키를 만들기 위해 `keyExp1` 와 결합되는 하나 이상의 추가 키입니다.  
   
 -   `aggregateList`  
   
-     필수 요소. 그룹의 집계 방법을 식별하는 하나 이상의 식입니다. 그룹화된 결과의 멤버 이름을 식별하려면 다음 형식 중 하나일 수 있는 `Group` 키워드를 사용합니다.  
+     필수. 그룹의 집계 방법을 식별하는 하나 이상의 식입니다. 그룹화된 결과의 멤버 이름을 식별하려면 다음 형식 중 하나일 수 있는 `Group` 키워드를 사용합니다.  
   
     ```  
     Into Group  
     ```  
   
-     또는  
+     -또는-  
   
     ```  
     Into <alias> = Group  

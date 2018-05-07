@@ -1,14 +1,6 @@
 ---
-title: "IMetaDataImport::EnumUserStrings 메서드"
-ms.custom: 
+title: IMetaDataImport::EnumUserStrings 메서드
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - IMetaDataImport.EnumUserStrings
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: 2b1f1418-4be8-4cdb-b418-b3abccc527a7
 topic_type:
 - apiref
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 3d9c802318203db2ccd6043cded3c7730b18b0cb
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 98b99493e54b123d37eb281455180b9a25baddd4
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="imetadataimportenumuserstrings-method"></a>IMetaDataImport::EnumUserStrings 메서드
 현재 메타데이터 범위에서 하드 코드된 문자열을 나타내는 String 토큰을 열거합니다.  
@@ -66,7 +54,7 @@ HRESULT EnumUserStrings (
   
 |HRESULT|설명|  
 |-------------|-----------------|  
-|`S_OK`|`EnumUserStrings`성공적으로 반환 합니다.|  
+|`S_OK`|`EnumUserStrings` 성공적으로 반환 합니다.|  
 |`S_FALSE`|열거할 토큰이 있습니다. 이 경우 `pcStrings` 은 0입니다.|  
   
 ## <a name="remarks"></a>설명  
@@ -79,7 +67,7 @@ HRESULT EnumUserStrings (
   
  **라이브러리:** MsCorEE.dll에 리소스로 포함  
   
- **.NET framework 버전:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>참고 항목  
  [IMetaDataImport 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)  

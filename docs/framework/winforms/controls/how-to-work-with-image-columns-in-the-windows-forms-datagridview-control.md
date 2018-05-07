@@ -1,14 +1,6 @@
 ---
 title: '방법: Windows Forms DataGridView 컨트롤에서 이미지 열 작업'
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-winforms
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -18,17 +10,11 @@ helpviewer_keywords:
 - image columns [Windows Forms], Windows Forms
 - DataGridView control [Windows Forms], image columns
 ms.assetid: 8a37aa75-3c6e-4893-91d0-7a5f34bfe287
-caps.latest.revision: 12
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 569b57f9efdd3bbcf39eb2df78cdf40b792008dc
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.openlocfilehash: b1c3fb5048419944507e9269c5ffd46fbe4a722b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-work-with-image-columns-in-the-windows-forms-datagridview-control"></a>방법: Windows Forms DataGridView 컨트롤에서 이미지 열 작업
 다음 코드 예제에서는 대화형 UI(사용자 인터페이스)에서 <xref:System.Windows.Forms.DataGridView> 이미지 열을 사용하는 방법을 보여 줍니다. 또한 <xref:System.Windows.Forms.DataGridViewImageColumn>에서 가능한 이미지 크기 조정 및 레이아웃 기능을 보여 줍니다.  

@@ -1,27 +1,15 @@
 ---
-title: "WMI 클래스 참조"
-ms.custom: 
+title: WMI 클래스 참조
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: b95a51f5-8251-4619-ae05-7de88cb90f9a
-caps.latest.revision: "6"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 0e221c8197b9713dd5f4e35114ada3c63f4978ef
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 73b36bfc3df917982a2cc9071bdb31f42b3b2dff
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="wmi-class-reference"></a>WMI 클래스 참조
-이 섹션에서는 [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] WMI 공급자가 노출하는 모든 WMI 클래스를 보여 줍니다.  
+이 섹션에서는 Windows Communication Foundation (WCF) WMI 공급자가 제공 하는 모든 WMI 클래스를 나열 합니다.  
   
 ## <a name="accessing-wmi-instances"></a>WMI 인스턴스에 액세스  
  WMI 개체 참조에 나열된 모든 클래스는 Service, AppDomain, Contract, ServiceAppDomain, ServiceToEndpointAssociation 및 Endpoint를 제외하고 직접 인스턴스화할 수 없습니다. 다른 인스턴스에 액세스하려면 앞에서 설명한 최상위 클래스의 속성에 액세스합니다. 예를 들어 Endpoint 인스턴스 -> Binding -> BindingElements에서 TransportBindingElement 인스턴스에 액세스할 수 있습니다.  

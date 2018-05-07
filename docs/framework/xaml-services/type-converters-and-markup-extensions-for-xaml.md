@@ -1,14 +1,6 @@
 ---
 title: XAML을 위한 형식 변환기 및 태그 확장명
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-wpf
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - XAML [XAML Services], type converter services
 - XAML [XAML Services], value converters
@@ -16,17 +8,11 @@ helpviewer_keywords:
 - value converters for XAML [XAML Services]
 - XAML [XAML Services], service context
 ms.assetid: db07a952-05ce-4aa4-b6f9-aac7397d0326
-caps.latest.revision: 13
-author: wadepickett
-ms.author: wpickett
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: a6ab52105785dc1efbffe093cdafb12cdf8eac4d
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 0c9cb7e87416860dda98df0da967ffbc070bc270
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="type-converters-and-markup-extensions-for-xaml"></a>XAML을 위한 형식 변환기 및 태그 확장명
 형식 변환기 및 태그 확장은 XAML 형식 시스템과 XAML 작성기가 개체 그래프 구성 요소를 생성하는 데 사용하는 두 가지 기술입니다. 일부 특징을 공유하지만 형식 변환기 및 태그 확장은 XAML 노드 스트림에서 다르게 표현됩니다. 이 설명서 집합에서는 때때로 형식 변환기, 태그 확장 및 유사한 구문을 총체적으로 값 변환기라고 합니다.  
@@ -45,7 +31,7 @@ ms.lasthandoff: 04/30/2018
   
 <a name="type_converters"></a>   
 ## <a name="type-converters"></a>형식 변환기  
- .NET Framework XAML 서비스 정의에서 형식 변환기는 CLR <xref:System.ComponentModel.TypeConverter> 클래스에서 파생되는 클래스입니다. <xref:System.ComponentModel.TypeConverter> 는 XAML 이전에 [!INCLUDE[TLA#tla_netframewk](../../../includes/tlasharptla-netframewk-md.md)] 에 있던 클래스입니다. 원래 목적은 [!INCLUDE[TLA2#tla_ide](../../../includes/tla2sharptla-ide-md.md)] 속성에 대해 속성 창 및 유사한 텍스트 기반 편집 기능을 지원하는 것이었습니다. .NET Framework에 XAML을 도입하는 경우 <xref:System.ComponentModel.TypeConverter> 를 사용하여 텍스트 구문(특성 값 또는 XAML 값 노드에 있음)을 개체로 변환합니다. <xref:System.ComponentModel.TypeConverter> 를 사용하여 개체 값을 텍스트 구문으로 직렬화할 수도 있습니다. <xref:System.ComponentModel.TypeConverter> Windows Presentation Foundation (WPF) 및 Windows Communication Foundation (WCF) 이전 프레임 워크별 XAML 구현 에서도 사용 되었습니다. XAML의 <xref:System.ComponentModel.TypeConverter> 에 대한 자세한 내용은 [Type Converters for XAML Overview](../../../docs/framework/xaml-services/type-converters-for-xaml-overview.md)의 이전 프레임워크별 XAML 구현에서도 사용되었습니다.  
+ .NET Framework XAML 서비스 정의에서 형식 변환기는 CLR <xref:System.ComponentModel.TypeConverter> 클래스에서 파생되는 클래스입니다. <xref:System.ComponentModel.TypeConverter> XAML이 도입 하기 전에 Microsoft.NET Framework에 있던 클래스입니다. 원래 목적은 [!INCLUDE[TLA2#tla_ide](../../../includes/tla2sharptla-ide-md.md)] 속성에 대해 속성 창 및 유사한 텍스트 기반 편집 기능을 지원하는 것이었습니다. .NET Framework에 XAML을 도입하는 경우 <xref:System.ComponentModel.TypeConverter> 를 사용하여 텍스트 구문(특성 값 또는 XAML 값 노드에 있음)을 개체로 변환합니다. <xref:System.ComponentModel.TypeConverter> 를 사용하여 개체 값을 텍스트 구문으로 직렬화할 수도 있습니다. <xref:System.ComponentModel.TypeConverter> Windows Presentation Foundation (WPF) 및 Windows Communication Foundation (WCF) 이전 프레임 워크별 XAML 구현 에서도 사용 되었습니다. XAML의 <xref:System.ComponentModel.TypeConverter> 에 대한 자세한 내용은 [Type Converters for XAML Overview](../../../docs/framework/xaml-services/type-converters-for-xaml-overview.md)의 이전 프레임워크별 XAML 구현에서도 사용되었습니다.  
   
 <a name="markup_extensions"></a>   
 ## <a name="markup-extensions"></a>태그 확장  

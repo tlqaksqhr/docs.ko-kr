@@ -1,17 +1,12 @@
 ---
 title: 속성(F#)
 description: 'F # 속성을 개체에 연결 된 값을 나타내는 멤버에 알아봅니다.'
-author: cartermp
-ms.author: phcart
 ms.date: 05/16/2016
-ms.topic: language-reference
-ms.prod: dotnet-fsharp
-ms.devlang: fsharp
-ms.openlocfilehash: 6cad5d0e32958374e080f9b8046f7eb73b6bf615
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 7aa71b1801b44fedcb420b824078004c6c240dc2
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="properties"></a>속성
 

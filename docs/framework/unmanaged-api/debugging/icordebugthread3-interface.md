@@ -1,14 +1,6 @@
 ---
-title: "ICorDebugThread3 인터페이스"
-ms.custom: 
+title: ICorDebugThread3 인터페이스
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICorDebugThread3
 api_location:
@@ -22,17 +14,13 @@ helpviewer_keywords:
 ms.assetid: eb2860ef-06cb-4968-a6c3-6d048ecda2a4
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 6cfb3267637210567f3df9fa08bb75135dc585ec
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: c9cb9217282af53d9788190844e4e52d5405ee2a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="icordebugthread3-interface"></a>ICorDebugThread3 인터페이스
 진입점을 제공 된 [ICorDebugStackWalk](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-interface.md) 및 해당 인터페이스입니다.  
@@ -45,7 +33,7 @@ ms.lasthandoff: 12/22/2017
 |[GetActiveInternalFrames 메서드](../../../../docs/framework/unmanaged-api/debugging/icordebugthread3-getactiveinternalframes-method.md)|내부 프레임의 배열을 반환 ([ICorDebugInternalFrame2](../../../../docs/framework/unmanaged-api/debugging/icordebuginternalframe2-interface.md) 개체)를 스택에 있습니다.|  
   
 ## <a name="remarks"></a>설명  
- `ICorDebugThread3`ICorDebugThread 인터페이스를 논리적으로 확장이 됩니다.  
+ `ICorDebugThread3` ICorDebugThread 인터페이스를 논리적으로 확장이 됩니다.  
   
 > [!NOTE]
 >  이 인터페이스는 크로스 시스템 또는 크로스 프로세스 원격 호출을 지원하지 않습니다.  
@@ -57,7 +45,7 @@ ms.lasthandoff: 12/22/2017
   
  **라이브러리:** CorGuids.lib  
   
- **.NET framework 버전:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET framework 버전:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>참고 항목  
  [디버깅 인터페이스](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)  

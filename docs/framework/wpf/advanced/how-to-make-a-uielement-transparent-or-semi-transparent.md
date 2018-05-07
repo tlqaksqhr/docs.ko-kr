@@ -1,34 +1,22 @@
 ---
-title: "방법: UIElement를 투명하거나 반투명하게 만들기"
-ms.custom: 
+title: '방법: UIElement를 투명하거나 반투명하게 만들기'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - UIElements [WPF], transparency
 - opacity [WPF], of UIElements
 - transparency of UIElements [WPF]
 - UIElements [WPF], opacity
 ms.assetid: a49fc8d6-7b32-4f28-9122-39b632a19b4b
-caps.latest.revision: "10"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 25245319c02ae376410d71afb7a1e56eda259e99
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 7bf79848edb84a5bd93d1196fbe0b3196d159ff3
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-make-a-uielement-transparent-or-semi-transparent"></a>방법: UIElement를 투명하거나 반투명하게 만들기
 확인 하는 방법을 보여 주는이 예제는 <xref:System.Windows.UIElement> 투명 하 게 또는 반투명 하 게 합니다. 요소를 투명 하 게 또는 반투명 하 게 확인을 설정 하면 해당 <xref:System.Windows.UIElement.Opacity%2A> 속성입니다. 값이 `0.0` 요소 값 완전히 투명 하 게 만듭니다 `1.0` 요소를 완전히 불투명 하 게 만듭니다. 값이 `0.5` 사용 하면 요소 50% 불투명 하 고 까지입니다. 요소의 <xref:System.Windows.UIElement.Opacity%2A> 로 설정 된 `1.0` 기본적으로 합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 예에서는 <xref:System.Windows.UIElement.Opacity%2A> 단추의 `0.25`, 내용을에 (이 경우 단추의 텍스트) 25% 불투명 하 게 만들기.  
   
  [!code-xaml[brushsamples_snip#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/brushsamples_snip/CS/OpacityExample.xaml#2)]  

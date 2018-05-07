@@ -1,24 +1,16 @@
 ---
-title: "반복기(Visual Basic)"
+title: 반복기(Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.suite: 
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.Iterator
 helpviewer_keywords:
 - Iterator keyword [Visual Basic]
 ms.assetid: 69cb0b04-ac87-49d0-bcfe-810c0d60daff
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: fd6c0b1fa422dc4ab659d8c59472e5c098c729bc
-ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
+ms.openlocfilehash: 565508046b3fa2dc52acf8c5204153beffc15d9e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="iterator-visual-basic"></a>반복기(Visual Basic)
 지정 하는 함수 또는 `Get` 접근자가 반복기입니다.  
@@ -45,12 +37,12 @@ ms.lasthandoff: 12/21/2017
   
 -   [Property 문](../../../visual-basic/language-reference/statements/property-statement.md)  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 예제에서는 반복기 함수를 보여 줍니다. 반복기 함수에는 `Yield` 문 내에 있는 한 [에 대 한... 다음](../../../visual-basic/language-reference/statements/for-next-statement.md) 루프입니다. 각 반복에서 [각각에 대해](../../../visual-basic/language-reference/statements/for-each-next-statement.md) 문 본문에서 `Main` 에 대 한 호출을 만듭니다는 `Power` 반복기 함수입니다. 반복기 함수를 호출할 때마다 다음에 `Yield` 루프를 반복하는 도중에 `For…Next` 문이 실행됩니다.  
   
  [!code-vb[VbVbalrStatements#98](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/iterator_1.vb)]  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 예제는 반복기인 `Get` 접근자에 대해 설명합니다. `Iterator` 한정자는 속성 선언에 있습니다.  
   
  [!code-vb[VbVbalrStatements#99](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/iterator_2.vb)]  

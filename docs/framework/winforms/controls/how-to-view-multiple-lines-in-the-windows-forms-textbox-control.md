@@ -1,13 +1,6 @@
 ---
-title: "방법: Windows Forms TextBox 컨트롤에 여러 줄 표시"
-ms.custom: 
+title: '방법: Windows Forms TextBox 컨트롤에 여러 줄 표시'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - newline
 - end of line
@@ -18,16 +11,11 @@ helpviewer_keywords:
 - TextBox control [Windows Forms], viewing multiple lines
 - carriage return
 ms.assetid: 43173201-0b74-4067-a472-605029ca5f35
-caps.latest.revision: "10"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 5dca8d0f869702dee50bf851a2099317c45aa842
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: c826a519d8be05430eb6e2434209424514347b5e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-view-multiple-lines-in-the-windows-forms-textbox-control"></a>방법: Windows Forms TextBox 컨트롤에 여러 줄 표시
 기본적으로 Windows Forms <xref:System.Windows.Forms.TextBox> 컨트롤의 텍스트 한 줄을 표시 하 고 스크롤 막대를 표시 하지 않습니다. 텍스트 사용 가능한 공간 보다 긴 경우에 텍스트의 일부만 표시 됩니다. 설정 하 여이 기본 동작을 변경할 수 있습니다는 <xref:System.Windows.Forms.TextBox.Multiline%2A>, <xref:System.Windows.Forms.TextBoxBase.WordWrap%2A>, 및 <xref:System.Windows.Forms.TextBox.ScrollBars%2A> 속성을 적절 한 값입니다.  

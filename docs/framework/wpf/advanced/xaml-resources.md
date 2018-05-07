@@ -1,29 +1,17 @@
 ---
-title: "XAML 리소스"
-ms.custom: 
+title: XAML 리소스
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - reusing resources [WPF]
 - resources [WPF], reusing
 - reusing commonly defined objects [WPF]
 - XAML [WPF], reusing resources
 ms.assetid: 91580b89-a0a8-4889-aecb-fddf8e63175f
-caps.latest.revision: "33"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a2d58802bcdfa57bb7689e7406651fcc9829a7e5
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 7b917b13909c463cd9d518d79bf8ce2683591dda
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="xaml-resources"></a>XAML 리소스
 리소스는 응용 프로그램의 여러 위치에서 다시 사용할 수 있는 개체입니다. 리소스의 예로는 브러시와 스타일이 있습니다. 이 개요에서는의 리소스를 사용 하는 방법을 설명 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]합니다. 만들 수 있고 하거나 코드 서로 바꿔 코드를 사용 하 여 리소스에 액세스 하면 및 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]합니다. 자세한 내용은 참조 [리소스와 코드가](../../../../docs/framework/wpf/advanced/resources-and-code.md)합니다.  
@@ -162,7 +150,7 @@ ms.lasthandoff: 12/22/2017
   
  스타일에 대 한 암시적 키 경우 컨트롤에 적용 되지 않습니다 <xref:System.Windows.FrameworkElement.OverridesDefaultStyle%2A> 은 `true` (또한 <xref:System.Windows.FrameworkElement.OverridesDefaultStyle%2A> 대신 명시적으로 컨트롤의 인스턴스 컨트롤 클래스에 대 한 기본 동작의 일부로 설정할 수 있습니다). 또한 암시적 키 파생된 클래스 시나리오를 지원 하려면 컨트롤 재정의 해야 <xref:System.Windows.FrameworkElement.DefaultStyleKey%2A> (의 일부로 제공 되는 모든 기존 컨트롤 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 이 작업을 수행). 스타일, 테마 및 컨트롤 디자인 하는 방법에 대 한 자세한 내용은 참조 [디자인 스타일 컨트롤에 대 한 지침이](../../../../docs/framework/wpf/controls/guidelines-for-designing-stylable-controls.md)합니다.  
   
- <xref:System.Windows.DataTemplate>암시적 키도 있습니다. 에 대 한 암시적 키는 <xref:System.Windows.DataTemplate> 는 <xref:System.Windows.DataTemplate.DataType%2A> 속성 값입니다. <xref:System.Windows.DataTemplate.DataType%2A>인수를 명시적으로 사용 하는 대신 형식의 이름으로 지정할 수도 있습니다 [{X:type...} ](../../../../docs/framework/xaml-services/x-type-markup-extension.md). 자세한 내용은 참조 [데이터 템플릿 개요](../../../../docs/framework/wpf/data/data-templating-overview.md)합니다.  
+ <xref:System.Windows.DataTemplate> 암시적 키도 있습니다. 에 대 한 암시적 키는 <xref:System.Windows.DataTemplate> 는 <xref:System.Windows.DataTemplate.DataType%2A> 속성 값입니다. <xref:System.Windows.DataTemplate.DataType%2A> 인수를 명시적으로 사용 하는 대신 형식의 이름으로 지정할 수도 있습니다 [{X:type...} ](../../../../docs/framework/xaml-services/x-type-markup-extension.md). 자세한 내용은 참조 [데이터 템플릿 개요](../../../../docs/framework/wpf/data/data-templating-overview.md)합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  <xref:System.Windows.ResourceDictionary>  

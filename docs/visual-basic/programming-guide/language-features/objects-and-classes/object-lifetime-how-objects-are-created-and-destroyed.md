@@ -1,13 +1,6 @@
 ---
 title: '개체 수명: 개체가 만들어지고 제거되는 방법(Visual Basic)'
-ms.custom: ''
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.Constructor
 helpviewer_keywords:
@@ -29,14 +22,11 @@ helpviewer_keywords:
 - Sub Dispose destructor
 - garbage collection [Visual Basic], Visual Basic
 ms.assetid: f1ee8458-b156-44e0-9a8a-5dd171648cd8
-caps.latest.revision: 22
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: d93d0c94bdbeb93e0527ef6b5c6248b3b580599f
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 441fe91c8c884e59c6399d57e7e55bf6591cb1bb
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="object-lifetime-how-objects-are-created-and-destroyed-visual-basic"></a>개체 수명: 개체가 만들어지고 제거되는 방법(Visual Basic)
 `New` 키워드를 사용하여 클래스의 인스턴스인 개체를 만듭니다. 새 개체를 사용하기 전에 초기화 작업을 수행해야 하는 경우가 많습니다. 일반적인 초기화 작업으로는 파일 열기, 데이터베이스에 연결, 레지스트리 키의 값 읽기 등이 포함됩니다. Visual Basic 라는 프로시저를 사용 하 여 새 개체를 초기화 하는 제어 *생성자* (초기화 제어할 수 있는 특별 한 메서드).  

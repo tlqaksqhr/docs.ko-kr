@@ -1,28 +1,19 @@
 ---
-title: "강력한 이름 어셈블리 키 파일 &#39;에서 만들 수 없습니다. &lt;filename&gt;&#39;: &lt;오류&gt;"
+title: '강력한 이름 어셈블리 키 파일에서 만들 수 없습니다 &#39; &lt;filename&gt;&#39;: &lt;오류&gt;'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vbc31026
 - bc31026
 helpviewer_keywords:
 - BC31026
 ms.assetid: 5dd09785-bc10-4ae7-ba24-b795057aca31
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: e6f71266f92c6ddb05c217736cdb59c5ce968a4a
-ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
+ms.openlocfilehash: 9b7a585dbe6b1da5e0f3b17e61e6407b52439601
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="unable-to-create-strong-named-assembly-from-key-file-39ltfilenamegt39-lterrorgt"></a>강력한 이름 어셈블리 키 파일 &#39;에서 만들 수 없습니다. &lt;filename&gt;&#39;: &lt;오류&gt;
+# <a name="unable-to-create-strong-named-assembly-from-key-file-39ltfilenamegt39-lterrorgt"></a>강력한 이름 어셈블리 키 파일에서 만들 수 없습니다 &#39; &lt;filename&gt;&#39;: &lt;오류&gt;
 지정된 된 키 파일에서 강력한 이름의 어셈블리를 만들 수 없습니다.  
   
  **오류 ID:** BC31026  

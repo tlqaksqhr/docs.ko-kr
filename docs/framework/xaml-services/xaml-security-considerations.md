@@ -1,27 +1,15 @@
 ---
-title: "XAML 보안 고려 사항"
-ms.custom: 
+title: XAML 보안 고려 사항
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - security [XAML Services], .NET XAML services
 - XAML security [XAML Services]
 ms.assetid: 544296d4-f38e-4498-af49-c9f4dad28964
-caps.latest.revision: "7"
-author: wadepickett
-ms.author: wpickett
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: b58719f36cd911497c5cd892610330688221e7ef
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ef47e7e370082a2050406710edcb62d0967df8ef
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="xaml-security-considerations"></a>XAML 보안 고려 사항
 이 항목에서는 XAML 및.NET Framework XAML 서비스 API를 사용 하는 경우 응용 프로그램의 보안에 대 한 모범 사례를 설명 합니다.  
@@ -29,7 +17,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="untrusted-xaml-in-applications"></a>응용 프로그램에서 신뢰할 수 없는 XAML  
  가장 일반적인 의미에서 신뢰할 수 없는 XAML은 응용 프로그램 포함 또는 생성 되지 않은 모든 XAML 소스입니다.  
   
- 컴파일 또는으로 저장 하는 XAML을 `resx`-신뢰할 수 있는 서명된 된 어셈블리 내의 형식 리소스를 기본적으로 신뢰할 수 없습니다. 어셈블리를 전체적으로 신뢰할 수 만큼 XAML 신뢰할 수 있습니다. 대부분의 경우에서 관심이 스트림 또는 다른 IO에서 로드 하는 XAML 소스는 느슨한 XAML의 신뢰 측면에. 느슨한 XAML는 특정 구성 요소 또는 응용 프로그램 모델을 배포 및 패키징 인프라의 기능 않습니다. 그러나 어셈블리는 느슨한 XAML을 로드 하는 동작을 구현할 수 있습니다.  
+ 컴파일 또는으로 저장 하는 XAML을 `resx`-신뢰할 수 있는 서명된 된 어셈블리 내의 형식 리소스를 기본적으로 신뢰할 수 없습니다. 어셈블리를 전체적으로 신뢰할 수 만큼 XAML 신뢰할 수 있습니다. 대부분의 경우에서 관심이 스트림 또는 기타 I/O에서 로드 하는 XAML 소스는 느슨한 XAML의 신뢰 측면에. 느슨한 XAML는 특정 구성 요소 또는 응용 프로그램 모델을 배포 및 패키징 인프라의 기능 않습니다. 그러나 어셈블리는 느슨한 XAML을 로드 하는 동작을 구현할 수 있습니다.  
   
  신뢰할 수 없는 XAML에 대 한 이지만 간주 해야 일반적으로 동일한을 마치 신뢰할 수 없는 코드입니다. 샌드박스를 적용 하거나 다른 기능을 사용 하 여 신뢰할 수 없는 XAML 신뢰할 수 있는 코드에 액세스 하지 않도록 설정 합니다.  
   

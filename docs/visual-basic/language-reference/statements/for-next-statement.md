@@ -1,11 +1,6 @@
 ---
-title: "For...Next 문(Visual Basic)"
+title: For...Next 문(Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.Step
 - vb.Next
@@ -28,14 +23,11 @@ helpviewer_keywords:
 - Exit statement [Visual Basic], For...Next statements
 - For statement [Visual Basic]
 ms.assetid: f5fc0d51-67ce-4c36-9f09-31c9a91c94e9
-caps.latest.revision: "64"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 8a50f44a167952c735c6ed2830ca87105413401b
-ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
+ms.openlocfilehash: 8c54189499b7d5b52cf93b4a0ae6cc47356bf57e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="fornext-statement-visual-basic"></a>For...Next 문(Visual Basic)
 문 그룹을 지정한 횟수 만큼을 반복합니다.  
@@ -103,7 +95,7 @@ Next [ counter ]
   
  개수에 관계 없이 넣을 수 `Exit For` 의 문에서 `For`...`Next` 루프입니다. 사용할 경우 내에 중첩 `For`중...`Next` 루프, `Exit For` 가장 안쪽 루프를 끝내 고 중첩 다음으로 높은 수준으로 제어를 전달 합니다.  
   
- `Exit For`일부 조건 평가 후에 주로 사용 됩니다 (예를 들어 한 `If`... `Then`... `Else` 구조). 사용 하려는 경우도 `Exit For` 다음 조건에 대 한 합니다.  
+ `Exit For` 일부 조건 평가 후에 주로 사용 됩니다 (예를 들어 한 `If`... `Then`... `Else` 구조). 사용 하려는 경우도 `Exit For` 다음 조건에 대 한 합니다.  
   
 -   계속 반복은 불필요 하거나 불가능 합니다. 잘못 된 값 이나 종료 요청에는이 조건을 만들 수 있습니다.  
   
@@ -132,7 +124,7 @@ Next [ counter ]
   
  기본값 `step` 는 1입니다.  
   
-###  <a name="BKMK_Counter"></a>카운터 인수  
+###  <a name="BKMK_Counter"></a> 카운터 인수  
  다음 표에서 여부 `counter` 전체 범위가 지정 된 새 지역 변수를 정의 `For…Next` 루프입니다. 이 결정에 따라 다릅니다. `datatype` 있는지 여부와 `counter` 이미 정의 되었습니다.  
   
 |`datatype` 존재?|`counter` 이미 정의 되어 있습니까?|결과 (여부 `counter` 전체 범위가 지정 된 새 지역 변수를 정의 `For...Next` 루프)|  
@@ -164,17 +156,17 @@ Next [ counter ]
   
  `start`, `end`, 및 `step` 식의 형식으로 확대 되는 모든 데이터 형식으로 평가할 수 `counter`합니다. 에 대 한 사용자 정의 형식을 사용 하면 `counter`를 정의 해야 할 수 있습니다는 `CType` 변환 연산자의 종류를 `start`, `end`, 또는 `step` 유형과 `counter`합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 예제에서는 제네릭 목록에서 모든 요소를 제거합니다. 대신는 [각각에 대해... 다음 문](../../../visual-basic/language-reference/statements/for-each-next-statement.md), 예제에 나와 있는 `For`... `Next` 내림차순 반복 하는 문입니다. 이 예제에서는 때문에이 기술을 사용 하 여는 `removeAt` 메서드 더 낮은 인덱스 값을 제거 하는 요소 뒤 요소를 사용 하면 됩니다.  
   
  [!code-vb[VbVbalrStatements#114](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/for-next-statement_5.vb)]  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 예제에서는 사용 하 여 선언 하는 열거형 반복는 [Enum 문](../../../visual-basic/language-reference/statements/enum-statement.md)합니다.  
   
  [!code-vb[VbVbalrStatements#116](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/for-next-statement_6.vb)]  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 예제에서는 문 매개 변수 사용에 대 한 연산자 오버 로드가 있는 클래스는 `+`, `-`, `>=`, 및 `<=` 연산자입니다.  
   
  [!code-vb[VbVbalrStatements#117](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/for-next-statement_7.vb)]  

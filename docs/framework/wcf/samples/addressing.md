@@ -1,24 +1,12 @@
 ---
-title: "주소 지정"
-ms.custom: 
+title: 주소 지정
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: d438e6f2-d0f3-43aa-b259-b51b5bda2e64
-caps.latest.revision: "21"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 21339d071ac26f073d0495814744535bd84f3a22
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 94ac903afb27f1b87f0ca8bf05cb891d0d9ee34c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="addressing"></a>주소 지정
 Addressing 샘플에서는 끝점 주소의 다양한 측면과 기능을 보여 줍니다. 이 샘플에 따라는 [시작](../../../../docs/framework/wcf/samples/getting-started-sample.md)합니다. 이 샘플에서 서비스는 자체 호스트됩니다. 서비스와 클라이언트는 모두 콘솔 응용 프로그램입니다. 서비스는 상대 및 절대 끝점 주소를 조합하여 여러 끝점을 정의합니다.  
@@ -51,7 +39,7 @@ Addressing 샘플에서는 끝점 주소의 다양한 측면과 기능을 보여
           contract="Microsoft.ServiceModel.Samples.ICalculator" />  
 ```  
   
- 이 경우 상대 주소가 비어 있으므로("") 끝점 주소는 기본 주소와 동일합니다. 실제 끝점 주소는 http://localhost:8000/servicemodelsamples/service입니다.  
+ 이 경우 상대 주소가 비어 있으므로("") 끝점 주소는 기본 주소와 동일합니다. 실제 끝점 주소는 http://localhost:8000/servicemodelsamples/service합니다.  
   
  두 번째 끝점 정의도 다음 샘플 구성에서처럼 상대 주소를 지정합니다.  
   
@@ -64,7 +52,7 @@ Addressing 샘플에서는 끝점 주소의 다양한 측면과 기능을 보여
           contract="Microsoft.ServiceModel.Samples.ICalculator" />  
 ```  
   
- 상대 주소 "test"가 기본 주소에 추가됩니다. 실제 끝점 주소는 http://localhost:8000/servicemodelsamples/service/test입니다.  
+ 상대 주소 "test"가 기본 주소에 추가됩니다. 실제 끝점 주소는 http://localhost:8000/servicemodelsamples/service/test합니다.  
   
  세 번째 끝점 정의는 다음 샘플 구성에서처럼 절대 주소를 지정합니다.  
   
@@ -74,7 +62,7 @@ Addressing 샘플에서는 끝점 주소의 다양한 측면과 기능을 보여
           contract="Microsoft.ServiceModel.Samples.ICalculator" />  
 ```  
   
- 주소에서 기본 주소는 아무런 역할도 하지 않습니다. 실제 끝점 주소는 http://localhost:8001/hello/servicemodelsamples입니다.  
+ 주소에서 기본 주소는 아무런 역할도 하지 않습니다. 실제 끝점 주소는 http://localhost:8001/hello/servicemodelsamples합니다.  
   
  네 번째 끝점 주소는 절대 주소 및 다른 전송(TCP)을 지정합니다. 주소에서 기본 주소는 아무런 역할도 하지 않습니다. 실제 끝점 주소는 net.tcp://localhost:9000/servicemodelsamples/service입니다.  
   
@@ -143,7 +131,7 @@ Press <ENTER> to terminate client.
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  이 디렉터리가 없으면 [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4(.NET Framework 4용 WCF(Windows Communication Foundation) 및 WF(Windows Workflow Foundation) 샘플)](http://go.microsoft.com/fwlink/?LinkId=150780) 로 이동하여 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 및 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플을 모두 다운로드하세요. 이 샘플은 다음 디렉터리에 있습니다.  
+>  이 디렉터리가로 이동 [Windows Communication Foundation (WCF) 및.NET Framework 4에 대 한 Windows WF (Workflow Foundation) 샘플](http://go.microsoft.com/fwlink/?LinkId=150780) 모든 Windows Communication Foundation (WCF)를 다운로드 하 고 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플. 이 샘플은 다음 디렉터리에 있습니다.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\Addressing`  
   

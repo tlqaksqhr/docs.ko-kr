@@ -1,33 +1,21 @@
 ---
-title: "방법: 바인딩 유효성 검사 구현"
-ms.custom: 
+title: '방법: 바인딩 유효성 검사 구현'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - validation of binding [WPF]
 - data binding [WPF], validation of binding
 - binding [WPF], validation of
 ms.assetid: eb98b33d-9866-49ae-b981-bc5ff20d607a
-caps.latest.revision: "19"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 2d57fb099fa364d34b7df5c5fce792eb42079a31
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 347e38ba036e5c1a716a9edb75572c1a49f99631
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-implement-binding-validation"></a>방법: 바인딩 유효성 검사 구현
 사용 하는 방법을 보여 주는이 예제는 <xref:System.Windows.Controls.Validation.ErrorTemplate%2A> 및 잘못 된 값을 입력 한 경우 사용자에 게 시각적 피드백을 제공 하는 스타일 트리거는 사용자 지정 유효성 검사 규칙에 기반 합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  텍스트의 콘텐츠는 <xref:System.Windows.Controls.TextBox> 에 바인딩된 다음 예제에서는 `Age` 속성 (int) 형식의 명명 된 바인딩 소스 개체의 `ods`합니다. 바인딩이 `AgeRangeRule`이라는 유효성 검사 규칙을 사용하도록 설정되어 있으므로 숫자가 아닌 문자 또는 21보다 작거나 130보다 큰 값을 입력하면 빨간색 느낌표가 텍스트 상자 옆에 나타나고 텍스트 상자 위로 마우스를 이동하면 오류 메시지가 포함된 도구 설명이 나타납니다.  
   
  [!code-xaml[BindValidation#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/BindValidation/CSharp/Window1.xaml#2)]  

@@ -1,31 +1,20 @@
 ---
 title: 봉인
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - limiting extensibility
 - classes [.NET Framework], sealing
 - preventing customization
 - sealed classes
 ms.assetid: cc42267f-bb7a-427a-845e-df97408528d4
-caps.latest.revision: 10
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 8a9ea7fd4f5df08631231db08ba7943a9c131012
-ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
+ms.openlocfilehash: 3f7202e10e41b9f114f42a4502ee2e6694bf3821
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="sealing"></a>봉인
 개체 지향 프레임 워크의 기능 중 하나는 개발자가 확장 하 고 프레임 워크 디자이너에서 예기치 않은 방식으로 사용자 지정할 수 있습니다. 이 기능과 확장 가능한 디자인의 위험 합니다. 사용자 프레임 워크를 디자인할 때 즉,이 필요한 경우 확장성을 위해 신중 하 게 디자인 하 고는 것은 위험 확장성을 제한할 매우 중요 합니다.  

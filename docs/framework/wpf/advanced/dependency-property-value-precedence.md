@@ -1,36 +1,24 @@
 ---
-title: "종속성 속성 값 우선 순위"
-ms.custom: 
+title: 종속성 속성 값 우선 순위
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - dependency properties [WPF], classes as owners
 - dependency properties [WPF], metadata
 - classes [WPF], owners of dependency properties
 - metadata [WPF], dependency properties
 ms.assetid: 1fbada8e-4867-4ed1-8d97-62c07dad7ebc
-caps.latest.revision: "27"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: d95cd0545fa4800f159f4e5e0f661cf7bddc6548
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 7719c39c82b69421477cadf9ae5caf9f9f55b457
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="dependency-property-value-precedence"></a>종속성 속성 값 우선 순위
 <a name="introduction"></a> 이 항목에서는 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 속성 시스템의 작업 방식이 종속성 속성 값에 영향을 주는 방식을 설명하고 속성 시스템의 일면이 속성의 유효 값이 적용되는 우선 순위에 관해 설명합니다.  
     
   
 <a name="prerequisites"></a>   
-## <a name="prerequisites"></a>필수 구성 요소  
+## <a name="prerequisites"></a>전제 조건  
  이 항목에서는 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 클래스에서 기존 종속성 속성의 이용자 관점에서 종속성 속성을 이해하고 [종속성 속성 개요](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)를 읽었다고 가정합니다. 이 항목의 예제를 따르려면 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]을 이해하고 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 응용 프로그램을 작성하는 방법도 알아야 합니다.  
   
 <a name="intro"></a>   
@@ -117,7 +105,7 @@ ms.lasthandoff: 12/22/2017
   
 <a name="setcurrentvalue"></a>   
 ## <a name="setcurrentvalue"></a>SetCurrentValue  
- <xref:System.Windows.DependencyObject.SetCurrentValue%2A> 메서드는 속성을 설정 하는 다른 방법은 하지만 우선 순위 않습니다. 대신, <xref:System.Windows.DependencyObject.SetCurrentValue%2A> 이전 값의 소스를 덮어쓰지 않고 속성 값을 변경할 수 있습니다. 사용할 수 있습니다 <xref:System.Windows.DependencyObject.SetCurrentValue%2A> 때마다 해당 값의 로컬 값 우선 순위를 부여 하지 않고 값을 설정 하려면 해당 합니다. 예를 들어 속성 트리거에 의해 설정 되 고 다음을 통해 다른 값이 지정 <xref:System.Windows.DependencyObject.SetCurrentValue%2A>, 여전히 유지 하므로 속성 시스템 트리거 및 작업이 발생 하는 경우 속성이 변경 됩니다. <xref:System.Windows.DependencyObject.SetCurrentValue%2A>우선 순위가 높은 소스 지정 하지 않고 속성의 값을 변경할 수 있습니다. 마찬가지로, 사용할 수 있습니다 <xref:System.Windows.DependencyObject.SetCurrentValue%2A> 바인딩을 덮어쓰지 않고 속성의 값을 변경할 수 있습니다.  
+ <xref:System.Windows.DependencyObject.SetCurrentValue%2A> 메서드는 속성을 설정 하는 다른 방법은 하지만 우선 순위 않습니다. 대신, <xref:System.Windows.DependencyObject.SetCurrentValue%2A> 이전 값의 소스를 덮어쓰지 않고 속성 값을 변경할 수 있습니다. 사용할 수 있습니다 <xref:System.Windows.DependencyObject.SetCurrentValue%2A> 때마다 해당 값의 로컬 값 우선 순위를 부여 하지 않고 값을 설정 하려면 해당 합니다. 예를 들어 속성 트리거에 의해 설정 되 고 다음을 통해 다른 값이 지정 <xref:System.Windows.DependencyObject.SetCurrentValue%2A>, 여전히 유지 하므로 속성 시스템 트리거 및 작업이 발생 하는 경우 속성이 변경 됩니다. <xref:System.Windows.DependencyObject.SetCurrentValue%2A> 우선 순위가 높은 소스 지정 하지 않고 속성의 값을 변경할 수 있습니다. 마찬가지로, 사용할 수 있습니다 <xref:System.Windows.DependencyObject.SetCurrentValue%2A> 바인딩을 덮어쓰지 않고 속성의 값을 변경할 수 있습니다.  
   
 <a name="animations"></a>   
 ## <a name="coercion-animations-and-base-value"></a>강제 변환, 애니메이션 및 기준 값  

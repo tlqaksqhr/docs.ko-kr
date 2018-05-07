@@ -1,13 +1,6 @@
 ---
-title: "방법: Grid를 사용하여 표준 UI 대화 상자 빌드"
-ms.custom: 
+title: '방법: Grid를 사용하여 표준 UI 대화 상자 빌드'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -15,21 +8,16 @@ helpviewer_keywords:
 - dialog boxes [WPF], creating
 - Grid control [WPF], creating [WPF], dialog box
 ms.assetid: d6ac3d51-844b-4d29-96d8-81a696a7b960
-caps.latest.revision: "14"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 69dba9b76f823e1779c4555521552b4a423c844c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: d0b24e320c2a341b069e1c9c3e8b6d5e93076733
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-build-a-standard-ui-dialog-box-by-using-grid"></a>방법: Grid를 사용하여 표준 UI 대화 상자 빌드
 이 예제에서는 한 표준을 만들 [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] 대화 상자를 사용 하 여는 <xref:System.Windows.Controls.Grid> 요소입니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 예제에서는 같은 대화 상자가 **실행** 대화 상자에는 [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] 운영 체제입니다.  
   
  이 예에서는 만듭니다는 <xref:System.Windows.Controls.Grid> 사용 하 여는 <xref:System.Windows.Controls.ColumnDefinition> 및 <xref:System.Windows.Controls.RowDefinition> 5 개의 열과 4 개의 행을 정의 하는 클래스입니다.  

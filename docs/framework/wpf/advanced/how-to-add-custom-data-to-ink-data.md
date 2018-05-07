@@ -1,27 +1,15 @@
 ---
-title: "방법: 잉크 데이터에 사용자 지정 데이터 추가"
-ms.custom: 
+title: '방법: 잉크 데이터에 사용자 지정 데이터 추가'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - ink data [WPF], adding custom data
 - InkCanvas [WPF], displaying
 ms.assetid: f02aac6f-3436-4f7c-b6ea-0452cba5332c
-caps.latest.revision: "5"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 2ca44d6a2c42219f7aec76f8007010c24c610138
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 40d883f3d3e1d504c8757c31325aa72a03da37e0
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-add-custom-data-to-ink-data"></a>방법: 잉크 데이터에 사용자 지정 데이터 추가
 serialize 된 잉크 형식 (ISF)로 저장할 때 저장 될 잉크를 사용자 지정 데이터를 추가할 수 있습니다.  사용자 지정 데이터를 저장할 수는 <xref:System.Windows.Ink.DrawingAttributes>, <xref:System.Windows.Ink.StrokeCollection>, 또는 <xref:System.Windows.Ink.Stroke>합니다.  3 개의 개체에 사용자 지정 데이터를 저장할 수 없게 하면 데이터를 저장 하는 가장 좋은 위치를 결정할 수 있습니다.  세 클래스 모두 유사한 메서드를 사용 하 여 저장 하 고 사용자 지정 데이터에 액세스 합니다.  
@@ -82,7 +70,7 @@ serialize 된 잉크 형식 (ISF)로 저장할 때 저장 될 잉크를 사용�
   
 -   <xref:System.UInt64>[]  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 예제에서는 추가 하 고 사용자 지정 데이터를 검색 하는 <xref:System.Windows.Ink.StrokeCollection>합니다.  
   
  [!code-csharp[HowToAddCustomDataToInk#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/HowToAddCustomDataToInk/CSharp/Window1.xaml.cs#1)]  

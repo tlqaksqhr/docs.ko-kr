@@ -1,28 +1,19 @@
 ---
-title: Namespace 또는 프로젝트 수준의 Imports &#39;에 지정 된 형식 &lt;qualifiedelementname&gt;&#39; 대상이 &#39; t public 멤버가 또는 형식을 찾을 수 없음
+title: 프로젝트 수준의 Imports에 지정 된 Namespace 또는 형식을 &#39; &lt;qualifiedelementname&gt; &#39; 대상이&#39;t public 멤버가 또는 형식을 찾을 수 없음
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vbc40057
 - bc40057
 helpviewer_keywords:
 - BC40057
 ms.assetid: 4ae3506e-2ebe-4ff3-995d-14ac60db5e9f
-caps.latest.revision: 10
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 0d0a164562524af239b3b130f681dbc6eff23814
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: d6d0c931262d892ec3e65888a76f25218b23d868
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="namespace-or-type-specified-in-the-project-level-imports-39ltqualifiedelementnamegt39-doesn39t-contain-any-public-member-or-cannot-be-found"></a>Namespace 또는 프로젝트 수준의 Imports &#39;에 지정 된 형식 &lt;qualifiedelementname&gt;&#39; 대상이 &#39; t public 멤버가 또는 형식을 찾을 수 없음
+# <a name="namespace-or-type-specified-in-the-project-level-imports-39ltqualifiedelementnamegt39-doesn39t-contain-any-public-member-or-cannot-be-found"></a>프로젝트 수준의 Imports에 지정 된 Namespace 또는 형식을 &#39; &lt;qualifiedelementname&gt; &#39; 대상이&#39;t public 멤버가 또는 형식을 찾을 수 없음
 프로젝트 수준의 Imports'에 지정 된 Namespace 또는 형식을\<qualifiedelementname >' public 멤버가 없거나 찾을 수 없습니다. 해당 네임 스페이스 또는 형식 정의 되어 있고 하나 이상의 public 멤버를 포함 합니다. 별칭 이름에는 다른 별칭 포함 되어 있지 않은지 확인 하십시오.  
   
  프로젝트의 가져오기 속성 지정 하거나 찾을 수 없거나 정의 하지 않는 포함 하는 요소 `Public` 멤버입니다.  

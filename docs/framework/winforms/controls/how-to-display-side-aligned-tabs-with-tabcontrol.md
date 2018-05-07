@@ -1,13 +1,6 @@
 ---
-title: "방법: TabControl을 사용하여 세로로 정렬된 탭 표시"
-ms.custom: 
+title: '방법: TabControl을 사용하여 세로로 정렬된 탭 표시'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -16,16 +9,11 @@ helpviewer_keywords:
 - tabs [Windows Forms], displaying side-aligned tabs
 - TabControl control [Windows Forms], displaying side-aligned tabs
 ms.assetid: 110d5abd-3ae3-4ded-95bf-778aaac798a0
-caps.latest.revision: "10"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 0dcbf2cc1aee1333ad5062f2a467adfd0dbe00c3
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: e145547ba4c8648a765e9507b7f35e50cb15fd82
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-display-side-aligned-tabs-with-tabcontrol"></a>방법: TabControl을 사용하여 세로로 정렬된 탭 표시
 <xref:System.Windows.Forms.TabControl>의 <xref:System.Windows.Forms.TabControl.Alignment%2A> 속성은 가로(컨트롤 위쪽 또는 아래쪽에 가로로)가 아니라 세로로(컨트롤 왼쪽 또는 오른쪽 가장자리에 세로로) 탭 표시를 지원합니다. 시각적 스타일을 사용하는 경우 <xref:System.Windows.Forms.TabPage> 개체의 <xref:System.Windows.Forms.TabPage.Text%2A> 속성이 탭에 표시되지 않으므로 기본적으로 이 세로 표시를 사용하면 사용자 환경이 저하됩니다. 탭 내의 텍스트 방향을 제어하는 직접적인 방법도 없습니다. <xref:System.Windows.Forms.TabControl>에서 소유자 그리기를 사용하여 이 환경을 개선할 수 있습니다.  

@@ -1,29 +1,17 @@
 ---
-title: "그래픽 프로그래밍 시작"
-ms.custom: 
+title: 그래픽 프로그래밍 시작
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - graphics [Windows Forms], getting started
 - getting started [Windows Forms], graphics programming
 - examples [Windows Forms], graphics
 - drawing
 ms.assetid: eb0f6d6f-9e52-4167-9592-ff4b82fb5869
-caps.latest.revision: "11"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 15bcd9295ba825b156668152b3f1addf538aa884
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 61080643d5cacde60f5fbff35d815977a977cb65
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="getting-started-with-graphics-programming"></a>그래픽 프로그래밍 시작
 이 섹션에서는 사용 하 여 시작 하는 방법을 보여 줍니다. [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] Windows Forms 응용 프로그램에서입니다. 다음 항목에서는 여러 완료 하는 방법을 보여 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 그리고 도형 및 텍스트를 채우는 등의 작업입니다.  

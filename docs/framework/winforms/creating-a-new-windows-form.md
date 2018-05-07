@@ -1,27 +1,15 @@
 ---
-title: "새 Windows Form 만들기"
-ms.custom: 
+title: 새 Windows Form 만들기
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - Windows Forms, getting started
 - Windows Forms, creating a new form
 ms.assetid: c725559c-803e-4725-80fa-96aba93de29a
-caps.latest.revision: "10"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: e5f2769921241216d60c3ed1bb25edcf238830d7
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ddceec86938ef5f500c38eb90004dc1f9d11b122
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="creating-a-new-windows-form"></a>새 Windows Form 만들기
 이 항목에는 첫 번째 Windows Forms 응용 프로그램을 만드는 방법을 설명하는 항목의 링크가 포함되어 있습니다. 또한 이 섹션의 항목에서는 Windows Forms 응용 프로그램을 만들 때 알고 있어야 하는 일부 기본 용어와 지침을 소개합니다. Windows Forms 응용 프로그램에 대 한 자세한 내용을 보려면, 이벤트 및 이벤트 처리 및 사용자 입력을 처리 하는 방법에 사용할 수는 컨트롤에 관련된 항목 목록을 참조 하십시오.  

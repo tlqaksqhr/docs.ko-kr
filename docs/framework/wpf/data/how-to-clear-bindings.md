@@ -1,13 +1,6 @@
 ---
-title: "방법: 바인딩 지우기"
-ms.custom: 
+title: '방법: 바인딩 지우기'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -16,21 +9,16 @@ helpviewer_keywords:
 - clearing bindings [WPF]
 - data binding [WPF], clearing bindings
 ms.assetid: 73962a93-32a9-4bcd-9240-bcfbb239093a
-caps.latest.revision: "12"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: af45d504eb4e7d45808f787925a90c8e0ed19476
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: f66477fc857a9e7a065e01b8cddf43789042b59c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-clear-bindings"></a>방법: 바인딩 지우기
 이 예에서는 개체에서 바인딩을 지우는 방법을 보여줍니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  개체에서 개별 속성에서 바인딩을 지우려면 호출 <xref:System.Windows.Data.BindingOperations.ClearBinding%2A> 다음 예제와 같이 합니다. 다음 예제에서 바인딩을 제거는 <xref:System.Windows.Controls.TextBlock.TextProperty> 의 *mytext*, <xref:System.Windows.Controls.TextBlock> 개체입니다.  
   
  [!code-csharp[CodeOnlyBinding#ClearBinding](../../../../samples/snippets/csharp/VS_Snippets_Wpf/CodeOnlyBinding/CSharp/binding.cs#clearbinding)]

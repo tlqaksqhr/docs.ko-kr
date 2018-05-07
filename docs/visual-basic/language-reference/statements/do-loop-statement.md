@@ -1,17 +1,12 @@
 ---
-title: "Do...Loop 문(Visual Basic)"
+title: Do...Loop 문(Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.Do
 - vb.Loop
 - vb.Until
 helpviewer_keywords:
-- "conditional statements [Visual Basic], Do�Loop"
+- conditional statements [Visual Basic], Do�Loop
 - while statement [Visual Basic], Do...Loop
 - execution [Visual Basic], conditional
 - Do loops
@@ -20,19 +15,16 @@ helpviewer_keywords:
 - instructions, repeating
 - Do statement [Visual Basic]
 - Exit statement [Visual Basic], in Do...Loop statements
-- "loop structures [Visual Basic], Do�Loop statements"
+- loop structures [Visual Basic], Do�Loop statements
 - do-while statements [Visual Basic]
 - loops, exiting
 - Loop keyword [Visual Basic], Do...Loop statement
 ms.assetid: 892f9096-b3e2-4aee-834d-83bc4e2c379d
-caps.latest.revision: "37"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 79d25dce963f383a84b56ce2c9b600fc2d5a7937
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: e12cdc1ae405b877d4d27d1947c98dcb51938ba7
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="doloop-statement-visual-basic"></a>Do...Loop 문(Visual Basic)
 동안 문 블록을 반복 하는 `Boolean` 조건이 `True` 조건이 있을 때까지 또는 `True`합니다.  
@@ -61,14 +53,14 @@ Loop { While | Until } condition
   
 |용어|정의|  
 |---|---|  
-|`Do`|필수 요소. 시작의 정의 `Do` 루프입니다.|  
+|`Do`|필수. 시작의 정의 `Do` 루프입니다.|  
 |`While`|`Until`를 사용하는 경우를 제외하고는 필수입니다. 반복 될 때까지 루프 `condition` 은 `False`합니다.|  
 |`Until`|`While`를 사용하는 경우를 제외하고는 필수입니다. 반복 될 때까지 루프 `condition` 은 `True`합니다.|  
-|`condition`|선택 사항입니다. `Boolean`식입니다. 경우 `condition` 은 `Nothing`, Visual Basic로 처리 `False`합니다.|  
+|`condition`|선택 사항입니다. `Boolean` 식입니다. 경우 `condition` 은 `Nothing`, Visual Basic로 처리 `False`합니다.|  
 |`statements`|선택 사항입니다. 동안 또는 하기 전 까지는 반복 되는 하나 이상의 문을 `condition` 은 `True`합니다.|  
 |`Continue Do`|선택 사항입니다. 다음 반복으로 제어를 전달는 `Do` 루프입니다.|  
 |`Exit Do`|선택 사항입니다. 밖으로 제어를 전송에서 `Do` 루프입니다.|  
-|`Loop`|필수 요소. 정의 종료는 `Do` 루프입니다.|  
+|`Loop`|필수. 정의 종료는 `Do` 루프입니다.|  
   
 ## <a name="remarks"></a>설명  
  사용 하 여 한 `Do...Loop` 조건이 충족 될 때까지 여러 번 무한히 문 집합을 반복할 때 구성 합니다. 문을 횟수 만큼 반복 하려는 경우는 [에 대 한... 다음 문](../../../visual-basic/language-reference/statements/for-next-statement.md) 일반적으로 것이 좋습니다.  
@@ -85,9 +77,9 @@ Loop { While | Until } condition
 >  `Do...Loop` 구조 보다 더 많은 유연성을 제공 된 [동안... End While 문](../../../visual-basic/language-reference/statements/while-end-while-statement.md) 하면 루프를 끝내 여부를 결정할 수 있기 때문에 때 `condition` 중지 되 `True` 되거나 먼저 `True`합니다. 테스트할 수도 있습니다 `condition` 시작 부분이 나 루프의 끝에 있습니다.  
   
 ## <a name="exit-do"></a>종료 안 함  
- [Exit Do](../../../visual-basic/language-reference/statements/exit-statement.md) 문을 종료 하는 다른 방법으로 제공할 수는 `Do…Loop`합니다. `Exit Do`뒤에 오는 문으로 제어를 즉시 전달는 `Loop` 문.  
+ [Exit Do](../../../visual-basic/language-reference/statements/exit-statement.md) 문을 종료 하는 다른 방법으로 제공할 수는 `Do…Loop`합니다. `Exit Do` 뒤에 오는 문으로 제어를 즉시 전달는 `Loop` 문.  
   
- `Exit Do`일부 조건이 계산에 사용 예는 대개는 `If...Then...Else` 구조입니다. 불필요 하거나 잘못 된 값 이나 종료 요청 같이 계속 반복할 수 있게 해 주는 조건을 발견 하면 루프를 끝낼 할 수 있습니다. 용도 중 하나 `Exit Do` 를 일으킬 수 있는 조건에 대해 테스트 하는 *무한 루프*, 상태가 대형 또는 무한도 가능 여러 번 실행 될 수 있는 합니다. 사용할 수 있습니다 `Exit Do` 루프를 이스케이프 합니다.  
+ `Exit Do` 일부 조건이 계산에 사용 예는 대개는 `If...Then...Else` 구조입니다. 불필요 하거나 잘못 된 값 이나 종료 요청 같이 계속 반복할 수 있게 해 주는 조건을 발견 하면 루프를 끝낼 할 수 있습니다. 용도 중 하나 `Exit Do` 를 일으킬 수 있는 조건에 대해 테스트 하는 *무한 루프*, 상태가 대형 또는 무한도 가능 여러 번 실행 될 수 있는 합니다. 사용할 수 있습니다 `Exit Do` 루프를 이스케이프 합니다.  
   
  개수에 관계 없이 포함할 수 있습니다 `Exit Do` 의 아무 곳 이나 문에서 `Do…Loop`합니다.  
   

@@ -1,22 +1,12 @@
 ---
-title: "(Visual Basic) 순수 함수로 리팩터링"
-ms.custom: 
+title: (Visual Basic) 순수 함수로 리팩터링
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 99e7d27b-a3ff-4577-bdb2-5a8278d6d7af
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: d0a1b8d314cf1403ef5065e5432f7acd15ebb440
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 207b77ff50cd2aaeede758db69b48c8f29a16ab1
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="refactoring-into-pure-functions-visual-basic"></a>(Visual Basic) 순수 함수로 리팩터링
 순수 함수 변환의 중요한 측면은 순수 함수를 사용하여 코드를 리팩터링하는 방법을 습득하는 것입니다.  

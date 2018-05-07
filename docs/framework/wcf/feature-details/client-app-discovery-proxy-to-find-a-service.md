@@ -1,27 +1,15 @@
 ---
-title: "방법: 검색 프록시를 사용하여 서비스를 찾는 클라이언트 응용 프로그램 구현"
-ms.custom: 
+title: '방법: 검색 프록시를 사용하여 서비스를 찾는 클라이언트 응용 프로그램 구현'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 62b41a75-cf40-4c52-a842-a5f1c70e247f
-caps.latest.revision: "12"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 920f2f85333f23d1b07b6a8ddf2a05279ee477ce
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 82b38d684d6a8de66d569c6fe09813f8ee1bea6a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-implement-a-client-application-that-uses-the-discovery-proxy-to-find-a-service"></a>방법: 검색 프록시를 사용하여 서비스를 찾는 클라이언트 응용 프로그램 구현
-이 항목은 검색 프록시를 구현하는 방법에 대해 설명하는 세 항목 중 세 번째 항목입니다. 이전 항목에서 [하는 방법: 검색 프록시에 등록 하는 검색 가능한 서비스를 구현](../../../../docs/framework/wcf/feature-details/discoverable-service-that-registers-with-the-discovery-proxy.md)를 구현 하는 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 검색 프록시에 자체 등록 하는 서비스입니다. 이 항목에서는 검색 프록시를 사용하여 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 서비스를 찾는 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 클라이언트를 만듭니다.  
+이 항목은 검색 프록시를 구현하는 방법에 대해 설명하는 세 항목 중 세 번째 항목입니다. 이전 항목에서 [하는 방법: 검색 프록시에 등록 하는 검색 가능한 서비스 구현](../../../../docs/framework/wcf/feature-details/discoverable-service-that-registers-with-the-discovery-proxy.md), 검색 프록시에 자체를 등록 하는 WCF 서비스를 구현 합니다. 이 항목에서는 검색 프록시를 사용 하 여 WCF 서비스를 검색 하는 WCF 클라이언트를 만듭니다.  
   
 ### <a name="implement-the-client"></a>클라이언트 구현  
   
@@ -114,7 +102,7 @@ ms.lasthandoff: 12/22/2017
   
  클라이언트 응용 프로그램의 구현을 완료했습니다. 계속 진행 하 [하는 방법: 검색 프록시 테스트](../../../../docs/framework/wcf/feature-details/how-to-test-the-discovery-proxy.md)합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음은 이 항목에서 사용되는 전체 코드 목록입니다.  
   
 ```  

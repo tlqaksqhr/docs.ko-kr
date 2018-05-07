@@ -1,13 +1,7 @@
 ---
 title: 삭제 패턴
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - Dispose method
 - class library design guidelines [.NET Framework], Dispose method
@@ -15,18 +9,13 @@ helpviewer_keywords:
 - customizing Dispose method name
 - Finalize method
 ms.assetid: 31a6c13b-d6a2-492b-9a9f-e5238c983bcb
-caps.latest.revision: 22
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: cb83b943a03eadd760d0080b1c9920e2c1e78cce
-ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
+ms.openlocfilehash: bdcb746ae2d8c2262b0cd0c6c9dcaababb12bd63
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="dispose-pattern"></a>삭제 패턴
 모든 프로그램 실행을 사용 하는 동안 메모리, 시스템 핸들 또는 데이터베이스 연결과 같은 하나 이상의 시스템 리소스를 획득합니다. 개발자가 직접 획득 고 사용한 후 해제 되어야 합니다 때문에 이러한 시스템 리소스를 사용할 때는 주의 해야 해야 합니다.  

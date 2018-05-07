@@ -1,25 +1,17 @@
 ---
 title: '연습: DataRepeater 컨트롤의 데이터 표시(Visual Studio)'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - DataRepeater, walkthrough
 ms.assetid: 65dcdb95-6c3e-47cc-987d-190000f71653
-caps.latest.revision: 12
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 93072bf30c8ee2a4a44c4862de0882072c298f8b
-ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
+ms.openlocfilehash: d02668303f61f6a22f99bd7c86c41c9c139a716f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="walkthrough-displaying-data-in-a-datarepeater-control-visual-studio"></a>연습: DataRepeater 컨트롤의 데이터 표시(Visual Studio)
 이 연습에서는 <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> 컨트롤의 바인딩된 데이터를 표시하는 작업을 처음부터 끝까지 보여 주는 기본 시나리오를 제공합니다.  
@@ -93,7 +85,7 @@ ms.lasthandoff: 04/10/2018
   
     -   Northwind 샘플 데이터베이스에 대한 데이터 연결이 드롭다운 목록에 표시되면 해당 연결을 클릭합니다.  
   
-         또는  
+         -또는-  
   
     -   **새 연결** 을 클릭하여 새 데이터 연결을 구성합니다. 자세한 내용은 참조 [새 연결 추가](/visualstudio/data-tools/add-new-connections)합니다.  
   

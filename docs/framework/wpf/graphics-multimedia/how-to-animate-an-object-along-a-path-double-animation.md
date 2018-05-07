@@ -1,13 +1,6 @@
 ---
-title: "방법: 경로를 따라 개체에 애니메이션 효과 주기(Double 애니메이션)"
-ms.custom: 
+title: '방법: 경로를 따라 개체에 애니메이션 효과 주기(Double 애니메이션)'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -15,21 +8,16 @@ helpviewer_keywords:
 - animation [WPF], objects along paths (double animation)
 - double animation [WPF]
 ms.assetid: 5a3c4a99-f303-42ad-a52a-e4794bb1798e
-caps.latest.revision: "12"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 60f662562422169bc7b234ed0136797294f0b39a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ebe24f060a342633a93b778d5e8030173970029c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-animate-an-object-along-a-path-double-animation"></a>방법: 경로를 따라 개체에 애니메이션 효과 주기(Double 애니메이션)
 사용 하는 방법을 보여 주는이 예제는 <xref:System.Windows.Media.Animation.DoubleAnimationUsingPath> 클래스에 정의 된 경로 따라 개체를 이동 하는 <xref:System.Windows.Media.PathGeometry>합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 예제에서는 두 개의 <xref:System.Windows.Media.Animation.DoubleAnimationUsingPath> 사각형 기하학적 경로 따라 이동 하는 개체:  
   
 -   첫 번째 <xref:System.Windows.Media.Animation.DoubleAnimationUsingPath> 애니메이션 효과 적용 된 <xref:System.Windows.Media.TranslateTransform.X%2A> 의 <xref:System.Windows.Media.TranslateTransform> 는 사각형에 적용 합니다. 이를 통해 사각형이 경로를 따라 가로로 이동하게 됩니다.  

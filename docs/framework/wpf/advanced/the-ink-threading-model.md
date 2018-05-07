@@ -1,13 +1,6 @@
 ---
-title: "잉크 스레딩 모델"
-ms.custom: 
+title: 잉크 스레딩 모델
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - application user interface thread [WPF]
 - stylus plug-in
@@ -20,16 +13,11 @@ helpviewer_keywords:
 - ink collection plug-in
 - plug-ins [WPF], for ink
 ms.assetid: c85fcad1-cb50-4431-847c-ac4145a35c89
-caps.latest.revision: "9"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: c8eb0cf9f1cbb1be688f228b7bbd10a3a3ca6ed0
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: cc0ff8a2345bd945dd2fffdfda80f00e1ab99c67
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="the-ink-threading-model"></a>잉크 스레딩 모델
 잉크 Tablet pc의 이점 중 하나는 마치을 자주 쓰는 것 처럼 일반 펜 및 용지입니다.  태블릿 펜이를 위해은 마우스 사용자 쓰기도 잉크를 렌더링 하는 보다 훨씬 더 높은 속도로 입력된 데이터를 수집 합니다.  응용 프로그램의 사용자 인터페이스 (UI) 스레드는 차단 될 수 있으므로 수집 펜 데이터 및 잉크를 렌더링 하기 위한 충분 하지 않습니다.  이 해결 하는 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 응용 프로그램 사용자가 잉크 때 두 개의 추가 스레드를 사용 하 합니다.  
@@ -72,11 +60,11 @@ ms.lasthandoff: 12/22/2017
   
  이전 다이어그램에 다음과 같은 동작이 수행이 됩니다.  
   
-1.  `StylusPlugin1`x에 대 한 값을 수정 하 고 y 합니다.  
+1.  `StylusPlugin1` x에 대 한 값을 수정 하 고 y 합니다.  
   
-2.  <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer>수정된 된 스타일러스 포인트 받아 동적 렌더링 스레드에서 렌더링 합니다.  
+2.  <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> 수정된 된 스타일러스 포인트 받아 동적 렌더링 스레드에서 렌더링 합니다.  
   
-3.  `StylusPlugin2`수정된 된 스타일러스 포인트를 받아 더욱 x에 대 한 값을 수정 하 고 y 합니다.  
+3.  `StylusPlugin2` 수정된 된 스타일러스 포인트를 받아 더욱 x에 대 한 값을 수정 하 고 y 합니다.  
   
 4.  응용 프로그램 스타일러스 포인트를 수집 하 고 사용자가 스트로크를 완료 하는 경우 정적으로 렌더링 합니다.  
   
@@ -87,7 +75,7 @@ ms.lasthandoff: 12/22/2017
   
  다음 다이어그램에서는 펜 스레드와의 스타일러스 이벤트와 관련 하 여 UI 스레드 간의 관계는 <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn>합니다.  
   
- ![잉크 스레딩 모델 &#40; UI 및 펜 &#41; ] (../../../../docs/framework/wpf/advanced/media/inkthreading-plugincallbacks.png "InkThreading_PluginCallbacks")  
+ ![잉크 스레딩 모델 &#40;UI 및 펜&#41;](../../../../docs/framework/wpf/advanced/media/inkthreading-plugincallbacks.png "InkThreading_PluginCallbacks")  
   
 ## <a name="rendering-ink"></a>잉크를 렌더링합니다.  
  사용자가 스트로크를 그릴 때 <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> 잉크 나타납니다 "에서"흐르는 펜 UI 스레드가 사용 중인 경우에 별도 스레드에서 잉크를 렌더링 합니다.  <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> 스타일러스 포인트를 수집 하면서 동적 렌더링 스레드에서 시각적 트리를 생성 합니다.  사용자가 스트로크를 끝내는 <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> 는 응용 프로그램은 다음 렌더링 패스를 수행 하는 경우 알림을 받으려면를 요청 합니다.  응용 프로그램에는 다음 렌더링 패스 완료 된 후의 <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> 시각적 트리를 정리 합니다.  다음 다이어그램에서는이 프로세스를 보여 줍니다.  

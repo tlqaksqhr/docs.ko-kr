@@ -1,26 +1,12 @@
 ---
 title: 세션, 인스턴스 및 동시성
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 50797a3b-7678-44ed-8138-49ac1602f35b
-caps.latest.revision: 16
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 6dd96ea552bb92dd90c1c47abac744c55e2e67e5
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: a3f56a08c695b4d92529d2c1bec625e9e8c6b6ec
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="sessions-instancing-and-concurrency"></a>세션, 인스턴스 및 동시성
 *세션* 은 두 개의 끝점 사이에 전송된 모든 메시지의 상관 관계입니다. *인스턴스 만들기* 는 사용자 정의 서비스 개체와 관련 <xref:System.ServiceModel.InstanceContext> 개체의 수명 제어를 의미합니다. *동시성* 은 <xref:System.ServiceModel.InstanceContext> 에서 동시에 실행되는 스레드 수의 제어를 의미하는 용어입니다.  
@@ -30,7 +16,7 @@ ms.lasthandoff: 04/28/2018
 ## <a name="sessions"></a>세션  
  서비스 계약이 <xref:System.ServiceModel.ServiceContractAttribute.SessionMode%2A?displayProperty=nameWithType> 속성을 <xref:System.ServiceModel.SessionMode.Required?displayProperty=nameWithType>로 설정할 경우 해당 계약은 모든 호출(호출을 지원하는 기본 메시지 교환)이 동일한 대화의 일부이어야 함을 의미합니다. 계약이 세션을 허용하지만 특정 세션이 필요 없음을 지정하는 경우, 클라이언트는 세션을 연결하여 설정하거나 설정하지 않을 수 있습니다. 세션이 종료되고 메시지가 동일한 세션 기반 채널을 통해 전송될 경우 예외가 throw됩니다.  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 세션에는 다음과 같은 주요 개념적 기능이 포함되어 있습니다.  
+ WCF 세션에는 다음과 같은 주요 개념적 기능이 포함 되어 있습니다.  
   
 -   이러한 기능은 호출 응용 프로그램에 의해 명시적으로 시작되고 종료됩니다.  
   
@@ -38,9 +24,9 @@ ms.lasthandoff: 04/28/2018
   
 -   세션은 메시지 그룹을 대화에 연결합니다. 상관 관계의 의미는 추상적입니다. 예를 들어, 공유된 네트워크 연결을 기반으로 메시지와 연결될 수 있는 세션 기반 채널이 있는 반면 메시지 본문의 공유 태그를 기반으로 메시지와 연결될 수 있는 세션 기반 채널도 있습니다. 세션에서 파생될 수 있는 기능은 상관 관계의 특성에 따라 다릅니다.  
   
--   [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 세션과 연결된 일반 데이터 저장소는 없습니다.  
+-   WCF 세션과 연결 된 일반 데이터 저장소가 없습니다.  
   
- <xref:System.Web.SessionState.HttpSessionState?displayProperty=nameWithType> 응용 프로그램의 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 클래스 및 기능에 익숙한 경우, 해당 유형의 세션 및 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 세션 사이에 다음과 같은 차이점이 있음을 알 수 있습니다  
+ 익숙한 경우는 <xref:System.Web.SessionState.HttpSessionState?displayProperty=nameWithType> 클래스 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 제공 응용 프로그램 및 기능, 해당 유형의 세션 및 WCF 세션 간에 다음과 같은 차이점이 있음을 알 수 있습니다.  
   
 -   [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 세션은 항상 서버에 의해 실행됩니다.  
   
@@ -78,7 +64,7 @@ public class CalculatorService : ICalculatorInstance
   
  <xref:System.ServiceModel.ServiceHost.%23ctor%28System.Object%2CSystem.Uri%5B%5D%29?displayProperty=nameWithType> 생성자를 사용하여 이러한 서비스를 만듭니다. singleton 서비스에서 사용할 특정 개체 인스턴스를 제공하려면 사용자 지정 <xref:System.ServiceModel.Dispatcher.IInstanceContextInitializer?displayProperty=nameWithType>를 구현하는 대신 제공합니다. 예를 들어, 매개 변수가 없는 기본 public 생성자를 구현하지 않는 경우와 같이 서비스 구현 형식을 생성하기 어려운 경우 이 오버로드를 사용할 수 있습니다.  
   
- 이 생성자에 개체가 제공되면 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 인스턴스 만들기 동작과 관련된 일부 기능이 다르게 작동합니다. 예를 들어 singleton 개체 인스턴스를 제공하는 경우 <xref:System.ServiceModel.InstanceContext.ReleaseServiceInstance%2A?displayProperty=nameWithType> 호출은 아무런 효과가 없습니다. 마찬가지로 다른 인스턴스 해제 메커니즘도 무시됩니다. <xref:System.ServiceModel.ServiceHost>는 항상 모든 작업에 대해 <xref:System.ServiceModel.OperationBehaviorAttribute.ReleaseInstanceMode%2A?displayProperty=nameWithType> 속성이 <xref:System.ServiceModel.ReleaseInstanceMode.None?displayProperty=nameWithType>으로 설정된 것처럼 동작합니다.  
+ Note는 개체는이 생성자에 제공 되는, 인스턴스 만들기 동작 Windows Communication Foundation (WCF)에 관련 된 일부 기능이 다르게 작동 합니다. 예를 들어 singleton 개체 인스턴스를 제공하는 경우 <xref:System.ServiceModel.InstanceContext.ReleaseServiceInstance%2A?displayProperty=nameWithType> 호출은 아무런 효과가 없습니다. 마찬가지로 다른 인스턴스 해제 메커니즘도 무시됩니다. <xref:System.ServiceModel.ServiceHost>는 항상 모든 작업에 대해 <xref:System.ServiceModel.OperationBehaviorAttribute.ReleaseInstanceMode%2A?displayProperty=nameWithType> 속성이 <xref:System.ServiceModel.ReleaseInstanceMode.None?displayProperty=nameWithType>으로 설정된 것처럼 동작합니다.  
   
 ### <a name="sharing-instancecontext-objects"></a>InstanceContext 개체 공유  
  또한 해당 연결을 직접 수행하여 <xref:System.ServiceModel.InstanceContext> 개체와 연결된 세션 채널 또는 호출을 제어할 수도 있습니다.  
@@ -92,7 +78,7 @@ public class CalculatorService : ICalculatorInstance
   
 -   <xref:System.ServiceModel.ConcurrencyMode.Multiple>: 각 서비스 인스턴스는 메시지를 동시에 처리하는 여러 스레드를 가질 수 있습니다. 이 동시성 모드를 사용하려면 스레드로부터 안전하게 서비스를 구현해야 합니다.  
   
--   <xref:System.ServiceModel.ConcurrencyMode.Reentrant>: 각 서비스 인스턴스가 한 번에 하나의 메시지를 처리하지만 재진입 작업 호출을 허용합니다. 서비스는 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 클라이언트 개체를 통해 호출하는 경우에만 이러한 호출을 허용합니다.  
+-   <xref:System.ServiceModel.ConcurrencyMode.Reentrant>: 각 서비스 인스턴스가 한 번에 하나의 메시지를 처리하지만 재진입 작업 호출을 허용합니다. 서비스 호출 하는 WCF 클라이언트 개체를 통해 하는 경우에 이러한 호출을 허용 합니다.  
   
 > [!NOTE]
 >  둘 이상의 스레드를 안전하게 사용하는 코드를 이해하고 개발하기는 쉽지 않습니다. <xref:System.ServiceModel.ConcurrencyMode.Multiple> 또는 <xref:System.ServiceModel.ConcurrencyMode.Reentrant> 값을 사용하기 전에 이러한 모드에 대해 해당 서비스가 적절하게 디자인되었는지 확인합니다. 자세한 내용은 <xref:System.ServiceModel.ServiceBehaviorAttribute.ConcurrencyMode%2A>을 참조하세요.  

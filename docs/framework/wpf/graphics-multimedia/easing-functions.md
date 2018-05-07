@@ -1,13 +1,6 @@
 ---
-title: "감속/가속 함수"
-ms.custom: 
+title: 감속/가속 함수
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -22,16 +15,11 @@ helpviewer_keywords:
 - easing functions [WPF], customizing
 - animations [WPF], applying
 ms.assetid: 075b9c2b-82c4-43fa-b3cd-de0b6236eb38
-caps.latest.revision: "10"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 570a065d3f28befe8db4887ff908c3bd60a639a1
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 3ce7c1824dc53c154ba1091ea62c1b8950b757c1
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="easing-functions"></a>감속/가속 함수
 감속/가속 함수를 사용하여 사용자 지정 수식을 애니메이션에 적용할 수 있습니다. 예를 들어 마치 스프링 위에 있는 것처럼 개체가 사실적으로 바운스되거나 동작하도록 하고 싶을 수 있습니다. 키 프레임 또는 심지어 From/To/By 애니메이션을 사용하여 이러한 효과를 대략적으로 나타낼 수 있지만 상당히 복잡한 작업이 필요하며 수식을 사용할 때보다 애니메이션이 덜 정확해집니다.  
@@ -50,7 +38,7 @@ ms.lasthandoff: 12/22/2017
   
 -   <xref:System.Windows.Media.Animation.ExponentialEase>: 및/또는 지 수 수식을 사용 하 여 감속 하는 애니메이션을 만듭니다.  
   
--   <xref:System.Windows.Media.Animation.PowerEase>: 및/또는 수식을 사용 하 여 감속 하는 애니메이션 만듭니다 *f*(*t*) = *t*<sup>p</sup> 여기서 p는는 같음<xref:System.Windows.Media.Animation.PowerEase.Power%2A> 속성입니다.  
+-   <xref:System.Windows.Media.Animation.PowerEase>: 및/또는 수식을 사용 하 여 감속 하는 애니메이션 만듭니다 *f*(*t*) = *t*<sup>p</sup> p가 인는 <xref:System.Windows.Media.Animation.PowerEase.Power%2A>속성입니다.  
   
 -   <xref:System.Windows.Media.Animation.QuadraticEase>: 및/또는 수식을 사용 하 여 감속 하는 애니메이션 만듭니다 *f*(*t*) = *t*<sup>2</sup>합니다.  
   

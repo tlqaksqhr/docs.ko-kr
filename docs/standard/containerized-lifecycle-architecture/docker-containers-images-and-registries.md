@@ -1,19 +1,14 @@
 ---
 title: Docker 컨테이너, 이미지 및 레지스트리
 description: Microsoft 플랫폼 및 도구를 사용하여 컨테이너화된 Docker 응용 프로그램 수명 주기
-ms.prod: .net
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/22/2017
-ms.topic: article
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 8ba0cd3323467e07a33ffd4083e390d57fdce7ff
-ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
+ms.openlocfilehash: 43b76f738fa4b7c89423a5b9fac7ef91f40880c5
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="docker-containers-images-and-registries"></a>Docker 컨테이너, 이미지 및 레지스트리
 

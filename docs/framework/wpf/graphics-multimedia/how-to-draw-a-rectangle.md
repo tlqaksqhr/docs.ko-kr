@@ -1,28 +1,16 @@
 ---
-title: "방법: 사각형 그리기"
-ms.custom: 
+title: '방법: 사각형 그리기'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - drawing [WPF], rectangles
 - graphics [WPF], rectangles
 - rectangles [WPF], drawing
 ms.assetid: beeb57ef-fab5-4446-a38a-1588f97b4c2f
-caps.latest.revision: "10"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 58f29783e48aa7173010ffec6a65f9ac1d8a2b62
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 100f1a8062628e892e9a71b988bb2a8754ea6bad
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-draw-a-rectangle"></a>방법: 사각형 그리기
 사용 하 여 사각형을 그리는 방법을 보여 주는이 예제는 <xref:System.Windows.Shapes.Rectangle> 요소입니다.  
@@ -33,7 +21,7 @@ ms.lasthandoff: 12/22/2017
   
  다음 예제에서는 두 개의 <xref:System.Windows.Shapes.Rectangle> 요소를 그립니다는 <xref:System.Windows.Controls.Canvas>합니다. 첫 번째 사각형에는 <xref:System.Windows.Media.Brushes.Blue%2A> 내부 합니다. 두 번째 사각형에는 <xref:System.Windows.Media.Brushes.Blue%2A> 내부는 <xref:System.Windows.Media.Brushes.Black%2A> 윤곽선 및 모서리가 둥근된 합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  [!code-xaml[drawingwithshapeelements#Rectangle1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DrawingWithShapeElements/CS/rectangleexample.xaml#rectangle1)]  
   
  이 예제에서는 한 <xref:System.Windows.Controls.Canvas> 사각형을 포함 하도록 사용할 수 있습니다 사각형 요소 (및 다른 모든 셰이프 요소) 함께 <xref:System.Windows.Controls.Panel> 또는 <xref:System.Windows.Controls.Control> 비 텍스트 콘텐츠를 지 원하는 합니다. 사각형은 부분에 대해 배경을 제공 하는 데 특히 유용 실제로 <xref:System.Windows.Controls.Grid> 패널입니다. 예를 들어 참조는 [테이블 개요](../../../../docs/framework/wpf/advanced/table-overview.md)합니다.  

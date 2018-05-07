@@ -1,27 +1,15 @@
 ---
-title: "Windows Forms 응용 프로그램의 네트워킹"
-ms.custom: 
+title: Windows Forms 응용 프로그램의 네트워킹
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - networking [Windows Forms], Windows Forms
 - Windows Forms, networking
 ms.assetid: babf8af3-8000-46e2-8c68-a42127efabba
-caps.latest.revision: "7"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: b9c8a66d2b1d60226ad814730125754c7253ca94
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 23251116344af49509547055af824802c4878849
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="networking-in-windows-forms-applications"></a>Windows Forms 응용 프로그램의 네트워킹
 .NET Framework는 웹 페이지 표시, 웹 콘텐츠를 다운로드 하 고, 파일 전송 프로토콜 (FTP) 사이트 상호 작용 하 고 쉽게 응용 프로그램에 네트워크 기능을 빌드할 수 있도록 하는 웹 서비스 사용에 대 한 클래스를 제공 합니다. 다음 리소스는 네트워킹 기술은의.NET Framework 및 Windows Forms에이 통합 하는 방법을 이해 하는 데 도움이 됩니다.  

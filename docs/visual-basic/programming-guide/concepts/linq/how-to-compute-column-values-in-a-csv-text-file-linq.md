@@ -1,22 +1,12 @@
 ---
-title: "방법: CSV 텍스트 파일 (LINQ) (Visual Basic)의 열 값 계산"
-ms.custom: 
+title: '방법: CSV 텍스트 파일 (LINQ) (Visual Basic)의 열 값 계산'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 88b2b9f3-c82e-41f3-b1b4-26ede5973a02
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: d57376ca2741801d6aee858688f00cba245a225d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 9eb0198c16efebd09af45ae26a47288b2153cf43
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-compute-column-values-in-a-csv-text-file-linq-visual-basic"></a>방법: CSV 텍스트 파일 (LINQ) (Visual Basic)의 열 값 계산
 이 예제에서는 .csv 파일의 열에 대해 Sum, Average, Min 및 Max 등의 집계 계산을 수행하는 방법을 보여 줍니다. 여기 표시된 예제 원칙은 다른 형식의 구조화된 텍스트에 적용할 수 있습니다.  

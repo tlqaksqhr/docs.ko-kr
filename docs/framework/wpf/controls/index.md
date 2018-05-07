@@ -1,35 +1,21 @@
 ---
 title: 컨트롤
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-wpf
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - controls [WPF], about WPF controls
 ms.assetid: 3f255a8a-35a8-4712-9065-472ff7d75599
-caps.latest.revision: 13
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 66c6cc58423a2af8d0fd6de93b8884918888fb48
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 11c9c2cdd9e485fb87f5d8ead7790ded0428f7dd
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="controls"></a>컨트롤
 <a name="introduction"></a>
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]많은 등 거의 모든 Windows 응용 프로그램에서 사용 되는 일반적인 UI 구성 요소와 함께 제공 <xref:System.Windows.Controls.Button>, <xref:System.Windows.Controls.Label>, <xref:System.Windows.Controls.TextBox>, <xref:System.Windows.Controls.Menu>, 및 <xref:System.Windows.Controls.ListBox>합니다. 지금까지 이러한 개체는 컨트롤이라고 불렀습니다. 동안는 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] SDK가 응용 프로그램에서 표시 되는 개체를 나타내는 모든 클래스를 대략적으로 의미를 "제어" 라는 용어를 사용 하 여 계속 클래스에서 상속 필요는 없습니다 해야는 <xref:System.Windows.Controls.Control> 클래스를 시각적 존재 합니다. 클래스에서 상속 되는 <xref:System.Windows.Controls.Control> 클래스에 포함 될는 <xref:System.Windows.Controls.ControlTemplate>, 컨트롤의 소비자를 완전히 새 하위 클래스를 만들 필요 없이 컨트롤의 모양을 변경할 수 있습니다.  이 항목에서는 방법을 컨트롤 (두는 것에서 상속 않는 <xref:System.Windows.Controls.Control> 클래스와 그러지 않은)에서 일반적으로 사용 되 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]합니다.  
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 많은 등 거의 모든 Windows 응용 프로그램에서 사용 되는 일반적인 UI 구성 요소와 함께 제공 <xref:System.Windows.Controls.Button>, <xref:System.Windows.Controls.Label>, <xref:System.Windows.Controls.TextBox>, <xref:System.Windows.Controls.Menu>, 및 <xref:System.Windows.Controls.ListBox>합니다. 지금까지 이러한 개체는 컨트롤이라고 불렀습니다. 동안는 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] SDK가 응용 프로그램에서 표시 되는 개체를 나타내는 모든 클래스를 대략적으로 의미를 "제어" 라는 용어를 사용 하 여 계속 클래스에서 상속 필요는 없습니다 해야는 <xref:System.Windows.Controls.Control> 클래스를 시각적 존재 합니다. 클래스에서 상속 되는 <xref:System.Windows.Controls.Control> 클래스에 포함 될는 <xref:System.Windows.Controls.ControlTemplate>, 컨트롤의 소비자를 완전히 새 하위 클래스를 만들 필요 없이 컨트롤의 모양을 변경할 수 있습니다.  이 항목에서는 방법을 컨트롤 (두는 것에서 상속 않는 <xref:System.Windows.Controls.Control> 클래스와 그러지 않은)에서 일반적으로 사용 되 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]합니다.  
 
 <a name="creating_an_instance_of_a_control"></a>   
 ## <a name="creating-an-instance-of-a-control"></a>컨트롤의 인스턴스 만들기  
@@ -37,7 +23,7 @@ ms.lasthandoff: 12/22/2017
   
  [!code-xaml[ControlsOverview#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ControlsOverview/CSharp/Window1.xaml#1)]  
   
- 다음 예제에서는 코드로 동일한 응용 프로그램을 만듭니다. 요약 하자면, 만들기는 <xref:System.Windows.Controls.Grid>, `grid1`, 샘플에서 제외 되었습니다. `grid1`동일한 행 및 열 정의는 앞에 표시 된 것과 같이 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 예제입니다.  
+ 다음 예제에서는 코드로 동일한 응용 프로그램을 만듭니다. 요약 하자면, 만들기는 <xref:System.Windows.Controls.Grid>, `grid1`, 샘플에서 제외 되었습니다. `grid1` 동일한 행 및 열 정의는 앞에 표시 된 것과 같이 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 예제입니다.  
   
  [!code-csharp[ControlsOverview#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ControlsOverview/CSharp/AppInCode.xaml.cs#2)]
  [!code-vb[ControlsOverview#2](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ControlsOverview/VisualBasic/AppInCode.xaml.vb#2)]  
@@ -63,7 +49,7 @@ ms.lasthandoff: 12/22/2017
  [!code-vb[ControlsOverview#4](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ControlsOverview/VisualBasic/AppInCode.xaml.vb#4)]  
   
 ### <a name="creating-a-style-for-a-control"></a>컨트롤에 대한 스타일 만들기  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]컨트롤의 모양을 만들어 응용 프로그램에서 각 인스턴스에서 속성을 설정 하는 대신 전체적 지정 하는 기능을 제공 된 <xref:System.Windows.Style>합니다. 다음 예제에서는 한 <xref:System.Windows.Style> 각각에 적용 되는 <xref:System.Windows.Controls.Button> 응용 프로그램에 있습니다. <xref:System.Windows.Style>정의에 일반적으로 정의 된 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 에 <xref:System.Windows.ResourceDictionary>와 같은 <xref:System.Windows.FrameworkElement.Resources%2A> 의 속성은 <xref:System.Windows.FrameworkElement>합니다.  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 컨트롤의 모양을 만들어 응용 프로그램에서 각 인스턴스에서 속성을 설정 하는 대신 전체적 지정 하는 기능을 제공 된 <xref:System.Windows.Style>합니다. 다음 예제에서는 한 <xref:System.Windows.Style> 각각에 적용 되는 <xref:System.Windows.Controls.Button> 응용 프로그램에 있습니다. <xref:System.Windows.Style> 정의에 일반적으로 정의 된 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 에 <xref:System.Windows.ResourceDictionary>와 같은 <xref:System.Windows.FrameworkElement.Resources%2A> 의 속성은 <xref:System.Windows.FrameworkElement>합니다.  
   
  [!code-xaml[ControlsOverview#5](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ControlsOverview/CSharp/AppInCode.xaml#5)]  
   

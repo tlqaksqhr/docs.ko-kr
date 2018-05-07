@@ -1,24 +1,14 @@
 ---
 title: Custom Secure Metadata Endpoint
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 9e369e99-ea4a-49ff-aed2-9fdf61091a48
-caps.latest.revision: "19"
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: b4ec6efa2a2b0993f7088e4424de86b3d3ad6c8b
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 2baa99ddaf5de60407b233b5a6ea013ad87401f3
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="custom-secure-metadata-endpoint"></a>Custom Secure Metadata Endpoint
 이 샘플을 구성 하는 방법과 비 메타 데이터 교환 바인딩을 중 하나를 사용 하 여 보안 메타 데이터 끝점을 사용 하 여 서비스를 구현 하는 방법을 보여 줍니다. [ServiceModel Metadata 유틸리티 도구 (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) 또는 인출 하는 클라이언트는 이러한 메타 데이터 끝점에서 메타 데이터입니다. 메타데이터 끝점을 노출하는 데 시스템에서 제공한 두 가지 바인딩, mexHttpBinding 및 mexHttpsBinding을 사용할 수 있습니다. mexHttpBinding은 HTTP를 통해 비보안 방식으로 메타데이터 끝점을 노출하는 데 사용되고, mexHttpsBinding은 HTTPS를 통해 보안 방식으로 메타데이터 끝점을 노출하는 데 사용됩니다. 이 샘플에서는 <xref:System.ServiceModel.WSHttpBinding>을 사용하여 보안 메타데이터 끝점을 노출하는 방법을 보여 줍니다. 바인딩의 보안 설정을 변경하려고 하지만 HTTPS를 사용하지 않으려는 경우 이 방법을 사용할 수 있습니다. mexHttpsBinding을 사용하면 메타데이터 끝점이 보안되지만 바인딩 설정은 수정할 수 없습니다.  
@@ -186,14 +176,14 @@ ChannelFactory<ICalculator> cf = new    ChannelFactory<ICalculator>(endpoint.Bin
 -   샘플 실행을 완료했으면 샘플 폴더에서 Cleanup.bat를 실행합니다.  
   
     > [!NOTE]
-    >  다중 컴퓨터 구성에서 이 샘플을 실행할 경우에는 이 스크립트로 서비스 인증서를 제거할 수 없습니다. 여러 시스템에서 인증서를 사용하는 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 샘플을 실행한 경우에는 CurrentUser - TrustedPeople 저장소에 설치된 서비스 인증서를 지워야 합니다. 이렇게 하려면 `certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>` 명령을 사용합니다. 예: `certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`  
+    >  다중 컴퓨터 구성에서 이 샘플을 실행할 경우에는 이 스크립트로 서비스 인증서를 제거할 수 없습니다. 여러 시스템에서 인증서를 사용 하는 Windows Communication Foundation (WCF) 샘플을 실행 한 경우 CurrentUser-TrustedPeople 저장소에에서 설치 된 서비스 인증서의 선택을 취소 해야 합니다. 이렇게 하려면 `certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>` 명령을 사용합니다. 예: `certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`  
   
 > [!IMPORTANT]
 >  컴퓨터에 이 샘플이 이미 설치되어 있을 수도 있습니다. 계속하기 전에 다음(기본) 디렉터리를 확인하세요.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  이 디렉터리가 없으면 [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4(.NET Framework 4용 WCF(Windows Communication Foundation) 및 WF(Windows Workflow Foundation) 샘플)](http://go.microsoft.com/fwlink/?LinkId=150780) 로 이동하여 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 및 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플을 모두 다운로드하세요. 이 샘플은 다음 디렉터리에 있습니다.  
+>  이 디렉터리가로 이동 [Windows Communication Foundation (WCF) 및.NET Framework 4에 대 한 Windows WF (Workflow Foundation) 샘플](http://go.microsoft.com/fwlink/?LinkId=150780) 모든 Windows Communication Foundation (WCF)를 다운로드 하 고 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플. 이 샘플은 다음 디렉터리에 있습니다.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Metadata\CustomMexEndpoint`  
   

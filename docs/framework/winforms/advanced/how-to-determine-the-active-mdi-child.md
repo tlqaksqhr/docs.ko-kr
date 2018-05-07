@@ -1,13 +1,6 @@
 ---
-title: "방법: 활성 MDI 자식 확인"
-ms.custom: 
+title: '방법: 활성 MDI 자식 확인'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -18,16 +11,11 @@ helpviewer_keywords:
 - MDI [Windows Forms], activating forms
 - MDI [Windows Forms], locating focus
 ms.assetid: 33880ec3-0207-4c2b-a616-ff140443cc0f
-caps.latest.revision: "12"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: c026df631c2ac033594ea86887bb8440a6aa240a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 0b084d204361764af1b36b154acfc5b360fc977e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-determine-the-active-mdi-child"></a>방법: 활성 MDI 자식 확인
 경우에 따라 현재 활성 자식 폼에 포커스가 있는 컨트롤에 작동 하는 명령을 제공 합니다. 예를 들어 자식 폼의 텍스트 상자에서 선택한 텍스트를 클립보드에 복사할 한다고 가정 합니다. 선택한 텍스트를 사용 하 여 클립보드에 복사 하는 프로시저를 만들면 됩니다는 <xref:System.Windows.Forms.Control.Click> 표준 편집 메뉴에서 메뉴 항목 복사본의 이벤트입니다.  

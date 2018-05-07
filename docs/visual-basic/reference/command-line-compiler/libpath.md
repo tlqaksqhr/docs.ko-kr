@@ -1,11 +1,6 @@
 ---
 title: -libpath
 ms.date: 03/10/2018
-ms.prod: .net
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - libpath compiler option [Visual Basic]
 - /libpath compiler option [Visual Basic]
@@ -13,11 +8,11 @@ helpviewer_keywords:
 ms.assetid: 5f1c26c9-3455-4e89-bdf3-b12d6c2e655b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cff59d9b406045b4522d3a7d6e85528513214635
-ms.sourcegitcommit: 498799639937c89de777361aab74261efe7b79ea
+ms.openlocfilehash: a5044bc0093960fdf6b063450d8d3a57575ff07c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="-libpath"></a>-libpath
 참조 된 어셈블리의 위치를 지정합니다.  
@@ -53,7 +48,7 @@ ms.lasthandoff: 03/22/2018
   
 |Visual Studio에서 /libpath를 설정 하려면 통합 개발 환경|  
 |---|  
-|1.  **솔루션 탐색기**에서 프로젝트를 선택합니다. **프로젝트** 메뉴에서 **속성**을 클릭합니다. <br />2.  **참조** 탭을 클릭합니다.<br />3.  클릭는 **참조 경로 중...** 단추입니다.<br />4.  에 **참조 경로** 대화 상자에서 디렉터리 이름을 입력 합니다는 **폴더:** 상자입니다.<br />5.  클릭 **폴더 추가**합니다.|  
+|1.  **솔루션 탐색기**에서 프로젝트를 선택합니다. **프로젝트** 메뉴에서 **속성**을 클릭합니다. <br />2.  **참조** 탭을 클릭합니다.<br />3.  클릭는 **참조 경로 중...**  단추입니다.<br />4.  에 **참조 경로** 대화 상자에서 디렉터리 이름을 입력 합니다는 **폴더:** 상자입니다.<br />5.  클릭 **폴더 추가**합니다.|  
   
 ## <a name="example"></a>예제  
  다음 코드에서는 `T2.vb` .exe 파일을 만듭니다. 컴파일러는 어셈블리 참조에 대 한 작업 디렉터리, c: 드라이브의 루트 디렉터리 및 c: 드라이브의 새 어셈블리 디렉터리를 찾습니다.  

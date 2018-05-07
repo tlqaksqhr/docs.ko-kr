@@ -1,27 +1,15 @@
 ---
-title: "멀티미디어 개요"
-ms.custom: 
+title: 멀티미디어 개요
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - multimedia [WPF]
 - media [WPF]
 ms.assetid: feb25b15-d741-4ac3-818f-1b19f63a3562
-caps.latest.revision: "19"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 65553e18fc66825c9c0a991aba600b4b90d0d4c0
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 7a986125cff1ff4812528212fa3aee7689af1f16
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="multimedia-overview"></a>멀티미디어 개요
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]의 멀티미디어 기능을 통해 오디오 및 비디오를 응용 프로그램에 통합하여 사용자 환경을 개선할 수 있습니다. 이 항목에서는 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]의 멀티미디어 기능을 소개합니다.  
@@ -32,7 +20,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="media-api"></a>미디어 API  
  <xref:System.Windows.Controls.MediaElement> 및 <xref:System.Windows.Media.MediaPlayer> 클래스 오디오 또는 비디오 콘텐츠를 제공 하는 데 사용 됩니다. 이러한 클래스는 대화형으로 또는 클록을 통해 제어할 수 있습니다. 이러한 클래스는 미디어 재생을 위한 [!INCLUDE[TLA#tla_wmp](../../../../includes/tlasharptla-wmp-md.md)] 10 컨트롤에서 사용할 수 있습니다. 사용하는 클래스는 시나리오에 따라 달라집니다.  
   
- <xref:System.Windows.Controls.MediaElement>이 <xref:System.Windows.UIElement> 으로 사용할 수 있는 [레이아웃](../../../../docs/framework/wpf/advanced/layout.md) 여러 컨트롤의 내용으로 사용 될 수 있습니다. 코드 뿐만 아니라 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]에서도 사용할 수 있습니다. <xref:System.Windows.Media.MediaPlayer>를 위해 디자인 된 반면에 <xref:System.Windows.Media.Drawing> 개체 및 레이아웃을 지원 하지 합니다. 사용 하 여 로드 된 미디어는 <xref:System.Windows.Media.MediaPlayer> 만 사용 하 여 표시 수는 <xref:System.Windows.Media.VideoDrawing> 또는 직접 상호 작용 하 여는 <xref:System.Windows.Media.DrawingContext>합니다. <xref:System.Windows.Media.MediaPlayer>XAML에서 사용할 수 없습니다.  
+ <xref:System.Windows.Controls.MediaElement> 이 <xref:System.Windows.UIElement> 으로 사용할 수 있는 [레이아웃](../../../../docs/framework/wpf/advanced/layout.md) 여러 컨트롤의 내용으로 사용 될 수 있습니다. 코드 뿐만 아니라 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]에서도 사용할 수 있습니다. <xref:System.Windows.Media.MediaPlayer>를 위해 디자인 된 반면에 <xref:System.Windows.Media.Drawing> 개체 및 레이아웃을 지원 하지 합니다. 사용 하 여 로드 된 미디어는 <xref:System.Windows.Media.MediaPlayer> 만 사용 하 여 표시 수는 <xref:System.Windows.Media.VideoDrawing> 또는 직접 상호 작용 하 여는 <xref:System.Windows.Media.DrawingContext>합니다. <xref:System.Windows.Media.MediaPlayer> XAML에서 사용할 수 없습니다.  
   
  Drawing 개체 및 그리기 컨텍스트에 대한 자세한 내용은 [Drawing 개체 개요](../../../../docs/framework/wpf/graphics-multimedia/drawing-objects-overview.md)를 참조하세요.  
   
@@ -88,7 +76,7 @@ ms.lasthandoff: 12/22/2017
 ### <a name="controlling-a-mediaelement"></a>MediaElement 제어  
  <xref:System.Windows.Controls.MediaElement.LoadedBehavior%2A> 및 <xref:System.Windows.Controls.MediaElement.UnloadedBehavior%2A> 의 동작을 제어 하는 속성은 <xref:System.Windows.Controls.MediaElement> 때 <xref:System.Windows.FrameworkElement.IsLoaded%2A> 은 `true` 또는 `false`각각. <xref:System.Windows.Controls.MediaState> 는 속성이 미디어 재생 동작에 영향을으로 설정 됩니다. 예를 들어 기본 <xref:System.Windows.Controls.MediaElement.LoadedBehavior%2A> 은 <xref:System.Windows.Controls.MediaState.Play> 및 기본 <xref:System.Windows.Controls.MediaElement.UnloadedBehavior%2A> 은 <xref:System.Windows.Controls.MediaState.Close>합니다. 즉으로 <xref:System.Windows.Controls.MediaElement> 로드 및 미리 받기 완료 되 면 미디어 재생 되기 시작 합니다. 재생이 완료되면 미디어가 닫히고 모든 미디어 리소스가 해제됩니다.  
   
- <xref:System.Windows.Controls.MediaElement.LoadedBehavior%2A> 및 <xref:System.Windows.Controls.MediaElement.UnloadedBehavior%2A> 속성은 미디어 재생을 제어 하는 유일한 방법은 없습니다. 클록 모드로 시계를 제어할 수는 <xref:System.Windows.Controls.MediaElement> 대화형 제어 방법을 시기를 제어 하는 및의 <xref:System.Windows.Controls.MediaElement.LoadedBehavior%2A> 은 <xref:System.Windows.Controls.MediaState.Manual>합니다. <xref:System.Windows.Controls.MediaElement>다음과 같은 우선 순위를 평가 하 여 컨트롤에 대 한이 경합은이 처리 합니다.  
+ <xref:System.Windows.Controls.MediaElement.LoadedBehavior%2A> 및 <xref:System.Windows.Controls.MediaElement.UnloadedBehavior%2A> 속성은 미디어 재생을 제어 하는 유일한 방법은 없습니다. 클록 모드로 시계를 제어할 수는 <xref:System.Windows.Controls.MediaElement> 대화형 제어 방법을 시기를 제어 하는 및의 <xref:System.Windows.Controls.MediaElement.LoadedBehavior%2A> 은 <xref:System.Windows.Controls.MediaState.Manual>합니다. <xref:System.Windows.Controls.MediaElement> 다음과 같은 우선 순위를 평가 하 여 컨트롤에 대 한이 경합은이 처리 합니다.  
   
 1.  <xref:System.Windows.Controls.MediaElement.UnloadedBehavior%2A>. 미디어가 언로드될 때 적용됩니다. 이렇게 하면 기본적으로 모든 미디어 리소스가 해제 되는 경우에는 <xref:System.Windows.Media.MediaClock> 연결 된는 <xref:System.Windows.Controls.MediaElement>합니다.  
   
@@ -107,7 +95,7 @@ ms.lasthandoff: 12/22/2017
   
 <a name="mediaplayer"></a>   
 ## <a name="mediaplayer-class"></a>MediaPlayer 클래스  
- 여기서는 <xref:System.Windows.Controls.MediaElement> 클래스는 프레임 워크 요소는 <xref:System.Windows.Media.MediaPlayer> 클래스에서 사용할 수 있도록 설계는 <xref:System.Windows.Media.Drawing> 개체입니다. 성능을 향상 시키는 프레임 워크 수준 기능을 무시 하거나 해야 할 때 사용 되는 그리기 개체 <xref:System.Windows.Freezable> 기능입니다. <xref:System.Windows.Media.MediaPlayer>응용 프로그램에서 미디어 콘텐츠를 제공 하는 동안 이러한 기능을 활용할 수 있습니다. 마찬가지로 <xref:System.Windows.Controls.MediaElement>, <xref:System.Windows.Media.MediaPlayer> 독립적인에서 사용할 수 있습니다 또는 모드 하지만 않습니다 하지 클록가 <xref:System.Windows.Controls.MediaElement> 개체의 언로드 및 상태를 로드 합니다. 재생 컨트롤 복잡도 감소이 <xref:System.Windows.Media.MediaPlayer>합니다.  
+ 여기서는 <xref:System.Windows.Controls.MediaElement> 클래스는 프레임 워크 요소는 <xref:System.Windows.Media.MediaPlayer> 클래스에서 사용할 수 있도록 설계는 <xref:System.Windows.Media.Drawing> 개체입니다. 성능을 향상 시키는 프레임 워크 수준 기능을 무시 하거나 해야 할 때 사용 되는 그리기 개체 <xref:System.Windows.Freezable> 기능입니다. <xref:System.Windows.Media.MediaPlayer> 응용 프로그램에서 미디어 콘텐츠를 제공 하는 동안 이러한 기능을 활용할 수 있습니다. 마찬가지로 <xref:System.Windows.Controls.MediaElement>, <xref:System.Windows.Media.MediaPlayer> 독립적인에서 사용할 수 있습니다 또는 모드 하지만 않습니다 하지 클록가 <xref:System.Windows.Controls.MediaElement> 개체의 언로드 및 상태를 로드 합니다. 재생 컨트롤 복잡도 감소이 <xref:System.Windows.Media.MediaPlayer>합니다.  
   
 ### <a name="controlling-mediaplayer"></a>MediaPlayer 제어  
  때문에 <xref:System.Windows.Media.MediaPlayer> 는 상태 비저장만 두 가지 미디어 재생을 제어할 수 있습니다.  

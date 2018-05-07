@@ -1,24 +1,14 @@
 ---
 title: 열거형을 사용하는 경우(Visual Basic)
-ms.custom: ''
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - enumerations [Visual Basic]
 ms.assetid: e6e47b5b-3ed9-452d-a481-9c3fed88519a
-caps.latest.revision: 12
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 5ab152687f4f9e4ba6bd032ae7c1352f65af715f
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: e50057e114abae9fbf05c94ef0b60cf94b033a2b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="when-to-use-an-enumeration-visual-basic"></a>열거형을 사용하는 경우(Visual Basic)
 열거형에는 쉽게 관련된 상수 집합으로 작업 하는 방법을 제공 합니다. 열거형, 또는 `Enum`, 값 집합에 대 한 기호화 된 이름입니다. 열거형 데이터 형식으로 처리 되 고 변수 및 속성과 함께 사용 하기 위해 상수 집합을 만드는 데 사용할 수 있습니다.  

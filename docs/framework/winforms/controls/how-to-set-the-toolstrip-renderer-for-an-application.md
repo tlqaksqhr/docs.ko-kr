@@ -1,14 +1,6 @@
 ---
 title: '방법: 응용 프로그램에 대한 ToolStrip 렌더러 설정'
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-winforms
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -19,17 +11,11 @@ helpviewer_keywords:
 - MenuStrip control [Windows Forms]
 - toolbars [Windows Forms], customizing
 ms.assetid: 46acef3e-9844-4ae8-9a2e-3006fe99cadf
-caps.latest.revision: 9
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 242bdd556a85c92d595c36b79b99756e8459dbf3
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.openlocfilehash: f4189b19b78ce3cda1981220caa1fce3f2ec708d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-set-the-toolstrip-renderer-for-an-application"></a>방법: 응용 프로그램에 대한 ToolStrip 렌더러 설정
 <xref:System.Windows.Forms.ToolStrip> 컨트롤의 모양을 개별적으로 또는 응용 프로그램의 모든 <xref:System.Windows.Forms.ToolStrip> 컨트롤에 대해 사용자 지정할 수 있습니다.  

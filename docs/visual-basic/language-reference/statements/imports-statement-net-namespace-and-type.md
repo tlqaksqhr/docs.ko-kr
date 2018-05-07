@@ -1,11 +1,6 @@
 ---
-title: "Imports 문(.NET 네임스페이스 및 형식)"
+title: Imports 문(.NET 네임스페이스 및 형식)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.Imports
 - imports
@@ -21,14 +16,11 @@ helpviewer_keywords:
 - aliases [Visual Basic], import
 - declared elements [Visual Basic], container elements
 ms.assetid: 7062f8aa-d890-4232-9eed-92836e13fb6e
-caps.latest.revision: "40"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 46cc78c2fd039fb56fd4d1b797f2d09cbe95d317
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: ef569b0ed6428d24d019e00c500e4d4b91c83d49
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="imports-statement-net-namespace-and-type"></a>Imports 문(.NET 네임스페이스 및 형식)
 사용 하도록 설정 이름을 네임 스페이스 한정자 없이 참조할 수를 입력 합니다.  
@@ -46,7 +38,7 @@ Imports [ aliasname = ] namespace.element
 |용어|정의|  
 |---|---|  
 |`aliasname`|선택 사항입니다. *가져오기 별칭* 또는 코드를 참조할 수 있는 이름을 `namespace` 정규화 문자열 대신 합니다. 참조 [선언 된 요소 이름](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)합니다.|  
-|`namespace`|필수 요소. 가져오고 있는 네임 스페이스의 정규화 된 이름입니다. 중첩 될 수 있습니다는 문자열 네임 스페이스의 모든 수준에 있습니다.|  
+|`namespace`|필수. 가져오고 있는 네임 스페이스의 정규화 된 이름입니다. 중첩 될 수 있습니다는 문자열 네임 스페이스의 모든 수준에 있습니다.|  
 |`element`|선택 사항입니다. 네임 스페이스에 선언 된 프로그래밍 요소의 이름입니다. 컨테이너 요소가 될 수 있습니다.|  
   
 ## <a name="remarks"></a>설명  

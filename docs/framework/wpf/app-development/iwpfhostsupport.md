@@ -1,34 +1,20 @@
 ---
 title: IWpfHostSupport
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - IWpfHostSupport interface [WPF]
 ms.assetid: cc5a0281-de81-4cc1-87e4-0e46b1a811e9
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: a516d5917c2106bc83842befac9b506312fcce1c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 51964358d27a16d9840e29be06c11f57de2fad23
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="iwpfhostsupport"></a>IWpfHostSupport
 응용 프로그램을 호스팅할 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] PresentationHost.exe 통해 콘텐츠를 호스트와 PresentationHost.exe 간의 통합 지점을 제공 하기 위해이 인터페이스를 구현 합니다.  
   
 ## <a name="remarks"></a>설명  
- [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)]웹 브라우저 같은 응용 프로그램에서 호스팅할 수 [!INCLUDE[TLA#tla_titlewinclient](../../../../includes/tlasharptla-titlewinclient-md.md)] 콘텐츠를 포함 하 여 [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)] 느슨한 XAML 및 합니다. 호스트에 [!INCLUDE[TLA#tla_titlewinclient](../../../../includes/tlasharptla-titlewinclient-md.md)] 콘텐츠, [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] 응용 프로그램의 인스턴스를 만들는 [WebBrowser 컨트롤](http://go.microsoft.com/fwlink/?LinkId=97911)합니다. 호스팅할 수 [!INCLUDE[TLA#tla_titlewinclient](../../../../includes/tlasharptla-titlewinclient-md.md)] PresentationHost.exe 호스팅된 제공 하는의 인스턴스를 만들고 [!INCLUDE[TLA#tla_titlewinclient](../../../../includes/tlasharptla-titlewinclient-md.md)] 에 표시 하기 위해 호스트에 콘텐츠는 [WebBrowser 컨트롤](http://go.microsoft.com/fwlink/?LinkId=97911)합니다.  
+ [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] 웹 브라우저 같은 응용 프로그램에서 호스팅할 수 [!INCLUDE[TLA#tla_titlewinclient](../../../../includes/tlasharptla-titlewinclient-md.md)] 콘텐츠를 포함 하 여 [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)] 느슨한 XAML 및 합니다. 호스트에 [!INCLUDE[TLA#tla_titlewinclient](../../../../includes/tlasharptla-titlewinclient-md.md)] 콘텐츠, [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] 응용 프로그램의 인스턴스를 만들는 [WebBrowser 컨트롤](http://go.microsoft.com/fwlink/?LinkId=97911)합니다. 호스팅할 수 [!INCLUDE[TLA#tla_titlewinclient](../../../../includes/tlasharptla-titlewinclient-md.md)] PresentationHost.exe 호스팅된 제공 하는의 인스턴스를 만들고 [!INCLUDE[TLA#tla_titlewinclient](../../../../includes/tlasharptla-titlewinclient-md.md)] 에 표시 하기 위해 호스트에 콘텐츠는 [WebBrowser 컨트롤](http://go.microsoft.com/fwlink/?LinkId=97911)합니다.  
   
  통합 사용 하 여 `IWpfHostSupport` PresentationHost.exe를 허용 합니다.  
   

@@ -1,31 +1,17 @@
 ---
-title: "Binding 태그 확장"
-ms.custom: 
+title: Binding 태그 확장
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 f1_keywords:
 - Binding
 helpviewer_keywords:
 - Binding markup extensions [WPF]
 - XAML [WPF], Binding markup extension
 ms.assetid: 83d6e2a4-1b0c-4fc8-bd96-b5e98800ab63
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: cc6a0616c6b462ffe6aca0a9adf27ac2ac7b7828
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 8fc860f52f8fde2aed3cae224c05bbcf08b864d3
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="binding-markup-extension"></a>Binding 태그 확장
 중간 식 개체 만들기와 런타임 시 해당 바인딩 요소에 적용 되는 데이터 컨텍스트를 해석 하는 데이터 바인딩된 값이 되도록 하 여 속성 값을 연기 합니다.  
@@ -125,7 +111,7 @@ ms.lasthandoff: 12/22/2017
  기본적인 수준에서 데이터 바인딩을 설명 하는이 항목에서 다루지 않습니다. 참조 [데이터 바인딩 개요](../../../../docs/framework/wpf/data/data-binding-overview.md)합니다.  
   
 > [!NOTE]
->  <xref:System.Windows.Data.MultiBinding>및 <xref:System.Windows.Data.PriorityBinding> 지원 하지 않는 한 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 확장 구문입니다. 속성 요소를 대신 사용 합니다. 에 대 한 참조 항목을 참조 <xref:System.Windows.Data.MultiBinding> 및 <xref:System.Windows.Data.PriorityBinding>합니다.  
+>  <xref:System.Windows.Data.MultiBinding> 및 <xref:System.Windows.Data.PriorityBinding> 지원 하지 않는 한 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 확장 구문입니다. 속성 요소를 대신 사용 합니다. 에 대 한 참조 항목을 참조 <xref:System.Windows.Data.MultiBinding> 및 <xref:System.Windows.Data.PriorityBinding>합니다.  
   
  XAML에 대 한 부울 값 대/소문자를 구분 합니다. 중 하나를 지정할 수는 예를 들어 `{Binding NotifyOnValidationError=true}` 또는 `{Binding NotifyOnValidationError=True}`합니다.  
   
@@ -133,7 +119,7 @@ ms.lasthandoff: 12/22/2017
   
  `Binding`은 태그 확장입니다. 태그 확장은 리터럴 값 또는 처리기 이외의으로 이름, 특성 값을 이스케이프 하는 되며 이러한 요구 사항은 특정 형식 또는 속성에 특성을 사용 하는 형식 변환기 보다 더 포괄적 때 일반적으로 구현 됩니다. XAML 용도에서 모든 마크업 확장의 `{` 및 `}` XAML 프로세서는 기준인 태그 확장 문자열 콘텐츠를 처리 해야 한다는 것을 인식 하는 규칙의 특성 구문에는 문자입니다. 자세한 내용은 [태그 확장 및 WPF XAML](../../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md)을 참조하세요.  
   
- `Binding`하는 예외적인 태그 확장은 <xref:System.Windows.Data.Binding> WPF의 XAML 구현에 대 한 확장 기능을 구현 하는 클래스는 다른 여러 메서드 및 XAML에 관련 되지 않은 속성에도 구현 합니다. 다른 멤버를 확인 하려고 <xref:System.Windows.Data.Binding> XAML 태그 확장으로 작동 하는 것 외에도 여러 데이터 바인딩 시나리오를 해결할 수 있는 하 게 자체 포함 된 클래스입니다.  
+ `Binding` 하는 예외적인 태그 확장은 <xref:System.Windows.Data.Binding> WPF의 XAML 구현에 대 한 확장 기능을 구현 하는 클래스는 다른 여러 메서드 및 XAML에 관련 되지 않은 속성에도 구현 합니다. 다른 멤버를 확인 하려고 <xref:System.Windows.Data.Binding> XAML 태그 확장으로 작동 하는 것 외에도 여러 데이터 바인딩 시나리오를 해결할 수 있는 하 게 자체 포함 된 클래스입니다.  
   
 ## <a name="see-also"></a>참고 항목  
  <xref:System.Windows.Data.Binding>  

@@ -1,13 +1,6 @@
 ---
-title: "애니메이션 개요"
-ms.custom: 
+title: 애니메이션 개요
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -15,20 +8,15 @@ helpviewer_keywords:
 - Storyboards [WPF], animations
 - animations [WPF], overview
 ms.assetid: bd9ce563-725d-4385-87c9-d7ee38cf79ea
-caps.latest.revision: "73"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 118d63bbbcd0cbb52d092af7002df2538df7790b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 5fb9550ddce4ead900206c2ece2f976ab8b42c4b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="animation-overview"></a>애니메이션 개요
 <a name="introduction"></a>
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]강력한 집합이 매력적인 사용자 인터페이스와 멋진 문서를 만들 수 있도록 하는 그래픽 및 레이아웃 기능을 제공 합니다. 애니메이션은 매력적인 사용자 인터페이스를 훨씬 더 화려하고 유용하게 만들어줄 수 있습니다. 방금 배경 색에 애니메이션을 적용 하거나 애니메이션을 적용 하 여 <xref:System.Windows.Media.Transform>, 유용한 시각적 표시를 제공 하거나 화면을 멋지게 전환을 만들 수 있습니다.  
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 강력한 집합이 매력적인 사용자 인터페이스와 멋진 문서를 만들 수 있도록 하는 그래픽 및 레이아웃 기능을 제공 합니다. 애니메이션은 매력적인 사용자 인터페이스를 훨씬 더 화려하고 유용하게 만들어줄 수 있습니다. 방금 배경 색에 애니메이션을 적용 하거나 애니메이션을 적용 하 여 <xref:System.Windows.Media.Transform>, 유용한 시각적 표시를 제공 하거나 화면을 멋지게 전환을 만들 수 있습니다.  
   
  이 개요에서는에 대 한 소개는 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 애니메이션, 타이밍 시스템입니다. 애니메이션에 중점을 둡니다 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 스토리 보드를 사용 하 여 개체입니다.  
 
@@ -46,7 +34,7 @@ ms.lasthandoff: 12/22/2017
   
 -   그런 다음 새 값으로 사각형을 업데이트한 후 그립니다.  
   
- 이전에 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], [!INCLUDE[TLA#tla_win](../../../../includes/tlasharptla-win-md.md)] 개발자가 만들고 타이밍 시스템을 관리할 하거나 특수 한 사용자 지정 라이브러리를 사용 해야 했습니다. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]관리 되는 코드를 통해 노출 되는 효율적인 타이밍 시스템 포함 및 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] 깊이에 통합 된 및의 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 프레임 워크입니다. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 애니메이션을 사용하면 쉽게 컨트롤 및 기타 그래픽 개체에 애니메이션 효과를 줄 수 있습니다.  
+ 이전에 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], [!INCLUDE[TLA#tla_win](../../../../includes/tlasharptla-win-md.md)] 개발자가 만들고 타이밍 시스템을 관리할 하거나 특수 한 사용자 지정 라이브러리를 사용 해야 했습니다. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 관리 되는 코드를 통해 노출 되는 효율적인 타이밍 시스템 포함 및 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] 깊이에 통합 된 및의 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 프레임 워크입니다. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 애니메이션을 사용하면 쉽게 컨트롤 및 기타 그래픽 개체에 애니메이션 효과를 줄 수 있습니다.  
   
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]는 타이밍 시스템을 관리하고 화면을 효율적으로 다시 그리는 모든 백그라운드 작업을 처리합니다. 그뿐 아니라 이러한 효과를 달성하는 기법이 아닌, 만들려는 효과에 집중할 수 있도록 하는 타이밍 클래스를 제공합니다. 또한 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]에서는 클래스가 상속할 수 있는 애니메이션 기본 클래스를 노출하여 사용자 고유의 애니메이션을 쉽게 만들 수 있도록 하므로 애니메이션을 사용자 지정할 수 있습니다. 이러한 사용자 지정 애니메이션은 표준 애니메이션 클래스에 비해 성능상의 이점도 큽니다.  
   
@@ -62,7 +50,7 @@ ms.lasthandoff: 12/22/2017
   
 -   사용 가능한 호환되는 애니메이션 형식이어야 합니다. (경우 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 제공 하지 않으면, 직접 만들 수 있습니다. 참조는 [사용자 지정 애니메이션 개요](../../../../docs/framework/wpf/graphics-multimedia/custom-animations-overview.md).)  
   
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]많은 개체가 포함 된 <xref:System.Windows.Media.Animation.IAnimatable> 속성입니다. 와 같은 컨트롤 <xref:System.Windows.Controls.Button> 및 <xref:System.Windows.Controls.TabControl>, 그리고 <xref:System.Windows.Controls.Panel> 및 <xref:System.Windows.Shapes.Shape> 개체에서 상속 <xref:System.Windows.DependencyObject>합니다. 해당 속성 대부분은 종속성 속성입니다.  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 많은 개체가 포함 된 <xref:System.Windows.Media.Animation.IAnimatable> 속성입니다. 와 같은 컨트롤 <xref:System.Windows.Controls.Button> 및 <xref:System.Windows.Controls.TabControl>, 그리고 <xref:System.Windows.Controls.Panel> 및 <xref:System.Windows.Shapes.Shape> 개체에서 상속 <xref:System.Windows.DependencyObject>합니다. 해당 속성 대부분은 종속성 속성입니다.  
   
  스타일 및 템플릿 컨트롤을 비롯한 거의 모든 위치에서 애니메이션을 사용할 수 있습니다. 애니메이션은 시각적일 필요가 없습니다. 이 섹션에 설명된 조건을 충족하지 않을 경우 사용자 인터페이스에 속하지 않는 개체에 애니메이션 효과를 줄 수 있습니다.  
   
@@ -268,7 +256,7 @@ ms.lasthandoff: 12/22/2017
   
 <a name="applyanimationstoproperty"></a>   
 ## <a name="applying-an-animation-to-a-property"></a>속성에 애니메이션 적용  
- 이전 섹션에서는 다양한 애니메이션 유형 및 타이밍 속성에 대해 설명합니다. 이 섹션에서는 애니메이션 효과를 주려는 속성에 애니메이션을 적용하는 방법을 보여 줍니다. <xref:System.Windows.Media.Animation.Storyboard>개체 속성에 애니메이션을 적용 하는 방법을 제공 합니다. A <xref:System.Windows.Media.Animation.Storyboard> 는 *컨테이너 타임 라인* 포함 된 애니메이션에 대 한 대상 정보를 제공 하는 합니다.  
+ 이전 섹션에서는 다양한 애니메이션 유형 및 타이밍 속성에 대해 설명합니다. 이 섹션에서는 애니메이션 효과를 주려는 속성에 애니메이션을 적용하는 방법을 보여 줍니다. <xref:System.Windows.Media.Animation.Storyboard> 개체 속성에 애니메이션을 적용 하는 방법을 제공 합니다. A <xref:System.Windows.Media.Animation.Storyboard> 는 *컨테이너 타임 라인* 포함 된 애니메이션에 대 한 대상 정보를 제공 하는 합니다.  
   
 ### <a name="targeting-objects-and-properties"></a>개체 및 속성을 대상으로 지정  
  <xref:System.Windows.Media.Animation.Storyboard> 클래스를 제공는 <xref:System.Windows.Media.Animation.Storyboard.TargetName%2A> 및 <xref:System.Windows.Media.Animation.Storyboard.TargetProperty%2A> 연결 된 속성입니다. 애니메이션에 이러한 속성을 설정하여 적용할 애니메이션을 지정합니다. 그러나 애니메이션이 개체를 대상으로 지정하려면 먼저 해당 개체에 이름을 지정해야 합니다.  

@@ -1,14 +1,6 @@
 ---
-title: "ICLRAppDomainResourceMonitor::GetCurrentCpuTime 메서드"
-ms.custom: 
+title: ICLRAppDomainResourceMonitor::GetCurrentCpuTime 메서드
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICLRAppDomainResourceMonitor.GetCurrentCpuTime
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: ebc9cc33-fcd6-4cae-9ecb-ea21c51874e6
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 2781cfb1e23db02ab8192c78bd0a3e585ee28b2b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 53deeab574716a426c1c4617abe279e72f27c04e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="iclrappdomainresourcemonitorgetcurrentcputime-method"></a>ICLRAppDomainResourceMonitor::GetCurrentCpuTime 메서드
 응용 프로그램 도메인이 만들어진 후 현재 응용 프로그램 도메인에서 실행 되는 동안 모든 스레드에서 사용 된 총 프로세서 시간을 가져옵니다.  
@@ -58,7 +46,7 @@ HRESULT GetCurrentCpuTime([in]  DWORD dwAppDomainId,
 |-------------|-----------------|  
 |S_OK|메서드가 완료되었습니다.|  
 |COR_E_APPDOMAINUNLOADED|응용 프로그램 도메인 언로드 되었습니다 또는 존재 하지 않습니다.|  
-|E_FAIL|응용 프로그램 도메인 리소스 모니터링은 사용할 수 없습니다.<br /><br /> 또는<br /><br /> 기타 모든 오류입니다.|  
+|E_FAIL|응용 프로그램 도메인 리소스 모니터링은 사용할 수 없습니다.<br /><br /> -또는-<br /><br /> 기타 모든 오류입니다.|  
   
 ## <a name="remarks"></a>설명  
  이 메서드는 관리 되는 관리 되지 않는 버전 <xref:System.AppDomain.MonitoringTotalProcessorTime%2A?displayProperty=nameWithType> 속성입니다.  
@@ -70,7 +58,7 @@ HRESULT GetCurrentCpuTime([in]  DWORD dwAppDomainId,
   
  **라이브러리:** MSCorEE.dll에 리소스로 포함  
   
- **.NET framework 버전:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET framework 버전:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>참고 항목  
  [ICLRAppDomainResourceMonitor 인터페이스](../../../../docs/framework/unmanaged-api/hosting/iclrappdomainresourcemonitor-interface.md)  

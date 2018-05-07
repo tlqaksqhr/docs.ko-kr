@@ -1,13 +1,7 @@
 ---
 title: Windows 스토어 앱 및 Windows 런타임에 대한 .NET Framework 지원
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - Windows Store apps, .NET Framework support for
 - Windows Runtime, .NET Framework support for
@@ -15,18 +9,13 @@ helpviewer_keywords:
 - .NET Framework, and Windows Store apps
 - .NET Framework, and Windows Runtime
 ms.assetid: 6fa7d044-ae12-4c54-b8ee-50915607a565
-caps.latest.revision: 20
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: dc6c1a31adb0c41225c39a186f876d43f7fb3e4b
-ms.sourcegitcommit: 68b60d38043e50104ccc90c76f8599b1ffe18346
+ms.openlocfilehash: cc673f62e38b854745b4c77522f191cc8bf3fbf6
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/20/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="net-framework-support-for-windows-store-apps-and-windows-runtime"></a>Windows 스토어 앱 및 Windows 런타임에 대한 .NET Framework 지원
 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]는 [!INCLUDE[wrt](../../../includes/wrt-md.md)]와 함께 다양한 소프트웨어 개발 시나리오를 지원합니다. 이러한 시나리오는 다음 세 가지 범주로 구분됩니다.  

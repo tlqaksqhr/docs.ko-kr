@@ -1,13 +1,6 @@
 ---
-title: "연습: 디자인 타임에 사용자 지정 Windows Forms 컨트롤 디버깅"
-ms.custom: 
+title: '연습: 디자인 타임에 사용자 지정 Windows Forms 컨트롤 디버깅'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -22,16 +15,11 @@ helpviewer_keywords:
 - walkthroughs [Windows Forms], debugging
 - design-time debugging
 ms.assetid: 1fd83ccd-3798-42fc-85a3-6cba99467387
-caps.latest.revision: "19"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 4dfdc102a5aeb2e3eaccde28a8ce57a1878141e4
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: b87c46b2182884f90b427498b9af696d14acac96
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="walkthrough-debugging-custom-windows-forms-controls-at-design-time"></a>연습: 디자인 타임에 사용자 지정 Windows Forms 컨트롤 디버깅
 사용자 지정 컨트롤을 만들 때는 경우 종종 있습니다의 디자인 타임 동작을 디버깅 하기 위해 필요 합니다. 사용자 지정 컨트롤에 대 한 사용자 지정 디자이너를 제작 하는 경우 특히 유용 합니다. 자세한 내용은 참조 [연습:는 Windows Forms 제어 하는 이점은의 Visual Studio 디자인 타임 기능을 만드는](../../../../docs/framework/winforms/controls/creating-a-wf-control-design-time-features.md)합니다.  

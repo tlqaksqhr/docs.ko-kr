@@ -1,13 +1,6 @@
 ---
-title: "방법: 디자이너를 사용하여 도구 모음 단추의 아이콘 정의"
-ms.custom: 
+title: '방법: 디자이너를 사용하여 도구 모음 단추의 아이콘 정의'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - toolbars [Windows Forms], adding icons to buttons
 - examples [Windows Forms], toolbars
@@ -16,22 +9,17 @@ helpviewer_keywords:
 - icons [Windows Forms], toolbar buttons
 - ToolBar control [Windows Forms], adding icons to buttons
 ms.assetid: d848f38e-67f2-49d4-8e88-01c845c06c02
-caps.latest.revision: "7"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 85be18b2cbb4e0fe729c335016fa8e7348f7be13
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: a6c08d33682e5e2cc936c3aa6aa109ad3389a367
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-define-an-icon-for-a-toolbar-button-using-the-designer"></a>방법: 디자이너를 사용하여 도구 모음 단추의 아이콘 정의
 > [!NOTE]
 >  <xref:System.Windows.Forms.ToolStrip> 컨트롤은 <xref:System.Windows.Forms.ToolBar> 컨트롤을 대체하고 여기에 다른 기능을 추가하여 새로 도입된 컨트롤이지만 이전 버전과의 호환성 및 이후 사용 가능성을 고려하여 <xref:System.Windows.Forms.ToolBar> 컨트롤을 계속 유지하도록 선택할 수 있습니다.  
   
- <xref:System.Windows.Forms.ToolBar>단추는 사용자가 쉽게 식별 하기 위해 그 안에서 아이콘을 표시할 수 있습니다. 이미지에 추가 통해 그렇게는 <xref:System.Windows.Forms.ImageList> 구성 요소에 연결 합니다는 <xref:System.Windows.Forms.ToolBar> 제어 합니다.  
+ <xref:System.Windows.Forms.ToolBar> 단추는 사용자가 쉽게 식별 하기 위해 그 안에서 아이콘을 표시할 수 있습니다. 이미지에 추가 통해 그렇게는 <xref:System.Windows.Forms.ImageList> 구성 요소에 연결 합니다는 <xref:System.Windows.Forms.ToolBar> 제어 합니다.  
   
  다음 절차를 수행 하려면는 **Windows 응용 프로그램** 포함 된 폼을 사용 하 여 프로젝트는 <xref:System.Windows.Forms.ToolBar> 제어 및 <xref:System.Windows.Forms.ImageList> 구성 요소입니다. 이러한 프로젝트 설정에 대 한 정보를 참조 하십시오. [하는 방법: Windows 응용 프로그램 프로젝트 만들기](http://msdn.microsoft.com/library/b2f93fed-c635-4705-8d0e-cf079a264efa) 및 [하는 방법: Windows Forms에 컨트롤 추가](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md)합니다.  
   

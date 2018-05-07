@@ -1,14 +1,6 @@
 ---
 title: 데이터 계약 버전 관리
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -17,17 +9,11 @@ helpviewer_keywords:
 - versioning [WCF]
 - data contracts [WCF], versioning
 ms.assetid: 4a0700cb-5f5f-4137-8705-3a3ecf06461f
-caps.latest.revision: 35
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: fd1679bb50a0dc6ee4997f7ae427c1cbdc0948ef
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 1ba51c51f30293e05dee17f9cf78cc049e1c751f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="data-contract-versioning"></a>데이터 계약 버전 관리
 응용 프로그램이 발전하면서 서비스가 사용하는 데이터 계약을 변경해야 할 수도 있습니다. 이 항목에서는 데이터 계약의 버전 관리 방법에 대해 설명합니다. 이 항목에서는 데이터 계약 버전 관리 메커니즘에 대해 설명합니다. 전체 개요 및 규정적 버전 관리 지침에 대 한 참조 [모범 사례: 데이터 계약 버전 관리](../../../../docs/framework/wcf/best-practices-data-contract-versioning.md)합니다.  
@@ -110,7 +96,7 @@ ms.lasthandoff: 04/30/2018
 ## <a name="schema-considerations"></a>스키마 고려 사항  
  참조에 대 한 설명은 데이터 계약 형식에 대해 어떤 스키마 생성, [데이터 계약 스키마 참조](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md)합니다.  
   
- 스키마 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]는 버전 관리에 대한 규정을 만들지 않는 데이터 계약 형식을 생성합니다. 즉, 특정 버전 형식에서 내보낸 스키마는 해당 버전에 존재하는 데이터 멤버만 포함합니다. <xref:System.Runtime.Serialization.IExtensibleDataObject> 인터페이스를 구현하더라도 특정 형식의 스키마는 변경되지 않습니다.  
+ 데이터 계약 형식을 버전 관리에 대 한 규정을 만들지 않는 성에 대 한 WCF 스키마를 생성 합니다. 즉, 특정 버전 형식에서 내보낸 스키마는 해당 버전에 존재하는 데이터 멤버만 포함합니다. <xref:System.Runtime.Serialization.IExtensibleDataObject> 인터페이스를 구현하더라도 특정 형식의 스키마는 변경되지 않습니다.  
   
  기본적으로 데이터 멤버를 선택적 요소로 스키마에 내보냅니다. 즉, `minOccurs`(XML 특성) 값이 0으로 설정됩니다. 필수 데이터 멤버는 `minOccurs`가 1로 설정된 상태에서 내보냅니다.  
   

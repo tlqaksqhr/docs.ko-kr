@@ -1,13 +1,6 @@
 ---
-title: "방법: ContextMenuStrip Opening 이벤트 처리"
-ms.custom: 
+title: '방법: ContextMenuStrip Opening 이벤트 처리'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -18,21 +11,16 @@ helpviewer_keywords:
 - event handling [Windows Forms], context menus
 - shortcut menus [Windows Forms], event handling
 ms.assetid: b661b3dd-7815-4cc2-a1aa-a9a391ab3427
-caps.latest.revision: "5"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 5de244abd35c83bce329882d679df8303ef3a833
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: c5af03f4726063754f81ec9226b4b161599b4121
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-handle-the-contextmenustrip-opening-event"></a>방법: ContextMenuStrip Opening 이벤트 처리
 동작을 사용자 지정할 수 있습니다 프로그램 <xref:System.Windows.Forms.ContextMenuStrip> 처리 하 여 컨트롤의 <xref:System.Windows.Forms.ToolStripDropDown.Opening> 이벤트입니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 코드 예제에서는 처리 하는 방법을 보여 줍니다.는 <xref:System.Windows.Forms.ToolStripDropDown.Opening> 이벤트입니다. 이벤트 처리기에 동적으로 항목에 추가 <xref:System.Windows.Forms.ContextMenuStrip> 제어 합니다. 전체 코드 예제를 보려면 [하는 방법: ToolStrip 추가 동적](../../../../docs/framework/winforms/controls/how-to-add-toolstrip-items-dynamically.md)합니다.  
   
  [!code-csharp[System.Windows.Forms.ToolStrip.Misc#42](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.Misc/CS/Program.cs#42)]

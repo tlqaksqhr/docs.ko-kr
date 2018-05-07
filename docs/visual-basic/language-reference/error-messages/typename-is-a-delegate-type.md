@@ -1,28 +1,19 @@
 ---
-title: '&#39; &lt;typename&gt;&#39; 대리자 형식이'
+title: '&#39;&lt;typename&gt; &#39; 대리자 형식이'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - bc32008
 - vbc32008
 helpviewer_keywords:
 - BC32008
 ms.assetid: dc6abba0-a9ad-450f-8899-87265bc84abc
-caps.latest.revision: 11
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 9428f0ac321b90e36d4d987381ed69b6c968894c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: c6d4244ce72dedee50b65ba19978149ce86b9e87
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="39lttypenamegt39-is-a-delegate-type"></a>&#39; &lt;typename&gt;&#39; 대리자 형식이
+# <a name="39lttypenamegt39-is-a-delegate-type"></a>&#39;&lt;typename&gt; &#39; 대리자 형식이
 '\<형식 이름 >' 대리자 형식이 있습니다. 대리자 구문에는 인수 목록으로 단일 AddressOf 식만 허용합니다. 종종 AddressOf 식은 대리자 구문 대신 사용할 수 있습니다.  
   
  A `New` 대리자 클래스의 인스턴스를 만드는 절 대리 생성자에는 잘못 된 인수 목록을 제공 합니다.  

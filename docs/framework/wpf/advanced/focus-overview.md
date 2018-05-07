@@ -1,13 +1,6 @@
 ---
-title: "포커스 개요"
-ms.custom: 
+title: 포커스 개요
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -15,16 +8,11 @@ helpviewer_keywords:
 - applications [WPF], focus
 - focus in applications [WPF]
 ms.assetid: 0230c4eb-0c8a-462b-ac4b-ae3e511659f4
-caps.latest.revision: "19"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: d35b65f88452085e601569b9dcfc62a541a1655f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 620839a0060469604d0affa6637c3cafac0f62c2
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="focus-overview"></a>포커스 개요
 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]에는 포커스에 관한 두 가지 주요 개념이 있습니다. 즉, 키보드 포커스와 논리 포커스입니다.  키보드 포커스는 키보드 입력을 수신하는 요소를 나타내고 논리 포커스는 포커스가 있는 포커스 범위의 요소를 나타냅니다.  이러한 개념은 이 개요에서 자세히 설명합니다.  포커스를 얻을 수 있는 여러 영역이 있는 복잡한 응용 프로그램을 작성할 때 이 개념의 차이를 이해하는 것이 중요합니다.  
@@ -69,11 +57,11 @@ ms.lasthandoff: 12/22/2017
  [!code-csharp[FocusSnippets#FocusSetIsFocusScope](../../../../samples/snippets/csharp/VS_Snippets_Wpf/FocusSnippets/CSharp/Window1.xaml.cs#focussetisfocusscope)]
  [!code-vb[FocusSnippets#FocusSetIsFocusScope](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/FocusSnippets/visualbasic/window1.xaml.vb#focussetisfocusscope)]  
   
- <xref:System.Windows.Input.FocusManager.GetFocusScope%2A>지정된 된 요소에 대 한 포커스 범위를 반환합니다.  
+ <xref:System.Windows.Input.FocusManager.GetFocusScope%2A> 지정된 된 요소에 대 한 포커스 범위를 반환합니다.  
   
  에 있는 클래스 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 는 기본적으로 포커스 범위인 <xref:System.Windows.Window>, <xref:System.Windows.Controls.MenuItem>, <xref:System.Windows.Controls.ToolBar>, 및 <xref:System.Windows.Controls.ContextMenu>합니다.  
   
- <xref:System.Windows.Input.FocusManager.GetFocusedElement%2A>지정한 포커스 범위에 대 한 포커스가 있는 요소를 가져옵니다.  <xref:System.Windows.Input.FocusManager.SetFocusedElement%2A>지정한 포커스 범위 내에서 포커스가 있는 요소를 설정합니다.  <xref:System.Windows.Input.FocusManager.SetFocusedElement%2A>초기 포커스가 있는 요소를 설정 하려면 일반적으로 사용 됩니다.  
+ <xref:System.Windows.Input.FocusManager.GetFocusedElement%2A> 지정한 포커스 범위에 대 한 포커스가 있는 요소를 가져옵니다.  <xref:System.Windows.Input.FocusManager.SetFocusedElement%2A> 지정한 포커스 범위 내에서 포커스가 있는 요소를 설정합니다.  <xref:System.Windows.Input.FocusManager.SetFocusedElement%2A> 초기 포커스가 있는 요소를 설정 하려면 일반적으로 사용 됩니다.  
   
  다음 예에서는 포커스 범위에서 포커스된 요소를 설정하고 포커스 범위의 포커스된 요소를 가져옵니다.  
   
@@ -97,20 +85,20 @@ ms.lasthandoff: 12/22/2017
 ## <a name="navigating-focus-programmatically"></a>포커스를 프로그래밍 방식으로 탐색  
  추가 [!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)] 는 포커스 작업할 <xref:System.Windows.UIElement.MoveFocus%2A> 및 <xref:System.Windows.UIElement.PredictFocus%2A>합니다.  
   
- <xref:System.Windows.FrameworkElement.MoveFocus%2A>응용 프로그램의 다음 요소에 포커스를 변경 합니다.  A <xref:System.Windows.Input.TraversalRequest> 방향을 지정 하는 데 사용 됩니다.   <xref:System.Windows.Input.FocusNavigationDirection> 에 전달 된 <xref:System.Windows.UIElement.MoveFocus%2A> 방향을 포커스를 이동할 수 있는 같은 지정 <xref:System.Windows.Input.FocusNavigationDirection.First>, <xref:System.Windows.Input.FocusNavigationDirection.Last>, <xref:System.Windows.Input.FocusNavigationDirection.Up> 및 <xref:System.Windows.Input.FocusNavigationDirection.Down>합니다.  
+ <xref:System.Windows.FrameworkElement.MoveFocus%2A> 응용 프로그램의 다음 요소에 포커스를 변경 합니다.  A <xref:System.Windows.Input.TraversalRequest> 방향을 지정 하는 데 사용 됩니다.   <xref:System.Windows.Input.FocusNavigationDirection> 에 전달 된 <xref:System.Windows.UIElement.MoveFocus%2A> 방향을 포커스를 이동할 수 있는 같은 지정 <xref:System.Windows.Input.FocusNavigationDirection.First>, <xref:System.Windows.Input.FocusNavigationDirection.Last>, <xref:System.Windows.Input.FocusNavigationDirection.Up> 및 <xref:System.Windows.Input.FocusNavigationDirection.Down>합니다.  
   
  다음 예제에서는 <xref:System.Windows.FrameworkElement.MoveFocus%2A> 포커스가 있는 요소를 변경할 수 있습니다.  
   
  [!code-csharp[focussample#FocusSampleMoveFocus](../../../../samples/snippets/csharp/VS_Snippets_Wpf/FocusSample/CSharp/Window1.xaml.cs#focussamplemovefocus)]
  [!code-vb[focussample#FocusSampleMoveFocus](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/FocusSample/visualbasic/window1.xaml.vb#focussamplemovefocus)]  
   
- <xref:System.Windows.FrameworkElement.PredictFocus%2A>포커스가 변경 될 경우 포커스를 받을 개체를 반환 합니다.  현재만 <xref:System.Windows.Input.FocusNavigationDirection.Up>, <xref:System.Windows.Input.FocusNavigationDirection.Down>, <xref:System.Windows.Input.FocusNavigationDirection.Left>, 및 <xref:System.Windows.Input.FocusNavigationDirection.Right> 에서 지 원하는 <xref:System.Windows.FrameworkElement.PredictFocus%2A>합니다.  
+ <xref:System.Windows.FrameworkElement.PredictFocus%2A> 포커스가 변경 될 경우 포커스를 받을 개체를 반환 합니다.  현재만 <xref:System.Windows.Input.FocusNavigationDirection.Up>, <xref:System.Windows.Input.FocusNavigationDirection.Down>, <xref:System.Windows.Input.FocusNavigationDirection.Left>, 및 <xref:System.Windows.Input.FocusNavigationDirection.Right> 에서 지 원하는 <xref:System.Windows.FrameworkElement.PredictFocus%2A>합니다.  
   
 <a name="Focus_Events"></a>   
 ## <a name="focus-events"></a>포커스 이벤트  
  키보드 포커스와 관련 된 이벤트는 <xref:System.Windows.Input.Keyboard.PreviewGotKeyboardFocus>, <xref:System.Windows.Input.Keyboard.GotKeyboardFocus> 및 <xref:System.Windows.Input.Keyboard.PreviewLostKeyboardFocus>, <xref:System.Windows.Input.Keyboard.LostKeyboardFocus>합니다.  이벤트에 연결 된 이벤트로 정의 된는 <xref:System.Windows.Input.Keyboard> 클래스 같지만 기본 요소 클래스에 해당 하는 라우트된 이벤트로 보다 쉽게 액세스할 수 있습니다.  이벤트에 대한 자세한 내용은 [라우트된 이벤트 개요](../../../../docs/framework/wpf/advanced/routed-events-overview.md)를 참조하세요.  
   
- <xref:System.Windows.Input.Keyboard.GotKeyboardFocus>요소가 키보드 포커스를 받을 때 발생 합니다.  <xref:System.Windows.Input.Keyboard.LostKeyboardFocus>요소가 키보드 포커스를 잃을 때 발생 합니다.  경우는 <xref:System.Windows.Input.Keyboard.PreviewGotKeyboardFocus> 이벤트 또는 <xref:System.Windows.Input.Keyboard.PreviewLostKeyboardFocusEvent> 이벤트를 처리 하 고 <xref:System.Windows.RoutedEventArgs.Handled%2A> 로 설정 된 `true`, 다음 포커스 변경 되지 것입니다.  
+ <xref:System.Windows.Input.Keyboard.GotKeyboardFocus> 요소가 키보드 포커스를 받을 때 발생 합니다.  <xref:System.Windows.Input.Keyboard.LostKeyboardFocus> 요소가 키보드 포커스를 잃을 때 발생 합니다.  경우는 <xref:System.Windows.Input.Keyboard.PreviewGotKeyboardFocus> 이벤트 또는 <xref:System.Windows.Input.Keyboard.PreviewLostKeyboardFocusEvent> 이벤트를 처리 하 고 <xref:System.Windows.RoutedEventArgs.Handled%2A> 로 설정 된 `true`, 다음 포커스 변경 되지 것입니다.  
   
  다음 예제에서는 연결 <xref:System.Windows.UIElement.GotKeyboardFocus> 및 <xref:System.Windows.UIElement.LostKeyboardFocus> 에 이벤트 처리기는 <xref:System.Windows.Controls.TextBox>합니다.  
   
@@ -126,7 +114,7 @@ ms.lasthandoff: 12/22/2017
  [!code-csharp[keyboardsample#KeyboardSampleLostFocus](../../../../samples/snippets/csharp/VS_Snippets_Wpf/KeyboardSample/CSharp/Window1.xaml.cs#keyboardsamplelostfocus)]
  [!code-vb[keyboardsample#KeyboardSampleLostFocus](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/KeyboardSample/visualbasic/window1.xaml.vb#keyboardsamplelostfocus)]  
   
- 논리 포커스와 관련 된 이벤트는 <xref:System.Windows.UIElement.GotFocus> 및 <xref:System.Windows.UIElement.LostFocus>합니다.  이러한 이벤트에 정의 된는 <xref:System.Windows.Input.FocusManager> 연결 된 이벤트로만 <xref:System.Windows.Input.FocusManager> CLR 이벤트 래퍼를 노출 하지 않습니다.  <xref:System.Windows.UIElement>및 <xref:System.Windows.ContentElement> 더 편리 하 게 이러한 이벤트를 노출 합니다.  
+ 논리 포커스와 관련 된 이벤트는 <xref:System.Windows.UIElement.GotFocus> 및 <xref:System.Windows.UIElement.LostFocus>합니다.  이러한 이벤트에 정의 된는 <xref:System.Windows.Input.FocusManager> 연결 된 이벤트로만 <xref:System.Windows.Input.FocusManager> CLR 이벤트 래퍼를 노출 하지 않습니다.  <xref:System.Windows.UIElement> 및 <xref:System.Windows.ContentElement> 더 편리 하 게 이러한 이벤트를 노출 합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  <xref:System.Windows.Input.FocusManager>  

@@ -1,17 +1,12 @@
 ---
 title: 참조 셀(F#)
 description: 'F # 참조 셀은 참조 의미론을 통해 변경할 수 있는 값을 만들 수 있도록 하는 저장소 위치 하는 방법에 대해 알아봅니다.'
-author: cartermp
-ms.author: phcart
 ms.date: 05/16/2016
-ms.topic: language-reference
-ms.prod: dotnet-fsharp
-ms.devlang: fsharp
-ms.openlocfilehash: e017adb2a031dff996892e2bb6585fc95f644ff9
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: d68726619bdfce5a9ed9bd94d6434427644cd9f1
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="reference-cells"></a>참조 셀
 

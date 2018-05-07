@@ -1,23 +1,16 @@
 ---
-title: "DataRepeater 컨트롤 소개(Visual Studio)"
+title: DataRepeater 컨트롤 소개(Visual Studio)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - repeating data
 - DataRepeater, overview
 - DataRepeater
 ms.assetid: 78a52a1d-65f0-4ecb-97ff-53bc114300c5
-caps.latest.revision: "8"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 699876cc568b22114e5ed8741c2fd0c053a137af
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: fc0cf9c358faf3e738eb3b24ec61577b88dbce4a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="introduction-to-the-datarepeater-control-visual-studio"></a>DataRepeater 컨트롤 소개(Visual Studio)
 Visual Basic Power Packs <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> 컨트롤은 데이터베이스 테이블의 행과 같은 반복된 데이터를 표시하는 컨트롤용 스크롤 가능한 컨테이너입니다. 데이터 레이아웃을 더 세밀하게 제어해야 할 경우 <xref:System.Windows.Forms.DataGridView> 컨트롤에 대한 대안으로 사용될 수 있습니다. <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> 관련된 컨트롤의 그룹을 스크롤 보기에서 여러 인스턴스를 만들어 "반복"입니다. 그러면 사용자가 동시에 여러 개의 레코드를 볼 수 있습니다.  

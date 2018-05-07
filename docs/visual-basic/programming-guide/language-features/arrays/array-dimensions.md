@@ -1,12 +1,6 @@
 ---
 title: Array Dimensions in Visual Basic
-ms.custom: 
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - dimensions, arrays
 - arrays [Visual Basic], dimensions
@@ -15,14 +9,11 @@ helpviewer_keywords:
 - rectangular arrays
 - ranking, arrays
 ms.assetid: 385e911b-18c1-4e98-9924-c6d279101dd9
-caps.latest.revision: "22"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 21e170ca5942862a26e05428fffaea7d1e875e19
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: cf295288dd034d744dceb71b5c58278be5cc2a2f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="array-dimensions-in-visual-basic"></a>Array Dimensions in Visual Basic
 A *차원* 은 방향 배열 요소의 사양을 변경할 수 있습니다. 각 날짜의 월에 대 한 총 판매를 포함 하는 배열에는 1 차원 (해당 월의 일)에 있습니다. 총 판매액이 들어 부서별로 각 날짜의 월에 대 한 배열 차원이 두 개 (부서 번호 및 월의 일). 배열의 차원 수 라고 해당 *순위*합니다.  
@@ -35,13 +26,13 @@ A *차원* 은 방향 배열 요소의 사양을 변경할 수 있습니다. 각
   
  다음 그림의 순위에 다른 배열 개념적 구조를 보여줍니다. 각 요소는 그림에 액세스 하는 인덱스 값을 보여 줍니다. 예를 들어 2 차원 배열의 두 번째 행의 첫 번째 요소 인덱스를 지정 하 여 액세스할 수 있습니다 `(1, 0)`합니다.  
   
- ![1 &#45;그래픽 다이어그램; 차원 배열](../../../../visual-basic/programming-guide/language-features/arrays/media/arrayexdimone.gif "ArrayExDimOne")  
+ ![하나는 그래픽 다이어그램&#45;차원 배열](../../../../visual-basic/programming-guide/language-features/arrays/media/arrayexdimone.gif "ArrayExDimOne")  
 1 차원 배열  
   
- ![2 &#45;그래픽 다이어그램; 차원 배열](../../../../visual-basic/programming-guide/language-features/arrays/media/arrayexdimtwo.gif "ArrayExDimTwo")  
+ ![2의 그래픽 다이어그램&#45;차원 배열](../../../../visual-basic/programming-guide/language-features/arrays/media/arrayexdimtwo.gif "ArrayExDimTwo")  
 2 차원 배열  
   
- ![3 &#45;그래픽 다이어그램; 차원 배열](../../../../visual-basic/programming-guide/language-features/arrays/media/arrayexdimthree.gif "ArrayExDimThree")  
+ ![세 개의의 그래픽 다이어그램&#45;차원 배열](../../../../visual-basic/programming-guide/language-features/arrays/media/arrayexdimthree.gif "ArrayExDimThree")  
 3 차원 배열  
   
 ### <a name="one-dimension"></a>차원이 두 개  

@@ -1,31 +1,20 @@
 ---
 title: 확장성을 위한 디자인
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - extending class libraries
 - extensibility with class libraries in .NET Framework
 - class library design guidelines [.NET Framework], extensibility
 - class library extensibility [.NET Framework]
 ms.assetid: 1cdb8740-871a-456c-9bd9-db96ca8d79b3
-caps.latest.revision: 11
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: b643c33a1418839c8aabf06d681083232e61553a
-ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
+ms.openlocfilehash: 68419fe293dd25936aa3c1e3def10bbe8852e175
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="designing-for-extensibility"></a>확장성을 위한 디자인
 프레임 워크를 디자인할 때의 중요 한 측면 있는지 확인 하는 프레임 워크의 확장성을 신중 하 게 고려 했습니다. 이렇게 하려면 다양 한 확장성 메커니즘와 관련 된 이점과 비용을 이해 해야 합니다. 이 장에서 확장성 메커니즘 중 어떤 것인지-서브클래싱, 이벤트, 가상 멤버, 콜백 및 등-프레임 워크의 요구 사항을 충족할 수 있습니다.  

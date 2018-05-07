@@ -1,29 +1,17 @@
 ---
-title: "방법: Windows Forms BindingSource 구성 요소를 사용하여 조회 테이블 만들기"
-ms.custom: 
+title: '방법: Windows Forms BindingSource 구성 요소를 사용하여 조회 테이블 만들기'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - lookup tables
 - tables [Windows Forms], creating lookup tables
 - BindingSource component [Windows Forms], creating a lookup table
 - BindingSource component [Windows Forms], examples
 ms.assetid: 622fce80-879d-44be-abbf-8350ec22ca2b
-caps.latest.revision: "13"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 324e4ed290b98d2268dd82fa55b81deaeb849770
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 83a34c9d1a4b3d1c2e9950d3c5427567022326b5
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-a-lookup-table-with-the-windows-forms-bindingsource-component"></a>방법: Windows Forms BindingSource 구성 요소를 사용하여 조회 테이블 만들기
 조회 테이블은 관련 테이블의 레코드에서 데이터를 표시하는 열이 포함된 데이터 테이블입니다. 다음 절차에서는 <xref:System.Windows.Forms.ComboBox> 컨트롤을 사용하여 부모에서 자식 테이블로의 외래 키 관계로 필드를 표시합니다.  
@@ -84,7 +72,7 @@ ms.lasthandoff: 12/22/2017
   
     4.  **데이터 연결 선택** 페이지의 사용 가능한 연결 목록에서 데이터 연결을 선택합니다. 원하는 데이터 연결을 사용할 수 없으면 **새 연결**을 선택하여 새 데이터 연결을 만듭니다.  
   
-    5.  **예, 연결을 저장합니다.**를 클릭하여 응용 프로그램 구성 파일에 연결 문자열을 저장합니다.  
+    5.  **예, 연결을 저장합니다.** 를 클릭하여 응용 프로그램 구성 파일에 연결 문자열을 저장합니다.  
   
     6.  응용 프로그램에 바인딩할 데이터베이스 개체를 선택합니다. 여기서는 외래 키 관계가 적용된 부모 테이블과 자식 테이블(예: Customers 및 Orders)을 선택합니다.  
   

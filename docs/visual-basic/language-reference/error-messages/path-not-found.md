@@ -1,23 +1,14 @@
 ---
 title: 경로를 찾을 수 없습니다.
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vbrID76
 ms.assetid: 644c45d5-4ffa-47e2-96db-6c4d2d5ae815
-caps.latest.revision: 6
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 29d0bd8374c60094a1dae7201c8a17f719e45e1d
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: c92417f960dcf9a1654dd1201f71c4c53f00257d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="path-not-found"></a>경로를 찾을 수 없습니다.
 파일 액세스 또는 디스크 액세스 작업 중 운영 체제를 지정된 된 경로 찾을 수 없습니다. 파일의 경로 드라이브 사양과, 디렉터리 및 파일을 찾을 이동 해야 하는 하위 디렉터리를 포함 합니다. 경로는 상대적이거나 절대적일 수 있습니다.  

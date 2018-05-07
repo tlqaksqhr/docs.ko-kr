@@ -1,23 +1,12 @@
 ---
 title: Async 및 Await를 사용한 비동기 프로그래밍(Visual Basic)
-ms.custom: ''
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: bd7e462b-583b-4395-9c36-45aa9e61072c
-caps.latest.revision: 4
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 18e3abb8d010d3766aa1b1239b3d22cc3cb9b47e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 0f30dbeafa8fcac0ebfd76496721f1455b20048b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="asynchronous-programming-with-async-and-await-visual-basic"></a>Async 및 Await를 사용한 비동기 프로그래밍(Visual Basic)
 비동기 프로그래밍을 사용하여 성능 병목 현상을 방지하고 응용 프로그램의 전체적인 응답성을 향상할 수 있습니다. 그러나 비동기 응용 프로그램을 쓰는 일반적인 기술이 복잡하여 해당 응용 프로그램을 쓰고, 디버깅하고, 유지 관리하기 어려울 수 있습니다.  
@@ -157,7 +146,7 @@ Dim urlContents As String = Await client.GetStringAsync()
   
  `Async` 및 `Await` 키워드로 인해 추가 스레드가 생성되지 않습니다. 비동기 메서드는 자체 스레드에서 실행되지 않으므로 다중 스레드가 필요하지 않습니다. 메서드는 현재 동기화 컨텍스트에서 실행되고 메서드가 활성화된 경우에만 스레드에서 시간을 사용합니다. <xref:System.Threading.Tasks.Task.Run%2A?displayProperty=nameWithType>을 사용하여 CPU 바인딩 작업을 백그라운드 스레드로 이동할 수 있지만 백그라운드 스레드는 프로세스를 지원하지 않고 결과를 사용할 수 있을 때까지 기다립니다.  
   
- 비동기 프로그래밍에 대한 비동기 기반 접근 방법은 거의 모든 경우에 기존 방법보다 선호됩니다. 특히, 이 접근 방식은 코드가 더 간단하고 경합 조건을 방지할 필요가 없기 때문에 IO 바인딩 작업의 <xref:System.ComponentModel.BackgroundWorker>보다 효과적입니다. 비동기 프로그래밍은 코드 실행에 대한 조합 세부 정보를 <xref:System.Threading.Tasks.Task.Run%2A?displayProperty=nameWithType>이 스레드 풀로 변환하는 작업과 구분하기 때문에 <xref:System.ComponentModel.BackgroundWorker>을 함께 사용하는 비동기 프로그래밍은 CPU 바인딩 작업을 위한 `Task.Run`보다 효과가 뛰어납니다.  
+ 비동기 프로그래밍에 대한 비동기 기반 접근 방법은 거의 모든 경우에 기존 방법보다 선호됩니다. 특히,이 방법은 보다 더 나은 <xref:System.ComponentModel.BackgroundWorker> I/o 바운드 작업 코드가 더 간단 하 고 보호 하지 않아도 때문에 경합 조건을 대 한 합니다. 비동기 프로그래밍은 코드 실행에 대한 조합 세부 정보를 <xref:System.Threading.Tasks.Task.Run%2A?displayProperty=nameWithType>이 스레드 풀로 변환하는 작업과 구분하기 때문에 <xref:System.ComponentModel.BackgroundWorker>을 함께 사용하는 비동기 프로그래밍은 CPU 바인딩 작업을 위한 `Task.Run`보다 효과가 뛰어납니다.  
   
 ##  <a name="BKMK_AsyncandAwait"></a> Async 및 Await  
  [Async](../../../../visual-basic/language-reference/modifiers/async.md) 한정자를 사용해서 메서드를 비동기 메서드로 지정하면 다음 두 기능이 활성화됩니다.  

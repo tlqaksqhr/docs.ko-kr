@@ -1,13 +1,6 @@
 ---
-title: "방법: Windows Forms DataGridView 컨트롤의 데이터 형식 지정"
-ms.custom: 
+title: '방법: Windows Forms DataGridView 컨트롤의 데이터 형식 지정'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -22,16 +15,11 @@ helpviewer_keywords:
 - data grids [Windows Forms], date values
 - cells [Windows Forms], text alignment
 ms.assetid: 8c33543c-9c08-4636-a65a-fdf714a529b7
-caps.latest.revision: "16"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 4be8ce245fdc17c55c03adb3d1e50f93b4e2a7e8
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 7e3e281a766e22ed76bbf6ae7726cba092a9741d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-format-data-in-the-windows-forms-datagridview-control"></a>방법: Windows Forms DataGridView 컨트롤의 데이터 형식 지정
 다음 절차를 사용 하 여 셀 값의 기본 형식을 보여 줍니다.는 <xref:System.Windows.Forms.DataGridView.DefaultCellStyle%2A> 의 속성을 <xref:System.Windows.Forms.DataGridView> 컨트롤 및 컨트롤의 특정 열입니다. 고급 데이터 형식에 대 한 정보를 참조 하십시오. [하는 방법: Windows Forms DataGridView 컨트롤에서 사용자 지정 데이터 형식](../../../../docs/framework/winforms/controls/how-to-customize-data-formatting-in-the-windows-forms-datagridview-control.md)합니다.  
@@ -64,7 +52,7 @@ ms.lasthandoff: 12/22/2017
      [!code-csharp[System.Windows.Forms.DataGridViewMisc#072](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/CS/datagridviewmisc.cs#072)]
      [!code-vb[System.Windows.Forms.DataGridViewMisc#072](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/VB/datagridviewmisc.vb#072)]  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  [!code-csharp[System.Windows.Forms.DataGridViewMisc#070](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/CS/datagridviewmisc.cs#070)]
  [!code-vb[System.Windows.Forms.DataGridViewMisc#070](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/VB/datagridviewmisc.vb#070)]  
   

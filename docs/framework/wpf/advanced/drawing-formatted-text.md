@@ -1,13 +1,6 @@
 ---
-title: "서식 있는 텍스트 그리기"
-ms.custom: 
+title: 서식 있는 텍스트 그리기
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -17,16 +10,11 @@ helpviewer_keywords:
 - formatted text [WPF]
 - drawing [WPF], formatted text
 ms.assetid: b1d851c1-331c-4814-9964-6fe769db6f1f
-caps.latest.revision: "14"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 364362e8377f02b5d6518e6ae4d71b6dd1eafc02
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 978c97b8cae24bff4ebdea8f4e56a940e5907fa6
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="drawing-formatted-text"></a>서식 있는 텍스트 그리기
 이 항목에서는의 기능에 대 한 개요는 <xref:System.Windows.Media.FormattedText> 개체입니다. 이 개체는 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 응용 프로그램에서 텍스트를 그리기 위한 하위 수준의 컨트롤을 제공합니다.  
@@ -42,11 +30,11 @@ FormattedText 메서드를 사용하여 표시된 텍스트
 >  [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] API에서 마이그레이션하는 개발자를 위해 [Win32 마이그레이션](#win32_migration) 섹션의 테이블에는 [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] DrawText 플래그와 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]의 거의 동급 플래그가 나열되어 있습니다.  
   
 ### <a name="reasons-for-using-formatted-text"></a>서식 있는 텍스트를 사용하는 이유  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]에서는 화면에 텍스트를 그리는 데 사용하는 여러 컨트롤이 포함되어 있습니다. 각 컨트롤은 다른 시나리오를 대상으로 하며 고유 기능 및 제한 사항 목록을 가지고 있습니다. 일반적으로 <xref:System.Windows.Controls.TextBlock> 요소 제한 텍스트 지원에 대 한 간단한 문장을 같이 필요한 경우 사용 되어야 합니다는 [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]합니다. <xref:System.Windows.Controls.Label>텍스트를 최소한 지원이 필요한 경우 사용할 수 있습니다. 자세한 내용은 [WPF의 문서](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)를 참조하세요.  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]에서는 화면에 텍스트를 그리는 데 사용하는 여러 컨트롤이 포함되어 있습니다. 각 컨트롤은 다른 시나리오를 대상으로 하며 고유 기능 및 제한 사항 목록을 가지고 있습니다. 일반적으로 <xref:System.Windows.Controls.TextBlock> 요소 제한 텍스트 지원에 대 한 간단한 문장을 같이 필요한 경우 사용 되어야 합니다는 [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]합니다. <xref:System.Windows.Controls.Label> 텍스트를 최소한 지원이 필요한 경우 사용할 수 있습니다. 자세한 내용은 [WPF의 문서](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)를 참조하세요.  
   
  <xref:System.Windows.Media.FormattedText> 서식 지정 기능 보다 큰 텍스트를 제공 하는 개체 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 텍스트 컨트롤이 텍스트 장식 요소로 사용 하려는 경우에 유용할 수 있습니다. 자세한 내용은 다음에 있는 [서식 있는 텍스트를 기하 도형으로 변환](#converting_formatted_text) 섹션을 참조하세요.  
   
- 또한는 <xref:System.Windows.Media.FormattedText> 개체는 텍스트 기반을 만드는 데 유용 <xref:System.Windows.Media.DrawingVisual>-파생 개체입니다. <xref:System.Windows.Media.DrawingVisual>도형, 이미지 또는 텍스트를 렌더링 하는 데 사용 되는 간단한 그리기 클래스가입니다. 자세한 내용은 [DrawingVisuals 샘플을 사용하는 적중 횟수 테스트](http://go.microsoft.com/fwlink/?LinkID=159994)를 참조하세요.  
+ 또한는 <xref:System.Windows.Media.FormattedText> 개체는 텍스트 기반을 만드는 데 유용 <xref:System.Windows.Media.DrawingVisual>-파생 개체입니다. <xref:System.Windows.Media.DrawingVisual> 도형, 이미지 또는 텍스트를 렌더링 하는 데 사용 되는 간단한 그리기 클래스가입니다. 자세한 내용은 [DrawingVisuals 샘플을 사용하는 적중 횟수 테스트](http://go.microsoft.com/fwlink/?LinkID=159994)를 참조하세요.  
   
 ## <a name="using-the-formattedtext-object"></a>FormattedText 개체 사용  
  서식 있는 텍스트를 만들려면 호출는 <xref:System.Windows.Media.FormattedText.%23ctor%2A> 를 만드는 생성자는 <xref:System.Windows.Media.FormattedText> 개체입니다. 첫 서식 있는 텍스트 문자열을 만든 다음 다양한 서식 지정 스타일을 적용할 수 있습니다.  
@@ -127,7 +115,7 @@ FormattedText 메서드를 사용하여 표시된 텍스트
 |DT_PREFIXONLY|없음|지원되지 않습니다.|  
 |DT_RIGHT|<xref:System.Windows.Media.FormattedText.TextAlignment%2A>|사용 하 여는 <xref:System.Windows.Media.FormattedText.TextAlignment%2A> 값으로 설정 된 속성 <xref:System.Windows.TextAlignment.Right>합니다. (WPF만 해당)|  
 |DT_RTLREADING|<xref:System.Windows.Media.FormattedText.FlowDirection%2A>|<xref:System.Windows.Media.FormattedText.FlowDirection%2A> 속성을 <xref:System.Windows.FlowDirection.RightToLeft>으로 설정합니다.|  
-|DT_SINGLELINE|없음|필요하지 않음. <xref:System.Windows.Media.FormattedText>하지 않는 한 개체를 한 줄 컨트롤로 동작 중 하나는 <xref:System.Windows.Media.FormattedText.MaxTextWidth%2A> 속성이 설정 되거나 텍스트는 캐리지 리턴/줄 바꿈 (CR/LF)가 포함 되어 있습니다.|  
+|DT_SINGLELINE|없음|필요하지 않음. <xref:System.Windows.Media.FormattedText> 하지 않는 한 개체를 한 줄 컨트롤로 동작 중 하나는 <xref:System.Windows.Media.FormattedText.MaxTextWidth%2A> 속성이 설정 되거나 텍스트는 캐리지 리턴/줄 바꿈 (CR/LF)가 포함 되어 있습니다.|  
 |DT_TABSTOP|없음|사용자 정의 탭 중지 위치는 지원하지 않습니다.|  
 |DT_TOP|<xref:System.Windows.Media.FormattedText.Height%2A>|필요하지 않음. 기본값은 위쪽 양쪽 맞춤입니다. 사용 하 여 다른 세로 위치 지정 값을 정의할 수 있습니다는 <xref:System.Windows.Media.FormattedText.Height%2A> 속성을 계산 하면 [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] 'y' DrawText 위치입니다.|  
 |DT_VCENTER|<xref:System.Windows.Media.FormattedText.Height%2A>|사용 하 여는 <xref:System.Windows.Media.FormattedText.Height%2A> 속성을 계산 하면 [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] 'y' DrawText 위치입니다.|  

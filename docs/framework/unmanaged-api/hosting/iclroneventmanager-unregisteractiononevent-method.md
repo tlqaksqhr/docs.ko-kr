@@ -1,14 +1,6 @@
 ---
-title: "ICLROnEventManager::UnregisterActionOnEvent 메서드"
-ms.custom: 
+title: ICLROnEventManager::UnregisterActionOnEvent 메서드
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICLROnEventManager.UnregisterActionOnEvent
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: 4c02ec37-cdf0-46b2-890e-235092741236
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 8d295817a7c6f8a177de3ff251904beeaf8ca828
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 7add5e85aac273b4d513a24196af8305082c417f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="iclroneventmanagerunregisteractiononevent-method"></a>ICLROnEventManager::UnregisterActionOnEvent 메서드
 지정된 된 이벤트에 대 한 이전에 등록 된 콜백 포인터를 등록 취소합니다.  
@@ -58,7 +46,7 @@ HRESULT UnregisterActionOnEvent (
   
 |HRESULT|설명|  
 |-------------|-----------------|  
-|S_OK|`UnregisterActionOnEvent`성공적으로 반환 합니다.|  
+|S_OK|`UnregisterActionOnEvent` 성공적으로 반환 합니다.|  
 |HOST_E_CLRNOTAVAILABLE|공용 언어 런타임 (CLR) 프로세스에 로드 되지 않았습니다 또는 CLR 중인 상태를 관리 코드를 실행 하거나 호출을 처리할 수 없습니다.|  
 |HOST_E_TIMEOUT|호출 시간이 초과 되었습니다.|  
 |HOST_E_NOT_OWNER|호출자에 게 잠금을 소유 하지 않습니다.|  
@@ -72,7 +60,7 @@ HRESULT UnregisterActionOnEvent (
   
  **라이브러리:** MSCorEE.dll에 리소스로 포함  
   
- **.NET framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>참고 항목  
  [EClrEvent 열거형](../../../../docs/framework/unmanaged-api/hosting/eclrevent-enumeration.md)  

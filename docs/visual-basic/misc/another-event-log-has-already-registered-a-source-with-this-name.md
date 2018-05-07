@@ -1,18 +1,12 @@
 ---
-title: "다른 이벤트 로그에서 이미 이 이름으로 소스를 등록했습니다."
+title: 다른 이벤트 로그에서 이미 이 이름으로 소스를 등록했습니다.
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology: devlang-visual-basic
-ms.topic: article
 ms.assetid: e6f5cd95-bb3f-4845-84fb-ae623a9bd44e
-caps.latest.revision: "13"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 0f04afd5d061a44f572d95abfb0173ad6fa2ac27
-ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
+ms.openlocfilehash: b12fd5dcdeaccb0dc294c44e4b8a898726978633
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="another-event-log-has-already-registered-a-source-with-this-name"></a>다른 이벤트 로그에서 이미 이 이름으로 소스를 등록했습니다.
 지정한 소스가 다른 이벤트 로그와 함께 등록되어 있는 이벤트 로그에 항목을 쓰려고 했습니다.  

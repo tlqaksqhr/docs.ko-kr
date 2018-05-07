@@ -1,13 +1,6 @@
 ---
-title: "혼합 응용 프로그램 문제 해결"
-ms.custom: 
+title: 혼합 응용 프로그램 문제 해결
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - overlapping controls [WPF]
 - Windows Forms [WPF], interoperability with
@@ -16,16 +9,11 @@ helpviewer_keywords:
 - hybrid applications [WPF interoperability]
 - message loops [WPF]
 ms.assetid: f440c23f-fa5d-4d5a-852f-ba61150e6405
-caps.latest.revision: "26"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 0a23f439b9b14d16a5440fa3b757b972304fdfa3
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 878761c030d4950e53ee24b76f7e29101584143a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="troubleshooting-hybrid-applications"></a>혼합 응용 프로그램 문제 해결
 <a name="introduction"></a> 이 항목에서는 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 및 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 기술을 둘 다 사용하는 혼합 응용 프로그램을 작성할 때 발생할 수 있는 몇 가지 일반적인 문제에 대해 설명합니다.  
@@ -38,7 +26,7 @@ ms.lasthandoff: 01/19/2018
   
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]에서 호스트되는 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 컨트롤은 항상 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 콘텐츠 위에 나타납니다.  
   
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]호스트 되는 콘텐츠는 <xref:System.Windows.Forms.Integration.ElementHost> 의 z 순서에 컨트롤 표시는 <xref:System.Windows.Forms.Integration.ElementHost> 제어 합니다. 겹칠 수 <xref:System.Windows.Forms.Integration.ElementHost> 컨트롤 이지만 호스팅된 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 콘텐츠 결합 하거나 상호 작용 하지 않습니다.  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 호스트 되는 콘텐츠는 <xref:System.Windows.Forms.Integration.ElementHost> 의 z 순서에 컨트롤 표시는 <xref:System.Windows.Forms.Integration.ElementHost> 제어 합니다. 겹칠 수 <xref:System.Windows.Forms.Integration.ElementHost> 컨트롤 이지만 호스팅된 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 콘텐츠 결합 하거나 상호 작용 하지 않습니다.  
   
 <a name="child_property"></a>   
 ## <a name="child-property"></a>자식 속성  
@@ -95,7 +83,7 @@ ms.lasthandoff: 01/19/2018
   
 <a name="dispose"></a>   
 ## <a name="dispose"></a>Dispose  
- 클래스를 올바르게 삭제하지 않으면 리소스가 누출될 수 있습니다. 하이브리드 응용 프로그램에 있는지 확인 하는 <xref:System.Windows.Forms.Integration.WindowsFormsHost> 및 <xref:System.Windows.Forms.Integration.ElementHost> 클래스가 삭제 또는 리소스 누수가 수 있습니다. [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]삭제 <xref:System.Windows.Forms.Integration.ElementHost> 시점을 제어 모달이 아닌 해당 <xref:System.Windows.Forms.Form> 부모가 닫힐 합니다. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]삭제 <xref:System.Windows.Forms.Integration.WindowsFormsHost> 응용 프로그램이 종료 될 때 요소입니다. 표시할 수는 <xref:System.Windows.Forms.Integration.WindowsFormsHost> 요소에는 <xref:System.Windows.Window> 에 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 메시지 루프입니다. 이 경우 코드에서 응용 프로그램이 종료되고 있다는 알림을 받을 수 없습니다.  
+ 클래스를 올바르게 삭제하지 않으면 리소스가 누출될 수 있습니다. 하이브리드 응용 프로그램에 있는지 확인 하는 <xref:System.Windows.Forms.Integration.WindowsFormsHost> 및 <xref:System.Windows.Forms.Integration.ElementHost> 클래스가 삭제 또는 리소스 누수가 수 있습니다. [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 삭제 <xref:System.Windows.Forms.Integration.ElementHost> 시점을 제어 모달이 아닌 해당 <xref:System.Windows.Forms.Form> 부모가 닫힐 합니다. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 삭제 <xref:System.Windows.Forms.Integration.WindowsFormsHost> 응용 프로그램이 종료 될 때 요소입니다. 표시할 수는 <xref:System.Windows.Forms.Integration.WindowsFormsHost> 요소에는 <xref:System.Windows.Window> 에 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 메시지 루프입니다. 이 경우 코드에서 응용 프로그램이 종료되고 있다는 알림을 받을 수 없습니다.  
   
 <a name="enabling_visual_styles"></a>   
 ## <a name="enabling-visual-styles"></a>비주얼 스타일 사용  

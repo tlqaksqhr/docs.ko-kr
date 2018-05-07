@@ -1,13 +1,6 @@
 ---
-title: "TreeView 스타일 및 템플릿"
-ms.custom: 
+title: TreeView 스타일 및 템플릿
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - ControlTemplate [WPF], TreeView
 - templates [WPF], TreeView
@@ -16,16 +9,11 @@ helpviewer_keywords:
 - styles [WPF], TreeView
 - TreeView [WPF], styles and templates
 ms.assetid: a49adb77-0202-4caa-b94a-8bb110d7fa9a
-caps.latest.revision: "16"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ea6e7d26ad70eef3aae4678b922ef01bccc9450b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 3a73127e409a96d5282272bd7a0e55a13a83a849
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="treeview-styles-and-templates"></a>TreeView 스타일 및 템플릿
 이 항목에서는 스타일 및 서식 파일에 대 한 설명의 <xref:System.Windows.Controls.TreeView> 제어 합니다. 기본값을 수정할 수 <xref:System.Windows.Controls.ControlTemplate> 고유한 모양을 제어할 수 있습니다. 자세한 내용은 [ControlTemplate을 만들어 기존 컨트롤의 모양 사용자 지정](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md)을 참조하세요.  

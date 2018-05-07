@@ -1,30 +1,19 @@
 ---
 title: 가상 멤버
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - overridable members
 - virtual members
 - members [.NET Framework], virtual
 ms.assetid: 8ff4eb97-0364-43ec-8a02-934b5cd94d19
-caps.latest.revision: 9
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 1b7abe1dbeb7f4888dd8ee4001b410cc583935c4
-ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
+ms.openlocfilehash: fa4227fc4476b86f07216650b22fccc25af7dd98
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="virtual-members"></a>가상 멤버
 가상 멤버는 하위 클래스의 동작을 변경 하는 따라서 재정의할 수 있습니다. 콜백을 제공 하 고 확장성 측면에서 매우 유사 하지만 실행 성능 및 메모리 사용량 측면에서 더 좋은 것은 있습니다. 또한 가상 멤버 만들어야 하는 특별 한 종류의 기존 유형 (특수화) 시나리오에서 더 자연 스러운 느낍니다.  

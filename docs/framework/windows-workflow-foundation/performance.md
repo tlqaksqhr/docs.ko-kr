@@ -1,24 +1,12 @@
 ---
 title: Windows Workflow Foundation 4 성능
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 67d2b3e8-3777-49f8-9084-abbb33b5a766
-caps.latest.revision: 9
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 4db761d2e6ba0231cb83d4ef5d1ee663c99178c5
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
-ms.translationtype: MT
+ms.openlocfilehash: 793645c442e960c43f00c3ea3c9b636a4c539706
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="windows-workflow-foundation-4-performance"></a>Windows Workflow Foundation 4 성능
 Dustin Metzgar  
@@ -29,12 +17,12 @@ Dustin Metzgar
   
  Microsoft [!INCLUDE[netfx40_long](../../../includes/netfx40-long-md.md)] 성능에 많은 투자를 Windows Workflow Foundation (WF)의 주 버전을 포함 합니다.  이 새로운 수정 버전에서는 .NET Framework 3.0 및 [!INCLUDE[wf1](../../../includes/wf1-md.md)]의 일부로 제공된 [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] 이전 버전의 디자인이 상당 부분 변경되었습니다. 성능과 유용성을 보다 향상시키기 위해 프로그래밍 모델, 런타임 및 도구의 핵심에서 다시 설계되었습니다. 이 항목에서는 이러한 수정 버전의 중요한 성능 특징을 보여 주고 이전 버전의 성능 특징과 비교합니다.  
   
- 개별 워크플로 구성 요소 성능은 WF3과 WF4 사이에 몇 배나 증가했습니다.  이에 비해 직접 코딩된 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 서비스와 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 워크플로 서비스 간의 차이는 매우 적은 편입니다.  WF4에서는 워크플로 대기 시간이 훨씬 줄었습니다.  지속성 성능은 2.5-3.0의 비율로 증가했습니다.  워크플로 추적을 통한 상태 모니터링의 오버헤드가 훨씬 줄었습니다.  이러한 특성은 응용 프로그램에서 WF4로 마이그레이션하거나 채택하는 강력한 이유가 됩니다.  
+ 개별 워크플로 구성 요소 성능은 WF3과 WF4 사이에 몇 배나 증가했습니다.  직접 코딩 된 Windows Communication Foundation (WCF) 서비스 간의 격차를 둡니다이 및 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 매우 적은 편 워크플로 서비스입니다.  WF4에서는 워크플로 대기 시간이 훨씬 줄었습니다.  지속성 성능은 2.5-3.0의 비율로 증가했습니다.  워크플로 추적을 통한 상태 모니터링의 오버헤드가 훨씬 줄었습니다.  이러한 특성은 응용 프로그램에서 WF4로 마이그레이션하거나 채택하는 강력한 이유가 됩니다.  
   
 ## <a name="terminology"></a>용어  
  이 항목의 나머지 부분에서는 [!INCLUDE[wf1](../../../includes/wf1-md.md)]에 도입된 [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] 버전을 WF4라고 지칭합니다.  [!INCLUDE[wf1](../../../includes/wf1-md.md)]은 .Net 3.0에서 도입되었고 [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] SP1을 통해 몇 가지 작은 수정이 있었습니다. 이 항목의 나머지 부분에서는 Workflow Foundation의 [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] 버전을 WF3이라고 지칭합니다. WF3은 WF4와 함께 [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)]에 포함되어 있습니다. WF3 아티팩트를 w f 4로 마이그레이션하는 방법에 대 한 자세한 내용은 참조: [Windows Workflow Foundation 4 마이그레이션 지침](http://go.microsoft.com/fwlink/?LinkID=153313)  
   
- [!INCLUDE[indigo1](../../../includes/indigo1-md.md)]은 서비스 기반 응용 프로그램을 빌드하기 위한 Microsoft의 통합 프로그래밍 모델이며, WF3과 함께 .NET 3.0의 일부로 처음 도입되었고 현재 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]의 주요 구성 요소 중 하나입니다.  
+ Windows Communication Foundation (WCF)는 서비스 지향 응용 프로그램을 빌드하기 위한 Microsoft의 통합된 프로그래밍 모델입니다. WF3과 함께 .NET 3.0의 일부로 처음 도입되었고 현재 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]의 주요 구성 요소 중 하나입니다.  
   
  Windows Server AppFabric은 IIS에서 실행되는 웹 응용 프로그램 및 복합 응용 프로그램을 쉽게 빌드하고, 확장 및 관리할 수 있게 하는 통합 기술 집합입니다. 서비스와 워크플로를 모니터링 및 관리하기 위한 도구를 제공합니다. 자세한 내용은 참조 [Windows Server AppFabric](http://msdn.microsoft.com/windowsserver/ee695849.aspx)  
   

@@ -1,21 +1,14 @@
 ---
 title: 장치를 사용할 수 없습니다.
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vbrID68
 ms.assetid: 9a89beda-140e-4b32-8d0a-2dc598ef279a
-caps.latest.revision: 7
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: ccf846937d1eb36c45cb91627978fec979f44edc
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 7d8bf87150fa6e05021dd430217ae130a6baa208
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="device-unavailable"></a>장치를 사용할 수 없습니다.
 네트워크 연결이 끊어졌거나, 액세스하려는 장치가 오프라인 상태이거나 존재하지 않습니다.  

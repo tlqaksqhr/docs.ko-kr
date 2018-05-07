@@ -1,28 +1,14 @@
 ---
-title: ".NET Framework XAML 서비스에서 사용할 사용자 지정 형식 정의"
-ms.custom: 
+title: .NET Framework XAML 서비스에서 사용할 사용자 지정 형식 정의
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - defining custom types [XAML Services]
 ms.assetid: c2667cbd-2f46-4a7f-9dfc-53696e35e8e4
-caps.latest.revision: 
-author: wadepickett
-ms.author: wpickett
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: c7cce479c7c7a5f6c7112f08f1e15f3bc7e4d366
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 9edc7baa1a540a71997cf5b1ed010ad5c7960d17
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="defining-custom-types-for-use-with-net-framework-xaml-services"></a>.NET Framework XAML 서비스에서 사용할 사용자 지정 형식 정의
 비즈니스 개체는 사용자 지정 형식을 정의 하거나 특정 프레임 워크에 대 한 종속성이 없는 유형이 때 참고할 수 XAML에 대 한 유용한 특정 있습니다. 이러한 사례를 따르는 경우.NET Framework XAML 서비스 XAML 판독기 및 XAML 작성기 수 형식의 XAML 특징을 검색 하 고 XAML 형식 시스템을 사용 하 여 XAML 노드 스트림의 적절 한 표현 합니다. 이 항목 형식 정의 멤버의 정의 및 CLR 형식 또는 멤버의 특성 설정에 대 한 모범 사례를 설명 합니다.  
@@ -103,7 +89,7 @@ ms.lasthandoff: 12/22/2017
  이 메서드에 대 한 값이 XAML 사용은 특성 형태로 일반적으로 입력 해야 합니다. 특성 형식에서 여야 텍스트 구문에 대 한 값 변환기 지원 하며이 특성에 `Get` *PropertyName* 접근자입니다.  
   
 ### <a name="attachable-member-stores"></a>연결 가능한 멤버 저장소  
- 접근자 메서드는 일반적으로 하지는 개체 그래프에 연결 가능한 멤버 값을 배치에 또는 개체 그래프에서 값을 검색 하 고 제대로 serialize 할 수 있는 방법을 제공 하기에 충분 합니다. 이 기능을 제공 하는 `target` 이전 접근자 시그니처에 개체 값을 저장할 수 있어야 합니다. 저장 메커니즘은 연결 가능한 멤버가 있지 않은 멤버 목록에는 대상에 연결할 수 있는 멤버는 연결 가능한 멤버 원칙와 일치 해야 합니다. .NET framework XAML 서비스 Api를 통해 연결할 수 있는 멤버를 저장에 대 한 구현 기술을 제공 <xref:System.Xaml.IAttachedPropertyStore> 및 <xref:System.Xaml.AttachablePropertyServices>합니다. <xref:System.Xaml.IAttachedPropertyStore>XAML 작성기를 검색할 저장소 구현 하는 데 사용 되는 형식에 구현 해야 및는 `target` 접근자의 합니다. 정적 <xref:System.Xaml.AttachablePropertyServices> Api는 접근자의 본문 내에서 사용 되 고 하 여 연결할 수 있는 멤버를 참조 해당 <xref:System.Xaml.AttachableMemberIdentifier>합니다.  
+ 접근자 메서드는 일반적으로 하지는 개체 그래프에 연결 가능한 멤버 값을 배치에 또는 개체 그래프에서 값을 검색 하 고 제대로 serialize 할 수 있는 방법을 제공 하기에 충분 합니다. 이 기능을 제공 하는 `target` 이전 접근자 시그니처에 개체 값을 저장할 수 있어야 합니다. 저장 메커니즘은 연결 가능한 멤버가 있지 않은 멤버 목록에는 대상에 연결할 수 있는 멤버는 연결 가능한 멤버 원칙와 일치 해야 합니다. .NET framework XAML 서비스 Api를 통해 연결할 수 있는 멤버를 저장에 대 한 구현 기술을 제공 <xref:System.Xaml.IAttachedPropertyStore> 및 <xref:System.Xaml.AttachablePropertyServices>합니다. <xref:System.Xaml.IAttachedPropertyStore> XAML 작성기를 검색할 저장소 구현 하는 데 사용 되는 형식에 구현 해야 및는 `target` 접근자의 합니다. 정적 <xref:System.Xaml.AttachablePropertyServices> Api는 접근자의 본문 내에서 사용 되 고 하 여 연결할 수 있는 멤버를 참조 해당 <xref:System.Xaml.AttachableMemberIdentifier>합니다.  
   
 ## <a name="xaml-related-clr-attributes"></a>XAML 관련 CLR 특성  
  올바르게 형식, 멤버 및 어셈블리 특성을 지정 하는 것이.NET Framework XAML 서비스 XAML 형식 시스템의 정보를 보고 하기 위해 중요 합니다. 이 정의 하거나 해당 XAML 판독기 및 XAML 작성기를 기반으로 하는 XAML을 사용 하 여 프레임 워크를 사용 하는 경우 또는 XAML 시스템 기반으로 하는 직접.NET Framework XAML 서비스 XAML 판독기 및 XAML 작성기와 함께 사용할 형식을 하려는 경우에 해당 됩니다.  

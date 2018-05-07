@@ -1,11 +1,6 @@
 ---
-title: "위치 및 이름으로 인수 전달(Visual Basic)"
-ms.custom: 
+title: 위치 및 이름으로 인수 전달(Visual Basic)
 ms.date: 02/01/2018
-ms.prod: .net
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - arguments [Visual Basic], passing by name
 - procedures [Visual Basic], arguments
@@ -29,11 +24,11 @@ helpviewer_keywords:
 ms.assetid: 1ad7358f-1da9-48da-a95b-f3c7ed41eff3
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 13f5e5a8da6a899d4920a25b250ca88b2a21f559
-ms.sourcegitcommit: 099aa20d9b6450d1b7452d782a55771a6ad8ff35
+ms.openlocfilehash: 49e313b2d5aa8302ea4b99e643e09f7b43659785
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/05/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="passing-arguments-by-position-and-by-name-visual-basic"></a>위치 및 이름으로 인수 전달(Visual Basic)
 호출 하는 경우는 `Sub` 또는 `Function` 프로시저 인수를 전달할 수 있습니다 *위치별* -프로시저의 정의에 나타나는 순서로-하거나 전달할 수 있습니다 *이름별*, 하지 않고 위치에 관계를 제공 합니다.  

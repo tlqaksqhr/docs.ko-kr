@@ -1,24 +1,12 @@
 ---
 title: 활동 유효성 검사 구성
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 25a4eccb-b8fc-4857-a01d-2683b6341219
-caps.latest.revision: 5
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: f0b7099cbae2faf53e99f73a52f4c25f42ed6834
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.openlocfilehash: e6fa043e0a0a96875319d556c19ab8ee90cd2139
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="configuring-activity-validation"></a>활동 유효성 검사 구성
 활동 유효성 검사를 사용하면 활동 작성자 및 사용자가 활동을 실행하기 이전에 활동 구성 오류를 식별하여 보고할 수 있습니다. Windows WF (Workflow Foundation)는 다음 세 가지 유형의 활동 유효성 검사를 제공합니다.  
