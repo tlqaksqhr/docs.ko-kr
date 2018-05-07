@@ -1,36 +1,22 @@
 ---
 title: '방법: 관리되는 Windows 서비스에서 WCF 서비스 호스팅'
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 8e37363b-4dad-4fb6-907f-73c30fac1d9a
-caps.latest.revision: 21
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: aab9780a0d40ab71710d454deb3144219557450f
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: c6c3e057fd07569d462f1bf25d1c283e42024a8b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-host-a-wcf-service-in-a-managed-windows-service"></a>방법: 관리되는 Windows 서비스에서 WCF 서비스 호스팅
-이 항목에서는 Windows 서비스에 의해 호스팅되는 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 서비스를 만드는 데 필요한 기본 단계에 대해 간략하게 설명합니다. 관리되는 Windows 서비스 호스팅 옵션을 통해 사용할 수 있는 시나리오는 메시지가 활성화되지 않은 보안 환경의 IIS(인터넷 정보 서비스) 외부에서 호스팅되는 장기 실행 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 서비스입니다. 서비스 수명은 대신 운영 체제에 의해 제어됩니다. 모든 버전의 Windows에서 이 호스팅 옵션을 사용할 수 있습니다.  
+이 항목에서는 Windows 서비스에서 호스팅하는 Windows Communication Foundation (WCF) 서비스를 만드는 데 필요한 기본 단계에 설명 합니다. 관리 되는 Windows 서비스 호스팅 옵션을 활성화 메시지를 보안 환경에서는 인터넷 정보 서비스 (IIS) 외부에서 호스팅되는 장기 실행 WCF 서비스에서 사용할 수 있는 시나리오 서비스 수명은 대신 운영 체제에 의해 제어됩니다. 모든 버전의 Windows에서 이 호스팅 옵션을 사용할 수 있습니다.  
   
- Windows 서비스는 MMC(Microsoft Management Console)의 Microsoft.ManagementConsole.SnapIn을 통해 관리되고 시스템 부팅 시 자동으로 시작되도록 구성될 수 있습니다. 이 호스팅 옵션은 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 서비스를 관리되는 Windows 서비스로 호스팅하는 응용 프로그램 도메인(AppDomain) 등록으로 구성되므로 서비스의 프로세스 수명은 Windows 서비스의 SCM(서비스 제어 관리자)에 의해 제어됩니다.  
+ Windows 서비스는 MMC(Microsoft Management Console)의 Microsoft.ManagementConsole.SnapIn을 통해 관리되고 시스템 부팅 시 자동으로 시작되도록 구성될 수 있습니다. 이 호스팅 옵션은 서비스의 프로세스 수명은 Windows 서비스에 대 한 서비스 제어 관리자 (SCM)으로 제어 됩니다를 Windows 서비스로 관리 되는 WCF 서비스를 호스트 하는 응용 프로그램 도메인 (AppDomain) 등록으로 구성 됩니다.  
   
- 서비스 코드에는 서비스 계약에 대한 서비스 구현, Windows 서비스 클래스 및 설치 관리자 클래스가 포함됩니다. 서비스 구현 클래스 `CalculatorService`는 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 서비스입니다. `CalculatorWindowsService`는 Windows 서비스입니다. Windows 서비스로 정규화하기 위해 클래스가 `ServiceBase`에서 상속되고 `OnStart` 및 `OnStop` 메서드를 구현합니다. `OnStart`에서 <xref:System.ServiceModel.ServiceHost> 형식에 대한 `CalculatorService`가 만들어지고 열립니다. `OnStop`에서 서비스가 중지되고 삭제됩니다. 또한 호스트는 응용 프로그램 설정에서 구성된 대로 기본 주소를 서비스 호스트에 제공합니다. <xref:System.Configuration.Install.Installer>에서 상속되는 설치 관리자 클래스를 사용하면 프로그램을 Installutil.exe 도구를 통해 Windows 서비스로 설치할 수 있습니다.  
+ 서비스 코드에는 서비스 계약에 대한 서비스 구현, Windows 서비스 클래스 및 설치 관리자 클래스가 포함됩니다. 서비스 구현 클래스 `CalculatorService`, WCF 서비스입니다. `CalculatorWindowsService`는 Windows 서비스입니다. Windows 서비스로 정규화하기 위해 클래스가 `ServiceBase`에서 상속되고 `OnStart` 및 `OnStop` 메서드를 구현합니다. `OnStart`에서 <xref:System.ServiceModel.ServiceHost> 형식에 대한 `CalculatorService`가 만들어지고 열립니다. `OnStop`에서 서비스가 중지되고 삭제됩니다. 또한 호스트는 응용 프로그램 설정에서 구성된 대로 기본 주소를 서비스 호스트에 제공합니다. <xref:System.Configuration.Install.Installer>에서 상속되는 설치 관리자 클래스를 사용하면 프로그램을 Installutil.exe 도구를 통해 Windows 서비스로 설치할 수 있습니다.  
   
 ### <a name="construct-the-service-and-provide-the-hosting-code"></a>서비스 생성 및 호스팅 코드 제공  
   
@@ -135,7 +121,7 @@ ms.lasthandoff: 04/30/2018
     > [!NOTE]
     >  [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] 명령 프롬프트를 사용하지 않는 경우에는 `%WinDir%\Microsoft.NET\Framework\v4.0.<current version>` 디렉터리가 시스템 경로에 있는지 확인합니다.  
   
-     명령 프롬프트에서 `services.msc`를 입력하여 SCM(서비스 제어 관리자)에 액세스합니다. Windows 서비스는 서비스에서 "WCFWindowsServiceSample"로 표시되어야 합니다. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 서비스는 Windows 서비스가 실행 중인 경우에만 클라이언트에 응답할 수 있습니다. 서비스를 시작 하려면 SCM 및 선택 "시작" 또는 형식 단추로 **net 시작 WCFWindowsServiceSample** 명령 프롬프트입니다.  
+     명령 프롬프트에서 `services.msc`를 입력하여 SCM(서비스 제어 관리자)에 액세스합니다. Windows 서비스는 서비스에서 "WCFWindowsServiceSample"로 표시되어야 합니다. WCF 서비스 Windows 서비스가 실행 중인 경우에 클라이언트에 응답할 수 있습니다. 서비스를 시작 하려면 SCM 및 선택 "시작" 또는 형식 단추로 **net 시작 WCFWindowsServiceSample** 명령 프롬프트입니다.  
   
 3.  서비스를 변경하려면 먼저 서비스를 중지하고 제거해야 합니다. 서비스를 중지 SCM에서 서비스를 마우스 오른쪽 단추로 클릭 하 고 "중지"를 선택 하려면 또는 **형식 net stop WCFWindowsServiceSample** 명령 프롬프트입니다. Windows 서비스를 중지한 다음 클라이언트를 실행할 경우 클라이언트가 서비스에 액세스하려고 할 때 <xref:System.ServiceModel.EndpointNotFoundException> 예외가 발생합니다. Windows 서비스 유형 제거에 **installutil /u bin\service.exe** 명령 프롬프트입니다.  
   

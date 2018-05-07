@@ -1,26 +1,15 @@
 ---
-title: "Windows Workflow 설명서에 대한 안내"
-ms.custom: 
+title: Windows Workflow 설명서에 대한 안내
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - WF [WF], guide to
 - Windows Workflow Foundation [WF], guide to
 ms.assetid: a75025be-f225-430f-90cf-98f7022db436
-caps.latest.revision: "14"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 0367d3c492947beb1a193650a8172f7e7293f4c5
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 9e5b363f28dce86e254540ff5e2f3ac9e7ca7d0e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="guide-to-the-windows-workflow-documentation"></a>Windows Workflow 설명서에 대한 안내
 이 항목에서는 Windows Workflow Foundation 설명서를 사용하는 방법을 설명합니다. 구체적인 관심사와 지식 수준에 따라 그룹화된 링크 문서부터 보시는 것이 좋습니다.  

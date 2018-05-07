@@ -1,28 +1,14 @@
 ---
 title: 시스템 제공 바인딩
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - bindings [WCF], system-provided
 ms.assetid: 2c243746-45ce-4588-995e-c17126a579a6
-caps.latest.revision: 60
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 4ccdab56a90f4114836dd9f0a56cc495657ee9c8
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
-ms.translationtype: MT
+ms.openlocfilehash: 12382b0886970bc48345107008ee449d9653ec4f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="system-provided-bindings"></a>시스템 제공 바인딩
 바인딩은 끝점과 통신할 때 사용할 통신 메커니즘을 지정하고 끝점에 연결하는 방법을 나타냅니다. 바인딩에 다음과 같은 요소가 포함됩니다.  
@@ -33,7 +19,7 @@ ms.lasthandoff: 04/30/2018
   
 -   인코딩은 끝점에 보내는 메시지에 사용할 텍스트/XML, 이진 또는 MTOM(Message Transmission Optimization Mechanism) 등의 연결 인코딩을 결정합니다.  
   
- 이 항목에서는 모든 시스템 제공 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 바인딩을 제공합니다. 이 중 하나라도 응용 프로그램의 정확한 조건을 충족하지 않을 경우 사용자 지정 바인딩을 만들 수 있습니다. 사용자 지정 바인딩 만들기에 대 한 자세한 내용은 참조 [사용자 지정 바인딩을](../../../docs/framework/wcf/extending/custom-bindings.md)합니다.  
+ 이 항목의 모든 Windows Communication Foundation (WCF) 시스템 제공 바인딩을 제공합니다. 이 중 하나라도 응용 프로그램의 정확한 조건을 충족하지 않을 경우 사용자 지정 바인딩을 만들 수 있습니다. 사용자 지정 바인딩 만들기에 대 한 자세한 내용은 참조 [사용자 지정 바인딩을](../../../docs/framework/wcf/extending/custom-bindings.md)합니다.  
   
  WS-Federation 프로토콜을 지원하는 안전하며 상호 운용 가능한 바인딩을 사용하면 페더레이션에 있는 조직이 사용자를 효율적으로 인증하고 권한을 부여할 수 있습니다.  
   

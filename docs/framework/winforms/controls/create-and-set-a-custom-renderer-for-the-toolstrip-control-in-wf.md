@@ -1,13 +1,6 @@
 ---
-title: "방법: Windows Forms의 ToolStrip 컨트롤에 대한 사용자 지정 렌더러 만들기 및 설정"
-ms.custom: 
+title: '방법: Windows Forms의 ToolStrip 컨트롤에 대한 사용자 지정 렌더러 만들기 및 설정'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -17,24 +10,19 @@ helpviewer_keywords:
 - examples [Windows Forms], toolbars
 - ToolStrip control [Windows Forms], rendering
 ms.assetid: 88a804ba-679f-4ba3-938a-0dc396199c5b
-caps.latest.revision: "16"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ad328af3aed9a319fe80d829b9556e867533e601
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 0b7a77a4a923065cba8c7ea366826f7b04126f11
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-and-set-a-custom-renderer-for-the-toolstrip-control-in-windows-forms"></a>방법: Windows Forms의 ToolStrip 컨트롤에 대한 사용자 지정 렌더러 만들기 및 설정
-<xref:System.Windows.Forms.ToolStrip>컨트롤에 게 쉽게 지원 테마 및 스타일. 설정 하 여 완전 한 사용자 지정 모양 및 동작 (모양 및 느낌)을 얻을 수 있습니다는 <xref:System.Windows.Forms.ToolStrip.Renderer%2A?displayProperty=nameWithType> 속성 또는 <xref:System.Windows.Forms.ToolStripManager.Renderer%2A?displayProperty=nameWithType> 속성을 사용자 지정 렌더러 합니다.  
+<xref:System.Windows.Forms.ToolStrip> 컨트롤에 게 쉽게 지원 테마 및 스타일. 설정 하 여 완전 한 사용자 지정 모양 및 동작 (모양 및 느낌)을 얻을 수 있습니다는 <xref:System.Windows.Forms.ToolStrip.Renderer%2A?displayProperty=nameWithType> 속성 또는 <xref:System.Windows.Forms.ToolStripManager.Renderer%2A?displayProperty=nameWithType> 속성을 사용자 지정 렌더러 합니다.  
   
  각 작업자에 게 렌더러를 할당할 수 있습니다 <xref:System.Windows.Forms.ToolStrip>, <xref:System.Windows.Forms.MenuStrip>, <xref:System.Windows.Forms.ContextMenuStrip>, 또는 <xref:System.Windows.Forms.StatusStrip> 컨트롤 또는 있습니다 사용할 수는 <xref:System.Windows.Forms.ToolStripManager.Renderer%2A> 속성을 설정 하 여 모든 개체를 적용 하려면는 <xref:System.Windows.Forms.ToolStrip.RenderMode%2A?displayProperty=nameWithType> 속성을 <xref:System.Windows.Forms.ToolStripRenderMode.ManagerRenderMode?displayProperty=nameWithType>합니다.  
   
 > [!NOTE]
->  <xref:System.Windows.Forms.ToolStrip.RenderMode%2A>반환 <xref:System.Windows.Forms.ToolStripRenderMode.Custom> 경우에만 값을 <xref:System.Windows.Forms.ToolStrip.Renderer%2A?displayProperty=nameWithType> 않습니다 `null`합니다.  
+>  <xref:System.Windows.Forms.ToolStrip.RenderMode%2A> 반환 <xref:System.Windows.Forms.ToolStripRenderMode.Custom> 경우에만 값을 <xref:System.Windows.Forms.ToolStrip.Renderer%2A?displayProperty=nameWithType> 않습니다 `null`합니다.  
   
 ### <a name="to-create-a-custom-renderer"></a>사용자 지정 렌더러를 만들려면  
   

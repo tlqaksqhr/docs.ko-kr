@@ -1,30 +1,18 @@
 ---
-title: "방법: SOAP 및 웹 클라이언트에 계약 공개"
-ms.custom: 
+title: '방법: SOAP 및 웹 클라이언트에 계약 공개'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: bb765a48-12f2-430d-a54d-6f0c20f2a23a
-caps.latest.revision: "21"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 0f13ba797b0c0e5c8b0d1eef271baf62f920f199
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: a9a730fe94d1df8c887a2eaf20c1e338bd056ed5
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-expose-a-contract-to-soap-and-web-clients"></a>방법: SOAP 및 웹 클라이언트에 계약 공개
-기본적으로 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]에서는 SOAP 클라이언트에 대해서만 끝점을 사용할 수 있도록 합니다. [하는 방법: 기본 WCF 웹 HTTP 서비스 만들기](../../../../docs/framework/wcf/feature-details/how-to-create-a-basic-wcf-web-http-service.md), 비 SOAP 클라이언트를 끝점 사용할 수 있습니다. 동일한 계약을 웹 끝점 및 SOAP 끝점으로 모두 사용해야 하는 경우가 있습니다. 이 항목에서는 이 작업을 수행하는 방법을 보여 줍니다.  
+에서는 기본적으로 Windows Communication Foundation (WCF) 끝점이 사용할 수 있는 SOAP 클라이언트에만 합니다. [하는 방법: 기본 WCF 웹 HTTP 서비스 만들기](../../../../docs/framework/wcf/feature-details/how-to-create-a-basic-wcf-web-http-service.md), 비 SOAP 클라이언트를 끝점 사용할 수 있습니다. 동일한 계약을 웹 끝점 및 SOAP 끝점으로 모두 사용해야 하는 경우가 있습니다. 이 항목에서는 이 작업을 수행하는 방법을 보여 줍니다.  
   
 ### <a name="to-define-the-service-contract"></a>서비스 계약을 정의하려면  
   
@@ -65,7 +53,7 @@ ms.lasthandoff: 12/22/2017
   
 ### <a name="to-call-service-operations-mapped-to-get-in-internet-explorer"></a>Internet Explorer에서 GET에 매핑된 서비스 작업을 호출하려면  
   
-1.  Internet Explorer를 열고 유형 "`http://localhost:8000/Web/EchoWithGet?s=Hello, world!`" ENTER 키를 누릅니다. URL에는 서비스 기준 주소("http://localhost:8000/"), 끝점 상대 주소(""), 호출할 서비스 작업("EchoWithGet") 및 앰퍼샌드(&)로 구분된 명명된 매개 변수의 목록 앞에 있는 물음표가 포함됩니다.  
+1.  Internet Explorer를 열고 유형 "`http://localhost:8000/Web/EchoWithGet?s=Hello, world!`" ENTER 키를 누릅니다. 서비스의 기본 주소를 포함 하는 URL ("http://localhost:8000/"), 끝점의 상대 주소 (""), 서비스 작업 호출 ("EchoWithGet") 및 물음표 및 앰퍼샌드로 구분 하는 명명 된 매개 변수 목록 (&).  
   
 ### <a name="to-call-service-operations-on-the-web-endpoint-in-code"></a>코드의 웹 끝점에서 서비스 작업을 호출하려면  
   
@@ -101,7 +89,7 @@ ms.lasthandoff: 12/22/2017
      [!code-csharp[htSoapWeb#9](../../../../samples/snippets/csharp/VS_Snippets_CFX/htsoapweb/cs/program.cs#9)]
      [!code-vb[htSoapWeb#9](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/htsoapweb/vb/program.vb#9)]  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음은 이 항목에 해당되는 전체 코드 목록입니다.  
   
  [!code-csharp[htSoapWeb#13](../../../../samples/snippets/csharp/VS_Snippets_CFX/htsoapweb/cs/program.cs#13)]

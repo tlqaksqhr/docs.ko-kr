@@ -1,38 +1,26 @@
 ---
-title: "방법: WSE3.0 서비스와 상호 운용하도록 WCF 클라이언트 구성"
-ms.custom: 
+title: '방법: WSE3.0 서비스와 상호 운용하도록 WCF 클라이언트 구성'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 3dadd7f1-d207-4ea5-a73b-3e8aa44407f8
-caps.latest.revision: "6"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ea71737e1e214aa1a035739901bf79f8ef4a9c7a
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: e30403f9c97f31e93c22a9658ffb74d4d02a49ec
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-configure-a-wcf-client-to-interoperate-with-wse30-services"></a>방법: WSE3.0 서비스와 상호 운용하도록 WCF 클라이언트 구성
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 클라이언트는 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 클라이언트가 2004년 8월 버전의 WS-Addressing 사양을 사용하도록 구성된 경우 Microsoft .NET 서비스용 WSE(Web Services Enhancements) 3.0과 유선 수준으로 호환됩니다.  
+Windows Communication Foundation (WCF) 클라이언트는 2004 년 8 월 버전의 Ws-addressing 사양 사용 하도록 WCF 클라이언트를 구성 하는 경우 Microsoft.NET (WSE) 서비스에 대 한 Web Services Enhancements 3.0과 유선 수준 호환 합니다.  
   
 ### <a name="to-configure-a-wcf-client-to-interoperate-with-a-wse-30-web-service"></a>WSE 3.0 웹 서비스와 상호 운용하도록 WCF 클라이언트를 구성하려면  
   
-1.  실행 된 [ServiceModel Metadata 유틸리티 도구 (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) 만들려는 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] WSE 3.0 웹 서비스에 대 한 클라이언트입니다.  
+1.  실행 된 [ServiceModel Metadata 유틸리티 도구 (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) WSE 3.0 웹 서비스에 대 한 WCF 클라이언트를 만듭니다.  
   
-     WSE 웹 서비스의 경우 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 클라이언트 클래스가 만들어집니다.  
+     WSE 웹 서비스에 대 한 WCF 클라이언트 클래스 생성 됩니다.  
   
-     만들기에 대 한 세부 정보에 대 한 한 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 클라이언트 참조는 [하는 방법: 클라이언트 만들기](../../../../docs/framework/wcf/how-to-create-a-wcf-client.md)합니다.  
+     WCF 클라이언트 만들기에 대 한 세부 정보를 참조 하십시오.는 [하는 방법: 클라이언트 만들기](../../../../docs/framework/wcf/how-to-create-a-wcf-client.md)합니다.  
   
 2.  WSE 3.0 웹 서비스와 통신할 수 있는 바인딩을 나타내는 클래스를 만듭니다.  
   
@@ -61,13 +49,13 @@ ms.lasthandoff: 01/19/2018
   
 3.  클라이언트 응용 프로그램 코드에서 바인딩 속성을 설정하기 위해 코드를 추가합니다.  
   
-     다음 코드 예제에서는 WSE 3.0 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 턴키 보안 어설션에 정의된 대로 `AnonymousForCertificate` 클라이언트가 반드시 메시지 보호 및 인증을 사용하도록 지정합니다. 또한 보안 세션 및 파생된 키도 필요합니다.  
+     다음 코드 예제에서는 WSE 3.0에 정의 된 대로 메시지 보호 및 인증 WCF 클라이언트 사용 해야 하도록 지정 `AnonymousForCertificate` 턴키 보안 어설션 합니다. 또한 보안 세션 및 파생된 키도 필요합니다.  
   
      [!code-csharp[c_WCFClientToWSEService#4](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_wcfclienttowseservice/cs/client.cs#4)]
      [!code-vb[c_WCFClientToWSEService#4](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_wcfclienttowseservice/vb/client.vb#4)]  
   
-## <a name="example"></a>예  
- 다음 코드 예제에서는 WSE 3.0 턴키 보안 어설션의 속성에 해당하는 속성을 노출하는 사용자 지정 바인딩을 정의합니다. `WseHttpBinding`이라는 사용자 지정 바인딩을 사용하여 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 클라이언트에 대한 바인딩 속성을 지정합니다.  
+## <a name="example"></a>예제  
+ 다음 코드 예제에서는 WSE 3.0 턴키 보안 어설션의 속성에 해당하는 속성을 노출하는 사용자 지정 바인딩을 정의합니다. 이름으로 지정 된 사용자 지정 바인딩을 `WseHttpBinding`, 그런 다음 WCF 클라이언트에 대 한 바인딩 속성을 지정 하는 데 사용 됩니다.  
   
   
 [!code-csharp[c_WCFClientToWSEService#0](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_wcfclienttowseservice/cs/client.cs#0)]

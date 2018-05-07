@@ -1,34 +1,20 @@
 ---
-title: "메타데이터 내보내기 및 가져오기"
-ms.custom: 
+title: 메타데이터 내보내기 및 가져오기
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - metadata [WCF], exporting and importing
 ms.assetid: 614a75bb-e0b0-4c95-b6d8-02cb5e5ddb38
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: a2785f74d9a07b267d836a9f6e6749d259a1ab21
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 497feb80d5930a784022877cfaa6e6c76a3047a1
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="exporting-and-importing-metadata"></a>메타데이터 내보내기 및 가져오기
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]에서 메타데이터 내보내기는 서비스 끝점을 설명하여 클라이언트에서 서비스 사용 방법을 이해할 수 있도록 병렬의 표준화된 표현으로 나타내는 프로세스입니다. 서비스 메타데이터 가져오기는 서비스 메타데이터에서 <xref:System.ServiceModel.Description.ServiceEndpoint> 인스턴스 또는 부분을 생성하는 프로세스입니다.  
+Windows Communication Foundation (WCF), 서비스 끝점을 설명 하는 클라이언트 서비스를 사용 하는 방법을 이해 하는 데 사용할 수 있는 병렬의 표준화 된 표현으로 하는 과정은 메타 데이터 내보내기. 서비스 메타데이터 가져오기는 서비스 메타데이터에서 <xref:System.ServiceModel.Description.ServiceEndpoint> 인스턴스 또는 부분을 생성하는 프로세스입니다.  
   
 ## <a name="exporting-metadata"></a>메타데이터 내보내기  
- <xref:System.ServiceModel.Description.ServiceEndpoint?displayProperty=nameWithType> 인스턴스에서 메타데이터를 내보내려면 <xref:System.ServiceModel.Description.MetadataExporter> 추상 클래스 구현을 사용합니다. <xref:System.ServiceModel.Description.WsdlExporter> 형식은 <xref:System.ServiceModel.Description.MetadataExporter>에 포함된 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 추상 클래스의 구현입니다.  
+ <xref:System.ServiceModel.Description.ServiceEndpoint?displayProperty=nameWithType> 인스턴스에서 메타데이터를 내보내려면 <xref:System.ServiceModel.Description.MetadataExporter> 추상 클래스 구현을 사용합니다. <xref:System.ServiceModel.Description.WsdlExporter> 종류는의 구현에서 <xref:System.ServiceModel.Description.MetadataExporter> 추상 WCF에 포함 된 클래스입니다.  
   
  <xref:System.ServiceModel.Description.WsdlExporter?displayProperty=nameWithType> 형식은 <xref:System.ServiceModel.Description.MetadataSet> 인스턴스에서 캡슐화된 연결된 정책 식을 사용하여 WSDL(웹 서비스 기술 언어) 메타데이터를 생성합니다. <xref:System.ServiceModel.Description.WsdlExporter?displayProperty=nameWithType> 인스턴스를 사용하여 <xref:System.ServiceModel.Description.ContractDescription> 개체 및 <xref:System.ServiceModel.Description.ServiceEndpoint> 개체에 대한 메타데이터를 반복적으로 내보낼 수 있습니다. <xref:System.ServiceModel.Description.ServiceEndpoint> 개체의 컬렉션을 내보내고, 해당 컬렉션을 특정 서비스 이름과 연결할 수도 있습니다.  
   
@@ -38,7 +24,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="importing-metadata"></a>메타데이터 가져오기  
   
 ### <a name="importing-wsdl-documents"></a>WSDL 문서 가져오기  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서 서비스 메타데이터를 가져오려면 <xref:System.ServiceModel.Description.MetadataImporter> 추상 클래스의 구현을 사용합니다. <xref:System.ServiceModel.Description.WsdlImporter?displayProperty=nameWithType> 형식은 <xref:System.ServiceModel.Description.MetadataImporter>에 포함된 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 추상 클래스의 구현입니다. <xref:System.ServiceModel.Description.WsdlImporter> 형식은 <xref:System.ServiceModel.Description.MetadataSet> 개체에 번들로 제공되는 연결된 정책과 함께 WSDL 메타데이터를 가져옵니다.  
+ Wcf에서 서비스 메타 데이터를 가져오려면의 구현을 사용는 <xref:System.ServiceModel.Description.MetadataImporter> 추상 클래스입니다. <xref:System.ServiceModel.Description.WsdlImporter?displayProperty=nameWithType> 종류는의 구현에서 <xref:System.ServiceModel.Description.MetadataImporter> 추상 WCF에 포함 된 클래스입니다. <xref:System.ServiceModel.Description.WsdlImporter> 형식은 <xref:System.ServiceModel.Description.MetadataSet> 개체에 번들로 제공되는 연결된 정책과 함께 WSDL 메타데이터를 가져옵니다.  
   
  <xref:System.ServiceModel.Description.WsdlImporter> 형식을 사용하여 메타데이터를 가져오는 방식을 제어할 수 있습니다. 끝점, 바인딩 또는 계약을 모두 가져올 수 있습니다. 특정 WSDL 서비스, 바인딩 또는 포트 종류와 관련된 모든 끝점을 가져올 수 있습니다. 특정 WSDL 포트에 대한 끝점, 특정 WSDL 바인딩에 대한 바인딩 또는 특정 WSDL 포트 종류에 대한 계약을 가져올 수도 있습니다.  
   

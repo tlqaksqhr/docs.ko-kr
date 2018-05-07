@@ -1,26 +1,12 @@
 ---
 title: 예상되는 예외
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 299a6987-ae6b-43c6-987f-12b034b583ae
-caps.latest.revision: 7
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 28af4a374d7ff474cf313aad711a3062f56263c9
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
-ms.translationtype: MT
+ms.openlocfilehash: 9552bf5178e3309d46e0f9220311c9e1a811c4b9
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="expected-exceptions"></a>예상되는 예외
 이 샘플에서는 형식화된 클라이언트를 사용할 때 예상되는 예외를 catch하는 방법을 보여 줍니다. 이 샘플에 따라는 [시작](../../../../docs/framework/wcf/samples/getting-started-sample.md) 계산기 서비스를 구현 하는 합니다. 이 샘플에서 클라이언트는 콘솔 응용 프로그램(.exe)이고 서비스는 IIS(인터넷 정보 서비스)를 통해 호스트됩니다.  
@@ -30,7 +16,7 @@ ms.lasthandoff: 04/27/2018
   
  이 샘플에서는 올바른 프로그램에서 처리해야 하는 두 가지 예상되는 예외 형식 `TimeoutException` 및 `CommunicationException`을 catch하고 처리하는 방법을 보여 줍니다.  
   
- [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 클라이언트에 있는 통신 메서드에서 throw되는 예외는 예상된 예외이거나 예기치 않은 예외입니다. 예기치 않은 예외에는 `OutOfMemoryException`과 같은 치명적인 실패와 `ArgumentNullException` 또는 `InvalidOperationException` 등의 프로그래밍 오류가 포함됩니다. 일반적으로 예기치 않은 오류를 처리하는 유용한 방법이 없기 때문에 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 클라이언트 통신 메서드를 호출할 때에는 보통 그런 오류를 catch하지 말아야 합니다.  
+ Windows Communication Foundation (WCF) 클라이언트에서 통신 메서드에서 throw 되는 예외는 예상 또는 예기치 않은 합니다. 예기치 않은 예외에는 `OutOfMemoryException`과 같은 치명적인 실패와 `ArgumentNullException` 또는 `InvalidOperationException` 등의 프로그래밍 오류가 포함됩니다. 일반적으로 예기치 않은 오류를 처리하는 유용한 방법이 없기 때문에 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 클라이언트 통신 메서드를 호출할 때에는 보통 그런 오류를 catch하지 말아야 합니다.  
   
  [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 클라이언트의 통신 메서드에서 예상되는 오류에는 `TimeoutException`, `CommunicationException`, 그리고 `CommunicationException`의 모든 파생 클래스가 포함됩니다. 이러한 오류는 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 클라이언트를 중단하고 통신 실패를 보고하면 안전하게 처리할 수 있는 통신 중의 문제를 나타냅니다. 어느 응용 프로그램에서나 외부 요소에 의해 이런 오류가 발생할 수 있기 때문에 올바른 응용 프로그램에서는 이런 예외를 catch할 수 있어야 하며, 이런 예외가 발생한 경우 복구할 수 있어야 합니다.  
   
@@ -89,7 +75,7 @@ Got System.TimeoutException
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  이 디렉터리가 없으면 [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4(.NET Framework 4용 WCF(Windows Communication Foundation) 및 WF(Windows Workflow Foundation) 샘플)](http://go.microsoft.com/fwlink/?LinkId=150780) 로 이동하여 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 및 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플을 모두 다운로드하세요. 이 샘플은 다음 디렉터리에 있습니다.  
+>  이 디렉터리가로 이동 [Windows Communication Foundation (WCF) 및.NET Framework 4에 대 한 Windows WF (Workflow Foundation) 샘플](http://go.microsoft.com/fwlink/?LinkId=150780) 모든 Windows Communication Foundation (WCF)를 다운로드 하 고 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플. 이 샘플은 다음 디렉터리에 있습니다.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Client\ExpectedExceptions`  
   

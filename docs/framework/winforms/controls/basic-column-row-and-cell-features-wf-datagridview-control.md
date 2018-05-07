@@ -1,29 +1,17 @@
 ---
-title: "Windows Forms DataGridView 컨트롤의 기본 열, 행 및 셀 기능"
-ms.custom: 
+title: Windows Forms DataGridView 컨트롤의 기본 열, 행 및 셀 기능
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - DataGridView control [Windows Forms], basic features
 - columns [Windows Forms], DataGridView control
 - data grids [Windows Forms], examples
 - DataGridView control [Windows Forms], examples
 ms.assetid: 78085f26-d5d2-4b75-813e-e932b72fd06f
-caps.latest.revision: "12"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: c70e1a88384041a2a1d958e48c672a961752202b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 3d6a44dce7dfd59d484d1a3495982a0d7d1f3e46
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="basic-column-row-and-cell-features-in-the-windows-forms-datagridview-control"></a>Windows Forms DataGridView 컨트롤의 기본 열, 행 및 셀 기능
 많은 기본 동작 `DataGridView` 단일 속성을 설정 하 여 셀, 행 및 열을 수정할 수 있습니다. 이 단원의 항목에서는 이러한 기능 중 가장 일반적으로 사용 중 몇 가지를 설명합니다.  

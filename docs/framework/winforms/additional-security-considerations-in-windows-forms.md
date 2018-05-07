@@ -1,29 +1,17 @@
 ---
-title: "Windows Forms의 추가 보안 고려 사항"
-ms.custom: 
+title: Windows Forms의 추가 보안 고려 사항
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - Windows Forms, secure calls to Windows API
 - security [Windows Forms]
 - security [Windows Forms], calling APIs
 - Clipboard [Windows Forms], securing access
 ms.assetid: 15abda8b-0527-47c7-aedb-77ab595f2bf1
-caps.latest.revision: "14"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 5c86374066cea2926b0ac4510afbc17749182fea
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: a1d8606eb972a6e3bea52f6230cb893a4bbb5aac
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="additional-security-considerations-in-windows-forms"></a>Windows Forms의 추가 보안 고려 사항
 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 보안 설정으로 인해 부분적으로 신뢰할 수 있는 환경에서는 로컬 컴퓨터에서와는 다르게 응용 프로그램이 실행될 수 있습니다. [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]에서는 여러 가지 중에서도 파일 시스템, 네트워크 및 관리되지 않는 API와 같은 중요한 로컬 리소스에 대한 액세스를 제한합니다. 보안 설정은 Microsoft Win32 API 또는 보안 시스템에서 확인할 수 없는 기타 API를 호출하는 기능에 영향을 줍니다. 또한 파일, 데이터 액세스, 인쇄를 비롯한 응용 프로그램의 다른 측면에도 영향을 줍니다. 부분 신뢰 환경에서의 파일 및 데이터 액세스에 대한 자세한 내용은 [Windows Forms의 파일 및 데이터 액세스 추가 보안](../../../docs/framework/winforms/more-secure-file-and-data-access-in-windows-forms.md)을 참조하세요. 부분 신뢰 환경에서의 인쇄에 대한 자세한 내용은 [Windows Forms의 인쇄 추가 보안](../../../docs/framework/winforms/more-secure-printing-in-windows-forms.md)을 참조하세요.  
@@ -55,7 +43,7 @@ ms.lasthandoff: 01/19/2018
   
  각 사용 권한 수준은로 식별 되는 <xref:System.Security.Permissions.UIPermissionWindow> 열거형을 사용 하면 상위 수준 보다 더 적은 작업 합니다. 다음 표에서 의해 제한 되는 작업을 나타내는 <xref:System.Security.Permissions.UIPermissionWindow.SafeTopLevelWindows> 및 <xref:System.Security.Permissions.UIPermissionWindow.SafeSubWindows> 값입니다. 각 멤버에 필요한 정확한 권한은 .NET Framework 클래스 라이브러리 설명서에서 해당 멤버의 항목을 참조하세요.  
   
- <xref:System.Security.Permissions.UIPermissionWindow.SafeTopLevelWindows>다음 표에 나열 된 작업을 제한 하는 권한입니다.  
+ <xref:System.Security.Permissions.UIPermissionWindow.SafeTopLevelWindows> 다음 표에 나열 된 작업을 제한 하는 권한입니다.  
   
 |구성 요소|제한된 작업|  
 |---------------|------------------------|  
@@ -87,11 +75,11 @@ ms.lasthandoff: 01/19/2018
   
 |구성 요소|멤버|  
 |---------------|------------|  
-|<xref:System.Windows.Forms.Application>|-   <xref:System.Windows.Forms.Application.AddMessageFilter%2A> 메서드<br />-   <xref:System.Windows.Forms.Application.CurrentInputLanguage%2A>속성<br />-   `Exit` 메서드<br />-   <xref:System.Windows.Forms.Application.ExitThread%2A> 메서드<br />-   <xref:System.Windows.Forms.Application.ThreadException>이벤트|  
-|<xref:System.Windows.Forms.CommonDialog>|-   <xref:System.Windows.Forms.CommonDialog.HookProc%2A> 메서드<br />-   <xref:System.Windows.Forms.CommonDialog.OwnerWndProc%2A>\ method<br />-   <xref:System.Windows.Forms.CommonDialog.Reset%2A> 메서드<br />-   <xref:System.Windows.Forms.CommonDialog.RunDialog%2A> 메서드|  
+|<xref:System.Windows.Forms.Application>|-   <xref:System.Windows.Forms.Application.AddMessageFilter%2A> 메서드<br />-   <xref:System.Windows.Forms.Application.CurrentInputLanguage%2A> 속성<br />-   `Exit` 메서드<br />-   <xref:System.Windows.Forms.Application.ExitThread%2A> 메서드<br />-   <xref:System.Windows.Forms.Application.ThreadException> 이벤트|  
+|<xref:System.Windows.Forms.CommonDialog>|-   <xref:System.Windows.Forms.CommonDialog.HookProc%2A> 메서드<br />-   <xref:System.Windows.Forms.CommonDialog.OwnerWndProc%2A>\ 메서드<br />-   <xref:System.Windows.Forms.CommonDialog.Reset%2A> 메서드<br />-   <xref:System.Windows.Forms.CommonDialog.RunDialog%2A> 메서드|  
 |<xref:System.Windows.Forms.Control>|-   <xref:System.Windows.Forms.Control.CreateParams%2A> 메서드<br />-   <xref:System.Windows.Forms.Control.DefWndProc%2A> 메서드<br />-   <xref:System.Windows.Forms.Control.DestroyHandle%2A> 메서드<br />-   <xref:System.Windows.Forms.Control.WndProc%2A> 메서드|  
-|<xref:System.Windows.Forms.Help>|-   <xref:System.Windows.Forms.Help.ShowHelp%2A>메서드<br />-   <xref:System.Windows.Forms.Help.ShowHelpIndex%2A> 메서드|  
-|<xref:System.Windows.Forms.NativeWindow>|-   <xref:System.Windows.Forms.NativeWindow>클래스|  
+|<xref:System.Windows.Forms.Help>|-   <xref:System.Windows.Forms.Help.ShowHelp%2A> 메서드<br />-   <xref:System.Windows.Forms.Help.ShowHelpIndex%2A> 메서드|  
+|<xref:System.Windows.Forms.NativeWindow>|-   <xref:System.Windows.Forms.NativeWindow> 클래스|  
 |<xref:System.Windows.Forms.Screen>|-   <xref:System.Windows.Forms.Screen.FromHandle%2A> 메서드|  
 |<xref:System.Windows.Forms.SendKeys>|-   <xref:System.Windows.Forms.SendKeys.Send%2A> 메서드<br />-   <xref:System.Windows.Forms.SendKeys.SendWait%2A> 메서드|  
   

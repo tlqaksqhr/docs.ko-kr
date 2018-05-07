@@ -1,27 +1,15 @@
 ---
-title: "방법: MDI 상위 폼 만들기"
-ms.custom: 
+title: '방법: MDI 상위 폼 만들기'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - parent forms
 - MDI [Windows Forms], creating forms
 ms.assetid: 12c71221-2377-4bb6-b10b-7b4b300fd462
-caps.latest.revision: "12"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 0147bc0777fdf3168ab0bc36ced0943571187d3c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 8d7a25b771488540d4867143a62c5c2487803a95
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-mdi-parent-forms"></a>방법: MDI 상위 폼 만들기
 > [!IMPORTANT]
@@ -40,7 +28,7 @@ ms.lasthandoff: 12/22/2017
     > [!NOTE]
     >  **속성** 창에서 속성을 설정하는 중에 원하는 경우 `WindowState` 속성을 **Maximized**(최대화)로 설정할 수도 있습니다. 부모 양식을 최대화하면 MDI 자식 창을 가장 쉽게 조작할 수 있기 때문입니다. 또한 MDI 부모 폼에는 <xref:System.Windows.Forms.Control.BackColor%2A?displayProperty=nameWithType> 속성을 사용하여 설정하는 배경색이 아니라 Windows 시스템 제어판에 설정된 시스템 색이 선택됩니다.  
   
-3.  **도구 상자**에서 **MenuStrip** 컨트롤을 양식으로 끌어옵니다. **텍스트** 속성을 **새로 만들기(&N)** 및 **닫기(&C)**라는 하위 항목이 있는 **파일(&F)**로 설정하여 최상위 메뉴 항목을 만듭니다. **창(&W)**이라는 최상위 메뉴 항목도 만듭니다.  
+3.  **도구 상자**에서 **MenuStrip** 컨트롤을 양식으로 끌어옵니다. **텍스트** 속성을 **새로 만들기(&N)** 및 **닫기(&C)** 라는 하위 항목이 있는 **파일(&F)** 로 설정하여 최상위 메뉴 항목을 만듭니다. **창(&W)** 이라는 최상위 메뉴 항목도 만듭니다.  
   
      런타임에 첫 번째 메뉴가 작성되고 메뉴 항목은 숨겨지며 두 번째 메뉴는 열려 있는 MDI 자식 창을 추적합니다. 이제 MDI 부모 창이 만들어졌습니다.  
   

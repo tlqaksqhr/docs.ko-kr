@@ -1,23 +1,12 @@
 ---
-title: "속성 vs입니다. 인수"
-ms.custom: 
+title: 속성 vs입니다. 인수
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 14651389-4a49-4cbb-9ddf-c83fdc155df1
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: b1b9083ecd147a1247209b272dfd1d7b0e3c74f2
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: a6ea4755599f18e8bbaa8187941623578d2168ac
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="properties-vs-arguments"></a>속성 vs입니다. 인수
 데이터를 작업으로 전달하는 데 사용할 수 있는 여러 가지 옵션이 있습니다. <xref:System.Activities.InArgument>를 사용하는 것 외에 표준 CLR 속성이나 공용 <xref:System.Activities.ActivityAction> 속성을 사용하여 데이터를 받는 작업을 개발할 수도 있습니다. 이 항목에서는 적절한 메서드 형식을 선택하는 방법에 대해 설명합니다.  

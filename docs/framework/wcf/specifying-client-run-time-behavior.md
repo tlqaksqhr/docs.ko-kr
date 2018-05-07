@@ -1,34 +1,20 @@
 ---
 title: 클라이언트 런타임 동작 지정
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - behaviors [WCF], system-provided client
 ms.assetid: d16d3405-be70-4edb-8f62-b5f614ddeca5
-caps.latest.revision: 8
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: fb6ba82af23f51e43da57adb0e65c77ee3436676
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
-ms.translationtype: MT
+ms.openlocfilehash: dbee1fecda66dc377513bdf8cae4645f009b6384
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="specifying-client-run-time-behavior"></a>클라이언트 런타임 동작 지정
-[!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 클라이언트는 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 서비스와 마찬가지로 클라이언트 응용 프로그램에 맞게 런타임 동작을 수정하도록 구성될 수 있습니다. 세 가지 특성을 사용하여 클라이언트 런타임 동작을 지정할 수 있습니다. 이중 클라이언트 콜백 개체는 <xref:System.ServiceModel.CallbackBehaviorAttribute> 및 <xref:System.ServiceModel.Description.CallbackDebugBehavior> 특성을 사용하여 런타임 동작을 수정할 수 있습니다. 다른 특성인 <xref:System.ServiceModel.Description.ClientViaBehavior>는 논리 대상과 직접 네트워크 대상을 구분하는 데 사용할 수 있습니다. 또한 이중 클라이언트 콜백 형식은 서비스측 동작 중 일부를 사용할 수 있습니다. 자세한 내용은 참조 [서비스 런타임 동작 지정](../../../docs/framework/wcf/specifying-service-run-time-behavior.md)합니다.  
+클라이언트 응용 프로그램에 맞게 런타임 동작을 수정 하려면 Windows Communication Foundation (WCF) 서비스와 같은 Windows Communication Foundation (WCF) 클라이언트를 구성할 수 있습니다. 세 가지 특성을 사용하여 클라이언트 런타임 동작을 지정할 수 있습니다. 이중 클라이언트 콜백 개체는 <xref:System.ServiceModel.CallbackBehaviorAttribute> 및 <xref:System.ServiceModel.Description.CallbackDebugBehavior> 특성을 사용하여 런타임 동작을 수정할 수 있습니다. 다른 특성인 <xref:System.ServiceModel.Description.ClientViaBehavior>는 논리 대상과 직접 네트워크 대상을 구분하는 데 사용할 수 있습니다. 또한 이중 클라이언트 콜백 형식은 서비스측 동작 중 일부를 사용할 수 있습니다. 자세한 내용은 참조 [서비스 런타임 동작 지정](../../../docs/framework/wcf/specifying-service-run-time-behavior.md)합니다.  
   
 ## <a name="using-the-callbackbehaviorattribute"></a>CallbackBehaviorAttribute 사용  
  <xref:System.ServiceModel.CallbackBehaviorAttribute> 클래스를 사용하여 클라이언트 응용 프로그램에서 콜백 계약 구현의 실행 동작을 구성하거나 확장할 수 있습니다. 이 특성은 인스턴스 동작과 트랜잭션 설정을 제외하고 <xref:System.ServiceModel.ServiceBehaviorAttribute> 클래스와 유사한 기능을 콜백 클래스에 대해 수행합니다.  

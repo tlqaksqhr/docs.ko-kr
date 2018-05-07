@@ -1,14 +1,6 @@
 ---
-title: "IMetaDataAssemblyImport::FindAssembliesByName 메서드"
-ms.custom: 
+title: IMetaDataAssemblyImport::FindAssembliesByName 메서드
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - IMetaDataAssemblyImport.FindAssembliesByName
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: 4db97cf9-e4c1-4233-8efa-cbdc0e14a8e4
 topic_type:
 - apiref
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 4d6518fdcf1bef8eaea74818f69f46bb6df26e31
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: a6c7bf332d829a440fe216756f7a23ec1277e6c6
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="imetadataassemblyimportfindassembliesbyname-method"></a>IMetaDataAssemblyImport::FindAssembliesByName 메서드
 지정 된 어셈블리의 배열을 가져옵니다 `szAssemblyName` 참조를 확인 하는 것에 대 한 공용 언어 런타임 (CLR)에서 표준 규칙을 사용 하 여 매개 변수입니다.  
@@ -74,7 +62,7 @@ HRESULT FindAssembliesByName (
   
 |HRESULT|설명|  
 |-------------|-----------------|  
-|`S_OK`|`FindAssembliesByName`성공적으로 반환 합니다.|  
+|`S_OK`|`FindAssembliesByName` 성공적으로 반환 합니다.|  
 |`S_FALSE`|어셈블리가 없는 있습니다.|  
   
 ## <a name="remarks"></a>설명  
@@ -82,9 +70,9 @@ HRESULT FindAssembliesByName (
   
  `FindAssembliesByName` 메서드를 사용 하려면 CLR 어셈블리 확인 논리를 호출 하려면 프로세스에서 초기화 되어야 합니다. 따라서 호출 해야 [CoInitializeEE](../../../../docs/framework/unmanaged-api/hosting/coinitializeee-function.md) (COINITEE_DEFAULT 전달) 호출 하기 전에 `FindAssembliesByName`, 한 다음 호출 하 여 따라 [CoUninitializeCor](../../../../docs/framework/unmanaged-api/hosting/couninitializecor-function.md)합니다.  
   
- `FindAssembliesByName`반환 된 [IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md) 전달 되는 어셈블리 이름에 대 한 어셈블리 매니페스트를 포함 하는 파일에 대 한 포인터입니다. 지정 된 어셈블리 이름 (예: 버전 포함 되어 있지 않으면) 완전 하 게 지정 되지 않은 경우 여러 어셈블리를 반환 될 수 있습니다.  
+ `FindAssembliesByName` 반환 된 [IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md) 전달 되는 어셈블리 이름에 대 한 어셈블리 매니페스트를 포함 하는 파일에 대 한 포인터입니다. 지정 된 어셈블리 이름 (예: 버전 포함 되어 있지 않으면) 완전 하 게 지정 되지 않은 경우 여러 어셈블리를 반환 될 수 있습니다.  
   
- `FindAssembliesByName`컴파일 타임에 참조 된 어셈블리를 찾으려고 시도 하는 컴파일러에서 일반적으로 사용 됩니다.  
+ `FindAssembliesByName` 컴파일 타임에 참조 된 어셈블리를 찾으려고 시도 하는 컴파일러에서 일반적으로 사용 됩니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **플랫폼:** 참조 [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)합니다.  
@@ -93,7 +81,7 @@ HRESULT FindAssembliesByName (
   
  **라이브러리:** MsCorEE.dll에서 리소스로 사용  
   
- **.NET framework 버전:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>참고 항목  
  [런타임에서 어셈블리를 찾는 방법](../../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)  

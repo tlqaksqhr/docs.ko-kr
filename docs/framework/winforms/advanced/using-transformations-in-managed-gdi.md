@@ -1,27 +1,15 @@
 ---
-title: "관리 GDI+에서 변형 사용"
-ms.custom: 
+title: 관리 GDI+에서 변형 사용
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - transformations
 - examples [Windows Forms], transformations
 ms.assetid: 1f8e18d3-d2f5-460e-a8e3-2da891c301de
-caps.latest.revision: "11"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 07f10050d669e0de741e8aa1361a078928eebef5
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: e20f779a3314b0f8f88cdeb67f60841302264f1f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-transformations-in-managed-gdi"></a>관리 GDI+에서 변형 사용
 3x3 유사 변환에는 회전, 크기 조정, 반영 하며, 기울이기 및 변환 하는 기능이 포함 됩니다. [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)], <xref:System.Drawing.Drawing2D.Matrix> 클래스 벡터 드로잉, 이미지 및 텍스트에서 관계 변형 수행 하기 위한 기반을 제공 합니다.  

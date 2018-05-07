@@ -1,32 +1,20 @@
 ---
 title: 익명 클라이언트를 사용하는 전송 보안
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 056653a5-384e-4a02-ae3c-1b0157d2ccb4
-caps.latest.revision: 14
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload:
-- dotnet
-ms.openlocfilehash: 2b52a32db1f1ac02f9204198a4cda5d4cb157486
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: ad22abe84289cac8f57bebb564ee129bcc2334c3
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="transport-security-with-an-anonymous-client"></a>익명 클라이언트를 사용하는 전송 보안
-이 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 시나리오에서는 기밀성 및 무결성 확보를 위해 전송 보안(HTTPS)을 사용합니다. 서버는 SSL(Secure Sockets Layer) 인증서로 인증되어야 하며 클라이언트는 서버의 인증서를 신뢰해야 합니다. 클라이언트는 어떤 메커니즘으로도 인증되지 않는 익명 클라이언트입니다.  
+이 Windows Communication Foundation (WCF) 시나리오에서는 기밀성 및 무결성을 보장 하려면 전송 보안 (HTTPS)을 사용 합니다. 서버는 SSL(Secure Sockets Layer) 인증서로 인증되어야 하며 클라이언트는 서버의 인증서를 신뢰해야 합니다. 클라이언트는 어떤 메커니즘으로도 인증되지 않는 익명 클라이언트입니다.  
   
  샘플 응용 프로그램에 대 한 참조 [WS 전송 보안](../../../../docs/framework/wcf/samples/ws-transport-security.md)합니다. 전송 보안에 대 한 자세한 내용은 참조 [전송 보안 개요](../../../../docs/framework/wcf/feature-details/transport-security-overview.md)합니다.  
   
@@ -38,7 +26,7 @@ ms.lasthandoff: 04/30/2018
 |--------------------|-----------------|  
 |보안 모드|전송|  
 |상호 운용성|기존 웹 서비스 및 클라이언트와의 상호 운용성|  
-|인증(서버)<br /><br /> 인증(클라이언트)|예<br /><br /> 응용 프로그램 수준([!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 지원 없음)|  
+|인증(서버)<br /><br /> 인증(클라이언트)|예<br /><br /> 응용 프로그램 수준 (WCF 지원 없음)|  
 |무결성|예|  
 |기밀성|예|  
 |전송|HTTPS|  

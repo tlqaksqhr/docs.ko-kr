@@ -1,13 +1,6 @@
 ---
-title: "방법: 그리는 데 필요한 그래픽 개체 만들기"
-ms.custom: 
+title: '방법: 그리는 데 필요한 그래픽 개체 만들기'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -17,16 +10,11 @@ helpviewer_keywords:
 - images [Windows Forms], creating
 - GDI+, creating images
 ms.assetid: 162861f9-f050-445e-8abb-b2c43a918b8b
-caps.latest.revision: "17"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: d4b626d3d87c6537b74b6d28e086303474ea2c3e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 3c25ddcfb3a566055afd5e233c2a69b3b7a8c66e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-graphics-objects-for-drawing"></a>방법: 그리는 데 필요한 그래픽 개체 만들기
 선 및 모양을 그릴 수 있습니다, 전에 텍스트를 렌더링 하거나 이미지를 조작으로 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]를 만들어야 할 한 <xref:System.Drawing.Graphics> 개체입니다. <xref:System.Drawing.Graphics> 개체가 나타내는 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 그리기 화면, 및는 그래픽 이미지를 만드는 데 사용 되는 개체입니다.  
@@ -44,11 +32,11 @@ ms.lasthandoff: 12/22/2017
   
 -   그래픽 개체에 대 한 참조의 일환으로 받아는 <xref:System.Windows.Forms.PaintEventArgs> 에 <xref:System.Windows.Forms.Control.Paint> 폼 이나 컨트롤의 이벤트입니다. 컨트롤에 대 한 그리기 코드를 만들 때 graphics 개체에 대 한 참조를 가져오는 방법을 보통입니다. 마찬가지로, 얻을 수도 있습니다는 graphics 개체의 속성으로는 <xref:System.Drawing.Printing.PrintPageEventArgs> 처리 하는 경우는 <xref:System.Drawing.Printing.PrintDocument.PrintPage> 에 대 한 이벤트는 <xref:System.Drawing.Printing.PrintDocument>합니다.  
   
-     또는  
+     -또는-  
   
 -   호출 된 <xref:System.Windows.Forms.Control.CreateGraphics%2A> 에 대 한 참조를 얻으려고 하는 폼 또는 컨트롤의 메서드는 <xref:System.Drawing.Graphics> 해당 폼 이나 컨트롤의 그리기 화면을 나타내는 개체입니다. 그릴 폼 이나 이미 존재 하는 컨트롤에서이 방법을 사용 합니다.  
   
-     또는  
+     -또는-  
   
 -   만들기는 <xref:System.Drawing.Graphics> 개체에서 상속 하는 개체 로부터 <xref:System.Drawing.Image>합니다. 이 방법은 기존 이미지를 변경 하려는 경우에 유용 합니다.  
   

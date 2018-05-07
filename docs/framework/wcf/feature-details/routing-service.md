@@ -1,31 +1,17 @@
 ---
 title: 라우팅 서비스
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: ca7c216a-5141-4132-8193-102c181d2eba
-caps.latest.revision: 13
-author: wadepickett
-ms.author: wpickett
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 8ff2a99bc06ab0de2aedce98ea029f484e47053f
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: e3170108ae190c08a42cc7d80d66576a7b4f8a8e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="routing-service"></a>라우팅 서비스
 라우팅 서비스는 메시지 라우터 역할을 하는 제네릭 SOAP 매개자입니다. 라우팅 서비스의 핵심 기능은 메시지 내용을 기반으로 메시지를 라우트할 수 있는, 즉 메시지 헤더나 메시지 본문 같은 메시지 자체에 포함된 값을 기반으로 메시지를 클라이언트 끝점에 전달할 수 있는 기능입니다.  
   
- <xref:System.ServiceModel.Routing.RoutingService>는 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 네임스페이스에서 <xref:System.ServiceModel.Routing> 서비스로 구현됩니다. 라우팅 서비스는 메시지를 받은 다음 메시지 내용을 기반으로 각 메시지를 하나 이상의 클라이언트 끝점에 라우트하는 하나 이상의 서비스 끝점을 노출합니다. 라우팅 서비스는 다음과 같은 기능을 제공합니다.  
+ <xref:System.ServiceModel.Routing.RoutingService> 에 Windows Communication Foundation (WCF) 서비스로 구현 됩니다는 <xref:System.ServiceModel.Routing> 네임 스페이스입니다. 라우팅 서비스는 메시지를 받은 다음 메시지 내용을 기반으로 각 메시지를 하나 이상의 클라이언트 끝점에 라우트하는 하나 이상의 서비스 끝점을 노출합니다. 라우팅 서비스는 다음과 같은 기능을 제공합니다.  
   
 -   내용 기반 라우팅  
   
@@ -47,10 +33,10 @@ ms.lasthandoff: 04/30/2018
   
  위에 나열된 이점을 제공하는 매개자 서비스를 만들 수는 있지만 종종 이러한 구현이 특정 시나리오나 솔루션으로 제한되어 새 응용 프로그램에 적용되지 않을 수 있습니다.  
   
- 라우팅 서비스는 동적으로 구성 가능한 플러그형 제네릭 SOAP 매개자를 제공합니다. 이 매개자는 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 서비스 및 채널 모델과 호환되고 SOAP 기반 메시지의 내용 기반 라우팅을 수행하는 데 사용됩니다.  
+ 라우팅 서비스에서 WCF 서비스 및 채널 모델과 호환 되 고 SOAP 기반 메시지의 콘텐츠 기반 라우팅을 수행할 수 있도록 하는 일반적이 고, 동적으로 구성 가능한 플러그형 SOAP 매개를 제공 합니다.  
   
 > [!NOTE]
->  라우팅 서비스는 현재 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] REST 서비스의 라우팅을 지원하지 않습니다.  REST 호출을 라우트하려면 사용해 보십시오 <xref:System.Web.Routing> 또는 [응용 프로그램 요청 라우팅](http://go.microsoft.com/fwlink/?LinkId=164589) (http://go.microsoft.com/fwlink/?LinkId=164589)합니다.  
+>  라우팅 서비스는 현재 WCF REST 서비스의 라우팅을 지원하지 않습니다.  REST 호출을 라우트하려면 사용해 보십시오 <xref:System.Web.Routing> 또는 [응용 프로그램 요청 라우팅](http://go.microsoft.com/fwlink/?LinkId=164589) (http://go.microsoft.com/fwlink/?LinkId=164589)합니다.  
   
 ## <a name="content-based-routing"></a>내용 기반 라우팅  
  내용 기반 라우팅은 메시지에 들어 있는 하나 이상의 값을 기반으로 메시지를 라우트할 수 있는 기능입니다. 라우팅 서비스는 각 메시지를 검사하고 메시지 내용과 사용자 제공 라우팅 논리를 기반으로 메시지를 대상 끝점에 라우트합니다. 내용 기반 라우팅은 서비스 집계, 서비스 버전 관리 및 우선 순위 라우팅에 대한 기초를 제공합니다.  

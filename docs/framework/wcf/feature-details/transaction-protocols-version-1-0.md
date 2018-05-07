@@ -1,29 +1,15 @@
 ---
 title: 트랜잭션 프로토콜 버전 1.0
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 034679af-0002-402e-98a8-ef73dcd71bb6
-caps.latest.revision: 3
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 60867daa7b8519f745c37371604807c51aa1cbb9
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: d510a74560369a132822e980e7812ca4deff55a3
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="transaction-protocols-version-10"></a>트랜잭션 프로토콜 버전 1.0
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 버전 1은 WS-Atomic Transaction 및 WS-Coordination 프로토콜의 버전 1.0을 구현합니다. 버전 1.1에 대 한 자세한 내용은 참조 [트랜잭션 프로토콜](../../../../docs/framework/wcf/feature-details/transaction-protocols.md)합니다.  
+Windows Communication Foundation (WCF) 버전 1은 Ws-atomic Transaction 및 Ws-coordination 프로토콜의 버전 1.0을 구현합니다. 버전 1.1에 대 한 자세한 내용은 참조 [트랜잭션 프로토콜](../../../../docs/framework/wcf/feature-details/transaction-protocols.md)합니다.  
   
 |사양/문서|링크|  
 |-----------------------------|----------|  
@@ -66,7 +52,7 @@ ms.lasthandoff: 04/30/2018
   
 -   응용 프로그램 메시지  
   
- 처음 세 개의 메시지 클래스는 트랜잭션 관리자 메시지로 간주되며, 해당 바인딩 구성은 이 항목의 뒷부분에 있는 "응용 프로그램 메시지 교환"에서 설명합니다. 네 번째 메시지는 응용 프로그램 간 메시지이며, 이 항목의 뒷부분에 있는 "메시지 예제" 단원에서 설명합니다. 이 단원에서는 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서 이러한 클래스 각각에 대해 사용하는 프로토콜 바인딩에 대해 설명합니다.  
+ 처음 세 개의 메시지 클래스는 트랜잭션 관리자 메시지로 간주되며, 해당 바인딩 구성은 이 항목의 뒷부분에 있는 "응용 프로그램 메시지 교환"에서 설명합니다. 네 번째 메시지는 응용 프로그램 간 메시지이며, 이 항목의 뒷부분에 있는 "메시지 예제" 단원에서 설명합니다. 이러한 각 클래스에 대 한 WCF에서 사용 되는 프로토콜 바인딩에 대해 설명 합니다.  
   
  다음 XML 네임스페이스 및 관련 접두사는 이 문서 전체에서 사용됩니다.  
   
@@ -96,12 +82,12 @@ ms.lasthandoff: 04/30/2018
 -   B1112: DNS는 X.509 주체 이름을 확인한 시스템에서 각 발신자-수신자 쌍 간에 작동해야 합니다.  
   
 #### <a name="activation-and-registration-binding-configuration"></a>바인딩 구성 활성화 및 등록  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에는 HTTPS를 통한 상관 관계와 함께 요청/회신 이중 바인딩이 필요합니다. 요청/회신 메시지 교환 패턴의 상관 관계 및 설명에 대한 자세한 내용은 8단원 WS-Atomic Transaction을 참조하십시오.  
+ WCF는 HTTPS를 통한 상관 관계와 함께 요청/회신 이중 바인딩이 필요 합니다. 요청/회신 메시지 교환 패턴의 상관 관계 및 설명에 대한 자세한 내용은 8단원 WS-Atomic Transaction을 참조하십시오.  
   
 #### <a name="2pc-protocol-binding-configuration"></a>2PC 프로토콜 바인딩 구성  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서는 HTTPS를 통해 단방향(데이터그램) 메시지를 지원합니다. 메시지 간의 상관 관계는 구현 정보로 유지됩니다.  
+ WCF는 HTTPS를 통해 단방향 (데이터 그램) 메시지를 지원합니다. 메시지 간의 상관 관계는 구현 정보로 유지됩니다.  
   
- B2131: 구현에서 지원 해야 `wsa:ReferenceParameters` 의 상관 관계를 달성 하기 위해 Ws-addressing에서 설명 된 대로 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]의 2PC 메시지입니다.  
+ B2131: 구현에서 지원 해야 `wsa:ReferenceParameters` WCF의 2PC 메시지 상관 관계를 달성 하기 위해 Ws-addressing에서 설명 된 대로 합니다.  
   
 ### <a name="transaction-manager-mixed-security-binding"></a>트랜잭션 관리자가 혼합된 보안 바인딩  
  이 바인딩 id 설정 목적 Ws-coordination 발급 토큰 모델과 함께 사용 하 여 전송 보안을 하는 대체 (혼합된 모드).  두 바인딩 간에 다른 요소는 활성화와 등록뿐입니다.  
@@ -112,7 +98,7 @@ ms.lasthandoff: 04/30/2018
 #### <a name="activation-message-binding-configuration"></a>활성화 메시지 바인딩 구성  
  활성화 메시지는 일반적으로 응용 프로그램과 해당 로컬 트랜잭션 관리자 간에 발생하기 때문에 대개 상호 운용성에 관여하지 않습니다.  
   
- B1221: [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 이중 HTTPS 바인딩을 사용 하 여 (에 설명 된 [메시징 프로토콜](../../../../docs/framework/wcf/feature-details/messaging-protocols.md)) 활성화 메시지에 대 한 합니다. 요청 및 회신 메시지는 WS-Addressing 2004/08을 사용하여 상호 관련됩니다.  
+ B1221: WCF 이중 HTTPS 바인딩을 사용 하 여 (에 설명 된 [메시징 프로토콜](../../../../docs/framework/wcf/feature-details/messaging-protocols.md)) 활성화 메시지에 대 한 합니다. 요청 및 회신 메시지는 WS-Addressing 2004/08을 사용하여 상호 관련됩니다.  
   
  8단원 WS-Atomic 트랜잭션 사양에서는 상관 관계 및 메시지 교환 패턴에 대해 좀 더 자세히 설명합니다.  
   
@@ -123,7 +109,7 @@ ms.lasthandoff: 04/30/2018
  새 `t:IssuedTokens` 에 나가는 연결에 대 한 헤더를 생성 해야 `wscoor:CreateCoordinationContextResponse` 메시지입니다.  
   
 #### <a name="registration-message-binding-configuration"></a>등록 메시지 바인딩 구성  
- B1231: [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 이중 HTTPS 바인딩을 사용 하 여 (에 설명 된 [메시징 프로토콜](../../../../docs/framework/wcf/feature-details/messaging-protocols.md)). 요청 및 회신 메시지는 WS-Addressing 2004/08을 사용하여 상호 관련됩니다.  
+ B1231: WCF 이중 HTTPS 바인딩을 사용 하 여 (에 설명 된 [메시징 프로토콜](../../../../docs/framework/wcf/feature-details/messaging-protocols.md)). 요청 및 회신 메시지는 WS-Addressing 2004/08을 사용하여 상호 관련됩니다.  
   
  8단원 WS-AtomicTransaction에서는 메시지 교환 패턴의 상관 관계 및 설명에 대해 좀 더 자세히 설명합니다.  
   
@@ -132,9 +118,9 @@ ms.lasthandoff: 04/30/2018
  `wsse:Timestamp` 요소를 사용 하 여 서명 해야 합니다는 `SecurityContextToken``STx` 발급 합니다. 이 서명은 특정 트랜잭션과 연관된 토큰을 소유했음을 나타내며, 트랜잭션에 등록된 참가자를 인증하는 데 사용합니다. RegistrationResponse 메시지는 HTTPS를 통해 다시 보내집니다.  
   
 #### <a name="2pc-protocol-binding-configuration"></a>2PC 프로토콜 바인딩 구성  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서는 HTTPS를 통해 단방향(데이터그램) 메시지를 지원합니다. 메시지 간의 상관 관계는 구현 정보로 유지됩니다.  
+ WCF는 HTTPS를 통해 단방향 (데이터 그램) 메시지를 지원합니다. 메시지 간의 상관 관계는 구현 정보로 유지됩니다.  
   
- B2131: 구현에서 지원 해야 `wsa:ReferenceParameters` 의 상관 관계를 달성 하기 위해 Ws-addressing에서 설명 된 대로 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]의 2PC 메시지입니다.  
+ B2131: 구현에서 지원 해야 `wsa:ReferenceParameters` WCF의 2PC 메시지 상관 관계를 달성 하기 위해 Ws-addressing에서 설명 된 대로 합니다.  
   
 ## <a name="application-message-exchange"></a>응용 프로그램 메시지 교환  
  바인딩이 다음 보안 요구 사항을 만족하는 경우, 응용 프로그램에서는 응용 프로그램 간 메시지에 대해 특정 바인딩을 자유롭게 사용할 수 있습니다.  
@@ -143,9 +129,9 @@ ms.lasthandoff: 04/30/2018
   
 -   R2002: `t:IssuedToken`의 무결성 및 기밀성이 제공되어야 합니다.  
   
- `CoordinationContext` 헤더에는 `wscoor:Identifier`가 포함됩니다. `xsd:AnyURI`를 정의하면 절대 URI와 상대 URI를 모두 사용할 수 있지만 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서는 절대 URI인 `wscoor:Identifiers`만 지원합니다.  
+ `CoordinationContext` 헤더에는 `wscoor:Identifier`가 포함됩니다. 정의 하는 동안 `xsd:AnyURI` 절대 곡선과 상대 Uri의 값만 다르고 WCF 지원만 `wscoor:Identifiers`는 절대 Uri입니다.  
   
- `wscoor:Identifier`의 `wscoor:CoordinationContext`가 상대 URI이면 트랜잭션 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 서비스에서 오류가 반환됩니다.  
+ 경우는 `wscoor:Identifier` 의 `wscoor:CoordinationContext` 가 상대 URI 이면 트랜잭션 WCF 서비스에서 오류가 반환 됩니다.  
   
 ## <a name="message-examples"></a>메시지 예제  
   

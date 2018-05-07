@@ -1,30 +1,18 @@
 ---
-title: "WCF 배포 개체 모델을 Atom 및 RSS로 매핑하는 방법"
-ms.custom: 
+title: WCF 배포 개체 모델을 Atom 및 RSS로 매핑하는 방법
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 0365eb37-98cc-4b13-80fb-f1e78847a748
-caps.latest.revision: "18"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 01030ed226a5cdc384db56933325d7c4eeade989
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 7baf77b4923cff4320d657b3024ab2a286e40c2b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-the-wcf-syndication-object-model-maps-to-atom-and-rss"></a>WCF 배포 개체 모델을 Atom 및 RSS로 매핑하는 방법
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 배포 서비스를 개발할 때 다음 클래스를 사용하여 피드 및 항목을 만듭니다.  
+Windows Communication Foundation (WCF) 배포 서비스를 개발할 때 피드 및 다음 클래스를 사용 하 여 항목을 만듭니다.  
   
 -   <xref:System.ServiceModel.Syndication.SyndicationFeed>  
   
@@ -42,9 +30,9 @@ ms.lasthandoff: 12/22/2017
   
 -   <xref:System.ServiceModel.Syndication.XmlSyndicationContent>  
   
- <xref:System.ServiceModel.Syndication.SyndicationFeed>를 포맷터가 정의된 배포로 serialize할 수 있습니다. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]는 <xref:System.ServiceModel.Syndication.Atom10FeedFormatter> 및 <xref:System.ServiceModel.Syndication.Rss20FeedFormatter>의 두 가지 포맷터가 제공됩니다.  
+ <xref:System.ServiceModel.Syndication.SyndicationFeed>를 포맷터가 정의된 배포로 serialize할 수 있습니다. WCF는 두 가지 포맷터와: <xref:System.ServiceModel.Syndication.Atom10FeedFormatter> 및 <xref:System.ServiceModel.Syndication.Rss20FeedFormatter>합니다.  
   
- <xref:System.ServiceModel.Syndication.SyndicationFeed> 및 <xref:System.ServiceModel.Syndication.SyndicationItem>에 대한 개체 모델은 RSS 2.0 사양보다는 Atom 1.0 사양에 더 가깝습니다. 이는 Atom 1.0이 RSS 2.0 사양에서 모호하거나 생략된 요소를 정의하는 실질적인 사양이기 때문입니다. 따라서 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 배포 개체 모델의 많은 항목에는 RSS 2.0 사양의 직접적인 표현이 없습니다. <xref:System.ServiceModel.Syndication.SyndicationFeed> 및 <xref:System.ServiceModel.Syndication.SyndicationItem> 개체를 RSS 2.0으로 serialize할 때 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]를 사용하면 Atom 특정 데이터 요소를 Atom 사양을 따르는 네임스페이스로 한정된 확장 요소로 serialize할 수 있습니다. <xref:System.ServiceModel.Syndication.Rss20FeedFormatter> 생성자에 전달된 매개 변수를 사용하여 이 작업을 제어할 수 있습니다.  
+ <xref:System.ServiceModel.Syndication.SyndicationFeed> 및 <xref:System.ServiceModel.Syndication.SyndicationItem>에 대한 개체 모델은 RSS 2.0 사양보다는 Atom 1.0 사양에 더 가깝습니다. 이는 Atom 1.0이 RSS 2.0 사양에서 모호하거나 생략된 요소를 정의하는 실질적인 사양이기 때문입니다. 이 때문에 WCF 배포 개체 모델에 많은 항목 직접적인 표현이 없습니다 RSS 2.0 사양에 있습니다. 직렬화 할 때 <xref:System.ServiceModel.Syndication.SyndicationFeed> 및 <xref:System.ServiceModel.Syndication.SyndicationItem> 개체를 RSS 2.0으로 WCF를 사용 하면 Atom 특정 데이터 요소를 Atom 사양을 따르는 네임 스페이스로 한정 된 확장 요소로 serialize 할 수 있습니다. <xref:System.ServiceModel.Syndication.Rss20FeedFormatter> 생성자에 전달된 매개 변수를 사용하여 이 작업을 제어할 수 있습니다.  
   
  이 항목의 코드 샘플에서는 여기에 정의된 두 개 메서드 중 하나를 사용하여 실제 serialization을 수행합니다.  
   

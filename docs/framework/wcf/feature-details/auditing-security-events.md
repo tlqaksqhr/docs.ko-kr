@@ -1,42 +1,30 @@
 ---
 title: 보안 이벤트 감사
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - auditing security events [WCF]
 ms.assetid: 5633f61c-a3c9-40dd-8070-1c373b66a716
-caps.latest.revision: 27
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload:
-- dotnet
-ms.openlocfilehash: 69b013389511ac2cfb31e22f7a39e98eb22fb977
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: e4219553f97f272577e8efdeb106b43e5f76ee59
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="auditing-security-events"></a>보안 이벤트 감사
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]에서 만든 응용 프로그램은 감사 기능을 사용하여 보안 이벤트(성공, 실패 또는 둘 다)를 기록할 수 있습니다. 이벤트는 Windows의 시스템 이벤트 로그에 기록되며 이벤트 뷰어를 사용하여 검사할 수 있습니다.  
+Windows Communication Foundation (WCF)와 만든 응용 프로그램은 감사 기능을 보안 이벤트 (성공, 실패 또는 둘 다)를 기록할 수 있습니다. 이벤트는 Windows의 시스템 이벤트 로그에 기록되며 이벤트 뷰어를 사용하여 검사할 수 있습니다.  
   
  관리자는 감사를 사용하여 이미 발생했거나 진행 중인 공격을 검색할 수 있습니다. 또한 감사는 개발자가 보안 관련 문제를 디버깅하는 데 도움이 됩니다. 예를 들어, 정책 검사 또는 권한 부여 구성 오류로 인해 실수로 권한 있는 사용자의 액세스가 거부될 경우 개발자는 이벤트 로그를 검사하여 오류의 원인을 신속하게 찾아서 격리시킬 수 있습니다.  
   
- 에 대 한 자세한 내용은 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 보안 참조 [보안 개요](../../../../docs/framework/wcf/feature-details/security-overview.md)합니다. 프로그래밍에 대 한 자세한 내용은 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], 참조 [기본 WCF 프로그래밍](../../../../docs/framework/wcf/basic-wcf-programming.md)합니다.  
+ WCF 보안에 대 한 자세한 내용은 참조 [보안 개요](../../../../docs/framework/wcf/feature-details/security-overview.md)합니다. WCF 프로그래밍에 대 한 자세한 내용은 참조 [기본 WCF 프로그래밍](../../../../docs/framework/wcf/basic-wcf-programming.md)합니다.  
   
 ## <a name="audit-level-and-behavior"></a>감사 수준 및 동작  
  보안 감사에는 다음과 같은 두 가지 수준이 있습니다.  
   
 -   서비스 인증 수준 - 호출자에게 권한이 부여됩니다.  
   
--   메시지 수준 - [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서 메시지의 유효성을 검사하고 호출자를 인증합니다.  
+-   메시지 수준 WCF 메시지의 유효성을 검사 하 고 있는 호출자를 인증 합니다.  
   
  감사 성공 또는 실패 라고 하는 수준 모두를 확인할 수 있습니다는 *감사 동작*합니다.  
   

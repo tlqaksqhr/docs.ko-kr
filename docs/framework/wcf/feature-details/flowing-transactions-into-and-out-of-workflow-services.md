@@ -1,24 +1,12 @@
 ---
-title: "트랜잭션을 워크플로 서비스 내부 및 외부로 이동"
-ms.custom: 
+title: 트랜잭션을 워크플로 서비스 내부 및 외부로 이동
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 03ced70e-b540-4dd9-86c8-87f7bd61f609
-caps.latest.revision: "11"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a38c0c224c93941efa767d142aa7738296a62f15
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 8b3d3e85b626d033c9ab50e93e3ceb3b86058a2f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="flowing-transactions-into-and-out-of-workflow-services"></a>트랜잭션을 워크플로 서비스 내부 및 외부로 이동
 워크플로 서비스 및 클라이언트는 트랜잭션에 참여할 수 있습니다.  서비스 작업이 앰비언트 트랜잭션의 일부가 되도록 하려면 <xref:System.ServiceModel.Activities.Receive> 활동 내에 <xref:System.ServiceModel.Activities.TransactedReceiveScope> 활동을 배치합니다. <xref:System.ServiceModel.Activities.Send> 내의 <xref:System.ServiceModel.Activities.SendReply> 또는 <xref:System.ServiceModel.Activities.TransactedReceiveScope> 활동에서 실행하는 모든 호출은 앰비언트 트랜잭션 내에서도 실행됩니다. 워크플로 클라이언트 응용 프로그램에서는 <xref:System.Activities.Statements.TransactionScope> 활동을 사용하여 앰비언트 트랜잭션을 만들고 앰비언트 트랜잭션을 사용하여 서비스 작업을 호출할 수 있습니다. 이 항목에서는 트랜잭션에 참여하는 워크플로 서비스와 워크플로 클라이언트를 만드는 과정을 보여 줍니다.  
@@ -87,7 +75,7 @@ ms.lasthandoff: 12/22/2017
   
 ### <a name="implement-the-workflow-service"></a>워크플로 서비스 구현  
   
-1.  새로 추가 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 워크플로 서비스인 `WorkflowService` 에 `Common` 프로젝트. 마우스 오른쪽 단추로 클릭이 작업을 수행 하는 `Common` 프로젝트를 **추가**, **새 항목...** 선택, **워크플로** 아래 **설치 된 템플릿** 선택 **WCF 워크플로 서비스**합니다.  
+1.  라는 새 WCF 워크플로 서비스를 추가 `WorkflowService` 에 `Common` 프로젝트. 마우스 오른쪽 단추로 클릭이 작업을 수행 하는 `Common` 프로젝트를 **추가**, **새 항목...** 선택, **워크플로** 아래 **설치 된 템플릿** 선택 **WCF 워크플로 서비스**합니다.  
   
      ![워크플로 서비스 추가](../../../../docs/framework/wcf/feature-details/media/addwfservice.JPG "AddWFService")  
   

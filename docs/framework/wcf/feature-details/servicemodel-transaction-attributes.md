@@ -1,31 +1,17 @@
 ---
-title: "ServiceModel 트랜잭션 특성"
-ms.custom: 
+title: ServiceModel 트랜잭션 특성
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - transactions [WCF], ServiceModel attributes
 ms.assetid: 1e0d2436-6ae5-439b-9765-a448d6f60000
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: aac52f3c542f88adbca40c6cbbdddc734e12903b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 79d97eee328d816281348b5b15cf779e1ee65893
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="servicemodel-transaction-attributes"></a>ServiceModel 트랜잭션 특성
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]에서는 <xref:System.ServiceModel> 서비스에 대한 트랜잭션의 동작을 구성할 수 있는 세 가지 표준 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 특성의 속성을 제공합니다.  
+세 가지 표준의 속성을 제공 하는 Windows Communication Foundation (WCF) <xref:System.ServiceModel> WCF 서비스에 대 한 트랜잭션의 동작을 구성할 수 있는 특성:  
   
 -   <xref:System.ServiceModel.TransactionFlowAttribute>  
   
@@ -50,7 +36,7 @@ ms.lasthandoff: 12/22/2017
 -   <xref:System.ServiceModel.ServiceBehaviorAttribute.TransactionTimeout%2A>은 서비스에서 만들어진 새 트랜잭션이 완료되어야 하는 시간을 지정합니다. 이 시간에 도달했는데도 트랜잭션이 완료되지 않으면 트랜잭션이 중단됩니다. <xref:System.TimeSpan>은 <xref:System.Transactions.TransactionScope>가 <xref:System.ServiceModel.OperationBehaviorAttribute.TransactionScopeRequired%2A>로 설정되고 새 트랜잭션이 만들어진 작업에 대한 `true` 시간 제한으로 사용됩니다. 시간 제한은 트랜잭션을 만든 시점으로부터 2단계 커밋 프로토콜의 1단계를 완료할 때까지의 최대 허용 기간입니다. <xref:System.ServiceModel.ServiceBehaviorAttribute.TransactionTimeout%2A> 속성과 `transactionTimeout` 구성 설정 사이에서 항상 더 낮은 값이 시간 제한 값으로 사용됩니다.  
   
 ## <a name="operationbehaviorattribute"></a>OperationBehaviorAttribute  
- <xref:System.ServiceModel.OperationBehaviorAttribute> 특성은 서비스 구현에서 메서드의 동작을 지정합니다. 이를 사용하여 작업의 특정 실행 동작을 나타낼 수 있습니다. 이 특성의 속성은 서비스 계약에 대한 WSDL(Web Service Description Language) 설명에 영향을 주지 않으며, 개발자가 구현해야 하는 일반 기능을 사용할 수 있는 순수한 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 프로그래밍 모델의 요소입니다.  
+ <xref:System.ServiceModel.OperationBehaviorAttribute> 특성은 서비스 구현에서 메서드의 동작을 지정합니다. 이를 사용하여 작업의 특정 실행 동작을 나타낼 수 있습니다. 이 특성의 서비스 계약의 서비스 설명 언어 WSDL (웹) 설명에는 영향을 주지 않습니다 속성과 요소가 순수 하 게 WCF 프로그래밍 모델의 개발자가 직접 구현 해야 하는 일반적인 기능을 사용할 수 있습니다.  
   
  이 특성에는 다음과 같은 트랜잭션별 속성이 있습니다.  
   

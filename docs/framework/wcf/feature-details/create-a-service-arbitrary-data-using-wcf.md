@@ -1,27 +1,15 @@
 ---
-title: "방법: WCF REST 프로그래밍 모델을 사용하여 임의의 데이터를 허용하는 서비스 만들기"
-ms.custom: 
+title: '방법: WCF REST 프로그래밍 모델을 사용하여 임의의 데이터를 허용하는 서비스 만들기'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: e566c15a-b600-4e4a-be3a-4af43e767dae
-caps.latest.revision: "8"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 170149f5a6c495b3f22b9fd30f79ecdda87789b4
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: bc2643672743971da14c8bc4c75ac113f691bf4a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-a-service-that-accepts-arbitrary-data-using-the-wcf-rest-programming-model"></a>방법: WCF REST 프로그래밍 모델을 사용하여 임의의 데이터를 허용하는 서비스 만들기
-서비스 작업에서 데이터가 반환되는 방법을 개발자가 완전히 제어해야 하는 경우가 있습니다. 서비스 작업이 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서 지원되지 않는 형식으로 데이터를 반환해야 하는 경우가 그렇습니다. 이 항목에서는 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] REST 프로그래밍 모델을 사용하여 임의의 데이터를 받는 서비스를 만드는 방법에 대해 설명합니다.  
+서비스 작업에서 데이터가 반환되는 방법을 개발자가 완전히 제어해야 하는 경우가 있습니다. 이 경우 데이터 형식이 지원 되지 않습니다. byWCF 서비스 작업을 반환 해야 하는 경우입니다. 이 항목에서는 WCF REST 프로그래밍 모델을 사용 하 여 임의의 데이터를 수신 하는 서비스를 만들에 대해 설명 합니다.  
   
 ### <a name="to-implement-the-service-contract"></a>서비스 계약을 구현하려면  
   
@@ -134,7 +122,7 @@ ms.lasthandoff: 12/22/2017
     host.Close();  
     ```  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음은 이 예제에 해당되는 전체 코드 목록입니다.  
   
 ```csharp  

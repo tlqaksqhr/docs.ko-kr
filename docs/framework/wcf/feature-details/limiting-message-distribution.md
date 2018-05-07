@@ -1,26 +1,12 @@
 ---
 title: 메시지 분포 제한
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 8b5ec4b8-1ce9-45ef-bb90-2c840456bcc1
-caps.latest.revision: ''
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: b4d81583a8dfc2c48fb9b7533f071495b562615e
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: 006cfaffe02752bb91e9f7d780477aecbaeb9c9e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="limiting-message-distribution"></a>메시지 분포 제한
 피어 채널은 디자인상 브로드캐스트 메시입니다. 피어 채널의 기본 플러딩 모델에는 메시의 임의 멤버가 보낸 각 메시지를 해당 메시의 다른 모든 멤버에 배포하는 작업이 포함됩니다. 이는 멤버가 생성한 모든 메시지가 관련성을 지니며 다른 모든 멤버에 유용한 경우(예: 채트 방) 이상적입니다. 그러나 많은 응용 프로그램에서 메시지 배포를 제한해야 하는 경우가 발생합니다. 예를 들어 새 멤버가 메시에 참가하여 메시를 통해 전송된 마지막 메시지를 검색하려고 할 경우 이 요청을 메시의 모든 멤버에 플러딩하지 않아도 됩니다. 이러한 요청을 인접한 환경으로 제한하거나 로컬로 생성된 메시지를 필터링하여 제외할 수 있습니다. 메시지를 메시의 개별 노드로 보낼 수도 있습니다. 이 항목에서는 홉 수, 메시지 전파 필터, 로컬 필터 또는 직접 연결을 사용하여 전체 메시에서 메시지가 전달되는 방법에 대해 설명하고 접근 방식을 선택하기 위한 일반적인 지침을 제공합니다.  

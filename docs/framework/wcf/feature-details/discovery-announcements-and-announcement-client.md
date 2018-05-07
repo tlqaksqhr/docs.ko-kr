@@ -1,27 +1,15 @@
 ---
-title: "검색 알림 및 알림 클라이언트"
-ms.custom: 
+title: 검색 알림 및 알림 클라이언트
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 426c6437-f8d2-4968-b23a-18afd671aa4b
-caps.latest.revision: "6"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 67eab6a5b35e29fe3df09ab286090433d25e8ca3
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: c32aca5e6deab01423d61c516ee924d00bc041ee
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="discovery-announcements-and-announcement-client"></a>검색 알림 및 알림 클라이언트
-[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 검색 기능을 사용하면 구성 요소가 자신의 가용성을 알릴 수 있습니다. 이렇게 구성된 경우 서비스는 Hello 및 Bye 알림을 보냅니다. 클라이언트 또는 기타 구성 요소는 이러한 알림 메시지를 수신 대기하고 이에 대해 동작을 수행할 수 있습니다. 이 기능은 클라이언트가 서비스를 인식하는 또 다른 방법을 제공합니다. 알림 기능은 여러 가지 용도로 사용됩니다. 예를 들어 서비스가 빈번하게 네트워크에 들어왔다가 나가는 경우 알림을 사용하는 것이 서비스를 검색하는 것보다 더 효율적일 수 있습니다. 이 방법을 사용하면 네트워크 트래픽이 줄어들고 클라이언트가 알림을 받는 즉시 해당 서비스가 있는지 여부를 알 수 있습니다.  
+WCF discovery 기능 구성 요소가 자신의 가용성을 알릴 수 있습니다. 이렇게 구성된 경우 서비스는 Hello 및 Bye 알림을 보냅니다. 클라이언트 또는 기타 구성 요소는 이러한 알림 메시지를 수신 대기하고 이에 대해 동작을 수행할 수 있습니다. 이 기능은 클라이언트가 서비스를 인식하는 또 다른 방법을 제공합니다. 알림 기능은 여러 가지 용도로 사용됩니다. 예를 들어 서비스가 빈번하게 네트워크에 들어왔다가 나가는 경우 알림을 사용하는 것이 서비스를 검색하는 것보다 더 효율적일 수 있습니다. 이 방법을 사용하면 네트워크 트래픽이 줄어들고 클라이언트가 알림을 받는 즉시 해당 서비스가 있는지 여부를 알 수 있습니다.  
   
 ## <a name="discovery-announcements"></a>검색 알림  
  알림을 받도록 구성된 서비스는 네트워크에 연결되어 검색 가능한 상태가 되면 수신 대기 중인 클라이언트에 자신의 가용성을 알리는 Hello 메시지를 보냅니다. 이 메시지에는 계약, 끝점 주소, 연결된 범위 등 서비스에 대한 검색 관련 정보가 포함됩니다. <xref:System.ServiceModel.Discovery.AnnouncementEndpoint> 클래스를 사용하면 알림 메시지를 보낼 위치를 지정할 수 있습니다. 알림 끝점이 <xref:System.ServiceModel.Discovery.UdpAnnouncementEndpoint>이면 Hello 및 Bye가 적절히 멀티캐스트됩니다. 그러나 알림 끝점이 유니캐스트이면 메시지가 지정된 끝점에 직접 보내집니다.  

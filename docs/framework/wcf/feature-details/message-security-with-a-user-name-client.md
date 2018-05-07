@@ -1,30 +1,20 @@
 ---
-title: "사용자 이름 클라이언트를 사용하는 메시지 보안"
-ms.custom: 
+title: 사용자 이름 클라이언트를 사용하는 메시지 보안
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 36335cb9-76b8-4443-92c7-44f081eabb21
-caps.latest.revision: "15"
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: dfda34c6bf165ebcecfd6d9a3710e785586d6cb1
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 7bda1bc18e2b5af1365c799c6f2be9d8d220e9ed
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="message-security-with-a-user-name-client"></a>사용자 이름 클라이언트를 사용하는 메시지 보안
-다음 그림에서는 메시지 수준 보안을 사용하여 보안된 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 서비스 및 클라이언트를 보여 줍니다. 서비스는 X.509 인증서를 사용하여 인증됩니다. 클라이언트는 사용자 이름 및 암호를 사용하여 인증합니다.  
+다음 그림에는 Windows Communication Foundation (WCF) 서비스 및 메시지 수준 보안을 사용 하 여 보호할 클라이언트 보여 줍니다. 서비스는 X.509 인증서를 사용하여 인증됩니다. 클라이언트는 사용자 이름 및 암호를 사용하여 인증합니다.  
   
  샘플 응용 프로그램에 대 한 참조 [메시지 보안 사용자 이름](../../../../docs/framework/wcf/samples/message-security-user-name.md)합니다.  
   
@@ -33,7 +23,7 @@ ms.lasthandoff: 12/22/2017
 |특성|설명|  
 |--------------------|-----------------|  
 |보안 모드|메시지|  
-|상호 운용성|[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]에만 해당|  
+|상호 운용성|Windows Communication Foundation (WCF)만|  
 |인증(서버)|최초 협상에는 서버 인증이 필요합니다.|  
 |인증(클라이언트)|사용자 이름/암호|  
 |무결성|예, 공유 보안 컨텍스트 사용|  
@@ -140,5 +130,5 @@ ms.lasthandoff: 12/22/2017
  [보안 개요](../../../../docs/framework/wcf/feature-details/security-overview.md)  
  [메시지 보안 사용자 이름](../../../../docs/framework/wcf/samples/message-security-user-name.md)  
  [서비스 ID 및 인증](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)  
- [\<identity >](../../../../docs/framework/configure-apps/file-schema/wcf/identity.md)  
+ [\<identity>](../../../../docs/framework/configure-apps/file-schema/wcf/identity.md)  
  [Windows Server App Fabric에 대 한 보안 모델](http://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

@@ -1,31 +1,17 @@
 ---
 title: '방법: 메타데이터 검색 및 규격 서비스 구현'
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: f6f3a2b9-c8aa-4b0b-832c-ec2927bf1163
-caps.latest.revision: ''
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: ac7654fa041688bbd703d564f6703df9671fbaea
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: 9ae888f5a9569ef51be52b91ea019fea897597b8
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-retrieve-metadata-and-implement-a-compliant-service"></a>방법: 메타데이터 검색 및 규격 서비스 구현
-서비스를 디자인하는 사람과 구현하는 사람이 다른 경우가 많습니다. 상호 운용하는 응용 프로그램이 중요한 환경에서는 WSDL(웹 서비스 기술 언어)로 계약을 디자인하거나 설명할 수 있으며 개발자는 제공된 계약에 따라 서비스를 구현해야 합니다. 기존 서비스를 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]로 마이그레이션하면서 통신 형식을 유지할 수도 있습니다. 또한 이중 계약에서는 호출자가 콜백 계약도 구현해야 합니다.  
+서비스를 디자인하는 사람과 구현하는 사람이 다른 경우가 많습니다. 상호 운용하는 응용 프로그램이 중요한 환경에서는 WSDL(웹 서비스 기술 언어)로 계약을 디자인하거나 설명할 수 있으며 개발자는 제공된 계약에 따라 서비스를 구현해야 합니다. Windows Communication Foundation (WCF)에 기존 서비스를 마이그레이션하려면 있지만 통신 형식을 유지할 수도 있습니다. 또한 이중 계약에서는 호출자가 콜백 계약도 구현해야 합니다.  
   
- 이 경우에 사용 해야 합니다는 [ServiceModel Metadata 유틸리티 도구 (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) (또는 해당 하는 도구)의 요구 사항을 충족 하기 위해 구현할 수 있는 관리 되는 언어에서 서비스 계약 인터페이스를 생성 하는 계약입니다. 일반적으로 [ServiceModel Metadata 유틸리티 도구 (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) 채널 팩터리와 함께 사용 되는 서비스 계약을 획득 하는 데 사용 되는 또는 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 뿐만 아니라를 설정 하는 클라이언트 구성 파일에서와 마찬가지로 클라이언트 유형은 올바른 바인딩 및 주소입니다. 생성된 구성 파일을 사용하려면 해당 파일을 서비스 구성 파일로 변경해야 합니다. 서비스 계약을 수정해야 할 수도 있습니다.  
+ 이 경우에 사용 해야 합니다는 [ServiceModel Metadata 유틸리티 도구 (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) (또는 해당 하는 도구)의 요구 사항을 충족 하기 위해 구현할 수 있는 관리 되는 언어에서 서비스 계약 인터페이스를 생성 하는 계약입니다. 일반적으로 [ServiceModel Metadata 유틸리티 도구 (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) 올바른 바인딩을 설정 하는 클라이언트 구성 파일 뿐 아니라 채널 팩터리 또는 WCF 클라이언트 형식과 함께 사용 되는 서비스 계약을 획득 하는 데 사용 됩니다 및 주소입니다. 생성된 구성 파일을 사용하려면 해당 파일을 서비스 구성 파일로 변경해야 합니다. 서비스 계약을 수정해야 할 수도 있습니다.  
   
 ### <a name="to-retrieve-data-and-implement-a-compliant-service"></a>데이터 검색 및 규격 서비스 구현  
   

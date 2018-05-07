@@ -1,27 +1,15 @@
 ---
-title: "방법: WCF 웹 HTTP 프로그래밍 모델을 사용하여 임의의 데이터를 반환하는 서비스 만들기"
-ms.custom: 
+title: '방법: WCF 웹 HTTP 프로그래밍 모델을 사용하여 임의의 데이터를 반환하는 서비스 만들기'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 0283955a-b4ae-458d-ad9e-6fbb6f529e3d
-caps.latest.revision: "11"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 829e9f2bcf909bee41f53b4b7cabbb0803e77963
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 763d62750380f025ae369e1e917b46d4e51874e8
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-a-service-that-returns-arbitrary-data-using-the-wcf-web-http-programming-model"></a>방법: WCF 웹 HTTP 프로그래밍 모델을 사용하여 임의의 데이터를 반환하는 서비스 만들기
-서비스 작업에서 데이터가 반환되는 방법을 개발자가 완전히 제어해야 하는 경우가 있습니다. 경우 이것이 서비스 작업을 데이터 형식에서 지원 되지 않습니다를 반환 해야 때 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]합니다. 이 항목에서는 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] WEB HTTP 프로그래밍 모델을 사용하여 이러한 서비스를 만드는 방법에 대해 설명합니다. 이 서비스에는 스트림을 반환하는 하나의 작업이 있습니다.  
+서비스 작업에서 데이터가 반환되는 방법을 개발자가 완전히 제어해야 하는 경우가 있습니다. 이 경우 서비스 작업을 WCF에서 지원 되지 않는 한 형식에서 데이터를 반환 해야 하는 경우입니다. 이 항목에서는 이러한 서비스를 만들려면 WCF 웹 HTTP 프로그래밍 모델을 사용 하 여 설명 합니다. 이 서비스에는 스트림을 반환하는 하나의 작업이 있습니다.  
   
 ### <a name="to-implement-the-service-contract"></a>서비스 계약을 구현하려면  
   
@@ -36,7 +24,7 @@ ms.lasthandoff: 12/22/2017
         }  
     ```  
   
-     이 메서드가 <xref:System.IO.Stream>을 반환하므로 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]는 서비스 작업에서 반환되는 바이트를 해당 작업이 완전히 제어하며 이 작업이 반환 데이터에 형식을 적용하지 않는다고 가정합니다.  
+     메서드가 반환 하므로 <xref:System.IO.Stream>WCF 작업을 완전히 제어할 서비스 작업에서 반환 되는 바이트를에 있다고 가정 하 고 반환 되는 데이터를 서식 없이 적용 됩니다.  
   
 2.  서비스 계약을 구현합니다. 이 계약에는 하나의 작업(`GetImage`)만 있습니다. 이 메서드는 비트맵을 생성하여 <xref:System.IO.MemoryStream>에 .jpg 형식으로 저장합니다. 그런 다음 이 작업은 해당 스트림을 호출자에 반환합니다.  
   
@@ -118,7 +106,7 @@ ms.lasthandoff: 12/22/2017
   
 2.  Internet Explorer를 열고 `http://localhost:8000/Service/GetImage?width=50&height=40`을 입력하면 파란 대각선이 중앙을 통과하는 노란 사각형이 표시됩니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음은 이 항목에 해당되는 전체 코드 목록입니다.  
   
 ```  

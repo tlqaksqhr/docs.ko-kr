@@ -1,14 +1,6 @@
 ---
-title: "ICorProfilerInfo::SetILInstrumentedCodeMap 메서드"
-ms.custom: 
+title: ICorProfilerInfo::SetILInstrumentedCodeMap 메서드
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICorProfilerInfo.SetILInstrumentedCodeMap
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: bce1dcf8-b4ec-4e73-a917-f2df1ad49c8a
 topic_type:
 - apiref
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 127f6d76e85ed30f1407d16f8d81c93dd2941960
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 8ecb80de1ae46b072df4bab8357e78e7a22ae298
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="icorprofilerinfosetilinstrumentedcodemap-method"></a>ICorProfilerInfo::SetILInstrumentedCodeMap 메서드
 지정한 Microsoft MSIL (intermediate language) 맵 엔트리를 사용 하 여 지정된 된 함수에 대 한 코드 맵을 설정 합니다.  
@@ -65,7 +53,7 @@ HRESULT SetILInstrumentedCodeMap(
  [in] MSIL 오프셋을 지정 하며 각 COR_IL_MAP 구조체의 배열입니다.  
   
 ## <a name="remarks"></a>설명  
- 프로파일러 (예: 지정 된 소스 줄에 도달할 때 알릴) 계측을 위해 메서드의 소스 코드 내에서 문을 삽입 하는 경우가 있습니다. `SetILInstrumentedCodeMap`프로파일러를 원래 MSIL 명령을 새 위치에 매핑할 수 있습니다. 프로파일러를 사용할 수는 [icorprofilerinfo:: Getiltonativemapping](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getiltonativemapping-method.md) 메서드를 지정된 된 네이티브 오프셋 위치에 대 한 원래 MSIL 오프셋을 가져옵니다.  
+ 프로파일러 (예: 지정 된 소스 줄에 도달할 때 알릴) 계측을 위해 메서드의 소스 코드 내에서 문을 삽입 하는 경우가 있습니다. `SetILInstrumentedCodeMap` 프로파일러를 원래 MSIL 명령을 새 위치에 매핑할 수 있습니다. 프로파일러를 사용할 수는 [icorprofilerinfo:: Getiltonativemapping](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getiltonativemapping-method.md) 메서드를 지정된 된 네이티브 오프셋 위치에 대 한 원래 MSIL 오프셋을 가져옵니다.  
   
  디버거는 각 이전 오프셋 MSIL 원래, 수정 되지 않은 MSIL 코드 내에서 오프셋을 나타내며 각 새 오프셋 새로운, 계측 된 코드 내에서 MSIL 오프셋을 참조 한다고 가정 합니다. 지도 오름차순으로 정렬 되어야 합니다. 단계별 코드 실행이 제대로 작동 하려면, 다음이 지침을 따르십시오.  
   
@@ -100,7 +88,7 @@ HRESULT SetILInstrumentedCodeMap(
   
  **라이브러리:** CorGuids.lib  
   
- **.NET framework 버전:**[!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]  
+ **.NET framework 버전:** [!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]  
   
 ## <a name="see-also"></a>참고 항목  
  [ICorProfilerInfo 인터페이스](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)

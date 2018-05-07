@@ -1,31 +1,17 @@
 ---
-title: "Windows Vista, Windows Server 2003 및 Windows XP의 큐 기능 차이점"
-ms.custom: 
+title: Windows Vista, Windows Server 2003 및 Windows XP의 큐 기능 차이점
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - queues [WCF], differences in operating systems
 ms.assetid: aa809d93-d0a3-4ae6-a726-d015cca37c04
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 8f30ad7819a570f0149868502261f986f4dd8c0b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: d956a72c9413384176c10effefc0307b09744c4c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="differences-in-queuing-features-in-windows-vista-windows-server-2003-and-windows-xp"></a>Windows Vista, Windows Server 2003 및 Windows XP의 큐 기능 차이점
-이 항목에서는 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], [!INCLUDE[wv](../../../../includes/wv-md.md)] 및 [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] 간 [!INCLUDE[wxp](../../../../includes/wxp-md.md)] 큐 기능의 차이점에 대해 요약합니다.  
+이 항목에서는 Windows Communication Foundation (WCF) 큐 기능 간의 차이점을 요약 [!INCLUDE[wv](../../../../includes/wv-md.md)], [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)], 및 [!INCLUDE[wxp](../../../../includes/wxp-md.md)]합니다.  
   
 ## <a name="application-specific-dead-letter-queue"></a>응용 프로그램별 배달 못한 편지 큐  
  대기 중인 메시지는 수신 응용 프로그램이 적절한 시간 내에 메시지를 읽지 못하는 경우 무기한 큐에 남을 수 있습니다. 시간이 중요한 메시지인 경우에는 이 동작이 별로 좋지 않습니다. 시간이 중요한 메시지는 대기 중인 바인딩에서 `TimeToLive` 속성이 설정되어 있습니다. 이 속성은 메시지가 만료될 때까지 큐에 머물 수 있는 기간을 나타냅니다. 만료된 메시지는 배달 못한 편지 큐라는 특수 큐로 보내집니다. 또한 큐 할당량 초과 또는 인증 오류 등 다른 이유로 메시지가 배달 못한 편지 큐에 놓일 수도 있습니다.  
@@ -43,7 +29,7 @@ ms.lasthandoff: 12/22/2017
   
 -   MSMQ는 [!INCLUDE[wv](../../../../includes/wv-md.md)]에서 네거티브 승인을 지원하지만 [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] 및 [!INCLUDE[wxp](../../../../includes/wxp-md.md)]에서는 지원하지 않습니다. 받는 큐 관리자에서 네거티브 승인을 사용하면 거부된 메시지가 보내는 큐 관리자의 배달 못한 편지 큐에 들어갑니다. 따라서 `ReceiveErrorHandling.Reject`는 [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] 및 [!INCLUDE[wxp](../../../../includes/wxp-md.md)]에서 허용되지 않습니다.  
   
--   [!INCLUDE[wv](../../../../includes/wv-md.md)]에서 MSMQ는 메시지 배달 시도 횟수를 보관하는 메시지 속성을 지원합니다. 이 중단 횟수 속성은 [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] 및 [!INCLUDE[wxp](../../../../includes/wxp-md.md)]에서 사용할 수 없습니다. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서는 중단 횟수가 메모리 내에 유지되기 때문에 웹 팜에 있는 둘 이상의 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 서비스에서 같은 메시지를 읽을 경우에는 이 속성 값이 정확하지 않을 수도 있습니다.  
+-   [!INCLUDE[wv](../../../../includes/wv-md.md)]에서 MSMQ는 메시지 배달 시도 횟수를 보관하는 메시지 속성을 지원합니다. 이 중단 횟수 속성은 [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] 및 [!INCLUDE[wxp](../../../../includes/wxp-md.md)]에서 사용할 수 없습니다. WCF 웹 팜에 있는 둘 이상의 WCF 서비스에서 동일한 메시지를 읽을 때이 속성 값이 정확에 없을 수 있습니다는 수도 있기 때문에서는 중단 횟수가 메모리에 유지 됩니다.  
   
 ## <a name="remote-transactional-read"></a>원격 트랜잭션 읽기  
  [!INCLUDE[wv](../../../../includes/wv-md.md)]의 MSMQ에서는 원격 트랜잭션 읽기를 지원합니다. 이를 통해 큐에서 읽기를 수행하는 응용 프로그램을 큐가 호스팅된 컴퓨터와 다른 컴퓨터에 호스팅할 수 있습니다. 이 기능을 사용하면 중앙의 큐에서 읽기를 수행하는 서비스 팜을 구성하여 시스템의 전체적인 처리량을 높일 수 있습니다. 또한 메시지를 읽거나 처리하는 동안 오류가 발생하면 트랜잭션을 롤백하여 나중에 처리할 수 있도록 메시지를 큐에 남길 수 있습니다.  

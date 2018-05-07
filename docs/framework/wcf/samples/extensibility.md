@@ -1,27 +1,15 @@
 ---
-title: "확장성"
-ms.custom: 
+title: 확장성
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: cd7ddffc-a261-44aa-bd50-33c1c74f0df0
-caps.latest.revision: "6"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: d1d8ea4987d918da79dcf1f69b842f19901e63a5
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 7cba21715a6a0347e910300de46c1e47fd6e30bf
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="extensibility"></a>확장성
-이 단원에는 사용자 지정 확장성 및 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]의 다른 기능을 처리하는 샘플이 포함되어 있습니다.  
+이 섹션에는 사용자 지정 확장성 및 Windows Communication Foundation (WCF)의 기타 기능을 처리 하는 샘플이 들어 있습니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
  [채널 확장성](../../../../docs/framework/wcf/samples/channels-extensibility.md)  
@@ -58,7 +46,7 @@ ms.lasthandoff: 12/22/2017
  확장성 지점에서 사용자 지정 메시지 데이터 형식을 사용하는 방법을 보여 줍니다.  
   
  [사용자 지정 메시지 필터](../../../../docs/framework/wcf/samples/custom-message-filter.md)  
- [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]에서 메시지를 끝점에 디스패치할 때 사용하는 메시지 필터를 대체하는 방법을 보여 줍니다.  
+ Windows Communication Foundation (WCF) 메시지를 끝점에 디스패치할 때 사용 하는 메시지 필터를 대체 하는 방법을 보여 줍니다.  
   
  [사용자 지정 서비스 호스트](../../../../docs/framework/wcf/samples/custom-service-host.md)  
  <xref:System.ServiceModel.ServiceHost> 클래스의 사용자 지정 파생을 사용하여 서비스의 런타임 동작을 변경하는 방법을 보여 줍니다.  

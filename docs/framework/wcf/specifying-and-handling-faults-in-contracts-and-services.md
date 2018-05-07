@@ -1,31 +1,17 @@
 ---
 title: 계약 및 서비스에서 오류 지정 및 처리
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - handling faults [WCF]
 ms.assetid: a9696563-d404-4905-942d-1e0834c26dea
-caps.latest.revision: 22
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 00b3687169aa2e5521a3e3348be2a45738e97093
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
-ms.translationtype: MT
+ms.openlocfilehash: fc5fa03b723a35c4748fc16db8946277266e3b0e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="specifying-and-handling-faults-in-contracts-and-services"></a>계약 및 서비스에서 오류 지정 및 처리
-[!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 응용 프로그램은 관리되는 예외 개체를 SOAP 오류 개체에 매핑하고 SOAP 오류 개체를 관리되는 예외 개체에 매핑하여 오류 상황을 처리합니다. 이 단원의 항목에서는 사용자 지정 SOAP 오류와 같은 오류 조건을 노출하도록 계약을 디자인하는 방법, 이러한 오류를 서비스 구현의 일부로 반환하는 방법 및 클라이언트가 이러한 오류를 catch하는 방법에 대해 설명합니다.  
+Windows Communication Foundation (WCF) 응용 프로그램 SOAP 오류 개체 및 SOAP 오류 개체를 관리 되는 예외 개체를 관리 되는 예외 개체를 매핑하여 오류 상황을 처리 합니다. 이 단원의 항목에서는 사용자 지정 SOAP 오류와 같은 오류 조건을 노출하도록 계약을 디자인하는 방법, 이러한 오류를 서비스 구현의 일부로 반환하는 방법 및 클라이언트가 이러한 오류를 catch하는 방법에 대해 설명합니다.  
   
 ## <a name="error-handling-overview"></a>오류 처리 개요  
  관리되는 모든 응용 프로그램에서 처리 오류는 <xref:System.Exception> 개체로 표시됩니다. [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 응용 프로그램 같은 SOAP 기반 응용 프로그램의 경우 서비스 메서드는 SOAP 오류 메시지를 사용하여 처리 오류 정보와 통신합니다. SOAP 오류는 서비스 작업의 메타데이터에 포함된 메시지 유형이므로 클라이언트가 작업을 더욱 견고하게 만들거나 대화형으로 만드는 데 사용할 수 있는 오류 계약을 만듭니다. 또한 SOAP 오류가 클라이언트에 XML 형식으로 표시되기 때문에 SOAP 플랫폼의 클라이언트가 사용할 수 있는 상호 운용성이 높은 형식의 시스템으로서 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 응용 프로그램으로의 연결이 쉬워집니다.  

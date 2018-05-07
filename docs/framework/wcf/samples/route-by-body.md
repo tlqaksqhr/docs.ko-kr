@@ -1,24 +1,12 @@
 ---
-title: "본문에 의한 경로"
-ms.custom: 
+title: 본문에 의한 경로
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 07a6fc3b-c360-42e0-b663-3d0f22cf4502
-caps.latest.revision: "18"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: defd3a3e9df273739aaf3440fd34fad2cad44cd4
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: e9a0c947a1dd7ac2a6c7af74baaa072aae67358c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="route-by-body"></a>본문에 의한 경로
 이 샘플에서는 SOAP 작업이 있는 메시지 개체를 수락하는 서비스를 구현하는 방법을 보여 줍니다. 이 샘플에 따라는 [시작](../../../../docs/framework/wcf/samples/getting-started-sample.md) 계산기 서비스를 구현 하는 합니다. 서비스는 `Calculate` 요청 매개 변수를 받아 <xref:System.ServiceModel.Channels.Message> 응답을 반환하는 단일 <xref:System.ServiceModel.Channels.Message> 작업을 구현합니다.  
@@ -28,7 +16,7 @@ ms.lasthandoff: 12/22/2017
 > [!NOTE]
 >  이 샘플의 설치 절차 및 빌드 지침은 이 항목의 끝부분에 나와 있습니다.  
   
- 이 샘플에서는 본문 콘텐츠에 기반한 메시지 디스패치를 보여 줍니다. 기본 제공 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 서비스 모델 메시지 디스패치 메커니즘은 메시지 동작을 기반으로 수행됩니다. 반면 모든 작업을 Action=""으로 정의하는 기존 웹 서비스도 많습니다. 동작 정보를 기준으로 계속 요청 메시지를 디스패치하는 WSDL을 기반으로 하여 서비스를 빌드할 수 없습니다. 이 샘플에서는 WSDL을 기반으로 하는 서비스 계약을 보여 줍니다. WSDL은 샘플에 포함된 Service.wsdl에 있습니다. 서비스 계약에 사용 된 것과 비슷한 계산기는 [시작](../../../../docs/framework/wcf/samples/getting-started-sample.md)합니다. 하지만 `[OperationContract]`는 모든 작업에 대해 `Action=""`을 지정합니다.  
+ 이 샘플에서는 본문 콘텐츠에 기반한 메시지 디스패치를 보여 줍니다. 기본 제공 Windows Communication Foundation (WCF) 서비스 모델 메시지 디스패치 메커니즘은 메시지 동작을 기반으로 합니다. 반면 모든 작업을 Action=""으로 정의하는 기존 웹 서비스도 많습니다. 동작 정보를 기준으로 계속 요청 메시지를 디스패치하는 WSDL을 기반으로 하여 서비스를 빌드할 수 없습니다. 이 샘플에서는 WSDL을 기반으로 하는 서비스 계약을 보여 줍니다. WSDL은 샘플에 포함된 Service.wsdl에 있습니다. 서비스 계약에 사용 된 것과 비슷한 계산기는 [시작](../../../../docs/framework/wcf/samples/getting-started-sample.md)합니다. 하지만 `[OperationContract]`는 모든 작업에 대해 `Action=""`을 지정합니다.  
   
 ```  
 [ServiceContract(Namespace = "http://Microsoft.ServiceModel.Samples"),    
@@ -80,7 +68,7 @@ Press <ENTER> to terminate client.
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  이 디렉터리가 없으면 [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4(.NET Framework 4용 WCF(Windows Communication Foundation) 및 WF(Windows Workflow Foundation) 샘플)](http://go.microsoft.com/fwlink/?LinkId=150780) 로 이동하여 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 및 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플을 모두 다운로드하세요. 이 샘플은 다음 디렉터리에 있습니다.  
+>  이 디렉터리가로 이동 [Windows Communication Foundation (WCF) 및.NET Framework 4에 대 한 Windows WF (Workflow Foundation) 샘플](http://go.microsoft.com/fwlink/?LinkId=150780) 모든 Windows Communication Foundation (WCF)를 다운로드 하 고 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플. 이 샘플은 다음 디렉터리에 있습니다.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Interop\RouteByBody`  
   

@@ -1,11 +1,7 @@
 ---
-title: "FormatFromRawValue 함수 (관리 되지 않는 API 참조)"
-description: "FormatFromRawValue 함수 원시 성능 데이터를 지정된 된 형식으로 변환합니다."
+title: FormatFromRawValue 함수 (관리 되지 않는 API 참조)
+description: FormatFromRawValue 함수 원시 성능 데이터를 지정된 된 형식으로 변환합니다.
 ms.date: 11/21/2017
-ms.prod: .net-framework
-ms.technology:
-- dotnet-clr
-ms.topic: reference
 api_name:
 - FormatFromRawValue
 api_location:
@@ -20,14 +16,11 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 3daa89ec0b40bb9c08898ecd682f05f0f0ce09a8
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: e0710b26237b350f1dfbc7d2464b7a131373604e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="formatfromrawvalue-function"></a>FormatFromRawValue 함수
 시간 기반 형식 변환 되 면 지정된 된 형식으로 원시 성능 데이터 값을 하나 또는 두 개의 원시 성능 데이터 값으로 변환 합니다.   
@@ -50,7 +43,7 @@ int FormatFromRawValue (
 ## <a name="parameters"></a>매개 변수
 
 `dwCounterType`  
-[in] 카운터 형식입니다. 목록이 카운터 형식에 대 한 참조 [WMI 성능 카운터 형식](https://msdn.microsoft.com/library/aa394569(v=vs.85).aspx)합니다. `dwCounterType`임의의 형식일 수 있습니다 카운터를 제외 하 고 `PERF_LARGE_RAW_FRACTION` 및 `PERF_LARGE_RAW_BASE`합니다. 
+[in] 카운터 형식입니다. 목록이 카운터 형식에 대 한 참조 [WMI 성능 카운터 형식](https://msdn.microsoft.com/library/aa394569(v=vs.85).aspx)합니다. `dwCounterType` 임의의 형식일 수 있습니다 카운터를 제외 하 고 `PERF_LARGE_RAW_FRACTION` 및 `PERF_LARGE_RAW_BASE`합니다. 
 
 `dwFormat`  
 [in] 원시 성능 데이터를 변환할 대상 형식입니다. 다음 값 중 하나일 수 있습니다.
@@ -71,11 +64,11 @@ int FormatFromRawValue (
 `pTimeBase`  
 [in] 형식 변환에 필요한 경우 시간 기준에 대 한 포인터입니다. 시간 기준 정보가 형식 변환에 대 한 필요가 없는 경우이 매개 변수 값은 무시 됩니다.
 
-`pRawValue1`[in] 에 대 한 포인터는 [ `PDH_RAW_COUNTER` ](https://msdn.microsoft.com/library/windows/desktop/aa373060(v=vs.85).aspx) 원시 성능 값을 나타내는 구조입니다.
+`pRawValue1` [in] 에 대 한 포인터는 [ `PDH_RAW_COUNTER` ](https://msdn.microsoft.com/library/windows/desktop/aa373060(v=vs.85).aspx) 원시 성능 값을 나타내는 구조입니다.
 
-`pRawValue2`[in] 에 대 한 포인터는 [ `PDH_RAW_COUNTER` ](https://msdn.microsoft.com/library/windows/desktop/aa373060(v=vs.85).aspx) 구조를 두 번째 원시 성능 값을 나타냅니다. 두 번째 원시 성능 값 필요가 없는 경우이 매개 변수 여야 합니다 `null`합니다.
+`pRawValue2` [in] 에 대 한 포인터는 [ `PDH_RAW_COUNTER` ](https://msdn.microsoft.com/library/windows/desktop/aa373060(v=vs.85).aspx) 구조를 두 번째 원시 성능 값을 나타냅니다. 두 번째 원시 성능 값 필요가 없는 경우이 매개 변수 여야 합니다 `null`합니다.
 
-`pFmtValue`[out] 에 대 한 포인터는 [ `PDH_FMT_COUNTERVALUE` ](https://msdn.microsoft.com/library/windows/desktop/aa373050(v=vs.85).aspx) 구조체 형식이 지정 된 성능 값입니다.
+`pFmtValue` [out] 에 대 한 포인터는 [ `PDH_FMT_COUNTERVALUE` ](https://msdn.microsoft.com/library/windows/desktop/aa373050(v=vs.85).aspx) 구조체 형식이 지정 된 성능 값입니다.
 
 ## <a name="return-value"></a>반환 값
 
@@ -96,7 +89,7 @@ int FormatFromRawValue (
   
  **라이브러리:** PerfCounter.dll  
   
- **.NET framework 버전:**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **.NET framework 버전:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>참고자료  
 [WMI 및 성능 카운터 (관리 되지 않는 API 참조)](index.md)

@@ -1,34 +1,22 @@
 ---
-title: "WCF에서 권한 부여"
-ms.custom: 
+title: WCF에서 권한 부여
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - authorization [WCF]
 - security [WCF], authorization
 ms.assetid: 8ea0b552-af65-45b0-a157-c6c111b8ce5e
-caps.latest.revision: "15"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ac43b2185048287d0edd4cb20561a936bce2f58b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: c6bf779c7baeea1f9a253ad0bde966cea67b57aa
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="authorization-in-wcf"></a>WCF에서 권한 부여
-권한 부여는 서비스나 파일과 같은 리소스에 대한 액세스 및 권한을 제어하는 프로세스입니다. 이 단원의 항목에서는 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]에서 여러 가지 방법으로 기본 작업을 수행하는 방법에 대해 설명합니다.  
+권한 부여는 서비스나 파일과 같은 리소스에 대한 액세스 및 권한을 제어하는 프로세스입니다. 이 섹션의 항목에서는 WCF Windows Communication Foundation ()는 여러 가지 방법으로 기본 작업을 수행 하는 방법을 보여 줍니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
  [Access Control 메커니즘](../../../../docs/framework/wcf/feature-details/access-control-mechanisms.md)  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]의 권한 부여 메커니즘 및 제안된 사용에 대해 간략히 설명합니다.  
+ WCF 및 적절된 한 사용 권한 부여 메커니즘의 간략 한 개요를 제공합니다.  
   
  [방법: PrincipalPermissionAttribute 클래스를 사용하여 액세스 제한](../../../../docs/framework/wcf/how-to-restrict-access-with-the-principalpermissionattribute-class.md)  
  <xref:System.Security.Permissions.PrincipalPermissionAttribute>를 사용하여 서비스에 대한 액세스를 제한하는 프로세스를 보여 줍니다.  
@@ -37,7 +25,7 @@ ms.lasthandoff: 12/22/2017
  [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]의 역할 공급자 기능을 사용할 수 있도록 설정하는 서비스 구성에 대해 설명합니다.  
   
  [방법: 서비스에서 ASP.NET 권한 부여 관리자 역할 공급자 사용](../../../../docs/framework/wcf/feature-details/how-to-use-the-aspnet-authorization-manager-role-provider-with-a-service.md)  
- [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]은 권한 부여 관리자를 사용하여 웹 사이트의 권한을 관리할 수 있습니다. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]도 이와 유사하게 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]/권한 부여 관리자를 결합 사용하여 클라이언트 권한을 관리할 수 있습니다.  
+ [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]은 권한 부여 관리자를 사용하여 웹 사이트의 권한을 관리할 수 있습니다. WCF 마찬가지로 활용할 수 있습니다는 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]/Authorization 관리자 클라이언트의 권한 부여를 결합 합니다.  
   
  [ID 모델을 사용하여 클레임 및 권한 부여 관리](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md)  
  클레임 기반 권한 부여에 ID 모델 인프라를 사용하는 기본적인 사용법에 대해 설명합니다 .  

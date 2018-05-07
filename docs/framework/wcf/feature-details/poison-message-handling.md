@@ -1,36 +1,22 @@
 ---
 title: 포이즌 메시지 처리
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 8d1c5e5a-7928-4a80-95ed-d8da211b8595
-caps.latest.revision: 29
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 6fa35209b2dafc088605848a0dc96a53a2813dfd
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: b860e239d001a03da191d73de2f7b53e7073c7a6
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="poison-message-handling"></a>포이즌 메시지 처리
 A *포이즌 메시지* 를 응용 프로그램에 배달 시도 최대 횟수를 초과한 메시지입니다. 큐 기반 응용 프로그램에서 오류로 인해 메시지를 처리할 수 없는 경우 이러한 상황이 발생할 수 있습니다. 안정성 요청을 충족하려면 대기 중인 응용 프로그램이 트랜잭션에서 메시지를 받습니다. 대기 중인 메시지를 받은 트랜잭션을 중단하면 메시지가 큐에 남으므로 새 트랜잭션에서 해당 메시지가 다시 시도됩니다. 트랜잭션의 중단 문제가 해결되지 않은 경우에는 수신 응용 프로그램이 최대 전달 시도 횟수를 초과할 때까지 같은 메시지를 받고 중단하는 루프에 갇히고, 포이즌 메시지가 발생합니다.  
   
  메시지는 여러 가지 이유로 포이즌 메시지가 될 수 있습니다. 가장 일반적인 이유는 응용 프로그램마다 고유하기 때문입니다. 예를 들어 응용 프로그램이 큐에서 메시지를 읽고 일부 데이터베이스 처리를 수행하면 응용 프로그램이 데이터베이스에 대한 잠금을 얻지 못해 트랜잭션이 중단될 수 있습니다. 데이터베이스 트랜잭션이 중단되었기 때문에 메시지가 큐에 남아 있으며 이로 인해 두 번째에서는 응용 프로그램이 메시지를 다시 읽고 데이터베이스에 대한 잠금을 얻도록 시도합니다. 메시지에 잘못된 정보가 들어 있는 경우 해당 메시지는 포이즌 메시지가 될 수도 있습니다. 예를 들면, 구매 주문서에 잘못된 고객 번호가 포함될 수 있습니다. 이 경우 응용 프로그램이 트랜잭션을 중단하고 메시지가 포이즌 메시지가 되도록 지정할 수 있습니다.  
   
- 경우에 따라 메시지가 응용 프로그램에 디스패치되지 않을 수도 있습니다. [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 계층에서 메시지에 잘못된 프레임이 있거나, 잘못된 메시지 자격 증명이 연결되어 있거나, 잘못된 동작 헤더가 있는 것처럼 메시지에 문제가 있을 수 있습니다. 이러한 경우 응용 프로그램이 메시지를 받지는 않지만 메시지가 포이즌 메시지가 될 수 있으며 그러한 메시지는 수동으로 처리할 수 있습니다.  
+ 경우에 따라 메시지가 응용 프로그램에 디스패치되지 않을 수도 있습니다. Windows Communication Foundation (WCF) 레이어는와 같은 메시지와 함께 문제를 찾을 수에서 메시지에 잘못 된 프레임이 있거나, 잘못 된 메시지 자격 증명이 연결 되어 있거나, 잘못 된 동작 헤더가 있는 것입니다. 이러한 경우 응용 프로그램이 메시지를 받지는 않지만 메시지가 포이즌 메시지가 될 수 있으며 그러한 메시지는 수동으로 처리할 수 있습니다.  
   
 ## <a name="handling-poison-messages"></a>포이즌 메시지 처리  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서 포이즌 메시지 처리는 응용 프로그램에 디스패치할 수 없는 메시지나 응용 프로그램에 디스패치할 수 있지만 응용 프로그램의 고유한 이유로 인해 처리하지 못한 메시지를 처리할 수신 응용 프로그램에 대한 메커니즘을 제공합니다. 포이즌 메시지 처리는 대기 중인 사용 가능한 각 바인딩에서 다음 속성으로 구성됩니다.  
+ Wcf에서는 포이즌 메시지 처리 응용 프로그램에 디스패치할 수 없는 메시지나 응용 프로그램에 있지만 응용 프로그램별 인해 처리 하지 못한 메시지를 처리는 수신 응용 프로그램에 대 한 메커니즘을 제공 이유입니다. 포이즌 메시지 처리는 대기 중인 사용 가능한 각 바인딩에서 다음 속성으로 구성됩니다.  
   
 -   `ReceiveRetryCount`. 응용 프로그램 큐에서 응용 프로그램으로 메시지 전달을 다시 시도하는 최대 횟수를 나타내는 정수 값입니다. 기본값은 5입니다. 이 값은 데이터베이스의 임시 교착 상태처럼 문제 해결을 즉시 다시 시도하는 경우 충분합니다.  
   
@@ -46,7 +32,7 @@ A *포이즌 메시지* 를 응용 프로그램에 배달 시도 최대 횟수�
   
 -   Reject. 이 옵션은 [!INCLUDE[wv](../../../../includes/wv-md.md)]에서만 사용할 수 있습니다. 이 옵션은 메시지 큐(MSMQ)에 응용 프로그램이 메시지를 받을 수 없는 전송 큐 관리자에게 부정 승인을 다시 보내도록 지시합니다. 이 메시지는 전송 큐 관리자의 배달 못한 편지 큐에 배치됩니다.  
   
--   Move. 이 옵션은 [!INCLUDE[wv](../../../../includes/wv-md.md)]에서만 사용할 수 있습니다. 이 옵션은 포이즌 메시지 처리 응용 프로그램이 나중에 처리할 수 있도록 포이즌 메시지를 포이즌 메시지 큐로 이동합니다. 포이즌 메시지 큐는 응용 프로그램 큐의 하위 큐입니다. 포이즌 메시지 처리 응용 프로그램은 포이즌 큐 외부의 메시지를 읽는 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 서비스일 수 있습니다. 포이즌 큐는 응용 프로그램 큐의 하위 큐 및 net.msmq://의 주소\<*컴퓨터 이름*>/*applicationQueue*; poison, 여기서  *컴퓨터 이름* 큐가 있는 컴퓨터의 이름 및 *applicationQueue* 응용 프로그램별 큐의 이름입니다.  
+-   Move. 이 옵션은 [!INCLUDE[wv](../../../../includes/wv-md.md)]에서만 사용할 수 있습니다. 이 옵션은 포이즌 메시지 처리 응용 프로그램이 나중에 처리할 수 있도록 포이즌 메시지를 포이즌 메시지 큐로 이동합니다. 포이즌 메시지 큐는 응용 프로그램 큐의 하위 큐입니다. 포이즌 메시지 처리 응용 프로그램에는 포이즌 큐에서 메시지를 읽는 WCF 서비스 일 수 있습니다. 포이즌 큐는 응용 프로그램 큐의 하위 큐 및 net.msmq://의 주소\<*컴퓨터 이름*>/*applicationQueue*; poison, 여기서  *컴퓨터 이름* 큐가 있는 컴퓨터의 이름 및 *applicationQueue* 응용 프로그램별 큐의 이름입니다.  
   
  다음은 메시지에 대한 최대 전달 시도 횟수입니다.  
   
@@ -57,20 +43,20 @@ A *포이즌 메시지* 를 응용 프로그램에 배달 시도 최대 횟수�
 > [!NOTE]
 >  전달된 메시지에 대해서는 다시 시도하지 않습니다.  
   
- 메시지 읽기를 시도한 횟수를 추적하려면 [!INCLUDE[wv](../../../../includes/wv-md.md)]에서 중단 횟수를 계산하는 지속적 메시지 속성과, 응용 프로그램 큐와 하위 큐 사이에서 메시지를 이동한 횟수를 계산하는 이동 횟수 속성을 관리합니다. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 채널은 이러한 속성을 사용하여 받은 재시도 횟수와 재시도 주기 수를 계산합니다. [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] 및 [!INCLUDE[wxp](../../../../includes/wxp-md.md)]에서 중단 횟수는 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 채널에 의해 메모리에서 관리되고 응용 프로그램이 실패하면 재설정됩니다. 또한 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 채널은 언제든지 메모리에 최대 256개의 메시지 중단 횟수를 보유할 수 있습니다. 257번째 메시지를 읽으면 가장 오래된 메시지의 중단 횟수가 재설정됩니다.  
+ 메시지 읽기를 시도한 횟수를 추적하려면 [!INCLUDE[wv](../../../../includes/wv-md.md)]에서 중단 횟수를 계산하는 지속적 메시지 속성과, 응용 프로그램 큐와 하위 큐 사이에서 메시지를 이동한 횟수를 계산하는 이동 횟수 속성을 관리합니다. WCF 채널 이러한를 사용 하 여 받은 재시도 횟수와 재시도 주기 수를 계산할 수 있습니다. [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] 및 [!INCLUDE[wxp](../../../../includes/wxp-md.md)],에서는 중단 횟수가 WCF 채널에 의해 메모리에 유지 하 고 응용 프로그램이 실패 하면 재설정 됩니다. 또한 WCF 채널 언제 든 지 메모리에 최대 256 개의 메시지 중단 횟수를 보유할 수 있습니다. 257번째 메시지를 읽으면 가장 오래된 메시지의 중단 횟수가 재설정됩니다.  
   
  중단 횟수와 이동 횟수 속성은 작업 컨텍스트를 통해 서비스 작업에 사용할 수 있습니다. 다음 코드 예제에서는 이러한 속성에 액세스하는 방법을 보여 줍니다.  
   
  [!code-csharp[S_UE_MSMQ_Poison#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_ue_msmq_poison/cs/service.cs#1)]  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서는 대기 중인 두 개의 표준 바인딩을 제공합니다.  
+ WCF에서는 대기 중인된 두 개의 표준 바인딩을 제공합니다.  
   
--   <xref:System.ServiceModel.NetMsmqBinding>. [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 바인딩은 다른 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 끝점과 큐 기반 통신을 수행하는 데 적합합니다.  
+-   <xref:System.ServiceModel.NetMsmqBinding>. A [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 다른 WCF 끝점과 큐 기반 통신을 수행 하는 데 적합 한 바인딩입니다.  
   
 -   <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding>. 기존 메시지 큐 응용 프로그램과 통신하는 데 적합한 바인딩입니다.  
   
 > [!NOTE]
->  [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 서비스 요구 사항을 기반으로 이러한 바인딩의 속성을 변경할 수 있습니다. 전체 포이즌 메시지 처리 메커니즘은 수신 응용 프로그램에 로컬입니다. 프로세스는 수신 응용 프로그램이 최종적으로 부정 승인을 중지하고 발신자에게 다시 보내지 않으면 송신 응용 프로그램에 표시되지 않습니다. 이 경우 메시지가 발신자의 배달 못 한 큐로 이동됩니다.  
+>  WCF 서비스의 요구 사항을 기반으로 이러한 바인딩의 속성을에서 변경할 수 있습니다. 전체 포이즌 메시지 처리 메커니즘은 수신 응용 프로그램에 로컬입니다. 프로세스는 수신 응용 프로그램이 최종적으로 부정 승인을 중지하고 발신자에게 다시 보내지 않으면 송신 응용 프로그램에 표시되지 않습니다. 이 경우 메시지가 발신자의 배달 못 한 큐로 이동됩니다.  
   
 ## <a name="best-practice-handling-msmqpoisonmessageexception"></a>최선의 방법: MsmqPoisonMessageException 처리  
  서비스에서 메시지가 포이즌임을 확인하면 대기 중인 전송이 포이즌 메시지의 <xref:System.ServiceModel.MsmqPoisonMessageException>를 포함하는 `LookupId`을 throw합니다.  
@@ -116,7 +102,7 @@ A *포이즌 메시지* 를 응용 프로그램에 배달 시도 최대 횟수�
   
 -   [!INCLUDE[wv](../../../../includes/wv-md.md)]의 메시지 큐는 부정 승인을 지원하지만 [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] 및 [!INCLUDE[wxp](../../../../includes/wxp-md.md)]에서는 지원하지 않습니다. 받는 큐 관리자에서 네거티브 승인을 사용하면 거부된 메시지가 보내는 큐 관리자의 배달 못한 편지 큐에 들어갑니다. 따라서 `ReceiveErrorHandling.Reject`는 [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] 및 [!INCLUDE[wxp](../../../../includes/wxp-md.md)]에서 허용되지 않습니다.  
   
--   [!INCLUDE[wv](../../../../includes/wv-md.md)]의 메시지 큐는 메시지 전달 시도 횟수를 보관하는 메시지 속성을 지원합니다. 이 중단 횟수 속성은 [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] 및 [!INCLUDE[wxp](../../../../includes/wxp-md.md)]에서 사용할 수 없습니다. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서는 중단 횟수가 메모리 내에 유지되기 때문에 팜에 있는 둘 이상의 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 서비스에서 같은 메시지를 읽을 경우에는 이 속성 값이 정확하지 않을 수도 있습니다.  
+-   [!INCLUDE[wv](../../../../includes/wv-md.md)]의 메시지 큐는 메시지 전달 시도 횟수를 보관하는 메시지 속성을 지원합니다. 이 중단 횟수 속성은 [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] 및 [!INCLUDE[wxp](../../../../includes/wxp-md.md)]에서 사용할 수 없습니다. WCF는 팜에 있는 둘 이상의 WCF 서비스에서 동일한 메시지를 읽을 때이 속성 값이 정확에 없을 수 있습니다는 수도 있기 때문에서는 중단 횟수가 메모리에 유지 됩니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [큐 개요](../../../../docs/framework/wcf/feature-details/queues-overview.md)  

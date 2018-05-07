@@ -1,35 +1,23 @@
 ---
 title: 전송 보안 개요
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 00959326-aa9d-44d0-af61-54933d4adc7f
-caps.latest.revision: 23
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload:
-- dotnet
-ms.openlocfilehash: b697dc6a227c3b2a5646f4fcb11a39fd9d6339ff
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 12b491971a9f3faa57edb1ccf9fb59351ed45f3b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="transport-security-overview"></a>전송 보안 개요
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]의 전송 보안 메커니즘은 사용 중인 바인딩과 전송에 따라 결정됩니다. 예를 들어 <xref:System.ServiceModel.WSHttpBinding> 클래스를 사용할 경우 전송은 HTTP이며, 전송 보안을 위한 기본 메커니즘은 HTTPS라고 알려진 HTTP를 통한 SSL(Secure Sockets Layer)입니다. 이 항목에서는 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 시스템 제공 바인딩에 사용되는 주요 전송 보안 메커니즘에 대해 설명합니다.  
+전송 보안 메커니즘 Windows Communication Foundation (WCF)에서 바인딩 및 사용 하는 전송에 따라 다릅니다. 예를 들어 <xref:System.ServiceModel.WSHttpBinding> 클래스를 사용할 경우 전송은 HTTP이며, 전송 보안을 위한 기본 메커니즘은 HTTPS라고 알려진 HTTP를 통한 SSL(Secure Sockets Layer)입니다. 이 항목에서는 WCF 시스템 제공 바인딩에 사용 되는 주요 전송 보안 메커니즘에 설명 합니다.  
   
 > [!NOTE]
->  .NET Framework 3.5 이상에서 SSL 보안을 사용하는 경우 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 클라이언트는 인증서 저장소의 중간 인증서와 SSL 협상 중에 받은 중간 인증서를 모두 사용하여 서비스의 인증서에서 인증서 체인 유효성 검사를 수행합니다. .NET Framework 3.0은 로컬 인증서 저장소에 설치된 중간 인증서만 사용합니다.  
+>  .NET Framework 3.5 이상 SSL 보안을 사용 하는 WCF 클라이언트는 인증서 저장소에 중간 인증서를 사용 하 고 서비스의 인증서 체인 유효성 검사를 수행 하려면 SSL 협상 중에 받은 중간 인증서 인증서입니다. .NET Framework 3.0은 로컬 인증서 저장소에 설치된 중간 인증서만 사용합니다.  
   
 > [!WARNING]
 >  전송 보안을 사용 하는 경우는 <!--zz <xref:System.Treading.Thread.CurrentPrincipal%2A> --> `CurrentPrincipal` 속성이 덮어쓰일 수 있습니다. 이러한 문제가 발생 집합에서이 방지 하려면는 <!--zz <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior.PrincipalPermission%2A> --> `PrincipalPermission` None으로 합니다. <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior>는 서비스 설명에 설정할 수 있는 서비스 동작입니다.  
@@ -75,7 +63,7 @@ ms.lasthandoff: 04/30/2018
  Kerberos 프로토콜에 오류가 있는 경우 이를 통해 서버가 인증에 NTLM을 사용할 수 있습니다. IIS를 구성 하는 방법에 대 한 자세한 내용은 [!INCLUDE[iis601](../../../../includes/iis601-md.md)], 참조 [NTLM 인증 강제 설정](http://go.microsoft.com/fwlink/?LinkId=88598)합니다. [!INCLUDE[iisver](../../../../includes/iisver-md.md)]의 경우 Windows 인증에 NTLM 인증이 포함됩니다. 자세한 내용은 참조 [IIS 7.0 베타: IIS 7.0에서 서버 인증서 구성](http://go.microsoft.com/fwlink/?LinkID=88595)합니다.  
   
 ## <a name="wshttpbinding"></a>WsHttpBinding  
- <xref:System.ServiceModel.WSHttpBinding> 클래스는 WS-* 사양을 구현하는 서비스와 상호 운용하도록 디자인되었습니다. 이 바인딩의 전송 보안은 HTTP 또는 SSL(Secure Sockets Layer) over HTTP입니다. SSL을 사용하는 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 응용 프로그램을 만들려면 IIS를 사용하여 응용 프로그램을 호스팅합니다. 또는 자체 호스팅 응용 프로그램을 만들려면 HttpCfg.exe 도구를 사용하여 X.509 인증서를 컴퓨터의 특정 포트에 바인딩합니다. 포트 번호는 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 응용 프로그램의 일부인 끝점 주소로 지정되어 있습니다. 전송 모드 사용 시 끝점 주소에 HTTPS 프로토콜이 포함되어야 하고, 그렇지 않으면 런타임에 예외가 throw됩니다. 자세한 내용은 참조 [HTTP 전송 보안](../../../../docs/framework/wcf/feature-details/http-transport-security.md)합니다.  
+ <xref:System.ServiceModel.WSHttpBinding> 클래스는 WS-* 사양을 구현하는 서비스와 상호 운용하도록 디자인되었습니다. 이 바인딩의 전송 보안은 HTTP 또는 SSL(Secure Sockets Layer) over HTTP입니다. SSL을 사용 하는 WCF 응용 프로그램을 만들려면 IIS를 사용 하는 응용 프로그램을 호스트 합니다. 또는 자체 호스팅 응용 프로그램을 만들려면 HttpCfg.exe 도구를 사용하여 X.509 인증서를 컴퓨터의 특정 포트에 바인딩합니다. 포트 번호는 끝점 주소로 WCF 응용 프로그램의 일부로 지정 됩니다. 전송 모드 사용 시 끝점 주소에 HTTPS 프로토콜이 포함되어야 하고, 그렇지 않으면 런타임에 예외가 throw됩니다. 자세한 내용은 참조 [HTTP 전송 보안](../../../../docs/framework/wcf/feature-details/http-transport-security.md)합니다.  
   
  클라이언트 인증의 경우 <xref:System.ServiceModel.HttpTransportSecurity.ClientCredentialType%2A> 클래스의 <xref:System.ServiceModel.HttpTransportSecurity> 속성을 <xref:System.ServiceModel.HttpClientCredentialType> 열거형 값 중 하나로 설정합니다. 열거형 값은 <xref:System.ServiceModel.BasicHttpBinding>에 대한 클라이언트 자격 증명 형식과 같으며 IIS 서비스와 호스팅되도록 디자인되었습니다.  
   

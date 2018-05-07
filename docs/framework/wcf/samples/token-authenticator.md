@@ -1,27 +1,15 @@
 ---
 title: Token Authenticator
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 84382f2c-f6b1-4c32-82fa-aebc8f6064db
-caps.latest.revision: "22"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 76f3913f5cf6166793cb6f95ef3658c24e2453b4
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
-ms.translationtype: MT
+ms.openlocfilehash: 35bba0b6a81ff11164636e906440db7e9b2ca25b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="token-authenticator"></a>Token Authenticator
-이 샘플에서는 사용자 지정 토큰 인증자를 구현하는 방법을 보여 줍니다. [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]의 토큰 인증자는 메시지와 함께 사용된 토큰의 유효성을 검사하여 일관성이 있는지 확인하고 토큰과 연관된 ID를 인증하는 데 사용됩니다.  
+이 샘플에서는 사용자 지정 토큰 인증자를 구현하는 방법을 보여 줍니다. Windows Communication Foundation (WCF)의 한 토큰 인증자는 자체 일관성 및 id를 인증 토큰에 연결 된 확인 메시지와 함께 사용 되는 토큰의 유효성 검사에 사용 됩니다.  
   
  사용자 지정 토큰 인증자는 다음과 같은 여러 경우에 유용합니다.  
   

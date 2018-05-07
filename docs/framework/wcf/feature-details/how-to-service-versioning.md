@@ -1,24 +1,12 @@
 ---
-title: "방법: 서비스 버전 관리"
-ms.custom: 
+title: '방법: 서비스 버전 관리'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 4287b6b3-b207-41cf-aebe-3b1d4363b098
-caps.latest.revision: "6"
-author: wadepickett
-ms.author: wpickett
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a4da80d264b05f9c7a1461a7298e521623a97f31
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: a745a35f72722003fc98ecf14d5f39027dc141f6
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-service-versioning"></a>방법: 서비스 버전 관리
 이 항목에서는 메시지를 동일한 서비스의 여러 버전에 라우트하는 라우팅 구성을 만드는 데 필요한 기본 단계에 대해 간략하게 설명합니다. 이 예제에서 메시지는 계산기 서비스의 서로 다른 두 버전인 `roundingCalc`(v1)와 `regularCalc`(v2)에 라우트됩니다. 두 구현 모두 같은 연산을 지원하지만 이전 버전인 `roundingCalc` 서비스에서는 반환 전에 가장 가까운 정수 값으로 모든 계산을 반올림합니다. 클라이언트 응용 프로그램에서는 새 버전인 `regularCalc` 서비스를 사용할지 여부를 나타낼 수 있어야 합니다.  
@@ -105,7 +93,7 @@ messageHeadersElement.Add(MessageHeader.CreateHeader("CalcVer", "http://my.custo
     ```  
   
     > [!NOTE]
-    >  S12 네임 스페이스 접두사는 기본적으로 네임 스페이스 테이블에 정의 된 하 고 "http://www.w3.org/2003/05/soap-envelope" 네임 스페이스를 나타냅니다.  
+    >  S12 네임 스페이스 접두사는 기본적으로 네임 스페이스 테이블에 정의 되며 네임 스페이스를 나타냅니다 "http://www.w3.org/2003/05/soap-envelope"입니다.  
   
 3.  각 끝점을 클라이언트 끝점과 연결하는 필터 테이블을 정의합니다. 값이 1 인는 "CalcVer" 헤더를 포함 하는 메시지를 regularCalc 서비스로 보내집니다. 값이 2이면 메시지가 roundingCalc 서비스에 보내집니다. 헤더가 없으면 메시지가 regularCalc에 라우트됩니다.  
   
@@ -141,7 +129,7 @@ messageHeadersElement.Add(MessageHeader.CreateHeader("CalcVer", "http://my.custo
     </behaviors>  
     ```  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음은 구성 파일의 전체 목록입니다.  
   
 ```xml  
@@ -224,7 +212,7 @@ messageHeadersElement.Add(MessageHeader.CreateHeader("CalcVer", "http://my.custo
 </configuration>  
 ```  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음은 클라이언트 응용 프로그램의 전체 목록입니다.  
   
 ```csharp  

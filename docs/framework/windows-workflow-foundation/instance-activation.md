@@ -1,28 +1,17 @@
 ---
-title: "인스턴스 활성화"
-ms.custom: 
+title: 인스턴스 활성화
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 134c3f70-5d4e-46d0-9d49-469a6643edd8
-caps.latest.revision: "6"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 41615618857c804c37f00e9d20a031a6d17bcab3
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: a1b78dc62fbdc6e5551addf400ceb14dc9e822f5
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="instance-activation"></a>인스턴스 활성화
 SQL 워크플로 인스턴스 저장소는 정기적으로 다시 시작되어 지속성 데이터베이스에서 실행 가능하거나 활성화 가능한 워크플로 인스턴스를 검색하는 내부 작업를 실행합니다. 실행 가능한 워크플로 인스턴스를 발견하면 해당 인스턴스를 활성화할 수 있는 워크플로 호스트에 알려 줍니다. 인스턴스 저장소에서 활성화 가능한 워크플로 인스턴스를 발견하면 워크플로 호스트를 활성화하여 워크플로 인스턴스를 실행하는 일반 호스트에 알려 줍니다. 이 항목의 다음 단원에서는 인스턴스 활성화 프로세스에 대해 자세히 설명합니다.  
   
-##  <a name="RunnableSection"></a>실행 가능한 워크플로 인스턴스 검색 및 활성화  
+##  <a name="RunnableSection"></a> 실행 가능한 워크플로 인스턴스 검색 및 활성화  
  SQL 워크플로 인스턴스 저장소에서 워크플로 인스턴스를 고려 *실행 가능한* 인스턴스가 일시 중단 된 상태나 완료 된 상태가 아니며 다음 조건을 충족 하는 경우:  
   
 -   인스턴스가 잠금 해제되었으며 만료된 보류 중인 타이머가 있습니다.  

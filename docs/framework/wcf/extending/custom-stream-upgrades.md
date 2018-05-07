@@ -1,24 +1,12 @@
 ---
-title: "사용자 지정 스트림 업그레이드"
-ms.custom: 
+title: 사용자 지정 스트림 업그레이드
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: e3da85c8-57f3-4e32-a4cb-50123f30fea6
-caps.latest.revision: "10"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 73359c293f7d29c16702e826ed6caa61149935bd
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 4bcd59cb5e420c551c611c8e676289f20d4354d0
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="custom-stream-upgrades"></a>사용자 지정 스트림 업그레이드
 TCP, 명명된 파이프 등의 스트림 지향 전송은 클라이언트와 서버 간의 연속 바이트 스트림에서 작동합니다. 이 스트림은 <xref:System.IO.Stream> 개체에 의해 나타날 수 있습니다. 스트림 업그레이드에서 클라이언트는 선택적 프로토콜 계층을 채널 스택에 추가하려고 하고 통신 채널의 반대쪽에서도 추가하도록 요청합니다. 스트림 업그레이드는 원래 <xref:System.IO.Stream> 개체를 업그레이드된 개체로 바꾸는 과정으로 이루어집니다.  
@@ -41,7 +29,7 @@ TCP, 명명된 파이프 등의 스트림 지향 전송은 클라이언트와 �
  여러 업그레이드의 경우 개시자와 수락자는 상태 컴퓨터를 캡슐화하여 각 시작에 올바른 업그레이드 전환을 적용합니다.  
   
 ## <a name="how-to-implement-a-stream-upgrade"></a>스트림 업그레이드 구현 방법  
- [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]에서는 구현할 수 있는 네 가지 `abstract` 클래스를 제공합니다.  
+ Windows Communication Foundation (WCF) 4 개 제공 `abstract` 클래스를 구현할 수 있습니다.  
   
 -   <xref:System.ServiceModel.Channels.StreamUpgradeInitiator?displayProperty=nameWithType>  
   

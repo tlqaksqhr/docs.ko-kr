@@ -1,34 +1,20 @@
 ---
-title: "방법: Windows Communication Foundation 서비스 계약 구현"
-ms.custom: 
+title: '방법: Windows Communication Foundation 서비스 계약 구현'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - service contracts [WCF], implementing
 ms.assetid: d5ab51ba-61ae-403e-b3c8-e2669e326806
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 4bf590b2f508cc6661b5acb045a7d66b38ed169c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: d8d1712e6fcc844a3606403efc3c2648ddcc9c65
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-implement-a-windows-communication-foundation-service-contract"></a>방법: Windows Communication Foundation 서비스 계약 구현
-이 작업은 기본 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 서비스와 이 서비스를 호출할 수 있는 클라이언트를 만드는 데 필요한 6가지 작업 중 두 번째입니다. 전체 7 개 작업의 개요를 참조 하십시오.는 [초보자를 위한 자습서](../../../docs/framework/wcf/getting-started-tutorial.md) 항목입니다.  
+기본 Windows Communication Foundation (WCF) 서비스 및 서비스를 호출할 수 있는 클라이언트를 만드는 데 필요한 6 가지 작업 중 두 번째 숫자입니다. 전체 7 개 작업의 개요를 참조 하십시오.는 [초보자를 위한 자습서](../../../docs/framework/wcf/getting-started-tutorial.md) 항목입니다.  
   
  WCF 응용 프로그램 만들기의 다음 단계는 서비스 인터페이스를 구현하는 것입니다. 여기에는 사용자 정의 `CalculatorService` 인터페이스를 구현하는 `ICalculator` 클래스의 생성이 포함됩니다.  
   
@@ -132,7 +118,7 @@ ms.lasthandoff: 12/22/2017
   
      각 메서드는 계산기 연산을 구현하고 더 쉬운 테스트를 위해 일부 텍스트를 콘솔에 씁니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 코드에서는 계약을 정의하는 인터페이스와 인터페이스 구현을 모두 보여 줍니다.  
   
 ```csharp

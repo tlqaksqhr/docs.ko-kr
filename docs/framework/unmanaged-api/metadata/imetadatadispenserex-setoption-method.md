@@ -1,14 +1,6 @@
 ---
-title: "IMetaDataDispenserEx::SetOption 메서드"
-ms.custom: 
+title: IMetaDataDispenserEx::SetOption 메서드
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - IMetaDataDispenserEx.SetOption
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: 9f1c7ccd-7fb2-41d8-aa00-24b823376527
 topic_type:
 - apiref
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 96810ba0eab99d1df58f0b68b85ef4da8ce7084e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: cfe600b54eb03a07ea01375355c5ff94190e5d9d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="imetadatadispenserexsetoption-method"></a>IMetaDataDispenserEx::SetOption 메서드
 현재 메타 데이터 범위에 대 한 지정된 된 값에 지정된 된 옵션을 설정합니다. 옵션은 현재 메타 데이터 범위에 대 한 호출의 처리 방법을 제어 합니다.  
@@ -57,7 +45,7 @@ HRESULT SetOption (
 ## <a name="remarks"></a>설명  
  다음 표에서 사용할 수 있는 Guid는는 `optionId` 매개 변수를 가리킬 수 있습니다 및 해당 유효한 값에 대 한는 `pValue` 매개 변수입니다.  
   
-|GUID|설명|`pValue`매개 변수|  
+|GUID|설명|`pValue` 매개 변수|  
 |----------|-----------------|------------------------|  
 |MetaDataCheckDuplicatesFor|중복 선택한 항목을 제어 합니다. 호출할 때마다는 [IMetaDataEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md) 새 항목을 만드는 메서드를 현재 범위에 항목이 이미 있는지 여부를 검사 하도록 요청할 수 있습니다. 예를 들어 있는지 여부를 확인할 수 있습니다 `mdMethodDef` 항목;이 경우 호출 하는 경우 [imetadataemit:: Definemethod](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definemethod-method.md), 메서드는 현재 범위에 이미 존재 하지 않습니다 확인 합니다. 이 검사에서는 고유 하 게 지정된 된 메서드를 식별 하는 키: 부모 유형, 이름 및 서명 합니다.|UI4, 유형의 variant 이어야 하며 값의 조합이 포함 되어야는 [CorCheckDuplicatesFor](../../../../docs/framework/unmanaged-api/metadata/corcheckduplicatesfor-enumeration.md) 열거 합니다.|  
 |MetaDataRefToDefCheck|항목이 참조 되는 제어를 정의로 변환 됩니다. 기본적으로 메타 데이터 엔진은 참조 된 항목은 현재 범위에 실제로 정의 된 경우 해당 정의에 참조 된 항목을 변환 하 여 코드를 최적화 합니다.|UI4, 유형의 variant 이어야 하며 값의 조합이 포함 되어야는 [CorRefToDefCheck](../../../../docs/framework/unmanaged-api/metadata/correftodefcheck-enumeration.md) 열거 합니다.|  
@@ -80,7 +68,7 @@ HRESULT SetOption (
   
  **라이브러리:** MsCorEE.dll에서 리소스로 사용  
   
- **.NET framework 버전:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>참고 항목  
  [IMetaDataDispenserEx 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenserex-interface.md)  

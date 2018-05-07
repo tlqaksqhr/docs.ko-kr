@@ -2,10 +2,6 @@
 title: Get 함수 (관리 되지 않는 API 참조)
 description: Get 함수는 지정된 된 속성 값을 검색합니다.
 ms.date: 11/06/2017
-ms.prod: .net-framework
-ms.technology:
-- dotnet-clr
-ms.topic: reference
 api_name:
 - Get
 api_location:
@@ -20,14 +16,11 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 69312030689ab1b87e3aadd040395f06e1c94ac8
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 2f837a526879f80177bc9979e1d7671edfcd8d4f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="get-function"></a>Get 함수
 있는 경우 지정된 된 속성 값을 검색 합니다.
@@ -59,13 +52,13 @@ HRESULT Get (
 `wszName`  
 [in] 속성의 이름입니다.
 
-`lFlags`[in] 예약 되어 있습니다. 이 매개 변수는 0 이어야 합니다.
+`lFlags` [in] 예약 되어 있습니다. 이 매개 변수는 0 이어야 합니다.
 
-`pVal`[out] 값을 포함 하는 함수가 성공적으로 반환 하는 경우는 `wszName` 속성입니다. `pval` 인수는 올바른 형식 및 한정자의 값을 할당 됩니다.
+`pVal` [out] 값을 포함 하는 함수가 성공적으로 반환 하는 경우는 `wszName` 속성입니다. `pval` 인수는 올바른 형식 및 한정자의 값을 할당 됩니다.
 
-`pvtType`[out] 함수가 성공적으로 반환 하는 경우를 포함 한 [CIM 형식 상수](https://msdn.microsoft.com/library/aa386309(v=vs.85).aspx) 속성 형식을 나타내는입니다. 해당 값 또한 수 `null`합니다. 
+`pvtType` [out] 함수가 성공적으로 반환 하는 경우를 포함 한 [CIM 형식 상수](https://msdn.microsoft.com/library/aa386309(v=vs.85).aspx) 속성 형식을 나타내는입니다. 해당 값 또한 수 `null`합니다. 
 
-`plFlavor`[out] 함수가 성공적으로 반환 하는 경우에 속성의 원점에 대 한 정보를 받습니다. 해당 값으로 가능 `null`, 또는에 정의 된 다음 WBEM_FLAVOR_TYPE 상수 중 하나는 *WbemCli.h* 헤더 파일: 
+`plFlavor` [out] 함수가 성공적으로 반환 하는 경우에 속성의 원점에 대 한 정보를 받습니다. 해당 값으로 가능 `null`, 또는에 정의 된 다음 WBEM_FLAVOR_TYPE 상수 중 하나는 *WbemCli.h* 헤더 파일: 
 
 |상수  |값  |설명  |
 |---------|---------|---------|
@@ -98,7 +91,7 @@ HRESULT Get (
   
  **헤더:** WMINet_Utils.idl  
   
- **.NET framework 버전:**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **.NET framework 버전:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>참고자료  
 [WMI 및 성능 카운터 (관리 되지 않는 API 참조)](index.md)

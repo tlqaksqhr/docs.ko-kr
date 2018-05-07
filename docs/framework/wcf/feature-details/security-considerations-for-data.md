@@ -1,32 +1,20 @@
 ---
 title: 데이터에 대한 보안 고려 사항
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: a7eb98da-4a93-4692-8b59-9d670c79ffb2
-caps.latest.revision: 23
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload:
-- dotnet
-ms.openlocfilehash: aa0692c130fdfcf3685c152cdcb73a07d041ab9b
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 077d6b3527119f00ecec3014778fecf0dd1a4bde
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="security-considerations-for-data"></a>데이터에 대한 보안 고려 사항
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]에서 데이터를 처리할 때는 여러 가지 위협 범주를 고려해야 합니다. 다음 표에는 데이터 처리와 관련하여 가장 중요한 위협 클래스가 나열되어 있습니다. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 는 이러한 위협을 완화하는 도구를 제공합니다.  
+Windows Communication Foundation (WCF)에서 데이터를 처리할 때는 여러 가지 위협 범주를 고려해 야 합니다. 다음 표에는 데이터 처리와 관련하여 가장 중요한 위협 클래스가 나열되어 있습니다. WCF는 이러한 위협을 완화 하는 도구를 제공 합니다.  
   
  서비스 거부  
  신뢰할 수 없는 데이터를 받을 경우 이 데이터가 시간이 오래 걸리는 계산을 야기하여 받는 쪽에서 메모리, 스레드, 사용 가능한 연결, 프로세서 주기 등과 같은 과도한 양의 다양한 리소스에 액세스하게 될 수 있습니다. 서버에 대한 서비스 거부 공격이 발생하면 서버의 작동이 중단되고 서버가 다른 올바른 클라이언트에서 보낸 메시지를 처리하지 못할 수 있습니다.  
@@ -38,7 +26,7 @@ ms.lasthandoff: 04/28/2018
  원격 공격자는 받는 쪽이 의도하는 것보다 많은 정보를 공개하는 방식으로 요청에 응답하도록 합니다.  
   
 ## <a name="user-provided-code-and-code-access-security"></a>사용자 제공 코드 및 코드 액세스 보안  
- [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 인프라에서는 여러 곳에서 사용자가 제공한 코드를 실행합니다. 예를 들어, <xref:System.Runtime.Serialization.DataContractSerializer> serialization 엔진은 사용자 제공 속성 `set` 접근자 및 `get` 접근자를 호출할 수 있으며, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 채널 인프라에서는 또한 <xref:System.ServiceModel.Channels.Message> 클래스의 사용자 제공 파생 클래스를 호출할 수도 있습니다.  
+ 사용자가 제공 하는 코드를 실행 하는 Windows Communication Foundation (WCF) 인프라에서 자릿수. 예를 들어, <xref:System.Runtime.Serialization.DataContractSerializer> serialization 엔진은 사용자 제공 속성 `set` 접근자 및 `get` 접근자를 호출할 수 있으며, WCF 채널 인프라의 사용자 제공 파생된 클래스를 호출할 수도 있습니다는 <xref:System.ServiceModel.Channels.Message> 클래스입니다.  
   
  코드를 작성할 때는 보안상 취약한 부분이 없도록 해야 합니다. 예를 들어, 데이터 멤버 속성이 정수 형식인 데이터 계약 형식을 만들고 `set` 접근자 구현에서 속성 값을 기반으로 배열을 할당하는 경우 악의적인 메시지에 이 데이터 멤버에 대한 매우 큰 값이 포함되어 있으면 서비스 거부 공격을 받을 가능성이 있습니다. 일반적으로 들어오는 데이터를 기반으로 할당을 수행하거나 사용자 제공 코드에서 시간이 오래 걸리는 처리를 수행하는 것은 피해야 합니다(특히 들어오는 데이터의 양이 적어도 처리 시간이 오래 걸릴 수 있는 경우). 사용자 제공 코드의 보안 분석을 수행할 때는 모든 실패의 경우(즉, 예외가 throw되는 모든 코드 분기)도 고려해야 합니다.  
   
@@ -68,7 +56,7 @@ ms.lasthandoff: 04/28/2018
   
  할당량 초과 시나리오는 복구가 가능합니다. 실행 중인 서비스에서 발생한 경우 현재 처리 중인 메시지를 삭제하면 서비스를 계속 실행하면서 메시지를 더 처리할 수 있습니다. 그러나 메모리 부족 및 스택 오버플로 시나리오는 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]에서 복구할 수 없습니다. 이러한 예외가 발생하면 서비스가 종료됩니다.  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 의 할당량은 사전 할당과 관계가 없습니다. 예를 들어, 다양한 클래스에 있는 <xref:System.ServiceModel.Channels.TransportBindingElement.MaxReceivedMessageSize%2A> 할당량이 128KB로 설정된 경우 각 메시지에 자동으로 128KB가 할당되는 것은 아닙니다. 실제로 할당되는 양은 실제로 들어오는 메시지 크기에 따라 다릅니다.  
+ WCF에서 할당량 사전 할당과 하지 않습니다. 예를 들어, 다양한 클래스에 있는 <xref:System.ServiceModel.Channels.TransportBindingElement.MaxReceivedMessageSize%2A> 할당량이 128KB로 설정된 경우 각 메시지에 자동으로 128KB가 할당되는 것은 아닙니다. 실제로 할당되는 양은 실제로 들어오는 메시지 크기에 따라 다릅니다.  
   
  많은 할당량을 전송 계층에서 사용할 수 있습니다. 이러한 할당량은 사용 중인 특정 전송 채널(HTTP, TCP 등)에서 적용됩니다. 이 항목에서는 이러한 할당량 중 일부에 대해 설명하며 자세한 내용은 [Transport Quotas](../../../../docs/framework/wcf/feature-details/transport-quotas.md)에 나와 있습니다.  
   
@@ -85,19 +73,19 @@ ms.lasthandoff: 04/28/2018
  이진 XML 인코딩을 사용하는 경우에는 특히 `MaxReceivedMessageSize` 에 추가로 할당량을 설정하는 것이 중요합니다. 이진 인코딩을 사용하는 것은 압축과 비슷한 면이 있습니다. 들어오는 메시지의 바이트 수가 적어도 표현하는 데이터는 많을 수 있습니다. 따라서 `MaxReceivedMessageSize` 제한에 맞는 메시지도 완전히 확장된 상태에서는 훨씬 더 많은 메모리를 차지할 수 있습니다. 이러한 XML 관련 위협을 완화하려면 이 항목 뒷부분의 "안전한 XML 사용" 단원에 설명된 대로 모든 XML 판독기 할당량을 올바르게 설정해야 합니다.  
   
 ## <a name="limiting-memory-consumption-with-streaming"></a>스트리밍 시 메모리 소비 제한  
- 스트리밍할 때 `MaxReceivedMessageSize` 를 작게 설정하여 서비스 거부 공격으로부터 시스템을 보호할 수 있습니다. 그러나 스트리밍과 관련된 보다 복잡한 시나리오도 가능합니다. 예를 들어, 파일 업로드 서비스에서 사용 가능한 전체 메모리보다 큰 파일을 받는 경우가 있습니다. 이 경우 데이터가 거의 메모리에 버퍼링되지 않고 메시지가 디스크로 직접 스트리밍될 것을 예상하고 `MaxReceivedMessageSize` 를 매우 큰 값으로 설정합니다. 그러나 이때 악의적인 메시지로 인해 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 에서 데이터를 스트리밍하는 대신 버퍼링하게 되면 `MaxReceivedMessageSize` 는 더 이상 사용 가능한 모든 메모리에 액세스하는 메시지로부터 시스템을 보호하지 못합니다.  
+ 스트리밍할 때 `MaxReceivedMessageSize` 를 작게 설정하여 서비스 거부 공격으로부터 시스템을 보호할 수 있습니다. 그러나 스트리밍과 관련된 보다 복잡한 시나리오도 가능합니다. 예를 들어, 파일 업로드 서비스에서 사용 가능한 전체 메모리보다 큰 파일을 받는 경우가 있습니다. 이 경우 데이터가 거의 메모리에 버퍼링되지 않고 메시지가 디스크로 직접 스트리밍될 것을 예상하고 `MaxReceivedMessageSize` 를 매우 큰 값으로 설정합니다. 악의적인 메시지에이 예에서 스트리밍하는 대신 데이터 버퍼링 WCF 강제로 어떻게 하 든 수 경우 `MaxReceivedMessageSize` 더 이상 사용 가능한 모든 메모리에 액세스 하는 메시지 로부터 시스템을 보호 합니다.  
   
- 이 위협을 완화하기 위해 다양한 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 데이터 처리 구성 요소에는 버퍼링을 제한하는 특정 할당량 설정이 있습니다. 이 중 가장 중요한 것은 다양한 전송 바인딩 요소 및 표준 바인딩에 대한 `MaxBufferSize` 속성입니다. 스트리밍 시 메시지당 할당하려는 최대 메모리 크기를 고려해서 이 할당량을 설정해야 합니다. 이 설정은 `MaxReceivedMessageSize`와 마찬가지로 메모리 소비량에 대한 절대 최대값을 지정하지 않으며 상수 계수 이내로 제한합니다. 또한 `MaxReceivedMessageSize`와 마찬가지로 여러 메시지를 동시에 처리하는 경우를 생각해야 합니다.  
+ 이 위협을 완화 하기 위해 특정 할당량 설정이 해당 한도 버퍼링 다양 한 WCF 데이터 처리 구성 요소에 있습니다. 이 중 가장 중요한 것은 다양한 전송 바인딩 요소 및 표준 바인딩에 대한 `MaxBufferSize` 속성입니다. 스트리밍 시 메시지당 할당하려는 최대 메모리 크기를 고려해서 이 할당량을 설정해야 합니다. 이 설정은 `MaxReceivedMessageSize`와 마찬가지로 메모리 소비량에 대한 절대 최대값을 지정하지 않으며 상수 계수 이내로 제한합니다. 또한 `MaxReceivedMessageSize`와 마찬가지로 여러 메시지를 동시에 처리하는 경우를 생각해야 합니다.  
   
 ### <a name="maxbuffersize-details"></a>MaxBufferSize 세부 정보  
- `MaxBufferSize` 속성은 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 에서 수행하는 모든 대량 버퍼링을 제한합니다. 예를 들어, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 에서는 항상 SOAP 헤더와 SOAP 오류를 버퍼링하고 MTOM(Message Transmission Optimization Mechanism) 메시지에서 읽기 순서가 자연스럽지 않은 것으로 판단되는 모든 MIME 부분도 버퍼링합니다. 이 설정은 이러한 모든 경우 버퍼링 크기를 제한합니다.  
+ `MaxBufferSize` 속성은 모든 대량 버퍼링 WCF가를 제한 합니다. 예를 들어 WCF SOAP 헤더 및 SOAP 오류 뿐 아니라 읽기 순서가 자연스럽 전송 최적화 메커니즘 MTOM (Message) 메시지의 지 않은 것으로 발견 되는 MIME 파트 항상 버퍼링 합니다. 이 설정은 이러한 모든 경우 버퍼링 크기를 제한합니다.  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 에서는 버퍼링을 수행할 수 있는 다양한 구성 요소에 `MaxBufferSize` 값을 전달하여 이 작업을 수행합니다. 예를 들어, <xref:System.ServiceModel.Channels.Message.CreateMessage%2A> 클래스의 일부 <xref:System.ServiceModel.Channels.Message> 오버로드는 `maxSizeOfHeaders` 매개 변수를 사용합니다. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 에서는 `MaxBufferSize` 값을 이 매개 변수에 전달하여 SOAP 헤더 버퍼링 크기를 제한합니다. <xref:System.ServiceModel.Channels.Message> 클래스를 직접 사용하는 경우 이 매개 변수를 설정하는 것이 중요합니다. 일반적으로 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 에서 할당량 매개 변수를 받는 구성 요소를 사용하는 경우에는 이러한 매개 변수가 보안상 갖는 의미를 이해하고 올바르게 설정해야 합니다.  
+ WCF 전달 하 여이 수행 합니다는 `MaxBufferSize` 버퍼링 할 수 있는 다양 한 구성 요소에는 값입니다. 예를 들어, <xref:System.ServiceModel.Channels.Message.CreateMessage%2A> 클래스의 일부 <xref:System.ServiceModel.Channels.Message> 오버로드는 `maxSizeOfHeaders` 매개 변수를 사용합니다. Wcf는 `MaxBufferSize` SOAP 헤더 버퍼링 양을 제한 하려면이 매개 변수 값입니다. <xref:System.ServiceModel.Channels.Message> 클래스를 직접 사용하는 경우 이 매개 변수를 설정하는 것이 중요합니다. 일반적으로 wcf에서 할당량 매개 변수를 사용 하는 구성 요소를 사용 하는 경우 이러한 매개 변수의 보안 의미를 이해 하 고 올바르게 설정 해야 됩니다.  
   
  MTOM 메시지 인코더에는 또한 `MaxBufferSize` 설정이 있습니다. 표준 바인딩을 사용하는 경우 이 설정은 자동으로 전송 수준 `MaxBufferSize` 값으로 설정됩니다. 그러나 MTOM 메시지 인코더 바인딩 요소를 사용하여 사용자 지정 바인딩을 생성하는 경우에는 `MaxBufferSize` 속성을 스트리밍을 사용할 때 안전한 값으로 설정해야 합니다.  
   
 ## <a name="xml-based-streaming-attacks"></a>XML 기반 스트리밍 공격  
- `MaxBufferSize` 만으로는 스트리밍이 예상되는 경우에 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 에 버퍼링이 적용되는 것을 막기에 부족합니다. 예를 들어, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] XML 판독기는 새 요소를 읽기 시작할 때 항상 전체 XML 요소 시작 태그를 버퍼링합니다. 이렇게 하면 네임스페이스와 특성이 올바르게 처리됩니다. `MaxReceivedMessageSize`가 크게(예: 큰 파일을 직접 디스크로 스트리밍하는 시나리오가 가능하도록) 구성된 경우 메시지 본문 전체가 거대한 XML 요소 시작 태그인 악의적인 메시지가 구성될 수 있습니다. 이 메시지를 읽으려고 하면 <xref:System.OutOfMemoryException>이 발생합니다. 여러 가능한 XML 기반 서비스 거부 공격을 모두을 완화할 수 있습니다이 항목의 뒷부분에 나오는 "안전한 XML 사용" 섹션에 설명 된 XML 판독기 할당량을 사용 하 여 중 하나입니다. 스트리밍을 사용할 때는 이러한 할당량을 모두 설정하는 것이 특히 중요합니다.  
+ `MaxBufferSize` 만으로는 충분 하지 않습니다 WCF 스트리밍이 예상 되는 경우 버퍼링을 강제 적용할 수 없는 되도록 합니다. 예를 들어 WCF XML 판독기 항상 버퍼링 전체 XML 요소 시작 태그를 새 요소를 읽기 시작할 때입니다. 이렇게 하면 네임스페이스와 특성이 올바르게 처리됩니다. `MaxReceivedMessageSize`가 크게(예: 큰 파일을 직접 디스크로 스트리밍하는 시나리오가 가능하도록) 구성된 경우 메시지 본문 전체가 거대한 XML 요소 시작 태그인 악의적인 메시지가 구성될 수 있습니다. 이 메시지를 읽으려고 하면 <xref:System.OutOfMemoryException>이 발생합니다. 여러 가능한 XML 기반 서비스 거부 공격을 모두을 완화할 수 있습니다이 항목의 뒷부분에 나오는 "안전한 XML 사용" 섹션에 설명 된 XML 판독기 할당량을 사용 하 여 중 하나입니다. 스트리밍을 사용할 때는 이러한 할당량을 모두 설정하는 것이 특히 중요합니다.  
   
 ### <a name="mixing-streaming-and-buffering-programming-models"></a>스트리밍과 버퍼링 프로그래밍 모델 혼합  
  동일한 서비스에서 스트리밍과 비스트리밍 프로그래밍 모델을 혼합하여 사용하는 경우 여러 가지 공격이 발생할 수 있습니다. <xref:System.IO.Stream> 을 받는 작업과 일부 사용자 정의 형식의 배열을 받는 작업의 두 가지 작업이 있는 서비스 계약을 가정할 수 있습니다. 또한 첫 번째 작업에서 큰 스트림을 처리할 수 있도록 `MaxReceivedMessageSize` 가 큰 값으로 설정되었다고 가정합니다. 그러나 이 경우 용량이 큰 메시지가 두 번째 작업으로도 전송될 수 있으며 작업이 호출되기 전에 deserializer가 데이터를 메모리에 배열로 버퍼링할 수 있습니다. 그러면 deserializer에서 작업에 사용하는 메시지 본문의 크기가 `MaxBufferSize` 할당량으로 제한되지 않아 서비스 거부 공격이 발생할 수 있습니다.  
@@ -123,7 +111,7 @@ ms.lasthandoff: 04/28/2018
 ### <a name="slow-stream-attacks"></a>느린 스트림 공격  
  스트리밍 서비스 거부 공격의 범주에는 메모리 소비가 포함되지 않으며, 대신 느린 데이터 발신자 또는 수신자가 포함됩니다. 데이터를 보내거나 받는 작업을 기다리는 동안 스레드 및 사용 가능한 연결 등의 리소스가 소모됩니다. 이러한 상황은 악의적인 공격의 결과로 발생하거나 올바른 발신자/수신자의 네트워크 연결이 느린 경우 발생할 수 있습니다.  
   
- 이러한 공격을 완화하려면 전송 시간 제한을 올바르게 설정합니다. 자세한 내용은 참조 [전송 할당량](../../../../docs/framework/wcf/feature-details/transport-quotas.md)합니다. 둘째로, `Read` 에서 스트리밍 작업을 할 때 동기 `Write` 또는 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]작업을 사용하지 마십시오.  
+ 이러한 공격을 완화하려면 전송 시간 제한을 올바르게 설정합니다. 자세한 내용은 참조 [전송 할당량](../../../../docs/framework/wcf/feature-details/transport-quotas.md)합니다. 둘째, 사용 하지 마십시오 동기 `Read` 또는 `Write` 작업 WCF에서 스트리밍 작업을 하는 경우.  
   
 ## <a name="using-xml-safely"></a>안전하게 XML 사용  
   
@@ -131,11 +119,11 @@ ms.lasthandoff: 04/28/2018
 >  이 단원에서는 XML에 대한 내용을 다루지만 이 정보는 JSON(JavaScript Object Notation) 문서에도 적용됩니다. 할당량도 [Mapping Between JSON and XML](../../../../docs/framework/wcf/feature-details/mapping-between-json-and-xml.md)을 사용하여 비슷하게 작동합니다.  
   
 ### <a name="secure-xml-readers"></a>보안 XML 판독기  
- XML Infoset은 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서 모든 메시지 처리의 기본을 구성합니다. 신뢰할 수 없는 소스로부터 XML 데이터를 받을 경우에는 완화해야 할 여러 가지 서비스 거부 공격이 발생할 수 있습니다. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 에서는 특수한 보안 XML 판독기를 제공합니다. 이러한 판독기는 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 에서 표준 인코딩 중 하나(텍스트, 이진 또는 MTOM)를 사용하는 경우 자동으로 만들어집니다.  
+ XML Infoset WCF에서 모든 메시지 처리의 기본을 형성합니다. 신뢰할 수 없는 소스로부터 XML 데이터를 받을 경우에는 완화해야 할 여러 가지 서비스 거부 공격이 발생할 수 있습니다. WCF는 특수 한 보안 XML 판독기를 제공합니다. 이러한 판독기는 WCF (텍스트, 이진 또는 MTOM)에서 표준 인코딩 중 하나를 사용할 때 자동으로 생성 됩니다.  
   
  이러한 판독기의 보안 기능 중 일부는 항상 활성화되어 있습니다. 예를 들어, 판독기는 서비스 거부 공격의 소스가 될 가능성이 있으므로 올바른 SOAP 메시지에 표시되어서는 안 되는 DTD(문서 종류 정의)를 처리하지 않습니다. 다른 보안 기능에는 구성해야 할 판독기 할당량이 포함되며, 이에 대해서는 다음 단원에서 설명합니다.  
   
- 사용자 지정 인코더를 작성하거나 <xref:System.ServiceModel.Channels.Message> 클래스로 직접 작업하는 경우와 같이 XML 판독기에서 직접 작업할 때는 신뢰할 수 없는 데이터로 작업할 가능성이 있는 경우 항상 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 보안 판독기를 사용하십시오. <xref:System.Xml.XmlDictionaryReader.CreateTextReader%2A>클래스에 있는 <xref:System.Xml.XmlDictionaryReader.CreateBinaryReader%2A>, <xref:System.Xml.XmlDictionaryReader.CreateMtomReader%2A> 또는 <xref:System.Xml.XmlDictionaryReader> 의 정적 팩터리 메서드 오버로드 중 하나를 호출하여 보안 판독기를 만듭니다. 판독기를 만들 때 보안 할당량 값을 전달합니다. `Create` 메서드 오버로드를 호출하지 마십시오. 이러한 오버로드는 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 판독기를 만들지 않으며 대신 이 단원에서 설명한 보안 기능으로 보호되지 않는 판독기를 만듭니다.  
+ XML 판독기에서 직접 작업 하는 경우 (같은와 직접 작업 하는 경우 또는 사용자 지정 인코더를 작성할 때는 <xref:System.ServiceModel.Channels.Message> 클래스)을 항상 WCF 보안 판독기를 사용 하 여 신뢰할 수 없는 데이터로 작업할 가능성이 있는 경우. <xref:System.Xml.XmlDictionaryReader.CreateTextReader%2A>클래스에 있는 <xref:System.Xml.XmlDictionaryReader.CreateBinaryReader%2A>, <xref:System.Xml.XmlDictionaryReader.CreateMtomReader%2A> 또는 <xref:System.Xml.XmlDictionaryReader> 의 정적 팩터리 메서드 오버로드 중 하나를 호출하여 보안 판독기를 만듭니다. 판독기를 만들 때 보안 할당량 값을 전달합니다. `Create` 메서드 오버로드를 호출하지 마십시오. 이러한 WCF 판독기를 만들지 않습니다. 대신 이 단원에서 설명한 보안 기능으로 보호되지 않는 판독기를 만듭니다.  
   
 ### <a name="reader-quotas"></a>판독기 할당량  
  보안 XML 판독기에는 5개의 구성 가능한 할당량이 있습니다. 일반적으로 이러한 할당량은 인코딩 바인딩 요소 또는 표준 바인딩에서 `ReaderQuotas` 속성을 사용하거나 판독기를 만들 때 전달된 <xref:System.Xml.XmlDictionaryReaderQuotas> 개체를 사용하여 구성합니다.  
@@ -164,9 +152,9 @@ ms.lasthandoff: 04/28/2018
  이 할당량은 바이트 배열을 포함하여 XML 판독기가 반환하는 기본 형식 배열의 최대 크기를 제한합니다. 이 할당량은 XML 판독기 자체의 메모리 소비량은 제한하지 않지만 판독기를 사용하는 모든 구성 요소의 메모리 소비량을 제한합니다. 예를 들어, <xref:System.Runtime.Serialization.DataContractSerializer> 가 <xref:System.Xml.XmlDictionaryReaderQuotas.MaxArrayLength%2A>로 보안이 설정된 판독기를 사용하는 경우에는 이 할당량보다 큰 바이트 배열을 deserialize하지 않습니다. 단일 계약에서 스트리밍 및 버퍼링 프로그래밍 모델을 혼합하려는 경우에는 이 할당량을 설정하는 것이 중요합니다. <xref:System.Xml.XmlDictionaryReader> 클래스를 직접 사용하는 경우에는 특정 기본 형식의 배열을 크기에 관계없이 읽도록 특별히 설계된 메서드(예: <xref:System.Xml.XmlDictionaryReader.ReadInt32Array%2A>)만 이 할당량을 준수합니다.  
   
 ## <a name="threats-specific-to-the-binary-encoding"></a>이진 인코딩과 관련된 위협  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 에서 지원하는 이진 XML 인코딩에는 *사전 문자열* 기능이 포함됩니다. 큰 문자열을 몇 바이트만 사용하여 인코딩할 수 있습니다. 이렇게 하면 성능은 크게 향상되지만 완화해야 할 새로운 서비스 거부 위협이 발생합니다.  
+ 이진 XML 인코딩을 WCF 지원에 포함 되어는 *사전 문자열* 기능입니다. 큰 문자열을 몇 바이트만 사용하여 인코딩할 수 있습니다. 이렇게 하면 성능은 크게 향상되지만 완화해야 할 새로운 서비스 거부 위협이 발생합니다.  
   
- 사전에는 *정적* 사전과 *동적*사전의 두 가지 종류가 있습니다. 정적 사전은 이진 인코딩에서 짧은 코드로 표현할 수 있는 긴 문자열이 포함된 기본 제공 목록입니다. 이 문자열 목록은 판독기를 만들 때 고정되며 수정할 수 없습니다. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 에서 기본적으로 사용하는 정적 사전의 문자열 중 심각한 서비스 거부 위협을 야기할 정도로 큰 것은 없지만 이러한 문자열이 사전 확장 공격에 사용될 수는 있습니다. 사용자가 직접 정적 사전을 제공하는 고급 시나리오에서 큰 사전 문자열을 사용하는 경우에는 특히 주의해야 합니다.  
+ 사전에는 *정적* 사전과 *동적*사전의 두 가지 종류가 있습니다. 정적 사전은 이진 인코딩에서 짧은 코드로 표현할 수 있는 긴 문자열이 포함된 기본 제공 목록입니다. 이 문자열 목록은 판독기를 만들 때 고정되며 수정할 수 없습니다. 하지 않습니다에서 기본적으로 WCF를 사용 하는 정적 사전의 문자열 중 심각한 서비스 거부 위협을 야기할 정도로 큰 것 않지만 사전 확장 공격에 계속 사용할 수 있습니다. 사용자가 직접 정적 사전을 제공하는 고급 시나리오에서 큰 사전 문자열을 사용하는 경우에는 특히 주의해야 합니다.  
   
  동적 사전 기능을 통해 메시지에서 직접 문자열을 정의하고 짧은 코드에 연결할 수 있습니다. 문자열과 코드 사이의 이러한 매핑은 그 뒤의 메시지에서 문자열을 다시 보낼 필요 없이 이미 정의된 코드를 활용할 수 있도록 전체 통신 세션 동안 메모리에 보존됩니다. 이러한 문자열의 길이는 임의로 지정되기 때문에 정적 사전에 사용되는 것보다 큰 위협을 야기할 수 있습니다.  
   
@@ -272,7 +260,7 @@ ms.lasthandoff: 04/28/2018
 -   신뢰할 수 없는 데이터 소스에서 deserialize된 개체 그래프를 먼저 검사하지 않고 신뢰해서는 안 됩니다. 각 개체의 상태가 일관되어도 개체 그래프 전체는 그렇지 않을 수 있습니다. 또한 개체 그래프 유지 모드가 사용하지 않도록 설정되어 있더라도 deserialize된 그래프에 같은 개체에 대한 참조가 여러 개 있거나 순환 참조가 있을 수 있습니다. 자세한 내용은 참조 [Serialization 및 Deserialization](../../../../docs/framework/wcf/feature-details/serialization-and-deserialization.md)합니다.  
   
 ### <a name="using-the-netdatacontractserializer-securely"></a>안전한 NetDataContractSerializer 사용  
- <xref:System.Runtime.Serialization.NetDataContractSerializer> 는 형식에 대한 밀접한 결합을 사용하는 serialization 엔진입니다. 이는 <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> 및 <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter>와 비슷합니다. 즉, 들어오는 데이터로부터 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 어셈블리 및 형식 이름을 읽어 인스턴스화할 형식을 결정합니다. 이 엔진은 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]의 일부이지만 이 serialization 엔진을 넣을 방법이 제공되어 있지는 않기 때문에 사용자 지정 코드를 작성해야 합니다. `NetDataContractSerializer` 는 주로 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 원격에서 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]를 마이그레이션하는 작업을 편하게 수행하기 위해 제공됩니다. 자세한 내용은의 관련 섹션을 참조 하십시오. [Serialization 및 Deserialization](../../../../docs/framework/wcf/feature-details/serialization-and-deserialization.md)합니다.  
+ <xref:System.Runtime.Serialization.NetDataContractSerializer> 는 형식에 대한 밀접한 결합을 사용하는 serialization 엔진입니다. 이는 <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> 및 <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter>와 비슷합니다. 즉, 들어오는 데이터로부터 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 어셈블리 및 형식 이름을 읽어 인스턴스화할 형식을 결정합니다. 이 serialization 엔진;에 연결의 제공 된 방법이 있으면 WCF의 일부는 아니지만 사용자 지정 코드를 작성 되어야 합니다. `NetDataContractSerializer` 에서 마이그레이션 과정을 용이 하는 데 주로 제공 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] remoting과 WCF 합니다. 자세한 내용은의 관련 섹션을 참조 하십시오. [Serialization 및 Deserialization](../../../../docs/framework/wcf/feature-details/serialization-and-deserialization.md)합니다.  
   
  메시지 자체에서 로드할 형식을 지정할 수 있기 때문에 <xref:System.Runtime.Serialization.NetDataContractSerializer> 메커니즘은 본질적으로 안전하지 않으며 신뢰할 수 있는 데이터에만 사용해야 합니다. 형식을 제한하는 안전한 형식 바인더를 작성하여 안전한 형식만 로드할 수도 있습니다( <xref:System.Runtime.Serialization.NetDataContractSerializer.Binder%2A> 속성 사용).  
   
@@ -343,7 +331,7 @@ ms.lasthandoff: 04/28/2018
  일반적으로 스키마를 가져와서 형식을 생성하는 과정은 웹 서비스에서 [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) 를 사용하여 클라이언트 클래스를 생성할 때와 같이 디자인할 때만 발생합니다. 그러나 보다 고급 시나리오에서는 런타임에 스키마를 처리할 수도 있습니다. 이 경우 서비스 거부 위험에 노출될 수 있습니다. 일부 스키마는 가져오는 데 시간이 오래 걸릴 수 있습니다. 신뢰할 수 없는 소스에서 스키마가 들어올 가능성이 있는 경우에는 이러한 시나리오에서 <xref:System.Xml.Serialization.XmlSerializer> 스키마 가져오기 구성 요소를 사용하지 마십시오.  
   
 ## <a name="threats-specific-to-aspnet-ajax-integration"></a>ASP.NET AJAX 통합과 관련된 위협  
- 사용자가 <xref:System.ServiceModel.Description.WebScriptEnablingBehavior> 또는 <xref:System.ServiceModel.Description.WebHttpBehavior>를 구현할 때 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 에서는 XML 및 JSON 메시지를 모두 수락할 수 있는 끝점을 노출합니다. 그러나 XML 판독기와 JSON 판독기에서 모두 사용하는 판독기 할당량 집합은 하나밖에 없습니다. 일부 할당량 설정은 이 중 하나의 판독기에는 적합하지만 다른 판독기에는 너무 클 수 있습니다.  
+ 사용자가 구현할 때 <xref:System.ServiceModel.Description.WebScriptEnablingBehavior> 또는 <xref:System.ServiceModel.Description.WebHttpBehavior>, WCF XML 및 JSON 메시지를 수락할 수 있는 끝점을 노출 합니다. 그러나 XML 판독기와 JSON 판독기에서 모두 사용하는 판독기 할당량 집합은 하나밖에 없습니다. 일부 할당량 설정은 이 중 하나의 판독기에는 적합하지만 다른 판독기에는 너무 클 수 있습니다.  
   
  `WebScriptEnablingBehavior`를 구현할 때 사용자는 끝점에서 JavaScript 프록시를 노출할 수 있습니다. 다음과 같은 보안 문제를 고려해야 합니다.  
   
@@ -352,9 +340,9 @@ ms.lasthandoff: 04/28/2018
 -   JavaScript 끝점을 사용하는 경우 중요한 정보와 개인 정보를 클라이언트 웹 브라우저 캐시에 보존할 수 있습니다.  
   
 ## <a name="a-note-on-components"></a>구성 요소 참조  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 는 유연하며 사용자 지정이 가능한 시스템입니다. 이 항목에 있는 내용의 대부분에서는 가장 일반적인 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 사용 시나리오를 중점적으로 다루었습니다. 그러나 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 에서 다른 방식으로 다양하게 제공하는 구성 요소를 작성해야 하는 경우도 있습니다. 이러한 구성 요소를 사용하는 경우의 보안 영향에 대해 알아야 합니다. 특히 다음과 같습니다.  
+ WCF는 유연 하 게 사용자 시스템입니다. 이 항목의 내용 중 대부분은 가장 일반적인 WCF 사용 시나리오에 집중합니다. 하지만 WCF는 다양 한 방법으로 제공 하는 구성 요소를 작성 하는 것이 같습니다. 이러한 구성 요소를 사용하는 경우의 보안 영향에 대해 알아야 합니다. 특히 다음과 같습니다.  
   
--   XML 판독기를 사용해야 하는 경우에는 다른 판독기 대신 <xref:System.Xml.XmlDictionaryReader> 클래스에서 제공하는 판독기를 사용합니다. 안전한 판독기는 <xref:System.Xml.XmlDictionaryReader.CreateTextReader%2A>, <xref:System.Xml.XmlDictionaryReader.CreateBinaryReader%2A>또는 <xref:System.Xml.XmlDictionaryReader.CreateMtomReader%2A> 메서드를 사용하여 만들어집니다. <xref:System.Xml.XmlReader.Create%2A> 메서드를 사용하지 마십시오. 판독기는 항상 안전한 할당량으로 구성해야 합니다. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에 있는 serialization 엔진은 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서 제공되는 보안 XML 판독기를 사용하는 경우에만 안전합니다.  
+-   XML 판독기를 사용해야 하는 경우에는 다른 판독기 대신 <xref:System.Xml.XmlDictionaryReader> 클래스에서 제공하는 판독기를 사용합니다. 안전한 판독기는 <xref:System.Xml.XmlDictionaryReader.CreateTextReader%2A>, <xref:System.Xml.XmlDictionaryReader.CreateBinaryReader%2A>또는 <xref:System.Xml.XmlDictionaryReader.CreateMtomReader%2A> 메서드를 사용하여 만들어집니다. <xref:System.Xml.XmlReader.Create%2A> 메서드를 사용하지 마십시오. 판독기는 항상 안전한 할당량으로 구성해야 합니다. WCF에서 serialization 엔진은이 WCF에서 제공 하는 보안 XML 판독기를 사용 하는 경우에 안전 합니다.  
   
 -   <xref:System.Runtime.Serialization.DataContractSerializer> 를 사용하여 신뢰할 수 없는 데이터를 deserialize할 때는 항상 <xref:System.Runtime.Serialization.DataContractSerializer.MaxItemsInObjectGraph%2A> 속성을 설정해야 합니다.  
   

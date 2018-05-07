@@ -1,13 +1,6 @@
 ---
-title: "Windows Forms과 컨트롤에서 국가별 글꼴"
-ms.custom: 
+title: Windows Forms과 컨트롤에서 국가별 글꼴
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - fonts [Windows Forms], international
 - international applications [Windows Forms], character display
@@ -17,16 +10,11 @@ helpviewer_keywords:
 - font fallback in Windows Forms
 - globalization [Windows Forms], character sets
 ms.assetid: 2c3066df-9bac-479a-82b2-79e484b346a3
-caps.latest.revision: "6"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: e7b6574e452faf4f0396f7633ba7f21519948262
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 38a6928dfb548c6b514b598dbebe5bbc62d2e3f8
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="international-fonts-in-windows-forms-and-controls"></a>Windows Forms과 컨트롤에서 국가별 글꼴
 국가별 응용 프로그램에서 글꼴을 선택 하는 권장된 방법은 가능 글꼴 대체 (fallback)를 사용 하는 합니다. 글꼴 대체 방법 결정 된다는 문자 스크립트에 속해 있습니다.  

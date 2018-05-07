@@ -1,27 +1,15 @@
 ---
-title: "구성"
-ms.custom: 
+title: 구성
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 86a6e12f-73b5-450e-8725-f4ca5fe0702c
-caps.latest.revision: "5"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: bfd61ea70fcae443d4a76403ed6c10c874407c4d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 3ef91a1f851f87ebf35669748f8beb1c6a880ae8
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="configuration"></a>구성
-이 항목에서는 [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] 구성에 의해 생성된 모든 예외를 보여 줍니다.  
+이 항목에서는 Windows Communication Foundation (WCF) 구성에 의해 생성 된 모든 예외를 보여 줍니다.  
   
 ## <a name="exception-list"></a>예외 목록  
   

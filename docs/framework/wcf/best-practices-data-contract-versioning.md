@@ -1,37 +1,23 @@
 ---
 title: '최선의 방법: 데이터 계약 버전 관리'
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - data contracts
 - service contracts
 - best practices [WCF], data contract versioning
 - Windows Communication Foundation, data contracts
 ms.assetid: bf0ab338-4d36-4e12-8002-8ebfdeb346cb
-caps.latest.revision: 24
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 6ea139f6b854a299760df4c7cb8c315b58701ab8
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
-ms.translationtype: MT
+ms.openlocfilehash: a578235a0db0ba769cae0b2ade93edbfd72b5508
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="best-practices-data-contract-versioning"></a>최선의 방법: 데이터 계약 버전 관리
 이 항목에서는 시간 경과에 따라 쉽게 발전할 수 있는 데이터 계약을 만드는 최선의 방법을 보여 줍니다. 데이터 계약에 대 한 자세한 내용은 참조 항목에서는 [를 사용 하 여 데이터 계약](../../../docs/framework/wcf/feature-details/using-data-contracts.md)합니다.  
   
 ## <a name="note-on-schema-validation"></a>스키마 유효성 검사에 대한 참고  
- 데이터 계약 버전 관리를 설명할 때는 기본적으로 요소가 옵션으로 표시된다는 사실을 제외하고 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)]에서 내보낸 데이터 계약 스키마에 버전 관리 지원이 없음을 확인하는 것이 중요합니다.  
+ 데이터 계약 버전 관리를 설명할 때는 Windows Communication Foundation (WCF)에서 내보낸 데이터 계약 스키마 요소가 옵션으로 기본적으로 표시 된다는 사실 제외의 모든 버전 관리 지원 하지 않았는지 확인 해야 합니다.  
   
  이는 새 데이터 멤버 추가 같은 가장 일반적인 버전 관리 시나리오도 지정된 스키마와 관련해서 매끄럽게 구현할 수 없음을 의미합니다. 예를 들어 새 데이터 멤버가 있는 최신 버전의 데이터 계약은 이전 스키마를 사용하여 유효성이 검사되지 않습니다.  
   

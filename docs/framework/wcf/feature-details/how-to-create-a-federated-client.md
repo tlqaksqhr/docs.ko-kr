@@ -1,14 +1,6 @@
 ---
 title: '방법: 페더레이션 클라이언트 만들기'
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -16,20 +8,14 @@ helpviewer_keywords:
 - WCF, federation
 - federation
 ms.assetid: 56ece47e-98bf-4346-b92b-fda1fc3b4d9c
-caps.latest.revision: 21
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 9a52aa5c2c3af6c7288b2a375e44024195dfe1cc
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 5c33c26043d90d99c295b2e066c897e2cdad32d4
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-a-federated-client"></a>방법: 페더레이션 클라이언트 만들기
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]에 대 한 클라이언트 만들기는 *페더레이션 서비스* 세 개의 주요 단계로 구성 됩니다.  
+Windows Communication Foundation (WCF)를 위한 클라이언트 만들기는 *페더레이션 서비스* 세 개의 주요 단계로 구성 됩니다.  
   
 1.  구성 된 [ \<wsFederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md) 또는 유사한 사용자 지정 바인딩을 합니다. 적절 한 바인딩 만들기에 대 한 자세한 내용은 참조 [하는 방법: WSFederationHttpBinding 만들기](../../../../docs/framework/wcf/feature-details/how-to-create-a-wsfederationhttpbinding.md)합니다. 또는 실행 하는 [ServiceModel Metadata 유틸리티 도구 (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) 페더레이션된 서비스와 하나 이상의와 통신 하기 위한 구성 파일을 생성 하는 페더레이션된 서비스의 메타 데이터 끝점에 대해 보안 토큰 서비스를 시작 합니다.  
   

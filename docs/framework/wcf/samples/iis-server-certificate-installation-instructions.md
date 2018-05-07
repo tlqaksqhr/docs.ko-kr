@@ -1,24 +1,12 @@
 ---
-title: "IIS(인터넷 정보 서비스) 서버 인증서 설치 지침"
-ms.custom: 
+title: IIS(인터넷 정보 서비스) 서버 인증서 설치 지침
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 11281490-d2ac-4324-8f33-e7714611a34b
-caps.latest.revision: "18"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: cfb168ae60765a57017aaec6bdedaf796491f602
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 46d1acf758dd50b881527a16570a1e4a45933958
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="internet-information-services-iis-server-certificate-installation-instructions"></a>IIS(인터넷 정보 서비스) 서버 인증서 설치 지침
 IIS(인터넷 정보 서비스)와 안전하게 통신하는 샘플을 실행하려면 서버 인증서를 만들어 설치해야 합니다.  
@@ -47,7 +35,7 @@ makecert -sr LocalMachine -ss My -n CN=ServiceModelSamples-HTTPS-Server -sky exc
   
      ![IIS 인증서 마법사](../../../../docs/framework/wcf/samples/media/iiscertificate-wizard.GIF "IISCertificate_Wizard")  
   
-6.  HTTPS 주소 https://localhost/servicemodelsamples/service.svc를 사용하여 브라우저에서 서비스에 대한 액세스를 테스트합니다.  
+6.  HTTPS 주소를 사용 하 여 브라우저에서 서비스에 대 한 액세스를 테스트 https://localhost/servicemodelsamples/service.svc합니다.  
   
 #### <a name="if-ssl-was-previously-configured-by-using-httpcfgexe"></a>Httpcfg.exe를 사용하여 SSL을 이전에 구성한 경우  
   
@@ -76,7 +64,7 @@ PermissiveCertificatePolicy.Enact("CN=ServiceModelSamples-HTTPS-Server");
   
 5.  선택 된 **ServiceModelSamples HTTPS 서버** 에서 **SSL 인증서** 드롭다운 목록에서 클릭 하 고 **확인**합니다.  
   
-6.  HTTPS 주소 https://localhost/servicemodelsamples/service.svc를 사용하여 브라우저에서 서비스에 대한 액세스를 테스트합니다.  
+6.  HTTPS 주소를 사용 하 여 브라우저에서 서비스에 대 한 액세스를 테스트 https://localhost/servicemodelsamples/service.svc합니다.  
   
 > [!NOTE]
 >  설치한 테스트 인증서는 신뢰할 수 있는 인증서가 아니므로 이 인증서로 보안된 로컬 웹 주소를 검색할 때 추가 Internet Explorer 보안 경고가 발생할 수 있습니다.  

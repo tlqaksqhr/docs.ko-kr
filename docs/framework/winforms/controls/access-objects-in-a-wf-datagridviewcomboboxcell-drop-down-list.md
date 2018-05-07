@@ -1,13 +1,6 @@
 ---
-title: "방법: Windows Forms DataGridViewComboBoxCell 드롭다운 목록의 개체 액세스"
-ms.custom: 
+title: '방법: Windows Forms DataGridViewComboBoxCell 드롭다운 목록의 개체 액세스'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -16,16 +9,11 @@ helpviewer_keywords:
 - combo boxes [Windows Forms], in DataGridView control
 - combo boxes [Windows Forms], accessing objects in DataGridViewComboBoxCell drop-down lists
 ms.assetid: bcbe794a-d1fa-47f8-b5a3-5f085b32097d
-caps.latest.revision: "5"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: d0f4eb14fbb459f6844053507d1eb4f0a46cede3
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 2758841031be9ca9f0a5eb5e57165191d6870e87
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-access-objects-in-a-windows-forms-datagridviewcomboboxcell-drop-down-list"></a>방법: Windows Forms DataGridViewComboBoxCell 드롭다운 목록의 개체 액세스
 와 같은 <xref:System.Windows.Forms.ComboBox> 컨트롤의 <xref:System.Windows.Forms.DataGridViewComboBoxColumn> 및 <xref:System.Windows.Forms.DataGridViewComboBoxCell> 형식을 사용 하면 임의의 개체를 드롭 다운 목록에 추가할 수 있습니다. 이 기능을 별도 컬렉션에 해당 하는 개체를 저장 하지 않고 드롭다운 목록에 복잡 한 상태를 나타낼 수 있습니다.  
@@ -43,7 +31,7 @@ ms.lasthandoff: 12/22/2017
      [!code-csharp[System.Windows.Forms.DataGridViewComboBoxObjectBinding#110](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewComboBoxObjectBinding/CS/form1.cs#110)]
      [!code-vb[System.Windows.Forms.DataGridViewComboBoxObjectBinding#110](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewComboBoxObjectBinding/vb/form1.vb#110)]  
   
-2.  <xref:System.Windows.Forms.DataGridViewComboBoxColumn.DisplayMember%2A> 및 <xref:System.Windows.Forms.DataGridViewComboBoxColumn.ValueMember%2A> 속성을 설정합니다. <xref:System.Windows.Forms.DataGridViewComboBoxColumn.DisplayMember%2A>드롭다운 목록에 표시할 수는 비즈니스 개체의 속성을 나타냅니다. <xref:System.Windows.Forms.DataGridViewComboBoxColumn.ValueMember%2A>비즈니스 개체에 대 한 참조를 반환 하는 속성을 나타냅니다.  
+2.  <xref:System.Windows.Forms.DataGridViewComboBoxColumn.DisplayMember%2A> 및 <xref:System.Windows.Forms.DataGridViewComboBoxColumn.ValueMember%2A> 속성을 설정합니다. <xref:System.Windows.Forms.DataGridViewComboBoxColumn.DisplayMember%2A> 드롭다운 목록에 표시할 수는 비즈니스 개체의 속성을 나타냅니다. <xref:System.Windows.Forms.DataGridViewComboBoxColumn.ValueMember%2A> 비즈니스 개체에 대 한 참조를 반환 하는 속성을 나타냅니다.  
   
      [!code-csharp[System.Windows.Forms.DataGridViewComboBoxObjectBinding#115](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewComboBoxObjectBinding/CS/form1.cs#115)]
      [!code-vb[System.Windows.Forms.DataGridViewComboBoxObjectBinding#115](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewComboBoxObjectBinding/vb/form1.vb#115)]  
@@ -60,7 +48,7 @@ ms.lasthandoff: 12/22/2017
      [!code-csharp[System.Windows.Forms.DataGridViewComboBoxObjectBinding#120](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewComboBoxObjectBinding/CS/form1.cs#120)]
      [!code-vb[System.Windows.Forms.DataGridViewComboBoxObjectBinding#120](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewComboBoxObjectBinding/vb/form1.vb#120)]  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  전체 예제 드롭 다운 목록에서 비즈니스 개체의 사용을 보여 줍니다. 예제에서는 한 <xref:System.Windows.Forms.DataGridView> 컨트롤의 컬렉션에 바인딩된 `Task` 개체입니다. 각 `Task` 개체에는 `AssignedTo` 나타내는 속성을는 `Employee` 해당 작업에 현재 할당 된 개체입니다. `Assigned To` 열에 표시 됩니다는 `Name` 직원, 또는 "할당 되지 않은" 경우 각 속성 값이 지정 된 `Task.AssignedTo` 속성 값은 `null`합니다.  
   
  이 예제에서는의 동작을 보려면 다음 단계를 수행 합니다.  

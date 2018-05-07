@@ -1,24 +1,12 @@
 ---
-title: "사용자 지정 WSDL 게시"
-ms.custom: 
+title: 사용자 지정 WSDL 게시
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 3b3e8103-2c95-4db3-a05b-46aa8e9d4d29
-caps.latest.revision: "21"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ba62c44ecf72df7faaed77f54f07ecd88157c6d8
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: e475a37b5c8e868cf06d7764d561755112ed943e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="custom-wsdl-publication"></a>사용자 지정 WSDL 게시
 이 샘플을 통해 다음을 수행하는 방법을 알 수 있습니다.  
@@ -29,7 +17,7 @@ ms.lasthandoff: 12/22/2017
   
 -   사용자 지정 계약 동작과 사용자 지정 작업 동작에 각각 <xref:System.ServiceModel.Description.IServiceContractGenerationExtension?displayProperty=nameWithType> 및 <xref:System.ServiceModel.Description.IOperationContractGenerationExtension?displayProperty=nameWithType>을 구현하여 가져온 주석을 가져온 계약 및 작업의 CodeDom에 주석으로 씁니다.  
   
--   <xref:System.ServiceModel.Description.MetadataExchangeClient?displayProperty=nameWithType>를 사용하여 WSDL을 다운로드하고, <xref:System.ServiceModel.Description.WsdlImporter?displayProperty=nameWithType>를 사용하여 사용자 지정 WSDL 가져오기로 WSDL을 가져오고, <xref:System.ServiceModel.Description.ServiceContractGenerator?displayProperty=nameWithType>를 사용하여 C# 및 Visual Basic에서 /// 및 ''' 주석으로 WSDL 주석에 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 클라이언트 코드를 생성합니다.  
+-   사용 하 여는 <xref:System.ServiceModel.Description.MetadataExchangeClient?displayProperty=nameWithType> WSDL을 다운로드 하는 <xref:System.ServiceModel.Description.WsdlImporter?displayProperty=nameWithType> 사용자 지정 WSDL 가져오기 도구를 사용 하 여 WSDL을 가져올 및 <xref:System.ServiceModel.Description.ServiceContractGenerator?displayProperty=nameWithType> / / /로 WSDL 주석이 추가 된 Windows Communication Foundation (WCF) 클라이언트 코드를 생성 하 고 ' ' 주석 C# 및 Visual 기본 합니다.  
   
 > [!NOTE]
 >  이 샘플의 설치 절차 및 빌드 지침은 이 항목의 끝부분에 나와 있습니다.  
@@ -311,7 +299,7 @@ public interface ICalculator
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  이 디렉터리가 없으면 [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4(.NET Framework 4용 WCF(Windows Communication Foundation) 및 WF(Windows Workflow Foundation) 샘플)](http://go.microsoft.com/fwlink/?LinkId=150780) 로 이동하여 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 및 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플을 모두 다운로드하세요. 이 샘플은 다음 디렉터리에 있습니다.  
+>  이 디렉터리가로 이동 [Windows Communication Foundation (WCF) 및.NET Framework 4에 대 한 Windows WF (Workflow Foundation) 샘플](http://go.microsoft.com/fwlink/?LinkId=150780) 모든 Windows Communication Foundation (WCF)를 다운로드 하 고 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플. 이 샘플은 다음 디렉터리에 있습니다.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Metadata\WsdlDocumentation`  
   

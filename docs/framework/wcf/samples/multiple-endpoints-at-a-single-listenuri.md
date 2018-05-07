@@ -1,24 +1,12 @@
 ---
-title: "단일 ListenUri의 여러 끝점"
-ms.custom: 
+title: 단일 ListenUri의 여러 끝점
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 911ffad4-4d47-4430-b7c2-79192ce6bcbd
-caps.latest.revision: "13"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 909fb35f9b8e4628df06918f207c3c86770a2d4e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: f3eb2036ffbb7c5e8cae77ebc1a86e07d31626c9
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="multiple-endpoints-at-a-single-listenuri"></a>단일 ListenUri의 여러 끝점
 이 샘플에서는 단일 `ListenUri`에서 여러 끝점을 호스팅하는 서비스를 보여 줍니다. 이 샘플에 따라는 [시작](../../../../docs/framework/wcf/samples/getting-started-sample.md) 계산기 서비스를 구현 하는 합니다.  
@@ -50,7 +38,7 @@ ms.lasthandoff: 12/22/2017
   
  세 개의 끝점은 모두 동일한 `ListenUri`에서 호스팅되고 동일한 `binding`을 사용합니다. 동일한 `ListenUri`에 있는 끝점은 컴퓨터의 해당 실제 주소에서 메시지를 수신 대기하는 단일 채널 스택을 공유하므로 동일한 바인딩을 가져야 합니다. 각 끝점의 `address`는 URN입니다. 일반적으로 주소가 실제 위치를 나타내지만 이 샘플에 나온 것처럼 실제로 이 주소는 일치 및 필터링 목적에 사용되므로 모든 종류의 URI가 될 수 있습니다.  
   
- 세 개의 끝점이 모두 동일한 `ListenUri`를 공유하므로 메시지가 여기에 도착하면 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]는 메시지의 대상이 되는 끝점을 결정해야 합니다. 각 끝점에는 주소 필터와 계약 필터의 두 부분으로 구성된 메시지 필터가 있습니다. 주소 필터는 SOAP 메시지의 `To`를 서비스 끝점의 주소에 일치시킵니다. 예를 들어, `To "Urn:OtherEcho"`에 주소 지정된 메시지만 이 서비스의 세 번째 끝점의 후보가 됩니다. 계약 필터는 특정 계약의 작업과 연관된 작업을 일치시킵니다. 예를 들면 `IEcho`의 작업을 가진 메시지입니다. 이 서비스의 두 번째 및 세 번째 끝점이 `Echo` 계약을 호스팅하기 때문에 `IEcho`는 이러한 두 끝점 모두의 계약 필터를 일치시킵니다.  
+ 세 개 끝점이 모두 동일한 공유 하기 때문에 `ListenUri`메시지가 도착할 때, Windows Communication Foundation (WCF)는 메시지의 대상이 되는 끝점을 결정 해야 합니다. 각 끝점에는 주소 필터와 계약 필터의 두 부분으로 구성된 메시지 필터가 있습니다. 주소 필터는 SOAP 메시지의 `To`를 서비스 끝점의 주소에 일치시킵니다. 예를 들어, `To "Urn:OtherEcho"`에 주소 지정된 메시지만 이 서비스의 세 번째 끝점의 후보가 됩니다. 계약 필터는 특정 계약의 작업과 연관된 작업을 일치시킵니다. 예를 들면 `IEcho`의 작업을 가진 메시지입니다. 이 서비스의 두 번째 및 세 번째 끝점이 `Echo` 계약을 호스팅하기 때문에 `IEcho`는 이러한 두 끝점 모두의 계약 필터를 일치시킵니다.  
   
  따라서 주소 필터와 계약 필터를 조합하면 이 서비스의 `ListenUri`에 도착하는 각 메시지를 올바른 끝점에 라우트할 수 있습니다. 세 번째 끝점은 다른 끝점에서 다른 주소로 보내진 메시지를 수락하기 때문에 다른 두 개와 구별됩니다. 첫 번째 및 두 번째 끝점은 해당 계약(들어오는 메시지의 작업)에 기초하여 서로 구별됩니다.  
   
@@ -86,7 +74,7 @@ calcClient.ChannelFactory.Endpoint.Behaviors.Add(
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  이 디렉터리가 없으면 [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4(.NET Framework 4용 WCF(Windows Communication Foundation) 및 WF(Windows Workflow Foundation) 샘플)](http://go.microsoft.com/fwlink/?LinkId=150780) 로 이동하여 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 및 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플을 모두 다운로드하세요. 이 샘플은 다음 디렉터리에 있습니다.  
+>  이 디렉터리가로 이동 [Windows Communication Foundation (WCF) 및.NET Framework 4에 대 한 Windows WF (Workflow Foundation) 샘플](http://go.microsoft.com/fwlink/?LinkId=150780) 모든 Windows Communication Foundation (WCF)를 다운로드 하 고 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플. 이 샘플은 다음 디렉터리에 있습니다.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\MultipleEndpointsSingleUri`  
   

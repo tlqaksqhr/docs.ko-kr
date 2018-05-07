@@ -1,6 +1,12 @@
- ---
-제목: "활동 라이브러리" ms.custom: "" ms.date: "03/30/2017" ms.prod: ".net framework" ms.reviewer: "" ms.suite: "" ms.tgt_pltfrm: "" ms.topic: "문서" ms.assetid: 5323e9d4-71d6-47eb-bfa6-31feac62044d caps.latest.revision: 7 작성자: "dotnet bot "ms.author:"dotnetcontent"관리자:"wpickett"ms.workload: 
-  - "dotnet"
+---
+title: 활동 라이브러리
+ms.date: 03/30/2017
+ms.assetid: 5323e9d4-71d6-47eb-bfa6-31feac62044d
+ms.openlocfilehash: 75a7f0203b27e331f9c33fa95be7f6fb95354b7b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="activity-library"></a>활동 라이브러리
 이 섹션에는 고급 사용자 지정 활동에서 Windows WF (Workflow Foundation)를 보여 주는 샘플이 포함 되어 있습니다.  

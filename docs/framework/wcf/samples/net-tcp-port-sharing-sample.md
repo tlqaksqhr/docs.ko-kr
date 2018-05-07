@@ -1,26 +1,12 @@
 ---
 title: Net.TCP Port Sharing 샘플
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 03da5959-0574-4e91-8a53-05854b6c55dc
-caps.latest.revision: 18
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 0db4148f9be6db97dec2b8b680dad56171106b2c
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.openlocfilehash: cfd87868a5ecc557ccca1003f54f3a896b2f9fcc
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="nettcp-port-sharing-sample"></a>Net.TCP Port Sharing 샘플
 TCP/IP 프로토콜은 포트라는 16비트 숫자를 사용하여 동일한 컴퓨터에서 실행되는 여러 네트워크 응용 프로그램에 대한 연결을 구분합니다. 응용 프로그램이 포트에서 수신 대기 중이면 이 포트의 모든 TCP 트래픽이 해당 응용 프로그램으로 이동합니다. 다른 응용 프로그램이 동시에 이 포트에서 수신 대기할 수는 없습니다.  
@@ -30,13 +16,13 @@ TCP/IP 프로토콜은 포트라는 16비트 숫자를 사용하여 동일한 �
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  이 디렉터리가 없으면 [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4(.NET Framework 4용 WCF(Windows Communication Foundation) 및 WF(Windows Workflow Foundation) 샘플)](http://go.microsoft.com/fwlink/?LinkId=150780) 로 이동하여 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 및 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플을 모두 다운로드하세요. 이 샘플은 다음 디렉터리에 있습니다.  
+>  이 디렉터리가로 이동 [Windows Communication Foundation (WCF) 및.NET Framework 4에 대 한 Windows WF (Workflow Foundation) 샘플](http://go.microsoft.com/fwlink/?LinkId=150780) 모든 Windows Communication Foundation (WCF)를 다운로드 하 고 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플. 이 샘플은 다음 디렉터리에 있습니다.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\Net\TCP\PortSharing`  
   
  대부분의 프로토콜은 표준 또는 기본 포트 번호를 사용합니다. 예를 들어 HTTP 프로토콜은 보통 TCP 포트 80을 사용합니다. IIS(인터넷 정보 서비스)에는 여러 HTTP 응용 프로그램 간에 포트를 공유하는 수신기가 있습니다. IIS는 직접 포트에서 수신 대기하고 메시지 스트림에 있는 정보에 따라 적절한 응용 프로그램으로 메시지를 전달합니다. 이렇게 하면 여러 HTTP 응용 프로그램이 메시지 수신 포트를 확보하기 위해 경쟁하지 않고 같은 포트 번호를 사용할 수 있습니다.  
   
- NetTcp 포트 공유는 한 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]이와 비슷하게 여러 네트워크 응용 프로그램이 하나의 포트를 공유할 수 있는 기능입니다. NetTcp 포트 공유 서비스는 net.tcp 프로토콜을 사용하여 연결을 받은 다음 대상 주소를 기준으로 메시지를 전달합니다.  
+ NetTcp 포트 공유는 이와 비슷하게 여러 네트워크 응용 프로그램이 하나의 포트를 공유할 수 있는 Windows Communication Foundation (WCF) 기능입니다. NetTcp 포트 공유 서비스는 net.tcp 프로토콜을 사용하여 연결을 받은 다음 대상 주소를 기준으로 메시지를 전달합니다.  
   
  NetTcp 포트 공유 서비스는 기본적으로 사용되지 않습니다. 이 샘플을 실행하기 전에 수동으로 이 서비스를 사용하도록 설정해야 합니다. 자세한 내용은 참조 [하는 방법: Net.TCP Port Sharing Service를 사용 하도록 설정](../../../../docs/framework/wcf/feature-details/how-to-enable-the-net-tcp-port-sharing-service.md)합니다. 서비스를 사용하지 않으면 서버 응용 프로그램이 시작될 때 예외가 throw됩니다.  
   

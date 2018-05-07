@@ -1,13 +1,6 @@
 ---
-title: "방법: Windows Forms TabControl의 모양 변경"
-ms.custom: 
+title: '방법: Windows Forms TabControl의 모양 변경'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -18,16 +11,11 @@ helpviewer_keywords:
 - tabs [Windows Forms], controlling appearance
 - buttons [Windows Forms], displaying tabs as
 ms.assetid: 7c6cc443-ed62-4d26-b94d-b8913b44f773
-caps.latest.revision: "16"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 61fb11b79459da14384af974dbc403024faa377f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 1ea2208229d790f69e517d55e2de5ee042bdfb03
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-change-the-appearance-of-the-windows-forms-tabcontrol"></a>방법: Windows Forms TabControl의 모양 변경
 속성을 사용 하 여 Windows Forms에서 탭의 모양을 변경할 수는 <xref:System.Windows.Forms.TabControl> 및 <xref:System.Windows.Forms.TabPage> 컨트롤의 개별 탭을 구성 하는 개체입니다. 이러한 속성을 설정 하 여 탭에 이미지를 표시, 표시 하거나 수 있습니다 가로 대신 세로로 탭, 여러 행의 탭이 표시 하 고 사용 하도록 설정 탭을 프로그래밍 방식으로 사용 하지 않도록 설정 합니다.  

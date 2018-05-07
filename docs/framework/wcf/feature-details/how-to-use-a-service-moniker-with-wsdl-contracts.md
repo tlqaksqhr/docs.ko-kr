@@ -1,24 +1,12 @@
 ---
-title: "방법: WSDL 계약을 통해 서비스 모니커 사용"
-ms.custom: 
+title: '방법: WSDL 계약을 통해 서비스 모니커 사용'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: a88d9650-bb50-4f48-8c85-12f5ce98a83a
-caps.latest.revision: "8"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 7c36ac73ced510c1ba3b7e16c71f764c46d6c8f9
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 838e7affcf47742c8f372879fcb33946d53ba43f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-use-a-service-moniker-with-wsdl-contracts"></a>방법: WSDL 계약을 통해 서비스 모니커 사용
 완전히 독립된 COM Interop 클라이언트가 필요한 경우가 있습니다. 호출하려는 서비스에서 MEX 끝점을 노출하지 않을 수도 있고 WCF 클라이언트 DLL이 COM interop에 등록되지 않을 수도 있습니다. 이 경우 서비스를 설명하는 WSDL 파일을 만들어 WCF 서비스 모니커에 전달할 수 있습니다. 이 항목에서는 WCF WSDL 모니커를 사용하여 WCF 시작 샘플을 호출하는 방법에 대해 설명합니다.  
@@ -27,7 +15,7 @@ ms.lasthandoff: 12/22/2017
   
 1.  GettingStarted 샘플 솔루션을 열고 빌드합니다.  
   
-2.  Internet Explorer를 열고 http://localhost/ServiceModelSamples/Service.svc로 이동하여 서비스가 작동하는지 확인합니다.  
+2.  Internet Explorer를 열고 http://localhost/ServiceModelSamples/Service.svc 서비스가 작동 되도록 합니다.  
   
 3.  Service.cs 파일에서 CalculatorService 클래스에 다음 특성을 추가합니다.  
   
@@ -37,7 +25,7 @@ ms.lasthandoff: 12/22/2017
   
   
   
-5.  응용 프로그램에서 읽을 WSDL 파일을 만듭니다. 3단계와 4단계에서 네임스페이스가 추가되었기 때문에 IE에서 http://localhost/ServiceModelSamples/Service.svc?wsdl로 이동하여 서비스의 WSDL 설명 전체를 쿼리할 수 있습니다. 그런 다음 Internet Explorer에서 serviceWSDL.xml로 파일을 저장할 수 있습니다. 3단계와 4단계에서 네임스페이스를 지정하지 않은 경우 위 URL을 쿼리했을 때 반환되는 WSDL 문서는 전체 WSDL이 아닙니다. 반환되는 WSDL 문서에는 다른 WSDL 문서를 가져오는 몇 개의 import 문이 포함됩니다. 각 import 문을 수행하고 전체 WSDL 문서를 빌드하여 서비스에서 반환되는 WSDL과 가져온 WSDL을 결합해야 합니다.  
+5.  응용 프로그램에서 읽을 WSDL 파일을 만듭니다. 네임 스페이스 3 및 4 단계에서 추가 된로 이동 하 여 서비스의 WSDL 설명 전체에 대 한 쿼리를 IE를 사용할 수 있습니다 http://localhost/ServiceModelSamples/Service.svc?wsdl합니다. 그런 다음 Internet Explorer에서 serviceWSDL.xml로 파일을 저장할 수 있습니다. 3단계와 4단계에서 네임스페이스를 지정하지 않은 경우 위 URL을 쿼리했을 때 반환되는 WSDL 문서는 전체 WSDL이 아닙니다. 반환되는 WSDL 문서에는 다른 WSDL 문서를 가져오는 몇 개의 import 문이 포함됩니다. 각 import 문을 수행하고 전체 WSDL 문서를 빌드하여 서비스에서 반환되는 WSDL과 가져온 WSDL을 결합해야 합니다.  
   
 6.  Visual Basic 6.0을 열고 새 표준 .exe 파일을 만듭니다. 폼에 단추를 추가하고 단추를 두 번 클릭하여 다음 코드를 클릭 처리기에 추가합니다.  
   

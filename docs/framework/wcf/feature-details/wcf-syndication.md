@@ -1,35 +1,21 @@
 ---
-title: "WCF 배포"
-ms.custom: 
+title: WCF 배포
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - syndication [WCF]
 ms.assetid: ebf80384-0fc9-4919-a1e8-23ca2a13e300
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 1f7f5fd65fc298107a66e2049c059f3cc58b3d44
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 627de6431c641e48367a97e3f80f3d05d185ab45
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="wcf-syndication"></a>WCF 배포
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]에서는 Atom, RSS 또는 기타 사용자 지정 형식의 배포 피드를 쉽게 사용하는 것이 지원되므로 이러한 배포 피드를 읽고 만들 수 있을 뿐만 아니라 서비스 끝점에서 노출할 수 있습니다. 이 단원의 항목에서는 배포에 대한 이 프로그래밍 모델에 대해 자세히 설명합니다.  
+Windows Communication Foundation (WCF)에 읽기 및 만들 뿐만 아니라 서비스 끝점에서 노출할 수 있는 Atom, RSS 또는 기타 사용자 지정 형식의 배포 피드를 쉽게 작업할 지원을 제공 합니다. 이 단원의 항목에서는 배포에 대한 이 프로그래밍 모델에 대해 자세히 설명합니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
  [WCF 배포 개요](../../../../docs/framework/wcf/feature-details/wcf-syndication-overview.md)  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서 제공하는 배포 지원에 대한 개요를 제공합니다.  
+ WCF에서 제공 하는 배포 지원의 개요를 제공 합니다.  
   
  [배포 아키텍처](../../../../docs/framework/wcf/feature-details/architecture-of-syndication.md)  
  개체 모델의 클래스와 배포 확장성에 대해 설명합니다.  

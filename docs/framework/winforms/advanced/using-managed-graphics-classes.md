@@ -1,28 +1,16 @@
 ---
-title: "관리되는 그래픽 클래스 사용"
-ms.custom: 
+title: 관리되는 그래픽 클래스 사용
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - GDI+, managed classes
 - graphics [Windows Forms], using in Windows Forms
 - graphics [Windows Forms], managed classes
 ms.assetid: e6d1a42d-2100-46aa-97e6-a5ddc0baaae5
-caps.latest.revision: "21"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 2a34e2726182c194882d94fe4b8d1164993d8284
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 1a2407065930da6fff74e50d1a6946dad94560da
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-managed-graphics-classes"></a>관리되는 그래픽 클래스 사용
 다음 항목을 사용 하는 방법을 설명는 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 관리 되는 클래스 프레임 워크의 API입니다.  

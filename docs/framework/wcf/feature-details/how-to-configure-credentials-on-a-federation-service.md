@@ -1,14 +1,6 @@
 ---
 title: '방법: 페더레이션 서비스에서 자격 증명 구성'
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -16,20 +8,14 @@ helpviewer_keywords:
 - WCF, federation
 - federation
 ms.assetid: 149ab165-0ef3-490a-83a9-4322a07bd98a
-caps.latest.revision: 21
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 063f4da3ca920f17f77b3cc53f7c5903fc89b8cf
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 5bfea40a500dc1355b439ae7d949b0d96d3ab08c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-configure-credentials-on-a-federation-service"></a>방법: 페더레이션 서비스에서 자격 증명 구성
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]에서는 다음과 같은 기본 절차를 통해 페더레이션 서비스를 만들 수 있습니다.  
+Windows Communication Foundation (WCF), 페더레이션된 서비스를 만드는 다음과 같은 기본 절차 이루어져 있습니다.  
   
 1.  <xref:System.ServiceModel.WSFederationHttpBinding> 또는 유사한 사용자 지정 바인딩을 구성합니다. 적절 한 바인딩 만들기에 대 한 자세한 내용은 참조 [하는 방법: WSFederationHttpBinding 만들기](../../../../docs/framework/wcf/feature-details/how-to-create-a-wsfederationhttpbinding.md)합니다.  
   

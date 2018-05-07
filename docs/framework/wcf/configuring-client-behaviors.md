@@ -1,30 +1,18 @@
 ---
-title: "클라이언트 동작 구성"
-ms.custom: 
+title: 클라이언트 동작 구성
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: df5b32fa-e73b-4e8e-b66f-357c748e0173
-caps.latest.revision: "7"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ee79900b52ae0fa58e8fb9a5cbbf50f5a882c295
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 062e726b6f1d6831303e1cc0ae82a434daab860c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="configuring-client-behaviors"></a>클라이언트 동작 구성
-[!INCLUDE[indigo1](../../../includes/indigo1-md.md)]에서는 클라이언트 응용 프로그램 구성 파일의 `<behavior>` 섹션에 정의된 동작 구성을 참조하거나 호출 응용 프로그램에서 프로그래밍 방식으로 동작을 구성합니다. 이 항목에서는 두 접근 방식 모두에 대해 설명합니다.  
+두 가지 방법으로 동작을 구성 하는 Windows Communication Foundation (WCF): 참조에 정의 된 동작 구성을 하 여는 `<behavior>` 섹션 또는 프로그래밍 방식으로 호출 하는 클라이언트 응용 프로그램 구성 파일- 응용 프로그램입니다. 이 항목에서는 두 접근 방식 모두에 대해 설명합니다.  
   
  구성 파일을 사용할 경우 동작 구성은 구성 설정의 명명된 컬렉션입니다. 각 동작 구성의 이름은 고유해야 합니다. 이 문자열은 끝점을 동작에 연결하는 끝점 구성의 `behaviorConfiguration` 특성에 사용됩니다.  
   
@@ -54,7 +42,7 @@ ms.lasthandoff: 12/22/2017
 ```  
   
 ## <a name="using-behaviors-programmatically"></a>프로그래밍 방식으로 동작 사용  
- 클라이언트를 열기 전에 `Behaviors` 클라이언트 개체 또는 클라이언트 채널 팩터리 개체에서 적절한 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 속성을 찾아 프로그래밍 방식으로 동작을 구성 또는 삽입할 수도 있습니다.  
+ 구성 하거나 적절 한 배치 하 여 동작을 프로그래밍 방식으로 삽입할 수도 `Behaviors` Windows Communication Foundation (WCF) 클라이언트 개체 또는 클라이언트를 열기 전에 클라이언트 채널 팩터리 개체에 속성입니다.  
   
 ## <a name="example"></a>예제  
  다음 코드 예제에서는 채널 개체를 만들기 전에 <xref:System.ServiceModel.Description.ServiceEndpoint.Behaviors%2A> 속성에서 반환된 <xref:System.ServiceModel.Description.ServiceEndpoint>의 <xref:System.ServiceModel.ChannelFactory.Endpoint%2A> 속성에 액세스하여 프로그래밍 방식으로 동작을 삽입하는 방법을 보여 줍니다.  

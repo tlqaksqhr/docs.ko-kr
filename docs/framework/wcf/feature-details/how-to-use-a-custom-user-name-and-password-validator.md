@@ -1,34 +1,20 @@
 ---
 title: '방법: 사용자 지정 사용자 이름 및 암호 유효성 검사기 사용'
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - WCF, username and password
 ms.assetid: 8e08b74b-fa44-4018-b63d-0d0805f85e3f
-caps.latest.revision: 14
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 4ea4f4d7021f02d239b9e2e93a85b5baaf5a0317
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 8580219181af8fd28bcc99c60bd1e681ffbdad54
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-use-a-custom-user-name-and-password-validator"></a>방법: 사용자 지정 사용자 이름 및 암호 유효성 검사기 사용
-기본적으로 사용자 이름과 암호가 인증에 사용될 때, [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]에서는 Windows를 사용하여 사용자 이름과 암호의 유효성을 검사합니다. 그러나 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 으로 알려진 사용자 지정 사용자 이름 및 암호 인증 체계에 대 한 허용 *유효성 검사기*합니다. 사용자 지정 사용자 이름 및 암호 유효성 검사기를 통합하려면 <xref:System.IdentityModel.Selectors.UserNamePasswordValidator>에서 파생되는 클래스를 만들어 구성합니다.  
+기본적으로 사용자 이름 및 암호 인증을 위해 사용 될 때 Windows Communication Foundation (WCF)를 사용 하 여 Windows 사용자 이름 및 암호의 유효성을 검사 합니다. 그러나 WCF에서는 사용자 지정 사용자 이름 및 암호 인증 체계에 대 한 라고도 *유효성 검사기*합니다. 사용자 지정 사용자 이름 및 암호 유효성 검사기를 통합하려면 <xref:System.IdentityModel.Selectors.UserNamePasswordValidator>에서 파생되는 클래스를 만들어 구성합니다.  
   
  샘플 응용 프로그램에 대 한 참조 [사용자 이름 암호 유효성 검사기](../../../../docs/framework/wcf/samples/user-name-password-validator.md)합니다.  
   
@@ -64,7 +50,7 @@ ms.lasthandoff: 04/30/2018
   
     1.  구성 파일에 아래에서 [ \<system.serviceModel >](../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md) 요소를 추가 [ \<바인딩 >](../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md) 요소입니다.  
   
-    2.  추가 [ \<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md) 또는 [ \<basicHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md) 요소는 바인딩 섹션입니다. 만들기에 대 한 자세한 내용은 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 참조 바인딩 요소 [하는 방법: 구성에서 서비스 바인딩 지정](../../../../docs/framework/wcf/how-to-specify-a-service-binding-in-configuration.md)합니다.  
+    2.  추가 [ \<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md) 또는 [ \<basicHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md) 요소는 바인딩 섹션입니다. WCF 바인딩 요소를 만드는 방법에 대 한 자세한 내용은 참조 [하는 방법: 구성에서 서비스 바인딩 지정](../../../../docs/framework/wcf/how-to-specify-a-service-binding-in-configuration.md)합니다.  
   
     3.  설정의 `mode` 특성에는 [ \<보안 >](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-wshttpbinding.md) 또는 [ \<보안 >](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-basichttpbinding.md) 를 `Message`, `Transport`, `or``TransportWithMessageCredential`합니다.  
   
@@ -75,9 +61,9 @@ ms.lasthandoff: 04/30/2018
          전송 수준 보안 HTTP (S)를 사용할 때는 `clientCredentialType` 특성에는 [ \<전송 >](../../../../docs/framework/configure-apps/file-schema/wcf/transport-of-wshttpbinding.md) 또는 [ \<전송 >](../../../../docs/framework/configure-apps/file-schema/wcf/transport-of-basichttpbinding.md) 를 `Basic`합니다.  
   
         > [!NOTE]
-        >  [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 서비스가 전송 수준 보안을 사용하여 IIS(인터넷 정보 서비스)에서 호스팅되고 <xref:System.ServiceModel.Security.UserNamePasswordServiceCredential.UserNamePasswordValidationMode%2A> 속성이 <xref:System.ServiceModel.Security.UserNamePasswordValidationMode.Custom>으로 설정되는 경우 사용자 지정 인증 스키마에서는 Windows 인증의 하위 집합을 사용합니다. 이 시나리오의 경우 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서 사용자 지정 인증자를 호출하기 전에 IIS에서 Windows 인증을 수행하기 때문입니다.  
+        >  WCF 서비스에서 인터넷 정보 서비스 (IIS) 전송 수준 보안을 사용 하는 호스트 하는 경우 및 <xref:System.ServiceModel.Security.UserNamePasswordServiceCredential.UserNamePasswordValidationMode%2A> 속성이 <xref:System.ServiceModel.Security.UserNamePasswordValidationMode.Custom>, 사용자 지정 인증 스키마에서는 Windows 인증의 하위 집합을 사용 합니다. 이 시나리오에서는 IIS WCF 사용자 지정 인증자를 호출 하기 전에 Windows 인증을 수행 하기 때문입니다.  
   
-     만들기에 대 한 자세한 내용은 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 참조 바인딩 요소 [하는 방법: 구성에서 서비스 바인딩 지정](../../../../docs/framework/wcf/how-to-specify-a-service-binding-in-configuration.md)합니다.  
+     WCF 바인딩 요소를 만드는 방법에 대 한 자세한 내용은 참조 [하는 방법: 구성에서 서비스 바인딩 지정](../../../../docs/framework/wcf/how-to-specify-a-service-binding-in-configuration.md)합니다.  
   
      다음 예제에서는 바인딩에 대한 구성 코드를 보여 줍니다.  
   
@@ -110,7 +96,7 @@ ms.lasthandoff: 04/30/2018
     6.  `userNamePasswordValidationMode`를 `Custom`으로 설정합니다.  
   
         > [!IMPORTANT]
-        >  `userNamePasswordValidationMode` 값이 설정되어 있지 않으면 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서는 사용자 지정 사용자 이름 및 암호 유효성 검사기 대신 Windows 인증을 사용합니다.  
+        >  경우는 `userNamePasswordValidationMode` 값 설정 하지 않으면, WCF 사용자 지정 사용자 이름 및 암호 유효성 검사기 대신 Windows 인증을 사용 합니다.  
   
     7.  `customUserNamePasswordValidatorType`을 사용자 지정 사용자 이름 및 암호 유효성 검사기를 나타내는 형식으로 설정합니다.  
   

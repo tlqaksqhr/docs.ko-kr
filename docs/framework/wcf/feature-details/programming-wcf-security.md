@@ -1,42 +1,30 @@
 ---
 title: WCF 보안 프로그래밍
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - message security [WCF], programming overview
 ms.assetid: 739ec222-4eda-4cc9-a470-67e64a7a3f10
-caps.latest.revision: 25
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload:
-- dotnet
-ms.openlocfilehash: 63f5c2c61a374b92b018419c83c9429e6ad796d8
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 3eb645dcc5b8cc1c52818e290699ebadcd0943c6
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="programming-wcf-security"></a>WCF 보안 프로그래밍
-이 항목에서는 보안 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 응용 프로그램을 만드는 데 사용되는 기본 프로그래밍 작업에 대해 설명합니다. 이 항목에서는 인증, 기밀성 및 무결성을 이라고 통칭 *전송 보안*합니다. 이 항목에서는 권한 부여 (리소스 또는 서비스에 대 한 액세스 제어);를 설명 하지 권한 부여에 대 한 자세한 내용은 참조 [권한 부여](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md)합니다.  
+이 항목에서는 안전한 Windows Communication Foundation (WCF) 응용 프로그램을 만드는 데는 기본 프로그래밍 작업을 설명 합니다. 이 항목에서는 인증, 기밀성 및 무결성을 이라고 통칭 *전송 보안*합니다. 이 항목에서는 권한 부여 (리소스 또는 서비스에 대 한 액세스 제어);를 설명 하지 권한 부여에 대 한 자세한 내용은 참조 [권한 부여](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md)합니다.  
   
 > [!NOTE]
->  에 대 한 관계에서 특히 보안 개념에 대 한 중요 한 사항을 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], msdn에서 집합의 패턴 및 실습 자습서를 참조 하십시오. [시나리오, 패턴 및 구현 지침에 대 한 향상 된 기능 WSE (Web Services) 3.0](http://go.microsoft.com/fwlink/?LinkID=88250).  
+>  다음 msdn에서 WCF, 특히 관련 하 여 보안 개념에 대 한 중요 한 사항을 참조 집합의 패턴 및 실습 자습서 [시나리오, 패턴 및 구현 지침에 대 한 향상 된 기능 WSE (Web Services) 3.0](http://go.microsoft.com/fwlink/?LinkID=88250)합니다.  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 보안 프로그래밍은 보안 모드, 클라이언트 자격 증명 형식 및 자격 증명 값을 설정하는 세 가지 단계로 구성됩니다. 코드 또는 구성을 통해 이러한 단계를 수행할 수 있습니다.  
+ 다음을 설정 하는 3 단계에 따라 WCF 보안 프로그래밍: 보안 모드, 클라이언트 자격 증명 유형 및 자격 증명 값입니다. 코드 또는 구성을 통해 이러한 단계를 수행할 수 있습니다.  
   
 ## <a name="setting-the-security-mode"></a>보안 모드 설정  
- 다음에서는 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서 보안 모드로 프로그래밍하는 일반 단계에 대해 설명합니다.  
+ 다음은 WCF의 보안 모드를 사용 하 여 프로그래밍 하기 위한 일반적인 단계에 대 한 설명입니다.  
   
 1.  응용 프로그램 요구 사항에 적합한 미리 정의된 바인딩 중 하나를 선택합니다. 바인딩 선택 목록, 참조 [시스템 제공 바인딩](../../../../docs/framework/wcf/system-provided-bindings.md)합니다. 기본적으로 거의 모든 바인딩에서 보안을 사용할 수 있습니다. 한 가지 예외는는 <xref:System.ServiceModel.BasicHttpBinding> 클래스 (구성을 사용 하 여 [ \<basicHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md)).  
   

@@ -1,45 +1,33 @@
 ---
 title: 바인딩 및 보안
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - bindings [WCF], security
 - WCF security
 - Windows Communication Foundation, security
 - bindings [WCF]
 ms.assetid: 4de03dd3-968a-4e65-af43-516e903d7f95
-caps.latest.revision: 42
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload:
-- dotnet
-ms.openlocfilehash: 440bbcf03eef8f32a28073bfc9f5aeeb824a50fd
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 938b04f6c612f38be41d278273aa18d41677f84c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="bindings-and-security"></a>바인딩 및 보안
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]에 포함된 시스템 제공 바인딩은 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 응용 프로그램을 신속하게 프로그래밍하기 위한 방법을 제공합니다. 한 가지 예외를 통해 모든 바인딩의 기본 보안 스키마가 활성화됩니다. 이 항목은 보안 요구 사항에 적합한 바인딩을 선택하는 데 도움을 줍니다.  
+Windows Communication Foundation (WCF)를 포함 하는 시스템 제공 바인딩은 WCF 응용 프로그램을 프로그래밍 하는 빠른 방법을 제공 합니다. 한 가지 예외를 통해 모든 바인딩의 기본 보안 스키마가 활성화됩니다. 이 항목은 보안 요구 사항에 적합한 바인딩을 선택하는 데 도움을 줍니다.  
   
- 에 대 한 개요 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 보안 참조 [보안 개요](../../../../docs/framework/wcf/feature-details/security-overview.md)합니다. 프로그래밍에 대 한 자세한 내용은 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 바인딩을 사용 하 여, 참조 [WCF 보안 프로그래밍](../../../../docs/framework/wcf/feature-details/programming-wcf-security.md)합니다.  
+ WCF 보안의 개요를 참조 하십시오. [보안 개요](../../../../docs/framework/wcf/feature-details/security-overview.md)합니다. WCF 바인딩을 사용 하 여 프로그래밍 하는 방법에 대 한 자세한 내용은 참조 [WCF 보안 프로그래밍](../../../../docs/framework/wcf/feature-details/programming-wcf-security.md)합니다.  
   
  연결에서 보안 된 런타임 동작에 대 한 자세한 내용을 확인할 수 이미 바인딩을 선택 하는 경우 [보안 동작](../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)합니다.  
   
  일부 보안 기능은 시스템 제공 바인딩을 사용하여 프로그래밍할 수 없습니다. 사용자 지정 바인딩을 사용 하 여 더 많은 컨트롤에 대 한 참조 [사용자 지정 바인딩을 사용 하는 보안 기능](../../../../docs/framework/wcf/feature-details/security-capabilities-with-custom-bindings.md)합니다.  
   
 ## <a name="security-functions-of-bindings"></a>바인딩의 보안 기능  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에는 대부분의 요구 사항을 충족하는 여러 시스템 제공 바인딩이 포함되어 있습니다. 또한 특정 바인딩이 요구 사항을 충족하지 않는 경우, 사용자 지정 바인딩을 만들 수도 있습니다. 시스템 제공 바인딩 목록, 참조 [시스템 제공 바인딩](../../../../docs/framework/wcf/system-provided-bindings.md)합니다. 사용자 지정 바인딩에 대 한 자세한 내용은 참조 하십시오. [사용자 지정 바인딩을](../../../../docs/framework/wcf/extending/custom-bindings.md)합니다.  
+ WCF에는 다양 한 대부분의 요구 사항을 충족 하는 시스템 제공 바인딩이 포함 되어 있습니다. 또한 특정 바인딩이 요구 사항을 충족하지 않는 경우, 사용자 지정 바인딩을 만들 수도 있습니다. 시스템 제공 바인딩 목록, 참조 [시스템 제공 바인딩](../../../../docs/framework/wcf/system-provided-bindings.md)합니다. 사용자 지정 바인딩에 대 한 자세한 내용은 참조 하십시오. [사용자 지정 바인딩을](../../../../docs/framework/wcf/extending/custom-bindings.md)합니다.  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]의 모든 바인딩에는 두 가지 양식 즉, 구성 파일에서 사용되는 XML 요소 및 API가 있습니다. 예를 들어는 `WSHttpBinding` (API) 해당 하는 도구에는 [ \<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md)합니다.  
+ WCF에서 모든 바인딩에 다음과 같은 두 가지 형태: 구성 파일에 사용 되는 XML 요소 및 API입니다. 예를 들어는 `WSHttpBinding` (API) 해당 하는 도구에는 [ \<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md)합니다.  
   
  다음 단원에서는 각 바인딩에 대한 두 가지 양식을 나열하고 해당 보안 기능에 대해 요약하여 설명합니다.  
   
@@ -149,7 +137,7 @@ ms.lasthandoff: 04/30/2018
 ### <a name="msmqintegrationbinding"></a>MsmqIntegrationBinding  
  코드를 사용 하 여는 <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding> 클래스; 구성에서 사용 된 [ \<msmqIntegrationBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/msmqintegrationbinding.md)합니다.  
   
- 이 바인딩은 비[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] MSMQ(Microsoft Message Queuing) 끝점과 상호 운용되는 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 클라이언트 및 서비스를 만들기 위해 최적화됩니다.  
+ 이 바인딩은 비-WCF MSMQ Microsoft Message Queuing 끝점을 사용 하 여 WCF 클라이언트와 상호 운용 하는 서비스를 만들기 위해 최적화 됩니다.  
   
  기본적으로 이 바인딩은 전송 보안을 사용하고 다음과 같은 보안 특성을 제공합니다.  
   
@@ -162,7 +150,7 @@ ms.lasthandoff: 04/30/2018
 ### <a name="netmsmqbinding"></a>NetMsmqBinding  
  코드를 사용 하 여는 <xref:System.ServiceModel.NetMsmqBinding> 클래스; 구성에서 사용 된 [ \<netMsmqBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/netmsmqbinding.md)합니다.  
   
- 이 바인딩은 MSMQ 대기 중인 메시지 지원이 필요한 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 서비스를 만들 때 사용합니다.  
+ 이 바인딩이 대기 중인 메시지 지원이 MSMQ를 필요로 하는 WCF 서비스를 만드는 경우 사용 하면 됩니다.  
   
  기본적으로 이 바인딩은 전송 보안을 사용하고 다음과 같은 보안 특성을 제공합니다.  
   
@@ -232,7 +220,7 @@ ms.lasthandoff: 04/30/2018
 |----------|-----------------|  
 |없음|서비스와 익명 클라이언트가 상호 작용할 수 있습니다.|  
 |Windows|Windows 자격 증명의 인증된 컨텍스트에서 SOAP 메시지 교환을 수행할 수 있습니다.|  
-|UserName|서비스에서 사용자 이름 자격 증명을 사용하여 클라이언트를 인증하도록 요구할 수 있습니다. 보안 모드를 `TransportWithMessageCredential`로 설정할 경우 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]는 암호 다이제스트를 보내거나 암호를 사용하여 키를 파생하고 메시지 모드 보안에 이러한 키를 사용하는 것을 지원하지 않습니다. 따라서 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서는 사용자 이름 자격 증명을 사용할 때 전송에 보안을 적용합니다.|  
+|UserName|서비스에서 사용자 이름 자격 증명을 사용하여 클라이언트를 인증하도록 요구할 수 있습니다. 보안 모드로 설정 된 경우 사용자에 게 유의 `TransportWithMessageCredential`, WCF는 암호 다이제스트 키를 파생 암호를 사용 하 고 메시지 모드 보안에 이러한 키를 사용 하 여 보낸를 지원 하지 않습니다. 따라서 WCF 사용자 이름 자격 증명을 사용 하는 경우에 전송 보안을 적용 합니다.|  
 |인증서|서비스에서 인증서를 사용하여 클라이언트를 인증하도록 요구할 수 있습니다.|  
 |IssuedToken|서비스가 보안 토큰 서비스를 사용하여 사용자 지정 토큰을 제공할 수 있습니다.|  
   

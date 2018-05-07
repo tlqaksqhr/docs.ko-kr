@@ -1,31 +1,19 @@
 ---
 title: WCF에서 사용되는 보안 개념
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 3b9dfcf5-4bf1-4f35-9070-723171c823a1
-caps.latest.revision: 15
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload:
-- dotnet
-ms.openlocfilehash: 74b16698d40747937a89f84f0d958178b42d2e44
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: ac76f1742ab72de9f5180d1ea2fcbc668ec2140c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="security-concepts-used-in-wcf"></a>WCF에서 사용되는 보안 개념
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 보안은 이미 사용 중인 개념을 기반으로 빌드되고 다양한 보안 인프라에 배포됩니다.  
+Windows Communication Foundation (WCF) 보안 개념을 이미 사용 중인 빌드 및 다양 한 보안 인프라에 배포 합니다.  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]는 HTTPS(HTTP를 통한 SSL(Secure Sockets Layer))와 같은 이러한 인프라 중 일부를 지원합니다. 그러나 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]는 SOAP 인코딩된 메시지를 통해 WS-Security와 같은 최신 상호 운용 가능한 보안 표준을 구현하여 기존 보안 인프라를 지원하는 것 이상의 기능을 합니다. 기존 메커니즘 또는 새로운 상호 운용 가능한 표준을 사용하는지 여부에 따라 두 가지의 보안 개념은 동일합니다. 따라서 기존 인프라 및 최신 표준에 적용된 개념을 이해하는 것이 특정 응용 프로그램에 대해 가장 적합한 보안 모델을 구현하는 데 매우 중요합니다.  
+ WCF와 같은 SSL Secure Sockets Layer () HTTP (HTTPS)을 통해 이러한 인프라 중 일부를 지원합니다. 하지만 WCF SOAP 인코딩된 메시지를 통한 Ws-security) (같은 최신 상호 운용 가능한 보안 표준을 구현 하 여 기존 보안 인프라를 지원할 이동 합니다. 기존 메커니즘 또는 새로운 상호 운용 가능한 표준을 사용하는지 여부에 따라 두 가지의 보안 개념은 동일합니다. 따라서 기존 인프라 및 최신 표준에 적용된 개념을 이해하는 것이 특정 응용 프로그램에 대해 가장 적합한 보안 모델을 구현하는 데 매우 중요합니다.  
   
 ## <a name="introduction-to-security-for-wcf-web-services"></a>WCF 웹 서비스 보안에 대한 소개  
  Microsoft Patterns and Practices 그룹은 여기에서 다운로드할 수 있는 WCF 보안 지침을 자세한 백서 썼습니다: [WCF 보안 가이드](http://go.microsoft.com/fwlink/?LinkId=210210)합니다. 이 백서에서는 웹 서비스와 관련된 기본 보안 개념, 주요 WCF 보안 개념, 인트라넷 응용 프로그램 시나리오 및 인터넷 응용 프로그램 시나리오에 대해 설명합니다.  

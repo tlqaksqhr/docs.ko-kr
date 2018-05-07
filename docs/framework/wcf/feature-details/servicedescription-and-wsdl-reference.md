@@ -1,36 +1,22 @@
 ---
 title: ServiceDescription 및 WSDL 참조
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: eedc025d-abd9-46b1-bf3b-61d2d5c95fd6
-caps.latest.revision: ''
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 7eadfaaae920071092f569fe2b8882875ed9497f
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: e70d653519c13d2f40fa2a579b674893e1b7ab02
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="servicedescription-and-wsdl-reference"></a>ServiceDescription 및 WSDL 참조
-이 항목에서는 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]에서 WSDL(웹 서비스 기술 언어) 문서를 <xref:System.ServiceModel.Description.ServiceDescription> 인스턴스에 매핑하는 방법을 설명합니다.  
+이 항목에서 Windows Communication Foundation (WCF) 설명 언어 WSDL (웹 서비스) 문서를 매핑하는 방법에 대해 설명 <xref:System.ServiceModel.Description.ServiceDescription> 인스턴스.  
   
 ## <a name="how-servicedescription-maps-to-wsdl-11"></a>ServiceDescription에서 WSDL 1.1에 매핑하는 방법  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]를 사용하여 서비스에 대한 <xref:System.ServiceModel.Description.ServiceDescription> 인스턴스에서 WSDL 문서를 내보낼 수 있습니다. WSDL 문서는 메타데이터 끝점을 게시할 때 서비스에 대해 자동으로 생성됩니다.  
+ WCF를 사용 하 여 WSDL 문서를 내보낼 수 있습니다는 <xref:System.ServiceModel.Description.ServiceDescription> 서비스에 대 한 인스턴스. WSDL 문서는 메타데이터 끝점을 게시할 때 서비스에 대해 자동으로 생성됩니다.  
   
  <xref:System.ServiceModel.Description.ServiceEndpoint> 형식을 사용하여 WSDL 문서에서 <xref:System.ServiceModel.Description.ContractDescription>, <xref:System.ServiceModel.Channels.Binding> 및 `WsdlImporter` 인스턴스를 가져올 수도 있습니다.  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서 내보낸 WSDL 문서는 외부 XML 스키마 문서에서 사용된 XML 스키마 정의를 가져옵니다. 서비스에서 데이터 형식에 사용되는 대상 네임스페이스마다 별도의 XML 스키마 문서를 내보냅니다. 마찬가지로 서비스 계약에 사용되는 대상 네임스페이스마다 별도의 WSDL 문서를 내보냅니다.  
+ WCF에서 내보낸 WSDL 문서는 외부 XML 스키마 문서에서 사용 되는 모든 XML 스키마 정의 가져옵니다. 서비스에서 데이터 형식에 사용되는 대상 네임스페이스마다 별도의 XML 스키마 문서를 내보냅니다. 마찬가지로 서비스 계약에 사용되는 대상 네임스페이스마다 별도의 WSDL 문서를 내보냅니다.  
   
 ### <a name="servicedescription"></a>ServiceDescription  
  <xref:System.ServiceModel.Description.ServiceDescription> 인스턴스는 `wsdl:service` 요소에 매핑됩니다. <xref:System.ServiceModel.Description.ServiceDescription> 인스턴스에는 각각 개별 <xref:System.ServiceModel.Description.ServiceEndpoint> 요소에 매핑되는 `wsdl:port` 인스턴스의 컬렉션이 포함되어 있습니다.  
@@ -49,13 +35,13 @@ ms.lasthandoff: 03/26/2018
 |속성|WSDL 매핑|  
 |----------------|------------------|  
 |`Name`|`wsdl:port` /@name 끝점에 대 한 값 및 `wsdl:binding` /@name 끝점 바인딩에 대 한 값입니다.|  
-|`Address`|끝점의 `wsdl:port` 정의에 대한 주소입니다.<br /><br /> 끝점에 대한 전송에 따라 주소 형식이 결정됩니다. 예를 들어, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 지원 전송의 경우 SOAP 주소 또는 끝점 참조일 수 있습니다.|  
-|`Binding`|끝점에 대한 `wsdl:binding` 정의입니다.<br /><br /> `wsdl:binding` 정의와 달리 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]의 바인딩은 어떠한 계약에도 연결되지 않습니다.|  
+|`Address`|끝점의 `wsdl:port` 정의에 대한 주소입니다.<br /><br /> 끝점에 대한 전송에 따라 주소 형식이 결정됩니다. 예를 들어 WCF에서 지 원하는 전송에 대 한 때문일 SOAP 주소 또는 끝점 참조일 있습니다.|  
+|`Binding`|끝점에 대한 `wsdl:binding` 정의입니다.<br /><br /> 와 달리 `wsdl:binding` 정의 WCF의 바인딩은 어떠한 계약에 연결 되지 않습니다.|  
 |`Contract`|끝점에 대한 `wsdl:portType` 정의입니다.|  
 |`Behaviors`|<xref:System.ServiceModel.Description.IWsdlExportExtension> 인터페이스를 구현하는 끝점 동작은 끝점에 대한 `wsdl:port`를 수정할 수 있습니다.|  
   
 ### <a name="bindings"></a>바인딩  
- `ServiceEndpoint` 인스턴스에 대한 바인딩 인스턴스가 `wsdl:binding` 정의에 매핑됩니다. 특정 `wsdl:binding` 정의와 연결되어야 하는 `wsdl:portType` 정의와 달리 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 바인딩은 계약에 독립적입니다.  
+ `ServiceEndpoint` 인스턴스에 대한 바인딩 인스턴스가 `wsdl:binding` 정의에 매핑됩니다. 와 달리 `wsdl:binding` 는 특정 연결 되어야 하는 정의 `wsdl:portType` 정의 WCF 바인딩에 계약에 독립적입니다.  
   
  바인딩은 바인딩 요소의 컬렉션으로 구성됩니다. 각 요소는 끝점이 클라이언트와 통신하는 방법의 일부를 설명합니다. 또한 바인딩에는 끝점에 대한 <xref:System.ServiceModel.Channels.MessageVersion> 및 <xref:System.ServiceModel.EnvelopeVersion>을 나타내는 <xref:System.ServiceModel.Channels.AddressingVersion>이 있습니다.  
   
@@ -72,10 +58,10 @@ ms.lasthandoff: 03/26/2018
  바인딩에 대한 <xref:System.ServiceModel.Channels.TransportBindingElement>에 따라 SOAP 바인딩에 대한 전송 URI(Uniform Resource Identifier)가 결정됩니다.  
   
 #### <a name="addressingversion"></a>AddressingVersion  
- 바인딩의 `AddressingVersion`은 `wsd:port`에 사용되는 주소 지정 버전에 매핑됩니다. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]는 SOAP 1.1 및 SOAP 1.2 주소와 WS-Addressing 08/2004 및 WS-Addressing 1.0 끝점 참조를 지원합니다.  
+ 바인딩의 `AddressingVersion`은 `wsd:port`에 사용되는 주소 지정 버전에 매핑됩니다. WCF 지원 SOAP 1.1 및 SOAP 1.2 주소와 Ws-addressing 08/2004 및 Ws-addressing 1.0 끝점 참조 합니다.  
   
 #### <a name="envelopeversion"></a>EnvelopeVersion  
- 바인딩의 `EnvelopeVersion`은 `wsdl:binding`에 사용되는 SOAP 버전에 매핑됩니다. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]는 SOAP 1.1 및 SOAP 1.2 바인딩을 지원합니다.  
+ 바인딩의 `EnvelopeVersion`은 `wsdl:binding`에 사용되는 SOAP 버전에 매핑됩니다. WCF는 SOAP 1.1 및 SOAP 1.2 바인딩을 지원합니다.  
   
 ### <a name="contracts"></a>계약  
  <xref:System.ServiceModel.Description.ContractDescription> 인스턴스에 대한 `ServiceEndpoint` 인스턴스가 `wsdl:portType`에 매핑됩니다. `ContractDescription` 인스턴스는 지정된 계약에 대한 모든 작업을 설명합니다.  
@@ -84,7 +70,7 @@ ms.lasthandoff: 03/26/2018
 |----------------|------------------|  
 |`Name`|`wsdl:portType` /@name 계약에 대 한 값입니다.|  
 |`Namespace`|`wsdl:portType` 정의에 대한 targetNamespace입니다.|  
-|`SessionMode`|`wsdl:portType` /@msc:usingSession 계약에 대 한 값입니다. 이 특성은 WSDL 1.1에 대한 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 확장입니다.|  
+|`SessionMode`|`wsdl:portType` /@msc:usingSession 계약에 대 한 값입니다. 이 특성은 WSDL 1.1에 대 한 WCF 확장 합니다.|  
 |`Operations`|계약에 대한 `wsdl:operation` 정의입니다.|  
   
 ### <a name="operations"></a>작업  
@@ -96,8 +82,8 @@ ms.lasthandoff: 03/26/2018
 |----------------|------------------|  
 |`Name`|`wsdl:portType` / `wsdl:operation` /@name 작업에 대 한 값입니다.|  
 |`ProtectionLevel`|이 작업의 `wsdl:binding/wsdl:operation` 메시지에 연결된 보안 정책의 보호 어설션입니다.|  
-|`IsInitiating`|`wsdl:portType` / `wsdl:operation` /@msc:isInitiating 작업에 대 한 값입니다. 이 특성은 WSDL 1.1에 대한 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 확장입니다.|  
-|`IsTerminating`|`wsdl:portType` / `wsdl:operation` /@msc:isTerminating 작업에 대 한 값입니다. 이 특성은 WSDL 1.1에 대한 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 확장입니다.|  
+|`IsInitiating`|`wsdl:portType` / `wsdl:operation` /@msc:isInitiating 작업에 대 한 값입니다. 이 특성은 WSDL 1.1에 대 한 WCF 확장 합니다.|  
+|`IsTerminating`|`wsdl:portType` / `wsdl:operation` /@msc:isTerminating 작업에 대 한 값입니다. 이 특성은 WSDL 1.1에 대 한 WCF 확장 합니다.|  
 |`Messages`|`wsdl:portType` / `wsdl:operation` / `wsdl:input` 및 `wsdl:portType` / `wsdl:operation` / `wsdl:output` 작업에 대 한 메시지입니다.|  
 |`Faults`|`wsdl:portType` / `wsdl:operation` / `wsdl:fault` 작업에 대 한 정의입니다.|  
 |`Behaviors`|`DataContractSerializerOperationBehavior` 및 `XmlSerializerOperationBehavior`는 작업 바인딩과 작업 메시지를 처리합니다.|  

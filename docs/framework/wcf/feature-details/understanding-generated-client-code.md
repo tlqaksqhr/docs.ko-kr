@@ -1,41 +1,27 @@
 ---
 title: 생성된 클라이언트 코드 이해
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: c3f6e4b0-1131-4c94-aa39-a197c5c2f2ca
-caps.latest.revision: 9
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 8cd3e7f5ac8f129e29ed080cbf510dfe106edfb7
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 8a28b52d786793308d8609704b564b75f23d95d8
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="understanding-generated-client-code"></a>생성된 클라이언트 코드 이해
 [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) 는 클라이언트 응용 프로그램을 빌드하는 데 사용할 클라이언트 응용 프로그램 구성 파일과 클라이언트 코드를 생성합니다. 이 항목에서는 표준 서비스 계약 시나리오를 위해 생성된 코드 예제를 간략히 살펴 봅니다. 생성된 된 코드를 사용 하 여 클라이언트 응용 프로그램을 작성 하는 방법에 대 한 자세한 내용은 참조 [WCF 클라이언트 개요](../../../../docs/framework/wcf/wcf-client-overview.md)합니다.  
   
 ## <a name="overview"></a>개요  
- Visual Studio를 사용 하 여 생성 하는 경우 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 프로젝트에 대 한 클라이언트 유형, 일반적으로 불필요 생성 된 클라이언트 코드를 검사 합니다. 동일한 서비스를 수행하는 개발 환경을 사용하지 않는 경우 Svcutil.exe 같은 도구를 사용하여 클라이언트 코드를 생성한 다음 해당 코드를 사용하여 클라이언트 응용 프로그램을 개발할 수 있습니다.  
+ Visual Studio를 사용 하 여 프로젝트에 대 한 Windows Communication Foundation (WCF) 클라이언트 형식을 생성 하는 경우에 일반적으로 생성 된 클라이언트 코드를 검사 하지 필요가. 동일한 서비스를 수행하는 개발 환경을 사용하지 않는 경우 Svcutil.exe 같은 도구를 사용하여 클라이언트 코드를 생성한 다음 해당 코드를 사용하여 클라이언트 응용 프로그램을 개발할 수 있습니다.  
   
  Svcutil.exe에는 생성된 형식 정보를 수정하는 많은 옵션이 있으므로 이 항목에서 모든 시나리오에 대해 설명하지는 않습니다. 그러나 다음 표준 작업에는 생성된 코드를 찾는 과정이 포함됩니다.  
   
 -   서비스 계약 인터페이스 식별  
   
--   [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 클라이언트 클래스 식별  
+-   WCF 클라이언트 클래스를 식별 합니다.  
   
 -   데이터 형식 식별  
   
@@ -52,14 +38,14 @@ ms.lasthandoff: 04/30/2018
   
  [!code-csharp[C_GeneratedCodeFiles#12](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_generatedcodefiles/cs/proxycode.cs#12)]  
   
- 생성된 서비스 계약 인터페이스를 <xref:System.ServiceModel.ChannelFactory?displayProperty=nameWithType> 클래스와 함께 사용하여 서비스 작업을 호출할 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 채널 개체를 만들 수 있습니다. 자세한 내용은 참조 [하는 방법: ChannelFactory를 사용 하 여](../../../../docs/framework/wcf/feature-details/how-to-use-the-channelfactory.md)합니다.  
+ 생성 된 서비스 계약 인터페이스와 함께 사용할 수 있습니다는 <xref:System.ServiceModel.ChannelFactory?displayProperty=nameWithType> 클래스는 서비스 작업을 호출 하는 데 사용할 WCF 채널 개체를 만듭니다. 자세한 내용은 참조 [하는 방법: ChannelFactory를 사용 하 여](../../../../docs/framework/wcf/feature-details/how-to-use-the-channelfactory.md)합니다.  
   
 ### <a name="finding-wcf-client-classes"></a>WCF 클라이언트 클래스 찾기  
- 사용할 서비스 계약을 구현하는 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 클라이언트 클래스를 찾으려면 형식 매개 변수가 이전에 찾았으며 해당 인터페이스를 확장하는 서비스 계약 인터페이스인 <xref:System.ServiceModel.ClientBase%601?displayProperty=nameWithType>의 확장을 검색합니다. 다음 코드 예제에서는 <xref:System.ServiceModel.ClientBase%601> 형식의 `ISampleService`클래스를 보여 줍니다.  
+ 사용 하려는 서비스 계약을 구현 하는 WCF 클라이언트 클래스를 찾으려면의 확장에 대 한 검색 <xref:System.ServiceModel.ClientBase%601?displayProperty=nameWithType>, 여기서 형식 매개 변수는 서비스 계약 인터페이스인 그 이전에 있고 해당 인터페이스를 확장 합니다. 다음 코드 예제에서는 <xref:System.ServiceModel.ClientBase%601> 형식의 `ISampleService`클래스를 보여 줍니다.  
   
  [!code-csharp[C_GeneratedCodeFiles#14](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_generatedcodefiles/cs/proxycode.cs#14)]  
   
- 새 인스턴스를 만들고 구현하는 메서드를 호출하여 이 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 클라이언트 클래스를 사용할 수 있습니다. 이러한 메서드는 상호 작용하도록 디자인 및 구성된 서비스 작업을 호출합니다. 자세한 내용은 참조 [WCF 클라이언트 개요](../../../../docs/framework/wcf/wcf-client-overview.md)합니다.  
+ 이 WCF 클라이언트 클래스의 새 인스턴스를 만들고 구현 하는 메서드를 호출 하 여 사용할 수 있습니다. 이러한 메서드는 상호 작용하도록 디자인 및 구성된 서비스 작업을 호출합니다. 자세한 내용은 참조 [WCF 클라이언트 개요](../../../../docs/framework/wcf/wcf-client-overview.md)합니다.  
   
 > [!NOTE]
 >  SvcUtil.exe는 WCF 클라이언트 클래스를 생성할 때 디버거가 WCF 클라이언트 클래스를 단계별로 실행하지 못하도록 하는 <xref:System.Diagnostics.DebuggerStepThroughAttribute> 를 클라이언트 클래스에 추가합니다.  

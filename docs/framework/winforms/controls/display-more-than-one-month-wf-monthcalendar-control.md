@@ -1,13 +1,6 @@
 ---
-title: "방법: Windows Forms MonthCalendar 컨트롤에서 여러 달 표시"
-ms.custom: 
+title: '방법: Windows Forms MonthCalendar 컨트롤에서 여러 달 표시'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -18,16 +11,11 @@ helpviewer_keywords:
 - calendars [Windows Forms], multiple months
 - MonthCalendar control [Windows Forms], formatting display
 ms.assetid: d197caa2-38a5-4cb4-acc3-562130c2ace3
-caps.latest.revision: "12"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 1c29ac094fb5149b4146701315f1458884a2701c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: a71f85af2d51faf37160aba7fa89a8421b4523d4
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-display-more-than-one-month-in-the-windows-forms-monthcalendar-control"></a>방법: Windows Forms MonthCalendar 컨트롤에서 여러 달 표시
 Windows Forms <xref:System.Windows.Forms.MonthCalendar> 컨트롤 12 개월까지 한 번에 표시할 수 있습니다. 기본적으로이 컨트롤은 한 달만 표시 되지만 몇 달 표시 되 고 컨트롤 내에서 정렬 되는 방식을 지정할 수 있습니다. 컨트롤의 크기 조정 달력 크기를 변경 하면 때문에 새 차원에 대 한 폼에 충분 한 공간이 해야 합니다.  

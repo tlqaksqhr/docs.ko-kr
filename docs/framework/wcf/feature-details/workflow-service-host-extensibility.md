@@ -1,24 +1,12 @@
 ---
-title: "워크플로 서비스 호스트 확장명"
-ms.custom: 
+title: 워크플로 서비스 호스트 확장명
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: c0e8f7bb-cb13-49ec-852f-b85d7c23972f
-caps.latest.revision: "14"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: caff90b66007310c7b3ad24f2f084cc2282a7021
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 3393843e6be75e122c3993b3ccfb7c56d63cebad
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="workflow-service-host-extensibility"></a>워크플로 서비스 호스트 확장명
 [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]에서는 워크플로 서비스를 호스트하는 <xref:System.ServiceModel.Activities.WorkflowServiceHost> 클래스를 제공합니다. 이 클래스는 관리되는 응용 프로그램의 워크플로 서비스나 Windows 서비스를 자체 호스트할 때 사용되며, IIS(인터넷 정보 서비스) 또는 WAS(Windows Process Activation Service)에서 워크플로 서비스를 호스트할 때도 사용됩니다. <xref:System.ServiceModel.Activities.WorkflowServiceHost> 클래스는 사용자 지정 확장을 추가하고, 유휴 동작을 변경하고, 서비스가 아닌 워크플로(메시징 작업을 사용하지 않는 워크플로)를 호스트할 수 있는 확장 지점을 제공합니다.  

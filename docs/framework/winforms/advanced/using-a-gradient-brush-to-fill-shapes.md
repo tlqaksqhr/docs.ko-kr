@@ -1,28 +1,16 @@
 ---
-title: "그라데이션 브러시를 사용하여 도형 채우기"
-ms.custom: 
+title: 그라데이션 브러시를 사용하여 도형 채우기
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - brushes [Windows Forms], gradient brushes
 - gradient brushes
 - examples [Windows Forms], gradient brushes
 ms.assetid: 2c6037b9-05bd-44c0-a22a-19584b722524
-caps.latest.revision: "11"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 6a84a68f9082d00559938c2710b6574690fa6ab4
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 857a9276a731ae5e69b3caa1a639d1315aba9901
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-a-gradient-brush-to-fill-shapes"></a>그라데이션 브러시를 사용하여 도형 채우기
 셰이프를 채우는 효과와 그라데이션 브러시를 사용할 수 있습니다. 예를 들어는 가로 그라데이션을 셰이프를 채우는 모양의 왼쪽된 가장자리에서 맨 오른쪽으로 이동 하면 점진적으로 변경 하는 색으로 사용할 수 있습니다. 검정 왼쪽된 가장자리에 사각형을 가정해 보세요 (0, 0, 0 빨강, 녹색 및 파랑 구성 요소에 의해 표현 됨)는 오른쪽 가장자리 빨강 (255, 0, 0)는 및입니다. 사각형이 256 픽셀 너비 경우 각된 픽셀의 빨간색 구성 요소는 왼쪽에 픽셀의 빨간색 구성 요소 보다 1 큽니다 됩니다. 행에서 가장 왼쪽에 있는 픽셀의 색 구성 요소 (0, 0, 0), 두 번째 픽셀은 (1, 0, 0), 세 번째 픽셀에는 (2, 0, 0)은, 및 기타 등등을 오른쪽에 있는 픽셀의 색 구성 요소 (255, 0, 0)에 도달할 때까지 합니다. 이러한 방식된으로 색 값 색 그라데이션의 구성 합니다.  

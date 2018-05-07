@@ -1,29 +1,15 @@
 ---
 title: 스트리밍 메시지 전송
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 72a47a51-e5e7-4b76-b24a-299d51e0ae5a
-caps.latest.revision: 13
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: ed2aa57e044910ab9fd9c60dfd47eb7aaa0ce75e
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 340c903e2cb34373514ea2f739cab57dc620df5d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="streaming-message-transfer"></a>스트리밍 메시지 전송
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 전송에서는 다음과 같은 두 가지 메시지 전송 모드를 지원합니다.  
+Windows Communication Foundation (WCF) 전송 메시지를 전송 하기 위한 두 가지 모드를 지원 합니다.  
   
 -   버퍼링 전송에서는 전송이 완료될 때까지 전체 메시지를 메모리 버퍼에 보관합니다. 버퍼링된 메시지는 수신기에서 읽기 전에 완전히 전달되어야 합니다.  
   
@@ -52,7 +38,7 @@ ms.lasthandoff: 04/30/2018
   
  스트리밍 전송을 통해 발생하는 작업에서 계약은 입력 또는 출력 매개 변수를 최대 하나만 가질 수 있습니다. 해당 매개 변수는 메시지의 전체 본문에 해당하며 <xref:System.ServiceModel.Channels.Message>, <xref:System.IO.Stream>의 파생 형식 또는 <xref:System.Xml.Serialization.IXmlSerializable> 구현이어야 합니다. 작업에 대한 반환 값을 지정하는 것은 출력 매개 변수를 지정하는 것과 같습니다.  
   
- 신뢰할 수 있는 메시징, 트랜잭션 및 SOAP 메시지 수준 보안과 같은 일부 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 기능은 버퍼링 메시지를 사용하여 전송합니다. 이러한 기능을 사용하면 스트리밍을 통해 얻는 성능 이점이 감소되거나 제거될 수 있습니다. 스트리밍 전송을 보안하려면 전송 수준 보안만 사용하거나 전송 수준 보안과 인증 전용 메시지 보안을 함께 사용합니다.  
+ 버퍼링 전송에 대 한 메시지 신뢰할 수 있는 메시징, 트랜잭션 및 SOAP 메시지 수준 보안과 같은 일부 WCF 기능을 사용 합니다. 이러한 기능을 사용하면 스트리밍을 통해 얻는 성능 이점이 감소되거나 제거될 수 있습니다. 스트리밍 전송을 보안하려면 전송 수준 보안만 사용하거나 전송 수준 보안과 인증 전용 메시지 보안을 함께 사용합니다.  
   
  SOAP 헤더는 전송 모드가 스트리밍으로 설정되어 있더라도 항상 버퍼링됩니다. 메시지 헤더는 `MaxBufferSize` 전송 할당량 크기를 초과할 수 없습니다. 이 설정에 대 한 자세한 내용은 참조 [전송 할당량](../../../../docs/framework/wcf/feature-details/transport-quotas.md)합니다.  
   

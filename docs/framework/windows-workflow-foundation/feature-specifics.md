@@ -1,29 +1,18 @@
 ---
-title: "Windows Workflow Foundation 기능 특성"
-ms.custom: 
+title: Windows Workflow Foundation 기능 특성
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: e84d12da-a055-45f6-b4d1-878d127b46b6
-caps.latest.revision: "6"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 6943a7eaeaecf8f11de7c10237979067c83c24d8
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: dc3ff5669d23e57685c89937f7c2171053f938ca
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="windows-workflow-foundation-feature-specifics"></a>Windows Workflow Foundation 기능 특성
 [!INCLUDE[netfx40_long](../../../includes/netfx40-long-md.md)]에서는 Windows Workflow Foundation에 많은 기능을 추가합니다. 이 문서에서는 여러 새로운 기능을 설명하고 이러한 기능이 유용할 수 있는 시나리오에 대한 세부 정보를 제공합니다.  
   
 ## <a name="messaging-activities"></a>메시징 활동  
- 메시징 활동 (<xref:System.ServiceModel.Activities.Receive>, <xref:System.ServiceModel.Activities.SendReply>, <xref:System.ServiceModel.Activities.Send>, <xref:System.ServiceModel.Activities.ReceiveReply>) 보내고 받는 데 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 워크플로와에서 메시지입니다.  <xref:System.ServiceModel.Activities.Receive>및 <xref:System.ServiceModel.Activities.SendReply> 작업 양식에 사용 되는 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 서비스 표준와 마찬가지로 WSDL을 통해 노출 되는 작업 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 웹 서비스입니다.  <xref:System.ServiceModel.Activities.Send>및 <xref:System.ServiceModel.Activities.ReceiveReply> WCF와 유사한 웹 서비스를 사용 하는 데 사용 됩니다 <xref:System.ServiceModel.ChannelFactory>; **서비스 참조 추가** 미리 구성 된 활동을 생성 하는 Workflow Foundation에 대 한 환경도 있습니다.  
+ 메시징 활동 (<xref:System.ServiceModel.Activities.Receive>, <xref:System.ServiceModel.Activities.SendReply>, <xref:System.ServiceModel.Activities.Send>, <xref:System.ServiceModel.Activities.ReceiveReply>) 보내고 받는 데 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 워크플로와에서 메시지입니다.  <xref:System.ServiceModel.Activities.Receive> 및 <xref:System.ServiceModel.Activities.SendReply> 활동은 표준와 마찬가지로 WSDL을 통해 노출 되는 Windows Communication Foundation (WCF) 서비스 작업을 형성 하는 데 사용 됩니다 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 웹 서비스입니다.  <xref:System.ServiceModel.Activities.Send> 및 <xref:System.ServiceModel.Activities.ReceiveReply> WCF와 유사한 웹 서비스를 사용 하는 데 사용 됩니다 <xref:System.ServiceModel.ChannelFactory>; **서비스 참조 추가** 미리 구성 된 활동을 생성 하는 Workflow Foundation에 대 한 환경도 있습니다.  
   
 ### <a name="getting-started-with-messaging-activities"></a>메시징 작업 시작  
   
@@ -305,7 +294,7 @@ ms.lasthandoff: 12/22/2017
   
 1.  설명서: [라우팅](../../../docs/framework/wcf/feature-details/routing.md)  
   
-2.  샘플: [라우팅 서비스 &#91; WCF 샘플 &#93;](../../../docs/framework/wcf/samples/routing-services.md)  
+2.  샘플: [라우팅 서비스 &#91;WCF 샘플&#93;](../../../docs/framework/wcf/samples/routing-services.md)  
   
 3.  블로그: [라우팅 규칙!](http://go.microsoft.com/fwlink/?LinkId=204956)  
   

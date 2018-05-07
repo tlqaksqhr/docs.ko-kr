@@ -1,28 +1,16 @@
 ---
-title: "GDI+ 관리 코드 정보"
-ms.custom: 
+title: GDI+ 관리 코드 정보
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - GDI+, about GDI+
 - GDI+
 - graphics [Windows Forms], GDI+
 ms.assetid: a98a76ab-e455-49c9-891c-0491ac932f2c
-caps.latest.revision: "21"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 817f90194d73bf6608cccde0ce3917717d0b4878
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 913654b98eb8bf72fe43b744886a28e0f675a5c4
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="about-gdi-managed-code"></a>GDI+ 관리 코드 정보
 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]는 2차원 벡터 그래픽, 이미징 및 입력 체계를 제공하는 Windows 운영 체제의 일부입니다. [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)](이전 버전의 Windows에 포함된 그래픽 장치 인터페이스)에서는 새로운 기능을 추가하고 기존 기능을 최적화하여 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]가 향상되었습니다.  

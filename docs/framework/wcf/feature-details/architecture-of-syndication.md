@@ -1,26 +1,12 @@
 ---
 title: 배포 아키텍처
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: ed4ca86e-e3d8-4acb-87aa-1921fbc353be
-caps.latest.revision: 25
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 2516a80f8d92b4e64372be140d2ee3d5db4c7b54
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: f0a6b288860c343157f31f74d5a461fad1784e0a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="architecture-of-syndication"></a>배포 아키텍처
 배포 API는 네트워크에서 배포된 콘텐츠를 다양한 형식으로 작성할 수 있는 형식 중립적 프로그래밍 모델을 제공하기 위해 디자인되었습니다. 추상 데이터 모델은 다음 클래스로 구성됩니다.  
@@ -37,16 +23,16 @@ ms.lasthandoff: 04/30/2018
   
  이러한 클래스는 이름이 다른 경우도 일부 있지만 Atom 1.0 사양에 정의된 구문에 밀접하게 매핑됩니다.  
   
- [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]의 경우 배포 피드는 다른 형식의 서비스 작업으로 모델링되며, 여기서 반환 형식은 <xref:System.ServiceModel.Syndication.SyndicationFeedFormatter>의 파생 클래스 중 하나입니다. 피드의 검색은 요청-회신 메시지 교환으로 모델링됩니다. 클라이언트는 서비스에 대한 요청 및 서비스 응답을 보냅니다. 요청 메시지는 원시 HTTP와 같은 인프라 프로토콜을 통해 설정되며, 응답 메시지에는 일반적으로 인식되는 배포 형식(RSS 2.0 또는 Atom 1.0)으로 구성되는 페이로드가 포함됩니다. 이러한 메시지 교환을 구현하는 서비스를 배포 서비스라고 합니다.  
+ Windows Communication Foundation (WCF), 배포 피드는 다른 형식의 반환 형식 보다의 파생된 클래스 중 하나는 서비스 작업으로 모델링 되며 <xref:System.ServiceModel.Syndication.SyndicationFeedFormatter>합니다. 피드의 검색은 요청-회신 메시지 교환으로 모델링됩니다. 클라이언트는 서비스에 대한 요청 및 서비스 응답을 보냅니다. 요청 메시지는 원시 HTTP와 같은 인프라 프로토콜을 통해 설정되며, 응답 메시지에는 일반적으로 인식되는 배포 형식(RSS 2.0 또는 Atom 1.0)으로 구성되는 페이로드가 포함됩니다. 이러한 메시지 교환을 구현하는 서비스를 배포 서비스라고 합니다.  
   
  배포 서비스 계약은 <xref:System.ServiceModel.Syndication.SyndicationFeedFormatter> 클래스의 인스턴스를 반환하는 작업 집합으로 구성됩니다. 다음 예제에서는 배포 서비스에 대한 인터페이스 선언을 보여 줍니다.  
   
  [!code-csharp[S_UE_SyndicationBoth#0](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_ue_syndicationboth/cs/service.cs#0)]  
   
- 배포 지원은 피드를 서비스로 사용할 수 있도록 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]와 함께 사용되는 <xref:System.ServiceModel.WebHttpBinding> 바인딩을 정의하는 <xref:System.ServiceModel.Description.WebHttpBehavior> REST 프로그래밍 모델을 기반으로 빌드됩니다. 에 대 한 자세한 내용은 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] REST 프로그래밍 모델 참조 [WCF 웹 HTTP 프로그래밍 모델 개요](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model-overview.md)합니다.  
+ 배포 지원은 기반으로 WCF REST 프로그래밍 모델을 정의 하는 <xref:System.ServiceModel.WebHttpBinding> 와 함께에서 사용 되는 바인딩 <xref:System.ServiceModel.Description.WebHttpBehavior> 피드를 서비스로 사용할 수 있도록 합니다. WCF REST 프로그래밍 모델에 대 한 자세한 내용은 참조 [WCF 웹 HTTP 프로그래밍 모델 개요](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model-overview.md)합니다.  
   
 > [!NOTE]
->  Atom 1.0 사양에 따라 날짜 구문에 소수로 표시된 초를 지정할 수 있습니다. serialize 및 deserialize할 때 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 구현은 소수로 표시된 초를 무시합니다.  
+>  Atom 1.0 사양에 따라 날짜 구문에 소수로 표시된 초를 지정할 수 있습니다. 직렬화 및 역직렬화 하는 경우 WCF 구현을 소수 자릿수 초를 무시 합니다.  
   
 ## <a name="object-model"></a>개체 모델  
  배포의 개체 모델은 다음 표의 클래스 그룹으로 구성됩니다.  
@@ -88,7 +74,7 @@ ms.lasthandoff: 04/30/2018
   
 ## <a name="extensibility"></a>확장성  
   
--   배포 프로토콜의 주요 기능은 확장성입니다. Atom 1.0 및 RSS 2.0에서는 사양에 정의되지 않은 배포 피드에 특성 및 요소를 추가할 수 있습니다. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 배포 프로그래밍 모델에서는 사용자 지정 특성 및 확장에 사용할 수 있는 새 클래스 파생 및 자유로운 형식의 액세스라는 두 가지 방식을 제공합니다. 자세한 내용은 참조 [배포 확장성](../../../../docs/framework/wcf/feature-details/syndication-extensibility.md)합니다.  
+-   배포 프로토콜의 주요 기능은 확장성입니다. Atom 1.0 및 RSS 2.0에서는 사양에 정의되지 않은 배포 피드에 특성 및 요소를 추가할 수 있습니다. WCF 배포 프로그래밍 모델에서는 두 가지 사용자 지정 특성 및 확장:는 새 사용할 클래스 파생 및 자유로운 형식의 액세스 합니다. 자세한 내용은 참조 [배포 확장성](../../../../docs/framework/wcf/feature-details/syndication-extensibility.md)합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [WCF 배포 개요](../../../../docs/framework/wcf/feature-details/wcf-syndication-overview.md)  

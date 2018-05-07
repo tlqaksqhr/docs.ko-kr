@@ -1,24 +1,12 @@
 ---
-title: "신뢰할 수 있는 세션을 위한 최선의 방법"
-ms.custom: 
+title: 신뢰할 수 있는 세션을 위한 최선의 방법
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: b94f6e01-8070-40b6-aac7-a2cb7b4cb4f2
-caps.latest.revision: "6"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: c022db62103826aa89e9035fd36c050d1f7c0f84
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 1d9671e7e3124d535b66de8cd8468f76dcb32b10
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="best-practices-for-reliable-sessions"></a>신뢰할 수 있는 세션을 위한 최선의 방법
 
@@ -26,7 +14,7 @@ ms.lasthandoff: 12/22/2017
 
 ## <a name="setting-maxtransferwindowsize"></a>MaxTransferWindowSize 설정
 
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]의 신뢰할 수 있는 세션은 전송 창을 사용하여 클라이언트 및 서비스에서 메시지를 보관합니다. 구성 가능한 속성 <xref:System.ServiceModel.Channels.ReliableSessionBindingElement.MaxTransferWindowSize%2A>는 전송 창이 보관할 수 있는 메시지 수를 나타냅니다.
+신뢰할 수 있는 세션의 Windows Communication Foundation (WCF)은 전송 창을 사용 하 여 클라이언트와 서비스에서 메시지를 보관 합니다. 구성 가능한 속성 <xref:System.ServiceModel.Channels.ReliableSessionBindingElement.MaxTransferWindowSize%2A>는 전송 창이 보관할 수 있는 메시지 수를 나타냅니다.
 
 발신자의 경우 전송 창이 승인을; 기다리는 동안 보관할 수 있는 메시지 수를 나타냅니다. 수신기에서 서비스에 대해 버퍼링 할 메시지 수 나타냅니다.
 
@@ -56,7 +44,7 @@ ms.lasthandoff: 12/22/2017
 
 *흐름 제어* 는 발신자와 수신자에 맞춰 서로, 메시지를 사용 하 고 작업을 수행 하는, 즉 보장 하는 메커니즘은 생성 하는 가능한 한 빨리 합니다. 클라이언트 및 서비스의 전송 창 크기는 발신자와 수신자가 적절한 동기화 창 내에 있도록 합니다.
 
-속성을 설정 하는 것이 좋습니다 <xref:System.ServiceModel.Channels.ReliableSessionBindingElement.FlowControlEnabled%2A> 를 `true` 간의 신뢰할 수 있는 세션을 사용 중인 경우는 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 클라이언트와 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 서비스입니다.
+속성을 설정 하는 것이 좋습니다 <xref:System.ServiceModel.Channels.ReliableSessionBindingElement.FlowControlEnabled%2A> 를 `true` WCF 클라이언트와 WCF 서비스 간에 신뢰할 수 있는 세션을 사용 중인 경우.
 
 ## <a name="setting-maxpendingchannels"></a>MaxPendingChannels 설정
 

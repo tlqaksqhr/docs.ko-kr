@@ -1,36 +1,22 @@
 ---
-title: "방법: 사용자 지정 인증서 유효성 검사기를 사용하는 서비스 만들기"
-ms.custom: 
+title: '방법: 사용자 지정 인증서 유효성 검사기를 사용하는 서비스 만들기'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - WCF, authentication
 ms.assetid: bb0190ff-0738-4e54-8d22-c97d343708bf
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: e0a48801b1d4674b81a0e4b54a80b69d026ce2af
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: d4a1532ed91b17cf5bed909026ace695aeba8cd9
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-a-service-that-employs-a-custom-certificate-validator"></a>방법: 사용자 지정 인증서 유효성 검사기를 사용하는 서비스 만들기
 이 항목에서는 사용자 지정 인증서 유효성 검사기를 구현하는 방법과 클라이언트 또는 서비스 자격 증명을 구성하여 기본 인증서 유효성 검사 논리를 사용자 지정 인증서 유효성 검사기로 바꾸는 방법을 보여 줍니다.  
   
- X.509 인증서를 사용하여 클라이언트 또는 서비스를 인증하는 경우 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]에서는 기본적으로 Windows 인증서 저장소와 Crypto API를 사용하여 인증서의 유효성을 검사하고 신뢰할 수 있는지 확인합니다. 기본 제공 인증서 유효성 검사 기능으로 충분하지 않은 경우에는 변경해야 합니다. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서는 사용자가 사용자 지정 인증서 유효성 검사기를 추가할 수 있도록 하여 쉽게 유효성 검사 논리를 변경하는 방법을 제공합니다. 사용자 지정 인증서 유효성 검사기를 지정하면 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서 기본 제공 인증서 유효성 검사 논리를 사용하지 않고 대신 사용자 지정 유효성 검사기를 사용합니다.  
+ X.509 인증서는 클라이언트 또는 서비스 인증을 사용 하는 경우 기본적으로 Windows Communication Foundation (WCF) 사용 하 여 Windows 인증서 저장소와 Crypto API 인증서의 유효성을 검사 하 고를 신뢰할 수 있는지 확인 합니다. 기본 제공 인증서 유효성 검사 기능으로 충분하지 않은 경우에는 변경해야 합니다. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서는 사용자가 사용자 지정 인증서 유효성 검사기를 추가할 수 있도록 하여 쉽게 유효성 검사 논리를 변경하는 방법을 제공합니다. 사용자 지정 인증서 유효성 검사기를 지정하면 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서 기본 제공 인증서 유효성 검사 논리를 사용하지 않고 대신 사용자 지정 유효성 검사기를 사용합니다.  
   
 ## <a name="procedures"></a>절차  
   
