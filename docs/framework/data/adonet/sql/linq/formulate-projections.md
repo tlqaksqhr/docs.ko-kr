@@ -1,29 +1,15 @@
 ---
 title: 프로젝션 작성
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-ado
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 745742df-0eda-479b-83f8-29bd8a80db96
-caps.latest.revision: 2
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload:
-- dotnet
-ms.openlocfilehash: d8215a016face76b8a258d694a36657be327b5e0
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: f554007bd8c9e69f6a8dc475c122d3fbdfc43a4f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="formulate-projections"></a>프로젝션 작성
 다음 예제에 나온 방법을 `select` C# 문 및 `Select` 문이 Visual Basic에서는 쿼리 프로젝션 구성 하는 다른 기능도와 결합할 수 있습니다.  

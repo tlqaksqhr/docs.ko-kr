@@ -1,27 +1,15 @@
 ---
-title: "사용자 지정 메시지 포맷터"
-ms.custom: 
+title: 사용자 지정 메시지 포맷터
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: c07435f3-5214-4791-8961-2c2b61306d71
-caps.latest.revision: "4"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ea32656db90907ae523502fc1796466442ef4a4d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 301c508a0c639985e226dc55f62431ad8bb9c12b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="custom-message-formatters"></a>사용자 지정 메시지 포맷터
-메시지 내용은 응용 프로그램에 편리한 형식이 아닌 XML 형식인 경우가 많습니다. 응용 프로그램은 속성을 가져오고 설정하여 개체를 조작합니다. [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]사용 하 여는 *데이터 계약* 변환 하는 <xref:System.ServiceModel.Channels.Message> 응용 프로그램에서 쉽게 처리할 수 있는 개체로 개체입니다. 이러한 프로세스를 serialization 및 deserialization이라고 합니다. 전송 계층에서 메시지 통신 형식에 대해 수행하는 관련 없는 프로세스인 serialization 및 deserialization을 설명하는 데에도 동일한 용어가 사용됩니다.  
+메시지 내용은 응용 프로그램에 편리한 형식이 아닌 XML 형식인 경우가 많습니다. 응용 프로그램은 속성을 가져오고 설정하여 개체를 조작합니다. Windows Communication Foundation (WCF) 사용 하 여는 *데이터 계약* 변환 하는 <xref:System.ServiceModel.Channels.Message> 응용 프로그램에서 쉽게 처리할 수 있는 개체로 개체입니다. 이러한 프로세스를 serialization 및 deserialization이라고 합니다. 전송 계층에서 메시지 통신 형식에 대해 수행하는 관련 없는 프로세스인 serialization 및 deserialization을 설명하는 데에도 동일한 용어가 사용됩니다.  
   
  데이터 계약을 통해 수행할 수 없는 메시지 및 개체 간의 특별한 변환을 구현해야 하는 경우 사용자 지정 메시지 포맷터를 사용할 수 있습니다. 이렇게 하려면 클라이언트 또는 서비스에서 특정 계약 작업의 실행 동작을 수정하거나 확장합니다.  
   

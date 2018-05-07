@@ -1,29 +1,17 @@
 ---
-title: "방법: ASP.NET 웹 서비스 코드를 Windows Communication Foundation으로 마이그레이션"
-ms.custom: 
+title: '방법: ASP.NET 웹 서비스 코드를 Windows Communication Foundation으로 마이그레이션'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: e528c64f-c027-4f2e-ada6-d8f3994cf8d6
-caps.latest.revision: "8"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: e56d2481785a9a8486174e611001b9d800c7c869
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 90a6109a56299ec1bcaff4a35141abc194484772
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-migrate-aspnet-web-service-code-to-the-windows-communication-foundation"></a>방법: ASP.NET 웹 서비스 코드를 Windows Communication Foundation으로 마이그레이션
-다음 절차에서는 ASP.NET 웹 서비스를 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]로 마이그레이션하는 방법에 대해 설명합니다.  
+다음 절차는 Windows Communication Foundation (WCF)에 ASP.NET 웹 서비스를 마이그레이션하는 방법을 설명 합니다.  
   
-## <a name="procedure"></a>절차  
+## <a name="procedure"></a>프로시저  
   
 #### <a name="to-migrate-aspnet-web-service-code-to-wcf"></a>ASP.NET 웹 서비스 코드를 WCF로 마이그레이션하려면  
   
@@ -85,9 +73,9 @@ ms.lasthandoff: 12/22/2017
   
 7.  변경 내용을 테스트합니다.  
   
-8.  [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 어셈블리 System.ServiceModel 및 System.Runtime.Serialization에 대한 참조를 ASP.NET 웹 서비스 프로젝트에 추가합니다.  
+8.  ASP.NET 웹 서비스 프로젝트에 WCF 어셈블리 System.ServiceModel 및 System.Runtime.Serialization에 대 한 참조를 추가 합니다.  
   
-9. 실행 [ServiceModel Metadata 유틸리티 도구 (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) 생성 하는 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] WSDL에서 클라이언트 클래스입니다. 생성된 클래스 모듈을 솔루션에 추가합니다.  
+9. 실행 [ServiceModel Metadata 유틸리티 도구 (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) 를 WSDL에서 WCF 클라이언트 클래스를 생성 합니다. 생성된 클래스 모듈을 솔루션에 추가합니다.  
   
 10. 이전 단계에서 생성된 클래스 모듈에는 인터페이스 정의가 들어 있습니다.  
   
@@ -145,7 +133,7 @@ ms.lasthandoff: 12/22/2017
     }  
     ```  
   
-13. ASP.NET 웹 서비스가 다음 중 하나를 사용하는 경우 현재 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 서비스 형식인 클래스를 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] ASP.NET 호환 모드가 필요하도록 구성합니다.  
+13. ASP.NET 웹 서비스는 다음 중 하나를 사용 하는 경우 WCF ASP.NET 호환 모드를 요구 하는 WCF 서비스 유형은 이제 되는 클래스를 구성 합니다.  
   
     -   <xref:System.Web.HttpContext> 클래스  
   
@@ -167,14 +155,14 @@ ms.lasthandoff: 12/22/2017
   
 14. 원래 .asmx 파일의 이름을 .asmx.old로 바꿉니다.  
   
-15. 서비스의 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 서비스 파일을 만들고 확장명 .asmx를 지정하여 IIS의 응용 프로그램 루트에 저장합니다.  
+15. 서비스에 대 한 WCF 서비스 파일 만들기, 확장명,.asmx 및 IIS에서 응용 프로그램 루트에 저장 합니다.  
   
     ```xml  
     <%@Service Class="MyOrganization.Adder" %>  
     <%@Assembly Name="MyServiceAssembly" %>   
     ```  
   
-16. 서비스의 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 구성을 해당 Web.config 파일에 추가합니다. 사용 하도록 서비스 구성의 [ \<basicHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md), 위의 단계에서 만든.asmx 확장명이 서비스 파일을 사용 하 고 자체에 대 한 WSDL을 생성 하지 않도록 있지만 2 단계에서 WSDL을 사용 하도록 합니다. 또한 필요한 경우 ASP.NET 호환 모드를 사용하도록 구성합니다.  
+16. 서비스에 대 한 WCF 구성을 해당 Web.config 파일에 추가 합니다. 사용 하도록 서비스 구성의 [ \<basicHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md), 위의 단계에서 만든.asmx 확장명이 서비스 파일을 사용 하 고 자체에 대 한 WSDL을 생성 하지 않도록 있지만 2 단계에서 WSDL을 사용 하도록 합니다. 또한 필요한 경우 ASP.NET 호환 모드를 사용하도록 구성합니다.  
   
     ```xml  
     <?xml version="1.0" encoding="utf-8" ?>  

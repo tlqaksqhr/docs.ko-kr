@@ -1,22 +1,12 @@
 ---
-title: "방법: 요소 이름 (LINQ to XML)에 대 한 필터 (Visual Basic)"
-ms.custom: 
+title: '방법: 요소 이름 (LINQ to XML)에 대 한 필터 (Visual Basic)'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: b1437b4a-48aa-4546-834a-d6d3ab015fe1
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 1dd63c2de233c2b33ce16de6649a5ffecdc7ade7
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 3c7ee9ceb2accef34e852396137107fb1f36350c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-filter-on-element-names-linq-to-xml-visual-basic"></a>방법: 요소 이름 (LINQ to XML)에 대 한 필터 (Visual Basic)
 <xref:System.Collections.Generic.IEnumerable%601>의 <xref:System.Xml.Linq.XElement>을 반환하는 메서드 중 하나를 호출하면 요소 이름을 기준으로 필터링할 수 있습니다.  

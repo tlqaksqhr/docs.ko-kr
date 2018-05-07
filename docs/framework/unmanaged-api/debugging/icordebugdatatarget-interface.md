@@ -1,14 +1,6 @@
 ---
-title: "ICorDebugDataTarget 인터페이스"
-ms.custom: 
+title: ICorDebugDataTarget 인터페이스
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICorDebugDataTarget
 api_location:
@@ -22,17 +14,13 @@ helpviewer_keywords:
 ms.assetid: df5f05be-bed7-4f3c-bc89-dbb435d79a0b
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: b5d3a3b190cfa606bd4239e24c5defdaff9f4257
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 972c650e0fb3b42e943838b72faf2658f65543ae
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="icordebugdatatarget-interface"></a>ICorDebugDataTarget 인터페이스
 특정 대상 프로세스에 대한 액세스를 제공하는 콜백 인터페이스를 제공합니다.  
@@ -46,7 +34,7 @@ ms.lasthandoff: 12/22/2017
 |[GetThreadContext 메서드](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget-getthreadcontext-method.md)|지정된 된 스레드에 대 한 현재 스레드 컨텍스트를 요청합니다.|  
   
 ## <a name="remarks"></a>설명  
- `ICorDebugDataTarget`및 해당 메서드는 다음과 같은 특징이 있습니다.  
+ `ICorDebugDataTarget` 및 해당 메서드는 다음과 같은 특징이 있습니다.  
   
 -   디버깅 서비스의 메모리와 대상 프로세스의 다른 데이터를 액세스 하려면이 인터페이스에서 메서드를 호출 합니다.  
   
@@ -68,7 +56,7 @@ ms.lasthandoff: 12/22/2017
   
  **라이브러리:** CorGuids.lib  
   
- **.NET framework 버전:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET framework 버전:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>참고 항목  
  [디버깅 인터페이스](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)  

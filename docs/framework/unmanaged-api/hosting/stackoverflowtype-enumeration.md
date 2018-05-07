@@ -1,14 +1,6 @@
 ---
-title: "StackOverflowType 열거형"
-ms.custom: 
+title: StackOverflowType 열거형
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - StackOverflowType
 api_location:
@@ -22,17 +14,13 @@ helpviewer_keywords:
 ms.assetid: dab648ad-972b-479c-b129-b4c1dcbd932e
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: a04db61a16aeae24476fb0b191a3d2dc89743dee
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 9e888b2359336c68ea6fdf52f798145fda12002e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="stackoverflowtype-enumeration"></a>StackOverflowType 열거형
 스택 오버플로 이벤트의 근본 원인을 나타내는 값을 포함 합니다.  
@@ -65,7 +53,7 @@ typedef enum {
   
  **라이브러리:** MSCorEE.dll  
   
- **.NET framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>참고 항목  
  [호스팅 열거형](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)

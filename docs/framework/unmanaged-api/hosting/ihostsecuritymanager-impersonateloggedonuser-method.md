@@ -1,14 +1,6 @@
 ---
-title: "IHostSecurityManager::ImpersonateLoggedOnUser 메서드"
-ms.custom: 
+title: IHostSecurityManager::ImpersonateLoggedOnUser 메서드
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - IHostSecurityManager.ImpersonateLoggedOnUser
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: acc49ba0-f1d9-45ad-871f-9d053a89dcbe
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: bf01ca07544fcce59eef81707bb1ff2d1f375feb
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: dc57c9465bfafde17156eeec65e52d65c8af9038
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ihostsecuritymanagerimpersonateloggedonuser-method"></a>IHostSecurityManager::ImpersonateLoggedOnUser 메서드
 요청이 현재 사용자 id의 자격 증명을 사용 하 여 코드를 실행 하는 합니다.  
@@ -54,7 +42,7 @@ HRESULT ImpersonateLoggedOnUser (
   
 |HRESULT|설명|  
 |-------------|-----------------|  
-|S_OK|`ImpersonateLoggedOnUser`성공적으로 반환 합니다.|  
+|S_OK|`ImpersonateLoggedOnUser` 성공적으로 반환 합니다.|  
 |HOST_E_CLRNOTAVAILABLE|공용 언어 런타임 (CLR) 프로세스에 로드 되지 않았습니다 또는 CLR 중인 상태를 관리 코드를 실행 하거나 호출을 처리할 수 없습니다.|  
 |HOST_E_TIMEOUT|호출 시간이 초과 되었습니다.|  
 |HOST_E_NOT_OWNER|호출자에 게 잠금을 소유 하지 않습니다.|  
@@ -73,7 +61,7 @@ HRESULT ImpersonateLoggedOnUser (
   
  **라이브러리:** MSCorEE.dll에 리소스로 포함  
   
- **.NET framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>참고 항목  
  [IHostSecurityContext 인터페이스](../../../../docs/framework/unmanaged-api/hosting/ihostsecuritycontext-interface.md)  

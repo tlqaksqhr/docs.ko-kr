@@ -1,14 +1,6 @@
 ---
-title: "_EFN_GetManagedObjectName 함수"
-ms.custom: 
+title: _EFN_GetManagedObjectName 함수
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - _EFN_GetManagedObjectName
 api_location:
@@ -22,17 +14,13 @@ helpviewer_keywords:
 ms.assetid: 6e7c6bee-7ced-495f-bf6c-2a5f0c716f7e
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: c29aa82143c34a229cee0a5b000657c9add22bd4
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 9f13fad537a6847ba6e19c939e72df86036e28ff
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="efngetmanagedobjectname-function"></a>_EFN_GetManagedObjectName 함수
 제공된 된 관리 되는 개체 포인터를 사용 하는 형식의 이름을 가져옵니다.  
@@ -69,7 +57,7 @@ HRESULT _EFN_GetManagedObjectName(
   
  **헤더:** SOS_Stacktrace.h  
   
- **.NET framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>참고 항목  
  [디버깅 전역 정적 함수](../../../../docs/framework/unmanaged-api/debugging/debugging-global-static-functions.md)

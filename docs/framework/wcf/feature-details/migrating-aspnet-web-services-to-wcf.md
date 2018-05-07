@@ -1,50 +1,38 @@
 ---
-title: "ASP.NET 웹 서비스를 WCF로 마이그레이션"
-ms.custom: 
+title: ASP.NET 웹 서비스를 WCF로 마이그레이션
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 1adbb931-f0b1-47f3-9caf-169e4edc9907
-caps.latest.revision: "9"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: f90f7dd508e2ff4058b787fc29d152abc18f24fd
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 7d43c66952d17a91e38ae1b086478b9416321b8a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="migrating-aspnet-web-services-to-wcf"></a>ASP.NET 웹 서비스를 WCF로 마이그레이션
-ASP.NET은 .NET Framework 클래스 라이브러리 및 웹 서비스 빌드를 위한 도구뿐 아니라 인터넷 정보 서비스(IIS) 내 호스팅 서비스에 대한 기능도 제공합니다. [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]은 .NET Framework 클래스 라이브러리, 도구 및 호스팅 기능을 제공하여 소프트웨어 엔터티가 웹 서비스에서 사용하는 프로토콜을 포함하여 모든 프로토콜을 사용하여 통신할 수 있도록 합니다.  ASP.NET 웹 서비스를 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]로 마이그레이션하면 응용 프로그램에서 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]만의 새로운 기능 및 향상된 기능을 활용할 수 있습니다.  
+ASP.NET은 .NET Framework 클래스 라이브러리 및 웹 서비스 빌드를 위한 도구뿐 아니라 인터넷 정보 서비스(IIS) 내 호스팅 서비스에 대한 기능도 제공합니다. Windows Communication Foundation (WCF)는.NET Framework 클래스 라이브러리, 도구 및 웹 서비스에서 사용 된 프로토콜을 사용 하 여 통신 하도록 소프트웨어 엔터티를 사용 하도록 설정 하기 위한 호스팅 기능을 제공 합니다.  WCF로 마이그레이션 ASP.NET 웹 서비스에는 새로운 기능 및 WCF에 고유한 향상 된 기능을 활용 하도록 응용을 프로그램 수 있습니다.  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에는 ASP.NET 웹 서비스와 관련된 몇 가지 중요한 이점이 있습니다. ASP.NET 웹 서비스 도구는 웹 서비스를 빌드하는 데에만 사용할 수 있는 반면, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서는 소프트웨어 엔터티 간 통신을 수행해야 할 경우 사용할 수 있는 도구를 제공합니다. 따라서 여러 소프트웨어 통신 시나리오를 적용하는 데 개발자가 알아야 하는 기술의 수가 적어지기 때문에 결과적으로는 소프트웨어 개발 프로젝트를 완료하는 데 필요한 시간뿐 아니라 소프트웨어 개발 리소스 비용을 줄일 수 있습니다.  
+ WCF에 ASP.NET 웹 서비스를 기준으로 하는 몇 가지 중요 한 이점이 있습니다. 웹 서비스를 구축에 대해서만 ASP.NET 웹 서비스 도구 이지만, WCF 소프트웨어 엔터티 수 있는 다른 노드와 통신할 때 사용할 수 있는 도구를 제공 합니다. 따라서 여러 소프트웨어 통신 시나리오를 적용하는 데 개발자가 알아야 하는 기술의 수가 적어지기 때문에 결과적으로는 소프트웨어 개발 프로젝트를 완료하는 데 필요한 시간뿐 아니라 소프트웨어 개발 리소스 비용을 줄일 수 있습니다.  
   
- 웹 서비스 개발 프로젝트의 경우에도 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서는 ASP.NET 웹 서비스보다 더 많은 웹 서비스 프로토콜을 지원합니다. 이러한 추가 프로토콜은 무엇보다도 신뢰할 수 있는 세션 및 트랜잭션이 사용되는 더욱 정교한 솔루션을 제공합니다.  
+ 웹 서비스 개발 프로젝트에 대해서도 WCF ASP.NET 웹 서비스 지원 보다 더 많은 웹 서비스 프로토콜을 지원합니다. 이러한 추가 프로토콜은 무엇보다도 신뢰할 수 있는 세션 및 트랜잭션이 사용되는 더욱 정교한 솔루션을 제공합니다.  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서는 ASP.NET 웹 서비스보다 더 많은 메시지 전송 프로토콜을 지원합니다. ASP.NET 웹 서비스는 HTTP(Hypertext Transfer Protocol)를 사용하여 메시지 보내기만 지원합니다. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]는 HTTP뿐 아니라 TCP(Transmission Control Protocol), 명명된 파이프 및 MSMQ(Microsoft Message Queuing)를 사용하여 메시지를 보낼 수 있습니다. 더 중요한 것은 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]은 추가 전송 프로토콜을 지원할 수 있도록 확장할 수 있다는 점입니다. 따라서 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]로 개발된 소프트웨어는 여러 다른 소프트웨어와 함께 사용할 수 있으므로 잠재적 투자 수익을 높일 수 있습니다.  
+ WCF는 ASP.NET 웹 서비스 보다 메시지 전송에 대 한 프로토콜을 지원 합니다. ASP.NET 웹 서비스는 HTTP(Hypertext Transfer Protocol)를 사용하여 메시지 보내기만 지원합니다. WCF는 전송 TCP (Control Protocol), 명명 된 파이프, Microsoft 메시지 큐 (MSMQ) 뿐 아니라 HTTP를 사용 하 여 메시지 보내기를 지원 합니다. 더 중요 한 WCF 추가 전송 프로토콜을 지원 하도록 확장할 수 있습니다. 따라서 WCF를 사용 하 여 개발 된 소프트웨어가 다른 소프트웨어와 있으므로 잠재적 투자 수익률 보다 광범위 한 작업을 수 있습니다.  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서는 ASP.NET 웹 서비스보다 더 다양한 응용 프로그램 배포 및 관리 기능을 제공합니다. ASP.NET에도 있는 구성 시스템 이외에 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서는 구성 편집기, 여러 매개자를 통해 발신자에서 수신자로의 동작 추적과 그 반대의 동작 추적, 추적 뷰어, 메시지 로깅, 다양한 성능 카운터 및 WMI(Windows Management Instrumentation) 지원 등을 제공합니다.  
+ WCF 배포 하기 위한 많은 다양 한 기능을 제공 하 고 제공 ASP.NET 웹 서비스 보다 응용 프로그램을 관리 합니다. WCF 구성 시스템을 제공 하는 ASP.NET, 외에도 구성 편집기를 제공 수신기 및 매개자, 추적 뷰어, 메시지 로깅, vast 수의 성능 카운터의 수에 관계 없이 다시 보낸 사람 으로부터 동작 추적 및 Windows Management Instrumentation을 지원 합니다.  
   
- ASP.NET 웹 서비스와 비교하여 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]의 이러한 이점을 고려한다면 ASP.NET 웹 서비스를 현재 사용하고 있거나 사용 계획 중인 경우 다음과 같은 옵션이 있습니다.  
+ 를 사용 하는 몇 가지 옵션이 ASP.NET 웹 서비스 사용을 고려 하는 경우 이러한 잠재적 이점을의 ASP.NET 웹 기준으로 WCF 서비스를 가정 합니다.  
   
--   [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서 제공하는 이점을 고려하지 않고 ASP.NET 웹 서비스를 계속 사용합니다.  
+-   ASP.NET 웹 서비스를 사용 하는 WCF에서 제공 하는 이점을 계속 있습니다.  
   
--   나중에 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]를 채택해 볼 것을 고려하고 ASP.NET 웹 서비스를 계속 사용합니다. 이 단원의 항목에서는 새로운 ASP.NET 웹 서비스 응용 프로그램을 나중에 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 응용 프로그램과 함께 사용할 가능성을 최대화하는 방법에 대해 설명합니다. 또한 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]로 손쉽게 마이그레이션할 수 있도록 새로운 ASP.NET 웹 서비스를 빌드하는 방법에 대해서도 설명합니다. 그러나 서비스 보안이 중요하거나, 신뢰성 또는 트랜잭션 보증이 필요하거나, 사용자 지정 관리 기능을 생성해야 하는 경우 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]를 채택하는 것이 더 좋습니다. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]가 바로 이러한 시나리오에 꼭 맞게 디자인되었기 때문입니다.  
+-   WCF에서 몇 가지 미래 시간을 채택 하기 위해 ASP.NET 웹 서비스를 계속 사용 합니다. 이 섹션의 항목에는 향후 WCF 응용 프로그램 함께 새로운 ASP.NET 웹 서비스 응용 프로그램을 사용할 수에 대 한 가능성을 최대화 하는 방법을 설명 합니다. 이 섹션의 항목에는 또한 새로운 ASP.NET 웹 손쉽게 WCF로 마이그레이션하려는 서비스를 빌드하는 방법을 설명 합니다. 그러나 서비스 보안이 중요 하거나 신뢰성 또는 트랜잭션 보증이 필요 하거나 사용자 지정 하는 경우 관리 기능을 생성 해야 다음 WCF를 채택 하는 편이 더 나은지는 합니다. WCF는 이런 시나리오에 정확 하 게 설계 되었습니다.  
   
--   기존의 ASP.NET 웹 서비스 응용 프로그램을 계속 유지 관리하면서 새 개발을 위해 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]를 채택합니다. 이 선택이 최선의 선택일 가능성이 큽니다. WCF를 사용하기 위해 기존 응용 프로그램 수정에 필요한 비용을 절약하면서 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]의 이점은 누릴 수 있기 때문입니다. 이 시나리오의 경우 새 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 응용 프로그램은 기존의 ASP.NET 응용 프로그램과 함께 사용할 수 있습니다. 새 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 응용 프로그램은 기존의 ASP.NET 웹 서비스를 사용할 수 있으며, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] ASP.NET 호환성 모드를 통해 새 작업 기능을 기존의 ASP.NET 응용 프로그램에 프로그래밍할 수 있습니다.  
+-   WCF 계속 기존 ASP.NET 웹 서비스 응용 프로그램 유지 관리 하면서 새 개발 작업에 적용 합니다. 이 선택이 최선의 선택일 가능성이 큽니다. 수정 사용 하도록 기존 응용 프로그램의 비용을 절약 하는 동안 WCF의 혜택을 생성 합니다. 이 시나리오에서는 WCF 응용 프로그램을 새 기존 ASP.NET 응용 프로그램에서 공존할 수 있습니다. 새 WCF 응용 프로그램은 기존의 ASP.NET 웹 서비스를 사용할 수 및 WCF를 사용 하 여 새 작업 기능을 통해 WCF ASP.NET 호환 모드 기존 ASP.NET 응용 프로그램을 프로그래밍할 수 있습니다.  
   
--   [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]를 채택하고 기존 ASP.NET 웹 서비스 응용 프로그램을 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]로 마이그레이션합니다. 기존 응용 프로그램을 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서 제공하는 기능을 사용하여 향상시키거나 더욱 강력한 새로운 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 응용 프로그램 내에서 기존 ASP.NET 웹 서비스의 기능을 재현하려는 경우 적합한 선택입니다.  
+-   WCF를 채택 하 고 기존 ASP.NET 웹 서비스 응용 프로그램을 WCF로 마이그레이션. WCF에서 제공 하는 기능으로 기존 응용 프로그램을 향상 시키기 위해 하거나 새로운 내에서 기존 ASP.NET 웹 서비스의 기능, 더욱 강력한 WCF 응용 프로그램을 재현 하려면이 옵션을 선택할 수 있습니다.  
   
 > [!NOTE]
->  [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 서비스가 IIS 5.x에서 호스팅될 때 ASP.NET을 제거하는 경우에는 주의해야 합니다. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 서비스가 IIS 5.x에서 호스팅될 때 ASP.NET을 제거하는 경우 서비스 코드를 요청할 수 있습니다. IIS 5.x가 실행 중이고 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]가 제거된 운영 체제에서 ASP.NET을 제거하면 확장자가 .svc인 파일이 텍스트 파일로 간주되어 소스 코드를 포함하여 내용이 요청자에게 반환됩니다.  
+>  WCF 서비스를 호스팅하는 경우 주의 해야 iis 5.x ASP.NET을 제거 합니다. WCF 서비스가 IIS에서 호스트 된 경우 ASP.NET을 제거 하는 경우에 5.x 서비스에 대 한 코드를 요청할 수 있습니다. IIS를 실행 하는 운영 체제에서 ASP.NET을 제거 하는 경우 5.x 및 WCF가 제거 하 고.svc 확장명을 가진 파일이 텍스트 파일로 간주 되어 소스 코드를 포함 하 여 내용을 요청자에 게 반환 됩니다.  
   
- 이 단원에서는 이러한 옵션에 대해 자세히 설명하고, ASP.NET 웹 서비스를 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]와 비교하여, ASP.NET 웹 서비스 코드를 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]로 마이그레이션하는 방법에 대한 지침을 제공합니다.  
+ 이 섹션에서에서 이러한 옵션에 설명 하 고 ASP.NET 웹 서비스와 WCF 비교 하 여 ASP.NET 웹 서비스 코드를 WCF로 마이그레이션하는 방법에 대해 설명 합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [Windows Communication Foundation 채택 예상: 이후의 마이그레이션을 용이하게 함](../../../../docs/framework/wcf/feature-details/anticipating-adopting-wcf-migration.md)  

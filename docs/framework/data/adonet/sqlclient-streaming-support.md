@@ -1,26 +1,12 @@
 ---
 title: SqlClient 스트리밍 지원
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-ado
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: c449365b-470b-4edb-9d61-8353149f5531
-caps.latest.revision: 14
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload:
-- dotnet
-ms.openlocfilehash: cfa672908248afa951ab3a429e437e0e2c0607c5
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: f881318677949f5507c3e1c4a4b5606dd880c396
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="sqlclient-streaming-support"></a>SqlClient 스트리밍 지원
 SQL Server 및 응용 프로그램 간의 스트리밍 지원 (의 새로운 [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)])는 서버 (문서, 이미지 및 미디어 파일)에서 구조화 되지 않은 데이터를 지원 합니다. SQL Server 데이터베이스를 사용 하는 이진 대형 개체 (Blob)을 저장할 수 있지만 BLOB를 검색 하는 다량의 메모리를 사용할 수 있습니다.  

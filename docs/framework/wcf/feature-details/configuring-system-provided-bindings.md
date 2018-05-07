@@ -1,33 +1,19 @@
 ---
 title: 시스템 제공 바인딩 구성
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - Windows Communication Foundation [WCF], system-provided bindings
 - WCF [WCF], system-provided bindings
 - bindings [WCF], system-provided
 ms.assetid: 443f8d65-f1f2-4311-83b3-4d8fdf7ccf16
-caps.latest.revision: 17
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 9bbf04f549c492ddc392b429edf3a703f3c307a0
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 184f4da26df2c688b2b6f30f063bab058af37a4a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="configuring-system-provided-bindings"></a>시스템 제공 바인딩 구성
-바인딩은 끝점과 통신할 때 사용할 통신 메커니즘을 지정하고 끝점에 연결하는 방법을 나타냅니다. 바인딩은 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 채널이 필수 통신 기능을 제공하기 위해 계층화되는 방식을 정의하는 요소로 구성됩니다. 바인딩에는 다음 세 가지 형식의 요소가 있습니다.  
+바인딩은 끝점과 통신할 때 사용할 통신 메커니즘을 지정하고 끝점에 연결하는 방법을 나타냅니다. 바인딩은 방법을 Windows Communication Foundation (WCF) 채널이 필수 통신 기능을 제공 하기 위해 계층화 되 정의 하는 요소로 구성 됩니다. 바인딩에는 다음 세 가지 형식의 요소가 있습니다.  
   
 -   프로토콜 채널 바인딩 요소. 끝점에 보내는 메시지에 사용할 보안, 안정성, 컨텍스트 흐름 설정 또는 사용자 정의 프로토콜을 결정합니다.  
   
@@ -35,7 +21,7 @@ ms.lasthandoff: 04/30/2018
   
 -   메시지 인코딩 바인딩 요소. 끝점에 보내는 메시지에 사용할 텍스트/XML, 이진 또는 MTOM(Message Transmission Optimization Mechanism) 등의 연결 인코딩을 결정합니다.  
   
- 이 항목에서는 모든 시스템 제공 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 바인딩을 제공합니다. 이러한 바인딩이 모두 응용 프로그램에 대한 정확한 요구 사항을 충족하지 않을 경우 <xref:System.ServiceModel.Channels.CustomBinding> 클래스를 사용하여 바인딩을 만들 수 있습니다. 사용자 지정 바인딩 만들기에 대 한 자세한 내용은 참조 [사용자 지정 바인딩을](../../../../docs/framework/wcf/extending/custom-bindings.md)합니다.  
+ 이 항목의 모든 Windows Communication Foundation (WCF) 시스템 제공 바인딩을 제공합니다. 이러한 바인딩이 모두 응용 프로그램에 대한 정확한 요구 사항을 충족하지 않을 경우 <xref:System.ServiceModel.Channels.CustomBinding> 클래스를 사용하여 바인딩을 만들 수 있습니다. 사용자 지정 바인딩 만들기에 대 한 자세한 내용은 참조 [사용자 지정 바인딩을](../../../../docs/framework/wcf/extending/custom-bindings.md)합니다.  
   
 > [!IMPORTANT]
 >  보안이 설정된 바인딩을 선택합니다. 기본적으로 <xref:System.ServiceModel.BasicHttpBinding> 바인딩을 제외한 모든 바인딩에는 보안이 설정되어 있습니다. 보안 바인딩을 선택하지 않거나 보안을 비활성화하는 경우 보안 데이터 센터 또는 격리된 네트워크에 보호하는 것과 같은 방식으로 네트워크 교환을 보호해야 합니다.  
@@ -44,7 +30,7 @@ ms.lasthandoff: 04/30/2018
 >  다른 방법으로 네트워크 교환의 보안을 유지하지 않는 한 보안을 지원하지 않거나 보안이 설정되지 않은 바인딩과 함께 이중 계약을 사용하지 마십시오.  
   
 ## <a name="system-provided-bindings"></a>시스템 제공 바인딩  
- 다음 바인딩은 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]와 함께 제공됩니다.  
+ 다음 바인딩은 WCF와 함께 제공 됩니다.  
   
 |바인딩|구성 요소|설명|  
 |-------------|---------------------------|-----------------|  
@@ -54,12 +40,12 @@ ms.lasthandoff: 04/30/2018
 |<xref:System.ServiceModel.WSDualHttpBinding>|[\<wsDualHttpBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/wsdualhttpbinding.md)|이중 서비스 계약 또는 SOAP 매개자를 통한 통신에 적합한 안전하고 상호 운용할 수 있는 바인딩입니다.|  
 |<xref:System.ServiceModel.WSFederationHttpBinding>|[\<wsFederationHttpBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md)|WS-Federation 프로토콜을 지원하는 안전하며 상호 운용 가능한 바인딩을 사용하면 페더레이션에 있는 조직이 사용자를 효율적으로 인증하고 권한을 부여할 수 있습니다.|  
 |<xref:System.ServiceModel.WS2007FederationHttpBinding>|[\<ws2007FederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/ws2007federationhttpbinding.md)|<xref:System.ServiceModel.WS2007HttpBinding>에서 파생되며 페더레이션 보안을 지원하는 안전하고 상호 운용 가능한 바인딩입니다.|  
-|<xref:System.ServiceModel.NetTcpBinding>|[\<netTcpBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/nettcpbinding.md)|[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 응용 프로그램 간 시스템 통신에 적합한 안전하고 최적화된 바인딩입니다.|  
-|<xref:System.ServiceModel.NetNamedPipeBinding>|[\<netNamedPipeBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/netnamedpipebinding.md)|[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 응용 프로그램 간 시스템 통신에 적합한, 안전하고 신뢰할 수 있으며 최적화된 바인딩입니다.|  
-|<xref:System.ServiceModel.NetMsmqBinding>|[\<netMsmqBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/netmsmqbinding.md)|[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 응용 프로그램 간 시스템 통신에 적합한 대기 중인 바인딩입니다.|  
+|<xref:System.ServiceModel.NetTcpBinding>|[\<netTcpBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/nettcpbinding.md)|안전 하 고 최적화 된 바인딩 WCF 응용 프로그램 간 시스템 통신에 적합 합니다.|  
+|<xref:System.ServiceModel.NetNamedPipeBinding>|[\<netNamedPipeBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/netnamedpipebinding.md)|WCF 응용 프로그램 간 시스템 통신에 적합 한 보안, 신뢰할 수 있는, 최적화 된 바인딩.|  
+|<xref:System.ServiceModel.NetMsmqBinding>|[\<netMsmqBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/netmsmqbinding.md)|WCF 응용 프로그램 간 시스템 통신에 적합 한 대기 중인된 바인딩.|  
 |<xref:System.ServiceModel.NetPeerTcpBinding>|[\<netPeerTcpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/netpeertcpbinding.md)|안전하게 여러 시스템 간에 통신할 수 있는 바인딩입니다.|  
-|<xref:System.ServiceModel.WebHttpBinding>|[\<webHttpBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/webhttpbinding.md)|SOAP 메시지 대신 HTTP 요청을 통해 노출되는 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 웹 서비스에 대한 끝점을 구성하는 데 사용되는 바인딩입니다.|  
-|<xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding>|[\<msmqIntegrationBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/msmqintegrationbinding.md)|[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 응용 프로그램과 기존 메시지 큐(MSMQ라고도 함) 응용 프로그램 간 시스템 통신에 적합한 바인딩입니다.|  
+|<xref:System.ServiceModel.WebHttpBinding>|[\<webHttpBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/webhttpbinding.md)|SOAP 메시지 대신 HTTP 요청을 통해 노출 되는 WCF 웹 서비스에 대 한 끝점을 구성 하는 데 사용 되는 바인딩.|  
+|<xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding>|[\<msmqIntegrationBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/msmqintegrationbinding.md)|바인딩에 WCF 응용 프로그램과 기존 메시지 큐 (MSMQ 라고도 함) 간의 컴퓨터 간 통신에 적합 한은 응용 프로그램입니다.|  
   
 ## <a name="binding-features"></a>바인딩 기능  
  다음 표에서는 각 시스템 제공 바인딩의 몇 가지 주요 기능을 보여 줍니다. 바인딩은 첫 번째 열에 나열되어 있고, 기능에 대한 정보는 표에 설명되어 있습니다. 다음 표에는 사용된 바인딩 약어에 대한 키가 나와 있습니다. 바인딩을 선택하려면 필요한 행 기능을 모두 만족하는 열을 결정합니다.  

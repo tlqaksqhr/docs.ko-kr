@@ -1,14 +1,6 @@
 ---
-title: "IMetaDataAssemblyEmit::DefineExportedType 메서드"
-ms.custom: 
+title: IMetaDataAssemblyEmit::DefineExportedType 메서드
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - IMetaDataAssemblyEmit.DefineExportedType
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: fad01d7a-3178-4c8c-9f0a-4641e3701c9b
 topic_type:
 - apiref
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 59aae188e404ebc717a140fb7918e3fbf69f3f70
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: a2eb894a8bac702c30826d1e965c91cae9b259ee
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="imetadataassemblyemitdefineexportedtype-method"></a>IMetaDataAssemblyEmit::DefineExportedType 메서드
 지정된 내보낸 형식에 대한 메타데이터를 포함하는 `ExportedType` 구조를 만들고 연결된 메타데이터 토큰을 반환합니다.  
@@ -57,13 +45,13 @@ HRESULT DefineExportedType (
  `tkImplementation`  
  [in] 내보낸된 형식을 구현 하는 지정 하는 토큰입니다. 유효한 값 및 관련된 의미는 합니다.  
   
--   `mdFile`형식이이 어셈블리 내의 다른 파일에 구현 됩니다.  
+-   `mdFile` 형식이이 어셈블리 내의 다른 파일에 구현 됩니다.  
   
--   `mdAssemblyRef`형식이 다른 어셈블리에 구현 됩니다.  
+-   `mdAssemblyRef` 형식이 다른 어셈블리에 구현 됩니다.  
   
--   `mdExportedTYpe`형식이 다른 형식에 중첩 합니다.  
+-   `mdExportedTYpe` 형식이 다른 형식에 중첩 합니다.  
   
--   `mdFileNil`매니페스트와 같은 파일에 형식과 중첩 된 형식이 아닙니다.  
+-   `mdFileNil` 매니페스트와 같은 파일에 형식과 중첩 된 형식이 아닙니다.  
   
  `tkTypeDef`  
  [in] 내보낼 형식을 지정 하는 메타 데이터 토큰입니다. 이 값은 입력의 `TypeDef` 형식을 구현 하 고이 파일은이 어셈블리의 경우에 해당 하는 파일에는 테이블입니다.  
@@ -84,7 +72,7 @@ HRESULT DefineExportedType (
   
  **라이브러리:** MsCorEE.dll에서 리소스로 사용  
   
- **.NET framework 버전:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>참고 항목  
  [IMetaDataAssemblyEmit 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)

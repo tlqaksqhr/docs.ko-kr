@@ -1,33 +1,19 @@
 ---
 title: '방법: JSON 데이터 Serialize 및 Deserialize'
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 88abc1fb-8196-4ee3-a23b-c6934144d1dd
-caps.latest.revision: 13
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 9152e0047102661664f9b158aa26f83fb1d3c25c
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: f51ffb180adfc8310c91ff3c1ec7b7725f6b8b15
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-serialize-and-deserialize-json-data"></a>방법: JSON 데이터 Serialize 및 Deserialize
 JSON(JavaScript Object Notation)은 클라이언트 브라우저 및 AJAX 사용 웹 서비스 간에 소량의 데이터를 신속하게 교환할 수 있는 효율적인 데이터 인코딩 형식입니다.  
   
  이 항목에서는 <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>를 사용하여 .NET 형식 개체를 JSON 인코딩된 데이터로 serialize한 다음 JSON 형식의 데이터를 다시 .NET 형식의 인스턴스로 deserialize하는 방법을 보여 줍니다. 이 예제에서는 데이터 계약을 사용하여 사용자 정의 `Person` 형식의 serialization 및 deserialization을 보여 줍니다.  
   
- 일반적으로 JSON serialization 및 deserialization은 AJAX 사용 끝점을 통해 노출되는 서비스 작업에서 데이터 계약 형식을 사용하는 경우 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]에 의해 자동으로 처리됩니다. 그러나 일부 경우에서는 JSON 데이터로 직접 작업해야 할 수도 있습니다. 이 항목에서는 그러한 경우를 보여 줍니다.  
+ 일반적으로 JSON serialization 및 deserialization을 자동으로 처리 됩니다 Windows Communication Foundation (WCF)에서 AJAX 사용 끝점을 통해 노출 되는 서비스 작업의 데이터 계약 형식을 사용 합니다. 그러나 일부 경우에서는 JSON 데이터로 직접 작업해야 할 수도 있습니다. 이 항목에서는 그러한 경우를 보여 줍니다.  
   
 > [!NOTE]
 >  서버에서 보내는 회신의 serialization 동안 오류가 발생하거나 일부 다른 이유로 인해 회신 작업에서 예외를 throw하는 경우 클라이언트를 오류로 반환하지 않을 수 있습니다.  

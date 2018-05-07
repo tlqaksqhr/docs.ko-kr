@@ -1,32 +1,18 @@
 ---
 title: 리소스 사용 제어 및 성능 향상
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 9a829669-5f76-4c88-80ec-92d0c62c0660
-caps.latest.revision: 18
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 6e864e0a90dbb46f440e2eba2b676413c72e0da9
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
-ms.translationtype: MT
+ms.openlocfilehash: 031261f50a0615efa7227d3655c90c3423e77796
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="controlling-resource-consumption-and-improving-performance"></a>리소스 사용 제어 및 성능 향상
-이 항목에서는 리소스 사용을 제어하고 성능 메트릭에 영향을 주는 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 아키텍처의 다른 영역에 있는 여러 속성에 대해 설명합니다.  
+이 항목에서는 다양 한 영역에서 Windows Communication Foundation (WCF) 아키텍처의 성능 메트릭에 영향을 및 리소스 소모를 사용 하는 다양 한 속성을 설명 합니다.  
   
 ## <a name="properties-that-constrain-resource-consumption-in-wcf"></a>WCF에서 리소스 사용을 제한하는 속성  
- [!INCLUDE[indigo1](../../../includes/indigo1-md.md)]에서는 보안이나 성능 향상을 위해 특정 유형의 프로세스에 제약 조건을 적용합니다. 이러한 제약 조건은 할당량이나 스로틀 같은 두 가지 기본 형태로 나타납니다. *할당량* 은 도달 또는 초과 시 시스템의 일부 지점에서 즉각적인 예외를 발생 시키는 제한 합니다. *스로틀* 제한이 즉시 발생 시키는 예외를 throw 합니다. 대신 스로틀 한계에 도달하면 프로세스는 해당 스로틀 값으로 설정된 한계 내에서만 계속 수행됩니다. 이러한 제한된 처리로 다른 위치에 예외가 트리거될 수 있지만, 응용 프로그램에 따라 다릅니다.  
+ Windows Communication Foundation (WCF)에 특정 유형의 보안 이나 성능 향상을 위해 프로세스에 제약 조건을 적용 합니다. 이러한 제약 조건은 할당량이나 스로틀 같은 두 가지 기본 형태로 나타납니다. *할당량* 은 도달 또는 초과 시 시스템의 일부 지점에서 즉각적인 예외를 발생 시키는 제한 합니다. *스로틀* 제한이 즉시 발생 시키는 예외를 throw 합니다. 대신 스로틀 한계에 도달하면 프로세스는 해당 스로틀 값으로 설정된 한계 내에서만 계속 수행됩니다. 이러한 제한된 처리로 다른 위치에 예외가 트리거될 수 있지만, 응용 프로그램에 따라 다릅니다.  
   
  할당량과 스로틀 간의 차이 외에도 제약 속성 중 일부는 serialization 수준에, 일부는 전송 수준에, 일부는 응용 프로그램 수준에 있는 등 차이가 있습니다. 예를 들어, 모든 시스템 제공 전송 바인딩 요소에 의해 구현되는 할당량인 <xref:System.ServiceModel.Channels.TransportBindingElement.MaxReceivedMessageSize%2A?displayProperty=nameWithType>는 악의적인 클라이언트가 메모리를 과도하게 사용하여 서비스에 대한 서비스 거부 공격을 하지 못하도록 기본적으로 65,536바이트로 설정됩니다. 일반적으로 이 값을 낮추면 성능이 향상됩니다.  
   

@@ -1,14 +1,6 @@
 ---
-title: "CoEEShutDownCOM 함수"
-ms.custom: 
+title: CoEEShutDownCOM 함수
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - CoEEShutDownCOM
 api_location:
@@ -25,17 +17,13 @@ helpviewer_keywords:
 ms.assetid: b634cae2-632f-4737-9be4-92d0652844d7
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 0ae339310c2bfd186cae798ff603d69735abeefd
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: f0b30cc2c499644ffc97a734e1554e4e352b34af
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="coeeshutdowncom-function"></a>CoEEShutDownCOM 함수
 공용 언어 런타임 (CLR) 내부 런타임 호출 가능 래퍼 RCW ()를 보유 하는 모든 인터페이스 포인터를 해제 하기 위해를 강제로 수행 합니다. 모든 RCW 캐시 해제 것과 효과가 있습니다. 이 전역 함수에서 사용 되지 않는 [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)]합니다. 대신, 특정 런타임에 대 한 진입점을 사용 합니다.  
@@ -61,7 +49,7 @@ void CoEEShutDownCOM ();
   
  **라이브러리:** MsCorEE.dll에 리소스로 포함  
   
- **.NET framework 버전:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>참고 항목  
  [메타데이터 전역 정적 함수](../../../../docs/framework/unmanaged-api/metadata/metadata-global-static-functions.md)

@@ -1,27 +1,17 @@
 ---
-title: "보안 투명 코드"
-ms.custom: 
+title: 보안 투명 코드
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - transparent code
 - security-transparent code
 ms.assetid: 4f3dd841-82f7-4659-aab0-6d2db2166c65
-caps.latest.revision: "24"
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 97db1cef60af267087e86f86ecd0a77021604642
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 6a491a87c896c76fa62f1702d1ef0e99fc404607
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="security-transparent-code"></a>보안 투명 코드
 <a name="top"></a>
@@ -52,7 +42,7 @@ ms.lasthandoff: 12/22/2017
  투명도는 .NET Framework 버전 2.0에서 새로 추가되었고 보안 모델을 단순화하고 이를 통해 보안 라이브러리 및 응용 프로그램을 더 쉽게 배포할 수 있습니다. 투명 코드는 Microsoft Silverlight에서 부분적으로 신뢰할 수 있는 응용 프로그램의 배포를 단순화하는 데도 사용됩니다.  
   
 > [!NOTE]
->  부분적으로 신뢰할 수 있는 응용 프로그램을 개발할 때 대상 호스트에 대한 권한 요구 사항을 알고 있어야 합니다. 일부 호스트에서 허용되지 않는 리소스를 사용하는 응용 프로그램을 개발할 수 있습니다. 이 응용 프로그램은 오류 없이 컴파일되지만 호스트된 환경으로 로드될 경우 실패합니다. Visual Studio를 사용하여 응용 프로그램을 개발한 경우 개발 환경에서 부분 신뢰 또는 제한된 권한 집합으로 디버깅을 사용할 수 있습니다. 자세한 내용은 참조 [하는 방법: 제한 된 권한으로 ClickOnce 응용 프로그램을 디버깅](/visualstudio/deployment/how-to-debug-a-clickonce-application-with-restricted-permissions)합니다. ClickOnce 응용 프로그램에 제공된 권한 계산 기능은 부분적으로 신뢰할 수 있는 응용 프로그램에도 사용할 수 있습니다.  
+>  부분적으로 신뢰할 수 있는 응용 프로그램을 개발할 때 대상 호스트에 대한 권한 요구 사항을 알고 있어야 합니다. 일부 호스트에서 허용되지 않는 리소스를 사용하는 응용 프로그램을 개발할 수 있습니다. 이 응용 프로그램은 오류 없이 컴파일되지만 호스트된 환경으로 로드될 경우 실패합니다. Visual Studio를 사용하여 응용 프로그램을 개발한 경우 개발 환경에서 부분 신뢰 또는 제한된 권한 집합으로 디버깅을 사용할 수 있습니다. 자세한 내용은 [방법: 제한된 권한으로 ClickOnce 응용 프로그램 디버그](/visualstudio/deployment/how-to-debug-a-clickonce-application-with-restricted-permissions)을 참조하세요. ClickOnce 응용 프로그램에 제공된 권한 계산 기능은 부분적으로 신뢰할 수 있는 응용 프로그램에도 사용할 수 있습니다.  
   
  [맨 위로 이동](#top)  
   

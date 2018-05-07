@@ -1,28 +1,16 @@
 ---
-title: "WCF Data Services 클라이언트 유틸리티(DataSvcUtil.exe)"
-ms.custom: 
+title: WCF Data Services 클라이언트 유틸리티(DataSvcUtil.exe)
 ms.date: 03/30/2017
-ms.prod: .net-framework-oob
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - WCF Data Services, generating client data classes
 - WCF Data Services, client library
 - WCF Data Services, consuming
 ms.assetid: 9d0af606-929b-4c03-b307-3ef5f705afce
-caps.latest.revision: "2"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: fcbbbe5180acaf943956310d4837a105d8d049d7
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 3206947d06a1736116674b70e469c20f8f4fca86
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="wcf-data-service-client-utility-datasvcutilexe"></a>WCF Data Services 클라이언트 유틸리티(DataSvcUtil.exe)
 DataSvcUtil.exe는에서 제공 하는 명령줄 도구 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 을 사용 하는 [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] 피드 하 고.NET Framework 클라이언트 응용 프로그램에서 데이터 서비스에 액세스 하는 데 필요한 클라이언트 데이터 서비스 클래스를 생성 합니다. 이 유틸리티는 다음 메타데이터 소스를 사용하여 데이터 클래스를 생성할 수 있습니다.  
@@ -50,7 +38,7 @@ datasvcutil /out:file [/in:file | /uri:serviceuri] [/dataservicecollection] [/la
 |`/dataservicecollection`|개체를 컨트롤에 바인딩하는 데 필요한 코드도 생성되도록 지정합니다.|  
 |`/help`<br /><br /> 또는<br /><br /> `/?`|이 도구의 명령 구문 및 옵션을 표시합니다.|  
 |`/in:` *\<파일 >*|.csdl 또는 .edmx 파일이나 파일이 있는 디렉터리를 지정합니다.|  
-|`/language:`[VB &#124; CSharp]|생성되는 소스 코드 파일의 언어를 지정합니다. 기본 언어는 C#입니다.|  
+|`/language:`[VB&#124;CSharp]|생성되는 소스 코드 파일의 언어를 지정합니다. 기본 언어는 C#입니다.|  
 |`/nologo`|저작권 메시지가 표시되지 않도록 합니다.|  
 |`/out:` *\<파일 >*|생성된 클라이언트 데이터 서비스 클래스가 포함되는 소스 코드 파일의 이름을 지정합니다.|  
 |`/uri:` *\<문자열 >*|URI는 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 피드입니다.|  

@@ -1,14 +1,6 @@
 ---
-title: "COR_HEAPINFO 구조체"
-ms.custom: 
+title: COR_HEAPINFO 구조체
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - COR_HEAPINFO
 api_location:
@@ -22,17 +14,13 @@ helpviewer_keywords:
 ms.assetid: bfb2cd39-3e0b-4d51-ba0c-f009755c1456
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 991e018c3967693f5b87b71c77cdbadcd4ae0cfe
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 8fb1ae367c30bb038bfe25961e91f02f172f486c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="corheapinfo-structure"></a>COR_HEAPINFO 구조체
 가비지 컬렉션 힙에 대한 일반 정보(열거 가능 여부 포함)를 제공합니다.  
@@ -53,10 +41,10 @@ typedef struct _COR_HEAPINFO {
   
 |멤버|설명|  
 |------------|-----------------|  
-|`areGCStructuresValid`|`true`가비지 수집 구조 유효 하 고 힙을 열거할 수 있는 경우 그렇지 않으면 `false`합니다.|  
+|`areGCStructuresValid`|`true` 가비지 수집 구조 유효 하 고 힙을 열거할 수 있는 경우 그렇지 않으면 `false`합니다.|  
 |`pointerSize`|대상 아키텍처에 대 한 포인터의 바이트 크기입니다.|  
 |`numHeaps`|프로세스에서 힙의 논리 가비지 수집의 수입니다.|  
-|`concurrent`|`TRUE`동시 하는 경우 (백그라운드) 가비지 수집이 설정 되어 있습니다. 그렇지 않으면 `FALSE`합니다.|  
+|`concurrent`|`TRUE` 동시 하는 경우 (백그라운드) 가비지 수집이 설정 되어 있습니다. 그렇지 않으면 `FALSE`합니다.|  
 |`gcType`|멤버는 [CorDebugGCType](../../../../docs/framework/unmanaged-api/debugging/cordebuggctype-enumeration.md) 가비지 수집기는 워크스테이션 또는 서버에서 실행 되 고 있는지를 나타내는 열거형입니다.|  
   
 ## <a name="remarks"></a>설명  
@@ -71,7 +59,7 @@ typedef struct _COR_HEAPINFO {
   
  **라이브러리:** CorGuids.lib  
   
- **.NET framework 버전:**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **.NET framework 버전:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
 ## <a name="see-also"></a>참고 항목  
  [디버깅 구조체](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)  

@@ -1,23 +1,12 @@
 ---
-title: "사용자 지정 작업 속성을 디자이너 컨트롤에 바인딩"
-ms.custom: 
+title: 사용자 지정 작업 속성을 디자이너 컨트롤에 바인딩
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 2e8061ea-10f5-407c-a31f-d0d74ce12f27
-caps.latest.revision: "5"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 79ceeb7406fdae9b4044053e12bec2aad926f26e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 1aa22403f5ed2de6893f8bfec9f03fa7dabd6868
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="binding-a-custom-activity-property-to-a-designer-control"></a>사용자 지정 작업 속성을 디자이너 컨트롤에 바인딩
 텍스트 상자 디자이너 컨트롤을 작업 인수에 바인딩하는 작업은 비교적 간단하지만 복잡한 디자이너 컨트롤(예: 콤보 상자)을 작업 인수에 바인딩하는 작업은 까다로울 수 있습니다. 이 항목에서는 사용자 지정 작업 디자이너에서 작업 인수를 콤보 상자 컨트롤에 바인딩하는 방법에 대해 설명합니다.  

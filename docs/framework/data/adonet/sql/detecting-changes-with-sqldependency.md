@@ -1,27 +1,15 @@
 ---
-title: "SqlDependency로 변경 내용 감지"
-ms.custom: 
+title: SqlDependency로 변경 내용 감지
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: e6a58316-f005-4477-92e1-45cc2eb8c5b4
-caps.latest.revision: "3"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: e105080b6ef3bdd6ce20ad8291c57fc9180980d7
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: a25afbe0124f7870df886a1e26e0df2a0716b205
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="detecting-changes-with-sqldependency"></a>SqlDependency로 변경 내용 감지
 <xref:System.Data.SqlClient.SqlDependency> 개체를 <xref:System.Data.SqlClient.SqlCommand>와 연결하여 쿼리 결과가 원래 검색한 결과와 달라지는 시기를 검색할 수 있습니다. 또한 연결된 명령에 대한 결과가 변경될 때 발생하는 `OnChange` 이벤트에 대리자를 할당할 수도 있습니다. 명령을 실행하기 전에 먼저 <xref:System.Data.SqlClient.SqlDependency>와 해당 명령을 연결해야 합니다. `HasChanges`의 <xref:System.Data.SqlClient.SqlDependency> 속성을 사용하여 쿼리 결과가 데이터를 처음 검색했을 때의 결과와 달라졌는지 확인할 수도 있습니다.  
@@ -29,7 +17,7 @@ ms.lasthandoff: 01/17/2018
 ## <a name="security-considerations"></a>보안 고려 사항  
  종속성 인프라는 원본으로 사용하는 데이터가 특정 명령에 대해 변경된 경우 알림을 받기 위해 <xref:System.Data.SqlClient.SqlConnection>가 호출되면 열리는 <xref:System.Data.SqlClient.SqlDependency.Start%2A>을 사용합니다. 클라이언트가 `SqlDependency.Start` 호출을 시작할 수 있는지 여부는 <xref:System.Data.SqlClient.SqlClientPermission>의 사용 및 코드 액세스 보안 특성을 통해 제어됩니다. 자세한 내용은 참조 [쿼리 알림을 사용 하도록 설정](../../../../../docs/framework/data/adonet/sql/enabling-query-notifications.md) 및 [코드 액세스 보안 및 ADO.NET](../../../../../docs/framework/data/adonet/code-access-security.md)합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  다음 단계에서는 종속성을 선언하고, 명령을 실행하고, 결과 집합이 변경될 때 알림을 받는 방법을 설명합니다.  
   
 1.  서버에 대한 `SqlDependency` 연결을 시작합니다.  

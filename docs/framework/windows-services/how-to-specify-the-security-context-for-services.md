@@ -1,13 +1,6 @@
 ---
-title: "방법: 서비스에 대한 보안 컨텍스트 지정"
-ms.custom: 
+title: '방법: 서비스에 대한 보안 컨텍스트 지정'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - Windows Service applications, security
 - security [Visual Studio], contexts
@@ -17,16 +10,13 @@ helpviewer_keywords:
 - services, security
 - ServiceInstaller class, security context
 ms.assetid: 02187c7b-dbf2-45f2-96c2-e11010225a22
-caps.latest.revision: "10"
 author: ghogen
-ms.author: ghogen
 manager: douge
-ms.workload: dotnet
-ms.openlocfilehash: 9ce65358f6d63414dbe6798d3cc2464ee2741980
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: e3e5ad7dd44dcaf1593ac80bbe6d0a367964e4e4
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-specify-the-security-context-for-services"></a>방법: 서비스에 대한 보안 컨텍스트 지정
 기본적으로 서비스에 로그인 한 사용자의 다른 보안 컨텍스트에서 실행 됩니다. 기본 시스템 계정의 컨텍스트에서 실행 되는 서비스 호출 `LocalSystem`는 서로 다른 액세스 권한을 부여 시스템 리소스에는 사용자입니다. 서비스 실행 해야 하는 다른 사용자 계정을 지정 하려면이 동작을 변경할 수 있습니다.  

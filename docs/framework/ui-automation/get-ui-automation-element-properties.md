@@ -1,13 +1,6 @@
 ---
-title: "UI 자동화 요소 속성 가져오기"
-ms.custom: 
+title: UI 자동화 요소 속성 가져오기
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-bcl
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -15,16 +8,14 @@ helpviewer_keywords:
 - properties, retrieving
 - UI Automation, retrieving properties of elements
 ms.assetid: 09576b1a-291f-435c-980e-dee32d899ae1
-caps.latest.revision: "5"
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: f3fcbb25fab616b60a1f60d9443af13b60f2d27a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 73678433692f5532f712f0d2c7a3c5bf138a87b5
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="get-ui-automation-element-properties"></a>UI 자동화 요소 속성 가져오기
 > [!NOTE]
@@ -44,7 +35,7 @@ ms.lasthandoff: 12/22/2017
   
 2.  호출 <xref:System.Windows.Automation.AutomationElement.GetCachedPropertyValue%2A>, 검색 또는 <xref:System.Windows.Automation.AutomationElement.Cached%2A> 속성 구조 및 해당 멤버 중 하나에서 값 가져오기.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 예에서는 현재 속성을 검색 하는 방법을 보여 주는 <xref:System.Windows.Automation.AutomationElement>합니다.  
   
  [!code-csharp[UIAClient_snip#170](../../../samples/snippets/csharp/VS_Snippets_Wpf/UIAClient_snip/CSharp/ClientForm.cs#170)]

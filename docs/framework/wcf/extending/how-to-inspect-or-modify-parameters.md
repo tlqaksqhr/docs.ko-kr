@@ -1,30 +1,18 @@
 ---
-title: "방법: 매개 변수 검사 또는 수정"
-ms.custom: 
+title: '방법: 매개 변수 검사 또는 수정'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: ab6c0ac7-aac4-45ba-93d6-a0e9afd1756f
-caps.latest.revision: "8"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 5f1a0ef31ba074082e4c3aa8a26e6a59502a7566
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: ddf6ad667eb131ec6fa4f12ed112c57368c43d9c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-inspect-or-modify-parameters"></a>방법: 매개 변수 검사 또는 수정
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 클라이언트 개체 또는 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 서비스에서 <xref:System.ServiceModel.Dispatcher.IParameterInspector?displayProperty=nameWithType> 인터페이스를 구현한 다음 클라이언트 또는 서비스 런타임에 삽입하여 단일 작업의 들어오는 메시지나 나가는 메시지를 검사 또는 수정할 수 있습니다. 일반적으로 작업 동작을 사용하여 단일 작업에 매개 변수 검사자를 추가하지만, 다른 동작을 사용하여 더 넓은 범위의 런타임에 쉬운 액세스를 제공할 수도 있습니다. 자세한 내용은 참조 [클라이언트 확장](../../../../docs/framework/wcf/extending/extending-clients.md) 및 [디스패처 확장](../../../../docs/framework/wcf/extending/extending-dispatchers.md)합니다.  
+검사 하거나 Windows Communication Foundation (WCF) 클라이언트 개체에서 단일 작업에 대 한 들어오는 메시지나 나가는 메시지를 수정할 수 있습니다 또는 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 구현 하 여 서비스는 <xref:System.ServiceModel.Dispatcher.IParameterInspector?displayProperty=nameWithType> 인터페이스와 클라이언트 또는 서비스에 삽입 런타임입니다. 일반적으로 작업 동작을 사용하여 단일 작업에 매개 변수 검사자를 추가하지만, 다른 동작을 사용하여 더 넓은 범위의 런타임에 쉬운 액세스를 제공할 수도 있습니다. 자세한 내용은 참조 [클라이언트 확장](../../../../docs/framework/wcf/extending/extending-clients.md) 및 [디스패처 확장](../../../../docs/framework/wcf/extending/extending-dispatchers.md)합니다.  
   
 ### <a name="inspecting-or-modifying-parameters"></a>매개 변수 검사 또는 수정  
   
@@ -34,7 +22,7 @@ ms.lasthandoff: 12/22/2017
   
 3.  <xref:System.ServiceModel.ClientBase%601.Open%2A?displayProperty=nameWithType>에서 <xref:System.ServiceModel.ICommunicationObject.Open%2A?displayProperty=nameWithType> 또는 <xref:System.ServiceModel.ChannelFactory%601?displayProperty=nameWithType> 메서드를 호출하기 전에 동작을 삽입합니다. 자세한 내용은 참조 [구성 하 고 런타임 동작을 확장](../../../../docs/framework/wcf/extending/configuring-and-extending-the-runtime-with-behaviors.md)합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 코드 예제는 아래 순서대로 나열되어 있습니다.  
   
 -   매개 변수 검사자 구현.  

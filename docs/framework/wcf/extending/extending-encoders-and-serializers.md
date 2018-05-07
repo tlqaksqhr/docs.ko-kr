@@ -1,27 +1,15 @@
 ---
-title: "인코더 및 Serializer 확장"
-ms.custom: 
+title: 인코더 및 Serializer 확장
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 97aec970-d73c-469c-9b93-8b86be701c44
-caps.latest.revision: "10"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 3dcf0765e025209abdadb850711fb373716b6edb
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: d5ba3e7b057968d81a8a33e195a760fc82a3670b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="extending-encoders-and-serializers"></a>인코더 및 Serializer 확장
-이 단원의 항목에서는 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] serialization 시스템을 확장하는 방법에 대해 설명합니다.  
+이 섹션의 항목에는 Windows Communication Foundation (WCF) serialization 시스템을 확장 하는 방법을 설명 합니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
  [데이터 계약 서로게이트](../../../../docs/framework/wcf/extending/data-contract-surrogates.md)  

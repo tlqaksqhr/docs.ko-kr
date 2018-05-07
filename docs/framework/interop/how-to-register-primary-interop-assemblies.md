@@ -1,29 +1,17 @@
 ---
-title: "방법: 주 Interop 어셈블리 등록"
-ms.custom: 
+title: '방법: 주 Interop 어셈블리 등록'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - registering primary interop assemblies
 - primary interop assemblies, registering
 ms.assetid: 4b2fcf8a-429d-43ce-8334-e026040be8bb
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 26455be1d6d5879041b9ccb397bfc94a04390a64
-ms.sourcegitcommit: d95a91d685565f4d95c8773b558752864a6a3d7e
+ms.openlocfilehash: 1f54d77be130d57c39319e81d58ad5af7815e548
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-register-primary-interop-assemblies"></a>방법: 주 Interop 어셈블리 등록
 클래스는 COM interop에 의해서만 마샬링될 수 있으며 항상 인터페이스로 마샬링됩니다. 클래스를 마샬링하는 데 사용되는 인터페이스를 클래스 인터페이스라고 하는 경우도 있습니다. 선택한 인터페이스로 클래스 인터페이스를 재정의하는 방법에 대한 자세한 내용은 [COM 호출 가능 래퍼](../../../docs/framework/interop/com-callable-wrapper.md)를 참조하세요.  
@@ -52,7 +40,7 @@ ms.lasthandoff: 03/12/2018
   
      이 명령에서 *assemblyname*은 등록된 어셈블리의 파일 이름입니다. Regasm.exe는 원래 형식 라이브러리와 동일한 레지스트리 키 아래에 주 interop 어셈블리에 대한 항목을 추가합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 예제에서는 `CompanyA.UtilLib.dll` 주 interop 어셈블리를 등록합니다.  
   
 ```console  

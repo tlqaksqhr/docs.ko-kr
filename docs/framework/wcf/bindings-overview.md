@@ -1,31 +1,17 @@
 ---
 title: Windows Communication Foundation 바인딩 개요
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - bindings [WCF], overview
 ms.assetid: cfb5842f-e0f9-4c56-a015-f2b33f258232
-caps.latest.revision: 16
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 58b3691c186dc6a33c94d9f8a1af96be488d67df
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
-ms.translationtype: MT
+ms.openlocfilehash: 38661c2ca0e3329f508e2740dfcdf69c0d5e4105
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="windows-communication-foundation-bindings-overview"></a>Windows Communication Foundation 바인딩 개요
-바인딩은 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 서비스의 끝점에 연결하기 위해 필요한 통신 세부 사항을 지정하는 데 사용되는 개체입니다. [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 서비스의 각 끝점에 대해 바인딩을 올바로 지정해야 합니다. 이 항목에서는 바인딩이 정의하는 통신 세부 사항의 형식, 바인딩의 요소, [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]에 포함되는 바인딩 및 끝점에 대해 바인딩을 지정할 수 있는 방법을 간략하게 설명합니다.  
+바인딩은 Windows Communication Foundation (WCF) 서비스의 끝점에 연결 하는 데 필요한 통신 세부 사항을 지정 하는 데 사용 되는 개체입니다. [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 서비스의 각 끝점에 대해 바인딩을 올바로 지정해야 합니다. 이 항목에서는 바인딩이 정의하는 통신 세부 사항의 형식, 바인딩의 요소, [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]에 포함되는 바인딩 및 끝점에 대해 바인딩을 지정할 수 있는 방법을 간략하게 설명합니다.  
   
 ## <a name="what-a-binding-defines"></a>바인딩이 정의하는 내용  
  바인딩의 정보는 매우 기본적이거나 매우 복잡할 수 있습니다. 가장 기본적인 바인딩은 끝점에 연결하는 데 사용해야 하는 HTTP 등의 전송 프로토콜만 지정합니다. 보다 일반적으로, 끝점 연결 방법과 관련해서 바인딩에 포함되는 정보는 다음 범주 중 하나에 해당합니다.  

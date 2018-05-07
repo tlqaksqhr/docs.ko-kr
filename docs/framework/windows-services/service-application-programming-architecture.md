@@ -1,13 +1,6 @@
 ---
-title: "서비스 응용 프로그램 프로그래밍 아키텍처"
-ms.custom: 
+title: 서비스 응용 프로그램 프로그래밍 아키텍처
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -21,25 +14,22 @@ helpviewer_keywords:
 - ServiceProcessInstaller class, service application code model
 - Windows Service applications, states
 ms.assetid: 83230026-d068-4174-97ff-e264c896eb2f
-caps.latest.revision: "15"
 author: ghogen
-ms.author: ghogen
 manager: douge
-ms.workload: dotnet
-ms.openlocfilehash: 2d44ee323040346437261b51fddb707a30d1de6c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: f0c760d0f9b65fc9b612a8bee8abb68fa5b4ecae
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="service-application-programming-architecture"></a>서비스 응용 프로그램 프로그래밍 아키텍처
 상속 되는 클래스를 기반으로 하는 Windows 서비스 응용 프로그램은 <xref:System.ServiceProcess.ServiceBase?displayProperty=nameWithType> 클래스입니다. 이 클래스에서 메서드를 재정의 하 고이 정보를 서비스의 작동 방식을 결정할 수에 대 한 기능을 정의 합니다.  
   
  서비스 만들기에 관련 된 기본 클래스는입니다.  
   
--   <xref:System.ServiceProcess.ServiceBase?displayProperty=nameWithType>— 메서드를 재정의할이 작업은 <xref:System.ServiceProcess.ServiceBase> 서비스를 만들 때 클래스와이 서비스 함수 클래스를 상속 하는 방법을 결정 하는 코드를 정의 합니다.  
+-   <xref:System.ServiceProcess.ServiceBase?displayProperty=nameWithType> — 메서드를 재정의할이 작업은 <xref:System.ServiceProcess.ServiceBase> 서비스를 만들 때 클래스와이 서비스 함수 클래스를 상속 하는 방법을 결정 하는 코드를 정의 합니다.  
   
--   <xref:System.ServiceProcess.ServiceProcessInstaller?displayProperty=nameWithType>및 <xref:System.ServiceProcess.ServiceInstaller?displayProperty=nameWithType> -이러한 클래스를 사용 하 여 설치 하 고 서비스를 제거 합니다.  
+-   <xref:System.ServiceProcess.ServiceProcessInstaller?displayProperty=nameWithType> 및 <xref:System.ServiceProcess.ServiceInstaller?displayProperty=nameWithType> -이러한 클래스를 사용 하 여 설치 하 고 서비스를 제거 합니다.  
   
  또한 라는 클래스 <xref:System.ServiceProcess.ServiceController> 는 서비스 자체를 조작 하는 데 사용할 수 있습니다. 이 클래스는 서비스 만들기에 관련 된 않으며 시작 하 고 서비스를 중지 하 고에 명령을 전달 하 고 일련의 열거형을 반환 하는 데 사용 될입니다.  
   

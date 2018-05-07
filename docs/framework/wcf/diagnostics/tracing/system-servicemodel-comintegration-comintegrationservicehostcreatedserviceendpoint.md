@@ -1,24 +1,12 @@
 ---
 title: System.ServiceModel.Channels.MsmqMoveOrDeleteAttemptFailed
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: d75d39da-7502-4a6a-91b9-eaa05b8e24d5
-caps.latest.revision: "6"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 87eac8f0e3949ac47c7bb2915a87043bdc205b8d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 0a28eec659b48d5add4c53bc8c16972892e65099
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="systemservicemodelchannelsmsmqmoveordeleteattemptfailed"></a>System.ServiceModel.Channels.MsmqMoveOrDeleteAttemptFailed
 메시지를 이동하거나 삭제할 수 없습니다.  
@@ -26,7 +14,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="description"></a>설명  
  이 추적은 MSMQ 메시지를 이동, 삭제 및 거부하는 동안 오류가 발생했음을 나타냅니다.  
   
- NetMsmqBinding 또는 MsmqIntegrationBinding과 함께 사용하는 경우 [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)]에서는 MSMQ 메시지를 사용합니다. 이 추적은 NetMsmqBinding 또는 MsmqIntegrationBinding의 선택한 `ReceiveErrorHandling` 속성 값과 관련됩니다.  
+ Windows Communication Foundation (WCF에서) (NetMsmqBinding 또는 MsmqIntegrationBinding과 함께 사용) 하는 경우 MSMQ 메시지를 사용 합니다. 이 추적은의 선택된 된 값은 관련이 `ReceiveErrorHandling` NetMsmqBinding 또는 MsmqIntegrationBinding의 속성입니다.  
   
  이 추적은 전체 시스템 오류를 의미하지는 않습니다. 그러나 메시지에서 선택한 포이즌 메시지를 처리하지 못했음을 나타냅니다. 참조 [포이즌 메시지 처리](http://go.microsoft.com/fwlink/?LinkID=99546) 경우 메시지가 포이즌이 되 고 적절히 처리 하도록 서비스를 구성 하는 방법에 대 한 자세한 내용은 합니다.  
   

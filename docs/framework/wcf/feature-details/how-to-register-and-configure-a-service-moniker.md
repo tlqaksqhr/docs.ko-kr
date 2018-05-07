@@ -1,36 +1,22 @@
 ---
 title: '방법: 서비스 모니커 등록 및 구성'
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - COM [WCF], configure service monikers
 - COM [WCF], register service monikers
 ms.assetid: e5e16c80-8a8e-4eef-af53-564933b651ef
-caps.latest.revision: 20
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 52b3ec27560ca2dc47b7951cb209f33f307fa7ea
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 1d245327c1e7d53de9a88c93ff0399d8e231a1df
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-register-and-configure-a-service-moniker"></a>방법: 서비스 모니커 등록 및 구성
-형식화된 계약이 있는 COM 응용 프로그램 내에서 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 서비스 모니커를 사용하려면 먼저 필요한 특성을 사용하는 형식을 COM에 등록하고 필요한 바인딩 구성을 사용하여 COM 응용 프로그램과 모니커를 구성해야 합니다.  
+형식화 된 계약이 있는 COM 응용 프로그램 내에서 Windows Communication Foundation (WCF) 서비스 모니커를 사용 하기 전에 필요한 특성 사용된 하는 형식을 COM에 등록 하며 필수 바인딩을 사용 하 여 COM 응용 프로그램과 모니커를 구성 합니다. 구성입니다.  
   
 ### <a name="to-register-the-required-attributed-types-with-com"></a>필요한 특성을 사용하는 형식을 COM에 등록하려면  
   
-1.  사용 하 여는 [ServiceModel Metadata 유틸리티 도구 (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) 도구에서 메타 데이터 계약을 검색 하는 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 서비스입니다. 이렇게 하면 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 클라이언트 어셈블리와 클라이언트 응용 프로그램 구성 파일에 대한 소스 코드가 생성됩니다.  
+1.  사용 하 여는 [ServiceModel Metadata 유틸리티 도구 (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) WCF 서비스에서 메타 데이터 계약을 검색 하는 도구입니다. 이 WCF 클라이언트 어셈블리와 클라이언트 응용 프로그램 구성 파일에 대 한 소스 코드를 생성합니다.  
   
 2.  어셈블리의 형식이 `ComVisible`로 표시되는지 확인합니다. 이렇게 하려면 Visual Studio 프로젝트의 AssemblyInfo.cs 파일에 다음 특성을 추가합니다.  
   
@@ -38,7 +24,7 @@ ms.lasthandoff: 04/28/2018
     [assembly: ComVisible(true)]  
     ```  
   
-3.  관리되는 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 클라이언트를 강력한 이름의 어셈블리로 컴파일합니다. 이렇게 하려면 암호화된 키 쌍으로 서명해야 합니다. 자세한 내용은 참조 [강력한 이름으로 어셈블리 서명](http://go.microsoft.com/fwlink/?LinkId=94874) .NET 개발자 가이드에서.  
+3.  관리 되는 WCF 클라이언트를 어셈블리를 강력한 이름의 어셈블리를 컴파일하십시오. 이렇게 하려면 암호화된 키 쌍으로 서명해야 합니다. 자세한 내용은 참조 [강력한 이름으로 어셈블리 서명](http://go.microsoft.com/fwlink/?LinkId=94874) .NET 개발자 가이드에서.  
   
 4.  어셈블리 등록(Regasm.exe) 도구에 `/tlb` 옵션을 사용하여 어셈블리의 형식을 COM에 등록합니다.  
   
@@ -49,7 +35,7 @@ ms.lasthandoff: 04/28/2018
   
 ### <a name="to-configure-the-com-application-and-the-moniker-with-the-required-binding-configuration"></a>필요한 바인딩 구성을 사용하여 COM 응용 프로그램과 모니커를 구성하려면  
   
--   바인딩 정의 배치 (에 의해 생성 된는 [ServiceModel Metadata 유틸리티 도구 (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) 생성 된 클라이언트 응용 프로그램 구성 파일에서) 클라이언트 응용 프로그램의 구성 파일에 있습니다. 예를 들어 이름이 CallCenterClient.exe인 Visual Basic 6.0 실행 파일에 대해 실행 파일과 동일한 디렉터리 내의 CallCenterConfig.exe.config 파일에 구성을 저장해야 합니다. 이제 클라이언트 응용 프로그램에서 모니커를 사용할 수 있습니다. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서 제공하는 표준 바인딩 형식 중 하나를 사용하는 경우 바인딩 구성이 필요하지 않습니다.  
+-   바인딩 정의 배치 (에 의해 생성 된는 [ServiceModel Metadata 유틸리티 도구 (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) 생성 된 클라이언트 응용 프로그램 구성 파일에서) 클라이언트 응용 프로그램의 구성 파일에 있습니다. 예를 들어 이름이 CallCenterClient.exe인 Visual Basic 6.0 실행 파일에 대해 실행 파일과 동일한 디렉터리 내의 CallCenterConfig.exe.config 파일에 구성을 저장해야 합니다. 이제 클라이언트 응용 프로그램에서 모니커를 사용할 수 있습니다. 참고 하는 표준 바인딩 WCF에서 제공 하는 형식 중 하나를 사용 하는 경우 바인딩 구성이 필요 하지 않습니다.  
   
      다음 형식이 등록됩니다.  
   

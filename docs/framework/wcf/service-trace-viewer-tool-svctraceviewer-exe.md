@@ -1,27 +1,15 @@
 ---
-title: "Service Trace Viewer 도구(SvcTraceViewer.exe)"
-ms.custom: 
+title: Service Trace Viewer 도구(SvcTraceViewer.exe)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 9027efd3-df8d-47ed-8bcd-f53d55ed803c
-caps.latest.revision: "55"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 7526f5cda302618b2f240e5ae1c126e60b9ab5e6
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
-ms.translationtype: MT
+ms.openlocfilehash: d9cd87bba52297d37683127ece3dd9c31e9a9a70
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="service-trace-viewer-tool-svctraceviewerexe"></a>Service Trace Viewer 도구(SvcTraceViewer.exe)
-[!INCLUDE[indigo1](../../../includes/indigo1-md.md)] Service Trace Viewer 도구를 사용하여 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]에서 생성한 진단 추적을 분석할 수 있습니다. Service Trace Viewer는 로그의 추적 메시지를 쉽게 병합하고, 보고, 필터링하는 방법을 제공하므로 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 서비스 문제를 진단하고, 복구하며, 확인할 수 있습니다.  
+Windows Communication Foundation (WCF) Service Trace Viewer 도구를 사용 하면 분석에서 생성 되는 진단 추적 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]합니다. Service Trace Viewer는 로그의 추적 메시지를 쉽게 병합하고, 보고, 필터링하는 방법을 제공하므로 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 서비스 문제를 진단하고, 복구하며, 확인할 수 있습니다.  
   
 ## <a name="configuring-tracing"></a>추적 구성  
  진단 추적은 응용 프로그램을 실행하는 동안 발생하는 상황을 보여 주는 정보를 제공합니다. 이름에서 알 수 있듯이 소스에서 대상까지의 작업뿐 아니라 중간 지점의 작업도 추적할 수 있습니다.  
@@ -272,7 +260,7 @@ ms.lasthandoff: 01/19/2018
   
 4.  왼쪽의 트리 뷰에는 1단계에서 선택한 추적 레코드의 구조가 표시됩니다. 조건을 만들려는 요소를 찾으십시오. 이 예제에서는 XPath에 있을 것으로 ThreadID 찾습니다: /E2ETraceEvent/System/Execution/@ThreadID 노드. 트리 뷰에서 ThreadID 특성을 두 번 클릭합니다. 이는 대화 상자의 오른쪽에 있는 특성에 대한 식을 만듭니다.  
   
-5.  스레드 ID 조건에 대한 매개 변수 필드를 없음에서 ‘{0}’으로 변경합니다. 이 단계를 통해 필터가 적용될 때 ThreadID 값이 구성되도록 할 수 있습니다. 필터 적용 방법 단원을 참조하십시오. 매개 변수는 4개까지 정의할 수 있습니다. 조건은 OR 연산자를 사용하여 결합됩니다.  
+5.  스레드 Id 조건에 대 한 매개 변수 필드를 없음에서 변경 '{0}'. 이 단계를 통해 필터가 적용될 때 ThreadID 값이 구성되도록 할 수 있습니다. 필터 적용 방법 단원을 참조하십시오. 매개 변수는 4개까지 정의할 수 있습니다. 조건은 OR 연산자를 사용하여 결합됩니다.  
   
 6.  클릭 **확인** 여 필터를 만듭니다.  
   
@@ -297,7 +285,7 @@ ms.lasthandoff: 01/19/2018
   
 2.  클릭 **지금 필터**, 작업의 결과 확인 합니다.  
   
- 필터에서 여러 매개 변수를 사용 하는 경우 입력으로 사용 하 여에서 구분 기호로 ';'는 **찾을 내용** 필드입니다. 예를 들어, ‘1;findValue;text’ 문자열은 세 개의 매개 변수를 정의합니다. 뷰어는 ‘1’을 필터의 {0} 매개 변수에 적용합니다. ‘findValue’ 및 ‘text’는 각각 {1} 및 {2}에 적용됩니다.  
+ 필터에서 여러 매개 변수를 사용 하는 경우 입력으로 사용 하 여에서 구분 기호로 ';'는 **찾을 내용** 필드입니다. 예를 들어, ‘1;findValue;text’ 문자열은 세 개의 매개 변수를 정의합니다. '1'을 적용 하는 뷰어는 {0} 필터의 매개 변수입니다. 'findValue' 및 'text' 적용 되는 {1} 및 {2} 각각.  
   
 ###### <a name="sharing-custom-filters"></a>사용자 지정 필터 공유  
  여러 세션 및 여러 사용자 간에 사용자 지정 필터를 공유할 수 있습니다. 필터를 정의 파일로 내보내고, 다른 위치에서 이 파일을 가져올 수 있습니다.  

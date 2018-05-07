@@ -1,14 +1,6 @@
 ---
-title: "ICLRRuntimeHost::GetCurrentAppDomainId 메서드"
-ms.custom: 
+title: ICLRRuntimeHost::GetCurrentAppDomainId 메서드
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICLRRuntimeHost.GetCurrentAppDomainId
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: 33800475-7815-4976-8aca-a1038761a2ef
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 5e4e682ae71512e24d91ea7e4e12a8a2dd70f1de
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: cbe6ac3c9f03de2224f933a7e44325f578ded48b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="iclrruntimehostgetcurrentappdomainid-method"></a>ICLRRuntimeHost::GetCurrentAppDomainId 메서드
 숫자 식별자를 가져옵니다는 <xref:System.AppDomain> 현재 실행 중인 합니다.  
@@ -54,7 +42,7 @@ HRESULT GetCurrentAppDomainId(
   
 |HRESULT|설명|  
 |-------------|-----------------|  
-|S_OK|`GetCurrentAppDomainId`성공적으로 반환 합니다.|  
+|S_OK|`GetCurrentAppDomainId` 성공적으로 반환 합니다.|  
 |HOST_E_CLRNOTAVAILABLE|공용 언어 런타임 (CLR) 프로세스에 로드 되지 않았습니다 또는 CLR 중인 상태를 관리 코드를 실행 하거나 호출을 처리할 수 없습니다.|  
 |HOST_E_TIMEOUT|호출 시간이 초과 되었습니다.|  
 |HOST_E_NOT_OWNER|호출자에 게 잠금을 소유 하지 않습니다.|  
@@ -71,7 +59,7 @@ HRESULT GetCurrentAppDomainId(
   
  **라이브러리:** MSCorEE.dll에 리소스로 포함  
   
- **.NET framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>참고 항목  
  <xref:System.AppDomain>  

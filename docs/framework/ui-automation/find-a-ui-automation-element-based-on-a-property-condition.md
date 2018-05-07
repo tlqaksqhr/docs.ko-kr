@@ -1,13 +1,6 @@
 ---
-title: "속성 조건을 기반으로 UI 자동화 요소 찾기"
-ms.custom: 
+title: 속성 조건을 기반으로 UI 자동화 요소 찾기
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-bcl
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -15,16 +8,14 @@ helpviewer_keywords:
 - elements, finding by property conditions
 - UI Automation, finding elements by property conditions
 ms.assetid: 3acaee5a-6ce8-4c3e-81c8-67e59eb74477
-caps.latest.revision: "19"
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: eda1d8baee9bb45dfb99c0368914a67b97cc10e7
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: da455b10425c9e0b20a644679358dde469ed92e5
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="find-a-ui-automation-element-based-on-a-property-condition"></a>속성 조건을 기반으로 UI 자동화 요소 찾기
 > [!NOTE]
@@ -32,7 +23,7 @@ ms.lasthandoff: 01/19/2018
   
  이 항목에서는 내에서 요소를 찾는 방법을 보여 주는 예제 코드는 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 트리 특정 속성 또는 속성에 기반 합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 예제에서는 속성 조건 집합이 관심 있는 특정 요소 (또는 요소)를 식별 하는에 지정 된 <xref:System.Windows.Automation.AutomationElement> 트리 합니다. 일치 하는 모든 요소에 대 한 검색 된 다음 수행는 <xref:System.Windows.Automation.AutomationElement.FindAll%2A> 일련의 통합 하는 메서드 <xref:System.Windows.Automation.AndCondition> 부울 연산 일치 하는 요소 수를 제한 합니다.  
   
 > [!NOTE]

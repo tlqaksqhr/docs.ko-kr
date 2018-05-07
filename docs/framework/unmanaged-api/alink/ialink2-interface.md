@@ -1,30 +1,18 @@
 ---
-title: "IALink2 인터페이스"
-ms.custom: 
+title: IALink2 인터페이스
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 f1_keywords:
 - IALink2
 helpviewer_keywords:
 - IALink2 interface
 ms.assetid: fba62a55-36bd-401e-bcd2-5be8e2d34891
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: de0ff924e2c9ae20b9796fbcae2df0fd858295dd
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 0ddc2f50b42ba8adf7aa5f4d7fa0dc68469e7344
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ialink2-interface"></a>IALink2 인터페이스
 보완은 [IALink 인터페이스](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md) 와 같은 최신 메타 데이터 인터페이스에 작동 하는 메서드를 선언 하 여 [IMetaDataEmit2 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)합니다. 또한 IALink2 원래 IALink 인터페이스를 통해 추가적인 사용 유연성을 제공 하는 메서드를 선언 합니다.  

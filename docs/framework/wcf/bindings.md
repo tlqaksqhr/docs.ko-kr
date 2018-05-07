@@ -1,31 +1,17 @@
 ---
-title: "Windows Communication Foundation 바인딩"
-ms.custom: 
+title: Windows Communication Foundation 바인딩
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - bindings [WCF]
 ms.assetid: 845df323-be53-4848-92ef-ba67a406484d
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: e878aadf1c7df6042323c008ff52a4be8a9d817f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: d40faff2734095af42f94c60c630dde8494e5975
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="windows-communication-foundation-bindings"></a>Windows Communication Foundation 바인딩
-바인딩은 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 서비스 끝점이 다른 끝점과 통신하는 방법을 지정합니다. 가장 기본적으로 바인딩은 HTTP 또는 TCP와 같은 사용할 전송을 지정해야 합니다. 바인딩을 통해 보안 및 트랜잭션 지원과 같은 다른 특징을 설정할 수도 있습니다.  
+바인딩은은 Windows Communication Foundation (WCF) 서비스 끝점이 다른 끝점과 통신 하는 방법을 지정 합니다. 가장 기본적으로 바인딩은 HTTP 또는 TCP와 같은 사용할 전송을 지정해야 합니다. 바인딩을 통해 보안 및 트랜잭션 지원과 같은 다른 특징을 설정할 수도 있습니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
  [WCF 바인딩 개요](../../../docs/framework/wcf/bindings-overview.md)  

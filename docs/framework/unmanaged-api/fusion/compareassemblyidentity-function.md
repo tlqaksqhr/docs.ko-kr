@@ -1,14 +1,6 @@
 ---
-title: "CompareAssemblyIdentity 함수"
-ms.custom: 
+title: CompareAssemblyIdentity 함수
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - CompareAssemblyIdentity
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: 8b364ae1-8efa-4744-a7da-81fd093d84d6
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 266868a65a0db75b57d46d92a469b4b6ceaa88e9
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 1b48adcb8e9de49a312af77c8a9b80a07455ebfe
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compareassemblyidentity-function"></a>CompareAssemblyIdentity 함수
 동일한 지 여부를 확인 하려면 두 개의 어셈블리 id를 비교 합니다.  
@@ -71,10 +59,10 @@ STDAPI CompareAssemblyIdentity (
  [out] [AssemblyComparisonResult](../../../../docs/framework/unmanaged-api/fusion/assemblycomparisonresult-enumeration.md) 비교에 대 한 자세한 정보를 포함 하는 열거형입니다.  
   
 ## <a name="return-value"></a>반환 값  
- `pfEquivalent`두 명의 어셈블리가 동일한 지 여부를 나타내는 부울 값을 반환 합니다. `pResult`중 하나를 반환 된 `AssemblyComparisonResult` 값의 값에 대 한 보다 자세한 이유와 함께을 `pfEquivalent`합니다.  
+ `pfEquivalent` 두 명의 어셈블리가 동일한 지 여부를 나타내는 부울 값을 반환 합니다. `pResult` 중 하나를 반환 된 `AssemblyComparisonResult` 값의 값에 대 한 보다 자세한 이유와 함께을 `pfEquivalent`합니다.  
   
 ## <a name="remarks"></a>설명  
- `CompareAssemblyIdentity`확인 여부 `pwzAssemblyIdentity1` 및 `pwzAssemblyIdentity2` 동일 합니다. `pfEquivalent`로 설정 되어 `true` 다음 조건 중 하나 이상:  
+ `CompareAssemblyIdentity` 확인 여부 `pwzAssemblyIdentity1` 및 `pwzAssemblyIdentity2` 동일 합니다. `pfEquivalent` 로 설정 되어 `true` 다음 조건 중 하나 이상:  
   
 -   두 어셈블리 id는 동일 합니다. 강력한 이름의 어셈블리 어셈블리일 어셈블리 이름, 버전, 공개 키 토큰 및 culture 동일 하 게 됩니다. 간단한 이름의 어셈블리일 어셈블리 이름 및 문화권의 일치 내용이 해당 됩니다.  
   
@@ -93,7 +81,7 @@ STDAPI CompareAssemblyIdentity (
   
  **라이브러리:** MsCorEE.dll에 리소스로 포함  
   
- **.NET framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>참고 항목  
  [Fusion 전역 정적 함수](../../../../docs/framework/unmanaged-api/fusion/fusion-global-static-functions.md)  

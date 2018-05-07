@@ -1,12 +1,6 @@
 ---
-title: "Visual Basic의 범위"
-ms.custom: 
+title: Visual Basic의 범위
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - module scope [Visual Basic]
 - scope [Visual Basic], levels
@@ -21,14 +15,11 @@ helpviewer_keywords:
 - scope [Visual Basic], Visual Basic
 - procedure scope [Visual Basic]
 ms.assetid: 208106fe-79c9-4eec-93c6-55f08548895f
-caps.latest.revision: "17"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: a9bfda19b9f5ee96d45a0322541b35dfab7635d7
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: d6692379626d787b728d6e92bd447c4a96e6680e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="scope-in-visual-basic"></a>Visual Basic의 범위
 *범위* 의 선언 된 요소는 집합을 통해 사용할 수 있도록 하거나 이름을 한정 하지 않고 변수를 참조할 수 있는 모든 코드는 [Imports 문 (.NET Namespace 및 형식)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)합니다. 요소는 다음 수준 중 하나에서 범위를 가질 수 있습니다.  
@@ -61,7 +52,7 @@ ms.lasthandoff: 11/21/2017
   
 -   `Do` 및 `Loop`  
   
--   `For`[`Each`] 및`Next`  
+-   `For` [`Each`] 및 `Next`  
   
 -   `If` 및 `End If`  
   
@@ -127,7 +118,7 @@ Public strMsg As String
   
  Namespace 범위는 중첩 된 네임 스페이스를 포함 합니다. 네임 스페이스 내에서 사용할 수 있는 요소를 해당 네임 스페이스 내에 중첩 된 모든 네임 스페이스 내에서 사용할 수 이기도 합니다.  
   
- 프로젝트에 포함 하지 않는 경우 [Namespace 문](../../../../visual-basic/language-reference/statements/namespace-statement.md)s, 프로젝트의 모든 항목은 동일한 네임 스페이스에 있습니다. 이 예에서 네임 스페이스 범위 프로젝트 범위로 간주 될 수 있습니다. `Public`모듈, 클래스 또는 구조체의 요소는 해당 프로젝트를 참조 하는 모든 프로젝트에 사용할 수도 있습니다.  
+ 프로젝트에 포함 하지 않는 경우 [Namespace 문](../../../../visual-basic/language-reference/statements/namespace-statement.md)s, 프로젝트의 모든 항목은 동일한 네임 스페이스에 있습니다. 이 예에서 네임 스페이스 범위 프로젝트 범위로 간주 될 수 있습니다. `Public` 모듈, 클래스 또는 구조체의 요소는 해당 프로젝트를 참조 하는 모든 프로젝트에 사용할 수도 있습니다.  
   
 ## <a name="choice-of-scope"></a>범위 선택  
  변수를 선언 해야 점만 기억 한다면 다음 사항을 범위를 선택 합니다.  

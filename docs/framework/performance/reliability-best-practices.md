@@ -1,13 +1,6 @@
 ---
-title: "최선의 안정성 구현 방법"
-ms.custom: 
+title: 최선의 안정성 구현 방법
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - marking locks
 - rebooting databases
@@ -45,16 +38,13 @@ helpviewer_keywords:
 - STA-dependent features
 - fibers
 ms.assetid: cf624c1f-c160-46a1-bb2b-213587688da7
-caps.latest.revision: "11"
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ad218e8f87c2a04a9df6f67a918097de20296d0c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: d6f29d15297fc7faff6bb3bb07ee535647c2bb7a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="reliability-best-practices"></a>최선의 안정성 구현 방법
 다음 안정성 규칙은 SQL Server 중심이지만, 호스트 기반 서버 응용 프로그램에도 적용됩니다. SQL Server와 같은 서버에서 리소스가 누출되지 않고 중단되지 않는 것이 매우 중요합니다.  그러나 이 작업은 개체의 상태를 변경하는 모든 메서드에 대해 취소 코드를 작성하여 수행할 수 없습니다.  취소 코드를 사용하여 모든 위치에서 모든 오류로부터 복구되는 100% 신뢰할 수 있는 관리 코드를 작성하는 것이 목표가 아닙니다.  성공 가능성이 희박한 매우 까다로운 작업입니다.  CLR(공용 언어 런타임)에서는 완벽한 코드를 작성할 수 있는 관리 코드가 제공된다고 확실히 보장할 수 없습니다.  ASP.NET과 달리 SQL Server에서는 허용할 수 없을 정도로 오랜 기간 동안 데이터베이스를 작동 중지하지 않고는 재활용할 수 없는 단 하나의 프로세스만 사용합니다.  
@@ -258,7 +248,7 @@ public static MyClass SingletonProperty
  문자열 형식 메서드의 <xref:System.FormatException>과 같이 예외가 throw될 것으로 예상하는 특정 형식의 예외를 catch하도록 모든 예외를 catch하는 위치를 모두 변경합니다.  그러면 catch 블록이 예기치 않은 예외에 대해 실행되지 않으며 예기치 않은 예외를 catch하여 코드에서 버그를 숨기지 않게 할 수 있습니다.  일반적으로 규칙은 라이브러리 코드의 예외를 처리하지 않습니다(예외를 catch해야 하는 코드가 호출하는 코드의 디자인 결함을 나타낼 수 있음).  경우에 따라 더 많은 데이터를 제공하기 위해 예외를 catch하여 여러 다른 예외 형식을 throw할 수 있습니다.  이 경우 중첩 예외를 사용하면 새로운 예외의 <xref:System.Exception.InnerException%2A> 속성에 실패의 실제 이유를 저장할 수 있습니다.  
   
 #### <a name="code-analysis-rule"></a>코드 분석 규칙  
- 관리 코드에서 모든 개체를 catch하거나 모든 예외를 catch하는 모든 catch 블록을 검토합니다.  즉, C#에서는 `catch` {} 및 `catch(Exception)` {} 둘 다로 플래그를 지정하는 것입니다.  예외 형식을 매우 구체적으로 만들거나 코드를 검토하여 예기치 않은 예외 형식을 catch하는 경우 잘못된 방식으로 작동하지 않게 합니다.  
+ 관리 코드에서 모든 개체를 catch하거나 모든 예외를 catch하는 모든 catch 블록을 검토합니다.  C#의 경우, 즉, 둘 다에 플래그를 지정 `catch` {} 및 `catch(Exception)` {}합니다.  예외 형식을 매우 구체적으로 만들거나 코드를 검토하여 예기치 않은 예외 형식을 catch하는 경우 잘못된 방식으로 작동하지 않게 합니다.  
   
 ### <a name="do-not-assume-a-managed-thread-is-a-win32-thread--it-is-a-fiber"></a>관리되는 스레드가 Win32 스레드라고 가정하지 않음 - 파이버임  
  관리되는 스레드 로컬 저장소를 사용하는 것은 가능하지만, 관리되지 않는 스레드 로컬 저장소를 사용하지 않거나 코드가 현재 운영 체제 스레드에서 다시 실행된다고 가정할 수 있습니다.  스레드 로캘과 같은 설정은 변경하지 않습니다.  플랫폼 호출을 통해 `InitializeCriticalSection` 또는 `CreateMutex`를 호출하지 마세요. 잠금을 시작하는 운영 체제 스레드가 잠금을 종료해야 하기 때문입니다.  파이버를 사용할 때는 해당되지 않으므로, Win32 중요 섹션과 뮤텍스를 SQL에서 직접 사용할 수 없습니다.  관리되는 <xref:System.Threading.Mutex> 클래스에서는 이러한 스레드 선호도 문제를 처리하지 않습니다.  

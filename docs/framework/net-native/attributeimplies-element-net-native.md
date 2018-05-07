@@ -1,24 +1,14 @@
 ---
-title: "&lt;AttributeImplies&gt; 요소(.NET 네이티브)"
-ms.custom: 
+title: '&lt;AttributeImplies&gt; 요소(.NET 네이티브)'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 82db7193-a860-418b-84fc-fff2fdf2e025
-caps.latest.revision: "7"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 92a886ab09978aef6694c37d74af49b27c37c6c4
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 960ee5716b9760ab82628a8d21728cd6675e5215
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ltattributeimpliesgt-element-net-native"></a>&lt;AttributeImplies&gt; 요소(.NET 네이티브)
 포함 특성이 적용되는 코드 요소에 대한 정책을 정의합니다.  
@@ -39,7 +29,7 @@ ms.lasthandoff: 12/22/2017
 ```  
   
 ## <a name="attributes-and-elements"></a>특성 및 요소  
- 다음 단원에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
+ 다음 섹션에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
   
 ### <a name="attributes"></a>특성  
   

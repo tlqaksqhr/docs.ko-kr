@@ -1,31 +1,17 @@
 ---
 title: 데이터 계약 Serializer에서 지원하는 형식
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - serialization [WCF], supported types
 ms.assetid: 7381b200-437a-4506-9556-d77bf1bc3f34
-caps.latest.revision: 24
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: c53a11408254dc3c5f2abfb7d5d45305d3429280
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 9a6279b9850ce5cd3d23cffeaf233dec1b360deb
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="types-supported-by-the-data-contract-serializer"></a>데이터 계약 Serializer에서 지원하는 형식
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 는 <xref:System.Runtime.Serialization.DataContractSerializer> 를 기본 serialization 엔진으로 사용하여 데이터를 XML로 변환하고 XML을 다시 데이터로 변환합니다. <xref:System.Runtime.Serialization.DataContractSerializer> 는 *데이터 계약* 형식을 serialize하도록 디자인되었습니다. 그러나 암시적 데이터 계약이 있는 것으로 간주될 수 있는 여러 가지 다른 형식을 지원합니다. 다음은 serialize할 수 있는 형식의 전체 목록입니다.  
+Windows Communication Foundation (WCF) 사용 하 여는 <xref:System.Runtime.Serialization.DataContractSerializer> 데이터를 XML로 변환 하 고 XML을 다시 데이터로 변환 하려면 기본 serialization 엔진으로 합니다. <xref:System.Runtime.Serialization.DataContractSerializer> 는 *데이터 계약* 형식을 serialize하도록 디자인되었습니다. 그러나 암시적 데이터 계약이 있는 것으로 간주될 수 있는 여러 가지 다른 형식을 지원합니다. 다음은 serialize할 수 있는 형식의 전체 목록입니다.  
   
 -   매개 변수를 사용하지 않는 생성자가 있는 모든 공개 형식  
   
@@ -51,13 +37,13 @@ ms.lasthandoff: 04/28/2018
   
 -   <xref:System.Runtime.Serialization.ISerializable> 를 사용하여 부분 신뢰 코드에서 <xref:System.Runtime.Serialization.DataContractSerializer> 을 구현하는 형식을 serialize 또는 deserialize하려면 <xref:System.Security.Permissions.SecurityPermissionAttribute.SerializationFormatter%2A> 및 <xref:System.Security.Permissions.SecurityPermissionAttribute.UnmanagedCode%2A> 권한이 필요합니다.  
   
--   실행 하는 경우 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 코드에서 [부분 신뢰](../../../../docs/framework/wcf/feature-details/partial-trust.md) 모드, serialization 및 deserialization `readonly` 필드 (둘 다 `public` 및 `private`) 지원 되지 않습니다. 이는 생성된 IL을 확인할 수 없어서 상승된 권한이 필요하기 때문입니다.  
+-   WCF 코드를 실행 중일 때 [부분 신뢰](../../../../docs/framework/wcf/feature-details/partial-trust.md) 모드, serialization 및 deserialization `readonly` 필드 (둘 다 `public` 및 `private`) 지원 되지 않습니다. 이는 생성된 IL을 확인할 수 없어서 상승된 권한이 필요하기 때문입니다.  
   
 -   <xref:System.Runtime.Serialization.DataContractSerializer> 및 <xref:System.Xml.Serialization.XmlSerializer> 는 모두 부분 신뢰 환경에서 지원됩니다. 그러나 <xref:System.Runtime.Serialization.DataContractSerializer> 의 사용은 다음 조건에 따라 결정됩니다.  
   
     -   serialize할 수 있는 모든 `[DataContract]` 형식은 public이어야 합니다.  
   
-    -   `[DataMember]` 형식의 serialize할 수 있는 모든 `[DataContract]` 필드 또는 속성은 public이고 읽기/쓰기가 가능해야 합니다. `readonly` 필드의 serialization 및 deserialization은 부분 신뢰 응용 프로그램에서 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 를 실행하는 경우 지원되지 않습니다.  
+    -   `[DataMember]` 형식의 serialize할 수 있는 모든 `[DataContract]` 필드 또는 속성은 public이고 읽기/쓰기가 가능해야 합니다. Serialization 및 deserialization `readonly` 필드에는 부분적으로 신뢰할 수 있는 응용 프로그램에서 WCF를 실행 하는 경우 지원 되지 않습니다.  
   
     -   `[Serializable]` / `ISerializable]` 프로그래밍 모델은 부분 신뢰 환경에서 지원 되지 않습니다.  
   
@@ -76,7 +62,7 @@ ms.lasthandoff: 04/28/2018
   
 -   구조체와 클래스 모두 지원됩니다.  
   
--   <xref:System.Runtime.Serialization.DataContractSerializer> 는 <xref:System.Xml.Serialization.XmlSerializer> 및 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 웹 서비스에서 사용하는 프로그래밍 모델을 지원하지 않습니다. 특히 <xref:System.Xml.Serialization.XmlElementAttribute> 및 <xref:System.Xml.Serialization.XmlAttributeAttribute>와 같은 특성을 지원하지 않습니다. 이 프로그래밍 모델을 지원하려면 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 를 전환하여 <xref:System.Xml.Serialization.XmlSerializer> 대신 <xref:System.Runtime.Serialization.DataContractSerializer>를 사용해야 합니다.  
+-   <xref:System.Runtime.Serialization.DataContractSerializer> 는 <xref:System.Xml.Serialization.XmlSerializer> 및 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 웹 서비스에서 사용하는 프로그래밍 모델을 지원하지 않습니다. 특히 <xref:System.Xml.Serialization.XmlElementAttribute> 및 <xref:System.Xml.Serialization.XmlAttributeAttribute>와 같은 특성을 지원하지 않습니다. 에이 프로그래밍 모델에 대 한 지원을 사용 하려면 WCF 사용 하도록 전환 해야 합니다는 <xref:System.Xml.Serialization.XmlSerializer> 대신는 <xref:System.Runtime.Serialization.DataContractSerializer>합니다.  
   
 -   <xref:System.DBNull> 형식은 특수한 방법으로 처리됩니다. singleton 형식이며, deserialization 시 deserializer가 singleton 제약 조건을 적용하고 singleton 인스턴스에 대한 모든 `DBNull` 참조를 가리킵니다. `DBNull` 은 serialize 가능한 형식이므로 <xref:System.Security.Permissions.SecurityPermissionAttribute.SerializationFormatter%2A> 권한이 필요합니다.  
   

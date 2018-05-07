@@ -1,14 +1,6 @@
 ---
-title: "ICLRTask::Reset 메서드"
-ms.custom: 
+title: ICLRTask::Reset 메서드
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICLRTask.Reset
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: 1bfb5d3a-0ffd-4bb4-9bf6-aec00cb675b7
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 8dc37f47fc01d73ff499ef974a2e11345a95286a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 29267d032f5e38e352592edc50dbded68aaa9f61
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="iclrtaskreset-method"></a>ICLRTask::Reset 메서드
 호스트가 완료 되는 작업을 CLR의 현재 다시 사용할 수 있도록 공용 언어 런타임 (CLR) 알립니다 [ICLRTask](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md) 인스턴스를 다른 작업을 나타내는입니다.  
@@ -56,7 +44,7 @@ HRESULT Reset (
   
 |HRESULT|설명|  
 |-------------|-----------------|  
-|S_OK|`Reset`성공적으로 반환 합니다.|  
+|S_OK|`Reset` 성공적으로 반환 합니다.|  
 |HOST_E_CLRNOTAVAILABLE|CLR은 프로세스에 로드 되지 않았습니다 또는 CLR 중인 상태를 관리 코드를 실행 하거나 호출을 처리할 수 없습니다. 성공적으로|  
 |HOST_E_TIMEOUT|호출 시간이 초과 되었습니다.|  
 |HOST_E_NOT_OWNER|호출자에 게 잠금을 소유 하지 않습니다.|  
@@ -76,7 +64,7 @@ HRESULT Reset (
   
 5.  호스트를 호출 하 여 작업을 소멸 시킵니다. `ICLRTask::ExitTask`합니다.  
   
- `Reset`두 가지 방법으로이 시나리오를 변경합니다. 호스트에서는 위의 5 단계에서 `Reset` 클린 상태로 작업을 다시 설정 하려면 다음의 `ICLRTask` 에서 연결 된 인스턴스 [IHostTask](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md) 인스턴스. 원하는 경우 호스트 캐시할 수도 있습니다는 `IHostTask` 인스턴스 다시 사용할 수 있도록 합니다. 위의 1 단계에서 공용 언어 런타임은 가져옵니다 재활용 된 `ICLRTask` 새 인스턴스를 만드는 대신 캐시에서 합니다.  
+ `Reset` 두 가지 방법으로이 시나리오를 변경합니다. 호스트에서는 위의 5 단계에서 `Reset` 클린 상태로 작업을 다시 설정 하려면 다음의 `ICLRTask` 에서 연결 된 인스턴스 [IHostTask](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md) 인스턴스. 원하는 경우 호스트 캐시할 수도 있습니다는 `IHostTask` 인스턴스 다시 사용할 수 있도록 합니다. 위의 1 단계에서 공용 언어 런타임은 가져옵니다 재활용 된 `ICLRTask` 새 인스턴스를 만드는 대신 캐시에서 합니다.  
   
  이 방법은 호스트에 다시 사용할 수 있는 작업자 태스크의 풀도 있는 경우 제대로 작동 합니다. 호스트 중 하나를 제거 하면 해당 `IHostTask` 인스턴스를 해당 제거 됩니다 `ICLRTask` 호출 하 여 `ExitTask`합니다.  
   
@@ -87,7 +75,7 @@ HRESULT Reset (
   
  **라이브러리:** MSCorEE.dll에 리소스로 포함  
   
- **.NET framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>참고 항목  
  [ICLRTask 인터페이스](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md)  

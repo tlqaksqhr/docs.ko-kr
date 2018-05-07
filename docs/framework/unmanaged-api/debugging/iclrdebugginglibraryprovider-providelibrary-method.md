@@ -1,14 +1,6 @@
 ---
-title: "ICLRDebuggingLibraryProvider::ProvideLibrary 메서드"
-ms.custom: 
+title: ICLRDebuggingLibraryProvider::ProvideLibrary 메서드
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICLRDebuggingLibraryProvider.ProvideLibrary Method
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: 86f06245-9517-49be-8d8c-ca5deaf34c02
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: cf6860a616312504e3d23177734cb532405bd714
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: b0644258eb1622f388f55d0657c8922079fe4dc1
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="iclrdebugginglibraryproviderprovidelibrary-method"></a>ICLRDebuggingLibraryProvider::ProvideLibrary 메서드
 라이브러리 공급자 콜백 인터페이스를 공용 언어 런타임 (CLR) 버전별 디버깅 라이브러리를 찾아서에 로드할 요청 수를 가져옵니다.  
@@ -71,7 +59,7 @@ HRESULT ProvideLibrary(
 ## <a name="exceptions"></a>예외  
   
 ## <a name="remarks"></a>설명  
- `ProvideLibrary`디버거를 mscordbi.dll 있는 등 특정 CLR 파일을 디버깅에 필요한 모듈을 제공할 수 있습니다. 모듈 핸들에 대 한 호출 될 때까지 유효한 상태를 유지 해야는 [iclrdebugging:: Canunloadnow](../../../../docs/framework/unmanaged-api/debugging/iclrdebugging-canunloadnow-method.md) 해제 될 수 있습니다, 이때는 핸들을 해제 해야 하는 호출자의 메서드 나타냅니다.  
+ `ProvideLibrary` 디버거를 mscordbi.dll 있는 등 특정 CLR 파일을 디버깅에 필요한 모듈을 제공할 수 있습니다. 모듈 핸들에 대 한 호출 될 때까지 유효한 상태를 유지 해야는 [iclrdebugging:: Canunloadnow](../../../../docs/framework/unmanaged-api/debugging/iclrdebugging-canunloadnow-method.md) 해제 될 수 있습니다, 이때는 핸들을 해제 해야 하는 호출자의 메서드 나타냅니다.  
   
  디버거를 찾거나 디버깅 모듈을 확보 하려면 사용 가능한 모든 방법을 사용할 수 있습니다.  
   
@@ -87,7 +75,7 @@ HRESULT ProvideLibrary(
   
  **라이브러리:** CorGuids.lib  
   
- **.NET framework 버전:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET framework 버전:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>참고 항목  
  [디버깅 인터페이스](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)  

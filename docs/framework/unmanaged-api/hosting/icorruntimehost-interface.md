@@ -1,14 +1,6 @@
 ---
-title: "ICorRuntimeHost 인터페이스"
-ms.custom: 
+title: ICorRuntimeHost 인터페이스
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICorRuntimeHost
 api_location:
@@ -22,17 +14,13 @@ helpviewer_keywords:
 ms.assetid: 4369533d-7834-4497-bc37-bfea0ad737b1
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 1280c49c2eea6a06eca10ebd8896b0722e321547
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: facc756061e7eb381abecc544ca4b15bfdde6343
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="icorruntimehost-interface"></a>ICorRuntimeHost 인터페이스
 시작 하 고를 만들고 기본 도메인에 액세스 하 고 프로세스에서 실행 중인 모든 도메인을 열거 하는 응용 프로그램 도메인을 구성 하려면 공용 언어 런타임 (CLR)를 명시적으로 중지할 호스트를 사용할 수 있는 메서드를 제공 합니다.  
@@ -46,7 +34,7 @@ ms.lasthandoff: 01/19/2018
 |[CloseEnum 메서드](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-closeenum-method.md)|도메인 목록의 시작 부분으로 다시 도메인 열거자를 설정 합니다.|  
 |[CreateDomain 메서드](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-createdomain-method.md)|응용 프로그램 도메인을 만듭니다. 호출자가 형식의 인터페이스 포인터를 받을 <xref:System._AppDomain> 형식의 인스턴스로 <xref:System.AppDomain?displayProperty=nameWithType>합니다.|  
 |[CreateDomainEx 메서드](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-createdomainex-method.md)|응용 프로그램 도메인을 만듭니다. 이 메서드를 사용 하면 호출자가 반환 된 추가 기능을 구성을 IAppDomainSetup 인스턴스를 전달 하 여 <xref:System._AppDomain> 인스턴스.|  
-|[CreateDomainSetup 메서드](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-createdomainsetup-method.md)|형식의 인터페이스 포인터를 가져옵니다 `IAppDomainSetup` 에 <xref:System.AppDomainSetup> 인스턴스. `IAppDomainSetup`만들기 전에 응용 프로그램 도메인의 측면을 구성 하는 메서드를 제공 합니다.|  
+|[CreateDomainSetup 메서드](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-createdomainsetup-method.md)|형식의 인터페이스 포인터를 가져옵니다 `IAppDomainSetup` 에 <xref:System.AppDomainSetup> 인스턴스. `IAppDomainSetup` 만들기 전에 응용 프로그램 도메인의 측면을 구성 하는 메서드를 제공 합니다.|  
 |[CreateEvidence 메서드](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-createevidence-method.md)|형식의 인터페이스 포인터를 가져옵니다 <xref:System.Security.Principal.IIdentity>, 보안 증명 정보에 전달할를 만들 호스트를 허용 하는 [CreateDomain](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-createdomain-method.md) 또는 [CreateDomainEx](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-createdomainex-method.md)합니다.|  
 |[CreateLogicalThreadState 메서드](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-createlogicalthreadstate-method.md)|사용하지 마십시오.|  
 |[CurrentDomain 메서드](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-currentdomain-method.md)|형식의 인터페이스 포인터를 가져옵니다 <xref:System._AppDomain> 현재 스레드에서 로드 도메인을 나타내는입니다.|  

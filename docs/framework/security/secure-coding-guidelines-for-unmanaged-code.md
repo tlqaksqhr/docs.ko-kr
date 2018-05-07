@@ -1,29 +1,19 @@
 ---
-title: "비관리 코드에 대한 보안 코딩 지침"
-ms.custom: 
+title: 비관리 코드에 대한 보안 코딩 지침
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - code security, unmanaged code
 - unmanaged code, securing
 - security [.NET Framework], unmanaged code
 - secure coding, unmanaged code
 ms.assetid: a8d15139-d368-4c9c-a747-ba757781117c
-caps.latest.revision: "13"
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: adbdd005bba9e7276a77f2e78c53be43fdceffae
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 60e293ac8c9100876aa5a524bb5dda04e9f4183f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="secure-coding-guidelines-for-unmanaged-code"></a>비관리 코드에 대한 보안 코딩 지침
 일부 라이브러리 코드는 비관리 코드(예: Win32와 같은 네이티브 코드 API)를 호출해야 합니다. 이는 관리 코드에 대한 보안 경계를 벗어나야 함을 의미하므로 주의해야 합니다. 코드가 보안 중립적인 경우 코드와 코드를 호출하는 다른 코드 둘 다에 비관리 코드 권한(<xref:System.Security.Permissions.SecurityPermission> 플래그가 지정된 <xref:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode> )이 있어야 합니다.  

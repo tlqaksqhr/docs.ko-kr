@@ -1,12 +1,6 @@
 ---
 title: / 연산자(Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb./
 helpviewer_keywords:
@@ -22,14 +16,11 @@ helpviewer_keywords:
 - / operator [Visual Basic]
 - math operators [Visual Basic]
 ms.assetid: 335e97f2-c434-439e-9064-76973a051101
-caps.latest.revision: 18
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 2f221e863725b9aeb0b3fa3219b3a881541e2be0
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 17eb3eddfae3cf7c818514a2fee20f646876a6ec
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="-operator-visual-basic"></a>/ 연산자(Visual Basic)
 두 숫자를 나누고 부동 소수점 결과 반환 합니다.  
@@ -42,10 +33,10 @@ expression1 / expression2
   
 ## <a name="parts"></a>요소  
  `expression1`  
- 필수 요소. 임의의 숫자 식입니다.  
+ 필수. 임의의 숫자 식입니다.  
   
  `expression2`  
- 필수 요소. 임의의 숫자 식입니다.  
+ 필수. 임의의 숫자 식입니다.  
   
 ## <a name="supported-types"></a>지원 형식  
  부호 없는 및 부동 소수점 형식을 포함 한 모든 숫자 형식 및 `Decimal`합니다.  
@@ -75,8 +66,8 @@ expression1 / expression2
 |피연산자 데이터 형식|동작 하는 경우 `expression2` 0|  
 |------------------------|---------------------------------------|  
 |부동 소수점 (`Single` 또는 `Double`)|무한대를 반환 (<xref:System.Double.PositiveInfinity> 또는 <xref:System.Double.NegativeInfinity>), 또는 <xref:System.Double.NaN> (숫자가 아님) 하는 경우 `expression1` 0입니다|  
-|`Decimal`|Throw<xref:System.DivideByZeroException>|  
-|정수 계열 (정수 또는 부호 없는)|정수 계열 형식 throw로 다시 변환 하려고 <xref:System.OverflowException> 정수 계열 형식 받아들일 수 있기 때문에 <xref:System.Double.PositiveInfinity>, <xref:System.Double.NegativeInfinity>, 또는<xref:System.Double.NaN>|  
+|`Decimal`|Throw <xref:System.DivideByZeroException>|  
+|정수 계열 (정수 또는 부호 없는)|정수 계열 형식 throw로 다시 변환 하려고 <xref:System.OverflowException> 정수 계열 형식 받아들일 수 있기 때문에 <xref:System.Double.PositiveInfinity>, <xref:System.Double.NegativeInfinity>, 또는 <xref:System.Double.NaN>|  
   
 > [!NOTE]
 >  `/` 연산자 될 수 있습니다 *오버 로드 된*, 클래스 또는 구조체 수 할의 동작에 해당 클래스 또는 구조체의 형식입니다. 이 연산자를 사용 하 여 이러한 클래스나 구조체에는 코드를 다시 정의 된 동작을 이해 해야 합니다. 자세한 내용은 참조 [연산자 프로시저](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)합니다.  

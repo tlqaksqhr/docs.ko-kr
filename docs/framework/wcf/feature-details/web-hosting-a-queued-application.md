@@ -1,29 +1,15 @@
 ---
 title: 대기 중인 응용 프로그램 웹 호스팅
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: c7a539fa-e442-4c08-a7f1-17b7f5a03e88
-caps.latest.revision: 18
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 7b7168d5283a0dbe1001631f855e493335576a80
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: f396ffadeca81d86d867842b63cad3c63d67ff3a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="web-hosting-a-queued-application"></a>대기 중인 응용 프로그램 웹 호스팅
-WAS(Windows Process Activation Service)는 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 서비스를 호스트하는 응용 프로그램이 포함된 작업자 프로세스의 활성화 및 수명을 관리합니다. WAS 프로세스 모델은 HTTP에 대한 종속성을 제거하여 HTTP 서버의 [!INCLUDE[iis601](../../../../includes/iis601-md.md)] 프로세스 모델을 일반화합니다. 이렇게 하면 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 서비스가 메시지 기반 활성화를 지원하고 지정된 컴퓨터에서 많은 응용 프로그램을 호스트하는 기능을 제공하는 호스팅 환경에서 HTTP 및 비-HTTP 프로토콜(예: net.msmq 및 msmq.formatname)을 모두 사용할 수 있습니다.  
+Windows 프로세스 활성화 서비스 (WAS) 정품 인증 및 Windows Communication Foundation (WCF) 서비스를 호스트 응용 프로그램을 포함 하는 작업자 프로세스의 수명을 관리 합니다. WAS 프로세스 모델은 HTTP에 대한 종속성을 제거하여 HTTP 서버의 [!INCLUDE[iis601](../../../../includes/iis601-md.md)] 프로세스 모델을 일반화합니다. WCF 서비스가 HTTP 및 HTTP가 아닌 프로토콜 예: net.msmq 및 msmq.formatname 메시지 기반 활성화를 지원 하 고 많은 수의 지정된 된 컴퓨터에서 응용 프로그램을 호스트 하는 기능을 제공 하는 호스팅 환경에서 모두 사용할 수 있습니다.  
   
  WAS에는 대기 중인 응용 프로그램에 사용된 큐 중 하나에 하나 이상의 메시지가 있을 경우 해당 응용 프로그램을 활성화하는 MSMQ(메시지 큐) 활성화 서비스가 포함됩니다. MSMQ 활성화 서비스는 기본적으로 자동 시작되는 NT 서비스입니다.  
   
@@ -49,7 +35,7 @@ WAS(Windows Process Activation Service)는 [!INCLUDE[indigo1](../../../../includ
  MSMQ 활성화 서비스는 NETWORK SERVICE로 실행됩니다. 큐를 모니터링하여 응용 프로그램을 활성화하는 서비스입니다. 큐에서 응용 프로그램을 활성화하려면 큐가 ACL(액세스 제어 목록)에서 메시지를 피킹할 NETWORK SERVICE 권한을 제공해야 합니다.  
   
 ### <a name="poison-messaging"></a>포이즌 메시징  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]의 포이즌 메시지 처리는 메시지가 포이즌된 것을 검색할 뿐만 아니라 사용자 구성을 기반으로 처리를 선택하는 채널에 의해 처리됩니다. 따라서 큐에 하나의 메시지가 있습니다. 웹에 호스트된 응용 프로그램은 연속 시도를 중단하며 메시지가 다시 시도 큐로 이동합니다. 다시 시도 주기 지연에 지정된 시점에서 다시 시도할 메시지가 다시 시도 큐에서 기본 큐로 이동합니다. 그러나 이 경우 대기 중인 채널이 활성 상태여야 합니다. WAS에서 응용 프로그램을 재활용하는 경우 다른 메시지가 기본 큐에 도착하여 대기 중인 응용 프로그램을 활성화할 때까지 메시지가 다시 시도 큐에 남아 있습니다. 이 경우의 해결 방법은 수동으로 메시지를 다시 시도 큐에서 기본 큐로 이동하여 응용 프로그램을 다시 활성화하는 것입니다.  
+ WCF에서 포이즌 메시지 처리는 검색할 뿐만 아니라 메시지 손상 되어 있지만 사용자 구성에 따라 처리를 선택 하는 채널에 의해 처리 됩니다. 따라서 큐에 하나의 메시지가 있습니다. 웹에 호스트된 응용 프로그램은 연속 시도를 중단하며 메시지가 다시 시도 큐로 이동합니다. 다시 시도 주기 지연에 지정된 시점에서 다시 시도할 메시지가 다시 시도 큐에서 기본 큐로 이동합니다. 그러나 이 경우 대기 중인 채널이 활성 상태여야 합니다. WAS에서 응용 프로그램을 재활용하는 경우 다른 메시지가 기본 큐에 도착하여 대기 중인 응용 프로그램을 활성화할 때까지 메시지가 다시 시도 큐에 남아 있습니다. 이 경우의 해결 방법은 수동으로 메시지를 다시 시도 큐에서 기본 큐로 이동하여 응용 프로그램을 다시 활성화하는 것입니다.  
   
 ### <a name="subqueue-and-system-queue-caveat"></a>하위 큐 및 시스템 큐 경고  
  시스템 차원의 배달 못 한 큐 등의 시스템 큐나 포이즌 하위 큐 등의 하위 큐에 있는 메시지를 기반으로 WAS에 호스트된 응용 프로그램을 활성화할 수 없습니다. 이 제품 버전의 제한 사항입니다.  

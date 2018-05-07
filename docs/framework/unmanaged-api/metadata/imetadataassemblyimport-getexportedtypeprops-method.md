@@ -1,14 +1,6 @@
 ---
-title: "IMetaDataAssemblyImport::GetExportedTypeProps 메서드"
-ms.custom: 
+title: IMetaDataAssemblyImport::GetExportedTypeProps 메서드
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - IMetaDataAssemblyImport.GetExportedTypeProps
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: 25ca7623-5a55-4f09-b44a-36b03d142278
 topic_type:
 - apiref
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 7fc5bb8266814fc4f1333de78fce4b6af86893c5
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: c76e46c75680d9fc0ad70e94da288f0c6b5e5ee1
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="imetadataassemblyimportgetexportedtypeprops-method"></a>IMetaDataAssemblyImport::GetExportedTypeProps 메서드
 지정한 메타 데이터 서명 사용 하 여 내보낸 형식의 속성 집합을 가져옵니다.  
@@ -63,7 +51,7 @@ HRESULT GetExportedTypeProps (
  [in] 와이드 문자에서 크기의 `szName`합니다.  
   
  `pchName`  
- [out] 에 실제로 반환 된 와이드 문자 수`szName`  
+ [out] 에 실제로 반환 된 와이드 문자 수 `szName`  
   
  `ptkImplementation`  
  [out] `mdFile`, `mdAssemblyRef`, 또는 `mdExportedType` 내보낸 형식의 속성에 대 한 액세스 허용 또는 포함 된 메타 데이터 토큰입니다.  
@@ -81,7 +69,7 @@ HRESULT GetExportedTypeProps (
   
  **라이브러리:** MsCorEE.dll에서 리소스로 사용  
   
- **.NET framework 버전:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>참고 항목  
  [IMetaDataAssemblyImport 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)

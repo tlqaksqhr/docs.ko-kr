@@ -2,11 +2,11 @@
 title: '&lt;endpointBehaviors&gt;의 &lt;behavior&gt;'
 ms.date: 03/30/2017
 ms.assetid: b90ca3bc-3c22-4174-b903-e3a39898bd27
-ms.openlocfilehash: 0619d14444d835ed959a1a1db7cd37aaf0429728
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
-ms.translationtype: HT
+ms.openlocfilehash: e275fbc1b14469553094a4df838930be53937de2
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ltbehaviorgt-of-ltendpointbehaviorsgt"></a>&lt;endpointBehaviors&gt;의 &lt;behavior&gt;
 `behavior` 요소는 끝점의 동작에 대한 설정 컬렉션을 포함합니다. 각 동작은 해당 `name`으로 인덱싱됩니다. 끝점은 이 이름을 통해 각 동작에 연결할 수 있습니다. [!INCLUDE[netfx40_short](../../../../../includes/netfx40-short-md.md)]부터는 바인딩 및 동작에 이름이 필요하지 않습니다. 기본 구성 및 이름이 없는 바인딩 및 동작에 대 한 자세한 내용은 참조 [단순화 된 구성](../../../../../docs/framework/wcf/simplified-configuration.md) 및 [WCF 서비스에 대 한 구성을 단순화](../../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md)합니다.  
@@ -52,7 +52,7 @@ ms.lasthandoff: 05/03/2018
 |[\<soapProcessing >](../../../../../docs/framework/configure-apps/file-schema/wcf/soapprocessing.md)|서로 다른 바인딩 형식과 메시지 버전 간에 메시지 마샬링을 위해 사용되는 클라이언트 끝점 동작을 정의합니다.|  
 |[\<synchronousReceive >](../../../../../docs/framework/configure-apps/file-schema/wcf/synchronousreceive-element.md)|서비스 또는 클라이언트 응용 프로그램에서 메시지 수신을 위한 런타임 동작을 지정합니다. 이 구성 요소에는 특성이나 자식 요소가 없습니다.|  
 |[\<transactedBatching >](../../../../../docs/framework/configure-apps/file-schema/wcf/transactedbatching.md)|받기 작업에 트랜잭션 일괄 처리가 지원되는지 여부를 지정합니다.|  
-|[\<webHttp >](../../../../../docs/framework/configure-apps/file-schema/wcf/webhttp.md)|구성을 통해 끝점에서 WebHttpBehavior를 지정합니다. 이 동작을 함께 사용 하는 경우는 \<webHttpBinding > 표준 바인딩 웹 프로그래밍 모델을 사용 하면 한 [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 서비스입니다.|  
+|[\<webHttp >](../../../../../docs/framework/configure-apps/file-schema/wcf/webhttp.md)|구성을 통해 끝점에서 WebHttpBehavior를 지정합니다. 이 동작을 함께 사용 하는 경우는 \<webHttpBinding > 표준 바인딩 WCF 서비스에 대 한 웹 프로그래밍 모델을 사용 하도록 설정 합니다.|  
   
 ### <a name="parent-elements"></a>부모 요소  
   

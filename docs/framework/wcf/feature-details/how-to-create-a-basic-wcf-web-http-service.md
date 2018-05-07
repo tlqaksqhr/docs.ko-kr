@@ -1,30 +1,18 @@
 ---
-title: "방법: 기본 WCF 웹 HTTP 서비스 만들기"
-ms.custom: 
+title: '방법: 기본 WCF 웹 HTTP 서비스 만들기'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 877662d3-d372-4e08-b417-51f66a0095cd
-caps.latest.revision: "26"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 4dc60bbb51bc573840d0d45356f0cd84fd32db2a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: d147286fd2f8fe3f4f5e822598a07b51ae6d9791
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-a-basic-wcf-web-http-service"></a>방법: 기본 WCF 웹 HTTP 서비스 만들기
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]에서는 웹 끝점을 노출하는 서비스를 만들 수 있습니다. 웹 끝점은 XML 또는 JSON으로 데이터를 보내며 SOAP 봉투가 없습니다. 이 항목에서는 이러한 끝점을 노출하는 방법을 보여 줍니다.  
+Windows Communication Foundation (WCF)를 사용 하 여 웹 끝점을 노출 하는 서비스를 만들 수 있습니다. 웹 끝점은 XML 또는 JSON으로 데이터를 보내며 SOAP 봉투가 없습니다. 이 항목에서는 이러한 끝점을 노출하는 방법을 보여 줍니다.  
   
 > [!NOTE]
 >  웹 끝점의 보안을 유지하는 유일한 방법은 전송 보안을 사용하여 HTTPS를 통해 웹 끝점을 노출하는 것입니다. 메시지 기반 보안을 사용하는 경우 보안 정보는 일반적으로 SOAP 헤더에 배치되고 비 SOAP 끝점에 보낸 메시지에 SOAP 봉투가 없기 때문에 보안 정보를 배치할 장소가 없으며 전송 보안을 사용해야 합니다.  
@@ -59,7 +47,7 @@ ms.lasthandoff: 12/22/2017
     > [!NOTE]
     >  끝점을 추가하지 않으면 <xref:System.ServiceModel.Web.WebServiceHost>는 자동으로 기본 끝점을 만듭니다. <xref:System.ServiceModel.Web.WebServiceHost>는 또한 <xref:System.ServiceModel.Description.WebHttpBehavior>를 추가하고 메타데이터 끝점이 기본 HTTP 끝점과 간섭하지 않도록 HTTP 도움말 페이지 및 WSDL(웹 서비스 기술 언어) GET 기능을 비활성화합니다.  
     >   
-    >  비 SOAP 끝점을 ""의 URL과 함께 추가하면 끝점에서 작업 호출 시도 시 예기치 못한 동작이 발생합니다. 그 이유는 끝점의 수신 대기 URI가 도움말 페이지([!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 서비스의 기본 주소를 찾을 때 표시되는 페이지)의 URI와 동일하기 때문입니다.  
+    >  비 SOAP 끝점을 ""의 URL과 함께 추가하면 끝점에서 작업 호출 시도 시 예기치 못한 동작이 발생합니다. 그 이유는의 수신 대기 끝점의 URI가 도움말 페이지 (WCF 서비스의 기본 주소를 찾을 때 표시 되는 페이지)에 대 한 URI와 동일 합니다.  
   
      이러한 동작이 발생되지 않도록 하기 위해 다음 작업 중 하나를 수행할 수 있습니다.  
   
@@ -87,7 +75,7 @@ ms.lasthandoff: 12/22/2017
   
 ### <a name="to-call-service-operations-mapped-to-get-in-internet-explorer"></a>Internet Explorer에서 GET에 매핑된 서비스 작업을 호출하려면  
   
-1.  Internet Explorer를 열고 유형 "`http://localhost:8000/EchoWithGet?s=Hello, world!`" ENTER 키를 누릅니다. URL에는 서비스 기준 주소("http://localhost:8000/"), 끝점 상대 주소(""), 호출할 서비스 작업("EchoWithGet") 및 앰퍼샌드(&)로 구분된 명명된 매개 변수의 목록 앞에 있는 물음표가 포함됩니다.  
+1.  Internet Explorer를 열고 유형 "`http://localhost:8000/EchoWithGet?s=Hello, world!`" ENTER 키를 누릅니다. 서비스의 기본 주소를 포함 하는 URL ("http://localhost:8000/"), 끝점의 상대 주소 (""), 서비스 작업 호출 ("EchoWithGet") 및 물음표 및 앰퍼샌드로 구분 하는 명명 된 매개 변수 목록 (&).  
   
 ### <a name="to-call-service-operations-in-code"></a>코드에서 서비스 작업을 호출하려면  
   
@@ -111,7 +99,7 @@ ms.lasthandoff: 12/22/2017
      [!code-csharp[htBasicService#9](../../../../samples/snippets/csharp/VS_Snippets_CFX/htbasicservice/cs/service.cs#9)]
      [!code-vb[htBasicService#9](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/htbasicservice/vb/service.vb#9)]  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음은 이 예제에 해당되는 전체 코드 목록입니다.  
   
  [!code-csharp[htBasicService#10](../../../../samples/snippets/csharp/VS_Snippets_CFX/htbasicservice/cs/service.cs#10)]

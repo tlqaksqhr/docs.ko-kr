@@ -1,14 +1,6 @@
 ---
-title: "CreateDebuggingInterfaceFromVersion 함수"
-ms.custom: 
+title: CreateDebuggingInterfaceFromVersion 함수
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - CreateDebuggingInterfaceFromVersion
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: a746a849-463c-44f5-a2f0-9e812ed8bcc3
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: b3f269f5b1758481995d6064e7137e62bff4a868
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 1b51b924652019cf05401e1972797c18e74b82d3
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="createdebugginginterfacefromversion-function"></a>CreateDebuggingInterfaceFromVersion 함수
 만듭니다는 [ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md) 지정된 된 버전 정보에 따라 개체입니다.  
@@ -66,7 +54,7 @@ HRESULT CreateDebuggingInterfaceFromVersion (
 |반환 코드|설명|  
 |-----------------|-----------------|  
 |S_OK|메서드가 완료되었습니다.|  
-|E_INVALIDARG|`szDebuggeeVersion`또는 `ppCordb` null 또는 버전 문자열이 잘못 되었습니다.|  
+|E_INVALIDARG|`szDebuggeeVersion` 또는 `ppCordb` null 또는 버전 문자열이 잘못 되었습니다.|  
   
 ## <a name="remarks"></a>설명  
  `szDebuggeeVersion` 매개 변수 MSCorDbi.dll의 해당 버전에 매핑됩니다.  
@@ -78,7 +66,7 @@ HRESULT CreateDebuggingInterfaceFromVersion (
   
  **라이브러리:** MSCorEE.dll  
   
- **.NET framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>참고 항목  
  [사용되지 않는 CLR 호스팅 함수](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)

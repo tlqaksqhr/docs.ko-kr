@@ -1,13 +1,6 @@
 ---
-title: "종속성 속성 콜백 및 유효성 검사"
-ms.custom: 
+title: 종속성 속성 콜백 및 유효성 검사
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -18,16 +11,11 @@ helpviewer_keywords:
 - dependency properties [WPF], callbacks
 - validation of dependency properties [WPF]
 ms.assetid: 48db5fb2-da7f-49a6-8e81-3540e7b25825
-caps.latest.revision: "17"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 15ba7f3315b2ce71357bd4735e2dfca1b3de616d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: e181c2d9610619587642f982959f809b96b011dc
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="dependency-property-callbacks-and-validation"></a>종속성 속성 콜백 및 유효성 검사
 이 항목에서는 유효성 검사 확인, 속성의 유효 값이 변경될 때마다 호출되는 콜백, 값 결정에 대한 가능한 외부 영향 재정의 등 속성 관련 기능에 대체 사용자 지정 구현을 사용하여 종속성 속성을 만드는 방법에 대해 설명합니다. 또한 이 항목에서는 이러한 기술을 사용한 기본 속성 시스템 동작 확장이 적절한 시나리오에 대해서도 설명합니다.  
@@ -35,7 +23,7 @@ ms.lasthandoff: 12/22/2017
   
   
 <a name="prerequisites"></a>   
-## <a name="prerequisites"></a>필수 구성 요소  
+## <a name="prerequisites"></a>전제 조건  
  이 항목에서는 종속성 속성을 구현하는 기본 시나리오와 메타데이터가 사용자 지정 종속성 속성에 적용되는 방법을 이해하고 있다고 가정합니다. 컨텍스트는 [사용자 지정 종속성 속성](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md) 및 [종속성 속성 메타데이터](../../../../docs/framework/wpf/advanced/dependency-property-metadata.md)를 참조하세요.  
   
 <a name="Validation_Callbacks"></a>   

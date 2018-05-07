@@ -1,12 +1,6 @@
 ---
 title: '* 연산자 (Visual Basic)'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.*
 helpviewer_keywords:
@@ -16,14 +10,11 @@ helpviewer_keywords:
 - multiplication operator [Visual Basic], syntax
 - math operators [Visual Basic]
 ms.assetid: 2b210382-99da-4195-89ba-b1d06f5e89ad
-caps.latest.revision: 19
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 450d728e44ef5639d75369e05b47cb3009b4d769
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 4e2d1000afcf8951e8914335f7b5a278b49f6277
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="-operator-visual-basic"></a>* 연산자(Visual Basic)
 두 숫자를 곱합니다.  
@@ -38,8 +29,8 @@ number1 * number2
   
 |용어|정의|  
 |---|---|  
-|`number1`|필수 요소. 임의의 숫자 식입니다.|  
-|`number2`|필수 요소. 임의의 숫자 식입니다.|  
+|`number1`|필수. 임의의 숫자 식입니다.|  
+|`number2`|필수. 임의의 숫자 식입니다.|  
   
 ## <a name="result"></a>결과  
  결과의 제품 `number1` 및 `number2`합니다.  

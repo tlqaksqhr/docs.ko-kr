@@ -1,13 +1,6 @@
 ---
 title: 개체 형식 확인(Visual Basic)
-ms.custom: ''
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - classes [Visual Basic], discovering which an object belongs to
 - types [Visual Basic], determining Visual Basic object types
@@ -16,14 +9,11 @@ helpviewer_keywords:
 - TypeName function
 - objects [Visual Basic], type determining
 ms.assetid: d95e7ad1-cd63-41d6-9a28-d7a1380d49c1
-caps.latest.revision: 13
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: a6d24be68ea4a9872f8f4fe89c1aabb943fbcb91
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: a9852998abeae67b2a0e9dc3ffc85318ce5045da
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="determining-object-type-visual-basic"></a>개체 형식 확인(Visual Basic)
 일반 개체 변수 (즉, 변수 선언으로 `Object`) 모든 클래스의 개체를에서 포함할 수 있습니다. 형식의 변수를 사용 하는 경우 `Object`, 개체의 클래스를 기반으로 하는 다른 작업을 수행 해야 할 수; 예를 들어 일부 개체 수 지원 하지 않습니다는 특정 속성 또는 메서드. Visual Basic에서 개체 변수에 저장 됩니다 개체의 유형을 결정 하는 두 가지 방법을 제공:는 `TypeName` 함수 및 `TypeOf...Is` 연산자입니다.  

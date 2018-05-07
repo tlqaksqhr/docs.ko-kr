@@ -1,29 +1,19 @@
 ---
-title: "진단 기호 저장소 구조체"
-ms.custom: 
+title: 진단 기호 저장소 구조체
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 helpviewer_keywords:
 - unmanaged structures [.NET Framework], diagnostics symbol store
 - unmanaged structures [.NET Framework], debugging
 - diagnostics symbol store structures [.NET Framework]
 - structures [.NET Framework debugging]
 ms.assetid: 0d423791-d40d-45c6-a82b-1a165768d737
-caps.latest.revision: "5"
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 4712728a27ada0d6e8f5045b1727b73b857cdde3
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 2e7bd0fabcd4838990ae8704de4f83e9677dbc08
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="diagnostics-symbol-store-structures"></a>진단 기호 저장소 구조체
 이 항목에서는 진단 기호 저장소 API를 사용 하는 관리 되지 않는 구조체에 설명 합니다.  

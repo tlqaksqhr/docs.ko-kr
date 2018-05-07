@@ -1,23 +1,12 @@
 ---
-title: "복구 수행"
-ms.custom: 
+title: 복구 수행
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 6dd17bf6-ba42-460a-a44b-8046f52b10d0
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 3a215a7f516c2a3f0173b2ebfbd1c52911dee654
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 149ac6b6162893de830f59b3d18008d8298eab56
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="performing-recovery"></a>복구 수행
 리소스 관리자는 리소스 오류가 발생한 후에 트랜잭션 참가 요소를 다시 참여시켜 트랜잭션에서 영속적 참여 항목을 쉽게 확인할 수 있도록 합니다.  

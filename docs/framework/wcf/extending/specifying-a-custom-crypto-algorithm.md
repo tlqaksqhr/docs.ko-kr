@@ -1,24 +1,12 @@
 ---
-title: "사용자 지정 암호화 알고리즘 지정"
-ms.custom: 
+title: 사용자 지정 암호화 알고리즘 지정
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: d662a305-8e09-451d-9a59-b0f12b012f1d
-caps.latest.revision: "2"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 965f121faa851722e6e2e7f92e805252f7e927c5
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: d8fb22daac66c3ef80f148db03703fc5024d3438
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="specifying-a-custom-crypto-algorithm"></a>사용자 지정 암호화 알고리즘 지정
 WCF를 통해 데이터를 암호화하거나 디지털 서명을 연산화할 때 사용할 사용자 지정 암호화 알고리즘을 지정할 수 있습니다. 이렇게 하려면 다음 단계를 따릅니다.  
@@ -116,7 +104,7 @@ public class MyCustomAlgorithmSuite : SecurityAlgorithmSuite
 </configuration>  
 ```  
   
- 아래 섹션에서 <`cryptoClasses`> 요소에서은 SHA256CryptoServiceProvider와 별칭 "SHA256CSP" 간의 매핑을 만듭니다. <`nameEntry`> 요소는 "SHA256CSP" 별칭과 지정된 된 URL (http://constoso.com/CustomAlgorithms/CustomHashAlgorithm) 간의 매핑을 만듭니다.  
+ 아래 섹션에서 <`cryptoClasses`> 요소에서은 SHA256CryptoServiceProvider와 별칭 "SHA256CSP" 간의 매핑을 만듭니다. <`nameEntry`> 요소는 "SHA256CSP" 별칭과 지정된 된 URL 간의 매핑을 만듭니다 (http://constoso.com/CustomAlgorithms/CustomHashAlgorithm ).  
   
  코드로 사용자 지정 알고리즘을 등록하려면 <xref:System.Security.Cryptography.CryptoConfig.AddAlgorithm(System.Type,System.String[])> 메서드를 사용합니다. 이 메서드는 두 매핑을 모두 만듭니다. 다음 예제에서는 이 메서드를 호출하는 방법을 보여 줍니다.  
   

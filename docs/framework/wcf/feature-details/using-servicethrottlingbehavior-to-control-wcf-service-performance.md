@@ -1,31 +1,17 @@
 ---
-title: "ServiceThrottlingBehavior를 사용하여 WCF 서비스 성능 제어"
-ms.custom: 
+title: ServiceThrottlingBehavior를 사용하여 WCF 서비스 성능 제어
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - behavior [WCF], service performance
 ms.assetid: f9dc120c-dc24-49d5-930e-b22f5bc73423
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 2b7e00e70bab0c5652bbc721d582a1b276e6a3fa
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: b54d1d6146b9751fdd12502771de01fe52854c07
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-servicethrottlingbehavior-to-control-wcf-service-performance"></a>ServiceThrottlingBehavior를 사용하여 WCF 서비스 성능 제어
-<xref:System.ServiceModel.Description.ServiceThrottlingBehavior> 클래스는 응용 프로그램 수준에서 생성되는 인스턴스 또는 세션의 수를 제한하기 위해 사용할 수 있는 속성을 노출합니다. 이 동작을 사용하여 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 응용 프로그램의 성능을 세밀하게 조정할 수 있습니다.  
+<xref:System.ServiceModel.Description.ServiceThrottlingBehavior> 클래스는 응용 프로그램 수준에서 생성되는 인스턴스 또는 세션의 수를 제한하기 위해 사용할 수 있는 속성을 노출합니다. 이 동작을 사용 하 여 Windows Communication Foundation (WCF) 응용 프로그램의 성능을 미세 조정할 수 있습니다.  
   
 ## <a name="controlling-service-instances-and-concurrent-calls"></a>서비스 인스턴스 및 동시 호출 제어  
  <xref:System.ServiceModel.Description.ServiceThrottlingBehavior.MaxConcurrentCalls%2A> 클래스를 통해 처리 중인 최대 메시지 수를 지정하려면 <xref:System.ServiceModel.ServiceHost> 속성을 사용하고, 서비스의 최대 <xref:System.ServiceModel.Description.ServiceThrottlingBehavior.MaxConcurrentInstances%2A> 개체 수를 지정하려면 <xref:System.ServiceModel.InstanceContext> 속성을 사용합니다.  

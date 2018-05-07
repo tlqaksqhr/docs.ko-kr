@@ -1,28 +1,14 @@
 ---
-title: "분석 추적 이벤트 참조"
-ms.custom: 
+title: 분석 추적 이벤트 참조
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - analytic tracing [WCF]. reference
 ms.assetid: e44540cf-44a1-4efc-b965-7fbfd2131d73
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 9a07aed6ade7d5eb806b666711a49c0b9507d3ee
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 9066f3cde47f95773596fbbf1c6cc36b71d3f3ba
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="analytic-trace-event-reference"></a>분석 추적 이벤트 참조
 다음 표에서는 [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 분석 추적과 연결된 이벤트 수준, ID 및 메시지를 정의합니다.  

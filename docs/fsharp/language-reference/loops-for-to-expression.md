@@ -1,17 +1,12 @@
 ---
 title: '루프: for...to 식(F#)'
 description: '참조 방식을 F # >for.. 식으로 하는 데 루프 변수 값의 범위에 대해 루프를 반복 합니다.'
-author: cartermp
-ms.author: phcart
 ms.date: 05/16/2016
-ms.topic: language-reference
-ms.prod: dotnet-fsharp
-ms.devlang: fsharp
-ms.openlocfilehash: 95a8960d71c82c01118d2e71479fc0ec5298a02b
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 841c7d557abc11e0253cb87ab8081cc77671b44b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="loops-forto-expression"></a>루프: for...to 식
 

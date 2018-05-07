@@ -1,13 +1,6 @@
 ---
-title: "단색 및 그라데이션을 사용한 그리기 개요"
-ms.custom: 
+title: 단색 및 그라데이션을 사용한 그리기 개요
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - solid colors [WPF], painting with
 - painting with gradients [WPF]
@@ -16,16 +9,11 @@ helpviewer_keywords:
 - brushes [WPF], painting with gradients
 - painting with solid colors [WPF]
 ms.assetid: f5b182f3-c5c7-4cbe-9f2f-65e690d08255
-caps.latest.revision: "21"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: bb71a1ae52b35b421474954410869f20fa004eb7
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: cea4b2dbd17178a6943b0f4a84182e65232330fb
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="painting-with-solid-colors-and-gradients-overview"></a>단색 및 그라데이션을 사용한 그리기 개요
 이 항목에서는 사용 하는 방법을 설명 <xref:System.Windows.Media.SolidColorBrush>, <xref:System.Windows.Media.LinearGradientBrush>, 및 <xref:System.Windows.Media.RadialGradientBrush> 단색, 선형 그라데이션 및 방사형 그라데이션으로으로 그리려면 개체입니다.  
@@ -74,7 +62,7 @@ ms.lasthandoff: 12/22/2017
   
 <a name="gradient"></a>   
 ## <a name="painting-an-area-with-a-gradient"></a>그라데이션으로 영역 그리기  
- 그라데이션 브러시는 축을 따라 서로 혼합되는 여러 색으로 영역을 그립니다. 이를 사용하여 빛과 그림자를 나타내고 컨트롤에 3차원 느낌을 줄 수 있습니다. 또한 유리, 크롬, 물, 기타 매끄러운 표면을 시뮬레이트하는 데도 사용할 수 있습니다.  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]두 가지 유형의 그라데이션 브러시를 제공: <xref:System.Windows.Media.LinearGradientBrush> 및 <xref:System.Windows.Media.RadialGradientBrush>합니다.  
+ 그라데이션 브러시는 축을 따라 서로 혼합되는 여러 색으로 영역을 그립니다. 이를 사용하여 빛과 그림자를 나타내고 컨트롤에 3차원 느낌을 줄 수 있습니다. 또한 유리, 크롬, 물, 기타 매끄러운 표면을 시뮬레이트하는 데도 사용할 수 있습니다.  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 두 가지 유형의 그라데이션 브러시를 제공: <xref:System.Windows.Media.LinearGradientBrush> 및 <xref:System.Windows.Media.RadialGradientBrush>합니다.  
   
 <a name="lineargradientbrush"></a>   
 ## <a name="linear-gradients"></a>선형 그라데이션  

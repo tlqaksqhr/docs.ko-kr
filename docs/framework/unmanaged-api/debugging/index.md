@@ -1,30 +1,18 @@
 ---
 title: 디버깅(관리되지 않는 API 참조)
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: reference
 helpviewer_keywords:
 - unmanaged API reference [.NET Framework], debugging
 - debugging [.NET Framework], using the unmanaged API
 - native API reference [.NET Framework], debugging
 ms.assetid: f0bf70be-42ef-4c46-8709-1694b5f99018
-caps.latest.revision: 20
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 62110d07903b05e68ddfc72c297a785bad72c87f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 86be3e7edb7149ed42dd053156de0f649f1480b4
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="debugging-unmanaged-api-reference"></a>디버깅(관리되지 않는 API 참조)
 디버깅 API를 통해 디버거가 CLR(공용 언어 런타임) 환경에서 실행되는 코드를 디버그할 수 있습니다. 디버그할 코드는 CLR이 지원하는 코드 형식일 수 있습니다.  

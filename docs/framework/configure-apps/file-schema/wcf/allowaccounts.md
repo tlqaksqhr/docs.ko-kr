@@ -2,11 +2,11 @@
 title: '&lt;allowAccounts&gt;'
 ms.date: 03/30/2017
 ms.assetid: 166923a9-a8ac-478f-92f9-529d9667f3a6
-ms.openlocfilehash: bbfe0d5d531cf61c01f95d0e82ce0f894031d6f3
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
-ms.translationtype: HT
+ms.openlocfilehash: 097112a8b54467843554047882e55b62d7813c0c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ltallowaccountsgt"></a>&lt;allowAccounts&gt;
 해당 호스트 Windows Communication Foundation (WCF) 서비스, 프로세스에 대 한 계정 사용자를 지정 하 고 공유 서비스에 대 한 연결 액세스가 부여 된 하는 구성 요소의 컬렉션을 포함 합니다.  
@@ -31,7 +31,7 @@ ms.lasthandoff: 05/03/2018
   
 |특성|설명|  
 |---------------|-----------------|  
-|[\<add>](../../../../../docs/framework/configure-apps/file-schema/wcf/add-of-allowaccounts.md)|[!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 서비스를 호스트하고 공유 서비스에 대한 연결 액세스 권한이 부여된 프로세스를 수행할 수 있는 사용자 계정을 추가합니다.|  
+|[\<add>](../../../../../docs/framework/configure-apps/file-schema/wcf/add-of-allowaccounts.md)|WCF 서비스를 호스팅하고 공유 서비스에 대 한 연결 액세스를 부여 하는 프로세스에 대 한 사용자 계정을 추가 합니다.|  
   
 ### <a name="parent-elements"></a>부모 요소  
   

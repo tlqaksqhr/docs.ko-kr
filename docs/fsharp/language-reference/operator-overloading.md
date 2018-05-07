@@ -1,17 +1,12 @@
 ---
 title: 연산자 오버로드(F#)
 description: 'F #에서 전역 수준에서 클래스 또는 레코드 종류에 산술 연산자를 오버 로드 하는 방법에 알아봅니다.'
-author: cartermp
-ms.author: phcart
 ms.date: 05/16/2016
-ms.topic: language-reference
-ms.prod: dotnet-fsharp
-ms.devlang: fsharp
-ms.openlocfilehash: 45fcb4d2acce29caa6b38d08ae4f166884f20147
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: fc9b7311aa746fd758930365972a187ffdfff0d5
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="operator-overloading"></a>연산자 오버로드
 

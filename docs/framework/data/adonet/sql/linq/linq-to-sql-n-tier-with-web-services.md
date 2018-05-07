@@ -1,27 +1,15 @@
 ---
-title: "웹 서비스를 사용하는 LINQ to SQL N 계층"
-ms.custom: 
+title: 웹 서비스를 사용하는 LINQ to SQL N 계층
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 9cb10eb8-957f-4beb-a271-5f682016fed2
-caps.latest.revision: "3"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 79b9b1270f99720dec6b6369706f8a2f601d249e
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 94b00c5b9a433aa53fecef10d865db76d5577c84
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="linq-to-sql-n-tier-with-web-services"></a>웹 서비스를 사용하는 LINQ to SQL N 계층
-[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]웹 서비스와 같이 느슨하게 결합 된 데이터 액세스 계층 (DAL)에서 중간 계층에서 사용 하도록 설계 되었습니다. 프레젠테이션 계층이 ASP.NET 웹 페이지인 경우에는 <xref:System.Web.UI.WebControls.LinqDataSource> 웹 서버 컨트롤을 사용하여 사용자 인터페이스와 중간 계층의 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 사이에 데이터 전송을 관리합니다. 그러나 프레젠테이션 계층이 ASP.NET 페이지가 아닌 경우에는 중간 계층과 프레젠테이션 계층 모두에서 데이터 serialization 및 deserialization을 관리하기 위해 추가적인 작업을 수행해야 합니다.  
+[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 웹 서비스와 같이 느슨하게 결합 된 데이터 액세스 계층 (DAL)에서 중간 계층에서 사용 하도록 설계 되었습니다. 프레젠테이션 계층이 ASP.NET 웹 페이지인 경우에는 <xref:System.Web.UI.WebControls.LinqDataSource> 웹 서버 컨트롤을 사용하여 사용자 인터페이스와 중간 계층의 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 사이에 데이터 전송을 관리합니다. 그러나 프레젠테이션 계층이 ASP.NET 페이지가 아닌 경우에는 중간 계층과 프레젠테이션 계층 모두에서 데이터 serialization 및 deserialization을 관리하기 위해 추가적인 작업을 수행해야 합니다.  
   
 ## <a name="setting-up-linq-to-sql-on-the-middle-tier"></a>중간 계층에서 LINQ to SQL 설정  
  웹 서비스 또는 n 계층 응용 프로그램의 중간 계층에는 데이터 컨텍스트와 엔터티 클래스가 들어 있습니다. 이러한 클래스는 수동으로 만들거나, 이 설명서의 다른 곳에 나와 있는 설명대로 SQLMetal.exe 또는 [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)]를 사용하여 만들 수 있습니다. 디자인 타임에 엔터티 클래스를 serialize할 수 있습니다. 자세한 내용은 참조 [하는 방법: 엔터티를 직렬화 가능 하 게](../../../../../../docs/framework/data/adonet/sql/linq/how-to-make-entities-serializable.md)합니다. 또는 serialize할 데이터를 캡슐화하는 별도의 클래스 집합을 만든 다음 [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)] 쿼리에 데이터를 반환할 때 serialize 가능한 이러한 형식을 사용할 수도 있습니다.  

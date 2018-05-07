@@ -1,14 +1,6 @@
 ---
-title: "PreBindAssemblyEx 함수"
-ms.custom: 
+title: PreBindAssemblyEx 함수
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - PreBindAssemblyEx
 api_location:
@@ -22,17 +14,13 @@ helpviewer_keywords:
 ms.assetid: bd285233-a4a2-4b52-bbca-0025a60e4864
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 05977db8e01d00af6e160cb2993867cf83eb24c1
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 3d3e2535851d39be642de56a86b78c328ecaf446
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="prebindassemblyex-function"></a>PreBindAssemblyEx 함수
 어셈블리에 대 한 사후 정책 표시 이름을 가져옵니다.  
@@ -69,7 +57,7 @@ HRESULT PreBindAssemblyEx (
  [out] 사후 정책 표시 이름을 포함합니다.  
   
  `pvReserved`  
- [in] 다음 버전의 확장에 대 한 예약 되어 있습니다. `pvReserved`null 참조 여야 합니다.  
+ [in] 다음 버전의 확장에 대 한 예약 되어 있습니다. `pvReserved` null 참조 여야 합니다.  
   
 ## <a name="remarks"></a>설명  
  `ppNamePostPolicy` 함수 FUSION_E_REF_DEF_MISMATCH HRESULT를 반환 하는 경우에 출력 매개 변수가 설정 됩니다. 그렇지 않으면 null입니다.  
@@ -81,7 +69,7 @@ HRESULT PreBindAssemblyEx (
   
  **라이브러리:** MsCorEE.dll에 리소스로 포함  
   
- **.NET framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>참고 항목  
  [Fusion 전역 정적 함수](../../../../docs/framework/unmanaged-api/fusion/fusion-global-static-functions.md)

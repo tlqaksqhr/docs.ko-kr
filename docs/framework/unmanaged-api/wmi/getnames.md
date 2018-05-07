@@ -1,11 +1,7 @@
 ---
-title: "GetNames 함수 (관리 되지 않는 API 참조)"
-description: "GetNames 함수 개체의 속성의 이름을 검색합니다."
+title: GetNames 함수 (관리 되지 않는 API 참조)
+description: GetNames 함수 개체의 속성의 이름을 검색합니다.
 ms.date: 11/06/2017
-ms.prod: .net-framework
-ms.technology:
-- dotnet-clr
-ms.topic: reference
 api_name:
 - GetNames
 api_location:
@@ -20,14 +16,11 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 80284900c318a3776168b781ce2e0e5e4a68f96d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 108946428cdfadcfb9c653b7e444bf278dfa2782
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="getnames-function"></a>GetNames 함수
 하위 집합 또는 모든 개체의 속성 이름을 검색합니다. 
@@ -91,7 +84,7 @@ HRESULT GetNames (
 
 | 그룹 1 플래그 |값  |설명  |
 |---------|---------|---------|
-| `WBEM_FLAG_ALWAYS` | 0 | 모든 속성 이름이 반환 됩니다. `strQualifierName`및 `pQualifierVal` 이 사용 되지 않습니다. |
+| `WBEM_FLAG_ALWAYS` | 0 | 모든 속성 이름이 반환 됩니다. `strQualifierName` 및 `pQualifierVal` 이 사용 되지 않습니다. |
 | `WBEM_FLAG_ONLY_IF_TRUE` | 1 | 지정 된 이름의 한정자가 있는 속성에만 반환는 `strQualifierName` 매개 변수입니다. 지정 해야이 플래그를 사용할 경우 `strQualifierName`합니다. |
 |`WBEM_FLAG_ONLY_IF_FALSE` | 2 |  지정 된 이름의 한정자가 없는 속성에만 반환는 `strQualifierName` 매개 변수입니다. 지정 해야이 플래그를 사용할 경우 `strQualifierName`합니다. |
 |`WBEM_FLAG_ONLY_IF_IDENTICAL` | 3 | 속성에서 지정 된 이름의 한정자가을 반환는 `wszQualifierName` 매개 변수 및 값에 지정 된 동일한도 `pQualifierVal` 구조입니다. 둘 다 지정 해야이 플래그를 사용 하는 경우는 `wszQualifierName` 및 `pQualifierValue`합니다. |
@@ -115,7 +108,7 @@ HRESULT GetNames (
   
  **헤더:** WMINet_Utils.idl  
   
- **.NET framework 버전:**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **.NET framework 버전:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>참고자료  
 [WMI 및 성능 카운터 (관리 되지 않는 API 참조)](index.md)

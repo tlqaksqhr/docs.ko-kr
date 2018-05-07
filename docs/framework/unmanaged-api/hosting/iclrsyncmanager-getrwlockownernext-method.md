@@ -1,14 +1,6 @@
 ---
-title: "ICLRSyncManager::GetRWLockOwnerNext 메서드"
-ms.custom: 
+title: ICLRSyncManager::GetRWLockOwnerNext 메서드
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICLRSyncManager.GetRWLockOwnerNext
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: 0e025b6a-280e-40a2-a2d0-b15f58777b81
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 1181cbb71aa30281fbff634354162e1f245d05fe
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 4725feff4645ec207be6e6afc7d1e1d38eca36ec
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="iclrsyncmanagergetrwlockownernext-method"></a>ICLRSyncManager::GetRWLockOwnerNext 메서드
 다음 가져옵니다 [IHostTask](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md) 현재 판독기 / 작성기 잠금을 차단 된 인스턴스.  
@@ -58,7 +46,7 @@ HRESULT GetRWLockOwnerNext (
   
 |HRESULT|설명|  
 |-------------|-----------------|  
-|S_OK|`GetRWLockOwnerNext`성공적으로 반환 합니다.|  
+|S_OK|`GetRWLockOwnerNext` 성공적으로 반환 합니다.|  
 |HOST_E_CLRNOTAVAILABLE|공용 언어 런타임 (CLR) 프로세스에 로드 되지 않았습니다 또는 CLR 중인 상태를 관리 코드를 실행 하거나 호출을 처리할 수 없습니다.|  
 |HOST_E_TIMEOUT|호출 시간이 초과 되었습니다.|  
 |HOST_E_NOT_OWNER|호출자에 게 잠금을 소유 하지 않습니다.|  
@@ -78,7 +66,7 @@ HRESULT GetRWLockOwnerNext (
   
  **라이브러리:** MSCorEE.dll에 리소스로 포함  
   
- **.NET framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>참고 항목  
  [ICLRSyncManager 인터페이스](../../../../docs/framework/unmanaged-api/hosting/iclrsyncmanager-interface.md)  

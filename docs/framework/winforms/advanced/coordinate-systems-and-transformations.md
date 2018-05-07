@@ -1,31 +1,19 @@
 ---
-title: "좌표계 및 변형"
-ms.custom: 
+title: 좌표계 및 변형
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - transformations
 - graphics [Windows Forms], transformations
 - matrix transformations
 ms.assetid: 9fef7451-bddf-4c68-9350-400d1f1f25a3
-caps.latest.revision: "13"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: d44805021f0070109ce67f28126d59d36e4175f8
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 1b91cbc21abe8cc92a9718a71712c52219ad0174
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="coordinate-systems-and-transformations"></a>좌표계 및 변형
-[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]변형할 수 있도록 전역 변환 및 페이지 변환을 제공 (회전, 크기 조정, 변환, 및 등) 사용자가 그린 항목입니다. 두 개의 변환에서는 다양 한 좌표 시스템에서에서 작동 하도록 수도 있습니다.  
+[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 변형할 수 있도록 전역 변환 및 페이지 변환을 제공 (회전, 크기 조정, 변환, 및 등) 사용자가 그린 항목입니다. 두 개의 변환에서는 다양 한 좌표 시스템에서에서 작동 하도록 수도 있습니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
  [좌표계 형식](../../../../docs/framework/winforms/advanced/types-of-coordinate-systems.md)  

@@ -1,14 +1,6 @@
 ---
-title: "ResolveTypeLib 메서드"
-ms.custom: 
+title: ResolveTypeLib 메서드
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ResolveTypeLib
 api_location:
@@ -21,17 +13,13 @@ helpviewer_keywords:
 ms.assetid: 95d2aa0d-8eeb-4a9f-a216-5249f7e2c167
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 72d1cedbfc1a1ec6c3588a7b0be9cf657d7369fd
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 96a9672ee05cb1fe2573620bd1dea23e57339c93
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="resolvetypelib-method"></a>ResolveTypeLib 메서드
 정규화 된 경로 반환 하 여 형식 라이브러리의 단순한 이름을 확인 합니다.  
@@ -79,11 +67,11 @@ HRESULT ResolveTypeLib(
 ## <a name="requirements"></a>요구 사항  
  **플랫폼:** 참조 [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)합니다.  
   
- **Header:** TlbRef.idl, TlbRef.h  
+ **헤더:** TlbRef.idl, TlbRef.h  
   
  **라이브러리:** TlbRef.lib  
   
- **.NET framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>참고 항목  
  [Tlbexp 도우미 함수](../../../../docs/framework/unmanaged-api/tlbexp/index.md)  

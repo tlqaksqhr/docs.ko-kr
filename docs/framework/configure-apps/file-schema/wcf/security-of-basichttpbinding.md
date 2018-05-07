@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 ms.assetid: 6432708d-5465-4bd9-bfc2-466742db99cb
 author: BrucePerlerMS
 manager: mbaldwin
-ms.openlocfilehash: ddf120d5462c7fcb0774e29fa18e80b71727acd8
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
-ms.translationtype: HT
+ms.openlocfilehash: e39d32a9cc689905bed42f56e4f998bbd8c6e038
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ltsecuritygt-of-ltbasichttpbindinggt"></a>&lt;basicHttpBinding&gt;의 &lt;security&gt;
 보안 기능을 정의 [ \<basicHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md)합니다.  
@@ -50,7 +50,7 @@ ms.lasthandoff: 05/03/2018
 |전송|HTTPS 전송을 사용하여 보안이 제공됩니다. SOAP 메시지는 HTTPS를 사용하여 보호됩니다. 이 서비스는 서비스의 X.509 인증서를 사용하여 클라이언트에 인증됩니다. 클라이언트는 제공된 ClientCredentialType을 사용하여 인증됩니다. 참조는 [ \<전송 >](../../../../../docs/framework/configure-apps/file-schema/wcf/transport-of-basichttpbinding.md)합니다.|  
 |메시지|SOAP 메시지 보안을 사용하여 보안이 제공됩니다. 기본적으로 본문에는 암호화 및 서명이 수행됩니다. 이 바인딩에서는 클라이언트에 out of band 방식으로 서버 인증서가 제공되어야 합니다. 이 바인딩의 유효한 `ClientCredentialType`은 `Certificate`뿐입니다.|  
 |TransportWithMessageCredential|전송 보안에 의해 무결성, 기밀성 및 서버 인증이 제공됩니다. 클라이언트 인증은 SOAP 메시지 보안에 의해 제공됩니다. 이 모드는 사용자가 사용자 이름/암호를 사용하여 인증되며 메시지 전송 보호를 위한 기존의 HTTP 배포가 있는 경우에 적합합니다.|  
-|TransportCredentialOnly|이 모드는 메시지 무결성 및 기밀성을 제공하지 않으나 http 기반 클라이언트 인증을 제공합니다. 이 모드는 주의해서 사용해야 합니다. 이 모드는 다른 방식(예: IPsec)에 의해 전송 보안이 제공되며 [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 인프라에서 클라이언트 인증만 제공하는 환경에서 사용해야 합니다.|  
+|TransportCredentialOnly|이 모드는 메시지 무결성 및 기밀성을 제공하지 않으나 http 기반 클라이언트 인증을 제공합니다. 이 모드는 주의해서 사용해야 합니다. WCF 인프라에서 클라이언트 인증만 제공 되 고 있는 다른 방법 (예: IPSec)에 의해 전송 보안이 제공 환경에서 사용 해야 합니다.|  
   
 ### <a name="child-elements"></a>자식 요소  
   

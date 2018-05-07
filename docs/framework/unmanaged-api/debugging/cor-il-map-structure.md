@@ -1,14 +1,6 @@
 ---
-title: "COR_IL_MAP 구조체"
-ms.custom: 
+title: COR_IL_MAP 구조체
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - COR_IL_MAP
 api_location:
@@ -22,17 +14,13 @@ helpviewer_keywords:
 ms.assetid: 534ebc17-963d-4b26-8375-8cd940281db3
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 2e2772833d75ced2209896ca37cf6cf37fb965f1
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 9676730a4f11ed77996b7a4aab4e538aba9b53c4
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="corilmap-structure"></a>COR_IL_MAP 구조체
 함수의 상대 오프셋 변경 내용을 지정합니다.  
@@ -53,7 +41,7 @@ typedef struct _COR_IL_MAP {
 |------------|-----------------|  
 |`oldOffset`|이전 Microsoft intermediate language (MSIL) 함수의 시작 부분에 상대적으로 오프셋 합니다.|  
 |`newOffset`|함수 시작을 기준으로 새 MSIL 오프셋입니다.|  
-|`fAccurate`|`true`정확 하 게; 매핑이 하는 경우 그렇지 않으면 `false`합니다.|  
+|`fAccurate`|`true` 정확 하 게; 매핑이 하는 경우 그렇지 않으면 `false`합니다.|  
   
 ## <a name="remarks"></a>설명  
  Map의 형식은 다음과 같습니다:입니다 디버거가 가정 `oldOffset` 원래, 수정 되지 않은 MSIL 코드 내에서 MSIL 오프셋을 나타냅니다. `newOffset` 새로운, 계측 된 코드 내에서 해당 MSIL 오프셋 매개 변수 참조입니다.  
@@ -99,7 +87,7 @@ typedef struct _COR_IL_MAP {
   
  **라이브러리:** CorGuids.lib  
   
- **.NET framework 버전:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>참고 항목  
  [디버깅 구조체](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)  

@@ -1,14 +1,6 @@
 ---
-title: "ExportTypeForwarder 메서드"
-ms.custom: 
+title: ExportTypeForwarder 메서드
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - IALink.ExportTypeForwarder
 api_location:
@@ -22,17 +14,13 @@ helpviewer_keywords:
 ms.assetid: 55989fa9-ab43-4f08-8eb6-2eb56fa7ca76
 topic_type:
 - apiref
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 3fe418b1f8a5d5a6d3c2d36184ca76d5ef9989bb
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 5b28c18d55b91d6315003229295ab0e6781be183
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="exporttypeforwarder-method"></a>ExportTypeForwarder 메서드
 지정된 된 어셈블리의 형식 테이블에는 형식 전달자를 추가합니다.  
@@ -56,7 +44,7 @@ HRESULT ExportTypeForwarder(
  내보낼 정규화 된 형식 이름입니다.  
   
  `dwFlags`  
- `ComType`와 같은 플래그 `tdPublic` 또는 `tdNested`합니다. 이 값이 전달 될 수 있습니다 [DefineExportedType 메서드](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-defineexportedtype-method.md)합니다.  
+ `ComType` 와 같은 플래그 `tdPublic` 또는 `tdNested`합니다. 이 값이 전달 될 수 있습니다 [DefineExportedType 메서드](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-defineexportedtype-method.md)합니다.  
   
  `pType`  
  내보낸된 형식 토큰을 받습니다. 이 중첩 된 형식을 내보내는에 필요 합니다.  

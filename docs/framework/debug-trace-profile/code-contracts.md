@@ -1,31 +1,19 @@
 ---
-title: "코드 계약"
-ms.custom: 
+title: 코드 계약
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - Code contracts
 ms.assetid: 84526045-496f-489d-8517-a258cf76f040
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 4a7f6dd2f97f7d57cdaa59d1420a34409804f9dd
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 09bfa08589bda68258883e6f080392f534e8c5df
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="code-contracts"></a>코드 계약
 코드 계약을 통해 코드에서 사전 조건, 사후 조건 및 개체 고정을 지정할 수 있습니다. 사전 조건은 메서드 또는 속성을 입력할 때 충족해야 하는 요구 사항입니다. 사후 조건은 메서드 또는 속성 코드가 종료될 때의 예상을 설명합니다. 개체 고정은 양호한 상태인 클래스의 예상 상태를 설명합니다.  

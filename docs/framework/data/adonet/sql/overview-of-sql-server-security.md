@@ -1,24 +1,12 @@
 ---
-title: "SQL Server 보안 개요"
-ms.custom: 
+title: SQL Server 보안 개요
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: ae66dd75-5c16-4cc0-9e12-774dd26d3fb9
-caps.latest.revision: "5"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: a8f44b69f177584bb3680f68c50ff054c6b805ed
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 84b6724417d03a30c131700e197744839d3a020d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="overview-of-sql-server-security"></a>SQL Server 보안 개요
 보안 위협에 대처하는 가장 좋은 방법은 여러 보안 계층으로 구성된 심층적인 방어 전략을 구현하는 것입니다. SQL Server는 데이터베이스 관리자와 개발자가 안전한 데이터베이스 응용 프로그램과 위협 대처 방안을 만들 수 있도록 디자인된 보안 아키텍처를 제공합니다. SQL Server의 각 버전은 새로운 기능이 추가되어 이전 버전의 SQL Server에 비해 향상되었지만 사용자 환경에 맞게 직접 보안을 구성하고 설정해야 합니다. 보안 요구 사항은 응용 프로그램마다 다릅니다. 따라서 개발자는 알려진 위협에 대응하는 데 가장 적합한 기능의 조합이 무엇인지 파악하고 향후 발생할 수 있는 위협에 대비할 수 있어야 합니다.  

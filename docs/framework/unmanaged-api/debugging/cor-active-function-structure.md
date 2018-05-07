@@ -1,14 +1,6 @@
 ---
-title: "COR_ACTIVE_FUNCTION 구조체"
-ms.custom: 
+title: COR_ACTIVE_FUNCTION 구조체
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - COR_ACTIVE_FUNCTION
 api_location:
@@ -22,17 +14,13 @@ helpviewer_keywords:
 ms.assetid: ed86185f-2152-459c-961f-10c06d62e83f
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 7bb587f485427d9fd88e2f834d844ece18d336ca
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 86ab3d3a0f460f1ecdf86147b14df205aaf49635
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="coractivefunction-structure"></a>COR_ACTIVE_FUNCTION 구조체
 스레드 프레임에서 현재 활성 상태인 함수에 대한 정보를 포함합니다. 이 구조에서 사용 되는 [icordebugthread2:: Getactivefunctions](../../../../docs/framework/unmanaged-api/debugging/icordebugthread2-getactivefunctions-method.md) 메서드.  
@@ -66,7 +54,7 @@ typedef struct  _COR_ACTIVE_FUNCTION {
   
  **라이브러리:** CorGuids.lib  
   
- **.NET framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>참고 항목  
  [디버깅 구조체](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)  

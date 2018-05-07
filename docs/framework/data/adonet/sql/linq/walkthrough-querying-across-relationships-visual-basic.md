@@ -1,28 +1,14 @@
 ---
-title: "연습: 관계 간 쿼리(Visual Basic)"
-ms.custom: 
+title: '연습: 관계 간 쿼리(Visual Basic)'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - vb
 ms.assetid: a7da43e3-769f-4e07-bcd6-552b8bde66f4
-caps.latest.revision: 
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload:
-- dotnet
-ms.openlocfilehash: fef9880d5f9fa652eab2eb0d17bbf782dc64773d
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: aa98a823a5d97d86144ea2f76953e990cde8edec
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="walkthrough-querying-across-relationships-visual-basic"></a>연습: 관계 간 쿼리(Visual Basic)
 이 연습에서는 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] *연결* 데이터베이스에서 외래 키 관계를 나타내는입니다.  
@@ -31,7 +17,7 @@ ms.lasthandoff: 01/17/2018
   
  이 연습은 Visual Basic 개발 설정을 사용하여 작성했습니다.  
   
-## <a name="prerequisites"></a>필수 구성 요소  
+## <a name="prerequisites"></a>전제 조건  
  완료 해야 [연습: 간단한 개체 모델 및 쿼리 (Visual Basic)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-simple-object-model-and-query-visual-basic.md)합니다. 이 연습은 c:\linqtest에 있는 northwnd.mdf 파일을 비롯하여 해당 연습의 단순 개체 모델 및 쿼리를 기반으로 합니다.  
   
 ## <a name="overview"></a>개요  

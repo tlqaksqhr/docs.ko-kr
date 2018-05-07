@@ -1,11 +1,7 @@
 ---
-title: "Initialize 함수 (관리 되지 않는 API 참조)"
-description: "Initialize 함수 WMI 초기화를 수행합니다."
+title: Initialize 함수 (관리 되지 않는 API 참조)
+description: Initialize 함수 WMI 초기화를 수행합니다.
 ms.date: 11/06/2017
-ms.prod: .net-framework
-ms.technology:
-- dotnet-clr
-ms.topic: reference
 api_name:
 - Initialize
 api_location:
@@ -20,14 +16,11 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: d62d959c5dfeac237abb20b86df87ae07a077dbd
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 01de35a0cd4d359dfba0375a85fbce017e44b9f8
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="initialize-function"></a>Initialize 함수
 WMI 초기화를 수행 합니다.  
@@ -54,7 +47,7 @@ HRESULT Initialize(
   
  **헤더:** WMINet_Utils.def  
   
- **.NET framework 버전:**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **.NET framework 버전:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>참고자료  
 [WMI 및 성능 카운터 (관리 되지 않는 API 참조)](index.md)

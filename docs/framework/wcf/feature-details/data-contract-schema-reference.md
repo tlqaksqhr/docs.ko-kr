@@ -1,34 +1,20 @@
 ---
 title: 데이터 계약 스키마 참조
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - data contracts [WCF], schema reference
 ms.assetid: 9ebb0ebe-8166-4c93-980a-7c8f1f38f7c0
-caps.latest.revision: 24
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 075f8d89caccd7723f3a1dc54fde695a8fb624ab
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 06bc79e059300d448ababa87974b590f54f7984c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="data-contract-schema-reference"></a>데이터 계약 스키마 참조
 이 항목에서는 XML serialization에 대한 CLR(공용 언어 런타임) 형식을 설명하기 위해 <xref:System.Runtime.Serialization.DataContractSerializer> 에서 사용하는 XSD(XML 스키마) 하위 집합에 대해 설명합니다.  
   
 ## <a name="datacontractserializer-mappings"></a>DataContractSerializer 매핑  
- 또한 WSDL(웹 서비스 기술 언어) 또는 XSD 문서에 액세스하여 서비스 또는 클라이언트에 대한 데이터 계약을 생성하기 위해 Svcutil.exe를 사용하는 경우 `DataContractSerializer` 는 메타데이터 끝점 또는 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 를 사용하여 [indigo1](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)서비스에서 메타데이터를 내보낼 때 CLR 형식을 XSD에 매핑합니다. 자세한 내용은 참조 [데이터 계약 Serializer](../../../../docs/framework/wcf/feature-details/data-contract-serializer.md)합니다.  
+ `DataContractSerializer` 메타 데이터 끝점을 사용 하 여 Windows Communication Foundation (WCF) 서비스에서 메타 데이터를 내보낼 때 CLR 형식을 XSD에 매핑합니다 또는 [ServiceModel Metadata 유틸리티 도구 (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)합니다. 자세한 내용은 참조 [데이터 계약 Serializer](../../../../docs/framework/wcf/feature-details/data-contract-serializer.md)합니다.  
   
  또한 WSDL(웹 서비스 기술 언어) 또는 XSD 문서에 액세스하여 서비스 또는 클라이언트에 대한 데이터 계약을 생성하기 위해 Svcutil.exe를 사용하는 경우 `DataContractSerializer` 는 XSD를 CLR 형식에 매핑합니다.  
   
@@ -105,7 +91,7 @@ ms.lasthandoff: 04/30/2018
 |`choice`|사용할 수 없음|  
 |`sequence`|지원되며 데이터 계약의 데이터 멤버에 매핑됩니다.|  
 |`attribute`|한 가지 예외를 포함하여 use="prohibited"인 경우에도 사용할 수 없습니다. 표준 Serialization 스키마 네임스페이스에서 선택적 특성만 지원됩니다. 이러한 특성은 데이터 계약 프로그래밍 모델의 데이터 멤버에 매핑되지 않습니다. 현재 이러한 하나의 특성만 의미가 있으며, 여기에 대해서는 ISerializable 단원에서 설명합니다. 다른 특성은 모두 무시됩니다.|  
-|`attributeGroup`|사용할 수 없습니다. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] v1 릴리스에서 `DataContractSerializer` 는 `attributeGroup` 내의 `xs:complexType`존재를 무시합니다.|  
+|`attributeGroup`|사용할 수 없습니다. WCF v1 릴리스에서 `DataContractSerializer` 의 존재를 무시 `attributeGroup` 내 `xs:complexType`합니다.|  
 |`anyAttribute`|사용할 수 없습니다.|  
 |(비어 있음)|데이터 멤버 없이 데이터 계약에 매핑됩니다.|  
   
@@ -215,7 +201,7 @@ ms.lasthandoff: 04/30/2018
   
  \* 사용 하는 경우는 `simpleType` 및 `complexType,` 때문에 명명 된 데이터 계약이 요소 이름에서 파생 된 생성 된 이름으로 생성 되 고 익명 데이터 계약이 없는 없다는 점을 제외 하면 익명 형식에 대 한 매핑을 익명이 아닌 형식 구문과 동일 합니다. 다음 목록에는 익명 형식에 대한 규칙이 포함되어 있습니다.  
   
--   [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 구현 정보: `xs:element` 이름에 마침표가 없는 경우 익명 형식은 외부 데이터 계약 형식의 내부 형식에 매핑됩니다. 이름에 마침표가 있는 경우 결과 데이터 계약 형식은 내부 형식이 아닌 독립적입니다.  
+-   WCF 구현 세부 정보: 경우는 `xs:element` 이름에 마침표가 없는, 익명 형식은 외부 데이터 계약 형식의 내부 형식에 매핑됩니다. 이름에 마침표가 있는 경우 결과 데이터 계약 형식은 내부 형식이 아닌 독립적입니다.  
   
 -   내부 형식의 생성된 데이터 계약 이름은 외부 형식의 데이터 계약 이름 다음에 마침표, 요소 이름 및 문자열 "Type"이 옵니다.  
   

@@ -1,14 +1,6 @@
 ---
-title: "GUID_ManagedName 특성"
-ms.custom: 
+title: GUID_ManagedName 특성
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - GUID_ManagedName
 api_location:
@@ -22,17 +14,13 @@ helpviewer_keywords:
 ms.assetid: 11e18095-e444-47bc-aff6-b887ac5dc01e
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 116a9e38b9885f0d0a5afc8f4915b9ce2b50f1dc
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 3bae50f695de81856d4fddcb2af3d1188d896642
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="guidmanagedname-attribute"></a>GUID_ManagedName 특성
 구성 요소 개체 모델 (COM) 라이브러리에 대 한 관리 되는 네임 스페이스 이름을 지정 하는 사용자 지정 인터페이스 특성을 정의 합니다.  
@@ -50,7 +38,7 @@ ms.lasthandoff: 12/22/2017
  라이브러리에 대 한 관리 되는 네임 스페이스 이름입니다.  
   
 ## <a name="definition"></a>정의  
- `GUID_ManagedName`Cor.h에 다음과 같이 정의 됩니다.  
+ `GUID_ManagedName` Cor.h에 다음과 같이 정의 됩니다.  
   
 ```  
 // {0F21F359-AB84-41e8-9A78-36D110E6D2F9}  
@@ -64,7 +52,7 @@ EXTERN_GUID(GUID_ManagedName, 0xf21f359, 0xab84, 0x41e8, 0x9a, 0x78, 0x36, 0xd1,
   
  자세한 내용은 참조 [인터페이스 특성](/cpp/windows/interface-attributes) Visual c + +에서 참조 설명서입니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 예제에서는 사용 하 여 라이브러리 정의 `GUID_ManagedName` 특성입니다.  
   
 ```  

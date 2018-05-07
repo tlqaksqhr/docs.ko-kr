@@ -1,14 +1,6 @@
 ---
-title: "CorSymAddrKind 열거형"
-ms.custom: 
+title: CorSymAddrKind 열거형
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - CorSymAddrKind
 api_location:
@@ -22,17 +14,13 @@ helpviewer_keywords:
 ms.assetid: 3ef841c2-cade-42ee-ba34-2ef91d6d0879
 topic_type:
 - apiref
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 300913f9ea89044e425f9f05856d13fa15cdc015
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 98cf49714829b4b2f80e0240c2ebde7fa6c280e1
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="corsymaddrkind-enumeration"></a>CorSymAddrKind 열거형
 메모리 주소 유형을 나타냅니다.  
@@ -71,7 +59,7 @@ typedef enum CorSymAddrKind
 |`ADDR_NATIVE_ISECTOFFSET`|첫 번째 주소 섹션은 두 번째 주소는 오프셋을 나타냅니다.|  
   
 ## <a name="requirements"></a>요구 사항  
- **헤더:** CorSym.idl, CorSym.h  
+ **Header:** CorSym.idl, CorSym.h  
   
 ## <a name="see-also"></a>참고 항목  
  [진단 기호 저장소 열거형](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-enumerations.md)

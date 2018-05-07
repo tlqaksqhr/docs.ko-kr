@@ -1,27 +1,15 @@
 ---
-title: "Windows Forms DataGridView 컨트롤의 기본 기능"
-ms.custom: 
+title: Windows Forms DataGridView 컨트롤의 기본 기능
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - data grids [Windows Forms], default functionality in DataGridView control
 - DataGridView control [Windows Forms], default functionality
 ms.assetid: 4405f697-cad1-4839-9bcd-8ddb09d9f00e
-caps.latest.revision: "10"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ecb8cdaa4e8eb0498259c597e0de3f80c3106549
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: a475d8bce388860c88571fbf638d206bfe01223d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="default-functionality-in-the-windows-forms-datagridview-control"></a>Windows Forms DataGridView 컨트롤의 기본 기능
 Windows Forms <xref:System.Windows.Forms.DataGridView> 컨트롤은 상당한 양의 기본 기능으로 사용자가 제공 합니다.  
@@ -51,7 +39,7 @@ Windows Forms <xref:System.Windows.Forms.DataGridView> 컨트롤은 상당한 �
   
 -   열 머리글 텍스트 데이터 원본 열의 이름을 자동으로 사용 합니다.  
   
--   데이터 원본의 내용으로 채워집니다. <xref:System.Windows.Forms.DataGridView>열은 데이터 원본의 각 열에 대해 자동으로 만들어집니다.  
+-   데이터 원본의 내용으로 채워집니다. <xref:System.Windows.Forms.DataGridView> 열은 데이터 원본의 각 열에 대해 자동으로 만들어집니다.  
   
 -   테이블에 표시 되는 각 행에 대 한 행을 만듭니다.  
   

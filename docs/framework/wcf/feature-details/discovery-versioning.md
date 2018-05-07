@@ -1,24 +1,12 @@
 ---
-title: "검색 버전 관리"
-ms.custom: 
+title: 검색 버전 관리
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: f91c6d0a-3af2-45c5-9a5c-e75390619836
-caps.latest.revision: "10"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: df5a15f740e9db4eb58ec4e410db9ef5e014fe0a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 18c160e5e08ed9b6733bed9d5e40a4dde00dfd1c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="discovery-versioning"></a>검색 버전 관리
 이 항목에서는 일부 새 검색 기능의 구현에 대해 간략하게 설명하고 사용할 검색 버전을 선택하는 방법에 대해서도 간략하게 설명합니다.  

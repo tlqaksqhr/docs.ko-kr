@@ -1,13 +1,6 @@
 ---
-title: "방법: 사용자 지정 컨트롤에서 잉크 선택"
-ms.custom: 
+title: '방법: 사용자 지정 컨트롤에서 잉크 선택'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -16,23 +9,18 @@ helpviewer_keywords:
 - ink [WPF], selecting from custom control
 - custom controls [WPF], ink selection
 ms.assetid: 5f3a45c6-6d40-4017-9b47-933f134ceba3
-caps.latest.revision: "5"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 972ece6964d1f3cc42c6221c3b18336e3353bc18
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 6c85855cda4f74d557539ed7aea3f725550512e8
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-select-ink-from-a-custom-control"></a>방법: 사용자 지정 컨트롤에서 잉크 선택
 추가 하 여 프로그램 <xref:System.Windows.Ink.IncrementalLassoHitTester> 사용자 지정 컨트롤을 활성화 컨트롤 사용자 방식과 유사 하 게 올가미 도구를 사용 하 여 잉크를 선택할 수 있도록는 <xref:System.Windows.Controls.InkCanvas> 가 올가미로 잉크를 선택 합니다.  
   
  이 예에서는 잉크 지원 사용자 지정 컨트롤을 만드는 잘 알고 있다면 가정 합니다.  잉크 입력을 허용 하는 사용자 지정 컨트롤을 만들려면 참조 [잉크 입력 컨트롤을 만드는](../../../../docs/framework/wpf/advanced/creating-an-ink-input-control.md)합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  사용자가 올가미로 그리면는 <xref:System.Windows.Ink.IncrementalLassoHitTester> 예측 사용자 올가미 완료 된 후 올가미 경로의 경계 내로 획 될 예정입니다.  올가미 경로의 경계 내에 있도록 결정 된 선은 선택 중인 생각할 수 있습니다.  선택한 스트로크 선택 되지 않은 메시지가 될 수도 있습니다.  예를 들어, 사용자 올가미를 그리는 동안 방향을 반대로 <xref:System.Windows.Ink.IncrementalLassoHitTester> 몇 개의 스트로크를 선택 취소할 수 있습니다.  
   
  <xref:System.Windows.Ink.IncrementalLassoHitTester> 발생는 <xref:System.Windows.Ink.IncrementalLassoHitTester.SelectionChanged> 올가미 사용자를 그리는 동안 응답 하도록 사용자 지정 컨트롤 수 있도록 하는 이벤트입니다.  예를 들어 사용자가 선택 하거나 선택을 취소할으로 선의 모양을 변경할 수 있습니다.  

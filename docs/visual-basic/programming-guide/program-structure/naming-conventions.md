@@ -1,12 +1,6 @@
 ---
-title: "Visual Basic 명명 규칙"
-ms.custom: 
+title: Visual Basic 명명 규칙
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - names [Visual Basic], Visual Basic rules
 - naming conventions
@@ -16,14 +10,11 @@ helpviewer_keywords:
 - names [Visual Basic], naming conventions
 - naming conventions [Visual Basic], classes
 ms.assetid: 164949a4-2a7c-4736-9d82-9c3078e2e56c
-caps.latest.revision: "10"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 97f02fd85d4796d6799a8a5b40a9137eeb79a93f
-ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
+ms.openlocfilehash: cb7e9f2a577e95e09fde885df1a78aea4e7fa466
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="visual-basic-naming-conventions"></a>Visual Basic 명명 규칙
 Visual Basic 응용 프로그램의 요소 이름을 지정할 때 해당 이름의 첫 번째 문자는 영문자 또는 밑줄 이어야 합니다. 단, 이름이 밑줄로 시작 준수 하지 않는 [언어 독립성 및 언어 독립적 구성 요소](../../../standard/language-independence-and-language-independent-components.md) (CLS).  

@@ -1,13 +1,6 @@
 ---
-title: "DynamicResource 태그 확장"
-ms.custom: 
+title: DynamicResource 태그 확장
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 f1_keywords:
 - DynamicResource
 - DynamicResourceExtension
@@ -15,16 +8,11 @@ helpviewer_keywords:
 - XAML [WPF], DynamicResource markup extension
 - DynamicResource markup extensions [WPF]
 ms.assetid: 7324f243-03af-4c2b-b0db-26ac6cdfcbe4
-caps.latest.revision: "16"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 3f6c8500f9b9cd6d617789a2da3444519971ae81
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: c09d009a8cc90e050f6cfb1a8d2abd5c61c5b19f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="dynamicresource-markup-extension"></a>DynamicResource 태그 확장
 에 대 한 값을 제공 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 정의 된 리소스에 대 한 참조가 되도록 지연 하 여 property 특성입니다. 해당 리소스에 대 한 조회 동작은 런타임에 조회과 같습니다.  
@@ -63,13 +51,13 @@ ms.lasthandoff: 12/22/2017
   
  리소스 키에 정의 된 모든 문자열일 수 있습니다는 [XamlName 문법](../../../../docs/framework/xaml-services/xamlname-grammar.md)합니다. 리소스 키 수도 있습니다 다른 개체 형식 같은 <xref:System.Type>합니다. A <xref:System.Type> 테마 컨트롤은 방식의 기본 키입니다. 자세한 내용은 [컨트롤 제작 개요](../../../../docs/framework/wpf/controls/control-authoring-overview.md)를 참조하십시오.  
   
- [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)]리소스 값을 조회에 대 한 같은 <xref:System.Windows.FrameworkElement.FindResource%2A>에서 사용 되는 동일한 리소스 조회 논리에 따라 `DynamicResource`합니다.  
+ [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] 리소스 값을 조회에 대 한 같은 <xref:System.Windows.FrameworkElement.FindResource%2A>에서 사용 되는 동일한 리소스 조회 논리에 따라 `DynamicResource`합니다.  
   
  리소스 참조 선언적 다른 방법을 사용 하는 한 [StaticResource 태그 확장](../../../../docs/framework/wpf/advanced/staticresource-markup-extension.md)합니다.  
   
  특성 구문은 이러한 태그 확장에 가장 많이 사용되는 구문입니다. `DynamicResource` 식별자 문자열 다음에 나오는 문자열 토큰은 기본 <xref:System.Windows.DynamicResourceExtension.ResourceKey%2A> 확장 클래스의 <xref:System.Windows.DynamicResourceExtension> 값으로 할당됩니다.  
   
- `DynamicResource`개체 요소 구문에서 사용할 수 있습니다. 이 경우의 값을 지정 하는 <xref:System.Windows.DynamicResourceExtension.ResourceKey%2A> 속성은 필수입니다.  
+ `DynamicResource` 개체 요소 구문에서 사용할 수 있습니다. 이 경우의 값을 지정 하는 <xref:System.Windows.DynamicResourceExtension.ResourceKey%2A> 속성은 필수입니다.  
   
  `DynamicResource` 속성을 다음과 같이 속성=값 쌍으로 지정하는 자세한 특성 사용 구문에도 <xref:System.Windows.DynamicResourceExtension.ResourceKey%2A>을 사용할 수 있습니다.  
   

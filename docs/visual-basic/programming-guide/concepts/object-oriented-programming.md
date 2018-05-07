@@ -1,21 +1,12 @@
 ---
-title: "개체 지향 프로그래밍 (Visual Basic)"
-ms.custom: 
+title: 개체 지향 프로그래밍 (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 ms.assetid: 49794de4-64c3-473c-b8ed-fe98835df69c
-caps.latest.revision: "4"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 950f080949dce0fc1a2834825d2f7c945007fb7b
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: e8936eb9031ef68ea333835d8433e1ba1a45990f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="object-oriented-programming-visual-basic"></a>개체 지향 프로그래밍 (Visual Basic)
 Visual Basic 캡슐화, 상속, 다형성 등 개체 지향 프로그래밍에 대 한 완벽 하 게 지원에서 제공 합니다.  
@@ -278,7 +269,7 @@ Dim sampleObject = New SampleClass With
 
 - [개체 이니셜라이저: 명명된 형식과 익명 형식](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)
 
-###  <a name="Static"></a>공유 클래스 및 멤버  
+###  <a name="Static"></a> 공유 클래스 및 멤버  
  클래스의 공유 멤버에는 속성, 프로시저 또는 클래스의 모든 인스턴스에서 공유 되는 필드입니다.  
   
  정의 하려면 공유 멤버:  
@@ -457,5 +448,5 @@ End Class
 
 - [AddressOf 연산자](../../../visual-basic/language-reference/operators/addressof-operator.md)
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참고자료
  [Visual Basic 프로그래밍 가이드](../../../visual-basic/programming-guide/index.md)

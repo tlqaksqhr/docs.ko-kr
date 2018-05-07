@@ -1,29 +1,19 @@
 ---
-title: "CLR ETW 키워드 및 수준"
-ms.custom: 
+title: CLR ETW 키워드 및 수준
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - CLR ETW keywords
 - CLR ETW levels
 - ETW, CLR keywords
 - ETW, CLR levels
 ms.assetid: fdf5856d-516b-4042-849d-911c4518a6cb
-caps.latest.revision: "15"
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 72775d4cb478b6d9c9d2e65119c63f8a34ae47d1
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 8332eba909c3ebe475e3f364f81a676733e4e3d7
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="clr-etw-keywords-and-levels"></a>CLR ETW 키워드 및 수준
 <a name="top"></a> 범주 및 수준별로 ETW(Windows용 이벤트 추적) 이벤트를 필터링할 수 있습니다. 이벤트 [CLR ETW 키워드](#keywords)를 통해 범주별로 이벤트를 필터링할 수 있습니다. 런타임 및 런다운 공급자를 위해 여러 키워드를 조합하여 사용할 수 있습니다. [이벤트 수준](#levels) 은 플래그로 식별됩니다.  
@@ -90,10 +80,10 @@ ms.lasthandoff: 12/22/2017
   
 |키워드 및 플래그|응용 프로그램 도메인, 어셈블리, 모듈 로드/언로드 이벤트|메서드 로드/언로드 이벤트(동적 이벤트 제외)|동적 메서드 로드/소멸 이벤트|  
 |------------------------|--------------------------------------------------------------|----------------------------------------------------------|-----------------------------------------|  
-|`LoaderKeyword`|이벤트를 로드 및 언로드합니다.|없음.|없음|  
+|`LoaderKeyword`|이벤트를 로드 및 언로드합니다.|없음|없음|  
 |`JITKeyword`<br /><br /> (+ `StartEnumerationKeyword` 는 아무것도 추가하지 않음)|없음.|이벤트를 로드합니다.|이벤트를 로드 및 언로드합니다.|  
 |`JITKeyword` +<br /><br /> `EndEnumerationKeyword`|없음|이벤트를 로드 및 언로드합니다.|이벤트를 로드 및 언로드합니다.|  
-|`NGenKeyword`|없음.|없음.|해당 사항 없음.|  
+|`NGenKeyword`|없음|없음.|해당 사항 없음.|  
 |`NGenKeyword` +<br /><br /> `StartEnumerationKeyword`|없음|이벤트를 로드합니다.|해당 사항 없음.|  
 |`NGenKeyword` +<br /><br /> `EndEnumerationKeyword`|없음|이벤트를 언로드합니다.|해당 사항 없음.|  
   

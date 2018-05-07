@@ -1,14 +1,6 @@
 ---
-title: "_AxlGetIssuerPublicKeyHash 함수"
-ms.custom: 
+title: _AxlGetIssuerPublicKeyHash 함수
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - _AxlGetIssuerPublicKeyHash
 api_location:
@@ -16,17 +8,13 @@ api_location:
 api_type:
 - DLLExport
 ms.assetid: fb626b41-b888-4625-84c3-2c02b5e3866f
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: fee2b3e0e74ec13009a9b02d226c6a99b0e2f34b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: b197aa539e60a9dbcee55cf190c44b45da3a5fb4
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="axlgetissuerpublickeyhash-function"></a>_AxlGetIssuerPublicKeyHash 함수
 지정한 인증서에 서명하는 데 사용되는 개인 키에 연결된 공개 키의 SHA-1 해시를 검색합니다.  

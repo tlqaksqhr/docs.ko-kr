@@ -1,11 +1,7 @@
 ---
-title: "ExecNotificationQueryWmi 함수 (관리 되지 않는 API 참조)"
-description: "ExecNotificationQueryWmi 함수 이벤트를 수신 하는 쿼리를 실행 합니다."
+title: ExecNotificationQueryWmi 함수 (관리 되지 않는 API 참조)
+description: ExecNotificationQueryWmi 함수 이벤트를 수신 하는 쿼리를 실행 합니다.
 ms.date: 11/06/2017
-ms.prod: .net-framework
-ms.technology:
-- dotnet-clr
-ms.topic: reference
 api_name:
 - ExecNotificationQueryWmi
 api_location:
@@ -20,14 +16,11 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: d6dd0926d2262f8d0aa125b86755017a65a95a7f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 4b5c26ab9c273b134915eea39078a83f569bcd32
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="execnotificationquerywmi-function"></a>ExecNotificationQueryWmi 함수
 이벤트를 수신 하는 쿼리를 실행 합니다. 호출이 즉시 반환 하 고 호출자에 게 도착 했을 때 반환 된 이벤트에 대 한 열거자를 폴링할 수 있습니다. 쿼리를 취소 반환 된 열거자를 해제 합니다.  
@@ -77,7 +70,7 @@ HRESULT ExecNotificationQueryWmi (
 `authLevel`  
 [in] 권한 부여 수준입니다.
 
-`impLevel`[in] 가장 수준입니다.
+`impLevel` [in] 가장 수준입니다.
 
 `pCurrentNamespace`   
 [in] 에 대 한 포인터는 [IWbemServices](https://msdn.microsoft.com/library/aa392093(v=vs.85).aspx) 현재 네임 스페이스를 나타내는 개체입니다.
@@ -127,7 +120,7 @@ HRESULT ExecNotificationQueryWmi (
   
  **헤더:** WMINet_Utils.idl  
   
- **.NET framework 버전:**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **.NET framework 버전:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>참고자료  
 [WMI 및 성능 카운터 (관리 되지 않는 API 참조)](index.md)

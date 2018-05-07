@@ -1,24 +1,12 @@
 ---
-title: "개인 정보 및 데이터 보안"
-ms.custom: 
+title: 개인 정보 및 데이터 보안
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 46fa5839-adf7-4c7c-bce3-71e941fa7de9
-caps.latest.revision: "3"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 002d4411e4fee10044ea5dc1d04d7a29cdcd6584
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 68796fb3373b815b74a4d142624f1c00481650bf
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="privacy-and-data-security"></a>개인 정보 및 데이터 보안
 ADO.NET 응용 프로그램의 중요한 정보를 안전하게 보호하고 관리하는 방법은 응용 프로그램을 만드는 데 사용된 기본 제품 및 기술에 따라 다릅니다. ADO.NET은 데이터 보안이나 암호화를 위한 서비스를 직접적으로 제공하지 않습니다.  

@@ -1,32 +1,20 @@
 ---
 title: 자격 증명 협상 없이 Windows 클라이언트를 사용하는 메시지 보안
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: fc07a26c-cbee-41c5-8fb0-329085fef749
-caps.latest.revision: 18
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload:
-- dotnet
-ms.openlocfilehash: 056e743ff1849457f8a0e8ee509a56475f09435c
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 05ffe731a578f8b8d2cdbdf5e3c9229e2b03821c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="message-security-with-a-windows-client-without-credential-negotiation"></a>자격 증명 협상 없이 Windows 클라이언트를 사용하는 메시지 보안
-다음 시나리오에서는 Kerberos 프로토콜에 의해 보안된 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 클라이언트 및 서비스를 보여 줍니다.  
+다음 시나리오에서는 Windows Communication Foundation (WCF) 클라이언트와 서비스가 Kerberos 프로토콜에 의해 보호를 보여 줍니다.  
   
  서비스와 클라이언트 모두 동일한 도메인 또는 신뢰할 수 있는 도메인에 있습니다.  
   
@@ -59,9 +47,9 @@ ms.lasthandoff: 04/30/2018
 > [!NOTE]
 >  Windows 자격 증명 형식을 협상 없이 사용하려면 서비스의 사용자 계정이 Active Directory 도메인에 등록된 SPN(서비스 사용자 이름)에 대한 액세스 권한이 있어야 합니다. 이 작업은  
   
-1.  `NetworkService` 또는 `LocalSystem` 계정을 사용하여 서비스를 실행합니다. 이러한 계정은 시스템에서 Active Directory 도메인에 연결할 때 설정된 시스템 SPN에 대한 액세스 권한이 있으므로, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서는 서비스 메타데이터(웹 서비스 기술 언어 또는 WSDL)의 서비스 끝점에 적절한 SPN 요소를 자동으로 생성합니다.  
+1.  `NetworkService` 또는 `LocalSystem` 계정을 사용하여 서비스를 실행합니다. WCF는 서비스의 메타 데이터 (웹 서비스 설명에에서는 서비스 끝점의 적절 한 SPN 요소를 자동으로 생성 이러한 계정은 시스템 시스템 Active Directory 도메인에 연결할 때 설정 된 SPN에 대 한 액세스를 가지기 때문에 언어에서 또는 WSDL)입니다.  
   
-2.  임의의 Active Directory 도메인 계정을 사용하여 서비스를 실행합니다. 이 경우 해당 도메인 계정에 대한 SPN을 설정해야 합니다. 그렇게 하는 한 가지 방법으로 Setspn.exe 유틸리티 도구를 사용합니다. 서비스 계정에 대한 SPN이 만들어지면 메타데이터(WSDL)를 통해 서비스 클라이언트에 SPN을 게시하도록 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]를 구성합니다. 이 작업은 응용 프로그램 구성 파일이나 코드를 통해 노출된 끝점에 대한 끝점 ID를 설정하여 수행합니다. 다음 예제에서는 ID를 프로그래밍 방식으로 게시합니다.  
+2.  임의의 Active Directory 도메인 계정을 사용하여 서비스를 실행합니다. 이 경우 해당 도메인 계정에 대한 SPN을 설정해야 합니다. 그렇게 하는 한 가지 방법으로 Setspn.exe 유틸리티 도구를 사용합니다. 서비스의 계정에 대 한 SPN을 만든 후 WCF 메타 데이터 (WSDL)를 통해 서비스의 클라이언트에 SPN을 게시 하도록 구성 합니다. 이 작업은 응용 프로그램 구성 파일이나 코드를 통해 노출된 끝점에 대한 끝점 ID를 설정하여 수행합니다. 다음 예제에서는 ID를 프로그래밍 방식으로 게시합니다.  
   
  Spn에 대 한 자세한 내용은, Kerberos 프로토콜 및 Active Directory에 대 한 참조 [Windows Kerberos 기술 자료에 대 한](http://go.microsoft.com/fwlink/?LinkId=88330)합니다. 끝점 id에 대 한 자세한 내용은 참조 [SecurityBindingElement 인증 모드](../../../../docs/framework/wcf/feature-details/securitybindingelement-authentication-modes.md)합니다.  
   

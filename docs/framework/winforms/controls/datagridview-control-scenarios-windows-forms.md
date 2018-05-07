@@ -1,28 +1,16 @@
 ---
-title: "DataGridView 컨트롤 시나리오(Windows Forms)"
-ms.custom: 
+title: DataGridView 컨트롤 시나리오(Windows Forms)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - data [Windows Forms], displaying in tabular format
 - data grids [Windows Forms], about data grids
 - DataGridView control [Windows Forms], scenarios
 ms.assetid: 09a5fd05-3447-47ec-a4ec-6082a2b7f0dd
-caps.latest.revision: "9"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 38e5337f775d98f8729c62b3481c3e839bff2252
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: a320b40664e4fe2254109183731db346a5d7d0b7
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="datagridview-control-scenarios-windows-forms"></a>DataGridView 컨트롤 시나리오(Windows Forms)
 와 <xref:System.Windows.Forms.DataGridView> 컨트롤을 다양 한 데이터 원본에서에서 테이블 형식 데이터를 표시할 수 있습니다. 간단한 용도로 수동으로 차원을 채울 수 있습니다는 <xref:System.Windows.Forms.DataGridView> 제어를 통해 직접 데이터를 조작 합니다. 그러나 일반적으로는 외부 데이터 원본에 데이터를 저장 한 키를 통해에 컨트롤 바인딩는 <xref:System.Windows.Forms.BindingSource> 구성 요소입니다.  
@@ -80,7 +68,7 @@ ms.lasthandoff: 12/22/2017
   
 ### <a name="scenario-key-points"></a>시나리오 주요 사항  
   
--   <xref:System.Windows.Forms.DataGridViewCellStyle>개체를 사용 하면 색, 글꼴, 서식 및 여러 수준에서 및 컨트롤의 개별 요소에 대 한 위치 정보를 제공할 수 있습니다.  
+-   <xref:System.Windows.Forms.DataGridViewCellStyle> 개체를 사용 하면 색, 글꼴, 서식 및 여러 수준에서 및 컨트롤의 개별 요소에 대 한 위치 정보를 제공할 수 있습니다.  
   
 -   셀 스타일 및 계층 코드를 재사용할 수 있으므로 여러 요소를 공유할 수 있습니다.  
   

@@ -1,32 +1,20 @@
 ---
 title: 인증서 클라이언트를 사용하는 메시지 보안
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 99770573-c815-4428-a38c-e4335c8bd7ce
-caps.latest.revision: 16
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload:
-- dotnet
-ms.openlocfilehash: 6e31c7a9e53e8b918661c0c6c544e697e2a772e6
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 570c7763da912de4e0d2729e7579a200f35c4941
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="message-security-with-a-certificate-client"></a>인증서 클라이언트를 사용하는 메시지 보안
-다음 시나리오에서는 메시지 보안 모드를 사용하여 보호되는 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 클라이언트 및 서비스를 보여 줍니다. 클라이언트 및 서비스는 인증서를 사용하여 인증됩니다. 자세한 내용은 참조 [분산 응용 프로그램 보안](../../../../docs/framework/wcf/feature-details/distributed-application-security.md)합니다.  
+다음 시나리오는 Windows Communication Foundation (WCF) 클라이언트 및 서비스 메시지 보안 모드를 사용 하 여 보안을 보여 줍니다. 클라이언트 및 서비스는 인증서를 사용하여 인증됩니다. 자세한 내용은 참조 [분산 응용 프로그램 보안](../../../../docs/framework/wcf/feature-details/distributed-application-security.md)합니다.  
   
  샘플 응용 프로그램에 대 한 참조 [메시지 보안 인증서](../../../../docs/framework/wcf/samples/message-security-certificate.md)합니다.  
   
@@ -35,7 +23,7 @@ ms.lasthandoff: 04/30/2018
 |특성|설명|  
 |--------------------|-----------------|  
 |보안 모드|메시지|  
-|상호 운용성|[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에만 해당|  
+|상호 운용성|WCF만|  
 |인증(서버)|서비스 인증서 사용|  
 |인증(클라이언트)|클라이언트 인증서 사용|  
 |무결성|예|  

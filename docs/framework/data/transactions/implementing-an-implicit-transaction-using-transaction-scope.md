@@ -1,26 +1,15 @@
 ---
-title: "트랜잭션 범위를 사용하여 암시적 트랜잭션 구현"
-ms.custom: 
+title: 트랜잭션 범위를 사용하여 암시적 트랜잭션 구현
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 49d1706a-1e0c-4c85-9704-75c908372eb9
-caps.latest.revision: "4"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 0b75091739b0ea97b63b35830f4946a78e49ff8f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: f3184801ed6a81d65727c638ef733bc93a87c1e8
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="implementing-an-implicit-transaction-using-transaction-scope"></a>트랜잭션 범위를 사용하여 암시적 트랜잭션 구현
 <xref:System.Transactions.TransactionScope> 클래스는 트랜잭션 자체와 상호 작용할 필요 없이 코드 블록을 트랜잭션에 참여하는 것으로 표시하는 단순한 방법을 제공합니다. 트랜잭션 범위는 자동으로 앰비언트 트랜잭션을 선택하고 관리할 수 있습니다. 사용하기 쉽고 효율적이므로 트랜잭션 응용 프로그램을 개발할 때는 <xref:System.Transactions.TransactionScope> 클래스를 사용하는 것이 좋습니다.  
@@ -51,7 +40,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="rolling-back-a-transaction"></a>트랜잭션 롤백  
  트랜잭션을 롤백하려면 트랜잭션 범위 내에서 <xref:System.Transactions.TransactionScope.Complete%2A> 메서드를 호출하면 안 됩니다. 예를 들어 범위 내에서 예외를 throw할 수 있습니다. 범위가 참여하는 트랜잭션이 롤백됩니다.  
   
-##  <a name="ManageTxFlow"></a>TransactionScopeOption를 사용 하 여 트랜잭션 흐름을 관리  
+##  <a name="ManageTxFlow"></a> TransactionScopeOption를 사용 하 여 트랜잭션 흐름을 관리  
  다음 예제의 <xref:System.Transactions.TransactionScope> 메서드와 같이 자체 범위를 사용하는 메서드 내의 `RootMethod`를 사용하는 메서드를 호출하여 트랜잭션 범위를 중첩할 수 있습니다.  
   
 ```csharp  

@@ -1,14 +1,6 @@
 ---
-title: "IMetaDataImport::EnumMethods 메서드"
-ms.custom: 
+title: IMetaDataImport::EnumMethods 메서드
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - IMetaDataImport.EnumMethods
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: 8cc3b0c3-d97d-4f71-9e7d-ef2a92b4959a
 topic_type:
 - apiref
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 4052bcd07ec5abd3c560569b59600123350e810c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 933694a6a033dbfe817e3848b9008f05b86f51f3
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="imetadataimportenummethods-method"></a>IMetaDataImport::EnumMethods 메서드
 지정한 형식의 메서드를 나타내는 MethodDef 토큰을 열거합니다.  
@@ -70,7 +58,7 @@ HRESULT EnumMethods (
   
 |HRESULT|설명|  
 |-------------|-----------------|  
-|`S_OK`|`EnumMethods`성공적으로 반환 합니다.|  
+|`S_OK`|`EnumMethods` 성공적으로 반환 합니다.|  
 |`S_FALSE`|열거할 MethodDef 토큰이 있습니다. 이 경우 `pcTokens` 은 0입니다.|  
   
 ## <a name="requirements"></a>요구 사항  
@@ -80,7 +68,7 @@ HRESULT EnumMethods (
   
  **라이브러리:** MsCorEE.dll에 리소스로 포함  
   
- **.NET framework 버전:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>참고 항목  
  [IMetaDataImport 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)  

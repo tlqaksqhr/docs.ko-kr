@@ -1,13 +1,7 @@
 ---
-title: "방법: GenericPrincipal 및 GenericIdentity 개체 만들기"
-ms.custom: 
+title: '방법: GenericPrincipal 및 GenericIdentity 개체 만들기'
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -17,18 +11,13 @@ helpviewer_keywords:
 - Creating GenericPrincipal Objects
 - GenericIdentity Objects
 ms.assetid: 465694cf-258b-4747-9dae-35b01a5bcdbb
-caps.latest.revision: "10"
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: b10029c8b290ffaaa4a858fe3e5a6315031f1bab
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 65fd078b6be9dbcdfc03e34285d70a6bfe42d87b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-genericprincipal-and-genericidentity-objects"></a>방법: GenericPrincipal 및 GenericIdentity 개체 만들기
 사용할 수는 <xref:System.Security.Principal.GenericIdentity> 클래스와 함께 <xref:System.Security.Principal.GenericPrincipal> 를 Windows 도메인의 독립적인 존재 하는 권한 부여 체계를 만드는 클래스입니다.  
@@ -67,7 +56,7 @@ ms.lasthandoff: 12/23/2017
     Thread.CurrentPrincipal = MyPrincipal;  
     ```  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 코드 예제에서는 **GenericPrincipal** 및 **GenericIdentity**의 인스턴스를 만드는 방법을 보여 줍니다 이 코드에서는 해당 개체의 값을 콘솔에 표시합니다.  
   
 ```vb  

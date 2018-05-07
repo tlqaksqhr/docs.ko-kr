@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 ms.assetid: 727cf3d2-6f56-48ad-a59f-ba423edb9c83
 author: BrucePerlerMS
 manager: mbaldwin
-ms.openlocfilehash: dd65b488a2d3f18f2e19191f143243204c4303d4
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
-ms.translationtype: HT
+ms.openlocfilehash: 2df10c0a35a5547dc2f1dafc6a2b9c0f9bbdc0a3
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ltsecuritygt-of-ltwebhttpbindinggt"></a>&lt;webHttpBinding&gt;의 &lt;security&gt;
 구성 된 끝점에 대 한 보안 요구 사항을 지정는 [ \<wsHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md)합니다.  
@@ -52,7 +52,7 @@ ms.lasthandoff: 05/03/2018
 |-----------|-----------------|  
 |없음|보안이 해제되어 있습니다.|  
 |전송|HTTPS를 사용하여 보안이 제공됩니다. 서비스는 SSL 인증서로 구성해야 합니다. 메시지는 HTTPS를 사용하여 완전하게 보안 처리되며, 서비스는 서비스의 SSL 인증서를 사용하여 클라이언트에 의해 인증됩니다. 클라이언트 인증을 통해 제어 되는 `ClientCredentialType` 특성에는 [ \<전송 >](../../../../../docs/framework/configure-apps/file-schema/wcf/transport-of-webhttpbinding.md)합니다.|  
-|TransportCredentialOnly|이 모드는 메시지 무결성 및 기밀성을 제공하지 않으나 HTTP 기반 클라이언트 인증을 제공합니다. 이 모드는 주의해서 사용해야 합니다. 이 모드는 다른 방식(예: IPsec)에 의해 전송 보안이 제공되며 [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 인프라에서 클라이언트 인증만 제공하는 환경에서 사용해야 합니다.|  
+|TransportCredentialOnly|이 모드는 메시지 무결성 및 기밀성을 제공하지 않으나 HTTP 기반 클라이언트 인증을 제공합니다. 이 모드는 주의해서 사용해야 합니다. WCF 인프라에서 클라이언트 인증만 제공 되 고 있는 다른 방법 (예: IPSec)에 의해 전송 보안이 제공 환경에서 사용 해야 합니다.|  
   
 ### <a name="child-elements"></a>자식 요소  
   

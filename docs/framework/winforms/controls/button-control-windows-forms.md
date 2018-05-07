@@ -1,27 +1,15 @@
 ---
-title: "Button 컨트롤(Windows Forms)"
-ms.custom: 
+title: Button 컨트롤(Windows Forms)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - buttons
 - Button control [Windows Forms]
 ms.assetid: d38bc40c-8040-4f19-9e88-2c665b0ab80b
-caps.latest.revision: "17"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: e4f9720f26458f3dd9cb2411d123fa830b20f3fd
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: d7eef53967962804033334750b9f3230b95a949d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="button-control-windows-forms"></a>Button 컨트롤(Windows Forms)
 사용자는 Windows Forms `Button` 컨트롤을 클릭하여 작업을 수행할 수 있습니다. `Button` 컨트롤은 텍스트와 이미지를 둘 다 표시할 수 있습니다. 단추를 클릭하면 눌렀다 놓는 것처럼 표시됩니다.  

@@ -1,27 +1,15 @@
 ---
-title: "System.Object 메서드"
-ms.custom: 
+title: System.Object 메서드
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 5397fca0-689e-443e-802f-e1cbdc866427
-caps.latest.revision: "2"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 319dc7ceae191de417bbdd33a5e234b42f3454de
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: bd4b30a65e7ad9391d9b867884d1c909491344bc
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="systemobject-methods"></a>System.Object 메서드
-[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]다음과 같은 지원 <xref:System.Object> 메서드.  
+[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 다음과 같은 지원 <xref:System.Object> 메서드.  
   
 |||  
 |-|-|  

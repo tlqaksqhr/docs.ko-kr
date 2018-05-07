@@ -1,36 +1,22 @@
 ---
 title: '방법: 권한을 부여하는 동안 메타데이터 요청 허용'
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - allowing metadata requests while authorizing [WCF]
 ms.assetid: 90cec34f-b619-452b-a056-8b1c0de49d05
-caps.latest.revision: 9
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: e56a95bf773e22166297bc153ee3ef88320db0f9
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 2f855080cf3ba4cee08470af77c52945e47a2ec4
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-allow-metadata-requests-while-authorizing"></a>방법: 권한을 부여하는 동안 메타데이터 요청 허용
 사용자 지정 인증을 수행하는 동안 메타데이터를 처리하도록 요청을 허용해야 할 수 있습니다. 다음 항목에서는 이러한 요청의 유효성을 검사하는 단계에 대해 설명합니다.  
   
- 에 대 한 자세한 내용은 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 권한 부여 참조 [권한 부여](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md)합니다.  
+ Windows Communication Foundation (WCF) 권한 부여에 대 한 자세한 내용은 참조 [권한 부여](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md)합니다.  
   
 ### <a name="to-allow-metadata-requests-during-authorization"></a>권한을 부여하는 동안 메타데이터 요청을 허용하려면  
   

@@ -1,14 +1,6 @@
 ---
-title: "ISymUnmanagedDocument 인터페이스"
-ms.custom: 
+title: ISymUnmanagedDocument 인터페이스
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ISymUnmanagedDocument
 api_location:
@@ -22,17 +14,13 @@ helpviewer_keywords:
 ms.assetid: 5c26b366-6e81-467c-9dd0-02dd26fee0a3
 topic_type:
 - apiref
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 2e176679b4fdb4d0a2c5c4fbcbc09403e45f1ad1
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: f75e517890275b90523dc42cdac3a83d871beac7
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="isymunmanageddocument-interface"></a>ISymUnmanagedDocument 인터페이스
 기호 저장소가 참조하는 문서를 나타냅니다. 문서 (URL)는 uniform resource locator와 문서 형식 GUID 정의 됩니다. URL을 사용 하 여 저장 하는 방법에 관계 없이 문서를 찾을 수 있으며 문서 유형 GUID 수 있습니다. 기호 저장소에 문서 소스를 저장 하 고이 인터페이스를 통해 검색할 수 있습니다.  

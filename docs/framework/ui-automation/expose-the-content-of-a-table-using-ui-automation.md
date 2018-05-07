@@ -1,13 +1,6 @@
 ---
-title: "UI 자동화를 사용하여 표의 콘텐츠 노출"
-ms.custom: 
+title: UI 자동화를 사용하여 표의 콘텐츠 노출
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-bcl
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -16,16 +9,14 @@ helpviewer_keywords:
 - UI Automation, exposing content of tables
 - exposing content of tables using UI Automation
 ms.assetid: ac3c5eaa-49c7-4653-b83e-532e2a2604a2
-caps.latest.revision: "12"
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: 1fcd56e1563b1fcd400d3c1d68b2675efaac3200
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 874eada0714ed0f96248ebac8edb0efe205d9f21
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="expose-the-content-of-a-table-using-ui-automation"></a>UI 자동화를 사용하여 표의 콘텐츠 노출
 > [!NOTE]
@@ -33,7 +24,7 @@ ms.lasthandoff: 01/19/2018
   
  이 항목에서는 방법을 [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] 는 테이블 형식 컨트롤 내에 있는 각 셀의 콘텐츠 및 내장 속성을 노출 하는 데 사용할 수 있습니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 코드 예제를 가져오는 방법을 보여 줍니다는 <xref:System.Windows.Automation.AutomationElement> 테이블 셀의 내용을 나타내는; 행 및 열 머리글 정보 행 및 열 인덱스, 행 및 열 범위 등 셀 속성은 가져올 수도 있습니다. 포커스 변경 이벤트 처리기를 사용 하 여 구현 하는 테이블 형식 컨트롤의 키보드 탐색을 시뮬레이션 하는이 예제 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]합니다. 각 테이블 항목에 대 한 정보는 포커스 변경 이벤트에 노출 됩니다.  
   
 > [!NOTE]

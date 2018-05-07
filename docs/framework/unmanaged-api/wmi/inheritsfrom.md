@@ -1,11 +1,7 @@
 ---
-title: "InheritsFrom 함수 (관리 되지 않는 API 참조)"
-description: "InheritsFrom 함수 클래스 또는 인스턴스는 특정 부모 클래스 로부터 파생 있는지 여부를 결정 합니다."
+title: InheritsFrom 함수 (관리 되지 않는 API 참조)
+description: InheritsFrom 함수 클래스 또는 인스턴스는 특정 부모 클래스 로부터 파생 있는지 여부를 결정 합니다.
 ms.date: 11/06/2017
-ms.prod: .net-framework
-ms.technology:
-- dotnet-clr
-ms.topic: reference
 api_name:
 - InheritsFrom
 api_location:
@@ -20,14 +16,11 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 0dce964829399e6761152a8ff424671b47cc6eb3
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 87a1c1ee44d3b192747bd785f538c0332300ff50
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="inheritsfrom-function"></a>InheritsFrom 함수
 현재 클래스 또는 인스턴스를 지정 된 부모 클래스에서 파생 있는지 여부를 결정 합니다.
@@ -53,7 +46,7 @@ HRESULT InheritsFrom (
 [in] 에 대 한 포인터는 [IWbemClassObject](https://msdn.microsoft.com/library/aa391433%28v=vs.85%29.aspx) 인스턴스.
 
 `wszAncestor`  
-[in] 클래스의 이름입니다. `wszAncestor`유효한 가리켜야 `LPCWSTR`합니다.
+[in] 클래스의 이름입니다. `wszAncestor` 유효한 가리켜야 `LPCWSTR`합니다.
 
 ## <a name="return-value"></a>반환 값
 
@@ -74,7 +67,7 @@ HRESULT InheritsFrom (
   
  **헤더:** WMINet_Utils.idl  
   
- **.NET framework 버전:**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **.NET framework 버전:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>참고자료  
 [WMI 및 성능 카운터 (관리 되지 않는 API 참조)](index.md)

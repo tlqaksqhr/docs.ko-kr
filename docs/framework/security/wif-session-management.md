@@ -1,24 +1,14 @@
 ---
-title: "WIF 세션 관리"
-ms.custom: 
+title: WIF 세션 관리
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 98bce126-18a9-401b-b20d-67ee462a5f8a
-caps.latest.revision: "7"
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: 7703d9fb612ead13140d010b1670abb209c5acb7
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: f97406ccf826bfa5b7c3ed87bdb58478b272a216
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="wif-session-management"></a>WIF 세션 관리
 클라이언트는 신뢰 당사자에 호스트된 보호된 리소스에 처음 액세스를 시도할 때 먼저 신뢰 당사자에 의해 신뢰된 STS(보안 토큰 서비스)에 인증해야 합니다. 그런 다음 STS는 클라이언트에 보안 토큰을 발급합니다. 클라이언트가 신뢰 당사자에게 이 토큰을 제공하면 신뢰 당사자가 보호된 리소스에 대한 액세스를 클라이언트에 부여합니다. 그러나 동일한 컴퓨터 또는 신뢰 당사자와 동일한 도메인에 없을 수도 있기 때문에 클라이언트가 각 요청에 대해 STS에 다시 인증할 필요가 없기를 바랍니다. 대신 WIF(Windows Identity Foundation)에서는 클라이언트 및 신뢰 당사자가 세션을 설정하고, 세션 중에 클라이언트는 첫 번째 요청 이후의 모든 요청에 대해 세션 보안 토큰을 사용하여 신뢰 당사자에 인증합니다. 신뢰 당사자는 쿠키 안에 저장된 이 세션 보안 토큰을 사용하여 클라이언트의 <xref:System.Security.Claims.ClaimsPrincipal?displayProperty=nameWithType>을 다시 구성할 수 있습니다.  
@@ -39,4 +29,4 @@ ms.lasthandoff: 12/22/2017
 ## <a name="extensibility"></a>확장성  
  세션 관리 메커니즘을 확장할 수 있습니다. 이 작업의 한 가지 이유는 성능을 향상하기 위한 것입니다. 예를 들어 메모리 내 상태와 쿠키에 포함할 항목 간에 세션 보안 토큰을 변환 또는 최적화하는 사용자 지정 쿠키 처리기를 만들 수 있습니다. 이 작업을 위해 <xref:System.IdentityModel.Services.CookieHandler?displayProperty=nameWithType>에서 파생되는 사용자 지정 쿠키 처리기를 사용하도록 <xref:System.IdentityModel.Services.SessionAuthenticationModule?displayProperty=nameWithType>의 <xref:System.IdentityModel.Services.SessionAuthenticationModule.CookieHandler%2A?displayProperty=nameWithType> 속성을 구성할 수 있습니다. 쿠키는 HTTP(Hypertext Transfer Protocol)에 허용되는 크기를 초과하기 때문에 <xref:System.IdentityModel.Services.ChunkedCookieHandler?displayProperty=nameWithType>가 기본 쿠키 처리기입니다. 사용자 지정 쿠키 처리기를 대신 사용하는 경우 청크를 구현해야 합니다.  
   
- 자세한 내용은 [ClaimsAwareWebFarm](http://go.microsoft.com/fwlink/?LinkID=248408)(http://go.microsoft.com/fwlink/?LinkID=248408) 샘플을 참조하세요. 이 샘플에서는 큰 쿠키를 교환하는 대신 참조로 세션을 사용할 수 있도록 tokenreplycache와 비교해서 팜 준비 세션 캐시를 보여 줍니다. 또한 팜의 쿠키를 보호하는 보다 손쉬운 방법을 보여 줍니다. 세션 캐시는 WCF 기반입니다. 세션 보안과 관련해서 이 샘플은 MachineKey 기반의 쿠키 변환에 대한 WIF 4.5의 새로운 기능을 보여 줍니다. 이 기능은 web.config에 적절한 코드 조각을 붙여넣어 활성화할 수 있습니다. 샘플 자체는 “팜” 환경이 아니지만 팜에서 앱을 사용하는 데 필요한 사항을 보여 줍니다.
+ 자세한 내용은 참조 [ClaimsAwareWebFarm](http://go.microsoft.com/fwlink/?LinkID=248408) (http://go.microsoft.com/fwlink/?LinkID=248408) 샘플. 이 샘플에서는 큰 쿠키를 교환하는 대신 참조로 세션을 사용할 수 있도록 tokenreplycache와 비교해서 팜 준비 세션 캐시를 보여 줍니다. 또한 팜의 쿠키를 보호하는 보다 손쉬운 방법을 보여 줍니다. 세션 캐시는 WCF 기반입니다. 세션 보안과 관련해서 이 샘플은 MachineKey 기반의 쿠키 변환에 대한 WIF 4.5의 새로운 기능을 보여 줍니다. 이 기능은 web.config에 적절한 코드 조각을 붙여넣어 활성화할 수 있습니다. 샘플 자체는 “팜” 환경이 아니지만 팜에서 앱을 사용하는 데 필요한 사항을 보여 줍니다.

@@ -1,27 +1,15 @@
 ---
-title: "자동 포맷 선택"
-ms.custom: 
+title: 자동 포맷 선택
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: dab51e56-8517-4a6a-bb54-b55b15ab37bb
-caps.latest.revision: "8"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: da09df968bffee9a07f1c03d5b771271a9d44129
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 9b9b4da4d5d3bdb3892feb49c033fbe4fc640cb0
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="automatic-format-selection"></a>자동 포맷 선택
-이 샘플에서는 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] REST 프로그래밍 모델을 사용하여 선택 영역 자동 서식 지정(XML 또는 JSON)을 사용하도록 설정하는 방법과 작업 코드에서 형식을 명시적으로 설정하는 방법을 보여 줍니다.  
+이 샘플의 작업 코드에서 형식을 명시적으로 설정 하는 방법 뿐만 아니라 모델을 프로그래밍 Windows Communication Foundation (WCF) 나머지 선택 영역 자동 서식 지정 (XML 또는 JSON)을 사용 하도록 설정 하는 방법을 보여 줍니다.  
   
 ## <a name="sample-details"></a>샘플 세부 정보  
  이 샘플은 서비스와 서비스로 요청을 보내는 클라이언트 코드로 구성되어 있습니다. 서비스에서는 단일 HTTP `GET` 작업(`EchoWithGet`) 및 단일 HTTP `POST` 작업(`EchoWithPost`)을 지원합니다. 두 작업은 모두 문자열을 필요로 하며 응답에서도 문자열을 반환합니다. `GET` 작업을 사용할 경우 문자열은 URI 쿼리 문자열 매개 변수에서 제공됩니다. `POST` 작업을 사용할 경우 문자열은 요청의 본문에서 XML로 serialize되어 제공됩니다. 서비스에서는 [!INCLUDE[netfx40_long](../../../../includes/netfx40-long-md.md)]의 새로운 기능인 선택 영역 자동 서식 지정 및 선택 영역 명령적 서식 지정 기능을 사용하여 응답을 XML이나 JSON으로 반환할 수 있습니다.  
@@ -47,7 +35,7 @@ ms.lasthandoff: 12/22/2017
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  이 디렉터리가 없으면 [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4(.NET Framework 4용 WCF(Windows Communication Foundation) 및 WF(Windows Workflow Foundation) 샘플)](http://go.microsoft.com/fwlink/?LinkId=150780) 로 이동하여 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 및 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플을 모두 다운로드하세요. 이 샘플은 다음 디렉터리에 있습니다.  
+>  이 디렉터리가로 이동 [Windows Communication Foundation (WCF) 및.NET Framework 4에 대 한 Windows WF (Workflow Foundation) 샘플](http://go.microsoft.com/fwlink/?LinkId=150780) 모든 Windows Communication Foundation (WCF)를 다운로드 하 고 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플. 이 샘플은 다음 디렉터리에 있습니다.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Web\AutomaticFormatSelection`  
   

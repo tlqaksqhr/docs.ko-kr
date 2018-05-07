@@ -1,13 +1,6 @@
 ---
 title: asynchronousThreadAbort MDA
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - asynchronous thread aborts
 - AsynchronousThreadAbort MDA
@@ -15,16 +8,13 @@ helpviewer_keywords:
 - threading [.NET Framework], managed debugging assistants
 - MDAs (managed debugging assistants), asynchronous thread aborts
 ms.assetid: 9ebe40b2-d703-421e-8660-984acc42bfe0
-caps.latest.revision: "10"
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ecd99b098a619d4ad132432f4fd163d32598c2ba
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: fd759a4167a667919a443bc6492c049631ad222c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="asynchronousthreadabort-mda"></a>asynchronousThreadAbort MDA
 `asynchronousThreadAbort` MDA(관리 디버깅 도우미)는 스레드가 비동기 중단을 다른 스레드에 도입하려고 할 때 활성화됩니다. 동기 스레드 중단은 `asynchronousThreadAbort` MDA를 활성화하지 않습니다.
@@ -64,7 +54,7 @@ ms.lasthandoff: 12/22/2017
 </mdaConfig>
 ```
 
-## <a name="example"></a>예
+## <a name="example"></a>예제
  `asynchronousThreadAbort` MDA를 활성화하려는 경우 실행 중인 별도 스레드에서 <xref:System.Threading.Thread.Abort%2A>를 호출하기만 하면 됩니다. 스레드 시작 함수의 내용이 임의 지점에서 중단에 의해 인터럽트될 수 있는 보다 복잡한 작업 집합인 경우의 결과를 고려해 보세요.
 
 ```csharp

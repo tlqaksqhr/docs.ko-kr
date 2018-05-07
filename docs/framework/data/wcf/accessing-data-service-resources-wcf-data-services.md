@@ -1,13 +1,6 @@
 ---
-title: "데이터 서비스 리소스에 액세스(WCF Data Services)"
-ms.custom: 
+title: 데이터 서비스 리소스에 액세스(WCF Data Services)
 ms.date: 03/30/2017
-ms.prod: .net-framework-oob
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - WCF Data Services, querying
 - getting started, WCF Data Services
@@ -15,19 +8,14 @@ helpviewer_keywords:
 - WCF Data Services, getting started
 - WCF Data Services, accessing data
 ms.assetid: 9665ff5b-3e3a-495d-bf83-d531d5d060ed
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: dddbd9cf8e11f09cf1c2dc36db49281d00e97aac
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: f1af991d7db9bfeeb0737e65a0517629f359f4a1
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="accessing-data-service-resources-wcf-data-services"></a>데이터 서비스 리소스에 액세스(WCF Data Services)
-[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]지원 된 [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] Uri로 주소를 지정할 수 있는 리소스가 포함 된 피드로 데이터를 노출할 수 있습니다. 이러한 리소스의 엔터티-관계 규칙에 따라 표시 되는 [엔터티 데이터 모델](../../../../docs/framework/data/adonet/entity-data-model.md)합니다. 이 모델에서 엔터티는 고객, 주문, 항목 및 제품과 같이 응용 프로그램 도메인의 데이터 형식인 데이터 운영 단위를 나타냅니다. REST(Representational State Transfer)의 의미 체계, 특히 GET, PUT, POST, DELETE 등의 표준 HTTP 동사를 사용하여 엔터티 데이터에 액세스하고 변경합니다.  
+[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 지원 된 [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] Uri로 주소를 지정할 수 있는 리소스가 포함 된 피드로 데이터를 노출할 수 있습니다. 이러한 리소스의 엔터티-관계 규칙에 따라 표시 되는 [엔터티 데이터 모델](../../../../docs/framework/data/adonet/entity-data-model.md)합니다. 이 모델에서 엔터티는 고객, 주문, 항목 및 제품과 같이 응용 프로그램 도메인의 데이터 형식인 데이터 운영 단위를 나타냅니다. REST(Representational State Transfer)의 의미 체계, 특히 GET, PUT, POST, DELETE 등의 표준 HTTP 동사를 사용하여 엔터티 데이터에 액세스하고 변경합니다.  
   
 ## <a name="addressing-resources"></a>리소스 처리  
  [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]에서는 URI를 사용하여 데이터 모델에서 노출하는 모든 데이터에 주소를 지정합니다. 예를 들어, 다음 URI는 Customer 엔터티 형식의 모든 인스턴스에 대 한 항목을 포함 하는 고객 엔터티 집합을 피드를 반환 합니다.  
@@ -66,7 +54,7 @@ http://services.odata.org/Northwind/Northwind.svc/Customers('ALFKI')/Orders
 http://services.odata.org/Northwind/Northwind.svc/Orders(10643)/Customer  
 ```  
   
- [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]또한 사용 하면 쿼리 식의 결과에 따라 리소스의 주소입니다. 따라서 계산된 된 식에 따라 리소스 집합을 필터링 할 수 있습니다. 예를 들어, 다음 URI는 1997년 9월 22일 이후에 운송된 특정 고객의 주문만 반환하도록 리소스를 필터링합니다.  
+ [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 또한 사용 하면 쿼리 식의 결과에 따라 리소스의 주소입니다. 따라서 계산된 된 식에 따라 리소스 집합을 필터링 할 수 있습니다. 예를 들어, 다음 URI는 1997년 9월 22일 이후에 운송된 특정 고객의 주문만 반환하도록 리소스를 필터링합니다.  
   
 ```  
 http://services.odata.org/Northwind/Northwind.svc/Customers('ALFKI')/Orders?$filter=ShippedDate gt datetime'1997-09-22T00:00:00'  
@@ -75,7 +63,7 @@ http://services.odata.org/Northwind/Northwind.svc/Customers('ALFKI')/Orders?$fil
  자세한 내용은 참조 [OData: URI 규칙](http://go.microsoft.com/fwlink/?LinkId=185564)합니다.  
   
 ## <a name="system-query-options"></a>시스템 쿼리 옵션  
- [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]필터링, 정렬 및 페이징과 같은 리소스에 대 한 일반적인 쿼리 작업을 수행 하는 데 사용할 수 있는 시스템 쿼리 옵션의 집합을 정의 합니다. 다음 URI에서 모든 집합을 반환 하는 예를 들어는 `Order` 관련 함께 엔터티 `Order_Detail` 는 우편 번호 끝나지 않는 엔터티 `100`:  
+ [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 필터링, 정렬 및 페이징과 같은 리소스에 대 한 일반적인 쿼리 작업을 수행 하는 데 사용할 수 있는 시스템 쿼리 옵션의 집합을 정의 합니다. 다음 URI에서 모든 집합을 반환 하는 예를 들어는 `Order` 관련 함께 엔터티 `Order_Detail` 는 우편 번호 끝나지 않는 엔터티 `100`:  
   
 ```  
 http://services.odata.org/Northwind/Northwind.svc/Orders?$filter=not endswith(ShipPostalCode,'100')&$expand=Order_Details&$orderby=ShipCity  
@@ -83,7 +71,7 @@ http://services.odata.org/Northwind/Northwind.svc/Orders?$filter=not endswith(Sh
   
  또한 반환된 피드의 항목은 주문의 ShipCity 속성 값을 기준으로 정렬됩니다.  
   
- [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]다음과 같은 지원 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 시스템 쿼리 옵션:  
+ [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 다음과 같은 지원 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 시스템 쿼리 옵션:  
   
 |쿼리 옵션|설명|  
 |------------------|-----------------|  
@@ -96,7 +84,7 @@ http://services.odata.org/Northwind/Northwind.svc/Orders?$filter=not endswith(Sh
 |`$inlinecount`|피드에 반환되는 엔터티 수가 피드와 함께 포함되도록 요청합니다. 자세한 내용은 참조 [OData: Inlinecount 시스템 쿼리 옵션 ($inlinecount)](http://go.microsoft.com/fwlink/?LinkId=186975)합니다.|  
   
 ## <a name="addressing-relationships"></a>관계 주소 지정  
- 엔터티 집합과 엔터티 인스턴스의 주소를 지정 하는 것 외에도 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 엔터티 간의 관계를 나타내는 연결 해결할 수 있습니다. 이 기능은 Northwind 샘플 데이터베이스의 지정된 주문과 관련된 운송업체와 같이 두 엔터티 인스턴스 간의 관계를 만들거나 변경하는 데 필요합니다. [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]지원는 `$link` 엔터티 간 연결을 처리 하기 위해 연산자. 예를 들어, 다음 URI는 HTTP PUT 요청 메시지에 지정되어 지정한 주문의 운송업체를 새 운송업체로 변경합니다.  
+ 엔터티 집합과 엔터티 인스턴스의 주소를 지정 하는 것 외에도 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 엔터티 간의 관계를 나타내는 연결 해결할 수 있습니다. 이 기능은 Northwind 샘플 데이터베이스의 지정된 주문과 관련된 운송업체와 같이 두 엔터티 인스턴스 간의 관계를 만들거나 변경하는 데 필요합니다. [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 지원는 `$link` 엔터티 간 연결을 처리 하기 위해 연산자. 예를 들어, 다음 URI는 HTTP PUT 요청 메시지에 지정되어 지정한 주문의 운송업체를 새 운송업체로 변경합니다.  
   
 ```  
 http://services.odata.org/Northwind/Northwind.svc/Orders(10643)/$links/Shipper  

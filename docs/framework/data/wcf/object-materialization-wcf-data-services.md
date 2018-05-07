@@ -1,27 +1,15 @@
 ---
-title: "개체 구체화(WCF Data Services)"
-ms.custom: 
+title: 개체 구체화(WCF Data Services)
 ms.date: 03/30/2017
-ms.prod: .net-framework-oob
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - WCF Data Services, client library
 - WCF Data Services, querying
 ms.assetid: f0dbf7b0-0292-4e31-9ae4-b98288336dc1
-caps.latest.revision: "4"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: b093fce50de6a0437456f4fb0e025e3c853777e4
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 54f8cc876b373fcfa8e8e514abf50111942de88c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="object-materialization-wcf-data-services"></a>개체 구체화(WCF Data Services)
 사용 하는 경우는 **서비스 참조 추가** 대화 상자를 사용 하는 [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] .NET Framework 기반 클라이언트 응용 프로그램에서 피드를 해당 하는 데이터 클래스가 피드에서 노출 하는 데이터 모델의 각 엔터티 형식에 대해 생성 됩니다. 자세한 내용은 참조 [데이터 서비스 클라이언트 라이브러리 생성](../../../../docs/framework/data/wcf/generating-the-data-service-client-library-wcf-data-services.md)합니다. 쿼리에서 반환되는 엔터티 데이터는 이러한 생성된 클라이언트 데이터 서비스 클래스 중 하나의 인스턴스로 구체화됩니다. 병합 옵션 및 추적 된 개체에 대 한 id 확인에 대 한 정보를 참조 하십시오. [데이터 서비스 컨텍스트 관리](../../../../docs/framework/data/wcf/managing-the-data-service-context-wcf-data-services.md)합니다.  

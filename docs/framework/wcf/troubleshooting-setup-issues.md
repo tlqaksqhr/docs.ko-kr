@@ -1,29 +1,15 @@
 ---
 title: 설치 문제 해결
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 1644f885-c408-4d5f-a5c7-a1a907bc8acd
-caps.latest.revision: 15
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 9238c1a1c9092e6806ee941bd7c992071cf98e09
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
-ms.translationtype: MT
+ms.openlocfilehash: 806e8a1f45deec5861e3bcc9a9c06a93ce410c1a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="troubleshooting-setup-issues"></a>설치 문제 해결
-이 항목에서는 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 설치 문제를 해결하는 방법을 설명합니다.  
+이 항목에서는 Windows Communication Foundation (WCF) 설치 문제를 해결 하는 방법에 설명 합니다.  
   
 ## <a name="some-windows-communication-foundation-registry-keys-are-not-repaired-by-performing-an-msi-repair-operation-on-the-net-framework-30"></a>일부 Windows Communication Foundation 레지스트리 키를 .NET Framework 3.0에서 MSI 복구 작업을 수행하여 복구할 수 없음  
  다음과 같은 레지스트리 키를 삭제한 경우 이 문제가 발생합니다.  

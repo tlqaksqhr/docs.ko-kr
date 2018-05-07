@@ -1,23 +1,12 @@
 ---
-title: "트랜잭션 기본 사항"
-ms.custom: 
+title: 트랜잭션 기본 사항
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 353f4ee2-e6bf-4b1c-b1c8-385fc8a486c0
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: fa26531b1d2573b4bef49ec93f4205716227e25b
-ms.sourcegitcommit: 2142a4732bb4ff519b9817db4c24a237b9810d4b
+ms.openlocfilehash: 1189556c74c45dc7475dd872c01c1ec5eaeba111
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/05/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="transaction-fundamentals"></a>트랜잭션 기본 사항
 트랜잭션은 여러 작업을 함께 바인딩합니다. 예를 들어 응용 프로그램이 두 가지 작업을 수행한다고 가정합니다. 먼저 데이터베이스에 새 테이블을 만듭니다. 그런 다음 특수 개체를 호출하여 데이터를 수집하고 형식을 지정하여 새 테이블에 삽입합니다. 데이터를 채울 수 없는 경우 새 테이블을 만들지 않으려고 한다는 점에서 두 작업은 서로 관련이 있고 상호 종속적입니다. 단일 트랜잭션 범위 내에서 두 작업을 실행하면 두 작업 간의 연결이 적용됩니다. 두 번째 작업이 실패하면 첫 번째 작업이 새 테이블을 만들기 전의 지점으로 롤백됩니다.  

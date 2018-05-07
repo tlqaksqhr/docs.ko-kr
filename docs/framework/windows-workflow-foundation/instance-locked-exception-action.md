@@ -1,23 +1,12 @@
 ---
-title: "인스턴스 잠금 예외 동작"
-ms.custom: 
+title: 인스턴스 잠금 예외 동작
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 164a5419-315c-4987-ad72-54cbdb88d402
-caps.latest.revision: "8"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 6b221b0eef1e132789ef04fb59b56126f023bc43
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 6146316d9fd09d9928642c0d98e3852ae1331b2f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="instance-locked-exception-action"></a>인스턴스 잠금 예외 동작
 SQL 워크플로 인스턴스 저장소의 <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore.InstanceLockedExceptionAction%2A> 속성을 사용하면 SQL 지속성 공급자가 <xref:System.Runtime.DurableInstancing.InstanceLockedException>을 수신할 때 수행해야 하는 동작을 지정할 수 있습니다. 지속성 공급자가 현재 다른 서비스 호스트에 의해 잠긴 워크플로 서비스 인스턴스를 잠그려고 하면 이 예외가 발생합니다. 이 속성의 값은 <xref:System.Activities.DurableInstancing.InstanceLockedExceptionAction.NoRetry>, <xref:System.Activities.DurableInstancing.InstanceLockedExceptionAction.BasicRetry> 및 <xref:System.Activities.DurableInstancing.InstanceLockedExceptionAction.AggressiveRetry>입니다. 기본값은 <xref:System.Activities.DurableInstancing.InstanceLockedExceptionAction.NoRetry>입니다. 다음 목록에서는 세 가지 옵션에 대해 설명합니다.  

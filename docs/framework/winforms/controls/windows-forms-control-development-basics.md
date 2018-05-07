@@ -1,28 +1,16 @@
 ---
-title: "Windows Forms 컨트롤 개발 기본 사항"
-ms.custom: 
+title: Windows Forms 컨트롤 개발 기본 사항
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - custom controls [Windows Forms], derivation types
 - programming concepts [Windows Forms], Windows Forms controls
 - controls [Windows Forms], creating
 ms.assetid: 6277bb81-90f7-4c5b-9f4b-b02bb42dd316
-caps.latest.revision: "10"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: bcf06f4dc0d8c70ae85d5add5a2fee078238d5e8
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: b455912468376d2f5de0ac1f30b4fcab5bb93309
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="windows-forms-control-development-basics"></a>Windows Forms 컨트롤 개발 기본 사항
 Windows Forms 컨트롤에서 직접 또는 간접적으로 파생 되는 클래스는 <xref:System.Windows.Forms.Control?displayProperty=nameWithType>합니다. 다음 목록에서는 Windows Forms 컨트롤 개발 하기 위한 일반적인 시나리오를 설명 합니다.  
@@ -39,7 +27,7 @@ Windows Forms 컨트롤에서 직접 또는 간접적으로 파생 되는 클래
   
      이 시나리오에서는 기본 클래스에서 컨트롤을 파생 <xref:System.Windows.Forms.Control>합니다. 재정의 속성, 메서드 및 기본 클래스의 이벤트 수 있을 뿐만 아니라 추가할 수 있습니다. 시작 하려면 참조 [하는 방법: 간단한 Windows Forms 컨트롤 개발](../../../../docs/framework/winforms/controls/how-to-develop-a-simple-windows-forms-control.md)합니다.  
   
- Windows Forms 컨트롤에 대 한 기본 클래스 <xref:System.Windows.Forms.Control>, 클라이언트 측 Windows 기반 응용 프로그램의 시각적 표시에 필요한 연결이 제공 합니다. <xref:System.Windows.Forms.Control>창 핸들, 메시지 라우팅을 처리와 마우스 및 키보드 이벤트 뿐만 아니라 여러 가지 사용자 인터페이스 이벤트를 제공 합니다. 고급 레이아웃을 제공 하 고 같은 시각적 표시는 관련 된 속성을 주지 <xref:System.Windows.Forms.Control.ForeColor%2A>, <xref:System.Windows.Forms.Control.BackColor%2A>, <xref:System.Windows.Forms.Control.Height%2A>, <xref:System.Windows.Forms.Control.Width%2A>, 및 다른 많은 요인을 합니다. 또한 보안을 스레딩 지원 및 ActiveX 컨트롤의 상호 운용성을 제공 합니다. 인프라의 상당 부분이 기본 클래스에서 제공되므로 비교적 쉽게 사용자 고유의 Windows Forms 컨트롤을 개발할 수 있습니다.  
+ Windows Forms 컨트롤에 대 한 기본 클래스 <xref:System.Windows.Forms.Control>, 클라이언트 측 Windows 기반 응용 프로그램의 시각적 표시에 필요한 연결이 제공 합니다. <xref:System.Windows.Forms.Control> 창 핸들, 메시지 라우팅을 처리와 마우스 및 키보드 이벤트 뿐만 아니라 여러 가지 사용자 인터페이스 이벤트를 제공 합니다. 고급 레이아웃을 제공 하 고 같은 시각적 표시는 관련 된 속성을 주지 <xref:System.Windows.Forms.Control.ForeColor%2A>, <xref:System.Windows.Forms.Control.BackColor%2A>, <xref:System.Windows.Forms.Control.Height%2A>, <xref:System.Windows.Forms.Control.Width%2A>, 및 다른 많은 요인을 합니다. 또한 보안을 스레딩 지원 및 ActiveX 컨트롤의 상호 운용성을 제공 합니다. 인프라의 상당 부분이 기본 클래스에서 제공되므로 비교적 쉽게 사용자 고유의 Windows Forms 컨트롤을 개발할 수 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [방법: 간단한 Windows Forms 컨트롤 개발](../../../../docs/framework/winforms/controls/how-to-develop-a-simple-windows-forms-control.md)  

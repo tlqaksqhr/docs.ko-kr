@@ -1,28 +1,14 @@
 ---
 title: Windows Communication Foundation 서비스에 대한 바인딩 구성
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - binding configuration [WCF]
 ms.assetid: 99a85fd8-f7eb-4a84-a93e-7721b37d415c
-caps.latest.revision: 36
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: f98d7c7b7d816687487a652f0527886300f0ee86
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
-ms.translationtype: MT
+ms.openlocfilehash: 8fcb2fbf49984ce2b6aaf1f112575d05a3d7d038
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="configuring-bindings-for-windows-communication-foundation-services"></a>Windows Communication Foundation 서비스에 대한 바인딩 구성
 응용 프로그램을 만들 때 응용 프로그램의 배포 후 관리자에게 결정을 맡겨야 할 경우가 있습니다. 예를 들어, 서비스 주소 또는 URI(Uniform Resource Identifier)가 무엇인지 미리 알 수 없는 경우가 있습니다. 주소를 하드 코딩하는 대신 관리자가 서비스를 작성한 후에 이를 수행하도록 하는 것이 좋습니다. 이러한 유연성은 구성을 통해 수행됩니다.  
@@ -31,7 +17,7 @@ ms.lasthandoff: 04/30/2018
 >  사용 하 여는 [ServiceModel Metadata 유틸리티 도구 (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) 와 `/config` 스위치를 신속 하 게 구성 파일을 만듭니다.  
   
 ## <a name="major-sections"></a>주요 섹션  
- [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 구성 체계에는 `serviceModel`, `bindings` 및 `services`의 세 가지 주요 섹션이 있습니다.  
+ Windows Communication Foundation (WCF) 구성 체계에는 다음 세 가지 주요 섹션 (`serviceModel`, `bindings`, 및 `services`):  
   
 ```xml  
 <configuration>  

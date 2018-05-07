@@ -1,24 +1,14 @@
 ---
-title: ".NET 네이티브로 시작 속도 개선 측정"
-ms.custom: 
+title: .NET 네이티브로 시작 속도 개선 측정
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: c4d25b24-9c1a-4b3e-9705-97ba0d6c0289
-caps.latest.revision: "7"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 03324850fbcb0264816b71cf8a8c6ad6a9688058
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: b010307baa8634a4bb62310318d1d718a2525d4a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="measuring-startup-improvement-with-net-native"></a>.NET 네이티브로 시작 속도 개선 측정
 [!INCLUDE[net_native](../../../includes/net-native-md.md)]를 사용하는 경우 앱 시작 시간이 크게 단축됩니다. 이러한 속도 개선은 휴대용 저전력 장치와 복잡한 앱에서 특히 두드러지게 나타납니다. 이 항목에서는 이러한 시작 속도 개선을 측정하는 데 필요한 기본적인 계측을 시작하는 방법을 설명합니다.  

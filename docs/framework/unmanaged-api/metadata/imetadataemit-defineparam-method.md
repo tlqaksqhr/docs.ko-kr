@@ -1,14 +1,6 @@
 ---
-title: "IMetaDataEmit::DefineParam 메서드"
-ms.custom: 
+title: IMetaDataEmit::DefineParam 메서드
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - IMetaDataEmit.DefineParam
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: d86a3d14-4796-4909-9591-dfafe3de5ce4
 topic_type:
 - apiref
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: f4bf36edfad504f2858a45d5e34891042d8850bf
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 5d49ac70aceb76f69711ea4bf514f69697ac156c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="imetadataemitdefineparam-method"></a>IMetaDataEmit::DefineParam 메서드
 지정된 된 토큰에서 참조 하는 메서드에 대 한 지정한 서명을 가진 매개 변수 정의 만들고 해당 매개 변수 정의 대 한 토큰을 가져옵니다.  
@@ -67,7 +55,7 @@ HRESULT DefineParam (
  [in] 매개 변수에 대 한 플래그입니다. 이 비트 마스크의 `CorParamAttr` 값입니다.  
   
  `dwCPlusTypeFlag`  
- [in] `ELEMENT_TYPE_`  *\**  상수 값에 대 한 합니다.  
+ [in] `ELEMENT_TYPE_` *\** 상수 값에 대 한 합니다.  
   
  `pValue`  
  [in] 매개 변수에 상수 값입니다.  
@@ -88,7 +76,7 @@ HRESULT DefineParam (
   
  **라이브러리:** MSCorEE.dll에서 리소스로 사용  
   
- **.NET framework 버전:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>참고 항목  
  [IMetaDataEmit 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)  

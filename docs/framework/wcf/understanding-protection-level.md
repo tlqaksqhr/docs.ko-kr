@@ -1,14 +1,6 @@
 ---
 title: 보호 수준 이해
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -16,20 +8,14 @@ helpviewer_keywords:
 - WCF, security
 - ProtectionLevel property
 ms.assetid: 0c034608-a1ac-4007-8287-b1382eaa8bf2
-caps.latest.revision: 22
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 4b079d7f6e22f0c1904433c2822b92da91923ef2
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
-ms.translationtype: MT
+ms.openlocfilehash: 0f17d6e787a48edd562559f52ac015edf7bc702c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="understanding-protection-level"></a>보호 수준 이해
-`ProtectionLevel` 및 <xref:System.ServiceModel.ServiceContractAttribute> 클래스와 같은 여러 클래스에서 볼 수 있는 <xref:System.ServiceModel.OperationContractAttribute> 속성은 메시지의 전체나 일부를 보호하는 방법을 제어합니다. 이 항목에서는 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 기능과 작동 방법에 대해 설명합니다.  
+`ProtectionLevel` 및 <xref:System.ServiceModel.ServiceContractAttribute> 클래스와 같은 여러 클래스에서 볼 수 있는 <xref:System.ServiceModel.OperationContractAttribute> 속성은 메시지의 전체나 일부를 보호하는 방법을 제어합니다. 이 항목에서는 Windows Communication Foundation (WCF) 기능과 작동 방법에 대해 설명 합니다.  
   
  보호 수준 설정에 대 한 지침을 참조 하십시오. [하는 방법: ProtectionLevel 속성 설정](../../../docs/framework/wcf/how-to-set-the-protectionlevel-property.md)합니다.  
   

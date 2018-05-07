@@ -1,29 +1,15 @@
 ---
 title: 응용 프로그램 구성
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: a2f995b0-669d-4721-b00f-4561ec7eb6a4
-caps.latest.revision: 10
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 170583239ed357904e723aebdaef9809938b5123
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
-ms.translationtype: MT
+ms.openlocfilehash: 7dfd662fafa636e0fa97f118217ad1786d5aa444
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="configuring-your-application"></a>응용 프로그램 구성
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]에서는 .NET 구성 시스템이 사용되며 컴퓨터와 응용 프로그램 범위 모두에서 서비스를 구성할 수 있습니다.  
+Windows Communication Foundation (WCF).NET 구성 시스템을 사용 하 고 시스템 및 응용 프로그램 범위에서 서비스를 구성할 수 있습니다.  
   
  [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서 정의한 구성 설정은 `<system.serviceModel>` 섹션 그룹에 있습니다. 구성 하는 방법에 대 한 자세한 내용은 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 서비스는 다음 항목을 참조 하십시오.  
   

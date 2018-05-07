@@ -1,30 +1,18 @@
 ---
-title: "응용 프로그램 시나리오(WCF Data Services)"
-ms.custom: 
+title: 응용 프로그램 시나리오(WCF Data Services)
 ms.date: 03/30/2017
-ms.prod: .net-framework-oob
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - WCF Data Services, learn more
 - WCF Data Services, scenarios
 ms.assetid: 7c82658f-e7c0-46b6-834d-6592f67ab5ea
-caps.latest.revision: "2"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ba83265b8bd533101fcde785566b9774df588c46
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 81a75007f1d4a13828867e6419412ea9f4c28906
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="application-scenarios-wcf-data-services"></a>응용 프로그램 시나리오(WCF Data Services)
-[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]시나리오의 핵심 집합으로 데이터 제공 및 사용에 대 한 지원 [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] 피드입니다. 이 항목에서는 이 시나리오와 관련된 항목으로 연결됩니다.  
+[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 시나리오의 핵심 집합으로 데이터 제공 및 사용에 대 한 지원 [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] 피드입니다. 이 항목에서는 이 시나리오와 관련된 항목으로 연결됩니다.  
   
  데이터베이스에서 관계형 데이터를 노출 한 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 피드입니다.  
  -   [빠른 시작](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md)  

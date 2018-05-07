@@ -1,24 +1,14 @@
 ---
-title: "ICorDebugDataTarget3::GetLoadedModules 메서드"
-ms.custom: 
+title: ICorDebugDataTarget3::GetLoadedModules 메서드
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 ms.assetid: 9a48c05b-1949-416e-933c-52549b6fcf5e
-caps.latest.revision: "4"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 3db6449abee4eed4a8e5d6c691834c52dc0717e2
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 7c51ce8ff76e0fc1588cdd136de83b77dcab0f10
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="icordebugdatatarget3getloadedmodules-method"></a>ICorDebugDataTarget3::GetLoadedModules 메서드
 지금까지 로드된 모듈 목록을 가져옵니다.  
@@ -55,7 +45,7 @@ HRESULT GetLoadedModules(
   
  **라이브러리:** CorGuids.lib  
   
- **.NET framework 버전:**[!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
+ **.NET framework 버전:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
 ## <a name="see-also"></a>참고 항목  
  [ICorDebugDataTarget3 인터페이스](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget3-interface.md)  

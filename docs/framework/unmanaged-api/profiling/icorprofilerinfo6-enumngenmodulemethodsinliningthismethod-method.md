@@ -1,24 +1,14 @@
 ---
-title: "ICorProfilerInfo6::EnumNgenModuleMethodsInliningThisMethod 메서드"
-ms.custom: 
+title: ICorProfilerInfo6::EnumNgenModuleMethodsInliningThisMethod 메서드
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: b933dfe6-7833-40cb-aad8-40842dc3034f
-caps.latest.revision: "6"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 8e11dd1c24001c764c82ed3f11336873ee57b2e9
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 564f3b1cdfab2a3020b6bb5ac8d9af03c6532c8b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="icorprofilerinfo6enumngenmodulemethodsinliningthismethod-method"></a>ICorProfilerInfo6::EnumNgenModuleMethodsInliningThisMethod 메서드
 [.NET Framework 4.6 이상 버전에서 지원 됨]  
@@ -54,7 +44,7 @@ HRESULT EnumNgenModuleMethodsInliningThisMethod(
  [out] 열거자의 주소에 대 한 포인터  
   
 ## <a name="remarks"></a>설명  
- `inlineeModuleId`및 `inlineeMethodId` 함께 인라인 처리 하지 않을 수 있는 메서드에 대 한 전체 식별자를 형성 합니다. 예를 들어 모듈 `A` 메서드를 정의 `Simple.Add`:  
+ `inlineeModuleId` 및 `inlineeMethodId` 함께 인라인 처리 하지 않을 수 있는 메서드에 대 한 전체 식별자를 형성 합니다. 예를 들어 모듈 `A` 메서드를 정의 `Simple.Add`:  
   
 ```csharp  
 Simple.Add(int a, int b)   
@@ -68,7 +58,7 @@ Fancy.AddTwice(int a, int b)
 { return Simple.Add(a,b) + Simple.Add(a,b); }  
 ```  
   
- 또한를 가정해 보겠습니다 `Fancy.AddTwice` 인라인 호출을 `SimpleAdd`합니다. 프로파일러는이 열거자를 사용 하 여 어떤 인라인 B 모듈에 정의 된 모든 메서드를 찾을 수 수 `Simple.Add`, 하 고 결과 열거는 `AddTwice`합니다.  `inlineeModuleId`모듈의 식별자 `A`, 및 `inlineeeMethodId` 식별자 `Simple.Add(int a, int b)`합니다.  
+ 또한를 가정해 보겠습니다 `Fancy.AddTwice` 인라인 호출을 `SimpleAdd`합니다. 프로파일러는이 열거자를 사용 하 여 어떤 인라인 B 모듈에 정의 된 모든 메서드를 찾을 수 수 `Simple.Add`, 하 고 결과 열거는 `AddTwice`합니다.  `inlineeModuleId` 모듈의 식별자 `A`, 및 `inlineeeMethodId` 식별자 `Simple.Add(int a, int b)`합니다.  
   
  경우 `incompleteData` 함수 뒤에 true가 반환 열거자 인라인 처리 하는 모든 메서드는 지정 된 메서드가 없습니다. 이 한 경우에 발생할 수 있습니다 또는 아직 로드 되지 않은 inliners 모듈의 직접 또는 간접 종속성 더 합니다. 프로파일러 정확한 데이터를 필요한 경우 것을 다시 시도해 야 나중에 더 많은 모듈을 로드할 때, 특히 각 모듈을 로드할 합니다.  
   
@@ -88,7 +78,7 @@ Simple.Add(int a, int b)
   
  **라이브러리:** CorGuids.lib  
   
- **.NET framework 버전:**[!INCLUDE[net_current_v46plus](../../../../includes/net-current-v46plus-md.md)]  
+ **.NET framework 버전:** [!INCLUDE[net_current_v46plus](../../../../includes/net-current-v46plus-md.md)]  
   
 ## <a name="see-also"></a>참고 항목  
  [ICorProfilerInfo6 인터페이스](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo6-interface.md)

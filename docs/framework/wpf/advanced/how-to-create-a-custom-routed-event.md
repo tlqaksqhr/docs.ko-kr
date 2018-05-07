@@ -1,13 +1,6 @@
 ---
-title: "방법: 사용자 지정 라우트된 이벤트 만들기"
-ms.custom: 
+title: '방법: 사용자 지정 라우트된 이벤트 만들기'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -15,21 +8,16 @@ helpviewer_keywords:
 - routed events [WPF], creating
 - events [WPF], routing
 ms.assetid: b79f459a-1c3f-4045-b2d4-1659cc8eaa3c
-caps.latest.revision: "13"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ecd335cb08056cb8b7c696555d666f54cad81b87
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: a8aa038008ed93cedfe49fde4e0269712b4fb19a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-a-custom-routed-event"></a>방법: 사용자 지정 라우트된 이벤트 만들기
 이벤트 라우팅을 지원 하도록 사용자 지정 이벤트를 등록 해야는 <xref:System.Windows.RoutedEvent> 를 사용 하는 <xref:System.Windows.EventManager.RegisterRoutedEvent%2A> 메서드. 이 예제에서는 사용자 지정 라우트된 이벤트를 만드는 데 대한 기본 사항을 설명합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 예제에서와 같이 먼저를 등록 한 <xref:System.Windows.RoutedEvent> 를 사용 하 여는 <xref:System.Windows.EventManager.RegisterRoutedEvent%2A> 메서드. 일반적으로는 <xref:System.Windows.RoutedEvent> 정적 필드 이름을 접미사로 끝나야 ***이벤트***합니다. 이 예제에서는 이벤트 이름이 `Tap` 이벤트의 라우팅 전략은 및 <xref:System.Windows.RoutingStrategy.Bubble>합니다. 등록 호출 후에는 이벤트에 대한 추가 및 제거 [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] 이벤트 접근자를 제공할 수 있습니다.  
   
  이 예제에서는 `OnTap`이라는 가상 메서드를 통해 이벤트를 발생시키지만 이벤트를 발생시키는 방법 및 이벤트가 변경에 응답하는 방법은 필요에 맞게 설정할 수 있습니다.  

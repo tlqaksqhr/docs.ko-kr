@@ -1,27 +1,17 @@
 ---
-title: "스레드 풀 ETW 이벤트"
-ms.custom: 
+title: 스레드 풀 ETW 이벤트
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - thread pool events [.NET Framework]
 - ETW, thread pool events (CLR)
 ms.assetid: f2a21e3a-3b6c-4433-97f3-47ff16855ecc
-caps.latest.revision: "8"
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 2a68f35dc5abb653514034cf0d30b62457b933de
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 41a37fa34b9d75eb8cfc1bdcb55b237faf137cad
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="thread-pool-etw-events"></a>스레드 풀 ETW 이벤트
 <a name="top"></a> 이러한 이벤트는 작업자 스레드 및 I/O 스레드에 대한 정보를 수집합니다.  
@@ -41,7 +31,7 @@ ms.lasthandoff: 12/22/2017
   
 |이벤트를 발생시키기 위한 키워드|수준|  
 |-----------------------------------|-----------|  
-|`ThreadingKeyword`(0x10000)|정보(4)|  
+|`ThreadingKeyword` (0x10000)|정보(4)|  
   
  다음 표에서는 이벤트 정보를 보여 줍니다.  
   
@@ -68,7 +58,7 @@ ms.lasthandoff: 12/22/2017
   
 |이벤트를 발생시키기 위한 키워드|수준|  
 |-----------------------------------|-----------|  
-|`ThreadingKeyword`(0x10000)|정보(4)|  
+|`ThreadingKeyword` (0x10000)|정보(4)|  
   
  다음 표에서는 이벤트 정보를 보여 줍니다.  
   
@@ -88,7 +78,7 @@ ms.lasthandoff: 12/22/2017
   
 |이벤트를 발생시키기 위한 키워드|수준|  
 |-----------------------------------|-----------|  
-|`ThreadingKeyword`(0x10000)|정보(4)|  
+|`ThreadingKeyword` (0x10000)|정보(4)|  
   
  다음 표에서는 이벤트 정보를 보여 줍니다.  
   
@@ -110,7 +100,7 @@ ms.lasthandoff: 12/22/2017
   
 |이벤트를 발생시키기 위한 키워드|수준|  
 |-----------------------------------|-----------|  
-|`ThreadingKeyword`(0x10000)|정보(4)|  
+|`ThreadingKeyword` (0x10000)|정보(4)|  
   
  다음 표에서는 이벤트 정보를 보여 줍니다.  
   
@@ -145,7 +135,7 @@ ms.lasthandoff: 12/22/2017
   
 |이벤트를 발생시키기 위한 키워드|수준|  
 |-----------------------------------|-----------|  
-|`ThreadingKeyword`(0x10000)|정보(4)|  
+|`ThreadingKeyword` (0x10000)|정보(4)|  
   
  다음 표에서는 이벤트 정보를 보여 줍니다.  
   
@@ -166,7 +156,7 @@ ms.lasthandoff: 12/22/2017
   
 |이벤트를 발생시키기 위한 키워드|수준|  
 |-----------------------------------|-----------|  
-|`ThreadingKeyword`(0x10000)|정보(4)|  
+|`ThreadingKeyword` (0x10000)|정보(4)|  
   
  다음 표에서는 이벤트 정보를 보여 줍니다.  
   
@@ -187,7 +177,7 @@ ms.lasthandoff: 12/22/2017
   
 |이벤트를 발생시키기 위한 키워드|수준|  
 |-----------------------------------|-----------|  
-|`ThreadingKeyword`(0x10000)|정보(4)|  
+|`ThreadingKeyword` (0x10000)|정보(4)|  
   
  다음 표에서는 이벤트 정보를 보여 줍니다.  
   
@@ -208,7 +198,7 @@ ms.lasthandoff: 12/22/2017
   
 |이벤트를 발생시키기 위한 키워드|수준|  
 |-----------------------------------|-----------|  
-|`ThreadingKeyword`(0x10000)|정보(4)|  
+|`ThreadingKeyword` (0x10000)|정보(4)|  
   
  다음 표에서는 이벤트 정보를 보여 줍니다.  
   

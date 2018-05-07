@@ -1,32 +1,20 @@
 ---
-title: "기본적인 Windows Communication Foundation 개념"
-ms.custom: 
+title: 기본적인 Windows Communication Foundation 개념
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - WCF [WCF], concepts
 - concepts [WCF]
 - fundamentals [WCF]
 - Windows Communication Foundation [WCF], concepts
 ms.assetid: 3e7e0afd-7913-499d-bafb-eac7caacbc7a
-caps.latest.revision: "39"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 651515095a0c9f9e970fff2d77421cfa804fa701
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
-ms.translationtype: MT
+ms.openlocfilehash: 44b36fc917ceb30141d7d2235b8bb364d3b998c9
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="fundamental-windows-communication-foundation-concepts"></a>기본적인 Windows Communication Foundation 개념
-이 문서에서는 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 아키텍처에 대해 간략하게 설명합니다. 또한 핵심 개념 및 이러한 개념이 서로 어떻게 연결되는지에 대해 설명합니다. 가장 간단한 버전을 만드는 방법에 대 한 자습서에 대 한는 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 서비스 및 클라이언트, 참조 [초보자를 위한 자습서](../../../docs/framework/wcf/getting-started-tutorial.md)합니다. 자세한 내용은 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 프로그래밍 참조 [기본 WCF 프로그래밍](../../../docs/framework/wcf/basic-wcf-programming.md)합니다.  
+이 문서는 Windows Communication Foundation (WCF) 아키텍처의 고급 보기를 제공합니다. 또한 핵심 개념 및 이러한 개념이 서로 어떻게 연결되는지에 대해 설명합니다. 가장 간단한 버전을 만드는 방법에 대 한 자습서에 대 한는 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 서비스 및 클라이언트, 참조 [초보자를 위한 자습서](../../../docs/framework/wcf/getting-started-tutorial.md)합니다. 자세한 내용은 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 프로그래밍 참조 [기본 WCF 프로그래밍](../../../docs/framework/wcf/basic-wcf-programming.md)합니다.  
   
 ## <a name="wcf-fundamentals"></a>WCF 기본 사항  
  [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]는 서비스와 클라이언트 사이에서 메시지를 보내는 시스템을 만드는 런타임과 API 집합입니다. 같은 컴퓨터 시스템에 있는 서로 다른 응용 프로그램 간의 통신이나 인터넷을 통해 액세스하는 다른 회사에 있는 시스템 간의 통신을 지원하는 응용 프로그램을 만들 때 동일한 인프라와 API가 사용됩니다.  

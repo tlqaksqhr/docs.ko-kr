@@ -1,11 +1,7 @@
 ---
-title: "GetObjectText 함수 (관리 되지 않는 API 참조)"
-description: "GetObjectText 함수 MOF 구문으로 개체의 텍스트 렌더링을 반환합니다."
+title: GetObjectText 함수 (관리 되지 않는 API 참조)
+description: GetObjectText 함수 MOF 구문으로 개체의 텍스트 렌더링을 반환합니다.
 ms.date: 11/06/2017
-ms.prod: .net-framework
-ms.technology:
-- dotnet-clr
-ms.topic: reference
 api_name:
 - GetObjectText
 api_location:
@@ -20,14 +16,11 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 0b47dc73bb9da71b0c8593aa5758179327d7572d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: d2f0e766a3a310bdb58f7cbffd8d49404eb5e0b0
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="getobjecttext-function"></a>GetObjectText 함수
 관리 되는 MOF (Object Format) 구문에서 개체의 텍스트 렌더링을 반환합니다.
@@ -81,14 +74,14 @@ HRESULT GetObjectText (
 1. 매개 변수는 해당 식별자 값 순서 대로 resequenced 됩니다.
 1. 으로 지정 된 매개 변수 `[in]` 및 `[out]` 단일 매개 변수를 결합 됩니다.
  
-`pstrObjectText`에 대 한 포인터 여야 합니다는 `null` 함수를 호출할 때는 하지를 가리켜야 포인터가 할당을 취소할 수는 때문에 메서드 호출 전에 올바르지 않은 하는 문자열입니다.
+`pstrObjectText` 에 대 한 포인터 여야 합니다는 `null` 함수를 호출할 때는 하지를 가리켜야 포인터가 할당을 취소할 수는 때문에 메서드 호출 전에 올바르지 않은 하는 문자열입니다.
 
 ## <a name="requirements"></a>요구 사항  
 **플랫폼:** 참조 [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)합니다.  
   
  **헤더:** WMINet_Utils.idl  
   
- **.NET framework 버전:**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **.NET framework 버전:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>참고자료  
 [WMI 및 성능 카운터 (관리 되지 않는 API 참조)](index.md)

@@ -1,13 +1,6 @@
 ---
-title: "연습: Visual Studio의 디자인 타임 기능을 사용하는 Windows Forms 컨트롤 만들기"
-ms.custom: 
+title: '연습: Visual Studio의 디자인 타임 기능을 사용하는 Windows Forms 컨트롤 만들기'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -17,16 +10,11 @@ helpviewer_keywords:
 - DocumentDesigner class [Windows Forms]
 - walkthroughs [Windows Forms], controls
 ms.assetid: 6f487c59-cb38-4afa-ad2e-95edacb1d626
-caps.latest.revision: "46"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a4e84c665897159d08cec36b0f35b4f5f2674445
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 10905df76f2b638c10b14c1dd8c181b9652ea963
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="walkthrough-creating-a-windows-forms-control-that-takes-advantage-of-visual-studio-design-time-features"></a>연습: Visual Studio의 디자인 타임 기능을 사용하는 Windows Forms 컨트롤 만들기
 연결 된 사용자 지정 디자이너를 제작 하 여 사용자 지정 컨트롤에 대 한 디자인 타임 환경을 개선할 수 있습니다.  
@@ -76,7 +64,7 @@ ms.lasthandoff: 01/19/2018
 > [!NOTE]
 >  표시되는 대화 상자와 메뉴 명령은 활성 설정이나 버전에 따라 도움말에서 설명하는 것과 다를 수 있습니다. 설정을 변경하려면 **도구** 메뉴에서 **설정 가져오기 및 내보내기** 를 선택합니다. 자세한 내용은 [Visual Studio에서 개발 설정 사용자 지정](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3)을 참조하세요.  
   
-## <a name="prerequisites"></a>필수 구성 요소  
+## <a name="prerequisites"></a>전제 조건  
  이 연습을 완료하려면 다음 사항이 필요합니다.  
   
 -   충분 한 권한이을 만들고 Visual Studio가 설치 된 컴퓨터에서 Windows Forms 응용 프로그램 프로젝트를 실행할 수 있습니다.  
@@ -481,7 +469,7 @@ using MarqueeControlLibrary;
      [!code-csharp[System.Windows.Forms.Design.DocumentDesigner#570](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/CS/marqueecontrolrootdesigner.cs#570)]
      [!code-vb[System.Windows.Forms.Design.DocumentDesigner#570](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/VB/marqueecontrolrootdesigner.vb#570)]  
   
-2.  해당 디자이너 동사에 이러한 이벤트 처리기를 연결 합니다. `MarqueeControlRootDesigner`상속 된 <xref:System.ComponentModel.Design.DesignerVerbCollection> 해당 기본 클래스에서 합니다. 만들려는 두 개의 새 <xref:System.ComponentModel.Design.DesignerVerb> 개체에서이 컬렉션에 추가 하는 <xref:System.Windows.Forms.Design.DocumentDesigner.Initialize%2A> 메서드.  
+2.  해당 디자이너 동사에 이러한 이벤트 처리기를 연결 합니다. `MarqueeControlRootDesigner` 상속 된 <xref:System.ComponentModel.Design.DesignerVerbCollection> 해당 기본 클래스에서 합니다. 만들려는 두 개의 새 <xref:System.ComponentModel.Design.DesignerVerb> 개체에서이 컬렉션에 추가 하는 <xref:System.Windows.Forms.Design.DocumentDesigner.Initialize%2A> 메서드.  
   
      [!code-csharp[System.Windows.Forms.Design.DocumentDesigner#590](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/CS/marqueecontrolrootdesigner.cs#590)]
      [!code-vb[System.Windows.Forms.Design.DocumentDesigner#590](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/VB/marqueecontrolrootdesigner.vb#590)]  

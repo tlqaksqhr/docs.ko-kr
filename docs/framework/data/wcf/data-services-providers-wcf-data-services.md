@@ -1,34 +1,20 @@
 ---
-title: "데이터 서비스 공급자(WCF Data Services)"
-ms.custom: 
+title: 데이터 서비스 공급자(WCF Data Services)
 ms.date: 03/30/2017
-ms.prod: .net-framework-oob
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - WCF Data Services, providers
 ms.assetid: a0160b1b-3d9c-4cc8-8391-cb0986a60a41
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 6f25f1f9137206c1adb3ab3f89b7c6a783aeccf0
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 7be6578f0b237f986bcb68a3ace10ba04cf06474
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="data-services-providers-wcf-data-services"></a>데이터 서비스 공급자(WCF Data Services)
-[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]데이터를 노출 하기 위한 여러 공급자 모델을 지원 한 [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] 피드입니다. 이 항목에서 제공하는 정보를 통해 데이터 소스에 가장 적합한 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 공급자를 선택할 수 있습니다.  
+[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 데이터를 노출 하기 위한 여러 공급자 모델을 지원 한 [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] 피드입니다. 이 항목에서 제공하는 정보를 통해 데이터 소스에 가장 적합한 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 공급자를 선택할 수 있습니다.  
   
 ## <a name="data-source-providers"></a>데이터 소스 공급자  
- [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]데이터 서비스의 데이터 모델을 정의 하기 위한 다음 공급자를 지원 합니다.  
+ [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 데이터 서비스의 데이터 모델을 정의 하기 위한 다음 공급자를 지원 합니다.  
   
 |공급자|설명|  
 |--------------|-----------------|  
@@ -37,7 +23,7 @@ ms.lasthandoff: 12/22/2017
 |사용자 지정 데이터 서비스 공급자|[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]에 포함된 공급자 집합을 사용하면 런타임에 바인딩된 데이터 형식을 기반으로 데이터 모델을 동적으로 정의할 수 있습니다. 응용 프로그램을 디자인할 때 노출되는 데이터를 알 수 없거나 Entity Framework 또는 리플렉션 공급자가 충분하지 않은 경우 이러한 인터페이스를 구현해야 합니다. 자세한 내용은 참조 [사용자 지정 데이터 서비스 공급자](../../../../docs/framework/data/wcf/custom-data-service-providers-wcf-data-services.md)합니다.|  
   
 ## <a name="other-data-service-providers"></a>기타 데이터 서비스 공급자  
- [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]에 기타 공급자 중 하나를 사용 하 여 정의 된 데이터 소스의 성능을 높이 다음과 같은 추가 데이터 서비스 공급자입니다.  
+ [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 에 기타 공급자 중 하나를 사용 하 여 정의 된 데이터 소스의 성능을 높이 다음과 같은 추가 데이터 서비스 공급자입니다.  
   
 |공급자|설명|  
 |--------------|-----------------|  

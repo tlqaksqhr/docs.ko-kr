@@ -1,30 +1,18 @@
 ---
-title: "활동"
-ms.custom: 
+title: 활동
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 70471705-f55f-4da1-919f-4b580f172665
-caps.latest.revision: "10"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: cbcf33aa734cde1d2458e46cd161f9ea5197a827
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 34281647f65157484c1e732bc67a6a4b2cf58db6
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="activity"></a>활동
-이 항목에서는 [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] 추적 모델의 동작 추적에 대해 설명합니다. 동작은 실패의 범위를 줄이도록 돕는 처리 단위입니다. 동일한 동작에서 발생하는 오류는 직접적으로 관련됩니다. 예를 들어 메시지 암호 해독이 실패하면 작업이 실패합니다. 작업 실패와 메시지 암호 해독 실패 둘 다에 대한 추적은 동일한 동작에서 나타나며, 암호 해독 오류와 요청 오류 사이의 직접적인 상관 관계를 보여 줍니다.  
+이 항목에서는 Windows Communication Foundation (WCF) 추적 모델의 동작 추적에 설명 합니다. 동작은 실패의 범위를 줄이도록 돕는 처리 단위입니다. 동일한 동작에서 발생하는 오류는 직접적으로 관련됩니다. 예를 들어 메시지 암호 해독이 실패하면 작업이 실패합니다. 작업 실패와 메시지 암호 해독 실패 둘 다에 대한 추적은 동일한 동작에서 나타나며, 암호 해독 오류와 요청 오류 사이의 직접적인 상관 관계를 보여 줍니다.  
   
 ## <a name="configuring-activity-tracing"></a>동작 추적 구성  
- [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)]응용 프로그램을 처리 하기 위한 미리 정의 된 활동을 제공 합니다. (참조 [활동 목록](../../../../../docs/framework/wcf/diagnostics/tracing/activity-list.md)). 사용자 추적을 그룹화하기 위해 프로그래밍 방식으로 동작을 정의할 수도 있습니다. 자세한 내용은 참조 [사용자 코드 추적 내보내기](../../../../../docs/framework/wcf/diagnostics/tracing/emitting-user-code-traces.md)합니다.  
+ [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 응용 프로그램을 처리 하기 위한 미리 정의 된 활동을 제공 합니다. (참조 [활동 목록](../../../../../docs/framework/wcf/diagnostics/tracing/activity-list.md)). 사용자 추적을 그룹화하기 위해 프로그래밍 방식으로 동작을 정의할 수도 있습니다. 자세한 내용은 참조 [사용자 코드 추적 내보내기](../../../../../docs/framework/wcf/diagnostics/tracing/emitting-user-code-traces.md)합니다.  
   
  런타임에 동작 추적을 내보내려면 다음 구성 코드에 나타난 것처럼 `ActivityTracing` 추적 소스, 또는 다른 `System.ServiceModel`나 사용자 지정 추적 소스에 대한 [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 설정을 사용합니다.  
   

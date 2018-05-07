@@ -1,14 +1,6 @@
 ---
-title: "ModuleBindInfo 구조체"
-ms.custom: 
+title: ModuleBindInfo 구조체
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ModuleBindInfo
 api_location:
@@ -22,17 +14,13 @@ helpviewer_keywords:
 ms.assetid: 632d4adc-dbc9-4ce8-9397-abc3285c1c69
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 399ba2471b4dc7c5e372a56a9dcab8117068a693
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: dbaba00e029729fff5ad478a50134ff1e1858c0c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="modulebindinfo-structure"></a>ModuleBindInfo 구조체
 참조 된 모듈 및 포함 된 어셈블리에 대 한 자세한 정보를 제공 합니다.  
@@ -56,7 +44,7 @@ typedef struct _ModuleBindInfo {
 |`lpModuleName`|참조 된 모듈의 이름입니다.|  
   
 ## <a name="remarks"></a>설명  
- `ModuleBindInfo`에 대 한 매개 변수로 전달 됩니다 `IHostAssemblyStore::ProvideModule`합니다. 고유 식별자를 제공 하는 호스트 `dwAppDomainId` 공용 언어 런타임 (CLR). 호출한 후에 [ihostassemblystore:: Provideassembly](../../../../docs/framework/unmanaged-api/hosting/ihostassemblystore-provideassembly-method.md) 런타임 식별자를 사용 하 여 결정 메서드가 반환 하는지 여부를의 내용을 `IStream` 매핑 되었습니다. 이 경우 런타임에서 스트림을 다시 매핑하는 것이 아니라 기존 복사본을 로드 합니다. 또한 공용 언어 런타임은이 식별자에 대 한 호출에서 반환 되는 스트림에 대 한 조회 키로는 `IHostAssemblyStore::ProvideAssembly` 메서드. 따라서 식별자 어셈블리 요청에 대 한 모듈 요청 및 고유 해야 합니다.  
+ `ModuleBindInfo` 에 대 한 매개 변수로 전달 됩니다 `IHostAssemblyStore::ProvideModule`합니다. 고유 식별자를 제공 하는 호스트 `dwAppDomainId` 공용 언어 런타임 (CLR). 호출한 후에 [ihostassemblystore:: Provideassembly](../../../../docs/framework/unmanaged-api/hosting/ihostassemblystore-provideassembly-method.md) 런타임 식별자를 사용 하 여 결정 메서드가 반환 하는지 여부를의 내용을 `IStream` 매핑 되었습니다. 이 경우 런타임에서 스트림을 다시 매핑하는 것이 아니라 기존 복사본을 로드 합니다. 또한 공용 언어 런타임은이 식별자에 대 한 호출에서 반환 되는 스트림에 대 한 조회 키로는 `IHostAssemblyStore::ProvideAssembly` 메서드. 따라서 식별자 어셈블리 요청에 대 한 모듈 요청 및 고유 해야 합니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **플랫폼:** 참조 [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)합니다.  
@@ -65,7 +53,7 @@ typedef struct _ModuleBindInfo {
   
  **라이브러리:** MSCorEE.dll에 리소스로 포함  
   
- **.NET framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>참고 항목  
  [호스팅 구조체](../../../../docs/framework/unmanaged-api/hosting/hosting-structures.md)  

@@ -1,14 +1,6 @@
 ---
-title: "ICorDebugEval::CreateValue 메서드"
-ms.custom: 
+title: ICorDebugEval::CreateValue 메서드
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICorDebugEval.CreateValue
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: 9a1c0b47-6f10-4fcb-844a-4ab2d7990140
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 64d55a951795cc5efc1bfc624dbe07575be153aa
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 6d67784daee055106f104d74d098b9926c6de2ec
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="icordebugevalcreatevalue-method"></a>ICorDebugEval::CreateValue 메서드
 초기 값이 0 또는 null 인 지정 된 형식의 값을 만듭니다.  
@@ -61,7 +49,7 @@ HRESULT CreateValue (
  [out] 값을 나타내는 "ICorDebugValue" 개체의 주소에 대 한 포인터입니다.  
   
 ## <a name="remarks"></a>설명  
- `CreateValue`만듭니다는 `ICorDebugValue` 함수 실행에 사용 하 여의 목적 으로만 지정 된 형식의 개체입니다. 이 값 개체 사용자 상수를 매개 변수로 전달 데 사용할 수 있습니다.  
+ `CreateValue` 만듭니다는 `ICorDebugValue` 함수 실행에 사용 하 여의 목적 으로만 지정 된 형식의 개체입니다. 이 값 개체 사용자 상수를 매개 변수로 전달 데 사용할 수 있습니다.  
   
  값 형식의 기본 형식인 경우 해당 초기 값은 0 또는 null입니다. 사용 하 여 [icordebuggenericvalue:: Setvalue](../../../../docs/framework/unmanaged-api/debugging/icordebuggenericvalue-setvalue-method.md) 기본 형식의 값을 설정 합니다.  
   

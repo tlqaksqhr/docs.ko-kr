@@ -1,14 +1,6 @@
 ---
 title: 페더레이션
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -16,25 +8,19 @@ helpviewer_keywords:
 - WCF, federation
 - federation [WCF]
 ms.assetid: 2f1e646f-8361-48d4-9d5d-1b961f31ede4
-caps.latest.revision: 26
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 0e7aef1f53675089ee311aa79a54abf60441b728
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: d69de8c01a23eff5314220a10a51f6487080df41
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="federation"></a>페더레이션
-이 항목에서는 페더레이션 보안의 개념에 대한 간략한 개요를 제공합니다. 또한 페더레이션 보안 아키텍처 배포를 위한 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 지원에 대해 설명합니다. 페더레이션을 보여 주는 샘플 응용 프로그램을 참조 하십시오. [Federation 샘플](../../../../docs/framework/wcf/samples/federation-sample.md)합니다.  
+이 항목에서는 페더레이션 보안의 개념에 대한 간략한 개요를 제공합니다. 또한 페더레이션된 보안 아키텍처 배포에 대 한 Windows Communication Foundation (WCF) 지원을 설명 합니다. 페더레이션을 보여 주는 샘플 응용 프로그램을 참조 하십시오. [Federation 샘플](../../../../docs/framework/wcf/samples/federation-sample.md)합니다.  
   
 ## <a name="definition-of-federated-security"></a>페더레이션 보안 정의  
  페더레이션 보안을 사용하면 클라이언트가 액세스 중인 서비스, 관련 인증, 권한 부여 절차를 서로 확실히 구분할 수 있습니다. 페더레이션 보안을 통해 여러 신뢰 영역에 있는 여러 시스템, 네트워크 및 조직 간에 공동 작업을 수행할 수도 있습니다.  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서는 페더레이션 보안을 사용하는 분산 시스템을 구축 및 배포하기 위한 지원을 제공합니다.  
+ WCF에는 페더레이션된 보안을 사용 하는 분산된 시스템을 구축 하기 위한 지원을 제공 합니다.  
   
 ### <a name="elements-of-a-federated-security-architecture"></a>페더레이션 보안 아키텍처의 요소  
  다음 표에 설명된 것처럼 페더레이션 보안 아키텍처에는 세 가지 요소가 있습니다.  
@@ -80,7 +66,7 @@ ms.lasthandoff: 04/28/2018
  사용자는 STS A로부터 가져온 보안 토큰을 STS B에 제공합니다. 조직 B에서는 사용자 요청에 대한 권한 부여를 수행하고, 자체 보안 토큰 집합으로부터 사용자에게 보안 토큰을 발급합니다. 그런 다음 사용자는 토큰을 조직 B의 리소스에 제공하고 서비스에 액세스합니다.  
   
 ## <a name="support-for-federated-security-in-wcf"></a>WCF의 페더레이션 보안을 위한 지원  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 페더레이션된 보안 아키텍처를 통해를 배포 하기 위한 턴키 지원 제공는 [ \<wsFederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md)합니다.  
+ WCF를 통해 페더레이션된 보안 아키텍처 배포를 위한 턴키 지원을 제공는 [ \<wsFederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md)합니다.  
   
  [ \<wsFederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md) 요소에 대 한 HTTP 요청-회신 통신 스타일에 대 한 기본 전송 메커니즘으로 사용 해야 하는 보안성, 안정성, 상호 운용 가능한 바인딩을 제공 텍스트 및 XML 인코딩 통신 형식으로 사용 합니다.  
   
@@ -98,10 +84,10 @@ ms.lasthandoff: 04/28/2018
 -   서비스에 대한 토큰을 제시하여 서비스에 액세스합니다.  
   
 ### <a name="phase-2-run-time-phase"></a>2단계: 런타임 단계  
- 런타임 단계에서 클라이언트는 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 클라이언트 클래스의 개체를 인스턴스화하며, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 클라이언트를 사용하여 호출을 합니다. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]의 기본 프레임워크는 페더레이션 보안 통신 패턴에서 이전에 언급한 단계를 처리하며, 클라이언트는 이를 통해 서비스를 원활하게 사용할 수 있습니다.  
+ 런타임 단계 동안 클라이언트는 WCF 클라이언트 클래스의 개체를 인스턴스화합니다 하 고 WCF 클라이언트를 사용 하 여에 대 한 호출. WCF의 기본 프레임 워크는 페더레이션된 보안 통신 패턴에서 이전에 언급 한 단계를 처리 하 고 원활 하 게 서비스를 사용할 수 있습니다.  
   
 ## <a name="sample-implementation-using-wcf"></a>WCF를 사용하여 샘플 구현  
- 다음 그림에서는 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]의 기본적인 지원을 사용하여 페더레이션 보안 아키텍처에 대한 샘플 구현을 보여 줍니다.  
+ 다음 그림에는 WCF의 기본적인 지원을 사용 하 여 페더레이션된 보안 아키텍처에 대 한 샘플 구현을 보여 줍니다.  
   
  ![WCF의 페더레이션 보안](../../../../docs/framework/wcf/feature-details/media/federatedsecurityinwcf.gif "FederatedSecurityInWCF")  
   
@@ -300,7 +286,7 @@ operationRequirementType="FederationSample.MyServiceOperationRequirement, MyServ
  ![페더레이션](../../../../docs/framework/wcf/feature-details/media/federationclienta.gif "FederationClientA")  
   
 ## <a name="summary"></a>요약  
- 페더레이션 보안은 책임을 확실히 나누며, 안전하고 확장성 있는 서비스 아키텍처를 구축하는 데 도움이 됩니다. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]는 분산 응용 프로그램을 빌드하고 배포하기 위한 플랫폼으로서, 페더레이션 보안을 구현하기 위한 기본적인 지원을 제공합니다.  
+ 페더레이션 보안은 책임을 확실히 나누며, 안전하고 확장성 있는 서비스 아키텍처를 구축하는 데 도움이 됩니다. WCF는 분산된 응용 프로그램 구축 하기 위한 플랫폼으로 페더레이션된 보안을 구현 하기 위한 네이티브 지원을 제공 합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [보안](../../../../docs/framework/wcf/feature-details/security.md)

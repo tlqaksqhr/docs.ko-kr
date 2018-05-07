@@ -1,29 +1,15 @@
 ---
 title: UriTemplate 및 UriTemplateTable
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 5cbbe03f-4a9e-4d44-9e02-c5773239cf52
-caps.latest.revision: 24
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: b0fedb812cee5cfa1e4c2ff921a78beb2a6c1beb
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 09726af0a124723de025f29927954a2100aebcb4
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="uritemplate-and-uritemplatetable"></a>UriTemplate 및 UriTemplateTable
-웹 개발자는 서비스가 응답하는 URI의 셰이프 및 레이아웃을 설명할 수 있어야 합니다. [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]에는 개발자가 URI를 제어할 수 있는 두 가지 새 클래스가 추가되었습니다. <xref:System.UriTemplate> 및 <xref:System.UriTemplateTable>은 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서 URI 기반 디스패치 엔진의 기초를 형성합니다. 이러한 클래스를 자체적으로 사용하면 개발자가 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 서비스를 구현하지 않고도 URI 매핑 메커니즘과 템플릿을 활용할 수 있습니다.  
+웹 개발자는 서비스가 응답하는 URI의 셰이프 및 레이아웃을 설명할 수 있어야 합니다. Windows Communication Foundation (WCF) 개발자가 Uri 제어할 수 있도록 하는 두 개의 새 클래스를 추가 합니다. <xref:System.UriTemplate> 및 <xref:System.UriTemplateTable> wcf에서 URI 기반 디스패치 엔진의 기초를 형성 합니다. 또한 이러한 클래스는 WCF 서비스를 구현 하지 않고도 때문에 서식 파일 및 URI를 활용 하기 위해 개발자가 직접 매핑 메커니즘에 사용할 수도 있습니다.  
   
 ## <a name="templates"></a>템플릿  
  템플릿을 사용하면 상대 URI 집합을 설명할 수 있습니다. 다음 표의 URI 템플릿 집합은 다양한 날씨 정보를 검색하는 시스템을 정의하는 방법을 보여 줍니다.  
@@ -35,7 +21,7 @@ ms.lasthandoff: 04/28/2018
 |구/군/시 예보|weather/{state}/{city}|  
 |활동 예보|weather/{state}/{city}/{activity}|  
   
- 이 표에서는 구조적으로 비슷한 URI 집합을 보여 줍니다. 각 항목은 URI 템플릿에 해당합니다. 중괄호 안에 있는 세그먼트는 변수를 설명하고 중괄호 밖에 있는 세그먼트는 리터럴 문자열을 설명합니다. 개발자는 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 템플릿 클래스를 사용하여 수신 URI(예: "/weather/wa/seattle/cycling")를 가져와서 해당 URI를 설명하는 템플릿("/weather/{state}/{city}/{activity}")과 일치시킬 수 있습니다.  
+ 이 표에서는 구조적으로 비슷한 URI 집합을 보여 줍니다. 각 항목은 URI 템플릿에 해당합니다. 중괄호 안에 있는 세그먼트는 변수를 설명하고 중괄호 밖에 있는 세그먼트는 리터럴 문자열을 설명합니다. WCF 템플릿 클래스 사용 예를 들어, "/ weather/wa/seattle/순환", 수신 URI 하 고를 설명 하는 서식 파일에 일치 하는 개발자가 "/weather/{state}/{city} {state} / {city} / {활동을 (를)"입니다.  
   
 ## <a name="uritemplate"></a>UriTemplate  
  <xref:System.UriTemplate>은 URI 템플릿을 캡슐화하는 클래스입니다. 생성자는 템플릿을 정의하는 문자열 매개 변수를 사용합니다. 이 문자열에는 다음 단원에 설명된 형식의 템플릿이 포함되어 있습니다. <xref:System.UriTemplate> 클래스는 수신 URI를 템플릿에 일치시키고, 템플릿에서 URI를 생성하고, 템플릿에 사용되는 변수 이름 컬렉션을 검색하고, 두 템플릿이 동일한지 확인하고, 템플릿의 문자열을 반환할 수 있는 메서드를 제공합니다.  

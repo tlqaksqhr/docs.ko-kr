@@ -1,27 +1,17 @@
 ---
-title: "로더 ETW 이벤트"
-ms.custom: 
+title: 로더 ETW 이벤트
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - loader events [.NET Framework]
 - ETW, loader events (CLR)
 ms.assetid: cb403cc6-56f8-4609-b467-cdfa09f07909
-caps.latest.revision: "18"
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ebdee4427bd0848e75e58443fefd439acaa27f64
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: d4746e9e7c8c83caf09ccf51749e9e3cbe69ec52
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="loader-etw-events"></a>로더 ETW 이벤트
 <a name="top"></a> 이들 이벤트는 응용 프로그램 도메인, 어셈블리 및 모듈 로드 및 언로드와 관련된 정보를 수집합니다.  
@@ -44,7 +34,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="application-domain-events"></a>응용 프로그램 도메인 이벤트  
  다음 표에서는 키워드와 수준을 보여 줍니다.  
   
-|이벤트를 발생시키기 위한 키워드|이벤트|수준|  
+|이벤트를 발생시키기 위한 키워드|이벤트(event)|수준|  
 |-----------------------------------|-----------|-----------|  
 |`LoaderKeyword` (0x8)|`AppDomainLoad_V1` 및 `AppDomainUnLoad_V1`|정보(4)|  
 |`LoaderRundownKeyword` (0x8) +<br /><br /> `StartRundownKeyword`|`AppDomainDCStart_V1`|정보(4)|  
@@ -75,7 +65,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="clr-loader-assembly-events"></a>CLR 로더 어셈블리 이벤트  
  다음 표에서는 키워드와 수준을 보여 줍니다.  
   
-|이벤트를 발생시키기 위한 키워드|이벤트|수준|  
+|이벤트를 발생시키기 위한 키워드|이벤트(event)|수준|  
 |-----------------------------------|-----------|-----------|  
 |`LoaderKeyword` (0x8)|`AssemblyLoad` 및 `AssemblyUnload`|정보(4)|  
 |`LoaderRundownKeyword` (0x8) +<br /><br /> `StartRundownKeyword`|`AssemblyDCStart`|정보(4)|  
@@ -107,7 +97,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="module-events"></a>모듈 이벤트  
  다음 표에서는 키워드와 수준을 보여 줍니다.  
   
-|이벤트를 발생시키기 위한 키워드|이벤트|수준|  
+|이벤트를 발생시키기 위한 키워드|이벤트(event)|수준|  
 |-----------------------------------|-----------|-----------|  
 |`LoaderKeyword` (0x8)|`ModuleLoad_V2` 및 `ModuleUnload_V2`|정보(4)|  
 |`LoaderRundownKeyword` (0x8) +<br /><br /> `StartRundownKeyword`|`ModuleDCStart_V2`|정보(4)|  
@@ -155,7 +145,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="clr-domain-module-events"></a>CLR 도메인 모듈 이벤트  
  다음 표에서는 키워드와 수준을 보여 줍니다.  
   
-|이벤트를 발생시키기 위한 키워드|이벤트|수준|  
+|이벤트를 발생시키기 위한 키워드|이벤트(event)|수준|  
 |-----------------------------------|-----------|-----------|  
 |`LoaderKeyword` (0x8)|`DomainModuleLoad_V1`|정보(4)|  
 |`LoaderRundownKeyword` (0x8) +<br /><br /> `StartRundownKeyword`|`DomainModuleDCStart_V1`|정보(4)|  
@@ -188,7 +178,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="module-range-events"></a>모듈 범위 이벤트  
  다음 표에서는 키워드와 수준을 보여 줍니다.  
   
-|이벤트를 발생시키기 위한 키워드|이벤트|수준|  
+|이벤트를 발생시키기 위한 키워드|이벤트(event)|수준|  
 |-----------------------------------|-----------|-----------|  
 |`PerfTrackKeyWord`)|`ModuleRange`|정보(4)|  
 |`PerfTrackKeyWord`|`ModuleRangeDCStart`|정보(4)|  

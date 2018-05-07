@@ -1,13 +1,6 @@
 ---
-title: "방법: 진행률을 보여 주는 Windows Forms 컨트롤 만들기"
-ms.custom: 
+title: '방법: 진행률을 보여 주는 Windows Forms 컨트롤 만들기'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -17,16 +10,11 @@ helpviewer_keywords:
 - progress [Windows Forms], reporting [Windows Forms]
 - FlashTrackBar custom control
 ms.assetid: 24c5a2e3-058c-4b8d-a217-c06e6a130c2f
-caps.latest.revision: "6"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 76ce5cd67b66dea47f5bd12e78bb27179b391257
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 5773181b8883f0f94ff451808c8c97ce3407970e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-a-windows-forms-control-that-shows-progress"></a>방법: 진행률을 보여 주는 Windows Forms 컨트롤 만들기
 다음 코드 예제에서는 사용자에게 수준 또는 응용 프로그램의 진행률을 표시하는 데 사용할 수 있는 `FlashTrackBar`이라는 사용자 지정 컨트롤을 보여 줍니다. 그라데이션을 사용하여 진행률을 시각적으로 나타냅니다.  
@@ -66,7 +54,7 @@ ms.lasthandoff: 12/22/2017
 |`OnValueChanged`|메서드는 `ValueChanged` 이벤트를 발생시킵니다.|  
   
 > [!NOTE]
->  `FlashTrackBar`사용 하 여는 <xref:System.EventArgs> 이벤트 데이터에 대 한 클래스 및 <xref:System.EventHandler> 이벤트 대리자에 대 한 합니다.  
+>  `FlashTrackBar` 사용 하 여는 <xref:System.EventArgs> 이벤트 데이터에 대 한 클래스 및 <xref:System.EventHandler> 이벤트 대리자에 대 한 합니다.  
   
  해당 처리에 *EventName* 이벤트 `FlashTrackBar` 에서 상속 하는 다음 메서드를 재정의 <xref:System.Windows.Forms.Control?displayProperty=nameWithType>:  
   
@@ -88,7 +76,7 @@ ms.lasthandoff: 12/22/2017
   
 -   <xref:System.Windows.Forms.Control.OnTextChanged%2A>  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  `FlashTrackBar` 컨트롤은 `FlashTrackBarValueEditor` 및 `FlashTrackBarDarkenByEditor`이라는 두 개의 UI 형식 편집기를 정의하며 이는 다음 코드 목록에 표시됩니다. `HostApp` 클래스는 Windows Form에소 `FlashTrackBar` 컨트롤을 사용합니다.  
   
  [!code-csharp[System.Windows.Forms.FlashTrackBar#1](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.FlashTrackBar/CS/FlashTrackBar.cs#1)]

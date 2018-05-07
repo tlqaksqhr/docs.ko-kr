@@ -1,27 +1,15 @@
 ---
-title: "개체 상태 및 변경 내용 추적"
-ms.custom: 
+title: 개체 상태 및 변경 내용 추적
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 7a808b00-9c3c-479a-aa94-717280fefd71
-caps.latest.revision: "2"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: f7eb1a8afe87caece18432c66a8d8a268ce9fbd2
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 482299f90a92acec9307649ec04a89f8ce6be414
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="object-states-and-change-tracking"></a>개체 상태 및 변경 내용 추적
-[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]일부에 항상 포함 개체가 *상태*합니다. 예를 들어, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]에서 새 개체를 만들 경우 개체는 `Unchanged` 상태입니다. 직접 만든 새 개체는 <xref:System.Data.Linq.DataContext>에 알려져 있지 않으며 `Untracked` 상태입니다. <xref:System.Data.Linq.DataContext.SubmitChanges%2A>를 실행하고 나면 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]에 알려진 모든 개체는 `Unchanged` 상태가 됩니다. 유일한 예외는 데이터베이스에서 삭제된 개체로 이러한 개체는 `Deleted` 상태이고 해당 <xref:System.Data.Linq.DataContext> 인스턴스에서 사용할 수 없습니다.  
+[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 일부에 항상 포함 개체가 *상태*합니다. 예를 들어, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]에서 새 개체를 만들 경우 개체는 `Unchanged` 상태입니다. 직접 만든 새 개체는 <xref:System.Data.Linq.DataContext>에 알려져 있지 않으며 `Untracked` 상태입니다. <xref:System.Data.Linq.DataContext.SubmitChanges%2A>를 실행하고 나면 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]에 알려진 모든 개체는 `Unchanged` 상태가 됩니다. 유일한 예외는 데이터베이스에서 삭제된 개체로 이러한 개체는 `Deleted` 상태이고 해당 <xref:System.Data.Linq.DataContext> 인스턴스에서 사용할 수 없습니다.  
   
 ## <a name="object-states"></a>개체 상태  
  다음 표에서는 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 개체의 가능한 상태를 보여 줍니다.  

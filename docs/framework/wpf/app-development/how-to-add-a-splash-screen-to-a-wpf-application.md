@@ -1,29 +1,17 @@
 ---
-title: "방법: WPF 응용 프로그램에 시작 화면 추가"
-ms.custom: 
+title: '방법: WPF 응용 프로그램에 시작 화면 추가'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - WPF [WPF], splash screen
 - startup window [WPF]
 - SplashScreen class [WPF]
 - splash screen [WPF]
 ms.assetid: d70a25c4-5fb9-4c27-b01d-b1b8ef39b3fd
-caps.latest.revision: "14"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 121cbc1c07ea8f6458df81d861aea3f8e1f91086
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 06d6cb7c5a5081d3b6c4979ab50e1caaa726acbe
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-add-a-splash-screen-to-a-wpf-application"></a>방법: WPF 응용 프로그램에 시작 화면 추가
 이 항목에서는 시작 창에 추가 하는 방법을 보여 줍니다. 또는 *시작 화면*, Windows Presentation Foundation (WPF) 응용 프로그램에 있습니다.  

@@ -1,14 +1,6 @@
 ---
 title: ICorDebugGenericValue Interface1
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICorDebugGenericValue
 api_location:
@@ -22,17 +14,13 @@ helpviewer_keywords:
 ms.assetid: bc14f408-b359-4c8c-ade2-888ccdf7261b
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: d6c6fb4893edf0bcda9d6f7ddbeea7054f5b4fd5
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 0081f020da673023e2c35f9599e9682215e2c9d4
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="icordebuggenericvalue-interface1"></a>ICorDebugGenericValue Interface1
 모든 값에 적용 되는 "ICorDebugValue"의 하위 클래스입니다. 이 인터페이스에서는 값의 Get 및 Set 메서드를 제공합니다.  
@@ -45,7 +33,7 @@ ms.lasthandoff: 12/22/2017
 |[SetValue 메서드](../../../../docs/framework/unmanaged-api/debugging/icordebuggenericvalue-setvalue-method.md)|지정된 된 버퍼에서 새 값을 복사합니다.|  
   
 ## <a name="remarks"></a>설명  
- `ICorDebugGenericValue`비 원격 이기 때문에 하위 인터페이스입니다.  
+ `ICorDebugGenericValue` 비 원격 이기 때문에 하위 인터페이스입니다.  
   
  참조 형식에 대 한 값이 참조의 내용을 보다는 참조 합니다.  
   
@@ -61,7 +49,7 @@ ms.lasthandoff: 12/22/2017
   
  **라이브러리:** CorGuids.lib  
   
- **.NET framework 버전:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>참고 항목  
     

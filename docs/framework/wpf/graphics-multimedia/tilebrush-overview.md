@@ -1,13 +1,6 @@
 ---
-title: "TileBrush 개요"
-ms.custom: 
+title: TileBrush 개요
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -15,23 +8,18 @@ helpviewer_keywords:
 - TileBrush [WPF]
 - brushes [WPF], TileBrush
 ms.assetid: aa4a7b7e-d09d-44c2-8d61-310c50e08d68
-caps.latest.revision: "16"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a7d5e9fa36ddeda0c724eeb0bb46a64d0ba36c99
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ac247a9caa54c40a31e3c78ba8537d60a333feb5
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tilebrush-overview"></a>TileBrush 개요
-<xref:System.Windows.Media.TileBrush>개체를 제공 하는 다양 한 이미지를 영역을 그리는 방법에 대 한 제어 <xref:System.Windows.Media.Drawing>, 또는 <xref:System.Windows.Media.Visual>합니다. 이 항목에서는 사용 하는 방법을 설명 <xref:System.Windows.Media.TileBrush> 방법을 더 잘 제어 하는 데 기능이 <xref:System.Windows.Media.ImageBrush>, <xref:System.Windows.Media.DrawingBrush>, 또는 <xref:System.Windows.Media.VisualBrush> 영역을 그립니다.  
+<xref:System.Windows.Media.TileBrush> 개체를 제공 하는 다양 한 이미지를 영역을 그리는 방법에 대 한 제어 <xref:System.Windows.Media.Drawing>, 또는 <xref:System.Windows.Media.Visual>합니다. 이 항목에서는 사용 하는 방법을 설명 <xref:System.Windows.Media.TileBrush> 방법을 더 잘 제어 하는 데 기능이 <xref:System.Windows.Media.ImageBrush>, <xref:System.Windows.Media.DrawingBrush>, 또는 <xref:System.Windows.Media.VisualBrush> 영역을 그립니다.  
   
   
 <a name="prerequisite"></a>   
-## <a name="prerequisites"></a>필수 구성 요소  
+## <a name="prerequisites"></a>전제 조건  
  이 항목을 이해 하려면의 기본 기능을 사용 하는 방법을 이해 하면 도움이 되는 <xref:System.Windows.Media.ImageBrush>, <xref:System.Windows.Media.DrawingBrush>, 또는 <xref:System.Windows.Media.VisualBrush> 클래스입니다. 이러한 형식에 대 한 소개를 참조 하십시오.는 [이미지, 그리기, 및 시각적 개체를 사용 하 여 그리기](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md)합니다.  
   
 <a name="tilebrush"></a>   

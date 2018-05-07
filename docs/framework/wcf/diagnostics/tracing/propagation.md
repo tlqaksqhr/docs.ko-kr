@@ -1,27 +1,15 @@
 ---
-title: "전파"
-ms.custom: 
+title: 전파
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: f8181e75-d693-48d1-b333-a776ad3b382a
-caps.latest.revision: "8"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 17b20b76d4932272c8e2a9e26603dc8483505242
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 5d848a2b74402d0adf125488481f5b82e0b09781
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="propagation"></a>전파
-이 항목에서는 [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] 추적 모델의 동작 전파에 대해 설명합니다.  
+이 항목에서는 Windows Communication Foundation (WCF) 추적 모델의 동작 전파에 설명 합니다.  
   
 ## <a name="using-propagation-to-correlate-activities-across-endpoints"></a>전파를 통해 끝점 내의 동작 상호 연결  
  전파는 사용자에게 응용 프로그램 끝점을 통해 동일한 처리 단위(예: 요청)에 대한 오류 추적의 직접적인 상관 관계를 제공합니다. 동일한 처리 단위에 대해 다른 끝점에서 내보내진 오류는 응용 프로그램 도메인에서도 동일한 동작에서 그룹화됩니다. 이는 메시지 헤더에서 동작 ID의 전파를 통해 수행됩니다. 그러므로 서버의 내부 오류로 인해 클라이언트의 시간이 초과되면 두 오류 모두 직접 상관 관계에 대해 동일한 동작에서 표시됩니다.  

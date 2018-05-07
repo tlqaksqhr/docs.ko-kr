@@ -1,14 +1,6 @@
 ---
 title: '방법: 서명 및 암호화에 별도의 X.509 인증서 사용'
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -17,20 +9,14 @@ helpviewer_keywords:
 - ClientCredentials class
 - ClientCredentialsSecurityTokenManager class
 ms.assetid: 0b06ce4e-7835-4d82-8baf-d525c71a0e49
-caps.latest.revision: 11
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: f6103dd8f680752581a51cba7ba61c83522decc2
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
-ms.translationtype: MT
+ms.openlocfilehash: d171af8dbcbbdd51cc015986a2c69e0393fe56dc
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-use-separate-x509-certificates-for-signing-and-encryption"></a>방법: 서명 및 암호화에 별도의 X.509 인증서 사용
-이 항목에서는 클라이언트와 서비스에서 메시지 서명 및 암호화에 서로 다른 인증서를 사용하기 위한 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 구성 방법에 대해 설명합니다.  
+이 항목에서는 WCF Windows Communication Foundation () 메시지 서명 및 암호화에 클라이언트와 서비스 모두에 대 한 다른 인증서를 사용 하도록 구성 하는 방법을 보여 줍니다.  
   
  서명 및 암호화에 별도의 인증서를 사용하려면, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서는 여러 클라이언트 또는 서비스 인증서를 설정하기 위한 API가 제공되지 않으므로 사용자 지정 클라이언트나 서비스 자격 증명(또는 모두)을 만들어야 합니다. 또한 여러 개의 인증서 정보를 활용하고 지정된 키 사용과 메시지 방향에 적합한 보안 토큰 공급자를 만들기 위해 보안 토큰 관리자도 제공되어야 합니다.  
   

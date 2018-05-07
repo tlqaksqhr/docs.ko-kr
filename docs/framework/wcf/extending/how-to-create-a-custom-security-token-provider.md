@@ -1,31 +1,19 @@
 ---
-title: "방법: 사용자 지정 보안 토큰 공급자 만들기"
-ms.custom: 
+title: '방법: 사용자 지정 보안 토큰 공급자 만들기'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - security [WCF], providing credentials
 ms.assetid: db8cb478-aa43-478b-bf97-c6489ad7c7fd
-caps.latest.revision: 
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload:
-- dotnet
-ms.openlocfilehash: 37e7f9541457c475bfe187485520df63a84f7555
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
-ms.translationtype: MT
+ms.openlocfilehash: 480b968a15193bccb84ba491347dbba69e16fb52
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-a-custom-security-token-provider"></a>방법: 사용자 지정 보안 토큰 공급자 만들기
 이 항목에서는 사용자 지정 보안 토큰 공급자를 사용하여 새 토큰 형식을 만드는 방법과 공급자를 사용자 지정 보안 토큰 관리자와 통합하는 방법에 대해 설명합니다.  
@@ -33,7 +21,7 @@ ms.lasthandoff: 01/19/2018
 > [!NOTE]
 >  <xref:System.IdentityModel.Tokens>에 있는 시스템 제공 토큰이 요구 사항에 맞지 않을 경우 사용자 지정 토큰 공급자를 만드세요.  
   
- 보안 토큰 공급자는 클라이언트 또는 서비스 자격 증명의 정보를 기반으로 보안 토큰 표현을 만듭니다. [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 보안에서 사용자 지정 보안 토큰 공급자를 사용하려면 사용자 지정 자격 증명과 보안 토큰 관리자 구현을 만들어야 합니다.  
+ 보안 토큰 공급자는 클라이언트 또는 서비스 자격 증명의 정보를 기반으로 보안 토큰 표현을 만듭니다. Windows Communication Foundation (WCF) 보안에 사용자 지정 보안 토큰 공급자를 사용 하려면 사용자 지정 자격 증명과 보안 토큰 관리자 구현을 만들어야 합니다.  
   
  사용자 지정 자격 증명과 보안 토큰 관리자에 대 한 자세한 내용은 참조는 [연습: 사용자 지정 클라이언트 만들기 및 서비스 자격 증명](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md)합니다.  
   
@@ -61,7 +49,7 @@ ms.lasthandoff: 01/19/2018
  [!code-csharp[c_CustomTokenProvider#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customtokenprovider/cs/source.cs#2)]
  [!code-vb[c_CustomTokenProvider#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customtokenprovider/vb/source.vb#2)]  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 예제에서는 해당 <xref:System.IdentityModel.Selectors.SecurityTokenProvider> 구현과 함께 전체 <xref:System.IdentityModel.Selectors.SecurityTokenManager> 구현을 보여 줍니다.  
   
  [!code-csharp[c_CustomTokenProvider#0](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customtokenprovider/cs/source.cs#0)]

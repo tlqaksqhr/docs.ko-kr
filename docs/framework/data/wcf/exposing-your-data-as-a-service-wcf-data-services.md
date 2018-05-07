@@ -1,33 +1,21 @@
 ---
-title: "서비스로 데이터 노출(WCF Data Services)"
-ms.custom: 
+title: 서비스로 데이터 노출(WCF Data Services)
 ms.date: 03/30/2017
-ms.prod: .net-framework-oob
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - WCF Data Services, configuring
 - getting started, WCF Data Services
 - WCF Data Services, getting started
 ms.assetid: df0bbcee-f66f-4a88-abb4-4e73c8b9c908
-caps.latest.revision: "2"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 55e0bc058b92540c9b11965854d38e8d124e205c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 1ab349125419a0589d68ccb821009f8227c942e8
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="exposing-your-data-as-a-service-wcf-data-services"></a>서비스로 데이터 노출(WCF Data Services)
-[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]데이터를 노출 하는 서비스를 보다 쉽게 정의할 수 있도록 Visual Studio와 통합 되어 [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] 피드입니다. 노출 하는 데이터 서비스 만들기는 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 피드에 필요한 다음과 같은 기본 단계:  
+[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 데이터를 노출 하는 서비스를 보다 쉽게 정의할 수 있도록 Visual Studio와 통합 되어 [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] 피드입니다. 노출 하는 데이터 서비스 만들기는 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 피드에 필요한 다음과 같은 기본 단계:  
   
-1.  **정의** **데이터 모델**합니다. [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]기본적으로 기반으로 하는 데이터 모델을 지원는 [ADO.NET Entity Framework](../../../../docs/framework/data/adonet/ef/index.md)합니다. 자세한 내용은 참조 [하는 방법: ADO.NET Entity Framework 데이터 소스를 사용 하 여 데이터 서비스 만들기](../../../../docs/framework/data/wcf/create-a-data-service-using-an-adonet-ef-data-wcf.md)합니다.  
+1.  **정의** **데이터 모델**합니다. [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 기본적으로 기반으로 하는 데이터 모델을 지원는 [ADO.NET Entity Framework](../../../../docs/framework/data/adonet/ef/index.md)합니다. 자세한 내용은 참조 [하는 방법: ADO.NET Entity Framework 데이터 소스를 사용 하 여 데이터 서비스 만들기](../../../../docs/framework/data/wcf/create-a-data-service-using-an-adonet-ef-data-wcf.md)합니다.  
   
      또한 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]는 <xref:System.Linq.IQueryable%601> 인터페이스 인스턴스를 반환하는 CLR(공용 언어 런타임) 개체를 기반으로 하는 데이터 모델을 지원합니다. 따라서 .NET Framework의 목록, 배열 및 컬렉션을 기반으로 하는 데이터 서비스를 배포할 수 있습니다. 이러한 데이터 구조에 대해 만들기, 업데이트 및 삭제 작업을 수행하려면 <xref:System.Data.Services.IUpdatable> 인터페이스도 구현해야 합니다. 자세한 내용은 참조 [하는 방법: 리플렉션 공급자를 사용 하 여 데이터 서비스 만들기](../../../../docs/framework/data/wcf/create-a-data-service-using-rp-wcf-data-services.md)합니다.  
   

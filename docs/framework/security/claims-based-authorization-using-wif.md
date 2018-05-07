@@ -1,27 +1,17 @@
 ---
-title: "WIF를 사용하여 클레임 기반 권한 부여"
-ms.custom: 
+title: WIF를 사용하여 클레임 기반 권한 부여
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: e24000a3-8fd8-4c0e-bdf0-39882cc0f6d8
-caps.latest.revision: "6"
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: bc6a9d828f1ab666ddda687931785f3853b74374
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 1d2972ccef6829a2b7a052ba30258086443bd833
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="claims-based-authorization-using-wif"></a>WIF를 사용하여 클레임 기반 권한 부여
-신뢰 당사자 응용 프로그램에서 권한 부여에 따라 인증된 ID가 액세스할 수 있도록 허용되는 리소스 및 이러한 리소스에서 수행할 수 있도록 허용되는 작업이 결정됩니다. 권한 부여가 부적절하거나 취약한 상태인 경우 정보가 노출되거나 데이터가 변조될 수 있습니다. 이 항목에서는 WIF(Windows Identity Foundation) 및 STS(보안 토큰 서비스)를 사용하여 클레임 인식 ASP.NET 웹 응용 프로그램과 서비스에 대한 권한 부여를 구현하기 위해 사용할 수 있는 방법에 대해 간략하게 설명합니다.  
+신뢰 당사자 응용 프로그램에서 권한 부여에 따라 인증된 ID가 액세스할 수 있도록 허용되는 리소스 및 이러한 리소스에서 수행할 수 있도록 허용되는 작업이 결정됩니다. 권한 부여가 부적절하거나 취약한 상태인 경우 정보가 노출되거나 데이터가 변조될 수 있습니다. 이 항목에서는 ACS(Windows Azure Access Control Service)와 같은 STS(보안 토큰 서비스) 및 WIF(Windows Identity Foundation)를 사용하여 클레임 인식 ASP.NET 웹 응용 프로그램과 서비스에 대한 권한 부여를 구현하기 위해 사용할 수 있는 방법에 대해 간략하게 설명합니다.  
   
 ## <a name="overview"></a>개요  
  첫 번째 버전 이후로 .NET Framework에서는 권한 부여를 구현할 수 있는 유연한 메커니즘을 제공해왔습니다. 이 메커니즘은 **IPrincipal** 및 **IIdentity**와 같은 두 가지 간단한 인터페이스를 기반으로 합니다. **IIdentity**의 구체적인 구현은 인증된 사용자를 나타냅니다. 예를 들어 **WindowsIdentity** 구현은 Active Directory에 의해 인증된 사용자를 나타내고, **GenericIdentity**는 사용자 지정 인증 프로세스를 통해 ID가 확인된 사용자를 나타냅니다. **IPrincipal**의 구체적인 구현은 역할 저장소에 따라 역할을 사용하여 권한을 확인하는 데 유용합니다. 예를 들어 **WindowsPrincipal**은 Active Directory 그룹의 멤버에 대한 **WindowsIdentity**를 확인합니다. **IPrincipal** 인터페이스에서 **IsInRole** 메서드를 호출하면 이러한 확인이 수행됩니다. 역할을 기반으로 액세스 권한을 확인하는 것을 RBAC(역할 기반 Access Control)라고 합니다. 자세한 내용은 [역할 기반 액세스 제어](../../../docs/framework/security/claims-based-authorization-using-wif.md#BKMK_1)를 참조하세요.  클레임을 사용하여 친숙한 역할 기반 권한 부여 메커니즘을 지원하기 위해 역할에 대한 정보를 전달할 수 있습니다.  
@@ -35,7 +25,7 @@ ms.lasthandoff: 12/22/2017
 ### <a name="iprincipalisinrole-method"></a>IPrincipal.IsInRole 메서드  
  클레임 인식 응용 프로그램에서 RBAC 방식을 구현하려면 비-클레임 인식 응용 프로그램에서와 마찬가지로 **IPrinicpal** 인터페이스에서 **IsInRole()** 메서드를 사용합니다. 다음과 같은 여러 가지 방법으로 **IsInRole()** 메서드를 사용할 수 있습니다.  
   
--   **IPrincipal.IsInRole(“Administrator”)**의 명시적 호출 이 방법에서는 결과가 부울입니다. 이는 조건문에서 사용되며, 코드에서 임의의 위치에 사용할 수 있습니다.  
+-   **IPrincipal.IsInRole(“Administrator”)** 의 명시적 호출 이 방법에서는 결과가 부울입니다. 이는 조건문에서 사용되며, 코드에서 임의의 위치에 사용할 수 있습니다.  
   
 -   보안 요청 **PrincipalPermission.Demand()** 사용 이 방법에서는 요청이 충족되지 않는 경우 결과가 예외입니다. 이는 예외 처리 전략에 맞아야 합니다. 부울 반환과 비교했을 때 예외가 발생하면 성능적인 측면에서 비용이 훨씬 많이 듭니다. 이는 코드에서 임의의 위치에 사용할 수 있습니다.  
   
@@ -52,7 +42,7 @@ ms.lasthandoff: 12/22/2017
   
 -   **토큰 발급 중**. 사용자가 인증되면 Microsoft Azure ACS(Access Control Service)와 같은 페더레이션 공급자 또는 ID 공급자 STS에 의해 역할 클레임이 발급될 수 있습니다.  
   
--   **ClaimsAuthenticationManager를 사용하여 임의의 클레임을 클레임 역할 형식으로 변형** ClaimsAuthenticationManager는 WIF의 일부로 제공되는 구성 요소입니다. 이는 토큰을 검사하고 클레임을 추가, 변경 또는 제거하여 해당 토큰을 변형하면서 응용 프로그램을 시작할 때 요청을 가로챌 수 있도록 허용합니다. 클레임을 변환하기 위해 ClaimsAuthenticationManager를 사용하는 방법에 대한 자세한 내용은 [방법: WIF 및 ACS를 사용하여 클레임 인식 ASP.NET 응용 프로그램에서 RBAC(역할 기반 액세스 제어) 구현](http://go.microsoft.com/fwlink/?LinkID=247445)(http://go.microsoft.com/fwlink/?LinkID=247444)을 참조하세요.  
+-   **ClaimsAuthenticationManager를 사용하여 임의의 클레임을 클레임 역할 형식으로 변형** ClaimsAuthenticationManager는 WIF의 일부로 제공되는 구성 요소입니다. 이는 토큰을 검사하고 클레임을 추가, 변경 또는 제거하여 해당 토큰을 변형하면서 응용 프로그램을 시작할 때 요청을 가로챌 수 있도록 허용합니다. ClaimsAuthenticationManager를 사용 하 여 클레임을 변환 하는 방법에 대 한 자세한 내용은 참조 [How To: 구현 RBAC 역할 기반 액세스 제어 ()는 클레임 인식 ASP.NET 응용 프로그램 사용 하 여 WIF 및 ACS에서](http://go.microsoft.com/fwlink/?LinkID=247445) (http://go.microsoft.com/fwlink/?LinkID=247444)합니다.  
   
 -   **samlSecurityTokenRequirement 구성 섹션을 사용하여 임의의 클레임을 역할 형식으로 매핑** - 구성만 사용하여 클레임 변형을 완료하며 코딩이 필요하지 않은 선언적 방법입니다.  
   

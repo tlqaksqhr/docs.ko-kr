@@ -1,23 +1,12 @@
 ---
-title: "단일 단계 커밋 및 승격 가능한 단일 단계 알림을 사용한 최적화"
-ms.custom: 
+title: 단일 단계 커밋 및 승격 가능한 단일 단계 알림을 사용한 최적화
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 57beaf1a-fb4d-441a-ab1d-bc0c14ce7899
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 6f85dabc8a447db13173a672db37b327ba4a9fe6
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 093dfb793d5a8c8dc59eaabab09f2e5b6c81c352
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="optimization-using-single-phase-commit-and-promotable-single-phase-notification"></a>단일 단계 커밋 및 승격 가능한 단일 단계 알림을 사용한 최적화
 이 항목에서는 <xref:System.Transactions> 인프라가 제공하는 성능 최적화 메커니즘에 대해 설명합니다.  

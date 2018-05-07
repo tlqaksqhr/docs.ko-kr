@@ -1,24 +1,14 @@
 ---
-title: "&lt;TypeInstantiation&gt; 요소(.NET 네이티브)"
-ms.custom: 
+title: '&lt;TypeInstantiation&gt; 요소(.NET 네이티브)'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: a5eada64-075b-4162-9655-ded84e4681f2
-caps.latest.revision: "21"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: b5dc19038af220cca63417a331a37d4a7d3b9f96
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 30802eff0b960c2a19e5cebb4757bfeff809d322
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="lttypeinstantiationgt-element-net-native"></a>&lt;TypeInstantiation&gt; 요소(.NET 네이티브)
 생성된 제네릭 형식에 런타임 리플렉션 정책을 적용합니다.  
@@ -41,7 +31,7 @@ ms.lasthandoff: 12/22/2017
 ```  
   
 ## <a name="attributes-and-elements"></a>특성 및 요소  
- 다음 단원에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
+ 다음 섹션에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
   
 ### <a name="attributes"></a>특성  
   
@@ -107,7 +97,7 @@ ms.lasthandoff: 12/22/2017
   
  `<TypeInstantiation>` 요소는 [\<Assembly>](../../../docs/framework/net-native/assembly-element-net-native.md), [\<Namespace>](../../../docs/framework/net-native/namespace-element-net-native.md) 또는 [\<Type>](../../../docs/framework/net-native/type-element-net-native.md) 요소의 자식인 경우 부모 요소가 정의하는 정책 설정을 재정의합니다. [\<Type>](../../../docs/framework/net-native/type-element-net-native.md) 요소가 해당 제네릭 형식 정의를 정의하는 경우 `<TypeInstantiation>` 요소는 지정한 생성된 제네릭 형식의 인스턴스화에 대해서만 런타임 리플렉션 정책을 재정의합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 예제에서는 리플렉션을 사용하여 생성된 <xref:System.Collections.Generic.Dictionary%602> 개체에서 제네릭 형식 정의를 검색합니다. 또한 리플렉션을 사용하여 생성된 제네릭 형식 및 제네릭 형식 정의를 나타내는 <xref:System.Type> 개체에 대한 정보를 표시합니다. 예제의 `b` 변수는 [TextBlock](http://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.textblock.aspx) 컨트롤입니다.  
   
  [!code-csharp[ProjectN_Reflection#2](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn_reflection/cs/makegenerictype1.cs#2)]  

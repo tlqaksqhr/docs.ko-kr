@@ -1,24 +1,12 @@
 ---
-title: "WCF 및 .NET Framework 클라이언트 프로필"
-ms.custom: 
+title: WCF 및 .NET Framework 클라이언트 프로필
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: b9f836a7-68f4-4e7e-a3cc-a1bae5d775d6
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: e502642375c6e940b069c072cf1535f22b3d163f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: c59ad835cf21e352cda38948f9fb43b6121c21ba
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="wcf-and-net-framework-client-profile"></a>WCF 및 .NET Framework 클라이언트 프로필
 [!INCLUDE[arrowhead](../../../includes/arrowhead-md.md)]은 전체 프레임워크가 필요하지 않은 클라이언트를 위해 디자인된 전체 .Net Framework의 약식 버전입니다. 클라이언트 프레임워크에서는 일부 Windows Communication Foundation이 지원되지 않습니다.  

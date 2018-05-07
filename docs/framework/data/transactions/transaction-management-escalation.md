@@ -1,23 +1,12 @@
 ---
-title: "트랜잭션 관리 에스컬레이션"
-ms.custom: 
+title: 트랜잭션 관리 에스컬레이션
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 1e96331e-31b6-4272-bbbd-29ed1e110460
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 5d076b93774282fbfa52acfacb6a1c9f3231a972
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 2a5592cc9ebf0ddfc49f38da9404c81d11a29cf8
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="transaction-management-escalation"></a>트랜잭션 관리 에스컬레이션
 Windows는 트랜잭션 관리자를 구성하는 서비스 및 모듈 집합을 호스팅합니다. 트랜잭션 관리 에스컬레이션은 트랜잭션 관리자의 구성 요소 중 하나에서 다른 구성 요소로 트랜잭션을 마이그레이션하는 프로세스에 대해 설명합니다.  

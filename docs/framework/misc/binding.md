@@ -1,23 +1,13 @@
 ---
-title: "&lt;바인딩&gt;"
-ms.custom: 
+title: '&lt;바인딩&gt;'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: 666183d6-4d1f-45c7-ac64-bdf93ee8f36f
-caps.latest.revision: "13"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 7b9e0c7e077a9f47de6df31b00f4df320b845150
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: d72b3a34e0696df944b2338c89f167c8bfa06400
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ltbindinggt"></a>&lt;바인딩&gt;
 `binding` 요소를 사용하여 WCF(Windows Communication Foundation)에서 제공하는 미리 정의된 다양한 바인딩 형식을 구성할 수 있습니다.  
@@ -52,4 +42,4 @@ ms.lasthandoff: 12/22/2017
  <xref:System.ServiceModel.Channels.BindingElement>  
  [바인딩](../../../docs/framework/wcf/bindings.md)  
  [사용자 지정 바인딩](../../../docs/framework/wcf/extending/custom-bindings.md)  
- [\<customBinding >](../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)
+ [\<customBinding>](../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)

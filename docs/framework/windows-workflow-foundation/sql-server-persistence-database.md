@@ -1,23 +1,12 @@
 ---
-title: "SQL Server 지속성 데이터베이스"
-ms.custom: 
+title: SQL Server 지속성 데이터베이스
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 4e594eec-2a31-4d49-ad31-aca2ecbb1f69
-caps.latest.revision: "4"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: b66783ae09e15d324cc1b6ff2aa8db90e052dddf
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 407b3657a6fd6dbdc876425c813a42ecf73c769e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="sql-server-persistence-database"></a>SQL Server 지속성 데이터베이스
 이 단원에서는 SQL 워크플로 인스턴스 저장소에서 지원하는 공용 데이터베이스 뷰에 대한 세부 정보를 제공하고, 기본 인스턴스 데이터 속성을 deserialize하는 방법과 비지속형 인스턴스를 쿼리하는 방법을 보여 줍니다.  

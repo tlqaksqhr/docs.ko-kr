@@ -1,23 +1,16 @@
 ---
-title: "컴파일러 경고 CS3024"
+title: 컴파일러 경고 CS3024
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 f1_keywords:
 - CS3024
 helpviewer_keywords:
 - CS3024
 ms.assetid: fef9db31-9a7f-42d5-ad37-3e7faf661f95
-caps.latest.revision: 
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: f175d102fa8a05b7f8c0a787564b933ff81cdf6c
-ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
+ms.openlocfilehash: c4c2f915d6172e3c30fc32c5c57fe9921c3f915d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-warning-cs3024"></a>컴파일러 경고 CS3024
 'type' 제약 조건 형식이 CLS 규격이 아닙니다.  
@@ -28,7 +21,7 @@ ms.lasthandoff: 03/15/2018
   
 1.  형식 제약 조건에 대해 CLS 규격 형식을 사용합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 예제에서는 여러 위치에서 CS3024를 생성합니다.  
   
 ```csharp  

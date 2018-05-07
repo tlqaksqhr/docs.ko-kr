@@ -1,26 +1,14 @@
 ---
-title: "WIF 클레임 프로그래밍 모델"
-ms.custom: 
+title: WIF 클레임 프로그래밍 모델
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 149cb875-9b1c-4695-b88a-fbf1725a02f9
-caps.latest.revision: 
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload:
-- dotnet
-ms.openlocfilehash: 1bd84e6a1e6fb0d4808dca42af2e2916be1133a3
-ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
+ms.openlocfilehash: 71327fb5a86c30d15ff060eff5cce170695e86a9
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="wif-claims-programming-model"></a>WIF 클레임 프로그래밍 모델
 ASP.NET 및 WCF(Windows Communication Foundation) 개발자는 일반적으로 사용자의 ID 정보 작업에 IIdentity 및 IPrincipal 인터페이스를 사용합니다. .NET 4.5에서는 다음 다이어그램과 같이 이제 모든 보안 주체에 대한 클레임이 항상 표시되도록 WIF(Windows Identity Foundation)가 통합되었습니다.  
@@ -35,7 +23,7 @@ ASP.NET 및 WCF(Windows Communication Foundation) 개발자는 일반적으로 �
   
 -   <xref:System.Security.Claims.Claim.Value%2A>에는 클레임 값이 포함되며 문자열로 표현됩니다. 전자 메일 주소도 나타낼 수는 예를 들어 "someone@contoso.com"입니다.  
   
--   <xref:System.Security.Claims.Claim.ValueType%2A>은 클레임 값 형식을 나타내며 일반적으로 URI입니다. 예를 들어 문자열 형식은 `http://www.w3.org/2001/XMLSchema#string`으로 표현됩니다. 값 형식은 XML 스키마에 따라 QName이어야 합니다. WIF에서 유효한 QName 값을 출력할 수 있게 하려면 값이 `namespace#format` 형식이어야 합니다. 네임스페이스가 잘 정의된 네임스페이스가 아닐 경우 해당 네임스페이스에 대해 게시된 XSD 파일이 없으므로 생성된 XML의 스키마 유효성이 검사되지 않을 수 있습니다. 기본값 형식은 `http://www.w3.org/2001/XMLSchema#string`입니다. 안전하게 사용할 수 있는 잘 알려진 값 형식은 [http://www.w3.org/2001/XMLSchema](http://go.microsoft.com/fwlink/?LinkId=209155)를 참조하세요.  
+-   <xref:System.Security.Claims.Claim.ValueType%2A>은 클레임 값 형식을 나타내며 일반적으로 URI입니다. 예를 들어 문자열 형식은 `http://www.w3.org/2001/XMLSchema#string`으로 표현됩니다. 값 형식은 XML 스키마에 따라 QName이어야 합니다. WIF에서 유효한 QName 값을 출력할 수 있게 하려면 값이 `namespace#format` 형식이어야 합니다. 네임스페이스가 잘 정의된 네임스페이스가 아닐 경우 해당 네임스페이스에 대해 게시된 XSD 파일이 없으므로 생성된 XML의 스키마 유효성이 검사되지 않을 수 있습니다. 기본값 형식은 `http://www.w3.org/2001/XMLSchema#string`입니다. 참조 하십시오 [ http://www.w3.org/2001/XMLSchema ](http://go.microsoft.com/fwlink/?LinkId=209155) 안전 하 게 사용할 수 있는 잘 알려진 값 형식에 대 한 합니다.  
   
 -   <xref:System.Security.Claims.Claim.Issuer%2A>는 클레임을 발급한 STS(보안 토큰 서비스)의 식별자입니다. `https://sts1.contoso.com/sts` 같은 STS를 나타내는 이름 또는 STS의 URL로 나타낼 수 있습니다.  
   

@@ -1,13 +1,6 @@
 ---
-title: "방법: ToolStripMenuItems 이동"
-ms.custom: 
+title: '방법: ToolStripMenuItems 이동'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - ToolStripMenuItems [Windows Forms], moving
 - menus [Windows Forms], arranging items
@@ -18,16 +11,11 @@ helpviewer_keywords:
 - MenuStrip control [Windows Forms], arranging items
 - ToolStripMenuItems [Windows Forms], cutting and pasting
 ms.assetid: cab9e03e-4edd-4c25-b3e3-bd1edc602bd9
-caps.latest.revision: "12"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 6ffef860118ba20508bba037910d85866055c898
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 5cfaf87a59d27678cfb786633ed4c9a9f66bac76
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-move-toolstripmenuitems"></a>방법: ToolStripMenuItems 이동
 디자인 타임에 이동할 수 있습니다 최상위 메뉴 전체와 해당 메뉴 항목을 다른 위치로 <xref:System.Windows.Forms.MenuStrip>합니다. 최상위 메뉴 간에 개별 메뉴 항목을 이동 하거나 메뉴 내에서 메뉴 항목의 위치를 변경할 수도 있습니다.  

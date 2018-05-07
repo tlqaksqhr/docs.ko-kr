@@ -1,10 +1,6 @@
 ---
 title: '방법: HRESULT 및 예외 매핑'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.technology:
-- dotnet-clr
-ms.topic: article
 dev_langs:
 - cpp
 helpviewer_keywords:
@@ -15,17 +11,13 @@ helpviewer_keywords:
 - COM interop, HRESULTs
 - COM interop, exceptions
 ms.assetid: 610b364b-2761-429d-9c4a-afbc3e66f1b9
-caps.latest.revision: 8
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: a79cae30237fb631728bf036d9bf8d7679179d3f
-ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
+ms.openlocfilehash: 0d9825deae22e856cf520e6173d53278539c576c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-map-hresults-and-exceptions"></a>방법: HRESULT 및 예외 매핑
 COM 메서드는 HRESULT를 반환하여 오류를 보고하고, .NET 메서드는 예외를 throw하여 오류를 보고합니다. 런타임은 두 항목 간의 전환을 처리합니다. .NET Framework의 각 예외 클래스는 HRESULT에 매핑됩니다.  

@@ -1,24 +1,12 @@
 ---
-title: "SQL Server Express 보안"
-ms.custom: 
+title: SQL Server Express 보안
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: cf9cf6d9-4b05-43e9-ac7b-6cefbfcd6d4e
-caps.latest.revision: "6"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 6593e075d1a9d672f414cfa0cd8652f760b084e1
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 7bc0fdf218f8fca1f904505c552df6986c47e4de
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="sql-server-express-security"></a>SQL Server Express 보안
 Microsoft SQL Server Express Edition(SQL Server Express)은 Microsoft SQL Server를 기반으로 하며 대부분의 데이터베이스 엔진 기능을 지원합니다. 이 제품은 중요하지 않은 기능 및 네트워크 연결이 기본적으로 해제되어 있기 때문에 악의적인 사용자의 공격에 노출되는 영역이 적습니다.  

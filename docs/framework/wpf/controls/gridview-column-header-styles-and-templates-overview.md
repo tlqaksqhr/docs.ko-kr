@@ -1,13 +1,6 @@
 ---
-title: "GridView 열 머리글 스타일 및 템플릿 개요"
-ms.custom: 
+title: GridView 열 머리글 스타일 및 템플릿 개요
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - column headers [WPF], customizing
 - ListView controls [WPF], GridView column header styles
@@ -15,16 +8,11 @@ helpviewer_keywords:
 - headers [WPF], customizing
 - GridView view mode [WPF], customizing column headers
 ms.assetid: 74835674-a39e-4ab5-9418-ad7f6ab7b956
-caps.latest.revision: "12"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 996d6d5f531a866d4fc80acc3848cdf264901032
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 28b4a64a6c79b226b1ff4b3bfcbf9a55b6d8df78
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="gridview-column-header-styles-and-templates-overview"></a>GridView 열 머리글 스타일 및 템플릿 개요
 이 개요에서는의 열 머리글에 사용자 지정 하는 속성에 대 한 우선 순위는 <xref:System.Windows.Controls.GridView> 의 보기 모드는 <xref:System.Windows.Controls.ListView> 제어 합니다.  

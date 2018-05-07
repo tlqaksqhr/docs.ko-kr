@@ -1,26 +1,15 @@
 ---
-title: "방법: 여러 버전의 워크플로를 함께 호스팅"
-ms.custom: 
+title: '방법: 여러 버전의 워크플로를 함께 호스팅'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 09c575df-e0a3-4f3b-9e01-a7ac59d65287
-caps.latest.revision: "10"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 96ae4d3e02b923187b3e0f88a7b18e84094fa584
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: d8fef8523f827ab91729054ee87544879b1f1aa3
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-host-multiple-versions-of-a-workflow-side-by-side"></a>방법: 여러 버전의 워크플로를 함께 호스팅
 `WorkflowIdentity`는 워크플로 응용 프로그램 개발자에게 이름 및 버전을 워크플로 정의에 연결하는 방법을 제공하며, 이러한 정보는 지속형 워크플로 인스턴스와 연결됩니다. 이 ID 정보는 워크플로 응용 프로그램 개발자가 여러 버전의 워크플로 정의를 side-by-side로 실행하는 경우와 같은 시나리오를 가능하도록 하는 데 사용될 수 있으며 동적 업데이트와 같은 다른 기능의 토대를 제공합니다. 자습서의 이 단계에서는 `WorkflowIdentity`를 사용하여 여러 버전의 워크플로를 동시에 호스트하는 방법을 보여 줍니다.  
@@ -51,7 +40,7 @@ ms.lasthandoff: 12/22/2017
 > [!NOTE]
 >  초보자를 위한 자습서의 각 단계는 이전 단계를 바탕으로 합니다. 이전 단계를 완료 하지 않은 경우에에서 자습서의 전체 버전을 다운로드할 수 있습니다 [Windows Workflow Foundation (WF45)-초보자를 위한 자습서](http://go.microsoft.com/fwlink/?LinkID=248976)합니다.  
   
-###  <a name="BKMK_BackupCopy"></a>NumberGuessWorkflowActivities 프로젝트의 복사본을 만들려면  
+###  <a name="BKMK_BackupCopy"></a> NumberGuessWorkflowActivities 프로젝트의 복사본을 만들려면  
   
 1.  열기는 **WF45GettingStartedTutorial** 에서 솔루션 [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)] 열려 있지 않으면입니다.  
   
@@ -74,10 +63,10 @@ ms.lasthandoff: 12/22/2017
   
 9. 다시 열어는 **WF45GettingStartedTutorial** 에서 솔루션 [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)]합니다.  
   
-###  <a name="BKMK_UpdateWorkflows"></a>워크플로 업데이트 하려면  
+###  <a name="BKMK_UpdateWorkflows"></a> 워크플로 업데이트 하려면  
  이 단원에서는 워크플로 정의를 업데이트합니다. 즉, 사용자의 추측에 대한 피드백을 제공하는 두 개의 `WriteLine` 활동을 업데이트하고, 숫자가 추측된 후 게임에 대한 추가 정보를 제공하는 새로운 `WriteLine` 활동을 추가합니다.  
   
-####  <a name="BKMK_UpdateStateMachine"></a>StateMachine 워크플로 업데이트 하려면  
+####  <a name="BKMK_UpdateStateMachine"></a> StateMachine 워크플로 업데이트 하려면  
   
 1.  **솔루션 탐색기**아래는 **NumberGuessWorkflowActivities** 두 번 클릭 **StateMachineNumberGuessWorkflow.xaml**합니다.  
   
@@ -119,7 +108,7 @@ ms.lasthandoff: 12/22/2017
     Guess + " is correct. You guessed it in " + Turns + " turns."  
     ```  
   
-####  <a name="BKMK_UpdateFlowchart"></a>순서도 워크플로 업데이트 하려면  
+####  <a name="BKMK_UpdateFlowchart"></a> 순서도 워크플로 업데이트 하려면  
   
 1.  **솔루션 탐색기**아래는 **NumberGuessWorkflowActivities** 두 번 클릭 **FlowchartNumberGuessWorkflow.xaml**합니다.  
   
@@ -155,7 +144,7 @@ ms.lasthandoff: 12/22/2017
     Guess + " is correct. You guessed it in " + Turns + " turns."  
     ```  
   
-####  <a name="BKMK_UpdateSequential"></a>순차 워크플로 업데이트 하려면  
+####  <a name="BKMK_UpdateSequential"></a> 순차 워크플로 업데이트 하려면  
   
 1.  **솔루션 탐색기**아래는 **NumberGuessWorkflowActivities** 두 번 클릭 **SequentialNumberGuessWorkflow.xaml**합니다.  
   
@@ -191,7 +180,7 @@ ms.lasthandoff: 12/22/2017
     Guess + " is correct. You guessed it in " + Turns + " turns."  
     ```  
   
-###  <a name="BKMK_UpdateWorkflowVersionMap"></a>이전 워크플로 버전을 포함 하도록 WorkflowVersionMap을 업데이트.  
+###  <a name="BKMK_UpdateWorkflowVersionMap"></a> 이전 워크플로 버전을 포함 하도록 WorkflowVersionMap을 업데이트.  
   
 1.  두 번 클릭 **WorkflowVersionMap.cs** (또는 **WorkflowVersionMap.vb**)에서 고 **NumberGuessWorkflowHost** 프로젝트를 엽니다.  
   
@@ -559,7 +548,7 @@ ms.lasthandoff: 12/22/2017
     }  
     ```  
   
-###  <a name="BKMK_BuildAndRun"></a>작성 하 고 응용 프로그램 실행  
+###  <a name="BKMK_BuildAndRun"></a> 작성 하 고 응용 프로그램 실행  
   
 1.  Ctrl+Shift+B를 눌러 응용 프로그램을 빌드하고 Ctrl+F5를 눌러 시작합니다.  
   

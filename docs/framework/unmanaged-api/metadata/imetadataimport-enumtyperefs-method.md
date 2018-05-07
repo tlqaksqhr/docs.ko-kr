@@ -1,14 +1,6 @@
 ---
-title: "IMetaDataImport::EnumTypeRefs 메서드"
-ms.custom: 
+title: IMetaDataImport::EnumTypeRefs 메서드
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - IMetaDataImport.EnumTypeRefs
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: b4896b8f-8e97-469c-8089-e72a025661b5
 topic_type:
 - apiref
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 3099f129abd3477aeb08526b9f0dcd5b701d4dc8
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: b8a4fe2a65244156abe1bb0da4266f949ddd3df6
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="imetadataimportenumtyperefs-method"></a>IMetaDataImport::EnumTypeRefs 메서드
 현재 메타데이터 범위에서 정의된 TypeRef 토큰을 열거합니다.  
@@ -66,7 +54,7 @@ HRESULT EnumTypeRefs (
   
 |HRESULT|설명|  
 |-------------|-----------------|  
-|`S_OK`|`EnumTypeRefs`성공적으로 반환 합니다.|  
+|`S_OK`|`EnumTypeRefs` 성공적으로 반환 합니다.|  
 |`S_FALSE`|열거할 토큰이 있습니다. 이 경우 `pcTypeRefs` 은 0입니다.|  
   
 ## <a name="remarks"></a>설명  
@@ -79,7 +67,7 @@ HRESULT EnumTypeRefs (
   
  **라이브러리:** MsCorEE.dll에 리소스로 포함  
   
- **.NET framework 버전:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>참고 항목  
  [IMetaDataImport 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)  

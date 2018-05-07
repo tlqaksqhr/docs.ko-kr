@@ -1,14 +1,6 @@
 ---
-title: "COR_PRF_GC_ROOT_FLAGS 열거형"
-ms.custom: 
+title: COR_PRF_GC_ROOT_FLAGS 열거형
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - COR_PRF_GC_ROOT_FLAGS
 api_location:
@@ -22,17 +14,13 @@ helpviewer_keywords:
 ms.assetid: 4611ee6f-0f05-4d84-91e1-e83d5e7dd7e4
 topic_type:
 - apiref
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 5e00f695edb94acbd54d6bd009ccd629aeec1b14
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 2d5dcb089074b52fc87a0bb83c7e062e7ef07b46
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="corprfgcrootflags-enumeration"></a>COR_PRF_GC_ROOT_FLAGS 열거형
 가비지 수집 루트의 속성을 나타냅니다.  
@@ -58,7 +46,7 @@ typedef enum {
 |`COR_PRF_GC_ROOT_REFCOUNTED`|루트 개체의 참조 횟수 특정 값이 있으면 가비지 수집을 방지 합니다.|  
   
 ## <a name="remarks"></a>설명  
- `COR_PRF_GC_ROOT_FLAGS`특수 루트에 대 한 추가 정보를 제공 하는 비트 마스크가입니다. 그러나 일부 루트는 특별 합니다. 예를 들어 일부 루트는 약한 참조를 내부 포인터, 고정 또는 참조 횟수가 계산 되지 않습니다. 이러한 루트 전달할 플래그가 있습니다. 따라서 등이 열거형을 사용 하는 메서드는 [icorprofilercallback2:: Rootreferences2](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-rootreferences2-method.md) 메서드를 모든 플래그를 나타내는 플래그 비트 마스크에 대 한 송신 0은 해제 되어 있습니다.  
+ `COR_PRF_GC_ROOT_FLAGS` 특수 루트에 대 한 추가 정보를 제공 하는 비트 마스크가입니다. 그러나 일부 루트는 특별 합니다. 예를 들어 일부 루트는 약한 참조를 내부 포인터, 고정 또는 참조 횟수가 계산 되지 않습니다. 이러한 루트 전달할 플래그가 있습니다. 따라서 등이 열거형을 사용 하는 메서드는 [icorprofilercallback2:: Rootreferences2](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-rootreferences2-method.md) 메서드를 모든 플래그를 나타내는 플래그 비트 마스크에 대 한 송신 0은 해제 되어 있습니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **플랫폼:** 참조 [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)합니다.  
@@ -67,7 +55,7 @@ typedef enum {
   
  **라이브러리:** CorGuids.lib  
   
- **.NET framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>참고 항목  
  [프로파일링 열거형](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)

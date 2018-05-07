@@ -1,24 +1,12 @@
 ---
-title: "피어 메시"
-ms.custom: 
+title: 피어 메시
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: d93e312e-ac04-40f8-baea-5da1cacb546e
-caps.latest.revision: "9"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 0f70c1dfba6ceb53cd674726702c471dbe508d46
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: afd9eae36f28c28b33b74c4456feb4ba8c91314d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="peer-meshes"></a>피어 메시
 A *메시* 은 서로 통신할 수 있는 고유한 메시 ID로 식별 되 고 피어 노드의 명명된 된 컬렉션 (상호 연결 된 그래프) 각 노드는 다른 여러 노드에 연결됩니다. 잘 연결된 메시에서는 모든 두 노드 간에 경로가 있으며 메시의 가장 바깥쪽 가장자리에 있는 노드 사이에 홉 수가 상대적으로 적습니다. 또한 일부 노드 또는 연결이 끊어지는 경우에도 메시가 연결된 상태로 유지됩니다. 메시의 활성 노드는 다른 피어가 찾을 수 있도록 해당 메시 ID를 사용하여 끝점 정보를 게시합니다.  

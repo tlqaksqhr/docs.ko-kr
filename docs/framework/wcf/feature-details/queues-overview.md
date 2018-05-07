@@ -1,31 +1,17 @@
 ---
-title: "큐 개요"
-ms.custom: 
+title: 큐 개요
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - queues [WCF], MSMQ integration
 ms.assetid: b8757992-ffce-40ad-9e9b-3243f6d0fce1
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: eb5d0f51fbbb6c8bad9bfbbfd9977368fdbd0666
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 85c8cb1fbbda9be14754174c7cb7c76513bd94c7
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="queues-overview"></a>큐 개요
-이 단원에서는 큐를 사용하는 통신의 일반 개념과 핵심 개념을 소개합니다. 뒤의 단원에서는 여기서 설명한 큐의 개념이 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]에서 명시되는 방법에 대해 자세히 설명합니다.  
+이 단원에서는 큐를 사용하는 통신의 일반 개념과 핵심 개념을 소개합니다. 이후 단원에서는 큐 개념을 여기에 설명 된 Windows Communication Foundation (WCF)를 명시 되는 방법에 대 한 세부 정보로 이동 합니다.  
   
 ## <a name="basic-queuing-concepts"></a>기본 큐 개념  
  분산 응용 프로그램을 디자인하는 경우 서비스와 클라이언트 사이의 통신에 적합한 전송을 선택하는 것이 중요합니다. 사용되는 전송의 종류는 몇 가지 요소에 따라 달라집니다. 한 가지 중요한 요소(서비스와 클라이언트 및 전송 사이의 격리)에 따라 대기 중인 전송이나 TCP 또는 HTTP와 같은 직접 전송 사용 여부가 결정됩니다. TCP 및 HTTP와 같은 직접 전송의 특성 상 서비스나 클라이언트의 기능이 중지되거나 네트워크 장애가 발생하면 통신이 완전히 중지됩니다. 응용 프로그램이 작동하려면 서비스, 클라이언트 및 네트워크가 동시에 실행되고 있어야 합니다. 대기 중인 전송에서는 격리 기능을 제공하기 때문에 서비스나 클라이언트가 실패하거나 그 사이의 통신 연결이 실패해도 클라이언트와 서비스가 계속 작동할 수 있습니다.  

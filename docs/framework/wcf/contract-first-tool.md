@@ -1,24 +1,12 @@
 ---
-title: "계약 중심 도구"
-ms.custom: 
+title: 계약 중심 도구
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 0a880690-f460-4475-a5f4-9f91ce08fcc6
-caps.latest.revision: "8"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 5079a4b45c7adf0cfd4d9ae1069379184422dc98
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: b8d38cc31eacf1d8eb29aaaf7d6ef29056ff9b79
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="contract-first-tool"></a>계약 중심 도구
 서비스 계약을 기존 서비스에서 만들어야 할 경우가 있습니다. [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]에서 계약 중심 도구를 사용하여 데이터 계약 클래스를 기존 서비스에서 자동으로 만들 수 있습니다. 계약 중심 도구를 사용하려면 XSD(XML 스키마 정의) 파일을 로컬에서 다운로드해야 합니다. 이 도구는 HTTP를 통해 원격 데이터 계약을 가져올 수 없습니다.  
@@ -72,11 +60,11 @@ ms.lasthandoff: 12/22/2017
 ## <a name="configuring-contract-first-options"></a>도구 중심 옵션 구성  
  도구 중심 옵션은 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 프로젝트의 속성 메뉴에서 구성할 수 있습니다. 계약 중심 개발을 사용 하려면 선택은 **XSD를 형식 정의 언어로** 프로젝트 속성 창의 WCF 페이지에서 확인란 합니다.  
   
- ![Contract& # 45를 보여 주는 WCF 프로젝트 옵션; 첫 번째](../../../docs/framework/wcf/media/contractfirstoptions.png "ContractFirstOptions")  
+ ![WCF 프로젝트 옵션 표시 계약&#45;첫 번째](../../../docs/framework/wcf/media/contractfirstoptions.png "ContractFirstOptions")  
   
  고급 속성을 구성하려면 고급 단추를 클릭합니다.  
   
- ![고급 contract&#45; 첫 번째 속성](../../../docs/framework/wcf/media/contractfirstadvanced.png "ContractFirstAdvanced")  
+ ![고급 계약&#45;첫 번째 속성](../../../docs/framework/wcf/media/contractfirstadvanced.png "ContractFirstAdvanced")  
   
  다음 고급 설정은 계약의 코드 생성에 대해 구성할 수 있습니다. 설정은 프로젝트의 파일 모두에 대해서만 구성할 수 있으며 이때 설정은 개별 파일에 대해 구성할 수 없습니다.  
   

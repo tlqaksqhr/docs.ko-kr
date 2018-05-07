@@ -1,28 +1,19 @@
 ---
-title: "UI 자동화 SelectionItem 컨트롤 패턴 구현"
-ms.custom: 
+title: UI 자동화 SelectionItem 컨트롤 패턴 구현
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-bcl
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - Selection Item control pattern
 - UI Automation, Selection Item control pattern
 - control patterns, Selection Item
 ms.assetid: 76b0949a-5b23-4cfc-84cc-154f713e2e12
-caps.latest.revision: "22"
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: 4ec9ee61973adacfc44c5fa7d8f1e6812e9950fd
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: abf1c1851e10036ecf46b04662d41a4d9f2667e1
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="implementing-the-ui-automation-selectionitem-control-pattern"></a>UI 자동화 SelectionItem 컨트롤 패턴 구현
 > [!NOTE]
@@ -57,7 +48,7 @@ ms.lasthandoff: 01/19/2018
   
 |예외 형식|조건|  
 |--------------------|---------------|  
-|<xref:System.InvalidOperationException>|다음 중 하나가 시도되는 경우:<br /><br /> -   <xref:System.Windows.Automation.Provider.ISelectionItemProvider.RemoveFromSelection%2A>단일 선택 컨테이너에 호출 되 여기서 <xref:System.Windows.Automation.SelectionPattern.IsSelectionRequiredProperty>  =  `true` 고 요소가 이미 선택 합니다.<br />-   <xref:System.Windows.Automation.Provider.ISelectionItemProvider.RemoveFromSelection%2A> 이 <xref:System.Windows.Automation.SelectionPattern.IsSelectionRequiredProperty> = `true` 이고 요소가 하나만 선택된 다중 선택 컨테이너에 호출되는 경우.<br />-   <xref:System.Windows.Automation.Provider.ISelectionItemProvider.AddToSelection%2A> 이 <xref:System.Windows.Automation.SelectionPattern.CanSelectMultipleProperty> = `false` 이고 다른 요소가 이미 선택된 단일 선택 컨테이너에 호출되는 경우.|  
+|<xref:System.InvalidOperationException>|다음 중 하나가 시도되는 경우:<br /><br /> -   <xref:System.Windows.Automation.Provider.ISelectionItemProvider.RemoveFromSelection%2A> 단일 선택 컨테이너에 호출 되 여기서 <xref:System.Windows.Automation.SelectionPattern.IsSelectionRequiredProperty>  =  `true` 고 요소가 이미 선택 합니다.<br />-   <xref:System.Windows.Automation.Provider.ISelectionItemProvider.RemoveFromSelection%2A> 이 <xref:System.Windows.Automation.SelectionPattern.IsSelectionRequiredProperty> = `true` 이고 요소가 하나만 선택된 다중 선택 컨테이너에 호출되는 경우.<br />-   <xref:System.Windows.Automation.Provider.ISelectionItemProvider.AddToSelection%2A> 이 <xref:System.Windows.Automation.SelectionPattern.CanSelectMultipleProperty> = `false` 이고 다른 요소가 이미 선택된 단일 선택 컨테이너에 호출되는 경우.|  
   
 ## <a name="see-also"></a>참고 항목  
  [UI 자동화 컨트롤 패턴 개요](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)  

@@ -1,27 +1,15 @@
 ---
-title: "컨텍스트 교환 프로토콜"
-ms.custom: 
+title: 컨텍스트 교환 프로토콜
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 3dfd38e0-ae52-491c-94f4-7a862b9843d4
-caps.latest.revision: "6"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 8f19b228eadcf8dabfaba2fc31f4f49f1b4d149b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: a682b94b1ab659515e618e79230d94f57f140717
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="context-exchange-protocol"></a>컨텍스트 교환 프로토콜
-이 단원에서는 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)][!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)] 릴리스에서 도입된 컨텍스트 교환 프로토콜에 대해 설명합니다. 클라이언트 채널에서는 이 프로토콜을 사용하여 서비스에서 제공되는 컨텍스트를 수락하고, 동일한 클라이언트 채널 인스턴스를 통해 보내는 해당 서비스에 대한 모든 후속 요청에 이 컨텍스트를 적용합니다. 컨텍스트 교환 프로토콜의 구현에서는 HTTP 쿠키 또는 SOAP 헤더 메커니즘 중 하나를 사용하여 서버와 클라이언트 간에 컨텍스트를 전파할 수 있습니다.  
+이 섹션에서는.NET Framework 버전 3.5 Windows Communication Foundation (WCF) 릴리스에서 새로 도입 된 컨텍스트 교환 프로토콜에 설명 합니다. 클라이언트 채널에서는 이 프로토콜을 사용하여 서비스에서 제공되는 컨텍스트를 수락하고, 동일한 클라이언트 채널 인스턴스를 통해 보내는 해당 서비스에 대한 모든 후속 요청에 이 컨텍스트를 적용합니다. 컨텍스트 교환 프로토콜의 구현에서는 HTTP 쿠키 또는 SOAP 헤더 메커니즘 중 하나를 사용하여 서버와 클라이언트 간에 컨텍스트를 전파할 수 있습니다.  
   
  컨텍스트 교환 프로토콜은 사용자 지정 채널 계층에서 구현됩니다. 채널은 <xref:System.ServiceModel.Channels.ContextMessageProperty> 속성을 사용하여 응용 프로그램 계층 간에 컨텍스트를 전달합니다. 끝점 간 전송을 위해 컨텍스트 값은 채널 계층에서 SOAP 헤더로 serialize되거나 HTTP 요청 및 응답을 나타내는 메시지 속성 간에 변환됩니다. 후자의 경우, 기존 채널 계층 중 하나가 HTTP 요청 및 응답 메시지 속성을 HTTP 쿠키로 변환하거나 HTTP 쿠키를 HTTP 요청 및 응답 메시지 속성으로 변환합니다. 컨텍스트 교환에 사용하는 메커니즘은 <xref:System.ServiceModel.Channels.ContextExchangeMechanism>에서 <xref:System.ServiceModel.Channels.ContextBindingElement> 속성을 사용하여 선택합니다. 유효한 값은 `HttpCookie` 또는 `SoapHeader`입니다.  
   

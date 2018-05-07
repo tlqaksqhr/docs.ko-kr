@@ -1,30 +1,18 @@
 ---
-title: "ADO.NET 및 LINQ to SQL"
-ms.custom: 
+title: ADO.NET 및 LINQ to SQL
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 49ac6da0-f2e1-46fa-963e-1b6dcb63fef7
-caps.latest.revision: "3"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: c95a84bafcb32861e299135feb0b89b931d11165
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: b2be963862b6bd7a0cd5643245606763907a5b72
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="adonet-and-linq-to-sql"></a>ADO.NET 및 LINQ to SQL
-[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]일부는 [!INCLUDE[vstecado](../../../../../../includes/vstecado-md.md)] 기술 제품군의 합니다. [!INCLUDE[vstecado](../../../../../../includes/vstecado-md.md)] 공급자 모델에 의해 제공된 서비스에 기반을 두기 때문에 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 코드를 기존 [!INCLUDE[vstecado](../../../../../../includes/vstecado-md.md)] 응용 프로그램과 조합하고 현재 [!INCLUDE[vstecado](../../../../../../includes/vstecado-md.md)] 솔루션을 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]로 마이그레이션할 수 있습니다. 다음 그림에서는 이 관계를 간략하게 보여 줍니다.  
+[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 일부는 [!INCLUDE[vstecado](../../../../../../includes/vstecado-md.md)] 기술 제품군의 합니다. [!INCLUDE[vstecado](../../../../../../includes/vstecado-md.md)] 공급자 모델에 의해 제공된 서비스에 기반을 두기 때문에 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 코드를 기존 [!INCLUDE[vstecado](../../../../../../includes/vstecado-md.md)] 응용 프로그램과 조합하고 현재 [!INCLUDE[vstecado](../../../../../../includes/vstecado-md.md)] 솔루션을 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]로 마이그레이션할 수 있습니다. 다음 그림에서는 이 관계를 간략하게 보여 줍니다.  
   
  ![LINQ to SQL 및 ADO.NET](../../../../../../docs/framework/data/adonet/sql/linq/media/dlinq-3.png "DLinq_3")  
   

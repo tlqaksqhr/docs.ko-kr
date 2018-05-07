@@ -1,24 +1,14 @@
 ---
-title: "방법: WIF 추적 사용"
-ms.custom: 
+title: '방법: WIF 추적 사용'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 271b6889-3454-46ff-96ab-9feb15e742ee
-caps.latest.revision: "3"
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: c9c3bc67d7ce59d259fec06377c5de1768a130ee
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 459d74f3faf9fab4cba047a87ccff77d193e9026
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-enable-wif-tracing"></a>방법: WIF 추적 사용
 ## <a name="applies-to"></a>적용 대상  
@@ -110,4 +100,4 @@ ms.lasthandoff: 12/22/2017
   
 2.  브라우저 창을 닫고 **C:\logs** 폴더로 이동합니다. 텍스트 편집기를 사용하여 **C:\logs\WIF.xml** 파일을 엽니다.  
   
-3.  **WIF.xml** 파일을 검사하고 **\<E2ETraceEvent>**로 시작하는 항목이 포함되어 있는지 확인합니다. 이러한 추적에는 **\<TraceRecord>** 요소와 추적된 작업에 대한 설명이 포함됩니다(예: **SecurityToken 유효성 검사**).
+3.  **WIF.xml** 파일을 검사하고 **\<E2ETraceEvent>** 로 시작하는 항목이 포함되어 있는지 확인합니다. 이러한 추적에는 **\<TraceRecord>** 요소와 추적된 작업에 대한 설명이 포함됩니다(예: **SecurityToken 유효성 검사**).

@@ -1,14 +1,6 @@
 ---
-title: "IMetaDataImport::EnumSignatures 메서드"
-ms.custom: 
+title: IMetaDataImport::EnumSignatures 메서드
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - IMetaDataImport.EnumSignatures
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: d0d65060-6f90-42a2-95cf-6ffb04352996
 topic_type:
 - apiref
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 88d47e2512103947f007c81450157a0b3e334a33
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: d36270047c8af0580a1cc3b44aa303e5907f33fc
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="imetadataimportenumsignatures-method"></a>IMetaDataImport::EnumSignatures 메서드
 현재 범위의 독립 실행형 서명을 나타내는 Signature 토큰을 열거합니다.  
@@ -66,7 +54,7 @@ HRESULT EnumSignatures (
   
 |HRESULT|설명|  
 |-------------|-----------------|  
-|`S_OK`|`EnumSignatures`성공적으로 반환 합니다.|  
+|`S_OK`|`EnumSignatures` 성공적으로 반환 합니다.|  
 |`S_FALSE`|열거할 토큰이 있습니다. 이 경우 `pcSignatures` 은 0입니다.|  
   
 ## <a name="remarks"></a>설명  
@@ -79,7 +67,7 @@ HRESULT EnumSignatures (
   
  **라이브러리:** MsCorEE.dll에 리소스로 포함  
   
- **.NET framework 버전:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>참고 항목  
  [IMetaDataImport 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)  

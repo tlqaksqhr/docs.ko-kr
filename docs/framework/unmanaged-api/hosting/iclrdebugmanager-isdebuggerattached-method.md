@@ -1,14 +1,6 @@
 ---
-title: "ICLRDebugManager::IsDebuggerAttached 메서드"
-ms.custom: 
+title: ICLRDebugManager::IsDebuggerAttached 메서드
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICLRDebugManager.IsDebuggerAttached
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: 2f105fe0-f52d-49c5-bda5-583fb27e3aa6
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 5abd854e224b19efa72100db0163d61b42b0b63c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: aaa085d9883f2a94a623f7800278c74a88e6a69a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="iclrdebugmanagerisdebuggerattached-method"></a>ICLRDebugManager::IsDebuggerAttached 메서드
 디버거가 프로세스에 연결되어 있는지 여부를 나타내는 값을 가져옵니다.  
@@ -54,7 +42,7 @@ HRESULT IsDebuggerAttached (
   
 |HRESULT|설명|  
 |-------------|-----------------|  
-|S_OK|`IsDebuggerAttached`성공적으로 반환 합니다.|  
+|S_OK|`IsDebuggerAttached` 성공적으로 반환 합니다.|  
 |HOST_E_CLRNOTAVAILABLE|공용 언어 런타임 (CLR) 프로세스에 로드 되지 않았습니다 또는 CLR 중인 상태를 관리 코드를 실행 하거나 호출을 처리할 수 없습니다.|  
 |HOST_E_TIMEOUT|호출 시간이 초과 되었습니다.|  
 |HOST_E_NOT_OWNER|호출자에 게 잠금을 소유 하지 않습니다.|  
@@ -62,7 +50,7 @@ HRESULT IsDebuggerAttached (
 |E_FAIL|알 수 없는 치명적인 오류가 발생 했습니다. E_FAIL을 반환 하는 메서드 후 CLR을 프로세스 내에서 사용할 수 없습니다. 호스팅 방법에 대 한 후속 호출 HOST_E_CLRNOTAVAILABLE를 반환 합니다.|  
   
 ## <a name="remarks"></a>설명  
- `IsDebuggerAttached`호스트를 프로세스에 디버거가 연결 되어 있는지 여부를 결정 하는 CLR를 쿼리할 수 있습니다.  
+ `IsDebuggerAttached` 호스트를 프로세스에 디버거가 연결 되어 있는지 여부를 결정 하는 CLR를 쿼리할 수 있습니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **플랫폼:** 참조 [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)합니다.  
@@ -71,7 +59,7 @@ HRESULT IsDebuggerAttached (
   
  **라이브러리:** MSCorEE.dll에 리소스로 포함  
   
- **.NET framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>참고 항목  
  [ICLRControl 인터페이스](../../../../docs/framework/unmanaged-api/hosting/iclrcontrol-interface.md)  

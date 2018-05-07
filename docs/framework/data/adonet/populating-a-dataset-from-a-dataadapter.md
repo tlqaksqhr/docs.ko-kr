@@ -1,27 +1,15 @@
 ---
-title: "DataAdapter에서 데이터 집합 채우기"
-ms.custom: 
+title: DataAdapter에서 데이터 집합 채우기
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 3fa0ac7d-e266-4954-bfac-3fbe2f913153
-caps.latest.revision: "6"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: c0991398a28e491d381d10dea8a14ed463c67c89
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: ced280be0fa14077be893c59596ed65b424172c3
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="populating-a-dataset-from-a-dataadapter"></a>DataAdapter에서 데이터 집합 채우기
 [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] <xref:System.Data.DataSet>은 데이터 소스에 독립적으로 일관성 있는 관계형 프로그래밍 모델을 제공하는 데이터의 메모리 상주 표현입니다. `DataSet` 은 테이블 및 제약 조건과 테이블 간의 관계를 포함하는 완전한 데이터 집합을 나타냅니다. `DataSet` 은 데이터 소스에 독립적입니다. 따라서 `DataSet` 은 응용 프로그램에 대해 로컬인 데이터뿐 아니라 여러 데이터 소스의 데이터도 포함할 수 있습니다. 기존 데이터 소스와의 상호 작용은 `DataAdapter`를 통해 제어됩니다.  
@@ -33,7 +21,7 @@ ms.lasthandoff: 01/17/2018
 > [!NOTE]
 >  `DataAdapter` 를 사용하여 모든 테이블을 검색하는 경우 시간이 많이 걸리며, 특히 테이블에 많은 행이 있는 경우 더욱 그렇습니다. 이는 데이터베이스에 액세스하여 데이터를 찾아서 처리한 다음 클라이언트로 데이터를 전송하는 데 많은 시간이 걸리기 때문입니다. 모든 테이블을 클라이언트로 가져오는 경우 서버의 모든 행이 잠기는 문제도 있습니다. 이 경우 `WHERE` 절을 사용하여 클라이언트에 반환되는 행 수를 대폭 줄이면 성능을 개선할 수 있습니다. `SELECT` 문에 필요한 열을 명시적으로 나열하여 클라이언트에 반환되는 데이터의 양을 줄일 수도 있습니다. 한 번에 몇 백 개씩 행을 일괄적으로 검색함으로써 클라이언트에서 현재 일괄 검색 작업이 완료되면 다음 일괄 검색 작업을 시작하는 것도 좋은 방법입니다.  
   
- `Fill` 메서드는 `DataReader` 개체를 암시적으로 사용하여 `DataSet`의 테이블 행을 채울 데이터와 `DataSet`에 테이블을 만드는 데 사용되는 열 이름 및 형식을 반환합니다. 테이블과 열은 없는 경우에만 만들어지고 있는 경우 `Fill` 에서 기존의 `DataSet` 스키마를 사용합니다. 열 유형으로 만들어집니다. [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 의 테이블에 따라 형식을 [ADO.NET에서 데이터 형식 매핑을](../../../../docs/framework/data/adonet/data-type-mappings-in-ado-net.md)합니다. 기본 키가 데이터 소스에 없으면 기본 키는 만들어지지 않고 `DataAdapter`**를 통해 제어됩니다.**`MissingSchemaAction` 이 `MissingSchemaAction`**를 통해 제어됩니다.**`AddWithKey`를 통해 제어됩니다. `Fill` 에서 테이블의 기본 키가 있음을 발견하면 기본 키 열 값이 데이터 소스에서 반환된 행의 값과 일치하는 행의 데이터 소스 데이터로 `DataSet` 의 데이터를 덮어씁니다. 기본 키가 없으면 해당 데이터가 `DataSet`의 테이블에 추가됩니다. `Fill`채울 때 있을 수 있는 모든 매핑을 사용 하 여는 `DataSet` (참조 [DataAdapter DataTable 및 DataColumn 매핑](../../../../docs/framework/data/adonet/dataadapter-datatable-and-datacolumn-mappings.md)).  
+ `Fill` 메서드는 `DataReader` 개체를 암시적으로 사용하여 `DataSet`의 테이블 행을 채울 데이터와 `DataSet`에 테이블을 만드는 데 사용되는 열 이름 및 형식을 반환합니다. 테이블과 열은 없는 경우에만 만들어지고 있는 경우 `Fill` 에서 기존의 `DataSet` 스키마를 사용합니다. 열 유형으로 만들어집니다. [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 의 테이블에 따라 형식을 [ADO.NET에서 데이터 형식 매핑을](../../../../docs/framework/data/adonet/data-type-mappings-in-ado-net.md)합니다. 기본 키가 데이터 소스에 없으면 기본 키는 만들어지지 않고 `DataAdapter`**를 통해 제어됩니다.**`MissingSchemaAction` 이 `MissingSchemaAction`**를 통해 제어됩니다.**`AddWithKey`를 통해 제어됩니다. `Fill` 에서 테이블의 기본 키가 있음을 발견하면 기본 키 열 값이 데이터 소스에서 반환된 행의 값과 일치하는 행의 데이터 소스 데이터로 `DataSet` 의 데이터를 덮어씁니다. 기본 키가 없으면 해당 데이터가 `DataSet`의 테이블에 추가됩니다. `Fill` 채울 때 있을 수 있는 모든 매핑을 사용 하 여는 `DataSet` (참조 [DataAdapter DataTable 및 DataColumn 매핑](../../../../docs/framework/data/adonet/dataadapter-datatable-and-datacolumn-mappings.md)).  
   
 > [!NOTE]
 >  `SelectCommand` 가 OUTER JOIN의 결과를 반환하면 `DataAdapter` 는 결과 `PrimaryKey` 에 대해 `DataTable`값을 설정하지 않습니다. 행 중복 문제를 해결하려면 `PrimaryKey` 를 직접 정의해야 합니다. 자세한 내용은 참조 [기본 키 정의](../../../../docs/framework/data/adonet/dataset-datatable-dataview/defining-primary-keys.md)합니다.  

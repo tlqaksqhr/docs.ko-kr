@@ -1,29 +1,15 @@
 ---
 title: 배달 못 한 편지 큐를 사용하여 메시지 전송 오류 처리
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 9e891c6a-d960-45ea-904f-1a00e202d61a
-caps.latest.revision: 19
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: b51999b1984dedf1baf23e41c1592382849c431b
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: b70b7a7849ba0927c8ee4a4903aefc27bfa9d0c0
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-dead-letter-queues-to-handle-message-transfer-failures"></a>배달 못 한 편지 큐를 사용하여 메시지 전송 오류 처리
 대기 중인 메시지를 배달하지 못할 수 있습니다. 이러한 실패 메시지는 배달 못 한 편지 큐에 기록됩니다. 네트워크 오류, 삭제된 큐, 꽉 찬 큐, 인증 오류 또는 정시 배달 실패와 같은 이유로 인해 배달 실패가 발생할 수 있습니다.  
@@ -32,11 +18,11 @@ ms.lasthandoff: 04/30/2018
   
  일반적으로 응용 프로그램에서는 배달 못 한 편지 큐에서 메시지를 읽는 보정 논리 및 실패 이유를 작성합니다. 보정 논리는 실패의 원인에 따라 달라집니다. 예를 들어, 인증 오류의 경우 메시지에 첨부된 인증서를 수정하여 메시지를 다시 보낼 수 있습니다. 대상 큐 할당량을 초과하여 배달에 실패한 경우 할당량 문제가 해결되었기를 기대하며 배달을 다시 시도할 수 있습니다.  
   
- 대부분의 큐 시스템에는 해당 시스템에서 실패한 모든 메시지가 저장되는 시스템 차원의 배달 못 한 편지 큐가 있습니다. 메시지 큐(MSMQ)에서는 두 개의 시스템 차원의 배달 못 한 편지 큐를 제공합니다. 하나는 트랜잭션 큐에 배달하지 못한 메시지를 저장하는 시스템 차원의 배달 못 한 트랜잭션 큐이고 다른 하나는 비트랜잭션 큐에 배달하지 못한 메시지를 저장하는 시스템 차원의 배달 못 한 비트랜잭션 큐입니다. 두 클라이언트에서 서로 다른 두 개의 서비스에 메시지를 보내는 경우 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에 있는 서로 다른 큐는 보낼 동일한 MSMQ 서비스를 공유하므로 배달 못 한 시스템 큐에 유형이 다른 여러 메시지가 있을 수 있습니다. 이 방법이 항상 최상은 아닙니다. 예를 들어 보안과 같이 경우에 따라 한 클라이언트가 배달 못 한 편지 큐에서 다른 클라이언트의 메시지를 읽을 수 없도록 할 수도 있습니다. 또한 공유된 배달 못 한 편지 큐에서는 클라이언트가 큐를 탐색하여 보낸 메시지를 찾도록 합니다. 이런 경우 배달 못 한 편지 큐에 있는 메시지의 수에 따라 지나치게 많은 비용이 들 수 있습니다. 따라서 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] `NetMsmqBinding`, `MsmqIntegrationBinding,` 및 MSMQ에 [!INCLUDE[wv](../../../../includes/wv-md.md)] (응용 프로그램별 배달 못 한 편지 큐 라고도 함)는 사용자 지정 배달 못 한 편지 큐를 제공 합니다.  
+ 대부분의 큐 시스템에는 해당 시스템에서 실패한 모든 메시지가 저장되는 시스템 차원의 배달 못 한 편지 큐가 있습니다. 메시지 큐(MSMQ)에서는 두 개의 시스템 차원의 배달 못 한 편지 큐를 제공합니다. 하나는 트랜잭션 큐에 배달하지 못한 메시지를 저장하는 시스템 차원의 배달 못 한 트랜잭션 큐이고 다른 하나는 비트랜잭션 큐에 배달하지 못한 메시지를 저장하는 시스템 차원의 배달 못 한 비트랜잭션 큐입니다. 두 클라이언트가 메시지를 두 개의 서비스에 보내는 및 WCF에서 다른 큐 보낼 동일한 MSMQ 서비스를 공유 하므로, 다음 있으면 시스템 배달 못 한 편지 큐에 여러 메시지가 있을 수 있습니다. 이 방법이 항상 최상은 아닙니다. 예를 들어 보안과 같이 경우에 따라 한 클라이언트가 배달 못 한 편지 큐에서 다른 클라이언트의 메시지를 읽을 수 없도록 할 수도 있습니다. 또한 공유된 배달 못 한 편지 큐에서는 클라이언트가 큐를 탐색하여 보낸 메시지를 찾도록 합니다. 이런 경우 배달 못 한 편지 큐에 있는 메시지의 수에 따라 지나치게 많은 비용이 들 수 있습니다. 따라서 WCF에서에서`NetMsmqBinding`, `MsmqIntegrationBinding,` 및 MSMQ에 [!INCLUDE[wv](../../../../includes/wv-md.md)] (응용 프로그램별 배달 못 한 편지 큐 라고도 함)는 사용자 지정 배달 못 한 편지 큐를 제공 합니다.  
   
  사용자 지정 배달 못 한 편지 큐에서는 메시지를 보내는 동일한 MSMQ 서비스를 공유하는 클라이언트를 격리할 수 있습니다.  
   
- [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] 및 [!INCLUDE[wxp](../../../../includes/wxp-md.md)]에서 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]는 시스템 차원의 배달 못 한 편지 큐를 대기 중인 모든 클라이언트 응용 프로그램에 제공합니다. [!INCLUDE[wv](../../../../includes/wv-md.md)]에서 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]는 배달 못 한 편지 큐를 대기 중인 각 클라이언트 응용 프로그램에 제공합니다.  
+ [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] 및 [!INCLUDE[wxp](../../../../includes/wxp-md.md)], Windows Communication Foundation (WCF) 모든 큐에 대기 중인된 클라이언트 응용 프로그램에 대 한 시스템 차원의 배달 못 한 편지 큐를 제공 합니다. [!INCLUDE[wv](../../../../includes/wv-md.md)], WCF 각 큐에 대기 중인된 클라이언트 응용 프로그램에 대 한 배달 못 한 편지 큐를 제공 합니다.  
   
 ## <a name="specifying-use-of-the-dead-letter-queue"></a>배달 못 한 편지 큐의 사용 지정  
  배달 못 한 편지 큐는 송신 응용 프로그램의 큐 관리자에 있습니다. 이 관리자는 만료되었거나 전송 또는 배달하지 못한 메시지를 보관합니다.  
@@ -48,7 +34,7 @@ ms.lasthandoff: 04/30/2018
 -   <xref:System.ServiceModel.MsmqBindingBase.CustomDeadLetterQueue%2A>  
   
 ## <a name="reading-messages-from-the-dead-letter-queue"></a>배달 못 한 편지 큐에서 메시지 읽기  
- 배달 못 한 편지 큐에서 메시지를 읽는 응용 프로그램은 다음과 같은 사소한 차이를 제외하면 응용 프로그램 큐에서 읽는 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 서비스와 유사합니다.  
+ 배달 못 한 편지 큐에서 메시지를 읽는 응용 프로그램을 다음과 같은 사소한 차이 제외 하 고 응용 프로그램 큐에서 읽을 수 있는 WCF 서비스와 비슷합니다.  
   
 -   시스템 트랜잭션 배달 못 한 편지 큐에서 메시지를 읽으려면 URI(Uniform Resource Identifier)가 net.msmq://localhost/system$;DeadXact 형식이어야 합니다.  
   
@@ -58,7 +44,7 @@ ms.lasthandoff: 04/30/2018
   
  주소 큐 하는 방법에 대 한 자세한 내용은 참조 [서비스 끝점 및 큐 주소 지정](../../../../docs/framework/wcf/feature-details/service-endpoints-and-queue-addressing.md)합니다.  
   
- 수신자의 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 스택에서는 서비스가 수신 대기하는 주소와 메시지의 주소가 일치합니다. 주소가 일치하면 메시지가 디스패치되고, 그렇지 않으면 메시지가 디스패치되지 않습니다. 일반적으로 배달 못 한 편지 큐에 있는 메시지는 배달 못 한 편지 큐 서비스가 아닌 서비스에 주소가 지정되기 때문에 배달 못 한 편지 큐에서 메시지를 읽을 때 문제가 발생할 수 있습니다. 따라서 배달 못 한 편지 큐에서 메시지를 읽는 서비스는 수신자와 관계없이 큐의 모든 메시지를 일치시키도록 스택에 지시하는 주소 필터 `ServiceBehavior`를 설치해야 합니다. 특히 `ServiceBehavior`를 <xref:System.ServiceModel.AddressFilterMode.Any> 매개 변수와 함께 배달 못 한 편지 큐에서 메시지를 읽는 서비스에 추가해야 합니다.  
+ 수신기에 대 한 WCF 스택 주소는 서비스에서 수신 대기 중인 메시지에 주소와 일치 합니다. 주소가 일치하면 메시지가 디스패치되고, 그렇지 않으면 메시지가 디스패치되지 않습니다. 일반적으로 배달 못 한 편지 큐에 있는 메시지는 배달 못 한 편지 큐 서비스가 아닌 서비스에 주소가 지정되기 때문에 배달 못 한 편지 큐에서 메시지를 읽을 때 문제가 발생할 수 있습니다. 따라서 배달 못 한 편지 큐에서 메시지를 읽는 서비스는 수신자와 관계없이 큐의 모든 메시지를 일치시키도록 스택에 지시하는 주소 필터 `ServiceBehavior`를 설치해야 합니다. 특히 `ServiceBehavior`를 <xref:System.ServiceModel.AddressFilterMode.Any> 매개 변수와 함께 배달 못 한 편지 큐에서 메시지를 읽는 서비스에 추가해야 합니다.  
   
 ## <a name="poison-message-handling-from-the-dead-letter-queue"></a>배달 못 한 편지 큐에서 포이즌 메시지 처리  
  경우에 따라 배달 못 한 편지 큐에서 포이즌 메시지 처리가 가능합니다. 시스템 큐에서 하위 큐를 만들 수 없기 때문에 배달 못 한 시스템 큐에서 메시지를 읽는 경우 `ReceiveErrorHandling`을 `Move`로 설정할 수 없습니다. 사용자 지정 배달 못 한 편지 큐에서 메시지를 읽는 경우 하위 큐를 사용할 수 있으므로 `Move`는 포이즌 메시지의 유효한 처리 방식입니다.  

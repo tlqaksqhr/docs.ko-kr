@@ -1,30 +1,18 @@
 ---
-title: "클라이언트 채널 수준 프로그래밍"
-ms.custom: 
+title: 클라이언트 채널 수준 프로그래밍
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 3b787719-4e77-4e77-96a6-5b15a11b995a
-caps.latest.revision: "6"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 4c3d9bc1819045c8261f003cbab52dd71c4da408
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ff399a2f3a4b86404695502fb002ee6920bea758
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="client-channel-level-programming"></a>클라이언트 채널 수준 프로그래밍
-이 항목에서는 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 클래스 및 관련 개체 모델을 사용하지 않고 <xref:System.ServiceModel.ClientBase%601?displayProperty=nameWithType> 클라이언트 응용 프로그램을 작성하는 방법에 대해 설명합니다.  
+이 항목에서는 사용 하지 않고 Windows Communication Foundation (WCF) 클라이언트 응용 프로그램을 작성 하는 방법을 설명는 <xref:System.ServiceModel.ClientBase%601?displayProperty=nameWithType> 클래스 및 관련된 개체 모델입니다.  
   
 ## <a name="sending-messages"></a>메시지 보내기  
  메시지를 보낸 다음 회신을 받고 처리할 준비를 하려면 다음 단계가 필요합니다.  

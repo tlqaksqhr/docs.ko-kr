@@ -1,13 +1,6 @@
 ---
-title: "프로파일링 개요"
-ms.custom: 
+title: 프로파일링 개요
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 helpviewer_keywords:
 - managed code, profiling API support
 - unmanaged code, combining with managed code in profiling
@@ -34,19 +27,16 @@ helpviewer_keywords:
 - security, profiling API considerations
 - stack depth [.NET Framework profiling]
 ms.assetid: 864c2344-71dc-46f9-96b2-ed59fb6427a8
-caps.latest.revision: "27"
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 84688ed80d0cb1b802290176400eb45998052a34
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: b38b64e1c86174bea11086e722ed86b0a0046e2c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="profiling-overview"></a>프로파일링 개요
-<a name="top"></a>프로파일러는 다른 응용 프로그램의 실행을 모니터링 하는 도구입니다. CLR(공용 언어 런타임) 프로파일러는 프로 파일링 API를 사용하여 CLR에서 메시지를 받고 보내는 함수로 구성된 DLL(동적 연결 라이브러리)입니다. 프로파일러 DLL은 런타임에 CLR에 의해 로드됩니다.  
+<a name="top"></a> 프로파일러는 다른 응용 프로그램의 실행을 모니터링 하는 도구입니다. CLR(공용 언어 런타임) 프로파일러는 프로 파일링 API를 사용하여 CLR에서 메시지를 받고 보내는 함수로 구성된 DLL(동적 연결 라이브러리)입니다. 프로파일러 DLL은 런타임에 CLR에 의해 로드됩니다.  
   
  기존의 프로파일링 도구는 응용 프로그램의 실행 측정에 중점을 둡니다. 즉, 각 함수에서 소요된 시간이나 시간 경과에 따른 응용 프로그램의 메모리 사용량을 측정합니다. 프로파일링 API는 코드 검사 유틸리티 및 고급 디버깅 지원과 같은 광범위한 진단 도구 클래스를 대상으로 합니다. 이러한 사용은 본질적으로 모두 진단입니다. 프로파일링 API는 응용 프로그램의 실행을 측정할 뿐 아니라 모니터링합니다. 이러한 이유로 프로파일링 API는 응용 프로그램 자체에서 사용하면 안 되며, 응용 프로그램의 실행이 프로파일러에 종속되거나 영향을 받아서도 안 됩니다.  
   

@@ -1,24 +1,14 @@
 ---
-title: "방법: 토큰 재생을 검색하도록 설정"
-ms.custom: 
+title: '방법: 토큰 재생을 검색하도록 설정'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 5a9f5771-f5f6-4100-8501-406aa20d731a
-caps.latest.revision: "4"
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: a7c72d77b4894376fb6cb8aed2d1c6641a3977da
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: b9c187998b4af41e1a56ed9a64625da7e4f95d5e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-enable-token-replay-detection"></a>방법: 토큰 재생을 검색하도록 설정
 ## <a name="applies-to"></a>적용 대상  
@@ -89,6 +79,6 @@ ms.lasthandoff: 12/22/2017
   
 1.  **F5** 키를 눌러 솔루션을 실행합니다. 기본 ASP.NET 홈페이지가 표시되고 개발 STS에서 반환되는 기본 사용자인 사용자 이름 *Terry*로 자동으로 인증되어야 합니다.  
   
-2.  브라우저의 **뒤로** 단추를 누릅니다. *ID1062: 토큰: ‘System.IdentityModel.Tokens.SamlSecurityToken’에 대해 재생이 검색되었습니다.*라는 설명에 이어 *AssertionId* 및 *Issuer*가 포함된 **‘/’ 응용 프로그램 서버 오류** 페이지가 표시되어야 합니다.  
+2.  브라우저의 **뒤로** 단추를 누릅니다. *ID1062: 토큰: ‘System.IdentityModel.Tokens.SamlSecurityToken’에 대해 재생이 검색되었습니다.* 라는 설명에 이어 *AssertionId* 및 *Issuer*가 포함된 **‘/’ 응용 프로그램 서버 오류** 페이지가 표시되어야 합니다.  
   
      토큰 재생이 검색될 때 <xref:System.IdentityModel.Tokens.SecurityTokenReplayDetectedException> 형식의 예외가 throw되었으므로 이 오류 페이지가 표시됩니다. 토큰이 먼저 제공된 경우 초기 POST 요청을 다시 보내려고 하므로 이 오류가 발생합니다. **뒤로** 단추를 선택해도 서버에 대한 후속 요청에서 이 동작이 수행되지 않습니다.

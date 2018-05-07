@@ -1,28 +1,16 @@
 ---
-title: "Windows Forms DataGridView 컨트롤의 셀 스타일"
-ms.custom: 
+title: Windows Forms DataGridView 컨트롤의 셀 스타일
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - DataGridView control [Windows Forms], cell styles
 - cells [Windows Forms], styles
 - data grids [Windows Forms], cell styles
 ms.assetid: dbb75ed6-8804-4232-8382-f9920c2e380c
-caps.latest.revision: "33"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 915aba380b6fe35299de94720f216cda5ab66721
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 463fbbffe1e88991934f08fbe7e7445b2e233081
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cell-styles-in-the-windows-forms-datagridview-control"></a>Windows Forms DataGridView 컨트롤의 셀 스타일
 내에 있는 각 셀은 <xref:System.Windows.Forms.DataGridView> 컨트롤 텍스트 형식, 배경색, 전경색 및 글꼴 등의 고유 스타일 있을 수 있습니다. 하지만 일반적으로 여러 셀 공유 합니다 특정 한 스타일 특성.  
@@ -66,7 +54,7 @@ ms.lasthandoff: 12/22/2017
 |<xref:System.Windows.Forms.DataGridView.AlternatingRowsDefaultCellStyle%2A>|<xref:System.Windows.Forms.DataGridView>|교대로 반복 되는 컨트롤의 행에서 사용 하는 기본 셀 스타일을 가져오거나 설정 합니다. 장부와 비슷한 효과 만드는 데 사용 합니다.|  
 |<xref:System.Windows.Forms.DataGridView.RowHeadersDefaultCellStyle%2A>|<xref:System.Windows.Forms.DataGridView>|컨트롤의 행 머리글에 의해 사용 되는 기본 셀 스타일을 가져오거나 설정 합니다. 비주얼 스타일을 사용 하는 경우 현재 테마를 기반으로 재정의 합니다.|  
 |<xref:System.Windows.Forms.DataGridView.ColumnHeadersDefaultCellStyle%2A>|<xref:System.Windows.Forms.DataGridView>|컨트롤의 열 머리글에 의해 사용 되는 기본 셀 스타일을 가져오거나 설정 합니다. 비주얼 스타일을 사용 하는 경우 현재 테마를 기반으로 재정의 합니다.|  
-|<xref:System.Windows.Forms.DataGridViewCell.Style%2A>|<xref:System.Windows.Forms.DataGridViewCell>클래스와 파생된 클래스|셀 수준에서 지정 된 스타일을 가져오거나 설정 합니다. 이러한 스타일의 상위 수준에서 상속을 재정의 합니다.|  
+|<xref:System.Windows.Forms.DataGridViewCell.Style%2A>|<xref:System.Windows.Forms.DataGridViewCell> 클래스와 파생된 클래스|셀 수준에서 지정 된 스타일을 가져오거나 설정 합니다. 이러한 스타일의 상위 수준에서 상속을 재정의 합니다.|  
 |`InheritedStyle`|<xref:System.Windows.Forms.DataGridViewCell><xref:System.Windows.Forms.DataGridViewRow>, <xref:System.Windows.Forms.DataGridViewColumn>, 및 파생 클래스|현재 셀, 행 또는 열을 포함 하는 상위 수준에서 상속 하는 스타일에 적용 된 모든 스타일을 가져옵니다.|  
   
  위에서 설명한 대로 새 인스턴스화합니다 스타일 속성의 값을 자동으로 가져오는 <xref:System.Windows.Forms.DataGridViewCellStyle> 경우 속성이 설정 되지 않았습니다 이전에 개체입니다. 행 및 열 클래스에는 이러한 개체를 불필요 하 게 만드는 방지 하려면는 <xref:System.Windows.Forms.DataGridViewBand.HasDefaultCellStyle%2A> 속성을 확인 하려면 확인할 수 있습니다 여부는 <xref:System.Windows.Forms.DataGridViewBand.DefaultCellStyle%2A> 속성이 설정 되어 있습니다. 마찬가지로, 셀 클래스에는 <xref:System.Windows.Forms.DataGridViewCell.HasStyle%2A> 나타내는 속성을 여부는 <xref:System.Windows.Forms.DataGridViewCell.Style%2A> 속성이 설정 되어 있습니다.  
@@ -80,7 +68,7 @@ ms.lasthandoff: 12/22/2017
   
 2.  <xref:System.Windows.Forms.DataGridViewRow.DefaultCellStyle%2A?displayProperty=nameWithType>  
   
-3.  <xref:System.Windows.Forms.DataGridView.AlternatingRowsDefaultCellStyle%2A?displayProperty=nameWithType>(홀수 인덱스 번호가 있는 행의 셀)에  
+3.  <xref:System.Windows.Forms.DataGridView.AlternatingRowsDefaultCellStyle%2A?displayProperty=nameWithType> (홀수 인덱스 번호가 있는 행의 셀)에  
   
 4.  <xref:System.Windows.Forms.DataGridView.RowsDefaultCellStyle%2A?displayProperty=nameWithType>  
   
@@ -110,7 +98,7 @@ ms.lasthandoff: 12/22/2017
   
 1.  <xref:System.Windows.Forms.DataGridViewRow.DefaultCellStyle%2A?displayProperty=nameWithType>  
   
-2.  <xref:System.Windows.Forms.DataGridView.AlternatingRowsDefaultCellStyle%2A?displayProperty=nameWithType>(홀수 인덱스 번호가 있는 행의 셀)에  
+2.  <xref:System.Windows.Forms.DataGridView.AlternatingRowsDefaultCellStyle%2A?displayProperty=nameWithType> (홀수 인덱스 번호가 있는 행의 셀)에  
   
 3.  <xref:System.Windows.Forms.DataGridView.RowsDefaultCellStyle%2A?displayProperty=nameWithType>  
   
@@ -120,7 +108,7 @@ ms.lasthandoff: 12/22/2017
   
  다음 표에서 설명 방법을 <xref:System.Windows.Forms.DataGridViewCellStyle.ForeColor%2A> 예제 셀 속성 값은 포함 된 열에서 상속 됩니다.  
   
-|형식의 속성`DataGridViewCellStyle`|예제 `ForeColor` 검색 된 개체에 대 한 값|  
+|형식의 속성 `DataGridViewCellStyle`|예제 `ForeColor` 검색 된 개체에 대 한 값|  
 |----------------------------------------------|----------------------------------------------------|  
 |<xref:System.Windows.Forms.DataGridViewCell.Style%2A?displayProperty=nameWithType>|<xref:System.Drawing.Color.Empty?displayProperty=nameWithType>|  
 |<xref:System.Windows.Forms.DataGridViewRow.DefaultCellStyle%2A?displayProperty=nameWithType>|<xref:System.Drawing.Color.Red%2A?displayProperty=nameWithType>|  
@@ -133,7 +121,7 @@ ms.lasthandoff: 12/22/2017
   
  다음 다이어그램에서는 서로 어떻게 다른 지 <xref:System.Windows.Forms.DataGridViewCellStyle> 속성 다른 위치에서 해당 값을 상속할 수 있습니다.  
   
- ![DataGridView 속성 &#45; 값을 상속](../../../../docs/framework/winforms/controls/media/datagridviewcells2.gif "DataGridViewCells2")  
+ ![DataGridView 속성&#45;값이 상속](../../../../docs/framework/winforms/controls/media/datagridviewcells2.gif "DataGridViewCells2")  
   
  스타일 상속을 활용 하 여 여러 위치에서 동일한 정보를 지정 하지 않고 전체 컨트롤에 대 한 적절 한 스타일을 제공할 수 있습니다.  
   

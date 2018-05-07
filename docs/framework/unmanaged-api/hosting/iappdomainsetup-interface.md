@@ -1,14 +1,6 @@
 ---
-title: "IAppDomainSetup 인터페이스"
-ms.custom: 
+title: IAppDomainSetup 인터페이스
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - IAppDomainSetup
 api_location:
@@ -22,17 +14,13 @@ helpviewer_keywords:
 ms.assetid: 1844da85-c031-40bf-bea4-1a3d12a36c8c
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 9db1b787015231b3d9053d4ed316cb70c5db96ec
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: cbcbc446eabcfcbc28c830f8860bde726c8eb6e3
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="iappdomainsetup-interface"></a>IAppDomainSetup 인터페이스
 구성할 수 있는 속성을 제공는 <xref:System.AppDomain?displayProperty=nameWithType> 유형 호출 하기 전에 [icorruntimehost:: Createdomainex](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-createdomainex-method.md) 메서드를 만듭니다.  
@@ -55,7 +43,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="remarks"></a>설명  
  `IAppDomainSetup` 인터페이스의 관리 되는 해당 <xref:System.IAppDomainSetup> 인터페이스는 <xref:System.AppDomainSetup> 구현을 입력 합니다. 참조 <xref:System.IAppDomainSetup?displayProperty=nameWithType> 에 대 한 해당 속성에 자세히 설명 합니다.  
   
- `IAppDomainSetup`에 추가할 수 있는 어셈블리 바인딩 정보를 나타내는 <xref:System.AppDomain> 만들어지기 전에 인스턴스. 예를 들어 호스트를 설정할 수는 <xref:System.AppDomainSetup.ApplicationBase%2A> 관리 되는 어셈블리 속성을 공용 언어 런타임 (CLR)를 검색 되는 루트 디렉터리를 설정 합니다.  
+ `IAppDomainSetup` 에 추가할 수 있는 어셈블리 바인딩 정보를 나타내는 <xref:System.AppDomain> 만들어지기 전에 인스턴스. 예를 들어 호스트를 설정할 수는 <xref:System.AppDomainSetup.ApplicationBase%2A> 관리 되는 어셈블리 속성을 공용 언어 런타임 (CLR)를 검색 되는 루트 디렉터리를 설정 합니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **플랫폼:** 참조 [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)합니다.  
@@ -64,7 +52,7 @@ ms.lasthandoff: 12/22/2017
   
  **라이브러리:** MSCorEE.dll에 리소스로 포함  
   
- **.NET framework 버전:**[!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]  
+ **.NET framework 버전:** [!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]  
   
 ## <a name="see-also"></a>참고 항목  
  <xref:System.AppDomain>  

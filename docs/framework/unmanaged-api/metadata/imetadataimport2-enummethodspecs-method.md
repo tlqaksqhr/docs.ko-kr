@@ -1,14 +1,6 @@
 ---
-title: "IMetaDataImport2::EnumMethodSpecs 메서드"
-ms.custom: 
+title: IMetaDataImport2::EnumMethodSpecs 메서드
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - IMetaDataImport2.EnumMethodSpecs
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: b3fc1e6c-bcb6-4915-baf8-7dc0a31b8724
 topic_type:
 - apiref
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 6e134d19eb6699f39e6d538f93f989b87ed8f37d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 6c2122c06c6e4f1137173f02e37fb0982864e7ec
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="imetadataimport2enummethodspecs-method"></a>IMetaDataImport2::EnumMethodSpecs 메서드
 지정한 MethodDef 또는 MemberRef 연관 MethodSpec 토큰 배열의 토큰 열거자를 가져옵니다.  
@@ -70,8 +58,8 @@ HRESULT EnumMethodSpecs (
   
 |HRESULT|설명|  
 |-------------|-----------------|  
-|`S_OK`|`EnumMethodSpecs`성공적으로 반환 합니다.|  
-|`S_FALSE`|`phEnum`에 멤버가 요소가 없습니다. 이 경우 `pcMethodSpecs` 0 (영)으로 설정 됩니다.|  
+|`S_OK`|`EnumMethodSpecs` 성공적으로 반환 합니다.|  
+|`S_FALSE`|`phEnum` 에 멤버가 요소가 없습니다. 이 경우 `pcMethodSpecs` 0 (영)으로 설정 됩니다.|  
   
 ## <a name="requirements"></a>요구 사항  
  **플랫폼:** 참조 [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)합니다.  
@@ -80,7 +68,7 @@ HRESULT EnumMethodSpecs (
   
  **라이브러리:** MsCorEE.dll에서 리소스로 사용  
   
- **.NET framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>참고 항목  
  [IMetaDataImport2 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)  

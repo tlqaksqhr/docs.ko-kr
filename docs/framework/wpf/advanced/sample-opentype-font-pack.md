@@ -1,28 +1,16 @@
 ---
-title: "샘플 OpenType 글꼴 팩"
-ms.custom: 
+title: 샘플 OpenType 글꼴 팩
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - OpenType font pack [WPF]
 - fonts [WPF], OpenType font pack
 - typography [WPF], OpenType font pack
 ms.assetid: 56b46fa1-a44e-419b-8f14-25ad51c715c3
-caps.latest.revision: "23"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 7390c8c84caa17b984d5a16b7ac6b9704b8f3c6e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: bec890f7937965c314ccf16b4142905c52ceff49
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="sample-opentype-font-pack"></a>샘플 OpenType 글꼴 팩
 이 항목에서는 [!INCLUDE[TLA2#tla_wcsdk](../../../../includes/tla2sharptla-wcsdk-md.md)]를 통해 배포되는 샘플 [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] 글꼴을 간략하게 설명합니다. 샘플 글꼴은 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 응용 프로그램에서 사용될 수 있는 확장 [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] 기능을 지원합니다.  
@@ -57,7 +45,7 @@ OpenType 글꼴 팩의 글꼴
 ## <a name="installing-the-fonts"></a>글꼴 설치  
  샘플 [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] 글꼴을 기본 [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] 글꼴 디렉터리 **\WINDOWS\Fonts**에 설치할 수 있습니다. [글꼴] 컨트롤 패널을 사용하여 글꼴을 설치합니다. 이러한 글꼴이 컴퓨터에 있으면 기본 [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] 글꼴을 참조하는 모든 응용 프로그램에 액세스할 수 있습니다. 글꼴 파일을 두 번 클릭하여 대표 문자 집합을 여러 글꼴 크기로 표시할 수 있습니다. 다음 스크린샷은 Lindsey 글꼴 파일인 Linds.ttf를 보여 줍니다.  
   
- ![Lindsey 글꼴 &#40; OpenType &#41; ] (../../../../docs/framework/wpf/advanced/media/typographyinwpf-04.png "TypographyInWPF_04")  
+ ![Lindsey 글꼴 &#40;OpenType&#41;](../../../../docs/framework/wpf/advanced/media/typographyinwpf-04.png "TypographyInWPF_04")  
 Lindsey 글꼴 표시  
   
 <a name="using_the_fonts"></a>   

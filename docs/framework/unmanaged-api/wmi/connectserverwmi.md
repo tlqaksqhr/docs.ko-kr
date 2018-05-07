@@ -1,11 +1,7 @@
 ---
-title: "ConnectServerWmi 함수 (관리 되지 않는 API 참조)"
-description: "ConnectServerWmi 함수 DCOM를 사용 하 여 WMI 네임 스페이스에 대 한 연결을 만듭니다."
+title: ConnectServerWmi 함수 (관리 되지 않는 API 참조)
+description: ConnectServerWmi 함수 DCOM를 사용 하 여 WMI 네임 스페이스에 대 한 연결을 만듭니다.
 ms.date: 11/06/2017
-ms.prod: .net-framework
-ms.technology:
-- dotnet-clr
-ms.topic: reference
 api_name:
 - ConnectServerWmi
 api_location:
@@ -20,14 +16,11 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: dc821bddf1d33ea1144fef0821b81cf027d8f92f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: de8447b9b090fc7f53df23346d61932bcb4dd6ea
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="connectserverwmi-function"></a>ConnectServerWmi 함수
 지정된 된 컴퓨터에서 DCOM 통해 WMI 네임 스페이스에 연결을 만듭니다.  
@@ -52,22 +45,22 @@ HRESULT ConnectServerWmi (
 ```  
 ## <a name="parameters"></a>매개 변수
 
-`strNetworkResource`[in] 포인터를 올바른 `BSTR` 올바른 WMI 네임 스페이스의 개체 경로 포함 하는 합니다. 참조는 [주의](#remarks) 한 자세 합니다.
+`strNetworkResource` [in] 포인터를 올바른 `BSTR` 올바른 WMI 네임 스페이스의 개체 경로 포함 하는 합니다. 참조는 [주의](#remarks) 한 자세 합니다.
 
-`strUser`[in] 에 대 한 포인터를 올바른 `BSTR` 사용자 이름이 들어 있는입니다. A `null` 값 현재 보안 컨텍스트를 나타냅니다. 사용자가을 현재 보다 다른 도메인의 경우 `strUser` 백슬래시로 구분 된 도메인과 사용자 이름을 포함할 수도 있습니다. `strUser`수 사용자에서 계정 이름 (UPN)의 형식을 지정할 수도,으로 suhc  *userName@domainName* 합니다. 참조는 [주의](#remarks) 한 자세 합니다.
+`strUser` [in] 에 대 한 포인터를 올바른 `BSTR` 사용자 이름이 들어 있는입니다. A `null` 값 현재 보안 컨텍스트를 나타냅니다. 사용자가을 현재 보다 다른 도메인의 경우 `strUser` 백슬래시로 구분 된 도메인과 사용자 이름을 포함할 수도 있습니다. `strUser` 수 사용자에서 계정 이름 (UPN)의 형식을 지정할 수도,으로 suhc *userName@domainName*합니다. 참조는 [주의](#remarks) 한 자세 합니다.
 
-`strPassword`[in] 에 대 한 포인터를 올바른 `BSTR` 암호가 포함 된 합니다. A `null` 현재 보안 컨텍스트를 나타냅니다. 빈 문자열 ("") 유효한 빈 암호를 나타냅니다.
+`strPassword` [in] 에 대 한 포인터를 올바른 `BSTR` 암호가 포함 된 합니다. A `null` 현재 보안 컨텍스트를 나타냅니다. 빈 문자열 ("") 유효한 빈 암호를 나타냅니다.
 
-`strLocale`[in] 에 대 한 포인터를 올바른 `BSTR` 정보 검색에 대 한 올바른 로캘을 나타내는입니다. Microsoft 로캘 식별자에 대 한 문자열의 형식은 "MS\_*xxx*" 여기서 *xxx* 로캘 식별자 (LCID)를 나타내는 16 진수 형식 문자열입니다. 잘못 된 로캘 지정 되 면 메서드가 반환 `WBEM_E_INVALID_PARAMETER` 제외 Windows 7, 서버에서 기본 로캘을 대신 사용 됩니다. 경우 ' null1, 현재 로캘을 사용 됩니다. 
+`strLocale` [in] 에 대 한 포인터를 올바른 `BSTR` 정보 검색에 대 한 올바른 로캘을 나타내는입니다. Microsoft 로캘 식별자에 대 한 문자열의 형식은 "MS\_*xxx*" 여기서 *xxx* 로캘 식별자 (LCID)를 나타내는 16 진수 형식 문자열입니다. 잘못 된 로캘 지정 되 면 메서드가 반환 `WBEM_E_INVALID_PARAMETER` 제외 Windows 7, 서버에서 기본 로캘을 대신 사용 됩니다. 경우 ' null1, 현재 로캘을 사용 됩니다. 
  
-`lSecurityFlags`[in] 플래그를 전달 하는 `ConnectServerWmi` 메서드. 에 대 한 호출에서 값이이 매개 변수에 대해 영 (0) 이면 `ConnectServerWmi` 서버에 연결 된 후에 반환 합니다. 이 인해 응답 하지 않는 무기한 끊어진 경우는 응용 프로그램 될 수 있습니다. 다른 유효한 값은:
+`lSecurityFlags` [in] 플래그를 전달 하는 `ConnectServerWmi` 메서드. 에 대 한 호출에서 값이이 매개 변수에 대해 영 (0) 이면 `ConnectServerWmi` 서버에 연결 된 후에 반환 합니다. 이 인해 응답 하지 않는 무기한 끊어진 경우는 응용 프로그램 될 수 있습니다. 다른 유효한 값은:
 
 | 상수  | 값  | 설명  |
 |---------|---------|---------|
 | `CONNECT_REPOSITORY_ONLY` | 0x40 | 내부용으로 예약됩니다. 사용하지 마십시오. |
-| `WBEM_FLAG_CONNECT_USE_MAX_WAIT` | 0x80 | `ConnectServerWmi`2 분 이내에 반환합니다. |
+| `WBEM_FLAG_CONNECT_USE_MAX_WAIT` | 0x80 | `ConnectServerWmi` 2 분 이내에 반환합니다. |
 
-`strAuthority`[in] 사용자의 도메인 이름입니다. 다음 값을 가질 수 있습니다.
+`strAuthority` [in] 사용자의 도메인 이름입니다. 다음 값을 가질 수 있습니다.
 
 | 값 | 설명 |
 |---------|---------|
@@ -104,7 +97,7 @@ HRESULT ConnectServerWmi (
 
  기본 네임 스페이스에 대 한 로컬 액세스에 대 한 `strNetworkResource` 단순 개체 경로일 수 있습니다: "root\default" 또는 "\\.\root\default"입니다. COM 또는 Microsoft 호환 네트워킹을 사용 하 여 원격 컴퓨터에서 기본 네임 스페이스에 대 한 액세스에 대 한 컴퓨터 이름을 포함할: "\\myserver\root\default"입니다. 또한 컴퓨터 이름을 DNS 이름 또는 IP 주소 수 있습니다. `ConnectServerWmi` 함수 i p v 6을 실행 하는 컴퓨터와 연결할 수도 IPv6 주소를 사용 합니다.
 
-`strUser`빈 문자열일 수 없습니다. 에 도메인을 지정 하는 경우 `strAuthority`, 것도 포함 해서도 안에 `strUser`, 함수 반환 또는 `WBEM_E_INVALID_PARAMETER`합니다.
+`strUser` 빈 문자열일 수 없습니다. 에 도메인을 지정 하는 경우 `strAuthority`, 것도 포함 해서도 안에 `strUser`, 함수 반환 또는 `WBEM_E_INVALID_PARAMETER`합니다.
 
 
 ## <a name="requirements"></a>요구 사항  
@@ -112,7 +105,7 @@ HRESULT ConnectServerWmi (
   
  **헤더:** WMINet_Utils.idl  
   
- **.NET framework 버전:**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **.NET framework 버전:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>참고자료  
 [WMI 및 성능 카운터 (관리 되지 않는 API 참조)](index.md)

@@ -1,14 +1,6 @@
 ---
 title: ICorProfilerInfo7::ReadInMemorySymbols
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 api_name:
 - ICorProfilerInfo7.ReadInMemorySymbols
 api_location:
@@ -18,17 +10,13 @@ api_location:
 api_type:
 - COM
 ms.assetid: 1745a0b9-8332-4777-a670-b549bff3b901
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 5851f73cc899ef21d8a5dcfd8f03617641a6625a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 9874c8e567a89fd3977be360666c86406f2cd395
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="icorprofilerinfo7readinmemorysymbols"></a>ICorProfilerInfo7::ReadInMemorySymbols
 [[!INCLUDE[net_v461](../../../../includes/net-v461-md.md)] 이상 버전에서 지원됨]  
@@ -69,7 +57,7 @@ HRESULT ReadInMemorySymbols(
  `CORPROF_E_MODULE_IS_DYNAMIC`를 사용 하 여 모듈을 만든 경우 <xref:System.Reflection.Emit>합니다.  
   
 ## <a name="remarks"></a>설명  
- `ReadInMemorySymbols` 메서드 읽으려고 시도 `countSymbolBytes` 오프셋에서 시작 하는 데이터의 `symbolsReadOffset` 메모리 스트림 내에서. 데이터 복사 `pSymbolBytes`, 있어야 사용할 수 있는 `countSymbolBytes` 의 사용 가능한 공간입니다.     `pCountSymbolsBytesRead`실제 읽은 발생할 수 있는 작은 바이트 수를 포함 보다 `countSymbolBytes` 스트림의 끝에 도달 합니다.  
+ `ReadInMemorySymbols` 메서드 읽으려고 시도 `countSymbolBytes` 오프셋에서 시작 하는 데이터의 `symbolsReadOffset` 메모리 스트림 내에서. 데이터 복사 `pSymbolBytes`, 있어야 사용할 수 있는 `countSymbolBytes` 의 사용 가능한 공간입니다.     `pCountSymbolsBytesRead` 실제 읽은 발생할 수 있는 작은 바이트 수를 포함 보다 `countSymbolBytes` 스트림의 끝에 도달 합니다.  
   
 > [!NOTE]
 >  현재 구현에서는 Reflection.Emit를 지원 하지 않습니다. 메서드가 반환 하는 경우 모듈 Reflection.Emit를 사용 하 여 만든, `CORPROF_E_MODULE_IS_DYNAMIC`합니다.  

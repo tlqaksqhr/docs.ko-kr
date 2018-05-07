@@ -1,34 +1,20 @@
 ---
 title: Message 클래스 사용
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: d1d62bfb-2aa3-4170-b6f8-c93d3afdbbed
-caps.latest.revision: 14
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: c63a0a88997a1c35b24562bcca3e0fdb40ebfd41
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 0ff65d9173838a8eb8850253e62d822f06942f26
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-the-message-class"></a>Message 클래스 사용
-<xref:System.ServiceModel.Channels.Message> 클래스는 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]의 기본 클래스입니다. 클라이언트와 서비스 간의 모든 통신에서 결국 <xref:System.ServiceModel.Channels.Message> 인스턴스의 전송과 수신이 발생합니다.  
+<xref:System.ServiceModel.Channels.Message> Windows Communication Foundation (WCF)에 기본 클래스입니다. 클라이언트와 서비스 간의 모든 통신에서 결국 <xref:System.ServiceModel.Channels.Message> 인스턴스의 전송과 수신이 발생합니다.  
   
- 일반적으로 <xref:System.ServiceModel.Channels.Message> 클래스와 직접 상호 작용하지는 않습니다. 대신 데이터 계약, 메시지 계약, 작업 계약 등의 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 서비스 모델 생성자가 사용되어 들어오는 메시지와 보내는 메시지를 설명합니다. 그러나 일부 고급 시나리오에서는 <xref:System.ServiceModel.Channels.Message> 클래스를 직접 사용하여 프로그래밍할 수 있습니다. 예를 들어 다음과 같은 경우 <xref:System.ServiceModel.Channels.Message> 클래스를 사용할 수 있습니다.  
+ 일반적으로 <xref:System.ServiceModel.Channels.Message> 클래스와 직접 상호 작용하지는 않습니다. 대신, WCF 서비스 모델 구문 예: 데이터 계약, 메시지 계약 및 작업 계약 등 들어오고 나가는 메시지를 설명 하기 위해 사용 됩니다. 그러나 일부 고급 시나리오에서는 <xref:System.ServiceModel.Channels.Message> 클래스를 직접 사용하여 프로그래밍할 수 있습니다. 예를 들어 다음과 같은 경우 <xref:System.ServiceModel.Channels.Message> 클래스를 사용할 수 있습니다.  
   
 -   [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 개체를 serialize하는 대신 보내는 메시지 내용을 만드는 대체 방법이 필요한 경우(예: 디스크의 파일에서 직접 메시지 생성).  
   
@@ -36,7 +22,7 @@ ms.lasthandoff: 04/28/2018
   
 -   메시지 내용에 관계없이 일반적인 방법으로 메시지를 처리해야 하는 경우(예: 라우터, 부하 분산 장치 또는 게시-구독 시스템을 구축할 때 메시지를 라우팅 또는 전달하는 경우)  
   
- 사용 하기 전에 <xref:System.ServiceModel.Channels.Message> 클래스, 잘 이해는 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 데이터 전송 아키텍처에 [데이터 전송 아키텍처 개요](../../../../docs/framework/wcf/feature-details/data-transfer-architectural-overview.md)합니다.  
+ 사용 하기 전에 <xref:System.ServiceModel.Channels.Message> 클래스의 WCF 데이터 전송 아키텍처를 숙지 [데이터 전송 아키텍처 개요](../../../../docs/framework/wcf/feature-details/data-transfer-architectural-overview.md)합니다.  
   
  <xref:System.ServiceModel.Channels.Message>는 데이터의 범용 컨테이너이지만 그 디자인은 SOAP 프로토콜의 메시지 디자인과 유사합니다. SOAP와 마찬가지로 메시지에는 메시지 본문과 헤더가 있습니다. 메시지 본문에는 실제 페이로드 데이터가 들어 있고 헤더에는 명명된 추가 데이터 컨테이너가 들어 있습니다. 본문과 헤더를 읽고 쓰는 규칙은 서로 다릅니다. 예를 들어 헤더는 항상 메모리에 버퍼링되고 순서와 횟수에 관계없이 액세스할 수 있지만 본문은 한 번만 읽을 수 있고 스트리밍할 수 있습니다. 일반적으로 SOAP를 사용하는 경우 메시지 본문은 SOAP 본문에 매핑되고 메시지 헤더는 SOAP 헤더에 매핑됩니다.  
   
@@ -181,7 +167,7 @@ ms.lasthandoff: 04/28/2018
  헤더의 XML 데이터에 액세스하려면 <xref:System.ServiceModel.Channels.MessageHeaders.GetReaderAtHeader%2A>를 호출하고 특정 헤더 인덱스에 대한 XML 판독기를 반환합니다. 헤더 내용을 개체로 deserialize하려면 <xref:System.ServiceModel.Channels.MessageHeaders.GetHeader%60%601%28System.Int32%29> 또는 다른 오버로드 중 하나를 사용합니다. 가장 기본적인 오버로드는 기본 방식으로 구성된 <xref:System.Runtime.Serialization.DataContractSerializer>를 사용하여 헤더를 deserialize합니다. 다른 serializer나 `DataContractSerializer`의 다른 구성을 사용하려면 `XmlObjectSerializer`를 받아들이는 오버로드 중 하나를 사용합니다. 인덱스 대신 헤더 이름, 네임스페이스 및 선택적으로 `Actor` 값의 목록을 사용하는 오버로드도 있습니다. 이 오버로드는 `FindHeader` 및 `GetHeader`의 조합입니다.  
   
 ## <a name="working-with-properties"></a>속성 작업  
- `Message` 인스턴스는 임의 형식과 개수의 명명된 개체를 포함할 수 있습니다. `Properties` 형식의 `MessageProperties` 속성을 통해 이 컬렉션에 액세스합니다. 이 컬렉션은 <xref:System.Collections.Generic.IDictionary%602> 인터페이스를 구현하며 <xref:System.String>에서 <xref:System.Object>로의 매핑으로 작동합니다. 일반적으로 속성 값은 통신 중인 메시지 부분에 직접 매핑되지 않고 대신 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 채널 스택의 다양한 채널이나 <xref:System.ServiceModel.Channels.MessageHeaders.CopyTo%28System.ServiceModel.Channels.MessageHeaderInfo%5B%5D%2CSystem.Int32%29> 서비스 프레임워크에 다양한 메시지 처리 힌트를 제공합니다. 예를 들어 참조 [데이터 전송 아키텍처 개요](../../../../docs/framework/wcf/feature-details/data-transfer-architectural-overview.md)합니다.  
+ `Message` 인스턴스는 임의 형식과 개수의 명명된 개체를 포함할 수 있습니다. `Properties` 형식의 `MessageProperties` 속성을 통해 이 컬렉션에 액세스합니다. 이 컬렉션은 <xref:System.Collections.Generic.IDictionary%602> 인터페이스를 구현하며 <xref:System.String>에서 <xref:System.Object>로의 매핑으로 작동합니다. 일반적으로 속성 값은 통신 중인 메시지의 모든 부분에 직접 매핑되지 않는 하지만 보다 다양 한 메시지 처리 힌트 또는 WCF 채널 스택의 다양 한 채널에는 제공 된 <xref:System.ServiceModel.Channels.MessageHeaders.CopyTo%28System.ServiceModel.Channels.MessageHeaderInfo%5B%5D%2CSystem.Int32%29> 서비스 프레임 워크입니다. 예를 들어 참조 [데이터 전송 아키텍처 개요](../../../../docs/framework/wcf/feature-details/data-transfer-architectural-overview.md)합니다.  
   
 ## <a name="inheriting-from-the-message-class"></a>Message 클래스에서 상속  
  `CreateMessage`를 사용하여 만든 기본 제공 메시지 형식이 요구 사항에 맞지 않을 경우 `Message` 클래스에서 파생된 클래스를 만듭니다.  

@@ -1,13 +1,6 @@
 ---
-title: "비트맵의 유형"
-ms.custom: 
+title: 비트맵의 유형
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - jpeg files
 - TIFF files
@@ -27,16 +20,11 @@ helpviewer_keywords:
 - bitmaps [Windows Forms], file format
 - Exchangeable Image File
 ms.assetid: 6be085a2-2c13-47c8-b80a-c18b32777d8d
-caps.latest.revision: "14"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 6af28e7b50cb7e4a2a90153a053a83931c738214
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 1a79f34daac4238093693947f5fb5e73bb56213d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="types-of-bitmaps"></a>비트맵의 유형
 비트맵은 픽셀의 사각형 배열에서 각 픽셀의 색을 지정 하는 비트의 배열입니다. 각 픽셀에 사용 되는 비트 수는 해당 픽셀에 지정할 수 있는 색 수를 결정 합니다. 예를 들어 각 픽셀을 4 비트로 표시할 다음 지정된 된 픽셀 수 할당할 수 16 다른 색상 중 하나로 (2 ^4 = 16). 다음 표에서 비트의 지정 된 수로 표현 되는 픽셀을 지정할 수 있는 색 수가 몇 가지 예를 보여 줍니다.  
@@ -64,7 +52,7 @@ ms.lasthandoff: 12/22/2017
  ![비트맵 샘플](../../../../docs/framework/winforms/advanced/media/aboutgdip03-art02.gif "AboutGdip03_Art02")  
   
 ## <a name="graphics-file-formats"></a>그래픽 파일 형식  
- 디스크 파일의 비트맵을 저장 하기 위한 다양 한 표준 형식 있습니다. [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]다음 단락에서 설명한 형식 파일 그래픽 지원 합니다.  
+ 디스크 파일의 비트맵을 저장 하기 위한 다양 한 표준 형식 있습니다. [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 다음 단락에서 설명한 형식 파일 그래픽 지원 합니다.  
   
 ### <a name="bmp"></a>BMP  
  BMP는 장치 및 응용 프로그램 독립적인 이미지를 저장할 Windows에서 사용 되는 표준 형식입니다. 주어진된 BMP 파일에 대 한 (1, 4, 8, 15, 24, 32 또는 64) 픽셀당 비트 수 파일 헤더에 지정 됩니다. 24 비트 / 픽셀을 사용 하 여 BMP 파일은 공통적입니다. BMP 파일은 일반적으로 압축 되지 않습니다 및 따라서 적합 하지 않습니다 전송에 대 한 인터넷을 통해.  

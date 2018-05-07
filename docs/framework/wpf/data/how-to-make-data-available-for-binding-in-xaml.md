@@ -1,14 +1,6 @@
 ---
-title: "방법: XAML의 바인딩에 사용할 수 있는 데이터 만들기"
-ms.custom: 
+title: '방법: XAML의 바인딩에 사용할 수 있는 데이터 만들기'
 ms.date: 01/29/2018
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -16,22 +8,16 @@ helpviewer_keywords:
 - data binding [WPF], making data available for binding
 - binding data [WPF], making data available for
 ms.assetid: 7103c2e8-0e31-4a13-bf12-ca382221a8d5
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 4f4e8e785b246e191ae8052f676331ea116b8c0d
-ms.sourcegitcommit: 973a12d1e6962cd9a9c263fbfaad040ec8267fe9
+ms.openlocfilehash: dd66fb2f96f8c42fea36afaeda0aaf35a2adbace
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/22/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-make-data-available-for-binding-in-xaml"></a>방법: XAML의 바인딩에 사용할 수 있는 데이터 만들기
 이 항목에는 여러 가지 방법을 사용할 수 있게 만드는 데이터에 대 한 바인딩에서는 설명 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]응용 프로그램의 필요에 따라 합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  있는 경우는 [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] 개체에서 바인딩할 원하는 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], 사용할 수 있게 만드는 개체 바인딩 리소스로 정의 하 고 지정 하는 것 방법 중 하나는 `x:Key`합니다. 다음 예제는 `Person` 라는 문자열 속성이 있는 개체 `PersonName`합니다. `Person` 개체를 포함 하는 강조 표시 된 줄에서 표시 되는 `<src>` 요소 라는 네임 스페이스에 정의 되어 `SDKSample`합니다.  
   
  [!code-xaml[SimpleBinding#Instantiation](../../../../samples/snippets/csharp/VS_Snippets_Wpf/SimpleBinding/CSharp/Page1.xaml?highlight=9,37)]  

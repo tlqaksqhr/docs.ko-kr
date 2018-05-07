@@ -1,22 +1,12 @@
 ---
-title: "방법: 특정 특성 (Visual Basic)으로 요소 찾기"
-ms.custom: 
+title: '방법: 특정 특성 (Visual Basic)으로 요소 찾기'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 59fb7c19-d42f-40eb-8cf8-f1d5b9658eb7
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 97842cc0c42ca531c0965914d086f4c2a1faa6f8
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: ea5221553e2bb4fd624ca6b10e615c5766bfcb0f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-find-an-element-with-a-specific-attribute-visual-basic"></a>방법: 특정 특성 (Visual Basic)으로 요소 찾기
 이 항목에서는 특정 값을 가진 특성이 포함된 요소를 찾는 방법을 보여 줍니다.  

@@ -1,13 +1,6 @@
 ---
-title: "응용 프로그램 추적 및 조율"
-ms.custom: 
+title: 응용 프로그램 추적 및 조율
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -20,16 +13,13 @@ helpviewer_keywords:
 - performance monitoring, tracing code
 - Trace class, instrumentation for .NET applications
 ms.assetid: 773b6fc4-9013-4322-b728-5dec7a72e743
-caps.latest.revision: "21"
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 20eea5ed6f69c17466aeb33617f418ac71a3e1b2
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 33d940a051c3185d8a3a04e77ea5899de0475ffc
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tracing-and-instrumenting-applications"></a>응용 프로그램 추적 및 조율
 추적은 실행되는 동안 응용 프로그램의 실행을 모니터링할 수 있는 방법입니다. 개발할 때 .NET Framework 응용 프로그램에 추적 및 디버깅 계측을 추가할 수 있으며, 응용 프로그램을 개발하는 동안 및 배포한 후에 해당 계측을 모두 사용할 수 있습니다. <xref:System.Diagnostics.Trace?displayProperty=nameWithType>, <xref:System.Diagnostics.Debug?displayProperty=nameWithType> 및 <xref:System.Diagnostics.TraceSource?displayProperty=nameWithType> 클래스를 사용하여 나중에 분석할 수 있도록 오류 및 응용 프로그램 실행 정보를 로그, 텍스트 파일 또는 다른 장치에 기록할 수 있습니다.  
@@ -53,7 +43,7 @@ ms.lasthandoff: 12/22/2017
  <xref:System.Diagnostics.Trace> 및 <xref:System.Diagnostics.Debug> 클래스는 개발 중이나 배포 후에 응용 프로그램 성능을 모니터링하고 검사할 수 있는 수단을 제공합니다. 예를 들어, 배포된 응용 프로그램에서 특정 동작 유형(예: 새 데이터베이스 연결 만들기)이 발생할 때 <xref:System.Diagnostics.Trace> 클래스를 사용하여 해당 동작을 추적할 수 있으므로 응용 프로그램의 효율성을 모니터링할 수 있습니다.  
   
 ## <a name="code-tracing-and-debugging"></a>코드 추적 및 디버깅  
- 개발하는 동안 <xref:System.Diagnostics.Debug> 클래스의 출력 메서드를 사용하여 Visual Studio IDE(통합 개발 환경)의 출력 창에 메시지를 표시할 수 있습니다. 예:  
+ 개발하는 동안 <xref:System.Diagnostics.Debug> 클래스의 출력 메서드를 사용하여 Visual Studio IDE(통합 개발 환경)의 출력 창에 메시지를 표시할 수 있습니다. 예를 들어:  
   
 ```vb  
 Trace.WriteLine("Hello World!")  

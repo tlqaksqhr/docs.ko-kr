@@ -1,13 +1,6 @@
 ---
 title: pInvokeStackImbalance MDA
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - signatures, platform invoke
 - stack depth
@@ -17,16 +10,13 @@ helpviewer_keywords:
 - PInvokeStackImbalance MDA
 - managed debugging assistants (MDAs), platform invoke
 ms.assetid: 34ddc6bd-1675-4f35-86aa-de1645d5c631
-caps.latest.revision: "16"
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: b9da05a84568a6168ed9f450afa48aa6864ed575
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 9938db3f4a3d054fde52139c166fb6a2e2a402df
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="pinvokestackimbalance-mda"></a>pInvokeStackImbalance MDA
 `pInvokeStackImbalance` MDA(관리 디버깅 도우미)는 <xref:System.Runtime.InteropServices.DllImportAttribute> 특성에 지정된 호출 규칙과 관리되는 서명의 매개 변수 선언을 기준으로 CLR에서 플랫폼 호출 후의 스택 깊이가 예상 스택 깊이와 일치하지 않음을 감지할 때 활성화됩니다.  

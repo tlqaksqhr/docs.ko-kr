@@ -1,24 +1,14 @@
 ---
 title: Visual Basic의 문자열 소개
-ms.custom: ''
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - strings [Visual Basic], about strings
 ms.assetid: c1b0f6b4-9717-426b-a3db-957e57a60764
-caps.latest.revision: 13
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 8f7eebce572717f38aa185942b263070e8b51753
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 2abe1069f251d88b692ab9d3d71ca8020cba2898
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="introduction-to-strings-in-visual-basic"></a>Visual Basic의 문자열 소개
 이 섹션에서는 Visual Basic에서 문자열 사용에 대 한 기본 개념을 설명 합니다.  

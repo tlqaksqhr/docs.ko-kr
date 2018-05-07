@@ -1,38 +1,24 @@
 ---
-title: "COM 응용 프로그램과 통합 개요"
-ms.custom: 
+title: COM 응용 프로그램과 통합 개요
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - COM [WCF], integration overview
 ms.assetid: 02c5697f-6e2e-47d6-b715-f3a28aebfbd5
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 5b20ae5329f08e9391fd7b93218c44c3c1978a48
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: c789d4a52da9b2785fb5919a674bf19f23d23509
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="integrating-with-com-applications-overview"></a>COM 응용 프로그램과 통합 개요
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]은 관리 코드 개발자에게 연결된 응용 프로그램을 만들 수 있는 풍부한 환경을 제공합니다. 하지만 관리되지 않는 COM 기반 코드에 이미 상당한 투자를 하여 마이그레이션을 원하지 않을 시에는 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 서비스 모니커를 사용하여 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 웹 서비스를 기존 코드에 바로 통합할 수도 있습니다. 서비스 모니커는 Office VBA, Visual Basic 6.0 또는 Visual C++ 6.0과 같은 다양한 범위의 COM 기반 개발 환경에서 사용할 수 있습니다.  
+Windows Communication Foundation (WCF)은 관리 코드 개발자와 연결 된 응용 프로그램을 만들기 위한 풍부한 환경 제공 합니다. 그러나 관리 되지 않는 COM 기반 코드에 이미 상당한 투자 하 고 마이그레이션할 하지 않으려는 경우 통합할 수도 있습니다 WCF 웹 서비스 기존 코드에 직접 WCF 서비스 모니커를 사용 하 여 합니다. 서비스 모니커는 Office VBA, Visual Basic 6.0 또는 Visual C++ 6.0과 같은 다양한 범위의 COM 기반 개발 환경에서 사용할 수 있습니다.  
   
 > [!NOTE]
->  서비스 모니커에서는 모든 통신에 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 통신 채널을 사용합니다. 이 채널의 보안 및 ID 메커니즘은 표준 COM 및 DCOM 프록시에 사용되는 메커니즘과 다릅니다. 또한 서비스 모니커에서는 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 통신 채널을 사용하기 때문에 모든 호출에 대한 기본 시간 제한은 1분입니다.  
+>  서비스 모니커는 모든 통신에 대 한 WCF 통신 채널을 사용합니다. 이 채널의 보안 및 ID 메커니즘은 표준 COM 및 DCOM 프록시에 사용되는 메커니즘과 다릅니다. 또한 서비스 모니커는 WCF 통신 채널을 기본 제한 시간을 사용 하기 때문에 모든 호출에 대해 1 분입니다.  
   
- 관리되지 않는 개발자에게 `GetObject` 웹 서비스 호출을 위한 강력한 형식의 COM별 접근 방식을 제공하려면 서비스 모니커를 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 함수와 함께 사용합니다. 이를 위해서는 사용할 바인딩 및 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 웹 서비스 계약에 대한 로컬 COM 노출 정의가 필요합니다. 처음 메서드를 호출할 때 COM 프로그래머에 대해 이 채널이 투명하게 생성되지만, 다른 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 클라이언트와 마찬가지로 서비스 모니커는 서비스에 대한 형식화된 채널을 생성합니다.  
+ 서비스 모니커는 서비스와 함께 사용 되는 `GetObject` WCF 웹 서비스 호출 하는 강력한 형식의 COM 별 접근 방식으로 관리 되지 않는 개발자를 제공 하는 함수입니다. 로컬, 사용할 바인딩 및 WCF 웹 서비스 계약의 COM 노출 정의가 필요 합니다. 다른 WCF 클라이언트와 같은 서비스 모니커는 서비스의 첫 번째 메서드 호출 때 COM 프로그래머에 게 투명 하 게이 채널 생성 되지만 서비스에 대 한 형식화 된 채널을 구성 해야 합니다.  
   
- 또한 다른 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 클라이언트와 공통적으로, 모니커를 사용하면 응용 프로그램에서 서비스와 통신할 주소, 바인딩 및 계약을 지정합니다. 계약은 다음 방법 중 하나로 지정할 수 있습니다.  
+ 다른 WCF 클라이언트, 모니커를 사용 하는 경우, 공통 된 응용 프로그램 주소, 바인딩 및 서비스와 통신 하는 계약을 지정 합니다. 계약은 다음 방법 중 하나로 지정할 수 있습니다.  
   
 -   형식화된 계약 – 계약이 클라이언트 컴퓨터에 COM 노출 형식으로 등록됩니다.  
   
@@ -64,7 +50,7 @@ ms.lasthandoff: 12/22/2017
 |`serializer`|"xml" 또는 "datacontract" serializer 사용을 지정합니다.|  
   
 > [!NOTE]
->  서비스 모니커를 완전한 COM 기반 클라이언트와 함께 사용하더라도 서비스 모니커를 사용하려면 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 및 지원 .NET Framework 2.0이 클라이언트 컴퓨터에 설치되어 있어야 합니다. 또한 서비스 모니커를 사용하는 클라이언트 응용 프로그램에서 올바른 버전의 .NET Framework 런타임을 로드해야 하는 점도 중요합니다. Office 응용 프로그램에서 모니커를 사용할 때 올바른 프레임워크 버전이 로드되도록 하기 위해 구성 파일이 필요할 수 있습니다. 예를 들어 Excel을 사용하는 경우, 다음 텍스트가 Excel.exe 파일과 동일한 디렉터리의 Excel.exe.config라는 파일에 있어야 합니다.  
+>  완전히 COM 기반 클라이언트를 사용 하는 경우에 클라이언트 컴퓨터에 설치 되는 WCF 및 지원.NET Framework 2.0 서비스 모니커가 필요 합니다. 또한 서비스 모니커를 사용하는 클라이언트 응용 프로그램에서 올바른 버전의 .NET Framework 런타임을 로드해야 하는 점도 중요합니다. Office 응용 프로그램에서 모니커를 사용할 때 올바른 프레임워크 버전이 로드되도록 하기 위해 구성 파일이 필요할 수 있습니다. 예를 들어 Excel을 사용하는 경우, 다음 텍스트가 Excel.exe 파일과 동일한 디렉터리의 Excel.exe.config라는 파일에 있어야 합니다.  
 >   
 >  `<?xml version="1.0" encoding="utf-8"?>`  
 >   

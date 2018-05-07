@@ -1,11 +1,7 @@
 ---
-title: "ResetSecurity 함수 (관리 되지 않는 API 참조)"
-description: "ResetSecurity 함수를 현재 스레드에서 가장 토큰을 지정합니다."
+title: ResetSecurity 함수 (관리 되지 않는 API 참조)
+description: ResetSecurity 함수를 현재 스레드에서 가장 토큰을 지정합니다.
 ms.date: 11/06/2017
-ms.prod: .net-framework
-ms.technology:
-- dotnet-clr
-ms.topic: reference
 api_name:
 - ResetSecurity
 api_location:
@@ -20,14 +16,11 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: bacee65633d25e705d978d3902a6804516a88bf4
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 31e42b9e39ddb43025e18888572c394d742e38cf
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="resetsecurity-function"></a>ResetSecurity 함수
 현재 스레드의에 제공 된 가장 토큰을 지정합니다.   
@@ -58,7 +51,7 @@ HRESULT ResetSecurity (
   
  **헤더:** WMINet_Utils.idl  
   
- **.NET framework 버전:**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **.NET framework 버전:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>참고자료  
 [WMI 및 성능 카운터 (관리 되지 않는 API 참조)](index.md)

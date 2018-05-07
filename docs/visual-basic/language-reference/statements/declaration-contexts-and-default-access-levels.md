@@ -1,11 +1,6 @@
 ---
-title: "선언 컨텍스트 및 기본 액세스 수준(Visual Basic)"
+title: 선언 컨텍스트 및 기본 액세스 수준(Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - module level, defined
 - declaration contexts, Visual Basic
@@ -14,14 +9,11 @@ helpviewer_keywords:
 - access levels, Visual Basic
 - access levels, default levels
 ms.assetid: bf63b96e-e825-4745-88c8-5dae222728db
-caps.latest.revision: "8"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: b89b74a6c0393f6a52a0b5c1ddf6f66c505564ba
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: b30b1068fe662d5f0318a1712dc4690b79bd739d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="declaration-contexts-and-default-access-levels-visual-basic"></a>선언 컨텍스트 및 기본 액세스 수준(Visual Basic)
 이 항목에서는 있는 Visual Basic 형식과 다른 형식 내에서 선언 될 수 있으며 어떤 액세스 수준을 기본적으로 지정 하지 않은 경우를 설명 합니다.  
@@ -41,18 +33,18 @@ ms.lasthandoff: 11/21/2017
   
 |선언 요소|Namespace 수준|모듈 수준|프로시저 수준|  
 |----------------------|---------------------|------------------|---------------------|  
-|변수 ([Dim 문](../../../visual-basic/language-reference/statements/dim-statement.md))|허용 되지 않습니다.|`Private`(`Public` 에 `Structure`에서 허용 되지 않음, `Interface`)|`Public`|  
-|상수 ([Const 문](../../../visual-basic/language-reference/statements/const-statement.md))|허용 되지 않습니다.|`Private`(`Public` 에 `Structure`에서 허용 되지 않음, `Interface`)|`Public`|  
+|변수 ([Dim 문](../../../visual-basic/language-reference/statements/dim-statement.md))|허용 되지 않습니다.|`Private` (`Public` 에 `Structure`에서 허용 되지 않음, `Interface`)|`Public`|  
+|상수 ([Const 문](../../../visual-basic/language-reference/statements/const-statement.md))|허용 되지 않습니다.|`Private` (`Public` 에 `Structure`에서 허용 되지 않음, `Interface`)|`Public`|  
 |열거형 ([Enum 문](../../../visual-basic/language-reference/statements/enum-statement.md))|`Friend`|`Public`|허용 되지 않습니다.|  
 |클래스 ([Class 문](../../../visual-basic/language-reference/statements/class-statement.md))|`Friend`|`Public`|허용 되지 않습니다.|  
 |구조 ([문을 구조체](../../../visual-basic/language-reference/statements/structure-statement.md))|`Friend`|`Public`|허용 되지 않습니다.|  
 |모듈 ([Module 문](../../../visual-basic/language-reference/statements/module-statement.md))|`Friend`|허용 되지 않습니다.|허용 되지 않습니다.|  
 |인터페이스 ([Interface 문](../../../visual-basic/language-reference/statements/interface-statement.md))|`Friend`|`Public`|허용 되지 않습니다.|  
 |프로시저 ([문을 작동](../../../visual-basic/language-reference/statements/function-statement.md), [Sub 문](../../../visual-basic/language-reference/statements/sub-statement.md))|허용 되지 않습니다.|`Public`|허용 되지 않습니다.|  
-|외부 참조 ([선언 문의](../../../visual-basic/language-reference/statements/declare-statement.md))|허용 되지 않습니다.|`Public`(에 사용할 수 없습니다 `Interface`)|허용 되지 않습니다.|  
-|연산자 ([Operator 문](../../../visual-basic/language-reference/statements/operator-statement.md))|허용 되지 않습니다.|`Public`(에 사용할 수 없습니다 `Interface` 또는 `Module`)|허용 되지 않습니다.|  
+|외부 참조 ([선언 문의](../../../visual-basic/language-reference/statements/declare-statement.md))|허용 되지 않습니다.|`Public` (에 사용할 수 없습니다 `Interface`)|허용 되지 않습니다.|  
+|연산자 ([Operator 문](../../../visual-basic/language-reference/statements/operator-statement.md))|허용 되지 않습니다.|`Public` (에 사용할 수 없습니다 `Interface` 또는 `Module`)|허용 되지 않습니다.|  
 |속성 ([Property 문](../../../visual-basic/language-reference/statements/property-statement.md))|허용 되지 않습니다.|`Public`|허용 되지 않습니다.|  
-|기본 속성 ([기본](../../../visual-basic/language-reference/modifiers/default.md))|허용 되지 않습니다.|`Public`(에 사용할 수 없습니다 `Module`)|허용 되지 않습니다.|  
+|기본 속성 ([기본](../../../visual-basic/language-reference/modifiers/default.md))|허용 되지 않습니다.|`Public` (에 사용할 수 없습니다 `Module`)|허용 되지 않습니다.|  
 |이벤트 ([Event 문](../../../visual-basic/language-reference/statements/event-statement.md))|허용 되지 않습니다.|`Public`|허용 되지 않습니다.|  
 |대리자 ([Delegate 문](../../../visual-basic/language-reference/statements/delegate-statement.md))|`Friend`|`Public`|허용 되지 않습니다.|  
   

@@ -1,24 +1,12 @@
 ---
-title: "방법: 데이터베이스 데이터 형식 지정"
-ms.custom: 
+title: '방법: 데이터베이스 데이터 형식 지정'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 2228fdad-7e6a-4b1b-b4d1-79d0198b7c28
-caps.latest.revision: "2"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 17ac588a8cf6815b244cf0b515603263f41b53ad
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 6b13af9be0fd3b10b4849694134b8cf8290a8dfb
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-specify-database-data-types"></a>방법: 데이터베이스 데이터 형식 지정
 사용 하 여는 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] <xref:System.Data.Linq.Mapping.ColumnAttribute.DbType%2A> 속성에는 <xref:System.Data.Linq.Mapping.ColumnAttribute> T-SQL 테이블 선언에는 열을 정의 하는 정확한 텍스트를 지정 하는 특성입니다.  

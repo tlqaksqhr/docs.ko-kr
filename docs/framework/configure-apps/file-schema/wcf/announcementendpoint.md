@@ -2,14 +2,14 @@
 title: '&lt;announcementEndpoint&gt;'
 ms.date: 03/30/2017
 ms.assetid: 034b7c69-a770-4502-8cef-38007bbcd025
-ms.openlocfilehash: 3ce141d70e17c14facd6aa8560c7b3424a8d9ae8
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
-ms.translationtype: HT
+ms.openlocfilehash: 15d60cd277b77fd52b2b77bfcdf4d0da1de7167a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ltannouncementendpointgt"></a>&lt;announcementEndpoint&gt;
-이 구성 요소는 고정 알림 계약이 있는 표준 끝점을 정의합니다. 서비스에서는 선택적으로 서비스가 열리거나 닫힐 때 각각 온라인 및 오프라인 알림 메시지를 보내 가용성을 알릴 수 있습니다. Windows Communication Foundation (WCF) 서비스에서 알림 끝점을 지정 된 [ \<serviceDiscovery >](../../../../../docs/framework/configure-apps/file-schema/wcf/servicediscovery.md) 공지를 수행 하려면 AnnouncementClient 사용 하 여 요소입니다. 다른 서비스에서 알림 역할을 실제로 수신 하려는 클라이언트는 [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] ; 서비스를 해당 클라이언트에 대 한 알림 끝점을 구성 해야 하므로 [ \<서비스 >](../../../../../docs/framework/configure-apps/file-schema/wcf/services.md) 섹션.  
+이 구성 요소는 고정 알림 계약이 있는 표준 끝점을 정의합니다. 서비스에서는 선택적으로 서비스가 열리거나 닫힐 때 각각 온라인 및 오프라인 알림 메시지를 보내 가용성을 알릴 수 있습니다. Windows Communication Foundation (WCF) 서비스에서 알림 끝점을 지정 된 [ \<serviceDiscovery >](../../../../../docs/framework/configure-apps/file-schema/wcf/servicediscovery.md) 공지를 수행 하려면 AnnouncementClient 사용 하 여 요소입니다. 다른 서비스에서 알림 수신 하려는 클라이언트를 WCF 서비스로; 실제로 역 따라서 해당 클라이언트에 대 한 알림 끝점을 구성할 필요가 [ \<서비스 >](../../../../../docs/framework/configure-apps/file-schema/wcf/services.md) 섹션.  
   
 \<system.ServiceModel>  
 \<d a r d >  

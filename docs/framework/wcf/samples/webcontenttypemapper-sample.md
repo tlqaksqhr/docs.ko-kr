@@ -1,27 +1,15 @@
 ---
-title: "WebContentTypeMapper 샘플"
-ms.custom: 
+title: WebContentTypeMapper 샘플
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: a4fe59e7-44d8-43c6-a1f8-40c45223adca
-caps.latest.revision: "15"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 34adf191d3edbff33fe989cf036c32104a6754ae
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 3b3d53b0fe619c74c5e7f3533194f4b5e7c18a16
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="webcontenttypemapper-sample"></a>WebContentTypeMapper 샘플
-이 샘플에서는 새 콘텐츠 형식을 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 메시지 본문 형식에 매핑하는 방법을 보여 줍니다.  
+이 샘플에는 새 콘텐츠 형식을 Windows Communication Foundation (WCF) 메시지 본문 형식에 매핑하는 방법을 보여 줍니다.  
   
  <xref:System.ServiceModel.Description.WebHttpEndpoint> 요소가 웹 메시지 인코더에 플러그 인되므로 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]는 동일한 끝점에서 JSON, XML 또는 원시 이진 메시지를 수신할 수 있습니다. 인코더는 요청의 HTTP 콘텐츠 형식을 확인하여 메시지의 본문 형식을 확인합니다. 이 샘플에서는 콘텐츠 형식과 본문 형식 간의 매핑을 사용자가 제어할 수 있게 하는 <xref:System.ServiceModel.Channels.WebContentTypeMapper> 클래스를 소개합니다.  
   
@@ -69,14 +57,14 @@ public class JsonContentTypeMapper : WebContentTypeMapper
   
 2.  에 설명 된 대로 WebContentTypeMapperSample.sln 솔루션을 구축 [Windows Communication Foundation 샘플 빌드](../../../../docs/framework/wcf/samples/building-the-samples.md)합니다.  
   
-3.  http://localhost/ServiceModelSamples/JCTMClientPage.htm으로 이동합니다. 프로젝트 디렉터리 내에서 브라우저를 사용하여 JCTMClientPage.htm을 열지 마십시오.  
+3.  로 이동 http://localhost/ServiceModelSamples/JCTMClientPage.htm (프로젝트 디렉터리 내에서 브라우저를 사용 하 여 JCTMClientPage.htm를 열지 않습니다).  
   
 > [!IMPORTANT]
 >  컴퓨터에 이 샘플이 이미 설치되어 있을 수도 있습니다. 계속하기 전에 다음(기본) 디렉터리를 확인하세요.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  이 디렉터리가 없으면 [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4(.NET Framework 4용 WCF(Windows Communication Foundation) 및 WF(Windows Workflow Foundation) 샘플)](http://go.microsoft.com/fwlink/?LinkId=150780) 로 이동하여 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 및 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플을 모두 다운로드하세요. 이 샘플은 다음 디렉터리에 있습니다.  
+>  이 디렉터리가로 이동 [Windows Communication Foundation (WCF) 및.NET Framework 4에 대 한 Windows WF (Workflow Foundation) 샘플](http://go.microsoft.com/fwlink/?LinkId=150780) 모든 Windows Communication Foundation (WCF)를 다운로드 하 고 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플. 이 샘플은 다음 디렉터리에 있습니다.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Ajax\WebContentTypeMapper`  
   

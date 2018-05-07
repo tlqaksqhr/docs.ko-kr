@@ -1,14 +1,6 @@
 ---
-title: "EmitManifest 메서드"
-ms.custom: 
+title: EmitManifest 메서드
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - EmitManifest
 - IALink.EmitManifest
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: fdebc1f3-b62e-4d9e-b775-8ccaa8ecb250
 topic_type:
 - apiref
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 11966eccfdbbdbab29d305915afd904a54f9c57b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 6df28cd3eaadfe62cd34e20e6e03d5a89e6bb425
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="emitmanifest-method"></a>EmitManifest 메서드
 최종 매니페스트를 내보냅니다. 다른 모든 파일을 가져오면 모든 옵션을 설정한 후이 메서드를 호출 합니다. 바인딩되지 않은 모듈에 대 한이 메서드를 호출 하지 마십시오.  

@@ -1,14 +1,6 @@
 ---
-title: "IMetaDataImport::EnumMemberRefs 메서드"
-ms.custom: 
+title: IMetaDataImport::EnumMemberRefs 메서드
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - IMetaDataImport.EnumMemberRefs
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: e97c97a6-6e4f-41f5-9af1-9b3cf3bdbd6b
 topic_type:
 - apiref
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: ea308db566e37d10cccdc2777b5a2374408a8ea6
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: c148ee0b2c96f2a387dac54eaff690ab3f05ebf8
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="imetadataimportenummemberrefs-method"></a>IMetaDataImport::EnumMemberRefs 메서드
 지정한 형식의 멤버를 나타내는 MemberRef 토큰을 열거합니다.  
@@ -70,7 +58,7 @@ HRESULT EnumMemberRefs (
   
 |HRESULT|설명|  
 |-------------|-----------------|  
-|`S_OK`|`EnumMemberRefs`성공적으로 반환 합니다.|  
+|`S_OK`|`EnumMemberRefs` 성공적으로 반환 합니다.|  
 |`S_FALSE`|열거할 MemberRef 토큰이 있습니다. 이 경우 `pcTokens` 는 0입니다.|  
   
 ## <a name="requirements"></a>요구 사항  
@@ -80,7 +68,7 @@ HRESULT EnumMemberRefs (
   
  **라이브러리:** MsCorEE.dll에 리소스로 포함  
   
- **.NET framework 버전:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>참고 항목  
  [IMetaDataImport 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)  

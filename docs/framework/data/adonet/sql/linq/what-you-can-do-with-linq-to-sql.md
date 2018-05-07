@@ -1,33 +1,21 @@
 ---
-title: "LINQ to SQL을- 사용하여 할 수 있는 작업"
-ms.custom: 
+title: LINQ to SQL을- 사용하여 할 수 있는 작업
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 061d98b2-baa7-4336-8ad2-c14de8134d91
-caps.latest.revision: "3"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: d8393866d8a13121913348404edd8e356f691b7e
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 719c2e5c97d3f8c64de53831ac50b2e7156a38fc
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="what-you-can-do-with-linq-to-sql"></a>LINQ to SQL을- 사용하여 할 수 있는 작업
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 에서는 SQL 개발자가 필요로 하는 모든 주요 기능을 지원합니다. 정보를 쿼리하고 테이블에 정보를 삽입, 업데이트 및 삭제할 수 있습니다.  
   
 ## <a name="selecting"></a>선택  
- 원하는 프로그래밍 언어로*쿼리를 작성한 다음 해당 쿼리를 실행하여 결과를 검색하는 간단한 방법으로 선택(*프로젝션 [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)] ) 작업을 수행할 수 있습니다. 필요한 모든 작업은[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 를 통해 사용자에게 익숙한 필수 SQL 작업으로 변환됩니다. 자세한 내용은 [LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/index.md)을 참조하십시오.  
+ 원하는 프로그래밍 언어로*쿼리를 작성한 다음 해당 쿼리를 실행하여 결과를 검색하는 간단한 방법으로 선택(* 프로젝션 [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)] ) 작업을 수행할 수 있습니다. 필요한 모든 작업은[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 를 통해 사용자에게 익숙한 필수 SQL 작업으로 변환됩니다. 자세한 내용은 [LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/index.md)을 참조하십시오.  
   
  다음 예제에서는 London의 고객사 이름이 검색되어 콘솔 창에 표시됩니다.  
   

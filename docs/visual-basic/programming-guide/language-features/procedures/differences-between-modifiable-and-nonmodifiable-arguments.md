@@ -1,12 +1,6 @@
 ---
-title: "수정할 수 있는 인수와 수정할 수 없는 인수 사이의 차이점(Visual Basic)"
-ms.custom: 
+title: 수정할 수 있는 인수와 수정할 수 없는 인수 사이의 차이점(Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - procedures [Visual Basic], arguments
 - procedure arguments
@@ -14,14 +8,11 @@ helpviewer_keywords:
 - Visual Basic code, procedures
 - arguments [Visual Basic], modifiable
 ms.assetid: 87b2df69-e1f7-4657-9caf-b3f48d693428
-caps.latest.revision: "16"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: ab108d064f5c6740f80328a9b6db4785334550ca
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 2b60d732b260ad0477946e41ece4cd182de541ce
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="differences-between-modifiable-and-nonmodifiable-arguments-visual-basic"></a>수정할 수 있는 인수와 수정할 수 없는 인수 사이의 차이점(Visual Basic)
 프로시저를 호출 하는 경우 일반적으로에 하나 이상의 인수를 전달 합니다. 각 인수는 기본 프로그래밍 요소에 해당합니다. 기본 요소와 인수 자체 수정 가능 하거나 수정할 수 있습니다.  

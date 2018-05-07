@@ -1,26 +1,17 @@
 ---
-title: "코드에서 요소 이름으로 사용되는 키워드(Visual Basic)"
-ms.custom: 
+title: 코드에서 요소 이름으로 사용되는 키워드(Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - Visual Basic code, naming conventions
 - keywords [Visual Basic], in code
 - name conflicts [Visual Basic]
 - element names [Visual Basic], in code
 ms.assetid: 2e4e8e02-23f7-49b9-a1c8-2b0402b6b525
-caps.latest.revision: "11"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: f410a0eaac0dcc034d406a89ed1d01a8f228a583
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 53c3172e8518115d001c23be2430fbc87ae1b60f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="keywords-as-element-names-in-code-visual-basic"></a>코드에서 요소 이름으로 사용되는 키워드(Visual Basic)
 모든 프로그램 요소-변수, 클래스 또는 멤버와 같은-제한 된 키워드와 동일한 이름을 가질 수 있습니다. 예를 들어 라는 변수를 만들 수 있습니다 `Loop`합니다. 그러나 구별 참조 하려면-제한 된와 동일한 이름이 있는 `Loop` 키워드-앞에 정규화 문자열 하거나 대괄호로 묶어야 합니다 (`[ ]`) 다음 예제와 같이 합니다.  

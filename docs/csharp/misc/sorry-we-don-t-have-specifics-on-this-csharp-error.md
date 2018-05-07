@@ -1,10 +1,6 @@
 ---
 title: 죄송 하지만 우리 않는&#39;t이 C# 오류에 대 한 구체적인 정보가
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 f1_keywords:
 - CS1583
 - CS0821
@@ -886,14 +882,11 @@ f1_keywords:
 helpviewer_keywords:
 - errors [C#], additional information
 ms.assetid: 48320e4a-6e17-45a6-9966-88c6ec89bd2f
-caps.latest.revision: 15
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: c6cabc4c619e6ace4c376fd125e7531f10bf9b88
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.openlocfilehash: 5e9c0aff2df5c46e707fa9f85506758327b58d80
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="sorry-we-don39t-have-specifics-on-this-c-error"></a>죄송 하지만 우리 않는&#39;t이 C# 오류에 대 한 구체적인 정보가
 죄송합니다. 이 오류에 대한 구체적인 정보가 없습니다. 오류 번호와 메시지 텍스트를 검색하여 웹에서 정보를 찾을 수 있습니다. 또는 다음이 포럼 중 하나를 사용 하 여 다른 개발자에 게 요청할 수 있습니다.  

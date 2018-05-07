@@ -1,28 +1,16 @@
 ---
-title: "작업 병렬 라이브러리 및 PLINQ의 ETW 이벤트"
-ms.custom: 
+title: 작업 병렬 라이브러리 및 PLINQ의 ETW 이벤트
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - tasks, ETW events
 ms.assetid: 87a9cff5-d86f-4e44-a06e-d12764d0dce2
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: a84fdb104296cf15b5f0d2d04f4ddd7ea1419643
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 3c5b372073b00f30312a83ae88ae0dbb6885d1a8
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="etw-events-in-task-parallel-library-and-plinq"></a>작업 병렬 라이브러리 및 PLINQ의 ETW 이벤트
 작업 병렬 라이브러리 및 PLINQ는 둘 다 Windows Performance Analyzer와 같은 도구를 사용하여 응용 프로그램을 프로파일링하고 응용 프로그램 문제를 해결하는 데 사용할 수 있는 ETW(Windows용 이벤트 추적) 이벤트를 생성합니다. 그러나 대부분의 경우 병렬 응용 프로그램 코드를 프로파일링하는 가장 좋은 방법은 [!INCLUDE[vsUltShort](../../../includes/vsultshort-md.md)]에서 [Concurrency 시각화](/visualstudio/profiling/concurrency-visualizer)를 사용하는 것입니다.  

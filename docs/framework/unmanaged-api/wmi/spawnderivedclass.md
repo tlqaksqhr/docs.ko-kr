@@ -1,11 +1,7 @@
 ---
-title: "SpawnDerivedClass 함수 (관리 되지 않는 API 참조)"
-description: "SpawnDerivedClass 함수는 개체에서 파생 된 새 개체를 만듭니다."
+title: SpawnDerivedClass 함수 (관리 되지 않는 API 참조)
+description: SpawnDerivedClass 함수는 개체에서 파생 된 새 개체를 만듭니다.
 ms.date: 11/06/2017
-ms.prod: .net-framework
-ms.technology:
-- dotnet-clr
-ms.topic: reference
 api_name:
 - SpawnDerivedClass
 api_location:
@@ -20,14 +16,11 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 51a0dd0013b1bb3898bcc81ee2d64be20a5b6ecc
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: fe93b7ee28db8151345871b0dd716d41227ed565
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="spawnderivedclass-function"></a>SpawnDerivedClass 함수
 지정된 된 개체에서 새로 파생된 클래스 개체를 만듭니다.    
@@ -75,7 +68,7 @@ HRESULT SpawnDerivedClass (
 
 이 함수에 대 한 호출을 래핑하는 [IWbemClassObject::SpawnDerivedClass](https://msdn.microsoft.com/library/aa391436(v=vs.85).aspx) 메서드.
 
-`ptr`생성 된 개체의 부모 클래스를 클래스 정의 해야 합니다. 반환 된 개체가 현재 개체의 하위 됩니다.
+`ptr` 생성 된 개체의 부모 클래스를 클래스 정의 해야 합니다. 반환 된 개체가 현재 개체의 하위 됩니다.
 
 반환 되는 새 개체 `ppNewClass` 현재 개체의 하위 클래스는 자동으로 됩니다. 이 동작을 재정의할 수 없습니다. 서브 클래스 (파생된 클래스)을 만들 수 있는 다른 메서드가 없는 합니다.
 
@@ -84,7 +77,7 @@ HRESULT SpawnDerivedClass (
   
  **헤더:** WMINet_Utils.idl  
   
- **.NET framework 버전:**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **.NET framework 버전:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>참고자료  
 [WMI 및 성능 카운터 (관리 되지 않는 API 참조)](index.md)

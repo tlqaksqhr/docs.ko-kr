@@ -1,28 +1,16 @@
 ---
-title: "성능 최적화: 컨트롤"
-ms.custom: 
+title: '성능 최적화: 컨트롤'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - controls [WPF], improving performance
 - container recycling [WPF]
 - user interface virtualization [WPF]
 ms.assetid: 45a31c43-ea8a-4546-96c8-0631b9934179
-caps.latest.revision: "22"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 1b8008d104437454f36f6f425634c40968d5481a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 9e4ceee26263a1d047aeda0881b955070de4326d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="optimizing-performance-controls"></a>성능 최적화: 컨트롤
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]에는 대부분의 Windows 응용 프로그램에 사용되는 일반적인 UI(사용자 인터페이스) 구성 요소가 다수 포함되어 있습니다. 이 항목에서는 UI의 성능을 향상시킬 수 있는 기술에 대해 설명합니다.  
@@ -35,7 +23,7 @@ ms.lasthandoff: 12/22/2017
   
  UI 가상화는 목록 컨트롤의 중요한 요소입니다. UI 가상화를 데이터 가상화와 혼동해서는 안 됩니다. UI 가상화의 경우 표시 가능한 항목만 메모리에 저장되지만 데이터 바인딩 시나리오에서는 전체 데이터 구조가 메모리에 저장됩니다. 반면 데이터 가상화의 경우 화면에 표시되는 데이터 항목만 메모리에 저장됩니다.  
   
- 기본적으로 UI 가상화에 대 한 사용 하도록 설정 된 <xref:System.Windows.Controls.ListView> 및 <xref:System.Windows.Controls.ListBox> 의 목록 항목이 데이터에 연결 되는 시기를 제어 합니다. <xref:System.Windows.Controls.TreeView>설정 하 여 가상화를 사용할 수는 <!--zz <xref:System.Windows.Controls.VirtualizingStackPanel.IsVirtualizing%2A?displayProperty=nameWithType> --> `IsVirtualizing` 연결 된 속성을 `true`합니다. 파생 되는 사용자 지정 컨트롤에 대 한 UI 가상화를 사용 하도록 설정 하려는 경우 <xref:System.Windows.Controls.ItemsControl> 기존 항목 사용 하는 컨트롤 또는 <xref:System.Windows.Controls.StackPanel> 클래스 같은 <xref:System.Windows.Controls.ComboBox>를 설정할 수 있습니다는 <xref:System.Windows.Controls.ItemsControl.ItemsPanel%2A> 를 <xref:System.Windows.Controls.VirtualizingStackPanel> 설정 <xref:System.Windows.Controls.VirtualizingPanel.IsVirtualizing%2A> 를`true`. 그러나 자신도 모르게 이러한 컨트롤의 UI 가상화 기능이 해제될 수 있습니다. UI 가상화는 다음과 같은 경우에 해제됩니다.  
+ 기본적으로 UI 가상화에 대 한 사용 하도록 설정 된 <xref:System.Windows.Controls.ListView> 및 <xref:System.Windows.Controls.ListBox> 의 목록 항목이 데이터에 연결 되는 시기를 제어 합니다. <xref:System.Windows.Controls.TreeView> 설정 하 여 가상화를 사용할 수는 <!--zz <xref:System.Windows.Controls.VirtualizingStackPanel.IsVirtualizing%2A?displayProperty=nameWithType> --> `IsVirtualizing` 연결 된 속성을 `true`합니다. 파생 되는 사용자 지정 컨트롤에 대 한 UI 가상화를 사용 하도록 설정 하려는 경우 <xref:System.Windows.Controls.ItemsControl> 기존 항목 사용 하는 컨트롤 또는 <xref:System.Windows.Controls.StackPanel> 클래스 같은 <xref:System.Windows.Controls.ComboBox>를 설정할 수 있습니다는 <xref:System.Windows.Controls.ItemsControl.ItemsPanel%2A> 를 <xref:System.Windows.Controls.VirtualizingStackPanel> 설정 <xref:System.Windows.Controls.VirtualizingPanel.IsVirtualizing%2A> 를`true`. 그러나 자신도 모르게 이러한 컨트롤의 UI 가상화 기능이 해제될 수 있습니다. UI 가상화는 다음과 같은 경우에 해제됩니다.  
   
 -   컨테이너의 항목에 직접 추가 됩니다는 <xref:System.Windows.Controls.ItemsControl>합니다. 예를 들어, 응용 프로그램을 명시적으로 추가 하는 경우 <xref:System.Windows.Controls.ListBoxItem> 개체는 <xref:System.Windows.Controls.ListBox>, <xref:System.Windows.Controls.ListBox> 가상화 하지 않습니다는 <xref:System.Windows.Controls.ListBoxItem> 개체입니다.  
   
@@ -57,7 +45,7 @@ ms.lasthandoff: 12/22/2017
   
 <a name="Supporting"></a>   
 ## <a name="supporting-bidirectional-virtualization"></a>양방향 가상화 지원  
- <xref:System.Windows.Controls.VirtualizingStackPanel>가로 또는 세로로 한 방향의 UI 가상화에 대 한 기본 제공 지원을 제공합니다. 컨트롤에 대 한 양방향 가상화를 사용 하려는 경우 확장 하는 사용자 지정 패널을 구현 해야는 <xref:System.Windows.Controls.VirtualizingStackPanel> 클래스입니다. <xref:System.Windows.Controls.VirtualizingStackPanel> 클래스와 같은 가상 메서드를 노출 <xref:System.Windows.Controls.VirtualizingStackPanel.OnViewportSizeChanged%2A>, <xref:System.Windows.Controls.VirtualizingStackPanel.LineUp%2A>, <xref:System.Windows.Controls.VirtualizingStackPanel.PageUp%2A>, 및 <xref:System.Windows.Controls.VirtualizingStackPanel.MouseWheelUp%2A>합니다. 이러한 가상 메서드를 사용 하 여 목록의 보이는 부분에서 변경 사항을 검색 하 고 적절 하 게 처리할 수 있습니다.  
+ <xref:System.Windows.Controls.VirtualizingStackPanel> 가로 또는 세로로 한 방향의 UI 가상화에 대 한 기본 제공 지원을 제공합니다. 컨트롤에 대 한 양방향 가상화를 사용 하려는 경우 확장 하는 사용자 지정 패널을 구현 해야는 <xref:System.Windows.Controls.VirtualizingStackPanel> 클래스입니다. <xref:System.Windows.Controls.VirtualizingStackPanel> 클래스와 같은 가상 메서드를 노출 <xref:System.Windows.Controls.VirtualizingStackPanel.OnViewportSizeChanged%2A>, <xref:System.Windows.Controls.VirtualizingStackPanel.LineUp%2A>, <xref:System.Windows.Controls.VirtualizingStackPanel.PageUp%2A>, 및 <xref:System.Windows.Controls.VirtualizingStackPanel.MouseWheelUp%2A>합니다. 이러한 가상 메서드를 사용 하 여 목록의 보이는 부분에서 변경 사항을 검색 하 고 적절 하 게 처리할 수 있습니다.  
   
 <a name="Optimizing"></a>   
 ## <a name="optimizing-templates"></a>템플릿 최적화  
@@ -67,7 +55,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="deferred-scrolling"></a>스크롤 지연  
  기본적으로 사용자가 스크롤 막대의 위치 조정 컨트롤을 끌면 콘텐츠 뷰가 지속적으로 업데이트됩니다.  컨트롤의 스크롤 속도가 느린 경우에는 스크롤 지연을 사용하는 것이 좋습니다.  스크롤 지연을 사용하면 사용자가 위치 조정 컨트롤을 놓을 때만 콘텐츠가 업데이트됩니다.  
   
- 지연 된 스크롤을 구현 하려면 설정는 <xref:System.Windows.Controls.ScrollViewer.IsDeferredScrollingEnabled%2A> 속성을 `true`합니다.  <xref:System.Windows.Controls.ScrollViewer.IsDeferredScrollingEnabled%2A>연결된 된 속성 이며에 설정 될 수 <xref:System.Windows.Controls.ScrollViewer> 및 가진 모든 컨트롤을 <xref:System.Windows.Controls.ScrollViewer> 컨트롤 템플릿에 합니다.  
+ 지연 된 스크롤을 구현 하려면 설정는 <xref:System.Windows.Controls.ScrollViewer.IsDeferredScrollingEnabled%2A> 속성을 `true`합니다.  <xref:System.Windows.Controls.ScrollViewer.IsDeferredScrollingEnabled%2A> 연결된 된 속성 이며에 설정 될 수 <xref:System.Windows.Controls.ScrollViewer> 및 가진 모든 컨트롤을 <xref:System.Windows.Controls.ScrollViewer> 컨트롤 템플릿에 합니다.  
   
 <a name="Controls"></a>   
 ## <a name="controls-that-implement-performance-features"></a>성능 기능을 구현하는 컨트롤  

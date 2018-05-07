@@ -1,14 +1,6 @@
 ---
-title: "ICorProfilerInfo4::GetILToNativeMapping2 메서드"
-ms.custom: 
+title: ICorProfilerInfo4::GetILToNativeMapping2 메서드
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICorProfilerInfo4.GetILToNativeMapping2
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: 756c1c25-08a7-4060-9798-dbeaa2f3bee5
 topic_type:
 - apiref
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 2d5ce076ad66214f786f7e221a0443edf7986c5d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: fba81500749a16a59405edaaa2ee1d12d86229f2
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="icorprofilerinfo4getiltonativemapping2-method"></a>ICorProfilerInfo4::GetILToNativeMapping2 메서드
 지정된 함수의 JIT 다시 컴파일된 버전에 포함된 코드에 대한 MSIL(Microsoft Intermediate Language) 오프셋과 네이티브 오프셋 간의 맵을 가져옵니다.  
@@ -67,7 +55,7 @@ HRESULT GetILToNativeMapping(
  [out] 각각 오프셋을 지정하는 `COR_DEBUG_IL_TO_NATIVE_MAP` 구조체의 배열입니다. `GetILToNativeMapping2` 메서드가 반환되면 `map`에 `COR_DEBUG_IL_TO_NATIVE_MAP` 구조체가 일부 또는 모두 포함됩니다.  
   
 ## <a name="remarks"></a>설명  
- `GetILToNativeMapping2`비슷합니다는 [icorprofilerinfo:: Getiltonativemapping](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getiltonativemapping-method.md) 메서드를 제외 하 고 프로파일러가 나중에 다시 컴파일된 함수의 ID를 지정 하는 허용 됩니다 해제 합니다.  
+ `GetILToNativeMapping2` 비슷합니다는 [icorprofilerinfo:: Getiltonativemapping](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getiltonativemapping-method.md) 메서드를 제외 하 고 프로파일러가 나중에 다시 컴파일된 함수의 ID를 지정 하는 허용 됩니다 해제 합니다.  
   
 > [!NOTE]
 >  [icorprofilerfunctioncontrol:: Setilinstrumentedcodemap](../../../../docs/framework/unmanaged-api/profiling/icorprofilerfunctioncontrol-setilinstrumentedcodemap-method.md) 에서 메서드를 구현 하지는 [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)]이므로 JIT 다시 컴파일된 함수가 다른 IL-네이티브 매핑을 사용할 수 없습니다는 원래 컴파일된 함수입니다. 따라서 [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)]에서는 0이 아닌 JIT 다시 컴파일된 ID를 사용하여 `GetILToNativeMapping2`를 호출할 수 없습니다.  
@@ -85,7 +73,7 @@ HRESULT GetILToNativeMapping(
   
  **라이브러리:** CorGuids.lib  
   
- **.NET framework 버전:**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **.NET framework 버전:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
 ## <a name="see-also"></a>참고 항목  
  [GetILToNativeMapping 메서드](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getiltonativemapping-method.md)  

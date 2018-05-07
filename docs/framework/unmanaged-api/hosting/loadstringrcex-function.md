@@ -1,14 +1,6 @@
 ---
-title: "LoadStringRCEx 함수"
-ms.custom: 
+title: LoadStringRCEx 함수
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - LoadStringRCEx
 api_location:
@@ -22,17 +14,13 @@ helpviewer_keywords:
 ms.assetid: bc789636-ca14-4f07-8f77-9305874d7495
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 9b046387b5ae365ece694509b302f7ac3a7e066a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 38c942b9a94c83f5a3316cf3ae3ccbbad2b0ec69
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="loadstringrcex-function"></a>LoadStringRCEx 함수
 HRESULT 값을 지정된 된 문화권에 대 한 적절 한 오류 메시지를 변환합니다.  
@@ -77,7 +65,7 @@ HRESULT LoadStringRCEx (
 |반환 코드|설명|  
 |-----------------|-----------------|  
 |S_OK|메서드가 완료되었습니다.|  
-|E_INVALIDARG|`szBuffer`매개 변수가 null 이면 또는 `iMax` 은 영 (0).|  
+|E_INVALIDARG|`szBuffer` 매개 변수가 null 이면 또는 `iMax` 은 영 (0).|  
   
 ## <a name="remarks"></a>설명  
  메서드가 성공적으로 완료 되지 않으면 `szBuffer` 빈 문자열을 포함 합니다.  
@@ -89,7 +77,7 @@ HRESULT LoadStringRCEx (
   
  **라이브러리:** MSCorEE.dll  
   
- **.NET framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>참고 항목  
  <xref:System.Globalization.CultureInfo.LCID%2A?displayProperty=nameWithType>  

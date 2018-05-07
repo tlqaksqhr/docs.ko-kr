@@ -1,14 +1,6 @@
 ---
-title: "GetRequestedRuntimeVersionForCLSID 함수"
-ms.custom: 
+title: GetRequestedRuntimeVersionForCLSID 함수
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - GetRequestedRuntimeVersionForCLSID
 api_location:
@@ -22,17 +14,13 @@ helpviewer_keywords:
 ms.assetid: 5bb12f9a-0612-434b-b4ed-2db636a20bec
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: be55754bc626ce24c51eec7b10d9f46aec92cfe5
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: e8d3a7168ce0ee3484384ae0e2d10ca00367fc9c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="getrequestedruntimeversionforclsid-function"></a>GetRequestedRuntimeVersionForCLSID 함수
 적절 한 공용 언어 런타임 정보를 가져옵니다 (CLR) 버전 지정 된 클래스에 대 한 `CLSID`합니다.  
@@ -79,14 +67,14 @@ HRESULT GetRequestedRuntimeVersionForCLSID (
 |E_INVALIDARG|매개 변수 중 하나는 잘못 된 유형 또는 미디어 형식에 있습니다.|  
 |ERROR_INSUFFICIENT_BUFFER|`pVersion` 버퍼를 전체 버전 문자열을 보관할 만큼 크지 않습니다.|  
 |REGDB_E_CLASSNOTREG|등록 된 지정 된 클래스가 없습니다 `CLSID`합니다.|  
-|E_POINTER|`dwLength`매개 변수가 null 이면 또는 `cchBuffer` 버전 문자열을 저장할 수 있도록 충분히 큰 있지만 `pVersion` null입니다.|  
+|E_POINTER|`dwLength` 매개 변수가 null 이면 또는 `cchBuffer` 버전 문자열을 저장할 수 있도록 충분히 큰 있지만 `pVersion` null입니다.|  
   
 ## <a name="requirements"></a>요구 사항  
  **플랫폼:** 참조 [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)합니다.  
   
  **헤더:** MSCorEE.h  
   
- **.NET framework 버전:**[!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]  
+ **.NET framework 버전:** [!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]  
   
 ## <a name="see-also"></a>참고 항목  
  [사용되지 않는 CLR 호스팅 함수](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)

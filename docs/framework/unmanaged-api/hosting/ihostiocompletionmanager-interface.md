@@ -1,14 +1,6 @@
 ---
-title: "IHostIoCompletionManager 인터페이스"
-ms.custom: 
+title: IHostIoCompletionManager 인터페이스
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - IHostIoCompletionManager
 api_location:
@@ -22,17 +14,13 @@ helpviewer_keywords:
 ms.assetid: c28d1983-83f7-46e2-990f-dbb9dc07c818
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: cbb4b87b57d4f5e11a9dab04d20dfb73170bb4a5
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 194dcec6ea484e9cd2d3a17093c1eceb16c8f6c9
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ihostiocompletionmanager-interface"></a>IHostIoCompletionManager 인터페이스
 공용 언어 런타임 (CLR) 호스트에서 제공 하는 I/O 완료 포트와 상호 작용할 수 있도록 하는 메서드를 제공 합니다.  
@@ -54,7 +42,7 @@ ms.lasthandoff: 12/22/2017
 |[SetMinThreads 메서드](../../../../docs/framework/unmanaged-api/hosting/ihostiocompletionmanager-setminthreads-method.md)|I/O 완료를 할당할 호스트 하는 스레드의 최소 수를 설정 합니다.|  
   
 ## <a name="remarks"></a>설명  
- `IHostIoCompletionManager`에 해당 하는 `ICLRIoCompletionManager` CLR에서 구현 된 인터페이스입니다. 메서드를 호출 하는 CLR `IHostIoCompletionManager` 핸들의 메서드를 호출 하는 호스트 및 호스트를 제공 하는 포트에 바인딩할 `ICLRIoCompletionManager` 입/출력 요청 완료를 보고 합니다.  
+ `IHostIoCompletionManager` 에 해당 하는 `ICLRIoCompletionManager` CLR에서 구현 된 인터페이스입니다. 메서드를 호출 하는 CLR `IHostIoCompletionManager` 핸들의 메서드를 호출 하는 호스트 및 호스트를 제공 하는 포트에 바인딩할 `ICLRIoCompletionManager` 입/출력 요청 완료를 보고 합니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **플랫폼:** 참조 [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)합니다.  
@@ -63,7 +51,7 @@ ms.lasthandoff: 12/22/2017
   
  **라이브러리:** MSCorEE.dll에 리소스로 포함  
   
- **.NET framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>참고 항목  
  [호스팅 인터페이스](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)

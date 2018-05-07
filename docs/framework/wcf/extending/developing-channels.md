@@ -1,27 +1,15 @@
 ---
-title: "채널 개발"
-ms.custom: 
+title: 채널 개발
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 0513af9f-a0c2-457b-9a50-5b6bfee48513
-caps.latest.revision: "17"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 42c89ae71078a3ddfbe7e85273a6f62879781c80
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: def60ec0cce8da71e7e2d98ff456420949360aed
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="developing-channels"></a>채널 개발
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 응용 프로그램 계층과 함께 사용할 수 있는 프로토콜 또는 전송 채널을 개발하려면 몇 가지 단계를 거쳐야 합니다. 이 항목에서는 이러한 단계에 대해 설명하고 자세한 내용을 참조할 수 있는 구체적인 항목을 알려 줍니다. 이 항목에서 설명 하는 다양 한 형식과 채널 모델을 이해 하려면 참조 [채널 모델 개요](../../../../docs/framework/wcf/extending/channel-model-overview.md)합니다. 전체 전송 채널 샘플을 보려면 [전송: UDP](../../../../docs/framework/wcf/samples/transport-udp.md)합니다.  
+Windows Communication Foundation (WCF)와 사용할 수 있는 프로토콜 또는 전송 채널을 개발 하 응용 프로그램 계층에는 여러 단계가 필요 합니다. 이 항목에서는 이러한 단계에 대해 설명하고 자세한 내용을 참조할 수 있는 구체적인 항목을 알려 줍니다. 이 항목에서 설명 하는 다양 한 형식과 채널 모델을 이해 하려면 참조 [채널 모델 개요](../../../../docs/framework/wcf/extending/channel-model-overview.md)합니다. 전체 전송 채널 샘플을 보려면 [전송: UDP](../../../../docs/framework/wcf/samples/transport-udp.md)합니다.  
   
 ## <a name="the-channel-development-task-list"></a>채널 개발 작업 목록  
  사용자 정의 채널을 만드는 단계는 다음과 같습니다. 모든 채널에 대해 다음을 수행해야 합니다.  

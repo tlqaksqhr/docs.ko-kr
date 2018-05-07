@@ -1,14 +1,6 @@
 ---
-title: "GetCachePath 함수"
-ms.custom: 
+title: GetCachePath 함수
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - GetCachePath
 api_location:
@@ -24,17 +16,13 @@ helpviewer_keywords:
 ms.assetid: d977ad29-6619-42e1-b0be-bc25ea950e80
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 371dab83d7441681b9d6bd5723bcd8c3caadb50e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 42bae646b0b1cdd451e01d55ed5b218f3660bb5a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="getcachepath-function"></a>GetCachePath 함수
 지정된 된 플래그를 사용 하 여 캐시 된 어셈블리에 경로 가져옵니다.  
@@ -64,7 +52,7 @@ HRESULT GetCachePath (
   
  **헤더:** Fusion.h  
   
- **.NET framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>참고 항목  
  [ASM_CACHE_FLAGS 열거형](../../../../docs/framework/unmanaged-api/fusion/asm-cache-flags-enumeration.md)  

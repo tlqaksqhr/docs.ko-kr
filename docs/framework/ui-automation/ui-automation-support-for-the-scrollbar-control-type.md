@@ -1,28 +1,19 @@
 ---
-title: "ScrollBar 컨트롤 형식에 대한 UI 자동화 지원"
-ms.custom: 
+title: ScrollBar 컨트롤 형식에 대한 UI 자동화 지원
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-bcl
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - UI Automation, Scroll Bar control type
 - control types, Scroll Bar
 - Scroll Bar control type
 ms.assetid: 329891d7-b609-49e6-920a-09ea8a627d07
-caps.latest.revision: "24"
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: 3d173c946cc511473fb8ac8ef43cba40d0ca8777
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 96760b1e4d2ad73374eb3cc2a2df42df13023c3f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ui-automation-support-for-the-scrollbar-control-type"></a>ScrollBar 컨트롤 형식에 대한 UI 자동화 지원
 > [!NOTE]
@@ -68,7 +59,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="required-ui-automation-control-patterns"></a>필요한 UI 자동화 컨트롤 패턴  
  다음 표에서는 스크롤 막대 컨트롤에서 지원되는 데 필요한 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 컨트롤 패턴을 나열하여 보여 줍니다. 컨트롤 패턴에 대한 자세한 내용은 [UI Automation Control Patterns Overview](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)를 참조하세요. 스크롤 막대가 마우스 조작의 컨트롤로만 사용되면 컨트롤 패턴을 지원하지 않습니다. 응용 프로그램 내에서 슬라이더 컨트롤로 사용되는 경우 Slider 컨트롤 형식이 지정되어야 합니다.  
   
-|컨트롤 패턴|지원|노트|  
+|컨트롤 패턴|Support(지원)|노트|  
 |---------------------|-------------|-----------|  
 |<xref:System.Windows.Automation.Provider.IScrollProvider>|Never|Scroll 컨트롤 패턴은 스크롤 막대에서 직접 지원되지 않습니다.|  
 |<xref:System.Windows.Automation.Provider.IRangeValueProvider>|종속|이 기능은 스크롤 막대를 보유하는 컨테이너에서 Scroll 컨트롤 패턴이 지원되지 않는 경우에만 필요합니다.|  

@@ -1,27 +1,15 @@
 ---
-title: "WCF 라이브러리 프로젝트 배포"
-ms.custom: 
+title: WCF 라이브러리 프로젝트 배포
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 9f9222fe-d358-443c-9a49-12c5498e35e7
-caps.latest.revision: "4"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: bbbbff1d88559f8ab35caa48fcb04ff1cd7bf015
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 08a1d794aeeea1a41cd1eb3abf298f3f4a0f6d15
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="deploying-a-wcf-library-project"></a>WCF 라이브러리 프로젝트 배포
-이 항목에서는 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 서비스 라이브러리 프로젝트를 배포하는 방법에 대해 설명합니다.  
+이 항목에서는 Windows Communication Foundation (WCF) 서비스 라이브러리 프로젝트를 배포 하는 방법에 대해 설명 합니다.  
   
 ## <a name="deploying-a-wcf-service-library"></a>WCF 서비스 라이브러리 배포  
  [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 서비스 라이브러리는 DDL(동적 연결 라이브러리)입니다. 따라서 자체적으로 실행될 수 없으며 호스팅 환경에서 배포되어야 합니다. 이 프로세스에 대 한 자세한 내용은 참조 [호스팅 및 WCF 서비스를 사용해](http://go.microsoft.com/fwlink/?LinkId=99932)합니다.  

@@ -1,24 +1,12 @@
 ---
-title: "Interop 확장성"
-ms.custom: 
+title: Interop 확장성
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 384a012a-d92d-40d1-b1a5-9c18ca932fcc
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 50da86434dcbf380caee7f8ca902eb7a03c20dfd
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ac74f4f8d431e709e3838342997e2c3039a4cdb3
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="interop-extensibility"></a>Interop 확장성
 이 단원에는 사용자 지정 상호 운용성을 보여 주는 샘플이 포함되어 있습니다.  

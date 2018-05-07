@@ -1,29 +1,15 @@
 ---
 title: 사용자 지정 바인딩
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - Windows Communication Foundation, endpoints
 - Windows Communication Foundation, configuration
 ms.assetid: 58532b6d-4eea-4a4f-854f-a1c8c842564d
-caps.latest.revision: 33
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: f5fc38becb4a737ada5102c187ddeaac73aaceb1
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 6880b04a3f8a82c1e109c32674804c5241913a8a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="custom-bindings"></a>사용자 지정 바인딩
 시스템에서 제공하는 바인딩 중 하나가 사용자의 서비스 요구 사항을 충족하지 않을 때 <xref:System.ServiceModel.Channels.CustomBinding> 클래스를 사용할 수 있습니다. 모든 바인딩은 정렬된 바인딩 요소 집합으로부터 생성됩니다. 사용자 지정 바인딩은 시스템 제공 바인딩 요소로부터 만들거나 사용자 정의 사용자 지정 바인딩 요소를 포함할 수 있습니다. 예를 들어 사용자 지정 바인딩 요소를 사용하여 서비스 끝점에서 새 전송 또는 새 인코더를 사용하도록 설정할 수 있습니다. 작업 예제를 보려면 [사용자 지정 바인딩 샘플](http://msdn.microsoft.com/library/657e8143-beb0-472d-9cfe-ed1a19c2ab08)합니다. 자세한 내용은 참조 [ \<customBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)합니다.  
@@ -55,7 +41,7 @@ ms.lasthandoff: 04/28/2018
   
     -   <xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement>  
   
- 맨 아래에는 필수 전송 요소가 있습니다. 고유의 전송을 사용하거나 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]에서 제공하는 다음 전송 바인딩 요소 중 하나를 사용할 수 있습니다.  
+ 맨 아래에는 필수 전송 요소가 있습니다. 고유의 전송을 또는 Windows Communication Foundation (WCF)를 제공 하는 다음 전송 바인딩 요소 중 하나를 사용할 수 있습니다.  
   
 -   <xref:System.ServiceModel.Channels.TcpTransportBindingElement>  
   

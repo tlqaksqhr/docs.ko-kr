@@ -1,27 +1,15 @@
 ---
-title: "단순화된 구성"
-ms.custom: 
+title: 단순화된 구성
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: dcbe1f84-437c-495f-9324-2bc09fd79ea9
-caps.latest.revision: "10"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 334dfce44b1f0a7b6b38f509f2f0a346ef90630f
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
-ms.translationtype: MT
+ms.openlocfilehash: a07ab26b19004df97f4ac65f711b03fc6a6ba445
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="simplified-configuration"></a>단순화된 구성
-[!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 서비스를 구성하는 것은 복잡한 태스크일 수 있습니다. 다양한 옵션이 있을 수 있고 경우에 따라 필요한 설정을 확인하는 것이 쉽지 않을 수도 있습니다. 구성 파일을 사용하면 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 서비스가 더 유연해지지만 문제의 원인을 찾기가 그만큼 더 어려울 수 있습니다. [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)]에서는 이러한 문제를 해결하고 서비스 구성의 크기와 복잡성을 줄일 수 있는 방법을 제공합니다.  
+Windows Communication Foundation (WCF) 서비스를 구성 하는 복잡 한 작업일 수 있습니다. 다양한 옵션이 있을 수 있고 경우에 따라 필요한 설정을 확인하는 것이 쉽지 않을 수도 있습니다. 구성 파일을 사용하면 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 서비스가 더 유연해지지만 문제의 원인을 찾기가 그만큼 더 어려울 수 있습니다. [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)]에서는 이러한 문제를 해결하고 서비스 구성의 크기와 복잡성을 줄일 수 있는 방법을 제공합니다.  
   
 ## <a name="simplified-configuration"></a>단순화된 구성  
  [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 서비스 구성 파일의 <`system.serviceModel`> 섹션에는 호스트된 각 서비스에 대한 <`service`> 요소가 포함되어 있습니다. <`service`> 요소에는 각 서비스에 대해 노출된 끝점을 지정하고 선택적으로 일련의 서비스 동작도 지정하는 <`endpoint`> 요소의 컬렉션이 포함되어 있습니다. <`endpoint`> 요소는 끝점에서 노출하는 주소, 바인딩 및 계약을 지정하고 선택적으로 바인딩 구성과 끝점 동작도 지정합니다. <`system.serviceModel`> 섹션에는 서비스 또는 끝점 동작을 지정할 수 있는 <`behaviors`> 요소도 포함되어 있습니다. 다음 예제에서는 구성 파일의 <`system.serviceModel`> 섹션을 보여 줍니다.  

@@ -1,28 +1,14 @@
 ---
-title: "리플렉션 공급자(WCF Data Services)"
-ms.custom: 
+title: 리플렉션 공급자(WCF Data Services)
 ms.date: 03/30/2017
-ms.prod: .net-framework-oob
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - WCF Data Services, providers
 ms.assetid: ef5ba300-6d7c-455e-a7bd-d0cc6d211ad4
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 617754fcd9515f080dc6cf8ae923c2c6fc34ad3a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 3c6885ee7976461379513e8e579f58160146769a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="reflection-provider-wcf-data-services"></a>리플렉션 공급자(WCF Data Services)
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]는 Entity Framework를 통해 데이터 모델의 데이터를 노출할 뿐 아니라 엔터티 기반 모델에 엄격하게 정의되지 않은 데이터를 노출할 수 있습니다. 리플렉션 공급자는 <xref:System.Linq.IQueryable%601> 인터페이스를 구현하는 형식을 반환하는 클래스의 데이터를 노출합니다. [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]는 리플렉션을 사용하여 이러한 클래스의 데이터 모델을 유추하고 리소스에 대한 주소 기반 쿼리를 노출된 <xref:System.Linq.IQueryable%601> 형식에 대한 LINQ(Language-Integrated Query) 기반 쿼리로 변환할 수 있습니다.  

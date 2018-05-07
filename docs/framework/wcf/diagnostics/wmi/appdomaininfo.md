@@ -1,24 +1,12 @@
 ---
 title: AppDomainInfo
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 6610b7d8-81eb-4bec-a543-9b72ad7b6f73
-caps.latest.revision: "10"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ed5053dd69628a9f5ff7318ce7fe772f42de6e24
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 7189448a930298837089cf3ac2743cb7e073ae02
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="appdomaininfo"></a>AppDomainInfo
 응용 프로그램 도메인 정보  
@@ -91,7 +79,7 @@ class AppDomainInfo
   
  System.Wmi.MessageLogging 추적 소스를 수신 대기하는 컬렉션 추적 수신기입니다.  
   
-### <a name="name"></a>name  
+### <a name="name"></a>이름  
  데이터 형식: string  
   
  액세스 형식: 읽기 전용  

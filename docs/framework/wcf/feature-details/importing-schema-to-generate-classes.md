@@ -1,14 +1,6 @@
 ---
 title: 스키마를 가져와 클래스 생성
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -16,20 +8,14 @@ helpviewer_keywords:
 - WCF, schema import and export
 - XsdDataContractImporter class
 ms.assetid: b9170583-8c34-43bd-97bb-6c0c8dddeee0
-caps.latest.revision: 15
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 4d7988630e2eba3e6d5ebdc8b15b23aeb280a66f
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 338daa031ac2c1b31a121908643a15449c5401a1
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="importing-schema-to-generate-classes"></a>스키마를 가져와 클래스 생성
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]에서 사용할 수 있는 스키마에서 클래스를 생성하려면 <xref:System.Runtime.Serialization.XsdDataContractImporter> 클래스를 사용합니다. 이 항목에서는 프로세스와 변형에 대해 설명합니다.  
+Windows Communication Foundation (WCF)으로 사용할 수 있는 스키마에서 클래스를 생성 하려면 사용 된 <xref:System.Runtime.Serialization.XsdDataContractImporter> 클래스입니다. 이 항목에서는 프로세스와 변형에 대해 설명합니다.  
   
 ## <a name="the-import-process"></a>가져오기 프로세스  
  스키마 가져오기 프로세스는 <xref:System.Xml.Schema.XmlSchemaSet>로 시작되고 <xref:System.CodeDom.CodeCompileUnit>을 생성합니다.  
@@ -114,7 +100,7 @@ ms.lasthandoff: 04/28/2018
  [!code-xml[C_SchemaImportExport#12](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_schemaimportexport/common/source.config#12)]  
   
 > [!NOTE]
->  모든 연결을 목록으로 간주할 수도 있습니다. 예를 들어 앞의 연결을 두 개의 필드(문자열 필드 및 정수 필드)가 있는 복잡한 `city` 개체 목록으로 간주할 수 있습니다. 두 패턴은 모두 XSD 스키마에서 하나로 표현됩니다. 목록과 연결을 구분할 수 없으므로 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에 관련된 특별한 주석이 스키마에 없으면 해당 패턴은 항상 목록으로 처리됩니다. 주석은 지정된 패턴이 연결을 나타냄을 가리킵니다. 자세한 내용은 참조 [데이터 계약 스키마 참조](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md)합니다.  
+>  모든 연결을 목록으로 간주할 수도 있습니다. 예를 들어 앞의 연결을 두 개의 필드(문자열 필드 및 정수 필드)가 있는 복잡한 `city` 개체 목록으로 간주할 수 있습니다. 두 패턴은 모두 XSD 스키마에서 하나로 표현됩니다. 이러한 패턴은 항상 목록으로 처리 WCF에 관련 된 특별 한 주석이 스키마에 없으면 경우가 아니면 목록 및 연결을 구분할 수 방식은 없습니다. 주석은 지정된 패턴이 연결을 나타냄을 가리킵니다. 자세한 내용은 참조 [데이터 계약 스키마 참조](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md)합니다.  
   
  일반적으로 목록은 스키마가 컬렉션의 표준 명명 패턴을 따르는지 여부에 따라 제네릭 목록에서 파생된 컬렉션 데이터 계약이나 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 배열로 가져옵니다. 이 내용이에 보다 자세히 설명 되어 [데이터 계약의 컬렉션 형식](../../../../docs/framework/wcf/feature-details/collection-types-in-data-contracts.md)합니다. 연결은 일반적으로 <xref:System.Collections.Generic.Dictionary%602> 또는 사전 개체에서 파생된 컬렉션 데이터 계약으로 가져옵니다. 예를 들어 다음 스키마를 생각해 볼 수 있습니다.  
   

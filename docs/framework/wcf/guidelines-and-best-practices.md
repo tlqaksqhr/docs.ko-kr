@@ -1,13 +1,6 @@
 ---
-title: "지침 및 최선의 구현 방법"
-ms.custom: 
+title: 지침 및 최선의 구현 방법
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - WCF, guidelines
 - best practices [WCF], application design
@@ -15,19 +8,14 @@ helpviewer_keywords:
 - WCF, best practices
 - Windows Communication Foundation, guidelines
 ms.assetid: 5098ba46-6e8d-4e02-b0c5-d737f9fdad84
-caps.latest.revision: "18"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 6dc6ad423010cf881c62e2c22570c080cad6a1e0
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
-ms.translationtype: MT
+ms.openlocfilehash: 09996681b17d324d53c74b727b183f3a457cc664
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="guidelines-and-best-practices"></a>지침 및 최선의 구현 방법
-이 단원의 항목에서는 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 응용 프로그램을 만들기 위한 지침을 제공합니다.  
+이 섹션에는 Windows Communication Foundation (WCF) 응용 프로그램을 만들기 위한 지침을 제공 하는 항목이 포함 되어 있습니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
  [모범 사례: 데이터 계약 버전 관리](../../../docs/framework/wcf/best-practices-data-contract-versioning.md)  

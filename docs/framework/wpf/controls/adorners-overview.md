@@ -1,31 +1,17 @@
 ---
-title: "표시기 개요"
-ms.custom: 
+title: 표시기 개요
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - adorners [WPF], about adorners
 ms.assetid: 33d4c5c2-2daf-4e45-ba9a-5b673e2b8280
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 47b43b1b9848f91e77448d41609d8be5d60ecda5
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 6dd38b9e24b42de8945c0e9729f8f30cf901fc3a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="adorners-overview"></a>표시기 개요
 표시기는 특수 한 유형의 <xref:System.Windows.FrameworkElement>, 사용자에 게 시각적 표시를 제공 하는 데 사용 합니다. 표시기는 다른 용도로 요소에 기능 핸들을 추가하거나 컨트롤에 대한 상태 정보를 제공하는 데 사용할 수 있습니다.  
@@ -89,7 +75,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="adorning-a-single-uielement"></a>단일 UIElement 표시  
  표시기를 특정 바인딩할 <xref:System.Windows.UIElement>, 다음이 단계를 수행 합니다.  
   
-1.  정적 메서드를 호출 <xref:System.Windows.Documents.AdornerLayer.GetAdornerLayer%2A> 가져오려는 <xref:System.Windows.Documents.AdornerLayer> 개체에 대 한는 <xref:System.Windows.UIElement> 표시 될 있습니다. <xref:System.Windows.Documents.AdornerLayer.GetAdornerLayer%2A>지정 된 위치에서 시작 하는 시각적 트리를 따라 <xref:System.Windows.UIElement>, 찾은 첫 번째 표시기 계층을 반환 합니다. (표시기 계층이 없으면 메서드가 null을 반환합니다.)  
+1.  정적 메서드를 호출 <xref:System.Windows.Documents.AdornerLayer.GetAdornerLayer%2A> 가져오려는 <xref:System.Windows.Documents.AdornerLayer> 개체에 대 한는 <xref:System.Windows.UIElement> 표시 될 있습니다. <xref:System.Windows.Documents.AdornerLayer.GetAdornerLayer%2A> 지정 된 위치에서 시작 하는 시각적 트리를 따라 <xref:System.Windows.UIElement>, 찾은 첫 번째 표시기 계층을 반환 합니다. (표시기 계층이 없으면 메서드가 null을 반환합니다.)  
   
 2.  호출 된 <xref:System.Windows.Documents.AdornerLayer.Add%2A> 대상에 표시기를 바인딩할 메서드를 <xref:System.Windows.UIElement>합니다.  
   

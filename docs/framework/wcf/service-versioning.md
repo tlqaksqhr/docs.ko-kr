@@ -1,29 +1,15 @@
 ---
 title: 서비스 버전 관리
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 37575ead-d820-4a67-8059-da11a2ab48e2
-caps.latest.revision: 19
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: fef65a4134f1cf526a7082b08aa4d8d1c6ea7f4d
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
-ms.translationtype: MT
+ms.openlocfilehash: efff9778f1cbe2ee5d97912ada0193c4e8ba137c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="service-versioning"></a>서비스 버전 관리
-서비스 및 서비스가 노출하는 끝점은 비즈니스 요구의 변경, 정보 기술의 요구 사항 또는 다른 문제 해결 등의 다양한 이유 때문에 최초로 배포된 후, 수명 동안 여러 차례에 걸쳐 변경되어야 할 수 있습니다. 각 변경 작업에는 새 버전의 서비스가 도입됩니다. 이 항목에서는 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)]의 버전 관리를 고려하는 방법에 대해 설명합니다.  
+서비스 및 서비스가 노출하는 끝점은 비즈니스 요구의 변경, 정보 기술의 요구 사항 또는 다른 문제 해결 등의 다양한 이유 때문에 최초로 배포된 후, 수명 동안 여러 차례에 걸쳐 변경되어야 할 수 있습니다. 각 변경 작업에는 새 버전의 서비스가 도입됩니다. 이 항목에서는 Windows Communication Foundation (WCF)에서 버전 관리를 고려 하는 방법에 설명 합니다.  
   
 ## <a name="four-categories-of-service-changes"></a>서비스 변경의 네 가지 범주  
  변경될 수 있는 서비스는 다음과 같이 네 가지 범주로 분류할 수 있습니다.  

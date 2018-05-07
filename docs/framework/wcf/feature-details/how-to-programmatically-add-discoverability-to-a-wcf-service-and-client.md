@@ -1,29 +1,15 @@
 ---
 title: '방법: 프로그래밍 방식으로 WCF 서비스 및 클라이언트에 검색 기능 추가'
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 4f7ae7ab-6fc8-4769-9730-c14d43f7b9b1
-caps.latest.revision: 13
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 3c0da3598b115df4f135ac3fab516447df85e258
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 0685694db8f67ed690cf2a8002bf70a05695a192
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-programmatically-add-discoverability-to-a-wcf-service-and-client"></a>방법: 프로그래밍 방식으로 WCF 서비스 및 클라이언트에 검색 기능 추가
-이 항목에서는 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 서비스를 검색 가능하게 만드는 방법에 대해 설명하며, 에 기반 하는 고 [자체 호스트](http://go.microsoft.com/fwlink/?LinkId=145523) 샘플.  
+이 항목에서는 Windows Communication Foundation (WCF) 서비스를 검색 가능 하 게 하는 방법에 설명 합니다. 에 기반 하는 고 [자체 호스트](http://go.microsoft.com/fwlink/?LinkId=145523) 샘플.  
   
 ### <a name="to-configure-the-existing-self-host-service-sample-for-discovery"></a>기존 자체 호스팅 서비스 샘플을 검색용으로 구성하려면  
   
@@ -105,7 +91,7 @@ ms.lasthandoff: 04/30/2018
     }  
     ```  
   
-     이렇게 하면 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 클래스에서 표준 UDP 검색 끝점을 사용하여 검색 메시지를 보내고 받아야 한다는 내용이 <xref:System.ServiceModel.Discovery.DiscoveryClient>에 전달됩니다.  
+     이렇게 하면 WCF는는 <xref:System.ServiceModel.Discovery.DiscoveryClient> 클래스 검색 메시지를 받거나 보내기 위해 표준 UDP 검색 끝점을 사용 해야 합니다.  
   
 8.  다음 줄에서 <xref:System.ServiceModel.Discovery.DiscoveryClient.Find%2A> 메서드를 호출하고 검색하려는 서비스 계약이 포함된 <xref:System.ServiceModel.Discovery.FindCriteria> 인스턴스를 지정합니다. 이 경우 `ICalculator`를 지정합니다.  
   

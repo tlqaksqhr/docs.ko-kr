@@ -1,30 +1,20 @@
 ---
-title: "보안이 설정되지 않은 인터넷 클라이언트 및 서비스"
-ms.custom: 
+title: 보안이 설정되지 않은 인터넷 클라이언트 및 서비스
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 97a10d79-3e7d-4bd1-9a99-fd9807fd70bc
-caps.latest.revision: "17"
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: b202c4d67b48a9559afe035dc6b7bc95f6cc7779
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 93bf7a038a46ff6c03f89e576f3e4150cd069dba
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="internet-unsecured-client-and-service"></a>보안이 설정되지 않은 인터넷 클라이언트 및 서비스
-다음 그림에서는 보안이 설정되지 않은 공용 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 클라이언트 및 서비스를 보여 줍니다.  
+다음 그림에는 public, 보안 되지 않은 Windows Communication Foundation (WCF) 클라이언트와 서비스의 예가 나와 있습니다.  
   
  ![보안 되지 않은 인터넷 클라이언트 및 서비스 시나리오](../../../../docs/framework/wcf/feature-details/media/publicunsecured.gif "publicUnsecured")  
   
@@ -32,7 +22,7 @@ ms.lasthandoff: 12/22/2017
 |--------------------|-----------------|  
 |보안 모드|없음|  
 |전송|HTTP|  
-|바인딩|<xref:System.ServiceModel.BasicHttpBinding>코드에서 또는 [ \<basicHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md) 구성 요소입니다.|  
+|바인딩|<xref:System.ServiceModel.BasicHttpBinding> 코드에서 또는 [ \<basicHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md) 구성 요소입니다.|  
 |상호 운용성|기존 웹 서비스 클라이언트 및 서비스와의 상호 운용성|  
 |인증|없음|  
 |무결성|없음|  
@@ -89,7 +79,7 @@ ms.lasthandoff: 12/22/2017
      [!code-vb[C_SecurityScenarios#0](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#0)]  
   
 ### <a name="code"></a>코드  
- 다음 코드에서는 보안이 설정되지 않은 끝점에 액세스하는 기본 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 클라이언트를 보여 줍니다.  
+ 다음 코드는 보안 되지 않은 끝점에 액세스 하는 기본 WCF 클라이언트를 보여 줍니다.  
   
  [!code-csharp[C_UnsecuredClient#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_unsecuredclient/cs/source.cs#1)]
  [!code-vb[C_UnsecuredClient#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_unsecuredclient/vb/source.vb#1)]  

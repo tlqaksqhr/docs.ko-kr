@@ -1,14 +1,6 @@
 ---
-title: "STARTUP_FLAGS 열거형"
-ms.custom: 
+title: STARTUP_FLAGS 열거형
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - STARTUP_FLAGS
 api_location:
@@ -22,17 +14,13 @@ helpviewer_keywords:
 ms.assetid: 4f043594-0c45-4bc6-988e-a6793f0d8d06
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: ca2db0cd7082a596999f1d74c9092264a65692ea
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: bc1d3ffc34cd74d68bf10cb677b68f0a75bb7c67
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="startupflags-enumeration"></a>STARTUP_FLAGS 열거형
 공용 언어 런타임 (CLR)의 시작 동작을 나타내는 값을 포함 합니다. 기본적으로 가비지 컬렉션은 비 동시 및 전용 기본 클래스 라이브러리는 도메인 중립적으로 영역에 로드 됩니다.  
@@ -92,7 +80,7 @@ typedef enum {
   
  **라이브러리:** MSCorEE.dll  
   
- **.NET framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>참고 항목  
  [호스팅 열거형](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)

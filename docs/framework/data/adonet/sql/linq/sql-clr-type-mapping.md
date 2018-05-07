@@ -1,24 +1,12 @@
 ---
-title: "SQL-CLR 형식 매핑"
-ms.custom: 
+title: SQL-CLR 형식 매핑
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 4ed76327-54a7-414b-82a9-7579bfcec04b
-caps.latest.revision: "4"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: cc6a3d38b8534c9727562cb3fb82f96fa60db7ec
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 5437529d9293951ad34abda435b538b4f404c600
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="sql-clr-type-mapping"></a>SQL-CLR 형식 매핑
 LINQ to SQL에서 관계형 데이터베이스의 데이터 모델은 사용자가 선택한 프로그래밍 언어로 표현되는 개체 모델에 매핑됩니다. 응용 프로그램을 실행하면 LINQ to SQL에서는 개체 모델의 통합 언어 쿼리를 SQL로 변환하여 실행을 위해 데이터베이스로 전송합니다. 데이터베이스에서 결과가 반환되면 LINQ to SQL에서는 해당 결과를 사용자의 프로그래밍 언어로 작업할 수 있는 개체로 다시 변환합니다.  
@@ -206,7 +194,7 @@ LINQ to SQL에서 관계형 데이터베이스의 데이터 모델은 사용자�
 >  SQL Server 형식 `DATETIME2`, `DATETIMEOFFSET`, `DATE` 및 `TIME`은 Microsoft SQL Server 2008부터 사용할 수 있습니다. LINQ to SQL에서는 .NET Framework 버전 3.5 SP1부터 이러한 새로운 형식의 매핑이 지원됩니다.  
   
 ### <a name="systemdatetime"></a>System.Datetime  
- CLR <xref:System.DateTime?displayProperty=nameWithType> 형식의 범위 및 전체 자릿수는 `DATETIME` 메서드의 기본 형식 매핑인 SQL Server <xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType> 형식의 범위 및 전체 자릿수보다 큽니다. `DATETIME`의 범위를 벗어나는 날짜와 관련된 예외가 발생하지 않도록 하려면 Microsoft SQL Server 2008부터 사용할 수 있는 `DATETIME2`를 사용하세요. `DATETIME2`범위와 CLR의 전체 자릿수가 일치 시킬 수 <xref:System.DateTime?displayProperty=nameWithType>합니다.  
+ CLR <xref:System.DateTime?displayProperty=nameWithType> 형식의 범위 및 전체 자릿수는 `DATETIME` 메서드의 기본 형식 매핑인 SQL Server <xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType> 형식의 범위 및 전체 자릿수보다 큽니다. `DATETIME`의 범위를 벗어나는 날짜와 관련된 예외가 발생하지 않도록 하려면 Microsoft SQL Server 2008부터 사용할 수 있는 `DATETIME2`를 사용하세요. `DATETIME2` 범위와 CLR의 전체 자릿수가 일치 시킬 수 <xref:System.DateTime?displayProperty=nameWithType>합니다.  
   
  SQL Server 날짜에는 CLR에서 지원되는 기능인 <xref:System.TimeZone> 개념이 없습니다. 원래 <xref:System.TimeZone> 정보에 관계없이 <xref:System.TimeZone> 값은 <xref:System.DateTimeKind> 변환 없이 데이터베이스에 있는 그대로 저장됩니다. <xref:System.DateTime> 값이 데이터베이스에서 검색될 경우 해당 값은 <xref:System.DateTime>가 <xref:System.DateTimeKind>로 지정되어 <xref:System.DateTimeKind.Unspecified>에 있는 그대로 로드됩니다. 에 대 한 자세한 내용은 지원 <xref:System.DateTime?displayProperty=nameWithType> 메서드 참조 [System.DateTime 메서드](../../../../../../docs/framework/data/adonet/sql/linq/system-datetime-methods.md)합니다.  
   
@@ -224,7 +212,7 @@ LINQ to SQL에서 관계형 데이터베이스의 데이터 모델은 사용자�
 |`BINARY(50)`|<xref:System.Data.Linq.Binary?displayProperty=nameWithType>|  
 |`VARBINARY(50)`|<xref:System.Data.Linq.Binary?displayProperty=nameWithType>|  
 |`VARBINARY(MAX)`|<xref:System.Data.Linq.Binary?displayProperty=nameWithType>|  
-|`VARBINARY(MAX)`와 `FILESTREAM` 특성|<xref:System.Data.Linq.Binary?displayProperty=nameWithType>|  
+|`VARBINARY(MAX)` 와 `FILESTREAM` 특성|<xref:System.Data.Linq.Binary?displayProperty=nameWithType>|  
 |`IMAGE`|<xref:System.Data.Linq.Binary?displayProperty=nameWithType>|  
 |`TIMESTAMP`|<xref:System.Data.Linq.Binary?displayProperty=nameWithType>|  
   

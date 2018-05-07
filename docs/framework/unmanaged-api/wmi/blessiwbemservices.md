@@ -1,11 +1,7 @@
 ---
-title: "BlessIWbemServices 함수 (관리 되지 않는 API 참조)"
-description: "BlessIWbemServices 함수는 사용자 자격 증명 IWbemServices 클래스에 대 한 액세스를 허용 하는지 여부를 나타냅니다."
+title: BlessIWbemServices 함수 (관리 되지 않는 API 참조)
+description: BlessIWbemServices 함수는 사용자 자격 증명 IWbemServices 클래스에 대 한 액세스를 허용 하는지 여부를 나타냅니다.
 ms.date: 11/06/2017
-ms.prod: .net-framework
-ms.technology:
-- dotnet-clr
-ms.topic: reference
 api_name:
 - BlessIWbemServices
 api_location:
@@ -20,14 +16,11 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: f384e8d045dd7a6f2f864f0991f8caf4a674408b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 59cb20f7ccfbd0b8f9d6026c9805468613818130
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="blessiwbemservices-function"></a>BlessIWbemServices 함수
 사용자 자격 증명을 지정 된 액세스를 허용 하는지 여부를 나타냅니다. [IWbemServices](https://msdn.microsoft.com/library/aa392093(v=vs.85).aspx) 클래스입니다.   
@@ -58,11 +51,11 @@ HRESULT BlessIWbemServices (
 `strPassword`  
 [in] 연결 된 암호 `strUser`합니다.
 
-`strAuthority`[in] 사용자의 도메인 이름입니다. 참조는 [ConnectServerWmi](connectserverwmi.md) 자세한 정보에 대 한 함수입니다.
+`strAuthority` [in] 사용자의 도메인 이름입니다. 참조는 [ConnectServerWmi](connectserverwmi.md) 자세한 정보에 대 한 함수입니다.
 
-`impLevel`[in] 가장 수준입니다.
+`impLevel` [in] 가장 수준입니다.
 
-`authnLevel`[in] 권한 부여 수준입니다.
+`authnLevel` [in] 권한 부여 수준입니다.
 
 ## <a name="return-value"></a>반환 값
 
@@ -81,7 +74,7 @@ HRESULT BlessIWbemServices (
   
  **헤더:** WMINet_Utils.idl  
   
- **.NET framework 버전:**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **.NET framework 버전:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>참고자료  
 [WMI 및 성능 카운터 (관리 되지 않는 API 참조)](index.md)

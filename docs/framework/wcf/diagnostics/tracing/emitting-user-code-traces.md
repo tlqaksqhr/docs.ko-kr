@@ -1,27 +1,15 @@
 ---
-title: "사용자 코드 추적 내보내기"
-ms.custom: 
+title: 사용자 코드 추적 내보내기
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: fa54186a-8ffa-4332-b0e7-63867126fd49
-caps.latest.revision: "9"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a71ab8d8b4f96900e6d0f83541b6ae17f09ddeee
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 120827bff85d4bc347274cad1370d291caba1c3d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="emitting-user-code-traces"></a>사용자 코드 추적 내보내기
-구성에서 추적을 활성화하여 [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)]에서 생성되는 계측 데이터를 수집하는 외에도 사용자 코드에서 프로그래밍 방식으로 추적할 수도 있습니다. 이런 방식으로 계측 데이터를 사전에 작성하여 나중에 진단을 위해 확인할 수 있습니다. 이 항목에서는 이 작업을 수행하는 방법에 대해 설명합니다.  
+Windows Communication Foundation (WCF)에서 생성 된 계측 데이터를 수집 하는 구성에서 추적을 사용 하도록 설정 하는 것 외에도 사용자 코드에서 프로그래밍 방식으로 추적을 살펴보세요를 내보낼 수 있습니다. 이런 방식으로 계측 데이터를 사전에 작성하여 나중에 진단을 위해 확인할 수 있습니다. 이 항목에서는 이 작업을 수행하는 방법에 대해 설명합니다.  
   
  또한는 [추적 확장](../../../../../docs/framework/wcf/samples/extending-tracing.md) 다음 섹션에 소개 하는 모든 코드 샘플에 포함 되어 있습니다.  
   
@@ -134,17 +122,17 @@ ts.TraceEvent(TraceEventType.Warning, 0, "Throwing exception " + "exceptionMessa
   
  다음 다이어그램에서는 계산기 동작에서 보내거나 받은 Transfer 추적을 표시하고 요청 동작별로 두 개의 Start 및 Stop 추적 쌍을 표시합니다. 이 추적 쌍은 클라이언트와 서비스별로 각각 하나씩(추적 소스별로 하나) 표시됩니다.  
   
- ![추적을 코드 추적 뷰어: 내보내기 user&#45;](../../../../../docs/framework/wcf/diagnostics/tracing/media/242c9358-475a-4baf-83f3-4227aa942fcd.gif "242c9358-475a-4baf-83f3-4227aa942fcd")  
+ ![추적 뷰어: 사용자 내보내기&#45;추적 코드](../../../../../docs/framework/wcf/diagnostics/tracing/media/242c9358-475a-4baf-83f3-4227aa942fcd.gif "242c9358-475a-4baf-83f3-4227aa942fcd")  
 생성 시간별 동작 목록(왼쪽 패널) 및 중첩된 동작 목록(오른쪽 위 패널)  
   
  서비스 코드가 예외를 throw하여 클라이언트에서도 예외가 throw되면(예: 클라이언트가 요청에 대한 응답을 가져오지 않은 경우), 서비스 및 클라이언트 경고 또는 오류 메시지가 직접 상관 관계에 대해 동일한 동작에서 표시됩니다. 다음 다이어그램에는 서비스 "서비스는 사용자 코드에서이 요청을 처리 하지는 않습니다."를 나타내는 예외를 throw 클라이언트 "는 서버 내부 오류로 인해 요청을 처리할 수 없습니다."를 나타내는 예외를 throw  
   
- ![코드 추적을 내보내려면 user&#45; Trace Viewer를 사용 하 여](../../../../../docs/framework/wcf/diagnostics/tracing/media/e2etrace2.gif "e2eTrace2")  
+ ![Trace Viewer를 사용 하 여 사용자를 내보내는 데&#45;추적 코드](../../../../../docs/framework/wcf/diagnostics/tracing/media/e2etrace2.gif "e2eTrace2")  
 지정된 요청에 대한 끝점에서의 오류는 요청 동작 ID가 전파된 경우와 동일한 동작에 표시됩니다.  
   
  왼쪽 패널에서 곱하기 동작을 두 번 클릭하면 다음과 같은 그래프가 표시되고 포함된 프로세스별로 곱하기 동작에 대한 추적 사항이 나타납니다. 서비스에서 처음 발생한 경고(throw된 예외)와 요청을 처리하지 못하여 클라이언트에서 발생한 경고 및 오류가 표시됩니다. 따라서 끝점 사이의 오류의 인과 관계를 유추하여 오류의 근본 원인을 파악할 수 있습니다.  
   
- ![코드 추적을 내보내려면 user&#45; Trace Viewer를 사용 하 여](../../../../../docs/framework/wcf/diagnostics/tracing/media/e2etrace3.gif "e2eTrace3")  
+ ![Trace Viewer를 사용 하 여 사용자를 내보내는 데&#45;추적 코드](../../../../../docs/framework/wcf/diagnostics/tracing/media/e2etrace3.gif "e2eTrace3")  
 오류 상관 관계 그래프 보기  
   
  이전 추적을 가져오려면 사용자 추적 소스에 대해 `ActivityTracing`을 설정하고 `propagateActivity=true` 추적 소스에 대해 `System.ServiceModel`로 설정합니다. 사용자 코드 동작 전파에 사용자 코드를 활성화하기 위해 `ActivityTracing` 추적 소스에 대해서는 `System.ServiceModel`을 설정하지 않았습니다. ServiceModel 동작 추적이 설정되어 있으면 클라이언트에 정의된 동작 ID가 서비스 사용자 코드에 끝까지 전파되지 않지만, 전송은 클라이언트 및 서비스 사용자 코드 동작을 중간 [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 동작에 연결합니다.  

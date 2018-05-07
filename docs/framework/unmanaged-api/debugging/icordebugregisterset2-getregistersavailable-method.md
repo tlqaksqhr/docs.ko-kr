@@ -1,14 +1,6 @@
 ---
-title: "ICorDebugRegisterSet2::GetRegistersAvailable 메서드"
-ms.custom: 
+title: ICorDebugRegisterSet2::GetRegistersAvailable 메서드
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICorDebugRegisterSet2.GetRegistersAvailable
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: f3ed344b-0d3a-44e8-8000-2a97e0805a2c
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 4e2e3862f91fc68879e2f9e396ab9045c617de82
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: d3a9cdb49c1a44dbc68cd4b7ccf4d4781ce5c539
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="icordebugregisterset2getregistersavailable-method"></a>ICorDebugRegisterSet2::GetRegistersAvailable 메서드
 사용 가능한 레지스터의 비트맵을 제공 하는 바이트의 배열을 가져옵니다.  
@@ -59,11 +47,11 @@ HRESULT GetRegistersAvailable (
   
 1.  추출 정확한 바이트에 액세스 하는 데 필요한 인덱스는 `availableRegChunks` 배열:  
   
-     `CorDebugRegister`값 >> 3  
+     `CorDebugRegister` 값 >> 3  
   
 2.  인덱싱된 바이트에서 비트 위치 0 비트는 최하위 비트를 추출 합니다.  
   
-     `CorDebugRegister`값 및 7  
+     `CorDebugRegister` 값 및 7  
   
 ## <a name="requirements"></a>요구 사항  
  **플랫폼:** 참조 [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)합니다.  
@@ -72,7 +60,7 @@ HRESULT GetRegistersAvailable (
   
  **라이브러리:** CorGuids.lib  
   
- **.NET framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>참고 항목  
  [ICorDebugRegisterSet2 인터페이스](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset2-interface.md)  

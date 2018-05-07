@@ -1,13 +1,6 @@
 ---
 title: reentrancy MDA
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - unmanaged code, debugging
 - transitioning threads unmanaged to managed code
@@ -20,16 +13,13 @@ helpviewer_keywords:
 - managed code, debugging
 - native debugging, MDAs
 ms.assetid: 7240c3f3-7df8-4b03-bbf1-17cdce142d45
-caps.latest.revision: "8"
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a305658068e6d59f27957879c053b18742ea642f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 5aea903a7b16491a84998d8290270044e167b79f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="reentrancy-mda"></a>reentrancy MDA
 이전에 수행된 관리 코드에서 네이티브 코드로의 전환이 순서대로 수행되지 않은 경우 네이티브 코드에서 관리 코드로 전환하려고 하면 `reentrancy` MDA(관리 디버깅 도우미)가 활성화됩니다.  
@@ -75,7 +65,7 @@ ConsoleApplication1\bin\Debug\ConsoleApplication1.vshost.exe'.
 </mdaConfig>  
 ```  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 코드 예제는 <xref:System.AccessViolationException>가 throw되는 원인이 됩니다.  따라서 벡터화된 예외 처리를 지원하는 Windows 버전에서 관리되는 벡터화된 예외 처리기가 호출됩니다.  `reentrancy` MDA가 사용되면 운영 체제의 벡터화된 예외 처리 지원 코드에서 `MyHandler`를 호출하려는 동안 MDA가 활성화됩니다.  
   
 ```  

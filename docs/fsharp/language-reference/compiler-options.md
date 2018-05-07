@@ -1,17 +1,12 @@
 ---
 title: 컴파일러 옵션(F#)
 description: 'F # 컴파일러 명령줄 옵션을 사용 하 여 F # 응용 프로그램 및 라이브러리의 컴파일을 제어 합니다.'
-author: cartermp
-ms.author: phcart
 ms.date: 05/16/2016
-ms.topic: language-reference
-ms.prod: dotnet-fsharp
-ms.devlang: fsharp
-ms.openlocfilehash: 5feab5ff6d6c6179a67ba0cbc566c10475804e5f
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: f4a596d0dede6f66faa34374f7f73a89323f1620
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-options"></a>컴파일러 옵션
 

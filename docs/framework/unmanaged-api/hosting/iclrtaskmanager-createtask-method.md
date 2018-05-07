@@ -1,14 +1,6 @@
 ---
-title: "ICLRTaskManager::CreateTask 메서드"
-ms.custom: 
+title: ICLRTaskManager::CreateTask 메서드
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICLRTaskManager.CreateTask
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: eea570d9-2e53-4320-9ea0-eb777bf9dcf3
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: e9e78db6e43397709f913f8f79a617221f98db87
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: f731e121324793a027c5977a02e1973b0d6fff20
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="iclrtaskmanagercreatetask-method"></a>ICLRTaskManager::CreateTask 메서드
 명시적 공용 언어 런타임 (CLR)에서 새 작업을 만들도록 요청 합니다.  
@@ -65,7 +53,7 @@ HRESULT CreateTask (
 ## <a name="remarks"></a>설명  
  CLR 사용자 코드에서 형식을 사용 하 여 스레드를 만드는 경우 초기화 시 자동으로 새 작업을 만듭니다는 <xref:System.Threading> 네임 스페이스 또는 스레드 풀의 크기가 증가 하는 경우. 또한 비관리 코드에서 관리 되는 함수를 호출할 때 작업을 만듭니다.  
   
- `CreateTask`호스트를를 명시적으로 요청할 CLR 새 태스크를 만들 수 있습니다. 예를 들어 호스트는 데이터 구조를 미리 초기화할 하려면이 메서드를 호출할 수 있습니다.  
+ `CreateTask` 호스트를를 명시적으로 요청할 CLR 새 태스크를 만들 수 있습니다. 예를 들어 호스트는 데이터 구조를 미리 초기화할 하려면이 메서드를 호출할 수 있습니다.  
   
 > [!IMPORTANT]
 >  새 작업 일시 중단 된 상태로 반환 되 고 호스트를 명시적으로 호출할 때까지 일시 중단 된 상태로 유지 됩니다 [ihosttask:: Start](../../../../docs/framework/unmanaged-api/hosting/ihosttask-start-method.md)합니다.  
@@ -77,7 +65,7 @@ HRESULT CreateTask (
   
  **라이브러리:** MSCorEE.dll에 리소스로 포함  
   
- **.NET framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>참고 항목  
  [ICLRTask 인터페이스](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md)  

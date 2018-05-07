@@ -1,36 +1,22 @@
 ---
-title: "방법: ListView의 사용자 지정 뷰 모드 만들기"
-ms.custom: 
+title: '방법: ListView의 사용자 지정 뷰 모드 만들기'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - ListView controls [WPF], creating custom View mode
 ms.assetid: 71077349-eeb9-4344-ab29-b5df96df3314
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: e67777b5568214dff889088708db166efc6ae4dd
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: b8600a2e201fdbcb566e6a322e3ecdabbe1641ef
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-a-custom-view-mode-for-a-listview"></a>방법: ListView의 사용자 지정 뷰 모드 만들기
 이 예제에는 사용자 지정을 만드는 방법을 보여 줍니다 <xref:System.Windows.Controls.ListView.View%2A> 에 대 한 모드는 <xref:System.Windows.Controls.ListView> 제어 합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  사용 해야 합니다는 <xref:System.Windows.Controls.ViewBase> 클래스에 대 한 사용자 지정 보기를 만들 때의 <xref:System.Windows.Controls.ListView> 제어 합니다. 다음 예제에서는 라고 하는 뷰 모드 `PlainView`에서 파생 되는 <xref:System.Windows.Controls.ViewBase> 클래스입니다.  
   
  [!code-csharp[ListViewCustomView#PlainView](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ListViewCustomView/CSharp/PlainView.cs#plainview)]

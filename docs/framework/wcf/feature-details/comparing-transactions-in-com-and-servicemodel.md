@@ -1,32 +1,20 @@
 ---
-title: "COM+ 및 ServiceModel의 트랜잭션 비교"
-ms.custom: 
+title: COM+ 및 ServiceModel의 트랜잭션 비교
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: e493bcdd-b91a-4486-853f-83dbcd1931b7
-caps.latest.revision: "5"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 87e3df31060a9c71e0b2868aa34373bca221fa79
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 4a47fe1686dff2e705b06b001d7d5e4ea6e8c5f2
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="comparing-transactions-in-com-and-servicemodel"></a>COM+ 및 ServiceModel의 트랜잭션 비교
-이 항목에서는 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 네임스페이스가 제공하는 <xref:System.ServiceModel> 특성을 사용하여 트랜잭션 COM+ 서비스의 동작을 시뮬레이션하는 방법에 대해 설명합니다.  
+이 항목에서는 트랜잭션 COM + 서비스의 Windows Communication Foundation (WCF) 특성을 사용 하 여 동작을 시뮬레이션 하는 방법을 설명의 <xref:System.ServiceModel> 네임 스페이스를 제공 합니다.  
   
 ## <a name="emulating-com-using-servicemodel-attributes"></a>ServiceModel 특성을 사용하여 COM+ 에뮬레이트  
- 다음 표에서는 <xref:System.EnterpriseServices.TransactionOption> 트랜잭션을 만드는 데 사용되는 `EnterpriseServices` 열거 및 이러한 열거가 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 네임스페이스에서 제공하는 <xref:System.ServiceModel> 특성과 상호 관련된 방식을 비교합니다.  
+ 다음 표에서 비교는 <xref:System.EnterpriseServices.TransactionOption> 를 만드는 데 사용 하는 열거는 `EnterpriseServices` 트랜잭션과 상호 관련 된 방식을 WCF 특성은 <xref:System.ServiceModel> 네임 스페이스를 제공 합니다.  
   
-|COM+ 특성|[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 특성|  
+|COM+ 특성|WCF 특성|  
 |---------------------|------------------------------------------------------------------------|  
 |RequiresNew|<xref:System.ServiceModel.TransactionFlowAttribute>이 <xref:System.ServiceModel.TransactionFlowOption.NotAllowed>로 설정됩니다.<br /><br /> <xref:System.ServiceModel.OperationBehaviorAttribute.TransactionScopeRequired%2A>가 `true`인 경우<br /><br /> 바인딩 요소의 `TransactionFlow` 특성이 `false`인 경우|  
 |필수|<xref:System.ServiceModel.TransactionFlowAttribute>이 <xref:System.ServiceModel.TransactionFlowOption.Allowed>로 설정됩니다.<br /><br /> <xref:System.ServiceModel.OperationBehaviorAttribute.TransactionScopeRequired%2A>가 `true`인 경우<br /><br /> 바인딩 요소의 `TransactionFlow` 특성이 `true`인 경우|  

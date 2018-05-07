@@ -1,24 +1,12 @@
 ---
-title: "IdentityModel 예외"
-ms.custom: 
+title: IdentityModel 예외
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 4ef34497-8ff5-4621-b773-7731cc721231
-caps.latest.revision: "7"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 26bf6cb88d77fc9890a23c482913514f1dc856aa
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ee0b5537a415e1ea53c653ae8e8485e94cc713fd
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="identitymodel-exceptions"></a>IdentityModel 예외
 이 항목에서는 IdentityModel에 의해 생성된 모든 예외를 보여 줍니다.  
@@ -91,8 +79,8 @@ ms.lasthandoff: 12/22/2017
 |SAMLSignatureAlreadyRead|서명을 이미 SAML 어설션에서 읽었습니다.|  
 |AlgorithmAndPrivateKeyMisMatch|지정된 알고리즘과 개인 키가 일치하지 않습니다.|  
 |EmptyTransformChainNotSupported|비어 있는 변환 체인이 지원되지 않습니다.|  
-|SspiWrapperEncryptDecryptAssert1|SSPIWrapper::EncryptDecryptHelper &#124;' 오프셋 ' 범위를 벗어났습니다.|  
-|SspiWrapperEncryptDecryptAssert2|SSPIWrapper::EncryptDecryptHelper &#124;' 크기 '가 범위를 벗어났습니다. SecurityTokenManagerCannotCreateAuthenticatorForRequirement=보안 토큰 관리자가 특정 요구 사항에 대한 토큰 인증자를 만들 수 없습니다.|  
+|SspiWrapperEncryptDecryptAssert1|SSPIWrapper::EncryptDecryptHelper&#124;'offset' 범위를 벗어났습니다.|  
+|SspiWrapperEncryptDecryptAssert2|SSPIWrapper::EncryptDecryptHelper&#124;'크기'가 범위를 벗어났습니다. SecurityTokenManagerCannotCreateAuthenticatorForRequirement=보안 토큰 관리자가 특정 요구 사항에 대한 토큰 인증자를 만들 수 없습니다.|  
 |UnableToCreateKeyedHashAlgorithm|특정 서명 알고리즘에 대한 특정 값에서 KeyedHashAlgorithm을 만들 수 없습니다.|  
 |SAMLUnableToLoadAssertion|\<saml:assertion > 요소를 로드 하지 못했습니다.|  
 |X509FindValueMismatchMulti|특정 X509FindType에서는 인수 findValue의 형식이 두 가지 값 중 하나이어야 합니다. 인수 findValue는 다른 형식입니다.|  

@@ -1,14 +1,6 @@
 ---
 title: 관리되지 않는 API 참조
-ms.custom: ''
 ms.date: 11/06/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: reference
 helpviewer_keywords:
 - runtime, unmanaged APIs
 - common language runtime, unmanaged APIs
@@ -17,14 +9,11 @@ helpviewer_keywords:
 ms.assetid: 9aa000ee-c04c-492c-ae4f-83ecdf4fdbbe
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: d86cf65dfb3637dbacfeff0cf2b5f48b12c49212
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: d9a716244c779a25ad75c9db37aade0524e9e740
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="unmanaged-api-reference"></a>관리되지 않는 API 참조
 이 섹션에는 런타임 호스트, 컴파일러, 디스어셈블러, 난독 처리기, 디버거, 프로파일러 등의 관리 코드 관련 응용 프로그램에서 사용할 수 있는 관리되지 않는 API에 대한 정보가 포함되어 있습니다.  

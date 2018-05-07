@@ -1,30 +1,18 @@
 ---
-title: "방법: 사용자 지정 클레임 만들기"
-ms.custom: 
+title: '방법: 사용자 지정 클레임 만들기'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: d619976b-eda3-475e-ac23-c7988a2dceb0
-caps.latest.revision: "8"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 92420b993a1959b03090181944a34a32ab500733
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: c1e8886ab3d9d90b217ce79078633433458bbe4b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-a-custom-claim"></a>방법: 사용자 지정 클레임 만들기
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]의 ID 모델 인프라에서는 기본 제공 클레임 형식 및 권한 집합에 해당 형식과 권한으로 <xref:System.IdentityModel.Claims.Claim> 인스턴스를 만드는 도우미 기능을 제공합니다. 이러한 기본 제공 클레임은 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서 기본적으로 지원하는 클라이언트 자격 증명 형식에 있는 정보를 모델링합니다. 일반적으로 기본 제공 클레임으로 충분하지만 일부 응용 프로그램에는 사용자 지정 클레임이 필요할 수 있습니다. 클레임은 클레임 형식, 클레임이 적용되는 리소스 및 해당 리소스에 대해 어설션되는 권한으로 구성됩니다. 이 항목에서는 사용자 지정 클레임을 만드는 방법에 대해 설명합니다.  
+Windows Communication Foundation (WCF)에 Id 모델 인프라를 만들기 위한 기본 제공 클레임 형식 및 도우미 함수를 사용한 권한 집합이 제공 <xref:System.IdentityModel.Claims.Claim> 해당 형식과 권한을 사용 하 여 인스턴스. 이러한 기본 제공 클레임은 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서 기본적으로 지원하는 클라이언트 자격 증명 형식에 있는 정보를 모델링합니다. 일반적으로 기본 제공 클레임으로 충분하지만 일부 응용 프로그램에는 사용자 지정 클레임이 필요할 수 있습니다. 클레임은 클레임 형식, 클레임이 적용되는 리소스 및 해당 리소스에 대해 어설션되는 권한으로 구성됩니다. 이 항목에서는 사용자 지정 클레임을 만드는 방법에 대해 설명합니다.  
   
 ### <a name="to-create-a-custom-claim-that-is-based-on-a-primitive-data-type"></a>기본 데이터 형식을 기반으로 사용자 지정 클레임을 만들려면  
   
@@ -79,7 +67,7 @@ ms.lasthandoff: 12/22/2017
          [!code-csharp[c_CustomClaim#5](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customclaim/cs/c_customclaim.cs#5)] 
          [!code-vb[c_CustomClaim#5](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customclaim/vb/c_customclaim.vb#5)]     
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 코드 예제에서는 기본 리소스 형식의 사용자 지정 클레임과 기본이 아닌 리소스 형식의 사용자 지정 클레임을 만드는 방법을 보여 줍니다.  
   
  [!code-csharp[c_CustomClaim#0](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customclaim/cs/c_customclaim.cs#0)]

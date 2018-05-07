@@ -1,12 +1,6 @@
 ---
-title: "방법: XML 스트림의 대체 요소 이름 지정"
-ms.custom: 
+title: '방법: XML 스트림의 대체 요소 이름 지정'
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -18,18 +12,11 @@ helpviewer_keywords:
 - classes, overriding
 - overriding classes
 ms.assetid: 5cc1c0b0-f94b-4525-9a41-88a582cd6668
-caps.latest.revision: "7"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: a41dbd6dd145e0dcd90ffb67106be9902ebc1721
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: d0e48c9c28c8d9447b22fa5ea7a8024442e09295
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-specify-an-alternate-element-name-for-an-xml-stream"></a>방법: XML 스트림의 대체 요소 이름 지정
 [코드 예제](#cpconoverridingserializationofclasseswithxmlattributeoverridesclassanchor1)  
@@ -54,7 +41,7 @@ ms.lasthandoff: 12/23/2017
   
 8.  `Book` 클래스의 인스턴스를 만들고 이를 serialize 또는 deserialize합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
   
 ```vb  
 Public Class SerializeOverride()  

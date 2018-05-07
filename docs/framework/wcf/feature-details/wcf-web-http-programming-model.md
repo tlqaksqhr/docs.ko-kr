@@ -1,38 +1,26 @@
 ---
-title: "WCF 웹 HTTP 프로그래밍 모델"
-ms.custom: 
+title: WCF 웹 HTTP 프로그래밍 모델
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - web services programming model [WCF]
 - POX
 - REST
 ms.assetid: 2312a8d3-b66e-4623-ba42-978434300c7f
-caps.latest.revision: "17"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: f008cfe874ae9e38a71eb3cf5d6b2ed4e6cbdf7c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: e063cdba74af9ee90b41d829a2a8b251a5cc96e7
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="wcf-web-http-programming-model"></a>WCF 웹 HTTP 프로그래밍 모델
-개발자는 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 웹 HTTP 프로그래밍 모델을 통해 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 서비스 작업을 비 SOAP 끝점에 노출시킬 수 있습니다. 이 단원의 항목에서는 이 기능에 대해 자세히 설명합니다.  
+Windows Communication Foundation (WCF) Web HTTP 프로그래밍 모델에는 개발자가 WCF 서비스 작업을 비 SOAP 끝점을 노출할 수 있습니다. 이 단원의 항목에서는 이 기능에 대해 자세히 설명합니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
  [WCF 웹 HTTP 프로그래밍 모델 개요](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model-overview.md)  
- [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 웹 HTTP 프로그래밍 모델에 대해 간략하게 설명합니다.  
+ Windows Communication Foundation (WCF) Web HTTP 프로그래밍 모델의 개요를 제공합니다.  
   
  [WCF 웹 HTTP 프로그래밍 개체 모델](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-object-model.md)  
- [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 웹 HTTP 프로그래밍 모델 및 해당 모델의 작동 방법에 대해 설명합니다.  
+ Windows Communication Foundation (WCF) Web HTTP 프로그래밍 모델 및 작동 방법에 대해 설명 합니다.  
   
  [방법: 기본 WCF 웹 HTTP 서비스 만들기](../../../../docs/framework/wcf/feature-details/how-to-create-a-basic-wcf-web-http-service.md)  
  비 SOAP 끝점을 노출시키는 기본 서비스를 작성하는 방법에 대해 설명합니다.  

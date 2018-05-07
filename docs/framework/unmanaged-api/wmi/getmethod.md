@@ -1,11 +1,7 @@
 ---
-title: "GetMethod 함수 (관리 되지 않는 API 참조)"
-description: "GetMethod 함수는 메서드에 대 한 정보를 검색합니다."
+title: GetMethod 함수 (관리 되지 않는 API 참조)
+description: GetMethod 함수는 메서드에 대 한 정보를 검색합니다.
 ms.date: 11/06/2017
-ms.prod: .net-framework
-ms.technology:
-- dotnet-clr
-ms.topic: reference
 api_name:
 - GetMethod
 api_location:
@@ -20,14 +16,11 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: f22a2dfa7aae411cac960cbad2017718df8057e1
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 65b8cb74a028892a3494e818f2b523f75e8766a1
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="getmethod-function"></a>GetMethod 함수
 지정 된 메서드에 대 한 정보를 검색합니다.
@@ -83,14 +76,14 @@ HRESULT GetMethod (
 
 Windows 관리에서 설정할 수는 [IWbemClassObject](https://msdn.microsoft.com/library/aa391433%28v=vs.85%29.aspx) 에 대 한 포인터 `null` 메서드 매개 변수가 없는 경우에 합니다.
 
-`ppInSignature` 및 `ppOutSignature` in 및 out 매개 변수를 각각 속성에 설명 된 `IWbemClassObject` 시스템 클래스의 인스턴스 [_Parameters](https://msdn.microsoft.com/library/aa394667(v=vs.85).aspx)합니다. 속성에 `ppInsignature` 이름은 **Param***n*여기서  *n*  (예: 메서드 시그니처의 매개 변수의 위치 으로 `Param1`, `Param2`등.). 속성에 `ppOutSignature` 라고도 **Param***n*, 반환 값은 이름이 고 **ReturnValue**합니다. 자세한 내용 및 예제에 대 한 참조 [IWbemClassObject::GetMethod 메서드](https://msdn.microsoft.com/library/aa391443(v=vs.85).aspx)합니다.
+`ppInSignature` 및 `ppOutSignature` in 및 out 매개 변수를 각각 속성에 설명 된 `IWbemClassObject` 시스템 클래스의 인스턴스 [_Parameters](https://msdn.microsoft.com/library/aa394667(v=vs.85).aspx)합니다. 속성에 `ppInsignature` 이름이 지정 된 **Param * * * n*여기서 *n* 메서드 시그니처의 매개 변수의 위치입니다 (같은 `Param1`, `Param2`등.). 속성에 `ppOutSignature` 라고도 **Param * * * n*, 반환 값은 이름이 고 **ReturnValue**합니다. 자세한 내용 및 예제에 대 한 참조 [IWbemClassObject::GetMethod 메서드](https://msdn.microsoft.com/library/aa391443(v=vs.85).aspx)합니다.
 
 ## <a name="requirements"></a>요구 사항  
 **플랫폼:** 참조 [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)합니다.  
   
  **헤더:** WMINet_Utils.idl  
   
- **.NET framework 버전:**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **.NET framework 버전:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>참고자료  
 [WMI 및 성능 카운터 (관리 되지 않는 API 참조)](index.md)

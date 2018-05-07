@@ -1,25 +1,15 @@
 ---
-title: "방법: 값이 변경되지 않는 변수 만들기(Visual Basic)"
-ms.custom: 
+title: '방법: 값이 변경되지 않는 변수 만들기(Visual Basic)'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - variables [Visual Basic], read-only
 - variables [Visual Basic], constant value
 ms.assetid: 86b59266-25df-4635-ae15-9b59c411d036
-caps.latest.revision: "15"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: d1475553e64fef92ec3f3bb7e1b4fbfb357dbec8
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: d63c254abe6d12c094e0d1252c9721f668947f09
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-a-variable-that-does-not-change-in-value-visual-basic"></a>방법: 값이 변경되지 않는 변수 만들기(Visual Basic)
 해당 값이 변경 되지 않는 변수 개념 모순 되 게 나타날 수 있습니다. 하지만 상황이 발생 하는 상수 작업이 불가능 하 고 변수 고정된 값을 사용 하는 것이 유용 합니다. 이러한 경우에 사용 하 여 멤버 변수를 정의할 수 있습니다는 [ReadOnly](../../../../visual-basic/language-reference/modifiers/readonly.md) 키워드입니다.  

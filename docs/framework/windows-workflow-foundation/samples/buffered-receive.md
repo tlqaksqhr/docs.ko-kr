@@ -1,24 +1,12 @@
 ---
 title: 버퍼링되는 수신
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 9d46d9b9-96c9-4531-9695-ab526b4d704a
-caps.latest.revision: 7
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: abec64433d10a23dca6186c6c9a553bbed12a017
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.openlocfilehash: ee53edafc94fd5efd4e412b1b9198a8763b79462
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="buffered-receive"></a>버퍼링되는 수신
 이 샘플에는 설정 및의 Windows WF (Workflow Foundation) 버퍼링된 된 수신 기능을 구성 하는 방법을 보여 줍니다. 버퍼링된 수신 기능을 사용하면 워크플로 작성자가 메시지의 수신 순서에 신경을 쓰지 않고 워크플로를 만들 수 있습니다. 버퍼링된 수신 기능은 메시지를 로컬로 버퍼링하고 워크플로에서 메시지를 받을 준비가 되었을 때 이를 전달하는 역할을 합니다.  
@@ -31,12 +19,12 @@ ms.lasthandoff: 04/27/2018
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  이 디렉터리가 없으면 [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4(.NET Framework 4용 WCF(Windows Communication Foundation) 및 WF(Windows Workflow Foundation) 샘플)](http://go.microsoft.com/fwlink/?LinkId=150780) 로 이동하여 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 및 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플을 모두 다운로드하세요. 이 샘플은 다음 디렉터리에 있습니다.  
+>  이 디렉터리가로 이동 [Windows Communication Foundation (WCF) 및.NET Framework 4에 대 한 Windows WF (Workflow Foundation) 샘플](http://go.microsoft.com/fwlink/?LinkId=150780) 모든 Windows Communication Foundation (WCF)를 다운로드 하 고 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플. 이 샘플은 다음 디렉터리에 있습니다.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Services\BufferedReceive`  
   
 ## <a name="discussion"></a>토론  
- 이 샘플에서 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 서비스는 [!INCLUDE[wf1](../../../../includes/wf1-md.md)]에 의해 구현되며 일련의 <xref:System.ServiceModel.Activities.Receive> 활동을 포함합니다. 이 워크플로는 간단한 대출 승인 프로세스를 모델링하며, 승인 여부를 결정해야 할 대출에 대한 알림 세 건을 받습니다. [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 클라이언트 응용 프로그램은 서비스에서 예상하는 순서와는 반대로 대출 관련 알림 세 건을 보냅니다. 그러나 이 서비스에서는 버퍼링된 수신 기능을 사용하므로 순서가 맞지 않는 각 메시지를 버퍼링한 후 워크플로에서 해당 메시지를 받을 준비가 되었을 때 이를 처리합니다.  
+ 이 샘플에서는 Windows Communication Foundation (WCF) 서비스를 사용 하 여 구현 됩니다 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 일련의 <xref:System.ServiceModel.Activities.Receive> 활동입니다. 이 워크플로는 간단한 대출 승인 프로세스를 모델링하며, 승인 여부를 결정해야 할 대출에 대한 알림 세 건을 받습니다. Windows Communication Foundation (WCF) 클라이언트 응용 프로그램 서비스에서 예상 반대 순서로 상호 관련된 알림 세 건을 보냅니다. 그러나 이 서비스에서는 버퍼링된 수신 기능을 사용하므로 순서가 맞지 않는 각 메시지를 버퍼링한 후 워크플로에서 해당 메시지를 받을 준비가 되었을 때 이를 처리합니다.  
   
  버퍼링된 수신 기능을 사용하려면 바인딩을 통해 <xref:System.ServiceModel.Activities.ReceiveContent>가 지원되어야 하므로 이 서비스에서는 <xref:System.ServiceModel.NetMsmqBinding>을 사용합니다. 이 바인딩에는 특별한 구성이 필요하지 않으므로 기본 설정이 사용됩니다.  
   
@@ -115,6 +103,6 @@ ms.lasthandoff: 04/27/2018
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  이 디렉터리가 없으면 [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4(.NET Framework 4용 WCF(Windows Communication Foundation) 및 WF(Windows Workflow Foundation) 샘플)](http://go.microsoft.com/fwlink/?LinkId=150780) 로 이동하여 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 및 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플을 모두 다운로드하세요. 이 샘플은 다음 디렉터리에 있습니다.  
+>  이 디렉터리가로 이동 [Windows Communication Foundation (WCF) 및.NET Framework 4에 대 한 Windows WF (Workflow Foundation) 샘플](http://go.microsoft.com/fwlink/?LinkId=150780) 모든 Windows Communication Foundation (WCF)를 다운로드 하 고 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플. 이 샘플은 다음 디렉터리에 있습니다.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Services\BufferedReceive`

@@ -1,36 +1,24 @@
 ---
-title: "필터링"
-ms.custom: 
+title: 필터링
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 4002946c-e34a-4356-8cfb-e25912a4be63
-caps.latest.revision: "9"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 6f67a7f6ac423bd66d9d25b834edc9cf55a5d6a8
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 5f599ac74aa63951f59c5e5c79d3fe37b2ab5100
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="filtering"></a>필터링
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 필터링 시스템은 선언적 필터를 사용하여 메시지를 일치시키고 작업을 결정할 수 있습니다. 필터를 사용하여 메시지 일부를 검사하고 메시지를 통해 수행할 작업을 결정할 수 있습니다. 예를 들어, 큐 프로세스에서는 XPath 1.0 쿼리를 사용하여 알려진 헤더의 우선 순위 요소를 검사함으로써 메시지를 큐의 앞으로 이동할지 여부를 결정할 수 있습니다.  
+Windows Communication Foundation (WCF) 시스템 필터링 선언적 필터를 사용 메시지를 일치 하 고 작업을 결정할 수 있습니다. 필터를 사용하여 메시지 일부를 검사하고 메시지를 통해 수행할 작업을 결정할 수 있습니다. 예를 들어, 큐 프로세스에서는 XPath 1.0 쿼리를 사용하여 알려진 헤더의 우선 순위 요소를 검사함으로써 메시지를 큐의 앞으로 이동할지 여부를 결정할 수 있습니다.  
   
- 필터링 시스템은 특정 `true` 메시지에 대해 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]인 필터 집합을 효율적으로 결정할 수 있는 클래스 집합으로 구성되어 있습니다.  
+ 필터링 시스템은 효율적으로 수행할 수 있는 클래스의 집합으로 구성를 필터 집합을 결정 `true` 특정 WCF 메시지에 대 한 합니다.  
   
- 필터링 시스템은 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 메시징의 핵심 구성 요소이며 매우 신속하게 수행되도록 디자인되었습니다. 각 필터 구현은 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 메시지와 일치하는 특정 유형에 대해 최적화되었습니다.  
+ 필터링 시스템은 WCF 메시징;의 핵심 구성 요소 매우 빠른 되도록 설계 되었습니다. 각 필터 구현은 WCF 메시지에 대 한 종류의 일치 하는 특정 작업에 대해 최적화 되었습니다.  
   
  필터링 시스템은 스레드로부터 안전하지 않습니다. 응용 프로그램은 모든 잠금 의미 체계를 처리해야 합니다. 그러나 다중 판독기, 단일 작성기를 지원합니다.  
   
 ## <a name="where-filtering-fits"></a>필터링이 적용되는 위치  
- 메시지를 수신하고 메시지를 적절한 응용 프로그램 구성 요소에 발송하는 프로세스의 일부인 경우 필터링이 수행됩니다. 필터링 시스템의 디자인은 메시징, 라우팅, 보안, 이벤트 처리 및 시스템 관리를 포함하여 여러 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 하위 시스템의 요구 사항을 해결합니다.  
+ 메시지를 수신하고 메시지를 적절한 응용 프로그램 구성 요소에 발송하는 프로세스의 일부인 경우 필터링이 수행됩니다. 필터링 시스템의 디자인에 몇 가지 WCF 하위 시스템 포함 메시징, 라우팅, 보안, 이벤트 처리 및 시스템 관리의 요구 사항을 해결 합니다.  
   
 ## <a name="filters"></a>필터  
  필터 엔진에는 두 가지 기본 구성 요소 즉, 필터와 필터 테이블이 있습니다. 필터는 사용자 지정 논리 조건에 기반한 메시지에 대해 부울을 결정합니다. 필터는 <xref:System.ServiceModel.Dispatcher.MessageFilter> 클래스를 구현합니다.  
@@ -53,7 +41,7 @@ ms.lasthandoff: 12/22/2017
   
 ### <a name="prefix-endpoint-address-filters"></a>접두사 끝점 주소 필터  
   
-1.  <xref:System.ServiceModel.Dispatcher.PrefixEndpointAddressMessageFilter>는 메시지 URI의 접두사에 위치할 수 있는 일치를 제외하고 <xref:System.ServiceModel.Dispatcher.EndpointAddressMessageFilter> 필터와 동일하게 작동합니다. 예를 들어, 주소 http://www.adatum.com을 지정하는 필터는 http://www.adatum.com/userA로 전달되는 메시지와 일치합니다.  
+1.  <xref:System.ServiceModel.Dispatcher.PrefixEndpointAddressMessageFilter>는 메시지 URI의 접두사에 위치할 수 있는 일치를 제외하고 <xref:System.ServiceModel.Dispatcher.EndpointAddressMessageFilter> 필터와 동일하게 작동합니다. 예를 들어 주소를 지정 하는 필터 http://www.adatum.com 주소가 지정 된 메시지를 일치 http://www.adatum.com/userA합니다.  
   
 ### <a name="xpath-message-filters"></a>XPath 메시지 필터  
  <xref:System.ServiceModel.Dispatcher.XPathMessageFilter>는 XPath 식을 사용하여 XML 문서에 특정 요소, 특성, 텍스트 또는 기타 XML 구문을 포함할지 여부를 결정합니다. 필터는 엄격한 XPath의 하위 집합에 대해 매우 효율적으로 최적화됩니다. 에 설명 된 XML 경로 언어는 [W3C XML 경로 언어 1.0 사양](http://go.microsoft.com/fwlink/?LinkId=94779)합니다.  
@@ -79,7 +67,7 @@ ms.lasthandoff: 12/22/2017
   
  <xref:System.ServiceModel.Dispatcher.XPathMessageFilterTable%601> 클래스는 메시징 시나리오 대부분을 포함하는 XPath의 하위 집합에 대한 일치를 최적화하고, 전체 XPath 1.0 문법도 지원합니다. 효율적인 병렬 일치를 위한 알고리즘을 최적화합니다.  
   
- 이 테이블에는 `Match` 및 <xref:System.Xml.XPath.XPathNavigator>를 통해 수행되는 여러 특수화된 <xref:System.ServiceModel.Dispatcher.SeekableXPathNavigator> 메서드가 있습니다. <xref:System.ServiceModel.Dispatcher.SeekableXPathNavigator>는 <xref:System.Xml.XPath.XPathNavigator> 속성을 추가하여 <xref:System.ServiceModel.Dispatcher.SeekableXPathNavigator.CurrentPosition%2A> 클래스를 확장합니다. 이 속성을 사용하면 XML 문서 내의 위치를 저장해 놓은 후 탐색기를 복제하지 않고 신속하게 로드할 수 있습니다. 이 작업을 <xref:System.Xml.XPath.XPathNavigator>에서 수행하려면 비용이 많이 드는 메모리 할당이 필요합니다. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] XPath 엔진은 XML 문서에 대한 쿼리를 실행하는 과정에서 커서의 위치를 자주 기록해야 하기 때문에, <xref:System.ServiceModel.Dispatcher.SeekableXPathNavigator>는 메시지 처리를 하는 데 있어 중요한 최적화 환경을 제공합니다.  
+ 이 테이블에는 `Match` 및 <xref:System.Xml.XPath.XPathNavigator>를 통해 수행되는 여러 특수화된 <xref:System.ServiceModel.Dispatcher.SeekableXPathNavigator> 메서드가 있습니다. <xref:System.ServiceModel.Dispatcher.SeekableXPathNavigator>는 <xref:System.Xml.XPath.XPathNavigator> 속성을 추가하여 <xref:System.ServiceModel.Dispatcher.SeekableXPathNavigator.CurrentPosition%2A> 클래스를 확장합니다. 이 속성을 사용하면 XML 문서 내의 위치를 저장해 놓은 후 탐색기를 복제하지 않고 신속하게 로드할 수 있습니다. 이 작업을 <xref:System.Xml.XPath.XPathNavigator>에서 수행하려면 비용이 많이 드는 메모리 할당이 필요합니다. WCF XPath 엔진은 XML 문서에 대해 쿼리를 실행 하는 과정에서 커서의 위치를 자주 기록해 야 하므로 <xref:System.ServiceModel.Dispatcher.SeekableXPathNavigator> 메시지 처리를 위한 중요 한 최적화를 제공 합니다.  
   
 ## <a name="customer-scenarios"></a>고객 시나리오  
  메시지에 포함된 데이터에 따라 메시지를 다른 프로세싱 모듈에 전송하려는 경우 언제든지 필터링을 사용할 수 있습니다. 두 가지 일반적인 시나리오는 동작 코드에 기반한 메시지 라우팅과 메시지 끝점 주소에 기반한 메시지 스트림의 역 멀티플렉싱입니다.  

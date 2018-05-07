@@ -1,13 +1,6 @@
 ---
-title: ".NET Framework의 보안 변경 내용"
-ms.custom: 
+title: .NET Framework의 보안 변경 내용
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - Allow Partially Trusted Callers attribute
 - .NET Framework 4, security changes
@@ -16,16 +9,13 @@ helpviewer_keywords:
 - security-critical code
 - code access security, changes
 ms.assetid: 5e87881c-9c13-4b52-8ad1-e34bb46e8aaa
-caps.latest.revision: "52"
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 0777b2566337427abd116bb3584bc19e67d34803
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 84e80b99ee6d872714180e73354d20770c21e144
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="security-changes-in-the-net-framework"></a>.NET Framework의 보안 변경 내용
 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 에서 보안에 대한 가장 중요한 변경 내용은 강력한 이름 지정입니다. 변경에 대한 설명은 [Enhanced Strong Naming](../../../docs/framework/app-domains/enhanced-strong-naming.md) 을 참조하세요.  

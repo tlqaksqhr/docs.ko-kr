@@ -1,23 +1,12 @@
 ---
-title: "트랜잭션 응용 프로그램 작성"
-ms.custom: 
+title: 트랜잭션 응용 프로그램 작성
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: a4d891f2-6fc8-4395-93c6-6819492406e0
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 9fab355da61ea7445e429cfc4e336a14b588e30c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 048df434ff0ada2ab5f8c7473913f6c34c05d1a2
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="writing-a-transactional-application"></a>트랜잭션 응용 프로그램 작성
 트랜잭션 응용 프로그램 프로그래머는 <xref:System.Transactions> 네임스페이스가 제공하는 두 가지 프로그래밍 모델을 활용하여 트랜잭션을 만들 수 있습니다. 사용 하 여 명시적 프로그래밍 모델을 사용할 수 있습니다는 <xref:System.Transactions.Transaction> 클래스 또는 트랜잭션을 관리 하는 자동으로 인프라에서 사용 하 여 암시적 프로그래밍 모델은 <xref:System.Transactions.TransactionScope> 클래스입니다. 개발에 대 한 암시적 트랜잭션 모델을 사용 하는 것이 좋습니다. 에 트랜잭션 범위를 사용 하는 방법에 자세한 정보를 확인할 수는 [암시적 트랜잭션은 트랜잭션 범위를 사용 하 여 구현](../../../../docs/framework/data/transactions/implementing-an-implicit-transaction-using-transaction-scope.md) 항목입니다.  

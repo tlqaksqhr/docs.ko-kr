@@ -1,12 +1,6 @@
 ---
 title: Skip While 절(Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.QuerySkipWhile
 helpviewer_keywords:
@@ -14,14 +8,11 @@ helpviewer_keywords:
 - Skip While clause [Visual Basic]
 - queries [Visual Basic], Skip While
 ms.assetid: 5dee8350-7520-4f1a-b00d-590cacd572d6
-caps.latest.revision: 16
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: f447a6d9b2eb58fa546ced6c96b987caf68fb3e5
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 9d95dc4a9f61a9ec3a50f9d594b31d673c2d3764
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="skip-while-clause-visual-basic"></a>Skip While 절(Visual Basic)
 지정된 조건이 `true`이면 컬렉션에 있는 요소를 무시하고 나머지 요소를 반환합니다.  
@@ -36,7 +27,7 @@ Skip While expression
   
 |용어|정의|  
 |---|---|  
-|`expression`|필수 요소. 에 대 한 요소를 테스트 하는 조건을 나타내는 식입니다. 식은 반환 해야 합니다는 `Boolean` 값 또는 이와 동일한 기능와 같은 프로그램 `Integer` 으로 계산 되는 `Boolean`합니다.|  
+|`expression`|필수. 에 대 한 요소를 테스트 하는 조건을 나타내는 식입니다. 식은 반환 해야 합니다는 `Boolean` 값 또는 이와 동일한 기능와 같은 프로그램 `Integer` 으로 계산 되는 `Boolean`합니다.|  
   
 ## <a name="remarks"></a>설명  
  `Skip While` 까지 제공 된 쿼리 결과의 시작 부분에서 요소를 무시 하는 절 `expression` 반환 `false`합니다. 후 `expression` 반환 `false`, 쿼리에서 나머지 모든 요소를 반환 합니다. `expression` 나머지 결과 대해 무시 됩니다.  

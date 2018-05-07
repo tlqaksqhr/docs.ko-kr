@@ -1,28 +1,19 @@
 ---
-title: "UI 자동화 개요"
-ms.custom: 
+title: UI 자동화 개요
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-bcl
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - UI Automation, overview
 - user interface, see UI
 - accessibility, UI automation
 ms.assetid: 65847654-9994-4a9e-b36d-2dd5d998770b
-caps.latest.revision: "35"
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: d86c70ec4421bc716b12044bac30f8f925c375f6
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: b4752bf8f5fb75115618f95c4dab8b1359a1eb5b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ui-automation-overview"></a>UI 자동화 개요
 > [!NOTE]
@@ -33,7 +24,7 @@ ms.lasthandoff: 12/22/2017
  [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 은 데스크톱에 있는 대부분의 [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] 요소에 대해 프로그래밍 방식의 액세스 권한을 제공하여, 화면 읽기 프로그램과 같은 보조 기술 제품에서 최종 사용자에게 [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] 에 관련 정보를 제공하고 표준 입력 이외의 방법으로 [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] 을 조작하도록 할 수 있습니다. 또한[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 은 자동화된 테스트 스크립트가 [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)]와 상호 작용할 수 있도록 합니다.  
   
 > [!NOTE]
->  [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]통해 다른 사용자가 시작한 프로세스 간의 통신은 지원 하지 않습니다는 **계정으로 실행** 명령입니다.  
+>  [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 통해 다른 사용자가 시작한 프로세스 간의 통신은 지원 하지 않습니다는 **계정으로 실행** 명령입니다.  
   
  UI 자동화 클라이언트 응용 프로그램이 여러 프레임워크에서 작동되도록 작성할 수 있습니다. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 코어가 다양한 [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)]항목의 기반이 되는 프레임워크에서 모든 차이점을 마스크합니다. 예를 들어, `Content` 단추의 [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] 속성, `Caption` 단추의 [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] 속성, HTML 이미지의 `ALT` 속성은 모두 <xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.Name%2A>뷰에서 단일 속성 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 에 매핑됩니다.  
   

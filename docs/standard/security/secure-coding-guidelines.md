@@ -1,13 +1,7 @@
 ---
-title: "보안 코딩 지침"
-ms.custom: 
+title: 보안 코딩 지침
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - managed wrapper to native code implementation
 - secure coding
@@ -21,18 +15,13 @@ helpviewer_keywords:
 - security-neutral code
 - security [.NET Framework], coding guidelines
 ms.assetid: 4f882d94-262b-4494-b0a6-ba9ba1f5f177
-caps.latest.revision: "20"
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 3e75f3c74c5966ce5ce22b23f7ba179e903d37aa
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: f8d61e76a657c7341ec7dfcede6d7dc9943d4659
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="secure-coding-guidelines"></a>보안 코딩 지침
 정보 기반 보안 및 코드 액세스 보안은 보안 구현을 위한 매우 강력하고 명시적인 메커니즘을 제공합니다. 대부분의 응용 프로그램 코드는 .NET Framework에서 구현하는 인프라를 간편하게 사용할 수 있습니다. 경우에 따라, 보안 시스템을 확장하거나 새로운 임시 메서드를 사용하여 빌드되는 추가적인 응용 프로그램 관련 보안이 필요합니다.  

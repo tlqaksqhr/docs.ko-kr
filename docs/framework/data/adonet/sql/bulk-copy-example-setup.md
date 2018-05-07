@@ -1,24 +1,12 @@
 ---
-title: "대량 복사 예제 설정"
-ms.custom: 
+title: 대량 복사 예제 설정
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: d4dde6ac-b8b6-4593-965a-635c8fb2dadb
-caps.latest.revision: "5"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 15e2bef7b4b710fcea7c63b8f77693fde05b3459
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: cb4e92529c8e68bd7e47e5943f7e79dcc97603e0
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="bulk-copy-example-setup"></a>대량 복사 예제 설정
 <xref:System.Data.SqlClient.SqlBulkCopy> 클래스를 사용하면 SQL Server 테이블에만 데이터를 쓸 수 있습니다. 이 항목에 표시 된 코드 예제는 SQL Server 예제 데이터베이스를 사용 하 여 **AdventureWorks**합니다. 코드 샘플에서는 기존 테이블을 변경하지 않도록 사용자가 먼저 만드는 테이블에 데이터를 씁니다.  

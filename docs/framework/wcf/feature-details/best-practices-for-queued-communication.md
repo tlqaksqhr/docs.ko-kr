@@ -1,32 +1,18 @@
 ---
 title: 대기 중인 통신을 위한 최선의 방법
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - queues [WCF], best practices
 - best practices [WCF], queued communication
 ms.assetid: 446a6383-cae3-4338-b193-a33c14a49948
-caps.latest.revision: 14
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 082fa083dbba601cefc00e40bad7b91e14a45d44
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: b54569ad3d11c3b9b1b96e2738bdf0582b63b0b7
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="best-practices-for-queued-communication"></a>대기 중인 통신을 위한 최선의 방법
-이 항목에서는 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]에서 대기 중인 통신에 대해 권장되는 방법을 제공합니다. 다음 단원에서는 시나리오 측면에서 권장되는 방법에 대해 설명합니다.  
+이 항목에서는 Windows Communication Foundation (WCF)에서 대기 중인된 통신에 대 한 권장 되는 방법을 제공 합니다. 다음 단원에서는 시나리오 측면에서 권장되는 방법에 대해 설명합니다.  
   
 ## <a name="fast-best-effort-queued-messaging"></a>신속하고 가장 효율적인 대기 중인 메시징  
  대기 중인 메시징이 제공하는 분리와 가장 효율적인 보증 작업을 통해 신속하고도 고성능인 메시징이 필요한 시나리오의 경우, 비트랜잭션 큐를 사용하여 <xref:System.ServiceModel.MsmqBindingBase.ExactlyOnce%2A> 속성을 `false`로 설정합니다.  
@@ -69,7 +55,7 @@ ms.lasthandoff: 04/28/2018
   
  일괄 처리를 사용하는 경우 동시성 및 스로틀이 동시 일괄 처리로 변환됩니다.  
   
- 높은 처리량 및 가용성을 실현하기 위해 큐에서 읽은 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 서비스 팜을 사용하십시오. 이를 사용하려면 이러한 모든 서비스가 동일한 끝점에서 동일한 계약을 노출해야 합니다. 팜 접근 방식은 많은 서비스를 동일한 큐에서 모두 읽을 수 있기 때문에 생산율이 높은 메시지가 있는 응용 프로그램에 가장 적합합니다.  
+ 높은 처리량 및 가용성을 달성 하려면 큐에서 읽은 WCF 서비스의 팜을 사용 합니다. 이를 사용하려면 이러한 모든 서비스가 동일한 끝점에서 동일한 계약을 노출해야 합니다. 팜 접근 방식은 많은 서비스를 동일한 큐에서 모두 읽을 수 있기 때문에 생산율이 높은 메시지가 있는 응용 프로그램에 가장 적합합니다.  
   
  MSMQ 3.0에서 팜을 사용하는 경우 트랜잭션된 원격 읽기를 지원하지 않습니다. MSMQ 4.0은 트랜잭션된 원격 읽기를 지원합니다.  
   
@@ -84,11 +70,11 @@ ms.lasthandoff: 04/28/2018
  일반적으로 큐는 단방향이지만 일부 시나리오에서는 수신한 회신을 이전에 보낸 요청과 상호 연결해야 하는 경우가 있습니다. 이러한 상호 연결이 필요한 경우 메시지에 상호 연결 정보가 포함된 자체 SOAP 메시지 헤더를 적용하는 것이 좋습니다. 일반적으로 보낸 사람은 이 헤더를 메시지에 첨부하고 받는 사람은 메시지 처리 및 회신 큐에 새 메시지로 다시 회신할 때 상호 연결 정보가 포함된 보낸 사람의 메시지 헤더를 첨부하여 보낸 사람이 요청 메시지를 통해 회신 메시지를 식별할 수 있도록 합니다.  
   
 ## <a name="integrating-with-non-wcf-applications"></a>비WCF 응용 프로그램과 통합  
- `MsmqIntegrationBinding` 서비스 또는 클라이언트를 비[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 서비스 또는 클라이언트와 통합하는 경우 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]을 사용합니다. 비[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 응용 프로그램에는 MSMQ 응용 프로그램이 System.Messaging, COM +, Visual Basic 또는 c + +를 사용 하 여 작성 될 수 있습니다.  
+ 사용 하 여 `MsmqIntegrationBinding` 아닌 WCF 서비스 또는 클라이언트와 WCF 서비스 또는 클라이언트를 통합 하는 경우. 비 WCF 응용 프로그램은 System.Messaging, COM +, Visual Basic 또는 c + +를 사용 하 여 작성 된 MSMQ 응용 프로그램 수 있습니다.  
   
  `MsmqIntegrationBinding`을 사용하는 경우 다음 사항에 주의하십시오.  
   
--   [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 메시지 본문은 MSMQ 메시지 본문과 다릅니다. 대기 중인 바인딩을 사용하여 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 메시지를 보내는 경우 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 메시지 본문이 MSMQ 메시지 내부에 배치됩니다. MSMQ 인프라는 이러한 추가 정보를 인식하지 못하고 MSMQ 메시지만 확인합니다.  
+-   WCF 메시지 본문은 MSMQ 메시지 본문과 같습니다. 큐에 대기 중인된 바인딩을 사용 하 여 WCF 메시지를 보낼 때 WCF 메시지 본문은 MSMQ 메시지 내부 배치 됩니다. MSMQ 인프라는 이러한 추가 정보를 인식하지 못하고 MSMQ 메시지만 확인합니다.  
   
 -   `MsmqIntegrationBinding`은 가장 많이 사용하는 serialization 형식을 지원합니다. serialization 형식에 기반한 일반 메시지의 본문 형식인 <xref:System.ServiceModel.MsmqIntegration.MsmqMessage%601>은 다른 형식의 매개 변수를 가져옵니다. 예를 들어 <xref:System.ServiceModel.MsmqIntegration.MsmqMessageSerializationFormat.ByteArray>는 `MsmqMessage\<byte[]>`가 필요하고 <xref:System.ServiceModel.MsmqIntegration.MsmqMessageSerializationFormat.Stream>은 `MsmqMessage<Stream>`이 필요합니다.  
   

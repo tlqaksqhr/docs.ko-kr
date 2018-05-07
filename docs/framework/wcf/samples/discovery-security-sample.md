@@ -1,24 +1,14 @@
 ---
-title: "Discovery Security 샘플"
-ms.custom: 
+title: Discovery Security 샘플
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: b8db01f4-b4a1-43fe-8e31-26d4e9304a65
-caps.latest.revision: "13"
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: f50334c8477b8823ef1dfb6abcae640e439d5ddd
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: a701a516a93cf94f76950b7b1b1c7f3a9b41214e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="discovery-security-sample"></a>Discovery Security 샘플
 검색 사양에서는 검색 프로세스에 참여하는 끝점을 보호하도록 요구하지 않습니다. 그러나 검색 메시지의 보안을 강화하면 메시지 변경, 서비스 거부, 재생, 스푸핑 같은 다양한 형식의 공격을 완화할 수 있습니다. 이 샘플에서는 WS-Discovery 사양의 8.2단원에 설명된 압축 서명 형식을 사용하여 메시지 서명을 계산 및 확인하는 사용자 지정 채널을 구현합니다. 모두 지원 하 여이 샘플은 [2005 검색 사양](http://go.microsoft.com/fwlink/?LinkId=177912) 및 [1.1 버전](http://go.microsoft.com/fwlink/?LinkId=179677)합니다.  
@@ -48,7 +38,7 @@ ms.lasthandoff: 12/22/2017
 > [!NOTE]
 >  2008 검색 버전 프로토콜에는 `PrefixList`가 추가되었습니다.  
   
- 서명을 계산하기 위해 이 샘플에서는 확장된 서명 항목을 확인합니다. XML 서명(`SignedInfo`)은 WS-Discovery 사양에서 요구하는 대로 `ds` 네임스페이스 접두사를 사용하여 만듭니다. 검색 및 주소 지정 네임스페이스의 본문과 모든 헤더는 서명에서 참조되므로 변경할 수 없습니다. 참조되는 각 요소가 배타적 정형화를 사용하여 변환된 다음(http://www.w3.org/2001/10/xml-exc-c14n#) SHA-1 다이제스트 값이 계산됩니다(http://www.w3.org/2000/09/xmldsig#sha1). 서명 값은 참조되는 모든 요소 및 해당 다이제스트 값에 따라 RSA 알고리즘(http://www.w3.org/2000/09/xmldsig#rsa-sha1)을 사용하여 계산됩니다.  
+ 서명을 계산하기 위해 이 샘플에서는 확장된 서명 항목을 확인합니다. XML 서명(`SignedInfo`)은 WS-Discovery 사양에서 요구하는 대로 `ds` 네임스페이스 접두사를 사용하여 만듭니다. 검색 및 주소 지정 네임스페이스의 본문과 모든 헤더는 서명에서 참조되므로 변경할 수 없습니다. 참조 되는 각 요소가 배타적 정형화를 사용 하 여 변환 됩니다 (http://www.w3.org/2001/10/xml-exc-c14n# ), sha-1 다이제스트 값을 계산한 다음 (http://www.w3.org/2000/09/xmldsig#sha1 ). 참조 되는 모든 요소 및 해당 다이제스트 값에 따라, 서명 값 RSA 알고리즘을 사용 하 여 계산 됩니다 (http://www.w3.org/2000/09/xmldsig#rsa-sha1 ).  
   
  메시지는 클라이언트에서 지정한 인증서를 사용하여 서명됩니다. 저장소 위치, 이름 및 인증서 주체 이름은 바인딩 요소를 만들 때 지정해야 합니다. 압축 서명의 `KeyId`는 서명 토큰의 키 식별자를 나타내며 서명 토큰의 SKI(주체 키 식별자)나 서명 토큰의 공개 키에 대한 SHA-1 해시(SKI가 없는 경우)입니다.  
   
@@ -82,7 +72,7 @@ ms.lasthandoff: 12/22/2017
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  이 디렉터리가 없으면 [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4(.NET Framework 4용 WCF(Windows Communication Foundation) 및 WF(Windows Workflow Foundation) 샘플)](http://go.microsoft.com/fwlink/?LinkId=150780) 로 이동하여 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 및 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플을 모두 다운로드하세요. 이 샘플은 다음 디렉터리에 있습니다.  
+>  이 디렉터리가로 이동 [Windows Communication Foundation (WCF) 및.NET Framework 4에 대 한 Windows WF (Workflow Foundation) 샘플](http://go.microsoft.com/fwlink/?LinkId=150780) 모든 Windows Communication Foundation (WCF)를 다운로드 하 고 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플. 이 샘플은 다음 디렉터리에 있습니다.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Scenario\DiscoveryScenario`  
   

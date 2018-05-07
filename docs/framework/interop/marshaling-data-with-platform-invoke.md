@@ -1,14 +1,6 @@
 ---
 title: 플랫폼 호출을 사용하여 데이터 마샬링
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - cpp
 helpviewer_keywords:
@@ -16,17 +8,13 @@ helpviewer_keywords:
 - data marshaling, platform invoke
 - marshaling, platform invoke
 ms.assetid: dc5c76cf-7b12-406f-b79c-d1a023ec245d
-caps.latest.revision: ''
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 24ae6da0b32cf15ee9104bd10ba5fe6bb03a9763
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: 2eb55d8490eae64e909ada68223983c570ef9afa
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="marshaling-data-with-platform-invoke"></a>플랫폼 호출을 사용하여 데이터 마샬링
 관리되지 않는 라이브러리에서 내보낸 함수를 호출하려면 .NET Framework 응용 프로그램의 관리 코드에 관리되지 않는 함수를 나타내는 함수 프로토타입이 필요합니다. 데이터를 제대로 마샬링하도록 플랫폼에서 호출할 수 있는 프로토타입을 만들려면 다음을 수행해야 합니다.  

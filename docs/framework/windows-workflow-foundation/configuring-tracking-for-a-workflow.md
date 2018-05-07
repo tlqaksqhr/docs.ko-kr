@@ -1,23 +1,12 @@
 ---
-title: "워크플로 추적 구성"
-ms.custom: 
+title: 워크플로 추적 구성
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 905adcc9-30a0-4918-acd6-563f86db988a
-caps.latest.revision: "24"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: bb64569984d71e35ef9f502c79d3a0bb8b4b8988
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 70697d82242ab0704dd67129940a6660d300bef9
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="configuring-tracking-for-a-workflow"></a>워크플로 추적 구성
 워크플로는 다음과 같은 세 가지 방식으로 실행할 수 있습니다.  
@@ -156,7 +145,7 @@ invoker.Invoke();
 ```  
   
 ### <a name="viewing-tracking-records-in-event-viewer"></a>이벤트 뷰어에서 추적 레코드 보기  
- WF 실행을 추적할 때 특별히 관심을 두고 확인할 이벤트 뷰어 로그 두 가지는 분석 로그와 디버그 로그입니다. 둘 다 Microsoft &#124; Windows&#124; 응용 프로그램 서버-응용 프로그램 노드입니다.  이 섹션의 로그에는 전체 시스템에 영향을 미치는 이벤트가 아닌 단일 응용 프로그램의 이벤트가 있습니다.  
+ WF 실행을 추적할 때 특별히 관심을 두고 확인할 이벤트 뷰어 로그 두 가지는 분석 로그와 디버그 로그입니다. 둘 다 Microsoft&#124;Windows&#124;응용 프로그램 서버-응용 프로그램 노드.  이 섹션의 로그에는 전체 시스템에 영향을 미치는 이벤트가 아닌 단일 응용 프로그램의 이벤트가 있습니다.  
   
  디버그 추적 이벤트는 디버그 로그에 기록됩니다. 이벤트 뷰어에서 WF 디버그 추적 이벤트를 수집하려면 디버그 로그를 사용합니다.  
   

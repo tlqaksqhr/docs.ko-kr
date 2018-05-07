@@ -1,31 +1,17 @@
 ---
 title: 약한형 JSON Serialization 샘플
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 0b30e501-4ef5-474d-9fad-a9d559cf9c52
-caps.latest.revision: 13
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 4cc75ff1078c35c177f0809d25cd32ca3b2b8e16
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
-ms.translationtype: MT
+ms.openlocfilehash: 66e68985da94df11a81ba6d387438fe29dd96d56
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="weakly-typed-json-serialization-sample"></a>약한형 JSON Serialization 샘플
 사용자 정의 형식을 지정된 통신 형식으로 serialize하거나 통신 형식을 사용자 정의 형식으로 다시 deserialize할 경우 서비스와 클라이언트 모두에서 지정된 사용자 정의 형식을 사용할 수 있어야 합니다. 보통 이렇게 하기 위해 이 사용자 정의 형식에 <xref:System.Runtime.Serialization.DataContractAttribute> 특성을 적용하고 해당 멤버에 <xref:System.Runtime.Serialization.DataMemberAttribute> 특성을 적용합니다. 이 메커니즘은 [How to: Serialize and Deserialize JSON Data](../../../../docs/framework/wcf/feature-details/how-to-serialize-and-deserialize-json-data.md)항목에 설명된 대로 JSON(JavaScript Object Notation) 개체로 작업하는 경우에도 적용됩니다.  
   
- 일부 시나리오에서는 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 서비스 또는 클라이언트가 개발자의 제어를 벗어난 외부의 서비스 또는 클라이언트로 생성된 JSON 개체에 액세스해야 합니다. 더 많은 웹 서비스에서 공개적으로 JSON API를 노출하면 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 개발자가 임의의 JSON 개체를 deserialize하는 로컬 사용자 정의 형식을 구성하는 것에 실익이 없어질 수도 있습니다. 이 샘플에서는 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 개발자가 사용자 정의 형식을 만들지 않고 deserialize된 임의의 JSON 개체로 작업할 수 있도록 해 주는 메커니즘을 제공합니다. 컴파일할 때에는 JSON 개체가 deserialize되는 형식을 알 수 없기 때문에 JSON 개체의 *약한 형식의 serialization* 이라고 합니다.  
+ 일부 시나리오에서는 Windows Communication Foundation (WCF) 서비스 또는 클라이언트 서비스 또는 개발자의 제어 범위 밖에 있는 클라이언트에 의해 생성 된 JSON 개체에 액세스 해야 합니다. 더 많은 웹 서비스에서 공개적으로 JSON API를 노출하면 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 개발자가 임의의 JSON 개체를 deserialize하는 로컬 사용자 정의 형식을 구성하는 것에 실익이 없어질 수도 있습니다. 이 샘플에서는 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 개발자가 사용자 정의 형식을 만들지 않고 deserialize된 임의의 JSON 개체로 작업할 수 있도록 해 주는 메커니즘을 제공합니다. 컴파일할 때에는 JSON 개체가 deserialize되는 형식을 알 수 없기 때문에 JSON 개체의 *약한 형식의 serialization* 이라고 합니다.  
   
 > [!NOTE]
 >  이 샘플의 설치 절차 및 빌드 지침은 이 항목의 끝부분에 나와 있습니다.  
@@ -149,7 +135,7 @@ My favorite bands are Band ABC and Band XYZ.
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  이 디렉터리가 없으면 [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4(.NET Framework 4용 WCF(Windows Communication Foundation) 및 WF(Windows Workflow Foundation) 샘플)](http://go.microsoft.com/fwlink/?LinkId=150780) 로 이동하여 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 및 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플을 모두 다운로드하세요. 이 샘플은 다음 디렉터리에 있습니다.  
+>  이 디렉터리가로 이동 [Windows Communication Foundation (WCF) 및.NET Framework 4에 대 한 Windows WF (Workflow Foundation) 샘플](http://go.microsoft.com/fwlink/?LinkId=150780) 모든 Windows Communication Foundation (WCF)를 다운로드 하 고 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플. 이 샘플은 다음 디렉터리에 있습니다.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Scenario\Ajax\WeaklyTypedJson`  
   

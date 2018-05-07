@@ -1,24 +1,14 @@
 ---
-title: "방법: 들어오는 클레임 변환"
-ms.custom: 
+title: '방법: 들어오는 클레임 변환'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 2831d514-d9d8-4200-9192-954bb6da1126
-caps.latest.revision: "4"
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: 1f736554cd50a5ca2bd45dfab2f41ba672601f29
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: cb71e320116c3af73139f1a8083fa62e8a7e21a7
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-transform-incoming-claims"></a>방법: 들어오는 클레임 변환
 ## <a name="applies-to"></a>적용 대상  
@@ -183,4 +173,4 @@ ms.lasthandoff: 12/22/2017
   
     ||||||  
     |-|-|-|-|-|  
-    |LOCAL AUTHORITY|LOCAL AUTHORITY|http://schemas.microsoft.com/ws/2008/06/identity/claims/role|관리자|http://www.w3.org/2001/XMLSchema#string|
+    |LOCAL AUTHORITY|LOCAL AUTHORITY|http://schemas.microsoft.com/ws/2008/06/identity/claims/role|관리|http://www.w3.org/2001/XMLSchema#string|

@@ -1,27 +1,15 @@
 ---
-title: "트랜잭션 예외"
-ms.custom: 
+title: 트랜잭션 예외
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 1d27ed51-7eda-477f-9eca-94fa129f3e07
-caps.latest.revision: "5"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 4f13a39c251afd55dbb1f0d2dde4fc66fe38d30a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 85d8d043a5610743d6cbad4d950330ed4bedb502
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="transaction-exceptions"></a>트랜잭션 예외
-이 항목에서는 [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] 트랜잭션에 의해 생성된 모든 예외를 보여 줍니다.  
+이 항목에서는 Windows Communication Foundation (WCF) 트랜잭션에 의해 생성 된 모든 예외를 보여 줍니다.  
   
 ## <a name="exception-list"></a>예외 목록  
   

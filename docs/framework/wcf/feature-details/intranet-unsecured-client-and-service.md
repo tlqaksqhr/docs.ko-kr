@@ -1,30 +1,20 @@
 ---
-title: "보안이 설정되지 않은 인트라넷 클라이언트 및 서비스"
-ms.custom: 
+title: 보안이 설정되지 않은 인트라넷 클라이언트 및 서비스
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: f450f5d4-3547-47ec-9320-2809e6a12634
-caps.latest.revision: "20"
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: 0cfd98d401921c47bd85f8d4089e3efb437ca6b7
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: d08e8b5f9a22fc558af6f8f7c2ca3049e4a692ba
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="intranet-unsecured-client-and-service"></a>보안이 설정되지 않은 인트라넷 클라이언트 및 서비스
-다음 표에서는 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 응용 프로그램에 보안 사설망에 대한 정보를 제공하기 위해 개발된 간단한 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 서비스를 보여 줍니다. 데이터의 중요도가 낮거나, 네트워크가 원래 보안이 유지되거나, 보안이 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 인프라 아래 계층에서 제공되기 때문에 보안이 필요하지 않습니다.  
+다음 그림에서는 WCF 응용 프로그램에 보안 사설망에 정보를 제공 하기 위해 개발 된 간단한 Windows Communication Foundation (WCF) 서비스를 보여 줍니다. 보안은 데이터의 중요도 낮거나, 본질적으로 안전 이어야 하는데 네트워크 또는 WCF 인프라 아래 계층에서 보안을 제공 하기 때문에 필요 하지 않습니다.  
   
  ![보안 되지 않은 인트라넷 클라이언트 및 서비스 시나리오](../../../../docs/framework/wcf/feature-details/media/unsecuredwebservice.gif "UnsecuredWebService")  
   
@@ -33,7 +23,7 @@ ms.lasthandoff: 12/22/2017
 |보안 모드|없음|  
 |전송|TCP|  
 |바인딩|<xref:System.ServiceModel.NetTcpBinding>|  
-|상호 운용성|[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에만 해당|  
+|상호 운용성|WCF만|  
 |인증|없음|  
 |무결성|없음|  
 |기밀성|없음|  
@@ -92,7 +82,7 @@ ms.lasthandoff: 12/22/2017
      [!code-vb[C_SecurityScenarios#0](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#0)]  
   
 ### <a name="code"></a>코드  
- 다음 코드는 TCP 프로토콜을 사용하여 보안이 설정되지 않은 끝점에 액세스하는 기본 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 클라이언트를 보여 줍니다.  
+ 다음 코드에서는 TCP 프로토콜을 사용 하는 보안 되지 않은 끝점에 액세스 하는 기본 WCF 클라이언트를 보여 줍니다.  
   
  [!code-csharp[C_UnsecuredClient#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_unsecuredclient/cs/source.cs#2)]
  [!code-vb[C_UnsecuredClient#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_unsecuredclient/vb/source.vb#2)]  

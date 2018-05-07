@@ -1,14 +1,6 @@
 ---
-title: "ICorDebugCode::GetCode 메서드"
-ms.custom: 
+title: ICorDebugCode::GetCode 메서드
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICorDebugCode.GetCode
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: 7137e3d1-1dad-48d8-8c37-16ac816534d3
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: f906fddf8073a00d2a3741613aae537b8604af67
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: d09681f97829f88bedf53af229298d5d57d764df
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="icordebugcodegetcode-method"></a>ICorDebugCode::GetCode 메서드
 디스어셈블리로 설정 된 지정된 된 함수에 대 한 모든 코드를 가져옵니다. 이 메서드는.NET Framework 버전 2.0에서에서 사용 되지 합니다. 사용 하 여 [icordebugcode2:: Getcodechunks](../../../../docs/framework/unmanaged-api/debugging/icordebugcode2-getcodechunks-method.md) 대신 합니다.  

@@ -1,27 +1,15 @@
 ---
-title: "ADO.NET에서 큰 값(최대값) 데이터 수정"
-ms.custom: 
+title: ADO.NET에서 큰 값(최대값) 데이터 수정
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 8aca5f00-d80e-4320-81b3-016d0466f7ee
-caps.latest.revision: "6"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: e42ff73cda8fc63d9b8ae6061cfbdb9749a0a864
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 285803d92474efd3268816d1af06eb3ff4abbc79
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="modifying-large-value-max-data-in-adonet"></a>ADO.NET에서 큰 값(최대값) 데이터 수정
 LOB(Large Object) 데이터 형식은 최대 행 크기 8KB를 초과하는 형식입니다. SQL Server에서는 `max`, `varchar` 및 `nvarchar` 데이터 형식에 사용할 수 있는 `varbinary` 지정자를 제공하여 2^32바이트에 이르는 큰 값도 저장할 수 있습니다. 테이블 열 및 Transact-SQL 변수에서는 `varchar(max)`, `nvarchar(max)` 또는 `varbinary(max)` 데이터 형식을 지정할 수 있습니다. ADO.NET에서는 `max`를 사용하여 `DataReader` 데이터 형식을 가져올 수 있을 뿐 아니라 특별한 처리 없이도 입력 및 출력 매개 변수 값을 모두 지정할 수 있습니다. 큰 `varchar` 데이터 형식의 경우에는 데이터를 점진적으로 검색하고 업데이트할 수 있습니다.  
@@ -78,7 +66,7 @@ FROM OPENROWSET
   
 |조건|결과|  
 |--------|----------|  
-|식이 NULL로 설정된 경우|`@Length`무시 됩니다에 값 *column_name* 잘렸습니다. 지정 된 위치에서 `@Offset`합니다.|  
+|식이 NULL로 설정된 경우|`@Length` 무시 됩니다에 값 *column_name* 잘렸습니다. 지정 된 위치에서 `@Offset`합니다.|  
 |`@Offset`이 NULL인 경우|업데이트 작업에서 기존의 끝에 식이 추가 *column_name* 값 및 `@Length` 는 무시 됩니다.|  
 |`@Offset`이 column_name 값의 길이보다 큰 경우|SQL Server에서 오류를 반환합니다.|  
 |`@Length`이 NULL인 경우|업데이트 작업을 통해 `@Offset`부터 `column_name` 값 끝 사이에 있는 모든 데이터가 제거됩니다.|  
@@ -254,7 +242,7 @@ FROM    Production.Document
 WHERE   DocumentID=@DocumentID  
 ```  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  ADO.NET 코드에서는 <xref:System.Data.SqlClient.SqlConnection> 및 <xref:System.Data.SqlClient.SqlCommand> 개체를 만들어 GetDocumentSummary 저장 프로시저를 실행하고 큰 값 형식으로 저장되는 문서 요약을 검색할 수 있습니다. 에 대 한 값을 전달 하는 코드는 @DocumentID 입력 매개 변수 및 결과에서 다시 전달 표시는 @DocumentSummary 콘솔 창에서 매개 변수를 출력 합니다.  
   
  [!code-csharp[DataWorks LargeValueType.Param#1](../../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks LargeValueType.Param/CS/source.cs#1)]

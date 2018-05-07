@@ -1,31 +1,17 @@
 ---
 title: WCF 성능 카운터
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - performance counters [WCF]
 ms.assetid: f559b2bd-ed83-4988-97a1-e88f06646609
-caps.latest.revision: 37
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: be4ffac8444f6365dacb2b20db6abbb6792c2239
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 74bf11779e6ccf032f2c8c920b62b2f0e5d0625d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="wcf-performance-counters"></a>WCF 성능 카운터
-[!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)]에는 응용 프로그램의 성능을 측정하는 데 도움이 되는 다양한 성능 카운터가 있습니다.  
+Windows Communication Foundation (WCF)에 다양 한 응용 프로그램의 성능을 측정할 수 있도록 성능 카운터가 포함 되어 있습니다.  
   
 ## <a name="enabling-performance-counters"></a>성능 카운터 사용  
  [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 서비스의 app.config 구성 파일을 통해 [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 서비스에 대한 성능 카운터를 다음과 같이 활성화할 수 있습니다.  

@@ -1,24 +1,12 @@
 ---
-title: "SQL Server 기능 및 ADO.NET"
-ms.custom: 
+title: SQL Server 기능 및 ADO.NET
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 2839529b-a79b-4450-be5d-07a98dbc7a0f
-caps.latest.revision: "9"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 5bf12958034aca0cca4300f3122c16528dcad322
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: e19cec01cb749968b051541e78ee8c9af5cbb333
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="sql-server-features-and-adonet"></a>SQL Server 기능 및 ADO.NET
 이 단원의 항목에서는 ADO.NET을 사용하여 데이터베이스 응용 프로그램을 개발하는 데 사용할 수 있는 SQL Server 기능에 대해 설명합니다.  

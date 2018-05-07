@@ -1,27 +1,17 @@
 ---
-title: "Visual Studio 2012용 ID 및 액세스 도구"
-ms.custom: 
+title: Visual Studio 2012용 ID 및 액세스 도구
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 87b8f8f2-4074-44fd-9fd6-08278e877390
-caps.latest.revision: "3"
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: 079c3798f17f4929124cd5cb027baa5d40a1167a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 107028b89d576b27a2559fd0ae5298c849da2c94
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="identity-and-access-tool-for-visual-studio-2012"></a>Visual Studio 2012용 ID 및 액세스 도구
-이 항목에서는 Visual Studio 11에 대한 새로운 ID 및 액세스 도구에 대해 설명합니다. 이 도구는 URL [http://go.microsoft.com/fwlink/?LinkID=245849](http://go.microsoft.com/fwlink/?LinkID=245849)에서 다운로드하거나, 확장 관리자에서 직접 “ID”를 검색하여 Visual Studio 11 내에서 바로 다운로드할 수 있습니다.  
+이 항목에서는 Visual Studio 11에 대한 새로운 ID 및 액세스 도구에 대해 설명합니다. 다음 URL에서이 도구를 다운로드할 수 있습니다: [ http://go.microsoft.com/fwlink/?LinkID=245849 ](http://go.microsoft.com/fwlink/?LinkID=245849) 또는에서 직접 확장 관리자에서 직접 "id"를 검색 하 여 Visual Studio 11 내에서.  
   
  Visual Studio 11의 ID 및 액세스 도구는 다음과 같은 주요 기능과 함께 개발 시간이 크게 절감된 환경을 제공합니다.  
   

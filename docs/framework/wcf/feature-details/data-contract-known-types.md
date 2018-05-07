@@ -1,14 +1,6 @@
 ---
 title: 데이터 계약 알려진 형식
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -17,17 +9,11 @@ helpviewer_keywords:
 - KnownTypeAttribute [WCF]
 - KnownTypes [WCF]
 ms.assetid: 1a0baea1-27b7-470d-9136-5bbad86c4337
-caps.latest.revision: 42
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: c9c180a0f1544fa187ddb53ec79a47f908c298d7
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 00ae32ff394b1ce2acb38fb237527e934934b935
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="data-contract-known-types"></a>데이터 계약 알려진 형식
 <xref:System.Runtime.Serialization.KnownTypeAttribute> 클래스를 사용하면 고려 사항에 포함해야 하는 형식을 deserialization을 수행하는 동안 미리 지정할 수 있습니다. 작업 예제는 [Known Types](../../../../docs/framework/wcf/samples/known-types.md) 예제를 참조하십시오.  
@@ -43,7 +29,7 @@ ms.lasthandoff: 04/28/2018
 -   [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 형식을 비롯한 일부 형식에는 앞의 세 범주 중 하나에 있는 멤버가 포함됩니다. 예를 들어 <xref:System.Collections.Hashtable> 은 <xref:System.Object> 를 사용하여 해시 테이블에 실제 개체를 저장합니다. 이러한 형식을 serialize할 때 받는 쪽에서 이러한 멤버에 대한 데이터 계약을 미리 확인할 수 없습니다.  
   
 ## <a name="the-knowntypeattribute-class"></a>KnownTypeAttribute 클래스  
- 데이터가 수신하는 끝점에 도착하면 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 런타임에서는 CLR(공용 언어 런타임) 형식의 인스턴스로 데이터를 deserialize하려고 시도합니다. deserialization을 위해 인스턴스화되는 형식은 메시지 내용이 따르는 데이터 계약을 확인하도록 들어오는 메시지를 먼저 검사하여 선택됩니다. 그런 다음 deserialization 엔진은 메시지 내용과 호환되는 데이터 계약을 구현하는 CLR 형식을 찾습니다. 이 프로세스 중에 deserialization 엔진에서 허용하는 후보 형식 집합을 deserializer의 "알려진 형식" 집합이라고 합니다.  
+ 데이터 수신 하는 끝점에 도착 하면 WCF 런타임 데이터를 공용 언어 런타임 (CLR) 형식의 인스턴스로 deserialize 하려고 합니다. deserialization을 위해 인스턴스화되는 형식은 메시지 내용이 따르는 데이터 계약을 확인하도록 들어오는 메시지를 먼저 검사하여 선택됩니다. 그런 다음 deserialization 엔진은 메시지 내용과 호환되는 데이터 계약을 구현하는 CLR 형식을 찾습니다. 이 프로세스 중에 deserialization 엔진에서 허용하는 후보 형식 집합을 deserializer의 "알려진 형식" 집합이라고 합니다.  
   
  deserialization 엔진에 형식을 알리는 한 가지 방법은 <xref:System.Runtime.Serialization.KnownTypeAttribute>를 사용하는 것입니다. 특성은 개별 데이터 멤버에 적용될 수 없고 전체 데이터 계약 형식에만 적용될 수 있습니다. 특성은 클래스 또는 구조체일 수 있는 *외부 형식* 에 적용됩니다. 가장 기본적인 사용법에서 특성을 적용하면 형식이 "알려진 형식"으로 지정됩니다. 이렇게 하면 외부 형식의 개체 또는 해당 멤버를 통해 참조되는 개체가 deserialize될 때마다 알려진 형식이 알려진 형식 집합의 일부가 됩니다. 두 개 이상의 <xref:System.Runtime.Serialization.KnownTypeAttribute> 특성을 같은 형식에 적용할 수 있습니다.  
   
@@ -144,7 +130,7 @@ ms.lasthandoff: 04/28/2018
  [!code-vb[C_KnownTypeAttribute#10](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_knowntypeattribute/vb/source.vb#10)]  
   
 ## <a name="additional-ways-to-add-known-types"></a>알려진 형식을 추가하는 다른 방법  
- 또한 구성 파일을 통해 알려진 형식을 추가할 수 있습니다. 이 기능은 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]에 타사 형식 라이브러리를 사용할 때처럼 적합한 deserialization에 알려진 형식이 필요한 형식을 제어하지 않을 때 유용합니다.  
+ 또한 구성 파일을 통해 알려진 형식을 추가할 수 있습니다. 형식 라이브러리와 Windows Communication Foundation (WCF) 공급 업체를 사용 하 여 때 처럼 적합 한 deserialization에 알려진된 형식이 필요한 형식을 제어 하지 않을 경우에 유용 합니다.  
   
  다음 구성 파일에서는 구성 파일에 알려진 형식을 지정하는 방법을 보여 줍니다.  
   

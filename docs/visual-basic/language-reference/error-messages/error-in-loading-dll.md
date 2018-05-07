@@ -1,23 +1,14 @@
 ---
 title: DLL을 로드하는 동안 오류가 발생했습니다(Visual Basic).
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vbrID48
 ms.assetid: 4226cd1f-028c-477d-88a5-cb57f7e0cdc8
-caps.latest.revision: 8
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: cc557dcc6709178b6519adb56f31debcbd1d1c39
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: ac21c4d52b248025ee26bac3e511bb5b0a0b668e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="error-in-loading-dll-visual-basic"></a>DLL을 로드하는 동안 오류가 발생했습니다(Visual Basic).
 동적 연결 라이브러리 (DLL)는에 지정 된 라이브러리는 `Lib` 절은 `Declare` 문. 이 오류에 대 한 가능한 원인은 다음과 같습니다.  

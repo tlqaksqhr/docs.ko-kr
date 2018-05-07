@@ -1,27 +1,15 @@
 ---
-title: "시퀀스의 첫 번째 요소 반환"
-ms.custom: 
+title: 시퀀스의 첫 번째 요소 반환
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: ccdc3777-b2c2-44e3-a627-abef8d79a555
-caps.latest.revision: "2"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: bbdfe78f15490ce2c6722c83a4615ca29cbc5863
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: fd228b2d7534feca3cff49586ac0d43fbf9bcb1f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="return-the-first-element-in-a-sequence"></a>시퀀스의 첫 번째 요소 반환
 <xref:System.Linq.Enumerable.First%2A> 연산자를 사용하여 시퀀스의 첫 번째 요소를 반환합니다. <xref:System.Linq.Enumerable.First%2A>를 사용한 쿼리는 즉시 실행됩니다.  
@@ -29,7 +17,7 @@ ms.lasthandoff: 01/17/2018
 > [!NOTE]
 >  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]에서는 <xref:System.Linq.Enumerable.Last%2A> 연산자를 지원하지 않습니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 코드에서는 테이블에서 첫 번째 `Shipper`를 찾습니다.  
   
  Northwind 샘플 데이터베이스에 대한 쿼리를 실행하면 결과는 다음과 같습니다.  
@@ -39,7 +27,7 @@ ms.lasthandoff: 01/17/2018
  [!code-csharp[DLinqQueryExamples#14](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryExamples/cs/Program.cs#14)]
  [!code-vb[DLinqQueryExamples#14](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#14)]  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 코드에서는 `Customer` BONAP이 있는 단일 `CustomerID`를 찾습니다.  
   
  Northwind 샘플 데이터베이스에 대해 이 쿼리를 실행하면 결과는 `ID = BONAP, Contact = Laurence Lebihan`입니다.  

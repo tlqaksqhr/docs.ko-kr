@@ -1,13 +1,6 @@
 ---
-title: "TextElement 콘텐츠 모델 개요"
-ms.custom: 
+title: TextElement 콘텐츠 모델 개요
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -16,16 +9,11 @@ helpviewer_keywords:
 - TextElement content model [WPF]
 - flow content elements [WPF], TextElement content model
 ms.assetid: d0a7791c-b090-438c-812f-b9d009d83ee9
-caps.latest.revision: "11"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 95d25ff6819ba913b7e9270bc2d87dd77032c5c6
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 4a50e8a10563fdc5e16ee2e2a46389e13b51e447
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="textelement-content-model-overview"></a>TextElement 콘텐츠 모델 개요
 에 대 한 지원 되는 콘텐츠를 설명 하는이 콘텐츠 모델 개요는 <xref:System.Windows.Documents.TextElement>합니다. <xref:System.Windows.Documents.Paragraph> 클래스는 유형의 <xref:System.Windows.Documents.TextElement>합니다. 콘텐츠 모델은 어떤 개체/요소가 다른 개체/요소에 포함될 수 있는지를 설명합니다. 이 개요에서 파생 된 개체에 사용 되는 콘텐츠 모델을 요약 <xref:System.Windows.Documents.TextElement>합니다. 자세한 내용은 참조 [문서 개요 흐름](../../../../docs/framework/wpf/advanced/flow-document-overview.md)합니다.  
@@ -69,7 +57,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="working-with-textelement-content-programmatically"></a>프로그래밍 방식으로 TextElement 콘텐츠 작업  
  콘텐츠는 <xref:System.Windows.Documents.TextElement> 컬렉션 등의 콘텐츠를 프로그래밍 방식으로 조작 하 여 구성 된 <xref:System.Windows.Documents.TextElement> 개체는 이러한 컬렉션을 사용 하 여 수행 됩니다. 사용 하는 세 가지 서로 다른 컬렉션 <xref:System.Windows.Documents.TextElement> -파생 된 클래스:  
   
--   <xref:System.Windows.Documents.InlineCollection>:의 컬렉션을 나타냅니다 <xref:System.Windows.Documents.Inline> 요소입니다. <xref:System.Windows.Documents.InlineCollection>사용할 수 있는 자식 콘텐츠를 정의 고 <xref:System.Windows.Documents.Paragraph>, <xref:System.Windows.Documents.Span>, 및 <xref:System.Windows.Controls.TextBlock> 요소입니다.  
+-   <xref:System.Windows.Documents.InlineCollection>:의 컬렉션을 나타냅니다 <xref:System.Windows.Documents.Inline> 요소입니다. <xref:System.Windows.Documents.InlineCollection> 사용할 수 있는 자식 콘텐츠를 정의 고 <xref:System.Windows.Documents.Paragraph>, <xref:System.Windows.Documents.Span>, 및 <xref:System.Windows.Controls.TextBlock> 요소입니다.  
   
 -   <xref:System.Windows.Documents.BlockCollection>:의 컬렉션을 나타냅니다 <xref:System.Windows.Documents.Block> 요소입니다. <xref:System.Windows.Documents.BlockCollection>은 <xref:System.Windows.Documents.FlowDocument>, <xref:System.Windows.Documents.Section>, <xref:System.Windows.Documents.ListItem>, <xref:System.Windows.Documents.TableCell>, <xref:System.Windows.Documents.Floater> 및 <xref:System.Windows.Documents.Figure> 요소의 사용할 수 있는 자식 콘텐츠를 정의합니다.  
   

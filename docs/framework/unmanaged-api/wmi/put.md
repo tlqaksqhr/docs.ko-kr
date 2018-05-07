@@ -1,11 +1,7 @@
 ---
-title: "Put 함수 (관리 되지 않는 API 참조)"
-description: "Put 함수는 명명된 된 속성에 새 값을 할당합니다."
+title: Put 함수 (관리 되지 않는 API 참조)
+description: Put 함수는 명명된 된 속성에 새 값을 할당합니다.
 ms.date: 11/06/2017
-ms.prod: .net-framework
-ms.technology:
-- dotnet-clr
-ms.topic: reference
 api_name:
 - Put
 api_location:
@@ -20,14 +16,11 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 09d3edc74b34688d5cc36e688f634850cfb60910
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 9f3ffe27bef6583b733fc04f2f25903d545daa74
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="put-function"></a>Put 함수
 명명된 된 속성을 새 값으로 설정합니다.
@@ -93,9 +86,9 @@ HRESULT Put (
 
 속성으로 설정 하는 경우는 `Put` 속성 형식은 부모 클래스 형식과 일치 하지 않는 하지 않는 한 속성의 기본값은 변경, 부모 클래스에 존재 합니다. 속성이 존재 하지 않는 경우 형식이 일치 하지 않습니다 속성이 ceated입니다.
 
-사용 하 여는 `vtType` CIM 클래스 정의에서 새 속성을 만들 때에 매개 변수 및 `pVal` 은 `null` 가리키는 또는 `VARIANT` 형식의 `VT_NULL`합니다. 이 경우에 `vType` 매개 변수 속성의 CIM 형식을 지정 합니다. 다른 모든 경우에 `vtType` 0 이어야 합니다. `vtType`0 이어야 기본 개체 인스턴스 라면 (경우에 `Val` 은 `null`) 속성의 형식이 고정 되어 있고 변경할 수 없습니다.   
+사용 하 여는 `vtType` CIM 클래스 정의에서 새 속성을 만들 때에 매개 변수 및 `pVal` 은 `null` 가리키는 또는 `VARIANT` 형식의 `VT_NULL`합니다. 이 경우에 `vType` 매개 변수 속성의 CIM 형식을 지정 합니다. 다른 모든 경우에 `vtType` 0 이어야 합니다. `vtType` 0 이어야 기본 개체 인스턴스 라면 (경우에 `Val` 은 `null`) 속성의 형식이 고정 되어 있고 변경할 수 없습니다.   
 
-## <a name="example"></a>예
+## <a name="example"></a>예제
 
 예를 들어 참조는 [IWbemClassObject::Put](https://msdn.microsoft.com/library/aa391455(v=vs.85).aspx) 메서드.
 
@@ -104,7 +97,7 @@ HRESULT Put (
   
  **헤더:** WMINet_Utils.idl  
   
- **.NET framework 버전:**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **.NET framework 버전:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>참고자료  
 [WMI 및 성능 카운터 (관리 되지 않는 API 참조)](index.md)

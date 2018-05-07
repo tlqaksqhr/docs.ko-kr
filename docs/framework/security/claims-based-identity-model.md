@@ -1,26 +1,14 @@
 ---
-title: "클레임 기반 ID 모델"
-ms.custom: 
+title: 클레임 기반 ID 모델
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 4a96a9af-d980-43be-bf91-341a23401431
-caps.latest.revision: 
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload:
-- dotnet
-ms.openlocfilehash: f675f75d6dfd51b5259748316864048562ee0452
-ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
+ms.openlocfilehash: dadcc397783e003574d417aa6253ebc561ed28db
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="claims-based-identity-model"></a>클레임 기반 ID 모델
 클레임 인식 응용 프로그램을 작성할 때 사용자 ID가 클레임 집합으로 응용 프로그램에 표시됩니다. 한 클레임에는 사용자의 이름 수, 다른 전자 메일 주소를 수 있습니다. 외부 ID 시스템은 수신하는 ID 데이터가 신뢰할 수 있는 출처에서 제공되는 암호화 보증과 함께 각각의 요청을 작성한 사용자에 대해 파악하기 위해 필요한 모든 사항을 응용 프로그램에 제공하도록 구성됩니다.  

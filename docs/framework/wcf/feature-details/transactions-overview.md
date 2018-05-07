@@ -1,30 +1,16 @@
 ---
 title: Windows Communication Foundation 트랜잭션 개요
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - transactions [WCF]
 - WCF, transactions
 - Windows Communication Foundation, transactions
 ms.assetid: c7757854-1207-4019-8b31-552578b7d570
-caps.latest.revision: 16
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 76edd7cf30d9da06db6e0c2f4624bf9a6d677eca
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 63f3826215f24a4bab6d84709c2f9da6a9c8f4f9
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="windows-communication-foundation-transactions-overview"></a>Windows Communication Foundation 트랜잭션 개요
 트랜잭션은 동작 또는 작업 집합을 하나의 개별 실행 단위로 그룹화하는 방법을 제공합니다. 트랜잭션은 다음 속성을 가진 작업 컬렉션입니다.  
@@ -37,9 +23,9 @@ ms.lasthandoff: 04/28/2018
   
 -   지속성. 커밋되고 나면 데이터베이스 레코드 같은 관리되는 리소스에 대한 업데이트가 실패한 경우에도 지속되도록 합니다.  
   
- [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]에서는 웹 서비스 응용 프로그램에서 분산 트랜잭션을 만들 수 있는 다양한 기능을 제공합니다.  
+ Windows Communication Foundation (WCF)에서는 다양 한 웹 서비스 응용 프로그램에서 분산된 트랜잭션을 만들 수 있도록 하는 기능을 제공 합니다.  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서는 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 응용 프로그램이 타사 기술을 사용하여 작성된 상호 운용 가능한 웹 서비스 같은 상호 운용 가능한 응용 프로그램으로 트랜잭션을 이동할 수 있도록 하는 WS-AT(WS-AtomicTransaction) 프로토콜 지원을 구현합니다. 또한 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서는 트랜잭션 흐름을 가능하게 하는 interop 기능이 필요하지 않은 시나리오에서 사용할 수 있는 OLE 트랜잭션 프로토콜 지원을 구현합니다.  
+ WCF에는 WCF 응용 프로그램이 타사 기술을 사용 하 여 작성 된 상호 운용 가능 웹 서비스 같은 상호 운용 가능한 응용 프로그램으로 트랜잭션 이동할 수 있도록 하는 WS-AT () Ws-atomictransaction 프로토콜에 대 한 지원을 구현 합니다. WCF에는 트랜잭션 흐름을 사용 하는 interop 기능이 필요 하지 시나리오에 사용 될 수 있는 OLE 트랜잭션 프로토콜 지원을 구현 합니다.  
   
  응용 프로그램 구성 파일에서 바인딩을 구성하여 트랜잭션 흐름을 가능하거나 불가능하게 하고 바인딩에 원하는 트랜잭션 프로토콜을 설정할 수 있습니다. 또한 구성 파일을 사용하여 서비스 수준에서 트랜잭션 시간 초과를 설정할 수 있습니다. 자세한 내용은 참조 [트랜잭션 흐름을 사용 하도록 설정](../../../../docs/framework/wcf/feature-details/enabling-transaction-flow.md)합니다.  
   

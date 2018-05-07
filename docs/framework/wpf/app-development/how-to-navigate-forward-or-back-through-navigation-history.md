@@ -1,13 +1,6 @@
 ---
-title: "방법: 탐색 기록을 앞으로 또는 뒤로 탐색"
-ms.custom: 
+title: '방법: 탐색 기록을 앞으로 또는 뒤로 탐색'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -15,26 +8,21 @@ helpviewer_keywords:
 - history [WPF], navigating forward
 - navigation [WPF], through navigation history (forward)
 ms.assetid: 5939d574-5f53-469e-85f5-1f2b13607caa
-caps.latest.revision: "11"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 78fd9fec6a93c100da6b4e7174376a963ae8beb2
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ac3b8b71b6adf04d71cf35edbb042b82c57d8e1f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-navigate-forward-or-back-through-navigation-history"></a>방법: 탐색 기록을 앞으로 또는 뒤로 탐색
 이 예제에는 앞으로 또는 뒤로 탐색 기록의 항목을 탐색 하는 방법을 보여 줍니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  내용을 사용 하 여 다음과 같은 호스트에서 실행 되는 코드 탐색 기록, 한 번에 하나의 항목을 통해 앞 이나 뒤로 탐색할 수 있습니다.  
   
--   <xref:System.Windows.Navigation.NavigationWindow>사용 하 여<xref:System.Windows.Navigation.NavigationService>  
+-   <xref:System.Windows.Navigation.NavigationWindow> 사용 하 여 <xref:System.Windows.Navigation.NavigationService>  
   
--   <xref:System.Windows.Controls.Frame>사용 하 여<xref:System.Windows.Navigation.NavigationService>  
+-   <xref:System.Windows.Controls.Frame> 사용 하 여 <xref:System.Windows.Navigation.NavigationService>  
   
 -   [!INCLUDE[TLA#tla_iegeneric](../../../../includes/tlasharptla-iegeneric-md.md)]  
   

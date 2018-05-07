@@ -1,13 +1,6 @@
 ---
-title: "방법: 샌드박스에서 부분 신뢰 코드 실행"
-ms.custom: 
+title: '방법: 샌드박스에서 부분 신뢰 코드 실행'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - partially trusted code
 - sandboxing
@@ -15,16 +8,13 @@ helpviewer_keywords:
 - restricted security environment
 - code security, sandboxing
 ms.assetid: d1ad722b-5b49-4040-bff3-431b94bb8095
-caps.latest.revision: "27"
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: fc335bfef4993f6e730dca93cd645d886a9d13b4
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 05ab0874c980d9e6138ae2bfd720c6d89628613c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-run-partially-trusted-code-in-a-sandbox"></a>방법: 샌드박스에서 부분 신뢰 코드 실행
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
@@ -186,7 +176,7 @@ AppDomain.CreateDomain( string friendlyName,
   
      완전 신뢰 어설션은 <xref:System.Security.SecurityException>에서 확장된 정보를 가져오는 데 사용됩니다. <xref:System.Security.PermissionSet.Assert%2A>를 사용하지 않으면 <xref:System.Security.SecurityException>의 <xref:System.Security.SecurityException.ToString%2A> 메서드는 스택에 부분적으로 신뢰할 수 있는 코드가 있는지 검색하고 반환된 정보를 제한합니다. 부분 신뢰 코드가 해당 정보를 읽을 수 없으면 이로 인해 보안 문제가 발생할 수 있지만 <xref:System.Security.Permissions.UIPermission>을 부여하지 않음으로써 위험이 완화됩니다. 완전 신뢰 어설션은 꼭 필요할 때만, 확실히 부분 신뢰 코드를 완전 신뢰로 높일 수 없을 때만 사용해야 합니다. 원칙적으로 같은 함수에서, 그리고 완전 신뢰에 대한 어설션을 호출한 후에는 신뢰할 수 없는 코드를 호출하지 마세요. 어설션 사용을 완료하면 항상 어설션을 되돌리는 것이 좋습니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 예제에서는 이전 섹션의 절차를 구현합니다. 예제에서 Visual Studio 솔루션의 `Sandboxer` 프로젝트에는 `UntrustedClass` 클래스를 구현하는 `UntrustedCode` 프로젝트가 들어 있습니다. 이 시나리오에서는 제공한 숫자가 피보나치 수인지를 나타내는 `true` 또는 `false`를 반환해야 하는 메서드가 포함된 라이브러리 어셈블리를 다운로드했다고 가정합니다. 대신에 메서드는 컴퓨터에서 파일을 읽으려고 시도합니다. 다음 예제에서는 신뢰할 수 없는 코드를 보여 줍니다.  
   
 ```  

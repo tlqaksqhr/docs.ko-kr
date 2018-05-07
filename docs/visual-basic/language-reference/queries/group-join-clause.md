@@ -1,11 +1,6 @@
 ---
-title: "Group Join 절(Visual Basic)"
+title: Group Join 절(Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.QueryGroupJoinIn
 - vb.QueryGroupJoinOn
@@ -16,14 +11,11 @@ helpviewer_keywords:
 - Group Join statement [Visual Basic]
 - queries [Visual Basic], Group Join
 ms.assetid: 37dbf79c-7b5c-421b-bbb7-dadfd2b92a1c
-caps.latest.revision: "24"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: c43b41336393b40684aee79f88c1e6999ebda674
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 094281b0afb34451ae8539e4eb967043b21d379c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="group-join-clause-visual-basic"></a>Group Join 절(Visual Basic)
 두 컬렉션을 단일 계층 구조 컬렉션으로 결합합니다. 조인 연산은 일치 하는 키를 기반으로 합니다.  
@@ -40,11 +32,11 @@ Group Join element [As type] In collection _
   
 |용어|정의|  
 |---|---|  
-|`element`|필수 요소. 조인 중인 컬렉션에 대 한 제어 변수입니다.|  
+|`element`|필수. 조인 중인 컬렉션에 대 한 제어 변수입니다.|  
 |`type`|선택 사항입니다. `element`의 형식입니다. 없는 경우 `type` 지정 된 유형의 `element` 에서 유추 `collection`합니다.|  
-|`collection`|필수 요소. 컬렉션의 왼쪽에 있는 컬렉션으로 결합 하는 `Group Join` 연산자입니다. A `Group Join` 절에 중첩 될 수 있습니다는 `Join` 절 또는 다른 `Group Join` 절.|  
-|`key1` `Equals` `key2`|필수 요소. 조인 중인 컬렉션에 대 한 키를 식별 합니다. 사용 해야 합니다는 `Equals` 조인 중인 컬렉션에서 키를 비교 연산자. 사용 하 여 조인 조건을 결합할 수 있습니다는 `And` 여러 키를 식별 하는 연산자입니다. `key1` 의 왼쪽에 있는 컬렉션에서 매개 변수 여야 합니다는 `Join` 연산자입니다. `key2` 의 오른쪽에 있는 컬렉션에서 매개 변수 여야 합니다는 `Join` 연산자입니다.<br /><br /> 조인 조건에 사용 되는 키 컬렉션에서 둘 이상의 항목을 포함 하는 식을 수 있습니다. 그러나 각 키의 식에는 해당 컬렉션의 항목에만 포함할 수 있습니다.|  
-|`expressionList`|필수 요소. 컬렉션에서 요소 그룹 집계 되는 방법을 식별 하는 하나 이상의 식입니다. 그룹화 된 결과의 멤버 이름을 식별 하려면 사용 하 여는 `Group` 키워드 (`<alias> = Group`). 그룹에 적용할 집계 함수를 포함할 수도 있습니다.|  
+|`collection`|필수. 컬렉션의 왼쪽에 있는 컬렉션으로 결합 하는 `Group Join` 연산자입니다. A `Group Join` 절에 중첩 될 수 있습니다는 `Join` 절 또는 다른 `Group Join` 절.|  
+|`key1` `Equals` `key2`|필수. 조인 중인 컬렉션에 대 한 키를 식별 합니다. 사용 해야 합니다는 `Equals` 조인 중인 컬렉션에서 키를 비교 연산자. 사용 하 여 조인 조건을 결합할 수 있습니다는 `And` 여러 키를 식별 하는 연산자입니다. `key1` 의 왼쪽에 있는 컬렉션에서 매개 변수 여야 합니다는 `Join` 연산자입니다. `key2` 의 오른쪽에 있는 컬렉션에서 매개 변수 여야 합니다는 `Join` 연산자입니다.<br /><br /> 조인 조건에 사용 되는 키 컬렉션에서 둘 이상의 항목을 포함 하는 식을 수 있습니다. 그러나 각 키의 식에는 해당 컬렉션의 항목에만 포함할 수 있습니다.|  
+|`expressionList`|필수. 컬렉션에서 요소 그룹 집계 되는 방법을 식별 하는 하나 이상의 식입니다. 그룹화 된 결과의 멤버 이름을 식별 하려면 사용 하 여는 `Group` 키워드 (`<alias> = Group`). 그룹에 적용할 집계 함수를 포함할 수도 있습니다.|  
   
 ## <a name="remarks"></a>설명  
  `Group Join` 절 조인 중인 컬렉션의 키 값을 일치 하는 두 개의 컬렉션을 결합 합니다. 결과 컬렉션에서 첫 번째 컬렉션에서 키 값과 일치 하는 두 번째 컬렉션에서 요소 컬렉션을 참조 하는 멤버가 포함 될 수 있습니다. 두 번째 컬렉션에서 그룹화 된 요소에 적용할 집계 함수를 지정할 수 있습니다. 집계 함수에 대 한 정보를 참조 하십시오. [Aggregate 절](../../../visual-basic/language-reference/queries/aggregate-clause.md)합니다.  

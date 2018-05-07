@@ -1,31 +1,21 @@
 ---
-title: "ICorDebugVirtualUnwinder 인터페이스"
-ms.custom: 
+title: ICorDebugVirtualUnwinder 인터페이스
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 ms.assetid: a09e9ccc-0b37-43e3-95c1-bc5fa7ee5f42
-caps.latest.revision: "4"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 936df5c3d913a2ee5a1648906fb3ece2751d8ef5
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: bb04ac42b3cc77db3af53c87efb0d1f1f75da928
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="icordebugvirtualunwinder-interface"></a>ICorDebugVirtualUnwinder 인터페이스
 스택 해제에 도움이 되는 메서드를 제공합니다.  
   
 ## <a name="methods"></a>메서드  
   
-|메서드|name|  
+|메서드|이름|  
 |------------|----------|  
 |[GetContext 메서드](../../../../docs/framework/unmanaged-api/debugging/icordebugvirtualunwinder-getcontext-method.md)|이 해제기의 현재 컨텍스트를 가져옵니다.|  
 |[Next 메서드](../../../../docs/framework/unmanaged-api/debugging/icordebugvirtualunwinder-next-method.md)|호출자의 컨텍스트로 이동합니다.|  
@@ -43,7 +33,7 @@ ms.lasthandoff: 12/22/2017
   
  **라이브러리:** CorGuids.lib  
   
- **.NET framework 버전:**[!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
+ **.NET framework 버전:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
 ## <a name="see-also"></a>참고 항목  
  [디버깅 인터페이스](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)  

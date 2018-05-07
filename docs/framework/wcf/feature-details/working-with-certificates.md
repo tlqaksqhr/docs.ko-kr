@@ -1,36 +1,22 @@
 ---
 title: 인증서 작업
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - certificates [WCF]
 ms.assetid: 6ffb8682-8f07-4a45-afbb-8d2487e9dbc3
-caps.latest.revision: 26
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 3c023b27ace10919c51aa13e2635040d9d5b812b
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: f5566eacaabb5d3eb5579d015fad8149a2ed4f3c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="working-with-certificates"></a>인증서 작업
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 보안을 프로그래밍하려면 일반적으로 X.509 디지털 인증서를 사용하여 클라이언트 및 서버를 인증하고, 암호화하고, 메시지에 디지털 서명합니다. 이 항목에서는 X.509 디지털 인증서 기능과 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서 인증서 기능을 사용하는 방법을 간략하게 설명하며, 이러한 개념을 자세히 설명하거나 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 및 인증서를 사용하여 일반 작업을 수행하는 방법을 보여 주는 항목에 대한 링크를 제공합니다.  
+Windows Communication Foundation (WCF) 보안을 프로그래밍할 수 X.509 디지털 인증서 클라이언트 및 서버 인증, 암호화 하 고 메시지에 디지털 서명 하 일반적으로 사용 됩니다. 간략하게이 항목에서는 X.509 디지털 인증서 기능과 wcf에서 사용 하는 방법에 설명 하 고 이러한 개념을 자세히 설명 하거나 WCF 및 인증서를 사용 하 여 일반적인 작업 수행 하는 방법을 보여 주는 항목의 링크를 포함 합니다.  
   
- 간단히 말해서 디지털 인증서는의 일부는 *공개 키 인프라* (PKI) 하는 디지털 인증서, 인증 기관 및 기타 등록 기관의 확인 하 고 인증의 유효성을 검사 하는 시스템 각 당사자 공개 키 암호화 사용을 통해 전자 트랜잭션에 참여 합니다. 인증 기관 인증서를 발급 하며 각 인증서와 같은 데이터를 포함 하는 필드 집합이 *주체* (인증서가 발급 엔터티), 유효 날짜 (때 인증서가 유효), (의 발급자 엔터티는 인증서를 발급 한), 및 공개 키입니다. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서 이러한 각 속성은 <xref:System.IdentityModel.Claims.Claim>으로 처리되며, 각 클레임은 ID와 권한의 두 가지 형식으로 세분화됩니다. 인증서 참조 X.509에 대 한 자세한 내용은 [X.509 공개 키 인증서](http://go.microsoft.com/fwlink/?LinkId=209952)WCF 참조에 클레임 및 권한 부여에 대 한 자세한 내용은 [관리 클레임 및 권한 부여 Id 모델](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md). PKI를 구현 하는 방법에 대 한 자세한 내용은 참조 [Windows Server 2008 R2 인증서 서비스](http://go.microsoft.com/fwlink/?LinkId=209949)합니다.  
+ 간단히 말해서 디지털 인증서는의 일부는 *공개 키 인프라* (PKI) 하는 디지털 인증서, 인증 기관 및 기타 등록 기관의 확인 하 고 인증의 유효성을 검사 하는 시스템 각 당사자 공개 키 암호화 사용을 통해 전자 트랜잭션에 참여 합니다. 인증 기관 인증서를 발급 하며 각 인증서와 같은 데이터를 포함 하는 필드 집합이 *주체* (인증서가 발급 엔터티), 유효 날짜 (때 인증서가 유효), (의 발급자 엔터티는 인증서를 발급 한), 및 공개 키입니다. Wcf에서는 이러한 각 속성으로 처리 한 <xref:System.IdentityModel.Claims.Claim>, 각 클레임은 두 가지 유형으로 세분화 하 고: id 및 오른쪽입니다. 인증서 참조 X.509에 대 한 자세한 내용은 [X.509 공개 키 인증서](http://go.microsoft.com/fwlink/?LinkId=209952)WCF 참조에 클레임 및 권한 부여에 대 한 자세한 내용은 [관리 클레임 및 권한 부여 Id 모델](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md). PKI를 구현 하는 방법에 대 한 자세한 내용은 참조 [Windows Server 2008 R2 인증서 서비스](http://go.microsoft.com/fwlink/?LinkId=209949)합니다.  
   
  인증서의 기본 기능은 인증서 소유자의 ID를 다른 엔터티에 인증하는 것입니다. 포함 된 인증서는 *공개 키* 소유자는 개인 키를 유지 하는 동안 해당 소유자의 합니다. 공개 키를 사용하여 인증서 소유자에게 보내는 메시지를 암호화할 수 있습니다. 소유자만 개인 키에 액세스할 수 있으므로 소유자만이 해당 메시지를 해독할 수 있습니다.  
   
@@ -46,7 +32,7 @@ ms.lasthandoff: 04/30/2018
   
 -   **현재 사용자 저장소**합니다. 대화형 응용 프로그램은 일반적으로 컴퓨터의 현재 사용자에 대한 인증서를 여기에 저장합니다. 클라이언트 응용 프로그램을 만들 경우 일반적으로 서비스에 사용자를 인증하는 인증서를 이 위치에 저장합니다.  
   
- 이러한 두 저장소는 하위 저장소로 세분화됩니다. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]로 프로그래밍할 때 가장 중요한 하위 저장소는 다음과 같습니다.  
+ 이러한 두 저장소는 하위 저장소로 세분화됩니다. 이 중 가장 중요 한 WCF 사용 하 여 프로그래밍 포함 하는 경우:  
   
 -   **신뢰할 수 있는 루트 인증 기관**합니다. 이 저장소에 있는 인증서를 사용하여 인증서 체인을 만들 수 있습니다. 이러한 인증서 체인은 이 저장소에 있는 인증서 인증 기관으로 다시 추적될 수 있습니다.  
   
@@ -99,7 +85,7 @@ ms.lasthandoff: 04/30/2018
  사용자 지정 인증자를 만들 때 재정의할 가장 중요한 메서드는 <xref:System.IdentityModel.Selectors.X509CertificateValidator.Validate%2A> 메서드입니다. 사용자 지정 인증의 예 참조는 [X.509 인증서 유효성 검사기](../../../../docs/framework/wcf/samples/x-509-certificate-validator.md) 샘플. 자세한 내용은 참조 [사용자 지정 자격 증명 및 자격 증명 유효성 검사](../../../../docs/framework/wcf/extending/custom-credential-and-credential-validation.md)합니다.  
   
 ## <a name="using-makecertexe-to-build-a-certificate-chain"></a>Makecert.exe를 사용하여 인증서 체인 빌드  
- 인증서 작성 도구(Makecert.exe)는 X.509 인증서 및 개인 키/공개 키 쌍을 만듭니다. 개인 키를 디스크에 저장한 다음 새 인증서를 발급하고 서명하여 체인 인증서의 계층 구조를 시뮬레이션할 수 있습니다. 이 도구는 서비스를 개발할 때 보조 도구로만 사용해야 하며 실제 배포할 인증서를 만드는 데 사용해서는 안됩니다. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 서비스를 개발할 경우 다음 단계를 수행하여 Makecert.exe로 신뢰 체인을 빌드합니다.  
+ 인증서 작성 도구(Makecert.exe)는 X.509 인증서 및 개인 키/공개 키 쌍을 만듭니다. 개인 키를 디스크에 저장한 다음 새 인증서를 발급하고 서명하여 체인 인증서의 계층 구조를 시뮬레이션할 수 있습니다. 이 도구는 서비스를 개발할 때 보조 도구로만 사용해야 하며 실제 배포할 인증서를 만드는 데 사용해서는 안됩니다. WCF 서비스를 개발할 때 Makecert.exe 사용 하 여 신뢰 체인을 빌드하려면 다음 단계를 사용 합니다.  
   
 #### <a name="to-build-a-chain-of-trust-with-makecertexe"></a>Makecert.exe를 사용하여 신뢰 체인을 빌드하려면  
   
@@ -137,7 +123,7 @@ ms.lasthandoff: 04/30/2018
  사용 하 여 구성에서 모드를 설정할 수도 있습니다는 `revocationMode` 둘의 특성은 [ \<인증 >](../../../../docs/framework/configure-apps/file-schema/wcf/authentication-of-clientcertificate-element.md) (의 [ \<serviceBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/servicebehaviors.md)) 및는 [ \<인증 >](../../../../docs/framework/configure-apps/file-schema/wcf/authentication-of-clientcertificate-element.md) (의 [ \<endpointBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/endpointbehaviors.md)).  
   
 ## <a name="the-setcertificate-method"></a>SetCertificate 메서드  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서는 서비스 또는 클라이언트에서 메시지를 인증, 암호화 또는 디지털 서명하는 데 사용할 인증서 또는 인증서 집합을 지정해야 할 수 있습니다. 이 작업은 X.509 인증서를 나타내는 다양한 클래스의 `SetCertificate` 메서드를 사용하여 프로그래밍 방식으로 수행할 수 있습니다. 다음 클래스에서는 `SetCertificate` 메서드를 사용하여 인증서를 지정합니다.  
+ WCF, 종종 인증서를 지정 하거나 서비스의 인증서를 설정 해야 하거나 클라이언트 인증, 암호화 또는 디지털 서명 메시지를 사용 하는 합니다. 이 작업은 X.509 인증서를 나타내는 다양한 클래스의 `SetCertificate` 메서드를 사용하여 프로그래밍 방식으로 수행할 수 있습니다. 다음 클래스에서는 `SetCertificate` 메서드를 사용하여 인증서를 지정합니다.  
   
 |클래스|메서드|  
 |-----------|------------|  
@@ -179,9 +165,9 @@ ms.lasthandoff: 04/30/2018
   
  Windows 사용자 계정을 나타내는 토큰에 X.509 인증서를 매핑하면 매핑된 Windows 토큰을 사용하여 보호된 리소스에 액세스할 수 있기 때문에 권한 상승으로 간주됩니다. 따라서 도메인 정책에서는 매핑 전에 X.509 인증서가 해당 정책을 준수하도록 요구합니다. *SChannel* 보안 패키지에는이 요구 사항을 적용 합니다.  
   
- [!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)] 이상을 사용하는 경우 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]는 인증서를 Windows 계정에 매핑하기 전에 해당 인증서가 도메인 정책을 준수하는지 확인합니다.  
+ 사용 하는 경우 [!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)] 하거나 나중에, WCF Windows 계정에 매핑하기 전에 인증서가 도메인 정책을 준수 합니다.  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]의 첫 번째 릴리스에서는 도메인 정책을 참조하지 않고 매핑을 수행했습니다. 따라서 매핑을 실행할 때 X.509 인증서가 도메인 정책에 맞지 않을 경우 첫 번째 릴리스에서 작동했던 이전 응용 프로그램이 실패할 수 있습니다.  
+ WCF의 첫 번째 릴리스에서 도메인 정책을 참조 하지 않고 매핑이 수행 됩니다. 따라서 매핑을 실행할 때 X.509 인증서가 도메인 정책에 맞지 않을 경우 첫 번째 릴리스에서 작동했던 이전 응용 프로그램이 실패할 수 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  
  <xref:System.ServiceModel.Channels>  

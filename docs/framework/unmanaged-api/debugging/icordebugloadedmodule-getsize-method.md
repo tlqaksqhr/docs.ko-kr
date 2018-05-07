@@ -1,24 +1,14 @@
 ---
-title: "ICorDebugLoadedModule::GetSize 메서드"
-ms.custom: 
+title: ICorDebugLoadedModule::GetSize 메서드
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 ms.assetid: aaa0e5c0-be9d-4fe1-8418-5295b9b184d6
-caps.latest.revision: "4"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 1fb340845afac0f5a13f7c4646d11ac057ebd054
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 9768fb91749158bf3193919b2106bde1c618468a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="icordebugloadedmodulegetsize-method"></a>ICorDebugLoadedModule::GetSize 메서드
 로드된 모듈의 크기(바이트)를 가져옵니다.  
@@ -47,7 +37,7 @@ HRESULT GetSize(
   
  **라이브러리:** CorGuids.lib  
   
- **.NET framework 버전:**[!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
+ **.NET framework 버전:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
 ## <a name="see-also"></a>참고 항목  
  [ICorDebugLoadedModule 인터페이스](../../../../docs/framework/unmanaged-api/debugging/icordebugloadedmodule-interface.md)  

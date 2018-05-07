@@ -1,23 +1,12 @@
 ---
-title: "저장소 확장성"
-ms.custom: 
+title: 저장소 확장성
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 7c3f4a46-4bac-4138-ae6a-a7c7ee0d28f5
-caps.latest.revision: "15"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: e269f485da16bcf3669bb8cb32396fad2875ca89
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 8cfbf96256d4b8416beb526875a1e9ac09c3bfbb
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="store-extensibility"></a>저장소 확장성
 <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore>를 사용하면 사용자가 지속성 데이터베이스의 인스턴스를 쿼리하는 데 사용할 수 있는 응용 프로그램별 사용자 지정 속성을 승격할 수 있습니다. 속성을 승격하면 값을 데이터베이스의 특수 뷰 내에서 사용할 수 있습니다. 사용자 쿼리에 사용할 수 있는 이러한 승격된 속성은 단순 형식(예: Guid, String, DateTime 등)이거나 serialize된 이진 형식(byte[])일 수 있습니다.  
@@ -118,7 +107,7 @@ ms.lasthandoff: 12/22/2017
     go  
     ```  
   
-##  <a name="InstancePromotedProperties"></a>[System.Activities.DurableInstancing.InstancePromotedProperties] 뷰  
+##  <a name="InstancePromotedProperties"></a> [System.Activities.DurableInstancing.InstancePromotedProperties] 뷰  
   
 |열 이름|열 유형|설명|  
 |-----------------|-----------------|-----------------|  

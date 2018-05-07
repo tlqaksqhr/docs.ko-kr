@@ -1,13 +1,6 @@
 ---
-title: "레이아웃"
-ms.custom: 
+title: 레이아웃
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -16,16 +9,11 @@ helpviewer_keywords:
 - controls [WPF], layout system
 - layout system [WPF]
 ms.assetid: 3eecdced-3623-403a-a077-7595453a9221
-caps.latest.revision: "31"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: c9a5f33ab22779002e85d7a73b29ae74dac81c26
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 00c2b2bcb58e60c1a60d2d360f25089c079c0704
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="layout"></a>레이아웃
 이 항목에서는 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 레이아웃 시스템에 대해 설명합니다. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]에서 사용자 인터페이스를 만들려면 언제, 어떻게 레이아웃을 계산해야 하는지를 이해해야 합니다.  
@@ -97,7 +85,7 @@ ms.lasthandoff: 12/22/2017
   
  첫 번째, 네이티브 크기 속성은 <xref:System.Windows.UIElement> 와 같은 평가 됩니다 <xref:System.Windows.UIElement.Clip%2A> 및 <xref:System.Windows.UIElement.Visibility%2A>합니다. 명명 된 값이 생성 `constraintSize` 에 전달 되는 <xref:System.Windows.FrameworkElement.MeasureCore%2A>합니다.  
   
- 프레임 워크 속성에 정의 된 두 번째로, <xref:System.Windows.FrameworkElement> 처리 되며, 값에 영향을 주는 `constraintSize`합니다. 이러한 속성은 일반적으로 내부 크기 조정 특성을 설명 <xref:System.Windows.UIElement>와 같은 해당 <xref:System.Windows.FrameworkElement.Height%2A>, <xref:System.Windows.FrameworkElement.Width%2A>, <xref:System.Windows.FrameworkElement.Margin%2A>, 및 <xref:System.Windows.FrameworkElement.Style%2A>합니다. 이러한 각 속성은 요소를 표시하는 데 필요한 공간을 변경할 수 있습니다. <xref:System.Windows.FrameworkElement.MeasureOverride%2A>다음으로 호출 `constraintSize` 매개 변수로 합니다.  
+ 프레임 워크 속성에 정의 된 두 번째로, <xref:System.Windows.FrameworkElement> 처리 되며, 값에 영향을 주는 `constraintSize`합니다. 이러한 속성은 일반적으로 내부 크기 조정 특성을 설명 <xref:System.Windows.UIElement>와 같은 해당 <xref:System.Windows.FrameworkElement.Height%2A>, <xref:System.Windows.FrameworkElement.Width%2A>, <xref:System.Windows.FrameworkElement.Margin%2A>, 및 <xref:System.Windows.FrameworkElement.Style%2A>합니다. 이러한 각 속성은 요소를 표시하는 데 필요한 공간을 변경할 수 있습니다. <xref:System.Windows.FrameworkElement.MeasureOverride%2A> 다음으로 호출 `constraintSize` 매개 변수로 합니다.  
   
 > [!NOTE]
 >  속성 사이의 차이가 <xref:System.Windows.FrameworkElement.Height%2A> 및 <xref:System.Windows.FrameworkElement.Width%2A> 및 <xref:System.Windows.FrameworkElement.ActualHeight%2A> 및 <xref:System.Windows.FrameworkElement.ActualWidth%2A>합니다. 예를 들어는 <xref:System.Windows.FrameworkElement.ActualHeight%2A> 속성은 다른 높이 입력 레이아웃 시스템에 따라 계산된 된 값입니다. 값은 실제 렌더링 단계에 따라 레이아웃 시스템 자체에서 설정 되며 같은 속성의 설정 값 뒤에 약간 지연 될 수 있습니다 <xref:System.Windows.FrameworkElement.Height%2A>, 입력된 변경 기준인 합니다.  
@@ -108,11 +96,11 @@ ms.lasthandoff: 12/22/2017
   
  정렬 단계에 대 한 호출으로 시작는 <xref:System.Windows.UIElement.Arrange%2A> 메서드. 부모 정렬 단계 동안 <xref:System.Windows.Controls.Panel> 요소는 자식 요소의 경계를 나타내는 사각형을 생성 합니다. 이 값이 전달 된 <xref:System.Windows.FrameworkElement.ArrangeCore%2A> 처리를 위해 메서드.  
   
- <xref:System.Windows.FrameworkElement.ArrangeCore%2A> 메서드 평가 <xref:System.Windows.UIElement.DesiredSize%2A> 자식 요소의 렌더링 된 크기에 영향을 줄 수 있는 추가 여백을 평가 하 고 있습니다. <xref:System.Windows.FrameworkElement.ArrangeCore%2A>생성 된 `arrangeSize`로 전달 되는 <xref:System.Windows.FrameworkElement.ArrangeOverride%2A> 의 메서드는 <xref:System.Windows.Controls.Panel> 매개 변수로 합니다. <xref:System.Windows.FrameworkElement.ArrangeOverride%2A>생성 된 `finalSize` 자식입니다. 마지막으로 <xref:System.Windows.FrameworkElement.ArrangeCore%2A> 메서드 등의 오프셋된 속성, 여백 및 맞춤, 마지막 평가 역할과 레이아웃 슬롯 내 자식을 넣습니다. 자식은 할당된 공간을 모두 채울 필요가 없으며 실제 모두 채우는 경우가 드뭅니다. 컨트롤의 부모에 게 반환 됩니다 <xref:System.Windows.Controls.Panel> 레이아웃 프로세스가 완료 됩니다.  
+ <xref:System.Windows.FrameworkElement.ArrangeCore%2A> 메서드 평가 <xref:System.Windows.UIElement.DesiredSize%2A> 자식 요소의 렌더링 된 크기에 영향을 줄 수 있는 추가 여백을 평가 하 고 있습니다. <xref:System.Windows.FrameworkElement.ArrangeCore%2A> 생성 된 `arrangeSize`로 전달 되는 <xref:System.Windows.FrameworkElement.ArrangeOverride%2A> 의 메서드는 <xref:System.Windows.Controls.Panel> 매개 변수로 합니다. <xref:System.Windows.FrameworkElement.ArrangeOverride%2A> 생성 된 `finalSize` 자식입니다. 마지막으로 <xref:System.Windows.FrameworkElement.ArrangeCore%2A> 메서드 등의 오프셋된 속성, 여백 및 맞춤, 마지막 평가 역할과 레이아웃 슬롯 내 자식을 넣습니다. 자식은 할당된 공간을 모두 채울 필요가 없으며 실제 모두 채우는 경우가 드뭅니다. 컨트롤의 부모에 게 반환 됩니다 <xref:System.Windows.Controls.Panel> 레이아웃 프로세스가 완료 됩니다.  
   
 <a name="LayoutSystem_PanelsCustom"></a>   
 ## <a name="panel-elements-and-custom-layout-behaviors"></a>패널 요소 및 사용자 지정 레이아웃 동작  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]파생 되는 요소는 그룹이 포함 되어 <xref:System.Windows.Controls.Panel>합니다. 이러한 <xref:System.Windows.Controls.Panel> 요소 많은 복잡 한 레이아웃을 사용 하도록 설정 합니다. 예를 들어 요소를 스태킹 쉽게 액세스가 가능를 사용 하 여는 <xref:System.Windows.Controls.StackPanel> 요소를 사용 하 여 복잡 하 고 무료 이동을 레이아웃은 가능한 한 <xref:System.Windows.Controls.Canvas>합니다.  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 파생 되는 요소는 그룹이 포함 되어 <xref:System.Windows.Controls.Panel>합니다. 이러한 <xref:System.Windows.Controls.Panel> 요소 많은 복잡 한 레이아웃을 사용 하도록 설정 합니다. 예를 들어 요소를 스태킹 쉽게 액세스가 가능를 사용 하 여는 <xref:System.Windows.Controls.StackPanel> 요소를 사용 하 여 복잡 하 고 무료 이동을 레이아웃은 가능한 한 <xref:System.Windows.Controls.Canvas>합니다.  
   
  다음 표에서 사용 가능한 레이아웃 요약 <xref:System.Windows.Controls.Panel> 요소입니다.  
   
@@ -133,11 +121,11 @@ ms.lasthandoff: 12/22/2017
   
 -   레이아웃 시스템에서 재귀적으로 업데이트하도록 하는 속성 값 변경에 주의해야 합니다.  
   
-     레이아웃 시스템을 초기화하는 값을 가진 종속성 속성은 공용 플래그로 표시됩니다. <xref:System.Windows.FrameworkPropertyMetadata.AffectsMeasure%2A>및 <xref:System.Windows.FrameworkPropertyMetadata.AffectsArrange%2A> 값이 변경 되는 속성에 대 한 재귀를 강제로 유용한 단서 레이아웃 시스템에서 업데이트를 제공 합니다. 요소의 경계 상자 크기에 영향을 줄 수 있는 모든 속성 있어야 일반적으로 <xref:System.Windows.FrameworkPropertyMetadata.AffectsMeasure%2A> 플래그가 true로 설정 합니다. 자세한 내용은 [종속성 속성 개요](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)를 참조하세요.  
+     레이아웃 시스템을 초기화하는 값을 가진 종속성 속성은 공용 플래그로 표시됩니다. <xref:System.Windows.FrameworkPropertyMetadata.AffectsMeasure%2A> 및 <xref:System.Windows.FrameworkPropertyMetadata.AffectsArrange%2A> 값이 변경 되는 속성에 대 한 재귀를 강제로 유용한 단서 레이아웃 시스템에서 업데이트를 제공 합니다. 요소의 경계 상자 크기에 영향을 줄 수 있는 모든 속성 있어야 일반적으로 <xref:System.Windows.FrameworkPropertyMetadata.AffectsMeasure%2A> 플래그가 true로 설정 합니다. 자세한 내용은 [종속성 속성 개요](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)를 참조하세요.  
   
 -   사용 가능한 경우 한 <xref:System.Windows.UIElement.RenderTransform%2A> 대신는 <xref:System.Windows.FrameworkElement.LayoutTransform%2A>합니다.  
   
-     A <xref:System.Windows.FrameworkElement.LayoutTransform%2A> 매우 유용 하 게 내용의 영향을 줄 수 있습니다는 [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]합니다. 그러나 다른 요소의 위치에 영향을 변환 효과가 없으면 것이 가장 좋습니다 사용 하는 <xref:System.Windows.UIElement.RenderTransform%2A> 대신 때문에 <xref:System.Windows.UIElement.RenderTransform%2A> 레이아웃 시스템을 호출 하지 않습니다. <xref:System.Windows.FrameworkElement.LayoutTransform%2A>변환을 적용 하 고 영향을 받는 요소의 새 위치를 고려 하는 재귀적 레이아웃 업데이트를 수행 합니다.  
+     A <xref:System.Windows.FrameworkElement.LayoutTransform%2A> 매우 유용 하 게 내용의 영향을 줄 수 있습니다는 [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]합니다. 그러나 다른 요소의 위치에 영향을 변환 효과가 없으면 것이 가장 좋습니다 사용 하는 <xref:System.Windows.UIElement.RenderTransform%2A> 대신 때문에 <xref:System.Windows.UIElement.RenderTransform%2A> 레이아웃 시스템을 호출 하지 않습니다. <xref:System.Windows.FrameworkElement.LayoutTransform%2A> 변환을 적용 하 고 영향을 받는 요소의 새 위치를 고려 하는 재귀적 레이아웃 업데이트를 수행 합니다.  
   
 -   불필요 한 호출 하지 마십시오. <xref:System.Windows.UIElement.UpdateLayout%2A>합니다.  
   

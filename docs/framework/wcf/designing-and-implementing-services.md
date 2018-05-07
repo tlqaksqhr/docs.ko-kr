@@ -1,33 +1,19 @@
 ---
 title: 서비스 디자인 및 구현
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - defining service contracts [WCF]
 ms.assetid: 036fae20-7c55-4002-b71d-ac4466e167a3
-caps.latest.revision: 37
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 9b954a8ac4f8507b095eb97d0724095cecc7b75b
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
-ms.translationtype: MT
+ms.openlocfilehash: 02117b95cbf5a2ee16267a7b991ea9f854b813c8
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="designing-and-implementing-services"></a>서비스 디자인 및 구현
 이 섹션을 정의 및 구현 하는 방법을 보여 줍니다. [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 계약입니다. 서비스 계약에서는 끝점이 외부와 통신하는 내용을 지정합니다. 더 구체적으로 말하면, 단방향 및 이중 request/reply와 같은 기본 메시지 교환 패턴에 구성된 특정 메시지 집합에 대한 문입니다. 서비스 계약이 논리적으로 관련된 메시지 교환 집합인 경우 서비스 작업은 단일 메시지 교환이 됩니다. 예를 들어 `Hello` 작업에서는 호출자가 인사말을 알릴 수 있도록 단일 메시지를 수락해야 하며 작업 의례에 따라 메시지를 반환하거나 반환하지 않을 수 있습니다.  
   
- 계약 및 다른 코어에 대 한 자세한 내용은 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 개념 참조 [기본적인 Windows Communication Foundation 개념](../../../docs/framework/wcf/fundamental-concepts.md)합니다. 이 항목에서는 서비스 계약을 이해하는 데 중점을 둡니다. 서비스에 연결 하려면 서비스 계약을 사용 하는 클라이언트를 구축 하는 방법에 대 한 자세한 내용은 참조 [WCF 클라이언트 개요](../../../docs/framework/wcf/wcf-client-overview.md)합니다.  
+ 계약 및 기타 핵심 Windows Communication Foundation (WCF) 개념에 대 한 자세한 내용은 참조 [기본적인 Windows Communication Foundation 개념](../../../docs/framework/wcf/fundamental-concepts.md)합니다. 이 항목에서는 서비스 계약을 이해하는 데 중점을 둡니다. 서비스에 연결 하려면 서비스 계약을 사용 하는 클라이언트를 구축 하는 방법에 대 한 자세한 내용은 참조 [WCF 클라이언트 개요](../../../docs/framework/wcf/wcf-client-overview.md)합니다.  
   
 ## <a name="overview"></a>개요  
  이 항목에서는 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 서비스를 디자인하고 구현하기 위한 높은 수준의 개념 방향을 제시합니다. 특정 디자인 및 구현에 대한 자세한 내용은 하위 항목에서 제공됩니다. [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 응용 프로그램을 디자인하고 구현하기 전에 다음 사항에 대해 이해하는 것이 좋습니다.  
@@ -77,7 +63,7 @@ ms.lasthandoff: 04/26/2018
   
  동작을 추가하기 위해 계약에서 런타임 구성 및 서비스 계약 구현의 특정 부분을 요구하는 방식에 유의해야 합니다. 사용할 서비스 노출을 위해 부합해야 하는 요구 사항은 이전의 요구 사항을 바탕으로 합니다. 계약에서 구현에 대한 요구 사항을 정하는 경우에는, 구현에서 서비스 실행을 위한 바인딩 및 구성을 더욱 많이 요구할 수 있습니다. 또한 호스트 응용 프로그램에서도 서비스 구성 및 바인딩을 통해 추가된 모든 요구 사항을 지원해야 합니다.  
   
- 이러한 추가 요구 사항 프로세스는 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 서비스 응용 프로그램을 디자인, 구현, 구성 및 호스팅하는 동안 유념해야 합니다. 예를 들어 세션 지원이 필요함을 계약에서 지정할 수 있습니다. 이 경우, 해당 계약 요구 사항을 지원하도록 바인딩을 구성해야 하며 그렇지 않으면 서비스 구현이 이루어지지 않습니다. 또는 Windows 통합 인증을 요구하는 서비스가 IIS(인터넷 정보 서비스)에서 호스팅되는 경우 해당 서비스가 있는 웹 응용 프로그램에는 Windows 통합 인증을 사용하도록 설정되고 익명 지원은 해제되어야 합니다. 기능 및 다른 서비스 호스트 응용 프로그램 종류의 영향에 대 한 자세한 내용은 참조 [호스팅 서비스](../../../docs/framework/wcf/hosting-services.md)합니다.  
+ 이러한 추가 요구 사항 프로세스는 디자인, 구현, 구성 및 Windows Communication Foundation (WCF) 서비스 응용 프로그램을 호스트 하는 동안 유념 해야 합니다. 예를 들어 세션 지원이 필요함을 계약에서 지정할 수 있습니다. 이 경우, 해당 계약 요구 사항을 지원하도록 바인딩을 구성해야 하며 그렇지 않으면 서비스 구현이 이루어지지 않습니다. 또는 Windows 통합 인증을 요구하는 서비스가 IIS(인터넷 정보 서비스)에서 호스팅되는 경우 해당 서비스가 있는 웹 응용 프로그램에는 Windows 통합 인증을 사용하도록 설정되고 익명 지원은 해제되어야 합니다. 기능 및 다른 서비스 호스트 응용 프로그램 종류의 영향에 대 한 자세한 내용은 참조 [호스팅 서비스](../../../docs/framework/wcf/hosting-services.md)합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [서비스 계약 디자인](../../../docs/framework/wcf/designing-service-contracts.md)  

@@ -1,29 +1,15 @@
 ---
 title: Windows Forms 응용 프로그램 강화
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-winforms
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - Windows Forms, enhancing
 - Windows Forms, adding features
 ms.assetid: 733d1219-d6ad-4256-a55b-9eccf47f5a06
-caps.latest.revision: 13
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 77bd9884681c632f0faa9279f63aea6eabfe076e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 750d94caf08776ae457dbff153afbc8ec9368f07
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="enhancing-windows-forms-applications"></a>Windows Forms 응용 프로그램 강화
 Windows Forms에는 사용자의 특정 요구에 맞게 Windows 기반 응용 프로그램을 향상시키는 데 사용할 수 있는 다양한 기능이 포함되어 있습니다. 다음 항목에서는 이러한 기능과 사용 방법을 설명합니다.  

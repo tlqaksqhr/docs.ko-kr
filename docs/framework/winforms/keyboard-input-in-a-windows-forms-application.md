@@ -1,28 +1,16 @@
 ---
-title: "Windows Forms 응용 프로그램의 키보드 입력"
-ms.custom: 
+title: Windows Forms 응용 프로그램의 키보드 입력
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - keyboard input [Windows Forms], using in Windows Forms
 - keyboards [Windows Forms], keyboard input
 - Windows Forms, keyboard input
 ms.assetid: 68f5bc70-14d5-45c9-b288-7d7b1493ee79
-caps.latest.revision: "6"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 256fb961c01b17c21613fe4ec60b8e7f68c2d8f1
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 90070ec6fb27e2f9892a3874cc326fe77af1a063
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="keyboard-input-in-a-windows-forms-application"></a>Windows Forms 응용 프로그램의 키보드 입력
 Windows Forms는 표준 키보드 이벤트를 사용 하면 특정 키 누름에 응답 하 고 차단, 수정 및 응용 프로그램 폼에서 키 누름을 사용할 및 수준을 제어 하는 방법을 제공 합니다.  

@@ -1,24 +1,14 @@
 ---
-title: "방법: WIF 추적을 사용하여 클레임 인식 응용 프로그램 및 서비스 디버그"
-ms.custom: 
+title: '방법: WIF 추적을 사용하여 클레임 인식 응용 프로그램 및 서비스 디버그'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 3d51ba59-3adb-4ca4-bd33-5027531af687
-caps.latest.revision: "7"
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: 4243313d88b22aa9f755a3586ea0c5fbe08cd891
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 0f2126a83e6a5638eb492bb2a529dbf4cdab1714
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-debug-claims-aware-applications-and-services-using-wif-tracing"></a>방법: WIF 추적을 사용하여 클레임 인식 응용 프로그램 및 서비스 디버그
 ## <a name="applies-to"></a>적용 대상  
@@ -69,7 +59,7 @@ ms.lasthandoff: 12/22/2017
   
 #### <a name="to-configure-wif-tracing-using-webconfig-configuration-file"></a>Web.config 구성 파일을 사용하여 WIF 추적을 구성하려면  
   
-1.  Visual Studio 편집기의 **솔루션 탐색기**에서 루트 **Web.config** 또는 **App.config** 구성 파일을 두 번 클릭하여 엽니다. 솔루션에 **Web.config** 또는 **App.config** 구성 파일이 없는 경우 **솔루션 탐색기**에서 솔루션을 마우스 오른쪽 단추로 클릭하고 **추가**, **새 항목...**을 차례로 클릭하여 추가합니다. **새 항목** 대화 상자의 목록에서 **App.config**에 대해 **응용 프로그램 구성 파일**을 선택하거나 **Web.config**에 대해 **웹 구성 파일**을 선택하고 **확인**을 클릭합니다.  
+1.  Visual Studio 편집기의 **솔루션 탐색기**에서 루트 **Web.config** 또는 **App.config** 구성 파일을 두 번 클릭하여 엽니다. 솔루션에 **Web.config** 또는 **App.config** 구성 파일이 없는 경우 **솔루션 탐색기**에서 솔루션을 마우스 오른쪽 단추로 클릭하고 **추가**, **새 항목...** 을 차례로 클릭하여 추가합니다. **새 항목** 대화 상자의 목록에서 **App.config**에 대해 **응용 프로그램 구성 파일**을 선택하거나 **Web.config**에 대해 **웹 구성 파일**을 선택하고 **확인**을 클릭합니다.  
   
 2.  구성 파일의 끝에 있는 **\<configuration>** 노드 내에 다음과 비슷한 구성 항목을 추가합니다.  
   
@@ -114,7 +104,7 @@ ms.lasthandoff: 12/22/2017
   
 |**오류 ID**|**오류 메시지**|**오류를 해결하는 데 필요한 작업**|  
 |-|-|-|  
-|ID4175|보안 토큰의 발급자가 IssuerNameRegistry에서 인식되지 않았습니다.  이 발급자의 보안 토큰을 수락하려면 이 발급자에 대한 유효한 이름을 반환하도록 IssuerNameRegistry를 구성합니다.|MMC 스냅인에서 지문을 복사하고 *Web.config* 파일에 붙여넣으면 이 오류가 발생할 수 있습니다. 특히, 인증서 속성 창에서 복사하는 경우 텍스트 문자열에서 인쇄할 수 없는 추가 문자를 가져올 수 있습니다. 이 추가 문자로 인해 지문 일치가 실패합니다. 지문을 올바르게 복사하기 위한 프로시저는 [http://msdn.microsoft.com/library/ff359102.aspx](http://msdn.microsoft.com/library/ff359102.aspx)에서 확인할 수 있습니다.|  
+|ID4175|보안 토큰의 발급자가 IssuerNameRegistry에서 인식되지 않았습니다.  이 발급자의 보안 토큰을 수락하려면 이 발급자에 대한 유효한 이름을 반환하도록 IssuerNameRegistry를 구성합니다.|MMC 스냅인에서 지문을 복사하고 *Web.config* 파일에 붙여넣으면 이 오류가 발생할 수 있습니다. 특히, 인증서 속성 창에서 복사하는 경우 텍스트 문자열에서 인쇄할 수 없는 추가 문자를 가져올 수 있습니다. 이 추가 문자로 인해 지문 일치가 실패 합니다. 지문을 올바르게 복사 하는 절차는 여기에서 확인할 수 있습니다. [http://msdn.microsoft.com/library/ff359102.aspx](http://msdn.microsoft.com/library/ff359102.aspx)|  
   
 ## <a name="related-items"></a>관련 항목  
   

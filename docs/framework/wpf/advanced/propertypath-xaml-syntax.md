@@ -1,27 +1,15 @@
 ---
-title: "PropertyPath XAML 구문"
-ms.custom: 
+title: PropertyPath XAML 구문
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - PropertyPath object [WPF]
 - XAML [WPF], PropertyPath object
 ms.assetid: 0e3cdf07-abe6-460a-a9af-3764b4fd707f
-caps.latest.revision: "24"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 9778094eb098d1e119ef4ef0c25dd022130a11ae
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 547c7d009d2fecf863284324c7ea45006d20d20c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="propertypath-xaml-syntax"></a>PropertyPath XAML 구문
 <xref:System.Windows.PropertyPath> 개체가 지원 복잡 한 인라인 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 구문을 사용 하는 다양 한 속성을 설정 하기 위한는 <xref:System.Windows.PropertyPath> 형식을 값으로. 이 항목 문서는 <xref:System.Windows.PropertyPath> 구문 되는 바인딩 및 애니메이션 구문에 적용 합니다.  
@@ -29,7 +17,7 @@ ms.lasthandoff: 12/22/2017
   
 <a name="where"></a>   
 ## <a name="where-propertypath-is-used"></a>PropertyPath를 사용하는 경우  
- <xref:System.Windows.PropertyPath>몇 개에 사용 되는 공통 개체 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 기능입니다. 일반을 사용 했는데도 <xref:System.Windows.PropertyPath> 속성 경로 정보를 전달 하기 위해 각 사용 기능 영역 여기서 <xref:System.Windows.PropertyPath> 다를 형식으로 사용 됩니다. 따라서 구문은 기능별로 설명하는 것이 좋습니다.  
+ <xref:System.Windows.PropertyPath> 몇 개에 사용 되는 공통 개체 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 기능입니다. 일반을 사용 했는데도 <xref:System.Windows.PropertyPath> 속성 경로 정보를 전달 하기 위해 각 사용 기능 영역 여기서 <xref:System.Windows.PropertyPath> 다를 형식으로 사용 됩니다. 따라서 구문은 기능별로 설명하는 것이 좋습니다.  
   
  기본적으로, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 사용 하 여 <xref:System.Windows.PropertyPath> 개체 데이터 원본의 속성을 탐색 하는 데 개체 모델 경로 설명 하 고 대상된 애니메이션에 대 한 대상 경로 설명 하기 위해 합니다.  
   
@@ -39,7 +27,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="propertypath-for-objects-in-data-binding"></a>데이터 바인딩의 개체에 대한 PropertyPath  
  데이터 바인딩은 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 기능으로 이를 통해 종속성 속성의 대상 값에 바인딩할 수 있습니다. 하지만 해당 데이터 바인딩의 소스는 종속성 속성이어야 하며 적용 가능한 데이터 공급자가 인식하는 모든 속성 형식일 수 있습니다. 속성 경로 특히 사용 된 <xref:System.Windows.Data.ObjectDataProvider>에서 바인딩 소스를 가져오는 데 사용 되는 [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] 개체 및 개체 속성입니다.  
   
- 데이터 바인딩을 지를 확인 [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)] 사용 하지 않는 <xref:System.Windows.PropertyPath>사용 하지 않으므로, <xref:System.Windows.Data.Binding.Path%2A> 에 <xref:System.Windows.Data.Binding>합니다. 대신를 사용 하 여 <xref:System.Windows.Data.Binding.XPath%2A> 에 유효한 XPath 구문을 지정 하 고는 [!INCLUDE[TLA#tla_xmldom](../../../../includes/tlasharptla-xmldom-md.md)] 데이터입니다. <xref:System.Windows.Data.Binding.XPath%2A>또한를 문자열로 지정 되었지만; 여기에 설명 되어 있지 않습니다. 참조 [XMLDataProvider 및 XPath 쿼리가 사용 하 여 XML 데이터에 바인딩할](../../../../docs/framework/wpf/data/how-to-bind-to-xml-data-using-an-xmldataprovider-and-xpath-queries.md)합니다.  
+ 데이터 바인딩을 지를 확인 [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)] 사용 하지 않는 <xref:System.Windows.PropertyPath>사용 하지 않으므로, <xref:System.Windows.Data.Binding.Path%2A> 에 <xref:System.Windows.Data.Binding>합니다. 대신를 사용 하 여 <xref:System.Windows.Data.Binding.XPath%2A> 에 유효한 XPath 구문을 지정 하 고는 [!INCLUDE[TLA#tla_xmldom](../../../../includes/tlasharptla-xmldom-md.md)] 데이터입니다. <xref:System.Windows.Data.Binding.XPath%2A> 또한를 문자열로 지정 되었지만; 여기에 설명 되어 있지 않습니다. 참조 [XMLDataProvider 및 XPath 쿼리가 사용 하 여 XML 데이터에 바인딩할](../../../../docs/framework/wpf/data/how-to-bind-to-xml-data-using-an-xmldataprovider-and-xpath-queries.md)합니다.  
   
  데이터 바인딩의 속성 경로를 이해하는 열쇠는 개별 속성 값에 대한 바인딩을 대상으로 지정할 수 있거나 목록이나 컬렉션을 사용하는 대상 속성에 바인딩할 수 있다는 점입니다. 예를 들어 바인딩 컬렉션에 바인딩하는 경우는 <xref:System.Windows.Controls.ListBox> 컬렉션에 있는 데이터 항목의 수에 따라 확장 되는 속성 경로 컬렉션 개체, 개별이 아닌 컬렉션 항목을 참조 해야 합니다. 데이터 바인딩 엔진은 데이터 원본 바인딩 대상의 형식에 자동으로 채우기 등의 동작으로 인해 발생 하는 대로 사용 되는 컬렉션을 찾습니다는 <xref:System.Windows.Controls.ListBox> 항목 배열을 사용 하 여 합니다.  
   
@@ -70,7 +58,7 @@ ms.lasthandoff: 12/22/2017
 <Binding Path="propertyName.propertyName2" .../>  
 ```  
   
- `propertyName`현재 속성의 이름 이어야 <xref:System.Windows.FrameworkElement.DataContext%2A>합니다. 경로 속성 `propertyName` 및 `propertyName2`는 관계에 있는 속성일 수 있습니다. 여기서 `propertyName2`는 `propertyName` 값인 형식에 있는 속성입니다.  
+ `propertyName` 현재 속성의 이름 이어야 <xref:System.Windows.FrameworkElement.DataContext%2A>합니다. 경로 속성 `propertyName` 및 `propertyName2`는 관계에 있는 속성일 수 있습니다. 여기서 `propertyName2`는 `propertyName` 값인 형식에 있는 속성입니다.  
   
 <a name="singleattached"></a>   
 ### <a name="single-property-attached-or-otherwise-type-qualified"></a>연결된 또는 정규화된 형식의 단일 속성  
@@ -166,7 +154,7 @@ or
 <animation Storyboard.TargetProperty="propertyName" .../>  
 ```  
   
- `propertyName`지정 된 존재 하는 종속성 속성의 이름 이어야 <xref:System.Windows.Media.Animation.Storyboard.TargetName%2A> 유형입니다.  
+ `propertyName` 지정 된 존재 하는 종속성 속성의 이름 이어야 <xref:System.Windows.Media.Animation.Storyboard.TargetName%2A> 유형입니다.  
   
 <a name="indirectanim"></a>   
 ### <a name="indirect-property-targeting"></a>간접 속성 대상 지정  
@@ -175,7 +163,7 @@ or
 <animation Storyboard.TargetProperty="propertyName.propertyName2" .../>  
 ```  
   
- `propertyName`속성 이어야 합니다는 <xref:System.Windows.Freezable> 값 형식 또는 지정 된 존재 하는 기본 형식 <xref:System.Windows.Media.Animation.Storyboard.TargetName%2A> 유형입니다.  
+ `propertyName` 속성 이어야 합니다는 <xref:System.Windows.Freezable> 값 형식 또는 지정 된 존재 하는 기본 형식 <xref:System.Windows.Media.Animation.Storyboard.TargetName%2A> 유형입니다.  
   
  `propertyName2`는 `propertyName` 값인 개체에 있는 종속성 속성의 이름이어야 합니다. 즉, `propertyName2` 되는 형식에서 종속성 속성으로 존재 해야 합니다는 `propertyName` <xref:System.Windows.DependencyProperty.PropertyType%2A>합니다.  
   

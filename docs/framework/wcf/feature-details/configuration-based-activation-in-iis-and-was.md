@@ -1,27 +1,15 @@
 ---
-title: "IIS 및 WAS에서 구성 기반 활성화"
-ms.custom: 
+title: IIS 및 WAS에서 구성 기반 활성화
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 6a927e1f-b905-4ee5-ad0f-78265da38238
-caps.latest.revision: "13"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: fc0e954ae5cadbe7e70cd8a83d3d5841f4e0d142
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: aa4a3c682ab1d5d7ca0869fee588934b9ed2bf75
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="configuration-based-activation-in-iis-and-was"></a>IIS 및 WAS에서 구성 기반 활성화
-일반적으로 IIS(인터넷 정보 서비스)나 WAS(Windows Process Activation Service)에서 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 서비스를 호스팅할 때는 .svc 파일을 제공해야 합니다. .svc 파일에는 서비스 이름과 선택적 사용자 지정 서비스 호스트 팩터리가 포함되어 있습니다. 이 추가 파일을 사용하면 관리 효율성이 떨어지지만 구성 기반 활성화 기능을 사용하면 .svc 파일이 필요 없기 때문에 이로 인한 관리 효율성 저하도 발생하지 않습니다.  
+일반적으로 인터넷 정보 서비스 (IIS) 나 WAS Windows Process Activation Service ()에서 Windows Communication Foundation (WCF) 서비스를 호스팅하는 경우.svc 파일을 제공 해야 합니다. .svc 파일에는 서비스 이름과 선택적 사용자 지정 서비스 호스트 팩터리가 포함되어 있습니다. 이 추가 파일을 사용하면 관리 효율성이 떨어지지만 구성 기반 활성화 기능을 사용하면 .svc 파일이 필요 없기 때문에 이로 인한 관리 효율성 저하도 발생하지 않습니다.  
   
 ## <a name="configuration-based-activation"></a>구성 기반 활성화  
  구성 기반 활성화는 이전에 .svc 파일에 있던 메타데이터를 가져와서 Web.config 파일에 저장합니다. 내에서 <`serviceHostingEnvironment`> 요소는 <`serviceActivations`> 요소입니다. 내에서 <`serviceActivations`> 요소는 하나 이상의 <`add`> 요소, 각 호스팅된 서비스에 대 한 합니다. <`add`> 요소는 서비스 및 서비스 종류 또는 서비스 호스트 팩터리에 대 한 상대 주소를 설정할 수 있는 특성을 포함 합니다. 다음 구성 예제 코드에서는 이 섹션을 사용하는 방법을 보여 줍니다.  
@@ -52,5 +40,5 @@ ms.lasthandoff: 12/22/2017
  <xref:System.ServiceModel.Configuration.ServiceHostingEnvironmentSection.ServiceActivations%2A>  
  [서비스 호스팅](../../../../docs/framework/wcf/hosting-services.md)  
  [워크플로 서비스 호스팅 개요](../../../../docs/framework/wcf/feature-details/hosting-workflow-services-overview.md)  
- [\<serviceHostingEnvironment >](../../../../docs/framework/configure-apps/file-schema/wcf/servicehostingenvironment.md)  
+ [\<ServiceHostingEnvironment >](../../../../docs/framework/configure-apps/file-schema/wcf/servicehostingenvironment.md)  
  [Windows Server App Fabric 호스팅 기능](http://go.microsoft.com/fwlink/?LinkId=201276)

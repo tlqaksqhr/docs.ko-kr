@@ -1,13 +1,6 @@
 ---
-title: "방법: DataGrid 컨트롤에서 데이터 그룹화, 정렬 및 필터링"
-ms.custom: 
+title: '방법: DataGrid 컨트롤에서 데이터 그룹화, 정렬 및 필터링'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -16,16 +9,11 @@ helpviewer_keywords:
 - DataGrid [WPF], group
 - DataGrid [WPF], filter
 ms.assetid: 03345e85-89e3-4aec-9ed0-3b80759df770
-caps.latest.revision: "8"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: e648b5a4a45c3583d496ac0ea6036d268d6d33a6
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 675c1441201fa1578023d6ed758f389a38f3b79a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-group-sort-and-filter-data-in-the-datagrid-control"></a>방법: DataGrid 컨트롤에서 데이터 그룹화, 정렬 및 필터링
 데이터를 종종 유용는 <xref:System.Windows.Controls.DataGrid> 그룹화, 정렬 및 데이터를 필터링 하 여 다양 한 방식에서입니다. 그룹화, 정렬 및 데이터를 필터링 하는 <xref:System.Windows.Controls.DataGrid>에 바인딩할는 <xref:System.Windows.Data.CollectionView> 이러한 함수를 지 원하는 합니다. 데이터로 작업할 수 있습니다는 <xref:System.Windows.Data.CollectionView> 원본 데이터에 영향을 주지 않고 합니다. 컬렉션 뷰에서의 변경에 반영 된 <xref:System.Windows.Controls.DataGrid> UI (사용자 인터페이스).  
@@ -142,7 +130,7 @@ DataGrid의 그룹화 된 데이터
   
  또는의 항목을 필터링 할 수 있습니다는 <xref:System.Windows.Controls.DataGrid> 필터링 논리를 설정 하는 메서드를 만들어서는 <xref:System.Windows.Data.CollectionView.Filter%2A?displayProperty=nameWithType> 속성을 필터를 적용 합니다. 이 방법의 예를 보려면 [보기에서 필터 데이터](../../../../docs/framework/wpf/data/how-to-filter-data-in-a-view.md)합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 예제에서는 그룹화, 정렬 및 필터링 `Task` 의 데이터는 <xref:System.Windows.Data.CollectionViewSource> 정렬, 필터링 및 그룹화, 표시 및 `Task` 의 데이터는 <xref:System.Windows.Controls.DataGrid>합니다. <xref:System.Windows.Data.CollectionViewSource> 로 사용 되는 <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A> 에 대 한는 <xref:System.Windows.Controls.DataGrid>합니다. 그룹화, 정렬 및 필터링에서 수행 되는 <xref:System.Windows.Data.CollectionViewSource> 에 표시 됩니다는 <xref:System.Windows.Controls.DataGrid> UI입니다.  
   
  이 예제를 테스트 하려면 DGGroupSortFilterExample 이름을 프로젝트 이름과 일치 하도록 조정 해야 합니다. Visual Basic을 사용 하는 경우에 대 한 클래스 이름을 변경 해야 합니다 <xref:System.Windows.Window> 다음과 합니다.  

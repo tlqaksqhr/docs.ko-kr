@@ -1,31 +1,17 @@
 ---
-title: "Panel 컨트롤 개요(Windows Forms)"
-ms.custom: 
+title: Panel 컨트롤 개요(Windows Forms)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 f1_keywords:
 - Panel
 helpviewer_keywords:
 - grouping controls [Windows Forms], Panel control
 - Panel control [Windows Forms], about Panel control
 ms.assetid: b6b83636-2c39-4dad-89d6-f0fa41049a74
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: a8855c88a0ec60cd0d44d73046e44c9614347d90
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 1ba766629f923b091459531ce74d28dca4b4ea0f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="panel-control-overview-windows-forms"></a>Panel 컨트롤 개요(Windows Forms)
 Windows Forms <xref:System.Windows.Forms.Panel> 컨트롤은 다른 컨트롤에 대 한 식별 가능한 그룹화를 제공 하는 데 사용 됩니다. 일반적으로 폼 함수로 세분화 하 패널을 사용 합니다. 예를 들어 어떤 야간 운송 같은 메일링 옵션을 지정 하는 주문 양식과 해야 합니다. 패널에 있는 모든 옵션을 그룹화 하면 오류가 논리 시각적 표시 합니다. 디자인 타임에 컨트롤을 쉽게 이동할 수 있습니다. 모든-이동 하는 경우는 <xref:System.Windows.Forms.Panel> 모든 포함 된 컨트롤이, 너무 제어 합니다. 패널에 그룹화 된 컨트롤을 통해 액세스할 수는 <xref:System.Windows.Forms.Control.Controls%2A> 속성입니다. 이 속성의 컬렉션을 반환 <xref:System.Windows.Forms.Control> 되므로 컨트롤을 캐스팅 해야 일반적으로 인스턴스를 특정 형식으로 이러한 방식으로 검색 합니다.  

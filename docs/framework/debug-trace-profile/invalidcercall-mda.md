@@ -1,13 +1,6 @@
 ---
 title: invalidCERCall MDA
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - invalid CER calls
 - InvalidCERCall MDA
@@ -16,16 +9,13 @@ helpviewer_keywords:
 - CER calls
 - managed debugging assistants (MDAs), CER calls
 ms.assetid: c4577410-602e-44e5-9dab-fea7c55bcdfe
-caps.latest.revision: "14"
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: c77c49fef5657d5f69538285149e458209ee9b7c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 15f41ebd961f25979fe569fd89dd2135a0a6cd41
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="invalidcercall-mda"></a>invalidCERCall MDA
 `invalidCERCall` MDA(관리 디버깅 도우미)는 안정성 계약 또는 지나치게 약한 계약이 없는 메서드에 대한 호출이 CER(제약이 있는 실행 영역) 그래프 내에 있으면 활성화됩니다. 약한 계약은 가장 나쁜 사례 상태 손상이 호출에 전달된 인스턴스보다 큰 범위에 관련됨을 선언하는 계약입니다. 즉, <xref:System.AppDomain> 또는 프로세스 상태가 손상될 수 있거나 CER 내에서 호출될 때 결과가 항상 결정적으로 계산 가능한 것은 아닙니다.  

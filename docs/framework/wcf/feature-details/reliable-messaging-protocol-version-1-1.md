@@ -1,29 +1,17 @@
 ---
-title: "Reliable Messaging 프로토콜 버전 1.1"
-ms.custom: 
+title: Reliable Messaging 프로토콜 버전 1.1
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 0da47b82-f8eb-42da-8bfe-e56ce7ba6f59
-caps.latest.revision: "13"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 67df8b539109d7e4dafcbc42ad7679643767021a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 8ff02bc6953ec1e5030dd0b592a352b7e23ab0d6
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="reliable-messaging-protocol-version-11"></a>Reliable Messaging 프로토콜 버전 1.1
-이 항목에서는 HTTP 전송을 사용하여 상호 운용에 필요한 WS-ReliableMessaging February 2007(버전 1.1) 프로토콜의 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 구현 정보에 대해 설명합니다. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]는 이 항목에서 설명한 제약 조건 및 확인된 내용과 함께 WS-ReliableMessaging 사양을 따릅니다. 부터는 Ws-reliablemessaging 1.1 프로토콜을 구현 하는 참고는 [!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)]합니다.  
+이 항목에서는 WS-RELIABLE Messaging에 대 한 Windows Communication Foundation (WCF) 구현 세부 정보를 다룹니다 HTTP 전송을 사용 하 여 상호 운용에 필요한 2007 년 2 월 (버전 1.1) 프로토콜입니다. WCF에는 제약 조건 및 확인 된이 항목에 설명 된 내용과 함께 WS-RELIABLE Messaging 사양을 따릅니다. 부터는 Ws-reliablemessaging 1.1 프로토콜을 구현 하는 참고는 [!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)]합니다.  
   
- WS-ReliableMessaging February 2007 프로토콜은 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서 <xref:System.ServiceModel.Channels.ReliableSessionBindingElement>에 의해 구현됩니다.  
+ WS-RELIABLE Messaging 2007 년 2 월 프로토콜에서 WCF에서 구현 되는 <xref:System.ServiceModel.Channels.ReliableSessionBindingElement>합니다.  
   
  편의상 이 항목에서는 다음 역할을 사용합니다.  
   
@@ -47,41 +35,41 @@ ms.lasthandoff: 12/22/2017
 ## <a name="messaging"></a>메시징  
   
 ### <a name="sequence-creation"></a>시퀀스 만들기  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]는 `CreateSequence` 및 `CreateSequenceResponse` 메시지를 구현하여 신뢰할 수 있는 메시징 시퀀스를 설정합니다. 적용되는 제약 조건은 다음과 같습니다.  
+ WCF 구현 `CreateSequence` 및 `CreateSequenceResponse` 신뢰할 수 있는 메시징 설정 하는 메시지 시퀀스입니다. 적용되는 제약 조건은 다음과 같습니다.  
   
--   B1101: [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 개시자는 `CreateSequence` 메시지의 `ReplyTo`, `AcksTo` 및 `Offer/Endpoint`와 동일한 끝점 참조를 사용합니다.  
+-   B1101: WCF 초기자와 동일한 끝점 참조를 사용 하 여 `CreateSequence` 메시지의 `ReplyTo`, `AcksTo` 및 `Offer/Endpoint`합니다.  
   
 -   R1102: `AcksTo` 메시지의 `ReplyTo`, `Offer/Endpoint` 및 `CreateSequence` 끝점 참조에는 8비트 형식과 일치하도록 동일한 문자열 표현을 포함하는 주소 값이 있어야 합니다.  
   
-    -   [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 응답자는 시퀀스를 만들기 전에 `AcksTo`, `ReplyTo` 및 `Endpoint` 끝점 참조의 URI 부분이 동일한지 확인합니다.  
+    -   WCF 응답자 확인의 URI 부분이 `AcksTo`, `ReplyTo` 및 `Endpoint` 시퀀스를 만들기 전에 끝점 참조는 동일 합니다.  
   
 -   R1103: `AcksTo` 메시지의 `ReplyTo`, `Offer/Endpoint` 및 `CreateSequence` 끝점 참조에는 동일한 참조 매개 변수 집합이 있어야 합니다.  
   
-    -   [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]는 `AcksTo`에 대한 `ReplyTo`, `Offer/Endpoint` 및 `CreateSequence` 끝점 참조의 참조 매개 변수를 동일한 것으로 지정하지 않지만 동일하다고 가정하며, 승인 및 역방향 시퀀스 메시지에 `ReplyTo` 끝점 참조의 참조 매개 변수를 사용합니다.  
+    -   WCF를 지정 하지 않지만 참조 하는 것으로 가정의 매개 변수는 `AcksTo`, `ReplyTo` 및 `Offer/Endpoint` 끝점 참조 `CreateSequence` 동일 하며에서 참조 매개 변수를 사용 하 여는 `ReplyTo` 에 대 한 끝점 참조 승인 및 역방향 시퀀스 메시지를 제공 합니다.  
   
--   B1104: [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 개시자는 `Expires` 메시지에 선택적 `Offer/Expires` 또는 `CreateSequence` 요소를 생성하지 않습니다.  
+-   B1104: WCF 초기자를 생성 하지 않습니다 선택적 `Expires` 또는 `Offer/Expires` 요소에는 `CreateSequence` 메시지입니다.  
   
--   B1105: `CreateSequence` 메시지에 액세스할 때 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 응답자는 `Expires` 요소의 `CreateSequence` 값을 `Expires` 요소의 `CreateSequenceResponse` 값으로 사용합니다. 그렇지 않으면 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 응답자는 `Expires` 및 `Offer/Expires` 값을 읽고 무시합니다.  
+-   B1105:에 액세스할 때는 `CreateSequence` 사용 하 여 메시지를 WCF 응답자는 `Expires` 값는 `CreateSequence` 요소도는 `Expires` 값는 `CreateSequenceResponse` 요소. WCF 응답자 읽고 무시 그렇지 않은 경우는 `Expires` 및 `Offer/Expires` 값입니다.  
   
--   B1106: `CreateSequenceResponse` 메시지에 액세스할 때 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 개시자는 선택적 `Expires` 값을 읽지만 사용하지는 않습니다.  
+-   B1106:에 액세스할 때의 `CreateSequenceResponse` 선택적 읽고 메시지를 WCF 초기자 `Expires` 값 하지만 사용 하지는 않습니다.  
   
--   B1107: [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 개시자와 응답자는 항상 `IncompleteSequenceBehavior` 및 `CreateSequence/Offer` 요소에 선택적 `CreateSequenceResponse` 요소를 생성합니다.  
+-   B1107: WCF 개시자와 응답자 항상 생성 선택적 `IncompleteSequenceBehavior` 요소에는 `CreateSequence/Offer` 및 `CreateSequenceResponse` 요소입니다.  
   
--   B1108: [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]는 `DiscardFollowingFirstGap` 요소에 `NoDiscard` 및 `IncompleteSequenceBehavior` 값만 사용합니다.  
+-   B1108: WCF에서는는 `DiscardFollowingFirstGap` 및 `NoDiscard` 값에 `IncompleteSequenceBehavior` 요소입니다.  
   
     -   WS-ReliableMessaging은 `Offer` 메커니즘을 사용하여 세션을 형성하는 상호 관련된 두 개의 역방향 시퀀스를 설정합니다.  
   
--   B1109: `CreateSequence`에 `Offer` 요소가 포함된 경우 단방향 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 응답자는 `CreateSequenceResponse` 요소를 사용하지 않고 `Accept`로 응답하여 제공된 시퀀스를 거부합니다.  
+-   B1109: 경우 `CreateSequence` 포함 한 `Offer` 요소는 한 가지 방법은 WCF 응답 자가 제공 된 시퀀스로 응답 하 여 거부는 `CreateSequenceResponse` 없이 `Accept` 요소입니다.  
   
--   B1110: 신뢰할 수 있는 메시징 응답자가 제공된 시퀀스를 거부하는 경우 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 개시자는 새로 설정된 시퀀스를 오류 처리합니다.  
+-   B1110: 신뢰할 수 있는 메시징 응답자가 제공 된 시퀀스를 거부 하는 경우 WCF 초기자 새로 설정된 된 시퀀스를 오류입니다.  
   
--   B1111: `CreateSequence`에 `Offer` 요소가 포함되지 않은 경우 양방향 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 응답자는 `CreateSequenceRefused` 오류로 응답하여 제공된 시퀀스를 거부합니다.  
+-   B1111: 경우 `CreateSequence` 없으면는 `Offer` 요소인 양방향 WCF 응답 자가 제공 된 시퀀스로 응답 하 여 거부는 `CreateSequenceRefused` 오류입니다.  
   
 -   R1112: `Offer` 메커니즘을 사용하여 두 개의 역방향 시퀀스가 설정된 경우 `[address]` 끝점 참조의 `CreateSequenceResponse/Accept/AcksTo` 속성은 `CreateSequence` 메시지 바이트별 대상 URI와 일치해야 합니다.  
   
 -   R1113: `Offer` 메커니즘을 사용하여 두 개의 역방향 시퀀스가 설정된 경우 개시자에서 응답자로 이동하는 두 시퀀스의 모든 메시지를 같은 끝점 참조로 보내야 합니다.  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]는 WS-ReliableMessaging을 사용하여 개시자와 응답자 간에 신뢰할 수 있는 세션을 설정합니다. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] WS-ReliableMessaging 구현에서는 단방향, 요청-회신 및 전체 이중 메시징 패턴에 신뢰할 수 있는 세션을 제공합니다. `Offer` 및 `CreateSequence`에서 WS-ReliableMessaging `CreateSequenceResponse` 메커니즘을 사용하면 상호 관련된 두 개의 역방향 시퀀스를 설정하고 모든 메시지 끝점에 적합한 세션 프로토콜을 제공합니다. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]는 세션 무결성을 위한 종단 간 보호를 포함하여 세션에 대한 보안 보장을 제공하므로 같은 상대방에 보낼 메시지가 동일한 대상에 도달하는지 확인하는 것이 좋습니다. 이렇게 하면 응용 프로그램 메시지에서 "피기백킹"이라고 하는 시퀀스 승인을 사용할 수 있습니다. 따라서 R1102, R1112, 및 R1113 제약 조건에 적용 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]합니다.  
+ WCF는 WS-RELIABLE Messaging을 사용 하 여 개시자와 응답자 간에 신뢰할 수 있는 세션을 설정 하 합니다. WCF WS-RELIABLE Messaging 구현에서는 단방향, 요청-회신 및 전체에 대 한 신뢰할 수 있는 세션을 제공 이중 메시징 패턴입니다. `Offer` 및 `CreateSequence`에서 WS-ReliableMessaging `CreateSequenceResponse` 메커니즘을 사용하면 상호 관련된 두 개의 역방향 시퀀스를 설정하고 모든 메시지 끝점에 적합한 세션 프로토콜을 제공합니다. WCF는 세션 무결성에 대 한 종단 간 보호를 포함 하는 세션에 대 한 보안 보장을 제공 하므로 하 여 동일한 파티를 대상으로 메시지가 동일한 대상에 도달할 수 있도록 유용 합니다. 이렇게 하면 응용 프로그램 메시지에서 "피기백킹"이라고 하는 시퀀스 승인을 사용할 수 있습니다. 따라서 제약 조건 R1102, R1112, 및 R1113 WCF에 적용 됩니다.  
   
  `CreateSequence` 메시지의 예입니다.  
   
@@ -136,9 +124,9 @@ ms.lasthandoff: 12/22/2017
 ```  
   
 ### <a name="closing-a-sequence"></a>시퀀스 닫기  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]는 신뢰할 수 있는 메시징 소스에 의해 시작된 종료에 `CloseSequence` 및 `CloseSequenceResponse` 메시지를 사용합니다. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 신뢰할 수 있는 메시징 대상은 종료를 시작하지 않고 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 신뢰할 수 있는 메시징 소스는 신뢰할 수 있는 메시징 대상에 의해 시작된 종료를 지원하지 않습니다. 적용되는 제약 조건은 다음과 같습니다.  
+ WCF를 사용 하는 `CloseSequence` 및 `CloseSequenceResponse` 신뢰할 수 있는 메시징 소스에서 시작 된 종료에 대 한 메시지입니다. WCF 신뢰할 수 있는 메시징 대상은 종료를 시작 하지 않고 및 WCF 신뢰할 수 있는 메시징 소스는 신뢰할 수 있는 메시징 대상에서 시작 된 종료를 지원 하지 않습니다. 적용되는 제약 조건은 다음과 같습니다.  
   
--   B1201: [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 신뢰할 수 있는 메시징 소스는 항상 `CloseSequence` 메시지를 보내어 시퀀스를 종료합니다.  
+-   B1201: WCF 신뢰할 수 있는 메시징 소스 항상 보냅니다는 `CloseSequence` 시퀀스를 종료 하는 메시지입니다.  
   
 -   B1202: 신뢰할 수 있는 메시징 소스는 시퀀스 메시지 전체 범위의 승인을 기다린 다음 `CloseSequence` 메시지를 보냅니다.  
   
@@ -146,7 +134,7 @@ ms.lasthandoff: 12/22/2017
   
 -   R1204: 신뢰할 수 있는 메시징 대상은 `CloseSequence` 메시지를 보내어 종료를 시작하면 안 됩니다.  
   
--   B1205: `CloseSequence` 메시지를 받으면 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 신뢰할 수 있는 메시징 소스는 시퀀스가 완료되지 않았다고 간주하고 오류를 보냅니다.  
+-   : B1205 수신 된 `CloseSequence` 메시지를 WCF 신뢰할 수 있는 메시징 소스는 시퀀스를 불완전 한 것으로 간주 하 고 오류를 보냅니다.  
   
  `CloseSequence` 메시지의 예입니다.  
   
@@ -189,15 +177,15 @@ Example CloseSequenceResponse message:
 ```  
   
 ### <a name="sequence-termination"></a>시퀀스 종료  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]는 `TerminateSequence/TerminateSequenceResponse` 핸드셰이크를 완료한 후 주로 `CloseSequence/CloseSequenceResponse` 핸드셰이크를 사용합니다. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 신뢰할 수 있는 메시징 대상은 종료를 시작하지 않고 신뢰할 수 있는 메시징 소스는 신뢰할 수 있는 메시징 대상에 의해 시작된 종료를 지원하지 않습니다. 적용되는 제약 조건은 다음과 같습니다.  
+ WCF에서 주로 사용 하는 `TerminateSequence/TerminateSequenceResponse` 핸드셰이크를 완료 한 후의 `CloseSequence/CloseSequenceResponse` 핸드셰이크 합니다. WCF 신뢰할 수 있는 메시징 대상은 종료를 시작 하지 않고 및 신뢰할 수 있는 메시징 소스는 신뢰할 수 있는 메시징 대상에서 시작 된 종료를 지원 하지 않습니다. 적용되는 제약 조건은 다음과 같습니다.  
   
--   B1301: [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 개시자는 `TerminateSequence` 핸드셰이크가 완료된 후 `CloseSequence/CloseSequenceResponse` 메시지만 보냅니다.  
+-   B1301: WCF 초기자만 보냅니다는 `TerminateSequence` 성공적으로 완료 한 후의 메시지는 `CloseSequence/CloseSequenceResponse` 핸드셰이크입니다.  
   
--   R1302: [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]는 `LastMsgNumber` 요소가 제공된 시퀀스의 모든 `CloseSequence` 및 `TerminateSequence` 메시지에서 일치하는지 확인합니다. 즉, `LastMsgNumber`가 모든 `CloseSequence` 및 `TerminateSequence` 메시지에 없거나, 모든 `CloseSequence` 및 `TerminateSequence` 메시지에 있으며 이러한 메시지에서 동일합니다.  
+-   R1302: WCF의 유효성을 검사 하는 `LastMsgNumber` 모든 요소는 일관 된 `CloseSequence` 및 `TerminateSequence` 지정 된 시퀀스에 대 한 메시지입니다. 즉, `LastMsgNumber`가 모든 `CloseSequence` 및 `TerminateSequence` 메시지에 없거나, 모든 `CloseSequence` 및 `TerminateSequence` 메시지에 있으며 이러한 메시지에서 동일합니다.  
   
 -   B1303: `TerminateSequence` 핸드셰이크 이후 `CloseSequence/CloseSequenceResponse` 메시지를 받을 때 신뢰할 수 있는 메시징 대상은 `TerminateSequenceResponse` 메시지로 응답합니다. 신뢰할 수 있는 메시징 소스에 `TerminateSequence` 메시지를 보내기 전의 최종 승인이 있으므로 신뢰할 수 있는 메시징 대상은 시퀀스가 종료되고 리소스를 즉시 회수함을 인식하고 있습니다.  
   
--   B1304: `TerminateSequence` 핸드셰이크 이전에 `CloseSequence/CloseSequenceResponse` 메시지를 받을 때 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 신뢰할 수 있는 메시징 대상은 `TerminateSequenceResponse` 메시지로 응답합니다. 신뢰할 수 있는 메시징 대상이 시퀀스에서 일치하지 않는 부분이 없음을 확인한 경우에는 클라이언트가 최종 승인을 받을 수 있도록 신뢰할 수 있는 메시징 대상이 응용 프로그램 대상에서 지정한 시간 동안 기다린 다음 리소스를 회수합니다. 그렇지 않은 경우 신뢰할 수 있는 메시징 대상이 리소스를 바로 회수하고 응용 프로그램 대상에 `Faulted` 이벤트를 발생시켜 시퀀스에 오류가 발생하여 종료되었음을 알려 줍니다.  
+-   B1304: 받을 때는 `TerminateSequence` 이전에 메시지는 `CloseSequence/CloseSequenceResponse` 핸드셰이크를 사용 하 여 응답 WCF 신뢰할 수 있는 메시징 대상은 `TerminateSequenceResponse` 메시지입니다. 신뢰할 수 있는 메시징 대상이 시퀀스에서 일치하지 않는 부분이 없음을 확인한 경우에는 클라이언트가 최종 승인을 받을 수 있도록 신뢰할 수 있는 메시징 대상이 응용 프로그램 대상에서 지정한 시간 동안 기다린 다음 리소스를 회수합니다. 그렇지 않은 경우 신뢰할 수 있는 메시징 대상이 리소스를 바로 회수하고 응용 프로그램 대상에 `Faulted` 이벤트를 발생시켜 시퀀스에 오류가 발생하여 종료되었음을 알려 줍니다.  
   
  `TerminateSequence` 메시지의 예입니다.  
   
@@ -242,7 +230,7 @@ Example TerminateSequenceResponse message:
 ### <a name="sequences"></a>시퀀스  
  다음은 시퀀스에 적용되는 제약 조건의 목록입니다.  
   
--   B1401:[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 생성 하 고 액세스 하는 시퀀스 번호 보다 높은 `xs:long`의 최대 포함 값 9223372036854775807 합니다.  
+-   B1401:WCF 생성 하 고 액세스 시퀀스 번호 보다 높은 `xs:long`의 최대 포함 값 9223372036854775807 합니다.  
   
  `Sequence` 헤더의 예입니다.  
   
@@ -254,7 +242,7 @@ Example TerminateSequenceResponse message:
 ```  
   
 ### <a name="request-acknowledgement"></a>승인 요청  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]는 `AckRequested` 헤더를 연결 유지 메커니즘으로 사용합니다.  
+ WCF를 사용 하 여는 `AckRequested` 헤더를 연결 유지 메커니즘으로 합니다.  
   
  `AckRequested` 헤더의 예입니다.  
   
@@ -265,11 +253,11 @@ Example TerminateSequenceResponse message:
 ```  
   
 ### <a name="sequenceacknowledgement"></a>SequenceAcknowledgement  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]는 WS-Reliable Messaging에 제공된 시퀀스 승인에 "피기백" 메커니즘을 사용합니다. 적용되는 제약 조건은 다음과 같습니다.  
+ WCF는 Ws-reliable Messaging에 제공 된 시퀀스 승인에 "피기백" 메커니즘을 사용 합니다. 적용되는 제약 조건은 다음과 같습니다.  
   
 -   R1601: 두 개의 역방향 시퀀스가 설정 된 경우 사용 하 여는 `Offer` 메커니즘은 `SequenceAcknowledgement` 응용 프로그램 받는 사람된에 게 전송 된 메시지에 헤더를 포함 될 수 있습니다. 원격 끝점에서는 피기백된 `SequenceAcknowledgement` 헤더에 액세스할 수 있어야 합니다.  
   
--   B1602: [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]는 `SequenceAcknowledgement` 요소가 포함된 `Nack` 헤더를 생성하지 않습니다. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]는 각 `Nack` 요소에 시퀀스 번호가 포함되어 있는지 확인하지만, 그렇지 않은 경우에는 `Nack` 요소와 값을 무시합니다.  
+-   B1602: WCF 생성 하지 않습니다 `SequenceAcknowledgement` 들어 있는 헤더 `Nack` 요소입니다. WCF는 각 유효성을 검사 `Nack` 요소 시퀀스 번호를 포함 하지만 그렇지 않은 경우 무시는 `Nack` 요소와 값입니다.  
   
  `SequenceAcknowledgement` 헤더의 예입니다.  
   
@@ -281,11 +269,11 @@ Example TerminateSequenceResponse message:
 ```  
   
 ### <a name="ws-reliablemessaging-faults"></a>WS-ReliableMessaging 오류  
- 다음은 WS-ReliableMessaging 오류의 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 구현에 적용되는 제약 조건 목록입니다. 적용되는 제약 조건은 다음과 같습니다.  
+ 다음은 WS-RELIABLE Messaging 오류의 WCF 구현에 적용 되는 제약 조건의 목록입니다. 적용되는 제약 조건은 다음과 같습니다.  
   
--   B1701: [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 생성 하지 않습니다 `MessageNumberRollover` 오류입니다.  
+-   B1701: WCF 생성 하지 않습니다 `MessageNumberRollover` 오류입니다.  
   
--   B1702: SOAP 1.2를 통해 서비스 끝점이 해당 연결 제한에 도달하여 새 연결을 처리할 수 없는 경우 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]는 다음 예제처럼 중첩된 `CreateSequenceRefused` 오류 하위 코드, `netrm:ConnectionLimitReached`를 생성합니다.  
+-   B1702: SOAP 1.2를 통해 서비스 끝점에서 연결 제한에 도달 하 고 새 연결을 처리할 수 없습니다. WCF에서는 오류가 발생 하는 중첩 된 `CreateSequenceRefused` 오류 하위 코드, `netrm:ConnectionLimitReached`다음 예제에 나온 것 처럼 합니다.  
   
 ```xml  
 <s:Envelope>  
@@ -312,9 +300,9 @@ Example TerminateSequenceResponse message:
 ```  
   
 ### <a name="ws-addressing-faults"></a>WS-Addressing 오류  
- WS-ReliableMessaging에서는 WS-Addressing을 사용하므로 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서 WS-ReliableMessaging을 구현하는 경우에는 WS-Addressing 오류를 생성하고 전송할 수 있습니다. 이 단원에서는 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]가 WS-ReliableMessaging 계층에서 명시적으로 생성하고 전송하는 WS-Addressing 오류에 대해 설명합니다.  
+ WS-RELIABLE Messaging에서는 Ws-addressing 때문에 WCF WS-RELIABLE Messaging 구현은 생성 하 고 Ws-addressing 오류를 전송할 수 있습니다. 이 섹션에서는 WCF에서 명시적으로 생성 하 고는 WS-RELIABLE Messaging 계층에 전송 하는 Ws-addressing 오류를 설명 합니다.  
   
--   B1801:[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 생성 하 고 전송 된 `Message Addressing Header Required` 다음 중 하나에 오류:  
+-   B1801:WCF 생성 하 고 전송 된 `Message Addressing Header Required` 다음 중 하나에 오류:  
   
     -   `CreateSequence`, `CloseSequence` 또는 `TerminateSequence` 메시지에 `MessageId` 헤더가 없습니다.  
   
@@ -322,26 +310,26 @@ Example TerminateSequenceResponse message:
   
     -   `CreateSequenceResponse`, `CloseSequenceResponse` 또는 `TerminateSequenceResponse` 메시지에 `RelatesTo` 헤더가 없습니다.  
   
--   B1802:[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 생성 하 고 전송 된 `Endpoint Unavailable` 있는 수신 대기 중인 끝점이 없습니다 나타내기 위해 오류 검사에서 주소 지정 헤더를 기준으로 시퀀스를 처리할 수는 `CreateSequence` 메시지입니다.  
+-   B1802:WCF 생성 하 고 전송 된 `Endpoint Unavailable` 있는 수신 대기 중인 끝점이 없습니다 나타내기 위해 오류 검사에서 주소 지정 헤더를 기준으로 시퀀스를 처리할 수는 `CreateSequence` 메시지입니다.  
   
 ## <a name="protocol-composition"></a>프로토콜 구성  
   
 ### <a name="composition-with-ws-addressing"></a>WS-Addressing을 사용하여 구성  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]는 WS-Addressing의 두 개 버전, WS-Addressing 2004/08 [WS-ADDR]과 W3C WS-Addressing 1.0 Recommendations [WS-ADDR-CORE] 및 [WS-ADDR-SOAP]를 지원합니다.  
+ WCF는 Ws-addressing의 두 가지 버전을 지원: Ws-addressing 2004/08 [WS-ADDR] 및 W3C Ws-addressing 1.0 Recommendations [WS ADDR 코어] 및 [WS ADDR SOAP].  
   
- WS-ReliableMessaging 사양에는 WS-Addressing 2004/08만 언급되어 있지만 WS-Addressing 버전만 사용하도록 제한되지는 않습니다. 다음은 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에 적용되는 제약 조건의 목록입니다.  
+ WS-ReliableMessaging 사양에는 WS-Addressing 2004/08만 언급되어 있지만 WS-Addressing 버전만 사용하도록 제한되지는 않습니다. 다음은 WCF에 적용 되는 제약 조건의 목록입니다.  
   
 -   R2101: WS-Addressing 2004/08과 WS-Addressing 1.0 모두 WS-Reliable Messaging과 함께 사용할 수 있습니다.  
   
 -   R2102: 단일 버전의 WS-Addressing은 `Offer` 메커니즘을 사용하여 상호 관련된 한 쌍의 역방향 시퀀스 또는 제공된 WS-ReliableMessaging 시퀀스 전체에서 사용할 수 있어야 합니다.  
   
 ### <a name="composition-with-soap"></a>SOAP를 사용하여 구성  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]는 WS-Reliable Messaging과 함께 SOAP 1.1 및 SOAP 1.2 모두 사용하는 것을 지원합니다.  
+ WCF는 SOAP 1.1 및 SOAP 1.2 Ws-reliable Messaging과 함께 모두 지원합니다.  
   
 ### <a name="composition-with-ws-security-and-ws-secureconversation"></a>WS-Security 및 WS-SecureConversation을 사용하여 구성  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]는 보안 전송(HTTPS), WS-Security를 사용한 구성 및 WS-Secure Conversation을 사용한 구성을 통해 WS-ReliableMessaging 시퀀스를 보호합니다. WS-ReliableMessaging 1.1 프로토콜, WS-Security 1.1 및 WS-Secure Conversation 1.3 프로토콜을 함께 사용해야 합니다. 다음은 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에 적용되는 제약 조건의 목록입니다.  
+ WCF 보안 전송 (HTTPS), Ws-security를 사용 하 여 구성 및 컴퍼지션 Ws-secure Conversation을 사용한 WS-RELIABLE Messaging 시퀀스에 대 한 보호를 제공 합니다. WS-ReliableMessaging 1.1 프로토콜, WS-Security 1.1 및 WS-Secure Conversation 1.3 프로토콜을 함께 사용해야 합니다. 다음은 WCF에 적용 되는 제약 조건의 목록입니다.  
   
--   R2301: 개별 메시지의 무결성과 기밀성뿐만 아니라 WS-ReliableMessaging 시퀀스의 무결성을 보호하려면 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서 WS-Secure Conversation을 사용해야 합니다.  
+-   R2301: 개별 메시지의 무결성 뿐만 아니라 Ws-reliablemessaging 시퀀스의 무결성과 기밀성을 보호 하려면 WCF에 필요한 Ws-secure Conversation을 사용 해야 합니다.  
   
 -   R2302:AWS-WS-RELIABLE Messaging 시퀀스를 설정 하기 전에 보안 대화 세션을 설정 해야 합니다.  
   
@@ -349,7 +337,7 @@ Example TerminateSequenceResponse message:
   
 -   B2304:WS-ReliableMessaging 시퀀스 또는 한 쌍의 상관 관계가 지정 된 역방향 시퀀스는 항상 단일 Ws-secureconversation 세션에 바인딩됩니다.  
   
--   R2305: WS-Secure Conversation을 사용하여 구성된 경우 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 응답자는 `CreateSequence` 메시지에 `wsse:SecurityTokenReference` 요소와 `wsrm:UsesSequenceSTR` 헤더를 포함해야 합니다.  
+-   R2305: Ws-secure Conversation, 작성 하는 경우 WCF 응답자를 사용 하려면는 `CreateSequence` 메시지에 포함 된 `wsse:SecurityTokenReference` 요소 및 `wsrm:UsesSequenceSTR` 헤더 합니다.  
   
  `UsesSequenceSTR` 헤더의 예입니다.  
   
@@ -358,31 +346,31 @@ Example TerminateSequenceResponse message:
 ```  
   
 ### <a name="composition-with-ssltls-sessions"></a>SSL/TLS 세션을 사용하여 구성  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]는 SSL/TLS 세션을 사용한 구성을 지원하지 않습니다.  
+ WCF는 SSL/TLS 세션을 사용 하 여 구성을 지원 하지 않습니다.  
   
--   B2401: [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]는 `wsrm:UsesSequenceSSL` 헤더를 생성하지 않습니다.  
+-   B2401: WCF 생성 하지 않습니다는 `wsrm:UsesSequenceSSL` 헤더입니다.  
   
--   R2402: 신뢰할 수 있는 메시징 개시자는 `CreateSequence` 응답자에게 `wsrm:UsesSequenceSSL` 헤더가 있는 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 메시지를 보내면 안 됩니다.  
+-   R2402: 신뢰할 수 있는 메시징 개시자 보내면 안는 `CreateSequence` 메시지는 `wsrm:UsesSequenceSSL` WCF 응답자에 대 한 헤더입니다.  
   
 ### <a name="composition-with-ws-policy"></a>WS-Policy를 사용하여 구성  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]는 WS-Policy의 두 개 버전, WS-Policy 1.2와 WS-Policy 1.5를 지원합니다.  
+ WCF는 Ws-policy의 두 가지 버전을 지원: Ws-policy 1.2와 Ws-policy 1.5입니다.  
   
 ## <a name="ws-reliablemessaging-ws-policy-assertion"></a>WS-ReliableMessaging WS-Policy Assertion  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]는 WS-ReliableMessaging WS-Policy Assertion `wsrm:RMAssertion`을 사용하여 끝점 기능을 설명합니다. 다음은 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에 적용되는 제약 조건의 목록입니다.  
+ WS-RELIABLE Messaging Ws-policy Assertion을 사용 하 여 WCF `wsrm:RMAssertion` 에 끝점 기능을 설명 합니다. 다음은 WCF에 적용 되는 제약 조건의 목록입니다.  
   
--   B3001: [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]는 `wsrmn:RMAssertion` WS-Policy Assertion을 `wsdl:binding` 요소에 연결합니다. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]는 `wsdl:binding` 및 `wsdl:port` 요소에 대한 두 개 첨부 파일을 모두 지원합니다.  
+-   B3001: WCF 연결 `wsrmn:RMAssertion` Ws-policy Assertion에 `wsdl:binding` 요소입니다. WCF에 첨부 파일이 모두 지원 `wsdl:binding` 및 `wsdl:port` 요소입니다.  
   
--   B3002: [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]는 `wsp:Optional` 태그를 생성하지 않습니다.  
+-   B3002: WCF 생성 하지 않습니다는 `wsp:Optional` 태그입니다.  
   
--   B3003: `wsrmp:RMAssertion` WS-Policy Assertion에 액세스할 때 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]는 `wsp:Optional` 태그를 무시하고 WS-RM 정책을 필수 항목으로 처리합니다.  
+-   B3003:에 액세스할 때의 `wsrmp:RMAssertion` Ws-policy Assertion WCF 무시는 `wsp:Optional` 태그를 지정 하 고 WS-RM 정책을 필수 항목으로 처리 합니다.  
   
--   R3004: [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]는 SSL/TLS 세션을 사용하여 구성되지 않으므로 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]는 `wsrmp:SequenceTransportSecurity`를 지정하는 정책을 허용하지 않습니다.  
+-   R3004: WCF SSL/TLS 세션을 갖는 작성 되지 않습니다, 때문에 WCF 받아들이지 않는 정책을 지정 하는 `wsrmp:SequenceTransportSecurity`합니다.  
   
--   B3005: [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]는 항상 `wsrmp:DeliveryAssurance` 요소를 생성합니다.  
+-   B3005: WCF는 항상 생성는 `wsrmp:DeliveryAssurance` 요소입니다.  
   
--   B3006: [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]는 항상 `wsrmp:ExactlyOnce` 배달 보증을 지정합니다.  
+-   B3006: WCF 항상 지정 된 `wsrmp:ExactlyOnce` 배달 보증 합니다.  
   
--   B3007: [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 생성 하 고 및 WS-RELIABLE Messaging 어설션의 다음과 같은 속성을 읽고,에서 제어를 제공는 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] `ReliableSessionBindingElement`:  
+-   B3007: WCF 생성 및 WS-RELIABLE Messaging 어설션의 다음과 같은 속성을 읽고 하 고 제공를 제어 WCF에서`ReliableSessionBindingElement`:  
   
     -   `netrmp:InactivityTimeout`  
   
@@ -406,12 +394,12 @@ Example TerminateSequenceResponse message:
     </wsrmp:RMAssertion>  
     ```  
   
-## <a name="flow-control-ws-reliablemessaging-extension"></a>흐름 제어 WS-ReliableMessaging 확장  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]는 WS-ReliableMessaging 확장성을 사용하여 선택적으로 시퀀스 메시지 흐름을 보다 엄격하게 제어합니다.  
+## <a name="flow-control-ws-reliablemessaging-extension"></a>흐름 제어 WS-ReliableMessaging 확장명  
+ WCF는 WS-RELIABLE Messaging 확장성을 사용 하 여 시퀀스 메시지 흐름을 보다 선택적 추가 더 엄격한 제어를 제공 합니다.  
   
- 흐름 제어를 설정 하 여 활성화는 `ReliableSessionBindingElement`의 `FlowControlEnabled``boolean` 속성을 `true`합니다. 다음은 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에 적용되는 제약 조건의 목록입니다.  
+ 흐름 제어를 설정 하 여 활성화는 `ReliableSessionBindingElement`의 `FlowControlEnabled``boolean` 속성을 `true`합니다. 다음은 WCF에 적용 되는 제약 조건의 목록입니다.  
   
--   B4001: 신뢰할 수 있는 메시징 흐름 제어를 사용하면 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]는 다음 예제에서처럼 `netrm:BufferRemaining` 헤더의 요소 확장성에 `SequenceAcknowledgement` 요소를 생성합니다.  
+-   B4001: 신뢰할 수 있는 메시징 흐름 제어를 사용 하도록 설정 하는 경우 WCF 생성 한 `netrm:BufferRemaining` 의 요소 확장성 요소는 `SequenceAcknowledgement` 헤더로, 다음 예제와 같이 합니다.  
   
     ```xml  
     <wsrm:SequenceAcknowledgement>  
@@ -421,16 +409,16 @@ Example TerminateSequenceResponse message:
     </wsrm:SequenceAcknowledgement>  
     ```  
   
--   B4002: 신뢰할 수 있는 메시징 흐름 제어를 사용하는 경우에도 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서는 `netrm:BufferRemaining` 헤더에 `SequenceAcknowledgement` 요소가 필요하지 않습니다.  
+-   B4002: 신뢰할 수 있는 메시징 흐름 제어를 사용 하도록 설정 하는 경우에 WCF에서는 않아도 `netrm:BufferRemaining` 요소에는 `SequenceAcknowledgement` 헤더입니다.  
   
--   B4003: [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 신뢰할 수 있는 메시징 대상은 `netrm:BufferRemaining`을 사용하여 버퍼링할 수 있는 새 메시지 수를 나타냅니다.  
+-   B4003: WCF 신뢰할 수 있는 메시징 대상은 사용 하 여 `netrm:BufferRemaining` 새 메시지 것을 나타내기 위해 버퍼링 할 수 있습니다.  
   
--   B4004:When 신뢰할 수 있는 메시징 흐름 제어를 사용 하도록 설정 된 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 의 값을 사용 하는 신뢰할 수 있는 메시징 소스 `netrm:BufferRemaining` 스로틀 메시지 전송에 있습니다.  
+-   B4004:When 신뢰할 수 있는 메시징 흐름 제어를 사용 하면 WCF 신뢰할 수 있는 메시징 소스에 값을 사용 하 여 `netrm:BufferRemaining` 스로틀 메시지 전송에 있습니다.  
   
--   B4005: [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]는 0과 4096 사이의 `netrm:BufferRemaining` 정수 값을 생성하고 0과 `xs:int`의 `maxInclusive` 값 214748364 사이의 정수 값을 읽습니다.  
+-   B4005: WCF 생성 `netrm:BufferRemaining` 정수 0과 4096 사이의 값 및 0 사이의 정수 값을 읽습니다 및 `xs:int`의 `maxInclusive` 값 214748364 합니다.  
   
 ## <a name="message-exchange-patterns"></a>메시지 교환 패턴  
- 이 단원에서는 WS-ReliableMessaging이 다른 메시지 교환 패턴에 사용되는 경우 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]의 동작을 설명합니다. 각 메시지 교환 패턴에 대해 다음 두 가지 배포 시나리오를 고려합니다.  
+ 이 섹션에서는 WS-RELIABLE Messaging이 다른 메시지 교환 패턴에 사용 되는 경우 WCF의 동작을 설명 합니다. 각 메시지 교환 패턴에 대해 다음 두 가지 배포 시나리오를 고려합니다.  
   
 -   주소를 지정할 수 없는 개시자: 개시자가 방화벽으로 보호됩니다. 응답자는 HTTP 응답에서만 개시자에게 메시지를 배달할 수 있습니다.  
   
@@ -439,97 +427,97 @@ Example TerminateSequenceResponse message:
 ### <a name="one-way-non-addressable-initiator"></a>주소를 지정할 수 없는 단방향 개시자  
   
 #### <a name="binding"></a>바인딩  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]는 각각 한 개의 HTTP 채널을 통해 한 개의 시퀀스를 사용하여 단방향 메시지 교환 패턴을 제공합니다. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]는 HTTP 요청을 사용하여 개시자의 모든 메시지를 응답자에게 전송하고 HTTP 응답을 사용하여 응답자의 모든 메시지를 개시자에게 전송합니다.  
+ WCF는 HTTP 채널을 통해 한 개의 시퀀스를 사용 하 여 단방향 메시지 교환 패턴을 제공 합니다. WCF는 HTTP 요청을 사용 하 여 시작자에 게 응답자의 모든 메시지를 응답자 및 HTTP 응답에는 시작자 로부터 모든 메시지를 전송 합니다.  
   
 #### <a name="createsequence-exchange"></a>CreateSequence 교환  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 개시자는 HTTP 요청에 `CreateSequence` 요소가 없는 `Offer` 메시지를 전송하고 HTTP 응답에 `CreateSequenceResponse` 메시지를 예상합니다. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 응답자는 시퀀스를 만들고 HTTP 응답에 `CreateSequenceResponse` 요소가 없는 `Accept` 메시지를 전송합니다.  
+ WCF 초기자 전송는 `CreateSequence` 없이 메시지 `Offer` 요소는 HTTP 요청에 것 이라고 예상는 `CreateSequenceResponse` HTTP 응답에는 메시지입니다. WCF 응답자는 시퀀스를 만들고 전송는 `CreateSequenceResponse` 메시지 없이 `Accept` HTTP 응답에는 요소입니다.  
   
 #### <a name="sequenceacknowledgement"></a>SequenceAcknowledgement  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 개시자는 `CreateSequence` 메시지와 오류 메시지를 제외한 모든 메시지의 회신에 대한 승인을 처리합니다. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 응답자는 항상 HTTP 응답에 대한 독립 실행형 승인을 모든 시퀀스 및 `AckRequested` 메시지에 전송합니다.  
+ WCF 초기자를 제외한 모든 메시지의 회신에 대 한 승인을 처리는 `CreateSequence` 메시지와 오류 메시지입니다. WCF 응답자는 항상 독립 실행형 승인을 모든 시퀀스에 대 한 HTTP 응답에 전송 하 고 `AckRequested` 메시지입니다.  
   
 #### <a name="closesequence-exchange"></a>CloseSequence 교환  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 개시자는 HTTP 요청에 `CloseSequence` 메시지를 전송하고 HTTP 응답에 `CreateSequenceResponse` 메시지를 예상합니다. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 응답자는 HTTP 응답에 `CloseSequenceResponse` 메시지를 전송합니다.  
+ WCF 초기자 전송는 `CloseSequence` 는 HTTP 요청에 메시지 보내기 및 예상는 `CreateSequenceResponse` HTTP 응답에는 메시지입니다. WCF 응답자 전송는 `CloseSequenceResponse` HTTP 응답에는 메시지입니다.  
   
 #### <a name="terminatesequence-exchange"></a>TerminateSequence 교환  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 개시자는 HTTP 요청에 `TerminateSequence` 메시지를 전송하고 HTTP 응답에 `TerminateSequenceResponse` 메시지를 예상합니다. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 응답자는 HTTP 응답에 `TerminateSequenceResponse` 메시지를 전송합니다.  
+ WCF 초기자 전송는 `TerminateSequence` 는 HTTP 요청에 메시지 보내기 및 예상는 `TerminateSequenceResponse` HTTP 응답에는 메시지입니다. WCF 응답자 전송는 `TerminateSequenceResponse` HTTP 응답에는 메시지입니다.  
   
 ### <a name="one-way-addressable-initiator"></a>주소를 지정할 수 있는 단방향 개시자  
   
 #### <a name="binding"></a>바인딩  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]는 각각 한 개의 인바운드 및 아웃바운드 HTTP 채널을 통해 한 개의 시퀀스를 사용하여 단방향 메시지 교환 패턴을 제공합니다. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]는 HTTP 요청을 사용하여 모든 메시지를 전송합니다. 모든 HTTP 응답에는 빈 본문과 HTTP 202 상태 코드가 포함됩니다.  
+ 하나를 통해 한 개의 시퀀스를 사용 하 여 단방향 메시지 교환 패턴을 제공 하는 WCF 인바운드 및 아웃 바운드 HTTP 채널입니다. WCF는 HTTP 요청을 사용 하 여 모든 메시지를 전송 합니다. 모든 HTTP 응답에는 빈 본문과 HTTP 202 상태 코드가 포함됩니다.  
   
 #### <a name="createsequence-exchange"></a>CreateSequence 교환  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 개시자는 HTTP 요청에 `CreateSequence` 요소가 없는 `Offer` 메시지를 전송합니다. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 응답자는 시퀀스를 만들고 HTTP 요청에 `CreateSequenceResponse` 요소가 없는 `Accept` 메시지를 전송합니다.  
+ WCF 초기자 전송는 `CreateSequence` 없이 메시지 `Offer` 는 HTTP 요청에는 요소입니다. WCF 응답자는 시퀀스를 만들고 전송는 `CreateSequenceResponse` 메시지 없이 `Accept` 는 HTTP 요청에 대 한 요소입니다.  
   
 ### <a name="duplex-addressable-initiator"></a>주소를 지정할 수 있는 이중 개시자  
   
 #### <a name="binding"></a>바인딩  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]는 각각 한 개의 인바운드 및 아웃바운드 HTTP 채널을 통해 두 개의 시퀀스를 사용하여 완전히 비동기적인 양방향 메시지 교환 패턴을 제공합니다. 이 메시지 교환 패턴은 제한된 방식으로 `Request/Reply`, `Addressable` 개시자 메시지 교환 패턴과 혼합하여 사용할 수 있습니다. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]는 HTTP 요청을 사용하여 모든 메시지를 전송합니다. 모든 HTTP 응답에는 빈 본문과 HTTP 202 상태 코드가 포함됩니다.  
+ WCF에서 시퀀스를 두 개를 사용 하 여 완전히 비동기적인 양방향 메시지 교환 패턴을 제공 인바운드 및 아웃 바운드 HTTP 채널입니다. 이 메시지 교환 패턴은 제한된 방식으로 `Request/Reply`, `Addressable` 개시자 메시지 교환 패턴과 혼합하여 사용할 수 있습니다. WCF는 HTTP 요청을 사용 하 여 모든 메시지를 전송 합니다. 모든 HTTP 응답에는 빈 본문과 HTTP 202 상태 코드가 포함됩니다.  
   
 #### <a name="createsequence-exchange"></a>CreateSequence 교환  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 개시자는 HTTP 요청에 `CreateSequence` 요소가 있는 `Offer` 메시지를 전송합니다. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 응답자는 `CreateSequence`에 `Offer` 요소가 있는지 확인한 다음 시퀀스를 만들고 `CreateSequenceResponse` 요소가 있는 `Accept` 메시지를 전송합니다.  
+ WCF 초기자 전송는 `CreateSequence` 메시지는 `Offer` 요소는 HTTP 요청에 있습니다. WCF 응답자 되도록는 `CreateSequence` 에 `Offer` 요소를 다음 시퀀스를 만들고 전송는 `CreateSequenceResponse` 메시지는 `Accept` 요소입니다.  
   
 #### <a name="sequence-lifetime"></a>시퀀스 수명  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]는 두 개의 시퀀스를 한 개의 전체 이중 세션으로 처리합니다.  
+ WCF는 개의 전체 이중 세션으로 두 시퀀스를 처리합니다.  
   
- 한 개의 시퀀스를 오류 처리하는 오류를 생성하면 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]는 원격 끝점이 두 시퀀스를 오류 처리한다고 예상합니다. 한 개의 시퀀스를 오류 처리하는 오류를 읽으면 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]는 두 시퀀스를 오류 처리합니다.  
+ 한 개의 시퀀스를 오류 처리 하는 오류를 생성 하면 WCF는 원격 끝점이 두 시퀀스를 오류를 예상 합니다. 한 개의 시퀀스를 오류 처리 하는 오류를 읽을 때 WCF에는 두 시퀀스 오류가 발생 합니다.  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서는 해당 아웃바운드 시퀀스를 닫고 해당 인바운드 시퀀스에서 메시지를 계속 처리할 수 있습니다. 반대로 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서는 인바운드 시퀀스를 닫고 해당 아웃바운드 시퀀스에서 메시지를 계속 보낼 수 있습니다.  
+ WCF 해당 아웃 바운드 시퀀스 닫고 해당 인바운드 시퀀스에서 메시지를 계속 처리 합니다. 반대로, WCF에서는 인바운드 시퀀스를 닫고을 계속 해 서 해당 아웃 바운드 시퀀스에서 메시지를 보낼 수 있습니다.  
   
 ### <a name="request-reply-and-one-way-non-addressable-initiator"></a>요청-회신 및 단방향의 주소를 지정할 수 없는 개시자  
   
 #### <a name="binding"></a>바인딩  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]는 각각 한 개의 인바운드 및 아웃바운드 HTTP 채널을 통해 두 개의 시퀀스를 사용하여 단방향 및 요청-회신 메시지 교환 패턴을 제공합니다. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]는 HTTP 요청을 사용하여 개시자의 모든 메시지를 응답자에게 전송하고 HTTP 응답을 사용하여 응답자의 모든 메시지를 개시자에게 전송합니다.  
+ HTTP 채널을 통해을 시퀀스 하는 두 개를 사용 하 여 요청-회신 메시지 교환 패턴 및 WCF 단방향 제공 합니다. WCF는 HTTP 요청을 사용 하 여 시작자에 게 응답자의 모든 메시지를 응답자 및 HTTP 응답에는 시작자 로부터 모든 메시지를 전송 합니다.  
   
 #### <a name="createsequence-exchange"></a>CreateSequence 교환  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 개시자는 HTTP 요청에 `CreateSequence` 요소가 있는 `Offer` 메시지를 전송하고 HTTP 응답에 `CreateSequenceResponse` 메시지를 예상합니다. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 응답자는 시퀀스를 만들고 HTTP 응답에 `CreateSequenceResponse` 요소가 있는 `Accept` 메시지를 예상합니다.  
+ WCF 시작자에서 전송는 `CreateSequence` 메시지는 `Offer` 요소는 HTTP 요청에 것 이라고 예상는 `CreateSequenceResponse` HTTP 응답에는 메시지입니다. WCF 응답자는 시퀀스를 만들고 전송는 `CreateSequenceResponse` 메시지는 `Accept` HTTP 응답에는 요소입니다.  
   
 #### <a name="one-way-message"></a>단방향 메시지  
- 단방향 메시지 교환을 완료하려면 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 개시자가 HTTP 요청에 요청 시퀀스 메시지를 전송하고 HTTP 응답에 독립 실행형 `SequenceAcknowledgement` 메시지를 받습니다. `SequenceAcknowledgement`는 전송된 메시지를 승인해야 합니다.  
+ 단방향 메시지 교환을 성공적으로 완료 하려면 WCF 초기자 HTTP 요청에 대 한 요청 시퀀스 메시지를 전송 하 고 독립 실행형 수신 `SequenceAcknowledgement` HTTP 응답에는 메시지입니다. `SequenceAcknowledgement`는 전송된 메시지를 승인해야 합니다.  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 응답자는 승인, 오류 또는 빈 본문과 HTTP 202 상태 코드가 포함된 응답으로 요청에 회신할 수 있습니다.  
+ WCF 응답자는 승인, 오류 또는 빈 본문과 HTTP 202 상태 코드가 포함 된 응답으로 요청에 회신할 수 있습니다.  
   
 #### <a name="two-way-messages"></a>양방향 메시지  
- 양방향 메시지 교환 프로토콜을 완료하려면 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 개시자가 HTTP 요청에 대한 요청 시퀀스 메시지를 전송하고 HTTP 응답에 대한 회신 시퀀스 메시지를 받습니다. 응답에 전송된 요청 시퀀스 메시지를 승인하는 `SequenceAcknowledgement`가 있어야 합니다.  
+ 양방향 메시지 교환 프로토콜을 성공적으로 완료 하려면 WCF 개시자는 HTTP 요청에 대 한 요청 시퀀스 메시지를 전송 하 고 HTTP 응답에 대 한 회신 시퀀스 메시지를 받습니다. 응답에 전송된 요청 시퀀스 메시지를 승인하는 `SequenceAcknowledgement`가 있어야 합니다.  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 응답자는 응용 프로그램 회신, 오류 또는 빈 본문과 HTTP 202 상태 코드가 포함된 응답으로 요청에 회신할 수 있습니다.  
+ WCF 응답자는 응용 프로그램 회신, 오류 또는 빈 본문과 HTTP 202 상태 코드가 포함 된 응답으로 요청에 회신할 수 있습니다.  
   
  단방향 메시지가 있고 응용 프로그램이 회신하는 시간 때문에 요청 시퀀스 메시지의 시퀀스 번호와 응답 메시지의 시퀀스 번호는 상관 관계가 없습니다.  
   
 #### <a name="retrying-replies"></a>회신 다시 시도  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]는 양방향 메시지 교환 프로토콜 상관 관계에 HTTP 요청-회신 상관 관계를 사용합니다. 따라서 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 개시자는 HTTP 응답에 `SequenceAcknowledgement`, 응용 프로그램 회신 또는 오류가 포함되지 않고 요청 시퀀스 메시지가 승인되는 경우 요청 시퀀스 메시지 다시 시도를 중지하지 않습니다. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 응답자는 회신이 상호 관련된 요청의 HTTP 응답에 회신을 다시 시도합니다.  
+ WCF는 HTTP 요청-회신 상관 관계는 양방향 메시지 교환 프로토콜 상관 관계를 기반으로 합니다. 이 때문에 WCF 초기자는 중단 되지 요청 시퀀스 메시지가 승인 되는 요청 시퀀스 메시지 다시 시도 그 대신 때 HTTP 응답의 경우 전달 된 `SequenceAcknowledgement`, 응용 프로그램 회신 또는 오류입니다. WCF 응답자는 회신 상관 된 요청의 HTTP 응답에 회신을 다시 시도 합니다.  
   
 #### <a name="closesequence-exchange"></a>CloseSequence 교환  
- 모든 단방향 요청 시퀀스 메시지에 대한 모든 회신 시퀀스 메시지와 승인을 받으면 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 개시자가 HTTP 요청에서 요청 시퀀스에 대한 `CloseSequence` 메시지를 전송하고 HTTP 응답에 `CloseSequenceResponse`를 예상합니다.  
+ 모든 회신 시퀀스 메시지와 모든 단방향 요청 시퀀스 메시지에 대 한 승인을 받으면 WCF 초기자 전송는 `CloseSequence` 는 HTTP 요청에 요청 시퀀스에 대 한 메시지 보내기 및 예상는 `CloseSequenceResponse` HTTP 응답에 있습니다.  
   
- 요청 시퀀스를 닫으면 회신 시퀀스가 암시적으로 닫힙니다. 즉, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 개시자에 `SequenceAcknowledgement` 메시지에 대한 회신 시퀀스의 최종 `CloseSequence`가 포함되고 회신 시퀀스에 `CloseSequence` 교환이 포함되지 않습니다.  
+ 요청 시퀀스를 닫으면 회신 시퀀스가 암시적으로 닫힙니다. 즉, WCF 초기자 포함 회신 시퀀스의 최종 `SequenceAcknowledgement` 에 `CloseSequence` 메시지와 회신 시퀀스에 없는 `CloseSequence` exchange 합니다.  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 응답자는 모든 회신에 승인했는지 확인하고 HTTP 응답에 `CloseSequenceResponse` 메시지를 전송합니다.  
+ WCF 응답자는 승인 했는지 확인 하 고 전송 하는 모든 회신의 `CloseSequenceResponse` HTTP 응답에는 메시지입니다.  
   
 #### <a name="terminatesequence-exchange"></a>TerminateSequence 교환  
- `CloseSequenceResponse` 메시지를 받으면 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 개시자는 HTTP 요청에서 요청 시퀀스에 대한 `TerminateSequence` 메시지를 전송하고 HTTP 응답에 `TerminateSequenceResponse`를 예상합니다.  
+ 수신 후는 `CloseSequenceResponse` 메시지를 WCF 초기자 전송는 `TerminateSequence` 는 HTTP 요청에 요청 시퀀스에 대 한 메시지 보내기 및 예상는 `TerminateSequenceResponse` HTTP 응답에 있습니다.  
   
- `CloseSequence` 교환과 마찬가지로 요청 시퀀스를 종료하면 회신 시퀀스가 암시적으로 종료됩니다. 즉, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 개시자에 `SequenceAcknowledgement` 메시지에 대한 회신 시퀀스의 최종 `TerminateSequence`가 포함되고 회신 시퀀스에 `TerminateSequence` 교환이 포함되지 않습니다.  
+ `CloseSequence` 교환과 마찬가지로 요청 시퀀스를 종료하면 회신 시퀀스가 암시적으로 종료됩니다. 즉, WCF 초기자 포함 회신 시퀀스의 최종 `SequenceAcknowledgement` 에 `TerminateSequence` 메시지와 회신 시퀀스에 없는 `TerminateSequence` exchange 합니다.  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 응답자는 HTTP 응답에 `TerminateSequenceResponse` 메시지를 전송합니다.  
+ WCF 응답자 전송는 `TerminateSequenceResponse` HTTP 응답에는 메시지입니다.  
   
 ### <a name="requestreply-addressable-initiator"></a>요청/회신, 주소를 지정할 수 있는 개시자  
   
 #### <a name="binding"></a>바인딩  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]는 각각 한 개의 인바운드 및 아웃바운드 HTTP 채널을 통해 두 개의 시퀀스를 사용하여 요청-회신 메시지 교환 패턴을 제공합니다. 이 메시지 교환 패턴은 제한된 방식으로 `Duplex, Addressable` 개시자 메시지 교환 패턴과 혼합하여 사용할 수 있습니다. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]는 HTTP 요청을 사용하여 모든 메시지를 전송합니다. 모든 HTTP 응답에는 빈 본문과 HTTP 202 상태 코드가 포함됩니다.  
+ WCF에서 시퀀스를 두 개를 사용 하 여 요청-회신 메시지 교환 패턴을 제공 인바운드 및 아웃 바운드 HTTP 채널입니다. 이 메시지 교환 패턴은 제한된 방식으로 `Duplex, Addressable` 개시자 메시지 교환 패턴과 혼합하여 사용할 수 있습니다. WCF는 HTTP 요청을 사용 하 여 모든 메시지를 전송 합니다. 모든 HTTP 응답에는 빈 본문과 HTTP 202 상태 코드가 포함됩니다.  
   
 #### <a name="createsequence-exchange"></a>CreateSequence 교환  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 개시자는 HTTP 요청에 `CreateSequence` 요소가 있는 `Offer` 메시지를 전송합니다. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 응답자는 `CreateSequence`에 `Offer` 요소가 있는지 확인한 다음 시퀀스를 만들고 `CreateSequenceResponse` 요소가 있는 `Accept` 메시지를 전송합니다.  
+ WCF 초기자 전송는 `CreateSequence` 메시지는 `Offer` 요소는 HTTP 요청에 있습니다. WCF 응답자는 `CreateSequence` 에 `Offer` 요소 다음 시퀀스를 만들고 전송는 `CreateSequenceResponse` 메시지는 `Accept` 요소입니다.  
   
 #### <a name="requestreply-correlation"></a>요청/회신 상관 관계  
  다음 사항은 모든 상호 관련된 요청 및 회신에 적용됩니다.  
   
--   [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]는 모든 응용 프로그램 요청 메시지에 `ReplyTo` 끝점 참조 및 `MessageId`가 있는지 확인합니다.  
+-   WCF 하면 모든 응용 프로그램 요청 메시지 약은 `ReplyTo` 끝점 참조 및 `MessageId`합니다.  
   
--   [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]는 로컬 끝점 참조를 각 응용 프로그램 요청 메시지의 `ReplyTo`로 적용합니다. 로컬 끝점 참조는 개시자에 대한 `CreateSequence` 메시지의 `ReplyTo`와 응답자에 대한 `CreateSequence` 메시지의 `To`입니다.  
+-   각 응용 프로그램 요청 메시지와 로컬 끝점 참조를 적용 하는 WCF `ReplyTo`합니다. 로컬 끝점 참조는 개시자에 대한 `CreateSequence` 메시지의 `ReplyTo`와 응답자에 대한 `CreateSequence` 메시지의 `To`입니다.  
   
--   [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]는 들어오는 요청 메시지에 `MessageId` 및 `ReplyTo`가 있는지 확인합니다.  
+-   WCF를 사용 하면 해당 들어오는 요청 메시지는 `MessageId` 및 `ReplyTo`합니다.  
   
--   [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]는 모든 응용 프로그램 요청 메시지의 `ReplyTo` 끝점 참조 URI가 앞에서 정의된 대로 로컬 끝점 참조와 일치하는지 확인합니다.  
+-   WCF를 사용 하면는 `ReplyTo` 앞에서 정의한 끝점 참조 URI 모든 응용 프로그램 요청 메시지의 로컬 끝점 참조와 일치 합니다.  
   
--   [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]는 모든 회신에 올바른 `RelatesTo` 및 `To` 헤더와 `wsa` 요청/회신 상관 관계 규칙이 차례로 있는지 확인합니다.
+-   WCF를 사용 하면 모든 회신 해야 올바른 `RelatesTo` 및 `To` 헤더 `wsa` 요청/회신 상관 관계 규칙이 있습니다.

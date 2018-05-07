@@ -1,32 +1,20 @@
 ---
-title: "방법: Popup에 애니메이션 효과 주기"
-ms.custom: 
+title: '방법: Popup에 애니메이션 효과 주기'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - Popup control [WPF], animating
 - animation [WPF], Popup controls
 ms.assetid: acaa2a0a-6137-4efd-9cd1-75ece222e390
-caps.latest.revision: "9"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: dd79b29849510f40034dd0e2f1d9668c9b742929
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 05b84eea7fe983340ebb8c5cdb20ff39eb2f0858
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-animate-a-popup"></a>방법: Popup에 애니메이션 효과 주기
 애니메이션 효과 적용 하는 두 가지를 보여 주는이 예제는 <xref:System.Windows.Controls.Primitives.Popup> 제어 합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 예에서는 <xref:System.Windows.Controls.Primitives.PopupAnimation> 속성의 값을 <xref:System.Windows.Controls.Primitives.PopupAnimation.Slide>,으로 구독이 <xref:System.Windows.Controls.Primitives.Popup> "슬라이드 기능에" 있으면 오류가 발생 합니다.  
   
  회전 하기 위해는 <xref:System.Windows.Controls.Primitives.Popup>를 지정 하는이 예제는 <xref:System.Windows.Media.RotateTransform> 에 <xref:System.Windows.UIElement.RenderTransform%2A> 속성에는 <xref:System.Windows.Controls.Canvas>의 자식 요소인는 <xref:System.Windows.Controls.Primitives.Popup>합니다.  

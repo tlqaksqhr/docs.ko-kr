@@ -2,11 +2,11 @@
 title: '&lt;webHttpBinding&gt;'
 ms.date: 03/30/2017
 ms.assetid: 84179d77-825d-44b9-895a-ab08e7aa044d
-ms.openlocfilehash: abc08f81ac05aa42ff7247edf662f8dd4482fd4a
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
-ms.translationtype: HT
+ms.openlocfilehash: 3a5a0844da401607b2049069e7195fa996c62fba
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ltwebhttpbindinggt"></a>&lt;webHttpBinding&gt;
 SOAP 메시지 대신 HTTP 요청에 응답 하는 Windows Communication Foundation (WCF) 웹 서비스에 대 한 끝점을 구성 하는 데 사용 되는 바인딩 요소를 정의 합니다.  
@@ -86,9 +86,9 @@ SOAP 메시지 대신 HTTP 요청에 응답 하는 Windows Communication Foundat
 |[\<bindings>](../../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)|이 요소는 표준 및 사용자 지정 바인딩의 컬렉션을 보유합니다.|  
   
 ## <a name="remarks"></a>설명  
- 개발자는 [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 웹 프로그래밍 모델을 사용하여 SOAP 기반 메시징 대신 "POX(Plain Old XML)" 스타일 메시지를 사용하는 HTTP 요청을 통해 [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 웹 서비스를 노출할 수 있습니다. HTTP 요청을 사용 하 여 서비스와 통신 하는 클라이언트에 대 한 서비스의 끝점으로 구성 해야 합니다는 [ \<webHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/webhttpbinding.md) 있는 \<WebHttpBehavior >에 연결 합니다.  
+ WCF 웹 프로그래밍 모델에는 개발자가 "plain old XML"을 사용 하는 HTTP 요청을 통해 WCF 웹 서비스를 노출할 수 있도록 하는 대신 SOAP 기반 메시징 (POX) 스타일입니다. HTTP 요청을 사용 하 여 서비스와 통신 하는 클라이언트에 대 한 서비스의 끝점으로 구성 해야 합니다는 [ \<webHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/webhttpbinding.md) 있는 \<WebHttpBehavior >에 연결 합니다.  
   
- 배포 및 ASP.AJAX 통합에 대한 [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)]의 지원은 둘 다 웹 프로그래밍 모델 위에 구축됩니다. 모델에 대 한 자세한 내용은 참조 하십시오. [WCF 웹 HTTP 프로그래밍 모델](../../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)합니다.  
+ 배포 및 ASP에 대 한 WCF에서 지원 합니다. AJAX 통합 둘 다 웹 프로그래밍 모델 위에 구축 됩니다. 모델에 대 한 자세한 내용은 참조 하십시오. [WCF 웹 HTTP 프로그래밍 모델](../../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  <xref:System.ServiceModel.WebHttpBinding>  

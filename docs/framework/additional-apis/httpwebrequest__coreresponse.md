@@ -1,9 +1,6 @@
 ---
 title: HttpWebRequest._CoreResponse Field
 ms.date: 01/29/2018
-ms.prod: .net-framework
-ms.technology: 
-ms.topic: reference
 topic_type:
 - apiref
 api_name:
@@ -13,19 +10,15 @@ api_location:
 api_type:
 - Assembly
 author: stevewhims
-ms.author: stwhi
-manager: markl
-ms.workload:
-- dotnet
-ms.openlocfilehash: e6493747cf6c894357223f011da026770778e26c
-ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
+ms.openlocfilehash: 3627c9bf0d72ccec3a0d6d9c7c89b62f83dcd4b4
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="httpwebrequestcoreresponse-field"></a>HttpWebRequest 합니다. \_CoreResponse 필드
 
-`HttpWebRequest._CoreResponse`개체 (중 하나는 [CoreResponseData](coreresponsedata.md) 또는 <xref:System.Exception>) HTTP 응답을 구문 분석의 결과가 들어 있는입니다.
+`HttpWebRequest._CoreResponse` 개체 (중 하나는 [CoreResponseData](coreresponsedata.md) 또는 <xref:System.Exception>) HTTP 응답을 구문 분석의 결과가 들어 있는입니다.
 
 ## <a name="syntax"></a>구문
   
@@ -40,7 +33,7 @@ private object _CoreResponse
 
 ## <a name="requirements"></a>요구 사항
 
-**Namespace:**<xref:System.Net>
+**Namespace:** <xref:System.Net>
 
 **어셈블리:** 시스템 (System.dll)
 

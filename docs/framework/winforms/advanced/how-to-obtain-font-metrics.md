@@ -1,13 +1,6 @@
 ---
-title: "방법: 글꼴 메트릭 얻기"
-ms.custom: 
+title: '방법: 글꼴 메트릭 얻기'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -15,16 +8,11 @@ helpviewer_keywords:
 - fonts [Windows Forms], obtaining metrics
 - font metrics [Windows Forms], obtaining
 ms.assetid: ff7c0616-67f7-4fa2-84ee-b8d642f2b09b
-caps.latest.revision: "13"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 16f1126cc75b75ae98298f5d1c58c78ff30edbb6
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 3cc5ee303efe6c703a61eef6c7448979b487f6bb
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-obtain-font-metrics"></a>방법: 글꼴 메트릭 얻기
 <xref:System.Drawing.FontFamily> 클래스는 특정 제품군/스타일 조합에 대 한 다양 한 메트릭을 검색 하는 다음 메서드를 제공 합니다.  
@@ -43,7 +31,7 @@ ms.lasthandoff: 12/22/2017
   
  ![글꼴 텍스트](../../../../docs/framework/winforms/advanced/media/fontstext7a.png "fontstext7A")  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 예제에서는 Arial 글꼴 패밀리의 일반 스타일에 대 한 메트릭을 표시합니다. 코드는 또한 만듭니다는 <xref:System.Drawing.Font> 16 픽셀 크기 및 표시 해당 특정 픽셀 단위로 메트릭 포함 된 개체 (Arial 제품군에 기반) <xref:System.Drawing.Font> 개체입니다.  
   
  다음 그림에서는 예제 코드의 출력을 보여 줍니다.  

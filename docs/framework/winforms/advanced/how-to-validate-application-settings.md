@@ -1,13 +1,6 @@
 ---
-title: "방법: 응용 프로그램 설정 유효성 검사"
-ms.custom: 
+title: '방법: 응용 프로그램 설정 유효성 검사'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -16,16 +9,11 @@ helpviewer_keywords:
 - application settings [Windows Forms], Windows Forms
 - application settings [Windows Forms], validating
 ms.assetid: 9f145ada-4267-436a-aa4c-c4dcffd0afb7
-caps.latest.revision: "17"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: e12620a5079efaba4faa9101253a3a586965b7e5
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: aa8877150d654bf9659dbb34b91436c0ee9ff8b8
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-validate-application-settings"></a>방법: 응용 프로그램 설정 유효성 검사
 이 항목에서는 응용 프로그램 설정이 유지되기 전에 유효성을 검사하는 방법을 설명합니다.  
@@ -69,11 +57,11 @@ ms.lasthandoff: 12/22/2017
         MySettings.Default   
         ```  
   
-         또는  
+         -또는-  
   
     -   사용자가 Visual Basic 개발자이며 프로젝트 디자이너를 사용하여 응용 프로그램 설정을 만든 경우 [My.Settings 개체](~/docs/visual-basic/language-reference/objects/my-settings-object.md)를 사용하여 설정을 검색할 수 있습니다.  
   
-         또는  
+         -또는-  
   
     -   파생 하 여 설정을 만든 경우 <xref:System.Configuration.ApplicationSettingsBase> 를 직접 클래스를 수동으로 인스턴스화해야 해야 합니다.  
   
@@ -91,7 +79,7 @@ ms.lasthandoff: 12/22/2017
   
 1.  폼 이나 컨트롤의 C# 개발자를 모르는 경우 `Load` 이벤트를 이벤트 처리기에 대 한 추가 <xref:System.Configuration.ApplicationSettingsBase.SettingChanging> 이벤트입니다.  
   
-     또는  
+     -또는-  
   
      사용자가 Visual Basic 개발자인 경우 `WithEvents` 키워드를 사용하여 `Settings` 변수를 선언해야 합니다.  
   

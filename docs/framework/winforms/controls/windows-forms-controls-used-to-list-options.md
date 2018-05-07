@@ -1,27 +1,15 @@
 ---
-title: "옵션 목록 표시에 사용하는 Windows Forms 컨트롤"
-ms.custom: 
+title: 옵션 목록 표시에 사용하는 Windows Forms 컨트롤
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - Windows Forms controls, listing options
 - option lists in Windows Forms
 ms.assetid: 5bc064c7-bc1f-4b62-8f4b-252f864b118e
-caps.latest.revision: "10"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: f43e8982dc9caaa57ffb6865bf9988243f42fa8b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 4f4dded135a2239d2c10fde71e068ccc03c97707
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="windows-forms-controls-used-to-list-options"></a>옵션 목록 표시에 사용하는 Windows Forms 컨트롤
 옵션을 선택 목록과 함께 사용자에 게 제공 하려면 Windows Form에 다양 한 컨트롤을 추가할 수 있습니다. 따라 양을 제한 하려면 사용자의 입력으로 추가할 수 있습니다는 <xref:System.Windows.Forms.ListBox> 컨트롤은 <xref:System.Windows.Forms.ComboBox> 컨트롤 또는 <xref:System.Windows.Forms.CheckedListBox> 제어 합니다. 요구에 적합 한 최상의 컨트롤을 확인 하려면 다음 링크를 사용 합니다.  

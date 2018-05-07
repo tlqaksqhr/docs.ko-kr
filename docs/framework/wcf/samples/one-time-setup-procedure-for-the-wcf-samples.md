@@ -1,29 +1,15 @@
 ---
 title: Windows Communication Foundation 샘플의 일회 설치 절차
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: a5848ffd-3eb5-432d-812e-bd948ccb6bca
-caps.latest.revision: 83
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: acb89c8c1819024ebdb77720654ab7280333e456
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: e3bf4d70217a8231fe4ddc5b9a15afdfe8f0522e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="one-time-setup-procedure-for-the-windows-communication-foundation-samples"></a>Windows Communication Foundation 샘플의 일회 설치 절차
-대부분의 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 샘플은 IIS(인터넷 정보 서비스)에서 호스팅되고 공용 가상 디렉터리에서 실행됩니다. 이 일회 설치 절차에서는 디스크; 폴더를 만듭니다. 명명 된 iis 가상 디렉터리 추가 **ServiceModelSamples**합니다.  
+대부분의 Windows Communication Foundation (WCF) 샘플 인터넷 정보 서비스 (IIS)에서 호스팅되고 공용 가상 디렉터리에서 실행 됩니다. 이 일회 설치 절차에서는 디스크; 폴더를 만듭니다. 명명 된 iis 가상 디렉터리 추가 **ServiceModelSamples**합니다.  
   
  **ServiceModelSamples** IIS에서 호스팅되는 서비스를 사용 하는 모든 샘플을 빌드 및 실행 가상 디렉터리를 사용 합니다. 이 디렉터리는 샘플을 실행하는 데 필요한 유일한 가상 디렉터리입니다. 샘플을 빌드하면 이 가상 디렉터리에서 이전에 배포된 서비스가 대체되고 가장 최근에 빌드된 샘플만 배포되어 이 가상 디렉터리에서 사용할 수 있게 됩니다.  
   

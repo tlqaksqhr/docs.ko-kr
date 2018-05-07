@@ -1,27 +1,15 @@
 ---
-title: "방법: 검색 프록시에 등록할 검색 가능한 서비스 구현"
-ms.custom: 
+title: '방법: 검색 프록시에 등록할 검색 가능한 서비스 구현'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: eb275bc1-535b-44c8-b9f3-0b75e9aa473b
-caps.latest.revision: "14"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ee99c7c74f0e1e2d287802d46cf4b716cfa3b76d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: e0ceada8f65b98676d160ba096c63bf946a178cf
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-implement-a-discoverable-service-that-registers-with-the-discovery-proxy"></a>방법: 검색 프록시에 등록할 검색 가능한 서비스 구현
-이 항목은 검색 프록시를 구현하는 방법에 대해 설명하는 네 항목 중 두 번째 항목입니다. 이전 항목에서 [하는 방법: 검색 프록시를 구현](../../../../docs/framework/wcf/feature-details/how-to-implement-a-discovery-proxy.md), 검색 프록시를 구현 합니다. 이 항목에서는 검색 프록시에 알림 메시지([!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 및 `Hello`)를 보내는 `Bye` 서비스를 만듭니다. 이러한 알림 메시지는 서비스가 검색 프록시에 해당 서비스를 등록하거나 등록 취소하는 데 사용됩니다.  
+이 항목은 검색 프록시를 구현하는 방법에 대해 설명하는 네 항목 중 두 번째 항목입니다. 이전 항목에서 [하는 방법: 검색 프록시를 구현](../../../../docs/framework/wcf/feature-details/how-to-implement-a-discovery-proxy.md), 검색 프록시를 구현 합니다. 이 항목에서는 알림 메시지를 보내는 WCF 서비스를 만들 (`Hello` 및 `Bye`) 검색 프록시에 프로그램이 등록 및 검색 프록시에 자체 등록을 취소 합니다.  
   
 ### <a name="to-define-the-service-contract"></a>서비스 계약을 정의하려면  
   
@@ -167,7 +155,7 @@ ms.lasthandoff: 12/22/2017
   
  검색 가능한 서비스의 구현을 완료했습니다. 계속 진행 하 [하는 방법: 검색 프록시를 사용 하 여 서비스를 검색 하는 클라이언트 응용 프로그램을 구현](../../../../docs/framework/wcf/feature-details/client-app-discovery-proxy-to-find-a-service.md)합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음은 이 항목에서 사용되는 전체 코드 목록입니다.  
   
 ```csharp  

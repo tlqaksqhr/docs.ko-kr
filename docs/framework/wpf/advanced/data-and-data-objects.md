@@ -1,13 +1,6 @@
 ---
-title: "데이터 및 데이터 개체"
-ms.custom: 
+title: 데이터 및 데이터 개체
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -16,16 +9,11 @@ helpviewer_keywords:
 - DataFormats class [WPF]
 - DataObject class [WPF]
 ms.assetid: 5967d557-1867-420f-a524-ae3af78402da
-caps.latest.revision: "5"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: cb2354b61a0433981675ba55978f31937212cabc
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ff596dc7428c9d105a27999f216d33e735e35a22
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="data-and-data-objects"></a>데이터 및 데이터 개체
 끌어서 놓기 작업의 일부로 전송 되는 데이터는 데이터 개체에 저장 됩니다.  개념적으로, 데이터 개체를 하나 이상의 다음 쌍으로 구성 됩니다.  
@@ -47,7 +35,7 @@ ms.lasthandoff: 12/22/2017
 |<xref:System.Windows.IDataObject.GetFormats%2A>|이 데이터 개체의 데이터에 저장 되거나으로 변환 될 수 있는 형식 목록을 반환 합니다.|  
 |<xref:System.Windows.IDataObject.SetData%2A>|이 데이터 개체에 지정된 된 데이터를 저장 합니다.|  
   
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]기본 구현을 제공 <xref:System.Windows.IDataObject> 에 <xref:System.Windows.DataObject> 클래스입니다. 재고 <xref:System.Windows.DataObject> 클래스는 많은 일반적인 데이터 전송 시나리오에 적합 합니다.  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 기본 구현을 제공 <xref:System.Windows.IDataObject> 에 <xref:System.Windows.DataObject> 클래스입니다. 재고 <xref:System.Windows.DataObject> 클래스는 많은 일반적인 데이터 전송 시나리오에 적합 합니다.  
   
  비트맵, CSV, 파일, HTML, RTF, 문자열, 텍스트, 오디오 등의 몇 가지 미리 정의 된 형식으로 있습니다. 와 함께 제공 되는 미리 정의 된 데이터 형식에 대 한 내용은 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], 참조는 <xref:System.Windows.DataFormats> 클래스 참조 항목입니다.  
   
@@ -86,7 +74,7 @@ ms.lasthandoff: 12/22/2017
  사용 가능한 데이터 형식에 대 한 데이터 개체를 쿼리 하는 코드의 더 많은 예제를 참조 하십시오. [데이터 개체의 데이터 형식 나열](../../../../docs/framework/wpf/advanced/how-to-list-the-data-formats-in-a-data-object.md)합니다.  특정 데이터 형식의 현재 상태에 대 한 데이터 개체를 쿼리하고의 예 참조 [데이터 형식이 있는지 확인 합니다. 데이터 개체에](../../../../docs/framework/wpf/advanced/how-to-determine-if-a-data-format-is-present-in-a-data-object.md)합니다.  
   
 ### <a name="retrieving-data-from-a-data-object"></a>데이터 개체에서 데이터 검색  
- 중 하나를 호출 하면 됩니다 특정 형식의 데이터 개체에서 데이터를 검색 하는 <xref:System.Windows.DataObject.GetData%2A> 메서드 및 원하는 데이터 형식을 지정 합니다.  중 하나는 <xref:System.Windows.DataObject.GetDataPresent%2A> 특정 데이터 형식의 존재를 확인 하려면 메서드를 사용할 수 있습니다.  <xref:System.Windows.DataObject.GetData%2A>에 데이터를 반환는 <xref:System.Object>; 데이터 형식에 따라이 개체는 특정 형식의 컨테이너도 캐스팅 될 수 있습니다.  
+ 중 하나를 호출 하면 됩니다 특정 형식의 데이터 개체에서 데이터를 검색 하는 <xref:System.Windows.DataObject.GetData%2A> 메서드 및 원하는 데이터 형식을 지정 합니다.  중 하나는 <xref:System.Windows.DataObject.GetDataPresent%2A> 특정 데이터 형식의 존재를 확인 하려면 메서드를 사용할 수 있습니다.  <xref:System.Windows.DataObject.GetData%2A> 에 데이터를 반환는 <xref:System.Object>; 데이터 형식에 따라이 개체는 특정 형식의 컨테이너도 캐스팅 될 수 있습니다.  
   
  다음 예제 코드를 사용 하 여는 <xref:System.Windows.DataObject.GetDataPresent%28System.String%29> 오버 로드는 지정 된 데이터 형식을 사용할 수 있는지 확인 하려면 (기본 또는 자동 변환을 통해). 이 예제에서는 지정 된 형식이 있는 경우 사용 하 여 데이터를 검색 된 <xref:System.Windows.DataObject.GetData%28System.String%29> 메서드.  
   

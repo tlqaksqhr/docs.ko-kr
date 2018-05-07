@@ -1,26 +1,17 @@
 ---
 title: 이름 &#39; &lt;이름&gt; &#39; 선언 되지 않았습니다
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - bc30451
 - vbc30451
 helpviewer_keywords:
 - BC30451
 ms.assetid: 765f099b-e21e-47c6-a906-a065444e56b3
-caps.latest.revision: 11
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 26245952a2dc5341dedba6c497c47773b882b49b
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: e17017e84720a2581abc5115338352aacc02d473
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="name-39ltnamegt39-is-not-declared"></a>이름 &#39; &lt;이름&gt; &#39; 선언 되지 않았습니다
 문에서 프로그래밍 요소를 참조 하지만 컴파일러에서 정확한 해당 이름 가진 요소를 찾을 수 없습니다.  

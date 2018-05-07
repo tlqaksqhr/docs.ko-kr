@@ -1,29 +1,15 @@
 ---
 title: 도구
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 89c907f9-313f-408c-992a-631f1eadf1da
-caps.latest.revision: ''
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 5badbb9142261fc1dc6c2b2d5af3c89c7af776b6
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: 6c4ada74c2fc6aba84eb1fe46f4d7cdee9978d13
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tools"></a>도구
-이 항목에서는 [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] 도구에 의해 생성된 모든 예외를 보여 줍니다.  
+이 항목에서는 Windows Communication Foundation (WCF) 도구에서 생성 된 모든 예외를 보여 줍니다.  
   
 ## <a name="exception-list"></a>예외 목록  
   
@@ -88,7 +74,7 @@ ms.lasthandoff: 03/26/2018
 |ErrInputConflictsWithMode|지정된 옵션에서 읽은 입력이 다른 옵션과 일관되지 않습니다.|  
 |ErrDuplicateValuePassedToTypeArg|지정된 값이 지정된 옵션에 여러 번 전달되었습니다. 각 형식은 한 번만 지정할 수 있습니다.|  
 |ErrInputEPRFileParseError|지정된 XML에서 끝점 참조를 읽을 수 없습니다. XML이 유효하고 형식이 올바른지 확인하십시오.|  
-|ErrCouldNotCreateCodeProvider|/{1} 인수에 전달된 지정된 값에 대해 코드 공급자를 만들 수 없습니다. 코드 공급자를 올바르게 설치하고 구성했는지 확인하십시오.|  
+|ErrCouldNotCreateCodeProvider|에 전달 된 지정된 된 값에 대해 코드 공급자를 만들 수 없습니다는 /{1} 인수입니다. 코드 공급자를 올바르게 설치하고 구성했는지 확인하십시오.|  
 |ErrPathTooLongDirOnly|지정된 결과 경로가 너무 깁니다. 지정된 인수를 검토합니다.|  
 |HelpDataContractSerializer|serialization 및 deserialization을 위해 DataContract Serializer를 사용하는 데이터 형식을 생성합니다.|  
 |ErrUnableToExportEndpoint|어셈블리에 대해 로드된 구성 파일에 있는 지정된 서비스 유형에서 지정된 네임스페이스의 지정된 끝점 이름을 내보내는 동안 오류가 발생했습니다.|  
@@ -155,7 +141,7 @@ ms.lasthandoff: 03/26/2018
 |ErrCodegenError|지정한 언어로 코드를 생성하는 동안 오류가 발생했습니다.<br /><br /> 이 언어에서 생성 중인 코드 요소 중 일부만 지원합니다. 다른 언어를 사용해야 합니다.|  
 |ErrInputWsdlParseError|지정된 XML을 읽는 동안 WSDL 구문 분석 오류가 발생했습니다. XML이 유효하고 형식이 올바른지 확인하십시오.|  
 |ErrCouldNotCreateInstance|지정된 인수에 전달된 지정된 형식의 인스턴스를 만들 수 없습니다.|  
-|ParametersNamespace|\<string,string>|  
+|ParametersNamespace|\<문자열, 문자열 >|  
 |HelpNostdlib|표준 라이브러리(기본적으로 mscorlib.dll 및 system.servicemodel.dll 참조)를 참조하지 않습니다.|  
 |WrnCannotLoadConfigFileForExport|지정된 위치에서 로드된 구성 파일을 처리하는 동안 오류가 발생했습니다. 이 구성 파일에 정의되어 있는 서비스를 로드할 수 없습니다.|  
 |WrnUnableToLoadContractForExport|계약 형식을 로드하는 동안 오류가 발생했습니다. 지정된 이 형식을 내보낼 수 없습니다.|

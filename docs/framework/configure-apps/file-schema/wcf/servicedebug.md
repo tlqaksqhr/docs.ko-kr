@@ -2,11 +2,11 @@
 title: '&lt;serviceDebug&gt;'
 ms.date: 03/30/2017
 ms.assetid: 6d7ea986-f232-49fe-842c-f934d9966889
-ms.openlocfilehash: 1e9a8a310a2b3154568b20ea225faead1c71d64f
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
-ms.translationtype: HT
+ms.openlocfilehash: 0a0c6a45b6103d533a87a921e6e428bf30d81b20
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ltservicedebuggt"></a>&lt;serviceDebug&gt;
 Windows Communication Foundation (WCF) 서비스에 대 한 디버깅 및 도움말 정보 기능을 지정합니다.  
@@ -38,11 +38,11 @@ Windows Communication Foundation (WCF) 서비스에 대 한 디버깅 및 도움
 |---------------|-----------------|  
 |httpHelpPageBinding|HTTP를 사용하여 서비스 도움말 페이지에 액세스할 때 사용할 바인딩 형식을 지정하는 문자열 값입니다.<br /><br /> <xref:System.ServiceModel.Channels.IReplyChannel?displayProperty=nameWithType>을 지원하는 내부 바인딩 요소가 있는 바인딩만 지원됩니다. 또한 바인딩의 <xref:System.ServiceModel.Channels.MessageVersion?displayProperty=nameWithType> 속성은 <xref:System.ServiceModel.Channels.MessageVersion.None?displayProperty=nameWithType>이어야 합니다.|  
 |httpHelpPageBindingConfiguration|이 바인딩의 추가 구성 정보를 참조하는 `httpHelpPageBinding` 특성에 지정된 바인딩의 이름을 지정하는 문자열입니다. 이와 동일한 이름이 `<bindings>` 섹션에서 정의되어야 합니다.|  
-|httpHelpPageEnabled|[!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)]가 `httpHelpPageUrl` 특성으로 지정된 주소에 HTML 도움말 페이지를 게시할지 여부를 제어하는 부울 값입니다. 기본값은 `true`입니다.<br /><br /> HTML 브라우저에 HTML 도움말 페이지가 게시되지 않게 하려면 이 속성을 `false`로 설정합니다.<br /><br /> `httpHelpPageUrl` 특성으로 지정된 위치에 HTML 도움말 페이지가 게시되게 하려면 이 특성을 `true`로 설정해야 합니다 또한 다음 조건 중 하나도 충족해야 합니다.<br /><br /> - `httpHelpPageUrl` 특성은 HTTP 프로토콜 체계를 지 원하는 절대 주소입니다.<br />-HTTP 프로토콜 체계를 지 원하는 서비스에 대 한 기본 주소가입니다.<br /><br /> HTTP 프로토콜 체계를 지원하지 않는 절대 주소가 `httpHelpPageUrl` 특성에 지정되면 예외가 throw되지만, 앞의 조건을 모두 충족하지 않는 시나리오에서는 예외가 발생하지 않고 HTML 도움말 페이지도 생성되지 않습니다.|  
+|httpHelpPageEnabled|WCF로 지정 된 주소에 HTML 도움말 페이지를 게시할지 여부를 제어 하는 부울 값은 `httpHelpPageUrl` 특성입니다. 기본값은 `true`입니다.<br /><br /> HTML 브라우저에 HTML 도움말 페이지가 게시되지 않게 하려면 이 속성을 `false`로 설정합니다.<br /><br /> `httpHelpPageUrl` 특성으로 지정된 위치에 HTML 도움말 페이지가 게시되게 하려면 이 특성을 `true`로 설정해야 합니다 또한 다음 조건 중 하나도 충족해야 합니다.<br /><br /> - `httpHelpPageUrl` 특성은 HTTP 프로토콜 체계를 지 원하는 절대 주소입니다.<br />-HTTP 프로토콜 체계를 지 원하는 서비스에 대 한 기본 주소가입니다.<br /><br /> HTTP 프로토콜 체계를 지원하지 않는 절대 주소가 `httpHelpPageUrl` 특성에 지정되면 예외가 throw되지만, 앞의 조건을 모두 충족하지 않는 시나리오에서는 예외가 발생하지 않고 HTML 도움말 페이지도 생성되지 않습니다.|  
 |httpHelpPageUrl|HTML 브라우저를 사용하여 끝점을 볼 때 사용자에게 표시되는 사용자 지정 HTML 도움말 파일의 상대 또는 절대 HTTP 기반 URL을 지정하는 URI입니다.<br /><br /> 이 특성을 사용하면 HTML 브라우저 등의 HTTP/Get 요청으로부터 반환되는 사용자 지정 HTML 도움말 파일을 사용하도록 설정할 수 있습니다. HTML 도움말 파일의 위치는 다음과 같이 확인됩니다.<br /><br /> 1.  이 특성의 값이 상대 주소이면 HTML 도움말 파일의 위치는 HTTP 요청을 지원하는 서비스 기준 주소에 이 속성 값을 추가한 것입니다.<br />2.  이 특성의 값이 절대 주소이고 HTTP 요청을 지원할 경우 HTML 도움말 파일의 위치는 이 속성의 값입니다.<br />3.  이 특성의 값이 절대 주소이지만 HTTP 요청을 지원하지 않으면 예외가 throw됩니다.<br /><br /> 이 특성은 경우에만 유효는 `httpHelpPageEnabled` 특성은 `true`합니다.|  
 |httpsHelpPageBinding|HTTPS를 사용하여 서비스 도움말 페이지에 액세스할 때 사용할 바인딩 형식을 지정하는 문자열 값입니다.<br /><br /> <xref:System.ServiceModel.Channels.IReplyChannel>을 지원하는 내부 바인딩 요소가 있는 바인딩만 지원됩니다. 또한 바인딩의 <xref:System.ServiceModel.Channels.MessageVersion?displayProperty=nameWithType> 속성은 <xref:System.ServiceModel.Channels.MessageVersion.None?displayProperty=nameWithType>이어야 합니다.|  
 |httpsHelpPageBindingConfiguration|이 바인딩의 추가 구성 정보를 참조하는 `httpsHelpPageBinding` 특성에 지정된 바인딩의 이름을 지정하는 문자열입니다. 이와 동일한 이름이 `<bindings>` 섹션에서 정의되어야 합니다.|  
-|httpsHelpPageEnabled|[!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)]가 `httpsHelpPageUrl` 특성으로 지정된 주소에 HTML 도움말 페이지를 게시할지 여부를 제어하는 부울 값입니다. 기본값은 `true`입니다.<br /><br /> HTML 브라우저에 HTML 도움말 페이지가 게시되지 않게 하려면 이 속성을 `false`로 설정합니다.<br /><br /> `httpsHelpPageUrl` 특성으로 지정된 위치에 HTML 도움말 페이지가 게시되게 하려면 이 특성을 `true`로 설정해야 합니다 또한 다음 조건 중 하나도 충족해야 합니다.<br /><br /> - `httpsHelpPageUrl` 특성은 HTTPS 프로토콜 체계를 지 원하는 절대 주소입니다.<br />-는 HTTPS 프로토콜 체계를 지 원하는 서비스에 대 한 기본 주소입니다.<br /><br /> HTTPS 프로토콜 체계를 지원하지 않는 절대 주소가 `httpsHelpPageUrl` 특성에 지정되면 예외가 throw되지만, 앞의 조건을 모두 충족하지 않는 시나리오에서는 예외가 발생하지 않고 HTML 도움말 페이지도 생성되지 않습니다.|  
+|httpsHelpPageEnabled|WCF로 지정 된 주소에 HTML 도움말 페이지를 게시할지 여부를 제어 하는 부울 값은 `httpsHelpPageUrl` 특성입니다. 기본값은 `true`입니다.<br /><br /> HTML 브라우저에 HTML 도움말 페이지가 게시되지 않게 하려면 이 속성을 `false`로 설정합니다.<br /><br /> `httpsHelpPageUrl` 특성으로 지정된 위치에 HTML 도움말 페이지가 게시되게 하려면 이 특성을 `true`로 설정해야 합니다 또한 다음 조건 중 하나도 충족해야 합니다.<br /><br /> - `httpsHelpPageUrl` 특성은 HTTPS 프로토콜 체계를 지 원하는 절대 주소입니다.<br />-는 HTTPS 프로토콜 체계를 지 원하는 서비스에 대 한 기본 주소입니다.<br /><br /> HTTPS 프로토콜 체계를 지원하지 않는 절대 주소가 `httpsHelpPageUrl` 특성에 지정되면 예외가 throw되지만, 앞의 조건을 모두 충족하지 않는 시나리오에서는 예외가 발생하지 않고 HTML 도움말 페이지도 생성되지 않습니다.|  
 |httpsHelpPageUrl|HTML 브라우저를 사용하여 끝점을 볼 때 사용자에게 표시되는 사용자 지정 HTML 도움말 파일의 상대 또는 절대 HTTPS 기반 URL을 지정하는 URI입니다.<br /><br /> 이 특성을 사용하면 HTML 브라우저 등의 HTTPS/Get 요청으로부터 반환되는 사용자 지정 HTML 도움말 파일을 사용하도록 설정할 수 있습니다. HTML 도움말 파일의 위치는 다음과 같이 확인됩니다.<br /><br /> -이 속성의 값이 상대 주소 이면 HTML 도움말 파일의 위치 인지 HTTPS 요청을 지 원하는 서비스 기본 주소 값이 속성 값을 추가한 것입니다.<br />-있으면이 속성의 값이 절대 주소가 고 HTTPS 요청을 지 원하는, HTML 도움말 파일의 위치가이 속성의 값입니다.<br />-이 속성의 값이 절대 주소 이지만 HTTPS 요청을 지원 하지 않습니다, 경우에 예외가 throw 됩니다.<br /><br /> 이 특성은 경우에만 유효는 `httpHelpPageEnabled` 특성은 `true`합니다.|  
 |includeExceptionDetailInFaults|디버깅 목적으로 클라이언트에 반환되는 SOAP 오류의 세부 정보에 관리되는 예외 정보를 포함할지 여부를 지정하는 값입니다. 기본값은 `false`입니다.<br /><br /> 이 특성을 `true`로 설정한 경우 관리되는 예외 정보가 디버깅을 위해 클라이언트로 전달되게 하고, 웹 브라우저에서 서비스를 검색하는 사용자를 위해 HTML 정보 파일을 게시할 수 있습니다. **주의:** 관리 되는 예외 정보를 클라이언트에는 보안상 위험할 수 있습니다를 반환 합니다. 예외 정보가 내부 서비스 구현 정보를 공개하여 권한 없는 클라이언트에서 이를 사용할 수 있기 때문입니다.|  
   

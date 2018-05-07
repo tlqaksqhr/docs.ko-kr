@@ -1,29 +1,15 @@
 ---
 title: '방법: 엔터프라이즈에서 끝점 잠그기'
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 1b7eaab7-da60-4cf7-9d6a-ec02709cf75d
-caps.latest.revision: 21
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: e5b10665e9a820c7057231c684769bddf9cb0c79
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
-ms.translationtype: MT
+ms.openlocfilehash: c91faf201c9a7cb0e5dd810059dbaa39b1e8eb05
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-lock-down-endpoints-in-the-enterprise"></a>방법: 엔터프라이즈에서 끝점 잠그기
-대형 엔터프라이즈에서는 응용 프로그램을 엔터프라이즈 보안 정책에 따라 개발해야 하는 경우가 종종 있습니다. 다음 항목에서는 컴퓨터에 설치된 모든 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 클라이언트 응용 프로그램의 유효성을 확인할 수 있는 클라이언트 끝점 유효성 검사기를 개발하고 설치하는 방법에 대해 설명합니다.  
+대형 엔터프라이즈에서는 응용 프로그램을 엔터프라이즈 보안 정책에 따라 개발해야 하는 경우가 종종 있습니다. 다음 항목에서는 개발 하 고 컴퓨터에 설치 된 모든 Windows Communication Foundation (WCF) 클라이언트 응용 프로그램이 유효성을 검사 하는 데 사용할 수 있는 클라이언트 끝점 유효성 검사기를 설치 하는 방법에 설명 합니다.  
   
  이 끝점 동작은 클라이언트에 추가 되기 때문에 유효성 검사기는 클라이언트 유효성 검사기가이 경우 [ \<c o m m >](../../../../docs/framework/configure-apps/file-schema/wcf/commonbehaviors.md) machine.config 파일의 섹션입니다. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]는 클라이언트 응용 프로그램 전용의 공통 끝점 동작을 로드하고 서비스 응용 프로그램 전용의 공통 서비스 동작을 로드합니다. 서비스 응용 프로그램에 동일한 유효성 검사기를 설치하려면 유효성 검사기가 서비스 동작이어야 합니다. 자세한 내용은 참조는 [ \<c o m m >](../../../../docs/framework/configure-apps/file-schema/wcf/commonbehaviors.md) 섹션.  
   

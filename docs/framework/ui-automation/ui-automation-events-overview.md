@@ -1,13 +1,6 @@
 ---
-title: "UI 자동화 이벤트 개요"
-ms.custom: 
+title: UI 자동화 이벤트 개요
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-bcl
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - UI Automation, providers
 - UI Automation, events
@@ -16,16 +9,14 @@ helpviewer_keywords:
 - providers, UI Automation
 - UI Automation, clients
 ms.assetid: 69eebd8b-39ed-40e7-93cc-4457c4caf746
-caps.latest.revision: "22"
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: 8b28d6aafc0e9680123859ee0e9a28dd71a2249c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 2190e404479a940e638d6ee8b9fd7135d8fc0109
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ui-automation-events-overview"></a>UI 자동화 이벤트 개요
 > [!NOTE]
@@ -39,7 +30,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="types-of-events"></a>이벤트 유형  
  [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 이벤트는 다음 범주로 구분됩니다.  
   
-|이벤트|설명|  
+|이벤트(event)|설명|  
 |-----------|-----------------|  
 |속성 변경|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 요소의 속성이나 컨트롤 패턴이 변경되면 발생합니다. 예를 들어 클라이언트가 응용 프로그램의 확인란 컨트롤을 모니터링해야 하는 경우 <xref:System.Windows.Automation.TogglePattern.TogglePatternInformation.ToggleState%2A> 속성에 대한 속성 변경 이벤트를 수신하도록 등록할 수 있습니다. 확인란 컨트롤을 선택하거나 선택 취소하면 공급자가 이벤트를 발생시키며 클라이언트가 필요에 따라 동작할 수 있습니다.|  
 |요소 작업|[!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] 결과가 최종 사용자나 프로그래밍 작업에 의해 변경되면(예: 단추를 클릭하거나 <xref:System.Windows.Automation.InvokePattern>을 통해 호출) 발생합니다.|  

@@ -1,11 +1,7 @@
 ---
-title: "PutClassWmi 함수 (관리 되지 않는 API 참조)"
-description: "PutClassWmi 함수는 새 클래스를 만들거나 기존을 업데이트 합니다."
+title: PutClassWmi 함수 (관리 되지 않는 API 참조)
+description: PutClassWmi 함수는 새 클래스를 만들거나 기존을 업데이트 합니다.
 ms.date: 11/06/2017
-ms.prod: .net-framework
-ms.technology:
-- dotnet-clr
-ms.topic: reference
 api_name:
 - PutClassWmi
 api_location:
@@ -20,14 +16,11 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 219cec2096cd3d1dfe1e0d3c0903b62692e444e6
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 3ce887d59d02cfc2e4d8c183aa495dcc1535853c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="putclasswmi-function"></a>PutClassWmi 함수
 새 클래스를 만들거나 기존을 업데이트 합니다.  
@@ -84,7 +77,7 @@ HRESULT PutClassWmi (
 | `WBEM_E_INVALID OPERATION` | 0x80041016 | 지정 된 클래스 이름이 유효 하지 않습니다. |
 | `WBEM_E_CLASS_HAS_CHILDREN` | 0x80041025 | 서브 클래스를 무효화 하는 변경 작업을 수행 하려고 했습니다. |
 | `WBEM_E_ALREADY_EXISTS` | 0x80041019 | `WBEM_FLAG_CREATE_ONLY` 플래그 지정 했지만 클래스가 이미 존재 합니다. |
-| `WBEM_E_NOT_FOUND` | 0x80041002 | `WBEM_FLAG_UPDATE_ONLY`에 지정 된 `lFlags`, 클래스를 찾을 수 없습니다. |
+| `WBEM_E_NOT_FOUND` | 0x80041002 | `WBEM_FLAG_UPDATE_ONLY` 에 지정 된 `lFlags`, 클래스를 찾을 수 없습니다. |
 | `WBEM_E_INCOMPLETE_CLASS` | 0x80041020 | 클래스에 대 한 필수 속성 모두 설정 않았습니다. |
 | `WBEM_E_OUT_OF_MEMORY` | 0x80041006 | 작업을 완료 하려면 사용할 수 있는 메모리가 충분 하지 않습니다. |
 | `WBEM_E_SHUTTING_DOWN` | 0x80041033 | WMI 아마도 중지 및 다시 시작 했습니다. 호출 [ConnectServerWmi](connectserverwmi.md) 다시 합니다. |
@@ -104,7 +97,7 @@ HRESULT PutClassWmi (
   
  **헤더:** WMINet_Utils.idl  
   
- **.NET framework 버전:**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **.NET framework 버전:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>참고자료  
 [WMI 및 성능 카운터 (관리 되지 않는 API 참조)](index.md)

@@ -1,27 +1,15 @@
 ---
-title: "방화벽 지침"
-ms.custom: 
+title: 방화벽 지침
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: a7dc429f-65ac-4faf-974a-77d5fb977fe1
-caps.latest.revision: "32"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 270df09f709dfdfeb78b9bd72bc3744c6614bc5e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 7ae7adcb773167a6af190355dd595f0f063fedc8
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="firewall-instructions"></a>방화벽 지침
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 샘플이 작동할 수 있도록 방화벽에서 몇 가지 포트나 프로그램을 사용할 수 있도록 설정해야 합니다. 대부분의 샘플은 8000-8003 범위의 포트와 포트 9000을 사용하여 통신합니다. 방화벽은 기본적으로 켜져 있어 이러한 포트에 액세스하지 못하도록 합니다. 샘플에 대해 방화벽을 사용하려면 요구 사항 및 보안 환경에 따라 다음 절차 중 하나를 완료합니다.  
+Windows Communication Foundation (WCF) 샘플이 작동할 수 있도록 여러 포트 또는 방화벽의 프로그램을 사용 해야 합니다. 대부분의 샘플은 8000-8003 범위의 포트와 포트 9000을 사용하여 통신합니다. 방화벽은 기본적으로 켜져 있어 이러한 포트에 액세스하지 못하도록 합니다. 샘플에 대해 방화벽을 사용하려면 요구 사항 및 보안 환경에 따라 다음 절차 중 하나를 완료합니다.  
   
 -   옵션 1: 샘플을 실행하는 동안 대화형으로 활성화합니다. 방화벽 구성을 미리 변경하지 않고 샘플의 빌드 및 실행을 시작합니다. 샘플을 실행 한 **Windows 보안 경고** 대화 상자가 나타납니다. 그런 다음 문제가 되는 샘플 프로그램을 차단 해제 목록에 대화형으로 추가할 수 있습니다. 이 절차를 사용하면 샘플을 다시 시작해야 할 수도 있습니다.  
   

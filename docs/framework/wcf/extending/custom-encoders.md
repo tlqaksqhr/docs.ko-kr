@@ -1,31 +1,17 @@
 ---
 title: 사용자 지정 인코더
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: fa0e1d7f-af36-4bf4-aac9-cd4eab95bc4f
-caps.latest.revision: 15
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 90926fd334eb5ccef3a63f637d5273c408c0c13e
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
-ms.translationtype: MT
+ms.openlocfilehash: 4f7b011b038714ee8349e74f6be270c85aed0a7b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="custom-encoders"></a>사용자 지정 인코더
 이 항목에서는 사용자 지정 인코더를 만드는 방법을 설명합니다.  
   
- [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], 사용 하면는 *바인딩* 네트워크를 통해 끝점 간에 데이터를 전송 하는 방법을 지정할 수 있습니다. 시퀀스로 구성 된 바인딩을 *바인딩 요소의*합니다. 보안, 필수와 같은 선택적 프로토콜 바인딩 요소를 포함 하는 바인딩을 *메시지 인코더* 필수 전송 바인딩 요소 및 바인딩 요소입니다. 메시지 인코더는 메시지 인코딩 바인딩 요소로 표시됩니다. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에는 이진, MTOM(Message Transmission Optimization Mechanism) 및 텍스트의 세 가지 메시지 인코더가 포함되어 있습니다.  
+ Windows Communication Foundation (WCF)를 사용 하면는 *바인딩* 네트워크를 통해 끝점 간에 데이터를 전송 하는 방법을 지정할 수 있습니다. 시퀀스로 구성 된 바인딩을 *바인딩 요소의*합니다. 보안, 필수와 같은 선택적 프로토콜 바인딩 요소를 포함 하는 바인딩을 *메시지 인코더* 필수 전송 바인딩 요소 및 바인딩 요소입니다. 메시지 인코더는 메시지 인코딩 바인딩 요소로 표시됩니다. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에는 이진, MTOM(Message Transmission Optimization Mechanism) 및 텍스트의 세 가지 메시지 인코더가 포함되어 있습니다.  
   
  메시지 인코딩 바인딩 요소는 보내는 <xref:System.ServiceModel.Channels.Message>를 serialize한 다음 전송으로 전달하거나, 전송에서 serialize된 메시지 형식을 받은 다음 프로토콜 계층이 있으면 프로토콜 계층에 전달하고 없으면 응용 프로그램에 전달합니다.  
   

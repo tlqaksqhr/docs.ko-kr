@@ -1,13 +1,7 @@
 ---
 title: 매개 변수 디자인
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - member design guidelines [.NET Framework], parameters
 - members [.NET Framework], parameters
@@ -15,18 +9,13 @@ helpviewer_keywords:
 - parameters, design guidelines
 - reserved parameters
 ms.assetid: 3f33bf46-4a7b-43b3-bb78-1ffebe0dcfa6
-caps.latest.revision: 11
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 0d89ed81c06558a6bc101864a7fef3173f019fd0
-ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
+ms.openlocfilehash: e39b38fd72f9f3b9ce76aa6f7e96e44841daabb9
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="parameter-design"></a>매개 변수 디자인
 이 섹션 인수 검사에 대 한 지침과 섹션을 추가 하는 매개 변수 디자인에는 광범위 한 지침을 제공 합니다. 에 설명 된 지침을 참조 해야 또한 [매개 변수 이름 지정](../../../docs/standard/design-guidelines/naming-parameters.md)합니다.  

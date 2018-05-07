@@ -1,14 +1,6 @@
 ---
-title: "IHostTaskManager::SwitchToTask 메서드"
-ms.custom: 
+title: IHostTaskManager::SwitchToTask 메서드
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - IHostTaskManager.SwitchToTask
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: 35d0c27e-4b14-49ce-810d-7ab2120177e8
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 03578a6a9579a807323d54308347f16f24ae90dd
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 7c4b6780b9784c5d02499224e6787f2cda6cc8e9
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ihosttaskmanagerswitchtotask-method"></a>IHostTaskManager::SwitchToTask 메서드
 현재 작업에서 전환 해야 함을 호스트에 알립니다.  
@@ -54,7 +42,7 @@ HRESULT SwitchToTask (
   
 |HRESULT|설명|  
 |-------------|-----------------|  
-|S_OK|`SwitchToTask`성공적으로 반환 합니다.|  
+|S_OK|`SwitchToTask` 성공적으로 반환 합니다.|  
 |HOST_E_CLRNOTAVAILABLE|공용 언어 런타임 (CLR) 프로세스에 로드 되지 않았습니다 또는 CLR 중인 상태를 관리 코드를 실행 하거나 호출을 처리할 수 없습니다.|  
 |HOST_E_TIMEOUT|호출 시간이 초과 되었습니다.|  
 |HOST_E_NOT_OWNER|호출자에 게 잠금을 소유 하지 않습니다.|  
@@ -65,7 +53,7 @@ HRESULT SwitchToTask (
  호스트에서 다른 작업으로 필요한 전환할 수 있습니다.  
   
 > [!NOTE]
->  `SwitchToTask`호스트; 하도록 전환 해야 하는 작업을 지정 하지 않습니다. 전환 해야 하는 작업에만 지정 합니다.  
+>  `SwitchToTask` 호스트; 하도록 전환 해야 하는 작업을 지정 하지 않습니다. 전환 해야 하는 작업에만 지정 합니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **플랫폼:** 참조 [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)합니다.  
@@ -74,7 +62,7 @@ HRESULT SwitchToTask (
   
  **라이브러리:** MSCorEE.dll에 리소스로 포함  
   
- **.NET framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>참고 항목  
  [ICLRTask 인터페이스](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md)  

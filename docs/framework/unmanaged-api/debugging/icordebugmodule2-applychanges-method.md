@@ -1,14 +1,6 @@
 ---
-title: "ICorDebugModule2::ApplyChanges 메서드"
-ms.custom: 
+title: ICorDebugModule2::ApplyChanges 메서드
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICorDebugModule2.ApplyChanges
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: 96fa3406-6a6f-41a1-88c6-d9bc5d1a16d1
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 4855b7a42d471304d000465a0437f29bdff05494
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 5a406e945a67352bc7f126b40bd56f4a11dd693b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="icordebugmodule2applychanges-method"></a>ICorDebugModule2::ApplyChanges 메서드
 실행 중인 프로세스에 메타 데이터의 변경 내용과 Microsoft MSIL (intermediate language) 코드의 변경 내용을 적용합니다.  
@@ -65,7 +53,7 @@ HRESULT ApplyChanges (
  [in] 업데이트 된 MSIL 코드를 포함 하는 버퍼입니다.  
   
 ## <a name="remarks"></a>설명  
- `pbMetadata` 특수 델타 메타 데이터 형식으로 매개 변수는 (으로 출력 하 여 [imetadataemit2:: Savedeltatomemory](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-savedeltatomemory-method.md)). `pbMetadata`이전 메타 데이터를 기반으로 하 고 해당 자료에 적용 하려면 개별 변경 내용을 설명 합니다.  
+ `pbMetadata` 특수 델타 메타 데이터 형식으로 매개 변수는 (으로 출력 하 여 [imetadataemit2:: Savedeltatomemory](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-savedeltatomemory-method.md)). `pbMetadata` 이전 메타 데이터를 기반으로 하 고 해당 자료에 적용 하려면 개별 변경 내용을 설명 합니다.  
   
  반면,는 `pbIL[`] 매개 변수는 새 업데이트 방법이 MSIL 포함 해당 메서드에 대 한 이전 MSIL을 완전히 대체 것 이며  
   
@@ -82,4 +70,4 @@ HRESULT ApplyChanges (
   
  **라이브러리:** CorGuids.lib  
   
- **.NET framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
+ **.NET framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]

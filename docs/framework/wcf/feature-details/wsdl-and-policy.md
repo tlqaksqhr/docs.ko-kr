@@ -1,31 +1,17 @@
 ---
 title: WSDL 및 정책
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: cea87440-3519-4640-8494-b8a2b0e88c84
-caps.latest.revision: ''
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: dd52e36199fc2412abb003d530dd5614cda8049b
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: 330a48989e9d6ca3cee0d11bf4b3fce38a25fa3d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="wsdl-and-policy"></a>WSDL 및 정책
-이 항목에서는 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] WSDL 1.1, WS-Policy 및 WS-PolicyAttachment 구현 세부 정보와 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서 소개된 추가 WS-Policy 어설션 및 WSDL 1.1 확장에 대해 다룹니다.  
+이 항목에서는 Windows Communication Foundation (WCF) WSDL 1.1, Ws-policy 및 Ws-policyattachment 구현 세부 정보 뿐만 아니라 추가 Ws-policy 어설션 및 WSDL 1.1 확장 WCF에 의해 도입 된 다룹니다.  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]는 이 문서에 설명된 제약 조건과 확인된 내용을 사용하여 W3C에 제출된 WS-Policy 및 WS-PolicyAttachment 사양을 구현합니다.  
+ WCF에는 제약 조건 및 확인 된이 문서에 설명 된 내용과 W3C에 제출 된 Ws-policy 및 Ws-policyattachment 사양을 구현 합니다.  
   
  이 문서에서는 다음 표에 있는 접두사와 네임스페이스를 사용합니다.  
   
@@ -41,19 +27,19 @@ ms.lasthandoff: 03/26/2018
 |cdp|http://schemas.microsoft.com/net/2006/06/duplex|  
   
 ## <a name="wcf-wsdl11-extensions"></a>WCF WSDL1.1 확장명  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]는 다음 WSDL1.1 확장을 사용하여 계약 세션 요구 사항에 대해 설명합니다.  
+ WCF 계약 세션 요구 사항을 기술 하는 다음 WSDL1.1 확장을 사용 합니다.  
   
  wsdl:portType/wsdl:operation/@msc:isInitiating  
- xs:boolean은 이 작업이 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 세션을 시작함을 나타냅니다. 기본값은 `false`입니다.  
+ xs: boolean; WCF 세션을 시작 하는이 작업을 나타냅니다. 기본값은 `false`합니다.  
   
  wsdl:portType/wsdl:operation/@msc:isTerminating  
- xs:boolean은 이 작업이 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 세션을 종료함을 나타냅니다. 기본값은 `false`입니다.  
+ xs: boolean; WCF 세션을 종료 하는이 작업을 나타냅니다. 기본값은 `false`합니다.  
   
  wsdl:portType/wsdl:operation/@msc:usingSession  
  xs:boolean은 이 계약에 대해 세션을 설정해야 함을 나타냅니다.  
   
 ### <a name="soap-1x-http-binding-transport-uris"></a>SOAP 1.x HTTP 바인딩 전송 URI  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]는 다음 URI를 사용하여 WSDL 1.1, SOAP 1.1 및 SOAP 1.2 바인딩 확장 요소에 사용할 전송을 나타냅니다.  
+ WCF는 다음 Uri를 사용 하 여 WSDL 1.1, SOAP 1.1 및 SOAP 1.2 바인딩 확장 요소에 사용할 전송을 나타냅니다.  
   
 |전송|URI|  
 |---------------|---------|  
@@ -63,7 +49,7 @@ ms.lasthandoff: 03/26/2018
 |명명된 파이프|http://schemas.microsoft.com/soap/named-pipe|  
   
 ## <a name="policy-assertions-implemented-by-wcf"></a>WCF에서 구현된 정책 어설션  
- WS-*(웹 서비스 사양)에서 소개되고 이 문서의 다른 단원에서 설명된 정책 어설션 외에도 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]는 다음 정책 어설션을 구현합니다.  
+ 웹 서비스 사양에서 도입 된 정책 어설션 외에도 (WS-*) 하 고이 문서의 다른 섹션에서 언급 했 듯이 WCF는 다음 정책 어설션을 구현 합니다.  
   
 |정책 어설션|정책 주체|설명|  
 |----------------------|--------------------|-----------------|  

@@ -1,28 +1,14 @@
 ---
 title: HTTP 및 HTTPS 구성
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - configuring HTTP [WCF]
 ms.assetid: b0c29a86-bc0c-41b3-bc1e-4eb5bb5714d4
-caps.latest.revision: 17
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 8d3317cd4bba7c9935bd7555f16599dc94725fbd
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 70c947724abf8da68ec8f7e6d858e26fec62dce5
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="configuring-http-and-https"></a>HTTP 및 HTTPS 구성
 WCF 서비스 및 클라이언트는 HTTP 및 HTTPS를 통해 통신할 수 있습니다. HTTP/HTTPS 설정은 IIS(인터넷 정보 서비스)나 명령줄 도구를 사용하여 구성합니다. WCF 서비스가 IIS 아래에서 호스팅되거나 IIS에서 inetmgr.exe 도구를 사용하여 HTTP 또는 HTTPS 설정을 구성할 수 있는 경우입니다. WCF 서비스가 자체 호스팅되는 경우 HTTP 또는 HTTPS 설정은 명령줄 도구를 사용하여 구성됩니다.  
@@ -79,7 +65,7 @@ netsh http add urlacl url=http://+:80/MyUri user=DOMAIN\user
  단계별 지침은 참조 하십시오. [하는 방법: SSL 인증서로 포트 구성](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md)합니다.  
   
 ## <a name="configuring-the-ip-listen-list"></a>IP 수신 대기 목록 구성  
- 사용자가 URL을 등록하면 HTTP Server API는 IP 주소 및 포트에만 바인딩됩니다. 기본적으로 HTTP Server API는 모든 시스템 IP 주소에 대한 URL의 포트에 바인딩됩니다. HTTP Server API를 사용하지 않는 응용 프로그램이 이전에 해당 IP 주소 및 포트 조합에 바인딩된 경우 충돌이 발생합니다. IP 수신 대기 목록을 사용하면 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 서비스는 일부 시스템 IP 주소에 대한 포트를 사용하는 응용 프로그램과 함께 사용할 수 있습니다. IP 수신 대기 목록에 항목이 포함된 경우 HTTP Server API는 목록에서 지정한 IP 주소에만 바인딩됩니다. IP 수신 대기 목록을 수정하려면 관리자 권한이 필요합니다.  
+ 사용자가 URL을 등록하면 HTTP Server API는 IP 주소 및 포트에만 바인딩됩니다. 기본적으로 HTTP Server API는 모든 시스템 IP 주소에 대한 URL의 포트에 바인딩됩니다. HTTP Server API를 사용하지 않는 응용 프로그램이 이전에 해당 IP 주소 및 포트 조합에 바인딩된 경우 충돌이 발생합니다. IP 수신 대기 목록을 WCF 서비스를 컴퓨터의 IP 주소 중 일부에 대 한 포트를 사용 하는 응용 프로그램과 함께 사용할 수 있습니다. IP 수신 대기 목록에 항목이 포함된 경우 HTTP Server API는 목록에서 지정한 IP 주소에만 바인딩됩니다. IP 수신 대기 목록을 수정하려면 관리자 권한이 필요합니다.  
   
 ### <a name="running-windows-xp-or-server-2003"></a>Windows XP 또는 Server 2003 실행  
  다음 예제와 같이 httpcfg 도구를 사용하여 IP 수신 대기 목록을 수정합니다. [Windows 지원 도구 설명서](http://go.microsoft.com/fwlink/?LinkId=94840) httpcfg.exe 도구에 대 한 구문에 설명 합니다.  
@@ -101,7 +87,7 @@ netsh http add iplisten ipaddress=0.0.0.0:8000
  HTTP Server API에는 HttpCfg를 통해 사용할 수 없는 일부 고급 구성 설정이 포함되어 있습니다. 이러한 설정은 레지스트리에 유지되며 HTTP Server API를 사용하는 시스템에서 실행되는 모든 응용 프로그램에 적용됩니다. 이러한 설정에 대 한 정보를 참조 하십시오. [IIS에 대 한 Http.sys 레지스트리 설정](http://go.microsoft.com/fwlink/?LinkId=94843)합니다. 대부분의 사용자는 이러한 설정을 변경할 필요 없습니다.  
   
 ## <a name="issues-specific-to-windows-xp"></a>Windows XP 관련 문제  
- IIS는 [!INCLUDE[wxp](../../../../includes/wxp-md.md)]에서 포트 공유를 지원하지 않습니다. IIS가 실행 중이고 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 서비스가 동일한 포트를 가진 네임스페이스를 사용하려는 경우 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 서비스를 시작할 수 없습니다. IIS 및 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 모두 기본적으로 포트 80을 사용합니다. 서비스 중 하나에 대한 포트 할당을 변경하거나 IP 수신 대기 목록을 사용하여 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 서비스를 IIS에서 사용하지 않는 네트워크 어댑터에 할당합니다. HTTP Server API를 사용할 수 있도록 IIS 6.0 이상이 다시 디자인되었습니다.  
+ IIS는 [!INCLUDE[wxp](../../../../includes/wxp-md.md)]에서 포트 공유를 지원하지 않습니다. IIS가 실행 되는 WCF 서비스를 동일한 포트와 네임 스페이스를 사용 하려고 하는 경우 WCF 서비스가 시작 되지 않습니다. IIS 및 WCF 모두 기본적으로 포트 80을 사용 합니다. 서비스 중 하나에 대 한 포트 할당을 변경 하거나 IP 수신 대기 목록을 사용 하 여 WCF 서비스를 IIS에서 사용 되지 네트워크 어댑터에 할당 합니다. HTTP Server API를 사용할 수 있도록 IIS 6.0 이상이 다시 디자인되었습니다.  
   
 ## <a name="see-also"></a>참고 항목  
  <xref:System.ServiceModel.WSDualHttpBinding>  

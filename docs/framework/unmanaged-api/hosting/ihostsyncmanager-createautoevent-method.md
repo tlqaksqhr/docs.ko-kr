@@ -1,14 +1,6 @@
 ---
-title: "IHostSyncManager::CreateAutoEvent 메서드"
-ms.custom: 
+title: IHostSyncManager::CreateAutoEvent 메서드
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - IHostSyncManager.CreateAutoEvent
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: 3153643e-cf5c-4b44-8e0e-c2b22cb08208
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: b7874839d04af89f2fa512f82213862f34408001
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: fe1b685f50f793f7451187f17adc848ec9d4422f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ihostsyncmanagercreateautoevent-method"></a>IHostSyncManager::CreateAutoEvent 메서드
 자동 재설정 이벤트 개체를 만듭니다.  
@@ -54,7 +42,7 @@ HRESULT CreateAutoEvent (
   
 |HRESULT|설명|  
 |-------------|-----------------|  
-|S_OK|`CreateAutoEvent`성공적으로 반환 합니다.|  
+|S_OK|`CreateAutoEvent` 성공적으로 반환 합니다.|  
 |HOST_E_CLRNOTAVAILABLE|공용 언어 런타임 (CLR) 프로세스에 로드 되지 않았습니다 또는 CLR 중인 상태를 관리 코드를 실행 하거나 호출을 처리할 수 없습니다.|  
 |HOST_E_TIMEOUT|호출 시간이 초과 되었습니다.|  
 |HOST_E_NOT_OWNER|호출자에 게 잠금을 소유 하지 않습니다.|  
@@ -63,7 +51,7 @@ HRESULT CreateAutoEvent (
 |E_OUTOFMEMORY|요청 된 이벤트 개체를 만들 메모리가 충분 하지 않습니다.|  
   
 ## <a name="remarks"></a>설명  
- `CreateAutoEvent`상태가 자동으로 변경 됩니다 신호 대기 스레드가 해제 된 후 자동 이벤트 개체를 만듭니다. 이 메서드는 Win32 미러링 `CreateEvent` 의 값으로 함수 `false` 에 대해 지정 된 된 `bManualReset` 매개 변수  
+ `CreateAutoEvent` 상태가 자동으로 변경 됩니다 신호 대기 스레드가 해제 된 후 자동 이벤트 개체를 만듭니다. 이 메서드는 Win32 미러링 `CreateEvent` 의 값으로 함수 `false` 에 대해 지정 된 된 `bManualReset` 매개 변수  
   
 ## <a name="requirements"></a>요구 사항  
  **플랫폼:** 참조 [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)합니다.  
@@ -72,7 +60,7 @@ HRESULT CreateAutoEvent (
   
  **라이브러리:** MSCorEE.dll에 리소스로 포함  
   
- **.NET framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>참고 항목  
  [ICLRSyncManager 인터페이스](../../../../docs/framework/unmanaged-api/hosting/iclrsyncmanager-interface.md)  

@@ -1,32 +1,18 @@
 ---
 title: 데이터 계약의 XML 및 ADO.NET 형식
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: c2ce8461-3c15-4c41-8c81-1cb78f5b59a6
-caps.latest.revision: 7
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 7efef63668bb78bdc9a7d66654c9e33ef6c0138c
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: ae21174d19ad69f87165427cf5a0bfd29ac872db
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="xml-and-adonet-types-in-data-contracts"></a>데이터 계약의 XML 및 ADO.NET 형식
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 데이터 계약 모델은 XML을 직접 표시하는 일부 형식을 지원합니다. 이러한 형식이 XML에 serialize되면 serializer는 추가 처리 없이 이러한 형식의 XML 콘텐츠를 씁니다. 지원되는 형식에는 <xref:System.Xml.XmlElement>을 구현하는 형식, <xref:System.Xml.XmlNode> 및 `XmlNode`의 배열이 있습니다. 단, <xref:System.Xml.Serialization.IXmlSerializable> 형식 자체는 지원되지 않습니다. <xref:System.Data.DataSet> 및 <xref:System.Data.DataTable> 형식은 형식화된 데이터 집합과 마찬가지로 데이터베이스 프로그래밍에 자주 사용됩니다. 이러한 형식은 `IXmlSerializable` 인터페이스를 구현하므로 데이터 계약 모델에서 serialize할 수 있습니다. 이러한 형식에 대한 몇 가지 특별한 고려 사항은 이 항목의 끝부분에 나와 있습니다.  
+Windows Communication Foundation (WCF) 데이터 계약 모델 XML을 직접 표시 하는 일부 형식을 지원 합니다. 이러한 형식이 XML에 serialize되면 serializer는 추가 처리 없이 이러한 형식의 XML 콘텐츠를 씁니다. 지원되는 형식에는 <xref:System.Xml.XmlElement>을 구현하는 형식, <xref:System.Xml.XmlNode> 및 `XmlNode`의 배열이 있습니다. 단, <xref:System.Xml.Serialization.IXmlSerializable> 형식 자체는 지원되지 않습니다. <xref:System.Data.DataSet> 및 <xref:System.Data.DataTable> 형식은 형식화된 데이터 집합과 마찬가지로 데이터베이스 프로그래밍에 자주 사용됩니다. 이러한 형식은 `IXmlSerializable` 인터페이스를 구현하므로 데이터 계약 모델에서 serialize할 수 있습니다. 이러한 형식에 대한 몇 가지 특별한 고려 사항은 이 항목의 끝부분에 나와 있습니다.  
   
 ## <a name="xml-types"></a>XML 형식  
   
@@ -48,7 +34,7 @@ ms.lasthandoff: 04/30/2018
 </MyDataContract>  
 ```  
   
- 래퍼 데이터 멤버 요소 `<myDataMember>`가 여전히 있음을 알 수 있습니다. 데이터 계약 모델에서 이 요소를 제거할 수 있는 방법은 없으며, 이 모델을 처리하는 serializer(<xref:System.Runtime.Serialization.DataContractSerializer> 및 <xref:System.Runtime.Serialization.NetDataContractSerializer>)가 특수 특성을 이 래퍼 요소로 내보낼 수 있습니다. 이러한 특성에는 표준 XML 스키마 인스턴스 "nil" 특성(`XmlElement`가 `null`인 경우 허용) 및 "type" 특성(`XmlElement`가 다형적으로 사용되는 경우 허용)이 포함됩니다. 또한 "Id", "Ref", "Type" 및 "Assembly" 등의 XML 특성은 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]와 관련이 있습니다. 이러한 특성을 내보내서 개체 그래프 유지 모드가 활성화된 상태로 또는 `XmlElement`로 <xref:System.Runtime.Serialization.NetDataContractSerializer> 사용을 지원할 수 있습니다. (개체 그래프 유지 모드가 대 한 자세한 내용은 참조 [Serialization 및 Deserialization](../../../../docs/framework/wcf/feature-details/serialization-and-deserialization.md).)  
+ 래퍼 데이터 멤버 요소 `<myDataMember>`가 여전히 있음을 알 수 있습니다. 데이터 계약 모델에서 이 요소를 제거할 수 있는 방법은 없으며, 이 모델을 처리하는 serializer(<xref:System.Runtime.Serialization.DataContractSerializer> 및 <xref:System.Runtime.Serialization.NetDataContractSerializer>)가 특수 특성을 이 래퍼 요소로 내보낼 수 있습니다. 이러한 특성에는 표준 XML 스키마 인스턴스 "nil" 특성(`XmlElement`가 `null`인 경우 허용) 및 "type" 특성(`XmlElement`가 다형적으로 사용되는 경우 허용)이 포함됩니다. 또한 다음과 같은 XML 특성은 WCF 관련: "Id", "Ref", "Type" 및 "Assembly"입니다. 이러한 특성을 내보내서 개체 그래프 유지 모드가 활성화된 상태로 또는 `XmlElement`로 <xref:System.Runtime.Serialization.NetDataContractSerializer> 사용을 지원할 수 있습니다. (개체 그래프 유지 모드가 대 한 자세한 내용은 참조 [Serialization 및 Deserialization](../../../../docs/framework/wcf/feature-details/serialization-and-deserialization.md).)  
   
  `XmlElement`의 배열 또는 컬렉션이 허용되며 다른 배열이나 컬렉션과 같이 처리됩니다. 즉, 전체 컬렉션에 대한 래퍼 요소와 배열의 각 `<myDataMember>`에 대한 개별 래퍼 요소(이전 예제의 `XmlElement`와 유사)가 있습니다.  
   
@@ -88,7 +74,7 @@ ms.lasthandoff: 04/30/2018
   
  잘못된 XML을 생성하는 `XmlNode` 배열은 serialize할 수 없습니다. 예를 들어 첫 번째 인스턴스가 `XmlNode`이고 두 번째 인스턴스가 `XmlElement`인 두 <xref:System.Xml.XmlAttribute> 인스턴스의 배열은 이 시퀀스가 올바른 XML 인스턴스에 해당하지 않고 특성을 연결할 위치가 없으므로 잘못되었습니다.  
   
- `XmlNode` 배열을 deserialize하면 노드가 만들어지고 들어오는 XML의 정보로 채워집니다. 또한 deserializer는 유효한 부모 <xref:System.Xml.XmlDocument>를 제공합니다. 래퍼 데이터 멤버 요소의 모든 특성을 포함하고 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] serializer에 의해 배치되는 특성(예: 다형적 할당을 나타내는 데 사용되는 특성)을 제외한 모든 노드가 deserialize됩니다. XML 단편에서 모든 네임스페이스 접두사를 정의하는 방법에 대한 경고가 `XmlNode`를 deserialize하는 경우와 마찬가지로 `XmlElement` 배열의 deserialization에 적용됩니다.  
+ `XmlNode` 배열을 deserialize하면 노드가 만들어지고 들어오는 XML의 정보로 채워집니다. 또한 deserializer는 유효한 부모 <xref:System.Xml.XmlDocument>를 제공합니다. 모든 특성을 래퍼 데이터 멤버 요소를 포함 하 여 모든 노드가 deserialize 됩니다 하지만 (예: 다형적 할당을 나타내는 데 사용 되는 특성) WCF serializer에 의해 배치 된 특성 제외 합니다. XML 단편에서 모든 네임스페이스 접두사를 정의하는 방법에 대한 경고가 `XmlNode`를 deserialize하는 경우와 마찬가지로 `XmlElement` 배열의 deserialization에 적용됩니다.  
   
  개체 그래프 유지가 설정된 상태로 serializer를 사용하는 경우 개별 `XmlNode` 인스턴스가 아니라 `XmlNode` 배열 수준에서만 개체 동일성이 유지됩니다.  
   
@@ -142,7 +128,7 @@ ms.lasthandoff: 04/30/2018
   
  `IXmlSerializable`을 구현하고 이전에 정의된 콘텐츠 형식인 형식의 데이터 멤버를 deserialize할 때 deserializer는 데이터 멤버의 래퍼 요소에 XML 판독기를 배치하고 제어를 <xref:System.Xml.Serialization.IXmlSerializable.ReadXml%2A> 메서드에 전달합니다. 메서드는 시작 및 끝 태그를 비롯하여 전체 요소를 읽어야 합니다. `ReadXml` 코드는 요소가 비어 있는 경우를 처리해야 합니다. 또한 `ReadXml` 구현은 래퍼 요소의 이름이 특정한 방식으로 지정되는 데 의존해서는 안 됩니다. serializer에서 선택되는 이름은 다양할 수 있습니다.  
   
- `IXmlSerializable` 형식의 데이터 멤버 등에 다형적으로 <xref:System.Object> 콘텐츠 형식을 할당할 수 있습니다. 또한 형식 인스턴스는 null일 수 있습니다. 마지막으로 개체 그래프 유지가 활성화된 상태 및 `IXmlSerializable`로 <xref:System.Runtime.Serialization.NetDataContractSerializer>을 사용할 수 있습니다. 이러한 모든 기능을 사용하려면 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] serializer가 특정 특성을 래퍼 요소에 연결해야 합니다. 즉, "nil" 및 "type"은 XML 스키마 인스턴스 네임스페이스에 연결하고 "Id", "Ref", "Type" 및 "Assembly"는 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 관련 네임스페이스에 연결합니다.  
+ `IXmlSerializable` 형식의 데이터 멤버 등에 다형적으로 <xref:System.Object> 콘텐츠 형식을 할당할 수 있습니다. 또한 형식 인스턴스는 null일 수 있습니다. 마지막으로 개체 그래프 유지가 활성화된 상태 및 `IXmlSerializable`로 <xref:System.Runtime.Serialization.NetDataContractSerializer>을 사용할 수 있습니다. 이러한 모든 기능에는 특정 특성을 래퍼 요소에 연결 하는 WCF serializer 필요 ("nil" 및 "type" XML 스키마 인스턴스 네임 스페이스 및 "Id", "Ref", "Type" 및 "Assembly" WCF 관련 네임 스페이스에).  
   
 #### <a name="attributes-to-ignore-when-implementing-readxml"></a>ReadXml을 구현할 때 무시할 특성  
  제어를 `ReadXml` 코드에 전달하기 전에 deserializer는 XML 요소를 검사하고 이러한 특수 XML 특성을 검색하여 작업을 수행합니다. 예를 들어 "nil"이 `true`이면 null 값이 deserialize되고 `ReadXml`은 호출되지 않습니다. 다형성이 검색되면 요소의 콘텐츠가 다른 형식인 것처럼 deserialize됩니다. 다형적으로 할당된 형식의 `ReadXml` 구현이 호출됩니다. 어떤 경우에든 이러한 특수 특성은 deserializer에 의해 처리되므로 `ReadXml` 구현에서는 해당 특수 특성을 무시해야 합니다.  
@@ -200,16 +186,16 @@ ms.lasthandoff: 04/30/2018
   
 -   XML 작성기는 XML 문서 선언 일반적으로 허용 하지 않습니다 (예를 들어 \<? xml 버전 ='1.0 '? >) 다른 문서를 작성 하는 중입니다. 전체 XML 문서를 사용하여 `Array` 데이터 멤버의 `XmlNode`로 serialize할 수 없습니다. 이렇게 하려면 문서 선언을 제거하거나 고유의 인코딩 체계를 사용하여 문서 선언을 나타내야 합니다.  
   
--   포함 된 XML 작성기의 모든 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] XML 처리 명령 (\<? … ? >)과 문서 형식 정의 (\<! … >)를 거부합니다. 이들은 SOAP 메시지에서 허용되지 않기 때문입니다. 자체 인코딩 메커니즘을 사용하여 이 제한을 해결할 수도 있습니다. 결과 XML에 이러한 요소를 포함해야 하는 경우 이를 지원하는 XML 작성기를 사용하는 사용자 지정 인코더를 작성할 수 있습니다.  
+-   WCF와 함께 제공 된 XML 작성기의 모든 거부 XML 처리 명령 (\<? … ? >)과 문서 형식 정의 (\<! … >)를 거부합니다. 이들은 SOAP 메시지에서 허용되지 않기 때문입니다. 자체 인코딩 메커니즘을 사용하여 이 제한을 해결할 수도 있습니다. 결과 XML에 이러한 요소를 포함해야 하는 경우 이를 지원하는 XML 작성기를 사용하는 사용자 지정 인코더를 작성할 수 있습니다.  
   
--   `WriteXml`을 구현할 때 XML 작성기에서 <xref:System.Xml.XmlWriter.WriteRaw%2A> 메서드를 호출하지 마세요. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서는 이진을 비롯한 다양한 XML 인코딩을 사용하며, 모든 인코딩에서 결과를 사용할 수 있도록 `WriteRaw`를 사용하는 것은 매우 어렵거나 불가능합니다.  
+-   `WriteXml`을 구현할 때 XML 작성기에서 <xref:System.Xml.XmlWriter.WriteRaw%2A> 메서드를 호출하지 마세요. 다양 한 XML 인코딩 (바이너리 포함)을 사용 하 여 WCF은 사용 하도록 매우 어렵거나 `WriteRaw` 결과 임의의 인코딩으로 사용할 수 있도록 합니다.  
   
--   `WriteXml`을 구현하는 경우 <xref:System.Xml.XmlWriter.WriteEntityRef%2A>에 포함된 XML 작성기에서 지원되지 않는 <xref:System.Xml.XmlWriter.WriteNmToken%2A> 및 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 메서드를 사용하지 마세요.  
+-   구현 하는 경우 `WriteXml`, 사용 하지 않도록는 <xref:System.Xml.XmlWriter.WriteEntityRef%2A> 및 <xref:System.Xml.XmlWriter.WriteNmToken%2A> WCF와 함께 제공 된 XML 작성기에서 지원 하지 않는 메서드입니다.  
   
 ## <a name="using-dataset-typed-dataset-and-datatable"></a>DataSet, 형식화된 DataSet 및 DataTable 사용  
  이러한 형식 사용은 데이터 계약 모델에서 완전히 지원됩니다. 이 형식을 사용할 때는 다음 사항을 고려하세요.  
   
--   이 형식에 대한 스키마(특히 <xref:System.Data.DataSet> 및 해당 형식화된 파생 클래스)는 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 이외의 플랫폼과 상호 운용되지 않을 수 있으며 이러한 플랫폼과 함께 사용할 때 유용성이 저하될 수도 있습니다. 또한 `DataSet` 형식을 사용하면 성능에 영향을 줄 수도 있습니다. 마지막으로 이후에 응용 프로그램의 버전 관리가 더 어려워질 수 있습니다. 계약에 `DataSet` 형식 대신 명시적으로 정의된 데이터 계약 형식을 사용하세요.  
+-   이러한 형식에 대 한 스키마 (특히 <xref:System.Data.DataSet> 및 해당 형식화 된 파생 클래스) 일부 비 WCF 플랫폼과 상호 운용 되지 않을 또는 이러한 플랫폼과 함께 사용할 때 유용성이 저하 될 수 있습니다. 또한 `DataSet` 형식을 사용하면 성능에 영향을 줄 수도 있습니다. 마지막으로 이후에 응용 프로그램의 버전 관리가 더 어려워질 수 있습니다. 계약에 `DataSet` 형식 대신 명시적으로 정의된 데이터 계약 형식을 사용하세요.  
   
 -   `DataSet` 또는 `DataTable` 스키마를 가져올 때는 이러한 형식을 참조하는 것이 중요합니다. Svcutil.exe 명령줄 도구로이 위해서는 System.Data.dll 어셈블리 이름을 전달 하 여는 `/reference` 전환 합니다. 형식화된 데이터 집합 스키마를 가져오는 경우 형식화된 데이터 집합의 형식을 참조해야 합니다. Svcutil.exe를 전달 하는 형식화 된 데이터 집합의 어셈블리의 위치는 `/reference` 전환 합니다. 형식 참조 하는 방법에 대 한 자세한 내용은 참조는 [스키마 클래스 생성를 가져와서](../../../../docs/framework/wcf/feature-details/importing-schema-to-generate-classes.md)합니다.  
   

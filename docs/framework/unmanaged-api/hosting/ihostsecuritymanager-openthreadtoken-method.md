@@ -1,14 +1,6 @@
 ---
-title: "IHostSecurityManager::OpenThreadToken 메서드"
-ms.custom: 
+title: IHostSecurityManager::OpenThreadToken 메서드
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - IHostSecurityManager.OpenThreadToken
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: d5999052-8bf0-4a9e-8621-da6284406b18
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 9b5c39632d7628d30149a0a0278f9bf6c865bc29
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 35a41badd7ade016619d940880a3ace80ccf5693
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ihostsecuritymanageropenthreadtoken-method"></a>IHostSecurityManager::OpenThreadToken 메서드
 현재 실행 중인 스레드와 연결 된 임의 액세스 토큰을 엽니다.  
@@ -62,7 +50,7 @@ HRESULT OpenThreadToken (
   
 |HRESULT|설명|  
 |-------------|-----------------|  
-|S_OK|`OpenThreadToken`성공적으로 반환 합니다.|  
+|S_OK|`OpenThreadToken` 성공적으로 반환 합니다.|  
 |HOST_E_CLRNOTAVAILABLE|공용 언어 런타임 (CLR) 프로세스에 로드 되지 않았습니다 또는 CLR 중인 상태를 관리 코드를 실행 하거나 호출을 처리할 수 없습니다.|  
 |HOST_E_TIMEOUT|호출 시간이 초과 되었습니다.|  
 |HOST_E_NOT_OWNER|호출자에 게 잠금을 소유 하지 않습니다.|  
@@ -70,7 +58,7 @@ HRESULT OpenThreadToken (
 |E_FAIL|알 수 없는 치명적인 오류가 발생 했습니다. 메서드가 E_FAIL을 반환 하는 경우 CLR을 하는 프로세스 내에서 사용할 수 없습니다. 호스팅 방법에 대 한 후속 호출 HOST_E_CLRNOTAVAILABLE를 반환 합니다.|  
   
 ## <a name="remarks"></a>설명  
- `IHostSecurityManager::OpenThreadToken`동작 마찬가지로 동일한 이름 가진 해당 Win32 함수에 Win32 함수에서는 임의의 스레드에 대 한 핸들에 전달할 호출자를 허용 한다는 점을 제외 하는 동안 `IHostSecurityManager::OpenThreadToken` 만 호출 스레드에 연결 된 토큰을 엽니다.  
+ `IHostSecurityManager::OpenThreadToken` 동작 마찬가지로 동일한 이름 가진 해당 Win32 함수에 Win32 함수에서는 임의의 스레드에 대 한 핸들에 전달할 호출자를 허용 한다는 점을 제외 하는 동안 `IHostSecurityManager::OpenThreadToken` 만 호출 스레드에 연결 된 토큰을 엽니다.  
   
  `HANDLE` 형식이 COM 호환, 즉, 해당 크기는 운영 체제에 적용 하 고 사용자 지정 마샬링 필요 합니다. 따라서이 토큰은 CLR과 호스트 간에 프로세스 에서만 사용 합니다.  
   
@@ -81,7 +69,7 @@ HRESULT OpenThreadToken (
   
  **라이브러리:** MSCorEE.dll에 리소스로 포함  
   
- **.NET framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>참고 항목  
  [IHostSecurityContext 인터페이스](../../../../docs/framework/unmanaged-api/hosting/ihostsecuritycontext-interface.md)  

@@ -1,21 +1,14 @@
 ---
 title: 모듈(Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - modules, Visual Basic
 ms.assetid: 370bfc90-e8f2-4942-bdec-9897ce605d31
-caps.latest.revision: 11
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: cd92be378894235f4753cfc52e8382a1960bd37b
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 33ca7bde852e6c38e0b52d4fcbbf4114861b3be0
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="modules-visual-basic"></a>모듈(Visual Basic)
 Visual Basic 사용 하면 문자열 조작, 시스템 정보 가져오기, 파일 및 디렉터리 작업을 수행 수학 계산 수행을 비롯 하 여 코드에서 일반적인 작업을 간소화 하 고 등 여러 모듈을 제공 합니다. 다음 표에서 Visual Basic에서 제공 되는 모듈을 나열 합니다.  

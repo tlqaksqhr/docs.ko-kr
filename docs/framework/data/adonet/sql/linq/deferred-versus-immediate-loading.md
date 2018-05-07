@@ -1,29 +1,15 @@
 ---
-title: "지연된 로드 및 즉시 로드 비교"
-ms.custom: 
+title: 지연된 로드 및 즉시 로드 비교
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: d1d7247f-a3b7-460b-b342-5c1a2365aa1a
-caps.latest.revision: 
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload:
-- dotnet
-ms.openlocfilehash: 8a4fa1574b8e25a5d98f9547ad916a3c84f10b01
-ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
+ms.openlocfilehash: 5955d7361658c825c120e62e531b72d402a12650
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="deferred-versus-immediate-loading"></a>지연된 로드 및 즉시 로드 비교
 개체를 쿼리하는 경우 실제로는 요청한 개체만 검색합니다. *관련* 개체는 동시에 자동으로 페치 되지 않습니다. (자세한 내용은 참조 [관계 간 쿼리](../../../../../../docs/framework/data/adonet/sql/linq/querying-across-relationships.md).) 관련 개체에 액세스할 때 검색 요청을 생성하기 때문에 관련 개체가 아직 로드되지 않았다는 사실을 확인할 수 없습니다.  

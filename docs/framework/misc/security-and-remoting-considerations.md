@@ -1,29 +1,19 @@
 ---
-title: "보안 및 원격 서비스 고려 사항"
-ms.custom: 
+title: 보안 및 원격 서비스 고려 사항
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - code security, remoting
 - remoting, security
 - security [.NET Framework], remoting
 - secure coding, remoting
 ms.assetid: 125d2ab8-55a4-4e5f-af36-a7d401a37ab0
-caps.latest.revision: "10"
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 38b4f61b334a41cedf812a900265af95f1f52e61
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: db4a5ee5673ef96c9fb7f39798ab32dd8c910f43
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="security-and-remoting-considerations"></a>보안 및 원격 서비스 고려 사항
 원격 기능을 사용하면 응용 프로그램 도메인, 프로세스 또는 컴퓨터 간에 투명한 호출을 설정할 수 있습니다. 그러나 코드 액세스 보안 스택 워크는 프로세스 또는 시스템 경계를 넘어갈 수 없습니다(동일한 프로세스의 응용 프로그램 도메인 간에 적용됨).  

@@ -1,28 +1,14 @@
 ---
-title: "채널 계층 확장"
-ms.custom: 
+title: 채널 계층 확장
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - extending channels [WCF]
 ms.assetid: 4238db74-2fb6-4dc8-a326-f58527230810
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 5a1a1bb0b1f2c5e6b42ee793f18f5ad442b1fe8e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: e60d8ef1a5191c6407b01eb1a2456a06aeeb1914
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="extending-the-channel-layer"></a>채널 계층 확장
 채널 계층은 클라이언트 및 서비스 간의 메시지 교환을 담당합니다. 채널 확장은 보안과 같은 새 프로토콜 기능 또는 SOAP 메시지를 전달하기 위한 새 네트워크 전송 구현과 같은 전송 기능을 구현할 수 있습니다.  

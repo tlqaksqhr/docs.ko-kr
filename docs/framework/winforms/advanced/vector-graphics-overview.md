@@ -1,13 +1,6 @@
 ---
-title: "벡터 그래픽 개요"
-ms.custom: 
+title: 벡터 그래픽 개요
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -16,19 +9,14 @@ helpviewer_keywords:
 - coordinate systems
 - graphics [Windows Forms], vector graphics
 ms.assetid: 0195df81-66be-452d-bb53-5a582ebfdc09
-caps.latest.revision: "16"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 603b76c999933f177a9e48ddb819562b8e4dd8f8
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 31fec6d0d3769251d21783b4657d00b06431e942
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="vector-graphics-overview"></a>벡터 그래픽 개요
-[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]좌표계에 선, 사각형 및 기타 도형을 그립니다. 좌표 시스템의 다양 한에서 선택할 수 있지만 기본 좌표계 x 축이 오른쪽에 y 축은 아래쪽을 향하고 왼쪽 위 모퉁이에 원점에 있습니다. 기본 좌표 시스템의 측정 단위 픽셀입니다.  
+[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 좌표계에 선, 사각형 및 기타 도형을 그립니다. 좌표 시스템의 다양 한에서 선택할 수 있지만 기본 좌표계 x 축이 오른쪽에 y 축은 아래쪽을 향하고 왼쪽 위 모퉁이에 원점에 있습니다. 기본 좌표 시스템의 측정 단위 픽셀입니다.  
   
 ## <a name="the-building-blocks-of-gdi"></a>GDI +의 구성 요소  
  ![벡터 그래픽](../../../../docs/framework/winforms/advanced/media/aboutgdip02-art01.gif "AboutGdip02_Art01")  
@@ -37,7 +25,7 @@ ms.lasthandoff: 12/22/2017
   
  ![벡터 그래픽](../../../../docs/framework/winforms/advanced/media/aboutgdip02-art02.gif "AboutGdip02_Art02")  
   
- 사용 하는 경우 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 선, 사각형 또는 곡선을 그리려면 항목에 대 한 주요 정보를 제공 합니다. 예를 들어 두 점을 제공 하 여 줄을 지정할 수 있습니다 및 지정, 높이 및 너비를 제공 하 여 사각형을 지정할 수 있습니다. [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]픽셀을 선, 사각형 또는 곡선을 표시 하도록 설정 해야 결정 하는 디스플레이 드라이버 소프트웨어와 함께 작동 합니다. 다음 그림에서는 점 (12, 8) (4, 2) 점에서 선을 표시 하려면 켜져 있는 픽셀을 보여 줍니다.  
+ 사용 하는 경우 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 선, 사각형 또는 곡선을 그리려면 항목에 대 한 주요 정보를 제공 합니다. 예를 들어 두 점을 제공 하 여 줄을 지정할 수 있습니다 및 지정, 높이 및 너비를 제공 하 여 사각형을 지정할 수 있습니다. [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 픽셀을 선, 사각형 또는 곡선을 표시 하도록 설정 해야 결정 하는 디스플레이 드라이버 소프트웨어와 함께 작동 합니다. 다음 그림에서는 점 (12, 8) (4, 2) 점에서 선을 표시 하려면 켜져 있는 픽셀을 보여 줍니다.  
   
  ![벡터 그래픽](../../../../docs/framework/winforms/advanced/media/aboutgdip02-art03.gif "AboutGdip02_Art03")  
   

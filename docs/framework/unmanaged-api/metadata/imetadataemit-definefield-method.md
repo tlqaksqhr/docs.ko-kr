@@ -1,14 +1,6 @@
 ---
-title: "IMetaDataEmit::DefineField 메서드"
-ms.custom: 
+title: IMetaDataEmit::DefineField 메서드
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - IMetaDataEmit.DefineField
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: 6b5be4fc-2e86-499c-8b09-833160bca767
 topic_type:
 - apiref
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: e2c4b5604c3daec78744eb8902a30750571b9f82
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: fd0ddda898911da2c96a53d941c4290af9028154
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="imetadataemitdefinefield-method"></a>IMetaDataEmit::DefineField 메서드
 지정한 메타 데이터 서명을 사용 하 여 필드에 대 한 정의 만들고 해당 필드 정의 하는 토큰을 가져옵니다.  
@@ -71,7 +59,7 @@ HRESULT DefineField (
  [in] 바이트 수 `pvSigBlob`합니다.  
   
  `dwCPlusTypeFlage`  
- [in] `ELEMENT_TYPE_`  *\**  상수 값에 대 한 합니다. 이 한 `CorElementType` 값입니다. 필드에 대 한 상수 값을 정의 하지 않는 사용 하 여 `ELEMENT_TYPE_END`합니다.  
+ [in] `ELEMENT_TYPE_` *\** 상수 값에 대 한 합니다. 이 한 `CorElementType` 값입니다. 필드에 대 한 상수 값을 정의 하지 않는 사용 하 여 `ELEMENT_TYPE_END`합니다.  
   
  `pValue`  
  [in] 필드에 대 한 상수 값입니다.  
@@ -89,7 +77,7 @@ HRESULT DefineField (
   
  **라이브러리:** MSCorEE.dll에서 리소스로 사용  
   
- **.NET framework 버전:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>참고 항목  
  [IMetaDataEmit 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)  

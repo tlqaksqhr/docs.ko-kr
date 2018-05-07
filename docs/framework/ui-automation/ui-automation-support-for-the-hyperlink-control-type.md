@@ -1,30 +1,19 @@
 ---
-title: "Hyperlink 컨트롤 형식에 대한 UI 자동화 지원"
-ms.custom: 
+title: Hyperlink 컨트롤 형식에 대한 UI 자동화 지원
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-bcl
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - Hyperlink control type
 - UI Automation, Hyperlink control type
 - control types, Hyperlink
 ms.assetid: 110cceea-5932-4955-a1a6-13afc51422b2
-caps.latest.revision: 
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.workload:
-- dotnet
-ms.openlocfilehash: 2cc63513214f43220ef26b479be353949fa89fa4
-ms.sourcegitcommit: 15316053918995cc1380163a7d7e7edd5c44e6d7
+ms.openlocfilehash: c8eb7bfc56b4dddaf352477e3817864700460db7
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ui-automation-support-for-the-hyperlink-control-type"></a>Hyperlink 컨트롤 형식에 대한 UI 자동화 지원
 > [!NOTE]
@@ -70,7 +59,7 @@ ms.lasthandoff: 03/19/2018
 |---------------------------------------|--------------------|-----------|  
 |<xref:System.Windows.Automation.Provider.IInvokeProvider>|예|모든 하이퍼링크 컨트롤이 Invoke 패턴을 지원해야 합니다.|  
 |<xref:System.Windows.Automation.Provider.IValueProvider>|종속|링크에 사용자가 사용할 수 있고 의미가 있는 정보가 포함되면 하이퍼링크 컨트롤이 Value 컨트롤 패턴을 지원해야 합니다.|  
-|<xref:System.Windows.Automation.Provider.IValueProvider.Value>|예: "http://www...."|인터넷 또는 인트라넷 주소의 URL은 사용자에게 의미 있는 정보가 포함된 하이퍼링크의 예입니다. 그러나 프로그래밍 링크는 응용 프로그램에만 의미가 있으며 Value 속성에는 권장되지 않습니다.|  
+|<xref:System.Windows.Automation.Provider.IValueProvider.Value>|예를 들어 "http://www...."|인터넷 또는 인트라넷 주소의 URL은 사용자에게 의미 있는 정보가 포함된 하이퍼링크의 예입니다. 그러나 프로그래밍 링크는 응용 프로그램에만 의미가 있으며 Value 속성에는 권장되지 않습니다.|  
   
 <a name="Required_UI_Automation_Events"></a>   
 ## <a name="required-ui-automation-events"></a>필요한 UI 자동화 이벤트  

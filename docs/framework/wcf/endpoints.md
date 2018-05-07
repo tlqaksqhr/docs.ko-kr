@@ -1,31 +1,17 @@
 ---
-title: "Windows Communication Foundation 끝점"
-ms.custom: 
+title: Windows Communication Foundation 끝점
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - endpoints [WCF]
 ms.assetid: bd0c310f-dd9f-4081-9be2-3db5909850b6
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 0725c4f4275853cce958072a57d7f6ca4059e8cf
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 2588cc0bd70932aa91d300d8ecbe35cd2bcd7d00
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="windows-communication-foundation-endpoints"></a>Windows Communication Foundation 끝점
-와 모든 통신은 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 서비스를 통해 발생 된 *끝점* 서비스의 합니다. 끝점은 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 서비스에서 제공하는 기능에 대한 클라이언트 액세스를 제공합니다.  
+Windows Communication Foundation (WCF) 서비스와 모든 통신을 통해 발생 된 *끝점* 서비스의 합니다. 끝점은 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 서비스에서 제공하는 기능에 대한 클라이언트 액세스를 제공합니다.  
   
  끝점을 만드는 방법에 대 한 개요를 참조 하십시오. [끝점 만들기 개요](../../../docs/framework/wcf/endpoint-creation-overview.md)합니다. 각 끝점에는 다음이 포함되어 있습니다.  
   

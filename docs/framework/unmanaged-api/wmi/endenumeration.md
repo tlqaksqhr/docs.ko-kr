@@ -1,11 +1,7 @@
 ---
-title: "EndEnumeration 함수 (관리 되지 않는 API 참조)"
-description: "EndEnumeration 함수는 열거형을 종료 합니다."
+title: EndEnumeration 함수 (관리 되지 않는 API 참조)
+description: EndEnumeration 함수는 열거형을 종료 합니다.
 ms.date: 11/06/2017
-ms.prod: .net-framework
-ms.technology:
-- dotnet-clr
-ms.topic: reference
 api_name:
 - EndEnumeration
 api_location:
@@ -20,14 +16,11 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: fee3137dad3f89fa8849b28e9ca38b40040f916e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: d77497beb122bef580d6eb142fede33b8cf220e3
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="endenumeration-function"></a>EndEnumeration 함수
 에 대 한 호출을 시작 하는 열거형 시퀀스를 마칩니다.는 [BeginEnumeration 함수](beginenumeration.md)합니다.  
@@ -72,7 +65,7 @@ HRESULT EndEnumeration (
   
  **헤더:** WMINet_Utils.idl  
   
- **.NET framework 버전:**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **.NET framework 버전:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>참고자료  
 [WMI 및 성능 카운터 (관리 되지 않는 API 참조)](index.md)

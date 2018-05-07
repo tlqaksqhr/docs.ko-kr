@@ -1,49 +1,35 @@
 ---
 title: WCF의 큐
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: e98d76ba-1acf-42cd-b137-0f8214661112
-caps.latest.revision: 21
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 8bf4a668fe882212da1c6626b66a4f55390a562f
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 7f0a6700dba8eb844cc471704095b29c2a2c7937
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="queuing-in-wcf"></a>WCF의 큐
-이 단원에서는 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]에서 대기 중인 통신을 사용하는 방법에 대해 설명합니다.  
+이 섹션에서는 Windows Communication Foundation (WCF)에서 대기 중인된 통신을 사용 하는 방법을 설명 합니다.  
   
 ## <a name="queues-as-a-wcf-transport-binding"></a>큐를 WCF 전송 바인딩으로  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서 계약은 교환 중인 항목을 지정합니다. 계약은 비즈니스 종속 또는 응용 프로그램별 메시지 교환입니다. 메시지를 교환하는 데 사용되는 메커니즘(또는 "방법")은 바인딩에 지정됩니다. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]의 바인딩은 메시지 교환 정보를 캡슐화합니다. 또한 다양한 전송 모양과 바인딩이 나타내는 프로토콜을 제어할 수 있도록 구성 노브를 사용자에게 노출합니다. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]의 큐는 다른 전송 바인딩처럼 처리되며 대부분의 큐 응용 프로그램에 유용합니다. 대부분의 큐 응용 프로그램은 다른 RPC(원격 프로시저 호출) 스타일 분산 응용 프로그램과 다르게 작성되어 사용 및 유지 관리가 어려울 수 있습니다. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서는 분산 응용 프로그램의 작성 스타일이 동일하므로 사용 및 유지 관리가 쉽습니다. 교환 메커니즘을 비즈니스 논리와 분리하여 응용 프로그램별 코드를 적용하지 않고도 전송을 변경하거나 쉽게 구성할 수 있습니다. 다음 그림에서는 MSMQ를 전송으로 사용하는 WCF 서비스 및 클라이언트의 구조를 보여 줍니다.  
+ WCF, 계약 교환 중인 항목을 지정 합니다. 계약은 비즈니스 종속 또는 응용 프로그램별 메시지 교환입니다. 메시지를 교환하는 데 사용되는 메커니즘(또는 "방법")은 바인딩에 지정됩니다. WCF의 바인딩은 메시지 교환 정보를 캡슐화 합니다. 또한 다양한 전송 모양과 바인딩이 나타내는 프로토콜을 제어할 수 있도록 구성 노브를 사용자에게 노출합니다. WCF의 큐는 다른 전송 바인딩을 대부분의 큐 응용 프로그램에 유용 처럼 처리 됩니다. 대부분의 큐 응용 프로그램은 다른 RPC(원격 프로시저 호출) 스타일 분산 응용 프로그램과 다르게 작성되어 사용 및 유지 관리가 어려울 수 있습니다. Wcf, 분산된 응용 프로그램을 작성의 스타일은 동일 하며 수행 하 고 유지 관리를 더욱 쉽게. 교환 메커니즘을 비즈니스 논리와 분리하여 응용 프로그램별 코드를 적용하지 않고도 전송을 변경하거나 쉽게 구성할 수 있습니다. 다음 그림에서는 MSMQ를 전송으로 사용하는 WCF 서비스 및 클라이언트의 구조를 보여 줍니다.  
   
  ![응용 프로그램 다이어그램 큐에 대기](../../../../docs/framework/wcf/feature-details/media/distributed-queue-figure.jpg "분산-큐-그림")  
   
- 이전 그림에서 볼 수 있듯이 클라이언트와 서비스는 응용 프로그램 의미 즉, 계약과 구현만 정의해야 합니다. 서비스는 기본 설정을 사용하여 대기 중인 바인딩을 구성합니다. 클라이언트가 사용 하는 [ServiceModel Metadata 유틸리티 도구 (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) 생성 하는 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 클라이언트 서비스 및 서비스에 메시지를 보내는 데 사용할 바인딩을 설명 하는 구성 파일을 생성 합니다. 따라서 대기 중인 메시지를 보내기 위해 클라이언트는 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 클라이언트를 인스턴스화하고 해당 클라이언트에서 작업을 호출합니다. 그러면 메시지가 전송 큐로 보내진 다음 대상 큐로 전송됩니다. 대기 중인 통신의 모든 복잡한 과정이 메시지를 보내고 받는 응용 프로그램에서 숨겨집니다.  
+ 이전 그림에서 볼 수 있듯이 클라이언트와 서비스는 응용 프로그램 의미 즉, 계약과 구현만 정의해야 합니다. 서비스는 기본 설정을 사용하여 대기 중인 바인딩을 구성합니다. 클라이언트가 사용 하 여 [ServiceModel Metadata 유틸리티 도구 (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) WCF 클라이언트를 서비스를 생성 하 고 서비스에 메시지를 보내는 데 사용할 바인딩을 설명 하는 구성 파일을 생성 합니다. 따라서 대기 중인된 메시지를 보내려면 클라이언트는 WCF 클라이언트를 인스턴스화하고 여기에서 작업을 호출 합니다. 그러면 메시지가 전송 큐로 보내진 다음 대상 큐로 전송됩니다. 대기 중인 통신의 모든 복잡한 과정이 메시지를 보내고 받는 응용 프로그램에서 숨겨집니다.  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]의 대기 중인 바인딩에 대한 유의할 사항은 다음과 같습니다.  
+ WCF의 큐에 대기 중인된 바인딩에 대 한 유의할 사항은 다음과 같습니다.  
   
--   [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]의 기본 대기 중인 바인딩은 큐를 사용한 이중 통신을 지원하지 않기 때문에 모든 서비스 작업이 단방향으로 수행되어야 합니다. 양방향 통신 샘플 ([양방향 통신](../../../../docs/framework/wcf/samples/two-way-communication.md)) 큐를 사용 하 여 이중 통신을 구현 하기 위해 두 개의 단방향 계약을 사용 하는 방법을 보여 줍니다.  
+-   기본 바인딩 WCF에서 대기 중인 때문에 작업이 단방향 되어야 하는 모든 서비스 큐를 사용 하 여 이중 통신을 지원 하지 않습니다. 양방향 통신 샘플 ([양방향 통신](../../../../docs/framework/wcf/samples/two-way-communication.md)) 큐를 사용 하 여 이중 통신을 구현 하기 위해 두 개의 단방향 계약을 사용 하는 방법을 보여 줍니다.  
   
--   메타데이터 교환을 사용하여 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 클라이언트를 생성하려면 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 클라이언트를 직접 생성한 후 바인딩 정보를 가져와서 대기 중인 통신을 적절하게 구성하도록 쿼리할 수 있도록 추가 HTTP 끝점이 필요합니다.  
+-   WCF를 생성 하려면 메타 데이터 교환을 사용 하 여 클라이언트 WCF 클라이언트를 생성 하 고 적절 하 게 대기 중인된 통신을 구성 하려면 바인딩 정보를 가져와서를 직접 쿼리할 수 있도록 서비스에서 추가 HTTP 끝점이 필요 합니다.  
   
--   대기 중인 바인딩을 기반으로 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 외부에서 추가 구성을 수행해야 합니다. 예를 들어, <xref:System.ServiceModel.NetMsmqBinding>와 함께 제공된 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 클래스에서는 바인딩을 구성해야 하며, 최소한 MSMQ(메시지 큐)를 구성해야 합니다.  
+-   대기 중인된 바인딩을에 따라, 추가 WCF 외부의 구성이 필요 합니다. 예를 들어는 <xref:System.ServiceModel.NetMsmqBinding> WCF와 함께 제공 되는 클래스를 사용 하는 바인딩을 구성할 수 있을 뿐만 아니라 최소한 MSMQ (메시지 큐)를 구성 해야 합니다.  
   
- 다음 단원에서는 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]와 함께 제공되고 MSMQ를 기반으로 하는 특정 대기 중인 바인딩에 대해 설명합니다.  
+ 다음 섹션에서는 특정 대기 중인된 바인딩에 WCF와 함께 제공 되는 MSMQ를 기반으로 설명 합니다.  
   
 ### <a name="msmq"></a>MSMQ  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]의 대기 중인 전송에서는 대기 중인 통신에 MSMQ를 사용합니다.  
+ WCF에서 대기 중인된 전송 대기 중인된 통신에 MSMQ를 사용합니다.  
   
  MSMQ는 Windows의 선택적 구성 요소로 제공되고 NT 서비스로 실행됩니다. MSMQ는 전송 큐에서 전송할 메시지를 캡처하여 대상 큐로 전달합니다. MSMQ 큐 관리자는 전송 중에 메시지가 손실되지 않도록 신뢰할 수 있는 메시지 전송 프로토콜을 구현합니다. 이 프로토콜에는 네이티브 프로토콜이나 SRMP(SOAP Reliable Messaging Protocol)와 같은 SOAP 기반 프로토콜이 해당됩니다.  
   
@@ -54,7 +40,7 @@ ms.lasthandoff: 04/30/2018
  MSMQ에 대 한 자세한 내용은 참조 [설치 메시지 큐 (MSMQ)](../../../../docs/framework/wcf/samples/installing-message-queuing-msmq.md)합니다.  
   
 ### <a name="netmsmqbinding"></a>NetMsmqBinding  
- [ \<netMsmqBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/netmsmqbinding.md) 큐에 대기 중인 바인딩을 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 에서는 두 가지 제공 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] MSMQ를 사용 하 여 통신 하는 끝점입니다. 따라서 바인딩은 MSMQ에 특정한 속성을 노출합니다. 그러나 모든 MSMQ 기능과 속성이 `NetMsmqBinding`에 노출되는 것은 아닙니다. 압축 `NetMsmqBinding`은 대부분의 고객에게 적합한 최적의 기능들로 디자인되었습니다.  
+ [ \<netMsmqBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/netmsmqbinding.md) MSMQ를 사용 하 여 통신 하는 두 개의 WCF 끝점에 대 한 WCF 제공 큐에 대기 중인 바인딩입니다. 따라서 바인딩은 MSMQ에 특정한 속성을 노출합니다. 그러나 모든 MSMQ 기능과 속성이 `NetMsmqBinding`에 노출되는 것은 아닙니다. 압축 `NetMsmqBinding`은 대부분의 고객에게 적합한 최적의 기능들로 디자인되었습니다.  
   
  `NetMsmqBinding`에서는 여기에서 지금까지 설명한 핵심 큐 개념을 바인딩에 대한 속성의 형태로 나타냅니다. 이러한 속성은 메시지를 전송 및 전달하는 방법을 MSMQ에 알려 줍니다. 속성 범주에 대한 자세한 내용은 다음 단원을 참조하세요. 자세한 내용은 특정 속성을 더욱 완전 하 게 설명 하는 개념 항목을 참조 합니다.  
   
@@ -75,7 +61,7 @@ ms.lasthandoff: 04/30/2018
   
  대부분의 큐 시스템에서는 시스템 차원의 배달 못한 편지 큐를 제공합니다. MSMQ에서는 비트랜잭션 큐에 배달하지 못한 메시지를 위한 시스템 차원의 비트랜잭션 배달 못한 편지 큐와 트랜잭션 큐에 배달하지 못한 메시지를 위한 시스템 차원의 트랜잭션 배달 못한 편지 큐를 제공합니다.  
   
- 서로 다른 대상 큐에 메시지를 보내는 여러 클라이언트가 MSMQ 서비스를 공유하는 경우 클라이언트가 보내는 모든 메시지는 동일한 배달 못한 편지 큐로 이동됩니다. 이것이 항상 좋은 것은 아닙니다. 격리 기능을 최대화하기 위해 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 및 [!INCLUDE[wv](../../../../includes/wv-md.md)]의 MSMQ에서는 배달 못한 메시지를 저장할 수 있는 사용자 지정 배달 못한 편지 큐(또는 응용 프로그램별 배달 못한 편지 큐)를 제공합니다. 따라서 클라이언트 간에 동일한 배달 못한 편지 큐를 공유하지 않습니다.  
+ 서로 다른 대상 큐에 메시지를 보내는 여러 클라이언트가 MSMQ 서비스를 공유하는 경우 클라이언트가 보내는 모든 메시지는 동일한 배달 못한 편지 큐로 이동됩니다. 이것이 항상 좋은 것은 아닙니다. 더 나은 격리의 경우 WCF 및에서 MSMQ [!INCLUDE[wv](../../../../includes/wv-md.md)] 제공 사용자 지정 배달 못 한 편지 큐 (또는 응용 프로그램별 배달 못 한 편지 큐) 배달 하지 못한 메시지를 저장 하는 사용자 지정 하는 합니다. 따라서 클라이언트 간에 동일한 배달 못한 편지 큐를 공유하지 않습니다.  
   
  바인딩에는 다음과 같은 두 가지 속성이 필요합니다.  
   
@@ -105,7 +91,7 @@ ms.lasthandoff: 04/30/2018
 -   `UseActiveDirectory`: 큐 주소 확인에 Active Directory를 사용해야 하는지 여부를 나타내는 부울 값입니다. 기본적으로 해제됩니다. 자세한 내용은 참조 [서비스 끝점 및 큐 주소 지정](../../../../docs/framework/wcf/feature-details/service-endpoints-and-queue-addressing.md)합니다.  
   
 ### <a name="msmqintegrationbinding"></a>MsmqIntegrationBinding  
- `MsmqIntegrationBinding`은 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 끝점에서 C, C++, COM 또는 System.Messaging API로 작성한 기존 MSMQ 응용 프로그램과 통신하려는 경우에 사용됩니다.  
+ `MsmqIntegrationBinding` C, c + +, COM 또는 System.Messaging Api로 작성 된 기존 MSMQ 응용 프로그램과 통신 하는 WCF 끝점을 원할 때 사용 됩니다.  
   
  바인딩 속성은 `NetMsmqBinding`에서와 같습니다. 그러나 다음과 같은 차이가 적용됩니다.  
   

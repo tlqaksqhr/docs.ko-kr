@@ -1,13 +1,6 @@
 ---
-title: "RepeatButton 스타일 및 템플릿"
-ms.custom: 
+title: RepeatButton 스타일 및 템플릿
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - RepeatButton [WPF], styles and templates
 - styles [WPF], RepeatButton
@@ -16,16 +9,11 @@ helpviewer_keywords:
 - ControlTemplate [WPF], RepeatButton
 - states [WPF], RepeatButton
 ms.assetid: fd340743-f44f-4990-9077-085301469670
-caps.latest.revision: "9"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 0087e210317056f742f9aceba623225525357e92
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 2e83a25eeb9cebf86a2e2c1c7524bcff52ee4848
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="repeatbutton-syles-and-templates"></a>RepeatButton 스타일 및 템플릿
 이 항목에서는 스타일 및 서식 파일에 대 한 설명의 <xref:System.Windows.Controls.Primitives.RepeatButton> 제어 합니다. 기본값을 수정할 수 <xref:System.Windows.Controls.ControlTemplate> 고유한 모양을 제어할 수 있습니다. 자세한 내용은 [ControlTemplate을 만들어 기존 컨트롤의 모양 사용자 지정](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md)을 참조하세요.  

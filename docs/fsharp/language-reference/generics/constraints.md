@@ -1,20 +1,17 @@
 ---
-title: "제약 조건(F#)"
-description: "제네릭 형식 또는 함수에서 형식 인수에 대 한 요구 사항을 지정 하려면 제네릭 형식 매개 변수에 적용 되는 F # 제약 조건에 알아봅니다."
-keywords: "visual f#, f#, 함수형 프로그래밍"
+title: 제약 조건(F#)
+description: '제네릭 형식 또는 함수에서 형식 인수에 대 한 요구 사항을 지정 하려면 제네릭 형식 매개 변수에 적용 되는 F # 제약 조건에 알아봅니다.'
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: 2f232a3a-9486-48fb-9759-f23404ed4b52
-ms.openlocfilehash: 91854fd2f692688e0f1c27aba1422eff64156048
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
-ms.translationtype: MT
+ms.openlocfilehash: 65f648d39cf7c3dedf5e558c2ed35337a12efe4a
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="constraints"></a>제약 조건
 

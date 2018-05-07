@@ -1,14 +1,6 @@
 ---
-title: "CloseAssembly 메서드"
-ms.custom: 
+title: CloseAssembly 메서드
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - IALink.CloseAssembly
 - CloseAssembly
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: f66a43bc-a5c5-4190-acbe-63fd27640634
 topic_type:
 - apiref
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 160ec53440f4ecdb924537c732a367881e75acf9
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 68698aab0fd0872c6e6f67e4ec531ab0226e784f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="closeassembly-method"></a>CloseAssembly 메서드
 어셈블리 작업을 완료 합니다. 새 어셈블리 또는 바인딩되지 않은 모듈을 시작 하기 전에이 메서드를 호출 합니다.  

@@ -1,14 +1,6 @@
 ---
-title: "GetVersionFromProcess 함수"
-ms.custom: 
+title: GetVersionFromProcess 함수
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - GetVersionFromProcess
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: a9f7f824-64a1-408d-8607-91c7f19d21fe
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: db5054ab9b71eb93005fc0315acba82d807487ec
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 0b57d04a8a49371872c679a331b5ae9c45dce797
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="getversionfromprocess-function"></a>GetVersionFromProcess 함수
 지정 된 프로세스 핸들과 연결 된 공용 언어 런타임 (CLR)의 버전 번호를 가져옵니다.  
@@ -70,8 +58,8 @@ HRESULT GetVersionFromProcess (
 |반환 코드|설명|  
 |-----------------|-----------------|  
 |S_OK|메서드가 완료되었습니다.|  
-|E_INVALIDARG|`pVersion`null 및 `cchBuffer` null이 아니면 또는 그 반대의 경우도 마찬가지입니다.<br /><br /> 또는<br /><br /> `hProcess`프로세스에 대 한 유효한 핸들이 않습니다.<br /><br /> 또는<br /><br /> CLR 로드 되지 않습니다.|  
-|ERROR_INSUFFICIENT_BUFFER|`cchBuffer`가 null 이거나 버전 문자열의 길이 보다 작습니다.|  
+|E_INVALIDARG|`pVersion` null 및 `cchBuffer` null이 아니면 또는 그 반대의 경우도 마찬가지입니다.<br /><br /> -또는-<br /><br /> `hProcess` 프로세스에 대 한 유효한 핸들이 않습니다.<br /><br /> -또는-<br /><br /> CLR 로드 되지 않습니다.|  
+|ERROR_INSUFFICIENT_BUFFER|`cchBuffer` 가 null 이거나 버전 문자열의 길이 보다 작습니다.|  
 |E_NOTIMPL|이 메서드는 Microsoft Windows 95, Microsoft Windows 98, 또는 Microsoft Windows Millennium Edition 운영 체제에서 사용할 수 없습니다.|  
   
 ## <a name="requirements"></a>요구 사항  
@@ -81,7 +69,7 @@ HRESULT GetVersionFromProcess (
   
  **라이브러리:** MSCorEE.dll  
   
- **.NET framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>참고 항목  
  [GetRequestedRuntimeInfo 함수](../../../../docs/framework/unmanaged-api/hosting/getrequestedruntimeinfo-function.md)  

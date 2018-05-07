@@ -1,14 +1,6 @@
 ---
-title: "관리 디버깅 도우미를 사용하여 오류 진단"
-ms.custom: 
+title: 관리 디버깅 도우미를 사용하여 오류 진단
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 f1_keywords:
 - EHMDA
 helpviewer_keywords:
@@ -37,17 +29,13 @@ helpviewer_keywords:
 - output, managed debugging assistants
 - errors [.NET Framework], managed debugging assistants
 ms.assetid: 76994ee6-9fa9-4059-b813-26578d24427c
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 12a96068412f05d48b8b006385c66f3efbbf9870
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 16a039a5edb0e1023551f97deefbf7874a19638b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="diagnosing-errors-with-managed-debugging-assistants"></a>관리 디버깅 도우미를 사용하여 오류 진단
 MDA(관리 디버깅 도우미)는 런타임 상태에 대한 정보를 제공하기 위해 CLR(공용 언어 런타임)과 함께 작동하는 디버깅 도우미입니다. 이 도우미는 다른 방법으로는 트래핑할 수 없는 런타임 이벤트에 대한 정보 메시지를 생성합니다. MDA를 사용하면 관리 코드와 비관리 코드 간에 변환할 때 발생하는 찾기 어려운 응용 프로그램 버그를 구분할 수 있습니다. Windows 레지스트리에 키를 추가하거나 환경 변수를 설정하여 모든 MDA를 사용하거나 사용하지 않도록 설정할 수 있습니다. 응용 프로그램 구성 설정을 사용하여 특정 MDA를 사용하도록 설정할 수 있습니다. 응용 프로그램의 구성 파일에서 일부 개별 MDA에 대한 추가 구성 설정을 지정할 수 있습니다. 이러한 구성 파일은 런타임이 로드될 때 구문 분석되므로 관리되는 응용 프로그램이 시작되기 전에 MDA를 사용하도록 설정해야 합니다. 이미 시작된 응용 프로그램에 대해서는 MDA를 사용하도록 설정할 수 없습니다.  

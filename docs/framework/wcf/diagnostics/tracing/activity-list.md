@@ -1,27 +1,15 @@
 ---
-title: "동작 목록"
-ms.custom: 
+title: 동작 목록
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 5540e185-ce8e-4db3-83b0-2b9f5bf71829
-caps.latest.revision: "6"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 5e7a371d43237b795536711cf1745030e14d6eca
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: dc504c37b21a2d457f270331ab917747bafbb022
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="activity-list"></a>동작 목록
-이 항목에서는 [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)]에 정의된 모든 동작을 나열합니다.  
+이 항목에서는 Windows Communication Foundation (WCF)에서 정의 되는 모든 작업을 나열 합니다.  
   
 > [!NOTE]
 >  사용자 추적을 그룹화하기 위해 프로그래밍 방식으로 동작을 정의할 수도 있습니다. 자세한 내용은 참조 [사용자 코드 추적 내보내기](../../../../../docs/framework/wcf/diagnostics/tracing/emitting-user-code-traces.md)합니다.  
@@ -33,8 +21,8 @@ ms.lasthandoff: 12/22/2017
 |-----------|-------------------|-------------------|-----------------|  
 |A, M|앰비언트 동작|해당 없음(ServiceModel에 의해 제어되지 않음)|ServiceModel 코드를 호출하기 이전에 TLS에 해당 ID가 설정되어 있는 동작입니다(클라이언트측 또는 서버측).<br /><br /> 예: open이 [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 클라이언트에서 호출되거나 serviceHost.open이 호출되는 동작|  
 |B|구문<br /><br /> ChannelFactory. ContractType : ‘[Type]’.|구성||  
-|C|열기<br /><br /> [ClientBase &#124; ChannelFactory]입니다. ContractType : ‘[Type]’.|열기||  
-|I|[ClientBase &#124; 닫기 ChannelFactory]입니다. ContractType : ‘[Type]’.|닫기||  
+|C|열기<br /><br /> [ClientBase&#124;ChannelFactory]. ContractType : ‘[Type]’.|열기||  
+|I|닫기 [ClientBase&#124;ChannelFactory]. ContractType : ‘[Type]’.|닫기||  
 |M|ServiceHost를 구성합니다. ServiceType: ‘[Type]’.|구성||  
 |N|ServiceHost를 엽니다. ServiceType: ‘[Type]’.|열기||  
 |Z|ServiceHost를 닫습니다. ServiceType: ‘[Type]’.|닫기||  

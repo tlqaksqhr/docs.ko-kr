@@ -1,13 +1,6 @@
 ---
-title: "방법: 텍스트에 변환 적용"
-ms.custom: 
+title: '방법: 텍스트에 변환 적용'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - typography [WPF], rotated text
 - typography [WPF], scaled text
@@ -22,21 +15,16 @@ helpviewer_keywords:
 - scaled text [WPF]
 - typography [WPF], skewed text
 ms.assetid: 0d61678a-4185-4f2a-85c6-c1d020f96fa0
-caps.latest.revision: "7"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 9c1e26b31907e7794492b88ea3a696d3db4d37d7
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 531537013ab3bbfba278ca63e14155341eefc826
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-apply-transforms-to-text"></a>방법: 텍스트에 변환 적용
 변환을 통해 응용 프로그램에서 텍스트 표시를 변경할 수 있습니다. 다음 예에서는 다양 한 유형의 렌더링 변환의 텍스트 표시에 영향을 사용 하 여 한 <xref:System.Windows.Controls.TextBlock> 제어 합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 예에서는 2차원 x-y 평면에서 지정된 점을 기준으로 회전하는 텍스트를 보여줍니다.  
   
  ![RotateTransform을 사용 하 여 회전 된 텍스트](../../../../docs/framework/wpf/advanced/media/transformedtext01.jpg "TransformedText01")  

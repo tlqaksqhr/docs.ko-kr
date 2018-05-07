@@ -1,30 +1,18 @@
 ---
-title: "IALink 인터페이스"
-ms.custom: 
+title: IALink 인터페이스
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 f1_keywords:
 - IALink
 helpviewer_keywords:
 - IALink interface
 ms.assetid: 50abd02d-6488-4815-999b-4fb89af4d568
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 4c58c3aa5ca1ec2d8b3bc820b2b7a500604b4b7d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 1eae19d592dcf5243139e11bb6662953436e45a8
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ialink-interface"></a>IALink 인터페이스
 .NET Framework 어셈블리를 생성할 수 있습니다. 특히, 인터페이스는 다중 모듈 어셈블리에 대 한 어셈블리 매니페스트를 작성, 강력한 이름의 어셈블리를 서명 및 netmodule 만들기에 도움이 되는 메서드를 포함 합니다.  

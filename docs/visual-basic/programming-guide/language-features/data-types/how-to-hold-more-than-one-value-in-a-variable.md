@@ -1,12 +1,6 @@
 ---
-title: "방법: 변수에 두 개 이상의 값 사용(Visual Basic)"
-ms.custom: 
+title: '방법: 변수에 두 개 이상의 값 사용(Visual Basic)'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - classes [Visual Basic], composite data types
 - composite types [Visual Basic]
@@ -17,14 +11,11 @@ helpviewer_keywords:
 - arrays [Visual Basic], compilation errors
 - types [Visual Basic], composite
 ms.assetid: 5fe0e558-aac2-4a40-b7f2-7cfea7336917
-caps.latest.revision: "16"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: c8c567ec2ba01d094819c98a2937af75cd105956
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 783c75ed4577831b7ca444870c97063e8a057346
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-hold-more-than-one-value-in-a-variable-visual-basic"></a>방법: 변수에 두 개 이상의 값 사용(Visual Basic)
 변수에 둘 이상의 값으로 선언 하는 경우는 *복합 데이터 형식을*합니다.  

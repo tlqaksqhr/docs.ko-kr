@@ -1,34 +1,20 @@
 ---
 title: 세션 사용
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - sessions [WCF]
 ms.assetid: 864ba12f-3331-4359-a359-6d6d387f1035
-caps.latest.revision: 32
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 172ef71bd3ae09e3c9f15cb0bdb48728a587605e
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
-ms.translationtype: MT
+ms.openlocfilehash: e826e0952f95608fd8d85a5b1fad6b17d3fdacb3
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-sessions"></a>세션 사용
-[!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 응용 프로그램에서 *세션* 은 메시지 그룹을 대화에 연결합니다. [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 세션은 [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] 응용 프로그램에서 사용할 수 있는 세션 개체와 다르며, 다른 동작을 지원하고 다른 방법으로 제어됩니다. 이 항목에서는 세션이 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 응용 프로그램에서 사용할 수 있는 기능과 그 사용 방법에 대해 설명합니다.  
+Windows Communication Foundation (WCF) 응용 프로그램에서 한 *세션* 은 메시지 그룹을 대화에 연결 합니다. [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 세션은 [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] 응용 프로그램에서 사용할 수 있는 세션 개체와 다르며, 다른 동작을 지원하고 다른 방법으로 제어됩니다. 이 항목에서는 세션이 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 응용 프로그램에서 사용할 수 있는 기능과 그 사용 방법에 대해 설명합니다.  
   
 ## <a name="sessions-in-windows-communication-foundation-applications"></a>Windows Communication Foundation 응용 프로그램의 세션  
  서비스 계약에서 세션이 필요하도록 지정할 경우 해당 계약은 모든 호출(즉, 호출을 지원하는 기본 메시지 교환)이 동일한 대화의 일부가 되도록 지정합니다. 계약이 세션을 허용하지만 특정 세션이 필요 없음을 지정하는 경우, 클라이언트는 세션을 연결하여 설정하거나 설정하지 않을 수 있습니다. 세션이 종료되고 메시지가 동일한 채널을 통해 전송될 경우 예외가 throw됩니다.  

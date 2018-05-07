@@ -1,33 +1,19 @@
 ---
 title: '방법: MEX가 아닌 바인딩을 통해 메타데이터 검색'
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 2292e124-81b2-4317-b881-ce9c1ec66ecb
-caps.latest.revision: 10
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: b469a08ad9759a2d5213f13256ec2def96107acc
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 198c343aa6f25d55e518990dc1dbd2667a8c17ad
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-retrieve-metadata-over-a-non-mex-binding"></a>방법: MEX가 아닌 바인딩을 통해 메타데이터 검색
 이 항목에서는 MEX가 아닌 바인딩을 통해 MEX 끝점으로부터 메타데이터를 검색하는 방법에 대해 설명합니다. 이 샘플의 코드 기반는 [메타 데이터 끝점을 보호 하는 사용자 지정](../../../../docs/framework/wcf/samples/custom-secure-metadata-endpoint.md) 샘플.  
   
 ### <a name="to-retrieve-metadata-over-a-non-mex-binding"></a>MEX가 아닌 바인딩을 통해 메타데이터를 검색하려면  
   
-1.  MEX 끝점에서 사용하는 바인딩을 결정합니다. [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 서비스의 경우, 서비스의 구성 파일에 액세스함으로써 MEX 바인딩을 결정할 수 있습니다. 이 경우에는 MEX 바인딩이 다음 서비스 구성에서 정의됩니다.  
+1.  MEX 끝점에서 사용하는 바인딩을 결정합니다. Windows Communication Foundation (WCF) 서비스에 대 한 서비스의 구성 파일에 액세스 함으로써 MEX 바인딩을 확인할 수 있습니다. 이 경우에는 MEX 바인딩이 다음 서비스 구성에서 정의됩니다.  
   
     ```xml  
     <services>  

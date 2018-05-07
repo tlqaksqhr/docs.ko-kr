@@ -1,37 +1,23 @@
 ---
 title: 서비스 계약 디자인
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - service contracts [WCF]
 ms.assetid: 8e89cbb9-ac84-4f0d-85ef-0eb6be0022fd
-caps.latest.revision: 34
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 14973d3612eb5739e0dfcd7b50409904ab5d6844
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
-ms.translationtype: MT
+ms.openlocfilehash: 6d1e9ba7f5546923b222f2d495aacdb2c1caaf96
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="designing-service-contracts"></a>서비스 계약 디자인
 이 항목에서는 서비스 계약의 정의, 서비스 계약을 정의하는 방법, 사용 가능한 작업(및 기본 메시지 교환에 미치는 영향), 사용되는 데이터 형식 및 시나리오 요구 사항을 만족하는 작업을 디자인하는 데 도움이 되는 기타 문제에 대해 설명합니다.  
   
 ## <a name="creating-a-service-contract"></a>서비스 계약 만들기  
- 서비스는 여러 연산을 노출합니다. [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 응용 프로그램에서 메서드를 만들고 <xref:System.ServiceModel.OperationContractAttribute> 특성으로 표시하여 작업을 정의합니다. 그런 다음 서비스 계약을 만들려면 <xref:System.ServiceModel.ServiceContractAttribute> 특성으로 표시한 인터페이스 내에 작업을 선언하거나 같은 특성으로 표시된 클래스에 작업을 정의하여 작업을 함께 그룹화합니다. (기본 예제를 보려면 [하는 방법: 서비스 계약 정의](../../../docs/framework/wcf/how-to-define-a-wcf-service-contract.md).)  
+ 서비스는 여러 연산을 노출합니다. Windows Communication Foundation (WCF) 응용 프로그램에서 메서드를 만들고 사용 하 여 표시 하 여 작업을 정의 <xref:System.ServiceModel.OperationContractAttribute> 특성입니다. 그런 다음 서비스 계약을 만들려면 <xref:System.ServiceModel.ServiceContractAttribute> 특성으로 표시한 인터페이스 내에 작업을 선언하거나 같은 특성으로 표시된 클래스에 작업을 정의하여 작업을 함께 그룹화합니다. (기본 예제를 보려면 [하는 방법: 서비스 계약 정의](../../../docs/framework/wcf/how-to-define-a-wcf-service-contract.md).)  
   
  <xref:System.ServiceModel.OperationContractAttribute> 특성이 없는 메서드는 서비스 작업이 아니며 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 서비스에서 노출하지 않습니다.  
   
@@ -82,7 +68,7 @@ ms.lasthandoff: 04/30/2018
 >  작업 서명의 매개 변수 이름 값은 계약의 일부이며 대/소문자를 구분합니다. 같은 매개 변수 이름을 로컬로 사용하지만 게시된 메타데이터에서 이름을 수정하려면 <xref:System.ServiceModel.MessageParameterAttribute?displayProperty=nameWithType>를 참조하십시오.  
   
 #### <a name="data-contracts"></a>데이터 계약  
- [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 응용 프로그램과 같은 서비스 지향 응용 프로그램은 Microsoft 플랫폼 및 타사 플랫폼에서 모두 광범위한 클라이언트 응용 프로그램과 상호 운용되도록 개발되었습니다. 광범위한 상호 운용을 위해 <xref:System.Runtime.Serialization.DataContractAttribute> 및 <xref:System.Runtime.Serialization.DataMemberAttribute> 특성으로 형식을 표시하여 서비스 작업이 교환하는 데이터를 설명하는 서비스 계약의 부분인 데이터 계약을 만드는 것이 좋습니다.  
+ Windows Communication Foundation (WCF) 응용 프로그램과 같은 서비스 지향 응용 프로그램은 Microsoft 및 타사 플랫폼에서 클라이언트 응용 프로그램의 가능한 가장 많은 수와 상호 운용 하도록 설계 되었습니다. 광범위한 상호 운용을 위해 <xref:System.Runtime.Serialization.DataContractAttribute> 및 <xref:System.Runtime.Serialization.DataMemberAttribute> 특성으로 형식을 표시하여 서비스 작업이 교환하는 데이터를 설명하는 서비스 계약의 부분인 데이터 계약을 만드는 것이 좋습니다.  
   
  데이터 계약은 옵트인 스타일 계약입니다. 데이터 계약 특성을 명시적으로 적용하지 않으면 형식이나 데이터 멤버가 serialize되지 않습니다. 데이터 계약은 관리되는 코드의 액세스 범위와 관련이 없습니다. 전용 데이터 멤버는 serialize될 수 있고 공개적으로 액세스할 다른 곳으로 보낼 수 있습니다. (데이터 계약의 기본 예제를 보려면 [하는 방법: 클래스 또는 구조체에 대 한 기본 데이터 계약을 만들](../../../docs/framework/wcf/feature-details/how-to-create-a-basic-data-contract-for-a-class-or-structure.md).) [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 작업의 기능을 활성화 하는 기본 SOAP 메시지의 정의 뿐만 아니라 내부 / 외부로 메시지의 본문 데이터 형식의 serialization을 처리 합니다. 데이터 형식을 serialize할 수 있다면 작업을 디자인할 때 기본 메시지 교환 인프라에 대해 고려하지 않아도 됩니다.  
   

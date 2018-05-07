@@ -1,14 +1,6 @@
 ---
-title: "IHostThreadPoolManager::GetMaxThreads 메서드"
-ms.custom: 
+title: IHostThreadPoolManager::GetMaxThreads 메서드
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - IHostThreadPoolManager.GetMaxThreads
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: db268876-6178-4a81-aca3-318ee7f96001
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 84867f1b5dfdcfd7a50d01c9e51cb0c42da62f0e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: fa6e0e2447cc3ff6766bb33bb603388f37ec3ce0
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ihostthreadpoolmanagergetmaxthreads-method"></a>IHostThreadPoolManager::GetMaxThreads 메서드
 스레드 풀에 동시에 호스트를 유지 하는 스레드의 최대 수를 가져옵니다.  
@@ -54,7 +42,7 @@ HRESULT GetMaxThreads (
   
 |HRESULT|설명|  
 |-------------|-----------------|  
-|S_OK|`GetMaxThreads`성공적으로 반환 합니다.|  
+|S_OK|`GetMaxThreads` 성공적으로 반환 합니다.|  
 |HOST_E_CLRNOTAVAILABLE|공용 언어 런타임 (CLR (프로세스에 로드 되지 않은 않았거나 상태에는 자신이 없습니다 관리 되는 코드 또는 호출 프로세스가 성공적으로 실행 합니다.|  
 |HOST_E_TIMEOUT|호출 시간이 초과 되었습니다.|  
 |HOST_E_NOT_OWNER|호출자에 게 잠금을 소유 하지 않습니다.|  
@@ -74,7 +62,7 @@ HRESULT GetMaxThreads (
   
  **라이브러리:** MSCorEE.dll에 리소스로 포함  
   
- **.NET framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>참고 항목  
  <xref:System.Threading.ThreadPool.GetMaxThreads%2A>  

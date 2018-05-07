@@ -1,27 +1,15 @@
 ---
-title: "전송"
-ms.custom: 
+title: 전송
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: dfcfa36c-d3bb-44b4-aa15-1c922c6f73e6
-caps.latest.revision: "7"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 83bb76cc46d72f3d368de20669391c3e7f24a0f2
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 7daa486286e022b24be32df7335ddbd5db7233f0
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="transfer"></a>전송
-이 항목에서는 [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] 동작 추적 모델의 전송에 대해 설명합니다.  
+Windows Communication Foundation (WCF) 동작 추적 모델의 전송에 설명 합니다.  
   
 ## <a name="transfer-definition"></a>전송 정의  
  동작 간 전송은 끝점 내의 관련 동작에 있는 이벤트 간의 인과 관계를 나타냅니다. 두 가지 동작은 컨트롤이 이러한 동작 간에 이동할 때(예: 동작 경계를 넘나드는 메서드 호출) 전송과 관련됩니다. [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)]에서는 서비스에서 바이트가 들어올 때 수신 대기 동작이 메시지 개체가 만들어지는 바이트 수신 동작으로 전송됩니다. 종단 간 추적 시나리오 및의 해당 활동 및 추적 디자인의 목록에 대 한 참조 [종단 간 추적 시나리오](../../../../../docs/framework/wcf/diagnostics/tracing/end-to-end-tracing-scenarios.md)합니다.  

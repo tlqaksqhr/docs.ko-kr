@@ -1,23 +1,12 @@
 ---
-title: "활동 지역화"
-ms.custom: 
+title: 활동 지역화
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 8ee7bc16-e609-469a-a3e8-8062952e2676
-caps.latest.revision: "5"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ccabcda9e26751db80ee7e955458d0eee0cae7e9
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 23a6d5c2ed202f030397eb70382896468a68a724
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="activity-localization"></a>활동 지역화
 워크플로 응용 프로그램 및 구성 요소가 다른 문화권과 언어로 지역화될 가능성이 있는 경우 다시 컴파일하지 않고 지역화할 수 있도록 리소스 문자열을 사용해야 합니다.  

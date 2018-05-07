@@ -1,13 +1,6 @@
 ---
-title: "디버거 표시 특성을 사용하여 디버깅 향상"
-ms.custom: 
+title: 디버거 표시 특성을 사용하여 디버깅 향상
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -20,19 +13,16 @@ helpviewer_keywords:
 - display attributes for debugger
 - DebuggerBrowsableAttribute attribute
 ms.assetid: 72bb7aa9-459b-42c4-9163-9312fab4c410
-caps.latest.revision: "7"
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ac5097326ae76a8790569c13fd8b1285b0cfeec0
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 2efa8cfb2b196d6f5a26354161e42c1f376e43b1
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="enhancing-debugging-with-the-debugger-display-attributes"></a>디버거 표시 특성을 사용하여 디버깅 향상
-디버거 표시 특성을 통해 해당 형식의 런타임 동작을 지정하고 가장 잘 이해하는 형식의 개발자는 해당 형식이 디버거에 표시될 때 무엇이 표시되는지 지정할 수도 있습니다. 또한 `Target` 속성을 제공하는 디버거 표시 특성의 경우 소스 코드를 모르는 사용자도 어셈블리 수준에서 적용할 수 있습니다. <xref:System.Diagnostics.DebuggerDisplayAttribute> 특성은 형식 또는 멤버가 디버거 변수 창에 표시되는 방식을 제어합니다. <xref:System.Diagnostics.DebuggerBrowsableAttribute> 특성은 필드 또는 속성이 디버거 변수 창에 표시되는지 결정합니다. <xref:System.Diagnostics.DebuggerTypeProxyAttribute> 특성은 형식에 대한 대체 형식 또는 프록시를 지정하고 디버거 창에 표시되는 방식을 변경합니다. 프록시 또는 대체 형식이 있는 변수를 볼 때 원래 형식 대신 프록시가 디버거 표시 창에 나타납니다**.** 디버거 변수 창에는 프록시 형식의 공용 멤버만 표시됩니다. 개인 멤버는 표시되지 않습니다.  
+디버거 표시 특성을 통해 해당 형식의 런타임 동작을 지정하고 가장 잘 이해하는 형식의 개발자는 해당 형식이 디버거에 표시될 때 무엇이 표시되는지 지정할 수도 있습니다. 또한 `Target` 속성을 제공하는 디버거 표시 특성의 경우 소스 코드를 모르는 사용자도 어셈블리 수준에서 적용할 수 있습니다. <xref:System.Diagnostics.DebuggerDisplayAttribute> 특성은 형식 또는 멤버가 디버거 변수 창에 표시되는 방식을 제어합니다. <xref:System.Diagnostics.DebuggerBrowsableAttribute> 특성은 필드 또는 속성이 디버거 변수 창에 표시되는지 결정합니다. <xref:System.Diagnostics.DebuggerTypeProxyAttribute> 특성은 형식에 대한 대체 형식 또는 프록시를 지정하고 디버거 창에 표시되는 방식을 변경합니다. 프록시 또는 대체 형식이 있는 변수를 볼 때 원래 형식 대신 프록시가 디버거 표시 창에 나타납니다 **.** 디버거 변수 창에는 프록시 형식의 공용 멤버만 표시됩니다. 개인 멤버는 표시되지 않습니다.  
   
 ## <a name="using-the-debuggerdisplayattribute"></a>DebuggerDisplayAttribute 사용  
  <xref:System.Diagnostics.DebuggerDisplayAttribute.%23ctor%2A> 생성자에는 형식 인스턴스에 대한 값 열에 표시되는 문자열인 단일 인수가 있습니다. 이 문자열에는 중괄호({ 및 })가 포함될 수 있습니다. 중괄호 쌍 안의 텍스트는 식으로 확인됩니다. 예를 들어 더하기 기호(+)를 선택하여 `MyHashtable` 인스턴스에 대한 디버거 표시를 확장하면 다음 C# 코드로 인해 “Count = 4”가 표시됩니다.  

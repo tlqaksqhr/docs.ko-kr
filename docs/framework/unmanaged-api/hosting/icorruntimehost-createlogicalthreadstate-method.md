@@ -1,14 +1,6 @@
 ---
-title: "ICorRuntimeHost::CreateLogicalThreadState 메서드"
-ms.custom: 
+title: ICorRuntimeHost::CreateLogicalThreadState 메서드
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICorRuntimeHost.CreateLogicalThreadState
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: 90f5e791-038b-4b05-9bc5-8d4367d0173e
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 9f19b93d45478fbaa7b91f934f8bf9a2e4e26446
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 4fba8dabc09c5586a92a12cf8b9e7239c564b795
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="icorruntimehostcreatelogicalthreadstate-method"></a>ICorRuntimeHost::CreateLogicalThreadState 메서드
 이 메서드는 .NET Framework 인프라를 지원하며 사용자 코드에서 직접 사용할 수 없습니다.  

@@ -1,27 +1,15 @@
 ---
-title: "이중 서비스"
-ms.custom: 
+title: 이중 서비스
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 396b875a-d203-4ebe-a3a1-6a330d962e95
-caps.latest.revision: "17"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 08fcb852977272d593229abea426abc8bf9b7e48
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: afe72b01fe3ec38cc34b0a7ff4d28ff714cf3dd2
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="duplex-services"></a>이중 서비스
 이중 서비스 계약은 양쪽 끝점에서 메시지를 다른 사용자에게 독립적으로 전송할 수 있는 메시지 교환 패턴입니다. 따라서 이중 서비스에서는 클라이언트 끝점으로 메시지를 보내 이벤트와 비슷한 동작을 제공할 수 있습니다. 이중 통신은 클라이언트가 서비스에 연결할 때 이루어지며, 서비스에서 클라이언트로 메시지를 다시 보낼 수 있는 채널을 제공합니다. 이중 서비스의 이벤트와 비슷한 동작은 세션 내에서만 작동합니다.  
@@ -43,7 +31,7 @@ ms.lasthandoff: 12/22/2017
  [!code-csharp[c_DuplexServices#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_duplexservices/cs/client.cs#2)]
  [!code-vb[c_DuplexServices#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_duplexservices/vb/client.vb#2)]  
   
- 이중 계약에 대해 생성된 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 클라이언트의 경우 생성 시 <xref:System.ServiceModel.InstanceContext> 클래스를 제공해야 합니다. 이 <xref:System.ServiceModel.InstanceContext> 클래스는 콜백 인터페이스를 구현하는 개체의 사이트로 사용되고 서비스에서 다시 전송된 메시지를 처리합니다. <xref:System.ServiceModel.InstanceContext> 클래스는 `CallbackHandler` 클래스의 인스턴스를 사용하여 생성됩니다. 이 개체는 콜백 인터페이스를 통해 서비스에서 클라이언트로 전송된 메시지를 처리합니다.  
+ 이중 계약에 대해 생성 되는 WCF 클라이언트는 <xref:System.ServiceModel.InstanceContext> 클래스를 생성 시 제공 해야 합니다. 이 <xref:System.ServiceModel.InstanceContext> 클래스는 콜백 인터페이스를 구현하는 개체의 사이트로 사용되고 서비스에서 다시 전송된 메시지를 처리합니다. <xref:System.ServiceModel.InstanceContext> 클래스는 `CallbackHandler` 클래스의 인스턴스를 사용하여 생성됩니다. 이 개체는 콜백 인터페이스를 통해 서비스에서 클라이언트로 전송된 메시지를 처리합니다.  
   
  [!code-csharp[c_DuplexServices#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_duplexservices/cs/client.cs#3)]
  [!code-vb[c_DuplexServices#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_duplexservices/vb/client.vb#3)]  

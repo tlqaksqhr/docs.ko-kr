@@ -1,14 +1,6 @@
 ---
-title: "ICLRDebugging::OpenVirtualProcess 메서드"
-ms.custom: 
+title: ICLRDebugging::OpenVirtualProcess 메서드
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICLRDebugging.OpenVirtualProcess
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: e8ab7c41-d508-4ed9-8a31-ead072b5a314
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: f1f71f42f10c3d25714998d1697b20a5ee13e055
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 51b5a9ecd85f0d40ac2fe2826cbbe7a56a6228d1
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="iclrdebuggingopenvirtualprocess-method"></a>ICLRDebugging::OpenVirtualProcess 메서드
 프로세스에서 로드 된 공용 언어 런타임 (CLR) 모듈에 해당 하는 ICorDebugProcess 인터페이스를 가져옵니다.  
@@ -87,7 +75,7 @@ HRESULT OpenVirtualProcess(
 |S_OK|메서드가 완료되었습니다.|  
 |E_POINTER|`pDataTarget`가 `null`인 경우|  
 |CORDBG_E_LIBRARY_PROVIDER_ERROR|[ICLRDebuggingLibraryProvider](../../../../docs/framework/unmanaged-api/debugging/iclrdebugginglibraryprovider-interface.md) 콜백 오류 반환 하거나 유효한 핸들을 제공 하지 않습니다.|  
-|CORDBG_E_MISSING_DATA_TARGET_INTERFACE|`pDataTarget`이 버전의 런타임에 필요한 데이터 대상 인터페이스를 구현 하지 않습니다.|  
+|CORDBG_E_MISSING_DATA_TARGET_INTERFACE|`pDataTarget` 이 버전의 런타임에 필요한 데이터 대상 인터페이스를 구현 하지 않습니다.|  
 |CORDBG_E_NOT_CLR|표시 된 모듈이 CLR 모듈이 아닙니다. 메모리가 손상, 모듈을 사용할 수 없거나 또는 CLR 버전은 shim 버전 보다 최신 때문에 CLR 모듈을 검색할 수 없는 경우에이 HRESULT 반환 됩니다.|  
 |CORDBG_E_UNSUPPORTED_DEBUGGING_MODEL|이 런타임 버전에서이 디버깅 모델을 지원 하지 않습니다. 현재 디버깅 모델 이전 버전의 CLR에서 지원 되지 않습니다는 [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)]합니다. `pwszVersion` 출력 매개 변수는 여전히이 오류 후 올바른 값으로 설정 됩니다.|  
 |CORDBG_E_UNSUPPORTED_FORWARD_COMPAT|버전의 CLR이 디버거에서 지원 하기 위해 버전 보다 큽니다. `pwszVersion` 출력 매개 변수는 여전히이 오류 후 올바른 값으로 설정 됩니다.|  
@@ -105,7 +93,7 @@ HRESULT OpenVirtualProcess(
   
  **라이브러리:** CorGuids.lib  
   
- **.NET framework 버전:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET framework 버전:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>참고 항목  
  [디버깅 인터페이스](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)  

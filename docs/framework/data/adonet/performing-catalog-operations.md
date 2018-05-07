@@ -1,27 +1,15 @@
 ---
-title: "카탈로그 작업 수행"
-ms.custom: 
+title: 카탈로그 작업 수행
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: e60f542f-6271-495b-a9e4-48553481c2a3
-caps.latest.revision: "3"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: b5ac8d5522b599eb1d426314eda1d7d9e406da90
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: c1d8b9dd579cae7f4868058343c034caf17c5fff
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="performing-catalog-operations"></a>카탈로그 작업 수행
 CREATE TABLE 또는 CREATE PROCEDURE 문과 같은 카탈로그 또는 데이터베이스를 수정 하는 명령을 실행 하려면 만듭니다는 **명령** 적절 한 SQL 문을 사용 하 여 개체 및 **연결** 개체입니다. 사용 하 여 명령을 실행의 **ExecuteNonQuery** 의 메서드는 **명령** 개체입니다.  

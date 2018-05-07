@@ -1,14 +1,6 @@
 ---
-title: "ICLRHostProtectionManager::SetEagerSerializeGrantSets 메서드"
-ms.custom: 
+title: ICLRHostProtectionManager::SetEagerSerializeGrantSets 메서드
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICLRHostProtectionManager.SetEagerSerializeGrantSets
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: d6158360-22b1-4ace-ad85-d830b9964783
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: f1d2bb2ecc4ae7edb4edbaa3ff36650c70c82daf
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: e9bddaa25ba83570389a9d70ac1a9f60357f533c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="iclrhostprotectionmanagerseteagerserializegrantsets-method"></a>ICLRHostProtectionManager::SetEagerSerializeGrantSets 메서드
 이 메서드는 .NET Framework 인프라를 지원하며 사용자 코드에서 직접 사용할 수 없습니다.  
@@ -48,7 +36,7 @@ HRESULT SetEagerSerializeGrantSets ();
   
 |HRESULT|설명|  
 |-------------|-----------------|  
-|S_OK|`SetEagerSerializeGrantSets`성공적으로 반환 합니다.|  
+|S_OK|`SetEagerSerializeGrantSets` 성공적으로 반환 합니다.|  
 |HOST_E_CLRNOTAVAILABLE|CLR은 프로세스에 로드 되지 않았습니다 또는 CLR 중인 상태를 관리 코드를 실행 하거나 호출을 처리할 수 없습니다.|  
 |HOST_E_TIMEOUT|호출 시간이 초과 되었습니다.|  
 |HOST_E_NOT_OWNER|호출자에 게 잠금을 소유 하지 않습니다.|  
@@ -62,7 +50,7 @@ HRESULT SetEagerSerializeGrantSets ();
   
  **라이브러리:** MSCorEE.dll에 리소스로 포함  
   
- **.NET framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>참고 항목  
  [ICLRControl 인터페이스](../../../../docs/framework/unmanaged-api/hosting/iclrcontrol-interface.md)  

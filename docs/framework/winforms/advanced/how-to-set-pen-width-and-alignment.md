@@ -1,13 +1,6 @@
 ---
-title: "방법: 펜 굵기 및 맞춤 설정"
-ms.custom: 
+title: '방법: 펜 굵기 및 맞춤 설정'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -15,16 +8,11 @@ helpviewer_keywords:
 - pens [Windows Forms], setting width
 - pens [Windows Forms], setting alignment
 ms.assetid: a202af36-4d31-4401-a126-b232f51db581
-caps.latest.revision: "16"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 1e5858da25174c8bc1de18d534023b57b58253e0
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 8ac125978405f39cd26680338cdabb661ad92d16
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-set-pen-width-and-alignment"></a>방법: 펜 굵기 및 맞춤 설정
 만들 때 한 <xref:System.Drawing.Pen>, 생성자의 인수 중 하나로 펜 너비를 제공할 수 있습니다. 펜 너비를 변경할 수도 있습니다는 <xref:System.Drawing.Pen.Width%2A> 의 속성은 <xref:System.Drawing.Pen> 클래스입니다.  

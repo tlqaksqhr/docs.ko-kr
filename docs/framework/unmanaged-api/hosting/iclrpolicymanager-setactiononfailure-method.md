@@ -1,14 +1,6 @@
 ---
-title: "ICLRPolicyManager::SetActionOnFailure 메서드"
-ms.custom: 
+title: ICLRPolicyManager::SetActionOnFailure 메서드
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICLRPolicyManager.SetActionOnFailure
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: 4664033f-db97-4388-b988-2ec470796e58
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 4440b36485ed900b5e64adcead2525dbb7d5206e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: bc3616b2cec0fa951df745e3c5f0468f74ab82bb
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="iclrpolicymanagersetactiononfailure-method"></a>ICLRPolicyManager::SetActionOnFailure 메서드
 공용 언어 런타임 (CLR)의 오류가 발생할 경우 수행 해야 하는 정책 동작을 지정 합니다.  
@@ -58,7 +46,7 @@ HRESULT SetActionOnFailure (
   
 |HRESULT|설명|  
 |-------------|-----------------|  
-|S_OK|`SetActionOnFailure`성공적으로 반환 합니다.|  
+|S_OK|`SetActionOnFailure` 성공적으로 반환 합니다.|  
 |HOST_E_CLRNOTAVAILABLE|CLR은 프로세스에 로드 되지 않았습니다 또는 CLR 중인 상태를 관리 코드를 실행 하거나 호출을 처리할 수 없습니다.|  
 |HOST_E_TIMEOUT|호출 시간이 초과 되었습니다.|  
 |HOST_E_NOT_OWNER|호출자에 게 잠금을 소유 하지 않습니다.|  
@@ -67,7 +55,7 @@ HRESULT SetActionOnFailure (
 |E_INVALIDARG|지정된 된 작업에 대 한 정책 작업을 설정할 수 없습니다 또는 작업에 대 한 정책 작업이 잘못 지정 되었습니다.|  
   
 ## <a name="remarks"></a>설명  
- 기본적으로 CLR 즉, 메모리 리소스를 할당 하지 못하면 예외를 throw 합니다. `SetActionOnFailure`호스트를 정책 작업을 실패를 지정 하 여이 동작을 재정의할 수 있습니다. 다음 표에서 조합을 보여 줍니다. [EClrFailure](../../../../docs/framework/unmanaged-api/hosting/eclrfailure-enumeration.md) 및 [EPolicyAction](../../../../docs/framework/unmanaged-api/hosting/epolicyaction-enumeration.md) 지원 되는 값입니다. (에서 FAIL_ 접두사를 생략 하는 [EClrFailure](../../../../docs/framework/unmanaged-api/hosting/eclrfailure-enumeration.md) 값입니다.)  
+ 기본적으로 CLR 즉, 메모리 리소스를 할당 하지 못하면 예외를 throw 합니다. `SetActionOnFailure` 호스트를 정책 작업을 실패를 지정 하 여이 동작을 재정의할 수 있습니다. 다음 표에서 조합을 보여 줍니다. [EClrFailure](../../../../docs/framework/unmanaged-api/hosting/eclrfailure-enumeration.md) 및 [EPolicyAction](../../../../docs/framework/unmanaged-api/hosting/epolicyaction-enumeration.md) 지원 되는 값입니다. (에서 FAIL_ 접두사를 생략 하는 [EClrFailure](../../../../docs/framework/unmanaged-api/hosting/eclrfailure-enumeration.md) 값입니다.)  
   
 ||NonCriticalResource|CriticalResource|FatalRuntime|OrphanedLock|StackOverflow|AccessViolation|CodeContract|  
 |-|-------------------------|----------------------|------------------|------------------|-------------------|---------------------|------------------|  
@@ -89,7 +77,7 @@ HRESULT SetActionOnFailure (
   
  **라이브러리:** MSCorEE.dll에 리소스로 포함  
   
- **.NET framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>참고 항목  
  [EClrFailure 열거형](../../../../docs/framework/unmanaged-api/hosting/eclrfailure-enumeration.md)  

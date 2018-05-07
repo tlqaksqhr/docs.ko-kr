@@ -1,24 +1,12 @@
 ---
 title: 워크플로 호스팅 옵션
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 37bcd668-9c5c-4e7c-81da-a1f1b3a16514
-caps.latest.revision: 3
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 3f022a5162ab8624d0c696efde6416484e77e874
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.openlocfilehash: 7713044e40532c431d090b1cb1795876ead2a899
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="workflow-hosting-options"></a>워크플로 호스팅 옵션
 대부분의 Windows WF (Workflow Foundation) 샘플 콘솔 응용 프로그램에서 호스트 되는 워크플로 사용 하지만이 실제 워크플로에 실질적으로 시나리오는 아닙니다. 실제 비즈니스 응용 프로그램의 워크플로는 영구 프로세스, 즉 개발자가 작성한 Windows 서비스나 [!INCLUDE[iisver](../../../includes/iisver-md.md)] 또는 AppFabric 같은 서버 응용 프로그램에서 호스트됩니다. 이러한 방법에는 다음과 같은 차이가 있습니다.  

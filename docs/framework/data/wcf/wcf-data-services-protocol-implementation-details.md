@@ -1,24 +1,12 @@
 ---
-title: "WCF Data Services 프로토콜 구현 정보"
-ms.custom: 
+title: WCF Data Services 프로토콜 구현 정보
 ms.date: 03/30/2017
-ms.prod: .net-framework-oob
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 712d689b-fada-4cbb-bcdb-d65a3ef83b4c
-caps.latest.revision: "2"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 1f5f723ddf5c81550661c6b96de77b35984b1eeb
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 82218f1f8e14c9909d8b617c66b1f18a28e4dcee
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="wcf-data-services-protocol-implementation-details"></a>WCF Data Services 프로토콜 구현 정보
 ## <a name="odata-protocol-implementation-details"></a>OData 프로토콜 구현 정보  

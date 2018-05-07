@@ -1,27 +1,15 @@
 ---
-title: "시작"
-ms.custom: 
+title: 시작
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: db8a557a-fef8-4f4f-bb91-8cff7250ee25
-caps.latest.revision: "2"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 6cea3468732367a7c179528601327f0110c0e38c
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 2358869d90baa82d4d51206b4ec1915a60b9a0f3
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="getting-started"></a>시작
 사용 하 여 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]를 사용할 수 있습니다는 [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)] 기술 SQL 액세스 하는 메모리 내 컬렉션에 액세스 하는 것 처럼 데이터베이스입니다.  

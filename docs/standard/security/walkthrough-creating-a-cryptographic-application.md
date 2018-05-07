@@ -1,13 +1,7 @@
 ---
-title: "연습: 암호화 응용 프로그램 만들기"
-ms.custom: 
+title: '연습: 암호화 응용 프로그램 만들기'
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -16,18 +10,13 @@ helpviewer_keywords:
 - cryptography [NET Framework], cryptographic application example
 - cryptography [NET Framework], application example
 ms.assetid: abf48c11-1e72-431d-9562-39cf23e1a8ff
-caps.latest.revision: "17"
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 869d35a15a028e6df09dea281ac653ab8b9a28d6
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 77debed932b78ae0aa1d8eebf54bd2d3bfbfea7a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="walkthrough-creating-a-cryptographic-application"></a>연습: 암호화 응용 프로그램 만들기
 이 연습에서는 콘텐츠를 암호화 및 암호 해독하는 방법을 보여 줍니다. 코드 예제는 Windows Forms 응용 프로그램용으로 설계되었습니다. 이 응용 프로그램은 스마트 카드 사용과 같은 실제 시나리오를 보여 주지 않습니다. 대신, 암호화 및 암호 해독의 기초를 보여 줍니다.  
@@ -55,7 +44,7 @@ ms.lasthandoff: 12/23/2017
 |공개 키 가져오기|XML 파일의 키를 키 컨테이너에 로드합니다.|  
 |응용 프로그램 테스트|이 응용 프로그램을 테스트하기 위한 절차를 나열합니다.|  
   
-## <a name="prerequisites"></a>필수 구성 요소  
+## <a name="prerequisites"></a>전제 조건  
  이 연습을 완료하려면 다음 구성 요소가 필요합니다.  
   
 -   <xref:System.IO> 및 <xref:System.Security.Cryptography> 네임스페이스에 대한 참조  
@@ -63,7 +52,7 @@ ms.lasthandoff: 12/23/2017
 ## <a name="creating-a-windows-forms-application"></a>Windows Forms 응용 프로그램 만들기  
  이 연습의 대다수 코드 예제는 단추 컨트롤에 대한 이벤트 처리기로 설계되었습니다. 다음 표에서는 샘플 응용 프로그램에 필요한 컨트롤 및 코드 예제와 일치하는 데 필요한 이름을 보여 줍니다.  
   
-|Control|name|텍스트 속성(필요에 따라)|  
+|Control|이름|텍스트 속성(필요에 따라)|  
 |-------------|----------|---------------------------------|  
 |<xref:System.Windows.Forms.Button>|`buttonEncryptFile`|파일 암호화|  
 |<xref:System.Windows.Forms.Button>|`buttonDecryptFile`|파일 암호 해독|  

@@ -1,10 +1,6 @@
 ---
-title: "&lt;선택을 취소&gt; 요소에 대 한 &lt;appSettings&gt;"
+title: '&lt;선택을 취소&gt; 요소에 대 한 &lt;appSettings&gt;'
 ms.date: 05/01/2017
-ms.prod: .net-framework
-ms.technology:
-- dotnet-clr
-ms.topic: article
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/appSettings/clear
 helpviewer_keywords:
@@ -13,14 +9,11 @@ helpviewer_keywords:
 ms.assetid: 6d18c7be-27db-438b-8fb5-765d396b0b7b
 author: guardrex
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 54479cab9abc2c1a107cd055341404c0fe1308fa
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 525818309ddc142fdb3ad65ce841ea58c1d635a2
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="clear-element-for-appsettings"></a>\<지우기 > 요소에 대 한 \<g s >
 
@@ -52,7 +45,7 @@ ms.lasthandoff: 12/22/2017
 
 없음
 
-## <a name="example"></a>예
+## <a name="example"></a>예제
 
 다음 예제에서는 사용자 지정 구성 설정의 선택을 취소 하는 방법을 보여 줍니다.
 
@@ -62,6 +55,6 @@ ms.lasthandoff: 12/22/2017
 </appSettings>
 ```
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참고자료
 
 [.NET Framework에 대 한 구성 파일 스키마](~/docs/framework/configure-apps/file-schema/index.md)

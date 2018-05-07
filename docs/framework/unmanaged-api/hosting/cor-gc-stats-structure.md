@@ -1,14 +1,6 @@
 ---
-title: "COR_GC_STATS 구조체"
-ms.custom: 
+title: COR_GC_STATS 구조체
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - COR_GC_STATS
 api_location:
@@ -22,17 +14,13 @@ helpviewer_keywords:
 ms.assetid: 8d4ff73e-739b-40f6-9349-359fbc99c2f9
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 02a775be4976760b354a492e7252a67ef04eace9
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 009f1482de6e1daea21766300b4fb6a3ab0ffc8c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="corgcstats-structure"></a>COR_GC_STATS 구조체
 공용 언어 런타임 (CLR)의 가비지 수집 메커니즘에 대 한 통계를 제공합니다.  
@@ -95,7 +83,7 @@ pCLRGCManager->GetStats(&GCStats);
   
  **라이브러리:** MSCorEE.dll에 리소스로 포함  
   
- **.NET framework 버전:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>참고 항목  
  [호스팅 구조체](../../../../docs/framework/unmanaged-api/hosting/hosting-structures.md)  

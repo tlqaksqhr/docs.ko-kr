@@ -1,13 +1,6 @@
 ---
-title: "라우트된 이벤트를 처리된 것으로 표시 및 클래스 처리"
-ms.custom: 
+title: 라우트된 이벤트를 처리된 것으로 표시 및 클래스 처리
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - tunneling events [WPF]
 - class listeners [WPF]
@@ -24,16 +17,11 @@ helpviewer_keywords:
 - events [WPF], suppressing
 - bubbling events [WPF]
 ms.assetid: 5e745508-4861-4b48-b5f6-5fc7ce5289d2
-caps.latest.revision: "19"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: b2c9a550e1423acb37da9645d09cdb4ccefcea66
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 2d696c85be0f46c5f08e1770f0d695dbb4d50cb9
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="marking-routed-events-as-handled-and-class-handling"></a>라우트된 이벤트를 처리된 것으로 표시 및 클래스 처리
 라우트된 이벤트의 처리기는 이벤트 데이터 내에서 이벤트를 처리된 것으로 표시할 수 있습니다. 이벤트를 처리하면 경로가 효과적으로 단축됩니다. 클래스 처리는 라우트된 이벤트를 통해 지원되는 프로그래밍 개념입니다. 클래스 처리기는 클래스의 모든 인스턴스에서 가장 먼저 호출되는 처리기를 사용하여 라우트된 특정 이벤트를 클래스 수준에서 처리할 수 있습니다.  
@@ -41,7 +29,7 @@ ms.lasthandoff: 12/22/2017
 
   
 <a name="prerequisites"></a>   
-## <a name="prerequisites"></a>필수 구성 요소  
+## <a name="prerequisites"></a>전제 조건  
  이 항목에서는 [라우트된 이벤트 개요](../../../../docs/framework/wpf/advanced/routed-events-overview.md)에 소개된 개념에 대해 설명합니다.  
   
 <a name="When_to_Mark_Events_as_Handled"></a>   
@@ -62,7 +50,7 @@ ms.lasthandoff: 12/22/2017
   
 <a name="Class_Handlers_and_Instance_Handlers"></a>   
 ## <a name="class-handlers-and-instance-handlers"></a>클래스 처리기 및 인스턴스 처리기  
- 라우트된 이벤트에서는 클래스 수신기와 인스턴스 수신기라는 두 가지 종류의 이벤트 수신기를 사용합니다. 클래스 수신기 형식 특정 호출 하기 때문에 존재 <xref:System.Windows.EventManager> [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] ,<xref:System.Windows.EventManager.RegisterClassHandler%2A>, 정적 생성자에서 요소 기본 클래스에서 클래스 처리기 가상 메서드를 재정의 했기 합니다. 인스턴스 수신기를 하나 이상의 처리기가 연결 해당 라우트된 이벤트를 호출 하 여 특정 클래스 인스턴스/요소는 <xref:System.Windows.UIElement.AddHandler%2A>합니다. 기존 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 라우트된 이벤트를 호출할 <xref:System.Windows.UIElement.AddHandler%2A> 의 일부로 [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] 이벤트 래퍼 {}를 추가 및 제거 하는 이벤트의 {} 구현을 간단한 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 특성을 통해 이벤트 처리기 연결의 메커니즘 구문을 사용 합니다. 따라서 간단한에도 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 사용는 <xref:System.Windows.UIElement.AddHandler%2A> 호출 합니다.  
+ 라우트된 이벤트에서는 클래스 수신기와 인스턴스 수신기라는 두 가지 종류의 이벤트 수신기를 사용합니다. 클래스 수신기 형식 특정 호출 하기 때문에 존재 <xref:System.Windows.EventManager> [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] ,<xref:System.Windows.EventManager.RegisterClassHandler%2A>, 정적 생성자에서 요소 기본 클래스에서 클래스 처리기 가상 메서드를 재정의 했기 합니다. 인스턴스 수신기를 하나 이상의 처리기가 연결 해당 라우트된 이벤트를 호출 하 여 특정 클래스 인스턴스/요소는 <xref:System.Windows.UIElement.AddHandler%2A>합니다. 기존 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 라우트된 이벤트를 호출할 <xref:System.Windows.UIElement.AddHandler%2A> 의 일부로 [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] 이벤트 래퍼 추가{} 제거{} 는 이벤트의 구현을 간단한 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 연결의 메커니즘 이벤트 처리기 특성 구문을 통해 활성화 됩니다. 따라서 간단한에도 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 사용는 <xref:System.Windows.UIElement.AddHandler%2A> 호출 합니다.  
   
  시각적 트리 내에 있는 요소는 등록된 처리기 구현이 있는지 확인됩니다. 이 처리기는 해당 라우트된 이벤트의 라우팅 전략 형식에 내재된 순서에 따라 경로에서 호출될 수 있습니다. 예를 들어 라우트된 버블링 이벤트는 라우트된 이벤트를 발생시킨 동일한 요소에 연결된 처리기를 먼저 호출합니다. 그런 다음 라우트된 이벤트는 다음 부모 요소로 “버블링”되며 응용 프로그램 루트 요소에 도달할 때까지 이 동작이 계속 수행됩니다.  
   
@@ -99,7 +87,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="deliberately-suppressing-input-events-for-control-compositing"></a>복합 컨트롤에 대한 입력 이벤트를 의도적으로 억제  
  라우트된 이벤트의 클래스 처리는 입력 이벤트 및 복합 컨트롤을 사용하는 시나리오에 주로 사용됩니다. 정의에 따라 복합 컨트롤은 여러 개의 실용적인 컨트롤이나 컨트롤 기본 클래스로 구성됩니다. 컨트롤 작성자가 전체 컨트롤을 단일 이벤트 소스로 보고하기 위해서 각 하위 구성 요소에서 발생할 수 있는 모든 가능한 입력 이벤트를 결합하려는 경우가 많습니다. 경우에 따라서는 컨트롤 작성자가 구성 요소 전체에서 이벤트를 억제하거나, 더 많은 정보를 제공하거나 더 구체적인 동작을 수행하는 구성 요소 정의 이벤트를 대체하는 경우가 있습니다. 모든 구성 요소를 만든 즉시 볼 수 있는 대표적인 예 어떻게는 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] <xref:System.Windows.Controls.Button> 결국로 확인 되는 직관적인 이벤트를 모든 마우스 이벤트를 처리:는 <xref:System.Windows.Controls.Primitives.ButtonBase.Click> 이벤트입니다.  
   
- <xref:System.Windows.Controls.Button> 기본 클래스 (<xref:System.Windows.Controls.Primitives.ButtonBase>)에서 파생 <xref:System.Windows.Controls.Control> 차례로에서 파생 된 <xref:System.Windows.FrameworkElement> 및 <xref:System.Windows.UIElement>, 많은 컨트롤 입력된 처리에 사용할 수 없으면 필요한 이벤트 인프라 및는 <xref:System.Windows.UIElement> 수준입니다. 특히, <xref:System.Windows.UIElement> 일반 처리 <xref:System.Windows.Input.Mouse> 해당 경계 내에서 마우스 커서에 대 한 적중 횟수 테스트 처리 하는 가장 일반적인에 대 한 개별 이벤트를 제공 하는 이벤트 단추와 같은 작업 <xref:System.Windows.UIElement.MouseLeftButtonDown>합니다. <xref:System.Windows.UIElement>빈 가상 제공 <xref:System.Windows.UIElement.OnMouseLeftButtonDown%2A> 에 대해 미리 등록된 클래스 처리기로 <xref:System.Windows.UIElement.MouseLeftButtonDown>, 및 <xref:System.Windows.Controls.Primitives.ButtonBase> 을 사용 하면 재정의 합니다. 마찬가지로, <xref:System.Windows.Controls.Primitives.ButtonBase> 사용 하 여 클래스에 대 한 처리기 <xref:System.Windows.UIElement.MouseLeftButtonUp>합니다. 를 전달 하는 이벤트 데이터는 재정의 구현은 표시 하는 <xref:System.Windows.RoutedEventArgs> 설정 처리 인스턴스 <xref:System.Windows.RoutedEventArgs.Handled%2A> 를 `true`, 않으며 동일한 이벤트 데이터를 다른 클래스 처리기에 대 한 경로가의 나머지 부분에서는 따라 및 또한를 인스턴스 처리기 또는 이벤트 setter 합니다. 또한는 <xref:System.Windows.Controls.Primitives.ButtonBase.OnMouseLeftButtonUp%2A> 재정의 다음으로 발생시킬지는 <xref:System.Windows.Controls.Primitives.ButtonBase.Click> 이벤트입니다. 대부분의 수신기에 대 한 최종 결과 됩니다는 <xref:System.Windows.UIElement.MouseLeftButtonDown> 및 <xref:System.Windows.UIElement.MouseLeftButtonUp> 이벤트 "사라지고"으로 대체 됩니다 <xref:System.Windows.Controls.Primitives.ButtonBase.Click>, 알려진이 이벤트가 생성 된 true 단추와 일부 하지에서 더 많은 의미를 포함 하는 이벤트 복합 단추 또는 다른 요소에서 완전히 피스 합니다.  
+ <xref:System.Windows.Controls.Button> 기본 클래스 (<xref:System.Windows.Controls.Primitives.ButtonBase>)에서 파생 <xref:System.Windows.Controls.Control> 차례로에서 파생 된 <xref:System.Windows.FrameworkElement> 및 <xref:System.Windows.UIElement>, 많은 컨트롤 입력된 처리에 사용할 수 없으면 필요한 이벤트 인프라 및는 <xref:System.Windows.UIElement> 수준입니다. 특히, <xref:System.Windows.UIElement> 일반 처리 <xref:System.Windows.Input.Mouse> 해당 경계 내에서 마우스 커서에 대 한 적중 횟수 테스트 처리 하는 가장 일반적인에 대 한 개별 이벤트를 제공 하는 이벤트 단추와 같은 작업 <xref:System.Windows.UIElement.MouseLeftButtonDown>합니다. <xref:System.Windows.UIElement> 빈 가상 제공 <xref:System.Windows.UIElement.OnMouseLeftButtonDown%2A> 에 대해 미리 등록된 클래스 처리기로 <xref:System.Windows.UIElement.MouseLeftButtonDown>, 및 <xref:System.Windows.Controls.Primitives.ButtonBase> 을 사용 하면 재정의 합니다. 마찬가지로, <xref:System.Windows.Controls.Primitives.ButtonBase> 사용 하 여 클래스에 대 한 처리기 <xref:System.Windows.UIElement.MouseLeftButtonUp>합니다. 를 전달 하는 이벤트 데이터는 재정의 구현은 표시 하는 <xref:System.Windows.RoutedEventArgs> 설정 처리 인스턴스 <xref:System.Windows.RoutedEventArgs.Handled%2A> 를 `true`, 않으며 동일한 이벤트 데이터를 다른 클래스 처리기에 대 한 경로가의 나머지 부분에서는 따라 및 또한를 인스턴스 처리기 또는 이벤트 setter 합니다. 또한는 <xref:System.Windows.Controls.Primitives.ButtonBase.OnMouseLeftButtonUp%2A> 재정의 다음으로 발생시킬지는 <xref:System.Windows.Controls.Primitives.ButtonBase.Click> 이벤트입니다. 대부분의 수신기에 대 한 최종 결과 됩니다는 <xref:System.Windows.UIElement.MouseLeftButtonDown> 및 <xref:System.Windows.UIElement.MouseLeftButtonUp> 이벤트 "사라지고"으로 대체 됩니다 <xref:System.Windows.Controls.Primitives.ButtonBase.Click>, 알려진이 이벤트가 생성 된 true 단추와 일부 하지에서 더 많은 의미를 포함 하는 이벤트 복합 단추 또는 다른 요소에서 완전히 피스 합니다.  
   
 <a name="WorkingAroundEventSuppressionByControls"></a>   
 ### <a name="working-around-event-suppression-by-controls"></a>컨트롤에서 억제하는 이벤트 문제 해결  

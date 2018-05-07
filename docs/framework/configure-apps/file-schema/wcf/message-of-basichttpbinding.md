@@ -2,11 +2,11 @@
 title: '&lt;basicHttpBinding&gt;의 &lt;message&gt;'
 ms.date: 03/30/2017
 ms.assetid: 51cdd329-6461-471a-8747-56c2299b61e5
-ms.openlocfilehash: f58fadbc3ac3f193232ad075c4973f6ac2f2d1f6
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
-ms.translationtype: HT
+ms.openlocfilehash: 7f543a91f1d11575df239267a6a8a0b244d99cb3
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ltmessagegt-of-ltbasichttpbindinggt"></a>&lt;basicHttpBinding&gt;의 &lt;message&gt;
 메시지 수준 보안 설정을 정의 [ \<basicHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md)합니다.  
@@ -40,7 +40,7 @@ ms.lasthandoff: 05/03/2018
   
 |값|설명|  
 |-----------|-----------------|  
-|UserName|-UserName 자격 증명으로 서버에 클라이언트를 인증 하도록 해야 합니다. 이 자격 증명을 사용 하 여 지정 해야는 [ \<clientCredentials >](../../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md)합니다.<br />-   [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 암호 다이제스트를 보내거나 암호를 사용 하 고 메시지 보안에 이러한 키를 사용 하 여 키를 파생 하는 지원 하지 않습니다. 따라서 [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)]에서는 UserName 자격 증명을 사용할 때 전송에 보안을 적용합니다. `basicHttpBinding`의 경우 SSL 채널을 설정해야 합니다.|  
+|UserName|-UserName 자격 증명으로 서버에 클라이언트를 인증 하도록 해야 합니다. 이 자격 증명을 사용 하 여 지정 해야는 [ \<clientCredentials >](../../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md)합니다.<br />WCF는 암호 다이제스트를 보내거나 암호를 사용 하 고 메시지 보안에 이러한 키를 사용 하 여 키를 파생 지원 하지 않습니다. 따라서 WCF UserName 자격 증명을 사용 하는 경우 전송에 보안을 적용 합니다. `basicHttpBinding`의 경우 SSL 채널을 설정해야 합니다.|  
 |인증서|클라이언트가 인증서를 사용하여 서버의 인증을 받도록 요구합니다. 클라이언트 자격 증명을이 예에서 사용 하 여 지정 해야 [ \<clientCredentials >](../../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md) 및 [ \<clientCertificate >](../../../../../docs/framework/configure-apps/file-schema/wcf/clientcertificate-of-servicecredentials.md)합니다. 또한 메시지 보안 모드를 사용하는 경우 서비스 인증서를 사용하여 클라이언트를 구축해야 합니다. 서비스 자격 증명을이 예에서 사용 하 여 지정 해야 <xref:System.ServiceModel.Description.ClientCredentials> 클래스 또는 `ClientCredentials` 동작 요소는 서비스를 지정 하 고 인증서를 사용 하 여 [ \<serviceCertificate >](../../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md)합니다.|  
   
 ### <a name="child-elements"></a>자식 요소  

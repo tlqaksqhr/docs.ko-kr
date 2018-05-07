@@ -1,27 +1,15 @@
 ---
-title: "COM+ 서비스 모델 구성 도구(ComSvcConfig.exe)"
-ms.custom: 
+title: COM+ 서비스 모델 구성 도구(ComSvcConfig.exe)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - Windows Communication Foundation, COM+ integration
 - WCF, COM+ integration
 ms.assetid: 7717c6c2-85fc-418b-a8ed-bad8e61cec5c
-caps.latest.revision: "15"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 40e7644ade32f245772a8971cf0693683b980952
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: db4518a66c54574f498c4657e25a29676f0f720a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="com-service-model-configuration-tool-comsvcconfigexe"></a>COM+ 서비스 모델 구성 도구(ComSvcConfig.exe)
 COM+ 서비스 모델 구성 명령줄 도구(ComSvcConfig.exe)를 사용하면 COM+ 인터페이스를 웹 서비스로 노출하도록 구성할 수 있습니다.  
@@ -55,11 +43,11 @@ ComSvcConfig.exe /install | /uninstall | /list [/application:<ApplicationID | Ap
   
 |옵션|설명|  
 |------------|-----------------|  
-|`/application:`\< *ApplicationID* &#124; *ApplicationName*\>|구성할 COM+ 응용 프로그램을 지정합니다.<br /><br /> 약식은 `/a`입니다.|  
-|`/contract:`\< *ClassID* &#124; *ProgID* &#124; \*,*InterfaceID* &#124; *InterfaceName* &#124;\*\>|서비스의 계약으로 구성할 COM+ 구성 요소 및 인터페이스를 지정합니다.<br /><br /> 약식은 `/c`입니다.<br /><br /> 하지만 와일드 카드 문자 (\*) 구성 요소 및 인터페이스 이름을 지정할 때 사용할 수 권장를 사용 하지 않는에 원하지 않은 인터페이스가 노출 될 수 있으므로 합니다.|  
-|`/hosting:`\< *complus* &#124; *되었습니다*\>|COM+ 호스팅 모드 또는 웹 호스팅 모드를 사용할지 지정합니다.<br /><br /> 약식은 `/h`입니다.<br /><br /> COM+ 호스팅 모드를 사용하려면 COM+ 응용 프로그램을 명시적으로 활성화해야 합니다. 웹 호스팅 모드를 사용하면 필요에 따라 COM+ 응용 프로그램을 자동으로 활성화할 수 있습니다. COM+ 응용 프로그램이 라이브러리 응용 프로그램인 경우 IIS(인터넷 정보 서비스) 프로세스에서 실행됩니다. COM+ 응용 프로그램이 서버 응용 프로그램인 경우 Dllhost.exe 프로세스에서 실행됩니다.|  
-|`/webSite:`\< *WebsiteName*\>|웹 호스팅 모드를 사용할 때 호스팅할 웹 사이트를 지정합니다. `/hosting` 플래그를 참조하십시오.<br /><br /> 약식은 `/w`입니다.<br /><br /> 웹 사이트가 지정되지 않은 경우에는 기본 웹 사이트가 사용됩니다.|  
-|`/webDirectory:`\< *WebDirectoryName*\>|웹 호스팅을 사용할 때 호스팅할 가상 디렉터리를 지정합니다. `/hosting` 플래그를 참조하십시오.<br /><br /> 약식은 `/d`입니다.|  
+|`/application:` \<*ApplicationID* &#124; *ApplicationName*\>|구성할 COM+ 응용 프로그램을 지정합니다.<br /><br /> 약식은 `/a`입니다.|  
+|`/contract:` \<*ClassID* &#124; *ProgID* &#124; \*,*InterfaceID* &#124; *InterfaceName*    &#124; \*\>|서비스의 계약으로 구성할 COM+ 구성 요소 및 인터페이스를 지정합니다.<br /><br /> 약식은 `/c`입니다.<br /><br /> 하지만 와일드 카드 문자 (\*) 구성 요소 및 인터페이스 이름을 지정할 때 사용할 수 권장를 사용 하지 않는에 원하지 않은 인터페이스가 노출 될 수 있으므로 합니다.|  
+|`/hosting:` \<*complus* &#124; *되었습니다* \>|COM+ 호스팅 모드 또는 웹 호스팅 모드를 사용할지 지정합니다.<br /><br /> 약식은 `/h`입니다.<br /><br /> COM+ 호스팅 모드를 사용하려면 COM+ 응용 프로그램을 명시적으로 활성화해야 합니다. 웹 호스팅 모드를 사용하면 필요에 따라 COM+ 응용 프로그램을 자동으로 활성화할 수 있습니다. COM+ 응용 프로그램이 라이브러리 응용 프로그램인 경우 IIS(인터넷 정보 서비스) 프로세스에서 실행됩니다. COM+ 응용 프로그램이 서버 응용 프로그램인 경우 Dllhost.exe 프로세스에서 실행됩니다.|  
+|`/webSite:` \<*WebsiteName*\>|웹 호스팅 모드를 사용할 때 호스팅할 웹 사이트를 지정합니다. `/hosting` 플래그를 참조하십시오.<br /><br /> 약식은 `/w`입니다.<br /><br /> 웹 사이트가 지정되지 않은 경우에는 기본 웹 사이트가 사용됩니다.|  
+|`/webDirectory:` \<*WebDirectoryName*\>|웹 호스팅을 사용할 때 호스팅할 가상 디렉터리를 지정합니다. `/hosting` 플래그를 참조하십시오.<br /><br /> 약식은 `/d`입니다.|  
 |`/mex`|서비스에서 계약 정의를 검색하려는 클라이언트를 지원하기 위해 기본 서비스 구성에 MEX(메타데이터 교환) 서비스 끝점을 추가합니다.<br /><br /> 약식은 `/x`입니다.|  
 |`/id`|응용 프로그램, 구성 요소 및 인터페이스 정보를 ID로 표시합니다.<br /><br /> 약식은 `/k`입니다.|  
 |`/nologo`|ComSvcConfig.exe에서 로고가 표시되지 않도록 합니다.<br /><br /> 약식은 `/n`입니다.|  

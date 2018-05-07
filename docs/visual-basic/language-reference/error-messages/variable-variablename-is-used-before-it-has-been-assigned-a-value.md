@@ -1,28 +1,19 @@
 ---
-title: 변수 &#39; &lt;variablename&gt;&#39; 값이 할당 되기 전에 사용 되었습니다.
+title: 변수 &#39; &lt;variablename&gt; &#39; 값이 할당 되기 전에 사용 되었습니다.
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vbc42104
 - BC42104
 helpviewer_keywords:
 - BC42104
 ms.assetid: 6909aa0b-b4a1-46f5-a18c-ba3e565c1dd8
-caps.latest.revision: 10
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 201667c250e15bb9af73e64e2d8c924c1952d1be
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: d314f952bd6e11adaac642ba63ed292f48cda805
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="variable-39ltvariablenamegt39-is-used-before-it-has-been-assigned-a-value"></a>변수 &#39; &lt;variablename&gt;&#39; 값이 할당 되기 전에 사용 되었습니다.
+# <a name="variable-39ltvariablenamegt39-is-used-before-it-has-been-assigned-a-value"></a>변수 &#39; &lt;variablename&gt; &#39; 값이 할당 되기 전에 사용 되었습니다.
 변수 '\<variablename >' 값이 할당 되기 전에 사용 되었습니다. 런타임에 null 참조 예외가 발생할 수 있습니다.  
   
  응용 프로그램에 코드 값을 할당 하기 전에 변수를 읽는 통해 하나 이상의 경로가 있습니다.  

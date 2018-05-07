@@ -1,28 +1,18 @@
 ---
-title: "호스팅 전역 정적 함수"
-ms.custom: 
+title: 호스팅 전역 정적 함수
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 helpviewer_keywords:
 - global static functions [.NET Framework hosting]
 - hosting global static functions [.NET Framework]
 - unmanaged global static functions [.NET Framework], hosting
 ms.assetid: 4e4ad69d-9343-4f6a-aed8-fe0335a3b979
-caps.latest.revision: "12"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: d4955da9abe91d10af70934a24e4d2bda954b487
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: dd0bdee6127aca259ae5ca1fe1aa8ecc574662b7
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="hosting-global-static-functions"></a>호스팅 전역 정적 함수
 이 섹션에서는 호스팅 Api는.NET Framework에서 사용 되는 관리 되지 않는 호스팅 함수에 설명 합니다.  

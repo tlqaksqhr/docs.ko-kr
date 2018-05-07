@@ -1,13 +1,6 @@
 ---
-title: "연습: 백그라운드에서 작업 실행"
-ms.custom: 
+title: '연습: 백그라운드에서 작업 실행'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -20,16 +13,11 @@ helpviewer_keywords:
 - threading [Windows Forms], background operations
 - background operations
 ms.assetid: 1b9a4e0a-f134-48ff-a1be-c461446a31ba
-caps.latest.revision: "11"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ca0892e9d384eefb0fec87a7717222fefb779d12
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 59447bb589eb019f81beb1db2ea254a9fe3a889e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="walkthrough-running-an-operation-in-the-background"></a>연습: 백그라운드에서 작업 실행
 완료하는 데 오랜 시간이 걸리는 작업이 있으며 사용자 인터페이스에서 지연이 발생되지 않게 하려는 경우 <xref:System.ComponentModel.BackgroundWorker> 클래스를 사용하여 다른 스레드에서 작업을 실행할 수 있습니다.  
@@ -46,7 +34,7 @@ ms.lasthandoff: 01/19/2018
     |단추|이름|텍스트|  
     |------------|----------|----------|  
     |`button1`|`startBtn`|**Start**|  
-    |`button2`|`cancelBtn`|**Cancel**|  
+    |`button2`|`cancelBtn`|**취소**|  
   
 2.  열기는 **도구 상자**, 클릭는 **구성 요소** 탭 한 다음 끌어는 <xref:System.ComponentModel.BackgroundWorker> 구성 요소를 폼입니다.  
   

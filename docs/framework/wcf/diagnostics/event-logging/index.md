@@ -1,31 +1,17 @@
 ---
 title: WCF에서 이벤트 로깅
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - event logging [WCF]
 ms.assetid: aac0530d-f44c-45a1-bada-e30e0677b41f
-caps.latest.revision: 22
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 4028772caef8e5c0301ab3a6a0bde2f180d821ca
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 78ad80188b8428bb718251045ef04ab803862a0f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="event-logging-in-wcf"></a>WCF에서 이벤트 로깅
-[!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)]에서는 Windows 이벤트 로그에 있는 내부 이벤트를 추적합니다.  
+Windows Communication Foundation (WCF)는 Windows 이벤트 로그에는 내부 이벤트를 추적합니다.  
   
 ## <a name="viewing-event-logs"></a>이벤트 로그 보기  
  이벤트 로깅은 기본적으로 활성화되며 비활성화 메커니즘이 없습니다. [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)]에서 기록된 이벤트는 이벤트 뷰어를 사용하여 볼 수 있습니다. 이 도구를 실행 하려면 클릭 **시작**, 클릭 **제어판**를 두 번 클릭 **관리 도구**, 두 번 클릭 하 고 **이벤트 뷰어**.  

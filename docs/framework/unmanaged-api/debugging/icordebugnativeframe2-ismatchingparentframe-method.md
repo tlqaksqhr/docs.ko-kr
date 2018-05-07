@@ -1,14 +1,6 @@
 ---
-title: "ICorDebugNativeFrame2::IsMatchingParentFrame 메서드"
-ms.custom: 
+title: ICorDebugNativeFrame2::IsMatchingParentFrame 메서드
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICorDebugNativeFrame2.IsMatchingParentFrame Method
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: d2ca20db-df22-4528-a0dd-a09ea62c8998
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: fc2d8eacb05e861290ad19a34c261943dc2959a1
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 39c0ea69a0922f5e0d25c98c21ec17a872b2f421
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="icordebugnativeframe2ismatchingparentframe-method"></a>ICorDebugNativeFrame2::IsMatchingParentFrame 메서드
 지정된 된 프레임의 현재 프레임 부모 인지 확인 합니다.  
@@ -65,7 +53,7 @@ HRESULT IsMatchingParentFrame([in] ICorDebugNativeFrame2
 ## <a name="exceptions"></a>예외  
   
 ## <a name="remarks"></a>설명  
- `IsMatchingParentFrame`반환 `true` 프레임 개체를 메서드에 전달 메서드가 호출 된 프레임 개체의 부모인 경우. 지정된 된 프레임의 자식이 아닌 프레임에서 메서드를 호출 하는 경우 오류가 반환 됩니다.  
+ `IsMatchingParentFrame` 반환 `true` 프레임 개체를 메서드에 전달 메서드가 호출 된 프레임 개체의 부모인 경우. 지정된 된 프레임의 자식이 아닌 프레임에서 메서드를 호출 하는 경우 오류가 반환 됩니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **플랫폼:** 참조 [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)합니다.  
@@ -74,7 +62,7 @@ HRESULT IsMatchingParentFrame([in] ICorDebugNativeFrame2
   
  **라이브러리:** CorGuids.lib  
   
- **.NET framework 버전:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET framework 버전:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>참고 항목  
  [ICorDebugNativeFrame2 인터페이스](../../../../docs/framework/unmanaged-api/debugging/icordebugnativeframe2-interface.md)  

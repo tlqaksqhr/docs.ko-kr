@@ -1,34 +1,20 @@
 ---
 title: 서비스 계약에서 데이터 전송 지정
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - service contracts [WCF], data transfer
 ms.assetid: 7c5a26c8-89c9-4bcb-a4bc-7131e6d01f0c
-caps.latest.revision: 38
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 852519dc1edc499511652f4027f4cd4eed6eef98
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 7423a44f7779c8e4ef75fc68e33eeb4ac48a660a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="specifying-data-transfer-in-service-contracts"></a>서비스 계약에서 데이터 전송 지정
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]는 메시징 인프라로 생각할 수 있습니다. 서비스 작업에서는 메시지를 받고 처리한 다음 보낼 수 있습니다. 메시지는 작업 계약을 사용하여 설명됩니다. 다음 계약을 예로 들 수 있습니다.  
+(WCF (Windows Communication Foundation)는 메시징 인프라로 생각할 수 있습니다. 서비스 작업에서는 메시지를 받고 처리한 다음 보낼 수 있습니다. 메시지는 작업 계약을 사용하여 설명됩니다. 다음 계약을 예로 들 수 있습니다.  
   
 ```csharp  
 [ServiceContract]  
@@ -65,7 +51,7 @@ float GetAirfare(string fromCity, string toCity, out string currency);
     Function GetAirfare(fromCity As String, toCity As String) As Double  
 ```  
   
- 또한 참조 매개 변수를 사용하여 요청 및 회신 메시지의 매개 변수 부분을 만들 수 있습니다. 매개 변수는 serialize할 수 있는, 즉 XML로 변환할 수 있는 형식이어야 합니다. 기본적으로 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서는 <xref:System.Runtime.Serialization.DataContractSerializer> 클래스라고 하는 구성 요소를 사용하여 이 변환을 수행합니다. `int`, `string`, `float` 및 `DateTime`과 같은 가장 기본적인 형식이 지원됩니다. 사용자 정의 형식에는 일반적으로 데이터 계약이 있어야 합니다. 자세한 내용은 참조 [를 사용 하 여 데이터 계약](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)합니다.  
+ 또한 참조 매개 변수를 사용하여 요청 및 회신 메시지의 매개 변수 부분을 만들 수 있습니다. 매개 변수는 serialize할 수 있는, 즉 XML로 변환할 수 있는 형식이어야 합니다. 기본적으로 WCF 사용 라는 구성 요소는 <xref:System.Runtime.Serialization.DataContractSerializer> 이 변환을 수행 하는 클래스입니다. `int`, `string`, `float` 및 `DateTime`과 같은 가장 기본적인 형식이 지원됩니다. 사용자 정의 형식에는 일반적으로 데이터 계약이 있어야 합니다. 자세한 내용은 참조 [를 사용 하 여 데이터 계약](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)합니다.  
   
 ```csharp
 public interface IAirfareQuoteService  
@@ -100,7 +86,7 @@ Public Interface IAirfareQuoteService
 End Interface  
 ```  
   
- `DataContractSerializer`는 사용자의 형식을 serialize하기에 적합하지 않은 경우도 있습니다. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서는 대체 serialization 엔진인 <xref:System.Xml.Serialization.XmlSerializer>를 지원하므로, 이 엔진을 사용하여 매개 변수를 serialize할 수도 있습니다. <xref:System.Xml.Serialization.XmlSerializer>를 통해 `XmlAttributeAttribute`와 같은 특성을 사용하여 결과 XML을 보다 효과적으로 제어할 수 있습니다. 특정 연산이나 전체 서비스에 <xref:System.Xml.Serialization.XmlSerializer>를 사용하려면 <xref:System.ServiceModel.XmlSerializerFormatAttribute> 특성을 연산이나 서비스에 적용합니다. 예를 들어:  
+ `DataContractSerializer`는 사용자의 형식을 serialize하기에 적합하지 않은 경우도 있습니다. WCF 지원 대체 serialization 엔진은 <xref:System.Xml.Serialization.XmlSerializer>, 매개 변수를 직렬화 하는 데 사용할 수 있습니다. <xref:System.Xml.Serialization.XmlSerializer>를 통해 `XmlAttributeAttribute`와 같은 특성을 사용하여 결과 XML을 보다 효과적으로 제어할 수 있습니다. 특정 연산이나 전체 서비스에 <xref:System.Xml.Serialization.XmlSerializer>를 사용하려면 <xref:System.ServiceModel.XmlSerializerFormatAttribute> 특성을 연산이나 서비스에 적용합니다. 예를 들어:  
   
 ```csharp  
 [ServiceContract]  
@@ -261,7 +247,7 @@ End Class
 ## <a name="describing-messages-by-using-streams"></a>스트림을 사용하여 메시지 설명  
  연산에서 메시지를 설명하는 또 다른 방법은 <xref:System.IO.Stream> 클래스 또는 작업 계약의 파생 클래스 중 하나를 사용하거나 메시지 계약 본문 멤버(이 경우 유일한 멤버여야 함)로 사용하는 것입니다. 들어오는 메시지의 경우 형식은 `Stream`이어야 하며, 파생 클래스는 사용할 수 없습니다.  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]는 serializer를 호출하지 않는 대신, 스트림에서 데이터를 검색하여 보내는 메시지에 직접 넣거나 들어오는 메시지에서 데이터를 검색하여 스트림에 직접 넣습니다. 다음 예제에서는 스트림의 사용 방법을 보여 줍니다.  
+ Serializer를 호출 하는 대신 WCF 스트림에서 데이터를 검색 하 고 보내는 메시지를 직접 넣습니다 또는 들어오는 메시지에서 데이터를 검색 하 고 스트림에 직접 넣습니다. 다음 예제에서는 스트림의 사용 방법을 보여 줍니다.  
   
 ```csharp  
 [OperationContract]  
@@ -477,7 +463,7 @@ End Interface
 ```  
   
 ### <a name="serialization-behaviors"></a>Serialization 동작  
- serializer가 특정 작업에 사용되고 있는지 여부에 따라 자동으로 연결되는 두 가지 동작, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 및 <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior>를 <xref:System.ServiceModel.Description.XmlSerializerOperationBehavior>에서 사용할 수 있습니다. 이러한 동작은 자동으로 적용되므로 일반적으로 사용자가 알아야 할 필요는 없습니다.  
+ WCF에서 사용할 수 있는 두 가지 동작의 <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior> 및 <xref:System.ServiceModel.Description.XmlSerializerOperationBehavior> 를 자동으로 연결 되는 serializer가 특정 작업에 대 한 사용에 따라 합니다. 이러한 동작은 자동으로 적용되므로 일반적으로 사용자가 알아야 할 필요는 없습니다.  
   
  그러나 `DataContractSerializerOperationBehavior`에는 serialization 프로세스를 사용자 지정하는 데 사용할 수 있는 `MaxItemsInObjectGraph`, `IgnoreExtensionDataObject` 및 `DataContractSurrogate` 속성이 있습니다. 처음 두 속성은 앞 단원에서 설명한 것과 의미가 같습니다. `DataContractSurrogate` 속성을 사용하여 serialization 프로세스를 사용자 지정하고 확장하는 데 필요한 강력한 메커니즘인 데이터 계약 서로게이트를 사용하도록 설정할 수 있습니다. 자세한 내용은 참조 [데이터 계약 서로게이트](../../../../docs/framework/wcf/extending/data-contract-surrogates.md)합니다.  
   
@@ -571,7 +557,7 @@ Dim serviceHost As ServiceHost = New ServiceHost(GetType(IDataService))
 ```  
   
 ### <a name="shared-type-serialization-object-graph-preservation-and-custom-serializers"></a>공유 형식 Serialization, 개체 그래프 유지 및 사용자 지정 Serializer  
- <xref:System.Runtime.Serialization.DataContractSerializer>는 .NET 형식 이름이 아니라 데이터 계약 이름을 사용하여 serialize합니다. 이러한 serialization 방식은 서비스 기반 아키텍처 개념과 일치하며, 연결 계약에 영향을 주지 않고 .NET 형식을 변경할 수 있는 등 유연성을 높여 줍니다. 드문 경우지만 실제 .NET 형식 이름을 serialize해야 하는 경우가 있으며, 이 경우 .NET Framework Remoting 기술과 유사한 클라이언트와 서버 간 밀접한 결합이 가능합니다. 일반적으로 .NET Framework Remoting에서 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]로 마이그레이션할 때 사용하는 드문 경우를 제외하고 이 방식은 권장되지 않습니다. 이 경우에는 <xref:System.Runtime.Serialization.NetDataContractSerializer> 클래스 대신 <xref:System.Runtime.Serialization.DataContractSerializer> 클래스를 사용해야 합니다.  
+ <xref:System.Runtime.Serialization.DataContractSerializer>는 .NET 형식 이름이 아니라 데이터 계약 이름을 사용하여 serialize합니다. 이러한 serialization 방식은 서비스 기반 아키텍처 개념과 일치하며, 연결 계약에 영향을 주지 않고 .NET 형식을 변경할 수 있는 등 유연성을 높여 줍니다. 드문 경우지만 실제 .NET 형식 이름을 serialize해야 하는 경우가 있으며, 이 경우 .NET Framework Remoting 기술과 유사한 클라이언트와 서버 간 밀접한 결합이 가능합니다. 이것이 하지 것이 좋을 제외 하 고 일반적으로.NET Framework remoting에서 WCF로 마이그레이션하는 경우에 발생 하는 드문 경우입니다. 이 경우에는 <xref:System.Runtime.Serialization.NetDataContractSerializer> 클래스 대신 <xref:System.Runtime.Serialization.DataContractSerializer> 클래스를 사용해야 합니다.  
   
  <xref:System.Runtime.Serialization.DataContractSerializer>는 일반적으로 개체 그래프를 개체 트리로 serialize합니다. 즉, 같은 개체를 두 번 이상 참조하는 경우 두 번 이상 serialize됩니다. `PurchaseOrder`와 `billTo`라고 하는 두 가지 주소 형식 필드가 있는 `shipTo` 인스턴스를 예로 들 수 있습니다. 두 필드가 같은 주소 인스턴스로 설정된 경우 serialization 및 deserialization 후 두 개의 동일한 주소 인스턴스가 생깁니다. <xref:System.Xml.Serialization.XmlSerializer> 및 `Style`에 대해 앞 단원에서 설명한 대로 `Use`에서 사용할 수 있는 레거시 SOAP 인코딩 표준을 제외하고, XML로 개체 그래프를 나타낼 표준 상호 운용 가능한 방법이 없기 때문에 이와 같이 수행됩니다. 개체 그래프를 트리로 serialize하면 순환 참조가 있는 그래프를 serialize할 수 없는 등의 단점이 있습니다. 상호 운용이 가능하지 않아도 실제 개체 그래프 serialization으로 전환해야 하는 경우도 있습니다. 이 작업은 <xref:System.Runtime.Serialization.DataContractSerializer>로 설정된 `preserveObjectReferences` 매개 변수를 사용하여 생성된 `true`를 사용하여 수행할 수 있습니다.  
   

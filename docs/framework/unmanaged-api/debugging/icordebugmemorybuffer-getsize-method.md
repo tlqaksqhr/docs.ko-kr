@@ -1,24 +1,14 @@
 ---
-title: "ICorDebugMemoryBuffer::GetSize 메서드"
-ms.custom: 
+title: ICorDebugMemoryBuffer::GetSize 메서드
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 ms.assetid: 9ffd5482-268e-4680-9fd1-bfb0b7d66450
-caps.latest.revision: "4"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 658fb2ce289b4b8cabfcf0cc2ea5f8dace2ec754
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: caf95e0b5c8d4ae942bb428f53d4e58313e0e78e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="icordebugmemorybuffergetsize-method"></a>ICorDebugMemoryBuffer::GetSize 메서드
 메모리 버퍼의 크기(바이트)를 가져옵니다.  
@@ -47,7 +37,7 @@ HRESULT GetSize(
   
  **라이브러리:** CorGuids.lib  
   
- **.NET framework 버전:**[!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
+ **.NET framework 버전:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
 ## <a name="see-also"></a>참고 항목  
  [ICorDebugMemoryBuffer 인터페이스](../../../../docs/framework/unmanaged-api/debugging/icordebugmemorybuffer-interface.md)  

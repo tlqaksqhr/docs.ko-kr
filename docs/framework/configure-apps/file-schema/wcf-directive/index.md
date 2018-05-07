@@ -2,14 +2,14 @@
 title: WCF 지시문 구문
 ms.date: 03/30/2017
 ms.assetid: e471b042-d5e3-491c-bc81-758655016a3a
-ms.openlocfilehash: 79656391324f6c4ad68ec23c6c905ad8a38c9952
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
-ms.translationtype: HT
+ms.openlocfilehash: 18cc3eda23154af143cdae5e3861242e20d64d50
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="wcf-directive-syntax"></a>WCF 지시문 구문
-컴파일러에 지시 하려면.svc 파일의 Windows Communication Foundation (WCF) 지시문에 의해 사용 되는 설정을 지정 합니다. 각 지시문에는 해당 지시문에만 관련되는 하나 이상의 특성(값과 쌍을 이룸)이 포함됩니다. [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)]에는 [@ServiceHost](../../../../../docs/framework/configure-apps/file-schema/wcf-directive/servicehost.md) 지시문만 있습니다.  
+컴파일러에 지시 하려면.svc 파일의 Windows Communication Foundation (WCF) 지시문에 의해 사용 되는 설정을 지정 합니다. 각 지시문에는 해당 지시문에만 관련되는 하나 이상의 특성(값과 쌍을 이룸)이 포함됩니다. WCF에는 [ @ServiceHost ](../../../../../docs/framework/configure-apps/file-schema/wcf-directive/servicehost.md) 지시문입니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
  [@ServiceHost](../../../../../docs/framework/configure-apps/file-schema/wcf-directive/servicehost.md)  

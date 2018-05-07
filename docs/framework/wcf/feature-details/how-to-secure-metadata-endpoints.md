@@ -1,34 +1,22 @@
 ---
 title: '방법: 메타데이터 끝점 보안 설정'
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 9f71b6ae-737c-4382-8d89-0a7b1c7e182b
-caps.latest.revision: 13
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload:
-- dotnet
-ms.openlocfilehash: 50a62366063123de9e1773b2926f79b76a1b1c3b
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 659291975902ec78c1484ac77f898b4486000e8d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-secure-metadata-endpoints"></a>방법: 메타데이터 끝점 보안 설정
 서비스의 메타데이터에는 악의적인 사용자가 활용할 수 있는 응용 프로그램에 대한 중요한 정보가 들어 있습니다. 또한 서비스의 소비자는 서비스의 메타데이터를 가져오기 위한 보안 메커니즘이 필요할 수도 있습니다. 따라서 보안 끝점을 사용하여 메타데이터를 게시해야 하는 경우가 있습니다.  
   
- 일반적으로 메타데이터 끝점의 보안은 응용 프로그램 끝점의 보안을 위해 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]에 정의된 표준 보안 메커니즘을 통해 이루어집니다. (자세한 내용은 참조 [보안 개요](../../../../docs/framework/wcf/feature-details/security-overview.md).)  
+ 메타 데이터 끝점은 일반적으로 응용 프로그램 끝점을 보호 하기 위한 Windows Communication Foundation (WCF)에 정의 된 표준 보안 메커니즘을 사용 하 여 보안 됩니다. (자세한 내용은 참조 [보안 개요](../../../../docs/framework/wcf/feature-details/security-overview.md).)  
   
  이 항목에서는 SSL(Secure Sockets Layer) 인증서 즉, HTTPS 끝점으로 보안되는 끝점을 만드는 방법에 대해 단계별로 설명합니다.  
   

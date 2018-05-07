@@ -1,27 +1,15 @@
 ---
-title: "DataReader를 사용하여 데이터 검색"
-ms.custom: 
+title: DataReader를 사용하여 데이터 검색
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 97afc121-fb8b-465b-bab3-6d844420badb
-caps.latest.revision: "3"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 60328d766a931abd7a1a3e9dc08c68928e01f2d2
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 0c78db5ce7a6a988e40718daca1d828096a734d2
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="retrieving-data-using-a-datareader"></a>DataReader를 사용하여 데이터 검색
 사용 하 여 데이터를 검색 하는 **DataReader** 의 인스턴스를 만들고는 **명령** 개체 어셈블리 한 후 한 **DataReader** 호출 하 여  **Command.ExecuteReader** 데이터 원본에서 행을 검색 합니다. 다음 예제에서는 사용 하 여는 **DataReader** 여기서 `reader` 유효한 DataReader 나타냅니다 및 `command` 유효한 명령 개체를 나타냅니다.  

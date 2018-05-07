@@ -1,28 +1,14 @@
 ---
-title: "바인딩 및 바인딩 요소"
-ms.custom: 
+title: 바인딩 및 바인딩 요소
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - binding elements [WCF]
 ms.assetid: 765ff77b-7682-4ea3-90eb-e4d751e37379
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 232d2d23ea88c834d2e28bae99cd2e001f6efac6
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 32b8b9e1fbb3ae16f4dd81620658569a9408057b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="bindings-and-binding-elements"></a>바인딩 및 바인딩 요소
 바인딩은 라고 하는 특수 구성 요소의 컬렉션입니다 *바인딩 요소의*, 클라이언트 때마다 서비스 런타임에 의해 평가 되 또는 서비스 끝점이 생성 되 고 있습니다. 한 바인딩 내에 있는 바인딩 요소의 형식과 순서는 끝점 채널 스택에서 프로토콜 및 전송 채널의 선택 및 스택 순서를 결정합니다.  
@@ -32,7 +18,7 @@ ms.lasthandoff: 12/22/2017
  바인딩에는 전송 바인딩 요소가 하나만 있어야 합니다. 각 전송 바인딩 요소는 기본 메시지 인코딩 바인딩 요소를 나타내며, 이러한 요소는 하나의 메시지 인코딩 바인딩 요소를 바인딩에 추가하여 재정의할 수 있습니다. 바인딩에는 전송 및 인코더 바인딩 요소 외에, 끝점 간에 SOAP 메시지를 보내고 서비스하는 데 필요한 기능을 함께 구현하는 여러 개의 프로토콜 바인딩 요소가 포함될 수 있습니다. 자세한 내용은 참조 [구성 서비스 및 클라이언트에 대 한 바인딩을 사용 하 여](../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)합니다.  
   
 ## <a name="extending-bindings-and-binding-elements"></a>바인딩 및 바인딩 요소 확장명  
- [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]에는 다양한 시나리오를 다루는 시스템 제공 바인딩이 포함되어 있습니다. (자세한 내용을 보려면 참조 [시스템 제공 바인딩](../../../../docs/framework/wcf/system-provided-bindings.md).) 그러나 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에 포함되지 않은 바인딩을 만들고 사용해야 하는 경우가 있을 수 있습니다. 다음 시나리오에서는 새 바인딩을 만들어야 합니다.  
+ Windows Communication Foundation (WCF)를 다양 한 시나리오를 다루는 시스템 제공 바인딩이 포함 되어 있습니다. (자세한 내용을 보려면 참조 [시스템 제공 바인딩](../../../../docs/framework/wcf/system-provided-bindings.md).) 그러나 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에 포함되지 않은 바인딩을 만들고 사용해야 하는 경우가 있을 수 있습니다. 다음 시나리오에서는 새 바인딩을 만들어야 합니다.  
   
 -   새 전송, 인코딩 또는 프로토콜 바인딩 요소와 같은 새 바인딩 요소를 사용하려면 해당 바인딩 요소를 포함하는 새 바인딩을 만들어야 합니다. 예를 들어 UDP 전송용 사용자 지정 `UdpTransportBindingElement`를 추가한 경우 새 바인딩을 만들어 사용해야 합니다. 사용 하 여이 동작을 수행 하는 방법에 대 한 내용은 <xref:System.ServiceModel.Channels.CustomBinding?displayProperty=nameWithType> 입력을 참조 하십시오. [사용자 지정 바인딩](../../../../docs/framework/wcf/extending/custom-bindings.md)합니다.  
   

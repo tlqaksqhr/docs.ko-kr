@@ -1,14 +1,6 @@
 ---
 title: 잉크 렌더링 사용자 지정
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-wpf
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -17,17 +9,11 @@ helpviewer_keywords:
 - ink [WPF], custom-rendering
 - classes [WPF], InkCanvas
 ms.assetid: 65c978a7-0ee0-454f-ac7f-b1bd2efecac5
-caps.latest.revision: 10
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: e8f7288d9d3b729ab9c38bc6b2afd603b4d6d1aa
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 2c627f757c1eccc37f57aea6880ffc8a362e5ddb
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="custom-rendering-ink"></a>잉크 렌더링 사용자 지정
 <xref:System.Windows.Ink.Stroke.DrawingAttributes%2A> 선의 속성을 사용 하면 크기, 색, 모양, 같은 선의 모양을 지정할 수 있지만 기능 이외의 모양을 사용자 지정 하려는 경우가 있을 수 있습니다 <xref:System.Windows.Ink.Stroke.DrawingAttributes%2A> 허용 합니다. 에어브러시, 오일 페인트 및 다른 많은 효과가 있는 모양을 렌더링하여 잉크 모양을 사용자 지정하려는 경우도 있을 수 있습니다. (WPF (Windows Presentation Foundation)를 사용 하면 사용자 지정 하는 사용자 지정을 구현 하 여 잉크를 렌더링 <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> 및 <xref:System.Windows.Ink.Stroke> 개체입니다.  

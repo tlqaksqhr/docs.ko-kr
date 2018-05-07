@@ -2,16 +2,16 @@
 title: WCF 구성 스키마
 ms.date: 03/30/2017
 ms.assetid: c282aeb5-91f0-4522-8e2f-704c1ef3651f
-ms.openlocfilehash: 147df2200017224bd20ad7eaca283f4dbcd08fb2
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
-ms.translationtype: HT
+ms.openlocfilehash: bcbc12d35dae59fcd43d5fbf2d4c936c8e4a4423
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="wcf-configuration-schema"></a>WCF 구성 스키마
-Windows Communication Foundation (WCF) 구성 요소는 구성할 수 있도록 [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 서비스 및 클라이언트 응용 프로그램입니다. [구성 편집기 도구(SvcConfigEditor.exe)](../../../../../docs/framework/wcf/configuration-editor-tool-svcconfigeditor-exe.md)를 사용하여 클라이언트 및 서비스에 대한 구성 파일을 만들고 수정할 수 있습니다. 구성 파일은 XML 형식이므로 텍스트 편집기를 사용하여 구성 파일을 수동으로 편집하려면 XML에 익숙해야 합니다. 그렇지 않으면 찾을 수 없는 XML 요소 태그나 특성과 같은 문제가 발생할 수 있습니다. XML 요소 태그 및 속성이 대소문자를 구분하기 때문입니다.  
+Windows Communication Foundation (WCF) 구성 요소를 사용 하 여 WCF 서비스 및 클라이언트 응용 프로그램을 구성할 수 있습니다. [구성 편집기 도구(SvcConfigEditor.exe)](../../../../../docs/framework/wcf/configuration-editor-tool-svcconfigeditor-exe.md)를 사용하여 클라이언트 및 서비스에 대한 구성 파일을 만들고 수정할 수 있습니다. 구성 파일은 XML 형식이므로 텍스트 편집기를 사용하여 구성 파일을 수동으로 편집하려면 XML에 익숙해야 합니다. 그렇지 않으면 찾을 수 없는 XML 요소 태그나 특성과 같은 문제가 발생할 수 있습니다. XML 요소 태그 및 속성이 대소문자를 구분하기 때문입니다.  
   
- [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 구성 시스템은 <xref:System.Configuration> 네임스페이스를 기반으로 합니다. 따라서 응용 프로그램 및 구성의 보안을 향상시키기 위해 구성 잠금, 암호화 및 병합과 같은 <xref:System.Configuration> 네임스페이스에서 제공하는 표준 기능을 모두 사용할 수 있습니다. 이러한 개념에 대한 자세한 내용은 다음 항목을 참조하세요.  
+ WCF 구성 시스템은 기반는 <xref:System.Configuration> 네임 스페이스입니다. 따라서 응용 프로그램 및 구성의 보안을 향상시키기 위해 구성 잠금, 암호화 및 병합과 같은 <xref:System.Configuration> 네임스페이스에서 제공하는 표준 기능을 모두 사용할 수 있습니다. 이러한 개념에 대한 자세한 내용은 다음 항목을 참조하세요.  
   
  [구성 정보 암호화](http://go.microsoft.com/fwlink/?LinkId=95337)  
   
@@ -22,7 +22,7 @@ Windows Communication Foundation (WCF) 구성 요소는 구성할 수 있도록 
  ![WCF 구성 스키마](../../../../../docs/framework/configure-apps/file-schema/wcf/media/orcasconfigschema.gif "OrcasConfigSchema")  
   
 > [!CAUTION]
->  잠재적 보안 위협을 방지하려면 응용 프로그램 구성 파일(app.config)에서 적절한 ACL(Access Control 목록)을 사용하여 [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 구성 섹션을 보호해야 합니다.  예를 들어, 적절한 사용자만이 응용 프로그램 바인딩의 보안 설정 또는 서비스에 대한 구성 파일의 서비스 모델 섹션에 액세스하거나 이를 수정할 수 있도록 해야 합니다.  
+>  응용 프로그램 구성 파일 (app.config)와 적절 한 ACL 액세스 제어 목록 () 잠재적 보안 위협을 방지 하기 위해의 WCF 구성 섹션을 보호 해야 합니다.  예를 들어, 적절한 사용자만이 응용 프로그램 바인딩의 보안 설정 또는 서비스에 대한 구성 파일의 서비스 모델 섹션에 액세스하거나 이를 수정할 수 있도록 해야 합니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
  [\<system.serviceModel>](../../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md)  
@@ -36,4 +36,4 @@ Windows Communication Foundation (WCF) 구성 요소는 구성할 수 있도록 
   
 ## <a name="related-sections"></a>관련 단원  
  [Windows Communication Foundation 응용 프로그램 구성](http://msdn.microsoft.com/library/13cb368e-88d4-4c61-8eed-2af0361c6d7a)  
- [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 서비스 및 클라이언트를 구성하는 방법에 대해 설명합니다.
+ WCF 서비스와 클라이언트를 구성 하는 방법에 설명 합니다.

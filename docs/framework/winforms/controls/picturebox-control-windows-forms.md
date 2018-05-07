@@ -1,28 +1,16 @@
 ---
-title: "PictureBox 컨트롤(Windows Forms)"
-ms.custom: 
+title: PictureBox 컨트롤(Windows Forms)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - PictureBox control [Windows Forms]
 - image controls [Windows Forms]
 - images [Windows Forms], adding to PictureBox control
 ms.assetid: f900eb93-25d5-40e5-b5df-b3cea0e831b6
-caps.latest.revision: "11"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 20c45ec8aa172edeb0c7babcb45c013330b9179b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: d186b9deb88753566713dbf053e475a024f0bfa2
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="picturebox-control-windows-forms"></a>PictureBox 컨트롤(Windows Forms)
 Windows Forms `PictureBox` 컨트롤은 그래픽 비트맵, GIF, JPEG, 메타 파일 또는 아이콘으로 표시 하는 데 사용 합니다.  

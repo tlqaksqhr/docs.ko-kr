@@ -1,27 +1,15 @@
 ---
-title: "WCF 서비스를 위한 단순화된 구성"
-ms.custom: 
+title: WCF 서비스를 위한 단순화된 구성
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 1e39ec25-18a3-4fdc-b6a3-9dfafbd60112
-caps.latest.revision: "11"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 02611dc44b98c1b8b5ef5ae74559f9f370483792
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 80e2ac83ec0e07176d6afe6d34c63fb4d8e836d1
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="simplified-configuration-for-wcf-services"></a>WCF 서비스를 위한 단순화된 구성
-이 샘플에서는 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]를 사용하여 일반적인 서비스 및 클라이언트를 구현하고 구성하는 방법을 보여 줍니다. 이 샘플은 다른 모든 기본 기술 샘플의 기준이 됩니다.  
+이 샘플에 구현 하 고 일반 서비스와 Windows Communication Foundation (WCF)를 사용 하 여 클라이언트를 구성 하는 방법을 보여 줍니다. 이 샘플은 다른 모든 기본 기술 샘플의 기준이 됩니다.  
   
  서비스와 통신하기 위한 끝점을 노출하는 이 서비스에서는 [!INCLUDE[netfx40_long](../../../../includes/netfx40-long-md.md)]의 단순화된 구성을 사용합니다. [!INCLUDE[netfx40_short](../../../../includes/netfx40-short-md.md)] 이전 버전에서 끝점은 일반적으로 구성 파일(Web.config)에서 다음 예제 구성 코드와 같이 정의됩니다.  
   
@@ -48,7 +36,7 @@ ms.lasthandoff: 12/22/2017
 </configuration>  
 ```  
   
- [!INCLUDE[netfx40_short](../../../../includes/netfx40-short-md.md)]에서는 `<service>`가 선택적 요소입니다. 서비스에서 끝점을 정의하지 않을 경우 각 기본 주소의 끝점과 구현된 계약이 서비스에 추가됩니다. 기본 주소가 계약 이름에 추가되어 끝점이 결정되고 바인딩은 주소 스키마에 의해 결정됩니다. 다음 코드 예제에서는 단순화된 구성 파일을 보여 줍니다. 구성된 대로 동일한 컴퓨터의 클라이언트는 http://localhost/servicemodelsamples/service.svc에서 서비스에 액세스할 수 있습니다. 원격 컴퓨터의 클라이언트가 서비스에 액세스하려면 localhost 대신 정규화된 도메인 이름을 지정해야 합니다. 기본적으로 서비스에서는 메타데이터를 노출하지 않습니다. 따라서 서비스에서는 <xref:System.ServiceModel.Description.ServiceMetadataBehavior> 동작을 설정합니다.  
+ [!INCLUDE[netfx40_short](../../../../includes/netfx40-short-md.md)]에서는 `<service>`가 선택적 요소입니다. 서비스에서 끝점을 정의하지 않을 경우 각 기본 주소의 끝점과 구현된 계약이 서비스에 추가됩니다. 기본 주소가 계약 이름에 추가되어 끝점이 결정되고 바인딩은 주소 스키마에 의해 결정됩니다. 다음 코드 예제에서는 단순화된 구성 파일을 보여 줍니다. 서비스에 액세스할 수 구성 된 대로 http://localhost/servicemodelsamples/service.svc 동일한 컴퓨터에 클라이언트에서. 원격 컴퓨터의 클라이언트가 서비스에 액세스하려면 localhost 대신 정규화된 도메인 이름을 지정해야 합니다. 기본적으로 서비스에서는 메타데이터를 노출하지 않습니다. 따라서 서비스에서는 <xref:System.ServiceModel.Description.ServiceMetadataBehavior> 동작을 설정합니다.  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8" ?>  
@@ -85,7 +73,7 @@ ms.lasthandoff: 12/22/2017
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  이 디렉터리가 없으면 [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4(.NET Framework 4용 WCF(Windows Communication Foundation) 및 WF(Windows Workflow Foundation) 샘플)](http://go.microsoft.com/fwlink/?LinkId=150780) 로 이동하여 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 및 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플을 모두 다운로드하세요. 이 샘플은 다음 디렉터리에 있습니다.  
+>  이 디렉터리가로 이동 [Windows Communication Foundation (WCF) 및.NET Framework 4에 대 한 Windows WF (Workflow Foundation) 샘플](http://go.microsoft.com/fwlink/?LinkId=150780) 모든 Windows Communication Foundation (WCF)를 다운로드 하 고 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플. 이 샘플은 다음 디렉터리에 있습니다.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\ConfigSimplificationIn40`  
   

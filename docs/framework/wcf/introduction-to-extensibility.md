@@ -1,33 +1,19 @@
 ---
 title: 확장성 소개
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - WCF [WCF], extensibility
 - Windows Communication Foundation [WCF], extensibility
 - extensibility [WCF]
 ms.assetid: ef56c251-d63c-4b3f-944f-b0c67bfb0f68
-caps.latest.revision: 7
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 991c3879990fd5b6562a2270c65e1560efadc022
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
-ms.translationtype: MT
+ms.openlocfilehash: 142478352c8eb1c893d8b95b960c6079f735fa06
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="introduction-to-extensibility"></a>확장성 소개
-[!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 응용 프로그램 모델은 분산 응용 프로그램의 대부분의 통신 요구 사항을 해결할 수 있도록 디자인되었습니다. 그러나 기본 응용 프로그램 모델과 시스템 제공 구현이 지원되지 않습니다. [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 확장성 모델은 전체 응용 프로그램 모델을 대체하는 지점을 비롯해서 모든 수준에서 시스템 동작을 수정할 수 있도록 허용하여 사용자 지정 시나리오를 지원합니다. 이 항목에서는 다양한 확장 영역에 대해 간략하게 설명하고 각 영역에 대한 자세한 내용을 제공합니다.  
+Windows Communication Foundation (WCF) 응용 프로그램 모델은 분산된 응용 프로그램의 통신 요구 사항의 대부분을 해결 하도록 설계 되었습니다. 그러나 기본 응용 프로그램 모델과 시스템 제공 구현이 지원되지 않습니다. [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 확장성 모델은 전체 응용 프로그램 모델을 대체하는 지점을 비롯해서 모든 수준에서 시스템 동작을 수정할 수 있도록 허용하여 사용자 지정 시나리오를 지원합니다. 이 항목에서는 다양한 확장 영역에 대해 간략하게 설명하고 각 영역에 대한 자세한 내용을 제공합니다.  
   
 ## <a name="areas-to-extend"></a>확장할 영역  
  확장 가능 영역:  

@@ -1,34 +1,20 @@
 ---
-title: "동작을 사용하여 런타임 구성 및 확장"
-ms.custom: 
+title: 동작을 사용하여 런타임 구성 및 확장
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - attaching extensions using behaviors [WCF]
 ms.assetid: 149b99b6-6eb6-4f45-be22-c967279677d9
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 2ea157ea1ac73a287ba39c1468e7e9a5781d40a0
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 05fd96574f072f8e349f83d11aca20bc5269dfc7
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="configuring-and-extending-the-runtime-with-behaviors"></a>동작을 사용하여 런타임 구성 및 확장
-동작을 사용하면 기본 동작을 수정하거나, 서비스 구성에 대한 검사 및 유효성 검사를 수행하는 사용자 지정 확장을 추가하거나, [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 클라이언트 및 서비스 응용 프로그램에서의 런타임 동작을 수정할 수 있습니다. 이 항목에서는 동작 인터페이스에 대해 설명하고 이를 구현하는 방법 및 프로그래밍 방식이나 구성 파일을 통해 서비스 응용 프로그램의 서비스 설명 또는 클라이언트 응용 프로그램의 끝점에 추가하는 방법에 대해 설명합니다. 시스템 제공 동작을 사용 하는 방법에 대 한 자세한 내용은 참조 [서비스 런타임 동작 지정](../../../../docs/framework/wcf/specifying-service-run-time-behavior.md) 및 [클라이언트 런타임 동작 지정](../../../../docs/framework/wcf/specifying-client-run-time-behavior.md)합니다.  
+동작을 사용 하 여 기본 동작을 검사 하 고 서비스 구성의 유효성을 검사 하거나 Windows Communication Foundation (WCF) 클라이언트와 서비스 응용 프로그램에서 런타임 동작을 수정 하는 사용자 지정 확장을 추가할 수 있습니다. 이 항목에서는 동작 인터페이스에 대해 설명하고 이를 구현하는 방법 및 프로그래밍 방식이나 구성 파일을 통해 서비스 응용 프로그램의 서비스 설명 또는 클라이언트 응용 프로그램의 끝점에 추가하는 방법에 대해 설명합니다. 시스템 제공 동작을 사용 하는 방법에 대 한 자세한 내용은 참조 [서비스 런타임 동작 지정](../../../../docs/framework/wcf/specifying-service-run-time-behavior.md) 및 [클라이언트 런타임 동작 지정](../../../../docs/framework/wcf/specifying-client-run-time-behavior.md)합니다.  
   
 ## <a name="behaviors"></a>동작  
- [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 서비스나 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 클라이언트가 실행되는 런타임을 만들기 위해 서비스 또는 서비스 끝점 설명 개체를 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서 사용하려면, 서비스 또는 클라이언트 각각에서 이러한 개체에 동작 형식을 추가합니다. 런타임 생성이 처리되는 동안 이러한 동작이 호출되면 동작은 계약, 바인딩 및 주소에 의해 생성된 런타임을 수정하는 메서드 및 런타임 속성에 액세스할 수 있습니다.  
+ 동작 형식은 서비스 또는 서비스 끝점 설명 개체에 추가 됩니다 (서비스 또는 클라이언트에서 각각) 해당 개체는 Windows Communication Foundation (WCF)에서 실행 되는 런타임을 만들기 위해 사용 전에 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 서비스나는 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 클라이언트입니다. 런타임 생성이 처리되는 동안 이러한 동작이 호출되면 동작은 계약, 바인딩 및 주소에 의해 생성된 런타임을 수정하는 메서드 및 런타임 속성에 액세스할 수 있습니다.  
   
 ### <a name="behavior-methods"></a>동작 메서드  
  모든 동작에는 `AddBindingParameters` 메서드, `ApplyDispatchBehavior` 메서드, `Validate` 메서드 및 `ApplyClientBehavior` 메서드가 있지만, 한 가지 예외가 있습니다. <xref:System.ServiceModel.Description.IServiceBehavior>는 클라이언트에서 실행되지 않기 때문에 `ApplyClientBehavior`를 구현하지 못합니다.  

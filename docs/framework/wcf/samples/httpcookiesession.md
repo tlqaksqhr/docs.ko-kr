@@ -1,27 +1,15 @@
 ---
 title: HttpCookieSession
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 101cb624-8303-448a-a3af-933247c1e109
-caps.latest.revision: "31"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 4c06efd7450afe93eaecca1e678eb6f8bf5de7a6
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 54e2459f5b480d8f53df42a08d4ebc8ac07b128c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="httpcookiesession"></a>HttpCookieSession
-이 샘플에서는 세션 관리에 HTTP 쿠키를 사용하기 위해 사용자 지정 프로토콜 채널을 빌드하는 방법을 보여 줍니다. 이 채널은 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 서비스와 ASMX 클라이언트 또는 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 클라이언트와 ASMX 서비스 사이의 통신을 가능하게 합니다.  
+이 샘플에서는 세션 관리에 HTTP 쿠키를 사용하기 위해 사용자 지정 프로토콜 채널을 빌드하는 방법을 보여 줍니다. 이 채널 간이나 Windows Communication Foundation (WCF) 서비스와 ASMX 클라이언트 간의 통신을 통해 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 클라이언트와 ASMX 서비스입니다.  
   
  클라이언트가 세션 기반의 ASMX 웹 서비스에 있는 웹 메서드를 호출하면 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 엔진은 다음 작업을 수행합니다.  
   
@@ -40,7 +28,7 @@ ms.lasthandoff: 12/22/2017
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  이 디렉터리가 없으면 [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4(.NET Framework 4용 WCF(Windows Communication Foundation) 및 WF(Windows Workflow Foundation) 샘플)](http://go.microsoft.com/fwlink/?LinkId=150780) 로 이동하여 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 및 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플을 모두 다운로드하세요. 이 샘플은 다음 디렉터리에 있습니다.  
+>  이 디렉터리가로 이동 [Windows Communication Foundation (WCF) 및.NET Framework 4에 대 한 Windows WF (Workflow Foundation) 샘플](http://go.microsoft.com/fwlink/?LinkId=150780) 모든 Windows Communication Foundation (WCF)를 다운로드 하 고 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플. 이 샘플은 다음 디렉터리에 있습니다.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Channels\HttpCookieSession`  
   

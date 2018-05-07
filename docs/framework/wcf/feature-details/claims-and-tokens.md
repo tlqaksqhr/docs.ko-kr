@@ -1,31 +1,17 @@
 ---
-title: "클레임 및 토큰"
-ms.custom: 
+title: 클레임 및 토큰
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - claims [WCF], and tokens
 ms.assetid: eff167f3-33f8-483d-a950-aa3e9f97a189
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: b2e571e8526581269cedb65b83c9ea0d8a81e280
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 087deeef91367210db936f2976a3846d0279dcba
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="claims-and-tokens"></a>클레임 및 토큰
-이 항목에서는 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]에서 지원되는 기본 토큰으로부터 만드는 다양한 클레임 형식에 대해 설명합니다.  
+이 항목에서는 Windows Communication Foundation (WCF) 지원 되는 기본 토큰 으로부터 만드는 다양 한 클레임 유형을 설명 합니다.  
   
  <xref:System.IdentityModel.Claims.ClaimSet> 및 <xref:System.IdentityModel.Claims.Claim> 클래스를 사용하여 클라이언트 자격 증명 클레임을 검사할 수 있습니다. `ClaimSet`에는 `Claim` 개체의 컬렉션이 포함됩니다. 각 `Claim`의 중요한 멤버는 다음과 같습니다.  
   

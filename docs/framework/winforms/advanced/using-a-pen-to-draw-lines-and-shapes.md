@@ -1,29 +1,17 @@
 ---
-title: "펜을 사용하여 선과 도형 그리기"
-ms.custom: 
+title: 펜을 사용하여 선과 도형 그리기
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - pens
 - examples [Windows Forms], drawing lines and shapes
 - examples [Windows Forms], pens
 - drawing
 ms.assetid: 8a7542ab-3e9e-443f-8405-2d6053528e20
-caps.latest.revision: "14"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 35f43316e2535aae6622ccf7952f649cdb92fc81
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 667a5b13c5e8cb5d9a693d6f8512b254f130d606
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-a-pen-to-draw-lines-and-shapes"></a>펜을 사용하여 선과 도형 그리기
 사용 하 여 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] `Pen` 개체를 선 세그먼트, 곡선 및 도형 윤곽선을 그립니다. 이 섹션에서는 *줄* 선분만 의미를 지정 하지 않는 한, 이러한 항목 중 하나를 참조 합니다. 색, 너비, 맞춤 및 해당 펜을 사용 하 여 그리는 선의 스타일을 제어 하는 펜의 속성을 설정 합니다.  

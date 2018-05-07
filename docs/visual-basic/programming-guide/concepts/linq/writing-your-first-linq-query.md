@@ -1,34 +1,24 @@
 ---
-title: "LINQ 쿼리 처음 작성(Visual Basic)"
-ms.custom: 
+title: LINQ 쿼리 처음 작성(Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - queries [LINQ in Visual Basic], writing
 - LINQ queries [Visual Basic]
 - LINQ [Visual Basic], writing queries
 ms.assetid: 4affb732-3e9b-4479-aa31-1f9bd8183cbe
-caps.latest.revision: "56"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: c16bb28189d5525654328da2dc80d868bbe61bf5
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: f426aac5358837563081d2bf9783f6d4fe04d853
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="writing-your-first-linq-query-visual-basic"></a>LINQ 쿼리 처음 작성(Visual Basic)
 *쿼리*는 데이터 소스에서 데이터를 검색하는 식입니다. 쿼리는 전용된 쿼리 언어로 표현 됩니다. 시간이 지남에 따라 다른 언어로 개발 되었습니다 다양 한 유형의 데이터 원본에 대 한 예를 들어, 관계형 데이터베이스에 대 한 SQL 및 XML에 대 한 XQuery. 이렇게 하면 응용 프로그램 개발자가 각 유형의 데이터 원본 또는 지원 되는 데이터 형식에 대 한 새 쿼리 언어를 배울 필요 합니다.  
   
- [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)]다양 한 종류의 데이터 소스 및 형식 데이터로 작업 하기 위한 일관 된 모델을 제공 하 여 상황을 간소화 합니다. [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 쿼리에서는 항상 개체를 사용하고 있습니다. 동일한 기본 코딩 패턴을 사용 하 여 쿼리하고를 XML 문서에 데이터, SQL 데이터베이스, ADO.NET 데이터 집합 및 엔터티,.NET Framework 컬렉션 및 모든 다른 원본 또는 형식 변환에 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 공급자를 사용할 수 있습니다. 이 문서에서는 basic 사용 하 여 만들고 만들기의 세 단계를 설명 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 쿼리 합니다.  
+ [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] 다양 한 종류의 데이터 소스 및 형식 데이터로 작업 하기 위한 일관 된 모델을 제공 하 여 상황을 간소화 합니다. [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 쿼리에서는 항상 개체를 사용하고 있습니다. 동일한 기본 코딩 패턴을 사용 하 여 쿼리하고를 XML 문서에 데이터, SQL 데이터베이스, ADO.NET 데이터 집합 및 엔터티,.NET Framework 컬렉션 및 모든 다른 원본 또는 형식 변환에 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 공급자를 사용할 수 있습니다. 이 문서에서는 basic 사용 하 여 만들고 만들기의 세 단계를 설명 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 쿼리 합니다.  
   
 ## <a name="three-stages-of-a-query-operation"></a>쿼리 작업의 세 단계  
- [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]쿼리 작업 세 가지 동작으로 구성 됩니다.  
+ [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 쿼리 작업 세 가지 동작으로 구성 됩니다.  
   
 1.  데이터 소스 또는 소스를 가져옵니다.  
   

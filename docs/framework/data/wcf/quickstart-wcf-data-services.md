@@ -1,29 +1,15 @@
 ---
 title: 빠른 시작(WCF Data Services)
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework-oob
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - WCF Data Services, quick-start example
 - WCF Data Services, Entity Data Model (EDM) service
 ms.assetid: 7b18ca1e-d4d6-4c7a-afb9-ce3cebb98a8d
-caps.latest.revision: 3
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: cf23c6f86900fd94d269e77dcefb05da0ace5ea0
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 1a30f7e65efc65bf47abd61e5bfdfa85b58ae3a2
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="quickstart-wcf-data-services"></a>빠른 시작(WCF Data Services)
 이 빠른 시작을 사용 하면 익숙해지는 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 및 [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] 일련의 항목에서는 지 원하는 작업을 통해 [시작](../../../../docs/framework/data/wcf/getting-started-with-wcf-data-services.md)합니다.  

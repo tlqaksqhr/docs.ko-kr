@@ -1,27 +1,18 @@
 ---
-title: "UI 자동화를 사용하여 혼합 텍스트 특성 정보 가져오기"
-ms.custom: 
+title: UI 자동화를 사용하여 혼합 텍스트 특성 정보 가져오기
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-bcl
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: d0e4c005-abd1-42bb-92a4-5faf87097311
-caps.latest.revision: "11"
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: 9dc823103d062d8165f3aae3f8cd49ad350cc2ac
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 6216c8daa183db28cf5f127fddac0e8f4583d370
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="obtain-mixed-text-attribute-details-using-ui-automation"></a>UI 자동화를 사용하여 혼합 텍스트 특성 정보 가져오기
 > [!NOTE]
@@ -29,7 +20,7 @@ ms.lasthandoff: 12/22/2017
   
  이 항목에서는 [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] 을 사용하여 여러 특성 값에 걸쳐 있는 텍스트 범위에서 텍스트 특성 세부 정보를 가져오는 방법을 보여줍니다. 텍스트 범위는 문서 내에서 캐럿의 현재 위치(또는 중복 제거 선택 항목), 연속적인 텍스트 선택 항목, 분리형 텍스트 선택 항목의 컬렉션 또는 문서의 전체 텍스트 내용에 해당될 수 있습니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 코드 예제는 <xref:System.Windows.Automation.TextPattern.FontNameAttribute> 가 <xref:System.Windows.Automation.Text.TextPatternRange.GetAttributeValue%2A> 개체를 반환하는 텍스트 범위에서 <xref:System.Windows.Automation.TextPattern.MixedAttributeValue> 를 가져오는 방법을 보여 줍니다.  
   
  [!code-csharp[FindText#RetrieveMixedAttributes](../../../samples/snippets/csharp/VS_Snippets_Wpf/FindText/CSharp/SearchWindow.cs#retrievemixedattributes)]

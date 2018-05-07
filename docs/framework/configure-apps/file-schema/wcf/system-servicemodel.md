@@ -8,11 +8,11 @@ helpviewer_keywords:
 - <system.serviceModel> element
 - system.serviceModel element
 ms.assetid: 78519531-ad7a-40d3-b3e7-42f1103d8854
-ms.openlocfilehash: 0ce459b5b3d739770353d9913f30c6feaceabfd8
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
-ms.translationtype: HT
+ms.openlocfilehash: ef3af4663462ff2bb93622e128e58a3ac039dcf5
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ltsystemservicemodelgt"></a>&lt;system.serviceModel&gt;
 이 구성 섹션에는 모든 Windows Communication Foundation (WCF) ServiceModel 구성 요소가 들어 있습니다.  
@@ -62,7 +62,7 @@ ms.lasthandoff: 05/03/2018
 |[\<bindings>](../../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)|이 섹션에는 표준 및 사용자 지정 바인딩 컬렉션이 포함됩니다. 각 항목은 고유한 `name`으로 식별됩니다. 서비스에서는 `name`을 통해 바인딩을 연결하여 바인딩을 사용합니다.|  
 |[\<클라이언트 >](../../../../../docs/framework/configure-apps/file-schema/wcf/client.md)|이 섹션에는 클라이언트가 서비스에 연결하는 데 사용하는 끝점의 목록이 포함됩니다.|  
 |[\<comContracts>](../../../../../docs/framework/configure-apps/file-schema/wcf/comcontracts.md)|이 섹션은 WCF 및 COM interop에 사용하도록 설정된 COM 계약을 정의합니다.|  
-|[\<c o m m >](../../../../../docs/framework/configure-apps/file-schema/wcf/commonbehaviors.md)|이 섹션은 machine.config 파일에서만 정의할 수 있습니다. 이 섹션은 두 자식 컬렉션 `endpointBehaviors` 및 `serviceBehaviors`를 정의합니다.  각 컬렉션은 컴퓨터의 모든 [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 끝점 및 서비스가 사용하는 동작 요소를 각각 정의합니다.  동작을 둘 다에 정의 된 경우 `<commonBehaviors>` 및 `<behaviors>` 섹션의 동작이 \<동작 > 섹션 우선 합니다.|  
+|[\<c o m m >](../../../../../docs/framework/configure-apps/file-schema/wcf/commonbehaviors.md)|이 섹션은 machine.config 파일에서만 정의할 수 있습니다. 이 섹션은 두 자식 컬렉션 `endpointBehaviors` 및 `serviceBehaviors`를 정의합니다.  각 컬렉션은 모든 WCF 끝점 및 서비스가 컴퓨터에서 각각 사용 하는 동작 요소를 정의 합니다.  동작을 둘 다에 정의 된 경우 `<commonBehaviors>` 및 `<behaviors>` 섹션의 동작이 \<동작 > 섹션 우선 합니다.|  
 |[\<확장 >](../../../../../docs/framework/configure-apps/file-schema/wcf/extensions-section.md)|이 섹션에는 사용자 정의 바인딩, 동작 및 확장의 기타 측면을 만들 수 있도록 하는 확장명 컬렉션이 포함됩니다.|  
 |[\<진단 >](../../../../../docs/framework/configure-apps/file-schema/wcf/diagnostics.md)|이 섹션에는 WCF의 진단 기능에 대한 설정이 포함됩니다. 사용자는 추적, 성능 카운터 및 WMI 공급자를 사용하거나 사용하지 않도록 설정하고 사용자 지정 메시지 필터를 추가할 수 있습니다.|  
 |[\<protocolMapping >](../../../../../docs/framework/configure-apps/file-schema/wcf/protocolmapping.md)|이 섹션에는 전송 프로토콜 체계 (예: http, net.tcp, net.pipe 등) 및 WCF 바인딩 간의 기본 프로토콜 매핑 집합을 정의합니다.|  
@@ -78,9 +78,9 @@ ms.lasthandoff: 05/03/2018
 |\<configuration>|.NET 구성 파일에 있는 모든 구성 요소의 루트 요소입니다.|  
   
 ## <a name="remarks"></a>설명  
- [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)]에서는 다른 제품의 구성 섹션에 요소를 추가하지 않습니다.  
+ WCF는 다른 제품의 구성 섹션에 요소를 추가 하지 않습니다.  
   
- [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 서비스는 구성 파일의 `services` 섹션에 정의됩니다. 어셈블리에는 여러 개의 서비스가 포함될 수 있습니다. 서비스별로 해당 `service` 구성 섹션이 있습니다. 해당 단원 및 내용에서는 특정 서비스의 서비스 계약, 동작 및 끝점을 정의합니다.  
+ 에 정의 된 WCF 서비스는 `services` 구성 파일의 섹션입니다. 어셈블리에는 여러 개의 서비스가 포함될 수 있습니다. 서비스별로 해당 `service` 구성 섹션이 있습니다. 해당 단원 및 내용에서는 특정 서비스의 서비스 계약, 동작 및 끝점을 정의합니다.  
   
  서비스의 `name` 특성만 필수입니다.  기본적으로 서비스 이름은 서비스를 구현하는 데 사용되는 기본 CLR 형식을 설명하지만 <xref:System.ServiceModel.ServiceContractAttribute>에서 ConfigurationName 속성을 변경하여 CLR 형식 요구 사항을 재정의할 수 있습니다.  
   

@@ -1,13 +1,6 @@
 ---
-title: "방법: 런타임에 그림의 크기 또는 위치 수정(Windows Forms)"
-ms.custom: 
+title: '방법: 런타임에 그림의 크기 또는 위치 수정(Windows Forms)'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -18,16 +11,11 @@ helpviewer_keywords:
 - PictureBox control [Windows Forms], picture size and alignment
 - pictures [Windows Forms], controlling placement in PictureBox control [Windows Forms]
 ms.assetid: d0b332a3-fae2-4891-957c-dc3e17743326
-caps.latest.revision: "12"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: e02ea1cbcb1fdd86d182bfba23241acb91c4b54a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 9e6e114e0a9d7e5e9c17ba21ef941703cd108784
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-modify-the-size-or-placement-of-a-picture-at-run-time-windows-forms"></a>방법: 런타임에 그림의 크기 또는 위치 수정(Windows Forms)
 Windows Forms를 사용 하는 경우 <xref:System.Windows.Forms.PictureBox> 컨트롤을 폼에 설정할 수 있습니다는 <xref:System.Windows.Forms.PictureBox.SizeMode%2A> 시키기 위해 속성:  
@@ -44,7 +32,7 @@ Windows Forms를 사용 하는 경우 <xref:System.Windows.Forms.PictureBox> 컨
   
 ### <a name="to-set-the-sizemode-property-at-run-time"></a>런타임 시 SizeMode 속성을 설정 하려면  
   
-1.  설정 <xref:System.Windows.Forms.PictureBox.SizeMode%2A> 를 <xref:System.Windows.Forms.PictureBoxSizeMode.Normal> (기본값) 이면 <xref:System.Windows.Forms.PictureBoxSizeMode.AutoSize>, <xref:System.Windows.Forms.PictureBoxSizeMode.CenterImage>, 또는 <xref:System.Windows.Forms.PictureBoxSizeMode.StretchImage>합니다. <xref:System.Windows.Forms.PictureBoxSizeMode.Normal>컨트롤의 왼쪽 위 구석에;에 이미지를 배치 하는 방법 이미지 컨트롤 보다 큰 경우 아래쪽과 오른쪽 가장자리 잘립니다. <xref:System.Windows.Forms.PictureBoxSizeMode.CenterImage>이미지 컨트롤에서 가운데 정렬 되어 있음을 의미 합니다. 이미지 컨트롤 보다 큰 경우 그림의 바깥쪽 가장자리 잘립니다. <xref:System.Windows.Forms.PictureBoxSizeMode.AutoSize>컨트롤의 크기를 이미지의 크기를 조정할 수 있다는 것을 의미 합니다. <xref:System.Windows.Forms.PictureBoxSizeMode.StretchImage>와 반대 및 이미지의 크기를 컨트롤의 크기를 조정할 수 있다는 것을 의미 합니다.  
+1.  설정 <xref:System.Windows.Forms.PictureBox.SizeMode%2A> 를 <xref:System.Windows.Forms.PictureBoxSizeMode.Normal> (기본값) 이면 <xref:System.Windows.Forms.PictureBoxSizeMode.AutoSize>, <xref:System.Windows.Forms.PictureBoxSizeMode.CenterImage>, 또는 <xref:System.Windows.Forms.PictureBoxSizeMode.StretchImage>합니다. <xref:System.Windows.Forms.PictureBoxSizeMode.Normal> 컨트롤의 왼쪽 위 구석에;에 이미지를 배치 하는 방법 이미지 컨트롤 보다 큰 경우 아래쪽과 오른쪽 가장자리 잘립니다. <xref:System.Windows.Forms.PictureBoxSizeMode.CenterImage> 이미지 컨트롤에서 가운데 정렬 되어 있음을 의미 합니다. 이미지 컨트롤 보다 큰 경우 그림의 바깥쪽 가장자리 잘립니다. <xref:System.Windows.Forms.PictureBoxSizeMode.AutoSize> 컨트롤의 크기를 이미지의 크기를 조정할 수 있다는 것을 의미 합니다. <xref:System.Windows.Forms.PictureBoxSizeMode.StretchImage> 와 반대 및 이미지의 크기를 컨트롤의 크기를 조정할 수 있다는 것을 의미 합니다.  
   
      아래 예제에서는 내 문서 폴더는 이미지의 위치에 대 한 설정 되었습니다. 이 도구를 실행 하므로 대부분의 Windows 운영 체제 실행 컴퓨터는이 디렉터리를 포함 되어 있습니다. 또한 최소한의 시스템 액세스 수준을 가진 사용자가 안전하게 응용 프로그램을 실행할 수 있습니다. 다음 예제에서는 가정 된 폼을 <xref:System.Windows.Forms.PictureBox> 컨트롤이 이미 추가 합니다.  
   

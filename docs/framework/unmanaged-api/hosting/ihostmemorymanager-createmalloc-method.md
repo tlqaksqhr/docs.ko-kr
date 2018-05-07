@@ -1,14 +1,6 @@
 ---
-title: "IHostMemoryManager::CreateMAlloc 메서드"
-ms.custom: 
+title: IHostMemoryManager::CreateMAlloc 메서드
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - IHostMemoryManager.CreateMAlloc
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: 9ee6e052-bef7-4350-9e4f-edfffd99ad6f
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 19b43ccf7cb2429c28c052ab8ab3a009ec4a30a4
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 503a7c2056d0a828c65c5b0b81c50ea1e133aeef
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ihostmemorymanagercreatemalloc-method"></a>IHostMemoryManager::CreateMAlloc 메서드
 한 인터페이스 포인터를 가져옵니다는 [IHostMAlloc](../../../../docs/framework/unmanaged-api/hosting/ihostmalloc-interface.md) 호스트에서 만든 힙에서 할당 요청을 만드는 사용 되는 인스턴스에 있습니다.  
@@ -58,7 +46,7 @@ HRESULT CreateMalloc (
   
 |HRESULT|설명|  
 |-------------|-----------------|  
-|S_OK|`CreateMAlloc`성공적으로 반환 합니다.|  
+|S_OK|`CreateMAlloc` 성공적으로 반환 합니다.|  
 |HOST_E_CLRNOTAVAILABLE|공용 언어 런타임 (CLR) 프로세스에 로드 되지 않았습니다 또는 CLR 중인 상태를 관리 코드를 실행 하거나 호출을 처리할 수 없습니다.|  
 |HOST_E_TIMEOUT|호출 시간이 초과 되었습니다.|  
 |HOST_E_NOT_OWNER|호출자에 게 잠금을 소유 하지 않습니다.|  
@@ -67,7 +55,7 @@ HRESULT CreateMalloc (
 |E_OUTOFMEMORY|실제 메모리가 부족 했습니다을 할당 요청을 완료할 수 없습니다.|  
   
 ## <a name="remarks"></a>설명  
- `CreateMAlloc`CLR 표준 Win32 함수를 사용 하는 대신 호스트를 통해 할당 요청을 만드는 수 있는 개체를 반환 합니다.  
+ `CreateMAlloc` CLR 표준 Win32 함수를 사용 하는 대신 호스트를 통해 할당 요청을 만드는 수 있는 개체를 반환 합니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **플랫폼:** 참조 [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)합니다.  
@@ -76,7 +64,7 @@ HRESULT CreateMalloc (
   
  **라이브러리:** MSCorEE.dll에 리소스로 포함  
   
- **.NET framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>참고 항목  
  [IHostMalloc 인터페이스](../../../../docs/framework/unmanaged-api/hosting/ihostmalloc-interface.md)  

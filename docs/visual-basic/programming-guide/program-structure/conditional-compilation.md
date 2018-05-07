@@ -1,24 +1,15 @@
 ---
-title: "Visual Basic의 조건부 컴파일"
-ms.custom: 
+title: Visual Basic의 조건부 컴파일
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - conditional compilation [Visual Basic], about conditional compilation
 - compilation [Visual Basic], conditional
 ms.assetid: 9c35e55e-7eee-44fb-a586-dad1f1884848
-caps.latest.revision: "15"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 559380dc9baceb2fba4dca782e83f335f1bcd92d
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.openlocfilehash: 496df36242c6b43e7e3ec94ce675d11177e8b466
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="conditional-compilation-in-visual-basic"></a>Visual Basic의 조건부 컴파일
 *조건부 컴파일*, 특정 코드 블록을 프로그램에서 선택적으로 컴파일되고 다른 특성을 무시 됩니다.  
@@ -49,7 +40,7 @@ ms.lasthandoff: 10/22/2017
 |---|---|  
 |**프로젝트 디자이너**|프로젝트의 모든 파일|  
 |명령줄|명령줄 컴파일러에 전달 하는 모든 파일|  
-|`#Const`코드에서 문|이전에 선언 된 파일의 전용|  
+|`#Const` 코드에서 문|이전에 선언 된 파일의 전용|  
   
 |프로젝트 디자이너의 상수를 설정 하려면|  
 |---|  

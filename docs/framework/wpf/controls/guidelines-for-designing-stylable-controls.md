@@ -1,27 +1,15 @@
 ---
-title: "스타일을 지정할 수 있는 컨트롤을 디자인하기 위한 지침"
-ms.custom: 
+title: 스타일을 지정할 수 있는 컨트롤을 디자인하기 위한 지침
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - style design for controls [WPF]
 - controls [WPF], style design
 ms.assetid: c52dde45-a311-4531-af4c-853371c4d5f4
-caps.latest.revision: "18"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 6707a434f64838467033966c9093e1e415b1fb31
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 4e807a323f6b454b1f07c8e0a9f99b17c9723df7
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="guidelines-for-designing-stylable-controls"></a>스타일을 지정할 수 있는 컨트롤을 디자인하기 위한 지침
 이 문서에서는 쉽게 스타일을 지정하고 템플릿을 지정할 수 있는 컨트롤을 디자인할 때 고려해야 하는 모범 사례 집합을 요약합니다. 기본 제공 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 컨트롤 집합의 테마 컨트롤 스타일에 대해 작업하는 동안 많은 시행착오를 거쳐 이 모범 사례 집합을 얻게 되었습니다. 성공적으로 스타일을 지정하려면 스타일 자체만큼이나 잘 설계된 개체 모델이 필요함을 알게 되었습니다. 이 문서의 독자는 스타일 작성자가 아니라 컨트롤 작성자입니다.  

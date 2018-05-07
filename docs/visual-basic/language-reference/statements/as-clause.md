@@ -1,12 +1,6 @@
 ---
 title: As 절(Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.as
 helpviewer_keywords:
@@ -14,14 +8,11 @@ helpviewer_keywords:
 - As keyword [Visual Basic], statement syntax
 - As keyword [Visual Basic]
 ms.assetid: b4281ec8-2be5-49f7-aae8-ae0a96265b0d
-caps.latest.revision: 19
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 73f0a59dae5e95fe8e4be49afeebd2c29f8a1a7f
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 9c1d9943c59a8ed4c3f2002fdbcdefeefafe42ba
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="as-clause-visual-basic"></a>As 절(Visual Basic)
 소개는 `As` 선언 문 또는 제네릭 형식 매개 변수의 제약 조건 목록에서 데이터 형식을 식별 하는 절.  

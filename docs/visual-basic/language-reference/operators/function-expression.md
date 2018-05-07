@@ -1,24 +1,16 @@
 ---
-title: "함수 식(Visual Basic)"
+title: 함수 식(Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - Function expression [Visual Basic]
 - functions [Visual Basic], function expressions
 - lambda expressions [Visual Basic], function expression
 ms.assetid: e8a47a45-4b8a-4f45-a623-7653625dffbc
-caps.latest.revision: "18"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: cb1790d363755fe9b8bd711409734f7c3a405f3e
-ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
+ms.openlocfilehash: 29bf95a336b6f6ed5c9c310c9ea7575a91089361
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="function-expression-visual-basic"></a>함수 식(Visual Basic)
 매개 변수 및 함수가 람다 식을 정의 하는 코드를 선언 합니다.  
@@ -61,24 +53,24 @@ End Function
   
 -   제네릭 매개 변수가 허용 되지 않습니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 예제는 간단한 람다 식을 만드는 두 가지 방법을 보여 줍니다. 첫 번째 예제는 `Dim` 함수에 대 한 이름을 제공 합니다. 함수를 호출 하려면 매개 변수 값에 보냅니다.  
   
  [!code-vb[VbVbalrLambdas#1](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/function-expression_1.vb)]  
   
  [!code-vb[VbVbalrLambdas#2](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/function-expression_2.vb)]  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  또는 선언 하 고 동시에 함수를 실행할 수 있습니다.  
   
  [!code-vb[VbVbalrLambdas#3](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/function-expression_3.vb)]  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음은 인수를 증가 시키고 값을 반환 하는 람다 식의 예입니다. 함수에 대 한 두에서는 한 줄 및 여러 줄 람다 식 구문을 보여 줍니다. 더 많은 예제를 참조 하십시오. [람다 식](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)합니다.  
   
  [!code-vb[VbVbalrLambdas#14](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/function-expression_4.vb)]  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  람다 식의 쿼리 연산자의 여러 기반이 [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)], 메서드 기반 쿼리에 명시적으로 사용할 수 있습니다. 다음 예제에서는 일반적인 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 쿼리의 다음 메서드 형식을를 쿼리 합니다.  
   
 ```vb  
