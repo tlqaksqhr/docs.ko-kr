@@ -1,22 +1,12 @@
 ---
-title: "연습: Async 및 Await를 사용하여 웹에 액세스(Visual Basic)"
-ms.custom: 
+title: '연습: Async 및 Await를 사용하여 웹에 액세스(Visual Basic)'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: get-started-article
 ms.assetid: 84fd047f-fab8-4d89-8ced-104fb7310a91
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: de1219de72be5ddc022d898c904663bf92ca5ab6
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 7154ea12f2660074e3ad8251b9baaa3eeb3d453c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="walkthrough-accessing-the-web-by-using-async-and-await-visual-basic"></a>연습: Async 및 Await를 사용하여 웹에 액세스(Visual Basic)
 async/await 기능을 사용하여 비동기 프로그램을 보다 쉽고 직관적인 방식으로 작성할 수 있습니다. 동기 코드처럼 보이는 비동기 코드를 작성하고 일반적으로 비동기 코드에 수반되는 어려운 콜백 함수 및 연속 작업을 컴파일러에서 처리하도록 할 수 있습니다.  
@@ -53,7 +43,7 @@ async/await 기능을 사용하여 비동기 프로그램을 보다 쉽고 직�
   
 -   [예](#BKMK_CompleteCodeExamples)  
   
-## <a name="prerequisites"></a>필수 구성 요소  
+## <a name="prerequisites"></a>전제 조건  
  Visual Studio 2012 이상이 컴퓨터에 설치되어 있어야 합니다. 자세한 내용은 [Microsoft 웹 사이트](http://go.microsoft.com/fwlink/?LinkId=235233)를 참조하세요.  
   
 ###  <a name="CreateWPFApp"></a> WPF 응용 프로그램을 만들려면  
@@ -117,7 +107,7 @@ async/await 기능을 사용하여 비동기 프로그램을 보다 쉽고 직�
 6.  **확인** 단추를 선택하여 대화 상자를 닫습니다.  
   
 ##  <a name="BKMK_AddStatesandDirs"></a>   
-###  <a name="ImportsState"></a>필요한 Import 문 추가 하려면  
+###  <a name="ImportsState"></a> 필요한 Import 문 추가 하려면  
   
 1.  **솔루션 탐색기**, MainWindow.xaml.vb에 대 한 바로 가기 메뉴를 열고 선택한 후 **코드 보기**합니다.  
   
@@ -683,11 +673,11 @@ End Class
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [Async 샘플: 웹 연습 (C# 및 Visual Basic)에 액세스](http://go.microsoft.com/fwlink/?LinkId=255191)  
+ [Async 샘플: 웹 연습에 액세스(C# 및 Visual Basic)](http://go.microsoft.com/fwlink/?LinkId=255191)  
  [Await 연산자](../../../../visual-basic/language-reference/operators/await-operator.md)  
  [비동기](../../../../visual-basic/language-reference/modifiers/async.md)  
  [Async 및 Await를 사용한 비동기 프로그래밍(Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/index.md)  
  [비동기 반환 형식(Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/async-return-types.md)  
- [작업 기반 비동기 프로그래밍 (TAP)](http://go.microsoft.com/fwlink/?LinkId=204847)  
+ [TAP(작업 기반 비동기 프로그래밍)](http://go.microsoft.com/fwlink/?LinkId=204847)  
  [방법: Task.WhenAll을 사용하여 비동기 연습 확장(Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/how-to-extend-the-async-walkthrough-by-using-task-whenall.md)  
  [방법: Async 및 Await를 사용하여 병렬로 여러 웹 요청 만들기(Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await.md)

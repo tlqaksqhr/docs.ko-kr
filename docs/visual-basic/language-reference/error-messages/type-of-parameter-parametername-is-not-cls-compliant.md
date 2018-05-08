@@ -1,26 +1,17 @@
 ---
 title: 매개 변수 형식의 &#39; &lt;parametername&gt; &#39; CLS 규격이 아닙니다
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vbc40028
 - bc40028
 helpviewer_keywords:
 - BC40028
 ms.assetid: dfa1f6f9-bb88-44ad-b85f-149144363d41
-caps.latest.revision: 11
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: d34de9e5914b02a0e878b87e786b81a5940a6d85
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 13a4e35cd27ed5aa135cec77c4415f223cba70f2
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="type-of-parameter-39ltparameternamegt39-is-not-cls-compliant"></a>매개 변수 형식의 &#39; &lt;parametername&gt; &#39; CLS 규격이 아닙니다
 프로시저로 표시 되어 `<CLSCompliant(True)>` 로 표시 된 형식으로 매개 변수를 선언 하지만 `<CLSCompliant(False)>`은 표시 되지 않았거나, 비규격 형식 이므로 사용할 수 없는 합니다.  

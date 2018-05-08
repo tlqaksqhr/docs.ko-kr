@@ -1,12 +1,6 @@
 ---
-title: "방법: 변환 연산자 정의(Visual Basic)"
-ms.custom: 
+title: '방법: 변환 연산자 정의(Visual Basic)'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - procedures [Visual Basic], defining
 - operators [Visual Basic], defining
@@ -15,14 +9,11 @@ helpviewer_keywords:
 - return values [Visual Basic], Operator procedures
 - operator overloading
 ms.assetid: 54203dfa-c24b-463f-9942-d5153e89e762
-caps.latest.revision: "14"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: b0f9e63ba039a48226186fa4ce118d3e47b5673e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 24bbe41af67f757cae661a78d482a423ff0ffd85
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-define-a-conversion-operator-visual-basic"></a>방법: 변환 연산자 정의(Visual Basic)
 클래스 또는 구조체를 정의 하는 경우 클래스 또는 구조체의 형식과 다른 데이터 형식 간에 형식 변환 연산자를 정의할 수 있습니다 (예: `Integer`, `Double`, 또는 `String`).  

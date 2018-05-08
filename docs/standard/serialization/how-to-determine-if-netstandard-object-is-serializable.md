@@ -1,10 +1,7 @@
 ---
-title: "방법: 표준.NET 개체를 직렬화 가능 인지 확인"
-description: "런타임 시.NET 표준 형식이 serialize 될 수 있는지 여부를 결정 하는 방법을 보여 줍니다."
-ms.custom: 
+title: '방법: 표준.NET 개체를 직렬화 가능 인지 확인'
+description: 런타임 시.NET 표준 형식이 serialize 될 수 있는지 여부를 결정 하는 방법을 보여 줍니다.
 ms.date: 10/20/2017
-ms.prod: .net
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -13,15 +10,11 @@ helpviewer_keywords:
 - objects, serializing steps
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 8246e825202b3eb02db5d11f1fe55b4a0d14a4ea
-ms.sourcegitcommit: 099aa20d9b6450d1b7452d782a55771a6ad8ff35
+ms.openlocfilehash: 247eed2e7091930c6bcfaa524296b45350dd6510
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/05/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-determine-if-a-net-standard-object-is-serializable"></a>방법: 표준.NET 개체를 직렬화 가능 인지 확인
 
@@ -39,7 +32,7 @@ ms.lasthandoff: 02/05/2018
 [!code-csharp[test-is-a-type-serializable](~/samples/snippets/standard/serialization/is-serializable/csharp/program.cs#1)]
 [!code-vb[test-is-a-type-serializable](~/samples/snippets/standard/serialization/is-serializable/vb/program.vb#1)]
 
-# <a name="see-also"></a>참고 항목
+# <a name="see-also"></a>참고자료
 
 [이진 serialization](binary-serialization.md)   
 <xref:System.SerializableAttribute?displayProperty=nameWithType>    

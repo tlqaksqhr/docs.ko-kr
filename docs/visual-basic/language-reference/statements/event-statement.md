@@ -1,11 +1,6 @@
 ---
-title: "Event 문"
+title: Event 문
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.Event
 - vb.Custom
@@ -23,14 +18,11 @@ helpviewer_keywords:
 - ByRef keyword [Visual Basic], Event statements
 - declaring user-defined events
 ms.assetid: 306ff8ed-74dd-4b6a-bd2f-e91b17474042
-caps.latest.revision: "33"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 4ba49d6582eb2ecac4846eaee570a4d92439a5d9
-ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
+ms.openlocfilehash: 967eedcf1f4d0c9a19775f294167b915cca25a9c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="event-statement"></a>Event 문
 사용자 정의된 이벤트를 선언합니다.  
@@ -72,7 +64,7 @@ End Event
 |`eventname`|필수. 이벤트의 이름입니다. 표준 변수 명명 규칙을 따릅니다.|  
 |`parameterlist`|선택 사항입니다. 이 이벤트의 매개 변수를 나타내는 지역 변수 목록입니다. 묶어야는 [매개 변수 목록](../../../visual-basic/language-reference/statements/parameter-list.md) 괄호 안에 있습니다.|  
 |`Implements`|선택 사항입니다. 이 이벤트가 인터페이스의 이벤트를 구현함을 나타냅니다.|  
-|`implementslist`|`Implements`가 제공된 경우 필수입니다. 구현할 `Sub` 프로시저 목록입니다. 여러 프로시저는 다음과 같이 쉼표로 구분합니다.<br /><br /> *implementedprocedure* [, *implementedprocedure* ...]<br /><br /> 각 `implementedprocedure`에는 다음과 같은 구문과 요소가 있습니다.<br /><br /> `interface`.`definedname`<br /><br /> -   `interface`-필요합니다. 이 프로시저의 포함하는 클래스 또는 구조체에서 구현하는 인터페이스의 이름입니다.<br />-   `Definedname`-필요합니다. 프로시저가 `interface`에 정의되는 이름입니다. 이 이름은 이 프로시저가 정의된 프로시저를 구현하는 데 사용하는 이름인 `name`과 동일하지 않아도 됩니다.|  
+|`implementslist`|`Implements`가 제공된 경우 필수입니다. 구현할 `Sub` 프로시저 목록입니다. 여러 프로시저는 다음과 같이 쉼표로 구분합니다.<br /><br /> *implementedprocedure* [, *implementedprocedure* ...]<br /><br /> 각 `implementedprocedure`에는 다음과 같은 구문과 요소가 있습니다.<br /><br /> `interface`.`definedname`<br /><br /> -   `interface` -필요합니다. 이 프로시저의 포함하는 클래스 또는 구조체에서 구현하는 인터페이스의 이름입니다.<br />-   `Definedname` -필요합니다. 프로시저가 `interface`에 정의되는 이름입니다. 이 이름은 이 프로시저가 정의된 프로시저를 구현하는 데 사용하는 이름인 `name`과 동일하지 않아도 됩니다.|  
 |`Custom`|필수. `Custom`으로 선언된 이벤트는 사용자 지정 `AddHandler`, `RemoveHandler` 및 `RaiseEvent` 접근자를 정의해야 합니다.|  
 |`delegatename`|선택 사항입니다. 이벤트 처리기 서명을 지정하는 대리자의 이름입니다.|  
 |`AddHandler`|필수. `AddHandler` 접근자를 선언합니다. 이 접근자는 명시적으로 `AddHandler` 문을 사용하거나 암시적으로 `Handles` 절을 사용하여 이벤트 처리기가 추가될 때 실행할 문을 지정합니다.|  
@@ -100,7 +92,7 @@ End Event
   
  대부분의 경우 이 항목의 구문 섹션에 있는 첫 번째 구문을 이벤트 선언에 사용할 수 있습니다. 그러나 일부 시나리오에서는 이벤트의 세부 동작을 더 많이 제어해야 합니다. 이 항목의 구문 섹션에 있는 마지막 구문에서는 `Custom` 키워드를 사용하여 사용자 지정 이벤트를 정의할 수 있도록 함으로써 해당 제어를 제공합니다. 사용자 지정 이벤트에서는 코드가 이벤트에서 이벤트 처리기를 추가하거나 제거할 때 또는 코드에서 이벤트를 발생시킬 때 수행되는 동작을 정확히 지정합니다. 예제를 보려면 [하는 방법: 절약 메모리를 사용자 지정 이벤트 선언](../../../visual-basic/programming-guide/language-features/events/how-to-declare-custom-events-to-conserve-memory.md) 및 [하는 방법: 선언 사용자 지정 이벤트를 차단을 방지](../../../visual-basic/programming-guide/language-features/events/how-to-declare-custom-events-to-avoid-blocking.md)합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 예제에서는 이벤트를 사용하여 10초부터 0초까지 카운트 다운합니다. 코드는 여러 가지 이벤트 관련 메서드, 속성 및 문을 보여 줍니다. 여기에는 `RaiseEvent` 문이 포함됩니다.  
   
  이벤트를 발생시키는 클래스는 이벤트 소스이고 이벤트를 처리하는 메서드는 이벤트 처리기입니다. 이벤트 소스는 생성되는 이벤트에 대해 여러 개의 처리기를 사용할 수 있습니다. 클래스에서 이벤트를 발생시키면 해당 이벤트는 개체의 해당 인스턴스에 대해 이벤트를 처리하도록 선택한 모든 클래스에서 발생됩니다.  

@@ -1,11 +1,6 @@
 ---
 title: -win32manifest (Visual Basic)
 ms.date: 03/13/2018
-ms.prod: .net
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - /win32manifest compiler option [Visual Basic]
 - win32manifest compiler option [Visual Basic]
@@ -13,11 +8,11 @@ helpviewer_keywords:
 ms.assetid: 9e3191b4-90db-41c8-966a-28036fd20005
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 901ea984a8e8e90329953a8936e68f2fc07f8847
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.openlocfilehash: f81b578c5ee3ffd830cef237fba2272eecd07642
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="-win32manifest-visual-basic"></a>-win32manifest (Visual Basic)
 프로젝트의 PE(포팅 가능한 실행 파일) 파일에 포함할 사용자 정의 Win32 응용 프로그램 매니페스트 파일을 식별합니다.  
@@ -48,7 +43,7 @@ ms.lasthandoff: 04/27/2018
   
 2.  요청한 실행 수준을 지정하지 않는 사용자 지정 매니페스트를 제공합니다.  
   
- Visual Studio 기본.manifest 파일을 만들고 실행 파일과 함께 디버그 및 릴리스 디렉터리에 저장 합니다. 보거나 클릭 하 여 기본 app.manifest 파일을 편집할 수 **UAC 설정 보기** 에 **응용 프로그램** 프로젝트 디자이너의 탭 합니다. 자세한 내용은 [프로젝트 디자이너, 응용 프로그램 페이지(Visual Basic)](/visualstudio/ide/reference/application-page-project-designer-visual-basic)를 참조하세요.  
+ Visual Studio는 기본 .manifest 파일을 만들고 이를 실행 파일과 함께 debug 및 release 디렉터리에 저장합니다. 보거나 클릭 하 여 기본 app.manifest 파일을 편집할 수 **UAC 설정 보기** 에 **응용 프로그램** 프로젝트 디자이너의 탭 합니다. 자세한 내용은 [프로젝트 디자이너, 응용 프로그램 페이지(Visual Basic)](/visualstudio/ide/reference/application-page-project-designer-visual-basic)를 참조하세요.  
   
  사용자 지정 빌드 후 단계 또는 Win32 리소스 파일의 일부로 사용 하 여 응용 프로그램 매니페스트를 제공할 수는 `-nowin32manifest` 옵션입니다. 응용 프로그램이 Windows Vista에서 파일 또는 레지스트리 가상화의 적용을 받도록 하려면 동일한 옵션을 사용합니다. 이렇게 하면 컴파일러에서 만들고 기본 매니페스트는 PE 파일에 포함 되지 것입니다.  
   

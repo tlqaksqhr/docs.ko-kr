@@ -1,13 +1,6 @@
 ---
 title: 람다 식(Visual Basic)
-ms.custom: ''
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.LambdaFunction
 helpviewer_keywords:
@@ -16,14 +9,11 @@ helpviewer_keywords:
 - expressions [Visual Basic], lambda
 - inline functions [Visual Basic]
 ms.assetid: 137064b0-3928-4bfa-ba71-c3f9cbd951e2
-caps.latest.revision: 52
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 69ac88d295420277e99058d0f80a5ae1c2ce2e39
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: c45500dc7a1e59a7ac83d43b826ca4cbfca6efb3
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="lambda-expressions-visual-basic"></a>람다 식(Visual Basic)
 A *람다 식을* 은 함수 또는 서브루틴 대리자가 유효한 함께 사용 될 수 있는 이름이 없는 합니다. 람다 식을 함수 또는 서브루틴 수 있으며 또는 여러 줄 수 있습니다. 람다 식에는 현재 범위에서 값을 전달할 수 있습니다.  
@@ -70,7 +60,7 @@ A *람다 식을* 은 함수 또는 서브루틴 대리자가 유효한 함께 �
   
 -   람다 식 매개 변수의 데이터 형식을 사용 하 여 지정할 수 있습니다는 `As` 키워드 또는 매개 변수의 데이터 형식을 유추할 수 있습니다. 데이터 형식 중 하나 또는 모두를 유추 합니다 모든 매개 변수에 지정 해야 합니다.  
   
--   `Optional`및 `Paramarray` 매개 변수는 허용 되지 않습니다.  
+-   `Optional` 및 `Paramarray` 매개 변수는 허용 되지 않습니다.  
   
 -   제네릭 매개 변수가 허용 되지 않습니다.  
   
@@ -118,7 +108,7 @@ End Class
   
  만들고 비동기 메서드를 사용 하는 방법에 대 한 자세한 내용은 참조 [Async 및 Await를 사용한 비동기 프로그래밍](../../../../visual-basic/programming-guide/concepts/async/index.md)합니다.  
   
-##  <a name="context"></a>컨텍스트  
+##  <a name="context"></a> 컨텍스트  
  람다 식 정의 된 범위와 해당 컨텍스트를 공유 합니다. 포함 범위에 작성 된 코드와 동일한 액세스 권한이 있음 여기에 멤버 변수, 함수 및 sub에 대 한 액세스 포함 됩니다. `Me`를 포함 하는 범위에서 지역 변수 및 매개 변수입니다.  
   
  지역 변수 및 매개 변수를 포함 하는 범위에 대 한 액세스 범위 하의 수명을 넘어서는 확장할 수 있습니다. 으로 참조 하는 람다 식을 대리자를 가비지 수집에 사용할 수 없는 원본 환경에서 변수에 액세스할 수 있도록 유지 됩니다. 다음 예에서는 변수에서 `target` 에 로컬인 `makeTheGame`, 메서드를 람다 식 `playTheGame` 정의 됩니다. 반환 된 람다 식에 할당 하는 참고 `takeAGuess` 에 `Main`, 지역 변수에 대 한 액세스를 아직 `target`합니다.  
@@ -127,15 +117,15 @@ End Class
   
  다음 예제에서는 다양 한 범위의 중첩 된 람다 식의 액세스 권한 보여 줍니다. 반환된 된 람다 식이 실행 되 면 `Main` 으로 `aDel`, 이러한 요소에 액세스 합니다.  
   
--   이전에 정의 된 클래스의 필드:`aField`  
+-   이전에 정의 된 클래스의 필드: `aField`  
   
--   이전에 정의 된 클래스의 속성:`aProp`  
+-   이전에 정의 된 클래스의 속성: `aProp`  
   
--   메서드의 매개 변수 `functionWithNestedLambda`에서 정의 됩니다.`level1`  
+-   메서드의 매개 변수 `functionWithNestedLambda`에서 정의 됩니다. `level1`  
   
--   지역 변수가 `functionWithNestedLambda`:`localVar`  
+-   지역 변수가 `functionWithNestedLambda`: `localVar`  
   
--   중첩 된 람다 식의 매개 변수:`level2`  
+-   중첩 된 람다 식의 매개 변수: `level2`  
   
  [!code-vb[VbVbalrLambdas#9](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/lambda-expressions_6.vb)]  
   

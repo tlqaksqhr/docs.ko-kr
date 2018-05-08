@@ -1,13 +1,6 @@
 ---
 title: Visual Basic 제한 사항
-ms.custom: ''
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - limits
 - limitations [Visual Basic]
@@ -15,14 +8,11 @@ helpviewer_keywords:
 - limits, Visual Basic code
 - Visual Basic code, limitations
 ms.assetid: cf1646b7-5d24-48c6-9616-bda8a4849d91
-caps.latest.revision: 14
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: d06b743996969dcd7fc022bbb8ab625f3a151137
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 57378c3aa18a5cc108c10e8654e55803f3cf9052
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="visual-basic-limitations"></a>Visual Basic 제한 사항
 이전 버전의 Visual Basic 코드에서 변수 이름, 모듈, 모듈 크기에 허용 되는 변수 수 길이 같은 제한이 있었습니다. Visual Basic.net에서는 이러한 제한이 완화 되었습니다, 훨씬 자유롭게 작성 하 고 정렬 코드를 제공 합니다.  

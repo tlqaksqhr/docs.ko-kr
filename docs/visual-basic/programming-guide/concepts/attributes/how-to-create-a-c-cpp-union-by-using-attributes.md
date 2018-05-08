@@ -1,27 +1,17 @@
 ---
-title: "방법: C + + 공용 구조체 (Visual Basic) 특성을 사용 하 여 만들기"
-ms.custom: 
+title: '방법: C + + 공용 구조체 (Visual Basic) 특성을 사용 하 여 만들기'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 9352a7e4-c0da-4d07-aa14-55ed43736fcb
-caps.latest.revision: "4"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 51d04c573e91a351c48edefebdb3d32fce1d306f
-ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
+ms.openlocfilehash: b07168df3fb7ec8195a3f64ef5b1bef0cc16dda2
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-a-cc-union-by-using-attributes-visual-basic"></a>방법: 특성 (Visual Basic)를 사용 하 여 C/c + + 공용 구조체 만들기
 특성을 사용하면 메모리에서 구조체가 레이아웃되는 방식을 사용자 지정할 수 있습니다. 예를 들어 `StructLayout(LayoutKind.Explicit)` 및 `FieldOffset` 특성을 사용하여 C/C++에서 공용 구조체로 알려진 항목을 만들 수 있습니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  이 코드 세그먼트에서 `TestUnion`의 모든 필드는 메모리의 같은 위치에서 시작합니다.  
   
 ```vb  
@@ -44,7 +34,7 @@ Structure TestUnion
 End Structure  
 ```  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음은 명시적으로 설정된 다른 위치에서 필드가 시작하는 또 다른 예제입니다.  
   
 ```vb  

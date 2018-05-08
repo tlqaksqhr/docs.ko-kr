@@ -1,13 +1,6 @@
 ---
 title: 익명 형식(Visual Basic)
-ms.custom: ''
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.AnonymousType
 helpviewer_keywords:
@@ -15,14 +8,11 @@ helpviewer_keywords:
 - anonymous types [Visual Basic]
 - types [Visual Basic], anonymous
 ms.assetid: 7b87532c-4b3e-4398-8503-6ea9d67574a4
-caps.latest.revision: 46
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 530e21e1595f9bbc3436280418287413e2a48111
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 451fe45c9b5efbeb64b1066d6ba8e5f9b27300c2
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="anonymous-types-visual-basic"></a>익명 형식(Visual Basic)
 Visual Basic에서는 익명 형식, 데이터 형식에 대 한 클래스 정의 작성 하지 않고 개체를 만들 수 있도록 지원 합니다. 대신 컴파일러가 클래스를 생성합니다. 클래스는 사용 가능한 이름이 없으므로에서 직접 상속 <xref:System.Object>, 개체를 선언할 지정 하는 속성을 포함 합니다. 데이터 형식의 이름을 지정 되어 있지 않으므로 것 이라고는 *익명 형식*합니다.  
@@ -95,11 +85,11 @@ Visual Basic에서는 익명 형식, 데이터 형식에 대 한 클래스 정�
 ## <a name="anonymous-types-from-query-expressions"></a>쿼리 식에서 익명 형식  
  쿼리 식에서는 익명 형식 만들 항상 필요 하지 않습니다. 가능 하면 있습니다를 사용 하 여 기존 형식을 열 데이터입니다. 이 쿼리가 데이터 원본 또는 각 레코드의 필드 하나만의 전체 레코드 중 하나는 반환 될 때 발생 합니다. 다음 코드 예제에서 `customers` 은 개체의 컬렉션을 `Customer` 클래스입니다. 클래스에는 많은 속성이 고 하나 이상의 순서에 관계 없이 쿼리 결과에 포함할 수 있습니다. 처음 두 예제에서 쿼리 명명 된 형식의 요소를 선택 하기 때문에 익명 형식이 없습니다가 필요 합니다.  
   
--   `custs1`때문에 문자열의 컬렉션을 포함 `cust.Name` 는 문자열입니다.  
+-   `custs1` 때문에 문자열의 컬렉션을 포함 `cust.Name` 는 문자열입니다.  
   
      [!code-vb[VbVbalrAnonymousTypes#30](../../../../visual-basic/language-reference/modifiers/codesnippet/VisualBasic/anonymous-types_9.vb)]  
   
--   `custs2`컬렉션을 포함 `Customer` 때문에 개체의 각 요소 `customers` 는 `Customer` 개체 및 전체 요소는 쿼리에서 선택 됩니다.  
+-   `custs2` 컬렉션을 포함 `Customer` 때문에 개체의 각 요소 `customers` 는 `Customer` 개체 및 전체 요소는 쿼리에서 선택 됩니다.  
   
      [!code-vb[VbVbalrAnonymousTypes#31](../../../../visual-basic/language-reference/modifiers/codesnippet/VisualBasic/anonymous-types_10.vb)]  
   

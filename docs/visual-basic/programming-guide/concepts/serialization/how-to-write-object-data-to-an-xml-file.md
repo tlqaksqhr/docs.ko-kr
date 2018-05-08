@@ -1,22 +1,12 @@
 ---
-title: "방법: XML 파일 (Visual Basic)에 개체 데이터 쓰기"
-ms.custom: 
+title: '방법: XML 파일 (Visual Basic)에 개체 데이터 쓰기'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: f7966480-5ed2-43ac-9894-33427436de2a
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: df461f9b560dac45add0d7c82ff4938b0a7b1e62
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 434706383c50e5df8e419e3988da8dc7cce87c83
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-write-object-data-to-an-xml-file-visual-basic"></a>방법: XML 파일 (Visual Basic)에 개체 데이터 쓰기
 이 예제에서는 <xref:System.Xml.Serialization.XmlSerializer> 클래스를 사용하여 XML 파일에 클래스의 개체를 씁니다.  

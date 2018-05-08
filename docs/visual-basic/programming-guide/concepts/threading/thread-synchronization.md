@@ -1,22 +1,12 @@
 ---
-title: "스레드 동기화 (Visual Basic)"
-ms.custom: 
+title: 스레드 동기화 (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 04f485d1-8333-4510-9e72-c334e7427e7e
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 643dbb6fdceb4e1cfd074d3a532787562dbfd03b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 9922230e1c7f2bd30c575bd66387feb4850a298b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="thread-synchronization-visual-basic"></a>스레드 동기화 (Visual Basic)
 다음 섹션에서는 다중 스레드 응용 프로그램에서 리소스에 대한 액세스를 동기화 하는 데 사용할 수 있는 기능 및 클래스를 설명합니다.  
@@ -38,7 +28,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="the-lock-and-synclock-keywords"></a>잠금 및 SyncLock 키워드  
  Visual Basic `SyncLock` 다른 스레드에서 코드 블록을 중단 없이 완료 될 때까지 실행 되도록 사용할 수 문입니다. 이렇게 하려면 코드 블록 기간 동안 지정된 개체에 대한 상호 배타적 잠금을 얻습니다.  
   
- `SyncLock` 문에 개체가 인수로 지정되고, 한 번에 하나의 스레드에 의해 실행되는 코드 블록이 뒤에 나옵니다. 예:  
+ `SyncLock` 문에 개체가 인수로 지정되고, 한 번에 하나의 스레드에 의해 실행되는 코드 블록이 뒤에 나옵니다. 예를 들어:  
   
 ```vb  
 Public Class TestThreading  
@@ -63,7 +53,7 @@ End Class
 -   <xref:System.Threading.Monitor>  
   
 ## <a name="monitors"></a>모니터  
- `SyncLock` 키워드와 마찬가지로, 모니터는 코드 블록이 여러 스레드에서 동시에 실행되지 않도록 합니다. <xref:System.Threading.Monitor.Enter%2A> 메서드를 사용하면 하나의 스레드만 다음 문으로 계속 진행할 수 있습니다. 다른 모든 스레드는 실행 중인 스레드가 <xref:System.Threading.Monitor.Exit%2A>를 호출할 때까지 차단됩니다. 이는 `SyncLock` 키워드를 사용하는 것과 같습니다. 예:  
+ `SyncLock` 키워드와 마찬가지로, 모니터는 코드 블록이 여러 스레드에서 동시에 실행되지 않도록 합니다. <xref:System.Threading.Monitor.Enter%2A> 메서드를 사용하면 하나의 스레드만 다음 문으로 계속 진행할 수 있습니다. 다른 모든 스레드는 실행 중인 스레드가 <xref:System.Threading.Monitor.Exit%2A>를 호출할 때까지 차단됩니다. 이는 `SyncLock` 키워드를 사용하는 것과 같습니다. 예를 들어:  
   
 ```vb  
 SyncLock x  

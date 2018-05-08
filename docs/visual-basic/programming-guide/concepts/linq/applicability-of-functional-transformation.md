@@ -1,22 +1,12 @@
 ---
-title: "함수 변환 (Visual Basic)의 적용 여부"
-ms.custom: 
+title: 함수 변환 (Visual Basic)의 적용 여부
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 3b74e134-e19b-44bc-8d06-e26c48305040
-caps.latest.revision: "4"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 184f40aa5752a620a5a9af1f27efc598251a96c2
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: bdb487ce0de986a1dba36908352a8270cfde2700
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="applicability-of-functional-transformation-visual-basic"></a>함수 변환 (Visual Basic)의 적용 여부
 순수 함수 변환은 광범위한 상황에서 적용 가능합니다.  

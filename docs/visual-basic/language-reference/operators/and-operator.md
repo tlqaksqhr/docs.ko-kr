@@ -1,12 +1,6 @@
 ---
 title: And 연산자(Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.And
 helpviewer_keywords:
@@ -19,14 +13,11 @@ helpviewer_keywords:
 - operators [Visual Basic], conjunction
 - bitwise comparison [Visual Basic]
 ms.assetid: 2ea711f3-439a-4c7c-9e3a-1ffe3b0d6046
-caps.latest.revision: 12
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 83e1f9df11152f88ef0db24a794026d6f5888a2e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: e14dfd8ba200598084cad04d1faa05f3561f8dab
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="and-operator-visual-basic"></a>And 연산자(Visual Basic)
 두 개의에 논리 결합을 수행 `Boolean` 식 또는 두 숫자 식에 비트 결합 합니다.  
@@ -39,13 +30,13 @@ result = expression1 And expression2
   
 ## <a name="parts"></a>요소  
  `result`  
- 필수 요소. 모든 `Boolean` 또는 숫자 식입니다. 부울 비교 `result` 는 두 논리 결합 `Boolean` 값입니다. 비트 연산에 대 한 `result` 는 두 개의 숫자 비트 패턴의 비트 결합을 나타내는 숫자 값입니다.  
+ 필수. 모든 `Boolean` 또는 숫자 식입니다. 부울 비교 `result` 는 두 논리 결합 `Boolean` 값입니다. 비트 연산에 대 한 `result` 는 두 개의 숫자 비트 패턴의 비트 결합을 나타내는 숫자 값입니다.  
   
  `expression1`  
- 필수 요소. 모든 `Boolean` 또는 숫자 식입니다.  
+ 필수. 모든 `Boolean` 또는 숫자 식입니다.  
   
  `expression2`  
- 필수 요소. 모든 `Boolean` 또는 숫자 식입니다.  
+ 필수. 모든 `Boolean` 또는 숫자 식입니다.  
   
 ## <a name="remarks"></a>설명  
  부울 비교 `result` 은 `True` 두 경우에 `expression1` 및 `expression2` 로 평가 `True`합니다. 다음 표에서 설명 방법을 `result` 결정 됩니다.  

@@ -1,13 +1,6 @@
 ---
 title: '연습: Windows API 호출(Visual Basic)'
-ms.custom: ''
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - DLLs, calling
 - Windows API, walkthroughs
@@ -18,14 +11,11 @@ helpviewer_keywords:
 - DllImport attribute, calling Windows API
 - Declare statement [Visual Basic], declaring DLL functions
 ms.assetid: 9280ca96-7a93-47a3-8d01-6d01be0657cb
-caps.latest.revision: 20
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 34bfb732e2d99b259811573a427ae66628c7fc3a
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: bb98d842bfe65bdf637a789fc9a8319a70cb2bc8
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="walkthrough-calling-windows-apis-visual-basic"></a>연습: Windows API 호출(Visual Basic)
 Windows Api는 Windows 운영 체제의 일부인 동적 연결 라이브러리 (Dll)입니다. 사용 하면 수 자신만의 프로시저 작성 하기 어려울 때는 작업을 수행 합니다. Windows 라는 함수를 제공 하는 예를 들어 `FlashWindowEx` 수 있게 해 주는 밝은 영역과 어두운 음영을 교대로 응용 프로그램에 대 한 제목 표시줄을 확인 합니다.  

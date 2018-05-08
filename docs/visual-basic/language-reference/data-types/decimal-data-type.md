@@ -1,11 +1,6 @@
 ---
 title: Decimal 데이터 형식(Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.Decimal
 helpviewer_keywords:
@@ -25,14 +20,11 @@ helpviewer_keywords:
 - '@ identifier type character'
 - identifier type characters [Visual Basic], @
 ms.assetid: 1d855b45-afe2-45b0-a623-96b6f63a43d5
-caps.latest.revision: 20
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 55a9293fa680a7a04cff4099654d4d66790e8d3d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 9e256e93d7857c8674a1d711fa9cafd3ed9a29f5
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="decimal-data-type-visual-basic"></a>Decimal 데이터 형식(Visual Basic)
 부호 있는 10의 거듭제곱으로 조정 된 96 비트 (12 바이트) 정수 숫자를 나타내는 128 비트 (16 바이트) 값을 저장 합니다. 소수점 오른쪽 자릿수의 수를 지정 하는 배율 인수 해당 범위는 0에서 28. 가장 큰 가능한 값은 0 (소수 자릿수 없이) 배율로 79228162514264337593543950335 + /-(7 + /-.9228162514264337593543950335E + 28)입니다. 소수 자릿수가 28 인 + /-7.9228162514264337593543950335 사이, 가장 큰 값은 및 0.0000000000000000000000000001 1E-28) (+ + /-0이 아닌 값은입니다.  
@@ -44,7 +36,7 @@ ms.lasthandoff: 11/21/2017
   
 ## <a name="programming-tips"></a>프로그래밍 팁  
   
--   **전체 자릿수입니다.** `Decimal`부동 소수점 데이터 형식이 아닙니다. `Decimal` 구조 부호 비트 및 자릿수 소수 부분 값의 부분을 지정 하는 요소와 함께 이진 정수 값을 보유 합니다. 이 인해 `Decimal` 숫자가 부동 소수점 형식 보다 메모리에서 보다 정확 하 게 표현 (`Single` 및 `Double`).  
+-   **전체 자릿수입니다.** `Decimal` 부동 소수점 데이터 형식이 아닙니다. `Decimal` 구조 부호 비트 및 자릿수 소수 부분 값의 부분을 지정 하는 요소와 함께 이진 정수 값을 보유 합니다. 이 인해 `Decimal` 숫자가 부동 소수점 형식 보다 메모리에서 보다 정확 하 게 표현 (`Single` 및 `Double`).  
   
 -   **성능.** `Decimal` 데이터 형식은 가장 느린 모든 숫자 형식입니다. 데이터 형식을 선택 하기 전에 성능에 대 한 전체 자릿수의 중요성을 저울질 해봐야 합니다.  
   

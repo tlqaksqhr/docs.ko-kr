@@ -1,12 +1,6 @@
 ---
-title: '&amp;연산자 (Visual Basic)'
+title: '&amp; 연산자 (Visual Basic)'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.&
 helpviewer_keywords:
@@ -16,16 +10,13 @@ helpviewer_keywords:
 - concatenation operators [Visual Basic], syntax
 - strings [Visual Basic], concatenating
 ms.assetid: fefc3d00-cbf1-475c-8c5e-6fb213b3f85a
-caps.latest.revision: 12
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 76c8fc52a518dfe7850a5680b7d4f06f3d09bf73
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 28d8cdb22974d77edf055ab9b2c6c767872e6783
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="amp-operator-visual-basic"></a>&amp;연산자 (Visual Basic)
+# <a name="amp-operator-visual-basic"></a>&amp; 연산자 (Visual Basic)
 두 식의 문자열 연결을 생성합니다.  
   
 ## <a name="syntax"></a>구문  
@@ -36,13 +27,13 @@ result = expression1 & expression2
   
 ## <a name="parts"></a>요소  
  `result`  
- 필수 요소. 모든 `String` 또는 `Object` 변수입니다.  
+ 필수. 모든 `String` 또는 `Object` 변수입니다.  
   
  `expression1`  
- 필수 요소. 모든 식으로 확장 되는 데이터 형식과 `String`합니다.  
+ 필수. 모든 식으로 확장 되는 데이터 형식과 `String`합니다.  
   
  `expression2`  
- 필수 요소. 모든 식으로 확장 되는 데이터 형식과 `String`합니다.  
+ 필수. 모든 식으로 확장 되는 데이터 형식과 `String`합니다.  
   
 ## <a name="remarks"></a>설명  
  데이터 형식이 `expression1` 또는 `expression2` 않습니다 `String` 로 확대 하지만 `String`로 변환 됩니다 `String`합니다. 하는 경우 데이터 형식 중 하나가 확대 변환 되지 않으면에 `String`, 컴파일러에 오류가 발생 합니다.  

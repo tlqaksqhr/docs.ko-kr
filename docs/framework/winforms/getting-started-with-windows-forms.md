@@ -1,13 +1,6 @@
 ---
-title: "Windows Forms 시작"
-ms.custom: 
+title: Windows Forms 시작
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 f1_keywords:
 - Designer_System.Windows.Forms.Design.FormDocumentDesigner
 - vb.wfc.formdesigner
@@ -15,16 +8,11 @@ helpviewer_keywords:
 - Windows Forms, getting started
 - getting started [Windows Forms], Windows Forms
 ms.assetid: a031aa58-5027-4082-b590-df7c12c77dec
-caps.latest.revision: "10"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: d5d81497872e231fb1b235d9707b9a36505d3165
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 7fc45efec8878ba4a098ad686e53bca375200c23
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="getting-started-with-windows-forms"></a>Windows Forms 시작
 Windows forms에서 강력한 Windows 기반 응용 프로그램을 만들 수 있습니다. 다음 항목 데이터를 표시 하 고 사용자 입력을 처리 한 다음이 쉽고 향상 된 보안 응용 프로그램을 배포 하려면 Windows Forms의 강력한 기능을 사용 하는 방법을 자세히 설명 합니다.  

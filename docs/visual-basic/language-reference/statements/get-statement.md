@@ -1,12 +1,6 @@
 ---
 title: Get 문
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.Get
 helpviewer_keywords:
@@ -17,14 +11,11 @@ helpviewer_keywords:
 - Get keyword [Visual Basic]
 - property procedures [Visual Basic], Get statements
 ms.assetid: 56b05cdc-bd64-4dfd-bb12-824eacec6f94
-caps.latest.revision: 19
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: c1ff062a5e3bf41794bd5b4c90f1e188d6d97480
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: d6a6fdfd191de76871619dea3bd1794b487698aa
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="get-statement"></a>Get 문
 선언 된 `Get` 속성 프로시저는 속성의 값을 검색 하는 데 사용 합니다.  
@@ -44,7 +35,7 @@ End Get
 |`attributelist`|선택 사항입니다. 참조 [특성 목록](../../../visual-basic/language-reference/statements/attribute-list.md)합니다.|  
 |`accessmodifier`|선택 사항 중 하나 에서만에서 `Get` 및 `Set` 이 속성에는 문입니다. 다음 중 하나일 수 있습니다.<br /><br /> -   [보호](../../../visual-basic/language-reference/modifiers/protected.md)<br />-   [Friend](../../../visual-basic/language-reference/modifiers/friend.md)<br />-   [개인](../../../visual-basic/language-reference/modifiers/private.md)<br />-   `Protected Friend`<br /><br /> 참조 [액세스 수준을 Visual Basic의](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)합니다.|  
 |`statements`|선택 사항입니다. 다음과 같은 경우 실행 하는 하나 이상의 문을 `Get` 속성 프로시저를 호출 합니다.|  
-|`End Get`|필수 요소. 정의 종료는 `Get` 속성 프로시저입니다.|  
+|`End Get`|필수. 정의 종료는 `Get` 속성 프로시저입니다.|  
   
 ## <a name="remarks"></a>설명  
  모든 속성은 한 `Get` 속성 프로시저 속성이 표시 되어 있지 않으면 `WriteOnly`합니다. `Get` 프로시저는 속성의 현재 값을 반환 하는 데 사용 됩니다.  
@@ -69,7 +60,7 @@ End Get
   
 -   **프로시저에서 반환 합니다.** 경우는 `Get` 프로시저가 호출 코드에 반환 되 면 속성 값을 요청한 문 내에서 계속 실행 합니다.  
   
-     `Get`속성 프로시저 중 하나를 사용 하 여 값을 반환할 수는 [Return 문을](../../../visual-basic/language-reference/statements/return-statement.md) 속성 이름에 반환 값을 할당 하 여 합니다. 자세한 내용은의 "반환 값이" 참조 [Function 문](../../../visual-basic/language-reference/statements/function-statement.md)합니다.  
+     `Get` 속성 프로시저 중 하나를 사용 하 여 값을 반환할 수는 [Return 문을](../../../visual-basic/language-reference/statements/return-statement.md) 속성 이름에 반환 값을 할당 하 여 합니다. 자세한 내용은의 "반환 값이" 참조 [Function 문](../../../visual-basic/language-reference/statements/function-statement.md)합니다.  
   
      `Exit Property` 및 `Return` 문은 속성 프로시저를 즉시 종료 합니다. 개수에 관계 없이 `Exit Property` 및 `Return` 문은 프로시저에서 아무 곳 이나 나타날 수 있으며 함께 사용할 수 있습니다 `Exit Property` 및 `Return` 문.  
   

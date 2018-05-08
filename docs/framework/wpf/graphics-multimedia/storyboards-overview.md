@@ -1,13 +1,6 @@
 ---
-title: "Storyboard 개요"
-ms.custom: 
+title: Storyboard 개요
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -16,29 +9,24 @@ helpviewer_keywords:
 - syntax [WPF], Storyboard
 - timelines [WPF]
 ms.assetid: 1a698c3c-30f1-4b30-ae56-57e8a39811bd
-caps.latest.revision: "31"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 614b5cc4843dbb886fa9cb02c56b28452e9fae8a
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 36922dce795443a4c1136f6442eff1c297f3c641
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="storyboards-overview"></a>Storyboard 개요
 이 항목에서는 사용 하는 방법을 보여 줍니다. <xref:System.Windows.Media.Animation.Storyboard> 개체를 구성 하 고 애니메이션을 적용 합니다. 대화형으로 조작 하는 방법을 설명 <xref:System.Windows.Media.Animation.Storyboard> 개체 및 대상 지정 구문 간접 속성에 설명 합니다.  
   
 <a name="prerequisites"></a>   
-## <a name="prerequisites"></a>필수 구성 요소  
+## <a name="prerequisites"></a>전제 조건  
  이 항목을 이해하려면 다양한 애니메이션 형식과 해당 기본 기능에 대해 잘 알고 있어야 합니다. 애니메이션 소개를 보려면 [애니메이션 개요](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)를 참조하세요. 또한 연결된 속성을 사용하는 방법을 알아야 합니다. 연결된 속성에 대한 자세한 내용은 [연결된 속성 개요](../../../../docs/framework/wpf/advanced/attached-properties-overview.md)를 참조하세요.  
   
 <a name="whatisatimeline"></a>   
 ## <a name="what-is-a-storyboard"></a>Storyboard란?  
  애니메이션만이 타임라인의 유용한 형식은 아닙니다. 타임라인의 집합을 구성하고 속성에 타임라인을 적용하는 데 도움이 되는 다른 타임라인 클래스도 제공됩니다. 파생 되는 컨테이너 타임 라인의 <xref:System.Windows.Media.Animation.TimelineGroup> 클래스와 포함 <xref:System.Windows.Media.Animation.ParallelTimeline> 및 <xref:System.Windows.Media.Animation.Storyboard>합니다.  
   
- A <xref:System.Windows.Media.Animation.Storyboard> 포함 된 타임 라인에 대 한 대상 정보를 제공 하는 컨테이너 타임 라인의 형식입니다. 스토리 보드에는 모든 종류의 포함 될 수 있습니다 <xref:System.Windows.Media.Animation.Timeline>, 다른 컨테이너 타임 라인 및 애니메이션을 포함 합니다. <xref:System.Windows.Media.Animation.Storyboard>개체를 사용 하 여 다양 한 개체 및 속성을 쉽게 구성 하 고 복잡 한 타이밍 동작을 제어 하는 단일 시간 표시 막대 트리에 영향을 주는 타임 라인을 결합할 수 있습니다. 예를 들어 다음 세 가지 작업을 수행하는 단추가 필요하다고 가정해 봅니다.  
+ A <xref:System.Windows.Media.Animation.Storyboard> 포함 된 타임 라인에 대 한 대상 정보를 제공 하는 컨테이너 타임 라인의 형식입니다. 스토리 보드에는 모든 종류의 포함 될 수 있습니다 <xref:System.Windows.Media.Animation.Timeline>, 다른 컨테이너 타임 라인 및 애니메이션을 포함 합니다. <xref:System.Windows.Media.Animation.Storyboard> 개체를 사용 하 여 다양 한 개체 및 속성을 쉽게 구성 하 고 복잡 한 타이밍 동작을 제어 하는 단일 시간 표시 막대 트리에 영향을 주는 타임 라인을 결합할 수 있습니다. 예를 들어 다음 세 가지 작업을 수행하는 단추가 필요하다고 가정해 봅니다.  
   
 -   단추를 선택하면 단추가 커지고 색이 변경됩니다.  
   
@@ -46,7 +34,7 @@ ms.lasthandoff: 01/19/2018
   
 -   사용되지 않도록 설정되면 축소되었다가 50% 불투명도로 페이드됩니다.  
   
- 이 경우 동일한 개체에 적용되는 여러 애니메이션 집합이 있고 단추 상태에 따라 다른 시간에 재생하려고 합니다. <xref:System.Windows.Media.Animation.Storyboard>개체를 사용 하 여 애니메이션을 구성 하 고 하나 이상의 개체 그룹으로 적용할 수 있습니다.  
+ 이 경우 동일한 개체에 적용되는 여러 애니메이션 집합이 있고 단추 상태에 따라 다른 시간에 재생하려고 합니다. <xref:System.Windows.Media.Animation.Storyboard> 개체를 사용 하 여 애니메이션을 구성 하 고 하나 이상의 개체 그룹으로 적용할 수 있습니다.  
   
 <a name="wherecanyouuseastoryboard"></a>   
 ## <a name="where-can-you-use-a-storyboard"></a>Storyboard를 사용할 수 있는 위치  
@@ -70,11 +58,11 @@ ms.lasthandoff: 01/19/2018
   
  다음 표에서 다양 한 위치를 보여 줍니다. 여기서 각 <xref:System.Windows.Media.Animation.Storyboard> 시작 기술을 사용할 수 있습니다: 인스턴스당, 스타일, 컨트롤 템플릿 및 데이터 서식 파일입니다. "인스턴스별"은 스타일, 컨트롤 템플릿 또는 데이터 템플릿이 아닌 개체의 인스턴스에 직접 애니메이션 또는 storyboard를 적용하는 기술을 나타냅니다.  
   
-|storyboard 시작 방법...|인스턴스별|스타일|컨트롤 템플릿|데이터 템플릿|예|  
+|storyboard 시작 방법...|인스턴스별|스타일|컨트롤 템플릿|데이터 템플릿|예제|  
 |--------------------------------|-------------------|-----------|----------------------|-------------------|-------------|  
-|<xref:System.Windows.Media.Animation.BeginStoryboard>및<xref:System.Windows.EventTrigger>|예|예|예|예|[Storyboard를 사용하여 속성에 애니메이션 효과 주기](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-property-by-using-a-storyboard.md)|  
-|<xref:System.Windows.Media.Animation.BeginStoryboard>속성<xref:System.Windows.Trigger>|아니요|예|예|예|[속성 값이 변경될 때 애니메이션 트리거](../../../../docs/framework/wpf/graphics-multimedia/how-to-trigger-an-animation-when-a-property-value-changes.md)|  
-|<xref:System.Windows.Media.Animation.BeginStoryboard>및<xref:System.Windows.DataTrigger>|아니요|예|예|예|[방법: 데이터가 변경될 때 애니메이션 트리거Changes](http://msdn.microsoft.com/library/a736bb3a-2ae5-479a-a33a-75a27055d863)|  
+|<xref:System.Windows.Media.Animation.BeginStoryboard> 및 <xref:System.Windows.EventTrigger>|예|예|예|예|[Storyboard를 사용하여 속성에 애니메이션 효과 주기](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-property-by-using-a-storyboard.md)|  
+|<xref:System.Windows.Media.Animation.BeginStoryboard> 속성 <xref:System.Windows.Trigger>|아니요|예|예|예|[속성 값이 변경될 때 애니메이션 트리거](../../../../docs/framework/wpf/graphics-multimedia/how-to-trigger-an-animation-when-a-property-value-changes.md)|  
+|<xref:System.Windows.Media.Animation.BeginStoryboard> 및 <xref:System.Windows.DataTrigger>|아니요|예|예|예|[방법: 데이터가 변경될 때 애니메이션 트리거Changes](http://msdn.microsoft.com/library/a736bb3a-2ae5-479a-a33a-75a27055d863)|  
 |<xref:System.Windows.Media.Animation.Storyboard.Begin%2A> 메서드|예|아니요|아니요|아니요|[Storyboard를 사용하여 속성에 애니메이션 효과 주기](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-property-by-using-a-storyboard.md)|  
   
  다음 예제에서는 <xref:System.Windows.Media.Animation.Storyboard> 애니메이션 효과를 주는 <xref:System.Windows.FrameworkElement.Width%2A> 의 <xref:System.Windows.Shapes.Rectangle> 요소 및 <xref:System.Windows.Media.SolidColorBrush.Color%2A> 의 <xref:System.Windows.Media.SolidColorBrush> 를 그리는 데 사용 되는 <xref:System.Windows.Shapes.Rectangle>합니다.  
@@ -107,7 +95,7 @@ ms.lasthandoff: 01/19/2018
   
  [!code-csharp[storyboards_ovw_snip#105](../../../../samples/snippets/csharp/VS_Snippets_Wpf/storyboards_ovw_snip/CSharp/StoryboardsExample.cs#105)]  
   
- <xref:System.Windows.Freezable>유형은 해당 클래스에서 상속 되는 <xref:System.Windows.Freezable> 클래스입니다. 몇 가지 <xref:System.Windows.Freezable> 포함 <xref:System.Windows.Media.SolidColorBrush>, <xref:System.Windows.Media.RotateTransform>, 및 <xref:System.Windows.Media.GradientStop>합니다.  
+ <xref:System.Windows.Freezable> 유형은 해당 클래스에서 상속 되는 <xref:System.Windows.Freezable> 클래스입니다. 몇 가지 <xref:System.Windows.Freezable> 포함 <xref:System.Windows.Media.SolidColorBrush>, <xref:System.Windows.Media.RotateTransform>, 및 <xref:System.Windows.Media.GradientStop>합니다.  
   
  대상으로 사용할 수 있도록는 <xref:System.Windows.Freezable> 에서 애니메이션에 따라 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], 사용 하면는 [X:name 지시문](../../../../docs/framework/xaml-services/x-name-directive.md) 에 이름을 할당할 수 있습니다. 코드를 사용 하 여는 <xref:System.Windows.NameScope.RegisterName%2A> 를 만든 요소에 해당 이름을 등록 하는 메서드는 <xref:System.Windows.NameScope>합니다.  
   
@@ -123,7 +111,7 @@ ms.lasthandoff: 01/19/2018
   
  [!code-csharp[storyboards_ovw_snip#107](../../../../samples/snippets/csharp/VS_Snippets_Wpf/storyboards_ovw_snip/CSharp/StoryboardsExample.cs#107)]  
   
- <xref:System.Windows.Media.Animation.Storyboard>개체 이름 범위를 사용 하 여 해결 하는 <xref:System.Windows.Media.Animation.Storyboard.TargetName%2A> 속성입니다. WPF 이름 범위에 대한 자세한 내용은 [WPF XAML 이름 범위](../../../../docs/framework/wpf/advanced/wpf-xaml-namescopes.md)를 참조하세요. 경우는 <xref:System.Windows.Media.Animation.Storyboard.TargetName%2A> 속성을 생략 하면, 애니메이션 정의 된 또는 스타일이 적용 된 요소 스타일의 경우 요소를 대상으로 합니다.  
+ <xref:System.Windows.Media.Animation.Storyboard> 개체 이름 범위를 사용 하 여 해결 하는 <xref:System.Windows.Media.Animation.Storyboard.TargetName%2A> 속성입니다. WPF 이름 범위에 대한 자세한 내용은 [WPF XAML 이름 범위](../../../../docs/framework/wpf/advanced/wpf-xaml-namescopes.md)를 참조하세요. 경우는 <xref:System.Windows.Media.Animation.Storyboard.TargetName%2A> 속성을 생략 하면, 애니메이션 정의 된 또는 스타일이 적용 된 요소 스타일의 경우 요소를 대상으로 합니다.  
   
  에 이름을 할당할 수 없는 경우에 따라는 <xref:System.Windows.Freezable> 개체입니다. 예를 들어 경우는 <xref:System.Windows.Freezable> 자원으로 선언 되거나 된 스타일에서 속성 값을 설정 하는 데 사용 되는 이름을 지정할 수 없습니다. 이름이 없기 때문에 직접적으로 대상으로 지정할 수 없지만 간접적으로 지정할 수는 있습니다. 다음 섹션에서는 간접 대상 지정을 사용하는 방법을 설명합니다.  
   
@@ -157,7 +145,7 @@ ms.lasthandoff: 01/19/2018
   
  다음 코드에 애니메이션 효과 적용 하는 방법을 보여 줍니다는 <xref:System.Windows.Media.SolidColorBrush.Color%2A> 의 <xref:System.Windows.Media.SolidColorBrush> 설정 하는 데는  
   
- <xref:System.Windows.Shapes.Shape.Fill%2A>사각형 요소입니다.  
+ <xref:System.Windows.Shapes.Shape.Fill%2A> 사각형 요소입니다.  
   
  [!code-xaml[storyboards_ovw_snip_XAML#32](../../../../samples/snippets/csharp/VS_Snippets_Wpf/storyboards_ovw_snip_XAML/CS/IndirectTargetingExample.xaml#32)]  
   
@@ -234,7 +222,7 @@ ms.lasthandoff: 01/19/2018
   
 <a name="controllable_storyboards"></a>   
 ## <a name="interactively-controlling-a-storyboard-in-xaml"></a>XAML에서 Storyboard를 대화형으로 제어  
- 스토리 보드를 시작 하려면 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]를 사용 하면는 <xref:System.Windows.Media.Animation.BeginStoryboard> 동작 합니다. <xref:System.Windows.Media.Animation.BeginStoryboard>개체와, 애니메이션 및 스토리 보드를 시작 하는 속성에 애니메이션을 배포 합니다. (이 프로세스에 대 한 세부 정보를 참조 하십시오.는 [애니메이션 및 타이밍 시스템 개요](../../../../docs/framework/wpf/graphics-multimedia/animation-and-timing-system-overview.md).) 제공 하는 경우는 <xref:System.Windows.Media.Animation.BeginStoryboard> 이름을 지정 하 여 해당 <xref:System.Windows.Media.Animation.BeginStoryboard.Name%2A> 속성 되도록 하 여 제어할 수 있는 스토리 보드 합니다. 그러면 Storyboard를 시작한 후에 대화형으로 제어할 수 있습니다. 다음은 Storyboard를 제어하기 위해 이벤트 트리거와 함께 사용하는 제어 가능한 Storyboard 작업 목록입니다.  
+ 스토리 보드를 시작 하려면 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]를 사용 하면는 <xref:System.Windows.Media.Animation.BeginStoryboard> 동작 합니다. <xref:System.Windows.Media.Animation.BeginStoryboard> 개체와, 애니메이션 및 스토리 보드를 시작 하는 속성에 애니메이션을 배포 합니다. (이 프로세스에 대 한 세부 정보를 참조 하십시오.는 [애니메이션 및 타이밍 시스템 개요](../../../../docs/framework/wpf/graphics-multimedia/animation-and-timing-system-overview.md).) 제공 하는 경우는 <xref:System.Windows.Media.Animation.BeginStoryboard> 이름을 지정 하 여 해당 <xref:System.Windows.Media.Animation.BeginStoryboard.Name%2A> 속성 되도록 하 여 제어할 수 있는 스토리 보드 합니다. 그러면 Storyboard를 시작한 후에 대화형으로 제어할 수 있습니다. 다음은 Storyboard를 제어하기 위해 이벤트 트리거와 함께 사용하는 제어 가능한 Storyboard 작업 목록입니다.  
   
 -   <xref:System.Windows.Media.Animation.PauseStoryboard>: 스토리 보드를 일시 중지 됩니다.  
   

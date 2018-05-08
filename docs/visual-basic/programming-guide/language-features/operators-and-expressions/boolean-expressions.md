@@ -1,12 +1,6 @@
 ---
-title: "부울 식(Visual Basic)"
-ms.custom: 
+title: 부울 식(Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - short-circuiting
 - Boolean expressions
@@ -20,17 +14,14 @@ helpviewer_keywords:
 - operators [Visual Basic], Boolean
 - Visual Basic code, expressions
 ms.assetid: d3d90406-55c8-4404-8143-50fd7f0d0d1a
-caps.latest.revision: "19"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 48071c6833f9841fa42311dda59d6959c0645ff4
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: ff5843c815658468ac69fe5d62a9ea4cac2be830
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="boolean-expressions-visual-basic"></a>부울 식(Visual Basic)
-A *부울 식* 식의 값으로 계산 되는 [Boolean 데이터 형식](../../../../visual-basic/language-reference/data-types/boolean-data-type.md): `True` 또는 `False`합니다. `Boolean`식에는 여러 가지 형식을 취할 수 있습니다. 가장 간단한는 값의 직접 비교는 `Boolean` 변수를 한 `Boolean` 리터럴, 다음 예제와 같이 합니다.  
+A *부울 식* 식의 값으로 계산 되는 [Boolean 데이터 형식](../../../../visual-basic/language-reference/data-types/boolean-data-type.md): `True` 또는 `False`합니다. `Boolean` 식에는 여러 가지 형식을 취할 수 있습니다. 가장 간단한는 값의 직접 비교는 `Boolean` 변수를 한 `Boolean` 리터럴, 다음 예제와 같이 합니다.  
   
  [!code-vb[VbVbalrOperators#87](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/boolean-expressions_1.vb)]  
   
@@ -56,7 +47,7 @@ A *부울 식* 식의 값으로 계산 되는 [Boolean 데이터 형식](../../.
  앞의 예제에서 전체 식의 값의 양쪽에 있는 식의 값에 종속 된 `And` 연산자입니다. 두 식이 모두 `True`, 전체 식은 다음 `True`합니다. 식 중 하나가 `False`, 전체 식은 다음 `False`합니다.  
   
 ## <a name="short-circuiting-operators"></a>단락 연산자  
- 논리 연산자 `AndAlso` 및 `OrElse` 라고 하는 동작을 나타낼 *단락 (short-circuiting)*합니다. 단락 연산자는 왼쪽된 피연산자를 먼저 평가합니다. 경우 전체 식의 값을 결정 하는 왼쪽된 피연산자, 오른쪽 식의 계산 하지 않고 프로그램 실행이 계속 됩니다. 다음은 이에 대한 예입니다.  
+ 논리 연산자 `AndAlso` 및 `OrElse` 라고 하는 동작을 나타낼 *단락 (short-circuiting)* 합니다. 단락 연산자는 왼쪽된 피연산자를 먼저 평가합니다. 경우 전체 식의 값을 결정 하는 왼쪽된 피연산자, 오른쪽 식의 계산 하지 않고 프로그램 실행이 계속 됩니다. 다음은 이에 대한 예입니다.  
   
  [!code-vb[VbVbalrOperators#89](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/boolean-expressions_3.vb)]  
   

@@ -1,11 +1,6 @@
 ---
-title: "Aggregate 절(Visual Basic)"
+title: Aggregate 절(Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.QueryAggregateIn
 - vb.QueryAggregate
@@ -15,14 +10,11 @@ helpviewer_keywords:
 - Aggregate statement [Visual Basic]
 - queries [Visual Basic], Aggregate
 ms.assetid: 1315a814-5db6-4077-b34b-b141e11cc0eb
-caps.latest.revision: "25"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 47017414a92bfbca0df4ce6e2b70398a01762d37
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 1db4b7fdcf9c8a38c2c49eca9d874eccea90ab1d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="aggregate-clause-visual-basic"></a>Aggregate 절(Visual Basic)
 컬렉션에 하나 이상의 집계 함수를 적용 합니다.  
@@ -40,11 +32,11 @@ Aggregate element [As type] In collection _
   
 |용어|정의|  
 |---|---|  
-|`element`|필수 요소. 컬렉션의 요소를 반복 하는 데 사용 하는 변수입니다.|  
+|`element`|필수. 컬렉션의 요소를 반복 하는 데 사용 하는 변수입니다.|  
 |`type`|선택 사항입니다. `element`의 형식입니다. 형식이 지정 되지 않은, 하는 경우의 형식 `element` 에서 유추 `collection`합니다.|  
-|`collection`|필수 요소. 작동 하도록 컬렉션을 나타냅니다.|  
+|`collection`|필수. 작동 하도록 컬렉션을 나타냅니다.|  
 |`clause`|선택 사항입니다. 하나 이상의 절을 같은 쿼리는 `Where` aggregate 절 또는 절을 적용 하 여 쿼리 결과를 구체화할 절.|  
-|`expressionList`|필수 요소. 하나 이상의 쉼표로 구분 된 식 컬렉션에 적용할 집계 함수를 식별 하는입니다. 쿼리 결과 대 한 멤버 이름을 지정 하는 집계 함수에 별칭을 적용할 수 있습니다. 별칭이 없는 제공 되는 경우 집계 함수의 이름이 사용 됩니다. 예제를 보려면이 항목의 뒷부분에 나오는 집계 함수에 대 한 섹션을 참조 합니다.|  
+|`expressionList`|필수. 하나 이상의 쉼표로 구분 된 식 컬렉션에 적용할 집계 함수를 식별 하는입니다. 쿼리 결과 대 한 멤버 이름을 지정 하는 집계 함수에 별칭을 적용할 수 있습니다. 별칭이 없는 제공 되는 경우 집계 함수의 이름이 사용 됩니다. 예제를 보려면이 항목의 뒷부분에 나오는 집계 함수에 대 한 섹션을 참조 합니다.|  
   
 ## <a name="remarks"></a>설명  
  `Aggregate` 쿼리에서 집계 함수를 포함 하도록 절을 사용할 수 있습니다. 집계 함수는 값의 집합에 대해 검사 및 계산을 수행 하 고 단일 값을 반환 합니다. 쿼리 결과 형식의 멤버를 사용 하 여 계산 된 값에 액세스할 수 있습니다. 사용할 수 있는 표준 집계 함수는는 `All`, `Any`, `Average`, `Count`, `LongCount`, `Max`, `Min`, 및 `Sum` 함수입니다. 이러한 함수는 SQL에서 집계에 익숙한 개발자에 게 익숙한입니다. 이 항목의 다음 섹션에서 설명 합니다.  

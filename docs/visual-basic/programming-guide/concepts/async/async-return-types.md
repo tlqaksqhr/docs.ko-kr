@@ -1,22 +1,12 @@
 ---
-title: "비동기 반환 형식 (Visual Basic)"
-ms.custom: 
+title: 비동기 반환 형식 (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 07890291-ee72-42d3-932a-fa4d312f2c60
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 1a62556fb93a3d8547d880e4ea6770b206ead900
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 0c6c02efd282f8581f3dc85905149acf7b3ea6ac
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="async-return-types-visual-basic"></a>비동기 반환 형식 (Visual Basic)
 비동기 메서드에 세 가지 가능한 반환 형식: <xref:System.Threading.Tasks.Task%601>, <xref:System.Threading.Tasks.Task>, 및 void입니다. Visual Basic에서 void 반환 형식은 [Sub](../../../../visual-basic/programming-guide/language-features/procedures/sub-procedures.md) 프로시저로 작성합니다. 비동기 메서드에 대 한 자세한 내용은 참조 [Async 및 Await (Visual Basic)를 사용한 비동기 프로그래밍](../../../../visual-basic/programming-guide/concepts/async/index.md)합니다.  
@@ -107,7 +97,7 @@ Async Function Task_MethodAsync() As Task
 End Function  
 ```  
   
- `Task_MethodAsync`호출 되 고 동기에 대 한 호출 문과 비슷하게 await 식 대신 await 문을 사용 하 여 대기 `Sub` 또는 void를 반환 합니다. 응용 프로그램 `Await` 연산자가 경우 값을 생성 하지는 합니다.  
+ `Task_MethodAsync` 호출 되 고 동기에 대 한 호출 문과 비슷하게 await 식 대신 await 문을 사용 하 여 대기 `Sub` 또는 void를 반환 합니다. 응용 프로그램 `Await` 연산자가 경우 값을 생성 하지는 합니다.  
   
  다음 코드는 `Task_MethodAsync` 메서드를 호출하고 기다립니다.  
   

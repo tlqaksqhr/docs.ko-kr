@@ -1,13 +1,6 @@
 ---
-title: "x:TypeArguments 지시문"
-ms.custom: 
+title: x:TypeArguments 지시문
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 f1_keywords:
 - x:TypeArguments
 - xTypeArguments
@@ -17,16 +10,11 @@ helpviewer_keywords:
 - TypeArguments attribute in XAML [XAML Services]
 - XAML [XAML Services], x:TypeArguments attribute
 ms.assetid: 86561058-d393-4a44-b5c3-993a4513ea74
-caps.latest.revision: "18"
-author: wadepickett
-ms.author: wpickett
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: e601fb5895460e52aa21836c542d0b1367527f09
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 94f09bdd3b6ee0b180e30bab0993f0b4e41730ac
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="xtypearguments-directive"></a>x:TypeArguments 지시문
 제네릭 형식의 생성자에 제네릭의 인수를 입력 하는 전달 합니다.  
@@ -62,13 +50,13 @@ xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib"
 ```  
   
 ### <a name="liststring"></a>목록\<문자열 >  
- `<scg:List x:TypeArguments="sys:String" ...>`새 인스턴스화합니다 <xref:System.Collections.Generic.List%601> 와 <xref:System.String> 인수를 입력 합니다.  
+ `<scg:List x:TypeArguments="sys:String" ...>` 새 인스턴스화합니다 <xref:System.Collections.Generic.List%601> 와 <xref:System.String> 인수를 입력 합니다.  
   
 ### <a name="dictionarystringstring"></a>사전\<문자열, 문자열 >  
- `<scg:Dictionary x:TypeArguments="sys:String,sys:String" ...>`새 인스턴스화합니다 <xref:System.Collections.Generic.Dictionary%602> 두 개의 <xref:System.String> 인수를 입력 합니다.  
+ `<scg:Dictionary x:TypeArguments="sys:String,sys:String" ...>` 새 인스턴스화합니다 <xref:System.Collections.Generic.Dictionary%602> 두 개의 <xref:System.String> 인수를 입력 합니다.  
   
 ### <a name="queuekeyvaluepairstringstring"></a>큐 < KeyValuePair\<String, String >>  
- `<scg:Queue x:TypeArguments="scg:KeyValuePair(sys:String,sys:String)" ...>`새 인스턴스화합니다 <xref:System.Collections.Generic.Queue%601> 의 제한 사항은 있는 <xref:System.Collections.Generic.KeyValuePair%602> 내부 제약 조건 형식 인수를 사용 <xref:System.String> 및 <xref:System.String>합니다.  
+ `<scg:Queue x:TypeArguments="scg:KeyValuePair(sys:String,sys:String)" ...>` 새 인스턴스화합니다 <xref:System.Collections.Generic.Queue%601> 의 제한 사항은 있는 <xref:System.Collections.Generic.KeyValuePair%602> 내부 제약 조건 형식 인수를 사용 <xref:System.String> 및 <xref:System.String>합니다.  
   
 ## <a name="xaml-2006-and-wpf-generic-xaml-usages"></a>XAML 2006 및 WPF XAML 제네릭 사용  
  XAML 2006 사용 및 WPF 응용 프로그램에 사용 되는 XAML에 대 한 다음과 같은 제한 사항이 `x:TypeArguments` 및 일반적으로 XAML 제네릭 형식 사용:  
@@ -79,7 +67,7 @@ xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib"
   
 -   제네릭에 대 한 루트 요소 XAML 개체 요소 사용 하 여 partial 클래스 선언 해야 `x:Class`합니다. 빌드 작업 WPF를 정의 하는 경우에 마찬가지입니다.  
   
--   `x:TypeArguments`중첩 된 제네릭 제약을 참조할 수 없습니다.  
+-   `x:TypeArguments` 중첩 된 제네릭 제약을 참조할 수 없습니다.  
   
 ## <a name="xaml-2009-or-xaml-2006-with-no-wpf-30-or-wpf-35-dependency"></a>XAML 2009 또는 WPF 3.0 또는 3.5 WPF 없는 XAML 2006 종속성  
  .NET Framework XAML 서비스 XAML 2006 또는 XAML 2009에서의 일반 XAML 사용에 대 한 WPF 관련 제한 완화 됩니다. 제네릭 개체 지원 형식 시스템 및 개체 모델을 지원할 수 있는 XAML 태그의 위치에 요소를 인스턴스화할 수 있습니다.  

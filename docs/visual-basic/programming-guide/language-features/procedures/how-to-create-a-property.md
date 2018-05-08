@@ -1,26 +1,17 @@
 ---
-title: "방법: 속성 만들기(Visual Basic)"
-ms.custom: 
+title: '방법: 속성 만들기(Visual Basic)'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - procedures [Visual Basic], defining
 - Visual Basic code, procedures
 - Visual Basic code, properties
 - properties [Visual Basic]
 ms.assetid: 4d229712-6be8-4c5c-bac5-06995ce9185a
-caps.latest.revision: "15"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: d140e6a10061f7fabe3d12c6cce5d0c201e103d6
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 6e3faed9880b6417f17ab8fe84bc5162e803c437
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-a-property-visual-basic"></a>방법: 속성 만들기(Visual Basic)
 속성 정의 간에 묶습니다는 `Property` 문 및 `End Property` 문. 정의 하 고이 정의 `Get` 프로시저는 `Set` 프로시저 중 하나 또는 둘 다 합니다. 이러한 프로시저 내에서 모든 속성의 코드에 표시 됩니다.  

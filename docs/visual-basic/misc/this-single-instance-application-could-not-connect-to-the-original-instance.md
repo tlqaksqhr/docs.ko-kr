@@ -1,21 +1,14 @@
 ---
-title: "이 단일 인스턴스 응용 프로그램을 원본 인스턴스에 연결할 수 없습니다."
+title: 이 단일 인스턴스 응용 프로그램을 원본 인스턴스에 연결할 수 없습니다.
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vbrAppModel_SingleInstanceCantConnect
 ms.assetid: 7c2c0cee-02a1-4157-be03-39d18e18408f
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 9cb8cef696ba93f922dfe0d92195a5fb5147b4cc
-ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
+ms.openlocfilehash: 9bc1f33231cc4f29fabd100a695843beb334aeaa
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="this-single-instance-application-could-not-connect-to-the-original-instance"></a>이 단일 인스턴스 응용 프로그램을 원본 인스턴스에 연결할 수 없습니다.
 이 단일 인스턴스 응용 프로그램을 원본 인스턴스에 연결할 수 없습니다. 이 문제가 발생할 수 있는 몇 가지 원인은 다음과 같습니다.  

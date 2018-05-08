@@ -1,14 +1,6 @@
 ---
-title: "잉크 시작"
-ms.custom: 
+title: 잉크 시작
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -19,17 +11,11 @@ helpviewer_keywords:
 - animation [WPF], gradient brush colors
 - brushes [WPF], animating colors of
 ms.assetid: 760332dd-594a-475d-865b-01659db8cab7
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 74227ebe815e971087569ff39ac0a3479c1b0d14
-ms.sourcegitcommit: d3cfda0943364aaf6ccd574f55f584576c8a4fee
+ms.openlocfilehash: 9a1b53d0513eeef377fe8e012a8d5d7ea3f8a984
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="getting-started-with-ink"></a>잉크 시작
 디지털 잉크 응용 프로그램에 통합 하는 것이 이전 보다 더 쉽습니다. 잉크가 발전 하 고 완벽 한 통합을 위한 프로그래밍의 COM 및 Windows Forms 메서드를 자연스럽 게 구축 되는 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]합니다. 별도 Sdk 또는 런타임 라이브러리를 설치할 필요가 없습니다.  

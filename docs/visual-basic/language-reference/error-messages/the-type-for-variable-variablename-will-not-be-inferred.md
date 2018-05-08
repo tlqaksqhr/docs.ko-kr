@@ -1,28 +1,19 @@
 ---
-title: 변수 &#39;에 대 한 형식 &lt;variablename&gt;&#39; 괄호로 묶인 범위 내의 필드에 바인딩되어 있기 때문에 유추 되지 것입니다
+title: 변수 형식이 &#39; &lt;variablename&gt; &#39; 괄호로 묶인 범위 내의 필드에 바인딩되어 있기 때문에 유추 되지 것입니다
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vbc42110
 - bc42110
 helpviewer_keywords:
 - BC42110
 ms.assetid: ef4442eb-08d1-434f-a03b-4aa2ed4e4414
-caps.latest.revision: 33
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 39968407f4de5436df324320c99dede4d72e2808
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: cb423e8dcced6956eb86d484607915030c91412b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="the-type-for-variable-39ltvariablenamegt39-will-not-be-inferred-because-it-is-bound-to-a-field-in-an-enclosing-scope"></a>변수 &#39;에 대 한 형식 &lt;variablename&gt;&#39; 괄호로 묶인 범위 내의 필드에 바인딩되어 있기 때문에 유추 되지 것입니다
+# <a name="the-type-for-variable-39ltvariablenamegt39-will-not-be-inferred-because-it-is-bound-to-a-field-in-an-enclosing-scope"></a>변수 형식이 &#39; &lt;variablename&gt; &#39; 괄호로 묶인 범위 내의 필드에 바인딩되어 있기 때문에 유추 되지 것입니다
 변수 형식이 '\<variablename >'의 필드는 바깥쪽 범위에 바인딩되어 있기 때문에 유추 되지 것입니다. 이름을 변경 하거나 '\<variablename >', 하거나 정규화 된 이름 (예: 'Me.variablename' 또는 'MyBase.variablename')를 사용 합니다.  
   
  코드에서 루프 제어 변수는 클래스 또는 다른 바깥쪽 범위의 필드와 이름이 동일한 합니다. 제어 변수 없이 사용 되기 때문에 프로그램 `As` 절 바깥쪽 범위의 필드에 바인딩된 및 컴파일러에 대 한 새 변수를 만들 하지 않거나 해당 형식을 유추 하도록 합니다.  

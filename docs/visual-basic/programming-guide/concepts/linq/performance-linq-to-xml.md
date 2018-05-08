@@ -1,27 +1,17 @@
 ---
-title: "성능 (LINQ to XML) (Visual Basic)"
-ms.custom: 
+title: 성능 (LINQ to XML) (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 155557f6-5d7e-4784-9d00-f42092a28857
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 525d7420af33c684b4e97e9df4b732e729620fb2
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 463075dbf1b84de1af45f7644019e49bbeca6487
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="performance-linq-to-xml-visual-basic"></a>성능 (LINQ to XML) (Visual Basic)
 이 단원에서는 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]의 성능을 함수 생성 및 쿼리 성능에 중점을 두어 설명합니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [(LINQ to XML) 연결 된 쿼리의 성능 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/performance-of-chained-queries-linq-to-xml.md)  
  연결된 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 쿼리에 대한 성능 정보를 제공합니다.  
   

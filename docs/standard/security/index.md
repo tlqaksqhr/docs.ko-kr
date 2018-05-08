@@ -1,31 +1,20 @@
 ---
 title: .NET Framework의 보안
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - .NET Framework, security
 - security [.NET Framework], about security
 - application development [.NET Framework], security
 - security [.NET Framework]
 ms.assetid: 9a9621d7-8883-4a4f-a874-65e8e09e20a6
-caps.latest.revision: 37
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 7f8600da624ff75ce2dbd5c417f886d6b3b1ac37
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 4f3911a46eaea2ed29287132935b0294ba509227
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="security-in-the-net-framework"></a>.NET Framework의 보안
 공용 언어 런타임 및.NET Framework는 개발자가 쉽게 안전한 코드를 작성할 수 있게 해주고 시스템 관리자가 보호된 리소스에 액세스할 수 있도록 코드에 부여되는 권한을 사용자 지정할 수 있게 해주는 많은 유용한 클래스 및 서비스를 제공합니다. 또한 런타임 및 .NET Framework는 암호화 및 역할 기반 보안을 쉽게 사용할 수 있게 해주는 유용한 클래스 및 서비스를 제공합니다.  

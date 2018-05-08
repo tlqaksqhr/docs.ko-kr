@@ -1,12 +1,6 @@
 ---
 title: Not 연산자(Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.Not
 helpviewer_keywords:
@@ -20,14 +14,11 @@ helpviewer_keywords:
 - logical negation
 - operators [Visual Basic], negation
 ms.assetid: 8f2ea83c-d2ed-480a-a474-3042a1cad9b5
-caps.latest.revision: 11
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: ac160aef7b7dc8acb8bf0211b403599692f2373c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 332cee57c8d25d7f51737e01e70ba515d50bd6e6
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="not-operator-visual-basic"></a>Not 연산자(Visual Basic)
 논리 부정을 수행는 `Boolean` 식 또는 숫자 식에 비트 부정을 합니다.  
@@ -40,10 +31,10 @@ result = Not expression
   
 ## <a name="parts"></a>요소  
  `result`  
- 필수 요소. 모든 `Boolean` 또는 숫자 식입니다.  
+ 필수. 모든 `Boolean` 또는 숫자 식입니다.  
   
  `expression`  
- 필수 요소. 모든 `Boolean` 또는 숫자 식입니다.  
+ 필수. 모든 `Boolean` 또는 숫자 식입니다.  
   
 ## <a name="remarks"></a>설명  
  에 대 한 `Boolean` 식, 다음 표에서 설명 방법을 `result` 결정 됩니다.  

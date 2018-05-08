@@ -1,13 +1,6 @@
 ---
-title: "성능 최적화: 하드웨어 이용"
-ms.custom: 
+title: '성능 최적화: 하드웨어 이용'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - graphics [WPF], performance
 - hardware rendering pipeline [WPF]
@@ -16,16 +9,11 @@ helpviewer_keywords:
 - graphics [WPF], rendering tiers
 - software rendering pipeline [WPF]
 ms.assetid: bfb89bae-7aab-4cac-a26c-a956eda8fce2
-caps.latest.revision: "6"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 55c9482ecb540baab3ddd57ca9350fd7265ac251
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: eb790da63b4636e3dd6c25ea118075304702acc0
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="optimizing-performance-taking-advantage-of-hardware"></a>성능 최적화: 하드웨어 이용
 내부 아키텍처 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 에 두 개의 렌더링 파이프라인, 하드웨어 및 소프트웨어. 이 항목에서는 응용 프로그램의 성능 최적화에 대 한 결정을 내릴 수 있도록 이러한 렌더링 파이프라인에 대 한 정보를 제공 합니다.  
@@ -34,14 +22,14 @@ ms.lasthandoff: 12/22/2017
  결정 하는 데 가장 중요 한 요소 중 하나 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 성능 렌더링 범위 된다는 점입니다-픽셀 수가 클수록 성능 비용을 렌더링 해야 합니다. 그러나에 있는 렌더링이 더를 오프 로드할 수는 [!INCLUDE[TLA#tla_gpu](../../../../includes/tlasharptla-gpu-md.md)], 성능 이점이 더를 얻을 수 있습니다. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 응용 프로그램 하드웨어 렌더링 파이프라인은 완전히 활용 [!INCLUDE[TLA#tla_dx](../../../../includes/tlasharptla-dx-md.md)] 기능을 지 원하는 최소 하드웨어에서 [!INCLUDE[TLA#tla_dx](../../../../includes/tlasharptla-dx-md.md)] 버전 7.0입니다. 추가 최적화가 지 원하는 하드웨어에 얻을 수 [!INCLUDE[TLA#tla_dx](../../../../includes/tlasharptla-dx-md.md)] 버전 7.0 및 PixelShader 2.0 + 기능입니다.  
   
 ## <a name="software-rendering-pipeline"></a>소프트웨어 렌더링 파이프라인  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 소프트웨어 렌더링 파이프라인은 전적으로 CPU 사용량이 합니다. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]SSE 및 SSE2 명령 활용 최적화, 완전 한 기능의 소프트웨어 래스터를 구현 하는 CPU에 설정 합니다. 소프트웨어 대체 (fallback)은 언제 든 지 하드웨어 렌더링 파이프라인을 사용 하 여 응용 프로그램의 기능을 렌더링할 수 없으면 원활 합니다.  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 소프트웨어 렌더링 파이프라인은 전적으로 CPU 사용량이 합니다. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] SSE 및 SSE2 명령 활용 최적화, 완전 한 기능의 소프트웨어 래스터를 구현 하는 CPU에 설정 합니다. 소프트웨어 대체 (fallback)은 언제 든 지 하드웨어 렌더링 파이프라인을 사용 하 여 응용 프로그램의 기능을 렌더링할 수 없으면 원활 합니다.  
   
  가장 큰 성능 문제 렌더링 소프트웨어 모드에서 렌더링 하는 픽셀 수로 정의 된 비율 채우기와 관련 된 경우 발생 합니다. 소프트웨어 렌더링 모드에서 성능에 대 한 관심이 경우 픽셀을 다시 그리면 시간 수를 최소화 하려고 합니다. 예를 들어 위에 약간 투명 한 이미지를 렌더링 합니다, 파란색 배경의 응용 프로그램이 있는 경우 응용 프로그램을 두 번의 픽셀의 모든 렌더링 됩니다. 결과적으로, 걸리는 두 번 파란색 배경만 갖는 경우 보다 이미지와 함께 응용 프로그램을 렌더링 하는 데 소요 되는입니다.  
   
 ### <a name="graphics-rendering-tiers"></a>그래픽 렌더링 계층  
  응용 프로그램에서 실행 하는 하드웨어 구성을 예측 하기가 매우 어려울 수 있습니다. 그러나 다음 고려 하면 응용 프로그램을 원활 하 게 기능을 전환할 다른 하드웨어에서 실행 하는 경우 각 다른 하드웨어 구성에 완전히 활용을 수행할 수 있도록 하는 디자인 하는 것이 좋습니다.  
   
- 이 작업을 수행할 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 런타임에 시스템의 그래픽 기능을 확인 하는 기능을 제공 합니다. 세 개의 기능 계층을 렌더링 중 하나로 비디오 카드를 범주화 하 여 그래픽 기능이 결정 됩니다. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]노출 된 [!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)] 렌더링 기능 계층을 쿼리 하는 응용 프로그램을 허용 하 합니다. 그러면 응용 프로그램 하드웨어에서 지 원하는 렌더링 계층에 따라 실행 시 서로 다른 코드 경로 수행할 수 있습니다.  
+ 이 작업을 수행할 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 런타임에 시스템의 그래픽 기능을 확인 하는 기능을 제공 합니다. 세 개의 기능 계층을 렌더링 중 하나로 비디오 카드를 범주화 하 여 그래픽 기능이 결정 됩니다. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 노출 된 [!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)] 렌더링 기능 계층을 쿼리 하는 응용 프로그램을 허용 하 합니다. 그러면 응용 프로그램 하드웨어에서 지 원하는 렌더링 계층에 따라 실행 시 서로 다른 코드 경로 수행할 수 있습니다.  
   
  렌더링 계층 수준에 가장 큰 영향을 미치는 그래픽 하드웨어 기능은 다음과 같습니다.  
   

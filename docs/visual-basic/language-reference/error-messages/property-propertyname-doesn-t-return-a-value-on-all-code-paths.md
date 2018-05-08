@@ -1,28 +1,19 @@
 ---
-title: 속성 &#39; &lt;propertyname&gt;&#39; 대상이 &#39; t 일부 코드 경로에 값을 반환 합니다.
+title: 속성 &#39; &lt;propertyname&gt; &#39; 대상이&#39;모든 코드 경로 에서만 값을 반환 하는 t
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - bc42107
 - vbc42107
 helpviewer_keywords:
 - BC42107
 ms.assetid: 06800966-9c3b-4844-9f13-83ac95607d32
-caps.latest.revision: 7
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: c9ef5b2ac62412f5684cbc78ab6bebf6bc7b6752
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 72bc7e45cadd2528f29c88bf6e80ee5f381052dd
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="property-39ltpropertynamegt39-doesn39t-return-a-value-on-all-code-paths"></a>속성 &#39; &lt;propertyname&gt;&#39; 대상이 &#39; t 일부 코드 경로에 값을 반환 합니다.
+# <a name="property-39ltpropertynamegt39-doesn39t-return-a-value-on-all-code-paths"></a>속성 &#39; &lt;propertyname&gt; &#39; 대상이&#39;모든 코드 경로 에서만 값을 반환 하는 t
 속성 '\<propertyname >' 모든 코드 경로 대해서만 값을 반환 합니다. 이 결과를 사용하면 런타임에 null 참조 예외가 발생할 수 있습니다.  
   
  속성 `Get` 프로시저 코드 값을 반환 하지 않는 통해 하나 이상의 경로가 있습니다.  

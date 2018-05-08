@@ -1,10 +1,6 @@
 ---
 title: MustInherit(Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - MustInherit
 - vb.MustInherit
@@ -14,14 +10,11 @@ helpviewer_keywords:
 - abstract classes [Visual Basic], MustInherit class
 - MustInherit keyword [Visual Basic]
 ms.assetid: b8f05185-90e3-4dd7-adc2-90d852fab5b4
-caps.latest.revision: "15"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 9d384986e42ee69a0f425c1590599aa2c82bc856
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 5d622c1cff77a45c8de7772af7efbb73586f4400
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="mustinherit-visual-basic"></a>MustInherit(Visual Basic)
 클래스를 기본 클래스로 사용할 수 있는지와에서 직접 개체를 만들 수 없음을 지정 합니다.  
@@ -31,7 +24,7 @@ ms.lasthandoff: 11/21/2017
   
  또 다른 용도 `MustInherit` 클래스는 관련된 클래스 집합에 변수를 제한 하는 것입니다. 기본 클래스를 정의 하 고 이러한 모든 관련된 클래스에서 파생 수 있습니다. 기본 클래스는 모든 파생된 클래스에 공통 된 기능을 제공 하지 않아도 되지만 변수에 값을 할당에 대 한 필터 역할도 할 수 있습니다. 기본 클래스로 변수를 선언 하는 사용 하는 코드를 하는 경우 Visual Basic를 사용 하면 파생된 클래스 중 하나에서 해당 변수는 개체에만 할당할 수 있습니다.  
   
- 여러.NET Framework 정의 `MustInherit` 클래스, 그중에서 <xref:System.Array>, <xref:System.Enum>, 및 <xref:System.ValueType>합니다. <xref:System.ValueType>변수를 제한 하는 기본 클래스의 예시입니다. 모든 값 형식에서 파생 <xref:System.ValueType>합니다. 변수를 선언 하는 경우 <xref:System.ValueType>, 값 형식에만 변수에 할당할 수 있습니다.  
+ 여러.NET Framework 정의 `MustInherit` 클래스, 그중에서 <xref:System.Array>, <xref:System.Enum>, 및 <xref:System.ValueType>합니다. <xref:System.ValueType> 변수를 제한 하는 기본 클래스의 예시입니다. 모든 값 형식에서 파생 <xref:System.ValueType>합니다. 변수를 선언 하는 경우 <xref:System.ValueType>, 값 형식에만 변수에 할당할 수 있습니다.  
   
 ## <a name="rules"></a>규칙  
   
@@ -48,7 +41,7 @@ ms.lasthandoff: 11/21/2017
   
  로 선언 되기 때문에 `shape`, 변수 `shape1` 및 `shape2` 파생된 클래스에서 개체에 제한 되어 `circle` 및 `square`합니다. Visual Basic 없도록 이러한 변수를 다른 개체를 할당할 수는 높은 수준의 형식 안전성을 제공 합니다.  
   
-## <a name="usage"></a>용도  
+## <a name="usage"></a>사용법  
  `MustInherit` 한정자는이 컨텍스트에서 사용할 수 있습니다.  
   
  [Class 문](../../../visual-basic/language-reference/statements/class-statement.md)  

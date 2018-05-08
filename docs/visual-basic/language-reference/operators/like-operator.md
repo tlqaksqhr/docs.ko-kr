@@ -1,11 +1,6 @@
 ---
-title: "Like 연산자(Visual Basic)"
+title: Like 연산자(Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - Like
 - vb.Like
@@ -27,14 +22,11 @@ helpviewer_keywords:
 - data [Visual Basic], string comparisons
 - string comparison [Visual Basic], Like operators
 ms.assetid: 966283ec-80e2-4294-baa8-c75baff804f9
-caps.latest.revision: "18"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: ad5729515362bfd52b0c3b401f218a49f569726e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: a9c672a397510c69c9ee67358689feff80d8831a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="like-operator-visual-basic"></a>Like 연산자(Visual Basic)
 문자열을 패턴과 비교합니다.  
@@ -47,13 +39,13 @@ result = string Like pattern
   
 ## <a name="parts"></a>요소  
  `result`  
- 필수 요소. 모든 `Boolean` 변수입니다. 결과 한 `Boolean` 나타내는 값 여부는 `string` 충족는 `pattern`합니다.  
+ 필수. 모든 `Boolean` 변수입니다. 결과 한 `Boolean` 나타내는 값 여부는 `string` 충족는 `pattern`합니다.  
   
  `string`  
- 필수 요소. 임의의 `String` 식입니다.  
+ 필수. 임의의 `String` 식입니다.  
   
  `pattern`  
- 필수 요소. 모든 `String` "주의"에 설명 된 패턴 일치 규칙에 맞는 식  
+ 필수. 모든 `String` "주의"에 설명 된 패턴 일치 규칙에 맞는 식  
   
 ## <a name="remarks"></a>설명  
  경우에 값 `string` 에 포함 된 패턴을 충족 `pattern`, `result` 은 `True`합니다. 문자열 패턴을 충족 하지 못하는 경우 `result` 은 `False`합니다. 두 `string` 및 `pattern` 빈 문자열이 결과 `True`합니다.  
@@ -64,13 +56,13 @@ result = string Like pattern
 ## <a name="pattern-options"></a>패턴 옵션  
  기본 제공 패턴 일치 문자열 비교에 유용한 도구를 제공 합니다. 패턴 일치 기능을 사용 하면 각 문자에 맞게 `string` 특정 문자, 와일드 카드 문자, 문자 목록, 또는 문자 범위에 대 한 합니다. 다음 표에서 허용 되는 문자를 보여 줍니다. `pattern` 일치 하 고 있습니다.  
   
-|문자`pattern`|에 일치 하는`string`|  
+|문자 `pattern`|에 일치 하는 `string`|  
 |-----------------------------|-------------------------|  
 |`?`|단일 문자|  
 |`*`|0 개 이상의 문자|  
 |`#`|임의의 단일 숫자 (0-9)|  
-|`[charlist]`|단일 문자`charlist`|  
-|`[!charlist]`|에 없는 모든 단일 문자`charlist`|  
+|`[charlist]`|단일 문자 `charlist`|  
+|`[!charlist]`|에 없는 모든 단일 문자 `charlist`|  
   
 ## <a name="character-lists"></a>문자 목록  
  하나 이상의 문자 그룹 (`charlist`) 대괄호로 묶은 (`[ ]`)는 내 임의의 단일 문자와 일치 하는 데 사용할 수 `string` 숫자를 포함 하 여 거의 모든 문자 코드를 포함할 수 있습니다.  

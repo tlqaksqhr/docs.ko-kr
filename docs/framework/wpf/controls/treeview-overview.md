@@ -1,28 +1,16 @@
 ---
-title: "TreeView 개요"
-ms.custom: 
+title: TreeView 개요
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - expanding node [WPF]
 - TreeView control [WPF], about TreeView control
 - Control class [WPF], TreeView
 ms.assetid: 62212512-5a5c-4864-949e-b6a6a3a52c02
-caps.latest.revision: "33"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 6e5f6b3d0a185754bc0d8d8ee726ca13443ccdc1
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: f8c49013bc34671ec590f0bd9f84a0f2cf3f9aaf
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="treeview-overview"></a>TreeView 개요
 <xref:System.Windows.Controls.TreeView> 컨트롤은 축소 가능한 노드를 사용 하 여 계층 구조에서 정보를 표시 하는 방법을 제공 합니다. 이 항목에서는 소개는 <xref:System.Windows.Controls.TreeView> 및 <xref:System.Windows.Controls.TreeViewItem> 컨트롤과 목록과 해당 사용법은 간단한 예제를 제공 합니다.  
@@ -30,7 +18,7 @@ ms.lasthandoff: 12/22/2017
   
 <a name="Simple_TreeView_Control"></a>   
 ## <a name="what-is-a-treeview"></a>TreeView란?  
- <xref:System.Windows.Controls.TreeView>이 <xref:System.Windows.Controls.ItemsControl> 를 사용 하 여 항목을 중첩 하 <xref:System.Windows.Controls.TreeViewItem> 컨트롤입니다. 다음 예제에서는 <xref:System.Windows.Controls.TreeView>합니다.  
+ <xref:System.Windows.Controls.TreeView> 이 <xref:System.Windows.Controls.ItemsControl> 를 사용 하 여 항목을 중첩 하 <xref:System.Windows.Controls.TreeViewItem> 컨트롤입니다. 다음 예제에서는 <xref:System.Windows.Controls.TreeView>합니다.  
   
  [!code-xaml[TreeViewSnips#EmbeddedTVIs](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TreeViewSnips/CSharp/Window1.xaml#embeddedtvis)]  
   

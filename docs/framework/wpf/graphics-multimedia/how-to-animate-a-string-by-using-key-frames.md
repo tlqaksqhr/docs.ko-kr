@@ -1,33 +1,21 @@
 ---
-title: "방법: 키 프레임을 사용하여 문자열에 애니메이션 효과 주기"
-ms.custom: 
+title: '방법: 키 프레임을 사용하여 문자열에 애니메이션 효과 주기'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - animation [WPF], strings with key frames
 - strings [WPF], animating with key frames
 - key frames [WPF], animating strings with
 ms.assetid: c62bc9fd-c09a-4227-bce0-0a1ab82049dd
-caps.latest.revision: "9"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 1692777a97754fb7f6481b2d9cb8942dcb62df77
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 5219ce11667c84d3ceca380d5a4ddd52695736b9
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-animate-a-string-by-using-key-frames"></a>방법: 키 프레임을 사용하여 문자열에 애니메이션 효과 주기
 이 예제는 문자열에 애니메이션을 적용 하는 방법을 보여 주는이 예제는 <xref:System.Windows.Controls.ContentControl.Content%2A> 속성은 <xref:System.Windows.Controls.Button> 키 프레임을 사용 하 여 제어 합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 예제에서는 <xref:System.Windows.Media.Animation.StringAnimationUsingKeyFrames> 애니메이션 효과를 줄 클래스는 <xref:System.Windows.Controls.ContentControl.Content%2A> 속성의는 <xref:System.Windows.Controls.Button>합니다.  
   
  이 예제에서 모든 키 프레임의 인스턴스를 사용 하 여는 <xref:System.Windows.Media.Animation.DiscreteStringKeyFrame> 문자열 애니메이션 키 프레임을 사용 하 여 만든 분리 된 키 프레임에만 사용할 수 있으므로 클래스. 과 같은 불연속 키 프레임 <xref:System.Windows.Media.Animation.DiscreteStringKeyFrame> 애니메이션에 대 한 변경 신속 하 게 발생 한, 값 간에 갑작스러운 점프 효과 만듭니다.  

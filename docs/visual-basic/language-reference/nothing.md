@@ -1,9 +1,6 @@
 ---
 title: Nothing(Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology: devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - Nothing
 - vb.Nothing
@@ -11,14 +8,11 @@ helpviewer_keywords:
 - Nothing keyword [Visual Basic]
 - Nothing keyword [Visual Basic], syntax
 ms.assetid: 06176e2d-bbf7-4a37-afaa-a86ad21ee99f
-caps.latest.revision: "31"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 6932fee01ec6f39f67fb1a26a9a5b5cbd47d9767
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: fb1af7d748faac78b26177af453a0e858f9e97c3
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="nothing-visual-basic"></a>Nothing(Visual Basic)
 모든 데이터 형식의 기본 값을 나타냅니다. 기본값은 참조 형식에 대해는 `null` 참조 합니다. 값 형식에 대 한 기본값 값 형식이 nullable 인지에 따라 달라 집니다.  
@@ -27,7 +21,7 @@ ms.lasthandoff: 11/21/2017
 >  Nullable이 아닌 값 형식에 대 한 `Nothing` Visual Basic에서 다릅니다 `null` C#입니다. Visual basic에서는 null이 아닌 값 형식으로의 변수를 설정 하면 `Nothing`, 변수 선언된 된 형식에 대 한 기본 값으로 설정 됩니다. C#에서 nullable이 아닌 값 형식으로의 변수를 할당 하는 경우 `null`, 컴파일 타임 오류가 발생 합니다.  
   
 ## <a name="remarks"></a>설명  
- `Nothing`데이터 형식의 기본 값을 나타냅니다. 기본값의 값 형식 또는 참조 형식의 변수 인지에 따라 달라 집니다.  
+ `Nothing` 데이터 형식의 기본 값을 나타냅니다. 기본값의 값 형식 또는 참조 형식의 변수 인지에 따라 달라 집니다.  
   
  변수는 *값 형식* 직접 해당 값을 포함 합니다. 값 형식에는 숫자 데이터 형식을 모두 포함 `Boolean`, `Char`, `Date`, 모든 구조 및 모든 열거 합니다. 변수는 *유형을 참조* 메모리에 개체의 인스턴스에 대 한 참조를 저장 합니다. 참조 형식 클래스, 배열, 대리자 및 문자열을 포함 합니다. 자세한 내용은 [Value Types and Reference Types](../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)을 참조하세요.  
   
@@ -53,7 +47,7 @@ ms.lasthandoff: 11/21/2017
   
  할당 하면 `Nothing` 하는 개체 변수를 더 이상 참조 개체 인스턴스를 합니다. 이전 인스턴스로 참조 변수를 한 경우로 설정 `Nothing` 인스턴스 자체는 종료 되지 않습니다. 종료 되 고 인스턴스와 및 남은 활성 참조가 없는 가비지 수집기 (GC) 검색 한 후에 연결 된 메모리와 시스템 리소스가 해제 됩니다.  
   
- `Nothing`와 다른는 <xref:System.DBNull> 초기화 되지 않은 변형 또는 존재 하지 않는 데이터베이스 열을 나타내는 개체입니다.  
+ `Nothing` 와 다른는 <xref:System.DBNull> 초기화 되지 않은 변형 또는 존재 하지 않는 데이터베이스 열을 나타내는 개체입니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [Dim 문](../../visual-basic/language-reference/statements/dim-statement.md)  

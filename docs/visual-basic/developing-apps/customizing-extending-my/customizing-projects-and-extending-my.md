@@ -1,28 +1,22 @@
 ---
-title: "Visual Basic에서 프로젝트 사용자 지정 및 My 확장"
+title: Visual Basic에서 프로젝트 사용자 지정 및 My 확장
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - My namespace [Visual Basic], customizing
 - My namespace
 - My namespace [Visual Basic], extending
 ms.assetid: 06ca80b9-1192-4eb5-8537-8ef5edfb9be0
-caps.latest.revision: "12"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 397b345239f8707f0129ac14ab426f93372b4010
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.openlocfilehash: 4dfe14f7680ad0c3a302334c07bb17e3e92011b0
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="customizing-projects-and-extending-my-with-visual-basic"></a>Visual Basic에서 프로젝트 사용자 지정 및 My 확장
 추가로 제공 되는 프로젝트 템플릿이 사용자 지정할 수 있습니다 `My` 개체입니다. 이렇게 하면 쉽게 찾고 사용자 개체를 사용 하는 다른 개발자에 대 한 합니다.  
   
-## <a name="in-this-section"></a>단원 내용  
- [확장은 Visual Basic에서 My Namespace](../../../visual-basic/developing-apps/customizing-extending-my/extending-the-my-namespace.md)  
+## <a name="in-this-section"></a>섹션 내용  
+ [Visual Basic의 내 네임스페이스 확장](../../../visual-basic/developing-apps/customizing-extending-my/extending-the-my-namespace.md)  
  사용자 지정 멤버를 추가 하는 방법을 설명 하 고 값을 `My` Visual Basic의 네임 스페이스입니다.  
   
  [사용자 지정 My 확장명 패키징 및 배포](../../../visual-basic/developing-apps/customizing-extending-my/packaging-and-deploying-custom-my-extensions.md)  

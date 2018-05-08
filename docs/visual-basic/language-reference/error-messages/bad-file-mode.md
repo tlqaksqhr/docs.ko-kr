@@ -1,23 +1,14 @@
 ---
 title: 파일 모드가 잘못되었습니다.
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vbrID54
 ms.assetid: 74891e96-884b-4c8d-872d-cd11ae272372
-caps.latest.revision: 10
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: a540135727eb97f4df5027e2ded7271e21bb4648
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: bccbbbeb79f38790a4664b0152ca3378fb55448d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="bad-file-mode"></a>파일 모드가 잘못되었습니다.
 파일 내용을 조작에 사용 된 파일을 연 모드에 적합 해야 합니다. 이 오류가 발생하는 원인은 다음과 같습니다.  
@@ -26,7 +17,7 @@ ms.lasthandoff: 11/21/2017
   
 -   A `Print` 이외의 액세스 모드에 대 한 열린 파일을 지정 하는 문을 `Output` 또는 `Append`합니다.  
   
--   `Input` 이외의 액세스 모드에 대 한 열린 파일을 지정 하는 문`Input`  
+-   `Input` 이외의 액세스 모드에 대 한 열린 파일을 지정 하는 문 `Input`  
   
 -   읽기 전용 파일에 쓰려고 했습니다.  
   

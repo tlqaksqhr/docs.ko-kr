@@ -1,26 +1,16 @@
 ---
-title: "방법: 두 개체가 관련이 있는지 확인(Visual Basic)"
-ms.custom: 
+title: '방법: 두 개체가 관련이 있는지 확인(Visual Basic)'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - inheritance [Visual Basic], Visual Basic objects
 - objects [Visual Basic], inheritance
 - object variables [Visual Basic], determining relation
 ms.assetid: da002e3f-6616-4bad-a229-f842d06652bb
-caps.latest.revision: "7"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 7824742459fca355c0043ad8ed20a26330402c05
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 2041f89ffd954e479046eb85c6dd82de1f8793ca
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-determine-whether-two-objects-are-related-visual-basic"></a>방법: 두 개체가 관련이 있는지 확인(Visual Basic)
 생성 된 클래스 간의 관계를 확인 하려면 두 개체를 비교할 수 있습니다. <xref:System.Type.IsInstanceOfType%2A> 의 메서드는 <xref:System.Type?displayProperty=nameWithType> 반환 클래스 `True` 지정된 된 클래스는 현재 클래스에서 상속 하는 경우 또는 현재 형식이 지정된 된 클래스에서 지 원하는 인터페이스인 경우.  
@@ -33,7 +23,7 @@ ms.lasthandoff: 11/21/2017
   
 3.  에 대 한 인수 목록에 <xref:System.Type.IsInstanceOfType%2A>, 파생 된 형식의 이라고 생각 되는 개체 수를 지정 합니다.  
   
-     <xref:System.Type.IsInstanceOfType%2A>반환 `True` 해당 인수 형식에서 상속 하는 경우는 <xref:System.Type?displayProperty=nameWithType> 개체 유형입니다.  
+     <xref:System.Type.IsInstanceOfType%2A> 반환 `True` 해당 인수 형식에서 상속 하는 경우는 <xref:System.Type?displayProperty=nameWithType> 개체 유형입니다.  
   
 ## <a name="example"></a>예제  
  다음 예제에서는 한 개체가 다른 개체의 클래스에서 파생 된 클래스를 나타내는지 여부를 결정 합니다.  

@@ -1,12 +1,6 @@
 ---
 title: '*= 연산자(Visual Basic)'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.*=
 helpviewer_keywords:
@@ -16,14 +10,11 @@ helpviewer_keywords:
 - '*= operator [Visual Basic]'
 - compound assignment statements [Visual Basic]
 ms.assetid: 96c86509-6eb8-4682-8226-3852e049376f
-caps.latest.revision: 20
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 2d0a2c638f3faaf20fadb745ef437941ee29d4f6
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 3863e6c7416057507e8ae569804ed4a1be6a5b50
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="-operator-visual-basic"></a>*= 연산자(Visual Basic)
 변수 또는 속성의 값 식의 값으로 곱하고 결과 변수 또는 속성에 할당 합니다.  
@@ -36,10 +27,10 @@ variableorproperty *= expression
   
 ## <a name="parts"></a>요소  
  `variableorproperty`  
- 필수 요소. 숫자 변수 또는 속성입니다.  
+ 필수. 숫자 변수 또는 속성입니다.  
   
  `expression`  
- 필수 요소. 임의의 숫자 식입니다.  
+ 필수. 임의의 숫자 식입니다.  
   
 ## <a name="remarks"></a>설명  
  왼쪽에 요소는 `*=` 연산자는 간단한 스칼라 변수, 속성 또는 배열의 요소 될 수 있습니다. 변수 또는 속성 수 없습니다 [ReadOnly](../../../visual-basic/language-reference/modifiers/readonly.md)합니다.  

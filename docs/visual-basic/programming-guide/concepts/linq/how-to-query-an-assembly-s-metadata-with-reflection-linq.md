@@ -1,24 +1,14 @@
 ---
-title: "방법: 어셈블리 &#39; 쿼리 (LINQ) (Visual Basic) 리플렉션 사용 하 여 s 메타 데이터"
-ms.custom: 
+title: '방법: 어셈블리 쿼리&#39;(LINQ) (Visual Basic) 리플렉션 사용 하 여 s 메타 데이터'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 53caa336-ab83-4181-b0f6-5c87c5f9e4ee
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 718f8d78ac71c8d6d28f762e756eb2a0219fce19
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: f465cccef2009bb9d8da1dc57c14eb09dc008f54
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="how-to-query-an-assembly39s-metadata-with-reflection-linq-visual-basic"></a>방법: 어셈블리 &#39; 쿼리 (LINQ) (Visual Basic) 리플렉션 사용 하 여 s 메타 데이터
+# <a name="how-to-query-an-assembly39s-metadata-with-reflection-linq-visual-basic"></a>방법: 어셈블리 쿼리&#39;(LINQ) (Visual Basic) 리플렉션 사용 하 여 s 메타 데이터
 다음 예제에서는 리플렉션과 함께 LINQ를 사용하여 지정된 검색 조건과 일치하는 메서드에 대한 특정 메타데이터를 검색하는 방법을 보여 줍니다. 이 경우 쿼리는 배열과 같은 열거 가능한 형식을 반환하는 모든 메서드의 이름을 어셈블리에서 검색합니다.  
   
 ## <a name="example"></a>예제  

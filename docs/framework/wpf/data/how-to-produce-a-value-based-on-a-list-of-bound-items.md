@@ -1,13 +1,6 @@
 ---
-title: "방법: 바인딩된 항목 목록을 기반으로 값 산출"
-ms.custom: 
+title: '방법: 바인딩된 항목 목록을 기반으로 값 산출'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -15,21 +8,16 @@ helpviewer_keywords:
 - data binding [WPF], MultiBinding
 - Multibinding [WPF]
 ms.assetid: b3d06378-b511-4181-95aa-316d60c9229b
-caps.latest.revision: "17"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: c3987690a1acb180ee22fa02e399accd9c5d481d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: d61631949382c177000b85aa8f4e093c3532c7ec
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-produce-a-value-based-on-a-list-of-bound-items"></a>방법: 바인딩된 항목 목록을 기반으로 값 산출
-<xref:System.Windows.Data.MultiBinding>바인딩 대상 속성 원본 속성의 목록에 바인딩하고 다음 지정 된 입력을 지 원하는 값을 생성 하는 논리를 적용할 수 있습니다. 사용 하는 방법을 보여 주는이 예제 <xref:System.Windows.Data.MultiBinding>합니다.  
+<xref:System.Windows.Data.MultiBinding> 바인딩 대상 속성 원본 속성의 목록에 바인딩하고 다음 지정 된 입력을 지 원하는 값을 생성 하는 논리를 적용할 수 있습니다. 사용 하는 방법을 보여 주는이 예제 <xref:System.Windows.Data.MultiBinding>합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 예제에서 `NameListData`은 `firstName`과 `lastName` 두 개의 속성을 포함하는 `PersonName` 개체의 컬렉션을 참조합니다. 다음 예제에서는 생성 한 <xref:System.Windows.Controls.TextBlock> 성 가진 사람 성과 이름을 보여 주는 첫 번째입니다.  
   
  [!code-xaml[MultiBinding#Resources1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/MultiBinding/CSharp/Window1.xaml#resources1)]  

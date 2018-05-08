@@ -1,13 +1,6 @@
 ---
-title: "사용자가 그린 컨트롤"
-ms.custom: 
+title: 사용자가 그린 컨트롤
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -16,25 +9,20 @@ helpviewer_keywords:
 - OnPaint method [Windows Forms]
 - user-drawn controls [Windows Forms]
 ms.assetid: 034af4b5-457f-4160-a937-22891817faa8
-caps.latest.revision: "14"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: e9e486058850616c2304ce0032c35baa855fdf2f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 26b4f062c120bf543a5e597fc8c734e8cc336bd8
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="user-drawn-controls"></a>사용자가 그린 컨트롤
 .NET Framework 사용자 지정 컨트롤을 쉽게 개발 하는 기능을 제공 합니다. 코드에서 함께 바인딩된 표준 컨트롤 집합을 사용자 정의 컨트롤을 만들거나 위로 기초부터 사용자 고유의 컨트롤을 디자인할 수 있습니다. 기존 컨트롤에서 상속 되는 컨트롤을 만들고의 고유 기능에 추가 상속을 사용할 수 있습니다. 어떤 방법을 사용 하는.NET Framework를 그릴 만드는 모든 컨트롤에 대 한 사용자 지정 그래픽 인터페이스를 제공 합니다.  
   
  컨트롤의 그리기 컨트롤의 코드를 실행 하 여 수행 됩니다 <xref:System.Windows.Forms.Control.OnPaint%2A> 메서드. 단일 인수는 <xref:System.Windows.Forms.Control.OnPaint%2A> 메서드는 한 <xref:System.Windows.Forms.PaintEventArgs> 모든 정보 및 컨트롤을 렌더링 하는 데 필요한 기능을 제공 하는 개체입니다. <xref:System.Windows.Forms.PaintEventArgs> 속성으로 컨트롤의 렌더링에 사용할 두 개의 기본 개체를 제공 합니다.  
   
--   <xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A>개체-에 그릴 컨트롤의 부분을 나타내는 사각형입니다. 이 수는 전체 컨트롤 또는 컨트롤을 그리는 방법에 따라 제어의 일부입니다.  
+-   <xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A> 개체-에 그릴 컨트롤의 부분을 나타내는 사각형입니다. 이 수는 전체 컨트롤 또는 컨트롤을 그리는 방법에 따라 제어의 일부입니다.  
   
--   <xref:System.Drawing.Graphics>개체-여러 그래픽 지향 개체와 컨트롤을 그리는 데 필요한 기능을 제공 하는 메서드를 캡슐화 합니다.  
+-   <xref:System.Drawing.Graphics> 개체-여러 그래픽 지향 개체와 컨트롤을 그리는 데 필요한 기능을 제공 하는 메서드를 캡슐화 합니다.  
   
  대 한 자세한 내용은 <xref:System.Drawing.Graphics> 개체와 사용을 참조 하는 방법 [하는 방법: 그리기에 대 한 그래픽 개체 만들기](../../../../docs/framework/winforms/advanced/how-to-create-graphics-objects-for-drawing.md)합니다.  
   

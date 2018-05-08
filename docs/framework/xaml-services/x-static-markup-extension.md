@@ -1,13 +1,6 @@
 ---
-title: "x:Static 태그 확장명"
-ms.custom: 
+title: x:Static 태그 확장명
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 f1_keywords:
 - StaticExtension
 - xStatic
@@ -17,16 +10,11 @@ helpviewer_keywords:
 - Static markup extension in XAML [XAML Services]
 - XAML [XAML Services], x:Static markup extension
 ms.assetid: 056aee79-7cdd-434f-8174-dfc856cad343
-caps.latest.revision: "25"
-author: wadepickett
-ms.author: wpickett
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 647bfed7b321a949090f6da047f9b8105d335101
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 980bf6a1bdb19afd5c8d3c798d31037ab8cd7086
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="xstatic-markup-extension"></a>x:Static 태그 확장명
 에 정의 된 모든 값으로 정적 코드 엔터티 참조는 [!INCLUDE[TLA#tla_cls](../../../includes/tlasharptla-cls-md.md)]– 규정을 준수 하는 방법입니다. 참조 되는 정적 속성 XAML에서 속성의 값을 제공 데 사용할 수 있습니다.  
@@ -41,7 +29,7 @@ ms.lasthandoff: 12/22/2017
   
 |||  
 |-|-|  
-|`prefix`|선택 사항입니다. 매핑된, 기본이 아닌 XAML 네임 스페이스를 참조 하는 접두사입니다. `prefix`명시적으로 표시 사용에서 기본 XAML 네임 스페이스에서 제공 하는 정적 속성을 거의 참조 하지 않기 때문입니다. 설명 부분을 참조하세요.|  
+|`prefix`|선택 사항입니다. 매핑된, 기본이 아닌 XAML 네임 스페이스를 참조 하는 접두사입니다. `prefix` 명시적으로 표시 사용에서 기본 XAML 네임 스페이스에서 제공 하는 정적 속성을 거의 참조 하지 않기 때문입니다. 설명 부분을 참조하세요.|  
 |`typeName`|필수. 원하는 정적 멤버를 정의 하는 유형의 이름입니다.|  
 |`staticMemberName`|필수. 원하는 정적 값 멤버 (상수, 정적 속성, 필드 또는 열거형 값)의 이름입니다.|  
   
@@ -68,9 +56,9 @@ ms.lasthandoff: 12/22/2017
   
  두 개의 다른 XAML 용도 기술적으로 가능 가지가 있습니다. 그러나이 사용은 덜 일반적인 불필요 하 게 자세한 정보 표시 되기 때문에:  
   
- **개체 요소 구문:** `<x:Static Member="` `prefix` `:` `typeName` `.` `staticMemberName``" .../>`  
+ **개체 요소 구문:** `<x:Static Member="` `prefix` `:` `typeName` `.` `staticMemberName` `" .../>`  
   
- **초기화 문자열에 대 한 명시적 멤버 속성이 있는 특성 구문:** `<` `object`  ``  `property` `="{x:Static Member=` `prefix` `:` `typeName` `.` `staticMemberName``}" .../>`  
+ **초기화 문자열에 대 한 명시적 구성원 속성이 있는 특성 구문:** `<` `object` `` `property` `="{x:Static Member=` `prefix` `:` `typeName` `.` `staticMemberName` `}" .../>`  
   
  이 태그 확장에 대 한 처리 정의한.NET Framework XAML 서비스 구현에는 <xref:System.Windows.Markup.StaticExtension> 클래스입니다.  
   

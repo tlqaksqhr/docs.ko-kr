@@ -1,12 +1,6 @@
 ---
-title: "Visual Basic의 논리 및 비트 연산자"
-ms.custom: 
+title: Visual Basic의 논리 및 비트 연산자
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - short-circuiting
 - Boolean expressions
@@ -27,14 +21,11 @@ helpviewer_keywords:
 - OrElse operator [Visual Basic]
 - logical operators [Visual Basic], unary
 ms.assetid: ca474e13-567d-4b1d-a18b-301433705e57
-caps.latest.revision: "22"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: ba48f722a11e93f82ae99aa407c3096a964e5ddd
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 371d28629b39fb2808ca018ea69da3306a31f50c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="logical-and-bitwise-operators-in-visual-basic"></a>Visual Basic의 논리 및 비트 연산자
 논리 연산자 비교 `Boolean` 식 및 반환 된 `Boolean` 결과입니다. `And`, `Or`, `AndAlso`, `OrElse`, 및 `Xor` 연산자는 *이진* 동안 두 개의 피연산자를 고려 하기 때문에 `Not` 연산자는 *단항* 단일 피연산자를 사용 하기 때문에 있습니다. 정수 계열 값의 비트 논리 연산을 수행할 수도 이러한 연산자 중 일부입니다.  
@@ -96,7 +87,7 @@ ms.lasthandoff: 11/21/2017
   
 -   결과 10 진수로 처리 됩니다. 001 값은 1의 이진 표현 이므로 `x` = 1입니다.  
   
- 비트 `Or` 연산도 비슷합니다 제외 하 고 비교 비트 중 하나 또는 모두 1 이면 결과 비트는 1이 할당 됩니다. `Xor`1 (멤버나) 비교 비트 중 정확히 하나의 이면 결과 비트에 1을 할당 합니다. `Not`단일 피연산자를 사용 하 고 부호 비트를 포함 하 여 모든 비트를을 반전 하 고 결과에 해당 값을 할당 합니다. 즉, 부호 있는 양수, `Not` 항상 음수 값을 반환 하 고 음수 값에 대 한 `Not` 항상 양수 또는 0 값을 반환 합니다.  
+ 비트 `Or` 연산도 비슷합니다 제외 하 고 비교 비트 중 하나 또는 모두 1 이면 결과 비트는 1이 할당 됩니다. `Xor` 1 (멤버나) 비교 비트 중 정확히 하나의 이면 결과 비트에 1을 할당 합니다. `Not` 단일 피연산자를 사용 하 고 부호 비트를 포함 하 여 모든 비트를을 반전 하 고 결과에 해당 값을 할당 합니다. 즉, 부호 있는 양수, `Not` 항상 음수 값을 반환 하 고 음수 값에 대 한 `Not` 항상 양수 또는 0 값을 반환 합니다.  
   
  `AndAlso` 및 `OrElse` 연산자는 비트 연산을 지원 하지 않습니다.  
   

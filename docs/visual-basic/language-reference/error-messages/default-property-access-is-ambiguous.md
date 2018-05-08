@@ -1,28 +1,19 @@
 ---
-title: 기본 속성 액세스가 상속 된 인터페이스 멤버 &#39; 사이의 모호합니다. &lt;defaultpropertyname&gt;&#39; 인터페이스 &#39;&lt; interfacename1&gt;&#39; 및 &#39;&lt; defaultpropertyname&gt;&#39; 인터페이스 &#39;&lt; interfacename2&gt;&#39;
+title: 기본 속성 액세스가 상속 된 인터페이스 멤버 사이 모호한 &#39; &lt;defaultpropertyname&gt; &#39; 인터페이스의 &#39; &lt;interfacename1&gt; &#39; 및 &#39; &lt;defaultpropertyname&gt; &#39; 인터페이스의 &#39; &lt;interfacename2&gt;&#39;
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vbc30686
 - bc30686
 helpviewer_keywords:
 - BC30686
 ms.assetid: 784fefec-ef57-48cf-b960-957df419b439
-caps.latest.revision: 13
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 23d613668ee2d92484117759dd614ed2cad4bcb2
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 65a10067284cad3bf56ecdc441ebefa0a740ef53
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="default-property-access-is-ambiguous-between-the-inherited-interface-members-39ltdefaultpropertynamegt39-of-interface-39ltinterfacename1gt39-and-39ltdefaultpropertynamegt39-of-interface-39ltinterfacename2gt39"></a>기본 속성 액세스가 상속 된 인터페이스 멤버 &#39; 사이의 모호합니다. &lt;defaultpropertyname&gt;&#39; 인터페이스 &#39;&lt; interfacename1&gt;&#39; 및 &#39;&lt; defaultpropertyname&gt;&#39; 인터페이스 &#39;&lt; interfacename2&gt;&#39;
+# <a name="default-property-access-is-ambiguous-between-the-inherited-interface-members-39ltdefaultpropertynamegt39-of-interface-39ltinterfacename1gt39-and-39ltdefaultpropertynamegt39-of-interface-39ltinterfacename2gt39"></a>기본 속성 액세스가 상속 된 인터페이스 멤버 사이 모호한 &#39; &lt;defaultpropertyname&gt; &#39; 인터페이스의 &#39; &lt;interfacename1&gt; &#39; 및 &#39; &lt;defaultpropertyname&gt; &#39; 인터페이스의 &#39; &lt;interfacename2&gt;&#39;
 인터페이스는 각각 같은 이름의 기본 속성을 선언 하는 두 가지 인터페이스에서 상속 됩니다. 컴파일러는 한정 하지 않고이 기본 속성에 대 한 액세스를 확인할 수 없습니다. 다음은 이에 대한 예입니다.  
   
 ```  
@@ -55,7 +46,7 @@ End Class
     Dim testObj As Iface1  
     ```  
   
-     또는  
+     -또는-  
   
 -   클래스에서 상속 하는 인터페이스를 구현 합니다. 그런 다음 다른 이름의 상속 된 속성의 각 구현할 수 있습니다. 그러나 그 중 하나만 구현 하는 클래스의 기본 속성을 수 있습니다. 다음은 이에 대한 예입니다.  
   

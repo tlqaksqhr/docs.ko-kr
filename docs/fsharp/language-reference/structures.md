@@ -1,17 +1,12 @@
 ---
 title: 구조체(F#)
 description: 'F # 구조, 종종 간단한 개체 형식에 대 한 자세한 내용은 적은 양의 데이터 적고 동작이 단순한 형식에 대 한 클래스 보다 더 효율적입니다.'
-author: cartermp
-ms.author: phcart
 ms.date: 05/16/2016
-ms.topic: language-reference
-ms.prod: dotnet-fsharp
-ms.devlang: fsharp
-ms.openlocfilehash: 14a4799b13c40e363dd400f7effd53264acc5614
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 728533e24dcfae219ae5ab3d410389e95fcfaee1
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="structures"></a>구조체
 

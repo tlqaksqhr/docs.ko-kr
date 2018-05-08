@@ -1,18 +1,12 @@
 ---
-title: "대상 경로에 하나 이상의 폴더가 없는 경우"
+title: 대상 경로에 하나 이상의 폴더가 없는 경우
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology: devlang-visual-basic
-ms.topic: article
 ms.assetid: b33b00f6-0eb6-47fa-a639-269f97e790cd
-caps.latest.revision: "7"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: b57d54c994530beaeac6a8a07ad959648c2f8007
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 1d0c3cc63182d8ec5b299bee3cdc7e072cf633d6
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="one-or-more-folders-in-the-target-path-do-not-exist"></a>대상 경로에 하나 이상의 폴더가 없는 경우
 대상 경로에 포함되는 하나 이상의 디렉터리가 없는 경우입니다. 경로가 올바르게 구문 분석되지 않은 것 같습니다. 특히 상대 경로를 지정하는 경우 그럴 수 있습니다.  

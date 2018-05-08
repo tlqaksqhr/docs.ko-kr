@@ -1,12 +1,6 @@
 ---
-title: "방법: 이름이 같은 변수 숨기기(Visual Basic)"
-ms.custom: 
+title: '방법: 이름이 같은 변수 숨기기(Visual Basic)'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - qualification [Visual Basic], of element names
 - declarations [Visual Basic], elements
@@ -18,14 +12,11 @@ helpviewer_keywords:
 - declared elements [Visual Basic], referencing
 - declared elements [Visual Basic], about declared elements
 ms.assetid: e39c0752-f19f-4d2e-a453-00df1b5fc7ee
-caps.latest.revision: "25"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: af031f3ef134b2a509922e6ada28aa5b2b80d641
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: a7ebc4eb44592800decd5ef943750f0cd845afb4
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-hide-a-variable-with-the-same-name-as-your-variable-visual-basic"></a>방법: 이름이 같은 변수 숨기기(Visual Basic)
 변수를 숨길 수 *섀도잉* 즉, 같은 이름의 변수로 다시 정의 하 여 합니다. 두 가지 방법으로 숨기려는 변수를 숨길 수 있습니다.  
@@ -42,7 +33,7 @@ ms.lasthandoff: 11/21/2017
   
     |변수의 영역|다시 정의할 수 있는 허용 가능한 부분 영역|  
     |-----------------------|-------------------------------------------|  
-    |모듈|모듈 내에서 클래스|  
+    |Module|모듈 내에서 클래스|  
     |클래스|클래스 내의 하위 클래스<br /><br /> 클래스 내의 프로시저|  
   
      예를 들어 해당 프로시저 내에 프로시저 변수를 재정의할 수 없습니다는 `If`... `End If` 생성 또는 `For` 루프입니다.  

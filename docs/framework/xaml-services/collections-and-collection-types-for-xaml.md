@@ -1,24 +1,12 @@
 ---
-title: "XAML을 위한 컬렉션 및 컬렉션 형식"
-ms.custom: 
+title: XAML을 위한 컬렉션 및 컬렉션 형식
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 58f8e7c6-9a41-4f25-8551-c042f1315baa
-caps.latest.revision: "2"
-author: wadepickett
-ms.author: wpickett
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: b67fec476c95d82b769494d53e50550cad0c719b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 5605c97b13503e18e2f698f2a19f715663052b08
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="collections-and-collection-types-for-xaml"></a>XAML을 위한 컬렉션 및 컬렉션 형식
 이 항목 컬렉션을 지원 하 고 컬렉션 항목 요소는 부모 개체의 요소 또는 속성 요소 자식으로 인스턴스화하기 위한 XAML 구문을 지원 하도록 설계 된 형식의 속성을 정의 하는 방법을 설명 합니다.  
@@ -34,7 +22,7 @@ ms.lasthandoff: 12/22/2017
   
 2.  <xref:System.Collections.IDictionary> 인터페이스 dicionary 컬렉션을 나타냅니다.  
   
-3.  <xref:System.Array>지 원하는 배열 및 배열 나타냅니다 <xref:System.Collections.IList> 메서드.  
+3.  <xref:System.Array> 지 원하는 배열 및 배열 나타냅니다 <xref:System.Collections.IList> 메서드.  
   
  호출 하는.NET Framework XAML 서비스 XAML 프로세서에서는 각 컬렉션 개념은 `Add` 컬렉션 속성 형식의 특정 인스턴스에 메서드. 또는 serialization 시나리오에서 XAML 프로세서는 목록, 사전 또는 "항목" 각 컬렉션의 특정 개념을 기준으로 배열에 있는 각 항목에 대 한 불연속 XAML 형식 인스턴스를 생성 합니다. 이들은: <xref:System.Collections.IList.Item%2A>; <xref:System.Collections.IDictionary.Item%2A>; 명시적 <xref:System.Array.System%23Collections%23IList%23Item%2A> 에 대 한 <xref:System.Array>합니다.  
   
@@ -49,8 +37,8 @@ ms.lasthandoff: 12/22/2017
 ## <a name="xaml-type-system-support-and-collections"></a>XAML 형식 시스템 지원 및 컬렉션  
  XAML을 구문 분석 하 고 채우거 나 컬렉션 속성을 직렬화 하는 작업의 기본 메커니즘에 외 XAML 형식 시스템에서.NET Framework XAML 서비스 구현에 xaml에서 컬렉션에 관련 된 몇 가지 디자인 기능은 포함 되어 있습니다.  
   
-1.  <xref:System.Xaml.XamlType.IsCollection%2A>XAML 형식 XAML 컬렉션 지원을 제공 하는 형식으로 백업 되어 있는 경우 true를 반환 합니다.  
+1.  <xref:System.Xaml.XamlType.IsCollection%2A> XAML 형식 XAML 컬렉션 지원을 제공 하는 형식으로 백업 되어 있는 경우 true를 반환 합니다.  
   
-2.  <xref:System.Xaml.XamlType.IsDictionary%2A>및 <xref:System.Xaml.XamlType.IsArray%2A> XAML 형식을 지원 되는 컬렉션 모드를 식별할 수 있습니다. 사용자 지정 XAML에 대 한.NET Framework XAML 서비스 및 XAML을 기반으로 하는 프로세서 형식 시스템 하지만 기존에 기반을 두지 <xref:System.Xaml.XamlWriter> 구현을 사용 하는 컬렉션 모드를 알고 있으면 할 수도 있습니다 사용할 방법에 대 한 호출을 확인 하기 위해 컬렉션 처리 합니다.  
+2.  <xref:System.Xaml.XamlType.IsDictionary%2A> 및 <xref:System.Xaml.XamlType.IsArray%2A> XAML 형식을 지원 되는 컬렉션 모드를 식별할 수 있습니다. 사용자 지정 XAML에 대 한.NET Framework XAML 서비스 및 XAML을 기반으로 하는 프로세서 형식 시스템 하지만 기존에 기반을 두지 <xref:System.Xaml.XamlWriter> 구현을 사용 하는 컬렉션 모드를 알고 있으면 할 수도 있습니다 사용할 방법에 대 한 호출을 확인 하기 위해 컬렉션 처리 합니다.  
   
 3.  각각의 이전 속성 값은 영향을 받는 재정의가 <xref:System.Xaml.XamlType.LookupCollectionKind%2A> XAML 형식입니다.
