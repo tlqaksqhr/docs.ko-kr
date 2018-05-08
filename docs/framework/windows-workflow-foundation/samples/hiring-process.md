@@ -1,29 +1,17 @@
 ---
 title: 채용 프로세스
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: d5fcacbb-c884-4b37-a5d6-02b1b8eec7b4
-caps.latest.revision: 13
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 8cfa23ab5f36b3a40de107a546dd4700a4523595
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 87327692e35e9386dab4cf906ab33cbe08d73fdd
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="hiring-process"></a>채용 프로세스
 이 샘플에서는 워크플로 서비스로 호스트되는 두 개의 워크플로와 메시징 활동을 사용하여 비즈니스 프로세스를 구현하는 방법을 보여 줍니다. 이 워크플로는 Contoso, Inc라는 가상 회사의 IT 인프라 중 일부입니다.  
   
- `HiringRequest`로 구현된 <xref:System.Activities.Statements.Flowchart> 워크플로 프로세스는 조직에 있는 여러 관리자의 권한 부여를 요구합니다. 이를 위해 워크플로에서는 조직에 있는 다른 기존 서비스를 사용하며 이 샘플에서는 기본 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 서비스로 구현된 조직 데이터 서비스와 받은 편지함 서비스를 사용합니다.  
+ `HiringRequest`로 구현된 <xref:System.Activities.Statements.Flowchart> 워크플로 프로세스는 조직에 있는 여러 관리자의 권한 부여를 요구합니다. 이 목표를 달성 하기 워크플로가 (이 경우, 받은 편지함 서비스 및 일반 Windows Communication Foundation (WCF) 서비스로 구현 된 조직 데이터 서비스)에서 조직의 다른 기존 서비스를 사용 합니다.  
   
  `ResumeRequest`로 구현된 <xref:System.Activities.Statements.Sequence> 워크플로에서는 Contoso의 외부 채용 웹 사이트에 직원 모집 공고를 게시하고 이력서 접수를 관리합니다. 직원 모집 공고는 마감 시한이 되거나 Contoso의 담당자가 삭제할 때까지 일정 기간 동안 외부 웹 사이트에서 볼 수 있습니다.  
   
@@ -64,7 +52,7 @@ ms.lasthandoff: 04/26/2018
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  이 디렉터리가 없으면 [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4(.NET Framework 4용 WCF(Windows Communication Foundation) 및 WF(Windows Workflow Foundation) 샘플)](http://go.microsoft.com/fwlink/?LinkId=150780) 로 이동하여 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 및 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플을 모두 다운로드하세요. 이 샘플은 다음 디렉터리에 있습니다.  
+>  이 디렉터리가로 이동 [Windows Communication Foundation (WCF) 및.NET Framework 4에 대 한 Windows WF (Workflow Foundation) 샘플](http://go.microsoft.com/fwlink/?LinkId=150780) 모든 Windows Communication Foundation (WCF)를 다운로드 하 고 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플. 이 샘플은 다음 디렉터리에 있습니다.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Application\HiringProcess`  
   
@@ -111,7 +99,7 @@ ms.lasthandoff: 04/26/2018
 |ContosoHR|데이터 계약, 비즈니스 개체 및 리포지토리 클래스를 포함합니다.|  
 |HiringRequestService|채용 요청 프로세스 워크플로의 정의를 포함합니다.<br /><br /> 이 프로젝트는 워크플로(xaml 파일)를 서비스로 자체 호스트하는 콘솔 응용 프로그램으로 구현됩니다.|  
 |ResumeRequestService|마감 시한이 되거나 담당자가 프로세스를 중지할 때까지 채용 후보로부터 이력서를 접수하는 워크플로 서비스입니다.<br /><br /> 이 프로젝트는 선언적 워크플로 서비스(xamlx)로 구현됩니다.|  
-|OrgService|조직 정보(직원, 직무, 직무 종류 및 부서)를 노출하는 서비스입니다. 이 서비스는 ERP(Enterprise Resource Plan)의 회사 조직 모듈로 생각하면 됩니다.<br /><br /> 이 프로젝트는 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 서비스를 노출하는 콘솔 응용 프로그램으로 구현됩니다.|  
+|OrgService|조직 정보(직원, 직무, 직무 종류 및 부서)를 노출하는 서비스입니다. 이 서비스는 ERP(Enterprise Resource Plan)의 회사 조직 모듈로 생각하면 됩니다.<br /><br /> 이 프로젝트는 Windows Communication Foundation (WCF) 서비스를 노출 하는 콘솔 응용 프로그램으로 구현 됩니다.|  
 |InboxService|직원이 조치 가능한 작업이 들어 있는 받은 편지함입니다.<br /><br /> 이 프로젝트는 WCF 서비스를 노출하는 콘솔 응용 프로그램으로 구현됩니다.|  
 |InternalClient|프로세스와 상호 작용하기 위한 웹 응용 프로그램입니다. 사용자는 HiringProcess 워크플로를 시작하고 참여하고 볼 수 있습니다. 사용자는 이 응용 프로그램을 사용하여 ResumeRequest 프로세스를 시작하고 모니터링할 수도 있습니다.<br /><br /> 이 사이트는 Contoso의 인트라넷에 내부적으로 구현되고 이 프로젝트는 ASP.NET 웹 사이트로 구현됩니다.|  
 |CareersWebSite|Contoso의 채용 정보를 노출하는 외부 웹 사이트입니다. 지원 의사가 있는 후보는 누구나 이 사이트로 이동하여 이력서를 제출할 수 있습니다.|  

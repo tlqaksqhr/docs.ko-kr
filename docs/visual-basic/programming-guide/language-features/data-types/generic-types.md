@@ -1,9 +1,6 @@
 ---
-title: "Visual Basic의 제네릭 형식(Visual Basic)"
+title: Visual Basic의 제네릭 형식(Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - generic interfaces
 - data type arguments [Visual Basic], defining
@@ -39,14 +36,11 @@ helpviewer_keywords:
 - type arguments [Visual Basic], defining
 - arguments [Visual Basic], type
 ms.assetid: 89f771d9-ecbb-4737-88b8-116b63c6cf4d
-caps.latest.revision: "45"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 463391da61cbafe1f50a246307994cfa134dba38
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: f86819f9bd3cbcceb4be696852655018868f4a56
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="generic-types-in-visual-basic-visual-basic"></a>Visual Basic의 제네릭 형식(Visual Basic)
 *제네릭 형식* 은 다양한 데이터 형식에 대해 동일한 기능을 수행하도록 조정되는 단일 프로그래밍 요소입니다. 제네릭 클래스 또는 프로시저를 정의할 때는 해당 기능을 수행하고자 하는 각 데이터 형식마다 별도의 버전을 정의할 필요가 없습니다.  

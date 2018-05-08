@@ -1,28 +1,14 @@
 ---
 title: 컨트롤 범주
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-wpf
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - controls [WPF], listed by category
 ms.assetid: f8a1f78e-d9fa-4367-9ec6-f084577e83bb
-caps.latest.revision: 18
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: e88dc45d640391798a22af7a6a1d34f1acebcc0a
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 93512ab00fe05a4166125c5e319ce91a5cc04573
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="controls-by-category"></a>컨트롤 범주
 Windows Presentation Foundation (wpf) 여러 범주로 논리적으로 그룹화 할 수 있습니다. 이러한 범주를 사용하면 유사한 사용 패턴 또는 기능이 있는 컨트롤을 볼 수 있으므로 시나리오에 적절한 컨트롤을 선택할 수 있습니다.  

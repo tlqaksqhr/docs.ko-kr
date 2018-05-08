@@ -1,33 +1,21 @@
 ---
-title: "방법: 바인딩 업데이트 알림 설정"
-ms.custom: 
+title: '방법: 바인딩 업데이트 알림 설정'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - notifications [WPF], binding updates
 - data binding [WPF], notification of binding updates
 - binding [WPF], updates [WPF], notifications of
 ms.assetid: 5673073e-dbe1-49da-980a-484a88f9595a
-caps.latest.revision: "15"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a07337e99e985bfbc0a5dbc5f2d231ee36cf1422
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 896ce103361590dceecccf8534fd330aabe18086
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-set-up-notification-of-binding-updates"></a>방법: 바인딩 업데이트 알림 설정
 이 예제에서는 바인딩의 바인딩 대상(대상) 또는 바인딩 소스(소스) 속성이 업데이트될 경우 알림을 받도록 설정하는 방법을 보여 줍니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]은 바인딩 소스 또는 대상이 업데이트될 때마다 데이터 업데이트 이벤트를 발생시킵니다. 내부적으로 이 이벤트는 바인딩된 데이터가 변경되었기 때문에 업데이트 작업을 수행해야 함을 [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]에 알리는 데 사용됩니다. 작동 하도록 하는 이러한 이벤트에 대 한 한도 제대로 작동 하려면 단방향 또는 양방향 바인딩이, 할 경우 사용 하 여 데이터 클래스를 구현 하는 참고는 <xref:System.ComponentModel.INotifyPropertyChanged> 인터페이스입니다. 자세한 내용은 [속성 변경 알림 구현](../../../../docs/framework/wpf/data/how-to-implement-property-change-notification.md)을 참조하세요.  
   
  설정의 <xref:System.Windows.Data.Binding.NotifyOnTargetUpdated%2A> 또는 <xref:System.Windows.Data.Binding.NotifyOnSourceUpdated%2A> 를 속성 (또는 둘 다) `true` 바인딩에 합니다. 이 이벤트를 수신하기 위해 제공하는 처리기는 변경 내용에 대한 알림을 받을 요소에 직접 연결하거나, 컨텍스트의 내용이 변경되었는지 여부를 알고 싶은 경우 전체 데이터 컨텍스트에 연결해야 합니다.  

@@ -1,24 +1,15 @@
 ---
-title: "방법: Visual Basic에서 XML 문서 만들기"
-ms.custom: 
+title: '방법: Visual Basic에서 XML 문서 만들기'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - XML comments
 - XML documentation [Visual Basic], creating
 ms.assetid: 27b5b06c-09b9-496a-8245-f9542d846230
-caps.latest.revision: "17"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 63b6485de5aba2ca49d54a057045bec2062d12dd
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 7fb56da8a28367a6dcd5e28f208b4519510d7d95
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-xml-documentation-in-visual-basic"></a>방법: Visual Basic에서 XML 문서 만들기
 이 예에서는 XML 문서 주석 코드를 추가 하는 방법을 보여 줍니다.  

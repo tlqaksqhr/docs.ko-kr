@@ -1,11 +1,6 @@
 ---
-title: "End 문"
+title: End 문
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.End
 - End
@@ -19,14 +14,11 @@ helpviewer_keywords:
 - End statement [Visual Basic]
 - execution [Visual Basic], stopping
 ms.assetid: 0e64467c-0f34-4aab-9ddd-43f8b9d55d90
-caps.latest.revision: "19"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: b692409f2895f5e9b713c57fc35ff2def40bce75
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 864ac5ef1713f8ffa93c18accede8ecd5b3b7a8c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="end-statement"></a>End 문
 즉시 실행을 종료합니다.  
@@ -38,7 +30,7 @@ End
 ```  
   
 ## <a name="remarks"></a>설명  
- 배치할 수 있습니다는 `End` 전체 응용 프로그램에서 실행을 중지 하려면 프로시저의 아무 곳 이나 문입니다. `End`사용 하 여 열린 파일을 닫고 프로그램 `Open` 문을 응용 프로그램의 모든 변수를 지웁니다. 응용 프로그램을 해당 개체에 대 한 참조를 보유 하는 다른 프로그램 있으며 실행 중인 코드의 항목이 즉시 종료 합니다.  
+ 배치할 수 있습니다는 `End` 전체 응용 프로그램에서 실행을 중지 하려면 프로시저의 아무 곳 이나 문입니다. `End` 사용 하 여 열린 파일을 닫고 프로그램 `Open` 문을 응용 프로그램의 모든 변수를 지웁니다. 응용 프로그램을 해당 개체에 대 한 참조를 보유 하는 다른 프로그램 있으며 실행 중인 코드의 항목이 즉시 종료 합니다.  
   
 > [!NOTE]
 >  `End` 문을 갑자기 코드 실행이 중지 되 고 호출 하지 않습니다는 `Dispose` 또는 `Finalize` 메서드 또는 Visual Basic 코드입니다. 다른 프로그램에서의 개체 참조를 무효화 합니다. 경우는 `End` 내에서 문이 `Try` 또는 `Catch` 제어 블록에 해당 요소에 통과 하지 못하는 `Finally` 블록입니다.  
@@ -50,7 +42,7 @@ End
  사용 해야 `End` 만 최소화 해야 즉시 중지 합니다. 프로시저를 종료 하는 일반적인 방법 ([Return 문을](../../../visual-basic/language-reference/statements/return-statement.md) 및 [Exit 문은](../../../visual-basic/language-reference/statements/exit-statement.md)) 뿐 아니라 프로시저를 완전히 종료 되지만 호출 코드에서 완전히 종료를 제공 합니다. 콘솔 응용 프로그램, 예를 들어 하기만 하면 `Return` 에서 `Main` 프로시저입니다.  
   
 > [!IMPORTANT]
->  `End` 문 호출은 <xref:System.Environment.Exit%2A> 의 메서드는 <xref:System.Environment> 클래스에 <xref:System> 네임 스페이스입니다. <xref:System.Environment.Exit%2A>해야 `UnmanagedCode` 권한. 그렇지 않고 하는 경우는 <xref:System.Security.SecurityException> 오류가 발생 합니다.  
+>  `End` 문 호출은 <xref:System.Environment.Exit%2A> 의 메서드는 <xref:System.Environment> 클래스에 <xref:System> 네임 스페이스입니다. <xref:System.Environment.Exit%2A> 해야 `UnmanagedCode` 권한. 그렇지 않고 하는 경우는 <xref:System.Security.SecurityException> 오류가 발생 합니다.  
   
  뒤에 키워드를 추가 하는 경우 [끝 \<키워드 > 문을](../../../visual-basic/language-reference/statements/end-keyword-statement.md) 적절 한 프로시저 또는 블록의 정의의 끝을 나타낼 합니다. 예를 들어 `End Function` 의 정의 종료 한 `Function` 프로시저입니다.  
   

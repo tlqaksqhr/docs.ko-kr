@@ -1,22 +1,12 @@
 ---
-title: "방법: 중간 값 (Visual Basic)를 계산 합니다."
-ms.custom: 
+title: '방법: 중간 값 (Visual Basic)를 계산 합니다.'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 933a97b2-dfe7-4f4d-94ad-e6e20df84abd
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: eaedaf15318ea9ae521cc070e7cd9a267decf330
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: e3aa54c365e90a11ac8c31e0bf7d901c5a4a6b96
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-calculate-intermediate-values-visual-basic"></a>방법: 중간 값 (Visual Basic)를 계산 합니다.
 이 예제에서는 정렬, 필터링 및 선택에 사용할 수 있는 중간 값을 계산하는 방법을 보여 줍니다.  

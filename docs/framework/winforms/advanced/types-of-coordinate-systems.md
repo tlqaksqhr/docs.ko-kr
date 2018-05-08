@@ -1,13 +1,6 @@
 ---
-title: "좌표계 형식"
-ms.custom: 
+title: 좌표계 형식
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -22,19 +15,14 @@ helpviewer_keywords:
 - coordinate systems
 - transformations [Windows Forms], world
 ms.assetid: c61ff50a-eb1d-4e6c-83cd-f7e9764cfa9f
-caps.latest.revision: "15"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 287b1c9eddef882041d9e4eac44a06190f3585a4
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ff53942cb90721d5411f99b261f90366d039e151
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="types-of-coordinate-systems"></a>좌표계 형식
-[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]세 개의 좌표 공간을 사용 하 여: 세계, 페이지 및 장치입니다. 세계 좌표 모델링할 특정 그래픽 영역을 사용 하는 좌표 및 좌표를.NET Framework의 메서드에 전달 합니다. 페이지 좌표 폼 또는 컨트롤과 같은 그리기 화면에서 사용 하는 좌표계를 가리킵니다. 장치 좌표는 화면이 나 용지 같은 항목이 그려지는 물리적 장치에서 사용 하는 좌표입니다. 호출을 수행 하면 `myGraphics.DrawLine(myPen, 0, 0, 160, 80)`, 전달 하는 지점은 <xref:System.Drawing.Graphics.DrawLine%2A> 메서드-`(0, 0)` 및 `(160, 80)`-세계 좌표 공간에서 됩니다. 하기 전에 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 화면에 줄을 그릴 수, 좌표 변환의 순서를 통해 전달 합니다. 월드 변형을 호출 하는 하나의 변환 페이지 좌표 세계 좌표를 변환 하 고 다른 변환에 페이지 변환을 통해 장치 좌표로 변환 합니다.  
+[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 세 개의 좌표 공간을 사용 하 여: 세계, 페이지 및 장치입니다. 세계 좌표 모델링할 특정 그래픽 영역을 사용 하는 좌표 및 좌표를.NET Framework의 메서드에 전달 합니다. 페이지 좌표 폼 또는 컨트롤과 같은 그리기 화면에서 사용 하는 좌표계를 가리킵니다. 장치 좌표는 화면이 나 용지 같은 항목이 그려지는 물리적 장치에서 사용 하는 좌표입니다. 호출을 수행 하면 `myGraphics.DrawLine(myPen, 0, 0, 160, 80)`, 전달 하는 지점은 <xref:System.Drawing.Graphics.DrawLine%2A> 메서드-`(0, 0)` 및 `(160, 80)`-세계 좌표 공간에서 됩니다. 하기 전에 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 화면에 줄을 그릴 수, 좌표 변환의 순서를 통해 전달 합니다. 월드 변형을 호출 하는 하나의 변환 페이지 좌표 세계 좌표를 변환 하 고 다른 변환에 페이지 변환을 통해 장치 좌표로 변환 합니다.  
   
 ## <a name="transforms-and-coordinate-systems"></a>변환 및 좌표계  
  원점은 왼쪽 위 모서리 아닌 클라이언트 영역의 본문에는 좌표계를 작성 하려면 한다고 가정 합니다. 예를 들어, 예를 들어 클라이언트 영역의 왼쪽된 가장자리에서 100 픽셀 성과 50 픽셀 클라이언트 영역의 위쪽에서 시작 되도록 합니다. 다음은 이러한 좌표 시스템입니다.  

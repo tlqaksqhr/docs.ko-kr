@@ -1,22 +1,14 @@
 ---
 title: My.Application.Log 개체
 ms.date: 07/20/2015
-ms.prod: .net
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - My.Application.Log object
 ms.assetid: 296147f9-1109-4a55-9b5e-047f1ab9466c
-caps.latest.revision: 32
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 9ba367f3d5f5cb5505300b7f4a54d9b3d7c4422e
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 4a4fbb2b823436a16f9f0646632e66f66fe62fdd
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="myapplicationlog-object"></a>My.Application.Log 개체
 응용 프로그램의 로그 수신기에 이벤트 및 예외 정보를 쓸 수 있는 속성 및 메서드를 제공합니다.  

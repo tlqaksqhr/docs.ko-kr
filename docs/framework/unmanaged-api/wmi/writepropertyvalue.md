@@ -1,11 +1,7 @@
 ---
-title: "WritePropertyValue 함수 (관리 되지 않는 API 참조)"
-description: "WritePropertyValue 함수 속성에 바이트를 씁니다."
+title: WritePropertyValue 함수 (관리 되지 않는 API 참조)
+description: WritePropertyValue 함수 속성에 바이트를 씁니다.
 ms.date: 11/06/2017
-ms.prod: .net-framework
-ms.technology:
-- dotnet-clr
-ms.topic: reference
 api_name:
 - WritePropertyValue
 api_location:
@@ -20,14 +16,11 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 7221c9e0f1cb49ab0e27130ce69c0527ba903148
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 6aafb918616d27cf6289a8747f3336b2e813beb6
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="writepropertyvalue-function"></a>WritePropertyValue 함수
 속성 핸들에 의해 식별 된 속성에 지정된 된 수의 바이트를 씁니다.
@@ -86,7 +79,7 @@ HRESULT WritePropertyValue (
   
  **헤더:** WMINet_Utils.idl  
   
- **.NET framework 버전:**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **.NET framework 버전:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>참고자료  
 [WMI 및 성능 카운터 (관리 되지 않는 API 참조)](index.md)

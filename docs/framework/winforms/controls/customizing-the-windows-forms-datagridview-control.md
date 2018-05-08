@@ -1,27 +1,15 @@
 ---
-title: "Windows Forms DataGridView 컨트롤 사용자 지정"
-ms.custom: 
+title: Windows Forms DataGridView 컨트롤 사용자 지정
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - data grids [Windows Forms], customization
 - DataGridView control [Windows Forms], customization
 ms.assetid: 01ea5d4c-a736-4596-b0e9-a67a1b86e15f
-caps.latest.revision: "12"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 348651784ef2b4d99679038a1875fc6650688a6d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 92bbace4d0869aca67025f1e4ac8c451fe073219
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="customizing-the-windows-forms-datagridview-control"></a>Windows Forms DataGridView 컨트롤 사용자 지정
 `DataGridView` 컨트롤은 모양과 해당 셀, 행 및 열의 기본 동작 (모양 및 느낌)를 조정 하는 데 사용할 수 있는 몇 가지 속성을 제공 합니다. 기능 이외에 특별 한 요구 사항이 있으면는 <xref:System.Windows.Forms.DataGridViewCellStyle> 클래스, 있지만 수 또한 소유자 그리기 컨트롤에 대 한 구현 하거나 사용자 지정 셀, 열 및 행을 만들어 기능을 확장 합니다.  

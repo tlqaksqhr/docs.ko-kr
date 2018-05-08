@@ -1,17 +1,12 @@
 ---
 title: 인터페이스(F#)
 description: 'F # 인터페이스에서 다른 클래스에서 구현 하는 관련된 멤버의 집합을 지정 하는 방법에 대해 알아봅니다.'
-author: cartermp
-ms.author: phcart
 ms.date: 05/16/2016
-ms.topic: language-reference
-ms.prod: dotnet-fsharp
-ms.devlang: fsharp
-ms.openlocfilehash: fa299a7e37d4e1e3800a02bf5a77831db9146daf
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 174e30c03cd555d2d9c89c88bd80e06a2cdcef46
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="interfaces"></a>인터페이스
 

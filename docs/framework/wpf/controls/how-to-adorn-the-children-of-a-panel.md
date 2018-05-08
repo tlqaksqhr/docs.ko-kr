@@ -1,13 +1,6 @@
 ---
-title: "방법: 패널의 자식 표시"
-ms.custom: 
+title: '방법: 패널의 자식 표시'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -15,21 +8,16 @@ helpviewer_keywords:
 - adorners [WPF], binding to children of Panels
 - Panel control [WPF], binding adorners to children
 ms.assetid: 4cc9b972-b472-4e5c-bdf3-3702d7fbb1f5
-caps.latest.revision: "9"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 70a2c1e7735a6df31a44fce7eb9bb2371acc208b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 4babbf1df57f340a3f6be218f213ad1c868ec9f5
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-adorn-the-children-of-a-panel"></a>방법: 패널의 자식 표시
 프로그래밍 방식으로 지정된 된 자식에 표시기를 바인딩하는 방법을 보여 주는이 예제 <xref:System.Windows.Controls.Panel>합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  표시기의 자식 항목에 바인딩하는 <xref:System.Windows.Controls.Panel>, 다음이 단계를 수행 합니다.  
   
 1.  선언 <xref:System.Windows.Documents.AdornerLayer> 개체와 호출은 `static` <xref:System.Windows.Documents.AdornerLayer.GetAdornerLayer%2A> 메서드 표시 수의 자식 요소에 대 한 표시기 계층을 찾으려고 합니다.  

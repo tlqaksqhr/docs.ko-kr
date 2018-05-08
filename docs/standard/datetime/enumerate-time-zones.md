@@ -1,13 +1,7 @@
 ---
-title: "방법: 컴퓨터에 있는 표준 시간대를 열거 합니다."
-ms.custom: 
+title: '방법: 컴퓨터에 있는 표준 시간대를 열거 합니다.'
 ms.date: 04/10/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -15,18 +9,13 @@ helpviewer_keywords:
 - time zones [.NET Framework], enumerating
 - enumerating time zones [.NET Framework]
 ms.assetid: bb7a42ab-6bd9-4c5c-b734-5546d51f8669
-caps.latest.revision: "12"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 2318a42040388adfe327f9d0075754daa1aa22a6
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: dfdc3993f6658ce5dc50050ed062c2de9d4cec29
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-enumerate-time-zones-present-on-a-computer"></a>방법: 컴퓨터에 있는 표준 시간대를 열거 합니다.
 
@@ -37,7 +26,7 @@ ms.lasthandoff: 12/23/2017
 
 ### <a name="to-enumerate-the-time-zones-present-on-the-local-system"></a>로컬 시스템에 있는 표준 시간대를 열거하려면
 
-1. <xref:System.TimeZoneInfo.GetSystemTimeZones%2A?displayProperty=nameWithType> 메서드를 호출합니다. 메서드가 제네릭 반환 <xref:System.Collections.ObjectModel.ReadOnlyCollection%601> 컬렉션 <xref:System.TimeZoneInfo> 개체입니다. 컬렉션의 항목을 기준으로 정렬 되며 해당 <xref:System.TimeZoneInfo.DisplayName%2A> 속성입니다. 예:
+1. <xref:System.TimeZoneInfo.GetSystemTimeZones%2A?displayProperty=nameWithType> 메서드를 호출합니다. 메서드가 제네릭 반환 <xref:System.Collections.ObjectModel.ReadOnlyCollection%601> 컬렉션 <xref:System.TimeZoneInfo> 개체입니다. 컬렉션의 항목을 기준으로 정렬 되며 해당 <xref:System.TimeZoneInfo.DisplayName%2A> 속성입니다. 예를 들어:
 
    [!code-csharp[System.TimeZone2.Concepts#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.TimeZone2.Concepts/CS/TimeZone2Concepts.cs#1)]
    [!code-vb[System.TimeZone2.Concepts#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.TimeZone2.Concepts/VB/TimeZone2Concepts.vb#1)]
@@ -57,7 +46,7 @@ ms.lasthandoff: 12/23/2017
 
 예제에서는 Windows 응용 프로그램에 대 한 그림을 제공 합니다.
 
-## <a name="example"></a>예
+## <a name="example"></a>예제
 
 이 예제에서는 목록 상자에서 시스템에 정의 된 표준 시간대를 표시 하는 Windows 응용 프로그램을 시작 합니다. 이 예제에서는 다음의 값을 포함 하는 대화 상자를 표시는 <xref:System.TimeZoneInfo.DisplayName%2A> 사용자가 선택한 표준 시간대 개체의 속성입니다.
 
@@ -77,11 +66,11 @@ ms.lasthandoff: 12/23/2017
 
 * 다음 네임 스페이스 가져와야 합니다.
 
-  <xref:System>C# 코드에서
+  <xref:System> C# 코드에서
 
   <xref:System.Collections.ObjectModel>
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참고자료
 
 [날짜, 시간 및 표준 시간대](../../../docs/standard/datetime/index.md)
 [하는 방법: 포함 된 표준 시간대 저장](../../../docs/standard/datetime/save-time-zones-to-an-embedded-resource.md)

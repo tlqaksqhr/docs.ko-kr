@@ -1,14 +1,6 @@
 ---
 title: '방법: 인쇄 작업을 현재 인쇄할 수 있는지 확인'
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-wpf
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -18,17 +10,11 @@ helpviewer_keywords:
 - printers [WPF], availability
 - print jobs [WPF], timing
 ms.assetid: 7e9c8ec1-abf6-4b3d-b1c6-33b35d3c4063
-caps.latest.revision: 9
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: eef74cfa290614e530fa22a34533c7924d4af1b4
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: e5ea5ad3bcb10bfbc091f0b5852ee181a2c3fa8a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-discover-whether-a-print-job-can-be-printed-at-this-time-of-day"></a>방법: 인쇄 작업을 현재 인쇄할 수 있는지 확인
 인쇄 큐 항상 사용할 수 없는 하루 24 시간에 대 한 합니다. 하루 중 특정 시간에 사용할 수 없도록 설정할 수 있는 시작 및 종료 시간 속성을 갖게 됩니다. 예를 들어 특정 부서 오후 5 시 이후에 단독으로 사용에 대 한 프린터를 예약 하 고이 기능을 사용할 수 있습니다. 해당 부서 사용 되는 다른 큐에서는 다른 부서에서 프린터를 처리 해야 합니다. 다른 부서에 대 한 큐 오후 5 시 이후에 사용할 수 없게 설정 됩니다, 그리고 부서에서 선호 하는 방식된에 대 한 큐 수로 설정 되어 동안 항상 사용 가능한 합니다.  

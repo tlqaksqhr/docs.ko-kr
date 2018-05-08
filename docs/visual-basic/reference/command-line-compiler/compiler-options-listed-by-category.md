@@ -1,22 +1,16 @@
 ---
 title: Visual Basic 컴파일러 옵션 범주별 목록
 ms.date: 04/12/2018
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - Visual Basic compiler, options
 ms.assetid: fbe36f7a-7cfa-4f77-a8d4-2be5958568e3
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a90c54ae1bb4d89b2fbe0df62730bc55c0ceb64f
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.openlocfilehash: 13aeab52cfd43aa8dfd7fda69e2eb9be798473e1
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="visual-basic-compiler-options-listed-by-category"></a>Visual Basic 컴파일러 옵션 범주별 목록
 Visual Basic 명령줄 컴파일러를 Visual Studio 통합된 개발 환경 (IDE)에서 프로그램을 컴파일하는 대신 제공 됩니다. 다음은 기능 범주별으로 정렬 한 Visual Basic 명령줄 컴파일러 옵션의 목록입니다.  
@@ -45,7 +39,7 @@ Visual Basic 명령줄 컴파일러를 Visual Studio 통합된 개발 환경 (ID
 |옵션|용도|  
 |---|---|  
 |[-doc](../../../visual-basic/reference/command-line-compiler/doc.md)|XML 파일에 대해 문서 주석을 처리합니다.|  
-|[-결정적](../../../visual-basic/reference/command-line-compiler/deterministic.md)|컴파일러가 해당 이진 콘텐츠는 동일 컴파일 간에 입력이 동일 어셈블리를 출력 합니다.|
+|[-deterministic](../../../visual-basic/reference/command-line-compiler/deterministic.md)|입력이 동일한 경우 컴파일 간에 이진 콘텐츠가 동일한 어셈블리를 컴파일러에서 출력하도록 합니다.|
 |[-netcf](../../../visual-basic/reference/command-line-compiler/netcf.md)|[!INCLUDE[Compact](~/includes/compact-md.md)]를 대상으로 하도록 컴파일러를 설정합니다.|  
 |[-out](../../../visual-basic/reference/command-line-compiler/out.md)|출력 파일을 지정합니다.|  
 |[/refonly](refonly-compiler-option.md)|한 참조 어셈블리를 출력합니다.|

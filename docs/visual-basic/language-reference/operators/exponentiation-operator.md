@@ -1,12 +1,6 @@
 ---
 title: ^ 연산자(Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.^
 helpviewer_keywords:
@@ -20,14 +14,11 @@ helpviewer_keywords:
 - powers
 - arithmetic operators [Visual Basic], exponentiation
 ms.assetid: d89a1ca8-83da-4784-a87b-a9d7dceb3f62
-caps.latest.revision: 14
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 9e7159f289b687055c7d75cc8da58d6f76607a83
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 426c3e9913dadda1091f4ba53c66c6b65e40e768
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="-operator-visual-basic"></a>^ 연산자(Visual Basic)
 숫자를를 다른 숫자의 거듭제곱을 발생 시킵니다.  
@@ -40,10 +31,10 @@ number ^ exponent
   
 ## <a name="parts"></a>요소  
  `number`  
- 필수 요소. 임의의 숫자 식입니다.  
+ 필수. 임의의 숫자 식입니다.  
   
  `exponent`  
- 필수 요소. 임의의 숫자 식입니다.  
+ 필수. 임의의 숫자 식입니다.  
   
 ## <a name="result"></a>결과  
  결과 `number` 의 거듭제곱을 `exponent`, 항상로 `Double` 값입니다.  
@@ -68,23 +59,23 @@ number ^ exponent
   
  앞의 예제 결과 다음과 같습니다.  
   
- `exp1`4 (2의 제곱)로 설정 됩니다.  
+ `exp1` 4 (2의 제곱)로 설정 됩니다.  
   
- `exp2`19683 (3, 3 제곱 값을 제곱)로 설정 됩니다.  
+ `exp2` 19683 (3, 3 제곱 값을 제곱)로 설정 됩니다.  
   
- `exp3`(3 제곱-5)-125로 설정 됩니다.  
+ `exp3` (3 제곱-5)-125로 설정 됩니다.  
   
- `exp4`625 (4 제곱-5)로 설정 됩니다.  
+ `exp4` 625 (4 제곱-5)로 설정 됩니다.  
   
- `exp5`2 (64.64의 8)로 설정 됩니다.  
+ `exp5` 2 (64.64의 8)로 설정 됩니다.  
   
- `exp6`(1.0 8의 세 제곱근으로 나눈) 0.5로 설정 됩니다.  
+ `exp6` (1.0 8의 세 제곱근으로 나눈) 0.5로 설정 됩니다.  
   
  앞의 예제 식에서는 괄호의 중요성을 note 합니다. 때문에 *연산자 우선 순위*, Visual Basic을 정상적으로 수행 된 `^` 단항 포함 하 여 다른 대체 이전에, 연산자 `–` 연산자입니다. 경우 `exp4` 및 `exp6` 계산 괄호 없이 다음과 같은 결과가 생성:  
   
- `exp4 = -5 ^ 4`– (4 제곱 5)로 계산 될 것-625를 초래 합니다.  
+ `exp4 = -5 ^ 4` – (4 제곱 5)로 계산 될 것-625를 초래 합니다.  
   
- `exp6 = 8 ^ -1.0 / 3.0`(-1 제곱, 즉 0.125 8)로 계산 될 것 3.0 0.041666666666666666666666666666667로 나눈 값입니다.  
+ `exp6 = 8 ^ -1.0 / 3.0` (-1 제곱, 즉 0.125 8)로 계산 될 것 3.0 0.041666666666666666666666666666667로 나눈 값입니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [^= 연산자](../../../visual-basic/language-reference/operators/exponentiation-assignment-operator.md)  

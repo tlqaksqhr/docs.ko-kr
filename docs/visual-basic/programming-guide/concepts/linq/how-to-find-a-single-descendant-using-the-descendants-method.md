@@ -1,22 +1,12 @@
 ---
-title: "방법: Descendants 메서드 (Visual Basic)를 사용 하 여 단일 하위 항목 찾기"
-ms.custom: 
+title: '방법: Descendants 메서드 (Visual Basic)를 사용 하 여 단일 하위 항목 찾기'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 0c03468c-efc8-4140-98f3-fb67acd9e8e1
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 0647dee5ced1e986fcb3fac7915437dfb37b0796
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 5c4e857d28ab4660638198c054cf93bf94a621a7
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-find-a-single-descendant-using-the-descendants-method-visual-basic"></a>방법: Descendants 메서드 (Visual Basic)를 사용 하 여 단일 하위 항목 찾기
 <xref:System.Xml.Linq.XContainer.Descendants%2A> 축 메서드를 사용하여 고유하게 명명된 단일 요소를 찾는 코드를 신속하게 작성할 수 있습니다. 이 기법은 지정된 이름을 가진 특정 하위 요소를 찾으려는 경우 특히 유용합니다. 원하는 요소를 탐색하는 코드를 작성할 수도 있지만 <xref:System.Xml.Linq.XContainer.Descendants%2A> 축을 사용하여 코드를 작성하는 것이 더 빠르고 쉬운 경우가 많습니다.  

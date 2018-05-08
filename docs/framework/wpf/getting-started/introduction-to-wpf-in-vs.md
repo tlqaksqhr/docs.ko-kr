@@ -1,14 +1,6 @@
 ---
-title: "Visual Studio에서의 WPF 소개"
-ms.custom: 
+title: Visual Studio에서의 WPF 소개
 ms.date: 01/26/2018
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - typography [WPF]
 - media [WPF]
@@ -23,17 +15,11 @@ helpviewer_keywords:
 - WPF [WPF], about Windows Presentation Foundation
 - 3-D rendering [WPF]
 ms.assetid: 582a314e-e23d-4144-b45b-acbbd5579252
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 0585513cabc0f767d6882fef02521db483c01308
-ms.sourcegitcommit: 655fd4f78741967f80c409cef98347fdcf77857d
+ms.openlocfilehash: a2d88b9094a6168989360102a25ef7ce6e0a918a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="introduction-to-wpf-in-visual-studio"></a>Visual Studio에서의 WPF 소개
 Visual Studio에서 Windows Presentation Foundation (WPF) 기간 업무 windows 데스크톱 응용 프로그램을 구축 하기 위한 통합된 프로그래밍 모델 개발자에 게 제공 합니다.  

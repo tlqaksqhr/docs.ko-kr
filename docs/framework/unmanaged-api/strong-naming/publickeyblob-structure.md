@@ -1,14 +1,6 @@
 ---
-title: "PublicKeyBlob 구조체"
-ms.custom: 
+title: PublicKeyBlob 구조체
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - PublicKeyBlob
 api_location:
@@ -22,17 +14,13 @@ helpviewer_keywords:
 ms.assetid: b9240712-829c-4c8d-9a09-a6e7aa63f63a
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: b1f04c692b7549c4d7d8d431591eeb867b673d9a
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: d7577a24a023c38370f5ac1f8c471ce31409e75d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="publickeyblob-structure"></a>PublicKeyBlob 구조체
 공개/개인 키 쌍의 공개 키를 이진 형식으로 나타냅니다.  
@@ -67,7 +55,7 @@ typedef struct {
   
  **라이브러리:** MsCorEE.dll에 리소스로 포함  
   
- **.NET framework 버전:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>참고 항목  
  [StrongNameGetPublicKey 함수](../../../../docs/framework/unmanaged-api/strong-naming/strongnamegetpublickey-function.md)  

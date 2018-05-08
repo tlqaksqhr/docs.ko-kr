@@ -1,13 +1,6 @@
 ---
 title: '방법: 값 변경에 대해 프로시저 인수 보호(Visual Basic)'
-ms.custom: ''
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - procedures [Visual Basic], arguments
 - procedures [Visual Basic], parameters
@@ -21,14 +14,11 @@ helpviewer_keywords:
 - arguments [Visual Basic], ByRef
 - arguments [Visual Basic], changing value
 ms.assetid: d2b7c766-ce16-4d2c-8d79-3fc0e7ba2227
-caps.latest.revision: 14
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 59c0486bd9543167e4c17a3109c4b89b3502e80e
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: d2e131b770d8498a634d946a5900f9b373ca7e56
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-protect-a-procedure-argument-against-value-changes-visual-basic"></a>방법: 값 변경에 대해 프로시저 인수 보호(Visual Basic)
 프로시저 매개 변수로 선언 된 경우 [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md), Visual Basic 프로시저 코드에 호출 코드의 기반이 되는 프로그래밍 요소에 대 한 직접 참조를 제공 합니다. 이렇게 하면 프로시저가 호출 코드의 기반이 되는 값을 변경할 수 있습니다. 일부 경우에서는 호출 코드에서 이러한 변경 으로부터 보호 하려고 할 수 있습니다.  

@@ -4,7 +4,7 @@ description: '모든 F # 언어 키워드에 대 한 정보 링크를를 찾습�
 ms.date: 05/16/2016
 ms.openlocfilehash: 2cb2fbb3236fcfeebc801b467d657f031b8da55a
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
 ---

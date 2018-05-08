@@ -1,26 +1,17 @@
 ---
-title: "방법: Visual Basic에서 배열 변수 초기화"
-ms.custom: 
+title: '방법: Visual Basic에서 배열 변수 초기화'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - variables [Visual Basic], initializing
 - arrays [Visual Basic], variables
 - arrays [Visual Basic], initializing
 - arrays [Visual Basic], declaring
 ms.assetid: aadd7a60-7ca4-4608-b986-091f19e7fc10
-caps.latest.revision: "42"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 3ccdbed601d3fa87acb0833bc153c199b17a4eba
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: ee8cb91fd2fae9637a0d0e33fca63a4cdb9d2fce
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-initialize-an-array-variable-in-visual-basic"></a>방법: Visual Basic에서 배열 변수 초기화
 배열에 리터럴을 포함 하 여 배열 변수 초기화는 `New` 절과 배열의 초기 값을 지정 합니다. 형식을 지정 하거나 배열 리터럴의 값에서 유추 될 수 있도록 허용 합니다. 형식 유추 되는 방법에 대 한 자세한 내용은 "채우기는 배열에 초기 값"의 참조 [배열](../../../../visual-basic/programming-guide/language-features/arrays/index.md)합니다.  
@@ -41,7 +32,7 @@ ms.lasthandoff: 11/21/2017
   
      [!code-vb[VbVbalrArrays#17](../../../../visual-basic/programming-guide/language-features/arrays/codesnippet/VisualBasic/how-to-initialize-an-array-variable_2.vb)]  
   
--   명시적으로 배열 범위를 지정 하거나 그대로 있고 컴파일러가 배열 리터럴의 값을 기반으로 배열 범위를 유추 하도록 합니다. 상한 및 값이 모두를 제공 하는 경우에 모든 차원에서 인덱스 0부터 상한 까지의 모든 요소에 대 한 값을 포함 해야 합니다. 다음 예제에서는 선언 만들고 형식의 요소가 있는 2 차원 배열을 포함 하는 변수를 초기화 하는 여러 가지 방법으로`Short`  
+-   명시적으로 배열 범위를 지정 하거나 그대로 있고 컴파일러가 배열 리터럴의 값을 기반으로 배열 범위를 유추 하도록 합니다. 상한 및 값이 모두를 제공 하는 경우에 모든 차원에서 인덱스 0부터 상한 까지의 모든 요소에 대 한 값을 포함 해야 합니다. 다음 예제에서는 선언 만들고 형식의 요소가 있는 2 차원 배열을 포함 하는 변수를 초기화 하는 여러 가지 방법으로 `Short`  
   
      [!code-vb[VbVbalrArrays#18](../../../../visual-basic/programming-guide/language-features/arrays/codesnippet/VisualBasic/how-to-initialize-an-array-variable_3.vb)]  
   

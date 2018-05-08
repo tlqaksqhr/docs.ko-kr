@@ -1,14 +1,6 @@
 ---
-title: "NotifyIcon 구성 요소 개요(Windows Forms)"
-ms.custom: 
+title: NotifyIcon 구성 요소 개요(Windows Forms)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 f1_keywords:
 - NotifyIcon
 helpviewer_keywords:
@@ -16,17 +8,11 @@ helpviewer_keywords:
 - system tray icons [Windows Forms], about system tray icons
 - system tray icons [Windows Forms], using in Windows Forms
 ms.assetid: 5b9189fa-d4ae-41a6-9b97-eb1f44bb1a69
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 8c909537bd4c52a546faeb83c6e9291c4de76d76
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 0da485bf377b263d07a2f0ec27c5e94e4274d8ed
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="notifyicon-component-overview-windows-forms"></a>NotifyIcon 구성 요소 개요(Windows Forms)
 Windows Forms <xref:System.Windows.Forms.NotifyIcon> 구성 요소는 일반적으로 백그라운드에서 실행되고 대체로 사용자 인터페이스를 표시하지 않는 프로세스에 대한 아이콘을 표시하는 데 사용됩니다. 예를 들어 작업 표시줄의 상태 알림 영역에서 아이콘을 클릭하여 액세스할 수 있는 바이러스 방지 프로그램이 있습니다.  

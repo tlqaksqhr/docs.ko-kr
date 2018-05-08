@@ -1,13 +1,6 @@
 ---
-title: "방법: 기하 도형을 매개 변수로 사용하여 적중 테스트"
-ms.custom: 
+title: '방법: 기하 도형을 매개 변수로 사용하여 적중 테스트'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -16,21 +9,16 @@ helpviewer_keywords:
 - visual objects [WPF], hit tests on
 - Geometry objects [WPF], hit tests on visual objects [WPF]
 ms.assetid: 6c8bdbf2-19e0-4fbb-bf89-c1252b2ebc61
-caps.latest.revision: "8"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 1b5c5bb47e3f435419bcf3c472f052260adec7c0
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 57b04f7f8c9bcc21f6b970c2981c2bab51044c10
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-hit-test-using-geometry-as-a-parameter"></a>방법: 기하 도형을 매개 변수로 사용하여 적중 테스트
 적중 횟수 테스트를 사용 하 여 시각적 개체에서 수행 하는 방법을 보여 주는이 예제는 <xref:System.Windows.Media.Geometry> 적중 매개 변수를 테스트 합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 예제에서는 사용 하 여 적중 횟수 테스트를 설정 하는 방법을 보여 줍니다. <xref:System.Windows.Media.GeometryHitTestParameters> 에 대 한는 <xref:System.Windows.Media.VisualTreeHelper.HitTest%2A> 메서드. <xref:System.Windows.Point> 에 전달 되는 값은 `OnMouseDown` 메서드 만드는 데 사용 되는 <xref:System.Windows.Media.Geometry> 적중 횟수 테스트의 범위를 확대 하기 위해 개체입니다.  
   
  [!code-csharp[HitTestingOverview#HitTestingOverviewSnippet10](../../../../samples/snippets/csharp/VS_Snippets_Wpf/HitTestingOverview/CSharp/GeometryHitTest.cs#hittestingoverviewsnippet10)]

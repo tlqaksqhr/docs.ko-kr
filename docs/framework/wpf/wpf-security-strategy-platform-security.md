@@ -1,14 +1,6 @@
 ---
 title: WPF 보안 전략 - 플랫폼 보안
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-wpf
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -25,17 +17,11 @@ helpviewer_keywords:
 - Windows Presentation Foundation [WPF], about security model
 - security model [WPF], operating system
 ms.assetid: 2a39a054-3e2a-4659-bcb7-8bcea490ba31
-caps.latest.revision: 30
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 8d4606023c1a9f3252e9039da547f384d27b7ecd
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 805c152728f973750320f7ff2c9b2f2a3ce531f4
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="wpf-security-strategy---platform-security"></a>WPF 보안 전략 - 플랫폼 보안
 또한 운영 체제를 포함 하는 기본 플랫폼의 보안 기능을 활용 Windows Presentation Foundation (WPF) 다양 한 보안 서비스를 제공 하며는 [!INCLUDE[TLA2#tla_clr](../../../includes/tla2sharptla-clr-md.md)], 및 [!INCLUDE[TLA2#tla_ie](../../../includes/tla2sharptla-ie-md.md)]합니다. 이러한 계층이 결합되어 다음 그림과 같이 단일 실패 지점을 방지하는 강력한 심층 방어 보안 모델인 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]를 제공합니다.  

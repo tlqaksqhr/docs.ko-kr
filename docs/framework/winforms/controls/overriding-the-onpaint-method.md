@@ -1,13 +1,6 @@
 ---
-title: "OnPaint 메서드 재정의"
-ms.custom: 
+title: OnPaint 메서드 재정의
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -15,16 +8,11 @@ helpviewer_keywords:
 - Paint event [Windows Forms], handling in Windows Forms custom control
 - OnPaint method [Windows Forms], overriding in Windows Forms custom controls
 ms.assetid: e9ca2723-0107-4540-bb21-4f5ffb4a9906
-caps.latest.revision: "12"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 7d9012d1a31eeaf50560b6166d32ac58662c5aa4
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: fc41158e9a3d5d331b391f0f28701612012becf7
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="overriding-the-onpaint-method"></a>OnPaint 메서드 재정의
 에 정의 된 이벤트를 재정의 하는 기본 단계는 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 동일 하며 다음 목록에 요약 되어 있습니다.  
@@ -93,7 +81,7 @@ public class PaintEventArgs : EventArgs {
 }  
 ```  
   
- <xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A>그리려는 사각형 및 <xref:System.Windows.Forms.PaintEventArgs.Graphics%2A> 속성은 참조는 <xref:System.Drawing.Graphics> 개체입니다. 클래스는 <xref:System.Drawing?displayProperty=nameWithType> 네임 스페이스는 관리의 기능에 대 한 액세스를 제공 하는 클래스 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)], 새 Windows 그래픽 라이브러리입니다. <xref:System.Drawing.Graphics> 개체의 포인트, 문자열, 선, 타원, 타원, 및 기타 많은 도형을 그릴 수 있는 메서드가 있습니다.  
+ <xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A> 그리려는 사각형 및 <xref:System.Windows.Forms.PaintEventArgs.Graphics%2A> 속성은 참조는 <xref:System.Drawing.Graphics> 개체입니다. 클래스는 <xref:System.Drawing?displayProperty=nameWithType> 네임 스페이스는 관리의 기능에 대 한 액세스를 제공 하는 클래스 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)], 새 Windows 그래픽 라이브러리입니다. <xref:System.Drawing.Graphics> 개체의 포인트, 문자열, 선, 타원, 타원, 및 기타 많은 도형을 그릴 수 있는 메서드가 있습니다.  
   
  컨트롤 호출 해당 <xref:System.Windows.Forms.Control.OnPaint%2A> 자신의 시각적 표시를 변경 해야 할 때마다 메서드. 이 메서드는 메서드가 다시에 <xref:System.Windows.Forms.Control.Paint> 이벤트입니다.  
   

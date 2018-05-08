@@ -1,25 +1,15 @@
 ---
-title: "방법: Visual Basic에서 개체 변수 선언 및 개체 변수에 개체 할당"
-ms.custom: 
+title: '방법: Visual Basic에서 개체 변수 선언 및 개체 변수에 개체 할당'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - object variables [Visual Basic], declaring
 - declaring object variables [Visual Basic]
 ms.assetid: 2fa77dde-1fb2-439a-80d4-3e9787649fad
-caps.latest.revision: "11"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: f4a682c7ae32ace0b1f859d52963342546a83f29
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 1f38c90f0571b3fc73c4c89812092cdada936d84
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-declare-an-object-variable-and-assign-an-object-to-it-in-visual-basic"></a>방법: Visual Basic에서 개체 변수 선언 및 개체 변수에 개체 할당
 형식의 변수를 선언한는 [Object 데이터 형식](../../../../visual-basic/language-reference/data-types/object-data-type.md) 지정 하 여 `As Object` 에 [Dim 문](../../../../visual-basic/language-reference/statements/dim-statement.md)합니다. 등호 뒤에 개체를 배치 하 여 이러한 변수를 개체를 할당 (`=`) 대입문 이나 초기화 절에서.  

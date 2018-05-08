@@ -1,17 +1,13 @@
 ---
 title: 보간된 문자열 (Visual Basic)
 ms.date: 10/31/2017
-ms.prod: .net
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9501c052f387a522226e957193a8866083aa4233
-ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
+ms.openlocfilehash: 95f79c5cdff1a48da2bb0eaf92229570ced631b1
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="interpolated-strings-visual-basic-reference"></a>보간된 문자열 (Visual Basic 참조)
 
@@ -61,7 +57,7 @@ $"<text> {<interpolated-expression> [,<field-width>] [:<format-string>] } <text>
 
    이는 문자열 해석의 최종 결과입니다. 나타나는 모든 이중 중괄호("{{" 및 "}}")가 단일 중괄호로 변환됩니다. 
 
-2. 보간된 문자열을 <xref:System.IFormattable> 변수로 변환. 이 변수를 사용하면 단일 <xref:System.IFormattable> 인스턴스의 문화권별 콘텐츠로 여러 결과 문자열을 만들 수 있습니다. 이 옵션은 개별 문화권의 올바른 숫자 및 날짜 형식 등을 포함하는 데 유용합니다.  모든 이중 중괄호("{{" 및 "}}")는 <xref:System.Object.ToString> 메서드를 명시적 또는 암시적으로 호출하여 문자열을 형식을 지정할 때까지 이중 중괄호로 유지됩니다.  포함된 보간 식은 모두 {0}, {1} 등으로 변환됩니다.  
+2. 보간된 문자열을 <xref:System.IFormattable> 변수로 변환. 이 변수를 사용하면 단일 <xref:System.IFormattable> 인스턴스의 문화권별 콘텐츠로 여러 결과 문자열을 만들 수 있습니다. 이 옵션은 개별 문화권의 올바른 숫자 및 날짜 형식 등을 포함하는 데 유용합니다.  모든 이중 중괄호("{{" 및 "}}")는 <xref:System.Object.ToString> 메서드를 명시적 또는 암시적으로 호출하여 문자열을 형식을 지정할 때까지 이중 중괄호로 유지됩니다.  포함 된 보간 식은 모두로 변환할지 {0}, {1}등입니다.  
 
    다음 예제에서는 리플렉션을 사용하여 보간된 문자열에서 생성된 <xref:System.IFormattable> 변수의 필드 및 속성 값뿐 아니라 멤버를 표시합니다. 또한 <xref:System.IFormattable> 변수를 <xref:System.Console.WriteLine(System.String)?displayProperty=nameWithType> 메서드에 전달합니다.
 
@@ -71,13 +67,13 @@ $"<text> {<interpolated-expression> [,<field-width>] [:<format-string>] } <text>
 
 3. 보간된 문자열을 변환은 <xref:System.FormattableString> 합성 형식 문자열을 나타내는 변수입니다. 예를 들어 복합 형식 문자열 및 복합 형식 문자열이 결과 문자열로 렌더링되는 방식을 검사하면 쿼리를 빌드하는 경우 삽입 공격으로부터 보호하는 데 도움이 됩니다. A <xref:System.FormattableString> 도 포함 됩니다.
 
-      - A <xref:System.FormattableString.ToString> 에 대 한 결과 문자열을 생성 하는 오버 로드는 <xref:System.Globalization.CultureInfo.CurrentCulture>합니다.
+      - <xref:System.Globalization.CultureInfo.CurrentCulture>에 대한 결과 문자열을 생성하는 <xref:System.FormattableString.ToString> 오버로드.
       
       - A <xref:System.FormattableString.Invariant%2A> 에 대 한 문자열을 생성 하는 메서드는 <xref:System.Globalization.CultureInfo.InvariantCulture>합니다.
       
-      - A <xref:System.FormattableString.ToString(System.IFormatProvider)> 는 지정 된 문화권에 대 한 결과 문자열을 생성 하는 메서드입니다. 
+      - 지정된 문화에 대한 결과 문자열을 생성하는 <xref:System.FormattableString.ToString(System.IFormatProvider)> 메서드. 
   
-    나타나는 모든 이중 중괄호 ("{{" 및 "}}") 표시 될 때까지 이중 중괄호로 유지 됩니다.  포함된 보간 식은 모두 {0}, {1} 등으로 변환됩니다.  
+    나타나는 모든 이중 중괄호 ("{{" 및 "}}") 표시 될 때까지 이중 중괄호로 유지 됩니다.  포함 된 보간 식은 모두로 변환할지 {0}, {1}등입니다.  
 
    [!code-vb[interpolated-strings3](../../../../../samples/snippets/visualbasic/programming-guide/language-features/strings/interpolated-strings3.vb)]  
 

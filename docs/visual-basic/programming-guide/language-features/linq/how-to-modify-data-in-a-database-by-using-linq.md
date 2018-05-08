@@ -1,12 +1,6 @@
 ---
-title: "방법: LINQ를 사용하여 데이터베이스의 데이터 수정(Visual Basic)"
-ms.custom: 
+title: '방법: LINQ를 사용하여 데이터베이스의 데이터 수정(Visual Basic)'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - inserting rows [LINQ to SQL]
 - deleting rows [LINQ to SQL]
@@ -18,14 +12,11 @@ helpviewer_keywords:
 - queries [LINQ in Visual Basic], data changes in database
 - queries [LINQ in Visual Basic], how-to topics
 ms.assetid: cf52635f-0c1b-46c3-aff1-bdf181cf19b1
-caps.latest.revision: "15"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 66f21b2a47d3890875062bbdf45e1c4507e1d603
-ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
+ms.openlocfilehash: c0c00c15756ab4d488096d4311bb47986a5eb25e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-modify-data-in-a-database-by-using-linq-visual-basic"></a>방법: LINQ를 사용하여 데이터베이스의 데이터 수정(Visual Basic)
 통합 언어 쿼리 (LINQ) 쿼리 쉽게 데이터베이스 정보를 액세스 및 데이터베이스의 값을 수정 합니다.  

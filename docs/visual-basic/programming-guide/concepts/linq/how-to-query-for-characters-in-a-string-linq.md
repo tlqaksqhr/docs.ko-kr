@@ -1,22 +1,12 @@
 ---
-title: "방법: 문자열 (LINQ) (Visual Basic)에 있는 문자에 대 한 쿼리"
-ms.custom: 
+title: '방법: 문자열 (LINQ) (Visual Basic)에 있는 문자에 대 한 쿼리'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 499ebbe0-746c-4235-9dba-ce722c12b50e
-caps.latest.revision: "4"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: ebc832763e271cc53e9c95827c301f82e9a7578a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 0953ff9152a4af1aa40379e15b2279d23ad0aac1
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-query-for-characters-in-a-string-linq-visual-basic"></a>방법: 문자열 (LINQ) (Visual Basic)에 있는 문자에 대 한 쿼리
 <xref:System.String> 클래스는 제네릭 <xref:System.Collections.Generic.IEnumerable%601> 인터페이스를 구현하기 때문에 모든 문자열을 문자 시퀀스로 쿼리할 수 있습니다. 그러나 LINQ는 일반적으로 이 용도로 사용되지 않습니다. 복잡한 패턴 일치 작업의 경우 <xref:System.Text.RegularExpressions.Regex> 클래스를 사용합니다.  

@@ -1,13 +1,6 @@
 ---
-title: "WPF 그래픽 렌더링 개요"
-ms.custom: 
+title: WPF 그래픽 렌더링 개요
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -15,16 +8,11 @@ helpviewer_keywords:
 - graphics [WPF], rendering
 - rendering graphics [WPF]
 ms.assetid: 6dec9657-4d8c-4e46-8c54-40fb80008265
-caps.latest.revision: "51"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: cfb9a546ca33b848fbbcbd114951eddc5b000663
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 305af1025abb98950d90f46e75a9f261704a8ebe
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="wpf-graphics-rendering-overview"></a>WPF 그래픽 렌더링 개요
 이 항목에서는 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 시각적 계층에 대해 간략하게 설명합니다. 역할에 중점을 둡니다는 <xref:System.Windows.Media.Visual> 렌더링에 지원 기능에 대 한 클래스는 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 모델입니다.  
@@ -58,7 +46,7 @@ ms.lasthandoff: 12/22/2017
   
 -   전역화  
   
- <xref:System.Windows.Media.Visual>자식 클래스를 파생 합니다는 공용 추상 클래스로 노출 됩니다. 다음 그림에서는 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]에서 노출되는 시각적 개체의 계층 구조를 보여 줍니다.  
+ <xref:System.Windows.Media.Visual> 자식 클래스를 파생 합니다는 공용 추상 클래스로 노출 됩니다. 다음 그림에서는 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]에서 노출되는 시각적 개체의 계층 구조를 보여 줍니다.  
   
  ![시각적 개체에서 파생 된 클래스의 다이어그램](../../../../docs/framework/wpf/graphics-multimedia/media/visualclass01.png "VisualClass01")  
 시각적 개체 클래스 계층 구조  
@@ -86,7 +74,7 @@ ms.lasthandoff: 12/22/2017
   
  만들 때 한 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 제어와 같은 <xref:System.Windows.Controls.Button>, 컨트롤이 드로잉 자체에 대 한 렌더링 데이터를 암시적으로 생성 합니다. 예를 들어 설정는 <xref:System.Windows.Controls.ContentControl.Content%2A> 속성은 <xref:System.Windows.Controls.Button> 해당 컨트롤이 컨트롤의 문자 모양 렌더링 표현을 저장 합니다.  
   
- A <xref:System.Windows.Media.Visual> 하나 이상으로 해당 내용을 설명 <xref:System.Windows.Media.Drawing> 에 포함 된 개체는 <xref:System.Windows.Media.DrawingGroup>합니다. A <xref:System.Windows.Media.DrawingGroup> 도 불투명 마스크, 변환, 비트맵 효과 및 해당 내용에 적용 되는 기타 작업을 설명 합니다. <xref:System.Windows.Media.DrawingGroup>작업은 콘텐츠를 렌더링 하는 경우 다음과 같은 순서로 적용 됩니다: <xref:System.Windows.Media.DrawingGroup.OpacityMask%2A>, <xref:System.Windows.Media.DrawingGroup.Opacity%2A>, <xref:System.Windows.Media.DrawingGroup.BitmapEffect%2A>, <xref:System.Windows.Media.DrawingGroup.ClipGeometry%2A>, <xref:System.Windows.Media.DrawingGroup.GuidelineSet%2A>, 차례로 <xref:System.Windows.Media.DrawingGroup.Transform%2A>합니다.  
+ A <xref:System.Windows.Media.Visual> 하나 이상으로 해당 내용을 설명 <xref:System.Windows.Media.Drawing> 에 포함 된 개체는 <xref:System.Windows.Media.DrawingGroup>합니다. A <xref:System.Windows.Media.DrawingGroup> 도 불투명 마스크, 변환, 비트맵 효과 및 해당 내용에 적용 되는 기타 작업을 설명 합니다. <xref:System.Windows.Media.DrawingGroup> 작업은 콘텐츠를 렌더링 하는 경우 다음과 같은 순서로 적용 됩니다: <xref:System.Windows.Media.DrawingGroup.OpacityMask%2A>, <xref:System.Windows.Media.DrawingGroup.Opacity%2A>, <xref:System.Windows.Media.DrawingGroup.BitmapEffect%2A>, <xref:System.Windows.Media.DrawingGroup.ClipGeometry%2A>, <xref:System.Windows.Media.DrawingGroup.GuidelineSet%2A>, 차례로 <xref:System.Windows.Media.DrawingGroup.Transform%2A>합니다.  
   
  다음 그림에서는 순서는 <xref:System.Windows.Media.DrawingGroup> 렌더링 시퀀스 중 작업이 적용 됩니다.  
   

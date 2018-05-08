@@ -1,14 +1,6 @@
 ---
-title: "방법: 스레드로부터 안전한 방식으로 Windows Forms 컨트롤 호출"
-ms.custom: 
+title: '방법: 스레드로부터 안전한 방식으로 Windows Forms 컨트롤 호출'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -24,17 +16,11 @@ helpviewer_keywords:
 - threading [Windows Forms], cross-thread calls
 - controls [Windows Forms], multithreading
 ms.assetid: 138f38b6-1099-4fd5-910c-390b41cbad35
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 7cca363be57e5c5022c70c62d876f62cebc6e9c0
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 1a726dd3c6ff5e36190f6260a9644d9f69b87933
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-make-thread-safe-calls-to-windows-forms-controls"></a>방법: 스레드로부터 안전한 방식으로 Windows Forms 컨트롤 호출
 Windows Forms 응용 프로그램의 성능을 개선하기 위해 다중 스레딩을 사용하는 경우에는 스레드로부터 안전한 방식으로 컨트롤을 호출할 수 있습니다.  
@@ -414,7 +400,7 @@ private:
   
  <xref:System.ComponentModel.BackgroundWorker.ProgressChanged> 이벤트를 사용하여 백그라운드 작업의 진행률을 보고할 수도 있습니다. 해당 이벤트가 통합되어 있는 예제를 보려면 <xref:System.ComponentModel.BackgroundWorker>를 참조하세요.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 코드 예제는 단추 세 개와 텍스트 상자 하나가 포함된 폼으로 구성되는 완전한 Windows Forms 응용 프로그램입니다. 첫 번째 단추는 안전하지 않은 크로스 스레드 액세스를, 두 번째 단추는 <xref:System.Windows.Forms.Control.Invoke%2A>를 사용하는 안전한 액세스를, 세 번째 단추는 <xref:System.ComponentModel.BackgroundWorker>를 사용하는 안전한 액세스를 보여 줍니다.  
   
 > [!NOTE]

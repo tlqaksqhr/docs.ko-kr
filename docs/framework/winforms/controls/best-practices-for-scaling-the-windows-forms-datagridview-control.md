@@ -1,13 +1,6 @@
 ---
-title: "Windows Forms DataGridView 컨트롤의 크기를 조정하는 최선의 방법"
-ms.custom: 
+title: Windows Forms DataGridView 컨트롤의 크기를 조정하는 최선의 방법
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - DataGridView control [Windows Forms], row sharing
 - data grids [Windows Forms], best practices
@@ -16,16 +9,11 @@ helpviewer_keywords:
 - best practices [Windows Forms], dataGridView control
 - DataGridView control [Windows Forms], scaling
 ms.assetid: 8321a8a6-6340-4fd1-b475-fa090b905aaf
-caps.latest.revision: "31"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ecd629bd38e08c8d6909ee4ad771f17b1554fc80
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 91153df539871de571375d7bf6d49d712a0c43b2
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="best-practices-for-scaling-the-windows-forms-datagridview-control"></a>Windows Forms DataGridView 컨트롤의 크기를 조정하는 최선의 방법
 <xref:System.Windows.Forms.DataGridView> 컨트롤은 최대 확장성을 제공 하도록 설계 되었습니다. 많은 양의 데이터를 표시 해야 하는 경우 많은 양의 메모리를 사용 하거나 사용자 인터페이스 (UI)의 응답 속도 저하를 방지 하려면이 항목에 설명 된 지침을 따라야 합니다. 이 항목에서는 다음과 같은 문제를 설명합니다.  
@@ -124,7 +112,7 @@ ms.lasthandoff: 12/22/2017
   
  행의 공유 해제 되지 않도록 하려면 다음 지침을 따르세요.  
   
--   인덱싱하지 마십시오는 <xref:System.Windows.Forms.DataGridView.Rows%2A> 컬렉션 또는을 사용 하 여 반복 하는 `foreach` 루프입니다. 일반적으로 않아도 됩니다 행에 직접 액세스할 수 있습니다. <xref:System.Windows.Forms.DataGridView>행에서 작동 하는 메서드 행 인스턴스가 아닌 행 인덱스 인수 변수를 사용 합니다. 또한 행 관련 이벤트에 대 한 처리기 공유가 하지 않고 행을 조작 하는 데 사용할 수 있는 행의 속성을 가진 이벤트 인수 개체를 표시 합니다.  
+-   인덱싱하지 마십시오는 <xref:System.Windows.Forms.DataGridView.Rows%2A> 컬렉션 또는을 사용 하 여 반복 하는 `foreach` 루프입니다. 일반적으로 않아도 됩니다 행에 직접 액세스할 수 있습니다. <xref:System.Windows.Forms.DataGridView> 행에서 작동 하는 메서드 행 인스턴스가 아닌 행 인덱스 인수 변수를 사용 합니다. 또한 행 관련 이벤트에 대 한 처리기 공유가 하지 않고 행을 조작 하는 데 사용할 수 있는 행의 속성을 가진 이벤트 인수 개체를 표시 합니다.  
   
 -   사용 하 여 행 개체에 액세스 해야 할 경우는 <xref:System.Windows.Forms.DataGridViewRowCollection.SharedRow%2A?displayProperty=nameWithType> 메서드와 행의 실제 인덱스를 전달 합니다. 그러나 Note,이 메서드를 통해 검색 하는 공유 행 개체를 수정 합니다.이 개체를 공유 하는 모든 행 수정 합니다. 하지만 새 레코드에 대 한 행와 공유 되지 않습니다 다른 행 다른 행을 수정 하는 경우 영향 수 있도록 합니다. Note 또한 공유 행으로 표시 하는 행 마다 서로 다른 바로 가기 메뉴를 있을 수 있습니다. 해당 바로 가기 메뉴는 공유 행 인스턴스에서를 검색 하려면 사용 된 <xref:System.Windows.Forms.DataGridViewRow.GetContextMenuStrip%2A> 메서드와 행의 실제 인덱스를 전달 합니다. 공유 행의에 액세스 하면 <xref:System.Windows.Forms.DataGridViewRow.ContextMenuStrip%2A> 속성 대신는-1의 공유 행 인덱스를 사용 하 고 해당 바로 가기 메뉴를 검색 하지 것입니다.  
   

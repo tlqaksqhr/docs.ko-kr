@@ -1,13 +1,6 @@
 ---
-title: "WPF 콘텐츠 모델"
-ms.custom: 
+title: WPF 콘텐츠 모델
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - UIElement class [WPF], displaying content
 - content model [WPF], controls
@@ -18,16 +11,11 @@ helpviewer_keywords:
 - arbitrary content classes [WPF], content model
 - ContentControl class [WPF], displaying content
 ms.assetid: 214da5ef-547a-4cf8-9b07-4aa8a0e52cdd
-caps.latest.revision: "17"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 7d708674682ffd7b0d13c9cbe828e28bbc26e260
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 48e96b04a3459aa18a52624758d5fa2347570fcf
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="wpf-content-model"></a>WPF 콘텐츠 모델
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]는 다양한 형식의 콘텐츠를 표시하는 것을 기본 용도로 하는 많은 컨트롤 형식 및 컨트롤과 유사한 형식을 제공하는 프레젠테이션 플랫폼입니다. 사용할 컨트롤이나 파생시킬 컨트롤을 결정하려면 특정 컨트롤이 가장 잘 표시할 수 있는 개체 유형을 이해해야 합니다.  
@@ -122,7 +110,7 @@ ms.lasthandoff: 12/22/2017
  만드는 방법의 예제를 보려면 <xref:System.Windows.Controls.TabItem> 개체 참조 <xref:System.Windows.Controls.HeaderedContentControl>합니다.  
   
 ### <a name="controls-that-contain-a-collection-of-arbitrary-objects"></a>임의 개체의 컬렉션을 포함하는 컨트롤  
- <xref:System.Windows.Controls.ItemsControl> 클래스에서 상속 <xref:System.Windows.Controls.Control> 하며 문자열, 개체 또는 기타 요소와 같은 여러 항목을 포함할 수 있습니다. 콘텐츠 속성은 <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A> 및 <xref:System.Windows.Controls.ItemsControl.Items%2A>합니다. <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A>일반적으로 채우는 데 사용 되는 <xref:System.Windows.Controls.ItemsControl> 데이터 컬렉션을 사용 합니다. 경우 원하지 않는 컬렉션을 채우는 데 사용 하는 <xref:System.Windows.Controls.ItemsControl>를 사용 하 여 항목을 추가할 수 있습니다는 <xref:System.Windows.Controls.ItemsControl.Items%2A> 속성입니다.  
+ <xref:System.Windows.Controls.ItemsControl> 클래스에서 상속 <xref:System.Windows.Controls.Control> 하며 문자열, 개체 또는 기타 요소와 같은 여러 항목을 포함할 수 있습니다. 콘텐츠 속성은 <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A> 및 <xref:System.Windows.Controls.ItemsControl.Items%2A>합니다. <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A> 일반적으로 채우는 데 사용 되는 <xref:System.Windows.Controls.ItemsControl> 데이터 컬렉션을 사용 합니다. 경우 원하지 않는 컬렉션을 채우는 데 사용 하는 <xref:System.Windows.Controls.ItemsControl>를 사용 하 여 항목을 추가할 수 있습니다는 <xref:System.Windows.Controls.ItemsControl.Items%2A> 속성입니다.  
   
  다음 컨트롤에서 상속 <xref:System.Windows.Controls.ItemsControl> 및 해당 콘텐츠 모델을 사용 합니다.  
   
@@ -261,7 +249,7 @@ ms.lasthandoff: 12/22/2017
   
 <a name="classes_that_format_text"></a>   
 ## <a name="classes-that-format-your-text"></a>텍스트 서식을 지정하는 클래스  
- <xref:System.Windows.Documents.TextElement>및 관련된 클래스를 사용 하면 텍스트 서식을 지정할 수 있도록 합니다. <xref:System.Windows.Documents.TextElement>개체를 포함 하 고 텍스트 서식 지정 <xref:System.Windows.Controls.TextBlock> 및 <xref:System.Windows.Documents.FlowDocument> 개체입니다. 두 가지 기본 유형이 <xref:System.Windows.Documents.TextElement> 개체는 <xref:System.Windows.Documents.Block> 요소 및 <xref:System.Windows.Documents.Inline> 요소입니다. A <xref:System.Windows.Documents.Block> 요소는 단락 또는 목록 등의 텍스트 블록을 나타냅니다. <xref:System.Windows.Documents.Inline> 요소 블록에는 텍스트의 일부를 나타냅니다. 많은 <xref:System.Windows.Documents.Inline> 클래스 적용 되는 텍스트에 대 한 서식을 지정 합니다. 각 <xref:System.Windows.Documents.TextElement> 자체 콘텐츠 모델을 포함 합니다. 자세한 내용은 [TextElement 콘텐츠 모델 개요](../../../../docs/framework/wpf/advanced/textelement-content-model-overview.md)를 참조하세요.  
+ <xref:System.Windows.Documents.TextElement> 및 관련된 클래스를 사용 하면 텍스트 서식을 지정할 수 있도록 합니다. <xref:System.Windows.Documents.TextElement> 개체를 포함 하 고 텍스트 서식 지정 <xref:System.Windows.Controls.TextBlock> 및 <xref:System.Windows.Documents.FlowDocument> 개체입니다. 두 가지 기본 유형이 <xref:System.Windows.Documents.TextElement> 개체는 <xref:System.Windows.Documents.Block> 요소 및 <xref:System.Windows.Documents.Inline> 요소입니다. A <xref:System.Windows.Documents.Block> 요소는 단락 또는 목록 등의 텍스트 블록을 나타냅니다. <xref:System.Windows.Documents.Inline> 요소 블록에는 텍스트의 일부를 나타냅니다. 많은 <xref:System.Windows.Documents.Inline> 클래스 적용 되는 텍스트에 대 한 서식을 지정 합니다. 각 <xref:System.Windows.Documents.TextElement> 자체 콘텐츠 모델을 포함 합니다. 자세한 내용은 [TextElement 콘텐츠 모델 개요](../../../../docs/framework/wpf/advanced/textelement-content-model-overview.md)를 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
  [고급](../../../../docs/framework/wpf/advanced/index.md)

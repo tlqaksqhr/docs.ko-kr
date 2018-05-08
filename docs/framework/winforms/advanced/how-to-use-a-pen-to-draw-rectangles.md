@@ -1,13 +1,6 @@
 ---
-title: "방법: 펜을 사용하여 사각형 그리기"
-ms.custom: 
+title: '방법: 펜을 사용하여 사각형 그리기'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -15,21 +8,16 @@ helpviewer_keywords:
 - rectangles [Windows Forms], drawing
 - pens [Windows Forms], drawing rectangles
 ms.assetid: 54a7fa14-3ad8-4d64-b424-2a12005b250c
-caps.latest.revision: "13"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 7257fa21432ec5d849a257f4a5e412515f474363
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ad5b436f7162c282198c7a9d3cce4d3ce3fd3c6f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-use-a-pen-to-draw-rectangles"></a>방법: 펜을 사용하여 사각형 그리기
 사각형 그리기, 하려면는 <xref:System.Drawing.Graphics> 개체 및 <xref:System.Drawing.Pen> 개체입니다. <xref:System.Drawing.Graphics> 개체를 제공는 <xref:System.Drawing.Graphics.DrawRectangle%2A> 메서드, 및 <xref:System.Drawing.Pen> 개체 선의 색 및 너비와 같은 기능을 저장 합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 예제에서는 왼쪽 위 모퉁이가으로 사각형을 그립니다 (10, 10). 사각형의 너비를 100 고 50 높이입니다. 에 전달 되는 두 번째 인수는 <xref:System.Drawing.Pen.%23ctor%2A> 생성자 펜 너비는 5 픽셀 임을 나타냅니다.  
   
  사각형을 그릴 때 펜 사각형의 경계에서 가운데 맞춤 됩니다. 사각형의 면은 그려지는 5 픽셀의 펜 너비는 5 이므로 해당 1 픽셀 그려집니다 너비로 자체 경계에 2 픽셀은 내부적으로 그려지며 2 픽셀 바깥쪽에 그려집니다. 펜 맞춤에 대 한 자세한 내용은 참조 하십시오. [하는 방법: 펜 굵기 설정 및 맞춤](../../../../docs/framework/winforms/advanced/how-to-set-pen-width-and-alignment.md)합니다.  

@@ -1,29 +1,17 @@
 ---
 title: '방법: 서비스 시작'
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - Windows Service applications, starting
 - services, starting
 ms.assetid: 9ea77955-2d96-4c3d-913c-14db7604cdad
-caps.latest.revision: 16
 author: ghogen
-ms.author: ghogen
 manager: douge
-ms.workload:
-- dotnet
-ms.openlocfilehash: 47e27f579c0ed7d1be0b061bc6e79bba0c060abb
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.openlocfilehash: 3c8382d2e425d11dc8aa8b22e361b3cc5637744f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-start-services"></a>방법: 서비스 시작
 서비스를 설치한 후에 시작 되어야 합니다. 호출을 시작는 <xref:System.ServiceProcess.ServiceBase.OnStart%2A> 서비스 클래스에 메서드. 일반적으로 <xref:System.ServiceProcess.ServiceBase.OnStart%2A> 메서드는 서비스에서 수행할 유용한 작업을 정의 합니다. 서비스 시작 후 수동으로 일시 중지 또는 중지 될 때까지 활성 남아 있습니다.  

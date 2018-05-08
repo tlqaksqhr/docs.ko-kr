@@ -1,23 +1,16 @@
 ---
-title: "인수 &#39; &lt;argumentname&gt;&#39; 보다 크거나 0 이어야 합니다"
+title: 인수 &#39; &lt;argumentname&gt; &#39; 보다 크거나 0 이어야 합니다
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vbrFinancial_ArgGEZero1
 ms.assetid: 7b901c2a-3447-4afc-91f8-8fa5f6f961d7
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 6e750f7c2542499cbab9630edb9acc486aa0ef7b
-ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
+ms.openlocfilehash: 786c18bc1e23323f5bd5bc6ad88ea163396296bb
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="argument-39ltargumentnamegt39-must-be-greater-than-or-equal-to-zero"></a>인수 &#39; &lt;argumentname&gt;&#39; 보다 크거나 0 이어야 합니다
+# <a name="argument-39ltargumentnamegt39-must-be-greater-than-or-equal-to-zero"></a>인수 &#39; &lt;argumentname&gt; &#39; 보다 크거나 0 이어야 합니다
 인수가 0보다 작기 때문에 사용할 수 없습니다.  
   
 ## <a name="to-correct-this-error"></a>이 오류를 해결하려면  

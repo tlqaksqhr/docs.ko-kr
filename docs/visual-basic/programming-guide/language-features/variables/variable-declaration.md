@@ -1,14 +1,6 @@
 ---
 title: Visual Basic의 변수 선언
-ms.custom: ''
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - variables [Visual Basic], declaring
 - member variables [Visual Basic], declarations
@@ -25,14 +17,11 @@ helpviewer_keywords:
 - local variables [Visual Basic], declarations
 - scope [Visual Basic], variables
 ms.assetid: d8f10226-92b1-480f-9f53-df377b2d7e15
-caps.latest.revision: 31
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 8edd0b65b08efd437cc35e8f58ed7ed423736920
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 6890ddfd8b463cd731ab3d8f39565b50a31a1192
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="variable-declaration-in-visual-basic"></a>Visual Basic의 변수 선언
 이름 및 특성을 지정 하려면 변수를 선언 합니다. 변수에 대 한 선언문이 [Dim 문](../../../../visual-basic/language-reference/statements/dim-statement.md)합니다. 해당 위치 및 내용을 변수의 특성을 결정 합니다.  

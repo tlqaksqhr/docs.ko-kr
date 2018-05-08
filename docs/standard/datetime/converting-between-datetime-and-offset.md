@@ -1,13 +1,7 @@
 ---
-title: "DateTime과 DateTimeOffset 간 변환"
-ms.custom: 
+title: DateTime과 DateTimeOffset 간 변환
 ms.date: 04/10/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -22,25 +16,20 @@ helpviewer_keywords:
 - Date data type, converting
 - local time conversions
 ms.assetid: b605ff97-0c45-4c24-833f-4c6a3e8be64c
-caps.latest.revision: "8"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 2055df26618664ee130be417599f4ec46e439444
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: dec0e5138ecf08783f11d21cd28d7291d27ea68d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="converting-between-datetime-and-datetimeoffset"></a>DateTime과 DateTimeOffset 간 변환
 
 하지만 <xref:System.DateTimeOffset> 구조는 더 높은 수준의 보다 시간대 인식 제공는 <xref:System.DateTime> 구조, <xref:System.DateTime> 메서드 호출에 매개 변수가 일반적으로 사용 됩니다. 따라서 변환 기능을 <xref:System.DateTimeOffset> 값을 <xref:System.DateTime> 값 및 반대의 작업은 특히 중요 합니다. 이 항목에는 최대한 많은 표준 시간대 정보를 유지 하는 방식으로 이러한 변환을 수행 하는 방법을 보여 줍니다.
 
 > [!NOTE]
-> 둘 다는 <xref:System.DateTime> 및 <xref:System.DateTimeOffset> 형식 시간대의 시간을 나타낼 때 몇 가지 제한 사항이 있습니다. 와 해당 <xref:System.DateTime.Kind%2A> 속성 <xref:System.DateTime> utc (협정 세계시) 및 시스템의 현지 표준 시간대를 반영할 수 있습니다. <xref:System.DateTimeOffset>한 번 UTC에서 오프셋 되지만 실제 표준 시간대 오프셋이 있는 속한 반영 되지 않습니다 반영 합니다. 시간 값 및 표준 시간대에 대 한 지원에 대 한 세부 정보를 참조 하십시오. [Choosing Between DateTime, DateTimeOffset, TimeSpan 및 TimeZoneInfo](../../../docs/standard/datetime/choosing-between-datetime.md)합니다.
+> 둘 다는 <xref:System.DateTime> 및 <xref:System.DateTimeOffset> 형식 시간대의 시간을 나타낼 때 몇 가지 제한 사항이 있습니다. 와 해당 <xref:System.DateTime.Kind%2A> 속성 <xref:System.DateTime> utc (협정 세계시) 및 시스템의 현지 표준 시간대를 반영할 수 있습니다. <xref:System.DateTimeOffset> 한 번 UTC에서 오프셋 되지만 실제 표준 시간대 오프셋이 있는 속한 반영 되지 않습니다 반영 합니다. 시간 값 및 표준 시간대에 대 한 지원에 대 한 세부 정보를 참조 하십시오. [Choosing Between DateTime, DateTimeOffset, TimeSpan 및 TimeZoneInfo](../../../docs/standard/datetime/choosing-between-datetime.md)합니다.
 
 ## <a name="conversions-from-datetime-to-datetimeoffset"></a>DateTime에서 DateTimeOffset으로 변환
 
@@ -139,6 +128,6 @@ UTC 및 현지 <xref:System.DateTime> 값의 <xref:System.DateTimeOffset.Offset%
 
 * 현지 표준 시간대 오프셋과 동일한 오프셋의 날짜와 시간이 현지 표준 시간대를 나타낸다고 가정합니다. 그러나 날짜 및 시간 값이 원래 표준 시간대와 관련이 없기 때문에 이와 다른 경우가 있을 수 있습니다. 날짜와 시간은 동일한 오프셋을 사용하는 다른 표준 시간대에서 가져올 수 있습니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참고자료
 
 [날짜, 시간 및 표준 시간대](../../../docs/standard/datetime/index.md)

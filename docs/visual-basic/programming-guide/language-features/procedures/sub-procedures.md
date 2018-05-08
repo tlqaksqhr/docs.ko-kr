@@ -1,13 +1,6 @@
 ---
 title: Sub 프로시저(Visual Basic)
-ms.custom: ''
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - Sub procedures [Visual Basic], about Sub procedures
 - statement blocks
@@ -18,14 +11,11 @@ helpviewer_keywords:
 - procedures [Visual Basic], Sub
 - syntax [Visual Basic], Sub procedures
 ms.assetid: 6a0a4958-ed0a-4d3d-8d31-0772c82bda58
-caps.latest.revision: 21
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 7258d57d2677042a2020097893a4f7a0adb35508
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 3286df1a5babfcf7d6b759ff5c9a920bb44f51ab
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="sub-procedures-visual-basic"></a>Sub 프로시저(Visual Basic)
 A `Sub` 절차는 일련의 Visual Basic 문으로 둘러싸인는 `Sub` 및 `End Sub` 문. `Sub` 프로시저는 작업을 수행한 다음 호출 코드에 제어를 반환 하지만 호출 코드에는 값을 반환 하지는 않습니다.  
@@ -39,7 +29,7 @@ A `Sub` 절차는 일련의 Visual Basic 문으로 둘러싸인는 `Sub` 및 `En
 ## <a name="declaration-syntax"></a>선언 구문  
  선언 구문이 `Sub` 절차는 다음과 같습니다.  
   
- `[` *한정자* `] Sub` *subname* `[(` *parameterlist*  `)]`  
+ `[` *한정자* `] Sub` *subname* `[(` *parameterlist* `)]`  
   
  `' Statements of the Sub procedure.`  
   
@@ -52,11 +42,11 @@ A `Sub` 절차는 일련의 Visual Basic 문으로 둘러싸인는 `Sub` 및 `En
   
  매개 변수 목록에서 각 매개 변수에 대 한 구문은 다음과 같습니다.  
   
- `[Optional] [ByVal | ByRef] [ParamArray]`  *parametername*`As`*데이터 형식*   
+ `[Optional] [ByVal | ByRef] [ParamArray]`  *parametername*`As`*데이터 형식*  
   
  매개 변수가 선택적 이면 해당 선언의 일부로 기본값도 제공 해야 합니다. 기본값을 지정 하기 위한 구문은 다음과 같습니다.  
   
- `Optional [ByVal | ByRef]`  *parametername*`As`*datatype*`=`*defaultvalue*   
+ `Optional [ByVal | ByRef]`  *parametername*`As`*datatype*`=`*defaultvalue*  
   
 ### <a name="parameters-as-local-variables"></a>지역 변수로 매개 변수  
  제어 절차를 전달 하는 경우 각 매개 변수에 지역 변수로 처리 됩니다. 즉, 프로시저의 수명이 같습니다 해당 범위는 전체 절차입니다.  

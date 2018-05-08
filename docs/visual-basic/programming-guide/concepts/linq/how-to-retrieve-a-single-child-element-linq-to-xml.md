@@ -1,22 +1,12 @@
 ---
-title: "방법: 단일 자식 요소 (LINQ to XML) 검색 (Visual Basic)"
-ms.custom: 
+title: '방법: 단일 자식 요소 (LINQ to XML) 검색 (Visual Basic)'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 0033e258-d9c4-4569-86f6-79b7c06d1204
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 580315fda6ef6f1919f7f2aabc0cf3604a5c4337
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 9f2b767dcfa68b732eb3f9d0552ec7404658d591
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-retrieve-a-single-child-element-linq-to-xml-visual-basic"></a>방법: 단일 자식 요소 (LINQ to XML) 검색 (Visual Basic)
 이 항목에서는 자식 요소의 이름이 제공되는 경우 단일 자식 요소를 검색하는 방법에 대해 설명합니다. 자식 요소의 이름과 해당 이름을 가진 요소가 하나만 있음을 알고 있는 경우 컬렉션 대신 한 요소만 검색하는 것이 편리할 수 있습니다.  

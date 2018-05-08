@@ -1,30 +1,17 @@
 ---
 title: 'How to: Use the XML Schema Definition Tool to Generate Classes and XML Schema Documents'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - generating XML classes using XML Schema Definition tool
 - generating XML Schema Document using XML Schema Definition tool
 - XML Schema Definition tool, using to generate classes that conform to specific schema
 - XML Schema Definition tool, using to generate XML Schema Document
 ms.assetid: 51f0edc3-993d-4051-b7f2-77753694d3d1
-caps.latest.revision: "5"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 0e390b808f9eaa5d6b305284e1abe28f45f4d104
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: c169a3068b240e8d4d1cdb1d307938ee113066fb
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-use-the-xml-schema-definition-tool-to-generate-classes-and-xml-schema-documents"></a>How to: Use the XML Schema Definition Tool to Generate Classes and XML Schema Documents
 XML 스키마 정의 도구(Xsd.exe)를 사용하면 클래스를 설명하는 XML 스키마를 생성하거나 XML 스키마로 정의된 클래스를 생성할 수 있습니다. 다음 절차에서는 이러한 작업을 수행하는 방법을 보여 줍니다.  
@@ -39,7 +26,7 @@ XML 스키마 정의 도구(Xsd.exe)를 사용하면 클래스를 설명하는 X
     xsd mySchema.xsd  
     ```  
   
-     도구는 2001년 3월 16일자 World Wide Web 컨소시엄 XML 사양을 참조하는 스키마만 처리할 수 있습니다. 즉, XML 스키마 네임스페이스는 다음 예제와 같이 "http://www.w3.org/2001/XMLSchema"여야 합니다.  
+     도구는 2001년 3월 16일자 World Wide Web 컨소시엄 XML 사양을 참조하는 스키마만 처리할 수 있습니다. 즉, XML 스키마 네임 스페이스 여야 합니다 "http://www.w3.org/2001/XMLSchema" 다음 예제와 같이 합니다.  
   
     ```xml  
     <?xml version="1.0" encoding="utf-8"?>  

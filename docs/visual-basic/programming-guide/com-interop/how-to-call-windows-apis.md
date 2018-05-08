@@ -1,31 +1,22 @@
 ---
-title: "방법: Windows API 호출(Visual Basic)"
-ms.custom: 
+title: '방법: Windows API 호출(Visual Basic)'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - API calls [Visual Basic]
 - Windows API, calling
 - API calls [Visual Basic], platform invoke
 - calls [Visual Basic], stored procedures
 ms.assetid: 27d75f0a-54ab-4ee1-b91d-43513a19b12d
-caps.latest.revision: "14"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 772db789fba4552a4645d2c6a242ba01944652ee
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: de568c3273d4d040c6566136e5d59e2155b86f8b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-call-windows-apis-visual-basic"></a>방법: Windows API 호출(Visual Basic)
 정의 하 고 호출 하는이 예제는 `MessageBox` user32.dll의 함수에는 문자열을 전달 합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  [!code-vb[VbVbalrInterop#1](../../../visual-basic/programming-guide/com-interop/codesnippet/VisualBasic/how-to-call-windows-apis_1.vb)]  
   
 ## <a name="compiling-the-code"></a>코드 컴파일  
@@ -43,7 +34,7 @@ ms.lasthandoff: 01/19/2018
 -   포함하는 형식은 `CreateType`을 사용하여 이전에 만든 것입니다. (<xref:System.InvalidOperationException>)  
   
 ## <a name="see-also"></a>참고 항목  
- [좀 더 자세히 살펴보고 플랫폼 호출](http://msdn.microsoft.com/library/ba9dd55b-2eaa-45cd-8afd-75cb8d64d243)  
+ [플랫폼 호출 자세히 보기](http://msdn.microsoft.com/library/ba9dd55b-2eaa-45cd-8afd-75cb8d64d243)  
  [플랫폼 호출 예제](../../../framework/interop/platform-invoke-examples.md)  
  [관리되지 않는 DLL 함수 사용](../../../framework/interop/consuming-unmanaged-dll-functions.md)  
  [내보내기를 리플렉션 사용 하 여 메서드를 정의 합니다.](http://msdn.microsoft.com/library/84fd3bf6-628f-41aa-83d9-b990cf926e81)  

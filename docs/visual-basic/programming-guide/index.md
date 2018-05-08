@@ -1,23 +1,16 @@
 ---
 title: Visual Basic 프로그래밍 가이드
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - Visual Basic code, language guide
 - Visual Basic, programming in
 - Visual Basic, language reference
 ms.assetid: 640e5796-2796-433c-af37-4d2a2334895b
-caps.latest.revision: 19
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 5f71267bb1bcbe5b3e3e47cea193488ac4e1596d
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 32654012343fc919dbadbfa4515c1e8e2b686ed1
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="visual-basic-programming-guide"></a>Visual Basic 프로그래밍 가이드
 모든 최신 프로그래밍 언어와 마찬가지로 Visual Basic에서는 여러 일반 프로그래밍 구문과 언어 요소를 지원 합니다. 이 가이드는 Visual Basic을 사용한 프로그래밍의 모든 주요 요소를 설명합니다.  

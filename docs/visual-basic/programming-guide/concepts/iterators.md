@@ -1,21 +1,12 @@
 ---
-title: "반복기 (Visual Basic)"
-ms.custom: 
+title: 반복기 (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 ms.assetid: f26b5c1e-fe9d-4004-b287-da7919d717ae
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: f02249f7f30d2cd6b43aa75530ace099286c7d7f
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: ecc48ad5bbddc82457a8d6cc8e60ee419fb593fa
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="iterators-visual-basic"></a>반복기 (Visual Basic)
 *반복기*는 목록 및 배열과 같은 컬렉션을 단계별로 실행하는 데 사용할 수 있습니다.  
@@ -221,7 +212,7 @@ Public Class Zoo
 End Class  
 ```  
   
-##  <a name="BKMK_TryBlocks"></a>Try 블록  
+##  <a name="BKMK_TryBlocks"></a> Try 블록  
  Visual Basic에서는 `Yield` 의 문에서 `Try` 블록는 [시도 중... Catch 하는 중... Finally 문](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)합니다. A `Try` 블록은 `Yield` 문의 `Catch` 을 차단 하 고 있을 수 있습니다는 `Finally` 블록입니다.  
   
  다음 예제에서는 포함 `Try`, `Catch`, 및 `Finally` 반복기 함수를 차단 합니다. `Finally` 반복기 함수에는 블록이 실행 하기 전에 `For Each` 반복 완료 합니다.  
@@ -261,7 +252,7 @@ End Function
   
  경우는 `For Each` 본문 (반복기 메서드에) 하는 대신 예외를 throw 한 `Catch` 블록에 반복기 함수가 실행 되지 않으며 하지만 `Finally` 반복기 함수에는 블록이 실행 됩니다. A `Catch` 반복기 함수 내의 블록 반복기 함수 내에서 발생 하는 예외만을 catch 합니다.  
   
-##  <a name="BKMK_AnonymousMethods"></a>무명 메서드  
+##  <a name="BKMK_AnonymousMethods"></a> 무명 메서드  
  Visual Basic의 경우 익명 함수 반복기 함수가 될 수 있습니다. 다음은 이에 대한 예입니다.  
   
 ```vb  

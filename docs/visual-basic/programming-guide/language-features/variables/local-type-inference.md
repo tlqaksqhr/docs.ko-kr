@@ -1,13 +1,6 @@
 ---
-title: "지역 형식 유추(Visual Basic)"
-ms.custom: 
+title: 지역 형식 유추(Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 f1_keywords:
 - local type inference
 - vb.TypeInfer
@@ -19,14 +12,11 @@ helpviewer_keywords:
 - inference [Visual Basic]
 - type inference [Visual Basic]
 ms.assetid: b8307f18-2e56-4ab3-a45a-826873f400f6
-caps.latest.revision: "43"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: d753d1fbdc60f70dcf0513d809f28a112243c111
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: b33b8b2d17c240e380377528d4f5d2f511381a7d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="local-type-inference-visual-basic"></a>지역 형식 유추(Visual Basic)
 Visual Basic 컴파일러를 사용 하 여 *형식 유추* 없이 선언 된 지역 변수의 데이터 형식을 결정 하는 `As` 절. 컴파일러는 초기화 식의 형식에서 변수의 형식을 유추합니다. 그러면 다음 예제와 같이 형식을 명시적으로 선언 하지 않고 변수를 선언할 수 있습니다. 선언 결과로 둘 다 `num1` 및 `num2` 는 정수로 강력한 형식입니다.  
@@ -68,7 +58,7 @@ Visual Basic 컴파일러를 사용 하 여 *형식 유추* 없이 선언 된 �
  [!code-vb[VbVbalrTypeInference#5](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/local-type-inference_6.vb)]  
   
 ## <a name="option-infer"></a>Option Infer  
- `Option Infer`지역 형식 유추 특정 파일에서 허용 되는지 여부를 지정할 수 있습니다. 사용 하도록 설정 하려면 또는 옵션을 차단 하는 파일의 시작 부분에 다음 문 중 하나를 입력 합니다.  
+ `Option Infer` 지역 형식 유추 특정 파일에서 허용 되는지 여부를 지정할 수 있습니다. 사용 하도록 설정 하려면 또는 옵션을 차단 하는 파일의 시작 부분에 다음 문 중 하나를 입력 합니다.  
   
  `Option Infer On`  
   

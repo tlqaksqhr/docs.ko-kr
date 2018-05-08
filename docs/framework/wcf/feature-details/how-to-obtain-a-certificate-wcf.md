@@ -1,31 +1,17 @@
 ---
-title: "방법: 인증서 가져오기(WCF)"
-ms.custom: 
+title: '방법: 인증서 가져오기(WCF)'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - certificates [WCF], obtaining
 ms.assetid: d53762fd-15ea-42dc-b0ea-6a6597aa23f7
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 5dcefa658aec37b9af3c4f9285ec76a0d549b868
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 368401d91aa2a83110631d583660d6ccebf8d4fc
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-obtain-a-certificate-wcf"></a>방법: 인증서 가져오기(WCF)
-X.509 인증서를 사용하는 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 기능을 사용하려면 먼저 인증서를 받습니다.  
+Windows Communication Foundation (WCF) 중 하나를 사용 하는의 기능을 사용 하려면 X.509 인증서 먼저 인증서를 받습니다.  
   
 ### <a name="to-obtain-an-x509-certificate"></a>X.509 인증서를 받으려면  
   

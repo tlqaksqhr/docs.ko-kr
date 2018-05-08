@@ -1,22 +1,12 @@
 ---
-title: "방법: 식 트리 (Visual Basic)를 실행 합니다."
-ms.custom: 
+title: '방법: 식 트리 (Visual Basic)를 실행 합니다.'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 9dfb5ab3-f48f-417e-975f-f8f6f1cdc18d
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 45a13f13659472b7620b6df070815ace1d6fb0de
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 5fbd9ea2842a87a941a1b572acadc93b0a7d2e11
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-execute-expression-trees-visual-basic"></a>방법: 식 트리 (Visual Basic)를 실행 합니다.
 이 항목에서는 식 트리를 실행하는 방법을 보여 줍니다. 식 트리를 실행할 때 값이 반환될 수 있거나, 메서드 호출 등의 작업만 수행할 수도 있습니다.  

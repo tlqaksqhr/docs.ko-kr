@@ -1,13 +1,6 @@
 ---
-title: "방법: 디자이너를 사용하여 Windows Forms TabControl에서 탭 추가 및 제거"
-ms.custom: 
+title: '방법: 디자이너를 사용하여 Windows Forms TabControl에서 탭 추가 및 제거'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - tabs [Windows Forms], removing from pages
 - TabPage control
@@ -15,16 +8,11 @@ helpviewer_keywords:
 - tabs [Windows Forms], adding to pages
 - tab pages
 ms.assetid: 480633db-413a-45d2-9c8f-0427cc13adbe
-caps.latest.revision: "7"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 8e603e420be2c5be6174fab3876008fdf73c8459
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 89440b083aa6b2dc3f95e0878075a20aeac65b32
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-add-and-remove-tabs-with-the-windows-forms-tabcontrol-using-the-designer"></a>방법: 디자이너를 사용하여 Windows Forms TabControl에서 탭 추가 및 제거
 배치 하는 경우는 <xref:System.Windows.Forms.TabControl> 컨트롤이 폼에 기본적으로 두 개의 탭 포함 합니다. 추가 하거나 디자이너를 사용 하 여 탭을 제거할 수 있습니다.  
@@ -38,7 +26,7 @@ ms.lasthandoff: 01/19/2018
   
 -   컨트롤의 스마트 태그에서 클릭 **탭 추가** 또는 **탭 제거**  
   
-     또는  
+     -또는-  
   
      에 **속성** 창 클릭는 **줄임표** 단추 (![VisualStudioEllipsesButton 스크린 샷](../../../../docs/framework/winforms/media/vbellipsesbutton.png "vbEllipsesButton")) 옆에 <xref:System.Windows.Forms.TabControl.TabPages%2A> 속성을 열고는 **TabPage 컬렉션 편집기**합니다. 클릭는 **추가** 또는 **제거** 단추입니다.  
   

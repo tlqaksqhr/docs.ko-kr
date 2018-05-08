@@ -1,13 +1,6 @@
 ---
-title: "Windows Forms 및 WPF 상호 운용성 입력 아키텍처"
-ms.custom: 
+title: Windows Forms 및 WPF 상호 운용성 입력 아키텍처
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - input architecture [WPF interoperability]
 - messages [WPF]
@@ -20,16 +13,11 @@ helpviewer_keywords:
 - WindowsFormsHost keyboard and messages [WPF]
 - modeless dialog boxes [WPF]
 ms.assetid: 0eb6f137-f088-4c5e-9e37-f96afd28f235
-caps.latest.revision: "20"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a246a3297d212eabc31bf2ac9d000aeb56329d09
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 250f34e3e5420a613bc7b1035c62af90665e71ee
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="windows-forms-and-wpf-interoperability-input-architecture"></a>Windows Forms 및 WPF 상호 운용성 입력 아키텍처
 간의 상호 운용성은 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 및 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 두 기술 모두에서 해당 하는 키보드 입력된 처리 해야 합니다. 이 항목에서는 이러한 기술을 키보드와 매끄럽게 상호 운용 혼합 응용 프로그램에서 사용 하도록 설정 하기 위해 메시지 처리를 구현 하는 방법을 설명 합니다.  
@@ -105,7 +93,7 @@ ms.lasthandoff: 12/22/2017
   
 -   명령 키 및 대화 상자 키를 제공 합니다.  
   
--   [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]액셀러레이터 키를 처리 합니다.  
+-   [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 액셀러레이터 키를 처리 합니다.  
   
  다음 섹션에서는 이러한 부분에서 자세히 설명합니다.  
   
@@ -131,7 +119,7 @@ ms.lasthandoff: 12/22/2017
   
 -   <xref:System.Windows.Forms.Control.IsInputChar%2A?displayProperty=nameWithType> 메서드는 모든 WM_CHAR 메시지는 호스트 된 요소에 전달 되도록 보장 합니다.  
   
--   메시지 ALT 키를 누를 경우 wm_syschar입니다. [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]통해이 메시지를 전처리 하지 않고 않습니다는 <xref:System.Windows.Forms.Control.IsInputChar%2A> 메서드. 따라서는 <xref:System.Windows.Forms.Control.ProcessMnemonic%2A> 메서드는 쿼리에 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Input.AccessKeyManager> 등록 된 액셀러레이터 키입니다. 등록된 된 액셀러레이터 키가 있으면 <xref:System.Windows.Input.AccessKeyManager> 처리 합니다.  
+-   메시지 ALT 키를 누를 경우 wm_syschar입니다. [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 통해이 메시지를 전처리 하지 않고 않습니다는 <xref:System.Windows.Forms.Control.IsInputChar%2A> 메서드. 따라서는 <xref:System.Windows.Forms.Control.ProcessMnemonic%2A> 메서드는 쿼리에 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Input.AccessKeyManager> 등록 된 액셀러레이터 키입니다. 등록된 된 액셀러레이터 키가 있으면 <xref:System.Windows.Input.AccessKeyManager> 처리 합니다.  
   
 -   ALT 키를 누르지 하는 경우는 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Input.InputManager> 처리 되지 않은 입력을 처리 하는 클래스입니다. 입력이 액셀러레이터의 <xref:System.Windows.Input.AccessKeyManager> 처리 합니다. <xref:System.Windows.Input.InputManager.PostProcessInput> 처리 되지 않은 WM_CHAR 메시지에 대 한 이벤트를 처리 합니다.  
   

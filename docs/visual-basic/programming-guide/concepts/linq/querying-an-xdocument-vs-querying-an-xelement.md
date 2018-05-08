@@ -1,22 +1,12 @@
 ---
-title: "XDocument 쿼리와 (Visual Basic) XElement 쿼리 비교"
-ms.custom: 
+title: XDocument 쿼리와 (Visual Basic) XElement 쿼리 비교
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 2d111f84-0ded-4cde-8d93-5440557a726d
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 3ee3c0c1cda12a74f50b4937263d80f526b5d7ba
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 6bc7af08544f00a87246b748d0419f11b57ed2da
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="querying-an-xdocument-vs-querying-an-xelement-visual-basic"></a>XDocument 쿼리와 (Visual Basic) XElement 쿼리 비교
 <xref:System.Xml.Linq.XDocument.Load%2A?displayProperty=nameWithType>를 통해 문서를 로드하는 경우에는 <xref:System.Xml.Linq.XElement.Load%2A?displayProperty=nameWithType>를 통해 로드하는 경우와 약간 다르게 쿼리를 작성해야 합니다.  

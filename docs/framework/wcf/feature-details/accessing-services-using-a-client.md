@@ -1,32 +1,18 @@
 ---
 title: 클라이언트를 사용하여 서비스 액세스
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: c8329832-bf66-4064-9034-bf39f153fc2d
-caps.latest.revision: 15
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 209d10f9545be65870f584fa79444f7fab90211a
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 1369403b493683f58640047fe042708afc5d5b46
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="accessing-services-using-a-client"></a>클라이언트를 사용하여 서비스 액세스
-클라이언트 응용 프로그램은 서비스와 통신할 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 클라이언트 또는 채널 개체를 만들고 구성 및 사용해야 합니다. [WCF 클라이언트 개요](../../../../docs/framework/wcf/wcf-client-overview.md) 항목에서는 개체 및 기본 클라이언트 및 채널 개체 만들기 및 사용에 관련 된 단계에 대 한 개요를 제공 합니다.  
+클라이언트 응용 프로그램 만들기, 구성 및 WCF 클라이언트 또는 채널 개체를 사용 하 여 서비스와 통신 해야 합니다. [WCF 클라이언트 개요](../../../../docs/framework/wcf/wcf-client-overview.md) 항목에서는 개체 및 기본 클라이언트 및 채널 개체 만들기 및 사용에 관련 된 단계에 대 한 개요를 제공 합니다.  
   
  이 항목에서는 시나리오에 따라 유용할 수 있는 클라이언트 및 채널 개체와 클라이언트 응용 프로그램과 관련된 몇 가지 문제에 대한 자세한 정보를 제공합니다.  
   
@@ -42,7 +28,7 @@ ms.lasthandoff: 04/30/2018
 -   대화형으로 채널 초기화  
   
 ### <a name="channel-and-session-lifetimes"></a>채널 및 세션 수명  
- [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 응용 프로그램에는 채널의 두 가지 범주인 데이터그램과 세션이 포함됩니다.  
+ Windows Communication Foundation (WCF) 응용 프로그램에는 두 가지 범주의 채널 그램과 세션이 포함 됩니다.  
   
  A *데이터 그램* 채널은 상호 관련 되지 않은 모든 메시지는 채널입니다. 데이터그램 채널을 사용할 경우 입력 또는 출력 작업이 실패해도 일반적으로 다음 작업이 영향을 받지 않으며 동일한 채널을 다시 사용할 수 있습니다. 이 때문에 데이터그램 채널은 실패하지 않습니다.  
   
@@ -79,11 +65,11 @@ ms.lasthandoff: 04/30/2018
  응용 프로그램 수준에서 오류 정보로 작업 하는 방법에 대 한 자세한 정보를 참조 하십시오. [지정 및 계약 및 서비스에서 처리 오류](../../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)합니다. [예상 되는 오류](../../../../docs/framework/wcf/samples/expected-exceptions.md) 예상 되는 예외를 설명 하 고 처리 하는 방법을 보여 줍니다. 채널 개발 하는 경우 오류를 처리 하는 방법에 대 한 자세한 내용은 참조 [예외 처리 및 오류](../../../../docs/framework/wcf/extending/handling-exceptions-and-faults.md)합니다.  
   
 ### <a name="client-blocking-and-performance"></a>클라이언트 차단 및 성능  
- 응용 프로그램에서 동기적으로 request-reply 작업을 호출하는 경우 클라이언트는 반환 값이 수신되거나 <xref:System.TimeoutException?displayProperty=nameWithType> 같은 예외가 throw될 때까지 차단됩니다. 이 동작은 로컬 동작과 유사합니다. 응용 프로그램이 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 클라이언트 개체나 채널에서 동기적으로 작업을 호출하는 경우 클라이언트는 채널 계층이 데이터를 네트워크에 쓸 수 있을 때까지 또는 예외가 throw될 때까지 반환되지 않습니다. <xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A?displayProperty=nameWithType>를 `true`로 설정하여 작업을 표시함으로써 지정된 단방향 메시지 교환 패턴은 일부 클라이언트의 응답을 향상시키지만 바인딩 및 이미 전송된 메시지에 따라 단방향 작업이 차단될 수도 있습니다. 단방향 작업은 메시지 교환에만 사용됩니다. 자세한 내용은 참조 [단방향 서비스](../../../../docs/framework/wcf/feature-details/one-way-services.md)합니다.  
+ 응용 프로그램에서 동기적으로 request-reply 작업을 호출하는 경우 클라이언트는 반환 값이 수신되거나 <xref:System.TimeoutException?displayProperty=nameWithType> 같은 예외가 throw될 때까지 차단됩니다. 이 동작은 로컬 동작과 유사합니다. 응용 프로그램을 WCF 클라이언트 개체 또는 채널에 대 한 작업을 동기적으로 호출, 네트워크 또는 예외가 throw 될 때까지 채널 계층에서 데이터를 쓸 수 클라이언트 반환 하지 않습니다. <xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A?displayProperty=nameWithType>를 `true`로 설정하여 작업을 표시함으로써 지정된 단방향 메시지 교환 패턴은 일부 클라이언트의 응답을 향상시키지만 바인딩 및 이미 전송된 메시지에 따라 단방향 작업이 차단될 수도 있습니다. 단방향 작업은 메시지 교환에만 사용됩니다. 자세한 내용은 참조 [단방향 서비스](../../../../docs/framework/wcf/feature-details/one-way-services.md)합니다.  
   
  큰 데이터 청크는 메시지 교환 패턴에 관계없이 클라이언트 처리 속도를 저하시킬 수 있습니다. 이러한 문제를 처리 하는 방법을 알아보려면 참조 [큰 데이터 및 스트리밍](../../../../docs/framework/wcf/feature-details/large-data-and-streaming.md)합니다.  
   
- 작업이 완료되는 동안 응용 프로그램에서 추가 작업을 수행해야 하는 경우 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 클라이언트가 구현하는 서비스 계약 인터페이스에 비동기 메서드 쌍을 만들어야 합니다. 이 작업을 수행 하는 가장 쉬운 방법은 사용 하는 `/async` 스위치에 [ServiceModel Metadata 유틸리티 도구 (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)합니다. 예를 들어 참조 [하는 방법: 비동기적 서비스 작업 호출](../../../../docs/framework/wcf/feature-details/how-to-call-wcf-service-operations-asynchronously.md)합니다.  
+ 응용 프로그램는 작업이 완료 될 때 더 많은 작업을 수행 해야 하는 경우 WCF 클라이언트를 구현 하는 서비스 계약 인터페이스에는 비동기 메서드 쌍을 만들어야 합니다. 이 작업을 수행 하는 가장 쉬운 방법은 사용 하는 `/async` 스위치에 [ServiceModel Metadata 유틸리티 도구 (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)합니다. 예를 들어 참조 [하는 방법: 비동기적 서비스 작업 호출](../../../../docs/framework/wcf/feature-details/how-to-call-wcf-service-operations-asynchronously.md)합니다.  
   
  증가 클라이언트 성능에 대 한 자세한 내용은 참조 [중간 계층 클라이언트 응용 프로그램](../../../../docs/framework/wcf/feature-details/middle-tier-client-applications.md)합니다.  
   

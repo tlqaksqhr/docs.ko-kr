@@ -1,13 +1,6 @@
 ---
 title: 코드의 특수 문자(Visual Basic)
-ms.custom: ''
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.)
 - vb.(
@@ -37,14 +30,11 @@ helpviewer_keywords:
 - exclamation point operator (!)
 - Visual Basic code, special characters
 ms.assetid: 310dce0c-45b5-4e0d-83e9-32df258d2a3e
-caps.latest.revision: 21
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: b724c48320f74045d7192be6d6e269c00511ffc9
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 932b38d97b36292e66bfad91a9a3799459d3b73c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="special-characters-in-code-visual-basic"></a>코드의 특수 문자(Visual Basic)
 경우에 따라 영문자 또는 숫자 하지 않은 문자가 즉, 사용자 코드에 특수 문자를 사용 해야 할 수도 있습니다. 문장 부호 및 Visual Basic 문자 집합의 특수 문자는 프로그램 텍스트에서 컴파일러 또는 컴파일된 프로그램이 수행 하는 작업 정의에 이르기까지 다양 한 용도로 사용 합니다. 이러한 특수 문자는 수행할 작업을 지정하지 않습니다.  

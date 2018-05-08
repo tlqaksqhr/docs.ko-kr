@@ -1,27 +1,15 @@
 ---
-title: "기본 리소스 서비스"
-ms.custom: 
+title: 기본 리소스 서비스
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 4360063e-cc8c-4648-846e-c05a5af51a7a
-caps.latest.revision: "8"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 8bfcd632846510f8f62280bfb1620ba1f8c35ce3
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 3ec743bbbb6d18d972701c3149179d6f615d1884
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="basic-resource-service"></a>기본 리소스 서비스
-이 샘플에서는 검색, 추가, 삭제 및 대체 작업을 지원하는 고객 컬렉션을 노출하는 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] REST 프로그래밍 모델을 사용하여 HTTP 기반 서비스를 구현하는 방법을 보여 줍니다. 이 샘플은 자체 호스팅되는 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] HTTP 서비스(Service.cs)와 서비스를 만들고 호출하는 콘솔 응용 프로그램(program.cs)의 두 구성 요소로 구성되어 있습니다.  
+이 샘플에는 검색을 지 원하는 고객 컬렉션을 노출 하는 Windows Communication Foundation (WCF) REST 프로그래밍 모델을 사용 하 여 HTTP 기반 서비스 구현, 추가, 삭제 및 바꾸기 작업 하는 방법을 보여 줍니다. 이 샘플은 자체 호스팅되는 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] HTTP 서비스(Service.cs)와 서비스를 만들고 호출하는 콘솔 응용 프로그램(program.cs)의 두 구성 요소로 구성되어 있습니다.  
   
 ## <a name="sample-details"></a>샘플 세부 정보  
  [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 서비스는 리소스 지향/REST 방식으로 고객 컬렉션을 노출합니다. 즉, 고객 컬렉션과 이 컬렉션 내의 모든 고객마다 고유한 URI가 있어야 합니다. 이 서비스는 컬렉션 URI에서 HTTP `GET`을 보내 전체 컬렉션을 검색하고 컬렉션 URI에서 HTTP `POST`를 보내 컬렉션에 새 고객을 추가하는 작업을 지원합니다. 또한 개별 고객의 URI에서는 고객 세부 정보를 가져오기 위한 HTTP `GET`, 고객 세부 정보를 대체하기 위한 HTTP `PUT` 및 컬렉션에서 고객을 제거하기 위한 HTTP `DELETE`를 지원합니다. 컬렉션에 새 고객이 추가되면 서비스에서는 고객에게 고유한 URI를 할당하고 이 URI를 고객 세부 정보의 일부로 저장합니다. 또한 서비스에서는 응답의 HTTP Location 헤더를 사용하여 이 URI를 클라이언트에 전달합니다.  
@@ -45,7 +33,7 @@ ms.lasthandoff: 12/22/2017
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  이 디렉터리가 없으면 [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4(.NET Framework 4용 WCF(Windows Communication Foundation) 및 WF(Windows Workflow Foundation) 샘플)](http://go.microsoft.com/fwlink/?LinkId=150780) 로 이동하여 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 및 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플을 모두 다운로드하세요. 이 샘플은 다음 디렉터리에 있습니다.  
+>  이 디렉터리가로 이동 [Windows Communication Foundation (WCF) 및.NET Framework 4에 대 한 Windows WF (Workflow Foundation) 샘플](http://go.microsoft.com/fwlink/?LinkId=150780) 모든 Windows Communication Foundation (WCF)를 다운로드 하 고 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플. 이 샘플은 다음 디렉터리에 있습니다.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Web\BasicResourceService`  
   

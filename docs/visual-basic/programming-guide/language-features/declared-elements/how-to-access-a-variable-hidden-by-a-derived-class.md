@@ -1,12 +1,6 @@
 ---
-title: "방법: 파생 클래스에 의해 숨겨진 변수에 액세스(Visual Basic)"
-ms.custom: 
+title: '방법: 파생 클래스에 의해 숨겨진 변수에 액세스(Visual Basic)'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - qualification [Visual Basic], of element names
 - base classes [Visual Basic], accessing elements
@@ -15,14 +9,11 @@ helpviewer_keywords:
 - declared elements [Visual Basic], referencing
 - variables [Visual Basic], accessing hidden
 ms.assetid: ae21a8ac-9cd4-4fba-a3ec-ecc4321ef93c
-caps.latest.revision: "20"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 0f94e45fcb0a26b0d59789e101c37aceba219250
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 8dd59dff5b8123331237db905432bbb4e94d62ab
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-access-a-variable-hidden-by-a-derived-class-visual-basic"></a>방법: 파생 클래스에 의해 숨겨진 변수에 액세스(Visual Basic)
 변수에 액세스 하는 파생된 클래스에서 코드를 컴파일러는 이전 파생 단계의 액세스 하는 클래스에서 액세스할 수 있는 버전 즉, 가장 가까운 액세스할 수 있는 버전에 대 한 참조에 해결 일반적으로 합니다. 변수를 파생된 클래스에서 정의 하는 경우 코드는 일반적으로 해당 정의 액세스 합니다.  

@@ -1,14 +1,6 @@
 ---
-title: "ImageList 구성 요소 개요(Windows Forms)"
-ms.custom: 
+title: ImageList 구성 요소 개요(Windows Forms)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 f1_keywords:
 - ImageList
 helpviewer_keywords:
@@ -16,17 +8,11 @@ helpviewer_keywords:
 - icon list control
 - ImageList component [Windows Forms], about ImageList component
 ms.assetid: 7e25d89b-5633-40c1-afc3-82e0e301ffa2
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: a913de1a6808c7e600a4f28ed58dedf93506466b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: bda9bb71dd2e9b6da2de2444013ed724979f61af
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="imagelist-component-overview-windows-forms"></a>ImageList 구성 요소 개요(Windows Forms)
 Windows Forms <xref:System.Windows.Forms.ImageList> 구성 요소는 컨트롤에 의해 표시될 수 있는 이미지를 저장하는 데 사용됩니다. 이미지 목록을 통해 일관된 단일 이미지 카탈로그에 대한 코드를 작성할 수 있습니다. 예를 들어 단추의 <xref:System.Windows.Forms.ButtonBase.ImageIndex%2A> 또는 <xref:System.Windows.Forms.ButtonBase.ImageKey%2A> 속성을 변경하여 <xref:System.Windows.Forms.Button> 컨트롤에 의해 표시되는 이미지를 회전할 수 있습니다. 동일한 이미지 목록을 여러 컨트롤에 연결할 수도 있습니다. 예를 들어 <xref:System.Windows.Forms.ListView> 컨트롤과 <xref:System.Windows.Forms.TreeView> 컨트롤 둘 다를 사용하여 동일한 파일 목록을 표시하는 경우 이미지 목록에서 파일 아이콘을 변경하면 두 보기에 모두 새 아이콘이 나타납니다.  

@@ -1,14 +1,6 @@
 ---
-title: "FontDialog 구성 요소 개요(Windows Forms)"
-ms.custom: 
+title: FontDialog 구성 요소 개요(Windows Forms)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 f1_keywords:
 - FontDialog
 helpviewer_keywords:
@@ -16,17 +8,11 @@ helpviewer_keywords:
 - Font dialog box
 - FontDialog component [Windows Forms], about FontDialog component
 ms.assetid: daf46e57-1b4b-4b7a-bad0-b50ca7ba75dc
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: b9e3018d024254adb249860f7736399e7f2da72a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 3a4707ffe471161988d0526ce0908b37299f3e07
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="fontdialog-component-overview-windows-forms"></a>FontDialog 구성 요소 개요(Windows Forms)
 Windows Forms <xref:System.Windows.Forms.FontDialog> 구성 요소는 표준 windows는 미리 구성 된 대화 상자, **글꼴** 시스템에 현재 설치 되어 있는 글꼴을 노출 하는 데 사용 되는 대화 상자. 글꼴 선택 대화 상자를 직접 구성 하는 대신에 대 한 간단한 솔루션으로 Windows 기반 응용 프로그램 내에서 사용 합니다.  

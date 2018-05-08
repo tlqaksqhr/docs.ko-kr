@@ -1,13 +1,6 @@
 ---
-title: "기본 쿼리 작업(Visual Basic)"
-ms.custom: 
+title: 기본 쿼리 작업(Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - data sources [LINQ in Visual Basic]
 - Join clause [LINQ in Visual Basic]
@@ -22,14 +15,11 @@ helpviewer_keywords:
 - grouping data [LINQ in Visual Basic]
 - Select clause [LINQ in Visual Basic]
 ms.assetid: 1146f6d0-fcb8-4f4d-8223-c9db52620d21
-caps.latest.revision: "37"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 794d77a18b50cc1667fddbad17c46735ae91be26
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 5587a60e97464324659b325e38a18ac25488d30d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="basic-query-operations-visual-basic"></a>기본 쿼리 작업(Visual Basic)
 이 항목에서는에 대 한 간략 한 소개 [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] Visual Basic을 쿼리에서 수행 하는 작업의 일반적인 종류의 일부에 대 한 식입니다. 자세한 내용은 다음 항목을 참조하세요.  
@@ -96,7 +86,7 @@ Where cust.City = "London" Or cust.City = "Paris"
   
      [!code-vb[VbLINQBasicOps#6](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/basic-query-operations_6.vb)]  
   
-     또는  
+     -또는-  
   
 -   명명 된 유형을 정의 하는 결과에 포함 하 고 만들고에서 형식의 인스턴스를 초기화 하 고 원하는 특정 필드가 `Select` 절. 반환 되는 컬렉션 외부 개별 결과 사용 해야 하는 경우에 또는 메서드 호출에 매개 변수로 전달 해야 할 경우이 옵션을 사용 합니다. 유형의 `londonCusts5` 다음 예제는 IEnumerable (Of NamePhone).  
   
@@ -118,7 +108,7 @@ Where cust.City = "London" Or cust.City = "Paris"
   
  [!code-vb[VbLINQBasicOps#10](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/basic-query-operations_10.vb)]  
   
- `Group Join`마찬가지로 컬렉션을 단일 계층 구조 컬렉션으로 결합 한 `LEFT JOIN` sql에서 합니다. 자세한 내용은 참조 [Join 절](../../../../visual-basic/language-reference/queries/join-clause.md) 및 [Group Join 절](../../../../visual-basic/language-reference/queries/group-join-clause.md)합니다.  
+ `Group Join` 마찬가지로 컬렉션을 단일 계층 구조 컬렉션으로 결합 한 `LEFT JOIN` sql에서 합니다. 자세한 내용은 참조 [Join 절](../../../../visual-basic/language-reference/queries/join-clause.md) 및 [Group Join 절](../../../../visual-basic/language-reference/queries/group-join-clause.md)합니다.  
   
 ## <a name="grouping-data-group-by"></a>데이터 그룹화 (Group By)  
  추가할 수는 `Group By` 요소 중 하나 이상의 필드에 따라 쿼리 결과의 요소를 그룹화 하는 절. 예를 들어 다음 코드는 클래스 연도별 학생 들을 그룹화합니다.  

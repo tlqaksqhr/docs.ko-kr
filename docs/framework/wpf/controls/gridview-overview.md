@@ -1,31 +1,19 @@
 ---
-title: "GridView 개요"
-ms.custom: 
+title: GridView 개요
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - GridView view mode [WPF]
 - ListView controls [WPF], GridView view mode
 - controls [WPF], ListView
 ms.assetid: b2d02267-32b3-40ce-8e9f-06972d8749d9
-caps.latest.revision: "26"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 099584ff5149891f406d5ad24a28a6b3e3faafb4
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 776897d490b2748e240cf7b9a4ea21364284c4c4
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="gridview-overview"></a>GridView 개요
-<xref:System.Windows.Controls.GridView>보기 모드에 대 한 보기 모드 중 하나는 <xref:System.Windows.Controls.ListView> 제어 합니다. <xref:System.Windows.Controls.GridView> 클래스와 해당 지원 클래스를 사용 하면 사용자 및 사용자가 일반적으로 대화형 열 머리글로 단추를 사용 하는 테이블에 항목 컬렉션을 볼 수 있습니다. 이 항목에서는 소개는 <xref:System.Windows.Controls.GridView> 클래스 및 해당 사용에 간략하게 설명 합니다.  
+<xref:System.Windows.Controls.GridView> 보기 모드에 대 한 보기 모드 중 하나는 <xref:System.Windows.Controls.ListView> 제어 합니다. <xref:System.Windows.Controls.GridView> 클래스와 해당 지원 클래스를 사용 하면 사용자 및 사용자가 일반적으로 대화형 열 머리글로 단추를 사용 하는 테이블에 항목 컬렉션을 볼 수 있습니다. 이 항목에서는 소개는 <xref:System.Windows.Controls.GridView> 클래스 및 해당 사용에 간략하게 설명 합니다.  
   
   
   
@@ -42,7 +30,7 @@ ms.lasthandoff: 12/22/2017
   
  ![스타일 지정된 ListView](../../../../docs/framework/wpf/controls/media/styledlistview.PNG "StyledListView")  
   
- <xref:System.Windows.Controls.GridView>열은로 나타납니다 <xref:System.Windows.Controls.GridViewColumn> 개체 수의 콘텐츠를 자동으로 크기를 조정 합니다. 필요에 따라 있습니다 명시적으로 설정할 수는 <xref:System.Windows.Controls.GridViewColumn> 특정 너비입니다. 열 헤더 사이에 위치 조정 막대를 끌어와 열의 크기를 조정할 수 있습니다. 있습니다 수 동적으로 추가, 제거, 바꾸기 및이 기능에 내장 되어 있으므로 열 순서 바꾸기 <xref:System.Windows.Controls.GridView>합니다. 그러나 <xref:System.Windows.Controls.GridView> 표시 하는 데이터를 직접 업데이트할 수 없습니다.  
+ <xref:System.Windows.Controls.GridView> 열은로 나타납니다 <xref:System.Windows.Controls.GridViewColumn> 개체 수의 콘텐츠를 자동으로 크기를 조정 합니다. 필요에 따라 있습니다 명시적으로 설정할 수는 <xref:System.Windows.Controls.GridViewColumn> 특정 너비입니다. 열 헤더 사이에 위치 조정 막대를 끌어와 열의 크기를 조정할 수 있습니다. 있습니다 수 동적으로 추가, 제거, 바꾸기 및이 기능에 내장 되어 있으므로 열 순서 바꾸기 <xref:System.Windows.Controls.GridView>합니다. 그러나 <xref:System.Windows.Controls.GridView> 표시 하는 데이터를 직접 업데이트할 수 없습니다.  
   
  다음 예제에서는 정의 하는 방법을 보여 줍니다.는 <xref:System.Windows.Controls.GridView> 직원 데이터를 표시 하는 합니다. 이 예제에서는 <xref:System.Windows.Controls.ListView> 정의 `EmployeeInfoDataSource` 로 <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A>합니다. 속성 정의 <xref:System.Windows.Controls.GridViewColumn.DisplayMemberBinding%2A> 바인딩할 <xref:System.Windows.Controls.GridViewColumn> 콘텐츠를 `EmployeeInfoDataSource` 데이터 범주입니다.  
   

@@ -1,13 +1,6 @@
 ---
 title: 연산자 프로시저(Visual Basic)
-ms.custom: ''
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - Visual Basic code, procedures
 - procedures [Visual Basic], operator
@@ -18,14 +11,11 @@ helpviewer_keywords:
 - operator overloading
 - operator procedures
 ms.assetid: 8c513d38-246b-4fb7-8b75-29e1364e555b
-caps.latest.revision: 17
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 8fba5180da6498d280fa4192937c39d3e33168e8
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 63a16163900f1b4dc7dadef6a227f56b89f4e820
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="operator-procedures-visual-basic"></a>연산자 프로시저(Visual Basic)
 연산자 프로시저는 일련의 표준 연산자의 동작을 정의 하는 Visual Basic 문 (같은 `*`, `<>`, 또는 `And`) 클래스 또는 구조체 정의에서 합니다. 이 라고도 *연산자 오버 로드*합니다.  
@@ -53,7 +43,7 @@ ms.lasthandoff: 04/26/2018
 ## <a name="declaration-syntax"></a>선언 구문  
  연산자 프로시저를 선언 하기 위한 구문은 다음과 같습니다.  
   
- `Public Shared`   `[Widening | Narrowing]`   `Operator`  *operatorsymbol* `(` *operand1*`[,`*operand2* `]) As` *데이터 형식*   
+ `Public Shared`   `[Widening | Narrowing]`   `Operator`  *operatorsymbol* `(` *operand1*`[,`*operand2* `]) As` *데이터 형식*  
   
  `' Statements of the operator procedure.`  
   
@@ -77,7 +67,7 @@ ms.lasthandoff: 04/26/2018
   
  `Dim testStruct As`  *structurename*  
   
- `Dim testNewStruct As`  *structurename*`= testStruct`*operatorsymbol*   `10`  
+ `Dim testNewStruct As`  *structurename*`= testStruct`*operatorsymbol*  `10`  
   
 ### <a name="illustration-of-declaration-and-call"></a>선언 및 호출의 그림  
  다음과 같은 구조 구성 하는 상위 및 하위 부분으로 서명 된 128 비트 정수 값을 저장합니다. 정의 `+` 두 개를 추가 하는 연산자 `veryLong` 값 및 결과 생성 `veryLong` 값입니다.  

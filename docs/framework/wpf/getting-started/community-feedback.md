@@ -1,10 +1,6 @@
 ---
-title: "WPF 커뮤니티 사용자 의견"
+title: WPF 커뮤니티 사용자 의견
 ms.date: 03/01/2018
-ms.prod: .net-framework
-ms.technology:
-- dotnet-wpf
-ms.topic: article
 helpviewer_keywords:
 - community resources [WPF]
 - forums [WPF]
@@ -12,14 +8,11 @@ helpviewer_keywords:
 ms.assetid: 468b060a-d54b-4900-a74a-9faccb554045
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 243e40b1b16fd88a786398c15cd29a5baeacd6ac
-ms.sourcegitcommit: ba765893e3efcece67d99fd6d5ce0074b050d1d9
+ms.openlocfilehash: 6394bda1c2bcd4a42f76579d541173e65ecd2dc9
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/02/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="wpf-community-feedback"></a>WPF 커뮤니티 사용자 의견
 
@@ -124,6 +117,6 @@ Visual Studio 개발자 커뮤니티를 게시할 때 기존 검색에 게시, �
 
 일반적으로 충돌 및 데이터 손실 시나리오는 영향이 크기 때문에 우선 순위를 정하기가 가장 쉽습니다. 하지만 일부 버그는 흔하지 않은 시나리오에서만 나타납니다. 경우에 따라 이러한 시나리오가 주요 시나리오일 수도 있습니다. 시나리오 및 영향 관련 컨텍스트를 제공 합니다. WPF 팀 올바른 결정을 내릴 수 있습니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참고자료
 
 [Visual Studio 2017의 문제를 보고하는 방법](/visualstudio/ide/how-to-report-a-problem-with-visual-studio-2017)

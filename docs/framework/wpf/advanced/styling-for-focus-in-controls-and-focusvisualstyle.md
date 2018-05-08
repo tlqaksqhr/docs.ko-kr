@@ -1,28 +1,16 @@
 ---
-title: "컨트롤의 포커스 스타일 지정 및 FocusVisualStyle"
-ms.custom: 
+title: 컨트롤의 포커스 스타일 지정 및 FocusVisualStyle
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - keyboard focus [WPF]
 - focus [WPF], visual styling
 - styles [WPF], focus visual style
 ms.assetid: 786ac576-011b-4d72-913b-558deccb9b35
-caps.latest.revision: "10"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 4d29fda788aa4ec79ad4278beefa16ee14208832
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 6c73c8bbfcf7631094ddf89641de9af38f86f88e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="styling-for-focus-in-controls-and-focusvisualstyle"></a>컨트롤의 포커스 스타일 지정 및 FocusVisualStyle
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]에서는 컨트롤이 키보드 포커스를 받을 때 컨트롤의 시각적 모양을 변경하는 두 가지 병렬 메커니즘을 제공합니다. 와 같은 속성에 대 한 속성 setter를 사용 하는 첫 번째 메커니즘은 <xref:System.Windows.UIElement.IsKeyboardFocused%2A> 스타일 또는 컨트롤에 적용 되는 서식 파일 내에서. 두 번째 메커니즘에서는 별도 스타일의 값으로 제공 하는 것은 <xref:System.Windows.FrameworkElement.FocusVisualStyle%2A> 속성 컨트롤 또는 다른 UI의 시각적 트리를 변경 하지 않고 컨트롤을 기반으로 그려지는 표시기에 대 한 별도 시각적 트리를 만듭니다 "포커스 비주얼 스타일" 교체 하 여 요소입니다. 이 항목에서는 이러한 각 메커니즘이 적절하게 적용되는 시나리오를 설명합니다.  

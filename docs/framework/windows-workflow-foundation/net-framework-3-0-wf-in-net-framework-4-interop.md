@@ -1,23 +1,12 @@
 ---
-title: ".NET Framework 4에서 Interop 활동과 함께 .NET Framework 3.0 WF 활동 사용"
-ms.custom: 
+title: .NET Framework 4에서 Interop 활동과 함께 .NET Framework 3.0 WF 활동 사용
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 71f112ba-abb0-46f7-b05f-a5d2eb9d0c5c
-caps.latest.revision: "15"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: e551a2a5253232ca7e504ea484601fb935901da4
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 8110c86ab8bf5c557dbf8eb361d4ead2e256a3b8
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-net-framework-30-wf-activities-in-net-framework-4-with-the-interop-activity"></a>.NET Framework 4에서 Interop 활동과 함께 .NET Framework 3.0 WF 활동 사용
 <xref:System.Activities.Statements.Interop> 활동은 [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] 워크플로에서 [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)](WF 3.5) 활동을 래핑하는 [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)](WF 4.5) 활동입니다. WF 3 활동은 단일 리프 활동이거나 전체 활동 트리입니다. [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] 활동의 실행(취소 및 예외 처리 포함)과 지속성은 실행 중인 [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] 워크플로 인스턴스의 컨텍스트 내에서 발생합니다.  

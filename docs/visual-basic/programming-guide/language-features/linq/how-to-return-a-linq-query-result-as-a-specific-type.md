@@ -1,12 +1,6 @@
 ---
-title: "방법: LINQ 쿼리 결과를 특정 형식으로 반환(Visual Basic)"
-ms.custom: 
+title: '방법: LINQ 쿼리 결과를 특정 형식으로 반환(Visual Basic)'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - queries [LINQ in Visual Basic], specific type returned
 - projection [LINQ in Visual Basic]
@@ -15,14 +9,11 @@ helpviewer_keywords:
 - queries [LINQ in Visual Basic], how-to topics
 - query samples [Visual Basic]
 ms.assetid: 621bb10a-e5d7-44fb-a025-317964b19d92
-caps.latest.revision: "8"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 33b79a00533e4ad8960c7f3cb512aafbe36e50b0
-ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
+ms.openlocfilehash: e0b7e402fba4fb51afb60ad0ae7698bd4947b2f9
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-return-a-linq-query-result-as-a-specific-type-visual-basic"></a>방법: LINQ 쿼리 결과를 특정 형식으로 반환(Visual Basic)
 통합 언어 쿼리 (LINQ)을 사용 하면 쉽게 데이터베이스 정보에 액세스 하 고 쿼리를 실행할 수 있습니다. LINQ 쿼리는 기본적으로 익명 형식으로 개체의 목록을 반환 합니다. 쿼리에서 사용 하 여 특정 형식의 목록을 반환 하도록 지정할 수도 있습니다는 `Select` 절.  

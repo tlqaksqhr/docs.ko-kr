@@ -1,30 +1,18 @@
 ---
-title: "Service Trace Viewer를 사용하여 상호 관련된 추적 보기 및 문제 해결"
-ms.custom: 
+title: Service Trace Viewer를 사용하여 상호 관련된 추적 보기 및 문제 해결
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 05d2321c-8acb-49d7-a6cd-8ef2220c6775
-caps.latest.revision: "22"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 13c862c8191a9bc312de743fc3ed99396c600f8f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: bfc0d2c10bfdca253f2ce410a4cd38218b3f5cfe
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting"></a>Service Trace Viewer를 사용하여 상호 관련된 추적 보기 및 문제 해결
 이 항목에서는 추적 데이터 형식, 추적 데이터를 보는 방법 및 Service Trace Viewer를 사용하여 응용 프로그램 문제를 해결하는 방법에 대해 설명합니다.  
   
 ## <a name="using-the-service-trace-viewer-tool"></a>Service Trace Viewer 도구 사용  
- [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] Service Trace Viewer 도구를 사용하면 [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 수신기에서 생성한 진단 추적의 연관성을 파악하여 오류의 근본 원인을 찾을 수 있습니다. 이 도구를 사용하면 추적을 쉽게 보고, 그룹화하며 필터링할 수 있으므로 [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 서비스 관련 문제를 진단, 복구 및 확인할 수 있습니다. 이 도구를 사용 하는 방법에 대 한 자세한 내용은 참조 [Service Trace Viewer 도구 (SvcTraceViewer.exe)](../../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)합니다.  
+ Windows Communication Foundation (WCF) Service Trace Viewer 도구를 사용 하 여 생성 한 진단 추적을 상호 연결할 수 [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 루트 수신기 오류가 발생 합니다. 이 도구를 사용하면 추적을 쉽게 보고, 그룹화하며 필터링할 수 있으므로 [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 서비스 관련 문제를 진단, 복구 및 확인할 수 있습니다. 이 도구를 사용 하는 방법에 대 한 자세한 내용은 참조 [Service Trace Viewer 도구 (SvcTraceViewer.exe)](../../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)합니다.  
   
  이 항목에서는 실행 하 여 생성 된 추적의 스크린 샷을 [Tracing and Message Logging](../../../../../docs/framework/wcf/samples/tracing-and-message-logging.md) 샘플을 사용 하 여 볼 때는 [Service Trace Viewer 도구 (SvcTraceViewer.exe)](../../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)합니다. 이 항목에서는 추적의 내용, 동작 및 상관 관계를 이해하는 방법과 문제 해결 시 많은 수의 추적을 분석하는 방법을 보여 줍니다.  
   

@@ -1,29 +1,15 @@
 ---
 title: Windows Forms에 사용할 수 있는 컨트롤
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-winforms
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - controls [Windows Forms]
 - Windows Forms controls, list of
 ms.assetid: dec51976-eae0-4398-a537-20bca7974722
-caps.latest.revision: 28
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 6454d7ead50c96ed4f92b2b9d53e7b9bbb4a84f8
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 53474de53375546e2a7f416488cf7758b3f9cd22
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="controls-to-use-on-windows-forms"></a>Windows Forms에 사용할 수 있는 컨트롤
 다음은 사전순 목록 컨트롤 및 Windows Forms에서 사용할 수 있는 구성 요소입니다. 이 섹션에서 다루는 Windows Forms 컨트롤 외에 Windows Forms에 ActiveX 및 사용자 지정 컨트롤을 추가할 수 있습니다. 여기에 나열된 목록에서 사용자가 필요한 컨트롤을 찾을 수 없는 경우 직접 만들 수도 있습니다. 자세한 내용은 [디자인할 때 Windows Forms 컨트롤 개발](../../../../docs/framework/winforms/controls/developing-windows-forms-controls-at-design-time.md)을 참조하십시오. 필요한 컨트롤을 선택하는 방법에 대한 자세한 내용은 [기능별 Windows Forms 컨트롤](../../../../docs/framework/winforms/controls/windows-forms-controls-by-function.md)을 참조하십시오.  

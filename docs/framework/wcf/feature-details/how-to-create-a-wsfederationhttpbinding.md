@@ -1,14 +1,6 @@
 ---
 title: '방법: WSFederationHttpBinding 만들기'
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -16,20 +8,14 @@ helpviewer_keywords:
 - WCF, federation
 - federation
 ms.assetid: e54897d7-aa6c-46ec-a278-b2430c8c2e10
-caps.latest.revision: 16
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: f43b95df73b35b7dc7c34c2e16364dfa7bbdbee4
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 41fa1e7c0430f4723123b03f04d4fc74f9bfc589
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-a-wsfederationhttpbinding"></a>방법: WSFederationHttpBinding 만들기
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], <xref:System.ServiceModel.WSFederationHttpBinding> 클래스 ([\<wsFederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md) 구성에서) 페더레이션된 서비스를 노출 하기 위한 메커니즘을 제공 합니다. 즉, 보안 토큰 서비스에서 발급된 보안 토큰을 사용하여 클라이언트가 인증해야 하는 서비스입니다. 이 항목에서는 코드와 구성 둘 다에서 <xref:System.ServiceModel.WSFederationHttpBinding>을 설정하는 방법을 보여 줍니다. 바인딩을 만들고 나면 해당 바인딩을 사용하도록 끝점을 설정할 수 있습니다.  
+Windows Communication Foundation (WCF)는 <xref:System.ServiceModel.WSFederationHttpBinding> 클래스 ([\<wsFederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md) 구성에서) 페더레이션된 서비스를 노출 하기 위한 메커니즘을 제공 합니다. 즉, 보안 토큰 서비스에서 발급된 보안 토큰을 사용하여 클라이언트가 인증해야 하는 서비스입니다. 이 항목에서는 코드와 구성 둘 다에서 <xref:System.ServiceModel.WSFederationHttpBinding>을 설정하는 방법을 보여 줍니다. 바인딩을 만들고 나면 해당 바인딩을 사용하도록 끝점을 설정할 수 있습니다.  
   
  기본 단계는 다음과 같이 간략하게 설명됩니다.  
   
@@ -38,7 +24,7 @@ ms.lasthandoff: 04/30/2018
     > [!NOTE]
     >  <xref:System.ServiceModel.WSFederationHttpBinding>은 보안 모드로 `None`도 지원합니다. 이 모드는 보안되지 않으며 디버깅 목적을 위해서만 제공됩니다. 서비스 끝점으로 배포 하는 경우는 <xref:System.ServiceModel.WSFederationHttpBinding> 로 설정 하는 보안 모드와 함께 `None`, 결과 클라이언트 바인딩에 (에 의해 생성 된는 [ServiceModel Metadata 유틸리티 도구 (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)) 되는 <<!--zz xref:System.ServiceModel.WsHttpBinding --> `xref:System.ServiceModel.WsHttpBinding`>의 보안 모드와 함께 `None`합니다.  
   
-     다른 시스템 제공 바인딩과 달리 `WSFederationHttpBinding`을 사용할 때는 클라이언트 자격 증명 형식을 선택할 필요가 없습니다. 이는 클라이언트 자격 증명 형식이 항상 발급된 토큰이기 때문입니다. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]는 지정된 발급자로부터 토큰을 받아서 서비스에 제공하여 클라이언트를 인증합니다.  
+     다른 시스템 제공 바인딩과 달리 `WSFederationHttpBinding`을 사용할 때는 클라이언트 자격 증명 형식을 선택할 필요가 없습니다. 이는 클라이언트 자격 증명 형식이 항상 발급된 토큰이기 때문입니다. WCF는 지정된 된 발급자 로부터 토큰을 획득 하 고 클라이언트를 인증 하는 서비스에 해당 토큰을 제공 합니다.  
   
 2.  페더레이션 클라이언트에서는 <xref:System.ServiceModel.FederatedMessageSecurityOverHttp.IssuerAddress%2A> 속성을 보안 토큰 서비스의 URL로 설정합니다. <xref:System.ServiceModel.FederatedMessageSecurityOverHttp.IssuerBinding%2A>을 보안 토큰 서비스와 통신하는 데 사용할 바인딩으로 설정합니다.  
   
@@ -65,7 +51,7 @@ ms.lasthandoff: 04/30/2018
   
 4.  설정의 <xref:System.ServiceModel.FederatedMessageSecurityOverHttp.IssuedKeyType%2A> 속성을 <xref:System.IdentityModel.Tokens.SecurityKeyType> `SymmetricKey` 또는 합니다.`AsymmetricKey` 필요에 따라 합니다.  
   
-5.  <xref:System.ServiceModel.FederatedMessageSecurityOverHttp.IssuedTokenType%2A> 속성을 적절한 값으로 설정합니다. 설정 된 경우 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 기본적으로 "http://docs.oasis-open.org/wss/oasis-wss-saml-token-profile-1.1#SAMLV1.1", SAML 1.1 토큰을 나타냅니다.  
+5.  <xref:System.ServiceModel.FederatedMessageSecurityOverHttp.IssuedTokenType%2A> 속성을 적절한 값으로 설정합니다. WCF 기본값으로 설정 된 경우 "http://docs.oasis-open.org/wss/oasis-wss-saml-token-profile-1.1#SAMLV1.1", SAML 1.1 토큰을 나타냅니다.  
   
 6.  로컬 발급자가 지정되지 않은 경우 클라이언트에서는 필수적 요소이고 서비스에서는 선택적 요소입니다. 보안 토큰 서비스의 주소 및 ID 정보를 포함하는 <xref:System.ServiceModel.EndpointAddress>를 만들고 <xref:System.ServiceModel.EndpointAddress> 인스턴스를 <xref:System.ServiceModel.FederatedMessageSecurityOverHttp.IssuerAddress%2A> 속성에 할당합니다.  
   

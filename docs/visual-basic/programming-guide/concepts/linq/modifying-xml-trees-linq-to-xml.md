@@ -1,22 +1,12 @@
 ---
-title: "XML 트리 수정 (LINQ to XML) (Visual Basic)"
-ms.custom: 
+title: XML 트리 수정 (LINQ to XML) (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 4ae511a5-4fc9-4178-9c8e-761357deae3f
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: de66788186f3ffd09560d8eacdebbbaa5edf067c
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: e524088ac6ccde3a46de7547379eb82f9760fd57
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="modifying-xml-trees-linq-to-xml-visual-basic"></a>XML 트리 수정 (LINQ to XML) (Visual Basic)
 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]은 XML 트리의 메모리 내 저장소입니다. 소스에서 XML 트리를 로드하거나 XML 트리의 구문을 분석한 후 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]을 통해 메모리 내 트리를 수정하고 serialize한 다음 파일에 저장하거나 원격 서버에 보낼 수 있습니다.  
@@ -25,7 +15,7 @@ ms.lasthandoff: 10/18/2017
   
  그러나 함수 생성을 사용하여 다른 모양의 새 트리를 생성하는 다른 방법도 있습니다. XML 트리에 수행해야 하는 변경 유형과 트리 크기에 따라 이 방법은 더 강력하고 개발하기 쉬울 수 있습니다. 이 단원의 첫 번째 항목에서는 이러한 두 방법을 비교합니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
   
 |항목|설명|  
 |-----------|-----------------|  

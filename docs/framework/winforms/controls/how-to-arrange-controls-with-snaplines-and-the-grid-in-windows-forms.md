@@ -1,14 +1,6 @@
 ---
 title: '방법: Windows Forms에서 맞춤선과 모눈을 사용하여 컨트롤 정렬'
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-winforms
-ms.tgt_pltfrm: ''
-ms.topic: article
 f1_keywords:
 - GridSize
 helpviewer_keywords:
@@ -16,17 +8,11 @@ helpviewer_keywords:
 - Windows Forms, grid options in designer
 - controls [Windows Forms], aligning
 ms.assetid: bb54bce5-880f-4a36-af68-8cf92058dc1c
-caps.latest.revision: 10
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 3f7467abe6669b88e1a55851fd745c2dcb56c150
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.openlocfilehash: f9e8335b5f3ffa56c06507708cd5c62efc51bcfd
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-arrange-controls-with-snaplines-and-the-grid-in-windows-forms"></a>방법: Windows Forms에서 맞춤선과 모눈을 사용하여 컨트롤 정렬
 Visual Studio의 레이아웃 기능을 사용 하 여, 컨트롤이 폼에 배치 될 위치를 정확 하 게 지정할 수 있습니다. 컨트롤을 폼에 추가 하거나 폼에서 이동한 행과 Windows Forms 디자이너 눈금의 열에 자동으로 정렬할 수 있습니다 또는 맞춤선 기능을 사용 하 여 컨트롤을 정렬할 수 있습니다.  

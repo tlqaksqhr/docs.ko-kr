@@ -1,13 +1,6 @@
 ---
-title: "방법: 종속성 속성의 메타데이터 재정의"
-ms.custom: 
+title: '방법: 종속성 속성의 메타데이터 재정의'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -16,21 +9,16 @@ helpviewer_keywords:
 - dependency properties [WPF], overriding metadata for
 - overriding metadata for dependency properties [WPF]
 ms.assetid: f90f026e-60d8-428a-933d-edf0dba4441f
-caps.latest.revision: "15"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 78d90414d86d06040065ad8ae18a037412723ce0
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 8b207ca931d2202f7a35ae3cd16e325ec295ef5a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-override-metadata-for-a-dependency-property"></a>방법: 종속성 속성의 메타데이터 재정의
 호출 하 여 상속된 된 클래스에서 제공 되는 기본 종속성 속성 메타 데이터를 재정의 하는 방법을 보여 주는이 예제는 <xref:System.Windows.DependencyProperty.OverrideMetadata%2A> 메서드와 유형별 메타 데이터를 제공 합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  정의 하 여 해당 <xref:System.Windows.PropertyMetadata>는 클래스는 기본 값과 속성 시스템 콜백이 같은 종속성 속성의 동작을 정의할 수 있습니다. 여러 종속성 속성 클래스에는 이미 등록 프로세스의 일부로 설정된 기본 메타데이터가 있습니다. 여기에 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)]의 일부인 종속성 속성이 포함됩니다. 해당 클래스 상속을 통해 종속성 속성을 상속받는 클래스에서는 원래 메타데이터를 재정의할 수 있으므로 메타데이터를 통해 변경할 수 있는 속성의 특성이 모든 서브클래스별 요구 사항과 일치합니다.  
   
  종속성 속성에 대한 메타데이터의 재정의는 속성 시스템이 해당 속성을 사용하기 전에 수행되어야 합니다(속성을 등록하는 개체의 특정 인스턴스가 인스턴스화되는 시간과 같은 것으로 간주). 에 대 한 호출이 <xref:System.Windows.DependencyProperty.OverrideMetadata%2A> 로 자신을 제공 하는 형식의 정적 생성자 내에서 수행 해야 합니다는 `forType` 의 매개 변수 <xref:System.Windows.DependencyProperty.OverrideMetadata%2A>합니다. 소유자 형식의 인스턴스가 존재하는 메타데이터를 변경하려고 하면 예외가 발생하지는 않지만 속성 시스템에서 일관성 없는 동작이 발생합니다. 또한 메타데이터 형식별로 한 번만 재정의할 수 있습니다. 동일한 형식의 메타데이터를 이어서 재정의하려고 하면 예외가 발생합니다.  

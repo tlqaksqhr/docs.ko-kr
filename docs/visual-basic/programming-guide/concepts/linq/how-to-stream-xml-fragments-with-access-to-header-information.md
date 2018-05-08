@@ -1,22 +1,12 @@
 ---
-title: "방법: 헤더 정보 (Visual Basic)에 액세스할 수 있는 XML 조각 스트리밍"
-ms.custom: 
+title: '방법: 헤더 정보 (Visual Basic)에 액세스할 수 있는 XML 조각 스트리밍'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: effd10df-87c4-4d7a-8a9a-1434d829dca5
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: f745d0725b9b05620b4b967e51b452e54fe5e6d9
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 60ec63c33d20fa38bed32d9c46c4acfe649ecd15
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-stream-xml-fragments-with-access-to-header-information-visual-basic"></a>방법: 헤더 정보 (Visual Basic)에 액세스할 수 있는 XML 조각 스트리밍
 예상할 수 없는 큰 크기의 XML 파일을 읽고 응용 프로그램의 메모리 사용 공간이 예상 가능하도록 응용 프로그램을 작성해야 하는 경우가 있습니다. XML 트리를 큰 XML 파일로 채우려는 경우 파일 크기에 비례하여 메모리가 사용되므로 메모리 사용량이 지나치게 증가하게 됩니다. 따라서 스트리밍 기법을 대신 사용해야 합니다.  

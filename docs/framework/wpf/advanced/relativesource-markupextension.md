@@ -1,31 +1,17 @@
 ---
 title: RelativeSource MarkupExtension
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 f1_keywords:
 - RelativeSource
 helpviewer_keywords:
 - RelativeSource markup extensions [WPF]
 - XAML [WPF], RelativeSource markup extension
 ms.assetid: 26be4721-49b5-4717-a92e-7d54ad0d3a81
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 6ea5d269c3d455a4fbe3a34dca4335e0d8999d80
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 77caa7c84f63f90ae83df5685f93ba6d18f7436f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="relativesource-markupextension"></a>RelativeSource MarkupExtension
 속성을 지정는 <xref:System.Windows.Data.RelativeSource> 내에서 사용 되는 바인딩 원본의 [바인딩 태그 확장](../../../../docs/framework/wpf/advanced/binding-markup-extension.md), 설정할 때 또는 <xref:System.Windows.Data.Binding.RelativeSource%2A> 속성은 <xref:System.Windows.Data.Binding> XAML에 설정 된 요소입니다.  
@@ -72,9 +58,9 @@ ms.lasthandoff: 12/22/2017
 |`intLevel`|`FindAncestor` 모드에서는 선택적으로 사용할 수 있습니다. 논리 트리에서 부모 방향 쪽으로 계산되는 상위 수준입니다.|  
   
 ## <a name="remarks"></a>설명  
- `{RelativeSource TemplatedParent}`바인딩 사용은 컨트롤의 UI와 컨트롤의 논리 분리의 더 큰 개념을 해결할 수 있는 핵심 기술입니다. 이를 통해 템플릿 정의 내에서 템플릿 기반 부모(템플릿이 적용되는 런타임 개체 인스턴스)로 바인딩할 수 있습니다. 이 경우에는 [TemplateBinding 태그 확장](../../../../docs/framework/wpf/advanced/templatebinding-markup-extension.md) 다음 바인딩 식의 약식 형태는 실제로: `{Binding RelativeSource={RelativeSource TemplatedParent}}`합니다. `TemplateBinding`또는 `{RelativeSource TemplatedParent}` 는 템플릿을 정의 하는 XAML 내 에서만 관련 둘 다 사용 됩니다. 자세한 내용은 참조 [TemplateBinding 태그 확장](../../../../docs/framework/wpf/advanced/templatebinding-markup-extension.md)  
+ `{RelativeSource TemplatedParent}` 바인딩 사용은 컨트롤의 UI와 컨트롤의 논리 분리의 더 큰 개념을 해결할 수 있는 핵심 기술입니다. 이를 통해 템플릿 정의 내에서 템플릿 기반 부모(템플릿이 적용되는 런타임 개체 인스턴스)로 바인딩할 수 있습니다. 이 경우에는 [TemplateBinding 태그 확장](../../../../docs/framework/wpf/advanced/templatebinding-markup-extension.md) 다음 바인딩 식의 약식 형태는 실제로: `{Binding RelativeSource={RelativeSource TemplatedParent}}`합니다. `TemplateBinding` 또는 `{RelativeSource TemplatedParent}` 는 템플릿을 정의 하는 XAML 내 에서만 관련 둘 다 사용 됩니다. 자세한 내용은 참조 [TemplateBinding 태그 확장](../../../../docs/framework/wpf/advanced/templatebinding-markup-extension.md)  
   
- `{RelativeSource FindAncestor}`주로 사용 컨트롤 템플릿 또는 예측 가능한 독립적인된 UI 구성 요소 컨트롤 항상 필요한 특정 상위 항목 종류의 시각적 트리에 포함 되도록 하는 경우. 예를 들어, 항목 컨트롤의 항목은 `FindAncestor`를 사용하여 항목 컨트롤 부모 상위 항목의 속성에 바인딩할 수 있습니다. 또는 템플릿에 컨트롤 컴퍼지션의 일부인 요소에서 `FindAncestor` 바인딩을 동일한 컴퍼지션 구조에서 상위 요소로 사용할 수 있습니다.  
+ `{RelativeSource FindAncestor}` 주로 사용 컨트롤 템플릿 또는 예측 가능한 독립적인된 UI 구성 요소 컨트롤 항상 필요한 특정 상위 항목 종류의 시각적 트리에 포함 되도록 하는 경우. 예를 들어, 항목 컨트롤의 항목은 `FindAncestor`를 사용하여 항목 컨트롤 부모 상위 항목의 속성에 바인딩할 수 있습니다. 또는 템플릿에 컨트롤 컴퍼지션의 일부인 요소에서 `FindAncestor` 바인딩을 동일한 컴퍼지션 구조에서 상위 요소로 사용할 수 있습니다.  
   
  XAML 구문 섹션에 표시된 `FindAncestor` 모드에 대한 개체 요소 구문에서 `FindAncestor` 모드의 경우에는 특히 두 번째 개체 요소 구문이 사용됩니다. `FindAncestor` 모드에는 <xref:System.Windows.Data.RelativeSource.AncestorType%2A> 값이 필요합니다. 설정 해야 <xref:System.Windows.Data.RelativeSource.AncestorType%2A> 사용 하 여 특성으로는 [X:type 태그 확장](../../../../docs/framework/xaml-services/x-type-markup-extension.md) 찾을 상위 항목의 형식에 대 한 참조입니다. 바인딩 요청이 실시간으로 처리될 때 <xref:System.Windows.Data.RelativeSource.AncestorType%2A> 값이 사용됩니다.  
   
@@ -82,11 +68,11 @@ ms.lasthandoff: 12/22/2017
   
  `FindAncestor` 모드를 사용하는 방법에 대한 자세한 내용은 <xref:System.Windows.Data.RelativeSource>를 참조하십시오.  
   
- `{RelativeSource Self}`경우에 유용 여기서 속성 인스턴스 중 하나에 종속 되어야 동일한 인스턴스와 없는 일반 종속성 속성 관계 (예: 강제 변환)의 다른 속성의 값 이미 이러한 두 속성 사이 존재 합니다. 드물지만 문자 그대로 동일 (고는 동일 하 게 입력) 값 두 개의 속성 개체에 있는, 적용할 수도 있습니다는 `Converter` 매개 변수를 가진 바인딩에 `{RelativeSource Self}`, 소스 사이 변환할 변환기를 사용 하 고 및 대상 형식입니다. 또 다른 시나리오로 `{RelativeSource Self}` 의 일부로 <xref:System.Windows.MultiDataTrigger>합니다.  
+ `{RelativeSource Self}` 경우에 유용 여기서 속성 인스턴스 중 하나에 종속 되어야 동일한 인스턴스와 없는 일반 종속성 속성 관계 (예: 강제 변환)의 다른 속성의 값 이미 이러한 두 속성 사이 존재 합니다. 드물지만 문자 그대로 동일 (고는 동일 하 게 입력) 값 두 개의 속성 개체에 있는, 적용할 수도 있습니다는 `Converter` 매개 변수를 가진 바인딩에 `{RelativeSource Self}`, 소스 사이 변환할 변환기를 사용 하 고 및 대상 형식입니다. 또 다른 시나리오로 `{RelativeSource Self}` 의 일부로 <xref:System.Windows.MultiDataTrigger>합니다.  
   
  예를 들어, 다음 XAML은 <xref:System.Windows.Shapes.Rectangle>에 어떤 값이 입력되더라도 <xref:System.Windows.FrameworkElement.Width%2A>은 항상 사각형이 되도록 <xref:System.Windows.Shapes.Rectangle> 요소를 정의합니다. `<Rectangle Width="200" Height="{Binding RelativeSource={RelativeSource Self}, Path=Width}" .../>`  
   
- `{RelativeSource PreviousData}`데이터 템플릿 또는 바인딩 컬렉션을 사용 하는 데이터 원본으로는 있는 경우에 유용 합니다. 사용할 수 있습니다 `{RelativeSource PreviousData}` 인접 한 데이터 컬렉션의에서 항목 간의 관계를 강조 표시 합니다. 관련된 기술은 데이터 소스에 있는 현재 항목과 이전 항목 사이에 <xref:System.Windows.Data.MultiBinding>을 구축하고 해당 바인딩에서 변환기를 사용하여 두 항목 사이의 차이점과 해당 속성을 확인하는 것입니다.  
+ `{RelativeSource PreviousData}` 데이터 템플릿 또는 바인딩 컬렉션을 사용 하는 데이터 원본으로는 있는 경우에 유용 합니다. 사용할 수 있습니다 `{RelativeSource PreviousData}` 인접 한 데이터 컬렉션의에서 항목 간의 관계를 강조 표시 합니다. 관련된 기술은 데이터 소스에 있는 현재 항목과 이전 항목 사이에 <xref:System.Windows.Data.MultiBinding>을 구축하고 해당 바인딩에서 변환기를 사용하여 두 항목 사이의 차이점과 해당 속성을 확인하는 것입니다.  
   
  다음 예제에서 항목 템플릿의 첫 번째 <xref:System.Windows.Controls.TextBlock>은 현재 번호를 표시합니다. 두 번째 <xref:System.Windows.Controls.TextBlock> 바인딩은 <xref:System.Windows.Data.MultiBinding> 두 <xref:System.Windows.Data.Binding> consistuents: 현재 레코드와 의도적으로 사용 하 여 이전 데이터 레코드를 사용 하는 바인딩을 `{RelativeSource PreviousData}`합니다. 그런 다음, <xref:System.Windows.Data.MultiBinding>의 변환기가 차이를 계산하고 이를 바인딩으로 반환합니다.  
   

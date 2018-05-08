@@ -1,10 +1,6 @@
 ---
 title: Partial(Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.Partial
 - partial
@@ -18,14 +14,11 @@ helpviewer_keywords:
 - Partial keyword [Visual Basic]
 - type promotion
 ms.assetid: 7adaef80-f435-46e1-970a-269fff63b448
-caps.latest.revision: "36"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 5129ef7737b1b07317d47f8d18e9aceb668bf05a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: c94c3bf1a1e3e4c724f90690f52e97e8216cb9a7
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="partial-visual-basic"></a>Partial(Visual Basic)
 형식 선언이 해당 형식에 대한 부분 정의임을 나타냅니다.  
@@ -56,7 +49,7 @@ Partial { Class | Structure | Interface | Module } name [ (Of typelist) ]
 |`Shadows`|선택 사항입니다. 참조 [그림자](../../../visual-basic/language-reference/modifiers/shadows.md)합니다.|  
 |`MustInherit`|선택 사항입니다. 참조 [MustInherit](../../../visual-basic/language-reference/modifiers/mustinherit.md)합니다.|  
 |`NotInheritable`|선택 사항입니다. 참조 [NotInheritable](../../../visual-basic/language-reference/modifiers/notinheritable.md)합니다.|  
-|`name`|필수 요소. 이 형식의 이름입니다. 동일한 형식의 다른 모든 partial 선언에 정의된 이름과 일치해야 합니다.|  
+|`name`|필수. 이 형식의 이름입니다. 동일한 형식의 다른 모든 partial 선언에 정의된 이름과 일치해야 합니다.|  
 |`Of`|선택 사항입니다. 제네릭 형식임을 지정합니다. 참조 [Visual Basic의 제네릭 형식](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)합니다.|  
 |`typelist`|사용 하는 경우 필수 [의](../../../visual-basic/language-reference/statements/of-clause.md)합니다. 참조 [목록을 입력](../../../visual-basic/language-reference/statements/type-list.md)합니다.|  
 |`Inherits`|선택 사항입니다. 참조 [Inherits 문](../../../visual-basic/language-reference/statements/inherits-statement.md)합니다.|  

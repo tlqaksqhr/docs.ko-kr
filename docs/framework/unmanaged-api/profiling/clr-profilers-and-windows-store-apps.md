@@ -1,14 +1,6 @@
 ---
-title: "CLR 프로파일러 및 Windows 스토어 앱"
-ms.custom: 
+title: CLR 프로파일러 및 Windows 스토어 앱
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 applies_to:
@@ -20,17 +12,13 @@ helpviewer_keywords:
 - profiling managed code
 - profiling managed code [Windows Store Apps]
 ms.assetid: 1c8eb2e7-f20a-42f9-a795-71503486a0f5
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: d884b80ba8ccc42d1b6acc671db408305a095a7d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 20a1ed9b6b613b1e4d3e5363ab9995cc81295091
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="clr-profilers-and-windows-store-apps"></a>CLR 프로파일러 및 Windows 스토어 앱
 이 항목에서는 쓰기 진단 도구 분석 하는 Windows 스토어 응용 프로그램 내에서 실행 되는 코드를 관리 하는 경우에 대해 생각 하는 데 필요한 사항 설명 합니다.  또한 Windows 스토어 앱에 대해 실행 하면 작업을 계속 하도록 기존 개발 도구를 수정 하는 지침을 제공 합니다.  이 정보를 이해 하는 것이 좋습니다 Windows 데스크톱 응용 프로그램을 올바르게 실행 하는 도구 수정 하는 이제 관심 있는 진단 도구에서이 API를 이미 사용 중인 공용 언어 런타임 프로 파일링 API에 익숙한 경우 Windows 스토어 앱에 대해 올바르게를 실행 합니다.  
@@ -64,7 +52,7 @@ ms.lasthandoff: 12/22/2017
   
 <a name="Intro"></a>   
 ## <a name="introduction"></a>소개  
- 소개 단락 지나서 변경한 경우 다음 익숙한 CLR 프로 파일링 API입니다.  관리 되는 데스크톱 응용 프로그램에 따라 제대로 작동 하는 진단 도구로 이미 작성 합니다.  이제 자세한 내용을 보려면 도구에 관리 되는 Windows 스토어 앱과 함께 작동 하도록 해야 할 일입니다.  아마도이 작업을 간단한 작업 아닌지 가져 왔어 시도 이미 하셨습니다.  실제로, 모든 도구 개발자에 게 명확 하지 않을 수 있는 고려 사항에는 여러 가지가 있습니다.  예:  
+ 소개 단락 지나서 변경한 경우 다음 익숙한 CLR 프로 파일링 API입니다.  관리 되는 데스크톱 응용 프로그램에 따라 제대로 작동 하는 진단 도구로 이미 작성 합니다.  이제 자세한 내용을 보려면 도구에 관리 되는 Windows 스토어 앱과 함께 작동 하도록 해야 할 일입니다.  아마도이 작업을 간단한 작업 아닌지 가져 왔어 시도 이미 하셨습니다.  실제로, 모든 도구 개발자에 게 명확 하지 않을 수 있는 고려 사항에는 여러 가지가 있습니다.  예를 들어:  
   
 -   Windows 스토어 앱 심각 하 게 축소 된 권한으로 컨텍스트에서 실행 됩니다.  
   
@@ -154,7 +142,7 @@ NET Runtime version 4.0.30319.17929 - Loading profiler failed during CoCreateIns
  **Windows 스토어 응용 프로그램 프로필 선택**  
  첫째, 프로파일러 사용자에 게는 Windows 스토어 앱 시작을 요청 합니다.  데스크톱 응용 프로그램에 대 한 파일 찾아보기 대화 상자로 표시 됩니다는 아마도 및 사용자를 찾아.exe 파일을 선택 합니다.  하지만 Windows 스토어 앱은 서로 다르며 찾아보기 대화 상자를 사용 하 여은 바람직하지 않습니다.  대신, 사용자에서 선택 하려면 해당 사용자에 대해 설치 된 Windows 스토어 앱의 목록을 표시 하는 것이 좋습니다.  
   
- 사용할 수는 [PackageManager 클래스](https://msdn.microsoft.com/library/windows/apps/windows.management.deployment.packagemanager.aspx) 이 목록을 생성 합니다.  `PackageManager`데스크톱 응용 프로그램에 제공 되는 Windows 런타임 클래스 이며은 실제로 *만* 데스크톱 앱에 사용할 수 있습니다.  
+ 사용할 수는 [PackageManager 클래스](https://msdn.microsoft.com/library/windows/apps/windows.management.deployment.packagemanager.aspx) 이 목록을 생성 합니다.  `PackageManager` 데스크톱 응용 프로그램에 제공 되는 Windows 런타임 클래스 이며은 실제로 *만* 데스크톱 앱에 사용할 수 있습니다.  
   
  C# yses에서 데스크톱 응용 프로그램으로 작성 된 가상의 프로파일러 UI에서 다음 ode 예제는 `PackageManager` Windows 앱의 목록을 생성 하려면:  
   
@@ -178,9 +166,9 @@ pkgDebugSettings.EnableDebugging(packgeFullName, debuggerCommandLine,
   
  몇 가지를 올바르게 해야 하는 항목이 있습니다.  
   
--   `packageFullName`패키지를 반복 하 고를 클릭 한 다음 확인할 수 있습니다 `package.Id.FullName`합니다.  
+-   `packageFullName` 패키지를 반복 하 고를 클릭 한 다음 확인할 수 있습니다 `package.Id.FullName`합니다.  
   
--   `debuggerCommandLine`좀 더 흥미로운 부분입니다.  사용자 정의 환경 블록을 Windows 스토어 응용 프로그램에 전달 하기 위해 단순화 한 것을 직접 더미 디버거를 작성 해야 합니다.  Windows 스 폰을 Windows 스토어 응용 프로그램 일시 중단 하 고이 예제에서와 같은 명령줄 디버거를 시작 하 여 디버거를 연결 합니다.  
+-   `debuggerCommandLine` 좀 더 흥미로운 부분입니다.  사용자 정의 환경 블록을 Windows 스토어 응용 프로그램에 전달 하기 위해 단순화 한 것을 직접 더미 디버거를 작성 해야 합니다.  Windows 스 폰을 Windows 스토어 응용 프로그램 일시 중단 하 고이 예제에서와 같은 명령줄 디버거를 시작 하 여 디버거를 연결 합니다.  
   
     ```Output  
     MyDummyDebugger.exe -p 1336 -tid 1424  
@@ -326,7 +314,7 @@ tempDir = appData.TemporaryFolder.Path;
  **이벤트를 통해 통신**  
  프로파일러 UI 및 프로파일러 DLL 간의 간단한 신호 의미 체계를 사용 하도록 하려는 경우 Windows 스토어 응용 프로그램과 데스크톱 응용 프로그램 이벤트를 사용할 수 있습니다.  
   
- 프로파일러 DLL에서 호출 하면는 [CreateEventEx](https://msdn.microsoft.com/library/windows/desktop/ms682400\(v=vs.85\).aspx) 이름은 원하는 대로와 명명된 된 이벤트를 만들 함수입니다.  예:  
+ 프로파일러 DLL에서 호출 하면는 [CreateEventEx](https://msdn.microsoft.com/library/windows/desktop/ms682400\(v=vs.85\).aspx) 이름은 원하는 대로와 명명된 된 이벤트를 만들 함수입니다.  예를 들어:  
   
 ```cpp  
 // Profiler DLL in Windows Store app (C++).  
@@ -341,7 +329,7 @@ CreateEventEx(
   
  `AppContainerNamedObjects\<acSid>\MyNamedEvent`  
   
- `<acSid>`Windows 스토어 앱의 AppContainer SID입니다.  이 항목의 이전 단원에는 현재 사용자에 대해 설치 된 패키지에 대해 반복 하는 방법을 배웠습니다.  해당 샘플 코드에서의 패키지 Id를 가져올 수 있습니다.  패키지 Id를 가져올 수 있습니다는 `<acSid>` 다음과 유사한 코드:  
+ `<acSid>` Windows 스토어 앱의 AppContainer SID입니다.  이 항목의 이전 단원에는 현재 사용자에 대해 설치 된 패키지에 대해 반복 하는 방법을 배웠습니다.  해당 샘플 코드에서의 패키지 Id를 가져올 수 있습니다.  패키지 Id를 가져올 수 있습니다는 `<acSid>` 다음과 유사한 코드:  
   
 ```csharp  
 IntPtr acPSID;  
@@ -421,7 +409,7 @@ GetAppContainerFolderPath(acSid, out acDir);
  Windows 스토어 응용 프로그램 내에서 실행 되는 관리 되는 코드를 분석 하는 CLR 프로 파일링 API를 사용 하는 것이 불가능 합니다.  실제로 개발 하는 기존 프로파일러는 가져와 Windows 스토어 앱을 대상 수 있도록 몇 가지 특정 내용을 변경할 수 있습니다.   프로파일러 UI 디버깅 모드에서 Windows 스토어 앱을 활성화 하기 위한 새 Api를 사용 해야 합니다.  프로파일러 DLL만 해당 Api를 사용 Windows 스토어 앱에 적용할 수 있는지 확인 합니다.  Windows 스토어 응용 프로그램 API 제한 사항에 주 및 제한 된 권한 Windows 스토어 앱에 대 한 위치에 대 한 인식을 높이 프로파일러 DLL 및 프로파일러 UI 사이의 통신 메커니즘을 작성 되어야 합니다.  프로파일러 DLL이 CLR Winmd를 처리 하는 방법을 알고 있어야 하 고 가비지 수집기 동작 하는 방식과 관련 하 여 관리 되는 스레드입니다.  
   
 <a name="Resources"></a>   
-## <a name="resources"></a>리소스  
+## <a name="resources"></a>자료  
  **공용 언어 런타임**  
  -   [CLR 프로 파일링 API 참조](../../../../docs/framework/unmanaged-api/profiling/index.md)  
   

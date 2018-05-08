@@ -1,28 +1,19 @@
 ---
-title: '&#39; &lt;interfacename&gt;.&lt; membername&gt;&#39;은 기본 클래스 &#39; 의해 이미 구현&lt; baseclassname&gt;&#39;. 다시 구현 &lt;형식&gt; 가정'
+title: '&#39;&lt;interfacename&gt;.&lt; membername&gt; &#39; 기본 클래스에 의해 이미 구현 &#39; &lt;baseclassname&gt;&#39;합니다. 다시 구현 &lt;형식&gt; 가정'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vbc42015
 - bc42015
 helpviewer_keywords:
 - BC42015
 ms.assetid: 658c070a-113e-4bd8-b294-12c243191160
-caps.latest.revision: 12
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 69884ed567e0046da5cf5c51b3e83e57e890d49f
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 9054c293ede9db4637f23579407f2f76db29f2ba
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="39ltinterfacenamegtltmembernamegt39-is-already-implemented-by-the-base-class-39ltbaseclassnamegt39-re-implementation-of-lttypegt-assumed"></a>&#39; &lt;interfacename&gt;.&lt; membername&gt;&#39;은 기본 클래스 &#39; 의해 이미 구현&lt; baseclassname&gt;&#39;. 다시 구현 &lt;형식&gt; 가정
+# <a name="39ltinterfacenamegtltmembernamegt39-is-already-implemented-by-the-base-class-39ltbaseclassnamegt39-re-implementation-of-lttypegt-assumed"></a>&#39;&lt;interfacename&gt;.&lt; membername&gt; &#39; 기본 클래스에 의해 이미 구현 &#39; &lt;baseclassname&gt;&#39;합니다. 다시 구현 &lt;형식&gt; 가정
 속성, 프로시저 또는 파생된 클래스에서 이벤트를 사용 하는 `Implements` 절을 이미 기본 클래스에서 구현 된 인터페이스 멤버를 지정 합니다.  
   
  파생 클래스는 기본 클래스에 의해 구현된 인터페이스 멤버를 다시 구현할 수 있습니다. 이는 기본 클래스 구현 재정의와 다릅니다. 자세한 내용은 참조 [구현](../../../visual-basic/language-reference/statements/implements-clause.md)합니다.  

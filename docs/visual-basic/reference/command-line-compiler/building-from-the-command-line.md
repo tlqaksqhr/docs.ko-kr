@@ -1,12 +1,6 @@
 ---
 title: 명령줄에서 빌드(Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - builds [Visual Basic], command-line
 - Visual Basic compiler, about Visual Basic compiler
@@ -19,14 +13,11 @@ helpviewer_keywords:
 - command-line compilers [Visual Basic], Visual Basic
 - command line [Visual Basic], Visual Basic
 ms.assetid: e61947e9-a42e-4717-a699-5f70a98cdd03
-caps.latest.revision: 13
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 9a9dee47f06e4f7d9fc8d237376df7707130921d
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.openlocfilehash: 391e16da86aa741a1b78f35d9afd95688f33c4db
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="building-from-the-command-line-visual-basic"></a>명령줄에서 빌드(Visual Basic)
 Visual Basic 프로젝트는 하나 이상의 별도 소스 파일로 구성 됩니다. 컴파일 이라는 프로세스 동안 이러한 파일 통합할 하나의 패키지로-응용 프로그램으로 실행할 수 있는 단일 실행 파일입니다.  

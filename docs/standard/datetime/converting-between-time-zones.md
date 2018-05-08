@@ -1,13 +1,7 @@
 ---
-title: "표준 시간대 간 시간 변환"
-ms.custom: 
+title: 표준 시간대 간 시간 변환
 ms.date: 04/10/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -18,18 +12,13 @@ helpviewer_keywords:
 - converting times
 - local time conversions
 ms.assetid: a51e1a3b-c983-4320-b31a-1f9fa3cf824a
-caps.latest.revision: "19"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: eabe0c1511e6fd42798f1a879e9e8d526d543a29
-ms.sourcegitcommit: 91691981897cf8451033cb01071d8f5d94017f97
+ms.openlocfilehash: 7547f0c2dd3651e478bb52106640a7b4525afc29
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="converting-times-between-time-zones"></a>표준 시간대 간 시간 변환
 
@@ -133,7 +122,8 @@ UTC보다 다섯 시간 빠른 표준 시간대의 날짜 및 시간을 나타�
 [!code-csharp[System.DateTimeOffset.Conceptual.OffsetConversions#2](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual.OffsetConversions/cs/timeconversions2.cs#2)]
 [!code-vb[System.DateTimeOffset.Conceptual.OffsetConversions#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual.OffsetConversions/vb/TimeConversions2.vb#2)]
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참고자료
 
-<xref:System.TimeZoneInfo>[날짜, 시간 및 표준 시간대](../../../docs/standard/datetime/index.md)
+<xref:System.TimeZoneInfo>
+[날짜, 시간 및 표준 시간대](../../../docs/standard/datetime/index.md)
 [로컬 시스템에 정의 된 표준 시간대 찾기](../../../docs/standard/datetime/finding-the-time-zones-on-local-system.md)

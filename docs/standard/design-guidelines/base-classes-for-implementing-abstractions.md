@@ -1,29 +1,18 @@
 ---
 title: 추상화 구현을 위한 기본 클래스
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - abstractions [.NET Framework]
 - base classes, abstractions
 ms.assetid: 37a2d9a4-9721-482a-a40f-eee2c1d97875
-caps.latest.revision: 9
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 70d107d96576b8cafe9e76135c00bd2c635f2d7e
-ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
+ms.openlocfilehash: 8c247ed7273687dbd61a6f19923b71e07e9ed960
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="base-classes-for-implementing-abstractions"></a>추상화 구현을 위한 기본 클래스
 엄격히 말해서, 클래스는 다른 클래스에서 파생 된 경우 기본 클래스를 수 있습니다. 그러나이 섹션에서는 목적으로 기본 클래스는 클래스는 일반적인 추상화를 제공 합니다. 또는 일부를 다시 사용 다른 클래스에 대 한 기본 구현을 통해 상속을 주로. 일반적으로 기본 클래스 추상화 계층의 루트에 맨 아래에 몇 가지 사용자 지정 구현이 사이의 상속 계층 구조 가운데에 배치 합니다.  

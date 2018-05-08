@@ -1,22 +1,12 @@
 ---
-title: "(Visual Basic) 기간 이후 비동기 작업 취소"
-ms.custom: 
+title: (Visual Basic) 기간 이후 비동기 작업 취소
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: a48045a3-6a99-42af-b824-af340f0b9a5d
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: b8f479a0b8897ba86c4bd750c87afe15600e1df3
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 1be9f976c68db41526aea2fbf250ecd8c4e9521e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cancel-async-tasks-after-a-period-of-time-visual-basic"></a>(Visual Basic) 기간 이후 비동기 작업 취소
 작업이 완료될 때까지 대기하지 않으려는 경우 일정 기간 후에 <xref:System.Threading.CancellationTokenSource.CancelAfter%2A?displayProperty=nameWithType> 메서드를 사용하여 비동기 작업을 취소할 수 있습니다. 이 메서드는 `CancelAfter` 식으로 지정된 일정 기간 내에 완료되지 않은 연결된 작업의 취소를 예약합니다.  

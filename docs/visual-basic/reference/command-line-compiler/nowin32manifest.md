@@ -1,11 +1,6 @@
 ---
 title: -nowin32manifest (Visual Basic)
 ms.date: 03/13/2018
-ms.prod: .net
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - /nowin32manifest compiler option [Visual Basic]
 - nowin32manifest compiler option [Visual Basic]
@@ -13,11 +8,11 @@ helpviewer_keywords:
 ms.assetid: c0528aae-83b3-4425-99f0-19448e9843e3
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7c539f7833c86215a1b0f8102f9fc46419636bc7
-ms.sourcegitcommit: 498799639937c89de777361aab74261efe7b79ea
+ms.openlocfilehash: ba4abc4a94a4938d54b3c34fbea2a5041a99454f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="-nowin32manifest-visual-basic"></a>-nowin32manifest (Visual Basic)
 실행 파일에 응용 프로그램 매니페스트를 포함하지 않도록 컴파일러에 지시합니다.  

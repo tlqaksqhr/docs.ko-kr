@@ -1,11 +1,7 @@
 ---
-title: "BeginEnumeration 함수 (관리 되지 않는 API 참조)"
-description: "BeginEnumeration 함수 열거형의 시작 부분에는 열거자를 다시 설정"
+title: BeginEnumeration 함수 (관리 되지 않는 API 참조)
+description: BeginEnumeration 함수 열거형의 시작 부분에는 열거자를 다시 설정
 ms.date: 11/06/2017
-ms.prod: .net-framework
-ms.technology:
-- dotnet-clr
-ms.topic: reference
 api_name:
 - BeginEnumeration
 api_location:
@@ -20,14 +16,11 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 90c3e8448a61145290ea4a75b1d38f7ae010cb9f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 9699f0cfc4e9fdb989337681b164cc1e703c1e60
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="beginenumeration-function"></a>BeginEnumeration 함수
 열거형의 시작 부분는 열거자를 다시 설정합니다.  
@@ -49,7 +42,7 @@ HRESULT BeginEnumeration (
 `vFunc`  
 [in] 이 매개 변수를 사용 하지 않습니다.
 
-`ptr`[in] 에 대 한 포인터는 [IWbemClassObject](https://msdn.microsoft.com/library/aa391433%28v=vs.85%29.aspx) 인스턴스.
+`ptr` [in] 에 대 한 포인터는 [IWbemClassObject](https://msdn.microsoft.com/library/aa391433%28v=vs.85%29.aspx) 인스턴스.
 
 `lEnumFlags`  
 [in] 플래그 또는에 설명 된 값의 비트 조합은 [주의](#remarks) 열거형에 포함 된 속성을 제어 하는 섹션입니다.
@@ -108,7 +101,7 @@ HRESULT BeginEnumeration (
   
  **헤더:** WMINet_Utils.idl  
   
- **.NET framework 버전:**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **.NET framework 버전:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>참고자료  
 [WMI 및 성능 카운터 (관리 되지 않는 API 참조)](index.md)

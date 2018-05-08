@@ -1,29 +1,15 @@
 ---
 title: 독립 실행형 JSON Serialization
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 312bd7b2-1300-4b12-801e-ebe742bd2287
-caps.latest.revision: 32
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 4d3c7234c25b0a968ca67b58a560e8c8b55bb73d
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 5a157dfd55e722b3e7be967a26e8d2ff5fd54afe
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="stand-alone-json-serialization"></a>독립 실행형 JSON Serialization
-JSON (JavaScript Object Notation)은 브라우저 내의 웹 페이지에서 실행되는 JavaScript 코드에 의해 사용되도록 특별히 디자인된 데이터 형식이며 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]에서 만든 ASP.NET AJAX 서비스에 의해 사용되는 기본 데이터 형식입니다.  
+JSON (JavaScript Object Notation)은 브라우저 내의 웹 페이지에서 실행되는 JavaScript 코드에 의해 사용되도록 특별히 디자인된 데이터 형식이며 것은 Windows Communication Foundation (WCF)에서 만든 ASP.NET AJAX 서비스에서 사용 하는 기본 데이터 형식입니다.  
   
  이 형식은 ASP.NET과 결합하지 않고 AJAX 서비스를 만드는 경우에도 사용할 수 있습니다. 이 경우 XML이 기본값이지만 JSON을 선택할 수 있습니다.  
   
@@ -87,7 +73,7 @@ JSON (JavaScript Object Notation)은 브라우저 내의 웹 페이지에서 실
   
 -   <xref:System.Runtime.Serialization.CollectionDataContractAttribute>를 사용하는 모든 사용자 지정은 JSON 표현에서 무시됩니다.  
   
--   사전은 JSON에 직접 사용할 수 있는 방식이 아닙니다. 사전\<문자열, o b j > 지원 되지 않는 동일한 방식 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 에서 다른 JSON 기술로 작업할 예상 합니다. 예를 들어 "abc"가 "xyz"로 매핑되고 "def"가 사전의 42로 매핑되는 경우 JSON 표현은 {"abc":"xyz","def":42}가 아니라 [{"Key":"abc","Value":"xyz"},{"Key":"def","Value":42}]입니다.  
+-   사전은 JSON에 직접 사용할 수 있는 방식이 아닙니다. 사전\<문자열, o b j >에서 다른 JSON 기술로 작업할 예상 대로 WCF에서 동일한 방식으로 지원 되지 않습니다. 예를 들어 "abc"가 "xyz"로 매핑되고 "def"가 사전의 42로 매핑되는 경우 JSON 표현은 {"abc":"xyz","def":42}가 아니라 [{"Key":"abc","Value":"xyz"},{"Key":"def","Value":42}]입니다.  
   
 -   JSON으로 직접 작업하려는 경우(엄격한 계약을 미리 정의하지 않고 키 및 값에 동적으로 액세스하는 경우) 다음과 같은 몇 가지 옵션이 있습니다.  
   
@@ -108,7 +94,7 @@ JSON (JavaScript Object Notation)은 브라우저 내의 웹 페이지에서 실
  deserialization 시 JSON 형식은 위의 표와 일치하지 않아도 됩니다. 예를 들어 `Int`는 일반적으로 JSON 숫자로 매핑되지만 JSON 문자열에 유효한 숫자가 있으면 이 문자열에서 deserialize할 수도 있습니다. 즉, "q"라고 하는 `Int` 데이터 멤버가 있는 경우 {"q":42} 및 {"q":"42"}는 유효합니다.  
   
 ### <a name="polymorphism"></a>다형성  
- 다형 serialization은 기본 형식이 필요한 경우에 파생 형식을 serialize하는 기능으로 구성됩니다. 다형 serialization은 XML serialization이 지원되는 방식과 비슷하게 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서 JSON serialization에 대해 지원됩니다. 예를 들어, serialize 할 수 있습니다 `MyDerivedType` 여기서 `MyBaseType` 가 serialize 하거나 `Int` 여기서 `Object` 가 필요 합니다.  
+ 다형 serialization은 기본 형식이 필요한 경우에 파생 형식을 serialize하는 기능으로 구성됩니다. 이 XML serialization은 지원 방식과 비슷하게 WCF에서 JSON serialization에 대 한 지원 됩니다. 예를 들어, serialize 할 수 있습니다 `MyDerivedType` 여기서 `MyBaseType` 가 serialize 하거나 `Int` 여기서 `Object` 가 필요 합니다.  
   
  복합 형식을 deserialize하지 않는 한 기본 형식이 필요한 경우에 파생 형식을 deserialize하면 형식 정보가 손실될 수도 있습니다. 예를 들어 <xref:System.Uri>가 필요한 경우 <xref:System.Object>를 serialize하면 JSON 문자열이 됩니다. 이 문자열을 다시 <xref:System.Object>로 deserialize하면 .NET <xref:System.String>이 반환됩니다. deserializer는 문자열이 처음에 <xref:System.Uri> 형식이었음을 인식하지 못합니다. 일반적으로 <xref:System.Object>가 필요한 경우 실제 원본 형식에 관계없이 모든 JSON 문자열은 .NET 문자열로 deserialize되고 .NET 컬렉션, 사전 및 배열을 serialize하는 데 사용되는 모든 JSON 배열은 <xref:System.Array> 형식의 .NET <xref:System.Object>로 deserialize됩니다. JSON 부울은 .NET <xref:System.Boolean>로 매핑됩니다. 그러나 <xref:System.Object>가 필요한 경우 JSON 숫자는 .NET <xref:System.Int32>, <xref:System.Decimal> 또는 <xref:System.Double>로 deserialize되며, 이때 가장 적합한 형식이 자동으로 선택됩니다.  
   
@@ -151,7 +137,7 @@ http://example.com/myservice.svc/MyOperation?number=7&p={"name":"John","age":42}
   
  ASP.NET AJAX 클라이언트 JavaScript 코드는 이러한 문자열을 JavaScript `DateTime` 인스턴스로 자동으로 변환합니다. .NET에 <xref:System.DateTime> 형식이 아닌 유사한 형식을 지닌 다른 문자열이 있는 경우 이 문자열 또한 변환됩니다.  
   
- 유일한 수행한 "/" 문자는 이스케이프 하는 경우 변환 (JSON의 모양 즉, "\\/Date(700000+0500)\\/"), 및 이러한 이유로 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]의 JSON 인코더 (으로 사용할 수는 <xref:System.ServiceModel.WebHttpBinding>)를 항상 이스케이프는 "/" 문자입니다.  
+ 유일한 수행한 "/" 문자는 이스케이프 하는 경우 변환 (JSON의 모양 즉, "\\/Date(700000+0500)\\/"), 및이 이유 WCF의 JSON 인코더에 대 한 (으로 사용할 수는 <xref:System.ServiceModel.WebHttpBinding>) "/" 문자를 항상 이스케이프 합니다.  
   
 ### <a name="xml-in-json-strings"></a>JSON 문자열의 XML  
   
@@ -209,7 +195,7 @@ http://example.com/myservice.svc/MyOperation?number=7&p={"name":"John","age":42}
 {"x":50,"y":70,"radius":10,"__type":"Circle:#MyApp.Shapes"}  
 ```  
   
- <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>에서 사용되는 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]와 ASP.NET AJAX 클라이언트 페이지는 모두 항상 형식 힌트를 첫 번째로 내보냅니다.  
+ 두는 <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> WCF 및 ASP.NET AJAX에서 사용 하는 클라이언트 페이지 항상 내보내고 형식 힌트 먼저 합니다.  
   
 #### <a name="type-hints-apply-only-to-complex-types"></a>형식 힌트는 복합 형식에만 적용  
  복합 형식이 아닌 경우에는 형식 힌트를 내보낼 수 없습니다. 예를 들어, 작업에 <xref:System.Object> 반환 형식이 있지만 Circle을 반환하는 경우 JSON 표현은 앞에서 보여 준 것과 같을 수 있으며 형식 정보는 유지됩니다. 그러나 URI가 반환되는 경우 JSON 표현은 문자열이고 URI를 표현하는 데 사용된 문자열은 손실됩니다. 이것은 기본 형식뿐 아니라 컬렉션 및 배열에도 적용됩니다.  

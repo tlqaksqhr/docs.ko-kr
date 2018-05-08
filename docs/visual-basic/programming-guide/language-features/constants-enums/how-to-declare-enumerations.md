@@ -1,25 +1,16 @@
 ---
-title: "방법: 열거형 선언(Visual Basic)"
-ms.custom: 
+title: '방법: 열거형 선언(Visual Basic)'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - declarations [Visual Basic], enumerations
 - enumerations [Visual Basic], declaring
 - declaring enumerations [Visual Basic]
 ms.assetid: db4ca1c3-f429-4c81-ae81-29e0157b29fd
-caps.latest.revision: "24"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 938550ebbfcf099729db3de96b809549cb234d81
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: e2dbdbbf6bf7fe3e4b71cbe7edc7a19b18f96ef2
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-declare-enumerations-visual-basic"></a>방법: 열거형 선언(Visual Basic)
 구성 된 열거형을 만들면는 `Enum` 클래스 또는 모듈 선언 섹션에서 설명 합니다. 메서드 내에서 열거형을 선언할 수 없습니다. 적절 한 액세스 수준을 지정 하려면 `Private`, `Protected`, `Friend`, 또는 `Public`합니다.  

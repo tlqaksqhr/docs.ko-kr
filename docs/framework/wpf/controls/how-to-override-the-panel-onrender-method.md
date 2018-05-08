@@ -1,13 +1,6 @@
 ---
-title: "방법: Panel의 OnRender 메서드 재정의"
-ms.custom: 
+title: '방법: Panel의 OnRender 메서드 재정의'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -21,21 +14,16 @@ helpviewer_keywords:
 - OnRender method [WPF], overriding
 - Panel control [WPF], overriding OnRender method
 ms.assetid: 57397834-a085-4e36-90ab-416fad98f341
-caps.latest.revision: "9"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 958595cdfa521b372270d6283c7134ef0ba0ef79
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: e591bc195d3b0ba58002bda42ddb3e9ed35d312e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-override-the-panel-onrender-method"></a>방법: Panel의 OnRender 메서드 재정의
 재정의 하는 방법을 보여 주는이 예제는 <xref:System.Windows.Controls.Panel.OnRender%2A> 방식의 <xref:System.Windows.Controls.Panel> 레이아웃 요소를 사용자 지정 그래픽 효과 추가 하기 위해 합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  사용 된 <xref:System.Windows.Controls.Panel.OnRender%2A> 그래픽 효과 렌더링된 된 패널 요소를 추가 하기 위해 메서드. 예를 들어 사용자 지정 테두리 또는 배경 효과 추가 하려면이 메서드를 사용할 수 있습니다. A <xref:System.Windows.Media.DrawingContext> 개체 도형, 텍스트, 이미지 또는 비디오를 그리기 위한 메서드를 제공 하는 인수로 전달 됩니다. 결과적으로,이 방법은 패널 개체의 사용자 지정 하는 데 유용 합니다.  
   
  [!code-csharp[LightWeightCustomPanel#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/LightWeightCustomPanel/CSharp/OffsetPanel.cs#1)]

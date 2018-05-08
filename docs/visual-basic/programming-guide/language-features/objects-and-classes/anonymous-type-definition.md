@@ -1,24 +1,14 @@
 ---
 title: 익명 형식 정의(Visual Basic)
-ms.custom: ''
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - anonymous types [Visual Basic], type definition
 ms.assetid: 7a8a0ddc-55ba-4d67-869e-87a84d938bac
-caps.latest.revision: 21
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 8b5b7eba55d719c1482b7224ecffc78b776feb00
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 179fb9773fde2631666498d54894037b2bbfd087
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="anonymous-type-definition-visual-basic"></a>익명 형식 정의(Visual Basic)
 익명 형식의 인스턴스 선언에 대 한 응답, 컴파일러는 형식에 대 한 지정 된 속성을 포함 하는 새 클래스 정을 만듭니다.  
@@ -63,7 +53,7 @@ End Class
   
  형식 정의에서 상속 되며, 세 가지 멤버를 재정의 무명 형식 선언 키 속성이 하나 이상 들어 있을 경우 <xref:System.Object>: <xref:System.Object.Equals%2A>, <xref:System.Object.GetHashCode%2A>, 및 <xref:System.Object.ToString%2A>합니다. 만 키 속성이 없는 선언 된 경우 <xref:System.Object.ToString%2A> 재정의 됩니다. 재정의 다음 기능을 제공 합니다.  
   
--   `Equals`반환 `True` 두 익명 형식 인스턴스는 동일한 인스턴스 또는 다음 조건을 충족 하는 경우:  
+-   `Equals` 반환 `True` 두 익명 형식 인스턴스는 동일한 인스턴스 또는 다음 조건을 충족 하는 경우:  
   
     -   동일한 수의 속성을 갖게 됩니다.  
   
@@ -77,9 +67,9 @@ End Class
   
      [!code-vb[VbVbalrAnonymousTypes#24](../../../../visual-basic/language-reference/modifiers/codesnippet/VisualBasic/anonymous-type-definition_2.vb)]  
   
--   `GetHashcode`적절 하 게 고유 GetHashCode 알고리즘을 제공합니다. 알고리즘 해시 코드를 계산 하는 키 속성만 사용 합니다.  
+-   `GetHashcode` 적절 하 게 고유 GetHashCode 알고리즘을 제공합니다. 알고리즘 해시 코드를 계산 하는 키 속성만 사용 합니다.  
   
--   `ToString`다음 예제와 같이 연결 된 속성 값의 문자열을 반환 합니다. 키와 키가 아닌 속성이 포함 됩니다.  
+-   `ToString` 다음 예제와 같이 연결 된 속성 값의 문자열을 반환 합니다. 키와 키가 아닌 속성이 포함 됩니다.  
   
      [!code-vb[VbVbalrAnonymousTypes#29](../../../../visual-basic/language-reference/modifiers/codesnippet/VisualBasic/anonymous-type-definition_3.vb)]  
   

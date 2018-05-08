@@ -1,22 +1,12 @@
 ---
-title: "방법: 스레드 풀 (Visual Basic)를 사용 하 여"
-ms.custom: 
+title: '방법: 스레드 풀 (Visual Basic)를 사용 하 여'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 90a0bb24-39f8-41f5-a217-b52a7d4fed0b
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 42a4120900203eb7eb5ad8463fba4491636882b1
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: a61defc2e40662d7fdadb40693e757fa559adb6a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-use-a-thread-pool-visual-basic"></a>방법: 스레드 풀 (Visual Basic)를 사용 하 여
 *스레드 풀링*은 스레드를 만들 때 자동으로 시작되고 작업이 큐에 추가되는 다중 스레딩의 한 형태입니다. 자세한 내용은 참조 [(Visual Basic) 풀링 스레드](../../../../visual-basic/programming-guide/concepts/threading/thread-pooling.md)합니다.  

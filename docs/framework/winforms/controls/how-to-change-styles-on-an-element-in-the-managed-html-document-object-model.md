@@ -1,31 +1,17 @@
 ---
 title: '방법: 관리되는 HTML 문서 개체 모델의 요소에 대한 스타일 변경'
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-winforms
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - managed HTML DOM [Windows Forms], changing styles on elements
 ms.assetid: 154e8d9f-3e2d-4e8b-a6f3-c85a070e9cc1
-caps.latest.revision: 7
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: e833a15e33d0baf80f0078b26758137e7908a8fd
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.openlocfilehash: 9ecb6b90508ca53e3801a633ac2444426e2f8113
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-change-styles-on-an-element-in-the-managed-html-document-object-model"></a>방법: 관리되는 HTML 문서 개체 모델의 요소에 대한 스타일 변경
 모양을 제어 하는 문서 및 해당 요소의 html에서 스타일을 사용할 수 있습니다. <xref:System.Windows.Forms.HtmlDocument> 및 <xref:System.Windows.Forms.HtmlElement> 지원 <xref:System.Windows.Forms.HtmlElement.Style%2A> 는 다음과 같은 형식의 스타일 문자열을 사용 하는 속성:  

@@ -1,33 +1,21 @@
 ---
-title: "방법: 선형 그라데이션으로 영역 그리기"
-ms.custom: 
+title: '방법: 선형 그라데이션으로 영역 그리기'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - linear gradients [WPF], painting with
 - brushes [WPF], painting with linear gradients
 - painting [WPF], with linear gradients
 ms.assetid: 00e0cd04-48c0-4ec5-850e-d321beb37a34
-caps.latest.revision: "11"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: eec4ec2fc7ba99081eaafa6803d20c99bebc6c2f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ec07a0c33468681f67d086ec3d1d58b378412ff9
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-paint-an-area-with-a-linear-gradient"></a>방법: 선형 그라데이션으로 영역 그리기
 사용 하는 방법을 보여 주는이 예제는 <xref:System.Windows.Media.LinearGradientBrush> 선형 그라데이션으로 영역을 그리는 클래스입니다. 다음 예제에서는 <xref:System.Windows.Shapes.Shape.Fill%2A> 의 <xref:System.Windows.Shapes.Rectangle> 노란색에서 파랑 라임 녹색으로 빨간색으로 전환 되 대각선 선형 그라데이션으로 그려집니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  [!code-xaml[GradientBrushExamples_snip#DiagonalGradient1XAML](../../../../samples/snippets/xaml/VS_Snippets_Wpf/GradientBrushExamples_snip/XAML/LinearGradientBrushExample.xaml#diagonalgradient1xaml)]  
   
  [!code-csharp[GradientBrushExamples_snip#DiagonalGradient1CSharp](../../../../samples/snippets/csharp/VS_Snippets_Wpf/GradientBrushExamples_snip/CSharp/LinearGradientBrushExample.cs#diagonalgradient1csharp)]  

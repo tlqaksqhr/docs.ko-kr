@@ -1,13 +1,6 @@
 ---
-title: "유동 문서 개요"
-ms.custom: 
+title: 유동 문서 개요
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -16,16 +9,11 @@ helpviewer_keywords:
 - ', '
 - flow documents [WPF]
 ms.assetid: ef236a50-d44f-43c8-ba7c-82b0c733c0b7
-caps.latest.revision: "39"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a99bd2336de41366d27c15e4bc4cfb2b2aff3cd0
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 0cf8944298af62a512599fc52998a046c66fed9b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="flow-document-overview"></a>유동 문서 개요
 유동 문서는 보기와 가독성을 최적화하도록 설계되었습니다. 유동 문서는 미리 정의된 하나의 레이아웃으로 설정되는 것이 아니라, 창 크기, 장치 해상도 및 선택적 사용자 기본 설정 등의 런타임 변수에 따라 동적으로 콘텐츠를 조정하고 리플로우합니다. 유동 문서에서는 페이지 매김 및 열과 같은 고급 문서 기능을 제공합니다. 이 항목에서는 유동 문서의 개요와 해당 문서를 작성하는 방법을 제공합니다.  
@@ -69,13 +57,13 @@ ms.lasthandoff: 12/22/2017
 ## <a name="flow-document-types"></a>유동 문서 형식  
  유동 문서 콘텐츠 표시 및 표시 방법은 유동 콘텐츠를 호스트하는 데 사용되는 개체에 따라 달라집니다. 유동 콘텐츠 보기를 지 원하는 컨트롤을 4 개의: <xref:System.Windows.Controls.FlowDocumentReader>, <xref:System.Windows.Controls.FlowDocumentPageViewer>, <xref:System.Windows.Controls.RichTextBox>, 및 <xref:System.Windows.Controls.FlowDocumentScrollViewer>합니다. 이러한 컨트롤은 아래에서 간략하게 설명합니다.  
   
- **참고:** <xref:System.Windows.Documents.FlowDocument> 되므로 이러한 컨트롤 보기의 모든 직접 호스트 유동 콘텐츠를 해야 하는 한 <xref:System.Windows.Documents.FlowDocument> 흐름 콘텐츠 호스트할 수 있도록 합니다.
+ **참고:** <xref:System.Windows.Documents.FlowDocument> 되므로 이러한 컨트롤 보기의 모든 직접 호스트 유동 콘텐츠를 해야 하는 한 <xref:System.Windows.Documents.FlowDocument> 흐름 콘텐츠 호스트할 수 있도록 합니다.  
   
 ### <a name="flowdocumentreader"></a>FlowDocumentReader  
- <xref:System.Windows.Controls.FlowDocumentReader>사용자가 동적으로 단일 페이지 (페이지-에-) 보기 모드를 한 번에 두 페이지 (책 읽기 형식) 보기 모드 및 연속 스크롤 (바닥 없음) 보기 모드를 포함 하 여 다양 한 보기 모드 사이 선택할 수 있는 기능이 포함 되어 있습니다. 이러한 보기 모드에 대 한 자세한 내용은 참조 하십시오. <xref:System.Windows.Controls.FlowDocumentReaderViewingMode>합니다. 동적으로 다른 보기 모드 사이 전환 하는 기능이 필요 하지 않은 경우 <xref:System.Windows.Controls.FlowDocumentPageViewer> 및 <xref:System.Windows.Controls.FlowDocumentScrollViewer> 간단한 유동 특정 보기 모드에서 수정 된 콘텐츠 뷰어를 제공 합니다.  
+ <xref:System.Windows.Controls.FlowDocumentReader> 사용자가 동적으로 단일 페이지 (페이지-에-) 보기 모드를 한 번에 두 페이지 (책 읽기 형식) 보기 모드 및 연속 스크롤 (바닥 없음) 보기 모드를 포함 하 여 다양 한 보기 모드 사이 선택할 수 있는 기능이 포함 되어 있습니다. 이러한 보기 모드에 대 한 자세한 내용은 참조 하십시오. <xref:System.Windows.Controls.FlowDocumentReaderViewingMode>합니다. 동적으로 다른 보기 모드 사이 전환 하는 기능이 필요 하지 않은 경우 <xref:System.Windows.Controls.FlowDocumentPageViewer> 및 <xref:System.Windows.Controls.FlowDocumentScrollViewer> 간단한 유동 특정 보기 모드에서 수정 된 콘텐츠 뷰어를 제공 합니다.  
   
 ### <a name="flowdocumentpageviewer-and-flowdocumentscrollviewer"></a>FlowDocumentPageViewer 및 FlowDocumentScrollViewer  
- <xref:System.Windows.Controls.FlowDocumentPageViewer>콘텐츠 페이지 런타임을 표시 하는 동안 보기 모드로 <xref:System.Windows.Controls.FlowDocumentScrollViewer> 콘텐츠 연속 스크롤 모드를 표시 합니다. 둘 다 <xref:System.Windows.Controls.FlowDocumentPageViewer> 및 <xref:System.Windows.Controls.FlowDocumentScrollViewer> 특정 보기 모드에 고정 됩니다. 비교할 <xref:System.Windows.Controls.FlowDocumentReader>, 사용자 동적으로 다양 한 보기 모드 중에서 선택할 수 있는 기능이 포함 되어 (에서 제공 됨는 <xref:System.Windows.Controls.FlowDocumentReaderViewingMode> 열거형), 더 많은 리소스를 보다 많이 사용 되 고 커밋되지만 <xref:System.Windows.Controls.FlowDocumentPageViewer> 또는 <xref:System.Windows.Controls.FlowDocumentScrollViewer>합니다.  
+ <xref:System.Windows.Controls.FlowDocumentPageViewer> 콘텐츠 페이지 런타임을 표시 하는 동안 보기 모드로 <xref:System.Windows.Controls.FlowDocumentScrollViewer> 콘텐츠 연속 스크롤 모드를 표시 합니다. 둘 다 <xref:System.Windows.Controls.FlowDocumentPageViewer> 및 <xref:System.Windows.Controls.FlowDocumentScrollViewer> 특정 보기 모드에 고정 됩니다. 비교할 <xref:System.Windows.Controls.FlowDocumentReader>, 사용자 동적으로 다양 한 보기 모드 중에서 선택할 수 있는 기능이 포함 되어 (에서 제공 됨는 <xref:System.Windows.Controls.FlowDocumentReaderViewingMode> 열거형), 더 많은 리소스를 보다 많이 사용 되 고 커밋되지만 <xref:System.Windows.Controls.FlowDocumentPageViewer> 또는 <xref:System.Windows.Controls.FlowDocumentScrollViewer>합니다.  
   
  기본적으로 세로 스크롤 막대는 항상 표시되며 가로 스크롤 막대는 필요한 경우 표시됩니다. 기본값에 대 한 UI <xref:System.Windows.Controls.FlowDocumentScrollViewer> 도구 모음을 포함 하지 않습니다; 그러나는 <xref:System.Windows.Controls.FlowDocumentScrollViewer.IsToolBarVisible%2A> 기본 제공 도구 모음을 사용 하도록 설정 하려면 속성을 사용할 수 있습니다.  
   
@@ -111,7 +99,7 @@ ms.lasthandoff: 12/22/2017
 ### <a name="block-derived-classes"></a>블록 파생 클래스  
  **단락**  
   
- <xref:System.Windows.Documents.Paragraph>대개 사용 그룹 콘텐츠를 단락으로 합니다. 가장 간단하고 가장 일반적으로 단락을 이용하는 경우는 텍스트 단락을 만드는 것입니다.  
+ <xref:System.Windows.Documents.Paragraph> 대개 사용 그룹 콘텐츠를 단락으로 합니다. 가장 간단하고 가장 일반적으로 단락을 이용하는 경우는 텍스트 단락을 만드는 것입니다.  
   
  [!code-xaml[FlowOvwSnippets_snip#ParagraphExampleWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/FlowOvwSnippets_snip/CS/ParagraphExample.xaml#paragraphexamplewholepage)]  
   
@@ -122,7 +110,7 @@ ms.lasthandoff: 12/22/2017
   
  **섹션**  
   
- <xref:System.Windows.Documents.Section>다른 포함 하기 위해서만 사용 되는 <xref:System.Windows.Documents.Block>-요소를 파생 합니다. 포함된 요소에 기본 서식 지정을 적용하지 않습니다. 그러나 모든 속성 값 집합에는 <xref:System.Windows.Documents.Section> 해당 자식 요소에 적용 됩니다. 또한 섹션을 사용하면 프로그래밍 방식으로 자식 컬렉션을 반복할 수 있습니다. <xref:System.Windows.Documents.Section>에 비슷한 방법으로 사용 되는 \<DIV > html에서 태그입니다.  
+ <xref:System.Windows.Documents.Section> 다른 포함 하기 위해서만 사용 되는 <xref:System.Windows.Documents.Block>-요소를 파생 합니다. 포함된 요소에 기본 서식 지정을 적용하지 않습니다. 그러나 모든 속성 값 집합에는 <xref:System.Windows.Documents.Section> 해당 자식 요소에 적용 됩니다. 또한 섹션을 사용하면 프로그래밍 방식으로 자식 컬렉션을 반복할 수 있습니다. <xref:System.Windows.Documents.Section> 에 비슷한 방법으로 사용 되는 \<DIV > html에서 태그입니다.  
   
  아래 예제에서는 세 개의 단락 하나에 정의 된 <xref:System.Windows.Documents.Section>합니다. 섹션에 있는 한 <xref:System.Windows.Documents.TextElement.Background%2A> 속성 값이 빨간색으로 단락의 배경색에 따라서 빨간색 이기도 합니다.  
   
@@ -133,7 +121,7 @@ ms.lasthandoff: 12/22/2017
   
  **BlockUIContainer**  
   
- <xref:System.Windows.Documents.BlockUIContainer>수 있도록 <xref:System.Windows.UIElement> 요소 (즉, 한 <xref:System.Windows.Controls.Button>) 블록 파생 유동 콘텐츠 내에 포함 될 수 있습니다. <xref:System.Windows.Documents.InlineUIContainer>(아래 참조)는 포함 하는 데 사용 되 <xref:System.Windows.UIElement> 인라인 파생 유동 콘텐츠 요소입니다. <xref:System.Windows.Documents.BlockUIContainer>및 <xref:System.Windows.Documents.InlineUIContainer> 은 사용 하는 다른 방법이 없기 때문에 중요 한 <xref:System.Windows.UIElement> 이러한 두 요소 중 어느 하나에 포함 되지 않은 콘텐츠 흐름에서.  
+ <xref:System.Windows.Documents.BlockUIContainer> 수 있도록 <xref:System.Windows.UIElement> 요소 (즉, 한 <xref:System.Windows.Controls.Button>) 블록 파생 유동 콘텐츠 내에 포함 될 수 있습니다. <xref:System.Windows.Documents.InlineUIContainer> (아래 참조)는 포함 하는 데 사용 되 <xref:System.Windows.UIElement> 인라인 파생 유동 콘텐츠 요소입니다. <xref:System.Windows.Documents.BlockUIContainer> 및 <xref:System.Windows.Documents.InlineUIContainer> 은 사용 하는 다른 방법이 없기 때문에 중요 한 <xref:System.Windows.UIElement> 이러한 두 요소 중 어느 하나에 포함 되지 않은 콘텐츠 흐름에서.  
   
  사용 하는 방법을 보여 주는 다음 예제는 <xref:System.Windows.Documents.BlockUIContainer> 요소 호스트를 <xref:System.Windows.UIElement> 유동 콘텐츠 내에서 개체입니다.  
   
@@ -145,7 +133,7 @@ ms.lasthandoff: 12/22/2017
   
  **목록**  
   
- <xref:System.Windows.Documents.List>글머리 기호 또는 숫자 목록을 만드는 데 사용 됩니다. 설정의 <xref:System.Windows.Documents.List.MarkerStyle%2A> 속성을는 <xref:System.Windows.TextMarkerStyle> 열거형 값의 목록 스타일을 결정 합니다. 아래 예에서는 간단한 목록을 만드는 방법을 보여줍니다.  
+ <xref:System.Windows.Documents.List> 글머리 기호 또는 숫자 목록을 만드는 데 사용 됩니다. 설정의 <xref:System.Windows.Documents.List.MarkerStyle%2A> 속성을는 <xref:System.Windows.TextMarkerStyle> 열거형 값의 목록 스타일을 결정 합니다. 아래 예에서는 간단한 목록을 만드는 방법을 보여줍니다.  
   
  [!code-xaml[FlowOvwSnippets_snip#ListExampleWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/FlowOvwSnippets_snip/CS/ListExample.xaml#listexamplewholepage)]  
   
@@ -156,12 +144,12 @@ ms.lasthandoff: 12/22/2017
   
  **Table**  
   
- <xref:System.Windows.Documents.Table>테이블을 만드는 데 사용 됩니다. <xref:System.Windows.Documents.Table>비슷합니다는 <xref:System.Windows.Controls.Grid> 요소 하지만 더 많은 기능이 있으며, 따라서 큰 리소스 오버 헤드가 필요 합니다. 때문에 <xref:System.Windows.Controls.Grid> 는 <xref:System.Windows.UIElement>에 포함 되지 않은 유동 콘텐츠를 사용할 수 없습니다는 <xref:System.Windows.Documents.BlockUIContainer> 또는 <xref:System.Windows.Documents.InlineUIContainer>합니다. 대 한 자세한 내용은 <xref:System.Windows.Documents.Table>, 참조 [테이블 개요](../../../../docs/framework/wpf/advanced/table-overview.md)합니다.  
+ <xref:System.Windows.Documents.Table> 테이블을 만드는 데 사용 됩니다. <xref:System.Windows.Documents.Table> 비슷합니다는 <xref:System.Windows.Controls.Grid> 요소 하지만 더 많은 기능이 있으며, 따라서 큰 리소스 오버 헤드가 필요 합니다. 때문에 <xref:System.Windows.Controls.Grid> 는 <xref:System.Windows.UIElement>에 포함 되지 않은 유동 콘텐츠를 사용할 수 없습니다는 <xref:System.Windows.Documents.BlockUIContainer> 또는 <xref:System.Windows.Documents.InlineUIContainer>합니다. 대 한 자세한 내용은 <xref:System.Windows.Documents.Table>, 참조 [테이블 개요](../../../../docs/framework/wpf/advanced/table-overview.md)합니다.  
   
 ### <a name="inline-derived-classes"></a>인라인 파생 클래스  
  **실행**  
   
- <xref:System.Windows.Documents.Run>서식 없는 텍스트를 포함 하는 데 사용 됩니다. 예상 대로 <xref:System.Windows.Documents.Run> 유동 콘텐츠 개체를에서 광범위 하 게 사용할 수 있습니다. 그러나 태그에서에서 <xref:System.Windows.Documents.Run> 요소가 명시적으로 사용 하는 데 필요 합니다. <xref:System.Windows.Documents.Run>코드를 사용 하 여 유동 문서를 조작 하거나 만들 때 사용 해야 합니다. 예를 들어, 첫 번째 항목 아래 태그에서에서 <xref:System.Windows.Documents.Paragraph> 지정는 <xref:System.Windows.Documents.Run> 되지만 명시적으로 두 번째 요소는 그렇지 않습니다. 두 단락 모두 동일한 출력을 생성합니다.  
+ <xref:System.Windows.Documents.Run> 서식 없는 텍스트를 포함 하는 데 사용 됩니다. 예상 대로 <xref:System.Windows.Documents.Run> 유동 콘텐츠 개체를에서 광범위 하 게 사용할 수 있습니다. 그러나 태그에서에서 <xref:System.Windows.Documents.Run> 요소가 명시적으로 사용 하는 데 필요 합니다. <xref:System.Windows.Documents.Run> 코드를 사용 하 여 유동 문서를 조작 하거나 만들 때 사용 해야 합니다. 예를 들어, 첫 번째 항목 아래 태그에서에서 <xref:System.Windows.Documents.Paragraph> 지정는 <xref:System.Windows.Documents.Run> 되지만 명시적으로 두 번째 요소는 그렇지 않습니다. 두 단락 모두 동일한 출력을 생성합니다.  
   
  [!code-xaml[FlowOvwSnippets_snip#RunExample1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/FlowOvwSnippets_snip/CS/RunSnippetsExample.xaml#runexample1)]  
   
@@ -169,7 +157,7 @@ ms.lasthandoff: 12/22/2017
   
  **Span**  
   
- <xref:System.Windows.Documents.Span>다른 인라인 콘텐츠 요소를 그룹화합니다. 고유 없습니다 렌더링이 내 콘텐츠의 적용 되는 <xref:System.Windows.Documents.Span> 요소입니다. 그러나 요소에서 상속 되는 <xref:System.Windows.Documents.Span> 포함 하 여 <xref:System.Windows.Documents.Hyperlink>, <xref:System.Windows.Documents.Bold>, <xref:System.Windows.Documents.Italic> 및 <xref:System.Windows.Documents.Underline> 텍스트에 서식을 적용지 않습니다.  
+ <xref:System.Windows.Documents.Span> 다른 인라인 콘텐츠 요소를 그룹화합니다. 고유 없습니다 렌더링이 내 콘텐츠의 적용 되는 <xref:System.Windows.Documents.Span> 요소입니다. 그러나 요소에서 상속 되는 <xref:System.Windows.Documents.Span> 포함 하 여 <xref:System.Windows.Documents.Hyperlink>, <xref:System.Windows.Documents.Bold>, <xref:System.Windows.Documents.Italic> 및 <xref:System.Windows.Documents.Underline> 텍스트에 서식을 적용지 않습니다.  
   
  다음은의 예는 <xref:System.Windows.Documents.Span> 텍스트를 포함 하 여 인라인 콘텐츠를 포함 하는 데 사용 되는 <xref:System.Windows.Documents.Bold> 요소 및 <xref:System.Windows.Controls.Button>합니다.  
   
@@ -181,7 +169,7 @@ ms.lasthandoff: 12/22/2017
   
  **InlineUIContainer**  
   
- <xref:System.Windows.Documents.InlineUIContainer>수 있도록 <xref:System.Windows.UIElement> 요소 (예:과 같은 컨트롤 <xref:System.Windows.Controls.Button>)에 포함할는 <xref:System.Windows.Documents.Inline> 콘텐츠 요소입니다. 이 요소는 해당 하는 인라인 <xref:System.Windows.Documents.BlockUIContainer> 위에서 설명한 합니다. 다음은 사용 하는 예제 <xref:System.Windows.Documents.InlineUIContainer> 삽입 하는 <xref:System.Windows.Controls.Button> 에서 인라인으로 <xref:System.Windows.Documents.Paragraph>합니다.  
+ <xref:System.Windows.Documents.InlineUIContainer> 수 있도록 <xref:System.Windows.UIElement> 요소 (예:과 같은 컨트롤 <xref:System.Windows.Controls.Button>)에 포함할는 <xref:System.Windows.Documents.Inline> 콘텐츠 요소입니다. 이 요소는 해당 하는 인라인 <xref:System.Windows.Documents.BlockUIContainer> 위에서 설명한 합니다. 다음은 사용 하는 예제 <xref:System.Windows.Documents.InlineUIContainer> 삽입 하는 <xref:System.Windows.Controls.Button> 에서 인라인으로 <xref:System.Windows.Documents.Paragraph>합니다.  
   
  [!code-xaml[FlowOvwSnippets_snip#InlineUIContainerExampleWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/FlowOvwSnippets_snip/CS/InlineUIContainerExample.xaml#inlineuicontainerexamplewholepage)]  
   
@@ -192,7 +180,7 @@ ms.lasthandoff: 12/22/2017
   
  **Figure 및 Floater**  
   
- <xref:System.Windows.Documents.Figure>및 <xref:System.Windows.Documents.Floater> 독립적 주 콘텐츠 흐름으로 지정할 수 있는 배치 속성을 가진 흐름 문서에 콘텐츠를 포함 하는 데 사용 됩니다. <xref:System.Windows.Documents.Figure>또는 <xref:System.Windows.Documents.Floater> 를 삽입할 느슨하게 관련 광고 등의 콘텐츠 또는 요소를 강조 표시 하거나 콘텐츠, 이미지 또는 기타 콘텐츠, 기본 콘텐츠 흐름 내에서 지 원하는 호스트에 일부를 주로 사용 됩니다.  
+ <xref:System.Windows.Documents.Figure> 및 <xref:System.Windows.Documents.Floater> 독립적 주 콘텐츠 흐름으로 지정할 수 있는 배치 속성을 가진 흐름 문서에 콘텐츠를 포함 하는 데 사용 됩니다. <xref:System.Windows.Documents.Figure> 또는 <xref:System.Windows.Documents.Floater> 를 삽입할 느슨하게 관련 광고 등의 콘텐츠 또는 요소를 강조 표시 하거나 콘텐츠, 이미지 또는 기타 콘텐츠, 기본 콘텐츠 흐름 내에서 지 원하는 호스트에 일부를 주로 사용 됩니다.  
   
  다음 예제에서는 포함 하는 방법을 보여 줍니다.는 <xref:System.Windows.Documents.Figure> 텍스트를 단락으로 합니다.  
   
@@ -205,7 +193,7 @@ ms.lasthandoff: 12/22/2017
   
  ![스크린샷: Figure 예](../../../../docs/framework/wpf/advanced/media/flow-ovw-figure-example.png "Flow_Ovw_Figure_Example")  
   
- <xref:System.Windows.Documents.Figure>및 <xref:System.Windows.Documents.Floater> 다른 점이 몇 가지 및 다양 한 시나리오에 사용 됩니다.  
+ <xref:System.Windows.Documents.Figure> 및 <xref:System.Windows.Documents.Floater> 다른 점이 몇 가지 및 다양 한 시나리오에 사용 됩니다.  
   
  **Figure:**  
   
@@ -219,15 +207,15 @@ ms.lasthandoff: 12/22/2017
   
 -   배치할 수 없으며 공간이 사용 가능하게 되면 렌더링됩니다. 오프셋 또는 앵커를 설정할 수 없습니다는 <xref:System.Windows.Documents.Floater>합니다.  
   
--   둘 이상의 열을 조정할 수 없습니다: 기본적으로 <xref:System.Windows.Documents.Floater> 크기입니다. 에 <xref:System.Windows.Documents.Floater.Width%2A> 하나 이상의 열을 하나 이상의 열 너비는 무시 됩니다 및 floater 보다 큰 경우이 값은 있지만 절대 픽셀 값으로 설정할 수 있는 속성의 크기는 합니다. 올바른 픽셀 너비를 설정 하 여 크기를 1 개 미만의 열 수 있지만 크기 조정 하지 않으므로 열을 기준 "0.5Column"에 올바른 식이 아닙니다. <xref:System.Windows.Documents.Floater> 너비입니다. <xref:System.Windows.Documents.Floater>높이 속성이 있고 그것이 높이 설정할 수 없습니다, 높이 내용에 따라 다릅니다.  
+-   둘 이상의 열을 조정할 수 없습니다: 기본적으로 <xref:System.Windows.Documents.Floater> 크기입니다. 에 <xref:System.Windows.Documents.Floater.Width%2A> 하나 이상의 열을 하나 이상의 열 너비는 무시 됩니다 및 floater 보다 큰 경우이 값은 있지만 절대 픽셀 값으로 설정할 수 있는 속성의 크기는 합니다. 올바른 픽셀 너비를 설정 하 여 크기를 1 개 미만의 열 수 있지만 크기 조정 하지 않으므로 열을 기준 "0.5Column"에 올바른 식이 아닙니다. <xref:System.Windows.Documents.Floater> 너비입니다. <xref:System.Windows.Documents.Floater> 높이 속성이 있고 그것이 높이 설정할 수 없습니다, 높이 내용에 따라 다릅니다.  
   
--   <xref:System.Windows.Documents.Floater>페이지를 매깁니다: 두 개 이상의 열 높이를 확장 하는 내용을 지정 된 너비에 floater 중단 하 고 다음 열이 고, 다음 페이지, 등의 페이지를 매깁니다.  
+-   <xref:System.Windows.Documents.Floater> 페이지를 매깁니다: 두 개 이상의 열 높이를 확장 하는 내용을 지정 된 너비에 floater 중단 하 고 다음 열이 고, 다음 페이지, 등의 페이지를 매깁니다.  
   
- <xref:System.Windows.Documents.Figure>크기를 제어 하려면 독립 실행형 콘텐츠를 저장 하는 좋은 장소가 위치 지정 및 지정된 된 크기에 콘텐츠를 표시할 수 있는지 확인 합니다. <xref:System.Windows.Documents.Floater>기본 페이지 콘텐츠를 비슷하게 진행 하지만 것에서 분리 되어 더 많은-흐름이 흥미롭게 좋은 위치가입니다.  
+ <xref:System.Windows.Documents.Figure> 크기를 제어 하려면 독립 실행형 콘텐츠를 저장 하는 좋은 장소가 위치 지정 및 지정된 된 크기에 콘텐츠를 표시할 수 있는지 확인 합니다. <xref:System.Windows.Documents.Floater> 기본 페이지 콘텐츠를 비슷하게 진행 하지만 것에서 분리 되어 더 많은-흐름이 흥미롭게 좋은 위치가입니다.  
   
  **LineBreak**  
   
- <xref:System.Windows.Documents.LineBreak>줄 바꿈을 유동 콘텐츠 내에 발생 하도록 하면 됩니다. 다음 예에서는 <xref:System.Windows.Documents.LineBreak>의 사용법을 보여줍니다.  
+ <xref:System.Windows.Documents.LineBreak> 줄 바꿈을 유동 콘텐츠 내에 발생 하도록 하면 됩니다. 다음 예에서는 <xref:System.Windows.Documents.LineBreak>의 사용법을 보여줍니다.  
   
  [!code-xaml[FlowOvwSnippets_snip#LineBreakExampleWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/FlowOvwSnippets_snip/CS/LineBreakExample.xaml#linebreakexamplewholepage)]  
   

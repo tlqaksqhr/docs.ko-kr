@@ -1,33 +1,21 @@
 ---
-title: "애니메이션 및 타이밍 시스템 개요"
-ms.custom: 
+title: 애니메이션 및 타이밍 시스템 개요
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - timing system [WPF]
 - animation [WPF]
 ms.assetid: 172cd5a8-a333-4c81-9456-fafccc19f382
-caps.latest.revision: "11"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 87e3b1b63c8582a322f74659f03803d1dbb19621
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: bfb9a337a604fe8d86d208344d4371748e28f285
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="animation-and-timing-system-overview"></a>애니메이션 및 타이밍 시스템 개요
 이 항목에서는 타이밍 시스템에 애니메이션을 사용 하는 방법을 설명 <xref:System.Windows.Media.Animation.Timeline>, 및 <xref:System.Windows.Media.Animation.Clock> 속성에 애니메이션을 적용 하는 클래스입니다.  
   
 <a name="prerequisites"></a>   
-## <a name="prerequisites"></a>필수 구성 요소  
+## <a name="prerequisites"></a>전제 조건  
  이 항목을 이해하려면 [애니메이션 개요](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)에 설명된 대로 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 애니메이션을 사용하여 속성에 애니메이션 효과를 줄 수 있어야 합니다. 종속성 속성에 익숙한 것도 도움이 됩니다. 자세한 내용은 [종속성 속성 개요](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)를 참조하세요.  
   
 <a name="timelinesandclocks"></a>   

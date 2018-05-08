@@ -1,13 +1,6 @@
 ---
 title: Visual Basic의 수명
-ms.custom: ''
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - static variables [Visual Basic], lifetime
 - static variables [Visual Basic], Visual Basic
@@ -17,14 +10,11 @@ helpviewer_keywords:
 - lifetime [Visual Basic], Visual Basic
 - lifetime [Visual Basic]
 ms.assetid: bd91e390-690a-469a-9946-8dca70bc14e7
-caps.latest.revision: 14
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 14a75a2c3af52f63051d02df9341faf19c3b76c7
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: d32639f1c392d53a7e9f6258440b6c0925d27a5d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="lifetime-in-visual-basic"></a>Visual Basic의 수명
 *수명* 는 시간 동안의 선언 된 요소는 자신이 사용 하 여 사용할 수 있습니다. 변수는 수명이 유일한 요소입니다. 이 작업을 위해 컴파일러가 프로시저 매개 변수를 처리 하 고 함수 변수의 특별 한 경우로 반환 합니다. 변수의 수명은 해당 값을 보유할 수 있는 시간을 나타냅니다. 해당 값은 수명 주기 동안 변경 될 수 있지만 항상 어떤 값을 가집니다.  

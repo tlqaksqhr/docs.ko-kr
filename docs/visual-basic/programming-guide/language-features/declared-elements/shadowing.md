@@ -1,13 +1,6 @@
 ---
 title: Visual Basic의 숨김 기능
-ms.custom: ''
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - inheritance [Visual Basic], shadowing
 - overriding, and shadowing
@@ -25,14 +18,11 @@ helpviewer_keywords:
 - objects [Visual Basic], names
 - names [Visual Basic], shadowing
 ms.assetid: 54bb4c25-12c4-4181-b4a0-93546053964e
-caps.latest.revision: 24
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 489e1786b08085f229f66b2dbc434b96b06d86df
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: fde6259b67a8d963ed8c30b87c94029fb2658664
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="shadowing-in-visual-basic"></a>Visual Basic의 숨김 기능
 두 개의 프로그래밍 요소가 동일한 이름을 공유 하는 경우 그 중 하나가 숨길 수, 또는 *그림자*, 다른 하나 있습니다. 이러한 상황에서 숨겨진된 요소는 참조용; 수 대신, 코드에서 요소 이름, Visual Basic 컴파일러 숨기는 요소 확인 합니다.  

@@ -1,24 +1,12 @@
 ---
-title: "상태 변경 이해"
-ms.custom: 
+title: 상태 변경 이해
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: a79ed2aa-e49a-47a8-845a-c9f436ec9987
-caps.latest.revision: "13"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ce0d3be43b8e50367d1cdd9b4e486a4154001624
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 5bfee392053d9f3fd529d68b533a046e53f20dd1
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="understanding-state-changes"></a>상태 변경 이해
 이 항목에서는 채널에 있는 상태와 전이, 채널 상태의 구조 지정에 사용되는 형식, 그리고 구현 방법에 대해 설명합니다.  
@@ -42,7 +30,7 @@ ms.lasthandoff: 12/22/2017
  ![채널 상태 전환](../../../../docs/framework/wcf/extending/media/channelstatetranitionshighleveldiagram.gif "ChannelStateTranitionsHighLevelDiagram")  
 그림 1입니다. ICommunicationObject 상태 시스템.  
   
- [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]에서는 <xref:System.ServiceModel.Channels.CommunicationObject> 및 채널 상태 시스템을 구현하는 <xref:System.ServiceModel.ICommunicationObject>라는 추상 기본 클래스를 제공합니다. 다음 그래픽은 <xref:System.ServiceModel.Channels.CommunicationObject>에 적용되는 수정된 상태 다이어그램입니다. 여기에는 <xref:System.ServiceModel.ICommunicationObject> 상태 시스템 외에도 추가 <xref:System.ServiceModel.Channels.CommunicationObject> 메서드가 호출되는 타이밍이 표시됩니다.  
+ Windows Communication Foundation (WCF) 라는 추상 기본 클래스를 제공 <xref:System.ServiceModel.Channels.CommunicationObject> 를 구현 하는 <xref:System.ServiceModel.ICommunicationObject> 및 채널 상태 시스템입니다. 다음 그래픽은 <xref:System.ServiceModel.Channels.CommunicationObject>에 적용되는 수정된 상태 다이어그램입니다. 여기에는 <xref:System.ServiceModel.ICommunicationObject> 상태 시스템 외에도 추가 <xref:System.ServiceModel.Channels.CommunicationObject> 메서드가 호출되는 타이밍이 표시됩니다.  
   
  ![상태 변경](../../../../docs/framework/wcf/extending/media/wcfc-wcfchannelsigure5statetransitionsdetailsc.gif "wcfc_WCFChannelsigure5StateTransitionsDetailsc")  
 그림 2. 이벤트 및 보호된 메서드 호출을 포함한 ICommunicationObject 상태 시스템의 CommunicationObject 구현  

@@ -1,13 +1,6 @@
 ---
-title: "방법: 이미지 잘라내기"
-ms.custom: 
+title: '방법: 이미지 잘라내기'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -15,23 +8,18 @@ helpviewer_keywords:
 - images [WPF], cropping
 - cropping images [WPF]
 ms.assetid: c6bba109-c6e7-4cf8-bfe6-9cf8d01bb4fc
-caps.latest.revision: "14"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 11f5b280635d2fe7b83d8c4496606ed02bc44149
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 46c559356447688e52508b823cc260c13128208f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-crop-an-image"></a>방법: 이미지 잘라내기
 이 예제에서는을 사용 하 여 이미지를 자를 <xref:System.Windows.Media.Imaging.CroppedBitmap>합니다.  
   
- <xref:System.Windows.Media.Imaging.CroppedBitmap>주로 자른된 이미지의 버전을 인코딩하는 경우 파일에 저장할 합니다. 이미지 표시 목적으로 참조를 자르려면는 [클립 영역을 만들](http://msdn.microsoft.com/library/56e4bed6-78d7-4292-b917-d72d0b3e4376) 항목입니다.  
+ <xref:System.Windows.Media.Imaging.CroppedBitmap> 주로 자른된 이미지의 버전을 인코딩하는 경우 파일에 저장할 합니다. 이미지 표시 목적으로 참조를 자르려면는 [클립 영역을 만들](http://msdn.microsoft.com/library/56e4bed6-78d7-4292-b917-d72d0b3e4376) 항목입니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] 아래의 샘플에 사용 되는 리소스를 정의 합니다.  
   
  [!code-xaml[imageelementexample#CroppedXAML1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ImageElementExample/CSharp/CroppedImageExample.xaml#croppedxaml1)]  

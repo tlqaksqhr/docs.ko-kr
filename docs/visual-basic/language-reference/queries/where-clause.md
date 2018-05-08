@@ -1,12 +1,6 @@
 ---
 title: Where 절(Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.QueryWhere
 helpviewer_keywords:
@@ -14,14 +8,11 @@ helpviewer_keywords:
 - queries [Visual Basic], Where
 - Where clause [Visual Basic]
 ms.assetid: 48b5c2c5-3181-429c-8545-894296798c89
-caps.latest.revision: 18
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 8c2572f513d00bc72e869cf28d382be799f7a303
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 0b61a52a366fb37a0834c9223bc8b7f099354d16
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="where-clause-visual-basic"></a>Where 절(Visual Basic)
 쿼리에 대 한 필터링 조건을 지정합니다.  
@@ -34,7 +25,7 @@ Where condition
   
 ## <a name="parts"></a>요소  
  `condition`  
- 필수 요소. 컬렉션에서 현재 항목의 값을 출력 컬렉션에 포함 되는지 여부를 결정 하는 식입니다. 에 식이 계산 되어야는 `Boolean` 값 또는 해당 하는 한 `Boolean` 값입니다. 조건이를 반환 하는 경우 `True`, 요소는 쿼리 결과에 포함 되지 않았으면, 쿼리 결과에서 요소 제외 됩니다.  
+ 필수. 컬렉션에서 현재 항목의 값을 출력 컬렉션에 포함 되는지 여부를 결정 하는 식입니다. 에 식이 계산 되어야는 `Boolean` 값 또는 해당 하는 한 `Boolean` 값입니다. 조건이를 반환 하는 경우 `True`, 요소는 쿼리 결과에 포함 되지 않았으면, 쿼리 결과에서 요소 제외 됩니다.  
   
 ## <a name="remarks"></a>설명  
  `Where` 절을 사용 하면 특정 조건을 충족 하는 요소만 선택 하 여 쿼리 데이터를 필터링 할 수 있습니다. 값이 해당 요소는 `Where` 를 평가 하는 절 `True` ; 쿼리 결과에 포함 된 다른 요소가 제외 됩니다. 식에 사용 되는 한 `Where` 절으로 계산 되어야 합니다는 `Boolean` 또는 해당 하는 `Boolean`, 등으로 계산 되는 정수 `False` 때 그 값은 0입니다. 여러 개의 식을 결합할 수는 `Where` 절과 같은 논리 연산자를 사용 하 여 `And`, `Or`, `AndAlso`, `OrElse`, `Is`, 및 `IsNot`합니다.  

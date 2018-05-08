@@ -1,29 +1,15 @@
 ---
 title: Windows Communication Foundation 샘플 빌드
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 2899e7a5-9cb2-4e8d-b8d2-f31391549198
-caps.latest.revision: 33
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: fcc57d28c109801cc5f995bebd31c49fcbdbe19c
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
-ms.translationtype: MT
+ms.openlocfilehash: 5493972306092fc3309b0993d595f22c74c8603a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="building-the-windows-communication-foundation-samples"></a>Windows Communication Foundation 샘플 빌드
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 또는 Visual Studio 2010을 사용 하 여 예제를 빌드할 수 있습니다는 **msbuild** 명령줄에서 명령을 합니다. 이 항목에서는 이 두 절차를 모두 설명합니다.  
+또는 Visual Studio 2010을 사용 하 여 Windows Communication Foundation (WCF) 샘플을 빌드할 수 있습니다는 **msbuild** 명령줄에서 명령을 합니다. 이 항목에서는 이 두 절차를 모두 설명합니다.  
   
 > [!NOTE]
 >  빌드 또는 중 하나를 실행 하기 전에 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 예제를 수행 했는지 확인는 [Windows Communication Foundation 샘플의 일회 설치 절차](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)합니다.  
@@ -52,7 +38,7 @@ ms.lasthandoff: 04/30/2018
  Setup.exe 및 Cleanup.exe 배치 파일과 스크립트는 Visual Studio 명령 프롬프트에서 실행해야 합니다. 일부 설치 및 정리 파일은 관리자 권한이 필요한 작업을 수행하므로 관리자 권한으로 실행해야 합니다.  
   
 ## <a name="important-security-information-about-metadata-endpoints"></a>메타데이터 끝점에 대한 중요한 보안 정보  
- 중요한 서비스 메타데이터를 실수로 공개하지 않도록 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 서비스의 기본 구성에서는 메타데이터 게시를 사용하지 않도록 설정합니다. 이 동작은 기본적으로 안전하지만 구성에서 서비스의 메타데이터 게시 동작이 명시적으로 사용하도록 설정되어 있지 않은 경우 Svcutil.exe 등의 메타데이터 가져오기 도구를 사용하여 서비스를 호출하는 데 필요한 클라이언트 코드를 생성할 수 없습니다. 샘플로 보다 쉽게 작업할 수 있도록 거의 모든 샘플에서는 보안되지 않은 메타데이터 게시 끝점을 노출합니다. 이러한 끝점은 인증되지 않은 익명의 소비자가 사용할 수 있으므로 이러한 끝점을 배포하기 전에 서비스의 메타데이터를 공개하는 것이 적절한지 주의를 기울여야 합니다. 서비스에 대 한 메타 데이터를 게시 하는 방법에 대 한 자세한 내용은 참조는 [메타 데이터 게시 동작이](../../../../docs/framework/wcf/samples/metadata-publishing-behavior.md) 샘플. 참조는 [메타 데이터 끝점을 보호 하는 사용자 지정](../../../../docs/framework/wcf/samples/custom-secure-metadata-endpoint.md) 메타 데이터 끝점 보안 샘플에 대 한 예제입니다.  
+ Windows Communication Foundation (WCF) 서비스에 대 한 기본 구성으로 잠재적으로 중요 한 서비스 메타 데이터가 실수로 공개를 방지 하려면 메타 데이터 게시를 해제 합니다. 이 동작은 기본적으로 안전하지만 구성에서 서비스의 메타데이터 게시 동작이 명시적으로 사용하도록 설정되어 있지 않은 경우 Svcutil.exe 등의 메타데이터 가져오기 도구를 사용하여 서비스를 호출하는 데 필요한 클라이언트 코드를 생성할 수 없습니다. 샘플로 보다 쉽게 작업할 수 있도록 거의 모든 샘플에서는 보안되지 않은 메타데이터 게시 끝점을 노출합니다. 이러한 끝점은 인증되지 않은 익명의 소비자가 사용할 수 있으므로 이러한 끝점을 배포하기 전에 서비스의 메타데이터를 공개하는 것이 적절한지 주의를 기울여야 합니다. 서비스에 대 한 메타 데이터를 게시 하는 방법에 대 한 자세한 내용은 참조는 [메타 데이터 게시 동작이](../../../../docs/framework/wcf/samples/metadata-publishing-behavior.md) 샘플. 참조는 [메타 데이터 끝점을 보호 하는 사용자 지정](../../../../docs/framework/wcf/samples/custom-secure-metadata-endpoint.md) 메타 데이터 끝점 보안 샘플에 대 한 예제입니다.  
   
 ## <a name="exception-handling"></a>예외 처리  
  일반적으로 이러한 샘플에는 코드가 샘플의 주제 위주로 작동하도록 예외 처리가 포함되어 있지 않습니다. 예외 처리에 대 한 자세한 내용은 참조는 [예상 예외](../../../../docs/framework/wcf/samples/expected-exceptions.md) 샘플.  

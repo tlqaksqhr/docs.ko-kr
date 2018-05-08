@@ -1,28 +1,16 @@
 ---
-title: "방법: 4원수를 사용하여 3차원 회전에 애니메이션 효과 주기"
-ms.custom: 
+title: '방법: 4원수를 사용하여 3차원 회전에 애니메이션 효과 주기'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - quaternions [WPF]
 - animation [WPF], 3-D translations [WPF], with quaternions
 - 3-D translations [WPF], animating [WPF], with quaternions
 ms.assetid: adca9cb1-066b-4de8-abbb-6b4007579ee7
-caps.latest.revision: "5"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 4301f4ffc935c6c72509638561ffa40b7744b94a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 4c2a46aad1feeefe5c7c31ec192f46b8c891337f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-animate-a-3-d-rotation-using-quaternions"></a>방법: 4원수를 사용하여 3차원 회전에 애니메이션 효과 주기
 이 예제에는 쿼터 니 언를 사용 하 여 3 차원 개체의 회전 애니메이션 효과 적용 하는 방법을 보여 줍니다.  
@@ -35,7 +23,7 @@ ms.lasthandoff: 12/22/2017
   
  [!code-xaml[Animation3DGallery_snip#QuaternionAnimationExampleInline2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Animation3DGallery_snip/CS/QuaternionAnimationExample.xaml#quaternionanimationexampleinline2)]  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 코드에서는 전체 예제를 보여 줍니다.  
   
  [!code-xaml[Animation3DGallery_snip#QuaternionAnimationExampleWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Animation3DGallery_snip/CS/QuaternionAnimationExample.xaml#quaternionanimationexamplewholepage)]  

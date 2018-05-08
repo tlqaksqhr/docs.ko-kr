@@ -1,32 +1,18 @@
 ---
 title: '방법: 코드를 사용하여 서비스에 대한 메타데이터 게시'
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 51407e6d-4d87-42d5-be7c-9887b8652006
-caps.latest.revision: 19
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: c3d2fd1222539ec8017846069e7eda9a2c503f22
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: bef5421d377bcae6e8c56b0117ebbe22a861de86
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-publish-metadata-for-a-service-using-code"></a>방법: 코드를 사용하여 서비스에 대한 메타데이터 게시
-이 항목은 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 서비스의 메타데이터 게시를 설명하는 두 가지 방법 항목 중 하나입니다. 서비스에서 메타데이터를 게시하는 방법을 지정하는 두 가지 방법은 구성 파일을 사용하는 방법과 코드를 사용하는 방법입니다. 이 항목에서는 코드를 사용하여 서비스에 대해 메타데이터를 게시하는 방법에 대해 설명합니다.  
+Windows Communication Foundation (WCF) 서비스에 대 한 메타 데이터 게시를 설명 하는 두 방법 항목 중 하나입니다. 서비스에서 메타데이터를 게시하는 방법을 지정하는 두 가지 방법은 구성 파일을 사용하는 방법과 코드를 사용하는 방법입니다. 이 항목에서는 코드를 사용하여 서비스에 대해 메타데이터를 게시하는 방법에 대해 설명합니다.  
   
 > [!CAUTION]
 >  이 항목에서는 보호되지 않은 방식으로 메타데이터를 게시하는 방법을 보여 줍니다. 즉, 모든 클라이언트가 서비스에서 메타데이터를 검색할 수 있습니다. 서비스에서 보호되는 방식으로 메타데이터를 게시해야 하는 경우에는 참조 [메타 데이터 끝점을 보호 하는 사용자 지정](../../../../docs/framework/wcf/samples/custom-secure-metadata-endpoint.md)합니다.  
@@ -94,7 +80,7 @@ ms.lasthandoff: 04/30/2018
 11. Internet Explorer를 사용 하 여 서비스의 기본 주소를 찾습니다 (http://localhost:8001/MetadataSample 이 샘플의) 메타 데이터 게시가 설정 되어 있는지 확인 합니다. 웹 페이지의 맨 위에 "간단한 서비스"라는 메시지가 표시되고 바로 아래에 "서비스를 만들었습니다."라는 메시지가 표시됩니다. 그렇지 않으면 "이 서비스에 대한 메타데이터 게시는 현재 사용할 수 없습니다."라는 메시지가 결과 페이지의 맨 위에 표시됩니다.  
   
 ## <a name="example"></a>예제  
- 다음 코드 예제에서는 코드에 서비스의 메타데이터를 게시하는 기본 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 서비스의 구현을 보여 줍니다.  
+ 다음 코드 예제에서는 코드에서 서비스에 대 한 메타 데이터를 게시 하는 기본 WCF 서비스의 구현을 보여 줍니다.  
   
  [!code-csharp[htPublishMetadataCode#11](../../../../samples/snippets/csharp/VS_Snippets_CFX/htpublishmetadatacode/cs/program.cs#11)]
  [!code-vb[htPublishMetadataCode#11](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/htpublishmetadatacode/vb/program.vb#11)]  

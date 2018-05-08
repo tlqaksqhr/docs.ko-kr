@@ -1,13 +1,6 @@
 ---
-title: "방법: 선형 그라데이션 만들기"
-ms.custom: 
+title: '방법: 선형 그라데이션 만들기'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -17,19 +10,14 @@ helpviewer_keywords:
 - colors [Windows Forms], creating linear gradients
 - gradients
 ms.assetid: 6c88e1cc-1217-4399-ac12-cb37592b9f01
-caps.latest.revision: "17"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 33979decf37e9adb29d94a6602a43f992d93aaa1
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 9eeedf1ef92bdf6e5e2724eeca5060765b0778f3
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-a-linear-gradient"></a>방법: 선형 그라데이션 만들기
-[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]가로, 세로, 및 대각선 선형 그라데이션을 제공합니다. 기본적으로 선형 그라데이션 색 균일 하 게 변경합니다. 그러나 균일 하지 않은 방식으로 색이 변경 되도록 선형 그라데이션을 사용자 지정할 수 있습니다.  
+[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 가로, 세로, 및 대각선 선형 그라데이션을 제공합니다. 기본적으로 선형 그라데이션 색 균일 하 게 변경합니다. 그러나 균일 하지 않은 방식으로 색이 변경 되도록 선형 그라데이션을 사용자 지정할 수 있습니다.  
   
  다음 예제에서는 줄, 타원 및 사각형 가로 선형 그라데이션 브러시로 채웁니다.  
   
@@ -50,7 +38,7 @@ ms.lasthandoff: 12/22/2017
   
  앞의 예제에서 200에서 가로 좌표 0 가로 좌표에서 이동 색상 구성 선형으로 변경 합니다. 예를 들어 첫 번째 좌표가 0과 200 사이의 중간 지점 0에서 255 사이의 중간에 있는 파란색 구성 요소를 갖습니다.  
   
- [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]다른 색이 변하는 그라데이션의 한쪽 가장자리에서 방식을 조정할 수 있습니다. 검정에서 다음 표에 따라 빨강으로 변경 하는 그라데이션 브러시를 만들려고 한다고 가정 합니다.  
+ [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 다른 색이 변하는 그라데이션의 한쪽 가장자리에서 방식을 조정할 수 있습니다. 검정에서 다음 표에 따라 빨강으로 변경 하는 그라데이션 브러시를 만들려고 한다고 가정 합니다.  
   
 |가로 좌표|RGB 구성 요소|  
 |---------------------------|--------------------|  

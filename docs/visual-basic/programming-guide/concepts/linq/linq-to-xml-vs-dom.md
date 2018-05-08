@@ -1,22 +1,12 @@
 ---
-title: "LINQ to XML과 비교 DOM (Visual Basic)"
-ms.custom: 
+title: LINQ to XML과 비교 DOM (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 18c36130-d598-40b7-9007-828232252978
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 1f89d3ded61daf16d4a59ccabb4d58625cae4a58
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: f62b7564e9ba7adfe1aa83c5d0336d7a43e7c362
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="linq-to-xml-vs-dom-visual-basic"></a>LINQ to XML과 비교 DOM (Visual Basic)
 이 섹션에서는 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]과 현재 주로 사용되는 XML 프로그래밍 API인 W3C DOM(문서 개체 모델)의 몇 가지 주요 차이점에 대해 설명합니다.  
@@ -124,7 +114,7 @@ doc.AppendChild(name)
  [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]에서는 `XmlDocumentFragment` 클래스와 동일한 항목을 제공하지 않습니다. 그러나 대부분의 경우에 `XmlDocumentFragment` 개념은 <xref:System.Collections.Generic.IEnumerable%601>의 <xref:System.Xml.Linq.XNode>이나 <xref:System.Collections.Generic.IEnumerable%601>의 <xref:System.Xml.Linq.XElement>로 형식화된 쿼리의 결과에 의해 처리될 수 있습니다.  
   
 ## <a name="support-for-xpathnavigator"></a>XPathNavigator에 대한 지원  
- [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]에서는 <xref:System.Xml.XPath.XPathNavigator> 네임스페이스의 확장 메서드를 통해 <xref:System.Xml.XPath?displayProperty=nameWithType>를 지원합니다. 자세한 내용은 <xref:System.Xml.XPath.Extensions?displayProperty=nameWithType>을 참조하십시오.  
+ [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]에서는 <xref:System.Xml.XPath.XPathNavigator> 네임스페이스의 확장 메서드를 통해 <xref:System.Xml.XPath?displayProperty=nameWithType>를 지원합니다. 자세한 내용은 <xref:System.Xml.XPath.Extensions?displayProperty=nameWithType>을 참조하세요.  
   
 ## <a name="support-for-white-space-and-indentation"></a>공백 및 들여쓰기에 대한 지원  
  [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]에서는 DOM의 경우보다 간단하게 공백을 처리합니다.  

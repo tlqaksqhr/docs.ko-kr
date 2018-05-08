@@ -1,22 +1,12 @@
 ---
-title: "방법: XSD (LINQ to XML)를 사용 하 여 유효성 검사 (Visual Basic)"
-ms.custom: 
+title: '방법: XSD (LINQ to XML)를 사용 하 여 유효성 검사 (Visual Basic)'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: a0fe88d4-4e77-49e7-90de-8953feeccc21
-caps.latest.revision: "4"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 53b4f96e4fe31588c948d8e860be2c3bd3fa372a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: fa607cea999ec484ccdd47829d4b96b2d73b060a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-validate-using-xsd-linq-to-xml-visual-basic"></a>방법: XSD (LINQ to XML)를 사용 하 여 유효성 검사 (Visual Basic)
 <xref:System.Xml.Schema> 네임스페이스에는 XSD(XML 스키마 정의 언어) 파일에 대해 XML 트리의 유효성을 쉽게 검사할 수 있도록 하는 확장 메서드가 포함되어 있습니다. 자세한 내용은 <xref:System.Xml.Schema.Extensions.Validate%2A> 메서드 설명서를 참조하세요.  

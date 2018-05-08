@@ -1,27 +1,15 @@
 ---
-title: "Windows Forms MenuStrip 컨트롤의 메뉴 항목 병합"
-ms.custom: 
+title: Windows Forms MenuStrip 컨트롤의 메뉴 항목 병합
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - MenuStrip [Windows Forms], merging
 - merging [Windows Forms], general concepts
 ms.assetid: 95e113ba-f362-4dda-8a76-6d95ddc45cee
-caps.latest.revision: "7"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: cd54855f7ee618915fea4fcb8f465cc8c1a68164
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 2782ae483d673f8f1eccab10876aca858737260a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="merging-menu-items-in-the-windows-forms-menustrip-control"></a>Windows Forms MenuStrip 컨트롤의 메뉴 항목 병합
 (mdi 다중) 다중 문서 인터페이스 응용 프로그램의 경우 부모 폼의 메뉴에 메뉴 항목이 나 자식 폼에서 전체 메뉴를 병합할 수 있습니다.  
@@ -41,7 +29,7 @@ ms.lasthandoff: 12/22/2017
   
  수동 또는 자동으로 메뉴 항목을 병합할 수 있습니다. 두 방법에 대 한 동일한 방식으로 메뉴 항목 병합 하지만 병합이이 항목의 뒷부분에 나오는 "수동 병합" 및 "자동 병합" 섹션에 설명 된 대로 다르게 활성화 됩니다. 각 병합 작업을 수동 및 자동 병합, 다음 병합 작업을 영향을 줍니다.  
   
- <xref:System.Windows.Forms.MenuStrip>하나에서 메뉴 항목을 이동 병합 <xref:System.Windows.Forms.ToolStrip> 다른 경우와 같이 복제 하는 대신 <xref:System.Windows.Forms.MainMenu>합니다.  
+ <xref:System.Windows.Forms.MenuStrip> 하나에서 메뉴 항목을 이동 병합 <xref:System.Windows.Forms.ToolStrip> 다른 경우와 같이 복제 하는 대신 <xref:System.Windows.Forms.MainMenu>합니다.  
   
 ## <a name="mergeaction-values"></a>MergeAction 값  
  메뉴 항목 소스에 대해 병합 작업을 설정할 <xref:System.Windows.Forms.MenuStrip> 를 사용 하는 <xref:System.Windows.Forms.MergeAction> 속성입니다.  
@@ -53,7 +41,7 @@ ms.lasthandoff: 12/22/2017
 |<xref:System.Windows.Forms.MergeAction.Append>|(기본값) 대상 항목 컬렉션의 끝에 소스 항목을 추가합니다.|프로그램의 특정 부분 활성화 될 때 메뉴의 끝에 메뉴 항목을 추가 합니다.|  
 |<xref:System.Windows.Forms.MergeAction.Insert>|소스 항목으로 지정 된 위치에서 대상 항목의 컬렉션에 추가 <xref:System.Windows.Forms.ToolStripItem.MergeIndex%2A> 소스 항목에서 속성을 설정 합니다.|중간 이나 프로그램의 특정 부분 활성화 될 때 메뉴의 시작 부분에 메뉴 항목을 추가 합니다.<br /><br /> 하는 경우의 값 <xref:System.Windows.Forms.ToolStripItem.MergeIndex%2A> 동일 메뉴 항목 모두에 대해 추가 된 반대 순서로 합니다. 설정 <xref:System.Windows.Forms.ToolStripItem.MergeIndex%2A> 적절 하 게 원래 순서를 보존 합니다.|  
 |<xref:System.Windows.Forms.MergeAction.Replace>|일치 하는 텍스트를 찾거나 사용 하 여는 <xref:System.Windows.Forms.ToolStripItem.MergeIndex%2A> 값이 텍스트 일치 항목이 없는 발견 되 고 원본 메뉴 항목과 일치 하는 대상 메뉴 항목을 다음으로 바꿉니다.|이름이 같은 다른 작업을 수행 하는 소스 메뉴 항목 대상 메뉴 항목을 대체 됩니다.|  
-|<xref:System.Windows.Forms.MergeAction.MatchOnly>|일치 하는 텍스트를 찾거나 사용 하 여는 <xref:System.Windows.Forms.ToolStripItem.MergeIndex%2A> 값이 텍스트 일치 항목이 없는 발견 되 고 대상에 원본의 모든 드롭다운 목록 항목을 추가 합니다.|메뉴 구조를 구축 삽입 되 또는 하위 메뉴에 메뉴 항목을 추가 하거나 하위 메뉴에서 메뉴 항목을 제거 합니다. 기본에서 MDI 자식 메뉴 항목을 추가할 수는 예를 들어 <xref:System.Windows.Forms.MenuStrip> **다른 이름으로 저장** 메뉴.<br /><br /> <xref:System.Windows.Forms.MergeAction.MatchOnly>작업을 수행 하지 않고 메뉴 구조를 탐색할 수 있습니다. 다음 항목을 평가 하는 방법을 제공 합니다.|  
+|<xref:System.Windows.Forms.MergeAction.MatchOnly>|일치 하는 텍스트를 찾거나 사용 하 여는 <xref:System.Windows.Forms.ToolStripItem.MergeIndex%2A> 값이 텍스트 일치 항목이 없는 발견 되 고 대상에 원본의 모든 드롭다운 목록 항목을 추가 합니다.|메뉴 구조를 구축 삽입 되 또는 하위 메뉴에 메뉴 항목을 추가 하거나 하위 메뉴에서 메뉴 항목을 제거 합니다. 기본에서 MDI 자식 메뉴 항목을 추가할 수는 예를 들어 <xref:System.Windows.Forms.MenuStrip> **다른 이름으로 저장** 메뉴.<br /><br /> <xref:System.Windows.Forms.MergeAction.MatchOnly> 작업을 수행 하지 않고 메뉴 구조를 탐색할 수 있습니다. 다음 항목을 평가 하는 방법을 제공 합니다.|  
 |<xref:System.Windows.Forms.MergeAction.Remove>|일치 하는 텍스트를 찾거나 사용 하 여는 <xref:System.Windows.Forms.ToolStripItem.MergeIndex%2A> 값이 텍스트 일치 항목이 없는 발견 되 고 다음 항목을 대상에서 제거 합니다.|대상에서 메뉴 항목을 제거 <xref:System.Windows.Forms.MenuStrip>합니다.|  
   
 ## <a name="manual-merging"></a>수동 병합  

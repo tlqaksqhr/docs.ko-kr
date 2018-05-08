@@ -1,31 +1,17 @@
 ---
 title: WS Transport With Message Credential
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 0d092f3a-b309-439b-920b-66d8f46a0e3c
-caps.latest.revision: 7
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 7b954e2d19f601476876beef6482ca10eb3f113b
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
-ms.translationtype: MT
+ms.openlocfilehash: acb2960fe3d563a05b0bdeee70af0d4093aae6f0
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ws-transport-with-message-credential"></a>WS Transport With Message Credential
 이 샘플에서는 메시지로 전달되는 클라이언트 자격 증명과 SSL 전송 보안을 조합하여 사용하는 방법을 보여 줍니다. 이 샘플에서는 `wsHttpBinding` 바인딩을 사용합니다.  
   
- 기본적으로 `wsHttpBinding` 바인딩은 HTTP 통신을 제공합니다. 전송 보안용으로 구성된 경우, 바인딩은 HTTPS 통신을 지원합니다. HTTPS는 통신을 통해 전송되는 메시지의 기밀성 및 무결성을 보호합니다. 하지만 서비스에 대한 클라이언트의 인증에 사용되는 인증 메커니즘은 HTTPS 전송에서 지원되는 범위로 제한됩니다. [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]는 이 제한을 극복하도록 디자인된 `TransportWithMessageCredential` 보안 모드를 제공합니다. 이 보안 모드가 구성되어 있으면 전송 보안을 사용하여 전송되는 메시지에 기밀성과 무결성을 제공하고 서비스 인증을 수행할 수 있습니다. 그러나 클라이언트 인증이 메시지에서 직접 클라이언트 자격 증명을 배치 하 여 수행 됩니다. 이 옵션을 사용 하면 동시에 전송 보안 모드의 성능 이점은 클라이언트 인증을 위해 메시지 보안 모드에서 지원 되는 모든 자격 증명 형식을 사용할 수 있습니다.  
+ 기본적으로 `wsHttpBinding` 바인딩은 HTTP 통신을 제공합니다. 전송 보안용으로 구성된 경우, 바인딩은 HTTPS 통신을 지원합니다. HTTPS는 통신을 통해 전송되는 메시지의 기밀성 및 무결성을 보호합니다. 하지만 서비스에 대한 클라이언트의 인증에 사용되는 인증 메커니즘은 HTTPS 전송에서 지원되는 범위로 제한됩니다. Windows Communication Foundation (WCF) 제공 된 `TransportWithMessageCredential` 이 제한을 극복 하도록 디자인 된 보안 모드입니다. 이 보안 모드가 구성되어 있으면 전송 보안을 사용하여 전송되는 메시지에 기밀성과 무결성을 제공하고 서비스 인증을 수행할 수 있습니다. 그러나 클라이언트 인증이 메시지에서 직접 클라이언트 자격 증명을 배치 하 여 수행 됩니다. 이 옵션을 사용 하면 동시에 전송 보안 모드의 성능 이점은 클라이언트 인증을 위해 메시지 보안 모드에서 지원 되는 모든 자격 증명 형식을 사용할 수 있습니다.  
   
  이 샘플에서는 `UserName` 자격 증명 형식을 사용하여 클라이언트를 서비스에 인증합니다.  
   

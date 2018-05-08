@@ -1,22 +1,12 @@
 ---
-title: "방법: XmlReader (Visual Basic)에서 XML 조각을 스트림"
-ms.custom: 
+title: '방법: XmlReader (Visual Basic)에서 XML 조각을 스트림'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: f67ce598-4a12-4dcb-9a07-24deca02a111
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: f18c922208fb52ffa775bd36e76c74f04d60f3b1
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 38a81e83421dffc997a2cbfd6d0996da5ece18d1
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-stream-xml-fragments-from-an-xmlreader-visual-basic"></a>방법: XmlReader (Visual Basic)에서 XML 조각을 스트림
 큰 XML 파일을 처리해야 하는 경우 전체 XML 트리를 메모리에 로드하는 것이 가능하지 않을 수 있습니다. 이 항목에서는 <xref:System.Xml.XmlReader>를 사용하여 조각을 스트림하는 방법을 보여 줍니다.  

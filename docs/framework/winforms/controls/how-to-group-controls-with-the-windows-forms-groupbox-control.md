@@ -1,28 +1,16 @@
 ---
-title: "방법: Windows Forms GroupBox 컨트롤을 사용하여 컨트롤 그룹화"
-ms.custom: 
+title: '방법: Windows Forms GroupBox 컨트롤을 사용하여 컨트롤 그룹화'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - controls [Windows Forms], grouping
 - GroupBox control [Windows Forms], grouping controls
 - Windows Forms controls, grouping
 ms.assetid: 0bda316d-bd2a-43aa-ac73-342453303169
-caps.latest.revision: "10"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 7ecdb7b8682b13f93f59d1de21552abfa91b8f50
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 718367e9da9efda20c79fbff3bd2f14f11c96ee1
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-group-controls-with-the-windows-forms-groupbox-control"></a>방법: Windows Forms GroupBox 컨트롤을 사용하여 컨트롤 그룹화
 Windows Forms <xref:System.Windows.Forms.GroupBox> 컨트롤은 다른 컨트롤을 그룹화 하는 데 사용 됩니다. 컨트롤을 그룹화 하는 방법은 세 가지가 있습니다.  

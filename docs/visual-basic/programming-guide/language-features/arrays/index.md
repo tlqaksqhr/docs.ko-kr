@@ -1,11 +1,6 @@
 ---
 title: Visual Basic의 배열
-ms.custom: ''
 ms.date: 12/06/2017
-ms.prod: .net
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.Array
 helpviewer_keywords:
@@ -14,12 +9,11 @@ helpviewer_keywords:
 ms.assetid: dbf29737-b589-4443-bee6-a27588d9c67e
 author: rpetrusha
 ms.author: ronpet
-ms.manager: wpickett
-ms.openlocfilehash: d223ca8b0ff59a13c31fa777e5cb6a97918421c6
-ms.sourcegitcommit: 01ea3686e74ff05e4f6de3d8d46dc603d051ec00
+ms.openlocfilehash: 3b6c1db0131f2a150dc1b00dd5e6dafc3a418f05
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="arrays-in-visual-basic"></a>Visual Basic의 배열
 배열 라고 하는 값의 집합이 *요소*, 서로 관련 된 논리적으로 합니다. 예를 들어 배열; 초등학교 각 학년의 학생 수 구성 될 배열의 각 요소에는 단일 학년의 학생 수입니다. 학생 성적 클래스;에 대 한 배열 구성 될 수 있습니다 마찬가지로, 배열의 각 요소에는 단일 등급입니다.    
@@ -165,7 +159,7 @@ Dim sales()() As Double = New Double(11)() {}
   
  [!code-vb[iterate-one-dimensional-array](../../../../../samples/snippets/visualbasic/programming-guide/language-features/arrays/iterate1d.vb)]  
   
- 다음 예에서는 사용 하 여 다차원 배열을 반복는 [ `For...Next` ](../../../../visual-basic/language-reference/statements/for-next-statement.md) 문. <xref:System.Array.GetUpperBound%2A> 메서드에는 차원을 지정하는 매개 변수가 있습니다. `GetUpperBound(0)`첫 번째 차원의 가장 큰 인덱스를 반환 하 고 `GetUpperBound(1)` 가장 높은 두 번째 차원 인덱스를 반환 합니다.
+ 다음 예에서는 사용 하 여 다차원 배열을 반복는 [ `For...Next` ](../../../../visual-basic/language-reference/statements/for-next-statement.md) 문. <xref:System.Array.GetUpperBound%2A> 메서드에는 차원을 지정하는 매개 변수가 있습니다. `GetUpperBound(0)` 첫 번째 차원의 가장 큰 인덱스를 반환 하 고 `GetUpperBound(1)` 가장 높은 두 번째 차원 인덱스를 반환 합니다.
   
  [!code-vb[iterate-two-dimensional-array](../../../../../samples/snippets/visualbasic/programming-guide/language-features/arrays/iterate2d.vb)]  
   
@@ -246,12 +240,12 @@ Dim sales()() As Double = New Double(11)() {}
 [!code-vb[jagged-array-size](../../../../../samples/snippets/visualbasic/programming-guide/language-features/arrays/jagged-length.vb)] 
 
 ## <a name="zero-length-arrays"></a>길이가 0 인 배열  
-Visual Basic가 초기화 되지 않은 배열 구분 (해당 값이 배열 `Nothing`) 및 *길이가 0 인 배열을* 또는 빈 배열 (요소가 없는 배열입니다.) 초기화 되지 않은 배열 이란 차원이 구분 되지 않습니다 또는 그에 게 할당 된 값입니다. 예:
+Visual Basic가 초기화 되지 않은 배열 구분 (해당 값이 배열 `Nothing`) 및 *길이가 0 인 배열을* 또는 빈 배열 (요소가 없는 배열입니다.) 초기화 되지 않은 배열 이란 차원이 구분 되지 않습니다 또는 그에 게 할당 된 값입니다. 예를 들어:
 
 ```vb
 Dim arr() As String
 ```
--1 차원을 길이가 0 인 배열은 선언 했습니다. 예:
+-1 차원을 길이가 0 인 배열은 선언 했습니다. 예를 들어:
 
 ```vb
 Dim arrZ(-1) As String

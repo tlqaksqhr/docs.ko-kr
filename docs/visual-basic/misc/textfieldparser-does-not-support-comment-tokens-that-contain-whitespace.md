@@ -1,21 +1,14 @@
 ---
-title: "TextFieldParser는 공백이 포함된 주석 토큰을 지원하지 않습니다."
+title: TextFieldParser는 공백이 포함된 주석 토큰을 지원하지 않습니다.
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vbrTextFieldParser_WhitespaceInToken
 ms.assetid: 55107656-270e-4bbb-841a-478904df8e07
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 0e5f41b1f1019459d55d5806f45301f4248e65fc
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: ed22ac435a5cd46288f9854ae711b7fad354f624
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="textfieldparser-does-not-support-comment-tokens-that-contain-whitespace"></a>TextFieldParser는 공백이 포함된 주석 토큰을 지원하지 않습니다.
 공백이 포함된 주석 토큰이 제공되었습니다. 토큰의 시작 부분에 공백이 발생하지 않는 한 `TextFieldParser` 는 공백을 포함하는 주석 토큰을 지원하지 않습니다. 토큰의 시작 부분에 있는 공백은 무시됩니다.  

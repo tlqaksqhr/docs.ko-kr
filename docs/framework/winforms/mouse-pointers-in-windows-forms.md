@@ -1,13 +1,6 @@
 ---
-title: "Windows Forms의 마우스 포인터"
-ms.custom: 
+title: Windows Forms의 마우스 포인터
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - pointers [Windows Forms], setting
 - mouse pointers
@@ -16,16 +9,11 @@ helpviewer_keywords:
 - cursors [Windows Forms], setting
 - mouse [Windows Forms], cursors
 ms.assetid: c3400d85-de5b-42e8-abc3-d6088d69ee53
-caps.latest.revision: "12"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: aaca18bff265fafbb5bad26adfe2a8c490d85132
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ed6312cb386d1557d4217a330318664b4e87c330
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="mouse-pointers-in-windows-forms"></a>Windows Forms의 마우스 포인터
 마우스 *포인터*, 마우스를 사용 하 여 사용자 입력에 대 한 화면에 포커스가 위치를 지정 하는 비트맵은 커서 참조 되는 경우에 따라 있는 합니다. 이 항목 Windows Forms에서 마우스 포인터의 개요를 제공 하 고 수정 하 고 마우스 포인터를 제어 하는 방법 중 일부에 대해 설명 합니다.  

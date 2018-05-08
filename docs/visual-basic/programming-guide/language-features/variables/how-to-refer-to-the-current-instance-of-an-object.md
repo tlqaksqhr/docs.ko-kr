@@ -1,13 +1,6 @@
 ---
-title: "방법: 개체의 현재 인스턴스 참조(Visual Basic)"
-ms.custom: 
+title: '방법: 개체의 현재 인스턴스 참조(Visual Basic)'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - variables [Visual Basic], object
 - objects [Visual Basic], referring to current instance
@@ -15,14 +8,11 @@ helpviewer_keywords:
 - current instance
 - object variables [Visual Basic]
 ms.assetid: 7f9b2c77-03cd-428f-adc2-b18070226e7c
-caps.latest.revision: "14"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 33ea612253b00e12f47258189da4ac7d8d98ade5
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: c1b79f1b6a9768941d6fe966c5b5886ea742f808
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-refer-to-the-current-instance-of-an-object-visual-basic"></a>방법: 개체의 현재 인스턴스 참조(Visual Basic)
 *현재 인스턴스가* 는 코드가 현재 실행 중인 개체입니다.  
@@ -38,7 +28,7 @@ ms.lasthandoff: 11/21/2017
     Me.Close()  
     ```  
   
-     하지만 `Me` 개체 처럼 동작 변수를 선언할 수 없거나 값을 할당할 합니다. `Me`항상 현재 인스턴스를 참조 합니다.  
+     하지만 `Me` 개체 처럼 동작 변수를 선언할 수 없거나 값을 할당할 합니다. `Me` 항상 현재 인스턴스를 참조 합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [개체 변수](../../../../visual-basic/programming-guide/language-features/variables/object-variables.md)  

@@ -1,31 +1,21 @@
 ---
-title: "메시지 보안 바인딩"
-ms.custom: 
+title: 메시지 보안 바인딩
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: a4570ce7-864e-461b-85d8-0f7bcc53c2c8
-caps.latest.revision: "4"
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: f0c8b125d3fc313dca4140b871ccea8165329fda
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 3bcc448b13a185065db1865c64d5ab3c498da1a6
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="message-security-binding"></a>메시지 보안 바인딩
 이 단원에는 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서 Windows 서비스의 메시지 보안 바인딩을 보여 주는 샘플이 포함되어 있습니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
  [메시지 보안 익명](../../../../docs/framework/wcf/samples/message-security-anonymous.md)  
- 이 샘플에서는 클라이언트 인증 없이 메시지 수준 보안을 사용하지만 서버의 X.509 인증서를 사용하는 서버 인증을 요구하는 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 응용 프로그램을 구현하는 방법을 보여 줍니다.  
+ 이 샘플에는 메시지 수준 보안 클라이언트 인증 없이을 사용 하는 Windows Communication Foundation (WCF) 응용 프로그램을 구현 하 하지만 서버의 X.509 인증서를 사용 하 여 서버 인증을 요구 하는 방법을 보여 줍니다.  
   
  [메시지 보안 인증서](../../../../docs/framework/wcf/samples/message-security-certificate.md)  
  이 샘플에서는 클라이언트에 대해 X.509 v3 인증서를 통한 WS-Security 인증을 사용하며 서버의 X.509 v3 인증서를 사용한 서버 인증을 수행해야 하는 응용 프로그램의 구현 방법을 보여 줍니다.  

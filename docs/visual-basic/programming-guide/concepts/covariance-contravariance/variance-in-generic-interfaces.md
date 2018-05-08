@@ -1,22 +1,12 @@
 ---
-title: "제네릭 인터페이스 (Visual Basic)의 가변성"
-ms.custom: 
+title: 제네릭 인터페이스 (Visual Basic)의 가변성
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: cf4096d0-4bb3-45a9-9a6b-f01e29a60333
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: d05ccdc97efd5dd193bbbe0d15dd227ec71910d8
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: c18f014897ace71e437bd733ff6fcd1d4d8810dd
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="variance-in-generic-interfaces-visual-basic"></a>제네릭 인터페이스 (Visual Basic)의 가변성
 .NET Framework 4에서는 기존의 몇몇 제네릭 인터페이스에 대한 가변성 지원이 추가되었습니다. 가변성 지원은 이러한 인터페이스를 구현하는 클래스의 암시적 변환을 가능하게 합니다. 다음 인터페이스는 현재 variant입니다.  

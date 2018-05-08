@@ -1,14 +1,6 @@
 ---
 title: Drawing 개체 개요
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-wpf
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - ImageDrawing objects [WPF]
 - GlyphRunDrawing objects [WPF]
@@ -17,17 +9,11 @@ helpviewer_keywords:
 - Drawing objects [WPF]
 - DrawingGroup objects [WPF]
 ms.assetid: 9b5ce5c0-e204-4320-a7a8-0b2210d62f88
-caps.latest.revision: 25
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 3672e4b1deacd8fb50a5318270854daae9c74761
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: c896cd0c070ae30cb825cfc64dd9df9f8832e4ca
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="drawing-objects-overview"></a>Drawing 개체 개요
 이 항목에서는 소개 <xref:System.Windows.Media.Drawing> 개체를 효율적으로 셰이프, 비트맵, 텍스트 및 미디어를 그리는 데 사용 하는 방법에 설명 합니다. 사용 하 여 <xref:System.Windows.Media.Drawing> 개체 클립 아트를 만들 때 사용 하 여 페인트는 <xref:System.Windows.Media.DrawingBrush>, 사용 또는 <xref:System.Windows.Media.Visual> 개체입니다.  

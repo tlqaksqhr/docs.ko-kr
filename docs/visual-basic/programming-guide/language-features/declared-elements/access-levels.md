@@ -1,12 +1,6 @@
 ---
-title: "Visual Basic의 액세스 수준"
-ms.custom: 
+title: Visual Basic의 액세스 수준
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - members [Visual Basic], accessing in Visual Basic
 - Friend access modifier
@@ -19,19 +13,16 @@ helpviewer_keywords:
 - Private access modifier
 - declared elements [Visual Basic], access level
 ms.assetid: 6e06c1ab-fd78-47f0-83a8-1152780b5e1a
-caps.latest.revision: "16"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 87e43ac7e813cece1179bdaf24c86fa62adcb438
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 6f8fda62e468e3735e3ae36afdebe440a8e4bc04
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="access-levels-in-visual-basic"></a>Visual Basic의 액세스 수준
 *액세스 수준* 의 선언 된 요소에 액세스할 수 정도, 즉, 있는 코드를 읽거나 쓰려고 합니다. 이 요소 자체를 선언한 방법 뿐만 아니라 요소의 컨테이너의 액세스 수준을 통해 결정 됩니다. 것까지 포함 하는 요소에 액세스할 수 없는 코드에 액세스할 수 없는 모든 포함 된 요소로 선언 `Public`합니다. 예를 들어 한 `Public` 변수에 `Private` 구조에서가 아니라 서 구조를 포함 하는 클래스 내부에서 액세스할 수 해당 클래스 외부 합니다.  
   
-## <a name="public"></a>공용  
+## <a name="public"></a>Public  
  [공용](../../../../visual-basic/language-reference/modifiers/public.md) 선언문에서 키워드는 같은 프로젝트의 코드, 프로젝트를 참조 하는 다른 프로젝트 및 프로젝트에서 빌드된 어셈블리에서 요소에 액세스할 수 있는지 지정 합니다. 다음 코드 예제를 보여 줍니다. `Public` 선언 합니다.  
   
 ```  
@@ -87,7 +78,7 @@ Private numberForMeOnly As Integer
 |`Protected`|파생:<br /><br /> 요소에 액세스할 수는 보호 된 요소 또는 여기에서 파생 된 클래스를 선언 하는 클래스의 코드에서|인터페이스<br /><br /> 클래스<br /><br /> 구조체<br /><br /> 절차<br /><br /> 속성<br /><br /> 멤버 변수<br /><br /> 상수<br /><br /> 열거형<br /><br /> 이벤트<br /><br /> 외부 선언<br /><br /> 대리자|클래스|  
 |`Friend`|어셈블리:<br /><br /> Friend 요소에 액세스할 수를 선언 하는 어셈블리의 코드에서|인터페이스<br /><br /> 모듈<br /><br /> 클래스<br /><br /> 구조체<br /><br /> 구조체 멤버<br /><br /> 절차<br /><br /> 속성<br /><br /> 멤버 변수<br /><br /> 상수<br /><br /> 열거형<br /><br /> 이벤트<br /><br /> 외부 선언<br /><br /> 대리자|소스 파일<br /><br /> 네임스페이스<br /><br /> 인터페이스<br /><br /> 모듈<br /><br /> 클래스<br /><br /> 구조체|  
 |`Protected` `Friend`|공용 구조체에 `Protected` 및 `Friend`:<br /><br /> 동일한 클래스 또는 protected friend 요소 또는 요소의 클래스에서 파생 된 클래스 내에서 동일한 어셈블리에서 코드를 액세스할 수 있습니다.|인터페이스<br /><br /> 클래스<br /><br /> 구조체<br /><br /> 절차<br /><br /> 속성<br /><br /> 멤버 변수<br /><br /> 상수<br /><br /> 열거형<br /><br /> 이벤트<br /><br /> 외부 선언<br /><br /> 대리자|클래스|  
-|`Private`|선언 컨텍스트.<br /><br /> 요소에 액세스할 수 포함 된 형식 내에서 코드를 포함 하 여 private 요소를 선언 하는 형식 코드|인터페이스<br /><br /> 클래스<br /><br /> 구조체<br /><br /> 구조체 멤버<br /><br /> 절차<br /><br /> 속성<br /><br /> 멤버 변수<br /><br /> 상수<br /><br /> 열거형<br /><br /> 이벤트<br /><br /> 외부 선언<br /><br /> 대리자|모듈<br /><br /> 클래스<br /><br /> 구조체|  
+|`Private`|선언 컨텍스트.<br /><br /> 요소에 액세스할 수 포함 된 형식 내에서 코드를 포함 하 여 private 요소를 선언 하는 형식 코드|인터페이스<br /><br /> 클래스<br /><br /> 구조체<br /><br /> 구조체 멤버<br /><br /> 절차<br /><br /> 속성<br /><br /> 멤버 변수<br /><br /> 상수<br /><br /> 열거형<br /><br /> 이벤트<br /><br /> 외부 선언<br /><br /> 대리자|Module<br /><br /> 클래스<br /><br /> 구조체|  
   
 ## <a name="see-also"></a>참고 항목  
  [Dim 문](../../../../visual-basic/language-reference/statements/dim-statement.md)  

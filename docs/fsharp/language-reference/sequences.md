@@ -1,17 +1,12 @@
 ---
 title: 시퀀스(F#)
 description: '대규모 데이터의 컬렉션을 정렬 되어 있지만 모든 요소를 사용 하려면 반드시 원하지 때 F # 시퀀스를 사용 하는 방법을 알아봅니다.'
-author: cartermp
-ms.author: phcart
 ms.date: 05/16/2016
-ms.topic: language-reference
-ms.prod: dotnet-fsharp
-ms.devlang: fsharp
-ms.openlocfilehash: a3521037112d40998ed00cd6fed376882c2f2c88
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: ebebec3a69fd0f4fb8e3ad8d554541fa1cc8945e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="sequences"></a>시퀀스
 

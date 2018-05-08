@@ -1,13 +1,6 @@
 ---
-title: "리소스 및 코드"
-ms.custom: 
+title: 리소스 및 코드
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -18,16 +11,11 @@ helpviewer_keywords:
 - procedural code [WPF], accessing resources from
 - resources [WPF], creating with procedural code
 ms.assetid: c1cfcddb-e39c-41c8-a7f3-60984914dfae
-caps.latest.revision: "14"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 772c44b63627204da7056a5707f2840a82053f11
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 27b72d4be9012caf388c90d52a61d9837713c71f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="resources-and-code"></a>리소스 및 코드
 이 개요에서는 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] 구문이 아닌 코드를 사용하여 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 리소스를 만들거나 리소스에 액세스하는 방법을 중점적으로 설명합니다. 일반적인 리소스 사용 및 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 구문 측면에서 본 리소스에 대한 자세한 내용은 [XAML 리소스](../../../../docs/framework/wpf/advanced/xaml-resources.md)를 참조하세요.  
@@ -36,7 +24,7 @@ ms.lasthandoff: 12/22/2017
   
 <a name="accessing"></a>   
 ## <a name="accessing-resources-from-code"></a>코드에서 리소스 액세스  
- [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]를 통해 정의된 리소스를 식별하는 키는 코드에서 리소스를 요청할 경우 특정 리소스를 검색하는 데도 사용됩니다. 코드에서 리소스를 검색 하는 가장 간단한 방법은 중 하나를 호출 하는 것은 <xref:System.Windows.FrameworkElement.FindResource%2A> 또는 <xref:System.Windows.FrameworkElement.TryFindResource%2A> 응용 프로그램의 프레임 워크 수준 개체에서 메서드. 이러한 메서드 간의 동작 차이는 요청된 키를 찾을 수 없는 경우에 발생합니다. <xref:System.Windows.FrameworkElement.FindResource%2A>예외를 발생 시킵니다. <xref:System.Windows.FrameworkElement.TryFindResource%2A> 반환 하지만 예외를 발생 시 키 지 것입니다 `null`합니다. 각 메서드는 리소스 키를 입력 매개 변수로 사용하고 느슨하게 형식화된 개체를 반환합니다. 일반적으로 리소스 키는 문자열이지만 문자열이 아닌 리소스 키가 사용되기도 합니다. 자세한 내용은 [개체를 키로 사용](#objectaskey) 섹션을 참조하세요. 일반적으로 반환된 개체는 리소스를 요청할 때 설정할 속성에 필요한 형식으로 캐스트합니다. 코드 리소스 확인에 대한 조회 논리는 동작 리소스 참조 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 사례와 같습니다. 리소스 검색은 호출 요소에서 시작되고 논리 트리의 다음 부모 요소로 계속됩니다. 조회는 응용 프로그램 리소스, 테마 및 시스템 리소스(필요한 경우)로 계속 진행됩니다. 리소스에 대한 코드 요청은 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]에서 로드되는 리소스 사전 다음에 만들어졌을 수 있는 리소스 사전의 런타임 변경 내용 및 실시간 시스템 리소스 변경 내용을 제대로 처리합니다.  
+ [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]를 통해 정의된 리소스를 식별하는 키는 코드에서 리소스를 요청할 경우 특정 리소스를 검색하는 데도 사용됩니다. 코드에서 리소스를 검색 하는 가장 간단한 방법은 중 하나를 호출 하는 것은 <xref:System.Windows.FrameworkElement.FindResource%2A> 또는 <xref:System.Windows.FrameworkElement.TryFindResource%2A> 응용 프로그램의 프레임 워크 수준 개체에서 메서드. 이러한 메서드 간의 동작 차이는 요청된 키를 찾을 수 없는 경우에 발생합니다. <xref:System.Windows.FrameworkElement.FindResource%2A> 예외를 발생 시킵니다. <xref:System.Windows.FrameworkElement.TryFindResource%2A> 반환 하지만 예외를 발생 시 키 지 것입니다 `null`합니다. 각 메서드는 리소스 키를 입력 매개 변수로 사용하고 느슨하게 형식화된 개체를 반환합니다. 일반적으로 리소스 키는 문자열이지만 문자열이 아닌 리소스 키가 사용되기도 합니다. 자세한 내용은 [개체를 키로 사용](#objectaskey) 섹션을 참조하세요. 일반적으로 반환된 개체는 리소스를 요청할 때 설정할 속성에 필요한 형식으로 캐스트합니다. 코드 리소스 확인에 대한 조회 논리는 동작 리소스 참조 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 사례와 같습니다. 리소스 검색은 호출 요소에서 시작되고 논리 트리의 다음 부모 요소로 계속됩니다. 조회는 응용 프로그램 리소스, 테마 및 시스템 리소스(필요한 경우)로 계속 진행됩니다. 리소스에 대한 코드 요청은 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]에서 로드되는 리소스 사전 다음에 만들어졌을 수 있는 리소스 사전의 런타임 변경 내용 및 실시간 시스템 리소스 변경 내용을 제대로 처리합니다.  
   
  다음은 키로 리소스를 찾아로 구현 하는 속성을 설정 하려면 반환된 된 값을 사용 하는 간단한 코드 예제는 <xref:System.Windows.Controls.Primitives.ButtonBase.Click> 이벤트 처리기입니다.  
   

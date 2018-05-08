@@ -1,13 +1,6 @@
 ---
-title: "맞춤, 여백 및 안쪽 여백 개요"
-ms.custom: 
+title: 맞춤, 여백 및 안쪽 여백 개요
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -17,16 +10,11 @@ helpviewer_keywords:
 - padding [WPF]
 - aligning [WPF]
 ms.assetid: 9c6a2009-9b86-4e40-8605-0a2664dc3973
-caps.latest.revision: "22"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 9d53ec57bdd6126aa1b82e3fa34d01b8907ca169
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 70eff35db638c5bfbc9c164dc381e3f58e18957b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="alignment-margins-and-padding-overview"></a>맞춤, 여백 및 안쪽 여백 개요
 <xref:System.Windows.FrameworkElement> 클래스 자식 요소의 위치를 정확 하 게 하는 데 사용 되는 몇 가지 속성을 표시 합니다. 이 항목에서는 가장 중요 한 속성의 4/설명: <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A>, <xref:System.Windows.FrameworkElement.Margin%2A>, <xref:System.Windows.Controls.Border.Padding%2A>, 및 <xref:System.Windows.FrameworkElement.VerticalAlignment%2A>합니다. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 응용 프로그램에서의 요소 위치를 제어하기 위한 기반을 제공하기 때문에 이 속성의 결과를 이해하는 것이 중요합니다.  
@@ -67,7 +55,7 @@ ms.lasthandoff: 12/22/2017
 |<xref:System.Windows.HorizontalAlignment.Left>|자식 요소는 부모 요소의 할당된 레이아웃 공간의 왼쪽에 정렬됩니다.|  
 |<xref:System.Windows.HorizontalAlignment.Center>|자식 요소는 부모 요소의 할당된 레이아웃 공간의 중앙에 정렬됩니다.|  
 |<xref:System.Windows.HorizontalAlignment.Right>|자식 요소는 부모 요소의 할당된 레이아웃 공간의 오른쪽에 정렬됩니다.|  
-|<xref:System.Windows.HorizontalAlignment.Stretch>(기본값)|자식 요소는 부모 요소의 할당된 레이아웃 공간을 채우도록 확장됩니다. 명시적 <xref:System.Windows.FrameworkElement.Width%2A> 및 <xref:System.Windows.FrameworkElement.Height%2A> 값이 우선 합니다.|  
+|<xref:System.Windows.HorizontalAlignment.Stretch> (기본값)|자식 요소는 부모 요소의 할당된 레이아웃 공간을 채우도록 확장됩니다. 명시적 <xref:System.Windows.FrameworkElement.Width%2A> 및 <xref:System.Windows.FrameworkElement.Height%2A> 값이 우선 합니다.|  
   
  적용 하는 방법을 보여 주는 다음 예제는 <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A> 속성을 <xref:System.Windows.Controls.Button> 요소입니다. 다양한 렌더링 동작의 이해를 돕기 위해 각 특성 값이 표시됩니다.  
   
@@ -87,7 +75,7 @@ ms.lasthandoff: 12/22/2017
 |<xref:System.Windows.VerticalAlignment.Top>|자식 요소는 부모 요소의 할당된 레이아웃 공간의 위에 정렬됩니다.|  
 |<xref:System.Windows.VerticalAlignment.Center>|자식 요소는 부모 요소의 할당된 레이아웃 공간의 중앙에 정렬됩니다.|  
 |<xref:System.Windows.VerticalAlignment.Bottom>|자식 요소는 부모 요소의 할당된 레이아웃 공간의 아래에 정렬됩니다.|  
-|<xref:System.Windows.VerticalAlignment.Stretch>(기본값)|자식 요소는 부모 요소의 할당된 레이아웃 공간을 채우도록 확장됩니다. 명시적 <xref:System.Windows.FrameworkElement.Width%2A> 및 <xref:System.Windows.FrameworkElement.Height%2A> 값이 우선 합니다.|  
+|<xref:System.Windows.VerticalAlignment.Stretch> (기본값)|자식 요소는 부모 요소의 할당된 레이아웃 공간을 채우도록 확장됩니다. 명시적 <xref:System.Windows.FrameworkElement.Width%2A> 및 <xref:System.Windows.FrameworkElement.Height%2A> 값이 우선 합니다.|  
   
  적용 하는 방법을 보여 주는 다음 예제는 <xref:System.Windows.FrameworkElement.VerticalAlignment%2A> 속성을 <xref:System.Windows.Controls.Button> 요소입니다. 다양한 렌더링 동작의 이해를 돕기 위해 각 특성 값이 표시됩니다. 이 샘플의 목적을 위해 한 <xref:System.Windows.Controls.Grid> 모눈선이 표시 된 요소는 각 속성 값의 레이아웃 동작 이해를 돕기 위해의 부모로 사용 됩니다.  
   
@@ -101,7 +89,7 @@ ms.lasthandoff: 12/22/2017
   
 <a name="wcpsdk_layout_amp_margin_properties"></a>   
 ## <a name="understanding-margin-properties"></a>여백 속성 이해  
- <xref:System.Windows.FrameworkElement.Margin%2A> 속성 요소와 자식 또는 피어 간의 거리를 설명 합니다. <xref:System.Windows.FrameworkElement.Margin%2A>와 같은 구문을 사용 하 여 값은 균일 수 `Margin="20"`합니다. 이 균일 한이 구문을 사용 하 여 <xref:System.Windows.FrameworkElement.Margin%2A> 20 장치 독립적 픽셀 요소에 적용 합니다. <xref:System.Windows.FrameworkElement.Margin%2A>값 수 형태를 취할 수의 네 가지 고유 값을 왼쪽, 위쪽, 오른쪽 및 아래쪽 (해당 순서에 따라)에 적용할 고유한 여백을 설명 하는 각 값 같은 `Margin="0,10,5,25"`합니다. 적절 한 사용는 <xref:System.Windows.FrameworkElement.Margin%2A> 속성 요소의 렌더링 위치 및 해당 인접 한 항목 요소 및 하위 항목 렌더링 위치 매우 세부적으로 제어할 수 있습니다.  
+ <xref:System.Windows.FrameworkElement.Margin%2A> 속성 요소와 자식 또는 피어 간의 거리를 설명 합니다. <xref:System.Windows.FrameworkElement.Margin%2A> 와 같은 구문을 사용 하 여 값은 균일 수 `Margin="20"`합니다. 이 균일 한이 구문을 사용 하 여 <xref:System.Windows.FrameworkElement.Margin%2A> 20 장치 독립적 픽셀 요소에 적용 합니다. <xref:System.Windows.FrameworkElement.Margin%2A> 값 수 형태를 취할 수의 네 가지 고유 값을 왼쪽, 위쪽, 오른쪽 및 아래쪽 (해당 순서에 따라)에 적용할 고유한 여백을 설명 하는 각 값 같은 `Margin="0,10,5,25"`합니다. 적절 한 사용는 <xref:System.Windows.FrameworkElement.Margin%2A> 속성 요소의 렌더링 위치 및 해당 인접 한 항목 요소 및 하위 항목 렌더링 위치 매우 세부적으로 제어할 수 있습니다.  
   
 > [!NOTE]
 >  0이 아닌 여백은 요소의 바깥쪽에 공간 <xref:System.Windows.FrameworkElement.ActualWidth%2A> 및 <xref:System.Windows.FrameworkElement.ActualHeight%2A>합니다.  
@@ -135,7 +123,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="using-alignment-margins-and-padding-in-an-application"></a>응용 프로그램에서 맞춤, 여백 및 안쪽 여백 사용  
  <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A><xref:System.Windows.FrameworkElement.Margin%2A>, <xref:System.Windows.Controls.Border.Padding%2A>, 및 <xref:System.Windows.FrameworkElement.VerticalAlignment%2A> 복잡 한을 만드는 데 필요한 위치 지정 제어를 제공 [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]합니다. 각 속성의 결과를 사용하여 자식 요소 위치를 변경하면 동적 응용 프로그램과 사용자 환경을 만드는 유연성을 사용할 수 있습니다.  
   
- 다음 예제에서는 이 항목에 설명된 각 개념을 보여 줍니다. 이 항목의 첫 번째 예제에는 인프라를 바탕으로 추가 하는이 예제는 <xref:System.Windows.Controls.Grid> 의 자식으로 <xref:System.Windows.Controls.Border> 첫 번째 샘플에서. <xref:System.Windows.Controls.Border.Padding%2A>부모에 적용 되 <xref:System.Windows.Controls.Border> 요소입니다. <xref:System.Windows.Controls.Grid> 세 명의 자식 사이 공백을 분할 하는 데 사용 <xref:System.Windows.Controls.StackPanel> 요소입니다. <xref:System.Windows.Controls.Button>다양 한 효과 표시 하려면 요소를 다시 사용 <xref:System.Windows.FrameworkElement.Margin%2A> 및 <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A>합니다. <xref:System.Windows.Controls.TextBlock>각각에 요소가 추가 <xref:System.Windows.Controls.ColumnDefinition> 효율적에 적용 되는 다양 한 속성으로 정의 <xref:System.Windows.Controls.Button> 각 열에 있는 요소입니다.  
+ 다음 예제에서는 이 항목에 설명된 각 개념을 보여 줍니다. 이 항목의 첫 번째 예제에는 인프라를 바탕으로 추가 하는이 예제는 <xref:System.Windows.Controls.Grid> 의 자식으로 <xref:System.Windows.Controls.Border> 첫 번째 샘플에서. <xref:System.Windows.Controls.Border.Padding%2A> 부모에 적용 되 <xref:System.Windows.Controls.Border> 요소입니다. <xref:System.Windows.Controls.Grid> 세 명의 자식 사이 공백을 분할 하는 데 사용 <xref:System.Windows.Controls.StackPanel> 요소입니다. <xref:System.Windows.Controls.Button> 다양 한 효과 표시 하려면 요소를 다시 사용 <xref:System.Windows.FrameworkElement.Margin%2A> 및 <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A>합니다. <xref:System.Windows.Controls.TextBlock> 각각에 요소가 추가 <xref:System.Windows.Controls.ColumnDefinition> 효율적에 적용 되는 다양 한 속성으로 정의 <xref:System.Windows.Controls.Button> 각 열에 있는 요소입니다.  
   
  [!code-cpp[MarginPaddingAlignmentSample#4](../../../../samples/snippets/cpp/VS_Snippets_Wpf/MarginPaddingAlignmentSample/CPP/Margin_Padding_Alignment_Sample.cpp#4)]
  [!code-csharp[MarginPaddingAlignmentSample#4](../../../../samples/snippets/csharp/VS_Snippets_Wpf/MarginPaddingAlignmentSample/CSharp/Margin_Padding_Alignment_Sample.cs#4)]

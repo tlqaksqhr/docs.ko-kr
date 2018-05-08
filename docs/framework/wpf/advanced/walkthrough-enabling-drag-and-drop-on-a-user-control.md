@@ -1,13 +1,6 @@
 ---
-title: "연습: 사용자 정의 컨트롤에서 끌어서 놓기 사용"
-ms.custom: 
+title: '연습: 사용자 정의 컨트롤에서 끌어서 놓기 사용'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -15,16 +8,11 @@ helpviewer_keywords:
 - walkthrough [WPF], drag-and-drop
 - drag-and-drop [WPF], walkthrough
 ms.assetid: cc844419-1a77-4906-95d9-060d79107fc7
-caps.latest.revision: "7"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: d87872d3009b46878b7b614c1aef728d5b1d511d
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: e4dba856b973f1210f2d088de3ed8ae5df2c6988
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="walkthrough-enabling-drag-and-drop-on-a-user-control"></a>연습: 사용자 정의 컨트롤에서 끌어서 놓기 사용
 이 연습에서는 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]에서 끌어서 놓기 데이터 전송에 참가할 수 있는 사용자 지정 사용자 정의 컨트롤을 만드는 방법을 보여 줍니다.  
@@ -41,7 +29,7 @@ ms.lasthandoff: 01/19/2018
   
 -   패널이 사용자 정의 컨트롤에서 놓은 데이터를 받을 수 있도록 설정  
   
-## <a name="prerequisites"></a>필수 구성 요소  
+## <a name="prerequisites"></a>전제 조건  
  이 연습을 완료하려면 다음 구성 요소가 필요합니다.  
   
 -   Visual Studio 2010  
@@ -131,9 +119,9 @@ ms.lasthandoff: 01/19/2018
   
         -   `dragSource` – 이 컨트롤에 대한 참조입니다.  
   
-        -   `data`– <xref:System.Windows.DataObject> 이전 코드에서 생성 합니다.  
+        -   `data` – <xref:System.Windows.DataObject> 이전 코드에서 생성 합니다.  
   
-        -   `allowedEffects`– 허용 된 끌어서 놓기 작업으로, <xref:System.Windows.DragDropEffects.Copy> 또는 <xref:System.Windows.DragDropEffects.Move>합니다.  
+        -   `allowedEffects` – 허용 된 끌어서 놓기 작업으로, <xref:System.Windows.DragDropEffects.Copy> 또는 <xref:System.Windows.DragDropEffects.Move>합니다.  
   
 3.  F5 키를 눌러 응용 프로그램을 빌드하고 실행합니다.  
   

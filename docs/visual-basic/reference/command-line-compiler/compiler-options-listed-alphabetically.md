@@ -1,22 +1,16 @@
 ---
 title: Visual Basic Compiler Options Listed Alphabetically
 ms.date: 04/12/2018
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - Visual Basic compiler, options
 ms.assetid: e67febba-bacf-4e1f-a143-c141e063f90e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a6e95c52c708128267ab6dc79a1b37d21b30bac2
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.openlocfilehash: dc25ff282772cc82b8ebe5d59e729a6a48afa8f8
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="visual-basic-compiler-options-listed-alphabetically"></a>Visual Basic 컴파일러 옵션 사전순 목록
 Visual Basic 명령줄 컴파일러는 Visual Studio 통합된 개발 환경 (IDE)에서 프로그램을 컴파일 하는 대신 제공 됩니다. 다음은 사전순으로 정렬 한 Visual Basic 명령줄 컴파일러 옵션의 목록입니다.  
@@ -37,7 +31,7 @@ Visual Basic 명령줄 컴파일러는 Visual Studio 통합된 개발 환경 (ID
 |[-debug](../../../visual-basic/reference/command-line-compiler/debug.md)|디버깅 정보를 생성합니다.|  
 |[-define](../../../visual-basic/reference/command-line-compiler/define.md)|조건부 컴파일 기호를 정의합니다.|  
 |[-delaysign](../../../visual-basic/reference/command-line-compiler/delaysign.md)|어셈블리를 완전히 서명할지, 아니면 부분적으로 서명할지를 지정합니다.|  
-|[-결정적](../../../visual-basic/reference/command-line-compiler/deterministic.md)|컴파일러가 해당 이진 콘텐츠는 동일 컴파일 간에 입력이 동일 어셈블리를 출력 합니다.|
+|[-deterministic](../../../visual-basic/reference/command-line-compiler/deterministic.md)|입력이 동일한 경우 컴파일 간에 이진 콘텐츠가 동일한 어셈블리를 컴파일러에서 출력하도록 합니다.|
 |[-doc](../../../visual-basic/reference/command-line-compiler/doc.md)|XML 파일에 대해 문서 주석을 처리합니다.|  
 |[-errorreport](../../../visual-basic/reference/command-line-compiler/errorreport.md)|Visual Basic 컴파일러에서 내부 컴파일러 오류를 보고 하는 방법을 지정 합니다.|  
 |[-filealign](../../../visual-basic/reference/command-line-compiler/filealign.md)|출력 파일의 섹션에 맞출 위치를 지정합니다.|  

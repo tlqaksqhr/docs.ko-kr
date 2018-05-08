@@ -1,12 +1,6 @@
 ---
-title: "방법: 변수의 사용 가능성 제어(Visual Basic)"
-ms.custom: 
+title: '방법: 변수의 사용 가능성 제어(Visual Basic)'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - access levels, declared elements
 - Private keyword [Visual Basic], accessing variables
@@ -17,14 +11,11 @@ helpviewer_keywords:
 - declared elements [Visual Basic], access level
 - Protected keyword [Visual Basic], accessing variables
 ms.assetid: eaf4f073-7922-43ce-ae1e-90ff376ae947
-caps.latest.revision: "14"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 004fb101661fadeaee084e1f9374ca8332ac7234
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 27ee5d3405ea24c0754cffa85e9b89b2ac561e42
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-control-the-availability-of-a-variable-visual-basic"></a>방법: 변수의 사용 가능성 제어(Visual Basic)
 지정 하 여 변수의 사용 가능성 제어 해당 *액세스 수준*합니다. 액세스 수준 변수에 쓰거나 읽을 수 있는 코드를 결정 합니다.  
@@ -53,7 +44,7 @@ ms.lasthandoff: 11/21/2017
   
      읽기 또는 어셈블리와 함께 상호 작용 하는 모든 코드에서 변수에 쓰기 수 있습니다.  
   
- 또는  
+ -또는-  
   
 1.  지역 변수를 배치에서 `Dim` 프로시저 내의 변수에 대 한 문을 합니다.  
   

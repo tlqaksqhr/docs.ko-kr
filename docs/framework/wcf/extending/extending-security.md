@@ -1,31 +1,19 @@
 ---
-title: "보안 확장"
-ms.custom: 
+title: 보안 확장
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - security [WCF], extending
 ms.assetid: a015a040-9fdf-4147-9ea9-f83b570be1d4
-caps.latest.revision: 
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload:
-- dotnet
-ms.openlocfilehash: cdd9b91ba7ff9b1e431f7d9107e72df084ba8af3
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
-ms.translationtype: MT
+ms.openlocfilehash: 6ba6df24163064ee65c563253fa56a1ec574cffc
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="extending-security"></a>보안 확장
-새 클레임 형식 및 사용자 지정 토큰을 적용하기 위해 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]의 보안 인프라를 확장할 수 있습니다. 이 단원의 각 항목에서는 이를 수행하는 방법을 보여 줍니다.  
+새 클레임 유형 및 사용자 지정 토큰을 수용 하기 위해 Windows Communication Foundation (WCF)의 보안 인프라를 확장할 수 있습니다. 이 단원의 각 항목에서는 이를 수행하는 방법을 보여 줍니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
  [보안 아키텍처](http://msdn.microsoft.com/library/16593476-d36a-408d-808c-ae6fd483e28f)  
@@ -50,7 +38,7 @@ ms.lasthandoff: 01/19/2018
  일반적으로 메시지는 단일 인증서를 사용하여 서명되고 암호화됩니다. 이 항목에서는 필요한 경우 두 가지 인증서를 사용하는 방법에 대해 설명합니다.  
   
  [방법: X.509 인증서의 개인 키에 대한 암호화 공급자 변경](../../../../docs/framework/wcf/extending/change-cryptographic-provider-x509-certificate-private-key.md)  
- X.509 인증서의 개인 키를 제공하는 데 사용되는 암호화 공급자를 변경하는 방법 및 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 프레임워크에 공급자를 통합하는 방법에 대해 설명합니다.  
+ X.509 인증서의 개인 키를 제공 하는 데 암호화 공급자를 변경 하는 방법 및 Windows Communication Foundation (WCF) 프레임 워크에 공급자를 통합 하는 방법을 설명 합니다.  
   
 ## <a name="reference"></a>참조  
  <xref:System.ServiceModel.ServiceAuthorizationManager>  

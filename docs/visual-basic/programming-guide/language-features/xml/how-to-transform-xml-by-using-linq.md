@@ -1,25 +1,15 @@
 ---
-title: "방법: LINQ를 사용하여 XML 변형(Visual Basic)"
-ms.custom: 
+title: '방법: LINQ를 사용하여 XML 변형(Visual Basic)'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - XML [Visual Basic], transforming
 - LINQ to XML [Visual Basic], transforming XML
 ms.assetid: 815687f4-0bc2-4c0b-adc6-d78744aa356f
-caps.latest.revision: "14"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: cf7c44598558b2c631ff3ef4c2ae0986a49ca2bd
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 94ad5180c7921a5ace09f9161de5f275475e46d4
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-transform-xml-by-using-linq-visual-basic"></a>방법: LINQ를 사용하여 XML 변형(Visual Basic)
 [XML 리터럴](../../../../visual-basic/language-reference/xml-literals/index.md) 쉽게를 한 소스에서 XML을 읽고 새 XML 형식으로 변환 합니다. LINQ 쿼리를 변환, 콘텐츠를 검색할를 활용 하거나 새 XML 형식으로 기존 문서에서 콘텐츠를 변경할 수 있습니다.  

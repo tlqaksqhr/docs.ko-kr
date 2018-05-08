@@ -1,12 +1,6 @@
 ---
-title: "방법: 변수의 범위 제어(Visual Basic)"
-ms.custom: 
+title: '방법: 변수의 범위 제어(Visual Basic)'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - variables [Visual Basic], scope
 - declared elements [Visual Basic], scope
@@ -18,14 +12,11 @@ helpviewer_keywords:
 - declared elements [Visual Basic], visibility
 - visibility [Visual Basic], variables
 ms.assetid: 44b7f62a-cb5c-4d50-bce9-60ae68f87072
-caps.latest.revision: "12"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 7284d344e3bf0fdd0f900f2a820d6c8db4a4bf74
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 6e8d1178398711226b88fee7e6defd5162b91fcb
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-control-the-scope-of-a-variable-visual-basic"></a>방법: 변수의 범위 제어(Visual Basic)
 변수는 일반적으로 *범위*, 또는 참조를 선언 하면 영역 전체에 대 한 표시 합니다. 경우에 따라 변수의 *액세스 수준* 해당 범위에 영향을 줄 수 있습니다.  

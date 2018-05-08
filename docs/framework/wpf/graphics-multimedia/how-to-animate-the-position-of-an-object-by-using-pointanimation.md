@@ -1,13 +1,6 @@
 ---
-title: "방법: PointAnimation을 사용하여 개체 위치에 애니메이션 효과 주기"
-ms.custom: 
+title: '방법: PointAnimation을 사용하여 개체 위치에 애니메이션 효과 주기'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -15,21 +8,16 @@ helpviewer_keywords:
 - graphics [WPF], animation
 - animation [WPF], PointAnimation
 ms.assetid: 42310977-cc90-438a-8a47-0345898e01be
-caps.latest.revision: "10"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 9f741770077a90bef33d75640726019496fe8eb8
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 326b71c10ad608e2481673e1c4a8cbc9ecbdc0dc
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-animate-the-position-of-an-object-by-using-pointanimation"></a>방법: PointAnimation을 사용하여 개체 위치에 애니메이션 효과 주기
 사용 하는 방법을 보여 주는이 예제는 <xref:System.Windows.Media.Animation.PointAnimation> 따라 개체를 애니메이션 효과를 줄 클래스는 <xref:System.Windows.Shapes.Path>합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 예제에서는 타원을 이동는 <xref:System.Windows.Shapes.Path> 한 지점에서 다른 화면에 있습니다. 이 예제에서 애니메이션 효과 적용 하의 위치는 <xref:System.Windows.Media.EllipseGeometry> 를 사용 하 여 <xref:System.Windows.Media.Animation.PointAnimation> 애니메이션 효과를 줄는 <xref:System.Windows.Media.EllipseGeometry.Center%2A> 속성입니다.  
   
  [!code-csharp[BasicAnimations_snip#PointAnimationWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/BasicAnimations_snip/CSharp/PointAnimationExample.cs#pointanimationwholepage)]

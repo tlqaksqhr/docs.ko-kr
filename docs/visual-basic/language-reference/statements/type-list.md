@@ -1,9 +1,6 @@
 ---
-title: "형식 목록(Visual Basic)"
+title: 형식 목록(Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology: devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - StructureConstraint
 - vb.StructureConstraint
@@ -27,14 +24,11 @@ helpviewer_keywords:
 - type parameters
 - constraints, Class keyword
 ms.assetid: 56db947a-2ae8-40f2-a70a-960764e9d0db
-caps.latest.revision: "33"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 35e72414b236615dc230b654ccfeed290841fb31
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 5fbb07154fce27feb257b431c1726446b42fbfe0
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="type-list-visual-basic"></a>형식 목록(Visual Basic)
 지정 된 *형식 매개 변수* 에 대 한는 *제네릭* 프로그래밍 요소입니다. 매개 변수가 여러 개이면 쉼표로 구분 됩니다. 다음은 한 형식 매개 변수에 대 한 구문입니다.  
@@ -50,7 +44,7 @@ ms.lasthandoff: 11/21/2017
 |용어|정의|  
 |---|---|  
 |`genericmodifier`|선택 사항입니다. 제네릭 인터페이스 및 대리자 에서만 사용할 수 있습니다. 형식을 선언할 수 있습니다는 공변 (covariant)를 사용 하 여는 [아웃](../../../visual-basic/language-reference/modifiers/out-generic-modifier.md) 키워드 또는 사용 하 여 반공 분산의 [에](../../../visual-basic/language-reference/modifiers/in-generic-modifier.md) 키워드입니다. [공변성(Covariance) 및 반공변성(Contravariance)](../../programming-guide/concepts/covariance-contravariance/index.md)을 참조하세요.|  
-|`typename`|필수 요소. 형식 매개 변수의 이름입니다. 해당 형식 인수가 제공 하는 정의 된 형식으로 대체 되어야 하는 자리 표시자입니다.|  
+|`typename`|필수. 형식 매개 변수의 이름입니다. 해당 형식 인수가 제공 하는 정의 된 형식으로 대체 되어야 하는 자리 표시자입니다.|  
 |`constraintlist`|선택 사항입니다. 에 제공할 수 있는 데이터 형식을 제한 하는 요구 사항 목록은 `typename`합니다. 여러 제약 조건이 있는 경우 중괄호로 묶습니다 (`{ }`) 하 고 쉼표로 구분 합니다. 사용 제약 조건 목록을 정의 해야는 [으로](../../../visual-basic/language-reference/statements/as-clause.md) 키워드입니다. 사용 하면 `As` 목록 맨 앞에 한 번만 합니다.|  
   
 ## <a name="remarks"></a>설명  

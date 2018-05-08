@@ -1,22 +1,12 @@
 ---
-title: "(LINQ to XML) 연결 된 쿼리의 성능 (Visual Basic)"
-ms.custom: 
+title: (LINQ to XML) 연결 된 쿼리의 성능 (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 589f2adc-69f9-404d-b9d6-4c28dabea7f7
-caps.latest.revision: "4"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 281eb8ea62760507da991ea878270befe458bb38
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: d390fc0e45967cd98697320eb6f61a51cb1c19da
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="performance-of-chained-queries-linq-to-xml-visual-basic"></a>(LINQ to XML) 연결 된 쿼리의 성능 (Visual Basic)
 LINQ(및 LINQ to XML)의 가장 큰 이점 중 하나는 연결된 쿼리가 보다 크고 복잡한 하나의 쿼리처럼 잘 수행될 수 있다는 것입니다.  

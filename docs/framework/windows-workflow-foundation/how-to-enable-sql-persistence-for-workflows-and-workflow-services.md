@@ -1,27 +1,15 @@
 ---
 title: '방법: 워크플로 및 워크플로 서비스에 SQL 지속성 사용'
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: ca7bf77f-3e5d-4b23-b17a-d0b60f46411d
-caps.latest.revision: 36
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 3e5872be7e8b686a744832bf63a98e97a99cf9b6
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 6bcd47f3a750659651d099519d5e1f435be01ab2
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-enable-sql-persistence-for-workflows-and-workflow-services"></a>방법: 워크플로 및 워크플로 서비스에 SQL 지속성 사용
 이 항목에서는 프로그래밍 방식과 구성 파일을 사용하여 워크플로 및 워크플로 서비스에 지속성을 사용하도록 SQL 워크플로 인스턴스 저장소 기능을 구성하는 방법을 설명합니다.  

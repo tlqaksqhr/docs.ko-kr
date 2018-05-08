@@ -1,22 +1,12 @@
 ---
-title: "연습: Visual Studio (Visual Basic)에서 관리 되는 어셈블리의 형식 포함"
-ms.custom: 
+title: '연습: Visual Studio (Visual Basic)에서 관리 되는 어셈블리의 형식 포함'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 56ed12ba-adff-4e9c-a668-7fcba80c4795
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 4411b40d8ffbdf2b74c49152db675286d91b43ea
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 1f6176746b783d020c809fb0b5d55d741ce0148b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="walkthrough-embedding-types-from-managed-assemblies-in-visual-studio-visual-basic"></a>연습: Visual Studio (Visual Basic)에서 관리 되는 어셈블리의 형식 포함
 강력한 이름의 관리되는 어셈블리에서 형식 정보를 포함하는 경우 응용 프로그램에서 유형을 느슨하게 연결하여 버전 독립성을 확보할 수 있습니다. 즉, 각 버전에 대해 컴파일하지 않고도 관리되는 라이브러리의 여러 버전에서 형식을 사용하도록 프로그램을 작성할 수 있습니다.  
@@ -63,13 +53,13 @@ ms.lasthandoff: 11/21/2017
   
 1.  Visual Studio의 **파일** 메뉴에서 **새로 만들기**를 가리킨 다음 **프로젝트**를 클릭합니다.  
   
-2.  **새 프로젝트** 대화 상자의 **프로젝트 형식** 창에서 **Windows**가 선택되었는지 확인합니다. **템플릿** 창에서 **클래스 라이브러리**를 선택합니다. **이름** 상자에 `TypeEquivalenceInterface`을 입력한 다음 **확인**을 클릭합니다. 새 프로젝트가 만들어집니다.  
+2.  **새 프로젝트** 대화 상자의 **프로젝트 형식** 창에서 **Windows**가 선택되었는지 확인합니다. **템플릿** 창에서 **클래스 라이브러리**를 선택합니다. **이름** 상자에 `TypeEquivalenceInterface`를 입력한 다음 **확인**을 클릭합니다. 새 프로젝트가 만들어집니다.  
   
 3.  **솔루션 탐색기**Class1.vb 파일을 마우스 오른쪽 단추로 클릭 하 고 클릭 **이름 바꾸기**합니다. 파일 이름을 `ISampleInterface.vb`으로 바꾸고 ENTER 키를 누릅니다. 파일 이름을 바꾸면 클래스 이름도 `ISampleInterface`로 바뀝니다. 이 클래스는 클래스에 대한 공용 인터페이스를 나타냅니다.  
   
 4.  TypeEquivalenceInterface 프로젝트를 마우스 오른쪽 단추로 클릭하고 **속성**을 클릭합니다. **컴파일** 탭을 클릭합니다. 개발 컴퓨터의 유효한 위치(예: `C:\TypeEquivalenceSample`)로 출력 경로를 설정합니다. 이 연습의 이후 단계에서도 이 위치가 사용됩니다.  
   
-5.  프로젝트 속성을 편집하는 동안 **서명** 탭을 클릭합니다. **어셈블리 서명** 옵션을 선택합니다. **강력한 이름 키 파일 선택** 목록에서 **<새로 만들기...>**를 클릭합니다. **키 파일 이름** 상자에 `key.snk`를 입력합니다. **암호로 내 키 파일 보호** 확인란의 선택을 취소합니다. **확인**을 클릭합니다.  
+5.  프로젝트 속성을 편집하는 동안 **서명** 탭을 클릭합니다. **어셈블리 서명** 옵션을 선택합니다. **강력한 이름 키 파일 선택** 목록에서 **<새로 만들기...>** 를 클릭합니다. **키 파일 이름** 상자에 `key.snk`를 입력합니다. **암호로 내 키 파일 보호** 확인란의 선택을 취소합니다. **확인**을 클릭합니다.  
   
 6.  ISampleInterface.vb 파일을 엽니다. ISampleInterface 인터페이스를 만드는 ISampleInterface 클래스 파일에 다음 코드를 추가합니다.  
   
@@ -86,7 +76,7 @@ ms.lasthandoff: 11/21/2017
   
 7.  **도구** 메뉴에서 **GUID 만들기**를 클릭합니다. **GUID 만들기** 대화 상자에서 **레지스트리 형식**과 **복사**를 차례로 클릭합니다. **끝내기**를 클릭합니다.  
   
-8.  `Guid` 특성에서 샘플 GUID를 삭제하고, **GUID 만들기** 대화 상자에서 복사한 GUID를 붙여 넣습니다. 복사된 GUID에서 중괄호({})를 제거합니다.  
+8.  `Guid` 특성에서 샘플 GUID를 삭제하고, **GUID 만들기** 대화 상자에서 복사한 GUID를 붙여 넣습니다. 중괄호 제거 ({})에서 복사 된 GUID입니다.  
   
 9. **프로젝트** 메뉴에서 **모든 파일 표시**를 클릭합니다.  
   
@@ -108,13 +98,13 @@ ms.lasthandoff: 11/21/2017
   
 1.  Visual Studio의 **파일** 메뉴에서 **새로 만들기**를 가리킨 다음 **프로젝트**를 클릭합니다.  
   
-2.  **새 프로젝트** 대화 상자의 **프로젝트 형식** 창에서 **Windows**가 선택되었는지 확인합니다. **템플릿** 창에서 **클래스 라이브러리**를 선택합니다. **이름** 상자에 `TypeEquivalenceRuntime`을 입력한 다음 **확인**을 클릭합니다. 새 프로젝트가 만들어집니다.  
+2.  **새 프로젝트** 대화 상자의 **프로젝트 형식** 창에서 **Windows**가 선택되었는지 확인합니다. **템플릿** 창에서 **클래스 라이브러리**를 선택합니다. **이름** 상자에 `TypeEquivalenceRuntime`를 입력한 다음 **확인**을 클릭합니다. 새 프로젝트가 만들어집니다.  
   
 3.  **솔루션 탐색기**Class1.vb 파일을 마우스 오른쪽 단추로 클릭 하 고 클릭 **이름 바꾸기**합니다. 파일 이름을 `SampleClass.vb`으로 바꾸고 ENTER 키를 누릅니다. 파일 이름을 바꾸면 클래스 이름도 `SampleClass`로 바뀝니다. 이 클래스는 `ISampleInterface` 인터페이스를 구현합니다.  
   
 4.  TypeEquivalenceRuntime 프로젝트를 마우스 오른쪽 단추로 클릭하고 **속성**을 클릭합니다. **컴파일** 탭을 클릭합니다. TypeEquivalenceInterface 프로젝트에서 사용한 것과 같은 위치로 출력 경로를 설정합니다(예: `C:\TypeEquivalenceSample`).  
   
-5.  프로젝트 속성을 편집하는 동안 **서명** 탭을 클릭합니다. **어셈블리 서명** 옵션을 선택합니다. **강력한 이름 키 파일 선택** 목록에서 **<새로 만들기...>**를 클릭합니다. **키 파일 이름** 상자에 `key.snk`를 입력합니다. **암호로 내 키 파일 보호** 확인란의 선택을 취소합니다. **확인**을 클릭합니다.  
+5.  프로젝트 속성을 편집하는 동안 **서명** 탭을 클릭합니다. **어셈블리 서명** 옵션을 선택합니다. **강력한 이름 키 파일 선택** 목록에서 **<새로 만들기...>** 를 클릭합니다. **키 파일 이름** 상자에 `key.snk`를 입력합니다. **암호로 내 키 파일 보호** 확인란의 선택을 취소합니다. **확인**을 클릭합니다.  
   
 6.  TypeEquivalenceRuntime 프로젝트를 마우스 오른쪽 단추로 클릭하고 **참조 추가**를 클릭합니다. **찾아보기** 탭을 클릭하여 출력 경로 폴더로 이동합니다. TypeEquivalenceInterface.dll 파일을 선택하고 **확인**을 클릭합니다.  
   

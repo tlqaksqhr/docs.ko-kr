@@ -1,17 +1,12 @@
 ---
 title: 진입점(F#)
 description: 'F # 프로그램 실행 정식으로 시작, 실행 파일로 컴파일로 진입점을 설정 하는 방법에 알아봅니다.'
-author: cartermp
-ms.author: phcart
 ms.date: 05/16/2016
-ms.topic: language-reference
-ms.prod: dotnet-fsharp
-ms.devlang: fsharp
-ms.openlocfilehash: 42e5fe7f85285f990ef92e9791ed5bdfacb85059
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 3d6cab755dd89f2d3d669a8763aa08660432a0ac
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="entry-point"></a>진입점
 

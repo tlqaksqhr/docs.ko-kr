@@ -1,22 +1,12 @@
 ---
-title: "다중 스레드 응용 프로그램 (Visual Basic)"
-ms.custom: 
+title: 다중 스레드 응용 프로그램 (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 02b0444b-2e68-4f2c-bc28-28c046004017
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 19a4fe40e27a9edf8515e2734914aaf02d5e48b2
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: ab4b8d1c77ae75aee6f2cf459258766f88d86abe
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="multithreaded-applications-visual-basic"></a>다중 스레드 응용 프로그램 (Visual Basic)
 Visual Basic의 경우 동시에 여러 작업을 수행 하는 응용 프로그램을 작성할 수 있습니다. 다른 작업을 지연시킬 수 있는 작업은 별도 스레드에서 실행할 수 있으며, 이 프로세스를 *다중 스레딩* 또는 *자유 스레딩*이라고 합니다.  

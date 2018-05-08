@@ -1,22 +1,12 @@
 ---
-title: "확장 메서드 (Visual Basic)를 사용 하 여 리팩터링"
-ms.custom: 
+title: 확장 메서드 (Visual Basic)를 사용 하 여 리팩터링
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: d87ae99a-cfa9-4a31-a5e4-9d6437be6810
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 3ac7ce4c6a40829582628907bd50321bdda29bb7
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: e613994651ad33b8e9f4aa78c0c2897431246344
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="refactoring-using-an-extension-method-visual-basic"></a>확장 메서드 (Visual Basic)를 사용 하 여 리팩터링
 이 예제에서는 앞의 예에서 [(Visual Basic) 단락의 텍스트 검색](../../../../visual-basic/programming-guide/concepts/linq/retrieving-the-text-of-the-paragraphs.md), 확장 메서드로 구현 된 순수 함수를 사용 하 여 문자열의 연결을 리팩터링 하 합니다.  

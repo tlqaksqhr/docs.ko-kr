@@ -1,23 +1,12 @@
 ---
-title: "CodeActivity 클래스를 사용하여 워크플로 활동 제작"
-ms.custom: 
+title: CodeActivity 클래스를 사용하여 워크플로 활동 제작
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: cfe315c1-f86d-43ec-b9ce-2f8c469b1106
-caps.latest.revision: "11"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 2daec260c1224cd81280c6bf699b70efc2072588
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 6a78c4399db0c4d207921544d5faa4da022dd107
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="workflow-activity-authoring-using-the-codeactivity-class"></a>CodeActivity 클래스를 사용하여 워크플로 활동 제작
 <xref:System.Activities.CodeActivity>에서 상속하여 만들어진 활동은 <xref:System.Activities.CodeActivity.Execute%2A> 메서드를 재정의하여 기본 명령형 동작을 구현합니다.  

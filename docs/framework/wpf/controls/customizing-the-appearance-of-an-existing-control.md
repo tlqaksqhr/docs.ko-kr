@@ -1,13 +1,6 @@
 ---
-title: "ControlTemplate을 만들어 기존 컨트롤의 모양 사용자 지정"
-ms.custom: 
+title: ControlTemplate을 만들어 기존 컨트롤의 모양 사용자 지정
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -19,19 +12,14 @@ helpviewer_keywords:
 - controls [WPF], appearance specified by state
 - templates [WPF], custom for existing controls
 ms.assetid: 678dd116-43a2-4b8c-82b5-6b826f126e31
-caps.latest.revision: "12"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 0019b739c794cbffa62b49749371c2a19f752267
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: bbdc79fabf8dbe344baae66d718d79ac6375db7e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="customizing-the-appearance-of-an-existing-control-by-creating-a-controltemplate"></a>ControlTemplate을 만들어 기존 컨트롤의 모양 사용자 지정
-<a name="introduction"></a>A <xref:System.Windows.Controls.ControlTemplate> 시각적 구조와 컨트롤의 시각적 동작을 지정 합니다. 새 제공 하 여 컨트롤의 모양을 사용자 지정할 수 있습니다 <xref:System.Windows.Controls.ControlTemplate>합니다. 만들 때 한 <xref:System.Windows.Controls.ControlTemplate>, 기능을 변경 하지 않고 기존 컨트롤의 모양을 바꿉니다. 예를 들어 만들 수 있는 단추 응용 프로그램에서 기본 정사각형 대신 라운드 있지만 단추에서 여전히 발생는 <xref:System.Windows.Controls.Primitives.ButtonBase.Click> 이벤트입니다.  
+<a name="introduction"></a> A <xref:System.Windows.Controls.ControlTemplate> 시각적 구조와 컨트롤의 시각적 동작을 지정 합니다. 새 제공 하 여 컨트롤의 모양을 사용자 지정할 수 있습니다 <xref:System.Windows.Controls.ControlTemplate>합니다. 만들 때 한 <xref:System.Windows.Controls.ControlTemplate>, 기능을 변경 하지 않고 기존 컨트롤의 모양을 바꿉니다. 예를 들어 만들 수 있는 단추 응용 프로그램에서 기본 정사각형 대신 라운드 있지만 단추에서 여전히 발생는 <xref:System.Windows.Controls.Primitives.ButtonBase.Click> 이벤트입니다.  
   
  이 항목의 다양 한 부분에 설명는 <xref:System.Windows.Controls.ControlTemplate>을 만드는 간단한 방법을 보여 줍니다 <xref:System.Windows.Controls.ControlTemplate> 에 대 한는 <xref:System.Windows.Controls.Button>, 모양을 사용자 지정할 수 있도록 컨트롤의 컨트롤 계약을 이해 하는 방법에 설명 합니다. 만들 수 있으므로 한 <xref:System.Windows.Controls.ControlTemplate> 에 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], 코드를 작성 하지 않고 컨트롤의 모양을 변경할 수 있습니다. Microsoft Expression Blend와 같은 디자이너를 사용하여 사용자 지정 컨트롤 템플릿을 만들 수도 있습니다. 이 항목의 예를 보여 줍니다.는 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 의 모양을 사용자 지정 하는 <xref:System.Windows.Controls.Button> 하 고이 항목의 끝에 전체 예제를 나열 합니다. Expression Blend 사용에 대한 자세한 내용은 [템플릿을 지원하는 컨트롤의 스타일 지정](http://go.microsoft.com/fwlink/?LinkId=161153)을 참조하세요.  
   
@@ -45,7 +33,7 @@ ms.lasthandoff: 12/22/2017
   
   
 <a name="prerequisites"></a>   
-## <a name="prerequisites"></a>필수 구성 요소  
+## <a name="prerequisites"></a>전제 조건  
  이 항목에서는 [컨트롤](../../../../docs/framework/wpf/controls/index.md)에 설명된 대로 컨트롤과 스타일을 만들고 사용하는 방법을 알고 있다고 가정합니다. 이 항목에 설명 된 개념에서 상속 하는 요소에 적용 된 <xref:System.Windows.Controls.Control> 클래스를 제외 하 고는 <xref:System.Windows.Controls.UserControl>합니다. 적용할 수 없습니다는 <xref:System.Windows.Controls.ControlTemplate> 에 <xref:System.Windows.Controls.UserControl>합니다.  
   
 <a name="when_you_should_create_a_controltemplate"></a>   
@@ -93,7 +81,7 @@ ms.lasthandoff: 12/22/2017
   
  이 예제는 <xref:System.Windows.Controls.Grid> 가 해당 <xref:System.Windows.Controls.Panel.Background%2A?displayProperty=nameWithType> 속성 서식 파일에 바인딩된 <xref:System.Windows.Controls.Control.Background%2A?displayProperty=nameWithType>합니다. 때문에 <xref:System.Windows.Controls.Panel.Background%2A?displayProperty=nameWithType> 은 바인딩된 서식 파일을 동일한 것을 사용 하는 여러 단추를 만들 수 있습니다 <xref:System.Windows.Controls.ControlTemplate> 설정 하 고는 <xref:System.Windows.Controls.Control.Background%2A?displayProperty=nameWithType> 각 단추에 대해 서로 다른 값으로. 경우 <xref:System.Windows.Controls.Control.Background%2A?displayProperty=nameWithType> 하지 서식 파일에 있는 요소의 속성에 바인딩된는 <xref:System.Windows.Controls.ControlTemplate>설정는 <xref:System.Windows.Controls.Control.Background%2A?displayProperty=nameWithType> 단추의 모양에 영향을 미치지 것을 단추입니다.  
   
- 두 속성의 이름이 같지 않아도 됩니다. 앞의 예제에는 <xref:System.Windows.Controls.Control.HorizontalContentAlignment%2A?displayProperty=nameWithType> 속성은 <xref:System.Windows.Controls.Button> 서식 파일에 바인딩된는 <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A?displayProperty=nameWithType> 속성의는 <xref:System.Windows.Controls.ContentPresenter>합니다. 이를 통해 단추 콘텐츠의 가로 위치를 지정할 수 있습니다. <xref:System.Windows.Controls.ContentPresenter>명명 된 속성이 없는 `HorizontalContentAlignment`, 하지만 <xref:System.Windows.Controls.Control.HorizontalContentAlignment%2A?displayProperty=nameWithType> 에 바인딩될 수 <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A?displayProperty=nameWithType>합니다. 속성을 템플릿 바인딩할 경우 대상 속성과 소스 속성의 형식이 동일해야 합니다.  
+ 두 속성의 이름이 같지 않아도 됩니다. 앞의 예제에는 <xref:System.Windows.Controls.Control.HorizontalContentAlignment%2A?displayProperty=nameWithType> 속성은 <xref:System.Windows.Controls.Button> 서식 파일에 바인딩된는 <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A?displayProperty=nameWithType> 속성의는 <xref:System.Windows.Controls.ContentPresenter>합니다. 이를 통해 단추 콘텐츠의 가로 위치를 지정할 수 있습니다. <xref:System.Windows.Controls.ContentPresenter> 명명 된 속성이 없는 `HorizontalContentAlignment`, 하지만 <xref:System.Windows.Controls.Control.HorizontalContentAlignment%2A?displayProperty=nameWithType> 에 바인딩될 수 <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A?displayProperty=nameWithType>합니다. 속성을 템플릿 바인딩할 경우 대상 속성과 소스 속성의 형식이 동일해야 합니다.  
   
  <xref:System.Windows.Controls.Control> 클래스 설정 하는 경우 컨트롤에 적용 하려면 컨트롤 템플릿을 사용 해야 하는 몇 가지 속성을 정의 합니다. 방법을 <xref:System.Windows.Controls.ControlTemplate> 사용 하 여가 속성은 속성에 따라 달라 집니다. <xref:System.Windows.Controls.ControlTemplate> 다음 방법 중 하나에서 속성을 사용 해야 합니다.  
   
@@ -200,9 +188,9 @@ ms.lasthandoff: 12/22/2017
   
 |제한 유형|From 값|To 값|  
 |-------------------------|-------------------|-----------------|  
-|지정된 상태에서 지정된 다른 상태로 전환|이름을<xref:System.Windows.VisualState>|이름을<xref:System.Windows.VisualState>|  
-|임의의 상태에서 지정된 상태로 전환|설정 안 함|이름을<xref:System.Windows.VisualState>|  
-|지정된 상태에서 임의의 상태로 전환|이름을<xref:System.Windows.VisualState>|설정 안 함|  
+|지정된 상태에서 지정된 다른 상태로 전환|이름을 <xref:System.Windows.VisualState>|이름을 <xref:System.Windows.VisualState>|  
+|임의의 상태에서 지정된 상태로 전환|설정 안 함|이름을 <xref:System.Windows.VisualState>|  
+|지정된 상태에서 임의의 상태로 전환|이름을 <xref:System.Windows.VisualState>|설정 안 함|  
 |임의의 상태에서 임의의 다른 상태로 전환|설정 안 함|설정 안 함|  
   
  여러 개 있을 수 <xref:System.Windows.VisualTransition> 개체에 <xref:System.Windows.VisualStateGroup> 동일한 상태를 참조 하는 없지만 이전 표에서 지정 된 순서로 사용할 됩니다. 다음 예제에서는 두 개의 <xref:System.Windows.VisualTransition> 개체입니다. 컨트롤에서 전환 하는 경우는 `Pressed` 상태는 `MouseOver` 상태는 <xref:System.Windows.VisualTransition> 가 모두 <xref:System.Windows.VisualTransition.From%2A> 및 <xref:System.Windows.VisualTransition.To%2A> 집합이 사용 됩니다. 컨트롤이 `Pressed`가 아닌 상태에서 `MouseOver` 상태로 전환될 때는 다른 상태가 사용됩니다.  

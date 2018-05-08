@@ -1,18 +1,12 @@
 ---
-title: "파일 이름으로 지정된 파일이 FileEncoding으로 지정된 인코딩을 사용하지 않습니다."
+title: 파일 이름으로 지정된 파일이 FileEncoding으로 지정된 인코딩을 사용하지 않습니다.
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology: devlang-visual-basic
-ms.topic: article
 ms.assetid: 2129f8df-96cd-4c2e-a4ca-f08a49f07d3f
-caps.latest.revision: "9"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: f708404276ab8037d162eb43922becf05c9fae84
-ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
+ms.openlocfilehash: d14ba8014670414944300960ef63770fcf542ab9
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="file-specified-by-filename-does-not-use-the-encoding-specified-by-fileencoding"></a>파일 이름으로 지정된 파일이 FileEncoding으로 지정된 인코딩을 사용하지 않습니다.
 파일에서 읽으려고 했지만 지정된 인코딩이 해당 파일에서 사용되지 않습니다.  

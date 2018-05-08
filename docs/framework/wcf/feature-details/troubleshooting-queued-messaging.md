@@ -1,38 +1,24 @@
 ---
 title: 대기 중인 메시지 문제 해결
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: a5f2836f-018d-42f5-a571-1e97e64ea5b0
-caps.latest.revision: 19
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 1342f2383e7cf2aa15ea60be03c93044e4332612
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 45a3bf82662fcc01b732428d1ca351e4ae8ddca0
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="troubleshooting-queued-messaging"></a>대기 중인 메시지 문제 해결
-이 단원에는 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]에서 큐를 사용하는 경우에 관한 일반적인 질문과 문제 해결 도움말이 있습니다.  
+이 섹션에는 일반적인 질문 및 문제 해결 Windows Communication Foundation (WCF)에서 큐를 사용 하 여에 대 한 도움말이 포함 되어 있습니다.  
   
 ## <a name="common-questions"></a>자주 묻는 질문  
- **Q:** 사용 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 베타 1과 I MSMQ 핫픽스를 설치 합니다. 핫픽스를 제거해야 합니까?  
+ **Q:** WCF 베타 1를 사용 하 고 MSMQ 핫픽스를 설치 합니다. 핫픽스를 제거해야 합니까?  
   
- **A:** 예. 이 핫픽스는 더 이상 지원되지 않습니다. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]를 이제 핫픽스 없이도 MSMQ에서 사용할 수 있습니다.  
+ **A:** 예. 이 핫픽스는 더 이상 지원되지 않습니다. WCF는 이제 핫픽스 없이 MSMQ에서 작동합니다.  
   
  **Q:** 두 가지 바인딩 msmq: <xref:System.ServiceModel.NetMsmqBinding> 및 <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding>합니다. 어느 것을 언제 사용해야 합니까?  
   
- **A:** 사용는 <xref:System.ServiceModel.NetMsmqBinding> 두 큐에 대기 중인된 통신에 MSMQ를 전송으로 사용 하려는 경우 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 응용 프로그램입니다. <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding>은 기존 MSMQ 응용 프로그램을 사용하여 새 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 응용 프로그램과 통신하려는 경우에 사용합니다.  
+ **A:** 사용는 <xref:System.ServiceModel.NetMsmqBinding> 두 WCF 응용 프로그램 간에 대기 중인된 통신에 대 한 MSMQ를 전송으로 사용 하려는 경우. 사용 하 여는 <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding> 새 WCF 응용 프로그램과 통신할 수 기존 MSMQ 응용 프로그램을 사용 하려는 경우.  
   
  **Q:** 사용 하려면 MSMQ를 업그레이드 해야는 <xref:System.ServiceModel.NetMsmqBinding> 및 `MsmqIntegration` 바인딩?  
   
@@ -54,7 +40,7 @@ ms.lasthandoff: 04/30/2018
   
  **A:** 예.  
   
- **Q:** new로 기존 MSMQ 응용 프로그램과 통합 하려는 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 클라이언트 또는 서버입니다. MSMQ 인프라의 양쪽을 모두 업그레이드해야 합니까?  
+ **Q:** 기존 MSMQ 응용 프로그램을 새 WCF 클라이언트 또는 서버에 통합 하고자 합니다. MSMQ 인프라의 양쪽을 모두 업그레이드해야 합니까?  
   
  **A:** 아니요. 어느 쪽에서도 MSMQ 4.0으로 업그레이드할 필요는 없습니다.  
   
@@ -145,9 +131,9 @@ System.ServiceModel.MsmqPoisonMessageException: The transport channel detected a
   
  **Q:** 공개 또는 개인 형식 이름을 사용 하 여 I와에서 서비스 호스트를 열고 [!INCLUDE[wv](../../../../includes/wv-md.md)], 오류가 발생 합니다. 이유  
   
- **A:** 는 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 통합 채널에서 [!INCLUDE[wv](../../../../includes/wv-md.md)] 포이즌 메시지 처리에 대 한 주 응용 프로그램 큐에 대 한 하위 큐를 열 수는 경우를 확인 합니다. 하위 큐의 이름은 수신기에 전달되는 msmq.formatname URI에서 파생됩니다. MSMQ에서 하위 큐 이름에는 직접 형식 이름만 사용할 수 있습니다. 따라서 오류가 발생합니다. 큐 URI를 직접 형식 이름으로 변경하십시오.  
+ **A:** WCF 통합 채널에서 [!INCLUDE[wv](../../../../includes/wv-md.md)] 포이즌 메시지 처리에 대 한 주 응용 프로그램 큐에 대 한 하위 큐를 열 수는 경우를 확인 합니다. 하위 큐의 이름은 수신기에 전달되는 msmq.formatname URI에서 파생됩니다. MSMQ에서 하위 큐 이름에는 직접 형식 이름만 사용할 수 있습니다. 따라서 오류가 발생합니다. 큐 URI를 직접 형식 이름으로 변경하십시오.  
   
- **Q:** MSMQ 응용 프로그램에서 메시지를 받을 때 메시지 큐에 배치 하 고 수신에서 읽을 수 없습니다 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 응용 프로그램입니다. 이유  
+ **Q:** MSMQ 응용 프로그램에서 메시지를 받을 때 메시지 큐에 배치 하 고 수신 WCF 응용 프로그램에서 읽을 수 없습니다. 이유  
   
  **A:** 메시지에 본문이 있는지 여부를 확인 합니다. 메시지에 본문이 없으면 MSMQ 통합 채널에서 메시지를 무시합니다. 예외에 대한 알림을 받고 추적을 확인하려면 `IErrorHandler`를 구현하십시오.  
   
@@ -193,7 +179,7 @@ System.ServiceModel.MsmqPoisonMessageException: The transport channel detected a
  **A:** 바인딩 구성을 확인 합니다. 기본 바인딩에는 메시지 서명을 위해 MSMQ 전송 보안이 설정되어 있습니다. MSMQ 전송 보안을 해제하십시오.  
   
 ### <a name="remote-transacted-receives"></a>트랜잭션된 원격 수신  
- **Q:** 컴퓨터 a에서 큐가 있고 및 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 서비스를 읽는 B (트랜잭션 된 원격 수신 시나리오), 메시지는 컴퓨터에 있는 큐에서 메시지를 큐에서 읽을 수 없습니다. 메시지 "트랜잭션을 가져올 수 없습니다."와 수신 실패 나타냅니다 추적 정보 이 문제를 해결 하려면 어떻게 해야 합니까?  
+ **Q:** 컴퓨터 A에서 큐를 있습니까 시점과 컴퓨터 B (트랜잭션 된 원격 수신 시나리오), 메시지 큐에서 메시지를 읽는 하는 WCF 서비스를 큐에서 읽을 수 없습니다. 메시지 "트랜잭션을 가져올 수 없습니다."와 수신 실패 나타냅니다 추적 정보 이 문제를 해결 하려면 어떻게 해야 합니까?  
   
  **A:** 없는 다음이 대 한 세 가지 가능한 이유:  
   

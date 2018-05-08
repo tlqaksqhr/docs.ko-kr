@@ -1,24 +1,12 @@
 ---
 title: 본문 코딩
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 5bfb2d95-9092-4551-9c59-bd8f0a37225e
-caps.latest.revision: 3
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 1a07ef581459585f0418cdd24660b8064d0f51b0
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.openlocfilehash: dc1ff68c0dad7dae33ca7977b566a86ae3bad9bd
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="code-bodied"></a>본문 코딩
 이 단원에는 선언적으로 코드로 만든 사용자 지정 활동 샘플이 포함되어 있습니다.  

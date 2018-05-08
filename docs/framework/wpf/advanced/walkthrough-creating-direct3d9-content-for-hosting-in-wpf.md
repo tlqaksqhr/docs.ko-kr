@@ -1,31 +1,17 @@
 ---
-title: "연습: WPF에서 호스팅할 Direct3D9 콘텐츠 만들기"
-ms.custom: 
+title: '연습: WPF에서 호스팅할 Direct3D9 콘텐츠 만들기'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - cpp
 helpviewer_keywords:
 - WPF [WPF], creating Direct3D9 content
 - Direct3D9 [WPF interoperability], creating Direct3D9 content
 ms.assetid: 286e98bc-1eaa-4b5e-923d-3490a9cca5fc
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: f1a5d70807541a0a3faf6bc99a3ced42827efd72
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: f279fb1749be9953e6d09d4b1bd4dd8578d42615
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="walkthrough-creating-direct3d9-content-for-hosting-in-wpf"></a>연습: WPF에서 호스팅할 Direct3D9 콘텐츠 만들기
 이 연습에는 Windows Presentation Foundation (WPF) 응용 프로그램에서 호스팅에 대 한 적합 한 Direct3D9 콘텐츠를 만드는 방법을 보여 줍니다. WPF 응용 프로그램의 Direct3D9 콘텐츠를 호스트에 대 한 자세한 내용은 참조 하십시오. [WPF 및 Direct3D9 상호 운용](../../../../docs/framework/wpf/advanced/wpf-and-direct3d9-interoperation.md)합니다.  
@@ -38,7 +24,7 @@ ms.lasthandoff: 12/22/2017
   
  작업을 완료 하는 경우에 WPF 응용 프로그램에서 사용 하기 위해 Direct3D9 콘텐츠를 포함 하는 DLL 해야 합니다.  
   
-## <a name="prerequisites"></a>필수 구성 요소  
+## <a name="prerequisites"></a>전제 조건  
  이 연습을 완료하려면 다음 구성 요소가 필요합니다.  
   
 -   [!INCLUDE[vs_dev10_long](../../../../includes/vs-dev10-long-md.md)].  
@@ -89,7 +75,7 @@ ms.lasthandoff: 12/22/2017
   
 1.  솔루션 탐색기를 사용 하 여 다음 프로젝트에 세 개의 c + + 클래스를 추가 합니다.  
   
-     `CRenderer`(가상 소멸자 포함)  
+     `CRenderer` (가상 소멸자 포함)  
   
      `CRendererManager`  
   

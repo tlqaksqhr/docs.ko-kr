@@ -1,25 +1,16 @@
 ---
-title: "Visual Basic 코딩 규칙"
-ms.custom: 
+title: Visual Basic 코딩 규칙
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - coding conventions [Visual Basic], Visual Basic
 - examples [Visual Basic], coding conventions
 - Visual Basic code, conventions
 ms.assetid: c1df130b-fec6-49a5-becf-0a7e494a1d0f
-caps.latest.revision: "48"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: afea862fb8783da3e69fd9828e0ded67fb81b00e
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.openlocfilehash: b686747b46529b53b0802a7deb38b5b4949f4d5e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="visual-basic-coding-conventions"></a>Visual Basic 코딩 규칙
 Microsoft 예제 및이 항목의 지침에 따라 설명서를 개발 합니다. 동일한 코딩 규칙을 따르는 경우는 다음과 같은 이점을 얻을 수 있습니다 수 있습니다.  
@@ -165,7 +156,7 @@ Microsoft 예제 및이 항목의 지침에 따라 설명서를 개발 합니다
   
      [!code-vb[VbVbalrGuidelines#26](../../../visual-basic/programming-guide/program-structure/codesnippet/VisualBasic/coding-conventions_18.vb)]  
   
--   이벤트 인지를 확인 하지 않습니다 `Nothing` (null)를 호출 하기 전에 `RaiseEvent` 메서드. `RaiseEvent`에 대 한 확인 `Nothing` 전에 이벤트를 발생 시킵니다.  
+-   이벤트 인지를 확인 하지 않습니다 `Nothing` (null)를 호출 하기 전에 `RaiseEvent` 메서드. `RaiseEvent` 에 대 한 확인 `Nothing` 전에 이벤트를 발생 시킵니다.  
   
 ### <a name="using-shared-members"></a>공유 멤버 사용  
  호출 `Shared` 클래스 이름에서가 아니라 인스턴스 변수를 사용 하 여 멤버입니다.  

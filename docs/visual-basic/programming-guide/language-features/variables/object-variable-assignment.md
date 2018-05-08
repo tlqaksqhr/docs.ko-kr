@@ -1,13 +1,6 @@
 ---
-title: "개체 변수 할당(Visual Basic)"
-ms.custom: 
+title: 개체 변수 할당(Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - Nothing keyword [Visual Basic], object variable assignment
 - object variables [Visual Basic], initializing
@@ -20,14 +13,11 @@ helpviewer_keywords:
 - assignment statements [Visual Basic], object variable assignment
 - Me keyword [Visual Basic], as object variable
 ms.assetid: 3706811d-fd40-44fe-8727-d692e8e55d6d
-caps.latest.revision: "19"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: eb6b53bebddc1c9cf1b9088e96ded36a5e1c5242
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: f20a03c4d9a0e33203629ae066686f4c9f25c105
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="object-variable-assignment-visual-basic"></a>개체 변수 할당(Visual Basic)
 일반적인 대입문을 사용 하 여 개체 변수에 개체를 할당 합니다. 개체 식을 할당할 수 있습니다 또는 [Nothing](../../../../visual-basic/language-reference/nothing.md) 키워드를 다음 예제와 같이 보여 줍니다.  
@@ -40,7 +30,7 @@ thisObject = Form1
 thisObject = Nothing  
 ```  
   
- `Nothing`변수에 할당 된 현재 개체가 없는 것을 의미 합니다.  
+ `Nothing` 변수에 할당 된 현재 개체가 없는 것을 의미 합니다.  
   
 ## <a name="initialization"></a>초기화  
  코드를 실행 하 고 변수가 초기화 됩니다 개체를 시작할 때 `Nothing`합니다. 해당 선언 초기화를 포함 하는 것 다시 선언 문이 실행 될 때 지정 된 값으로 초기화 됩니다.  

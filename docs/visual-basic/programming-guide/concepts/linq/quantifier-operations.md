@@ -1,22 +1,12 @@
 ---
-title: "수량자 작업 (Visual Basic)"
-ms.custom: 
+title: 수량자 작업 (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: ae1a2b73-503c-4f4b-a3fd-31b5adbee67c
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 9bc48c69179b1f8876efaa465295e94a9a0e0fb6
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 0a0a5fae35a14ab6451f2f56fb2eedd92ac437e7
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="quantifier-operations-visual-basic"></a>수량자 작업 (Visual Basic)
 수량자 작업은 시퀀스에서 조건을 충족하는 요소가 일부인지 전체인지를 나타내는 <xref:System.Boolean> 값을 반환합니다.  

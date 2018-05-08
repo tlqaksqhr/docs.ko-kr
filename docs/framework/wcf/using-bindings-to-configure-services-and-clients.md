@@ -1,31 +1,17 @@
 ---
 title: 바인딩을 사용하여 서비스 및 클라이언트 구성
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - bindings [WCF], using
 ms.assetid: c39479c3-0766-4a17-ba4c-97a74607f392
-caps.latest.revision: 33
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 68c8c2c93ce29147247c332848025fd931bf7854
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
-ms.translationtype: MT
+ms.openlocfilehash: 39866d7cdd871c6450e0864848c7a3197779045a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-bindings-to-configure-services-and-clients"></a>바인딩을 사용하여 서비스 및 클라이언트 구성
-바인딩은 끝점에 연결하는 데 필요한 통신 세부 사항을 지정하는 개체입니다. 보다 구체적으로, 바인딩에는 해당 끝점이나 클라이언트 채널에 사용할 전송, 통신 형식(메시지 인코딩) 및 프로토콜의 고유 정보를 정의하여 클라이언트 또는 서비스 런타임을 만드는 데 사용되는 구성 정보가 들어 있습니다. 작동하는 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 서비스를 만들려면 서비스의 각 끝점에 바인딩이 필요합니다. 이 항목에서는 바인딩 정의, 바인딩이 정의되는 방법 및 끝점에 대해 특정 바인딩이 지정되는 방법에 대해 설명합니다.  
+바인딩은 끝점에 연결하는 데 필요한 통신 세부 사항을 지정하는 개체입니다. 보다 구체적으로, 바인딩에는 해당 끝점이나 클라이언트 채널에 사용할 전송, 통신 형식(메시지 인코딩) 및 프로토콜의 고유 정보를 정의하여 클라이언트 또는 서비스 런타임을 만드는 데 사용되는 구성 정보가 들어 있습니다. 작동 중인 Windows Communication Foundation (WCF) 서비스를 만들려면 각 서비스의 끝점에에서는 바인딩이 필요 합니다. 이 항목에서는 바인딩 정의, 바인딩이 정의되는 방법 및 끝점에 대해 특정 바인딩이 지정되는 방법에 대해 설명합니다.  
   
 ## <a name="what-a-binding-defines"></a>바인딩이 정의하는 내용  
  바인딩의 정보는 매우 기본적이거나 매우 복잡할 수 있습니다. 가장 기본적인 바인딩은 끝점에 연결하는 데 사용해야 하는 HTTP 등의 전송 프로토콜만 지정합니다. 보다 일반적으로, 끝점 연결 방법과 관련해서 바인딩에 포함되는 정보는 다음 표의 범주 중 하나에 해당합니다.  

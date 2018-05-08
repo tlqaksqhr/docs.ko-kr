@@ -1,14 +1,6 @@
 ---
-title: "StrongNameKeyGen 함수"
-ms.custom: 
+title: StrongNameKeyGen 함수
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - StrongNameKeyGen
 api_location:
@@ -22,17 +14,13 @@ helpviewer_keywords:
 ms.assetid: 883e413a-ad2f-4f7f-b1b9-aeb8fe5b65f8
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: e3bb9530884f61345d439ec8662a088e1d152de7
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 5fce08434cb8864350fd333dcfcaa388a8031c09
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="strongnamekeygen-function"></a>StrongNameKeyGen 함수
 강력한 이름 사용 하기 위해 새 공개/개인 키 쌍을 만듭니다.  
@@ -52,7 +40,7 @@ BOOLEAN StrongNameKeyGen (
   
 #### <a name="parameters"></a>매개 변수  
  `wszKeyContainer`  
- [in] 요청 된 키 컨테이너 이름입니다. `wszKeyContainer`비어 있지 않은 문자열 이어야 하거나 임시 이름을 생성 하는 null 해야 합니다.  
+ [in] 요청 된 키 컨테이너 이름입니다. `wszKeyContainer` 비어 있지 않은 문자열 이어야 하거나 임시 이름을 생성 하는 null 해야 합니다.  
   
  `dwFlags`  
  [in] 등록 키를 상태로 둘지 여부를 지정 합니다. 다음 값이 지원 됩니다.  
@@ -68,7 +56,7 @@ BOOLEAN StrongNameKeyGen (
  [out] 를 바이트 단위로 크기의 `ppbKeyBlob`합니다.  
   
 ## <a name="return-value"></a>반환 값  
- `true`성공적으로 완료 됩니다. 그렇지 않으면 `false`합니다.  
+ `true` 성공적으로 완료 됩니다. 그렇지 않으면 `false`합니다.  
   
 ## <a name="remarks"></a>설명  
  `StrongNameKeyGen` 함수는 1024 비트 키를 만듭니다. 호출 해야 키를 검색 한 후의 [StrongNameFreeBuffer](../../../../docs/framework/unmanaged-api/strong-naming/strongnamefreebuffer-function.md) 함수 할당 된 메모리를 해제 합니다.  
@@ -82,7 +70,7 @@ BOOLEAN StrongNameKeyGen (
   
  **라이브러리:** MsCorEE.dll에 리소스로 포함  
   
- **.NET framework 버전:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>참고 항목  
  [StrongNameKeyGen 메서드](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamekeygen-method.md)  

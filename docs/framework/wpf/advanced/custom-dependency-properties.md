@@ -1,13 +1,6 @@
 ---
-title: "사용자 지정 종속성 속성"
-ms.custom: 
+title: 사용자 지정 종속성 속성
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -21,16 +14,11 @@ helpviewer_keywords:
 - wrappers [WPF], implementing
 - dependency properties [WPF], custom
 ms.assetid: e6bfcfac-b10d-4f58-9f77-a864c2a2938f
-caps.latest.revision: "25"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 588ab00d61a701dc43e2af5978a6023a93f367f4
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 2623f34418aad7a0b29c52d1310fdc79afced790
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="custom-dependency-properties"></a>사용자 지정 종속성 속성
 이 항목에서는 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 응용 프로그램 개발자와 구성 요소 작성자가 사용자 지정 종속성 속성을 만들려고 하는 이유와 구현 단계 및 속성의 성능, 유용성 또는 유연성을 향상시킬 수 있는 일부 구현 옵션에 대해 설명합니다.  
@@ -38,7 +26,7 @@ ms.lasthandoff: 12/22/2017
 
   
 <a name="prerequisites"></a>   
-## <a name="prerequisites"></a>필수 구성 요소  
+## <a name="prerequisites"></a>전제 조건  
  이 항목에서는 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 클래스에서 기존 종속성 속성의 소비자 관점에서 종속성 속성을 이해하고 [종속성 속성 개요](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md) 항목을 읽었다고 가정합니다. 이 항목의 예제를 따르려면 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]를 이해하고 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 응용 프로그램을 작성하는 방법도 알아야 합니다.  
   
 <a name="whatis"></a>   
@@ -134,11 +122,11 @@ ms.lasthandoff: 12/22/2017
   
 -   속성 (또는 해당 값의 변경 사항이) 적용 하는 경우는 [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)], 특히 영향을 줌 레이아웃 시스템 크기를 조정 하거나 페이지에서 요소를 렌더링 하는 방법 설정 플래그 중 하나 이상을: <xref:System.Windows.FrameworkPropertyMetadataOptions.AffectsMeasure>, <xref:System.Windows.FrameworkPropertyMetadataOptions.AffectsArrange>, <xref:System.Windows.FrameworkPropertyMetadataOptions.AffectsRender>합니다.  
   
-    -   <xref:System.Windows.FrameworkPropertyMetadataOptions.AffectsMeasure>이 속성에 대 한 변경에 대 한 변경 해야 함을 의미 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 를 포함 하는 개체 공간이 필요할 수 있습니다 더 많거나 적게 부모 내에서 렌더링 합니다. 예를 들어 "Width" 속성은 이 플래그를 설정해야 합니다.  
+    -   <xref:System.Windows.FrameworkPropertyMetadataOptions.AffectsMeasure> 이 속성에 대 한 변경에 대 한 변경 해야 함을 의미 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 를 포함 하는 개체 공간이 필요할 수 있습니다 더 많거나 적게 부모 내에서 렌더링 합니다. 예를 들어 "Width" 속성은 이 플래그를 설정해야 합니다.  
   
-    -   <xref:System.Windows.FrameworkPropertyMetadataOptions.AffectsArrange>이 속성에 대 한 변경에 대 한 변경 해야 함을 의미 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 렌더링이에서 변경 된 전용된 공간 필요 하지 않지만 공간 내에서 위치 지정이 변경 되었음을 나타내는지 않습니다. 예를 들어 "Alignment" 속성은 이 플래그를 설정해야 합니다.  
+    -   <xref:System.Windows.FrameworkPropertyMetadataOptions.AffectsArrange> 이 속성에 대 한 변경에 대 한 변경 해야 함을 의미 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 렌더링이에서 변경 된 전용된 공간 필요 하지 않지만 공간 내에서 위치 지정이 변경 되었음을 나타내는지 않습니다. 예를 들어 "Alignment" 속성은 이 플래그를 설정해야 합니다.  
   
-    -   <xref:System.Windows.FrameworkPropertyMetadataOptions.AffectsRender>나타냅니다 레이아웃 및 측정값에 영향을 주지 것입니다 되지만 다른 렌더링이 필요한 다른 변경 사항이 있는 발생 했습니다. 예를 들어 기존 요소의 색상을 변경하는 "Background"와 같은 속성이 있습니다.  
+    -   <xref:System.Windows.FrameworkPropertyMetadataOptions.AffectsRender> 나타냅니다 레이아웃 및 측정값에 영향을 주지 것입니다 되지만 다른 렌더링이 필요한 다른 변경 사항이 있는 발생 했습니다. 예를 들어 기존 요소의 색상을 변경하는 "Background"와 같은 속성이 있습니다.  
   
     -   이러한 플래그는 종종 속성 시스템 또는 레이아웃 콜백의 자체 재정의 구현에 대한 메타데이터의 프로토콜로 사용됩니다. 예를 들어, 할 수 있습니다는 <xref:System.Windows.DependencyObject.OnPropertyChanged%2A> 호출 하는 콜백 <xref:System.Windows.UIElement.InvalidateArrange%2A> 인스턴스 속성 값 변경 사항을 보고 및 <xref:System.Windows.FrameworkPropertyMetadata.AffectsArrange%2A> 으로 `true` 는 메타 데이터에 있습니다.  
   
@@ -148,7 +136,7 @@ ms.lasthandoff: 12/22/2017
   
 -   기본적으로 데이터 바인딩 <xref:System.Windows.Data.Binding.Mode%2A> 종속성 속성이 기본적으로에 대 한 <xref:System.Windows.Data.BindingMode.OneWay>합니다. 바인딩의 언제 든 변경할 수 <xref:System.Windows.Data.BindingMode.TwoWay> 바인딩 인스턴스별로; 대 한 자세한 내용은 참조 [바인딩의 방향을 지정](../../../../docs/framework/wpf/data/how-to-specify-the-direction-of-the-binding.md)합니다. 종속성 속성 작성자는 속성 사용 하도록 선택할 수 있지만 <xref:System.Windows.Data.BindingMode.TwoWay> 기본적으로 바인딩 모드입니다. 기존 종속성 속성의 예로 <xref:System.Windows.Controls.MenuItem.IsSubmenuOpen%2A?displayProperty=nameWithType>;은이 속성에 대 한 시나리오는 <xref:System.Windows.Controls.MenuItem.IsSubmenuOpen%2A> 설정 논리와의 합성 <xref:System.Windows.Controls.MenuItem> 기본 테마 스타일와 상호 작용 합니다. <xref:System.Windows.Controls.MenuItem.IsSubmenuOpen%2A> 속성 논리를 사용 하 여 데이터 바인딩을 고유 하 게 다른 상태 속성 및 메서드 호출에 따라에서 속성의 상태를 유지 합니다. 바인딩하는 다른 속성으로 <xref:System.Windows.Data.BindingMode.TwoWay> 은 기본적으로 <xref:System.Windows.Controls.TextBox.Text%2A?displayProperty=nameWithType>합니다.  
   
--   설정 하 여 사용자 지정 종속성 속성의 속성 상속을 사용할 수도 있습니다는 <xref:System.Windows.FrameworkPropertyMetadataOptions.Inherits> 플래그입니다. 속성 상속은 부모 요소와 자식 요소가 공통된 속성을 갖는 시나리오에 유용하며 자식 요소가 해당 특정 속성 값을 부모가 설정한 값과 동일한 값으로 설정하는 것이 적합합니다. 예제에서는 상속 가능한 속성은 <xref:System.Windows.FrameworkElement.DataContext%2A>, 바인딩 데이터 표시에 대 한 중요 한 마스터-세부 정보 시나리오를 사용 하는 작업에 사용 됩니다. 함으로써 <xref:System.Windows.FrameworkElement.DataContext%2A> , 상속 가능한 모든 자식 요소는 데이터 컨텍스트를 상속도 합니다. 속성 값 상속으로 인해 페이지 또는 응용 프로그램 루트에서 데이터 컨텍스트를 지정할 수 있으며 가능한 모든 하위 요소의 바인딩에 대해 다시 지정할 필요가 없습니다. <xref:System.Windows.FrameworkElement.DataContext%2A>또한 상속 된 기본값을 무시 하지만 항상 설정할 수 있습니다 로컬로; 특정 자식 요소에 설명 하기 위해 좋은 예 자세한 내용은 참조 [마스터-세부 패턴을 사용 하 여 계층적 데이터로](../../../../docs/framework/wpf/data/how-to-use-the-master-detail-pattern-with-hierarchical-data.md)합니다. 속성 값 상속을 사용하면 성능이 저하될 수 있으므로 꼭 필요할 때만 사용해야 합니다. 자세한 내용은 [속성 값 상속](../../../../docs/framework/wpf/advanced/property-value-inheritance.md)을 참조하세요.  
+-   설정 하 여 사용자 지정 종속성 속성의 속성 상속을 사용할 수도 있습니다는 <xref:System.Windows.FrameworkPropertyMetadataOptions.Inherits> 플래그입니다. 속성 상속은 부모 요소와 자식 요소가 공통된 속성을 갖는 시나리오에 유용하며 자식 요소가 해당 특정 속성 값을 부모가 설정한 값과 동일한 값으로 설정하는 것이 적합합니다. 예제에서는 상속 가능한 속성은 <xref:System.Windows.FrameworkElement.DataContext%2A>, 바인딩 데이터 표시에 대 한 중요 한 마스터-세부 정보 시나리오를 사용 하는 작업에 사용 됩니다. 함으로써 <xref:System.Windows.FrameworkElement.DataContext%2A> , 상속 가능한 모든 자식 요소는 데이터 컨텍스트를 상속도 합니다. 속성 값 상속으로 인해 페이지 또는 응용 프로그램 루트에서 데이터 컨텍스트를 지정할 수 있으며 가능한 모든 하위 요소의 바인딩에 대해 다시 지정할 필요가 없습니다. <xref:System.Windows.FrameworkElement.DataContext%2A> 또한 상속 된 기본값을 무시 하지만 항상 설정할 수 있습니다 로컬로; 특정 자식 요소에 설명 하기 위해 좋은 예 자세한 내용은 참조 [마스터-세부 패턴을 사용 하 여 계층적 데이터로](../../../../docs/framework/wpf/data/how-to-use-the-master-detail-pattern-with-hierarchical-data.md)합니다. 속성 값 상속을 사용하면 성능이 저하될 수 있으므로 꼭 필요할 때만 사용해야 합니다. 자세한 내용은 [속성 값 상속](../../../../docs/framework/wpf/advanced/property-value-inheritance.md)을 참조하세요.  
   
 -   설정의 <xref:System.Windows.FrameworkPropertyMetadataOptions.Journal> 종속성 속성을 검색 또는 탐색 저널링 services에서 사용 하는 경우를 나타내는 플래그입니다. 예로 <xref:System.Windows.Controls.Primitives.Selector.SelectedIndex%2A> 속성, 선택 영역에서 선택 된 항목이 저널링 기록을 탐색할 때 컨트롤을 유지 해야 합니다.  
   

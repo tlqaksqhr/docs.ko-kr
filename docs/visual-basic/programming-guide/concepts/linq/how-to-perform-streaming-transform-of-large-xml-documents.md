@@ -1,22 +1,12 @@
 ---
-title: "방법: (Visual Basic) 큰 XML 문서의 스트리밍 변형 수행"
-ms.custom: 
+title: '방법: (Visual Basic) 큰 XML 문서의 스트리밍 변형 수행'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 3d954cc9-4b3c-4b47-8132-ff7541cff53b
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: d211cbd1c94d485e0c41d23eb12dcae28ae7ad6e
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 50534cc7692386b217dec46082acf65e244ebb48
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-perform-streaming-transform-of-large-xml-documents-visual-basic"></a>방법: (Visual Basic) 큰 XML 문서의 스트리밍 변형 수행
 큰 XML 파일을 변환하고 응용 프로그램의 메모리 사용 공간이 예상 가능하도록 응용 프로그램을 작성해야 하는 경우가 있습니다. XML 트리를 매우 큰 XML 파일로 채우려는 경우 메모리 사용은 파일 크기에 비례하므로 지나치게 증가하게 됩니다. 따라서 스트리밍 기법을 대신 사용해야 합니다.  

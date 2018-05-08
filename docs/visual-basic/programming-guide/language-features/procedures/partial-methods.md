@@ -1,12 +1,6 @@
 ---
-title: "부분 메서드(Visual Basic)"
-ms.custom: 
+title: 부분 메서드(Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.PartialMethod
 - PartialMethod
@@ -17,14 +11,11 @@ helpviewer_keywords:
 - methods [Visual Basic], partial methods
 - inserting custom logic into code
 ms.assetid: 74b3368b-b348-44a0-a326-7d7dc646f4e9
-caps.latest.revision: "16"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 33e34c63988e74be2c22cb7b1358f5e8b04048c6
-ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
+ms.openlocfilehash: a1708c1d953a60429c1bd87fd858da5c50a3e759
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="partial-methods-visual-basic"></a>부분 메서드(Visual Basic)
 부분 메서드는 개발자가 코드를 사용자 지정 논리를 삽입할 수를 사용 합니다. 일반적으로 코드는 디자이너에서 생성 된 클래스의 일부입니다. 부분 메서드는 코드 생성기에 의해 만들어진 partial 클래스에 정의 된 하 고 변경 된 내용이 알림을 제공 하 여 일반적으로 사용 됩니다. 사용 개발자는 변경에 따른에서 사용자 지정 동작을 지정할 수 있습니다.  

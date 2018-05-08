@@ -1,26 +1,17 @@
 ---
 title: 이 컨텍스트에서는 nullable 형식을 유추할 수 없습니다.
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vbc36629
 - bc36629
 helpviewer_keywords:
 - BC36629
 ms.assetid: 0a1e2dbc-d9a4-433d-9306-c5540782b81d
-caps.latest.revision: 5
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: e7a5450d812260d3916296dff56abee27b3d586c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: ea531c7be676e940a263b019a66cc80cf280a772
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="nullable-type-inference-is-not-supported-in-this-context"></a>이 컨텍스트에서는 nullable 형식을 유추할 수 없습니다.
 값 형식 및 구조는 null을 허용 선언할 수 있습니다.  

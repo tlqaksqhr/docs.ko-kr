@@ -1,22 +1,12 @@
 ---
-title: "Visual Studio (Visual Basic)에서 식 트리 디버깅"
-ms.custom: 
+title: Visual Studio (Visual Basic)에서 식 트리 디버깅
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 492cc28f-b7a2-4c47-b582-b3c437b8a5d5
-caps.latest.revision: "4"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: ff1bee9c3c3fdeafab24368d2c7e8376d4ff7b97
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 2addba2654067eaaf6c621c927e0992308879ae4
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="debugging-expression-trees-in-visual-studio-visual-basic"></a>Visual Studio (Visual Basic)에서 식 트리 디버깅
 응용 프로그램을 디버그할 때 식 트리의 구조 및 내용을 분석할 수 있습니다. 식 트리 구조의 개요를 빠르게 확인하려면 디버그 모드에서만 제공되는 `DebugView` 속성을 사용합니다. 디버깅에 대한 자세한 내용은 [Debugging in Visual Studio](/visualstudio/debugger/debugging-in-visual-studio)(Visual Studio의 디버깅)를 참조하세요.  

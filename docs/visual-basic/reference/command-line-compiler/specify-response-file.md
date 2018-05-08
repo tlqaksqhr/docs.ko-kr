@@ -1,21 +1,16 @@
 ---
 title: '@(지시 파일 지정)(Visual Basic)'
 ms.date: 03/13/2018
-ms.prod: .net
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - '@ (Specify Response File) compiler option [Visual Basic]'
 ms.assetid: a6847eaa-e5f9-4303-9421-45b55484b9ca
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: af66000208dee0896792892a52dc6acdf5cb1e37
-ms.sourcegitcommit: 498799639937c89de777361aab74261efe7b79ea
+ms.openlocfilehash: 4ad4201dcc094364899984e13c85f2f43a6467ff
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="-specify-response-file-visual-basic"></a>@(지시 파일 지정)(Visual Basic)
 컴파일러 옵션을 포함 하는 파일 및 컴파일할 소스 코드 파일을 지정 합니다.  

@@ -1,24 +1,12 @@
 ---
-title: "사용자 지정 필터"
-ms.custom: 
+title: 사용자 지정 필터
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 97cf247d-be0a-4057-bba9-3be5c45029d5
-caps.latest.revision: "5"
-author: wadepickett
-ms.author: wpickett
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 9d24e517a8fd63a3363d080ebbabf2c1e3306b76
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 4140a944ed195e1defc1a0677d8e26ff4ff85beb
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="custom-filters"></a>사용자 지정 필터
 사용자 지정 필터를 사용하면 시스템 제공 메시지 필터를 사용하여 정의할 수 없는 일치 논리를 정의할 수 있습니다. 예를 들어 특정 메시지 요소를 해시한 다음 값을 검사하여 필터가 true를 반환하는지 아니면 false를 반환하는지를 확인하는 사용자 지정 필터를 만들 수 있습니다.  

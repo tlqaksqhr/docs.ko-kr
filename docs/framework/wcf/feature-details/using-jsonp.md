@@ -1,24 +1,12 @@
 ---
-title: "JSONP 사용"
-ms.custom: 
+title: JSONP 사용
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: f386718c-b4ba-4931-a610-40c27a46672a
-caps.latest.revision: "7"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: f3cd0d20f619444b2a00fccafdf63557b5e09e21
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 55f90c37dc4e94653f2233371a044a2f019b59a1
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-jsonp"></a>JSONP 사용
 
@@ -95,6 +83,6 @@ JSONP를 사용하도록 설정한 경우 다음 유효성 검사가 수행됩�
 
 - 콜백 이름이 `null`이거나 빈 문자열이면 응답 형식이 JSONP로 지정되지 않습니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참고자료
 
 [WCF 웹 HTTP 프로그래밍 모델 개요](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model-overview.md)

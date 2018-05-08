@@ -1,32 +1,22 @@
 ---
-title: "Visual Basic에서 쿼리 작성"
-ms.custom: 
+title: Visual Basic에서 쿼리 작성
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: get-started-article
 helpviewer_keywords:
 - queries [LINQ in Visual Basic], writing
 - LINQ [Visual Basic], walkthroughs
 - LINQ [Visual Basic], writing queries
 - writing LINQ queries [Visual Basic]
 ms.assetid: f0045808-b9fe-4d31-88d1-473d9957211e
-caps.latest.revision: "70"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: e78d93895a86ad9b2456e5ac7c05db83ebf0379d
-ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
+ms.openlocfilehash: beb192f6b136455cb1adcb6cf2616578b63fcebf
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="walkthrough-writing-queries-in-visual-basic"></a>연습: Visual Basic에서 쿼리 작성
 이 연습에서는 Visual Basic 언어 기능을 사용 하 여 작성 하는 방법을 보여 줍니다. [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] 쿼리 식입니다. 이 연습에는 쿼리를 만드는 방법을 학생 개체의 목록에서 다음 쿼리를 실행 하는 방법 및 수정 하는 방법을 보여 줍니다. 이 쿼리는 개체 이니셜라이저, 지역 형식 유추, 익명 형식을 비롯 한 몇 가지 기능을 통합 합니다.  
   
- 이 연습을 완료 한 후 샘플 및 특정에 대 한 설명서로 이동할 준비가 됩니다 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 공급자에 관심이 있습니다. [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]공급자에 포함 되어 [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)], [!INCLUDE[linq_dataset](~/includes/linq-dataset-md.md)], 및 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]합니다.  
+ 이 연습을 완료 한 후 샘플 및 특정에 대 한 설명서로 이동할 준비가 됩니다 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 공급자에 관심이 있습니다. [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 공급자에 포함 되어 [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)], [!INCLUDE[linq_dataset](~/includes/linq-dataset-md.md)], 및 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]합니다.  
   
 ## <a name="create-a-project"></a>프로젝트 만들기  
   

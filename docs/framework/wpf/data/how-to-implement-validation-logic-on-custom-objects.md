@@ -1,13 +1,6 @@
 ---
-title: "방법: 사용자 지정 개체의 유효성 검사 논리 구현"
-ms.custom: 
+title: '방법: 사용자 지정 개체의 유효성 검사 논리 구현'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -17,21 +10,16 @@ helpviewer_keywords:
 - implementing validation logic on custom objects [WPF]
 - custom objects [WPF], implementing validation logic on
 ms.assetid: 751fda9b-44f9-4d63-b4f2-1df07ac41e0f
-caps.latest.revision: "7"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 5044339e1d06bddad05151b2db99d5f96d068e77
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: dbeddb5eb6996d5758717ddd2d4d5af0b6f57f3c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-implement-validation-logic-on-custom-objects"></a>방법: 사용자 지정 개체의 유효성 검사 논리 구현
 이 예제에서는 사용자 지정 개체에서 유효성 검사 논리를 구현 하 여 바인딩하는 방법을 보여 줍니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  소스 개체가 구현 하는 경우 비즈니스 계층에 유효성 검사 논리를 제공할 수 있습니다 <xref:System.ComponentModel.IDataErrorInfo>다음 예제와 같이,:  
   
  [!code-csharp[BusinessLayerValidation#IDataErrorInfo](../../../../samples/snippets/csharp/VS_Snippets_Wpf/BusinessLayerValidation/CSharp/Data.cs#idataerrorinfo)]

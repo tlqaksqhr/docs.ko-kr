@@ -1,17 +1,12 @@
 ---
 title: 메서드(F#)
 description: '어떻게는 F # 메서드는 노출 하 고 개체 및 형식과의 동작 및 기능을 구현 하는 데 사용 되는 형식과 연결 하는 함수에 알아봅니다.'
-author: cartermp
-ms.author: phcart
 ms.date: 05/16/2016
-ms.topic: language-reference
-ms.prod: dotnet-fsharp
-ms.devlang: fsharp
-ms.openlocfilehash: e73e4f8ea6979de3b0d5403fcb31275e99e9fa5f
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 6cd354eaa4698bb194fd8fc04b09348e708cb0f8
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="methods"></a>메서드
 

@@ -1,13 +1,6 @@
 ---
 title: 루프 구조(Visual Basic)
-ms.custom: ''
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - control flow [Visual Basic], loops
 - For keyword [Visual Basic], loop structures
@@ -17,14 +10,11 @@ helpviewer_keywords:
 - Do statement [Visual Basic], Do loops
 - conditional statements [Visual Basic], loop structures
 ms.assetid: ecacb09b-a4c9-42be-98b2-a15d368b5db8
-caps.latest.revision: 18
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 8c13f2cc6546a652f0967bd83369d8af5998f7e2
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 8138609f06d82b53ef5b5afb480e8609461ffc33
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="loop-structures-visual-basic"></a>루프 구조(Visual Basic)
 Visual Basic 루프 구조를 사용 하면 하나 이상의 코드 줄을 반복 해 서 실행할 수 있습니다. 조건이 될 때까지 루프 구조에서 문을 반복할 수 `True`조건이 될 때까지 `False`, 컬렉션에서 각 요소에 대해 한 번 횟수 또는 번호를 지정 합니다.  

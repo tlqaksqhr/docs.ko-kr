@@ -1,27 +1,17 @@
 ---
-title: "XML 네임 스페이스 (Visual Basic) 작업"
-ms.custom: 
+title: XML 네임 스페이스 (Visual Basic) 작업
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 428bf4b0-e348-4ffd-986b-d905d5a0e7fa
-caps.latest.revision: "4"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: fd38b2421a58fafa807d39506b728b7d3a4645a1
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 9408034173be9bba4ad11b86eef2d2a86b51b403
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="working-with-xml-namespaces-visual-basic"></a>XML 네임 스페이스 (Visual Basic) 작업
 이 단원의 항목에서는 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]에서 네임스페이스를 지원하는 방법에 대해 설명합니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
   
 |항목|설명|  
 |-----------|-----------------|  

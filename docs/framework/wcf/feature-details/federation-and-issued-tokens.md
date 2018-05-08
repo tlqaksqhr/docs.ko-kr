@@ -1,31 +1,19 @@
 ---
-title: "페더레이션 및 발급된 토큰"
-ms.custom: 
+title: 페더레이션 및 발급된 토큰
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - WCF, federation
 - issued tokens [WCF]
 - federation [WCF], issued tokens
 ms.assetid: 4c31ee7d-a820-4067-8b84-a83049021bb6
-caps.latest.revision: "16"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 017d3e51022ad9980dc8f058415697c80a2a6b35
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: b6a5411b74b53cb5e3b18cced7fd8fc09e9a9676
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="federation-and-issued-tokens"></a>페더레이션 및 발급된 토큰
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]를 사용하면 WS-Federation 및 WS-Trust 사양을 구현하는 서비스와 안전하게 통신하는 클라이언트를 만들 수 있습니다. 사양은 XML, SOAP 및 WSDL(웹 서비스 기술 언어)을 사용하여 여러 신뢰 영역 간에 인증 및 권한을 사용할 수 있는 메커니즘을 제공합니다.  
+와 WCF Windows Communication Foundation (), Ws-federation 및 Ws-trust 사양을 구현 하는 서비스와 안전 하 게 통신 하는 클라이언트를 만들 수 있습니다. 사양은 XML, SOAP 및 WSDL(웹 서비스 기술 언어)을 사용하여 여러 신뢰 영역 간에 인증 및 권한을 사용할 수 있는 메커니즘을 제공합니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
  [페더레이션](../../../../docs/framework/wcf/feature-details/federation.md)  
@@ -35,7 +23,7 @@ ms.lasthandoff: 12/22/2017
  페더레이션 서비스 또는 클라이언트를 만들 때 알아야 할 디자인 문제에 대해 설명합니다.  
   
  [방법: 페더레이션 클라이언트 만들기](../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]를 사용하여 페더레이션 클라이언트를 만들기 위한 기본적인 사항에 대해 설명합니다.  
+ WCF를 사용 하 여 페더레이션된 클라이언트 만들기의 기본 사항을 설명 합니다.  
   
  [방법: 페더레이션 서비스에서 자격 증명 구성](../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)  
  페더레이션 서비스를 만드는 단계를 설명합니다.  

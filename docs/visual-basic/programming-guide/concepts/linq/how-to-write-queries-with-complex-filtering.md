@@ -1,22 +1,12 @@
 ---
-title: "방법: 복합 필터링 (Visual Basic)으로 쿼리를 작성 합니다."
-ms.custom: 
+title: '방법: 복합 필터링 (Visual Basic)으로 쿼리를 작성 합니다.'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: bf286ffc-7990-4b00-a4eb-ee3d70129950
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 15ed0dcf87ad05b1da984aca494d28c1b19eb685
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 500cd9cdc62252eff3addc26006c4ce815ae1b4d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-write-queries-with-complex-filtering-visual-basic"></a>방법: 복합 필터링 (Visual Basic)으로 쿼리를 작성 합니다.
 복잡한 필터를 사용하여 LINQ to XML 쿼리를 작성하려는 경우가 있습니다. 예를 들어, 특정 이름과 값을 가진 자식 요소가 있는 모든 요소를 찾으려고 할 수 있습니다. 이 항목에서는 복잡한 필터링을 사용하여 쿼리를 작성하는 예제를 제공합니다.  

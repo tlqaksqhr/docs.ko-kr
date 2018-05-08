@@ -1,11 +1,6 @@
 ---
-title: "New 연산자(Visual Basic)"
+title: New 연산자(Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.new
 - vb.NewConstraint
@@ -16,14 +11,11 @@ helpviewer_keywords:
 - New constraint
 - New keyword [Visual Basic]
 ms.assetid: d7d566d7-fe0e-4336-91f7-641a542de4d0
-caps.latest.revision: "23"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 74f0352379e861ad135ea23d31ea07d638f9e6c1
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 0fe511b2c16681d7bab7eeda7c121fcbbaa2f5dd
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="new-operator-visual-basic"></a>New 연산자(Visual Basic)
 소개는 `New` 절을 새 개체 인스턴스를 만드는 형식 매개 변수에 생성자 제약 조건을 지정 하거나 식별 한 `Sub` 클래스 생성자와 프로시저입니다.  

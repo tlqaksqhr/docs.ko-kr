@@ -1,25 +1,16 @@
 ---
-title: "방법: Visual Basic에서 열거형 반복"
-ms.custom: 
+title: '방법: Visual Basic에서 열거형 반복'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - arrays [Visual Basic], iterating
 - enumerations [Visual Basic], iterating
 - ListBox control [Windows Forms], populating from an enumeration
 ms.assetid: e5aa10eb-cfcd-4a3b-8e76-f06b8f2002be
-caps.latest.revision: "20"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 439e6eae7d475316625a2cc1d3a70a9e7181f68a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 06609d38c805e5f073a2f3a299ecc3aa7cf7be01
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-iterate-through-an-enumeration-in-visual-basic"></a>방법: Visual Basic에서 열거형 반복
 열거형은 관련된 상수 집합으로 작업하고 이름과 상수 값을 연결하는 편리한 방법을 제공합니다. 열거를 반복 하려면 이동할 수 있습니다 사용 하 여 배열에는 <xref:System.Enum.GetValues%2A> 메서드. 사용 하는 열거형 반복할 수도 있습니다는 `For...Each` 문을 사용 하는 <xref:System.Enum.GetNames%2A> 또는 <xref:System.Enum.GetValues%2A> 문자열이 나 숫자 값을 추출 하는 메서드.  

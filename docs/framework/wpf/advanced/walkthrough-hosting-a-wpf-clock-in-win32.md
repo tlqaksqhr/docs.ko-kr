@@ -1,33 +1,21 @@
 ---
-title: "연습: Win32에서 WPF 시계 호스팅"
-ms.custom: 
+title: '연습: Win32에서 WPF 시계 호스팅'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - interoperability [WPF], tutorials
 - Win32 code [WPF], WPF interoperation
 - interoperability [WPF], Win32
 ms.assetid: 555e55a7-0851-4ec8-b1c6-0acba7e9b648
-caps.latest.revision: "15"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: caf652f8a80da8e927a74ffc012d09b2389b1b09
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 58e4b1dd311ccd6e1bbab79f4c4dda2207f96eaa
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="walkthrough-hosting-a-wpf-clock-in-win32"></a>연습: Win32에서 WPF 시계 호스팅
 넣을 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 내 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 응용 프로그램을 사용 하 여 <xref:System.Windows.Interop.HwndSource>를 포함 하는 HWND를 제공 하는 프로그램 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 콘텐츠입니다. 먼저 만듭니다는 <xref:System.Windows.Interop.HwndSource>, CreateWindow 유사한 매개 변수를 제공 합니다.  그런는 <xref:System.Windows.Interop.HwndSource> 에 대 한는 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 내부 원하는 콘텐츠입니다.  HWND를 얻게 마지막으로 <xref:System.Windows.Interop.HwndSource>합니다. 이 연습에는 혼합 만드는 방법을 보여 주는 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 내 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 운영 체제 상자 응용 프로그램 **날짜 및 시간 속성** 대화 상자.  
   
-## <a name="prerequisites"></a>필수 구성 요소  
+## <a name="prerequisites"></a>전제 조건  
  참조 [WPF 및 Win32 상호 운용](../../../../docs/framework/wpf/advanced/wpf-and-win32-interoperation.md)합니다.  
   
 ## <a name="how-to-use-this-tutorial"></a>이 자습서를 사용하는 방법  

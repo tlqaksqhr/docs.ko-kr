@@ -1,13 +1,6 @@
 ---
 title: '방법: 연산자를 정의하는 클래스 사용(Visual Basic)'
-ms.custom: ''
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - operator procedures [Visual Basic], calling
 - procedures [Visual Basic], operator
@@ -18,14 +11,11 @@ helpviewer_keywords:
 - return values [Visual Basic], Operator procedures
 - operator overloading
 ms.assetid: 7ccce94a-6ca0-47d1-9f3f-13385d34f5d5
-caps.latest.revision: 21
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 7e0bcfaeca638dfabb841a9e935b872f76fdf957
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 7e1d5698c1e83f0adf1be67245e0726aecaabdac
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-use-a-class-that-defines-operators-visual-basic"></a>방법: 연산자를 정의하는 클래스 사용(Visual Basic)
 클래스 또는 고유한 연산자를 정의 하는 구조체를 사용 하는 경우에 Visual Basic에서 이러한 연산자를 액세스할 수 있습니다.  

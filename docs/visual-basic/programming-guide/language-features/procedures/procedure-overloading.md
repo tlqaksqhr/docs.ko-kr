@@ -1,12 +1,6 @@
 ---
-title: "프로시저 오버로딩(Visual Basic)"
-ms.custom: 
+title: 프로시저 오버로딩(Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - signatures
 - Overloads keyword [Visual Basic]
@@ -23,14 +17,11 @@ helpviewer_keywords:
 - procedure overloading
 - procedures [Visual Basic], parameter lists
 ms.assetid: fbc7fb18-e3b2-48b6-b554-64c00ed09d2a
-caps.latest.revision: "24"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 65fd5a6763752c616f13891bfa5acabff6115d7c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 0d1f2c4d8c88922659b3d91ed41d5e760e6e5233
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="procedure-overloading-visual-basic"></a>프로시저 오버로딩(Visual Basic)
 *오버 로드* 프로시저 이름은 같지만 다른 매개 변수 목록을 사용 하 여 여러 버전에서 정의 의미 합니다. 오버 로드의 목적은 이름을 다르게 필요 없이 프로시저의 밀접 한 관련이 있는 여러 버전을 정의 하는 것입니다. 매개 변수 목록을 변경 하 여이 작업을 수행 합니다.  
@@ -56,13 +47,13 @@ ms.lasthandoff: 11/21/2017
   
 -   **서명 포함 되지 않는 항목**합니다. 서명을 변경 하지 않고 프로시저를 오버 로드할 수 없습니다. 특히, 다음 항목 중 하나 이상의 변경 하 여 프로시저를 오버 로드할 수 없습니다 있습니다.  
   
-    -   프로시저 한정자 키워드와 같은 `Public`, `Shared`, 및`Static`  
+    -   프로시저 한정자 키워드와 같은 `Public`, `Shared`, 및 `Static`  
   
     -   매개 변수 또는 형식 매개 변수 이름  
   
     -   형식 매개 변수 제약 조건 (제네릭 프로시저의 경우)  
   
-    -   매개 변수 한정자 키워드와 같은 `ByRef` 및`Optional`  
+    -   매개 변수 한정자 키워드와 같은 `ByRef` 및 `Optional`  
   
     -   값을 반환 하는지 여부  
   

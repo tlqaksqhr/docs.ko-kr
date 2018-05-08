@@ -1,14 +1,6 @@
 ---
 title: '방법: PageSetupDialog 구성 요소를 사용하여 페이지 속성 설정'
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-winforms
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -18,17 +10,11 @@ helpviewer_keywords:
 - page setup
 - PageSetupDialog component
 ms.assetid: 6dae05bc-c0fd-4357-bb93-841a1631d98f
-caps.latest.revision: 14
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 52ef02ccfe6586f89adabb30187aa48e5fe87349
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 4b1acef216e4f8eca078d47a8cde87fb8f95ee0b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-determine-page-properties-using-the-pagesetupdialog-component"></a>방법: PageSetupDialog 구성 요소를 사용하여 페이지 속성 설정
 [PageSetupDialog](../../../../docs/framework/winforms/controls/pagesetupdialog-component-windows-forms.md) 구성 요소는 문서의 사용자에게 레이아웃, 용지 크기 및 기타 페이지 레이아웃 옵션을 표시합니다.  

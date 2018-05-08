@@ -1,13 +1,6 @@
 ---
-title: "방법: 색 매트릭스를 사용하여 단색으로 변형"
-ms.custom: 
+title: '방법: 색 매트릭스를 사용하여 단색으로 변형'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -15,23 +8,18 @@ helpviewer_keywords:
 - image colors [Windows Forms], transforming
 - color matrices [Windows Forms], using
 ms.assetid: 44df4556-a433-49c0-ac0f-9a12063a5860
-caps.latest.revision: "17"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: d6c9273102dc8e8f0fe6be3e31d0f0b6e570c7af
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 741259fcf853c82dfd13b43edc92e50d8767887b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-use-a-color-matrix-to-transform-a-single-color"></a>방법: 색 매트릭스를 사용하여 단색으로 변형
-[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]제공 된 <xref:System.Drawing.Image> 및 <xref:System.Drawing.Bitmap> 저장 및 이미지 조작을 위한 클래스입니다. <xref:System.Drawing.Image>및 <xref:System.Drawing.Bitmap> 개체는 32 비트 숫자 각 픽셀의 색을 저장 합니다: 각각 빨강, 녹색, 파랑 및 알파에 8 비트입니다. 네 개의 구성 요소가 0부터 농도가 없음을 나타내고 255 전체 강도 나타내는 0부터 255 까지의 숫자입니다. 알파 구성 요소는 색상의 투명도 지정 합니다.: 0은 완전히 투명 하며, 255은 완전히 불투명 합니다.  
+[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 제공 된 <xref:System.Drawing.Image> 및 <xref:System.Drawing.Bitmap> 저장 및 이미지 조작을 위한 클래스입니다. <xref:System.Drawing.Image> 및 <xref:System.Drawing.Bitmap> 개체는 32 비트 숫자 각 픽셀의 색을 저장 합니다: 각각 빨강, 녹색, 파랑 및 알파에 8 비트입니다. 네 개의 구성 요소가 0부터 농도가 없음을 나타내고 255 전체 강도 나타내는 0부터 255 까지의 숫자입니다. 알파 구성 요소는 색상의 투명도 지정 합니다.: 0은 완전히 투명 하며, 255은 완전히 불투명 합니다.  
   
  색 벡터 (빨강, 녹색, 파란색, alpha) 형태의 4-튜플 됩니다. 예를 들어 색 벡터 (0, 255, 0, 255) 빨강 및 파랑 하지만 농도가 녹색 불투명 한 색을 나타냅니다.  
   
- 색을 표시 하는 다른 규칙 전체 강도 대 한 숫자 1을 사용 합니다. 이 규칙을 사용 하 여 이전 단락에 설명 된 색을 표시 벡터 (0, 1, 0, 1). [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]색을 변환할 때 전체 강도으로 1의 규칙을 사용 합니다.  
+ 색을 표시 하는 다른 규칙 전체 강도 대 한 숫자 1을 사용 합니다. 이 규칙을 사용 하 여 이전 단락에 설명 된 색을 표시 벡터 (0, 1, 0, 1). [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 색을 변환할 때 전체 강도으로 1의 규칙을 사용 합니다.  
   
  4x4 매트릭스 색 벡터를 곱하여 색 벡터 선형 변환 (예: 회전, 배율 및 like)을 적용할 수 있습니다. 그러나는 비선형 변환을 수행 하는 4x4 매트릭스를 사용할 수 없습니다. 색 벡터의 각 더미 다섯 번째 좌표 (예를 들어 번호 1)를 추가 하는 경우에 선형 변환 및 번역의 조합을 적용할 5 × 5 매트릭스를 사용할 수 있습니다. 번역 나옵니다 선형 변환으로 구성 된 변환에는 3x3 유사 변환을 이라고 합니다.  
   
@@ -53,7 +41,7 @@ ms.lasthandoff: 12/22/2017
   
  행렬 및 변환의 자세한 논의 알려면 [좌표계 및 변형](../../../../docs/framework/winforms/advanced/coordinate-systems-and-transformations.md)합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 예제에서는 모두 한 가지 색상 (0.2, 0.0, 0.4, 1.0) 및 이전 단락에 설명 된 변환을 적용 하는 이미지입니다.  
   
  다음 그림에서는 오른쪽에서 왼쪽의 원래 이미지 및 변형 된 이미지를 보여 줍니다.  

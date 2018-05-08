@@ -1,13 +1,6 @@
 ---
 title: 이벤트 처리 (Visual Basic)
-ms.custom: ''
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - event handling [Visual Basic], walkthroughs
 - walkthroughs [Visual Basic], event handling
@@ -16,14 +9,11 @@ helpviewer_keywords:
 - WithEvents keyword [Visual Basic], walkthroughs
 - event handlers [Visual Basic], walkthroughs
 ms.assetid: f145b3fc-5ae0-4509-a2aa-1ff6934706bd
-caps.latest.revision: 18
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: c1743e5f5d9dcdf83ab646407cd1fcdc77ff71cd
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 0ac3514505ca42870d77317feec30a27e4384e6c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="walkthrough-handling-events-visual-basic"></a>연습: 이벤트 처리(Visual Basic)
 이벤트로 작업 하는 방법을 보여 주는 두 항목 중 두 번째 숫자입니다. 첫 번째 항목 [연습: 이벤트 선언 및 발생](../../../../visual-basic/programming-guide/language-features/events/walkthrough-declaring-and-raising-events.md)를 선언 하는 방법을 보여 줍니다. 이 섹션에서는 발생할 때 이벤트를 처리 하는 방법을 보여 주는 폼과 다음 연습에서 클래스를 사용 합니다.  

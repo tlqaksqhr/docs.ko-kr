@@ -1,27 +1,17 @@
 ---
 title: 확장 메서드(Visual Basic)
-ms.custom: ''
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.ExtensionMethods
 helpviewer_keywords:
 - extending data types [Visual Basic]
 - extension methods [Visual Basic]
 ms.assetid: b8020aae-374d-46a9-bcb7-8cc2390b93b6
-caps.latest.revision: 41
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: d3db3bc2b213b78ef2dceebcf56c9d5fbfa3016e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 1cc2ccef09dd027c6f1e82f60ed4ac5f50db6ebe
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="extension-methods-visual-basic"></a>확장 메서드(Visual Basic)
 확장 메서드는 개발자가 새 파생된 형식을 만들지 않고 이미 정의 되어 있는 데이터 형식에 사용자 지정 기능을 추가할 수를 사용 합니다. 확장 메서드는 기존 형식의 인스턴스 메서드인 것 처럼 호출할 수 있는 메서드를 작성할 수 있도록 설정 합니다.  
@@ -38,7 +28,7 @@ ms.lasthandoff: 11/21/2017
   
  [!code-vb[VbVbalrExtensionMethods#1](./codesnippet/VisualBasic/extension-methods_1.vb)]  
   
- 확장 메서드 정의 확장 특성으로 표시 된 것을 알 `<Extension()>`합니다. 메서드가 정의 된 모듈을 표시 하는 것은 옵션 이지만 각 확장 메서드를 표시 합니다. <xref:System.Runtime.CompilerServices>확장 특성에 액세스 하기 위해 가져와야 합니다.  
+ 확장 메서드 정의 확장 특성으로 표시 된 것을 알 `<Extension()>`합니다. 메서드가 정의 된 모듈을 표시 하는 것은 옵션 이지만 각 확장 메서드를 표시 합니다. <xref:System.Runtime.CompilerServices> 확장 특성에 액세스 하기 위해 가져와야 합니다.  
   
  확장 메서드는 모듈 내 에서만 선언할 수 있습니다. 일반적으로 확장 메서드가 정의 된 모듈에서 호출 된 것과 동일한 모듈이 아닙니다. 대신 확장 메서드를 포함 하는 모듈을 가져온 범위 가져오는 되어야 하는 경우. 포함 된 모듈 후 `Print` 는 범위에는 메서드 인수 사용 하지 않는와 같은 일반적인 인스턴스 메서드인 것 처럼 경우 `ToUpper`:  
   
@@ -48,9 +38,9 @@ ms.lasthandoff: 11/21/2017
   
  [!code-vb[VbVbalrExtensionMethods#3](./codesnippet/VisualBasic/extension-methods_3.vb)]  
   
- 에 대 한 문자열 인수에 전송 하 여 메서드는 `punc`:`example.PrintAndPunctuate(".")`  
+ 에 대 한 문자열 인수에 전송 하 여 메서드는 `punc`: `example.PrintAndPunctuate(".")`  
   
- 다음 예제와 `Print` 및 `PrintAndPunctuate` 정의 되 고 호출 합니다. <xref:System.Runtime.CompilerServices>확장 특성에 액세스할 수 있도록 하기 위해 정의 모듈의 가져오게 됩니다.  
+ 다음 예제와 `Print` 및 `PrintAndPunctuate` 정의 되 고 호출 합니다. <xref:System.Runtime.CompilerServices> 확장 특성에 액세스할 수 있도록 하기 위해 정의 모듈의 가져오게 됩니다.  
   
 ### <a name="code"></a>코드  
   

@@ -1,10 +1,6 @@
 ---
 title: Nullable 값 형식(Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.Nullable
 helpviewer_keywords:
@@ -14,13 +10,11 @@ helpviewer_keywords:
 - nullable types [Visual Basic]
 - data types [Visual Basic], nullable
 ms.assetid: 9ac3b602-6f96-4e6d-96f7-cd4e81c468a6
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 16df20be89a88aa68e06692594c208cee1ab2dea
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: bb44ad85347b494b63dde964b2b407d8f038f2b9
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="nullable-value-types-visual-basic"></a>Nullable 값 형식(Visual Basic)
 경우에 따라 상황에 따라 정의 된 값이 없는 값 형식과 함께 사용할 수도 있습니다. 예를 들어 한 데이터베이스의 필드에에서 의미 있는 있는 할당 된 값이 있는 할당된 된 값 고 다니지 않아도 구분 해야 합니다. 값 형식 매개 변수 정상 값 또는 null 값을 확장할 수 있습니다. 이러한 확장 라고는 *nullable 형식*합니다.  

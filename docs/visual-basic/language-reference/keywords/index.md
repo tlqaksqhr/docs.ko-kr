@@ -1,11 +1,6 @@
 ---
 title: 키워드(Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - reserved keywords, Visual Basic
 - keywords [Visual Basic]
@@ -15,14 +10,11 @@ helpviewer_keywords:
 - reserved words, Visual Basic keywords
 - Visual Basic, keywords
 ms.assetid: b5a65ef0-c408-4836-afb6-e6828c0771ca
-caps.latest.revision: 43
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 5a8e1f06e1f32baacd494339a561a363f5d81c9d
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: eaa8813613a0d17b6d1e32cdcdb8361e9b2e8d84
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="keywords-visual-basic"></a>키워드(Visual Basic)
 다음 표에서 모든 Visual Basic 언어 키워드를 보여 줍니다.  

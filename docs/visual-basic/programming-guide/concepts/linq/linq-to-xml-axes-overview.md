@@ -1,22 +1,12 @@
 ---
-title: "LINQ to XML 축 개요(Visual Basic)"
-ms.custom: 
+title: LINQ to XML 축 개요(Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 9161f151-cfa8-4408-94ba-08a9ba3a486d
-caps.latest.revision: "4"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: ae01d8c7257eb03d091a9e249475ef46a67a1c44
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 9164dcff118c5fa3d15a5fe673b2174a4002e9d6
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="linq-to-xml-axes-overview-visual-basic"></a>LINQ to XML 축 개요(Visual Basic)
 XML 트리를 만들거나 XML 문서를 XML 트리에 로드한 후 XML 트리를 쿼리하여 요소와 특성을 찾고 해당 값을 검색할 수 있습니다. *축 메서드*(*축*)를 통해 컬렉션을 검색합니다. 일부 축은 <xref:System.Xml.Linq.XElement> 컬렉션을 반환하는 <xref:System.Xml.Linq.XDocument> 및 <xref:System.Collections.Generic.IEnumerable%601> 클래스의 메서드이고, 일부 축은 <xref:System.Xml.Linq.Extensions> 클래스의 확장 메서드입니다. 확장명 메서드로 구현되는 축은 컬렉션에 대해 작동하고 컬렉션을 반환합니다.  

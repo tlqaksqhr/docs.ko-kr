@@ -1,13 +1,6 @@
 ---
-title: "Visual Basic의 Main 프로시저"
-ms.custom: 
+title: Visual Basic의 Main 프로시저
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.Main
 helpviewer_keywords:
@@ -15,19 +8,16 @@ helpviewer_keywords:
 - Main method [Visual Basic]
 - main function
 ms.assetid: f0db283e-f283-4464-b521-b90858cc1b44
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 6de98ad4e470cd0becaf25f5a9a00c8095e44b15
-ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
+ms.openlocfilehash: 109bf94eb91292cfca700a9e456c8ab53e83d68f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="main-procedure-in-visual-basic"></a>Visual Basic의 Main 프로시저
 모든 Visual Basic 응용 프로그램 호출 프로시저를 포함 해야 `Main`합니다. 이 절차는 사용 시작 지점 및 응용 프로그램에 대해 전체적으로 제어 됩니다. .NET Framework 호출 프로그램 `Main` 프로시저 응용 프로그램을 로드 하 고 제어를 전달 하도록 준비 되어 있습니다. Windows Forms 응용 프로그램을 만들 경우를 제외 작성 해야 합니다는 `Main` 자체적으로 실행 되는 응용 프로그램에 대 한 프로시저입니다.  
   
- `Main`첫 번째 실행 되는 코드를 포함 합니다. `Main`, 프로그램을 시작할 때 먼저 로드할 폼을 확인, 응용 프로그램의 복사본은 시스템에서 실행 이미 확인, 응용 프로그램에 대 한 일련의 변수를 설정 하거나 응용 프로그램에 필요한 데이터베이스를 열 수 있습니다.  
+ `Main` 첫 번째 실행 되는 코드를 포함 합니다. `Main`, 프로그램을 시작할 때 먼저 로드할 폼을 확인, 응용 프로그램의 복사본은 시스템에서 실행 이미 확인, 응용 프로그램에 대 한 일련의 변수를 설정 하거나 응용 프로그램에 필요한 데이터베이스를 열 수 있습니다.  
   
 ## <a name="requirements-for-the-main-procedure"></a>Main 프로시저에 대 한 요구 사항  
  자체적 (일반적으로 확장명이.exe)으로 실행 되는 파일을 포함 해야 합니다는 `Main` 프로시저입니다. 라이브러리 (예를 들어 확장명.dll)에서 실행 되지 않을 자체 이며 필요 하지 않습니다는 `Main` 프로시저입니다. 만들 수 있습니다 하는 다양 한 유형의 프로젝트에 대 한 요구 사항은 다음과 같습니다.  
@@ -56,7 +46,7 @@ ms.lasthandoff: 12/21/2017
     End Module  
     ```  
   
--   `Main`반환할 수도 있습니다는 `Integer` 프로그램에 대 한 종료 코드로 운영 체제를 사용 하는 값입니다. 다른 프로그램을 Windows ERRORLEVEL 값을 검사 하 여이 코드를 테스트할 수 있습니다. 종료 코드를 반환 하려면 선언 해야 `Main` 로 `Function` 프로시저 대신는 `Sub` 프로시저입니다.  
+-   `Main` 반환할 수도 있습니다는 `Integer` 프로그램에 대 한 종료 코드로 운영 체제를 사용 하는 값입니다. 다른 프로그램을 Windows ERRORLEVEL 값을 검사 하 여이 코드를 테스트할 수 있습니다. 종료 코드를 반환 하려면 선언 해야 `Main` 로 `Function` 프로시저 대신는 `Sub` 프로시저입니다.  
   
     ```  
     Module mainModule  
@@ -73,7 +63,7 @@ ms.lasthandoff: 12/21/2017
     End Module  
     ```  
   
--   `Main`도 사용할 수 있습니다는 `String` 인수로 배열입니다. 배열의 각 문자열 프로그램을 호출 하는 데 사용 되는 명령줄 인수 중 하나를 포함 합니다. 값에 따라 다른 작업을 수행할 수 있습니다.  
+-   `Main` 도 사용할 수 있습니다는 `String` 인수로 배열입니다. 배열의 각 문자열 프로그램을 호출 하는 데 사용 되는 명령줄 인수 중 하나를 포함 합니다. 값에 따라 다른 작업을 수행할 수 있습니다.  
   
     ```  
     Module mainModule  

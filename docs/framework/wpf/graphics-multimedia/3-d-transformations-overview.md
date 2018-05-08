@@ -1,13 +1,6 @@
 ---
-title: "3차원 변환 개요"
-ms.custom: 
+title: 3차원 변환 개요
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -15,16 +8,11 @@ helpviewer_keywords:
 - 3-D transformations
 - transformations [WPF], 3-D
 ms.assetid: e45e555d-ac1e-4b36-aced-e433afe7f27f
-caps.latest.revision: "18"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 7b45c2c12393f296f916eaf8ea3f912958b54b09
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: f0fb859905327b30c0ea509e5d07072b81dcf30e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="3-d-transformations-overview"></a>3차원 변환 개요
 이 항목에서는 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 그래픽 시스템에서 3차원 모델에 변환을 적용하는 방법을 설명합니다. 변환을 사용하면 개발자가 해당 항목을 정의하는 기준 값을 변경하지 않고도 모델의 위치, 크기 및 방향을 변경할 수 있습니다.  
@@ -49,7 +37,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="translation-transformations"></a>좌표 이동 변환  
  3 차원 변환의 추상 기본 클래스에서 상속 <xref:System.Windows.Media.Media3D.Transform3D>; 여기에 3x3 유사 변환 클래스 <xref:System.Windows.Media.Media3D.TranslateTransform3D>, <xref:System.Windows.Media.Media3D.ScaleTransform3D>, 및 <xref:System.Windows.Media.Media3D.RotateTransform3D>합니다. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 3 차원 인터페이스도 제공는 <xref:System.Windows.Media.Media3D.MatrixTransform3D> 수 있는 클래스 보다 간결 하 게 행렬 작업에 동일한 변환을 지정 합니다.  
   
- <xref:System.Windows.Media.Media3D.TranslateTransform3D>모든 지점 방향으로 사용 하 여 지정한 오프셋된 벡터 Model3D의 이동은 <xref:System.Windows.Media.Media3D.TranslateTransform3D.OffsetX%2A>, <xref:System.Windows.Media.Media3D.TranslateTransform3D.OffsetY%2A>, 및 <xref:System.Windows.Media.Media3D.TranslateTransform3D.OffsetZ%2A> 속성. 예를 들어 큐브의 꼭짓점 하나가 (2,2,2)에 있고 오프셋 벡터가 (0,1.6,1)인 경우 해당 꼭짓점 (2,2,2)가 (2,3.6,3)으로 이동합니다. 모델 공간에서 큐브의 꼭짓점은 계속 (2,2,2)이지만 이제 모델 공간의 (2,2,2)가 월드 공간의 (2,3.6,3)이 되도록 모델 공간과 월드 공간의 관계가 변경되었습니다.  
+ <xref:System.Windows.Media.Media3D.TranslateTransform3D> 모든 지점 방향으로 사용 하 여 지정한 오프셋된 벡터 Model3D의 이동은 <xref:System.Windows.Media.Media3D.TranslateTransform3D.OffsetX%2A>, <xref:System.Windows.Media.Media3D.TranslateTransform3D.OffsetY%2A>, 및 <xref:System.Windows.Media.Media3D.TranslateTransform3D.OffsetZ%2A> 속성. 예를 들어 큐브의 꼭짓점 하나가 (2,2,2)에 있고 오프셋 벡터가 (0,1.6,1)인 경우 해당 꼭짓점 (2,2,2)가 (2,3.6,3)으로 이동합니다. 모델 공간에서 큐브의 꼭짓점은 계속 (2,2,2)이지만 이제 모델 공간의 (2,2,2)가 월드 공간의 (2,3.6,3)이 되도록 모델 공간과 월드 공간의 관계가 변경되었습니다.  
   
  ![변환 그림](../../../../docs/framework/wpf/graphics-multimedia/media/transforms-translate.png "변환은 변환")  
 오프셋을 사용한 좌표 이동  
@@ -59,7 +47,7 @@ ms.lasthandoff: 12/22/2017
  [!code-xaml[animation3dgallery_snip#Translation3DAnimationExampleWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Animation3DGallery_snip/CS/Translation3DAnimationExample.xaml#translation3danimationexamplewholepage)]  
   
 ## <a name="scale-transformations"></a>배율 변환  
- <xref:System.Windows.Media.Media3D.ScaleTransform3D>지정 된 크기 조정 벡터 중심점을 기준으로 모델의 배율을 변경합니다. X, Y 및 Z축에서 모델의 배율을 같은 값으로 조정하는 균일한 배율을 지정하면 모델의 크기를 비례적으로 변경할 수 있습니다. 예를 들어 변환 설정 <xref:System.Windows.Media.ScaleTransform.ScaleX%2A>, <xref:System.Windows.Media.ScaleTransform.ScaleY%2A>, 및 <xref:System.Windows.Media.Media3D.ScaleTransform3D.ScaleZ%2A> 분모를 모델의 크기 속성을 0.5로; 모든 세 개의 축에 배율 두 배로 만듭니다 동일한 속성을 2로 설정 합니다.  
+ <xref:System.Windows.Media.Media3D.ScaleTransform3D> 지정 된 크기 조정 벡터 중심점을 기준으로 모델의 배율을 변경합니다. X, Y 및 Z축에서 모델의 배율을 같은 값으로 조정하는 균일한 배율을 지정하면 모델의 크기를 비례적으로 변경할 수 있습니다. 예를 들어 변환 설정 <xref:System.Windows.Media.ScaleTransform.ScaleX%2A>, <xref:System.Windows.Media.ScaleTransform.ScaleY%2A>, 및 <xref:System.Windows.Media.Media3D.ScaleTransform3D.ScaleZ%2A> 분모를 모델의 크기 속성을 0.5로; 모든 세 개의 축에 배율 두 배로 만듭니다 동일한 속성을 2로 설정 합니다.  
   
  ![ScaleTransform3D 일정 한](../../../../docs/framework/wpf/graphics-multimedia/media/threecubes-uniformscale-1.png "threecubes_uniformscale_1")  
 ScaleVector 예제  
@@ -87,7 +75,7 @@ ScaleCenter 예제
   
  모델을 "현재 위치"에서 회전시키려면 모델의 실제 중심을 회전 중심으로 지정합니다. 기하 도형은 일반적으로 원점을 기준으로 모델링되므로 먼저 모델의 크기를 조정하고(배율 조정) 방향을 설정한 다음(회전) 마지막으로 원하는 위치로 이동하면(좌표 이동) 대부분의 경우 예상한 일련의 변환 결과를 얻을 수 있습니다.  
   
- ![X에서 60도 &#45; 회전 및 y &#45; 축](../../../../docs/framework/wpf/graphics-multimedia/media/twocubes-rotation2axes-1.png "twocubes_rotation2axes_1")  
+ ![X에서 60도 회전&#45; 및 y&#45;축](../../../../docs/framework/wpf/graphics-multimedia/media/twocubes-rotation2axes-1.png "twocubes_rotation2axes_1")  
 회전 예제  
   
  축-각도 회전은 정적 변환 및 일부 애니메이션에서 잘 작동합니다. 그러나 큐브 모델을 X축을 기준으로 60도 회전시킨 다음 Z축을 기준으로 45도 회전시키는 경우를 가정합니다. 이 변환은 두 개의 개별 유사 변환 또는 행렬로 설명할 수 있습니다. 그러나 이 방식으로 정의한 회전에 애니메이션 효과를 원활하게 적용하기가 어려울 수 있습니다. 어느 방법을 사용하든 모델의 시작 및 끝 위치는 동일하게 계산되지만 모델이 이동하는 중간 위치는 확실하게 계산되지 않습니다. 쿼터니언은 회전의 시작 및 끝 사이의 보간을 계산하는 다른 방법을 나타냅니다.  

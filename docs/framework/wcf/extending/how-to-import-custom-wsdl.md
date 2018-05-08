@@ -1,24 +1,12 @@
 ---
-title: "방법: 사용자 지정 WSDL 가져오기"
-ms.custom: 
+title: '방법: 사용자 지정 WSDL 가져오기'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: ddc3718d-ce60-44f6-92af-a5c67477dd99
-caps.latest.revision: "9"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: af43baabfe979baa5c6fd7010c8be4dc72a3be9d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 33762afffca6e90cb32c358bee6d9f29ca609994
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-import-custom-wsdl"></a>방법: 사용자 지정 WSDL 가져오기
 이 항목에서는 사용자 지정 WSDL을 가져오는 방법에 대해 설명합니다. 사용자 지정 WSDL을 처리하려면 <xref:System.ServiceModel.Description.IWsdlImportExtension> 인터페이스를 구현해야 합니다.  

@@ -1,25 +1,16 @@
 ---
-title: "방법: 차단을 방지하는 사용자 지정 이벤트 선언(Visual Basic)"
-ms.custom: 
+title: '방법: 차단을 방지하는 사용자 지정 이벤트 선언(Visual Basic)'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - declaring events [Visual Basic], custom
 - events [Visual Basic], custom
 - custom events [Visual Basic]
 ms.assetid: 998b6a90-67c5-4d2c-8b11-366d3e355505
-caps.latest.revision: "12"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 4a36c855efb67752674615a61f2fa701974ce5f1
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 3cb66aed71195d2fd2335fbd59cc499b3dbf808e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-declare-custom-events-to-avoid-blocking-visual-basic"></a>방법: 차단을 방지하는 사용자 지정 이벤트 선언(Visual Basic)
 이 하나의 이벤트 처리기는 후속 이벤트 처리기를 차단 하지 중요 한 몇 가지 경우가 있습니다. 사용자 지정 이벤트의 이벤트 처리기를 비동기적으로 호출 하려면 이벤트를 허용 합니다.  

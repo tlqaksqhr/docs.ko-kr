@@ -1,19 +1,12 @@
 ---
-title: "Func 및 Action 제네릭 대리자 (Visual Basic)에 대 한 가변성 사용"
+title: Func 및 Action 제네릭 대리자 (Visual Basic)에 대 한 가변성 사용
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 36c3012f-b39c-493b-b90f-079b5912ac1b
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: b8f9b2ebf758bc0d67b2b623038a4beeb7149261
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: e4c878f65867c575a1691423df583662d72a257c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-variance-for-func-and-action-generic-delegates-visual-basic"></a>Func 및 Action 제네릭 대리자 (Visual Basic)에 대 한 가변성 사용
 이러한 예제는 메서드를 다시 사용하고 코드의 유연성을 높이기 위해 `Func` 및 `Action` 제네릭 대리자에서 공변성(covariance) 및 반공변성(contravariance)을 사용하는 방법을 보여 줍니다.  
