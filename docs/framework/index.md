@@ -1,10 +1,6 @@
 ---
 title: .NET Framework 4.7, 4.6 및 4.5
-ms.date: 10/17/2017
-ms.prod: .net-framework
-ms.technology:
-- dotnet-clr
-ms.topic: article
+ms.date: 04/10/2018
 ms.custom: updateeachrelease
 f1_keywords:
 - f61f02f2-2f20-483d-8f56-a9c8f3a54986
@@ -14,19 +10,16 @@ helpviewer_keywords:
 ms.assetid: f61f02f2-2f20-483d-8f56-a9c8f3a54986
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 34402e74bb0cb560d213760c38ce4b936d712eb4
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 85bb386f2adbf02a8fde891c65c78b8e8d4537b2
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="net-framework-guide"></a>.NET Framework 가이드
 
 > [!NOTE]
-> 이 .NET Framework 콘텐츠 집합에는 .NET Framework 버전 4.5, 4.5.1, 4.5.2, 4.6, 4.6.1, 4.6.2, 4.7 및 4.7.1에 대한 정보가 포함되어 있습니다. .NET Framework를 다운로드하려면 [.NET Framework 설치](../../docs/framework/install/guide-for-developers.md)를 참조하세요. .NET Framework 4.5, [!INCLUDE[net_v46](../../includes/net-v46-md.md)], 해당 포인트 릴리스 및 .NET Framework 4.7 및 4.7.1의 새로운 기능과 변경 사항 목록은 [.NET Framework의 새로운 기능](../../docs/framework/whats-new/index.md)을 참조하세요. 지원되는 플랫폼 목록은 [.NET Framework 시스템 요구 사항](../../docs/framework/get-started/system-requirements.md)을 참조하세요. 
+> 이 .NET Framework 콘텐츠 집합에는 .NET Framework 버전 4.5, 4.5.1, 4.5.2, 4.6, 4.6.1, 4.6.2, 4.7, 4.7.1 및 4.7.2에 대한 정보가 포함되어 있습니다. .NET Framework를 다운로드하려면 [.NET Framework 설치](../../docs/framework/install/guide-for-developers.md)를 참조하세요. .NET Framework 4.5, [!INCLUDE[net_v46](../../includes/net-v46-md.md)], 해당 포인트 릴리스 및 .NET Framework 4.7, 4.7.1 및 4.7.2의 새로운 기능과 변경 사항 목록은 [.NET Framework의 새로운 기능](../../docs/framework/whats-new/index.md)을 참조하세요. 지원되는 플랫폼 목록은 [.NET Framework 시스템 요구 사항](../../docs/framework/get-started/system-requirements.md)을 참조하세요. 
 
 .NET Framework는 웹, Windows, Windows Phone, Windows Server 및 Microsoft Azure용 앱을 빌드하기 위한 개발 플랫폼으로, 많은 업계 표준에 대한 다양한 기능 및 지원을 포함하는 .NET Framework 클래스 라이브러리와 CLR(공용 언어 런타임)로 구성됩니다.
 
@@ -61,7 +54,7 @@ Windows와 함께 .NET Framework를 사용하면 .NET Framework 응용 프로그
 [도구](../../docs/framework/tools/index.md)  
 .NET Framework 기술을 사용하여 응용 프로그램을 개발, 구성 및 배포하는 데 도움이 되는 도구에 대해 설명합니다.  
   
-[.NET Framework 클래스 라이브러리](/dotnet/api/?view=netframework-4.7.1)   
+[.NET Framework 클래스 라이브러리](/dotnet/api/?view=netframework-4.7.2)   
 .NET Framework 네임스페이스에 포함된 각 클래스에 대해 구문, 코드 예제 및 관련 정보를 제공합니다.  
   
 [추가 클래스 라이브러리 및 API](../../docs/framework/additional-apis/index.md)  
