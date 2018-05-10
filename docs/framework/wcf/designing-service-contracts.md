@@ -7,11 +7,11 @@ dev_langs:
 helpviewer_keywords:
 - service contracts [WCF]
 ms.assetid: 8e89cbb9-ac84-4f0d-85ef-0eb6be0022fd
-ms.openlocfilehash: 6d1e9ba7f5546923b222f2d495aacdb2c1caaf96
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 163c551103a68ac320e482b1daa0a0c19b2b8fed
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="designing-service-contracts"></a>서비스 계약 디자인
 이 항목에서는 서비스 계약의 정의, 서비스 계약을 정의하는 방법, 사용 가능한 작업(및 기본 메시지 교환에 미치는 영향), 사용되는 데이터 형식 및 시나리오 요구 사항을 만족하는 작업을 디자인하는 데 도움이 되는 기타 문제에 대해 설명합니다.  
@@ -19,7 +19,7 @@ ms.lasthandoff: 05/04/2018
 ## <a name="creating-a-service-contract"></a>서비스 계약 만들기  
  서비스는 여러 연산을 노출합니다. Windows Communication Foundation (WCF) 응용 프로그램에서 메서드를 만들고 사용 하 여 표시 하 여 작업을 정의 <xref:System.ServiceModel.OperationContractAttribute> 특성입니다. 그런 다음 서비스 계약을 만들려면 <xref:System.ServiceModel.ServiceContractAttribute> 특성으로 표시한 인터페이스 내에 작업을 선언하거나 같은 특성으로 표시된 클래스에 작업을 정의하여 작업을 함께 그룹화합니다. (기본 예제를 보려면 [하는 방법: 서비스 계약 정의](../../../docs/framework/wcf/how-to-define-a-wcf-service-contract.md).)  
   
- <xref:System.ServiceModel.OperationContractAttribute> 특성이 없는 메서드는 서비스 작업이 아니며 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 서비스에서 노출하지 않습니다.  
+ 가 없는 모든 메서드는 <xref:System.ServiceModel.OperationContractAttribute> 특성 서비스 작업이 고 WCF 서비스에서 노출 되지 않습니다.  
   
  이 항목에서는 다음과 같이 서비스 계약을 디자인할 때의 결정 사항에 대해 설명합니다.  
   
@@ -34,7 +34,7 @@ ms.lasthandoff: 05/04/2018
 -   작업 입력 및 출력에 대한 제한  
   
 ## <a name="classes-or-interfaces"></a>클래스 또는 인터페이스  
- 클래스와 인터페이스는 모두 기능의 그룹화를 나타내므로 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 서비스 계약을 정의하는 데 사용될 수 있습니다. 그러나 인터페이스는 서비스 계약을 직접 모델링하므로 인터페이스를 사용하는 것이 좋습니다. 구현을 사용하지 않으면 인터페이스는 특정 서명이 있는 메서드 그룹화만 정의합니다. 서비스 계약 인터페이스를 구현하면 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 서비스를 구현한 것입니다.  
+ 기능의 그룹화를 나타내는 클래스와 인터페이스 하 고 따라서 둘 다 사용할 수는 WCF 서비스 계약을 정의 하 합니다. 그러나 인터페이스는 서비스 계약을 직접 모델링하므로 인터페이스를 사용하는 것이 좋습니다. 구현을 사용하지 않으면 인터페이스는 특정 서명이 있는 메서드 그룹화만 정의합니다. 서비스 계약 인터페이스를 구현 하 고 WCF 서비스를 구현 합니다.  
   
  관리되는 인터페이스의 모든 장점이 서비스 계약 인터페이스에 적용됩니다.  
   
@@ -70,12 +70,12 @@ ms.lasthandoff: 05/04/2018
 #### <a name="data-contracts"></a>데이터 계약  
  Windows Communication Foundation (WCF) 응용 프로그램과 같은 서비스 지향 응용 프로그램은 Microsoft 및 타사 플랫폼에서 클라이언트 응용 프로그램의 가능한 가장 많은 수와 상호 운용 하도록 설계 되었습니다. 광범위한 상호 운용을 위해 <xref:System.Runtime.Serialization.DataContractAttribute> 및 <xref:System.Runtime.Serialization.DataMemberAttribute> 특성으로 형식을 표시하여 서비스 작업이 교환하는 데이터를 설명하는 서비스 계약의 부분인 데이터 계약을 만드는 것이 좋습니다.  
   
- 데이터 계약은 옵트인 스타일 계약입니다. 데이터 계약 특성을 명시적으로 적용하지 않으면 형식이나 데이터 멤버가 serialize되지 않습니다. 데이터 계약은 관리되는 코드의 액세스 범위와 관련이 없습니다. 전용 데이터 멤버는 serialize될 수 있고 공개적으로 액세스할 다른 곳으로 보낼 수 있습니다. (데이터 계약의 기본 예제를 보려면 [하는 방법: 클래스 또는 구조체에 대 한 기본 데이터 계약을 만들](../../../docs/framework/wcf/feature-details/how-to-create-a-basic-data-contract-for-a-class-or-structure.md).) [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 작업의 기능을 활성화 하는 기본 SOAP 메시지의 정의 뿐만 아니라 내부 / 외부로 메시지의 본문 데이터 형식의 serialization을 처리 합니다. 데이터 형식을 serialize할 수 있다면 작업을 디자인할 때 기본 메시지 교환 인프라에 대해 고려하지 않아도 됩니다.  
+ 데이터 계약은 옵트인 스타일 계약입니다. 데이터 계약 특성을 명시적으로 적용하지 않으면 형식이나 데이터 멤버가 serialize되지 않습니다. 데이터 계약은 관리되는 코드의 액세스 범위와 관련이 없습니다. 전용 데이터 멤버는 serialize될 수 있고 공개적으로 액세스할 다른 곳으로 보낼 수 있습니다. (데이터 계약의 기본 예제를 보려면 [하는 방법: 클래스 또는 구조체에 대 한 기본 데이터 계약을 만들](../../../docs/framework/wcf/feature-details/how-to-create-a-basic-data-contract-for-a-class-or-structure.md).) WCF 작업의 기능을 활성화 하는 기본 SOAP 메시지의 정의 뿐만 아니라 내부 / 외부로 메시지의 본문 데이터 형식의 serialization을 처리 합니다. 데이터 형식을 serialize할 수 있다면 작업을 디자인할 때 기본 메시지 교환 인프라에 대해 고려하지 않아도 됩니다.  
   
- 일반 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 응용 프로그램에서는 <xref:System.Runtime.Serialization.DataContractAttribute> 및 <xref:System.Runtime.Serialization.DataMemberAttribute> 특성을 사용하여 작업에 대한 데이터 계약을 만들지만 다른 serialization 메커니즘을 사용할 수도 있습니다. 표준 <xref:System.Runtime.Serialization.ISerializable>, <xref:System.SerializableAttribute> 및 <xref:System.Xml.Serialization.IXmlSerializable> 메커니즘은 모두 응용 프로그램 간에 데이터 형식을 전달하는 기본 SOAP 메시지에 데이터 형식의 serialization을 처리하는 작업을 수행합니다. 데이터 형식에 특별 지원이 필요할 경우 더 많은 serialization 전략을 채택할 수 있습니다. 데이터 형식 serialization에 대 한 선택에 대 한 자세한 내용은 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 응용 프로그램 참조 [서비스 계약에 데이터 전송 지정](../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md)합니다.  
+ 일반적인 WCF 응용 프로그램을 사용 하지는 않지만 <xref:System.Runtime.Serialization.DataContractAttribute> 및 <xref:System.Runtime.Serialization.DataMemberAttribute> 특성을 작업에 대 한 데이터 계약을 만들지만 다른 serialization 메커니즘을 사용할 수 있습니다. 표준 <xref:System.Runtime.Serialization.ISerializable>, <xref:System.SerializableAttribute> 및 <xref:System.Xml.Serialization.IXmlSerializable> 메커니즘은 모두 응용 프로그램 간에 데이터 형식을 전달하는 기본 SOAP 메시지에 데이터 형식의 serialization을 처리하는 작업을 수행합니다. 데이터 형식에 특별 지원이 필요할 경우 더 많은 serialization 전략을 채택할 수 있습니다. WCF 응용 프로그램에서 데이터 형식 serialization에 대 한 선택에 대 한 자세한 내용은 참조 [서비스 계약에 데이터 전송 지정](../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md)합니다.  
   
 #### <a name="mapping-parameters-and-return-values-to-message-exchanges"></a>메시지 교환에 매개 변수 및 반환 값 매핑  
- 서비스 작업은 응용 프로그램 데이터뿐만 아니라 응용 프로그램이 특정 표준 보안, 트랜잭션 및 세션 관련 기능을 지원하는 데 필요한 데이터를 주고받는 SOAP 메시지의 기본 교환에 의해 지원됩니다. 서비스 작업의 시그니처 특정 기본 지정 하는 경우 이기 때문에 *메시지 교환 패턴* (MEP) 데이터 전송 및 작업에 필요한 기능을 지원할 수 있는 합니다. [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 프로그래밍 모델에서 요청/회신, 단방향 및 이중 메시지 패턴을 지정할 수 있습니다.  
+ 서비스 작업은 응용 프로그램 데이터뿐만 아니라 응용 프로그램이 특정 표준 보안, 트랜잭션 및 세션 관련 기능을 지원하는 데 필요한 데이터를 주고받는 SOAP 메시지의 기본 교환에 의해 지원됩니다. 서비스 작업의 시그니처 특정 기본 지정 하는 경우 이기 때문에 *메시지 교환 패턴* (MEP) 데이터 전송 및 작업에 필요한 기능을 지원할 수 있는 합니다. WCF 프로그래밍 모델의 세 가지 패턴을 지정할 수 있습니다: 요청/회신, 단방향 및 이중 메시지 패턴입니다.  
   
 ##### <a name="requestreply"></a>요청/회신  
  요청/회신 패턴은 요청 발신자(클라이언트 응용 프로그램)가 요청과 상호 관련된 회신을 받는 패턴입니다. 이 패턴은 하나 이상의 매개 변수가 작업에 전달되고 반환값이 다시 호출자에게 전달되는 작업을 지원하므로 기본 MEP입니다. 예를 들어, 다음 C# 코드 예제에서는 문자열 하나를 사용하여 문자열을 반환하는 기본적인 서비스 작업을 보여 줍니다.  
@@ -92,7 +92,7 @@ string Hello(string greeting);
 Function Hello (ByVal greeting As String) As String  
 ```  
   
- 이 작업 서명은 기본 메시지 교환 형식을 지정합니다. 상관 관계가 없는 경우 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]는 반환 값을 사용할 작업을 결정할 수 없습니다.  
+ 이 작업 서명은 기본 메시지 교환 형식을 지정합니다. 상관 관계가 없는 경우 반환 값은 대상 작업에 대 한 WCF 확인할 수 없습니다.  
   
  다른 기본 메시지 패턴을 지정 하지 않으면 반환 하는 서비스 작업에도 참고 `void` (`Nothing` Visual basic에서)가 요청/회신 메시지 교환입니다. 작업 결과, 클라이언트가 작업을 비동기적으로 호출하지 않으면 일반적인 경우 메시지가 비어 있어도 클라이언트가 반환 메시지를 받을 때까지 처리를 중지합니다. 다음 C# 코드 예제에서는 클라이언트가 빈 메시지를 응답으로 받을 때까지 반환되지 않는 작업을 보여 줍니다.  
   
@@ -108,10 +108,10 @@ void Hello(string greeting);
 Sub Hello (ByVal greeting As String)  
 ```  
   
- 앞의 예제에서는 작업을 수행하는 데 시간이 오래 걸릴 경우 클라이언트 성능 및 응답성이 저하될 수 있지만 `void`를 반환하는 경우에도 요청/회신 작업에 이점이 있습니다. 명백한 점은 통신에서든 처리 중에든 일부 서비스 관련 오류 조건이 발생했음을 나타내는 응답 메시지에 SOAP 오류가 반환될 수 있다는 것입니다. 서비스 계약에 지정된 SOAP 오류는 클라이언트 응용 프로그램에 <xref:System.ServiceModel.FaultException%601> 개체로 전달됩니다. 여기서 형식 매개 변수는 서비스 계약에 지정된 형식입니다. 이를 통해 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 서비스의 오류 조건에 대한 정보를 클라이언트에게 쉽게 알릴 수 있습니다. 예외, SOAP 오류 및 오류 처리 하는 방법에 대 한 자세한 내용은 참조 [지정 및 계약 및 서비스에서 처리 오류](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)합니다. 요청/회신 서비스와 클라이언트의 예를 보려면 [하는 방법: 요청-회신 계약 만들기](../../../docs/framework/wcf/feature-details/how-to-create-a-request-reply-contract.md)합니다. 문제는 요청-회신 패턴에 대 한 자세한 내용은 참조 [요청-회신 서비스](../../../docs/framework/wcf/feature-details/request-reply-services.md)합니다.  
+ 앞의 예제에서는 작업을 수행하는 데 시간이 오래 걸릴 경우 클라이언트 성능 및 응답성이 저하될 수 있지만 `void`를 반환하는 경우에도 요청/회신 작업에 이점이 있습니다. 명백한 점은 통신에서든 처리 중에든 일부 서비스 관련 오류 조건이 발생했음을 나타내는 응답 메시지에 SOAP 오류가 반환될 수 있다는 것입니다. 서비스 계약에 지정된 SOAP 오류는 클라이언트 응용 프로그램에 <xref:System.ServiceModel.FaultException%601> 개체로 전달됩니다. 여기서 형식 매개 변수는 서비스 계약에 지정된 형식입니다. 이렇게 하면 알림 클라이언트 오류 조건에 대 한 WCF 서비스에서 쉽게 합니다. 예외, SOAP 오류 및 오류 처리 하는 방법에 대 한 자세한 내용은 참조 [지정 및 계약 및 서비스에서 처리 오류](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)합니다. 요청/회신 서비스와 클라이언트의 예를 보려면 [하는 방법: 요청-회신 계약 만들기](../../../docs/framework/wcf/feature-details/how-to-create-a-request-reply-contract.md)합니다. 문제는 요청-회신 패턴에 대 한 자세한 내용은 참조 [요청-회신 서비스](../../../docs/framework/wcf/feature-details/request-reply-services.md)합니다.  
   
 ##### <a name="one-way"></a>단방향  
- [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 서비스 응용 프로그램의 클라이언트가 작업이 완료될 때까지 기다리지 않아도 되고 SOAP 오류가 처리되지 않을 경우 작업에 단방향 메시지 패턴을 지정할 수 있습니다. 단방향 작업은 클라이언트가 작업을 호출하고 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]에서 네트워크에 메시지를 작성한 후에 처리를 계속하는 작업입니다. 일반적으로 아웃바운드 메시지에 보내는 데이터가 아주 크지 않은 경우 데이터를 보내는 데 문제가 없다면 클라이언트가 바로 계속해서 실행됩니다. 이러한 형식의 메시지 교환 패턴은 클라이언트에서 서비스 응용 프로그램으로 이벤트와 비슷한 동작을 지원합니다.  
+ WCF 서비스 응용 프로그램의 클라이언트 작업을 완료 하려면 기다릴 필요가 없습니다 SOAP 오류가 처리 되지 않는 경우는 작업 단방향 메시지 패턴을 지정할 수 있습니다. 단방향 작업은 클라이언트는 작업을 호출 하 고 WCF 메시지를 네트워크에 기록 된 후 처리를 계속 합니다. 일반적으로 아웃바운드 메시지에 보내는 데이터가 아주 크지 않은 경우 데이터를 보내는 데 문제가 없다면 클라이언트가 바로 계속해서 실행됩니다. 이러한 형식의 메시지 교환 패턴은 클라이언트에서 서비스 응용 프로그램으로 이벤트와 비슷한 동작을 지원합니다.  
   
  메시지를 보내지만 반환되는 메시지가 없는 메시지 교환은 `void` 이외의 반환 값을 지정하는 서비스 작업을 지원할 수 없습니다. 이 경우 <xref:System.InvalidOperationException> 예외가 throw됩니다.  
   

@@ -2,11 +2,11 @@
 title: 인스턴싱 초기화
 ms.date: 03/30/2017
 ms.assetid: 154d049f-2140-4696-b494-c7e53f6775ef
-ms.openlocfilehash: 75b8d2a2696d5900fd7bffe42dbaf62b9f6ce694
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: ae01254760219f2b408ef9d9663c4158e2802be8
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="instancing-initialization"></a>인스턴싱 초기화
 이 샘플은 확장는 [풀링](../../../../docs/framework/wcf/samples/pooling.md) 인터페이스를 정의 하 여 샘플 `IObjectControl`, 활성화 및 비활성화 하 여 개체의 초기화를 사용자 지정입니다. 클라이언트에서는 개체를 풀로 반환하는 메서드와 개체를 풀로 반환하지 않는 메서드를 호출합니다.  
@@ -15,12 +15,12 @@ ms.lasthandoff: 05/04/2018
 >  이 샘플의 설치 절차 및 빌드 지침은 이 항목의 끝부분에 나와 있습니다.  
   
 ## <a name="extensibility-points"></a>확장 지점  
- Windows Communication Foundation (WCF) 확장을 만드는 첫 번째 단계 사용할 확장명 지점을 결정 하는 것입니다. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], 용어 *EndpointDispatcher* 런타임 구성 요소를 그 메서드의 반환 값을 변환 하 고 들어오는 메시지를 사용자의 서비스에 대 한 메서드 호출으로 변환 하는 것에 대 한 참조는 보내는 메시지입니다. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 서비스는 각 끝점에 대해 EndpointDispatcher를 만듭니다.  
+ Windows Communication Foundation (WCF) 확장을 만드는 첫 번째 단계 사용할 확장명 지점을 결정 하는 것입니다. Wcf에서는 용어 *EndpointDispatcher* 들어오는 메시지를 사용자의 서비스에 대 한 메서드 호출으로 변환 하 고 보내는 메시지를 그 메서드의 반환 값 변환에 대 한 런타임 구성 요소 참조 . WCF 서비스는 각 끝점에 대해 EndpointDispatcher를 만듭니다.  
   
  EndpointDispatcher는 <xref:System.ServiceModel.Dispatcher.EndpointDispatcher> 클래스를 사용하여 서비스에서 보내거나 받는 모든 메시지에 대해 끝점 범위 확장성을 제공합니다. 이 클래스를 사용하면 EndpointDispatcher의 동작을 제어하는 다양한 속성을 사용자 지정할 수 있습니다. 이 샘플에서는 서비스 클래스의 인스턴스를 제공하는 개체를 가리키는 <xref:System.ServiceModel.Dispatcher.DispatchRuntime.InstanceProvider%2A> 속성을 중점적으로 다룹니다.  
   
 ## <a name="iinstanceprovider"></a>IInstanceProvider  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서 EndpointDispatcher는 <xref:System.ServiceModel.Dispatcher.IInstanceProvider> 인터페이스를 구현하는 인스턴스 공급자를 사용하여 서비스 클래스의 인스턴스를 만듭니다. 이 인터페이스에는 다음과 같은 두 개의 메서드만 있습니다.  
+ Wcf에서는 EndpointDispatcher를 구현 하는 인스턴스 공급자를 사용 하 여 서비스 클래스의 인스턴스를 만드는 <xref:System.ServiceModel.Dispatcher.IInstanceProvider> 인터페이스입니다. 이 인터페이스에는 다음과 같은 두 개의 메서드만 있습니다.  
   
 -   <xref:System.ServiceModel.Dispatcher.IInstanceProvider.GetInstance%2A>: 메시지가 도착하면 디스패처가 <xref:System.ServiceModel.Dispatcher.IInstanceProvider.GetInstance%2A> 메서드를 호출하여 메시지를 처리할 서비스 클래스의 인스턴스를 만듭니다. 이 메서드의 호출 빈도는 <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A> 속성에 의해 결정됩니다. 예를 들어 <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A> 속성이 <xref:System.ServiceModel.InstanceContextMode.PerCall?displayProperty=nameWithType>로 설정된 경우 도착하는 각 메시지를 처리하기 위해 서비스 클래스의 새 인스턴스가 만들어지므로, 메시지가 도착할 때마다 <xref:System.ServiceModel.Dispatcher.IInstanceProvider.GetInstance%2A>가 호출됩니다.  
   
@@ -153,7 +153,7 @@ if (activeObjectsCount == 0)
   
  이 샘플에서는 사용자 지정 특성을 사용합니다. <xref:System.ServiceModel.ServiceHost>가 생성되면 이는 서비스의 형식 정의에 사용된 특성을 확인하고 사용 가능한 동작을 서비스 설명의 동작 컬렉션에 추가합니다.  
   
- <xref:System.ServiceModel.Description.IServiceBehavior> 인터페이스에는 세 가지 방법: <xref:System.ServiceModel.Description.IServiceBehavior.Validate%2A> `,` <xref:System.ServiceModel.Description.IServiceBehavior.AddBindingParameters%2A> `,` 및 <xref:System.ServiceModel.Description.IServiceBehavior.ApplyDispatchBehavior%2A>합니다. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]가 초기화 중일 때 <xref:System.ServiceModel.ServiceHost>에서 이러한 메서드를 호출합니다. <xref:System.ServiceModel.Description.IServiceBehavior.Validate%2A?displayProperty=nameWithType>가 먼저 호출되어 서비스에 일관성을 검사할 수 있게 해 줍니다. <xref:System.ServiceModel.Description.IServiceBehavior.AddBindingParameters%2A?displayProperty=nameWithType>이 다음으로 호출됩니다. 이 메서드는 고급 시나리오에서만 필요합니다. <xref:System.ServiceModel.Description.IServiceBehavior.ApplyDispatchBehavior%2A?displayProperty=nameWithType>가 마지막으로 호출되며 런타임 구성을 담당합니다. 다음 매개 변수가 <xref:System.ServiceModel.Description.IServiceBehavior.ApplyDispatchBehavior%2A?displayProperty=nameWithType>에 전달됩니다.  
+ <xref:System.ServiceModel.Description.IServiceBehavior> 인터페이스에는 세 가지 방법: <xref:System.ServiceModel.Description.IServiceBehavior.Validate%2A> `,` <xref:System.ServiceModel.Description.IServiceBehavior.AddBindingParameters%2A> `,` 및 <xref:System.ServiceModel.Description.IServiceBehavior.ApplyDispatchBehavior%2A>합니다. WCF에서 이러한 메서드를 호출 하는 경우는 <xref:System.ServiceModel.ServiceHost> 초기화 하는 중입니다. <xref:System.ServiceModel.Description.IServiceBehavior.Validate%2A?displayProperty=nameWithType>가 먼저 호출되어 서비스에 일관성을 검사할 수 있게 해 줍니다. <xref:System.ServiceModel.Description.IServiceBehavior.AddBindingParameters%2A?displayProperty=nameWithType>이 다음으로 호출됩니다. 이 메서드는 고급 시나리오에서만 필요합니다. <xref:System.ServiceModel.Description.IServiceBehavior.ApplyDispatchBehavior%2A?displayProperty=nameWithType>가 마지막으로 호출되며 런타임 구성을 담당합니다. 다음 매개 변수가 <xref:System.ServiceModel.Description.IServiceBehavior.ApplyDispatchBehavior%2A?displayProperty=nameWithType>에 전달됩니다.  
   
 -   `Description`: 이 매개 변수는 전체 서비스에 대한 서비스 설명을 제공합니다. 이 매개 변수를 사용하여 서비스의 끝점, 계약, 바인딩 및 그 외 서비스와 관련된 데이터에 대한 설명 데이터를 검사할 수 있습니다.  
   
@@ -189,7 +189,7 @@ public void ApplyDispatchBehavior(ServiceDescription description, ServiceHostBas
   
  <xref:System.ServiceModel.Description.IServiceBehavior> 구현 외에 `ObjectPoolingAttribute` 클래스에도 특성 인수를 사용하여 개체 풀을 사용자 지정하는 멤버가 몇 개 있습니다. 이러한 멤버에는 .NET Enterprise Services에서 제공하는 개체 풀링 기능 집합과 일치하는 `MaxSize`, `MinSize`, `Enabled` 및 `CreationTimeout`이 포함됩니다.  
   
- 이제 새로 만든 사용자 지정 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 특성으로 서비스 구현을 주석으로 지정하여 개체 풀링 동작을 `ObjectPooling` 서비스에 추가할 수 있습니다.  
+ 개체 풀링 동작 이제 추가할 수는 WCF 서비스를 새로 만든 사용자 지정 서비스 구현을 주석으로 지정 하 여 `ObjectPooling` 특성입니다.  
   
 ```  
 [ObjectPooling(MaxSize=1024, MinSize=10, CreationTimeout=30000]      

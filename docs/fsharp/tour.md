@@ -1,17 +1,12 @@
 ---
 title: 'F # 둘러보기'
 description: 'F # 프로그래밍 언어에서이 둘러보기는 샘플 코드의 주요 기능 중 일부를 검사 합니다.'
-author: cartermp
-ms.author: phcart
 ms.date: 02/28/2018
-ms.topic: conceptual
-ms.prod: dotnet-fsharp
-ms.devlang: fsharp
-ms.openlocfilehash: 6821c74827b928cdd0c5aff101be4f9103986e3e
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
-ms.translationtype: HT
+ms.openlocfilehash: 2ce251b90d5c202996e0b1673e8f7f378a38af5f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tour-of-f"></a>F # 둘러보기 #
 

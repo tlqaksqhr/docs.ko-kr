@@ -7,23 +7,23 @@ helpviewer_keywords:
 - Configuration file
 - configuration file schema
 ms.assetid: 2db21a57-5f64-426f-89df-fb0dc2d2def5
-ms.openlocfilehash: ab6e3a99f951d2977a079f49e4aa3eff250ee8d5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 75657786135fd13222c6c7edd5acfa122cc72e52
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="configuration-editor-tool-svcconfigeditorexe"></a>Configuration Editor 도구(SvcConfigEditor.exe)
-Windows Communication Foundation (WCF) 서비스 구성 편집기 (SvcConfigEditor.exe)를 통해 관리자와 개발자가 생성 및 구성 설정을 수정할 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 그래픽 사용자 인터페이스를 사용 하 여 서비스입니다. 이 도구를 사용하면 XML 구성 파일을 직접 편집하지 않고도 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 바인딩, 동작, 서비스 및 진단에 대한 설정을 관리할 수 있습니다.  
+WCF(Windows Communication Foundation) 서비스 구성 편집기(SvcConfigEditor.exe)를 사용하면 관리자와 개발자가 그래픽 사용자 인터페이스를 사용하여 WCF 서비스에 대한 구성 설정을 만들고 수정할 수 있습니다. 이 도구를 사용하면 XML 구성 파일을 직접 편집하지 않고도 WCF 바인딩, 동작, 서비스 및 진단에 대한 설정을 관리할 수 있습니다.  
   
  서비스 구성 편집기는 C:\Program Files\Microsoft SDKs\Windows\v6.0\Bin 폴더에 있습니다.  
   
 ## <a name="the-wcf-configuration-editor"></a>WCF Configuration Editor  
- Service Configuration Editor는 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 서비스 또는 클라이언트를 구성하는 모든 단계를 안내하는 마법사와 함께 제공됩니다. 편집기를 직접 사용하는 대신 마법사를 사용하는 것이 좋습니다.  
+ 서비스 구성 편집기는 WCF 서비스 또는 클라이언트를 구성하는 모든 단계를 안내하는 마법사와 함께 제공됩니다. 편집기를 직접 사용하는 대신 마법사를 사용하는 것이 좋습니다.  
   
- 표준 System.Configuration 스키마를 따르는 일부 구성 파일이 이미 있으면 사용자 인터페이스로 바인딩, 동작, 서비스 및 진단에 대한 특정 설정을 관리할 수 있습니다. Service Configuration Editor를 사용하면 실행 파일, COM+ 서비스 및 웹 호스팅 서비스뿐 아니라 기존 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 구성 파일에 대한 설정을 관리할 수 있습니다. 서비스 구성 편집기를 사용하여 웹 호스팅 서비스를 열면 서비스의 자체 구성과 상위 수준 노드의 상속된 구성 섹션이 모두 표시됩니다.  
+ 표준 System.Configuration 스키마를 따르는 일부 구성 파일이 이미 있으면 사용자 인터페이스로 바인딩, 동작, 서비스 및 진단에 대한 특정 설정을 관리할 수 있습니다. 서비스 구성 편집기를 사용하면 실행 파일, COM+ 서비스 및 웹 호스팅 서비스뿐 아니라 기존 WCF 구성 파일에 대한 설정을 관리할 수 있습니다. 서비스 구성 편집기를 사용하여 웹 호스팅 서비스를 열면 서비스의 자체 구성과 상위 수준 노드의 상속된 구성 섹션이 모두 표시됩니다.  
   
- [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 구성 설정이 구성 파일의 `<system.serviceModel>` 섹션에 있으므로 편집기는 이 요소의 내용에 대해서만 작동하고 같은 파일의 다른 요소에 액세스하지 않습니다. 기존 구성 파일을 직접 찾거나 서비스, 가상 디렉터리 또는 COM+ 서비스가 포함된 어셈블리를 선택할 수 있습니다. 편집기는 특정 서비스의 구성 파일을 로드하여 구성 파일의 `<system.serviceModel>` 섹션에 중첩된 기존 요소를 편집하거나 새 요소를 추가할 수 있도록 합니다.  
+ WCF 구성 설정이 구성 파일의 `<system.serviceModel>` 섹션에 있으므로 편집기는 이 요소의 내용에 대해서만 작동하고 같은 파일의 다른 요소에 액세스하지 않습니다. 기존 구성 파일을 직접 찾거나 서비스, 가상 디렉터리 또는 COM+ 서비스가 포함된 어셈블리를 선택할 수 있습니다. 편집기는 특정 서비스의 구성 파일을 로드하여 구성 파일의 `<system.serviceModel>` 섹션에 중첩된 기존 요소를 편집하거나 새 요소를 추가할 수 있도록 합니다.  
   
  편집기는 IntelliSense를 지원하며 스키마를 준수하도록 적용합니다. 결과 출력은 구성 파일의 스키마를 준수하고 올바른 구문의 데이터 값을 갖습니다. 그러나 편집기를 사용해도 구성 파일의 의미가 유효하지 않을 수 있습니다. 즉, 편집기를 사용해도 구성 파일이 해당 구성 파일을 구성하는 서비스에서 작동하지 않을 수 있습니다.  
   
@@ -45,7 +45,7 @@ Windows Communication Foundation (WCF) 서비스 구성 편집기 (SvcConfigEdit
   
  C:\Program Files\Microsoft SDKs\Windows\v6.0\Bin\SvcConfigEditor.exe  
   
- 서비스 구성 편집기를 시작 하면 후 사용할 수 있습니다는 **파일/열기** 서비스 또는 어셈블리를 관리 하려는 검색 하는 메뉴입니다. 구성 파일을 직접 열고 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] /COM+ 서비스를 찾아 웹 호스팅 서비스의 구성 파일을 열 수 있습니다.  
+ 서비스 구성 편집기를 시작 하면 후 사용할 수 있습니다는 **파일/열기** 서비스 또는 어셈블리를 관리 하려는 검색 하는 메뉴입니다. 구성 파일을 직접 열고 WCF /COM+ 서비스를 찾아 웹 호스팅 서비스의 구성 파일을 열 수 있습니다.  
   
  Service Configuration Editor 사용자 인터페이스는 다음 영역으로 나뉩니다.  
   
@@ -57,7 +57,7 @@ Windows Communication Foundation (WCF) 서비스 구성 편집기 (SvcConfigEdit
   
 ### <a name="opening-a-configuration-file"></a>구성 파일 열기  
   
-1.  명령 창으로 이동 하려면 사용 하 여 서비스 구성 편집기를 시작 하면 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 설치 위치 및 입력 한 후 `SvcConfigEditor.exe`합니다.  
+1.  WCF 설치 위치를 찾아 입력 한 다음 명령 창을 사용 하 여 서비스 구성 편집기를 시작 `SvcConfigEditor.exe`합니다.  
   
 2.  **파일** 메뉴 선택 **열려** 관리 하려는 파일의 유형을 클릭 합니다.  
   
@@ -208,7 +208,7 @@ Windows Communication Foundation (WCF) 서비스 구성 편집기 (SvcConfigEdit
 3.  편집하려는 바인딩 요소 확장을 선택합니다. 요소의 설정이 편집 가능한 오른쪽 창에 나타납니다.  
   
 ### <a name="diagnostics"></a>진단  
- **진단** 노드 진단 설정의 모든 구성 파일에 표시 됩니다. 이 노드를 통해 성능 카운터 설정 또는 해제, WMI(Windows Management Instrumentation) 활성화 또는 비활성화, [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 추적 구성 및 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 메시지 로깅 구성이 가능합니다. 설정에는 **진단** 에 해당 하는 노드는 <`system.diagnostics`> 섹션 및 `<diagnostics>` 섹션 `<system.serviceModel>` 구성 파일에 있습니다.  
+ **진단** 노드 진단 설정의 모든 구성 파일에 표시 됩니다. 성능 카운터 켜기 / 끄기, 설정 또는 Windows Management Instrumentation (WMI)를 사용 하지 않도록 설정, WCF 추적을 구성 및 WCF 메시지 로깅을 구성 수 있습니다. 설정에는 **진단** 에 해당 하는 노드는 <`system.diagnostics`> 섹션 및 `<diagnostics>` 섹션 `<system.serviceModel>` 구성 파일에 있습니다.  
   
  클릭는 **진단** 노드를 보거나 진단에서 작업을 수행할 수 있습니다 **요약 페이지** 에 **세부 정보 창**합니다.  
   
@@ -225,18 +225,18 @@ Windows Communication Foundation (WCF) 서비스 구성 편집기 (SvcConfigEdit
 2.  WMI 공급자를 사용 하도록 설정 하려면 클릭는 **WMI 공급자를 사용 하도록 설정** 링크 합니다.  
   
 #### <a name="enabling-wcf-tracing"></a>WCF 추적 사용  
- 표준 속성으로 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 추적 파일을 만들거나 사용자 지정 추적 파일을 설정할 수 있습니다.  
+ 표준 속성으로 WCF 추적 파일을 만들거나 사용자 지정 추적 파일을 설정할 수 있습니다.  
   
 1.  클릭는 **진단** 노드.  
   
 2.  클릭 **추적을 활성화**합니다.  
   
-3.  클릭는 **추적 수준을** 링크 추적 수준을 조정 해야 합니다. 추적 수준에는 Off, Critical, Error, Warning, Information 및 Verbose 여섯 가지가 있습니다. **동작 추적** 및 **동작 전파** 옵션에 사용할 수 있도록는 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 동작 추적 기능입니다.  
+3.  클릭는 **추적 수준을** 링크 추적 수준을 조정 해야 합니다. 추적 수준에는 Off, Critical, Error, Warning, Information 및 Verbose 여섯 가지가 있습니다. **동작 추적** 및 **동작 전파** 옵션을 사용 하면 WCF 동작 추적 기능을 사용할 수 있도록 합니다.  
   
 4.  추적 파일 및 옵션을 지정하려면 추적 수신기 이름을 클릭합니다.  
   
 #### <a name="enabling-wcf-logging"></a>WCF 로깅 사용  
- 표준 속성으로 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 추적 파일을 만들거나 사용자 지정 추적 파일을 설정할 수 있습니다.  
+ 표준 속성으로 WCF 추적 파일을 만들거나 사용자 지정 추적 파일을 설정할 수 있습니다.  
   
 1.  클릭는 **진단** 노드.  
   
@@ -316,7 +316,7 @@ Windows Communication Foundation (WCF) 서비스 구성 편집기 (SvcConfigEdit
  이 섹션에서는 프로토콜 주소 체계와 가능한 바인딩 간의 정의된 매핑을 통해 http, tcp, MSMQ, net.pipe 등의 여러 가지 프로토콜에 대한 기본 바인딩 형식을 설정할 수 있습니다. 또한 다른 프로토콜에 대한 매핑을 새로 추가할 수 있습니다.  
   
 #### <a name="extensions"></a>확장  
- [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 구성에 사용하기 위해 새 바인딩 확장, 바인딩 요소 확장, 표준 끝점 확장 및 동작 확장을 등록할 수 있습니다. 확장은 이름/형식 쌍입니다. 이름은 구성의 확장 이름을 정의하는 반면 형식은 확장을 구현합니다. 확장에는 네 가지 형식이 있습니다.  
+ WCF 구성에서 사용 하기 위해 새 바인딩 확장명, 바인딩 요소 확장명, 표준 끝점 확장명 및 동작 확장을 등록할 수 있습니다. 확장은 이름/형식 쌍입니다. 이름은 구성의 확장 이름을 정의하는 반면 형식은 확장을 구현합니다. 확장에는 네 가지 형식이 있습니다.  
   
 -   바인딩 확장은 전체 바인딩 형식을 정의합니다. 예를 들어, `basicHttpBinding` 같은 형식입니다.  
   
@@ -326,9 +326,9 @@ Windows Communication Foundation (WCF) 서비스 구성 편집기 (SvcConfigEdit
   
 -   동작 요소 확장은 동작의 요소를 정의합니다. 예를 들어, `clientVia` 같은 형식입니다.  
   
- 구성에 등록된 확장은 같은 형식의 다른 모든 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 구성 요소와 같이 사용할 수 있습니다.  
+ 구성에 등록된 확장은 같은 형식의 다른 모든 WCF 구성 요소와 같이 사용할 수 있습니다.  
   
-##### <a name="adding-a-new-extension"></a>새 확장 추가  
+##### <a name="adding-a-new-extension"></a>새 확장명 추가  
  고급 노드에서 확장명 노드 중 하나를 선택합니다.  
   
 1.  **새로 만들기**를 클릭합니다.  
@@ -343,11 +343,11 @@ Windows Communication Foundation (WCF) 서비스 구성 편집기 (SvcConfigEdit
  이 섹션에서는 서비스 호스팅 환경에 대한 인스턴스화 설정을 정의할 수 있습니다.  
   
 ### <a name="creating-a-configuration-file-using-the-wizard"></a>마법사를 사용하여 구성 파일 만들기  
- 새 구성 파일을 만드는 한 가지 방법은 새 서비스 요소 마법사를 사용하는 것입니다. 마법사는 COM+ 및 웹 호스팅 가상 디렉터리를 포함하여, 설치된 서비스 형식 및 컴퓨터의 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]와 호환되는 기타 요소를 찾고, 훨씬 완벽한 구성을 만들기 위해 미리 로드합니다.  
+ 새 구성 파일을 만드는 한 가지 방법은 새 서비스 요소 마법사를 사용하는 것입니다. 마법사는 설치 된 서비스 형식 및 기타 요소 COM + 및 웹 호스팅 가상 디렉터리를 포함 하는 컴퓨터에 WCF와 호환 찾아서 훨씬 더 완벽 한 구성을 만들기 위해 미리 로드 합니다.  
   
 #### <a name="creating-a-configuration-file"></a>구성 파일 만들기  
   
-1.  명령 창으로 이동 하려면 사용 하 여 서비스 구성 편집기를 시작 하면 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 설치 위치 및 입력 한 후 `SvcConfigEditor.exe`합니다.  
+1.  WCF 설치 위치를 찾아 입력 한 다음 명령 창을 사용 하 여 서비스 구성 편집기를 시작 `SvcConfigEditor.exe`합니다.  
   
 2.  **파일** 메뉴 선택 **열려** 클릭 **실행 파일**, **COM + 서비스**, 또는 **WebHosted 서비스**만들려는 구성 파일의 형식에 따라 합니다.  
   
@@ -370,7 +370,7 @@ Windows Communication Foundation (WCF) 서비스 구성 편집기 (SvcConfigEdit
   
 2.  첫 페이지의 트리에서 COM+ 응용 프로그램을 선택합니다. 트리에서 COM+ 응용 프로그램을 찾을 수 없으면 구성 요소 서비스에 설치되어 있고 GAC(전역 어셈블리 캐시)에 등록되어 있는지 확인하십시오.  
   
-3.  다음 페이지에서는 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 서비스로 노출하려는 메서드를 선택합니다. COM+ 응용 프로그램에서 지원되는 모든 메서드가 기본적으로 표시되고 선택됩니다.  
+3.  다음 페이지에서는 WCF 서비스로 노출하려는 메서드를 선택합니다. COM+ 응용 프로그램에서 지원되는 모든 메서드가 기본적으로 표시되고 선택됩니다.  
   
 4.  호스팅 메서드를 선택합니다.  
   
@@ -390,6 +390,6 @@ Windows Communication Foundation (WCF) 서비스 구성 편집기 (SvcConfigEdit
     >  COM 계약이 포함된 구성 파일을 직접 열어 편집할 수도 있습니다.  
   
 ## <a name="security"></a>보안  
- 구성 편집기에서 생성한 서비스 구성 파일은 보안되지 않을 수 있습니다. 참조 하십시오는 [보안](../../../docs/framework/wcf/feature-details/security.md) 보호 하는 방법을 확인 하려면 설명서 프로그램 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 서비스입니다.  
+ 구성 편집기에서 생성한 서비스 구성 파일은 보안되지 않을 수 있습니다. 참조 하십시오는 [보안](../../../docs/framework/wcf/feature-details/security.md) WCF 서비스를 보호 하는 방법을 확인 하려면 설명서입니다.  
   
- 또한 Configuration Editor는 유효한 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 구성 요소를 읽고 쓰는 데에만 사용할 수 있습니다. 이 도구는 스키마 규격의 사용자 정의 요소를 무시합니다. 또한 이러한 요소를 구성 파일에서 제거하지 않고 알려진 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 요소에 대한 영향을 확인하지 않습니다. 이러한 요소가 응용 프로그램이나 시스템에 위협을 야기하는지 여부는 사용자가 확인해야 합니다.
+ 또한 구성 편집기는 유효한 WCF 구성 요소를 읽고 쓰는 데만 사용할 수 있습니다. 이 도구는 스키마 규격의 사용자 정의 요소를 무시합니다. 또한 이러한 요소를 구성 파일에서 제거하지 않고 알려진 WCF 요소에 대한 영향을 확인하지 않습니다. 이러한 요소가 응용 프로그램이나 시스템에 위협을 야기하는지 여부는 사용자가 확인해야 합니다.

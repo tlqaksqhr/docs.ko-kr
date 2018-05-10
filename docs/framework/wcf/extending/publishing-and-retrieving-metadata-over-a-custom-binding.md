@@ -2,11 +2,11 @@
 title: 사용자 지정 바인딩을 통해 메타데이터 게시 및 검색
 ms.date: 03/30/2017
 ms.assetid: 904e11b4-d90e-45c6-9ee5-c3472c90008c
-ms.openlocfilehash: 607cf70e8e226e6c97a785f2478ad3a655b21a7c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 528f7662ee3a1f956427e5e42f540816f55027f8
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="publishing-and-retrieving-metadata-over-a-custom-binding"></a>사용자 지정 바인딩을 통해 메타데이터 게시 및 검색
 <xref:System.ServiceModel.Description.ServiceMetadataBehavior?displayProperty=nameWithType>에서는 메타데이터 끝점을 서비스에 추가할 수 있도록 지원합니다. 이러한 메타 데이터 끝점에서 URL HTTP GET 요청에 응답할 수는 `?wsdl` querystring 및 Ws-metadataexchange (MEX) 사양에 정의 된 대로 Ws-transfer GET 요청을 합니다. MEX 끝점은 <xref:System.ServiceModel.Description.IMetadataExchange?displayProperty=nameWithType> 계약을 구현합니다.  
@@ -19,7 +19,7 @@ ms.lasthandoff: 05/04/2018
 ## <a name="retrieving-metadata-over-a-custom-binding"></a>사용자 지정 바인딩을 통해 메타데이터 검색  
  표준 HTTP 또는 HTTPS GET 요청을 사용하여 HTTP Get 및 HTTPS Get 메타데이터 끝점에서 메타데이터를 검색할 수 있습니다.  
   
- MEX 메타데이터 끝점에서 메타데이터를 검색하기 위해 일반적으로 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서 지원하는 표준 MEX 바인딩 중 하나를 사용할 수 있습니다. 자세한 내용은 <xref:System.ServiceModel.Description.MetadataExchangeBindings?displayProperty=nameWithType>을 참조하세요. <xref:System.ServiceModel.Description.MetadataExchangeClient?displayProperty=nameWithType> 형식 및 Svcutil.exe 도구에서는 지정된 메타데이터 끝점의 주소에 따라 이러한 표준 MEX 바인딩 중 하나를 자동으로 선택합니다.  
+ 일반적으로 하나를 사용 하면 WCF에서 지 원하는 표준 MEX 바인딩 중 MEX 메타 데이터 끝점에서 메타 데이터를 검색 합니다. 자세한 내용은 <xref:System.ServiceModel.Description.MetadataExchangeBindings?displayProperty=nameWithType>을 참조하세요. <xref:System.ServiceModel.Description.MetadataExchangeClient?displayProperty=nameWithType> 형식 및 Svcutil.exe 도구에서는 지정된 메타데이터 끝점의 주소에 따라 이러한 표준 MEX 바인딩 중 하나를 자동으로 선택합니다.  
   
  MEX 메타데이터 끝점에서 표준 MEX 바인딩과 다른 바인딩을 사용하는 경우 코드를 사용하거나 <xref:System.ServiceModel.Description.MetadataExchangeClient> 클라이언트 끝점 구성을 제공하여 <xref:System.ServiceModel.Description.IMetadataExchange>에서 사용하는 바인딩을 구성할 수 있습니다. Svcutil.exe 도구는 메타데이터 끝점 주소의 URI 스키마와 이름이 같은 <xref:System.ServiceModel.Description.IMetadataExchange> 클라이언트 끝점 구성을 구성 파일에서 자동으로 로드합니다.  
   

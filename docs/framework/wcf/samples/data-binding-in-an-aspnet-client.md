@@ -2,11 +2,11 @@
 title: ASP.NET 클라이언트에서 데이터 바인딩
 ms.date: 03/30/2017
 ms.assetid: 68b49fa6-94e7-4d4c-a34e-902a2b3770b6
-ms.openlocfilehash: c0f3cbb08f0078bf364ef720635f7afda3257611
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 8fdebec272fbedf23233e03ba7c6fe2d64cb18cc
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="data-binding-in-an-aspnet-client"></a>ASP.NET 클라이언트에서 데이터 바인딩
 이 샘플에는 Web Forms 응용 프로그램에서 일반적인 Windows Communication Foundation (WCF) 서비스에서 반환 된 데이터를 바인딩하는 방법을 보여 줍니다.  
@@ -14,11 +14,11 @@ ms.lasthandoff: 05/04/2018
 > [!NOTE]
 >  이 샘플의 설치 절차 및 빌드 지침은 이 항목의 끝부분에 나와 있습니다.  
   
- 이 샘플에서는 요청-회신 통신 패턴을 정의하는 계약을 구현하는 서비스를 보여 줍니다. 이 샘플은 브라우저에서 액세스할 수 있는 클라이언트 Web Forms 응용 프로그램과 IIS(인터넷 정보 서비스)에서 호스팅하는 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 서비스로 구성됩니다.  
+ 이 샘플에서는 요청-회신 통신 패턴을 정의하는 계약을 구현하는 서비스를 보여 줍니다. 이 샘플 클라이언트 브라우저와 인터넷 정보 서비스 (IIS)에서 호스트 되는 WCF 서비스에서 액세스할 수 있는 Web Forms 응용 프로그램으로 구성 됩니다.  
   
  이 서비스는 요청-회신 통신 패턴을 정의하는 계약을 구현합니다. 계약은 `IWeatherService`라는 작업을 노출시키는 `GetWeatherData` 인터페이스에 의해 정의됩니다. 이 작업은 도시 배열을 사용하여 도시의 최고 및 최저 예상 기온을 나타내는 `WeatherData` 개체의 배열을 반환합니다.  
   
- [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 클라이언트 .aspx 페이지에는 이 서비스에 의해 반환된 데이터의 그래픽 표현을 포함하는 DataGrid 웹 컨트롤이 정의되어 있습니다. .aspx 페이지의 코드는 날씨 데이터를 위한 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 서비스를 호출하고 이 데이터를 `WeatherData` 개체의 배열에 반환합니다. DataGrid는 `DataSource` 속성을 이 배열로 설정하여 데이터를 가져올 위치를 지정합니다. DataGrid의 `DataBind` 메서드를 호출함과 동시에 데이터 바인딩이 발생하며, 에 포함 된 모든이 코드는 합니다.`aspx` 페이지의 `Page_Load` 될 때마다 사용자가 브라우저 페이지를 데이터를 새로 고칠 하므로 DataGrid에서 업데이트 됩니다.  
+ [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 클라이언트 .aspx 페이지에는 이 서비스에 의해 반환된 데이터의 그래픽 표현을 포함하는 DataGrid 웹 컨트롤이 정의되어 있습니다. 날씨 데이터에 대 한 WCF 서비스를 호출 하 고 배열에 데이터를 반환 하는 코드는.aspx 페이지에 `WeatherData` 개체입니다. DataGrid는 `DataSource` 속성을 이 배열로 설정하여 데이터를 가져올 위치를 지정합니다. DataGrid의 `DataBind` 메서드를 호출함과 동시에 데이터 바인딩이 발생하며, 에 포함 된 모든이 코드는 합니다.`aspx` 페이지의 `Page_Load` 될 때마다 사용자가 브라우저 페이지를 데이터를 새로 고칠 하므로 DataGrid에서 업데이트 됩니다.  
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>샘플을 설치, 빌드 및 실행하려면  
   

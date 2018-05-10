@@ -2,20 +2,20 @@
 title: 사용자 지정 수명
 ms.date: 03/30/2017
 ms.assetid: 52806c07-b91c-48fe-b992-88a41924f51f
-ms.openlocfilehash: 1d9baa2d6eab476d5c8428208576f341e71fef2f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: e41c970739b8036730fa601433ce7157e01d7e19
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="custom-lifetime"></a>사용자 지정 수명
-이 샘플에서는 공유에 대 한 사용자 지정 수명 서비스를 제공 하는 Windows Communication Foundation (WCF) 확장을 작성 하는 방법을 보여 줍니다. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 서비스 인스턴스.  
+이 샘플에는 WCF 서비스 인스턴스를 공유에 대 한 사용자 지정 수명 서비스를 제공 하는 Windows Communication Foundation (WCF) 확장을 작성 하는 방법을 보여 줍니다.  
   
 > [!NOTE]
 >  이 샘플의 설치 절차 및 빌드 지침은 이 항목의 끝부분에 나와 있습니다.  
   
 ## <a name="shared-instancing"></a>공유 인스턴스 만들기  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서는 서비스 인스턴스에 대한 몇 가지 인스턴스 만들기 모드를 제공합니다. 이 항목에서 설명하는 공유 인스턴스 만들기 모드를 사용하면 여러 채널 간에 서비스 인스턴스를 공유할 수 있습니다. 클라이언트에서는 인스턴스의 끝점 주소를 로컬로 확인하거나 서비스의 팩터리 메서드에 연결하여 실행 중인 인스턴스의 끝점 주소를 가져올 수 있습니다. 끝점 주소를 가져온 후에는 새 채널을 만들고 통신을 시작할 수 있습니다. 다음 코드 조각에서는 클라이언트 응용 프로그램에서 기존 서비스 인스턴스에 대한 새 채널을 만드는 방법을 보여 줍니다.  
+ WCF는 서비스 인스턴스에 대 한 인스턴스 만들기 모드를 제공 합니다. 이 항목에서 설명하는 공유 인스턴스 만들기 모드를 사용하면 여러 채널 간에 서비스 인스턴스를 공유할 수 있습니다. 클라이언트에서는 인스턴스의 끝점 주소를 로컬로 확인하거나 서비스의 팩터리 메서드에 연결하여 실행 중인 인스턴스의 끝점 주소를 가져올 수 있습니다. 끝점 주소를 가져온 후에는 새 채널을 만들고 통신을 시작할 수 있습니다. 다음 코드 조각에서는 클라이언트 응용 프로그램에서 기존 서비스 인스턴스에 대한 새 채널을 만드는 방법을 보여 줍니다.  
   
 ```  
 // Create the first channel.  
@@ -34,12 +34,12 @@ ChannelFactory<IEchoService> channelFactory2 =
 IEchoService proxy2 = channelFactory2.CreateChannel();  
 ```  
   
- 다른 인스턴스 만들기 모드와 달리 공유 인스턴스 만들기 모드에는 서비스 인스턴스를 해제하는 고유한 방법이 있습니다. 인스턴스의 모든 채널이 닫히면 서비스 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 런타임에서는 타이머를 시작합니다. 제한 시간이 만료되기 전에 아무도 연결하지 않으면 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서는 인스턴스를 해제하고 리소스를 확보합니다. 중지 절차의 일부로 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서는 인스턴스를 해제하기 전에 모든 <xref:System.ServiceModel.Dispatcher.IInstanceContextProvider.IsIdle%2A> 구현의 <xref:System.ServiceModel.Dispatcher.IInstanceContextProvider> 메서드를 호출합니다. 모든 메서드가 `true`를 반환하면 인스턴스가 해제됩니다. 그렇지 않으면 <xref:System.ServiceModel.Dispatcher.IInstanceContextProvider> 구현에서 콜백 메서드를 사용하여 `Dispatcher`에 유휴 상태를 알려야 합니다.  
+ 다른 인스턴스 만들기 모드와 달리 공유 인스턴스 만들기 모드에는 서비스 인스턴스를 해제하는 고유한 방법이 있습니다. 인스턴스에 대 한 모든 채널이 닫히면 서비스 WCF 런타임 타이머를 시작 합니다. 제한 시간이 만료 되기 전에 아무도 연결, WCF의 인스턴스를 해제 하 고 리소스를 확보 합니다. 중지 절차의 일부로 WCF 호출는 <xref:System.ServiceModel.Dispatcher.IInstanceContextProvider.IsIdle%2A> 모든 메서드 <xref:System.ServiceModel.Dispatcher.IInstanceContextProvider> 인스턴스를 해제 하기 전에 구현 합니다. 모든 메서드가 `true`를 반환하면 인스턴스가 해제됩니다. 그렇지 않으면 <xref:System.ServiceModel.Dispatcher.IInstanceContextProvider> 구현에서 콜백 메서드를 사용하여 `Dispatcher`에 유휴 상태를 알려야 합니다.  
   
  기본적으로 <xref:System.ServiceModel.InstanceContext>의 유휴 제한 시간 값은 1분입니다. 그러나 이 샘플에서는 사용자 지정 확장을 사용하여 이 시간을 연장하는 방법을 보여 줍니다.  
   
 ## <a name="extending-the-instancecontext"></a>InstanceContext 확장  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서 <xref:System.ServiceModel.InstanceContext>는 서비스 인스턴스와 `Dispatcher` 사이의 링크입니다. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서는 확장 가능한 개체 패턴을 사용하여 새 상태나 동작을 추가하여 이 런타임 구성 요소를 확장할 수 있습니다. 확장 가능한 개체 패턴은 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서 새 기능으로 기존 런타임 클래스를 확장하거나 개체에 새 상태 기능을 추가하는 데 사용됩니다. 확장 가능한 개체 패턴에는 세 가지 인터페이스인 `IExtensibleObject<T>`, `IExtension<T>` 및 `IExtensionCollection<T>`이 있습니다.  
+ Wcf에서는 <xref:System.ServiceModel.InstanceContext> 은 서비스 인스턴스 사이의 연결 및 `Dispatcher`합니다. WCF를 사용 하면 확장 가능한 개체 패턴을 사용 하 여 새 상태나 동작을 추가 하 여이 런타임 구성 요소를 확장할 수 있습니다. 확장명 가능한 개체 패턴은 새 기능으로 기존 런타임 클래스를 확장 하거나 하거나 개체에 새 상태 기능을 추가 하려면 WCF에서 사용 됩니다. 확장 가능한 개체 패턴에는 세 가지 인터페이스인 `IExtensibleObject<T>`, `IExtension<T>` 및 `IExtensionCollection<T>`이 있습니다.  
   
  `IExtensibleObject<T>` 인터페이스는 개체의 기능을 사용자 지정하는 확장을 허용하는 개체를 통해 구현됩니다.  
   
@@ -80,7 +80,7 @@ class CustomLeaseExtension : IExtension<InstanceContext>, ICustomLease
 }  
 ```  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서 <xref:System.ServiceModel.Dispatcher.IInstanceContextProvider.IsIdle%2A> 구현의 <xref:System.ServiceModel.Dispatcher.IInstanceContextProvider> 메서드를 호출할 경우 이 호출은 <xref:System.ServiceModel.Dispatcher.IInstanceContextProvider.IsIdle%2A>의 `CustomLeaseExtension` 메서드로 라우트됩니다. 그런 다음 `CustomLeaseExtension`에서 메서드의 전용 상태를 검사하여 <xref:System.ServiceModel.InstanceContext>가 유휴 상태인지 여부를 확인합니다. 유휴 상태이면 이 메서드는 `true`를 반환하며, 그렇지 않으면 연장된 수명 기간에 대한 타이머를 시작합니다.  
+ WCF 호출 하는 경우는 <xref:System.ServiceModel.Dispatcher.IInstanceContextProvider.IsIdle%2A> 에서 메서드는 <xref:System.ServiceModel.Dispatcher.IInstanceContextProvider> 구현이이 호출에 전달 되는 <xref:System.ServiceModel.Dispatcher.IInstanceContextProvider.IsIdle%2A> 의 메서드는 `CustomLeaseExtension`합니다. 그런 다음 `CustomLeaseExtension`에서 메서드의 전용 상태를 검사하여 <xref:System.ServiceModel.InstanceContext>가 유휴 상태인지 여부를 확인합니다. 유휴 상태이면 이 메서드는 `true`를 반환하며, 그렇지 않으면 연장된 수명 기간에 대한 타이머를 시작합니다.  
   
 ```  
 public bool IsIdle  
@@ -116,7 +116,7 @@ void idleTimer_Elapsed(object sender, ElapsedEventArgs args)
   
  유휴 상태로 전환되는 인스턴스에 대해 새 메시지가 도착할 경우에는 실행 중인 타이머를 갱신할 수 없습니다.  
   
- 이 샘플에서는 <xref:System.ServiceModel.Dispatcher.IInstanceContextProvider>을 구현하여 <xref:System.ServiceModel.Dispatcher.IInstanceContextProvider.IsIdle%2A> 메서드에 대한 호출을 가로채고 이를 `CustomLeaseExtension`에 라우트합니다. <xref:System.ServiceModel.Dispatcher.IInstanceContextProvider> 구현은 `CustomLifetimeLease` 클래스에 포함됩니다. <xref:System.ServiceModel.Dispatcher.IInstanceContextProvider.IsIdle%2A> 메서드는 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서 서비스 인스턴스를 해제하려고 할 때 호출됩니다. 그러나 ServiceBehavior의 `ISharedSessionInstance` 컬렉션에는 특정 <xref:System.ServiceModel.Dispatcher.IInstanceContextProvider> 구현의 인스턴스가 하나만 있습니다. 즉, <xref:System.ServiceModel.InstanceContext>에서 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 메서드를 확인할 때 <xref:System.ServiceModel.Dispatcher.IInstanceContextProvider.IsIdle%2A>가 닫히는지 알 수 있는 방법이 없습니다. 따라서 이 샘플에서는 스레드 잠금을 사용하여 <xref:System.ServiceModel.Dispatcher.IInstanceContextProvider.IsIdle%2A> 메서드에 대한 요청을 serialize합니다.  
+ 이 샘플에서는 <xref:System.ServiceModel.Dispatcher.IInstanceContextProvider>을 구현하여 <xref:System.ServiceModel.Dispatcher.IInstanceContextProvider.IsIdle%2A> 메서드에 대한 호출을 가로채고 이를 `CustomLeaseExtension`에 라우트합니다. <xref:System.ServiceModel.Dispatcher.IInstanceContextProvider> 구현은 `CustomLifetimeLease` 클래스에 포함됩니다. <xref:System.ServiceModel.Dispatcher.IInstanceContextProvider.IsIdle%2A> 메서드는 WCF 서비스 인스턴스를 해제 하려고 할 때 호출 됩니다. 그러나 ServiceBehavior의 `ISharedSessionInstance` 컬렉션에는 특정 <xref:System.ServiceModel.Dispatcher.IInstanceContextProvider> 구현의 인스턴스가 하나만 있습니다. 이 의미를 알 수 없는 <xref:System.ServiceModel.InstanceContext> WCF 확인 시 닫히는 <xref:System.ServiceModel.Dispatcher.IInstanceContextProvider.IsIdle%2A> 메서드. 따라서 이 샘플에서는 스레드 잠금을 사용하여 <xref:System.ServiceModel.Dispatcher.IInstanceContextProvider.IsIdle%2A> 메서드에 대한 요청을 serialize합니다.  
   
 > [!IMPORTANT]
 >  serialization은 응용 프로그램의 성능에 큰 영향을 주므로 스레드 잠금은 사용하지 않는 것이 좋습니다.  
@@ -160,7 +160,7 @@ public void NotifyIdle(InstanceContextIdleCallback callback,
   
  `ICustomLease.IsIdle` 속성을 확인하기 전에 Callback 속성이 설정되어야 하며, 이는 `CustomLeaseExtension`이 유휴 상태가 될 때 디스패처에 이를 알리기 위해서 반드시 필요한 사항입니다. `ICustomLease.IsIdle`이 `true`를 반환하는 경우에는 `isIdle`에서 전용 멤버 `CustomLifetimeLease`이 `true`로 설정되고 callback 메서드를 호출합니다. 코드에서 잠금을 유지하므로 다른 스레드에서는 이 전용 멤버의 값을 변경할 수 없습니다. 다음에 디스패처에서 `ISharedSessionLifetime.IsIdle`을 확인할 때 이 멤버는 `true`를 반환하며 디스패처에서 인스턴스를 해제하도록 합니다.  
   
- 사용자 지정 확장의 기반이 완성된 후에는 이를 서비스 모델에 후크해야 합니다. `CustomLeaseExtension` 구현을 <xref:System.ServiceModel.InstanceContext>에 후크하기 위해 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서는 <xref:System.ServiceModel.Dispatcher.IInstanceContextInitializer> 인터페이스를 제공하여 <xref:System.ServiceModel.InstanceContext>의 부트스트래핑을 수행합니다. 샘플에서 `CustomLeaseInitializer` 클래스는 이 인터페이스를 구현하고 유일한 메서드 초기화에서 `CustomLeaseExtension` 컬렉션에 <xref:System.ServiceModel.InstanceContext.Extensions%2A>의 인스턴스를 추가합니다. 이 메서드는 <xref:System.ServiceModel.InstanceContext>를 초기화하는 동안 디스패처에서 호출됩니다.  
+ 사용자 지정 확장의 기반이 완성된 후에는 이를 서비스 모델에 후크해야 합니다. 후크 하는 `CustomLeaseExtension` 구현에는 <xref:System.ServiceModel.InstanceContext>, WCF 제공는 <xref:System.ServiceModel.Dispatcher.IInstanceContextInitializer> 의 부트스트래핑을 수행 하는 인터페이스 <xref:System.ServiceModel.InstanceContext>합니다. 샘플에서 `CustomLeaseInitializer` 클래스는 이 인터페이스를 구현하고 유일한 메서드 초기화에서 `CustomLeaseExtension` 컬렉션에 <xref:System.ServiceModel.InstanceContext.Extensions%2A>의 인스턴스를 추가합니다. 이 메서드는 <xref:System.ServiceModel.InstanceContext>를 초기화하는 동안 디스패처에서 호출됩니다.  
   
 ```  
 public void Initialize(InstanceContext instanceContext, Message message)  

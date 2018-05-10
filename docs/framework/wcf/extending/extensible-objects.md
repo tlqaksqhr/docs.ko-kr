@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - extensible objects [WCF]
 ms.assetid: bc88cefc-31fb-428e-9447-6d20a7d452af
-ms.openlocfilehash: 4fdb3ddff6bda21ac7f9538645d92f15e0b443b9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 95bd354e3aed8e0968debcac160383eb9c26cd0a
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="extensible-objects"></a>확장 가능한 개체
 새 기능과 함께 기존 런타임 클래스를 확장하거나 새 상태를 개체에 추가하기 위해 확장명 가능한 개체 패턴이 사용됩니다. 확장명 가능한 개체 중 하나에 연결된 확장은 이 개체에서 액세스할 수 있는 확장명 가능한 일반 개체에 연결된 공유 상태 및 기능에 액세스하는 처리 시에 매우 다른 단계에서 동작을 활성화합니다.  
@@ -56,7 +56,7 @@ where T : IExtensibleObject<T>
   
 -   <xref:System.ServiceModel.OperationContext> – 이 클래스는 런타임에서 각 작업에 대해 수집하는 작업 정보를 나타냅니다.  여기에는 들어오는 메시지 헤더, 들어오는 메시지 속성, 들어오는 보안 ID, 기타 정보 등이 포함됩니다.  이 클래스의 확장은 <xref:System.ServiceModel.OperationContext>의 동작을 확장하거나 각 작업의 상태를 저장할 수 있습니다.  
   
--   <xref:System.ServiceModel.IContextChannel> – 이 인터페이스를 사용하면 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 런타임에 의해 작성된 채널 및 프록시에서 각 상태를 확인할 수 있습니다.  이 클래스의 확장은 <xref:System.ServiceModel.IClientChannel>의 동작을 확장하거나 이 동작을 사용하여 각 채널의 상태를 저장할 수 있습니다.  
+-   <xref:System.ServiceModel.IContextChannel> –이 인터페이스는 채널 및 프록시에서 WCF 런타임에 의해 작성에 대 한 각 상태 검사에 대 한 허용 합니다.  이 클래스의 확장은 <xref:System.ServiceModel.IClientChannel>의 동작을 확장하거나 이 동작을 사용하여 각 채널의 상태를 저장할 수 있습니다.  
   
 -  
   

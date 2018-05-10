@@ -2,11 +2,11 @@
 title: 예외 및 오류 처리
 ms.date: 03/30/2017
 ms.assetid: a64d01c6-f221-4f58-93e5-da4e87a5682e
-ms.openlocfilehash: a7fb7b5dd5755b9d534d9a96af3db598a44b42b0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 494a0665f5bad2c7da3998cf77ced79314ca2f36
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="handling-exceptions-and-faults"></a>예외 및 오류 처리
 예외는 서비스 또는 클라이언트 구현 내에서 로컬 오류 통신에 사용됩니다. 이와 반대로 오류는 서버에서 클라이언트로 또는 그 반대로 가는 경우와 같이 서비스 경계 너머로 이루어지는 오류 통신에도 사용되는 말입니다. 오류 외에, 전송 채널에서 전송별 메커니즘을 사용하여 전송 수준의 오류 통신을 수행하는 경우도 많습니다. 예를 들어 HTTP 전송에서는 404 등의 상태 코드를 사용하여 끝점 URL이 없는 경우(오류를 다시 보낼 끝점이 없음)를 나타냅니다. 이 문서는 사용자 지정 채널 작성자를 위한 안내 자료를 제공하는 세 개의 단원으로 구성되어 있습니다. 첫 단원에서는 예외를 정의하고 throw하는 방법에 대한 안내 자료를 제공합니다. 둘째 단원에서는 오류 생성 및 소비에 대한 안내 자료를 제공합니다. 셋째 단원에서는 추적 정보를 제공하여 사용자 지정 채널 사용자의 응용 프로그램 실행 문제 해결을 돕는 방법에 대해 설명합니다.  
@@ -15,7 +15,7 @@ ms.lasthandoff: 05/04/2018
  예외를 throw할 경우 두 가지를 염두에 두어야 합니다. 첫째, 사용자가 예외에 적절하게 반응하는 정확한 코드를 쓸 수 있는 형식이어야 합니다. 둘째, 잘못된 것이 무엇이고, 실패의 영향은 무엇이며, 문제를 해결하는 방법이 무엇인지 사용자가 이해하기에 충분한 정보를 제공해야 합니다. 다음 섹션에서는 예외 형식 및 Windows Communication Foundation (WCF) 채널에 대 한 메시지에 대 한 지침을 제공 합니다. .NET의 예외 디자인 지침 문서에도 예외에 대한 일반적인 안내 자료가 있습니다.  
   
 ### <a name="exception-types"></a>예외 형식  
- 채널에서 throw되는 모든 예외는 <xref:System.TimeoutException?displayProperty=nameWithType>, <xref:System.ServiceModel.CommunicationException?displayProperty=nameWithType>이거나 <xref:System.ServiceModel.CommunicationException>에서 파생된 형식이어야 합니다. <xref:System.ObjectDisposedException> 등의 예외도 throw될 수 있지만 이는 오직 호출 코드에서 채널을 잘못 사용한 것을 나타내기 위한 것입니다. 채널이 올바르게 사용된 경우 지정된 예외를 throw해야 합니다.) [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]는 <xref:System.ServiceModel.CommunicationException>에서 파생되고 채널에서 사용하도록 설계된 일곱 가지 예외 형식을 제공합니다. <xref:System.ServiceModel.CommunicationException>에서 파생되며 시스템의 다른 부분에서 사용하도록 디자인된 다른 예외도 있습니다. 예외 형식은 다음과 같습니다.  
+ 채널에서 throw되는 모든 예외는 <xref:System.TimeoutException?displayProperty=nameWithType>, <xref:System.ServiceModel.CommunicationException?displayProperty=nameWithType>이거나 <xref:System.ServiceModel.CommunicationException>에서 파생된 형식이어야 합니다. <xref:System.ObjectDisposedException> 등의 예외도 throw될 수 있지만 이는 오직 호출 코드에서 채널을 잘못 사용한 것을 나타내기 위한 것입니다. 채널을 올바르게 사용한 경우에는 지정된 예외만 throw해야 합니다. WCF에서 파생 되는 일곱 가지 예외 형식을 제공 <xref:System.ServiceModel.CommunicationException> 및 채널에서 사용할 수 있도록 설계 되었습니다. <xref:System.ServiceModel.CommunicationException>에서 파생되며 시스템의 다른 부분에서 사용하도록 디자인된 다른 예외도 있습니다. 예외 형식은 다음과 같습니다.  
   
 |예외 형식|의미|내부 예외 콘텐츠|복구 전략|  
 |--------------------|-------------|-----------------------------|-----------------------|  
@@ -131,7 +131,7 @@ public class FaultConverter
 }  
 ```  
   
- 사용자 지정 오류를 생성하는 각 채널에서는 `FaultConverter`를 구현하여 호출에서 `GetProperty<FaultConverter>`로 반환해야 합니다. 사용자 지정 `OnTryCreateFaultMessage` 구현에서는 예외를 오류로 변환하거나 내부 채널의 `FaultConverter`에 위임해야 합니다. 채널이 전송인 경우에는 예외를 변환하거나 인코더의 `FaultConverter` 또는 `FaultConverter`에 제공되는 기본 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에 위임해야 합니다. 기본 `FaultConverter`는 WS-Addressing 및 SOAP에서 지정한 오류 메시지에 해당되는 오류를 변환합니다. 다음은 `OnTryCreateFaultMessage` 구현 예입니다.  
+ 사용자 지정 오류를 생성하는 각 채널에서는 `FaultConverter`를 구현하여 호출에서 `GetProperty<FaultConverter>`로 반환해야 합니다. 사용자 지정 `OnTryCreateFaultMessage` 구현에서는 예외를 오류로 변환하거나 내부 채널의 `FaultConverter`에 위임해야 합니다. 예외를 변환 하거나 인코더의에 위임 해야 합니다는 채널이 전송 인 경우 `FaultConverter` 또는 기본 `FaultConverter` WCF에서 제공 합니다. 기본 `FaultConverter`는 WS-Addressing 및 SOAP에서 지정한 오류 메시지에 해당되는 오류를 변환합니다. 다음은 `OnTryCreateFaultMessage` 구현 예입니다.  
   
 ```  
 public override bool OnTryCreateFaultMessage(Exception exception,   
@@ -186,7 +186,7 @@ public override bool OnTryCreateFaultMessage(Exception exception,
   
 3.  WS-RM 시퀀스 번호 오류와 같이 스택의 단일 계층에 전달되는 오류.  
   
- 범주 1입니다. 오류는 일반적으로 WS-Addressing 및 SOAP 오류입니다. `FaultConverter`에서 제공되는 기본 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 클래스에서는 WS-Addressing 및 SOAP에 지정된 오류 메시지에 해당되는 오류를 변환하기 때문에 이런 예외의 변환을 자신이 직접 처리할 필요가 없습니다.  
+ 범주 1입니다. 오류는 일반적으로 WS-Addressing 및 SOAP 오류입니다. 기본 `FaultConverter` 클래스 WCF 오류 메시지에 해당 오류를 변환에서 지정한으로 Ws-addressing 및 SOAP 이런 예외의 변환을 처리할 필요가 직접 제공 합니다.  
   
  범주 2입니다. 오류는 계층에 대한 메시지 정보를 완전히 소비하지 않는 메시지에 계층에서 속성을 추가한 경우에 발생합니다. 높은 계층에서 메시지 속성에 추가로 메시지 정보를 처리하도록 요청하는 경우 이후에 오류가 검색될 수 있습니다. 이러한 채널에서는 이전에 지정한 `GetProperty`를 구현하여 높은 계층에서 올바른 오류를 다시 보낼 수 있게 합니다. 이러한 경우의 예에는 TransactionMessageProperty가 있습니다. 이 속성은 헤더에 있는 모든 데이터의 유효성을 완전히 검사하지 않고 메시지에 추가됩니다. 그 과정에서 DTC(Distributed Transaction Coordinator)에 연결해야 할 수도 있습니다.  
   
@@ -285,7 +285,7 @@ public override bool OnTryCreateException(
  구분되는 복구 시나리오가 있는 특정 오류 조건의 경우에는 `ProtocolException`의 파생된 클래스를 사용하는 것을 고려해 보십시오.  
   
 ### <a name="mustunderstand-processing"></a>MustUnderstand 처리  
- SOAP에서는 수신기에서 필수 헤더가 이해되지 않은 경우를 나타내기 위한 일반 오류를 정의합니다. 이 오류를 `mustUnderstand` 오류라고 합니다. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]의 사용자 지정 채널에서는 `mustUnderstand` 오류가 생성되지 않습니다. 대신 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 통신 스택의 맨 위에 있는 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 디스패처에서 MustUndestand=true로 표시된 모든 헤더를 기본 스택에서 이해해고 있는지 확인합니다. 이해되지 않은 것이 있으면 그 순간 `mustUnderstand` 오류가 생성됩니다. 사용자는 이 `mustUnderstand` 처리를 끄고 응용 프로그램에서 모든 메시지 헤더를 받게 만들 수 있습니다. 그런 경우에는 응용 프로그램에서 `mustUnderstand` 처리를 수행합니다. 생성된 오류에는 MustUnderstand=true이고 이해되지 않은 모든 헤더의 이름이 포함된 NotUnderstood 헤더가 있습니다.  
+ SOAP에서는 수신기에서 필수 헤더가 이해되지 않은 경우를 나타내기 위한 일반 오류를 정의합니다. 이 오류를 `mustUnderstand` 오류라고 합니다. Wcf에서는 사용자 지정 채널을 생성 하지 않습니다 `mustUnderstand` 오류입니다. WCF 통신 스택의 맨 위에 있는 WCF 발송자 확인 하는 대신,는 MustUndestand로 표시 된 모든 헤더 = true 기본 스택에서 이해 했습니다. 이해되지 않은 것이 있으면 그 순간 `mustUnderstand` 오류가 생성됩니다. 사용자는 이 `mustUnderstand` 처리를 끄고 응용 프로그램에서 모든 메시지 헤더를 받게 만들 수 있습니다. 그런 경우에는 응용 프로그램에서 `mustUnderstand` 처리를 수행합니다. 생성된 오류에는 MustUnderstand=true이고 이해되지 않은 모든 헤더의 이름이 포함된 NotUnderstood 헤더가 있습니다.  
   
  프로토콜 채널에서 MustUnderstand=true인 사용자 지정 헤더를 보낸 후 `mustUnderstand` 오류를 받은 경우에는 헤더를 보냈기 때문에 발생한 오류인지 여부를 확인해야 합니다. `MessageFault` 클래스에는 여기에 유용한 2개의 멤버가 있습니다.  
   
@@ -310,14 +310,14 @@ public class MessageFault
   
 -   <xref:System.Diagnostics.TraceSource?displayProperty=nameWithType>는 쓰려는 추적 정보의 소스이고 <xref:System.Diagnostics.TraceListener?displayProperty=nameWithType>는 <xref:System.Diagnostics.TraceSource>로부터 추적할 정보를 받아 수신기별 대상으로 출력하는 구체적인 수신기의 추상 기본 클래스입니다. 예를 들어 <xref:System.Diagnostics.XmlWriterTraceListener>에서는 추적 정보를 XML 파일로 출력합니다. 마지막으로 <xref:System.Diagnostics.TraceSwitch?displayProperty=nameWithType>은 응용 프로그램 사용자가 추적의 자세한 정도를 추적할 수 있게 해 주며 일반적으로 구성에 지정됩니다.  
   
--   핵심 구성 요소 외에도 사용할 수 있습니다는 [Service Trace Viewer 도구 (SvcTraceViewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md) 를 보고 검색할 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 추적 합니다. 해당 도구는 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서 생성되는 추적 파일을 위해 디자인되었으며 <xref:System.Diagnostics.XmlWriterTraceListener>를 사용하여 작성되었습니다. 다음 그림에서는 추적에 관련된 다양한 구성 요소를 소개합니다.  
+-   핵심 구성 요소 외에도 사용할 수 있습니다는 [Service Trace Viewer 도구 (SvcTraceViewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md) WCF 검색 및 보기를 추적 합니다. 이 도구를 사용 하 여 기록 및 WCF에 의해 생성 된 추적 파일을 위해 특별히 설계 <xref:System.Diagnostics.XmlWriterTraceListener>합니다. 다음 그림에서는 추적에 관련된 다양한 구성 요소를 소개합니다.  
   
  ![예외 및 오류 처리](../../../../docs/framework/wcf/extending/media/wcfc-tracinginchannelsc.gif "wcfc_TracingInChannelsc")  
   
 ### <a name="tracing-from-a-custom-channel"></a>사용자 지정 채널에서 추적  
  사용자 지정 채널에서는 디버거를 실행 중인 응용 프로그램에 첨부할 수 없는 경우 문제의 진단을 돕기 위한 추적 메시지를 작성해야 합니다. 이 과정은 높은 수준의 작업 2개로 진행됩니다. 하나는 <xref:System.Diagnostics.TraceSource>를 인스턴스화하는 작업이고, 다른 하나는 메서드를 호출하여 추적을 작성하는 작업입니다.  
   
- <xref:System.Diagnostics.TraceSource>를 인스턴스화하면 지정한 문자열이 소스의 이름이 됩니다. 이 이름은 추적 소스를 구성(활성화/비활성화/추적 수준 설정)하는 데 사용됩니다. 이 이름은 추적 출력 자체에도 표시됩니다. 사용자 지정 채널에서는 추적 출력을 읽는 사람이 추적 정보가 오는 곳을 파악할 수 있도록 고유한 소스 이름을 사용해야 합니다. 일반적으로는 정보를 쓰는 어셈블리의 이름을 추적 소스의 이름으로 사용합니다. 예를 들어 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서는 System.ServiceModel 어셈블리에서 쓰는 정보의 추적 소스로 System.ServiceModel을 사용합니다.  
+ <xref:System.Diagnostics.TraceSource>를 인스턴스화하면 지정한 문자열이 소스의 이름이 됩니다. 이 이름은 추적 소스를 구성(활성화/비활성화/추적 수준 설정)하는 데 사용됩니다. 이 이름은 추적 출력 자체에도 표시됩니다. 사용자 지정 채널에서는 추적 출력을 읽는 사람이 추적 정보가 오는 곳을 파악할 수 있도록 고유한 소스 이름을 사용해야 합니다. 일반적으로는 정보를 쓰는 어셈블리의 이름을 추적 소스의 이름으로 사용합니다. 예를 들어 WCF System.ServiceModel 어셈블리에서 쓰는 정보의 추적 소스로 System.ServiceModel을 사용 합니다.  
   
  추적 소스가 있으면 <xref:System.Diagnostics.TraceSource.TraceData%2A>, <xref:System.Diagnostics.TraceSource.TraceEvent%2A> 또는 <xref:System.Diagnostics.TraceSource.TraceInformation%2A> 메서드를 호출하여 추적 수신기에 추적 항목을 씁니다. 쓰는 각 추적 항목에 대해 이벤트의 형식을 <xref:System.Diagnostics.TraceEventType>에 정의된 이벤트 형식 중 하나로 분류해야 합니다. 구성에서 이 분류와 추적 수준 설정에 따라 추적 항목이 수신기로 출력되는지 여부가 결정됩니다. 예를 들어 구성에서 추적 수준을 `Warning`으로 설정하면 `Warning`, `Error` 및 `Critical` 추적 항목을 쓰고 Information 및 Verbose 항목은 차단합니다. 다음은 추적 소스를 인스턴스화하고 Information 수준에서 항목을 쓰는 경우의 예입니다.  
   
@@ -402,4 +402,4 @@ udpsource.TraceInformation("UdpInputChannel received a message");
 </E2ETraceEvent>  
 ```  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Trace Viewer에서는 이전에 표시된 `TraceRecord` 요소의 스키마를 파악하고 자식 요소에서 데이터를 추출하여 표 형식으로 표시합니다. 채널에서는 Svctraceviewer.exe 사용자가 데이터를 읽는 데 도움이 되도록 구조적 응용 프로그램 데이터를 추적할 때 이 스키마를 사용해야 합니다.
+ 스키마를 파악 하는 WCF 추적 뷰어는 `TraceRecord` 앞에 표시 된 요소 및 해당 자식 요소에서 데이터를 추출 하 고 테이블 형식으로 표시 됩니다. 채널에서는 Svctraceviewer.exe 사용자가 데이터를 읽는 데 도움이 되도록 구조적 응용 프로그램 데이터를 추적할 때 이 스키마를 사용해야 합니다.

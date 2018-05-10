@@ -2,11 +2,11 @@
 title: 사용자 지정 채널 디스패처
 ms.date: 03/30/2017
 ms.assetid: 813acf03-9661-4d57-a3c7-eeab497321c6
-ms.openlocfilehash: 7cd27d485efe7fe91e7c59627bf14e188e85f386
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 2f7bb67f45c3aa9eb0cb58fa2f30744d5500fab0
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="custom-channel-dispatcher"></a>사용자 지정 채널 디스패처
 이 샘플에서는 <xref:System.ServiceModel.ServiceHostBase>를 직접 구현하여 사용자 지정 방식으로 채널 스택을 빌드하는 방법과 웹 호스트 환경에서 사용자 지정 채널 디스패처를 만드는 방법을 보여 줍니다. 채널 디스패처에서는 <xref:System.ServiceModel.Channels.IChannelListener>와 상호 작용하여 채널을 수락하고 채널 스택에서 메시지를 검색합니다. 또한 이 샘플에서는 <xref:System.ServiceModel.Activation.VirtualPathExtension>을 사용하여 웹 호스트 환경에서 채널 스택을 빌드하는 방법을 보여 주는 기본 샘플을 제공합니다.  
@@ -22,13 +22,13 @@ ms.lasthandoff: 05/04/2018
  디스패처에서는 먼저 채널 수신기를 연 다음 singleton 회신 채널을 수락합니다. 그런 다음 이 채널을 사용하여 무한 루프에 메시지(요청)를 보내기 시작합니다. 또한 각 요청에 대해 회신 메시지를 만들고 이를 다시 클라이언트에 보냅니다.  
   
 ## <a name="creating-a-response-message"></a>응답 메시지 만들기  
- 메시지 처리는 `MyServiceManager` 형식에서 구현됩니다. `HandleRequest` 메서드에서는 메시지의 `Action` 헤더를 먼저 검사하여 요청이 지원되는지 여부를 확인합니다. SOAP 동작을 미리 정의 된 "http://tempuri.org/HelloWorld/Hello" 메시지 필터링을 제공 하도록 정의 됩니다. 이는 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서 구현하는 <xref:System.ServiceModel.ServiceHost>의 서비스 계약 개념과 비슷합니다.  
+ 메시지 처리는 `MyServiceManager` 형식에서 구현됩니다. `HandleRequest` 메서드에서는 메시지의 `Action` 헤더를 먼저 검사하여 요청이 지원되는지 여부를 확인합니다. SOAP 동작을 미리 정의 된 "http://tempuri.org/HelloWorld/Hello" 메시지 필터링을 제공 하도록 정의 됩니다. 이것은 WCF 구현의 서비스 계약 개념과 비슷합니다 <xref:System.ServiceModel.ServiceHost>합니다.  
   
  올바른 SOAP 동작의 경우 샘플에서는 요청된 메시지 데이터를 검색하고 <xref:System.ServiceModel.ServiceHost>의 경우와 비슷하게 요청에 해당하는 응답을 생성합니다.  
   
  이 경우 브라우저에서 서비스를 찾아 올바르게 컴파일되었는지 확인할 수 있도록 사용자 지정 HTML 메시지를 반환하여 HTTP-GET 동사를 특별하게 처리했습니다. SOAP 동작이 일치하지 않는 경우에는 요청이 지원되지 않음을 나타내는 오류 메시지를 다시 보냅니다.  
   
- 이 샘플의 클라이언트는 서비스에서 아무 것도 가정하지 않는 일반적인 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 클라이언트입니다. 따라서 서비스는 일반적인 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]<xref:System.ServiceModel.ServiceHost> 구현에서 가져온 것과 일치하도록 특별하게 디자인되었습니다. 결과적으로 클라이언트에는 서비스 계약만 필요합니다.  
+ 이 샘플의 클라이언트는 일반 WCF 클라이언트는 서비스에서 아무 것도 가정 하지 않는입니다. 서비스는 일반 WCF에서 가져온 것에 맞게 특별히 고안 된 따라서<xref:System.ServiceModel.ServiceHost> 구현 합니다. 결과적으로 클라이언트에는 서비스 계약만 필요합니다.  
   
 ## <a name="using-the-sample"></a>샘플 사용  
  클라이언트 응용 프로그램을 직접 실행하면 다음과 같이 출력됩니다.  

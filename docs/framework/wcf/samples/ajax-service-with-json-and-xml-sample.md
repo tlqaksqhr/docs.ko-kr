@@ -2,16 +2,16 @@
 title: JSON 및 XML 샘플을 포함한 AJAX 서비스
 ms.date: 03/30/2017
 ms.assetid: 8ea5860d-0c42-4ae9-941a-e07efdd8e29c
-ms.openlocfilehash: 1973be48457d3164bec6b8df236c07f5bfa6b897
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 32964c287b0064daf529aa4c1e28f0927d29a6d5
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="ajax-service-with-json-and-xml-sample"></a>JSON 및 XML 샘플을 포함한 AJAX 서비스
 이 샘플에서는 개체 JSON (JavaScript Notation) 또는 XML 데이터를 반환 하는 Asynchronous JavaScript and XML (AJAX) 서비스를 만들려면 Windows Communication Foundation (WCF)를 사용 하는 방법을 보여 줍니다. 웹 브라우저 클라이언트에서 JavaScript 코드를 사용하여 AJAX 서비스에 액세스할 수 있습니다. 기반으로 하는이 샘플은 [기본 AJAX 서비스](../../../../docs/framework/wcf/samples/basic-ajax-service.md) 샘플.  
   
- 다른 AJAX 샘플과 달리 이 샘플에서는 ASP.NET AJAX 및 <xref:System.Web.UI.ScriptManager> 컨트롤을 사용하지 않습니다. 몇 가지 추가 구성이 있으면 HTML 페이지에서 JavaScript를 통해 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] AJAX 서비스에 액세스할 수 있으며 여기에서는 이 시나리오를 보여 줍니다. 사용 하는 예제에 대 한 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] ASP.NET AJAX와 함께 참조 [AJAX 샘플과](http://msdn.microsoft.com/library/f3fa45b3-44d5-4926-8cc4-a13c30a3bf3e)합니다.  
+ 다른 AJAX 샘플과 달리 이 샘플에서는 ASP.NET AJAX 및 <xref:System.Web.UI.ScriptManager> 컨트롤을 사용하지 않습니다. 몇 가지 추가 구성이 JavaScript 통해 모든 HTML 페이지에서 WCF AJAX 서비스에 액세스할 수 및이 시나리오는 다음과 같습니다. ASP.NET AJAX와 함께 WCF를 사용 하는 예제를 참조 하십시오. [AJAX 샘플과](http://msdn.microsoft.com/library/f3fa45b3-44d5-4926-8cc4-a13c30a3bf3e)합니다.  
   
  이 샘플에서는 작업의 응답 형식을 JSON과 XML 간에 전환하는 방법을 보여 줍니다. 이 기능은 서비스가 ASP.NET AJAX에서 액세스하도록 구성되었는지 아니면 HTML/JavaScript 클라이언트 페이지에서 액세스하도록 구성되었는지 여부에 관계없이 사용할 수 있습니다.  
   
@@ -39,7 +39,7 @@ ms.lasthandoff: 05/04/2018
   
  기본 데이터 형식은 <xref:System.ServiceModel.Description.WebHttpEndpoint> 는 XML에 대 한 기본 데이터 형식을 동안 <xref:System.ServiceModel.Description.WebScriptEndpoint> 은 JSON입니다. 자세한 내용은 참조 [ASP.NET 하지 않고 WCF AJAX 서비스 만들기](../../../../docs/framework/wcf/feature-details/creating-wcf-ajax-services-without-aspnet.md)합니다.  
   
- 다음 샘플의 서비스는 두 개의 작업을 포함하는 표준 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 서비스입니다. 두 작업 모두 <xref:System.ServiceModel.Web.WebMessageBodyStyle.Wrapped> 또는 <xref:System.ServiceModel.Web.WebGetAttribute> 특성에서 <xref:System.ServiceModel.Web.WebInvokeAttribute> 본문 스타일을 필요로 합니다. 이는 `webHttp` 동작과 관련이 있으며 JSON/XML 데이터 형식 전환과는 관계가 없습니다.  
+ 다음 샘플에서 서비스는 두 개의 작업는 표준 WCF 서비스입니다. 두 작업 모두 <xref:System.ServiceModel.Web.WebMessageBodyStyle.Wrapped> 또는 <xref:System.ServiceModel.Web.WebGetAttribute> 특성에서 <xref:System.ServiceModel.Web.WebInvokeAttribute> 본문 스타일을 필요로 합니다. 이는 `webHttp` 동작과 관련이 있으며 JSON/XML 데이터 형식 전환과는 관계가 없습니다.  
 
 ```csharp
 [OperationContract]  
@@ -57,7 +57,7 @@ MathResult DoMathXml(double n1, double n2);
 MathResult DoMathJson(double n1, double n2);  
 ```
 
- 두 경우 모두 작업은 표준 `MathResult` 데이터 계약 형식인 복합 형식 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]를 반환합니다.  
+ 두 경우 모두 작업 반환 복합 형식을 `MathResult`, 표준 WCF 데이터 계약 형식인 합니다.  
   
  클라이언트 웹 페이지 XmlAjaxClientPage.htm에는 사용자가 클릭할 때 위의 두 작업 중 하나를 호출 하는 JavaScript 코드가 포함 되어는 **(return JSON) 계산을 수행할** 또는 **계산 (return XML)**  페이지 단추를 합니다. 서비스를 호출하는 코드는 JSON 본문을 만든 다음 HTTP POST를 사용하여 전송합니다. 요청을 만들 수동으로 JavaScript에서와 달리는 [기본 AJAX 서비스](../../../../docs/framework/wcf/samples/basic-ajax-service.md) 샘플 및 ASP.NET AJAX를 사용 하 여 다른 예제입니다.  
 

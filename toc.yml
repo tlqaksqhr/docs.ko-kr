@@ -593,3 +593,13 @@
             - name: 참조
               tocHref: /dotnet/visual-basic/reference/
               topicHref: /dotnet/visual-basic/reference/index
+        - name: ML.NET 가이드
+          tocHref: /dotnet/machine-learning/
+          topicHref: /dotnet/machine-learning/index
+          items:
+            - name: 자료
+              tocHref: /dotnet/machine-learning/resources/
+              topicHref: /dotnet/machine-learning/resources/index
+            - name: 자습서
+              tocHref: /dotnet/machine-learning/tutorials/
+              topicHref: /dotnet/machine-learning/tutorials/index

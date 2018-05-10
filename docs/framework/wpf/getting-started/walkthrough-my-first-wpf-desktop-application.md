@@ -10,11 +10,11 @@ helpviewer_keywords:
 ms.assetid: b96bed40-8946-4285-8fe4-88045ab854ed
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a21a18b8e203cf57dfd1659b2eeeece157ad24ad
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 7ceb4d79bb88e41e62f3ee136b6beb3324b3dbd7
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="walkthrough-my-first-wpf-desktop-application"></a>연습: 내 첫 WPF 데스크톱 응용 프로그램
 
@@ -196,7 +196,7 @@ Visual Studio의 최신 버전을 설치 하는 방법에 대 한 자세한 내�
     [!code-csharp[ExpenseIt#2_5](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ExpenseIt/CSharp/ExpenseIt2/ExpenseItHome.xaml.cs#2_5)]
     [!code-vb[ExpenseIt#2_5](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ExpenseIt/VB/ExpenseIt1_A/ExpenseItHome.xaml.vb#2_5)]
 
-    및에 대 한 다음과 같은 **ExpenseReport**:
+    및에 대 한 다음과 같은 **ExpenseReportPage**:
 
     [!code-csharp[ExpenseIt#5](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ExpenseIt/CSharp/ExpenseIt/ExpenseReportPage.xaml.cs#5)]
     [!code-vb[ExpenseIt#5](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ExpenseIt/VB/ExpenseIt1_A/ExpenseReportPage.xaml.vb#5)]

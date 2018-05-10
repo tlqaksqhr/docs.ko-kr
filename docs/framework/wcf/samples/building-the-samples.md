@@ -2,17 +2,17 @@
 title: Windows Communication Foundation 샘플 빌드
 ms.date: 03/30/2017
 ms.assetid: 2899e7a5-9cb2-4e8d-b8d2-f31391549198
-ms.openlocfilehash: 5493972306092fc3309b0993d595f22c74c8603a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 637b862d81ce4eeddc56acb24a527e6937f33f64
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="building-the-windows-communication-foundation-samples"></a>Windows Communication Foundation 샘플 빌드
 또는 Visual Studio 2010을 사용 하 여 Windows Communication Foundation (WCF) 샘플을 빌드할 수 있습니다는 **msbuild** 명령줄에서 명령을 합니다. 이 항목에서는 이 두 절차를 모두 설명합니다.  
   
 > [!NOTE]
->  빌드 또는 중 하나를 실행 하기 전에 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 예제를 수행 했는지 확인는 [Windows Communication Foundation 샘플의 일회 설치 절차](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)합니다.  
+>  수행 했는지 확인를 작성 하거나 WCF 샘플 중 하나를 실행 하기 전에 [Windows Communication Foundation 샘플의 일회 설치 절차](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)합니다.  
   
 ### <a name="to-build-the-sample-using-a-command-prompt"></a>명령 프롬프트를 사용하여 샘플을 빌드하려면  
   

@@ -7,14 +7,14 @@ dev_langs:
 helpviewer_keywords:
 - configuration [WCF], interoperable services
 ms.assetid: 91b70a21-8f5c-4679-808c-2ed5fa6b2013
-ms.openlocfilehash: 461bd7ba095300f945157db21122ccc610119680
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: aa76a6633ef86a908e00bb9dcb1b16eefe35c12d
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="creating-ws-i-basic-profile-11-interoperable-services"></a>WS-I Basic Profile 1.1 상호 운용할 수 있는 서비스 만들기
-[!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 서비스 끝점을 [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] 웹 서비스 클라이언트와 상호 운용할 수 있도록 구성하려면  
+상호 운용 가능 하도록 WCF 서비스 끝점을 구성 하려면 [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] 웹 서비스 클라이언트:  
   
 -   <xref:System.ServiceModel.BasicHttpBinding?displayProperty=nameWithType> 형식을 서비스 끝점의 바인딩 형식으로 사용합니다.  
   
@@ -28,12 +28,12 @@ ms.lasthandoff: 05/04/2018
   
 -   <xref:System.ServiceModel.BasicHttpBinding.Security%2A?displayProperty=nameWithType> 값을 사용하여 제어하는 메시지 보안에서는 WS-I Basic Security Profile 1.0과 호환되는 WS-Security를 지원합니다. WS-Security를 사용하지 않으려면 이 속성을 기본값인 <xref:System.ServiceModel.SecurityMode.Transport?displayProperty=nameWithType>로 둡니다.  
   
- 에 대 한 메타 데이터를 확인 하는 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 를 사용할 수 있는 서비스 [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)], 웹 서비스 클라이언트 생성 도구를 사용 하 여: [웹 서비스 설명 언어 도구 (Wsdl.exe)](http://msdn.microsoft.com/library/b9210348-8bc2-4367-8c91-d1a04b403e88), [웹 서비스 검색 도구 ( Disco.exe)](http://msdn.microsoft.com/library/acd88078-c581-42bc-94ca-6633e2851979), 및 `Add Web Reference` Visual Studio에서 기능; 메타 데이터 게시를 사용 하도록 설정 해야 합니다. 자세한 내용은 참조 [메타 데이터 끝점 게시](../../../docs/framework/wcf/publishing-metadata-endpoints.md)합니다.  
+ WCF 서비스에 대 한 메타 데이터를 사용할 수 있도록 [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)], 웹 서비스 클라이언트 생성 도구를 사용 하 여: [웹 서비스 설명 언어 도구 (Wsdl.exe)](http://msdn.microsoft.com/library/b9210348-8bc2-4367-8c91-d1a04b403e88), [웹 서비스 검색 도구 (Disco.exe)](http://msdn.microsoft.com/library/acd88078-c581-42bc-94ca-6633e2851979), 및 `Add Web Reference` Visual Studio에서 기능; 메타 데이터 게시를 사용 하도록 설정 해야 합니다. 자세한 내용은 참조 [메타 데이터 끝점 게시](../../../docs/framework/wcf/publishing-metadata-endpoints.md)합니다.  
   
 ## <a name="example"></a>예제  
   
 ### <a name="description"></a>설명  
- 다음 예제 코드에 추가 하는 방법을 보여 줍니다는 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 와 호환 되는 끝점 [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] 웹 서비스 클라이언트 코드에서 또는 구성 파일에 있습니다.  
+ 다음 예제 코드와 호환 되는 WCF 끝점을 추가 하는 방법을 보여 줍니다 [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] 웹 서비스 클라이언트 코드에서 또는 구성 파일에 있습니다.  
   
 ### <a name="code"></a>코드  
  [!code-csharp[C_HowTo-WCFServiceAndASMXClient#0](../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto-wcfserviceandasmxclient/cs/program.cs#0)]

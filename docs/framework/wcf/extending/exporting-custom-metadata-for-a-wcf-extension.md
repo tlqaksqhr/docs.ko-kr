@@ -2,11 +2,11 @@
 title: WCF 확장에 대한 사용자 지정 메타데이터 내보내기
 ms.date: 03/30/2017
 ms.assetid: 53c93882-f8ba-4192-965b-787b5e3f09c0
-ms.openlocfilehash: 8d9f5e223bb47fc8997f6509ec882b282e1ee8b5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: c2ae547f10e96a1fdc16fc428e98145fc81c59d5
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="exporting-custom-metadata-for-a-wcf-extension"></a>WCF 확장에 대한 사용자 지정 메타데이터 내보내기
 Windows Communication Foundation (WCF), 메타 데이터 내보내기는 서비스 끝점을 설명 하 고 클라이언트에서 서비스를 사용 하는 방법을 이해 하는 데 사용할 수 있는 병렬의 표준화 된 표현으로는 프로세스입니다. 사용자 지정 메타데이터는 시스템에서 제공한 메타데이터 내보내기에서 내보낼 수 없는 XML 요소로 구성됩니다. 일반적으로 여기에는 사용자 정의 동작 및 바인딩 요소에 대한 사용자 지정 WSDL 요소를 비롯하여 바인딩 및 계약의 기능과 요구 사항에 대한 정책 어설션이 포함됩니다.  
@@ -14,7 +14,7 @@ Windows Communication Foundation (WCF), 메타 데이터 내보내기는 서비�
  이 단원에서는 사용자 지정 WSDL 또는 정책 어설션 내보내기에 대해 설명하지만 내보내기 프로세스 자체를 중점적으로 설명하지는 않습니다. 내보내기 및 가져오기는 메타 데이터 사용자 지정 또는 시스템 생성 인지에 관계 없이 메타 데이터 형식을 사용 하는 방법에 대 한 자세한 내용은 참조 하십시오. [내보내기 및 가져오기는 메타 데이터](../../../../docs/framework/wcf/feature-details/exporting-and-importing-metadata.md)합니다.  
   
 ## <a name="overview"></a>개요  
- <xref:System.ServiceModel.Description.ServiceMetadataBehavior?displayProperty=nameWithType>를 사용하여 메타데이터를 게시할 경우 <xref:System.ServiceModel.Description.ServiceDescription?displayProperty=nameWithType>을 검사하고 시스템에 제공된 특성과 바인딩을 사용하여 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서 지원 가능한 모든 계약 및 바인딩에 대한 XSD 및 WSDL(정책 어설션 포함)을 생성합니다. 그러나 메타데이터를 올바르게 내보내려면 먼저 사용자 지정 동작 특성 또는 바인딩 요소가 지원되어야 합니다.  
+ 사용 하 여 메타 데이터가 게시 되는 경우는 <xref:System.ServiceModel.Description.ServiceMetadataBehavior?displayProperty=nameWithType>, <xref:System.ServiceModel.Description.ServiceDescription?displayProperty=nameWithType> 유효성을 검사 하 XSD 및 WSDL 정책 어설션 포함 모든 계약 및 바인딩에 시스템에 제공 된 특성과 바인딩을 사용 하 여 WCF에서 지원할 수 있는 대해 생성 됩니다. 그러나 메타데이터를 올바르게 내보내려면 먼저 사용자 지정 동작 특성 또는 바인딩 요소가 지원되어야 합니다.  
   
  이 단원의 내용은 다음과 같습니다.  
   

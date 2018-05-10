@@ -8,11 +8,11 @@ helpviewer_keywords:
 - WCF, best practices
 - Windows Communication Foundation, guidelines
 ms.assetid: 5098ba46-6e8d-4e02-b0c5-d737f9fdad84
-ms.openlocfilehash: 09996681b17d324d53c74b727b183f3a457cc664
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 40e0d2e8d9293792e295f1b1a45de84f4d66d8af
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="guidelines-and-best-practices"></a>지침 및 최선의 구현 방법
 이 섹션에는 Windows Communication Foundation (WCF) 응용 프로그램을 만들기 위한 지침을 제공 하는 항목이 포함 되어 있습니다.  
@@ -22,7 +22,7 @@ ms.lasthandoff: 05/04/2018
  다음 버전 생성 시 손상되지 않는 데이터 계약을 만드는 방법 및 시점에 대해 설명합니다.  
   
  [서비스 버전 관리](../../../docs/framework/wcf/service-versioning.md)  
- [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]의 버전 관리를 고려하는 방법에 대해 설명합니다. 예를 들어, 배포 후 서비스(및 노출된 끝점)를 비즈니스 요구 사항 또는 IT 요구 사항 변경을 충족하거나 문제를 해결하기 위해 변경할 수 있습니다. 각 변경 작업에는 새 버전의 서비스가 도입됩니다.  
+ WCF에서 버전 관리를 고려 하는 방법에 설명 합니다. 예를 들어, 배포 후 서비스(및 노출된 끝점)를 비즈니스 요구 사항 또는 IT 요구 사항 변경을 충족하거나 문제를 해결하기 위해 변경할 수 있습니다. 각 변경 작업에는 새 버전의 서비스가 도입됩니다.  
   
  [부하 분산](../../../docs/framework/wcf/load-balancing.md)  
  웹 팜에서 부하 분산을 위한 지침을 보여 줍니다.  

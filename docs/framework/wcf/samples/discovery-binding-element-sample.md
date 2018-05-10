@@ -2,20 +2,20 @@
 title: Discovery 바인딩 Element 샘플
 ms.date: 03/30/2017
 ms.assetid: af513015-85bf-417b-8729-1bdff77ff6d6
-ms.openlocfilehash: 7dc38acbe91e03f579414294da07bff5cc53cc4c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 853f5cebfd745b3413d605dcfbf0e395e103b4f1
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="discovery-binding-element-sample"></a>Discovery 바인딩 Element 샘플
 이 샘플에서는 검색 클라이언트 바인딩 요소를 사용하여 서비스를 검색하는 방법을 보여 줍니다. 개발자는 이 기능을 사용하여 기존 클라이언트 채널 스택에 검색 클라이언트 채널을 추가할 수 있으므로 프로그래밍 모델을 매우 직관적으로 만들 수 있습니다. 연결된 채널이 열리면 검색을 사용하여 서비스의 주소가 확인됩니다. 이 샘플은 다음 프로젝트로 구성되어 있습니다.  
   
--   **CalculatorService**: 검색 가능한 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 서비스입니다.  
+-   **CalculatorService**: WCF 서비스를 검색할 수 있습니다.  
   
--   **CalculatorClient**: A [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] discovery 클라이언트 채널을 사용 하 여 검색 하 고 CalculatorService를 호출 하는 클라이언트 응용 프로그램입니다.  
+-   **CalculatorClient**: discovery 클라이언트 채널을 사용 하 여 검색 하 고 CalculatorService를 호출 하는 WCF 클라이언트 응용 프로그램입니다.  
   
--   **DynamicCalculatorClient**: A [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 동적 끝점을 사용 하 여 검색 하 고 CalculatorService를 호출 하는 클라이언트 응용 프로그램입니다.  
+-   **DynamicCalculatorClient**: 동적 끝점을 사용 하 여 검색 하 고 CalculatorService를 호출 하는 WCF 클라이언트 응용 프로그램입니다.  
   
 > [!IMPORTANT]
 >  컴퓨터에 이 샘플이 이미 설치되어 있을 수도 있습니다. 계속하기 전에 다음(기본) 디렉터리를 확인하세요.  

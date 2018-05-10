@@ -4,18 +4,18 @@ ms.date: 03/30/2017
 ms.assetid: 947986cf-9946-4987-84e5-a14678d96edb
 author: BrucePerlerMS
 manager: mbaldwin
-ms.openlocfilehash: 97602a261f1e86cb70b38f21080c2a2e792605e8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: d513ddd41d87da7274f961969d261724b49aab65
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="token-provider"></a>Token Provider
-이 샘플에서는 사용자 지정 토큰 공급자를 구현하는 방법을 보여 줍니다. Windows Communication Foundation (WCF)에 토큰 공급자는 보안 인프라에 자격 증명 제공에 사용 됩니다. 일반적으로 토큰 공급자는 대상을 검사하고 적절한 자격 증명을 발급하여 보안 인프라에서 메시지의 보안을 유지할 수 있도록 합니다. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서는 기본 자격 증명 관리자 토큰 공급자를 제공합니다. 또한 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]는 [!INCLUDE[infocard](../../../../includes/infocard-md.md)] 토큰 공급자를 제공합니다. 사용자 지정 토큰 공급자는 다음과 같은 경우에 유용합니다.  
+이 샘플에서는 사용자 지정 토큰 공급자를 구현하는 방법을 보여 줍니다. Windows Communication Foundation (WCF)에 토큰 공급자는 보안 인프라에 자격 증명 제공에 사용 됩니다. 일반적으로 토큰 공급자는 대상을 검사하고 적절한 자격 증명을 발급하여 보안 인프라에서 메시지의 보안을 유지할 수 있도록 합니다. WCF는 기본 자격 증명 관리자 토큰 공급자와 함께 제공 합니다. WCF도 함께 제공 된 [!INCLUDE[infocard](../../../../includes/infocard-md.md)] 토큰 공급자입니다. 사용자 지정 토큰 공급자는 다음과 같은 경우에 유용합니다.  
   
 -   이러한 토큰 공급자가 작동되지 않는 자격 증명 저장소가 있는 경우  
   
--   사용자가 세부 정보를 제공하는 지점에서 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 클라이언트 프레임워크에서 자격 증명을 사용하는 지점으로 자격 증명을 변환하는 사용자 지정 메커니즘을 제공하려는 경우  
+-   WCF 클라이언트 프레임 워크에서 자격 증명을 사용 하는 경우에 세부 정보를 제공 하는 사용자 지점에서 자격 증명을 변형에 대 한 사용자 지정 메커니즘을 제공 하려면.  
   
 -   사용자 지정 토큰을 빌드하고 있는 경우  
   
@@ -108,7 +108,7 @@ ms.lasthandoff: 05/04/2018
 </system.serviceModel>  
 ```  
   
- 다음 단계에서는 사용자 지정 토큰 공급자를 개발하고 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 보안 프레임워크와 통합하는 방법을 보여 줍니다.  
+ 다음 단계에는 사용자 지정 토큰 공급자를 개발 하 고 WCF 보안 프레임 워크와 통합 하는 방법을 보여 줍니다.  
   
 1.  사용자 지정 토큰 공급자를 작성합니다.  
   

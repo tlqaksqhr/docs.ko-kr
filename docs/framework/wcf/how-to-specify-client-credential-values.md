@@ -5,11 +5,11 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 82293d7f-471a-4549-8f19-0be890e7b074
-ms.openlocfilehash: e1133194fe925bca4fb79d8adc1975a2063450f2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 9625400b855492ead12a5a2f1fa74f10164f6cdd
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="how-to-specify-client-credential-values"></a>방법: 클라이언트 자격 증명 값 지정
 Windows Communication Foundation (WCF)를 사용 하 여 서비스 클라이언트가 서비스에 인증 하는 방법을 지정할 수 있습니다. 예를 들면 서비스는 클라이언트가 인증서를 사용하여 인증하도록 규정할 수 있습니다.  
@@ -44,7 +44,7 @@ Windows Communication Foundation (WCF)를 사용 하 여 서비스 클라이언�
   
 1.  사용 하 여는 [ServiceModel Metadata 유틸리티 도구 (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) 를 서비스에서 코드 및 구성을 생성 합니다.  
   
-2.  생성된 코드를 사용하여 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 클라이언트의 인스턴스를 만듭니다.  
+2.  생성된 된 코드를 사용 하 여 WCF 클라이언트의 인스턴스를 만듭니다.  
   
 3.  클라이언트 클래스에서 <xref:System.ServiceModel.ClientBase%601.ClientCredentials%2A> 클래스의 <xref:System.ServiceModel.ClientBase%601> 속성을 적절한 값으로 설정합니다. 이 예제에서는 <xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential.SetCertificate%2A> 클래스의 <xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential> 메서드를 사용하여 속성을 X.509 인증서로 설정합니다.  
   

@@ -2,14 +2,14 @@
 title: Service Trace Viewer 도구(SvcTraceViewer.exe)
 ms.date: 03/30/2017
 ms.assetid: 9027efd3-df8d-47ed-8bcd-f53d55ed803c
-ms.openlocfilehash: d9cd87bba52297d37683127ece3dd9c31e9a9a70
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 215e34a3e7b075463ceeaa15386d3a347ffff064
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="service-trace-viewer-tool-svctraceviewerexe"></a>Service Trace Viewer 도구(SvcTraceViewer.exe)
-Windows Communication Foundation (WCF) Service Trace Viewer 도구를 사용 하면 분석에서 생성 되는 진단 추적 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]합니다. Service Trace Viewer는 로그의 추적 메시지를 쉽게 병합하고, 보고, 필터링하는 방법을 제공하므로 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 서비스 문제를 진단하고, 복구하며, 확인할 수 있습니다.  
+Windows Communication Foundation (WCF) Service Trace Viewer 도구를 사용 하면 WCF에 의해 생성 되는 진단 추적을 분석할 수 있습니다. Service Trace Viewer는 쉽게 병합 하 고, 보기 및, 진단, 복구 및 WCF 서비스 문제를 확인할 수 있도록 로그에 추적 메시지를 필터링 하는 방법을 제공 합니다.  
   
 ## <a name="configuring-tracing"></a>추적 구성  
  진단 추적은 응용 프로그램을 실행하는 동안 발생하는 상황을 보여 주는 정보를 제공합니다. 이름에서 알 수 있듯이 소스에서 대상까지의 작업뿐 아니라 중간 지점의 작업도 추적할 수 있습니다.  
@@ -55,7 +55,7 @@ Windows Communication Foundation (WCF) Service Trace Viewer 도구를 사용 하
 ### <a name="opening-and-viewing-wcf-trace-files"></a>WCF 추적 파일 열기 및 보기  
  서비스 추적 뷰어는 다음 세 가지 파일 형식을 지원합니다.  
   
--   [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 추적 파일(.svcLog)  
+-   WCF 추적 파일 (.svcLog)  
   
 -   이벤트 추적 파일(.etl)  
   
@@ -65,7 +65,7 @@ Windows Communication Foundation (WCF) Service Trace Viewer 도구를 사용 하
   
 ##### <a name="to-open-a-trace-file"></a>추적 파일을 열려면  
   
-1.  명령 창으로 이동 하려면 사용 하 여 Service Trace Viewer를 시작 하면 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 설치 위치 (C:\Program Files\Microsoft SDKs\Windows\v6.0\Bin) 한 다음 입력 `SvcTraceViewer.exe`합니다.  
+1.  WCF 설치 위치 (C:\Program Files\Microsoft SDKs\Windows\v6.0\Bin)로 이동한 다음를 입력 하려면 명령 창을 사용 하 여 Service Trace Viewer를 시작 `SvcTraceViewer.exe`합니다.  
   
 > [!NOTE]
 >  Service Trace Viewer 도구는 .svclog 및 .stvproj라는 두 개의 파일 형식과 연결됩니다. 파일 확장명을 등록 및 등록 취소하기 위해 명령줄에 두 매개 변수를 사용할 수 있습니다.  
@@ -87,7 +87,7 @@ Windows Communication Foundation (WCF) Service Trace Viewer 도구를 사용 하
 >  200MB보다 큰 추적 로그 파일을 로드하지 않는 것이 좋습니다. 이 제한보다 큰 파일을 로드하면 컴퓨터의 리소스에 따라 로딩 프로세스를 수행하는 데 시간이 오래 걸릴 수 있습니다. Service Trace Viewer 도구가 오랜 시간 동안 응답하지 않거나 컴퓨터의 메모리가 부족할 수 있습니다. 이 문제를 방지하려면 부분 로드를 구성하는 것이 좋습니다. 이 작업을 수행하는 방법에 대한 자세한 내용은 "큰 추적 파일 로드" 단원을 참조하십시오.  
   
 #### <a name="event-tracing-and-crimson-tracing"></a>이벤트 추적 및 심홍색 추적  
- 뷰어의 네이티브 형식은 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]가 내보내는 동작 추적 형식입니다. 다른 형식으로 내보낸 추적은 뷰어가 이를 표시하기 전에 전환되어야 합니다. 현재 동작 추적 형식 외에도 뷰어는 이벤트 추적 및 심홍색 추적을 지원합니다.  
+ 뷰어의 네이티브 형식은 WCF 내보내는 동작 추적 형식입니다. 다른 형식으로 내보낸 추적은 뷰어가 이를 표시하기 전에 전환되어야 합니다. 현재 동작 추적 형식 외에도 뷰어는 이벤트 추적 및 심홍색 추적을 지원합니다.  
   
  특정 동작 추적이 포함되지 않은 파일을 열 때 뷰어는 파일 변환을 시도합니다. 변환된 추적 데이터를 포함할 파일의 이름 및 위치를 지정해야 합니다. 데이터가 변환되고 나면 뷰어가 새 파일의 콘텐츠를 표시합니다.  
   
@@ -104,7 +104,7 @@ Windows Communication Foundation (WCF) Service Trace Viewer 도구를 사용 하
 -   에 **프로젝트** 탭을 프로젝트에 파일을 추가할 수 있습니다.  
   
 ### <a name="viewing-wcf-traces"></a>WCF 추적 보기  
- [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]는 동작 추적 형식을 사용하여 추적을 내보냅니다. 동작 추적 모델에서 개별 추적은 각 목적에 따라 동작별로 그룹화됩니다. 논리 제어 흐름은 활동 간에 전달됩니다. 예를 들어, 응용 프로그램의 수명 동안 많은 "메시지 보내기 동작"이 나타나고 사라집니다. 추적 및 활동 및 Service Trace Viewer의 사용자 인터페이스를 너무 보기에 대 한 자세한 내용은 참조 하십시오. [상관 관계가 지정 된 추적 보기 및 문제 해결에 대 한 Service Trace Viewer를 사용 하 여](../../../docs/framework/wcf/diagnostics/tracing/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md)합니다.  
+ WCF 동작 추적 형식을 사용 하 여 추적을 내보냅니다. 동작 추적 모델에서 개별 추적은 각 목적에 따라 동작별로 그룹화됩니다. 논리 제어 흐름은 활동 간에 전달됩니다. 예를 들어, 응용 프로그램의 수명 동안 많은 "메시지 보내기 동작"이 나타나고 사라집니다. 추적 및 활동 및 Service Trace Viewer의 사용자 인터페이스를 너무 보기에 대 한 자세한 내용은 참조 하십시오. [상관 관계가 지정 된 추적 보기 및 문제 해결에 대 한 Service Trace Viewer를 사용 하 여](../../../docs/framework/wcf/diagnostics/tracing/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md)합니다.  
   
 #### <a name="switching-to-different-views"></a>다른 보기로 전환  
  Service Trace Viewer는 다음과 같이 여러 보기를 제공합니다. 뷰어의 왼쪽된 창에 탭으로 표시 하며에서 액세스할 수도 있습니다는 **보기** 메뉴.  
@@ -217,7 +217,7 @@ Windows Communication Foundation (WCF) Service Trace Viewer 도구를 사용 하
   
 -   필터 도구 모음은 미리 정의된 사용자 지정 필터에 대한 액세스를 제공합니다. 통해 사용할 수는 **보기** 메뉴.  
   
--   뷰어의 미리 정의된 필터는 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 추적의 부분을 선택적으로 필터링하는 데 사용할 수 있습니다. 기본적으로 모든 인프라 추적이 전달될 수 있도록 설정되어 있습니다. 이 필터의 설정에 정의 된는 **필터 옵션** 하위 메뉴 아래 **보기** 메뉴.  
+-   뷰어의 미리 정의 된 필터 WCF 추적의 부분을 선택적으로 필터링 데 사용할 수 있습니다. 기본적으로 모든 인프라 추적이 전달될 수 있도록 설정되어 있습니다. 이 필터의 설정에 정의 된는 **필터 옵션** 하위 메뉴 아래 **보기** 메뉴.  
   
 -   사용자 지정 XPath 필터를 사용하면 필터링을 완벽하게 제어할 수 있습니다. 정의할 수 있습니다는 **사용자 지정 필터** 아래 **보기** 메뉴.  
   
@@ -237,7 +237,7 @@ Windows Communication Foundation (WCF) Service Trace Viewer 도구를 사용 하
  **지우기** 단추 모든 추적이 통과 허용 하도록 미리 정의 되 고 사용자 지정 필터를 다시 설정 합니다.  
   
 #### <a name="filter-options"></a>필터 옵션  
- 뷰어는 보기에서 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 추적을 자동으로 제거할 수 있습니다. [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]의 특정 영역에서 내보내진 추적을 선택적으로 제거할 수 있습니다. 예를 들어, 보기에서 트랜잭션 관련 추적을 제거할 수 있습니다.  
+ 뷰어는 보기에서 WCF 추적을 자동으로 제거할 수 있습니다. WCF의 특정 영역에서 내보내진 추적을 선택적으로 제거할 수 있습니다. 예를 들어, 보기에서 트랜잭션 관련 추적을 제거할 수 있습니다.  
   
  이 필터의 설정에 정의 된는 **필터 옵션** 하위 메뉴 아래 **보기** 메뉴.  
   
@@ -347,7 +347,7 @@ Windows Communication Foundation (WCF) Service Trace Viewer 도구를 사용 하
 -   뒤로 가기: 사용 된 **활동** 메뉴를 사용 하거나 "F9"를 누릅니다. 추적 창에서 "위쪽" 화살표 키를 사용할 수 있습니다.  
   
 > [!NOTE]
->  [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 메시지는 여러 컴퓨터에 걸쳐 있는 동작 ID를 전달할 수 있기 때문에 앞으로 가기 또는 뒤로 가기를 통해 다른 프로세스 또는 다른 컴퓨터에서 발생한 동작으로 이동할 수 있습니다.  
+>  이 있으므로 사용할 수 있습니다 있습니다 다른 컴퓨터 또는 다른 프로세스에서 발생 한 동작으로 WCF 메시지는 컴퓨터에 걸쳐 있는 동작 Id를 포함할 수 있습니다.  
   
 #### <a name="follow-transfer"></a>전송 이동  
  전송 추적은 추적 파일에서 특별한 추적입니다. 동작은 전송 추적에 의해 다른 동작으로 전송될 수 있습니다. 예를 들어 "활동 A"는 "활동 B"로 보낼 수 있습니다. 이러한 경우에 없는 경우 전송 추적 "활동 A"와 "To: Activity" 이름을 전송 아이콘 이 전송 추적은 두 추적 간의 링크입니다. "활동 b" 있을 수도 있습니다 "활동 A"를 다시 전송 하는 활동의 끝에 전송 추적 합니다. 이는 프로그램의 함수 호출과 유사합니다. A가 B를 호출하면 B가 반환되는 것입니다.  
@@ -417,9 +417,9 @@ Windows Communication Foundation (WCF) Service Trace Viewer 도구를 사용 하
   
 |아이콘|설명|  
 |----------|-----------------|  
-|![메시지 로그 추적](../../../docs/framework/wcf/media/7c66e994-2476-4260-a0db-98948b9af197.gif "7c66e994-2476-4260-a0db-98948b9af197")|메시지 로그 추적: [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 추적 소스를 사용할 때 `System.ServiceModel.MessageLogging` 메시지가 메시지 로깅 기능에 의해 기록되는 경우 내보낸 추적입니다. 이 추적을 클릭하면 메시지가 표시됩니다. 메시지에 대해 구성할 수 있는 4개의 로깅 지점은 ServiceLevelSendRequest, TransportSend, TransportReceive 및 ServiceLevelReceiveRequest이며, 메시지 로그 추적의 `messageSource` 특성으로도 지정할 수 있습니다.|  
-|![수신 된 메시지 추적](../../../docs/framework/wcf/media/de4f586c-c5dd-41ec-b1c3-ac56b4dfa35c.gif "de4f586c-c5dd-41ec-b1c3-ac56b4dfa35c")|수신된 메시지 추적: [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 추적 소스를 Information 또는 Verbose 수준에서 사용하는 경우 `System.ServiceModel` 메시지를 받을 때 내보낸 추적입니다. 이 추적은 동작에서 메시지 상관 관계 화살표를 보는 데 반드시 필요는 **그래프** 보기.|  
-|![전송 된 메시지 추적](../../../docs/framework/wcf/media/558943c4-17cf-4c12-9405-677e995ac387.gif "558943c4-17cf-4c12-9405-677e995ac387")|전송된 메시지 추적: [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 추적 소스를 Information 또는 Verbose 수준에서 사용하는 경우 `System.ServiceModel` 메시지를 보낼 때 내보낸 추적입니다. 이 추적은 동작에서 메시지 상관 관계 화살표를 보는 데 반드시 필요는 **그래프** 보기.|  
+|![메시지 로그 추적](../../../docs/framework/wcf/media/7c66e994-2476-4260-a0db-98948b9af197.gif "7c66e994-2476-4260-a0db-98948b9af197")|메시지 로그 추적: WCF 메시지가 메시지 로깅 기능에 의해 기록 되는 경우 발생 되는 추적 때는 `System.ServiceModel.MessageLogging` 추적 소스를 사용 합니다. 이 추적을 클릭하면 메시지가 표시됩니다. 메시지에 대해 구성할 수 있는 4개의 로깅 지점은 ServiceLevelSendRequest, TransportSend, TransportReceive 및 ServiceLevelReceiveRequest이며, 메시지 로그 추적의 `messageSource` 특성으로도 지정할 수 있습니다.|  
+|![수신 된 메시지 추적](../../../docs/framework/wcf/media/de4f586c-c5dd-41ec-b1c3-ac56b4dfa35c.gif "de4f586c-c5dd-41ec-b1c3-ac56b4dfa35c")|수신 된 메시지 추적: 경우 WCF 메시지를 수신 될 때 발생 되는 추적 된 `System.ServiceModel` 추적 소스를 Information 또는 Verbose 수준에서 사용 합니다. 이 추적은 동작에서 메시지 상관 관계 화살표를 보는 데 반드시 필요는 **그래프** 보기.|  
+|![전송 된 메시지 추적](../../../docs/framework/wcf/media/558943c4-17cf-4c12-9405-677e995ac387.gif "558943c4-17cf-4c12-9405-677e995ac387")|전송 된 메시지 추적: 경우 WCF 메시지를 보낼 때 발생 되는 추적 된 `System.ServiceModel` 추적 소스를 Information 또는 Verbose 수준에서 사용 합니다. 이 추적은 동작에서 메시지 상관 관계 화살표를 보는 데 반드시 필요는 **그래프** 보기.|  
   
 ### <a name="activities"></a>활동  
   
@@ -432,11 +432,11 @@ Windows Communication Foundation (WCF) Service Trace Viewer 도구를 사용 하
   
 |아이콘|설명|  
 |----------|-----------------|  
-|![환경 동작](../../../docs/framework/wcf/media/29fa00ac-cf78-46e5-822d-56222fff61d1.gif "29fa00ac-cf78-46e5-822d-56222fff61d1")|환경 동작: [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 호스트 또는 클라이언트를 만들거나 열거나 닫는 동작입니다. 이러한 단계 중에 발생한 오류는 이 동작에 나타납니다.|  
+|![환경 동작](../../../docs/framework/wcf/media/29fa00ac-cf78-46e5-822d-56222fff61d1.gif "29fa00ac-cf78-46e5-822d-56222fff61d1")|환경 동작: 활동을 만들고 열거나 WCF 호스트 또는 클라이언트를 닫습니다. 이러한 단계 중에 발생한 오류는 이 동작에 나타납니다.|  
 |![Listen 활동](../../../docs/framework/wcf/media/d7b135f6-ec7d-45d7-9913-037ab30e4c26.gif "d7b135f6-ec7d-45d7-9913-037ab30e4c26")|Listen 활동: 수신기와 관련된 추적을 기록하는 동작입니다. 이 활동 내에서 수신기 정보 및 연결 요청을 볼 수 있습니다.|  
 |![바이트 수신 동작](../../../docs/framework/wcf/media/2f628580-b80f-45a7-925b-616c96426c0e.gif "2f628580-b80f-45a7-925b-616c96426c0e")|바이트 수신 동작: 두 끝점 간의 연결에서 수신되는 들어오는 바이트와 관련된 모든 추적을 그룹화하는 동작입니다. 이 동작은 http.sys와 같은 동작 ID를 전파하는 전송 동작들을 상호 연결시키는 데 반드시 필요합니다. 중단과 같은 연결 오류가 이 동작에 나타납니다.|  
-|![메시지 처리 동작](../../../docs/framework/wcf/media/wcfc-executionactivityiconc.GIF "wcfc_ExecutionActivityIconc")|메시지 처리 동작: [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 메시지 만들기와 관련된 추적을 그룹화하는 동작입니다. 잘못된 봉투 또는 메시지로 인해 발생한 오류가 이 동작에 나타납니다. 이 동작 내에서 호출자로부터 동작 ID가 전파되었는지 여부를 확인하기 위해 메시지 헤더를 검사할 수 있습니다. 호출자로부터 활동 ID가 전파된 경우 작업 처리 활동(다음 아이콘)으로 전송할 때 호출자와 호출 수신자의 추적 간 상관 관계에 대해 전파된 활동 ID를 해당 활동에 할당할 수도 있습니다.|  
-|![메시지 로그 추적](../../../docs/framework/wcf/media/7c66e994-2476-4260-a0db-98948b9af197.gif "7c66e994-2476-4260-a0db-98948b9af197")|작업 처리 동작: 두 끝점 간의 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 요청과 관련된 모든 추적을 그룹화하는 동작입니다. 구성의 두 끝점에서 `propagateActivity`가 `true`로 설정되면 두 개의 끝점에서 모든 추적이 직접 상관 관계에 대해 하나의 동작으로 병합됩니다. 해당 동작에는 전송 또는 보안 처리로 인해 발생한 오류가 포함되며, 응답이 있는 경우 사용자 코드 경계로 확장됩니다.|  
+|![메시지 처리 동작](../../../docs/framework/wcf/media/wcfc-executionactivityiconc.GIF "wcfc_ExecutionActivityIconc")|메시지 처리 동작: WCF 메시지를 만드는 데 관련 된 추적을 그룹화 하는 동작입니다. 잘못된 봉투 또는 메시지로 인해 발생한 오류가 이 동작에 나타납니다. 이 동작 내에서 호출자로부터 동작 ID가 전파되었는지 여부를 확인하기 위해 메시지 헤더를 검사할 수 있습니다. 호출자로부터 활동 ID가 전파된 경우 작업 처리 활동(다음 아이콘)으로 전송할 때 호출자와 호출 수신자의 추적 간 상관 관계에 대해 전파된 활동 ID를 해당 활동에 할당할 수도 있습니다.|  
+|![메시지 로그 추적](../../../docs/framework/wcf/media/7c66e994-2476-4260-a0db-98948b9af197.gif "7c66e994-2476-4260-a0db-98948b9af197")|작업 처리 동작: 두 개의 끝점을 통해 WCF 요청에 관련 된 모든 추적을 그룹화 하는 동작입니다. 구성의 두 끝점에서 `propagateActivity`가 `true`로 설정되면 두 개의 끝점에서 모든 추적이 직접 상관 관계에 대해 하나의 동작으로 병합됩니다. 해당 동작에는 전송 또는 보안 처리로 인해 발생한 오류가 포함되며, 응답이 있는 경우 사용자 코드 경계로 확장됩니다.|  
 |![메시지 처리 동작](../../../docs/framework/wcf/media/wcfc-executionactivityiconc.GIF "wcfc_ExecutionActivityIconc")|사용자 코드 실행 동작: 요청을 처리하기 위해 사용자 코드 추적을 그룹화하는 동작입니다.|  
   
 ## <a name="troubleshooting"></a>문제 해결  

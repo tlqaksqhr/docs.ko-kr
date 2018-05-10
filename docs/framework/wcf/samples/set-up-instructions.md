@@ -5,21 +5,21 @@ helpviewer_keywords:
 - WCF Samples [WCF], setup
 - Windows Communication Foundation Samples [WCF], setup
 ms.assetid: 0be7d232-485b-4f6d-9ed0-b4243c907376
-ms.openlocfilehash: 20f6662289384b1a094c34c0c0c986b754a44ad2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: cbb23281d94bbd1edc66b0a3b9caafca62304487
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="set-up-instructions"></a>설치 지침
 이 항목 집합에서는 Windows Communication Foundation (WCF) 서비스를 실행 하는 데 필요한 서비스를 설정 하는 방법에 설명 합니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
  [Windows Communication Foundation 샘플의 일회 설치 절차](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 샘플을 설치하는 단계를 간략하게 설명합니다.  
+ WCF 샘플을 설정 하기 위한 단계를 간략하게 설명 합니다.  
   
  [방화벽 지침](../../../../docs/framework/wcf/samples/firewall-instructions.md)  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 서비스 작동을 허용하도록 Windows 방화벽을 설정하는 데 필요한 단계를 간략하게 설명합니다.  
+ WCF 서비스를 작동을 허용 하도록 Windows 방화벽을 설정 하는 데 필요한 단계를 간략하게 설명 합니다.  
   
  [인터넷 정보 서비스 호스팅 지침](../../../../docs/framework/wcf/samples/internet-information-service-hosting-instructions.md)  
  IIS 설정에 필요한 단계를 간략하게 설명합니다.  
@@ -31,10 +31,10 @@ ms.lasthandoff: 05/04/2018
  가상 디렉터리를 만드는 데 필요한 단계를 간략하게 설명합니다.  
   
  [Windows Communication Foundation 샘플 빌드](../../../../docs/framework/wcf/samples/building-the-samples.md)  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 샘플을 빌드하는 단계를 간략하게 설명합니다.  
+ WCF 샘플을 작성 하기 위한 단계를 간략하게 설명 합니다.  
   
  [Windows Communication Foundation 샘플 실행](../../../../docs/framework/wcf/samples/running-the-samples.md)  
- 같은 컴퓨터 및 다중 컴퓨터 구성에서 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 샘플을 실행하는 단계를 간략하게 설명합니다.  
+ 동일한 컴퓨터에서 및 컴퓨터에서 WCF 샘플을 실행 하기 위한 단계를 간략하게 설명 합니다.  
   
  [피어 투 피어 서비스 사용](http://msdn.microsoft.com/library/e7a0fcf4-b0e5-4b26-a7e3-f0f37b60a1f9)  
  피어 투 피어 메시징 서비스용으로 기본 제공되는 확인자인 Windows 피어 투 피어 구성 요소를 설치하는 단계를 간략하게 설명합니다.  

@@ -2,11 +2,11 @@
 title: 주소 헤더
 ms.date: 03/30/2017
 ms.assetid: b0c94d4a-3bde-4b4d-bb6d-9f12bc3a6940
-ms.openlocfilehash: c0e3807aadc18c7737f3a5e354135721cbfccf3e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 276649c17a04822eb27eb4e3ed9cbe711b384edc
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="address-headers"></a>주소 헤더
 Address Headers 샘플은로 인해 클라이언트 Windows Communication Foundation (WCF)를 사용 하 여 서비스에 참조 매개 변수를 전달 하는 방법을 보여 줍니다.  
@@ -14,9 +14,9 @@ Address Headers 샘플은로 인해 클라이언트 Windows Communication Founda
 > [!NOTE]
 >  이 샘플의 설치 절차 및 빌드 지침은 이 항목의 끝부분에 나와 있습니다.  
   
- WS-Addressing 사양은 특성 웹 서비스 끝점의 주소를 지정하는 방법으로 끝점 참조의 개념을 정의합니다. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서 끝점 참조는 `EndpointAddress` 클래스를 사용하여 모델링됩니다. `EndpointAddress`는 `ServiceEndpoint` 클래스의 주소 필드 형식입니다.  
+ WS-Addressing 사양은 특성 웹 서비스 끝점의 주소를 지정하는 방법으로 끝점 참조의 개념을 정의합니다. Wcf에서는 끝점 참조를 사용 하 여 모델링 됩니다는 `EndpointAddress` 클래스- `EndpointAddress` 의 주소 필드의 형식인는 `ServiceEndpoint` 클래스입니다.  
   
- 끝점 참조 모델의 일부에서 각 참조는 추가 식별 정보를 추가하는 일부 참조 매개 변수를 전달할 수 있습니다. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서 이러한 참조 매개 변수는 `AddressHeader` 클래스의 인스턴스로 모델링됩니다.  
+ 끝점 참조 모델의 일부에서 각 참조는 추가 식별 정보를 추가하는 일부 참조 매개 변수를 전달할 수 있습니다. 이러한 참조 매개 변수의 인스턴스로 모델링 되며 wcf에서는 `AddressHeader` 클래스입니다.  
   
  이 샘플에서 클라이언트는 클라이언트 끝점의 `EndpointAddress`에 참조 매개 변수를 추가합니다. 서비스는 이 참조 매개 변수를 찾아서 "Hello" 서비스 작업의 논리에 해당 값을 사용합니다.  
   

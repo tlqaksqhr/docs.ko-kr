@@ -2,11 +2,11 @@
 title: 예상되는 예외
 ms.date: 03/30/2017
 ms.assetid: 299a6987-ae6b-43c6-987f-12b034b583ae
-ms.openlocfilehash: 9552bf5178e3309d46e0f9220311c9e1a811c4b9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 6c4af62e0870cdd670c46ead169033ff72902fc0
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="expected-exceptions"></a>예상되는 예외
 이 샘플에서는 형식화된 클라이언트를 사용할 때 예상되는 예외를 catch하는 방법을 보여 줍니다. 이 샘플에 따라는 [시작](../../../../docs/framework/wcf/samples/getting-started-sample.md) 계산기 서비스를 구현 하는 합니다. 이 샘플에서 클라이언트는 콘솔 응용 프로그램(.exe)이고 서비스는 IIS(인터넷 정보 서비스)를 통해 호스트됩니다.  
@@ -16,9 +16,9 @@ ms.lasthandoff: 05/04/2018
   
  이 샘플에서는 올바른 프로그램에서 처리해야 하는 두 가지 예상되는 예외 형식 `TimeoutException` 및 `CommunicationException`을 catch하고 처리하는 방법을 보여 줍니다.  
   
- Windows Communication Foundation (WCF) 클라이언트에서 통신 메서드에서 throw 되는 예외는 예상 또는 예기치 않은 합니다. 예기치 않은 예외에는 `OutOfMemoryException`과 같은 치명적인 실패와 `ArgumentNullException` 또는 `InvalidOperationException` 등의 프로그래밍 오류가 포함됩니다. 일반적으로 예기치 않은 오류를 처리하는 유용한 방법이 없기 때문에 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 클라이언트 통신 메서드를 호출할 때에는 보통 그런 오류를 catch하지 말아야 합니다.  
+ Windows Communication Foundation (WCF) 클라이언트에서 통신 메서드에서 throw 되는 예외는 예상 또는 예기치 않은 합니다. 예기치 않은 예외에는 `OutOfMemoryException`과 같은 치명적인 실패와 `ArgumentNullException` 또는 `InvalidOperationException` 등의 프로그래밍 오류가 포함됩니다. 일반적으로 보통를 catch 하지 말아야 하는 WCF 클라이언트 통신 메서드를 호출할 때, 예기치 않은 오류를 해결 하는 유용한 방법이 있습니다.  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 클라이언트의 통신 메서드에서 예상되는 오류에는 `TimeoutException`, `CommunicationException`, 그리고 `CommunicationException`의 모든 파생 클래스가 포함됩니다. 이러한 오류는 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 클라이언트를 중단하고 통신 실패를 보고하면 안전하게 처리할 수 있는 통신 중의 문제를 나타냅니다. 어느 응용 프로그램에서나 외부 요소에 의해 이런 오류가 발생할 수 있기 때문에 올바른 응용 프로그램에서는 이런 예외를 catch할 수 있어야 하며, 이런 예외가 발생한 경우 복구할 수 있어야 합니다.  
+ 예외는 WCF 클라이언트에서 통신 메서드에서 예상 `TimeoutException`, `CommunicationException`, 및의 모든 파생 클래스가 `CommunicationException`합니다. 이 WCF 클라이언트를 중단 하 고 통신 실패를 보고 하 여 안전 하 게 처리 될 수 있는 통신 하는 동안 문제를 나타냅니다. 어느 응용 프로그램에서나 외부 요소에 의해 이런 오류가 발생할 수 있기 때문에 올바른 응용 프로그램에서는 이런 예외를 catch할 수 있어야 하며, 이런 예외가 발생한 경우 복구할 수 있어야 합니다.  
   
  클라이언트에서 throw할 수 있는 `CommunicationException`의 파생 클래스가 몇 가지 있습니다. 경우에 따라 응용 프로그램에서 이 중 일부를 catch하여 특수 처리를 수행하고, 나머지는 `CommunicationException`으로 처리할 수도 있습니다. 보다 한정된 예외 형식을 먼저 catch한 다음 이후의 catch 절에서 `CommunicationException`을 catch하면 됩니다.  
   

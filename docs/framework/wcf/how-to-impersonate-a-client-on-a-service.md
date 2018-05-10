@@ -9,11 +9,11 @@ helpviewer_keywords:
 - impersonation
 - WCF, security
 ms.assetid: 431db851-a75b-4009-9fe2-247243d810d3
-ms.openlocfilehash: 991792b22dbef42e6f244f33f3a82550c02ddeba
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: c15d201a002ec93ff3a83ce1bba9f94ccb6a7b95
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="how-to-impersonate-a-client-on-a-service"></a>방법: 서비스에서 클라이언트 가장
 Windows Communication Foundation (WCF) 서비스에 클라이언트를 가장 하는 서비스를 클라이언트를 대신해 작업을 수행할 수 있습니다. 예를 들어, 시스템의 디렉터리 및 파일에 대한 액세스 또는 SQL Server 데이터베이스에 대한 액세스와 같이 ACL(액세스 제어 목록) 검사 관련 작업의 경우 ACL 검사는 클라이언트 사용자 계정에 대해 수행됩니다. 이 항목에서는 Windows 도메인의 클라이언트를 사용하여 클라이언트 가장 수준을 설정하는 데 필요한 기본적인 단계에 대해 설명합니다. 이와 관련된 작업 예제는 [Impersonating the Client](../../../docs/framework/wcf/samples/impersonating-the-client.md)을 참조하십시오. 클라이언트 가장에 대 한 자세한 내용은 참조 [위임 및 가장](../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md)합니다.  
@@ -36,7 +36,7 @@ Windows Communication Foundation (WCF) 서비스에 클라이언트를 가장 �
   
 1.  [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)를 사용하여 서비스 클라이언트 코드를 만듭니다. 자세한 내용은 참조 [WCF 클라이언트를 사용 하 여 액세스 서비스](../../../docs/framework/wcf/accessing-services-using-a-wcf-client.md)합니다.  
   
-2.  [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 클라이언트를 만든 후 <xref:System.ServiceModel.Security.WindowsClientCredential.AllowedImpersonationLevel%2A> 클래스의 <xref:System.ServiceModel.Security.WindowsClientCredential> 속성을 <xref:System.Security.Principal.TokenImpersonationLevel> 열거형 값 중 하나로 설정합니다.  
+2.  WCF 클라이언트를 만든 후 설정는 <xref:System.ServiceModel.Security.WindowsClientCredential.AllowedImpersonationLevel%2A> 속성은 <xref:System.ServiceModel.Security.WindowsClientCredential> 클래스 중 하나에 <xref:System.Security.Principal.TokenImpersonationLevel> 열거형 값입니다.  
   
     > [!NOTE]
     >  <xref:System.Security.Principal.TokenImpersonationLevel.Delegation>을 사용하려면 협상된 Kerberos 인증( *multi-leg* 또는 *multi-step* Kerberos라고도 함)을 사용해야 합니다. 이 구현 하는 방법에 대 한 참조 [보안에 대 한 유용한](../../../docs/framework/wcf/feature-details/best-practices-for-security-in-wcf.md)합니다.  

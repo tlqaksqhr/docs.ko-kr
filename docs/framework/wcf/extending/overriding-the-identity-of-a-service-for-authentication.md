@@ -5,11 +5,11 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: d613a22b-07d7-41a4-bada-1adc653b9b5d
-ms.openlocfilehash: 6fbdd7f09c7ae15368972afbce896c5ecb39ccbe
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 3df1f2490f8636d52ac75fad2469adadec2a57da
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="overriding-the-identity-of-a-service-for-authentication"></a>인증을 위해 서비스 ID 재정의
 일반적으로 선택한 클라이언트 자격 증명 형식에 따라 서비스 메타데이터에 노출되는 ID 형식이 결정되므로 서비스에 ID를 설정할 필요가 없습니다. 예를 들어 다음 구성 코드에서는 [ \<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md) 요소 및 집합은 `clientCredentialType` 특성을 Windows로 합니다.  
@@ -30,9 +30,9 @@ ms.lasthandoff: 05/04/2018
 > [!NOTE]
 >  Windows 자격 증명 형식을 협상 없이 사용하려면 서비스의 사용자 계정이 Active Directory 도메인에 등록된 SPN에 대한 액세스 권한이 있어야 합니다. 다음과 같은 방법으로 이 작업을 수행할 수 있습니다.  
   
--   NetworkService 또는 LocalSystem 계정을 사용하여 서비스를 실행합니다. 이러한 계정은 시스템에서 Active Directory 도메인에 연결할 때 설정된 시스템 SPN에 대한 액세스 권한이 있으므로, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서는 서비스 메타데이터(WSDL)의 서비스 끝점에 적절한 SPN 요소를 자동으로 생성합니다.  
+-   NetworkService 또는 LocalSystem 계정을 사용하여 서비스를 실행합니다. 이러한 계정은 시스템 시스템 Active Directory 도메인에 연결할 때 설정 된 SPN에 대 한 액세스 권한이, 있으므로 WCF 서비스의 메타 데이터 (WSDL)에 서비스의 끝점 적절 한 SPN 요소를 자동으로 생성 합니다.  
   
--   임의의 Active Directory 도메인 계정을 사용하여 서비스를 실행합니다. 이 경우 해당 도메인 계정의 SPN을 설정합니다. Setspn.exe 유틸리티 도구를 사용하여 이 작업을 수행할 수 있습니다. 서비스 계정의 SPN을 만들고 나면 메타데이터(WSDL)를 통해 서비스 클라이언트에 SPN을 게시하도록 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]를 구성합니다. 이 작업은 응용 프로그램 구성 파일이나 코드를 통해 노출된 끝점에 대한 끝점 ID를 설정하여 수행합니다.  
+-   임의의 Active Directory 도메인 계정을 사용하여 서비스를 실행합니다. 이 경우 해당 도메인 계정의 SPN을 설정합니다. Setspn.exe 유틸리티 도구를 사용하여 이 작업을 수행할 수 있습니다. 서비스의 계정에 대 한 SPN을 만든 후 WCF 메타 데이터 (WSDL)를 통해 서비스의 클라이언트에 SPN을 게시 하도록 구성 합니다. 이 작업은 응용 프로그램 구성 파일이나 코드를 통해 노출된 끝점에 대한 끝점 ID를 설정하여 수행합니다.  
   
  Spn에 대 한 자세한 내용은, Kerberos 프로토콜 및 Active Directory에 대 한 참조 [Windows Kerberos 기술 자료에 대 한](http://go.microsoft.com/fwlink/?LinkId=88330)합니다.  
   
@@ -59,7 +59,7 @@ ms.lasthandoff: 05/04/2018
   
   
 ### <a name="setting-identity-programmatically"></a>프로그래밍 방식으로 ID 설정  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서 자동으로 확인하므로 서비스가 명시적으로 ID를 지정할 필요는 없습니다. 그러나 필요한 경우 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서 끝점에 ID를 지정할 수 있습니다. 다음 코드에서는 특정 DNS ID를 사용하여 새 서비스 끝점을 추가합니다.  
+ 서비스 없는 id에 명시적으로 지정 하려면 WCF가 자동으로 결정 하기 때문에 있습니다. 그러나 WCF에서는 필요한 경우 끝점에 대 한 id를 지정할 수 있습니다. 다음 코드에서는 특정 DNS ID를 사용하여 새 서비스 끝점을 추가합니다.  
   
  [!code-csharp[C_Identity#5](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_identity/cs/source.cs#5)]
  [!code-vb[C_Identity#5](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_identity/vb/source.vb#5)]  

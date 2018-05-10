@@ -2,11 +2,11 @@
 title: 사용자 지정 스트림 업그레이드
 ms.date: 03/30/2017
 ms.assetid: e3da85c8-57f3-4e32-a4cb-50123f30fea6
-ms.openlocfilehash: 4bcd59cb5e420c551c611c8e676289f20d4354d0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 84edac7a4dbaaf1a01332f5c0af29319c279dd1b
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="custom-stream-upgrades"></a>사용자 지정 스트림 업그레이드
 TCP, 명명된 파이프 등의 스트림 지향 전송은 클라이언트와 서버 간의 연속 바이트 스트림에서 작동합니다. 이 스트림은 <xref:System.IO.Stream> 개체에 의해 나타날 수 있습니다. 스트림 업그레이드에서 클라이언트는 선택적 프로토콜 계층을 채널 스택에 추가하려고 하고 통신 채널의 반대쪽에서도 추가하도록 요청합니다. 스트림 업그레이드는 원래 <xref:System.IO.Stream> 개체를 업그레이드된 개체로 바꾸는 과정으로 이루어집니다.  
@@ -66,7 +66,7 @@ TCP, 명명된 파이프 등의 스트림 지향 전송은 클라이언트와 �
 ## <a name="security-upgrades"></a>보안 업그레이드  
  보안 업그레이드 추가는 일반적인 스트림 업그레이드 프로세스의 특수화된 버전입니다.  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서는 이미 스트림 보안 업그레이드를 위한 두 개의 바인딩 요소를 제공합니다. 전송 수준 보안의 구성은 구성하여 사용자 지정 바인딩에 추가할 수 있는 <xref:System.ServiceModel.Channels.WindowsStreamSecurityBindingElement> 및 <xref:System.ServiceModel.Channels.SslStreamSecurityBindingElement>에 의해 캡슐화됩니다. 이러한 바인딩 요소는 클라이언트 및 서버 스트림 업그레이드 공급자를 빌드하는 <xref:System.ServiceModel.Channels.StreamUpgradeBindingElement> 클래스를 확장합니다. 두 바인딩 요소에는 특수화된 보안 스트림 업그레이드 공급자 클래스를 만드는 메서드가 있습니다. 이 메서드는 `public`이 아니므로 두 경우 모두 바인딩 요소를 바인딩에 추가하기만 하면 됩니다.  
+ WCF는 이미 스트림 보안 업그레이드를 위한 두 개의 바인딩 요소를 제공 합니다. 전송 수준 보안의 구성은 구성하여 사용자 지정 바인딩에 추가할 수 있는 <xref:System.ServiceModel.Channels.WindowsStreamSecurityBindingElement> 및 <xref:System.ServiceModel.Channels.SslStreamSecurityBindingElement>에 의해 캡슐화됩니다. 이러한 바인딩 요소는 클라이언트 및 서버 스트림 업그레이드 공급자를 빌드하는 <xref:System.ServiceModel.Channels.StreamUpgradeBindingElement> 클래스를 확장합니다. 두 바인딩 요소에는 특수화된 보안 스트림 업그레이드 공급자 클래스를 만드는 메서드가 있습니다. 이 메서드는 `public`이 아니므로 두 경우 모두 바인딩 요소를 바인딩에 추가하기만 하면 됩니다.  
   
  위의 두 바인딩 요소가 만족하지 않는 보안 시나리오의 경우 위의 개시자, 수락자 및 공급자 기본 클래스에서 보안과 관련된 세 개의 `abstract` 클래스가 파생됩니다.  
   

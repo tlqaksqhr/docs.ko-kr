@@ -2,24 +2,24 @@
 title: Contract2
 ms.date: 03/30/2017
 ms.assetid: 305eeb65-a52f-459e-9aa8-0ef071eade16
-ms.openlocfilehash: d7af8df46fabcb96a8f7015e360ee2617b7273a0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 1b751e3d4fd6eae01e3fcd7500f844427d46524c
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="contract"></a>계약
 이 섹션에는 Windows Communication Foundation (WCF)에서 계약을 보여 주는 샘플이 포함 되어 있습니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
  [데이터 계약](../../../../docs/framework/wcf/samples/data-contracts.md)  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]의 데이터 계약을 보여 줍니다.  
+ WCF에서는 데이터 계약을 보여 줍니다.  
   
  [메시지 계약](../../../../docs/framework/wcf/samples/message-contracts.md)  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]의 메시지 계약을 보여 줍니다.  
+ WCF의 메시지 계약을 보여 줍니다.  
   
  [서비스 계약](../../../../docs/framework/wcf/samples/service-contracts.md)  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]의 서비스 계약을 보여 줍니다.  
+ Wcf에서 서비스 계약의 계약을 보여 줍니다.  
   
  [DataContractResolver](../../../../docs/framework/wcf/samples/datacontractresolver.md)  
  <xref:System.Runtime.Serialization.DataContractResolver> 클래스를 사용하여 serialization 및 deserialization 프로세스를 사용자 지정하는 방법을 보여 줍니다.  

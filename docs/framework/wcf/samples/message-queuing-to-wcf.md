@@ -2,11 +2,11 @@
 title: Windows Communication Foundation로 메시지 큐
 ms.date: 03/30/2017
 ms.assetid: 6d718eb0-9f61-4653-8a75-d2dac8fb3520
-ms.openlocfilehash: c0208de93ad0c903b8a75383b509de57365ac4bf
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: b3c16a95b21dcdea941e605f3e25e560b7193b03
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="message-queuing-to-windows-communication-foundation"></a>Windows Communication Foundation로 메시지 큐
 이 샘플에서는 MSMQ (메시지 큐) 응용 프로그램을 Windows Communication Foundation (WCF) 서비스에 MSMQ 메시지를 보낼 수 있는 방법을 보여 줍니다. 이 서비스는 자체적으로 호스트되는 콘솔 응용 프로그램으로서 이를 사용하여 서비스에서 대기된 메시지를 받는 것을 볼 수 있습니다.  
@@ -59,7 +59,7 @@ using (ServiceHost serviceHost = new ServiceHost(typeof(OrderProcessorService)))
  다음 샘플 구성에서 보여 주는 것처럼 MSMQ 큐 이름은 구성 파일의 appSettings 섹션에 지정됩니다.  
   
 > [!NOTE]
->  큐 이름은 로컬 컴퓨터에 점(.)을, 그 경로에는 백슬래시 구분 기호를 사용합니다. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 끝점 주소는 msmq.formatname 체계를 지정하며 로컬 컴퓨터로 localhost를 사용합니다. 각 MSMQ 형식 이름 주소 지정 지침의 큐 주소는 msmq.formatname 체계를 따릅니다.  
+>  큐 이름은 로컬 컴퓨터에 점(.)을, 그 경로에는 백슬래시 구분 기호를 사용합니다. WCF 끝점 주소는 msmq.formatname 체계를 지정 하 고 로컬 컴퓨터로 localhost를 사용 합니다. 각 MSMQ 형식 이름 주소 지정 지침의 큐 주소는 msmq.formatname 체계를 따릅니다.  
   
 ```xml  
 <appSettings>  

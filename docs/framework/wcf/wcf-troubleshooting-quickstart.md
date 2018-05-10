@@ -5,11 +5,11 @@ helpviewer_keywords:
 - WCF [WCF], troubleshooting
 - Windows Communication Foundation [WCF], troubleshooting
 ms.assetid: a9ea7a53-f31a-46eb-806e-898e465a4992
-ms.openlocfilehash: 5a6ea4f3ba121f419d1a8c46fc2534988a93d554
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: e752f6f4428d01474d643f1571935cb7d96d41ca
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="wcf-troubleshooting-quickstart"></a>WCF 문제 해결 퀵 스타트
 이 항목에서는 WCF 클라이언트 및 서비스를 개발하는 동안 발생하는 몇 가지 알려진 문제점을 나열합니다. 발생하는 문제가 이 목록에 없는 경우 서비스에 대한 추적을 구성하는 것이 좋습니다. 추적을 구성하면 추적 파일 뷰어로 보고 서비스 내에서 발생하는 예외에 대한 자세한 정보를 얻을 수 있는 추적 파일이 생성됩니다. 추적을 구성하는 방법에 대한 자세한 내용은 [Configuring Tracing](../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md)을 참조하십시오. 추적 파일 뷰어에 대한 자세한 내용은 [Service Trace Viewer Tool (SvcTraceViewer.exe)](../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)를 참조하십시오.  
@@ -153,7 +153,7 @@ public class MyServiceHost : ServiceHost
   
 <a name="BKMK_q6"></a>   
 ## <a name="it-seems-like-one-way-and-request-reply-operations-return-at-roughly-the-same-speed-when-the-reply-contains-no-data-whats-happening"></a>회신에 데이터가 포함되지 않은 경우 단방향 및 요청-회신 작업이 거의 같은 속도로 반환되는 것 같습니다. 이유가 무엇입니까?  
- 작업을 단방향 작업으로 지정한다는 것은 작업 계약이 입력 메시지를 받은 다음 출력 메시지를 반환하지 않는다는 것을 의미할 뿐입니다. [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]에서 모든 클라이언트 호출은 아웃바운드 데이터가 네트워크에 기록되거나 예외가 throw되는 경우 반환됩니다. 단방향 작업도 이와 동일한 방식으로 작동하며, 서비스를 찾을 수 없는 경우 throw되거나 서비스가 네트워크로부터 데이터를 받을 준비가 되지 않은 경우 블로킹될 수 있습니다. 그 결과 보통 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]에서는 단방향 호출이 요청-회신보다 더 빨리 클라이언트에 반환되지만 네트워크를 통해 아웃바운드 데이터를 보내는 속도가 느려지는 상황이 발생하는 경우 요청-회신 작업뿐 아니라 단방향 작업의 속도도 느려집니다. 자세한 내용은 참조 [단방향 서비스](../../../docs/framework/wcf/feature-details/one-way-services.md) 및 [WCF 클라이언트를 사용 하 여 액세스 서비스](../../../docs/framework/wcf/feature-details/accessing-services-using-a-client.md)합니다.  
+ 작업을 단방향 작업으로 지정한다는 것은 작업 계약이 입력 메시지를 받은 다음 출력 메시지를 반환하지 않는다는 것을 의미할 뿐입니다. WCF, 모든 클라이언트 호출은 아웃 바운드 데이터가 네트워크에 기록 되거나 예외가 발생 하는 경우를 반환 합니다. 단방향 작업도 이와 동일한 방식으로 작동하며, 서비스를 찾을 수 없는 경우 throw되거나 서비스가 네트워크로부터 데이터를 받을 준비가 되지 않은 경우 블로킹될 수 있습니다. 일반적으로 wcf에서는이 인해 단방향 호출이 요청-회신 보다 더 빨리 클라이언트에 반환 합니다. 하지만 네트워크를 통해 아웃 바운드 데이터를 보내는 느려지는 상황이 발생 하 요청-회신 작업 뿐 아니라 단방향 작업의 속도도 느려집니다. 자세한 내용은 참조 [단방향 서비스](../../../docs/framework/wcf/feature-details/one-way-services.md) 및 [WCF 클라이언트를 사용 하 여 액세스 서비스](../../../docs/framework/wcf/feature-details/accessing-services-using-a-client.md)합니다.  
   
 <a name="BKMK_q77"></a>   
 ## <a name="im-using-an-x509-certificate-with-my-service-and-i-get-a-systemsecuritycryptographycryptographicexception-whats-happening"></a>서비스에 X.509 인증서를 사용하고 있으며 System.Security.Cryptography.CryptographicException이 발생합니다. 이유가 무엇입니까?  
@@ -169,7 +169,7 @@ public class MyServiceHost : ServiceHost
   
 <a name="BKMK_q99"></a>   
 ## <a name="im-using-one-of-my-tracing-tools-and-i-get-an-endpointnotfoundexception-whats-happening"></a>추적 도구 중 하나를 사용하는 동안 EndpointNotFoundException이 발생합니다. 이유가 무엇입니까?  
- 시스템에서 제공되는 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 추적 메커니즘이 아닌 추적 도구를 사용하는 경우 주소 필터가 일치하지 않음을 알리는 <xref:System.ServiceModel.EndpointNotFoundException> 이 발생하면 <xref:System.ServiceModel.Description.ClientViaBehavior> 클래스를 사용하여 메시지를 추적 유틸리티로 보낸 다음 유틸리티에서 이 메시지를 서비스 주소로 리디렉션하도록 해야 합니다. <xref:System.ServiceModel.Description.ClientViaBehavior> 클래스는 `Via` 주소 지정 헤더를 변경하여 `To` 주소 지정 헤더로 표시되는 최종 수신자와 별도로 다음 네트워크 주소를 지정합니다. 그러나 이 경우 `To` 값을 설정하는 데 사용되는 끝점 주소를 변경해서는 안 됩니다.  
+ 시스템에서 제공한 WCF 추적 메커니즘이 아닌 추적 도구를 사용 하는 경우 나타납니다는 <xref:System.ServiceModel.EndpointNotFoundException> 나타나지만 주소 필터가 일치 하지 했습니다를 사용 해야 하는 <xref:System.ServiceModel.Description.ClientViaBehavior> 클래스는 메시지를 추적 유틸리티로 보낸를 및 이 메시지를 서비스 주소로 리디렉션하도록 유틸리티가 있어야 합니다. <xref:System.ServiceModel.Description.ClientViaBehavior> 클래스는 `Via` 주소 지정 헤더를 변경하여 `To` 주소 지정 헤더로 표시되는 최종 수신자와 별도로 다음 네트워크 주소를 지정합니다. 그러나 이 경우 `To` 값을 설정하는 데 사용되는 끝점 주소를 변경해서는 안 됩니다.  
   
  다음 코드 예제는 클라이언트 구성 파일의 예를 보여 줍니다.  
   

@@ -2,16 +2,16 @@
 title: 추적
 ms.date: 03/30/2017
 ms.assetid: 2649eae2-dbf8-421c-9cfb-cfa9e01de87f
-ms.openlocfilehash: a0c3e5591280247cab97b6597a42ca496c9654d7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 6f427425b1bbf19ecd8b30fb1498634a7a3d5fa9
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="tracing"></a>추적
 Windows Communication Foundation (WCF) 오류 모니터링 및 분석에 대 한 응용 프로그램 계측 및 진단 데이터를 제공합니다. 응용 프로그램의 작동 방법 또는 오류 발생 원인을 이해하기 위해 디버거 대신 추적을 사용할 수 있습니다. 종단 간 환경을 제공하기 위해 전체 구성 요소에서의 오류와 처리를 연결할 수도 있습니다.  
   
- [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)]에서는 진단 추적을 위해 다음 데이터를 출력합니다.  
+ WCF 진단 추적을 위해 다음 데이터를 출력 합니다.  
   
 -   작업 호출, 코드 예외, 경고 및 기타 중요 처리 이벤트 등과 같이 응용 프로그램의 모든 구성 요소에서 프로세스 중요 시점에 대한 추적  
   
@@ -36,7 +36,7 @@ Windows Communication Foundation (WCF) 오류 모니터링 및 분석에 대 한
   
  [추적 참조](../../../../../docs/framework/wcf/diagnostics/tracing/traces-reference.md)  
   
- 이 항목에서는 [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)]에 의해 생성된 모든 추적을 보여 줍니다.  
+ 이 항목에서는 WCF에 의해 생성 된 모든 추적 합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [Service Trace Viewer 도구(SvcTraceViewer.exe)](../../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)

@@ -2,17 +2,17 @@
 title: BindingElement 만들기
 ms.date: 03/30/2017
 ms.assetid: 01a35307-a41f-4ef6-a3db-322af40afc99
-ms.openlocfilehash: fdc3ec1fef86ad31434ea372740497969c7ae6a7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 96924e97ad3fcc121ef7b28125301060d8448514
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="creating-a-bindingelement"></a>BindingElement 만들기
-바인딩 및 바인딩 요소 (확장 하는 개체 <xref:System.ServiceModel.Channels.Binding?displayProperty=nameWithType> 및 <xref:System.ServiceModel.Channels.BindingElement?displayProperty=nameWithType>각각)은 Windows Communication Foundation (WCF) 응용 프로그램 모델은 채널 팩터리 및 채널 수신기와 연결 하는 장소입니다. 바인딩으로 설정 하지 않고 사용자 지정 채널을 사용 하 여 프로그래밍이 필요 채널 수준에서에 설명 된 대로 [서비스 채널 수준 프로그래밍](../../../../docs/framework/wcf/extending/service-channel-level-programming.md) 및 [클라이언트 채널 수준 프로그래밍](../../../../docs/framework/wcf/extending/client-channel-level-programming.md)합니다. 이 항목에서는에서 채널을 사용 하 여 사용할 수 있도록 최소 요구 사항을 설명 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], 개발은 <xref:System.ServiceModel.Channels.BindingElement> 채널 및의 4 단계에 설명 된 대로 응용 프로그램에서 사용에 대 한 [개발 채널](../../../../docs/framework/wcf/extending/developing-channels.md)합니다.  
+바인딩 및 바인딩 요소 (확장 하는 개체 <xref:System.ServiceModel.Channels.Binding?displayProperty=nameWithType> 및 <xref:System.ServiceModel.Channels.BindingElement?displayProperty=nameWithType>각각)은 Windows Communication Foundation (WCF) 응용 프로그램 모델은 채널 팩터리 및 채널 수신기와 연결 하는 장소입니다. 바인딩으로 설정 하지 않고 사용자 지정 채널을 사용 하 여 프로그래밍이 필요 채널 수준에서에 설명 된 대로 [서비스 채널 수준 프로그래밍](../../../../docs/framework/wcf/extending/service-channel-level-programming.md) 및 [클라이언트 채널 수준 프로그래밍](../../../../docs/framework/wcf/extending/client-channel-level-programming.md)합니다. 이 항목에서는 채널을 사용 하 여 WCF에서의 개발에 사용할 수 있도록 최소 요구 사항을 설명는 <xref:System.ServiceModel.Channels.BindingElement> 채널 및의 4 단계에 설명 된 대로 응용 프로그램에서 사용에 대 한 [개발 채널](../../../../docs/framework/wcf/extending/developing-channels.md)합니다.  
   
 ## <a name="overview"></a>개요  
- 채널에 대한 <xref:System.ServiceModel.Channels.BindingElement>를 만들면 개발자가 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 응용 프로그램에서 사용할 수 있습니다. <xref:System.ServiceModel.Channels.BindingElement> 개체는 채널의 정확한 형식 정보가 없어도 <xref:System.ServiceModel.ServiceHost?displayProperty=nameWithType> 클래스에서 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 응용 프로그램에 연결하는 데 사용할 수 있습니다.  
+ 만들기는 <xref:System.ServiceModel.Channels.BindingElement> 채널을 통해 개발자가 WCF 응용 프로그램에서 사용할 수 있습니다. <xref:System.ServiceModel.Channels.BindingElement> 개체에서 사용할 수는 <xref:System.ServiceModel.ServiceHost?displayProperty=nameWithType> 채널의 정확한 형식 정보가 필요 없이 WCF 응용 프로그램에 연결 하는 클래스입니다.  
   
  한 번는 <xref:System.ServiceModel.Channels.BindingElement> 되었습니다를 만든 다음 나머지 채널 개발 단계에서 설명 하 여 요구 사항에 따라 더 많은 기능이 사용할 수 있습니다 [개발 채널](../../../../docs/framework/wcf/extending/developing-channels.md)합니다.  
   

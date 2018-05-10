@@ -7,11 +7,11 @@ dev_langs:
 helpviewer_keywords:
 - behaviors [WCF], system-provided client
 ms.assetid: d16d3405-be70-4edb-8f62-b5f614ddeca5
-ms.openlocfilehash: dbee1fecda66dc377513bdf8cae4645f009b6384
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: bc104c4f51ebc64154bd3d9b39ac2bca13b2fab1
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="specifying-client-run-time-behavior"></a>클라이언트 런타임 동작 지정
 클라이언트 응용 프로그램에 맞게 런타임 동작을 수정 하려면 Windows Communication Foundation (WCF) 서비스와 같은 Windows Communication Foundation (WCF) 클라이언트를 구성할 수 있습니다. 세 가지 특성을 사용하여 클라이언트 런타임 동작을 지정할 수 있습니다. 이중 클라이언트 콜백 개체는 <xref:System.ServiceModel.CallbackBehaviorAttribute> 및 <xref:System.ServiceModel.Description.CallbackDebugBehavior> 특성을 사용하여 런타임 동작을 수정할 수 있습니다. 다른 특성인 <xref:System.ServiceModel.Description.ClientViaBehavior>는 논리 대상과 직접 네트워크 대상을 구분하는 데 사용할 수 있습니다. 또한 이중 클라이언트 콜백 형식은 서비스측 동작 중 일부를 사용할 수 있습니다. 자세한 내용은 참조 [서비스 런타임 동작 지정](../../../docs/framework/wcf/specifying-service-run-time-behavior.md)합니다.  
@@ -35,7 +35,7 @@ ms.lasthandoff: 05/04/2018
   
 -   제어된 디버깅 시나리오에서만 이 작업을 수행합니다.  
   
- 다음 코드 예제에서는 클라이언트 콜백 개체의 관리되는 예외 정보를 SOAP 메시지에 반환하도록 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]에 지시하는 클라이언트 구성 파일을 보여 줍니다.  
+ 다음 코드 예제에서는 클라이언트 WCF가 관리 되는 예외 정보는 클라이언트에서 콜백 개체가 SOAP 메시지에 반환 하도록 지시 하는 구성 파일을 보여 줍니다.  
   
  [!code-xml[SCA.CallbackContract#4](../../../samples/snippets/csharp/VS_Snippets_CFX/sca.callbackcontract/cs/client.exe.config#4)]  
  

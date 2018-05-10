@@ -2,14 +2,14 @@
 title: XMLSerializer 샘플
 ms.date: 03/30/2017
 ms.assetid: 7d134453-9a35-4202-ba77-9ca3a65babc3
-ms.openlocfilehash: 3d1df93ef0efb7da24a1478f87e10dd18aa10bf1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 155719f546491f53ad2587e12d030dd7821b1fd3
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="xmlserializer-sample"></a>XMLSerializer 샘플
-이 샘플에서는 <xref:System.Xml.Serialization.XmlSerializer>와 호환되는 형식을 serialize 및 deserialize하는 방법을 보여 줍니다. Windows Communication Foundation (WCF) 포맷터의 기본값은 <xref:System.Runtime.Serialization.DataContractSerializer> 클래스입니다. <xref:System.Xml.Serialization.XmlSerializer> 클래스를 사용할 수 없는 경우 <xref:System.Runtime.Serialization.DataContractSerializer> 클래스를 사용하여 형식을 serialize 및 deserialize할 수 있습니다. 이는 XML에 대한 정밀한 제어가 필요한 경우(예: 데이터의 일부가 XML 요소가 아닌 XML 특성이어야 하는 경우)에 자주 발생합니다. 또한 <xref:System.Xml.Serialization.XmlSerializer>가 아닌 서비스를 위해 클라이언트를 만들 때 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]가 자동으로 선택되는 경우가 많습니다.  
+이 샘플에서는 <xref:System.Xml.Serialization.XmlSerializer>와 호환되는 형식을 serialize 및 deserialize하는 방법을 보여 줍니다. Windows Communication Foundation (WCF) 포맷터의 기본값은 <xref:System.Runtime.Serialization.DataContractSerializer> 클래스입니다. <xref:System.Xml.Serialization.XmlSerializer> 클래스를 사용할 수 없는 경우 <xref:System.Runtime.Serialization.DataContractSerializer> 클래스를 사용하여 형식을 serialize 및 deserialize할 수 있습니다. 이는 XML에 대한 정밀한 제어가 필요한 경우(예: 데이터의 일부가 XML 요소가 아닌 XML 특성이어야 하는 경우)에 자주 발생합니다. 또한는 <xref:System.Xml.Serialization.XmlSerializer> 자주 자동으로 선택 되 아닌 WCF 서비스에 대 한 클라이언트를 만들 때.  
   
  이 샘플에서 클라이언트는 콘솔 응용 프로그램(.exe)이고 서비스는 IIS(인터넷 정보 서비스)를 통해 호스트됩니다.  
   

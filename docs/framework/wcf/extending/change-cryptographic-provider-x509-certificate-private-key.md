@@ -8,16 +8,16 @@ helpviewer_keywords:
 - cryptographic provider [WCF], changing
 - cryptographic provider [WCF]
 ms.assetid: b4254406-272e-4774-bd61-27e39bbb6c12
-ms.openlocfilehash: be6033efc03e25967af8bbb3266b0f60df02eaba
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 633e87bca302adc0963e1bf52d2470c9dbae81a5
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="how-to-change-the-cryptographic-provider-for-an-x509-certificate39s-private-key"></a>방법: X.509 인증서에 대 한 암호화 공급자를 변경 개인 키
 이 항목에서는 X.509 인증서의 개인 키를 제공 하는 데 암호화 공급자를 변경 하는 방법과 Windows Communication Foundation (WCF) 보안 프레임 워크에 공급자를 통합 하는 방법을 보여 줍니다. 인증서를 사용 하는 방법에 대 한 자세한 내용은 참조 [인증서 작업](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)합니다.  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 보안 프레임 워크에 설명 된 대로 새 보안 토큰 형식을 적용 하는 방법 제공 [하는 방법: 사용자 지정 토큰 만들기](../../../../docs/framework/wcf/extending/how-to-create-a-custom-token.md)합니다. 사용자 지정 토큰을 사용하여 시스템에서 제공되는 기존 형식을 대체할 수도 있습니다.  
+ WCF 보안 프레임 워크에 설명 된 대로 새 보안 토큰 형식을 적용 하는 방법 제공 [하는 방법: 사용자 지정 토큰 만들기](../../../../docs/framework/wcf/extending/how-to-create-a-custom-token.md)합니다. 사용자 지정 토큰을 사용하여 시스템에서 제공되는 기존 형식을 대체할 수도 있습니다.  
   
  이 항목에서는 시스템에서 제공되는 X.509 보안 토큰을 인증서 개인 키의 다른 구현을 제공하는 사용자 지정 X.509 토큰으로 대체합니다. 기본 Windows 암호화 공급자와 다른 암호화 공급자에서 실제 개인 키를 제공하는 경우에 유용한 시나리오입니다. 대체 암호화 공급자의 한 예로는 개인 키와 관련된 모든 암호화 작업을 수행하면서 개인 키를 메모리에 저장하지는 않는 방식으로 시스템 보안을 향상시키는 하드웨어 보안 모듈이 있습니다.  
   
@@ -32,9 +32,9 @@ ms.lasthandoff: 05/04/2018
   
 2.  <xref:System.IdentityModel.Tokens.SecurityKey.KeySize%2A> 읽기 전용 속성을 재정의합니다. 이 속성에서는 인증서의 공개/개인 키 쌍의 실제 키 크기를 반환합니다.  
   
-3.  <xref:System.IdentityModel.Tokens.SecurityKey.DecryptKey%2A> 메서드를 재정의합니다. 이 메서드는 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 보안 프레임워크에서 대칭 키를 인증서의 개인 키로 해독하기 위해 호출합니다. 키는 이전에 인증서의 공개 키로 암호화되었습니다.  
+3.  <xref:System.IdentityModel.Tokens.SecurityKey.DecryptKey%2A> 메서드를 재정의합니다. 이 메서드는 인증서의 개인 키를 사용 하 여 대칭 키의 암호를 해독 하는 WCF 보안 프레임 워크에서 호출 됩니다. 키는 이전에 인증서의 공개 키로 암호화되었습니다.  
   
-4.  <xref:System.IdentityModel.Tokens.AsymmetricSecurityKey.GetAsymmetricAlgorithm%2A> 메서드를 재정의합니다. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 보안 프레임워크에서 이 메서드는 메서드로 전달되는 매개 변수에 따라 인증서의 개인 또는 공개 키의 암호화 공급자를 나타내는 <xref:System.Security.Cryptography.AsymmetricAlgorithm> 클래스의 인스턴스를 가져오기 위해 호출합니다.  
+4.  <xref:System.IdentityModel.Tokens.AsymmetricSecurityKey.GetAsymmetricAlgorithm%2A> 메서드를 재정의합니다. 이 메서드는 WCF 보안 프레임 워크의 인스턴스를 가져오는 <xref:System.Security.Cryptography.AsymmetricAlgorithm> 메서드에 전달 된 매개 변수에 따라 인증서의 개인 또는 공개 키에 대 한 암호화 공급자를 나타내는 클래스입니다.  
   
 5.  선택 사항입니다. <xref:System.IdentityModel.Tokens.AsymmetricSecurityKey.GetHashAlgorithmForSignature%2A> 메서드를 재정의합니다. 다른 <xref:System.Security.Cryptography.HashAlgorithm> 클래스 구현이 필요한 경우 이 메서드를 재정의합니다.  
   
@@ -45,7 +45,7 @@ ms.lasthandoff: 05/04/2018
      [!code-csharp[c_CustomX509Token#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customx509token/cs/source.cs#1)]
      [!code-vb[c_CustomX509Token#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customx509token/vb/source.vb#1)]  
   
- 다음 절차에서는 이전 절차에서 만든 사용자 지정 X.509 비대칭 보안 키 구현을 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 보안 프레임워크에 통합하여 시스템에서 제공되는 X.509 보안 토큰을 대체하는 방법을 보여 줍니다.  
+ 다음 절차 토큰 시스템 제공 X.509 보안을 교체 하기 위해 WCF 보안 프레임 워크와 이전 절차에서 만든 사용자 지정 X.509 비대칭 보안 키 구현을 통합 하는 방법을 보여 줍니다.  
   
 #### <a name="to-replace-the-system-provided-x509-security-token-with-a-custom-x509-asymmetric-security-key-token"></a>시스템에서 제공되는 X.509 보안 토큰을 사용자 지정 X.509 비대칭 보안 키 토큰으로 대체하려면  
   

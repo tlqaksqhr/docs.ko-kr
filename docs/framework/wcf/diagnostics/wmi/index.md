@@ -2,19 +2,19 @@
 title: 진단에 Windows Management Instrumentation 사용
 ms.date: 03/30/2017
 ms.assetid: fe48738d-e31b-454d-b5ec-24c85c6bf79a
-ms.openlocfilehash: a53fee8bfed9f5a0f5773c9dfcfbaab5f173ddad
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 3b06cc61714b3fdc63086d2b79b087540bece698
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="using-windows-management-instrumentation-for-diagnostics"></a>진단에 Windows Management Instrumentation 사용
-Windows Communication Foundation (WCF)의 통해 런타임으로 서비스 검사 데이터를 노출 한 [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] Windows Management Instrumentation (WMI) 공급자입니다.  
+Windows Communication Foundation (WCF)의 WCF Windows Management Instrumentation (WMI) 공급자를 통해 런타임으로 서비스 검사 데이터를 노출 합니다.  
   
 ## <a name="enabling-wmi"></a>WMI 사용  
  WMI는 Microsoft에서 구현한 WBEM(Web-Based Enterprise Management) 표준입니다. WMI SDK에 대 한 자세한 내용은 참조 [Windows Management Instrumentation](https://msdn.microsoft.com/library/aa394582.aspx)합니다. WBEM은 응용 프로그램에서 외부 관리 도구에 관리 계측을 노출하는 방법을 지정하는 산업 표준입니다.  
   
- WMI 공급자는 WBEM 호환 인터페이스를 통해 런타임으로 계측을 노출하는 구성 요소이며, 특성/값 쌍을 가진 WMI 개체 집합으로 구성됩니다. 쌍은 다양한 단순 형식일 수 있습니다. 관리 도구는 런타임에 인터페이스를 통해 서비스에 연결될 수 있습니다. [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)]에서는 주소, 바인딩, 동작 및 수신기와 같은 서비스 특성을 노출합니다.  
+ WMI 공급자는 WBEM 호환 인터페이스를 통해 런타임으로 계측을 노출하는 구성 요소이며, 특성/값 쌍을 가진 WMI 개체 집합으로 구성됩니다. 쌍은 다양한 단순 형식일 수 있습니다. 관리 도구는 런타임에 인터페이스를 통해 서비스에 연결될 수 있습니다. WCF는 서비스 주소, 바인딩, 동작 및 수신기와 같은 특성을 노출합니다.  
   
  응용 프로그램의 구성 파일에서 기본 제공 WMI 공급자를 활성화할 수 있습니다. 이렇게는 `wmiProviderEnabled` 특성에는 [ \<진단 >](../../../../../docs/framework/configure-apps/file-schema/wcf/diagnostics.md) 에 [ \<system.serviceModel >](../../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md) 섹션에서 다음 샘플에 나와 있는 것 처럼 구성입니다.  
   
@@ -38,18 +38,18 @@ Windows Communication Foundation (WCF)의 통해 런타임으로 서비스 검�
   
  구성 파일에서 메시지 로깅에 대한 메시지 로깅 추적 수신기 또는 추적을 위한 `System.ServiceModel` 추적 수신기를 지정하지 않으면, WMI에서 변경이 승인되더라도 변경 내용이 적용되지 않습니다. 각 수신기를 제대로 설정에 대 한 자세한 내용은 참조 하십시오. [메시지 로깅 구성](../../../../../docs/framework/wcf/diagnostics/configuring-message-logging.md) 및 [추적 구성](../../../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md)합니다. 구성에 지정된 다른 모든 추적 소스의 추적 수준은 응용 프로그램이 시작되면 적용되며 변경할 수 없습니다.  
   
- [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)]는 스크립트를 위한 `GetOperationCounterInstanceName` 메서드를 노출합니다. 이 메서드는 작업 이름과 함께 제공된 경우 성능 카운터 인스턴스 이름을 반환합니다. 사용자 입력을 검증하지는 않습니다. 따라서 잘못된 작업 이름을 제공하면 잘못된 카운터 이름이 반환됩니다.  
+ WCF에서 노출 한 `GetOperationCounterInstanceName` 스크립트 메서드. 이 메서드는 작업 이름과 함께 제공된 경우 성능 카운터 인스턴스 이름을 반환합니다. 사용자 입력을 검증하지는 않습니다. 따라서 잘못된 작업 이름을 제공하면 잘못된 카운터 이름이 반환됩니다.  
   
- `OutgoingChannel` 인스턴스의 `Service` 속성은 대상 서비스에 대한 [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 클라이언트를 `Service` 메서드 내에서 만들지 않은 경우 서비스에서 다른 서비스에 연결하기 위해 연 채널 수를 계산하지 않습니다.  
+ `OutgoingChannel` 의 속성은 `Service` 인스턴스 내에서 WCF 클라이언트를 대상 서비스를 만들지 않은 경우 다른 서비스에 연결 하는 서비스에서 연 채널을 계산 하지 않습니다는 `Service` 메서드.  
   
  **주의** WMI만 지원 합니다.는 <xref:System.TimeSpan> 소수점이 하 최대 3 값입니다. 예를 들어, 서비스에서 속성 중 하나를 <xref:System.TimeSpan.MaxValue>로 설정한 경우 해당 값은 WMI를 통해 볼 때 소수점 이하 셋째 자리 이후부터 잘립니다.  
   
 ## <a name="security"></a>보안  
- [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] WMI 공급자를 사용하면 환경에서 서비스를 검색할 수 있기 때문에 액세스를 허용할 때 특히 주의해야 합니다. 기본 관리자 전용 액세스를 완화하면 충분히 신뢰할 수 없는 대상이 사용자 환경의 중요 데이터에 액세스할 수 있습니다. 특히 원격 WMI 액세스에 대한 권한을 완화하면 자원 소모 공격이 발생할 수 있습니다. 과도한 WMI 요청으로 프로세스 자원이 소모되면 성능이 저하될 수 있습니다.  
+ 환경에서 서비스의 검색을 허용 하는 WCF WMI 공급자, 때문에에 대 한 액세스를 부여 하는 것에 주의 기울여야 합니다. 기본 관리자 전용 액세스를 완화하면 충분히 신뢰할 수 없는 대상이 사용자 환경의 중요 데이터에 액세스할 수 있습니다. 특히 원격 WMI 액세스에 대한 권한을 완화하면 자원 소모 공격이 발생할 수 있습니다. 과도한 WMI 요청으로 프로세스 자원이 소모되면 성능이 저하될 수 있습니다.  
   
  또한 MOF 파일에 대한 액세스 권한을 완화하면 충분히 신뢰할 수 없는 대상이 WMI 동작을 조작하고 WMI 스키마에 로드된 개체를 변경할 수 있습니다. 예를 들어, 필드를 제거하여 중요 데이터를 관리자가 보지 못하도록 숨기거나, 채워지지 않거나 예외가 발생한 필드를 파일에 추가할 수 있습니다.  
   
- 기본적으로 [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] WMI 공급자는 관리자에게 "실행 메서드", "공급자 쓰기" 및 "계정 사용" 권한을 부여하고 ASP.NET, Local Service 및 Network Service에 "계정 사용" 권한을 부여합니다. 특히, [!INCLUDE[wv](../../../../../includes/wv-md.md)] 이외의 플랫폼에서 ASP.NET 계정은 WMI ServiceModel 네임스페이스에 대한 읽기 권한을 가집니다. 특정 사용자 그룹에 이러한 권한을 부여하지 않으려면 WMI 공급자를 비활성화하거나(기본값) 해당 사용자 그룹에 대한 액세스 권한을 비활성화해야 합니다.  
+ 기본적으로 WCF WMI 공급자에 게 부여 "실행 메서드", "공급자 쓰기" 및 "계정 사용" 관리자에 대 한 사용 권한과 ASP.NET, Local Service 및 Network Service "계정 사용" 권한을 합니다. 특히, [!INCLUDE[wv](../../../../../includes/wv-md.md)] 이외의 플랫폼에서 ASP.NET 계정은 WMI ServiceModel 네임스페이스에 대한 읽기 권한을 가집니다. 특정 사용자 그룹에 이러한 권한을 부여하지 않으려면 WMI 공급자를 비활성화하거나(기본값) 해당 사용자 그룹에 대한 액세스 권한을 비활성화해야 합니다.  
   
  또한 구성을 통해 WMI를 활성화할 경우 사용자 권한이 부족하여 WMI가 활성화되지 않을 수도 있습니다. 그러나 이 오류를 기록하기 위해 이벤트가 이벤트 로그에 기록되지는 않습니다.  
   
@@ -149,7 +149,7 @@ Whoami /user
  그러면 현재 사용자의 SID가 제공되기는 하지만, 이 방법을 통해 모든 임의 사용자의 SID를 가져올 수는 없습니다. SID를 가져오는 다른 방법을 사용 하는 것은 [getsid.exe](http://go.microsoft.com/fwlink/?LinkId=186467) 에서 도구는 [관리 작업에 대 한 Windows 2000 Resource Kit 도구](http://go.microsoft.com/fwlink/?LinkId=178660)합니다. 이 도구는 두 사용자(로컬 또는 도메인)의 SID를 비교하는데, 두 SID를 명령줄에 인쇄한다는 단점이 있습니다. 자세한 내용은 참조 [잘 알려진 Sid](http://go.microsoft.com/fwlink/?LinkId=186468)합니다.  
   
 ## <a name="accessing-remote-wmi-object-instances"></a>원격 WMI 개체 인스턴스 액세스  
- 원격 시스템에서 [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] WMI 인스턴스에 액세스해야 하는 경우 액세스하는 데 사용할 도구에서 패킷 개인 정보를 활성화해야 합니다. 다음 단원에서는 WMI CIM Studio, Windows Management Instrumentation Tester 및 .NET SDK 2.0을 사용하여 이러한 작업을 수행하는 방법에 대해 설명합니다.  
+ 원격 컴퓨터에서 WCF WMI 인스턴스에 액세스 해야 할 경우 액세스를 위해 사용 하는 도구에서 패킷 개인 정보 사용 하도록 설정 해야 합니다. 다음 단원에서는 WMI CIM Studio, Windows Management Instrumentation Tester 및 .NET SDK 2.0을 사용하여 이러한 작업을 수행하는 방법에 대해 설명합니다.  
   
 ### <a name="wmi-cim-studio"></a>WMI CIM Studio  
  설치한 경우 [WMI 관리 도구](http://go.microsoft.com/fwlink/?LinkId=95185), WMI 인스턴스에 액세스 하려면 WMI CIM Studio를 사용할 수 있습니다. 도구는 다음 폴더에 있습니다.  

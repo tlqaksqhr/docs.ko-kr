@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - message logging [WCF]
 ms.assetid: 0ff4c857-8f09-4b85-9dc0-89084706e4c9
-ms.openlocfilehash: 4c75b0f27e82b8cfe9327a9911d27d4e435ddf81
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: cea307b4e3920ff6413d6db28c2ce1e640b673f9
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="configuring-message-logging"></a>메시지 로깅 구성
 이 항목에서는 다양한 시나리오에서 메시지 로깅을 구성하는 방법에 대해 설명합니다.  
@@ -66,7 +66,7 @@ ms.lasthandoff: 05/04/2018
   
  나가는 메시지의 경우 로깅은 메시지가 사용자 코드를 벗어난 직후 및 메시지가 송신되기 직전에 발생합니다.  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서는 두 가지 수준 즉, 서비스 및 전송 수준에서 메시지를 기록합니다. 잘못된 형식의 메시지도 기록됩니다. 이 세 가지 범주는 서로 연관이 없으며 구성에서 별도로 활성화할 수 있습니다.  
+ WCF는 두 가지 수준, 서비스 및 전송에서 메시지를 기록 합니다. 잘못된 형식의 메시지도 기록됩니다. 이 세 가지 범주는 서로 연관이 없으며 구성에서 별도로 활성화할 수 있습니다.  
   
  로깅 수준은 `logMessagesAtServiceLevel` 요소의 `logMalformedMessages`, `logMessagesAtTransportLevel` 및 `messageLogging` 특성을 설정하여 제어할 수 있습니다.  
   
@@ -77,7 +77,7 @@ ms.lasthandoff: 05/04/2018
  이 계층에서 기록된 메시지는 통신 전송 동안 또는 그 이후에 인코딩이나 디코딩할 수 있습니다. 필터가 정의된 경우에는 해당 필터에 맞는 메시지만 기록되며 그 이외에는 전송 계층의 모든 메시지가 기록됩니다. 신뢰할 수 있는 메시징 메시지를 포함한 모든 인프라 메시지도 이 계층에서 기록됩니다. 스트리밍된 메시지의 경우는 헤더만 기록됩니다. 또한 보안 메시지는 이 수준에서 암호화된 채로 기록되는데 HTTPS와 같은 보안 전송이 사용되는 경우는 예외입니다.  
   
 ### <a name="malformed-level"></a>잘못된 형식의 수준  
- 잘못된 형식의 메시지란 모든 처리 단계에서 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 스택에 의해 거부된 메시지를 말합니다. 이러한 잘못된 형식의 메시지는 암호화된 상태라면 암호화된 상태로, 적절하지 않은 XML로 된 상태라면 그 상태 그대로 기록됩니다. `maxSizeOfMessageToLog`는 CDATA로 기록될 메시지 크기를 정의합니다. 기본적으로 `maxSizeOfMessageToLog`는256K입니다. 이 특성에 대 한 자세한 내용은 기타 옵션 단원을 참조 하십시오.  
+ 잘못 된 형식의 메시지는 처리의 모든 단계에서 WCF 스택에 의해 거부 된 메시지입니다. 이러한 잘못된 형식의 메시지는 암호화된 상태라면 암호화된 상태로, 적절하지 않은 XML로 된 상태라면 그 상태 그대로 기록됩니다. `maxSizeOfMessageToLog`는 CDATA로 기록될 메시지 크기를 정의합니다. 기본적으로 `maxSizeOfMessageToLog`는256K입니다. 이 특성에 대 한 자세한 내용은 기타 옵션 단원을 참조 하십시오.  
   
 ### <a name="other-options"></a>기타 옵션  
  로깅 수준 이외에 다음과 같은 옵션을 지정할 수 있습니다.  

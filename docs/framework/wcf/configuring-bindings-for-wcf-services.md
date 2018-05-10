@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - binding configuration [WCF]
 ms.assetid: 99a85fd8-f7eb-4a84-a93e-7721b37d415c
-ms.openlocfilehash: 8fcb2fbf49984ce2b6aaf1f112575d05a3d7d038
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: b91c8ff5a78ef2b2b2db5ea26ae7a1733a97ffd0
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="configuring-bindings-for-windows-communication-foundation-services"></a>Windows Communication Foundation 서비스에 대한 바인딩 구성
 응용 프로그램을 만들 때 응용 프로그램의 배포 후 관리자에게 결정을 맡겨야 할 경우가 있습니다. 예를 들어, 서비스 주소 또는 URI(Uniform Resource Identifier)가 무엇인지 미리 알 수 없는 경우가 있습니다. 주소를 하드 코딩하는 대신 관리자가 서비스를 작성한 후에 이를 수행하도록 하는 것이 좋습니다. 이러한 유연성은 구성을 통해 수행됩니다.  
@@ -39,9 +39,9 @@ ms.lasthandoff: 05/04/2018
   
  예를 들어 지정 하는 [ \<basicHttpBinding >](../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md) 요소는 끝점에 대 한 HTTP를 전송으로 사용 하도록 나타냅니다. 이 끝점을 사용하는 서비스가 열려 있는 경우 이 요소는 런타임에 끝점을 연결하는 데 사용됩니다.  
   
- 바인딩에는 미리 정의된 바인딩 및 사용자 지정 바인딩의 두 종류가 있습니다. 미리 정의된 바인딩에는 일반적인 시나리오에서 사용되는 유용한 요소의 조합이 있습니다. 미리 정의 된 바인딩 목록을 형식에 대해 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 제공 참조 [시스템 제공 바인딩](../../../docs/framework/wcf/system-provided-bindings.md)합니다. 서비스 응용 프로그램에서 필요로 하는 올바른 기능의 조합을 가진 미리 정의된 바인딩 컬렉션이 없는 경우 사용자 지정 바인딩을 만들어 응용 프로그램의 요구 사항을 충족시킬 수 있습니다. 사용자 지정 바인딩에 대 한 자세한 내용은 참조 하십시오. [ \<customBinding >](../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)합니다.  
+ 바인딩에는 미리 정의된 바인딩 및 사용자 지정 바인딩의 두 종류가 있습니다. 미리 정의된 바인딩에는 일반적인 시나리오에서 사용되는 유용한 요소의 조합이 있습니다. WCF는 제공 된 미리 정의 된 바인딩 형식 목록은 참조 [시스템 제공 바인딩](../../../docs/framework/wcf/system-provided-bindings.md)합니다. 서비스 응용 프로그램에서 필요로 하는 올바른 기능의 조합을 가진 미리 정의된 바인딩 컬렉션이 없는 경우 사용자 지정 바인딩을 만들어 응용 프로그램의 요구 사항을 충족시킬 수 있습니다. 사용자 지정 바인딩에 대 한 자세한 내용은 참조 하십시오. [ \<customBinding >](../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)합니다.  
   
- 다음 4개의 예제에서는 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 서비스를 설정하는 데 사용되는 가장 일반적인 바인딩 구성을 보여 줍니다.  
+ 다음 4 개의 예제에서는 WCF 서비스를 설정 하는 데 가장 일반적인 바인딩 구성을 보여 줍니다.  
   
 #### <a name="specifying-an-endpoint-to-use-a-binding-type"></a>끝점을 지정하여 바인딩 형식 사용  
  첫 번째 예제에서는 주소, 계약 및 바인딩으로 구성된 끝점을 지정하는 방법에 대해 보여 줍니다.  

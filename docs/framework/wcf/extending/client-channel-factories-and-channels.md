@@ -2,11 +2,11 @@
 title: '클라이언트: 채널 팩터리 및 채널'
 ms.date: 03/30/2017
 ms.assetid: ef245191-fdab-4468-a0da-7c6f25d2110f
-ms.openlocfilehash: c7890f5fafb4e53053c4c393a7c8af584bd7a520
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 91e19c692718ae02e2f125a791904f62fe8401f7
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="client-channel-factories-and-channels"></a>클라이언트: 채널 팩터리 및 채널
 이 항목에서는 채널 팩터리 및 채널 만들기에 대해 설명합니다.  
@@ -19,7 +19,7 @@ ms.lasthandoff: 05/04/2018
   
  닫힌 채널 팩터리는 만든 채널 중에서 아직 닫히지 않은 채널을 닫습니다. 여기서는 채널 수신기가 닫혀 있기 때문에 모델이 비대칭이며, 새 채널 승인만 중지하고 기존 채널은 메시지 수신을 계속할 수 있도록 열린 상태로 유지합니다.  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]은 이 프로세스에 대한 기본 클래스 도우미를 제공합니다. (이 항목에서 설명 하는 채널 도우미 클래스 다이어그램을 참조 하십시오. [채널 모델 개요](../../../../docs/framework/wcf/extending/channel-model-overview.md).)  
+ WCF는이 프로세스에 대 한 기본 클래스 도우미를 제공합니다. (이 항목에서 설명 하는 채널 도우미 클래스 다이어그램을 참조 하십시오. [채널 모델 개요](../../../../docs/framework/wcf/extending/channel-model-overview.md).)  
   
 -   <xref:System.ServiceModel.Channels.CommunicationObject> 클래스 구현 <xref:System.ServiceModel.ICommunicationObject> 의 2 단계에서 설명한 상태 시스템을 적용 하 고 [개발 채널](../../../../docs/framework/wcf/extending/developing-channels.md)합니다.  
   

@@ -2,11 +2,11 @@
 title: NamedPipe 활성화
 ms.date: 03/30/2017
 ms.assetid: f3c0437d-006c-442e-bfb0-6b29216e4e29
-ms.openlocfilehash: a4d6612f8d598be6f02def2526920251e36047f4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 46b59dab0f67c66ca364d9e880ef519386d0df94
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="namedpipe-activation"></a>NamedPipe 활성화
 이 샘플에서는 WAS(Windows Process Activation Service)를 사용하는 서비스를 호스트하여 이름 파이프를 통해 통신하는 서비스를 활성화하는 방법을 보여 줍니다. 이 샘플에 따라는 [시작](../../../../docs/framework/wcf/samples/getting-started-sample.md) 으로 이루어지며 [!INCLUDE[wv](../../../../includes/wv-md.md)] 실행 되도록 합니다.  
@@ -160,7 +160,7 @@ Press <ENTER> to terminate client.
   
 2.  수행 했는지 확인는 [Windows Communication Foundation 샘플의 일회 설치 절차](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)합니다.  
   
-     또한 HTTP가 아닌 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 활성화 구성 요소를 설치해야 합니다.  
+     또한 WCF NON-HTTP activation 구성 요소를 설치 해야 합니다.  
   
     1.  **시작** 메뉴 선택 **제어판**합니다.  
   

@@ -2,11 +2,11 @@
 title: ASP.NET 호환성
 ms.date: 03/30/2017
 ms.assetid: c8b51f1e-c096-4c42-ad99-0519887bbbc5
-ms.openlocfilehash: 35d9362fde21faf4998051e85f66fc4ddfb8b94b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: f621a3f13fafee67a015d463898a10aaf9104008
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="aspnet-compatibility"></a>ASP.NET 호환성
 이 샘플을 사용 하도록 설정 하는 방법을 보여 줍니다 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 호환 모드에서 Windows Communication Foundation (WCF). [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 호환 모드에서 실행되는 서비스는 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 응용 프로그램 파이프라인에 완전히 참여하고 파일/URL 권한 부여, 세션 상태 및 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 클래스와 같은 <xref:System.Web.HttpContext> 기능을 활용할 수 있습니다. <xref:System.Web.HttpContext> 클래스는 쿠키, 세션 및 기타 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 기능에 대한 액세스를 허용합니다. 이 모드에서는 바인딩에 HTTP 전송이 사용되고 서비스 자체가 IIS에서 호스트되어야 합니다.  
@@ -59,7 +59,7 @@ public interface ICalculatorSession
  서비스는 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 세션을 사용하여 각 클라이언트 세션의 결과를 저장합니다. 따라서 서비스는 여러 서비스 호출에서 각 클라이언트에 대한 실행 결과를 유지 관리할 수 있습니다.  
   
 > [!NOTE]
->  [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 세션 상태와 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 세션은 전혀 다릅니다.  참조는 [세션](../../../../docs/framework/wcf/samples/session.md) 대 한 자세한 내용은 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 세션입니다.  
+>  [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 세션 상태 및 WCF 세션은 전혀 다릅니다.  참조는 [세션](../../../../docs/framework/wcf/samples/session.md) WCF 세션에 대 한 자세한 내용은 합니다.  
   
  서비스는 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 세션 상태에 크게 의존하며 올바른 작동을 위해 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 호환 모드가 필요합니다. 이러한 요구 사항은 `AspNetCompatibilityRequirements` 특성을 적용하여 선언적으로 표현됩니다.  
   

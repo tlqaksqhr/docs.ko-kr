@@ -8,14 +8,14 @@ helpviewer_keywords:
 - Windows Communication Foundation [WCF], reliable sessions
 - service contracts [WCF], reliable services
 ms.assetid: 07814ed0-0775-47f2-987b-d8134fdd5099
-ms.openlocfilehash: 02e0b8822c29490462fe74803a34222188afc910
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: f98da5db34686e3bf09cc14c42a2ff6b693201f6
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="reliable-services"></a>신뢰할 수 있는 서비스
-큐 및 신뢰할 수 있는 세션은 신뢰할 수 있는 메시징을 구현 하는 Windows Communication Foundation (WCF) 기능입니다. 이 항목에서는 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]의 신뢰할 수 있는 메시징 기능에 대해 설명합니다.  
+큐 및 신뢰할 수 있는 세션은 신뢰할 수 있는 메시징을 구현 하는 Windows Communication Foundation (WCF) 기능입니다. 이 항목에서는 WCF의 신뢰할 수 있는 메시징 기능에 설명 합니다.  
   
  *신뢰할 수 있는 메시징* 방법 신뢰할 수 있는 메시징 소스는 (라는 *소스*) 메시지를 안정적으로 신뢰할 수 있는 메시징 대상 전송 (라는 *대상*).  
   
@@ -25,7 +25,7 @@ ms.lasthandoff: 05/04/2018
   
 -   소스와 대상을 서로 분리합니다. 따라서 소스 및 대상의 실패와 복구를 따로 관리할 수 있으며 소스나 대상을 사용할 수 없는 경우라도 메시지를 안전하게 전송 및 전달할 수 있습니다.  
   
- 하지만 신뢰할 수 있는 메시징에는 대기 시간이 길다는 단점이 있습니다. *대기 시간* 메시지가 소스에서 대상까지 도달 하는 데 걸리는 시간입니다. 따라서[!INCLUDE[indigo2](../../../includes/indigo2-md.md)]에서는 다음과 같은 유형의 신뢰할 수 있는 메시징을 제공합니다.  
+ 하지만 신뢰할 수 있는 메시징에는 대기 시간이 길다는 단점이 있습니다. *대기 시간* 메시지가 소스에서 대상까지 도달 하는 데 걸리는 시간입니다. 따라서 WCF에는 다음과 같은 유형의 신뢰할 수 있는 메시징을 제공합니다.  
   
 -   [신뢰할 수 있는 세션](../../../docs/framework/wcf/feature-details/reliable-sessions.md), 신뢰할 수 있는 전송 대기 시간이 길어진다는 비용 없이 제공 합니다.  
   
@@ -37,7 +37,7 @@ ms.lasthandoff: 05/04/2018
  신뢰할 수 있는 세션은 대기 시간이 짧은 안전한 메시지 전송을 제공하며, TCP가 IP 브리지를 통해 패킷을 지원하는 것과 같이, 프록시나 매개자를 통해 SOAP 메시지를 지원합니다. 신뢰할 수 있는 세션에 대 한 자세한 내용은 참조 [신뢰할 수 있는 세션](../../../docs/framework/wcf/feature-details/reliable-sessions.md)합니다.  
   
 ### <a name="queues"></a>큐  
- [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]의 큐를 사용하면 메시지를 안전하게 전송할 수 있으며 소스와 대상을 분리할 수 있지만 대기 시간이 깁니다. [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 대기 중인 통신은 메시지 큐(MSMQ)의 위에 빌드됩니다.  
+ WCF의 큐 안전 하 게 전송할 메시지와 분리의 원본 및 대상 대기 시간이 길다는 사이입니다. WCF 대기 중인 통신은 기반으로 메시지 큐 (MSMQ) 빌드됩니다.  
   
  MSMQ는 Windows의 선택적 구성 요소로 제공되며 MSMQ 서비스는 Windows 서비스로 실행되고, 소스 대신 전송 큐에서 전송할 메시지를 캡처하여 대상 큐로 배달합니다. 대상 큐는 대상을 대신해 메시지를 수락하고 나중에 대상에서 메시지를 요청할 때 배달합니다. MSMQ 관리자는 전송 중에 메시지가 손실되지 않도록 안전한 메시지 전송 프로토콜을 구현합니다. 이러한 프로토콜에는 네이티브 프로토콜 또는 SRMP(SOAP Reliable Messaging Protocol)라고 하는 SOAP 기반 프로토콜이 해당됩니다.  
   

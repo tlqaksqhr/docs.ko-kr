@@ -5,11 +5,11 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: f2d34e43-fa8b-46d2-91cf-d2960e13e16b
-ms.openlocfilehash: 99d46b19e744190c50a2ba316fe0f59a8f6cf07b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: a9f03419c5c924f129b3ec8580ee25693c218715
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="how-to-create-a-custom-client-identity-verifier"></a>방법: 사용자 지정 클라이언트 ID 검증 도구 만들기
 *identity* 기능 Windows Communication Foundation (WCF) 클라이언트는 서비스의 예상된 id를 미리 지정할 수 있습니다. 서버가 클라이언트에 자신을 인증할 때마다 이 ID와 비교하여 ID가 검사됩니다. (참조에 대 한 id 및 작동 방법 설명은 [서비스 Id 및 인증](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md).)  
@@ -43,7 +43,7 @@ ms.lasthandoff: 05/04/2018
   
 ### <a name="to-implement-the-trygetidentity-method"></a>TryGetIdentity 메서드를 구현하려면  
   
-1.  클라이언트가 <xref:System.ServiceModel.Security.IdentityVerifier.TryGetIdentity%2A> 클래스의 인스턴스를 반환할 수 있는지 여부를 확인하는 <xref:System.ServiceModel.EndpointIdentity> 메서드를 구현합니다. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 인프라는 먼저 메시지에서 서비스의 ID를 가져오기 위해 `TryGetIdentity` 메서드의 구현을 호출합니다. 그런 다음 반환된 `CheckAccess` 및 `EndpointIdentity`와 함께 <xref:System.IdentityModel.Policy.AuthorizationContext> 구현을 호출합니다.  
+1.  클라이언트가 <xref:System.ServiceModel.Security.IdentityVerifier.TryGetIdentity%2A> 클래스의 인스턴스를 반환할 수 있는지 여부를 확인하는 <xref:System.ServiceModel.EndpointIdentity> 메서드를 구현합니다. 구현을 호출 하는 WCF 인프라는 `TryGetIdentity` 메서드는 메시지에서 서비스의 id를 검색 하기 위해 우선 합니다. 그런 다음 반환된 `CheckAccess` 및 `EndpointIdentity`와 함께 <xref:System.IdentityModel.Policy.AuthorizationContext> 구현을 호출합니다.  
   
 2.  `TryGetIdentity` 메서드에서 다음 코드를 입력합니다.  
   

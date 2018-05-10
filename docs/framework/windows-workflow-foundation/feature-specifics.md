@@ -2,17 +2,17 @@
 title: Windows Workflow Foundation 기능 특성
 ms.date: 03/30/2017
 ms.assetid: e84d12da-a055-45f6-b4d1-878d127b46b6
-ms.openlocfilehash: dc3ff5669d23e57685c89937f7c2171053f938ca
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 0f9bc81609379414ce022499e20791073d259cdc
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="windows-workflow-foundation-feature-specifics"></a>Windows Workflow Foundation 기능 특성
 [!INCLUDE[netfx40_long](../../../includes/netfx40-long-md.md)]에서는 Windows Workflow Foundation에 많은 기능을 추가합니다. 이 문서에서는 여러 새로운 기능을 설명하고 이러한 기능이 유용할 수 있는 시나리오에 대한 세부 정보를 제공합니다.  
   
 ## <a name="messaging-activities"></a>메시징 활동  
- 메시징 활동 (<xref:System.ServiceModel.Activities.Receive>, <xref:System.ServiceModel.Activities.SendReply>, <xref:System.ServiceModel.Activities.Send>, <xref:System.ServiceModel.Activities.ReceiveReply>) 보내고 받는 데 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 워크플로와에서 메시지입니다.  <xref:System.ServiceModel.Activities.Receive> 및 <xref:System.ServiceModel.Activities.SendReply> 활동은 표준와 마찬가지로 WSDL을 통해 노출 되는 Windows Communication Foundation (WCF) 서비스 작업을 형성 하는 데 사용 됩니다 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 웹 서비스입니다.  <xref:System.ServiceModel.Activities.Send> 및 <xref:System.ServiceModel.Activities.ReceiveReply> WCF와 유사한 웹 서비스를 사용 하는 데 사용 됩니다 <xref:System.ServiceModel.ChannelFactory>; **서비스 참조 추가** 미리 구성 된 활동을 생성 하는 Workflow Foundation에 대 한 환경도 있습니다.  
+ 메시징 활동 (<xref:System.ServiceModel.Activities.Receive>, <xref:System.ServiceModel.Activities.SendReply>, <xref:System.ServiceModel.Activities.Send>, <xref:System.ServiceModel.Activities.ReceiveReply>) 워크플로와에서 WCF 메시지를 받거나 보내기 위해 사용 됩니다.  <xref:System.ServiceModel.Activities.Receive> 및 <xref:System.ServiceModel.Activities.SendReply> 활동은 표준 WCF 웹 서비스와 마찬가지로 WSDL을 통해 노출 되는 Windows Communication Foundation (WCF) 서비스 작업을 형성 하는 데 사용 됩니다.  <xref:System.ServiceModel.Activities.Send> 및 <xref:System.ServiceModel.Activities.ReceiveReply> WCF와 유사한 웹 서비스를 사용 하는 데 사용 됩니다 <xref:System.ServiceModel.ChannelFactory>; **서비스 참조 추가** 미리 구성 된 활동을 생성 하는 Workflow Foundation에 대 한 환경도 있습니다.  
   
 ### <a name="getting-started-with-messaging-activities"></a>메시징 작업 시작  
   
@@ -34,11 +34,11 @@ ms.lasthandoff: 05/04/2018
  A `BestPriceFinder` 특정 경로 대 한 최상의 티켓 가격을 검색 하기 위해 여러 airline 서비스 서비스를 호출 합니다.  이 시나리오를 구현 가격 요청을 받고, 가격 백 엔드 서비스에서 검색 한 가격이 가격 요청에 회신 하 메시지 활동을 사용 해야 합니다.  또한 해야 최상의 가격을 계산 하기 위한 비즈니스 논리를 만드는 다른 기본 제공 활동을 사용할 수 있습니다.  
   
 ## <a name="workflowservicehost"></a>WorkflowServiceHost  
- <xref:System.ServiceModel.WorkflowServiceHost> 는 여러 인스턴스를 지 원하는 기본 제공 워크플로 호스트 구성 및 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 메시징 (워크플로가 호스팅되기 위해 메시징을 사용할 요구 하지 않음) 하지만 합니다.  서비스 동작의 집합을 통해 지속성, 추적 및 인스턴스 제어와 통합됩니다.  마찬가지로 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]의 <xref:System.ServiceModel.ServiceHost>, <xref:System.ServiceModel.WorkflowServiceHost> 콘솔/WinForms/WPF 응용 프로그램 또는 Windows 서비스에서 자체 호스트 되거나 (.xamlx 파일로) 웹 호스트 될 수 IIS 또는 WAS에서 합니다.  
+ <xref:System.ServiceModel.WorkflowServiceHost> 는 여러 인스턴스, 구성 및 WCF 메시징 (워크플로가 호스팅되기 위해 메시징을 사용할 필요 없지만)를 지 원하는 기본 제공 워크플로 호스트입니다.  서비스 동작의 집합을 통해 지속성, 추적 및 인스턴스 제어와 통합됩니다.  WCF의 동일 하 게 <xref:System.ServiceModel.ServiceHost>, <xref:System.ServiceModel.WorkflowServiceHost> 콘솔/WinForms/WPF 응용 프로그램 또는 Windows 서비스에서 자체 호스트 되거나 (.xamlx 파일로) 웹 호스트 될 수 IIS 또는 WAS에서 합니다.  
   
 ### <a name="getting-started-with-workflow-service-host"></a>워크플로 서비스 호스트 시작  
   
--   Visual Studio 2010에서 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 워크플로 서비스 응용 프로그램 프로젝트를 만듭니다. 이 프로젝트는 웹 호스트 환경에서 <xref:System.ServiceModel.WorkflowServiceHost>를 사용하도록 설정됩니다.  
+-   Visual Studio 2010에서는 WCF 워크플로 서비스 응용 프로그램 프로젝트를 만듭니다:이 프로젝트 사용 하도록 설정 됩니다 <xref:System.ServiceModel.WorkflowServiceHost> 웹 호스트 환경에서 합니다.  
   
 -   메시징이 아닌 워크플로를 호스트하려면 메시지를 기반으로 하는 인스턴스를 만들 사용자 지정 <xref:System.ServiceModel.Activities.WorkflowHostingEndpoint>를 추가합니다.  
   
@@ -92,7 +92,7 @@ ms.lasthandoff: 05/04/2018
  주문 처리 워크플로의 새 주문 만들기 및 프로세스에 있는 기존 주문 업데이트를 처리 하는 데 사용 됩니다.  이 시나리오를 구현 해야 합니다에서 워크플로 호스팅 <xref:System.ServiceModel.WorkflowServiceHost> 메시징 활동을 사용 하 고 있습니다.  또한 필요에 따라 상관 관계는 `orderId` 에 업데이트를 올바른 워크플로에 내용이 있는지 확인 합니다.  
   
 ## <a name="simplified-configuration"></a>단순화된 구성  
- [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 구성 스키마는 복잡하며 찾기 어려운 많은 기능을 사용자에게 제공합니다. [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)]에서는 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 사용자가 다음 기능을 통해 서비스를 구성할 수 있도록 지원하는 데 중점을 두었습니다.  
+ WCF 구성 스키마는 복잡 하며 기능 찾기 어려운 많은 사용자를 제공 합니다. [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)], 초점을 WCF 사용자가 다음 기능을 통해 서비스를 구성할 수 있도록 지원 합니다.  
   
 -   서비스별 명시적 구성의 필요성을 제거합니다. 구성 하지 않으면 \<서비스 > 끝점 집합이 서비스 계약 및 서비스 기준 주소 하나에 자동으로 추가 됩니다 한 다음 모든 끝점에 프로그래밍 방식으로 서비스 및 서비스에 대 한 요소를 정의 하지 않습니다 서비스에 의해 구현 됩니다.  
   
@@ -100,7 +100,7 @@ ms.lasthandoff: 05/04/2018
   
 -   표준 끝점은 하나 이상의 끝점 속성(주소, 바인딩 및 계약)에 대한 고정 값이 있는 미리 구성된 다시 사용 가능 끝점을 정의하며 사용자 지정 속성 정의를 허용합니다.  
   
--   마지막으로, <xref:System.ServiceModel.Configuration.ConfigurationChannelFactory%601>를 사용하면 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 클라이언트 구성을 중앙에서 관리할 수 있으며, 응용 프로그램 도메인 로드 시간 후에 구성이 선택되거나 변경되는 시나리오에서 유용합니다.  
+-   마지막으로 <xref:System.ServiceModel.Configuration.ConfigurationChannelFactory%601> 구성이 있는 선택 되거나 응용 프로그램 도메인 로드 시간 후에 변경할 시나리오에서 유용 WCF 클라이언트 구성을 중앙에서 관리할 수 있습니다.  
   
 ### <a name="getting-started"></a>시작  
   
@@ -116,7 +116,7 @@ ms.lasthandoff: 05/04/2018
   
 ### <a name="simplified-configuration-scenarios"></a>단순화된 구성 시나리오  
   
--   숙련된 ASMX 개발자가 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 사용을 시작하려고 합니다. 하지만 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]는 너무 복잡한 것 같습니다. 구성 파일을 작성하는 데 필요한 모든 정보는 무엇입니까? .NET 4에서는 구성 파일을 전혀 사용하지 않을 수도 있습니다.  
+-   숙련 된 ASMX 개발자는 WCF를 사용 하 여 시작 하려고 합니다. 그러나 WCF 너무 복잡 한 것 같습니다. 구성 파일을 작성하는 데 필요한 모든 정보는 무엇입니까? .NET 4에서는 구성 파일을 전혀 사용하지 않을 수도 있습니다.  
   
 -   기존의 WCF 서비스 집합은 구성 및 유지 관리가 매우 어려웠습니다. 구성 파일에는 수천 줄의 XML 코드가 있으며 수정하는 것이 매우 위험합니다. 관리하기 쉽도록 코드 양을 줄이기 위한 도움이 필요합니다.  
   
@@ -272,7 +272,7 @@ ms.lasthandoff: 05/04/2018
  사용자에게 입력을 요청하는 메시지를 표시해야 합니다. 정상적인 상황에서는 개발자가 <xref:System.Console.ReadLine%2A>과 같은 메서드 호출을 사용하여 사용자 입력을 요청합니다. 이 설치와 관련된 문제는 사용자가 입력할 때까지 프로그램이 기다린다는 것입니다. 이 시나리오에서는 차단 작업의 차단을 해제하기 위해 시간 제한이 필요합니다. 일반적인 시나리오에서는 지정된 기간 내에 작업을 완료해야 합니다. 차단 작업 시간 초과는 Pick에서 많은 값을 추가하는 시나리오입니다.  
   
 ## <a name="wcf-routing-service"></a>WCF 라우팅 서비스  
- 라우팅 서비스는 일반 소프트웨어 방법을 제어할 수 있습니다 라우터 하도록 설계 되었습니다 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]클라이언트와 서비스 사이의 메시지입니다.  라우팅 서비스에서 수 있습니다 클라이언트 서비스에서를 분리 하기 위한 구성 측면에서 훨씬 더 자유롭게를 제공 하 지원할 수 있고 있는지 유연성 서비스를 호스트 하는 방법을 고려 하는 경우.  .NET 3.5에서 클라이언트 및 서비스 된 밀접 하 게; 클라이언트의 모든 통신 하기 위해 필요 하 고 있던 위치 서비스에 대해 알고 해야 했습니다. 또한 .NET Framework 3.5의 WCF에는 다음과 같은 제한이 있었습니다.  
+ 라우팅 서비스는 일반 소프트웨어 라우터 WCFmessages 클라이언트와 서비스 사이의 흐름 방식을 제어할 수 있도록 하도록 설계 되었습니다.  라우팅 서비스에서 수 있습니다 클라이언트 서비스에서를 분리 하기 위한 구성 측면에서 훨씬 더 자유롭게를 제공 하 지원할 수 있고 있는지 유연성 서비스를 호스트 하는 방법을 고려 하는 경우.  .NET 3.5에서 클라이언트 및 서비스 된 밀접 하 게; 클라이언트의 모든 통신 하기 위해 필요 하 고 있던 위치 서비스에 대해 알고 해야 했습니다. 또한 .NET Framework 3.5의 WCF에는 다음과 같은 제한이 있었습니다.  
   
 -   이 논리를 클라이언트 프로그램에 하드 코딩해야 했으므로 오류 처리가 복잡했습니다.  
   
@@ -312,7 +312,7 @@ ms.lasthandoff: 05/04/2018
 -   클라이언트가 서비스를 사용할 수 없는 경우나 오류에 대해 보다 강력하도록 설정할 수 있습니다.  
   
 ## <a name="wcf-discovery"></a>WCF 검색  
- [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Discovery는 검색 메커니즘을 응용 프로그램 인프라에 통합할 수 있는 프레임워크 기술입니다. 이 기술을 사용하여 서비스를 검색 가능하게 만들고 서비스를 검색하도록 클라이언트를 구성할 수 있습니다. 끝점을 사용하여 클라이언트를 더 이상 하드 코딩할 필요가 없으므로 응용 프로그램의 견고성과 내결함성이 강화됩니다. Discovery는 자동 구성 기능을 응용 프로그램에 빌드하는 완벽한 플랫폼입니다.  
+ WCF Discovery는 검색 메커니즘을 응용 프로그램 인프라에 통합할 수 있는 프레임 워크 기술입니다. 이 기술을 사용하여 서비스를 검색 가능하게 만들고 서비스를 검색하도록 클라이언트를 구성할 수 있습니다. 끝점을 사용하여 클라이언트를 더 이상 하드 코딩할 필요가 없으므로 응용 프로그램의 견고성과 내결함성이 강화됩니다. Discovery는 자동 구성 기능을 응용 프로그램에 빌드하는 완벽한 플랫폼입니다.  
   
  이 제품은 WS-Discovery 표준을 기반으로 하며 상호 운용 및 확장 가능한 제네릭으로 디자인되었습니다. 이 제품에서는 다음 두 가지 작업 모드가 지원됩니다.  
   

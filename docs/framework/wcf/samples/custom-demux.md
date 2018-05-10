@@ -2,11 +2,11 @@
 title: 사용자 지정 Demux
 ms.date: 03/30/2017
 ms.assetid: fc54065c-518e-4146-b24a-0fe00038bfa7
-ms.openlocfilehash: 76f8d60fdcc1fcba9942a78138e83104dfcd972b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: e88672f152b87740feef1345b3eac213916a1527
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="custom-demux"></a>사용자 지정 Demux
 이 샘플에서는 MSMQ 메시지 헤더 매핑할 수 있는 방법을 다양 한 서비스 작업에 Windows Communication Foundation (WCF) 사용 하는 서비스를 보여 줍니다. <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding> 에서처럼 하나의 서비스 작업을 사용 하 여 제한 되지 않습니다는 [ 메시지 큐를 Windows Communication Foundation](../../../../docs/framework/wcf/samples/message-queuing-to-wcf.md) 및 [메시지 큐에 Windows Communication Foundation](../../../../docs/framework/wcf/samples/wcf-to-message-queuing.md) 샘플입니다.  
@@ -108,7 +108,7 @@ public static void Main()
  MSMQ 큐 이름은 구성 파일의 appSettings 섹션에 지정됩니다.  
   
 > [!NOTE]
->  큐 이름은 로컬 컴퓨터에 점(.)을, 그 경로에는 백슬래시 구분 기호를 사용합니다. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 끝점 주소는 msmq.formatname 체계를 지정하며 로컬 컴퓨터로 localhost를 사용합니다. 이 체계를 따르는 주소는 MSMQ 형식 이름 주소 지정 지침에 따라 형식이 올바르게 지정된 큐 주소입니다.  
+>  큐 이름은 로컬 컴퓨터에 점(.)을, 그 경로에는 백슬래시 구분 기호를 사용합니다. WCF 끝점 주소는 msmq.formatname 체계를 지정 하 고 로컬 컴퓨터로 localhost를 사용 합니다. 이 체계를 따르는 주소는 MSMQ 형식 이름 주소 지정 지침에 따라 형식이 올바르게 지정된 큐 주소입니다.  
   
 ```xml  
 <appSettings>  

@@ -2,14 +2,14 @@
 title: '전송: UDP'
 ms.date: 03/30/2017
 ms.assetid: 738705de-ad3e-40e0-b363-90305bddb140
-ms.openlocfilehash: 51f445d7f53f70fa206c53835b107da68749e3c2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 4f69730831ec57efc782a95d7412496aa69a4afb
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="transport-udp"></a>전송: UDP
-UDP 전송 샘플을 UDP 유니캐스트 및 멀티 캐스트를 사용자 지정 Windows Communication Foundation (WCF) 전송으로 구현 하는 방법을 보여 줍니다. 이 샘플에서는 채널 프레임워크를 사용하고 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 모범 사례에 따라 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서 사용자 지정 전송을 만드는 권장 절차에 대해 설명합니다. 사용자 지정 전송을 만드는 단계는 다음과 같습니다.  
+UDP 전송 샘플을 UDP 유니캐스트 및 멀티 캐스트를 사용자 지정 Windows Communication Foundation (WCF) 전송으로 구현 하는 방법을 보여 줍니다. 이 샘플에서는 WCF 최선의 구현 방법 및 채널 프레임 워크를 사용 하 여 wcf에서 사용자 지정 전송을 만드는 권장된 절차를 설명 합니다. 사용자 지정 전송을 만드는 단계는 다음과 같습니다.  
   
 1.  채널 결정 [메시지 교환 패턴](#MessageExchangePatterns) (IOutputChannel, IInputChannel, IDuplexChannel, IRequestChannel 또는 IReplyChannel) ChannelFactory 및 ChannelListener를 지원 합니다. 그런 다음 이러한 인터페이스의 세션 변형을 지원할지 여부를 결정합니다.  
   
@@ -49,7 +49,7 @@ UDP 전송 샘플을 UDP 유니캐스트 및 멀티 캐스트를 사용자 지�
 >  UDP 전송의 경우 UDP는 본래 "fire and forget" 프로토콜이므로 데이터그램 MEP만 지원됩니다.  
   
 ### <a name="the-icommunicationobject-and-the-wcf-object-lifecycle"></a>ICommunicationObject 및 WCF 개체 수명 주기  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에는 통신에 사용되는 <xref:System.ServiceModel.Channels.IChannel>, <xref:System.ServiceModel.Channels.IChannelFactory> 및 <xref:System.ServiceModel.Channels.IChannelListener>와 같은 개체의 수명 주기를 관리하는 데 사용되는 일반적인 상태 시스템이 있습니다. 이러한 통신 개체의 상태는 5가지로 나타낼 수 있습니다. 이러한 상태는 <xref:System.ServiceModel.CommunicationState> 열거형으로 나타내며 다음과 같습니다.  
+ WCF는 같은 개체의 수명 주기 관리에 사용 되는 일반적인 상태 시스템이 <xref:System.ServiceModel.Channels.IChannel>, <xref:System.ServiceModel.Channels.IChannelFactory>, 및 <xref:System.ServiceModel.Channels.IChannelListener> 통신에 사용 되는 합니다. 이러한 통신 개체의 상태는 5가지로 나타낼 수 있습니다. 이러한 상태는 <xref:System.ServiceModel.CommunicationState> 열거형으로 나타내며 다음과 같습니다.  
   
 -   Created: <xref:System.ServiceModel.ICommunicationObject>가 처음 인스턴스화되었을 때의 상태입니다. 이 상태에서는 I/O(입/출력)이 발생하지 않습니다.  
   
@@ -67,7 +67,7 @@ UDP 전송 샘플을 UDP 유니캐스트 및 멀티 캐스트를 사용자 지�
   
 <a name="ChannelAndChannelListener"></a>   
 ## <a name="channel-factory-and-channel-listener"></a>채널 팩터리 및 채널 수신기  
- 사용자 지정 전송을 작성하는 다음 단계는 클라이언트 채널을 위한 <xref:System.ServiceModel.Channels.IChannelFactory> 및 서비스 채널을 위한 <xref:System.ServiceModel.Channels.IChannelListener>의 구현을 만드는 것입니다. 채널 계층은 채널을 만들기 위해 팩토리 패턴을 사용합니다. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]은 이 프로세스에 대한 기본 클래스 도우미를 제공합니다.  
+ 사용자 지정 전송을 작성하는 다음 단계는 클라이언트 채널을 위한 <xref:System.ServiceModel.Channels.IChannelFactory> 및 서비스 채널을 위한 <xref:System.ServiceModel.Channels.IChannelListener>의 구현을 만드는 것입니다. 채널 계층은 채널을 만들기 위해 팩토리 패턴을 사용합니다. WCF는이 프로세스에 대 한 기본 클래스 도우미를 제공합니다.  
   
 -   <xref:System.ServiceModel.Channels.CommunicationObject> 클래스는 <xref:System.ServiceModel.ICommunicationObject>를 구현하고 2단계에서 설명한 상태 시스템을 적용합니다. 
 
@@ -256,7 +256,7 @@ AddWSAddressingAssertion(context, encodingBindingElement.MessageVersion.Addressi
   
 -   사용자 지정 바인딩을 통해 사용: 사용자 지정 바인딩에서는 사용자가 임의의 바인딩 요소 집합을 기반으로 직접 바인딩을 만들 수 있습니다.  
   
--   해당 바인딩 요소가 포함된 시스템 제공 바인딩 사용 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서는 `BasicHttpBinding`, `NetTcpBinding`, `WsHttpBinding` 등의 다양한 시스템 정의 바인딩을 제공합니다. 이러한 바인딩 각각은 제대로 정의된 프로필에 연결됩니다.  
+-   해당 바인딩 요소가 포함된 시스템 제공 바인딩 사용 WCF는와 같은 다양 한 시스템 정의 바인딩이 제공 `BasicHttpBinding`, `NetTcpBinding`, 및 `WsHttpBinding`합니다. 이러한 바인딩 각각은 제대로 정의된 프로필에 연결됩니다.  
   
  샘플에서는 `SampleProfileUdpBinding`에서 파생된 <xref:System.ServiceModel.Channels.Binding>의 프로필 바인딩을 구현합니다. `SampleProfileUdpBinding`은 최대 네 개의 바인딩 요소, 즉 `UdpTransportBindingElement`, `TextMessageEncodingBindingElement CompositeDuplexBindingElement` 및 `ReliableSessionBindingElement`를 포함합니다.  
   

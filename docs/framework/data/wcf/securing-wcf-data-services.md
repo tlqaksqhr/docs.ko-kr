@@ -66,7 +66,7 @@ context.Credentials = _
  인터셉터를 사용하면 데이터 서비스 리소스에 대한 요청이 데이터 서비스에 의해 실행되기 전에 이 요청을 가로챌 수 있습니다. 자세한 내용은 참조 [인터셉터](../../../../docs/framework/data/wcf/interceptors-wcf-data-services.md)합니다. 인터셉터를 사용하면 요청을 하는 인증된 사용자를 기준으로 권한 부여 결정을 수행할 수 있습니다. 인증 된 사용자 id에 따라 데이터 서비스 리소스에 대 한 액세스를 제한 하는 방법의 예제를 보려면 [하는 방법: 데이터 서비스 메시지 가로채기](../../../../docs/framework/data/wcf/how-to-intercept-data-service-messages-wcf-data-services.md)합니다.  
   
 ### <a name="restrict-access-to-the-persisted-data-store-and-local-resources"></a>지속형 데이터 저장소 및 로컬 리소스에 대한 액세스 제한  
- 지속형 저장소에 액세스하는 데 사용되는 계정에는 데이터베이스 또는 파일 시스템에서 데이터 서비스의 요구 사항을 지원하기에 충분한 권한만 부여해야 합니다. 익명 인증을 사용하는 경우 이 계정은 호스팅 응용 프로그램을 실행하는 데 사용되는 계정입니다. 자세한 내용은 [How to: Develop a WCF Data Service Running on IIS](../../../../docs/framework/data/wcf/how-to-develop-a-wcf-data-service-running-on-iis.md)을 참조하십시오. 가장을 사용하는 경우에는 인증된 사용자에게 일반적으로 Windows 그룹의 일부인 이러한 리소스에 대한 액세스 권한을 부여해야 합니다.  
+ 지속형 저장소에 액세스하는 데 사용되는 계정에는 데이터베이스 또는 파일 시스템에서 데이터 서비스의 요구 사항을 지원하기에 충분한 권한만 부여해야 합니다. 익명 인증을 사용하는 경우 이 계정은 호스팅 응용 프로그램을 실행하는 데 사용되는 계정입니다. 자세한 내용은 [방법: IIS에서 실행되는 WCF Data Services 개발](../../../../docs/framework/data/wcf/how-to-develop-a-wcf-data-service-running-on-iis.md)을 참조하십시오. 가장을 사용하는 경우에는 인증된 사용자에게 일반적으로 Windows 그룹의 일부인 이러한 리소스에 대한 액세스 권한을 부여해야 합니다.  
   
 ## <a name="other-security-considerations"></a>기타 보안 고려 사항  
   

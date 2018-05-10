@@ -10,20 +10,20 @@ helpviewer_keywords:
 - WSSecurityTokenSerializer class
 - SecurityToken class
 ms.assetid: 6d892973-1558-4115-a9e1-696777776125
-ms.openlocfilehash: eb227075b1a696216e62e851aa8b10c7511ac93f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 2198d5548b09ba05eeb11466a6fd2d3a1262de94
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="how-to-create-a-custom-token"></a>방법: 사용자 지정 토큰 만들기
 이 항목에서는 <xref:System.IdentityModel.Tokens.SecurityToken> 클래스를 사용하여 사용자 지정 보안 토큰을 만들고 사용자 지정 보안 토큰 공급자 및 인증자를 사용하여 통합하는 방법에 대해 설명합니다. 전체 코드 예제에 대 한 참조는 [사용자 지정 토큰](../../../../docs/framework/wcf/samples/custom-token.md) 샘플.  
   
- A *보안 토큰* 기본적으로 SOAP 메시지 안의 발신자에 대 한 클레임을 나타내기 위해 Windows Communication Foundation (WCF) 보안 프레임 워크에서 사용 하는 XML 요소입니다. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 보안은 시스템에서 제공한 인증 모드에 대해 다양한 토큰을 제공합니다. 예를 들면 <xref:System.IdentityModel.Tokens.X509SecurityToken> 클래스에 의해 표시되는 X.509 인증서 보안 토큰과 <xref:System.IdentityModel.Tokens.UserNameSecurityToken> 클래스에 의해 표시되는 사용자 이름 보안 토큰이 있습니다.  
+ A *보안 토큰* 기본적으로 SOAP 메시지 안의 발신자에 대 한 클레임을 나타내기 위해 Windows Communication Foundation (WCF) 보안 프레임 워크에서 사용 하는 XML 요소입니다. WCF 보안 시스템에서 제공한 인증 모드에 대 한 다양 한 토큰을 제공합니다. 예를 들면 <xref:System.IdentityModel.Tokens.X509SecurityToken> 클래스에 의해 표시되는 X.509 인증서 보안 토큰과 <xref:System.IdentityModel.Tokens.UserNameSecurityToken> 클래스에 의해 표시되는 사용자 이름 보안 토큰이 있습니다.  
   
  제공된 형식이 인증 모드나 자격 증명을 지원하지 않는 경우도 있습니다. 그럴 경우 사용자 지정 보안 토큰을 만들어 SOAP 메시지에서 사용자 지정 자격 증명의 XML 표현을 제공해야 합니다.  
   
- 다음 절차에서는 사용자 지정 보안 토큰을 만드는 방법과 이를 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 보안 인프라와 통합하는 방법에 대해 설명합니다. 이 항목에서는 클라이언트의 신용 카드 관련 정보를 서버에 전달하는 데 사용되는 신용 카드 토큰을 만듭니다.  
+ 다음 절차에는 사용자 지정 보안 토큰을 만드는 방법과 WCF 보안 인프라와 통합 하는 방법을 보여 줍니다. 이 항목에서는 클라이언트의 신용 카드 관련 정보를 서버에 전달하는 데 사용되는 신용 카드 토큰을 만듭니다.  
   
  사용자 지정 자격 증명과 보안 토큰 관리자에 대 한 자세한 내용은 참조 [연습: 사용자 지정 클라이언트 만들기 및 서비스 자격 증명](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md)합니다.  
   
@@ -43,7 +43,7 @@ ms.lasthandoff: 05/04/2018
      [!code-csharp[c_CustomToken#4](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customtoken/cs/source.cs#4)]
      [!code-vb[c_CustomToken#4](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customtoken/vb/source.vb#4)]  
   
- 이제 사용자 지정 보안 토큰을 나타내는 클래스를 만들어야 합니다. 이 클래스는 보안 토큰 공급자, 인증자 및 serializer 클래스에서 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 보안 인프라와 보안 토큰 관련 정보를 주고 받는 데 사용합니다.  
+ 이제 사용자 지정 보안 토큰을 나타내는 클래스를 만들어야 합니다. 이 클래스는 WCF 보안 인프라와 보안 토큰에 대 한 정보를 전달 하는 보안 토큰 공급자, 인증자 및 serializer 클래스에서 사용 됩니다.  
   
 #### <a name="to-create-a-custom-security-token-class"></a>사용자 지정 보안 토큰 클래스를 만들려면  
   
@@ -51,14 +51,14 @@ ms.lasthandoff: 05/04/2018
   
 2.  <xref:System.IdentityModel.Tokens.SecurityToken.Id%2A> 속성을 재정의합니다. 이 속성은 SOAP 메시지 내의 다른 요소에서 보안 토큰 XML 표현을 가리키는 데 사용되는 보안 토큰의 로컬 식별자를 가져올 때 사용합니다. 이 예제에서는 토큰 식별자를 생성자 매개 변수로 전달하거나 보안 토큰 인스턴스를 만들 때마다 새 토큰 식별자를 임의로 생성합니다.  
   
-3.  <xref:System.IdentityModel.Tokens.SecurityToken.SecurityKeys%2A> 속성을 구현합니다. 이 속성은 보안 토큰 인스턴스가 나타내는 보안 키 컬렉션을 반환합니다. 이러한 키는 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서 SOAP 메시지 부분을 서명하거나 암호화하는 데 사용할 수 있습니다. 이 예제에서 신용 카드 보안 토큰은 보안 키를 포함할 수 없기 때문에 속성 구현 시 항상 빈 컬렉션을 반환합니다.  
+3.  <xref:System.IdentityModel.Tokens.SecurityToken.SecurityKeys%2A> 속성을 구현합니다. 이 속성은 보안 토큰 인스턴스가 나타내는 보안 키 컬렉션을 반환합니다. SOAP 메시지의 부분을 암호화 하거나 서명 하려면 WCF에서 이러한 키를 사용할 수 있습니다. 이 예제에서 신용 카드 보안 토큰은 보안 키를 포함할 수 없기 때문에 속성 구현 시 항상 빈 컬렉션을 반환합니다.  
   
-4.  <xref:System.IdentityModel.Tokens.SecurityToken.ValidFrom%2A> 및 <xref:System.IdentityModel.Tokens.SecurityToken.ValidTo%2A> 속성을 재정의합니다. 이러한 속성은 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서 보안 토큰 인스턴스의 유효성을 확인하는 데 사용됩니다. 이 예제에서는 신용 카드 보안 토큰에 만료 날짜만 있으므로, `ValidFrom` 속성은 인스턴스를 만든 날짜와 시간을 나타내는 <xref:System.DateTime>을 반환합니다.  
+4.  <xref:System.IdentityModel.Tokens.SecurityToken.ValidFrom%2A> 및 <xref:System.IdentityModel.Tokens.SecurityToken.ValidTo%2A> 속성을 재정의합니다. 이러한 속성은 보안 토큰 인스턴스의 유효성을 확인 하려면 WCF에 의해 사용 됩니다. 이 예제에서는 신용 카드 보안 토큰에 만료 날짜만 있으므로, `ValidFrom` 속성은 인스턴스를 만든 날짜와 시간을 나타내는 <xref:System.DateTime>을 반환합니다.  
   
      [!code-csharp[c_CustomToken#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customtoken/cs/source.cs#1)]
      [!code-vb[c_CustomToken#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customtoken/vb/source.vb#1)]  
   
- 새 보안 토큰 형식을 만들 때 <xref:System.ServiceModel.Security.Tokens.SecurityTokenParameters> 클래스를 구현해야 합니다. 구현은 보안 바인딩 요소 구성에서 새 토큰 형식을 나타내는 데 사용됩니다. 보안 토큰 매개 변수 클래스는 메시지를 처리할 때 실제 보안 토큰 인스턴스를 일치시키는 데 사용되는 템플릿 역할을 합니다. 템플릿은 응용 프로그램에서 사용 또는 인증을 위해 보안 토큰을 일치시켜야 하는 기준을 지정하는 데 사용할 수 있는 추가 속성을 제공합니다. 다음 예제에서는 속성을 추가하지 않으므로, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 인프라에서 사용하거나 유효성을 검사할 보안 토큰 인스턴스를 검색할 때 보안 토큰 형식만 일치시킵니다.  
+ 새 보안 토큰 형식을 만들 때 <xref:System.ServiceModel.Security.Tokens.SecurityTokenParameters> 클래스를 구현해야 합니다. 구현은 보안 바인딩 요소 구성에서 새 토큰 형식을 나타내는 데 사용됩니다. 보안 토큰 매개 변수 클래스는 메시지를 처리할 때 실제 보안 토큰 인스턴스를 일치시키는 데 사용되는 템플릿 역할을 합니다. 템플릿은 응용 프로그램에서 사용 또는 인증을 위해 보안 토큰을 일치시켜야 하는 기준을 지정하는 데 사용할 수 있는 추가 속성을 제공합니다. 다음 예제에서는 WCF 인프라를 사용 하거나 유효성을 검사 하는 보안 토큰 인스턴스를 검색할 때 토큰 유형이 일치 하는 보안에만 추가 속성을 추가 하지 않습니다.  
   
 #### <a name="to-create-a-custom-security-token-parameters-class"></a>사용자 지정 보안 토큰 매개 변수 클래스를 만들려면  
   
@@ -72,17 +72,17 @@ ms.lasthandoff: 05/04/2018
   
 5.  <xref:System.ServiceModel.Security.Tokens.SecurityTokenParameters.SupportsClientWindowsIdentity%2A> 읽기 전용 속성을 구현합니다. 이 속성은 이 클래스에 표시된 보안 토큰 형식을 Windows 계정에 매핑할 수 있는 경우 `true`를 반환합니다. 그럴 경우 인증 결과는 <xref:System.Security.Principal.WindowsIdentity> 클래스 인스턴스에 의해 표시됩니다. 이 예제에서는 토큰을 Windows 계정에 매핑할 수 없습니다.  
   
-6.  <xref:System.ServiceModel.Security.Tokens.SecurityTokenParameters.CreateKeyIdentifierClause%28System.IdentityModel.Tokens.SecurityToken%2CSystem.ServiceModel.Security.Tokens.SecurityTokenReferenceStyle%29> 메서드를 구현합니다. 이 보안 토큰 매개 변수 클래스에 표시되는 보안 토큰 인스턴스에 대한 참조가 필요한 경우 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 보안 프레임워크에 의해 이 메서드가 호출됩니다. 실제 보안 토큰 인스턴스 및 요청 중인 참조 형식을 지정하는 <xref:System.ServiceModel.Security.Tokens.SecurityTokenReferenceStyle>이 모두 이 메서드에 인수로 전달됩니다. 이 예제에서 신용 카드 보안 토큰은 내부 참조만 지원합니다. <xref:System.IdentityModel.Tokens.SecurityToken> 클래스에는 내부 참조를 만드는 기능이 있으므로 구현 시에 추가 코드가 필요하지 않습니다.  
+6.  <xref:System.ServiceModel.Security.Tokens.SecurityTokenParameters.CreateKeyIdentifierClause%28System.IdentityModel.Tokens.SecurityToken%2CSystem.ServiceModel.Security.Tokens.SecurityTokenReferenceStyle%29> 메서드를 구현합니다. 이 메서드는이 보안 토큰 매개 변수 클래스에 의해 표시 되는 보안 토큰 인스턴스에 대 한 참조를 해야 하는 경우 WCF 보안 프레임 워크에서 호출 됩니다. 실제 보안 토큰 인스턴스 및 요청 중인 참조 형식을 지정하는 <xref:System.ServiceModel.Security.Tokens.SecurityTokenReferenceStyle>이 모두 이 메서드에 인수로 전달됩니다. 이 예제에서 신용 카드 보안 토큰은 내부 참조만 지원합니다. <xref:System.IdentityModel.Tokens.SecurityToken> 클래스에는 내부 참조를 만드는 기능이 있으므로 구현 시에 추가 코드가 필요하지 않습니다.  
   
-7.  <xref:System.ServiceModel.Security.Tokens.SecurityTokenParameters.InitializeSecurityTokenRequirement%28System.IdentityModel.Selectors.SecurityTokenRequirement%29> 메서드를 구현합니다. 이 메서드는 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서 보안 토큰 매개 변수 클래스 인스턴스를 <xref:System.IdentityModel.Selectors.SecurityTokenRequirement> 클래스 인스턴스로 변환할 때 호출됩니다. 결과는 보안 토큰 공급자가 해당 보안 토큰 인스턴스를 만드는 데 사용됩니다.  
+7.  <xref:System.ServiceModel.Security.Tokens.SecurityTokenParameters.InitializeSecurityTokenRequirement%28System.IdentityModel.Selectors.SecurityTokenRequirement%29> 메서드를 구현합니다. 이 메서드는 WCF의 인스턴스로 보안 토큰 매개 변수 클래스 인스턴스를 변환 하는 <xref:System.IdentityModel.Selectors.SecurityTokenRequirement> 클래스입니다. 결과는 보안 토큰 공급자가 해당 보안 토큰 인스턴스를 만드는 데 사용됩니다.  
   
      [!code-csharp[c_CustomToken#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customtoken/cs/source.cs#2)]
      [!code-vb[c_CustomToken#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customtoken/vb/source.vb#2)]  
   
- 보안 토큰은 SOAP 메시지 내부에서 전송되며, 메모리 내 보안 토큰 표시와 통신 중 표현 간의 변환 메커니즘이 필요합니다. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서는 보안 토큰 serializer를 사용하여 이 작업을 수행합니다. 모든 사용자 지정 토큰은 SOAP 메시지로부터 사용자 지정 보안 토큰을 serialize 및 deserialize할 수 있는 사용자 지정 보안 토큰 serializer와 함께 표시되어야 합니다.  
+ 보안 토큰은 SOAP 메시지 내부에서 전송되며, 메모리 내 보안 토큰 표시와 통신 중 표현 간의 변환 메커니즘이 필요합니다. WCF 보안 토큰 serializer를 사용 하 여이 작업을 수행 합니다. 모든 사용자 지정 토큰은 SOAP 메시지로부터 사용자 지정 보안 토큰을 serialize 및 deserialize할 수 있는 사용자 지정 보안 토큰 serializer와 함께 표시되어야 합니다.  
   
 > [!NOTE]
->  파생 키는 기본적으로 활성화됩니다. 사용자 지정 보안 토큰을 만들고 주 토큰으로 사용하면 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서 해당 토큰에서 키를 파생시킵니다. 이때 사용자 지정 보안 토큰 serializer를 호출하여 <xref:System.IdentityModel.Tokens.SecurityKeyIdentifierClause>을 네트워크에 serialize하는 동안 사용자 지정 보안 토큰에 대해 `DerivedKeyToken`을 작성합니다. 받는 측에서는 연결이 끊어진 상태에서 토큰을 deserialize하면 `DerivedKeyToken` serializer에서 `SecurityTokenReference` 요소를 자체의 최상위 자식으로 예상합니다. 사용자 지정 보안 토큰 serializer가 해당 절 형식을 serialize하는 동안 `SecurityTokenReference` 요소를 추가하지 않으면 예외가 throw됩니다.  
+>  파생 키는 기본적으로 활성화됩니다. 사용자 지정 보안 토큰을 만들고 주 토큰으로 사용 하는 경우 WCF에서 키를 파생 합니다. 이때 사용자 지정 보안 토큰 serializer를 호출하여 <xref:System.IdentityModel.Tokens.SecurityKeyIdentifierClause>을 네트워크에 serialize하는 동안 사용자 지정 보안 토큰에 대해 `DerivedKeyToken`을 작성합니다. 받는 측에서는 연결이 끊어진 상태에서 토큰을 deserialize하면 `DerivedKeyToken` serializer에서 `SecurityTokenReference` 요소를 자체의 최상위 자식으로 예상합니다. 사용자 지정 보안 토큰 serializer가 해당 절 형식을 serialize하는 동안 `SecurityTokenReference` 요소를 추가하지 않으면 예외가 throw됩니다.  
   
 #### <a name="to-create-a-custom-security-token-serializer"></a>사용자 지정 보안 토큰 serializer를 만들려면  
   
@@ -138,7 +138,7 @@ ms.lasthandoff: 05/04/2018
      [!code-csharp[c_customToken#11](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customtoken/cs/source.cs#11)]
      [!code-vb[c_customToken#11](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customtoken/vb/source.vb#11)]  
   
- 앞에서 만든 사용자 지정 보안 토큰 매개 변수 클래스는 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 보안 프레임워크에 서비스와 통신할 때 사용자 지정 보안 토큰을 사용하도록 지시하는 데 사용됩니다. 다음 절차는 이 작업을 수행하는 방법을 보여 줍니다.  
+ 이전에 만든 사용자 지정 보안 토큰 매개 변수 클래스를 WCF 보안 프레임 워크는 서비스와 통신할 때 사용자 지정 보안 토큰을 사용 해야 사용 됩니다. 다음 절차는 이 작업을 수행하는 방법을 보여 줍니다.  
   
 #### <a name="to-integrate-the-custom-security-token-with-the-binding"></a>사용자 지정 보안 토큰을 바인딩과 통합하려면  
   

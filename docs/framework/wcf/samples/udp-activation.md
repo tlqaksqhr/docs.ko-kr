@@ -2,11 +2,11 @@
 title: UDP 활성화
 ms.date: 03/30/2017
 ms.assetid: 4b0ccd10-0dfb-4603-93f9-f0857c581cb7
-ms.openlocfilehash: 6dd1ee02b51dc969af0ba1bc418b7fb20f6f0ed6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 9f7600bff17c015f28c3fb94ed5360561d45c65b
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="udp-activation"></a>UDP 활성화
 이 샘플에 따라는 [전송: UDP](../../../../docs/framework/wcf/samples/transport-udp.md) 샘플. 확장 된 [전송: UDP](../../../../docs/framework/wcf/samples/transport-udp.md) 샘플은 WAS Windows Process Activation Service ()를 사용 하 여 프로세스 활성화를 지원 하도록 합니다.  
@@ -20,7 +20,7 @@ ms.lasthandoff: 05/04/2018
 -   WAS에서 활성화한 작업자 프로세스에서 호스팅되고 UDP 사용자 지정 전송을 통해 메시지를 수신하는 서비스  
   
 ## <a name="udp-protocol-activator"></a>UDP 프로토콜 활성기  
- UDP 프로토콜 활성기는 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 클라이언트와 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 서비스 간을 연결해 주는 역할을 하며 전송 계층에서 UDP 프로토콜을 통한 데이터 통신을 제공합니다. 주요 기능 두 가지는 다음과 같습니다.  
+ UDP 프로토콜 활성기는 WCF 클라이언트와 WCF 서비스 간의 브리지입니다. 전송 계층에서 UDP 프로토콜을 통한 데이터 통신을 제공합니다. 주요 기능 두 가지는 다음과 같습니다.  
   
 -   WAS LA(수신기 어댑터) - 들어오는 메시지에 대한 응답으로 WAS와 공동 작업하여 프로세스를 활성화합니다.  
   
@@ -55,7 +55,7 @@ ms.lasthandoff: 05/04/2018
  UDP 프로토콜 수신기는 가상 응용 프로그램을 대신하여 UDP 끝점에서 수신 대기하는 프로토콜 활성기 내에 있는 모듈입니다. 이 수신기는 `UdpSocketListener` 클래스에서 구현됩니다. 끝점은 사이트의 프로토콜 바인딩에서 포트 번호가 추출되는 `IPEndpoint`로 표시됩니다.  
   
 ### <a name="control-service"></a>제어 서비스  
- 이 샘플에서는 활성기와 WAS 작업자 프로세스 간에 통신하는 데 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]를 사용합니다. 활성기에 상주하는 서비스를 제어 서비스라고 합니다.  
+ 이 샘플에서는 활성기와 WAS 작업자 프로세스 간에 통신 WCF 사용 합니다. 활성기에 상주하는 서비스를 제어 서비스라고 합니다.  
   
 ## <a name="protocol-handlers"></a>프로토콜 처리기  
  수신기 어댑터가 `WebhostOpenListenerChannelInstance`를 호출한 후 WAS 프로세스 관리자는 작업자 프로세스를 시작합니다(시작되지 않은 경우). 그런 다음 작업자 프로세스 내부의 응용 프로그램 관리자는 해당 `ListenerChannelId`에 대한 요청과 함께 UDP PPH(프로세스 프로토콜 처리기)를 로드합니다. 호출에는 PPH `IAdphManager`합니다.`StartAppDomainProtocolListenerChannel` UDP AppDomain 프로토콜 처리기 ADPH ()를 시작 합니다.  

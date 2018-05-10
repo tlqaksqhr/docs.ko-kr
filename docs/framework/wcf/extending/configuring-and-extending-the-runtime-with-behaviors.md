@@ -4,17 +4,17 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - attaching extensions using behaviors [WCF]
 ms.assetid: 149b99b6-6eb6-4f45-be22-c967279677d9
-ms.openlocfilehash: 05fd96574f072f8e349f83d11aca20bc5269dfc7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: af95fa01fc9caffb8a4f0e85d3457c7f3fa60320
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="configuring-and-extending-the-runtime-with-behaviors"></a>동작을 사용하여 런타임 구성 및 확장
 동작을 사용 하 여 기본 동작을 검사 하 고 서비스 구성의 유효성을 검사 하거나 Windows Communication Foundation (WCF) 클라이언트와 서비스 응용 프로그램에서 런타임 동작을 수정 하는 사용자 지정 확장을 추가할 수 있습니다. 이 항목에서는 동작 인터페이스에 대해 설명하고 이를 구현하는 방법 및 프로그래밍 방식이나 구성 파일을 통해 서비스 응용 프로그램의 서비스 설명 또는 클라이언트 응용 프로그램의 끝점에 추가하는 방법에 대해 설명합니다. 시스템 제공 동작을 사용 하는 방법에 대 한 자세한 내용은 참조 [서비스 런타임 동작 지정](../../../../docs/framework/wcf/specifying-service-run-time-behavior.md) 및 [클라이언트 런타임 동작 지정](../../../../docs/framework/wcf/specifying-client-run-time-behavior.md)합니다.  
   
 ## <a name="behaviors"></a>동작  
- 동작 형식은 서비스 또는 서비스 끝점 설명 개체에 추가 됩니다 (서비스 또는 클라이언트에서 각각) 해당 개체는 Windows Communication Foundation (WCF)에서 실행 되는 런타임을 만들기 위해 사용 전에 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 서비스나는 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 클라이언트입니다. 런타임 생성이 처리되는 동안 이러한 동작이 호출되면 동작은 계약, 바인딩 및 주소에 의해 생성된 런타임을 수정하는 메서드 및 런타임 속성에 액세스할 수 있습니다.  
+ 동작 형식은 서비스 또는 서비스 끝점 설명 개체에 추가 됩니다 (서비스 또는 클라이언트에서 각각) 해당 개체는 Windows Communication Foundation (WCF)에서 WCF 서비스 또는 WCF 클라이언트를 실행 하는 런타임을 만들기 위해 사용 전에 합니다. 런타임 생성이 처리되는 동안 이러한 동작이 호출되면 동작은 계약, 바인딩 및 주소에 의해 생성된 런타임을 수정하는 메서드 및 런타임 속성에 액세스할 수 있습니다.  
   
 ### <a name="behavior-methods"></a>동작 메서드  
  모든 동작에는 `AddBindingParameters` 메서드, `ApplyDispatchBehavior` 메서드, `Validate` 메서드 및 `ApplyClientBehavior` 메서드가 있지만, 한 가지 예외가 있습니다. <xref:System.ServiceModel.Description.IServiceBehavior>는 클라이언트에서 실행되지 않기 때문에 `ApplyClientBehavior`를 구현하지 못합니다.  
@@ -33,9 +33,9 @@ ms.lasthandoff: 05/04/2018
 > [!NOTE]
 >  런타임 속성과 확장명 형식에는 클라이언트의 실행 동작을 수정 하는 데 사용할 수 있는 논의 알려면 [클라이언트 확장](../../../../docs/framework/wcf/extending/extending-clients.md)합니다. 런타임 속성 및 확장 형식 서비스 발송자의 실행 동작을 수정 하는 데 사용할 수 있는 논의 알려면 [디스패처 확장](../../../../docs/framework/wcf/extending/extending-dispatchers.md)합니다.  
   
- 대부분의 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 사용자는 런타임과 직접 상호 작용하지 않습니다. 대신 끝점, 계약, 바인딩, 주소 및 구성 파일에 있는 동작이나 클래스의 동작 특성과 같은 핵심 프로그래밍 모델 구문을 사용합니다. 이러한 구문에서 *설명 트리에*, 되는 서비스를 지 원하는 런타임을 생성 하기 위한 완전 한 사양 또는 클라이언트 트리란 자신이 설명 하 고 설명 합니다.  
+ 대부분의 WCF 사용자 수행 하지는 런타임과 직접 상호 작용; 대신 프로그래밍 모델 구문을 끝점, 계약, 바인딩, 주소 및 구성 파일에 있는 동작이 나 클래스의 동작 특성과 같은 핵심을 사용 합니다. 이러한 구문에서 *설명 트리에*, 되는 서비스를 지 원하는 런타임을 생성 하기 위한 완전 한 사양 또는 클라이언트 트리란 자신이 설명 하 고 설명 합니다.  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에는 다음과 같은 네 가지 종류의 동작이 있습니다.  
+ WCF에서 동작의 네 가지 종류가 있습니다.  
   
 -   서비스 동작(<xref:System.ServiceModel.Description.IServiceBehavior> 형식)을 사용하면 <xref:System.ServiceModel.ServiceHostBase>를 비롯한 전체 서비스 런타임을 사용자 지정할 수 있습니다.  
   
@@ -64,24 +64,24 @@ ms.lasthandoff: 05/04/2018
   
 3.  구성을 확장하는 사용자 지정 <xref:System.ServiceModel.Configuration.BehaviorExtensionElement> 구현. 이를 통해 응용 프로그램 구성 파일에서 서비스 동작을 사용할 수 있습니다.  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]의 서비스 동작 예제에는 <xref:System.ServiceModel.ServiceBehaviorAttribute> 특성과 <xref:System.ServiceModel.Description.ServiceThrottlingBehavior>, <xref:System.ServiceModel.Description.ServiceMetadataBehavior> 및  동작이 포함되어 있습니다.  
+ WCF 서비스 동작의 예로 <xref:System.ServiceModel.ServiceBehaviorAttribute> 특성에는 <xref:System.ServiceModel.Description.ServiceThrottlingBehavior>, 및 <xref:System.ServiceModel.Description.ServiceMetadataBehavior> 동작 합니다.  
   
 #### <a name="contract-behaviors"></a>계약 동작  
  <xref:System.ServiceModel.Description.IContractBehavior> 인터페이스를 구현하는 계약 동작은 계약에서 클라이언트와 서비스 런타임을 모두 확장하는 데 사용됩니다.  
   
- 계약 동작을 계약에 추가하는 데는 다음과 같은 두 가지 메커니즘이 있습니다.  첫 번째 메커니즘에서는 계약 인터페이스에 사용될 사용자 지정 특성을 만듭니다. 계약 인터페이스가 <xref:System.ServiceModel.ServiceHost> 또는 <xref:System.ServiceModel.ChannelFactory%601>에 전달되면 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서 인터페이스의 특성을 검사합니다. <xref:System.ServiceModel.Description.IContractBehavior>를 구현하는 특성이 있는 경우 해당 인터페이스용으로 만들어진 <xref:System.ServiceModel.Description.ContractDescription?displayProperty=nameWithType>의 동작 컬렉션에 해당 특성이 추가됩니다.  
+ 계약 동작을 계약에 추가하는 데는 다음과 같은 두 가지 메커니즘이 있습니다.  첫 번째 메커니즘에서는 계약 인터페이스에 사용될 사용자 지정 특성을 만듭니다. 때 계약 인터페이스에 전달 되는 <xref:System.ServiceModel.ServiceHost> 또는 <xref:System.ServiceModel.ChannelFactory%601>, WCF 인터페이스에서 특성을 확인 합니다. <xref:System.ServiceModel.Description.IContractBehavior>를 구현하는 특성이 있는 경우 해당 인터페이스용으로 만들어진 <xref:System.ServiceModel.Description.ContractDescription?displayProperty=nameWithType>의 동작 컬렉션에 해당 특성이 추가됩니다.  
   
  사용자 지정 계약 동작 특성에 대한 <xref:System.ServiceModel.Description.IContractBehaviorAttribute?displayProperty=nameWithType>를 구현할 수도 있습니다. 이 경우 적용되는 동작은 다음과 같습니다.  
   
- • 계약 인터페이스. 이 경우 모든 끝점에서 해당 형식의 모든 계약에 동작이 적용되고 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서는 <xref:System.ServiceModel.Description.IContractBehaviorAttribute.TargetContract%2A?displayProperty=nameWithType> 속성 값을 무시합니다.  
+ • 계약 인터페이스. 이 경우 모든 끝점에서 해당 형식의 모든 계약에 동작이 적용 되 고 WCF의 값을 무시 된 <xref:System.ServiceModel.Description.IContractBehaviorAttribute.TargetContract%2A?displayProperty=nameWithType> 속성입니다.  
   
  • 서비스 클래스. 이 경우 해당 계약이 <xref:System.ServiceModel.Description.IContractBehaviorAttribute.TargetContract%2A> 속성 값인 끝점에만 동작이 적용됩니다.  
   
- • 콜백 클래스. 이 경우 이중 클라이언트의 끝점에 동작이 적용되고 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서 <xref:System.ServiceModel.Description.IContractBehaviorAttribute.TargetContract%2A> 속성 값을 무시합니다.  
+ • 콜백 클래스. 이 경우 이중 클라이언트의 끝점에 동작이 적용 되 고 WCF의 값을 무시 된 <xref:System.ServiceModel.Description.IContractBehaviorAttribute.TargetContract%2A> 속성입니다.  
   
  두 번째 메커니즘에서는 <xref:System.ServiceModel.Description.ContractDescription>의 동작 컬렉션에 동작을 추가합니다.  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]의 계약 동작 예제에는 <xref:System.ServiceModel.DeliveryRequirementsAttribute?displayProperty=nameWithType> 특성이 포함됩니다. 자세한 내용 및 예제는 참조 항목을 참조하십시오.  
+ WCF의 계약 동작의 예로 <xref:System.ServiceModel.DeliveryRequirementsAttribute?displayProperty=nameWithType> 특성입니다. 자세한 내용 및 예제는 참조 항목을 참조하십시오.  
   
 #### <a name="endpoint-behaviors"></a>끝점 동작  
  <xref:System.ServiceModel.Description.IEndpointBehavior>를 구현하는 끝점 동작은 특정 끝점에 대한 전체 서비스 또는 클라이언트 런타임을 수정할 수 있는 기본 메커니즘입니다.  
@@ -97,11 +97,11 @@ ms.lasthandoff: 05/04/2018
 #### <a name="operation-behaviors"></a>작업 동작  
  <xref:System.ServiceModel.Description.IOperationBehavior> 인터페이스를 구현하는 작업 동작은 각 작업에 대해 클라이언트와 서비스 런타임을 모두 확장하는 데 사용됩니다.  
   
- 작업 동작을 작업에 추가하는 데는 다음과 같은 두 가지 메커니즘이 있습니다. 첫 번째 메커니즘에서는 작업을 모델링하는 메서드에서 사용될 사용자 지정 특성을 만듭니다. 작업을 <xref:System.ServiceModel.ServiceHost> 또는 <xref:System.ServiceModel.ChannelFactory>에 추가하면, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서는 해당 작업용으로 만들어진 <xref:System.ServiceModel.Description.IOperationBehavior>의 동작 컬렉션에 <xref:System.ServiceModel.Description.OperationDescription> 특성을 추가합니다.  
+ 작업 동작을 작업에 추가하는 데는 다음과 같은 두 가지 메커니즘이 있습니다. 첫 번째 메커니즘에서는 작업을 모델링하는 메서드에서 사용될 사용자 지정 특성을 만듭니다. 작업 중 하나에 추가 하면는 <xref:System.ServiceModel.ServiceHost> 또는 <xref:System.ServiceModel.ChannelFactory>, WCF에서는 <xref:System.ServiceModel.Description.IOperationBehavior> 에 특성의 동작 컬렉션에는 <xref:System.ServiceModel.Description.OperationDescription> 해당 작업용으로 만들어진 합니다.  
   
  두 번째 메커니즘에서는 생성된 <xref:System.ServiceModel.Description.OperationDescription>의 동작 컬렉션에 동작을 직접 추가합니다.  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]의 작업 동작 예제에는 <xref:System.ServiceModel.OperationBehaviorAttribute>와 <xref:System.ServiceModel.TransactionFlowAttribute>가 포함됩니다.  
+ WCF의 작업 동작의 예로 <xref:System.ServiceModel.OperationBehaviorAttribute> 및 <xref:System.ServiceModel.TransactionFlowAttribute>합니다.  
   
  자세한 내용 및 예제는 참조 항목을 참조하십시오.  
   

@@ -2,17 +2,17 @@
 title: 계층적 구성 모델
 ms.date: 03/30/2017
 ms.assetid: 28dcc698-226c-4b77-9e51-8bf45a36216c
-ms.openlocfilehash: 4debeaf0bfd2558552a7943f3767a4f9b53ce550
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 233a8d4ba36835ab26e0c4a8cd044cf60d497a0b
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="hierarchical-configuration-model"></a>계층적 구성 모델
 이 샘플에서는 서비스의 구성 파일 계층 구조를 구현하는 방법을 보여 줍니다. 또한 계층 구조의 상위 수준에서 바인딩, 서비스 동작 및 끝점 동작이 상속되는 방식을 보여 줍니다.  
   
 ## <a name="sample-details"></a>샘플 세부 정보  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서 [!INCLUDE[netfx40_long](../../../../includes/netfx40-long-md.md)]용으로 개발된 기능 중 하나는 향상된 계층적 구성 모델입니다. 계층적 구성 모델의 예로는 Machine.config -> Rootweb.config -> Web.config로 정의되는 구성 모델이 있습니다. [!INCLUDE[netfx40_short](../../../../includes/netfx40-short-md.md)]에서는 명시적으로 구성할 필요 없이 구성 계층 구조의 상위 수준에 정의된 바인딩 및 동작이 서비스에 추가됩니다. 이 샘플에서는 컴퓨터 또는 응용 프로그램 수준에 정의된 구성 요소를 사용하여 서비스 구성을 단순화하는 방법을 보여 줍니다.  
+ WCF에 용으로 개발 된 기능 중 하나는 [!INCLUDE[netfx40_long](../../../../includes/netfx40-long-md.md)] 는 향상 된 계층적 구성 모델입니다. 계층적 구성 모델의 예로는 Machine.config -> Rootweb.config -> Web.config로 정의되는 구성 모델이 있습니다. [!INCLUDE[netfx40_short](../../../../includes/netfx40-short-md.md)]에서는 명시적으로 구성할 필요 없이 구성 계층 구조의 상위 수준에 정의된 바인딩 및 동작이 서비스에 추가됩니다. 이 샘플에서는 컴퓨터 또는 응용 프로그램 수준에 정의된 구성 요소를 사용하여 서비스 구성을 단순화하는 방법을 보여 줍니다.  
   
  이 샘플은 계층 구조의 세 수준에 정의된 9개의 서비스로 구성되어 있습니다. `Service1`은 루트에 있습니다. `Service2` 및 `Service3`는 `Service1`에서 기본 요소를 상속합니다. `Service4`, `Service5`, `Service6` 및 `Service7`은 계층 구조의 세 번째 수준에 정의되어 있으며 `Service3`에서 기본 요소를 상속합니다. 마지막으로 `Service10` 및 `Service11`은 계층 구조의 네 번째 수준에 있습니다.  
   

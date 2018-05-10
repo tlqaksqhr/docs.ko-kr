@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - data contracts [WCF], surrogates
 ms.assetid: 8c31134c-46c5-4ed7-94af-bab0ac0dfce5
-ms.openlocfilehash: 455900b1ac5d10c02e6b1341e737eb6874c874f4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: b06cb45d6075c8de1da973a11e2edec6792df304
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="data-contract-surrogates"></a>데이터 계약 서로게이트
 데이터 계약 *서로게이트* 데이터 계약 모델을 기반으로 하는 고급 기능입니다. 이 기능은 사용자가 형식을 메타데이터에 나타내거나 serialize 또는 deserialize하는 방식을 변경하려는 경우 형식 사용자 지정 및 대체에 사용하도록 디자인되었습니다. 서로게이트는 데이터 계약이 형식에 대해 지정되지 않은 경우, 필드와 속성에 <xref:System.Runtime.Serialization.DataMemberAttribute> 특성이 표시되지 않은 경우 또는 사용자가 스키마 변형을 동적으로 만들려는 경우 사용할 수 있습니다.  
@@ -133,7 +133,7 @@ ms.lasthandoff: 05/04/2018
  해당 메서드는 스키마 내보내기 및 가져오기를 시작할 때 호출됩니다. 이 메서드는 내보내거나 가져온 스키마에 사용되는 사용자 지정 데이터 형식을 반환합니다. 이 메서드는 형식의 컬렉션인 <xref:System.Collections.ObjectModel.Collection%601>(`customDataTypes` 매개 변수)에 전달됩니다. 메서드는 알려진 추가 형식을 이 컬렉션에 추가해야 합니다. 알려진 사용자 지정 데이터 형식은 <xref:System.Runtime.Serialization.DataContractSerializer>를 사용하여 사용자 지정 데이터의 serialization 및 deserialization을 활성화하는 데 필요합니다. 자세한 내용은 참조 [데이터 계약 알려진 형식을](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)합니다.  
   
 ## <a name="implementing-a-surrogate"></a>서로게이트 구현  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 내에서 데이터 계약 서로게이트를 사용하려면 몇 가지 특수한 프로시저를 수행해야 합니다.  
+ WCF 내에서 데이터 계약 서로게이트를 사용 하려면 몇 가지 특수 절차를 따라야 합니다.  
   
 ### <a name="to-use-a-surrogate-for-serialization-and-deserialization"></a>Serialization 및 Deserialization에 서로게이트를 사용하려면  
  <xref:System.Runtime.Serialization.DataContractSerializer>를 사용하여 서로게이트를 통해 데이터의 serialization 및 deserialization을 수행합니다. <xref:System.Runtime.Serialization.DataContractSerializer>는 <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior>에 의해 만들어집니다. 서로게이트도 지정해야 합니다.  
@@ -174,7 +174,7 @@ ms.lasthandoff: 05/04/2018
      [!code-csharp[C_IDataContractSurrogate#9](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_idatacontractsurrogate/cs/source.cs#9)]  
   
 ### <a name="to-use-a-surrogate-for-metadata-export"></a>메타데이터 내보내기에 서로게이트를 사용하려면  
- 기본적으로 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서 서비스에 대한 메타데이터를 내보낼 때 WSDL 및 XSD 스키마를 모두 생성해야 합니다. 데이터 계약 형식, <xref:System.Runtime.Serialization.XsdDataContractExporter>에 대한 XSD 스키마를 생성하는 구성 요소에 서로게이트를 추가해야 합니다. 이 작업을 수행하려면 <xref:System.ServiceModel.Description.IWsdlExportExtension>을 구현하는 동작을 사용하여 <xref:System.ServiceModel.Description.WsdlExporter>를 수정하거나 메타데이터 내보내기에 사용된 <xref:System.ServiceModel.Description.WsdlExporter>를 직접 수정합니다.  
+ 기본적으로 wcf에서 서비스에 대 한 메타 데이터를 내보낼 때을 모두 WSDL 및 XSD 스키마를 생성 해야 합니다. 데이터 계약 형식, <xref:System.Runtime.Serialization.XsdDataContractExporter>에 대한 XSD 스키마를 생성하는 구성 요소에 서로게이트를 추가해야 합니다. 이 작업을 수행하려면 <xref:System.ServiceModel.Description.IWsdlExportExtension>을 구현하는 동작을 사용하여 <xref:System.ServiceModel.Description.WsdlExporter>를 수정하거나 메타데이터 내보내기에 사용된 <xref:System.ServiceModel.Description.WsdlExporter>를 직접 수정합니다.  
   
 ##### <a name="to-use-a-surrogate-for-metadata-export"></a>메타데이터 내보내기에 서로게이트를 사용하려면  
   

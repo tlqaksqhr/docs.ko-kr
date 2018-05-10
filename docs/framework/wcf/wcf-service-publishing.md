@@ -2,19 +2,19 @@
 title: WCF 서비스 게시
 ms.date: 03/30/2017
 ms.assetid: c806b253-cd47-4b96-b831-e73cbf08808f
-ms.openlocfilehash: 9f76ab11e9697fc5af5c507d4dc9d944c433c918
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 258c7e65b69648477e58880f35b100a9378dc9c0
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="wcf-service-publishing"></a>WCF 서비스 게시
-Windows Communication Foundation (WCF) 서비스 게시 하는 데 도움이에서 제공 하는 초기 개발 환경에서 진행 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 서비스 호스트 및 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 테스트 클라이언트를 프로덕션 환경에 응용 프로그램을 실제로 배포를 테스트 목적으로 환경입니다. 최종 배포 계획에 커밋하기 전에 사용할 수 있습니다 Windows Communication Foundation (WCF) 서비스 게시 되었는지 확인 하 여 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 서비스가 올바르게 수행 되 고 게시할 준비가 됩니다. 또한 테스트 목적으로 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 서비스 라이브러리를 여러 대상 위치에 배포할 수도 있습니다.  
+Windows Communication Foundation (WCF) 서비스 게시 사용 하면 실제로 테스트 목적으로 프로덕션 환경에 응용 프로그램을 배포 하려면 WCF 서비스 호스트 및 WCF 테스트 클라이언트에서 제공 하는 초기 개발 환경에서 진행 하 고 있습니다. 최종 배포 계획에 커밋하기 전에 사용할 수 있습니다 Windows Communication Foundation (WCF) 서비스 게시 WCF 서비스가 올바르게 수행 하 고 게시할 준비가 됩니다. 또한 WCF 서비스 라이브러리를 테스트 하기 위한 다양 한 대상 위치에 배포할 수 있습니다.  
   
 ## <a name="supported-services-and-target-locations"></a>지원되는 서비스 및 대상 위치  
- [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 서비스 게시에서는 다음과 같은 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 서비스 라이브러리 템플릿 집합과 해당하는 항목 템플릿에서 만든 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 서비스를 게시할 수 있습니다.  
+ WCF 서비스 게시는 WCF 서비스 라이브러리 템플릿 및 다음과 같은 해당 항목 템플릿 집합에서 생성 하는 WCF 서비스 게시를 지원 합니다.  
   
--   [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 서비스 라이브러리 템플릿과 항목 템플릿  
+-   WCF 서비스 라이브러리 템플릿과 항목 템플릿  
   
 -   배포 서비스 라이브러리  
   
@@ -43,31 +43,31 @@ Windows Communication Foundation (WCF) 서비스 게시 하는 데 도움이에�
   
  사용할 수 있습니다 **게시** 을 어셈블리, 구성 및 대상 위치에 프로젝트에 정의 된 모든 서비스에 대 한.svc 파일을 복사 하려면 지정한 대상에 기존 파일을 덮어씁니다.  
   
- 응용 프로그램을 로컬 IIS에 배포하도록 선택하면 IIS 설치와 관련된 오류가 발생할 수 있습니다. IIS가 제대로 설치되었는지 확인하세요. "하이퍼링크"를 입력할 수 있습니다http://localhost" http://localhost" 브라우저에서 확인 여부를 IIS 기본 페이지가 표시 합니다.  경우에 따라 IIS에서 ASP.NET 또는 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]의 잘못된 등록 때문에 문제가 발생할 수도 있습니다. Visual Studio 명령 프롬프트를 열고 및 ASP.NET 등록 문제를 해결 하는 명령 "aspnet_regiis.exe-ir"를 실행 하거나 "ServiceModelReg.exe – ia" 명령을 실행 하는 WCF 등록 문제를 해결 수 있습니다.  
+ 응용 프로그램을 로컬 IIS에 배포하도록 선택하면 IIS 설치와 관련된 오류가 발생할 수 있습니다. IIS가 제대로 설치되었는지 확인하세요. "하이퍼링크"를 입력할 수 있습니다http://localhost" http://localhost" 브라우저에서 확인 여부를 IIS 기본 페이지가 표시 합니다.  일부 경우에도 IIS에서 ASP.NET 또는 WCF 잘못 된 등록 하 여 대 문제 발생할 수 있습니다. Visual Studio 명령 프롬프트를 열고 및 ASP.NET 등록 문제를 해결 하는 명령 "aspnet_regiis.exe-ir"를 실행 하거나 "ServiceModelReg.exe – ia" 명령을 실행 하는 WCF 등록 문제를 해결 수 있습니다.  
   
 ## <a name="files-generated-for-publishing"></a>게시를 위해 생성되는 파일  
- [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 서비스 라이브러리가 웹 호스트되기 전에 도구에서 어셈블리 파일, Web.config 파일 및 .svc 파일이 생성됩니다. 이러한 파일이 모두 대상 위치에 복사된 후에 서비스가 게시됩니다.  
+ 다음 파일은 도구에서 생성 하는 WCF 서비스 라이브러리를 하려면 먼저 웹 호스팅: 어셈블리 파일, Web.config 파일 및.svc 파일입니다. 이러한 파일이 모두 대상 위치에 복사된 후에 서비스가 게시됩니다.  
   
 ### <a name="assembly-files"></a>어셈블리 파일  
- 이 도구를 사용하여 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 서비스를 게시하면 먼저 서비스가 자동으로 빌드되고 빌드 후에 서비스 프로젝트에서 어셈블리 파일이 생성됩니다.  
+ WCF 서비스를 게시할 때이 도구를 사용 하 여 서비스는 자동으로 먼저 만들어지고 어셈블리 파일이 만든 후 서비스 프로젝트에서 생성 됩니다.  
   
 ### <a name="svc-file"></a>.SVC 파일  
- 게시 작업에서는 각 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 서비스에 대해 버전 유효성 확인을 위해 *.svc 파일이 기존에 있는지 여부와 관계없이 생성됩니다. [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 서비스 라이브러리 및 배포 서비스 라이브러리용과 순차 및 상태 시스템 워크플로 서비스 라이브러리용의 서로 다른 두 가지 svc 파일이 있습니다. 생성 된 \*.svc 파일은 대상 위치의 루트 폴더로 복사 합니다.  
+ 게시 작업은 파일 버전 유효성을 확인할 여부를 존재 여부 각 WCF 서비스에 대 한 *.svc 파일을 생성 합니다. Svc 파일이 서로 다른 두: WCF 서비스 라이브러리 및 배포 서비스 라이브러리 및 다른 순차 및 상태 시스템 워크플로 서비스 라이브러리에 대 한 합니다. 생성 된 \*.svc 파일은 대상 위치의 루트 폴더로 복사 합니다.  
   
 ### <a name="webconfig-file"></a>Web.config 파일  
  서비스 프로젝트를 특정 대상 위치에 게시할 때마다 Web.config 파일이 만들어집니다.  
   
- 생성된 Web.config 파일에는 웹 호스팅에 사용되는 웹 섹션 및 다음과 같은 변경 내용과 함께 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 서비스 라이브러리에 대한 App.config의 내용이 포함됩니다.  
+ 생성 된 Web.config 파일에 다음 변경 내용으로 WCF 서비스 라이브러리에 대 한 App.config의 내용이 및 웹 호스팅에 대해 사용 되는 웹 섹션에 포함 됩니다.  
   
 -   기본 주소는 제외됩니다.  
   
 -   `<diagnostics>` 요소의 설정은 대상 플랫폼의 추적 설정을 유지하기 위해 제외됩니다.  
   
 ## <a name="publishing-wcf-services-with-non-http-bindings-to-iis"></a>HTTP가 아닌 바인딩을 사용하여 WCF 서비스를 IIS에 게시  
- IIS 7.0 이상을 사용하는 경우 HTTP가 아닌 바인딩을 사용하여 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 서비스를 IIS에 게시할 수 있습니다. 몇 가지 사전 구성 작업을 수행해야 합니다. 자세한 내용은 항목을 참조 하십시오 [Windows Process Activation Service에서의 호스팅](../../../docs/framework/wcf/feature-details/hosting-in-windows-process-activation-service.md)합니다.  
+ Iis 7.0을 사용 하는 경우 이상 버전에서는 IIS에 HTTP가 아닌 바인딩을 사용 하는 WCF 서비스를 게시할 수 있습니다. 몇 가지 사전 구성 작업을 수행해야 합니다. 자세한 내용은 항목을 참조 하십시오 [Windows Process Activation Service에서의 호스팅](../../../docs/framework/wcf/feature-details/hosting-in-windows-process-activation-service.md)합니다.  
   
 ## <a name="security"></a>보안  
- IIS는 관리자 계정으로 실행해야 하므로 로컬 IIS에 게시하려면 관리자 권한이 필요합니다. 관리자 권한이 없는 사용자가 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 서비스 게시를 여는 경우 IIS를 대상 위치로 사용할 수 없습니다. 파일 시스템 또는 FTP 사이트에 게시 하는 관리자 권한 없이 작동합니다.  
+ IIS는 관리자 계정으로 실행해야 하므로 로컬 IIS에 게시하려면 관리자 권한이 필요합니다. 관리자 권한 없이 사용자가 WCF 서비스 게시를 하는 경우 IIS를 대상 위치로 사용할 수 없는 경우 파일 시스템 또는 FTP 사이트에 게시 하는 관리자 권한 없이 작동합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [WCF Visual Studio 템플릿](../../../docs/framework/wcf/wcf-vs-templates.md)  

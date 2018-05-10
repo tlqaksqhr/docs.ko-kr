@@ -2,11 +2,11 @@
 title: Token Authenticator
 ms.date: 03/30/2017
 ms.assetid: 84382f2c-f6b1-4c32-82fa-aebc8f6064db
-ms.openlocfilehash: 35bba0b6a81ff11164636e906440db7e9b2ca25b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 4681dea4fd39b039346d22c02c478323ff53e240
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="token-authenticator"></a>Token Authenticator
 이 샘플에서는 사용자 지정 토큰 인증자를 구현하는 방법을 보여 줍니다. Windows Communication Foundation (WCF)의 한 토큰 인증자는 자체 일관성 및 id를 인증 토큰에 연결 된 확인 메시지와 함께 사용 되는 토큰의 유효성 검사에 사용 됩니다.  
@@ -23,11 +23,11 @@ ms.lasthandoff: 05/04/2018
   
 -   서버에서 사용자 지정 토큰 인증자를 사용하여 클라이언트 자격 증명의 유효성을 검사하는 방법  
   
--   [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 서비스 코드가 사용자 지정 토큰 인증자와 관련되는 방법  
+-   어떻게 WCF 서비스 코드는 사용자 지정 토큰 인증자를 사용 하 여 연결 합니다.  
   
 -   서버의 X.509 인증서를 사용하여 서버를 인증하는 방법  
   
- 또한 이 샘플에서는 사용자 지정 토큰 인증 프로세스 후에 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서 호출자의 ID에 액세스할 수 있는 방법을 보여 줍니다.  
+ 이 샘플에는 사용자 지정 토큰 인증 프로세스 후 호출자의 id는 WCF에서 액세스할 수 있는 방법을 보여 줍니다.  
   
  서비스에서는 서비스와의 통신에 사용할 수 있는 단일 끝점을 노출하며, 이 끝점은 App.config 구성 파일을 사용하여 정의합니다. 끝점은 하나의 주소, 바인딩 및 계약으로 구성됩니다. 바인딩은 `wsHttpBinding`의 기본 모드인 message로 설정된 보안 모드가 있는 표준 `wsHttpBinding`을 사용하여 구성됩니다. 이 샘플에서는 클라이언트 사용자 이름 인증을 사용하도록 표준 `wsHttpBinding`를 설정합니다. 또한 서비스는 `serviceCredentials` 동작을 사용하여 서비스 인증서를 구성합니다. `securityCredentials` 동작을 통해 서비스 인증서를 지정할 수 있습니다. 서비스 인증서는 클라이언트에서 서비스를 인증하고 메시지 보호를 제공하는 데 사용됩니다. 다음 구성에서는 뒤에 나오는 설치 지침에 설명된 대로 샘플 설치 중에 설치되는 localhost 인증서를 참조합니다.  
   

@@ -2,17 +2,17 @@
 title: Service Trace Viewer를 사용하여 상호 관련된 추적 보기 및 문제 해결
 ms.date: 03/30/2017
 ms.assetid: 05d2321c-8acb-49d7-a6cd-8ef2220c6775
-ms.openlocfilehash: bfc0d2c10bfdca253f2ce410a4cd38218b3f5cfe
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: cfa1ec0e486943d196ec016be87544f17a0114e6
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting"></a>Service Trace Viewer를 사용하여 상호 관련된 추적 보기 및 문제 해결
 이 항목에서는 추적 데이터 형식, 추적 데이터를 보는 방법 및 Service Trace Viewer를 사용하여 응용 프로그램 문제를 해결하는 방법에 대해 설명합니다.  
   
 ## <a name="using-the-service-trace-viewer-tool"></a>Service Trace Viewer 도구 사용  
- Windows Communication Foundation (WCF) Service Trace Viewer 도구를 사용 하 여 생성 한 진단 추적을 상호 연결할 수 [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 루트 수신기 오류가 발생 합니다. 이 도구를 사용하면 추적을 쉽게 보고, 그룹화하며 필터링할 수 있으므로 [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 서비스 관련 문제를 진단, 복구 및 확인할 수 있습니다. 이 도구를 사용 하는 방법에 대 한 자세한 내용은 참조 [Service Trace Viewer 도구 (SvcTraceViewer.exe)](../../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)합니다.  
+ Windows Communication Foundation (WCF) Service Trace Viewer 도구를 사용 하는 오류의 근본 원인을 찾으려고 WCF 수신기에서 생성 한 진단 추적을 상호 연결할 수 있습니다. 이 도구는 쉽게 보고, 그룹화 하 고 진단, 복구 및 WCF 서비스와의 문제를 확인할 수 있도록 추적을 필터링 하는 방법을 제공 합니다. 이 도구를 사용 하는 방법에 대 한 자세한 내용은 참조 [Service Trace Viewer 도구 (SvcTraceViewer.exe)](../../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)합니다.  
   
  이 항목에서는 실행 하 여 생성 된 추적의 스크린 샷을 [Tracing and Message Logging](../../../../../docs/framework/wcf/samples/tracing-and-message-logging.md) 샘플을 사용 하 여 볼 때는 [Service Trace Viewer 도구 (SvcTraceViewer.exe)](../../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)합니다. 이 항목에서는 추적의 내용, 동작 및 상관 관계를 이해하는 방법과 문제 해결 시 많은 수의 추적을 분석하는 방법을 보여 줍니다.  
   
@@ -104,11 +104,11 @@ ms.lasthandoff: 05/04/2018
 ```  
   
 ## <a name="servicemodel-e2e-tracing"></a>ServiceModel E2E 추적  
- `System.ServiceModel` 추적 소스가 Off가 아닌 `switchValue` 및 `ActivityTracing`으로 설정되면 [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)]에서 [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 처리에 대한 동작 및 전송을 만듭니다.  
+ 때는 `System.ServiceModel` 으로 설정 된 추적 소스는 `switchValue` Off가 아닌 및 `ActivityTracing`, 작업 및 전송에 WCF 처리에 대 한 WCF를 만듭니다.  
   
- 동작은 해당 처리 단위와 관련된 모든 추적을 그룹화하는 논리적인 처리 단위입니다. 예를 들어 요청별로 하나의 동작을 정의할 수 있습니다. 전송은 끝점 내의 동작 사이에 인과 관계를 만듭니다. 동작 ID를 전파하면 끝점을 통해 동작을 서로 연결할 수 있습니다. 설정 하 여이 작업을 수행할 수 있습니다 `propagateActivity` = `true` 모든 끝점에서 구성에서 합니다. 동작, 전송 및 전파를 통해 오류 상관 관계를 수행할 수 있습니다. 이 방법으로 오류에 대한 근본적인 원인을 신속하게 찾을 수 있습니다.  
+ 동작은 해당 처리 단위와 관련된 모든 추적을 그룹화하는 논리적인 처리 단위입니다. 예를 들어 요청별로 하나의 동작을 정의할 수 있습니다. 전송은 끝점 내의 동작 사이에 인과 관계를 만듭니다. 동작 ID를 전파하면 끝점을 통해 동작을 서로 연결할 수 있습니다. 설정 하 여이 작업을 수행할 수 있습니다 `propagateActivity` = `true` 모든 끝점에서 구성에서 합니다. 동작, 전송 및 전파를 통해 오류 상관 관계를 수행할 수 있습니다. 이 방법으로 오류에 대한 근본 원인을 신속하게 찾을 수 있습니다.  
   
- 클라이언트에서 각 개체 모델 호출(예: Open ChannelFactory, Add, Divide 등)에 대해 [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 동작 한 개가 만들어집니다. 각 작업 호출은 "Process Action" 동작에서 처리 됩니다.  
+ 클라이언트에서 각 개체 모델 호출 (예를 들어 Open ChannelFactory, Add, Divide 등 등과 합니다.)에 대해 하나의 WCF 활동을 만듭니다. 각 작업 호출은 "Process Action" 동작에서 처리 됩니다.  
   
  추출 된 다음 스크린샷에 [Tracing and Message Logging](../../../../../docs/framework/wcf/samples/tracing-and-message-logging.md) 샘플 왼쪽된 패널 생성 시간으로 정렬 하는 클라이언트 프로세스에서 만든 활동 목록이 표시 됩니다. 다음은 발생한 동작 순서 목록입니다.  
   
@@ -127,14 +127,14 @@ ms.lasthandoff: 05/04/2018
  wsHttpBinding이 사용되기 때문에 보안 인프라 메시지가 표시됩니다.  
   
 > [!NOTE]
->  [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)]에서는 요청 메시지를 포함하는 Process Action 동작에 전송을 통해 응답 메시지를 관련시키기 전에 처음에 별도의 동작(Process message)에서 처리되고 있는 응답 메시지를 보여 줍니다. 이는 인프라 메시지와 비동기 요청에 대해 발생하며, 그 이유는 메시지를 검사하고, activityId 헤더를 읽고, 이 ID를 갖는 기존의 Process Action 동작을 식별하여 서로 관련시켜야 하기 때문입니다. 동기 요청의 경우에는 응답을 차단하므로 응답이 어떤 Process Action과 연결되어 있는지 알 수 있습니다.  
+>  WCF, 별도 동작 (Process message)에서 처음 처리 되 고 응답 메시지 표시에 전송을 통해 요청 메시지를 포함 하는 해당 Process Action 동작 시키기 전에 합니다. 이는 인프라 메시지와 비동기 요청에 대해 발생하며, 그 이유는 메시지를 검사하고, activityId 헤더를 읽고, 이 ID를 갖는 기존의 Process Action 동작을 식별하여 서로 관련시켜야 하기 때문입니다. 동기 요청의 경우에는 응답을 차단하므로 응답이 어떤 Process Action과 연결되어 있는지 알 수 있습니다.  
   
  ![Trace Viewer를 사용 하 여](../../../../../docs/framework/wcf/diagnostics/tracing/media/e2etrace4.gif "e2eTrace4")  
 만든 시간별로 나열된 WCF 클라이언트 동작(왼쪽 패널)과 중첩된 동작 및 추적(오른쪽 위 패널)  
   
  왼쪽 패널에서 동작을 선택하면 중첩된 동작과 추적이 오른쪽 위 패널에 표시됩니다. 따라서 이 보기는 선택한 부모 동작을 기준으로 왼쪽에 동작 목록을 축소한 계층 구조 보기입니다. 선택한 Process action Add가 첫 번째 요청이므로 이 동작에 Set Up Secure Session 동작(전송, 다시 전송)이 포함되며 추가 작업의 실제 처리를 추적합니다.  
   
- 왼쪽 패널에서 Process action Add 동작을 두 번 클릭하면 추가와 관련된 클라이언트 [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 동작이 그래픽으로 표시됩니다. 왼쪽의 첫 번째 동작은 기본 동작인 루트 동작(0000)입니다. [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)]는 앰비언트 동작 밖으로 전송합니다. 이 동작이 정의되지 않은 경우 [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)]는 0000에서 전송합니다. 이때 두 번째 동작인 Process Action Add가 0에서 전송합니다. 그런 다음 Setup Secure Session이 표시됩니다.  
+ Process action Add 동작 왼쪽된 패널에서을 두 번 클릭 하는 경우 추가 관련 된 클라이언트 WCF 동작을 그래픽으로 표시 됩니다. 왼쪽의 첫 번째 동작은 기본 동작인 루트 동작(0000)입니다. WCF 전송 앰비언트 동작 합니다. 정의 되지 않은 경우 WCF 0000에서 전송 합니다. 이때 두 번째 동작인 Process Action Add가 0에서 전송합니다. 그런 다음 Setup Secure Session이 표시됩니다.  
   
  ![Trace Viewer를 사용 하 여](../../../../../docs/framework/wcf/diagnostics/tracing/media/e2etrace5.gif "e2eTrace5")  
 WCF 클라이언트 동작 그래프 보기: 앰비언트 동작(여기서 0), Process action 및 Set Up Secure Session  
@@ -146,7 +146,7 @@ Process Action 동작에 대한 추적 목록: 같은 동작으로 요청을 보
   
  여기에서 쉽게 구별할 수 있도록 클라이언트 추적을만 로드 하지만 서비스 추적 (받은 요청 메시지와 보낸 응답 메시지)도 도구에 로드 된 경우 동일한 동작에 나타납니다 및 `propagateActivity` 로 설정 된 `true.` 이 뒷부분에 나오는 그림에 나와 있습니다.  
   
- 서비스에서 동작 모델이 다음과 같이 [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 개념에 매핑됩니다.  
+ 서비스에는 활동 모델 WCF 개념을 다음과 같이 매핑합니다.  
   
 1.  ServiceHost를 생성하고 엽니다. 이렇게 하면 보안의 경우 여러 호스트 관련 동작을 만들 수 있습니다.  
   
@@ -154,11 +154,11 @@ Process Action 동작에 대한 추적 목록: 같은 동작으로 요청을 보
   
 3.  수신기는 클라이언트에서 시작 된 통신 요청을 감지 하면 클라이언트에서 보낸 모든 바이트가 처리 되는 "Receive Bytes" 동작을 전송 합니다. 이 동작에서 클라이언트-서비스 상호 작용 중에 발생한 연결 오류가 표시됩니다.  
   
-4.  각 바이트 집합을 받은 메시지에 해당 하는에 대 한 처리 "메시지 처리" 동작에서 이러한 바이트 만듭니다는 [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 메시지 개체입니다. 이 동작에서 악의적인 메시지 또는 잘못된 봉투와 관련된 오류가 표시됩니다.  
+4.  각 바이트 집합을 받은 메시지에 해당 하는에 대 한 처리 "메시지 처리" 동작에서 이러한 접두사 바이트는 WCF 메시지 개체를 만듭니다. 이 동작에서 악의적인 메시지 또는 잘못된 봉투와 관련된 오류가 표시됩니다.  
   
-5.  메시지가 형성되면 Process Action 동작으로 전송합니다. `propagateActivity`가 클라이언트와 서버에서 모두 `true`로 설정되는 경우 이 동작에는 클라이언트에서 정의되고 앞에서 설명한 것과 동일한 ID를 갖게 됩니다. 요청과 관련된 [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)]에서 내보낸 모든 추적이 응답 메시지 처리를 비롯한 같은 동작에 있기 때문에 이 단계부터 끝점을 통해 직접적인 상관 관계의 이점을 활용할 수 있습니다.  
+5.  메시지가 형성되면 Process Action 동작으로 전송합니다. `propagateActivity`가 클라이언트와 서버에서 모두 `true`로 설정되는 경우 이 동작에는 클라이언트에서 정의되고 앞에서 설명한 것과 동일한 ID를 갖게 됩니다. 이 단계에서 시작 하기 위해 직접적인 상관 관계의 끝점을 통해 WCF에 포함 된 요청에 관련 된 모든 추적이 응답 메시지 처리를 포함 하 여 같은 동작에에 있기 때문에 합니다.  
   
-6.  작업 중이 아닌 작업에 대 한 "사용자 코드 실행" 활동에서 내보낸 추적과에서 사용자 코드에서 내보낸 추적을 격리 시킵니다 만듭니다 [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)]합니다. 앞의 예제에서 "서비스가 추가 응답을 보냅니다" 추적을 해당 하는 경우 클라이언트가 전파 한 동작이에 없는 "사용자 코드 실행" 동작에서 내보냅니다.  
+6.  작업 중이 아닌 작업에 대 한 WCF에서 내보낸 추적과에서 사용자 코드에서 내보낸 추적을 격리 하기 위한 "사용자 코드 실행" 작업을 만듭니다. 앞의 예제에서 "서비스가 추가 응답을 보냅니다" 추적을 해당 하는 경우 클라이언트가 전파 한 동작이에 없는 "사용자 코드 실행" 동작에서 내보냅니다.  
   
  다음 그림에서 왼쪽의 첫 번째 동작은 기본 동작인 루트 동작(0000)입니다. 다음 세 동작은 ServiceHost를 여는 동작입니다. 열 5의 동작은 수신기이고, 나머지 동작(6 - 8)은 바이트 처리부터 사용자 코드 활성화까지 메시지를 처리하는 WCF입니다.  
   

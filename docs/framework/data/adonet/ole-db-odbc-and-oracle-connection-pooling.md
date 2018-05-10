@@ -2,11 +2,11 @@
 title: OLE DB, ODBC 및 Oracle 연결 풀링
 ms.date: 03/30/2017
 ms.assetid: 2bd83b1e-3ea9-43c4-bade-d9cdb9bbbb04
-ms.openlocfilehash: 2e42b52bb75008fd34f3e4bef1788626d96368bc
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 5b70f6aeeae565684158aeb135d0d3e765e694d1
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="ole-db-odbc-and-oracle-connection-pooling"></a>OLE DB, ODBC 및 Oracle 연결 풀링
 연결 풀링을 사용하면 응용 프로그램의 성능 및 확장성을 대폭 향상시킬 수 있습니다. 이 단원에서는 OLE DB, ODBC 및 Oracle용 .NET Framework 데이터 공급자에 대한 연결 풀링에 대해 설명합니다.  
@@ -26,8 +26,6 @@ Provider=SQLOLEDB;OLE DB Services=-4;Data Source=localhost;Integrated Security=S
  .NET Framework Data Provider for ODBC의 연결 풀링은 연결에 사용되는 ODBC 드라이버 관리자에서 관리하며 .NET Framework Data Provider for ODBC에 의해 영향을 받지 않습니다.  
   
  연결 풀링을 사용 하지 않도록 설정 하거나, 엽니다 **ODBC 데이터 원본 관리자** 제어판의 관리 도구 폴더에 있습니다. **연결 풀링** 탭을 사용 하면 연결 풀링 설치 된 각 ODBC 드라이버에 대 한 매개 변수를 지정할 수 있습니다. 특정 ODBC 드라이버에 대해 연결 풀링이 변경되면 해당 ODBC 드라이버를 사용하는 모든 응용 프로그램에 영향을 줍니다.  
-  
- ODBC 연결 풀링에 대 한 자세한 내용은 참조 하십시오. [정보: 자주 묻는 질문에 대 한 ODBC 연결 풀링](http://support.microsoft.com/kb/169470)합니다.  
   
 ## <a name="connection-pooling-for-oracleclient"></a>OracleClient에 대한 연결 풀링  
  .NET Framework Data Provider for Oracle에서는 ADO.NET 클라이언트 응용 프로그램에 대한 연결 풀링을 자동으로 제공합니다. 또한 여러 개의 연결 풀링 한정자를 지정하여 연결 풀링 동작을 제어할 수 있습니다(이 항목 뒷부분의 "연결 문자열 키워드를 사용하여 연결 풀링 제어" 참조).  

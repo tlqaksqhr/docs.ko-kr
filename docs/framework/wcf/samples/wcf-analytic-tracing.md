@@ -2,21 +2,21 @@
 title: WCF 분석 추적
 ms.date: 03/30/2017
 ms.assetid: 6029c7c7-3515-4d36-9d43-13e8f4971790
-ms.openlocfilehash: 99b28dcc1cfb32f5f6835eadee1bded14375c216
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: e13aa0f7d0dbc48bedad0a9c639695ed038b9303
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="wcf-analytic-tracing"></a>WCF 분석 추적
-이 샘플에서는 Windows Communication Foundation (WCF) ETW에 기록 하는 분석 추적 스트림에 추적 이벤트를 추가 하는 방법을 보여 줍니다. [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]합니다. 분석 추적은 성능을 크게 저하시키지 않으면서 서비스를 쉽게 확인할 수 있도록 하기 위한 것입니다. 이 샘플에서는 <xref:System.Diagnostics.Eventing?displayProperty=nameWithType> API를 사용하여 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 서비스와 통합되는 이벤트를 기록하는 방법을 보여 줍니다.  
+이 샘플에서는 Windows Communication Foundation (WCF) ETW에 기록 하는 분석 추적 스트림에 추적 이벤트를 추가 하는 방법을 보여 줍니다. [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]합니다. 분석 추적은 성능을 크게 저하시키지 않으면서 서비스를 쉽게 확인할 수 있도록 하기 위한 것입니다. 이 예제에서는 사용 하는 방법을 보여 줍니다.는 <xref:System.Diagnostics.Eventing?displayProperty=nameWithType> WCF 서비스와 통합 하는 쓰기 이벤트에는 Api입니다.  
   
  에 대 한 자세한 내용은 <xref:System.Diagnostics.Eventing?displayProperty=nameWithType> Api 참조 <xref:System.Diagnostics.Eventing?displayProperty=nameWithType>합니다.  
   
  Windows에서 이벤트 추적에 대 한 자세한 참조 [디버깅 개선 및 ETW를 사용한 성능 조정](http://go.microsoft.com/fwlink/?LinkId=166488)합니다.  
   
 ## <a name="disposing-eventprovider"></a>EventProvider 삭제  
- 이 샘플에서는 <xref:System.Diagnostics.Eventing.EventProvider?displayProperty=nameWithType>을 구현하는 <xref:System.IDisposable?displayProperty=nameWithType> 클래스를 사용합니다. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 서비스에 대한 추적을 구현할 경우 서비스의 수명 동안 <xref:System.Diagnostics.Eventing.EventProvider>의 리소스를 사용할 수 있습니다. 이러한 이유로, 또한 읽기 쉽게 하려는 목적으로 이 샘플에서는 래핑된 <xref:System.Diagnostics.Eventing.EventProvider>를 삭제하지 않습니다. 어떤 이유로 서비스에 다른 추적 요구 사항이 있으며 이 리소스를 삭제해야 하는 경우 관리되지 않는 리소스를 삭제하기 위한 최선의 방법에 따라 이 샘플을 수정해야 합니다. 관리 되지 않는 리소스를 삭제 하는 방법에 대 한 자세한 내용은 참조 [Dispose 메서드를 구현](http://go.microsoft.com/fwlink/?LinkId=166436)합니다.  
+ 이 샘플에서는 <xref:System.Diagnostics.Eventing.EventProvider?displayProperty=nameWithType>을 구현하는 <xref:System.IDisposable?displayProperty=nameWithType> 클래스를 사용합니다. 사용할 수 있는 것은 WCF 서비스에 대 한 추적을 구현할 때는 <xref:System.Diagnostics.Eventing.EventProvider>의 서비스의 수명에 대 한 리소스입니다. 이러한 이유로, 또한 읽기 쉽게 하려는 목적으로 이 샘플에서는 래핑된 <xref:System.Diagnostics.Eventing.EventProvider>를 삭제하지 않습니다. 어떤 이유로 서비스에 다른 추적 요구 사항이 있으며 이 리소스를 삭제해야 하는 경우 관리되지 않는 리소스를 삭제하기 위한 최선의 방법에 따라 이 샘플을 수정해야 합니다. 관리 되지 않는 리소스를 삭제 하는 방법에 대 한 자세한 내용은 참조 [Dispose 메서드를 구현](http://go.microsoft.com/fwlink/?LinkId=166436)합니다.  
   
 ## <a name="self-hosting-vs-web-hosting"></a>자체 호스팅 및 웹 호스팅  
  웹 호스팅 서비스에 대 한 WCF의 분석 추적에서는 추적을 내보내는 서비스를 식별 하는 데 사용 되는 "hostreference" 필드를 제공 합니다. 확장 가능한 사용자 추적이 이 모델에 관여할 수 있으며 이 샘플에서는 이 작업을 수행하기 위한 최선의 방법을 보여 줍니다. 경우 참조는 웹 호스트 형식은 파이프 '&#124;' 문자는 결과에 실제로 표시 문자열에는 다음 중 하나가 될 수 있습니다.  
@@ -29,10 +29,10 @@ ms.lasthandoff: 05/04/2018
   
      \<사이트 이름 >&#124;\<ServiceVirtualPath >&#124;\<ServiceName >  
   
- 자체 호스팅된 서비스에 대 한 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]의 분석 추석 "에서는 HostReference" 필드를 채우지 않습니다. 이 샘플의 `WCFUserEventProvider` 클래스는 자체 호스팅 서비스에서 사용될 때 일관성 있게 동작합니다.  
+ 자체 호스팅된 서비스에 대 한 WCF의 분석 추석 "에서는 HostReference" 필드를 채우지 마십시오. 이 샘플의 `WCFUserEventProvider` 클래스는 자체 호스팅 서비스에서 사용될 때 일관성 있게 동작합니다.  
   
 ## <a name="custom-event-details"></a>사용자 지정 이벤트 상세 정보  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]의 ETW 이벤트 공급자 매니페스트는 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 서비스 작성자가 서비스 코드 내에서 내보내도록 디자인한 세 개의 이벤트를 정의합니다. 다음 표에서는 세 개의 이벤트를 간략하게 설명합니다.  
+ WCF의 ETW 이벤트 공급자 매니페스트는 서비스 코드 내에서 WCF 서비스 작성자가 공개 될 수 있도록 세 가지 이벤트를 정의 합니다. 다음 표에서는 세 개의 이벤트를 간략하게 설명합니다.  
   
 |이벤트|설명|이벤트 ID|  
 |-----------|-----------------|--------------|  
@@ -50,11 +50,11 @@ ms.lasthandoff: 05/04/2018
   
      웹 브라우저에서 클릭 **Calculator.svc**합니다. 서비스의 WSDL 문서에 대한 URI가 브라우저에 나타납니다. 이 URI를 복사합니다.  
   
-4.  [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 테스트 클라이언트(WcfTestClient.exe)를 실행합니다.  
+4.  WCF 테스트 클라이언트 (WcfTestClient.exe)를 실행 합니다.  
   
-     [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 에 있는 테스트 클라이언트 (WcfTestClient.exe)는 \< [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] Install > \Common7\IDE\ WcfTestClient.exe (기본 [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] 설치 디렉터리는 C:\Program Files\Microsoft Visual Studio 10.0).  
+     WCF 테스트 클라이언트 (WcfTestClient.exe)에 \< [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] Install > \Common7\IDE\ WcfTestClient.exe (기본 [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] 설치 디렉터리는 C:\Program Files\Microsoft Visual Studio 10.0).  
   
-5.  내에서 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 클라이언트 테스트를 선택 하 여 서비스를 추가 **파일**, 차례로 **서비스 추가**합니다.  
+5.  WCF 테스트 클라이언트 내에서 선택 하 여 서비스를 추가 **파일**, 차례로 **서비스 추가**합니다.  
   
      입력 상자에 끝점 주소를 추가합니다.  
   
@@ -64,7 +64,7 @@ ms.lasthandoff: 05/04/2018
   
 7.  이벤트 뷰어 응용 프로그램을 엽니다.  
   
-     서비스를 호출하기 전에 이벤트 뷰어를 시작하고 이벤트 로그가 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 서비스에서 내보낸 추적 이벤트를 수신 대기하고 있는지 확인합니다.  
+     서비스를 호출 하기 전에 이벤트 뷰어를 시작 하 고 이벤트 로그를 수신 대기 하는 WCF 서비스에서 내보낸 추적 이벤트를 확인 하십시오.  
   
 8.  **시작** 메뉴 선택 **관리 도구**, 차례로 **이벤트 뷰어**합니다. 사용 하도록 설정 된 **분석** 및 **디버그** 로그 합니다.  
   

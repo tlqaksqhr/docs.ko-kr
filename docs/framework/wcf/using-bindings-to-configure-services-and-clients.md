@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - bindings [WCF], using
 ms.assetid: c39479c3-0766-4a17-ba4c-97a74607f392
-ms.openlocfilehash: 39866d7cdd871c6450e0864848c7a3197779045a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 8271f51885c0d7800d26018b94942a7d832bf4a5
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="using-bindings-to-configure-services-and-clients"></a>바인딩을 사용하여 서비스 및 클라이언트 구성
 바인딩은 끝점에 연결하는 데 필요한 통신 세부 사항을 지정하는 개체입니다. 보다 구체적으로, 바인딩에는 해당 끝점이나 클라이언트 채널에 사용할 전송, 통신 형식(메시지 인코딩) 및 프로토콜의 고유 정보를 정의하여 클라이언트 또는 서비스 런타임을 만드는 데 사용되는 구성 정보가 들어 있습니다. 작동 중인 Windows Communication Foundation (WCF) 서비스를 만들려면 각 서비스의 끝점에에서는 바인딩이 필요 합니다. 이 항목에서는 바인딩 정의, 바인딩이 정의되는 방법 및 끝점에 대해 특정 바인딩이 지정되는 방법에 대해 설명합니다.  
@@ -26,15 +26,15 @@ ms.lasthandoff: 05/04/2018
  텍스트/XML, 이진 또는 MTOM(Message Transmission Optimization Mechanism) 등 메시지가 통신 중 바이트 스트림으로 표현되는 방법을 결정하는 메시지 인코딩을 결정합니다.  
   
 ## <a name="system-provided-bindings"></a>시스템 제공 바인딩  
- [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]에는 대부분의 응용 프로그램 요구 사항과 시나리오를 다루는 시스템 제공 바인딩 집합이 포함됩니다. 다음 클래스는 시스템 제공 바인딩의 몇 가지 예를 나타냅니다.  
+ WCF에는 대부분의 응용 프로그램 요구 사항 및 시나리오를 처리 하는 시스템 제공 바인딩 집합이 포함 되어 있습니다. 다음 클래스는 시스템 제공 바인딩의 몇 가지 예를 나타냅니다.  
   
 -   <xref:System.ServiceModel.BasicHttpBinding>: ASP.NET 웹 서비스[ASMX] 기반 서비스 등 웹 서비스에 연결하는 데 적합한, WS-I Basic Profile 1.1 사양을 준수하는 HTTP 프로토콜 바인딩입니다.  
   
 -   <xref:System.ServiceModel.WSHttpBinding>: 끝점에 연결하는 데 적합한, 웹 서비스 사양 프로토콜을 준수하는 HTTP 프로토콜 바인딩입니다.  
   
--   <xref:System.ServiceModel.NetNamedPipeBinding>: Windows 명명된 파이프 전송과 함께 .NET 이진 인코딩 및 프레이밍 기술을 사용하여 동일한 컴퓨터의 다른 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 끝점에 연결합니다.  
+-   <xref:System.ServiceModel.NetNamedPipeBinding>: 사용 하 여.NET 이진 인코딩 및 프레이밍 기술을 함께 Windows 명명 된 파이프 전송과 동일한 컴퓨터에 다른 WCF 끝점에 연결 합니다.  
   
--   <xref:System.ServiceModel.NetMsmqBinding>: MSMQ라고도 하는 메시지 큐와 함께 .NET 이진 인코딩 및 프레이밍 기술을 사용하여 다른 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 끝점과의 대기 중인 메시지 연결을 만듭니다.  
+-   <xref:System.ServiceModel.NetMsmqBinding>:.NET 이진 인코딩 및 프레이밍 기술을 메시지 큐 (MSMQ 라고도 함)와 함께 다른 WCF 끝점을 사용 하 여 대기 중인된 메시지 연결을 만들려면 사용 합니다.  
   
  설명 된 시스템 제공 바인딩에의 전체 목록을 참조 하십시오. [시스템 제공 바인딩](../../../docs/framework/wcf/system-provided-bindings.md)합니다.  
   
@@ -49,7 +49,7 @@ ms.lasthandoff: 05/04/2018
 2.  이 바인딩을 사용하는 끝점을 만듭니다.  
   
 ## <a name="code-and-configuration"></a>코드 및 구성  
- 코드 또는 구성을 통해 바인딩을 정의하거나 구성할 수 있습니다. 이러한 두 방법은 사용되는 바인딩 형식에 관계가 없습니다. 예를 들어 시스템 제공 바인딩 또는 <xref:System.ServiceModel.Channels.CustomBinding> 바인딩을 사용하는지에 관계가 없습니다. 일반적으로 코드를 사용하면 컴파일 시 바인딩 정의를 완전히 제어할 수 있습니다. 반면 구성을 사용하는 경우 시스템 관리자나 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 서비스 또는 클라이언트의 사용자가 바인딩의 매개 변수를 변경할 수 있습니다. [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 응용 프로그램이 배포될 특정 컴퓨터 요구 사항과 네트워크 상태를 예측할 방법이 없으므로 이 유연성은 바람직한 경우가 많습니다. 바인딩(및 주소 지정) 정보를 코드와 구분하면 관리자가 응용 프로그램을 다시 컴파일하거나 다시 배포할 필요 없이 바인딩 세부 정보를 변경할 수 있습니다. 바인딩이 코드에서 정의된 경우 구성 파일에서 수행된 구성 기반 정의를 재정의합니다. 이러한 방법의 예는 다음 항목을 참조하세요.  
+ 코드 또는 구성을 통해 바인딩을 정의하거나 구성할 수 있습니다. 이러한 두 방법은 사용되는 바인딩 형식에 관계가 없습니다. 예를 들어 시스템 제공 바인딩 또는 <xref:System.ServiceModel.Channels.CustomBinding> 바인딩을 사용하는지에 관계가 없습니다. 일반적으로 코드를 사용하면 컴파일 시 바인딩 정의를 완전히 제어할 수 있습니다. 구성을 사용 하는 시스템 관리자 또는 WCF 서비스 또는 바인딩 매개 변수를 변경 하는 클라이언트의 사용자 반면에 있습니다. 특정 컴퓨터 요구 사항을 예측 하 고 네트워크에 WCF 응용 프로그램을 배포 하는 상태에 없기 때문에 이러한 유연성은 바람직한 경우가 많습니다. 바인딩(및 주소 지정) 정보를 코드와 구분하면 관리자가 응용 프로그램을 다시 컴파일하거나 다시 배포할 필요 없이 바인딩 세부 정보를 변경할 수 있습니다. 바인딩이 코드에서 정의된 경우 구성 파일에서 수행된 구성 기반 정의를 재정의합니다. 이러한 방법의 예는 다음 항목을 참조하세요.  
   
 -   [방법: 관리 되는 응용 프로그램에서 WCF 서비스 호스팅](../../../docs/framework/wcf/how-to-host-a-wcf-service-in-a-managed-application.md) 코드에서 바인딩을 만드는의 예제를 제공 합니다.  
   

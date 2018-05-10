@@ -5,24 +5,24 @@ helpviewer_keywords:
 - WCF [WCF], concepts
 - Windows Communication Foundation [WCF], concepts
 ms.assetid: 503fae4b-014c-44df-a9c7-c76ec4ed4229
-ms.openlocfilehash: 93c0411c8d261e40bd4e8f1cd11d8a51d4f0edb4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 7a885bd4ff0d3c35e26fd0f37e82a41abf713b6e
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="conceptual-overview"></a>개념적 개요
 이 항목에서는 메시징 시스템 및 클래스를 사용할 수 있도록 Windows Communication Foundation (WCF)에 대 한 정보를 요약 합니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
  [Windows Communication Foundation 정의](../../../docs/framework/wcf/whats-wcf.md)  
- [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]에 대한 간략한 개요.  
+ WCF에 간략하게 설명 합니다.  
   
  [기본적인 Windows Communication Foundation 개념](../../../docs/framework/wcf/fundamental-concepts.md)  
- [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 프로그래밍 모델의 주요 개념에 대한 개요.  
+ WCF 프로그래밍 모델의 주요 개념의 개요.  
   
  [Windows Communication Foundation 아키텍처](../../../docs/framework/wcf/architecture.md)  
- [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 아키텍처의 그래픽 표현.  
+ WCF 아키텍처의 그래픽 표현입니다.  
   
 ## <a name="reference"></a>참조  
  <xref:System.ServiceModel>  

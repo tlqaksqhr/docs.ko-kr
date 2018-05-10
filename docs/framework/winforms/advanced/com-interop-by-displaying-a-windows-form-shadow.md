@@ -21,7 +21,7 @@ ms.lasthandoff: 05/04/2018
   
 -   <xref:System.Windows.Forms.Form.ShowDialog%2A?displayProperty=nameWithType> 메서드를 사용하여 Windows Form을 표시합니다.  
   
--   각 Windows Form을 별도 스레드에 표시합니다. 자세한 내용은 [How to: Support COM Interop by Displaying Each Windows Form on Its Own Thread](../../../../docs/framework/winforms/advanced/how-to-support-com-interop-by-displaying-each-windows-form-on-its-own-thread.md)을 참조하세요.  
+-   각 Windows Form을 별도 스레드에 표시합니다. 자세한 내용은 [방법: 각 Windows Form을 별개의 스레드에서 표시하여 COM Interop 지원](../../../../docs/framework/winforms/advanced/how-to-support-com-interop-by-displaying-each-windows-form-on-its-own-thread.md)을 참조하세요.  
   
 ## <a name="procedure"></a>프로시저  
  <xref:System.Windows.Forms.Form.ShowDialog%2A?displayProperty=nameWithType> 메서드를 사용하는 것이 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 메시지 루프에 폼을 표시하는 가장 쉬운 방법일 수 있습니다. 모든 방법 중에서 이 방법이 코드 구현을 가장 적게 요구하기 때문입니다.  

@@ -2,21 +2,21 @@
 title: AJAX Service Using HTTP POST
 ms.date: 03/30/2017
 ms.assetid: 1ac80f20-ac1c-4ed1-9850-7e49569ff44e
-ms.openlocfilehash: 742f14d10fbd668609e8bd20db817d51269777ed
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: f904a26d87a21a931035b45261dbcd970f7d63a1
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="ajax-service-using-http-post"></a>AJAX Service Using HTTP POST
 이 샘플에서는 만들려면 Windows Communication Foundation (WCF)를 사용 하는 방법을 보여 줍니다.는 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Asynchronous JavaScript and XML (AJAX) HTTP POST를 사용 하는 서비스입니다. AJAX 서비스는 웹 브라우저 클라이언트에서 기본 JavaScript 코드를 사용하여 액세스할 수 있는 서비스입니다. 기반으로 하는이 샘플은 [기본 AJAX 서비스](../../../../docs/framework/wcf/samples/basic-ajax-service.md) 샘플; 두 개의 샘플 간의 유일한 차이점은 HTTP POST HTTP GET 대신 사용 합니다.  
   
- Windows Communication Foundation (WCF)에서 AJAX 지원을 통해 ASP.NET AJAX와 함께 사용 되도록 최적화 되었습니다는 `ScriptManager` 제어 합니다. 사용 하는 예제에 대 한 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] ASP.NET AJAX와 함께 참조는 [Ajax 샘플과](../../../../docs/framework/wcf/samples/ajax-service-using-http-post.md)합니다.  
+ Windows Communication Foundation (WCF)에서 AJAX 지원을 통해 ASP.NET AJAX와 함께 사용 되도록 최적화 되었습니다는 `ScriptManager` 제어 합니다. ASP.NET AJAX와 함께 WCF를 사용 하는 예제를 참조 하십시오.는 [Ajax 샘플과](../../../../docs/framework/wcf/samples/ajax-service-using-http-post.md)합니다.  
   
 > [!NOTE]
 >  이 샘플의 설치 절차 및 빌드 지침은 이 항목의 끝부분에 나와 있습니다.  
   
- 다음 샘플의 서비스는 AJAX 특정 코드가 없는 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 서비스입니다.  
+ 다음 샘플의 서비스는 AJAX 특정 코드가 없는 WCF 서비스입니다.  
   
  경우는 <xref:System.ServiceModel.Web.WebInvokeAttribute> 특성은 작업에서 적용 또는 <xref:System.ServiceModel.Web.WebGetAttribute> 특성이 적용 되지 않으면, 기본 HTTP 동사 ("POST")가 사용 됩니다. POST 요청이 GET 요청보다 구성하기 어렵지만 해당 요청은 캐시되지 않습니다. 캐싱이 적절하지 않은 모든 작업에 POST 요청을 사용하십시오.  
 

@@ -1,24 +1,12 @@
 ---
-title: "서비스 작업 오류 모니터링"
-ms.custom: 
+title: 서비스 작업 오류 모니터링
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 59472ba3-8ebf-4479-bd7b-f440d5e636cb
-caps.latest.revision: "6"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ce62eb348cb57ce6137c58fbc50a32e829980c0c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 3d708b537789c8d0decf75df780300c1e185c4c8
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="monitoring-service-operation-failures"></a>서비스 작업 오류 모니터링
 응용 프로그램에 분석 추적을 사용하도록 설정된 경우 이벤트 뷰어에서 서비스 오류를 쉽게 모니터링할 수 있습니다.  이 항목에서는 서비스 작업이 실패한 경우를 확인하는 방법과 오류가 발생한 원인을 확인하는 방법을 보여 줍니다.  
@@ -29,7 +17,7 @@ ms.lasthandoff: 12/22/2017
   
 2.  분석 추적을 활성화 하지 않은 확장 **Applications and Services Logs**, **Microsoft**, **Windows**, **응용 프로그램 서버-응용 프로그램** . 선택 **보기**, **분석 및 디버그 로그 표시**합니다. 마우스 오른쪽 단추로 클릭 **분석** 선택 **로그 사용**합니다. 서비스 작업이 실패한 후 추적 내용을 볼 수 있도록 이벤트 뷰어를 열어 둡니다.  
   
-3.  만든 샘플을 열고는 [초보자를 위한 자습서](../../../../../docs/framework/wcf/getting-started-tutorial.md) 에 [!INCLUDE[vs_current_long](../../../../../includes/vs-current-long-md.md)] 실행 해야 하는 참고 [!INCLUDE[vs_current_long](../../../../../includes/vs-current-long-md.md)] 관리자 권한으로 서비스를 만들 수 있도록 합니다. 있는 경우는 [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 열 수 있습니다 설치 되어 있는 샘플의 [시작](../../../../../docs/framework/wcf/samples/getting-started-sample.md), 자습서에서 만든 완료 된 프로젝트를 포함 하 합니다.  
+3.  만든 샘플을 열고는 [초보자를 위한 자습서](../../../../../docs/framework/wcf/getting-started-tutorial.md) 에 [!INCLUDE[vs_current_long](../../../../../includes/vs-current-long-md.md)] 실행 해야 하는 참고 [!INCLUDE[vs_current_long](../../../../../includes/vs-current-long-md.md)] 관리자 권한으로 서비스를 만들 수 있도록 합니다. WCF 샘플 설치 되어 있는 경우 열 수 있습니다는 [시작](../../../../../docs/framework/wcf/samples/getting-started-sample.md), 자습서에서 만든 완료 된 프로젝트를 포함 하 합니다.  
   
 4.  Server 프로젝트의 Program.cs 파일에서 `Divide` 클래스의 `CalculatorService` 메서드 시작 부분에 다음 코드 줄을 추가합니다.  
   

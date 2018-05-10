@@ -4,14 +4,14 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - service creation [WCF]
 ms.assetid: 7cf21bfe-23bd-46aa-8033-609f851dbf76
-ms.openlocfilehash: df86b0750a0fb8760d77fa36ec0806a1c5a9c0a0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: b20167ad776f3524e4516b71e43ab8cdb5c2aea4
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="basic-programming-lifecycle"></a>기본 프로그래밍 수명 주기
-Windows Communication Foundation (WCF) 응용 프로그램이 있는지 동일한 컴퓨터에서 인터넷을 통해 또는 다른 응용 프로그램 플랫폼에서 통신할 수 있습니다. 이 항목에서는 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 응용 프로그램을 빌드하는 데 필요한 작업에 대해 간략하게 설명합니다. 작업 샘플 응용 프로그램에 대 한 참조 [초보자를 위한 자습서](../../../docs/framework/wcf/getting-started-tutorial.md)합니다.  
+Windows Communication Foundation (WCF) 응용 프로그램이 있는지 동일한 컴퓨터에서 인터넷을 통해 또는 다른 응용 프로그램 플랫폼에서 통신할 수 있습니다. 이 항목에서는 WCF 응용 프로그램을 빌드하는 데 필요한 작업에 설명 합니다. 작업 샘플 응용 프로그램에 대 한 참조 [초보자를 위한 자습서](../../../docs/framework/wcf/getting-started-tutorial.md)합니다.  
   
 ## <a name="the-basic-tasks"></a>기본 작업  
  수행할 기본 작업 순서는 다음과 같습니다.  

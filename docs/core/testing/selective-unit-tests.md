@@ -1,20 +1,19 @@
 ---
-title: "선택적 단위 테스트 실행"
-description: "필터 식을 사용하여 dotnet 명령으로 선택적 단위 테스트를 실행하는 방법을 보여 줍니다."
-keywords: ".NET, .NET Core, 단위 테스트, 선택적 테스트"
+title: 선택적 단위 테스트 실행
+description: 필터 식을 사용하여 dotnet 명령으로 선택적 단위 테스트를 실행하는 방법을 보여 줍니다.
 author: smadala
 ms.author: mairaw
 ms.date: 03/22/2017
-ms.topic: article
-ms.prod: .net-core
+ms.topic: conceptual
+ms.prod: dotnet-core
 ms.devlang: dotnet
-ms.assetid: 13d01272-bbf8-456c-a97a-560001d1a7f2
-ms.workload: dotnetcore
-ms.openlocfilehash: a650e971afd63171b0cc12f679d81bc222a609a5
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.workload:
+- dotnetcore
+ms.openlocfilehash: 77ac7ab5a46150bd3654d50e6686087c804b8440
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="running-selective-unit-tests"></a>선택적 단위 테스트 실행
 
@@ -104,6 +103,6 @@ namespace XUnitNamespace
 
 | 식 | 결과 |
 | ---------- | ------ |
-| <code>dotnet test --filter "FullyQualifiedName~TestClass1&#124;Category=Nightly"</code> | `FullyQualifiedName`에 `TestClass1`**이** 있거나 `Category`가 `Nightly`인 테스트를 실행합니다. |
+| <code>dotnet test --filter "FullyQualifiedName~TestClass1&#124;Category=Nightly"</code> | `FullyQualifiedName`에 `TestClass1`이 **있거나**`Category`가 `Nightly`인 테스트를 실행합니다. |
 | `dotnet test --filter "FullyQualifiedName~TestClass1&Category=Nightly"` | `FullyQualifiedName`에 `TestClass1`**이 있고** `Category`가 `Nightly`인 테스트를 실행합니다. |
-| <code>dotnet test --filter "(FullyQualifiedName~TestClass1&Category=Nightly)&#124;Priority=1"</code> | `TestClass1`을 포함하는 `FullyQualifiedName`**이 있고**`Category`가 `CategoryA`**이거나** `Priority`가 1인 테스트를 실행합니다. |
+| <code>dotnet test --filter "(FullyQualifiedName~TestClass1&Category=Nightly)&#124;Priority=1"</code> | `TestClass1`을 포함하는 `FullyQualifiedName`**이** 있고 `Category`가 `CategoryA`**이거나** `Priority`가 1인 테스트를 실행합니다. |

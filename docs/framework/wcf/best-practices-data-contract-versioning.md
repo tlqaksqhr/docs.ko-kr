@@ -7,11 +7,11 @@ helpviewer_keywords:
 - best practices [WCF], data contract versioning
 - Windows Communication Foundation, data contracts
 ms.assetid: bf0ab338-4d36-4e12-8002-8ebfdeb346cb
-ms.openlocfilehash: a578235a0db0ba769cae0b2ade93edbfd72b5508
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 33db8749656a8bb001f0a1797c77451476a126f2
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="best-practices-data-contract-versioning"></a>최선의 방법: 데이터 계약 버전 관리
 이 항목에서는 시간 경과에 따라 쉽게 발전할 수 있는 데이터 계약을 만드는 최선의 방법을 보여 줍니다. 데이터 계약에 대 한 자세한 내용은 참조 항목에서는 [를 사용 하 여 데이터 계약](../../../docs/framework/wcf/feature-details/using-data-contracts.md)합니다.  
@@ -21,7 +21,7 @@ ms.lasthandoff: 05/04/2018
   
  이는 새 데이터 멤버 추가 같은 가장 일반적인 버전 관리 시나리오도 지정된 스키마와 관련해서 매끄럽게 구현할 수 없음을 의미합니다. 예를 들어 새 데이터 멤버가 있는 최신 버전의 데이터 계약은 이전 스키마를 사용하여 유효성이 검사되지 않습니다.  
   
- 그러나 엄격한 스키마 준수가 필요하지 않은 많은 시나리오가 있습니다. [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 및 ASP.NET을 사용하여 만든 XML 웹 서비스 등 많은 웹 서비스 플랫폼은 기본적으로 스키마 유효성 검사를 수행하지 않으므로 스키마에서 설명하지 않는 추가 요소를 허용합니다. 이러한 플랫폼에서 작업할 때는 많은 버전 관리 시나리오를 보다 쉽게 구현할 수 있습니다.  
+ 그러나 엄격한 스키마 준수가 필요하지 않은 많은 시나리오가 있습니다. ASP.NET을 사용 하 여 만든 WCF 및 XML 웹 서비스를 포함 한 다양 한 웹 서비스 플랫폼에서 기본적으로 스키마 유효성 검사를 수행 하지 않으며 따라서 스키마에서 설명 하지 않는 추가 요소를 허용 합니다. 이러한 플랫폼에서 작업할 때는 많은 버전 관리 시나리오를 보다 쉽게 구현할 수 있습니다.  
   
  따라서 데이터 계약 버전 관리 지침에는 엄격한 스키마 유효성이 중요한 시나리오에 대한 집합과 중요하지 않은 시나리오에 대한 집합의 두 가지 집합이 있습니다.  
   
@@ -36,7 +36,7 @@ ms.lasthandoff: 05/04/2018
   
  자세한 내용은 유용한 정보를 참조 하십시오.: [서비스 버전 관리](../../../docs/framework/wcf/service-versioning.md)합니다.  
   
- 경우에 따라 응용 프로그램이 보낸 메시지에서 엄격한 스키마 준수를 보장해야 하지만 들어오는 메시지가 엄격하게 스키마를 준수한다고 확신할 수 없습니다. 이 경우 들어오는 메시지에 잘못 사용된 데이터가 포함될 위험이 있습니다. 잘못 사용된 값이 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]에서 저장되고 및 반환되므로 스키마에 맞지 않는 메시지가 전송됩니다. 이 문제를 방지하려면 왕복 기능을 해제해야 합니다. 이렇게 하는 데는 두 가지 방법이 있습니다.  
+ 경우에 따라 응용 프로그램이 보낸 메시지에서 엄격한 스키마 준수를 보장해야 하지만 들어오는 메시지가 엄격하게 스키마를 준수한다고 확신할 수 없습니다. 이 경우 들어오는 메시지에 잘못 사용된 데이터가 포함될 위험이 있습니다. 잘못 사용 된 값이 저장 되 고 WCF에 의해 반환 되 고 따라서 스키마에 맞지 않는 메시지를 보낼을 유발 합니다. 이 문제를 방지하려면 왕복 기능을 해제해야 합니다. 이렇게 하는 데는 두 가지 방법이 있습니다.  
   
 -   아무 형식에도 <xref:System.Runtime.Serialization.IExtensibleDataObject> 인터페이스를 구현하지 않습니다.  
   

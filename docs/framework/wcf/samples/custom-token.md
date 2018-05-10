@@ -2,11 +2,11 @@
 title: Custom Token
 ms.date: 03/30/2017
 ms.assetid: e7fd8b38-c370-454f-ba3e-19759019f03d
-ms.openlocfilehash: 5850f97d6d3a66aacf82ab1cb2338240a75a00fb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: c7219b94861cd23f27b331d1d3e5509654263430
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="custom-token"></a>Custom Token
 이 샘플에는 Windows Communication Foundation (WCF) 응용 프로그램에 사용자 지정 토큰 구현을 추가 하는 방법을 보여 줍니다. 이 예제에서는 클라이언트 신용 카드에 대한 정보를 서비스에 안전하게 전달하기 위해 `CreditCardToken`을 사용합니다. 이 토큰은 WS-Security 메시지 헤더로 전달되고 메시지 본문 및 다른 메시지 헤더와 함께 대칭 보안 바인딩 요소를 사용하여 서명 및 암호화됩니다. 이 방법은 기본 제공 토큰이 충분하지 않은 경우 유용합니다. 이 샘플에서는 기본 제공 토큰 중 하나를 사용하는 대신 사용자 지정 보안 토큰을 서비스에 제공하는 방법을 보여 줍니다. 이 서비스는 요청-회신 통신 패턴을 정의하는 계약을 구현합니다.  
@@ -20,7 +20,7 @@ ms.lasthandoff: 05/04/2018
   
 -   서비스가 사용자 지정 보안 토큰을 사용하고 유효성을 검사하는 방법  
   
--   [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 서비스 코드가 사용자 지정 보안 토큰을 비롯한 수신된 보안 토큰에 대한 정보를 얻는 방법  
+-   어떻게 WCF 서비스 코드는 사용자 지정 보안 토큰을 포함 하 여 수신된 된 보안 토큰에 대 한 정보를 얻을 수 있습니다.  
   
 -   서버의 X.509 인증서를 사용하여 메시지 암호화 및 서명에 사용되는 대칭 키를 보호하는 방법  
   
@@ -114,9 +114,9 @@ channelFactory.Close();
 ```  
   
 ## <a name="custom-security-token-implementation"></a>사용자 지정 보안 토큰 구현  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서 사용자 지정 보안 토큰을 사용하도록 설정하려면 사용자 지정 보안 토큰의 개체 표현을 만듭니다. 이 샘플에서는 `CreditCardToken` 클래스에 이 표현이 있습니다. 개체 표현은 모든 관련 보안 토큰 정보를 보유하고 보안 토큰에 포함된 보안 키의 목록을 제공합니다. 이 경우에는 신용 카드 보안 토큰에 보안 키가 포함되지 않습니다.  
+ Wcf에서 사용자 지정 보안 토큰을 사용 하도록 설정 하려면 사용자 지정 보안 토큰의 개체 표현을 만듭니다. 이 샘플에서는 `CreditCardToken` 클래스에 이 표현이 있습니다. 개체 표현은 모든 관련 보안 토큰 정보를 보유하고 보안 토큰에 포함된 보안 키의 목록을 제공합니다. 이 경우에는 신용 카드 보안 토큰에 보안 키가 포함되지 않습니다.  
   
- 다음 단원에서는 사용자 지정 토큰을 연결을 통해 전송하고 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 끝점에서 사용할 수 있도록 수행해야 하는 작업에 대해 설명합니다.  
+ 다음 섹션 네트워크를 통해 전송 하도록 사용자 지정 토큰을 사용 하도록 설정 하기 위해 수행 및 WCF 끝점에서 사용 해야 기능을 설명 합니다.  
   
 ```  
 class CreditCardToken : SecurityToken  
@@ -154,7 +154,7 @@ class CreditCardToken : SecurityToken
 ```  
   
 ## <a name="getting-the-custom-credit-card-token-to-and-from-the-message"></a>사용자 지정 신용 카드 토큰을 메시지로 가져가거나 메시지에서 가져오기  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]의 보안 토큰 serializer는 메시지의 XML에서 보안 토큰의 개체 표현을 만들고 보안 토큰의 XML 양식을 만듭니다. 또한 이러한 serializer는 보안 토큰을 가리키는 읽기 및 쓰기 키 식별자와 같은 다른 기능을 수행하지만 이 예제에서는 보안 토큰 관련 기능만 사용합니다. 사용자 지정 토큰을 사용하도록 설정하려면 고유한 보안 토큰 serializer를 구현해야 합니다. 이 샘플에서는 이를 위해 `CreditCardSecurityTokenSerializer` 클래스를 사용합니다.  
+ WCF의 보안 토큰 serializer는 메시지에 XML에서 보안 토큰의 개체 표현을 만들고 보안 토큰의 XML 양식을 만듭니다. 또한 이러한 serializer는 보안 토큰을 가리키는 읽기 및 쓰기 키 식별자와 같은 다른 기능을 수행하지만 이 예제에서는 보안 토큰 관련 기능만 사용합니다. 사용자 지정 토큰을 사용하도록 설정하려면 고유한 보안 토큰 serializer를 구현해야 합니다. 이 샘플에서는 이를 위해 `CreditCardSecurityTokenSerializer` 클래스를 사용합니다.  
   
  서비스에서 사용자 지정 serializer는 사용자 지정 토큰의 XML 양식을 읽고 이로부터 사용자 지정 토큰 개체 표현을 만듭니다.  
   

@@ -6,14 +6,14 @@ helpviewer_keywords:
 - Windows Communication Foundation [WCF], extensibility
 - extensibility [WCF]
 ms.assetid: ef56c251-d63c-4b3f-944f-b0c67bfb0f68
-ms.openlocfilehash: 142478352c8eb1c893d8b95b960c6079f735fa06
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 7b302a7d0643ed61d12cfedf26348590d40d18f3
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="introduction-to-extensibility"></a>확장성 소개
-Windows Communication Foundation (WCF) 응용 프로그램 모델은 분산된 응용 프로그램의 통신 요구 사항의 대부분을 해결 하도록 설계 되었습니다. 그러나 기본 응용 프로그램 모델과 시스템 제공 구현이 지원되지 않습니다. [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 확장성 모델은 전체 응용 프로그램 모델을 대체하는 지점을 비롯해서 모든 수준에서 시스템 동작을 수정할 수 있도록 허용하여 사용자 지정 시나리오를 지원합니다. 이 항목에서는 다양한 확장 영역에 대해 간략하게 설명하고 각 영역에 대한 자세한 내용을 제공합니다.  
+Windows Communication Foundation (WCF) 응용 프로그램 모델은 분산된 응용 프로그램의 통신 요구 사항의 대부분을 해결 하도록 설계 되었습니다. 그러나 기본 응용 프로그램 모델과 시스템 제공 구현이 지원되지 않습니다. WCF 확장성 모델은 전체 응용 프로그램 모델을 대체 지점에도 모든 수준에서 시스템 동작을 수정 하 여 사용자 지정 시나리오를 지원 하도록 도와줍니다. 이 항목에서는 다양한 확장명 영역에 대해 간략하게 설명하고 각 영역에 대한 자세한 내용을 제공합니다.  
   
 ## <a name="areas-to-extend"></a>확장할 영역  
  확장 가능 영역:  
@@ -25,7 +25,7 @@ Windows Communication Foundation (WCF) 응용 프로그램 모델은 분산된 �
 -   호스트 런타임. 이 영역에서는 호스트 응용 프로그램 도메인과 채널 및 응용 프로그램 런타임의 관계를 확장합니다.  
   
 ### <a name="extending-the-application-runtime"></a>응용 프로그램 런타임 확장  
- [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 응용 프로그램에서는 대상이 해당 채널인 메시지와 대상이 응용 프로그램 자체인 메시지가 구분됩니다. 채널 메시지는 보안 대화 설정, 신뢰할 수 있는 세션 설정과 같은 일부 채널 관련 기능을 지원합니다. 이러한 메시지는 응용 프로그램 런타임에 사용할 수 없으며, 응용 프로그램 계층이 포함되기 이전에 처리됩니다.  
+ WCF 응용 프로그램에서 해당 채널에 대 한 보내는 메시지의 및 응용 프로그램 자체에 대 한 보내는 메시지의 사이는 차이가 있습니다. 채널 메시지는 보안 대화 설정, 신뢰할 수 있는 세션 설정과 같은 일부 채널 관련 기능을 지원합니다. 이러한 메시지는 응용 프로그램 런타임에 사용할 수 없으며, 응용 프로그램 계층이 포함되기 이전에 처리됩니다.  
   
  응용 프로그램 메시지는 사용자 또는 사용자의 고객이 만든 클라이언트 또는 서비스 작업을 대상으로 하는 데이터를 포함합니다. 이러한 메시지는 응용 프로그램 수준 확장 시스템에서 필요에 따라 메시지 또는 개체 형태로 사용할 수 있습니다.  
   

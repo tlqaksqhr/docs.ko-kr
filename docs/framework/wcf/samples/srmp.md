@@ -2,11 +2,11 @@
 title: SRMP
 ms.date: 03/30/2017
 ms.assetid: cf37078c-dcb4-45e0-acaf-2f196521b226
-ms.openlocfilehash: 5c2079f1aa90821448c88de53d311d064bb6e65b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: c746897666ae78844df35c2989c803d852c3f70e
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="srmp"></a>SRMP
 이 샘플에서는 HTTP를 통해 MSMQ(메시지 큐)를 사용하여 트랜잭션된 대기 중인 통신을 수행하는 방법을 보여 줍니다.  
@@ -37,7 +37,7 @@ ms.lasthandoff: 05/04/2018
  이 샘플을 실행하려면 MSMQ 외에 서비스와 클라이언트 컴퓨터 둘 다에 IIS가 설치되어 있어야 합니다.  
   
 ## <a name="demonstrates"></a>세부 항목  
- 이 샘플에서는 HTTP를 통해 MSMQ를 사용하여 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 대기 중인 메시지를 보내는 방법을 보여 줍니다. 이를 SRMP 메시징이라고도 합니다. 대기 중인 메시지를 보낼 경우 보내는 컴퓨터의 MSMQ는 TCP 또는 HTTP 전송을 통해 수신 큐 관리자에게 메시지를 전송합니다. 사용자는 SRMP를 선택하여 큐 전송을 위한 전송 프로토콜로 HTTP가 사용된다는 것을 나타냅니다. SRMP 보안에서는 HTTPS 사용이 허용됩니다.  
+ 샘플 WCF 전송 HTTP를 통해 MSMQ를 사용 하 여 메시지 큐에 대기 합니다. 이를 SRMP 메시징이라고도 합니다. 대기 중인 메시지를 보낼 경우 보내는 컴퓨터의 MSMQ는 TCP 또는 HTTP 전송을 통해 수신 큐 관리자에게 메시지를 전송합니다. 사용자는 SRMP를 선택하여 큐 전송을 위한 전송 프로토콜로 HTTP가 사용된다는 것을 나타냅니다. SRMP 보안에서는 HTTPS 사용이 허용됩니다.  
   
 ## <a name="example"></a>예제  
  이 샘플 코드는 트랜잭션된 샘플에 기반을 둡니다. SRMP를 사용하여 큐에 메시지를 보내고 큐에서 메시지를 받는 방법은 네이티브 프로토콜을 사용하여 메시지를 보내고 받는 방법과 동일합니다.  

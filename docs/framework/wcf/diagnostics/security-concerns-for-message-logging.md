@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 ms.assetid: 21f513f2-815b-47f3-85a6-03c008510038
 author: BrucePerlerMS
 manager: mbaldwin
-ms.openlocfilehash: c8b2fe3300bacc76e63f9d533c613171d03600d7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 0ca5eee4d4a1fd0dfaabbf9160488eb2d88f3d3d
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="security-concerns-for-message-logging"></a>메시지 로깅에 대한 보안 고려 사항
 이 항목에서는 메시지 로깅에 의해 생성된 이벤트뿐 아니라 중요한 데이터가 메시지 로그에서 노출되지 않도록 보호하는 방법에 대해 설명합니다.  
@@ -16,7 +16,7 @@ ms.lasthandoff: 05/04/2018
 ## <a name="security-concerns"></a>보안 고려 사항  
   
 ### <a name="logging-sensitive-information"></a>중요한 정보 로깅  
- Windows Communication Foundation (WCF) 응용 프로그램별 헤더 및 본문의 모든 데이터를 수정 하지 않습니다. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서 응용 프로그램별 헤더 또는 본문 데이터에서 개인 정보를 추적하지도 않습니다.  
+ Windows Communication Foundation (WCF) 응용 프로그램별 헤더 및 본문의 모든 데이터를 수정 하지 않습니다. 또한 WCF 응용 프로그램별 헤더 또는 본문 데이터에 개인 정보를 추적 하지 않습니다.  
   
  메시지 로깅을 사용하도록 설정하면 쿼리 문자열 등의 응용 프로그램별 헤더와 신용 카드 번호 등의 본문 정보에 있는 개인 정보가 로그에 표시될 수 있습니다. 응용 프로그램 배포자는 구성 및 로그 파일에 액세스 제어를 적용하는 작업을 담당합니다. 이런 종류의 정보가 표시되지 않도록 하려면 로깅을 사용하지 않도록 설정하거나 로그를 공유하려는 데이터의 일부를 필터링해야 합니다.  
   

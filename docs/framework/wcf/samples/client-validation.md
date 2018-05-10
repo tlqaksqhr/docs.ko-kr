@@ -2,11 +2,11 @@
 title: Client Validation
 ms.date: 03/30/2017
 ms.assetid: f0c1f805-1a81-4d0d-a112-bf5e2e87a631
-ms.openlocfilehash: a5c1c5f907a797bff3dff490cbc953879ab69718
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 6e34ca8e1bb14f610e363c02eaeb94b7fa5e27c7
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="client-validation"></a>Client Validation
 서비스는 메타데이터를 자주 게시하여 클라이언트 프록시 형식의 자동 생성 및 구성을 활성화합니다. 서비스를 신뢰할 수 없으면 클라이언트 응용 프로그램에서 메타데이터가 보안, 트랜잭션, 서비스 계약 형식 등에 대한 클라이언트 응용 프로그램의 정책을 준수하는지 확인해야 합니다. 다음 샘플에서는 서비스 끝점을 안전하게 사용할 수 있도록 서비스 끝점의 유효성을 검사하는 클라이언트 끝점 동작 기록 방법을 보여 줍니다.  
@@ -60,7 +60,7 @@ ms.lasthandoff: 05/04/2018
 -   샘플 실행을 완료했으면 샘플 폴더에서 Cleanup.bat를 실행합니다.  
   
     > [!NOTE]
-    >  다중 컴퓨터 구성에서 이 샘플을 실행할 경우에는 이 스크립트로 클라이언트의 서비스 인증서를 제거할 수 없습니다. 다중 컴퓨터 구성의 인증서를 사용하는 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 샘플을 실행한 경우 CurrentUser - TrustedPeople 저장소에 설치된 서비스 인증서를 지워야 합니다. 이렇게 하려면 `certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>. For example: certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com` 명령을 사용합니다.  
+    >  다중 컴퓨터 구성에서 이 샘플을 실행할 경우에는 이 스크립트로 클라이언트의 서비스 인증서를 제거할 수 없습니다. CurrentUser-에 설치 된 서비스 인증서를 지워야를 컴퓨터 인증서를 사용 하는 WCF 샘플을 실행 한 경우 TrustedPeople 저장 합니다. 이렇게 하려면 `certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>. For example: certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com` 명령을 사용합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [메타데이터 사용](../../../../docs/framework/wcf/feature-details/using-metadata.md)

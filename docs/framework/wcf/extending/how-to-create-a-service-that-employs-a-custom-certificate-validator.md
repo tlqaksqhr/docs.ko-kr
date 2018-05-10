@@ -7,16 +7,16 @@ dev_langs:
 helpviewer_keywords:
 - WCF, authentication
 ms.assetid: bb0190ff-0738-4e54-8d22-c97d343708bf
-ms.openlocfilehash: d4a1532ed91b17cf5bed909026ace695aeba8cd9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: cc768f5e5086e6eba1ccac9d969eac14e14ceb2f
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="how-to-create-a-service-that-employs-a-custom-certificate-validator"></a>방법: 사용자 지정 인증서 유효성 검사기를 사용하는 서비스 만들기
 이 항목에서는 사용자 지정 인증서 유효성 검사기를 구현하는 방법과 클라이언트 또는 서비스 자격 증명을 구성하여 기본 인증서 유효성 검사 논리를 사용자 지정 인증서 유효성 검사기로 바꾸는 방법을 보여 줍니다.  
   
- X.509 인증서는 클라이언트 또는 서비스 인증을 사용 하는 경우 기본적으로 Windows Communication Foundation (WCF) 사용 하 여 Windows 인증서 저장소와 Crypto API 인증서의 유효성을 검사 하 고를 신뢰할 수 있는지 확인 합니다. 기본 제공 인증서 유효성 검사 기능으로 충분하지 않은 경우에는 변경해야 합니다. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서는 사용자가 사용자 지정 인증서 유효성 검사기를 추가할 수 있도록 하여 쉽게 유효성 검사 논리를 변경하는 방법을 제공합니다. 사용자 지정 인증서 유효성 검사기를 지정하면 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서 기본 제공 인증서 유효성 검사 논리를 사용하지 않고 대신 사용자 지정 유효성 검사기를 사용합니다.  
+ X.509 인증서는 클라이언트 또는 서비스 인증을 사용 하는 경우 기본적으로 Windows Communication Foundation (WCF) 사용 하 여 Windows 인증서 저장소와 Crypto API 인증서의 유효성을 검사 하 고를 신뢰할 수 있는지 확인 합니다. 기본 제공 인증서 유효성 검사 기능으로 충분하지 않은 경우에는 변경해야 합니다. WCF에는 쉽게 사용자가 사용자 지정 인증서 유효성 검사기를 추가할 수 있도록 하 여 유효성 검사 논리를 변경 하는 방법을 제공 합니다. 사용자 지정 인증서 유효성 검사기를 지정 하는 경우에 WCF 기본 제공 인증서 유효성 검사 논리를 사용 하지 않는 하지만 대신 사용자 지정 유효성 검사기에 의존 합니다.  
   
 ## <a name="procedures"></a>절차  
   

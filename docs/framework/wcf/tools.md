@@ -5,14 +5,14 @@ helpviewer_keywords:
 - WCF, tools
 - Windows Communication Foundation, tools
 ms.assetid: 399a47b4-bfea-434b-8e83-f76b5063d79d
-ms.openlocfilehash: 7d42ab9711a8d0b46ec3d35eec979e276a8c74a7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 27a18d436d4ee63cb6e65ed5981b65d55aadf036
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="windows-communication-foundation-tools"></a>Windows Communication Foundation 도구
-Windows Communication Foundation (WCF) 도구는 보다 쉽게 만들고 배포 하 고 관리할 수 있도록 설계 되었으며 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 응용 프로그램입니다. 이 단원에서는 이러한 도구에 대해 자세하게 설명합니다. 이 도구는 지원되지 않습니다.  
+Windows Communication Foundation (WCF) 도구는 보다 쉽게 만들고 배포 하 고 WCF 응용 프로그램을 관리할 수 있도록 설계 되었습니다. 이 단원에서는 이러한 도구에 대해 자세하게 설명합니다. 이 도구는 지원되지 않습니다.  
   
  명령줄에서 모든 도구를 실행할 수 있습니다.  
   
@@ -29,7 +29,7 @@ Windows Communication Foundation (WCF) 도구는 보다 쉽게 만들고 배포 
 |[WS-AtomicTransaction 구성 유틸리티(wsatConfig.exe)](../../../docs/framework/wcf/ws-atomictransaction-configuration-utility-wsatconfig-exe.md)|명령줄 도구를 사용하여 기본 WS-AtomicTransaction 지원 설정을 구성합니다.|  
 |[WS-AtomicTransaction 구성 MMC 스냅인](../../../docs/framework/wcf/ws-atomictransaction-configuration-mmc-snap-in.md)|MMC 스냅인을 사용하여 기본 WS-AtomicTransaction 지원 설정을 구성합니다.|  
 |[워크플로 서비스 등록 도구(WFServicesReg.exe)](../../../docs/framework/wcf/workflow-service-registration-tool-wfservicesreg-exe.md)|Windows 워크플로 서비스를 등록합니다.|  
-|[WCF 서비스 호스트(WcfSvcHost.exe)](../../../docs/framework/wcf/wcf-service-host-wcfsvchost-exe.md)|라이브러리 파일(*.dll)에 포함된 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 서비스를 호스팅합니다.|  
+|[WCF 서비스 호스트(WcfSvcHost.exe)](../../../docs/framework/wcf/wcf-service-host-wcfsvchost-exe.md)|파일 (*.dll) 라이브러리에 포함 된 WCF 서비스 호스트|  
 |[WCF 테스트 클라이언트(WcfTestClient.exe)](../../../docs/framework/wcf/wcf-test-client-wcftestclient-exe.md)|임의 형식의 매개 변수를 입력하고, 서비스에 해당 입력 내용을 전송하고, 서비스에서 되돌려 보내는 응답을 보는 데 사용할 수 있는 GUI 도구입니다.|  
 |[계약 중심 도구](../../../docs/framework/wcf/contract-first-tool.md)|XSD 데이터 계약에서 코드 클래스를 만드는 Visual Studio 빌드 작업입니다.|  
   

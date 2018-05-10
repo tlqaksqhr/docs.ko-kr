@@ -2,11 +2,11 @@
 title: 성능 카운터 사용
 ms.date: 03/30/2017
 ms.assetid: 00a787af-1876-473c-a48d-f52b51e28a3f
-ms.openlocfilehash: 2e25551494a433c53832127fdb0a32cb4eccac47
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 8784b4a481b8313d370aad1d8f265dcb44ab3ed6
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="using-performance-counters"></a>성능 카운터 사용
 이 샘플에는 사용자 정의 성능 카운터를 만드는 방법 및 Windows Communication Foundation (WCF) 성능 카운터에 액세스 하는 방법을 보여 줍니다. 이 샘플에 따라는 [시작](../../../../docs/framework/wcf/samples/getting-started-sample.md)합니다.  
@@ -28,7 +28,7 @@ ms.lasthandoff: 05/04/2018
   
  이 작업을 수행할 수도 있습니다를 사용 하 여 [Configuration Editor 도구 (SvcConfigEditor.exe)](../../../../docs/framework/wcf/configuration-editor-tool-svcconfigeditor-exe.md)합니다.  
   
- 성능 카운터가 사용되면 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 성능 카운터 모음 전체가 서비스에 대해 사용됩니다. .NET Framework는 `ServiceModelService`, `ServiceModelEndpoint` 및 `ServiceModelOperation`의 세 가지 수준에서 성능 데이터를 자동으로 유지 관리합니다. 이러한 각 수준에는 "Calls", "Calls per Second" 및 "Security Calls Not Authorized"와 같은 성능 카운터가 있습니다.  
+ 성능 카운터를 사용 하는 WCF 성능 카운터 모음 전체가 서비스에 대해 활성화 됩니다. .NET Framework는 `ServiceModelService`, `ServiceModelEndpoint` 및 `ServiceModelOperation`의 세 가지 수준에서 성능 데이터를 자동으로 유지 관리합니다. 이러한 각 수준에는 "Calls", "Calls per Second" 및 "Security Calls Not Authorized"와 같은 성능 카운터가 있습니다.  
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>샘플을 설치, 빌드 및 실행하려면  
   
@@ -47,10 +47,10 @@ ms.lasthandoff: 05/04/2018
   
 2.  나열된 성능 카운터를 선택한 다음 Delete 키를 누르면 성능 카운터를 제거할 수 있습니다.  
   
-3.  추가 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 그래프 창을 마우스 오른쪽 단추로 클릭 하 고 선택 하 여 카운터 **카운터 추가**합니다. 에 **카운터 추가** 대화 상자에서 **ServiceModelOperation 3.0.0.0, ServiceModelEndpoint 3.0.0.0 또는 ServiceModelService 3.0.0.0** 성능 개체에 있는 드롭다운 목록 상자입니다. 목록에서 보려는 카운터를 선택합니다.  
+3.  그래프 창을 마우스 오른쪽 단추로 클릭 하 고 선택 하 여 WCF 카운터 추가 **카운터 추가**합니다. 에 **카운터 추가** 대화 상자에서 **ServiceModelOperation 3.0.0.0, ServiceModelEndpoint 3.0.0.0 또는 ServiceModelService 3.0.0.0** 성능 개체에 있는 드롭다운 목록 상자입니다. 목록에서 보려는 카운터를 선택합니다.  
   
     > [!NOTE]
-    >  컴퓨터에서 실행 중인 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 서비스가 없는 경우에는 서비스의 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 성능 카운터가 없습니다.  
+    >  컴퓨터에서 실행 중인 WCF 서비스가 없는 경우 서비스에 대해 WCF 성능 카운터가 있습니다.  
   
 ### <a name="to-use-the-configuration-editor-to-enable-counters"></a>Configuration Editor를 사용하여 카운터를 사용하려면  
   

@@ -2,11 +2,11 @@
 title: 메시지 교환 패턴 선택
 ms.date: 03/30/2017
 ms.assetid: 0f502ca1-6a8e-4607-ba15-59198c0e6146
-ms.openlocfilehash: 3466be98522eef0ebec6f6613f51566700a7cdb7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: ac5ff841eb4e314c1c9d04c895d7a22766da003e
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="choosing-a-message-exchange-pattern"></a>메시지 교환 패턴 선택
 결정 하는 사용자 지정 전송을 작성 하는 첫 번째 단계는 *메시지 교환 패턴* (즉, Mep)는 개발 중인 채널에 대 한 필요 합니다. 이 항목에서는 사용 가능한 옵션과 여러 가지 요구 사항에 대해 설명합니다. 이에 설명 된 채널 개발 작업 목록에서 첫 번째 작업이 [개발 채널](../../../../docs/framework/wcf/extending/developing-channels.md)합니다.  
@@ -47,7 +47,7 @@ ms.lasthandoff: 05/04/2018
 >  UDP 전송의 경우 UDP는 본래 실행 후 제거 프로토콜이므로 데이터그램 MEP만 지원됩니다.  
   
 ## <a name="sessions-and-sessionful-channels"></a>세션 및 세션 채널  
- 네트워킹 환경에는 TCP와 같은 연결 지향 프로토콜과 UDP와 같은 연결 지양 프로토콜이 있습니다. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]는 연결과 비슷한 논리적 추상을 나타내는 데 세션이라는 용어를 사용합니다. 세션 WCF 프로토콜은 연결 지향 네트워크 프로토콜과 비슷하며 세션 없는 WCF 프로토콜은 연결 지양 네트워크 프로토콜과 비슷합니다.  
+ 네트워킹 환경에는 TCP와 같은 연결 지향 프로토콜과 UDP와 같은 연결 지양 프로토콜이 있습니다. WCF는 연결과 비슷한 논리적 추상을 나타내는 의미임 용어 세션을 사용 합니다. 세션 WCF 프로토콜은 연결 지향 네트워크 프로토콜과 비슷하며 세션 없는 WCF 프로토콜은 연결 지양 네트워크 프로토콜과 비슷합니다.  
   
  채널 개체 모델에서 각각의 논리적 세션은 세션 채널의 인스턴스로 매니페스트됩니다. 따라서 클라이언트에서 만들어져 서비스에서 허용되는 모든 새 세션은 클라이언트와 서비스 측의 새 세션 채널에 해당합니다. 다음은 위와 아래에 세션 없는 채널 구조와 세션 채널 구조가 각각 표시된 다이어그램입니다.  
   

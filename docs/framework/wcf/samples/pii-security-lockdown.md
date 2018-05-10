@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 ms.assetid: c44fb338-9527-4dd0-8607-b8787d15acb4
 author: BrucePerlerMS
 manager: mbaldwin
-ms.openlocfilehash: 81fc656784dadf0706e2ae3feda09cd08b886560
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: ec8af8c7df9335774b1f3953f88c2aad438963b6
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="pii-security-lockdown"></a>PII 보안 잠금
 이 샘플에는 Windows Communication Foundation (WCF) 서비스의 여러 보안 관련 기능을 제어 하는 방법을 보여 줍니다.  
@@ -29,11 +29,11 @@ ms.lasthandoff: 05/04/2018
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Management\SecurityLockdown`  
   
 ## <a name="discussion"></a>토론  
- 이러한 각 기능을 별개로 사용하거나 함께 사용하여 서비스 보안의 여러 측면을 제어할 수 있습니다. 여기서 다루는 내용이 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 서비스를 보안하기 위한 최선의 가이드는 아닙니다.  
+ 이러한 각 기능을 별개로 사용하거나 함께 사용하여 서비스 보안의 여러 측면을 제어할 수 있습니다. WCF 서비스를 보안 하기 위한 최선의 가이드는 아닙니다.  
   
  .NET Framework는 데이터베이스에 연결하기 위한 연결 문자열과 같은 중요한 정보를 포함할 수 있습니다. 공유된 웹 호스팅 시나리오에서는 서비스의 구성 파일에 포함된 데이터가 노출되지 않도록 구성 파일에서 이 정보를 암호화하는 것이 바람직할 수 있습니다. .NET Framework 2.0 이상에는 Windows DPAPI(데이터 보호 응용 프로그래밍 인터페이스) 또는 RSA 암호화 공급자를 사용하여 구성 파일의 일부를 암호화하는 기능이 있습니다. DPAPI 또는 RSA를 사용하는 aspnet_regiis.exe는 구성 파일의 특정 부분을 암호화할 수 있습니다.  
   
- 웹 호스팅 시나리오에서는 다른 서비스의 하위 디렉터리에 서비스를 가질 수 있습니다. 구성 값을 결정하기 위한 기본 의미 체계를 사용하면 중첩된 디렉터리의 구성 파일이 부모 디렉터리의 구성 값을 재정의할 수 있습니다. 특정 상황에서는 다양한 이유로 인해 이 기능이 적합하지 않을 수 있습니다. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 서비스 구성에서는 재정의된 구성 값을 사용하여 중첩된 서비스를 실행할 때 중첩된 구성에서 예외를 생성할 수 있도록 구성 값을 잠그는 기능이 지원됩니다.  
+ 웹 호스팅 시나리오에서는 다른 서비스의 하위 디렉터리에 서비스를 가질 수 있습니다. 구성 값을 결정하기 위한 기본 의미 체계를 사용하면 중첩된 디렉터리의 구성 파일이 부모 디렉터리의 구성 값을 재정의할 수 있습니다. 특정 상황에서는 다양한 이유로 인해 이 기능이 적합하지 않을 수 있습니다. 사용 하 여 중첩된 된 서비스를 실행할 때 예외를 생성 하도록 중첩 된 구성 구성 값의 잠금 WCF 서비스를 구성 하는 지원 구성 값을 재정의 합니다.  
   
  이 샘플에서는 사용자 이름 및 암호와 같은 추적 및 메시지 로그의 알려진 PII(개인적으로 식별할 수 있는 정보)의 로깅을 제어하는 방법을 보여 줍니다. 기본적으로 알려진 PII의 로깅은 사용되지 않지만 특정 상황에서는 응용 프로그램 디버깅을 위해 PII의 로깅이 중요할 수 있습니다. 이 샘플에 따라는 [시작](../../../../docs/framework/wcf/samples/getting-started-sample.md)합니다. 또한 이 샘플에서는 추적 및 메시지 로깅을 사용합니다. 자세한 내용은 참조는 [Tracing and Message Logging](../../../../docs/framework/wcf/samples/tracing-and-message-logging.md) 샘플.  
   

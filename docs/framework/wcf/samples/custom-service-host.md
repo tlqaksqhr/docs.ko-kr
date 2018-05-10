@@ -2,11 +2,11 @@
 title: 사용자 지정 서비스 호스트
 ms.date: 03/30/2017
 ms.assetid: fe16ff50-7156-4499-9c32-13d8a79dc100
-ms.openlocfilehash: c081858d57d9575a616c7c057047b0593a177f3e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: c02ceb114a5346ea2a851f711f1ab9b50373cb75
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="custom-service-host"></a>사용자 지정 서비스 호스트
 이 샘플에서는 <xref:System.ServiceModel.ServiceHost> 클래스의 사용자 지정 파생 항목을 사용하여 서비스의 런타임 동작을 변경하는 방법을 보여 줍니다. 이 접근 방식을 사용하면 일반적인 방법으로 여러 서비스를 구성하는 대신 재사용 가능한 대체 방법이 제공됩니다. 또한 샘플에서는 <xref:System.ServiceModel.Activation.ServiceHostFactory> 클래스를 사용하여 IIS(인터넷 정보 서비스) 또는 WAS(Windows Process Activation Service) 호스팅 환경에서 사용자 지정 ServiceHost를 사용하는 방법을 보여 줍니다.  
@@ -121,7 +121,7 @@ host.Open();
  사용자 지정 호스트는 기본 <xref:System.ServiceModel.ServiceHost> 클래스를 사용하여 서비스를 호스트한 경우처럼 응용 프로그램 구성 파일에서 서비스의 끝점 구성을 계속 읽습니다. 그러나 사용자 지정 호스트의 내부에서 메타데이터 게시를 사용하도록 설정하는 논리를 추가했으므로 구성에서 메타데이터 게시 동작을 더 이상 명시적으로 사용하도록 설정할 필요가 없습니다. 이 접근 방식을 사용하면 여러 서비스가 포함된 응용 프로그램을 빌드할 때 같은 구성 요소를 반복해서 작성하지 않고도 각 서비스에서 메타데이터 게시를 사용하도록 설정할 수 있다는 장점이 있습니다.  
   
 ## <a name="using-a-custom-servicehost-in-iis-or-was"></a>IIS 또는 WAS 환경에서 사용자 지정 ServiceHost 사용  
- 자체 호스팅 시나리오에서는 결국 응용 프로그램 코드를 통해 서비스 호스트 인스턴스를 만들고 여는 작업을 수행하므로 사용자 지정 서비스 호스트 사용이 간단합니다. 그러나 IIS 또는 WAS 호스팅 환경에서는 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 인프라가 들어오는 메시지에 대한 응답으로 서비스의 호스트를 동적으로 인스턴스화합니다. 이 호스팅 환경에서 사용자 지정 서비스 호스트를 사용할 수도 있지만 ServiceHostFactory 형식의 추가 코드가 필요합니다. 다음 코드에서는 사용자 지정 <xref:System.ServiceModel.Activation.ServiceHostFactory>의 인스턴스를 반환하는 `SelfDescribingServiceHost`의 파생 항목을 보여 줍니다.  
+ 자체 호스팅 시나리오에서는 결국 응용 프로그램 코드를 통해 서비스 호스트 인스턴스를 만들고 여는 작업을 수행하므로 사용자 지정 서비스 호스트 사용이 간단합니다. 하지만 IIS 또는 WAS 호스팅 환경 WCF 인프라가 동적으로 인스턴스화합니다 들어오는 메시지에 대 한 응답으로 서비스의 호스트를입니다. 이 호스팅 환경에서 사용자 지정 서비스 호스트를 사용할 수도 있지만 ServiceHostFactory 형식의 추가 코드가 필요합니다. 다음 코드에서는 사용자 지정 <xref:System.ServiceModel.Activation.ServiceHostFactory>의 인스턴스를 반환하는 `SelfDescribingServiceHost`의 파생 항목을 보여 줍니다.  
   
 ```  
 public class SelfDescribingServiceHostFactory : ServiceHostFactory  
@@ -150,7 +150,7 @@ public class SelfDescribingServiceHostFactory : ServiceHostFactory
                language=c# Debug="true" %>  
 ```  
   
- 여기서는 `Factory` 지시문에 추가 `@ServiceHost` 특성을 추가하고 사용자 지정 팩터리의 CLR 형식 이름을 특성의 값으로 전달했습니다. IIS나 WAS에서 이 서비스에 대한 메시지를 받으면 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 호스팅 인프라에서는 먼저 ServiceHostFactory의 인스턴스를 만든 다음 `ServiceHostFactory.CreateServiceHost()`를 호출하여 서비스 호스트 자체를 인스턴스화합니다.  
+ 여기서는 `Factory` 지시문에 추가 `@ServiceHost` 특성을 추가하고 사용자 지정 팩터리의 CLR 형식 이름을 특성의 값으로 전달했습니다. WCF 호스팅 인프라 IIS 또는 WAS이이 서비스에 대 한 메시지를 받으면 먼저 ServiceHostFactory의 인스턴스를 만든 하 고 다음 호출 하 여 서비스 호스트 자체를 인스턴스화합니다 `ServiceHostFactory.CreateServiceHost()`합니다.  
   
 ## <a name="running-the-sample"></a>샘플 실행  
  이 샘플에서는 완전한 기능을 갖춘 클라이언트 및 서비스 구현을 제공하지만 샘플의 핵심은 사용자 지정 호스트를 사용하여 서비스의 런타임 동작을 변경하는 방법을 보여 주는 것이므로 다음 단계를 수행합니다.  

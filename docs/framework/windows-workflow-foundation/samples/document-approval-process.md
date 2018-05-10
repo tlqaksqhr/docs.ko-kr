@@ -2,11 +2,11 @@
 title: 문서 승인 프로세스
 ms.date: 03/30/2017
 ms.assetid: 9b240937-76a7-45cd-8823-7f82c34d03bd
-ms.openlocfilehash: b1ef35f5a96399b669f0cda039bf1f6dd0fde979
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: c28dafd3b0a1cb6dbee37fed2b3df8923ccd82c8
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="document-approval-process"></a>문서 승인 프로세스
 이 샘플 여러 Windows WF (Workflow Foundation) 및 Windows Communication Foundation (WCF) 기능의 사용을 함께 보여 줍니다. 이 기능들은 문서 승인 프로세스 시나리오를 구현하는 데 함께 사용됩니다. 클라이언트 응용 프로그램은 승인이 필요한 문서를 제출하고 문서를 승인합니다. 클라이언트 사이의 원활한 통신을 지원하고 승인 프로세스의 규칙을 적용하는 데는 승인 관리자 응용 프로그램이 사용됩니다. 승인 프로세스는 여러 가지 유형의 승인을 실행할 수 있는 워크플로입니다. 단일 승인 프로세스, 정족수 승인(승인자 집합의 백분율) 프로세스 및 정족수 승인과 단일 승인이 차례로 이루어지는 복합 승인 프로세스를 처리하기 위하여 각기 다른 활동이 사용됩니다.  
@@ -29,7 +29,7 @@ ms.lasthandoff: 05/04/2018
   
 1.  승인 프로세스 시스템의 사용자로 클라이언트를 등록합니다.  
   
-2.  [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 클라이언트에서 승인 관리자 응용 프로그램을 통해 호스트되는 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 서비스로 요청을 보냅니다.  
+2.  WCF 클라이언트 승인 관리자 응용 프로그램에서 호스팅되는 WCF 서비스에 보냅니다.  
   
 3.  고유한 사용자 ID가 클라이언트로 반환됩니다. 이제 클라이언트가 승인 프로세스에 참가할 수 있습니다.  
   
@@ -47,19 +47,19 @@ ms.lasthandoff: 05/04/2018
   
 10. 클라이언트가 승인 요청을 받고 언제든지 해당 요청에 응답할 수 있습니다.  
   
-11. 클라이언트에 호스트된 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 서비스가 승인 관리자 응용 프로그램으로부터 승인 요청을 받을 수 있습니다.  
+11. 클라이언트에서 호스트 되는 WCF 서비스에서 승인 관리자 응용 프로그램 승인 요청을 받을 수 있습니다.  
   
 12. 문서 정보가 검토를 위해 클라이언트에 표시됩니다.  
   
 13. 사용자가 문서를 승인하거나 거부할 수 있습니다.  
   
-14. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 클라이언트를 통해 승인 응답이 승인 관리자 응용 프로그램으로 다시 보내집니다.  
+14. WCF 클라이언트 승인 관리자 응용 프로그램을 다시 승인 응답을 보내는 데 사용 됩니다.  
   
  승인 관리자 응용 프로그램측에서 볼 때 승인 프로세스는 다음과 같이 진행됩니다.  
   
 1.  승인 프로세스 시스템에 대한 참가 요청이 클라이언트로부터 전달됩니다.  
   
-2.  승인 관리자의 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 서비스가 승인 프로세스 시스템에 참가하고자 하는 클라이언트 요청을 받습니다.  
+2.  WCF 서비스에서 승인 관리자 승인 프로세스 시스템의 일부가 되도록 요청을 받습니다.  
   
 3.  클라이언트를 위한 고유한 ID가 생성됩니다. 사용자 정보가 데이터베이스에 저장됩니다.  
   

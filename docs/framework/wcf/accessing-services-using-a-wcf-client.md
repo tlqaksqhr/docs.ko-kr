@@ -7,20 +7,20 @@ dev_langs:
 helpviewer_keywords:
 - clients [WCF], consuming services
 ms.assetid: d780af9f-73c5-42db-9e52-077a5e4de7fe
-ms.openlocfilehash: d29483995a1fbf7a8c9918db0c3b65f7deac1e44
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: b0bde07dbeb70eaafbde4d90627d245554ad7ca6
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="accessing-services-using-a-wcf-client"></a>WCF 클라이언트를 사용하여 서비스 액세스
-서비스를 만들고 나면 다음 단계로 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 클라이언트 프록시를 만듭니다. 클라이언트 응용 프로그램은 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 클라이언트 프록시를 사용하여 서비스와 통신합니다. 클라이언트 응용 프로그램은 일반적으로 서비스의 메타데이터를 가져와서 서비스 호출에 사용할 수 있는 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 클라이언트 코드를 생성합니다.  
+서비스를 만든 후에 다음 단계에서는 WCF 클라이언트 프록시를 만드는 것입니다. 클라이언트 응용 프로그램 WCF 클라이언트 프록시를 사용 하 여 서비스와 통신 합니다. 클라이언트 응용 프로그램은 일반적으로 서비스를 호출 하는 데 사용할 수 있는 WCF 클라이언트 코드를 생성 하는 서비스의 메타 데이터를 가져옵니다.  
   
- [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 클라이언트를 만드는 기본 단계에는 다음이 포함됩니다.  
+ WCF 클라이언트를 만들기 위한 기본 단계는 다음과 같습니다.  
   
 1.  서비스 코드를 컴파일합니다.  
   
-2.  [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 클라이언트 프록시를 생성합니다.  
+2.  WCF 클라이언트 프록시를 생성 합니다.  
   
 3.  WCF 클라이언트 프록시를 인스턴스화합니다.  
   
@@ -39,7 +39,7 @@ Svcutil.exe <service's Metadata Exchange (MEX) address or HTTP GET address>
 Svcutil.exe <list of WSDL and XSD files on file system>  
 ```  
   
- 결과는 클라이언트 응용 프로그램이 서비스 호출에 사용할 수 있는 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 클라이언트 코드를 포함하는 코드 파일입니다.  
+ 결과 클라이언트 응용 프로그램 서비스를 호출 하는 데 사용할 수 있는 WCF 클라이언트 코드를 포함 하는 코드 파일입니다.  
   
  이 도구를 사용하여 구성 파일을 생성할 수도 있습니다.  
   
@@ -79,7 +79,7 @@ Public Interface ICalculator
 End Interface
 ```
   
- ServiceModel Metadata 유틸리티 도구 및 Visual Studio의 서비스 참조 추가는 다음 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 클라이언트 클래스를 생성합니다. 클래스는 제네릭 <xref:System.ServiceModel.ClientBase%601> 클래스에서 상속되며 `ICalculator` 인터페이스를 구현합니다. 또한 이 도구는 여기에 표시되지 않은 `ICalculator` 인터페이스를 생성합니다.  
+ ServiceModel Metadata 유틸리티 도구 및 Visual Studio에서 서비스 참조 추가 다음과 같은 WCF 클라이언트 클래스를 생성 합니다. 클래스는 제네릭 <xref:System.ServiceModel.ClientBase%601> 클래스에서 상속되며 `ICalculator` 인터페이스를 구현합니다. 또한 이 도구는 여기에 표시되지 않은 `ICalculator` 인터페이스를 생성합니다.  
   
 ```csharp
 public partial class CalculatorClient : System.ServiceModel.ClientBase<ICalculator>, ICalculator
@@ -147,7 +147,7 @@ End Class
 ```
   
 ## <a name="using-the-wcf-client"></a>WCF 클라이언트 사용  
- [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 클라이언트를 사용하려면 다음 코드와 같이 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 클라이언트 인스턴스를 만든 다음 해당 메서드를 호출합니다.  
+ WCF 클라이언트를 사용 하려면 WCF 클라이언트의 인스턴스를 만들고 다음 코드에 나와 있는 것 처럼 해당 메서드를 호출 합니다.  
   
 ```csharp
 // Create a client object with the given client endpoint configuration.
@@ -172,7 +172,7 @@ Console.WriteLine("Add({0},{1}) = {2}", value1, value2, result)
 ```
   
 ## <a name="debugging-exceptions-thrown-by-a-client"></a>클라이언트에서 Throw된 예외 디버깅  
- [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 클라이언트에서 throw된 많은 예외는 서비스에서의 예외로 인해 발생합니다. 다음은 이를 보여 주는 몇 가지 예입니다.  
+ WCF 클라이언트에서 throw 된 많은 예외는 서비스에서 예외로 인해 발생 합니다. 다음은 이를 보여 주는 몇 가지 예입니다.  
   
 -   <xref:System.Net.Sockets.SocketException>: 기존 연결이 원격 호스트에 의해 강제로 닫혔습니다.  
   

@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Tracing and logging
 ms.assetid: a4f39bfc-3c5e-4d51-a312-71c5c3ce0afd
-ms.openlocfilehash: 5f0cca66798a9d84b01c9fde1147c28f14a953db
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 13d23c0f69c65dd3bd6b2714dd710eb7f97a1c07
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="tracing-and-message-logging"></a>추적 및 메시지 로깅
 이 샘플에서는 추적 및 메시지 로깅을 사용하도록 설정하는 방법을 보여 줍니다. 결과 추적 및 메시지 로그를 사용 하 여 표시 되는 [Service Trace Viewer 도구 (SvcTraceViewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)합니다. 이 샘플에 따라는 [시작](../../../../docs/framework/wcf/samples/getting-started-sample.md)합니다.  
@@ -17,7 +17,7 @@ ms.lasthandoff: 05/04/2018
 >  이 샘플의 설치 절차 및 빌드 지침은 이 항목의 끝부분에 나와 있습니다.  
   
 ## <a name="tracing"></a>추적  
- 에 정의 된 추적 메커니즘을 사용 하 여 Windows Communication Foundation (WCF)는 <xref:System.Diagnostics> 네임 스페이스입니다. 이 추적 모델에서 추적 데이터는 응용 프로그램이 구현하는 추적 소스에 의해 생성됩니다. 각 소스는 이름으로 식별됩니다. 추적 소비자는 정보를 검색하려는 추적 소스에 대한 추적 수신기를 만듭니다. 추적 데이터를 수신하려면 추적 소스에 대한 수신기를 만들어야 합니다. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서 이 작업을 수행하려면 서비스 모델 추적 소스를 `switchValue`로 설정하여 서비스나 클라이언트의 구성 파일에 다음 코드를 추가합니다.  
+ 에 정의 된 추적 메커니즘을 사용 하 여 Windows Communication Foundation (WCF)는 <xref:System.Diagnostics> 네임 스페이스입니다. 이 추적 모델에서 추적 데이터는 응용 프로그램이 구현하는 추적 소스에 의해 생성됩니다. 각 소스는 이름으로 식별됩니다. 추적 소비자는 정보를 검색하려는 추적 소스에 대한 추적 수신기를 만듭니다. 추적 데이터를 수신하려면 추적 소스에 대한 수신기를 만들어야 합니다. 서비스 모델 추적 소스를 설정 하 여 서비스 또는 클라이언트의 구성 파일에 다음 코드를 추가 하 여 수행할 수이 wcf에서는 `switchValue`:  
   
 ```xml  
 <system.diagnostics>  
@@ -55,12 +55,12 @@ ms.lasthandoff: 05/04/2018
   
 -   전송과 전파를 통해 동작을 상호 연결합니다.  
   
--   [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 추적의 성능 비용(예: 로그 파일의 디스크 공간 비용)을 줄입니다.  
+-   (예: 로그 파일의 디스크 공간 비용) WCF 추적의 성능 비용을 줄일 수 있습니다.  
   
  사용자 정의 동작 추적에 대 한 자세한 내용은 참조 하십시오는 [추적 확장](../../../../docs/framework/wcf/samples/extending-tracing.md) 샘플.  
   
 ## <a name="message-logging"></a>메시지 로깅  
- 모든 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 응용 프로그램의 클라이언트 및 서비스 둘 다에서 메시지 로깅을 사용하도록 설정할 수 있습니다. 메시지 로깅을 사용하도록 설정하려면 클라이언트나 서비스에 다음 코드를 추가해야 합니다.  
+ 메시지 로깅은 모두 클라이언트와 WCF 응용 프로그램의 서비스에서 사용할 수 있습니다. 메시지 로깅을 사용하도록 설정하려면 클라이언트나 서비스에 다음 코드를 추가해야 합니다.  
   
 ```xml  
 <configuration>  

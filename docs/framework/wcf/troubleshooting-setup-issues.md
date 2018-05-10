@@ -2,11 +2,11 @@
 title: 설치 문제 해결
 ms.date: 03/30/2017
 ms.assetid: 1644f885-c408-4d5f-a5c7-a1a907bc8acd
-ms.openlocfilehash: 806e8a1f45deec5861e3bcc9a9c06a93ce410c1a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 3c750aa4f9a4ec4750aa24ffcd685c9c349a45a7
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="troubleshooting-setup-issues"></a>설치 문제 해결
 이 항목에서는 Windows Communication Foundation (WCF) 설치 문제를 해결 하는 방법에 설명 합니다.  
@@ -61,12 +61,12 @@ ms.lasthandoff: 05/04/2018
  [워크플로 서비스 등록 도구 (WFServicesReg.exe)](../../../docs/framework/wcf/workflow-service-registration-tool-wfservicesreg-exe.md) %windir%\Microsoft.NET\framework\v3.5\ 또는 %windir%\Microsoft.NET\framework64\v3.5\에서 찾을 수  
   
 ## <a name="configure-iis-properly-for-wcfwf-webhost-after-installing-net-framework-35"></a>.NET Framework 3.5 설치 후 WCF/WF Webhost에 대해 IIS를 올바로 구성  
- [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)]를 설치하여 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 관련 추가 IIS 구성 설정을 구성하지 못한 경우 설치 로그에 오류가 계속 기록됩니다. 필요한 구성 설정이 없기 때문에 WorkflowServices 응용 프로그램을 실행할 수 없습니다. 예를 들어 xoml 또는 규칙 서비스를 로드하지 못할 수 있습니다.  
+ 때 [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] 추가 WCF 관련 IIS 구성 설정을 구성 하지 못한, 설치 로그에 오류를 기록 하 고 계속 합니다. 필요한 구성 설정이 없기 때문에 WorkflowServices 응용 프로그램을 실행할 수 없습니다. 예를 들어 xoml 또는 규칙 서비스를 로드하지 못할 수 있습니다.  
   
  문제를 해결 하려면 사용 하 여가이 문제는 [워크플로 서비스 등록 도구 (WFServicesReg.exe)](../../../docs/framework/wcf/workflow-service-registration-tool-wfservicesreg-exe.md) 와 `/c` 컴퓨터에서 IIS 스크립트 맵을 구성 하는 스위치입니다. [워크플로 서비스 등록 도구 (WFServicesReg.exe)](../../../docs/framework/wcf/workflow-service-registration-tool-wfservicesreg-exe.md) %windir%\Microsoft.NET\framework\v3.5\ 또는 %windir%\Microsoft.NET\framework64\v3.5\에서 찾을 수  
   
 ## <a name="could-not-load-type-systemservicemodelactivationhttpmodule-from-assembly-systemservicemodel-version-3000-cultureneutral-publickeytokenb77a5c561934e089"></a>‘System.ServiceModel, Version 3.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089’ 어셈블리에서 ‘System.ServiceModel.Activation.HttpModule’ 형식을 로드할 수 없습니다.  
- 이 오류가 발생 하는 경우 [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] 가 설치 되어 다음 [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] HTTP 활성화가 사용 합니다. 이 문제를 해결하려면 [!INCLUDE[vs2010](../../../includes/vs2010-md.md)] 명령 프롬프트에서 다음 명령줄을 실행합니다.  
+ 이 오류가 발생 하는 경우 [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] 가 설치 되어 다음 WCF HTTP 활성화를 사용할 수 있습니다. 이 문제를 해결하려면 [!INCLUDE[vs2010](../../../includes/vs2010-md.md)] 명령 프롬프트에서 다음 명령줄을 실행합니다.  
   
 ```Output  
 aspnet_regiis.exe -i -enable  

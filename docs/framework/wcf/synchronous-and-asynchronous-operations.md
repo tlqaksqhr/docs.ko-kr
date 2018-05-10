@@ -8,23 +8,23 @@ helpviewer_keywords:
 - service contracts [WCF], synchronous operations
 - service contracts [WCF], asynchronous operations
 ms.assetid: db8a51cb-67e6-411b-9035-e5821ed350c9
-ms.openlocfilehash: 0b64d45797babff2da1649fb7469684342e65d47
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 6c464dc79e0f38b72f724fafcef59916d766e2d0
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="synchronous-and-asynchronous-operations"></a>동기 및 비동기 작업
 이 항목에서는 비동기 서비스 작업의 구현 및 호출에 대해 설명합니다.  
   
- 대부분의 응용 프로그램은 메서드를 비동기적으로 호출합니다. 이렇게 하면 메서드 호출이 실행되는 동안 응용 프로그램이 유용한 작업을 계속할 수 있기 때문입니다. Windows Communication Foundation (WCF) 서비스와 클라이언트에서 두 가지 고유 수준의 응용 프로그램을 제공 하는 비동기 작업 호출에 참여할 수 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 처리량을 최대화 하기 위해 더 많은 유연성에 대 한 분산 된 응용 프로그램 상호 작용 합니다.  
+ 대부분의 응용 프로그램은 메서드를 비동기적으로 호출합니다. 이렇게 하면 메서드 호출이 실행되는 동안 응용 프로그램이 유용한 작업을 계속할 수 있기 때문입니다. Windows Communication Foundation (WCF) 서비스와 클라이언트에서 두 가지 고유 수준의 응용 프로그램을 WCF 응용 프로그램 상호 작용에 대 한 분산 된 처리량을 최대화 하기 위해 더 많은 유연성을 제공 하는 비동기 작업 호출에 참여할 수 있습니다. .  
   
 ## <a name="types-of-asynchronous-operations"></a>비동기 작업 형식  
- [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]의 모든 서비스 계약은 매개 변수 형식 및 반환 값에 관계없이 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 특성을 사용하여 클라이언트와 서비스 간의 특정 메시지 교환 패턴을 지정합니다. [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]에서는 인바운드 및 아웃바운드 메시지를 자동으로 적절한 서비스 작업이나 실행 중인 클라이언트 코드로 라우팅합니다.  
+ 모든 서비스 계약은 WCF, 매개 변수 형식에 관계 없이 및 반환 값을 WCF 특성을 클라이언트와 서비스 간의 특정 메시지 교환 패턴을 지정 합니다. WCF는 자동으로 적절 한 서비스 작업이 나 실행 중인 클라이언트 코드에 인바운드 및 아웃 바운드 메시지를 라우팅합니다.  
   
  클라이언트는 특정 작업의 메시지 교환 패턴을 지정하는 서비스 계약만 소유하며 기본 메시지 교환 패턴이 확인되는 한 클라이언트가 선택한 프로그래밍 모델을 개발자에게 제공할 수 있습니다. 또한 지정된 메시지 패턴이 확인되는 한 서비스도 임의의 방식으로 작업을 구현할 수 있습니다.  
   
- 서비스나 클라이언트 구현에서 서비스 계약이 독립되면 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 응용 프로그램에서 다음과 같은 비동기 실행을 구현할 수 있습니다.  
+ 서비스 또는 클라이언트 구현에서 서비스 계약의 독립성에는 다음과 같은 형태의 WCF 응용 프로그램에서 비동기 실행 수 있습니다.  
   
 -   클라이언트는 동기 메시지 교환을 사용하여 요청/응답 작업을 비동기적으로 호출할 수 있습니다.  
   
@@ -147,7 +147,7 @@ Function DoWork(ByVal data As String, ByRef inout As String, _out outonly As out
 >  <xref:System.ServiceModel.OperationContractAttribute> 특성은 `BeginDoWork` 메서드에만 적용됩니다. 결과 계약에는 `DoWork`라는 하나의 WSDL 작업이 포함됩니다.  
   
 ### <a name="client-side-asynchronous-invocations"></a>클라이언트측 비동기 호출  
- [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 클라이언트 응용 프로그램은 위에서 설명한 세 가지 비동기 호출 모델 중 하나를 사용할 수 있습니다.  
+ WCF 클라이언트 응용 프로그램 앞에서 설명한 세 가지 비동기 호출 모델 중 하나를 사용할 수 있습니다.  
   
  작업 기반 모델을 사용하는 경우 다음 코드 조각과 같이 await 키워드를 사용하여 작업을 호출합니다.  
   
@@ -161,9 +161,9 @@ await simpleServiceClient.SampleMethodTaskAsync("hello, world");
 svcutil http://localhost:8000/servicemodelsamples/service/mex /async /tcv:Version35  
 ```  
   
- 그러면 Svcutil.exe는 호출 응용 프로그램이 응답을 받고 적절한 작업을 수행하기 위한 이벤트 처리기를 구현하고 할당할 수 있는 이벤트 인프라를 사용하여 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 클라이언트 클래스를 생성합니다. 전체 예제를 참조 하십시오. [하는 방법: 비동기적 서비스 작업 호출](../../../docs/framework/wcf/feature-details/how-to-call-wcf-service-operations-asynchronously.md)합니다.  
+ 이 도구를 실행 하는 경우 Svcutil.exe는 호출 응용 프로그램 구현 하 고 응답을 수신 하 고 적절 한 조치를 수행 하는 이벤트 처리기를 할당할 수 있는 이벤트 인프라는 WCF 클라이언트 클래스를 생성 합니다. 전체 예제를 참조 하십시오. [하는 방법: 비동기적 서비스 작업 호출](../../../docs/framework/wcf/feature-details/how-to-call-wcf-service-operations-asynchronously.md)합니다.  
   
- 그러나 이벤트 기반 비동기 모델은 [!INCLUDE[netfx35_long](../../../includes/netfx35-long-md.md)]에서만 사용할 수 있으며, [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)]를 사용하여 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 클라이언트 채널이 만들어진 경우에는 <xref:System.ServiceModel.ChannelFactory%601?displayProperty=nameWithType>에서도 지원되지 않습니다. [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 클라이언트 채널 개체가 있는 경우 <xref:System.IAsyncResult?displayProperty=nameWithType> 개체를 사용하여 작업을 비동기적으로 호출해야 합니다. 이 방법을 사용 하려면 지정 된 **/async** 명령 옵션으로는 [ServiceModel Metadata 유틸리티 도구 (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)다음 예제와 같이, 합니다.  
+ 그러나 이벤트 기반 비동기 모델은 [!INCLUDE[netfx35_long](../../../includes/netfx35-long-md.md)]에서만 사용할 수 있으며, 또한 지원 되지 않습니다에 [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] 를 사용 하 여 WCF 클라이언트 채널을 만들면는 <xref:System.ServiceModel.ChannelFactory%601?displayProperty=nameWithType>합니다. WCF 클라이언트 채널 개체와 함께 사용 해야 <xref:System.IAsyncResult?displayProperty=nameWithType> 작업을 비동기적으로 호출 하는 개체입니다. 이 방법을 사용 하려면 지정 된 **/async** 명령 옵션으로는 [ServiceModel Metadata 유틸리티 도구 (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)다음 예제와 같이, 합니다.  
   
 ```  
 svcutil http://localhost:8000/servicemodelsamples/service/mex /async   

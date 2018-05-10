@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - user-defined bindings [WCF]
 ms.assetid: c4960675-d701-4bc9-b400-36a752fdd08b
-ms.openlocfilehash: 82fe3baada73b89291311a891069c6ee3f19cf20
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: c9d37163770f2fd192a6fd2a03878b28f0237646
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="creating-user-defined-bindings"></a>사용자 정의 바인딩 만들기
 시스템에서 제공하지 않는 바인딩은 다음과 같은 여러 가지 방법으로 만들 수 있습니다.  
@@ -26,9 +26,9 @@ ms.lasthandoff: 05/04/2018
   
  프로토콜 바인딩 요소 – 이 요소는 메시지에 대해 수행하는 높은 수준의 처리 단계를 나타냅니다. 이러한 바인딩 요소로 만들어진 채널 및 수신기는 메시지 내용을 추가, 제거 또는 수정할 수 있습니다. 제공된 바인딩에는 임의의 개수의 프로토콜 바인딩 요소가 포함될 수 있으며 각 요소는 <xref:System.ServiceModel.Channels.BindingElement>에서 상속됩니다. Windows Communication Foundation (WCF) 등의 여러 프로토콜 바인딩 요소가 포함 된 <xref:System.ServiceModel.Channels.ReliableSessionBindingElement> 및 <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement>합니다.  
   
- 인코딩 바인딩 요소 – 이 요소는 네트워크에서 전송 대기 중인 메시지와 인코딩 간의 변환을 나타냅니다. 일반적인 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 바인딩에는 하나의 인코딩 바인딩 요소만 포함됩니다. 인코딩 바인딩 요소의 예로는 <xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement>, <xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement> 및 <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>가 있습니다. 바인딩에 대해 인코딩 바인딩 요소를 지정하지 않으면 기본 인코딩이 사용됩니다. 기본값은 HTTP 전송이면 텍스트이고, 그렇지 않으면 이진입니다.  
+ 인코딩 바인딩 요소 – 이 요소는 네트워크에서 전송 대기 중인 메시지와 인코딩 간의 변환을 나타냅니다. 일반적인 WCF 바인딩에 정확히 하나의 인코딩 바인딩 요소를 포함 합니다. 인코딩 바인딩 요소의 예로는 <xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement>, <xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement> 및 <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>가 있습니다. 바인딩에 대해 인코딩 바인딩 요소를 지정하지 않으면 기본 인코딩이 사용됩니다. 기본값은 HTTP 전송이면 텍스트이고, 그렇지 않으면 이진입니다.  
   
- 전송 바인딩 요소 – 이 요소는 전송 프로토콜에서 인코딩 메시지의 전송을 나타냅니다. 일반적인 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 바인딩에는 하나의 전송 바인딩 요소만 포함되며, 이 요소는 <xref:System.ServiceModel.Channels.TransportBindingElement>에서 상속됩니다. 전송 바인딩 요소의 예로는 <xref:System.ServiceModel.Channels.TcpTransportBindingElement>, <xref:System.ServiceModel.Channels.HttpTransportBindingElement> 및 <xref:System.ServiceModel.Channels.NamedPipeTransportBindingElement>가 있습니다.  
+ 전송 바인딩 요소 – 이 요소는 전송 프로토콜에서 인코딩 메시지의 전송을 나타냅니다. 상속 하는 정확히 하나의 전송 바인딩 요소를 포함 하는 일반적인 WCF 바인딩 <xref:System.ServiceModel.Channels.TransportBindingElement>합니다. 전송 바인딩 요소의 예로는 <xref:System.ServiceModel.Channels.TcpTransportBindingElement>, <xref:System.ServiceModel.Channels.HttpTransportBindingElement> 및 <xref:System.ServiceModel.Channels.NamedPipeTransportBindingElement>가 있습니다.  
   
  새 바인딩을 만들 때 추가되는 바인딩 요소의 순서가 중요합니다. 항상 다음 순서대로 바인딩 요소를 추가합니다.  
   
@@ -41,10 +41,10 @@ ms.lasthandoff: 05/04/2018
 |Encoding|텍스트, 이진, MTOM, 사용자 지정|예*|  
 |전송|TCP, 명명된 파이프, HTTP, HTTPS, MSMQ, 사용자 지정|예|  
   
- *인코딩은 각 바인딩의 필수적 요소이므로 인코딩을 지정하지 않으면 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서 기본 인코딩을 자동으로 추가합니다. 기본값은 HTTP 및 HTTPS 전송의 경우 텍스트/XML이고 그렇지 않은 경우 이진입니다.  
+ * 인코딩은 이므로 각 바인딩의 필수적 요소는 인코딩이 지정 되지 않은 경우, WCF에서 기본 인코딩을 추가 합니다. 기본값은 HTTP 및 HTTPS 전송의 경우 텍스트/XML이고 그렇지 않은 경우 이진입니다.  
   
 ## <a name="creating-a-new-binding-element"></a>새 바인딩 요소 만들기  
- <xref:System.ServiceModel.Channels.BindingElement>가 제공하는 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서 파생되는 형식 이외에 바인딩 요소를 만들 수 있습니다. 따라서 바인딩 스택을 만드는 방법 및 스택에서 기타 시스템 제공 형식으로 구성할 수 있는 <xref:System.ServiceModel.Channels.BindingElement>를 만들어 이 스택에 삽입되는 구성 요소를 사용자 지정할 수 있습니다.  
+ 파생 된 형식 외에도 <xref:System.ServiceModel.Channels.BindingElement> 하는 WCF 바인딩 요소를 만들 수 있습니다 제공 합니다. 따라서 바인딩 스택을 만드는 방법 및 스택에서 기타 시스템 제공 형식으로 구성할 수 있는 <xref:System.ServiceModel.Channels.BindingElement>를 만들어 이 스택에 삽입되는 구성 요소를 사용자 지정할 수 있습니다.  
   
  예를 들어, 메시지를 데이터베이스에 기록하는 기능을 제공하는 `LoggingBindingElement`를 구현하는 경우 채널 스택의 전송 채널 위에 요소를 배치해야 합니다. 이 경우 응용 프로그램은 다음 예제에서처럼 `LoggingBindingElement`로 `TcpTransportBindingElement`를 구성한 사용자 지정 바인딩을 만듭니다.  
   
@@ -64,7 +64,7 @@ Binding customBinding = new CustomBinding(
   
  최소한 사용자 정의 바인딩은 <xref:System.ServiceModel.Channels.Binding.CreateBindingElements%2A> 메서드 및 <xref:System.ServiceModel.Channels.Binding.Scheme%2A> 속성을 구현해야 합니다.  
   
- <xref:System.ServiceModel.Channels.Binding.CreateBindingElements%2A> 메서드는 바인딩의 바인딩 요소가 포함된 새 <xref:System.ServiceModel.Channels.BindingElementCollection>을 반환합니다. 컬렉션에는 먼저 프로토콜 바인딩 요소 그리고 인코딩 바인딩 요소와 전송 바인딩 요소가 순서대로 포함되어 있어야 합니다. 사용 하는 경우는 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 시스템 제공 바인딩 요소를 정렬 규칙에 지정 된 바인딩 요소를 수행 해야 [사용자 지정 바인딩](../../../../docs/framework/wcf/extending/custom-bindings.md)합니다. 이 컬렉션은 사용자 정의 바인딩 클래스 내에서 참조된 개체를 참조하지 않아야 합니다. 따라서 바인딩 작성자는 `Clone()`를 호출할 때마다 <xref:System.ServiceModel.Channels.BindingElementCollection>의 <xref:System.ServiceModel.Channels.Binding.CreateBindingElements%2A>을 반환해야 합니다.  
+ <xref:System.ServiceModel.Channels.Binding.CreateBindingElements%2A> 메서드는 바인딩의 바인딩 요소가 포함된 새 <xref:System.ServiceModel.Channels.BindingElementCollection>을 반환합니다. 컬렉션에는 먼저 프로토콜 바인딩 요소 그리고 인코딩 바인딩 요소와 전송 바인딩 요소가 순서대로 포함되어 있어야 합니다. WCF 시스템 제공 바인딩 요소를 사용할 때는 정렬 규칙에 지정 된 바인딩 요소를 수행 해야 [사용자 지정 바인딩](../../../../docs/framework/wcf/extending/custom-bindings.md)합니다. 이 컬렉션은 사용자 정의 바인딩 클래스 내에서 참조된 개체를 참조하지 않아야 합니다. 따라서 바인딩 작성자는 `Clone()`를 호출할 때마다 <xref:System.ServiceModel.Channels.BindingElementCollection>의 <xref:System.ServiceModel.Channels.Binding.CreateBindingElements%2A>을 반환해야 합니다.  
   
  <xref:System.ServiceModel.Channels.Binding.Scheme%2A> 속성은 바인딩에서 사용 중인 전송 프로토콜의 URI 스키마를 나타냅니다. 예를 들어는 *WSHttpBinding* 및 *NetTcpBinding* 는 각각의 "http" 및 "net.tcp"를 반환할 <xref:System.ServiceModel.Channels.Binding.Scheme%2A> 속성입니다.  
   

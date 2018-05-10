@@ -9,16 +9,16 @@ helpviewer_keywords:
 - ClientCredentials class
 - ClientCredentialsSecurityTokenManager class
 ms.assetid: 0b06ce4e-7835-4d82-8baf-d525c71a0e49
-ms.openlocfilehash: d171af8dbcbbdd51cc015986a2c69e0393fe56dc
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: d4c2e34b3e123e6fa9d8dc8e544f621b39861592
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="how-to-use-separate-x509-certificates-for-signing-and-encryption"></a>방법: 서명 및 암호화에 별도의 X.509 인증서 사용
 이 항목에서는 WCF Windows Communication Foundation () 메시지 서명 및 암호화에 클라이언트와 서비스 모두에 대 한 다른 인증서를 사용 하도록 구성 하는 방법을 보여 줍니다.  
   
- 서명 및 암호화에 별도의 인증서를 사용하려면, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서는 여러 클라이언트 또는 서비스 인증서를 설정하기 위한 API가 제공되지 않으므로 사용자 지정 클라이언트나 서비스 자격 증명(또는 모두)을 만들어야 합니다. 또한 여러 개의 인증서 정보를 활용하고 지정된 키 사용과 메시지 방향에 적합한 보안 토큰 공급자를 만들기 위해 보안 토큰 관리자도 제공되어야 합니다.  
+ 별도 인증서를 서명 및 암호화에 사용할 수 있도록 사용자 지정 클라이언트 또는 서비스 자격 증명 (또는 둘 다) 하기 때문에 만들어야 WCF 클라이언트 또는 서비스에 대 한 여러 인증서를 설정 하기 위한 API를 제공 하지 않습니다. 또한 여러 개의 인증서 정보를 활용하고 지정된 키 사용과 메시지 방향에 적합한 보안 토큰 공급자를 만들기 위해 보안 토큰 관리자도 제공되어야 합니다.  
   
  다음 다이어그램에서는 사용되는 주 클래스, 상속하는 클래스(위쪽 화살표로 표시), 특정 메서드 및 속성의 반환 형식을 보여 줍니다.  
   

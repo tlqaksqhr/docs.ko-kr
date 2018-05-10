@@ -2,11 +2,11 @@
 title: 가상 디렉터리 설치 지침
 ms.date: 03/30/2017
 ms.assetid: 3c62cab5-81a4-48b6-ac8c-9ce33a85a157
-ms.openlocfilehash: a6fc8309563e78f919fe1e2009c1f46801c32913
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 3ff578b69590071ef2135e777b3105e7c226563e
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="virtual-directory-setup-instructions"></a>가상 디렉터리 설치 지침
 Windows Communication Foundation (WCF) 샘플은 %SystemDrive%\inetpub\wwwroot\servicemodelsamples 폴더에 매핑되어 있는 servicemodelsamples 라는 공용 가상 디렉터리를 공유 하는 데 사용 됩니다.  
@@ -35,12 +35,12 @@ Windows Communication Foundation (WCF) 샘플은 %SystemDrive%\inetpub\wwwroot\s
 7.  **확인**을 클릭합니다. WCF 샘플에 웹 응용 프로그램이 만들어집니다.  
   
     > [!NOTE]
-    >  [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]의 모든 샘플에서는 동일한 servicemodelsamples 웹 응용 프로그램을 사용하므로 이 작업은 한 번만 실행해야 합니다.  
+    >  모든 WCF 샘플에서는 동일한 servicemodelsamples 웹 응용 프로그램을 사용 하기 때문에이 작업을 한 번만 수행 되어야 합니다.  
   
     > [!NOTE]
     >  이 문서에서는 `virtual directory`라는 용어는 `Web application`과 동의어입니다.  
   
-     가상 디렉터리 만들기 외에도 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 서비스를 실행하려면 해당 서비스의 속성을 설정해야 합니다. 자세한 내용은 다음을 참조하십시오.  
+     가상 디렉터리를 만드는 것 이외에 WCF 서비스를 실행할 수 있도록 해당 속성을 설정 해야 합니다. 자세한 내용은 다음을 참조하십시오.  
   
 #### <a name="to-create-a-virtual-directory-in-iis-51-or-60"></a>IIS 5.1 또는 6.0에서 가상 디렉터리를 만들려면  
   
@@ -52,7 +52,7 @@ Windows Communication Foundation (WCF) 샘플은 %SystemDrive%\inetpub\wwwroot\s
   
 4.  마법사에서 입력 `servicemodelsamples` 만들고 있는 가상 디렉터리에 대 한 별칭으로 합니다.  
   
-5.  경로를 %SystemDrive%\inetpub\wwwroot\servicemodelsamples로 설정합니다. 대부분의 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 샘플은 빌드 시 서비스 실행 파일을 이 위치에 복사합니다.  
+5.  경로를 %SystemDrive%\inetpub\wwwroot\servicemodelsamples로 설정합니다. 대부분의 WCF 샘플은 빌드 시 서비스 실행 파일을 이 위치에 복사합니다.  
   
 6.  **다음**을 클릭합니다.  
   
@@ -65,7 +65,7 @@ Windows Communication Foundation (WCF) 샘플은 %SystemDrive%\inetpub\wwwroot\s
 8.  클릭 **다음**, 클릭 하 고 **마침** 마법사를 완료 합니다.  
   
     > [!NOTE]
-    >  [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]의 모든 샘플에서는 동일한 servicemodelsamples 가상 디렉터리를 사용하므로 이 작업은 한 번만 실행해야 합니다.  
+    >  모든 WCF 샘플에서는 동일한 servicemodelsamples 가상 디렉터리를 사용 하기 때문에이 작업을 한 번만 수행 되어야 합니다.  
   
 #### <a name="to-set-additional-virtual-directory-properties-in-iis-70-or-75"></a>7.5 또는 IIS 7.0에서 추가 가상 디렉터리 속성을 설정 하려면  
   

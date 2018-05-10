@@ -4,19 +4,19 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - load balancing [WCF]
 ms.assetid: 148e0168-c08d-4886-8769-776d0953b80f
-ms.openlocfilehash: 9ad9c9c569137534addfa3b91f412fb0c0a4b808
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: c9d554dfd8d21b6e0e5f4aef0f4402e16485c2e8
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="load-balancing"></a>부하 분산
-하나의 Windows Communication Foundation (WCF) 응용 프로그램의 용량을 늘리려면 방법은 부하 분산 된 서버 팜으로 배포를 확장할 수입니다. [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 응용 프로그램에서는 Windows 네트워크 부하 분산과 같은 소프트웨어 부하 분산 장치와 하드웨어 기반의 부하 분산 장치 등 표준 부하 분산 기술을 사용하여 부하를 분산할 수 있습니다.  
+하나의 Windows Communication Foundation (WCF) 응용 프로그램의 용량을 늘리려면 방법은 부하 분산 된 서버 팜으로 배포를 확장할 수입니다. WCF 응용 프로그램에는 하드웨어 기반의 부하 분산 뿐만 아니라 표준 부하 분산 Windows 네트워크 부하 분산과 같은 소프트웨어 부하 분산 장치를 비롯 한 기술을 사용 하 여 분산 된 부하 수 있습니다.  
   
- 다음 단원에서는 여러 가지 시스템 제공 바인딩을 사용하여 부하 분산 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 응용 프로그램을 빌드할 때의 고려 사항에 대해 설명합니다.  
+ 다음 섹션에서는 부하 분산 여러 가지 시스템 제공 바인딩을 사용 하 여 작성 하는 WCF 응용 프로그램에 대 한 고려 사항에 설명 합니다.  
   
 ## <a name="load-balancing-with-the-basic-http-binding"></a>기본 HTTP 바인딩을 사용한 부하 분산  
- 부하 분산 측면에서 볼 때, [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]을 사용하여 통신하는 <xref:System.ServiceModel.BasicHttpBinding> 응용 프로그램은 정적 HTML 콘텐츠, ASP.NET 페이지 또는 ASMX 웹 서비스와 같은 다른 일반적인 형식의 HTTP 네트워크 트래픽과 다르지 않습니다. 이 바인딩을 사용하는 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 채널은 기본적으로 상태 비저장 채널이며 채널이 닫힐 때 연결을 종료합니다. 따라서 <xref:System.ServiceModel.BasicHttpBinding>은 기존의 HTTP 부하 분산 기술과 호환됩니다.  
+ 부하 분산을 사용 하 여 통신 하는 WCF 응용 프로그램의 관점에서의 <xref:System.ServiceModel.BasicHttpBinding> 은 다른 일반적인 형식의 HTTP 네트워크 트래픽 (정적 HTML 콘텐츠, ASP.NET 페이지 또는 ASMX 웹 서비스) 다르지 않습니다. 기본적으로 상태 비저장이 바인딩을 사용 하는 WCF 채널 이며 채널이 닫힐 때 연결을 종료 합니다. 따라서 <xref:System.ServiceModel.BasicHttpBinding>은 기존의 HTTP 부하 분산 기술과 호환됩니다.  
   
  기본적으로 <xref:System.ServiceModel.BasicHttpBinding>은 `Keep-Alive` 값을 사용하여 메시지의 연결 HTTP 헤더를 보내는데, 이를 통해 클라이언트는 영구 연결을 지원하는 서비스에 대해 이러한 연결을 설정할 수 있습니다. 또한 이 구성에서는 이전에 설정된 연결을 다시 사용하여 이후 메시지를 동일한 서버에 보낼 수 있으므로 처리량을 향상시킬 수 있습니다. 하지만 연결을 다시 사용하면 클라이언트가 부하 분산 팜의 특정 서버에만 강력하게 연결되어 라운드 로빈 부하 분산의 효율성이 떨어집니다. 이를 방지하려면, `Keep-Alive` 또는 사용자 정의 <xref:System.ServiceModel.Channels.HttpTransportBindingElement.KeepAliveEnabled%2A>에 <xref:System.ServiceModel.Channels.CustomBinding> 속성을 사용하여 서버에서 HTTP <xref:System.ServiceModel.Channels.Binding>를 비활성화할 수 있습니다. 다음 예제에서는 구성을 사용하여 이 작업을 수행하는 방법을 보여 줍니다.  
   

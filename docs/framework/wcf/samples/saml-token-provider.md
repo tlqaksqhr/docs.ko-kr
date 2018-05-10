@@ -1,35 +1,23 @@
 ---
 title: SAML Token Provider
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: eb16e5e2-4c8d-4f61-a479-9c965fcec80c
-caps.latest.revision: "15"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: d5c1fdb3801762f20dd99c0f2d9e6835eb98d0d1
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 519bde6b2849328efdeb2f295bde4749fbb652ca
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="saml-token-provider"></a>SAML Token Provider
-이 샘플에서는 사용자 지정 클라이언트 SAML 토큰 공급자를 구현하는 방법을 보여 줍니다. [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]의 토큰 공급자는 보안 인프라에 자격 증명을 제공하는 데 사용됩니다. 일반적으로 토큰 공급자는 대상을 검사하고 적절한 자격 증명을 발급하여 보안 인프라에서 메시지의 보안을 유지할 수 있도록 합니다. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서는 기본 자격 증명 관리자 토큰 공급자를 제공합니다. 또한 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]는 [!INCLUDE[infocard](../../../../includes/infocard-md.md)] 토큰 공급자를 제공합니다. 사용자 지정 토큰 공급자는 다음과 같은 경우에 유용합니다.  
+이 샘플에서는 사용자 지정 클라이언트 SAML 토큰 공급자를 구현하는 방법을 보여 줍니다. Windows Communication Foundation (WCF)에 토큰 공급자는 보안 인프라에 자격 증명 제공에 사용 됩니다. 일반적으로 토큰 공급자는 대상을 검사하고 적절한 자격 증명을 발급하여 보안 인프라에서 메시지의 보안을 유지할 수 있도록 합니다. WCF는 기본 자격 증명 관리자 토큰 공급자와 함께 제공 합니다. WCF도 함께 제공 된 [!INCLUDE[infocard](../../../../includes/infocard-md.md)] 토큰 공급자입니다. 사용자 지정 토큰 공급자는 다음과 같은 경우에 유용합니다.  
   
 -   이러한 토큰 공급자가 작동되지 않는 자격 증명 저장소가 있는 경우  
   
--   사용자가 세부 정보를 제공하는 지점에서 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 클라이언트 프레임워크에서 자격 증명을 사용하는 지점으로 자격 증명을 변환하는 사용자 지정 메커니즘을 제공하려는 경우  
+-   WCF 클라이언트 프레임 워크에서 자격 증명을 사용 하는 경우에 세부 정보를 제공 하는 사용자 지점에서 자격 증명을 변형에 대 한 사용자 지정 메커니즘을 제공 하려면.  
   
 -   사용자 지정 토큰을 빌드하고 있는 경우  
   
- 이 샘플에서는 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 클라이언트 프레임워크 외부에서 가져온 SAML 토큰을 사용할 수 있는 사용자 지정 토큰 공급자를 빌드하는 방법을 보여 줍니다.  
+ 이 샘플에 사용할 WCF 클라이언트 프레임 워크 외부에서 가져온 SAML 토큰을 허용 하는 사용자 지정 토큰 공급자를 빌드하는 방법을 보여 줍니다.  
   
  즉, 이 샘플에서는 다음 방법을 보여 줍니다.  
   
@@ -37,7 +25,7 @@ ms.lasthandoff: 01/19/2018
   
 -   사용자 지정 클라이언트 자격 증명으로 SAML 토큰을 전달하는 방법  
   
--   [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 클라이언트 프레임워크에 SAML 토큰을 제공하는 방법  
+-   어떻게 SAML 토큰은 WCF 클라이언트 프레임 워크에 제공 됩니다.  
   
 -   서버의 X.509 인증서를 사용하여 클라이언트에서 서버를 인증하는 방법  
   
@@ -122,7 +110,7 @@ ms.lasthandoff: 01/19/2018
 </system.serviceModel>  
 ```  
   
- 다음 단계에서는 사용자 지정 SAML 토큰 공급자를 개발하고 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 보안 프레임워크와 통합하는 방법을 보여 줍니다.  
+ 다음 단계에는 사용자 지정 SAML 토큰 공급자를 개발 하 고 WCF와 통합 하는 방법을 보여 줍니다: 보안 프레임 워크:  
   
 1.  사용자 지정 SAML 토큰 공급자를 씁니다.  
   

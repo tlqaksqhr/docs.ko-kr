@@ -2,11 +2,11 @@
 title: ServiceModel 등록 도구(ServiceModelReg.exe)
 ms.date: 03/30/2017
 ms.assetid: 396ec5ae-e34f-4c64-a164-fcf50e86b6ac
-ms.openlocfilehash: 660bad0b80a80a21936c9c8a5d485fe05b8c8acf
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 5fab1a356cd035ed006bfe90d713e179907e0137
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="servicemodel-registration-tool-servicemodelregexe"></a>ServiceModel 등록 도구(ServiceModelReg.exe)
 이 명령줄 도구는 단일 컴퓨터에서 WCF 및 WF 구성 요소 등록을 관리하는 기능을 제공합니다. 일반적인 경우에는 설치 시 WCF 및 WF 구성 요소가 구성되므로 이 도구를 사용할 필요가 없습니다. 하지만 서비스 활성화 문제가 있는 경우 이 도구를 사용하여 구성 요소를 등록해 볼 수 있습니다.  
@@ -41,7 +41,7 @@ ServiceModelReg.exe[(-ia|-ua|-r)|((-i|-u) -c:<command>)] [-v|-q] [-nologo] [-?]
 |`-?`|도움말 텍스트 표시|  
   
 ## <a name="fixing-the-fileloadexception-error"></a>FileLoadException 오류 수정  
- 컴퓨터에 이전 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 버전을 설치한 경우 새 설치를 등록하기 위해 ServiceModelReg 도구를 실행할 때 `FileLoadFoundException` 오류가 발생할 수 있습니다. 이전 설치에서 파일을 수동으로 제거했지만 machine.config 설정이 그대로 남아 있으면 이 오류가 발생할 수 있습니다.  
+ 컴퓨터에 이전 버전의 WCF 설치 하는 경우 발생할 수 있습니다는 `FileLoadFoundException` 새 설치를 등록 하기 위해 ServiceModelReg 도구를 실행 하는 동안 오류가 발생 했습니다. 이전 설치에서 파일을 수동으로 제거했지만 machine.config 설정이 그대로 남아 있으면 이 오류가 발생할 수 있습니다.  
   
  다음과 유사한 오류 메시지가 표시됩니다.  
   
@@ -50,7 +50,7 @@ Error: System.IO.FileLoadException: Could not load file or assembly 'System.Serv
 File name: 'System.ServiceModel, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089'  
 ```  
   
- 오류 메시지에 따르면 System.ServiceModel 버전 2.0.0.0 어셈블리가 초기 CTP(Customer Technology Preview) 릴리스에 의해 설치되었습니다. 릴리스된 System.ServiceModel 어셈블리의 현재 버전은 3.0.0.0입니다. 따라서 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]의 초기 CTP 릴리스가 설치되었지만 완전히 제거되지 않은 컴퓨터에 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]의 공식 릴리스를 설치하려는 경우 이 문제가 발생합니다.  
+ 오류 메시지에 따르면 System.ServiceModel 버전 2.0.0.0 어셈블리가 초기 CTP(Customer Technology Preview) 릴리스에 의해 설치되었습니다. 릴리스된 System.ServiceModel 어셈블리의 현재 버전은 3.0.0.0입니다. 따라서 여기서 WCF의 초기 CTP 릴리스에서 설치 되었지만 완전히 제거 되지 컴퓨터에서 공식 WCF 릴리스를 설치 하려는 경우이 문제가 발생 합니다.  
   
  ServiceModelReg.exe는 이전 버전의 항목을 정리할 수 없으며 새 버전의 항목을 등록할 수도 없습니다. 유일한 해결 방법은 수동으로 machine.config를 편집하는 것입니다. 다음 위치에서 이 파일을 찾을 수 있습니다.  
   
@@ -58,7 +58,7 @@ File name: 'System.ServiceModel, Version=2.0.0.0, Culture=neutral, PublicKeyToke
 %windir%\Microsoft.NET\Framework\v2.0.50727\config\machine.config   
 ```  
   
- 또한 64비트 컴퓨터에서 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]를 실행하는 경우 이 위치에서 동일한 파일을 편집해야 합니다.  
+ 64 비트 컴퓨터에서 WCF를 실행 하는 경우에이 위치에서 동일한 파일을 편집 해야 합니다.  
   
 ```  
 %windir%\Microsoft.NET\Framework64\v2.0.50727\config\machine.config   

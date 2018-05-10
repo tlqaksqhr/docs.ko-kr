@@ -2,11 +2,11 @@
 title: 권한 부여 정책
 ms.date: 03/30/2017
 ms.assetid: 1db325ec-85be-47d0-8b6e-3ba2fdf3dda0
-ms.openlocfilehash: fc0c147f2f9a57c80edda6144a14f208bde835eb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 3744afb20c06e1ca85b91dadde6549d87ac89337
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="authorization-policy"></a>권한 부여 정책
 이 샘플에서는 사용자 지정 클레임 권한 부여 정책 및 연관된 사용자 지정 서비스 인증 관리자를 구현하는 방법을 보여 줍니다. 이 방법은 서비스에서 서비스 작업에 대해 클레임 기반 액세스 검사를 수행하는 경우에 유용하며 액세스 검사 전에 호출자에게 특정 권한을 부여합니다. 이 샘플에서는 클레임을 추가하는 프로세스와 종료된 클레임 집합에 대해 액세스 검사를 수행하는 방법을 보여 줍니다. 클라이언트와 서버 간의 모든 응용 프로그램 메시지는 서명 및 암호화됩니다. 기본적으로 `wsHttpBinding` 바인딩에서는 클라이언트에서 제공하는 사용자 이름과 암호를 사용하여 유효한 Windows NT 계정에 로그온합니다. 이 샘플에서는 사용자 지정을 활용 하는 방법을 보여 줍니다. <!--zz <xref:System.IdentityModel.Selectors.UsernamePasswordValidator>--> `System.IdentityModel.Selectors.UsernamePasswordValidator` 클라이언트를 인증 합니다. 이 샘플에서는 그 외에도 X.509 인증서를 사용하여 서비스에 대해 클라이언트를 인증하는 방법을 보여 줍니다. 이 샘플에서는 서로의 사이에서 특정 사용자에 대해 서비스의 특정 메서드에 대한 액세스 권한을 부여하는 <xref:System.IdentityModel.Policy.IAuthorizationPolicy> 및 <xref:System.ServiceModel.ServiceAuthorizationManager> 구현을 보여 줍니다. 이 샘플에 따라는 [메시지 보안 사용자 이름](../../../../docs/framework/wcf/samples/message-security-user-name.md), 없지만 이전에 클레임 변환을 수행 하는 방법을 보여 줍니다.는 <xref:System.ServiceModel.ServiceAuthorizationManager> 호출 합니다.  
@@ -496,6 +496,6 @@ public class MyAuthorizationPolicy : IAuthorizationPolicy
 1.  샘플 실행을 완료했으면 샘플 폴더에서 Cleanup.bat를 실행합니다. 그러면 인증서 저장소에서 서버 및 클라이언트 인증서가 제거됩니다.  
   
 > [!NOTE]
->  다중 컴퓨터 구성에서 이 샘플을 실행할 경우에는 이 스크립트로 클라이언트의 서비스 인증서를 제거할 수 없습니다. 다중 컴퓨터 구성의 인증서를 사용하는 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 샘플을 실행한 경우 CurrentUser - TrustedPeople 저장소에 설치된 서비스 인증서를 지워야 합니다. 이를 수행하려면 `certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>` 명령을 사용합니다(예: `certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`).  
+>  다중 컴퓨터 구성에서 이 샘플을 실행할 경우에는 이 스크립트로 클라이언트의 서비스 인증서를 제거할 수 없습니다. CurrentUser-에 설치 된 서비스 인증서를 지워야를 컴퓨터 인증서를 사용 하는 WCF 샘플을 실행 한 경우 TrustedPeople 저장 합니다. 이를 수행하려면 `certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>` 명령을 사용합니다(예: `certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`).  
   
 ## <a name="see-also"></a>참고 항목

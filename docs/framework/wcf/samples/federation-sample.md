@@ -2,17 +2,17 @@
 title: Federation 샘플
 ms.date: 03/30/2017
 ms.assetid: 7e9da0ca-e925-4644-aa96-8bfaf649d4bb
-ms.openlocfilehash: 38581c7003c30038ee1a3438caa96b7f2782a23e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: a9c2b91f7d8bdf24476c76fcd479b7f2fb44c90f
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="federation-sample"></a>Federation 샘플
 이 샘플에서는 연결된 보안을 보여 줍니다.  
   
 ## <a name="sample-details"></a>샘플 세부 정보  
- Windows Communication Foundation (WCF)을 통해 페더레이션된 보안 아키텍처 배포에 대 한 지원을 제공는 `wsFederationHttpBinding`합니다. `wsFederationHttpBinding`에서는 요청/회신 통신의 기본 전송 메커니즘으로 HTTP를 사용하고, 인코딩 통신 형식으로 텍스트/XML을 사용하는, 안전하고 안정적이며 상호 운용 가능한 바인딩을 제공합니다. 페더레이션에 대 한 자세한 내용은 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], 참조 [페더레이션](../../../../docs/framework/wcf/feature-details/federation.md)합니다.  
+ Windows Communication Foundation (WCF)을 통해 페더레이션된 보안 아키텍처 배포에 대 한 지원을 제공는 `wsFederationHttpBinding`합니다. `wsFederationHttpBinding`에서는 요청/회신 통신의 기본 전송 메커니즘으로 HTTP를 사용하고, 인코딩 통신 형식으로 텍스트/XML을 사용하는, 안전하고 안정적이며 상호 운용 가능한 바인딩을 제공합니다. WCF의 페더레이션에 대 한 자세한 내용은 참조 [페더레이션](../../../../docs/framework/wcf/feature-details/federation.md)합니다.  
   
  이 시나리오는 네 부분으로 구성되어 있습니다.  
   

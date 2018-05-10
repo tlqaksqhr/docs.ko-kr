@@ -7,19 +7,19 @@ dev_langs:
 helpviewer_keywords:
 - endpoints [WCF], overview
 ms.assetid: f4dce0fb-6f54-47e6-8054-86d7f574b91c
-ms.openlocfilehash: 91e5e45d380ec6a8229a7272c841e1a345423c7a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 46ca6294d68537e86a319b55d8c11e3ae0084738
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="endpoint-creation-overview"></a>끝점 만들기 개요
-Windows Communication Foundation (WCF) 서비스와 모든 통신을 통해 발생 된 *끝점* 서비스의 합니다. 끝점은 클라이언트에게 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 서비스에서 제공하는 기능에 대한 액세스를 제공합니다. 이 단원에서는 끝점의 구조에 대해 설명하고 구성 및 코드에서 끝점을 정의하는 방법을 간략하게 설명합니다.  
+Windows Communication Foundation (WCF) 서비스와 모든 통신을 통해 발생 된 *끝점* 서비스의 합니다. 끝점의 클라이언트는 WCF 서비스에서 제공 하는 기능에 대 한 액세스를 제공 합니다. 이 단원에서는 끝점의 구조에 대해 설명하고 구성 및 코드에서 끝점을 정의하는 방법을 간략하게 설명합니다.  
   
 ## <a name="the-structure-of-an-endpoint"></a>끝점의 구조  
  각 끝점에는 끝점을 찾을 위치를 나타내는 주소, 클라이언트가 끝점과 통신할 수 있는 방법을 지정하는 바인딩, 그리고 사용 가능한 메서드를 식별하는 계약이 포함되어 있습니다.  
   
--   **주소**합니다. 주소는 끝점을 고유하게 식별하고 잠재 고객에게 서비스가 있는 위치를 알려 줍니다. 주소는 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 개체 모델에서 <xref:System.ServiceModel.EndpointAddress> 주소로 표시되며 URI(Uniform Resource Identifier) 및 ID를 포함하는 주소 속성, 일부 WSDL(웹 서비스 기술 언어) 요소 및 선택적 헤더의 컬렉션을 포함합니다. 선택적 헤더는 끝점을 확인하거나 상호 작용하는 데 필요한 자세한 주소 지정 정보를 추가로 제공합니다. 자세한 내용은 참조 [끝점 주소 지정](../../../docs/framework/wcf/specifying-an-endpoint-address.md)합니다.  
+-   **주소**합니다. 주소는 끝점을 고유하게 식별하고 잠재 고객에게 서비스가 있는 위치를 알려 줍니다. WCF 개체 모델에서 표시 됩니다는 <xref:System.ServiceModel.EndpointAddress> 는 식별자 URI (Uniform Resource)과 id, 일부 WSDL 웹 서비스 설명 언어 () 요소 및 선택적의 컬렉션을 포함 하는 주소 속성이 포함 된 주소 헤더입니다. 선택적 헤더는 끝점을 확인하거나 상호 작용하는 데 필요한 자세한 주소 지정 정보를 추가로 제공합니다. 자세한 내용은 참조 [끝점 주소 지정](../../../docs/framework/wcf/specifying-an-endpoint-address.md)합니다.  
   
 -   **바인딩**합니다. 바인딩은 끝점과 통신하는 방법을 지정합니다. 바인딩은 사용할 전송 프로토콜(예: TCP 또는 HTTP), 메시지에 사용할 인코딩(예: 텍스트 또는 이진), 필요한 보안 요구 사항(예: SSL[Secure Sockets Layer] 또는 SOAP 메시지 보안) 등을 포함하여 끝점이 대상과 통신하는 방법을 지정합니다. 자세한 내용은 참조 [구성 서비스 및 클라이언트에 대 한 바인딩을 사용 하 여](../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)합니다.  
   

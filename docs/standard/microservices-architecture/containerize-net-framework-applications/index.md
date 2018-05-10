@@ -1,21 +1,14 @@
 ---
 title: Windows 컨테이너로 레거시 모놀리식 .NET Framework 응용 프로그램 마이그레이션
 description: 컨테이너화된 .NET 응용 프로그램을 위한 .NET 마이크로 서비스 아키텍처 | Windows 컨테이너로 레거시 모놀리식 .NET Framework 응용 프로그램 마이그레이션
-keywords: Docker, 마이크로 서비스, ASP.NET, 컨테이너
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.prod: .net-core
-ms.technology: dotnet-docker
-ms.topic: article
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: c88027156b55829f77357c1fdb1aef01a802b88a
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: a12012f115629a79734c18c3bc75733ae2fc8195
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="migrating-legacy-monolithic-net-framework-applications-to-windows-containers"></a>Windows 컨테이너로 레거시 모놀리식 .NET Framework 응용 프로그램 마이그레이션
 
@@ -45,7 +38,7 @@ Catalog.WebForms 응용 프로그램은 eShopOnContainers GitHub 리포지토리
 
 마지막으로, 컨테이너화된 응용 프로그램은 더욱 수평으로 확장된 곡선을 갖습니다. 컨테이너화된 앱을 통해 어떻게 VM 또는 물리적 컴퓨터에서 더 많은 컨테이너를 사용할 수 있는지에 대해 알아보았습니다. 이는 밀도가 높아지고 필요한 자원이 줄어든다는 것을 의미합니다.
 
-이러한 모든 이유로 “리프트 앤 시프트” 작업을 사용하여 Docker 컨테이너에서 레거시 모놀리식 앱을 실행하는 것이 좋습니다. “리프트 앤 시프트”라는 문구는 작업의 범위를 설명합니다. 즉, 물리적 컴퓨터나 가상 컴퓨터에서 전체 응용 프로그램을 들어 올린(리프트) 후 컨테이너로 옮깁니다(시프트). 이상적인 상황에서는 응용 프로그램 코드를 컨테이너에서 실행하기 위해 해당 코드를 변경할 필요가 없습니다.
+이러한 모든 이유로 “리프트 앤 시프트” 작업을 사용하여 Docker 컨테이너에서 레거시 모놀리식 앱을 실행하는 것이 좋습니다. “리프트 앤 시프트”라는 문구는 작업의 범위를 설명합니다. 즉, 물리적 컴퓨터나 가상 머신에서 전체 응용 프로그램을 들어 올린(리프트) 후 컨테이너로 옮깁니다(시프트). 이상적인 상황에서는 응용 프로그램 코드를 컨테이너에서 실행하기 위해 해당 코드를 변경할 필요가 없습니다.
 
 ## <a name="possible-migration-paths"></a>가능한 마이그레이션 경로
 

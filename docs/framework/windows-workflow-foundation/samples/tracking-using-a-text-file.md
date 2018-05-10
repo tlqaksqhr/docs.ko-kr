@@ -2,11 +2,11 @@
 title: 텍스트 파일 사용 추적
 ms.date: 03/30/2017
 ms.assetid: 56a82682-73c2-4b91-a206-4d8bb12c561b
-ms.openlocfilehash: 3ff786836dbf5b10d64702733c92579185ef2f3c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: aa59ab8304c68873c938f42fc585be883b234ecc
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="tracking-using-a-text-file"></a>텍스트 파일 사용 추적
 이 샘플에서는 사용자 지정 추적 참가자를 만들어 추적에서 Windows WF (Workflow Foundation)를 확장 하는 방법을 보여 줍니다. 추적 참가자는 추적 레코드를 내보낼 때 런타임에서 추적 레코드를 받는 .NET Framework 클래스입니다. 시나리오에 필요한 대상에 추적 이벤트를 전송하는 추적 참가자를 만들 수 있습니다. 예를 들어 ETW(Windows용 이벤트 추적) 추적 참가자는 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]의 일부로 제공됩니다. 이 샘플의 추적 참가자는 XML 형식의 레코드를 텍스트 파일에 기록합니다.  
@@ -17,7 +17,7 @@ ms.lasthandoff: 05/04/2018
 |클래스|설명|  
 |-----------|-----------------|  
 |`TextFileTrackingExtensionElement`|<xref:System.ServiceModel.Configuration.BehaviorExtensionElement>는 텍스트 파일 추적 참가자를 구성하는 데 사용되는 구성 섹션을 정의하는 데 사용됩니다. 이 클래스를 사용하면 사용자가 표준 .NET Framework 구성 파일을 사용하여 로그 파일의 대상을 지정할 수 있습니다.|  
-|`TextFileTrackingBehavior`|[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]의 동작을 통해 사용자는 확장을 런타임에 삽입할 수 있습니다. 이 동작은 서비스가 시작될 때 추적 참가자를 서비스에 추가합니다.|  
+|`TextFileTrackingBehavior`|WCF의 동작 확장을 런타임에 삽입할 수 있도록 합니다. 이 동작은 서비스가 시작될 때 추적 참가자를 서비스에 추가합니다.|  
 |`TextFileTrackingParticipant`|런타임에 추적 참가자를 받아 로그 파일에 XML로 저장하는 추적 참가자입니다.|  
   
 ## <a name="behavior-extension-elements-configuration"></a>동작 확장 요소 구성  

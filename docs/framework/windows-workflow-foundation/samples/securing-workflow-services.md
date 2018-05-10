@@ -2,11 +2,11 @@
 title: 워크플로 서비스에 보안 설정
 ms.date: 03/30/2017
 ms.assetid: 53f84ad5-1ed1-4114-8d0d-b12e8a021c6e
-ms.openlocfilehash: ac02b5ffcfc14ea4aab9e8aafd5f6a4cbcdef3b4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 5dbd724f3a2f8febfc74719584f4d69cbf75b567
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="securing-workflow-services"></a>워크플로 서비스에 보안 설정
 보안 워크플로 서비스 샘플에서는 다음 절차를 보여 줍니다.  
@@ -21,7 +21,7 @@ ms.lasthandoff: 05/04/2018
  WCF 보안(클레임 기반 권한 부여)을 사용하여 클라이언트와 워크플로 서비스 간 통신에 보안 설정  
   
 ## <a name="discussion"></a>토론  
- 이 샘플에서는 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 보안 인프라를 사용하여 일반 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 서비스에서와 동일하게 워크플로 서비스에 보안을 설정하는 방법을 보여 줍니다. 특히 여기에서는 권한 부여에 사용자 지정 클레임을 사용합니다. 이 경우 Windows 자격 증명에 <xref:System.ServiceModel.WSHttpBinding> 및 메시지 모드 보안을 사용합니다.  
+ 이 샘플 일반 WCF 서비스와 마찬가지로 워크플로 서비스를 보안 WCF 보안 인프라의 사용법을 보여줍니다. 특히 여기에서는 권한 부여에 사용자 지정 클레임을 사용합니다. 이 경우 Windows 자격 증명에 <xref:System.ServiceModel.WSHttpBinding> 및 메시지 모드 보안을 사용합니다.  
   
  사용자 지정 <xref:System.IdentityModel.Policy.IAuthorizationPolicy>(`CustomNameCheckerPolicy`)는 클라이언트의 Windows 사용자 이름에 특정 문자가 있는지 확인합니다. 해당 문자가 있으면 클레임을 만들어 <xref:System.IdentityModel.Policy.EvaluationContext>에 추가합니다. 이렇게 하여 사용자 지정 정책이 클라이언트의 사용자 이름에 이 문자가 있음을 나타내는 문을 만듭니다. 호출의 수명 주기 전체에 걸쳐 이 클레임을 쿼리할 수 있습니다. `Constants.cs`에서 해당 문자를 찾을 수 있습니다.  
   

@@ -1,21 +1,14 @@
 ---
 title: 다중 컨테이너 및 마이크로 서비스 기반 .NET 응용 프로그램 디자인 및 개발
 description: 컨테이너화된 .NET 응용 프로그램을 위한 .NET 마이크로 서비스 아키텍처 | 다중 컨테이너 및 마이크로 서비스 기반 .NET 응용 프로그램 디자인 및 개발
-keywords: Docker, 마이크로 서비스, ASP.NET, 컨테이너
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.prod: .net-core
-ms.technology: dotnet-docker
-ms.topic: article
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 2a4c59c63cb3f76975173663948e94a7c64ef193
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 297a53d6d6d37b1fa4a0e021919c9df86edeca03
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="designing-and-developing-multi-container-and-microservice-based-net-applications"></a>다중 컨테이너 및 마이크로 서비스 기반 .NET 응용 프로그램 디자인 및 개발
 

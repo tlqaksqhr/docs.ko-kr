@@ -2,11 +2,11 @@
 title: 사용자 지정 WSDL 게시
 ms.date: 03/30/2017
 ms.assetid: 3b3e8103-2c95-4db3-a05b-46aa8e9d4d29
-ms.openlocfilehash: e475a37b5c8e868cf06d7764d561755112ed943e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: b75aa2269d9c21a6f6d7f579d3c0b6f547a92332
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="custom-wsdl-publication"></a>사용자 지정 WSDL 게시
 이 샘플을 통해 다음을 수행하는 방법을 알 수 있습니다.  
@@ -230,7 +230,7 @@ public void GenerateOperation(OperationContractGenerationContext context)
 </client>  
 ```  
   
- 사용자 지정 가져오기를 지정하고 나면 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 메타데이터 시스템에서 이 목적으로 만든 모든 <xref:System.ServiceModel.Description.WsdlImporter>에 사용자 지정 가져오기를 로드합니다. 이 샘플에서는 <xref:System.ServiceModel.Description.MetadataExchangeClient>를 사용하여 메타데이터를 다운로드하고, 올바르게 구성된 <xref:System.ServiceModel.Description.WsdlImporter>를 사용하여 샘플로 만든 사용자 지정 가져오기를 통해 메타데이터를 가져오고, <xref:System.ServiceModel.Description.ServiceContractGenerator>를 사용하여 Visual Studio에서 Intellisense 지원을 위해 사용하거나 XML 문서에 컴파일할 수 있는 Visual Basic 및 C# 클라이언트 코드로 수정된 계약 정보를 컴파일합니다.  
+ WCF 메타 데이터 시스템에 사용자 지정 가져오기를 로드 사용자 지정 가져오기를 지정 되 면 <xref:System.ServiceModel.Description.WsdlImporter> 해당 용도로 작성 합니다. 이 샘플에서는 <xref:System.ServiceModel.Description.MetadataExchangeClient>를 사용하여 메타데이터를 다운로드하고, 올바르게 구성된 <xref:System.ServiceModel.Description.WsdlImporter>를 사용하여 샘플로 만든 사용자 지정 가져오기를 통해 메타데이터를 가져오고, <xref:System.ServiceModel.Description.ServiceContractGenerator>를 사용하여 Visual Studio에서 Intellisense 지원을 위해 사용하거나 XML 문서에 컴파일할 수 있는 Visual Basic 및 C# 클라이언트 코드로 수정된 계약 정보를 컴파일합니다.  
   
 ```  
 /// From WSDL Documentation:  

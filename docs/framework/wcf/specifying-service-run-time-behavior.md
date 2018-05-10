@@ -5,11 +5,11 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 5c5450ea-6af1-4b75-a267-613d0ac54707
-ms.openlocfilehash: 38035230cf4f5e411f7ec769a169528ada130749
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 61a81e342a16bd298cbebef2dc733b5ec631839c
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="specifying-service-run-time-behavior"></a>서비스 런타임 동작 지정
 서비스 계약을 디자인([Designing Service Contracts](../../../docs/framework/wcf/designing-service-contracts.md)) 서비스 계약을 구현([Implementing Service Contracts](../../../docs/framework/wcf/implementing-service-contracts.md))했으면 서비스 런타임의 작업 동작을 구성할 수 있습니다. 이 항목에서는 시스템 제공 서비스와 작업 동작에 대해 설명하고, 새 동작을 만들기 위해 추가 정보를 찾을 수 있는 위치에 대해 설명합니다. 일부 동작은 특성으로 적용되지만 대부분은 응용 프로그램 구성 파일을 사용하여 적용되거나 프로그래밍 방식으로 적용됩니다. 서비스 응용 프로그램을 구성 하는 방법에 대 한 자세한 내용은 참조 [서비스 구성](../../../docs/framework/wcf/configuring-services.md)합니다.  
@@ -21,7 +21,7 @@ ms.lasthandoff: 05/04/2018
   
  <xref:System.ServiceModel.ServiceBehaviorAttribute?displayProperty=nameWithType> 및 <xref:System.ServiceModel.OperationBehaviorAttribute?displayProperty=nameWithType> 특성은 가장 널리 쓰이는 유용한 동작이며, 가장 일반적으로 요청되는 작업 기능을 노출합니다. 이들은 특성이기 때문에 서비스 또는 작업 구현에 적용합니다. <xref:System.ServiceModel.Description.ServiceMetadataBehavior?displayProperty=nameWithType> 또는 <xref:System.ServiceModel.Description.ServiceDebugBehavior?displayProperty=nameWithType> 등의 다른 동작은 프로그래밍 방식으로 사용될 수 있긴 하지만 일반적으로 응용 프로그램 구성 파일을 사용하여 적용됩니다.  
   
- 이 항목에서는 <xref:System.ServiceModel.ServiceBehaviorAttribute> 및 <xref:System.ServiceModel.OperationBehaviorAttribute> 특성에 대해 간략하게 설명하고, 동작이 작동할 수 있는 여러 범위에 대해 설명하고, [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 개발자에게 유용할 수 있는 여러 범위의 다양한 시스템 제공 동작에 대해 짧게 설명합니다.  
+ 이 항목에 대해 간략하게 설명는 <xref:System.ServiceModel.ServiceBehaviorAttribute> 및 <xref:System.ServiceModel.OperationBehaviorAttribute> 특성는 동작이 작동할 수, 다양 한 범위에 설명 하 고 많은 될 수 있는 다양 한 범위에서 시스템 제공 동작의 빠른 설명 WCF 개발자에 게 유용한 합니다.  
   
 ## <a name="servicebehaviorattribute-and-operationbehaviorattribute"></a>ServiceBehaviorAttribute 및 OperationBehaviorAttribute  
  가장 중요한 동작은 다음을 제어할 때 사용할 수 있는 <xref:System.ServiceModel.ServiceBehaviorAttribute> 및 <xref:System.ServiceModel.OperationBehaviorAttribute> 특성입니다.  
@@ -76,13 +76,13 @@ ms.lasthandoff: 05/04/2018
 ### <a name="service-behaviors"></a>서비스 동작  
  다음 동작은 서비스에서 작동합니다.  
   
--   <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsAttribute>. 해당 서비스를 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 호환 모드로 실행할 수 있는지 여부를 나타내기 위해 [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] 서비스에 적용됩니다.  
+-   <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsAttribute>. 해당 서비스를 실행할 수 있는지 여부를 나타내기 위해 WCF 서비스에 적용 된 [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] 호환 모드입니다.  
   
 -   <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior>. 서비스가 클라이언트 클레임에 권한을 부여하는 방식을 제어합니다.  
   
 -   <xref:System.ServiceModel.Description.ServiceCredentials>. 이 클래스는 서비스 자격 증명을 구성합니다. 이 클래스를 사용하여 서비스에 대한 자격 증명(예: X.509 인증서)을 지정합니다.  
   
--   <xref:System.ServiceModel.Description.ServiceDebugBehavior>. [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 서비스에 대한 디버깅 및 도움말 정보 기능을 사용합니다.  
+-   <xref:System.ServiceModel.Description.ServiceDebugBehavior>. 디버깅 및 도움말 정보 기능을 WCF 서비스에 대 한 사용 합니다.  
   
 -   <xref:System.ServiceModel.Description.ServiceMetadataBehavior>. 서비스 메타데이터 및 관련 정보의 게시를 제어합니다.  
   
@@ -95,13 +95,13 @@ ms.lasthandoff: 05/04/2018
   
 -   <xref:System.ServiceModel.CallbackBehaviorAttribute>. 이중 클라이언트 응용 프로그램에서 콜백 서비스 구현을 구성합니다.  
   
--   <xref:System.ServiceModel.Description.CallbackDebugBehavior>. [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 콜백 개체에 대해 서비스 디버깅을 사용하도록 설정합니다.  
+-   <xref:System.ServiceModel.Description.CallbackDebugBehavior>. 서비스는 WCF 콜백 개체에 대 한 디버깅을 활성화 합니다.  
   
 -   <xref:System.ServiceModel.Description.ClientCredentials>. 사용자가 클라이언트와 서비스 자격 증명 및 클라이언트에서 사용할 서비스 자격 증명 인증 설정을 구성할 수 있습니다.  
   
 -   <xref:System.ServiceModel.Description.ClientViaBehavior>. 전송 채널을 만들어야 하는 URI(Uniform Resource Identifier)를 지정하기 위해 클라이언트에서 사용합니다.  
   
--   <xref:System.ServiceModel.Description.MustUnderstandBehavior>. [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 처리를 사용하지 않도록 `MustUnderstand` 에 지시합니다.  
+-   <xref:System.ServiceModel.Description.MustUnderstandBehavior>. WCF를 사용 하지 않도록 지시는 `MustUnderstand` 처리 합니다.  
   
 -   <xref:System.ServiceModel.Description.SynchronousReceiveBehavior>. 런타임에 채널에 대한 동기 수신 프로세스를 사용하도록 지시합니다.  
   

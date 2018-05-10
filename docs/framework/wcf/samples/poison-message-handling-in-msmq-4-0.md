@@ -2,11 +2,11 @@
 title: Poison Message Handling in MSMQ 4.0
 ms.date: 03/30/2017
 ms.assetid: ec8d59e3-9937-4391-bb8c-fdaaf2cbb73e
-ms.openlocfilehash: 25d99e6864b967b498fc53a6f6d78f476f4d938f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: d0ddab7832e308336d5bfb1c5f75fd13fe63fe72
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="poison-message-handling-in-msmq-40"></a>Poison Message Handling in MSMQ 4.0
 이 샘플에서는 서비스에서 포이즌 메시지 처리를 수행하는 방법을 보여 줍니다. 이 샘플에 따라는 [트랜잭션 된 MSMQ 바인딩](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md) 샘플. 이 샘플에서는 `netMsmqBinding`을 사용합니다. 이 서비스는 자체적으로 호스트되는 콘솔 응용 프로그램으로서 이를 사용하여 서비스에서 대기된 메시지를 받는 것을 볼 수 있습니다.  
@@ -156,7 +156,7 @@ public class OrderProcessorService : IOrderProcessor
 ## <a name="processing-messages-from-the-poison-message-queue"></a>포이즌 메시지 큐의 메시지 처리  
  포이즌 메시지 서비스에서는 최종 포이즌 메시지 큐로부터 메시지를 읽어 처리합니다.  
   
- 포이즌 메시지 큐의 메시지는 메시지를 처리 중인 서비스로 주소가 지정되는 메시지입니다. 이 서비스는 포이즌 메시지 서비스 끝점과 다를 수 있습니다. 따라서 포이즌 메시지 서비스가 큐에서 메시지를 읽으면 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 채널 계층은 끝점에서 불일치를 발견하고 메시지를 디스패치하지 않습니다. 이 경우 메시지의 주소는 주문 처리 서비스로 지정되지만 포이즌 메시지 서비스에서 메시지를 받게 됩니다. 메시지의 주소가 다른 끝점으로 지정되는 경우에도 메시지를 계속 받으려면 `ServiceBehavior`를 추가하여 메시지 주소가 지정된 서비스 끝점과 일치하는 주소를 필터링해야 합니다. 포이즌 메시지 큐에서 읽은 메시지를 성공적으로 처리하려면 이러한 구성이 필요합니다.  
+ 포이즌 메시지 큐의 메시지는 메시지를 처리 중인 서비스로 주소가 지정되는 메시지입니다. 이 서비스는 포이즌 메시지 서비스 끝점과 다를 수 있습니다. 따라서 포이즌 메시지 서비스가 큐에서 메시지를 읽고, WCF 채널 계층은 끝점에서 불일치를 발견 및 메시지를 디스패치하지 않습니다. 이 경우 메시지의 주소는 주문 처리 서비스로 지정되지만 포이즌 메시지 서비스에서 메시지를 받게 됩니다. 메시지의 주소가 다른 끝점으로 지정되는 경우에도 메시지를 계속 받으려면 `ServiceBehavior`를 추가하여 메시지 주소가 지정된 서비스 끝점과 일치하는 주소를 필터링해야 합니다. 포이즌 메시지 큐에서 읽은 메시지를 성공적으로 처리하려면 이러한 구성이 필요합니다.  
   
  포이즌 메시지 서비스 구현 자체는 서비스 구현과 매우 유사합니다. 이 구현에서는 계약을 구현하고 주문을 처리합니다. 코드 예제는 다음과 같습니다.  
 

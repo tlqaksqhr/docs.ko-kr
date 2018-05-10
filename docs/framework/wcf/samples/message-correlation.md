@@ -2,11 +2,11 @@
 title: 메시지 상관 관계
 ms.date: 03/30/2017
 ms.assetid: 3f62babd-c991-421f-bcd8-391655c82a1f
-ms.openlocfilehash: 1573cdafafb5861099b275caa888c79d23cafeb1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 7105c66153625b4a7a2b9a2d61a2ab2821cab2af
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="message-correlation"></a>메시지 상관 관계
 이 샘플에서는 요청/응답 시나리오에서 발신자와 수신자 응용 프로그램 간의 메시지 수 상관 관계 및 메시지 큐 (MSMQ) 응용 프로그램을 Windows Communication Foundation (WCF) 서비스에 MSMQ 메시지를 보낼 수 있는 방법을 보여 줍니다. 이 샘플에서는 msmqIntegrationBinding 바인딩을 사용합니다. 이 경우 서비스는 자체 호스팅 콘솔 응용 프로그램으로, 이를 사용하여 대기 중인 메시지를 받는 서비스를 확인할 수 있습니다. k  
@@ -64,9 +64,9 @@ public class OrderProcessorService : IOrderProcessor
 }  
 ```
 
- 서비스는 사용자 지정 클라이언트 `OrderResponseClient`를 사용하여 MSMQ 메시지를 큐에 보냅니다. 메시지를 받아 처리하는 응용 프로그램은 MSMQ 응용 프로그램이고 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 응용 프로그램이 아니기 때문에 두 응용 프로그램 사이에 암시적인 서비스 계약은 없습니다. 따라서 이 시나리오에서는 Svcutil.exe 도구를 사용하여 프록시를 만들 수 없습니다.  
+ 서비스는 사용자 지정 클라이언트 `OrderResponseClient`를 사용하여 MSMQ 메시지를 큐에 보냅니다. 수신 하 고 메시지를 처리 하는 응용 프로그램 MSMQ 응용 프로그램 및 WCF 응용 프로그램이 아닌 이기 때문에 두 개의 응용 프로그램 간의 암시적인 서비스 계약은 없습니다는 없습니다. 따라서 이 시나리오에서는 Svcutil.exe 도구를 사용하여 프록시를 만들 수 없습니다.  
   
- 기본적으로 사용자 지정 프록시는 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 바인딩을 사용하여 메시지를 보내는 모든 `msmqIntegrationBinding` 응용 프로그램에서 동일합니다. 하지만 다른 프록시와 달리 사용자 지정 프록시에는 일정 범위의 서비스 작업이 포함되지 않습니다. 메시지 제출 작업으로만 한정됩니다.  
+ 사용자 지정 프록시는 기본적으로 사용 하는 모든 WCF 응용 프로그램에 대해 동일는 `msmqIntegrationBinding` 바인딩 메시지를 보낼 수 있습니다. 하지만 다른 프록시와 달리 사용자 지정 프록시에는 일정 범위의 서비스 작업이 포함되지 않습니다. 메시지 제출 작업으로만 한정됩니다.  
 
 ```csharp
 [System.ServiceModel.ServiceContractAttribute(Namespace = "http://Microsoft.ServiceModel.Samples")]  
@@ -212,7 +212,7 @@ static void PlaceOrder()
  주문 응답을 받는 MSMQ 큐는 다음 샘플 구성에 표시된 것처럼 구성 파일의 appSettings 섹션에 지정됩니다.  
   
 > [!NOTE]
->  큐 이름은 로컬 컴퓨터에 점(.)을, 그 경로에는 백슬래시 구분 기호를 사용합니다. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 끝점 주소는 msmq.formatname 체계를 지정하며 로컬 컴퓨터로 "localhost"를 사용합니다. 적절한 형식의 형식 이름은 MSMQ 지침에 따라 URI에서 msmq.formatname을 따릅니다.  
+>  큐 이름은 로컬 컴퓨터에 점(.)을, 그 경로에는 백슬래시 구분 기호를 사용합니다. WCF 끝점 주소는 msmq.formatname 체계를 지정 하 고 로컬 컴퓨터에 대 한 "localhost"를 사용 합니다. 적절한 형식의 형식 이름은 MSMQ 지침에 따라 URI에서 msmq.formatname을 따릅니다.  
   
 ```xml  
 <appSettings>  

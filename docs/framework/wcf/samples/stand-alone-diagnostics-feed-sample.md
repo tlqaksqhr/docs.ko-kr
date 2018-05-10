@@ -2,16 +2,16 @@
 title: 독립형 진단 피드 샘플
 ms.date: 03/30/2017
 ms.assetid: d31c6c1f-292c-4d95-8e23-ed8565970ea5
-ms.openlocfilehash: 1edd1c2184dde368fbd16299a836f1811dd24ba6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 730cf011208ea1b57929fff4a1953fd3a935335c
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="stand-alone-diagnostics-feed-sample"></a>독립형 진단 피드 샘플
 이 샘플에는 RSS/Atom 배포와 Windows Communication Foundation (WCF)에 대 한 피드를 만드는 방법을 보여 줍니다. 개체 모델의 기본 사항 및 Windows Communication Foundation (WCF) 서비스를 설정 하는 방법을 보여 주는 기본 "Hello World" 프로그램은  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 모델 배포는 특수 데이터 형식인 <xref:System.ServiceModel.Syndication.SyndicationFeedFormatter>를 반환하는 서비스 작업으로 제공됩니다. <xref:System.ServiceModel.Syndication.SyndicationFeedFormatter>의 인스턴스는 피드를 RSS 2.0 및 ATOM 1.0 형식으로 serialize할 수 있습니다. 다음 샘플 코드에서는 사용된 계약을 보여 줍니다.  
+ WCF 배포 피드를 특별 한 데이터 형식을 반환 하는 서비스 작업으로 모델링 <xref:System.ServiceModel.Syndication.SyndicationFeedFormatter>합니다. <xref:System.ServiceModel.Syndication.SyndicationFeedFormatter>의 인스턴스는 피드를 RSS 2.0 및 ATOM 1.0 형식으로 serialize할 수 있습니다. 다음 샘플 코드에서는 사용된 계약을 보여 줍니다.  
   
 ```  
 [ServiceContract(Namespace = "")]  
@@ -31,9 +31,9 @@ ms.lasthandoff: 05/04/2018
     }  
 ```  
   
- `GetProcesses`가 서비스 작업에 HTTP GET 요청을 디스패치하는 방법을 제어하고 보낸 메시지 형식을 지정할 수 있도록 하는 <xref:System.ServiceModel.Web.WebGetAttribute> 특성을 사용하여 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 작업에 주석을 추가합니다.  
+ `GetProcesses` 작업으로 추적이 <xref:System.ServiceModel.Web.WebGetAttribute> HTTP GET WCF을 디스패치 하는 방법을 제어할 수 있도록 특성 보내는 메시지의 형식을 지정 하 고 서비스 작업을 요청 합니다.  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 서비스처럼 배포 피드는 관리되는 응용 프로그램에서 자체 호스트될 수 있습니다. 배포 서비스가 제대로 작동하려면 특정 바인딩(<xref:System.ServiceModel.WebHttpBinding>) 및 특정 끝점 동작(<xref:System.ServiceModel.Description.WebHttpBehavior>)이 필요합니다. 새 <xref:System.ServiceModel.Web.WebServiceHost> 클래스는 특정 구성 없이 이러한 끝점을 만들기 위해 다음과 같이 편리한 API를 제공합니다.  
+ WCF 서비스 처럼 배포 피드는 관리 되는 모든 응용 프로그램에서 자체 호스트 수 있습니다. 배포 서비스가 제대로 작동하려면 특정 바인딩(<xref:System.ServiceModel.WebHttpBinding>) 및 특정 끝점 동작(<xref:System.ServiceModel.Description.WebHttpBehavior>)이 필요합니다. 새 <xref:System.ServiceModel.Web.WebServiceHost> 클래스는 특정 구성 없이 이러한 끝점을 만들기 위해 다음과 같이 편리한 API를 제공합니다.  
   
 ```  
 WebServiceHost host = new WebServiceHost(typeof(ProcessService), new Uri("http://localhost:8000/diagnostics"));  

@@ -2,11 +2,11 @@
 title: 전파
 ms.date: 03/30/2017
 ms.assetid: f8181e75-d693-48d1-b333-a776ad3b382a
-ms.openlocfilehash: 5d848a2b74402d0adf125488481f5b82e0b09781
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: f4e92c6dec163d191c507dd80bb0d9dc129c6e96
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="propagation"></a>전파
 이 항목에서는 Windows Communication Foundation (WCF) 추적 모델의 동작 전파에 설명 합니다.  
@@ -20,7 +20,7 @@ ms.lasthandoff: 05/04/2018
 <source name="System.ServiceModel" switchValue="Verbose,ActivityTracing" propagateActivity="true" >  
 ```  
   
- 동작 전파는 [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)]가 TLS에 동작 ID를 포함한 아웃바운드 메시지에 헤더를 추가하도록 구성할 수 있는 기능입니다. 서버측에서 이후의 추적에 이를 포함함으로써 클라이언트 및 서버 동작을 상호 연결할 수 있습니다.  
+ 동작 전파에 TLS에 동작 ID를 포함 하는 아웃 바운드 메시지에 헤더를 추가 하려면 WCF를 발생 시키는 구성 가능한 기능입니다. 서버측에서 이후의 추적에 이를 포함함으로써 클라이언트 및 서버 동작을 상호 연결할 수 있습니다.  
   
 ## <a name="propagation-definition"></a>전파 정의  
  다음 조건이 모두 충족되면 동작 M의 gAId가 동작 N에 전파됩니다.  

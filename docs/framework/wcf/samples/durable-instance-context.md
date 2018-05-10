@@ -2,11 +2,11 @@
 title: 영속 인스턴스 컨텍스트
 ms.date: 03/30/2017
 ms.assetid: 97bc2994-5a2c-47c7-927a-c4cd273153df
-ms.openlocfilehash: 75516bfa0cf5ac7bfb27eb5ee2c51d04c30bc9a5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: fb331fc0e5f384f0ffb268c1c6f7a5ffc99478ec
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="durable-instance-context"></a>영속 인스턴스 컨텍스트
 이 샘플에는 영 속 인스턴스 컨텍스트를 사용 하도록 설정 하려면 Windows Communication Foundation (WCF) 런타임 사용자 지정 하는 방법을 보여 줍니다. 여기서는 SQL Server 2005를 백업 저장소(이 경우 SQL Server 2005 Express)로 사용합니다. 사용자 지정 저장소 메커니즘에 액세스하는 방법도 제공합니다.  
@@ -14,7 +14,7 @@ ms.lasthandoff: 05/04/2018
 > [!NOTE]
 >  이 샘플의 설치 절차 및 빌드 지침은 이 항목의 끝부분에 나와 있습니다.  
   
- 이 샘플에서는 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]의 채널 계층과 서비스 모델 계층을 확장합니다. 따라서 구현 세부 정보를 검토하려면 먼저 기본 개념을 이해해야 합니다.  
+ 이 샘플의 채널 계층과 wcf 서비스 모델 계층을 확장 하는 작업이 포함 됩니다. 따라서 구현 세부 정보를 검토하려면 먼저 기본 개념을 이해해야 합니다.  
   
  영속 인스턴스 컨텍스트는 실제 시나리오에서 매우 자주 발견됩니다. 예를 들어, 장바구니 응용 프로그램에는 중간에 쇼핑을 일시 중지하고 다른 날 계속 진행할 수 있는 기능이 있습니다. 따라서 다음날 장바구니를 방문하면 원래 컨텍스트가 복원됩니다. 서버의 장바구니 응용 프로그램에서는 연결이 끊어진 동안 장바구니 인스턴스를 유지 관리하지 않습니다. 대신 해당 상태를 영속 저장소 매체에 유지하여 복원된 컨텍스트에 새 인스턴스를 생성할 때 사용합니다. 따라서 동일한 컨텍스트에 대해 제공되는 서비스 인스턴스는 이전 인스턴스와 동일하지 않습니다. 즉, 메모리 주소가 동일하지 않습니다.  
   
@@ -119,7 +119,7 @@ if (isFirstMessage)
 }  
 ```  
   
- 그런 다음 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 클래스와 `DurableInstanceContextBindingElement` 클래스에서 이러한 채널 구현을 `DurableInstanceContextBindingElementSection` 채널 런타임에 적절하게 추가합니다. 참조는 [HttpCookieSession](../../../../docs/framework/wcf/samples/httpcookiesession.md) 채널 바인딩 요소 및 바인딩 요소 섹션에 대 한 자세한 내용은 샘플 설명서입니다.  
+ 이러한 채널 구현을 추가 하 여 WCF 채널 런타임에 됩니다는 `DurableInstanceContextBindingElement` 클래스 및 `DurableInstanceContextBindingElementSection` 클래스 적절 하 게 합니다. 참조는 [HttpCookieSession](../../../../docs/framework/wcf/samples/httpcookiesession.md) 채널 바인딩 요소 및 바인딩 요소 섹션에 대 한 자세한 내용은 샘플 설명서입니다.  
   
 ## <a name="service-model-layer-extensions"></a>서비스 모델 계층 확장명  
  이제 컨텍스트 ID가 채널 계층을 통해 이동했으므로 서비스 동작을 구현하여 인스턴스를 사용자 지정할 수 있습니다. 이 샘플에서는 저장소 관리자를 사용하여 영구 저장소에서 상태를 로드하고 저장합니다. 앞에서 설명한 대로 이 샘플에서는 SQL Server 2005를 백업 저장소로 사용하는 저장소 관리자를 제공합니다. 그러나 이 확장에 사용자 지정 저장소 메커니즘을 추가할 수도 있습니다. 해당 작업을 수행하기 위해 모든 저장소 관리자에 의해 구현되어야 하는 공용 인터페이스를 선언합니다.  
@@ -228,9 +228,9 @@ else
   
  영구 저장소에서 인터페이스를 읽고 쓰는 데 필요한 인프라를 구현합니다. 이제 서비스 동작을 변경하는 데 필요한 단계를 수행해야 합니다.  
   
- 이 프로세스의 첫 번째 단계로 채널 계층을 통해 현재 InstanceContext에 도달한 컨텍스트 ID를 저장해야 합니다. InstanceContext는 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 디스패처와 서비스 인스턴스 간의 링크 역할을 하는 런타임 구성 요소입니다. 이 구성 요소를 사용하면 서비스 인스턴스에 추가 상태 및 동작을 제공할 수 있습니다. 세션 통신에서는 첫 번째 메시지에 대해서만 컨텍스트 ID를 전송하기 때문에 이 구성 요소가 매우 중요합니다.  
+ 이 프로세스의 첫 번째 단계로 채널 계층을 통해 현재 InstanceContext에 도달한 컨텍스트 ID를 저장해야 합니다. InstanceContext는 WCF 디스패처와 서비스 인스턴스 간의 링크 역할을 하는 런타임 구성 요소입니다. 이 구성 요소를 사용하면 서비스 인스턴스에 추가 상태 및 동작을 제공할 수 있습니다. 세션 통신에서는 첫 번째 메시지에 대해서만 컨텍스트 ID를 전송하기 때문에 이 구성 요소가 매우 중요합니다.  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서는 확장 가능한 개체 패턴을 사용하여 새 상태 및 동작을 추가함으로써 InstanceContext 런타임 구성 요소를 확장할 수 있습니다. 확장 가능한 개체 패턴은 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서 새 기능으로 기존 런타임 클래스를 확장하거나 개체에 새 상태 기능을 추가하는 데 사용됩니다. 세 가지 인터페이스가 있습니다 확장명 가능한 개체 패턴에 IExtensibleObject의\<T >, IExtension\<T >, 및 i e x\<T >:  
+ WCF는 새 상태 및 확장 가능한 개체 패턴을 사용 하는 동작을 추가 함으로써 InstanceContext 런타임 구성 요소를 확장할 수 있습니다. 확장명 가능한 개체 패턴은 새 기능으로 기존 런타임 클래스를 확장 하거나 하거나 개체에 새 상태 기능을 추가 하려면 WCF에서 사용 됩니다. 세 가지 인터페이스가 있습니다 확장명 가능한 개체 패턴에 IExtensibleObject의\<T >, IExtension\<T >, 및 i e x\<T >:  
   
 -   IExtensibleObject\<T > 인터페이스의 기능을 사용자 지정 확장을 허용 하는 개체에 의해 구현 됩니다.  
   
@@ -278,7 +278,7 @@ public void Initialize(InstanceContext instanceContext, Message message)
   
  앞에서 설명한 대로 `Properties` 클래스의 `Message` 컬렉션에서 컨텍스트 ID를 읽고 확장 클래스의 생성자에게 전달합니다. 이 샘플에서는 계층 간에 일관된 방식으로 정보를 교환할 수 있는 방법을 보여 줍니다.  
   
- 다음으로 중요한 단계는 서비스 인스턴스 생성 프로세스를 재정의하는 단계입니다. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서는 사용자 지정 인스턴스 동작을 구현하고 IInstanceProvider 인터페이스를 사용하여 런타임에 연결할 수 있습니다. 이 작업을 수행하기 위해 새 `InstanceProvider` 클래스가 구현됩니다. 생성자에는 인스턴스 공급자에 필요한 서비스 유형이 허용되며, 이 서비스 유형은 나중에 새 인스턴스를 만드는 데 사용됩니다. `GetInstance` 구현에서는 지속적인 인스턴스를 찾는 저장소 관리자 인스턴스를 만듭니다. 이 구현에서 `null`을 반환하면 서비스 유형의 새 인스턴스가 인스턴스화되어 호출자에게 반환됩니다.  
+ 다음으로 중요한 단계는 서비스 인스턴스 생성 프로세스를 재정의하는 단계입니다. WCF는 사용자 지정 인스턴스 동작을 구현 하 고 IInstanceProvider 인터페이스를 사용 하 여 런타임에 연결을 수 있습니다. 이 작업을 수행하기 위해 새 `InstanceProvider` 클래스가 구현됩니다. 생성자에는 인스턴스 공급자에 필요한 서비스 유형이 허용되며, 이 서비스 유형은 나중에 새 인스턴스를 만드는 데 사용됩니다. `GetInstance` 구현에서는 지속적인 인스턴스를 찾는 저장소 관리자 인스턴스를 만듭니다. 이 구현에서 `null`을 반환하면 서비스 유형의 새 인스턴스가 인스턴스화되어 호출자에게 반환됩니다.  
   
 ```  
 public object GetInstance(InstanceContext instanceContext, Message message)  
@@ -349,9 +349,9 @@ foreach (ChannelDispatcherBase cdb in serviceHostBase.ChannelDispatchers)
   
  지금까지의 내용을 요약하면 이 샘플에서는 사용자 지정 컨텍스트 ID 교환을 위해 사용자 지정 유선 프로토콜을 사용하는 채널을 생성하고 기본 인스턴스 동작을 덮어써서 영구 저장소에서 인스턴스를 로드했습니다.  
   
- 이제 서비스 인스턴스를 영구 저장소에 저장하는 방법만 남아 있습니다. 앞에서 설명한 대로 상태를 저장하는 데 필요한 기능은 `IStorageManager`에 이미 구현되어 있습니다. 이제 이 기능을 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 런타임과 통합해야 합니다. 서비스 구현 클래스의 메서드에 적용할 수 있는 또 다른 특성이 필요합니다. 이 특성은 서비스 인스턴스의 상태를 변경하는 메서드에 적용됩니다.  
+ 이제 서비스 인스턴스를 영구 저장소에 저장하는 방법만 남아 있습니다. 앞에서 설명한 대로 상태를 저장하는 데 필요한 기능은 `IStorageManager`에 이미 구현되어 있습니다. 에서는 이제 통합 되어야이 WCF 런타임 합니다. 서비스 구현 클래스의 메서드에 적용할 수 있는 또 다른 특성이 필요합니다. 이 특성은 서비스 인스턴스의 상태를 변경하는 메서드에 적용됩니다.  
   
- `SaveStateAttribute` 클래스가 이 기능을 구현합니다. 또한 `IOperationBehavior` 클래스를 구현하여 각 작업에 대해 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 런타임을 수정합니다. 이 특성으로 메서드를 표시하면 적절한 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]이 생성되는 동안 `ApplyBehavior` 런타임에서 `DispatchOperation` 메서드를 호출합니다. 이 메서드 구현에는 다음과 같은 코드가 한 줄 있습니다.  
+ `SaveStateAttribute` 클래스가 이 기능을 구현합니다. 또한 구현 `IOperationBehavior` 각 작업에 대 한 WCF 런타임을 수정 하는 클래스입니다. WCF 런타임 호출 메서드는이 특성으로 표시 되 면는 `ApplyBehavior` 해당 하는 동안 메서드 `DispatchOperation` 생성 되 고 있습니다. 이 메서드 구현에는 다음과 같은 코드가 한 줄 있습니다.  
   
 ```  
 dispatch.Invoker = new OperationInvoker(dispatch.Invoker);  
@@ -372,8 +372,8 @@ extension.StorageManager.SaveInstance(extension.ContextId, instance);
 return result;  
 ```  
   
-## <a name="using-the-extension"></a>확장 사용  
- 채널 계층 확장과 서비스 모델 계층 확장이 모두 수행되어 이제 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 응용 프로그램에서 사용할 수 있습니다. 서비스는 사용자 지정 바인딩을 사용하여 채널 스택에 채널을 추가한 다음 적절한 특성으로 서비스 구현 클래스를 표시해야 합니다.  
+## <a name="using-the-extension"></a>확장명 사용  
+ 모두 채널 계층과 서비스 모델 계층 확장이 완료 되 고 WCF 응용 프로그램에서 사용할 이제 합니다. 서비스는 사용자 지정 바인딩을 사용하여 채널 스택에 채널을 추가한 다음 적절한 특성으로 서비스 구현 클래스를 표시해야 합니다.  
   
 ```  
 [DurableInstanceContext]  

@@ -2,11 +2,11 @@
 title: 영속 이중
 ms.date: 03/30/2017
 ms.assetid: 4e76d1a1-f3d8-4a0f-8746-4a322cdff6eb
-ms.openlocfilehash: 91490eb3ee6c11f29bb49d8343b807e74e8d3bc2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 3df5ba962ef33594df1eaebc20789fa9e2d35244
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="durable-duplex"></a>영속 이중
 이 샘플에는 설정 및의 Windows WF (Workflow Foundation) 메시징 활동을 사용 하 여 영 속 이중 메시지 교환을 구성 하는 방법을 보여 줍니다. 영속 이중 메시지 교환은 오랜 기간 동안 발생하는 양방향 메시지 교환입니다. 메시지 교환 수명 주기는 통신 채널 수명 주기와 서비스 인스턴스의 메모리 내 수명 주기보다 길 수 있습니다.  
@@ -41,7 +41,7 @@ ms.lasthandoff: 05/04/2018
 >  이 샘플에서 사용하는 바인딩은 보안 처리되어 있지 않으므로 응용 프로그램을 배포할 때 응용 프로그램의 보안 요구 사항에 따라 바인딩을 구성해야 합니다.  
   
 > [!NOTE]
->  이 샘플에서 사용하는 큐는 트랜잭션이 아닙니다. 설정 하는 방법을 보여 주는 샘플에 대 한 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 트랜잭션 큐를 사용 하 여 교환 메시지에서 참조는 [MSMQ 활성화](../../../../docs/framework/wcf/samples/msmq-activation.md) 샘플.  
+>  이 샘플에서 사용하는 큐는 트랜잭션이 아닙니다. 트랜잭션 큐를 사용 하 여 WCF 메시지 교환을 설정 하는 방법을 보여 주는 샘플을 참조 하십시오.는 [MSMQ 활성화](../../../../docs/framework/wcf/samples/msmq-activation.md) 샘플.  
   
  Service1.xamlx에서 Service2.xamlx로 보내는 메시지는 Service2.xamlx의 주소로 구성된 클라이언트 끝점과 이전에 정의된 사용자 지정 바인딩을 사용하여 보내집니다. Service2.xamlx에서 Service1.xamlx로의 콜백은 Service1.xamlx에서 보낸 콜백 컨텍스트에서 주소를 가져오므로 주소가 명시적으로 구성되지 않은 클라이언트 끝점을 사용하여 보내집니다. 다음 코드 예제에서는 클라이언트 끝점을 정의합니다.  
   

@@ -2,11 +2,11 @@
 title: Pooling
 ms.date: 03/30/2017
 ms.assetid: 688dfb30-b79a-4cad-a687-8302f8a9ad6a
-ms.openlocfilehash: 2c864bd0c1d27e9c771a1b97e756c04b107ac2b8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 6554ec9c5eaefaf8c9e39d2a8d92982716cc18c5
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="pooling"></a>Pooling
 이 샘플에서는 개체 풀링을 지 원하는 Windows Communication Foundation (WCF)를 확장 하는 방법을 보여 줍니다. 엔터프라이즈 서비스의 `ObjectPoolingAttribute` 특성과 구문 및 의미 체계가 비슷한 특성을 만드는 방법을 소개합니다. 개체 풀링을 통해 응용 프로그램의 성능을 크게 높일 수 있습니다. 그러나 제대로 사용하지 않으면 역효과가 일어나기도 합니다. 개체 풀링은 광범위한 초기화가 필요하며 자주 사용되는 개체를 다시 만드는 오버헤드를 줄이는 데 도움이 됩니다. 그러나 풀링된 개체에서 메서드 호출이 완료되기까지 상당한 시간이 걸리는 경우 최대 풀 크기에 도달하는 즉시 개체 풀링은 추가 요청을 큐에 보냅니다. 따라서 일부 개체 만들기 요청을 처리하지 않고 시간 초과 예외를 throw할 수 있습니다.  
@@ -14,14 +14,14 @@ ms.lasthandoff: 05/04/2018
 > [!NOTE]
 >  이 샘플의 설치 절차 및 빌드 지침은 이 항목의 끝부분에 나와 있습니다.  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 확장을 만들려면 먼저 사용할 확장 지점을 결정해야 합니다.  
+ WCF 확장을 만드는 첫 번째 단계 사용할 확장명 지점을 결정 하는 것입니다.  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 용어 *발송자* 들어오는 메시지를 사용자의 서비스에 대 한 메서드 호출으로 변환 하 고 나가는을 그 메서드의 반환 값을 변환 하기 위한 런타임 구성 요소 참조 메시지. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 서비스는 각 끝점에 대해 디스패처를 만듭니다. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 클라이언트는 그 클라이언트와 연결된 계약이 이중 계약인 경우 디스패처를 사용해야 합니다.  
+ Wcf에서 용어 *발송자* 들어오는 메시지를 사용자의 서비스에 대 한 메서드 호출으로 변환 하 고 보내는 메시지를 그 메서드의 반환 값 변환에 대 한 런타임 구성 요소를 가리킵니다. WCF 서비스는 각 끝점에 대해 디스패처를 만듭니다. WCF 클라이언트는 해당 클라이언트와 연결 된 계약이 이중 계약인 경우 디스패처를 사용 해야 합니다.  
   
  채널 및 끝점 디스패처는 디스패처의 동작을 제어하는 다양한 속성을 노출시켜 채널 및 계약 수준의 확장성을 제공합니다. 또한 <xref:System.ServiceModel.Dispatcher.EndpointDispatcher.DispatchRuntime%2A> 속성을 사용하면 디스패치 프로세스를 검사, 수정하거나 사용자 지정할 수 있습니다. 이 샘플에서는 서비스 클래스의 인스턴스를 제공하는 개체를 가리키는 <xref:System.ServiceModel.Dispatcher.DispatchRuntime.InstanceProvider%2A> 속성을 중점적으로 다룹니다.  
   
 ## <a name="the-iinstanceprovider"></a>IInstanceProvider  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서는 디스패처가 <xref:System.ServiceModel.Dispatcher.DispatchRuntime.InstanceProvider%2A> 인터페이스를 구현하는 <xref:System.ServiceModel.Dispatcher.IInstanceProvider>를 사용하여 서비스 클래스의 인스턴스를 만듭니다. 이 인터페이스에는 세 개의 메서드가 있습니다.  
+ 발송자 wcf에서 사용 하 여 서비스 클래스의 인스턴스를 만드는 <xref:System.ServiceModel.Dispatcher.DispatchRuntime.InstanceProvider%2A>를 구현 하는 <xref:System.ServiceModel.Dispatcher.IInstanceProvider> 인터페이스입니다. 이 인터페이스에는 세 개의 메서드가 있습니다.  
   
 -   <xref:System.ServiceModel.Dispatcher.IInstanceProvider.GetInstance%28System.ServiceModel.InstanceContext%2CSystem.ServiceModel.Channels.Message%29>: 메시지가 도착하면 디스패처는 <xref:System.ServiceModel.Dispatcher.IInstanceProvider.GetInstance%28System.ServiceModel.InstanceContext%2CSystem.ServiceModel.Channels.Message%29> 메서드를 호출하여 메시지를 처리할 서비스 클래스의 인스턴스를 만듭니다. 이 메서드의 호출 빈도는 <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A> 속성에 의해 결정됩니다. 예를 들어 <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A> 속성이 <xref:System.ServiceModel.InstanceContextMode.PerCall>로 설정되면 도착하는 각 메시지를 처리하기 위해 서비스 클래스의 새 인스턴스가 만들어지며, 따라서 메시지가 도착할 때마다 <xref:System.ServiceModel.Dispatcher.IInstanceProvider.GetInstance%28System.ServiceModel.InstanceContext%2CSystem.ServiceModel.Channels.Message%29>가 호출됩니다.  
   
@@ -100,7 +100,7 @@ void IInstanceProvider.ReleaseInstance(InstanceContext instanceContext, object i
   
  이 샘플에서는 사용자 지정 특성을 사용합니다. <xref:System.ServiceModel.ServiceHost>가 구성되면 서비스의 형식 정의에 사용되는 특성을 확인한 후 서비스 설명의 동작 컬렉션에 사용 가능한 동작을 추가합니다.  
   
- <xref:System.ServiceModel.Description.IServiceBehavior> 인터페이스에는 세 개의 메서드, 즉 <xref:System.ServiceModel.Description.IServiceBehavior.Validate%2A>, <xref:System.ServiceModel.Description.IServiceBehavior.AddBindingParameters%2A> 및 <xref:System.ServiceModel.Description.IServiceBehavior.ApplyDispatchBehavior%2A>가 있습니다. <xref:System.ServiceModel.Description.IServiceBehavior.Validate%2A> 메서드는 동작이 서비스에 적용될 수 있음을 확인할 때 사용합니다. 이 샘플의 구현에서는 서비스에 <xref:System.ServiceModel.InstanceContextMode.Single>이 구현되지 않음을 확인합니다. <xref:System.ServiceModel.Description.IServiceBehavior.AddBindingParameters%2A> 메서드는 서비스의 바인딩을 구성하는 데 사용되며, 이 시나리오에서는 필요하지 않습니다. <xref:System.ServiceModel.Description.IServiceBehavior.ApplyDispatchBehavior%2A>는 서비스의 디스패처를 구성하는 데 사용됩니다. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]가 초기화 중일 때 <xref:System.ServiceModel.ServiceHost>에서 이 메서드를 호출합니다. 다음 매개 변수가 이 메서드로 전달됩니다.  
+ <xref:System.ServiceModel.Description.IServiceBehavior> 인터페이스에는 세 개의 메서드, 즉 <xref:System.ServiceModel.Description.IServiceBehavior.Validate%2A>, <xref:System.ServiceModel.Description.IServiceBehavior.AddBindingParameters%2A> 및 <xref:System.ServiceModel.Description.IServiceBehavior.ApplyDispatchBehavior%2A>가 있습니다. <xref:System.ServiceModel.Description.IServiceBehavior.Validate%2A> 메서드는 동작이 서비스에 적용될 수 있음을 확인할 때 사용합니다. 이 샘플의 구현에서는 서비스에 <xref:System.ServiceModel.InstanceContextMode.Single>이 구현되지 않음을 확인합니다. <xref:System.ServiceModel.Description.IServiceBehavior.AddBindingParameters%2A> 메서드는 서비스의 바인딩을 구성하는 데 사용되며, 이 시나리오에서는 필요하지 않습니다. <xref:System.ServiceModel.Description.IServiceBehavior.ApplyDispatchBehavior%2A>는 서비스의 디스패처를 구성하는 데 사용됩니다. 이 메서드는 WCF 때는 <xref:System.ServiceModel.ServiceHost> 초기화 하는 중입니다. 다음 매개 변수가 이 메서드로 전달됩니다.  
   
 -   `Description`: 이 인수는 전체 서비스의 서비스 설명을 제공합니다. 서비스의 끝점, 계약, 바인딩 및 기타 데이터에 대한 설명을 검사할 때 사용할 수 있습니다.  
   
@@ -177,7 +177,7 @@ InvalidOperationException(ResourceHelper.GetString("ExNullThrottle"));
   
  <xref:System.ServiceModel.Description.IServiceBehavior> 구현 외에 <xref:System.EnterpriseServices.ObjectPoolingAttribute> 클래스에도 특성 인수를 사용하여 개체 풀을 사용자 지정하는 멤버가 몇 개 있습니다. 이 멤버에는 .NET Enterprise Services에서 제공되는 개체 풀링 기능 집합과 일치하는 <xref:System.EnterpriseServices.ObjectPoolingAttribute.MaxPoolSize%2A>, <xref:System.EnterpriseServices.ObjectPoolingAttribute.MinPoolSize%2A> 및 <xref:System.EnterpriseServices.ObjectPoolingAttribute.CreationTimeout%2A>이 포함됩니다.  
   
- 이제 새로 만든 사용자 지정 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 특성으로 서비스 구현을 주석으로 지정하여 개체 풀링 동작을 `ObjectPooling` 서비스에 추가할 수 있습니다.  
+ 개체 풀링 동작 이제 추가할 수는 WCF 서비스를 새로 만든 사용자 지정 서비스 구현을 주석으로 지정 하 여 `ObjectPooling` 특성입니다.  
   
 ```  
 [ObjectPooling(MaxPoolSize=1024, MinPoolSize=10, CreationTimeout=30000)]      

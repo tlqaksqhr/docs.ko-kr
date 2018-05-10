@@ -5,22 +5,22 @@ helpviewer_keywords:
 - clients [WCF], running
 - WCF clients [WCF], running
 ms.assetid: a67884cc-1c4b-416b-8c96-5c954099f19f
-ms.openlocfilehash: 962f1255f3c759d623850678005eff138353cc80
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: d2932293536f875d8986d8d49842cddc196ced0f
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="how-to-create-a-windows-communication-foundation-client"></a>방법: Windows Communication Foundation 클라이언트 만들기
 Windows Communication Foundation (WCF) 응용 프로그램을 만드는 데 필요한 6 가지 작업 중 네 번째 작업입니다. 모든 6 가지 작업의 개요를 참조 하십시오.는 [초보자를 위한 자습서](../../../docs/framework/wcf/getting-started-tutorial.md) 항목입니다.  
   
- 이 항목에서는 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 서비스에서 메타데이터를 검색하고 이를 사용하여 서비스에 액세스할 수 있는 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 프록시를 만드는 방법에 대해 설명합니다. 이 작업은 Visual Studio에서 제공하는 서비스 참조 추가 기능을 사용하여 완료합니다. 이 도구는 서비스의 MEX 끝점에서 메타데이터를 가져와 사용자가 선택한 언어를 사용하여 클라이언트 프록시에 대한 관리되는 소스 코드 파일을 생성합니다(기본적으로 C#). 클라이언트 프록시를 만드는 것 이외에 해당 도구는 클라이언트에 대한 구성 파일도 만들거나 업데이트합니다. 이 구성 파일을 사용하여 클라이언트 응용 프로그램에서 해당 끝점 중 하나의 서비스에 연결할 수 있습니다.  
+ 이 항목에서는 서비스에 액세스할 수 있는 WCF 프록시를 만들 사용 하 여 WCF 서비스에서 메타 데이터를 검색 하는 방법에 설명 합니다. 이 작업은 Visual Studio에서 제공하는 서비스 참조 추가 기능을 사용하여 완료합니다. 이 도구는 서비스의 MEX 끝점에서 메타데이터를 가져와 사용자가 선택한 언어를 사용하여 클라이언트 프록시에 대한 관리되는 소스 코드 파일을 생성합니다(기본적으로 C#). 클라이언트 프록시를 만드는 것 이외에 해당 도구는 클라이언트에 대한 구성 파일도 만들거나 업데이트합니다. 이 구성 파일을 사용하여 클라이언트 응용 프로그램에서 해당 끝점 중 하나의 서비스에 연결할 수 있습니다.  
   
 > [!NOTE]
 >  사용할 수도 있습니다는 [ServiceModel Metadata 유틸리티 도구 (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) 프록시 클래스와 Visual Studio 내에서 서비스 참조 추가 사용 하는 대신 구성을 생성 하는 도구입니다.  
   
 > [!WARNING]
->  [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]에서 클래스 라이브러리 프로젝트의 [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)] 서비스를 호출할 경우 서비스 참조 추가 기능을 사용하면 프록시 및 연결된 구성 파일을 자동으로 생성할 수 있습니다.  이 구성 파일은 클래스 라이브러리 프로젝트에서는 사용되지 않습니다. 생성된 구성 파일의 설정을 클래스 라이브러리를 호출하는 실행 파일의 app.config 파일에 추가해야 합니다.  
+>  클래스 라이브러리 프로젝트에서 WCF 서비스를 호출할 때 [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)] 서비스 참조 추가 기능을 사용 하 여 프록시 및 연결 된 구성 파일을 자동으로 생성 합니다.  이 구성 파일은 클래스 라이브러리 프로젝트에서는 사용되지 않습니다. 생성된 구성 파일의 설정을 클래스 라이브러리를 호출하는 실행 파일의 app.config 파일에 추가해야 합니다.  
   
  클라이언트 응용 프로그램은 생성된 프록시 클래스를 사용하여 서비스와 통신합니다. 이 절차에 설명 되어 [하는 방법: 클라이언트를 사용 하 여](../../../docs/framework/wcf/how-to-use-a-wcf-client.md)합니다.  
   

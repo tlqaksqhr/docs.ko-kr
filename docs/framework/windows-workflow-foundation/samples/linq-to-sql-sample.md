@@ -2,21 +2,21 @@
 title: LINQ to SQL 샘플
 ms.date: 03/30/2017
 ms.assetid: 5f39db9e-0e62-42c9-8c98-bb8b54cec98c
-ms.openlocfilehash: a5c84dab941a50ddd5edb065004343cc304fd0f3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 3cfcaf3de1a22b8bb5505083f127a9888b99dbd8
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="linq-to-sql-sample"></a>LINQ to SQL 샘플
 이 샘플에서는 SQL Server 데이터베이스의 테이블에 있는 LINQ to SQL 쿼리 엔터티를 사용하는 활동을 만드는 방법을 보여 줍니다.  
   
 > [!IMPORTANT]
->  컴퓨터에 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 샘플이 이미 설치되어 있을 수도 있습니다. 계속하기 전에 다음(기본) 디렉터리를 확인하세요.  
+>  WCF 샘플 컴퓨터에 이미 설치 되어 있습니다. 계속하기 전에 다음(기본) 디렉터리를 확인하세요.  
 >   
 >  `<InstallDrive>:\Samples\WCFWFCardspace`  
 >   
->  이 디렉터리가 없으면 이 페이지의 맨 위에 있는 다운로드 샘플 링크를 클릭하세요. 그러면 모든 [!INCLUDE[wf1](../../../../includes/wf1-md.md)], [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 및 [!INCLUDE[infocard](../../../../includes/infocard-md.md)] 샘플이 다운로드되고 설치됩니다. 이 샘플은 다음 디렉터리에 있습니다.  
+>  이 디렉터리가 없으면 이 페이지의 맨 위에 있는 다운로드 샘플 링크를 클릭하세요. 이 링크 다운로드 되 고 모든 설치의 [!INCLUDE[wf1](../../../../includes/wf1-md.md)], WCF, 및 [!INCLUDE[infocard](../../../../includes/infocard-md.md)] 샘플입니다. 이 샘플은 다음 디렉터리에 있습니다.  
 >   
 >  `<InstallDrive>:\Samples\WCFWFCardSpace\WF\Scenario\ActivityLibrary\Linq\LinqToSql`  
   

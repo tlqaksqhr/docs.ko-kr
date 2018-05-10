@@ -2,11 +2,11 @@
 title: Supporting Tokens
 ms.date: 03/30/2017
 ms.assetid: 65a8905d-92cc-4ab0-b6ed-1f710e40784e
-ms.openlocfilehash: 4f8cf62220955bef3f341c43b3c615f873387b2e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 8d8ff3cf4d5a060d135cbcf40c043681ce72b6e0
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="supporting-tokens"></a>Supporting Tokens
 Supporting Tokens 샘플에서는 WS-Security를 사용하는 메시지에 토큰을 추가하는 방법을 보여 줍니다. 이 예제에서는 사용자 이름 보안 토큰에 X.509 이진 보안 토큰을 추가합니다. 이 토큰은 WS-Security 메시지 헤더에 포함되어 클라이언트에서 서비스로 전달되며, 메시지의 일부는 X.509 보안 토큰과 연결된 개인 키로 서명되어 X.509 인증서를 소유했음을 수신자에게 증명합니다. 이는 발신자를 인증하거나 권한 부여하기 위해 메시지에 여러 개의 클레임이 연결되어야 하는 경우에 유용합니다. 이 서비스는 요청-회신 통신 패턴을 정의하는 계약을 구현합니다.  
@@ -345,7 +345,7 @@ void GetCallerIdentities(ServiceSecurityContext callerSecurityContext, out strin
 ```  
   
 ## <a name="running-the-sample"></a>샘플 실행  
- 샘플을 실행하면 클라이언트는 먼저 사용자 이름 토큰의 사용자 이름과 암호를 입력하라는 메시지를 표시합니다. 서비스의 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서 사용자 이름 토큰에 제공된 값을 시스템에서 제공한 ID에 매핑하므로 시스템 계정의 정확한 값을 제공해야 합니다. 그런 다음 클라이언트는 서비스로부터의 응답을 표시합니다. 클라이언트를 종료하려면 클라이언트 창에서 Enter 키를 누릅니다.  
+ 샘플을 실행하면 클라이언트는 먼저 사용자 이름 토큰의 사용자 이름과 암호를 입력하라는 메시지를 표시합니다. 사용할 WCF 서비스에 시스템에서 제공한 id에는 사용자 이름 토큰에 제공 된 값에 매핑하므로 시스템 계정의 정확한 값을 제공 해야 합니다. 그런 다음 클라이언트는 서비스로부터의 응답을 표시합니다. 클라이언트를 종료하려면 클라이언트 창에서 Enter 키를 누릅니다.  
   
 ## <a name="setup-batch-file"></a>설치 배치 파일  
  이 샘플에 포함된 Setup.bat 배치 파일을 사용하면 서버 인증서 기반 보안이 필요한 IIS(인터넷 정보 서비스) 호스팅 응용 프로그램을 실행하도록 관련 인증서가 있는 서버를 구성할 수 있습니다. 다중 컴퓨터 구성이나 호스팅되지 않는 환경에서 이 배치 파일을 사용하려면 배치 파일을 수정해야 합니다.  
@@ -464,6 +464,6 @@ iisreset
 -   샘플 실행을 완료했으면 샘플 폴더에서 Cleanup.bat를 실행합니다.  
   
 > [!NOTE]
->  다중 컴퓨터 구성에서 이 샘플을 실행할 경우에는 이 스크립트로 서비스 인증서를 제거할 수 없습니다. 여러 시스템에서 인증서를 사용하는 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 샘플을 실행한 경우에는 CurrentUser - TrustedPeople 저장소에 설치된 서비스 인증서를 지워야 합니다. 이를 수행하려면 `certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>` 명령을 사용합니다(예: `certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`).  
+>  다중 컴퓨터 구성에서 이 샘플을 실행할 경우에는 이 스크립트로 서비스 인증서를 제거할 수 없습니다. 여러 시스템에서 인증서를 사용 하는 WCF 샘플을 실행 한 경우 CurrentUser-TrustedPeople 저장소에에서 설치 된 서비스 인증서의 선택을 취소 해야 합니다. 이를 수행하려면 `certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>` 명령을 사용합니다(예: `certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`).  
   
 ## <a name="see-also"></a>참고 항목

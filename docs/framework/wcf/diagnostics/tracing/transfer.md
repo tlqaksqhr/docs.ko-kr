@@ -2,17 +2,17 @@
 title: 전송
 ms.date: 03/30/2017
 ms.assetid: dfcfa36c-d3bb-44b4-aa15-1c922c6f73e6
-ms.openlocfilehash: 7daa486286e022b24be32df7335ddbd5db7233f0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: aa7535aa393544077a9802b5c3255d6e5f6accda
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="transfer"></a>전송
 Windows Communication Foundation (WCF) 동작 추적 모델의 전송에 설명 합니다.  
   
 ## <a name="transfer-definition"></a>전송 정의  
- 동작 간 전송은 끝점 내의 관련 동작에 있는 이벤트 간의 인과 관계를 나타냅니다. 두 가지 동작은 컨트롤이 이러한 동작 간에 이동할 때(예: 동작 경계를 넘나드는 메서드 호출) 전송과 관련됩니다. [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)]에서는 서비스에서 바이트가 들어올 때 수신 대기 동작이 메시지 개체가 만들어지는 바이트 수신 동작으로 전송됩니다. 종단 간 추적 시나리오 및의 해당 활동 및 추적 디자인의 목록에 대 한 참조 [종단 간 추적 시나리오](../../../../../docs/framework/wcf/diagnostics/tracing/end-to-end-tracing-scenarios.md)합니다.  
+ 동작 간 전송은 끝점 내의 관련 동작에 있는 이벤트 간의 인과 관계를 나타냅니다. 두 가지 동작은 컨트롤이 이러한 동작 간에 이동할 때(예: 동작 경계를 넘나드는 메서드 호출) 전송과 관련됩니다. Wcf에서는 서비스에서 들어오는 바이트는 Listen At 동작으로 전송 됩니다 바이트 수신 동작 메시지 개체를 만들 위치입니다. 종단 간 추적 시나리오 및의 해당 활동 및 추적 디자인의 목록에 대 한 참조 [종단 간 추적 시나리오](../../../../../docs/framework/wcf/diagnostics/tracing/end-to-end-tracing-scenarios.md)합니다.  
   
  Transfer 추적을 내보내려면 다음 구성 코드와 같이 추적 소스에 `ActivityTracing` 설정을 사용합니다.  
   

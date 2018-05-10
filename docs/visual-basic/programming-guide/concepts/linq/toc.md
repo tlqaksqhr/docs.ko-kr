@@ -87,7 +87,6 @@
 ## [방법: 네임스페이스 접두사 제어(LINQ to XML)](how-to-control-namespace-prefixes-linq-to-xml.md)
 ## [기본 네임스페이스 범위](scope-of-default-namespaces.md)
 ## [전역 네임스페이스 작업(LINQ to XML)](working-with-global-namespaces-linq-to-xml.md)
-## [네임스페이스(LINQ to XML)](namespaces-linq-to-xml.md)
 ## [방법: 네임스페이스에서 XML로 쿼리 작성](how-to-write-queries-on-xml-in-namespaces.md)
 
 # [XML 트리 serialization](serializing-xml-trees.md)

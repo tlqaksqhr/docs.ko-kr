@@ -2,11 +2,11 @@
 title: 구성 기반 활성화
 ms.date: 03/30/2017
 ms.assetid: 21bb762e-c43e-4b0c-887b-5e434d665838
-ms.openlocfilehash: 2829458d40e3efb180699122570b2775a90be9e6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 3ac4edd2a51e4ed8a5c0b7e73d7d1afa31334c33
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="configuration-based-activation"></a>구성 기반 활성화
 이 샘플에서는.svc 파일 없이 Windows Communication Foundation (WCF) 서비스를 활성화 하는 방법을 보여 줍니다.  
@@ -21,7 +21,7 @@ ms.lasthandoff: 05/04/2018
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\Hosting\ConfigBasedActivation`  
   
 ## <a name="sample-details"></a>샘플 세부 정보  
- 이 샘플에서 클라이언트는 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 테스트 클라이언트이고 서비스는 IIS에서 호스팅됩니다.  
+ 이 샘플에서 클라이언트는 WCF 테스트 클라이언트와 서비스는 IIS에서 호스팅됩니다.  
   
 > [!NOTE]
 >  이 샘플의 설치 및 빌드 지침은 이 항목의 끝부분에 나와 있습니다.  

@@ -2,11 +2,11 @@
 title: '전송: UDP 샘플에 의한 사용자 지정 트랜잭션'
 ms.date: 03/30/2017
 ms.assetid: 6cebf975-41bd-443e-9540-fd2463c3eb23
-ms.openlocfilehash: e395300df4cd9917b9662d4bc3b1e8d50d82914d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 911331d5f5120f33a6c442a1eb4b2be2c8269a0e
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="transport-custom-transactions-over-udp-sample"></a>전송: UDP 샘플에 의한 사용자 지정 트랜잭션
 이 샘플에 따라는 [전송: UDP](../../../../docs/framework/wcf/samples/transport-udp.md) 샘플 Windows Communication Foundation (WCF)에서[전송 확장성](../../../../docs/framework/wcf/samples/transport-extensibility.md)합니다. 이 샘플은 사용자 지정 트랜잭션 흐름을 지원하도록 UDP 전송 샘플을 확장하고 <xref:System.ServiceModel.Channels.TransactionMessageProperty> 속성의 사용 방법을 보여 줍니다.  
@@ -47,7 +47,7 @@ int bytesSent = this.socket.SendTo(txmsgBuffer, 0, txmsgBuffer.Length, SocketFla
   
  `TransactionMessageBuffer.WriteTransactionMessageBuffer`는 현재 트랜잭션의 전파 토큰을 메시지 엔터티와 병합하고 이를 버퍼에 배치하는 새로운 기능이 포함된 도우미 메서드입니다.  
   
- 사용자 지정 트랜잭션 흐름 전송의 경우 클라이언트 구현에서는 트랜잭션 흐름이 필요한 서비스 작업을 파악하고 이 정보를 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에 전달해야 합니다. 또한 사용자 트랜잭션을 전송 계층으로 전송하기 위한 메커니즘도 있어야 합니다. 이 샘플에서는 "[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 메시지 검사자"를 사용하여 이 정보를 가져옵니다. 여기서 구현된 `TransactionFlowInspector`라는 클라이언트 메시지 검사자는 다음 작업을 수행합니다.  
+ 사용자 지정 트랜잭션 흐름 전송의 경우 클라이언트 구현에서 트랜잭션 흐름이 필요한 서비스 작업 알고 있어야 하 고 WCF에이 정보를 전달 합니다. 또한 사용자 트랜잭션을 전송 계층으로 전송하기 위한 메커니즘도 있어야 합니다. 이 샘플에서는 "WCF 메시지 검사자"이이 정보를 얻을 수 있습니다. 여기서 구현된 `TransactionFlowInspector`라는 클라이언트 메시지 검사자는 다음 작업을 수행합니다.  
   
 -   지정된 메시지 작업에 대해 트랜잭션을 이동해야 하는지 여부를 결정합니다. 이 작업은 `IsTxFlowRequiredForThisOperation()`에서 수행됩니다.  
   

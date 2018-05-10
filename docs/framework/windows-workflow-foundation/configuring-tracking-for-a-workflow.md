@@ -2,11 +2,11 @@
 title: 워크플로 추적 구성
 ms.date: 03/30/2017
 ms.assetid: 905adcc9-30a0-4918-acd6-563f86db988a
-ms.openlocfilehash: 70697d82242ab0704dd67129940a6660d300bef9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 23a20b014962b74b6408c8b3c9ac6764d4a42d56
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="configuring-tracking-for-a-workflow"></a>워크플로 추적 구성
 워크플로는 다음과 같은 세 가지 방식으로 실행할 수 있습니다.  
@@ -46,7 +46,7 @@ instance.Extensions.Add(trackingParticipant);
 ```  
   
 ### <a name="configuring-workflow-service-tracking"></a>워크플로 서비스 추적 구성  
- 워크플로는 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 서비스 호스트에서 호스트될 때 <xref:System.ServiceModel.Activities.WorkflowServiceHost> 서비스로 노출될 수 있습니다. <xref:System.ServiceModel.Activities.WorkflowServiceHost>는 워크플로 기반 서비스에 대한 특수 .NET ServiceHost 구현입니다. 이 단원에서는 [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)]에서 실행되는 <xref:System.ServiceModel.Activities.WorkflowServiceHost> 워크플로 서비스에 대해 추적을 구성하는 방법에 대해 설명합니다. 이러한 추적 기능은 Web.config 파일(웹 호스팅 서비스의 경우) 또는 App.config 파일(콘솔 응용 프로그램과 같은 독립 실행형 응용 프로그램에서 호스트되는 서비스의 경우)을 통해 서비스 동작을 지정하거나, 코드를 통해 서비스 호스트에 대한 <xref:System.ServiceModel.Description.ServiceDescription.Behaviors%2A> 컬렉션에 추적별 동작을 추가하여 구성됩니다.  
+ 워크플로에서 호스팅되는 경우 WCF 서비스로 노출 될 수 있습니다는 <xref:System.ServiceModel.Activities.WorkflowServiceHost> 서비스 호스트입니다. <xref:System.ServiceModel.Activities.WorkflowServiceHost>는 워크플로 기반 서비스에 대한 특수 .NET ServiceHost 구현입니다. 이 단원에서는 [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)]에서 실행되는 <xref:System.ServiceModel.Activities.WorkflowServiceHost> 워크플로 서비스에 대해 추적을 구성하는 방법에 대해 설명합니다. 이러한 추적 기능은 Web.config 파일(웹 호스팅 서비스의 경우) 또는 App.config 파일(콘솔 응용 프로그램과 같은 독립 실행형 응용 프로그램에서 호스트되는 서비스의 경우)을 통해 서비스 동작을 지정하거나, 코드를 통해 서비스 호스트에 대한 <xref:System.ServiceModel.Description.ServiceDescription.Behaviors%2A> 컬렉션에 추적별 동작을 추가하여 구성됩니다.  
   
  <xref:System.ServiceModel.WorkflowServiceHost>에서 호스트되는 워크플로 서비스의 경우 다음 예제와 같이 구성 파일에서 <<xref:System.Activities.Tracking.EtwTrackingParticipant>> 요소를 사용하여 `behavior`를 추가할 수 있습니다.  
   

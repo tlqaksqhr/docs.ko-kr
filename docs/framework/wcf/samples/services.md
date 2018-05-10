@@ -2,30 +2,30 @@
 title: Services2
 ms.date: 03/30/2017
 ms.assetid: 462a2218-f8c6-4fb7-95bc-64765459c429
-ms.openlocfilehash: ef5de3fc51e43a88adb021b66732492f03d9d912
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 2b6d8322caa32246d6171af50c7773342ac11de2
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="services"></a>서비스
 이 섹션에는 Windows Communication Foundation (WCF) 서비스를 보여 주는 샘플이 들어 있습니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
  [호스팅](../../../../docs/framework/wcf/feature-details/hosting.md)  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 서비스를 호스팅하는 방법을 보여 줍니다.  
+ WCF 서비스 호스팅 방법을 보여 줍니다.  
   
  [서비스 상호 운용성](../../../../docs/framework/wcf/samples/service-interoperability.md)  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 및 다른 서비스 기술 간의 상호 작용을 보여 줍니다.  
+ WCF와 다른 서비스 기술 간의 상호 작용을 보여 줍니다.  
   
  [동작](../../../../docs/framework/wcf/samples/behaviors.md)  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 서비스 동작을 보여 줍니다.  
+ WCF 서비스 동작을 보여 줍니다.  
   
  [서비스 보안](../../../../docs/framework/wcf/samples/service-security.md)  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 서비스 보안을 보여 줍니다.  
+ WCF 서비스 보안을 보여 줍니다.  
   
  [WCF 서비스를 위한 단순화된 구성](../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md)  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]를 사용하여 일반적인 서비스 및 클라이언트를 구현하고 구성하는 방법을 보여 줍니다.  
+ 구현 하 고 일반적인 서비스 및 WCF를 사용 하 여 클라이언트를 구성 하는 방법을 보여 줍니다.  
   
  [표준 끝점 사용](../../../../docs/framework/wcf/samples/usage-of-standard-endpoints.md)  
  서비스 구성 파일에서 표준 끝점을 사용하는 방법을 보여 줍니다.  
@@ -55,7 +55,7 @@ ms.lasthandoff: 05/04/2018
  단일 `ListenUri`에서 여러 끝점을 호스팅하는 서비스를 보여 줍니다.  
   
  [OperationContextScope](../../../../docs/framework/wcf/samples/operationcontextscope.md)  
- 헤더를 사용하여 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 호출에서 추가 정보를 보내는 방법을 보여 줍니다.  
+ 헤더를 사용 하 여 WCF 호출에 대 한 추가 정보를 보내는 방법을 보여 줍니다.  
   
  [서비스 설명](../../../../docs/framework/wcf/samples/service-description.md)  
  서비스가 런타임에 해당 서비스 설명 정보를 검색할 수 있는 방법을 보여 줍니다.  

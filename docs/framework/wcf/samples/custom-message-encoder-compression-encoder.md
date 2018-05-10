@@ -2,11 +2,11 @@
 title: '사용자 지정 메시지 인코더: 압축 인코더'
 ms.date: 03/30/2017
 ms.assetid: 57450b6c-89fe-4b8a-8376-3d794857bfd7
-ms.openlocfilehash: 087bec47787c0a28eb30346904c8b876136b3eab
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 5dc665da3b28a98f1b3016d38ce706bf77dce06f
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="custom-message-encoder-compression-encoder"></a>사용자 지정 메시지 인코더: 압축 인코더
 이 샘플은 Windows Communication Foundation (WCF) 플랫폼을 사용 하 여 사용자 지정 인코더를 구현 하는 방법을 보여 줍니다.  
@@ -24,9 +24,9 @@ ms.lasthandoff: 05/04/2018
  이 샘플은 클라이언트 콘솔 프로그램(.exe), 자체 호스팅 서비스 콘솔 프로그램(.exe) 및 압축 메시지 인코더 라이브러리(.dll)로 구성됩니다. 이 서비스는 요청-회신 통신 패턴을 정의하는 계약을 구현합니다. 이 계약은 기본 문자열 echo 작업(`ISampleServer` 및 `Echo`)을 노출하는 `BigEcho` 인터페이스에 의해 정의됩니다. 클라이언트가 지정된 작업에 대한 동기적 요청을 만들면 서비스는 이 메시지를 다시 클라이언트에게 보내는 방법으로 회신합니다. 클라이언트와 서비스 동작은 콘솔 창에 표시됩니다. 이 샘플의 목적은 사용자 지정 인코더의 작성 방법과 통신 중 메시지 압축이 미치는 영향을 보여 주는 데 있습니다. 압축 메시지 인코더에 계측을 추가하여 메시지 크기, 처리 시간 또는 둘 다를 계산할 수 있습니다.  
   
 > [!NOTE]
->  .NET Framework 4의 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 클라이언트에서는 서버에서 GZip 또는 Deflate 같은 알고리즘으로 만들어진 압축된 응답을 보낼 경우 자동 압축 해제가 사용하도록 설정되어 있습니다. 서비스가 IIS(인터넷 정보 서버)에 웹 호스팅된 경우 서비스에서 압축된 응답을 보낼 수 있도록 IIS를 구성할 수 있습니다. 이 샘플은 클라이언트와 서비스 모두에서 압축 및 압축 해제를 수행하거나 서비스가 자체 호스팅되는 경우에 사용할 수 있습니다.  
+>  .NET Framework 4의 자동 압축 풀기 서버 (GZip 또는 Deflate 같은 알고리즘을 사용 하 여 만든) 압축 된 응답을 보내는 경우 WCF 클라이언트에서 설정 되었습니다. 서비스가 IIS(인터넷 정보 서버)에 웹 호스팅된 경우 서비스에서 압축된 응답을 보낼 수 있도록 IIS를 구성할 수 있습니다. 이 샘플은 클라이언트와 서비스 모두에서 압축 및 압축 해제를 수행하거나 서비스가 자체 호스팅되는 경우에 사용할 수 있습니다.  
   
- 이 샘플에서는 사용자 지정 메시지 인코더를 빌드하여 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 응용 프로그램에 통합하는 방법을 보여 줍니다. 라이브러리 GZipEncoder.dll은 클라이언트와 서비스 모두와 함께 배포됩니다. 또한 이 샘플에서는 메시지 압축이 미치는 영향을 보여 줍니다. GZipEncoder.dll의 코드는 다음 작업을 보여 줍니다.  
+ 샘플 빌드 및 WCF 응용 프로그램에 사용자 지정 메시지 인코더를 통합 하는 방법을 보여 줍니다. 라이브러리 GZipEncoder.dll은 클라이언트와 서비스 모두와 함께 배포됩니다. 또한 이 샘플에서는 메시지 압축이 미치는 영향을 보여 줍니다. GZipEncoder.dll의 코드는 다음 작업을 보여 줍니다.  
   
 -   사용자 지정 인코더 및 인코더 팩터리 빌드  
   
@@ -56,13 +56,13 @@ ms.lasthandoff: 05/04/2018
   
 5.  인코더 계층이 클래스 팩터리로 구현됩니다. 인코더 클래스 팩터리만 사용자 지정 인코더에 대해 공개적으로 노출되어야 합니다. <xref:System.ServiceModel.ServiceHost> 또는 <xref:System.ServiceModel.ChannelFactory%601> 개체가 만들어질 때 바인딩 요소가 팩터리 개체를 반환합니다. 메시지 인코더는 버퍼링 모드 또는 스트리밍 모드에서 작동할 수 있습니다. 이 샘플에서는 버퍼링 모드와 스트리밍 모드를 모두 보여 줍니다.  
   
- 각 모드에 대해 추상 `ReadMessage` 클래스에 관련 `WriteMessage` 및 `MessageEncoder` 메서드가 있습니다. 인코딩 작업 중 대부분은 이 메서드에서 수행됩니다. 이 샘플은 기존 텍스트 및 이진 메시지 인코더를 래핑합니다. 따라서 샘플에서 메시지 연결 표시의 읽기 및 쓰기를 내부 인코더로 위임할 수 있고 압축 인코더가 그 결과를 압축하거나 압축을 풀 수 있습니다. 메시지 인코딩을 위한 파이프라인이 없으므로 이는 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서 여러 인코더를 사용하는 경우의 유일한 모델입니다. 메시지의 압축을 풀었으면 결과 메시지는 채널 스택에서 처리하도록 스택을 따라 위로 전달됩니다. 압축 과정에서 압축된 결과 메시지는 제공된 스트림에 직접 기록됩니다.  
+ 각 모드에 대해 추상 `ReadMessage` 클래스에 관련 `WriteMessage` 및 `MessageEncoder` 메서드가 있습니다. 인코딩 작업 중 대부분은 이 메서드에서 수행됩니다. 이 샘플은 기존 텍스트 및 이진 메시지 인코더를 래핑합니다. 따라서 샘플에서 메시지 연결 표시의 읽기 및 쓰기를 내부 인코더로 위임할 수 있고 압축 인코더가 그 결과를 압축하거나 압축을 풀 수 있습니다. 메시지 인코딩을 위한 파이프라인이 없으므로 WCF에서 여러 인코더를 사용 하기 위한 유일한 모델입니다. 메시지의 압축을 풀었으면 결과 메시지는 채널 스택에서 처리하도록 스택을 따라 위로 전달됩니다. 압축 과정에서 압축된 결과 메시지는 제공된 스트림에 직접 기록됩니다.  
   
  이 샘플에서는 `CompressBuffer` 클래스를 사용하기 위해 도우미 메서드(`DecompressBuffer` 및 `GZipStream`)를 사용하여 버퍼에서 스트림으로의 변환을 수행합니다.  
   
  버퍼링된 `ReadMessage` 및 `WriteMessage` 클래스는 `BufferManager` 클래스를 사용합니다. 인코더는 인코더 팩터리를 통해서만 액세스할 수 있습니다. 추상 `MessageEncoderFactory` 클래스는 현재 인코더에 액세스하기 위해 `Encoder`라는 이름의 속성을, 세션을 지원하는 인코더를 만들기 위해 `CreateSessionEncoder`라는 이름의 메서드를 제공합니다. 이러한 인코더는 채널이 세션을 지원하는 시나리오에서 사용 가능하며 순서가 지정되었고 신뢰할 수 있습니다. 이 시나리오에서는 연결 중에 기록된 데이터의 세션별로 최적화를 허용합니다. 이를 원치 않을 경우 기본 메서드를 오버로드해서는 안 됩니다. `Encoder` 속성은 세션 없는 인코더에 액세스하기 위한 메커니즘을 제공하며 `CreateSessionEncoder` 메서드의 기본 구현은 속성의 값을 반환합니다. 이 샘플에서는 압축을 제공하기 위해 기존 인코더를 래핑하므로 `MessageEncoderFactory` 구현은 내부 인코더 팩터리를 나타내는 `MessageEncoderFactory`를 허용합니다.  
   
- 인코더 및 인코더 팩터리가 정의되었으므로 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 클라이언트 및 서비스와 함께 사용할 수 있습니다. 그러나 이 인코더가 채널 스택에 추가되어야 합니다. <xref:System.ServiceModel.ServiceHost> 및 <xref:System.ServiceModel.ChannelFactory%601> 클래스로부터 클래스를 파생하고 `OnInitialize` 메서드를 재정의하여 이 인코더 팩터리를 수동으로 추가할 수 있습니다. 또한 사용자 지정 바인딩 요소를 통해 인코더 팩터리를 노출할 수도 있습니다.  
+ 인코더 및 인코더 팩터리를 정의 하는 WCF 클라이언트 및 서비스를 사용할 수 있습니다. 그러나 이 인코더가 채널 스택에 추가되어야 합니다. <xref:System.ServiceModel.ServiceHost> 및 <xref:System.ServiceModel.ChannelFactory%601> 클래스로부터 클래스를 파생하고 `OnInitialize` 메서드를 재정의하여 이 인코더 팩터리를 수동으로 추가할 수 있습니다. 또한 사용자 지정 바인딩 요소를 통해 인코더 팩터리를 노출할 수도 있습니다.  
   
  새 사용자 지정 바인딩 요소를 만들려면 <xref:System.ServiceModel.Channels.BindingElement> 클래스로부터 클래스를 파생합니다. 그러나 바인딩 요소에는 몇 가지 형식이 있습니다. 사용자 지정 바인딩 요소가 메시지 인코딩 바인딩 요소로 인식되기 위해서는 <xref:System.ServiceModel.Channels.MessageEncodingBindingElement>도 구현해야 합니다. <xref:System.ServiceModel.Channels.MessageEncodingBindingElement>는 새 메시지 인코더를 만들기 위한 메서드 팩터리(`CreateMessageEncoderFactory`)를 노출하며 이는 일치하는 메시지 인코더 팩터리의 인스턴스를 반환하기 위해 구현됩니다. 또한 <xref:System.ServiceModel.Channels.MessageEncodingBindingElement>는 주소 지정 버전을 나타내는 속성을 갖습니다. 이 샘플에서 기존 인코더를 래핑하기 때문에 샘플 구현 시 기존 인코더 바인딩 요소도 래핑하며 내부 인코더 바인딩 요소를 생성자의 매개 변수로 받아 어떤 속성을 통해 노출합니다. 다음 샘플 코드에서는 `GZipMessageEncodingBindingElement` 클래스의 구현을 보여 줍니다.  
   

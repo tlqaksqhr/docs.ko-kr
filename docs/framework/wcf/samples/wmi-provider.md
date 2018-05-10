@@ -2,18 +2,18 @@
 title: WMI Provider
 ms.date: 03/30/2017
 ms.assetid: 462f0db3-f4a4-4a4b-ac26-41fc25c670a4
-ms.openlocfilehash: 202923ab1d09b0ce836dbfce7360dd22a479a900
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: d135466c402fa21b6a1b11f208ca900f58748bdb
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="wmi-provider"></a>WMI Provider
-이 샘플에 포함 된 Windows Management Instrumentation (WMI) 공급자를 사용 하 여 런타임에 Windows Communication Foundation (WCF) 서비스에서 데이터를 수집 하는 방법을 보여 줍니다 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]합니다. 또한 사용자 정의 WMI 개체를 서비스에 추가하는 방법도 보여 줍니다. 이 샘플에 대 한 WMI 공급자를 활성화는 [시작](../../../../docs/framework/wcf/samples/getting-started-sample.md) 에서 데이터를 수집 하는 방법을 보여 줍니다는 `ICalculator` 런타임에 서비스입니다.  
+이 샘플에서는 WCF에 포함 된 Windows Management Instrumentation (WMI) 공급자를 사용 하 여 런타임에 Windows Communication Foundation (WCF) 서비스에서 데이터를 수집 하는 방법을 보여 줍니다. 또한 사용자 정의 WMI 개체를 서비스에 추가하는 방법도 보여 줍니다. 이 샘플에 대 한 WMI 공급자를 활성화는 [시작](../../../../docs/framework/wcf/samples/getting-started-sample.md) 에서 데이터를 수집 하는 방법을 보여 줍니다는 `ICalculator` 런타임에 서비스입니다.  
   
  WMI는 Microsoft에서 구현한 WBEM(Web-Based Enterprise Management) 표준입니다. WMI SDK에 대 한 자세한 내용은 참조 [Windows Management Instrumentation](https://msdn.microsoft.com/library/aa394582.aspx)합니다. WBEM은 응용 프로그램에서 외부 관리 도구에 관리 계측을 노출하는 방법을 지정하는 산업 표준입니다.  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]는 런타임에 WBEM 호환 인터페이스를 통해 계측을 노출하는 구성 요소인 WMI 공급자를 구현합니다. 관리 도구는 런타임에 인터페이스를 통해 서비스에 연결될 수 있습니다. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서는 주소, 바인딩, 동작 및 수신기와 같은 서비스 특성을 노출합니다.  
+ WCF는 WMI 공급자를 WBEM 호환 인터페이스를 통해 런타임으로 계측을 노출 하는 구성 요소를 구현 합니다. 관리 도구는 런타임에 인터페이스를 통해 서비스에 연결될 수 있습니다. WCF는 서비스 주소, 바인딩, 동작 및 수신기와 같은 특성을 노출합니다.  
   
  기본 제공 WMI 공급자는 응용 프로그램의 구성 파일에서 활성화합니다. 이렇게는 `wmiProviderEnabled` 특성에는 [ \<진단 >](../../../../docs/framework/configure-apps/file-schema/wcf/diagnostics.md) 에 [ \<system.serviceModel >](../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md) 섹션에서 다음 샘플에 나와 있는 것 처럼 구성:  
   
@@ -35,7 +35,7 @@ ms.lasthandoff: 05/04/2018
   
  이 샘플에서는 두 개의 Java 스크립트를 사용합니다. 하나는 컴퓨터에서 실행 중인 서비스를 속성과 함께 나열하고, 다른 하나는 사용자 정의 WMI 데이터를 표시합니다. 스크립트에서는 WMI 공급자에 대한 연결을 열고, 데이터를 구문 분석하고, 수집된 데이터를 표시합니다.  
   
- 샘플을 시작하여 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 서비스의 실행 인스턴스를 만듭니다. 서비스가 실행 중인 동안 명령 프롬프트에서 다음 명령을 사용하여 각 Java 스크립트를 실행합니다.  
+ WCF 서비스의 실행 중인 인스턴스를 만들기 위한 샘플을 시작 합니다. 서비스가 실행 중인 동안 명령 프롬프트에서 다음 명령을 사용하여 각 Java 스크립트를 실행합니다.  
   
 ```  
 cscript EnumerateServices.js  
@@ -116,7 +116,7 @@ cscript EnumerateCustomObjects.js
   
  컴퓨터에서 단일 서비스가 실행되고 있다는 것이 출력에 표시됩니다. 서비스에서는 `ICalculator` 계약을 구현하는 끝점 하나를 노출합니다. 끝점에서 구현하는 동작 및 바인딩 설정은 메시징 스택에 있는 개별 요소의 합으로 나열됩니다.  
   
- WMI는 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 인프라의 관리 계측을 노출할 뿐 아니라 같은 메커니즘을 통해 자체 도메인별 데이터 항목을 노출할 수 있습니다. WMI는 웹 서비스의 검사 및 제어를 위한 통합 메커니즘입니다.  
+ WMI는 WCF 인프라의 관리 계측을 노출 하는 데 제한이 없습니다. 같은 메커니즘을 통해 자체 도메인별 데이터 항목을 노출할 수 있습니다. WMI는 웹 서비스의 검사 및 제어를 위한 통합 메커니즘입니다.  
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>샘플을 설치, 빌드 및 실행하려면  
   
@@ -129,7 +129,7 @@ cscript EnumerateCustomObjects.js
 4.  지침에 따라 단일 컴퓨터 또는 다중 컴퓨터 구성에서 샘플을 실행 하려면 [Windows Communication Foundation 샘플 실행](../../../../docs/framework/wcf/samples/running-the-samples.md)합니다.  
   
     > [!NOTE]
-    >  ASP.NET을 설치한 후에 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]를 설치한 경우에는 "%WINDIR%\ Microsoft.Net\Framework\v3.0\Windows Communication Foundation\servicemodelreg.exe " -r -x를 실행하여 ASPNET 계정에 WMI 개체를 게시할 권한을 부여해야 할 수도 있습니다.  
+    >  "%WINDIR%\ 실행 되도록 할 수 ASP.NET 설치 후 WCF를 설치한 경우 Microsoft.Net\Framework\v3.0\Windows Communication Foundation\servicemodelreg.exe "-r-x WMI 개체를 게시 하는 ASPNET 계정 권한을 부여할 수 있습니다.  
   
 5.  `cscript EnumerateServices.js` 또는 `cscript EnumerateCustomObjects.js` 명령을 사용하여 WMI를 통해 표시된 샘플의 데이터를 봅니다.  
   

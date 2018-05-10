@@ -260,9 +260,9 @@ dotnet published/aspnetapp.dll
 수행할 수 있는 몇 가지 다음 단계는 다음과 같습니다.
 
 * [Visual Studio Docker 도구로 작업](https://docs.microsoft.com/aspnet/core/publishing/visual-studio-tools-for-docker)
-* [Deploying Docker Images from the Azure Container Registry to Azure Container Instances](https://blogs.msdn.microsoft.com/stevelasker/2017/07/28/deploying-docker-images-from-the-azure-container-registry-to-azure-container-instances/)(Azure Container Registry의 Docker 이미지를 Azure Container Instances에 배포)
+* [Azure Container Registry의 Docker 이미지를 Azure Container Instances에 배포](https://blogs.msdn.microsoft.com/stevelasker/2017/07/28/deploying-docker-images-from-the-azure-container-registry-to-azure-container-instances/)
 * [Debugging with Visual Studio Code](https://code.visualstudio.com/docs/nodejs/debugging-recipes#_nodejs-typescript-docker-container)(Visual Studio Code를 사용한 디버깅) 
-* [Getting hands on with Visual Studio for Mac, containers, and serverless code in the cloud](https://blogs.msdn.microsoft.com/visualstudio/2017/08/31/hands-on-with-visual-studio-for-mac-containers-serverless-code-in-the-cloud/#comments)(클라우드에서 Mac용 Visual Studio, 컨테이너 및 서버리스 코드에 익숙해지기)
+* [클라우드에서 Mac용 Visual Studio, 컨테이너 및 서버리스 코드에 익숙해지기](https://blogs.msdn.microsoft.com/visualstudio/2017/08/31/hands-on-with-visual-studio-for-mac-containers-serverless-code-in-the-cloud/#comments)
 * [Getting Started with Docker and Visual Studio for Mac Lab](https://github.com/Microsoft/vs4mac-labs/tree/master/Docker/Getting-Started)(Docker 및 Mac용 Visual Studio 랩 시작)
 
 > [!NOTE]

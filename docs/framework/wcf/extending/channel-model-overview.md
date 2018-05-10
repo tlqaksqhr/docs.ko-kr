@@ -4,17 +4,17 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - channel model [WCF]
 ms.assetid: 07a81e11-3911-4632-90d2-cca99825b5bd
-ms.openlocfilehash: df2993d9ba25c043aa66029aa00fae945d5cec9d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 13fe07d1521832ed12ba5770e0bd069ff9b917d2
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="channel-model-overview"></a>채널 모델 개요
-Windows Communication Foundation (WCF) 채널 스택은 메시지를 처리 하는 하나 이상의 채널로 계층화 된 통신 스택을 합니다. 스택의 맨 아래에는 채널 스택을 TCP, HTTP, SMTP 및 기타 다른 유형의 전송과 같은 기본 전송에 적용하는 전송 채널이 있습니다. 채널은 메시지를 보내고 받기 위한 하위 수준의 프로그래밍 모델을 제공합니다. 이러한 프로그래밍 모델에서는 몇 가지 인터페이스와 총체적으로 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 채널 모델이라고 하는 기타 형식을 사용합니다. 이 항목에서는 채널 셰이프, 서비스에서의 기본 채널 수신기 생성 및 클라이언트에서의 채널 팩터리 생성에 대해 설명합니다.  
+Windows Communication Foundation (WCF) 채널 스택은 메시지를 처리 하는 하나 이상의 채널로 계층화 된 통신 스택을 합니다. 스택의 맨 아래에는 채널 스택을 TCP, HTTP, SMTP 및 기타 다른 유형의 전송과 같은 기본 전송에 적용하는 전송 채널이 있습니다. 채널은 메시지를 보내고 받기 위한 하위 수준의 프로그래밍 모델을 제공합니다. 이 프로그래밍 모델은 몇 가지 인터페이스와 WCF 채널 모델 이라고 통칭 다른 형식에 의존 합니다. 이 항목에서는 채널 셰이프, 서비스에서의 기본 채널 수신기 생성 및 클라이언트에서의 채널 팩터리 생성에 대해 설명합니다.  
   
 ## <a name="channel-stack"></a>채널 스택  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 끝점은 채널 스택이라고 하는 통신 스택을 사용하여 세계와 통신합니다. 다음 다이어그램에서는 채널 스택을 TCP/IP 등의 다른 통신 스택과 비교합니다.  
+ WCF 끝점은 채널 스택 이라고 하는 통신 스택을 사용 하 여 세계와 통신 합니다. 다음 다이어그램에서는 채널 스택을 TCP/IP 등의 다른 통신 스택과 비교합니다.  
   
  ![채널 모델](../../../../docs/framework/wcf/extending/media/wcfc-channelstackhighlevelc.gif "wcfc_ChannelStackHighLevelc")  
   

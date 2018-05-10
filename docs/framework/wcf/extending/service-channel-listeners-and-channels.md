@@ -2,11 +2,11 @@
 title: '서비스: 채널 수신기 및 채널'
 ms.date: 03/30/2017
 ms.assetid: 8ccbe0e8-7e55-441d-80de-5765f67542fa
-ms.openlocfilehash: 5f5acff6ca933006707a863ea5ba04cd01cfb93e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: eca7061243fa7f006079d19c3eaaf86ba906bca2
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="service-channel-listeners-and-channels"></a>서비스: 채널 수신기 및 채널
 채널 개체에는 채널, 채널 수신기 및 채널 팩터리의 세 가지 범주가 있습니다. 채널은 응용 프로그램과 채널 스택 사이의 인터페이스입니다. 채널 수신기는 받는(또는 수신) 쪽, 일반적으로 새 들어오는 메시지 또는 연결에 대한 응답으로 채널을 만듭니다. 채널 팩터리는 보내는 쪽에 끝점과 통신을 시작할 채널을 만듭니다.  
@@ -21,7 +21,7 @@ ms.lasthandoff: 05/04/2018
   
  구현에서는 실제로 큐를 사용하지 않을 수도 있지만 이 프로세스는 개념적으로 각 채널 내의 큐로 모델링될 수 있습니다. 채널 수신기는 아래 계층 또는 네트워크로부터 메시지를 받아서 큐에 넣습니다. 채널은 큐에서 메시지를 가져오고 계층이 채널에서 `Receive`를 호출하는 것과 같은 방법으로 메시지를 요청하면 위의 계층으로 해당 메시지를 전달합니다.  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]은 이 프로세스에 대한 기본 클래스 도우미를 제공합니다. (이 항목에서 설명 하는 채널 도우미 클래스 다이어그램을 참조 하십시오. [채널 모델 개요](../../../../docs/framework/wcf/extending/channel-model-overview.md).)  
+ WCF는이 프로세스에 대 한 기본 클래스 도우미를 제공합니다. (이 항목에서 설명 하는 채널 도우미 클래스 다이어그램을 참조 하십시오. [채널 모델 개요](../../../../docs/framework/wcf/extending/channel-model-overview.md).)  
   
 -   <xref:System.ServiceModel.Channels.CommunicationObject> 클래스 구현 <xref:System.ServiceModel.ICommunicationObject> 의 2 단계에서 설명한 상태 시스템을 적용 하 고 [개발 채널](../../../../docs/framework/wcf/extending/developing-channels.md)합니다.  
   

@@ -2,11 +2,11 @@
 title: ASP.NET 캐싱 통합
 ms.date: 03/30/2017
 ms.assetid: f581923a-8a72-42fc-bd6a-46de2aaeecc1
-ms.openlocfilehash: 420ff192caf41a37b6229bf36e32124f3646d69c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 744ecbff8b51565906ff4c619ba8c8aecff123c7
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="aspnet-caching-integration"></a>ASP.NET 캐싱 통합
 이 샘플에서는 WCF 웹 HTTP 프로그래밍 모델을 사용하여 ASP.NET 출력 캐시를 활용하는 방법을 보여 줍니다. 참조 하십시오는 [Basic Resource Service](../../../../docs/framework/wcf/samples/basic-resource-service.md) 자체 호스팅 버전 심층에서 서비스 구현에 나와 있는이 시나리오의 샘플입니다. 이 항목에서는 ASP.NET 출력 캐시 통합 기능을 중점적으로 설명합니다.  
@@ -28,7 +28,7 @@ ms.lasthandoff: 05/04/2018
   
  샘플 Service 프로젝트의 Service.cs 파일에서 모두는 `GetCustomer` 및 `GetCustomers` 작업으로 표시 됩니다는 <xref:System.ServiceModel.Web.AspNetCacheProfileAttribute>, 캐시 프로필 이름 "CacheFor60Seconds"를 제공 하는 합니다. 서비스 프로젝트의 Web.config 파일에서 캐시 프로필 "CacheFor60Seconds" 제공 하지 않습니다는 <`caching`> 요소의 <`system.web`> 합니다. 이 캐시 프로필의 값에는 `duration` 특성 이므로 "60"이이 프로필에 연결 된 응답은 60 초 동안 ASP.NET 출력 캐시에 캐시 됩니다. 또한이 캐시 프로필에 대 한는 `varmByParam` 특성이 너무 요청에 대 한 값이 서로 다른 "format"으로 설정 되어는 `format` 쿼리 문자열 매개 변수에서는 응답이 별도로 캐시 됩니다. 마지막으로 캐시 프로필의 `varyByHeader` 있으므로 Accept 헤더 값이 다른 요청에서는 응답이 별도로 캐시 특성이 "Accept"로 설정 되어 있습니다.  
   
- Client 프로젝트의 Program.cs에서는 <xref:System.Net.HttpWebRequest>를 사용하여 이러한 클라이언트를 작성하는 방법을 보여 줍니다. 이 방법은 WCF 서비스에 액세스하는 여러 방법 중 하나일 뿐입니다. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 채널 팩터리 및 <xref:System.Net.WebClient>와 같은 다른 .NET Framework 클래스를 사용하여 서비스에 액세스할 수도 있습니다. SDK의 다른 샘플 (같은 [기본 HTTP 서비스](../../../../docs/framework/wcf/samples/basic-http-service.md) 샘플 및 [선택 영역 자동 서식](../../../../docs/framework/wcf/samples/automatic-format-selection.md) 샘플)와 통신 하려면 이러한 클래스를 사용 하는 방법을 보여는 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 서비스입니다.  
+ Client 프로젝트의 Program.cs에서는 <xref:System.Net.HttpWebRequest>를 사용하여 이러한 클라이언트를 작성하는 방법을 보여 줍니다. 이 방법은 WCF 서비스에 액세스하는 여러 방법 중 하나일 뿐입니다. WCF 채널 팩터리와 같은 다른.NET Framework 클래스를 사용 하 여 서비스에 액세스할 수 이기도 및 <xref:System.Net.WebClient>합니다. SDK의 다른 샘플 (같은 [기본 HTTP 서비스](../../../../docs/framework/wcf/samples/basic-http-service.md) 샘플 및 [선택 영역 자동 서식](../../../../docs/framework/wcf/samples/automatic-format-selection.md) 샘플) 이러한 클래스를 사용 하 여 WCF 서비스와 통신 하는 방법을 보여 줍니다.  
   
 ## <a name="to-run-the-sample"></a>이 샘플을 실행하려면  
  이 샘플은 다음의 세 프로젝트로 구성되어 있습니다.  

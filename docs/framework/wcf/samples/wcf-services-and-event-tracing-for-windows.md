@@ -2,18 +2,18 @@
 title: Windows용 WCF 서비스 및 이벤트 추척
 ms.date: 03/30/2017
 ms.assetid: eda4355d-0bd0-4dc9-80a2-d2c832152272
-ms.openlocfilehash: ef98cb14b5f1ee6a2ce11c35627456459d3215b5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: ea917ee87b598fc3ad01df70d9aedfadfd1396a4
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="wcf-services-and-event-tracing-for-windows"></a>Windows용 WCF 서비스 및 이벤트 추척
-이 샘플에서 이벤트 추적에 대 한 ETW (Windows) 이벤트를 내보내는 Windows Communication Foundation (WCF)의 분석 추적을 사용 하는 방법을 보여 줍니다. 분석 추적은 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 스택에서 주요 시점에 내보내는 이벤트로서, 프로덕션 환경에서 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 서비스의 문제를 해결하는 데 사용할 수 있습니다.  
+이 샘플에서 이벤트 추적에 대 한 ETW (Windows) 이벤트를 내보내는 Windows Communication Foundation (WCF)의 분석 추적을 사용 하는 방법을 보여 줍니다. 분석 추적은 프로덕션 환경에서 WCF 서비스의 문제 해결을 허용 하는 WCF 스택의 주요 지점에서 내보내는 이벤트 됩니다.  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 서비스의 분석 추적은 프로덕션 환경에서 성능에 최소한의 영향만 주면서 설정할 수 있는 추적입니다. 이러한 추적은 ETW 세션에 이벤트로 내보내집니다.  
+ WCF 서비스의 분석 추적은 추적 켤 수 있지만 프로덕션 환경에서 성능에 미치는 영향을 최소화 합니다. 이러한 추적은 ETW 세션에 이벤트로 내보내집니다.  
   
- 이 샘플에는 서비스에서 이벤트 뷰어를 사용하여 볼 수 있는 이벤트 로그로 이벤트를 내보내는 기본 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 서비스가 포함되어 있습니다. 또한 이 샘플에서는 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 서비스의 이벤트를 수신 대기하는 전용 ETW 세션을 시작할 수 있습니다. 이 샘플에는 이벤트 뷰어를 사용하여 읽을 수 있는 이진 파일에 이벤트를 저장하는 전용 ETW 세션을 만드는 스크립트가 포함되어 있습니다.  
+ 이 샘플에는 기본 WCF 서비스는 이벤트는 서비스에서 내보낸 이벤트 뷰어를 사용 하 여 볼 수 있는 이벤트 로그에 포함 됩니다. WCF 서비스에서 이벤트를 수신 하는 전용된 ETW 세션을 시작할 수 이기도 합니다. 이 샘플에는 이벤트 뷰어를 사용하여 읽을 수 있는 이진 파일에 이벤트를 저장하는 전용 ETW 세션을 만드는 스크립트가 포함되어 있습니다.  
   
 #### <a name="to-use-this-sample"></a>이 샘플을 사용하려면  
   
@@ -27,17 +27,17 @@ ms.lasthandoff: 05/04/2018
   
      기본적으로 서비스 포트 1378에서 요청에 대 한 수신을 시작 (http://localhost:1378/Calculator.svc)합니다.  
   
-4.  [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 테스트 클라이언트(WcfTestClient.exe)를 실행합니다.  
+4.  WCF 테스트 클라이언트 (WcfTestClient.exe)를 실행 합니다.  
   
-     [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 에 있는 테스트 클라이언트 (WcfTestClient.exe)는 \< [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] Install > \Common7\IDE\ WcfTestClient.exe (기본 [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] 설치 디렉터리는 C:\Program Files\Microsoft Visual Studio 10.0).  
+     WCF 테스트 클라이언트 (WcfTestClient.exe)에 \< [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] Install > \Common7\IDE\ WcfTestClient.exe (기본 [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] 설치 디렉터리는 C:\Program Files\Microsoft Visual Studio 10.0).  
   
-5.  내에서 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 클라이언트 테스트를 선택 하 여 서비스를 추가 **파일**, 차례로 **서비스 추가**합니다.  
+5.  WCF 테스트 클라이언트 내에서 선택 하 여 서비스를 추가 **파일**, 차례로 **서비스 추가**합니다.  
   
      입력 상자에 끝점 주소를 추가합니다. 기본값은 http://localhost:1378/Calculator.svc입니다.  
   
 6.  이벤트 뷰어 응용 프로그램을 엽니다.  
   
-     서비스를 호출하기 전에 이벤트 뷰어를 시작하고 이벤트 로그가 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 서비스에서 내보낸 추적 이벤트를 수신 대기하고 있는지 확인합니다.  
+     서비스를 호출 하기 전에 이벤트 뷰어를 시작 하 고 이벤트 로그를 수신 대기 하는 WCF 서비스에서 내보낸 추적 이벤트를 확인 하십시오.  
   
 7.  **시작** 메뉴 선택 **관리 도구**, 차례로 **이벤트 뷰어**합니다.  사용 하도록 설정 된 **분석** 및 **디버그** 로그 합니다.  
   
@@ -51,7 +51,7 @@ ms.lasthandoff: 05/04/2018
   
 #### <a name="to-test-the-service"></a>서비스를 테스트하려면  
   
-1.  다시 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 테스트 클라이언트로 전환하고 `Divide`를 두 번 클릭한 다음 분모 0을 지정하는 기본값을 유지합니다.  
+1.  WCF 테스트 클라이언트로 다시 전환 하 고 두 번 클릭 `Divide` 분모 0 지정 하는 기본값을 유지 하 고 있습니다.  
   
      분모가 0이면 서비스에서는 오류를 throw합니다.  
   

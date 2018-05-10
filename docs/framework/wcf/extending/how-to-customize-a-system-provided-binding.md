@@ -5,11 +5,11 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: f8b97862-e8bb-470d-8b96-07733c21fe26
-ms.openlocfilehash: 40efa49836561351dc14c2cb49d906a6d344a5bc
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 04b81689d7d625d519a0a9fc8b1fa6df3df16ada
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="how-to-customize-a-system-provided-binding"></a>방법: 시스템 제공 바인딩 사용자 지정
 Windows Communication Foundation (WCF)에 기본 바인딩 요소의 속성 중 일부에 속성을 구성할 수 있도록 여러 시스템 제공 바인딩이 포함 되어 있습니다. 이 항목에서는 바인딩 요소의 속성을 설정하여 사용자 지정 바인딩을 만드는 방법을 보여 줍니다.  
@@ -18,7 +18,7 @@ Windows Communication Foundation (WCF)에 기본 바인딩 요소의 속성 중 
   
  만들기 및 사용자 지정 바인딩 확장에 대 한 자세한 내용은 참조 [바인딩 확장](../../../../docs/framework/wcf/extending/extending-bindings.md)합니다.  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 모든 바인딩에 이루어져 *바인딩 요소의*합니다. 각 바인딩 요소는 <xref:System.ServiceModel.Channels.BindingElement> 클래스에서 파생됩니다. <xref:System.ServiceModel.BasicHttpBinding>과 같은 시스템 제공 바인딩은 자체 바인딩 요소를 만들고 구성합니다. 이 항목에서는 특히 <xref:System.ServiceModel.BasicHttpBinding> 클래스와 같은 바인딩에서 직접 노출되지 않는 이러한 바인딩 요소의 속성에 액세스하여 이를 변경하는 방법을 보여 줍니다.  
+ WCF에서 모든 바인딩에 이루어져 *바인딩 요소의*합니다. 각 바인딩 요소는 <xref:System.ServiceModel.Channels.BindingElement> 클래스에서 파생됩니다. <xref:System.ServiceModel.BasicHttpBinding>과 같은 시스템 제공 바인딩은 자체 바인딩 요소를 만들고 구성합니다. 이 항목에서는 특히 <xref:System.ServiceModel.BasicHttpBinding> 클래스와 같은 바인딩에서 직접 노출되지 않는 이러한 바인딩 요소의 속성에 액세스하여 이를 변경하는 방법을 보여 줍니다.  
   
  개별 바인딩 요소는 <xref:System.ServiceModel.Channels.BindingElementCollection> 클래스로 표시되는 컬렉션에 포함되며, 트랜잭션 흐름, 신뢰할 수 있는 세션, 보안, 복합 이중, 단방향, 스트림 보안, 메시지 인코딩 및 전송 순서로 추가됩니다. 나열된 모든 바인딩 요소가 모든 바인딩에서 필요한 것은 아닙니다. 사용자 정의 바인딩 요소도 앞에서 설명한 동일한 순서로 이 바인딩 요소에 나타날 수 있습니다. 예를 들어, 사용자 정의 전송은 바인딩 요소 컬렉션의 마지막 요소여야 합니다.  
   

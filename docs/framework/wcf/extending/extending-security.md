@@ -6,18 +6,18 @@ helpviewer_keywords:
 ms.assetid: a015a040-9fdf-4147-9ea9-f83b570be1d4
 author: BrucePerlerMS
 manager: mbaldwin
-ms.openlocfilehash: 6ba6df24163064ee65c563253fa56a1ec574cffc
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 94aefe80674c5b4ec6fcce6a41d9b68e093f4262
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="extending-security"></a>보안 확장
 새 클레임 유형 및 사용자 지정 토큰을 수용 하기 위해 Windows Communication Foundation (WCF)의 보안 인프라를 확장할 수 있습니다. 이 단원의 각 항목에서는 이를 수행하는 방법을 보여 줍니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
  [보안 아키텍처](http://msdn.microsoft.com/library/16593476-d36a-408d-808c-ae6fd483e28f)  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 보안 시스템의 아키텍처에 대해 설명합니다.  
+ WCF 보안 시스템의 아키텍처에 설명 합니다.  
   
  [사용자 지정 자격 증명 및 자격 증명 유효성 검사](../../../../docs/framework/wcf/extending/custom-credential-and-credential-validation.md)  
  사용자 지정 자격 증명의 유효성을 검사할 때 ID 모델을 사용하는 방법에 대해 설명합니다.  

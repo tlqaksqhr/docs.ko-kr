@@ -2,11 +2,11 @@
 title: 신뢰된 외관 서비스
 ms.date: 03/30/2017
 ms.assetid: c34d1a8f-e45e-440b-a201-d143abdbac38
-ms.openlocfilehash: 08e115d297439910c16601051539a23a5a6bebc9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: d5a4cfe63f2fc6facbe4ce78d1c0047349e303fd
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="trusted-facade-service"></a>신뢰된 외관 서비스
 이 시나리오 샘플에서는 Windows Communication Foundation (WCF)을 사용 하 여 한 서비스에서 호출자의 id 정보를 이동 하는 방법을 보여 줍니다. 보안 인프라입니다.  
@@ -21,7 +21,7 @@ ms.lasthandoff: 05/04/2018
   
 -   계산기 백 엔드 서비스  
   
- 외관 서비스는 요청의 유효성을 검사하고 호출자를 인증합니다. 인증과 유효성 검사에 성공하고 나면 주변 네트워크에서 내부 네트워크로의 제어된 통신 채널을 사용하여 백 엔드 서비스에 요청을 전달합니다. 외관 서비스는 호출자의 ID에 대한 정보를 전달된 요청의 일부로 포함하므로 백 엔드 서비스는 이 정보를 해당 처리에서 사용할 수 있습니다. 호출자의 ID는 메시지 `Username` 헤더 내의 `Security` 보안 토큰을 사용하여 전송됩니다. 이 샘플에서는 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 보안 인프라를 사용하여 `Security` 헤더에서 이 정보를 전송 및 추출합니다.  
+ 외관 서비스는 요청의 유효성을 검사하고 호출자를 인증합니다. 인증과 유효성 검사에 성공하고 나면 주변 네트워크에서 내부 네트워크로의 제어된 통신 채널을 사용하여 백 엔드 서비스에 요청을 전달합니다. 외관 서비스는 호출자의 ID에 대한 정보를 전달된 요청의 일부로 포함하므로 백 엔드 서비스는 이 정보를 해당 처리에서 사용할 수 있습니다. 호출자의 ID는 메시지 `Username` 헤더 내의 `Security` 보안 토큰을 사용하여 전송됩니다. 샘플 WCF 보안 인프라를 사용 하 여 전송 및에서이 정보를 추출 하 고 `Security` 헤더입니다.  
   
 > [!IMPORTANT]
 >  백 엔드 서비스는 호출자를 인증하기 위해 외관 서비스를 신뢰합니다. 따라서 백 엔드 서비스는 호출자를 다시 인증하지 않으며 전달된 요청에서 외관 서비스에 의해 제공된 ID 정보를 사용합니다. 이 신뢰 관계 때문에 백 엔드 서비스는 전달된 메시지가 신뢰할 수 있는 소스(이 경우에는 외관 서비스)에서 제공되는지 확인하기 위해 외관 서비스를 인증해야 합니다.  
@@ -110,7 +110,7 @@ public class MyUserNamePasswordValidator : UserNamePasswordValidator
   
  [ \<보안 >](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md) 바인딩 요소는 초기 호출자의 사용자 이름 전송과 추출을 처리 합니다. [ \<windowsStreamSecurity >](../../../../docs/framework/configure-apps/file-schema/wcf/windowsstreamsecurity.md) 및 [ \<tcpTransport >](../../../../docs/framework/configure-apps/file-schema/wcf/tcptransport.md) 외관 및 백 엔드 서비스 인증을 처리 하 고 메시지 보호 합니다.  
   
- 요청을 전달하기 위해 외관 서비스 구현은 초기 호출자의 사용자 이름을 제공해야 하므로 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 보안 인프라에서 이 정보를 전달된 메시지에 포함할 수 있습니다. 외관 서비스가 백 엔드 서비스와 통신하기 위해 사용하는 클라이언트 프록시 인스턴스의 `ClientCredentials` 속성에서 초기 호출자의 사용자 이름을 설정함으로써 외관 서비스 구현에서 해당 사용자 이름이 제공됩니다.  
+ 요청을 전달 하기 위해 WCF 보안 인프라에이 전달된 된 메시지에 배치할 수 있도록 외관 서비스 구현은 초기 호출자의 사용자를 제공 해야 합니다. 외관 서비스가 백 엔드 서비스와 통신하기 위해 사용하는 클라이언트 프록시 인스턴스의 `ClientCredentials` 속성에서 초기 호출자의 사용자 이름을 설정함으로써 외관 서비스 구현에서 해당 사용자 이름이 제공됩니다.  
   
  다음 코드에서는 `GetCallerIdentity` 메서드가 외관 서비스에서 구현되는 방법을 보여 줍니다. 다른 메서드에도 동일한 패턴이 사용됩니다.  
   
@@ -125,9 +125,9 @@ public string GetCallerIdentity()
 }  
 ```  
   
- 위 코드에서 볼 수 있듯이 `ClientCredentials` 속성에서는 암호가 설정되지 않고 사용자 이름만 설정됩니다. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 보안 인프라는 암호 없이 사용자 이름 보안 토큰을 만드는 데 이 시나리오에서는 이와 같은 작업이 필요합니다.  
+ 위 코드에서 볼 수 있듯이 `ClientCredentials` 속성에서는 암호가 설정되지 않고 사용자 이름만 설정됩니다. WCF 보안 인프라 만드는 암호 없이 사용자 이름 보안 토큰을이 경우에 정확 하 게이 시나리오에서 요구 하는 합니다.  
   
- 백 엔드 서비스에서는 사용자 이름 보안 토큰에 포함된 정보가 인증되어야 합니다. 기본적으로 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 보안에서는 제공된 암호를 사용하여 Windows 계정에 사용자를 매핑하는 것을 시도합니다. 이 경우에는 제공된 암호가 없으며 외관 서비스에 의해 인증이 이미 수행되었으므로 백 엔드 서비스는 사용자 이름을 인증할 필요가 없습니다. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서 이 기능을 구현하기 위해 토큰에 사용자 이름을 지정하는 것만 강제하고 어떠한 추가 인증도 수행하지 않는 사용자 지정 `UserNamePasswordValidator` 가 제공됩니다.  
+ 백 엔드 서비스에서는 사용자 이름 보안 토큰에 포함된 정보가 인증되어야 합니다. 기본적으로 WCF 보안에는 사용자를 입력된 한 암호를 사용 하 여 Windows 계정으로 매핑하려고 시도 합니다. 이 경우에는 제공된 암호가 없으며 외관 서비스에 의해 인증이 이미 수행되었으므로 백 엔드 서비스는 사용자 이름을 인증할 필요가 없습니다. Wcf에서는 사용자 지정이이 기능을 구현 하려면 `UserNamePasswordValidator` 제공 것만 강제 사용자 이름 토큰에 지정 하 고 어떠한 추가 인증도 수행 하지 않습니다.  
   
 ```  
 public class MyUserNamePasswordValidator : UserNamePasswordValidator  
@@ -208,7 +208,7 @@ public string GetCallerIdentity()
 }  
 ```  
   
- 외관 서비스 계정 정보는 `ServiceSecurityContext.Current.WindowsIdentity` 속성을 사용하여 추출됩니다. 초기 호출자에 대한 정보에 액세스하기 위해 백 엔드 서비스는 `ServiceSecurityContext.Current.AuthorizationContext.ClaimSets` 속성을 사용합니다. 이 속성은 `Identity` 형식을 가진 `Name`클레임을 찾습니다. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 보안 인프라는 `Username` 보안 토큰에 포함된 정보에서 이 클레임을 자동으로 생성합니다.  
+ 외관 서비스 계정 정보는 `ServiceSecurityContext.Current.WindowsIdentity` 속성을 사용하여 추출됩니다. 초기 호출자에 대한 정보에 액세스하기 위해 백 엔드 서비스는 `ServiceSecurityContext.Current.AuthorizationContext.ClaimSets` 속성을 사용합니다. 이 속성은 `Identity` 형식을 가진 `Name`클레임을 찾습니다. 이 클레임에 포함 된 정보에서 WCF 보안 인프라에서 자동으로 생성 됩니다는 `Username` 보안 토큰입니다.  
   
 ## <a name="running-the-sample"></a>샘플 실행  
  샘플을 실행하면 작업 요청 및 응답이 클라이언트 콘솔 창에 표시됩니다. 클라이언트를 종료하려면 클라이언트 창에서 Enter 키를 누릅니다. 외관 및 백 엔드 서비스 콘솔 창에서 Enter 키를 눌러 서비스를 종료할 수 있습니다.  

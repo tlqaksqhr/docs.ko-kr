@@ -2,17 +2,17 @@
 title: 메시지 로그 보기
 ms.date: 03/30/2017
 ms.assetid: 3012fa13-f650-45fb-aaea-c5cca8c7d372
-ms.openlocfilehash: 56e4fb1ea8c67c35df440a2088034327788f6f15
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 4fa205b52e3d19d2421d93297b5689422775f719
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="viewing-message-logs"></a>메시지 로그 보기
 이 항목에서는 메시지 로그를 볼 수 있는 방법에 대해 설명합니다.  
   
 ## <a name="viewing-message-logs-in-the-service-trace-viewer"></a>Service Trace Viewer에서 메시지 로그 보기  
- 메시지는 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서 처리되는 동안 변형됩니다. 그러므로 기록되는 메시지는 기록되는 시점의 메시지 내용만을 반영하며, 통신 중의 내용은 반영하지 않습니다.  
+ WCF에 의해 처리 되는 메시지를 변환 됩니다. 그러므로 기록되는 메시지는 기록되는 시점의 메시지 내용만을 반영하며, 통신 중의 내용은 반영하지 않습니다.  
   
  메시지 로깅 출력은 메시지 전송 형식과 관계가 없으므로 메시지 로깅은 항상 디코딩된 메시지를 출력합니다. 메시지 로깅을 올바로 구성한 경우 메시지는 일반 텍스트로 기록되어야 합니다. 예를 들어 기록된 메시지 형식(일반 텍스트)은 이진 메시지 인코더 사용에 영향을 받지 않습니다.  
   

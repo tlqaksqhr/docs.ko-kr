@@ -6,14 +6,14 @@ helpviewer_keywords:
 - Windows Communication Foundation [WCF], getting started
 - getting started [WCF]
 ms.assetid: df939177-73cb-4440-bd95-092a421516a1
-ms.openlocfilehash: 4a095e5391f3b532211b82a190c7010f41283e31
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 64d9fc09d56c417c2226d030ef6f5ee7204c4eb6
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="getting-started-tutorial"></a>초보자를 위한 자습서
-이 섹션에 포함 된 항목은 빠른 노출 하는 WCF Windows Communication Foundation () 프로그래밍 기능을 제공 하는 데 사용 됩니다. 이 항목 아래쪽에 나열된 순서대로 진행하세요. 이 자습서를 수행하면 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 서비스 및 클라이언트 응용 프로그램을 만드는 데 필요한 단계에 대한 기초적인 이해를 할 수 있습니다. 서비스는 하나 이상의 끝점을 노출하며 각 끝점은 하나 이상의 서비스 작업을 노출합니다. *끝점* 서비스의 서비스를 찾을 수 있는, 클라이언트는 서비스 및 기능을 정의 하는 계약와 통신 하는 방법을 설명 하는 정보를 포함 하는 바인딩을 주소를 지정 합니다. 클라이언트에 서비스에서 제공 합니다.  
+이 섹션에 포함 된 항목은 빠른 노출 하는 WCF Windows Communication Foundation () 프로그래밍 기능을 제공 하는 데 사용 됩니다. 이 항목 아래쪽에 나열된 순서대로 진행하세요. 이 자습서를 통해 작업 WCF 서비스 및 클라이언트 응용 프로그램을 만드는 데 필요한 단계에 대 한 기초적인 이해를 제공 합니다. 서비스는 하나 이상의 끝점을 노출하며 각 끝점은 하나 이상의 서비스 작업을 노출합니다. *끝점* 서비스의 서비스를 찾을 수 있는, 클라이언트는 서비스 및 기능을 정의 하는 계약와 통신 하는 방법을 설명 하는 정보를 포함 하는 바인딩을 주소를 지정 합니다. 클라이언트에 서비스에서 제공 합니다.  
   
  이 자습서의 항목을 순서대로 수행하면 서비스를 실행하고 클라이언트에서 서비스를 호출할 수 있습니다. 첫 번째 세 개 항목에서는 서비스 계약을 정의하는 방법, 서비스 계약을 구현하는 방법 및 서비스를 호스트하는 방법을 설명합니다. 만들어진 서비스는 콘솔 응용 프로그램 내에서 자체 호스트됩니다. IIS(인터넷 정보 서비스)에서 서비스를 호스트할 수도 있습니다. 이 작업을 수행 하는 방법에 대 한 자세한 내용은 참조 하십시오. [하는 방법: IIS에서 WCF 서비스 호스팅](../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-iis.md)합니다. 서비스는 코드로 구성하지만 구성 파일 내에 서비스를 구성할 수도 있습니다. 구성 파일을 사용 하는 방법에 대 한 자세한 내용은 참조 [구성 서비스를 사용 하 여 구성 파일](../../../docs/framework/wcf/configuring-services-using-configuration-files.md)합니다.  
   
@@ -30,7 +30,7 @@ ms.lasthandoff: 05/04/2018
   
 ## <a name="in-this-section"></a>섹션 내용  
  [방법: 서비스 계약 정의](../../../docs/framework/wcf/how-to-define-a-wcf-service-contract.md)  
- 사용자 정의 인터페이스를 사용하여 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 계약을 만드는 방법을 설명합니다. 계약은 서비스에서 노출하는 기능을 정의합니다.  
+ 사용자 정의 인터페이스를 사용 하는 WCF 계약을 만드는 방법을 설명 합니다. 계약은 서비스에서 노출하는 기능을 정의합니다.  
   
  [방법: 서비스 계약 구현](../../../docs/framework/wcf/how-to-implement-a-wcf-contract.md)  
  서비스 계약을 구현하는 방법에 대해 설명합니다. 정의된 계약은 서비스 클래스를 사용하여 구현해야 합니다.  
@@ -39,13 +39,13 @@ ms.lasthandoff: 05/04/2018
  코드에서 서비스의 끝점을 구성하는 방법 및 콘솔 응용 프로그램에서 서비스를 호스트하는 방법을 설명합니다. 서비스를 활성화하려면 런타임 환경에 구성하고 호스트해야 합니다. 이 환경에서 서비스를 만들고 서비스의 컨텍스트 및 수명을 제어합니다.  
   
  [방법: 클라이언트 만들기](../../../docs/framework/wcf/how-to-create-a-wcf-client.md)  
- [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 서비스에서 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 클라이언트 프록시를 만드는 데 사용되는 메타데이터를 검색하는 방법을 설명합니다. 이 프로세스는 Visual Studio 2011의 서비스 참조 추가 기능을 사용합니다.  
+ WCF 서비스에서 WCF 클라이언트 프록시를 만드는 데 메타 데이터를 검색 하는 방법을 설명 합니다. 이 프로세스는 Visual Studio 2011의 서비스 참조 추가 기능을 사용합니다.  
   
  [방법: 클라이언트 구성](../../../docs/framework/wcf/how-to-configure-a-basic-wcf-client.md)  
  WCF 클라이언트를 구성하는 방법을 설명합니다. 클라이언트를 구성하려면 클라이언트에서 서비스에 액세스하는 데 사용하는 끝점을 지정해야 합니다.  
   
  [방법: 클라이언트 사용](../../../docs/framework/wcf/how-to-use-a-wcf-client.md)  
- [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 클라이언트 프록시를 사용하여 서비스 작업을 호출하는 방법을 설명합니다.  
+ 서비스 작업을 호출할 WCF 클라이언트 프록시를 사용 하는 방법을 설명 합니다.  
   
 ## <a name="reference"></a>참조  
  <xref:System.ServiceModel.ServiceContractAttribute>  

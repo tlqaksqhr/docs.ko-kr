@@ -1,21 +1,14 @@
 ---
 title: Docker 기반 응용 프로그램에 대한 개발 프로세스
 description: 컨테이너화된 .NET 응용 프로그램을 위한 .NET 마이크로 서비스 아키텍처 | Docker 기반 응용 프로그램에 대한 개발 프로세스
-keywords: Docker, 마이크로 서비스, ASP.NET, 컨테이너
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/18/2017
-ms.prod: .net-core
-ms.technology: dotnet-docker
-ms.topic: article
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: dc91c7d5e2e27602afd6d583bf09adae3caea59e
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 881817f4f1007edad85eefb9002d56764cbf2a02
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="development-process-for-docker-based-applications"></a>Docker 기반 응용 프로그램에 대한 개발 프로세스
 
@@ -35,9 +28,9 @@ ms.lasthandoff: 12/23/2017
 
 [Docker CE(Community Edition)](https://www.docker.com/community-edition) 도구를 설치하면 단일 Docker CLI를 사용하여 Windows용 앱과 Linux용 앱을 모두 빌드할 수 있습니다. 또한 Visual Studio Code는 Dockerfile용 IntelliSense와 같은 Docker용 확장을 지원하고 편집기에서 Docker 명령을 실행하는 바로 가기 작업도 지원합니다.
 
-### <a name="additional-resources"></a>추가 리소스
+### <a name="additional-resources"></a>추가 자료
 
--   **Visual Studio Tools for Docker**
+-   **Docker용 Visual Studio Tools**
     [*https://docs.microsoft.com/aspnet/core/publishing/visual-studio-tools-for-docker*](https://docs.microsoft.com/aspnet/core/publishing/visual-studio-tools-for-docker)
 
 -   **Visual Studio Code**. 공식 사이트입니다.

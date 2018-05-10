@@ -2,11 +2,11 @@
 title: Windows Communication Foundation에서 메시지 큐로
 ms.date: 03/30/2017
 ms.assetid: 78d0d0c9-648e-4d4a-8f0a-14d9cafeead9
-ms.openlocfilehash: 83c16fc097cc6eca76578730bcad0491b648c5c8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 0864098a55cbd7b43100bf9e0a1836e749eb2bc9
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="windows-communication-foundation-to-message-queuing"></a>Windows Communication Foundation에서 메시지 큐로
 이 샘플 Windows Communication Foundation (WCF) 응용 프로그램 메시지 큐 (MSMQ) 응용 프로그램에 메시지를 보낼 수 있는 방법을 보여 줍니다. 이 서비스는 자체적으로 호스트되는 콘솔 응용 프로그램으로서 이를 사용하여 서비스에서 대기된 메시지를 받는 것을 볼 수 있습니다. 서비스 및 클라이언트가 동시에 실행될 필요는 없습니다.  
@@ -95,9 +95,9 @@ Console.WriteLine("Order has been submitted:{0}", po);
 client.Close();  
 ```
 
- 클라이언트는 큐에 MSMQ 메시지를 보내기 위해 사용자 지정 클라이언트를 사용합니다. 메시지를 받아 처리하는 응용 프로그램은 MSMQ 응용 프로그램이고 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 응용 프로그램이 아니기 때문에 두 응용 프로그램 사이에 암시적인 서비스 계약은 없습니다. 따라서 이 시나리오에서는 Svcutil.exe 도구를 사용하여 프록시를 만들 수 없습니다.  
+ 클라이언트는 큐에 MSMQ 메시지를 보내기 위해 사용자 지정 클라이언트를 사용합니다. 수신 하 고 메시지를 처리 하는 응용 프로그램 MSMQ 응용 프로그램 및 WCF 응용 프로그램이 아닌 이기 때문에 두 개의 응용 프로그램 간의 암시적인 서비스 계약은 없습니다는 없습니다. 따라서 이 시나리오에서는 Svcutil.exe 도구를 사용하여 프록시를 만들 수 없습니다.  
   
- 사용자 지정 클라이언트는 실질적으로 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 바인딩을 사용하여 메시지를 보내는 모든 `MsmqIntegration` 응용 프로그램에서 동일합니다. 다른 클라이언트와 달리, 여기에는 서비스 작업 범위가 포함되지 않으며 메시지 제출 작업으로만 한정됩니다.  
+ 사용자 지정 클라이언트는 기본적으로 사용 하는 모든 WCF 응용 프로그램에 대해 동일는 `MsmqIntegration` 바인딩 메시지를 보낼 수 있습니다. 다른 클라이언트와 달리, 여기에는 서비스 작업 범위가 포함되지 않으며 메시지 제출 작업으로만 한정됩니다.  
 
 ```csharp
 [System.ServiceModel.ServiceContractAttribute(Namespace = "http://Microsoft.ServiceModel.Samples")]  

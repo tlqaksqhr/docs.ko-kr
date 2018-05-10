@@ -2,11 +2,11 @@
 title: 메시지 흐름 개요
 ms.date: 03/30/2017
 ms.assetid: fb0899e1-84cc-4d90-b45b-dc5a50063943
-ms.openlocfilehash: 056737b9d057101568274ab8d24c0c0e2780f93a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: aea0ca4c5a8574f6039cd055561ce7da0099841b
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="message-flow-overview"></a>메시지 흐름 개요
 상호 연결된 서비스가 포함된 분산 시스템에서는 서비스 간의 인과 관계를 확인해야 합니다. 상태 모니터링, 문제 해결 및 근본 원인 분석과 같은 중요한 시나리오를 지원하기 위해 요청 흐름의 일부인 다양한 구성 요소를 이해하는 것이 중요합니다. 다양한 서비스 간 추적을 상호 연결할 수 있도록 하기 위해 .NET Framework 4에서는 다음 기능을 통한 지원이 추가되었습니다.  
@@ -25,7 +25,7 @@ ms.lasthandoff: 05/04/2018
   
 2.  분석 추적을 활성화 하지 않은 확장 **Applications and Services Logs**, **Microsoft**, **Windows**, **응용 프로그램 서버-응용 프로그램** . 선택 **보기**, **분석 및 디버그 로그 표시**합니다. 마우스 오른쪽 단추로 클릭 **분석** 선택 **로그 사용**합니다. 추적 내용을 볼 수 있도록 이벤트 뷰어를 열어 둡니다.  
   
-3.  만든 샘플을 열고는 [초보자를 위한 자습서](../../../../docs/framework/wcf/getting-started-tutorial.md) 에서 [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)]합니다. 서비스를 만들 수 있도록 관리자 권한으로 [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)]을 실행해야 합니다. 있는 경우는 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 열 수 있습니다 설치 되어 있는 샘플의 [시작](../../../../docs/framework/wcf/samples/getting-started-sample.md), 자습서에서 만든 완료 된 프로젝트를 포함 하 합니다.  
+3.  만든 샘플을 열고는 [초보자를 위한 자습서](../../../../docs/framework/wcf/getting-started-tutorial.md) 에서 [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)]합니다. 서비스를 만들 수 있도록 관리자 권한으로 [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)]을 실행해야 합니다. WCF 샘플 설치 되어 있는 경우 열 수 있습니다는 [시작](../../../../docs/framework/wcf/samples/getting-started-sample.md), 자습서에서 만든 완료 된 프로젝트를 포함 하 합니다.  
   
 4.  마우스 오른쪽 단추로 클릭는 **서비스** 프로젝트를 마우스 선택 **추가**, **새 항목**합니다. 선택 **응용 프로그램 구성 파일** 클릭 **확인**합니다.  
   

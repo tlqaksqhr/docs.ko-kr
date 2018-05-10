@@ -2,11 +2,11 @@
 title: 초보자를 위한 자습서 문제 해결
 ms.date: 03/30/2017
 ms.assetid: 69a21511-0871-4c41-9a53-93110e84d7fd
-ms.openlocfilehash: 863e9dd1253624c025e830f589068068cb996413
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 12812bd1ef88eab14a8defed0b71657b0d33c618
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="troubleshooting-the-getting-started-tutorial"></a>초보자를 위한 자습서 문제 해결
 이 항목에서는 초보자를 위한 자습서를 수행할 때 발생하는 가장 일반적인 문제 및 해결 방법을 보여 줍니다.  
@@ -31,7 +31,7 @@ ms.lasthandoff: 05/04/2018
   
 <a name="BKMK_q2"></a>   
 ## <a name="attempting-to-run-the-service-application-http-could-not-register-url-http8000servicemodelsamplesservice-your-process-does-not-have-access-rights-to-this-namespace"></a>서비스 응용 프로그램을 실행 하는: HTTP URL을 등록 하지 못했습니다 http://+:8000/ServiceModelSamples/Service/합니다. 사용자의 프로세스에 이 네임스페이스에 액세스할 수 있는 권한이 없습니다.  
- [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 서비스를 호스팅하는 프로세스는 관리자 권한으로 실행해야 합니다. [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)] 내에서 서비스를 실행 중인 경우에는 [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)]을 관리자로 실행해야 합니다. 이렇게 하려면 **시작**를 마우스 오른쪽 단추로 클릭 [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)] 선택 **관리자 권한으로 실행**합니다. 명령줄 프롬프트에서 서비스를 실행 중인 경우에는 동일한 방식으로 명령줄 프롬프트를 관리자로 시작해야 합니다. 클릭 **시작**를 마우스 오른쪽 단추로 클릭 **명령 프롬프트** 선택 **관리자 권한으로 실행**합니다.  
+ WCF 서비스를 호스팅하는 프로세스를 관리자 권한으로 실행 되어야 합니다. [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)] 내에서 서비스를 실행 중인 경우에는 [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)]을 관리자로 실행해야 합니다. 이렇게 하려면 **시작**를 마우스 오른쪽 단추로 클릭 [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)] 선택 **관리자 권한으로 실행**합니다. 명령줄 프롬프트에서 서비스를 실행 중인 경우에는 동일한 방식으로 명령줄 프롬프트를 관리자로 시작해야 합니다. 클릭 **시작**를 마우스 오른쪽 단추로 클릭 **명령 프롬프트** 선택 **관리자 권한으로 실행**합니다.  
   
 <a name="BKMK_q3"></a>   
 ## <a name="attempting-to-use-the-svcutilexe-tool-svcutil-is-not-recognized-as-an-internal-or-external-command-operable-program-or-batch-file"></a>Svcutil.exe 도구를 사용하려고 할 때 다음 오류가 발생합니다. 'svcutil'은(는) 내부 또는 외부 명령, 실행할 수 있는 프로그램, 또는 배치 파일이 아닙니다.  

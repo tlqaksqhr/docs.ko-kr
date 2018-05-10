@@ -4,22 +4,22 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - event logging [WCF]
 ms.assetid: aac0530d-f44c-45a1-bada-e30e0677b41f
-ms.openlocfilehash: 78ad80188b8428bb718251045ef04ab803862a0f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: ea0e6f3dc66bf40d631077c0dce20ea46f3a6688
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="event-logging-in-wcf"></a>WCF에서 이벤트 로깅
 Windows Communication Foundation (WCF)는 Windows 이벤트 로그에는 내부 이벤트를 추적합니다.  
   
 ## <a name="viewing-event-logs"></a>이벤트 로그 보기  
- 이벤트 로깅은 기본적으로 활성화되며 비활성화 메커니즘이 없습니다. [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)]에서 기록된 이벤트는 이벤트 뷰어를 사용하여 볼 수 있습니다. 이 도구를 실행 하려면 클릭 **시작**, 클릭 **제어판**를 두 번 클릭 **관리 도구**, 두 번 클릭 하 고 **이벤트 뷰어**.  
+ 이벤트 로깅은 기본적으로 활성화되며 비활성화 메커니즘이 없습니다. 이벤트 뷰어를 사용 하 여 WCF에 의해 기록 된 이벤트를 볼 수 있습니다. 이 도구를 실행 하려면 클릭 **시작**, 클릭 **제어판**를 두 번 클릭 **관리 도구**, 두 번 클릭 하 고 **이벤트 뷰어**.  
   
 ### <a name="application-event-log"></a>응용 프로그램 이벤트 로그  
- **응용 프로그램 이벤트 로그** 의해 생성 된 이벤트의 대부분 포함 [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)]합니다. 대부분의 항목은 응용 프로그램에서 특정 기능을 시작하지 못한 것을 나타냅니다. 예를 들면 다음과 같습니다.  
+ **응용 프로그램 이벤트 로그** WCF에 의해 생성 된 이벤트의 대부분을 포함 합니다. 대부분의 항목은 응용 프로그램에서 특정 기능을 시작하지 못한 것을 나타냅니다. 다음과 같은 경우를 예로 들 수 있습니다.  
   
--   메시지 로깅/추적: [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)]에서는 추적 및 메시지 로깅에 실패하면 이벤트 로그에 이벤트를 기록합니다. 그러나 모든 추적 실패가 이벤트를 트리거하는 것은 아닙니다. 이벤트 로그가 추적 오류로 가득 차는 것을 방지하기 위해, [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)]에서는 그와 같은 이벤트가 발생한 후 10분 동안 블랙아웃 기간을 구현합니다. 즉, [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)]에서 이벤트 로그에 추적 실패를 기록하면 적어도 10분 동안은 다시 기록하지 않습니다.  
+-   메시지 로깅/추적: WCF 이벤트를 씁니다 이벤트 로그에 추적 및 메시지 로깅 실패 한 경우. 그러나 모든 추적 실패가 이벤트를 트리거하는 것은 아닙니다. 이벤트 로그에서 추적 오류로 가득 차는 것을 방지 하려면 WCF 이러한 이벤트에 대 일 분 동안 블랙 아웃 기간을 구현 합니다. 이 이벤트 로그에 추적 실패를 기록 하는 WCF를 하는 경우 수행 되지 않습니다 다시 10 분 이상에 대 한 것을 의미 합니다.  
   
 -   공유 수신기: WCF TCP Port Sharing Service에서는 시작에 실패하면 이벤트를 기록합니다.  
   

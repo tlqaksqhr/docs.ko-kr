@@ -2,39 +2,39 @@
 title: 웹
 ms.date: 03/30/2017
 ms.assetid: 88794df1-8e2d-431e-b377-2fd3dc7942ab
-ms.openlocfilehash: ed5dcf4ee41a296a76914ae868082259ec620247
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: b1a691e7f5b10f603e604f3bd8f1fc1fafb87765
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="web"></a>웹
 이 단원에는 웹 호스팅 샘플이 포함되어 있습니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
  [고급 포맷 선택](../../../../docs/framework/wcf/samples/advanced-format-selection.md)  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 웹 HTTP 프로그래밍 모델을 확장하여 나가는 응답의 새로운 형식을 지원하는 방법을 보여 줍니다.  
+ 나가는 응답의 새로운 형식을 지원 하기 위해 WCF 웹 HTTP 프로그래밍 모델을 확장 하는 방법을 보여 줍니다.  
   
  [자동 포맷 선택](../../../../docs/framework/wcf/samples/automatic-format-selection.md)  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 웹 HTTP 프로그래밍 모델을 사용하여 선택 영역 자동 서식 지정(XML 또는 JSON)을 사용하도록 설정하는 방법과 작업 코드에서 형식을 명시적으로 설정하는 방법을 보여 줍니다.  
+ WCF 웹 HTTP 프로그래밍으로 모델을 작업 코드에서 형식을 명시적으로 설정 하는 방법으로 선택 영역 자동 서식 지정 (XML 또는 JSON)을 사용 하도록 설정 하는 방법을 보여 줍니다.  
   
  [기본 HTTP 서비스](../../../../docs/framework/wcf/samples/basic-http-service.md)  
- HTTP 및 RPC 기반 서비스-일반적으로 "POX" (Plain Old XML) 서비스 라고 하를 사용 하 여 구현 하는 방법을 보여 줍니다.는 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 웹 HTTP 프로그래밍 모델입니다.  
+ 많이 WCF 웹 HTTP 프로그래밍 모델을 사용 하 여 "POX" (Plain Old XML) 서비스 라고 하는 HTTP 기반, RPC 기반 서비스를 구현 하는 방법을 보여 줍니다.  
   
  [기본 리소스 서비스](../../../../docs/framework/wcf/samples/basic-resource-service.md)  
- 검색, 추가, 삭제 및 대체 작업을 지원하는 고객 컬렉션을 노출하는 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 웹 HTTP 프로그래밍 모델을 사용하여 HTTP 기반 서비스를 구현하는 방법을 보여 줍니다.  
+ 검색을 지 원하는 고객 컬렉션을 노출 하는 WCF 웹 HTTP 프로그래밍 모델을 사용 하 여 HTTP 기반 서비스 구현, 추가, 삭제 및 바꾸기 작업 하는 방법을 보여 줍니다.  
   
  [AspNetRouteIntegration](../../../../docs/framework/wcf/samples/aspnetrouteintegration.md)  
- ASP.NET 경로를 사용하여 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 웹 HTTP 서비스를 호스팅하는 방법을 보여 줍니다.  
+ ASP.NET 경로 사용 하 여 WCF 웹 HTTP 서비스를 호스팅하는 방법을 보여 줍니다.  
   
  [조건부 Get과 Put](../../../../docs/framework/wcf/samples/conditional-get-and-put.md)  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 웹 HTTP 프로그래밍 모델을 위한 새 조건부 검색 및 업데이트 API를 사용하는 방법을 보여 줍니다.  
+ 새 조건부 검색을 사용 하 고 WCF 웹 HTTP 프로그래밍 모델에 대 한 Api를 업데이트 하는 방법을 보여 줍니다.  
   
  [SOAP 및 HTTP 끝점](../../../../docs/framework/wcf/samples/soap-and-http-endpoints.md)  
- RPC 기반 서비스를 구현 하 고 SOAP 형식 및 사용 하 여 "Plain Old XML" (POX) 형식을 노출 하는 방법을 보여 줍니다.는 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 웹 HTTP 프로그래밍 모델입니다.  
+ RPC 기반 서비스를 구현 하 고 SOAP 형식 및 WCF 웹 HTTP 프로그래밍 모델을 사용 하 여 "Plain Old XML" (POX) 형식에 노출 하는 방법을 보여 줍니다.  
   
  [ASP.NET 캐싱 통합](../../../../docs/framework/wcf/samples/aspnet-caching-integration.md)  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 웹 HTTP 프로그래밍 모델을 사용하여 ASP.NET 출력 캐시를 활용하는 방법을 보여 줍니다.  
+ WCF 웹 HTTP 프로그래밍 모델을 사용 하 여 ASP.NET 출력 캐시를 활용 하는 방법을 보여 줍니다.  
   
  [UriTemplate](../../../../docs/framework/wcf/samples/uritemplate-sample.md)  
  <xref:System.UriTemplate>과 관련된 핵심 개념을 보여 줍니다.  

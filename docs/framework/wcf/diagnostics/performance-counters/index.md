@@ -4,17 +4,17 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - performance counters [WCF]
 ms.assetid: f559b2bd-ed83-4988-97a1-e88f06646609
-ms.openlocfilehash: 74bf11779e6ccf032f2c8c920b62b2f0e5d0625d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 1d9e6b83a78967193c4cb0343f6c77560354a837
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="wcf-performance-counters"></a>WCF 성능 카운터
 Windows Communication Foundation (WCF)에 다양 한 응용 프로그램의 성능을 측정할 수 있도록 성능 카운터가 포함 되어 있습니다.  
   
 ## <a name="enabling-performance-counters"></a>성능 카운터 사용  
- [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 서비스의 app.config 구성 파일을 통해 [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 서비스에 대한 성능 카운터를 다음과 같이 활성화할 수 있습니다.  
+ WCF 서비스의 app.config 구성 파일을 통해 다음과 같은 WCF 서비스에 대 한 성능 카운터를 사용할 수 있습니다.  
   
 ```xml  
 <configuration>  
@@ -32,9 +32,9 @@ Windows Communication Foundation (WCF)에 다양 한 응용 프로그램의 성�
   
 -   Off: ServiceModel* 성능 카운터가 비활성화됩니다.  
   
- 모든 [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 응용 프로그램에 대해 성능 카운터를 활성화하려면 Machine.config 파일에 구성 설정을 입력할 수 있습니다.  참조 하십시오는 **성능 카운터에 대 한 메모리 크기 늘리기** 컴퓨터에 성능 카운터에 대 한 충분 한 메모리를 구성 하는 방법에 대 한 자세한 내용은 아래 섹션.  
+ 모든 WCF 응용 프로그램에 대 한 성능 카운터를 사용 하려면 Machine.config 파일에 구성 설정을 배치할 수 있습니다.  참조 하십시오는 **성능 카운터에 대 한 메모리 크기 늘리기** 컴퓨터에 성능 카운터에 대 한 충분 한 메모리를 구성 하는 방법에 대 한 자세한 내용은 아래 섹션.  
   
- 사용자 지정 작업 호출자와 같은 [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 확장성 지점을 사용하는 경우에는 성능 카운터도 내보내야 합니다. 이는 확장성 지점을 구현하는 경우 [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)]에서 더 이상 기본 경로에서 표준 성능 카운터 데이터를 내보낼 수 없기 때문입니다. 수동 성능 카운터 지원을 구현하지 않으면 예상하는 성능 카운터 데이터가 표시되지 않을 수 있습니다.  
+ 사용자 지정 작업 호출자와 같은 WCF 확장성 지점을 사용 하는 경우 개발자 고유의 성능 카운터 내보내야 합니다. 즉, WCF 더 이상 기본 경로에서 표준 성능 카운터 데이터를 내보낼 수 확장성 지점을 구현 하는 경우. 수동 성능 카운터 지원을 구현하지 않으면 예상하는 성능 카운터 데이터가 표시되지 않을 수 있습니다.  
   
  코드를 사용하여 다음과 같이 성능 카운터를 활성화할 수도 있습니다.  
   
@@ -56,11 +56,11 @@ config.Save();
 >  끝점 디스패처가 마지막 메시지를 처리하기 이전에 성능 카운터 인스턴스가 해제될 수 있습니다. 그러면 일부 메시지에 대한 성능 데이터가 캡처되지 않습니다.  
   
 ## <a name="increasing-memory-size-for-performance-counters"></a>성능 카운터에 대한 메모리 크기 늘리기  
- [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)]에서는 성능 카운터 범주에 대해 별도의 공유 메모리를 사용합니다.  
+ WCF 성능 카운터 범주에 대 한 별도 공유 메모리를 사용합니다.  
   
- 기본적으로 별도의 공유 메모리는 전역 성능 카운터 메모리 크기의 1/4로 설정됩니다. 기본 전역 성능 카운터 메모리는 524,288바이트입니다. 따라서 세 개의 [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 성능 카운터 범주의 기본 크기는 각각 약 128KB입니다. 컴퓨터에 있는 [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 응용 프로그램의 런타임 특성에 따라 성능 카운터 메모리가 부족할 수 있습니다. 이 때 [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)]는 응용 프로그램 이벤트 로그에 오류를 기록합니다. 오류 내용에는 성능 카운터가 로드되지 않았다는 설명이 표시되며, "System.InvalidOperationException: 사용자 지정 카운터 파일 뷰 메모리가 부족합니다."라는 예외가 항목에 포함됩니다. 오류 수준에서 추적 기능을 사용하도록 설정하면 이 오류도 추적됩니다. 성능 카운터 메모리가 부족한 상태에서 성능 카운터를 활성화한 상태로 [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 응용 프로그램을 계속 실행하면 성능이 저하될 수 있습니다. 컴퓨터 관리자는 언제든지 최대 성능 카운터 수를 지원하는 데 충분한 메모리를 할당하도록 컴퓨터를 구성해야 합니다.  
+ 기본적으로 별도의 공유 메모리는 전역 성능 카운터 메모리 크기의 1/4로 설정됩니다. 기본 전역 성능 카운터 메모리는 524,288바이트입니다. 따라서 세 개의 WCF 성능 카운터 범주는 각각 약 128KB의 기본 크기를 갖습니다. 컴퓨터에서 WCF 응용 프로그램의 런타임 특성에 따라, 성능 카운터 메모리가 부족할 수 있습니다. 이 경우 WCF 응용 프로그램 이벤트 로그에 오류를 기록 합니다. 오류 내용에는 성능 카운터가 로드되지 않았다는 설명이 표시되며, "System.InvalidOperationException: 사용자 지정 카운터 파일 뷰 메모리가 부족합니다."라는 예외가 항목에 포함됩니다. 오류 수준에서 추적 기능을 사용하도록 설정하면 이 오류도 추적됩니다. 성능 카운터 메모리가 부족 한 상태를 계속 사용 하도록 설정 하는 성능 카운터와 WCF 응용 프로그램을 실행 성능이 저하 될 수 있습니다. 컴퓨터 관리자는 언제든지 최대 성능 카운터 수를 지원하는 데 충분한 메모리를 할당하도록 컴퓨터를 구성해야 합니다.  
   
- 레지스트리에서 [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 범주에 대한 성능 카운터 메모리 양을 변경할 수 있습니다. 그렇게 하려면 다음 세 위치에 `FileMappingSize`라는 새로운 DWORD 값을 추가하여 원하는 값(바이트)으로 설정해야 합니다. 컴퓨터를 다시 부팅하여 변경 내용을 적용합니다.  
+ 레지스트리에서 WCF 범주에 대 한 성능 카운터 메모리 양을 변경할 수 있습니다. 그렇게 하려면 다음 세 위치에 `FileMappingSize`라는 새로운 DWORD 값을 추가하여 원하는 값(바이트)으로 설정해야 합니다. 컴퓨터를 다시 부팅하여 변경 내용을 적용합니다.  
   
 -   HKLM\System\CurrentControlSet\Services\ServiceModelEndpoint 4.0.0.0\Performance  
   
@@ -123,7 +123,7 @@ ServiceName@ServiceBaseAddress
 >  계약에 중복 작업 이름이 있는 경우 두 작업에 대해 카운터 인스턴스를 하나만 가져옵니다.  
   
 ## <a name="programming-the-wcf-performance-counters"></a>WCF 성능 카운터 프로그래밍  
- [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 성능 카운터를 프로그래밍 방식으로 액세스할 수 있도록 SDK 설치 폴더에 여러 파일이 설치됩니다. 설치되는 파일은 다음과 같습니다.  
+ WCF 성능 카운터를 프로그래밍 방식으로 액세스할 수 있도록 SDK 설치 폴더에 여러 파일이 설치 됩니다. 설치되는 파일은 다음과 같습니다.  
   
 -   _ServiceModelEndpointPerfCounters.vrg  
   

@@ -5,11 +5,11 @@ helpviewer_keywords:
 - WCF [WCF], what's new
 - Windows Communication Foundation [WCF], what's new
 ms.assetid: 7e93fe73-af93-46b5-9f63-32f761ee40cf
-ms.openlocfilehash: 1d4ac2fe884a3c6696dc70ea2de9967a23fc6605
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 910da1073f0dc787be26d2c87b5bf49b4115aaef
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="what39s-new-in-windows-communication-foundation-45"></a>어떤&#39;Windows Communication Foundation 4.5의 새로운 s
 이 항목에서는 Windows Communication Foundation (WCF)에 새로 추가 된 기능에 설명 합니다.  
@@ -73,7 +73,7 @@ ms.lasthandoff: 05/04/2018
  WCF 서비스의 기존 및 새 개발자들이 서비스를 구성하는 데 도움이 되도록 이제 Visual Studio XML 편집기에서 서비스 구성 파일에 포함된 모든 구성 요소 및 해당 속성에 대한 도구 설명을 제공합니다.  
   
 ## <a name="configuring-wcf-services-in-code"></a>코드로 WCF 서비스 구성  
- Windows Communication Foundation (WCF) 구성 파일 또는 코드를 사용 하 여 서비스를 구성 하는 개발자를 있습니다.  구성 파일은 배포 후 서비스를 구성해야 하는 경우에 유용합니다. 구성 파일을 사용할 경우 IT 전문가가 구성 파일을 업데이트하기만 하면 되고 다시 컴파일할 필요가 없습니다. 하지만 구성 파일은 관리하기가 복잡하고 어려울 수 있습니다. 구성 파일 디버깅은 지원되지 않으며 구성 요소는 이름으로 참조되므로 구성 파일을 작성하기가 어렵고 오류가 발생하기 쉽습니다. [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]에서는 서비스를 코드로 구성할 수도 있습니다. 이전 버전 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)](4.0 이하)의 경우 자체 호스팅 시나리오에서 코드로 서비스를 구성하기가 쉬웠으며 <xref:System.ServiceModel.ServiceHost> 클래스를 사용하여 ServiceHost.Open을 호출하기 전에 끝점 및 동작을 구성할 수 있었습니다. 그러나 웹 호스팅 시나리오에서는 <xref:System.ServiceModel.ServiceHost> 클래스에 액세스할 수 없습니다. 웹 호스팅 서비스를 구성하려면 `System.ServiceModel.ServiceHostFactory`를 만들고 필요한 구성을 수행하는 <xref:System.ServiceModel.Activation.ServiceHostFactory>를 만들어야 했습니다. .NET 4.5부터 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]는 자체 호스팅 서비스와 웹 호스팅 서비스를 모두 코드로 구성할 수 있는 더욱 손쉬운 방법을 제공합니다. 자세한 내용은 참조 [코드에서 WCF 서비스 구성](../../../docs/framework/wcf/configuring-wcf-services-in-code.md)합니다.  
+ Windows Communication Foundation (WCF) 구성 파일 또는 코드를 사용 하 여 서비스를 구성 하는 개발자를 있습니다.  구성 파일은 배포 후 서비스를 구성해야 하는 경우에 유용합니다. 구성 파일을 사용할 경우 IT 전문가가 구성 파일을 업데이트하기만 하면 되고 다시 컴파일할 필요가 없습니다. 하지만 구성 파일은 관리하기가 복잡하고 어려울 수 있습니다. 구성 파일 디버깅은 지원되지 않으며 구성 요소는 이름으로 참조되므로 구성 파일을 작성하기가 어렵고 오류가 발생하기 쉽습니다. WCF를 사용 하면 코드에서 서비스를 구성할 수 있습니다. 이전 버전의 코드에서 WCF (4.0 및 이전 버전) 서비스를 구성에서 자체 호스팅된 시나리오에서 쉬 웠는 <xref:System.ServiceModel.ServiceHost> 클래스 끝점 및 사용 하 여 ServiceHost.Open을 호출 하기 전에 동작을 구성할 수 있었습니다. 그러나 웹 호스팅 시나리오에서는 <xref:System.ServiceModel.ServiceHost> 클래스에 액세스할 수 없습니다. 웹 호스팅 서비스를 구성하려면 `System.ServiceModel.ServiceHostFactory`를 만들고 필요한 구성을 수행하는 <xref:System.ServiceModel.Activation.ServiceHostFactory>를 만들어야 했습니다. .NET 4.5 부터는 WCF 있는 더욱 손쉬운 방법을 구성 하는 자체 호스팅 및 웹 호스팅 서비스 코드를 제공 합니다. 자세한 내용은 참조 [코드에서 WCF 서비스 구성](../../../docs/framework/wcf/configuring-wcf-services-in-code.md)합니다.  
   
 ## <a name="channelfactory-caching"></a>ChannelFactory 캐싱  
  WCF 클라이언트 응용 프로그램에서는 <xref:System.ServiceModel.ChannelFactory%601> 클래스를 사용하여 WCF 서비스와의 통신 채널을 만듭니다.  <xref:System.ServiceModel.ChannelFactory%601> 인스턴스를 만들 때는 다음 작업이 필요하기 때문에 약간의 오버헤드가 발생합니다.  
@@ -107,7 +107,7 @@ ms.lasthandoff: 05/04/2018
  프로젝트에 정의된 사용자 지정 특성의 경우 이제 구성 파일의 특성 값에서 intellisense를 지원하므로 구성 작업을 쉽고 빠르고 정확하게 수행할 수 있습니다.  
   
 ## <a name="configuration-tooltips"></a>구성 도구 설명  
- 이제 XML 편집기에서 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 요소 및 특성에 도구 설명이 표시되므로 요소 또는 특성의 용도를 더 쉽고 정확하게 식별할 수 있습니다.  
+ WCF 요소와 특성 이제 보다 쉽게 XML 편집기, 도구 설명 해야 하 고 요소 또는 특성의 용도 정확 하 게 식별 합니다.  
   
 ## <a name="paste-data-as-classes"></a>데이터를 클래스로 붙여넣기  
  WCF 프로젝트에서는 XML에 정의된 데이터 형식(서비스에 노출된 형식 등)을 코드 페이지에 직접 붙여넣을 수 있습니다. XML 형식은 CLR 형식으로 붙여 넣게 됩니다. 참조 [XML에서 데이터 형식 클래스 생성](../../../docs/framework/wcf/generating-data-type-classes-from-xml.md) 내용을 확인 합니다.  

@@ -2,14 +2,14 @@
 title: 작업 포맷터와 작업 선택기
 ms.date: 03/30/2017
 ms.assetid: 1c27e9fe-11f8-4377-8140-828207b98a0e
-ms.openlocfilehash: 469b7f2c99652cb6fceb2e8f12f1c74f0140b5ec
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: db548e99c99ba6f29cc1c6e998d0e7485cd41046
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="operation-formatter-and-operation-selector"></a>작업 포맷터와 작업 선택기
-이 샘플에과 다른 형식의 메시지 데이터를 허용 하도록 Windows Communication Foundation (WCF) 확장 지점을 사용할 수 있는 방법을 보여 줍니다. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 필요 합니다. 기본적으로 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 포맷터 예상 아래에 포함 시킬 메서드 매개 변수는 `soap:body` 요소입니다. 이 샘플에서는 대신 HTTP GET 쿼리 문자열의 매개 변수 데이터를 구문 분석하고 이 데이터를 사용하여 메서드를 호출하는 사용자 지정 작업 포맷터를 구현하는 방법을 보여 줍니다.  
+이 샘플에서는 WCF이 기대에서 다른 형식의 메시지 데이터를 허용 하도록 Windows Communication Foundation (WCF) 확장 지점을 사용할 수 있는 방법을 보여 줍니다. 기본적으로 WCF 포맷터 예상 아래에 포함 시킬 메서드 매개 변수는 `soap:body` 요소입니다. 이 샘플에서는 대신 HTTP GET 쿼리 문자열의 매개 변수 데이터를 구문 분석하고 이 데이터를 사용하여 메서드를 호출하는 사용자 지정 작업 포맷터를 구현하는 방법을 보여 줍니다.  
   
  샘플 기반는 [시작](../../../../docs/framework/wcf/samples/getting-started-sample.md)를 구현 하는 `ICalculator` 서비스 계약입니다. 이 샘플에서는 클라이언트에서 서버로 보내는 요청에 대해 HTTP GET를 사용하고 서버에서 클라이언트로 보내는 응답에 대해 POX 메시지가 포함된 HTTP POST를 사용하도록 Add, Subtract, Multiply 및 Divide 메시지를 변경하는 방법을 보여 줍니다.  
   
@@ -29,7 +29,7 @@ ms.lasthandoff: 05/04/2018
 >  이 샘플의 설치 절차 및 빌드 지침은 이 항목의 끝부분에 나와 있습니다.  
   
 ## <a name="key-concepts"></a>주요 개념  
- `QueryStringFormatter` - 작업 포맷터는 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]의 구성 요소로서 메시지를 매개 변수 개체의 배열로 변환하고 매개 변수 개체의 배열을 메시지로 변환합니다. 이 작업은 클라이언트에서는 <xref:System.ServiceModel.Dispatcher.IClientMessageFormatter> 인터페이스를 사용하고 서버에서는 <xref:System.ServiceModel.Dispatcher.IDispatchMessageFormatter> 인터페이스를 사용하여 수행됩니다. 사용자는 이러한 인터페이스를 사용하여 `Serialize` 및 `Deserialize` 메서드에서 요청 및 응답 메시지를 가져올 수 있습니다.  
+ `QueryStringFormatter` -작업 포맷터는 매개 변수 개체의 배열 및 메시지에 대 한 매개 변수 개체의 배열에는 메시지를 변환 하는 일을 담당 하는 WCF에서 구성 요소입니다. 이 작업은 클라이언트에서는 <xref:System.ServiceModel.Dispatcher.IClientMessageFormatter> 인터페이스를 사용하고 서버에서는 <xref:System.ServiceModel.Dispatcher.IDispatchMessageFormatter> 인터페이스를 사용하여 수행됩니다. 사용자는 이러한 인터페이스를 사용하여 `Serialize` 및 `Deserialize` 메서드에서 요청 및 응답 메시지를 가져올 수 있습니다.  
   
  이 샘플에서 `QueryStringFormatter`는 이 두 가지 인터페이스를 모두 구현하며, 클라이언트와 서버에서 구현됩니다.  
   
@@ -59,10 +59,10 @@ ms.lasthandoff: 05/04/2018
   
  <xref:System.ServiceModel.Dispatcher.DispatchRuntime.OperationSelector%2A>는 <xref:System.ServiceModel.Dispatcher.IDispatchOperationSelector> 구현으로 설정됩니다.  
   
- 기본적으로 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서는 정확히 일치하는 주소 필터를 사용합니다. 들어오는 메시지의 URI는 작업 이름 접미사와, 그 뒤에 매개 변수 데이터가 포함된 쿼리 문자열로 구성되므로 끝점 동작은 주소 필터를 접미사 일치 필터가 되도록 변경합니다. 사용 하 여는 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] <xref:System.ServiceModel.Dispatcher.PrefixEndpointAddressMessageFilter> 이 목적을 위해 합니다.  
+ 기본적으로 WCF는 정확히 일치 주소 필터를 사용합니다. 들어오는 메시지의 URI는 작업 이름 접미사와, 그 뒤에 매개 변수 데이터가 포함된 쿼리 문자열로 구성되므로 끝점 동작은 주소 필터를 접미사 일치 필터가 되도록 변경합니다. WCF를 사용 하 여<xref:System.ServiceModel.Dispatcher.PrefixEndpointAddressMessageFilter> 이 목적을 위해 합니다.  
   
 ### <a name="installing-operation-formatters"></a>작업 포맷터 설치  
- 포맷터를 지정하는 작업 동작은 고유합니다. 이러한 동작은 모든 작업이 필요한 작업 포맷터를 만들 수 있도록 항상 기본적으로 구현됩니다. 그러나 이러한 동작은 단지 다른 작업 동작과 유사하게 보이며 다른 특성으로도 식별할 수 없습니다. 대체 동작을 설치하기 위해 구현에서는 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 형식 로더에 의해 기본적으로 설치되는 특정 포맷터 동작을 찾아서 이를 대체하거나, 기본 동작 이후에 실행될 호환 동작을 추가해야 합니다.  
+ 포맷터를 지정하는 작업 동작은 고유합니다. 이러한 동작은 모든 작업이 필요한 작업 포맷터를 만들 수 있도록 항상 기본적으로 구현됩니다. 그러나 이러한 동작은 단지 다른 작업 동작과 유사하게 보이며 다른 특성으로도 식별할 수 없습니다. 구현에서는 대체 동작을 설치 하려면 교체 하거나 및 기본적으로 WCF 형식 로더에 의해 설치 되는 특정 포맷터 동작을 찾습니다 하거나, 기본 동작 이후에 실행 될 호환 동작을 추가 해야 합니다.  
   
  이러한 작업 포맷터 동작은 <xref:System.ServiceModel.Channels.CommunicationObject.Open%2A?displayProperty=nameWithType>을 호출하기 전에 프로그래밍 방식으로 설치하거나, 기본 동작 이후에 실행되는 작업 동작을 지정하여 설치할 수 있습니다. 그러나 동작 모델에서는 동작이 다른 동작을 대체하거나 설명 트리를 수정하는 것을 허용하지 않기 때문에 이러한 작업 포맷터 동작을 끝점 동작이나 구성을 통해 쉽게 설치할 수 없습니다.  
   

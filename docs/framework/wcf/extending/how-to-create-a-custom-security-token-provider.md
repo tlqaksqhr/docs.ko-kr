@@ -9,11 +9,11 @@ helpviewer_keywords:
 ms.assetid: db8cb478-aa43-478b-bf97-c6489ad7c7fd
 author: BrucePerlerMS
 manager: mbaldwin
-ms.openlocfilehash: 480b968a15193bccb84ba491347dbba69e16fb52
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 16bdbf3aa2403a3af603b24df90391d36660dbd4
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="how-to-create-a-custom-security-token-provider"></a>방법: 사용자 지정 보안 토큰 공급자 만들기
 이 항목에서는 사용자 지정 보안 토큰 공급자를 사용하여 새 토큰 형식을 만드는 방법과 공급자를 사용자 지정 보안 토큰 관리자와 통합하는 방법에 대해 설명합니다.  
@@ -42,7 +42,7 @@ ms.lasthandoff: 05/04/2018
   
 2.  아직 재정의되지 않은 경우 <xref:System.IdentityModel.Selectors.SecurityTokenManager.CreateSecurityTokenProvider%28System.IdentityModel.Selectors.SecurityTokenRequirement%29> 메서드를 재정의합니다.  
   
-     <xref:System.IdentityModel.Selectors.SecurityTokenManager.CreateSecurityTokenProvider%28System.IdentityModel.Selectors.SecurityTokenRequirement%29> 메서드는 <xref:System.IdentityModel.Selectors.SecurityTokenProvider> 보안 프레임워크에서 메서드로 전달한 <xref:System.IdentityModel.Selectors.SecurityTokenRequirement> 매개 변수에 적합한 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 클래스의 인스턴스를 반환합니다. 적절한 보안 토큰 매개 변수를 사용하여 메서드를 호출할 때 이전 절차에서 만든 사용자 지정 보안 토큰 공급자 구현을 반환하도록 메서드를 수정합니다. 보안 토큰 관리자에 대 한 자세한 내용은 참조는 [연습: 사용자 지정 클라이언트 만들기와 서비스 자격 증명](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md)합니다.  
+     <xref:System.IdentityModel.Selectors.SecurityTokenManager.CreateSecurityTokenProvider%28System.IdentityModel.Selectors.SecurityTokenRequirement%29> 메서드는 인스턴스를 반환 하는 데는 <xref:System.IdentityModel.Selectors.SecurityTokenProvider> 에 적절 한 클래스는 <xref:System.IdentityModel.Selectors.SecurityTokenRequirement> WCF 보안 프레임 워크에서 매개 변수가 메서드에 전달 합니다. 적절한 보안 토큰 매개 변수를 사용하여 메서드를 호출할 때 이전 절차에서 만든 사용자 지정 보안 토큰 공급자 구현을 반환하도록 메서드를 수정합니다. 보안 토큰 관리자에 대 한 자세한 내용은 참조는 [연습: 사용자 지정 클라이언트 만들기와 서비스 자격 증명](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md)합니다.  
   
 3.  메서드에 논리를 추가하여 <xref:System.IdentityModel.Selectors.SecurityTokenRequirement> 매개 변수를 기반으로 사용자 지정 보안 토큰 공급자를 반환할 수 있도록 합니다. 다음 예제에서는 토큰 요구 사항에 맞을 경우 사용자 지정 보안 토큰 공급자를 반환합니다. 요구 사항에는 X.509 보안 토큰 및 토큰이 메시지 출력에 사용되는 메시지 방향이 포함됩니다. 다른 모든 경우에서 코드는 기본 클래스를 호출하여 다른 보안 토큰 요구 사항에 대한 시스템 제공 동작을 유지 관리합니다.  
   

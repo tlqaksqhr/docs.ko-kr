@@ -2,11 +2,11 @@
 title: WSStreamedHttpBinding
 ms.date: 03/30/2017
 ms.assetid: 97ce4d3d-ca6f-45fa-b33b-2429bb84e65b
-ms.openlocfilehash: f146e469a323dffa2cdb9b76b6956be97747b2de
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: b0a4c316957a002f7541d230f96299e3f43ef778
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="wsstreamedhttpbinding"></a>WSStreamedHttpBinding
 이 샘플에서는 HTTP 전송이 사용될 때 스트리밍 시나리오를 지원하도록 디자인된 바인딩을 만드는 방법을 보여 줍니다.  
@@ -51,7 +51,7 @@ ms.lasthandoff: 05/04/2018
   
 2.  구성 지원 추가  
   
-     구성을 통해 전송을 노출하기 위해 샘플에서는 두 개의 추가 클래스인 `WSStreamedHttpBindingConfigurationElement` 및 `WSStreamedHttpBindingSection`을 구현합니다. `WSStreamedHttpBindingSection` 클래스는 <xref:System.ServiceModel.Configuration.StandardBindingCollectionElement%602> 구성 시스템에 `WSStreamedHttpBinding`을 노출하는 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]입니다. 대량의 구현은 `WSStreamedHttpBindingConfigurationElement`에서 파생되는 <xref:System.ServiceModel.Configuration.StandardBindingElement>에 위임됩니다. `WSStreamedHttpBindingConfigurationElement` 클래스에는 `WSStreamedHttpBinding`의 속성에 해당하는 속성과 각 구성 요소를 바인딩에 매핑하기 위한 함수가 있습니다.  
+     구성을 통해 전송을 노출하기 위해 샘플에서는 두 개의 추가 클래스인 `WSStreamedHttpBindingConfigurationElement` 및 `WSStreamedHttpBindingSection`을 구현합니다. 클래스 `WSStreamedHttpBindingSection` 는 <xref:System.ServiceModel.Configuration.StandardBindingCollectionElement%602> 노출 하 `WSStreamedHttpBinding` WCF 구성 시스템에 있습니다. 대량의 구현은 `WSStreamedHttpBindingConfigurationElement`에서 파생되는 <xref:System.ServiceModel.Configuration.StandardBindingElement>에 위임됩니다. `WSStreamedHttpBindingConfigurationElement` 클래스에는 `WSStreamedHttpBinding`의 속성에 해당하는 속성과 각 구성 요소를 바인딩에 매핑하기 위한 함수가 있습니다.  
   
      서비스의 구성 파일에 다음 섹션을 추가하여 구성 시스템에 처리기를 등록합니다.  
   
@@ -133,7 +133,7 @@ public class StreamedEchoService : IStreamedEchoService
 ```  
   
 ## <a name="the-wsstreamedhttpbinding-sample-client"></a>WSStreamedHttpBinding 샘플 클라이언트  
- `WSStreamedHttpBinding`을 사용하여 상호 작용하는 데 사용되는 클라이언트는 클라이언트 하위 디렉터리에 있습니다. 보안 경고가 표시와 같은 HTTPS 주소 브라우저에 액세스 하려고 할 때이 샘플에 사용 된 인증서는 Makecert.exe를 사용 하 여 만든 테스트 인증서 이므로 https://localhost/servicemodelsamples/service.svc합니다. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 클라이언트에서 제공되는 테스트 인증서를 사용하여 작업을 수행할 수 있도록 클라이언트에 추가 코드를 추가하여 보안 경고가 나타나지 않게 합니다. 코드 및 함께 사용되는 클래스는 프로덕션 인증서를 사용할 때에는 필요가 없습니다.  
+ `WSStreamedHttpBinding`을 사용하여 상호 작용하는 데 사용되는 클라이언트는 클라이언트 하위 디렉터리에 있습니다. 보안 경고가 표시와 같은 HTTPS 주소 브라우저에 액세스 하려고 할 때이 샘플에 사용 된 인증서는 Makecert.exe를 사용 하 여 만든 테스트 인증서 이므로 https://localhost/servicemodelsamples/service.svc합니다. 에서 테스트 인증서를 사용 하도록 WCF 클라이언트를 허용 하려면 일부 추가 코드가 보안 경고가 표시 되지 않도록 클라이언트에 추가 되었습니다. 코드 및 함께 사용되는 클래스는 프로덕션 인증서를 사용할 때에는 필요가 없습니다.  
   
 ```  
 // WARNING: This code is only required for test certificates such as those created by makecert. It is   

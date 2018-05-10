@@ -2,11 +2,11 @@
 title: 'Custom Message Encoder: Custom Text Encoder'
 ms.date: 03/30/2017
 ms.assetid: 68ff5c74-3d33-4b44-bcae-e1d2f5dea0de
-ms.openlocfilehash: 975cfd44834ed31a5d723fdca0fe467cba63e68d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 369706ecdc2e37a5fb62a448a273b045fe424df8
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="custom-message-encoder-custom-text-encoder"></a>Custom Message Encoder: Custom Text Encoder
 이 샘플에는 Windows Communication Foundation (WCF)를 사용 하 여 사용자 지정 텍스트 메시지 인코더를 구현 하는 방법을 보여 줍니다.  
@@ -20,7 +20,7 @@ ms.lasthandoff: 05/04/2018
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\MessageEncoder\Text`  
   
- <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>의 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]는 UTF-8, UTF-16 및 Big Endian 유니코드 인코딩만 지원합니다. 이 샘플의 사용자 지정 텍스트 메시지 인코더는 상호 운용성에 필요할 수 있는 모든 플랫폼에서 지원하는 문자 인코딩을 지원합니다. 이 샘플은 클라이언트 콘솔 프로그램(.exe), IIS(인터넷 정보 서비스)에서 호스팅하는 서비스 라이브러리(.dll) 및 텍스트 메시지 인코더 라이브러리(.dll)로 구성됩니다. 이 서비스는 요청-회신 통신 패턴을 정의하는 계약을 구현합니다. 계약은 수학 연산(Add, Subtract, Multiply 및 Divide)을 노출시키는 `ICalculator` 인터페이스에 의해 정의됩니다. 클라이언트에서 지정된 수학 작업을 동기적으로 요청하면 서비스에서 결과로 회신합니다. 클라이언트와 서비스는 모두 기본 `CustomTextMessageEncoder` 대신 <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>를 사용합니다.  
+ <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement> WCF의 u t F-8, utf-16 및 Big Endean 유니코드 인코딩만 지원 합니다. 이 샘플의 사용자 지정 텍스트 메시지 인코더는 상호 운용성에 필요할 수 있는 모든 플랫폼에서 지원하는 문자 인코딩을 지원합니다. 이 샘플은 클라이언트 콘솔 프로그램(.exe), IIS(인터넷 정보 서비스)에서 호스팅하는 서비스 라이브러리(.dll) 및 텍스트 메시지 인코더 라이브러리(.dll)로 구성됩니다. 이 서비스는 요청-회신 통신 패턴을 정의하는 계약을 구현합니다. 계약은 수학 연산(Add, Subtract, Multiply 및 Divide)을 노출시키는 `ICalculator` 인터페이스에 의해 정의됩니다. 클라이언트에서 지정된 수학 작업을 동기적으로 요청하면 서비스에서 결과로 회신합니다. 클라이언트와 서비스는 모두 기본 `CustomTextMessageEncoder` 대신 <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>를 사용합니다.  
   
  사용자 지정 인코더 구현은 메시지 인코더 팩터리, 메시지 인코더, 메시지 인코딩 바인딩 요소 및 구성 처리기로 구성되며 다음 방법을 보여 줍니다.  
   
@@ -47,7 +47,7 @@ ms.lasthandoff: 05/04/2018
 4.  지침에 따라 단일 또는 다중 컴퓨터 구성에서 샘플을 실행 하려면 [Windows Communication Foundation 샘플 실행](../../../../docs/framework/wcf/samples/running-the-samples.md)합니다.  
   
 ## <a name="message-encoder-factory-and-the-message-encoder"></a>메시지 인코더 팩터리 및 메시지 인코더  
- <xref:System.ServiceModel.ServiceHost> 또는 클라이언트 채널이 열려 있으면 디자인 타임 구성 요소 `CustomTextMessageBindingElement`는 `CustomTextMessageEncoderFactory`를 만듭니다. 이 팩터리는 `CustomTextMessageEncoder`를 만듭니다. 메시지 인코더는 스트리밍 모드와 버퍼링 모드에서 모두 작동하며 <xref:System.Xml.XmlReader> 및 <xref:System.Xml.XmlWriter>를 사용하여 각각 메시지를 읽고 씁니다. UTF-8, UTF-16 및 Big-Endian 유니코드만 지원하도록 최적화된 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]의 XML 판독기 및 작성기와 달리 이러한 판독기와 작성기는 모든 플랫폼에서 지원하는 인코딩을 지원합니다.  
+ <xref:System.ServiceModel.ServiceHost> 또는 클라이언트 채널이 열려 있으면 디자인 타임 구성 요소 `CustomTextMessageBindingElement`는 `CustomTextMessageEncoderFactory`를 만듭니다. 이 팩터리는 `CustomTextMessageEncoder`를 만듭니다. 메시지 인코더는 스트리밍 모드와 버퍼링 모드에서 모두 작동하며 <xref:System.Xml.XmlReader> 및 <xref:System.Xml.XmlWriter>를 사용하여 각각 메시지를 읽고 씁니다. 최적화 된 XML 판독기 및 u t F-8, utf-16 및 Big Endean 유니코드를 지원 하는 WCF의 작성기 이러한 판독기와 작성기 모든 플랫폼에서 지 원하는 인코딩을 지원 합니다.  
   
  다음 코드 예제는 CustomTextMessageEncoder를 보여 줍니다.  
   
@@ -190,11 +190,11 @@ public class CustomTextMessageEncoderFactory : MessageEncoderFactory
 ```  
   
 ## <a name="message-encoding-binding-element"></a>메시지 인코딩 바인딩 요소  
- 바인딩 요소를 사용하면 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 런타임 스택을 구성할 수 있습니다. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 응용 프로그램에서 사용자 지정 메시지 인코더를 사용하려면 런타임 스택의 적절한 수준에서 적절한 설정으로 메시지 인코더 팩터리를 만드는 바인딩 요소가 필요합니다.  
+ 바인딩 요소에 WCF 런타임 스택 구성할 수 있도록 합니다. 바인딩 요소는 필수 사용자 지정 메시지 인코더에서 WCF 응용 프로그램을 사용 하려면 런타임 스택의 적절 한 수준에서 적절 한 설정으로 메시지 인코더 팩터리를 만드는 합니다.  
   
- `CustomTextMessageBindingElement`는 <xref:System.ServiceModel.Channels.BindingElement> 기본 클래스에서 파생되며 <xref:System.ServiceModel.Channels.MessageEncodingBindingElement> 클래스에서 상속됩니다. 따라서 다른 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 구성 요소가 이 바인딩 요소를 메시지 인코딩 바인딩 요소로 인식할 수 있습니다. <xref:System.ServiceModel.Channels.MessageEncodingBindingElement.CreateMessageEncoderFactory%2A>의 구현은 일치하는 메시지 인코더 팩터리의 인스턴스를 알맞은 설정과 함께 반환합니다.  
+ `CustomTextMessageBindingElement`는 <xref:System.ServiceModel.Channels.BindingElement> 기본 클래스에서 파생되며 <xref:System.ServiceModel.Channels.MessageEncodingBindingElement> 클래스에서 상속됩니다. 따라서 다른 WCF 구성 요소가 메시지 인코딩 바인딩 요소가이 바인딩 요소 인식할 수 있습니다. <xref:System.ServiceModel.Channels.MessageEncodingBindingElement.CreateMessageEncoderFactory%2A>의 구현은 일치하는 메시지 인코더 팩터리의 인스턴스를 알맞은 설정과 함께 반환합니다.  
   
- `CustomTextMessageBindingElement`는 속성을 통해 `MessageVersion`, `ContentType` 및 `Encoding`에 대한 설정을 노출합니다. 인코더는 Soap11Addressing 및 Soap12Addressing1 버전을 모두 지원하며 기본값은 Soap11Addressing1입니다. `ContentType`의 기본값은 "text/xml"입니다. `Encoding` 속성을 사용하면 원하는 문자 인코딩의 값을 설정할 수 있습니다. 이 샘플의 클라이언트 및 서비스는 <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>의 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서는 지원되지 않는 ISO-8859-1(Latin1) 문자 인코딩을 사용합니다.  
+ `CustomTextMessageBindingElement`는 속성을 통해 `MessageVersion`, `ContentType` 및 `Encoding`에 대한 설정을 노출합니다. 인코더는 Soap11Addressing 및 Soap12Addressing1 버전을 모두 지원하며 기본값은 Soap11Addressing1입니다. `ContentType`의 기본값은 "text/xml"입니다. `Encoding` 속성을 사용하면 원하는 문자 인코딩의 값을 설정할 수 있습니다. 샘플의 클라이언트 및 서비스가 사용 하 여 iso-8859-1 (Latin1) 문자 인코딩을에서 지원 되지 않습니다는 <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement> WCF의 합니다.  
   
  다음 코드는 사용자 지정 텍스트 메시지 인코더를 사용하여 프로그래밍 방식으로 바인딩을 만드는 방법을 보여 줍니다.  
   

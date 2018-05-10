@@ -2,11 +2,11 @@
 title: Using the WCF Moniker with COM Clients
 ms.date: 03/30/2017
 ms.assetid: e2799bfe-88bd-49d7-9d6d-ac16a9b16b04
-ms.openlocfilehash: 79040cd267d354d32b3e957dc70fcc65b09b0fc8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 6d47b9c655db932bb9a4243533fbd01bcf25e0df
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="using-the-wcf-moniker-with-com-clients"></a>Using the WCF Moniker with COM Clients
 이 샘플에는 웹 서비스 응용 프로그램 (Office VBA)에 대 한 Microsoft Office Visual Basic 또는 Visual Basic 6.0 등의 COM 기반 개발 환경에 통합 하는 Windows Communication Foundation (WCF) 서비스 모니커를 사용 하는 방법을 보여 줍니다. 이 샘플은 IIS(인터넷 정보 서비스)에서 호스트되는 Windows 스크립트 호스트 클라이언트(.vbs), 지원 클라이언트 라이브러리(.dll) 및 서비스 라이브러리(.dll)로 구성됩니다. 서비스는 계산기 서비스이고 COM 클라이언트는 서비스에서 수학 작업인 Add, Subtract, Multiply 및 Divide를 호출합니다. 클라이언트 동작이 메시지 상자 창에 표시됩니다.  
@@ -99,7 +99,7 @@ contractType={9213C6D2-5A6F-3D26-839B-3BA9B82228D3}")
 WScript.Echo "Typed service moniker: 100 + 15.99 = " & typedServiceMoniker.Add(100, 15.99)  
 ```  
   
- 샘플을 실행할 경우 작업 응답이 Windows 스크립트 호스트 메시지 상자 창에 표시됩니다. 이 응답은 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 서비스와 통신하기 위해 형식화된 모니커를 사용하여 COM 호출을 수행하는 COM 클라이언트를 보여 줍니다. 클라이언트 응용 프로그램에서 COM이 사용되지만 서비스와의 통신은 웹 서비스 호출로만 구성됩니다.  
+ 샘플을 실행할 경우 작업 응답이 Windows 스크립트 호스트 메시지 상자 창에 표시됩니다. 이 형식화 된 모니커를 사용 하 여 WCF 서비스와 통신 하는 COM 호출을 수행 하는 COM 클라이언트를 보여 줍니다. 클라이언트 응용 프로그램에서 COM이 사용되지만 서비스와의 통신은 웹 서비스 호출로만 구성됩니다.  
   
 ## <a name="wsdl-contract"></a>WSDL 계약  
  WSDL 계약과 함께 모니커를 사용하려면 클라이언트 라이브러리 등록이 필요하지 않지만 브라우저를 사용하여 서비스의 WSDL 끝점에 액세스하는 것처럼 out-of-band 메커니즘을 통해 서비스에 대한 WSDL 계약을 검색해야 합니다. 그런 다음 모니커는 실행 시에 해당 계약에 액세스할 수 있습니다.  
@@ -135,7 +135,7 @@ Set wsdlServiceMoniker = GetObject(wsdlMonikerString)
 -   계약의 이름 및 네임스페이스. WSDL에 둘 이상의 계약이 포함될 수도 있으므로 이 식별 정보가 필요합니다.  
   
     > [!NOTE]
-    >  기본적으로 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 서비스는 사용되는 각 네임스페이스에 대해 별개의 WSDL 파일을 생성합니다. 이러한 파일은 WSDL 가져오기 구문 사용과 연결됩니다. 모니커에 단일 WSDL 정의가 필요하므로 이 샘플에 표시된 것처럼 단일 네임스페이스가 서비스에 사용되거나 별개의 파일을 수동으로 병합해야 합니다.  
+    >  WCF 서비스를 기본적으로 각 네임 스페이스에 대 한 별도 WSDL 파일을 생성 하는 사용 합니다. 이러한 파일은 WSDL 가져오기 구문 사용과 연결됩니다. 모니커에 단일 WSDL 정의가 필요하므로 이 샘플에 표시된 것처럼 단일 네임스페이스가 서비스에 사용되거나 별개의 파일을 수동으로 병합해야 합니다.  
   
  서비스 모니커를 사용하여 프록시 인스턴스를 생성한 후 클라이언트 응용 프로그램은 프록시에서 메서드를 호출할 수 있습니다. 이렇게 하면 결과적으로 서비스 모니커 인프라에서 해당 서비스 작업을 호출하게 됩니다.  
   
@@ -144,7 +144,7 @@ Set wsdlServiceMoniker = GetObject(wsdlMonikerString)
 WScript.Echo "WSDL service moniker: 145 - 76.54 = " & wsdlServiceMoniker.Subtract(145, 76.54)  
 ```  
   
- 샘플을 실행할 경우 작업 응답이 Windows 스크립트 호스트 메시지 상자 창에 표시됩니다. 이 응답은 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 서비스와 통신하기 위해 WSDL 계약과 함께 모니커를 사용하여 COM 호출을 수행하는 COM 클라이언트를 보여 줍니다.  
+ 샘플을 실행할 경우 작업 응답이 Windows 스크립트 호스트 메시지 상자 창에 표시됩니다. 이 WSDL 계약과 함께 모니커를 사용 하 여 WCF 서비스와 통신 하는 COM 호출을 수행 하는 COM 클라이언트를 보여 줍니다.  
   
 ## <a name="metadata-exchange-contract"></a>메타데이터 교환 계약  
  MEX 계약과 함께 모니커를 사용하려면 WSDL 계약과 마찬가지로 클라이언트 등록이 필요하지 않습니다. 서비스에 대한 계약은 메타데이터 교환의 내부 사용을 통해 실행 시에 검색됩니다.  
@@ -179,7 +179,7 @@ Set mexServiceMoniker = GetObject(mexMonikerString)
 WScript.Echo "MEX service moniker: 9 * 81.25 = " & mexServiceMoniker.Multiply(9, 81.25)  
 ```  
   
- 샘플을 실행할 경우 작업 응답이 Windows 스크립트 호스트 메시지 상자 창에 표시됩니다. 이 응답은 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 서비스와 통신하기 위해 MEX 계약과 함께 모니커를 사용하여 COM 호출을 수행하는 COM 클라이언트를 보여 줍니다.  
+ 샘플을 실행할 경우 작업 응답이 Windows 스크립트 호스트 메시지 상자 창에 표시됩니다. 이 MEX 계약과 함께 모니커를 사용 하 여 WCF 서비스와 통신 하는 COM 호출을 수행 하는 COM 클라이언트를 보여 줍니다.  
   
 #### <a name="to-set-up-and-build-the-sample"></a>샘플을 설치하고 빌드하려면  
   

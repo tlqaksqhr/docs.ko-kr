@@ -2,11 +2,11 @@
 title: 사용자 코드 추적 내보내기
 ms.date: 03/30/2017
 ms.assetid: fa54186a-8ffa-4332-b0e7-63867126fd49
-ms.openlocfilehash: 120827bff85d4bc347274cad1370d291caba1c3d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 18b424139f4c1656193f80cf76c704af2b2887e3
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="emitting-user-code-traces"></a>사용자 코드 추적 내보내기
 Windows Communication Foundation (WCF)에서 생성 된 계측 데이터를 수집 하는 구성에서 추적을 사용 하도록 설정 하는 것 외에도 사용자 코드에서 프로그래밍 방식으로 추적을 살펴보세요를 내보낼 수 있습니다. 이런 방식으로 계측 데이터를 사전에 작성하여 나중에 진단을 위해 확인할 수 있습니다. 이 항목에서는 이 작업을 수행하는 방법에 대해 설명합니다.  
@@ -65,9 +65,9 @@ Trace.CorrelationManager.ActivityId = oldID;
  클라이언트와 서비스 구성 파일 모두에서 `propagateActivity` 추적 소스에 대해 `true` 특성을 `System.ServiceModel`로 설정하면 클라이언트에 정의된 것과 동일한 동작에서 추가 요청에 대한 서비스 처리가 발생합니다. 서비스에서 자체 동작과 전송을 정의하는 경우 클라이언트가 전파한 동작에는 서비스 추적이 표시되지 않습니다. 대신 클라이언트가 해당 ID를 전파한 동작의 Transfer 추적에 의해 연결된 동작에 서비스 추적이 표시됩니다.  
   
 > [!NOTE]
->  클라이언트와 서비스 모두에서 `propagateActivity` 특성이 `true`로 설정되어 있는 경우 서비스 작업 범위 내의 앰비언트 동작이 [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)]에 의해 설정됩니다.  
+>  경우는 `propagateActivity` 특성이로 설정 된 `true` 클라이언트와 서비스를 서비스의 작업 범위 내의 앰비언트 동작이 WCF로 설정 됩니다.  
   
- 다음 코드를 사용하여 [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)]에 의해 범위 내의 동작이 설정되었는지 여부를 확인할 수 있습니다.  
+ WCF에 의해 활동 범위 내에 설정 되어 있는지 확인 하려면 다음 코드를 사용할 수 있습니다.  
   
 ```  
 // Check if an activity was set in scope by WCF, if it was   
@@ -135,7 +135,7 @@ ts.TraceEvent(TraceEventType.Warning, 0, "Throwing exception " + "exceptionMessa
  ![Trace Viewer를 사용 하 여 사용자를 내보내는 데&#45;추적 코드](../../../../../docs/framework/wcf/diagnostics/tracing/media/e2etrace3.gif "e2eTrace3")  
 오류 상관 관계 그래프 보기  
   
- 이전 추적을 가져오려면 사용자 추적 소스에 대해 `ActivityTracing`을 설정하고 `propagateActivity=true` 추적 소스에 대해 `System.ServiceModel`로 설정합니다. 사용자 코드 동작 전파에 사용자 코드를 활성화하기 위해 `ActivityTracing` 추적 소스에 대해서는 `System.ServiceModel`을 설정하지 않았습니다. ServiceModel 동작 추적이 설정되어 있으면 클라이언트에 정의된 동작 ID가 서비스 사용자 코드에 끝까지 전파되지 않지만, 전송은 클라이언트 및 서비스 사용자 코드 동작을 중간 [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 동작에 연결합니다.  
+ 이전 추적을 가져오려면 사용자 추적 소스에 대해 `ActivityTracing`을 설정하고 `propagateActivity=true` 추적 소스에 대해 `System.ServiceModel`로 설정합니다. 사용자 코드 동작 전파에 사용자 코드를 활성화하기 위해 `ActivityTracing` 추적 소스에 대해서는 `System.ServiceModel`을 설정하지 않았습니다. (ServiceModel 동작 추적에 있으면 클라이언트에 정의 된 동작 ID 전파 되지 않습니다는 서비스 사용자 코드를 하지만 전송 연결 중간 하 여 WCF 클라이언트 및 서비스 사용자 코드 동작 합니다.)  
   
  동작을 정의하고 동작 ID를 전파하면 끝점을 통해 오류 상관 관계를 직접 수행할 수 있습니다. 그러면 오류에 대한 근본 원인을 신속하게 찾을 수 있습니다.  
   

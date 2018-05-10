@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Transactions
 ms.assetid: f8eecbcf-990a-4dbb-b29b-c3f9e3b396bd
-ms.openlocfilehash: 699ba3efad0c8b98aacfc4b64f2fdf03270478b0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: bf78b679be84efa416d088d5addaaa25a593abf4
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="ws-transaction-flow"></a>WS Transaction Flow
 이 샘플에서는 클라이언트에서 조정하는 트랜잭션의 사용법과 WS-Atomic Transaction 또는 OleTransactions 프로토콜을 사용하는 트랜잭션 흐름의 클라이언트 및 서버 옵션을 보여 줍니다. 이 샘플에 따라는 [시작](../../../../docs/framework/wcf/samples/getting-started-sample.md) 계산기 서비스를 구현 하는 작업의 사용을 보여 주기 위해 특성을 사용 하지만 `TransactionFlowAttribute` 와 **TransactionFlowOption** 어떤 수준 트랜잭션 흐름이 활성화 된 결정 하는 열거형입니다. 흐름이 지정된 트랜잭션의 범위 내에서는 요청한 작업에 대한 로그가 데이터베이스에 기록되고 클라이언트에서 조정하는 트랜잭션이 완료될 때까지 유지됩니다. 클라이언트 트랜잭션이 완료되지 않으면 웹 서비스 트랜잭션에서 데이터베이스에 적합한 업데이트가 커밋되지 않도록 합니다.  
@@ -231,7 +231,7 @@ Press <ENTER> to terminate the service.
     > [!NOTE]
     >  다중 컴퓨터 구성의 경우 아래의 지침을 사용하여 DTC(Distributed Transaction Coordinator)를 사용하도록 설정하고 Windows SDK에서 WsatConfig.exe 도구를 사용하여 WCF 트랜잭션 네트워크 지원을 사용하도록 설정합니다. 참조 [Ws-atomic Transaction 지원 구성](http://go.microsoft.com/fwlink/?LinkId=190370) WsatConfig.exe 설정에 대 한 내용은 합니다.  
   
- 한 컴퓨터에서 샘플을 실행하는지 아니면 여러 컴퓨터에서 샘플을 실행하는지 여부에 관계없이 네트워크 트랜잭션 흐름을 활성화하도록 MSDTC(Microsoft Distributed Transaction Coordinator)를 구성하고 WsatConfig.exe 도구를 사용하여 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 트랜잭션 네트워크 지원을 사용하도록 설정해야 합니다.  
+ 동일한 컴퓨터 또는 서로 다른 컴퓨터에서 샘플을 실행 하는지 여부를는 Microsoft MSDTC Distributed Transaction Coordinator ()를 네트워크 트랜잭션 흐름을 사용 하 고 WsatConfig.exe 도구를 사용 하 여 WCF 트랜잭션 네트워크 지원을 사용 하도록 구성 해야 합니다.  
   
 ### <a name="to-configure-the-microsoft-distributed-transaction-coordinator-msdtc-to-support-running-the-sample"></a>샘플을 실행할 수 있도록 MSDTC(Microsoft Distributed Transaction Coordinator)를 구성하려면  
   

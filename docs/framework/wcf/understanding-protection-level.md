@@ -8,11 +8,11 @@ helpviewer_keywords:
 - WCF, security
 - ProtectionLevel property
 ms.assetid: 0c034608-a1ac-4007-8287-b1382eaa8bf2
-ms.openlocfilehash: 0f17d6e787a48edd562559f52ac015edf7bc702c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 157e660a8b4d3866b9ab1994c409f82f16ac8359
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="understanding-protection-level"></a>보호 수준 이해
 `ProtectionLevel` 및 <xref:System.ServiceModel.ServiceContractAttribute> 클래스와 같은 여러 클래스에서 볼 수 있는 <xref:System.ServiceModel.OperationContractAttribute> 속성은 메시지의 전체나 일부를 보호하는 방법을 제어합니다. 이 항목에서는 Windows Communication Foundation (WCF) 기능과 작동 방법에 대해 설명 합니다.  
@@ -39,7 +39,7 @@ ms.lasthandoff: 05/04/2018
   
 -   `ProtectionLevel` 은 개발자가 설정할 수 있는 방법을 *최소 수준* 바인딩을 따라야 하 합니다. 서비스가 배포되면 구성에 지정된 실제 바인딩은 최소 수준을 지원하거나 지원하지 않을 수 있습니다. 예를 들어 <xref:System.ServiceModel.BasicHttpBinding> 클래스는 보안을 활성화할 수 있더라도 기본적으로 보안을 제공하지 않습니다. 따라서 `None` 이외의 값으로 설정된 계약에 이 클래스를 사용하면 예외가 throw됩니다.  
   
--   서비스에서 모든 메시지에 대한 최소 `ProtectionLevel`로 `Sign`을 요구할 경우, 주로 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 기술 이외의 기술로 만들어지는 클라이언트에서는 요구된 최소 보안 수준 이상으로 모든 메시지를 암호화하고 서명할 수 있습니다. 이 경우, [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]에서는 클라이언트가 최소 수준 이상의 작업을 수행하기 때문에 예외를 throw하지 않습니다. 하지만 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 응용 프로그램(서비스 또는 클라이언트)에서는 가능하면 메시지 부분을 과보호하지 않지만 최소 수준은 따릅니다. 또한 `Transport`를 보안 모드로 사용하면, 전송에서 메시지 스트림을 과보호할 수 있는데, 이는 보다 세부적인 수준으로 보호하는 것이 기본적으로 불가능하기 때문입니다.  
+-   서비스에 필요한 경우 최소 `ProtectionLevel` 모든 메시지에 대 한 `Sign`합니다 (만든 경우 등 비 WCF 기술) 클라이언트 암호화 하 고 수 모든 메시지에 서명 (되는 데 필요한 최소 수준 이상의). 이 경우 WCF 클라이언트 최소값 보다 더 했기 때문에 예외를 throw 하지 않습니다. 그러나 WCF 응용 프로그램 (서비스 또는 클라이언트)은과 보호 하지 메시지 파트 가능 하면 않지만 최소 수준은 따릅니다 note 합니다. 또한 `Transport`를 보안 모드로 사용하면, 전송에서 메시지 스트림을 과보호할 수 있는데, 이는 보다 세부적인 수준으로 보호하는 것이 기본적으로 불가능하기 때문입니다.  
   
 -   `ProtectionLevel`을 명시적으로 `Sign` 또는 `EncryptAndSign`으로 설정하면 보안이 활성화된 상태에서 바인딩을 사용해야 합니다. 그렇지 않으면 예외가 throw됩니다.  
   

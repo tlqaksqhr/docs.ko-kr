@@ -2,11 +2,11 @@
 title: WS 바인딩
 ms.date: 03/30/2017
 ms.assetid: 629945b2-d771-46d7-a87b-5df3b2e460da
-ms.openlocfilehash: 67102c7c2925c2ac032d9defccdd5e187e76d608
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 11480b91c6ac6a5501029dfdf10cd81d3fa18820
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="ws-binding"></a>WS 바인딩
 이 섹션에는 Windows Communication Foundation (WCF)에서 Windows 서비스 바인딩을 보여 주는 샘플이 포함 되어 있습니다.  
@@ -25,7 +25,7 @@ ms.lasthandoff: 05/04/2018
  WSHttpBinding과 함께 MTOM(Message Transmission Optimization Mechanism) 메시지 인코딩을 사용하는 것을 보여 줍니다.  
   
  [WSHttpBinding](../../../../docs/framework/wcf/samples/wshttpbinding.md)  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]를 사용하여 일반 서비스와 일반 클라이언트를 구현하는 방법을 보여 줍니다.  
+ 일반 서비스와 WCF를 사용 하 여 일반 클라이언트를 구현 하는 방법을 보여 줍니다.  
   
  [WS 신뢰할 수 있는 세션](../../../../docs/framework/wcf/samples/ws-reliable-session.md)  
  신뢰할 수 있는 세션의 사용법을 보여 줍니다.  
@@ -34,7 +34,7 @@ ms.lasthandoff: 05/04/2018
  <xref:System.ServiceModel.WSHttpBinding> 바인딩과 함께 SSL 전송 보안을 사용하는 방법을 보여 줍니다.  
   
  [메시지 보안 바인딩](../../../../docs/framework/wcf/samples/message-security-binding.md)  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서 메시지 보안을 사용하는 방법을 보여 줍니다.  
+ Wcf에서 메시지 보안을 사용 하는 방법을 보여 줍니다.  
   
  [메시지 자격 증명을 사용한 WS 전송](../../../../docs/framework/wcf/samples/ws-transport-with-message-credential.md)  
  이 샘플에서는 메시지로 전달되는 클라이언트 자격 증명과 SSL 전송 보안을 조합하여 사용하는 방법을 보여 줍니다.

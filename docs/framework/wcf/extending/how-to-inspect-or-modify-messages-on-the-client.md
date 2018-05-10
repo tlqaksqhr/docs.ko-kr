@@ -2,14 +2,14 @@
 title: '방법: 클라이언트에서 메시지 검사 또는 수정'
 ms.date: 03/30/2017
 ms.assetid: b8256335-f1c2-419f-b862-9f220ccad84c
-ms.openlocfilehash: 3cd0cf9dd772cad5e1dc16f61ef55eb3b314858d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 6cd0f39494006bf51b7c4bb55afcc112ec08aadb
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="how-to-inspect-or-modify-messages-on-the-client"></a>방법: 클라이언트에서 메시지 검사 또는 수정
-[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]를 구현하고 클라이언트 런타임에 삽입하여 들어오거나 보내는 메시지를 <xref:System.ServiceModel.Dispatcher.IClientMessageInspector?displayProperty=nameWithType>에서 검사하거나 수정할 수 있습니다. 자세한 내용은 참조 [클라이언트 확장](../../../../docs/framework/wcf/extending/extending-clients.md)합니다. 서비스의 해당 기능은 <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector?displayProperty=nameWithType>입니다. 전체 코드 예제에 대 한 참조는 [메시지 검사자](../../../../docs/framework/wcf/samples/message-inspectors.md) 샘플.  
+검사 하거나 구현 하 여 WCF 클라이언트에 걸쳐 들어오거나 보내는 메시지를 수정할 수는 <xref:System.ServiceModel.Dispatcher.IClientMessageInspector?displayProperty=nameWithType> 클라이언트 런타임에 삽입 합니다. 자세한 내용은 참조 [클라이언트 확장](../../../../docs/framework/wcf/extending/extending-clients.md)합니다. 서비스의 해당 기능은 <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector?displayProperty=nameWithType>입니다. 전체 코드 예제에 대 한 참조는 [메시지 검사자](../../../../docs/framework/wcf/samples/message-inspectors.md) 샘플.  
   
 ### <a name="to-inspect-or-modify-messages"></a>메시지를 검사하거나 수정하려면  
   

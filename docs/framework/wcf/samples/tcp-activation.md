@@ -2,11 +2,11 @@
 title: TCP 활성화
 ms.date: 03/30/2017
 ms.assetid: bf8c215c-0228-4f4f-85c2-e33794ec09a7
-ms.openlocfilehash: 3627307c74604f30c77927067d302baf41b1c536
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 9f08864c1d5139160ac25e0733ddcfc1c8557ad9
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="tcp-activation"></a>TCP 활성화
 이 샘플에서는 net.tcp 프로토콜을 통해 통신하는 서비스를 활성화하기 위해 WAS(Windows Process Activation Service)를 사용하는 서비스를 호스트하는 방법을 보여 줍니다. 이 샘플에 따라는 [시작](../../../../docs/framework/wcf/samples/getting-started-sample.md)합니다.  
@@ -143,7 +143,7 @@ Press <ENTER> to terminate client.
   
 2.  수행한 반드시는 [Windows Communication Foundation 샘플의 일회 설치 절차](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)합니다.  
   
-     또한 HTTP가 아닌 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 활성화 구성 요소를 설치해야 합니다.  
+     또한 WCF NON-HTTP activation 구성 요소를 설치 해야 합니다.  
   
     1.  **시작** 메뉴 선택 **제어판**합니다.  
   

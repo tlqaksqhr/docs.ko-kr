@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - binding elements [WCF]
 ms.assetid: 765ff77b-7682-4ea3-90eb-e4d751e37379
-ms.openlocfilehash: 32b8b9e1fbb3ae16f4dd81620658569a9408057b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 2a0e797a921ff20b2432e824c92c09fff833bf7d
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="bindings-and-binding-elements"></a>바인딩 및 바인딩 요소
 바인딩은 라고 하는 특수 구성 요소의 컬렉션입니다 *바인딩 요소의*, 클라이언트 때마다 서비스 런타임에 의해 평가 되 또는 서비스 끝점이 생성 되 고 있습니다. 한 바인딩 내에 있는 바인딩 요소의 형식과 순서는 끝점 채널 스택에서 프로토콜 및 전송 채널의 선택 및 스택 순서를 결정합니다.  
@@ -18,7 +18,7 @@ ms.lasthandoff: 05/04/2018
  바인딩에는 전송 바인딩 요소가 하나만 있어야 합니다. 각 전송 바인딩 요소는 기본 메시지 인코딩 바인딩 요소를 나타내며, 이러한 요소는 하나의 메시지 인코딩 바인딩 요소를 바인딩에 추가하여 재정의할 수 있습니다. 바인딩에는 전송 및 인코더 바인딩 요소 외에, 끝점 간에 SOAP 메시지를 보내고 서비스하는 데 필요한 기능을 함께 구현하는 여러 개의 프로토콜 바인딩 요소가 포함될 수 있습니다. 자세한 내용은 참조 [구성 서비스 및 클라이언트에 대 한 바인딩을 사용 하 여](../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)합니다.  
   
 ## <a name="extending-bindings-and-binding-elements"></a>바인딩 및 바인딩 요소 확장명  
- Windows Communication Foundation (WCF)를 다양 한 시나리오를 다루는 시스템 제공 바인딩이 포함 되어 있습니다. (자세한 내용을 보려면 참조 [시스템 제공 바인딩](../../../../docs/framework/wcf/system-provided-bindings.md).) 그러나 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에 포함되지 않은 바인딩을 만들고 사용해야 하는 경우가 있을 수 있습니다. 다음 시나리오에서는 새 바인딩을 만들어야 합니다.  
+ Windows Communication Foundation (WCF)를 다양 한 시나리오를 다루는 시스템 제공 바인딩이 포함 되어 있습니다. (자세한 내용을 보려면 참조 [시스템 제공 바인딩](../../../../docs/framework/wcf/system-provided-bindings.md).) 그러나 경우도 있습니다, 만들고 WCF에 포함 되지 않은 바인딩을 사용 해야 할 경우입니다. 다음 시나리오에서는 새 바인딩을 만들어야 합니다.  
   
 -   새 전송, 인코딩 또는 프로토콜 바인딩 요소와 같은 새 바인딩 요소를 사용하려면 해당 바인딩 요소를 포함하는 새 바인딩을 만들어야 합니다. 예를 들어 UDP 전송용 사용자 지정 `UdpTransportBindingElement`를 추가한 경우 새 바인딩을 만들어 사용해야 합니다. 사용 하 여이 동작을 수행 하는 방법에 대 한 내용은 <xref:System.ServiceModel.Channels.CustomBinding?displayProperty=nameWithType> 입력을 참조 하십시오. [사용자 지정 바인딩](../../../../docs/framework/wcf/extending/custom-bindings.md)합니다.  
   
@@ -37,7 +37,7 @@ ms.lasthandoff: 05/04/2018
   
  일반적으로 채널에는 프로토콜 채널과 전송 채널의 두 가지 유형이 있습니다. 전송 채널은 네트워크 끝점 간에 실제로 메시지를 전송합니다. 전송 채널에는 기본 메시지 인코더가 있어야 하며 해당 채널은 메시지 인코더 바인딩 요소를 통해 제공되는 대체 메시지 인코더를 사용할 수 있어야 합니다. 메시지 인코더는 <xref:System.ServiceModel.Channels.Message?displayProperty=nameWithType>를 연결 표시로 또는 그 반대로 바꿉니다. 프로토콜 채널은 WS-Security 또는 WS-ReliableMessaging과 같은 SOAP 수준 프로토콜을 구현합니다.  
   
- 전송 및 프로토콜 채널의 기본 요구 사항은 해당 채널이 필수 채널 인터페이스를 구현하는 것입니다. 작업 채널 계층을 만들려면 연결된 팩터리와 수신기 등이 있어야 합니다. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]의 채널 구현을 사용하려면 각 채널에 대해 <xref:System.ServiceModel.Channels.BindingElement>에서 파생되는 연결된 바인딩 요소가 있어야 하며, <xref:System.ServiceModel.Configuration.BindingElementExtensionElement>에서 파생되는 구성 파일에 포함할 관련 바인딩 확장 요소가 있어야 합니다.  
+ 전송 및 프로토콜 채널의 기본 요구 사항은 해당 채널이 필수 채널 인터페이스를 구현하는 것입니다. 작업 채널 계층을 만들려면 연결된 팩터리와 수신기 등이 있어야 합니다. 파생 된 연결 된 바인딩 요소가 있어야 하는 wcf에서 채널 구현을 사용 하려면 <xref:System.ServiceModel.Channels.BindingElement> 각 채널에 대 한 에서파생되는구성파일에포함할관련된바인딩확장명요소가있어야하고<xref:System.ServiceModel.Configuration.BindingElementExtensionElement>.  
   
  앞에서도 언급했듯이 메시지 인코더, 프로토콜 및 전송 채널 구현을 위한 바인딩 요소를 쌓아 채널 스택을 구성할 수 있으며, 순서가 지정된 집합에 이들을 정렬하는 메커니즘이 바인딩이 됩니다. 바인딩 및 바인딩 요소는 응용 프로그램 프로그래밍 모델을 채널 모델에 연결합니다. 코드에서 직접 채널 구현을 사용할 수 있지만 인코더, 전송 및 프로토콜이 바인딩 요소로 구현되지 않은 경우에는 해당 채널 구현을 서비스 계층 프로그래밍 모델에서 사용할 수 없습니다.  
   

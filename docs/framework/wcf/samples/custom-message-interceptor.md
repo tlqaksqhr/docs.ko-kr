@@ -2,11 +2,11 @@
 title: 사용자 지정 메시지 인터셉터
 ms.date: 03/30/2017
 ms.assetid: 73f20972-53f8-475a-8bfe-c133bfa225b0
-ms.openlocfilehash: 0ed34823251dcc010fc438bda1e746549b97f0f3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: a59b2075473e2ca4c8cb8751fd6cb733f282238b
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="custom-message-interceptor"></a>사용자 지정 메시지 인터셉터
 이 샘플에서는 채널 확장성 모델의 사용 방법을 보여 줍니다. 특히 채널 팩터리 및 채널 수신기를 만드는 사용자 지정 바인딩 요소를 구현하여 런타임 스택의 특정 지점에서 들어오고 보내는 모든 메시지를 가로채는 방법을 보여 줍니다. 또한 이 샘플에는 이 사용자 지정 팩터리의 사용을 보여 주는 클라이언트와 서버도 포함되어 있습니다.  
@@ -25,7 +25,7 @@ ms.lasthandoff: 05/04/2018
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Channels\MessageInterceptor`  
   
- 다음 및 채널 프레임 워크를 사용 하 여 Windows Communication Foundation (WCF), 사용자 지정 계층화 된 채널을 만들기 위한 권장된 절차를 설명 하는 샘플 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 모범 사례입니다. 사용자 지정 계층화된 채널을 만드는 단계는 다음과 같습니다.  
+ 이 샘플에서는 WCF 최선의 구현 방법 및 채널 프레임 워크를 사용 하 여 Windows Communication Foundation (WCF), 사용자 지정 계층화 된 채널을 만들기 위한 권장된 절차를 설명 합니다. 사용자 지정 계층화된 채널을 만드는 단계는 다음과 같습니다.  
   
 1.  채널 팩터리 및 채널 수신기에서 지원할 채널 셰이프를 결정합니다.  
   

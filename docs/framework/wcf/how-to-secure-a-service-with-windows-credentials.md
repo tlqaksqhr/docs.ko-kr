@@ -9,11 +9,11 @@ helpviewer_keywords:
 ms.assetid: d171b5ca-96ef-47ff-800c-c138023cf76e
 author: BrucePerlerMS
 manager: mbaldwin
-ms.openlocfilehash: 5ed09947350a284dd7701b37bad93912f79f7e3c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 2fa8d753d5fb168c14ee71cbbf6de62e0e4aff9e
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="how-to-secure-a-service-with-windows-credentials"></a>방법: Windows 자격 증명을 사용하여 서비스에 보안 설정
 이 항목에서는 Windows 도메인에 있으며 동일한 도메인에 클라이언트에서 호출 하는 Windows Communication Foundation (WCF) 서비스에서 전송 보안을 사용 하는 방법을 보여 줍니다. 이 시나리오에 대 한 자세한 내용은 참조 [Windows 인증과 함께 전송 보안](../../../docs/framework/wcf/feature-details/transport-security-with-windows-authentication.md)합니다. 샘플 응용 프로그램에 대 한 참조는 [WSHttpBinding](../../../docs/framework/wcf/samples/wshttpbinding.md) 샘플.  
@@ -75,7 +75,7 @@ ms.lasthandoff: 05/04/2018
   
 ##### <a name="to-use-a-binding-in-a-client-with-code"></a>코드를 통해 클라이언트에 바인딩을 사용하려면  
   
-1.  SvcUtil.exe 도구를 사용하여 서비스의 메타데이터에서 프록시 코드를 생성합니다. 자세한 내용은 참조 [하는 방법: 클라이언트 만들기](../../../docs/framework/wcf/how-to-create-a-wcf-client.md)합니다. 생성된 프록시 코드는 <xref:System.ServiceModel.ClientBase%601> 클래스에서 상속되어 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 서비스와 통신하는 데 필요한 생성자, 메서드 및 속성이 모든 클라이언트에 있도록 합니다. 이 예제에서 생성된 코드에는 `CalculatorClient` 인터페이스를 구현하는 `ICalculator` 클래스가 포함되어 서비스 코드와의 호환성을 지원합니다.  
+1.  SvcUtil.exe 도구를 사용하여 서비스의 메타데이터에서 프록시 코드를 생성합니다. 자세한 내용은 참조 [하는 방법: 클라이언트 만들기](../../../docs/framework/wcf/how-to-create-a-wcf-client.md)합니다. 생성된 된 프록시 코드에서 상속 된 <xref:System.ServiceModel.ClientBase%601> 모든 클라이언트에 필요한 생성자, 메서드 및 WCF 서비스와 통신 하는 속성을 보장 하는 클래스입니다. 이 예제에서 생성된 코드에는 `CalculatorClient` 인터페이스를 구현하는 `ICalculator` 클래스가 포함되어 서비스 코드와의 호환성을 지원합니다.  
   
 2.  이 프로시저의 코드는 클라이언트 프로그램에 대한 `Main` 메서드의 시작 부분에 삽입됩니다.  
   

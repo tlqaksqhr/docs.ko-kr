@@ -2,11 +2,11 @@
 title: Windows Communication Foundation 샘플 실행
 ms.date: 03/30/2017
 ms.assetid: db8a83da-95c1-4a21-a9d2-48caeb6398ea
-ms.openlocfilehash: ee02b6e737e4728a378533ebb5ba89cec9807b33
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 68b05b590e80a65ba8816c0dcfd8d140b71eb8c8
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="running-the-windows-communication-foundation-samples"></a>Windows Communication Foundation 샘플 실행
 Windows Communication Foundation (WCF) 샘플 단일 컴퓨터 또는 다중 컴퓨터 구성에서 실행할 수 있습니다. 샘플은 단일 컴퓨터 구성에서 실행할 준비가 된 상태로 제공됩니다. 다중 컴퓨터 구성에서는 샘플의 구성 파일 설정을 수정해야 합니다. 다음 절차에서는 단일 컴퓨터 및 다중 컴퓨터 구성에서 샘플을 실행하는 방법에 대해 설명합니다. IIS(인터넷 정보 서비스) 및 자체 호스팅 샘플에서 호스트되는 서비스에 적용되는 단계가 약간씩 다릅니다. 대부분의 샘플은 IIS에서 호스트됩니다. 이러한 샘플이 호스트되는 방법에 대한 자세한 내용은 샘플 추가 정보를 참조하세요.  
@@ -14,7 +14,7 @@ Windows Communication Foundation (WCF) 샘플 단일 컴퓨터 또는 다중 컴
  [!INCLUDE[wv](../../../../includes/wv-md.md)]에서는 IIS에서 호스트되지 않는 샘플의 경우 Http.sys에 수신기를 등록하기 위해 상승된 권한이 필요합니다. Httpcfg.exe를 사용하여 서비스가 수신 대기 중인 계정에 서비스의 수신 대기 주소를 등록하거나 관리자 권한으로 실행 중인 명령 프롬프트에서 서비스를 실행합니다.  
   
 > [!NOTE]
->  빌드 또는 중 하나를 실행 하기 전에 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 예제를 수행 했는지 확인는 [Windows Communication Foundation 샘플의 일회 설치 절차](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)합니다.  
+>  를 작성 하거나 WCF 샘플 중 하나를 실행 하기 전에 수행 했는지 확인 해야는 [Windows Communication Foundation 샘플의 일회 설치 절차](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)합니다.  
   
 ### <a name="to-run-the-sample-on-the-same-machine"></a>단일 컴퓨터 구성에서 샘플을 실행하려면  
   

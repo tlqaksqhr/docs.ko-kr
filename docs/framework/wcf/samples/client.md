@@ -2,21 +2,21 @@
 title: 클라이언트
 ms.date: 03/30/2017
 ms.assetid: fabb0c70-b79b-4e58-a5d3-9705de85ee5b
-ms.openlocfilehash: 4c44ed4be9a3598ea79355737db678dd7a80a56a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: cd172aefa640853c7ace1d9d7ad3fada73714642
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="client"></a>클라이언트
 이 섹션에는 Windows Communication Foundation (WCF) 클라이언트 응용 프로그램을 보여 주는 샘플이 포함 되어 있습니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
  [클라이언트 상호 운용성](../../../../docs/framework/wcf/samples/client-interoperability.md)  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]와 다른 기술 간의 상호 운용성을 보여 줍니다.  
+ WCF와 다른 기술 간의 상호 운용성을 보여 줍니다.  
   
  [주소 헤더](../../../../docs/framework/wcf/samples/address-headers.md)  
- 클라이언트에서 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]를 사용하여 참조 매개 변수를 서비스에 전달하는 방법을 보여 줍니다.  
+ 로 인해 클라이언트 WCF를 사용 하 여 서비스에 참조 매개 변수를 전달 하는 방법을 보여 줍니다.  
   
  [채널 팩터리](../../../../docs/framework/wcf/samples/channel-factory.md)  
  클라이언트 응용 프로그램에서 생성된 클라이언트 대신 <xref:System.ServiceModel.ChannelFactory> 클래스가 있는 채널을 만드는 방법을 보여 줍니다.  

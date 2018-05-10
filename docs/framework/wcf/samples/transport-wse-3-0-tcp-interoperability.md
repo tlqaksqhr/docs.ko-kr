@@ -2,14 +2,14 @@
 title: 'Transport: WSE 3.0 TCP Interoperability'
 ms.date: 03/30/2017
 ms.assetid: 5f7c3708-acad-4eb3-acb9-d232c77d1486
-ms.openlocfilehash: fb877e6d55214e9a268a88b33a4613ca8df0eb8f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 8cdd88b354f2e07c84ccfda85c8552d37ca2f519
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="transport-wse-30-tcp-interoperability"></a>Transport: WSE 3.0 TCP Interoperability
-WSE 3.0 TCP Interoperability Transport 샘플에는 사용자 지정 Windows Communication Foundation (WCF) 전송으로 TCP 이중 세션을 구현 하는 방법을 보여 줍니다. 또한 채널 계층의 확장성을 사용하여 연결을 통해 기존에 배포된 시스템과 상호 작용할 수 있는 방법도 보여 줍니다. 다음 단계에서는 이 사용자 지정 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 전송을 빌드하는 방법을 설명합니다.  
+WSE 3.0 TCP Interoperability Transport 샘플에는 사용자 지정 Windows Communication Foundation (WCF) 전송으로 TCP 이중 세션을 구현 하는 방법을 보여 줍니다. 또한 채널 계층의 확장성을 사용하여 연결을 통해 기존에 배포된 시스템과 상호 작용할 수 있는 방법도 보여 줍니다. 다음 단계에는이 사용자 지정 WCF 전송을 작성 하는 방법을 보여 줍니다.  
   
 1.  TCP 소켓에서 시작하여 DIME 프레이밍을 사용하여 메시지 경계를 나타내는 <xref:System.ServiceModel.Channels.IDuplexSessionChannel>의 클라이언트 및 서버 구현을 만듭니다.  
   
@@ -128,7 +128,7 @@ WSE 3.0 TCP Interoperability Transport 샘플에는 사용자 지정 Windows Com
   
  `binding.Elements.Add(new WseTcpTransportBindingElement());`  
   
- 이 테스트 코드는 두 개의 테스트로 구성됩니다. 첫 번째 테스트에서는 WSE 3.0 WSDL에서 생성된 코드를 사용하여 형식화된 클라이언트를 설정합니다. 두 번째 테스트에서는 채널 API 위에서 바로 메시지를 보냄으로써 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]를 클라이언트와 서버로 모두 사용합니다.  
+ 이 테스트 코드는 두 개의 테스트로 구성됩니다. 첫 번째 테스트에서는 WSE 3.0 WSDL에서 생성된 코드를 사용하여 형식화된 클라이언트를 설정합니다. 두 번째 테스트 채널 Api 위에서 바로 메시지를 전송 하 여 클라이언트와 서버 모두으로 WCF를 사용 합니다.  
   
  샘플을 실행할 경우의 예상 출력은 다음과 같습니다.  
   
@@ -182,7 +182,7 @@ Symbols:
   
     2.  StockService 프로젝트를 시작 프로젝트로 설정합니다.  
   
-    3.  StockService 프로젝트에서 StockService.cs를 열고 `StockService` 클래스의 [Policy] 특성을 주석으로 처리합니다. 이렇게 하면 샘플에서 보안을 사용하지 않습니다. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]는 WSE 3.0 보안 끝점과 상호 운용할 수 있지만 여기서는 이 샘플이 사용자 지정 TCP 전송 위주로 작동하도록 보안을 사용하지 않습니다.  
+    3.  StockService 프로젝트에서 StockService.cs를 열고 `StockService` 클래스의 [Policy] 특성을 주석으로 처리합니다. 이렇게 하면 샘플에서 보안을 사용하지 않습니다. WCF WSE 3.0 보안 끝점과 상호 운용할 수, 하는 동안 사용자 지정 TCP 전송에 포커스가 있는이 샘플을 유지 하려면 보안이 해제 되어 있습니다.  
   
     4.  F5 키를 눌러 `TcpSyncStockService`를 시작합니다. 새 콘솔 창에서 서비스가 시작됩니다.  
   

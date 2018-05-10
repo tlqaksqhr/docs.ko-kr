@@ -9,11 +9,11 @@ helpviewer_keywords:
 ms.assetid: 10e245f7-d31e-42e7-82a2-d5780325d372
 author: BrucePerlerMS
 manager: mbaldwin
-ms.openlocfilehash: 41936b407dfdb3fecee80b2513b557016cdcfe5e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: ba554ed23ae039796f51f4a699d368c4a6c0587e
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="how-to-create-a-custom-security-token-authenticator"></a>방법: 사용자 지정 보안 토큰 인증자 만들기
 이 항목에서는 사용자 지정 보안 토큰 인증자를 만드는 방법과 이를 사용자 지정 보안 토큰 관리자와 통합하는 방법에 대해 설명합니다. 보안 토큰 인증자는 들어오는 메시지와 함께 제공된 보안 토큰 내용의 유효성을 검사합니다. 유효성 검사에 성공하면, 인증자는 평가 시 클레임 집합이 반환되는 <xref:System.IdentityModel.Policy.IAuthorizationPolicy> 인스턴스 컬렉션을 반환합니다.  
@@ -33,7 +33,7 @@ ms.lasthandoff: 05/04/2018
      [!code-csharp[C_CustomTokenAuthenticator#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customtokenauthenticator/cs/source.cs#1)]
      [!code-vb[C_CustomTokenAuthenticator#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customtokenauthenticator/vb/source.vb#1)]  
   
- 이전 코드는 <xref:System.IdentityModel.Selectors.SecurityTokenAuthenticator.CanValidateToken%28System.IdentityModel.Tokens.SecurityToken%29> 메서드에서 권한 부여 정책 컬렉션을 반환합니다. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]는 이 인터페이스의 공용 구현을 제공하지 않습니다. 다음 절차에서는 사용자 요구 사항에 맞게 이를 수행하는 방법을 보여 줍니다.  
+ 이전 코드는 <xref:System.IdentityModel.Selectors.SecurityTokenAuthenticator.CanValidateToken%28System.IdentityModel.Tokens.SecurityToken%29> 메서드에서 권한 부여 정책 컬렉션을 반환합니다. WCF는이 인터페이스의 공용 구현을 제공 하지 않습니다. 다음 절차에서는 사용자 요구 사항에 맞게 이를 수행하는 방법을 보여 줍니다.  
   
 #### <a name="to-create-a-custom-authorization-policy"></a>사용자 지정 권한 부여 정책을 만들려면  
   
@@ -43,7 +43,7 @@ ms.lasthandoff: 05/04/2018
   
 3.  <xref:System.IdentityModel.Policy.IAuthorizationPolicy.Issuer%2A> 읽기 전용 속성을 구현합니다. 이 속성은 토큰에서 가져오는 클레임 집합 발급자를 반환하는 데 필요합니다. 이 발급자는 토큰 발급자이거나 토큰 내용의 유효성을 검사하는 인증 기관이어야 합니다. 다음 예제에서는 이전 절차에서 만든 사용자 지정 보안 토큰 인증자로부터 이 클래스에 전달된 발급자 클레임을 사용합니다. 사용자 지정 보안 토큰 인증자는 <xref:System.IdentityModel.Claims.ClaimSet.System%2A> 속성을 통해 반환된 시스템 제공 클레임 집합을 사용하여, 사용자 이름 토큰의 발급자를 나타냅니다.  
   
-4.  <xref:System.IdentityModel.Policy.IAuthorizationPolicy.Evaluate%2A> 메서드를 구현합니다. 이 메서드는 인수로 전달된 <xref:System.IdentityModel.Policy.EvaluationContext> 클래스의 인스턴스를 들어오는 보안 토큰의 내용을 바탕으로 하는 클레임으로 채웁니다. 평가 시 이 작업이 완료되면 메서드는 `true`를 반환합니다. 평가 컨텍스트에 추가 정보를 제공하는 다른 권한 부여 정책을 사용하여 구현하는 경우, 필요한 정보가 평가 컨텍스트에 아직 없으면 이 메서드는 `false`를 반환할 수 있습니다. 이때 권한 부여 정책 중 하나 이상의 정책에 의해 평가 컨텍스트가 수정되면,[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서는 들어오는 메시지에 대해 생성된 기타 권한 부여 정책을 모두 평가한 후 이 메서드를 다시 호출합니다.  
+4.  <xref:System.IdentityModel.Policy.IAuthorizationPolicy.Evaluate%2A> 메서드를 구현합니다. 이 메서드는 인수로 전달된 <xref:System.IdentityModel.Policy.EvaluationContext> 클래스의 인스턴스를 들어오는 보안 토큰의 내용을 바탕으로 하는 클레임으로 채웁니다. 평가 시 이 작업이 완료되면 메서드는 `true`를 반환합니다. 평가 컨텍스트에 추가 정보를 제공하는 다른 권한 부여 정책을 사용하여 구현하는 경우, 필요한 정보가 평가 컨텍스트에 아직 없으면 이 메서드는 `false`를 반환할 수 있습니다. 이 경우 WCF에서는 이러한 권한 부여 정책 중 하나 이상에 의해 평가 컨텍스트가 수정 하는 경우 들어오는 메시지에 대해 생성 된 다른 모든 권한 부여 정책을 평가한 후에 다시 메서드를 호출 합니다.  
   
      [!code-csharp[c_CustomTokenAuthenticator#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customtokenauthenticator/cs/source.cs#2)]
      [!code-vb[c_CustomTokenAuthenticator#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customtokenauthenticator/vb/source.vb#2)]  

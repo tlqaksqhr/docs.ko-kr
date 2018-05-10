@@ -4,14 +4,14 @@ ms.date: 03/30/2017
 ms.assetid: 921edc41-e91b-40f9-bde9-b6148b633e61
 author: BrucePerlerMS
 manager: mbaldwin
-ms.openlocfilehash: b8faa7a3f92be25b1c1ae700c92e5d2a0828a5a5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 65523fcc1d08bd48a432e6cf599dfcb73ade8747
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="reliable-secure-profile"></a>신뢰할 수 있는 보안 프로필
-이 샘플에서는 구성 하는 방법을 보여 줍니다. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 및 [Reliable Secure Profile](http://go.microsoft.com/fwlink/?LinkId=178140) (RSP). 이 샘플의 구현을 설명는 [연결 만들기](http://go.microsoft.com/fwlink/?LinkId=178141) 함께 신뢰할 수 있는 메시징 및 선택적으로 구성 될 수 있는 채널에 보안 채널을 신뢰할 수 있는 보안 바인딩을 만드는 사양을 기반으로 rsp 구성 합니다.  
+이 샘플에서는 WCF를 구성 하는 방법을 보여 줍니다. 및 [Reliable Secure Profile](http://go.microsoft.com/fwlink/?LinkId=178140) (RSP). 이 샘플의 구현을 설명는 [연결 만들기](http://go.microsoft.com/fwlink/?LinkId=178141) 함께 신뢰할 수 있는 메시징 및 선택적으로 구성 될 수 있는 채널에 보안 채널을 신뢰할 수 있는 보안 바인딩을 만드는 사양을 기반으로 rsp 구성 합니다.  
   
 > [!IMPORTANT]
 >  컴퓨터에 이 샘플이 이미 설치되어 있을 수도 있습니다. 계속하기 전에 다음(기본) 디렉터리를 확인하세요.  

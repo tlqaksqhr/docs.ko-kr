@@ -2,11 +2,11 @@
 title: 키워드 참조(F#)
 description: '모든 F # 언어 키워드에 대 한 정보 링크를를 찾습니다.'
 ms.date: 05/16/2016
-ms.openlocfilehash: 2cb2fbb3236fcfeebc801b467d657f031b8da55a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 7d8a2bf667f5303cc19e8d4279e433efca25c294
+ms.sourcegitcommit: c03eef711abe961a85db2b4d0715257d1524aef6
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="keyword-reference"></a>키워드 참조
 
@@ -114,7 +114,6 @@ ms.lasthandoff: 05/04/2018
 * `eager`
 * `event`
 * `external`
-* `fixed`
 * `functor`
 * `include`
 * `method`

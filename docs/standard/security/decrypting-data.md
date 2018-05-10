@@ -173,7 +173,7 @@ class Class1
 ## <a name="asymmetric-decryption"></a>비대칭 암호 해독  
  일반적으로 당사자(당사자 A)는 공개 키와 개인 키를 둘 다 생성하고 메모리 또는 암호화 키 컨테이너에 키를 저장합니다.  당사자 A가 다른 당사자(당사자 B)에게 공개 키를 보냅니다.  구성원 B는 공개 키를 사용하여 데이터를 암호화하고 데이터를 다시 구성원 A에게 보냅니다. 구성원 A는 데이터를 받은 다음 해당하는 개인 키를 사용하여 데이터를 해독합니다.  암호 해독은 당사자 A가 당사자 B에서 데이터를 암호화하는 데 사용한 공개 키에 해당하는 개인 키를 사용하는 경우에만 성공합니다.  
   
- 안전한 암호화 키 컨테이너에 비대칭 키를 저장하는 방법 및 나중에 비대칭 키를 검색하는 방법에 대한 자세한 내용은 [How to: Store Asymmetric Keys in a Key Container](../../../docs/standard/security/how-to-store-asymmetric-keys-in-a-key-container.md)을 참조하세요.  
+ 안전한 암호화 키 컨테이너에 비대칭 키를 저장하는 방법 및 나중에 비대칭 키를 검색하는 방법에 대한 자세한 내용은 [방법: 키 컨테이너에 비대칭 키 저장](../../../docs/standard/security/how-to-store-asymmetric-keys-in-a-key-container.md)을 참조하세요.  
   
  다음 예제에서는 대칭 키 및 IV를 나타내는 두 바이트 배열의 암호 해독을 보여 줍니다.  제3자에게 쉽게 보낼 수 있는 형식으로 <xref:System.Security.Cryptography.RSACryptoServiceProvider> 개체에서 비대칭 공개 키를 추출하는 방법에 대한 자세한 내용은 [Encrypting Data](../../../docs/standard/security/encrypting-data.md)이라는 관리되는 스트림의 값으로 초기화합니다.  
   

@@ -2,11 +2,11 @@
 title: MSMQ 활성화
 ms.date: 03/30/2017
 ms.assetid: e3834149-7b8c-4a54-806b-b4296720f31d
-ms.openlocfilehash: ab414cb5535ce2b9062520c9d82e139ebdfc04c4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 4dc8cc2a3c6d9178f6507c87ae512a8929bd1380
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="msmq-activation"></a>MSMQ 활성화
 이 샘플에서는 메시지 큐에서 읽은 WAS(Windows Process Activation Service)에서 응용 프로그램을 호스트하는 방법을 보여 줍니다. 이 샘플에서는 `netMsmqBinding` 기반으로 하 고는 [양방향 통신](../../../../docs/framework/wcf/samples/two-way-communication.md) 샘플. 이 경우 서비스는 웹 호스팅 응용 프로그램이고 클라이언트는 자체 호스트되며 전송된 구매 주문의 상태를 확인하기 위해 콘솔에 출력됩니다.  
@@ -19,11 +19,11 @@ ms.lasthandoff: 05/04/2018
 >   
 >  \<InstallDrive>:\WF_WCF_Samples  
 >   
->  이 디렉터리가 이동 Windows Communication Foundation (WCF) 하이퍼링크에 "http://go.microsoft.com/fwlink/?LinkId=150780" \t "_blank" 및 Windows WF (Workflow Foundation) 샘플 [!INCLUDE[netfx40_long](../../../../includes/netfx40-long-md.md)] 모두 다운로드 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 및 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플입니다. 이 샘플은 다음 디렉터리에 있습니다.  
+>  이 디렉터리가 이동 Windows Communication Foundation (WCF) 하이퍼링크에 "http://go.microsoft.com/fwlink/?LinkId=150780" \t "_blank" 및 Windows WF (Workflow Foundation) 샘플에 대 한 [!INCLUDE[netfx40_long](../../../../includes/netfx40-long-md.md)] 모든 WCF를 다운로드 하 고 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플. 이 샘플은 다음 디렉터리에 있습니다.  
 >   
 >  \<InstallDrive>:\Samples\WCFWFCardSpace\WCF\Basic\Services\Hosting\WASHost\MsmqActivation.  
   
- [!INCLUDE[lserver](../../../../includes/lserver-md.md)]용의 새 프로세스 활성화 메커니즘인 WAS(Windows Process Activation Service)는 이전에 HTTP 기반 응용 프로그램에만 사용할 수 있었던 IIS와 같은 기능을 HTTP가 아닌 프로토콜을 사용하는 응용 프로그램에 제공합니다. Windows Communication Foundation (WCF) 수신기 어댑터 인터페이스를 사용 하 여에서 지 원하는 HTTP가 아닌 프로토콜을 통해 수신 되는 활성화 요청을 통신 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]TCP, 명명 된 파이프, MSMQ 등과 같은 합니다. HTTP가 아닌 프로토콜을 통해 요청을 수신하는 기능은 SMSvcHost.exe에서 실행되는 관리되는 Windows 서비스에 의해 호스트됩니다.  
+ [!INCLUDE[lserver](../../../../includes/lserver-md.md)]용의 새 프로세스 활성화 메커니즘인 WAS(Windows Process Activation Service)는 이전에 HTTP 기반 응용 프로그램에만 사용할 수 있었던 IIS와 같은 기능을 HTTP가 아닌 프로토콜을 사용하는 응용 프로그램에 제공합니다. Windows Communication Foundation (WCF) 수신기 어댑터 인터페이스를 사용 하 여 TCP, 명명 된 파이프, MSMQ 등과 같은 WCF에서 지 원하는 HTTP가 아닌 프로토콜을 통해 수신 되는 활성화 요청을 통신 합니다. HTTP가 아닌 프로토콜을 통해 요청을 수신하는 기능은 SMSvcHost.exe에서 실행되는 관리되는 Windows 서비스에 의해 호스트됩니다.  
   
  Net.Msmq Listener Adapter 서비스(NetMsmqActivator)는 큐의 메시지에 기초하여 큐에 대기 중인 응용 프로그램을 활성화합니다.  
   
@@ -83,7 +83,7 @@ public class OrderProcessorService : IOrderProcessor
  MSMQ 큐 이름은 구성 파일의 appSettings 섹션에 지정됩니다. 서비스의 끝점은 구성 파일의 System.serviceModel 섹션에 정의됩니다.  
   
 > [!NOTE]
->  MSMQ 큐 이름 및 끝점 주소는 약간 다른 주소 지정 규칙을 사용합니다. MSMQ 큐 이름은 로컬 컴퓨터에 점(.)을, 그 경로에는 백슬래시 구분 기호를 사용합니다. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 끝점 주소에서는 net.msmq: 체계를 지정하며 로컬 컴퓨터의 경우 "localhost"를 사용하고 경로에서 슬래시를 사용합니다. 원격 컴퓨터에서 호스트되는 큐에서 읽으려면 "." 및 "localhost"를 원격 컴퓨터 이름으로 바꿉니다.  
+>  MSMQ 큐 이름 및 끝점 주소는 약간 다른 주소 지정 규칙을 사용합니다. MSMQ 큐 이름은 로컬 컴퓨터에 점(.)을, 그 경로에는 백슬래시 구분 기호를 사용합니다. WCF 끝점 주소에서는 net.msmq 지정: 체계를 "localhost"를 사용 하 여 로컬 컴퓨터에 대 한 및 그 경로에 슬래시를 사용 합니다. 원격 컴퓨터에서 호스트되는 큐에서 읽으려면 "." 및 "localhost"를 원격 컴퓨터 이름으로 바꿉니다.  
   
  클래스 이름을 가진 .svc 파일은 WAS에서 서비스 코드를 호스트하는 데 사용됩니다.  
   
@@ -215,7 +215,7 @@ Status of order 70cf9d63-3dfa-4e69-81c2-23aa4478ebed :Pending
   
 1.  WAS 활성화에 필요한 [!INCLUDE[iisver](../../../../includes/iisver-md.md)]이 설치되어 있는지 확인합니다.  
   
-2.  수행 했는지 확인 하십시오.는 [Windows Communication Foundation 샘플의 일회 설치 절차](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)합니다. 또한 HTTP가 아닌 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 활성화 구성 요소를 설치해야 합니다.  
+2.  수행 했는지 확인 하십시오.는 [Windows Communication Foundation 샘플의 일회 설치 절차](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)합니다. 또한 WCF NON-HTTP activation 구성 요소를 설치 해야 합니다.  
   
     1.  **시작** 메뉴 선택 **제어판**합니다.  
   

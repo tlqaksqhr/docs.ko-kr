@@ -1,27 +1,20 @@
 ---
 title: .NET 마이크로 서비스. 컨테이너화된 .NET 응용 프로그램을 위한 아키텍처
 description: 컨테이너화된 .NET 응용 프로그램을 위한 .NET 마이크로 서비스 아키텍처 | 전문
-keywords: Docker, 마이크로 서비스, ASP.NET, 컨테이너
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.prod: .net-core
-ms.technology: dotnet-docker
-ms.topic: article
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 289f34b12cc0278212ceb737c2b9cb3f2ff986c1
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: d4499384d63f11a1d78d0aa84749aed8ea554794
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/04/2018
 ---
 ![](./media/cover.png)
 
 # <a name="net-microservices-architecture-for-containerized-net-applications"></a>.NET 마이크로 서비스. 컨테이너화된 .NET 응용 프로그램을 위한 아키텍처
 
-다운로드 가능한 위치: <https://aka.ms/microservicesebook>
+다운로드 위치: <https://aka.ms/microservicesebook>
 
 게시자:
 
@@ -129,7 +122,7 @@ Windows 및 Linux 에코시스템에서 가장 중요한 공급업체가 지원�
 
 이 가이드는 응용 프로그램 수명 주기, DevOps, CI/CD 파이프라인 또는 팀 작업에 중점을 두지 않습니다. 이러한 주제는 상호 보완적인 가이드인 [Containerized Docker Application Lifecycle with Microsoft Platform and Tools](https://aka.ms/dockerlifecycleebook)에서 중점적으로 다룹니다. 또한 현재 이 가이드는 특정 Orchestrator에 대한 정보와 같은 Azure 인프라에 대한 구현 세부 정보도 제공하지 않습니다.
 
-### <a name="additional-resources"></a>추가 리소스
+### <a name="additional-resources"></a>추가 자료
 
 -   **Microsoft 플랫폼 및 도구를 사용하여 컨테이너화된 Docker 응용 프로그램 수명 주기**(다운로드 가능한 전자책) [*https://aka.ms/dockerlifecycleebook*](https://aka.ms/dockerlifecycleebook)
 

@@ -2,21 +2,21 @@
 title: 영속 제공된 토큰 공급자
 ms.date: 03/30/2017
 ms.assetid: 76fb27f5-8787-4b6a-bf4c-99b4be1d2e8b
-ms.openlocfilehash: 20006f87f7ecba9c09f6c957f8b6355dec7fbd32
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 145faaae709119708240863f85eb5352fb2c5a1b
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="durable-issued-token-provider"></a>영속 제공된 토큰 공급자
 이 샘플에서는 사용자 지정 클라이언트가 발급한 토큰 공급자를 구현하는 방법을 보여 줍니다.  
   
 ## <a name="discussion"></a>토론  
- Windows Communication Foundation (WCF)에 토큰 공급자는 보안 인프라에 자격 증명을 제공 하는 데 사용 됩니다. 일반적으로 토큰 공급자는 대상을 검사하고 적절한 자격 증명을 발급하여 보안 인프라에서 메시지의 보안을 유지할 수 있도록 합니다. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]는 [!INCLUDE[infocard](../../../../includes/infocard-md.md)] 토큰 공급자를 기본 제공합니다. 사용자 지정 토큰 공급자는 다음과 같은 경우에 유용합니다.  
+ Windows Communication Foundation (WCF)에 토큰 공급자는 보안 인프라에 자격 증명을 제공 하는 데 사용 됩니다. 일반적으로 토큰 공급자는 대상을 검사하고 적절한 자격 증명을 발급하여 보안 인프라에서 메시지의 보안을 유지할 수 있도록 합니다. WCF와 함께 제공 되는 [!INCLUDE[infocard](../../../../includes/infocard-md.md)] 토큰 공급자입니다. 사용자 지정 토큰 공급자는 다음과 같은 경우에 유용합니다.  
   
 -   기본 제공 토큰 공급자가 작동하지 않는 자격 증명 저장소가 있는 경우  
   
--   사용자가 세부 정보를 제공하는 지점에서 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 클라이언트가 자격 증명을 사용하는 지점으로 자격 증명을 변환하는 사용자 지정 메커니즘을 제공하려는 경우  
+-   WCF 클라이언트 자격 증명을 사용 하는 경우에 세부 정보를 제공 하는 사용자 지점에서 자격 증명을 변형에 대 한 사용자 지정 메커니즘을 제공 하려면.  
   
 -   사용자 지정 토큰을 빌드하고 있는 경우  
   
@@ -26,7 +26,7 @@ ms.lasthandoff: 05/04/2018
   
 -   사용자 지정 토큰 공급자로 클라이언트를 구성하는 방법  
   
--   발급된 토큰을 캐시하고 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 클라이언트에 제공하는 방법  
+-   발급 된 토큰을 캐시 하 고 WCF 클라이언트에 제공 하는 방법입니다.  
   
 -   서버의 X.509 인증서를 사용하여 클라이언트에서 서버를 인증하는 방법  
   
@@ -109,7 +109,7 @@ ms.lasthandoff: 05/04/2018
  보안 토큰 서비스는 표준 wsHttpBinding을 사용하여 단일 끝점을 노출합니다. 보안 토큰 서비스는 클라이언트의 토큰 요청에 응답하며, 클라이언트가 Windows 계정을 사용하여 인증하는 경우 클라이언트의 사용자 이름을 발급된 토큰의 클레임으로 포함하는 토큰을 발급합니다. 토큰을 만드는 동안 보안 토큰 서비스는 CN=STS 인증서에 연결된 개인 키를 사용하여 토큰에 서명합니다. 또한 대칭 키를 만들고 CN=localhost 인증서와 연관된 공개 키를 사용하여 이를 암호화합니다. 보안 토큰 서비스는 토큰을 클라이언트에 반환하면서 대칭 키도 반환합니다. 클라이언트는 발급된 토큰을 계산기 서비스에 제공하고 대칭 키로 메시지에 서명하여 해당 키를 알고 있음을 증명합니다.  
   
 ## <a name="custom-client-credentials-and-token-provider"></a>사용자 지정 클라이언트 자격 증명 및 토큰 공급자  
- 다음 단계에서는 발급된 토큰을 캐시하는 사용자 지정 토큰 공급자를 개발하고 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 보안과 통합하는 방법을 보여 줍니다.  
+ 다음 단계는 발급 된 토큰 사용자 지정 토큰 공급자를 개발 및 WCF와 통합 하는 방법을 보여 줍니다: 보안 합니다.  
   
 #### <a name="to-develop-a-custom-token-provider"></a>사용자 지정 토큰 공급자를 개발하려면  
   

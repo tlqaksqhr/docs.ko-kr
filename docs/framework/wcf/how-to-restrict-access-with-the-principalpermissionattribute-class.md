@@ -9,11 +9,11 @@ helpviewer_keywords:
 - WCF, authorization
 - WCF, security
 ms.assetid: 5162f5c4-8781-4cc4-9425-bb7620eaeaf4
-ms.openlocfilehash: a93726598b31ee57d583aca16012d615e90441f4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 38e3c62aaf0e87860732bcb12c61da69b1c4346d
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="how-to-restrict-access-with-the-principalpermissionattribute-class"></a>방법: PrincipalPermissionAttribute 클래스를 사용하여 액세스 제한
 Windows 도메인 컴퓨터의 리소스에 대한 액세스 제어는 기본적인 보안 작업입니다. 예를 들어, 특정 사용자만 급여 정보와 같은 민감한 데이터를 볼 수 있어야 합니다. 이 항목에서는 사용자가 미리 정의된 그룹에 속하도록 요청하여 메서드에 대한 액세스를 제한하는 방법을 설명합니다. 작업 예제를 참조 하십시오. [서비스 작업에 대 한 액세스 권한을 부여](../../../docs/framework/wcf/samples/authorizing-access-to-service-operations.md)합니다.  
@@ -76,7 +76,7 @@ Windows 도메인 컴퓨터의 리소스에 대한 액세스 제어는 기본적
     </behaviors>  
     ```  
   
-     이 값을 `UseAspNetRoles`로 설정하면 `Name`의 `PrincipalPermissionAttribute` 속성이 문자열 비교를 수행하는 데 사용됨을 나타냅니다. 인증서가 클라이언트 자격 증명으로 사용되는 경우 기본적으로 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]는 인증서 일반 이름과 지문을 세미콜론으로 연결하여 클라이언트의 기본 ID에 대한 고유한 값을 만듭니다. `UseAspNetRoles`를 서비스의 `PrincipalPermissionMode`로 설정한 경우 이 기본 ID 값을 `Name` 속성 값과 비교하여 사용자의 액세스 권한을 결정합니다.  
+     이 값을 `UseAspNetRoles`로 설정하면 `Name`의 `PrincipalPermissionAttribute` 속성이 문자열 비교를 수행하는 데 사용됨을 나타냅니다. 인증서를 클라이언트 자격 증명으로 사용 하면 기본적으로 WCF 연결 인증서 일반 이름과 지문을 세미콜론 클라이언트의 기본 id에 대 한 고유 값을 만드는 데 사용 하 여 합니다. `UseAspNetRoles`를 서비스의 `PrincipalPermissionMode`로 설정한 경우 이 기본 ID 값을 `Name` 속성 값과 비교하여 사용자의 액세스 권한을 결정합니다.  
   
      또는 자체 호스팅되는 서비스를 만드는 경우 코드의 <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior.PrincipalPermissionMode%2A> 속성을 다음 코드와 같이 설정합니다.  
   

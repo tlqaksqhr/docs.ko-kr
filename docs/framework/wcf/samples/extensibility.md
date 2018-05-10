@@ -2,11 +2,11 @@
 title: 확장성
 ms.date: 03/30/2017
 ms.assetid: cd7ddffc-a261-44aa-bd50-33c1c74f0df0
-ms.openlocfilehash: 7cba21715a6a0347e910300de46c1e47fd6e30bf
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 010d6d7b17d3cb39e19c23550ca3522d6ea73a21
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="extensibility"></a>확장성
 이 섹션에는 사용자 지정 확장성 및 Windows Communication Foundation (WCF)의 기타 기능을 처리 하는 샘플이 들어 있습니다.  
@@ -55,10 +55,10 @@ ms.lasthandoff: 05/04/2018
  데이터 계약 서로게이트 클래스를 사용하여 serialization, deserialization, 스키마 내보내기 및 스키마 가져오기 등의 프로세스를 사용자 지정하는 방법을 보여 줍니다.  
   
  [오류 처리 및 오류 보고에 대한 제어 확장](../../../../docs/framework/wcf/samples/extending-control-over-error-handling-and-reporting.md)  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 서비스에서 <xref:System.ServiceModel.Dispatcher.IErrorHandler> 인터페이스를 사용하여 오류 처리 및 오류 보고에 대한 제어를 확장하는 방법을 보여 줍니다.  
+ 오류 처리 및 오류 보고 사용 하 여 WCF 서비스에 대 한 제어를 확장 하는 방법을 보여 줍니다.는 <xref:System.ServiceModel.Dispatcher.IErrorHandler> 인터페이스입니다.  
   
  [메시지 검사기](../../../../docs/framework/wcf/samples/message-inspectors.md)  
  클라이언트 및 서비스 메시지 검사자를 구현 및 구성하는 방법을 보여 줍니다.  
   
  [WebContentTypeMapper](../../../../docs/framework/wcf/samples/webcontenttypemapper-sample.md)  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 메시지 본문 형식에 새 콘텐츠 형식을 매핑하는 방법을 보여 줍니다.
+ WCF 메시지 본문 형식에 새 콘텐츠 형식을 매핑하는 방법을 보여 줍니다.

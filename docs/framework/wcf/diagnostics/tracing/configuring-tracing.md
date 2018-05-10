@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - tracing [WCF]
 ms.assetid: 82922010-e8b3-40eb-98c4-10fc05c6d65d
-ms.openlocfilehash: 2f84254a993df35ef999ee6cdd36c4f6b256a89f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: f9603f79992c31ad1af3b6c672b448ab031ba78d
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="configuring-tracing"></a>추적 구성
 이 항목에서는 추적을 사용하고, 추적을 내보내도록 추적 소스를 구성하고, 추적 수준을 설정하고, 종단 간 추적 상관 관계를 지원하도록 동작 추적 및 전파를 설정하고, 추적에 액세스하도록 추적 수신기를 설정하는 방법에 대해 설명합니다.  
@@ -25,11 +25,11 @@ ms.lasthandoff: 05/04/2018
   
 -   추적 기능 오작동 시 Windows 오류 이벤트. 참조 [이벤트 로깅](../../../../../docs/framework/wcf/diagnostics/event-logging/index.md)합니다.  
   
- [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 추적은 <xref:System.Diagnostics>를 기반으로 합니다. 추적을 사용하려면 구성 파일 또는 코드에 추적 소스를 정의해야 합니다. [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)]는 각 [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 어셈블리에 대한 추적 소스를 정의합니다. `System.ServiceModel` 추적 소스는 가장 일반적인 [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 추적 소스이며, 전송 시작/종료에서 사용자 코드 시작/종료까지 [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 통신 스택의 처리 중요 시점을 기록합니다. `System.ServiceModel.MessageLogging` 추적 소스는 시스템을 통해 이동하는 모든 메시지를 기록합니다.  
+ WCF 추적의 맨 위에 빌드됩니다 <xref:System.Diagnostics>합니다. 추적을 사용하려면 구성 파일 또는 코드에 추적 소스를 정의해야 합니다. WCF 각 WCF 어셈블리에 대 한 추적 소스를 정의합니다. `System.ServiceModel` 추적 원본이 가장 일반적인 WCF 추적 소스 이며 WCF 통신 스택을 사용자 코드 시작/종료 전송 시작/종료에서 전체 처리 중요 시점을 기록 합니다. `System.ServiceModel.MessageLogging` 추적 소스는 시스템을 통해 이동하는 모든 메시지를 기록합니다.  
   
- 추적은 기본적으로 사용되지 않습니다. 추적을 활성화하려면 추적 수신기를 만들고 구성에서 선택한 추적 소스에 대해 "Off" 이외의 추적 수준을 설정해야 합니다. 그렇지 않으면, [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)]가 추적을 생성하지 않습니다. 수신기를 지정하지 않으면 추적이 자동으로 사용되지 않습니다. 수신기는 정의되었지만 수준이 지정되지 않은 경우 수준이 기본적으로 "Off"로 설정됩니다. 이 설정은 추적이 내보내지지 않음을 의미합니다.  
+ 추적은 기본적으로 사용되지 않습니다. 추적을 활성화 하려면 추적 수신기 만들기 및 구성;에 "Off"에서 선택한 추적 소스에 대 한 이외의 추적 수준을 설정 해야 합니다. 그렇지 않은 경우 WCF 추적을 생성 하지 않습니다. 수신기를 지정하지 않으면 추적이 자동으로 사용되지 않습니다. 수신기는 정의되었지만 수준이 지정되지 않은 경우 수준이 기본적으로 "Off"로 설정됩니다. 이 설정은 추적이 내보내지지 않음을 의미합니다.  
   
- 사용자 지정 작업 호출자와 같은 [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 확장성 지점을 사용하는 경우에는 추적을 직접 내보내야 합니다. 이는 확장성 지점을 구현하는 경우 [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)]에서는 더 이상 기본 경로에서 표준 추적을 내보낼 수 없기 때문입니다. 추적을 내보내 수동 추적 지원을 구현하지 않으면 예상하는 추적이 표시되지 않을 수 있습니다.  
+ 사용자 지정 작업 호출자와 같은 WCF 확장성 지점을 사용 하는 경우 추적을 직접 내보내야 합니다. WCF 확장성 지점을 구현 하는 경우 기본 경로에서 표준 추적을 내보낼 더 이상 수 때문입니다. 추적을 내보내 수동 추적 지원을 구현하지 않으면 예상하는 추적이 표시되지 않을 수 있습니다.  
   
  응용 프로그램의 구성 파일(웹에 호스팅된 응용 프로그램의 경우 Web.config, 자체 호스팅 응용 프로그램의 경우 Appname.exe.config)을 편집하여 추적을 구성할 수 있습니다. 다음은 이러한 편집의 예제입니다. 이러한 설정에 대 한 자세한 내용은 "구성 추적 수신기에 추적을 사용" 섹션을 참조 합니다.  
   
@@ -52,12 +52,12 @@ ms.lasthandoff: 05/04/2018
 ```  
   
 > [!NOTE]
->  구성 파일을 편집 하려면는 [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] Visual Studio에서 프로젝트를 서비스, 응용 프로그램의 구성 파일을 마우스 오른쪽 단추로 클릭-Web.config, 자체 호스팅 응용 프로그램의 경우 appname.exe.config 웹 호스팅 응용 프로그램에 대 한  **솔루션 탐색기**합니다. 선택 된 **WCF 구성 편집** 상황에 맞는 메뉴 항목입니다. 그러면는 [Configuration Editor 도구 (SvcConfigEditor.exe)](../../../../../docs/framework/wcf/configuration-editor-tool-svcconfigeditor-exe.md)에 대 한 구성 설정을 수정할 수 있습니다 [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 그래픽 사용자 인터페이스를 사용 하 여 서비스입니다.  
+>  Visual Studio에서 WCF 서비스 프로젝트의 구성 파일을 편집 하려면 마우스 오른쪽 단추로 클릭 하 여 응용 프로그램의 구성 파일-Web.config, 자체 호스팅 응용 프로그램의 경우 appname.exe.config 웹 호스팅 응용 프로그램에 대 한 **솔루션 탐색기** . 선택 된 **WCF 구성 편집** 상황에 맞는 메뉴 항목입니다. 그러면는 [Configuration Editor 도구 (SvcConfigEditor.exe)](../../../../../docs/framework/wcf/configuration-editor-tool-svcconfigeditor-exe.md), 그래픽 사용자 인터페이스를 사용 하 여 WCF 서비스에 대 한 구성 설정을 수정할 수 있습니다.  
   
 ## <a name="configuring-trace-sources-to-emit-traces"></a>추적을 내보내도록 추적 소스 구성  
- [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)]는 각 어셈블리에 대한 추적 소스를 정의합니다. 어셈블리 내에 생성된 추적은 해당 소스에 대해 정의된 수신기를 통해 액세스합니다. 다음 추적 소스가 정의됩니다.  
+ WCF는 각 어셈블리에 대 한 추적 소스를 정의합니다. 어셈블리 내에 생성된 추적은 해당 소스에 대해 정의된 수신기를 통해 액세스합니다. 다음 추적 소스가 정의됩니다.  
   
--   System.ServiceModel: 구성을 읽을 때마다, 메시지가 전송, 보안 처리에서 처리될 때마다, 메시지가 사용자 코드에서 디스패치될 때마다 모든 [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 처리 단계를 기록합니다.  
+-   System.ServiceModel: WCF 때마다 처리의 모든 단계를 기록 하 구성을 읽을, 메시지를 처리는 전송에서, 보안 처리, 메시지가 사용자 코드 및 기타 등등에 디스패치 됩니다.  
   
 -   System.ServiceModel.MessageLogging: 시스템을 통해 이동하는 모든 메시지를 기록합니다.  
   
@@ -135,7 +135,7 @@ ms.lasthandoff: 05/04/2018
  사용자 정의 추적 소스를 만드는 방법에 대 한 자세한 내용은 참조 [추적 확장](../../../../../docs/framework/wcf/samples/extending-tracing.md)합니다.  
   
 ## <a name="configuring-trace-listeners-to-consume-traces"></a>추적을 사용하도록 추적 수신기 구성  
- 런타임 시 [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)]는 데이터를 처리하는 수신기에 추적 데이터를 공급합니다. [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)]는 <xref:System.Diagnostics>(출력에 사용하는 형식은 다를 수 있음)에 대해 사전 정의된 몇 가지 수신기를 제공합니다. 사용자 지정 수신기 형식을 추가할 수도 있습니다.  
+ 런타임 시, WCF 피드 데이터를 처리 하는 수신기를 추적 데이터입니다. 에 대 한 몇 가지 미리 정의 된 수신기를 제공 하는 WCF <xref:System.Diagnostics>, 출력에 사용 하는 형식은 다를 수 있음. 사용자 지정 수신기 형식을 추가할 수도 있습니다.  
   
  `add`를 사용하여 사용할 추적 수신기의 이름과 형식을 지정할 수 있습니다. 예제 구성에서는 수신기 이름을 `traceListener`로 지정하고 표준 .NET Framework 추적 수신기(`System.Diagnostics.XmlWriterTraceListener`)를 사용할 형식으로 추가했습니다. 각 소스에 대한 추적 수신기를 여러 개 추가할 수 있습니다. 추적 수신기가 파일로 추적을 내보내는 경우에는 구성 파일에 출력 파일 위치와 이름을 지정해야 합니다. 이 작업을 수행하려면 `initializeData`를 해당 수신기의 파일 이름으로 설정합니다. 파일 이름을 지정하지 않으면 사용된 수신기 형식에 따라 임의 파일 이름이 생성됩니다. <xref:System.Diagnostics.XmlWriterTraceListener>가 사용되면 확장명이 없는 파일 이름이 생성됩니다. 사용자 지정 수신기를 구현하는 경우 이 특성을 사용하여 파일 이름 이외의 초기화 데이터를 받을 수도 있습니다. 예를 들면 이 특성에 대한 데이터베이스 식별자를 지정할 수 있습니다.  
   
@@ -169,13 +169,13 @@ ms.lasthandoff: 05/04/2018
  `activityTracing` 특성에 대한 지정된 `switchValue` 값은 끝점 내에서 동작 경계와 전송에 대한 추적을 내보내는 동작 추적을 활성화하는 데 사용됩니다.  
   
 > [!NOTE]
->  [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)]에서 특정 확장성 기능을 사용하는 경우 동작 추적이 활성화될 때 <xref:System.NullReferenceException>을 가져올 수 있습니다. 이 문제를 해결하려면 응용 프로그램의 구성 파일을 확인하고 추적 소스의 `switchValue` 특성이 `activityTracing`으로 설정되지 않았는지 확인합니다.  
+>  WCF에서 특정 확장성 기능을 사용할 때 표시 될 수 있습니다는 <xref:System.NullReferenceException> 동작 추적을 활성화 한 경우. 이 문제를 해결하려면 응용 프로그램의 구성 파일을 확인하고 추적 소스의 `switchValue` 특성이 `activityTracing`으로 설정되지 않았는지 확인합니다.  
   
  `propagateActivity` 특성은 동작을 메시지 교환에 참여하는 다른 끝점에 전파해야 하는지 여부를 나타냅니다. 이 값을 `true`로 설정하여 두 끝점에서 생성된 추적 파일을 가져오고 한 끝점의 추적 집합이 다른 끝점의 추적 집합으로 이동한 방법을 확인할 수 있습니다.  
   
  동작 추적 및 전파 하는 방법에 대 한 자세한 내용은 참조 [전파](../../../../../docs/framework/wcf/diagnostics/tracing/propagation.md)합니다.  
   
- 둘 다 `propagateActivity` 및 `ActivityTracing` 부울 값 System.ServiceModel TraceSource에 적용 합니다. `ActivityTracing` 모든 추적 소스에도 적용 됩니다 값 포함 하 여 [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 또는 사용자 정의 합니다.  
+ 둘 다 `propagateActivity` 및 `ActivityTracing` 부울 값 System.ServiceModel TraceSource에 적용 합니다. `ActivityTracing` 값 WCF 또는 사용자 정의 포함 하 여 모든 추적 소스에도 적용 됩니다.  
   
  `propagateActivity` 특성은 사용자 정의 추적 소스에 사용할 수 없습니다. 사용자 코드 동작 ID 전파를 위해 ServiceModel `ActivityTracing`은 설정하지 않고 ServiceModel `propagateActivity` 특성은 `true`로 설정해야 합니다.  
   
