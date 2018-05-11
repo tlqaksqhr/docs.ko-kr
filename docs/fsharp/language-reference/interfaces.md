@@ -2,11 +2,11 @@
 title: 인터페이스(F#)
 description: 'F # 인터페이스에서 다른 클래스에서 구현 하는 관련된 멤버의 집합을 지정 하는 방법에 대해 알아봅니다.'
 ms.date: 05/16/2016
-ms.openlocfilehash: 174e30c03cd555d2d9c89c88bd80e06a2cdcef46
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 54ae8a2840ce26814be25f08c3ed02e12df6b7c0
+ms.sourcegitcommit: ff1d40507b3eb6e2185478e37c66c66be6de46f1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/11/2018
 ---
 # <a name="interfaces"></a>인터페이스
 
@@ -17,7 +17,7 @@ ms.lasthandoff: 05/04/2018
 ```fsharp
 // Interface declaration:
 [ attributes ]
-type interface-name =
+type [accessibility-modifier] interface-name =
     [ interface ]     [ inherit base-interface-name ...]
     abstract member1 : [ argument-types1 -> ] return-type1
     abstract member2 : [ argument-types2 -> ] return-type2
@@ -42,6 +42,8 @@ let class-name (argument-list) =
 
 ## <a name="remarks"></a>설명
 인터페이스 선언 없는 멤버가 구현 된 점을 제외 하 고 클래스 선언 유사 합니다. 대신, 모든 멤버는 키워드로 표시 된 대로 추상적 `abstract`합니다. 추상 메서드에 대 한 메서드 본문을 제공 하지 않습니다. 와 함께 방법으로 멤버의 별도 정의 포함 하 여 기본 구현을 제공할 수 있습니다는 `default` 키워드입니다. 이렇게 다른.NET 언어에서 기본 클래스의 가상 메서드를 작성 하는 것과 결과가 같습니다. 클래스에서 인터페이스를 구현 하는 가상 메서드를 재정의할 수 있습니다.
+
+인터페이스에 대 한 기본 액세스 가능성은 `public`합니다.
 
 필요에 따라 일반 F # 구문을 사용 하 여 이름을 각 메서드 매개 변수를 지정할 수 있습니다.
 

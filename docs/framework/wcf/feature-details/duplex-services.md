@@ -1,15 +1,15 @@
 ---
 title: 이중 서비스
-ms.date: 03/30/2017
+ms.date: 05/09/2018
 dev_langs:
 - csharp
 - vb
 ms.assetid: 396b875a-d203-4ebe-a3a1-6a330d962e95
-ms.openlocfilehash: afe72b01fe3ec38cc34b0a7ff4d28ff714cf3dd2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: da92b8f2d1223f582677a93a8ff6fd697512d297
+ms.sourcegitcommit: 88f251b08bf0718ce119f3d7302f514b74895038
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="duplex-services"></a>이중 서비스
 이중 서비스 계약은 양쪽 끝점에서 메시지를 다른 사용자에게 독립적으로 전송할 수 있는 메시지 교환 패턴입니다. 따라서 이중 서비스에서는 클라이언트 끝점으로 메시지를 보내 이벤트와 비슷한 동작을 제공할 수 있습니다. 이중 통신은 클라이언트가 서비스에 연결할 때 이루어지며, 서비스에서 클라이언트로 메시지를 다시 보낼 수 있는 채널을 제공합니다. 이중 서비스의 이벤트와 비슷한 동작은 세션 내에서만 작동합니다.  
@@ -52,14 +52,19 @@ HTTP could not register URL
 htp://+:80/Temporary_Listen_Addresses/<guid> because TCP port 80 is being used by another application.  
 ```  
   
- 다음 샘플 코드에서는 코드에서 클라이언트 끝점 주소를 지정하는 방법을 보여 줍니다.  
+ 다음 샘플 코드에서는 클라이언트를 지정 하는 방법을 끝점 주소 프로그래밍 방식으로
   
-```  
+```csharp  
 WSDualHttpBinding binding = new WSDualHttpBinding();  
 EndpointAddress endptadr = new EndpointAddress("http://localhost:12000/DuplexTestUsingCode/Server");  
 binding.ClientBaseAddress = new Uri("http://localhost:8000/DuplexTestUsingCode/Client/");  
 ```  
-  
+```vb
+Dim binding As New WSDualHttpBinding()
+Dim endptadr As New EndpointAddress("http://localhost:12000/DuplexTestUsingCode/Server")
+binding.ClientBaseAddress = New Uri("http://localhost:8000/DuplexTestUsingCode/Client/")  
+```
+
  다음 샘플 코드에서는 구성에서 클라이언트 끝점 주소를 지정하는 방법을 보여 줍니다.  
   
 ```xml  

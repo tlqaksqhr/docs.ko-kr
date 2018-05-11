@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - configuring HTTP [WCF]
 ms.assetid: b0c29a86-bc0c-41b3-bc1e-4eb5bb5714d4
-ms.openlocfilehash: 70c947724abf8da68ec8f7e6d858e26fec62dce5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ed9c7a444018e7c5e9ac00de82133cce633fac93
+ms.sourcegitcommit: 88f251b08bf0718ce119f3d7302f514b74895038
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="configuring-http-and-https"></a>HTTP 및 HTTPS 구성
 WCF 서비스 및 클라이언트는 HTTP 및 HTTPS를 통해 통신할 수 있습니다. HTTP/HTTPS 설정은 IIS(인터넷 정보 서비스)나 명령줄 도구를 사용하여 구성합니다. WCF 서비스가 IIS 아래에서 호스팅되거나 IIS에서 inetmgr.exe 도구를 사용하여 HTTP 또는 HTTPS 설정을 구성할 수 있는 경우입니다. WCF 서비스가 자체 호스팅되는 경우 HTTP 또는 HTTPS 설정은 명령줄 도구를 사용하여 구성됩니다.  
@@ -19,7 +19,7 @@ WCF 서비스 및 클라이언트는 HTTP 및 HTTPS를 통해 통신할 수 있�
   
  실행 하는 경우 [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] 또는 [!INCLUDE[wxp](../../../../includes/wxp-md.md)]를 HttpCfg.exe 도구를 사용 합니다. [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)]이 도구를 자동으로 설치합니다. 실행 하는 경우 [!INCLUDE[wxp](../../../../includes/wxp-md.md)]에서 도구를 다운로드할 수 있습니다 [Windows XP 서비스 팩 2 지원 도구](http://go.microsoft.com/fwlink/?LinkId=88606)합니다. 자세한 내용은 참조 [Httpcfg 개요](http://go.microsoft.com/fwlink/?LinkId=88605)합니다.  
   
- [!INCLUDE[wv](../../../../includes/wv-md.md)] 또는 Windows 7을 실행하는 경우에는 Netsh.exe 도구를 사용하여 이러한 설정을 구성합니다.  
+ 실행 하는 경우 [!INCLUDE[wv](../../../../includes/wv-md.md)] 또는 Windows 7의 경우 이러한 설정을 구성 하면 Netsh.exe 도구와 함께 합니다.  
   
 ## <a name="configuring-namespace-reservations"></a>네임스페이스 예약 구성  
  네임스페이스 예약은 HTTP URL 네임스페이스 일부에 대한 권한을 특정 사용자 그룹에 할당합니다. 예약을 통해 이러한 사용자에게 네임스페이스의 해당 부분에서 수신 대기하는 서비스를 만들 수 있는 권한을 제공합니다. 예약은 URL 접두사이며 예약이 예약 경로의 모든 하위 경로를 포함함을 의미합니다. 네임스페이스 예약은 와일드카드를 사용하는 두 가지 방법을 허용합니다. HTTP Server API 설명서에서 설명 하는 [와일드 카드가 포함 하는 네임 스페이스 클레임 확인 순서](http://go.microsoft.com/fwlink/?LinkId=94841)합니다.  
