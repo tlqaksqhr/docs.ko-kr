@@ -1,20 +1,13 @@
 ---
-title: "이벤트 소개"
-description: "이 개요에서는 .NET Core의 이벤트와 이벤트에 대한 언어 디자인 목표를 알아봅니다."
-keywords: .NET, .NET Core
-author: BillWagner
-ms.author: wiwagn
+title: 이벤트 소개
+description: 이 개요에서는 .NET Core의 이벤트와 이벤트에 대한 언어 디자인 목표를 알아봅니다.
 ms.date: 06/20/2016
-ms.topic: article
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.devlang: csharp
 ms.assetid: 9b8d2a00-1584-4a5b-8994-5003d54d8e0c
-ms.openlocfilehash: f81c2d9fc2ec69c295485fe06029b5de65335db0
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 2a2230ea5fba1b0cd5b13319677965e7a776549e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="introduction-to-events"></a>이벤트 소개
 

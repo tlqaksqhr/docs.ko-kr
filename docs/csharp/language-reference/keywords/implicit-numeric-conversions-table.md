@@ -1,23 +1,17 @@
 ---
-title: "암시적 숫자 변환 표(C# 참조)"
+title: 암시적 숫자 변환 표(C# 참조)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - conversions [C#], implicit numeric
 - implicit numeric conversions [C#]
 - numeric conversions [C#], implicit
 - types [C#], implicit numeric conversions
 ms.assetid: 72eb5a94-0491-48bf-8032-d7ebfdfeb8d8
-caps.latest.revision: "12"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: f6b1705dca357fd2a155fc1ea9c7fe0f65bad8a7
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 2d417a2020656f300de0517526742679388f262e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="implicit-numeric-conversions-table-c-reference"></a>암시적 숫자 변환 표(C# 참조)
 다음 표에서는 미리 정의된 암시적 숫자 변환을 보여 줍니다. 암시적 변환은 메서드 호출, 할당 문을 비롯한 대부분의 경우에서 발생할 수 있습니다.  
@@ -30,12 +24,12 @@ ms.lasthandoff: 11/21/2017
 |[ushort](../../../csharp/language-reference/keywords/ushort.md)|`int`, `uint`, `long`, `ulong`, `float`, `double` 또는 `decimal`|  
 |[int](../../../csharp/language-reference/keywords/int.md)|`long`, `float`, `double` 또는 `decimal`|  
 |[uint](../../../csharp/language-reference/keywords/uint.md)|`long`, `ulong`, `float`, `double` 또는 `decimal`|  
-|[long](../../../csharp/language-reference/keywords/long.md)|`float`, `double` 또는 `decimal`|  
+|[long](../../../csharp/language-reference/keywords/long.md)|`float`, `double`또는 `decimal`|  
 |[char](../../../csharp/language-reference/keywords/char.md)|`ushort`, `int`, `uint`, `long`, `ulong`, `float`, `double` 또는 `decimal`|  
 |[float](../../../csharp/language-reference/keywords/float.md)|`double`|  
-|[ulong](../../../csharp/language-reference/keywords/ulong.md)|`float`, `double` 또는 `decimal`|  
+|[ulong](../../../csharp/language-reference/keywords/ulong.md)|`float`, `double`또는 `decimal`|  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>설명  
   
 -   `int`, `uint`, `long` 또는 `ulong`에서 `float`로 변환하고 `long` 또는 `ulong`에서 `double`로 변환하는 동안 전체 자릿수가 손실될 수도 있지만 크기는 손실되지 않습니다.  
   

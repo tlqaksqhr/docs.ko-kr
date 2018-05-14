@@ -1,26 +1,17 @@
 ---
-title: "방법: XML 파일에 개체 데이터 쓰기(C#)"
-ms.custom: 
+title: '방법: XML 파일에 개체 데이터 쓰기(C#)'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-csharp
-ms.topic: article
 ms.assetid: 7681eb98-703d-4005-a369-26a7bca0f894
-caps.latest.revision: "4"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: f43075c0b4d04ff935e7a29ed270b348209d17b1
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 1c8bfd00452cee63456bc3bf64ccf4a0c61aa06e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-write-object-data-to-an-xml-file-c"></a>방법: XML 파일에 개체 데이터 쓰기(C#)
 이 예제에서는 <xref:System.Xml.Serialization.XmlSerializer> 클래스를 사용하여 XML 파일에 클래스의 개체를 씁니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
   
 ```csharp  
 public class XMLWrite  

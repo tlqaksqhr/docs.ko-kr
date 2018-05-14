@@ -1,13 +1,6 @@
 ---
-title: "어셈블리 보안 고려 사항"
-ms.custom: 
+title: 어셈블리 보안 고려 사항
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-bcl
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - assemblies [.NET Framework], security
 - signcodes
@@ -22,16 +15,13 @@ helpviewer_keywords:
 - security [.NET Framework], assemblies
 - integrity with assemblies
 ms.assetid: 1b5439c1-f3d5-4529-bd69-01814703d067
-caps.latest.revision: "14"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: f649c45420d111a1b94374f3025ef807eb3d8efb
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: a4f791ea339c9188ac8fada525611fc68821351d
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="assembly-security-considerations"></a>어셈블리 보안 고려 사항
 <a name="top"></a> 어셈블리를 빌드할 때 어셈블리를 실행하는 데 필요한 권한을 지정할 수 있습니다. 어셈블리에 대한 특정 권한 부여 여부는 증명 정보를 바탕으로 합니다.  
@@ -40,7 +30,7 @@ ms.lasthandoff: 12/22/2017
   
 -   먼저 입력된 증명 정보를 로더에 의해 수집된 증명 정보와 결합하여 정책 결정에 사용할 최종 증명 정보를 만듭니다. 이 의미 체계를 사용하는 메서드로는 **Assembly.Load**, **Assembly.LoadFrom** 및 **Activator.CreateInstance**가 있습니다.  
   
--   또 다른 방법은 입력된 증명 정보를 바꾸지 않고 정책 결정을 위한 최종 증명 정보로 사용하는 것입니다. 이 의미 체계를 사용하는 메서드로는 **Assembly.Load(byte[])** 및 **AppDomain.DefineDynamicAssembly()**가 있습니다.  
+-   또 다른 방법은 입력된 증명 정보를 바꾸지 않고 정책 결정을 위한 최종 증명 정보로 사용하는 것입니다. 이 의미 체계를 사용하는 메서드로는 **Assembly.Load(byte[])** 및 **AppDomain.DefineDynamicAssembly()** 가 있습니다.  
   
  선택적 권한은 어셈블리가 실행될 컴퓨터에 설정한 [보안 정책](../../../docs/framework/misc/code-access-security-basics.md)으로 부여될 수 있습니다. 코드에서 모든 가능한 보안 예외를 처리하게 하려면 다음 중 하나를 수행해야 합니다.  
   

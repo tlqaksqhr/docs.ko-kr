@@ -1,20 +1,13 @@
 ---
-title: "대리자 소개"
-description: "기본 개념을 소개하고 대리자에 대한 언어 디자인 목표를 설명하는 이 개요 항목에서 대리자에 대해 알아봅니다."
-keywords: .NET, .NET Core
-author: BillWagner
-ms.author: wiwagn
+title: 대리자 소개
+description: 기본 개념을 소개하고 대리자에 대한 언어 디자인 목표를 설명하는 이 개요 항목에서 대리자에 대해 알아봅니다.
 ms.date: 06/20/2016
-ms.topic: article
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.devlang: csharp
 ms.assetid: 59b61d77-84e5-457b-8da5-fb5f24ca6ed6
-ms.openlocfilehash: dd4c68fb4f960d0c2d5cbdc9e699650070cacaf1
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: d42d9d10aeaa153f12933fa3a59e58719f7741e7
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="introduction-to-delegates"></a>대리자 소개
 

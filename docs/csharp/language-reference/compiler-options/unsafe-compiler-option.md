@@ -1,23 +1,17 @@
 ---
 title: -unsafe(C# 컴파일러 옵션)
 ms.date: 04/25/2018
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 f1_keywords:
 - /unsafe
 helpviewer_keywords:
 - -unsafe compiler option [C#]
 - unsafe compiler option [C#]
 - /unsafe compiler option [C#]
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 35868923ed2f34587c66f04395324489e8b36538
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: e308cae4a46efd53a77baf5b175e9069b5371fa4
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="-unsafe-c-compiler-options"></a>-unsafe(C# 컴파일러 옵션)
 **-unsafe** 컴파일러 옵션을 사용하면 [unsafe](../../../csharp/language-reference/keywords/unsafe.md) 키워드를 사용하는 코드를 컴파일할 수 있습니다.  

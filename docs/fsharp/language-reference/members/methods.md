@@ -2,11 +2,11 @@
 title: 메서드(F#)
 description: '어떻게는 F # 메서드는 노출 하 고 개체 및 형식과의 동작 및 기능을 구현 하는 데 사용 되는 형식과 연결 하는 함수에 알아봅니다.'
 ms.date: 05/16/2016
-ms.openlocfilehash: 6cd354eaa4698bb194fd8fc04b09348e708cb0f8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6e0b0789d97a9671425fb08c56c84ba1f66dfbe6
+ms.sourcegitcommit: e5bb395ec86f536e114314184288f40a8c745e2e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/12/2018
 ---
 # <a name="methods"></a>메서드
 
@@ -34,7 +34,7 @@ abstract member self-identifier.method-name : type-signature
 [ attributes ]
 abstract member [inline] self-identifier.method-name : type-signature
 [ attributes ]
-default member [inline] self-identifier.method-nameparameter-list[ : return-type ] =
+default [inline] self-identifier.method-nameparameter-list[ : return-type ] =
     method-body
 
 // Override of inherited virtual method.

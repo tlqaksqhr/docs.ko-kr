@@ -2,11 +2,11 @@
 title: 참조 셀(F#)
 description: 'F # 참조 셀은 참조 의미론을 통해 변경할 수 있는 값을 만들 수 있도록 하는 저장소 위치 하는 방법에 대해 알아봅니다.'
 ms.date: 05/16/2016
-ms.openlocfilehash: d68726619bdfce5a9ed9bd94d6434427644cd9f1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3a632425356a250f07e5babd2751b9923eec6552
+ms.sourcegitcommit: e5bb395ec86f536e114314184288f40a8c745e2e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/12/2018
 ---
 # <a name="reference-cells"></a>참조 셀
 
@@ -81,6 +81,9 @@ let ref x = { contents = x }
 >[!NOTE]
 C# 프로그래머는 ref 다르게 작동 F #에서 C#에서 사용 하지 않고 알고 있어야 합니다. 예를 들어 인수를 전달 하는 경우 ref 사용 않아도 같습니다 F #에서 C#에서 마찬가지로 됩니다.
 
+>[!NOTE]
+`mutable` 변수를 자동으로 승격 될 수 있습니다 `'a ref` 클로저;에 의해 캡처된 참조 [값](values/index.md)합니다.
+
 ## <a name="consuming-c-ref-returns"></a>C# 사용 `ref` 반환
 
 사용할 수 있는 F # 4.1 부터는 `ref` C#의 생성을 반환 합니다.  이러한 호출의 결과 `byref<_>` 포인터입니다.
@@ -132,3 +135,5 @@ let f (x: byref<int>) = &x
 [매개 변수 및 인수](parameters-and-arguments.md)
 
 [기호 및 연산자 참조](symbol-and-operator-reference/index.md)
+
+[값](values/index.md)

@@ -1,29 +1,18 @@
 ---
-title: "스타일시트 매개 변수 및 확장명 개체의 XsltArgumentList"
-ms.custom: 
+title: 스타일시트 매개 변수 및 확장명 개체의 XsltArgumentList
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: de2f0dce-6b98-4908-bba7-ed150cc50355
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: b14365266d5a477b32dbbe177d9644596b9e3b38
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 808d21ae0eabdc7502ef97facc3d45f2220883af
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="xsltargumentlist-for-style-sheet-parameters-and-extension-objects"></a>스타일시트 매개 변수 및 확장명 개체의 XsltArgumentList
 <xref:System.Xml.Xsl.XsltArgumentList> 클래스에는 XSLT(Extensible Stylesheet Language for Transformations) 매개 변수와 XSLT 확장 개체가 포함되어 있습니다. 이러한 매개 변수와 확장 개체는 <xref:System.Xml.Xsl.XslTransform.Transform%2A> 메서드에 전달될 경우 스타일시트에서 호출할 수 있습니다.  
@@ -46,7 +35,7 @@ ms.lasthandoff: 12/23/2017
 ## <a name="xslt-style-sheet-parameters"></a>XSLT 스타일시트 매개 변수  
  <xref:System.Xml.Xsl.XsltArgumentList> 메서드를 사용하여 <xref:System.Xml.Xsl.XsltArgumentList.AddParam%2A>에 XSLT 매개 변수를 추가합니다. 그러면 정규화된 이름과 네임스페이스 URI(Uniform Resource Identifier)가 매개 변수 개체와 연결됩니다.  
   
- 매개 변수 개체는 W3C(World Wide Web 컨소시엄) 형식과 일치해야 합니다. 다음 표에서는 해당하는 W3C 형식과 해당 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 클래스(형식), 그리고 W3C 형식이 XPath(XML Path Language) 형식인지, 또는 XSLT 형식인지를 보여줍니다.  
+ 매개 변수 개체는 W3C(World Wide Web 컨소시엄) 형식과 일치해야 합니다. 다음 표에서는 해당하는 W3C 형식과 해당 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 클래스(형식), 그리고 W3C 형식이 XPath(XML Path Language) 형식인지, 또는 XSLT 형식인지를 보여 줍니다.  
   
 |W3C 형식|해당 .NET Framework 클래스(형식)|XPath 형식 또는 XSLT 형식|  
 |--------------|----------------------------------------------|-----------------------------|  

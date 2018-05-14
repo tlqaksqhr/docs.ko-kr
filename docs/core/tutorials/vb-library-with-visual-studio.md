@@ -4,18 +4,13 @@ description: Visual Studio 2017을 사용하여 Visual Basic으로 작성된 클
 author: rpetrusha
 ms.author: ronpet
 ms.date: 08/07/2017
-ms.topic: conceptual
-ms.prod: dotnet-core
-ms.technology: devlang-vb
 dev_langs:
 - vb
-ms.workload:
-- dotnetcore
-ms.openlocfilehash: 149be4788d924afee8affc816eede075cbe4e3a1
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: ec01307ec438e7b7dce6b4b825952c110276305c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="building-a-class-library-with-visual-basic-and-net-core-in-visual-studio-2017"></a>Visual Studio 2017에서 Visual Basic 및 .NET Core로 클래스 라이브러리 빌드
 

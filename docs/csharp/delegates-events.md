@@ -1,20 +1,13 @@
 ---
-title: "대리자 및 이벤트"
-description: ".NET Core 설명서에서 대리자 및 이벤트에 대한 정보를 찾을 수 있는 위치를 확인합니다."
-keywords: .NET, .NET Core
-author: BillWagner
-ms.author: wiwagn
+title: 대리자 및 이벤트
+description: .NET Core 설명서에서 대리자 및 이벤트에 대한 정보를 찾을 수 있는 위치를 확인합니다.
 ms.date: 06/20/2016
-ms.topic: article
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.devlang: csharp
 ms.assetid: 4e80e053-8022-4987-a8a0-209caec0315d
-ms.openlocfilehash: e511b5057cb83119819a1403d56f23f738488a3f
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 939bb0f441e5a18b1ae8d48fe9a8021bd2dad3f2
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="delegates--events"></a>대리자 및 이벤트
 

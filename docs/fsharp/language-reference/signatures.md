@@ -2,11 +2,11 @@
 title: 서명(F#)
 description: 'F # 시그니처 파일을 사용 하 여 형식, 네임 스페이스 및 모듈 등 F # 프로그램 요소를 집합의 공개 서명에 대 한 정보를 보관 하는 방법에 알아봅니다.'
 ms.date: 05/16/2016
-ms.openlocfilehash: 04539a871dda9eedd1495e0e5b1f3f5026bae037
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6e182a1a0ac7f3f9fab27026e582d83ee737822e
+ms.sourcegitcommit: e5bb395ec86f536e114314184288f40a8c745e2e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/12/2018
 ---
 # <a name="signatures"></a>서명
 
@@ -64,6 +64,9 @@ ms.lasthandoff: 05/04/2018
 
 
 - 서명 및 구현의 매개 변수 패턴( *인자*라고도 함)이 일치해야 합니다.
+
+
+- 서명 파일의 매개 변수 이름을 해당 구현 파일에서 다른 경우 서명 파일에 있는 이름 대신 사용 됩니다, 디버깅 또는 프로 파일링 하는 경우 문제를 일으킬 수 있는 합니다. 이러한 불일치 3218 프로젝트 파일의 경고 활성화 알림을 받을 하려는 경우 또는 컴파일러를 호출할 때 (참조 `--warnon` 아래 [컴파일러 옵션](compiler-options.md)).
 
 
 다음 코드 예제에서는 해당 특성과 함께 네임스페이스, 모듈, 함수 값 및 형식 서명을 포함하는 서명 파일의 예를 보여 줍니다. 또한 해당 구현 파일을 보여 줍니다.

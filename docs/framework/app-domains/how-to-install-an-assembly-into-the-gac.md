@@ -1,13 +1,6 @@
 ---
-title: "방법: 전역 어셈블리 캐시에 어셈블리 설치"
-ms.custom: 
+title: '방법: 전역 어셈블리 캐시에 어셈블리 설치'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-bcl
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - assemblies [.NET Framework], global assembly cache
 - Gacutil.exe
@@ -15,16 +8,13 @@ helpviewer_keywords:
 - global assembly cache, installing assemblies
 - Global Assembly Cache tool
 ms.assetid: a7e6f091-d02c-49ba-b736-7295cb0eb743
-caps.latest.revision: "24"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 98dd4d1e75fc37820a1b1f4eccfa48f978772687
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: ed6519cb6bb7006f62ef83cd6baf8f2e32a44d19
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="how-to-install-an-assembly-into-the-global-assembly-cache"></a>방법: 전역 어셈블리 캐시에 어셈블리 설치
 강력한 이름의 어셈블리를 전역 어셈블리 캐시(GAC)에 설치하는 방법은 두 가지입니다.  
@@ -74,13 +64,13 @@ gacutil -i hello.dll
   
 4.  GAC에 어셈블리를 추가하는 프로세스를 시작하려면 **솔루션 탐색기**의 **응용 프로그램 데이터 지정** 단계에서 **파일**을 선택합니다.  
   
-5.  **대상 컴퓨터의 폴더** 창에서 **대상 컴퓨터**에 대한 바로 가기 메뉴를 열고 **미리 정의된 폴더 표시**, **[GlobalAssemblyCache]**를 차례로 선택합니다.  
+5.  **대상 컴퓨터의 폴더** 창에서 **대상 컴퓨터**에 대한 바로 가기 메뉴를 열고 **미리 정의된 폴더 표시**, **[GlobalAssemblyCache]** 를 차례로 선택합니다.  
   
 6.  전역 어셈블리 캐시에 설치하려는 어셈블리를 포함한 솔루션의 각 프로젝트에 대해 다음을 수행합니다.  
   
     1.  **원본 컴퓨터의 폴더** 창에서 프로젝트를 선택합니다.  
   
-    2.  **대상 컴퓨터의 폴더** 창에서 **[GlobalAssemblyCache]**를 선택합니다.  
+    2.  **대상 컴퓨터의 폴더** 창에서 **[GlobalAssemblyCache]** 를 선택합니다.  
   
     3.  **원본 컴퓨터의 파일** 창에서 *<project_name>***의 기본 출력**을 선택합니다.  
   

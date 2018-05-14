@@ -2,11 +2,11 @@
 title: Discriminated Unions(F#)
 description: 'F #을 사용 하는 방법을 알아봅니다 구별 된 공용 구조체입니다.'
 ms.date: 05/16/2016
-ms.openlocfilehash: 7949fd1685ca128f19dd0d0d4aec7236169cd375
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 617c659e26df52819a98294bcbfa081ab82fed03
+ms.sourcegitcommit: e5bb395ec86f536e114314184288f40a8c745e2e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/12/2018
 ---
 # <a name="discriminated-unions"></a>구별된 공용 구조체
 
@@ -16,14 +16,16 @@ ms.lasthandoff: 05/04/2018
 
 ```fsharp
 [ attributes ]
-type type-name =
+type [accessibility-modifier] type-name =
     | case-identifier1 [of [ fieldname1 : ] type1 [ * [ fieldname2 : ] type2 ...]
     | case-identifier2 [of [fieldname3 : ]type3 [ * [ fieldname4 : ]type4 ...]
 ...
 ```
 
 ## <a name="remarks"></a>설명
-구분 된 공용 구조체 다른 언어의 공용 구조체 형식과 유사 하지만 차이점이 있습니다. 으로 c + +에서 공용 구조체 형식 또는 Visual Basic의 variant 형식과 함께 값에 저장 된 데이터를 수정 하지 않으면; 여러 가지 옵션 중 하나일 수 있습니다. 그러나 구조체와 달리 이러한 다른 언어로, 각각의 가능한 옵션은 부여는 *케이스 식별자*합니다. 케이스 식별자에 가능한 다양 한 유형의 값이 유형의 개체 수; 이름에는 값은 선택적입니다. 값이 대/소문자는 열거형 케이스와 동일 합니다. 값이 더 있는 경우 각 값 단일 값에 지정된 된 형식 또는 동일한 또는 다른 형식의 여러 필드를 집계 하는 튜플이 일 수 있습니다. F # 3.1의 경우, 현재 이름을, 개별 필드를 지정할 수 있지만 이름이 선택 사항 대/소문자 그대로의 다른 필드에 이름이 지정 된 경우에 합니다.
+구분 된 공용 구조체 다른 언어의 공용 구조체 형식과 유사 하지만 차이점이 있습니다. 으로 c + +에서 공용 구조체 형식 또는 Visual Basic의 variant 형식과 함께 값에 저장 된 데이터를 수정 하지 않으면; 여러 가지 옵션 중 하나일 수 있습니다. 그러나 구조체와 달리 이러한 다른 언어로, 각각의 가능한 옵션은 부여는 *케이스 식별자*합니다. 케이스 식별자에 가능한 다양 한 유형의 값이 유형의 개체 수; 이름에는 값은 선택적입니다. 값이 대/소문자는 열거형 케이스와 동일 합니다. 값이 더 있는 경우 각 값 단일 값에 지정된 된 형식 또는 동일한 또는 다른 형식의 여러 필드를 집계 하는 튜플이 일 수 있습니다. 이름을, 개별 필드를 지정할 수 있지만 이름이 선택 사항 대/소문자 그대로의 다른 필드에 이름이 지정 된 경우에 합니다.
+
+기본 구분 된 공용 구조체에 대 한 액세스 권한은 `public`합니다.
 
 예를 들어 셰이프 형식의 다음 선언을 생각해 보세요.
 

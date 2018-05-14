@@ -1,27 +1,17 @@
 ---
-title: ".NET Framework 응용 프로그램 배포"
-ms.custom: 
+title: .NET Framework 응용 프로그램 배포
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - deploying applications [.NET Framework]
 - .NET Framework, deploying apps
 ms.assetid: 139d4cb1-5972-40f4-bdd8-1ce68e4dfb80
-caps.latest.revision: "3"
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ecf0a4544b5417a548c7cc212e26c98bd1891c00
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 7c999b6c391294a05eb7fae1d1f076f1d52b8c5c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="deploying-net-framework-applications"></a>.NET Framework 응용 프로그램 배포
 .NET Framework 설명서의 이 섹션에서는 어셈블리를 로드하고, 어셈블리 참조를 확인하고, 네이티브 이미지 생성을 통해 응용 프로그램의 성능을 향상시키는 지침을 포함하여 .NET Framework 응용 프로그램 배포에 대한 중요한 정보를 제공합니다.  
