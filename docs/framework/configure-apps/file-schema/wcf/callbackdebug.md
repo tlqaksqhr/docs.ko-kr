@@ -1,61 +1,49 @@
 ---
 title: '&lt;callbackDebug&gt;'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 4073feda-1857-4be4-9947-227afb847ced
-caps.latest.revision: "9"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ccb48efcdd1924ade27220a685e146a7f5eeef76
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 2103c32112b6c5554d7b510f486d4cbb1349f35d
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
-# <a name="ltcallbackdebuggt"></a><span data-ttu-id="2d675-102">&lt;callbackDebug&gt;</span><span class="sxs-lookup"><span data-stu-id="2d675-102">&lt;callbackDebug&gt;</span></span>
-<span data-ttu-id="2d675-103">[!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] 콜백 개체의 서비스 디버깅을 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="2d675-103">Specifies service debugging for a [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] callback object.</span></span>  
+# <a name="ltcallbackdebuggt"></a><span data-ttu-id="99b06-102">&lt;callbackDebug&gt;</span><span class="sxs-lookup"><span data-stu-id="99b06-102">&lt;callbackDebug&gt;</span></span>
+<span data-ttu-id="99b06-103">Windows Communication Foundation (WCF) 콜백 개체에 대 한 서비스 디버깅을 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="99b06-103">Specifies service debugging for a Windows Communication Foundation (WCF) callback object.</span></span>  
   
- <span data-ttu-id="2d675-104">\<시스템입니다. ServiceModel ></span><span class="sxs-lookup"><span data-stu-id="2d675-104">\<system.ServiceModel></span></span>  
-<span data-ttu-id="2d675-105">\<동작 ></span><span class="sxs-lookup"><span data-stu-id="2d675-105">\<behaviors></span></span>  
-<span data-ttu-id="2d675-106">\<endpointBehaviors ></span><span class="sxs-lookup"><span data-stu-id="2d675-106">\<endpointBehaviors></span></span>  
-<span data-ttu-id="2d675-107">\<동작 ></span><span class="sxs-lookup"><span data-stu-id="2d675-107">\<behavior></span></span>  
-<span data-ttu-id="2d675-108">\<callbackDebug ></span><span class="sxs-lookup"><span data-stu-id="2d675-108">\<callbackDebug></span></span>  
+ <span data-ttu-id="99b06-104">\<system.ServiceModel></span><span class="sxs-lookup"><span data-stu-id="99b06-104">\<system.ServiceModel></span></span>  
+<span data-ttu-id="99b06-105">\<동작 ></span><span class="sxs-lookup"><span data-stu-id="99b06-105">\<behaviors></span></span>  
+<span data-ttu-id="99b06-106">\<endpointBehaviors></span><span class="sxs-lookup"><span data-stu-id="99b06-106">\<endpointBehaviors></span></span>  
+<span data-ttu-id="99b06-107">\<동작 ></span><span class="sxs-lookup"><span data-stu-id="99b06-107">\<behavior></span></span>  
+<span data-ttu-id="99b06-108">\<callbackDebug ></span><span class="sxs-lookup"><span data-stu-id="99b06-108">\<callbackDebug></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="2d675-109">구문</span><span class="sxs-lookup"><span data-stu-id="2d675-109">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="99b06-109">구문</span><span class="sxs-lookup"><span data-stu-id="99b06-109">Syntax</span></span>  
   
 ```xml  
 <callbackDebug  includeExceptionDetailInFaults="Boolean" />  
 ```  
   
-## <a name="type"></a><span data-ttu-id="2d675-110">형식</span><span class="sxs-lookup"><span data-stu-id="2d675-110">Type</span></span>  
+## <a name="type"></a><span data-ttu-id="99b06-110">형식</span><span class="sxs-lookup"><span data-stu-id="99b06-110">Type</span></span>  
  `Type`  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="2d675-111">특성 및 요소</span><span class="sxs-lookup"><span data-stu-id="2d675-111">Attributes and Elements</span></span>  
- <span data-ttu-id="2d675-112">다음 단원에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="2d675-112">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="99b06-111">특성 및 요소</span><span class="sxs-lookup"><span data-stu-id="99b06-111">Attributes and Elements</span></span>  
+ <span data-ttu-id="99b06-112">다음 섹션에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="99b06-112">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="2d675-113">특성</span><span class="sxs-lookup"><span data-stu-id="2d675-113">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="99b06-113">특성</span><span class="sxs-lookup"><span data-stu-id="99b06-113">Attributes</span></span>  
   
-|<span data-ttu-id="2d675-114">특성</span><span class="sxs-lookup"><span data-stu-id="2d675-114">Attribute</span></span>|<span data-ttu-id="2d675-115">설명</span><span class="sxs-lookup"><span data-stu-id="2d675-115">Description</span></span>|  
+|<span data-ttu-id="99b06-114">특성</span><span class="sxs-lookup"><span data-stu-id="99b06-114">Attribute</span></span>|<span data-ttu-id="99b06-115">설명</span><span class="sxs-lookup"><span data-stu-id="99b06-115">Description</span></span>|  
 |---------------|-----------------|  
-|`includeExceptionDetailInFaults`|<span data-ttu-id="2d675-116">클라이언트 콜백 개체가 관리되는 예외 정보를 SOAP 오류의 형태로 서비스에 반환하는지 여부를 지정하는 값입니다.</span><span class="sxs-lookup"><span data-stu-id="2d675-116">A value that specifies whether client callback objects return managed exception information in SOAP faults back to the service.</span></span><br /><br /> <span data-ttu-id="2d675-117">이 특성을 프로그래밍 방식으로 `true`로 설정한 경우 클라이언트 콜백 개체에 있는 관리되는 예외 정보 흐름을 디버깅을 위해 다시 서비스로 이동하게 할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="2d675-117">If you set this attribute to `true` programmatically, you can enable the flow of managed exception information in a client callback object back to the service for debugging purposes.</span></span> <span data-ttu-id="2d675-118">**주의:** 관리 되는 예외 정보를 클라이언트에는 보안상 위험할 수 있습니다를 반환 합니다.</span><span class="sxs-lookup"><span data-stu-id="2d675-118">**Caution:**  Returning managed exception information to clients can be a security risk.</span></span> <span data-ttu-id="2d675-119">예외 정보가 내부 서비스 구현 정보를 공개하여 권한 없는 클라이언트에서 이를 사용할 수 있기 때문입니다.</span><span class="sxs-lookup"><span data-stu-id="2d675-119">This is because exception details expose information about the internal service implementation that could be used by unauthorized clients.</span></span>|  
+|`includeExceptionDetailInFaults`|<span data-ttu-id="99b06-116">클라이언트 콜백 개체가 관리되는 예외 정보를 SOAP 오류의 형태로 서비스에 반환하는지 여부를 지정하는 값입니다.</span><span class="sxs-lookup"><span data-stu-id="99b06-116">A value that specifies whether client callback objects return managed exception information in SOAP faults back to the service.</span></span><br /><br /> <span data-ttu-id="99b06-117">이 특성을 프로그래밍 방식으로 `true`로 설정한 경우 클라이언트 콜백 개체에 있는 관리되는 예외 정보 흐름을 디버깅을 위해 다시 서비스로 이동하게 할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="99b06-117">If you set this attribute to `true` programmatically, you can enable the flow of managed exception information in a client callback object back to the service for debugging purposes.</span></span> <span data-ttu-id="99b06-118">**주의:** 관리 되는 예외 정보를 클라이언트에는 보안상 위험할 수 있습니다를 반환 합니다.</span><span class="sxs-lookup"><span data-stu-id="99b06-118">**Caution:**  Returning managed exception information to clients can be a security risk.</span></span> <span data-ttu-id="99b06-119">예외 정보가 내부 서비스 구현 정보를 공개하여 권한 없는 클라이언트에서 이를 사용할 수 있기 때문입니다.</span><span class="sxs-lookup"><span data-stu-id="99b06-119">This is because exception details expose information about the internal service implementation that could be used by unauthorized clients.</span></span>|  
   
-### <a name="child-elements"></a><span data-ttu-id="2d675-120">자식 요소</span><span class="sxs-lookup"><span data-stu-id="2d675-120">Child Elements</span></span>  
- <span data-ttu-id="2d675-121">없음</span><span class="sxs-lookup"><span data-stu-id="2d675-121">None.</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="99b06-120">자식 요소</span><span class="sxs-lookup"><span data-stu-id="99b06-120">Child Elements</span></span>  
+ <span data-ttu-id="99b06-121">없음</span><span class="sxs-lookup"><span data-stu-id="99b06-121">None.</span></span>  
   
-### <a name="parent-elements"></a><span data-ttu-id="2d675-122">부모 요소</span><span class="sxs-lookup"><span data-stu-id="2d675-122">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="99b06-122">부모 요소</span><span class="sxs-lookup"><span data-stu-id="99b06-122">Parent Elements</span></span>  
   
-|<span data-ttu-id="2d675-123">요소</span><span class="sxs-lookup"><span data-stu-id="2d675-123">Element</span></span>|<span data-ttu-id="2d675-124">설명</span><span class="sxs-lookup"><span data-stu-id="2d675-124">Description</span></span>|  
+|<span data-ttu-id="99b06-123">요소</span><span class="sxs-lookup"><span data-stu-id="99b06-123">Element</span></span>|<span data-ttu-id="99b06-124">설명</span><span class="sxs-lookup"><span data-stu-id="99b06-124">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="2d675-125">\<동작 ></span><span class="sxs-lookup"><span data-stu-id="2d675-125">\<behavior></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)|<span data-ttu-id="2d675-126">끝점 동작을 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="2d675-126">Specifies an endpoint behavior.</span></span>|  
+|[<span data-ttu-id="99b06-125">\<동작 ></span><span class="sxs-lookup"><span data-stu-id="99b06-125">\<behavior></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)|<span data-ttu-id="99b06-126">끝점 동작을 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="99b06-126">Specifies an endpoint behavior.</span></span>|  
   
-## <a name="see-also"></a><span data-ttu-id="2d675-127">참고 항목</span><span class="sxs-lookup"><span data-stu-id="2d675-127">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="99b06-127">참고 항목</span><span class="sxs-lookup"><span data-stu-id="99b06-127">See Also</span></span>  
  <xref:System.ServiceModel.Configuration.CallbackDebugElement>  
  <xref:System.ServiceModel.Description.CallbackDebugBehavior>

@@ -1,0 +1,1 @@
+<span data-ttu-id="c903d-101">4.7.1부터 사용할 수 있음</span><span class="sxs-lookup"><span data-stu-id="c903d-101">Available since 4.7.1</span></span>

@@ -1,63 +1,51 @@
 ---
 title: '&lt;persistenceProvider&gt;'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: a37049c5-a7ea-4519-94f2-912eeb010380
-caps.latest.revision: "5"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 447384ef34c1ca2c7e641f0ba0d3d3718139e579
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 3c7fd74a84184ddbf8cc8db90141174ed84e5774
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
-# <a name="ltpersistenceprovidergt"></a><span data-ttu-id="2b902-102">&lt;persistenceProvider&gt;</span><span class="sxs-lookup"><span data-stu-id="2b902-102">&lt;persistenceProvider&gt;</span></span>
-<span data-ttu-id="2b902-103">사용할 지속성 공급자 구현 형식 및 지속성 작업에 사용할 제한 시간을 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="2b902-103">Specifies the type of the persistence provider implementation to use, as well as the time-out to use for persistence operations.</span></span>  
+# <a name="ltpersistenceprovidergt"></a><span data-ttu-id="c5260-102">&lt;persistenceProvider&gt;</span><span class="sxs-lookup"><span data-stu-id="c5260-102">&lt;persistenceProvider&gt;</span></span>
+<span data-ttu-id="c5260-103">사용할 지속성 공급자 구현 형식 및 지속성 작업에 사용할 제한 시간을 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="c5260-103">Specifies the type of the persistence provider implementation to use, as well as the time-out to use for persistence operations.</span></span>  
   
- <span data-ttu-id="2b902-104">\<시스템입니다. ServiceModel ></span><span class="sxs-lookup"><span data-stu-id="2b902-104">\<system.ServiceModel></span></span>  
-<span data-ttu-id="2b902-105">\<동작 ></span><span class="sxs-lookup"><span data-stu-id="2b902-105">\<behaviors></span></span>  
-<span data-ttu-id="2b902-106">\<serviceBehaviors ></span><span class="sxs-lookup"><span data-stu-id="2b902-106">\<serviceBehaviors></span></span>  
-<span data-ttu-id="2b902-107">\<동작 ></span><span class="sxs-lookup"><span data-stu-id="2b902-107">\<behavior></span></span>  
-<span data-ttu-id="2b902-108">\<persistenceProvider ></span><span class="sxs-lookup"><span data-stu-id="2b902-108">\<persistenceProvider></span></span>  
+ <span data-ttu-id="c5260-104">\<system.ServiceModel></span><span class="sxs-lookup"><span data-stu-id="c5260-104">\<system.ServiceModel></span></span>  
+<span data-ttu-id="c5260-105">\<동작 ></span><span class="sxs-lookup"><span data-stu-id="c5260-105">\<behaviors></span></span>  
+<span data-ttu-id="c5260-106">\<serviceBehaviors></span><span class="sxs-lookup"><span data-stu-id="c5260-106">\<serviceBehaviors></span></span>  
+<span data-ttu-id="c5260-107">\<동작 ></span><span class="sxs-lookup"><span data-stu-id="c5260-107">\<behavior></span></span>  
+<span data-ttu-id="c5260-108">\<persistenceProvider ></span><span class="sxs-lookup"><span data-stu-id="c5260-108">\<persistenceProvider></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="2b902-109">구문</span><span class="sxs-lookup"><span data-stu-id="2b902-109">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="c5260-109">구문</span><span class="sxs-lookup"><span data-stu-id="c5260-109">Syntax</span></span>  
   
 ```xml  
 <persistenceProvider persistenceOperationTimeout="TimeSpan"  
    type="String" />  
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="2b902-110">특성 및 요소</span><span class="sxs-lookup"><span data-stu-id="2b902-110">Attributes and Elements</span></span>  
- <span data-ttu-id="2b902-111">다음 단원에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="2b902-111">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="c5260-110">특성 및 요소</span><span class="sxs-lookup"><span data-stu-id="c5260-110">Attributes and Elements</span></span>  
+ <span data-ttu-id="c5260-111">다음 섹션에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="c5260-111">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="2b902-112">특성</span><span class="sxs-lookup"><span data-stu-id="2b902-112">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="c5260-112">특성</span><span class="sxs-lookup"><span data-stu-id="c5260-112">Attributes</span></span>  
   
-|<span data-ttu-id="2b902-113">특성</span><span class="sxs-lookup"><span data-stu-id="2b902-113">Attribute</span></span>|<span data-ttu-id="2b902-114">설명</span><span class="sxs-lookup"><span data-stu-id="2b902-114">Description</span></span>|  
+|<span data-ttu-id="c5260-113">특성</span><span class="sxs-lookup"><span data-stu-id="c5260-113">Attribute</span></span>|<span data-ttu-id="c5260-114">설명</span><span class="sxs-lookup"><span data-stu-id="c5260-114">Description</span></span>|  
 |---------------|-----------------|  
-|<span data-ttu-id="2b902-115">persistenceOperationTimeout</span><span class="sxs-lookup"><span data-stu-id="2b902-115">persistenceOperationTimeout</span></span>|<span data-ttu-id="2b902-116">지속성 작업에 사용되는 제한 시간을 지정하는 <xref:System.TimeSpan> 값입니다.</span><span class="sxs-lookup"><span data-stu-id="2b902-116">A <xref:System.TimeSpan> value that specifies the time-out used for persistence operations.</span></span> <span data-ttu-id="2b902-117">기본값은 "00: 00:30"입니다.</span><span class="sxs-lookup"><span data-stu-id="2b902-117">The default is "00:00:30".</span></span>|  
-|<span data-ttu-id="2b902-118">type</span><span class="sxs-lookup"><span data-stu-id="2b902-118">type</span></span>|<span data-ttu-id="2b902-119">사용할 지속성 공급자 팩터리의 형식을 지정하는 문자열입니다.</span><span class="sxs-lookup"><span data-stu-id="2b902-119">A string that specifies the type of the persistence provider factory to use.</span></span>|  
+|<span data-ttu-id="c5260-115">persistenceOperationTimeout</span><span class="sxs-lookup"><span data-stu-id="c5260-115">persistenceOperationTimeout</span></span>|<span data-ttu-id="c5260-116">지속성 작업에 사용되는 제한 시간을 지정하는 <xref:System.TimeSpan> 값입니다.</span><span class="sxs-lookup"><span data-stu-id="c5260-116">A <xref:System.TimeSpan> value that specifies the time-out used for persistence operations.</span></span> <span data-ttu-id="c5260-117">기본값은 "00: 00:30"입니다.</span><span class="sxs-lookup"><span data-stu-id="c5260-117">The default is "00:00:30".</span></span>|  
+|<span data-ttu-id="c5260-118">type</span><span class="sxs-lookup"><span data-stu-id="c5260-118">type</span></span>|<span data-ttu-id="c5260-119">사용할 지속성 공급자 팩터리의 형식을 지정하는 문자열입니다.</span><span class="sxs-lookup"><span data-stu-id="c5260-119">A string that specifies the type of the persistence provider factory to use.</span></span>|  
   
-### <a name="child-elements"></a><span data-ttu-id="2b902-120">자식 요소</span><span class="sxs-lookup"><span data-stu-id="2b902-120">Child Elements</span></span>  
- <span data-ttu-id="2b902-121">없음</span><span class="sxs-lookup"><span data-stu-id="2b902-121">None.</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="c5260-120">자식 요소</span><span class="sxs-lookup"><span data-stu-id="c5260-120">Child Elements</span></span>  
+ <span data-ttu-id="c5260-121">없음</span><span class="sxs-lookup"><span data-stu-id="c5260-121">None.</span></span>  
   
-### <a name="parent-elements"></a><span data-ttu-id="2b902-122">부모 요소</span><span class="sxs-lookup"><span data-stu-id="2b902-122">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="c5260-122">부모 요소</span><span class="sxs-lookup"><span data-stu-id="c5260-122">Parent Elements</span></span>  
   
-|<span data-ttu-id="2b902-123">요소</span><span class="sxs-lookup"><span data-stu-id="2b902-123">Element</span></span>|<span data-ttu-id="2b902-124">설명</span><span class="sxs-lookup"><span data-stu-id="2b902-124">Description</span></span>|  
+|<span data-ttu-id="c5260-123">요소</span><span class="sxs-lookup"><span data-stu-id="c5260-123">Element</span></span>|<span data-ttu-id="c5260-124">설명</span><span class="sxs-lookup"><span data-stu-id="c5260-124">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="2b902-125">\<동작 ></span><span class="sxs-lookup"><span data-stu-id="2b902-125">\<behavior></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)|<span data-ttu-id="2b902-126">동작 요소를 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="2b902-126">Specifies a behavior element.</span></span>|  
+|[<span data-ttu-id="c5260-125">\<동작 ></span><span class="sxs-lookup"><span data-stu-id="c5260-125">\<behavior></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)|<span data-ttu-id="c5260-126">동작 요소를 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="c5260-126">Specifies a behavior element.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="2b902-127">설명</span><span class="sxs-lookup"><span data-stu-id="2b902-127">Remarks</span></span>  
- <span data-ttu-id="2b902-128">이 요소는 WCF 서비스의 상태를 serialize하는 데 사용되는 지속성 공급자를 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="2b902-128">This element specifies the persistence provider to be used to serialize the state of a WCF service.</span></span> <span data-ttu-id="2b902-129">이 요소는 HTTP 헤더에서 상태 정보를 전달하는 `wsHttpContextBinding`과 함께 사용되어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="2b902-129">It should be used together with the `wsHttpContextBinding` which passes state information in HTTP headers.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="c5260-127">설명</span><span class="sxs-lookup"><span data-stu-id="c5260-127">Remarks</span></span>  
+ <span data-ttu-id="c5260-128">이 요소는 WCF 서비스의 상태를 serialize하는 데 사용되는 지속성 공급자를 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="c5260-128">This element specifies the persistence provider to be used to serialize the state of a WCF service.</span></span> <span data-ttu-id="c5260-129">이 요소는 HTTP 헤더에서 상태 정보를 전달하는 `wsHttpContextBinding`과 함께 사용되어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="c5260-129">It should be used together with the `wsHttpContextBinding` which passes state information in HTTP headers.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="2b902-130">참고 항목</span><span class="sxs-lookup"><span data-stu-id="2b902-130">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="c5260-130">참고 항목</span><span class="sxs-lookup"><span data-stu-id="c5260-130">See Also</span></span>  
  <xref:System.ServiceModel.Configuration.PersistenceProviderElement>  
  <xref:System.ServiceModel.Persistence.PersistenceProvider>

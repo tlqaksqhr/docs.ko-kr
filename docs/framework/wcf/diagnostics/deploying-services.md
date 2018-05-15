@@ -1,31 +1,19 @@
 ---
-title: "서비스 배포"
-ms.custom: 
+title: 서비스 배포
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: ac361bfb-017d-4da9-a2d7-fc0fb72d65bb
-caps.latest.revision: "5"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 6e32570b381d6cab4326a13246dfe053b5032589
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 4d9efcb4da064021d93345285982c0cbd29dde2e
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/07/2018
 ---
-# <a name="deploying-services"></a><span data-ttu-id="a0391-102">서비스 배포</span><span class="sxs-lookup"><span data-stu-id="a0391-102">Deploying Services</span></span>
-<span data-ttu-id="a0391-103">이 항목에서는 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 응용 프로그램을 런타임 환경에 배포하는 방법에 대해 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="a0391-103">This topic describes how you can deploy a [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] application to a run-time environment.</span></span>  
+# <a name="deploying-services"></a><span data-ttu-id="e5d7f-102">서비스 배포</span><span class="sxs-lookup"><span data-stu-id="e5d7f-102">Deploying Services</span></span>
+<span data-ttu-id="e5d7f-103">이 항목에서는 방법을 런타임 환경에 Windows Communication Foundation (WCF) 응용 프로그램을 배포할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="e5d7f-103">This topic describes how you can deploy a Windows Communication Foundation (WCF) application to a run-time environment.</span></span>  
   
-## <a name="choosing-the-hosting-environment-for-your-application"></a><span data-ttu-id="a0391-104">응용 프로그램의 호스팅 환경 선택</span><span class="sxs-lookup"><span data-stu-id="a0391-104">Choosing the Hosting Environment for Your Application</span></span>  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]<span data-ttu-id="a0391-105"> 서비스는 관리 코드를 지원하는 모든 Windows 프로세스에서 실행할 수 있게 디자인되었습니다.</span><span class="sxs-lookup"><span data-stu-id="a0391-105"> services are designed to run in any Windows process that supports managed code.</span></span> <span data-ttu-id="a0391-106">활성화할 서비스는 서비스를 만들고 컨텍스트와 수명을 제어하는 런타임 환경에 호스팅해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="a0391-106">To become active, a service must be hosted within a run-time environment that creates it and controls its context and lifetime.</span></span> <span data-ttu-id="a0391-107">호스팅 옵션은 가장 간단한 콘솔 응용 프로그램에서 Windows 서비스, IIS(Internet Information Services), 또는 WAS(Windows Activation Service)에서 관리하는 작업자 프로세스 등의 서버 환경까지 다양합니다.</span><span class="sxs-lookup"><span data-stu-id="a0391-107">Hosting options range from running inside the simplest console application to server environments like a Windows service, Internet Information Services (IIS), or within a worker process managed by the Windows Activation Service (WAS).</span></span> <span data-ttu-id="a0391-108">다른 호스팅 옵션을 검토 하 여 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 응용 프로그램 참조 [호스팅 서비스](../../../../docs/framework/wcf/hosting-services.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="a0391-108">To review the different hosting options for your [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] application, see [Hosting Services](../../../../docs/framework/wcf/hosting-services.md).</span></span>  
+## <a name="choosing-the-hosting-environment-for-your-application"></a><span data-ttu-id="e5d7f-104">응용 프로그램의 호스팅 환경 선택</span><span class="sxs-lookup"><span data-stu-id="e5d7f-104">Choosing the Hosting Environment for Your Application</span></span>  
+ <span data-ttu-id="e5d7f-105">WCF 서비스는 관리 코드를 지 원하는 모든 Windows 프로세스에서 실행 되도록 설계 되었습니다.</span><span class="sxs-lookup"><span data-stu-id="e5d7f-105">WCF services are designed to run in any Windows process that supports managed code.</span></span> <span data-ttu-id="e5d7f-106">활성화할 서비스는 서비스를 만들고 컨텍스트와 수명을 제어하는 런타임 환경에 호스팅해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="e5d7f-106">To become active, a service must be hosted within a run-time environment that creates it and controls its context and lifetime.</span></span> <span data-ttu-id="e5d7f-107">호스팅 옵션은 가장 간단한 콘솔 응용 프로그램에서 Windows 서비스, IIS(Internet Information Services), 또는 WAS(Windows Activation Service)에서 관리하는 작업자 프로세스 등의 서버 환경까지 다양합니다.</span><span class="sxs-lookup"><span data-stu-id="e5d7f-107">Hosting options range from running inside the simplest console application to server environments like a Windows service, Internet Information Services (IIS), or within a worker process managed by the Windows Activation Service (WAS).</span></span> <span data-ttu-id="e5d7f-108">WCF 응용 프로그램에 대 한 다른 호스팅 옵션을 검토 하려면 참조 [호스팅 서비스](../../../../docs/framework/wcf/hosting-services.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="e5d7f-108">To review the different hosting options for your WCF application, see [Hosting Services](../../../../docs/framework/wcf/hosting-services.md).</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="a0391-109">참고 항목</span><span class="sxs-lookup"><span data-stu-id="a0391-109">See Also</span></span>  
- [<span data-ttu-id="a0391-110">호스팅</span><span class="sxs-lookup"><span data-stu-id="a0391-110">Hosting</span></span>](../../../../docs/framework/wcf/feature-details/hosting.md)  
- [<span data-ttu-id="a0391-111">서비스 호스팅</span><span class="sxs-lookup"><span data-stu-id="a0391-111">Hosting Services</span></span>](../../../../docs/framework/wcf/hosting-services.md)
+## <a name="see-also"></a><span data-ttu-id="e5d7f-109">참고 항목</span><span class="sxs-lookup"><span data-stu-id="e5d7f-109">See Also</span></span>  
+ [<span data-ttu-id="e5d7f-110">호스팅</span><span class="sxs-lookup"><span data-stu-id="e5d7f-110">Hosting</span></span>](../../../../docs/framework/wcf/feature-details/hosting.md)  
+ [<span data-ttu-id="e5d7f-111">서비스 호스팅</span><span class="sxs-lookup"><span data-stu-id="e5d7f-111">Hosting Services</span></span>](../../../../docs/framework/wcf/hosting-services.md)

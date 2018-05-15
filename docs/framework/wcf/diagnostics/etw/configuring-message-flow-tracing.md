@@ -1,32 +1,20 @@
 ---
-title: "메시지 흐름 추적 구성"
-ms.custom: 
+title: 메시지 흐름 추적 구성
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 15571ca2-bee2-47fb-ba10-fcbc09152ad0
-caps.latest.revision: "8"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 8df32a64c07db8a45dfb41a46e7a65a92fbef434
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 02c43b152cb1aef1684185e56eb7f172036ac46b
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/07/2018
 ---
-# <a name="configuring-message-flow-tracing"></a><span data-ttu-id="e1825-102">메시지 흐름 추적 구성</span><span class="sxs-lookup"><span data-stu-id="e1825-102">Configuring Message Flow Tracing</span></span>
-<span data-ttu-id="e1825-103">[!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] 작업 추적을 사용하도록 설정하면 [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 스택을 통해 논리 작업에 종단 간 작업 ID가 할당됩니다.</span><span class="sxs-lookup"><span data-stu-id="e1825-103">When [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] activity tracing is enabled, End-To-End Activity IDs are assigned to logical activities throughout the [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] stack.</span></span> <span data-ttu-id="e1825-104">[!INCLUDE[netfx_current_short](../../../../../includes/netfx-current-short-md.md)]에는 메시지 흐름 추적이라고 하는 ETW(Event Tracing for Windows)와 함께 작동하는 이 기능의 더 높은 성능 버전이 있습니다.</span><span class="sxs-lookup"><span data-stu-id="e1825-104">In [!INCLUDE[netfx_current_short](../../../../../includes/netfx-current-short-md.md)], there is now a higher performance version of this feature that works with Event Tracing for Windows (ETW) called message flow tracing.</span></span> <span data-ttu-id="e1825-105">이 기능을 사용하도록 설정하면 종단 간 작업 ID가 들어오는 메시지에서 가져와 지고(비어 있는 경우 들어오는 메시지에 할당됨) 메시지가 채널을 통해 디코딩된 후 내보내지는 모든 추적 이벤트에 전파됩니다.</span><span class="sxs-lookup"><span data-stu-id="e1825-105">When enabled, End-To-End activity IDs are taken from (or assigned to if empty) incoming messages and are propagated to all tracing events that are emitted after the message has been decoded by the channel.</span></span> <span data-ttu-id="e1825-106">이 기능을 사용하면 다른 서비스의 추적 로그를 사용하여 메시지 흐름을 다시 생성할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="e1825-106">Customers can use this feature to reconstruct message flows with trace logs from different services after decoding.</span></span>  
+# <a name="configuring-message-flow-tracing"></a><span data-ttu-id="76ec0-102">메시지 흐름 추적 구성</span><span class="sxs-lookup"><span data-stu-id="76ec0-102">Configuring Message Flow Tracing</span></span>
+<span data-ttu-id="76ec0-103">Windows Communication Foundation (WCF) 동작 추적이 활성화 될 때 WCF 스택을 통해 논리 작업에 종단 간 작업 Id가 할당 됩니다.</span><span class="sxs-lookup"><span data-stu-id="76ec0-103">When Windows Communication Foundation (WCF) activity tracing is enabled, End-To-End Activity IDs are assigned to logical activities throughout the WCF stack.</span></span> <span data-ttu-id="76ec0-104">[!INCLUDE[netfx_current_short](../../../../../includes/netfx-current-short-md.md)]에는 메시지 흐름 추적이라고 하는 ETW(Event Tracing for Windows)와 함께 작동하는 이 기능의 더 높은 성능 버전이 있습니다.</span><span class="sxs-lookup"><span data-stu-id="76ec0-104">In [!INCLUDE[netfx_current_short](../../../../../includes/netfx-current-short-md.md)], there is now a higher performance version of this feature that works with Event Tracing for Windows (ETW) called message flow tracing.</span></span> <span data-ttu-id="76ec0-105">이 기능을 사용하도록 설정하면 종단 간 작업 ID가 들어오는 메시지에서 가져와 지고(비어 있는 경우 들어오는 메시지에 할당됨) 메시지가 채널을 통해 디코딩된 후 내보내지는 모든 추적 이벤트에 전파됩니다.</span><span class="sxs-lookup"><span data-stu-id="76ec0-105">When enabled, End-To-End activity IDs are taken from (or assigned to if empty) incoming messages and are propagated to all tracing events that are emitted after the message has been decoded by the channel.</span></span> <span data-ttu-id="76ec0-106">이 기능을 사용하면 다른 서비스의 추적 로그를 사용하여 메시지 흐름을 다시 생성할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="76ec0-106">Customers can use this feature to reconstruct message flows with trace logs from different services after decoding.</span></span>  
   
- <span data-ttu-id="e1825-107">추적은 응용 프로그램에서 문제가 발견되면 사용하도록 설정했다가 문제가 해결되면 사용하지 않도록 설정할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="e1825-107">Tracing can be enabled after a problem is detected with the application and then disabled once the problem is resolved.</span></span>  
+ <span data-ttu-id="76ec0-107">추적은 응용 프로그램에서 문제가 발견되면 사용하도록 설정했다가 문제가 해결되면 사용하지 않도록 설정할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="76ec0-107">Tracing can be enabled after a problem is detected with the application and then disabled once the problem is resolved.</span></span>  
   
-## <a name="enabling-tracing"></a><span data-ttu-id="e1825-108">추적 사용</span><span class="sxs-lookup"><span data-stu-id="e1825-108">Enabling Tracing</span></span>  
- <span data-ttu-id="e1825-109">다음 예제와 같이 .NET Framework 4 `messageFlowTracing` 구성 요소를 `true`로 설정하여 메시지 흐름 추적을 사용하도록 설정할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="e1825-109">You can enable message flow tracing by setting the .NET Framework 4 `messageFlowTracing` configuration element to `true`, as shown in the following example.</span></span>  
+## <a name="enabling-tracing"></a><span data-ttu-id="76ec0-108">추적 사용</span><span class="sxs-lookup"><span data-stu-id="76ec0-108">Enabling Tracing</span></span>  
+ <span data-ttu-id="76ec0-109">다음 예제와 같이 .NET Framework 4 `messageFlowTracing` 구성 요소를 `true`로 설정하여 메시지 흐름 추적을 사용하도록 설정할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="76ec0-109">You can enable message flow tracing by setting the .NET Framework 4 `messageFlowTracing` configuration element to `true`, as shown in the following example.</span></span>  
   
 ```xml  
 <system.servicemodel>  
@@ -37,12 +25,12 @@ ms.lasthandoff: 12/22/2017
 ```  
   
 > [!NOTE]
->  <span data-ttu-id="e1825-110">`endToEndTracing` 구성 요소는 Web.config 파일에 있기 때문에 ETW와 동일한 방식으로 동적으로 구성할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="e1825-110">Because the `endToEndTracing` configuration element resides in a Web.config file, it cannot be dynamically configured in the same way as ETW.</span></span> <span data-ttu-id="e1825-111">`endToEndTracing` 구성 요소를 적용하려면 응용 프로그램을 재활용해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="e1825-111">For the `endToEndTracing` configuration element to take effect, the application must be recycled.</span></span>  
+>  <span data-ttu-id="76ec0-110">`endToEndTracing` 구성 요소는 Web.config 파일에 있기 때문에 ETW와 동일한 방식으로 동적으로 구성할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="76ec0-110">Because the `endToEndTracing` configuration element resides in a Web.config file, it cannot be dynamically configured in the same way as ETW.</span></span> <span data-ttu-id="76ec0-111">`endToEndTracing` 구성 요소를 적용하려면 응용 프로그램을 재활용해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="76ec0-111">For the `endToEndTracing` configuration element to take effect, the application must be recycled.</span></span>  
   
- <span data-ttu-id="e1825-112">작업은 작업 ID라는 식별자의 교환을 통해 상호 연결됩니다.</span><span class="sxs-lookup"><span data-stu-id="e1825-112">Activities are correlated by the interchange of an identifier called the activity ID.</span></span> <span data-ttu-id="e1825-113">이 식별자는 GUID이며 System.Diagnostics.CorrelationManager 클래스에서 생성됩니다.</span><span class="sxs-lookup"><span data-stu-id="e1825-113">This identifier is a GUID, and is generated by the System.Diagnostics.CorrelationManager class.</span></span> <span data-ttu-id="e1825-114">System.Diagnostics.Trace.CorrelationManager.ActivityID를 조작하는 경우 실행 제어가 WCF 코드로 다시 전달될 때 값이 원래대로 설정되는지 확인합니다.</span><span class="sxs-lookup"><span data-stu-id="e1825-114">If you manipulate System.Diagnostics.Trace.CorrelationManager.ActivityID, ensure that the value is set to original when execution control transfers back to WCF code.</span></span>  <span data-ttu-id="e1825-115">또한 비동기 WCF 프로그래밍 모델을 사용하는 경우 System.Diagnostics.Trace.CorrelationManager.ActivityID가 스레드 간에 전달되는지 확인합니다.</span><span class="sxs-lookup"><span data-stu-id="e1825-115">Also, if you use an asynchronous WCF programming model ensure that System.Diagnostics.Trace.CorrelationManager.ActivityID is transferred between the threads.</span></span>  
+ <span data-ttu-id="76ec0-112">작업은 작업 ID라는 식별자의 교환을 통해 상호 연결됩니다.</span><span class="sxs-lookup"><span data-stu-id="76ec0-112">Activities are correlated by the interchange of an identifier called the activity ID.</span></span> <span data-ttu-id="76ec0-113">이 식별자는 GUID이며 System.Diagnostics.CorrelationManager 클래스에서 생성됩니다.</span><span class="sxs-lookup"><span data-stu-id="76ec0-113">This identifier is a GUID, and is generated by the System.Diagnostics.CorrelationManager class.</span></span> <span data-ttu-id="76ec0-114">System.Diagnostics.Trace.CorrelationManager.ActivityID를 조작하는 경우 실행 제어가 WCF 코드로 다시 전달될 때 값이 원래대로 설정되는지 확인합니다.</span><span class="sxs-lookup"><span data-stu-id="76ec0-114">If you manipulate System.Diagnostics.Trace.CorrelationManager.ActivityID, ensure that the value is set to original when execution control transfers back to WCF code.</span></span>  <span data-ttu-id="76ec0-115">또한 비동기 WCF 프로그래밍 모델을 사용하는 경우 System.Diagnostics.Trace.CorrelationManager.ActivityID가 스레드 간에 전달되는지 확인합니다.</span><span class="sxs-lookup"><span data-stu-id="76ec0-115">Also, if you use an asynchronous WCF programming model ensure that System.Diagnostics.Trace.CorrelationManager.ActivityID is transferred between the threads.</span></span>  
   
-## <a name="message-flow-tracing-and-rest-services"></a><span data-ttu-id="e1825-116">메시지 흐름 추적 및 REST 서비스</span><span class="sxs-lookup"><span data-stu-id="e1825-116">Message Flow Tracing and REST Services</span></span>  
- <span data-ttu-id="e1825-117">메시지 흐름 추적을 사용해서 종단 간 요청을 추적할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="e1825-117">Message flow tracing allows you to trace a request end to end.</span></span>  <span data-ttu-id="e1825-118">SOAP 기반 서비스에서는 작업 ID가 SOAP 메시지 헤더로 전송됩니다.</span><span class="sxs-lookup"><span data-stu-id="e1825-118">With SOAP-based services an Activity ID is sent in a SOAP message header.</span></span> <span data-ttu-id="e1825-119">REST 요청에는 이 헤더가 포함되지 않으므로 특별한 HTTP 이벤트 헤더가 대신 사용됩니다.</span><span class="sxs-lookup"><span data-stu-id="e1825-119">REST requests do not contain this header so a special HTTP event header is used instead.</span></span> <span data-ttu-id="e1825-120">다음 코드 조각에서는 작업 ID 값을 자동으로 검색하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="e1825-120">The following code snippet shows how you can programmatically retrieve the Activity ID value:</span></span>  
+## <a name="message-flow-tracing-and-rest-services"></a><span data-ttu-id="76ec0-116">메시지 흐름 추적 및 REST 서비스</span><span class="sxs-lookup"><span data-stu-id="76ec0-116">Message Flow Tracing and REST Services</span></span>  
+ <span data-ttu-id="76ec0-117">메시지 흐름 추적을 사용해서 종단 간 요청을 추적할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="76ec0-117">Message flow tracing allows you to trace a request end to end.</span></span>  <span data-ttu-id="76ec0-118">SOAP 기반 서비스에서는 작업 ID가 SOAP 메시지 헤더로 전송됩니다.</span><span class="sxs-lookup"><span data-stu-id="76ec0-118">With SOAP-based services an Activity ID is sent in a SOAP message header.</span></span> <span data-ttu-id="76ec0-119">REST 요청에는 이 헤더가 포함되지 않으므로 특별한 HTTP 이벤트 헤더가 대신 사용됩니다.</span><span class="sxs-lookup"><span data-stu-id="76ec0-119">REST requests do not contain this header so a special HTTP event header is used instead.</span></span> <span data-ttu-id="76ec0-120">다음 코드 조각에서는 작업 ID 값을 자동으로 검색하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="76ec0-120">The following code snippet shows how you can programmatically retrieve the Activity ID value:</span></span>  
   
 ```csharp
 Object output = null;
@@ -54,7 +42,7 @@ if (OperationContext.Current.IncomingMessageProperties.TryGetValue(HttpRequestMe
 }
 ```
 
- <span data-ttu-id="e1825-121">다음 코드를 사용해서 헤더를 프로그래밍 방식으로 추가할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="e1825-121">You can programmatically add the header using the following code:</span></span>  
+ <span data-ttu-id="76ec0-121">다음 코드를 사용해서 헤더를 프로그래밍 방식으로 추가할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="76ec0-121">You can programmatically add the header using the following code:</span></span>  
   
 ```csharp  
 HttpContent content = new StreamContent(contentStream);  

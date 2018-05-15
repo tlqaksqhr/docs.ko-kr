@@ -1,13 +1,6 @@
 ---
-title: "방법: 전역 어셈블리 캐시에서 어셈블리 제거"
-ms.custom: 
+title: '방법: 전역 어셈블리 캐시에서 어셈블리 제거'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-bcl
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - assemblies [.NET Framework], global assembly cache
 - Gacutil.exe
@@ -18,49 +11,46 @@ helpviewer_keywords:
 - Global Assembly Cache tool
 - GAC (global assembly cache), removing assemblies
 ms.assetid: acdcc588-b458-436d-876c-726de68244c1
-caps.latest.revision: "14"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 5d50d6a1b27cf30511fece1540f002524238a424
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 6c5f47f4c33f725377281146bef0a37dbd3f774c
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
-# <a name="how-to-remove-an-assembly-from-the-global-assembly-cache"></a><span data-ttu-id="d253f-102">방법: 전역 어셈블리 캐시에서 어셈블리 제거</span><span class="sxs-lookup"><span data-stu-id="d253f-102">How to: Remove an Assembly from the Global Assembly Cache</span></span>
-<span data-ttu-id="d253f-103">GAC(전역 어셈블리 캐시)에서 어셈블리를 제거하는 다음 두 가지 방법이 있습니다.</span><span class="sxs-lookup"><span data-stu-id="d253f-103">There are two ways to remove an assembly from the global assembly cache (GAC):</span></span>  
+# <a name="how-to-remove-an-assembly-from-the-global-assembly-cache"></a><span data-ttu-id="d2be7-102">방법: 전역 어셈블리 캐시에서 어셈블리 제거</span><span class="sxs-lookup"><span data-stu-id="d2be7-102">How to: Remove an Assembly from the Global Assembly Cache</span></span>
+<span data-ttu-id="d2be7-103">GAC(전역 어셈블리 캐시)에서 어셈블리를 제거하는 다음 두 가지 방법이 있습니다.</span><span class="sxs-lookup"><span data-stu-id="d2be7-103">There are two ways to remove an assembly from the global assembly cache (GAC):</span></span>  
   
--   <span data-ttu-id="d253f-104">[전역 어셈블리 캐시 도구(Gacutil.exe)](../../../docs/framework/tools/gacutil-exe-gac-tool.md) 사용.</span><span class="sxs-lookup"><span data-stu-id="d253f-104">By using the [Global Assembly Cache tool (Gacutil.exe)](../../../docs/framework/tools/gacutil-exe-gac-tool.md).</span></span> <span data-ttu-id="d253f-105">개발 및 테스트 중 GAC에 배치한 어셈블리를 제거하려면 이 옵션을 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="d253f-105">You can use this option to uninstall assemblies that you've placed in the GAC during development and testing.</span></span>  
+-   <span data-ttu-id="d2be7-104">[전역 어셈블리 캐시 도구(Gacutil.exe)](../../../docs/framework/tools/gacutil-exe-gac-tool.md) 사용.</span><span class="sxs-lookup"><span data-stu-id="d2be7-104">By using the [Global Assembly Cache tool (Gacutil.exe)](../../../docs/framework/tools/gacutil-exe-gac-tool.md).</span></span> <span data-ttu-id="d2be7-105">개발 및 테스트 중 GAC에 배치한 어셈블리를 제거하려면 이 옵션을 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="d2be7-105">You can use this option to uninstall assemblies that you've placed in the GAC during development and testing.</span></span>  
   
--   <span data-ttu-id="d253f-106">[Windows Installer](http://msdn.microsoft.com/library/windows/desktop/cc185688.aspx) 사용.</span><span class="sxs-lookup"><span data-stu-id="d253f-106">By using [Windows Installer](http://msdn.microsoft.com/library/windows/desktop/cc185688.aspx).</span></span> <span data-ttu-id="d253f-107">설치 패키지를 테스트할 때 및 프로덕션 시스템에 대해 어셈블리를 제거하려면 이 옵션을 사용해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="d253f-107">You should use this option to uninstall assemblies when testing installation packages and for production systems.</span></span>  
+-   <span data-ttu-id="d2be7-106">[Windows Installer](http://msdn.microsoft.com/library/windows/desktop/cc185688.aspx) 사용.</span><span class="sxs-lookup"><span data-stu-id="d2be7-106">By using [Windows Installer](http://msdn.microsoft.com/library/windows/desktop/cc185688.aspx).</span></span> <span data-ttu-id="d2be7-107">설치 패키지를 테스트할 때 및 프로덕션 시스템에 대해 어셈블리를 제거하려면 이 옵션을 사용해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="d2be7-107">You should use this option to uninstall assemblies when testing installation packages and for production systems.</span></span>  
   
-### <a name="removing-an-assembly-with-gacutilexe"></a><span data-ttu-id="d253f-108">Gacutil.exe를 사용하여 어셈블리 제거</span><span class="sxs-lookup"><span data-stu-id="d253f-108">Removing an assembly with Gacutil.exe</span></span>  
+### <a name="removing-an-assembly-with-gacutilexe"></a><span data-ttu-id="d2be7-108">Gacutil.exe를 사용하여 어셈블리 제거</span><span class="sxs-lookup"><span data-stu-id="d2be7-108">Removing an assembly with Gacutil.exe</span></span>  
   
-1.  <span data-ttu-id="d253f-109">명령 프롬프트에 다음 명령을 입력합니다.</span><span class="sxs-lookup"><span data-stu-id="d253f-109">At the command prompt, type the following command:</span></span>  
+1.  <span data-ttu-id="d2be7-109">명령 프롬프트에 다음 명령을 입력합니다.</span><span class="sxs-lookup"><span data-stu-id="d2be7-109">At the command prompt, type the following command:</span></span>  
   
-     <span data-ttu-id="d253f-110">**gacutil –u** \<*assembly name*></span><span class="sxs-lookup"><span data-stu-id="d253f-110">**gacutil –u** \<*assembly name*></span></span>  
+     <span data-ttu-id="d2be7-110">**gacutil –u** \<*assembly name*></span><span class="sxs-lookup"><span data-stu-id="d2be7-110">**gacutil –u** \<*assembly name*></span></span>  
   
-     <span data-ttu-id="d253f-111">이 명령에서 *assembly name*은 전역 어셈블리 캐시에서 제거할 어셈블리의 이름입니다.</span><span class="sxs-lookup"><span data-stu-id="d253f-111">In this command, *assembly name* is the name of the assembly to remove from the global assembly cache.</span></span>  
+     <span data-ttu-id="d2be7-111">이 명령에서 *assembly name*은 전역 어셈블리 캐시에서 제거할 어셈블리의 이름입니다.</span><span class="sxs-lookup"><span data-stu-id="d2be7-111">In this command, *assembly name* is the name of the assembly to remove from the global assembly cache.</span></span>  
   
     > [!WARNING]
-    >  <span data-ttu-id="d253f-112">어셈블리가 일부 응용 프로그램에서 여전히 필요할 수 있으므로 프로덕션 시스템에서 어셈블리를 제거하려는 경우 Gacutil.exe를 사용하면 안 됩니다.</span><span class="sxs-lookup"><span data-stu-id="d253f-112">You should not use Gacutil.exe to remove assemblies on production systems because of the possibility that the assembly may still be required by some application.</span></span> <span data-ttu-id="d253f-113">대신, GAC에 설치하는 각 어셈블리에 대한 참조 횟수를 유지 관리하는 Windows Installer를 사용해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="d253f-113">Instead, you should use the Windows Installer, which maintains a reference count for each assembly it installs in the GAC.</span></span>  
+    >  <span data-ttu-id="d2be7-112">어셈블리가 일부 응용 프로그램에서 여전히 필요할 수 있으므로 프로덕션 시스템에서 어셈블리를 제거하려는 경우 Gacutil.exe를 사용하면 안 됩니다.</span><span class="sxs-lookup"><span data-stu-id="d2be7-112">You should not use Gacutil.exe to remove assemblies on production systems because of the possibility that the assembly may still be required by some application.</span></span> <span data-ttu-id="d2be7-113">대신, GAC에 설치하는 각 어셈블리에 대한 참조 횟수를 유지 관리하는 Windows Installer를 사용해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="d2be7-113">Instead, you should use the Windows Installer, which maintains a reference count for each assembly it installs in the GAC.</span></span>  
   
- <span data-ttu-id="d253f-114">다음 예제에서는 전역 어셈블리 캐시에서 `hello.dll`이라는 어셈블리를 제거합니다.</span><span class="sxs-lookup"><span data-stu-id="d253f-114">The following example removes an assembly named `hello.dll` from the global assembly cache.</span></span>  
+ <span data-ttu-id="d2be7-114">다음 예제에서는 전역 어셈블리 캐시에서 `hello.dll`이라는 어셈블리를 제거합니다.</span><span class="sxs-lookup"><span data-stu-id="d2be7-114">The following example removes an assembly named `hello.dll` from the global assembly cache.</span></span>  
   
 ```  
 gacutil -u hello  
 ```  
   
-### <a name="removing-an-assembly-with-windows-installer"></a><span data-ttu-id="d253f-115">Windows Installer를 사용하여 어셈블리 제거</span><span class="sxs-lookup"><span data-stu-id="d253f-115">Removing an assembly with Windows Installer</span></span>  
+### <a name="removing-an-assembly-with-windows-installer"></a><span data-ttu-id="d2be7-115">Windows Installer를 사용하여 어셈블리 제거</span><span class="sxs-lookup"><span data-stu-id="d2be7-115">Removing an assembly with Windows Installer</span></span>  
   
-1.  <span data-ttu-id="d253f-116">**제어판**의 **프로그램 및 기능** 앱에서 제거할 앱을 선택합니다.</span><span class="sxs-lookup"><span data-stu-id="d253f-116">From the **Programs and Features** app in **Control Panel**, select the app that you want to uninstall.</span></span> <span data-ttu-id="d253f-117">설치 패키지가 GAC에 어셈블리를 배치한 경우 다른 응용 프로그램에서 사용되지 않으면 Windows Installer가 해당 어셈블리를 제거합니다.</span><span class="sxs-lookup"><span data-stu-id="d253f-117">If the installation package placed assemblies in the GAC, Windows Installer will remove them if they are not used by another application.</span></span>  
+1.  <span data-ttu-id="d2be7-116">**제어판**의 **프로그램 및 기능** 앱에서 제거할 앱을 선택합니다.</span><span class="sxs-lookup"><span data-stu-id="d2be7-116">From the **Programs and Features** app in **Control Panel**, select the app that you want to uninstall.</span></span> <span data-ttu-id="d2be7-117">설치 패키지가 GAC에 어셈블리를 배치한 경우 다른 응용 프로그램에서 사용되지 않으면 Windows Installer가 해당 어셈블리를 제거합니다.</span><span class="sxs-lookup"><span data-stu-id="d2be7-117">If the installation package placed assemblies in the GAC, Windows Installer will remove them if they are not used by another application.</span></span>  
   
     > [!NOTE]
-    >  <span data-ttu-id="d253f-118">Windows Installer는 GAC에 설치된 어셈블리에 대한 참조 횟수를 유지 관리합니다.</span><span class="sxs-lookup"><span data-stu-id="d253f-118">Windows Installer maintains a reference count for assemblies installed in the GAC.</span></span> <span data-ttu-id="d253f-119">참조 횟수가 0에 도달하여 Windows Installer 패키지를 통해 설치된 응용 프로그램에서 사용되지 않음을 나타내는 경우에만 어셈블리가 GAC에서 제거됩니다.</span><span class="sxs-lookup"><span data-stu-id="d253f-119">An assembly is removed from the GAC only when its reference count reaches zero, which indicates that it is not used by any application installed by a Windows Installer package.</span></span>  
+    >  <span data-ttu-id="d2be7-118">Windows Installer는 GAC에 설치된 어셈블리에 대한 참조 횟수를 유지 관리합니다.</span><span class="sxs-lookup"><span data-stu-id="d2be7-118">Windows Installer maintains a reference count for assemblies installed in the GAC.</span></span> <span data-ttu-id="d2be7-119">참조 횟수가 0에 도달하여 Windows Installer 패키지를 통해 설치된 응용 프로그램에서 사용되지 않음을 나타내는 경우에만 어셈블리가 GAC에서 제거됩니다.</span><span class="sxs-lookup"><span data-stu-id="d2be7-119">An assembly is removed from the GAC only when its reference count reaches zero, which indicates that it is not used by any application installed by a Windows Installer package.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="d253f-120">참고 항목</span><span class="sxs-lookup"><span data-stu-id="d253f-120">See Also</span></span>  
- [<span data-ttu-id="d253f-121">어셈블리 및 전역 어셈블리 캐시 사용</span><span class="sxs-lookup"><span data-stu-id="d253f-121">Working with Assemblies and the Global Assembly Cache</span></span>](../../../docs/framework/app-domains/working-with-assemblies-and-the-gac.md)  
- [<span data-ttu-id="d253f-122">방법: 전역 어셈블리 캐시에 어셈블리 설치</span><span class="sxs-lookup"><span data-stu-id="d253f-122">How to: Install an Assembly into the Global Assembly Cache</span></span>](../../../docs/framework/app-domains/how-to-install-an-assembly-into-the-gac.md)  
- [<span data-ttu-id="d253f-123">Gacutil.exe(전역 어셈블리 캐시 도구)</span><span class="sxs-lookup"><span data-stu-id="d253f-123">Gacutil.exe (Global Assembly Cache Tool)</span></span>](../../../docs/framework/tools/gacutil-exe-gac-tool.md)
+## <a name="see-also"></a><span data-ttu-id="d2be7-120">참고 항목</span><span class="sxs-lookup"><span data-stu-id="d2be7-120">See Also</span></span>  
+ [<span data-ttu-id="d2be7-121">어셈블리 및 전역 어셈블리 캐시 사용</span><span class="sxs-lookup"><span data-stu-id="d2be7-121">Working with Assemblies and the Global Assembly Cache</span></span>](../../../docs/framework/app-domains/working-with-assemblies-and-the-gac.md)  
+ [<span data-ttu-id="d2be7-122">방법: 전역 어셈블리 캐시에 어셈블리 설치</span><span class="sxs-lookup"><span data-stu-id="d2be7-122">How to: Install an Assembly into the Global Assembly Cache</span></span>](../../../docs/framework/app-domains/how-to-install-an-assembly-into-the-gac.md)  
+ [<span data-ttu-id="d2be7-123">Gacutil.exe(전역 어셈블리 캐시 도구)</span><span class="sxs-lookup"><span data-stu-id="d2be7-123">Gacutil.exe (Global Assembly Cache Tool)</span></span>](../../../docs/framework/tools/gacutil-exe-gac-tool.md)

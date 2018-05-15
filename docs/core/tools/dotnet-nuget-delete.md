@@ -4,71 +4,66 @@ description: dotnet-nuget-delete 명령은 서버에서 패키지를 삭제하�
 author: karann-msft
 ms.author: mairaw
 ms.date: 08/14/2017
-ms.topic: conceptual
-ms.prod: dotnet-core
-ms.technology: dotnet-cli
-ms.workload:
-- dotnetcore
-ms.openlocfilehash: 1e81501d526ae92336b808f98c7c192b55e89f98
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 639ade54bfed5eb2de89bdb3b7f451393b4be187
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="dotnet-nuget-delete"></a><span data-ttu-id="bffe6-103">dotnet nuget delete</span><span class="sxs-lookup"><span data-stu-id="bffe6-103">dotnet nuget delete</span></span>
+# <a name="dotnet-nuget-delete"></a><span data-ttu-id="4c4f8-103">dotnet nuget delete</span><span class="sxs-lookup"><span data-stu-id="4c4f8-103">dotnet nuget delete</span></span>
 
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
 
-## <a name="name"></a><span data-ttu-id="bffe6-104">name</span><span class="sxs-lookup"><span data-stu-id="bffe6-104">Name</span></span>
+## <a name="name"></a><span data-ttu-id="4c4f8-104">name</span><span class="sxs-lookup"><span data-stu-id="4c4f8-104">Name</span></span>
 
-<span data-ttu-id="bffe6-105">`dotnet nuget delete` - 서버에서 패키지를 삭제하거나 목록에서 제거합니다.</span><span class="sxs-lookup"><span data-stu-id="bffe6-105">`dotnet nuget delete` - Deletes or unlists a package from the server.</span></span>
+<span data-ttu-id="4c4f8-105">`dotnet nuget delete` - 서버에서 패키지를 삭제하거나 목록에서 제거합니다.</span><span class="sxs-lookup"><span data-stu-id="4c4f8-105">`dotnet nuget delete` - Deletes or unlists a package from the server.</span></span>
 
-## <a name="synopsis"></a><span data-ttu-id="bffe6-106">개요</span><span class="sxs-lookup"><span data-stu-id="bffe6-106">Synopsis</span></span>
+## <a name="synopsis"></a><span data-ttu-id="4c4f8-106">개요</span><span class="sxs-lookup"><span data-stu-id="4c4f8-106">Synopsis</span></span>
 
 `dotnet nuget delete [<PACKAGE_NAME> <PACKAGE_VERSION>] [-s|--source] [--non-interactive] [-k|--api-key] [--force-english-output] [-h|--help]`
 
-## <a name="description"></a><span data-ttu-id="bffe6-107">설명</span><span class="sxs-lookup"><span data-stu-id="bffe6-107">Description</span></span>
+## <a name="description"></a><span data-ttu-id="4c4f8-107">설명</span><span class="sxs-lookup"><span data-stu-id="4c4f8-107">Description</span></span>
 
-<span data-ttu-id="bffe6-108">`dotnet nuget delete` 명령은 패키지를 삭제하거나 목록에서 제거합니다.</span><span class="sxs-lookup"><span data-stu-id="bffe6-108">The `dotnet nuget delete` command deletes or unlists a package from the server.</span></span> <span data-ttu-id="bffe6-109">[nuget.org](https://www.nuget.org/)의 경우 작업을 통해 패키지가 목록에서 제거됩니다.</span><span class="sxs-lookup"><span data-stu-id="bffe6-109">For [nuget.org](https://www.nuget.org/), the action is to unlist the package.</span></span>
+<span data-ttu-id="4c4f8-108">`dotnet nuget delete` 명령은 패키지를 삭제하거나 목록에서 제거합니다.</span><span class="sxs-lookup"><span data-stu-id="4c4f8-108">The `dotnet nuget delete` command deletes or unlists a package from the server.</span></span> <span data-ttu-id="4c4f8-109">[nuget.org](https://www.nuget.org/)의 경우 작업을 통해 패키지가 목록에서 제거됩니다.</span><span class="sxs-lookup"><span data-stu-id="4c4f8-109">For [nuget.org](https://www.nuget.org/), the action is to unlist the package.</span></span>
 
-## <a name="arguments"></a><span data-ttu-id="bffe6-110">인수</span><span class="sxs-lookup"><span data-stu-id="bffe6-110">Arguments</span></span>
+## <a name="arguments"></a><span data-ttu-id="4c4f8-110">인수</span><span class="sxs-lookup"><span data-stu-id="4c4f8-110">Arguments</span></span>
 
 `PACKAGE_NAME`
 
-<span data-ttu-id="bffe6-111">삭제할 패키지입니다.</span><span class="sxs-lookup"><span data-stu-id="bffe6-111">Package to delete.</span></span>
+<span data-ttu-id="4c4f8-111">삭제할 패키지입니다.</span><span class="sxs-lookup"><span data-stu-id="4c4f8-111">Package to delete.</span></span>
 
 `PACKAGE_VERSION`
 
-<span data-ttu-id="bffe6-112">삭제할 패키지의 버전입니다.</span><span class="sxs-lookup"><span data-stu-id="bffe6-112">Version of the package to delete.</span></span>
+<span data-ttu-id="4c4f8-112">삭제할 패키지의 버전입니다.</span><span class="sxs-lookup"><span data-stu-id="4c4f8-112">Version of the package to delete.</span></span>
 
-## <a name="options"></a><span data-ttu-id="bffe6-113">옵션</span><span class="sxs-lookup"><span data-stu-id="bffe6-113">Options</span></span>
+## <a name="options"></a><span data-ttu-id="4c4f8-113">옵션</span><span class="sxs-lookup"><span data-stu-id="4c4f8-113">Options</span></span>
 
 `-h|--help`
 
-<span data-ttu-id="bffe6-114">명령에 대한 간단한 도움말을 출력합니다.</span><span class="sxs-lookup"><span data-stu-id="bffe6-114">Prints out a short help for the command.</span></span>
+<span data-ttu-id="4c4f8-114">명령에 대한 간단한 도움말을 출력합니다.</span><span class="sxs-lookup"><span data-stu-id="4c4f8-114">Prints out a short help for the command.</span></span>
 
 `-s|--source <SOURCE>`
 
-<span data-ttu-id="bffe6-115">서버 URL을 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="bffe6-115">Specifies the server URL.</span></span> <span data-ttu-id="bffe6-116">nuget.org에 대해 지원되는 URL에는 `http://www.nuget.org`, `http://www.nuget.org/api/v3` 및 `http://www.nuget.org/api/v2/package`가 포함됩니다.</span><span class="sxs-lookup"><span data-stu-id="bffe6-116">Supported URLs for nuget.org include `http://www.nuget.org`, `http://www.nuget.org/api/v3`, and `http://www.nuget.org/api/v2/package`.</span></span> <span data-ttu-id="bffe6-117">개인용 피드의 경우 호스트 이름(예: `%hostname%/api/v3`)을 대체합니다.</span><span class="sxs-lookup"><span data-stu-id="bffe6-117">For private feeds, substitute the host name (for example, `%hostname%/api/v3`).</span></span>
+<span data-ttu-id="4c4f8-115">서버 URL을 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="4c4f8-115">Specifies the server URL.</span></span> <span data-ttu-id="4c4f8-116">nuget.org에 대해 지원되는 URL에는 `http://www.nuget.org`, `http://www.nuget.org/api/v3` 및 `http://www.nuget.org/api/v2/package`가 포함됩니다.</span><span class="sxs-lookup"><span data-stu-id="4c4f8-116">Supported URLs for nuget.org include `http://www.nuget.org`, `http://www.nuget.org/api/v3`, and `http://www.nuget.org/api/v2/package`.</span></span> <span data-ttu-id="4c4f8-117">개인용 피드의 경우 호스트 이름(예: `%hostname%/api/v3`)을 대체합니다.</span><span class="sxs-lookup"><span data-stu-id="4c4f8-117">For private feeds, substitute the host name (for example, `%hostname%/api/v3`).</span></span>
 
 `--non-interactive`
 
-<span data-ttu-id="bffe6-118">사용자 입력 또는 확인에 대한 메시지를 표시하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="bffe6-118">Doesn't prompt for user input or confirmations.</span></span>
+<span data-ttu-id="4c4f8-118">사용자 입력 또는 확인에 대한 메시지를 표시하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="4c4f8-118">Doesn't prompt for user input or confirmations.</span></span>
 
 `-k|--api-key <API_KEY>`
 
-<span data-ttu-id="bffe6-119">서버에 대한 API 키입니다.</span><span class="sxs-lookup"><span data-stu-id="bffe6-119">The API key for the server.</span></span>
+<span data-ttu-id="4c4f8-119">서버에 대한 API 키입니다.</span><span class="sxs-lookup"><span data-stu-id="4c4f8-119">The API key for the server.</span></span>
 
 `--force-english-output`
 
-<span data-ttu-id="bffe6-120">명령줄 출력이 영어로 강제로 표시됩니다.</span><span class="sxs-lookup"><span data-stu-id="bffe6-120">Forces command-line output in English.</span></span>
+<span data-ttu-id="4c4f8-120">명령줄 출력이 영어로 강제로 표시됩니다.</span><span class="sxs-lookup"><span data-stu-id="4c4f8-120">Forces command-line output in English.</span></span>
 
-## <a name="examples"></a><span data-ttu-id="bffe6-121">예제</span><span class="sxs-lookup"><span data-stu-id="bffe6-121">Examples</span></span>
+## <a name="examples"></a><span data-ttu-id="4c4f8-121">예제</span><span class="sxs-lookup"><span data-stu-id="4c4f8-121">Examples</span></span>
 
-<span data-ttu-id="bffe6-122">`Microsoft.AspNetCore.Mvc` 패키지 버전 1.0을 삭제합니다.</span><span class="sxs-lookup"><span data-stu-id="bffe6-122">Deletes version 1.0 of package `Microsoft.AspNetCore.Mvc`:</span></span>
+<span data-ttu-id="4c4f8-122">`Microsoft.AspNetCore.Mvc` 패키지 버전 1.0을 삭제합니다.</span><span class="sxs-lookup"><span data-stu-id="4c4f8-122">Deletes version 1.0 of package `Microsoft.AspNetCore.Mvc`:</span></span>
 
 `dotnet nuget delete Microsoft.AspNetCore.Mvc 1.0` 
 
-<span data-ttu-id="bffe6-123">사용자에게 자격 증명 또는 기타 입력을 위한 메시지를 표시하지 않고 `Microsoft.AspNetCore.Mvc` 패키지 버전 1.0을 삭제합니다.</span><span class="sxs-lookup"><span data-stu-id="bffe6-123">Deletes version 1.0 of package `Microsoft.AspNetCore.Mvc`, not prompting user for credentials or other input:</span></span>
+<span data-ttu-id="4c4f8-123">사용자에게 자격 증명 또는 기타 입력을 위한 메시지를 표시하지 않고 `Microsoft.AspNetCore.Mvc` 패키지 버전 1.0을 삭제합니다.</span><span class="sxs-lookup"><span data-stu-id="4c4f8-123">Deletes version 1.0 of package `Microsoft.AspNetCore.Mvc`, not prompting user for credentials or other input:</span></span>
 
 `dotnet nuget delete Microsoft.AspNetCore.Mvc 1.0 --non-interactive`

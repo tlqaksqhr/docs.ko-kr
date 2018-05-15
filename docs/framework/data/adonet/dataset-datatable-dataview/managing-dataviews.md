@@ -1,34 +1,22 @@
 ---
-title: "데이터 보기 관리"
-ms.custom: 
+title: 데이터 보기 관리
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 0b67fab5-1722-4d2b-bfc1-247a75f0f1ee
-caps.latest.revision: "4"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 5944883541d7a8151748bc15d3ae90f51a48ecc2
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: c292c9f7827e86d48f2006c05f6012ad95da1485
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
-# <a name="managing-dataviews"></a><span data-ttu-id="6c868-102">데이터 보기 관리</span><span class="sxs-lookup"><span data-stu-id="6c868-102">Managing DataViews</span></span>
-<span data-ttu-id="6c868-103"><xref:System.Data.DataViewManager>를 사용하여 <xref:System.Data.DataView>의 모든 테이블에 대한 뷰 설정을 관리할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="6c868-103">You can use a <xref:System.Data.DataViewManager> to manage view settings for all the tables in a <xref:System.Data.DataView>.</span></span> <span data-ttu-id="6c868-104">여러 테이블에 바인딩할 하는 컨트롤의 경우는 표와 같이 관계를 탐색 하는 **DataViewManager** 이상적입니다.</span><span class="sxs-lookup"><span data-stu-id="6c868-104">If you have a control that you want to bind to multiple tables, such as a grid that navigates relationships, a **DataViewManager** is ideal.</span></span>  
+# <a name="managing-dataviews"></a><span data-ttu-id="e214e-102">데이터 보기 관리</span><span class="sxs-lookup"><span data-stu-id="e214e-102">Managing DataViews</span></span>
+<span data-ttu-id="e214e-103"><xref:System.Data.DataViewManager>를 사용하여 <xref:System.Data.DataView>의 모든 테이블에 대한 뷰 설정을 관리할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="e214e-103">You can use a <xref:System.Data.DataViewManager> to manage view settings for all the tables in a <xref:System.Data.DataView>.</span></span> <span data-ttu-id="e214e-104">여러 테이블에 바인딩할 하는 컨트롤의 경우는 표와 같이 관계를 탐색 하는 **DataViewManager** 이상적입니다.</span><span class="sxs-lookup"><span data-stu-id="e214e-104">If you have a control that you want to bind to multiple tables, such as a grid that navigates relationships, a **DataViewManager** is ideal.</span></span>  
   
- <span data-ttu-id="6c868-105">**DataViewManager** 의 컬렉션을 포함 <xref:System.Data.DataViewSetting> 에 있는 테이블의 뷰를 설정 하는 데 사용 되는 개체는 <xref:System.Data.DataSet>합니다.</span><span class="sxs-lookup"><span data-stu-id="6c868-105">The **DataViewManager** contains a collection of <xref:System.Data.DataViewSetting> objects that are used to set the view setting of the tables in the <xref:System.Data.DataSet>.</span></span> <span data-ttu-id="6c868-106"><xref:System.Data.DataViewSettingCollection> 하나가 포함 된 <xref:System.Data.DataViewSetting> 의 각 테이블에 대 한 개체는 **DataSet**합니다.</span><span class="sxs-lookup"><span data-stu-id="6c868-106">The <xref:System.Data.DataViewSettingCollection> contains one <xref:System.Data.DataViewSetting> object for each table in a **DataSet**.</span></span> <span data-ttu-id="6c868-107">기본값을 설정할 수 있습니다 **ApplyDefaultSort**, **정렬**, **RowFilter**, 및 **RowStateFilter** 하면 참조 된 테이블의 속성 사용 하 여 해당 **DataViewSetting**합니다.</span><span class="sxs-lookup"><span data-stu-id="6c868-107">You can set the default **ApplyDefaultSort**, **Sort**, **RowFilter**, and **RowStateFilter** properties of the referenced table by using its **DataViewSetting**.</span></span> <span data-ttu-id="6c868-108">참조할 수는 **DataViewSetting** 이름 또는 서 수 참조 별로 또는 해당 특정 테이블 개체에 대 한 참조를 전달 하 여 특정 테이블에 대 한 합니다.</span><span class="sxs-lookup"><span data-stu-id="6c868-108">You can reference the **DataViewSetting** for a particular table by name or ordinal reference, or by passing a reference to that specific table object.</span></span> <span data-ttu-id="6c868-109">컬렉션에 액세스할 수 있습니다 **DataViewSetting** 개체에 **DataViewManager** 를 사용 하 여는 **Dataviewsetting** 속성입니다.</span><span class="sxs-lookup"><span data-stu-id="6c868-109">You can access the collection of **DataViewSetting** objects in a **DataViewManager** by using the **DataViewSettings** property.</span></span>  
+ <span data-ttu-id="e214e-105">**DataViewManager** 의 컬렉션을 포함 <xref:System.Data.DataViewSetting> 에 있는 테이블의 뷰를 설정 하는 데 사용 되는 개체는 <xref:System.Data.DataSet>합니다.</span><span class="sxs-lookup"><span data-stu-id="e214e-105">The **DataViewManager** contains a collection of <xref:System.Data.DataViewSetting> objects that are used to set the view setting of the tables in the <xref:System.Data.DataSet>.</span></span> <span data-ttu-id="e214e-106"><xref:System.Data.DataViewSettingCollection> 하나가 포함 된 <xref:System.Data.DataViewSetting> 의 각 테이블에 대 한 개체는 **DataSet**합니다.</span><span class="sxs-lookup"><span data-stu-id="e214e-106">The <xref:System.Data.DataViewSettingCollection> contains one <xref:System.Data.DataViewSetting> object for each table in a **DataSet**.</span></span> <span data-ttu-id="e214e-107">기본값을 설정할 수 있습니다 **ApplyDefaultSort**, **정렬**, **RowFilter**, 및 **RowStateFilter** 하면 참조 된 테이블의 속성 사용 하 여 해당 **DataViewSetting**합니다.</span><span class="sxs-lookup"><span data-stu-id="e214e-107">You can set the default **ApplyDefaultSort**, **Sort**, **RowFilter**, and **RowStateFilter** properties of the referenced table by using its **DataViewSetting**.</span></span> <span data-ttu-id="e214e-108">참조할 수는 **DataViewSetting** 이름 또는 서 수 참조 별로 또는 해당 특정 테이블 개체에 대 한 참조를 전달 하 여 특정 테이블에 대 한 합니다.</span><span class="sxs-lookup"><span data-stu-id="e214e-108">You can reference the **DataViewSetting** for a particular table by name or ordinal reference, or by passing a reference to that specific table object.</span></span> <span data-ttu-id="e214e-109">컬렉션에 액세스할 수 있습니다 **DataViewSetting** 개체에 **DataViewManager** 를 사용 하 여는 **Dataviewsetting** 속성입니다.</span><span class="sxs-lookup"><span data-stu-id="e214e-109">You can access the collection of **DataViewSetting** objects in a **DataViewManager** by using the **DataViewSettings** property.</span></span>  
   
- <span data-ttu-id="6c868-110">다음 코드 예에서는 채우기는 **DataSet** SQL Server와 **Northwind** 데이터베이스 테이블 **고객**, **Orders**, 및  **주문 정보를**, 테이블 간의 관계를 생성, 사용 하 여는 **DataViewManager** 기본값을 설정 하려면 **DataView** 설정과 바인딩을 **DataGrid**  에 **DataViewManager**합니다.</span><span class="sxs-lookup"><span data-stu-id="6c868-110">The following code example fills a **DataSet** with the SQL Server **Northwind** database tables **Customers**, **Orders**, and **Order Details**, creates the relationships between the tables, uses a **DataViewManager** to set default **DataView** settings, and binds a **DataGrid** to the **DataViewManager**.</span></span> <span data-ttu-id="6c868-111">이 예제에서는 기본 설정 **DataView** 의 모든 테이블에 대 한 설정을 **DataSet** 테이블의 기본 키로 정렬 하려면 (**ApplyDefaultSort**  =  **true**), 다음의 정렬 순서를 수정 하 고는 **고객** 기준으로 정렬 하려면 테이블 **CompanyName**합니다.</span><span class="sxs-lookup"><span data-stu-id="6c868-111">The example sets the default **DataView** settings for all tables in the **DataSet** to sort by the primary key of the table (**ApplyDefaultSort** = **true**), and then modifies the sort order of the **Customers** table to sort by **CompanyName**.</span></span>  
+ <span data-ttu-id="e214e-110">다음 코드 예에서는 채우기는 **DataSet** SQL Server와 **Northwind** 데이터베이스 테이블 **고객**, **Orders**, 및  **주문 정보를**, 테이블 간의 관계를 생성, 사용 하 여는 **DataViewManager** 기본값을 설정 하려면 **DataView** 설정과 바인딩을 **DataGrid**  에 **DataViewManager**합니다.</span><span class="sxs-lookup"><span data-stu-id="e214e-110">The following code example fills a **DataSet** with the SQL Server **Northwind** database tables **Customers**, **Orders**, and **Order Details**, creates the relationships between the tables, uses a **DataViewManager** to set default **DataView** settings, and binds a **DataGrid** to the **DataViewManager**.</span></span> <span data-ttu-id="e214e-111">이 예제에서는 기본 설정 **DataView** 의 모든 테이블에 대 한 설정을 **DataSet** 테이블의 기본 키로 정렬 하려면 (**ApplyDefaultSort**  =  **true**), 다음의 정렬 순서를 수정 하 고는 **고객** 기준으로 정렬 하려면 테이블 **CompanyName**합니다.</span><span class="sxs-lookup"><span data-stu-id="e214e-111">The example sets the default **DataView** settings for all tables in the **DataSet** to sort by the primary key of the table (**ApplyDefaultSort** = **true**), and then modifies the sort order of the **Customers** table to sort by **CompanyName**.</span></span>  
   
 ```vb  
 ' Assumes connection is a valid SqlConnection to Northwind.  
@@ -130,10 +118,10 @@ System.Windows.Forms.DataGrid grid = new System.Windows.Forms.DataGrid();
 grid.SetDataBinding(viewManager, "Customers");  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="6c868-112">참고 항목</span><span class="sxs-lookup"><span data-stu-id="6c868-112">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="e214e-112">참고 항목</span><span class="sxs-lookup"><span data-stu-id="e214e-112">See Also</span></span>  
  <xref:System.Data.DataSet>  
  <xref:System.Data.DataViewManager>  
  <xref:System.Data.DataViewSetting>  
  <xref:System.Data.DataViewSettingCollection>  
- [<span data-ttu-id="6c868-113">DataView</span><span class="sxs-lookup"><span data-stu-id="6c868-113">DataViews</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataviews.md)  
- [<span data-ttu-id="6c868-114">ADO.NET 관리되는 공급자 및 데이터 집합 개발자 센터</span><span class="sxs-lookup"><span data-stu-id="6c868-114">ADO.NET Managed Providers and DataSet Developer Center</span></span>](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [<span data-ttu-id="e214e-113">DataView</span><span class="sxs-lookup"><span data-stu-id="e214e-113">DataViews</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataviews.md)  
+ [<span data-ttu-id="e214e-114">ADO.NET 관리되는 공급자 및 데이터 집합 개발자 센터</span><span class="sxs-lookup"><span data-stu-id="e214e-114">ADO.NET Managed Providers and DataSet Developer Center</span></span>](http://go.microsoft.com/fwlink/?LinkId=217917)

@@ -1,49 +1,37 @@
 ---
-title: "전파"
-ms.custom: 
+title: 전파
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: f8181e75-d693-48d1-b333-a776ad3b382a
-caps.latest.revision: "8"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 17b20b76d4932272c8e2a9e26603dc8483505242
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: f4e92c6dec163d191c507dd80bb0d9dc129c6e96
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/07/2018
 ---
-# <a name="propagation"></a><span data-ttu-id="22889-102">전파</span><span class="sxs-lookup"><span data-stu-id="22889-102">Propagation</span></span>
-<span data-ttu-id="22889-103">이 항목에서는 [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] 추적 모델의 동작 전파에 대해 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="22889-103">This topic describes activity propagation in the [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] tracing model.</span></span>  
+# <a name="propagation"></a><span data-ttu-id="7300d-102">전파</span><span class="sxs-lookup"><span data-stu-id="7300d-102">Propagation</span></span>
+<span data-ttu-id="7300d-103">이 항목에서는 Windows Communication Foundation (WCF) 추적 모델의 동작 전파에 설명 합니다.</span><span class="sxs-lookup"><span data-stu-id="7300d-103">This topic describes activity propagation in the Windows Communication Foundation (WCF) tracing model.</span></span>  
   
-## <a name="using-propagation-to-correlate-activities-across-endpoints"></a><span data-ttu-id="22889-104">전파를 통해 끝점 내의 동작 상호 연결</span><span class="sxs-lookup"><span data-stu-id="22889-104">Using Propagation to Correlate Activities Across Endpoints</span></span>  
- <span data-ttu-id="22889-105">전파는 사용자에게 응용 프로그램 끝점을 통해 동일한 처리 단위(예: 요청)에 대한 오류 추적의 직접적인 상관 관계를 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="22889-105">Propagation provides the user with direct correlation of error traces for the same unit of processing across application endpoints, for example, a request.</span></span> <span data-ttu-id="22889-106">동일한 처리 단위에 대해 다른 끝점에서 내보내진 오류는 응용 프로그램 도메인에서도 동일한 동작에서 그룹화됩니다.</span><span class="sxs-lookup"><span data-stu-id="22889-106">Errors emitted at different endpoints for the same unit of processing are grouped in the same activity, even across application domains.</span></span> <span data-ttu-id="22889-107">이는 메시지 헤더에서 동작 ID의 전파를 통해 수행됩니다.</span><span class="sxs-lookup"><span data-stu-id="22889-107">This is done through propagation of the activity ID in the message headers.</span></span> <span data-ttu-id="22889-108">그러므로 서버의 내부 오류로 인해 클라이언트의 시간이 초과되면 두 오류 모두 직접 상관 관계에 대해 동일한 동작에서 표시됩니다.</span><span class="sxs-lookup"><span data-stu-id="22889-108">Therefore, if a client times out because of an internal error in the server, both errors appear in the same activity for direct correlation.</span></span>  
+## <a name="using-propagation-to-correlate-activities-across-endpoints"></a><span data-ttu-id="7300d-104">전파를 통해 끝점 내의 동작 상호 연결</span><span class="sxs-lookup"><span data-stu-id="7300d-104">Using Propagation to Correlate Activities Across Endpoints</span></span>  
+ <span data-ttu-id="7300d-105">전파는 사용자에게 응용 프로그램 끝점을 통해 동일한 처리 단위(예: 요청)에 대한 오류 추적의 직접적인 상관 관계를 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="7300d-105">Propagation provides the user with direct correlation of error traces for the same unit of processing across application endpoints, for example, a request.</span></span> <span data-ttu-id="7300d-106">동일한 처리 단위에 대해 다른 끝점에서 내보내진 오류는 응용 프로그램 도메인에서도 동일한 동작에서 그룹화됩니다.</span><span class="sxs-lookup"><span data-stu-id="7300d-106">Errors emitted at different endpoints for the same unit of processing are grouped in the same activity, even across application domains.</span></span> <span data-ttu-id="7300d-107">이는 메시지 헤더에서 동작 ID의 전파를 통해 수행됩니다.</span><span class="sxs-lookup"><span data-stu-id="7300d-107">This is done through propagation of the activity ID in the message headers.</span></span> <span data-ttu-id="7300d-108">그러므로 서버의 내부 오류로 인해 클라이언트의 시간이 초과되면 두 오류 모두 직접 상관 관계에 대해 동일한 동작에서 표시됩니다.</span><span class="sxs-lookup"><span data-stu-id="7300d-108">Therefore, if a client times out because of an internal error in the server, both errors appear in the same activity for direct correlation.</span></span>  
   
- <span data-ttu-id="22889-109">이 작업을 수행하려면 앞의 예제에서 설명한 대로 `ActivityTracing` 설정을 사용하세요.</span><span class="sxs-lookup"><span data-stu-id="22889-109">To do this, use the `ActivityTracing` setting as demonstrated in the previous example.</span></span> <span data-ttu-id="22889-110">또한 모든 끝점에서 `propagateActivity` 추적 소스에 대해 `System.ServiceModel` 특성을 설정하세요.</span><span class="sxs-lookup"><span data-stu-id="22889-110">In addition, set the `propagateActivity` attribute for the `System.ServiceModel` trace source at all endpoints.</span></span>  
+ <span data-ttu-id="7300d-109">이 작업을 수행하려면 앞의 예제에서 설명한 대로 `ActivityTracing` 설정을 사용하세요.</span><span class="sxs-lookup"><span data-stu-id="7300d-109">To do this, use the `ActivityTracing` setting as demonstrated in the previous example.</span></span> <span data-ttu-id="7300d-110">또한 모든 끝점에서 `propagateActivity` 추적 소스에 대해 `System.ServiceModel` 특성을 설정하세요.</span><span class="sxs-lookup"><span data-stu-id="7300d-110">In addition, set the `propagateActivity` attribute for the `System.ServiceModel` trace source at all endpoints.</span></span>  
   
 ```xml  
 <source name="System.ServiceModel" switchValue="Verbose,ActivityTracing" propagateActivity="true" >  
 ```  
   
- <span data-ttu-id="22889-111">동작 전파는 [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)]가 TLS에 동작 ID를 포함한 아웃바운드 메시지에 헤더를 추가하도록 구성할 수 있는 기능입니다.</span><span class="sxs-lookup"><span data-stu-id="22889-111">Activity propagation is a configurable capability that causes [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] to add a header to outbound messages, which includes the activity ID on the TLS.</span></span> <span data-ttu-id="22889-112">서버측에서 이후의 추적에 이를 포함함으로써 클라이언트 및 서버 동작을 상호 연결할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="22889-112">By including this on subsequent traces on the server side, we can correlate client and server activities.</span></span>  
+ <span data-ttu-id="7300d-111">동작 전파에 TLS에 동작 ID를 포함 하는 아웃 바운드 메시지에 헤더를 추가 하려면 WCF를 발생 시키는 구성 가능한 기능입니다.</span><span class="sxs-lookup"><span data-stu-id="7300d-111">Activity propagation is a configurable capability that causes WCF to add a header to outbound messages, which includes the activity ID on the TLS.</span></span> <span data-ttu-id="7300d-112">서버측에서 이후의 추적에 이를 포함함으로써 클라이언트 및 서버 동작을 상호 연결할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="7300d-112">By including this on subsequent traces on the server side, we can correlate client and server activities.</span></span>  
   
-## <a name="propagation-definition"></a><span data-ttu-id="22889-113">전파 정의</span><span class="sxs-lookup"><span data-stu-id="22889-113">Propagation Definition</span></span>  
- <span data-ttu-id="22889-114">다음 조건이 모두 충족되면 동작 M의 gAId가 동작 N에 전파됩니다.</span><span class="sxs-lookup"><span data-stu-id="22889-114">Activity M’s gAId is propagated to activity N if all of the following conditions apply.</span></span>  
+## <a name="propagation-definition"></a><span data-ttu-id="7300d-113">전파 정의</span><span class="sxs-lookup"><span data-stu-id="7300d-113">Propagation Definition</span></span>  
+ <span data-ttu-id="7300d-114">다음 조건이 모두 충족되면 동작 M의 gAId가 동작 N에 전파됩니다.</span><span class="sxs-lookup"><span data-stu-id="7300d-114">Activity M’s gAId is propagated to activity N if all of the following conditions apply.</span></span>  
   
--   <span data-ttu-id="22889-115">N은 M으로 인해 만들어집니다.</span><span class="sxs-lookup"><span data-stu-id="22889-115">N is created because of M</span></span>  
+-   <span data-ttu-id="7300d-115">N은 M으로 인해 만들어집니다.</span><span class="sxs-lookup"><span data-stu-id="7300d-115">N is created because of M</span></span>  
   
--   <span data-ttu-id="22889-116">M의 gAId가 N에 알려집니다.</span><span class="sxs-lookup"><span data-stu-id="22889-116">M’s gAId is known to N</span></span>  
+-   <span data-ttu-id="7300d-116">M의 gAId가 N에 알려집니다.</span><span class="sxs-lookup"><span data-stu-id="7300d-116">M’s gAId is known to N</span></span>  
   
--   <span data-ttu-id="22889-117">N의 gAId가 M의 gAId와 같습니다.</span><span class="sxs-lookup"><span data-stu-id="22889-117">N's gAId is equal to M’s gAId.</span></span>  
+-   <span data-ttu-id="7300d-117">N의 gAId가 M의 gAId와 같습니다.</span><span class="sxs-lookup"><span data-stu-id="7300d-117">N's gAId is equal to M’s gAId.</span></span>  
   
- <span data-ttu-id="22889-118">다음 XML 스키마에 설명된 것처럼 gAId는 ActivityId 메시지 헤더를 통해 전파됩니다.</span><span class="sxs-lookup"><span data-stu-id="22889-118">The gAId is propagated through the ActivityId message header, as illustrated in the following XML schema.</span></span>  
+ <span data-ttu-id="7300d-118">다음 XML 스키마에 설명된 것처럼 gAId는 ActivityId 메시지 헤더를 통해 전파됩니다.</span><span class="sxs-lookup"><span data-stu-id="7300d-118">The gAId is propagated through the ActivityId message header, as illustrated in the following XML schema.</span></span>  
   
 ```xml  
 <xsd:element name="ActivityId" type="integer" minOccurs="0">  
@@ -51,7 +39,7 @@ ms.lasthandoff: 12/22/2017
 </xsd:element>  
 ```  
   
- <span data-ttu-id="22889-119">다음은 메시지 헤더의 예제입니다.</span><span class="sxs-lookup"><span data-stu-id="22889-119">The following is an example of the message header.</span></span>  
+ <span data-ttu-id="7300d-119">다음은 메시지 헤더의 예제입니다.</span><span class="sxs-lookup"><span data-stu-id="7300d-119">The following is an example of the message header.</span></span>  
   
 ```xml  
 <MessageLogTraceRecord>  
@@ -83,14 +71,14 @@ ms.lasthandoff: 12/22/2017
 </MessageLogTraceRecord>  
 ```  
   
-## <a name="propagation-and-activity-boundaries"></a><span data-ttu-id="22889-120">전파 및 동작 경계</span><span class="sxs-lookup"><span data-stu-id="22889-120">Propagation and Activity Boundaries</span></span>  
- <span data-ttu-id="22889-121">동작 ID가 끝점을 통해 전파되는 경우 메시지 수신자는 해당(전파된) 동작 ID를 사용하여 Start 및 Stop 추적을 내보냅니다.</span><span class="sxs-lookup"><span data-stu-id="22889-121">When the activity ID is propagated across endpoints, the message receiver emits a Start and Stop traces with that (propagated) activity ID.</span></span> <span data-ttu-id="22889-122">따라서 각 추적 소스의 해당 gAId를 가진 Start 및 Stop 추적이 있습니다.</span><span class="sxs-lookup"><span data-stu-id="22889-122">Therefore, there is a Start and Stop trace with that gAId from each trace source.</span></span> <span data-ttu-id="22889-123">끝점이 동일한 프로세스에 있고 동일한 추적 소스 이름을 사용하는 경우 동일한 lAId(동일한 gAId, 동일한 추적 소스, 동일한 프로세스)를 가진 여러 Start 및 Stop 추적이 만들어집니다.</span><span class="sxs-lookup"><span data-stu-id="22889-123">If the endpoints are in the same process and use the same trace source name, multiple Start and Stop with the same lAId (same gAId, same trace source, same process) are created.</span></span>  
+## <a name="propagation-and-activity-boundaries"></a><span data-ttu-id="7300d-120">전파 및 동작 경계</span><span class="sxs-lookup"><span data-stu-id="7300d-120">Propagation and Activity Boundaries</span></span>  
+ <span data-ttu-id="7300d-121">동작 ID가 끝점을 통해 전파되는 경우 메시지 수신자는 해당(전파된) 동작 ID를 사용하여 Start 및 Stop 추적을 내보냅니다.</span><span class="sxs-lookup"><span data-stu-id="7300d-121">When the activity ID is propagated across endpoints, the message receiver emits a Start and Stop traces with that (propagated) activity ID.</span></span> <span data-ttu-id="7300d-122">따라서 각 추적 소스의 해당 gAId를 가진 Start 및 Stop 추적이 있습니다.</span><span class="sxs-lookup"><span data-stu-id="7300d-122">Therefore, there is a Start and Stop trace with that gAId from each trace source.</span></span> <span data-ttu-id="7300d-123">끝점이 동일한 프로세스에 있고 동일한 추적 소스 이름을 사용하는 경우 동일한 lAId(동일한 gAId, 동일한 추적 소스, 동일한 프로세스)를 가진 여러 Start 및 Stop 추적이 만들어집니다.</span><span class="sxs-lookup"><span data-stu-id="7300d-123">If the endpoints are in the same process and use the same trace source name, multiple Start and Stop with the same lAId (same gAId, same trace source, same process) are created.</span></span>  
   
-## <a name="synchronization"></a><span data-ttu-id="22889-124">동기화</span><span class="sxs-lookup"><span data-stu-id="22889-124">Synchronization</span></span>  
- <span data-ttu-id="22889-125">서로 다른 컴퓨터에서 실행되는 끝점에서 이벤트를 동기화하기 위해 CorrelationId가 메시지에 전파되는 ActivityId 헤더에 추가됩니다.</span><span class="sxs-lookup"><span data-stu-id="22889-125">To synchronize events across endpoints that run on different machines, a CorrelationId is added to the ActivityId header that is propagated in messages.</span></span> <span data-ttu-id="22889-126">도구에서 이 ID를 사용하여 클럭이 일치하지 않는 시스템 간의 이벤트를 동기화할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="22889-126">Tools can use this ID to synchronize events across machines with clock discrepancy.</span></span> <span data-ttu-id="22889-127">특히 Service Trace Viewer 도구는 이 ID를 사용하여 끝점 간의 메시지 흐름을 표시합니다.</span><span class="sxs-lookup"><span data-stu-id="22889-127">Specifically, the Service Trace Viewer tool uses this ID for showing message flows between endpoints.</span></span>  
+## <a name="synchronization"></a><span data-ttu-id="7300d-124">동기화</span><span class="sxs-lookup"><span data-stu-id="7300d-124">Synchronization</span></span>  
+ <span data-ttu-id="7300d-125">서로 다른 컴퓨터에서 실행되는 끝점에서 이벤트를 동기화하기 위해 CorrelationId가 메시지에 전파되는 ActivityId 헤더에 추가됩니다.</span><span class="sxs-lookup"><span data-stu-id="7300d-125">To synchronize events across endpoints that run on different machines, a CorrelationId is added to the ActivityId header that is propagated in messages.</span></span> <span data-ttu-id="7300d-126">도구에서 이 ID를 사용하여 클럭이 일치하지 않는 시스템 간의 이벤트를 동기화할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="7300d-126">Tools can use this ID to synchronize events across machines with clock discrepancy.</span></span> <span data-ttu-id="7300d-127">특히 Service Trace Viewer 도구는 이 ID를 사용하여 끝점 간의 메시지 흐름을 표시합니다.</span><span class="sxs-lookup"><span data-stu-id="7300d-127">Specifically, the Service Trace Viewer tool uses this ID for showing message flows between endpoints.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="22889-128">참고 항목</span><span class="sxs-lookup"><span data-stu-id="22889-128">See Also</span></span>  
- [<span data-ttu-id="22889-129">추적 구성</span><span class="sxs-lookup"><span data-stu-id="22889-129">Configuring Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md)  
- [<span data-ttu-id="22889-130">Service Trace Viewer를 사용하여 상호 관련된 추적 보기 및 문제 해결</span><span class="sxs-lookup"><span data-stu-id="22889-130">Using Service Trace Viewer for Viewing Correlated Traces and Troubleshooting</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md)  
- [<span data-ttu-id="22889-131">종단 간 추적 시나리오</span><span class="sxs-lookup"><span data-stu-id="22889-131">End-To-End Tracing Scenarios</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/end-to-end-tracing-scenarios.md)  
- [<span data-ttu-id="22889-132">Service Trace Viewer 도구(SvcTraceViewer.exe)</span><span class="sxs-lookup"><span data-stu-id="22889-132">Service Trace Viewer Tool (SvcTraceViewer.exe)</span></span>](../../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)
+## <a name="see-also"></a><span data-ttu-id="7300d-128">참고 항목</span><span class="sxs-lookup"><span data-stu-id="7300d-128">See Also</span></span>  
+ [<span data-ttu-id="7300d-129">추적 구성</span><span class="sxs-lookup"><span data-stu-id="7300d-129">Configuring Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md)  
+ [<span data-ttu-id="7300d-130">Service Trace Viewer를 사용하여 상호 관련된 추적 보기 및 문제 해결</span><span class="sxs-lookup"><span data-stu-id="7300d-130">Using Service Trace Viewer for Viewing Correlated Traces and Troubleshooting</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md)  
+ [<span data-ttu-id="7300d-131">종단 간 추적 시나리오</span><span class="sxs-lookup"><span data-stu-id="7300d-131">End-To-End Tracing Scenarios</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/end-to-end-tracing-scenarios.md)  
+ [<span data-ttu-id="7300d-132">Service Trace Viewer 도구(SvcTraceViewer.exe)</span><span class="sxs-lookup"><span data-stu-id="7300d-132">Service Trace Viewer Tool (SvcTraceViewer.exe)</span></span>](../../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)
