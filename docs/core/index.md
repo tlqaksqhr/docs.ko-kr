@@ -4,11 +4,11 @@ description: .NET Core는 Windows, Linux 및 Mac 앱을 만들기 위한 모듈�
 author: richlander
 ms.author: mairaw
 ms.date: 06/20/2016
-ms.openlocfilehash: 7a2548a177f6e62e9c76c336c6e270a139d9fce0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1f413e4efa8b33877917330855f4881c3fbf0854
+ms.sourcegitcommit: 88f251b08bf0718ce119f3d7302f514b74895038
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="net-core-guide"></a>.NET Core 가이드
 
@@ -31,14 +31,14 @@ ms.lasthandoff: 05/04/2018
 
 - [.NET 런타임](https://github.com/dotnet/coreclr) - 형식 시스템, 어셈블리 로드, 가비지 수집기, 네이티브 interop 및 기타 기본 서비스를 제공합니다. 
 - [프레임워크 라이브러리](https://github.com/dotnet/corefx) 집합 - 기본 데이터 형식, 앱 구성 형식 및 기본 유틸리티를 제공합니다. 
-- [SDK 도구 집합](https://github.com/dotnet/cli) 및 [언어 컴파일러](https://github.com/dotnet/roslyn) - [.NET Core SDK](sdk.md)에서 사용할 수 있는 기본 개발자 환경을 사용할 수 있도록 합니다.
+- [.NET Core SDK](sdk.md)에서 사용할 수 있는 기본 개발자 환경을 사용할 수 있도록 하는 [SDK 도구 집합](https://github.com/dotnet/cli) 및 언어 컴파일러([Roslyn](https://github.com/dotnet/roslyn) 및 [F#](https://github.com/microsoft/visualfsharp))입니다.
 - 'dotnet' 앱 호스트 - .NET Core 앱을 시작하는 데 사용됩니다. 이 호스트는 런타임을 선택하고 런타임을 호스트하며 어셈블리 로드 정책을 제공하고 앱을 시작합니다. 동일한 호스트를 사용하여 거의 동일한 방식으로 SDK 도구를 시작할 수도 있습니다.
 
 ### <a name="languages"></a>언어
 
 C#, Visual Basic 및 F# 언어를 사용하여 .NET Core에 대한 응용 프로그램 및 라이브러리를 작성할 수 있습니다. 컴파일러는 .NET Core에서 실행되며, 실행되는 모든 위치에서 .NET Core를 개발할 수 있습니다. 일반적으로 컴파일러는 직접 사용하지 않고 SDK 도구를 통해 간접적으로 사용합니다.
 
-C#, Visual Basic 및 F# 컴파일러와 .NET Core 도구는 Visual Studio, [Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=ms-vscode.csharp), Sublime Text 및 Vim을 포함한 여러 텍스트 편집기 및 IDE에 통합되어 즐겨찾는 코딩 환경 및 OS에서 .NET Core 개발을 옵션으로 만들 수 있습니다. 이 통합은 [OmniSharp 프로젝트](http://www.omnisharp.net/)의 적합한 담당자에 의해 부분적으로 제공됩니다.
+C#, Visual Basic 및 F# 컴파일러와 .NET Core 도구는 Visual Studio, [Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=ms-vscode.csharp), Sublime Text 및 Vim을 포함한 여러 텍스트 편집기 및 IDE에 통합되어 즐겨찾는 코딩 환경 및 OS에서 .NET Core 개발을 옵션으로 만들 수 있습니다. 이 통합은 [OmniSharp 프로젝트](http://www.omnisharp.net/) 및 [Ionide](http://ionide.io)의 적합한 담당자에 의해 부분적으로 제공됩니다.
 
 ### <a name="net-apis-and-compatibility"></a>.NET API 및 호환성
 

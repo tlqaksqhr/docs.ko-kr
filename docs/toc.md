@@ -1113,7 +1113,7 @@
 # [ML.NET 가이드](machine-learning/index.md)
 ## [자습서](machine-learning/tutorials/index.md)
 ### [감정 분석(분류)](machine-learning/tutorials/sentiment-analysis.md)
-### [택시 시간 예측기(회귀)](machine-learning/tutorials/taxi-fare.md)
+### [택시 요금 예측기(회귀)](machine-learning/tutorials/taxi-fare.md)
 ## [리소스](machine-learning/resources/index.md)
 ### [Machine Learning 용어](machine-learning/resources/glossary.md)
 ### [Machine Learning 기본](machine-learning/resources/basics.md)

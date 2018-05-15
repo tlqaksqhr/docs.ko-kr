@@ -5,11 +5,11 @@ hide_bc: true
 title: .NET 설명서
 description: C#, Visual Basic 및 F#을 사용하는 모든 플랫폼에서 .NET을 사용하여 다양한 응용 프로그램을 만드는 방법을 알아보세요. API 참조, 샘플 코드, 자습서 등을 찾아보세요.
 ms.custom: updateeachrelease
-ms.openlocfilehash: 7fbafb9a5ca939b4ca8bb78d38b66767e3cf6ab9
-ms.sourcegitcommit: c03eef711abe961a85db2b4d0715257d1524aef6
+ms.openlocfilehash: 3a2501d4eb0e40930bb119fb27f9cb630bc2a884
+ms.sourcegitcommit: 88f251b08bf0718ce119f3d7302f514b74895038
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 05/10/2018
 ---
 <div id="main" class="v2">
     <div class="container">
@@ -231,7 +231,7 @@ ms.lasthandoff: 05/08/2018
                                                 <p><a href="/dotnet/machine-learning/tutorials">자습서</a></p>
                                                 <p><a href="/dotnet/machine-learning/resources">리소스</a></p>
                                                 <p><a href="/dotnet/machine-learning/resources/glossary">용어</a></p>
-                                                <p><a href="/dotnet/api?view=ml-dotnet">ML.NET API</a></p>
+                                                <p><a href="/dotnet/api?view=ml-dotnet">ML.NET API 참조</a></p>
                                             </div>
                                         </div>
                                     </div>

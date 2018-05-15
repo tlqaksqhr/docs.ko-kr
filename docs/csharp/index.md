@@ -8,11 +8,11 @@ helpviewer_keywords:
 - Help, Visual C# documentation
 - C# language
 - Visual C#
-ms.openlocfilehash: 598ddfbe16a1a09326d811b4eafcf87f3ca6e971
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4d349f8aff5e3d48a2bc738e848d2a251805e260
+ms.sourcegitcommit: ff1d40507b3eb6e2185478e37c66c66be6de46f1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/11/2018
 ---
 # <a name="c-guide"></a>C# 가이드
 
@@ -43,8 +43,8 @@ C# 가이드에는 여러 섹션이 있습니다. 순서대로 읽거나 가장 
 * [C# 둘러보기](tour-of-csharp/index.md)
   * 이 섹션에서는 이 언어의 개요를 살펴봅니다. C# 프로그램을 구성하는 요소와 이 언어의 기능을 다룹니다. C#의 모든 구문 요소를 포함하는 간단한 샘플을 보여 주고 주요 C# 언어 항목을 설명합니다.
 
-* [최신 기능](whats-new/index.md)
-  * 이 언어의 새 기능에 대해 자세히 알아봅니다. C# Interactive(C#의 REPL) 및 .NET 컴파일러 플랫폼 SDK와 같은 새로운 도구에 대해 알아봅니다. 이 섹션에서는 언어가 발전하는 방식과 새 도구가 생산성을 높여주는 방법을 보여 줍니다.
+* [C#의 새로운 기능](whats-new/index.md)
+  * 최신 언어 릴리스에 추가된 새로운 기능 및 C# 언어 기록의 개요를 제공합니다.
 
 <!--
 * [.NET Compiler Platform SDK](roslyn-sdk/index.md)

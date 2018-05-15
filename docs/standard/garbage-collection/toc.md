@@ -4,6 +4,7 @@
 ### [IDisposable을 구현하는 개체 사용](using-objects.md)
 ## [가비지 수집](index.md)
 ### [가비지 수집 기본 사항](fundamentals.md)
+### [대형 개체 힙](large-object-heap.md)
 ### [가비지 수집 및 성능](performance.md)
 ### [인덱싱된 컬렉션](induced.md)
 ### [대기 시간 모드](latency.md)
