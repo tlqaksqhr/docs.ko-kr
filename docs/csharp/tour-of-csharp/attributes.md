@@ -1,20 +1,13 @@
 ---
 title: C# 특성 - C# 언어 둘러보기
 description: C#에서 특성을 사용하는 선언적 프로그래밍에 대해 알아보기
-keywords: .NET, c샵
-author: BillWagner
-ms.author: wiwagn
 ms.date: 08/10/2016
-ms.topic: article
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.devlang: csharp
 ms.assetid: 753bcfe2-7ddd-4487-9513-ba70937fc8e9
-ms.openlocfilehash: 6878a408ef892ee47a03bfa04f736b9bf9671696
-ms.sourcegitcommit: bbde43da655ae7bea1977f7af7345eb87bd7fd5f
+ms.openlocfilehash: d055f5386d1dddef0b70843a0a5fa6fc04922296
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="attributes"></a>특성
 

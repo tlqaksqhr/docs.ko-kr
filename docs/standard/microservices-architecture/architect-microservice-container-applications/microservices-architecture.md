@@ -1,21 +1,14 @@
 ---
 title: 마이크로 서비스 아키텍처
 description: 컨테이너화된 .NET 응용 프로그램을 위한 .NET 마이크로 서비스 아키텍처 | 마이크로 서비스 아키텍처
-keywords: Docker, 마이크로 서비스, ASP.NET, 컨테이너
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.prod: .net-core
-ms.technology: dotnet-docker
-ms.topic: article
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 78d3903e7ed4abf27e78812de87ccbcb9f733663
-ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
+ms.openlocfilehash: 9bcaacce323ed9afa482660f409312f9a1b82cfa
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="microservices-architecture"></a>마이크로 서비스 아키텍처
 
@@ -69,4 +62,4 @@ ms.lasthandoff: 04/18/2018
 
 
 >[!div class="step-by-step"]
-[이전](service-oriented-architecture.md)[다음](data-sovereignty-per-microservice.md)
+[이전] (service-oriented-architecture.md) [다음] (data-sovereignty-per-microservice.md)

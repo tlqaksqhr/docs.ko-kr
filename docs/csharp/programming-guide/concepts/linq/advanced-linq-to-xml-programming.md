@@ -1,21 +1,12 @@
 ---
-title: "고급 LINQ to XML 프로그래밍(C#)"
-ms.custom: 
+title: 고급 LINQ to XML 프로그래밍(C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-csharp
-ms.topic: article
 ms.assetid: 2e012d40-532b-49ea-b1fc-152e616bdfa3
-caps.latest.revision: "3"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 0f451700dbd2bf9f924eacf6c3685b88ff2c8849
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: e455b2b579c56632d5e06b4da5c44a71ea150416
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="advanced-linq-to-xml-programming-c"></a>고급 LINQ to XML 프로그래밍(C#)
 이 단원에서는 특정 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 시나리오의 고급 개발자에게만 해당될 수 있는 정보를 제공합니다.  

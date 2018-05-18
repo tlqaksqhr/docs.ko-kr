@@ -1,13 +1,7 @@
 ---
-title: "정규식의 기타 구문"
-ms.custom: 
+title: 정규식의 기타 구문
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -16,18 +10,13 @@ helpviewer_keywords:
 - .NET Framework regular expressions, miscellaneous constructs
 - regular expressions, miscellaneous constructs
 ms.assetid: 7d10d11f-680f-4721-b047-fb136316b4cd
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 7a7c577c617ca8f40d64548f9f0f2d103c5887e1
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 9fabf1a133ca3c3b3ba39a4898ce0aceb378f76d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="miscellaneous-constructs-in-regular-expressions"></a>정규식의 기타 구문
 .NET의 정규식에는 세 가지 기타 언어 구문이 포함됩니다. 한 구문에서는 정규식 패턴 중간에 특정 일치 옵션을 사용하거나 사용하지 않도록 설정할 수 있습니다. 나머지 두 구문에서는 정규식에 주석을 포함할 수 있습니다.  
@@ -92,7 +81,7 @@ ms.lasthandoff: 12/23/2017
 ## <a name="end-of-line-comment"></a>줄의 끝 주석  
  숫자 기호(`#`)는 정규식 패턴의 끝에 있는 이스케이프되지 않은 # 문자에서 시작하여 줄의 끝까지 계속되는 x-mode 주석을 표시합니다. 이 구문을 사용하려면 인라인 옵션을 통해 `x` 옵션을 사용하도록 설정하거나, <xref:System.Text.RegularExpressions.Regex> 개체를 인스턴스화하거나 정적 <xref:System.Text.RegularExpressions.Regex> 메서드를 호출할 때 <xref:System.Text.RegularExpressions.RegexOptions.IgnorePatternWhitespace?displayProperty=nameWithType> 값을 `option` 매개 변수에 제공해야 합니다.  
   
- 다음 예제에서는 줄의 끝 주석 구문을 보여줍니다. 문자열이 하나 이상의 형식 항목을 포함하는 복합 형식 문자열인지 여부를 결정합니다. 다음 표에서는 정규식 패턴의 구문을 설명합니다.  
+ 다음 예제에서는 줄의 끝 주석 구문을 보여 줍니다. 문자열이 하나 이상의 형식 항목을 포함하는 복합 형식 문자열인지 여부를 결정합니다. 다음 표에서는 정규식 패턴의 구문을 설명합니다.  
   
  `\{\d+(,-*\d+)*(\:\w{1,4}?)*\}(?x) # Looks for a composite format item.`  
   

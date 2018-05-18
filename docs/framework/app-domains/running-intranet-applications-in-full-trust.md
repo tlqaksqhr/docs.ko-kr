@@ -1,28 +1,18 @@
 ---
-title: "완전 신뢰 모드에서 인트라넷 응용 프로그램 실행"
-ms.custom: 
+title: 완전 신뢰 모드에서 인트라넷 응용 프로그램 실행
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-bcl
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - full trust, running intranet applications in
 - intranet applications, running in full trust
 - running intranet applications in full trust
 ms.assetid: ee13c0a8-ab02-49f7-b8fb-9eab16c6c4f0
-caps.latest.revision: "20"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 51a9b9ee938d6a03330d53c25fdf0468781e02a8
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 3c6f58ef5bd96d8a74ce27bb53acd36af005c335
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="running-intranet-applications-in-full-trust"></a>완전 신뢰 모드에서 인트라넷 응용 프로그램 실행
 .NET Framework 버전 3.5 SP1(서비스 팩 1)부터 응용 프로그램 및 해당 라이브러리 어셈블리를 네트워크 공유에서 완전 신뢰 어셈블리로 실행할 수 있습니다. <xref:System.Security.SecurityZone.MyComputer> 영역 증거가 인트라넷의 공유에서 로드된 어셈블리에 자동으로 추가됩니다. 이 증거는 컴퓨터에 있는 어셈블리와 동일한 권한 부여 집합(일반적으로 완전 신뢰)을 해당 어셈블리에 제공합니다. 이 기능은 호스트에서 실행되도록 설계된 응용 프로그램 또는 ClickOnce 응용 프로그램에는 적용되지 않습니다.  

@@ -1,18 +1,12 @@
 ---
-title: "언어 기능 및 라이브러리 형식 간의 관계 | Microsoft Docs"
-description: "언어 기능은 종종 구현에 대한 라이브러리 형식에 의존합니다. 해당 관계를 이해합니다."
-keywords: "C# 언어 디자인, 표준 라이브러리"
-author: billwagner
-ms.author: wiwagn
+title: 언어 기능 및 라이브러리 형식 간의 관계 | Microsoft Docs
+description: 언어 기능은 종종 구현에 대한 라이브러리 형식에 의존합니다. 해당 관계를 이해합니다.
 ms.date: 07/20/2017
-ms.topic: article
-ms.prod: .net
-ms.devlang: devlang-csharp
-ms.openlocfilehash: b7de4fdb4356e8822dba6aaaf67d615980ff09cd
-ms.sourcegitcommit: 2142a4732bb4ff519b9817db4c24a237b9810d4b
+ms.openlocfilehash: dfae7972af0a251a92700d7d33bd6f971eb1870e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/05/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="relationships-between-language-features-and-library-types"></a>언어 기능 및 라이브러리 형식 간의 관계
 

@@ -1,21 +1,14 @@
 ---
-title: "모놀리식 응용 프로그램 컨테이너화"
-description: "컨테이너화된 .NET 응용 프로그램을 위한 .NET 마이크로 서비스 아키텍처 | 모놀리식 응용 프로그램 컨테이너화"
-keywords: "Docker, 마이크로 서비스, ASP.NET, 컨테이너"
+title: 모놀리식 응용 프로그램 컨테이너화
+description: 컨테이너화된 .NET 응용 프로그램을 위한 .NET 마이크로 서비스 아키텍처 | 모놀리식 응용 프로그램 컨테이너화
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.prod: .net-core
-ms.technology: dotnet-docker
-ms.topic: article
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: fc01054e4352a711d2203e694001a1204dedadf9
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: f5d00c6ce4c965d66937dae3f8e5453883afb4b7
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="containerizing-monolithic-applications"></a>모놀리식 응용 프로그램 컨테이너화
 
@@ -79,4 +72,4 @@ Visual Studio 2017의 컨테이너 지원은 그림 4-4에 표시된 대로 응�
 
 
 >[!div class="step-by-step"]
-[이전](index.md) [Next](docker-application-state-data.md)
+[이전] (index.md) [Next] (docker-application-state-data.md)

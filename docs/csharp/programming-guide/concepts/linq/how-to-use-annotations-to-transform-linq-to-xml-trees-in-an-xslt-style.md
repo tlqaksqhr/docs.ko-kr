@@ -1,21 +1,12 @@
 ---
-title: "방법: XSLT 스타일에서 주석을 사용하여 LINQ to XML 트리 변환(C#)"
-ms.custom: 
+title: '방법: XSLT 스타일에서 주석을 사용하여 LINQ to XML 트리 변환(C#)'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-csharp
-ms.topic: article
 ms.assetid: 12a95902-a6b7-4a1e-ad52-04a518db226f
-caps.latest.revision: "3"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 335f6efd0086eda93b9bcf8af1dcc1532086ff0e
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 551be4fe39bcfc9fd5492366014322d78416ba58
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-use-annotations-to-transform-linq-to-xml-trees-in-an-xslt-style-c"></a>방법: XSLT 스타일에서 주석을 사용하여 LINQ to XML 트리 변환(C#)
 주석을 사용하여 XML 트리를 쉽게 변환할 수 있습니다.  

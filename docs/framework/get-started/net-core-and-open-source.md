@@ -1,24 +1,14 @@
 ---
-title: ".NET Core 및 오픈 소스"
-ms.custom: 
+title: .NET Core 및 오픈 소스
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: e6bd4655-ce37-4003-8462-468a6fe2c40f
-caps.latest.revision: "8"
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: cc41a51a9c85b84f2f5365eb1650ebec37888652
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 707e73705e5e96e1b0b92976d22f763afef64929
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="net-core-and-open-source"></a>.NET Core 및 오픈 소스
 이 항목에서는 .NET Core에 대한 간략한 개요 및 자세한 정보를 찾는 방법을 보여줍니다. .NET Core 주제에 대한 전체 목록은 [.NET Core 가이드](../../core/index.md)를 참조하세요.

@@ -1,31 +1,20 @@
 ---
 title: '방법: 폴링을 통해 취소 요청 수신 대기'
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - cancellation, how to poll for requests
 ms.assetid: c7f2f022-d08e-4e00-b4eb-ae84844cb1bc
-caps.latest.revision: 12
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 56a927e10cb026814302728a72acb2f32223b29b
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: f6e257ced27812f8383edf9eb9688e9f48cfde02
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-listen-for-cancellation-requests-by-polling"></a>방법: 폴링을 통해 취소 요청 수신 대기
 다음 예제는 사용자 코드가 정기적으로 취소 토큰을 폴링하여 호출 스레드에서 취소가 요청되었는지 여부를 확인하는 방법을 보여줍니다. 이 예제에서는 <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> 유형을 사용하지만, 동일한 패턴이 <xref:System.Threading.ThreadPool?displayProperty=nameWithType> 유형 또는 <xref:System.Threading.Thread?displayProperty=nameWithType> 유형으로 직접 생성된 비동기 작업에 적용됩니다.  

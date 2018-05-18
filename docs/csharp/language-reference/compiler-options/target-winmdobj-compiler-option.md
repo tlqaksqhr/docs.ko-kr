@@ -1,18 +1,12 @@
 ---
-title: "-target:winmdobj(C# 컴파일러 옵션)"
+title: -target:winmdobj(C# 컴파일러 옵션)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.topic: article
 ms.assetid: 1819a045-659d-498a-9457-c466e902986f
-caps.latest.revision: "15"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 444fcd69db327ea9d9c3dc739b42520bb9472c4d
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: b0b1ec0bed174484e9ed7b9ecddbe82b0c705325
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="-targetwinmdobj-c-compiler-options"></a>-target:winmdobj(C# 컴파일러 옵션)
 **-target:winmdobj** 컴파일러 옵션을 사용하는 경우 컴파일러는 사용자가 Windows 런타임 이진(.winmd) 파일로 변환할 수 있는 중간 .winmdobj 파일을 만듭니다. 그런 다음 관리되는 언어 프로그램뿐만 아니라 JavaScript 및 C++ 프로그램에서도 .winmd 파일을 사용할 수 있습니다.  

@@ -1,22 +1,15 @@
 ---
-title: "참조 형식 매개 변수 전달(C# 프로그래밍 가이드)"
+title: 참조 형식 매개 변수 전달(C# 프로그래밍 가이드)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - method parameters [C#], reference types
 - parameters [C#], reference
 ms.assetid: 9e6eb65c-942e-48ab-920a-b7ba9df4ea20
-caps.latest.revision: 
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 282929d82822f81f12dae91d2f422da51a0f43e5
-ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
+ms.openlocfilehash: ed6c822638c56b3ab95216581f6f39cacb9d06ee
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="passing-reference-type-parameters-c-programming-guide"></a>참조 형식 매개 변수 전달(C# 프로그래밍 가이드)
 [참조 형식](../../../csharp/language-reference/keywords/reference-types.md)의 변수에는 해당 데이터가 직접 포함되지 않고 데이터에 대한 참조가 포함됩니다. 참조 형식 매개 변수를 값으로 전달하는 경우 클래스 멤버 값 등 참조된 개체에 속하는 데이터를 변경할 수 있습니다. 하지만 참조 자체의 값은 변경할 수 없습니다. 예를 들어 동일한 참조를 사용하여 새 클래스에 대한 메모리를 할당하고 메서드 외부에 유지되도록 할 수 없습니다. 이렇게 하려면 [ref](../../../csharp/language-reference/keywords/ref.md) 또는 [out](../../../csharp/language-reference/keywords/out-parameter-modifier.md) 키워드를 사용하여 매개 변수를 전달합니다. 간단한 설명을 위해 다음 예제에서는 `ref`를 사용합니다.  

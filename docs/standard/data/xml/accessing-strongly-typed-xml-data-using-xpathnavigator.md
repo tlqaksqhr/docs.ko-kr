@@ -1,29 +1,18 @@
 ---
-title: "XPathNavigator를 사용하여 강력한 형식의 XML 데이터 액세스"
-ms.custom: 
+title: XPathNavigator를 사용하여 강력한 형식의 XML 데이터 액세스
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 898e0f52-8a7c-4d1f-afcd-6ffb28b050b4
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 651a8e11b5782227cdf5ffcc3d53cf2c75def031
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 040a137f9b7c26c4484a69313e1f405699a19b64
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="accessing-strongly-typed-xml-data-using-xpathnavigator"></a>XPathNavigator를 사용하여 강력한 형식의 XML 데이터 액세스
 XPath 2.0 데이터 모델의 인스턴스로서 <xref:System.Xml.XPath.XPathNavigator> 클래스는 CLR(공용 언어 런타임) 형식에 매핑되는 강력한 형식의 데이터를 포함할 수 있습니다. XPath 2.0 데이터 모델에 따르면 요소와 특성에만 강력한 형식의 데이터를 포함할 수 있습니다. <xref:System.Xml.XPath.XPathNavigator> 클래스는 데이터 형식을 변환하는 메커니즘뿐 아니라 강력한 형식의 데이터로 <xref:System.Xml.XPath.XPathDocument> 또는 <xref:System.Xml.XmlDocument> 개체 내의 데이터에 액세스할 수 있는 메커니즘도 제공합니다.  
@@ -42,7 +31,7 @@ XPath 2.0 데이터 모델의 인스턴스로서 <xref:System.Xml.XPath.XPathNav
 -   스키마 언어 관련 형식 리플렉션: XML 문서에 적용된 스키마 관련 형식의 세부 정보를 얻어야 할 경우가 있습니다. 예를 들어, XML 파일을 읽을 때 사용자 지정 계산을 수행하기 위해 XML 문서에서 유효한 각 노드의 `maxOccurs` 특성을 추출해야 할 수 있습니다. 이 정보는 스키마 유효성 검사를 통해서만 설정되므로 <xref:System.Xml.XPath.XPathNavigator.SchemaInfo%2A> 클래스의 <xref:System.Xml.XPath.XPathNavigator> 속성을 통해 이 정보에 액세스할 수 있습니다. 자세한 내용은 아래의 PSVI(Post Schema Validation Infoset) 단원을 참조하세요.  
   
 ## <a name="xpathnavigator-typed-accessors"></a>XPathNavigator의 형식화된 접근자  
- 다음 표에서는 노드에 대한 형식 정보에 액세스하는 데 사용할 수 있는 <xref:System.Xml.XPath.XPathNavigator> 클래스의 다양한 속성 및 메서드를 보여줍니다.  
+ 다음 표에서는 노드에 대한 형식 정보에 액세스하는 데 사용할 수 있는 <xref:System.Xml.XPath.XPathNavigator> 클래스의 다양한 속성 및 메서드를 보여 줍니다.  
   
 |속성|설명|  
 |--------------|-----------------|  
@@ -68,7 +57,7 @@ XPath 2.0 데이터 모델의 인스턴스로서 <xref:System.Xml.XPath.XPathNav
   
 3.  형식 주석: 형식 정의 또는 요소와 특성 선언 등의 스키마 구성 요소에 대한 참조 내용입니다. 유효한 경우 <xref:System.Xml.XPath.XPathNavigator.XmlType%2A>의 <xref:System.Xml.XPath.XPathNavigator> 속성에는 노드에 대한 특정 형식 정보가 들어 있습니다. 노드의 유효성을 검사한 후 노드를 편집한 경우와 같이 노드의 유효성을 알 수 없는 경우 <xref:System.Xml.XPath.XPathNavigator.XmlType%2A> 속성은 `null`로 설정되지만 <xref:System.Xml.XPath.XPathNavigator.SchemaInfo%2A> 클래스에 대한 <xref:System.Xml.XPath.XPathNavigator> 속성의 다양한 속성을 통해 형식 정보를 확인할 수 있습니다.  
   
- 다음 예제에서는 <xref:System.Xml.XPath.XPathNavigator>에 의해 노출된 Post Schema Validation Infoset의 정보를 사용하는 방법을 보여줍니다.  
+ 다음 예제에서는 <xref:System.Xml.XPath.XPathNavigator>에 의해 노출된 Post Schema Validation Infoset의 정보를 사용하는 방법을 보여 줍니다.  
   
 ```vb  
 Dim settings As XmlReaderSettings = New XmlReaderSettings()  
@@ -164,7 +153,7 @@ xmlns:xs="http://www.w3.org/2001/XMLSchema">
   
  <xref:System.Xml.XPath.XPathNavigator>가 `price` 요소에 있을 경우 <xref:System.Xml.XPath.XPathNavigator.XmlType%2A> 속성은 `null`이 되고 <xref:System.Xml.XPath.XPathNavigator.ValueType%2A> 속성은 <xref:System.String>이 되며 <xref:System.Xml.XPath.XPathNavigator.TypedValue%2A> 속성은 문자열 `10.00`이 됩니다.  
   
- 그러나 여전히 <xref:System.Xml.XPath.XPathItem.ValueAs%2A>, <xref:System.Xml.XPath.XPathNavigator.ValueAsDouble%2A>, <xref:System.Xml.XPath.XPathNavigator.ValueAsInt%2A> 또는 <xref:System.Xml.XPath.XPathNavigator.ValueAsLong%2A> 같은 메서드 및 속성을 사용하여 숫자 값으로 값을 추출할 수 있습니다. 다음 예제에서는 <xref:System.Xml.XPath.XPathItem.ValueAs%2A> 메서드를 사용하여 이러한 캐스팅을 수행하는 방법을 보여줍니다.  
+ 그러나 여전히 <xref:System.Xml.XPath.XPathItem.ValueAs%2A>, <xref:System.Xml.XPath.XPathNavigator.ValueAsDouble%2A>, <xref:System.Xml.XPath.XPathNavigator.ValueAsInt%2A> 또는 <xref:System.Xml.XPath.XPathNavigator.ValueAsLong%2A> 같은 메서드 및 속성을 사용하여 숫자 값으로 값을 추출할 수 있습니다. 다음 예제에서는 <xref:System.Xml.XPath.XPathItem.ValueAs%2A> 메서드를 사용하여 이러한 캐스팅을 수행하는 방법을 보여 줍니다.  
   
 ```vb  
 Dim document As New XmlDocument()  

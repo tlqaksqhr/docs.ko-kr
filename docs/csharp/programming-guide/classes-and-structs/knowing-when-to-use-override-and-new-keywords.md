@@ -1,22 +1,16 @@
 ---
-title: "Override 및 New 키워드를 사용해야 하는 경우(C# 프로그래밍 가이드)"
+title: Override 및 New 키워드를 사용해야 하는 경우(C# 프로그래밍 가이드)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - override keyword [C#]
 - new keyword [C#]
 - polymorphism [C#], using override and new [C#]
 ms.assetid: 323db184-b136-46fc-8839-007886e7e8b0
-caps.latest.revision: "16"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: b4d53f16f046839d56bc1dc37f7b2d8816c5956f
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 61bfa87b7aaa7c17d4ba67c69fa1e57ee7415dc0
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="knowing-when-to-use-override-and-new-keywords-c-programming-guide"></a>Override 및 New 키워드를 사용해야 하는 경우(C# 프로그래밍 가이드)
 C#에서는 파생 클래스의 메서드가 기본 클래스의 메서드와 동일한 이름을 사용할 수 있습니다. [new](../../../csharp/language-reference/keywords/new.md) 및 [override](../../../csharp/language-reference/keywords/override.md) 키워드를 사용하여 메서드가 상호 작용하는 방식을 지정할 수 있습니다. `override` 한정자는 기본 클래스 메서드를 *확장*하고, `new` 한정자는 기본 클래스 메서드를 *숨깁니다*. 이 항목의 예제에서는 차이점을 보여 줍니다.  

@@ -1,24 +1,17 @@
 ---
 title: lock 문(C# 참조)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 f1_keywords:
 - lock_CSharpKeyword
 - lock
 helpviewer_keywords:
 - lock keyword [C#]
 ms.assetid: 656da1a4-707e-4ef6-9c6e-6d13b646af42
-caps.latest.revision: 43
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: eb48c2b1554ad2817406eaef42b4cb336ea46862
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 2ce870e8caa67d780ce603a6f1dbcc7cd303b842
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="lock-statement-c-reference"></a>lock 문(C# 참조)
 `lock` 키워드는 지정된 개체에 대한 상호 배타적 잠금을 얻고 문을 실행한 다음 잠금을 해제하여 문 블록을 임계 영역으로 표시합니다. 다음 예제에는 `lock` 문이 포함되어 있습니다.  
@@ -45,7 +38,7 @@ class Account
   
  자세한 내용은 [스레드 동기화](../../programming-guide/concepts/threading/thread-synchronization.md)를 참조하세요.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>설명  
  `lock` 키워드는 한 스레드가 임계 영역에 있는 동안 다른 스레드가 코드의 임계 영역에 들어오지 않도록 합니다. 다른 스레드가 잠긴 코드에 들어오려고 하면 개체가 해제될 때까지 대기 및 차단됩니다.  
   
  [스레딩](../../programming-guide/concepts/threading/index.md) 섹션에서 스레딩에 대해 설명합니다.  
@@ -64,12 +57,12 @@ class Account
   
  `lock` 문의 본문에서 [await](../../../csharp/language-reference/keywords/await.md) 키워드를 사용할 수 없습니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 샘플에서는 C#에서 잠금 없이 스레드를 간단하게 사용하는 방법을 보여 줍니다.  
   
  [!code-csharp[csrefKeywordsFixedLock#5](../../../csharp/language-reference/keywords/codesnippet/CSharp/lock-statement_1.cs)]  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 샘플에서는 스레드 및 `lock`을 사용합니다. `lock` 문이 있으면 문 블록은 임계 영역이 되며 `balance`가 음수가 되지 않습니다.  
   
  [!code-csharp[csrefKeywordsFixedLock#6](../../../csharp/language-reference/keywords/codesnippet/CSharp/lock-statement_2.cs)]  

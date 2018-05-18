@@ -1,30 +1,19 @@
 ---
 title: Post-Schema Compilation Infoset
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 - cpp
 ms.assetid: 7f1bc7f4-401b-459f-9078-f099cc711fde
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 5b55271306abdca95694bd8fb2ebb6e538d060ae
-ms.sourcegitcommit: ba765893e3efcece67d99fd6d5ce0074b050d1d9
+ms.openlocfilehash: db1c952003e73beb756567be74ed4eb72612c989
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/02/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="post-schema-compilation-infoset"></a>Post-Schema Compilation Infoset
 [World Wide Web Consortium (W3C) XML Schema Recommendation](https://www.w3.org/XML/Schema)(W3C(World Wide Web 컨소시엄) XML 스키마 권장 사항)에서는 사전 스키마 유효성 검사 및 사후 스키마 컴파일을 위해 노출해야 하는 infoset(정보 집합)에 대해 설명합니다. XML SOM(스키마 개체 모델)은 <xref:System.Xml.Schema.XmlSchemaSet.Compile%2A>의 <xref:System.Xml.Schema.XmlSchemaSet> 메서드를 호출하기 전과 후에 이렇게 노출된 내용을 표시합니다.  

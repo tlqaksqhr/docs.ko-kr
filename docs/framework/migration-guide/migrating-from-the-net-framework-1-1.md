@@ -1,27 +1,17 @@
 ---
-title: ".NET Framework 1.1에서 마이그레이션"
-ms.custom: 
+title: .NET Framework 1.1에서 마이그레이션
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - .NET Framework 4.5, migrating from 1.1
 - .NET Framework 1.1, migrating to .NET Framework 4.5
 ms.assetid: 7ead0cb3-3b19-414a-8417-a1c1fa198d9e
-caps.latest.revision: "12"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 7d54fac935e7b1fad6b07a3a6cf2031dbca702cb
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: bc181d0aecd6a0c7c0800544ea00a818573c954c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="migrating-from-the-net-framework-11"></a>.NET Framework 1.1에서 마이그레이션
 [!INCLUDE[win7](../../../includes/win7-md.md)] 및 이후 버전의 Windows 운영 체제는 [!INCLUDE[net_v11_long](../../../includes/net-v11-long-md.md)]을 지원하지 않습니다. 따라서 [!INCLUDE[net_v11_short](../../../includes/net-v11-short-md.md)] 이상 운영 체제 버전에서 수정하지 않으면 [!INCLUDE[win7](../../../includes/win7-md.md)] 을 대상으로 하는 응용 프로그램이 실행되지 않습니다. 이 항목에서는 [!INCLUDE[net_v11_short](../../../includes/net-v11-short-md.md)] 및 이후 버전의 Windows 운영 체제에서 [!INCLUDE[win7](../../../includes/win7-md.md)]을 대상으로 하는 응용 프로그램을 실행하는 데 필요한 단계에 대해 설명합니다. [!INCLUDE[net_v11_long](../../../includes/net-v11-long-md.md)] 및 [!INCLUDE[win8](../../../includes/win8-md.md)]에 대한 자세한 내용은 [Windows 8 이상 버전에서 .NET Framework 1.1 앱 실행](../../../docs/framework/install/run-net-framework-1-1-apps.md)을 참조하세요.  

@@ -1,9 +1,6 @@
 ---
-title: "상속(C# 프로그래밍 가이드)"
+title: 상속(C# 프로그래밍 가이드)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - abstract methods [C#]
 - abstract classes [C#]
@@ -12,14 +9,11 @@ helpviewer_keywords:
 - virtual methods [C#]
 - C# language, inheritance
 ms.assetid: 81d64ee4-50f9-4d6c-a8dc-257c348d2eea
-caps.latest.revision: "38"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: dc3d448d311fe0a67839757fa43a209d92141214
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 6294669a05f5cc6c52de5164d89e29062ceb6bdd
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="inheritance-c-programming-guide"></a>상속(C# 프로그래밍 가이드)
 
@@ -45,7 +39,7 @@ ms.lasthandoff: 11/21/2017
  기본 클래스가 메서드를 [virtual](../../../csharp/language-reference/keywords/virtual.md)로 선언하는 경우 파생 클래스가 해당 구현으로 메서드를 [재정의](../../../csharp/language-reference/keywords/override.md)할 수 있습니다. 기본 클래스가 멤버를 [abstract](../../../csharp/language-reference/keywords/abstract.md)로 선언하는 경우 해당 클래스에서 직접 상속하는 모든 비추상 클래스에서 메서드를 재정의해야 합니다. 파생 클래스 자체가 abstract인 경우 직접 구현하지 않고 추상 멤버를 상속합니다. 추상 멤버 및 가상 멤버는 개체 지향 프로그래밍의 두 번째 주요 특징인 다형성의 기초가 됩니다. 자세한 내용은 [다형성](../../../csharp/programming-guide/classes-and-structs/polymorphism.md)을 참조하세요.  
   
 ## <a name="abstract-base-classes"></a>추상 기본 클래스  
- [new](../../../csharp/language-reference/keywords/new.md) 키워드를 사용한 직접 인스턴스화를 방지하려는 경우 클래스를 [abstract](../../../csharp/language-reference/keywords/abstract.md)로 선언할 수 있습니다. 이 작업을 수행하면 해당 클래스에서 새 클래스가 파생된 경우에만 클래스를 사용할 수 있습니다. 추상 클래스에는 그 자체가 abstract로 선언된 메서드 시그니처가 하나 이상 포함될 수 있습니다. 이러한 시그니처는 매개 변수와 반환 값을 지정하지만 구현(메서드 본문)이 없습니다. 추상 클래스는 추상 멤버를 포함하지 않아도 됩니다. 그러나 클래스에 추상 멤버가 포함되지 않은 경우 클래스 자체를 abstract로 선언해야 합니다. 그 자체가 추상이 아닌 파생 클래스는 추상 기본 클래스의 모든 추상 멤버에 대한 구현을 제공해야 합니다. 자세한 내용은 [추상 및 봉인 클래스와 클래스 멤버](../../../csharp/programming-guide/classes-and-structs/abstract-and-sealed-classes-and-class-members.md)를 참조하세요.  
+ [new](../../../csharp/language-reference/keywords/new.md) 키워드를 사용한 직접 인스턴스화를 방지하려는 경우 클래스를 [abstract](../../../csharp/language-reference/keywords/abstract.md)로 선언할 수 있습니다. 이 작업을 수행하면 해당 클래스에서 새 클래스가 파생된 경우에만 클래스를 사용할 수 있습니다. 추상 클래스에는 그 자체가 abstract로 선언된 메서드 시그니처가 하나 이상 포함될 수 있습니다. 이러한 시그니처는 매개 변수와 반환 값을 지정하지만 구현(메서드 본문)이 없습니다. 추상 클래스는 추상 멤버를 포함하지 않아도 됩니다. 그러나 클래스에 추상 멤버가 포함되지 않은 경우 클래스 자체를 abstract로 선언해야 합니다. 그 자체가 추상이 아닌 파생 클래스는 추상 기본 클래스의 모든 추상 멤버에 대한 구현을 제공해야 합니다. 자세한 내용은 [Abstract 및 Sealed 클래스와 클래스 멤버](../../../csharp/programming-guide/classes-and-structs/abstract-and-sealed-classes-and-class-members.md)를 참조하세요.  
   
 ## <a name="interfaces"></a>인터페이스  
  *인터페이스*는 추상 멤버로만 구성된 추상 기본 클래스와 비슷한 참조 형식입니다. 클래스에서 인터페이스를 구현하는 경우 인터페이스의 모든 멤버에 대해 구현을 제공해야 합니다. 하나의 직접 기본 클래스에서만 파생할 수 있는 경우에도 클래스에서 여러 인터페이스를 구현할 수 있습니다.  

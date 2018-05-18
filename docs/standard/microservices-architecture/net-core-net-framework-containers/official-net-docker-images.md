@@ -1,21 +1,14 @@
 ---
 title: 공식 .NET Docker 이미지
 description: 컨테이너화된 .NET 응용 프로그램을 위한 .NET 마이크로 서비스 아키텍처 | 공식 .NET Docker 이미지
-keywords: Docker, 마이크로 서비스, ASP.NET, 컨테이너
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/18/2017
-ms.prod: .net-core
-ms.technology: dotnet-docker
-ms.topic: article
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: adbe63a2d2f93819b5b29c6dd8d8089cd35ad2f3
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: d2105603fe1fcbacd995710c9b365ec406bad255
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="official-net-docker-images"></a>공식 .NET Docker 이미지
 
@@ -65,4 +58,4 @@ Docker 허브에서 .NET 이미지 리포지토리를 탐색하는 경우 태그
 
 
 >[!div class="step-by-step"]
-[이전](net-container-os-targets.md) [다음](../architect-microservice-container-applications/index.md)
+[이전] (net-container-os-targets.md) [다음] (../architect-microservice-container-applications/index.md)

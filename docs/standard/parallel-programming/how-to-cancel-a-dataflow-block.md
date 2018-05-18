@@ -1,9 +1,7 @@
 ---
 title: '방법: 데이터 흐름 블록 취소'
 ms.date: 03/30/2017
-ms.prod: .net
 ms.technology: dotnet-standard
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -14,15 +12,11 @@ helpviewer_keywords:
 ms.assetid: fbddda0d-da3b-4ec8-a1d6-67ab8573fcd7
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: eece4992deecbf30299d6e9e96fa8c2faf16d3ab
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 2684473f82eb156bf8762c9797503324f318632d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-cancel-a-dataflow-block"></a>방법: 데이터 흐름 블록 취소
 이 문서에서는 응용 프로그램에서 취소를 사용하도록 설정하는 방법을 보여 줍니다. 이 예제에서는 Windows Forms를 사용하여 데이터 흐름 파이프라인에서 작업 항목이 활성 상태인 위치뿐만 아니라 취소의 효과도 보여 줍니다.  

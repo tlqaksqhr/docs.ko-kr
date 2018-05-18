@@ -1,31 +1,22 @@
 ---
-title: "C#에서 LINQ 시작"
-ms.custom: 
+title: C#에서 LINQ 시작
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - LINQ [C#]
 - queries [LINQ in C#]
 - LINQ, C#
 - queries [LINQ], LINQ in C#
 ms.assetid: b8700c1f-05c9-4380-b6eb-e34c4da38e54
-caps.latest.revision: "17"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 1e8f520f1fa5146f68bae0b634f8b2b1d5d875d9
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 843126d86df36b2aeaa8f57248afb930b92a9ff0
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="getting-started-with-linq-in-c"></a>C#에서 LINQ 시작
 이 섹션에서는 LINQ 설명서 및 샘플의 나머지 부분을 이해하는 데 도움이 되는 기본 배경 정보를 제공합니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [LINQ 쿼리 소개(C#)](../../../../csharp/programming-guide/concepts/linq/introduction-to-linq-queries.md)  
  모든 언어 및 데이터 소스에서 공통된 기본 LINQ 쿼리 작업의 세 가지 부분에 대해 설명합니다.  
   

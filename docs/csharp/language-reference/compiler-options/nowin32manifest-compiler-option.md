@@ -1,10 +1,6 @@
 ---
-title: "-nowin32manifest(C# 컴파일러 옵션)"
+title: -nowin32manifest(C# 컴파일러 옵션)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 f1_keywords:
 - /nowin32manifest
 helpviewer_keywords:
@@ -12,14 +8,11 @@ helpviewer_keywords:
 - -nowin32manifest compiler option [C#]
 - /nowin32manifest compiler option [C#]
 ms.assetid: 6f06365b-b87b-46a2-b187-b3bfeaf4862d
-caps.latest.revision: 
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 7682a3e1ecf483b8495d817ef01e57093ae0f987
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: a07ead99ddd4e230fff8d1452ef81171ed849b29
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="-nowin32manifest-c-compiler-options"></a>-nowin32manifest(C# 컴파일러 옵션)
 **-nowin32manifest** 옵션을 사용하면 실행 파일에 응용 프로그램 매니페스트를 포함하지 않도록 컴파일러에 지시할 수 있습니다.  

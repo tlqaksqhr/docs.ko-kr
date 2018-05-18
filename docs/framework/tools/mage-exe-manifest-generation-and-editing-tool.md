@@ -1,27 +1,15 @@
 ---
-title: "Mage.exe(매니페스트 생성 및 편집 도구)"
-ms.custom: 
+title: Mage.exe(매니페스트 생성 및 편집 도구)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - Manifest Generation and Editing tool
 - Mage.exe
 ms.assetid: 77dfe576-2962-407e-af13-82255df725a1
-caps.latest.revision: "68"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 405503ac824ccf443d8ada7387d65e55876cb3e5
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 551173a7ed8d60ca1870159cd7e533720275bd20
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="mageexe-manifest-generation-and-editing-tool"></a>Mage.exe(매니페스트 생성 및 편집 도구)
 매니페스트 생성 및 편집 도구(Mage.exe)는 응용 프로그램 매니페스트 및 배포 매니페스트의 생성과 편집을 지원하는 명령줄 도구입니다. Mage.exe는 명령줄 도구로서 일괄 처리 스크립트뿐 아니라 [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] 응용 프로그램을 비롯한 Windows 기반 응용 프로그램에서도 실행할 수 있습니다.  
@@ -46,7 +34,7 @@ Mage [commands] [commandOptions]
 |명령|설명|  
 |-------------|-----------------|  
 |**-cc, ClearApplicationCache**|모든 온라인 전용 응용 프로그램의 다운로드한 응용 프로그램 캐시를 지웁니다.|  
-|**-n, -New** *fileType [newOptions]*|지정한 형식의 새 파일을 만듭니다. 유효한 형식은 다음과 같습니다.<br /><br /> -   `Deployment`: 새 배포 매니페스트를 만듭니다.<br />-   `Application`: 새 응용 프로그램 매니페스트를 만듭니다.<br /><br /> 이 명령에 추가 매개 변수를 지정하지 않으면 적절한 기본 태그 및 특성 값을 사용하여 적절한 형식의 파일이 만들어집니다.<br /><br /> 새 파일의 이름과 경로를 지정하려면 **-ToFile** 옵션(아래 표 참조)을 사용합니다.<br /><br /> 매니페스트의 \<dependency> 섹션에 추가한 응용 프로그램의 모든 어셈블리를 포함하는 응용 프로그램 매니페스트를 만들려면  **-FromDirectory**  옵션(아래 표 참조)을 사용합니다.|  
+|**-n, -New** *fileType [newOptions]*|지정한 형식의 새 파일을 만듭니다. 유효한 형식은 다음과 같습니다.<br /><br /> -   `Deployment`: 새 배포 매니페스트를 만듭니다.<br />-   `Application`: 새 응용 프로그램 매니페스트를 만듭니다.<br /><br /> 이 명령에 추가 매개 변수를 지정하지 않으면 적절한 기본 태그 및 특성 값을 사용하여 적절한 형식의 파일이 만들어집니다.<br /><br /> 새 파일의 이름과 경로를 지정하려면 **-ToFile** 옵션(아래 표 참조)을 사용합니다.<br /><br /> 매니페스트의 \<dependency> 섹션에 추가한 응용 프로그램의 모든 어셈블리를 포함하는 응용 프로그램 매니페스트를 만들려면 **-FromDirectory** 옵션(아래 표 참조)을 사용합니다.|  
 |**-u, -Update** *[filePath] [updateOptions]*|매니페스트 파일에서 하나 이상의 항목을 변경합니다. 편집하는 파일의 형식은 지정할 필요가 없습니다. Mage.exe에서 휴리스틱 집합을 사용하여 파일을 검사하고 배포 매니페스트인지 아니면 응용 프로그램 매니페스트인지 확인합니다.<br /><br /> 이미 인증서를 사용하여 파일에 서명한 경우 **-Update** 를 사용하면 키 서명 블록이 제거됩니다. 이유는 키 서명에 파일의 해시가 포함되어 있으며 파일 렌더러를 수정하면 해시가 무효화되기 때문입니다.<br /><br /> 다음 표에 나와 있는 **-ToFile** 옵션을 사용하여 기존 파일을 덮어쓰지 않고 새 파일 이름 및 경로를 지정할 수 있습니다.|  
 |**-s, -Sign** `[signOptions]`|키 쌍 또는 X509 인증서를 사용하여 파일에 서명합니다. 서명은 파일 내부에 XML 요소로 삽입됩니다.<br /><br /> **-TimestampUri** 값을 지정하는 매니페스트를 서명할 때 인터넷에 연결해야 합니다.|  
 |**-h, -?, -Help** *[verbose]*|사용 가능한 모든 명령과 옵션에 대한 설명을 표시합니다. `verbose` 를 지정하면 자세한 도움말을 볼 수 있습니다.|  

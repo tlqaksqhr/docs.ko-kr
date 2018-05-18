@@ -1,21 +1,14 @@
 ---
-title: "RabbitMQ를 사용하여 개발 또는 테스트 환경에 대한 이벤트 서비스 구현"
-description: "컨테이너화된 .NET 응용 프로그램의 .NET 마이크로 서비스 아키텍처 | RabbitMQ를 사용하여 개발 또는 테스트 환경에 대한 이벤트 서비스 구현"
-keywords: "Docker, 마이크로 서비스, ASP.NET, 컨테이너"
+title: RabbitMQ를 사용하여 개발 또는 테스트 환경에 대한 이벤트 서비스 구현
+description: 컨테이너화된 .NET 응용 프로그램의 .NET 마이크로 서비스 아키텍처 | RabbitMQ를 사용하여 개발 또는 테스트 환경에 대한 이벤트 서비스 구현
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 12/11/2017
-ms.prod: .net-core
-ms.technology: dotnet-docker
-ms.topic: article
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 3505cb993c736165d4aff4ce8fad38cfa14ed417
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: e2b0f1a6152df5d323164fb2eca102fcb973667e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="implementing-an-event-bus-with-rabbitmq-for-the-development-or-test-environment"></a>RabbitMQ를 사용하여 개발 또는 테스트 환경에 대한 이벤트 서비스 구현
 
@@ -117,4 +110,4 @@ public class EventBusRabbitMQ : IEventBus, IDisposable
 
 
 >[!div class="step-by-step"]
-[이전](integration-event-based-microservice-communications.md) [다음](subscribe-events.md)
+[이전] (integration-event-based-microservice-communications.md) [다음] (subscribe-events.md)

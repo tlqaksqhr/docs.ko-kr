@@ -1,26 +1,15 @@
 ---
-title: "DOM의 네임스페이스 지원"
-ms.custom: 
+title: DOM의 네임스페이스 지원
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: f0548ead-0fed-41ee-b33e-117ba900d3bc
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 2b8135a55c537f480e0d595e127c2cad55e977ca
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 6e91ce2b36462780925dcaef701583a966c5f59b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="namespace-support-in-the-dom"></a>DOM의 네임스페이스 지원
 XML DOM(문서 개체 모델)은 네임스페이스를 완전하게 인식합니다. 또한 네임스페이스를 인식하는 XML 문서만 지원됩니다. W3C(World Wide Web 컨소시엄)는 Level 1을 구현한 DOM 응용 프로그램은 네임스페이스를 인식하지 못할 수 있으며 DOM Level 2 기능은 네임스페이스를 인식한다고 지정합니다. 하지만 메서드가 Level 1 또는 Level 2 DOM 권장 사항을 따르는지 여부에 관계없이 XML DOM의 모든 기능은 네임스페이스를 인식합니다.  

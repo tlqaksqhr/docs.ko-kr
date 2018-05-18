@@ -1,21 +1,12 @@
 ---
-title: "생성 작업(C#)"
-ms.custom: 
+title: 생성 작업(C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-csharp
-ms.topic: article
 ms.assetid: 1c421b3a-5954-448c-bcac-a27798d1858f
-caps.latest.revision: "3"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 8bbc4b1c33e992d322ad8048a72b496515358c1c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 01b3d439e826dc5fd8435d37f8c80a29141b3ecc
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="generation-operations-c"></a>생성 작업(C#)
 생성은 값의 새 시퀀스를 만드는 작업을 나타냅니다.  

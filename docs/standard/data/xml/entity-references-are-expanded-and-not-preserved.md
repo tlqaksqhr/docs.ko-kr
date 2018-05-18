@@ -1,26 +1,15 @@
 ---
-title: "유지되지 않고 확장되는 엔터티 참조"
-ms.custom: 
+title: 유지되지 않고 확장되는 엔터티 참조
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: ffd97806-ab43-4538-8de2-5828bfbbde57
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 00b997865c614756ea5fd9567ded3baa469f4c62
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: aa03532200a89aa164648c1278c9dbafc2aee214
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="entity-references-are-expanded-and-not-preserved"></a>유지되지 않고 확장되는 엔터티 참조
 엔터티 참조가 확장되어 해당 참조가 나타내는 텍스트로 바뀌면 **XmlEntityReference** 노드가 생성되지 않습니다. 대신 엔터티 선언이 구문 분석되고 선언의 내용에서 생성된 노드가 **XmlEntityReference**를 대신하여 복사됩니다. 따라서 `&publisher;` 예제에서 `&publisher;`가 저장되는 대신 **XmlText** 노드가 생성됩니다.  

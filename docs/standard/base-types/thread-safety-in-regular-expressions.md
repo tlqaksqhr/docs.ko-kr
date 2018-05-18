@@ -1,13 +1,7 @@
 ---
-title: "정규식의 스레드로부터의 안전성"
-ms.custom: 
+title: 정규식의 스레드로부터의 안전성
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - .NET Framework regular expressions, threads
 - regular expressions, threads
@@ -15,18 +9,13 @@ helpviewer_keywords:
 - parsing text with regular expressions, threads
 - pattern-matching with regular expressions, threads
 ms.assetid: 7c4a167b-5236-4cde-a2ca-58646230730f
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 804f83d85206b5f49a0bea290f281b36e18bb847
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 79ca0b92cf79ca9be023925f064c1c7c16b3c9ac
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="thread-safety-in-regular-expressions"></a>정규식의 스레드로부터의 안전성
 <xref:System.Text.RegularExpressions.Regex> 클래스 자체는 스레드로부터 안전하고 변경할 수 없습니다(읽기 전용). 즉, 모든 스레드에서 **Regex** 개체를 만들어 스레드 간에 공유할 수 있습니다. 일치하는 메서드는 모든 스레드에서 호출할 수 있고 전역 상태를 변경하지 않습니다.  

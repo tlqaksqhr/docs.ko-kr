@@ -1,30 +1,19 @@
 ---
-title: "다중 스레딩을 위한 데이터 동기화"
-ms.custom: 
+title: 다중 스레딩을 위한 데이터 동기화
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - synchronization, threads
 - threading [.NET Framework], synchronizing threads
 - managed threading
 ms.assetid: b980eb4c-71d5-4860-864a-6dfe3692430a
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 4e1e123b8c8440b766e5b8903170c8cb392f154a
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 998e159cceded6da2e9c3068680c45bc1c9345a6
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="synchronizing-data-for-multithreading"></a>다중 스레딩을 위한 데이터 동기화
 다중 스레드가 단일 개체의 속성 및 메서드에 대한 호출을 할 수 있는 경우 해당 호출을 동기화하는 것은 중요합니다. 그렇지 않으면 하나의 스레드는 다른 스레드가 수행하는 작업을 중단시킬 수 있으며 개체는 잘못된 상태로 남을 수 있습니다. 멤버가 그러한 중단으로부터 보호되는 클래스를 스레드로부터 안전하다고 합니다.  
@@ -39,7 +28,7 @@ ms.lasthandoff: 12/23/2017
   
 -   <xref:System.Collections.Concurrent?displayProperty=nameWithType> 네임스페이스의 컬렉션 클래스. 이러한 클래스는 기본 제공 동기화된 추가 및 제거 작업을 제공합니다. 자세한 내용은 [스레드로부터 안전한 컬렉션](../../../docs/standard/collections/thread-safe/index.md)을 참조하세요.  
   
- 공용 언어 런타임은 클래스가 요구 사항에 따라 다양한 서로 다른 방식으로 동기화될 수 있는 범주의 수로 나뉘는 스레드 모델을 제공합니다. 다음 표는 지정된 동기화 범주로 필드 및 메서드에 대해 제공되는 동기화 지원을 보여줍니다.  
+ 공용 언어 런타임은 클래스가 요구 사항에 따라 다양한 서로 다른 방식으로 동기화될 수 있는 범주의 수로 나뉘는 스레드 모델을 제공합니다. 다음 표는 지정된 동기화 범주로 필드 및 메서드에 대해 제공되는 동기화 지원을 보여 줍니다.  
   
 |범주|전역 필드|정적 필드|정적 메서드|인스턴스 필드|인스턴스 메서드|특정 코드 블록|  
 |--------------|-------------------|-------------------|--------------------|---------------------|----------------------|--------------------------|  

@@ -1,13 +1,6 @@
 ---
-title: "Cert2spc.exe(SPC 테스트 도구)"
-ms.custom: 
+title: Cert2spc.exe(SPC 테스트 도구)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - SPC
 - Software Publisher Certificate Test tool
@@ -15,16 +8,13 @@ helpviewer_keywords:
 - Cert2spc.exe
 - certificates, Software Publisher's Certificate
 ms.assetid: be434d7d-9c0d-46e7-8392-58a9b542d11d
-caps.latest.revision: "21"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: e5a8363b0ec059c1ae94b7ab53e5c3064a06541f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 3c1d1944ae06ea26ce9bf7b4726e79155768d444
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cert2spcexe-software-publisher-certificate-test-tool"></a>Cert2spc.exe(SPC 테스트 도구)
 SPC(소프트웨어 게시자 인증서) 테스트 도구를 사용하면 하나 이상의 X.509 인증서에서 SPC를 만들 수 있습니다. Cert2spc.exe는 테스트 전용이며, VeriSign 또는 Thawte 같은 인증 기관에서 유효한 SPC를 받을 수 있습니다. X.509 인증서를 만드는 방법은 [Makecert.exe(인증서 작성 도구)](http://msdn.microsoft.com/library/b0343f8e-9c41-4852-a85c-f8a0c408cf0d)를 참조하세요.  

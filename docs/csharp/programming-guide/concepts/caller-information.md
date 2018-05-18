@@ -1,18 +1,12 @@
 ---
-title: "호출자 정보(C#)"
+title: 호출자 정보(C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.topic: article
 ms.assetid: ffad3d24-2fb7-4641-9124-53b5bc91d339
-caps.latest.revision: "3"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 05c153afd502da1f290b3bc36460ded27789e21c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 6f0cd4d9d8fc85cb15431ccb4c76eee14b3f67c7
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="caller-information-c"></a>호출자 정보(C#)
 호출자 정보 특성을 사용하여 메서드 호출자에 대한 정보를 얻을 수 있습니다. 소스 코드 파일 경로, 소스 코드 줄 번호 및 호출자의 멤버 이름을 얻을 수 있습니다. 이 정보는 추적, 디버깅 및 진단 도구를 만드는 데 도움이 됩니다.  
@@ -25,7 +19,7 @@ ms.lasthandoff: 11/21/2017
 |<xref:System.Runtime.CompilerServices.CallerLineNumberAttribute>|메서드가 호출되는 소스 파일의 줄 번호입니다.|`Integer`|  
 |<xref:System.Runtime.CompilerServices.CallerMemberNameAttribute>|호출자의 메서드 또는 속성 이름입니다. 이 항목의 뒷부분에 있는 [멤버 이름](#MEMBERNAMES)을 참조하세요.|`String`|  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제에서는 호출자 정보 특성을 사용하는 방법을 보여줍니다. `TraceMessage` 메서드에 대한 각 호출에서 호출자 정보는 선택적 매개 변수에 대한 인수로 대체됩니다.  
   
 ```csharp  
@@ -52,7 +46,7 @@ public void TraceMessage(string message,
 //  source line number: 31  
 ```  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>설명  
  각각의 선택적 매개 변수에 대한 명시적 기본값을 지정해야 합니다. 선택적으로 지정되지 않은 매개 변수에 호출자 정보 특성을 적용할 수 없습니다.  
   
  호출자 정보 특성은 매개 변수를 선택적 매개 변수로 만들지 못합니다. 대신, 이런 특성은 인수가 생략될 때 전달되는 기본값에 영향을 미칩니다.  

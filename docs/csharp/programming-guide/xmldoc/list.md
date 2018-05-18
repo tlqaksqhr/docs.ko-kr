@@ -1,9 +1,6 @@
 ---
-title: "&lt;list&gt;(C# 프로그래밍 가이드)"
+title: '&lt;list&gt;(C# 프로그래밍 가이드)'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.topic: article
 f1_keywords:
 - list
 - <list>
@@ -15,14 +12,11 @@ helpviewer_keywords:
 - <item> C# XML tag
 - <list> C# XML tag
 ms.assetid: c9620b1b-c2e6-43f1-ab88-8ab47308ffec
-caps.latest.revision: "11"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 6d997f3692d21959daa8eaec9eeeac8c0a1dc9bb
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 768490424403f1235873a681ffba3367e3f128b0
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ltlistgt-c-programming-guide"></a>&lt;list&gt;(C# 프로그래밍 가이드)
 ## <a name="syntax"></a>구문  
@@ -56,7 +50,7 @@ ms.lasthandoff: 11/21/2017
   
  [/doc](../../../csharp/language-reference/compiler-options/doc-compiler-option.md)로 컴파일하여 문서 주석을 파일로 처리합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  [!code-csharp[csProgGuideDocComments#6](../../../csharp/programming-guide/xmldoc/codesnippet/CSharp/list_1.cs)]  
   
 ## <a name="see-also"></a>참고 항목  

@@ -1,21 +1,12 @@
 ---
-title: "방법: 헤더 정보에 액세스하여 XML 조각 스트리밍(C#)"
-ms.custom: 
+title: '방법: 헤더 정보에 액세스하여 XML 조각 스트리밍(C#)'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-csharp
-ms.topic: article
 ms.assetid: 7f242770-b0c7-418d-894b-643215e1f8aa
-caps.latest.revision: "3"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 07fe45bb54c0d8b867cd3ae03fc3ed940243a538
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: af8f83ba746292289bb97f591103cc91d6febbad
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-stream-xml-fragments-with-access-to-header-information-c"></a>방법: 헤더 정보에 액세스하여 XML 조각 스트리밍(C#)
 예상할 수 없는 큰 크기의 XML 파일을 읽고 응용 프로그램의 메모리 사용 공간이 예상 가능하도록 응용 프로그램을 작성해야 하는 경우가 있습니다. XML 트리를 큰 XML 파일로 채우려는 경우 파일 크기에 비례하여 메모리가 사용되므로 메모리 사용량이 지나치게 증가하게 됩니다. 따라서 스트리밍 기법을 대신 사용해야 합니다.  
@@ -26,7 +17,7 @@ ms.lasthandoff: 10/18/2017
   
  스트리밍 기법은 소스 문서를 한 번만 처리해야 하고 문서 순서의 요소를 처리할 수 있는 경우에 가장 효과적으로 적용됩니다. <xref:System.Linq.Enumerable.OrderBy%2A>와 같은 특정 표준 쿼리 연산자는 자신의 소스를 반복하고 모든 데이터를 수집하여 정렬한 다음 시퀀스의 첫 번째 항목을 최종적으로 생성합니다. 첫 번째 항목을 생성하기 전에 소스를 유형화하는 쿼리 연산자를 사용하는 경우 작은 메모리 사용 공간이 유지되지 않습니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  좀 더 흥미로운 문제가 발생하는 경우도 있습니다. 다음 XML 문서에서 사용자 지정 축 메서드의 소비자는 각 항목을 소유하는 고객의 이름도 알아야 합니다.  
   
 ```xml  

@@ -1,20 +1,13 @@
 ---
-title: "그룹화 작업에서 하위 쿼리 수행"
-description: "그룹화 작업에서 하위 쿼리를 수행하는 방법"
-keywords: .NET, .NET Core, C#
-author: BillWagner
-manager: wpickett
-ms.author: wiwagn
+title: 그룹화 작업에서 하위 쿼리 수행
+description: 그룹화 작업에서 하위 쿼리를 수행하는 방법
 ms.date: 12/1/2016
-ms.topic: article
-ms.prod: .net
-ms.technology: devlang-csharp
 ms.assetid: d75a588e-9b6f-4f37-b195-f99ec8503855
-ms.openlocfilehash: f638b8a679a15891d04e02f1597d6bf7934a9e74
-ms.sourcegitcommit: 7e99f66ef09d2903e22c789c67ff5a10aa953b2f
+ms.openlocfilehash: 209d05c2fe8719fa9116061d199272366146f465
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="perform-a-subquery-on-a-grouping-operation"></a>그룹화 작업에서 하위 쿼리 수행
 
@@ -24,7 +17,7 @@ ms.lasthandoff: 11/18/2017
   
  연속에 대한 자세한 내용은 [into](../language-reference/keywords/into.md)를 참조하세요. 다음 예제에서는 메모리 내 데이터 구조를 데이터 소스로 사용하지만 모든 종류의 LINQ 데이터 소스에 대해 동일한 원칙이 적용됩니다.  
   
-## <a name="example"></a>예제 
+## <a name="example"></a>예 
 
  > [!NOTE]
  > 이 예제에는 [개체의 컬렉션 쿼리](query-a-collection-of-objects.md)에서 샘플 코드에 정의된 개체에 대한 참조가 포함됩니다.

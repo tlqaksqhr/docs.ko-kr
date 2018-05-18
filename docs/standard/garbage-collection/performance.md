@@ -1,29 +1,18 @@
 ---
 title: 가비지 컬렉션 및 성능
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - garbage collection, troubleshooting
 - garbage collection, performance
 ms.assetid: c203467b-e95c-4ccf-b30b-953eb3463134
-caps.latest.revision: 35
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: daf70cdb7344f895059d0bc8b986edddbf7d53bc
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 9b2102c4e33f551cf3dc71cf83539cdc494e5379
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="garbage-collection-and-performance"></a>가비지 컬렉션 및 성능
 <a name="top"></a> 이 항목에서는 가비지 컬렉션 및 메모리 사용과 관련된 문제를 설명합니다. 관리되는 힙과 관련된 문제를 해결하고 응용 프로그램에 미치는 가비지 컬렉션의 영향을 최소화하는 방법을 설명합니다. 각 문제에는 문제를 조사하는 데 사용할 수 있는 절차 링크가 있습니다.  

@@ -1,10 +1,6 @@
 ---
-title: "-delaysign(C# 컴파일러 옵션)"
+title: -delaysign(C# 컴파일러 옵션)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 f1_keywords:
 - /delaysign
 helpviewer_keywords:
@@ -12,14 +8,11 @@ helpviewer_keywords:
 - delaysign compiler option [C#]
 - /delaysign compiler option [C#]
 ms.assetid: bcb058eb-2933-4e7f-b356-5c941db4de75
-caps.latest.revision: 
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: a931dccb2aebd2c898b55f0a007d9fac8da42f2e
-ms.sourcegitcommit: dd6ea7f0e581ac84e0a90d9b23c463fcf1ec3ce7
+ms.openlocfilehash: f8525a4e96d172709673b94316b06d815535805f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="-delaysign-c-compiler-options"></a>-delaysign(C# 컴파일러 옵션)
 이 옵션을 사용하면 나중에 디지털 시그니처를 추가할 수 있도록 컴파일러가 출력 파일에 공간을 예약합니다.  
@@ -32,14 +25,14 @@ ms.lasthandoff: 01/23/2018
   
 ## <a name="arguments"></a>인수  
  `+` &#124; `-`  
- 완전히 서명된 어셈블리가 필요하면 **-delaysign-**를 사용합니다. 어셈블리에 공개 키만 배치하려면 **-delaysign+**를 사용합니다. 기본값은 **-delaysign-**입니다.  
+ 완전히 서명된 어셈블리가 필요하면 **-delaysign-** 를 사용합니다. 어셈블리에 공개 키만 배치하려면 **-delaysign+** 를 사용합니다. 기본값은 **-delaysign-** 입니다.  
   
 ## <a name="remarks"></a>설명  
  **-delaysign** 옵션은 [-keyfile](../../../csharp/language-reference/compiler-options/keyfile-compiler-option.md) 또는 [-keycontainer](../../../csharp/language-reference/compiler-options/keycontainer-compiler-option.md)와 함께 사용하지 않으면 효과가 없습니다.  
   
  완전히 서명된 어셈블리를 요청할 경우 컴파일러는 매니페스트(어셈블리 메타데이터)가 포함된 파일을 해시하고 개인 키로 해당 해시에 서명합니다. 결과로 생성되는 디지털 서명은 매니페스트가 포함된 파일에 저장됩니다. 어셈블리 서명이 연기된 경우 컴파일러는 서명을 계산하거나 저장하지 않고 나중에 서명을 추가할 수 있도록 파일에 공간을 예약합니다.  
   
- 예를 들어 **-delaysign+**를 사용하면 테스터를 통해 전역 캐시에 어셈블리를 넣을 수 있습니다. 테스트를 마친 후 [어셈블리 링커](../../../framework/tools/al-exe-assembly-linker.md) 유틸리티를 통해 어셈블리에 개인 키를 배치하여 어셈블리에 완전히 서명할 수 있습니다.  
+ 예를 들어 **-delaysign+** 를 사용하면 테스터를 통해 전역 캐시에 어셈블리를 넣을 수 있습니다. 테스트를 마친 후 [어셈블리 링커](../../../framework/tools/al-exe-assembly-linker.md) 유틸리티를 통해 어셈블리에 개인 키를 배치하여 어셈블리에 완전히 서명할 수 있습니다.  
   
  자세한 내용은 [강력한 이름의 어셈블리 만들기 및 사용](../../../framework/app-domains/create-and-use-strong-named-assemblies.md) 및 [어셈블리 서명 지연](../../../framework/app-domains/delay-sign-assembly.md)을 참조하세요.  
   

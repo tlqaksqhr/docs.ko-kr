@@ -1,31 +1,20 @@
 ---
-title: "관리되는 스레딩 기본 사항"
-ms.custom: 
+title: 관리되는 스레딩 기본 사항
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - multiple threads
 - threading [.NET Framework], multiple threads
 - threading [.NET Framework], about threading
 - managed threading
 ms.assetid: b2944911-0e8f-427d-a8bb-077550618935
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 035834959aa5f9340727327b22cae93b3f21b056
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 5fa91bb22de6492815f79bfd50e1fefc800c6047
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="managed-threading-basics"></a>관리되는 스레딩 기본 사항
 이 섹션의 첫 5개 항목은 관리되는 스레딩을 사용하는 시기를 결정하도록 돕고 몇 가지 기본 기능을 설명하도록 설계되었습니다. 추가 기능을 제공하는 클래스에 대한 내용은 [스레딩 개체 및 기능](../../../docs/standard/threading/threading-objects-and-features.md) 및 [동기화 기본 형식 개요](../../../docs/standard/threading/overview-of-synchronization-primitives.md)를 참조하세요.  
@@ -54,7 +43,7 @@ ms.lasthandoff: 12/23/2017
  [Windows에서 관리되는 스레딩 및 관리되지 않는 스레딩](../../../docs/standard/threading/managed-and-unmanaged-threading-in-windows.md)  
  관리되는 스레딩과 관리되지 않는 스레딩, 간의 관계에 대해 설명하고, Windows 스레딩 API에 대해 관리되는 스레딩을 나열하고, COM 아파트 및 관리되는 스레드의 상호 작용에 대해 설명합니다.  
   
- [Thread.Suspend, 가비지 수집, 안전한 시점](../../../docs/standard/threading/thread-suspend-garbage-collection-and-safe-points.md)  
+ [Thread.Suspend, 가비지 컬렉션, 안전한 시점](../../../docs/standard/threading/thread-suspend-garbage-collection-and-safe-points.md)  
  스레드 일시중단 및 가비지 수집에 대해 설명합니다.  
   
  [스레드 로컬 저장소: 스레드 상대 정적 필드 및 데이터 슬롯](../../../docs/standard/threading/thread-local-storage-thread-relative-static-fields-and-data-slots.md)  

@@ -1,22 +1,12 @@
 ---
 title: 비동기 앱에서 재입력 처리(C#)
-ms.custom: ''
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-csharp
-ms.topic: article
 ms.assetid: 47c5075e-c448-45ce-9155-ed4e7e98c677
-caps.latest.revision: 3
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 0f0b6ba1985ab3cbbcc3490ae9b2ffcceb88f873
-ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
+ms.openlocfilehash: f2b43bd982b7dcd1f4641ae55f95595d14d70b0b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="handling-reentrancy-in-async-apps-c"></a>비동기 앱에서 재입력 처리(C#)
 앱에 비동기 코드를 포함하는 경우 완료되기 전에 비동기 작업을 다시 입력하는 것을 나타내는 재입력을 고려하고 방지할 수 있어야 합니다. 재입력 가능성을 식별하고 처리하지 못하면 예기치 않은 결과가 발생할 수 있습니다.  
@@ -574,7 +564,7 @@ private async Task FinishOneGroupAsync(List<string> urls, Task<byte[]>[] content
   
      **새 프로젝트** 대화 상자가 열립니다.  
   
-3.  **설치된 템플릿** 창에서 **Visual C#**을 확장한 다음 **Windows**를 확장합니다.  
+3.  **설치된 템플릿** 창에서 **Visual C#** 을 확장한 다음 **Windows**를 확장합니다.  
   
 4.  프로젝트 형식 목록에서 **WPF 응용 프로그램**을 선택합니다.  
   

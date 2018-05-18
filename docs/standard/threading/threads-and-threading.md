@@ -1,30 +1,19 @@
 ---
 title: 스레드 및 스레딩
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - multiple threads
 - threading [.NET Framework]
 - threading [.NET Framework], multiple threads
 ms.assetid: 5baac3aa-e603-4fa6-9f89-0f2c1084e6b1
-caps.latest.revision: 14
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 02c676e3bb6c0dcc9e65858367d13f41adc797e8
-ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
+ms.openlocfilehash: 4380c509a08ebe59f9561a9e6fc596458768917f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="threads-and-threading"></a>스레드 및 스레딩
 운영 체제에서는 프로세스를 사용하여 실행 중인 서로 다른 응용 프로그램을 분리합니다. 스레드는 운영 체제가 프로세서 시간을 할당하는 기본 단위이며 둘 이상의 스레드가 해당 프로세스 내에서 코드를 실행 중일 수 있습니다. 각 스레드는 예외 처리기, 예약 우선 순위 및 시스템에서 스레드가 예약될 때까지 스레드 컨텍스트를 저장하는 데 사용하는 구조 집합을 유지 관리합니다. 스레드 컨텍스트에는 스레드의 CPU 레지스터 및 스택 집합을 포함하여 스레드가 실행을 원활하게 재개하는 데 필요한 모든 정보가 스레드 호스트 프로세스의 주소 공간에 포함됩니다.  

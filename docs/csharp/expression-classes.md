@@ -1,20 +1,13 @@
 ---
-title: "식 트리를 지원하는 프레임워크 형식"
-description: "식 트리를 지원하는 프레임워크 형식, 식 트리 만들기, 식 트리 API 작업을 위한 기술에 대해 알아봅니다."
-keywords: .NET, .NET Core
-author: BillWagner
-ms.author: wiwagn
+title: 식 트리를 지원하는 프레임워크 형식
+description: 식 트리를 지원하는 프레임워크 형식, 식 트리 만들기, 식 트리 API 작업을 위한 기술에 대해 알아봅니다.
 ms.date: 06/20/2016
-ms.topic: article
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.devlang: csharp
 ms.assetid: e9c85021-0d36-48af-91b7-aaaa66f22654
-ms.openlocfilehash: ed89b286eee9b4c2e11bb27d18e50f777f94f33e
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 3110f2a9534085aba95fcb5c8e76f66229e79f86
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="framework-types-supporting-expression-trees"></a>식 트리를 지원하는 프레임워크 형식
 

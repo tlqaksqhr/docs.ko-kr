@@ -1,13 +1,7 @@
 ---
-title: "작업 취소"
-ms.custom: 
+title: 작업 취소
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -15,18 +9,13 @@ helpviewer_keywords:
 - tasks, cancellation
 - asynchronous task cancellation
 ms.assetid: 3ecf1ea9-e399-4a6a-a0d6-8475f48dcb28
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 46e202d4f5cafdef44f908d44f9362127bc6eb1a
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 4b9a9331f62ba9655c20a2e27b3a94dac1903472
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="task-cancellation"></a>작업 취소
 <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> 및 <xref:System.Threading.Tasks.Task%601?displayProperty=nameWithType> 클래스는 .NET Framework에서 취소 토큰을 사용하는 방법으로 취소 기능을 지원합니다. 자세한 내용은 [관리되는 스레드의 취소](../../../docs/standard/threading/cancellation-in-managed-threads.md)를 참조하세요. 작업 클래스에서 취소하려면 취소할 수 있는 작업을 나타내는 사용자 대리자와 취소를 요청한 코드 간의 협조가 필요합니다.  성공적으로 취소하려면 <xref:System.Threading.CancellationTokenSource.Cancel%2A?displayProperty=nameWithType> 메서드를 호출하는 요청 코드와 적절한 시간에 작업을 종료하는 사용자 대리자가 필요합니다. 다음 방법 중 하나를 사용하여 작업을 종료할 수 있습니다.  
@@ -35,7 +24,7 @@ ms.lasthandoff: 12/23/2017
   
 -   <xref:System.OperationCanceledException> 을 throw하고 취소가 요청된 토큰을 전달합니다. 이렇게 하려면 <xref:System.Threading.CancellationToken.ThrowIfCancellationRequested%2A> 메서드를 사용하는 것이 좋습니다. 이 방법으로 취소된 작업은 Canceled 상태로 전환되므로 호출 코드에서는 이 상태를 통해 작업이 취소 요청에 응답했음을 확인할 수 있습니다.  
   
- 다음 예제에서는 예외를 throw하는 작업 취소의 기본적인 패턴을 보여줍니다. 토큰은 사용자 대리자와 작업 인스턴스 자체에 전달됩니다.  
+ 다음 예제에서는 예외를 throw하는 작업 취소의 기본적인 패턴을 보여 줍니다. 토큰은 사용자 대리자와 작업 인스턴스 자체에 전달됩니다.  
   
  [!code-csharp[TPL_Cancellation#02](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_cancellation/cs/snippet02.cs#02)]
  [!code-vb[TPL_Cancellation#02](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_cancellation/vb/module1.vb#02)]  

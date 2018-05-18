@@ -1,13 +1,7 @@
 ---
-title: "동기 메서드를 비동기 방식으로 호출"
-ms.custom: 
+title: 동기 메서드를 비동기 방식으로 호출
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -26,18 +20,13 @@ helpviewer_keywords:
 - waiting for asynchronous calls
 - status information [.NET Framework], asynchronous operations
 ms.assetid: 41972034-92ed-450a-9664-ab93fcc6f1fb
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: e7e6f402d9423a8ae1ee464499f1b794785c2b06
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: cbe0178033338754c9e412dfcac993f042d943d1
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="calling-synchronous-methods-asynchronously"></a>동기 메서드를 비동기 방식으로 호출
 .NET Framework에서는 모든 메서드를 비동기 방식으로 호출할 수 있습니다. 이렇게 하려면 호출하려는 메서드와 같은 시그니처를 사용하여 대리자를 정의합니다. 그러면 공용 언어 런타임은 이 대리자에 대해 `BeginInvoke` 및 `EndInvoke` 메서드를 해당 시그니처와 함께 자동으로 정의합니다.  
@@ -52,7 +41,7 @@ ms.lasthandoff: 12/23/2017
 > [!NOTE]
 >  [!INCLUDE[vsprvslong](../../../includes/vsprvslong-md.md)] 의 IntelliSense 기능에서는 `BeginInvoke` 및 `EndInvoke`의 매개 변수를 표시합니다. Visual Studio 또는 이와 유사한 도구를 사용하지 않거나 [!INCLUDE[vsprvslong](../../../includes/vsprvslong-md.md)]와 C#을 함께 사용하는 경우 이러한 메서드에 대해 정의된 매개 변수에 대한 설명을 보려면 [APM(비동기 프로그래밍 모델)](../../../docs/standard/asynchronous-programming-patterns/asynchronous-programming-model-apm.md)을 참조하세요.  
   
- 이 항목의 코드 예제에서는 `BeginInvoke` 및 `EndInvoke`를 사용하여 비동기 호출을 수행하는 네 가지 일반적인 방법을 보여줍니다. `BeginInvoke` 를 호출한 후 다음과 같은 작업을 수행할 수 있습니다.  
+ 이 항목의 코드 예제에서는 `BeginInvoke` 및 `EndInvoke`를 사용하여 비동기 호출을 수행하는 네 가지 일반적인 방법을 보여 줍니다. `BeginInvoke` 를 호출한 후 다음과 같은 작업을 수행할 수 있습니다.  
   
 -   작업을 수행한 다음 `EndInvoke` 를 호출하여 호출이 완료될 때까지 실행을 차단합니다.  
   
@@ -66,9 +55,9 @@ ms.lasthandoff: 12/23/2017
 >  사용하는 방법에 관계없이 항상 `EndInvoke` 를 호출하여 비동기 호출을 완료해야 합니다.  
   
 ## <a name="defining-the-test-method-and-asynchronous-delegate"></a>테스트 메서드 및 비동기 대리자 정의  
- 다음 코드 예제에서는 동일한 장기 실행 메서드인 `TestMethod`를 비동기 방식으로 호출하는 다양한 방법을 보여줍니다. `TestMethod` 메서드는 처리를 시작했음을 나타내는 콘솔 메시지를 표시하고 몇 초간 대기한 후 종료됩니다. `TestMethod` 에는 `out` 및 `BeginInvoke` 의 시그니처에 해당 매개 변수가 추가되는 방식을 보여주는 `EndInvoke`매개 변수가 있습니다. `ref` 매개 변수도 마찬가지로 처리할 수 있습니다.  
+ 다음 코드 예제에서는 동일한 장기 실행 메서드인 `TestMethod`를 비동기 방식으로 호출하는 다양한 방법을 보여 줍니다. `TestMethod` 메서드는 처리를 시작했음을 나타내는 콘솔 메시지를 표시하고 몇 초간 대기한 후 종료됩니다. `TestMethod` 에는 `out` 및 `BeginInvoke` 의 시그니처에 해당 매개 변수가 추가되는 방식을 보여 주는 `EndInvoke`매개 변수가 있습니다. `ref` 매개 변수도 마찬가지로 처리할 수 있습니다.  
   
- 다음 코드 예제에서는 `TestMethod` 의 정의와 `AsyncMethodCaller` 를 비동기식으로 호출하는 데 사용할 수 있는 `TestMethod` 라는 대리자를 보여줍니다. 코드 예제를 컴파일하려면 `TestMethod` 및 `AsyncMethodCaller` 대리자의 정의를 포함해야 합니다.  
+ 다음 코드 예제에서는 `TestMethod` 의 정의와 `AsyncMethodCaller` 를 비동기식으로 호출하는 데 사용할 수 있는 `TestMethod` 라는 대리자를 보여 줍니다. 코드 예제를 컴파일하려면 `TestMethod` 및 `AsyncMethodCaller` 대리자의 정의를 포함해야 합니다.  
   
  [!code-cpp[AsyncDelegateExamples#1](../../../samples/snippets/cpp/VS_Snippets_CLR/AsyncDelegateExamples/cpp/TestMethod.cpp#1)]
  [!code-csharp[AsyncDelegateExamples#1](../../../samples/snippets/csharp/VS_Snippets_CLR/AsyncDelegateExamples/CS/TestMethod.cs#1)]

@@ -1,30 +1,19 @@
 ---
-title: "XML 스키마 통과"
-ms.custom: 
+title: XML 스키마 통과
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 - cpp
 ms.assetid: cce69574-5861-4a30-b730-2e18d915d8ee
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: ceca36b5e988751dff34b5574978aa0ae2da1259
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: b02fd72c705d264394b83b89fc7ec802be7e502a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="traversing-xml-schemas"></a>XML 스키마 통과
 SOM(스키마 개체 모델) API를 사용하여 XML 스키마를 통과하면 SOM에 저장된 요소, 특성 및 형식에 액세스할 수 있습니다. SOM에 로드된 XML 스키마를 통과하는 것은 SOM API를 사용하여 XML 스키마를 편집하는 첫 번째 단계이기도 합니다.  
@@ -49,7 +38,7 @@ SOM(스키마 개체 모델) API를 사용하여 XML 스키마를 통과하면 S
 >   
 >  <xref:System.Xml.Schema.XmlSchema.UnhandledAttributes%2A> 속성은 스키마 네임스페이스에 속하지 않은 모든 특성에 대한 액세스를 제공합니다. 이러한 특성은 스키마 프로세서로 처리되지 않습니다.  
   
- 다음 코드 예제에서는 [XML 스키마 빌드](../../../../docs/standard/data/xml/building-xml-schemas.md) 항목에서 만든 고객 스키마를 트래버스하는 예를 보여줍니다. 이 코드 예제에서는 위에서 설명한 컬렉션을 사용하여 스키마를 통과하는 것을 보여주고 스키마의 모든 요소와 특성을 콘솔에 작성합니다.  
+ 다음 코드 예제에서는 [XML 스키마 빌드](../../../../docs/standard/data/xml/building-xml-schemas.md) 항목에서 만든 고객 스키마를 트래버스하는 예를 보여줍니다. 이 코드 예제에서는 위에서 설명한 컬렉션을 사용하여 스키마를 통과하는 것을 보여 주고 스키마의 모든 요소와 특성을 콘솔에 작성합니다.  
   
  이 샘플은 다음과 같은 단계로 고객 스키마를 통과합니다.  
   

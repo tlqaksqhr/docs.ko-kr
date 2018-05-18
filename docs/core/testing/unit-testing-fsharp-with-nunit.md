@@ -3,17 +3,13 @@ title: dotnet test 및 NUnit을 사용하여 .NET Core에서 F# 라이브러리 
 description: dotnet test 및 NUnit을 사용하여 샘플 솔루션을 단계별로 빌드하는 대화형 환경을 통해 .NET Core의 F#에 대한 단위 테스트 개념을 알아봅니다.
 author: rprouse
 ms.date: 12/01/2017
-ms.topic: conceptual
 dev_langs:
 - fsharp
-ms.prod: dotnet-core
-ms.workload:
-- dotnetcore
-ms.openlocfilehash: f5793c79177e919547b9daa9b8fd2523938d3c66
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: c5653463ce43ab8660753aa03ef79ba10f339fac
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="unit-testing-f-libraries-in-net-core-using-dotnet-test-and-nunit"></a>dotnet test 및 NUnit을 사용하여 .NET Core에서 F# 라이브러리 유닛 테스트
 

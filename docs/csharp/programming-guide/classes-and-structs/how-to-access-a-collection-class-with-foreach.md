@@ -1,21 +1,14 @@
 ---
-title: "방법: foreach를 사용하여 컬렉션 클래스 액세스(C# 프로그래밍 가이드)"
+title: '방법: foreach를 사용하여 컬렉션 클래스 액세스(C# 프로그래밍 가이드)'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - collection classes [C#], foreach statement
 ms.assetid: a6b9cf5c-6c8d-4223-b12c-288949434493
-caps.latest.revision: 
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 0cf827e958d4dc3b951d17b53effd155356c0ca5
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: b02b9f4508984e3248cfd8e0cde0c994e1b871ef
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-access-a-collection-class-with-foreach-c-programming-guide"></a>방법: foreach를 사용하여 컬렉션 클래스 액세스(C# 프로그래밍 가이드)
 다음 코드 예제에서는 [foreach](../../../csharp/language-reference/keywords/foreach-in.md)와 함께 사용할 수 있는 제네릭이 아닌 컬렉션 클래스를 작성하는 방법을 보여 줍니다. 예제에서는 문자열 토크나이저 클래스를 정의합니다.  
@@ -27,7 +20,7 @@ ms.lasthandoff: 11/21/2017
   
  [!code-csharp[csProgGuideCollections#3](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-access-a-collection-class-with-foreach_1.cs)]  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  내부적으로 `Tokens` 클래스는 배열을 사용하여 토큰을 저장합니다. 배열은 <xref:System.Collections.IEnumerator> 및 <xref:System.Collections.IEnumerable>을 구현하기 때문에 이 코드 예제에서는 `Tokens` 클래스에서 메서드를 정의하는 대신 배열의 열거형 메서드(<xref:System.Collections.IEnumerable.GetEnumerator%2A>, <xref:System.Collections.IEnumerator.MoveNext%2A>, <xref:System.Collections.IEnumerator.Reset%2A>, <xref:System.Collections.IEnumerator.Current%2A>)가 사용될 수 있었습니다. 메서드 정의는 메서드가 정의된 방식과 각 메서드의 기능을 설명하기 위해 예제에 포함되었습니다.  
   
  [!code-csharp[csProgGuideCollections#2](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-access-a-collection-class-with-foreach_2.cs)]  

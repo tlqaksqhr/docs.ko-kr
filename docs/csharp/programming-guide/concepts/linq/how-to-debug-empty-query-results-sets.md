@@ -1,21 +1,12 @@
 ---
-title: "방법: 빈 쿼리 결과 집합 디버그(C#)"
-ms.custom: 
+title: '방법: 빈 쿼리 결과 집합 디버그(C#)'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-csharp
-ms.topic: article
 ms.assetid: b569f0dc-425e-45a6-acbf-770fb761c981
-caps.latest.revision: "3"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: f8fb77a65c2c5023685251435d3028ffa9b3c2b3
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: a425327c6ba7168f7070d53a39fa64be991d4ddf
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-debug-empty-query-results-sets-c"></a>방법: 빈 쿼리 결과 집합 디버그(C#)
 XML 트리를 쿼리할 때 가장 일반적인 문제 중 하나는 XML 트리에 기본 네임스페이스가 있으면 개발자가 경우에 따라 XML이 네임스페이스에 없는 것처럼 쿼리를 작성하는 것입니다.  
@@ -26,7 +17,7 @@ XML 트리를 쿼리할 때 가장 일반적인 문제 중 하나는 XML 트리�
   
  자세한 내용은 [XML 네임스페이스 작업(C#)](../../../../csharp/programming-guide/concepts/linq/working-with-xml-namespaces.md)을 참조하세요.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  이 예제에서는 네임스페이스에 XML을 만들고 빈 결과 집합을 반환하는 쿼리를 만드는 방법을 보여 줍니다.  
   
 ```csharp  
@@ -55,7 +46,7 @@ Result set follows:
 End of result set  
 ```  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  이 예제에서는 네임스페이스에 XML을 만들고 제대로 코딩된 쿼리를 만드는 방법을 보여 줍니다.  
   
  해결 방법은 <xref:System.Xml.Linq.XNamespace> 개체를 선언하고 초기화하여 <xref:System.Xml.Linq.XName> 개체를 지정할 때 사용하는 것입니다. 이 경우 <xref:System.Xml.Linq.XElement.Elements%2A> 메서드의 인수는 <xref:System.Xml.Linq.XName> 개체입니다.  

@@ -1,21 +1,12 @@
 ---
-title: "LINQ to XML 보안(C#)"
-ms.custom: 
+title: LINQ to XML 보안(C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-csharp
-ms.topic: article
 ms.assetid: ef2c0dc9-ecf9-4c17-b24e-144184ab725f
-caps.latest.revision: "3"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 281f979d0c7df2538f664199e4444db5166ba55e
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: f51c256091d503a34caadbdf46d08e05c3122238
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="linq-to-xml-security-c"></a>LINQ to XML 보안(C#)
 이 항목에서는 LINQ to XML과 관련된 보안 문제에 대해 설명합니다. 또한 보안 노출을 경감하는 몇 가지 지침을 제공합니다.  

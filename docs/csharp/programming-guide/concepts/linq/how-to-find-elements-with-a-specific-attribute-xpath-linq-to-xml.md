@@ -1,21 +1,12 @@
 ---
-title: "방법: 특정 특성으로 요소 찾기(XPath-LINQ to XML)(C#)"
-ms.custom: 
+title: '방법: 특정 특성으로 요소 찾기(XPath-LINQ to XML)(C#)'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-csharp
-ms.topic: article
 ms.assetid: daed00dd-923a-43be-8a90-eee406f6f574
-caps.latest.revision: "3"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 66053135dbfdf6f61ff1f09b846acd9d9cfe054f
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 18dbd3170b5e3f8f8b3e11c66430d71ba6acd0da
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-find-elements-with-a-specific-attribute-xpath-linq-to-xml-c"></a>방법: 특정 특성으로 요소 찾기(XPath-LINQ to XML)(C#)
 특정 특성을 가진 모든 요소를 찾으려는 경우가 있습니다. 특성의 내용에는 관심이 없으며, 대신 특성의 존재에 따라 선택하려고 합니다.  
@@ -24,7 +15,7 @@ ms.lasthandoff: 10/18/2017
   
  `./*[@Select]`  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 코드에서는 `Select` 특성을 가진 요소만 선택합니다.  
   
 ```csharp  

@@ -1,34 +1,23 @@
 ---
 title: '방법: 스레드 로컬 변수를 사용하는 Parallel.For 루프 작성'
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - parallel for loops, how to use local state
 ms.assetid: 68384064-7ee7-41e2-90e3-71f00bde01bb
-caps.latest.revision: 23
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 004998a8891d92e2d1f805b3353fbe93864dcf1d
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: a70b8e3d1f56eafc04b97a19a1582d9c664e587d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-write-a-parallelfor-loop-with-thread-local-variables"></a>방법: 스레드 로컬 변수를 사용하는 Parallel.For 루프 작성
-이 예제에서는 스레드 지역 변수를 사용하여, <xref:System.Threading.Tasks.Parallel.For%2A> 루프에 의해 만들어진 각 별도 작업의 상태를 저장하고 검색하는 방법을 보여줍니다. 스레드 지역 데이터를 사용하여, 공유 상태에 대한 많은 수의 액세스를 동기화하는 오버헤드를 방지할 수 있습니다. 반복할 때마다 공유 리소스에 쓰는 대신 작업의 반복이 모두 완료될 때까지 값을 계산하여 저장합니다. 그런 다음, 공유 리소스에 최종 결과를 한 번 쓰거나, 최종 결과를 다른 메서드로 전달할 수 있습니다.  
+이 예제에서는 스레드 지역 변수를 사용하여, <xref:System.Threading.Tasks.Parallel.For%2A> 루프에 의해 만들어진 각 별도 작업의 상태를 저장하고 검색하는 방법을 보여 줍니다. 스레드 지역 데이터를 사용하여, 공유 상태에 대한 많은 수의 액세스를 동기화하는 오버헤드를 방지할 수 있습니다. 반복할 때마다 공유 리소스에 쓰는 대신 작업의 반복이 모두 완료될 때까지 값을 계산하여 저장합니다. 그런 다음 공유 리소스에 최종 결과를 한 번 쓰거나, 최종 결과를 다른 메서드로 전달할 수 있습니다.  
   
 ## <a name="example"></a>예  
  다음 예제에서는 <xref:System.Threading.Tasks.Parallel.For%60%601%28System.Int32%2CSystem.Int32%2CSystem.Func%7B%60%600%7D%2CSystem.Func%7BSystem.Int32%2CSystem.Threading.Tasks.ParallelLoopState%2C%60%600%2C%60%600%7D%2CSystem.Action%7B%60%600%7D%29> 메서드를 호출하여 1백만 개의 요소가 포함된 배열의 값 합계를 계산합니다. 각 요소의 값은 해당 인덱스와 같습니다.  
@@ -48,7 +37,7 @@ ms.lasthandoff: 12/23/2017
 Function() new MyClass()  
 ```  
   
- 네 번째 매개 변수는 루프 논리를 정의합니다. 이 매개 변수는 시그니처가 `Func<int, ParallelLoopState, long, long>`(C#의 경우) 또는 `Func(Of Integer, ParallelLoopState, Long, Long)`(Visual Basic의 경우)인 대리자 또는 람다 식이어야 합니다. 첫 번째 매개 변수는 루프의 해당 반복에 대한 루프 카운터의 값입니다. 두 번째 매개 변수는 루프를 중단하는 데 사용할 수 있는 <xref:System.Threading.Tasks.ParallelLoopState> 개체입니다. 이 개체는 <xref:System.Threading.Tasks.Parallel> 클래스에 의해 루프의 각 발생으로 제공됩니다. 세 번째 매개 변수는 스레드 지역 변수입니다. 마지막 매개 변수는 반환 형식입니다. 이 경우 반환 형식은 <xref:System.Int64>입니다. 이 형식이 사용자가 <xref:System.Threading.Tasks.Parallel.For%2A> 형식 인수에 지정한 형식이기 때문입니다. 해당 변수의 이름은 `subtotal`로 지정되며 람다 식에 의해 반환됩니다. 반환 값은 이후에 루프가 반복될 때마다 `subtotal`을 초기화하는 데 사용됩니다. 또한 이 마지막 매개 변수를 각 반복에 전달된 다음, 마지막 반복이 완료될 때 `localFinally` 대리자에게 전달되는 값으로 생각할 수 있습니다.  
+ 네 번째 매개 변수는 루프 논리를 정의합니다. 이 매개 변수는 시그니처가 `Func<int, ParallelLoopState, long, long>`(C#의 경우) 또는 `Func(Of Integer, ParallelLoopState, Long, Long)`(Visual Basic의 경우)인 대리자 또는 람다 식이어야 합니다. 첫 번째 매개 변수는 루프의 해당 반복에 대한 루프 카운터의 값입니다. 두 번째 매개 변수는 루프를 중단하는 데 사용할 수 있는 <xref:System.Threading.Tasks.ParallelLoopState> 개체입니다. 이 개체는 <xref:System.Threading.Tasks.Parallel> 클래스에 의해 루프의 각 발생으로 제공됩니다. 세 번째 매개 변수는 스레드 지역 변수입니다. 마지막 매개 변수는 반환 형식입니다. 이 경우 반환 형식은 <xref:System.Int64>입니다. 이 형식이 사용자가 <xref:System.Threading.Tasks.Parallel.For%2A> 형식 인수에 지정한 형식이기 때문입니다. 해당 변수의 이름은 `subtotal`로 지정되며 람다 식에 의해 반환됩니다. 반환 값은 이후에 루프가 반복될 때마다 `subtotal`을 초기화하는 데 사용됩니다. 또한 이 마지막 매개 변수를 각 반복에 전달된 다음 마지막 반복이 완료될 때 `localFinally` 대리자에게 전달되는 값으로 생각할 수 있습니다.  
   
  다섯 번째 매개 변수는 특정 스레드에 대한 모든 반복이 완료된 후 한 번 호출되는 메서드를 정의합니다. 입력 인수의 형식은 다시 <xref:System.Threading.Tasks.Parallel.For%60%601%28System.Int32%2CSystem.Int32%2CSystem.Func%7B%60%600%7D%2CSystem.Func%7BSystem.Int32%2CSystem.Threading.Tasks.ParallelLoopState%2C%60%600%2C%60%600%7D%2CSystem.Action%7B%60%600%7D%29> 메서드의 형식 인수 및 본문 람다 식에 의해 반환되는 형식에 해당합니다. 이 예제에서 값은 <xref:System.Threading.Interlocked.Add%2A?displayProperty=nameWithType> 메서드를 호출하여 스레드로부터 안전한 방법으로 클래스 범위에서 변수에 더해집니다. 스레드 지역 변수를 사용하여, 루프가 반복될 때마다 이 클래스 변수에 쓰는 것을 방지했습니다.  
   

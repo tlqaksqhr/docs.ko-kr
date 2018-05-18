@@ -1,9 +1,6 @@
 ---
-title: "접근자 액세스 가능성 제한(C# 프로그래밍 가이드)"
+title: 접근자 액세스 가능성 제한(C# 프로그래밍 가이드)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - read-only properties [C#]
 - read-only indexers [C#]
@@ -12,14 +9,11 @@ helpviewer_keywords:
 - asymmetric accessor accesibility [C#]
 - indexers [C#], read-only
 ms.assetid: 6e655798-e112-4301-a680-6310a6e012e1
-caps.latest.revision: "26"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: a4905885323f59d8b8b2654a5331e02054334398
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: bf9ead7934630d3974657107ca38e08bbd3bed85
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="restricting-accessor-accessibility-c-programming-guide"></a>접근자 액세스 가능성 제한(C# 프로그래밍 가이드)
 속성 또는 인덱서의 [get](../../../csharp/language-reference/keywords/get.md) 및 [set](../../../csharp/language-reference/keywords/set.md) 부분을 *접근자*라고 합니다. 기본적으로 이러한 접근자는 속하는 속성 또는 인덱서와 동일한 표시 유형 또는 액세스 수준을 갖습니다. 자세한 내용은 [접근성 수준](../../../csharp/language-reference/keywords/accessibility-levels.md)을 참조하세요. 그러나 이러한 접근자 중 하나에 대한 액세스를 제한하는 것이 유용한 경우도 있습니다. 이렇게 하려면 일반적으로 `set` 접근자의 접근성을 제한하는 동시에 `get` 접근자를 공개적으로 액세스할 수 있도록 유지해야 합니다. 예:  
@@ -54,7 +48,7 @@ ms.lasthandoff: 11/21/2017
   
  접근자의 액세스 한정자를 사용하지 않은 경우 접근자의 접근성 도메인은 속성 또는 인덱서의 접근성 수준에 의해 결정됩니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제에는 세 가지 클래스 `BaseClass`, `DerivedClass`, `MainClass`가 포함되어 있습니다. `BaseClass`에는 두 클래스의 `Name` 및 `Id`인 두 가지 속성이 있습니다. 예제에서는 [protected](../../../csharp/language-reference/keywords/protected.md), [private](../../../csharp/language-reference/keywords/private.md) 등의 제한적인 액세스 한정자를 사용할 때 `DerivedClass`의 `Id` 속성을 `BaseClass`의 `Id` 속성으로 숨길 수 있는 방법을 보여 줍니다. 따라서 이 속성에 값을 할당하면 `BaseClass` 클래스의 속성이 대신 호출됩니다. 액세스 한정자를 [public](../../../csharp/language-reference/keywords/public.md)으로 바꾸면 속성에 액세스할 수 있습니다.  
   
  또한 예제에서는 `DerivedClass`, `Name` 속성의 `set` 접근자에 있는 `private`, `protected` 등의 제한적인 액세스 한정자가 접근자에 대한 액세스를 차단하고 할당을 시도할 때 오류를 생성함을 보여 줍니다.  

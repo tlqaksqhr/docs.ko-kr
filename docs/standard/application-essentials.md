@@ -1,28 +1,17 @@
 ---
-title: ".NET Framework 응용 프로그램 주요 사항"
-ms.custom: 
+title: .NET Framework 응용 프로그램 주요 사항
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - .NET Framework development
 ms.assetid: 653da4ba-3752-4d1f-a08a-de017dc86ecc
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: f830064c585e1024bdc304c6356327ddc8c059f3
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: f05f66af71b86ccaefe19c0ddce2bfe7572f1084
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="net-framework-application-essentials"></a>.NET Framework 응용 프로그램 주요 사항
 .NET Framework 설명서의 이 섹션은 .NET Framework의 기본 응용 프로그램 개발 작업에 대한 정보를 제공합니다.  

@@ -1,19 +1,13 @@
 ---
 title: 분기 및 루프 자습서 - C# 로컬 빠른 시작
 description: 분기 및 루프에 관한 이 빠른 시작에서는 C# 코드를 작성하여 문을 반복적으로 실행하기 위한 조건부 분기 및 루프를 지원하는 언어 구문을 살펴봅니다.
-author: billwagner
-ms.author: wiwagn
 ms.date: 10/31/2017
-ms.topic: get-started-article
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.devlang: csharp
 ms.custom: mvc
-ms.openlocfilehash: ea9fb2322202dfa19344e6119e748827535b0739
-ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
+ms.openlocfilehash: 711cc9b40284076d28b5003935bbbbb77dc36664
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="branches-and-loops"></a>분기 및 루프
 

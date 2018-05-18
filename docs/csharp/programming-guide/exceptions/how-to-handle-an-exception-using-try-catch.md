@@ -1,27 +1,21 @@
 ---
-title: "방법: try-catch를 사용하여 예외 처리(C# 프로그래밍 가이드)"
+title: '방법: try-catch를 사용하여 예외 처리(C# 프로그래밍 가이드)'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - exception handling [C#], try/catch blocks
 - exceptions [C#], try/catch blocks
 - try/catch blocks [C#]
 ms.assetid: ca8e3773-980e-4767-8633-7408540e9818
-caps.latest.revision: "14"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 9098bbcf5cefb85211f9d3bb9cac15943ba02172
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: b67a3d7b6d2e10519363a273b7dd1d8b61317d1c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-handle-an-exception-using-trycatch-c-programming-guide"></a>방법: try/catch를 사용하여 예외 처리(C# 프로그래밍 가이드)
 [try-catch](../../../csharp/language-reference/keywords/try-catch.md) 블록은 작업 코드에서 생성된 예외를 catch하고 처리하기 위한 것입니다. 일부 예외는 `catch` 블록에서 처리될 수 있으며, 예외가 다시 throw되지 않고 문제가 해결됩니다. 그러나 대체로 수행할 수 있는 작업은 적절한 예외가 throw되었는지 확인하는 것뿐입니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  이 예제에서 <xref:System.IndexOutOfRangeException>은 가장 적합한 예외가 아닙니다. 호출자가 전달한 `index` 인수로 인해 오류가 발생하기 때문에 <xref:System.ArgumentOutOfRangeException>이 메서드에 더 적합합니다.  
   
  [!code-csharp[csProgGuideExceptions#5](../../../csharp/programming-guide/exceptions/codesnippet/CSharp/how-to-handle-an-exception-using-try-catch_1.cs)]  

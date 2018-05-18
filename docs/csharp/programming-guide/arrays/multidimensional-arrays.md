@@ -1,21 +1,15 @@
 ---
-title: "다차원 배열(C# 프로그래밍 가이드)"
+title: 다차원 배열(C# 프로그래밍 가이드)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - arrays [C#], multidimensional
 - multidimensional arrays [C#]
 ms.assetid: 020ce02e-7dff-4273-8e53-bf0b33747232
-caps.latest.revision: "16"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: ab3a93c21ddb9541a6149967605b851ea5a50a3c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 12cc7ff4f0a688145f2dee130e66dbe9a05ec7e7
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="multidimensional-arrays-c-programming-guide"></a>다차원 배열(C# 프로그래밍 가이드)
 배열에 둘 이상의 차원이 있을 수 있습니다. 예를 들어 다음 선언은 행 4개, 열 2개의 2차원 배열을 만듭니다.  

@@ -1,29 +1,18 @@
 ---
-title: "이름 또는 인덱스별로 정렬되지 않은 노드 검색"
-ms.custom: 
+title: 이름 또는 인덱스별로 정렬되지 않은 노드 검색
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 2038a90b-92af-4a0a-baaa-08e688d95194
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: b80f48d425623c9e6cdf1431ceb4a37efe7f2465
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 785a609455a35dd87a9593f00b58fd160ac708e9
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="unordered-node-retrieval-by-name-or-index"></a>이름 또는 인덱스별로 정렬되지 않은 노드 검색
 **XmlNamedNodeMap**은 W3C(World Wide Web 컨소시엄) 사양에서 NamedNodeMap으로 설명되며 이름이나 인덱스를 사용하여 노드를 참조할 수 있는 정렬되지 않은 노드 집합 처리에 필수적입니다. **XmlNamedNodeMap**에 액세스할 수 있는 유일한 방법은 메서드나 속성을 통해 **XmlNamedNodeMap**을 반환하는 경우입니다. 다음과 같은 세 가지 메서드나 속성이 **XmlNamedNodeMap**을 반환합니다.  

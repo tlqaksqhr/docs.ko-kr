@@ -1,21 +1,15 @@
 ---
-title: "한정자(C# 참조)"
+title: 한정자(C# 참조)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - keywords [C#], modifiers
 - modifiers [C#]
 ms.assetid: c96691dd-b357-49ec-b5ae-03ca214fadfb
-caps.latest.revision: "18"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 31bdfb74c5803e0108aab5b7733ea7b725f7ef3c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 241cbc767a3d094d664cf77f488e4154812d7516
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="modifiers-c-reference"></a>한정자(C# 참조)
 한정자는 형식 및 형식 멤버의 선언을 수정하는 데 사용됩니다. 이 단원에서는 다음의 C# 한정자에 대해 소개합니다.  

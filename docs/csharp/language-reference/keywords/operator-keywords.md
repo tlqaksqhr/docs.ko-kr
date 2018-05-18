@@ -1,21 +1,15 @@
 ---
-title: "연산자 키워드(C# 참조)"
+title: 연산자 키워드(C# 참조)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - keywords [C#], operators
 - operators [C#], keywords
 ms.assetid: f745c81f-f8d8-4673-86a1-0f3a85cc63c3
-caps.latest.revision: "10"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 1d30e85dd76f37c797ec212b9e0700ab93a21a67
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 19be5aadf68f7812f2cb4a4e694a6600c5203af4
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="operator-keywords-c-reference"></a>연산자 키워드(C# 참조)
 개체 생성, 개체의 런타임 형식 확인, 형식의 크기 가져오기 등의 기타 작업을 수행하는 데 사용됩니다. 이 섹션에서는 다음과 같은 키워드를 소개합니다.  

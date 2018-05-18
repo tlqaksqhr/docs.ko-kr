@@ -1,10 +1,6 @@
 ---
-title: "-optimize(C# 컴파일러 옵션)"
+title: -optimize(C# 컴파일러 옵션)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 f1_keywords:
 - /optimize
 helpviewer_keywords:
@@ -16,14 +12,11 @@ helpviewer_keywords:
 - compiler optimization [C#]
 - o compiler option [C#]
 ms.assetid: 6dd5b6f2-cd1d-4593-a9f4-1c2ed9404ca0
-caps.latest.revision: 
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 2cf6919ee2d4f0a4031e18d46b9e5ebaf816b120
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 86c8ebb2d2061085be4c00e8ac95448e1c341161
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="-optimize-c-compiler-options"></a>-optimize(C# 컴파일러 옵션)
 **-optimize** 옵션은 컴파일러에서 더 작지만 빠르고 효율적인 출력 파일을 만들기 위해 수행하는 최적화 기능을 사용하거나 사용하지 않도록 설정합니다.  
@@ -37,7 +30,7 @@ ms.lasthandoff: 01/19/2018
 ## <a name="remarks"></a>설명  
  또한 **-optimize**는 런타임에 코드를 최적화하도록 공용 언어 런타임에 알립니다.  
   
- 최적화는 기본적으로 사용되지 않습니다. 최적화를 사용하려면 **-optimize+**를 지정합니다.  
+ 최적화는 기본적으로 사용되지 않습니다. 최적화를 사용하려면 **-optimize+** 를 지정합니다.  
   
  어셈블리에서 사용할 모듈을 빌드하는 경우 어셈블리의 설정과 동일한 **-optimize** 설정을 사용합니다.  
   

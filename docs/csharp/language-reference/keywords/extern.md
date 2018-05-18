@@ -1,9 +1,6 @@
 ---
-title: "extern(C# 참조)"
+title: extern(C# 참조)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.topic: article
 f1_keywords:
 - extern_CSharpKeyword
 - extern
@@ -11,14 +8,11 @@ helpviewer_keywords:
 - DllImport attribute
 - extern keyword [C#]
 ms.assetid: 9c3f02c4-51b8-4d80-9cb2-f2b6e1ae15c7
-caps.latest.revision: "26"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 106ceb6a4acf57daa01919acb38e4245655fca2f
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: f4fd42505937b2623ab9460489f5277364550d71
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="extern-c-reference"></a>extern(C# 참조)
 `extern` 한정자는 외부에서 구현되는 메서드를 선언하는 데 사용됩니다. `extern` 한정자는 일반적으로 Interop 서비스를 사용하여 비관리 코드를 호출할 때 `DllImport` 특성과 함께 사용됩니다. 이 경우 다음 예제에서와 같이 메서드를 `static`으로 선언해야 합니다.  
@@ -34,12 +28,12 @@ private static extern void AVIFileInit();
   
  extern 키워드는 C++보다 C#에서 사용이 제한적입니다. C# 키워드를 C++ 키워드와 비교하려면 extern을 사용하여 C++ 언어 참조에 링크 지정을 참조하십시오.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  **예제 1.** 이 예제에서는 프로그램이 사용자로부터 문자열을 수신하여 메시지 상자에 표시합니다. 이 프로그램은 User32.dll 라이브러리에서 가져온 `MessageBox` 메서드를 사용합니다.  
   
  [!code-csharp[csrefKeywordsModifiers#8](../../../csharp/language-reference/keywords/codesnippet/CSharp/extern_1.cs)]  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  **예제 2.** 이 예제는 C 라이브러리(네이티브 DLL)로 호출되는 C# 프로그램을 보여 줍니다.  
   
  1. 다음 C 파일을 만들고 이름을 `cmdll.c`로 지정합니다.  
@@ -53,7 +47,7 @@ int __declspec(dllexport) SampleMethod(int i)
 }  
 ```  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  2. Visual Studio 설치 디렉터리에서 Visual Studio x64(또는 x32) 네이티브 도구 명령 프롬프트 창을 열고 명령 프롬프트에서 **cl /LD cmdll.c**를 입력하여 `cmdll.c` 파일을 컴파일합니다.  
   
  3. 같은 디렉터리에서 다음 C# 파일을 만들고 이름을 `cm.cs`로 지정합니다.  
@@ -74,7 +68,7 @@ public class MainClass
 }  
 ```  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  3. Visual Studio 설치 디렉터리에서 Visual Studio x64(또는 x32) 네이티브 도구 명령 프롬프트 창을 열고 명령 프롬프트에서 다음을 입력하여 `cm.cs` 파일을 컴파일합니다.  
   
 > **csc cm.cs**(x64 명령 프롬프트의 경우)   

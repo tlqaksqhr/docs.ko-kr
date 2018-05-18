@@ -1,26 +1,17 @@
 ---
-title: "방법: 네임스페이스에서 모든 노드 찾기(C#)"
-ms.custom: 
+title: '방법: 네임스페이스에서 모든 노드 찾기(C#)'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-csharp
-ms.topic: article
 ms.assetid: 3a38b913-a53e-4d0e-a19d-8782bffd3364
-caps.latest.revision: "3"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 766b0b4ff535703e6acdfeb409a51bb09a265e43
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: b22acdd7c2d64316e802c4dd01876a61141c8979
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-find-all-nodes-in-a-namespace-c"></a>방법: 네임스페이스에서 모든 노드 찾기(C#)
 해당 특정 네임스페이스에서 모든 노드를 찾기 위해 각 요소나 특성의 네임스페이스를 기준으로 필터링할 수 있습니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제에서는 두 네임스페이스가 포함된 XML 트리를 만듭니다. 그런 다음 트리를 반복하고 이러한 네임스페이스 중 하나에 있는 모든 요소 및 특성의 이름을 출력합니다.  
   
 ```csharp  
@@ -51,7 +42,7 @@ Nodes in the http://www.adventure-works.com namespace
 {http://www.adventure-works.com}GrandChild2  
 ```  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 쿼리에서 액세스하는 XML 파일에는 두 가지 네임스페이스의 구매 주문이 포함되어 있습니다. 쿼리에서는 네임스페이스 중 하나에 있는 요소만 포함된 트리를 새로 만듭니다.  
   
  이 예제에서는 XML 문서 [샘플 XML 파일: 통합된 구매 주문](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-consolidated-purchase-orders.md)을 사용합니다.  

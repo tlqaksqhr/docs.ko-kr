@@ -1,21 +1,12 @@
 ---
-title: "개념과 용어(함수 변환)(C#)"
-ms.custom: 
+title: 개념과 용어(함수 변환)(C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-csharp
-ms.topic: article
 ms.assetid: 03defb3a-7e17-4ab1-8efa-4dd66621e860
-caps.latest.revision: "3"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: c62aadc84f9c62429ffe59b78de386aac0f5cf63
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: f0d09f8846556dfa0ce70f253d59ddd41f254363
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="concepts-and-terminology-functional-transformation-c"></a>개념과 용어(함수 변환)(C#)
 이 항목에서는 순수 함수 변환의 개념과 용어에 대해 소개합니다. 데이터 변환에 대한 함수 변환 방법은 전통적인 명령형 프로그래밍보다 신속하게 프로그래밍할 수 있고 표현이 다양하며 디버깅과 유지 관리가 쉬운 코드를 생성합니다.  
@@ -23,7 +14,7 @@ ms.lasthandoff: 11/21/2017
  이 단원의 항목에서는 함수형 프로그래밍에 대해 전체적으로 설명하지 않고 XML의 모양을 쉽게 변환하는 데 사용할 수 있는 몇 가지 함수형 프로그래밍 기능만 살펴봅니다.  
   
 ## <a name="what-is-pure-functional-transformation"></a>순수 함수 변환이란?  
- *순수 함수 변환*에서 *순수 함수*라는 일련의 함수는 구조화된 데이터의 집합을 원래 형태에서 다른 형태로 변환하는 방법을 정의합니다. "순수"라는 단어는 함수가 *구성 가능(composable)*함을 의미합니다. 구성 가능한 함수에는 다음과 같은 특징이 있습니다.  
+ *순수 함수 변환*에서 *순수 함수*라는 일련의 함수는 구조화된 데이터의 집합을 원래 형태에서 다른 형태로 변환하는 방법을 정의합니다. "순수"라는 단어는 함수가 *구성 가능(composable)* 함을 의미합니다. 구성 가능한 함수에는 다음과 같은 특징이 있습니다.  
   
 -   *자체 포함*됩니다. 프로그램의 나머지 부분과 상호 종속되거나 얽히는 일 없이 함수가 자유롭게 정렬되고 다시 정렬될 수 있습니다. 순수 변환은 환경에 대한 지식이 없고 환경에 영향을 미치지 않습니다. 즉, 변환에 사용되는 함수가 *의도하지 않은 결과*를 발생시키지 않습니다.  
   

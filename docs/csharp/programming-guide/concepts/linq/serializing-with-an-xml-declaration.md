@@ -1,21 +1,12 @@
 ---
-title: "XML 선언으로 serialize(C#)"
-ms.custom: 
+title: XML 선언으로 serialize(C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-csharp
-ms.topic: article
 ms.assetid: c237fa4a-a042-40fd-886f-17b54c66bb75
-caps.latest.revision: "3"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 44d7f199508abd6d60bb554806409cebb1b7f845
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 3f331f1226e7e5a905471f4a793f9a415bdd858a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="serializing-with-an-xml-declaration-c"></a>XML 선언으로 serialize(C#)
 이 항목에서는 serialization을 통해 XML 선언이 생성되는지 여부를 제어하는 방법에 대해 설명합니다.  

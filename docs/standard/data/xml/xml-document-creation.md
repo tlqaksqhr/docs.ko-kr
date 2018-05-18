@@ -1,29 +1,18 @@
 ---
-title: "XML 문서 만들기"
-ms.custom: 
+title: XML 문서 만들기
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 877e9c62-b082-4bfb-bc5b-f47297eb30ef
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: ea67841e44d8d88d2effec92eb1668142c1510f2
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 5ab7632966cd2a0087a8bdc1d452d02543edbec4
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="xml-document-creation"></a>XML 문서 만들기
 XML 문서를 만드는 방법에는 두 가지가 있습니다. 하나는 매개 변수 없이 **XmlDocument**를 만드는 방법이고 다른 방법은 **XmlDocument**를 만들어 XmlNameTable를 매개 변수로 전달하는 것입니다. 다음 예제에서는 매개 변수를 사용하지 않고 비어 있는 새 **XmlDocument**를 만드는 방법을 보여줍니다.  

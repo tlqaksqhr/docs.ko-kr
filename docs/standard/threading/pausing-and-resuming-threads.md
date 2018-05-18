@@ -1,13 +1,7 @@
 ---
-title: "스레드 일시 중지 및 다시 시작"
-ms.custom: 
+title: 스레드 일시 중지 및 다시 시작
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -16,18 +10,13 @@ helpviewer_keywords:
 - threading [.NET Framework], pausing
 - pausing threads
 ms.assetid: 9fce4859-a19d-4506-b082-7dd0792688ca
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 4b87fbb51dbdcd5226a902e8b7ee5aeb7e126b7e
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: a9c2d58576098c83af110f2a713a0a8562e23aec
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="pausing-and-resuming-threads"></a>스레드 일시 중지 및 다시 시작
 스레드 작업을 동기화하는 가장 일반적인 방법은 스레드를 차단 및 해제하거나 개체 또는 코드 영역을 잠그는 것입니다. 이러한 잠금 및 차단 메커니즘에 대한 자세한 내용은 [동기화 기본 형식 개요](../../../docs/standard/threading/overview-of-synchronization-primitives.md)를 참조하세요.  
@@ -39,7 +28,7 @@ ms.lasthandoff: 12/23/2017
   
  한 스레드가 다른 스레드에서 <xref:System.Threading.Thread.Sleep%2A?displayProperty=nameWithType>를 호출할 수는 없습니다.  <xref:System.Threading.Thread.Sleep%2A?displayProperty=nameWithType>은 현재 스레드를 항상 일시 중지하는 정적 메서드입니다.  
   
- <xref:System.Threading.Timeout.Infinite?displayProperty=nameWithType> 값을 사용하여 <xref:System.Threading.Thread.Sleep%2A?displayProperty=nameWithType>을 호출하면 일시 중지 스레드에서 <xref:System.Threading.Thread.Interrupt%2A?displayProperty=nameWithType> 메서드를 호출하는 다른 스레드에 의해 중단될 때까지 또는 <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> 메서드 호출에 의해 종료될 때까지 스레드가 일시 중지됩니다.  다음 예제에서는 대기 중인 스레드를 중단하는 두 가지 메서드를 보여줍니다.  
+ <xref:System.Threading.Timeout.Infinite?displayProperty=nameWithType> 값을 사용하여 <xref:System.Threading.Thread.Sleep%2A?displayProperty=nameWithType>을 호출하면 일시 중지 스레드에서 <xref:System.Threading.Thread.Interrupt%2A?displayProperty=nameWithType> 메서드를 호출하는 다른 스레드에 의해 중단될 때까지 또는 <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> 메서드 호출에 의해 종료될 때까지 스레드가 일시 중지됩니다.  다음 예제에서는 대기 중인 스레드를 중단하는 두 가지 메서드를 보여 줍니다.  
   
  [!code-csharp[Conceptual.Threading.Resuming#1](../../../samples/snippets/csharp/VS_Snippets_CLR/Conceptual.Threading.Resuming/cs/Sleep1.cs#1)]
  [!code-vb[Conceptual.Threading.Resuming#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Conceptual.Threading.Resuming/vb/Sleep1.vb#1)]  

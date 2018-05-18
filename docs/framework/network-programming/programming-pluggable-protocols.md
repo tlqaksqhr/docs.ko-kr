@@ -1,12 +1,6 @@
 ---
-title: "플러그형 프로토콜 프로그래밍"
-ms.custom: 
+title: 플러그형 프로토콜 프로그래밍
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - downloading Internet resources, pluggable protocols
 - WebRequest class, pluggable protocols
@@ -21,16 +15,14 @@ helpviewer_keywords:
 - receiving data, pluggable protocols
 - protocols, pluggable
 ms.assetid: 66ef8456-7576-4e97-8956-959b216373db
-caps.latest.revision: "12"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: c97b64c9e042706fedabac435b8982aed65a8be4
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: fe9f9216c00448391967b82c84207f95eaccdb53
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="programming-pluggable-protocols"></a>플러그형 프로토콜 프로그래밍
 추상 <xref:System.Net.WebRequest> 및 <xref:System.Net.WebResponse> 클래스에서 플러그형 프로토콜의 기초를 제공합니다. <xref:System.Net.WebRequest> 및 <xref:System.Net.WebResponse>에서 프로토콜별 클래스를 파생시키면, 응용 프로그램에서 사용할 프로토콜을 지정하지 않아도 인터넷 리소스에서 데이터를 요청하고 응답을 읽을 수 있습니다.  

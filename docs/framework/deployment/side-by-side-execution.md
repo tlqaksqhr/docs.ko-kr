@@ -1,28 +1,16 @@
 ---
-title: ".NET Framework의 Side-by-Side 실행"
-ms.custom: 
+title: .NET Framework의 Side-by-Side 실행
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - side-by-side execution
 ms.assetid: 649f1342-766b-49e6-a90d-5b019a751e11
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 75ee159f45932f6130db2ce47c6923c24b38ca99
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ea7a26a5b8ce0f30893e9ca66873ad61f82ff8df
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="side-by-side-execution-in-the-net-framework"></a>.NET Framework의 Side-by-Side 실행
 Side-by-side 실행은 동일한 컴퓨터에서 여러 버전의 응용 프로그램 또는 구성 요소를 실행하는 기능입니다. 동일한 컴퓨터에서 여러 버전의 공용 언어 런타임과, 하나의 런타임 버전을 사용하는 여러 버전의 응용 프로그램 및 구성 요소를 동시에 사용할 수 있습니다.  

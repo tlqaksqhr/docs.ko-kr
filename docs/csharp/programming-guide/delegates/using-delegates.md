@@ -1,28 +1,21 @@
 ---
-title: "대리자 사용(C# 프로그래밍 가이드)"
+title: 대리자 사용(C# 프로그래밍 가이드)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - delegates [C#], how to use
 ms.assetid: 99a2fc27-a32e-4a34-921c-e65497520eec
-caps.latest.revision: 
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: cef62448388299f310fa26ecb632485b6538c032
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: b27c94570fdf76808e8a7df67b34466bde20de7f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-delegates-c-programming-guide"></a>대리자 사용(C# 프로그래밍 가이드)
 [대리자](../../../csharp/language-reference/keywords/delegate.md)는 C 및 C++의 함수 포인터처럼 메서드를 안전하게 캡슐화하는 형식입니다. 함수 포인터와는 달리 대리자는 개체 지향적이고 형식이 안전하며 보안이 유지됩니다. 대리자의 형식은 대리자의 이름으로 정의됩니다. 다음 예제에서는 [string](../../../csharp/language-reference/keywords/string.md)을 인수로 사용하고 [void](../../../csharp/language-reference/keywords/void.md)를 반환하는 메서드를 캡슐화할 수 있는 `Del` 대리자를 선언합니다.  
   
  [!code-csharp[csProgGuideDelegates#21](../../../csharp/programming-guide/delegates/codesnippet/CSharp/using-delegates_1.cs)]  
   
- 대리자 개체는 일반적으로 대리자가 래핑할 메서드의 이름을 제공하거나 [무명 메서드](../../../csharp/programming-guide/statements-expressions-operators/anonymous-methods.md)를 사용하여 생성합니다. 대리자를 인스턴스화하고 나면 대리자에 대한 메서드 호출이 대리자에 의해 해당 메서드로 전달됩니다. 호출자가 대리자에게 전달한 매개 변수가 메서드로 전달되며 메서드의 반환 값(있는 경우)이 대리자에 의해 호출자로 반환됩니다. 이 과정을 대리자 호출이라고 합니다. 인스턴스화된 대리자는 래핑된 메서드 자체인 것처럼 호출할 수 있습니다. 예를 들면 다음과 같습니다.  
+ 대리자 개체는 일반적으로 대리자가 래핑할 메서드의 이름을 제공하거나 [무명 메서드](../../../csharp/programming-guide/statements-expressions-operators/anonymous-methods.md)를 사용하여 생성합니다. 대리자를 인스턴스화하고 나면 대리자에 대한 메서드 호출이 대리자에 의해 해당 메서드로 전달됩니다. 호출자가 대리자에게 전달한 매개 변수가 메서드로 전달되며 메서드의 반환 값(있는 경우)이 대리자에 의해 호출자로 반환됩니다. 이 과정을 대리자 호출이라고 합니다. 인스턴스화된 대리자는 래핑된 메서드 자체인 것처럼 호출할 수 있습니다. 예:  
   
  [!code-csharp[csProgGuideDelegates#22](../../../csharp/programming-guide/delegates/codesnippet/CSharp/using-delegates_2.cs)]  
   
@@ -50,11 +43,11 @@ ms.lasthandoff: 11/21/2017
   
  이제는 위에 나와 있는 정적 `DelegateMethod`와 함께 3개 메서드를 `Del` 인스턴스로 래핑할 수 있습니다.  
   
- 대리자는 호출 시 둘 이상의 메서드를 호출할 수 있습니다. 이러한 호출을 멀티캐스트라고 합니다. 대리자의 메서드 목록(호출 목록)에 메서드를 더 추가하려는 경우 더하기 또는 더하기 대입 연산자('+' 또는 '+=')를 사용하여 대리자만 두 개 더 추가하면 됩니다. 예를 들면 다음과 같습니다.  
+ 대리자는 호출 시 둘 이상의 메서드를 호출할 수 있습니다. 이러한 호출을 멀티캐스트라고 합니다. 대리자의 메서드 목록(호출 목록)에 메서드를 더 추가하려는 경우 더하기 또는 더하기 대입 연산자('+' 또는 '+=')를 사용하여 대리자만 두 개 더 추가하면 됩니다. 예:  
   
  [!code-csharp[csProgGuideDelegates#27](../../../csharp/programming-guide/delegates/codesnippet/CSharp/using-delegates_7.cs)]  
   
- 이 시점에서 `allMethodsDelegate`의 호출 목록에는 `Method1`, `Method2`, `DelegateMethod`의 3개 메서드가 포함되어 있습니다. 원래 대리자 3개(`d1`, `d2`, `d3`)는 그대로 유지됩니다. `allMethodsDelegate`를 호출하면 3개 메서드가 모두 순서대로 호출됩니다. 대리자가 참조 매개 변수를 사용하는 경우 참조는 각 3개 메서드에 순서대로 전달되며 메서드 하나의 변경 내용은 다음 메서드에도 표시됩니다. 메서드 중 하나라도 메서드 내에서 catch되지 않은 예외를 throw하면 해당 예외가 대리자의 호출자에게 해당 예외가 전달되며 호출 목록의 후속 메서드는 호출되지 않습니다. 반환 값 및/또는 out 매개 변수를 포함하는 대리자는 마지막으로 호출한 메서드의 반환 값과 매개 변수를 반환합니다. 호출 목록에서 메서드를 제거하려면 감소 또는 감소 대입 연산자('-' 또는 '-=')를 사용합니다. 예를 들면 다음과 같습니다.  
+ 이 시점에서 `allMethodsDelegate`의 호출 목록에는 `Method1`, `Method2`, `DelegateMethod`의 3개 메서드가 포함되어 있습니다. 원래 대리자 3개(`d1`, `d2`, `d3`)는 그대로 유지됩니다. `allMethodsDelegate`를 호출하면 3개 메서드가 모두 순서대로 호출됩니다. 대리자가 참조 매개 변수를 사용하는 경우 참조는 각 3개 메서드에 순서대로 전달되며 메서드 하나의 변경 내용은 다음 메서드에도 표시됩니다. 메서드 중 하나라도 메서드 내에서 catch되지 않은 예외를 throw하면 해당 예외가 대리자의 호출자에게 해당 예외가 전달되며 호출 목록의 후속 메서드는 호출되지 않습니다. 반환 값 및/또는 out 매개 변수를 포함하는 대리자는 마지막으로 호출한 메서드의 반환 값과 매개 변수를 반환합니다. 호출 목록에서 메서드를 제거하려면 감소 또는 감소 대입 연산자('-' 또는 '-=')를 사용합니다. 예:  
   
  [!code-csharp[csProgGuideDelegates#28](../../../csharp/programming-guide/delegates/codesnippet/CSharp/using-delegates_8.cs)]  
   

@@ -1,21 +1,12 @@
 ---
-title: "표준 쿼리 연산자의 쿼리 식 구문(C#)"
-ms.custom: 
+title: 표준 쿼리 연산자의 쿼리 식 구문(C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-csharp
-ms.topic: article
 ms.assetid: e1e17ef2-68ff-4c26-b6e2-015668227fa5
-caps.latest.revision: "3"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: f662f23948f5d18c31a981a2f46d78f382ff5c96
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 48ca1173439559832ac7e578eac1e11c2bf34be2
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="query-expression-syntax-for-standard-query-operators-c"></a>표준 쿼리 연산자의 쿼리 식 구문(C#)
 자주 사용되는 표준 쿼리 연산자 중 일부에는 *쿼리 식*의 일부로 호출할 수 있는 전용 C# 언어 키워드 구문이 있습니다. 쿼리 식은 *메서드 기반* 양식과는 다른, 가독성이 더 우수한 쿼리 표현 양식입니다. 쿼리 식 절은 컴파일 시간에 쿼리 메서드 호출로 변환됩니다.  

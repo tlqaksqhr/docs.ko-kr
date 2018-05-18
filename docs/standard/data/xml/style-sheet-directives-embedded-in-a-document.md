@@ -1,26 +1,15 @@
 ---
-title: "문서에 포함된 스타일시트 지시문"
-ms.custom: 
+title: 문서에 포함된 스타일시트 지시문
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: d79fb295-ebc7-438d-ba1b-05be7d534834
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: b0d4589dc73b4effeff553e5b7bf5562a7602c2d
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 2fa671304c611db571b160cd1d960b83bf451c9a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="style-sheet-directives-embedded-in-a-document"></a>문서에 포함된 스타일시트 지시문
 기존 XML에 `<?xml:stylesheet?>`의 스타일시트 지시문이 포함된 경우도 있습니다. Microsoft Internet Explorer에서는 `<?xml-stylesheet?>` 구문 대신 이처럼 포함된 지시문이 적용됩니다. 다음 데이터와 같이 XML 데이터에 `<?xml:stylesheet?>` 지시문이 있는 경우 이 데이터를 XML DOM(문서 개체 모델)으로 로드하려고 하면 예외가 throw됩니다.  

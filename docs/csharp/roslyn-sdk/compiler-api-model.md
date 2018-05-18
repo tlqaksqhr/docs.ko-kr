@@ -1,18 +1,13 @@
 ---
 title: .NET Compiler Platform SDK 개념 및 개체 모델
 description: 이 개요는 .NET 컴파일러 SDK와 함께 효과적으로 작동해야 하는 배경 정보를 제공합니다. API 계층, 관련된 주요 형식 및 전체 개체 모델을 학습합니다.
-author: billwagner
-ms.author: wiwagn
 ms.date: 10/10/2017
-ms.topic: conceptual
-ms.prod: .net
-ms.devlang: devlang-csharp
 ms.custom: mvc
-ms.openlocfilehash: 17a7884518f71d7df1f4a9fe8c91da87d7335e0d
-ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
+ms.openlocfilehash: a3104313efa0110699c45a4ce7bca99aab20542a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="understand-the-net-compiler-platform-sdk-model"></a>.NET Compiler Platform SDK 모델 이해
 

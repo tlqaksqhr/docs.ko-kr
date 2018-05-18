@@ -1,20 +1,13 @@
 ---
-title: "업데이트된 .NET Core 이벤트 패턴"
-description: ".NET Core 이벤트 패턴을 통해 이전 버전과의 호환성을 유연하게 사용하는 방법 및 비동기 구독자로 안전한 이벤트 처리를 구현하는 방법을 알아봅니다."
-keywords: .NET, .NET Core
-author: BillWagner
-ms.author: wiwagn
+title: 업데이트된 .NET Core 이벤트 패턴
+description: .NET Core 이벤트 패턴을 통해 이전 버전과의 호환성을 유연하게 사용하는 방법 및 비동기 구독자로 안전한 이벤트 처리를 구현하는 방법을 알아봅니다.
 ms.date: 06/20/2016
-ms.topic: article
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.devlang: csharp
 ms.assetid: 9aa627c3-3222-4094-9ca8-7e88e1071e06
-ms.openlocfilehash: cf69cbe0a7adbd274d1cb9e9544dda77d9fa1740
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: d0ad85479265041d895039d6c72f1f9909ea5fa8
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="the-updated-net-core-event-pattern"></a>업데이트된 .NET Core 이벤트 패턴
 

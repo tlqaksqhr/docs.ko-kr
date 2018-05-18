@@ -1,20 +1,14 @@
 ---
 title: 특성 - C#
 description: C#에서 특성이 작동하는 방식을 알아봅니다.
-keywords: .NET, .NET Core, C#, 특성
 author: mgroves
-ms.author: wiwagn
 ms.date: 03/06/2017
-ms.topic: article
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.devlang: csharp
 ms.assetid: b152cf36-76e4-43a5-b805-1a1952e53b79
-ms.openlocfilehash: dad02c64d22fe0f127057202c082680f13261d7b
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: db6db50ac59e804225bdc11c435fef3d53fa685e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-attributes-in-c"></a>C#에서 특성 사용 #
 
@@ -24,7 +18,7 @@ ms.lasthandoff: 10/18/2017
 
 이 자습서에서는 코드에 특성을 추가하는 방법, 사용자 지정 특성을 만들고 사용하는 방법, .NET Core로 빌드되는 일부 특성을 사용하는 방법을 소개합니다.
 
-## <a name="prerequisites"></a>필수 구성 요소
+## <a name="prerequisites"></a>전제 조건
 .NET Core를 실행하도록 컴퓨터에 설정해야 합니다. [.NET Core](https://www.microsoft.com/net/core) 페이지에서 설치 지침을 확인할 수 있습니다.
 Windows, Ubuntu Linux, macOS 또는 Docker 컨테이너에서 이 응용 프로그램을 실행할 수 있습니다. 선호하는 코드 편집기를 설치해야 합니다. 아래 설명에서는 오픈 소스 플랫폼 간 편집기인 [Visual Studio Code](https://code.visualstudio.com/)를 사용합니다. 그러나 익숙한 어떤 도구도 사용 가능합니다.
 
@@ -90,12 +84,12 @@ C#에서 특성은 `Attribute` 기본 클래스에서 상속되는 클래스입�
 * 생성자
 * 대리자
 * Enum
-* 이벤트
+* 이벤트(event)
 * 필드
 * GenericParameter
 * 인터페이스
 * 메서드
-* 모듈
+* Module
 * 매개 변수
 * 속성
 * ReturnValue

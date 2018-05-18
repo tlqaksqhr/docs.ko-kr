@@ -1,26 +1,17 @@
 ---
-title: "시작(LINQ to XML)"
-ms.custom: 
+title: 시작(LINQ to XML)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-csharp
-ms.topic: article
 ms.assetid: a6c65e53-4e5f-443d-aef2-9c46ad0a3bf0
-caps.latest.revision: "3"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 71c38b5e59bb098f0ee08e99c43977fd2e9cfdcf
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 0faf3f0fbe5dcc495da7b1447287f6ef09657aa0
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="getting-started-linq-to-xml"></a>시작(LINQ to XML)
 다음 항목에서는 LINQ to XML을 소개합니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
   
 |항목|설명|  
 |-----------|-----------------|  

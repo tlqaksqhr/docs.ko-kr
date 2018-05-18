@@ -1,26 +1,15 @@
 ---
-title: "요소 및 특성이 있는 새 노드의 엔터티 참조 확장에 대한 네임스페이스의 영향"
-ms.custom: 
+title: 요소 및 특성이 있는 새 노드의 엔터티 참조 확장에 대한 네임스페이스의 영향
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 64359aee-aab0-4042-9a32-d19789af6ca7
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 9b59f85eb0ef6646345eaef2a409f622c6fe4651
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: e2ba9964f17380e868ea5fe906a40f8b491018a0
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="namespace-affect-on-entity-reference-expansion-for-new-nodes-containing-elements-and-attributes"></a>요소 및 특성이 있는 새 노드의 엔터티 참조 확장에 대한 네임스페이스의 영향
 엔터티 선언 내용은 거의 모든 항목을 포함할 수 있기 때문에 이 내용에 `<!ENTITY aname "<elem>test</elem>">`와 같은 요소가 포함될 가능성도 있습니다.  

@@ -1,28 +1,19 @@
 ---
-title: "자습서: 여러 쿼리 연결(C#)"
-ms.custom: 
+title: '자습서: 여러 쿼리 연결(C#)'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-csharp
-ms.topic: article
 ms.assetid: 44f54444-c4c5-4c23-9d19-986b957b8eda
-caps.latest.revision: "3"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 08196f4780e566cc05e36b6cfe78caad3e9c96a1
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 8411d8577c192e2aa1a43bea47644fe6bdc09e88
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tutorial-chaining-queries-together-c"></a>자습서: 여러 쿼리 연결(C#)
 이 자습서에서는 쿼리를 연결할 때의 처리 모델을 보여 줍니다. 쿼리 연결은 함수 변환을 작성할 때 핵심 부분을 차지합니다. 연결된 쿼리의 작동 방식을 정확히 이해해야 합니다.  
   
  Office Open XML 문서를 처리하는 쿼리는 이 기법을 광범위하게 사용합니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
   
 |항목|설명|  
 |-----------|-----------------|  

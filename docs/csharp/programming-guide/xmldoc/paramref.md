@@ -1,9 +1,6 @@
 ---
-title: "&lt;paramref&gt;(C# 프로그래밍 가이드)"
+title: '&lt;paramref&gt;(C# 프로그래밍 가이드)'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.topic: article
 f1_keywords:
 - paramref
 - <paramref>
@@ -11,14 +8,11 @@ helpviewer_keywords:
 - <paramref> C# XML tag
 - paramref C# XML tag
 ms.assetid: 756c24c1-f591-40e8-a838-559761539b0b
-caps.latest.revision: "12"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: fff532c02538f121ebe399e1780d8c19d9d6633a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 0b0d49b90e097e23d3878281f9accda14b057720
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ltparamrefgt-c-programming-guide"></a>&lt;paramref&gt;(C# 프로그래밍 가이드)
 ## <a name="syntax"></a>구문  
@@ -36,7 +30,7 @@ ms.lasthandoff: 11/21/2017
   
  [/doc](../../../csharp/language-reference/compiler-options/doc-compiler-option.md)로 컴파일하여 문서 주석을 파일로 처리합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  [!code-csharp[csProgGuideDocComments#7](../../../csharp/programming-guide/xmldoc/codesnippet/CSharp/paramref_1.cs)]  
   
 ## <a name="see-also"></a>참고 항목  

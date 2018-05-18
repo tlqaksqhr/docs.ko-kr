@@ -1,29 +1,18 @@
 ---
-title: "변형 과정에서 XPathNodeIterator의 역할"
-ms.custom: 
+title: 변형 과정에서 XPathNodeIterator의 역할
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 2bc6ddc6-674a-4f75-b264-abc35e4e5857
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 523a4774de9975812838b22bbb5193e59cd58130
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 0d30760ef018c9b2d1264b323b57172417e4ef0c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="xpathnodeiterator-in-transformations"></a>변형 과정에서 XPathNodeIterator의 역할
 <xref:System.Xml.XPath.XPathNodeIterator>는 XPath(XML Path Language) 쿼리의 결과로 만들어진 노드 집합이나 노드 집합 메서드를 사용하여 노드 집합으로 변환된 결과 트리 조각을 반복하기 위한 메서드를 제공합니다. <xref:System.Xml.XPath.XPathNodeIterator>를 사용하면 해당 노드 집합 내의 노드를 반복할 수 있습니다. 노드 집합을 검색한 후 <xref:System.Xml.XPath.XPathNodeIterator> 클래스는 선택한 노드 집합에 대해 앞으로만 이동 가능한 읽기 전용 커서를 제공합니다. 노드 집합은 문서 순서에 따라 만들어지므로 이 메서드를 호출하면 문서 순서에서 다음 노드로 이동하게 됩니다. <xref:System.Xml.XPath.XPathNodeIterator>는 집합에 속하는 모든 노드의 노드 트리를 빌드하지 않습니다. 대신 트리에서 이동하는 것을 나타내는 원본으로 사용하는 노드를 노출하는 데이터에 대한 단일 노드 창을 제공합니다. <xref:System.Xml.XPath.XPathNodeIterator> 클래스에서 사용할 수 있는 메서드 및 속성을 통해 현재 노드에서 정보를 가져올 수 있습니다. 사용 가능한 메서드 및 속성 목록을 보려면 <xref:System.Windows.Forms.ToolBar>를 참조하세요.  
@@ -38,7 +27,7 @@ ms.lasthandoff: 12/23/2017
   
  노드 집합을 처음 확인하는 경우에는 <xref:System.Xml.XPath.XPathNodeIterator.MoveNext%2A>를 호출하여 <xref:System.Xml.XPath.XPathNodeIterator>를 선택된 집합의 첫 번째 노드에 배치해야 합니다. 그러면 while 루프를 작성할 수 있습니다.  
   
- 다음 코드 예제에서는 <xref:System.Xml.XPath.XPathNodeIterator>를 <xref:System.Xml.Xsl.XslTransform>의 매개 변수로 <xref:System.Xml.Xsl.XsltArgumentList>에 전달하는 방법을 보여줍니다. 코드의 입력은 **books.xml**이고 스타일시트는 **text.xsl**입니다. **test.xml** 파일은 <xref:System.Xml.XPath.XPathDocument>입니다.  
+ 다음 코드 예제에서는 <xref:System.Xml.XPath.XPathNodeIterator>를 <xref:System.Xml.Xsl.XslTransform>의 매개 변수로 <xref:System.Xml.Xsl.XsltArgumentList>에 전달하는 방법을 보여 줍니다. 코드의 입력은 **books.xml**이고 스타일시트는 **text.xsl**입니다. **test.xml** 파일은 <xref:System.Xml.XPath.XPathDocument>입니다.  
   
 ```vb  
 Imports System  

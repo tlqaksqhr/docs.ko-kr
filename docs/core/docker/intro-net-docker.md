@@ -4,19 +4,12 @@ description: Docker 및 .NET Core 이해
 author: jralexander
 ms.author: johalex
 ms.date: 11/06/2017
-ms.topic: conceptual
-ms.prod: dotnet-core
-ms.technology: dotnet-docker
-ms.devlang: dotnet
-manager: wpickett
 ms.custom: mvc
-ms.workload:
-- dotnetcore
-ms.openlocfilehash: 3ceeead391c3e64db6849236a0f6821eb03abc3c
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: bc652a375abd03bbc70f055b34d6ecea4d9fc374
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="introduction-to-net-and-docker"></a>.NET 및 Docker 소개
 
@@ -193,9 +186,9 @@ Docker 플랫폼 및 다양한 Docker 이미지에 대해 알아보았으므로,
 * [Service Fabric Getting Started Sample](https://azure.microsoft.com/resources/samples/service-fabric-dotnet-getting-started/)(Service Fabric 시작 샘플)
 * [Windows 컨테이너의 혜택](/virtualization/windowscontainers/about/index#video-overview)
 * [Visual Studio Docker 도구로 작업](/aspnet/core/host-and-deploy/docker/visual-studio-tools-for-docker)
-* [Deploying Docker Images from the Azure Container Registry to Azure Container Instances](https://blogs.msdn.microsoft.com/stevelasker/2017/07/28/deploying-docker-images-from-the-azure-container-registry-to-azure-container-instances/)(Azure Container Registry의 Docker 이미지를 Azure Container Instances에 배포)
+* [Azure Container Registry의 Docker 이미지를 Azure Container Instances에 배포](https://blogs.msdn.microsoft.com/stevelasker/2017/07/28/deploying-docker-images-from-the-azure-container-registry-to-azure-container-instances/)
 * [Debugging with Visual Studio Code](https://code.visualstudio.com/docs/nodejs/debugging-recipes#_nodejs-typescript-docker-container)(Visual Studio Code를 사용한 디버깅)
-* [Getting hands on with Visual Studio for Mac, containers, and serverless code in the cloud](https://blogs.msdn.microsoft.com/visualstudio/2017/08/31/hands-on-with-visual-studio-for-mac-containers-serverless-code-in-the-cloud/#comments)(클라우드에서 Mac용 Visual Studio, 컨테이너 및 서버리스 코드에 익숙해지기)
+* [클라우드에서 Mac용 Visual Studio, 컨테이너 및 서버리스 코드에 익숙해지기](https://blogs.msdn.microsoft.com/visualstudio/2017/08/31/hands-on-with-visual-studio-for-mac-containers-serverless-code-in-the-cloud/#comments)
 * [Getting Started with Docker and Visual Studio for Mac Lab](https://github.com/Microsoft/vs4mac-labs/tree/master/Docker/Getting-Started)(Docker 및 Mac용 Visual Studio 랩 시작)
 
 ## <a name="next-steps"></a>다음 단계

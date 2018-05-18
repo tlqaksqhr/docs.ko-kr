@@ -1,28 +1,19 @@
 ---
-title: "XML 트리 serialize(C#)"
-ms.custom: 
+title: XML 트리 serialize(C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-csharp
-ms.topic: article
 ms.assetid: b3937e54-4ce9-4236-ac96-14e7972aa594
-caps.latest.revision: "3"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 27001dbc92afddc35be12b593f5ba082c29af5f0
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 8f372a05bd69b801085cba9d9a3b11ae01841a2c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="serializing-xml-trees-c"></a>XML 트리 serialize(C#)
 XML 트리를 serialize하는 것은 XML 트리에서 XML을 생성하는 것을 의미합니다. 파일, <xref:System.IO.TextWriter> 클래스의 구체적 구현 또는 <xref:System.Xml.XmlWriter>의 구체적 구현으로 serialize할 수 있습니다.  
   
  serialization의 다양한 측면을 제어할 수 있습니다. 예를 들어, serialize된 XML을 들여쓸지 여부와 XML 선언을 쓸지 여부를 제어할 수 있습니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
   
 |항목|설명|  
 |-----------|-----------------|  

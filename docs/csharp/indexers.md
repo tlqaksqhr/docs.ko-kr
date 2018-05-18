@@ -1,20 +1,13 @@
 ---
 title: 인덱서
 description: 하나 이상의 인수를 사용하여 참조된 속성인 인덱싱된 속성을 구현하는 방법 및 C# 인덱서에 대해 알아봅니다.
-keywords: .NET, .NET Core
-author: BillWagner
-ms.author: wiwagn
 ms.date: 06/20/2016
-ms.topic: article
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.devlang: csharp
 ms.assetid: 0e9496da-e766-45a9-b92b-91820d4a350e
-ms.openlocfilehash: f0731061c518a61ce5b81e8282915b1245239864
-ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
+ms.openlocfilehash: 73f79f58cd20187a6fd0de29f53f1a31a269e0e9
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="indexers"></a>인덱서
 

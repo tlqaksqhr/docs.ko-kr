@@ -1,36 +1,25 @@
 ---
 title: '방법: 병렬 루프의 예외 처리'
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - parallel loops, how to handle exceptions
 ms.assetid: 512f0d5a-4636-4875-b766-88f20044f143
-caps.latest.revision: 14
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: f6df28a019c2a21cc6ef94367553e0e5eaa1ad30
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 11ba240d71287be91bd0b4b40a2cb69f6e2808d7
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-handle-exceptions-in-parallel-loops"></a>방법: 병렬 루프의 예외 처리
 <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> 및 <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> 오버로드에는 throw될 수 있는 예외를 처리하기 위한 특별한 메커니즘이 없습니다. 이런 점에서 일반 `for` 및 `foreach` 루프(Visual Basic의 `For` 및 `For Each`)와 비슷합니다. 처리되지 않은 예외로 인해 루프가 즉시 종료됩니다.  
   
- 병렬 루프에 고유한 예외 처리 논리를 추가할 때 비슷한 예외가 여러 스레드에서 동시에 throw되는 경우와 한 스레드에서 throw된 예외로 인해 다른 스레드에서 다른 예외가 throw되는 경우를 처리합니다. <xref:System.AggregateException?displayProperty=nameWithType>에서 루프의 모든 예외를 래핑하여 두 경우 모두를 처리합니다. 다음 예제에서는 한 가지 가능한 접근 방법을 보여줍니다.  
+ 병렬 루프에 고유한 예외 처리 논리를 추가할 때 비슷한 예외가 여러 스레드에서 동시에 throw되는 경우와 한 스레드에서 throw된 예외로 인해 다른 스레드에서 다른 예외가 throw되는 경우를 처리합니다. <xref:System.AggregateException?displayProperty=nameWithType>에서 루프의 모든 예외를 래핑하여 두 경우 모두를 처리합니다. 다음 예제에서는 한 가지 가능한 접근 방법을 보여 줍니다.  
   
 > [!NOTE]
 >  “내 코드만”이 사용하도록 설정된 경우 Visual Studio가 예외를 발생시키는 줄에서 중단하고 "예외가 사용자 코드에서 처리되지 않았다"는 오류 메시지를 표시합니다. 이 오류는 심각하지는 않습니다. F5 키를 눌러 계속하고 아래 예제에 설명된 예외 처리 동작을 확인할 수 있습니다. 첫 번째 오류 지점에서 Visual Studio가 실행을 중단하지 않도록 하려면 **도구, 옵션, 디버깅, 일반**을 차례로 선택하고 “내 코드만” 확인란의 선택을 취소하기만 하면 됩니다.  

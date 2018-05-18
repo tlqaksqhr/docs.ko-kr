@@ -1,24 +1,17 @@
 ---
-title: "typeof(C# 참조)"
+title: typeof(C# 참조)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 f1_keywords:
 - typeof
 - typeof_CSharpKeyword
 helpviewer_keywords:
 - typeof keyword [C#]
 ms.assetid: 0c08d880-515e-46bb-8cd2-48b8dd62c08d
-caps.latest.revision: 
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: be24740ea7f6fbe8780dd9cac58b7dea9aaf6872
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: be79fa4f2cfb1119a50201bf6c18a144726f2f21
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="typeof-c-reference"></a>typeof(C# 참조)
 형식의 `System.Type` 개체를 가져오는 데 사용됩니다. `typeof` 식의 형식은 다음과 같습니다.  
@@ -44,10 +37,10 @@ string s = method.ReturnType.GetInterface
     (typeof(System.Collections.Generic.IEnumerable<>).FullName);  
 ```  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  [!code-csharp[csrefKeywordsOperator#12](../../../csharp/language-reference/keywords/codesnippet/CSharp/typeof_1.cs)]  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  이 샘플에서는 <xref:System.Object.GetType%2A> 메서드를 사용하여 숫자 계산의 결과를 포함하는 데 사용되는 형식을 결정합니다. 이 형식은 결과 숫자의 저장소 요구 사항에 따라 달라집니다.  
   
  [!code-csharp[csrefKeywordsOperator#13](../../../csharp/language-reference/keywords/codesnippet/CSharp/typeof_2.cs)]  

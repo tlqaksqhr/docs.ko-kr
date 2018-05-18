@@ -1,10 +1,6 @@
 ---
 title: '연습: Office 프로그래밍(C# 및 Visual Basic)'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -13,13 +9,11 @@ helpviewer_keywords:
 - Office programming [C#]
 - Office programming [Visual Basic]
 ms.assetid: 519cff31-f80b-4f0e-a56b-26358d0f8c51
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 7108ef10333b2ec7aded1b8f768c2953283ac625
-ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
+ms.openlocfilehash: cef2a907a8d7e6158239b88d5c8551c2c734faa0
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="walkthrough-office-programming-c-and-visual-basic"></a>연습: Office 프로그래밍(C# 및 Visual Basic)
 Visual Studio에서는 Microsoft Office 프로그래밍을 개선하는 C# 및 Visual Basic의 기능을 제공합니다. 유용한 C# 기능으로는 명명된 인수 및 선택적 인수, `dynamic` 형식의 반환 값 등이 있습니다. COM 프로그래밍에서 `ref` 키워드를 생략하면 인덱싱된 속성에 액세스할 수 있게 됩니다. Visual Basic의 기능으로는 자동 구현 속성, 람다 식의 문, 컬렉션 이니셜라이저 등이 있습니다.
@@ -42,7 +36,7 @@ Visual Studio에서는 Microsoft Office 프로그래밍을 개선하는 C# 및 V
   
 2.  **파일** 메뉴에서 **새로 만들기**를 가리킨 다음 **프로젝트**를 클릭합니다.  
   
-3.  **설치된 템플릿** 창에서 **Visual Basic** 또는 **Visual C#**을 확장하고 **Office**를 확장한 다음 Office 제품의 버전 연도를 클릭합니다.  
+3.  **설치된 템플릿** 창에서 **Visual Basic** 또는 **Visual C#** 을 확장하고 **Office**를 확장한 다음 Office 제품의 버전 연도를 클릭합니다.  
   
 4.  **템플릿** 창에서 **Excel \<버전> 추가 기능**을 클릭합니다.  
   
@@ -160,11 +154,11 @@ Visual Studio에서는 Microsoft Office 프로그래밍을 개선하는 C# 및 V
   
 1.  응용 프로그램을 다시 실행하되 **솔루션 정리**를 클릭하지는 않습니다.  
   
-2.  **시작**을 선택합니다. **Microsoft Visual Studio \<버전>**을 찾은 다음 개발자 명령 프롬프트를 엽니다.  
+2.  **시작**을 선택합니다. **Microsoft Visual Studio \<버전>** 을 찾은 다음 개발자 명령 프롬프트를 엽니다.  
   
 3.  Visual Studio 명령 프롬프트 창에 `ildasm`을 입력하고 Enter 키를 누릅니다. IL DASM 창이 나타납니다.  
   
-4.  IL DASM 창의 **파일** 메뉴에서 **파일** > **열기**를 선택합니다. **Visual Studio \<version>**과 **프로젝트**를 차례로 두 번 클릭합니다. 프로젝트 폴더를 열고 *프로젝트 이름*.dll에서 bin/Debug 폴더를 확인한 후 *프로젝트 이름*.dll을 두 번 클릭합니다. 새 창에 프로젝트 특성과 기타 모듈 및 어셈블리에 대한 참조가 표시됩니다. 어셈블리에는 `Microsoft.Office.Interop.Excel` 및 `Microsoft.Office.Interop.Word` 네임스페이스가 포함되어 있습니다. 기본적으로 Visual Studio에서 컴파일러는 필요한 형식을 참조된 PIA에서 어셈블리로 가져옵니다.  
+4.  IL DASM 창의 **파일** 메뉴에서 **파일** > **열기**를 선택합니다. **Visual Studio \<version>** 과 **프로젝트**를 차례로 두 번 클릭합니다. 프로젝트 폴더를 열고 *프로젝트 이름*.dll에서 bin/Debug 폴더를 확인한 후 *프로젝트 이름*.dll을 두 번 클릭합니다. 새 창에 프로젝트 특성과 기타 모듈 및 어셈블리에 대한 참조가 표시됩니다. 어셈블리에는 `Microsoft.Office.Interop.Excel` 및 `Microsoft.Office.Interop.Word` 네임스페이스가 포함되어 있습니다. 기본적으로 Visual Studio에서 컴파일러는 필요한 형식을 참조된 PIA에서 어셈블리로 가져옵니다.  
   
      자세한 내용은 [방법: 어셈블리 내용 보기](../../../framework/app-domains/how-to-view-assembly-contents.md)를 참조하세요.  
   

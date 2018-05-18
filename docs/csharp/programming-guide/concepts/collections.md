@@ -1,18 +1,12 @@
 ---
-title: "컬렉션(C#)"
+title: 컬렉션(C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.topic: get-started-article
 ms.assetid: 317d7dc3-8587-4873-8b3e-556f86497939
-caps.latest.revision: "6"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 271939b869433742f8b5720ba05955169ea5c410
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 85cbabf74a702a4d6442a29c3cf3d7b726ab38da
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="collections-c"></a>컬렉션(C#)
 대부분의 응용 프로그램의 경우 관련 개체의 그룹을 만들고 관리하려고 합니다. 개체를 그룹화하는 방법에는 개체 배열을 만들거나 개체 컬렉션을 만드는 두 가지가 있습니다.  

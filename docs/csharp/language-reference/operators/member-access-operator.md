@@ -1,10 +1,6 @@
 ---
-title: 입니다. 연산자(C# 참조)
+title: 이어야 합니다. 연산자(C# 참조)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 f1_keywords:
 - ._CSharpKeyword
 helpviewer_keywords:
@@ -12,16 +8,13 @@ helpviewer_keywords:
 - . operator [C#]
 - dot operator (.) [C#]
 ms.assetid: a1f54b52-b686-4ae5-a48e-a2a9ebd0eb7b
-caps.latest.revision: 21
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 2bb636bc110f57ace9a824a43afdd86246ed0a5c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 088f1991cafa92a69e11ca14bd2d983b36c0e3ca
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="-operator-c-reference"></a>입니다. 연산자(C# 참조)
+# <a name="-operator-c-reference"></a>이어야 합니다. 연산자(C# 참조)
 점 연산자(`.`)는 멤버 액세스에 사용됩니다. 점 연산자는 형식 또는 네임스페이스의 멤버를 지정합니다. 예를 들어 점 연산자는 .NET Framework 클래스 라이브러리 내의 특정 메서드에 액세스하는 데 사용됩니다.  
   
  [!code-csharp[csRefOperators#16](../../../csharp/language-reference/operators/codesnippet/CSharp/member-access-operator_1.cs)]  

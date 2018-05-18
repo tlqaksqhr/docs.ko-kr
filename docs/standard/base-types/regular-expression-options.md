@@ -1,13 +1,7 @@
 ---
-title: "정규식 옵션"
-ms.custom: 
+title: 정규식 옵션
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -18,18 +12,13 @@ helpviewer_keywords:
 - inline option constructs
 - options parameter
 ms.assetid: c82dc689-7e82-4767-a18d-cd24ce5f05e9
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: cc32a98930c4c1243f53fc9c5d2a10f339b4de11
-ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
+ms.openlocfilehash: f3c229b0fc463863b7113c7ba73890b84e86553b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="regular-expression-options"></a>정규식 옵션
 <a name="Top"></a> 기본적으로 입력 문자열을 정규식 패턴의 리터럴 문자와 비교할 때는 대/소문자를 구분하고, 정규식 패턴의 공백은 리터럴 공백 문자로 해석되며, 정규식의 캡처링 그룹은 명시적 및 암시적으로 명명됩니다. 정규식 옵션을 지정하여 기본 정규식 동작의 이러한 측면과 몇 가지 다른 측면을 수정할 수 있습니다. 다음 테이블에 나열되어 있는 이러한 옵션은 정규식 패턴의 일부로 인라인으로 포함되거나, <xref:System.Text.RegularExpressions.Regex?displayProperty=nameWithType> 클래스 생성자 또는 정적 패턴 일치 메서드에 <xref:System.Text.RegularExpressions.RegexOptions?displayProperty=nameWithType> 열거형 값으로 제공될 수 있습니다.  
@@ -386,7 +375,7 @@ ms.lasthandoff: 03/15/2018
 ## <a name="comparison-using-the-invariant-culture"></a>고정 문화권을 사용한 비교  
  기본적으로 정규식 엔진은 대/소문자를 구분하지 않는 비교를 수행할 때 현재 문화권의 대/소문자 사용 규칙을 사용하여 동일한 대문자와 소문자를 확인합니다.  
   
- 그러나 이 동작은 일부 비교 형식에는 바람직하지 않은데, 특히 사용자 입력을 시스템 리소스의 이름과 비교할 때 그렇습니다(예: 암호, 파일 또는 URL). 다음 예제에서는 이러한 상황을 시나리오로 보여 줍니다. 이 코드는 URL 앞에 **FILE://**가 있는 모든 리소스에 대한 액세스를 차단하도록 작성되었습니다. 이 정규식에서는 정규식 `$FILE://`를 사용하여 문자열에 대해 대/소문자를 구분하지 않는 일치를 시도합니다. 그러나 현재 시스템 문화권이 tr-TR(터키어-터키)인 경우 "I"는 "i"의 대문자에 해당하는 문자가 아닙니다. 따라서 <xref:System.Text.RegularExpressions.Regex.IsMatch%2A?displayProperty=nameWithType> 메서드에 대한 호출에서 `false`를 반환하고 파일에 대한 액세스가 허용됩니다.  
+ 그러나 이 동작은 일부 비교 형식에는 바람직하지 않은데, 특히 사용자 입력을 시스템 리소스의 이름과 비교할 때 그렇습니다(예: 암호, 파일 또는 URL). 다음 예제에서는 이러한 상황을 시나리오로 보여 줍니다. 이 코드는 URL 앞에 **FILE://** 가 있는 모든 리소스에 대한 액세스를 차단하도록 작성되었습니다. 이 정규식에서는 정규식 `$FILE://`를 사용하여 문자열에 대해 대/소문자를 구분하지 않는 일치를 시도합니다. 그러나 현재 시스템 문화권이 tr-TR(터키어-터키)인 경우 "I"는 "i"의 대문자에 해당하는 문자가 아닙니다. 따라서 <xref:System.Text.RegularExpressions.Regex.IsMatch%2A?displayProperty=nameWithType> 메서드에 대한 호출에서 `false`를 반환하고 파일에 대한 액세스가 허용됩니다.  
   
  [!code-csharp[Conceptual.Regex.Language.Options#14](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.options/cs/culture1.cs#14)]
  [!code-vb[Conceptual.Regex.Language.Options#14](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.options/vb/culture1.vb#14)]  

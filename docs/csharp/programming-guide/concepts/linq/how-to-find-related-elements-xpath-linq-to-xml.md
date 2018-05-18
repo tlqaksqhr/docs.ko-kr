@@ -1,21 +1,12 @@
 ---
-title: "방법: 관련 요소 찾기(XPath 및 LINQ to XML)(C#)"
-ms.custom: 
+title: '방법: 관련 요소 찾기(XPath 및 LINQ to XML)(C#)'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-csharp
-ms.topic: article
 ms.assetid: 41b386ee-562d-4841-bd6b-e44a7eb69f26
-caps.latest.revision: "3"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 3b128c8aa801c445e5e8cd2b4aab4e55f22b086c
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: e5367c1b47f24dd269f5055f692c657ecd748b63
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-find-related-elements-xpath-linq-to-xml-c"></a>방법: 관련 요소 찾기(XPath 및 LINQ to XML)(C#)
 이 항목에서는 다른 요소의 값에 의해 참조되는 특성을 기준으로 선택하여 요소를 가져오는 방법을 비교합니다.  
@@ -24,7 +15,7 @@ ms.lasthandoff: 10/18/2017
   
  `.//Customer[@CustomerID=/Root/Orders/Order[12]/CustomerID]`  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  이 예제에서는 12번째 `Order` 요소를 찾은 다음 해당 주문의 고객을 찾습니다.  
   
  .Net에서 목록의 인덱싱은 0부터 시작하고 XPath 조건자에서 노드 컬렉션의 인덱싱은 1부터 시작합니다. 이 예제에서는 이 차이를 반영합니다.  

@@ -1,31 +1,20 @@
 ---
-title: "스레드 로컬 저장소: 스레드 상대 정적 필드 및 데이터 슬롯"
-ms.custom: 
+title: '스레드 로컬 저장소: 스레드 상대 정적 필드 및 데이터 슬롯'
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - threading [.NET Framework], local storage
 - threading [.NET Framework], thread-relative static fields
 - local thread storage
 - TLS
 ms.assetid: c633a4dc-a790-4ed1-96b5-f72bd968b284
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 127f7ea9bb6a6bf91547d049f582439882d2fb6e
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: a17bc509c8c82bfb30811ec3511207ca2d823e5b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="thread-local-storage-thread-relative-static-fields-and-data-slots"></a>스레드 로컬 저장소: 스레드 상대 정적 필드 및 데이터 슬롯
 관리되는 TLS(스레드 로컬 저장소)를 사용하여 스레드 및 응용 프로그램 도메인에 고유한 데이터를 저장할 수 있습니다. .NET Framework는 관리되는 TLS를 사용하는 두 가지 방법인 스레드 관련 정적 필드 및 데이터 슬롯을 제공합니다.  

@@ -1,21 +1,12 @@
 ---
-title: "XElement 및 XDocument 개체의 유효한 콘텐츠3"
-ms.custom: 
+title: XElement 및 XDocument 개체의 유효한 콘텐츠3
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-csharp
-ms.topic: article
 ms.assetid: 0d253586-2b97-459f-b1a7-f30f38f3ed9f
-caps.latest.revision: "5"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 113a187c9a852420ffcef3893a415a24bae2c655
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 32521941bacdf8d689a81f6136d427307481ddc9
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="valid-content-of-xelement-and-xdocument-objects"></a>XElement 및 XDocument 개체의 올바른 콘텐츠
 이 항목에서는 생성자에 전달될 수 있는 유효한 인수에 대해 설명하고 내용을 요소와 문서에 추가하는 데 사용하는 메서드에 대한 정보를 제공합니다.  

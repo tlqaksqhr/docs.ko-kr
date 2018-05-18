@@ -1,26 +1,19 @@
 ---
 title: '#endif(C# 참조)'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 f1_keywords:
 - '#endif'
 helpviewer_keywords:
 - '#endif directive [C#]'
 ms.assetid: 6a5fca55-5aee-441f-86f6-1c99fbe9ec05
-caps.latest.revision: 9
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: d7e68dd20d914052c3fe5cabcb83abdae100465c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 1686e706ce5cae3b2eaa28a7e1c89b5694b2be88
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="endif-c-reference"></a>#endif(C# 참조)
-`#endif`는 [#if](../../../csharp/language-reference/preprocessor-directives/preprocessor-if.md) 지시문으로 시작한 조건부 지시문의 끝을 지정합니다. 예를 들면 다음과 같습니다.  
+`#endif`는 [#if](../../../csharp/language-reference/preprocessor-directives/preprocessor-if.md) 지시문으로 시작한 조건부 지시문의 끝을 지정합니다. 예를 들어 개체에 적용된  
   
 ```csharp
 #define DEBUG  

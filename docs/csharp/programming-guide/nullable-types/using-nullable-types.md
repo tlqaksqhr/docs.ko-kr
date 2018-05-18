@@ -1,21 +1,14 @@
 ---
-title: "Nullable 형식 사용(C# 프로그래밍 가이드)"
+title: Nullable 형식 사용(C# 프로그래밍 가이드)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - nullable types [C#], about nullable types
 ms.assetid: 0bacbe72-ce15-4b14-83e1-9c14e6380c28
-caps.latest.revision: 
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: c8a42392bbcd2e53c54ff4c13bf98c048262ae4d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: d2fe0f34c45d3de0516a71ca5ed4dc807df4bf93
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-nullable-types-c-programming-guide"></a>Nullable 형식 사용(C# 프로그래밍 가이드)
 nullable 형식은 기본 형식의 모든 값과 추가 [null](../../../csharp/language-reference/keywords/null.md) 값을 나타낼 수 있습니다. nullable 형식은 다음과 같은 두 가지 방법 중 하나로 선언됩니다.  
@@ -106,13 +99,13 @@ nullable 형식은 기본 형식의 모든 값과 추가 [null](../../../csharp/
 |X|y|x&y|x&#124;y|  
 |-------|-------|---------|--------------|  
 |true|true|true|true|  
-|true|false|false|true|  
+|true|False|false|true|  
 |true|null|null|true|  
-|false|true|false|true|  
-|false|false|false|false|  
-|false|null|false|null|  
+|False|true|False|true|  
+|False|False|False|False|  
+|False|null|False|null|  
 |null|true|null|true|  
-|null|false|false|null|  
+|null|False|False|null|  
 |null|null|null|null|  
   
 ## <a name="see-also"></a>참고 항목  

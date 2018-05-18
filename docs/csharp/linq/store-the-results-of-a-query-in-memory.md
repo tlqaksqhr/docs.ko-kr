@@ -1,20 +1,13 @@
 ---
-title: "쿼리 결과를 메모리에 저장"
-description: "결과 저장 방법"
-keywords: .NET, .NET Core, C#
-author: BillWagner
-manager: wpickett
-ms.author: wiwagn
+title: 쿼리 결과를 메모리에 저장
+description: 결과 저장 방법
 ms.date: 11/30/2016
-ms.topic: article
-ms.prod: .net
-ms.technology: devlang-csharp
 ms.assetid: 5b863961-1750-4cf9-9607-acea5054d15a
-ms.openlocfilehash: 86a9c2d464eac83cabb5faa68987ad580fc31248
-ms.sourcegitcommit: 7e99f66ef09d2903e22c789c67ff5a10aa953b2f
+ms.openlocfilehash: c125d134d7c1db98363844c12fc8abd3faa9c868
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="store-the-results-of-a-query-in-memory"></a>쿼리 결과를 메모리에 저장
 
@@ -30,7 +23,7 @@ ms.lasthandoff: 11/18/2017
   
  쿼리 결과를 저장하는 경우 다음 예제와 같이 반환된 컬렉션 개체를 새 변수에 할당하는 것이 좋습니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  [!code-csharp[csProgGuideLINQ#25](../../../samples/snippets/csharp/concepts/linq/how-to-store-the-results-of-a-query-in-memory_1.cs)]  
   
 

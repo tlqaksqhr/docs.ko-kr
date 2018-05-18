@@ -1,22 +1,12 @@
 ---
-title: "방법: LINQ를 사용하여 ArrayList 쿼리(C#)"
-ms.custom: 
+title: '방법: LINQ를 사용하여 ArrayList 쿼리(C#)'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- devlang-csharp
-ms.topic: article
 ms.assetid: 2bfb471c-6e9a-4e60-bd83-4a1778abde11
-caps.latest.revision: 
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 2f32fcca4504ce3d3f297cfc1b81529dd027f9a6
-ms.sourcegitcommit: 75a180acb5d8a2dbd4a52915ce8e980749fb1d05
+ms.openlocfilehash: 8aaf90843fa85cf20a92a40644f085769404aa85
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/24/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-query-an-arraylist-with-linq-c"></a>방법: LINQ를 사용하여 ArrayList 쿼리(C#)
 LINQ를 사용하여 <xref:System.Collections.ArrayList> 등의 제네릭이 아닌 <xref:System.Collections.IEnumerable> 컬렉션을 쿼리하는 경우 컬렉션에 있는 개체의 특정 형식을 반영하도록 범위 변수의 형식을 명시적으로 선언해야 합니다. 예를 들어 `Student` 개체의 <xref:System.Collections.ArrayList>가 있는 경우 [from 절](../../../../csharp/language-reference/keywords/from-clause.md)은 다음과 같아야 합니다.  

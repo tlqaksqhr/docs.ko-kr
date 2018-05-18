@@ -1,26 +1,15 @@
 ---
-title: "외부 XSLT 스타일시트 및 문서 확인"
-ms.custom: 
+title: 외부 XSLT 스타일시트 및 문서 확인
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 920cfe3b-d525-4bb2-abf6-9431651f9cf9
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 85176c45b768d1e8fe9efc408fd644bf33aa8c05
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 6aa9c6717d89cf5529ef65b56811e614b6fc30f1
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="resolving-external-xslt-style-sheets-and-documents"></a>외부 XSLT 스타일시트 및 문서 확인
 다음과 같이 변환 중에 외부 리소스를 확인해야 하는 몇 가지 경우가 있습니다.  
@@ -39,7 +28,7 @@ ms.lasthandoff: 12/23/2017
 ## <a name="using-the-xmlresolver-class"></a>XmlResolver 클래스 사용  
  네트워크 리소스에 액세스하기 위해 인증이 필요한 경우 <xref:System.Xml.Xsl.XslTransform.Load%2A> 매개 변수를 사용하여 필요한 자격 증명 속성 집합을 갖는 <xref:System.Xml.XmlResolver> 개체를 전달할 수 있는 <xref:System.Xml.XmlResolver> 메서드를 사용합니다.  
   
- 다음 표에서는 사용하려는 사용자 지정 <xref:System.Xml.XmlResolver>가 있거나 다른 자격 증명을 지정해야 하는 경우 외부 리소스 확인이 필요한 시기에 따라 필요한 작업의 목록을 보여줍니다.  
+ 다음 표에서는 사용하려는 사용자 지정 <xref:System.Xml.XmlResolver>가 있거나 다른 자격 증명을 지정해야 하는 경우 외부 리소스 확인이 필요한 시기에 따라 필요한 작업의 목록을 보여 줍니다.  
   
 |확인이 필요한 프로세스|필요한 작업|  
 |--------------------------------------|-------------------|  

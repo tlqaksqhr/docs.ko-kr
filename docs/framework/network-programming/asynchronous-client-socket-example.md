@@ -1,12 +1,6 @@
 ---
-title: "비동기 클라이언트 소켓 예제"
-ms.custom: 
+title: 비동기 클라이언트 소켓 예제
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -15,16 +9,14 @@ helpviewer_keywords:
 - sockets, code examples
 - sockets, asynchronous client sockets
 ms.assetid: d4ac53a0-b50b-4232-9726-d47d25fcc38a
-caps.latest.revision: "8"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: 323250f7aae44d07aed8e79654335f29e53438bd
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: d295841173ee2f3bf018a2058b4eac1629c4828f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="asynchronous-client-socket-example"></a>비동기 클라이언트 소켓 예제
 다음 예제 프로그램에서는 서버에 연결하는 클라이언트를 만듭니다. 이 클라이언트는 비동기 소켓으로 빌드되므로 서버에서 응답을 반환하는 동안 클라이언트 응용 프로그램의 실행이 일시 중단되지 않습니다. 응용 프로그램은 서버에 문자열을 보낸 다음 서버에서 반환된 문자열을 콘솔에 표시합니다.  

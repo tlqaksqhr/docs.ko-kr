@@ -1,21 +1,12 @@
 ---
-title: "LINQ에 대한 Visual Studio IDE 및 도구 지원(C#)"
-ms.custom: 
+title: LINQ에 대한 Visual Studio IDE 및 도구 지원(C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-csharp
-ms.topic: article
 ms.assetid: c1f6cfdf-c96f-417f-acc8-4a049772ead3
-caps.latest.revision: "3"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 577338cc70bf9c335b162ca32bb3fc026addd49e
-ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
+ms.openlocfilehash: 866b8938d127bf20314bb13d2951e0aa5f666094
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/09/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="visual-studio-ide-and-tools-support-for-linq-c"></a>LINQ에 대한 Visual Studio IDE 및 도구 지원(C#)
 Visual Studio IDE(통합 개발 환경)는 LINQ 응용 프로그램 개발을 지원하는 다음과 같은 기능을 제공합니다.  

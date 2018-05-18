@@ -1,21 +1,12 @@
 ---
-title: "방법: 인코딩된 문서 읽기 및 쓰기(C#)"
-ms.custom: 
+title: '방법: 인코딩된 문서 읽기 및 쓰기(C#)'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-csharp
-ms.topic: article
 ms.assetid: 84f64e71-39a6-42c6-ad68-f052bb158a03
-caps.latest.revision: "3"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: a08fa9404c92bd64b07059df2f419bff5f80da3e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 9fc6a7beaa4a7b9de21961e1095dd41fe2e407dd
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-read-and-write-an-encoded-document-c"></a>방법: 인코딩된 문서 읽기 및 쓰기(C#)
 인코딩된 XML 문서를 만들려면 <xref:System.Xml.Linq.XDeclaration>을 XML 트리에 추가하여 인코딩을 원하는 코드 페이지 이름으로 설정합니다.  
@@ -26,7 +17,7 @@ ms.lasthandoff: 11/21/2017
   
  <xref:System.Xml.Linq.XDeclaration.Encoding%2A>을 유효한 코드 페이지 이름으로 설정하는 경우 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]에서는 지정된 인코딩을 사용하여 serialize합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제에서는 UTF-8 인코딩을 사용하여 문서를 하나 만들고 UTF-16 인코딩을 사용하여 문서를 하나 만든 다음 그런 다음 문서를 로드하고 인코딩을 콘솔에 출력합니다.  
   
 ```csharp  

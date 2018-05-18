@@ -1,21 +1,12 @@
 ---
-title: "연습: BackgroundWorker 구성 요소를 사용한 다중 스레딩(C#)"
-ms.custom: 
+title: '연습: BackgroundWorker 구성 요소를 사용한 다중 스레딩(C#)'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-csharp
-ms.topic: article
 ms.assetid: ff670fbf-a0ac-40c1-ab08-9ed53768f880
-caps.latest.revision: "3"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 72d6e9ab42ca270ebe0691be23ebe181b973620d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: bc334261dbea7759d1bb571cc61a5f00f84531a4
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="walkthrough-multithreading-with-the-backgroundworker-component-c"></a>연습: BackgroundWorker 구성 요소를 사용한 다중 스레딩(C#)
 이 연습에서는 텍스트 파일에서 단어를 검색하는 다중 스레드 Windows Forms 응용 프로그램을 만드는 방법을 보여 줍니다. 세부 항목은 다음과 같습니다.  
@@ -47,7 +38,7 @@ ms.lasthandoff: 11/21/2017
   
 4.  각 텍스트 상자 옆에 레이블을 추가합니다. 다음 표와 같이 각 레이블에 대해 `Text` 속성을 설정합니다.  
   
-    |개체|속성|설정|  
+    |Object|속성|설정|  
     |------------|--------------|-------------|  
     |첫 번째 레이블|`Text`|소스 파일|  
     |두 번째 레이블|`Text`|문자열 비교|  

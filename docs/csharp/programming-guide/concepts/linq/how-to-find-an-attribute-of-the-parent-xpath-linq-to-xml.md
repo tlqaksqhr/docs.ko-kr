@@ -1,21 +1,12 @@
 ---
-title: "방법: 부모의 특성 찾기(XPath-LINQ to XML)(C#)"
-ms.custom: 
+title: '방법: 부모의 특성 찾기(XPath-LINQ to XML)(C#)'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-csharp
-ms.topic: article
 ms.assetid: dbef9d89-a5c4-431f-80cc-7a2ebf323f86
-caps.latest.revision: "3"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: eeb1bea8c82eaff904ec1076e92609cd16024d28
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 6f796bfb8f8b0051af4e31f6e82a503dbfbbc334
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-find-an-attribute-of-the-parent-xpath-linq-to-xml-c"></a>방법: 부모의 특성 찾기(XPath-LINQ to XML)(C#)
 이 항목에서는 부모 요소를 탐색하고 부모 요소의 특성을 찾는 방법을 보여 줍니다.  
@@ -24,7 +15,7 @@ ms.lasthandoff: 10/18/2017
   
  `../@id`  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  이 예제에서는 먼저 `Author` 요소를 찾은 다음 부모 요소의 `id` 특성을 찾습니다.  
   
  이 예제에서는 XML 문서 [샘플 XML 파일: Books(LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-books-linq-to-xml.md)를 사용합니다.  

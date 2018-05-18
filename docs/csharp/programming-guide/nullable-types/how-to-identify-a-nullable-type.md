@@ -1,21 +1,14 @@
 ---
-title: "방법: Nullable 형식 식별(C# 프로그래밍 가이드)"
+title: '방법: Nullable 형식 식별(C# 프로그래밍 가이드)'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - nullable types [C#], identifying
 ms.assetid: d4b67ee2-66e8-40c1-ae9d-545d32c71387
-caps.latest.revision: 
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 610ed18308df02c5632361cd09ef94330dea598b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: f3ac4ebd77fc92a133eb326919d5ba55264ced97
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-identify-a-nullable-type-c-programming-guide"></a>방법: Nullable 형식 식별(C# 프로그래밍 가이드)
 C# [typeof](../../../csharp/language-reference/keywords/typeof.md) 연산자를 사용하여 Nullable 형식을 나타내는 <xref:System.Type> 개체를 만들 수 있습니다.  
@@ -45,7 +38,7 @@ static void Main(string[] args)
 }  
 ```  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 코드를 사용하여 <xref:System.Type> 개체가 Nullable 형식을 나타내는지 여부를 확인할 수 있습니다. 이 항목의 앞부분에서 설명한 것처럼 이 코드는 <xref:System.Object.GetType%2A> 호출에서 `Type` 개체가 반환된 경우 항상 false를 반환합니다.  
   
 ```  

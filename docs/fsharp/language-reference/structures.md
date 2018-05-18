@@ -2,11 +2,11 @@
 title: 구조체(F#)
 description: 'F # 구조, 종종 간단한 개체 형식에 대 한 자세한 내용은 적은 양의 데이터 적고 동작이 단순한 형식에 대 한 클래스 보다 더 효율적입니다.'
 ms.date: 05/16/2016
-ms.openlocfilehash: 728533e24dcfae219ae5ab3d410389e95fcfaee1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 57c4148aec1d6a19237d74aa99824ef475c3632e
+ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/15/2018
 ---
 # <a name="structures"></a>구조체
 
@@ -18,13 +18,13 @@ A *구조* 는 적은 양의 데이터 적고 동작이 단순한 변수가 있�
 [ attributes ]
 type [accessibility-modifier] type-name =
     struct
-        type-definition-elements
+        type-definition-elements-and-members
     end
 // or
 [ attributes ]
 [<StructAttribute>]
 type [accessibility-modifier] type-name =
-    type-definition-elements
+    type-definition-elements-and-members
 ```
 
 ## <a name="remarks"></a>설명
@@ -32,7 +32,7 @@ type [accessibility-modifier] type-name =
 
 위 구문에는 두 개의 폼이 표시되어 있습니다. 첫 번째는 간단한 구문은 아니지만 자주 사용됩니다. `struct` 및 `end` 키워드를 사용하는 경우 두 번째 구문에 나와 있는 `StructAttribute` 특성을 생략할 수 있기 때문입니다. 즉, `StructAttribute`를 `Struct`로 간략하게 작성할 수 있습니다.
 
-*형식 정의-요소* 위 구문 멤버 선언 및 정의 나타냅니다. 구조체는 생성자 및 변경 가능/불가능한 필드를 포함할 수 있으며 멤버 및 인터페이스 구현을 선언할 수 있습니다. 자세한 내용은 참조 [멤버](members/index.md)합니다.
+*형식-정의-요소-및-멤버* 위 구문 멤버 선언 및 정의 나타냅니다. 구조체는 생성자 및 변경 가능/불가능한 필드를 포함할 수 있으며 멤버 및 인터페이스 구현을 선언할 수 있습니다. 자세한 내용은 참조 [멤버](members/index.md)합니다.
 
 구조체는 상속에 참가할 수 없고, `let` 또는 `do` 바인딩을 포함할 수 없으며, 자신의 형식으로 된 필드를 재귀적으로 포함할 수 없습니다. 그러나 자신의 형식을 참조하는 참조 셀은 포함할 수 있습니다.
 

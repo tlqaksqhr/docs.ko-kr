@@ -1,26 +1,15 @@
 ---
-title: "XPath 데이터 모델을 사용하여 XML 데이터 처리"
-ms.custom: 
+title: XPath 데이터 모델을 사용하여 XML 데이터 처리
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 536c6fce-1453-4654-9c72-bca54d47e081
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 9992efa209773a6e9f74050183260346f7f1f0ed
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: ae129d0be4afb91aedb050ff4b90aff1ce058976
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="process-xml-data-using-the-xpath-data-model"></a>XPath 데이터 모델을 사용하여 XML 데이터 처리
 <xref:System.Xml?displayProperty=nameWithType> 네임스페이스는 <xref:System.Xml.XmlDocument> 또는 <xref:System.Xml.XPath.XPathDocument> 클래스를 사용하여 XML 문서, 조각, 노드 또는 메모리 내 노드 집합의 프로그래밍 방식 표현을 제공합니다.  

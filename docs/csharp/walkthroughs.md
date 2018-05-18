@@ -1,29 +1,23 @@
 ---
-title: "C# 연습"
+title: C# 연습
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - walkthroughs [C#]
 - walkthroughs [Visual Studio], Visual C#
 - Visual C#, walkthroughs
 ms.assetid: 2d07b972-ef69-4676-9aef-e1784728e1ff
-caps.latest.revision: "28"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 92aef08636b7bba3a61367f8a707c82c75f8d3d3
-ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
+ms.openlocfilehash: aaf57e666faf18010c7f267f96e6958c73e58bcf
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/09/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="c-walkthroughs"></a>C# 연습
 연습에서는 일반 시나리오에 대한 단계별 지침을 제공하므로 제품 또는 특정 기능 영역 파악을 효율적으로 시작할 수 있습니다.  
   
  이 섹션에는 C# 프로그래밍 연습에 대한 링크가 포함되어 있습니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
 
  [Async 및 Await를 사용하여 웹에 액세스](./programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)  
  [async](../csharp/language-reference/keywords/async.md) 및 [await](../csharp/language-reference/keywords/await.md)를 사용하여 비동기 솔루션을 만드는 방법을 보여 줍니다.  

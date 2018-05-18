@@ -1,31 +1,19 @@
 ---
 title: Al.exe(어셈블리 링커)
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - Al.exe
 - Assembly Linker
 - modules, Assembly Linker
 - assembly manifest, Assembly Linker
 ms.assetid: b5382965-0053-47cf-b92f-862860275a01
-caps.latest.revision: ''
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 830c141a13f2a7676e120600e05d786093a5ff44
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
-ms.translationtype: MT
+ms.openlocfilehash: 5a9789669f6d896bfbaf4ccf5cbd0eccdd710980
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="alexe-assembly-linker"></a>Al.exe(어셈블리 링커)
 
@@ -65,7 +53,7 @@ al sources options
 |**/config[uration]:** `text`|어셈블리의 Configuration 필드에 대한 문자열을 지정합니다. `text`에 공백이 있으면 문자열을 큰따옴표(" ")로 묶습니다. 이 문자열은 어셈블리의 사용자 지정 속성이며 리플렉션과 함께 볼 수 있습니다.<br /><br /> 텍스트가 빈 문자열이면 Win32 Configuration 리소스가 단일 공백으로 표시됩니다.<br /><br /> MSIL 모듈의 소스 코드에서 이 옵션을 사용자 지정 특성(<xref:System.Reflection.AssemblyConfigurationAttribute>)으로 지정할 수도 있습니다.|
 |**/copy[right]:** `text`|어셈블리의 Copyright 필드에 대한 문자열을 지정합니다. `text`에 공백이 있으면 문자열을 큰따옴표(" ")로 묶습니다. 이 문자열은 어셈블리의 사용자 지정 속성이며 리플렉션과 함께 볼 수 있습니다.<br /><br /> **/win32res**를 지정하지 않으면 파일 탐색기에서 **/copyright**가 Win32 Copyright(저작권) 리소스로 나타납니다.<br /><br /> 텍스트가 빈 문자열이면 Win32 Copyright 리소스가 단일 공백으로 표시됩니다.<br /><br /> **/win32res**를 지정하면 **/copyright**는 Win32 리소스 정보에 영향을 주지 않습니다.<br /><br /> MSIL 모듈의 소스 코드에서 이 옵션을 사용자 지정 특성(<xref:System.Reflection.AssemblyCopyrightAttribute>)으로 지정할 수도 있습니다.|
 |**/c[ulture]:** `text`|어셈블리에 연결할 문화권 문자열을 지정합니다. "Tags for the Identification of Languages"라는 제목의 인터넷 RFC(Requests for Comments) 문서 1766에서 정의하는 값이 문화권의 유효한 값입니다.<br /><br /> `text`에 공백이 있으면 문자열을 큰따옴표(" ")로 묶습니다. 기본 문화권 문자열은 없습니다. 이 문자열을 리플렉션과 함께 볼 수 있습니다.<br /><br /> 유효한 `text` 문자열에 대한 자세한 내용은 <xref:System.Globalization.CultureInfo>를 참조하세요.<br /><br /> MSIL 모듈의 소스 코드에서 이 옵션을 사용자 지정 특성(<xref:System.Reflection.AssemblyCultureAttribute>)으로 지정할 수도 있습니다.|
-|**/delay[sign][+&#124;-]**|어셈블리를 완전히 서명할지, 아니면 부분적으로 서명할지를 지정합니다. 완전히 서명된 어셈블리가 필요하면 **/delaysign-**를 사용합니다. 어셈블리에 공개 키만 포함하려면 **/delaysign+**를 사용합니다.<br /><br /> 완전히 서명된 어셈블리를 요청할 경우 *Al.exe*는 매니페스트(어셈블리 메타데이터)가 포함된 파일을 해시하고 공개 키로 해당 해시에 서명합니다. 결과로 생성되는 디지털 서명은 매니페스트가 포함된 파일에 저장됩니다. 어셈블리 서명이 연기된 경우 *Al.exe*는 시그니처를 계산하거나 저장하지 않고 나중에 시그니처를 추가할 수 있도록 파일에 공간을 예약합니다.<br /><br /> 기본값은 **/delaysign-**입니다.<br /><br /> **/delaysign** 옵션은 **/keyfile** 또는 **/keyname**과 함께 사용하지 않으면 효과가 없습니다.<br /><br /> 예를 들어 **/delaysign+**를 사용하면 테스터를 통해 전역 캐시에 어셈블리를 넣을 수 있습니다. 테스트를 마친 후 어셈블리에 개인 키를 포함하여 어셈블리에 완전히 서명할 수 있습니다.<br /><br /> 참고: [*Gacutil.exe*(전역 어셈블리 캐시 도구)](../../../docs/framework/tools/gacutil-exe-gac-tool.md)를 사용하여 전역 캐시에 서명이 연기된 어셈블리를 넣으려면, 먼저 [*Sn.exe*(강력한 이름 도구)](../../../docs/framework/tools/sn-exe-strong-name-tool.md)를 사용하여 확인을 건너뛰는 어셈블리를 등록합니다. 예를 들어, `Sn.exe –Vr delaySignedAssembly`을 입력합니다. 개발에서만 이 기능을 사용하세요.<br /><br /> MSIL 모듈의 소스 코드에서 이 옵션을 사용자 지정 특성(<xref:System.Reflection.AssemblyDelaySignAttribute>)으로 지정할 수도 있습니다.|
+|**/delay[sign][+&#124;-]**|어셈블리를 완전히 서명할지, 아니면 부분적으로 서명할지를 지정합니다. 완전히 서명된 어셈블리가 필요하면 **/delaysign-** 를 사용합니다. 어셈블리에 공개 키만 포함하려면 **/delaysign+** 를 사용합니다.<br /><br /> 완전히 서명된 어셈블리를 요청할 경우 *Al.exe*는 매니페스트(어셈블리 메타데이터)가 포함된 파일을 해시하고 공개 키로 해당 해시에 서명합니다. 결과로 생성되는 디지털 서명은 매니페스트가 포함된 파일에 저장됩니다. 어셈블리 서명이 연기된 경우 *Al.exe*는 시그니처를 계산하거나 저장하지 않고 나중에 시그니처를 추가할 수 있도록 파일에 공간을 예약합니다.<br /><br /> 기본값은 **/delaysign-** 입니다.<br /><br /> **/delaysign** 옵션은 **/keyfile** 또는 **/keyname**과 함께 사용하지 않으면 효과가 없습니다.<br /><br /> 예를 들어 **/delaysign+** 를 사용하면 테스터를 통해 전역 캐시에 어셈블리를 넣을 수 있습니다. 테스트를 마친 후 어셈블리에 개인 키를 포함하여 어셈블리에 완전히 서명할 수 있습니다.<br /><br /> 참고: [*Gacutil.exe*(전역 어셈블리 캐시 도구)](../../../docs/framework/tools/gacutil-exe-gac-tool.md)를 사용하여 전역 캐시에 서명이 연기된 어셈블리를 넣으려면, 먼저 [*Sn.exe*(강력한 이름 도구)](../../../docs/framework/tools/sn-exe-strong-name-tool.md)를 사용하여 확인을 건너뛰는 어셈블리를 등록합니다. 예를 들어, `Sn.exe –Vr delaySignedAssembly`을 입력합니다. 개발에서만 이 기능을 사용하세요.<br /><br /> MSIL 모듈의 소스 코드에서 이 옵션을 사용자 지정 특성(<xref:System.Reflection.AssemblyDelaySignAttribute>)으로 지정할 수도 있습니다.|
 |**/descr[iption]:** `text`|어셈블리의 <xref:System.Reflection.AssemblyDescriptionAttribute.Description%2A> 필드에 대한 문자열을 지정합니다. `text`에 공백이 있으면 문자열을 큰따옴표(" ")로 묶습니다. 이 문자열은 어셈블리의 사용자 지정 속성이며 리플렉션과 함께 볼 수 있습니다.<br /><br /> **/win32res**를 지정하지 않으면 파일 탐색기에서 **/description**이 Win32 **Comments**(설명) 리소스로 나타납니다.<br /><br /> 텍스트가 빈 문자열이면 Win32 **Comments** 리소스가 단일 공백으로 나타납니다.<br /><br /> **/win32res**를 지정하면 **/description**은 Win32 리소스 정보에 영향을 주지 않습니다.<br /><br /> MSIL 모듈의 소스 코드에서 이 옵션을 사용자 지정 특성(<xref:System.Reflection.AssemblyDescriptionAttribute.Description%2A>)으로 지정할 수도 있습니다.|
 |**/e[vidence]:** `file`|어셈블리에 `file`을 Security.Evidence라는 리소스 이름으로 포함시킵니다.<br /><br /> 기본 리소스에는 Security.Evidence를 사용할 수 없습니다.|
 |**/fileversion:** `version`|어셈블리의 **File Version**(파일 버전) 필드에 대한 문자열을 지정합니다. 이 문자열은 어셈블리의 사용자 지정 속성이며 리플렉션과 함께 볼 수 있습니다.<br /><br /> **/win32res**를 지정하지 않으면 **/fileversion**이 Win32 **File Version** 리소스로 사용됩니다. **/fileversion**을 지정하지 않으면 Win32 **File Version** 리소스가 Win32 **Assembly Version**(어셈블리 버전) 리소스로 채워집니다.<br /><br /> **/win32res**를 지정하면 **/fileversion**은 Win32 리소스에 영향을 주지 않습니다.<br /><br /> MSIL 모듈의 소스 코드에서 이 옵션을 사용자 지정 특성(AssemblyFileVersionAttribute)으로 지정할 수도 있습니다.|
@@ -104,7 +92,7 @@ al sources options
 | ----- | ----------- |
 |al1001|내부 컴파일러 오류<br /><br /> *Al.exe*가 예기치 않은 구문을 분석할 수 없어 실패하는지 여부를 확인합니다. 그런 다음 Microsoft 기술 지원 서비스에 문의하세요.|
 |al1002|메모리 부족<br /><br /> *Al.exe*가 메모리 부족으로 중지되었습니다. 사용 가능한 메모리 양을 늘립니다.|
-|al1003|'option' 컴파일러 옵션 다음에는 인수가 와야 합니다.<br /><br /> *Al.exe*에서 명령줄 옵션에 인수가 전달될 것으로 예상했습니다. 예를 들어 **/algid:**를 지정하는 경우 알고리즘 식별자를 전달해야 합니다.|
+|al1003|'option' 컴파일러 옵션 다음에는 인수가 와야 합니다.<br /><br /> *Al.exe*에서 명령줄 옵션에 인수가 전달될 것으로 예상했습니다. 예를 들어 **/algid:** 를 지정하는 경우 알고리즘 식별자를 전달해야 합니다.|
 |al1004|예기치 않은 공용 언어 런타임 초기화 오류 - 'reason'<br /><br /> *Al.exe*에서 지정된 이유로 Visual Studio 또는 공용 언어 런타임 설치 오류를 보고했습니다.|
 |al1005|'file' 파일이 너무 커서 열 수 없습니다.<br /><br /> *Al.exe*에서 여는 모든 파일은 4GB(기가바이트)보다 작아야 합니다.|
 |al1006|'file' 지시 파일이 이미 포함되었습니다.<br /><br /> 동일한 지시 파일이 명령줄에서 두 번 이상 지정되었습니다(`@file`). 지시 파일은 한 번만 포함될 수 있습니다.|
@@ -172,11 +160,11 @@ al sources options
 |al1072|어셈블리 및 'Module Name' 모듈은 다른 프로세서를 대상으로 할 수 없습니다.<br /><br /> 결과를 단일 프로세서에서 실행해야 하므로 서로 다른 프로세서를 대상으로 하는 어셈블리와 모듈을 연결할 수 없습니다.|
 |al1073|참조된 ‘assembly’ 어셈블리가 다른 프로세서를 대상으로 합니다.<br /><br /> 결과를 단일 프로세서에서 실행해야 하므로 서로 다른 프로세서를 대상으로 하는 어셈블리를 연결할 수 없습니다.|
 |al1074|'File Name'에 저장된 'Module Name' 모듈 이름은 해당 파일 이름과 일치해야 합니다.<br /><br /> 이는 링커에 필요합니다. 이 문제를 해결하려면 두 이름이 일치하도록 만듭니다.|
-|al1075|서명 연기가 요청되었지만 키가 지정되지 않았습니다.<br /><br /> 어셈블리 서명이 연기된 경우 컴파일러는 서명을 계산하거나 저장하지 않고 나중에 서명을 추가할 수 있도록 파일에 공간을 예약합니다.<br /><br /> 예를 들어 **/delaysign+**를 사용하면 테스터를 통해 전역 캐시에 어셈블리를 넣을 수 있습니다. 테스트를 마친 후 어셈블리 링커 유틸리티를 통해 어셈블리에 개인 키를 추가하여 어셈블리에 완전히 서명할 수 있습니다.|
+|al1075|서명 연기가 요청되었지만 키가 지정되지 않았습니다.<br /><br /> 어셈블리 서명이 연기된 경우 컴파일러는 서명을 계산하거나 저장하지 않고 나중에 서명을 추가할 수 있도록 파일에 공간을 예약합니다.<br /><br /> 예를 들어 **/delaysign+** 를 사용하면 테스터를 통해 전역 캐시에 어셈블리를 넣을 수 있습니다. 테스트를 마친 후 어셈블리 링커 유틸리티를 통해 어셈블리에 개인 키를 추가하여 어셈블리에 완전히 서명할 수 있습니다.|
 |al1076|'type' 형식이 여러 어셈블리에 전달되었습니다. 'assembly' 및 'assembly'.<br /><br /> 각 형식을 하나의 어셈블리에만 전달할 수 있습니다.|
 |al1077|'type' public 형식이 'assembly'에서 정의되고 'assembly'로 전달됩니다.<br /><br /> 생성되는 어셈블리에 중복된 public 형식이 있습니다. 하나는 유효한 형식 정의이고 다른 하나는 형식 전달자입니다.|
 
-## <a name="example"></a>예제
+## <a name="example"></a>예
 
 다음 명령은 `t2.netmodule` 모듈의 어셈블리를 사용하여 실행 파일 *t2a.exe*를 만듭니다. 진입점은 `Main`의 `MyClass` 메서드입니다.
 
@@ -184,7 +172,7 @@ al sources options
 al t2.netmodule /target:exe /out:t2a.exe /main:MyClass.Main
 ```
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
  
 [도구](../../../docs/framework/tools/index.md)  
 [*Sn.exe* (Strong Name Tool)](../../../docs/framework/tools/sn-exe-strong-name-tool.md)(Sn.exe(강력한 이름 도구))  

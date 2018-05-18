@@ -1,23 +1,16 @@
 ---
 title: 관리 코드란?
 description: 관리 코드가 CLR(공용 언어 런타임) 런타임에서 해당 실행이 관리되는 코드임을 알아봅니다.
-keywords: .NET, .NET Core
 author: blackdwarf
 ms.author: mairaw
 ms.date: 06/20/2016
-ms.topic: article
-ms.prod: .net
 ms.technology: dotnet-standard
-ms.devlang: dotnet
 ms.assetid: 20bb7ea8-192e-4a96-8ef3-e10e1950fd3d
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 46bbe30f216ba9b0a3bc7f88267c428ec56de614
-ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
+ms.openlocfilehash: 268ffe9c5cbbc9490ed91f2b4c28f8f876b8ff5e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="what-is-managed-code"></a>"관리 코드"란?
 

@@ -1,26 +1,17 @@
 ---
-title: "XML 네임스페이스 작업(C#)"
-ms.custom: 
+title: XML 네임스페이스 작업(C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-csharp
-ms.topic: article
 ms.assetid: 05cf4dc7-7b25-40f0-abc9-1bc35de4b48a
-caps.latest.revision: "4"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 6257f924cfcaa3b9f16dd5ed12b8ef7970fde20c
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: e00886281fbccd0e10706575483dd174d7d53052
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="working-with-xml-namespaces-c"></a>XML 네임스페이스 작업(C#)
 이 단원의 항목에서는 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]에서 네임스페이스를 지원하는 방법에 대해 설명합니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
   
 |항목|설명|  
 |-----------|-----------------|  

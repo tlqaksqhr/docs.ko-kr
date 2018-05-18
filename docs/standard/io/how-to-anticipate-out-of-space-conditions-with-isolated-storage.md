@@ -1,13 +1,7 @@
 ---
-title: "방법: 격리된 저장소의 공간 부족 상태 예상"
-ms.custom: 
+title: '방법: 격리된 저장소의 공간 부족 상태 예상'
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -28,18 +22,13 @@ helpviewer_keywords:
 - isolated storage, out of space conditions
 - data storage using isolated storage, out of space conditions
 ms.assetid: e35d4535-3732-421e-b1a3-37412e036145
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: e04b4b85b9a14e842c94226017fcd903ad1cbb40
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 9b99803970b205e3dbbb1d78c9bdaf0fefa73a04
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-anticipate-out-of-space-conditions-with-isolated-storage"></a>방법: 격리된 저장소의 공간 부족 상태 예상
 격리된 저장소를 사용하는 코드는 격리된 저장소 파일 및 디렉터리가 있는 데이터 구획의 최대 크기를 지정하는 [할당량](../../../docs/standard/io/isolated-storage.md#quotas)에 의해 제한됩니다. 이 할당 한도는 보안 정책에서 정의하고 관리자가 구성할 수 있습니다. 데이터를 쓸 때 최대 허용 크기를 초과하면 <xref:System.IO.IsolatedStorage.IsolatedStorageException> 예외가 throw되고 작업이 실패합니다. 이를 통해 데이터 저장소가 가득 차서 응용 프로그램이 요청을 거부하는 문제를 발생시킬 수 있는 악성 서비스 거부 공격을 방지할 수 있습니다.  

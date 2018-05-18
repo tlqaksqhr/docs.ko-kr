@@ -1,13 +1,7 @@
 ---
 title: 이벤트 기반 비동기 패턴 구현 시기 결정
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - Event-based Asynchronous Pattern
 - ProgressChangedEventArgs class
@@ -18,18 +12,11 @@ helpviewer_keywords:
 - AsyncOperation class
 - AsyncCompletedEventArgs class
 ms.assetid: a00046aa-785d-4f7f-a8e5-d06475ea50da
-caps.latest.revision: 8
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 330dc5ec76fe33a7f6165857334a367f578840ef
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.openlocfilehash: 3f9b18b3362155e256c922a84f3f1cdb6d255a4b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="deciding-when-to-implement-the-event-based-asynchronous-pattern"></a>이벤트 기반 비동기 패턴 구현 시기 결정
 이벤트 기반 비동기 패턴은 클래스의 비동기 동작을 표시하기 위한 패턴을 제공합니다. 이 패턴의 도입에 따라 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]는 비동기 동작을 표시하기 위한 두 가지 패턴 즉, <xref:System.IAsyncResult?displayProperty=nameWithType> 인터페이스를 기반으로 하는 비동기 패턴 및 이벤트 기반 패턴을 정의합니다. 이 항목에서는 두 패턴을 모두 구현하는 것이 적절한 경우에 대해 설명합니다.  

@@ -1,24 +1,14 @@
 ---
-title: "완화: WPF 창 렌더링"
-ms.custom: 
+title: '완화: WPF 창 렌더링'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 28ed6bf8-141b-4b73-a4e3-44a99fae5084
-caps.latest.revision: "3"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 032d07b75b96809ff71c7735a267a7351ad25dda
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 8a91839ff12109b84c563dcd3fabd078f75dad9f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="mitigation-wpf-window-rendering"></a>완화: WPF 창 렌더링
 Windows 8 이상에서 실행되는 [!INCLUDE[net_v46](../../../includes/net-v46-md.md)]에서, 다중 모니터 시나리오에서 전체 창이 단일 디스플레이를 벗어나 확장되는 경우 클리핑 없이 렌더링됩니다.  

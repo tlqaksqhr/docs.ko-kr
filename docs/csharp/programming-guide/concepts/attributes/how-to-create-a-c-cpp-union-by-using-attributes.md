@@ -1,26 +1,17 @@
 ---
-title: "방법: 특성을 사용하여 C-C++ 공용 구조체 만들기(C#)"
-ms.custom: 
+title: '방법: 특성을 사용하여 C-C++ 공용 구조체 만들기(C#)'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-csharp
-ms.topic: article
 ms.assetid: 85f35e56-26e0-4d31-9f3a-89bd4005e71a
-caps.latest.revision: "3"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: e9274b585c2fecf53b94d94f9bdfdaf4a47f1041
-ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
+ms.openlocfilehash: 30a8be9021495aa4cf61010508762999cdf91ff4
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/09/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-a-cc-union-by-using-attributes-c"></a>방법: 특성을 사용하여 C/C++ 공용 구조체 만들기(C#)
 특성을 사용하면 메모리에서 구조체가 레이아웃되는 방식을 사용자 지정할 수 있습니다. 예를 들어 `StructLayout(LayoutKind.Explicit)` 및 `FieldOffset` 특성을 사용하여 C/C++에서 공용 구조체로 알려진 항목을 만들 수 있습니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  이 코드 세그먼트에서 `TestUnion`의 모든 필드는 메모리의 같은 위치에서 시작합니다.  
   
 ```csharp  
@@ -43,7 +34,7 @@ ms.lasthandoff: 12/09/2017
        }  
 ```  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음은 명시적으로 설정된 다른 위치에서 필드가 시작하는 또 다른 예제입니다.  
   
 ```csharp  

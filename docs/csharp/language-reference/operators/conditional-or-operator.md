@@ -1,10 +1,6 @@
 ---
 title: '|| 연산자(C# 참조)'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 f1_keywords:
 - '||_CSharpKeyword'
 helpviewer_keywords:
@@ -12,14 +8,11 @@ helpviewer_keywords:
 - conditional-OR operator (||) [C#]
 - '|| operator [C#]'
 ms.assetid: 7d442d8e-400d-421f-b4d2-034bf82bcbdc
-caps.latest.revision: 25
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 7b95fd162c9a89789e1970b32473c8acf16ba5cf
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: ce0834874f9c5b4c5154a798492600d6ac45a4c6
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="-operator-c-reference"></a>|| 연산자(C# 참조)
 조건부 OR 연산자(`||`)는 해당 `bool` 피연산자의 논리적 OR을 수행합니다. 첫 번째 피연산자가 `true`이면 두 번째 피연산자는 계산되지 않습니다. 첫 번째 피연산자가 `false`이면 두 번째 피연산자에 의해 OR 식 전체가 `true` 또는 `false`인지가 결정됩니다.  
@@ -41,7 +34,7 @@ x | y
   
  조건부 OR 연산자는 오버로드될 수 없지만 일반 논리 연산자와 [true](../../../csharp/language-reference/keywords/true.md) 및 [false](../../../csharp/language-reference/keywords/false.md) 연산자의 오버로드는 조건부 논리 연산자의 오버로드로 간주합니다(특정 제한 사항 있음).  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제에서 `||`를 사용하는 식은 첫 번째 피연산자만 계산합니다. `|`를 사용하는 식은 두 피연산자를 모두 계산합니다. 두 번째 예제에서 두 피연산자가 모두 계산되면 런타임 예외가 발생합니다.  
   
  [!code-csharp[csRefOperators#52](../../../csharp/language-reference/operators/codesnippet/CSharp/conditional-or-operator_1.cs)]  

@@ -1,21 +1,15 @@
 ---
-title: "점프문(C# 참조)"
+title: 점프문(C# 참조)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - jump statements [C#]
 - branch statements [C#]
 ms.assetid: 58da6ae7-7388-491e-828f-e74485d87d53
-caps.latest.revision: "14"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: c8f657f53d8781790908ef7fc1e9dd81968417ab
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 363e0cfa9d31479caeb8c71e2454db3e28d372bc
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="jump-statements-c-reference"></a>점프문(C# 참조)
 분기는 점프 문을 사용하여 수행되며, 프로그램 제어가 즉시 전송됩니다. 점프 문에서 사용되는 키워드는 다음과 같습니다.  

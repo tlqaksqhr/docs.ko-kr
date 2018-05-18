@@ -1,21 +1,14 @@
 ---
 title: true 연산자(C# 참조)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - true operator [C#]
 ms.assetid: acaba817-5da5-4364-b3b2-2e5c75ec1839
-caps.latest.revision: 19
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 96ab7679862959f3c99e31beac0bd5514228bd8d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 71f522b3860f7461f5c52dd77bb424f7ba0f9bf5
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="true-operator-c-reference"></a>true 연산자(C# 참조)
 [bool](../../../csharp/language-reference/keywords/bool.md) 값 `true`를 반환하여 피연산자가 true임을 나타내고, true가 아니면 `false`를 반환합니다.  

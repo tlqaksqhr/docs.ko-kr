@@ -1,13 +1,7 @@
 ---
-title: ".NET에서 새 문자열 만들기"
-ms.custom: 
+title: .NET에서 새 문자열 만들기
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -19,18 +13,13 @@ helpviewer_keywords:
 - strings [.NET Framework], creating
 - Insert method
 ms.assetid: 06fdf123-2fac-4459-8904-eb48ab908a30
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 3ba91b42bc9815b1b12fdc761882741b11790060
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: f9f0c487d3d04af998fb1c3339d736e9bb043374
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="creating-new-strings-in-net"></a>.NET에서 새 문자열 만들기
 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]에서는 간단한 할당을 사용하여 문자열을 만들 수 있으며, 클래스 생성자를 오버로드하여 여러 다양한 매개 변수를 사용한 문자열 생성도 지원합니다. 또한 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]에서는 여러 문자열, 문자열 배열 또는 개체를 결합하여 새 문자열 개체를 만드는 여러 메서드를 <xref:System.String?displayProperty=nameWithType> 클래스에서 제공합니다.  
@@ -42,7 +31,7 @@ ms.lasthandoff: 12/23/2017
  <xref:System.String> 클래스 생성자의 오버로드를 사용하여 문자 배열에서 문자열을 만들 수 있습니다. 특정 문자를 지정된 횟수만큼 복제하여 새 문자열을 만들 수도 있습니다.  
   
 ## <a name="methods-that-return-strings"></a>문자열을 반환하는 메서드  
- 다음 표에서는 새 문자열 개체를 반환하는 여러 유용한 메서드를 보여줍니다.  
+ 다음 표에서는 새 문자열 개체를 반환하는 여러 유용한 메서드를 보여 줍니다.  
   
 |메서드 이름|사용|  
 |-----------------|---------|  

@@ -1,14 +1,6 @@
 ---
 title: 런타임에서 어셈블리를 찾는 방법
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - app.config files, assembly locations
 - deploying applications [.NET Framework], assembly locations
@@ -17,17 +9,13 @@ helpviewer_keywords:
 - locating assemblies
 - assemblies [.NET Framework], location
 ms.assetid: 772ac6f4-64d2-4cfb-92fd-58096dcd6c34
-caps.latest.revision: 20
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 6e154e0658534018ccd1086631cad6d350528b5d
-ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
+ms.openlocfilehash: d34de754d551a97178de2d4f9c6558170f58fe27
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-the-runtime-locates-assemblies"></a>런타임에서 어셈블리를 찾는 방법
 .NET Framework 응용 프로그램을 성공적으로 배포하려면 공용 언어 런타임이 응용 프로그램을 구성하는 어셈블리를 찾아서 바인딩하는 방법을 이해해야 합니다. 기본적으로 런타임은 응용 프로그램 빌드 시 사용된 정확한 버전의 어셈블리로 바인딩을 시도합니다. 이 기본 동작은 구성 파일 설정으로 재정의할 수 있습니다.  
@@ -143,7 +131,7 @@ Al.exe /link:asm6.exe.config /out:policy.3.0.asm6.dll /keyfile: compatkey.dat /v
 #### <a name="safe-mode"></a>안전 모드  
  게시자 정책 파일은 일반적으로 서비스 팩이나 프로그램 업데이트의 일부로 명시적으로 설치됩니다. 업그레이드된 공유 구성 요소에 문제가 있는 경우 안전 모드를 사용하여 게시자 정책 파일의 재정의를 무시할 수 있습니다. 안전 모드는 **\<publisherPolicy apply="yes**&#124;**no"/>** 요소에 의해 결정되며, 이 요소는 응용 프로그램 구성 파일에만 있습니다. 바인딩 프로세스에서 게시자 정책 구성 정보를 제거할지 여부를 지정합니다.  
   
- 전체 응용 프로그램이나 선택한 어셈블리에 대해 안전 모드를 설정할 수 있습니다. 즉, 응용 프로그램을 구성하는 모든 어셈블리에 대해 정책을 해제하거나 다른 어셈블리는 제외하고 일부 어셈블리에 대해서만 설정할 수 있습니다. 응용 프로그램을 구성하는 어셈블리에 게시자 정책을 선택적으로 적용하려면, **\<publisherPolicy apply\=no/>**를 설정한 다음 \<**dependentAssembly**> 요소를 사용하여 정책을 적용하려는 어셈블리를 지정합니다. 응용 프로그램을 구성하는 모든 어셈블리에 게시자 정책을 적용하려면 종속 어셈블리 요소 없이 **\<publisherPolicy apply\=no/>**를 설정합니다. 구성에 대한 자세한 내용은 [구성 파일을 사용하여 앱 구성](../../../docs/framework/configure-apps/index.md)을 참조하세요.  
+ 전체 응용 프로그램이나 선택한 어셈블리에 대해 안전 모드를 설정할 수 있습니다. 즉, 응용 프로그램을 구성하는 모든 어셈블리에 대해 정책을 해제하거나 다른 어셈블리는 제외하고 일부 어셈블리에 대해서만 설정할 수 있습니다. 응용 프로그램을 구성하는 어셈블리에 게시자 정책을 선택적으로 적용하려면, **\<publisherPolicy apply\=no/>** 를 설정한 다음 \<**dependentAssembly**> 요소를 사용하여 정책을 적용하려는 어셈블리를 지정합니다. 응용 프로그램을 구성하는 모든 어셈블리에 게시자 정책을 적용하려면 종속 어셈블리 요소 없이 **\<publisherPolicy apply\=no/>** 를 설정합니다. 구성에 대한 자세한 내용은 [구성 파일을 사용하여 앱 구성](../../../docs/framework/configure-apps/index.md)을 참조하세요.  
   
 ### <a name="machine-configuration-file"></a>컴퓨터 구성 파일  
  셋째, 런타임은 컴퓨터 구성 파일을 검사합니다. Machine.config라는 이 파일은 로컬 컴퓨터에서 런타임이 설치된 루트 디렉터리의 Config 하위 디렉터리에 상주합니다. 관리자는 이 파일을 사용하여 해당 컴퓨터에 로컬로 적용되는 어셈블리 바인딩 제한 사항을 지정할 수 있습니다. 컴퓨터 구성 파일의 설정은 다른 모든 구성 설정보다 우선합니다. 그러나 모든 구성 설정을 이 파일에 넣어야 한다는 의미는 아닙니다. 관리자 정책 파일에서 결정된 버전이 최종 버전이며 재정의할 수 없습니다. Machine.config 파일에서 지정된 재정의는 모든 응용 프로그램에 영향을 줍니다. 구성 파일에 대한 자세한 내용은 [구성 파일을 사용하여 앱 구성](../../../docs/framework/configure-apps/index.md)을 참조하세요.  

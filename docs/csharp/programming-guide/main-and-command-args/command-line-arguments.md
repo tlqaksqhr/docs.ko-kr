@@ -1,21 +1,14 @@
 ---
-title: "명령줄 인수(C# 프로그래밍 가이드)"
+title: 명령줄 인수(C# 프로그래밍 가이드)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - command-line arguments [C#]
 ms.assetid: 0e597e0d-ea7a-41ba-a38a-0198122f3c26
-caps.latest.revision: 
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 025ed2c451c0a657ce71db56df603302097fc7ee
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 92b3f916b58f72ab2f2f542d3a611d35861afebe
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="command-line-arguments-c-programming-guide"></a>명령줄 인수(C# 프로그래밍 가이드)
 다음 방법 중 하나로 메서드를 정의하여 인수를 `Main` 메서드에 보낼 수 있습니다.  
@@ -51,7 +44,7 @@ long num = Convert.ToInt64(s);
   
  자세한 내용은 <xref:System.Int64.Parse%2A> 및 <xref:System.Convert>를 참조하세요.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제에서는 콘솔 응용 프로그램에서 명령줄 인수를 사용하는 방법을 보여 줍니다. 응용 프로그램은 런타임에 하나의 인수를 사용하고, 인수를 정수로 변환하고, 숫자의 계승을 계산합니다. 인수가 제공되지 않으면 응용 프로그램에서는 프로그램의 올바른 사용법을 설명하는 메시지를 표시합니다.  
   
  명령 프롬프트에서 응용 프로그램을 컴파일 및 실행하려면 다음 단계를 수행합니다.  

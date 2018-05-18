@@ -1,18 +1,13 @@
 ---
 title: .NET Compiler Platform SDK 구문 모델 사용
 description: 이 개요에서는 구문 노드를 이해하고 조작하는 데 사용하는 형식에 대한 이해를 제공합니다.
-author: billwagner
-ms.author: wiwagn
 ms.date: 10/15/2017
-ms.topic: conceptual
-ms.prod: .net
-ms.devlang: devlang-csharp
 ms.custom: mvc
-ms.openlocfilehash: 0230777c59185a6b50d5dac5066efc3afa347f44
-ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
+ms.openlocfilehash: a48d48168dffdb439c984f5b4209019514b3b970
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="work-with-syntax"></a>구문 작업
 

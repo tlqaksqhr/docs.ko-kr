@@ -1,19 +1,13 @@
 ---
 title: C#의 숫자 자습서 - C# 로컬 빠른 시작
 description: 숫자 형식, 해당 속성 및 메서드를 살펴보면서 C#을 학습합니다.
-author: billwagner
-ms.author: wiwagn
 ms.date: 10/31/2017
-ms.topic: get-started-article
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.devlang: csharp
 ms.custom: mvc
-ms.openlocfilehash: 6570693ea09ca2b548615291ba4f2b69f6d92482
-ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
+ms.openlocfilehash: cf8f00193b4fa66ff444fe8e40942c39e99d10b1
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="numbers-in-c-quickstart"></a>C#의 숫자 빠른 시작
 

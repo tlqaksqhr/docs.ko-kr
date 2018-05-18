@@ -1,24 +1,17 @@
 ---
 title: 포인터에 대한 산술 연산(C# 프로그래밍 가이드)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - pointers [C#], arithmetic operations
 ms.assetid: d4f0b623-827e-45ce-8649-cfcebc8692aa
-caps.latest.revision: 18
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 54c439aab8b6cd34a796db8d31f9eabeefddf9f8
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: c40b125e42649093aa1f1fe860a3e8f5d2690359
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="arithmetic-operations-on-pointers-c-programming-guide"></a>포인터에 대한 산술 연산(C# 프로그래밍 가이드)
-이 항목에서는 산술 연산자 `+` 및 **-**를 사용하여 포인터를 조작하는 방법을 설명합니다.  
+이 항목에서는 산술 연산자 `+` 및 **-** 를 사용하여 포인터를 조작하는 방법을 설명합니다.  
   
 > [!NOTE]
 >  void 포인터에 대해 산술 연산을 수행할 수 없습니다.  
@@ -33,7 +26,7 @@ ms.lasthandoff: 11/21/2017
   
  산술 연산이 포인터의 도메인을 오버플로하는 경우 예외가 생성되지 않고 결과는 구현에 따라 다릅니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  [!code-csharp[csProgGuidePointers#14](../../../csharp/programming-guide/unsafe-code-pointers/codesnippet/CSharp/arithmetic-operations-on-pointers_1.cs)]  
   
  [!code-csharp[csProgGuidePointers#15](../../../csharp/programming-guide/unsafe-code-pointers/codesnippet/CSharp/arithmetic-operations-on-pointers_2.cs)]  

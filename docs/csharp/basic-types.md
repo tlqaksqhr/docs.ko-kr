@@ -1,20 +1,13 @@
 ---
-title: "기본 형식 - C# 가이드"
-description: "모든 C# 프로그램의 핵심 형식(숫자, 문자열 및 개체)을 알아봅니다."
-keywords: .NET, .NET Core, C#
-author: BillWagner
-ms.author: wiwagn
+title: 기본 형식 - C# 가이드
+description: 모든 C# 프로그램의 핵심 형식(숫자, 문자열 및 개체)을 알아봅니다.
 ms.date: 10/10/2016
-ms.topic: article
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.devlang: csharp
 ms.assetid: 95c686ba-ae4f-440e-8e94-0dbd6e04d11f
-ms.openlocfilehash: 398a73f72a9a31c6b2a19a626f704f65564f4fbd
-ms.sourcegitcommit: bbde43da655ae7bea1977f7af7345eb87bd7fd5f
+ms.openlocfilehash: 2e62a461e41f4172bd6dd512a71babb998924978
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="types-variables-and-values"></a>형식, 변수 및 값  
 C#은 강력한 형식의 언어입니다. 모든 변수 및 상수에는 값으로 계산되는 모든 식을 실행하는 형식이 있습니다. 모든 메서드 시그니처는 각 입력 매개 변수 및 반환 값의 형식을 지정합니다. .NET Framework 클래스 라이브러리는 기본 제공 숫자 형식 집합 및 날짜, 개체의 배열, 컬렉션, 네트워크 연결, 파일 시스템과 같은 더 복잡한 형식을 정의합니다. 일반 C# 프로그램에서는 클래스 라이브러리의 형식 및 프로그램의 문제 도메인에 관련된 개념을 모델링하는 사용자 정의 형식을 사용합니다.  

@@ -1,13 +1,7 @@
 ---
-title: "방법: 간단한 Parallel.For 루프 작성"
-ms.custom: 
+title: '방법: 간단한 Parallel.For 루프 작성'
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -16,18 +10,13 @@ helpviewer_keywords:
 - for loop, parallel construction in .NET
 - parallel for loops, how to use
 ms.assetid: 9029ba7f-a9d1-4526-8c84-c88716dba5d4
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 3a70dcb5e3811a18e23aeb2ebf0940d2c52f49a9
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 6a601c8f1fed04c839c2a413e4b0e44a75f4195b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-write-a-simple-parallelfor-loop"></a>방법: 간단한 Parallel.For 루프 작성
 이 항목에는 <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> 메서드를 설명하는 두 가지 예제가 포함되어 있습니다. 첫 번째 예제에서는 <xref:System.Threading.Tasks.Parallel.For%28System.Int64%2CSystem.Int64%2CSystem.Action%7BSystem.Int64%7D%29?displayProperty=nameWithType> 메서드 오버로드를 사용하고, 두 번째 예제에서는 <xref:System.Threading.Tasks.Parallel.For%28System.Int32%2CSystem.Int32%2CSystem.Action%7BSystem.Int32%7D%29?displayProperty=nameWithType> 오버로드를 사용합니다. <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> 메서드의 가장 간단한 오버로드 중 두 개입니다. 루프를 취소하거나, 루프 반복을 중단하거나, 스레드 로컬 상태를 유지할 필요가 없는 경우 <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> 메서드의 이러한 두 오버로드를 사용할 수 있습니다.  
@@ -44,7 +33,7 @@ ms.lasthandoff: 12/23/2017
  [!code-vb[Conceptual.Parallel.For#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.parallel.for/vb/for1.vb#1)]  
   
 ## <a name="example"></a>예  
- 이 예제에서는 <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> 메서드를 사용하여 두 행렬의 곱을 계산합니다. 또한 <xref:System.Diagnostics.Stopwatch?displayProperty=nameWithType> 클래스를 사용하여 병렬 루프와 비병렬 루프의 성능을 비교하는 방법을 보여줍니다. 대용량의 출력을 생성할 수 있으므로 예제에서는 출력을 파일로 리디렉션할 수 있도록 합니다.  
+ 이 예제에서는 <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> 메서드를 사용하여 두 행렬의 곱을 계산합니다. 또한 <xref:System.Diagnostics.Stopwatch?displayProperty=nameWithType> 클래스를 사용하여 병렬 루프와 비병렬 루프의 성능을 비교하는 방법을 보여 줍니다. 대용량의 출력을 생성할 수 있으므로 예제에서는 출력을 파일로 리디렉션할 수 있도록 합니다.  
   
  [!code-csharp[TPL_Parallel#01](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_parallel/cs/simpleparallelfor.cs#01)]
  [!code-vb[TPL_Parallel#01](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_parallel/vb/simpleparallelfor.vb#01)]  

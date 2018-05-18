@@ -1,27 +1,17 @@
 ---
-title: ".NET Framework 배포"
-ms.custom: 
+title: .NET Framework 배포
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - .NET Framework, deploying
 - deployment [.NET Framework]
 ms.assetid: 19df26c5-4008-461d-a7d7-18f4506312d2
-caps.latest.revision: "2"
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 1320c0364b1fdc3a67d2ac99d0591f37044c36a4
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: aa204b9ac604cd4e0f2c1ae75e872f6bb5cdaf22
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="deploying-the-net-framework"></a>.NET Framework 배포
 .NET Framework 설명서의 이 섹션은 응용 프로그램과 함께 .NET Framework를 설치하려는 개발자 및 네트워크에서 .NET Framework를 배포하려는 관리자를 위한 정보를 제공합니다. 또한 배포에 관련된 활성화 및 다시 시작 문제와 .NET Framework 설치의 진행 상황을 모니터링하는 방법을 설명합니다.  

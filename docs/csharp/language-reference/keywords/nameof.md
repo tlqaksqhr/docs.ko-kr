@@ -1,21 +1,15 @@
 ---
-title: "nameof(C# 참조)"
+title: nameof(C# 참조)
 ms.date: 06/16/2017
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.topic: article
 f1_keywords:
 - nameof_CSharpKeyword
 - nameof
 ms.assetid: 33601bf3-cc2c-4496-846d-f9679bccf2a7
-caps.latest.revision: "3"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 95f50f45ec25c1eb3bacaa5051dc0407b11b7c34
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 8a850633bee26120a12f9d72e9d18b5af131d267
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="nameof-c-reference"></a>nameof(C# 참조)
 
@@ -76,7 +70,7 @@ class C {
 }  
 ```  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  일부 C# 예제:  
   
 ```csharp  
@@ -109,7 +103,7 @@ nameof(Method2()) -> error "This expression does not have a name"
   
  인수는 구문상 식이어야 하므로 나열해도 유용하지 않은, 허용되지 않는 많은 항목이 있습니다.  오류를 생성하는 다음 항목은 주의해야 합니다. 미리 정의된 형식(예: `int` 또는 `void`), null 허용 형식(`Point?`), 배열 형식(`Customer[,]`), 포인터 형식(`Buffer*`), 정규화된 별칭(`A::B`), 바운딩되지 않은 제네릭 형식(`Dictionary<,>`), 전처리 기호(`DEBUG`) 및 레이블(`loop:`).  
   
- 정규화된 이름을 가져와야 하는 경우 `nameof`와 함께 `typeof` 식을 사용할 수 있습니다.  예를 들면 다음과 같습니다.
+ 정규화된 이름을 가져와야 하는 경우 `nameof`와 함께 `typeof` 식을 사용할 수 있습니다.  예:
 ```csharp  
 class C {
     void f(int i) {  

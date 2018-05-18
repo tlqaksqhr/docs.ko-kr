@@ -1,12 +1,6 @@
 ---
-title: "방법: WebRequest 클래스를 사용하여 데이터 요청"
-ms.custom: 
+title: '방법: WebRequest 클래스를 사용하여 데이터 요청'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -17,17 +11,14 @@ helpviewer_keywords:
 - receiving data, using WebRequest class
 - Internet, requesting data
 ms.assetid: 368b8d0f-dc5e-4469-a8b8-b2adbf5dd800
-caps.latest.revision: 
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload:
-- dotnet
-ms.openlocfilehash: 463a59444d3f93e5560e149033fd845ac8cbe62d
-ms.sourcegitcommit: 15316053918995cc1380163a7d7e7edd5c44e6d7
-ms.translationtype: MT
+ms.openlocfilehash: e02ad4772d3ba84a2735a2e146a9979862d75989
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-request-data-using-the-webrequest-class"></a>방법: WebRequest 클래스를 사용하여 데이터 요청
 다음 프로시저에서는 서버의 웹 페이지 또는 파일과 같은 리소스를 요청하는 데 사용되는 단계를 설명합니다. 리소스는 URI로 식별되어야 합니다.  
@@ -110,7 +101,7 @@ ms.lasthandoff: 03/19/2018
     response.Close()  
     ```  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
   
 ```csharp  
 using System;  

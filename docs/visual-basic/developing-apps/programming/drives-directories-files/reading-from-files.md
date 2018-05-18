@@ -1,12 +1,6 @@
 ---
-title: "Visual Basic에서 파일 읽기"
-ms.custom: 
+title: Visual Basic에서 파일 읽기
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - data [Visual Basic], reading from files
 - I/O [Visual Basic], reading from files
@@ -14,19 +8,16 @@ helpviewer_keywords:
 - files [Visual Basic], reading
 - reading files [Visual Basic]
 ms.assetid: ad831a1b-7d01-4f07-a47b-799f3037df19
-caps.latest.revision: "16"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 29eddd4abbadd2b4dfa12c19213612f4822bbb3f
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.openlocfilehash: cfb22fea6d2be4c1cf78efbc63b2e2342bcac49c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="reading-from-files-in-visual-basic"></a>Visual Basic에서 파일 읽기
 이 섹션에서는 파일 읽기와 관련된 작업을 수행하는 방법을 설명합니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [방법: 텍스트 파일에서 읽기](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-text-files.md)  
  텍스트 파일에서 읽는 방법을 보여 줍니다.  
   

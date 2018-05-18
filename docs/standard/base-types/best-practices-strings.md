@@ -1,13 +1,7 @@
 ---
-title: ".NET에서 문자열 사용에 대한 모범 사례"
-ms.custom: 
+title: .NET에서 문자열 사용에 대한 모범 사례
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -23,18 +17,13 @@ helpviewer_keywords:
 - comparing strings
 - strings [.NET Framework],comparing
 ms.assetid: b9f0bf53-e2de-4116-8ce9-d4f91a1df4f7
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: a4b92cd9d6b880f23d6acaf9e38e685184ec3bfe
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 3bdc23c909be0f9df051d538ca93cbb0a8e31426
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="best-practices-for-using-strings-in-net"></a>.NET에서 문자열 사용에 대한 모범 사례
 <a name="top"></a> .NET에서는 지역화된 응용 프로그램과 전역화된 응용 프로그램을 개발하기 위한 광범위한 지원을 제공하고 문자열 정렬 및 표시와 같은 일반적인 작업을 수행할 때 현재 문화권이나 특정 문화권의 규칙을 쉽게 적용할 수 있습니다. 그러나 문자열 정렬 및 비교가 항상 문화권이 구분되는 작업은 아닙니다. 예를 들어 응용 프로그램에서 내부적으로 사용되는 문자열은 대기 모든 문화권에서 동일하게 처리해야 합니다. XML 태그, HTML 태그, 사용자 이름, 파일 경로 및 시스템 개체 이름과 같이 문화권을 구분하지 않는 문자열 데이터가 문화권이 구분되는 것처럼 해석되면 응용 프로그램 코드에는 감지하기 어려운 버그, 성능 저하 및 경우에 따라 보안 문제가 발생할 수 있습니다.  
@@ -138,7 +127,7 @@ ms.lasthandoff: 12/23/2017
 ### <a name="string-comparisons-that-use-the-current-culture"></a>현재 문화권을 사용하는 문자열 비교  
  문자열 비교 시 현재 문화권의 규칙을 사용하는 한 가기 기준이 포함됩니다. 현재 문화권을 기준으로 한 비교에는 스레드의 현재 문화권 또는 로캘이 사용됩니다. 사용자가 문화권을 설정하지 않으면 문화권은 기본적으로 제어판, **국가별 옵션** 창의 설정으로 지정됩니다. 데이터가 언어적으로 관련되는 경우와 문화권이 구분되는 사용자 조작을 반영하는 경우에는 항상 현재 문화권을 기준으로 한 비교를 사용해야 합니다.  
   
- 그러나 문화권이 변경되면 .NET의 비교 및 대/소문자 지정 동작도 바뀝니다. 응용 프로그램이 개발된 컴퓨터와 다른 문화권을 포함하는 컴퓨터에서 응용 프로그램을 실행하거나 실행 스레드가 문화권을 변경할 경우 이 동작이 수행됩니다. 이 동작은 의도적이지만 대부분 개발자가 이해하기가 분명하지는 않습니다. 다음 예제에서는 미국 영어("en-US") 및 스웨덴어("sv-SE") 문화권의 정렬 순서 차이를 보여줍니다. 정렬된 문자열 배열에서 단어 "ångström", "Windows" 및 "Visual Studio"가 다른 위치에 나타남을 알 수 있습니다.  
+ 그러나 문화권이 변경되면 .NET의 비교 및 대/소문자 지정 동작도 바뀝니다. 응용 프로그램이 개발된 컴퓨터와 다른 문화권을 포함하는 컴퓨터에서 응용 프로그램을 실행하거나 실행 스레드가 문화권을 변경할 경우 이 동작이 수행됩니다. 이 동작은 의도적이지만 대부분 개발자가 이해하기가 분명하지는 않습니다. 다음 예제에서는 미국 영어("en-US") 및 스웨덴어("sv-SE") 문화권의 정렬 순서 차이를 보여 줍니다. 정렬된 문자열 배열에서 단어 "ångström", "Windows" 및 "Visual Studio"가 다른 위치에 나타남을 알 수 있습니다.  
   
  [!code-csharp[Conceptual.Strings.BestPractices#3](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.strings.bestpractices/cs/comparison1.cs#3)]
  [!code-vb[Conceptual.Strings.BestPractices#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.strings.bestpractices/vb/comparison1.vb#3)]  
@@ -190,7 +179,7 @@ ms.lasthandoff: 12/23/2017
 > [!IMPORTANT]
 >  문자열 비교 메서드는 포함된 null 문자를 무시하지만 <xref:System.String.Contains%2A?displayProperty=nameWithType>, <xref:System.String.EndsWith%2A?displayProperty=nameWithType>, <xref:System.String.IndexOf%2A?displayProperty=nameWithType>, <xref:System.String.LastIndexOf%2A?displayProperty=nameWithType> 및 <xref:System.String.StartsWith%2A?displayProperty=nameWithType>와 같은 문자열 검색 메서드는 무시하지 않습니다.  
   
- 다음 예제에서는 문자열 "Aa" 및 "A"와 "a" 사이에 여러 포함된 null 문자를 포함하는 비슷한 문자열의 문화권 구분 비교를 수행하고 두 문자열을 어떻게 같은 것으로 간주하는지 보여줍니다.  
+ 다음 예제에서는 문자열 "Aa" 및 "A"와 "a" 사이에 여러 포함된 null 문자를 포함하는 비슷한 문자열의 문화권 구분 비교를 수행하고 두 문자열을 어떻게 같은 것으로 간주하는지 보여 줍니다.  
   
  [!code-csharp[Conceptual.Strings.BestPractices#19](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.strings.bestpractices/cs/embeddednulls1.cs#19)]
  [!code-vb[Conceptual.Strings.BestPractices#19](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.strings.bestpractices/vb/embeddednulls1.vb#19)]  
@@ -200,7 +189,7 @@ ms.lasthandoff: 12/23/2017
  [!code-csharp[Conceptual.Strings.BestPractices#20](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.strings.bestpractices/cs/embeddednulls2.cs#20)]
  [!code-vb[Conceptual.Strings.BestPractices#20](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.strings.bestpractices/vb/embeddednulls2.vb#20)]  
   
- 대/소문자를 구분하지 않는 서수 비교는 다음으로 가장 보수적인 접근 방법입니다. 이들 비교는 대부분 대/소문자 구분을 무시합니다. 예를 들어 "windows"는 "Windows"와 일치합니다. ASCII 문자를 처리할 때 이 정책은 사용 가능한 ASCII 대/소문자 구분을 무시한다는 점을 제외하고 <xref:System.StringComparison.Ordinal?displayProperty=nameWithType>과 같습니다. 따라서 [A, Z](\u0041-\u005A)의 모든 문자는 [a,z](\u0061-\007A)의 해당 문자와 일치합니다. ASCII 범위를 벗어난 대/소문자 구분에는 고정 문화권 테이블이 사용됩니다. 따라서 다음 비교는  
+ 대/소문자를 구분하지 않는 서수 비교는 다음으로 가장 보수적인 접근 방법입니다. 이들 비교는 대부분 대/소문자 구분을 무시합니다. 예를 들어 "windows"는 "Windows"와 일치합니다. ASCII 문자를 처리할 때 이 정책은 사용 가능한 ASCII 대/소문자 구분을 무시한다는 점을 제외하고 <xref:System.StringComparison.Ordinal?displayProperty=nameWithType>과 같습니다. 따라서 [A, Z] (\u0041-\u005A) 의 모든 문자는 [a,z] (\u0061-\007A) 의 해당 문자와 일치합니다. ASCII 범위를 벗어난 대/소문자 구분에는 고정 문화권 테이블이 사용됩니다. 따라서 다음 비교는  
   
  [!code-csharp[Conceptual.Strings.BestPractices#4](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.strings.bestpractices/cs/comparison2.cs#4)]
  [!code-vb[Conceptual.Strings.BestPractices#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.strings.bestpractices/vb/comparison2.vb#4)]  
@@ -330,7 +319,7 @@ ms.lasthandoff: 12/23/2017
  [!code-csharp[Conceptual.Strings.BestPractices#7](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.strings.bestpractices/cs/indirect1.cs#7)]
  [!code-vb[Conceptual.Strings.BestPractices#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.strings.bestpractices/vb/indirect1.vb#7)]  
   
- 배열을 정렬 및 검색할 때 둘 다 같은 서수(문화권을 구분하지 않는) 비교 메서드를 사용하는 다음 예제에서 권장되는 변형을 보여줍니다. 변경 코드는 두 예제의 `Line A` 및 `Line B` 줄에 반영됩니다.  
+ 배열을 정렬 및 검색할 때 둘 다 같은 서수(문화권을 구분하지 않는) 비교 메서드를 사용하는 다음 예제에서 권장되는 변형을 보여 줍니다. 변경 코드는 두 예제의 `Line A` 및 `Line B` 줄에 반영됩니다.  
   
  [!code-csharp[Conceptual.Strings.BestPractices#8](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.strings.bestpractices/cs/indirect1.cs#8)]
  [!code-vb[Conceptual.Strings.BestPractices#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.strings.bestpractices/vb/indirect1.vb#8)]  
@@ -362,7 +351,7 @@ ms.lasthandoff: 12/23/2017
   
 -   숫자 또는 날짜/시간의 형식 지정을 관리하는 국제, 지역 또는 국가 표준은 시간에 지나면서 변경되고 이들 변경은 Windows 운영 체제 업데이트에 통합됩니다. 형식 지정 규칙이 변경될 때 이전 규칙을 사용하여 형식이 지정된 데이터를 읽지 못하게 될 수 있습니다.  
   
- 다음 예제에서는 문화권 구분 형식 지정을 사용하여 데이터를 유지함으로 인해 제한된 이식성을 보여줍니다. 예제에서는 날짜 및 시간 값 배열을 파일에 저장합니다. 이들 값은 영어(미국) 문화권의 규칙을 사용하여 형식이 지정됩니다. 응용 프로그램이 현재 스레드 문화권을 프랑스어(스위스)로 변경하고 나면 현재 문화권의 형식 지정 규칙을 사용하여 저장된 값을 읽으려고 합니다. 두 데이터 항목을 읽으려는 시도로 인해 <xref:System.FormatException> 예외가 throw되고 날짜 배열에는 <xref:System.DateTime.MinValue>와 같은 잘못된 두 가지 요소가 포함됩니다.  
+ 다음 예제에서는 문화권 구분 형식 지정을 사용하여 데이터를 유지함으로 인해 제한된 이식성을 보여 줍니다. 예제에서는 날짜 및 시간 값 배열을 파일에 저장합니다. 이들 값은 영어(미국) 문화권의 규칙을 사용하여 형식이 지정됩니다. 응용 프로그램이 현재 스레드 문화권을 프랑스어(스위스)로 변경하고 나면 현재 문화권의 형식 지정 규칙을 사용하여 저장된 값을 읽으려고 합니다. 두 데이터 항목을 읽으려는 시도로 인해 <xref:System.FormatException> 예외가 throw되고 날짜 배열에는 <xref:System.DateTime.MinValue>와 같은 잘못된 두 가지 요소가 포함됩니다.  
   
  [!code-csharp[Conceptual.Strings.BestPractices#21](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.strings.bestpractices/cs/persistence.cs#21)]
  [!code-vb[Conceptual.Strings.BestPractices#21](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.strings.bestpractices/vb/persistence.vb#21)]  

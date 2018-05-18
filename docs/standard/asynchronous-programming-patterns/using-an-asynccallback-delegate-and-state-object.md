@@ -1,13 +1,7 @@
 ---
-title: "AsyncCallback 대리자 및 상태 개체 사용"
-ms.custom: 
+title: AsyncCallback 대리자 및 상태 개체 사용
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -17,18 +11,13 @@ helpviewer_keywords:
 - asynchronous programming, state objects
 - IAsyncResult interface, samples
 ms.assetid: e3e5475d-c5e9-43f0-928e-d18df8ca1f1d
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: cb0cdc9e98dcaf3c9f9879359eff0b31c8435773
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 259f7de52dff04af043554382a5bad35355d9926
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-an-asynccallback-delegate-and-state-object"></a>AsyncCallback 대리자 및 상태 개체 사용
 <xref:System.AsyncCallback> 대리자를 사용하여 별도의 스레드에서 비동기 작업의 결과를 처리할 때 상태 개체를 사용하여 콜백 간에 정보를 전달하고 최종 결과를 검색할 수 있습니다. 이 항목에서는 [AsyncCallback 대리자를 사용하여 비동기 작업 종료](../../../docs/standard/asynchronous-programming-patterns/using-an-asynccallback-delegate-to-end-an-asynchronous-operation.md)의 예를 확장하여 연습하는 방법을 보여줍니다.  

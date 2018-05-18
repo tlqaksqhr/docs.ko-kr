@@ -1,26 +1,17 @@
 ---
-title: "파일 인코딩(Visual Basic)"
-ms.custom: 
+title: 파일 인코딩(Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - character encodings
 - files [Visual Basic], encoding
 - Unicode, file encoding
 - file encoding
 ms.assetid: ea2c5f5f-bbb1-4150-9928-b9951fa6bc57
-caps.latest.revision: "8"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: deaab4371ab0d5d15c627bfd6352a7090bf08024
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 30aba517b3b0fbb5fa5bea48134934b2c2d26e50
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="file-encodings-visual-basic"></a>파일 인코딩(Visual Basic)
 문자 인코딩이라고도 하는 파일 인코딩은 텍스트 처리 시 문자를 나타내는 방법을 지정합니다. 처리할 수 있거나 없는 언어 문자를 기준으로 특정 인코딩이 다른 인코딩보다 선호될 수 있지만, 일반적으로 유니코드가 선호됩니다.  
@@ -35,7 +26,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="encoding-class"></a>Encoding 클래스  
  <xref:System.Text.Encoding> 클래스는 문자 인코딩을 나타냅니다. 이 표에서는 사용 가능한 인코딩 형식을 나열하고 각 인코딩 형식을 설명합니다.  
   
-|이름|설명|
+|name|설명|
 |---|---|    
 |<xref:System.Text.ASCIIEncoding>|유니코드 문자의 ASCII 문자 인코딩을 나타냅니다.|  
 |<xref:System.Text.UnicodeEncoding>|유니코드 문자의 UTF-16 인코딩을 나타냅니다.|  

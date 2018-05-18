@@ -1,31 +1,20 @@
 ---
 title: '방법: 작업 및 해당 자식 취소'
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - tasks, how to cancel
 ms.assetid: 08574301-8331-4719-ad50-9cf7f6ff3048
-caps.latest.revision: 16
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: ecccd5ddd3ff662b03ae7078aabaf58e397f7003
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 66082d58ac38348eb4f2ee16bf611259d9fe598e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-cancel-a-task-and-its-children"></a>방법: 작업 및 해당 자식 취소
 이 예제는 다음 작업을 수행하는 방법을 보여줍니다.  
@@ -41,7 +30,7 @@ ms.lasthandoff: 12/23/2017
  호출 스레드가 작업을 강제로 종료하지 않으며, 취소가 요청되었다는 신호만 보냅니다. 작업이 이미 실행 중인 경우 사용자 대리자가 요청을 알리고 적절하게 응답해야 합니다. 작업 실행 전에 취소를 요청하면 사용자 대리자가 실행되지 않고 작업 개체가 Canceled 상태로 전환됩니다.  
   
 ## <a name="example"></a>예  
- 이 예제는 취소 요청에 대한 응답으로 <xref:System.Threading.Tasks.Task> 및 해당 자식을 종료하는 방법을 보여줍니다. 또한 <xref:System.Threading.Tasks.TaskCanceledException>을 throw하여 사용자 대리자가 종료될 때 호출 스레드에서 필요에 따라 <xref:System.Threading.Tasks.Task.Wait%2A> 메서드나 <xref:System.Threading.Tasks.Task.WaitAll%2A> 메서드를 사용하여 작업이 종료될 때까지 대기할 수 있음을 보여줍니다. 이 경우 `try/catch` 블록을 사용하여 호출 스레드에서 예외를 처리해야 합니다.  
+ 이 예제는 취소 요청에 대한 응답으로 <xref:System.Threading.Tasks.Task> 및 해당 자식을 종료하는 방법을 보여줍니다. 또한 <xref:System.Threading.Tasks.TaskCanceledException>을 throw하여 사용자 대리자가 종료될 때 호출 스레드에서 필요에 따라 <xref:System.Threading.Tasks.Task.Wait%2A> 메서드나 <xref:System.Threading.Tasks.Task.WaitAll%2A> 메서드를 사용하여 작업이 종료될 때까지 대기할 수 있음을 보여 줍니다. 이 경우 `try/catch` 블록을 사용하여 호출 스레드에서 예외를 처리해야 합니다.  
   
  [!code-csharp[TPL_Cancellation#04](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_cancellation/cs/cancel1.cs#04)]
  [!code-vb[TPL_Cancellation#04](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_cancellation/vb/cancel1.vb#04)]  

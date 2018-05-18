@@ -1,29 +1,18 @@
 ---
-title: "스키마 컴파일을 위한 XmlSchemaSet"
-ms.custom: 
+title: 스키마 컴파일을 위한 XmlSchemaSet
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 55c4b175-3170-4071-9d60-dd5a42f79b54
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: a834fe8764744f5b2dd41de1f4fe1479059b87bb
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 91835006925f9768c25ad1a984a3b189e3e4c58c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="xmlschemaset-for-schema-compilation"></a>스키마 컴파일을 위한 XmlSchemaSet
 XSD(XML 스키마 정의 언어) 스키마를 저장하고 유효성을 검사할 수 있는 캐시인 <xref:System.Xml.Schema.XmlSchemaSet>에 대해 설명합니다.  
@@ -33,7 +22,7 @@ XSD(XML 스키마 정의 언어) 스키마를 저장하고 유효성을 검사�
   
  <xref:System.Xml?displayProperty=nameWithType> 버전 1.0에서는 스키마 라이브러리로서 <xref:System.Xml.Schema.XmlSchemaCollection> 클래스에 XML 스키마가 로드되었습니다. <xref:System.Xml?displayProperty=nameWithType> 버전 2.0에서는 <xref:System.Xml.XmlValidatingReader> 및 <xref:System.Xml.Schema.XmlSchemaCollection> 클래스는 사용되지 않으며 각각 <xref:System.Xml.XmlReader.Create%2A> 메서드와 <xref:System.Xml.Schema.XmlSchemaSet> 클래스로 바뀌었습니다.  
   
- <xref:System.Xml.Schema.XmlSchemaSet>이 추가되어 표준 호환성, 성능, 사용되지 않는 Microsoft XDR(XML 데이터 축소) 스키마 형식 등 많은 문제가 해결되었습니다.  
+ <xref:System.Xml.Schema.XmlSchemaSet>이 추가되어 표준 호환성, 성능, 사용되지 않는 Microsoft XDR(XML-Data Reduced) 스키마 형식 등 많은 문제가 해결되었습니다.  
   
  다음은 <xref:System.Xml.Schema.XmlSchemaCollection> 클래스와 <xref:System.Xml.Schema.XmlSchemaSet> 클래스를 비교한 것입니다.  
   
@@ -45,7 +34,7 @@ XSD(XML 스키마 정의 언어) 스키마를 저장하고 유효성을 검사�
 |컬렉션 내에는 특정 대상 네임스페이스에 대한 스키마가 한 개만 존재할 수 있습니다.|형식 충돌이 없으면 같은 대상 네임스페이스에 대한 여러 스키마를 추가할 수 있습니다.|  
   
 ## <a name="migrating-to-the-xmlschemaset"></a>XmlSchemaSet으로 마이그레이션  
- 다음 코드 예제에서는 사용되지 않는 <xref:System.Xml.Schema.XmlSchemaSet> 클래스에서 새 <xref:System.Xml.Schema.XmlSchemaCollection> 클래스로 마이그레이션하는 방법을 보여줍니다. 또한 두 클래스 간에 다음과 같은 주요 차이점을 설명합니다.  
+ 다음 코드 예제에서는 사용되지 않는 <xref:System.Xml.Schema.XmlSchemaSet> 클래스에서 새 <xref:System.Xml.Schema.XmlSchemaCollection> 클래스로 마이그레이션하는 방법을 보여 줍니다. 또한 두 클래스 간에 다음과 같은 주요 차이점을 설명합니다.  
   
 -   <xref:System.Xml.Schema.XmlSchemaCollection.Add%2A> 클래스의 <xref:System.Xml.Schema.XmlSchemaCollection> 메서드와 달리 <xref:System.Xml.Schema.XmlSchemaSet.Add%2A>의 <xref:System.Xml.Schema.XmlSchemaSet> 메서드를 호출할 때 스키마가 컴파일되지 않습니다. 예제 코드에서는 <xref:System.Xml.Schema.XmlSchemaSet.Compile%2A>의 <xref:System.Xml.Schema.XmlSchemaSet> 메서드를 명시적으로 호출합니다.  
   
@@ -171,7 +160,7 @@ schemaSet.Compile();
   
  <xref:System.Xml.Schema.XmlSchemaSet.Reprocess%2A>에서 컴파일을 수행한 후 <xref:System.Xml.Schema.XmlSchemaSet>의 스키마를 수정한 경우 <xref:System.Xml.Schema.XmlSchemaSet> 메서드를 사용해야 합니다.  
   
- 다음 예제에서는 <xref:System.Xml.Schema.XmlSchemaSet> 메서드를 사용하여 <xref:System.Xml.Schema.XmlSchemaSet.Reprocess%2A>에 추가한 스키마를 다시 처리하는 방법을 보여줍니다. <xref:System.Xml.Schema.XmlSchemaSet> 메서드를 사용하여 <xref:System.Xml.Schema.XmlSchemaSet.Compile%2A>을 컴파일하고 <xref:System.Xml.Schema.XmlSchemaSet>에 추가된 스키마를 수정한 후에는 <xref:System.Xml.Schema.XmlSchemaSet.IsCompiled%2A>의 스키마를 수정했더라도 `true` 속성은 <xref:System.Xml.Schema.XmlSchemaSet>로 설정됩니다. <xref:System.Xml.Schema.XmlSchemaSet.Reprocess%2A> 메서드를 호출하면 <xref:System.Xml.Schema.XmlSchemaSet.Add%2A> 메서드에 의해 수행된 모든 전처리가 수행되며 <xref:System.Xml.Schema.XmlSchemaSet.IsCompiled%2A> 속성이 `false`로 설정됩니다.  
+ 다음 예제에서는 <xref:System.Xml.Schema.XmlSchemaSet> 메서드를 사용하여 <xref:System.Xml.Schema.XmlSchemaSet.Reprocess%2A>에 추가한 스키마를 다시 처리하는 방법을 보여 줍니다. <xref:System.Xml.Schema.XmlSchemaSet> 메서드를 사용하여 <xref:System.Xml.Schema.XmlSchemaSet.Compile%2A>을 컴파일하고 <xref:System.Xml.Schema.XmlSchemaSet>에 추가된 스키마를 수정한 후에는 <xref:System.Xml.Schema.XmlSchemaSet.IsCompiled%2A>의 스키마를 수정했더라도 `true` 속성은 <xref:System.Xml.Schema.XmlSchemaSet>로 설정됩니다. <xref:System.Xml.Schema.XmlSchemaSet.Reprocess%2A> 메서드를 호출하면 <xref:System.Xml.Schema.XmlSchemaSet.Add%2A> 메서드에 의해 수행된 모든 전처리가 수행되며 <xref:System.Xml.Schema.XmlSchemaSet.IsCompiled%2A> 속성이 `false`로 설정됩니다.  
   
 ```vb  
 Dim schemaSet As XmlSchemaSet = New XmlSchemaSet()  

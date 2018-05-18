@@ -1,12 +1,6 @@
 ---
-title: "동기 클라이언트 소켓 사용"
-ms.custom: 
+title: 동기 클라이언트 소켓 사용
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -23,16 +17,14 @@ helpviewer_keywords:
 - Internet, sockets
 - client sockets
 ms.assetid: 945d00c6-7202-466c-9df9-140b84156d43
-caps.latest.revision: "12"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: 03595539d825f26251a24fce33ede2552b79b38b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: c9101957c6c4b9961ca5985bda8b8f82d69b45d7
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-a-synchronous-client-socket"></a>동기 클라이언트 소켓 사용
 동기 클라이언트 소켓은 네트워크 작업이 완료되는 동안 응용 프로그램을 일시 중단합니다. 동기 소켓은 네트워크를 작업에 많이 사용하는 응용 프로그램에 적합하지 않지만 다른 응용 프로그램의 네트워크 서비스에 대한 간단한 액세스를 가능하게 합니다.  

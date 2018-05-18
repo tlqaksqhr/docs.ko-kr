@@ -1,24 +1,17 @@
 ---
-title: "await(C# 참조)"
+title: await(C# 참조)
 ms.date: 05/22/2017
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 f1_keywords:
 - await_CSharpKeyword
 helpviewer_keywords:
 - await keyword [C#]
 - await [C#]
 ms.assetid: 50725c24-ac76-4ca7-bca1-dd57642ffedb
-caps.latest.revision: 
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 23a3299492c538963e9a5dceaadc81a44d386b19
-ms.sourcegitcommit: 401c4427a3ec0d1263543033b3084039278509dc
+ms.openlocfilehash: e32c7007ca98ce2153386665b60c45ff9e90cc3b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/06/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="await-c-reference"></a>await(C# 참조)
 `await` 연산자는 비동기 메서드의 작업에 적용되어 대기 중인 작업이 완료될 때까지 메서드의 실행에 일시 중단 지점을 삽입합니다. 작업은 진행 중인 작업을 나타냅니다.  
@@ -66,7 +59,7 @@ TResult result = await AsyncMethodThatReturnsValueTaskTResult();
   
 비동기 메서드에서 오류 처리에 대한 예제는 [try-catch](../../../csharp/language-reference/keywords/try-catch.md)를 참조하세요.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
 다음 예제에서는 해당 URL이 명령줄 인수로 전달되는 페이지의 총 문자 수를 반환합니다. 예제에서는 `async` 키워드로 표시된 `GetPageLengthsAsync` 메서드를 호출합니다. `GetPageLengthsAsync` 메서드는 다시 `await` 키워드를 사용하여 <xref:System.Net.Http.HttpClient.GetStringAsync%2A?displayProperty=nameWithType> 메서드 호출을 대기합니다.  
 
 [!code-csharp[await-example](../../../../samples/snippets/csharp/language-reference/keywords/await/await2.cs)]  

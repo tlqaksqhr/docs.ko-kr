@@ -1,19 +1,13 @@
 ---
 title: 값 형식과 참조 의미 체계
 description: 구조 복사를 안전하게 최소화하는 언어 기능 이해
-author: billwagner
-ms.author: wiwagn
 ms.date: 11/10/2017
-ms.topic: article
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.devlang: csharp
 ms.custom: mvc
-ms.openlocfilehash: 778897dc92f8a94178ebbbed7704c0dfe2397729
-ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
+ms.openlocfilehash: 3c53a426a6adb37f5091e4ad61835fef6c9f7729
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="reference-semantics-with-value-types"></a>값 형식과 참조 의미 체계
 

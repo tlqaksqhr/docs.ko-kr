@@ -1,12 +1,6 @@
 ---
-title: "WebRequest에서 파생"
-ms.custom: 
+title: WebRequest에서 파생
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - WebRequest class, pluggable protocols
 - protocol-specific request handler
@@ -16,16 +10,14 @@ helpviewer_keywords:
 - receiving data, pluggable protocols
 - protocols, pluggable
 ms.assetid: 9810c177-973e-43d7-823c-14960bd625ea
-caps.latest.revision: "9"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: 83579c25c154462cb21488acf9fcf84999b9a2d4
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 1a1dd850c6534443603fbefb2c1444c85f84a31b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="deriving-from-webrequest"></a>WebRequest에서 파생
 <xref:System.Net.WebRequest> 클래스는 .NET Framework 플러그형 프로토콜 모델에 적합한 프로토콜별 요청 처리기를 만들기 위한 기본 메서드 및 속성을 제공하는 추상 기본 클래스입니다. **WebRequest** 클래스를 사용하는 응용 프로그램은 사용되는 프로토콜을 지정할 필요 없이 지원되는 모든 프로토콜을 사용하여 데이터를 요청할 수 있습니다.  

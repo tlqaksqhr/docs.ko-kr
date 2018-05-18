@@ -1,13 +1,7 @@
 ---
-title: "사용자 지정 TimeSpan 서식 문자열"
-ms.custom: 
+title: 사용자 지정 TimeSpan 서식 문자열
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -19,18 +13,13 @@ helpviewer_keywords:
 - formatting [.NET Framework], time
 - custom TimeSpan format strings
 ms.assetid: a63ebf55-7269-416b-b4f5-286f6c03bf0e
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: f86aeab5a024c463dbfbf0a0d0ff198cef80f7ac
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 354b9fe1171e8e41702db001ab3c0e5daa65431e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="custom-timespan-format-strings"></a>사용자 지정 TimeSpan 서식 문자열
 <xref:System.TimeSpan> 형식 문자열은 서식 지정 작업에서 생성되는 <xref:System.TimeSpan> 값의 텍스트 표현을 정의합니다. 사용자 지정 형식 문자열은 하나 이상의 사용자 지정 <xref:System.TimeSpan> 형식 지정자와 임의 개수의 리터럴 문자로 구성됩니다. [표준 TimeSpan 형식 문자열](../../../docs/standard/base-types/standard-timespan-format-strings.md)이 아닌 문자열은 사용자 지정 <xref:System.TimeSpan> 형식 문자열로 해석됩니다.  
@@ -45,7 +34,7 @@ ms.lasthandoff: 12/23/2017
  [!code-csharp[Conceptual.TimeSpan.Custom#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.timespan.custom/cs/customformatexample1.cs#1)]
  [!code-vb[Conceptual.TimeSpan.Custom#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.timespan.custom/vb/customformatexample1.vb#1)]  
   
- 사용자 지정 <xref:System.TimeSpan> 형식 문자열은 <xref:System.TimeSpan.ParseExact%2A?displayProperty=nameWithType> 및 <xref:System.TimeSpan.TryParseExact%2A?displayProperty=nameWithType> 메서드에서도 구문 분석 작업에 필요한 입력 문자열 서식을 정의하는 데 사용합니다. 구문 분석 시에는 값의 문자열 표현이 해당 값으로 변환됩니다. 다음 예제에서는 구문 분석 작업에 표준 형식 문자열을 사용하는 방법을 보여줍니다.  
+ 사용자 지정 <xref:System.TimeSpan> 형식 문자열은 <xref:System.TimeSpan.ParseExact%2A?displayProperty=nameWithType> 및 <xref:System.TimeSpan.TryParseExact%2A?displayProperty=nameWithType> 메서드에서도 구문 분석 작업에 필요한 입력 문자열 서식을 정의하는 데 사용합니다. 구문 분석 시에는 값의 문자열 표현이 해당 값으로 변환됩니다. 다음 예제에서는 구문 분석 작업에 표준 형식 문자열을 사용하는 방법을 보여 줍니다.  
   
  [!code-csharp[Conceptual.TimeSpan.Custom#2](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.timespan.custom/cs/customparseexample1.cs#2)]
  [!code-vb[Conceptual.TimeSpan.Custom#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.timespan.custom/vb/customparseexample1.vb#2)]  
@@ -69,7 +58,7 @@ ms.lasthandoff: 12/23/2017
 |"fffff"|시간 간격의 1/100000초입니다.<br /><br /> 추가 정보: ["FFFFF" 사용자 지정 형식 지정자](#f5Specifier)|`TimeSpan.Parse("0:0:6.8954321")`:<br /><br /> `fffff` --> 89543<br /><br /> `ss\.fffff` --> 06.89543|  
 |"ffffff"|시간 간격의 1/1000000초입니다.<br /><br /> 추가 정보: ["FFFFFF" 사용자 지정 형식 지정자](#f6Specifier)|`TimeSpan.Parse("0:0:6.8954321")`:<br /><br /> `ffffff` --> 895432<br /><br /> `ss\.ffffff` --> 06.895432|  
 |"fffffff"|시간 간격의 1/10000000초(또는 소수 자릿수 틱)입니다.<br /><br /> 추가 정보: ["FFFFFFF" 사용자 지정 형식 지정자](#f7Specifier)|`TimeSpan.Parse("0:0:6.8954321")`:<br /><br /> `fffffff` --> 8954321<br /><br /> `ss\.fffffff` --> 06.8954321|  
-|"F", "%F"|시간 간격의 1/10초입니다. 이 자릿수가 0이면 아무것도 표시되지 않습니다.<br /><br /> 추가 정보: ["F" 사용자 지정 형식 지정자](#F_Specifier)|`TimeSpan.Parse("00:00:06.32")`:<br /><br /> `%F`: 3<br /><br /> `TimeSpan.Parse("0:0:3.091")`:<br /><br /> `ss\.F`: 03.|  
+|"F", "%F"|시간 간격의 1/10초입니다. 이 자릿수가 0이면 아무 것도 표시되지 않습니다.<br /><br /> 추가 정보: ["F" 사용자 지정 형식 지정자](#F_Specifier)|`TimeSpan.Parse("00:00:06.32")`:<br /><br /> `%F`: 3<br /><br /> `TimeSpan.Parse("0:0:3.091")`:<br /><br /> `ss\.F`: 03.|  
 |"FF"|시간 간격의 1/100초입니다. 뒤에 오는 소수 자릿수 0이나 연속 두 자리 0은 포함되지 않습니다.<br /><br /> 추가 정보: ["FF" 사용자 지정 형식 지정자](#FF_Specifier)|`TimeSpan.Parse("00:00:06.329")`:<br /><br /> `FF`: 32<br /><br /> `TimeSpan.Parse("0:0:3.101")`:<br /><br /> `ss\.FF`: 03.1|  
 |"FFF"|시간 간격의 밀리초입니다. 뒤에 오는 소수 자릿수 0은 포함되지 않습니다.<br /><br /> 추가 정보:|`TimeSpan.Parse("00:00:06.3291")`:<br /><br /> `FFF`: 329<br /><br /> `TimeSpan.Parse("0:0:3.1009")`:<br /><br /> `ss\.FFF`: 03.1|  
 |"FFFF"|시간 간격의 1/10000초입니다. 뒤에 오는 소수 자릿수 0은 포함되지 않습니다.<br /><br /> 추가 정보: ["FFFF" 사용자 지정 형식 지정자](#F4_Specifier)|`TimeSpan.Parse("00:00:06.32917")`:<br /><br /> `FFFFF`: 3291<br /><br /> `TimeSpan.Parse("0:0:3.10009")`:<br /><br /> `ss\.FFFF`: 03.1|  
@@ -89,7 +78,7 @@ ms.lasthandoff: 12/23/2017
  [!code-csharp[Conceptual.TimeSpan.Custom#3](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.timespan.custom/cs/customexamples1.cs#3)]
  [!code-vb[Conceptual.TimeSpan.Custom#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.timespan.custom/vb/customexamples1.vb#3)]  
   
- 다음 예제에서는 "d" 사용자 지정 형식 지정자를 사용하는 방법을 보여줍니다.  
+ 다음 예제에서는 "d" 사용자 지정 형식 지정자를 사용하는 방법을 보여 줍니다.  
   
  [!code-csharp[Conceptual.TimeSpan.Custom#4](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.timespan.custom/cs/customexamples1.cs#4)]
  [!code-vb[Conceptual.TimeSpan.Custom#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.timespan.custom/vb/customexamples1.vb#4)]  
@@ -123,7 +112,7 @@ ms.lasthandoff: 12/23/2017
  [!code-csharp[Conceptual.TimeSpan.Custom#8](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.timespan.custom/cs/customexamples1.cs#8)]
  [!code-vb[Conceptual.TimeSpan.Custom#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.timespan.custom/vb/customexamples1.vb#8)]  
   
- 다음 예제에서는 "h" 사용자 지정 형식 지정자를 사용하는 방법을 보여줍니다.  
+ 다음 예제에서는 "h" 사용자 지정 형식 지정자를 사용하는 방법을 보여 줍니다.  
   
  [!code-csharp[Conceptual.TimeSpan.Custom#7](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.timespan.custom/cs/customexamples1.cs#7)]
  [!code-vb[Conceptual.TimeSpan.Custom#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.timespan.custom/vb/customexamples1.vb#7)]  
@@ -139,7 +128,7 @@ ms.lasthandoff: 12/23/2017
  [!code-csharp[Conceptual.TimeSpan.Custom#9](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.timespan.custom/cs/customexamples1.cs#9)]
  [!code-vb[Conceptual.TimeSpan.Custom#9](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.timespan.custom/vb/customexamples1.vb#9)]  
   
- 다음 예제에서는 "hh" 사용자 지정 형식 지정자를 사용하는 방법을 보여줍니다.  
+ 다음 예제에서는 "hh" 사용자 지정 형식 지정자를 사용하는 방법을 보여 줍니다.  
   
  [!code-csharp[Conceptual.TimeSpan.Custom#10](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.timespan.custom/cs/customexamples1.cs#10)]
  [!code-vb[Conceptual.TimeSpan.Custom#10](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.timespan.custom/vb/customexamples1.vb#10)]  
@@ -160,7 +149,7 @@ ms.lasthandoff: 12/23/2017
  [!code-csharp[Conceptual.TimeSpan.Custom#11](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.timespan.custom/cs/customexamples1.cs#11)]
  [!code-vb[Conceptual.TimeSpan.Custom#11](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.timespan.custom/vb/customexamples1.vb#11)]  
   
- 다음 예제에서는 "m" 사용자 지정 형식 지정자를 사용하는 방법을 보여줍니다.  
+ 다음 예제에서는 "m" 사용자 지정 형식 지정자를 사용하는 방법을 보여 줍니다.  
   
  [!code-csharp[Conceptual.TimeSpan.Custom#12](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.timespan.custom/cs/customexamples1.cs#12)]
  [!code-vb[Conceptual.TimeSpan.Custom#12](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.timespan.custom/vb/customexamples1.vb#12)]  
@@ -176,7 +165,7 @@ ms.lasthandoff: 12/23/2017
  [!code-csharp[Conceptual.TimeSpan.Custom#13](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.timespan.custom/cs/customexamples1.cs#13)]
  [!code-vb[Conceptual.TimeSpan.Custom#13](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.timespan.custom/vb/customexamples1.vb#13)]  
   
- 다음 예제에서는 "mm" 사용자 지정 형식 지정자를 사용하는 방법을 보여줍니다.  
+ 다음 예제에서는 "mm" 사용자 지정 형식 지정자를 사용하는 방법을 보여 줍니다.  
   
  [!code-csharp[Conceptual.TimeSpan.Custom#14](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.timespan.custom/cs/customexamples1.cs#14)]
  [!code-vb[Conceptual.TimeSpan.Custom#14](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.timespan.custom/vb/customexamples1.vb#14)]  
@@ -197,7 +186,7 @@ ms.lasthandoff: 12/23/2017
  [!code-csharp[Conceptual.TimeSpan.Custom#17](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.timespan.custom/cs/customexamples1.cs#17)]
  [!code-vb[Conceptual.TimeSpan.Custom#17](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.timespan.custom/vb/customexamples1.vb#17)]  
   
- 다음 예제에서는 "s" 사용자 지정 형식 지정자를 사용하는 방법을 보여줍니다.  
+ 다음 예제에서는 "s" 사용자 지정 형식 지정자를 사용하는 방법을 보여 줍니다.  
   
  [!code-csharp[Conceptual.TimeSpan.Custom#16](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.timespan.custom/cs/customexamples1.cs#16)]
  [!code-vb[Conceptual.TimeSpan.Custom#16](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.timespan.custom/vb/customexamples1.vb#16)]  
@@ -213,7 +202,7 @@ ms.lasthandoff: 12/23/2017
  [!code-csharp[Conceptual.TimeSpan.Custom#18](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.timespan.custom/cs/customexamples1.cs#18)]
  [!code-vb[Conceptual.TimeSpan.Custom#18](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.timespan.custom/vb/customexamples1.vb#18)]  
   
- 다음 예제에서는 "ss" 사용자 지정 형식 지정자를 사용하는 방법을 보여줍니다.  
+ 다음 예제에서는 "ss" 사용자 지정 형식 지정자를 사용하는 방법을 보여 줍니다.  
   
  [!code-csharp[Conceptual.TimeSpan.Custom#19](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.timespan.custom/cs/customexamples1.cs#19)]
  [!code-vb[Conceptual.TimeSpan.Custom#19](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.timespan.custom/vb/customexamples1.vb#19)]  

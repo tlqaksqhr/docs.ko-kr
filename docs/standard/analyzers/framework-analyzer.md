@@ -1,19 +1,15 @@
 ---
-title: ".NET 보안 분석기 - .NET"
-description: ".NET Framework 분석기 패키지에서 .NET 보안 분석기를 사용하여 보안 위험을 찾아 해결하는 방법을 알아봅니다."
-keywords: .NET, .NET Core
+title: .NET 보안 분석기 - .NET
+description: .NET Framework 분석기 패키지에서 .NET 보안 분석기를 사용하여 보안 위험을 찾아 해결하는 방법을 알아봅니다.
 author: billwagner
 ms.author: billwagner
 ms.date: 01/25/2018
-ms.topic: article
-ms.prod: .net
 ms.technology: dotnet-standard
-ms.devlang: dotnet
-ms.openlocfilehash: 06a387d72d06609182c8894dd874b241a5d7b69c
-ms.sourcegitcommit: 3a96c706e4dbb4667bf3bf37edac9e1666646f93
+ms.openlocfilehash: 904218c177ea45f82a73b4532ce3230af954aa85
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="the-net-framework-analyzer"></a>.NET Framework 분석기
 

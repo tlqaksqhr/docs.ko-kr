@@ -1,29 +1,18 @@
 ---
-title: "사용자 정의 함수 및 변수"
-ms.custom: 
+title: 사용자 정의 함수 및 변수
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 4772f20e-1e7f-496e-93c2-1484473be555
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: b6870861541a063c56f83dcb286d21a5a970d1b1
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: c2ce474dac44de1ac72811ecd3bc294ba57ce40a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="user-defined-functions-and-variables"></a>사용자 정의 함수 및 변수
 <xref:System.Xml.XPath.XPathNavigator> 클래스는 <xref:System.Xml.XPath.XPathDocument> 데이터와 상호 작용하는 데 사용되는 메서드 집합을 제공합니다. XPath 쿼리 식에서 사용되는 확장명 함수 및 변수를 구현하여 표준 XPath 함수를 보완할 수 있습니다. <xref:System.Xml.XPath.XPathExpression.SetContext%2A> 메서드는 <xref:System.Xml.Xsl.XsltContext>에서 파생되는 사용자 정의 컨텍스트를 적용할 수 있습니다. 사용자 정의 함수는 사용자 지정 컨텍스트로 확인됩니다.  

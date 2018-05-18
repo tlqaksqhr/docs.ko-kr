@@ -1,18 +1,13 @@
 ---
 title: .NET Compiler Platform SDK 작업 영역 모델 사용
 description: 이 개요에서는 코드에 대한 작업 영역 및 프로젝트를 쿼리하고 조작하는 데 사용하는 형식에 대한 이해를 제공합니다.
-author: billwagner
-ms.author: wiwagn
 ms.date: 10/15/2017
-ms.topic: conceptual
-ms.prod: .net
-ms.devlang: devlang-csharp
 ms.custom: mvc
-ms.openlocfilehash: c42795346c505f925c0b4cb232325085fa065201
-ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
+ms.openlocfilehash: 7d450b31cbf2c83c79552d1ace3a1ae692bfdd88
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="work-with-a-workspace"></a>작업 영역 작업
 

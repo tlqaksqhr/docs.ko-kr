@@ -1,13 +1,6 @@
 ---
-title: "Winres.exe(Windows Forms 리소스 편집기)"
-ms.custom: 
+title: Winres.exe(Windows Forms 리소스 편집기)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - Winres.exe
 - Windows Forms Resource Editor
@@ -17,16 +10,13 @@ helpviewer_keywords:
 - resx files
 - .resx files
 ms.assetid: cb8bc835-9221-4888-af53-1a4f5fad6c48
-caps.latest.revision: "23"
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: efdb5055197611baf56fdc25fe7c0700c1a06dfd
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 69ba816e5b7cf05ef094153b7ff044d573ac1760
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="winresexe-windows-forms-resource-editor"></a>Winres.exe(Windows Forms 리소스 편집기)
 Winres.exe(Windows Forms 리소스 편집기)는 지역화 전문가가 폼에 사용된 Windows Forms UI(사용자 인터페이스)를 쉽게 지역화하는 데 사용할 수 있는 시각적 레이아웃 도구입니다. Winres.exe의 입력으로 사용되는 .resx 또는 .resources 파일은 Microsoft Visual Studio 같은 시각적 디자인 환경을 사용하여 만들 수 있습니다. .NET Framework 응용 프로그램의 리소스를 배포하는 데 대한 자세한 내용은 [데스크톱 앱의 리소스](../../../docs/framework/resources/index.md)를 참조하세요.  

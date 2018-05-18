@@ -1,21 +1,12 @@
 ---
-title: "방법: XML 트리의 모양 변환(C#)"
-ms.custom: 
+title: '방법: XML 트리의 모양 변환(C#)'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-csharp
-ms.topic: article
 ms.assetid: 93c5d426-dea2-4709-a991-60204de42e8f
-caps.latest.revision: "3"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: fd5b1351f8473aa2a1bd40992095a89fdfc38375
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 2c1f5728781a89caa813c2e3cbd822ae711a77e4
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-transform-the-shape-of-an-xml-tree-c"></a>방법: XML 트리의 모양 변환(C#)
 XML 문서의 *모양*은 요소 이름, 특성 이름 및 계층 구조의 특징을 나타냅니다.  
@@ -26,7 +17,7 @@ XML 문서의 *모양*은 요소 이름, 특성 이름 및 계층 구조의 특�
   
  이 항목의 두 번째 예제에서는 소스 문서와 모양이 다른 XML 문서를 만들고 요소 이름의 대/소문자를 변경한 다음 일부 요소의 이름을 바꾸고 소스 트리의 일부 요소를 변환된 트리 외부에 둡니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 코드에서는 포함된 쿼리 식을 사용하여 XML 파일의 모양을 변경합니다.  
   
  이 예제의 소스 XML 문서에는 `Customers` 요소 아래에 모든 고객이 포함된 `Root` 요소가 들어 있습니다. 또한 `Orders` 요소 아래에 모든 주문이 포함된 `Root` 요소도 포함되어 있습니다. 이 예제에서는 각 고객의 주문이 `Orders` 요소에 있는 `Customer` 요소에 포함되어 있는 새 XML 트리를 만듭니다. 원래 문서에도 `CustomerID` 요소에 `Order` 요소가 포함되어 있습니다. 이 요소는 모양이 다시 변경된 문서에서 제거됩니다.  
@@ -93,7 +84,7 @@ Console.WriteLine(newCustOrd);
   . . .  
 ```  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  이 예제에서는 일부 요소의 이름을 바꾸고 일부 특성을 요소로 변환합니다.  
   
  코드에서는 `ConvertAddress` 개체의 목록을 반환하는 <xref:System.Xml.Linq.XElement>를 호출합니다. 메서드의 인수는 `Address` 특성의 값이 `Type`인 `"Shipping"` 복합 요소를 확인하는 쿼리입니다.  

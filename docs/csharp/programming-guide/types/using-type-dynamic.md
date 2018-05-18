@@ -1,21 +1,15 @@
 ---
-title: "dynamic 형식 사용(C# 프로그래밍 가이드)"
+title: dynamic 형식 사용(C# 프로그래밍 가이드)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - dynamic [C#], about dynamic type
 - dynamic type [C#]
 ms.assetid: 3828989d-c967-4a51-b948-857ebc8fdf26
-caps.latest.revision: "30"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: e4eea7cd1bf87ac4c4efb827e6a9ca403e94acc9
-ms.sourcegitcommit: 7e99f66ef09d2903e22c789c67ff5a10aa953b2f
+ms.openlocfilehash: 67eb39fd6f2077d2adf1d38d001e801b815d687d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-type-dynamic-c-programming-guide"></a>dynamic 형식 사용(C# 프로그래밍 가이드)
 [!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)]에서는 새로운 형식 `dynamic`을 소개합니다. 이 형식은 정적 형식이지만 `dynamic` 형식의 개체가 정적 형식 검사를 건너뜁니다. 대부분의 경우 이 형식은 `object` 형식을 가지고 있는 것처럼 작동합니다. 컴파일 시간에 `dynamic` 형식의 요소는 모든 연산을 지원하는 것으로 간주됩니다. 따라서 개체가 값을 COM API, IronPython 같은 동적 언어, HTML DOM(문서 개체 모델), 리플렉션 또는 프로그램의 다른 곳 등 어디서 가져오든 신경을 쓸 필요가 없습니다. 그러나 코드가 유효하지 않으면 런타임 시 오류가 catch됩니다.  

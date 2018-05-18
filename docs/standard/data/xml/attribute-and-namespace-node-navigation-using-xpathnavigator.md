@@ -1,26 +1,15 @@
 ---
-title: "XPathNavigator를 사용하여 특성 및 네임스페이스 노드 탐색"
-ms.custom: 
+title: XPathNavigator를 사용하여 특성 및 네임스페이스 노드 탐색
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 23975f88-e0af-4b88-93de-9e20e11880ad
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 2f86abb7da5509a80cceede0f1092a75cef4d8da
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 34ce6ec5a4cc5ddd4542474dc9ce55ff64a274ec
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="attribute-and-namespace-node-navigation-using-xpathnavigator"></a>XPathNavigator를 사용하여 특성 및 네임스페이스 노드 탐색
 <xref:System.Xml.XPath.XPathNavigator> 클래스는 두 개의 탐색 메서드 집합을 제공합니다. [XPathNavigator를 사용하여 노드 집합 탐색](../../../../docs/standard/data/xml/node-set-navigation-using-xpathnavigator.md) 항목에서 찾을 수 있는 첫 번째 집합은 <xref:System.Xml.XPath.XPathDocument> 또는 <xref:System.Xml.XmlDocument> 개체의 ‘노드 집합’을 탐색하는 데 사용합니다. 이 항목에서 설명하는 두 번째 집합은 <xref:System.Xml.XPath.XPathDocument> 또는 <xref:System.Xml.XmlDocument> 개체의 ‘특성 및 네임스페이스 노드’를 탐색하는 데 사용합니다.  
@@ -64,7 +53,7 @@ ms.lasthandoff: 12/23/2017
 ### <a name="the-xpathnamespacescope-enumeration"></a>XPathNamespaceScope 열거형  
  네임스페이스 노드를 탐색할 때 <xref:System.Xml.XPath.XPathNavigator.MoveToFirstNamespace%2A> 매개 변수를 사용하여 <xref:System.Xml.XPath.XPathNavigator.MoveToNextNamespace%2A> 및 <xref:System.Xml.XPath.XPathNamespaceScope> 메서드를 호출할 수 있습니다. 이러한 메서드는 매개 변수 없이 호출되는 메서드와 다르게 동작합니다. <xref:System.Xml.XPath.XPathNamespaceScope> 열거형에는 <xref:System.Xml.XPath.XPathNamespaceScope.All>, <xref:System.Xml.XPath.XPathNamespaceScope.ExcludeXml> 또는 <xref:System.Xml.XPath.XPathNamespaceScope.Local> 값이 있습니다.  
   
- 다음 예제에서는 XML 문서의 다양한 범위에서 <xref:System.Xml.XPath.XPathNavigator.MoveToFirstNamespace%2A> 및 <xref:System.Xml.XPath.XPathNavigator.MoveToNextNamespace%2A> 메서드가 반환하는 네임스페이스를 보여줍니다.  
+ 다음 예제에서는 XML 문서의 다양한 범위에서 <xref:System.Xml.XPath.XPathNavigator.MoveToFirstNamespace%2A> 및 <xref:System.Xml.XPath.XPathNavigator.MoveToNextNamespace%2A> 메서드가 반환하는 네임스페이스를 보여 줍니다.  
   
 ```xml  
 <root>  
@@ -85,7 +74,7 @@ ms.lasthandoff: 12/23/2017
 > [!NOTE]
 >  <xref:System.Xml.XPath.XPathNavigator> 클래스는 네임스페이스 노드를 문서 순서와 역순으로 반환합니다. 따라서 <xref:System.Xml.XPath.XPathNavigator.MoveToFirstNamespace%2A>는 기본적으로 현재 범위의 마지막 네임스페이스 노드로 이동합니다.  
   
- 다음 예제에서는 XML 문서의 다양한 범위에서 <xref:System.Xml.XPath.XPathNavigator.MoveToFirstNamespace%2A> 열거형을 지정한 경우 <xref:System.Xml.XPath.XPathNavigator.MoveToNextNamespace%2A> 및 <xref:System.Xml.XPath.XPathNamespaceScope> 메서드가 반환하는 네임스페이스를 보여줍니다.  
+ 다음 예제에서는 XML 문서의 다양한 범위에서 <xref:System.Xml.XPath.XPathNavigator.MoveToFirstNamespace%2A> 열거형을 지정한 경우 <xref:System.Xml.XPath.XPathNavigator.MoveToNextNamespace%2A> 및 <xref:System.Xml.XPath.XPathNamespaceScope> 메서드가 반환하는 네임스페이스를 보여 줍니다.  
   
 ```xml  
 <root xmlns="http://www.contoso.com" xmlns:a="http://www.contoso.com/a" xmlns:b="http://www.contoso.com/b">  

@@ -3,17 +3,11 @@ title: .NET Core 명령줄 도구 아키텍처
 description: .NET Core 도구 레이어 및 최신 버전의 변경 내용에 대해 알아봅니다.
 author: blackdwarf
 ms.date: 03/06/2017
-ms.topic: conceptual
-ms.prod: dotnet-core
-ms.technology: dotnet-cli
-ms.devlang: dotnet
-ms.workload:
-- dotnetcore
-ms.openlocfilehash: 909e3ba088a3eabededf008fa07a51ac7d677fa2
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 50ccaa490f079c62901c57eb9cf91690ee655bf2
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="high-level-overview-of-changes-in-the-net-core-tools"></a>.NET Core 도구의 변경 내용에 대한 대략적인 개요
 
@@ -22,7 +16,7 @@ ms.lasthandoff: 04/28/2018
 ## <a name="moving-away-from-projectjson"></a>project.json로부터의 이동
 .NET Core용 도구의 가장 큰 변화는 프로젝트 시스템이 [project.json에서 csproj로 전환](https://blogs.msdn.microsoft.com/dotnet/2016/05/23/changes-to-project-json/)되었다는 점입니다. 최신 버전의 명령줄 도구는 *project.json* 파일을 지원하지 않습니다. 즉, project.json 기반 응용 프로그램 및 라이브러리를 빌드, 실행 또는 게시하는 데 사용할 수 없습니다. 이 버전의 도구를 사용하려면 기존 프로젝트를 마이그레이션하거나 새 프로젝트를 시작해야 합니다. 
 
-이러한 흐름에 포함되어 project.json 프로젝트를 빌드하기 위해 개발된 사용자 지정 빌드 엔진이 전문적이고 완전한 기능의 빌드 엔진인 [MSBuild](https://github.com/Microsoft/msbuild)로 바뀌었습니다. MSBuild는.NET 커뮤니티에서 잘 알려진 엔진으로 플랫폼의 첫 번째 릴리스 이후 핵심 기술로 부상하였습니다. 물론 .NET Core 응용 프로그램을 구축해야 하므로 MSBuild는 .NET Core로 이식되었으며, .NET Core에서 실행하는 모든 플랫폼에서 사용할 수 있습니다. .NET Core의 주요 기능 중 하나는 플랫폼 간 개발 스택에 대한 것으로 이 이동으로 인해 이 기능이 없어지진 않습니다.
+이러한 흐름에 포함되어 project.json 프로젝트를 빌드하기 위해 개발된 사용자 지정 빌드 엔진이 전문적이고 완전한 기능의 빌드 엔진인 [MSBuild](https://github.com/Microsoft/msbuild)로 바뀌었습니다. MSBuild는.NET 커뮤니티에서 잘 알려진 엔진으로 플랫폼의 첫 번째 릴리스 이후 핵심 기술로 부상하였습니다. 물론 .NET Core 응용 프로그램을 구축해야 하므로 MSBuild는 .NET Core로 이식되었으며, .NET Core에서 실행하는 모든 플랫폼에서 사용할 수 있습니다. NET Core의 주요 기능 중 하나는 플랫폼 간 개발 스택에 대한 것으로 이 이동으로 인해 이 기능이 없어지진 않습니다.
 
 > [!NOTE]
 > 처음 MSBuild를 사용하는 경우 자세한 내용을 보려면 [MSBuild 개념](/visualstudio/msbuild/msbuild-concepts) 문서를 읽어 시작할 수 있습니다. 

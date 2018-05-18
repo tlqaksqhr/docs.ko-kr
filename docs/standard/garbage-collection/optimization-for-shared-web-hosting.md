@@ -1,30 +1,19 @@
 ---
-title: "공유 웹 호스팅을 위한 최적화"
-ms.custom: 
+title: 공유 웹 호스팅을 위한 최적화
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - garbage collection, Web hosting
 - garbage collection, optimizing
 - garbage collection, shared Web hosting
 ms.assetid: be98c0ab-7ef8-409f-8a0d-cb6e5b75ff20
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 7525ca263449da77b4b6364fd6bcfd51dcba145d
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: c3c979477f0928c9c3d2a393042867c84df33ecf
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="optimization-for-shared-web-hosting"></a>공유 웹 호스팅을 위한 최적화
 여러 소규모 웹 사이트를 호스트하여 공유되는 서버의 관리자인 경우 .NET 디렉터리의 Aspnet.config 파일에서 `runtime` 노드에 ​​다음 `gcTrimCommitOnLowMemory` 설정을 추가하여 성능을 최적화하고 사이트 용량을 늘릴 수 있습니다.  

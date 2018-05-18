@@ -1,31 +1,20 @@
 ---
 title: 예외 처리(작업 병렬 라이브러리)
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - tasks, exceptions
 ms.assetid: beb51e50-9061-4d3d-908c-56a4f7c2e8c1
-caps.latest.revision: 21
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 86b4d105b7d79abbd25b342774705866119ada68
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 16ab0b8967ac394540f201fcc9098024faaccaa7
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="exception-handling-task-parallel-library"></a>예외 처리(작업 병렬 라이브러리)
 작업 내에서 실행되는 사용자 코드에 의해 throw된 처리되지 않은 예외는 이 항목의 뒷부분에서 설명하는 특정 시나리오를 제외하고는 호출 스레드로 다시 전파됩니다. 정적 또는 인스턴스 <xref:System.Threading.Tasks.Task.Wait%2A?displayProperty=nameWithType> 또는 <!--zz <xref:System.Threading.Tasks.Task%601.Wait%2A?displayProperty=nameWithType>  --> `Wait` 메서드 중 하나를 사용할 때 예외가 전파되며 `try`/`catch` 문에 호출을 포함하여 예외를 처리할 수 있습니다. 어떤 작업이 연결된 자식 작업의 부모인 경우 또는 여러 작업에서 대기 중인 경우, 여러 개의 예외가 throw될 수 있습니다.  
@@ -49,7 +38,7 @@ ms.lasthandoff: 12/23/2017
  예외가 가입된 스레드로 다시 버블 업될 수 있는 경우 예외가 발생한 후에도 작업에서 일부 항목을 계속 처리할 수 있습니다.  
   
 > [!NOTE]
->  “내 코드만”이 사용하도록 설정된 경우 Visual Studio가 예외를 발생시키는 줄에서 중단하고 "예외가 사용자 코드에서 처리되지 않았다"는 오류 메시지를 표시합니다. 이 오류는 심각하지는 않습니다. F5 키를 눌러 계속하고 이러한 예제에 설명된 예외 처리 동작을 확인할 수 있습니다. 첫 번째 오류 지점에서 Visual Studio가 실행을 중단하지 않도록 하려면 **도구, 옵션, 디버깅, 일반** 을 차례로 선택하고 **내 코드만 사용**확인란의 선택을 취소하기만 하면 됩니다.  
+>  “내 코드만”이 사용하도록 설정된 경우 Visual Studio가 예외를 발생시키는 줄에서 중단하고 "예외가 사용자 코드에서 처리되지 않았다"는 오류 메시지를 표시합니다. 이 오류는 심각하지는 않습니다. F5 키를 눌러 계속하고 이러한 예제에 설명된 예외 처리 동작을 확인할 수 있습니다. 맨 처음 오류 지점에서 Visual Studio가 실행을 중단하지 않도록 하려면 **도구, 옵션, 디버깅, 일반** 을 차례로 선택하고 **내 코드만 사용**확인란의 선택을 취소하기만 하면 됩니다.  
   
 ## <a name="attached-child-tasks-and-nested-aggregateexceptions"></a>연결된 자식 작업 및 중첩된 AggregateExceptions  
  작업에 예외를 throw하는 연결된 자식 작업이 있는 경우 해당 예외가 <xref:System.AggregateException> 에서 래핑된 다음 상위 작업으로 전파되고, 이 상위 작업은 해당 예외를 자체 <xref:System.AggregateException> 에서 래핑한 다음 호출 스레드로 다시 전파합니다. 이러한 경우 <xref:System.Threading.Tasks.Task.Wait%2A?displayProperty=nameWithType>, <!--zz <xref:System.Threading.Tasks.Task%601.Wait%2A?displayProperty=nameWithType>  --> `Wait`, <xref:System.Threading.Tasks.Task.WaitAny%2A> 또는 <xref:System.Threading.Tasks.Task.WaitAll%2A> 메서드에서 catch된 <xref:System.AggregateException> 예외의 <xref:System.AggregateException.InnerExceptions%2A> 속성에는 오류를 발생시킨 원래 예외가 아니라 하나 이상의 <xref:System.AggregateException> 인스턴스가 포함됩니다. 중첩된 <xref:System.AggregateException> 예외를 반복할 필요가 없도록 하려면 <xref:System.AggregateException.InnerExceptions%2A?displayProperty=nameWithType> 속성에 원래 예외가 포함되도록 <xref:System.AggregateException.Flatten%2A> 메서드를 사용하여 중첩된 모든 <xref:System.AggregateException> 예외를 제거합니다. 다음 예제에서는 중첩된 <xref:System.AggregateException> 인스턴스가 하나의 루프에서 결합되고 처리됩니다.  

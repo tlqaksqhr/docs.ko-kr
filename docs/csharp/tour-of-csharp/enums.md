@@ -1,20 +1,13 @@
 ---
-title: "C# 열거형 - C# 언어 둘러보기"
-description: "C#의 열거형, 명명된 개별 상수에 대해 자세히 알아보기"
-keywords: ".NET, c샵"
-author: BillWagner
-ms.author: wiwagn
+title: C# 열거형 - C# 언어 둘러보기
+description: C#의 열거형, 명명된 개별 상수에 대해 자세히 알아보기
 ms.date: 08/10/2016
-ms.topic: article
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.devlang: csharp
 ms.assetid: 7faba1cc-6ea9-4a19-adb9-0335e4b132e5
-ms.openlocfilehash: 77d315dd87d9cab32605de415674d146eb9115fa
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 7fe2626381cb90e55842e3be17dd450eb73d5a5b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="enums"></a>열거형
 

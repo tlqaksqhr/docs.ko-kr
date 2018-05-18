@@ -1,14 +1,6 @@
 ---
 title: 데스크톱 응용 프로그램용 위성 어셈블리 만들기
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-bcl
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -31,17 +23,13 @@ helpviewer_keywords:
 - compiling satellite assemblies
 - re-signing assemblies
 ms.assetid: 8d5c6044-2919-41d2-8321-274706b295ac
-caps.latest.revision: ''
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 2f75da3332c8172a6a888e6f40c66383866799ea
-ms.sourcegitcommit: 498799639937c89de777361aab74261efe7b79ea
+ms.openlocfilehash: c308c7e16f106d00e5fd1b5ad820f8b330f4bbbf
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="creating-satellite-assemblies-for-desktop-apps"></a>데스크톱 응용 프로그램용 위성 어셈블리 만들기
 리소스 파일은 지역화된 응용 프로그램에서 중요한 역할을 합니다. 응용 프로그램을 사용하여 사용자의 언어 및 문화권에서 문자열, 이미지 및 기타 데이터를 표시하고 사용자의 언어 또는 문화권에 대한 리소스를 사용할 수 없는 경우 대체 데이터를 제공할 수 있습니다. .NET Framework에서는 허브 및 스포크 모델을 사용하여 지역화된 리소스를 찾고 검색합니다. 허브는 지역화할 수 없는 실행 코드와 중립 또는 기본 문화권이라고 하는 단일 문화권의 리소스를 포함하는 주 어셈블리입니다. 기본 문화권은 응용 프로그램의 대체 문화권으로, 지역화된 리소스를 사용할 수 없는 경우 사용됩니다. <xref:System.Resources.NeutralResourcesLanguageAttribute> 특성을 사용하여 응용 프로그램의 기본 문화권의 문화를 지정합니다. 각 스포크는 지역화된 단일 문화권의 리소스를 포함하지만 코드는 포함하지 않는 위성 어셈블리에 연결됩니다. 위성 어셈블리는 주 어셈블리의 일부가 아니므로 응용 프로그램의 주 어셈블리를 바꾸지 않고도 특정 문화권에 해당하는 리소스를 손쉽게 업데이트하거나 바꿀 수 있습니다.  
@@ -87,11 +75,11 @@ al -target:lib -embed:strings.de.resources -culture:de -out:Example.resources.dl
   
 |옵션|설명|  
 |------------|-----------------|  
-|**-target:**lib|위성 어셈블리가 라이브러리(.dll) 파일로 컴파일되도록 지정합니다. 위성 어셈블리가 실행 코드를 포함하지 않고 응용 프로그램의 주 어셈블리가 아니므로 위성 어셈블리를 DLL로 저장해야 합니다.|  
-|**-embed:**strings.de.resources|Al.exe가 어셈블리를 컴파일할 때 포함할 리소스 파일의 이름을 지정합니다. 위성 어셈블리에 여러 개의 .resources 파일을 포함할 수 있지만, 허브 및 스포크 모델을 따르는 경우, 각 문화권에 대해 하나의 위성 어셈블리를 컴파일해야 합니다. 그러나 문자열 및 개체에 대해 별도의 .resources 파일을 만들 수 있습니다.|  
-|**-culture:**de|컴파일한 리소스의 문화권을 지정합니다. 공용 언어 런타임은 지정된 문화권의 리소스를 검색할 때 이 정보를 사용합니다. 이 옵션을 생략해도 Al.exe는 리소스를 컴파일하지만 런타임에서는 사용자가 리소스를 요청할 때 해당 리소스를 찾을 수 없습니다.|  
-|**-out:**Example.resources.dll|출력 파일의 이름을 지정합니다. 이 이름은 명명 표준 *baseName*.resources.*extension*을 따라야 합니다. 여기서 *baseName*은 주 어셈블리의 이름이고 *extension*은 유효한 파일 이름 확장명(예: .dll)입니다. 런타임이 출력 파일 이름을 기반으로 위성 어셈블리의 문화권을 결정할 수 없는 경우 지정하기 위해 **/culture** 옵션을 사용해야 합니다.|  
-|**-template:**Example.dll|위성 어셈블리가 culture 필드를 제외하고 모든 어셈블리 메타데이터를 상속할 어셈블리를 지정합니다. 이 옵션은 [강력한 이름](../../../docs/framework/app-domains/strong-named-assemblies.md)을 가진 어셈블리를 지정할 때에만 위성 어셈블리에 영향을 미칩니다.|  
+|**-target:** lib|위성 어셈블리가 라이브러리(.dll) 파일로 컴파일되도록 지정합니다. 위성 어셈블리가 실행 코드를 포함하지 않고 응용 프로그램의 주 어셈블리가 아니므로 위성 어셈블리를 DLL로 저장해야 합니다.|  
+|**-embed:** strings.de.resources|Al.exe가 어셈블리를 컴파일할 때 포함할 리소스 파일의 이름을 지정합니다. 위성 어셈블리에 여러 개의 .resources 파일을 포함할 수 있지만, 허브 및 스포크 모델을 따르는 경우, 각 문화권에 대해 하나의 위성 어셈블리를 컴파일해야 합니다. 그러나 문자열 및 개체에 대해 별도의 .resources 파일을 만들 수 있습니다.|  
+|**-culture:** de|컴파일한 리소스의 문화권을 지정합니다. 공용 언어 런타임은 지정된 문화권의 리소스를 검색할 때 이 정보를 사용합니다. 이 옵션을 생략해도 Al.exe는 리소스를 컴파일하지만 런타임에서는 사용자가 리소스를 요청할 때 해당 리소스를 찾을 수 없습니다.|  
+|**-out:** Example.resources.dll|출력 파일의 이름을 지정합니다. 이 이름은 명명 표준 *baseName*.resources.*extension*을 따라야 합니다. 여기서 *baseName*은 주 어셈블리의 이름이고 *extension*은 유효한 파일 이름 확장명(예: .dll)입니다. 런타임이 출력 파일 이름을 기반으로 위성 어셈블리의 문화권을 결정할 수 없는 경우 지정하기 위해 **/culture** 옵션을 사용해야 합니다.|  
+|**-template:** Example.dll|위성 어셈블리가 culture 필드를 제외하고 모든 어셈블리 메타데이터를 상속할 어셈블리를 지정합니다. 이 옵션은 [강력한 이름](../../../docs/framework/app-domains/strong-named-assemblies.md)을 가진 어셈블리를 지정할 때에만 위성 어셈블리에 영향을 미칩니다.|  
   
  Al.exe에서 사용할 수 있는 전체 옵션 목록을 보려면 [어셈블리 링커(Al.exe)](../../../docs/framework/tools/al-exe-assembly-linker.md)를 참조하세요.  
   

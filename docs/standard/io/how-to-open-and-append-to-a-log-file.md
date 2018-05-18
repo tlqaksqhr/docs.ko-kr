@@ -1,13 +1,7 @@
 ---
-title: "방법: 로그 파일 열기 및 추가"
-ms.custom: 
+title: '방법: 로그 파일 열기 및 추가'
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -17,18 +11,13 @@ helpviewer_keywords:
 - log files, appending to
 - I/O [.NET Framework], log files
 ms.assetid: 74423362-1721-49cb-aa0a-e04005f72a06
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 333b20adee4ea2826a1fc6795a39490dca1af843
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: cd2d13a49d9b696541ac278b9f1847c8e4a48cf1
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-open-and-append-to-a-log-file"></a>방법: 로그 파일 열기 및 추가
 <xref:System.IO.StreamWriter> 및 <xref:System.IO.StreamReader>는 스트림에서 문자를 쓰고 문자를 읽습니다. 다음 코드 예제는 입력을 위해 `log.txt` 파일을 열거나, 파일이 존재하지 않는 경우 파일을 만들고 파일의 끝에 정보를 추가합니다. 그러면 파일의 콘텐츠가 디스플레이의 표준 출력에 기록됩니다. 이 예제의 대안으로, 정보를 단일 문자열 또는 문자열 배열로 저장할 수 있으며, <xref:System.IO.File.WriteAllText%2A> 또는 <xref:System.IO.File.WriteAllLines%2A> 메서드를 동일한 기능을 수행하는 데 사용할 수도 있습니다.  

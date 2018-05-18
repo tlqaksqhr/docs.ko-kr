@@ -1,24 +1,17 @@
 ---
 title: unchecked(C# 참조)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 f1_keywords:
 - unchecked_CSharpKeyword
 - unchecked
 helpviewer_keywords:
 - unchecked keyword [C#]
 ms.assetid: 0c021f7c-923f-4b3d-a58f-55336f5ac27e
-caps.latest.revision: 23
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: c05e7cb742d8e8f5a7804656a5ec13548d0498b1
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: d7a48950b7158be3cd589c20fbfe0661f3c9c5af
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="unchecked-c-reference"></a>unchecked(C# 참조)
 `unchecked` 키워드는 정수 형식 산술 연산 및 변환에 대한 오버플로 검사를 비활성화하는 데 사용됩니다.  
@@ -33,7 +26,7 @@ ms.lasthandoff: 11/21/2017
   
  오버플로를 확인하는 데 시간이 걸리기 때문에 오버플로 위험이 없는 상황에서는 unchecked 코드를 사용하여 성능을 향상할 수 있습니다. 그러나 오버플로가 발생할 가능성이 있는 경우 checked 환경을 사용해야 합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  이 샘플에서는 `unchecked` 키워드를 사용하는 방법을 보여 줍니다.  
   
  [!code-csharp[csrefKeywordsChecked#2](../../../csharp/language-reference/keywords/codesnippet/CSharp/unchecked_2.cs)]  

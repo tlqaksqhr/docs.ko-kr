@@ -1,20 +1,13 @@
 ---
-title: "C# 문 - C# 언어 둘러보기"
-description: "문을 사용하여 C# 프로그램 동작 만들기"
-keywords: ".NET, c샵, 문, 구문"
-author: BillWagner
-ms.author: wiwagn
+title: C# 문 - C# 언어 둘러보기
+description: 문을 사용하여 C# 프로그램 동작 만들기
 ms.date: 11/06/2016
-ms.topic: article
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.devlang: csharp
 ms.assetid: 5409c379-5622-4fae-88b5-1654276ea8d4
-ms.openlocfilehash: 99ec2489daf89926da9b8c4e148965412826a8a6
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 2f25c07ccc0af27a503465b9414bf607c61d1b2e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="statements"></a>문
 

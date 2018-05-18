@@ -1,13 +1,7 @@
 ---
-title: ".NET에서 문자열 비교"
-ms.custom: 
+title: .NET에서 문자열 비교
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -24,18 +18,13 @@ helpviewer_keywords:
 - Equals method
 - StartsWith method
 ms.assetid: 977dc094-fe19-4955-98ec-d2294d04a4ba
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: a9c2597ed2321c7494eaf44c3c43c2edc4df1952
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: c925b734c6d89bfa7240a7946c5bae4d8062a47a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="comparing-strings-in-net"></a>.NET에서 문자열 비교
 .NET에서는 문자열의 값을 비교하는 여러 가지 메서드를 제공합니다. 다음 표에서는 값 비교 메서드를 나열하고 설명합니다.  
@@ -52,7 +41,7 @@ ms.lasthandoff: 12/23/2017
 |<xref:System.String.LastIndexOf%2A?displayProperty=nameWithType>|검사 중인 문자열의 끝부터 시작하여 문자 또는 문자열의 인덱스 위치를 반환합니다. 정수 값을 반환합니다.|  
   
 ## <a name="compare"></a>비교  
- 정적 <xref:System.String.Compare%2A?displayProperty=nameWithType> 메서드는 두 문자열을 비교하는 철저한 방법을 제공합니다. 이 메서드는 문화권을 인식합니다. 이 함수를 사용하여 두 문자열 또는 두 문자열의 부분 문자열을 비교할 수 있습니다. 또한 대/소문자와 문화권 차이를 반영하거나 무시하는 오버로드가 제공됩니다. 다음 표에서는 이 메서드가 반환할 수 있는 세 가지 정수 값을 보여줍니다.  
+ 정적 <xref:System.String.Compare%2A?displayProperty=nameWithType> 메서드는 두 문자열을 비교하는 철저한 방법을 제공합니다. 이 메서드는 문화권을 인식합니다. 이 함수를 사용하여 두 문자열 또는 두 문자열의 부분 문자열을 비교할 수 있습니다. 또한 대/소문자와 문화권 차이를 반영하거나 무시하는 오버로드가 제공됩니다. 다음 표에서는 이 메서드가 반환할 수 있는 세 가지 정수 값을 보여 줍니다.  
   
 |반환 값|조건|  
 |------------------|---------------|  
@@ -101,7 +90,7 @@ ms.lasthandoff: 12/23/2017
   
  이 예제에서는 콘솔에 `-1` 를 표시합니다.  
   
- <xref:System.String.CompareTo%2A?displayProperty=nameWithType> 메서드의 모든 오버로드는 기본적으로 문화권 구분 및 대/소문자 구분 비교 작업을 수행합니다. 문화권을 구분하지 않는 비교를 수행할 수 있는 이 메서드의 오버로드는 제공되지 않습니다. 코드를 이해하기 쉽도록 문화권 구분 작업에는 <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=nameWithType>를 지정하고 문화권을 구분하지 않는 작업에는 <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType>를 지정하여 **String.Compare** 메서드를 대신 사용하는 것이 좋습니다. **String.Compare** 메서드를 사용하여 문화권 구분 비교와 문화권을 구분하지 않는 비교를 둘 다 수행하는 방법을 보여주는 예제는 [문화권을 구분하지 않는 문자열 비교 수행](../../../docs/standard/globalization-localization/performing-culture-insensitive-string-comparisons.md)을 참조하세요.  
+ <xref:System.String.CompareTo%2A?displayProperty=nameWithType> 메서드의 모든 오버로드는 기본적으로 문화권 구분 및 대/소문자 구분 비교 작업을 수행합니다. 문화권을 구분하지 않는 비교를 수행할 수 있는 이 메서드의 오버로드는 제공되지 않습니다. 코드를 이해하기 쉽도록 문화권 구분 작업에는 <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=nameWithType>를 지정하고 문화권을 구분하지 않는 작업에는 <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType>를 지정하여 **String.Compare** 메서드를 대신 사용하는 것이 좋습니다. **String.Compare** 메서드를 사용하여 문화권 구분 비교와 문화권을 구분하지 않는 비교를 둘 다 수행하는 방법을 보여 주는 예제는 [문화권을 구분하지 않는 문자열 비교 수행](../../../docs/standard/globalization-localization/performing-culture-insensitive-string-comparisons.md)을 참조하세요.  
   
 ## <a name="equals"></a>같음  
  **String.Equals** 메서드는 두 문자열이 같은지 여부를 쉽게 확인할 수 있습니다. 대/소문자 구분 메서드는 **true** 또는 **false** 부울 값을 반환합니다. 다음 예제와 같이 기존 클래스에서 사용할 수 있습니다. 다음 예제에서는 **Equals** 메서드를 사용하여 문자열 개체에 "Hello World"라는 구가 포함되어 있는지 여부를 확인합니다.  

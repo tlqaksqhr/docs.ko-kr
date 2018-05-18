@@ -1,13 +1,6 @@
 ---
-title: "Ilasm.exe(IL 어셈블러)"
-ms.custom: 
+title: Ilasm.exe(IL 어셈블러)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - MSIL generators
 - metadata, MSIL Assembler
@@ -18,16 +11,13 @@ helpviewer_keywords:
 - Ilasm.exe
 - verifying MSIL performance
 ms.assetid: 4ca3a4f0-4400-47ce-8936-8e219961c76f
-caps.latest.revision: "41"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 2507acc7ddf41d921af0b86622b1e85208191767
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 4009fe4910af81c685ee015c7801b040a90c25aa
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ilasmexe-il-assembler"></a>Ilasm.exe(IL 어셈블러)
 
@@ -88,7 +78,7 @@ ilasm [options] filename [[options]filename...]
 |**/?**|이 도구의 명령 구문 및 옵션을 표시합니다.|
 
 > [!NOTE]
-> *Ilasm.exe*의 모든 옵션은 대/소문자가 구분되지 않으며 처음 세 문자로 인식됩니다. 예를 들어 **/lis**는 **/listing**과 같고, **/res:**myresfile.res는 **/resource:**myresfile.res와 같습니다. 인수를 지정하는 옵션에는 옵션과 인수 사이의 구분 기호로 콜론(:) 또는 등호(=) 중 하나만 사용할 수 있습니다. 예를 들어, **/output**:*file.ext*는 **/output**=*file.ext*와 같습니다.
+> *Ilasm.exe*의 모든 옵션은 대/소문자가 구분되지 않으며 처음 세 문자로 인식됩니다. 예를 들어 **/lis**는 **/listing**과 같고, **/res:** myresfile.res는 **/resource:** myresfile.res와 같습니다. 인수를 지정하는 옵션에는 옵션과 인수 사이의 구분 기호로 콜론(:) 또는 등호(=) 중 하나만 사용할 수 있습니다. 예를 들어, **/output**:*file.ext*는 **/output**=*file.ext*와 같습니다.
 
 ## <a name="remarks"></a>설명
 

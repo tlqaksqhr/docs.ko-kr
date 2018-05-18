@@ -1,13 +1,6 @@
 ---
 title: .NET Framework Client Profile
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - WPF [.NET Framework Client Profile]
 - WCF [.NET Framework Client Profile]
@@ -16,16 +9,13 @@ helpviewer_keywords:
 - profile [.NET Framework Client Profile]
 - .NET Framework Client Profile
 ms.assetid: f0219919-1f02-4588-8704-327a62fd91f1
-caps.latest.revision: "44"
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 1f05290486b107f325e61cfffad052311258eee3
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 0ac78e6a2952761632edb95bc3d73d75a7675711
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="net-framework-client-profile"></a>.NET Framework Client Profile
 .NET Client Profile은 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] 및 이전 버전에서 제공되었고 클라이언트 응용 프로그램을 위해 최적화된 .NET Framework의 하위 집합입니다. .NET Framework는 Windows, Windows Phone 및 Microsoft Azure용 개발 플랫폼으로서, 관리되는 앱 실행 환경과 .NET Framework 클래스 라이브러리를 제공합니다. [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] 및 이전 버전에서는 전체 .NET Framework와 Client Profile의 두 가지 배포 옵션을 제공했습니다. Client Profile로 전체 .NET Framework보다 더 빠르게 배포하고 더 작은 응용 프로그램 설치 패키지를 사용할 수 있게 되었습니다.  

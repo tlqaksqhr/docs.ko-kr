@@ -1,22 +1,12 @@
 ---
-title: "비동기 프로그램의 제어 흐름(C#)"
-ms.custom: 
+title: 비동기 프로그램의 제어 흐름(C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- devlang-csharp
-ms.topic: article
 ms.assetid: fc92b08b-fe1d-4d07-84ab-5192fafe06bb
-caps.latest.revision: 
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 8b975b75f9ff31f43e722d3ceb28d08ed3b6ce11
-ms.sourcegitcommit: cec0525b2121c36198379525e69aa5388266db5b
+ms.openlocfilehash: 7367b55a665a911a4d94f7b235cdc559a69854cd
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="control-flow-in-async-programs-c"></a>비동기 프로그램의 제어 흐름(C#)
 `async` 및 `await` 키워드를 사용하면 비동기 프로그램을 더 쉽게 쓰고 유지 관리할 수 있습니다. 그러나 프로그램 작동 방식을 이해하지 못한다면 결과가 놀라울 수 있습니다. 이 항목에서는 간단한 비동기 프로그램을 통해 제어 흐름을 추적하여 언제 메서드 간에 제어가 이동되고 매번 어떤 정보가 전달되는지 보여 줍니다.  
@@ -125,7 +115,7 @@ Length of the downloaded string: 33946.
   
      **새 프로젝트** 대화 상자가 열립니다.  
   
-3.  **설치된 템플릿** 창에서 **Visual C#**을 선택한 다음 프로젝트 형식 목록에서 **WPF 응용 프로그램**을 선택합니다.  
+3.  **설치된 템플릿** 창에서 **Visual C#** 을 선택한 다음 프로젝트 형식 목록에서 **WPF 응용 프로그램**을 선택합니다.  
   
 4.  프로젝트의 이름으로 `AsyncTracer`를 입력한 다음 **확인** 단추를 선택합니다.  
   

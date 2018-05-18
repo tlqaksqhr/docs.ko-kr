@@ -1,21 +1,12 @@
 ---
-title: "방법: 특성 필터링(XPath 및 LINQ to XML)(C#)"
-ms.custom: 
+title: '방법: 특성 필터링(XPath 및 LINQ to XML)(C#)'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-csharp
-ms.topic: article
 ms.assetid: 208d6256-1bd7-4237-b2c9-909f26dfd0e2
-caps.latest.revision: "3"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 3ae49f729b46bd794eb614f90ab83fc80d4021a6
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 12ecf4c2c4b74cd58c4df0c355351232d09a84ab
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-filter-on-an-attribute-xpath-linq-to-xml-c"></a>방법: 특성 필터링(XPath 및 LINQ to XML)(C#)
 이 항목에서는 지정된 이름을 가진 하위 요소와 지정된 값을 가진 특성이 포함된 하위 요소를 가져오는 방법을 보여 줍니다.  
@@ -24,7 +15,7 @@ ms.lasthandoff: 10/18/2017
   
  `.//Address[@Type='Shipping']`  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  이 예제에서는 이름이 `Address`인 하위 요소와 값이 "Shipping"인 `Type` 특성이 포함된 하위 요소를 모두 찾습니다.  
   
  이 예제에서는 XML 문서 [샘플 XML 파일: 여러 구매 주문(LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-linq-to-xml.md)을 사용합니다.  

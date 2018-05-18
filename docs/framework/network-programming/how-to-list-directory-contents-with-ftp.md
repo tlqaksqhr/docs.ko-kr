@@ -1,23 +1,15 @@
 ---
-title: "방법: FTP로 디렉터리 내용 나열"
-ms.custom: 
+title: '방법: FTP로 디렉터리 내용 나열'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 130c64c9-7b7f-4672-9b3b-d946bd2616c5
-caps.latest.revision: "5"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: b3c0a5090709999ee5ab17e857bb5334d6982954
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 12351b06dc7d03971f9ce70f36110b8b6d672fd5
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-list-directory-contents-with-ftp"></a>방법: FTP로 디렉터리 내용 나열
 이 샘플은 FTP 서버의 디렉터리 콘텐츠를 나열하는 방법을 보여 줍니다.  

@@ -1,17 +1,15 @@
 ---
-title: ".NET API 분석기"
-description: ".NET API 분석기가 사용되지 않는 API 및 플랫폼 호환성 문제를 발견하는 데 어떻게 도움이 되는지 알아봅니다."
+title: .NET API 분석기
+description: .NET API 분석기가 사용되지 않는 API 및 플랫폼 호환성 문제를 발견하는 데 어떻게 도움이 되는지 알아봅니다.
 author: oliag
 ms.author: mairaw
 ms.date: 01/30/2018
-ms.topic: article
-ms.prod: .net
 ms.technology: dotnet-standard
-ms.openlocfilehash: 81ab7e32b2af6048d822243226f1054ebd1ca419
-ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
+ms.openlocfilehash: ac0e777e1df837ff7e9fbe185c462f56765e47bf
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="net-api-analyzer"></a>.NET API 분석기
 
@@ -22,7 +20,7 @@ API 분석기는 NuGet 패키지 [Microsoft.DotNet.Analyzers.Compatibility](http
 > [!NOTE]
 > .NET API 분석기는 여전히 시험판 버전입니다.
 
-## <a name="prerequisites"></a>필수 구성 요소
+## <a name="prerequisites"></a>전제 조건
 
 * Visual Studio 2017 또는 Mac용 Visual Studio(모든 버전).
 

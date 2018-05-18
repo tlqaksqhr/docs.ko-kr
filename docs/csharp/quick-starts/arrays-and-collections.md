@@ -1,19 +1,13 @@
 ---
 title: 컬렉션 자습서 - C# 로컬 빠른 시작
 description: 이 자습서에서는 목록 컬렉션을 살펴보면서 C#에 대해 학습합니다.
-author: billwagner
-ms.author: wiwagn
 ms.date: 10/13/2017
-ms.topic: get-started-article
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.devlang: csharp
 ms.custom: mvc
-ms.openlocfilehash: ace19ea8b8a1986466cdc851a1e8bb1c55f9709f
-ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
+ms.openlocfilehash: 51e8ce47165cd4ce22a72ed78138b36d15a97156
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="c-quickstart-collections"></a>C# 빠른 시작: 컬렉션
 

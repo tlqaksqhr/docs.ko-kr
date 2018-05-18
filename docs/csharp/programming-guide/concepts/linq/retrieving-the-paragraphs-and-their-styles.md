@@ -1,21 +1,12 @@
 ---
-title: "단락 및 해당 스타일 검색(C#)"
-ms.custom: 
+title: 단락 및 해당 스타일 검색(C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-csharp
-ms.topic: article
 ms.assetid: c2f767f8-57b1-4b4b-af04-89ffb1f7067d
-caps.latest.revision: "3"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: d7619ede02e9a384ddceec23a232a53de1dad0aa
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 11788c1fa46c63c78a9db0255c8e84250285863e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="retrieving-the-paragraphs-and-their-styles-c"></a>단락 및 해당 스타일 검색(C#)
 이 예제에서는 WordprocessingML 문서에서 단락 노드를 검색하는 쿼리를 작성합니다. 또한 각 단락의 스타일도 식별합니다.  
@@ -24,7 +15,7 @@ ms.lasthandoff: 10/18/2017
   
  이 항목에서는 몇 가지 쿼리 부분의 의미에 대해 설명한 다음 작동하는 전체 예제의 일부로 쿼리를 보여 줍니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  문서의 모든 단락과 단락 스타일을 검색하는 쿼리의 소스는 다음과 같습니다.  
   
 ```csharp  
@@ -33,7 +24,7 @@ xDoc.Root.Element(w + "body").Descendants(w + "p")
   
  이 식은 이전 예제 [기본 단락 스타일 찾기(C#)](../../../../csharp/programming-guide/concepts/linq/finding-the-default-paragraph-style.md)의 쿼리 소스와 유사합니다. 주요 차이점은 이 식에서는 <xref:System.Xml.Linq.XContainer.Descendants%2A> 축 대신 <xref:System.Xml.Linq.XContainer.Elements%2A> 축을 사용하는 것입니다. 섹션이 포함된 문서에서 단락은 본문 요소의 직접적 자식이 아니고 계층 구조에서 두 수준 아래에 있기 때문에 쿼리에서는 <xref:System.Xml.Linq.XContainer.Descendants%2A> 축을 사용합니다. 코드에서는 <xref:System.Xml.Linq.XContainer.Descendants%2A> 축을 사용하여 문서에서 섹션을 사용하는지 여부에 대한 작업을 합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  쿼리에서는 `let` 절을 사용하여 스타일 노드가 포함된 요소를 확인합니다. 요소가 없으면 `styleNode`가 `null`로 설정됩니다.  
   
 ```csharp  
@@ -44,7 +35,7 @@ let styleNode = para.Elements(w + "pPr").Elements(w + "pStyle").FirstOrDefault()
   
  쿼리에서는 두 멤버 `StyleName` 및 `ParagraphNode`가 있는 익명 형식의 컬렉션을 프로젝션합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  이 예제에서는 WordprocessingML 문서를 처리하여 WordprocessingML 문서에서 단락 노드를 검색합니다. 또한 각 단락의 스타일도 식별합니다. 이 예제는 이 자습서의 이전 예제를 기반으로 합니다. 새 쿼리는 아래에 있는 코드의 주석에서 호출됩니다.  
   
  이 예제의 소스 문서 만들기에 대한 지침은 [원본 Office Open XML 문서 만들기(C#)](../../../../csharp/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md)에서 찾을 수 있습니다.  

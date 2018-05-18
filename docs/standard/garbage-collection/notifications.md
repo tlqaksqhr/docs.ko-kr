@@ -1,13 +1,7 @@
 ---
-title: 가비지 수집 알림
-ms.custom: ''
+title: 가비지 컬렉션 알림
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -15,26 +9,21 @@ dev_langs:
 helpviewer_keywords:
 - garbage collection, notifications
 ms.assetid: e12d8e74-31e3-4035-a87d-f3e66f0a9b89
-caps.latest.revision: 23
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: ac951ad1f89d058b06280bc176ca7928a1dc65bf
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: d3470ebdd55adc97a60f07228c441cb7c94a53e6
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="garbage-collection-notifications"></a>가비지 수집 알림
-공용 언어 런타임에서 전체 가비지 수집(즉, 2세대 컬렉션)을 실행하면 성능이 저하될 수 있는 경우가 있습니다. 이는 대량의 요청을 처리하는 서버에서 특히 문제가 될 수 있습니다. 이 경우 장기적인 가비지 수집으로 인해 요청 시간이 초과될 수 있습니다. 중요 기간에 전체 수집이 발생하지 않도록 하기 위해 전체 가비지 수집에 근접하고 있다는 알림을 받을 수 있습니다. 그러면 워크로드를 다른 서버 인스턴스로 리디렉션하는 조치를 취할 수 있습니다. 또한 현재 서버 인스턴스가 요청을 처리하지 않아도 되는 경우 직접 수집을 유도할 수도 있습니다.  
+# <a name="garbage-collection-notifications"></a>가비지 컬렉션 알림
+공용 언어 런타임에서 전체 가비지 컬렉션(즉, 2세대 컬렉션)을 실행하면 성능이 저하될 수 있는 경우가 있습니다. 이는 대량의 요청을 처리하는 서버에서 특히 문제가 될 수 있습니다. 이 경우 장기적인 가비지 수집으로 인해 요청 시간이 초과될 수 있습니다. 중요 기간에 전체 수집이 발생하지 않도록 하기 위해 전체 가비지 수집에 근접하고 있다는 알림을 받을 수 있습니다. 그러면 워크로드를 다른 서버 인스턴스로 리디렉션하는 조치를 취할 수 있습니다. 또한 현재 서버 인스턴스가 요청을 처리하지 않아도 되는 경우 직접 수집을 유도할 수도 있습니다.  
   
  <xref:System.GC.RegisterForFullGCNotification%2A> 메서드는 런타임에서 전체 가비지 수집에 근접하고 있음을 감지할 때 발생되는 알림에 등록합니다. 이 알림에는 두 부분이 있습니다. 즉, 알림은 전체 가비지 수집에 근접하고 있을 때와 전체 가비지 수집이 완료되었을 때 발생할 수 있습니다.  
   
 > [!WARNING]
->  차단 가비지 수집만 알림을 발생시킵니다. [\<gcConcurrent>](../../../docs/framework/configure-apps/file-schema/runtime/gcconcurrent-element.md) 구성 요소를 사용하면 백그라운드 가비지 수집은 알림을 발생시키지 않습니다.  
+>  차단 가비지 컬렉션만 알림을 발생시킵니다. [\<gcConcurrent>](../../../docs/framework/configure-apps/file-schema/runtime/gcconcurrent-element.md) 구성 요소를 사용하면 백그라운드 가비지 수집은 알림을 발생시키지 않습니다.  
   
  알림이 발생한 시기를 확인하려면 <xref:System.GC.WaitForFullGCApproach%2A> 및 <xref:System.GC.WaitForFullGCComplete%2A> 메서드를 사용합니다. 일반적으로 `while` 루프에 이러한 메서드를 사용하면 알림 상태를 표시하는 <xref:System.GCNotificationStatus> 열거형을 계속해서 가져올 수 있습니다. 해당 값이 <xref:System.GCNotificationStatus.Succeeded>인 경우 다음을 수행할 수 있습니다.  
   

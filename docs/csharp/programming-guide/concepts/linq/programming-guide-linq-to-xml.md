@@ -1,21 +1,12 @@
 ---
-title: "프로그래밍 가이드(LINQ to XML)(C#)"
-ms.custom: 
+title: 프로그래밍 가이드(LINQ to XML)(C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-csharp
-ms.topic: article
 ms.assetid: 4b1ffd10-ab81-4a0d-a0ca-e9876478d924
-caps.latest.revision: "3"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 7ee6ac9d13d265442e6d5b9f02c6d5788e75c50f
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 03742916c973f9ddac8163fe231cba45750ff080
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="programming-guide-linq-to-xml-c"></a>프로그래밍 가이드(LINQ to XML)(C#)
 이 단원에서는 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]을 사용한 프로그래밍의 개념과 방법에 대해 설명합니다.  
@@ -27,7 +18,7 @@ ms.lasthandoff: 11/21/2017
   
  [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]은 제네릭 클래스에 크게 의존하므로 제네릭 클래스의 사용에 대해 이해해야 합니다. 또한 매개 변수가 있는 형식으로 선언된 대리자에 대해 알고 있으면 도움이 됩니다. C# 제네릭 클래스에 대해 잘 모르는 경우에는 [제네릭 클래스](../../../../csharp/programming-guide/generics/generic-classes.md)를 참조하세요.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
   
 |항목|설명|  
 |-----------|-----------------|  

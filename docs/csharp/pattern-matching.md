@@ -1,19 +1,13 @@
 ---
 title: 패턴 일치 - C# 가이드
 description: C#의 패턴 일치 식에 대한 자세한 정보
-keywords: .NET, .NET Core, C#
 ms.date: 01/24/2017
-ms.author: wiwagn
-ms.topic: article
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.devlang: csharp
 ms.assetid: 1e575c32-2e2b-4425-9dca-7d118f3ed15b
-ms.openlocfilehash: a0f80fc2c019cefa81506d9dcdeabc57a1e98c2b
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 0f95ac8b16939173e6cfd7304b9cbe52526b5169
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="pattern-matching"></a>패턴 일치 #
 
@@ -51,7 +45,7 @@ C# 7.0 이전에는 일련의 `if` 및 `is` 문에서 각 형식을 테스트해
 
 패턴 일치 식에 대한 언어 규칙은 일치 식의 결과를 잘못 사용하는 경우를 방지하는 데 도움이 됩니다. 위의 예제에서 `s`, `c` 및 `r` 변수는 범위 내에만 있고 해당 패턴 일치 식에 `true` 결과가 있는 경우 무기한 할당됩니다. 다른 위치에 있는 변수 중 하나를 사용하려는 경우 코드에서 컴파일러 오류를 생성합니다.
 
-범위부터 시작하여 해당 규칙을 자세히 살펴보겠습니다. `c` 변수는 첫 번째 `if` 문의 `else` 분기에서만 범위 내에 있습니다. `s` 변수는 `ComputeArea` 메서드에서 범위 내에 있습니다. 이는 `if` 문의 각 분기가 변수에 대해 별도 범위를 설정하기 때문입니다. 그러나 `if` 문 자체는 별도 범위를 설정하지 않습니다. 즉, `if` 문에서 선언된 변수는 `if` 문(이 경우 메서드)과 동일한 범위에 있습니다. 이 동작은 패턴 일치와 관련은 없지만 변수 범위와 `if` 및 `else` 문에 대해 정의된 동작입니다.
+범위부터 시작하여 해당 규칙을 자세히 살펴보겠습니다. `c` 변수는 첫 번째 `if` 문의 `else` 분기에서만 범위 내에 있습니다. `s` 변수는 `ComputeAreaModernIs` 메서드에서 범위 내에 있습니다. 이는 `if` 문의 각 분기가 변수에 대해 별도 범위를 설정하기 때문입니다. 그러나 `if` 문 자체는 별도 범위를 설정하지 않습니다. 즉, `if` 문에서 선언된 변수는 `if` 문(이 경우 메서드)과 동일한 범위에 있습니다. 이 동작은 패턴 일치와 관련은 없지만 변수 범위와 `if` 및 `else` 문에 대해 정의된 동작입니다.
 
 `c` 및 `s` 변수는 한정적으로 할당된 true 시 메커니즘 때문에 해당 `if` 문이 true일 때 할당됩니다.
 

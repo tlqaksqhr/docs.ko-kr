@@ -1,13 +1,7 @@
 ---
 title: .NET Framework의 숫자
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - SIMD
 - System.Numerics.Vectors
@@ -17,18 +11,13 @@ helpviewer_keywords:
 - numerics
 - BigInteger
 ms.assetid: dfebc18e-acde-4510-9fa7-9a0f4aa3bd11
-caps.latest.revision: 11
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 074ed60a3cbc1949eea4a8d866cdb3bba7c0f196
-ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
+ms.openlocfilehash: a2a795fb52c123840c1ba7b82f77d6745feba89b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="numerics-in-the-net-framework"></a>.NET Framework의 숫자
 .NET Framework에서는 표준 숫자 정수 계열 및 부동 소수점 기본 형식과 <xref:System.Numerics.BigInteger>, 이론적 상한 또는 하한이 없는 정수 형식, <xref:System.Numerics.Complex>, 복소수를 나타내는 형식, <xref:System.Numerics> 네임스페이스에서 SIMD 사용 벡터 형식 집합을 지원합니다.  

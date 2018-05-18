@@ -1,21 +1,12 @@
 ---
-title: "XAttribute 클래스 개요(C#)"
-ms.custom: 
+title: XAttribute 클래스 개요(C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-csharp
-ms.topic: article
 ms.assetid: 5a630f24-f9ad-400e-831e-c14ebfc9e142
-caps.latest.revision: "3"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: e9cfedb476f44ef8c3eaeb45bac571d17802d525
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: e0020a8cd8841ef9a35781b534c82db5e15c257f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="xattribute-class-overview-c"></a>XAttribute 클래스 개요(C#)
 특성은 요소와 연결된 이름/값 쌍입니다. <xref:System.Xml.Linq.XAttribute> 클래스는 XML 특성을 나타냅니다.  
@@ -30,7 +21,8 @@ ms.lasthandoff: 10/18/2017
   
 |생성자|설명|  
 |-----------------|-----------------|  
-|`XAttribute(XName name, object content)`|<xref:System.Xml.Linq.XAttribute> 개체를 만듭니다. `name` 인수는 특성의 이름을 지정하고, `content`는 특성의 내용을 지정합니다.|  
+|`XAttribute(XName name, object content)`|
+          <xref:System.Xml.Linq.XAttribute> 개체를 만듭니다. `name` 인수는 특성의 이름을 지정하고, `content`는 특성의 내용을 지정합니다.|  
   
 ### <a name="creating-an-element-with-an-attribute"></a>특성을 사용하여 요소 만들기  
  다음 코드에서는 특성이 포함된 요소를 만드는 일반적인 작업을 보여 줍니다.  

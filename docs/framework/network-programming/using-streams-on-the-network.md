@@ -1,12 +1,6 @@
 ---
-title: "네트워크에서 스트림 사용"
-ms.custom: 
+title: 네트워크에서 스트림 사용
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -23,16 +17,14 @@ helpviewer_keywords:
 - Internet, streams
 - streams
 ms.assetid: 02b05fba-7235-45ce-94e5-060436ee0875
-caps.latest.revision: "10"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: 9f6cf68115f69e7238d2bec226258ab06c417d7f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: ba30129389d048f35916536ba119d4e4e06e0b3c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-streams-on-the-network"></a>네트워크에서 스트림 사용
 네트워크 리소스는 .NET Framework에서 스트림으로 표현됩니다. 스트림을 일반적으로 처리하여 .NET Framework는 다음과 같은 기능을 제공합니다.  

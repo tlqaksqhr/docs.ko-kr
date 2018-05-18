@@ -1,13 +1,7 @@
 ---
-title: "방법: 웹 사용자에게 지역화된 날짜 및 시간 정보 표시"
-ms.custom: 
+title: '방법: 웹 사용자에게 지역화된 날짜 및 시간 정보 표시'
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - formatting [.NET Framework], dates
 - parsing strings [.NET Framework], date and time strings
@@ -16,21 +10,16 @@ helpviewer_keywords:
 - displaying date and time data
 - localized date displays [.NET Framework]
 ms.assetid: 377fe93c-32be-421a-a30a-be639a46ede8
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: b6c68ddd29b8221a073b00ade87e3b9d3dc870b8
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 63775d48ca2e11cfa121f3b7aeaff708d86e50de
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-display-localized-date-and-time-information-to-web-users"></a>방법: 웹 사용자에게 지역화된 날짜 및 시간 정보 표시
-웹 페이지는 전 세계 어디에서든 표시될 수 있으므로 날짜 및 시간 값의 구문 분석 및 서식 지정 작업은 사용자와 상호 작용할 때 기본 형식(대체로 웹 서버의 현지 문화권 형식임)을 사용해서는 안 됩니다. 대신 사용자가 입력한 날짜 및 시간 문자열을 처리하는 Web Forms는 사용자의 기본 설정 문화권을 사용하여 문자열을 구문 분석해야 합니다. 마찬가지로 날짜 및 시간 데이터는 사용자의 문화권을 따르는 형식으로 사용자에게 표시되어야 합니다. 이 항목에서는 프로젝션의 형식을 제어하는 방법을 보여줍니다.  
+웹 페이지는 전 세계 어디에서든 표시될 수 있으므로 날짜 및 시간 값의 구문 분석 및 서식 지정 작업은 사용자와 상호 작용할 때 기본 형식(대체로 웹 서버의 현지 문화권 형식임)을 사용해서는 안 됩니다. 대신 사용자가 입력한 날짜 및 시간 문자열을 처리하는 Web Forms는 사용자의 기본 설정 문화권을 사용하여 문자열을 구문 분석해야 합니다. 마찬가지로 날짜 및 시간 데이터는 사용자의 문화권을 따르는 형식으로 사용자에게 표시되어야 합니다. 이 항목에서는 프로젝션의 형식을 제어하는 방법을 보여 줍니다.  
   
 ### <a name="to-parse-date-and-time-strings-input-by-the-user"></a>사용자가 입력한 날짜 및 시간 문자열을 구문 분석하려면  
   

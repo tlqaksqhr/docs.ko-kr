@@ -1,29 +1,18 @@
 ---
-title: "msxsl:script를 사용하는 스크립트 블록"
-ms.custom: 
+title: msxsl:script를 사용하는 스크립트 블록
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: fde6f43f-c594-486f-abcb-2211197fae20
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: badf5511c5638d98d25997f31a3aff8dc11144d6
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 23961caa7b307df46b20b3811d0883d4c702a357
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="script-blocks-using-msxslscript"></a>msxsl:script를 사용하는 스크립트 블록
 <xref:System.Xml.Xsl.XslCompiledTransform> 클래스는 `msxsl:script` 요소를 사용하여 포함 스크립트를 지원합니다. 스타일시트가 로드될 때 정의된 모든 함수는 CodeDOM(코드 문서 개체 모델)에 의해 MSIL(Microsoft Intermediate Language)로 컴파일되며 런타임 동안 실행됩니다. 포함된 스크립트 블록에서 생성된 어셈블리는 스타일시트에 대해 생성된 어셈블리와는 다릅니다.  
@@ -48,7 +37,7 @@ ms.lasthandoff: 12/23/2017
  `implements-prefix` 특성은 필수 항목입니다. 이 특성은 네임스페이스를 선언하고 스크립트 블록에 연결하는 데 사용됩니다. 이 특성 값은 네임스페이스를 나타내는 접두사입니다. 이 접두사는 스타일시트에서 정의할 수 있습니다.  
   
 > [!NOTE]
->  `msxsl:script` 요소를 사용하는 경우에는 언어에 관계없이 스크립트를 CDATA 섹션에 배치하는 것이 좋습니다. 스크립트에는 지정된 언어에 대한 연산자, 식별자 또는 구분자가 포함될 수 있으므로 스크립트를 CDATA 섹션에 포함하지 않으면 XML로 잘못 해석될 수 있습니다. 다음 XML에서는 코드를 배치할 수 있는 CDATA 섹션 템플릿을 보여줍니다.  
+>  `msxsl:script` 요소를 사용하는 경우에는 언어에 관계없이 스크립트를 CDATA 섹션에 배치하는 것이 좋습니다. 스크립트에는 지정된 언어에 대한 연산자, 식별자 또는 구분자가 포함될 수 있으므로 스크립트를 CDATA 섹션에 포함하지 않으면 XML로 잘못 해석될 수 있습니다. 다음 XML에서는 코드를 배치할 수 있는 CDATA 섹션 템플릿을 보여 줍니다.  
   
 ```xml  
 <msxsl:script implements-prefix='your-prefix' language='CSharp'>  
@@ -61,7 +50,7 @@ ms.lasthandoff: 12/23/2017
 ## <a name="script-functions"></a>스크립트 함수  
  함수는 `msxsl:script` 요소 내에서 선언할 수 있습니다. 함수를 선언하면 해당 함수는 스크립트 블록 내에 포함됩니다. 스타일시트에는 여러 스크립트 블록이 포함될 수 있으며 각 블록은 서로 독립적으로 작동합니다. 즉, 스크립트 블록 내부에서 실행할 경우 같은 네임스페이스와 같은 스크립트 언어를 사용하도록 선언된 경우에만 다른 스크립트 블록에 정의된 함수를 호출할 수 있습니다. 각 스크립트 블록에서는 서로 다른 언어를 사용할 수 있고, 블록은 해당 언어 파서의 문법 규칙에 따라 구문 분석되기 때문에 사용하는 언어의 올바른 구문을 사용해야 합니다. 예를 들어, Microsoft C# 스크립트 블록에서는 C# 주석 구문을 사용합니다.  
   
- 함수에 제공된 인수 및 반환 값에는 어떤 형식도 사용할 수 있습니다. W3C XPath 형식은 CLR(공용 언어 런타임) 형식의 하위 집합이므로 XPath 형식으로 간주되지 않는 형식에서 형식 변환이 발생합니다. 다음 표에서는 해당 W3C 형식 및 CLR 형식을 보여줍니다.  
+ 함수에 제공된 인수 및 반환 값에는 어떤 형식도 사용할 수 있습니다. W3C XPath 형식은 CLR(공용 언어 런타임) 형식의 하위 집합이므로 XPath 형식으로 간주되지 않는 형식에서 형식 변환이 발생합니다. 다음 표에서는 해당 W3C 형식 및 CLR 형식을 보여 줍니다.  
   
 |W3C 형식|CLR 형식|  
 |--------------|--------------|  
@@ -71,7 +60,7 @@ ms.lasthandoff: 12/23/2017
 |`Result Tree Fragment`|<xref:System.Xml.XPath.XPathNavigator>|  
 |`Node Set`|<xref:System.Xml.XPath.XPathNodeIterator>|  
   
- CLR 숫자 형식은 <xref:System.Double>로 변환됩니다. <xref:System.DateTime> 형식은 <xref:System.String>으로 변환되고, <xref:System.Xml.XPath.IXPathNavigable> 형식은 <xref:System.Xml.XPath.XPathNavigator>로 변환됩니다. **XPathNavigator[]**는 <xref:System.Xml.XPath.XPathNodeIterator>로 변환됩니다.  
+ CLR 숫자 형식은 <xref:System.Double>로 변환됩니다. <xref:System.DateTime> 형식은 <xref:System.String>으로 변환되고, <xref:System.Xml.XPath.IXPathNavigable> 형식은 <xref:System.Xml.XPath.XPathNavigator>로 변환됩니다. **XPathNavigator[]** 는 <xref:System.Xml.XPath.XPathNodeIterator>로 변환됩니다.  
   
  다른 모든 형식은 오류를 throw합니다.  
   

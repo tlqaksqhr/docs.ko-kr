@@ -1,26 +1,15 @@
 ---
-title: "DOM에 엔터티 선언 및 엔터티 참조 읽어오기"
-ms.custom: 
+title: DOM에 엔터티 선언 및 엔터티 참조 읽어오기
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 86dba977-5cc4-4567-964f-027ffabc47b2
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 33b3b0589fb9d3cdf550b8d56d82a2bd999a59f6
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 986f0f1d6ce20722b85ac0cfa9e3fe3fa351b75e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="reading-entity-declarations-and-entity-references-into-the-dom"></a>DOM에 엔터티 선언 및 엔터티 참조 읽어오기
 엔터티는 XML에서 내용 또는 태그 대신 사용되는 이름을 나타내는 선언입니다. 엔터티는 두 부분으로 구성됩니다. 먼저 엔터티 선언을 사용하여 이름을 대체 내용에 연결해야 합니다. 엔터티 선언은 DTD(문서 종류 정의) 또는 XML 스키마에 `<!ENTITY name "value">` 구문을 사용하여 만듭니다. 그러면 엔터티 선언에 정의된 이름이 XML에서 사용됩니다. XML에서 사용될 경우 이 이름을 엔터티 참조라고 합니다. 예를 들어, 다음 엔터티 선언은 "Microsoft Press"라는 내용과 연결될 `publisher`라는 이름의 엔터티를 선언합니다.  
@@ -29,7 +18,7 @@ ms.lasthandoff: 12/23/2017
 <!ENTITY publisher "Microsoft Press">  
 ```  
   
- 다음 예제에서는 XML에서 엔터티 참조로 이 엔터티 선언을 사용하는 방법을 보여줍니다.  
+ 다음 예제에서는 XML에서 엔터티 참조로 이 엔터티 선언을 사용하는 방법을 보여 줍니다.  
   
 ```xml  
 <author>Fred</author>  
@@ -52,7 +41,7 @@ ms.lasthandoff: 12/23/2017
 <pubinfo>Published by Microsoft Press</pubinfo>  
 ```  
   
- 엔터티에는 여러 종류가 있습니다. 다음 다이어그램은 엔터티 형식과 용어의 분류를 보여줍니다.  
+ 엔터티에는 여러 종류가 있습니다. 다음 다이어그램은 엔터티 형식과 용어의 분류를 보여 줍니다.  
   
  ![엔터티 형식 계층 구조의 순서도](../../../../docs/standard/data/xml/media/entity-hierarchy.gif "Entity_hierarchy")  
   

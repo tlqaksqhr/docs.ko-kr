@@ -1,26 +1,21 @@
 ---
-title: "C#의 상속"
-description: "C# 라이브러리 및 응용 프로그램에서 상속 사용 방법 알아보기"
-keywords: "상속(C#), 기본 클래스, 파생 클래스, 추상 기본 클래스"
+title: C#의 상속
+description: C# 라이브러리 및 응용 프로그램에서 상속 사용 방법 알아보기
 author: rpetrusha
-manager: wpickett
 ms.author: ronpet
 ms.date: 08/16/2017
-ms.topic: article
-ms.prod: .net
-ms.technology: devlang-csharp
 ms.assetid: aeb68c74-0ea0-406f-9fbe-2ce02d47ef31
-ms.openlocfilehash: 39de8879fd902c714a58cf59c70f0a4914b2ff6e
-ms.sourcegitcommit: 9bee08539b1886c9d57fa3d5bd8a58dfdd7cad94
+ms.openlocfilehash: 1476425594e55531fdb56de531ee61808dccd7db
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/12/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="inheritance-in-c-and-net"></a>C# 및 .NET의 상속
 
 이 자습서에서는 C#의 상속에 대해 소개합니다. 상속은 특정 기능(데이터 및 동작)을 제공하는 기본 클래스를 정의하고 해당 기능을 상속하거나 재정의하는 파생 클래스를 정의할 수 있는 개체 지향 프로그래밍 언어의 기능입니다.
 
-## <a name="prerequisites"></a>필수 구성 요소
+## <a name="prerequisites"></a>전제 조건
 
 이 자습서에서는 .NET Core를 설치했다고 가정합니다. 설치 지침은 [.NET Core 설치 가이드](https://www.microsoft.com/net/core)를 참조하세요. 코드 편집기도 필요합니다. 원하는 어떤 코드 편집기도 사용 가능하지만 이 자습서에서는 [Visual Studio Code](https://code.visualstudio.com)를 사용합니다.
 

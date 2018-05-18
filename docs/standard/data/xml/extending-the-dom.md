@@ -1,29 +1,18 @@
 ---
-title: "DOM 확장"
-ms.custom: 
+title: DOM 확장
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: b5489c96-4afd-439a-a25d-fc82eb4a148d
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 06cac8d76b17f3ef32931ea21d0556085f05d7b1
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 93821b844d35f005afa1702e4f7922ca1320c962
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="extending-the-dom"></a>DOM 확장
 Microsoft .NET Framework에는 XML DOM(문서 개체 모델)을 구현하는 기본 클래스 집합이 포함되어 있습니다. <xref:System.Xml.XmlNode>와 해당 파생 클래스는 XML 문서의 내용 및 구조를 탐색하고, 쿼리하고, 수정할 수 있게 해 주는 메서드 및 속성을 제공합니다.  
@@ -39,7 +28,7 @@ Microsoft .NET Framework에는 XML DOM(문서 개체 모델)을 구현하는 기
 ## <a name="creating-your-own-node-instances"></a>고유한 노드 인스턴스 만들기  
  <xref:System.Xml.XmlDocument> 클래스에는 노드 생성 메서드가 포함되어 있습니다. XML 파일을 로드하면 이러한 메서드가 호출되어 노드가 만들어집니다. 문서가 로드될 때 사용자의 노드 인스턴스가 만들어지도록 이러한 메서드를 재정의할 수 있습니다. 예를 들어, <xref:System.Xml.XmlElement> 클래스를 확장했다면 <xref:System.Xml.XmlDocument> 클래스를 상속하고 <xref:System.Xml.XmlDocument.CreateElement%2A> 메서드를 재정의했을 수 있습니다.  
   
- 다음 예제에서는 <xref:System.Xml.XmlDocument.CreateElement%2A> 클래스의 사용자 구현을 반환하도록 <xref:System.Xml.XmlElement> 메서드를 재정의하는 방법을 보여줍니다.  
+ 다음 예제에서는 <xref:System.Xml.XmlDocument.CreateElement%2A> 클래스의 사용자 구현을 반환하도록 <xref:System.Xml.XmlElement> 메서드를 재정의하는 방법을 보여 줍니다.  
   
 ```vb  
 Class LineInfoDocument  
@@ -246,7 +235,7 @@ public class Test {
 Number of elements in book.xml: 3  
 ```  
   
- XML DOM 클래스(System.Xml)를 확장하는 방법을 보여주는 예제는 www.gotdotnet.com/userfiles/XMLDom/extendDOM.zip을 참조하세요.  
+ XML DOM 클래스(System.Xml)를 확장하는 방법을 보여 주는 예제는 www.gotdotnet.com/userfiles/XMLDom/extendDOM.zip을 참조하세요.  
   
 ## <a name="node-event-handler"></a>노드 이벤트 처리기  
  .NET Framework의 DOM 구현에는 XML 문서의 노드가 변경될 때 이벤트를 받아 처리할 수 있는 이벤트 시스템이 포함됩니다. <xref:System.Xml.XmlNodeChangedEventHandler> 및 <xref:System.Xml.XmlNodeChangedEventArgs> 클래스를 사용하면 `NodeChanged`, `NodeChanging`, `NodeInserted`, `NodeInserting`, `NodeRemoved` 및 `NodeRemoving` 이벤트를 캡처할 수 있습니다.  

@@ -1,29 +1,18 @@
 ---
-title: "XslTransform 클래스의 XSLT 프로세서 구현"
-ms.custom: 
+title: XslTransform 클래스의 XSLT 프로세서 구현
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 88373fe2-4a6b-44f9-8a62-8a3e348e3a46
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 2f1367268920e4b72f29b77a7f2e96f09a1dce37
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 5fd0a72ab0274fe6ccc2016d90739a5fda876826
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="xsltransform-class-implements-the-xslt-processor"></a>XslTransform 클래스의 XSLT 프로세서 구현
 > [!NOTE]
@@ -135,7 +124,7 @@ public void Load(XPathNavigator, XmlResolver, Evidence);
   
 -   파일의 문자열 URL  
   
- 마지막 형식인 문자열 URL은 URL에 있는 입력 문서를 변환하여 출력 URL에 문서를 쓸 경우에 자주 사용됩니다. 이 <xref:System.Xml.Xsl.XslTransform.Transform%2A> 메서드는 파일에서 XML 문서를 로드하고 XSLT 변환을 수행하여 출력을 파일에 쓸 때 편리한 메서드입니다. 이 메서드를 사용하면 입력 소스 문서를 만들고 로드한 다음 파일 스트림에 쓸 필요가 없습니다. 다음 코드 예제에서는 문자열 URL을 입력 및 출력으로 사용하는 <xref:System.Xml.Xsl.XslTransform.Transform%2A> 메서드를 보여줍니다.  
+ 마지막 형식인 문자열 URL은 URL에 있는 입력 문서를 변환하여 출력 URL에 문서를 쓸 경우에 자주 사용됩니다. 이 <xref:System.Xml.Xsl.XslTransform.Transform%2A> 메서드는 파일에서 XML 문서를 로드하고 XSLT 변환을 수행하여 출력을 파일에 쓸 때 편리한 메서드입니다. 이 메서드를 사용하면 입력 소스 문서를 만들고 로드한 다음 파일 스트림에 쓸 필요가 없습니다. 다음 코드 예제에서는 문자열 URL을 입력 및 출력으로 사용하는 <xref:System.Xml.Xsl.XslTransform.Transform%2A> 메서드를 보여 줍니다.  
   
 ```vb  
 Dim xsltransform As XslTransform = New XslTransform()  
@@ -214,7 +203,7 @@ Root node is book.
 ```  
   
 ## <a name="migration-of-xslt-from-net-framework-version-10-to-net-framework-version-11"></a>.NET Framework 버전 1.0에서 .NET Framework 버전 1.1로 XSLT 마이그레이션  
- 다음 표에서는 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 메서드의 사용되지 않는 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 버전 1.0 메서드와 새로운 <xref:System.Xml.Xsl.XslTransform.Load%2A> 버전 1.1 메서드를 보여줍니다. 새로운 메서드를 사용하면 증명 정보를 지정하여 스타일시트의 권한을 제한할 수 있습니다.  
+ 다음 표에서는 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 메서드의 사용되지 않는 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 버전 1.0 메서드와 새로운 <xref:System.Xml.Xsl.XslTransform.Load%2A> 버전 1.1 메서드를 보여 줍니다. 새로운 메서드를 사용하면 증명 정보를 지정하여 스타일시트의 권한을 제한할 수 있습니다.  
   
 |더 이상 사용되지 않는 .NET Framework 버전 1.0 Load 메서드|대체 .NET Framework 버전 1.1 Load 메서드|  
 |------------------------------------------------------|---------------------------------------------------------|  
@@ -222,7 +211,7 @@ Root node is book.
 |Load(IXPathNavigable stylesheet);<br /><br /> Load(IXPathNavigable stylesheet, XmlResolver resolver);|Load(IXPathNavigable stylesheet, XmlResolver resolver, Evidence evidence);|  
 |Load(XmlReader stylesheet);<br /><br /> Load(XmlReader stylesheet, XmlResolver resolver);|Load(XmlReader stylesheet, XmlResolver resolver, Evidence evidence);|  
   
- 다음 표에서는 <xref:System.Xml.Xsl.XslTransform.Transform%2A> 메서드의 사용되지 않는 메서드와 새로운 메서드를 보여줍니다. 새로운 메서드는 <xref:System.Xml.XmlResolver> 개체를 사용합니다.  
+ 다음 표에서는 <xref:System.Xml.Xsl.XslTransform.Transform%2A> 메서드의 사용되지 않는 메서드와 새로운 메서드를 보여 줍니다. 새로운 메서드는 <xref:System.Xml.XmlResolver> 개체를 사용합니다.  
   
 |더 이상 사용되지 않는 .NET Framework 버전 1.0 Transform 메서드|대체 .NET Framework 버전 1.1 Transform 메서드|  
 |-----------------------------------------------------------|--------------------------------------------------------------|  

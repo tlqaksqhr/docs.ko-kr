@@ -1,29 +1,18 @@
 ---
-title: "변형 과정에서 XPathNavigator의 역할"
-ms.custom: 
+title: 변형 과정에서 XPathNavigator의 역할
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 118f97d1-7110-4d1b-b0bd-4143252c0bb0
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: c492d470fe29041f32039d98ecb854e18f40423c
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 76cfa51c7d434a6dfdcdc1e6852779decaa601e4
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="xpathnavigator-in-transformations"></a>변형 과정에서 XPathNavigator의 역할
 <xref:System.Xml.XPath.XPathNavigator> 클래스는 데이터에 대한 임의의 읽기 전용 액세스를 제공하며 XSLT(Extensible Stylesheet Language for Transformations)의 입력으로 사용하도록 디자인되었습니다. 이 클래스는 <xref:System.Xml.XPath.XPathDocument>, <xref:System.Xml.XmlDataDocument> 및 <xref:System.Xml.XmlDocument>에서 구현합니다. <xref:System.Xml.XPath.XPathNavigator>는 XPath(XML Path Language) 권장 사항의 5단원에서 설명하는 W3C(World Wide Web 컨소시엄) 데이터 모델을 기반으로 합니다.  

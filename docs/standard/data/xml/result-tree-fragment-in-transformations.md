@@ -1,26 +1,15 @@
 ---
-title: "변형의 결과 트리 조각"
-ms.custom: 
+title: 변형의 결과 트리 조각
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: df363480-ba02-4233-9ddf-8434e421c4f1
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 04e23f39f522fca7f69aa86be7036320a5698a60
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 2c64baef3037cdb7b45ede3febacdbc1e76304c0
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="result-tree-fragment-in-transformations"></a>변형의 결과 트리 조각
 > [!NOTE]
@@ -50,7 +39,7 @@ ms.lasthandoff: 12/23/2017
   
  개념적으로 볼 때 결과 트리 조각은 단일 루트 노드만 있는 노드 집합과 동일하게 작동합니다. 그러나 반환된 노드의 나머지는 자식 노드에 해당합니다. 자식 노드를 프로그래밍 방식으로 나타내려면 `<xsl:copy-of>` 요소를 사용하여 결과 트리 조각을 결과 트리로 복사합니다. copy-of가 수행될 때 모든 자식 노드도 순서대로 결과 트리에 복사됩니다. `copy` 또는 `copy-of`가 사용될 때까지 결과 트리 조각은 결과 트리 또는 변환 결과에 속하지 않습니다.  
   
- 결과 트리 조각의 반환된 노드를 검색하기 위해 <xref:System.Xml.XPath.XPathNavigator>가 사용됩니다. 다음 코드 샘플에서는 XML을 포함하는 매개 변수 `fragment`로 함수를 호출하여 스타일시트 내부에서 결과 트리 조각을 만드는 방법을 보여줍니다.  
+ 결과 트리 조각의 반환된 노드를 검색하기 위해 <xref:System.Xml.XPath.XPathNavigator>가 사용됩니다. 다음 코드 샘플에서는 XML을 포함하는 매개 변수 `fragment`로 함수를 호출하여 스타일시트 내부에서 결과 트리 조각을 만드는 방법을 보여 줍니다.  
   
 ```xml  
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"  
@@ -78,7 +67,7 @@ ms.lasthandoff: 12/23/2017
 </xsl:stylesheet>  
 ```  
   
- 다음은 RTF(서식 있는 텍스트), 즉 노드 집합으로 변환되지 않은 결과 트리 집합 형식으로 된 변수를 보여주는 또 다른 예제입니다. 대신 이 변수는 스크립트 함수로 전달되며 <xref:System.Xml.XPath.XPathNavigator>를 사용하여 노드를 탐색합니다.  
+ 다음은 RTF(서식 있는 텍스트), 즉 노드 집합으로 변환되지 않은 결과 트리 집합 형식으로 된 변수를 보여 주는 또 다른 예제입니다. 대신 이 변수는 스크립트 함수로 전달되며 <xref:System.Xml.XPath.XPathNavigator>를 사용하여 노드를 탐색합니다.  
   
 ```xml  
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform"  
@@ -120,7 +109,7 @@ ms.lasthandoff: 12/23/2017
 </xsl:stylesheet>  
 ```  
   
- 다음 출력에서는 이 스타일시트를 사용하여 XML을 변형한 결과를 보여줍니다.  
+ 다음 출력에서는 이 스타일시트를 사용하여 XML을 변형한 결과를 보여 줍니다.  
   
 ## <a name="output"></a>출력  
   
@@ -128,7 +117,7 @@ ms.lasthandoff: 12/23/2017
 <first_book xmlns:user="urn:books">Book1</first_book>  
 ```  
   
- 위의 설명대로 `node-set` 함수를 사용하면 결과 트리 조각을 노드 집합으로 변환할 수 있습니다. 이렇게 만들어지는 노드는 항상 트리의 루트 노드인 단일 노드를 포함합니다. 결과 트리 조각을 노드 집합으로 변환하면 해당 노드 집합을 for-each 문이나 `select` 특성 값 등 일반 노드 집합의 어디에서든 사용할 수 있습니다. 다음 코드 줄에서는 노드 집합으로 변환되어 노드 집합으로 사용되는 조각을 보여줍니다.  
+ 위의 설명대로 `node-set` 함수를 사용하면 결과 트리 조각을 노드 집합으로 변환할 수 있습니다. 이렇게 만들어지는 노드는 항상 트리의 루트 노드인 단일 노드를 포함합니다. 결과 트리 조각을 노드 집합으로 변환하면 해당 노드 집합을 for-each 문이나 `select` 특성 값 등 일반 노드 집합의 어디에서든 사용할 수 있습니다. 다음 코드 줄에서는 노드 집합으로 변환되어 노드 집합으로 사용되는 조각을 보여 줍니다.  
   
  `<xsl:for-each select="msxsl:node-set($node-fragment)">`  
   
@@ -156,7 +145,7 @@ ms.lasthandoff: 12/23/2017
 </xsl:stylesheet>  
 ```  
   
- 다음은 RTF, 즉 XPathNodeIterator로 스크립트 함수에 전달되기 전에 노드 집합으로 변환되는 결과 트리 조각 형식의 변수를 보여주는 또 다른 예제입니다.  
+ 다음은 RTF, 즉 XPathNodeIterator로 스크립트 함수에 전달되기 전에 노드 집합으로 변환되는 결과 트리 조각 형식의 변수를 보여 주는 또 다른 예제입니다.  
   
 ```xml  
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform"  

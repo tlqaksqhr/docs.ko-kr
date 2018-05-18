@@ -1,23 +1,15 @@
 ---
-title: "인증서 선택 및 유효성 검사"
-ms.custom: 
+title: 인증서 선택 및 유효성 검사
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: c933aca2-4cd0-4ff1-9df9-267143f25a6f
-caps.latest.revision: "15"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: 54d1409b74793a8539f432ce0b43f410d578e934
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: f163de89a3edbf3a4ca8509fdecd10f1aa1adf1b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="certificate-selection-and-validation"></a>인증서 선택 및 유효성 검사
 <xref:System.Net> 클래스는 SSL(Secure Sockets Layer) 연결에 대한 <xref:System.Security.Cryptography.X509Certificates>를 선택하고 유효성을 검사하는 여러 가지 방법을 지원합니다. 클라이언트는 서버에 인증하기 위해 하나 이상의 인증서를 선택할 수 있습니다. 서버는 인증을 위해 클라이언트 인증서에 하나 이상의 특정 특성이 있도록 요구할 수 있습니다.  

@@ -1,21 +1,12 @@
 ---
-title: "원본 Office Open XML 문서 만들기(C#)"
-ms.custom: 
+title: 원본 Office Open XML 문서 만들기(C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-csharp
-ms.topic: article
 ms.assetid: 653c8cdb-73be-4dc2-927f-924cfb4ed9ed
-caps.latest.revision: "3"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 378a83db02c6e07a070fb3770b042ed657860560
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: c5884d1e34558d01be4c873c3f44222396e588ab
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="creating-the-source-office-open-xml-document-c"></a>원본 Office Open XML 문서 만들기(C#)
 이 항목에서는 이 자습서의 다른 예제에서 사용하는 Office Open XML WordprocessingML 문서를 만드는 방법을 보여 줍니다. 이러한 지침을 따르는 경우 출력은 각 예제에서 제공되는 출력과 일치합니다.  

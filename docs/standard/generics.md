@@ -1,23 +1,16 @@
 ---
-title: "제네릭 형식(제네릭) 개요"
-description: "제네릭이 실제 데이터 형식에 커밋하지 않고 형식이 안전한 데이터 구조를 정의할 수 있게 해주는 코드 템플릿으로 사용되는 방법을 알아봅니다."
-keywords: .NET, .NET Core
+title: 제네릭 형식(제네릭) 개요
+description: 제네릭이 실제 데이터 형식에 커밋하지 않고 형식이 안전한 데이터 구조를 정의할 수 있게 해주는 코드 템플릿으로 사용되는 방법을 알아봅니다.
 author: kuhlenh
 ms.author: wiwagn
 ms.date: 06/20/2016
-ms.topic: article
-ms.prod: .net
 ms.technology: dotnet-standard
-ms.devlang: dotnet
 ms.assetid: a315b111-8e48-446c-ab19-acb6405894a7
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: f36bae495631db68afb1404398cbf43e890d4f33
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: ad6216998dff70ca7e36b52b374c5ffb9fd0cd45
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="generic-types-generics-overview"></a>제네릭 형식(제네릭) 개요
 

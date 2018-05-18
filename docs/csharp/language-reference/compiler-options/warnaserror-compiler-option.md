@@ -1,10 +1,6 @@
 ---
-title: "-warnaserror(C# 컴파일러 옵션)"
+title: -warnaserror(C# 컴파일러 옵션)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 f1_keywords:
 - /warnaserror
 helpviewer_keywords:
@@ -12,14 +8,11 @@ helpviewer_keywords:
 - -warnaserror compiler option [C#]
 - warnaserror compiler option [C#]
 ms.assetid: 04680ec3-08d6-4e2e-a274-38310e10e33c
-caps.latest.revision: 
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 6a341fe9760d7fdb0e4df7046cf356e550b4adb9
-ms.sourcegitcommit: c3ebb11a66e85a465c9ba2c42592222630b7ff9e
+ms.openlocfilehash: 762db1b3d72b5b4c3d606f3517f0b384f466d231
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="-warnaserror-c-compiler-options"></a>-warnaserror(C# 컴파일러 옵션)
 **-warnaserror+** 옵션은 모든 경고를 오류로 처리합니다.  
@@ -33,7 +26,7 @@ ms.lasthandoff: 01/25/2018
 ## <a name="remarks"></a>설명  
  일반적으로 경고로 보고되는 메시지가 대신 오류로 보고되며, 빌드 프로세스가 중지됩니다(출력 파일이 작성되지 않음).  
   
- 기본적으로 **-warnaserror-**가 적용되며, 경고가 발생해도 출력 파일이 생성됩니다. **-warnaserror+**와 동일한 **-warnaserror**는 경고가 오류로 처리되도록 합니다.  
+ 기본적으로 **-warnaserror-** 가 적용되며, 경고가 발생해도 출력 파일이 생성됩니다. **-warnaserror+** 와 동일한 **-warnaserror**는 경고가 오류로 처리되도록 합니다.  
   
  필요에 따라 몇 개의 특정 경고만 오류로 처리하려는 경우 오류로 처리할 경고 번호의 쉼표로 구분된 목록을 지정할 수 있습니다.  
   

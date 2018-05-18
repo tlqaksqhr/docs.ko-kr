@@ -1,29 +1,18 @@
 ---
-title: "XmlSchemaCollection 스키마 컴파일"
-ms.custom: 
+title: XmlSchemaCollection 스키마 컴파일
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 76f28770-7126-428f-9ed5-7b5ae8bad5ee
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: c891736534741d1d3d3edb93d75d9f191c2dd573
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: d64443f213603b1f5db9c256acc88e998e3f009a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="xmlschemacollection-schema-compilation"></a>XmlSchemaCollection 스키마 컴파일
 **XmlSchemaCollection**은 XDR(XML 데이터 축소) 및 XSD(XML 스키마 정의 언어) 스키마를 저장하고 유효성 검사를 수행할 수 있는 캐시 또는 라이브러리입니다. **XmlSchemaCollection**에서는 파일이나 URL에서 스키마에 액세스하는 대신 메모리에 있는 스키마를 캐시하여 성능을 향상시킵니다.  

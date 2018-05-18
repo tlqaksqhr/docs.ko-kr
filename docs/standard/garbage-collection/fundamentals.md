@@ -1,13 +1,7 @@
 ---
-title: "가비지 수집 기본 사항"
-ms.custom: 
+title: 가비지 컬렉션 기본 사항
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - garbage collection, generations
 - garbage collection, background garbage collection
@@ -16,21 +10,16 @@ helpviewer_keywords:
 - garbage collection, workstation garbage collection
 - garbage collection, managed heap
 ms.assetid: 67c5a20d-1be1-4ea7-8a9a-92b0b08658d2
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 9a42c9aeb3295cd90fb6796e36b840daff843aac
-ms.sourcegitcommit: 91691981897cf8451033cb01071d8f5d94017f97
+ms.openlocfilehash: d4dd3e16edae6e30d93083694a2d2d18c0815933
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="fundamentals-of-garbage-collection"></a>가비지 수집 기본 사항
-<a name="top"></a> CLR(공용 언어 런타임)에서 가비지 수집기는 자동 메모리 관리자 역할을 합니다. 가비지 수집은 다음과 같은 이점을 제공합니다.  
+# <a name="fundamentals-of-garbage-collection"></a>가비지 컬렉션 기본 사항
+<a name="top"></a> CLR(공용 언어 런타임)에서 가비지 수집은 자동 메모리 관리자 역할을 합니다. 가비지 수집은 다음과 같은 이점을 제공합니다.  
   
 -   응용 프로그램을 개발할 때 메모리를 해제할 필요가 없습니다.  
   
@@ -151,7 +140,7 @@ ms.lasthandoff: 01/09/2018
   
  임시 세대는 임시 세그먼트라는 메모리 세그먼트에 할당되어야 합니다. 가비지 수집기에서 획득하는 새로운 각 세그먼트는 새로운 임시 세그먼트가 되며 0세대 가비지 수집에서 남은 개체를 포함합니다. 이전의 임시 세그먼트는 새로운 2세대 세그먼트가 됩니다.  
   
- 임시 세그먼트의 크기는 시스템이 32비트 또는 64비트인지 및 실행 중인 가비지 수집기 형식에 따라 달라집니다. 다음 표에서는 기본값을 보여줍니다.  
+ 임시 세그먼트의 크기는 시스템이 32비트 또는 64비트인지 및 실행 중인 가비지 수집기 형식에 따라 달라집니다. 다음 표에서는 기본값을 보여 줍니다.  
   
 ||32비트|64비트|  
 |-|-------------|-------------|  
@@ -190,7 +179,7 @@ ms.lasthandoff: 01/09/2018
   
  가비지 수집이 시작되기 전에 가비지 수집을 트리거한 스레드를 제외한 모든 관리되는 스레드가 일시 중단됩니다.  
   
- 다음 그림에서는 가비지 수집을 트리거하여 다른 스레드가 일시 중단되도록 하는 스레드를 보여줍니다.  
+ 다음 그림에서는 가비지 수집을 트리거하여 다른 스레드가 일시 중단되도록 하는 스레드를 보여 줍니다.  
   
  ![스레드에서 가비지 수집을 트리거하는 시기](../../../docs/standard/garbage-collection/media/gc-triggered.png "GC_Triggered")  
 가비지 수집을 트리거하는 스레드  
@@ -219,7 +208,7 @@ ms.lasthandoff: 01/09/2018
   
 -   높은 처리 속도 및 확장성이 필요한 서버 응용 프로그램을 위한 서버 가비지 수집 서버 가비지 수집은 비동시 또는 백그라운드일 수 있습니다.  
   
- 다음 그림에서는 서버에서 가비지 수집을 수행하는 전용 스레드를 보여줍니다.  
+ 다음 그림에서는 서버에서 가비지 수집을 수행하는 전용 스레드를 보여 줍니다.  
   
  ![서버 가비지 수집 스레드](../../../docs/standard/garbage-collection/media/gc-server.png "GC_Server")  
 서버 가비지 수집  
@@ -270,7 +259,7 @@ ms.lasthandoff: 01/09/2018
   
  동시 수집 중에 개체를 할당할 수 있으므로 동시 가비지 수집의 작업 집합은 비동시 가비지 수집에 비해 약간 더 큽니다. 그러나 할당하는 개체가 작업 집합의 일부가 될 수 있으므로 이는 성능에 영향을 미칠 수 있습니다. 기본적으로 동시 가비지 수집은 일시 중지 시간이 짧은 대신 CPU 및 메모리를 더 소비합니다.  
   
- 다음 그림에서는 개별 전용 스레드에서 수행되는 동시 가비지 수집을 보여줍니다.  
+ 다음 그림에서는 개별 전용 스레드에서 수행되는 동시 가비지 수집을 보여 줍니다.  
   
  ![동시 가비지 수집 스레드](../../../docs/standard/garbage-collection/media/gc-concurrent.png "GC_Concurrent")  
 동시 가비지 수집  
@@ -290,7 +279,7 @@ ms.lasthandoff: 01/09/2018
   
  백그라운드 가비지 수집 중에 임시 가비지 수집이 발생할 수 있으므로 백그라운드 가비지 수집은 동시 가비지 수집에 의해 적용된 할당 제한을 제거합니다. 이는 백그라운드 가비지 수집이 임시 세대에서 비활성 개체를 제거할 수 있고, 필요한 경우 1세대 가비지 수집 중에 힙을 확장할 수도 있음을 의미합니다.  
   
- 다음 그림에서는 워크스테이션의 개별 전용 스레드에서 수행되는 백그라운드 가비지 수집을 보여줍니다.  
+ 다음 그림에서는 워크스테이션의 개별 전용 스레드에서 수행되는 백그라운드 가비지 수집을 보여 줍니다.  
   
  ![백그라운드 워크스테이션 가비지 수집](../../../docs/standard/garbage-collection/media/backgroundworkstn.png "BackgroundWorkstn")  
 백그라운드 워크스테이션 가비지 수집  
@@ -301,7 +290,7 @@ ms.lasthandoff: 01/09/2018
 ## <a name="background-server-garbage-collection"></a>백그라운드 서버 가비지 수집  
  .NET Framework 4.5부터 백그라운드 서버 가비지 수집이 서버 가비지 수집의 기본 모드입니다. 이 모드를 선택하려면 런타임 구성 스키마에서 [\<gcServer> 요소](../../../docs/framework/configure-apps/file-schema/runtime/gcserver-element.md)의 `enabled` 특성을 `true`로 설정합니다. 이 모드는 앞의 단원에서 설명한 백그라운드 워크스테이션 가비지 수집과 비슷하게 작동하지만 몇 가지 다른 점이 있습니다. 백그라운드 서버 가비지 수집은 일반적으로 각 논리 프로세서에 대한 전용 스레드인 다중 스레드를 사용하는 반면, 백그라운드 워크스테이션 가비지 수집은 단일 전용 백그라운드 가비지 수집 스레드를 사용합니다. 워크스테이션 백그라운드 가비지 수집 스레드와는 달리 이러한 스레드는 시간 초과되지 않습니다.  
   
- 다음 그림에서는 서버의 개별 전용 스레드에서 수행되는 백그라운드 가비지 수집을 보여줍니다.  
+ 다음 그림에서는 서버의 개별 전용 스레드에서 수행되는 백그라운드 가비지 수집을 보여 줍니다.  
   
  ![백그라운드 서버 가비지 수집](../../../docs/standard/garbage-collection/media/backgroundserver.png "BackgroundServer")  
 백그라운드 서버 가비지 수집  

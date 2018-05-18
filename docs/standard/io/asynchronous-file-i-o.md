@@ -1,13 +1,7 @@
 ---
-title: 비동기 파일 I-O
-ms.custom: ''
+title: 비동기 파일 I/O
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -23,18 +17,13 @@ helpviewer_keywords:
 - multiple I/O requests
 - data streams, synchronous streams
 ms.assetid: dbdd55e7-d6b9-4f9e-8abb-ab0edd4457f7
-caps.latest.revision: 23
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: e0c67c9b397dfcd6f6ba947c2876919693c4f472
-ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
+ms.openlocfilehash: 270ae5a8cfa7c69c7caa0896dfe23b84db48f659
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="asynchronous-file-io"></a>비동기 파일 I/O
 비동기 작업을 사용하면 주 스레드를 차단하지 않고 리소스 집중형 I/O 작업을 수행할 수 있습니다. 이 성능 고려 사항은 특히 시간이 소비되는 스트림 작업이 UI 스레드를 차단하고 응용 프로그램이 작동하지 않는 것처럼 표시할 수 있는 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 응용 프로그램 또는 [!INCLUDE[desktop_appname](../../../includes/desktop-appname-md.md)] 응용 프로그램에서 중요합니다.  

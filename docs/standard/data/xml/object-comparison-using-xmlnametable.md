@@ -1,29 +1,18 @@
 ---
-title: "XmlNameTable을 사용한 개체 비교"
-ms.custom: 
+title: XmlNameTable을 사용한 개체 비교
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 8d94e041-d340-4ddf-9a2c-d7319e3f4f86
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: f6c65581437bfb22cf771d66716b3dbb62dbafae
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 09f717cb4c09c1e35b9472b7b549f1d3edf0dd15
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="object-comparison-using-xmlnametable"></a>XmlNameTable을 사용한 개체 비교
 **XmlDocuments**가 생성되면 해당 문서와 관련된 이름 테이블도 생성됩니다. XML이 문서에 로드되거나 새 요소 또는 특성이 생성되면 해당 특성 및 요소 이름이 **XmlNameTable**에 포함됩니다. 또한 다른 문서의 기존 **NameTable**을 사용하여 **XmlDocument**를 만들 수도 있습니다. **XmlNameTable** 매개 변수를 사용하는 생성자로 **XmlDocuments**를 만들면 문서에서 **XmlNameTable**에 저장된 노드 이름, 네임스페이스 및 접두사에 액세스할 수 있습니다. 이름 테이블에 이름이 로드되는 방법에 관계없이 테이블에 이름을 저장한 후에는 문자열 비교 대신 개체 비교를 통해 이름을 신속하게 비교할 수 있습니다. 또한 <xref:System.Xml.NameTable.Add%2A>를 사용하여 이름 테이블에 문자열을 추가할 수도 있습니다. 다음 코드 샘플에서는 이름 테이블을 만들고 테이블에 **MyString** 문자열을 추가하는 방법을 보여줍니다. 그런 다음, 해당 테이블을 사용하여 **XmlDocument**를 만들고, 기존 이름 테이블에 **Myfile.xml**의 요소 및 특성 이름을 추가합니다.  
@@ -42,7 +31,7 @@ XmlDocument doc = new XmlDocument(nt);
 doc.Load("Myfile.xml");  
 ```  
   
- 다음 코드 예제에서는 문서를 만들고, 해당 문서에 새 요소 두 개를 추가하여 문서 이름 테이블에 추가하고, 이름에 대한 개체 비교를 수행하는 방법을 보여줍니다.  
+ 다음 코드 예제에서는 문서를 만들고, 해당 문서에 새 요소 두 개를 추가하여 문서 이름 테이블에 추가하고, 이름에 대한 개체 비교를 수행하는 방법을 보여 줍니다.  
   
 ```vb  
 Dim doc1 As XmlDocument = imp.CreateDocument()  

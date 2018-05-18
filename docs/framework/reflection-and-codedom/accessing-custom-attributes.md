@@ -1,13 +1,6 @@
 ---
-title: "사용자 지정 특성 액세스"
-ms.custom: 
+title: 사용자 지정 특성 액세스
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -17,16 +10,13 @@ helpviewer_keywords:
 - attributes [.NET Framework], accessing
 - reflection, custom attributes
 ms.assetid: 1d8e3398-00d8-47d5-a084-214f9859d3d7
-caps.latest.revision: "15"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 0980488f3093bfcaedc730bac126b1b5b6505187
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 8aafd1586068dcd7aaf4a72ef5454e3a2698ccd1
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="accessing-custom-attributes"></a>사용자 지정 특성 액세스
 특성이 프로그램 요소와 연결된 후 리플렉션을 사용하여 특성의 존재 및 값을 쿼리할 수 있습니다. .NET Framework 버전 1.0 및 1.1에서 사용자 지정 특성은 실행 컨텍스트에서 검사됩니다. .NET Framework 버전 2.0에서는 실행을 위해 로드할 수 없는 코드를 검사하는 데 사용할 수 있는 새로운 로드 컨텍스트인 리플렉션 전용 컨텍스트를 제공합니다.  

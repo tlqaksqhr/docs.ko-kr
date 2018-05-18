@@ -1,13 +1,7 @@
 ---
-title: "Culture의 영향을 받지 않는 문자열 작업 수행"
-ms.custom: 
+title: Culture의 영향을 받지 않는 문자열 작업 수행
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - case mappings
 - custom case mappings
@@ -17,18 +11,13 @@ helpviewer_keywords:
 - culture, custom case mappings
 - culture-insensitive string operations, method overloads
 ms.assetid: 579ef891-1f83-4c63-9ebd-2f40406b5b91
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 62aa839d2dae2f6dc84d529a8abf5061367f221f
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 9500550fe415d77bacb44011622ddd83ffc8a9ec
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="performing-culture-insensitive-string-operations"></a>Culture의 영향을 받지 않는 문자열 작업 수행
 문화권 구분 문자열 작업을 수행하는 대부분의 .NET Framework 메서드는 기본적으로 <xref:System.Globalization.CultureInfo> 매개 변수를 전달하여 사용할 문화권을 명시적으로 지정할 수 있도록 하는 메서드 오버로드를 제공합니다. 이러한 오버로드를 사용하여 매핑 및 정렬 규칙이 문화권을 구분하지 않는 결과를 보장할 경우 문화권 변동을 제거할 수 있습니다.  

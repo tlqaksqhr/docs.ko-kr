@@ -1,21 +1,14 @@
 ---
 title: 액세스 가능성 수준 사용에 대한 제한(C# 참조)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - access modifiers [C#], accessibility level restrictions
 ms.assetid: 987e2f22-46bf-4fea-80ee-270b9cd01045
-caps.latest.revision: 21
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 44d065429f67d717d7c50e3877294eadd462a99d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: bbe358822e885e5ddaba4cb9d982e89cefe1921e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="restrictions-on-using-accessibility-levels-c-reference"></a>액세스 가능성 수준 사용에 대한 제한(C# 참조)
 선언에서 형식을 지정하는 경우, 형식의 액세스 가능성 수준이 멤버 또는 다른 형식의 액세스 가능성 수준에 따라 달라지는지를 확인합니다. 예를 들어 직접 기본 클래스는 적어도 파생 클래스 수준만큼 액세스 가능해야 합니다. 다음 선언에서는 기본 클래스 `BaseClass`가 `MyClass`보다 액세스 가능성이 낮기 때문에 컴파일러 오류가 발생합니다.  
@@ -41,7 +34,7 @@ public class MyClass: BaseClass {...} // Error
 |[연산자](../../../csharp/programming-guide/statements-expressions-operators/operators.md)|연산자의 반환 형식 및 매개 변수 형식은 적어도 연산자 자체 수준만큼 액세스 가능해야 합니다.|  
 |[생성자](../../../csharp/programming-guide/classes-and-structs/constructors.md)|생성자의 매개 변수 형식은 적어도 생성자 자체 수준만큼 액세스 가능해야 합니다.|  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제에는 다양한 종류의 잘못된 선언이 포함되어 있습니다. 각 선언 다음의 주석은 예상된 컴파일러 오류를 나타냅니다.  
   
 ```  

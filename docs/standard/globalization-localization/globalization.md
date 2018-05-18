@@ -1,13 +1,7 @@
 ---
-title: "전역화"
-ms.custom: 
+title: 전역화
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -19,18 +13,13 @@ helpviewer_keywords:
 - application development [.NET Framework], globalization
 - culture, globalization
 ms.assetid: 4e919934-6b19-42f2-b770-275a4fae87c9
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 357d18843af0af2869d0ec98def6c733e51f9a4c
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 9eb57aa0d6645958691c0003b07db6e8bb844fc9
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="globalization"></a>전역화
 전역화는 다양한 문화권의 사용자를 위해 현지화된 인터페이스와 국가별 데이터를 지원하는 지역화 대비 응용 프로그램을 디자인하고 개발하는 작업을 수반합니다. 디자인 단계를 시작하기 전에 앱에서 지원할 문화권을 결정해야 합니다. 앱이 기본적으로 단일 문화권이나 국가를 대상으로 하더라도, 다른 문화권이나 국가의 사용자에게 쉽게 확장될 수 있도록 디자인하고 작성할 수 있습니다.  
@@ -207,7 +196,7 @@ ms.lasthandoff: 12/23/2017
   
 -   고정 문화권의 서식 규칙을 사용하여 문자열을 저장합니다.  
   
- 다음 예제에서 마지막 방법을 보여줍니다. 정적 <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType> 속성에 의해 반환되는 고정 문화권의 서식 규칙을 사용합니다.  
+ 다음 예제에서 마지막 방법을 보여 줍니다. 정적 <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType> 속성에 의해 반환되는 고정 문화권의 서식 규칙을 사용합니다.  
   
  [!code-csharp[Conceptual.Globalization#4](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.globalization/cs/dates3.cs#4)]
  [!code-vb[Conceptual.Globalization#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.globalization/vb/dates3.vb#4)]  
@@ -216,7 +205,7 @@ ms.lasthandoff: 12/23/2017
 ### <a name="serialization-and-time-zone-awareness"></a>Serialization 및 표준 시간대 인식  
  날짜 및 시간 값은 일반 시간(“매장은 2013년 1월 2일 오전 9:00에 개장합니다.”)에서 특정한 순간(“생년월일: 2013년 1월 2일 오전 6:32:00”)에 이르기까지 다수의 해석이 있을 수 있습니다. 시간 값이 특정한 순간을 나타내는 경우 serialize된 값으로부터 복원하며, 사용자의 지리적 위치 또는 표준 시간대와 상관없이 동일한 순간을 나타내도록 해야 합니다.  
   
- 다음 예제에서는 이 문제를 보여줍니다. 단일 지역 날짜 및 시간 값을 세 가지 [표준 서식](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)(“G”는 일반 날짜 자세한 시간, “s”는 정렬 가능한 날짜/시간, “o”는 날짜/시간 값 라운드트립)은 물론 이진 형식의 문자열로 저장합니다.  
+ 다음 예제에서는 이 문제를 보여 줍니다. 단일 지역 날짜 및 시간 값을 세 가지 [표준 서식](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)(“G”는 일반 날짜 자세한 시간, “s”는 정렬 가능한 날짜/시간, “o”는 날짜/시간 값 라운드트립)은 물론 이진 형식의 문자열로 저장합니다.  
   
  [!code-csharp[Conceptual.Globalization#10](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.globalization/cs/dates4.cs#10)]
  [!code-vb[Conceptual.Globalization#10](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.globalization/vb/dates4.vb#10)]  
@@ -251,7 +240,7 @@ ms.lasthandoff: 12/23/2017
   
 -   값을 UTC로 변환하고 이진 형식으로 저장합니다. 그런 다음 대상 시스템에서 값을 deserialize하고 현지 시간으로 변환합니다.  
   
- 다음 예제는 각 방법을 보여줍니다.  
+ 다음 예제는 각 방법을 보여 줍니다.  
   
  [!code-csharp[Conceptual.Globalization#11](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.globalization/cs/dates8.cs#11)]
  [!code-vb[Conceptual.Globalization#11](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.globalization/vb/dates8.vb#11)]  
@@ -342,7 +331,7 @@ ms.lasthandoff: 12/23/2017
   
 -   숫자를 이진 형식이 아닌 문자열 형식으로 serialize합니다.  
   
- 다음 예제에서 마지막 방법을 보여줍니다. <xref:System.Double> 값의 배열을 serialize한 다음 deserialize하고 영어(미국) 및 프랑스어(프랑스) 문화권의 서식 규칙을 사용하여 나타냅니다.  
+ 다음 예제에서 마지막 방법을 보여 줍니다. <xref:System.Double> 값의 배열을 serialize한 다음 deserialize하고 영어(미국) 및 프랑스어(프랑스) 문화권의 서식 규칙을 사용하여 나타냅니다.  
   
  [!code-csharp[Conceptual.Globalization#7](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.globalization/cs/numbers3.cs#7)]
  [!code-vb[Conceptual.Globalization#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.globalization/vb/numbers3.vb#7)]  

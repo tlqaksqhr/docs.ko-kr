@@ -1,24 +1,17 @@
 ---
 title: '* 연산자(C# 참조)'
 ms.date: 04/04/2018
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 f1_keywords:
 - '*_CSharpKeyword'
 helpviewer_keywords:
 - multiplication operator (*) [C#]
 - '* operator [C#]'
 ms.assetid: abd9a5f0-9b24-431e-971a-09ee1c45c50e
-caps.latest.revision: 14
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 07d06d668ba43ebc3f4fae394d7b6641b122f4a6
-ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
+ms.openlocfilehash: 6c5d4de587b67e5ade158c163a87e8dea6bece5a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="-operator-c-reference"></a>* 연산자(C# 참조)
 곱하기 연산자(`*`)는 피연산자의 곱을 계산합니다. 모든 숫자 형식에는 곱하기 연산자가 미리 정의되어 있습니다.  

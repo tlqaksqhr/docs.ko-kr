@@ -1,21 +1,15 @@
 ---
-title: "다형성(C# 프로그래밍 가이드)"
+title: 다형성(C# 프로그래밍 가이드)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - C# language, polymorphism
 - polymorphism [C#]
 ms.assetid: 086af969-29a5-4ce8-a993-0b7d53839dab
-caps.latest.revision: "31"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 601c8cf626c846ca6c5d6bc2338e271e6b93544a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 8bbf93d14a16b06441ba48b9d4e19cfd249e9146
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="polymorphism-c-programming-guide"></a>다형성(C# 프로그래밍 가이드)
 다형성은 흔히 캡슐화와 상속의 뒤를 이어 개체 지향 프로그래밍의 세 번째 특징으로 일컬어집니다. 다형성은 "여러 형태"를 의미하는 그리스어 단어이며 다음과 같은 두 가지 고유한 측면을 가집니다.  
@@ -62,7 +56,7 @@ ms.lasthandoff: 11/21/2017
   
  [!code-csharp[csProgGuideInheritance#18](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/polymorphism_4.cs)]  
   
- 숨겨진 기본 클래스 멤버는 파생 클래스의 인스턴스를 기본 클래스의 인스턴스로 캐스팅하여 클라이언트 코드에서 계속 액세스할 수 있습니다. 예를 들면 다음과 같습니다.  
+ 숨겨진 기본 클래스 멤버는 파생 클래스의 인스턴스를 기본 클래스의 인스턴스로 캐스팅하여 클라이언트 코드에서 계속 액세스할 수 있습니다. 예:  
   
  [!code-csharp[csProgGuideInheritance#19](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/polymorphism_5.cs)]  
   
@@ -91,7 +85,7 @@ ms.lasthandoff: 11/21/2017
 > [!NOTE]
 >  가상 멤버는 `base`를 사용하여 자체 구현에서 해당 멤버의 기본 클래스 구현을 호출하는 것이 좋습니다. 기본 클래스 동작이 발생하도록 하면 파생 클래스가 파생 클래스에 대한 동작 구현에 집중할 수 있습니다. 기본 클래스 구현이 호출되지 않는 경우 해당 동작이 기본 클래스의 동작과 호환되도록 하는 것은 파생 클래스의 책임입니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
   
 -   [Override 및 New 키워드를 사용하여 버전 관리](../../../csharp/programming-guide/classes-and-structs/versioning-with-the-override-and-new-keywords.md)  
   

@@ -1,13 +1,6 @@
 ---
-title: "Visual Studio용 개발자 명령 프롬프트"
-ms.custom: 
+title: Visual Studio용 개발자 명령 프롬프트
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - command prompt, Windows SDK
 - Visual Studio command prompt
@@ -17,16 +10,13 @@ helpviewer_keywords:
 - environment variables, setting for tools
 - developer command prompt
 ms.assetid: 94fcf524-9045-4993-bfb2-e2d8bad44219
-caps.latest.revision: "45"
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: d8bd7baec77e6e776f93a2a13156d66c1199f918
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: d3ff897e37e3fa2f7202a54c05c8093ba05282c5
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="developer-command-prompt-for-visual-studio"></a>Visual Studio용 개발자 명령 프롬프트
 Visual Studio용 개발자 명령 프롬프트는 .NET Framework 도구를 쉽게 사용할 수 있는 환경 변수를 자동으로 설정합니다. 개발자 명령 프롬프트는 전체 또는 커뮤니티 버전의 Visual Studio와 함께 설치됩니다. Express 버전의 Visual Studio에서는 설치되지 않습니다.  
@@ -79,7 +69,7 @@ Visual Studio용 개발자 명령 프롬프트는 .NET Framework 도구를 쉽�
   
 1.  Visual Studio를 엽니다.  
   
-2.  **도구** 메뉴를 선택하고 **외부 도구...**를 선택합니다.  
+2.  **도구** 메뉴를 선택하고 **외부 도구...** 를 선택합니다.  
   
 3.  **외부 도구** 대화 상자에서 **추가** 단추를 선택합니다. 새 항목이 표시됩니다.  
   

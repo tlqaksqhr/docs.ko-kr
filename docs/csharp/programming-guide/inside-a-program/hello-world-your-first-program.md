@@ -1,9 +1,6 @@
 ---
-title: "Hello World -- 프로그램 처음 만들기(C# 프로그래밍 가이드)"
+title: Hello World -- 프로그램 처음 만들기(C# 프로그래밍 가이드)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.topic: get-started-article
 f1_keywords:
 - cs.program
 - vs.csharp.startpage.firstapplication
@@ -11,14 +8,11 @@ helpviewer_keywords:
 - examples [C#], Hello World
 - Hello World example [C#]
 ms.assetid: 6493182a-b0b6-4539-a719-518a168cb730
-caps.latest.revision: "39"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 1b6511394e69edd344c4f4a1bbc9da549a1a2a17
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 904657175d87e0d78e518248ed89b3720227360f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="hello-world----your-first-program-c-programming-guide"></a>Hello World -- 프로그램 처음 만들기(C# 프로그래밍 가이드)
 다음 절차에서는 기존 "Hello World!" 프로그램의 C# 버전을 만듭니다. 이 프로그램은 문자열 `Hello World!`를 표시합니다.  
@@ -35,7 +29,7 @@ ms.lasthandoff: 01/19/2018
   
      **새 프로젝트** 대화 상자가 열립니다.  
   
-3.  **설치됨**, **템플릿**, **Visual C#**을 차례로 확장하고 **콘솔 응용 프로그램**을 선택합니다.  
+3.  **설치됨**, **템플릿**, **Visual C#** 을 차례로 확장하고 **콘솔 응용 프로그램**을 선택합니다.  
   
 4.  **이름** 상자에 프로젝트의 이름을 지정하고 **확인** 단추를 선택합니다.  
   

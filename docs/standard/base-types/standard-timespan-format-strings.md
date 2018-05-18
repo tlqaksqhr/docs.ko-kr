@@ -1,13 +1,7 @@
 ---
-title: "표준 TimeSpan 서식 문자열"
-ms.custom: 
+title: 표준 TimeSpan 서식 문자열
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -23,28 +17,23 @@ helpviewer_keywords:
 - standard TimeSpan format strings
 - formatting [.NET Framework], time intervals
 ms.assetid: 9f6c95eb-63ae-4dcc-9c32-f81985c75794
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 02dd73cd7f8f6be07b298e6fb1aac2b4759d21bb
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 82774ffaf03b7eaad6240a0361bede076053de0c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="standard-timespan-format-strings"></a>표준 TimeSpan 서식 문자열
 <a name="Top"></a> 표준 <xref:System.TimeSpan> 형식 문자열은 단일 형식 지정자를 사용하여 서식 지정 작업으로 생성되는 <xref:System.TimeSpan> 값의 텍스트 표현을 정의합니다. 공백을 포함하여 문자가 두 개 이상 포함된 형식 문자열은 사용자 지정 <xref:System.TimeSpan> 형식 문자열로 해석됩니다. 자세한 내용은 [사용자 지정 TimeSpan 서식 문자열](../../../docs/standard/base-types/custom-timespan-format-strings.md)을 참조하세요.  
   
- <xref:System.TimeSpan> 값의 문자열 표현은 <xref:System.TimeSpan.ToString%2A?displayProperty=nameWithType>과 같이 복합 서식 지정을 지원하는 메서드 및 <xref:System.String.Format%2A?displayProperty=nameWithType> 메서드의 오버로드 호출을 통해 생성됩니다. 자세한 내용은 [서식 지정 형식](../../../docs/standard/base-types/formatting-types.md) 및 [복합 서식 지정](../../../docs/standard/base-types/composite-formatting.md)을 참조하세요. 다음 예제에서는 서식 지정 작업에 표준 형식 문자열을 사용하는 방법을 보여줍니다.  
+ <xref:System.TimeSpan> 값의 문자열 표현은 <xref:System.TimeSpan.ToString%2A?displayProperty=nameWithType>과 같이 복합 서식 지정을 지원하는 메서드 및 <xref:System.String.Format%2A?displayProperty=nameWithType> 메서드의 오버로드 호출을 통해 생성됩니다. 자세한 내용은 [서식 지정 형식](../../../docs/standard/base-types/formatting-types.md) 및 [복합 서식 지정](../../../docs/standard/base-types/composite-formatting.md)을 참조하세요. 다음 예제에서는 서식 지정 작업에 표준 형식 문자열을 사용하는 방법을 보여 줍니다.  
   
  [!code-csharp[Conceptual.TimeSpan.Standard#2](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.timespan.standard/cs/formatexample1.cs#2)]
  [!code-vb[Conceptual.TimeSpan.Standard#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.timespan.standard/vb/formatexample1.vb#2)]  
   
- 표준 <xref:System.TimeSpan> 형식 문자열은 구문 분석 작업에 필요한 입력 문자열 서식을 정의하기 위해 <xref:System.TimeSpan.ParseExact%2A?displayProperty=nameWithType> 및 <xref:System.TimeSpan.TryParseExact%2A?displayProperty=nameWithType> 메서드에서도 사용됩니다. 구문 분석 시에는 값의 문자열 표현이 해당 값으로 변환됩니다. 다음 예제에서는 구문 분석 작업에 표준 형식 문자열을 사용하는 방법을 보여줍니다.  
+ 표준 <xref:System.TimeSpan> 형식 문자열은 구문 분석 작업에 필요한 입력 문자열 서식을 정의하기 위해 <xref:System.TimeSpan.ParseExact%2A?displayProperty=nameWithType> 및 <xref:System.TimeSpan.TryParseExact%2A?displayProperty=nameWithType> 메서드에서도 사용됩니다. 구문 분석 시에는 값의 문자열 표현이 해당 값으로 변환됩니다. 다음 예제에서는 구문 분석 작업에 표준 형식 문자열을 사용하는 방법을 보여 줍니다.  
   
  [!code-csharp[Conceptual.TimeSpan.Standard#3](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.timespan.standard/cs/parseexample1.cs#3)]
  [!code-vb[Conceptual.TimeSpan.Standard#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.timespan.standard/vb/parseexample1.vb#3)]  

@@ -1,20 +1,13 @@
 ---
-title: "연속 키를 기준으로 결과 그룹화"
-description: "연속 키를 기준으로 결과를 그룹화하는 방법입니다."
-keywords: .NET, .NET Core, C#
-author: BillWagner
-manager: wpickett
-ms.author: wiwagn
+title: 연속 키를 기준으로 결과 그룹화
+description: 연속 키를 기준으로 결과를 그룹화하는 방법입니다.
 ms.date: 12/1/2016
-ms.topic: article
-ms.prod: .net
-ms.technology: devlang-csharp
 ms.assetid: cbda9c08-151b-4c9e-82f7-c3d7f3dac66b
-ms.openlocfilehash: cdd06a6fad037291bbc5aa011b47bb668fa2f062
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: a8d6ac133932a12154d5b23454065144c7652067
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="group-results-by-contiguous-keys"></a>연속 키를 기준으로 결과 그룹화
 
@@ -22,7 +15,7 @@ ms.lasthandoff: 11/21/2017
   
 |Key|값|  
 |---------|-----------|  
-|A|We|  
+|A|수|  
 |A|think|  
 |A|that|  
 |B|Linq|  
@@ -47,7 +40,7 @@ ms.lasthandoff: 11/21/2017
   
  스레드로부터의 안전성을 달성하려면 소스 코드 요소에 설명된 대로 소스 시퀀스가 반복됨에 따라 각 그룹 또는 청크의 복사본을 만듭니다. 소스 시퀀스에 연속 항목의 큰 시퀀스가 포함된 경우 공용 언어 런타임이 <xref:System.OutOfMemoryException>을 throw할 수 있습니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제에서는 확장 메서드 및 이 메서드를 사용하는 클라이언트 코드를 보여 줍니다.  
   
  [!code-csharp[cscsrefContiguousGroups#1](../../../samples/snippets/csharp/concepts/linq/how-to-group-results-by-contiguous-keys_1.cs)]  

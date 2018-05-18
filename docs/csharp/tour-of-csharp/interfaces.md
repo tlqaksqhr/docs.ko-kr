@@ -1,20 +1,13 @@
 ---
-title: "C# 인터페이스 - C# 언어 둘러보기"
-description: "인터페이스는 C#의 형식이 구현하는 계약을 정의합니다."
-keywords: ".NET, c샵, 인터페이스, 다중 상속, 다형성"
-author: BillWagner
-ms.author: wiwagn
+title: C# 인터페이스 - C# 언어 둘러보기
+description: 인터페이스는 C#의 형식이 구현하는 계약을 정의합니다.
 ms.date: 08/10/2016
-ms.topic: article
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.devlang: csharp
 ms.assetid: a9bf82f4-efd1-4216-bd34-4ef0fa48c968
-ms.openlocfilehash: 673ac56f3f5732fcda02d313b6f4273708ae365f
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 0ad02d5b2792656783d93b2cc767aeb81efbc30e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="interfaces"></a>인터페이스
 

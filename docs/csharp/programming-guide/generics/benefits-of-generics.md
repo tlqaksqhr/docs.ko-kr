@@ -1,21 +1,14 @@
 ---
-title: "제네릭의 장점(C# 프로그래밍 가이드)"
+title: 제네릭의 장점(C# 프로그래밍 가이드)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - generics [C#], benefits
 ms.assetid: 80f037cd-9ea7-48be-bfc1-219bfb2d4277
-caps.latest.revision: 
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 2eb4aad3d23e459af738045b37ae3f1e8f33da06
-ms.sourcegitcommit: 96cc82cac4650adfb65ba351506d8a8fbcd17b5c
+ms.openlocfilehash: bd0a133c6ce1a9623bfe8598d1dc786c44e6eaad
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="benefits-of-generics-c-programming-guide"></a>제네릭의 장점(C# 프로그래밍 가이드)
 제네릭은 형식을 유니버설 기본 형식 <xref:System.Object>으로/에서 캐스팅하여 일반화가 수행되는 이전 버전의 공용 언어 런타임 및 C# 언어의 제한 사항에 대한 솔루션을 제공합니다. 제네릭 클래스를 만들면 컴파일 시간에 형식이 안전한 컬렉션을 만들 수 있습니다.  

@@ -1,26 +1,15 @@
 ---
-title: "XPathNavigator를 사용하여 XML 데이터 액세스"
-ms.custom: 
+title: XPathNavigator를 사용하여 XML 데이터 액세스
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: c57b46e6-5c77-408f-bc4e-67a5dcc9cc05
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 9e0b6d8545fccf9148aaa317b6d936c5c9f02775
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 74a991148ba4a71284e1f5da7b5d9c2a40c4446b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="accessing-xml-data-using-xpathnavigator"></a>XPathNavigator를 사용하여 XML 데이터 액세스
 <xref:System.Xml.XPath.XPathNavigator> 클래스는 <xref:System.Xml.XPath.XPathDocument> 또는 <xref:System.Xml.XmlDocument> 개체에서 노드를 탐색하고 XML 데이터를 추출하고 강력한 형식의 XML 데이터에 액세스하는 메서드를 제공합니다.  

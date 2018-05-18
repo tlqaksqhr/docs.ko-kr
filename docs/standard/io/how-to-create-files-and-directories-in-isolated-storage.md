@@ -1,13 +1,7 @@
 ---
-title: "방법: 격리된 저장소에 파일 및 디렉터리 만들기"
-ms.custom: 
+title: '방법: 격리된 저장소에 파일 및 디렉터리 만들기'
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -20,18 +14,13 @@ helpviewer_keywords:
 - stores, creating files and directories
 - storing data using isolated storage, creating files and directories
 ms.assetid: 2ca4d2a4-809b-4f00-bc08-bf4a64d3a5c3
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: cf6295e7d58d03e7b4bf4e0a00cfc509d289e071
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: b7fa96e4f28e92e0890acf6ffc105ca11a97d575
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-files-and-directories-in-isolated-storage"></a>방법: 격리된 저장소에 파일 및 디렉터리 만들기
 격리된 저장소를 가져온 다음에는 데이터를 저장할 디렉터리와 파일을 만들 수 있습니다. 저장소 내에서 파일 및 디렉터리 이름은 가상 파일 시스템의 루트와 관련하여 지정됩니다.  
@@ -40,7 +29,7 @@ ms.lasthandoff: 12/23/2017
   
  파일을 만들려면 <xref:System.IO.IsolatedStorage.IsolatedStorageFile.CreateFile%2A?displayProperty=nameWithType> 메서드를 사용합니다.  
   
- Windows 운영 체제에서 격리된 저장소 파일 및 디렉터리 이름은 대/소문자를 구분하지 않습니다. 즉, `ThisFile.txt`라는 파일을 만든 다음, `THISFILE.TXT`라는 다른 파일을 만들면 한 파일만 만들어집니다. 파일 이름은 표시를 위해 원래 대소문자를 유지합니다.  
+ Windows 운영 체제에서 격리된 저장소 파일 및 디렉터리 이름은 대/소문자를 구분하지 않습니다. 즉, `ThisFile.txt`라는 파일을 만든 다음 `THISFILE.TXT`라는 다른 파일을 만들면 한 파일만 만들어집니다. 파일 이름은 표시를 위해 원래 대소문자를 유지합니다.  
   
 ## <a name="example"></a>예  
  다음 코드 예제는 분리된 저장소에서 파일 및 디렉터리를 만드는 방법을 보여줍니다.  

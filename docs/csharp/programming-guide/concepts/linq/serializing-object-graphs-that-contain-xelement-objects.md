@@ -1,21 +1,12 @@
 ---
-title: "XElement 개체를 포함하는 개체 그래프 serialize(C#)"
-ms.custom: 
+title: XElement 개체를 포함하는 개체 그래프 serialize(C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-csharp
-ms.topic: article
 ms.assetid: fcbc3951-3cc4-4d0f-9259-e97549ed68f0
-caps.latest.revision: "3"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 8b7da4429360beb20fa304b592020d48666fe732
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: f51a026642563e1c1690d9a49220aae462840211
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="serializing-object-graphs-that-contain-xelement-objects-c"></a>XElement 개체를 포함하는 개체 그래프 serialize(C#)
 이 항목에서는 <xref:System.Xml.Linq.XElement> 형식의 개체에 대한 참조가 포함된 개체 그래프를 serialize하는 기능에 대해 소개합니다. 이러한 유형의 serialize를 용이하게 수행하기 위해 <xref:System.Xml.Linq.XElement>는 <xref:System.Xml.Serialization.IXmlSerializable> 인터페이스를 구현합니다.  

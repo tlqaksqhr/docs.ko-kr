@@ -1,12 +1,6 @@
 ---
-title: "응용 프로그램의 정보 기록(Visual Basic)"
-ms.custom: 
+title: 응용 프로그램의 정보 기록(Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - Log object
 - My.Log object
@@ -15,25 +9,22 @@ helpviewer_keywords:
 - My.Application.Log object
 - examples [Visual Basic], logging application information
 ms.assetid: 8bf4f047-22d6-48d6-aec5-93b98ad5b8e8
-caps.latest.revision: "12"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 4e52aaf4c26b4fa60ee04d7df6aa96980ebbf491
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 68ec09dac026e46716ff18dce88acf9d60635026
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="logging-information-from-the-application-visual-basic"></a>응용 프로그램의 정보 기록(Visual Basic)
 이 섹션에는 `My.Application.Log` 또는 `My.Log` 개체를 사용하여 응용 프로그램의 정보를 기록하는 방법과 응용 프로그램의 로깅 기능을 확장하는 방법을 설명하는 항목이 포함되어 있습니다.  
   
  `Log` 개체는 응용 프로그램의 로그 수신기에 정보를 쓰기 위한 메서드를 제공하고, `Log` 개체의 고급 `TraceSource` 속성은 자세한 구성 정보를 제공합니다. `Log` 개체는 응용 프로그램의 구성 파일에서 구성됩니다.  
   
- `My.Log` 개체는 ASP.NET 응용 프로그램에만 사용할 수 있습니다. 클라이언트 응용 프로그램의 경우 `My.Application.Log`를 사용합니다. 자세한 내용은 <xref:Microsoft.VisualBasic.Logging.Log>을 참조하십시오.  
+ `My.Log` 개체는 ASP.NET 응용 프로그램에만 사용할 수 있습니다. 클라이언트 응용 프로그램의 경우 `My.Application.Log`를 사용합니다. 자세한 내용은 <xref:Microsoft.VisualBasic.Logging.Log>을 참조하세요.  
   
 ## <a name="tasks"></a>작업  
   
-|후|참조|  
+|대상|보기|  
 |--------|---------|  
 |응용 프로그램의 로그에 이벤트 정보를 씁니다.|[방법: 로그 메시지 쓰기](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-log-messages.md)|  
 |응용 프로그램의 로그에 예외 정보를 씁니다.|[방법: 예외 기록](../../../../visual-basic/developing-apps/programming/log-info/how-to-log-exceptions.md)|  

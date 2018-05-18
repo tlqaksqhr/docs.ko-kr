@@ -1,20 +1,13 @@
 ---
-title: "런타임에 동적으로 조건자 필터 지정"
-description: "런타임에 동적으로 조건자 필터를 지정하는 방법"
-keywords: .NET, .NET Core, C#
-author: BillWagner
-manager: wpickett
-ms.author: wiwagn
+title: 런타임에 동적으로 조건자 필터 지정
+description: 런타임에 동적으로 조건자 필터를 지정하는 방법
 ms.date: 12/1/2016
-ms.topic: article
-ms.prod: .net
-ms.technology: devlang-csharp
 ms.assetid: 90238470-0767-497c-916c-52d0d16845e0
-ms.openlocfilehash: 06bc594ac1357e7dca6c182fa28310559a79875c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: fa3426a513758d8c30bf381ec480b9b8d12a5f81
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="dynamically-specify-predicate-filters-at-runtime"></a>런타임에 동적으로 조건자 필터 지정
 

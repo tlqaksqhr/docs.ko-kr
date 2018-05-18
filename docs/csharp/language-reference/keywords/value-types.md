@@ -1,10 +1,6 @@
 ---
-title: "값 형식(C# 참조)"
+title: 값 형식(C# 참조)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 f1_keywords:
 - cs.valuetypes
 helpviewer_keywords:
@@ -12,14 +8,11 @@ helpviewer_keywords:
 - types [C#], value types
 - C# language, value types
 ms.assetid: 471eb994-2958-49d5-a6be-19b4313f80a3
-caps.latest.revision: 
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 281b811f2a8a1f2c364405b563f9f103899b492c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: fdda6942c6883baaaea5e305a1e699a01e707d2b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="value-types-c-reference"></a>값 형식(C# 참조)
 값 형식은 다음 두 가지 기본 범주로 구성됩니다.  

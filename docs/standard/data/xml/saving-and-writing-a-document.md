@@ -1,29 +1,18 @@
 ---
-title: "문서 작성 및 저장"
-ms.custom: 
+title: 문서 작성 및 저장
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 097b0cb1-5743-4c3a-86ef-caf5cbe6750d
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 2138b9c47c6e41cd94e775eaed005d8a6fd976c9
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 389ae0d95f3d612ca9c81ce69b74f8b58534d679
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="saving-and-writing-a-document"></a>문서 작성 및 저장
 <xref:System.Xml.XmlDocument>를 로드하고 저장할 경우 저장된 문서는 다음과 같이 원래 문서와 다를 수 있습니다.  
@@ -70,7 +59,7 @@ doc.Save(tw);
 ## <a name="writing-document-content-using-the-outerxml-property"></a>OuterXml 속성을 사용하여 문서 내용 작성  
  <xref:System.Xml.XmlNode.OuterXml%2A> 속성은 Microsoft에서 W3C(World Wide Web 컨소시엄) XML DOM(문서 개체 모델) 표준을 확장한 결과입니다. <xref:System.Xml.XmlNode.OuterXml%2A> 속성을 사용하여 전체 XML 문서의 태그를 가져오거나 단일 노드 및 해당 자식 노드의 태그만 가져올 수 있습니다. <xref:System.Xml.XmlNode.OuterXml%2A>은 지정된 노드 및 모든 자식 노드를 나타내는 태그를 반환합니다.  
   
- 다음 코드 예제에서는 문서 전체를 문자열로 저장하는 방법을 보여줍니다.  
+ 다음 코드 예제에서는 문서 전체를 문자열로 저장하는 방법을 보여 줍니다.  
   
 ```vb  
 Dim mydoc As New XmlDocument()  
@@ -86,7 +75,7 @@ XmlDocument mydoc = new XmlDocument();
 string xml = mydoc.OuterXml;  
 ```  
   
- 다음 코드 예제에서는 문서 요소만 저장하는 방법을 보여줍니다.  
+ 다음 코드 예제에서는 문서 요소만 저장하는 방법을 보여 줍니다.  
   
 ```vb  
 ' For the content of the Document Element only.  

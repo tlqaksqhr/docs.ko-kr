@@ -1,19 +1,13 @@
 ---
 title: C#의 역사 - C# 가이드
 description: 이 언어의 초창기 버전은 어떤 모습이었으며 이후 어떻게 변했는가?
-keywords: C#, .NET, .NET Core, 새로운 기능, C#의 역사
 author: erikdietrich
-ms.author: wiwagn
 ms.date: 09/20/2017
-ms.topic: article
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.devlang: csharp
-ms.openlocfilehash: 0a24e8cf22bb8350777879a3adfd2757b89cd305
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 1c7b91a3a5c77059ca8d7acef95252b4a3557b28
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="the-history-of-c"></a>C#의 역사 #
 

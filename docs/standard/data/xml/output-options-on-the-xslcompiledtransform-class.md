@@ -1,26 +1,15 @@
 ---
-title: "XslCompiledTransform 클래스의 출력 옵션"
-ms.custom: 
+title: XslCompiledTransform 클래스의 출력 옵션
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 91ce8cba-386c-411e-bb38-0891a0393c0a
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 84171c92a56a9970b5ffc16ce8f30c85d61cc678
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: aa1049528458d558409ac1ace215c7d5b10f520e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="output-options-on-the-xslcompiledtransform-class"></a>XslCompiledTransform 클래스의 출력 옵션
 이 항목에서는 사용할 수 있는 XSLT 출력 옵션에 대해 설명합니다. 스타일시트나 <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A> 메서드에서 출력 옵션을 지정할 수 있습니다.  
