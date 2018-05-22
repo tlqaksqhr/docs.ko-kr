@@ -1,21 +1,14 @@
 ---
 title: 마이크로 서비스 지향 응용 프로그램 디자인
 description: 컨테이너화된 .NET 응용 프로그램을 위한 .NET 마이크로 서비스 아키텍처 | 마이크로 서비스 지향 응용 프로그램 디자인
-keywords: Docker, 마이크로 서비스, ASP.NET, 컨테이너
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.prod: .net-core
-ms.technology: dotnet-docker
-ms.topic: article
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 116ddb44655f0a9708a6496cbe7fb4fbc608300b
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
-ms.translationtype: MT
+ms.openlocfilehash: a5107e979dc2101380cf848dc574033caf750fd9
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="designing-a-microservice-oriented-application"></a>마이크로 서비스 지향 응용 프로그램 디자인
 
@@ -85,7 +78,7 @@ ms.lasthandoff: 03/26/2018
 
 -   비동기 이벤트 기반 통신. 이 통신은 마이크로 서비스 전체에 업데이트를 전파하거나 외부 응용 프로그램과 통합하기 위해 이벤트 버스를 통해 발생합니다. 이벤트 버스는 RabbitMQ와 같은 메시징-브로커 인프라 기술로 구현하거나 Azure Service Bus, NServiceBus, MassTransit, Brighter 등 높은 수준의 서비스 버스를 사용하여 구현할 수 있습니다.
 
-이 응용 프로그램은 컨테이너 형태의 마이크로 서비스 집합으로 배포됩니다. 클라이언트 앱은 이러한 컨테이너와 통신할 수 있으며 마이크로 서비스 사이에서도 통신 가능합니다. 이미 언급했듯이, 이 초기 아키텍처는 클라이언트-마이크로 서비스 간 직접 통신 아키텍처를 사용하므로 클라이언트 응용 프로그램이 각 마이크로 서비스에 직접 요청을 보낼 수 있습니다. 각 마이크로 서비스는 https://servicename.applicationname.companyname과 같은 공용 엔드포인트를 가집니다. 필요에 따라 각 마이크로 서비스는 다른 TCP 포트를 사용할 수 있습니다. 프로덕션 환경에서는 해당 URL이 마이크로 서비스의 부하 분산 장치로 매핑되어 사용 가능한 마이크로 서비스 인스턴스로 요청을 분산합니다.
+이 응용 프로그램은 컨테이너 형태의 마이크로 서비스 집합으로 배포됩니다. 클라이언트 앱은 이러한 컨테이너와 통신할 수 있으며 마이크로 서비스 사이에서도 통신 가능합니다. 이미 언급했듯이, 이 초기 아키텍처는 클라이언트-마이크로 서비스 간 직접 통신 아키텍처를 사용하므로 클라이언트 응용 프로그램이 각 마이크로 서비스에 직접 요청을 보낼 수 있습니다. 각 마이크로 서비스에는 https://servicename.applicationname.companyname와 같은 공용 엔드포인트가 있습니다. 필요에 따라 각 마이크로 서비스는 다른 TCP 포트를 사용할 수 있습니다. 프로덕션 환경에서는 해당 URL이 마이크로 서비스의 부하 분산 장치로 매핑되어 사용 가능한 마이크로 서비스 인스턴스로 요청을 분산합니다.
 
 **API 게이트웨이와 eShopOnContainers의 직접 통신에 대한 중요 참고 사항.** 이 가이드의 아키텍처 섹션에서 설명했듯이, 클라이언트-마이크로 서비스 간 직접 통신 아키텍처는 복잡하고 큰 마이크로 서비스 기반 응용 프로그램을 빌드할 때 단점이 있을 수 있습니다. 하지만 eShopOnContainers 응용 프로그램과 같이 간단한 시작하기 Docker 컨테이너 기반 응용 프로그램에 집중하는 것이 목표이고 마이크로 서비스의 개발 자율성에 영향을 미칠 수 있는 단일 모놀리식 API 게이트웨이를 만들지 않으려는 소규모 응용 프로그램에는 충분할 수 있습니다.
 
@@ -104,7 +97,7 @@ ms.lasthandoff: 03/26/2018
 
 ### <a name="additional-resources"></a>추가 자료
 
--   **eShopOnContainers GitHub 리포지토리. 참조 응용 프로그램에 대 한 소스 코드**
+-   **eShopOnContainers GitHub 리포지토리. 참조 응용 프로그램의 소스 코드**
     *https://aka.ms/eShopOnContainers/*
 
 ## <a name="benefits-of-a-microservice-based-solution"></a>마이크로 서비스 기반 솔루션의 이점

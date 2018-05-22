@@ -15,11 +15,11 @@ helpviewer_keywords:
 - styles [WPF], triggers
 - styles [WPF], event triggers
 ms.assetid: 481765e5-5467-4a75-9f7b-e10e2ac410d9
-ms.openlocfilehash: e39afea9fe11cdab9e5a6623499a96468aa9d091
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 85911647c089d51bafe2d65d1c5db907599b06d4
+ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/15/2018
 ---
 # <a name="styling-and-templating"></a>스타일 지정 및 템플릿
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 스타일 지정 및 템플릿은 개발자와 디자이너가 시각적으로 눈에 띄는 효과를 만들고 제품에 대한 일관된 모양을 만들 수 있는 기능 모음(스타일, 템플릿, 트리거 및 스토리보드)을 나타냅니다. 개발자 및/또는 디자이너는 응용 프로그램에 따라 모양을 광범위하게 사용자 지정할 수 있지만 응용 프로그램 내에서 또는 응용 프로그램 간에 모양을 유지 관리 및 공유하려면 강력한 스타일 지정 및 템플릿 모델이 필요합니다. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]에서 이 모델을 제공합니다.  
@@ -38,7 +38,7 @@ ms.lasthandoff: 05/04/2018
   
  ![스타일 지정된 ListView](../../../../docs/framework/wpf/controls/media/stylingintro-triggers.png "StylingIntro_triggers")  
   
- 이 간단한 사진 샘플에서는 스타일 지정 및 템플릿을 사용하여 시각적으로 눈에 띄는 사용자 환경을 만듭니다. 이 샘플에는 두 개의 <xref:System.Windows.Controls.TextBlock> 요소와 <xref:System.Windows.Controls.ListBox> 이미지 목록에 바인딩되는 컨트롤입니다. 전체 샘플을 보려면 [Introduction to Styling and Templating Sample](http://go.microsoft.com/fwlink/?LinkID=160010)(스타일 지정 및 템플릿 샘플 소개)을 참조하세요.  
+ 이 간단한 사진 샘플에서는 스타일 지정 및 템플릿을 사용하여 시각적으로 눈에 띄는 사용자 환경을 만듭니다. 이 샘플에는 두 개의 <xref:System.Windows.Controls.TextBlock> 요소와 <xref:System.Windows.Controls.ListBox> 이미지 목록에 바인딩되는 컨트롤입니다. 전체 샘플을 보려면 [Introduction to Styling and Templating Sample](https://github.com/Microsoft/WPF-Samples/tree/master/Styles%20&%20Templates/IntroToStylingAndTemplating)(스타일 지정 및 템플릿 샘플 소개)을 참조하세요.  
   
 <a name="styling_basics"></a>   
 ## <a name="style-basics"></a>스타일 기본 사항  

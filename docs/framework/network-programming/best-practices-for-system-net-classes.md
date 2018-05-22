@@ -1,12 +1,6 @@
 ---
-title: "System.Net 클래스에 대한 모범 사례"
-ms.custom: 
+title: System.Net 클래스에 대한 모범 사례
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - sending data, best practices
 - requesting data from Internet, best practices
@@ -16,22 +10,19 @@ helpviewer_keywords:
 - best practices, data requests
 - receiving data, best practices
 ms.assetid: 716decc6-5952-47b7-9c5a-ba6fc5698684
-caps.latest.revision: 
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload:
-- dotnet
-ms.openlocfilehash: 90722abbdb4568be115c0ac77007d5f18984df6f
-ms.sourcegitcommit: 32172ca05d5dcce7ef3d327b9c8639c736e0fe2b
-ms.translationtype: MT
+ms.openlocfilehash: c74f9d0534675d07c87d3edbcf8434cd98f6c621
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/20/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="best-practices-for-systemnet-classes"></a>System.Net 클래스에 대한 모범 사례
 다음 권장 사항은 <xref:System.Net>에 포함된 클래스를 최대한 활용하는 데 도움이 됩니다.  
   
--   보안 TLS (전송 계층) 모범 사례를 참조 하십시오. [보안 TLS (전송 계층).NET Framework와 함께 유용한](tls.md)합니다.
+-   TLS(전송 계층 보안) 모범 사례는 [.NET Framework를 사용한 TLS(전송 계층 보안) 모범 사례](tls.md)를 참조하세요.
 
 -   가능한 경우 하위 클래스에 대한 형식 캐스팅 대신 <xref:System.Net.WebRequest> 및 <xref:System.Net.WebResponse>를 사용합니다. **WebRequest** 및 **WebResponse**를 사용하는 응용 프로그램은 광범위한 코드 변경 없이 새 인터넷 프로토콜을 활용할 수 있습니다.  
   

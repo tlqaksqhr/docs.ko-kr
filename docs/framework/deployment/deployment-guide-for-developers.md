@@ -1,30 +1,25 @@
 ---
 title: 개발자를 위한 .NET Framework 배포 가이드
 ms.custom: updateeachrelease
-ms.date: 12/14/2017
-ms.prod: .net-framework
-ms.technology:
-- dotnet-clr
-ms.topic: article
+ms.date: 04/10/2018
 helpviewer_keywords:
 - developer's guide, deploying .NET Framework
 - deployment [.NET Framework], developer's guide
 ms.assetid: 094d043e-33c4-40ba-a503-e0b20b55f4cf
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 6b2083efabd6c16bafd8b241980c4cd413258ae5
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
-ms.translationtype: MT
+ms.openlocfilehash: 14bb5cd242a45b98a23a9d807b22aa4487d2591e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="net-framework-deployment-guide-for-developers"></a>개발자를 위한 .NET Framework 배포 가이드
 이 항목에서는 앱과 함께 .NET Framework 4.5에서 [!INCLUDE[net_current](../../../includes/net-current-version.md)]까지의 모든 .NET Framework 버전을 설치하려는 개발자를 위한 정보를 제공합니다.
 
 다운로드 링크를 확인하려면 [재배포 가능 패키지](#redistributable-packages) 섹션을 참조하세요. 재배포 가능 패키지 및 언어 팩은 다음 Microsoft 다운로드 센터 페이지에서 다운로드할 수도 있습니다.
+
+- 모든 운영 체제용 .NET Framework 4.7.2([웹 설치 관리자](http://go.microsoft.com/fwlink/?LinkId=863262) 또는 [오프라인 설치 관리자](http://go.microsoft.com/fwlink/p/?LinkId=863265))
 
 - 모든 운영 체제용 .NET Framework 4.7.1([웹 설치 관리자](http://go.microsoft.com/fwlink/?LinkId=852095) 또는 [오프라인 설치 관리자](http://go.microsoft.com/fwlink/p/?LinkId=852107))
 
@@ -55,7 +50,7 @@ ms.lasthandoff: 03/26/2018
 
 - [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 및 해당 포인트 릴리스를 설치하려면 관리자 권한이 있어야 합니다.
 
-- [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 는 [!INCLUDE[win8](../../../includes/win8-md.md)] 및 [!INCLUDE[winserver8](../../../includes/winserver8-md.md)]에 포함되었으므로 이러한 운영 체제에 응용 프로그램과 함께 배포할 필요가 없습니다. 마찬가지로 [!INCLUDE[net_v451](../../../includes/net-v451-md.md)] 은 [!INCLUDE[win81](../../../includes/win81-md.md)] 및 Windows Server 2012 R2에 포함되어 있습니다. .NET Framework 4.5.2는 어느 운영 체제에도 들어 있지 않습니다. [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] 은 Windows 10에 포함되고 [!INCLUDE[net_v461](../../../includes/net-v461-md.md)] 은 Windows 10 11월 업데이트에 포함되고 [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] Windows 10 1주년 업데이트에 포함되어 있습니다.  .NET Framework 4.7은 Windows 10 크리에이터스 업데이트에 포함되어 있으며, .NET Framework 4.7.1은 Windows 10 Fall Creators Update에 포함되어 있습니다. 하드웨어 및 소프트웨어 요구 사항의 전체 목록은 [시스템 요구 사항](../../../docs/framework/get-started/system-requirements.md)을 참조하세요.
+- [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 는 [!INCLUDE[win8](../../../includes/win8-md.md)] 및 [!INCLUDE[winserver8](../../../includes/winserver8-md.md)]에 포함되었으므로 이러한 운영 체제에 응용 프로그램과 함께 배포할 필요가 없습니다. 마찬가지로 [!INCLUDE[net_v451](../../../includes/net-v451-md.md)] 은 [!INCLUDE[win81](../../../includes/win81-md.md)] 및 Windows Server 2012 R2에 포함되어 있습니다. .NET Framework 4.5.2는 어느 운영 체제에도 들어 있지 않습니다. [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] 은 Windows 10에 포함되고 [!INCLUDE[net_v461](../../../includes/net-v461-md.md)] 은 Windows 10 11월 업데이트에 포함되고 [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] Windows 10 1주년 업데이트에 포함되어 있습니다.  .NET Framework 4.7은 Windows 10 작성자 업데이트에 포함되어 있으며, .NET Framework 4.7.1은 Windows 10 가을 작성자 업데이트에 포함되어 있고, .NET Framework 4.7.2는 Windows 10 2018년 4월 업데이트에 포함되어 있습니다. 하드웨어 및 소프트웨어 요구 사항의 전체 목록은 [시스템 요구 사항](../../../docs/framework/get-started/system-requirements.md)을 참조하세요.
 
 - [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]부터 사용자는 설치하는 동안 실행 중인 .NET Framework 응용 프로그램의 목록을 보고 쉽게 닫을 수 있습니다. 이렇게 하면 .NET Framework 설치로 인해 시스템이 다시 시작되는 것을 방지할 수 있습니다. [시스템 다시 시작 사례 감소](../../../docs/framework/deployment/reducing-system-restarts.md)를 참조하세요.
 
@@ -79,7 +74,7 @@ ms.lasthandoff: 03/26/2018
 
 ||웹 설치 관리자|오프라인 설치 관리자|
 |-|-------------------|-----------------------|
-|파일 다운로드|.NET Framework 4.7.1: <br/>[NDP471-KB4033344-Web.exe](http://go.microsoft.com/fwlink/?LinkId=852092)<br/><br/>.NET Framework 4.7: <br />[NDP47-KB3186500-Web.exe](http://go.microsoft.com/fwlink/?LinkId=825298) <br /><br />[!INCLUDE[net_v462](../../../includes/net-v462-md.md)]: <br />[NDP462-KB3151802-Web.exe](http://go.microsoft.com/fwlink/?LinkId=780596)<br /><br /> [!INCLUDE[net_v461](../../../includes/net-v461-md.md)]:<br />[NDP461-KB3102438-Web.exe](http://go.microsoft.com/fwlink/?LinkId=671728)<br /><br /> [!INCLUDE[net_v46](../../../includes/net-v46-md.md)]:<br />[NDP46-KB3045560-Web.exe](http://go.microsoft.com/fwlink/?LinkId=528222)<br /><br /> .NET Framework 4.5.2: <br />[NDP452-KB2901954-Web.exe](http://go.microsoft.com/fwlink/?LinkId=397707)<br /><br /> [!INCLUDE[net_v451](../../../includes/net-v451-md.md)]: <br />[NDP451-KB2859818-Web.exe](http://go.microsoft.com/fwlink/?LinkId=322115)<br /><br /> [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]: <br />[dotNetFx45_Full_setup.exe](http://go.microsoft.com/fwlink/?LinkId=225704)|.NET Framework 4.7.1: <br />[NDP471-KB4033342-x86-x64-AllOS-ENU.exe](http://go.microsoft.com/fwlink/?LinkId=852104) <br /><br />.NET Framework 4.7: <br />[NDP47-KB3186497-x86-x64-AllOS-ENU.exe](http://go.microsoft.com/fwlink/?LinkId=825302) <br /><br />[!INCLUDE[net_v462](../../../includes/net-v462-md.md)]: <br />[NDP462-KB3151800-x86-x64-AllOS-ENU.exe](http://go.microsoft.com/fwlink/?LinkId=780600)<br /><br /> [!INCLUDE[net_v461](../../../includes/net-v461-md.md)]: <br />[NDP461-KB3102436-x86-x64-AllOS-ENU.exe](http://go.microsoft.com/fwlink/?LinkId=671743)<br /><br /> [!INCLUDE[net_v46](../../../includes/net-v46-md.md)]: <br />[NDP46-KB3045557-x86-x64-AllOS-ENU.exe](http://go.microsoft.com/fwlink/?LinkId=528232)<br /><br /> .NET Framework 4.5.2: <br />[NDP452-KB2901907-x86-x64-AllOS-ENU.exe](http://go.microsoft.com/fwlink/?LinkId=397708)<br /><br /> [!INCLUDE[net_v451](../../../includes/net-v451-md.md)]: <br />[NDP451-KB2858728-x86-x64-AllOS-ENU.exe](http://go.microsoft.com/fwlink/?LinkId=322116)<br /><br /> [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]: <br />[dotNetFx45_Full_x86_x64.exe](http://go.microsoft.com/fwlink/?LinkId=225702)|
+|파일 다운로드|.NET Framework 4.7.2: <br/>[NDP472-KB4054531-Web.exe](http://go.microsoft.com/fwlink/?LinkId=863262)<br/><br/>.NET Framework 4.7.1: <br/>[NDP471-KB4033344-Web.exe](http://go.microsoft.com/fwlink/?LinkId=852092)<br/><br/>.NET Framework 4.7: <br />[NDP47-KB3186500-Web.exe](http://go.microsoft.com/fwlink/?LinkId=825298) <br /><br />[!INCLUDE[net_v462](../../../includes/net-v462-md.md)]: <br />[NDP462-KB3151802-Web.exe](http://go.microsoft.com/fwlink/?LinkId=780596)<br /><br /> [!INCLUDE[net_v461](../../../includes/net-v461-md.md)]:<br />[NDP461-KB3102438-Web.exe](http://go.microsoft.com/fwlink/?LinkId=671728)<br /><br /> [!INCLUDE[net_v46](../../../includes/net-v46-md.md)]:<br />[NDP46-KB3045560-Web.exe](http://go.microsoft.com/fwlink/?LinkId=528222)<br /><br /> .NET Framework 4.5.2: <br />[NDP452-KB2901954-Web.exe](http://go.microsoft.com/fwlink/?LinkId=397707)<br /><br /> [!INCLUDE[net_v451](../../../includes/net-v451-md.md)]: <br />[NDP451-KB2859818-Web.exe](http://go.microsoft.com/fwlink/?LinkId=322115)<br /><br /> [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]: <br />[dotNetFx45_Full_setup.exe](http://go.microsoft.com/fwlink/?LinkId=225704)|.NET Framework 4.7.2: <br/>[NDP472-KB4054530-x86-x64-AllOS-ENU.exe](http://go.microsoft.com/fwlink/?LinkId=863265)<br/><br/>.NET Framework 4.7.1: <br />[NDP471-KB4033342-x86-x64-AllOS-ENU.exe](http://go.microsoft.com/fwlink/?LinkId=852104) <br /><br />.NET Framework 4.7: <br />[NDP47-KB3186497-x86-x64-AllOS-ENU.exe](http://go.microsoft.com/fwlink/?LinkId=825302) <br /><br />[!INCLUDE[net_v462](../../../includes/net-v462-md.md)]: <br />[NDP462-KB3151800-x86-x64-AllOS-ENU.exe](http://go.microsoft.com/fwlink/?LinkId=780600)<br /><br /> [!INCLUDE[net_v461](../../../includes/net-v461-md.md)]: <br />[NDP461-KB3102436-x86-x64-AllOS-ENU.exe](http://go.microsoft.com/fwlink/?LinkId=671743)<br /><br /> [!INCLUDE[net_v46](../../../includes/net-v46-md.md)]: <br />[NDP46-KB3045557-x86-x64-AllOS-ENU.exe](http://go.microsoft.com/fwlink/?LinkId=528232)<br /><br /> .NET Framework 4.5.2: <br />[NDP452-KB2901907-x86-x64-AllOS-ENU.exe](http://go.microsoft.com/fwlink/?LinkId=397708)<br /><br /> [!INCLUDE[net_v451](../../../includes/net-v451-md.md)]: <br />[NDP451-KB2858728-x86-x64-AllOS-ENU.exe](http://go.microsoft.com/fwlink/?LinkId=322116)<br /><br /> [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]: <br />[dotNetFx45_Full_x86_x64.exe](http://go.microsoft.com/fwlink/?LinkId=225702)|
 |인터넷 연결 여부|예|아니요|
 |다운로드 크기|작게(대상 플랫폼의 설치 관리자만 포함) *|크게*|
 |언어 팩|포함됨**|반드시 [별도로 설치](#chain_langpack)합니다. 그러지 않으면, 모든 운영 체제를 대상으로 하는 패키지를 사용합니다.|
@@ -196,7 +191,7 @@ InstallAware는 단일 소스에서 Windows 앱(APPX), Windows Installer(MSI), �
 dotNetFx45_Full_x86_x64.exe /q /norestart /ChainingPackage Contoso
 ```
 
- 추가 명령줄 옵션을 사용하여 설치를 사용자 지정할 수 있습니다. 예를 들면 다음과 같습니다.
+ 추가 명령줄 옵션을 사용하여 설치를 사용자 지정할 수 있습니다. 예:
 
 - 사용자가 실행 중인 .NET Framework 응용 프로그램을 닫아 시스템이 다시 시작되는 경우를 최소화하려면 다음과 같이 Passive 모드를 설정하고 `/showrmui` 옵션을 사용합니다.
 
@@ -251,6 +246,8 @@ dotNetFx45_Full_x86_x64.exe /q /norestart /ChainingPackage Contoso
 
 |버전|릴리스 DWORD의 값|
 |-------------|--------------------------------|
+|.NET Framework 4.7.2가 Windows 10 2018년 4월 업데이트에 설치됨|461808|
+|Windows 10 2018년 4월 업데이트 이외의 모든 OS 버전에 설치된 .NET Framework 4.7.2|461814|
 |Windows 10 Fall Creators Update에 설치된 .NET Framework 4.7.1|461308|
 |Windows 10 Fall Creators Update 이외의 모든 OS 버전에 설치된 .NET Framework 4.7.1|461310|
 |.NET Framework 4.7이 Windows 10 크리에이터 업데이트에 설치됨|460798|
@@ -277,11 +274,13 @@ Name: Release
 Type: DWORD
 ```
 
- [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], 4.5.1, 4.5.2, 4.6, 4.6.1, 4.6.2, 4.7 또는 4.7.1에 대해 최종 릴리스 버전의 언어 팩이 설치되었는지를 확인하려면 이전 섹션인 [.NET Framework 검색](#detect_net)에 설명된 릴리스 키 DWORD의 값을 확인하세요.
+ 4.5~4.7.2의 특정 버전의 .NET Framework에 대해 최종 릴리스 버전의 언어 팩이 설치되었는지를 확인하려면 이전 섹션인 [.NET Framework 검색](#detect_net)에 설명된 릴리스 키 DWORD의 값을 확인하세요.
 
 <a name="chain_langpack"></a> 
 ### <a name="chaining-the-language-packs-to-your-app-setup"></a>응용 프로그램 설치 프로그램에 언어 팩 연결
  .NET Framework에서는 특정 문화권에 맞게 지역화된 리소스를 포함하는 독립 실행형 언어 팩 실행 파일의 집합을 제공합니다. 언어 팩은 Microsoft 다운로드 센터에 있습니다.
+
+- [.NET Framework 4.7.2 언어 팩](http://go.microsoft.com/fwlink/p/?LinkId=863258)
 
 - [.NET Framework 4.7.1 언어 팩](http://go.microsoft.com/fwlink/p/?LinkId=852090)
 
@@ -348,7 +347,7 @@ NDP451-KB2858728-x86-x64-AllOS-JPN.exe/q /norestart /ChainingPackage <ProductNam
  [!INCLUDE[win8](../../../includes/win8-md.md)]부터는 제어판의 **Windows 기능 사용/사용 안 함**을 사용하여 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 또는 해당 포인트 릴리스 중 하나를 제거할 수 있습니다. 이전 버전의 Windows에서는 제어판의 **프로그램 추가/제거**를 사용하여 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 또는 해당 포인트 릴리스 중 하나를 제거할 수 있습니다.
 
 > [!IMPORTANT]
-> Windows 7 및 이전 운영 체제의 경우 [!INCLUDE[net_v451](../../../includes/net-v451-md.md)], 4.5.2, 4.6, 4.6.1, 4.6.2, 4.7 또는 4.7.1을 제거해도 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 파일이 복원되지 않고, [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]를 제거해도 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] 파일이 복원되지 않습니다. 이전 버전으로 돌아가려면 해당 프로그램과 업데이트를 다시 설치해야 합니다.
+> Windows 7 및 이전 운영 체제의 경우 [!INCLUDE[net_v451](../../../includes/net-v451-md.md)], 4.5.2, 4.6, 4.6.1, 4.6.2, 4.7, 4.7.1 또는 4.7.2를 제거해도 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 파일이 복원되지 않고, [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]를 제거해도 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] 파일이 복원되지 않습니다. 이전 버전으로 돌아가려면 해당 프로그램과 업데이트를 다시 설치해야 합니다.
 
 ## <a name="appendix"></a>부록
 
@@ -358,7 +357,7 @@ NDP451-KB2858728-x86-x64-AllOS-JPN.exe/q /norestart /ChainingPackage <ProductNam
 |옵션|설명|
 |------------|-----------------|
 |**/CEIPConsent**|기본 동작을 덮어쓰고 향후 배포 환경을 개선하기 위해 Microsoft에 익명으로 피드백을 보냅니다. 이 옵션은 설치 프로그램에서 사용자에게 동의를 요청하고 Microsoft로 익명 피드백을 보낼 수 있는 권한을 사용자가 부여한 경우에만 사용될 수 있습니다.|
-|**/chainingpackage** `packageName`|연결을 수행하는 실행 파일의 이름을 지정합니다. 이 정보는 향후 배포 환경 개선을 지원하기 위해 익명 피드백으로 Microsoft에 보내집니다.<br /><br /> 패키지 이름에 공백이 포함되어 있으면 **/chainingpackage "Lucerne Publishing"**과 같이 큰따옴표를 구분자로 사용합니다. 연결 패키지의 예는 MSDN 라이브러리의 [설치 패키지에서 진행 정보 가져오기](http://go.microsoft.com/fwlink/?LinkId=181926) 를 참조하세요.|
+|**/chainingpackage** `packageName`|연결을 수행하는 실행 파일의 이름을 지정합니다. 이 정보는 향후 배포 환경 개선을 지원하기 위해 익명 피드백으로 Microsoft에 보내집니다.<br /><br /> 패키지 이름에 공백이 포함되어 있으면 **/chainingpackage "Lucerne Publishing"** 과 같이 큰따옴표를 구분자로 사용합니다. 연결 패키지의 예는 MSDN 라이브러리의 [설치 패키지에서 진행 정보 가져오기](http://go.microsoft.com/fwlink/?LinkId=181926) 를 참조하세요.|
 |**/LCID**  `LCID`<br /><br /> 여기서 `LCID` 는 로캘 식별자를 지정합니다( [지원되는 언어](#supported-languages)참조).|`LCID` 로 지정된 언어 팩을 설치하고 표시된 UI가 해당 언어로 표시되도록 합니다(자동 모드가 설정되어 있지 않은 경우).<br /><br /> 웹 설치 관리자에 대해 이 옵션을 사용하면 웹을 통해 언어 팩도 함께 설치됩니다. **참고:** 웹 설치 관리자에서만 이 옵션을 사용합니다.|
 |**/log** `file` &#124; `folder`|로그 파일의 위치를 지정합니다. 기본값은 프로세스에 대한 임시 폴더이며 기본 파일 이름은 패키지를 기반으로 합니다. 파일 확장명이 .txt인 경우 텍스트 로그가 생성됩니다. 다른 확장명을 지정하거나 확장명을 지정하지 않는 경우 HTML 로그가 만들어집니다.|
 |**/msioptions**|.msi 및 .msp 항목에 대해 전달될 옵션을 지정합니다(예: `/msioptions "PROPERTY1='Value'"`).|
@@ -392,7 +391,7 @@ NDP451-KB2858728-x86-x64-AllOS-JPN.exe/q /norestart /ChainingPackage <ProductNam
 |1041|일본어|ja|
 |1042|한국어|ko|
 |1043|네덜란드어 - 네덜란드|nl|
-|1044|노르웨이어(복말)|no|
+|1044|노르웨이어(복말)|아니요|
 |1045|폴란드어|pl|
 |1046|포르투갈어 – 브라질|pt-BR|
 |1049|러시아어|ru|
@@ -402,7 +401,7 @@ NDP451-KB2858728-x86-x64-AllOS-JPN.exe/q /norestart /ChainingPackage <ProductNam
 |2070|포르투갈어 - 포르투갈|pt-PT|
 |3082|스페인어 - 스페인(현대 정렬)|es|
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
  [관리자를 위한 배포 가이드](../../../docs/framework/deployment/guide-for-administrators.md)  
  [시스템 요구 사항](../../../docs/framework/get-started/system-requirements.md)  
  [개발자용 .NET Framework 설치](../../../docs/framework/install/guide-for-developers.md)  

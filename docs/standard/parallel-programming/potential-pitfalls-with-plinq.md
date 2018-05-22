@@ -1,31 +1,20 @@
 ---
 title: PLINQ에서 발생할 수 있는 문제
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - PLINQ queries, pitfalls
 ms.assetid: 75a38b55-4bc4-488a-87d5-89dbdbdc76a2
-caps.latest.revision: 13
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 972734b1275c82141c9057398268d068f5eaf3e6
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 73ec2d2fb73ee95b39a15307d136c35542578c41
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="potential-pitfalls-with-plinq"></a>PLINQ에서 발생할 수 있는 문제
 대부분의 경우 PLINQ는 순차적인 LINQ to Objects 쿼리에 대해 상당한 성능 향상을 제공할 수 있습니다. 그러나 쿼리 실행을 병렬 처리하는 작업에는 순차적 코드에서는 일반적이지 않거나 전혀 발생하지 않는 문제를 일으킬 수 있는 복잡성이 있습니다. 이 항목에서는 PLINQ 쿼리를 작성할 때 주의해야 할 사항을 나열합니다.  

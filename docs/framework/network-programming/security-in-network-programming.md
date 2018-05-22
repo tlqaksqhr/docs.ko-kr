@@ -1,8 +1,6 @@
 ---
-title: "네트워크 프로그래밍-.NET Framework의 보안"
+title: 네트워크 프로그래밍의 보안 - .NET Framework
 ms.date: 03/14/2018
-ms.prod: .net-framework
-ms.topic: article
 helpviewer_keywords:
 - sending data, Internet security
 - protocols, Internet security
@@ -17,13 +15,11 @@ ms.assetid: afb07899-2707-49ab-a57f-e0caf20d0171
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload:
-- dotnet
-ms.openlocfilehash: 2dd4133c31cf0595c06485a76490d78d469a0d38
-ms.sourcegitcommit: 1c0b0f082b3f300e54b4d069b317ac724c88ddc3
-ms.translationtype: MT
+ms.openlocfilehash: a684fd1a7ce8cce52e00511b114cb4905ed0a42b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="security-in-network-programming"></a>네트워크 프로그래밍의 보안
 
@@ -31,8 +27,8 @@ ms.lasthandoff: 03/16/2018
   
 ## <a name="in-this-section"></a>단원 내용
 
-[.NET Framework와 함께 전송 계층 보안 (TLS) 모범 사례](tls.md)  
-.NET 프레임 워크와 TLS 모범 사례를 설명합니다.
+[.NET Framework를 사용한 TLS(전송 계층 보안) 모범 사례](tls.md)  
+.NET Framwork로 TLS 모범 사례를 설명합니다.
  
 [SSL(Secure Sockets Layer) 사용](../../../docs/framework/network-programming/using-secure-sockets-layer.md)  
 SSL(Secure Sockets Layer) 연결 사용 방법을 설명합니다.  

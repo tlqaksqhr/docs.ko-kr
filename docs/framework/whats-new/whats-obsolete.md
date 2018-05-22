@@ -1,10 +1,7 @@
 ---
-title: ".NET Framework 클래스 라이브러리의 사용되지 않는 기능"
+title: .NET Framework 클래스 라이브러리의 사용되지 않는 기능
 ms.custom: updateeachrelease
-ms.date: 10/17/2017
-ms.prod: .net-framework
-ms.technology: dotnet-clr
-ms.topic: article
+ms.date: 04/10/2018
 helpviewer_keywords:
 - obsolete [.NET Framework]
 - what's obsolete [.NET Framework]
@@ -12,13 +9,11 @@ helpviewer_keywords:
 ms.assetid: d356a43a-73df-4ae2-a457-b9628074c7cd
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: d5fc41473c4a3ea812013ee7e5204c22d0a694d7
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 01969eff86e5b1e8e4e2bdc4950df9fb5291f5b6
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="what39s-obsolete-in-the-net-framework-class-library"></a>.NET Framework 클래스 라이브러리의 사용되지 않는 기능
 .NET Framework는 시간이 지남에 따라 변경됩니다. 새 버전이 나올 때마다 새로운 기능을 제공하는 새로운 형식 및 형식 멤버가 추가됩니다. 기존 형식과 해당 멤버도 시간이 지남에 따라 변경됩니다. 예를 들어 일부 형식은 지원하는 기술이 새로운 기술로 대체됨에 따라 덜 중요해지고 일부 메서드는 보다 편리하거나 보다 완전한 기능을 갖춘 최신 메서드로 대체됩니다.  
@@ -62,7 +57,7 @@ ms.lasthandoff: 12/22/2017
   
 |.NET Framework 버전|`version` 문자열|
 |-|-|  
-|4.7(4.7.1 포함)|v4.0|  
+|4.7(4.7.1 및 4.7.2 포함)|v4.0|  
 |4.6(4.6.1 및 4.6.2 포함)|v4.0|  
 |4.5(4.5.1 및 4.5.2 포함)|v4.0|  
 |4|v4.0|  
@@ -71,7 +66,7 @@ ms.lasthandoff: 12/22/2017
 |1.1|v1.1.4322|  
 |1.0|v1.0.3705|  
   
-## <a name="obsolete-lists-for-the-net-framework-45-and-46"></a>.NET Framework 4.5 및 4.6에서 사용되지 않는 항목 목록  
+## <a name="obsolete-lists-for-the-net-framework-45-and-later-versions"></a>.NET Framework 4.5 이상 버전에서 사용되지 않는 항목 목록  
  [사용되지 않는 형식](../../../docs/framework/whats-new/obsolete-types.md)  
   
  [사용되지 않는 멤버](../../../docs/framework/whats-new/obsolete-members.md)  

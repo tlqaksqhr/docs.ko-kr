@@ -1,21 +1,14 @@
 ---
 title: ASP.NET Core 서비스 및 웹앱 테스트
 description: 컨테이너화된 .NET 응용 프로그램을 위한 .NET 마이크로 서비스 아키텍처 | ASP.NET Core 서비스 및 웹앱 테스트
-keywords: Docker, 마이크로 서비스, ASP.NET, 컨테이너
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 12/11/2017
-ms.prod: .net-core
-ms.technology: dotnet-docker
-ms.topic: article
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 596f588aae8c0814e5b40d29c4bf5723f944c5ac
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
-ms.translationtype: MT
+ms.openlocfilehash: b3aa0d50ba3ab64440ef51201d611177fea78ce4
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="testing-aspnet-core-services-and-web-apps"></a>ASP.NET Core 서비스 및 웹앱 테스트
 
@@ -102,17 +95,17 @@ public class PrimeWebDefaultRequestShould
 
 #### <a name="additional-resources"></a>추가 자료
 
--   **Steve Smith. 테스트 컨트롤러** (ASP.NET 코어) [*https://docs.microsoft.com/aspnet/core/mvc/controllers/testing*](/aspnet/core/mvc/controllers/testing)
+-   **Steve Smith. 컨트롤러 테스트**(ASP.NET Core) [*https://docs.microsoft.com/aspnet/core/mvc/controllers/testing*](/aspnet/core/mvc/controllers/testing)
 
--   **Steve Smith. 통합 테스트** (ASP.NET 코어) [*https://docs.microsoft.com/aspnet/core/testing/integration-testing*](/aspnet/core/testing/integration-testing)
+-   **Steve Smith. 통합 테스트**(ASP.NET Core) [*https://docs.microsoft.com/aspnet/core/testing/integration-testing*](/aspnet/core/testing/integration-testing)
 
--   **.NET Core dotnet 테스트를 사용 하 여의 단위 테스트**
+-   **dotnet 테스트를 사용한 .NET Core의 유닛 테스트**
     [*https://docs.microsoft.com/dotnet/core/testing/unit-testing-with-dotnet-test*](../../../core/testing/unit-testing-with-dotnet-test.md)
 
 -   **xUnit.net**. 공식 사이트입니다.
     [*https://xunit.github.io/*](https://xunit.github.io/)
 
--   **단위 테스트 기본 사항입니다.**
+-   **유닛 테스트 기본 사항**
     [*https://msdn.microsoft.com/library/hh694602.aspx*](https://msdn.microsoft.com/library/hh694602.aspx)
 
 -   **Moq**. GitHub 리포지토리

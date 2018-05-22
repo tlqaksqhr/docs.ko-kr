@@ -1,20 +1,13 @@
 ---
 title: C# 7.0의 새로운 기능 - C# 가이드
 description: C# 언어의 새 버전 7에서 제공되는 새로운 기능을 간단히 살펴봅니다.
-keywords: C#, .NET, .NET Core, 최신 기능, 새로운 기능
-author: BillWagner
-ms.author: wiwagn
 ms.date: 12/21/2016
-ms.topic: article
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.devlang: csharp
 ms.assetid: fd41596d-d0c2-4816-b94d-c4d00a5d0243
-ms.openlocfilehash: 1951c60ee11d0d5c4856f5f92eee8ba690b11f8d
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: a78b30411d734d6dadc52b7dbd402763d4eb7f5e
+ms.sourcegitcommit: 88f251b08bf0718ce119f3d7302f514b74895038
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="whats-new-in-c-70"></a>C# 7.0의 새로운 기능
 
@@ -91,7 +84,7 @@ C#에서는 디자인 의도를 설명하는 데 사용되는 클래스 및 구�
 > 튜플은 C# 7.0 이전부터 사용할 수 있었지만 비효율적이었고 언어 지원이 없었습니다.
 > 즉, 튜플 요소는 `Item1`, `Item2` 등으로만 참조될 수 있었습니다. C# 7.0은 새롭고 보다 효율적인 튜플 유형을 사용하여 튜플의 필드에 대해 의미론적 이름을 사용할 수 있는 튜플에 대한 언어 지원을 소개합니다.
 
-각 멤버를 값에 할당하여 튜플을 만들 수 있습니다.
+각 멤버에 값을 할당하여 튜플을 만들 수 있습니다.
 
 [!code-csharp[UnnamedTuple](../../../samples/snippets/csharp/new-in-7/program.cs#04_UnnamedTuple "Unnamed tuple")]
 
@@ -136,7 +129,7 @@ C#에서는 디자인 의도를 설명하는 데 사용되는 클래스 및 구�
 
 [!code-csharp[PointWithDeconstruction](../../../samples/snippets/csharp/new-in-7/point.cs#11_PointWithDeconstruction "Point with deconstruction method")]
  
-`Point`에 튜플을 할당하여 개별 필드를 추출할 수 있습니다.
+튜플에 `Point`을 할당하여 개별 필드를 추출할 수 있습니다.
 
 [!code-csharp[DeconstructPoint](../../../samples/snippets/csharp/new-in-7/program.cs#12_DeconstructPoint "Deconstruct a point")]
 

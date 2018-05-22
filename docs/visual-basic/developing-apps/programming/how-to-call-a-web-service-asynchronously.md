@@ -1,23 +1,15 @@
 ---
 title: '방법: 비동기적으로 웹 서비스 호출(Visual Basic)'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - asynchronous calls [Visual Basic]
 - Web services [Visual Basic], accessing
 ms.assetid: ff8046f4-f1f2-4d8b-90b7-95e3f7415418
-caps.latest.revision: 14
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: c7a9666141accdcc0b1346de7b0c2903c7cc86df
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.openlocfilehash: 8968eaa8edd8dee177906a6c801f2f46c2a740d7
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-call-a-web-service-asynchronously-visual-basic"></a>방법: 비동기적으로 웹 서비스 호출(Visual Basic)
 이 예제에서는 비동기 메서드 호출의 결과를 검색할 수 있도록 웹 서비스의 비동기 처리기 이벤트에 처리기를 연결합니다. 여기에는 http://www.xmethods.net에 DemoTemperatureService 웹 서비스가 사용되었습니다.  

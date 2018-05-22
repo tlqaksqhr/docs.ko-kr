@@ -1,21 +1,14 @@
 ---
 title: using 지시문(C# 참조)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - using directive [C#]
 ms.assetid: b42b8e61-5e7e-439c-bb71-370094b44ae8
-caps.latest.revision: 31
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 02c50b1e7a54d776985b60570c898e7d0739c44c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 180c038987e7de6b39a8eae0e86871eea41a40bb
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-directive-c-reference"></a>using 지시문(C# 참조)
 `using` 지시문에는 다음 세 가지 용도가 있습니다.  
@@ -64,9 +57,9 @@ class Program
   
  `using` 지시문을 만들어서 네임스페이스를 지정할 필요 없이 네임스페이스에서 이 형식을 사용합니다. `using` 지시문은 지정한 네임스페이스에 중첩된 모든 네임스페이스에 대한 액세스 권한을 제공하지 않습니다.  
   
- 네임스페이스는 두 가지 범주인 사용자 정의 및 시스템 정의로 구분됩니다. 사용자 정의 네임스페이스는 코드에서 정의된 네임스페이스입니다. 시스템 정의 네임 스페이스의 목록에 대 한 참조 [.NET Framework 클래스 라이브러리 개요](../../../standard/class-library-overview.md)합니다.  
+ 네임스페이스는 두 가지 범주인 사용자 정의 및 시스템 정의로 구분됩니다. 사용자 정의 네임스페이스는 코드에서 정의된 네임스페이스입니다. 시스템 정의 네임스페이스 목록을 보려면 [.NET Framework 클래스 라이브러리 개요](../../../standard/class-library-overview.md)를 참조하세요.  
   
- 다른 어셈블리의 메서드를 참조 하는 예제를 참조 하십시오. [만들기 및 사용 하 여 어셈블리 사용 하 여 명령줄](../../programming-guide/concepts/assemblies-gac/how-to-create-and-use-assemblies-using-the-command-line.md)합니다.  
+ 다른 어셈블리의 메서드를 참조하는 예제는 [명령줄을 사용하여 어셈블리 만들기 및 사용](../../programming-guide/concepts/assemblies-gac/how-to-create-and-use-assemblies-using-the-command-line.md)을 참조하세요.  
   
 ## <a name="example-1"></a>예제 1  
   

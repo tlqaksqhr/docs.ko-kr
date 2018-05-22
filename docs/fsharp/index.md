@@ -3,11 +3,11 @@ title: F# 가이드
 description: 이 가이드에서는 F#, .NET에서 실행되는 함수형 프로그래밍 언어에 대한 다양한 교육 자료에 대한 개요를 제공합니다.
 author: jackfoxy
 ms.date: 03/19/2018
-ms.openlocfilehash: 393214a5da7445d8ee3dced844da8592f4ca6d31
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: cb829e904c006467e1470752b4fe8757ca694b05
+ms.sourcegitcommit: 895c7602386a6dfe7ca4facce3d965b27e5c6e87
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="f-guide"></a>F# 가이드
 
@@ -49,6 +49,8 @@ F#의 핵심은 생산성입니다. 툴링 지원은 어디에서나 볼 수 있
 [F#으로 .NET Core CLI 시작](get-started/get-started-command-line.md) 커맨드 라인 도구 사용을 원한다면 해당 문서를 참고하십시오.
 
 [F# 및 Xamarin 시작](https://docs.microsoft.com/xamarin/cross-platform/platform/fsharp/) F#을 이용한 모바일 프로그래밍에 대한 문서입니다.
+
+[F # Azure 노트북용](https://notebooks.azure.com/Microsoft/libraries/samples/html/FSharp%20for%20Azure%20Notebooks.ipynb) 학습 무료, 호스팅된 Jupyter 노트북에서 F #에 대 한 자습서가 있습니다.
 
 ## <a name="references"></a>참조
 

@@ -1,20 +1,13 @@
 ---
-title: "C# 구조체 - C# 언어 둘러보기"
-description: "구조체라고 하는 C# 값 형식의 기본 사항에 대해 알아보기"
-keywords: ".NET, C#, 구조체, 값 형식"
-author: BillWagner
-ms.author: wiwagn
+title: C# 구조체 - C# 언어 둘러보기
+description: 구조체라고 하는 C# 값 형식의 기본 사항에 대해 알아보기
 ms.date: 08/10/2016
-ms.topic: article
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.devlang: csharp
 ms.assetid: 88a74571-f741-4a31-a2b5-1ccf165535b8
-ms.openlocfilehash: fa840d80bba98889f75863db2612f196d78bd3c5
-ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
+ms.openlocfilehash: dac0952e6a55a16ecefec79f9789f9e2d44aada1
+ms.sourcegitcommit: ff1d40507b3eb6e2185478e37c66c66be6de46f1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 05/11/2018
 ---
 # <a name="structs"></a>구조체
 
@@ -30,7 +23,7 @@ ms.lasthandoff: 03/15/2018
 
 이제 1개의 개체만 인스턴스화되고(배열에 대해 1개) `Point` 인스턴스는 배열에 인라인으로 저장됩니다.
 
-구조체 생성자는 새 연산자로 호출되지만 메모리가 할당된다는 것을 의미하지는 않습니다. 개체를 동적으로 할당하고 그에 대한 참조를 반환하는 대신, 구조체 생성자는 단순히 구조체 값 자체(일반적으로 스택의 임시 위치에 있음)를 반환하며 이 값은 필요할 때 복사됩니다.
+구조체 생성자는 `new` 연산자로 호출되지만 메모리가 할당된다는 것을 의미하지는 않습니다. 개체를 동적으로 할당하고 그에 대한 참조를 반환하는 대신, 구조체 생성자는 단순히 구조체 값 자체(일반적으로 스택의 임시 위치에 있음)를 반환하며 이 값은 필요할 때 복사됩니다.
 
 클래스에서는 두 가지 변수가 같은 개체를 참조할 수 있으므로 한 변수에 대한 작업이 다른 변수에서 참조하는 개체에 영향을 미칠 수 있습니다. 구조체에서는 변수 각각에 데이터의 자체 사본이 들어 있으며 한 변수의 작업이 다른 변수에 영향을 미칠 수 없습니다. 예를 들어 다음 코드 조각에서 생성하는 출력은 Point가 클래스인지 또는 구조체인지에 따라 달라집니다.
 

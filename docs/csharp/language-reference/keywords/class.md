@@ -1,24 +1,17 @@
 ---
 title: class(C# 참조)
 ms.date: 07/18/2017
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 f1_keywords:
 - class_CSharpKeyword
 - class
 helpviewer_keywords:
 - class keyword [C#]
 ms.assetid: b95d8815-de18-4c3f-a8cc-a0a53bdf8690
-caps.latest.revision: 30
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: ae4b019ee88b6f331a76c750ab94fc76a3343adb
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 20968d2f72195db6d16de1b726c6e946b91ffcd5
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="class-c-reference"></a>class(C# 참조)
 
@@ -32,10 +25,10 @@ class TestClass
 }
 ```
 
-## <a name="remarks"></a>주의
+## <a name="remarks"></a>설명
 C#에서는 단일 상속만 허용됩니다. 즉, 한 클래스는 하나의 기본 클래스에서만 구현을 상속할 수 있습니다. 그러나 한 클래스는 두 개 이상의 인터페이스를 구현할 수 있습니다. 다음 표에는 클래스 상속 및 인터페이스 구현에 대한 예제가 나와 있습니다.
 
-|상속|예제|
+|상속|예|
 |-----------------|-------------|
 |없음|`class ClassA { }`|
 |Single|`class DerivedClass: BaseClass { }`|
@@ -44,7 +37,7 @@ C#에서는 단일 상속만 허용됩니다. 즉, 한 클래스는 하나의 �
 
 다른 클래스 내에 중첩되는 것이 아니라 네임스페이스 내에서 직접 선언되는 클래스는 [public](../../../csharp/language-reference/keywords/public.md) 또는 [internal](../../../csharp/language-reference/keywords/internal.md)일 수 있습니다. 기본적으로 클래스는 `internal`입니다.
 
-중첩된 클래스를 포함 하 여 클래스 멤버 수 [공용](../../../csharp/language-reference/keywords/public.md), `protected internal`, [보호](../../../csharp/language-reference/keywords/protected.md), [내부](../../../csharp/language-reference/keywords/internal.md), [개인](../../../csharp/language-reference/keywords/private.md), 또는 `private protected`. 기본적으로 멤버는 [private](../../../csharp/language-reference/keywords/private.md)입니다.
+중첩 클래스를 포함한 클래스 멤버는 [public](../../../csharp/language-reference/keywords/public.md), `protected internal`, [protected](../../../csharp/language-reference/keywords/protected.md), [internal](../../../csharp/language-reference/keywords/internal.md), [private](../../../csharp/language-reference/keywords/private.md) 또는 `private protected`일 수 있습니다. 기본적으로 멤버는 [private](../../../csharp/language-reference/keywords/private.md)입니다.
 
 자세한 내용은 [액세스 한정자](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md)를 참조하세요.
 
@@ -78,7 +71,7 @@ C#에서는 단일 상속만 허용됩니다. 즉, 한 클래스는 하나의 �
 
 - [구조체](../../../csharp/programming-guide/classes-and-structs/structs.md)
 
-## <a name="example"></a>예제
+## <a name="example"></a>예
 다음 예제에서는 클래스 필드, 생성자 및 메서드를 선언하는 방법을 보여 줍니다. 또한 개체 인스턴스화 및 인스턴스 데이터 출력을 보여 줍니다. 이 예제에서는 두 개의 클래스가 선언됩니다. 첫 번째 클래스인 `Child`는 private 필드 2개(`name` 및 `age`), public 생성자 2개, public 메서드 1개를 포함합니다. 두 번째 클래스인 `StringTest`는 `Main`을 포함하는 데 사용됩니다.
 
 [!code-csharp[csrefKeywordsTypes#5](../../../csharp/language-reference/keywords/codesnippet/CSharp/class_1.cs)]

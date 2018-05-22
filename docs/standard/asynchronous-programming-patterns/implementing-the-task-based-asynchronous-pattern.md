@@ -1,10 +1,6 @@
 ---
-title: "작업 기반 비동기 패턴 구현"
+title: 작업 기반 비동기 패턴 구현
 ms.date: 06/14/2017
-ms.prod: .net
-ms.technology:
-- dotnet-clr
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -15,18 +11,13 @@ helpviewer_keywords:
 - Task-based Asynchronous Pattern, .NET Framework support for
 - .NET Framework, asynchronous design patterns
 ms.assetid: fab6bd41-91bd-44ad-86f9-d8319988aa78
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 238f164fec78fe5e6dae9e7880fabc0a386bf399
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 0ed73e8d7279d5371c305e7bd29c08ac00f6a329
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="implementing-the-task-based-asynchronous-pattern"></a>작업 기반 비동기 패턴 구현
 TAP(작업 기반 비동기 패턴)는 세 가지 방식으로 구현할 수 있습니다. 즉 Visual Studio에서 C# 또는 Visual Basic 컴파일러를 사용하여 구현하거나, 수동으로 구현하거나, 컴파일러와 수동 방식을 함께 사용하여 구현할 수 있습니다. 다음 섹션에서는 각 방법에 대해 자세히 설명합니다. TAP 패턴을 사용하면 계산 바운드 및 I/O 바운드 비동기 작업을 모두 구현할 수 있습니다. 각 작업 유형에 대해서는 [워크로드](#workloads) 섹션에서 설명합니다.
@@ -51,7 +42,7 @@ TAP(작업 기반 비동기 패턴)는 세 가지 방식으로 구현할 수 있
  또한 빠른 경로 최적화를 구현하며 캐시된 작업을 반환하려는 경우에도 이러한 위임이 유용합니다.
 
 ## <a name="workloads"></a>작업
-컴퓨트 바운드 및 I/O 바운드 비동기 작업을 모두 TAP 메서드로 구현할 수 있습니다. 그러나 TAP 메서드를 라이브러리에서 공개적으로 노출할 때는 I/O 바운드 연산이 포함된 작업에만 해당 메서드를 제공해야 합니다. 이러한 작업은 계산도 포함할 수 있지만 순수한 계산 작업이어서는 안 됩니다. 순수한 계산 바운드 메서드의 경우에는 동기 구현으로만 표시되어야 합니다. 그러면 해당 메서드를 사용하는 코드는 작업을 다른 스레드로 오프로드하거나 병렬 처리 기능을 제공하기 위해 해당 동기 메서드의 호출을 작업으로 래핑할지 여부를 선택할 수 있습니다. 그리고 IO 바운드 메서드의 경우에는 비동기 구현으로만 표시되어야 합니다.
+컴퓨트 바운드 및 I/O 바운드 비동기 작업을 모두 TAP 메서드로 구현할 수 있습니다. 그러나 TAP 메서드를 라이브러리에서 공개적으로 노출할 때는 I/O 바운드 연산이 포함된 작업에만 해당 메서드를 제공해야 합니다. 이러한 작업은 계산도 포함할 수 있지만 순수한 계산 작업이어서는 안 됩니다. 순수한 계산 바운드 메서드의 경우에는 동기 구현으로만 표시되어야 합니다. 그러면 해당 메서드를 사용하는 코드는 작업을 다른 스레드로 오프로드하거나 병렬 처리 기능을 제공하기 위해 해당 동기 메서드의 호출을 작업으로 래핑할지 여부를 선택할 수 있습니다. 그리고 메서드가 I/O 바운드인 경우에는 비동기 구현으로만 표시되어야 합니다.
 
 ### <a name="compute-bound-tasks"></a>계산 바운드 작업
 <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> 클래스는 계산을 많이 수행하는 작업에 가장 적합합니다. 이 클래스는 기본적으로 <xref:System.Threading.ThreadPool> 클래스 내의 특수 지원을 활용하여 효율적 실행을 제공하며 비동기 계산 실행 시기, 위치 및 방법에 대한 상당한 제어 기능도 제공합니다.
@@ -107,7 +98,7 @@ TAP(작업 기반 비동기 패턴)는 세 가지 방식으로 구현할 수 있
 [!code-csharp[Conceptual.TAP_Patterns#7](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.tap_patterns/cs/patterns1.cs#7)]
 [!code-vb[Conceptual.TAP_Patterns#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.tap_patterns/vb/patterns1.vb#7)]
 
-또한 이 예제에서는 여러 비동기 작업을 통해 단일 취소 토큰 스레드를 만드는 방법도 보여줍니다. 자세한 내용은 [작업 기반 비동기 패턴 사용](../../../docs/standard/asynchronous-programming-patterns/consuming-the-task-based-asynchronous-pattern.md)의 취소 사용 섹션을 참조하세요.
+또한 이 예제에서는 여러 비동기 작업을 통해 단일 취소 토큰 스레드를 만드는 방법도 보여 줍니다. 자세한 내용은 [작업 기반 비동기 패턴 사용](../../../docs/standard/asynchronous-programming-patterns/consuming-the-task-based-asynchronous-pattern.md)의 취소 사용 섹션을 참조하세요.
 
 ## <a name="see-also"></a>참고 항목
  [TAP(작업 기반 비동기 패턴)](../../../docs/standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap.md)  

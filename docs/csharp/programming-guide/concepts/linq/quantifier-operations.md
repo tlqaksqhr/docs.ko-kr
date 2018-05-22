@@ -1,21 +1,12 @@
 ---
-title: "수량자 작업(C#)"
-ms.custom: 
+title: 수량자 작업(C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-csharp
-ms.topic: article
 ms.assetid: 84ac2ac2-7a63-4581-bc4c-14e34be1493b
-caps.latest.revision: "3"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: d6152cbbd390508a8ffce732f6cbdf1f2e1aa0f0
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: dac5ca7349a45f5fc37cff0cb83bd6b2e1292568
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="quantifier-operations-c"></a>수량자 작업(C#)
 수량자 작업은 시퀀스에서 조건을 충족하는 요소가 일부인지 전체인지를 나타내는 <xref:System.Boolean> 값을 반환합니다.  

@@ -1,21 +1,12 @@
 ---
-title: "XPath 및 LINQ to XML 비교2"
-ms.custom: 
+title: XPath 및 LINQ to XML 비교2
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-csharp
-ms.topic: article
 ms.assetid: 87d361b1-daa9-4fd4-a53a-cbfa40111ad3
-caps.latest.revision: "3"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 0890bd7d8edb19a16c864d0b845558d3302d6139
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 64860ab538105e7e3826b29f83b8e713ca525e21
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="comparison-of-xpath-and-linq-to-xml"></a>XPath 및 LINQ to XML 비교
 XPath와 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]은 유사한 기능을 제공합니다. XML 트리를 쿼리하여 결과를 요소 컬렉션, 특성 컬렉션, 노드 컬렉션 또는 요소나 특성의 값으로 반환하는 데 사용할 수 있습니다. 하지만 차이점도 있습니다.  

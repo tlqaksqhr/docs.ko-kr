@@ -1,24 +1,17 @@
 ---
 title: '%= 연산자(C# 참조)'
 ms.date: 04/04/2018
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 f1_keywords:
 - '%=_CSharpKeyword'
 helpviewer_keywords:
 - remainder assignment operator (%=) [C#]
 - '%= assignment operator (remainder assignment) [C#]'
 ms.assetid: 47e5f068-1d97-4010-bd3b-e21b5d3a77f5
-caps.latest.revision: 20
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 864b96dcf16e4756cd0e74a6e02297660e72357e
-ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
+ms.openlocfilehash: aadcb5ef969ff408cc1e738fc0f5b67152fdc78b
+ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2018
+ms.lasthandoff: 05/15/2018
 ---
 # <a name="-operator-c-reference"></a>%= 연산자(C# 참조)
 나머지 대입 연산자입니다.  
@@ -26,13 +19,13 @@ ms.lasthandoff: 04/09/2018
 ## <a name="remarks"></a>설명  
  다음과 같은 `%=` 대입 연산자를 사용하는 식의 경우  
   
-```  
+```csharp  
 x %= y  
 ```  
   
  위의 식은 아래의 식과 동일합니다.  
   
-```  
+```csharp  
 x = x % y  
 ```  
   

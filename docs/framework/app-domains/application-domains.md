@@ -14,11 +14,11 @@ helpviewer_keywords:
 ms.assetid: 113a8bbf-6875-4a72-a49d-ca2d92e19cc8
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 04028a2b350493a3cc8f2c92bafafd9658fc7c58
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 811443dbd8e2483f7fc1b0f8c44afb4ebcd9efcf
+ms.sourcegitcommit: 22c3c8f74eaa138dbbbb02eb7d720fce87fc30a9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/18/2018
 ---
 # <a name="application-domains"></a>응용 프로그램 도메인
 운영 체제와 런타임 환경은 일반적으로 응용 프로그램 간에 몇 가지 형식의 격리를 제공합니다. 예를 들어 Windows에서는 프로세스를 사용하여 응용 프로그램을 격리합니다. 격리는 한 응용 프로그램에서 실행 중인 코드가 서로 관련 없는 다른 응용 프로그램에 나쁜 영향을 주지 않도록 하기 위해 필요합니다.  
@@ -74,11 +74,11 @@ ms.lasthandoff: 05/03/2018
   
  도메인 중립 어셈블리를 로드할 수 있는 다음과 같은 세 가지 옵션이 있습니다.  
   
--   <xref:System.LoaderOptimization>에서는 어셈블리를 도메인 중립적으로 로드하지 않습니다. 단, 항상 도메인 중립적으로 로드되는 Mscorlib는 예외입니다. 이 설정은 일반적으로 호스트가 프로세스에서 단일 응용 프로그램을 실행 중인 경우에만 사용되므로 단일 도메인이라고 합니다.  
-  
--   <xref:System.LoaderOptimization>에서는 모든 어셈블리를 도메인 중립적으로 로드합니다. 프로세스에 여러 응용 프로그램 도메인이 있고 모두 동일한 코드를 실행하는 경우 이 설정을 사용합니다.  
-  
--   <xref:System.LoaderOptimization>에서는 강력한 이름의 어셈블리와 이 어셈블리의 모든 종속 어셈블리가 전역 어셈블리 캐시에 설치되어 있는 경우 강력한 이름의 어셈블리를 도메인 중립적으로 로드합니다. 다른 어셈블리는 해당 어셈블리가 로드되는 각 응용 프로그램 도메인에 대해 개별적으로 로드되고 JIT 컴파일되므로 프로세스에서 언로드할 수 있습니다. 동일한 프로세스에서 둘 이상의 응용 프로그램을 실행할 경우나 여러 응용 프로그램 도메인에서 공유되는 어셈블리와 프로세스에서 언로드해야 하는 어셈블리가 혼합된 경우 이 설정을 사용합니다.  
+- <xref:System.LoaderOptimization.SingleDomain?displayProperty=nameWithType>에서는 어셈블리를 도메인 중립적으로 로드하지 않습니다. 단, 항상 도메인 중립적으로 로드되는 Mscorlib는 예외입니다. 이 설정은 일반적으로 호스트가 프로세스에서 단일 응용 프로그램을 실행 중인 경우에만 사용되므로 단일 도메인이라고 합니다.
+
+- <xref:System.LoaderOptimization.MultiDomain?displayProperty=nameWithType>에서는 모든 어셈블리를 도메인 중립적으로 로드합니다. 프로세스에 여러 응용 프로그램 도메인이 있고 모두 동일한 코드를 실행하는 경우 이 설정을 사용합니다.
+
+- <xref:System.LoaderOptimization.MultiDomainHost?displayProperty=nameWithType>에서는 강력한 이름의 어셈블리와 이 어셈블리의 모든 종속 어셈블리가 전역 어셈블리 캐시에 설치되어 있는 경우 강력한 이름의 어셈블리를 도메인 중립적으로 로드합니다. 다른 어셈블리는 해당 어셈블리가 로드되는 각 응용 프로그램 도메인에 대해 개별적으로 로드되고 JIT 컴파일되므로 프로세스에서 언로드할 수 있습니다. 동일한 프로세스에서 둘 이상의 응용 프로그램을 실행할 경우나 여러 응용 프로그램 도메인에서 공유되는 어셈블리와 프로세스에서 언로드해야 하는 어셈블리가 혼합된 경우 이 설정을 사용합니다.
   
  <xref:System.Reflection.Assembly.LoadFrom%2A> 클래스의 <xref:System.Reflection.Assembly> 메서드를 사용하여 로드 컨텍스트로 로드한 어셈블리나 바이트 배열을 지정하는 <xref:System.Reflection.Assembly.Load%2A> 메서드의 오버로드를 사용하여 이미지에서 로드한 어셈블리의 경우 JIT 컴파일된 코드를 공유할 수 없습니다.  
   

@@ -1,21 +1,14 @@
 ---
-title: ".NET Core를 사용하여 마이크로 서비스 도메인 모델 구현"
-description: "컨테이너화된 .NET 응용 프로그램을 위한 .NET 마이크로 서비스 아키텍처 | .NET Core로 마이크로 서비스 도메인 모델 구현"
-keywords: "Docker, 마이크로 서비스, ASP.NET, 컨테이너"
+title: .NET Core를 사용하여 마이크로 서비스 도메인 모델 구현
+description: 컨테이너화된 .NET 응용 프로그램을 위한 .NET 마이크로 서비스 아키텍처 | .NET Core로 마이크로 서비스 도메인 모델 구현
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 11/09/2017
-ms.prod: .net-core
-ms.technology: dotnet-docker
-ms.topic: article
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 0b954efffe2ee7e3e2bdaa49bd1057d72d69088c
-ms.sourcegitcommit: 96cc82cac4650adfb65ba351506d8a8fbcd17b5c
+ms.openlocfilehash: e0c931405b8b7e3b52bdcbd511737b449dc74273
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="implementing-a-microservice-domain-model-with-net-core"></a>.NET Core를 사용하여 마이크로 서비스 도메인 모델 구현 
 
@@ -173,7 +166,7 @@ EF Core 1.1 이상의 기능을 사용하여 열을 필드에 매핑하면 속�
 
 예를 들어 앞의 OrderAggregate 코드 예제에는 `_paymentMethodId` 필드 같이 setter나 getter에 대한 관련 속성이 없는 몇 가지 비공개 필드가 있습니다. 해당 필드도 주문의 비즈니스 논리 안에서 산출되어 주문의 메서드에서 사용될 수 있지만 데이터베이스 안에서도 지속되어야 합니다. 이 때문에 EF Core(v1.1 이후)에서는 관련 속성 없이 데이터베이스의 열에 필드를 매핑하는 방법이 있습니다. 이것도 본 가이드의 [인프라 계층](#the-infrastructure-layer) 에서 설명합니다.
 
-### <a name="additional-resources"></a>추가 리소스
+### <a name="additional-resources"></a>추가 자료
 
 -   **Vaughn Vernon. DDD 및 Entity Framework를 사용한 집계 모델링** 이것은 Entity Framework Core가 *아닙니다*.
     [*https://vaughnvernon.co/?p=879*](https://vaughnvernon.co/?p=879)

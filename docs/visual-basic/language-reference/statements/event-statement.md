@@ -1,6 +1,6 @@
 ---
 title: Event 문
-ms.date: 07/20/2015
+ms.date: 05/12/2018
 f1_keywords:
 - vb.Event
 - vb.Custom
@@ -18,11 +18,11 @@ helpviewer_keywords:
 - ByRef keyword [Visual Basic], Event statements
 - declaring user-defined events
 ms.assetid: 306ff8ed-74dd-4b6a-bd2f-e91b17474042
-ms.openlocfilehash: 967eedcf1f4d0c9a19775f294167b915cca25a9c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d59dc8e7b01612af0e4c8f6c1018269580284c46
+ms.sourcegitcommit: 22c3c8f74eaa138dbbbb02eb7d720fce87fc30a9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="event-statement"></a>Event 문
 사용자 정의된 이벤트를 선언합니다.  
@@ -58,7 +58,7 @@ End Event
 |파트|설명|  
 |---|---|  
 |`attrlist`|선택 사항입니다. 이 이벤트에 적용되는 특성 목록입니다. 여러 특성은 쉼표로 구분합니다. 묶어야는 [특성 목록](../../../visual-basic/language-reference/statements/attribute-list.md) 꺾쇠 괄호에서 ("`<`"및"`>`").|  
-|`accessmodifier`|선택 사항입니다. 이벤트에 액세스할 수 있는 코드를 지정합니다. 다음 중 하나일 수 있습니다.<br /><br /> -   [공용](../../../visual-basic/language-reference/modifiers/public.md)— 이벤트를 선언 하는 요소에 액세스할 수 있는 모든 코드에서 액세스할 수 있습니다.<br />-   [보호 된](../../../visual-basic/language-reference/modifiers/protected.md)-코드의 클래스 및 파생된 클래스에서 액세스할 수 있습니다.<br />-   [Friend](../../../visual-basic/language-reference/modifiers/friend.md)— 동일한 어셈블리의 코드에에서 액세스할 수 있습니다.<br />-   [개인](../../../visual-basic/language-reference/modifiers/private.md)— 이벤트를 선언 하는 요소에만 코드에 액세스할 수 있습니다.<br /><br /> `Protected Friend`를 지정하면 이벤트의 클래스, 파생 클래스 또는 동일한 어셈블리의 코드에서 액세스하도록 할 수 있습니다.|  
+|`accessmodifier`|선택 사항입니다. 이벤트에 액세스할 수 있는 코드를 지정합니다. 다음 중 하나일 수 있습니다.<br /><br /> -   [공용](../../../visual-basic/language-reference/modifiers/public.md)— 이벤트를 선언 하는 요소에 액세스할 수 있는 모든 코드에서 액세스할 수 있습니다.<br />-   [보호 된](../../../visual-basic/language-reference/modifiers/protected.md)-코드의 클래스 및 파생된 클래스에서 액세스할 수 있습니다.<br />-   [Friend](../../../visual-basic/language-reference/modifiers/friend.md)— 동일한 어셈블리의 코드에에서 액세스할 수 있습니다.<br />-   [개인](../../../visual-basic/language-reference/modifiers/private.md)— 이벤트를 선언 하는 요소에만 코드에 액세스할 수 있습니다.<br /> -   [Protected Friend](../../language-reference/modifiers/protected-friend.md)-이벤트의 클래스, 파생된 클래스 또는 동일한 어셈블리의 코드에서 액세스할 수 있습니다. <br />- [보호 된 개인](../../language-reference/modifiers/private-protected.md)-이벤트의 클래스 또는 파생된 클래스에서 동일한 어셈블리의 코드에서 액세스할 수 있습니다.|  
 |`Shared`|선택 사항입니다. 이 이벤트가 클래스 또는 구조체의 특정 인스턴스와 연결되지 않도록 지정합니다.|  
 |`Shadows`|선택 사항입니다. 이 이벤트가 기본 클래스의 이름이 같은 프로그래밍 요소 또는 오버로드된 요소 집합을 다시 선언하고 숨김을 나타냅니다. 모든 종류의 선언된 요소를 다른 종류로 섀도잉할 수 있습니다.<br /><br /> 섀도잉된 요소는 섀도잉 요소에 액세스할 수 없는 위치를 제외하고 해당 요소를 섀도잉하는 파생 클래스 내에서 사용할 수 없습니다. 예를 들어 `Private` 요소가 기본 클래스 요소를 섀도잉하는 경우 `Private` 요소에 액세스할 수 있는 권한이 없는 코드는 기본 클래스 요소에 대신 액세스합니다.|  
 |`eventname`|필수. 이벤트의 이름입니다. 표준 변수 명명 규칙을 따릅니다.|  

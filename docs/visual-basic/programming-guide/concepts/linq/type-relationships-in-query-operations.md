@@ -1,14 +1,6 @@
 ---
 title: 쿼리 작업의 형식 관계(Visual Basic)
-ms.custom: ''
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - variable relationships [LINQ in Visual Basic]
 - type information inferred [LINQ in Visual Basic]
@@ -19,14 +11,11 @@ helpviewer_keywords:
 - inferring type information [LINQ in Visual Basic]
 - relationships [LINQ in Visual Basic]
 ms.assetid: b5ff4da5-f3fd-4a8e-aaac-1cbf52fa16f6
-caps.latest.revision: 34
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: e38f51d77869dcca8a81fdcbc70aed32c4146935
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
-ms.translationtype: HT
+ms.openlocfilehash: ed0072eeb44a17201ddab2af6f6a44fd14461029
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="type-relationships-in-query-operations-visual-basic"></a>쿼리 작업의 형식 관계(Visual Basic)
 사용 되는 변수 [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] 쿼리 작업에는 강력한 형식이 며 서로 호환 되어야 합니다. 강력한 형식 지정 데이터 원본, 쿼리 자체 및 쿼리 실행에 사용 됩니다. 다음 그림에 설명 하는 데 사용 되는 용어를 식별 한 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 쿼리 합니다. 쿼리 부분에 대 한 자세한 내용은 참조 [기본 쿼리 작업 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/basic-query-operations.md)합니다.  
@@ -119,7 +108,7 @@ For Each custInfo In nameCityQuery
 Next  
 ```  
   
- 이전 예제에서 모든 변수에 대 한 형식을 지정 하려면 가능한 경우에 관계 ֿ ´ .  
+ 이전 예제에서 모든 변수에 대 한 형식을 지정 하려면 가능한 경우에 관계 ֿ ´.  
   
 1.  데이터 원본에 있는 요소의 형식은 쿼리에서 범위 변수의 형식을 다시 합니다. 이 예제에서는 `cust` 의 인스턴스가 `Customer`합니다.  
   

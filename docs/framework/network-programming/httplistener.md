@@ -1,26 +1,17 @@
 ---
 title: HttpListener
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - HTTP
 ms.assetid: 5b89d3fb-3c9a-49e2-af1f-c34c020c68ac
-caps.latest.revision: 
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload:
-- dotnet
-ms.openlocfilehash: b4b8c1e916aa9382d156a197fa15c2e72e900a1c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: db2c42dab15b4282c5474c50f970ffe47a101215
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="httplistener"></a>HttpListener
 <xref:System.Net.HttpListener> 클래스는 프로그래밍 방식으로 제어되는 HTTP 프로토콜 수신기를 제공합니다. 수신기는 <xref:System.Net.HttpListener> 개체의 수명 동안 활성화되며 응용 프로그램 내에서 실행됩니다.  
@@ -33,7 +24,7 @@ ms.lasthandoff: 12/22/2017
  <xref:System.Net.HttpWebRequest>  
  <xref:System.Net.HttpWebResponse>  
  [HTTP 서버](http://go.microsoft.com/fwlink/?LinkID=178285)  
- [인터넷 정보에서 향상 된 보안 기능](http://go.microsoft.com/fwlink/?LinkID=178286)  
+ [인터넷 정보의 향상된 보안 기능](http://go.microsoft.com/fwlink/?LinkID=178286)  
  [HttpListener ASPX 호스트 응용 프로그램 샘플](http://go.microsoft.com/fwlink/?LinkID=179560)  
  [HttpListener 기술 샘플](http://go.microsoft.com/fwlink/?LinkID=179558)  
  [네트워크 프로그래밍 샘플](../../../docs/framework/network-programming/network-programming-samples.md)

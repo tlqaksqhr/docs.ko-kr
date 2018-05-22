@@ -1,29 +1,18 @@
 ---
-title: "XSLT 매개 변수"
-ms.custom: 
+title: XSLT 매개 변수
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: fe60aaa0-ae43-4b1c-9be1-426af66ba757
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: b16ad921e5b16ab7564b2ceedab91c6b6073537d
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: ef57d16c52100398919563205a97205be3c5dd7c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="xslt-parameters"></a>XSLT 매개 변수
 <xref:System.Xml.Xsl.XsltArgumentList> 메서드를 사용하여 <xref:System.Xml.Xsl.XsltArgumentList.AddParam%2A>에 XSLT 매개 변수를 추가합니다. 이 때 정규화된 이름 및 네임스페이스 URI가 매개 변수 개체와 연결됩니다.  
@@ -37,7 +26,7 @@ ms.lasthandoff: 12/23/2017
 3.  <xref:System.Xml.Xsl.XsltArgumentList> 개체를 <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A> 메서드에 전달합니다.  
   
 ## <a name="parameter-types"></a>매개 변수 형식  
- 매개 변수 개체는 W3C 형식과 일치해야 합니다. 다음 표에서는 해당 W3C 형식, 해당 Microsoft .NET 클래스(형식) 및 W3C 형식이 XPath 형식인지 또는 XSLT 형식인지를 보여줍니다.  
+ 매개 변수 개체는 W3C 형식과 일치해야 합니다. 다음 표에서는 해당 W3C 형식, 해당 Microsoft .NET 클래스(형식) 및 W3C 형식이 XPath 형식인지 또는 XSLT 형식인지를 보여 줍니다.  
   
 |W3C 형식|해당 .NET 클래스(형식)|XPath 또는 XSLT 형식|  
 |--------------|------------------------------------|------------------------|  
@@ -50,7 +39,7 @@ ms.lasthandoff: 12/23/2017
   
  *단일 노드가 포함된 노드 집합과 같습니다.  
   
- 매개 변수 개체가 위 클래스에 해당하지 않으면 다음 규칙에 따라 변환됩니다. CLR(공용 언어 런타임) 숫자 형식은 <xref:System.Double>로 변환됩니다. <xref:System.DateTime> 형식은 <xref:System.String>으로 변환되고, <xref:System.Xml.XPath.IXPathNavigable> 형식은 <xref:System.Xml.XPath.XPathNavigator>로 변환됩니다. **XPathNavigator[]**는 <xref:System.Xml.XPath.XPathNodeIterator>로 변환됩니다.  
+ 매개 변수 개체가 위 클래스에 해당하지 않으면 다음 규칙에 따라 변환됩니다. CLR(공용 언어 런타임) 숫자 형식은 <xref:System.Double>로 변환됩니다. <xref:System.DateTime> 형식은 <xref:System.String>으로 변환되고, <xref:System.Xml.XPath.IXPathNavigable> 형식은 <xref:System.Xml.XPath.XPathNavigator>로 변환됩니다. **XPathNavigator[]** 는 <xref:System.Xml.XPath.XPathNodeIterator>로 변환됩니다.  
   
  다른 모든 형식은 오류를 throw합니다.  
   

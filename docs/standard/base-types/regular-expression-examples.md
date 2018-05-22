@@ -1,33 +1,22 @@
 ---
-title: "정규식 예제"
-ms.custom: 
+title: 정규식 예제
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - regular expressions [.NET Framework], examples
 - regular expressions [.NET Framework]
 - strings [.NET Framework], regular expressions
 ms.assetid: e9fd53f2-ed56-4b09-b2ea-e9bc9d65e6d6
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 4d2d3aced78d2afed3f0d1396efe5e954ef84102
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 8fb58f8e7a1fef711de28534fbe53dfc9d7084ac
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="regular-expression-examples"></a>정규식 예제
-이 섹션은 일반적인 응용 프로그램에서 정규식 사용을 보여주는 코드 예제를 포함합니다.  
+이 섹션은 일반적인 응용 프로그램에서 정규식 사용을 보여 주는 코드 예제를 포함합니다.  
   
 > [!NOTE]
 >  <xref:System.Web.RegularExpressions> 네임스페이스에는 HTML, XML 및 ASP.NET 문서의 문자열을 구문 분석하기 위해 미리 정의된 정규식 패턴을 구현하는 여러 정규식 개체가 포함되어 있습니다. 예를 들어 <xref:System.Web.RegularExpressions.TagRegex> 클래스는 문자열의 시작 태그를 식별하고, <xref:System.Web.RegularExpressions.CommentRegex> 클래스는 문자열의 ASP.NET 주석을 식별합니다.  

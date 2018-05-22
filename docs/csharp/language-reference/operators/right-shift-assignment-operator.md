@@ -7,11 +7,11 @@ helpviewer_keywords:
 - right shift assignment operator (>>=) [C#]
 - '>>= operator (right-shift assignment) [C#]'
 ms.assetid: b593778c-b9b4-440d-8b29-c1ac22cb81c0
-ms.openlocfilehash: 41203f6e7c9929bb349d29c40cf7cc6c24550c36
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ccc3f688d985b9e35404550f0c53a7acf8095dd5
+ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/15/2018
 ---
 # <a name="gtgt-operator-c-reference"></a>&gt;&gt;= 연산자(C# 참조)
 오른쪽 시프트 대입 연산자입니다.  
@@ -19,13 +19,13 @@ ms.lasthandoff: 05/04/2018
 ## <a name="remarks"></a>설명  
  다음 형태의 식이 있다고 가정합니다.  
   
-```  
+```csharp  
 x >>= y  
 ```  
   
  이 식은 다음과 같이 계산됩니다.  
   
-```  
+```csharp  
 x = x >> y  
 ```  
   

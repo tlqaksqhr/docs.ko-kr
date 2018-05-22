@@ -7,11 +7,11 @@ helpviewer_keywords:
 - delegate keyword [Visual Basic]
 - Delegate statement [Visual Basic]
 ms.assetid: f799c518-0817-40cc-ad0b-4da846fdba57
-ms.openlocfilehash: fb9d8b2c2647ba8fd3b7cee4781f1574b6679b0f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3965dc2d71ec9356cdb38d5ddcd4e00f9259951a
+ms.sourcegitcommit: 22c3c8f74eaa138dbbbb02eb7d720fce87fc30a9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="delegate-statement"></a>Delegate 문
 대리자를 선언 하는 데 사용 합니다. 대리자는 참조 형식 참조 하는 `Shared` 메서드는 형식 또는 개체의 인스턴스 메서드. 매개 변수 및 반환 형식을 일치 하는 프로시저가 대리자 클래스의 인스턴스를 만드는 데 사용할 수 있습니다. 다음 대리자 인스턴스를 통해 프로시저에 나중에 호출 수 있습니다.  
@@ -28,7 +28,7 @@ ms.lasthandoff: 05/04/2018
 |용어|정의|  
 |---|---|  
 |`attrlist`|선택 사항입니다. 이 대리자에 적용 되는 특성의 목록입니다. 여러 특성은 쉼표로 구분합니다. 묶어야는 [특성 목록](../../../visual-basic/language-reference/statements/attribute-list.md) 꺾쇠 괄호에서 ("`<`"및"`>`").|  
-|`accessmodifier`|선택 사항입니다. 대리자를 액세스할 수 있는 코드를 지정 합니다. 다음 중 하나일 수 있습니다.<br /><br /> -   [공용](../../../visual-basic/language-reference/modifiers/public.md)합니다. 대리자를 선언 하는 요소에 액세스할 수 있는 모든 코드를 액세스할 수 있습니다.<br />-   [보호 된](../../../visual-basic/language-reference/modifiers/protected.md)합니다. 대리자의 클래스 또는 파생된 클래스 내에서 코드에만 액세스할 수 있습니다.<br />-   [Friend](../../../visual-basic/language-reference/modifiers/friend.md)합니다. 동일한 어셈블리 내 코드만 대리자를 액세스할 수 있습니다.<br />-   [개인](../../../visual-basic/language-reference/modifiers/private.md)합니다. 대리자를 선언 하는 요소 내의 코드만 액세스할 수 있습니다.<br /><br /> 지정할 수 있습니다 `Protected Friend` 대리자의 클래스나 파생된 클래스에서 동일한 어셈블리 내의 코드에서 액세스할 수 있도록 합니다.|  
+|`accessmodifier`|선택 사항입니다. 대리자를 액세스할 수 있는 코드를 지정 합니다. 다음 중 하나일 수 있습니다.<br /><br /> - [공용](../../../visual-basic/language-reference/modifiers/public.md)합니다. 대리자를 선언 하는 요소에 액세스할 수 있는 모든 코드를 액세스할 수 있습니다.<br />-   [보호 된](../../../visual-basic/language-reference/modifiers/protected.md)합니다. 대리자의 클래스 또는 파생된 클래스 내에서 코드에만 액세스할 수 있습니다.<br />-   [Friend](../../../visual-basic/language-reference/modifiers/friend.md)합니다. 동일한 어셈블리 내 코드만 대리자를 액세스할 수 있습니다.<br />- [개인](../../../visual-basic/language-reference/modifiers/private.md)합니다. 대리자를 선언 하는 요소 내의 코드만 액세스할 수 있습니다.<br /><br /> - [Protected Friend](../../language-reference/modifiers/protected-friend.md) 대리자의 클래스, 파생된 클래스 또는 동일한 어셈블리 내 코드만 대리자를 액세스할 수 있습니다. <br />- [보호 된 개인](../../language-reference/modifiers/private-protected.md) 코드만 대리자의 클래스 내에서 또는 동일한 어셈블리의 파생된 클래스에서 대리자를 액세스할 수 있습니다. |  
 |`Shadows`|선택 사항입니다. 이 대리자는 같은 이름의 프로그래밍 요소 또는 기본 클래스에서 오버 로드 된 요소 집합을 다시 선언 하 고 숨김을 나타냅니다. 모든 종류의 선언된 요소를 다른 종류로 섀도잉할 수 있습니다.<br /><br /> 섀도잉된 요소는 섀도잉 요소에 액세스할 수 없는 위치를 제외하고 해당 요소를 섀도잉하는 파생 클래스 내에서 사용할 수 없습니다. 예를 들어 경우는 `Private` 요소 기본 클래스 요소를 액세스할 수 있는 권한이 없는 코드를 숨기는 `Private` 요소 기본 클래스 요소에 대신 액세스 합니다.|  
 |`Sub`|선택적 `Sub` 또는 `Function` 나타나야 합니다. 대리자로이 프로시저를 선언 `Sub` 값을 반환 하지 않는 프로시저입니다.|  
 |`Function`|선택적 `Sub` 또는 `Function` 나타나야 합니다. 대리자로이 프로시저를 선언 `Function` 값을 반환 하는 프로시저입니다.|  

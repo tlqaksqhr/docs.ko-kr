@@ -1,20 +1,13 @@
 ---
-title: "XML 주석을 사용하여 코드 문서화"
-description: "XML 문서 주석을 사용하여 코드를 문서화하고 컴파일 시간에 XML 문서 파일을 생성하는 방법을 알아봅니다."
-keywords: .NET, .NET Core
-author: BillWagner
-ms.author: wiwagn
+title: XML 주석을 사용하여 코드 문서화
+description: XML 문서 주석을 사용하여 코드를 문서화하고 컴파일 시간에 XML 문서 파일을 생성하는 방법을 알아봅니다.
 ms.date: 02/14/2017
-ms.topic: article
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.devlang: csharp
 ms.assetid: 8e75e317-4a55-45f2-a866-e76124171838
-ms.openlocfilehash: 709ef2ba2202e69ba35834789ad6e743a0f6b719
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 1284f179c7debb323ea3bbd302df1f02bf8b31b1
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="documenting-your-code-with-xml-comments"></a>XML 주석을 사용하여 코드 문서화
 
@@ -25,7 +18,7 @@ XML 문서 주석은 모든 다른 주석처럼 컴파일러에서 무시됩니�
 
 다음 중 하나를 수행하여 컴파일 시간에 XML 파일을 생성할 수 있습니다.
 
-- 명령줄에서 .NET Core를 사용하여 응용 프로그램을 개발할 경우 .csproj 프로젝트 파일의 `<PropertyGroup>` 섹션에 [DocumentationFile 요소](http://docs.microsoft.com/visualstudio/msbuild/common-msbuild-project-properties)를 추가할 수 있습니다. 다음 예제에서는 어셈블리와 동일한 루트 파일 이름으로 프로젝트 디렉터리에 XML 파일을 생성합니다.
+- 명령줄에서 .NET Core를 사용하여 응용 프로그램을 개발할 경우 .csproj 프로젝트 파일의 `<PropertyGroup>` 섹션에 [DocumentationFile 요소](http://docs.microsoft.com/visualstudio/msbuild/common-msbuild-project-properties)를 추가할 수 있습니다. 다음 예제에서는 프로젝트 디렉터리에 어셈블리와 같은 루트 파일 이름을 가진 XML 파일을 생성합니다.
 
    ```xml
    <DocumentationFile>bin\$(Configuration)\$(TargetFramework)\$(AssemblyName).xml</DocumentationFile>

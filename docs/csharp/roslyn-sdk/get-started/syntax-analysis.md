@@ -1,18 +1,13 @@
 ---
 title: 구문 분석 시작(Roslyn API)
 description: 구문 트리를 트래버스하고, 탐색하고, 쿼리하는 방법을 소개합니다.
-author: billwagner
-ms.author: wiwagn
 ms.date: 02/05/2018
-ms.topic: conceptual
-ms.prod: .net
-ms.technology: devlang-csharp
 ms.custom: mvc
-ms.openlocfilehash: 9e42253e520b89fd8a864dead8c17d53bdb8a439
-ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
+ms.openlocfilehash: e377fe10e094e958627c3503fc39b7e2d02b3d7a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="get-started-with-syntax-analysis"></a>구문 분석 시작
 

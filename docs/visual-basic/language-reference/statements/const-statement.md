@@ -1,16 +1,16 @@
 ---
 title: Const 문(Visual Basic)
-ms.date: 07/20/2015
+ms.date: 05/12/2018
 f1_keywords:
 - vb.Const
 helpviewer_keywords:
 - Const statement [Visual Basic]
 ms.assetid: 495b318d-b7c5-4198-94f8-0790a541b07a
-ms.openlocfilehash: bb4c524fa5c29efbcbe485fb5e86c8cf0fa432e8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a5842e284eaa858e7a66160060123edc21858a3a
+ms.sourcegitcommit: 22c3c8f74eaa138dbbbb02eb7d720fce87fc30a9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="const-statement-visual-basic"></a>Const 문(Visual Basic)
 선언 하 고 하나 이상의 상수를 정의 합니다.  
@@ -27,7 +27,7 @@ Const constantlist
  선택 사항입니다. 이 문에서 선언 된 모든 상수에 적용 되는 특성의 목록입니다. 참조 [특성 목록](../../../visual-basic/language-reference/statements/attribute-list.md) 꺾쇠 괄호에서 ("`<`"및"`>`").  
   
  `accessmodifier`  
- 선택 사항입니다. 이러한 상수에 액세스할 수 있는 코드를 지정 하려면이 사용 합니다. 수 [공용](../../../visual-basic/language-reference/modifiers/public.md), [Protected](../../../visual-basic/language-reference/modifiers/protected.md), [Friend](../../../visual-basic/language-reference/modifiers/friend.md), `Protected Friend`, 또는 [개인](../../../visual-basic/language-reference/modifiers/private.md)합니다.  
+ 선택 사항입니다. 이러한 상수에 액세스할 수 있는 코드를 지정 하려면이 사용 합니다. 수 [공용](../../../visual-basic/language-reference/modifiers/public.md), [Protected](../../../visual-basic/language-reference/modifiers/protected.md), [Friend](../../../visual-basic/language-reference/modifiers/friend.md), [Protected Friend](../modifiers/protected-friend.md), [개인](../../../visual-basic/language-reference/modifiers/private.md), 또는 [보호 된 개인](../../language-reference/modifiers/private-protected.md)합니다.
   
  `Shadows`  
  선택 사항입니다. 이 사용 하 여 다시 선언 하 고 기본 클래스에는 프로그래밍 요소를 숨길 수 있습니다. 참조 [그림자](../../../visual-basic/language-reference/modifiers/shadows.md)합니다.  

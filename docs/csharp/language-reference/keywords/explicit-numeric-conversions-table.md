@@ -1,9 +1,6 @@
 ---
-title: "명시적 숫자 변환 표(C# 참조)"
+title: 명시적 숫자 변환 표(C# 참조)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - conversions [C#], explicit numeric
 - numeric conversions [C#], explicit
@@ -12,14 +9,11 @@ helpviewer_keywords:
 - types [C#], explicit numeric conversions
 - type conversion [C#], explicit numeric
 ms.assetid: f3bb9e76-6b92-4df7-bc36-f866c24e1dfd
-caps.latest.revision: "14"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: e7a366328035b205b93a50ff6d212a06576ee801
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 7363df3e4b2449924222745de409fd68349b93de
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="explicit-numeric-conversions-table-c-reference"></a>명시적 숫자 변환 표(C# 참조)
 명시적 숫자 변환은 캐스트 식을 사용하여 숫자 형식을 암시적 변환이 없는 다른 숫자 형식으로 변환하는 데 사용됩니다. 다음 표에는 이러한 변환이 나와 있습니다.  
@@ -36,7 +30,7 @@ ms.lasthandoff: 11/21/2017
 |[uint](../../../csharp/language-reference/keywords/uint.md)|`sbyte`, `byte`, `short`, `ushort`, `int` 또는 `char`|  
 |[long](../../../csharp/language-reference/keywords/long.md)|`sbyte`, `byte`, `short`, `ushort`, `int`, `uint`, `ulong` 또는 `char`|  
 |[ulong](../../../csharp/language-reference/keywords/ulong.md)|`sbyte`, `byte`, `short`, `ushort`, `int`, `uint`, `long` 또는 `char`|  
-|[char](../../../csharp/language-reference/keywords/char.md)|`sbyte`, `byte` 또는 `short`|  
+|[char](../../../csharp/language-reference/keywords/char.md)|`sbyte`, `byte`또는 `short`|  
 |[float](../../../csharp/language-reference/keywords/float.md)|`sbyte`, `byte`, `short`, `ushort`, `int`, `uint`, `long`, `ulong`, `char` 또는 `decimal`|  
 |[double](../../../csharp/language-reference/keywords/double.md)|`sbyte`, `byte`, `short`, `ushort`, `int`, `uint`, `long`, `ulong`, `char`, `float` 또는 `decimal`|  
 |[decimal](../../../csharp/language-reference/keywords/decimal.md)|`sbyte`, `byte`, `short`, `ushort`, `int`, `uint`, `long`, `ulong`, `char`, `float` 또는 `double`|  

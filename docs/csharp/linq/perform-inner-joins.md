@@ -1,20 +1,13 @@
 ---
-title: "내부 조인 수행"
-description: "내부 조인을 수행하는 방법"
-keywords: .NET, .NET Core, C#
-author: BillWagner
-manager: wpickett
-ms.author: wiwagn
+title: 내부 조인 수행
+description: 내부 조인을 수행하는 방법
 ms.date: 12/1/2016
-ms.topic: article
-ms.prod: .net
-ms.technology: devlang-csharp
 ms.assetid: 45bceed6-f549-4114-a9b1-b44feb497742
-ms.openlocfilehash: fdf75c0b7195742bdce70566ebb3880bb0565f31
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 9d372579e3c32964c588b6387b6d4e97f632a21f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="perform-inner-joins"></a>내부 조인 수행
 
@@ -30,7 +23,7 @@ ms.lasthandoff: 11/21/2017
   
 -   그룹 조인을 사용하여 구현되는 내부 조인  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
   
 ## <a name="simple-key-join-example"></a>단순 키 조인 예제  
  다음 예제에서는 두 개의 사용자 정의 형식인 `Person` 및 `Pet`의 개체를 포함하는 두 개의 컬렉션을 만듭니다. 쿼리는 C#의 `join` 절을 사용하여 `Person` 개체를 `Owner`가 해당 `Person`인 `Pet` 개체와 일치시킵니다. C#의 `select` 절은 결과 개체의 모양을 정의합니다. 이 예제에서 결과 개체는 소유자의 이름과 애완 동물의 이름으로 구성된 무명 형식입니다.  
@@ -39,7 +32,7 @@ ms.lasthandoff: 11/21/2017
   
  `LastName`이 "Huff"인 `Person` 개체는 `Pet.Owner`가 `Person`과 같은 `Pet` 개체가 없기 때문에 결과 집합에 표시되지 않습니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
   
 ## <a name="composite-key-join-example"></a>복합 키 조인 예제  
  속성 하나만 기준으로 요소를 상호 연결하는 대신 복합 키를 사용하여 여러 속성을 기준으로 요소를 비교할 수 있습니다. 이렇게 하려면 비교하려는 속성으로 구성된 무명 형식을 반환할 각 컬렉션에 대한 키 선택기 함수를 지정합니다. 속성에 레이블을 지정하는 경우 각 키의 무명 형식에 동일한 레이블이 있어야 합니다. 또한 속성은 동일한 순서로 나타나야 합니다.  
@@ -48,7 +41,7 @@ ms.lasthandoff: 11/21/2017
   
  [!code-csharp[CsLINQProgJoining#2](../../../samples/snippets/csharp/concepts/linq/how-to-perform-inner-joins_2.cs)]  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
   
 ## <a name="multiple-join-example"></a>여러 조인 예제  
  개수에 제한없이 조인 작업을 서로 추가하여 여러 조인을 수행할 수 있습니다. C#의 각 `join` 절은 지정된 데이터 소스를 이전 조인의 결과와 상호 연결합니다.  
@@ -61,7 +54,7 @@ ms.lasthandoff: 11/21/2017
   
  [!code-csharp[CsLINQProgJoining#3](../../../samples/snippets/csharp/concepts/linq/how-to-perform-inner-joins_3.cs)]  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
   
 ## <a name="inner-join-by-using-grouped-join-example"></a>그룹화된 조인을 사용하는 내부 조인 예제  
  다음 예제에서는 그룹 조인을 사용하여 내부 조인을 구현하는 방법을 보여 줍니다.  

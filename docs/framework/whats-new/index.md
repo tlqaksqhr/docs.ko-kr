@@ -10,11 +10,11 @@ helpviewer_keywords:
 ms.assetid: 1d971dd7-10fc-4692-8dac-30ca308fc0fa
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c6d12740333d869b2fd43914437a6f5b5f62f843
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1c0f831426762ddcb21e4c1c1191e20435a13deb
+ms.sourcegitcommit: 22c3c8f74eaa138dbbbb02eb7d720fce87fc30a9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="whats-new-in-the-net-framework"></a>.NET Framework의 새로운 기능
 <a name="introduction"></a> 이 문서에서는 다음 버전의 .NET Framework에 새로 추가된 주요 기능과 향상된 내용에 대해 요약합니다.  
@@ -49,7 +49,7 @@ ms.lasthandoff: 05/04/2018
 
 .NET Framework 4.7.2는 Windows 10, Windows 8.1, Windows 7 SP1 및 Windows Server 2008 R2 SP1 이상의 해당 서버 플랫폼에 설치할 수 있습니다. 웹 설치 관리자 또는 오프라인 설치 관리자를 사용하여 .NET Framework 4.7.2를 설치할 수 있습니다. 대부분의 사용자에게 권장되는 방법은 웹 설치 관리자를 사용하는 것입니다.
 
-[.NET Framework 4.7.2 개발자 팩](http://go.microsoft.com/fwlink/?LinkId=863261)을 설치하여 Visual Studio 2012 이상 버전에서 .NET Framework 4.7.2를 대상으로 할 수 있습니다. 
+[.NET Framework 4.7.2 개발자 팩](http://go.microsoft.com/fwlink/?LinkId=874338)을 설치하여 Visual Studio 2012 이상 버전에서 .NET Framework 4.7.2를 대상으로 할 수 있습니다. 
 
 ### <a name="whats-new-in-the-net-framework-472"></a>.NET Framework 4.7.2의 새로운 기능
 

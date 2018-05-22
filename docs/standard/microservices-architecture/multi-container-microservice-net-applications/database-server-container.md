@@ -1,21 +1,14 @@
 ---
-title: "컨테이너로 실행되는 데이터베이스 서버 사용"
-description: "컨테이너화된 .NET 응용 프로그램을 위한 .NET 마이크로 서비스 아키텍처 | 컨테이너로 실행되는 데이터베이스 서버 사용"
-keywords: "Docker, 마이크로 서비스, ASP.NET, 컨테이너"
+title: 컨테이너로 실행되는 데이터베이스 서버 사용
+description: 컨테이너화된 .NET 응용 프로그램을 위한 .NET 마이크로 서비스 아키텍처 | 컨테이너로 실행되는 데이터베이스 서버 사용
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/30/2017
-ms.prod: .net-core
-ms.technology: dotnet-docker
-ms.topic: article
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 70dd3686519fc38ae35910284948ccf95e743ef7
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 8ff6afbe9618df918e0a965fa1202bbb999eee5c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-a-database-server-running-as-a-container"></a>컨테이너로 실행되는 데이터베이스 서버 사용
 
@@ -52,12 +45,12 @@ eShopOnContainers 응용 프로그램은 다음 섹션에 설명한 대로 시�
 
 SQL Server를 컨테이너로 실행하면 SQL Server의 인스턴스에 대한 액세스 권한이 없는 데모에 유용하지 않습니다. 앞서 언급한 대로 새 샘플 데이터를 시드하여 깔끔한 SQL Server 이미지 및 알려진 데이터에서 시작하는 통합 테스트를 실행할 수 있도록 개발 및 테스트 환경에 사용하는 것이 좋습니다.
 
-#### <a name="additional-resources"></a>추가 리소스
+#### <a name="additional-resources"></a>추가 자료
 
--   **Linux, Mac 또한 Windows에서 SQL Server Docker 이미지 실행**
+-   **Linux, Mac 또는 Windows에서 SQL Server Docker 이미지 실행**
     [*https://docs.microsoft.com/sql/linux/sql-server-linux-setup-docker*](https://docs.microsoft.com/sql/linux/sql-server-linux-setup-docker)
 
--   **sqlcmd를 사용하여 Linux에서 SQL Server에 연결 및 쿼리**
+-   **sqlcmd를 사용하여 Linux에서 SQL Server 연결 및 쿼리**
     [*https://docs.microsoft.com/sql/linux/sql-server-linux-connect-and-query-sqlcmd*](https://docs.microsoft.com/sql/linux/sql-server-linux-connect-and-query-sqlcmd)
 
 ### <a name="seeding-with-test-data-on-web-application-startup"></a>웹 응용 프로그램 시작 시 테스트 데이터로 시드

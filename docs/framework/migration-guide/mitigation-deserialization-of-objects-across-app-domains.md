@@ -1,24 +1,14 @@
 ---
-title: "완화: 응용 프로그램 도메인 간 개체의 deserialization"
-ms.custom: 
+title: '완화: 응용 프로그램 도메인 간 개체의 deserialization'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 30c2d66c-04a8-41a5-ad31-646b937f61b5
-caps.latest.revision: "5"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: fa156c914d2a1bb2ff0601d9e06c9b87d4190754
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: be1ca715fbf4a8166385ba1985986859d91527f2
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="mitigation-deserialization-of-objects-across-app-domains"></a>완화: 응용 프로그램 도메인 간 개체의 deserialization
 경우에 따라 앱이 다양한 응용 프로그램을 기반으로 하여 두 개 이상의 응용 프로그램 도메인을 사용하면 여러 응용 프로그램 도메인 간에 논리 호출 컨텍스트의 개체를 deserialize하려는 시도로 인해 예외가 throw됩니다.  

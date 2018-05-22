@@ -4,16 +4,11 @@ description: .NET에서 서버 앱을 구축할 때 고려해야 할 .NET 구현
 author: cartermp
 ms.author: mairaw
 ms.date: 03/15/2018
-ms.topic: article
-ms.prod: .net
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 1fba5ce14b2504ea688bdff35efa959b8a5a86ab
-ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
+ms.openlocfilehash: 5626c6c1687fe0b8d558df8772fc69c32981787c
+ms.sourcegitcommit: 22c3c8f74eaa138dbbbb02eb7d720fce87fc30a9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="choosing-between-net-core-and-net-framework-for-server-apps"></a>서버 앱에 대해 .NET Core와 .NET Framework 중에 선택
 
@@ -98,8 +93,6 @@ Docker 컨테이너는 고유한 Linux 또는 Windows 인프라나 [Azure Contai
 * WCF 서비스 구현. .NET Core에서 WCF 서비스를 사용할 수 있는 [WCF-클라이언트 라이브러리](https://github.com/dotnet/wcf)가 있더라도 WCF 서버 구현은 현재 .NET Framework에서만 사용할 수 있습니다. 이 시나리오는 .NET Core에 대한 현재 계획의 일부가 아니지만 차후에 고려될 예정입니다.
 
 * 워크플로 관련 서비스: Windows WF(Workflow Foundation), 워크플로 서비스(단일 서비스에서 WCF + WF) 및 WCF Data Services(이전의 “ADO.NET 데이터 서비스”)는 .NET Framework에서만 사용할 수 있습니다.  WF/WCF+WF/WCF Data Services를 .NET Core에 적용할 계획은 없습니다.
-
-* WPF(Windows Presentation Foundation) 및 Windows Forms: WPF 및 Windows Forms 응용 프로그램은 .NET Framework에서만 사용할 수 있습니다. .NET Core로 이식할 예정은 없습니다.
 
 * 언어 지원: Visual Basic 및 F#은 현재 .NET Core에서 지원되지만 일부 프로젝트 형식에서는 지원되지 않습니다. 지원되는 프로젝트 템플릿 목록은 [dotnet new에 대한 템플릿 옵션](../core/tools/dotnet-new.md#arguments)을 참조하세요.
 

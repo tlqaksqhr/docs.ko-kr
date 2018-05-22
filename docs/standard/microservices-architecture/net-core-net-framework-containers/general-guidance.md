@@ -1,21 +1,14 @@
 ---
-title: "일반 지침"
-description: "컨테이너화된 .NET 응용 프로그램을 위한 .NET 마이크로 서비스 아키텍처 | 일반 지침"
-keywords: "Docker, 마이크로 서비스, ASP.NET, 컨테이너"
+title: 일반 지침
+description: 컨테이너화된 .NET 응용 프로그램을 위한 .NET 마이크로 서비스 아키텍처 | 일반 지침
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/18/2017
-ms.prod: .net-core
-ms.technology: dotnet-docker
-ms.topic: article
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: fa58d1d81b2d1523baf123d4963db2ca00fee15d
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: ccaae99f4c46fe739041f9b9e907a702303e62f6
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="general-guidance"></a>일반 지침
 
@@ -43,12 +36,12 @@ ms.lasthandoff: 12/23/2017
 
 Docker에서 .NET Framework를 사용하면 배포 문제 최소화를 통해 배포 환경을 개선할 수 있습니다. 이러한 [*"이동 편의" 시나리오*](https://aka.ms/liftandshiftwithcontainersebook)는 ASP.NET WebForms, MVC 웹앱 또는 WCF(Windows Communication Foundation) 서비스 같은 기존 .NET Framework로 개발된 레거시 응용 프로그램을 컨테이너화하는 데 중요합니다.
 
-### <a name="additional-resources"></a>추가 리소스
+### <a name="additional-resources"></a>추가 자료
 
--   **전자책: Azure 및 Windows Containers를 통한 기존 .NET Framework 응용 프로그램 현대화**
+-   **전자책: Azure 및 Windows 컨테이너를 사용하여 기존 .NET Framework 응용 프로그램 현대화**
     [*https://aka.ms/liftandshiftwithcontainersebook*](https://aka.ms/liftandshiftwithcontainersebook)
 
--   **앱 샘플: Windows Containers를 통한 레거시 ASP.NET 웹 앱 현대화**
+-   **앱 샘플: Windows Containers를 사용하여 레거시 ASP.NET 웹앱 현대화**
     [*https://aka.ms/eshopmodernizing*](https://aka.ms/eshopmodernizing)
 
 

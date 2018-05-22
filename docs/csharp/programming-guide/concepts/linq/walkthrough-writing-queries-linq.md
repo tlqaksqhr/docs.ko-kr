@@ -1,26 +1,17 @@
 ---
-title: "연습: C#에서 쿼리 작성(LINQ)"
-ms.custom: 
+title: '연습: C#에서 쿼리 작성(LINQ)'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-csharp
-ms.topic: get-started-article
 helpviewer_keywords:
 - LINQ [C#], walkthroughs
 - LINQ [C#], writing queries
 - queries [LINQ in C#], writing
 - writing LINQ queries
 ms.assetid: 2962a610-419a-4276-9ec8-4b7f2af0c081
-caps.latest.revision: "32"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 8db1b59bd8de523ae74ca198302f814c2d43f25a
-ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
+ms.openlocfilehash: 10ffdbd6430c0ad55b0a5d71f217a7cb18163741
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/09/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="walkthrough-writing-queries-in-c-linq"></a>연습: C#에서 쿼리 작성(LINQ)
 이 연습에서는 LINQ 쿼리 식을 작성하는 데 사용되는 C # 언어 기능을 보여 줍니다.  
@@ -38,7 +29,7 @@ ms.lasthandoff: 12/09/2017
   
      **새 프로젝트** 대화 상자가 열립니다.  
   
-3.  **설치됨**, **템플릿**, **Visual C#**을 차례로 확장하고 **콘솔 응용 프로그램**을 선택합니다.  
+3.  **설치됨**, **템플릿**, **Visual C#** 을 차례로 확장하고 **콘솔 응용 프로그램**을 선택합니다.  
   
 4.  **이름** 텍스트 상자에 다른 이름을 입력하거나 기본 이름을 선택한 다음 **확인** 단추를 선택합니다.  
   

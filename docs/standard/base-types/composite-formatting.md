@@ -1,13 +1,7 @@
 ---
 title: 복합 형식 지정
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -19,18 +13,13 @@ helpviewer_keywords:
 - composite formatting
 - objects [.NET Framework], formatting multiple objects
 ms.assetid: 87b7d528-73f6-43c6-b71a-f23043039a49
-caps.latest.revision: 36
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 473669b4aaa0782fec32fb0e2d89875c4ab7a838
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 4922470633f3dec8e2e2f898bdf544f5aa4deded
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="composite-formatting"></a>복합 형식 지정
 .NET의 복합 형식 지정 기능에는 개체 목록과 복합 형식 문자열이 입력으로 사용됩니다. 합성 서식 문자열은 고정 텍스트와 목록의 개체에 해당하는 인덱싱된 자리 표시자(서식 항목이라고 함)가 결합된 형태로 구성됩니다. 서식 지정 작업을 통해 원래의 고정 텍스트와 목록에 있는 개체의 문자열 표현이 결합된 형태의 결과 문자열을 얻을 수 있습니다.  
@@ -123,13 +112,13 @@ ms.lasthandoff: 04/30/2018
  [!code-vb[Formatting.Composite#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Composite/vb/Escaping1.vb#2)]  
   
 ### <a name="processing-order"></a>처리 순서  
- 합성 서식 지정 메서드에 대한 호출에 값이 <xref:System.IFormatProvider>이 아닌 `null` 인수가 포함되는 경우, 런타임은 <xref:System.IFormatProvider.GetFormat%2A?displayProperty=nameWithType> 메서드를 호출하여 <xref:System.ICustomFormatter> 구현을 요청합니다. 이 메서드가 <xref:System.ICustomFormatter> 구현을 반환할 수 있는 경우 나중에 사용할 수 있도록 캐시됩니다.  
+ 합성 서식 지정 메서드에 대한 호출에 값이 <xref:System.IFormatProvider>이 아닌 `null` 인수가 포함되는 경우, 런타임은 <xref:System.IFormatProvider.GetFormat%2A?displayProperty=nameWithType> 메서드를 호출하여 <xref:System.ICustomFormatter> 구현을 요청합니다. 메서드가 <xref:System.ICustomFormatter> 구현을 반환할 수 있는 경우 복합 서식 지정 메서드의 호출 기간 동안 캐시됩니다.
   
- 다음 단계를 수행하면 서식 항목에 상응하는 매개 변수 목록의 각 값이 문자열로 변환됩니다. 처음 세 단계의 조건 중 해당 사항이 하나라도 있으면 해당 단계에서 값의 문자열 표현이 반환되고 이후의 단계는 실행되지 않습니다.  
+ 다음과 같이 서식 항목에 상응하는 매개 변수 목록의 각 값이 문자열로 변환됩니다.  
   
-1.  서식을 지정할 값이 `null`이면 빈 문자열("")이 반환됩니다.  
+1.  서식을 지정할 값이 `null`이면 빈 문자열 <xref:System.String.Empty?displayProperty=nameWithType>이 반환됩니다.  
   
-2.  <xref:System.ICustomFormatter> 구현을 사용할 수 있는 경우 런타임은 <xref:System.ICustomFormatter.Format%2A> 메서드를 호출합니다. <xref:System.IFormatProvider> 구현과 함께, 형식 항목의 *formatString* 값이 있는 경우 메서드에 이 값을 전달하고, 값이 없는 경우에는 `null`을 전달합니다.  
+2.  <xref:System.ICustomFormatter> 구현을 사용할 수 있는 경우 런타임은 <xref:System.ICustomFormatter.Format%2A> 메서드를 호출합니다. <xref:System.IFormatProvider> 구현과 함께, 형식 항목의 *formatString* 값이 있는 경우 메서드에 이 값을 전달하고, 값이 없는 경우에는 `null`을 전달합니다. <xref:System.ICustomFormatter.Format%2A?displayProperty=nameWithType> 메서드에 대한 호출이 `null`을 반환하는 경우 실행은 다음 단계로 진행합니다. 그렇지 않은 경우 <xref:System.ICustomFormatter.Format%2A?displayProperty=nameWithType> 호출의 결과가 반환됩니다.
   
 3.  값이 <xref:System.IFormattable> 인터페이스를 구현하면 인터페이스의 <xref:System.IFormattable.ToString%28System.String%2CSystem.IFormatProvider%29> 메서드가 호출됩니다. *formatString* 값(형식 항목에 있는 경우) 또는 `null`(없는 경우)이 메서드에 전달됩니다. <xref:System.IFormatProvider> 인수는 다음과 같이 결정됩니다.  
   

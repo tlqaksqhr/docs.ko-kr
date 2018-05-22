@@ -1,6 +1,6 @@
 ---
 title: Sub 문(Visual Basic)
-ms.date: 07/20/2015
+ms.date: 05/12/2018
 f1_keywords:
 - vb.Sub
 helpviewer_keywords:
@@ -29,11 +29,11 @@ helpviewer_keywords:
 - ByVal keyword [Visual Basic], Sub statements
 - Visual Basic code, Sub procedures
 ms.assetid: e347d700-d06c-405b-b302-e9b1edb57dfc
-ms.openlocfilehash: 9a806f2ec979699f7ccf4012c6477bee11301b0f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 08be38cdbec82914b567ab5b86eed71181efcf57
+ms.sourcegitcommit: 22c3c8f74eaa138dbbbb02eb7d720fce87fc30a9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="sub-statement-visual-basic"></a>Sub 문(Visual Basic)
 선언 이름과 매개 변수를 정의 하는 코드는 `Sub` 프로시저입니다.  
@@ -71,7 +71,9 @@ End Sub
   
     -   [전용](../modifiers/private.md)  
   
-    -   `Protected Friend`  
+    - [Protected Friend](../../language-reference/modifiers/protected-friend.md)
+
+    - [보호 된 개인](../../language-reference/modifiers/private-protected.md)
   
      참조 [액세스 수준을 Visual Basic의](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)합니다.  
   

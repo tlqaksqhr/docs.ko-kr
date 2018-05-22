@@ -1,21 +1,12 @@
 ---
-title: "방법: 네임스페이스 접두사 제어(C#)(LINQ to XML)"
-ms.custom: 
+title: '방법: 네임스페이스 접두사 제어(C#)(LINQ to XML)'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-csharp
-ms.topic: article
 ms.assetid: 64de5186-b81a-4ddd-8327-8693df59a01b
-caps.latest.revision: "3"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: fc8d652c54be62fdf38e0aa05fcf6a81af3f719b
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: af864139d56bd3ebb22cca6369b82539b9d007da
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-control-namespace-prefixes-c-linq-to-xml"></a>방법: 네임스페이스 접두사 제어(C#)(LINQ to XML)
 이 항목에서는 XML 트리를 serialize할 때 네임스페이스 접두사를 제어하는 방법에 대해 설명합니다.  
@@ -32,7 +23,7 @@ ms.lasthandoff: 10/18/2017
   
  접두사가 포함된 네임스페이스를 선언하는 특성을 만들려면 특성 이름의 네임스페이스가 <xref:System.Xml.Linq.XNamespace.Xmlns%2A>이고 특성의 이름이 네임스페이스 접두사인 특성을 만듭니다. 특성 값은 네임스페이스의 URI입니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  이 예제에서는 두 네임스페이스를 선언한 다음 `http://www.adventure-works.com` 네임스페이스가 `aw` 접두사를 갖고 `www.fourthcoffee.com`네임스페이스가 `fc` 접두사를 갖도록 지정합니다.  
   
 ```csharp  

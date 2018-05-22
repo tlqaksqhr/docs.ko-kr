@@ -1,21 +1,14 @@
 ---
-title: "의사 결정 테이블. Docker에 사용할 .NET Framework"
-description: "컨테이너화된 .NET 응용 프로그램을 위한 .NET 마이크로 서비스 아키텍처 | 의사 결정 테이블, Docker에 사용할 .NET Framework"
-keywords: "Docker, 마이크로 서비스, ASP.NET, 컨테이너"
+title: 의사 결정 테이블. Docker에 사용할 .NET Framework
+description: 컨테이너화된 .NET 응용 프로그램을 위한 .NET 마이크로 서비스 아키텍처 | 의사 결정 테이블, Docker에 사용할 .NET Framework
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/18/2017
-ms.prod: .net-core
-ms.technology: dotnet-docker
-ms.topic: article
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 40e6a14e7e3515194185e1f4558c91ac29429108
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 0e384fabca88d8ad6f93ae626140fb3d5dcaf971
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="decision-table-net-frameworks-to-use-for-docker"></a>의사 결정 테이블: Docker에 사용할 .NET Framework
 
@@ -33,7 +26,7 @@ ms.lasthandoff: 12/23/2017
     - .NET 구현으로 *.NET Core*를 선택해도 되고 *.NET Framework*를 선택해도 됩니다.
     - *.NET Core*를 선택한 경우 컨테이너 플랫폼으로 *Linux 컨테이너*를 선택해도 되고 *Windows 컨테이너*를 선택해도 됩니다.
     - *.NET Framework*를 선택한 경우 컨테이너 플랫폼으로 *Windows 컨테이너*를 선택해야 합니다.
-* 응용 프로그램은 **새 컨테이너 기반 개발("그린 필드")**입니다.
+* 응용 프로그램은 **새 컨테이너 기반 개발("그린 필드")** 입니다.
     - .NET 구현으로 *.NET Core*를 선택합니다.
     - 컨테이너 플랫폼으로 *Linux 컨테이너*를 선택해도 되고 *Windows 컨테이너*를 선택해도 됩니다.
 * 응용 프로그램은 **컨테이너로의 Windows Server 레거시 앱("브라운 필드") 마이그레이션**
@@ -47,19 +40,19 @@ ms.lasthandoff: 12/23/2017
     - 다른 프레임워크 종속성이 있는 경우 *.NET Framework* 구현을 사용할 수 있습니다.
     - *.NET Core*를 선택한 경우 컨테이너 플랫폼으로 *Linux 컨테이너*를 선택해도 되고 *Windows 컨테이너*를 선택해도 됩니다.
     - *.NET Framework*를 선택한 경우 컨테이너 플랫폼으로 *Windows 컨테이너*를 선택해야 합니다.
-* **ASP.NET 4(MVC 5, Web API 2 및 Web Forms)**를 사용하여 응용 프로그램을 빌드합니다.
+* **ASP.NET 4(MVC 5, Web API 2 및 Web Forms)** 를 사용하여 응용 프로그램을 빌드합니다.
     - .NET 구현으로 프레임워크 종속성 기반의 *.NET Framework*를 선택합니다.
     - .NET Framework 종속성 때문에 컨테이너 플랫폼으로 *Windows 컨테이너*를 선택해야 합니다.
 * 응용 프로그램에서는 **SignalR 서비스**를 사용합니다.
-    - .NET 구현으로 *.NET Framework*를 선택해도 되고 *.NET Core 2.1 이상(릴리스된 경우)*을 선택해도 됩니다.
+    - .NET 구현으로 *.NET Framework*를 선택해도 되고 *.NET Core 2.1 이상(릴리스된 경우)* 을 선택해도 됩니다.
     - .NET Framework에서 SignalR 구현을 선택한 경우 컨테이너 플랫폼으로 *Windows 컨테이너*를 선택해야 합니다.
     - .NET Core 2.1 이상(릴리스된 경우)에서 SignalR 구현을 선택한 경우 컨테이너 플랫폼으로 Linux 컨테이너를 선택해도 되고 Windows 컨테이너를 선택해도 됩니다.  
     - **SignalR 서비스**가 *.NET Core*에서 실행되면 *Linux 컨테이너 또는 Windows 컨테이너*를 사용할 수 있습니다.
 * 응용 프로그램에서는 **WCF, WF 및 기타 레거시 프레임워크**를 사용합니다.
-    - .NET 구현으로 *.NET Framework* 또는 *.NET Core(향후 릴리스에 대한 로드맵에 있는)*를 선택합니다.
+    - .NET 구현으로 *.NET Framework* 또는 *.NET Core(향후 릴리스에 대한 로드맵에 있는)* 를 선택합니다.
     - .NET Framework 종속성 때문에 컨테이너 플랫폼으로 *Windows 컨테이너*를 선택해야 합니다.
 * 응용 프로그램에서는 **Azure 서비스를 사용**합니다.
-    - .NET 구현으로 *.NET Framework* 또는 *.NET Core(궁극적으로 모든 Azure 서비스 클라이언트에서 SDKs for .NET Core 제공)*를 선택합니다.
+    - .NET 구현으로 *.NET Framework* 또는 *.NET Core(궁극적으로 모든 Azure 서비스 클라이언트에서 SDKs for .NET Core 제공)* 를 선택합니다.
     - .NET Framework 클라이언트 API를 사용하는 경우 컨테이너 플랫폼으로 *Windows 컨테이너*를 선택해야 합니다.
     - *.NET Core*에 제공되는 클라이언트 API를 사용하는 경우 *Linux 컨테이너 및 Windows 컨테이너* 중에 선택할 수도 있습니다.
 

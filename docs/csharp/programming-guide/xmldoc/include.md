@@ -1,9 +1,6 @@
 ---
-title: "&lt;include&gt;(C# 프로그래밍 가이드)"
+title: '&lt;include&gt;(C# 프로그래밍 가이드)'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.topic: article
 f1_keywords:
 - include
 - <include>
@@ -11,14 +8,11 @@ helpviewer_keywords:
 - <include> C# XML tag
 - include C# XML tag
 ms.assetid: a8a70302-6196-4643-bd09-ef33f411f18f
-caps.latest.revision: "19"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: f4df6a23b2fe33b2390aef86891aedc6b04e464d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: a681a2fcbb874d67b82c8bda73d92dd993928bbc
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ltincludegt-c-programming-guide"></a>&lt;include&gt;(C# 프로그래밍 가이드)
 ## <a name="syntax"></a>구문  
@@ -45,7 +39,7 @@ ms.lasthandoff: 11/21/2017
   
  \<include> 태그는 XML XPath 구문을 사용합니다. \<include> 사용을 사용자 지정하는 방법은 XPath 설명서를 참조하세요.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다중 파일 예제입니다. 아래에는 \<include>를 사용하는 첫 번째 파일이 나와 있습니다.  
   
  [!code-csharp[csProgGuideDocComments#5](../../../csharp/programming-guide/xmldoc/codesnippet/CSharp/include_1.cs)]  

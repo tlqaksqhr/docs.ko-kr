@@ -1,22 +1,16 @@
 ---
-title: "부동 소수점 형식 표(C# 참조)"
+title: 부동 소수점 형식 표(C# 참조)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - floating-point numbers [C#]
 - ranges of floating-point types [C#]
 - types [C#], floating-point types
 ms.assetid: da886cc5-e01e-4f62-b3ec-6428c8f7a102
-caps.latest.revision: "11"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: be0db5bdc986534f964c34156da5fcc7752e1f8f
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 0a0d59e653138d5037eaec8d494313222e526ad8
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="floating-point-types-table-c-reference"></a>부동 소수점 형식 표(C# 참조)
 다음 표는 부동 소수점 형식의 자릿수와 근사 범위를 보여 줍니다.  

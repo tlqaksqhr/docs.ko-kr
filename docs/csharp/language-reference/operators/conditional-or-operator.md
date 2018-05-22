@@ -8,11 +8,11 @@ helpviewer_keywords:
 - conditional-OR operator (||) [C#]
 - '|| operator [C#]'
 ms.assetid: 7d442d8e-400d-421f-b4d2-034bf82bcbdc
-ms.openlocfilehash: ce0834874f9c5b4c5154a798492600d6ac45a4c6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d22e57d097edb0fe52b604e9c6431e167c410f0b
+ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/15/2018
 ---
 # <a name="-operator-c-reference"></a>|| 연산자(C# 참조)
 조건부 OR 연산자(`||`)는 해당 `bool` 피연산자의 논리적 OR을 수행합니다. 첫 번째 피연산자가 `true`이면 두 번째 피연산자는 계산되지 않습니다. 첫 번째 피연산자가 `false`이면 두 번째 피연산자에 의해 OR 식 전체가 `true` 또는 `false`인지가 결정됩니다.  
@@ -20,13 +20,13 @@ ms.lasthandoff: 05/04/2018
 ## <a name="remarks"></a>설명  
  이 작업은  
   
-```  
+```csharp  
 x || y  
 ```  
   
  연산에 해당합니다.  
   
-```  
+```csharp  
 x | y  
 ```  
   

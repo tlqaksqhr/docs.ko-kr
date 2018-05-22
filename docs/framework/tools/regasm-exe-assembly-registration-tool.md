@@ -1,29 +1,19 @@
 ---
-title: "Regasm.exe(어셈블리 등록 도구)"
-ms.custom: 
+title: Regasm.exe(어셈블리 등록 도구)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - Assembly Registration tool
 - assemblies [.NET Framework], registering
 - Regasm.exe
 - registering assemblies
 ms.assetid: e190e342-36ef-4651-a0b4-0e8c2c0281cb
-caps.latest.revision: "20"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: b2762080c66c3c9451e7c7c3d4621d8cb9d4846e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 11ccdb4c75af2b37595d9be977f2ab881ebe1184
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="regasmexe-assembly-registration-tool"></a>Regasm.exe(어셈블리 등록 도구)
 어셈블리 등록 도구를 사용하면 어셈블리 내의 메타데이터를 읽고 필요한 엔트리를 레지스트리에 추가할 수 있습니다. 이렇게 하면 COM 클라이언트에서 .NET Framework 클래스를 투명하게 만들 수 있습니다. 클래스가 등록되고 나면 COM 클라이언트에서는 해당 클래스가 마치 COM 클래스인 것처럼 사용할 수 있습니다. 클래스는 어셈블리가 설치될 때 한 번만 등록됩니다. 클래스가 실제로 등록되어야만 COM에서 어셈블리 내의 클래스 인스턴스를 만들 수 있습니다.  
@@ -58,7 +48,7 @@ regasm assemblyFile [options]
 |**/?** 또는 **/help**|이 도구의 명령 구문 및 옵션을 표시합니다.|  
   
 > [!NOTE]
->  Regasm.exe의 명령줄 옵션은 대/소문자가 구분되지 않습니다. 따라서 옵션을 고유하게 식별할 수 있을 정도로만 옵션을 지정하면 됩니다. 예를 들어 **/n**은 **/nologo**와 같고, **/t:** *outfile.tlb*는 **/tlb:** *outfile.tlb*와 같습니다.  
+>  Regasm.exe의 명령줄 옵션은 대/소문자가 구분되지 않습니다. 따라서 옵션을 고유하게 식별할 수 있을 정도로만 옵션을 지정하면 됩니다. 예를 들어, **/n**은 **/nologo**와 같고, **/t:** *outfile.tlb*는 **/tlb:** *outfile.tlb*와 같습니다.  
   
 ## <a name="remarks"></a>설명  
  **/regfile** 옵션을 사용하면 레지스트리를 직접 변경하는 대신 레지스트리 항목이 들어 있는 .ref 파일을 생성할 수 있습니다. 레지스트리 편집기 도구(Regedit.exe)를 사용하여 .reg 파일을 가져오면 시스템의 레지스트리를 업데이트할 수도 있습니다. 사용자 정의 등록 함수에서 수행되는 레지스트리 업데이트 내용은 .reg 파일에 포함되지 않습니다.  **/regfile** 옵션은 관리되는 클래스에 대한 레지스트리 항목만 내보냅니다.  이 옵션은 `TypeLibID` 또는 `InterfaceID`에 대한 항목은 내보내지 않습니다.  

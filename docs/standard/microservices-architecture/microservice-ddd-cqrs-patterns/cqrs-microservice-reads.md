@@ -1,21 +1,14 @@
 ---
-title: "CQRS 마이크로 서비스에서 읽기/쿼리 구현"
-description: "컨테이너화된 .NET 응용 프로그램용 .NET 마이크로 서비스 아키텍처 | CQRS 마이크로 서비스에서 읽기/쿼리 구현"
-keywords: "Docker, 마이크로 서비스, ASP.NET, 컨테이너"
+title: CQRS 마이크로 서비스에서 읽기/쿼리 구현
+description: 컨테이너화된 .NET 응용 프로그램용 .NET 마이크로 서비스 아키텍처 | CQRS 마이크로 서비스에서 읽기/쿼리 구현
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 11/02/2017
-ms.prod: .net-core
-ms.technology: dotnet-docker
-ms.topic: article
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: ca9bcefb317d2b3c7c225b773918ca4a2484cb8f
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 8eca01acc2308097d1684be8bdb0f07edd86832f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="implementing-readsqueries-in-a-cqrs-microservice"></a>CQRS 마이크로 서비스에서 읽기/쿼리 구현
 
@@ -191,12 +184,12 @@ public class OrderSummary
 
 위의 이미지에서는 ViewModel 형식 및 반환될 수 있는 가능한 HTTP 상태 코드에 기반한 몇 가지 예제 값을 확인할 수 있습니다.
 
-## <a name="additional-resources"></a>추가 리소스
+## <a name="additional-resources"></a>추가 자료
 
 -   **Dapper**
     [*https://github.com/StackExchange/dapper-dot-net*](https://github.com/StackExchange/dapper-dot-net)
 
--   **Julie Lerman 작성, 데이터 요소 - Dapper, Entity Framework 및 하이브리드 앱(MSDN Mag. 문서)**
+-   **Julie Lerman. 데이터 요소 - Dapper, Entity Framework 및 하이브리드 앱(MSDN Mag. 문서)**
 
     *https://msdn.microsoft.com/magazine/mt703432.aspx*
 

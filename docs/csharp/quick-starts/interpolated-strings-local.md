@@ -4,16 +4,12 @@ description: 이 빠른 시작에서는 C# 문자열 보간 기능을 사용하�
 author: rpetrusha
 ms.author: ronpet
 ms.date: 04/14/2018
-ms.topic: get-started-article
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.devlang: csharp
 ms.custom: mvc
-ms.openlocfilehash: 7ef904e30475d2cc0584f2baf56bc33a68e172d4
-ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
+ms.openlocfilehash: 314626e276f50178e2855b8c8a1edc104546d574
+ms.sourcegitcommit: 88f251b08bf0718ce119f3d7302f514b74895038
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="string-interpolation"></a>문자열 보간
 
@@ -173,4 +169,4 @@ Console.WriteLine($"[{DateTime.Now,-20:d}] Hour [{DateTime.Now,-10:HH}] [{1063.3
 
 자체 개발 환경에서 [목록 컬렉션](arrays-and-collections.md) 빠른 시작을 계속할 수 있습니다.
 
-C# 참조의 [문자열 보간](../language-reference/tokens/interpolated.md) 항목에서 문자열 보간에 대해 자세히 알아보세요.
+자세한 내용은 [문자열 보간](../language-reference/tokens/interpolated.md) 항목 및 [C#에서 문자열 보간](../tutorials/string-interpolation.md) 자습서를 참조하세요.

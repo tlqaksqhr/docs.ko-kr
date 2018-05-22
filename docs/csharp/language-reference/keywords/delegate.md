@@ -9,16 +9,16 @@ helpviewer_keywords:
 - delegate keyword [C#]
 - function pointers [C#]
 ms.assetid: 0bb8cb6d-2f87-47c7-9d1f-d65c1cd01e9f
-ms.openlocfilehash: 923d746927063490236a721e8d2600889084dac0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4eafd0ffb6da191db80fd69f1980a167dbfc742b
+ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/15/2018
 ---
 # <a name="delegate-c-reference"></a>delegate(C# 참조)
 delegate 형식의 선언은 메서드 시그니처와 유사합니다. 반환 값이 있으며 모든 형식의 매개 변수를 개수에 관계없이 사용할 수 있습니다.  
   
-```  
+```csharp  
 public delegate void TestDelegate(string message);  
 public delegate int TestDelegate(MyType m, long num);  
 ```  

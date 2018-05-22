@@ -11,11 +11,11 @@ helpviewer_keywords:
 - variables [Visual Basic], enumeration
 - constants [Visual Basic], enumerated
 ms.assetid: a45e51f1-65ff-48e1-bf32-79130f137377
-ms.openlocfilehash: 89de51f2551437d102ccdc5a0f1ff5f23b53e47f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7cac4d5bde9ec617a1877a0605dc6dbab67ddf7f
+ms.sourcegitcommit: 22c3c8f74eaa138dbbbb02eb7d720fce87fc30a9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="enum-statement-visual-basic"></a>Enum 문(Visual Basic)
 열거형을 선언 하 고 해당 멤버의 값을 정의 합니다.  
@@ -49,8 +49,10 @@ End Enum
   
     -   [전용](../../../visual-basic/language-reference/modifiers/private.md)  
   
-     지정할 수 있습니다 `Protected``Friend` 열거형의 클래스나 파생된 클래스에서 동일한 어셈블리 내의 코드에서 액세스할 수 있도록 합니다.  
-  
+    - [Protected Friend](../../language-reference/modifiers/protected-friend.md)
+    
+    - [보호 된 개인](../../language-reference/modifiers/private-protected.md)
+
 -   `Shadows`  
   
      선택 사항입니다. 이 열거형의 동일 하 게 명명 된 프로그래밍 요소 또는 기본 클래스에서 오버 로드 된 요소 집합을 다시 선언 하 고 숨기도록 지정 합니다. 지정할 수 있습니다 [그림자](../../../visual-basic/language-reference/modifiers/shadows.md) 열거형 자체에 대해서만, 해당 멤버 중 하나에 없는 합니다.  

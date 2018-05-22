@@ -3,17 +3,12 @@ title: Linux에서 .NET Core의 필수 구성 요소
 description: Linux 컴퓨터에서 .NET Core 응용 프로그램을 개발, 배포 및 실행하기 위해 지원되는 Linux 버전 및 .NET Core 종속성입니다.
 author: jralexander
 ms.author: johalex
-ms.date: 04/19/2018
-ms.topic: conceptual
-ms.prod: dotnet-core
-ms.devlang: dotnet
-ms.workload:
-- dotnetcore
-ms.openlocfilehash: 9d986ed56bbc6f803988fde4b5500cd5d5364050
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.date: 05/08/2018
+ms.openlocfilehash: 41656bf8f18c2b66c35f0a65e4af0949db4464f9
+ms.sourcegitcommit: 88f251b08bf0718ce119f3d7302f514b74895038
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="prerequisites-for-net-core-on-linux"></a>Linux에서 .NET Core의 필수 구성 요소
 
@@ -38,7 +33,7 @@ ms.lasthandoff: 04/28/2018
 * Oracle Linux 7
 * Fedora 27, 26
 * Debian 9, 8.7 이상 버전
-* Ubuntu 17.10, 16.04, 14.04
+* Ubuntu 18.04, 17.10, 16.04, 14.04
 * Linux Mint 18, 17
 * openSUSE 42.3 이상 버전
 * SUSE Enterprise Linux(SLES) 12 서비스 팩 2 이상
@@ -147,24 +142,29 @@ Red Hat .NET 채널 액세스 등록 도움말은 Red Hat에서 [Chapter 1 of th
 
 **.NET Core 2.0**
 
-|런타임/SDK          |Ubuntu 17.10  |Ubuntu 16.04/Linux Mint 18|Ubuntu 14.04/Linux Mint 17|
-|-------------------------|--------------|----------------------------|----------------------------|
-|.NET Core 런타임 2.0.6  |[설치 링크](https://www.microsoft.com/net/download/linux-package-manager/ubuntu17-10/runtime-2.0.6)|[설치 링크](https://www.microsoft.com/net/download/linux-package-manager/ubuntu16-04/runtime-2.0.6)          |[설치 링크](https://www.microsoft.com/net/download/linux-package-manager/ubuntu14-04/runtime-2.0.6)            |
-|.NET Core 런타임 2.0.5  |[설치 링크](https://www.microsoft.com/net/download/linux-package-manager/ubuntu17-10/runtime-2.0.5)|[설치 링크](https://www.microsoft.com/net/download/linux-package-manager/ubuntu16-04/runtime-2.0.5)          |[설치 링크](https://www.microsoft.com/net/download/linux-package-manager/ubuntu14-04/runtime-2.0.5)            |
-|.NET Core SDK 2.1.103    |[설치 링크](https://www.microsoft.com/net/download/linux-package-manager/ubuntu17-10/sdk-2.1.103)|[설치 링크](https://www.microsoft.com/net/download/linux-package-manager/ubuntu16-04/sdk-2.1.103)            |[설치 링크](https://www.microsoft.com/net/download/linux-package-manager/ubuntu14-04/sdk-2.1.103)            |
-|.NET Core SDK 2.0.3      |[설치 링크](https://www.microsoft.com/net/download/linux-package-manager/ubuntu17-10/sdk-2.0.3)|[설치 링크](https://www.microsoft.com/net/download/linux-package-manager/ubuntu16-04/sdk-2.0.3)          |[설치 링크](https://www.microsoft.com/net/download/linux-package-manager/ubuntu14-04/sdk-2.0.3)            |
+|런타임/SDK          |Ubuntu 18.04    |Ubuntu 17.10    |Ubuntu 16.04/Linux Mint 18|Ubuntu 14.04/Linux Mint 17|
+|-------------------------|----------------|----------------|----------------------------|----------------------------|
+|.NET Core 런타임 2.0.7  |[설치 링크](https://www.microsoft.com/net/download/linux-package-manager/ubuntu18-04/runtime-2.0.7)|[설치 링크](https://www.microsoft.com/net/download/linux-package-manager/ubuntu17-10/runtime-2.0.7)|[설치 링크](https://www.microsoft.com/net/download/linux-package-manager/ubuntu16-04/runtime-2.0.7)          |[설치 링크](https://www.microsoft.com/net/download/linux-package-manager/ubuntu14-04/runtime-2.0.7)            |
+|.NET Core 런타임 2.0.6  |[설치 링크](https://www.microsoft.com/net/download/linux-package-manager/ubuntu18-04/runtime-2.0.6)|[설치 링크](https://www.microsoft.com/net/download/linux-package-manager/ubuntu17-10/runtime-2.0.6)|[설치 링크](https://www.microsoft.com/net/download/linux-package-manager/ubuntu16-04/runtime-2.0.6)          |[설치 링크](https://www.microsoft.com/net/download/linux-package-manager/ubuntu14-04/runtime-2.0.6)            |
+|.NET Core 런타임 2.0.5  |[설치 링크](https://www.microsoft.com/net/download/linux-package-manager/ubuntu18-04/runtime-2.0.5)|[설치 링크](https://www.microsoft.com/net/download/linux-package-manager/ubuntu17-10/runtime-2.0.5)|[설치 링크](https://www.microsoft.com/net/download/linux-package-manager/ubuntu16-04/runtime-2.0.5)          |[설치 링크](https://www.microsoft.com/net/download/linux-package-manager/ubuntu14-04/runtime-2.0.5)            |
+|.NET Core SDK 2.1.105    |[설치 링크](https://www.microsoft.com/net/download/linux-package-manager/ubuntu18-04/sdk-2.1.105)|[설치 링크](https://www.microsoft.com/net/download/linux-package-manager/ubuntu17-10/sdk-2.1.105)|[설치 링크](https://www.microsoft.com/net/download/linux-package-manager/ubuntu16-04/sdk-2.1.105)            |[설치 링크](https://www.microsoft.com/net/download/linux-package-manager/ubuntu14-04/sdk-2.1.105)            |
+|.NET Core SDK 2.1.103    |[설치 링크](https://www.microsoft.com/net/download/linux-package-manager/ubuntu18-04/sdk-2.1.103)|[설치 링크](https://www.microsoft.com/net/download/linux-package-manager/ubuntu17-10/sdk-2.1.103)|[설치 링크](https://www.microsoft.com/net/download/linux-package-manager/ubuntu16-04/sdk-2.1.103)            |[설치 링크](https://www.microsoft.com/net/download/linux-package-manager/ubuntu14-04/sdk-2.1.103)            |
+|.NET Core SDK 2.0.3      |[설치 링크](https://www.microsoft.com/net/download/linux-package-manager/ubuntu18-04/sdk-2.0.3)|[설치 링크](https://www.microsoft.com/net/download/linux-package-manager/ubuntu17-10/sdk-2.0.3)|[설치 링크](https://www.microsoft.com/net/download/linux-package-manager/ubuntu16-04/sdk-2.0.3)          |[설치 링크](https://www.microsoft.com/net/download/linux-package-manager/ubuntu14-04/sdk-2.0.3)            |
+|.NET Core SDK 2.0.0      |[설치 링크](https://www.microsoft.com/net/download/linux-package-manager/ubuntu18-04/sdk-2.0.0)|[설치 링크](https://www.microsoft.com/net/download/linux-package-manager/ubuntu17-10/sdk-2.0.0)|[설치 링크](https://www.microsoft.com/net/download/linux-package-manager/ubuntu16-04/sdk-2.0.0)          |[설치 링크](https://www.microsoft.com/net/download/linux-package-manager/ubuntu14-04/sdk-2.0.0)            |
 
 **.NET Core 2.1**
 
 >[!IMPORTANT]
 > Visual Studio와 함께 .NET Core 2.1을 사용하려면 [Visual Studio 2017 15.7 미리 보기 1 이상을 설치](https://www.visualstudio.com/vs/preview)해야 합니다.
 
-|런타임/SDK                  |Ubuntu 17.10    |Ubuntu 16.04/Linux Mint 18|Ubuntu 14.04/Linux Mint 17|
-|---------------------------------|----------------|----------------------------|----------------------------|
-|.NET Core 런타임 2.1.0-미리 보기2 |[설치 링크](https://www.microsoft.com/net/download/linux-package-manager/ubuntu17-10/runtime-2.1.0-preview2)|[설치 링크](https://www.microsoft.com/net/download/linux-package-manager/ubuntu16-04/runtime-2.1.0-preview2)            |[설치 링크](https://www.microsoft.com/net/download/linux-package-manager/ubuntu14-04/runtime-2.1.0-preview2)            |
-|.NET Core 런타임 2.1.0-미리 보기1 |[설치 링크](https://www.microsoft.com/net/download/linux-package-manager/ubuntu17-10/runtime-2.1.0-preview1)|[설치 링크](https://www.microsoft.com/net/download/linux-package-manager/ubuntu16-04/runtime-2.1.0-preview1)            |[설치 링크](https://www.microsoft.com/net/download/linux-package-manager/ubuntu14-04/runtime-2.1.0-preview1)            |
-|.NET Core SDK 2.1.300-미리 보기2   |[설치 링크](https://www.microsoft.com/net/download/linux-package-manager/ubuntu17-10/sdk-2.1.300-preview2)|[설치 링크](https://www.microsoft.com/net/download/linux-package-manager/ubuntu16-04/sdk-2.1.300-preview2)            |[설치 링크](https://www.microsoft.com/net/download/linux-package-manager/ubuntu14-04/sdk-2.1.300-preview2)
-|.NET Core SDK 2.1.300-미리 보기1   |[설치 링크](https://www.microsoft.com/net/download/linux-package-manager/ubuntu17-10/sdk-2.1.300-preview1)|[설치 링크](https://www.microsoft.com/net/download/linux-package-manager/ubuntu16-04/sdk-2.1.300-preview1)            |[설치 링크](https://www.microsoft.com/net/download/linux-package-manager/ubuntu14-04/sdk-2.1.300-preview1)            |
+|런타임/SDK                  |Ubuntu 18.04    |Ubuntu 17.10    |Ubuntu 16.04/Linux Mint 18|Ubuntu 14.04/Linux Mint 17|
+|---------------------------------|----------------|----------------|----------------------------|----------------------------|
+|.NET Core 런타임 2.1.0-rc1      |[설치 링크](https://www.microsoft.com/net/download/linux-package-manager/ubuntu18-04/runtime-2.1.0-rc1)|[설치 링크](https://www.microsoft.com/net/download/linux-package-manager/ubuntu17-10/runtime-2.1.0-rc1)|[설치 링크](https://www.microsoft.com/net/download/linux-package-manager/ubuntu16-04/runtime-2.1.0-rc1)            |[설치 링크](https://www.microsoft.com/net/download/linux-package-manager/ubuntu14-04/runtime-2.1.0-rc1)            |
+|.NET Core 런타임 2.1.0-미리 보기2 |[설치 링크](https://www.microsoft.com/net/download/linux-package-manager/ubuntu18-04/runtime-2.1.0-preview2)|[설치 링크](https://www.microsoft.com/net/download/linux-package-manager/ubuntu17-10/runtime-2.1.0-preview2)|[설치 링크](https://www.microsoft.com/net/download/linux-package-manager/ubuntu16-04/runtime-2.1.0-preview2)            |[설치 링크](https://www.microsoft.com/net/download/linux-package-manager/ubuntu14-04/runtime-2.1.0-preview2)            |
+|.NET Core 런타임 2.1.0-미리 보기1 |[설치 링크](https://www.microsoft.com/net/download/linux-package-manager/ubuntu18-04/runtime-2.1.0-preview1)|[설치 링크](https://www.microsoft.com/net/download/linux-package-manager/ubuntu17-10/runtime-2.1.0-preview1)|[설치 링크](https://www.microsoft.com/net/download/linux-package-manager/ubuntu16-04/runtime-2.1.0-preview1)            |[설치 링크](https://www.microsoft.com/net/download/linux-package-manager/ubuntu14-04/runtime-2.1.0-preview1)            |
+|.NET Core SDK 2.1.300-rc1  |[설치 링크](https://www.microsoft.com/net/download/linux-package-manager/ubuntu18-04/sdk-2.1.300-rc1)|[설치 링크](https://www.microsoft.com/net/download/linux-package-manager/ubuntu17-10/sdk-2.1.300-rc1)|[설치 링크](https://www.microsoft.com/net/download/linux-package-manager/ubuntu16-04/sdk-2.1.300-rc1)            |[설치 링크](https://www.microsoft.com/net/download/linux-package-manager/ubuntu14-04/sdk-2.1.300-rc1)            |
+|.NET Core SDK 2.1.300-미리 보기2   |[설치 링크](https://www.microsoft.com/net/download/linux-package-manager/ubuntu18-04/sdk-2.1.300-preview2)|[설치 링크](https://www.microsoft.com/net/download/linux-package-manager/ubuntu17-10/sdk-2.1.300-preview2)|[설치 링크](https://www.microsoft.com/net/download/linux-package-manager/ubuntu16-04/sdk-2.1.300-preview2)            |[설치 링크](https://www.microsoft.com/net/download/linux-package-manager/ubuntu14-04/sdk-2.1.300-preview2)            |
+|.NET Core SDK 2.1.300-미리 보기1   |[설치 링크](https://www.microsoft.com/net/download/linux-package-manager/ubuntu18-04/sdk-2.1.300-preview1)|[설치 링크](https://www.microsoft.com/net/download/linux-package-manager/ubuntu17-10/sdk-2.1.300-preview1)|[설치 링크](https://www.microsoft.com/net/download/linux-package-manager/ubuntu16-04/sdk-2.1.300-preview1)            |[설치 링크](https://www.microsoft.com/net/download/linux-package-manager/ubuntu14-04/sdk-2.1.300-preview1)            |
 
 
 # <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
@@ -203,10 +203,13 @@ Red Hat .NET 채널 액세스 등록 도움말은 Red Hat에서 [Chapter 1 of th
 
 |런타임/SDK          |Debian 9       |Debian 8       |
 |-------------------------|---------------|---------------|
+|.NET Core 런타임 2.0.7  |[설치 링크](https://www.microsoft.com/net/download/linux-package-manager/debian9/runtime-2.0.7)   |[설치 링크](https://www.microsoft.com/net/download/linux-package-manager/debian8/runtime-2.0.7)   |
 |.NET Core 런타임 2.0.6  |[설치 링크](https://www.microsoft.com/net/download/linux-package-manager/debian9/runtime-2.0.6)   |[설치 링크](https://www.microsoft.com/net/download/linux-package-manager/debian8/runtime-2.0.6)   |
 |.NET Core 런타임 2.0.5  |[설치 링크](https://www.microsoft.com/net/download/linux-package-manager/debian9/runtime-2.0.5)   |[설치 링크](https://www.microsoft.com/net/download/linux-package-manager/debian8/runtime-2.0.5)   |
+|.NET Core SDK 2.1.105    |[설치 링크](https://www.microsoft.com/net/download/linux-package-manager/debian9/sdk-2.1.105)   |[설치 링크](https://www.microsoft.com/net/download/linux-package-manager/debian8/sdk-2.1.105)   |
 |.NET Core SDK 2.1.103    |[설치 링크](https://www.microsoft.com/net/download/linux-package-manager/debian9/sdk-2.1.103)   |[설치 링크](https://www.microsoft.com/net/download/linux-package-manager/debian8/sdk-2.1.103)   |
 |.NET Core SDK 2.0.3      |[설치 링크](https://www.microsoft.com/net/download/linux-package-manager/debian9/sdk-2.0.3)   |[설치 링크](https://www.microsoft.com/net/download/linux-package-manager/debian8/sdk-2.0.3)   |
+|.NET Core SDK 2.0.0      |[설치 링크](https://www.microsoft.com/net/download/linux-package-manager/debian9/sdk-2.0.0)   |[설치 링크](https://www.microsoft.com/net/download/linux-package-manager/debian8/sdk-2.0.0)   |
 
 **.NET Core 2.1**
 
@@ -215,8 +218,10 @@ Red Hat .NET 채널 액세스 등록 도움말은 Red Hat에서 [Chapter 1 of th
 
 |런타임/SDK                  |Debian 9       |Debian 8       |
 |---------------------------------|---------------|---------------|
+|.NET Core 런타임 2.1.0-rc1      |[설치 링크](https://www.microsoft.com/net/download/linux-package-manager/debian9/runtime-2.1.0-rc1)   |[설치 링크](https://www.microsoft.com/net/download/linux-package-manager/debian8/runtime-2.1.0-rc1)   |
 |.NET Core 런타임 2.1.0-미리 보기2 |[설치 링크](https://www.microsoft.com/net/download/linux-package-manager/debian9/runtime-2.1.0-preview2)   |[설치 링크](https://www.microsoft.com/net/download/linux-package-manager/debian8/runtime-2.1.0-preview2)   |
 |.NET Core 런타임 2.1.0-미리 보기1 |[설치 링크](https://www.microsoft.com/net/download/linux-package-manager/debian9/runtime-2.1.0-preview1)   |[설치 링크](https://www.microsoft.com/net/download/linux-package-manager/debian8/runtime-2.1.0-preview1)   |
+|.NET Core SDK 2.1.300-rc1        |[설치 링크](https://www.microsoft.com/net/download/linux-package-manager/debian9/sdk-2.1.300-rc1)   |[설치 링크](https://www.microsoft.com/net/download/linux-package-manager/debian8/sdk-2.1.300-rc1)        |
 |.NET Core SDK 2.1.300-미리 보기2   |[설치 링크](https://www.microsoft.com/net/download/linux-package-manager/debian9/sdk-2.1.300-preview2)   |[설치 링크](https://www.microsoft.com/net/download/linux-package-manager/debian8/sdk-2.1.300-preview2)   |
 |.NET Core SDK 2.1.300-미리 보기1   |[설치 링크](https://www.microsoft.com/net/download/linux-package-manager/debian9/sdk-2.1.300-preview1)   |[설치 링크](https://www.microsoft.com/net/download/linux-package-manager/debian8/sdk-2.1.300-preview1)   |
 
@@ -254,8 +259,10 @@ Red Hat .NET 채널 액세스 등록 도움말은 Red Hat에서 [Chapter 1 of th
 
 |런타임/SDK          |Fedora 26 이상 |Fedora 25 이전 |
 |-------------------------|-------------------|----------------------|
+|.NET Core 런타임 2.0.7  |[설치 링크](https://www.microsoft.com/net/download/linux-package-manager/fedora26/runtime-2.0.7)       |[설치 링크](https://www.microsoft.com/net/download/linux-package-manager/fedora25/runtime-2.0.7)           |
 |.NET Core 런타임 2.0.6  |[설치 링크](https://www.microsoft.com/net/download/linux-package-manager/fedora26/runtime-2.0.6)       |[설치 링크](https://www.microsoft.com/net/download/linux-package-manager/fedora25/runtime-2.0.6)           |
 |.NET Core 런타임 2.0.5  |[설치 링크](https://www.microsoft.com/net/download/linux-package-manager/fedora26/runtime-2.0.5)       |[설치 링크](https://www.microsoft.com/net/download/linux-package-manager/fedora25/runtime-2.0.5)           |
+|.NET Core SDK 2.1.105    |[설치 링크](https://www.microsoft.com/net/download/linux-package-manager/fedora26/sdk-2.1.105)       |[설치 링크](https://www.microsoft.com/net/download/linux-package-manager/fedora25/sdk-2.1.105)           |
 |.NET Core SDK 2.1.103    |[설치 링크](https://www.microsoft.com/net/download/linux-package-manager/fedora26/sdk-2.1.103)       |[설치 링크](https://www.microsoft.com/net/download/linux-package-manager/fedora25/sdk-2.1.103)           |
 |.NET Core SDK 2.0.3      |[설치 링크](https://www.microsoft.com/net/download/linux-package-manager/fedora26/sdk-2.0.3)       |[설치 링크](https://www.microsoft.com/net/download/linux-package-manager/fedora25/sdk-2.0.3)           |
 
@@ -264,12 +271,14 @@ Red Hat .NET 채널 액세스 등록 도움말은 Red Hat에서 [Chapter 1 of th
 >[!IMPORTANT]
 > Visual Studio와 함께 .NET Core 2.1을 사용하려면 [Visual Studio 2017 15.7 미리 보기 1 이상을 설치](https://www.visualstudio.com/vs/preview)해야 합니다.
 
-|런타임/SDK                  |Fedora 26 이상 |Fedora 25 이전 |
+|런타임/SDK                  |Fedora 27          |Fedora 26             |
 |---------------------------------|-------------------|----------------------|
-|.NET Core 런타임 2.1.0-미리 보기2 |[설치 링크](https://www.microsoft.com/net/download/linux-package-manager/fedora26/runtime-2.1.0-preview2)       |[설치 링크](https://www.microsoft.com/net/download/linux-package-manager/fedora25/runtime-2.1.0-preview2)           |
-|.NET Core 런타임 2.1.0-미리 보기1 |[설치 링크](https://www.microsoft.com/net/download/linux-package-manager/fedora26/runtime-2.1.0-preview1)       |[설치 링크](https://www.microsoft.com/net/download/linux-package-manager/fedora25/runtime-2.1.0-preview1)           |
-|.NET Core SDK 2.1.300-미리 보기2   |[설치 링크](https://www.microsoft.com/net/download/linux-package-manager/fedora26/sdk-2.1.300-preview2)       |[설치 링크](https://www.microsoft.com/net/download/linux-package-manager/fedora25/sdk-2.1.300-preview2)           |
-|.NET Core SDK 2.1.300-미리 보기1   |[설치 링크](https://www.microsoft.com/net/download/linux-package-manager/fedora26/sdk-2.1.300-preview1)       |[설치 링크](https://www.microsoft.com/net/download/linux-package-manager/fedora25/sdk-2.1.300-preview1)           |
+|.NET Core 런타임 2.1.0-rc1      |[설치 링크](https://www.microsoft.com/net/download/linux-package-manager/fedora27/runtime-2.1.0-rc1)       |[설치 링크](https://www.microsoft.com/net/download/linux-package-manager/fedora26/runtime-2.1.0-rc1)           |
+|.NET Core 런타임 2.1.0-미리 보기2 |[설치 링크](https://www.microsoft.com/net/download/linux-package-manager/fedora27/runtime-2.1.0-preview2)       |[설치 링크](https://www.microsoft.com/net/download/linux-package-manager/fedora26/runtime-2.1.0-preview2)           |
+|.NET Core 런타임 2.1.0-미리 보기1 |[설치 링크](https://www.microsoft.com/net/download/linux-package-manager/fedora27/runtime-2.1.0-preview1)       |[설치 링크](https://www.microsoft.com/net/download/linux-package-manager/fedora26/runtime-2.1.0-preview1)           |
+|.NET Core SDK 2.1.300-rc1        |[설치 링크](https://www.microsoft.com/net/download/linux-package-manager/fedora27/sdk-2.1.300-rc1)       |[설치 링크](https://www.microsoft.com/net/download/linux-package-manager/fedora26/sdk-2.1.300-rc1)           |
+|.NET Core SDK 2.1.300-미리 보기2   |[설치 링크](https://www.microsoft.com/net/download/linux-package-manager/fedora27/sdk-2.1.300-preview2)       |[설치 링크](https://www.microsoft.com/net/download/linux-package-manager/fedora26/sdk-2.1.300-preview2))           |
+|.NET Core SDK 2.1.300-미리 보기1   |[설치 링크](https://www.microsoft.com/net/download/linux-package-manager/fedora27/runtime-2.1.0-preview1)       |[설치 링크](https://www.microsoft.com/net/download/linux-package-manager/fedora26/runtime-2.1.0-preview1)           |
 
 # <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
 
@@ -308,18 +317,23 @@ Red Hat .NET 채널 액세스 등록 도움말은 Red Hat에서 [Chapter 1 of th
 
 **.NET Core 2.0**
 
+* .NET Core 런타임 2.0.7 [설치 링크](https://www.microsoft.com/net/download/linux-package-manager/centos/runtime-2.0.6)
 * .NET Core 런타임 2.0.6 [설치 링크](https://www.microsoft.com/net/download/linux-package-manager/centos/runtime-2.0.6)
 * .NET Core 런타임 2.0.5 [설치 링크](https://www.microsoft.com/net/download/linux-package-manager/centos/runtime-2.0.5)
+* .NET Core SDK 2.1.105 [설치 링크](https://www.microsoft.com/net/download/linux-package-manager/centos/sdk-2.1.105)
 * .NET Core SDK 2.1.103 [설치 링크](https://www.microsoft.com/net/download/linux-package-manager/centos/sdk-2.1.103)
 * .NET Core SDK 2.0.3 [설치 링크](https://www.microsoft.com/net/download/linux-package-manager/centos/sdk-2.0.3)
+* .NET Core SDK 2.0.0 [설치 링크](https://www.microsoft.com/net/download/linux-package-manager/centos/sdk-2.0.0)
  
 **.NET Core 2.1**
 
 >[!IMPORTANT]
 > Visual Studio와 함께 .NET Core 2.1을 사용하려면 [Visual Studio 2017 15.7 미리 보기 1 이상을 설치](https://www.visualstudio.com/vs/preview/)해야 합니다.
 
+* .NET Core 런타임 2.1.0-rc1 [설치 링크](https://www.microsoft.com/net/download/linux-package-manager/centos/runtime-2.1.0-rc1)
 * .NET Core 런타임 2.1.0-미리 보기2 [설치 링크](https://www.microsoft.com/net/download/linux-package-manager/centos/runtime-2.1.0-preview2)
 * .NET Core 런타임 2.1.0-미리 보기1 [설치 링크](https://www.microsoft.com/net/download/linux-package-manager/centos/runtime-2.1.0-preview1)
+* .NET Core SDK 2.1.300-rc1 [설치 링크](https://www.microsoft.com/net/download/linux-package-manager/centos/sdk-2.1.300-rc1)
 * .NET Core SDK 2.1.300-미리 보기2 [설치 링크](https://www.microsoft.com/net/download/linux-package-manager/centos/sdk-2.1.300-preview2)
 * .NET Core SDK 2.1.300-미리 보기1 [설치 링크](https://www.microsoft.com/net/download/linux-package-manager/centos/sdk-2.1.300-preview1)
 
@@ -352,18 +366,46 @@ Red Hat .NET 채널 액세스 등록 도움말은 Red Hat에서 [Chapter 1 of th
 
 **.NET Core 2.0**
 
+**SUSE Linux Enterprise Server**
+
+* .NET Core 런타임 2.0.7 [설치 링크](https://www.microsoft.com/net/download/linux-package-manager/sles/runtime-2.0.7)
+* .NET Core 런타임 2.0.6 [설치 링크](https://www.microsoft.com/net/download/linux-package-manager/sles/runtime-2.0.6)
+* .NET Core 런타임 2.0.5 [설치 링크](https://www.microsoft.com/net/download/linux-package-manager/sles/runtime-2.0.5)
+* .NET Core SDK 2.1.105 [설치 링크](https://www.microsoft.com/net/download/linux-package-manager/sles/sdk-2.1.105)
+* .NET Core SDK 2.1.103 [설치 링크](https://www.microsoft.com/net/download/linux-package-manager/sles/sdk-2.1.103)
+* .NET Core SDK 2.0.3 [설치 링크](https://www.microsoft.com/net/download/linux-package-manager/sles/sdk-2.0.3)
+* .NET Core SDK 2.0.0 [설치 링크](https://www.microsoft.com/net/download/linux-package-manager/sles/sdk-2.0.0)
+
+**openSUSE**
+
+* .NET Core 런타임 2.0.7 [설치 링크](https://www.microsoft.com/net/download/linux-package-manager/opensuse/runtime-2.0.7)
 * .NET Core 런타임 2.0.6 [설치 링크](https://www.microsoft.com/net/download/linux-package-manager/opensuse/runtime-2.0.6)
 * .NET Core 런타임 2.0.5 [설치 링크](https://www.microsoft.com/net/download/linux-package-manager/opensuse/runtime-2.0.5)
+* .NET Core SDK 2.1.105 [설치 링크](https://www.microsoft.com/net/download/linux-package-manager/opensuse/sdk-2.1.105)
 * .NET Core SDK 2.1.103 [설치 링크](https://www.microsoft.com/net/download/linux-package-manager/opensuse/sdk-2.1.103)
 * .NET Core SDK 2.0.3 [설치 링크](https://www.microsoft.com/net/download/linux-package-manager/opensuse/sdk-2.0.3)
+* .NET Core SDK 2.0.0 [설치 링크](https://www.microsoft.com/net/download/linux-package-manager/opensuse/sdk-2.0.0)
  
 **.NET Core 2.1**
 
 >[!IMPORTANT]
 > Visual Studio와 함께 .NET Core 2.1을 사용하려면 [Visual Studio 2017 15.7 미리 보기 1 이상을 설치](https://www.visualstudio.com/vs/preview)해야 합니다.
 
+**SUSE Linux Enterprise Server**
+
+* .NET Core 런타임 2.1.0-rc1 [설치 링크](https://www.microsoft.com/net/download/linux-package-manager/sles/runtime-2.1.0-rc1)
+* .NET Core 런타임 2.1.0-미리 보기2 [설치 링크](https://www.microsoft.com/net/download/linux-package-manager/sles/runtime-2.1.0-preview2)
+* .NET Core 런타임 2.1.0-미리 보기1 [설치 링크](https://www.microsoft.com/net/download/linux-package-manager/sles/runtime-2.1.0-preview1)
+* .NET Core SDK 2.1.300-rc1 [설치 링크](https://www.microsoft.com/net/download/linux-package-manager/sles/sdk-2.1.300-rc1)
+* .NET Core SDK 2.1.300-미리 보기2 [설치 링크](https://www.microsoft.com/net/download/linux-package-manager/sles/sdk-2.1.300-preview2)
+* .NET Core SDK 2.1.300-미리 보기1 [설치 링크](https://www.microsoft.com/net/download/linux-package-manager/sles/sdk-2.1.300-preview1)
+
+**openSUSE**
+
+* .NET Core 런타임 2.1.0-rc1 [설치 링크](https://www.microsoft.com/net/download/linux-package-manager/opensuse/runtime-2.1.0-rc1)
 * .NET Core 런타임 2.1.0-미리 보기2 [설치 링크](https://www.microsoft.com/net/download/linux-package-manager/opensuse/runtime-2.1.0-preview2)
 * .NET Core 런타임 2.1.0-미리 보기1 [설치 링크](https://www.microsoft.com/net/download/linux-package-manager/opensuse/runtime-2.1.0-preview1)
+* .NET Core SDK 2.1.300-rc1 [설치 링크](https://www.microsoft.com/net/download/linux-package-manager/opensuse/sdk-2.1.300-rc1)
 * .NET Core SDK 2.1.300-미리 보기2 [설치 링크](https://www.microsoft.com/net/download/linux-package-manager/opensuse/sdk-2.1.300-preview2)
 * .NET Core SDK 2.1.300-미리 보기1 [설치 링크](https://www.microsoft.com/net/download/linux-package-manager/opensuse/sdk-2.1.300-preview1)
 

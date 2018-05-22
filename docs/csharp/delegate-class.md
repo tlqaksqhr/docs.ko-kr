@@ -1,20 +1,13 @@
 ---
-title: "System.Delegate 및 `delegate` 키워드"
-description: ".NET Framework에서 대리자를 지원하는 클래스와 해당 클래스가 ‘delegate’ 키워드에 매핑되는 방법을 설명합니다."
-keywords: .NET, .NET Core
-author: BillWagner
-ms.author: wiwagn
+title: System.Delegate 및 `delegate` 키워드
+description: .NET Framework에서 대리자를 지원하는 클래스와 해당 클래스가 ‘delegate’ 키워드에 매핑되는 방법을 설명합니다.
 ms.date: 06/20/2016
-ms.topic: article
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.devlang: csharp
 ms.assetid: f3742fda-13c2-4283-8966-9e21c2674393
-ms.openlocfilehash: 09c7da7c780389d3819cf23a533cc425b43ad5ff
-ms.sourcegitcommit: bbde43da655ae7bea1977f7af7345eb87bd7fd5f
+ms.openlocfilehash: 2265d081b884a19cda6fc9d80a0f621a30c87e2a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="systemdelegate-and-the-delegate-keyword"></a>System.Delegate 및 `delegate` 키워드
 
@@ -120,7 +113,7 @@ Sort() 예제에서는 일반적으로 단일 대상 메서드를 대리자에 �
 
 ## <a name="delegate-and-multicastdelegate-classes"></a>Delegate 및 MulticastDelegate 클래스
 
-위에 설명된 언어 지원은 일반적으로 대리자를 사용할 때 필요한 기능과 지원을 제공합니다. 이러한 기능은 두 클래스는.NET Core framework에서 기반으로 만들어진: <xref:System.Delegate> 및 <xref:System.MulticastDelegate>합니다.
+위에 설명된 언어 지원은 일반적으로 대리자를 사용할 때 필요한 기능과 지원을 제공합니다. 이러한 기능은 .NET Core Framework의 두 가지 클래스 <xref:System.Delegate> 및 <xref:System.MulticastDelegate>를 기반으로 빌드됩니다.
 
 `System.Delegate` 클래스와 단일 직접 하위 클래스 `System.MulticastDelegate`는 대리자를 만들고, 메서드를 대리자 대상으로 등록하고, 대리자 대상으로 등록된 모든 메서드를 호출하기 위한 프레임워크 지원을 제공합니다. 
 

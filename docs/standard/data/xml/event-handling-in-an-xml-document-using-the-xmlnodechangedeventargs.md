@@ -1,29 +1,18 @@
 ---
-title: "XmlNodeChangedEventArgs를 사용한 XML 문서의 이벤트 처리"
-ms.custom: 
+title: XmlNodeChangedEventArgs를 사용한 XML 문서의 이벤트 처리
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 0fe844e3-5b6f-4fe7-ad15-22459501738b
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: cc74b13fd4771cc4f00500ff3253795f45db2b40
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 00ed0437f51650cd335d528632f9f0cc14af6422
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="event-handling-in-an-xml-document-using-the-xmlnodechangedeventargs"></a>XmlNodeChangedEventArgs를 사용한 XML 문서의 이벤트 처리
 **XmlNodeChangedEventArgs**는 이벤트 처리를 위해 **XmlDocument** 개체에 등록된 이벤트 처리기에 전달되는 인수를 캡슐화합니다. 다음 표에서는 이벤트와 해당 이벤트가 발생하는 시기에 대해 설명합니다.  
@@ -40,7 +29,7 @@ ms.lasthandoff: 12/23/2017
 > [!NOTE]
 >  **XmlDataDocument** 메모리 사용이 **DataSet** 저장소를 사용하도록 완전히 최적화된 경우 기본 **DataSet**이 변경될 때 **XmlDataDocument**에서 위에 나열된 어떠한 이벤트도 발생시키지 않을 수 있습니다. 이러한 이벤트가 필요한 경우 전체 **XmlDocument**를 한 번 트래버스하여 메모리 사용이 완전히 최적화되지 않은 상태로 만들어야 합니다.  
   
- 다음 코드 예제에서는 이벤트 처리기를 정의하는 방법과 이벤트에 이벤트 처리기를 추가하는 방법을 보여줍니다.  
+ 다음 코드 예제에서는 이벤트 처리기를 정의하는 방법과 이벤트에 이벤트 처리기를 추가하는 방법을 보여 줍니다.  
   
 ```vb  
 ' Attach the event handler, NodeInsertedHandler, to the NodeInserted  

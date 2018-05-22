@@ -1,23 +1,15 @@
 ---
-title: "버전 3.5 SP1에서 HttpWebRequest에 대한 NTLM 인증 변경 내용"
-ms.custom: 
+title: 버전 3.5 SP1에서 HttpWebRequest에 대한 NTLM 인증 변경 내용
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 8bf0b428-5a21-4299-8d6e-bf8251fd978a
-caps.latest.revision: "8"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: 239834a732fe3bc1cb3e8e7f1d126d26c210d1f6
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: f5affc15607ddae76ec90a90928cb42fa0ad49e1
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="changes-to-ntlm-authentication-for-httpwebrequest-in-version-35-sp1"></a>버전 3.5 SP1에서 HttpWebRequest에 대한 NTLM 인증 변경 내용
 .NET Framework 버전 3.5 SP1 이상에서는 <xref:System.Net.HttpWebRequest>, <xref:System.Net.HttpListener>, <xref:System.Net.Security.NegotiateStream> 및 System.Net 네임스페이스의 관련 클래스에 의해 Windows 통합 인증이 처리되는 방식에 영향을 미치는 보안 변경 사항이 적용되었습니다. 이러한 변경 내용은 NTLM 기반의 Windows 통합 인증이 사용되는 경우 이러한 클래스를 통해 웹 요청을 만들고 응답을 수신하는 응용 프로그램에 영향을 줄 수 있습니다. 이 변경 내용은 Windows 통합 인증을 사용하도록 구성된 웹 서버 및 클라이언트 응용 프로그램에 영향을 미칠 수 있습니다.  

@@ -8,16 +8,16 @@ helpviewer_keywords:
 - DllImport attribute
 - extern keyword [C#]
 ms.assetid: 9c3f02c4-51b8-4d80-9cb2-f2b6e1ae15c7
-ms.openlocfilehash: f4fd42505937b2623ab9460489f5277364550d71
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 996888a585f8355bdda14e09b6bb9544257ae824
+ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/15/2018
 ---
 # <a name="extern-c-reference"></a>extern(C# 참조)
 `extern` 한정자는 외부에서 구현되는 메서드를 선언하는 데 사용됩니다. `extern` 한정자는 일반적으로 Interop 서비스를 사용하여 비관리 코드를 호출할 때 `DllImport` 특성과 함께 사용됩니다. 이 경우 다음 예제에서와 같이 메서드를 `static`으로 선언해야 합니다.  
   
-```  
+```csharp  
 [DllImport("avifil32.dll")]  
 private static extern void AVIFileInit();  
 ```  
@@ -52,7 +52,7 @@ int __declspec(dllexport) SampleMethod(int i)
   
  3. 같은 디렉터리에서 다음 C# 파일을 만들고 이름을 `cm.cs`로 지정합니다.  
   
-```  
+```csharp  
 // cm.cs  
 using System;  
 using System.Runtime.InteropServices;  

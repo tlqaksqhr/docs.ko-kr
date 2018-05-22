@@ -1,13 +1,6 @@
 ---
 title: Visual Basic을 사용한 파일 액세스
-ms.custom: ''
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - file access
 - files [Visual Basic], input and output
@@ -21,14 +14,11 @@ helpviewer_keywords:
 - I/O [Visual Basic]
 - sequential access
 ms.assetid: 231533bf-d049-4345-befa-3fb78fe6517d
-caps.latest.revision: 17
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 2aabea79e3c7a6dabf47647c7e27b072738ba363
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: f9cbb255dea8c6915951b5099f40bfd0ba66c8aa
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="file-access-with-visual-basic"></a>Visual Basic을 사용한 파일 액세스
 `My.Computer.FileSystem` 개체는 파일 및 폴더로 작업하기 위한 도구를 제공합니다. 해당 속성, 메서드 및 이벤트를 사용하여 파일 및 폴더를 만들고 복사, 이동, 조사 및 삭제할 수 있습니다. `My.Computer.FileSystem`은 이전 버전과의 호환성을 위해 Visual Basic에서 제공하는 레거시 함수(`FileOpen`, `FileClose`, `Input`, `InputString`, `LineInput` 등)보다 뛰어난 성능을 제공합니다.  

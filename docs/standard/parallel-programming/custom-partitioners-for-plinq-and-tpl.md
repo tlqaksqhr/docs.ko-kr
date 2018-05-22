@@ -1,31 +1,20 @@
 ---
 title: PLINQ 및 TPL에 대한 사용자 지정 파티셔너
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - tasks, partitioners
 ms.assetid: 96153688-9a01-47c4-8430-909cee9a2887
-caps.latest.revision: 19
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: bc409a528dd095d3defb0026a48430b10a3ba6f3
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 0868ce76f82ed0575154744d9ab02814a0bd990a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="custom-partitioners-for-plinq-and-tpl"></a>PLINQ 및 TPL에 대한 사용자 지정 파티셔너
 데이터 소스에 대한 작업을 병렬화하기 위한 필수 단계 중 하나는 다중 스레드에서 동시에 액세스 가능한 여러 섹션으로 소스를 ‘분할’하는 것입니다. PLINQ 및 TPL(작업 병렬 라이브러리)은 병렬 쿼리 또는 <xref:System.Threading.Tasks.Parallel.ForEach%2A> 루프를 쓸 때 투명하게 작동하는 기본 파티셔너를 제공합니다. 더 높은 수준의 시나리오에서는 고유한 파티셔너를 연결할 수 있습니다.  

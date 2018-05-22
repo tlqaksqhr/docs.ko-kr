@@ -1,21 +1,14 @@
 ---
 title: 상황별 키워드(C# 참조)
 ms.date: 03/07/2017
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - contextual keywords [C#]
 ms.assetid: 7c76bc29-a754-4389-b0ab-f6b441018298
-caps.latest.revision: 19
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: a6268e09b8063f95aa11fc1563f0b5b5d5d96a08
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 8b15b0df5e3f65494a037eed7992c9a16d9b8578
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="contextual-keywords-c-reference"></a>상황별 키워드(C# 참조)
 상황별 키워드는 코드에서 특정 의미를 제공하는 데 사용되지만 C#의 예약어입니다. 다음 상황별 키워드를 이 섹션에서 소개합니다.  

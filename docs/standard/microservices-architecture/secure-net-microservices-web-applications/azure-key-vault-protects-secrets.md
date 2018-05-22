@@ -1,21 +1,14 @@
 ---
-title: "Azure Key Vault를 사용하여 프로덕션 시 비밀 보호"
-description: "컨테이너화된 .NET 응용 프로그램에 대한 .NET 마이크로 서비스 아키텍처 | Azure Key Vault를 사용하여 프로덕션 시 비밀 보호"
-keywords: "Docker, 마이크로 서비스, ASP.NET, 컨테이너"
+title: Azure Key Vault를 사용하여 프로덕션 시 비밀 보호
+description: 컨테이너화된 .NET 응용 프로그램에 대한 .NET 마이크로 서비스 아키텍처 | Azure Key Vault를 사용하여 프로덕션 시 비밀 보호
 author: mjrousos
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.prod: .net-core
-ms.technology: dotnet-docker
-ms.topic: article
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: cb289c7361362c225eac8b9898bac276c4b623b4
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 5ad5686909c29eba5916cbcc4b7115a16108a004
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-azure-key-vault-to-protect-secrets-at-production-time"></a>Azure Key Vault를 사용하여 프로덕션 시 비밀 보호
 
@@ -63,7 +56,7 @@ var kvClient = new KeyVaultClient(new KeyVaultClient.AuthenticationCallback(asyn
 
 이 예제에서 AddAzureKeyVault에 대한 호출은 구성 공급자 등록의 끝에 발생합니다. 이전 공급자에서 구성 값을 재정의할 기회를 갖고 다른 원본의 구성 값이 키 자격 증명 모음의 구성 값을 재정의하지 않도록 마지막 구성 공급자로 Azure Key Vault를 등록하는 것이 좋습니다.
 
-## <a name="additional-resources"></a>추가 리소스
+## <a name="additional-resources"></a>추가 자료
 
 -   **Azure Key Vault를 사용하여 응용 프로그램 비밀 보호**
     [*https://docs.microsoft.com/azure/guidance/guidance-multitenant-identity-keyvault*](https://docs.microsoft.com/azure/guidance/guidance-multitenant-identity-keyvault)
@@ -71,11 +64,11 @@ var kvClient = new KeyVaultClient(new KeyVaultClient.AuthenticationCallback(asyn
 -   **개발 중 안전한 앱 비밀 저장소**
     [*https://docs.microsoft.com/aspnet/core/security/app-secrets*](https://docs.microsoft.com/aspnet/core/security/app-secrets)
 
--   **데이터 보호 구성**
+-   **데이터 보호 구성하기**
     [*https://docs.microsoft.com/aspnet/core/security/data-protection/configuration/overview*](https://docs.microsoft.com/aspnet/core/security/data-protection/configuration/overview)
 
 -   **키 관리 및 수명**
-    [*https://docs.microsoft.com/aspnet/core/security/data-protection/configuration/default-settings\#data-protection-default-settings*](https://docs.microsoft.com/aspnet/core/security/data-protection/configuration/default-settings#data-protection-default-settings)
+    [*https://docs.microsoft.com/aspnet/core/security/data-protection/configuration/default-settings\#데이터 보호 기본 설정*](https://docs.microsoft.com/aspnet/core/security/data-protection/configuration/default-settings#data-protection-default-settings)
 
 -   **Microsoft.Extensions.Configuration.DockerSecrets.** GitHub 리포지토리
     [*https://github.com/aspnet/Configuration/tree/dev/src/Microsoft.Extensions.Configuration.DockerSecrets*](https://github.com/aspnet/Configuration/tree/dev/src/Microsoft.Extensions.Configuration.DockerSecrets)

@@ -1,12 +1,6 @@
 ---
-title: "방법: 네트워크 추적 구성"
-ms.custom: 
+title: '방법: 네트워크 추적 구성'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - formatting [.NET Framework], network tracing
 - network tracing, configuring
@@ -17,21 +11,19 @@ helpviewer_keywords:
 - application configuration files, network tracing
 - sockets, trace output
 ms.assetid: 5ef9fe4b-8d3d-490e-9259-1d014b2181af
-caps.latest.revision: "23"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: b58887dc2614ab31a422eb74ce8d0805cf8153bf
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
-ms.translationtype: MT
+ms.openlocfilehash: 77eb199e5e8bbfb0874f8189a8daa2904b31d48e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-configure-network-tracing"></a>방법: 네트워크 추적 구성
 응용 프로그램 또는 컴퓨터 구성 파일은 형식과 네트워크 추적의 내용을 결정하는 설정을 유지합니다. 이 절차를 수행하기 전에 추적이 활성화되어야 합니다. 추적을 사용하는 방법에 대한 자세한 내용은 [네트워크 추적 사용](../../../docs/framework/network-programming/enabling-network-tracing.md)을 참조하세요.  
   
- 컴퓨터 구성 파일인 machine.config는 Windows가 설치된 디렉터리의 %Windir%\Microsoft.NET\Framework 폴더에 저장됩니다. 별개의 machine.config 파일에에서 있습니다 (예를 들어 C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\machine.config 또는 C:\Windows\ 컴퓨터에 설치 된.NET Framework의 각 버전에 대해 %Windir%\Microsoft.NET\Framework의 폴더 Microsoft.NET\Framework64\v4.0.30319\Config\machine.config입니다.)입니다.  
+ 컴퓨터 구성 파일인 machine.config는 Windows가 설치된 디렉터리의 %Windir%\Microsoft.NET\Framework 폴더에 저장됩니다. 컴퓨터에 설치된 .NET Framework의 각 버전에 해당하는 %Windir%\Microsoft.NET\Framework 아래의 폴더에는 개별 machine.config 파일이 있습니다(예: C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\machine.config 또는 C:\Windows\Microsoft.NET\Framework64\v4.0.30319\Config\machine.config).  
   
  이러한 설정은 컴퓨터 구성 파일보다 우선하는 응용 프로그램의 구성 파일에서 만들 수도 있습니다.  
   

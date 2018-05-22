@@ -1,10 +1,7 @@
 ---
-title: ".NET Framework의 버전 호환성"
+title: .NET Framework의 버전 호환성
 ms.custom: updateeachrelease
-ms.date: 10/17/2017
-ms.prod: .net-framework
-ms.technology: dotnet-clr
-ms.topic: article
+ms.date: 04/10/2018
 helpviewer_keywords:
 - .NET Framework, version compatibility
 - .NET Framework 4.5, compatibility with earlier versions
@@ -12,13 +9,11 @@ helpviewer_keywords:
 ms.assetid: 2f25e522-456a-48c3-8a53-e5f39275649f
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 45bb0174bd4c757b6e51621f36b25eb5f4354c94
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 15c5455bd604765ebcd78aa418d2f74f4141628d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="version-compatibility-in-the-net-framework"></a>.NET Framework의 버전 호환성
 이전 버전과의 호환성은 특정 버전의 플랫폼용으로 개발된 앱이 해당 플랫폼의 다음 버전에서도 실행되는 것을 의미합니다. .NET Framework에서는 이전 버전과의 호환성을 최대한 지원하려고 합니다. 한 버전의 .NET Framework용으로 작성된 소스 코드는 다음 버전의 .NET Framework에서 컴파일되어야 하며 한 버전의 .NET Framework에서 실행되는 이진 파일은 다음 버전의 .NET Framework에서 동일하게 작동해야 합니다.  
@@ -50,7 +45,7 @@ ms.lasthandoff: 12/22/2017
   
  실제 상황에서 .NET Framework의 외견상 중요하지 않은 변경 사항 및 프로그래밍 기술 변경 사항에 의해 이 호환성이 손상될 수 있습니다. 예를 들어 .NET Framework 4.5 성능 향상 기능이 이전 버전에서 발생하지 않은 경합 상태를 발생시킬 수 있습니다. 마찬가지로 .NET Framework 어셈블리에 하드 코드된 경로 사용, 특정 버전의 .NET Framework와 같음 비교 수행, 리플렉션을 사용한 전용 필드 값 가져오기는 이전 버전과 호환되지 않습니다. 또한 각 .NET Framework 버전에는 일부 앱 및 구성 요소의 호환성에 영향을 줄 수 있는 버그 수정 내용 및 보안 관련 변경 사항이 포함되어 있습니다.  
   
- 앱이나 구성 요소가 .NET Framework 4.5 및 해당 포인트 릴리스([!INCLUDE[net_v451](../../../includes/net-v451-md.md)], 4.5.2, 4.6, 4.6.1, 4.6.2, 4.7 또는 4.7.1)에서 제대로 작동하지 않는 경우 다음 검사 목록을 사용합니다.  
+ 앱이나 구성 요소가 .NET Framework 4.5 및 해당 포인트 릴리스([!INCLUDE[net_v451](../../../includes/net-v451-md.md)], 4.5.2, 4.6, 4.6.1, 4.6.2, 4.7, 4.7.1 또는 4.7.2)에서 제대로 작동하지 않는 경우 다음 검사 목록을 사용합니다.  
   
 -  앱이 .NET Framework 4.0으로 시작하는 .NET Framework의 모든 버전에서 실행되도록 개발된 경우 대상 NET Framework 버전과 앱이 실행되는 버전 간 변경 내용의 목록을 생성하려면 [.NET Framework의 응용 프로그램 호환성](application-compatibility.md)을 참조하세요.  
 
@@ -64,7 +59,7 @@ ms.lasthandoff: 12/22/2017
   
 -   [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]가 변경되어 앱이 깨지는 것으로 확인된 경우 [런타임 설정 스키마](../../../docs/framework/configure-apps/file-schema/runtime/index.md)에서 앱 구성 파일의 런타임 설정을 사용하여 이전 동작을 복원할 수 있는지 여부를 확인합니다.  
   
--   문서화되지 않은 문제가 발생한 경우 [Microsoft Connect](http://go.microsoft.com/fwlink/?LinkID=154815)에 버그를 등록하고 해당 버그 번호로 [netfxcf@microsoft.com](mailto:netfxcf@microsoft.com)에 문의하십시오.  
+-   문서화되지 않은 문제가 발생하는 경우 [.NET용 개발자 커뮤니티 사이트](https://developercommunity.visualstudio.com/spaces/61/index.html)에서 문제를 열거나 [Microsoft/dotnet GitHub 리포지토리](https://github.com/microsoft/dotnet/issues)에서 문제를 엽니다.
   
 ## <a name="compatibility-and-side-by-side-execution"></a>호환성 및 Side-By-Side 실행  
  문제에 대한 적합한 해결 방법을 찾지 못한 경우 .NET Framework 4.5(또는 해당 포인트 릴리스 중 하나)가 버전 1.1, 2.0 및 3.5와 side-by-side 실행된다는 것과 버전 4.5는 버전 4를 대체하는 내부 업데이트임을 기억하십시오. 버전 1.1, 2.0 및 3.5를 대상으로 하는 앱의 경우 대상 컴퓨터에 적절한 .NET Framework 버전을 설치하여 앱을 가장 적합한 환경에서 실행할 수 있습니다. Side-by-Side 실행에 대한 자세한 내용은 [Side-by-Side 실행](../../../docs/framework/deployment/side-by-side-execution.md)을 참조하십시오.  

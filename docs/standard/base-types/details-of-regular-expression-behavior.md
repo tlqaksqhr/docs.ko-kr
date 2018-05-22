@@ -1,13 +1,7 @@
 ---
-title: "정규식 동작 정보"
-ms.custom: 
+title: 정규식 동작 정보
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -15,18 +9,13 @@ helpviewer_keywords:
 - regular expressions, behavior
 - .NET Framework regular expressions, behavior
 ms.assetid: 0ee1a6b8-caac-41d2-917f-d35570021b10
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 5b471cd8e934880fc8095fbad68b460174ec338c
-ms.sourcegitcommit: 3a96c706e4dbb4667bf3bf37edac9e1666646f93
+ms.openlocfilehash: bc4d8fdc39153f227e8344ea1da52a0dba2688d0
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="details-of-regular-expression-behavior"></a>정규식 동작 정보
 .NET Framework 정규식 엔진은 Perl, Python, Emacs 및 Tcl에서 사용하는 것과 같은 기존의 NFA(Nondeterministic Finite Automaton) 엔진을 통합하는 역추적 정규식 일치 도구입니다. 이를 통해 해당 awk, egrep 또는 lex와 같은 빠르지만 제한적인 순수 정규식 DFA(Deterministic Finite Automaton) 엔진과 구분합니다. 또한 표준화되지만 느린 POSIX NFA과도 구분합니다. 다음 섹션에서는 세 가지 유형의 정규식 엔진을 설명하고 기존 NFA 엔진을 사용하여 .NET Framework의 정규식을 구현하는 이유를 설명합니다.  
@@ -48,7 +37,7 @@ ms.lasthandoff: 02/27/2018
   
  .NET Framework 정규식 엔진의 다른 기능은 다음과 같습니다.  
   
--   게으른 수량자: `??`, `*?`, `+?`, `{`*n*`,`*m*`}?`. 이러한 구문은 역추적 엔진이 최소 반복 횟수를 먼저 검색하도록 지시합니다. 반면, 일반적인 탐욕적 수량자는 먼저 최대 반복 횟수를 찾으려고 합니다. 다음 예제에서는 둘 사이의 차이점을 보여 줍니다. 정규식은 숫자로 끝나는 문장을 찾고 캡처링 그룹은 해당 숫자를 추출하려고 합니다. 정규식 `.+(\d+)\.`은 탐욕적 수량자 `.+`를 포함하며 이로 인해 정규식 엔진은 번호의 마지막 숫자만 캡처하게 됩니다. 반대로 정규식 `.+?(\d+)\.`은 게으른 수량자 `.+?`를 포함하며 이로 인해 정규식 엔진은 전체 번호를 캡처하게 됩니다.  
+-   게으른 수량자: `??`, `*?`, `+?`, `{`*n*`,`*m*`}?` 이러한 구문은 역추적 엔진이 최소 반복 횟수를 먼저 검색하도록 지시합니다. 반면, 일반적인 탐욕적 수량자는 먼저 최대 반복 횟수를 찾으려고 합니다. 다음 예제에서는 둘 사이의 차이점을 보여 줍니다. 정규식은 숫자로 끝나는 문장을 찾고 캡처링 그룹은 해당 숫자를 추출하려고 합니다. 정규식 `.+(\d+)\.`은 탐욕적 수량자 `.+`를 포함하며 이로 인해 정규식 엔진은 번호의 마지막 숫자만 캡처하게 됩니다. 반대로 정규식 `.+?(\d+)\.`은 게으른 수량자 `.+?`를 포함하며 이로 인해 정규식 엔진은 전체 번호를 캡처하게 됩니다.  
   
      [!code-csharp[Conceptual.RegularExpressions.Design#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.design/cs/lazy1.cs#1)]
      [!code-vb[Conceptual.RegularExpressions.Design#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.design/vb/lazy1.vb#1)]  

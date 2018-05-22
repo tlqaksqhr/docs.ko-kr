@@ -1,10 +1,6 @@
 ---
-title: "-resource(C# 컴파일러 옵션)"
+title: -resource(C# 컴파일러 옵션)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 f1_keywords:
 - /resource
 helpviewer_keywords:
@@ -15,14 +11,11 @@ helpviewer_keywords:
 - res compiler option [C#]
 - resource compiler option [C#]
 ms.assetid: 5212666e-98ab-47e4-a497-b5545ab15c7f
-caps.latest.revision: 
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: a305f98b09d390afbeba7b55ab44ff09abc74617
-ms.sourcegitcommit: dd6ea7f0e581ac84e0a90d9b23c463fcf1ec3ce7
+ms.openlocfilehash: 8744d0f85859367ada51e4c44e767e681a3487bf
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="-resource-c-compiler-options"></a>-resource(C# 컴파일러 옵션)
 출력 파일에 지정된 리소스를 포함합니다.  

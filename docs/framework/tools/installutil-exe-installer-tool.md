@@ -1,14 +1,6 @@
 ---
-title: "Installutil.exe(설치 관리자 도구)"
-ms.custom: 
+title: Installutil.exe(설치 관리자 도구)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - uninstalling server resources
 - removing server resources
@@ -21,17 +13,13 @@ helpviewer_keywords:
 - progress information for installation
 - reporting installation progress
 ms.assetid: 3f9d0533-f895-4897-b4ea-528284e0241d
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 68bb098cf34839e0587864092d1af302d70eca89
-ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
+ms.openlocfilehash: ec7e498e0f0634d4f0e104247b430fb591f702ac
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="installutilexe-installer-tool"></a>Installutil.exe(설치 관리자 도구)
 설치 관리자 도구는 특정 어셈블리에서 설치 관리자 구성 요소를 실행하는 방법으로 서버 리소스를 설치하고 제거하는 데 사용할 수 있는 명령줄 유틸리티입니다. 이 도구는 <xref:System.Configuration.Install> 네임스페이스의 클래스와 함께 사용됩니다.  

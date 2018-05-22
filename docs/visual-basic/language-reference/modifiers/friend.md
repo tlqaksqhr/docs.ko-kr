@@ -10,11 +10,11 @@ helpviewer_keywords:
 - Protected Friend keyword combination
 - Friend keyword [Visual Basic], and Protected
 ms.assetid: b664605e-1c79-4728-b996-aa59c50846bc
-ms.openlocfilehash: 756a18da74ff49cbefaf6a63980302bbcb141713
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d906fc8ada19f22059da44acbd76dd07dacd4801
+ms.sourcegitcommit: 22c3c8f74eaa138dbbbb02eb7d720fce87fc30a9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="friend-visual-basic"></a>Friend(Visual Basic)
 하나 이상의 선언 된 프로그래밍 요소를 해당 하는 어셈블리 내 에서만 액세스할 수 있도록 지정 합니다.  
@@ -27,9 +27,10 @@ ms.lasthandoff: 05/04/2018
  `Friend` 액세스는 종종 응용 프로그램의 프로그래밍 요소에 대 한 기본 수준 및 `Friend` 는 기본 액세스 인터페이스, 모듈, 클래스 또는 구조체의 수준입니다.  
   
  사용할 수 있습니다 `Friend` 모듈, 인터페이스 또는 네임 스페이스 수준 에서만. 따라서 선언 컨텍스트는 `Friend` 소스 파일, 네임 스페이스, 인터페이스, 모듈, 클래스 또는 구조체 요소가 있어야 하며 프로시저 수 없습니다.  
-  
- 사용할 수 있습니다는 `Friend` 와 함께에서 한정자는 [Protected](../../../visual-basic/language-reference/modifiers/protected.md) 같은 선언에는 한정자입니다. 한정자를이 함께 제공 둘 다 `Friend` 액세스 및 자체 클래스에서 및 파생된 클래스에서 동일한 어셈블리의 모든 위치에서 액세스할 수 있도록 선언된 된 요소에 대 한 액세스를 보호 합니다. 지정할 수 있습니다 `Protected Friend` 클래스의 멤버에 대해서만 합니다.  
-  
+
+> [!NOTE]
+> 사용할 수도 있습니다는 [Protected Friend](protected-friend.md) 액세스 한정자를 클래스 멤버를 해당 클래스, 파생 된 클래스에서 및 클래스 정의 되어 있는 동일한 어셈블리 내에서 액세스할 수 있게 됩니다. 사용 하 게 동일한 어셈블리의 파생된 클래스에서 해당 클래스 내에서 멤버에 대 한 액세스를 제한 하는 [개인 보호](private-protected.md) 액세스 한정자입니다.
+
  에 대 한 비교 `Friend` 오류 코드 및 기타 참조, 액세스 한정자 [액세스 수준을 Visual Basic의](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)합니다.  
   
 > [!NOTE]
@@ -74,6 +75,8 @@ ms.lasthandoff: 05/04/2018
  [공용](../../../visual-basic/language-reference/modifiers/public.md)  
  [보호됨](../../../visual-basic/language-reference/modifiers/protected.md)  
  [전용](../../../visual-basic/language-reference/modifiers/private.md)  
+ [보호 된 개인](./private-protected.md)   
+ [Protected Friend](./protected-friend.md)   
  [Visual Basic의 액세스 수준](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)  
  [절차](../../../visual-basic/programming-guide/language-features/procedures/index.md)  
  [구조체](../../../visual-basic/programming-guide/language-features/data-types/structures.md)  

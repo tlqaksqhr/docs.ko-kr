@@ -1,26 +1,20 @@
 ---
-title: "방법: XML 문서 기능 사용(C# 프로그래밍 가이드)"
+title: '방법: XML 문서 기능 사용(C# 프로그래밍 가이드)'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - XML documentation [C#]
 - C# language, XML documentation features
 ms.assetid: 8f33917b-9577-4c9a-818a-640dbbb0b399
-caps.latest.revision: "19"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: eb647a275a5cd5fac2316706591440d9792861b3
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 6c7e30d23868959145e8941057f1c633fe6e374e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-use-the-xml-documentation-features-c-programming-guide"></a>방법: XML 문서 기능 사용(C# 프로그래밍 가이드)
 다음 샘플은 문서화된 형식에 대한 기본 개요를 제공합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  [!code-csharp[csProgGuideDocComments#15](../../../csharp/programming-guide/xmldoc/codesnippet/CSharp/how-to-use-the-xml-documentation-features_1.cs)]  
   
  **// This .xml file was generated with the previous code sample.**  
@@ -34,7 +28,7 @@ ms.lasthandoff: 11/21/2017
  **\<summary>**  
  **Class level summary documentation goes here.\</summary>**  
  **\<remarks>**  
- **긴 설명은 형식 또는 멤버와 연결 가능**  
+ **Longer comments can be associated with a type or member**  
  **through the remarks tag\</remarks>**  
  **\</member>**  
  **\<member name="F:SomeClass.m_Name">**  
@@ -42,14 +36,14 @@ ms.lasthandoff: 11/21/2017
  **Store for the name property\</summary>**  
  **\</member>**  
  **\<member name="M:SomeClass.#ctor">**  
- **\<요약 > 클래스 생성자입니다. \<요약/>**  
+ **\<summary>The class constructor.\</summary>**  
  **\</member>**  
  **\<member name="M:SomeClass.SomeMethod(System.String)">**  
  **\<summary>**  
  **Description for SomeMethod.\</summary>**  
  **\<param name="s"> Parameter description for s goes here\</param>**  
  **\<seealso cref="T:System.String">**  
- **태그 cref 특성을 사용 하 여 형식 또는 멤버를 참조할 수 있습니다.**  
+ **You can use the cref attribute on any tag to reference a type or member**  
  **and the compiler will check that the reference exists. \</seealso>**  
  **\</member>**  
  **\<member name="M:SomeClass.SomeOtherMethod">**  
@@ -99,5 +93,5 @@ ms.lasthandoff: 11/21/2017
   
 ## <a name="see-also"></a>참고 항목  
  [C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)  
- [/doc (C# 컴파일러 옵션)](../../../csharp/language-reference/compiler-options/doc-compiler-option.md)  
+ [/doc(C# 컴파일러 옵션)](../../../csharp/language-reference/compiler-options/doc-compiler-option.md)  
  [XML 문서 주석](../../../csharp/programming-guide/xmldoc/xml-documentation-comments.md)

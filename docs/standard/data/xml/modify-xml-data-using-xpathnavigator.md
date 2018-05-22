@@ -1,30 +1,19 @@
 ---
-title: "XPathNavigator를 사용하여 XML 데이터 수정"
-ms.custom: 
+title: XPathNavigator를 사용하여 XML 데이터 수정
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 - cpp
 ms.assetid: 03a7c5a1-b296-4af4-b209-043c958dc0a5
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: cc46aeda6efe9f21bc094a4bc9d211fc282e9b65
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: eb31c2ea504472a8707d700ff84b8c367467b607
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="modify-xml-data-using-xpathnavigator"></a>XPathNavigator를 사용하여 XML 데이터 수정
 <xref:System.Xml.XPath.XPathNavigator> 클래스는 XML 문서에서 노드와 값을 수정하는 메서드 집합을 제공합니다. 이러한 메서드를 사용하려면 <xref:System.Xml.XPath.XPathNavigator> 개체가 편집 가능한 상태여야 합니다. 즉, <xref:System.Xml.XPath.XPathNavigator.CanEdit%2A> 속성이 `true`여야 합니다.  
@@ -36,7 +25,7 @@ ms.lasthandoff: 12/23/2017
 ## <a name="modifying-nodes"></a>노드 수정  
  <xref:System.Xml.XPath.XPathNavigator.SetValue%2A> 클래스의 <xref:System.Xml.XPath.XPathNavigator.SetTypedValue%2A> 및 <xref:System.Xml.XPath.XPathNavigator> 메서드를 사용하면 쉽게 노드 값을 변경할 수 있습니다.  
   
- 다음 표에서는 여러 노드 형식에서 이러한 메서드를 사용한 결과를 보여줍니다.  
+ 다음 표에서는 여러 노드 형식에서 이러한 메서드를 사용한 결과를 보여 줍니다.  
   
 |<xref:System.Xml.XPath.XPathNodeType>|변경되는 데이터|  
 |---------------------------------------------------------------------------------------------------------------------------------------------|------------------|  

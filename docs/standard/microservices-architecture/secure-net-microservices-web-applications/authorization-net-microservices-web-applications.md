@@ -1,21 +1,14 @@
 ---
-title: ".NET 마이크로 서비스 및 웹 응용 프로그램의 권한 부여 정보"
-description: "컨테이너화된 .NET 응용 프로그램용 .NET 마이크로 서비스 아키텍처 | .NET 마이크로 서비스 및 웹 응용 프로그램의 권한 부여 정보"
-keywords: "Docker, 마이크로 서비스, ASP.NET, 컨테이너"
+title: .NET 마이크로 서비스 및 웹 응용 프로그램의 권한 부여 정보
+description: 컨테이너화된 .NET 응용 프로그램용 .NET 마이크로 서비스 아키텍처 | .NET 마이크로 서비스 및 웹 응용 프로그램의 권한 부여 정보
 author: mjrousos
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.prod: .net-core
-ms.technology: dotnet-docker
-ms.topic: article
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 6cd7be9bc8216aecf85f99a76e859b411a8735b0
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 2ea56f5a28d115fc5d91a98604b82565c8bf5c78
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="about-authorization-in-net-microservices-and-web-applications"></a>.NET 마이크로 서비스 및 웹 응용 프로그램의 권한 부여 정보
 
@@ -117,7 +110,7 @@ AddPolicy 호출에 사용자 지정 정책 요구 사항을 등록하는 것 �
 
 DateOfBirth 클레임에 따라 사용자의 연령을 확인하기 위한 사용자 지정 권한 부여 요구 사항 및 처리기의 예제는 ASP.NET Core [권한 부여 설명서](https://docs.asp.net/en/latest/security/authorization/policies.html)에서 사용할 수 있습니다.
 
-## <a name="additional-resources"></a>추가 리소스
+## <a name="additional-resources"></a>추가 자료
 
 -   **ASP.NET Core 인증**
     [*https://docs.microsoft.com/aspnet/core/security/authentication/identity*](https://docs.microsoft.com/aspnet/core/security/authentication/identity)

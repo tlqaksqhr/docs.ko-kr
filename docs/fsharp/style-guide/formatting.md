@@ -1,12 +1,12 @@
 ---
-title: 'F # 코드 formattin 지침'
+title: 'F # 코드 지침 서식 지정'
 description: 'F # 코드의 서식을 지정 하기 위한 지침에 알아봅니다.'
 ms.date: 05/14/2018
-ms.openlocfilehash: e5c700ca9ae3968243f11c1237b9e4b26e580dcf
-ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
-ms.translationtype: HT
+ms.openlocfilehash: 1433b6891a6a0ddcdc082c141365ae54fa40c27b
+ms.sourcegitcommit: 22c3c8f74eaa138dbbbb02eb7d720fce87fc30a9
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/15/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="f-code-formatting-guidelines"></a>F # 코드 지침 서식 지정
 
@@ -324,19 +324,10 @@ let function1 arg1 arg2 arg3 arg4 =
 
 ### <a name="formatting-pipeline-operators"></a>파이프라인 연산자를 형식 지정
 
-파이프라인 `|>` 에 작업 중인 식 바로 아래 줄의 시작 될 때까지 유지 되어야 합니다.
+파이프라인 `|>` 연산자에서 작동 하는 식 아래까지 유지 되어야 합니다.
 
 ```fsharp
-// OK
-let methods2 = System.AppDomain.CurrentDomain.GetAssemblies()
-               |> List.ofArray
-               |> List.map (fun assm -> assm.GetTypes())
-               |> Array.concat
-               |> List.ofArray
-               |> List.map (fun t -> t.GetMethods())
-               |> Array.concat
-
-// OK, but prefer previous
+// Preferred approach
 let methods2 =
     System.AppDomain.CurrentDomain.GetAssemblies()
     |> List.ofArray
@@ -481,6 +472,56 @@ type MyClass() =
 let emailMyBossTheLatestResults =
     ...
 ```
+
+### <a name="use-camelcase-for-parameters"></a>매개 변수에 대 한 camelCase를 사용 하 여
+
+모든 매개 변수는 camelCase.NET 명명 규칙에 따라 사용 해야 합니다.
+
+```fsharp
+module MyModule =
+    let myFunction paramOne paramTwo = ...
+
+type MyClass() =
+    member this.MyMethod(paramOne, paramTwo) = ...
+```
+
+### <a name="use-pascalcase-for-modules"></a>모듈에 대 한 표시 방법이 PascalCase를 사용 하 여
+
+모든 모듈 (예: 최상위, 내부, 개인, 중첩 된) 표시 방법이 PascalCase 사용 해야 합니다.
+
+```fsharp
+module MyTopLevelModule
+
+module Helpers =
+    module private SuperHelpers =
+        ...
+
+    ...
+```
+
+### <a name="use-pascalcase-for-type-declarations-members-and-labels"></a>형식 선언, 멤버 및 레이블 표시 방법이 PascalCase 사용
+
+클래스, 인터페이스, 구조체, 열거형, 대리자, 레코드 및 구분 된 공용 구조체 모두 표시 방법이 PascalCase로 지정 합니다. 또한 형식 및 레코드 및 구분 된 공용 구조체에 대 한 레이블 내에서 멤버 표시 방법이 PascalCase를 사용 해야 합니다.
+
+```fsharp
+type IMyInterface =
+    abstract Something: int
+
+type MyClass() =
+    member this.MyMethod(x, y) = x + y
+
+type MyRecord = { IntVal: int; StringVal: string }
+
+type SchoolPerson =
+    | Professor
+    | Student
+    | Advisor
+    | Administrator
+```
+
+### <a name="use-pascalcase-for-constructs-intrinsic-to-net"></a>.NET 내장 구문에 대 한 표시 방법이 PascalCase를 사용 하 여
+
+네임 스페이스, 예외, 이벤트 및 프로젝트 /`.dll` 이름 표시 방법이 PascalCase에도 사용 해야 합니다. 뿐만 아니라 소비자에 게 더 자연 스러운 생각 하는 다른.NET 언어에서 소비 되셨나요는 발생할 가능성이 있는.NET 명명 규칙과 일치 이기도 합니다.
 
 ### <a name="avoid-underscores-in-names"></a>이름에 밑줄이 방지
 

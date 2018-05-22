@@ -10,11 +10,11 @@ helpviewer_keywords:
 - templates [WPF], data
 - data templates [WPF]
 ms.assetid: 0f4d9f8c-0230-4013-bd7b-e8e7fed01b4a
-ms.openlocfilehash: feed791ac876c13dbd637f0455d3cfdd83a86e05
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7aed418fe5e2c7d8a217f3016655f39c99300d53
+ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/15/2018
 ---
 # <a name="data-templating-overview"></a>데이터 템플릿 개요
 WPF 데이터 템플릿 모델을 사용하면 데이터 표시를 매우 유연하게 정의할 수 있습니다. WPF 컨트롤에는 데이터 표시의 사용자 지정을 지원하는 기본 제공 기능이 있습니다. 이 항목에는 먼저 정의 하는 방법을 보여 줍니다는 <xref:System.Windows.DataTemplate> 하 고 다음 사용자 지정 논리 및 계층적 데이터의 표시에 대 한 지원에 따라 템플릿 선택과 같은 다른 데이터 템플릿 기능을 소개 합니다.  
@@ -132,7 +132,8 @@ WPF 데이터 템플릿 모델을 사용하면 데이터 표시를 매우 유연
   
 <a name="what_belongs_in_datatemplate"></a>   
 ### <a name="what-belongs-in-a-datatemplate"></a>DataTemplate은 무엇으로 구성되나요?  
- 앞의 예에서 트리거 내에서 배치는 <xref:System.Windows.DataTemplate> 를 사용 하는 <xref:System.Windows.DataTemplate>합니다.<xref:System.Windows.DataTemplate.Triggers%2A> 속성입니다. <xref:System.Windows.Setter> 트리거의 요소 속성의 값을 설정 (의 <xref:System.Windows.Controls.Border> 요소) 내에서 <xref:System.Windows.DataTemplate>합니다. 그러나 경우 속성 하는 프로그램 `Setters` 고려 하는 현재 내에 있는 요소의 속성 <xref:System.Windows.DataTemplate>, 사용 하 여 속성을 설정 하려면 더 적합할 수 있습니다는 <xref:System.Windows.Style> 위한는 <xref:System.Windows.Controls.ListBoxItem> 클래스 (하는 경우는 바인딩할 컨트롤은 한 <xref:System.Windows.Controls.ListBox>). 예를 들어, 원하는 프로그램 <xref:System.Windows.Trigger> 애니메이션 효과를 줄의 <xref:System.Windows.UIElement.Opacity%2A> 값 항목의 마우스의 항목을 가리킬 때 트리거를 정의 내에서 <xref:System.Windows.Controls.ListBoxItem> 스타일입니다. 예제를 보려면 [Introduction to Styling and Templating Sample](http://go.microsoft.com/fwlink/?LinkID=160010)(스타일 지정 및 템플릿 샘플 소개)을 참조하세요.  
+
+앞의 예에서 트리거 내에서 배치는 <xref:System.Windows.DataTemplate> 를 사용 하는 <xref:System.Windows.DataTemplate>합니다.<xref:System.Windows.DataTemplate.Triggers%2A> 속성입니다. <xref:System.Windows.Setter> 트리거의 요소 속성의 값을 설정 (의 <xref:System.Windows.Controls.Border> 요소) 내에서 <xref:System.Windows.DataTemplate>합니다. 그러나 경우 속성 하는 프로그램 `Setters` 고려 하는 현재 내에 있는 요소의 속성 <xref:System.Windows.DataTemplate>, 사용 하 여 속성을 설정 하려면 더 적합할 수 있습니다는 <xref:System.Windows.Style> 위한는 <xref:System.Windows.Controls.ListBoxItem> 클래스 (하는 경우는 바인딩할 컨트롤은 한 <xref:System.Windows.Controls.ListBox>). 예를 들어, 원하는 프로그램 <xref:System.Windows.Trigger> 애니메이션 효과를 줄의 <xref:System.Windows.UIElement.Opacity%2A> 값 항목의 마우스의 항목을 가리킬 때 트리거를 정의 내에서 <xref:System.Windows.Controls.ListBoxItem> 스타일입니다. 예제를 보려면 [Introduction to Styling and Templating Sample](https://github.com/Microsoft/WPF-Samples/tree/master/Styles%20&%20Templates/IntroToStylingAndTemplating)(스타일 지정 및 템플릿 샘플 소개)을 참조하세요.
   
  일반적으로 한다는 점에 유의 하는 <xref:System.Windows.DataTemplate> 생성 된 각 적용 되 고 <xref:System.Windows.Controls.ListBoxItem> (적용 실제로 방법과 위치에 대 한 자세한 내용은 참조는 <xref:System.Windows.Controls.ItemsControl.ItemTemplate%2A> 페이지입니다.). 프로그램 <xref:System.Windows.DataTemplate> 프레젠테이션 및 데이터 개체의 모양을 관련 됩니다. 대부분의 경우 어떤 항목이 같은 표현의 다른 모든 측면 같이 선택 방법을 <xref:System.Windows.Controls.ListBox> 에 항목이 배치의 정의에 속하지 않는 <xref:System.Windows.DataTemplate>합니다. 예제를 보려면 [ItemsControl 스타일 지정 및 템플릿 만들기](#DataTemplating_ItemsControl) 섹션을 참조하세요.  
   
@@ -164,9 +165,9 @@ WPF 데이터 템플릿 모델을 사용하면 데이터 표시를 매우 유연
  원위치에서 템플릿 선택기는 <xref:System.Windows.Controls.ListBox> 다음과 같이 표시 됩니다.  
   
  ![데이터 템플릿 샘플 스크린샷](../../../../docs/framework/wpf/data/media/datatemplatingintro-fig7.png "DataTemplatingIntro_fig7")  
-  
- 이것으로 이 예제에 대한 설명을 마칩니다. 전체 샘플을 보려면 [Introduction to Data Templating Sample](http://go.microsoft.com/fwlink/?LinkID=160009)(데이터 템플릿 샘플 소개)을 참조하세요.  
-  
+
+이것으로 이 예제에 대한 설명을 마칩니다. 전체 샘플을 보려면 [Introduction to Data Templating Sample](https://github.com/Microsoft/WPF-Samples/tree/master/Data%20Binding/DataTemplatingIntro)(데이터 템플릿 샘플 소개)을 참조하세요.
+
 <a name="DataTemplating_ItemsControl"></a>   
 ## <a name="styling-and-templating-an-itemscontrol"></a>ItemsControl 스타일 지정 및 템플릿 만들기  
  경우에는 <xref:System.Windows.Controls.ItemsControl> 은 사용할 수 있는 유일한 컨트롤 형식이 아닙니다는 <xref:System.Windows.DataTemplate> 는 것은 매우 일반적인 시나리오에 바인딩하는 <xref:System.Windows.Controls.ItemsControl> 컬렉션에 있습니다. 에 [DataTemplate에 포함 되](#what_belongs_in_datatemplate) 논의 하는 섹션의 정의 <xref:System.Windows.DataTemplate> 관련 된 데이터의 표현을 있어야 합니다. 사용할 수 없는 경우를 확인 하기 위해는 <xref:System.Windows.DataTemplate> 제공한 다른 스타일 및 템플릿 속성을 이해 해야는 <xref:System.Windows.Controls.ItemsControl>합니다. 다음 예제는 이러한 각 속성의 기능을 설명하도록 디자인되어 있습니다. <xref:System.Windows.Controls.ItemsControl> 이 예에서 동일한에 바인딩된 `Tasks` 앞의 예와 수집 합니다. 설명을 위해 이 예제의 스타일 및 템플릿은 모두 인라인으로 선언됩니다.  

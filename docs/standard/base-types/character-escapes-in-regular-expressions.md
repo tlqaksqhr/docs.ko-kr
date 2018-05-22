@@ -1,13 +1,7 @@
 ---
 title: 정규식의 문자 이스케이프
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -20,18 +14,13 @@ helpviewer_keywords:
 - .NET Framework regular expressions, character escapes
 - constructs, character escapes
 ms.assetid: f49cc9cc-db7d-4058-8b8a-422bc08b29b0
-caps.latest.revision: ''
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 8a4ec10bfa332c8caafce57385791d8069a7231a
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
-ms.translationtype: MT
+ms.openlocfilehash: ebdcda655a186d54065e98f8b9c5c7ae2fda4955
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="character-escapes-in-regular-expressions"></a>정규식의 문자 이스케이프
 정규식의 백슬래시(\\)는 다음 중 하나를 나타냅니다.  
@@ -48,7 +37,7 @@ ms.lasthandoff: 03/26/2018
   
 |문자 또는 시퀀스|설명|  
 |---------------------------|-----------------|  
-|다음을 제외한 모든 문자입니다.<br /><br /> 이어야 합니다. $ ^ { [ ( &#124; ) * + ? \|에 나열 된 문자 이외의 문자는 **문자 또는 시퀀스** 열 정규식에서 특별 한 의미를 있어야 합니다; 문자 그대로 해석 합니다.<br /><br /> **문자 또는 시퀀스** 열에 포함된 문자는 특수 정규식 언어 요소입니다. 정규식에서 이들 문자를 찾으려면 문자를 이스케이프하거나 [긍정 문자 그룹](../../../docs/standard/base-types/character-classes-in-regular-expressions.md)에 포함해야 합니다. 예를 들어 정규식 `\$\d+` 또는 `[$]\d+`는 "$1200"을 찾습니다.|  
+|다음을 제외한 모든 문자입니다.<br /><br /> 이어야 합니다. $ ^ { [ ( &#124; ) * + ? \|**문자 또는 시퀀스** 열에 나열된 문자 이외의 문자는 정규식에서 특별한 의미를 가지지 않습니다. 문자 그대로 해석됩니다.<br /><br /> **문자 또는 시퀀스** 열에 포함된 문자는 특수 정규식 언어 요소입니다. 정규식에서 이들 문자를 찾으려면 문자를 이스케이프하거나 [긍정 문자 그룹](../../../docs/standard/base-types/character-classes-in-regular-expressions.md)에 포함해야 합니다. 예를 들어 정규식 `\$\d+` 또는 `[$]\d+`는 "$1200"을 찾습니다.|  
 |`\a`|벨 문자인 `\u0007`을 찾습니다.|  
 |`\b`|`[`*character_group*`]` 문자 클래스에서 백스페이스 문자인 `\u0008`을 찾습니다.  [문자 클래스](../../../docs/standard/base-types/character-classes-in-regular-expressions.md)를 참조하세요. 문자 클래스 이외에 `\b`는 단어 경계와 일치하는 앵커입니다. [앵커](../../../docs/standard/base-types/anchors-in-regular-expressions.md)를 참조하세요.|  
 |`\t`|탭 문자인 `\u0009`를 찾습니다.|  
@@ -71,7 +60,7 @@ ms.lasthandoff: 03/26/2018
   
  정규식 `\G(.+)[\t|\u007c](.+)\r?\n`는 다음 테이블과 같이 해석됩니다.  
   
-|패턴|설명|  
+|무늬|설명|  
 |-------------|-----------------|  
 |`\G`|마지막 일치가 종료되면 일치를 시작합니다.|  
 |`(.+)`|임의 문자를 한 번 이상 찾습니다. 이 그룹은 첫 번째 캡처링 그룹입니다.|  

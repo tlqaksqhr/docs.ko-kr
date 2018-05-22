@@ -1,21 +1,14 @@
 ---
-title: "복원력 있는 Entity Framework Core SQL 연결 구현"
-description: "컨테이너화된 .NET 응용 프로그램용 .NET 마이크로 서비스 아키텍처 | 복원력 있는 Entity Framework Core SQL 연결 구현"
-keywords: "Docker, 마이크로 서비스, ASP.NET, 컨테이너"
+title: 복원력 있는 Entity Framework Core SQL 연결 구현
+description: 컨테이너화된 .NET 응용 프로그램용 .NET 마이크로 서비스 아키텍처 | 복원력 있는 Entity Framework Core SQL 연결 구현
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.prod: .net-core
-ms.technology: dotnet-docker
-ms.topic: article
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: b37d2c5683aff44165d0330c8d42fc881effbb76
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 54d0df517514c359c155de35d34e1e0f56eed4eb
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="implementing-resilient-entity-framework-core-sql-connections"></a>복원력 있는 Entity Framework Core SQL 연결 구현
 
@@ -89,7 +82,7 @@ public async Task<IActionResult> UpdateProduct([FromBody]CatalogItem
 
 첫 번째 DbContext는 \_ catalogContext이고 두 번째 DbContext는 \_integrationEventLogService 개체 내에 있습니다. 커밋 작업은 EF 실행 전략을 사용하여 여러 DbContexts를 수행합니다.
 
-## <a name="additional-resources"></a>추가 리소스
+## <a name="additional-resources"></a>추가 자료
 
 -   **Entity Framework를 사용하여 연결 복원력 및 명령 인터셉션**
     [*https://docs.microsoft.com/azure/architecture/patterns/category/resiliency*](https://docs.microsoft.com/azure/architecture/patterns/category/resiliency)

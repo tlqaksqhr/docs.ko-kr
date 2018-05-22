@@ -1,13 +1,7 @@
 ---
-title: "관리되는 스레드 풀"
-ms.custom: 
+title: 관리되는 스레드 풀
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -18,18 +12,13 @@ helpviewer_keywords:
 - threading [.NET Framework], thread pool
 - threading [.NET Framework], pooling
 ms.assetid: 2be05b06-a42e-4c9d-a739-96c21d673927
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: e50fd66096d6bd58fb7db692449e7f8654b5ca76
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 3894229ff5561e50d42a36f576a89ee7bf01c067
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="the-managed-thread-pool"></a>관리되는 스레드 풀
 <xref:System.Threading.ThreadPool> 클래스는 시스템에서 관리하는 작업자 스레드 풀을 응용 프로그램에 제공하여 스레드 관리 대신 응용 프로그램 작업에 집중할 수 있게 해줍니다. 후순위 처리가 필요한 간단한 작업이 있는 경우 관리되는 스레드 풀을 통해 쉽게 여러 스레드를 활용할 수 있습니다. 예를 들어 [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)]부터는 스레드 풀 스레드에서 비동기 작업을 수행하는 <xref:System.Threading.Tasks.Task> 및 <xref:System.Threading.Tasks.Task%601> 개체를 만들 수 있습니다.  
@@ -99,7 +88,7 @@ ms.lasthandoff: 12/23/2017
  [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]부터 스레드 풀을 사용하는 가장 쉬운 방법은 [TPL(작업 병렬 라이브러리)](../../../docs/standard/parallel-programming/task-parallel-library-tpl.md)을 사용하는 것입니다. 기본적으로 <xref:System.Threading.Tasks.Task> 및 <xref:System.Threading.Tasks.Task%601>과 같은 병렬 라이브러리 형식은 스레드 풀 스레드를 사용하여 작업을 실행합니다. 관리 코드에서 <xref:System.Threading.ThreadPool.QueueUserWorkItem%2A?displayProperty=nameWithType>(또는 비관리 코드에서 `CorQueueUserWorkItem`)을 호출하고 작업을 수행하는 메서드를 나타내는 <xref:System.Threading.WaitCallback> 대리자를 전달하여 스레드 풀을 사용할 수도 있습니다. 스레드 풀을 사용하는 또 다른 방법은 <xref:System.Threading.ThreadPool.RegisterWaitForSingleObject%2A?displayProperty=nameWithType> 메서드를 사용하고 신호를 받거나 시간 초과된 경우 <xref:System.Threading.WaitOrTimerCallback> 대리자가 나타내는 메서드를 호출하는 <xref:System.Threading.WaitHandle>을 전달하여 대기 작업과 관련된 작업 항목을 큐에 대기합니다. 스레드 풀 스레드는 콜백 메서드를 호출하는 데 사용됩니다.  
   
 ## <a name="threadpool-examples"></a>ThreadPool 예제  
- 이 섹션의 코드 예제에서는 <xref:System.Threading.Tasks.Task> 클래스, <xref:System.Threading.ThreadPool.QueueUserWorkItem%2A?displayProperty=nameWithType> 메서드 및 <xref:System.Threading.ThreadPool.RegisterWaitForSingleObject%2A?displayProperty=nameWithType> 메서드를 사용하여 스레드 풀을 보여줍니다.  
+ 이 섹션의 코드 예제에서는 <xref:System.Threading.Tasks.Task> 클래스, <xref:System.Threading.ThreadPool.QueueUserWorkItem%2A?displayProperty=nameWithType> 메서드 및 <xref:System.Threading.ThreadPool.RegisterWaitForSingleObject%2A?displayProperty=nameWithType> 메서드를 사용하여 스레드 풀을 보여 줍니다.  
   
 -   [작업 병렬 라이브러리를 사용하여 비동기 작업 실행](#TaskParallelLibrary)  
   
@@ -111,7 +100,7 @@ ms.lasthandoff: 12/23/2017
   
 <a name="TaskParallelLibrary"></a>   
 ### <a name="executing-asynchronous-tasks-with-the-task-parallel-library"></a>작업 병렬 라이브러리를 사용하여 비동기 작업 실행  
- 다음 예제에서는 <xref:System.Threading.Tasks.TaskFactory.StartNew%2A?displayProperty=nameWithType> 메서드를 호출하여 <xref:System.Threading.Tasks.Task> 개체를 만들고 사용하는 방법을 보여줍니다. <xref:System.Threading.Tasks.Task%601> 클래스를 사용하여 비동기 작업의 값을 반환하는 예제는 [방법: 작업에서 값 반환](../../../docs/standard/parallel-programming/how-to-return-a-value-from-a-task.md)을 참조하세요.  
+ 다음 예제에서는 <xref:System.Threading.Tasks.TaskFactory.StartNew%2A?displayProperty=nameWithType> 메서드를 호출하여 <xref:System.Threading.Tasks.Task> 개체를 만들고 사용하는 방법을 보여 줍니다. <xref:System.Threading.Tasks.Task%601> 클래스를 사용하여 비동기 작업의 값을 반환하는 예제는 [방법: 작업에서 값 반환](../../../docs/standard/parallel-programming/how-to-return-a-value-from-a-task.md)을 참조하세요.  
   
  [!code-csharp[System.Threading.Tasks.Task#01](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.threading.tasks.task/cs/startnew.cs#01)]
  [!code-vb[System.Threading.Tasks.Task#01](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.threading.tasks.task/vb/startnew.vb#01)]  
@@ -134,7 +123,7 @@ ms.lasthandoff: 12/23/2017
   
 <a name="RegisterWaitForSingleObject"></a>   
 ### <a name="using-registerwaitforsingleobject"></a>RegisterWaitForSingleObject 사용  
- 다음 예제에서는 여러 가지 스레딩 기능을 보여줍니다.  
+ 다음 예제에서는 여러 가지 스레딩 기능을 보여 줍니다.  
   
 -   <xref:System.Threading.ThreadPool.RegisterWaitForSingleObject%2A> 메서드를 사용하여 <xref:System.Threading.ThreadPool> 스레드에서 실행할 작업을 큐에 대기.  
   

@@ -1,28 +1,17 @@
 ---
-title: "병렬 진단 도구"
-ms.custom: 
+title: 병렬 진단 도구
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - parallel programming, debugging and profiling tools
 ms.assetid: 38f7302a-ddf6-4179-ba19-f49e00395b9f
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 127737877ac64ac9278bc039650caf72936571bf
-ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
+ms.openlocfilehash: 016229ea1b80c82ed9174e19bb08adfa67f016fc
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="parallel-diagnostic-tools"></a>병렬 진단 도구
 Visual Studio는 다중 스레드 응용 프로그램 디버깅 및 프로파일링에 대한 광범위한 지원을 제공합니다.  

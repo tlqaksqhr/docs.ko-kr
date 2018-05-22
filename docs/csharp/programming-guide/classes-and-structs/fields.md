@@ -1,21 +1,14 @@
 ---
-title: "필드(C# 프로그래밍 가이드)"
+title: 필드(C# 프로그래밍 가이드)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - fields [C#]
 ms.assetid: 3cbb2f61-75f8-4cce-b4ef-f5d1b3de0db7
-caps.latest.revision: 
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: acf4ade68235a196fd6d2f3c6c71279748f3dd71
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 31073772fd42244167b5e68959ebb373ec759025
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="fields-c-programming-guide"></a>필드(C# 프로그래밍 가이드)
 *필드*는 [클래스](../../../csharp/language-reference/keywords/class.md) 또는 [구조체](../../../csharp/language-reference/keywords/struct.md)에서 직접 선언되는 모든 형식의 변수입니다. 필드는 포함하는 형식의 *멤버*입니다.  
@@ -43,9 +36,9 @@ ms.lasthandoff: 11/21/2017
 > [!NOTE]
 >  필드 이니셜라이저는 다른 인스턴스 필드를 참조할 수 없습니다.  
   
- 로 필드를 표시할 수 있습니다 [공용](../../../csharp/language-reference/keywords/public.md), [개인](../../../csharp/language-reference/keywords/private.md), [보호](../../../csharp/language-reference/keywords/protected.md), [내부](../../../csharp/language-reference/keywords/internal.md), [내부 보호](../../../csharp/language-reference/keywords/protected-internal.md) 또는 [보호 된 개인](../../../csharp/language-reference/keywords/private-protected.md)합니다. 이러한 액세스 한정자는 클래스 사용자가 필드에 액세스 하는 방법을 정의합니다. 자세한 내용은 [액세스 한정자](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md)를 참조하세요.  
+ 필드는 [public](../../../csharp/language-reference/keywords/public.md), [private](../../../csharp/language-reference/keywords/private.md), [protected](../../../csharp/language-reference/keywords/protected.md), [internal](../../../csharp/language-reference/keywords/internal.md), [protected internal](../../../csharp/language-reference/keywords/protected-internal.md) 또는 [private protected](../../../csharp/language-reference/keywords/private-protected.md)로 표시될 수 있습니다. 이러한 액세스 한정자는 클래스 사용자가 필드에 액세스 하는 방법을 정의합니다. 자세한 내용은 [액세스 한정자](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md)를 참조하세요.  
   
- 필요에 따라 필드를 [static](../../../csharp/language-reference/keywords/static.md)으로 선언할 수 있습니다. 그러면 클래스의 인스턴스가 없는 경우에도 언제든지 호출자가 필드를 사용할 수 있습니다. 자세한 내용은 [정적 클래스 및 정적 클래스 멤버](../../../csharp/programming-guide/classes-and-structs/static-classes-and-static-class-members.md)를 참조하세요.  
+ 필요에 따라 필드를 [static](../../../csharp/language-reference/keywords/static.md)으로 선언할 수 있습니다. 그러면 클래스의 인스턴스가 없는 경우에도 언제든지 호출자가 필드를 사용할 수 있습니다. 자세한 내용은 [static 클래스 및 static 클래스 멤버](../../../csharp/programming-guide/classes-and-structs/static-classes-and-static-class-members.md)를 참조하세요.  
   
  필드를 [readonly](../../../csharp/language-reference/keywords/readonly.md)로 선언할 수 있습니다. 읽기 전용 필드는 초기화 중이나 생성자에서만 값을 할당할 수 있습니다. C# 컴파일러가 컴파일 시간에는 정적 읽기 전용 필드의 값에 액세스할 수 없고 런타임 시에만 액세스할 수 있다는 점을 제외하면`static``readonly` 필드는 상수와 매우 유사합니다. 자세한 내용은 [상수](../../../csharp/programming-guide/classes-and-structs/constants.md)를 참조하세요.  
   

@@ -1,21 +1,14 @@
 ---
-title: "도메인 모델 레이어에서 유효성 검사 디자인"
-description: "컨테이너화된 .NET 응용 프로그램에 대한 .NET 마이크로 서비스 아키텍처 | 도메인 모델 레이어에서 유효성 검사 디자인"
-keywords: "Docker, 마이크로 서비스, ASP.NET, 컨테이너"
+title: 도메인 모델 레이어에서 유효성 검사 디자인
+description: 컨테이너화된 .NET 응용 프로그램에 대한 .NET 마이크로 서비스 아키텍처 | 도메인 모델 레이어에서 유효성 검사 디자인
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.prod: .net-core
-ms.technology: dotnet-docker
-ms.topic: article
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: e7a111ce20039f8c87d3c3d63efdeaf38a4e1e96
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: ce3cb0c79cbd492224ce1d4ecb25cd02062f11cd
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="designing-validations-in-the-domain-model-layer"></a>도메인 모델 레이어에서 유효성 검사 디자인
 
@@ -113,7 +106,7 @@ UI 계층 내에서 모델 유효성 검사를 허용하도록 입력을 허용�
 
 예를 들어 데이터 주석과 함께 필드 유효성 검사를 사용하여 유효성 검사 정의를 중복하지 않습니다. 그러나 실행은 DTO의 경우 서버 쪽 및 클라이언트 쪽 모두가 될 수 있습니다(예: 명령 및 Viewmodel).
 
-## <a name="additional-resources"></a>추가 리소스
+## <a name="additional-resources"></a>추가 자료
 
 -   **Rachel Appel. ASP.NET Core MVC의 모델 유효성 검사 소개**
     [*https://docs.microsoft.com/aspnet/core/mvc/models/validation*](https://docs.microsoft.com/aspnet/core/mvc/models/validation)
@@ -121,7 +114,7 @@ UI 계층 내에서 모델 유효성 검사를 허용하도록 입력을 허용�
 -   **Rick Anderson. 유효성 검사 추가**
     [*https://docs.microsoft.com/aspnet/core/tutorials/first-mvc-app/validation*](https://docs.microsoft.com/aspnet/core/tutorials/first-mvc-app/validation)
 
--   **Martin Fowler. 유효성 검사에서 알림으로 throw되는 예외 대체**
+-   **Martin Fowler. 유효성 검사에서 예외 Throw를 알림으로 교체**
     [*https://martinfowler.com/articles/replaceThrowWithNotification.html*](https://martinfowler.com/articles/replaceThrowWithNotification.html)
 
 -   **사양 및 알림 패턴**

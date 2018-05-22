@@ -1,21 +1,14 @@
 ---
-title: "개발하는 동안 응용 프로그램 비밀 저장"
-description: "컨테이너화된 .NET 응용 프로그램을 위한 .NET 마이크로 서비스 아키텍처 | 개발하는 동안 응용 프로그램 비밀 저장"
-keywords: "Docker, 마이크로 서비스, ASP.NET, 컨테이너"
+title: 개발하는 동안 응용 프로그램 비밀 저장
+description: 컨테이너화된 .NET 응용 프로그램을 위한 .NET 마이크로 서비스 아키텍처 | 개발하는 동안 응용 프로그램 비밀 저장
 author: mjrousos
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.prod: .net-core
-ms.technology: dotnet-docker
-ms.topic: article
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: f70f7c741da9653745e4f542125986c701b5d22d
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: d8dd2da07104d6461d4eec0cb3fccd61c4db71c1
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="storing-application-secrets-safely-during-development"></a>개발하는 동안 응용 프로그램 비밀 저장
 
@@ -59,4 +52,4 @@ ASP.NET Core [암호 관리자](https://docs.microsoft.com/aspnet/core/security/
 
 
 >[!div class="step-by-step"]
-[이전](authorization-net-microservices-web-applications.md) [다음](azure-key-vault-protects-secrets.md)
+[이전] (authorization-net-microservices-web-applications.md) [다음] (azure-key-vault-protects-secrets.md)

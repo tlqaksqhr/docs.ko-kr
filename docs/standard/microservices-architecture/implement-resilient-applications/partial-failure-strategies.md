@@ -1,21 +1,14 @@
 ---
-title: "부분 실패 처리 전략"
-description: "컨테이너화된 .NET 응용 프로그램을 위한 .NET 마이크로 서비스 아키텍처 | 부분 실패 처리 전략"
-keywords: "Docker, 마이크로 서비스, ASP.NET, 컨테이너"
+title: 부분 실패 처리 전략
+description: 컨테이너화된 .NET 응용 프로그램을 위한 .NET 마이크로 서비스 아키텍처 | 부분 실패 처리 전략
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.prod: .net-core
-ms.technology: dotnet-docker
-ms.topic: article
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 0b5fdb03e4b0d0c2d4e8aa8a897fd46d56707f11
-ms.sourcegitcommit: c3957fdb990060559d73cca44ab3e2c7b4d049c0
+ms.openlocfilehash: f1b2b59af96bf28035eeb32eb15eaa4105677cf4
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="strategies-for-handling-partial-failure"></a>부분 실패 처리 전략
 
@@ -33,7 +26,7 @@ ms.lasthandoff: 03/05/2018
 
 **큐에 대기 중인 요청 수 제한**. 클라이언트는 클라이언트 마이크로 서비스가 특정 서비스에 보낼 수 있는 대기 중인 요청 수에 대한 상한값을 입력해야 합니다. 제한치에 도달한 경우 추가 요청을 하는 것은 무의미하며 이런 시도는 즉각 실패합니다. 구현 관점에서 Polly [Bulkhead 격리](https://github.com/App-vNext/Polly/wiki/Bulkhead) 정책은 요구 사항을 충족하는 데 사용할 수 있습니다. 이 방법은 기본적으로 <xref:System.Threading.SemaphoreSlim>을 구현으로 사용하는 병렬화 제한입니다. 또한 Bulkhead 외부에 "큐"를 허용합니다. 실행 전에도 과부하를 미리 줄일 수 있습니다(예를 들어, 용량이 가득찼다고 여겨지기 때문에). 이렇게 하면 특정 오류 시나리오에 대한 응답이 회로 차단기보다 더 빠르게 됩니다. 회로 차단기는 오류를 대기하기 때문입니다. Polly에서 BulkheadPolicy 개체는 Bulkhead와 큐가 얼마나 차있는지 드러내며 오버플로에 대한 이벤트를 제공하므로 자동화된 수평 확장에 사용될 수 있습니다.
 
-## <a name="additional-resources"></a>추가 리소스
+## <a name="additional-resources"></a>추가 자료
 
 -   **복원력 패턴**
     [*https://docs.microsoft.com/azure/architecture/patterns/category/resiliency*](https://docs.microsoft.com/azure/architecture/patterns/category/resiliency)
@@ -44,7 +37,7 @@ ms.lasthandoff: 03/05/2018
 -   **Bulkhead.** GitHub 리포지토리. Polly 정책 구현.\
     [*https://github.com/App-vNext/Polly/wiki/Bulkhead*](https://github.com/App-vNext/Polly/wiki/Bulkhead)
 
--   **Azure용 복원력 있는 응용 프로그램 설계**
+-   **Azure용 복원력 있는 응용 프로그램 디자인**
     [*https://docs.microsoft.com/azure/architecture/resiliency/*](https://docs.microsoft.com/azure/architecture/resiliency/)
 
 -   **일시적인 오류 처리**

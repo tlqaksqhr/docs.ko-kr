@@ -1,24 +1,20 @@
 ---
-title: "내부 (C# 참조)를 보호합니다."
+title: protected internal(C# 참조)
 ms.date: 11/15/2017
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.topic: article
 author: sputier
-ms.author: wiwagn
-ms.openlocfilehash: f9004a5e8d65179c9ff2e30688e63c14c95ab431
-ms.sourcegitcommit: 7e99f66ef09d2903e22c789c67ff5a10aa953b2f
+ms.openlocfilehash: 5ba2c811a1a4f095bcee65ed6678a7dc50fe94db
+ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 05/15/2018
 ---
-# <a name="protected-internal-c-reference"></a>내부 (C# 참조)를 보호합니다.
-`protected internal` 키워드 조합은 멤버 액세스 한정자입니다. 보호 된 내부 멤버는 현재 어셈블리 또는 포함 하는 클래스에서 파생 된 형식에서 액세스할 수 있습니다. `protected internal` 및 다른 액세스 한정자와 비교는 [액세스 가능성 수준](../../../csharp/language-reference/keywords/accessibility-levels.md)을 참조하세요. 
+# <a name="protected-internal-c-reference"></a>protected internal(C# 참조)
+`protected internal` 키워드 조합은 멤버 액세스 한정자입니다. protected internal 멤버는 포함하는 클래스에서 파생된 형식이나 현재 어셈블리에서 액세스할 수 있습니다. `protected internal` 및 다른 액세스 한정자와 비교는 [액세스 가능성 수준](../../../csharp/language-reference/keywords/accessibility-levels.md)을 참조하세요. 
    
-## <a name="example"></a>예제  
- 기본 클래스의 보호 된 내부 멤버는 모든 형식을 포함 하는 어셈블리가 내에서 액세스할 수 있습니다. 파생된 클래스 형식의 변수를 통해 액세스 발생 하는 경우에 다른 어셈블리에 있는 파생된 클래스에서 액세스할 수 이기도 합니다. 예를 들어 다음 코드 세그먼트를 고려하세요.  
+## <a name="example"></a>예  
+ 기본 클래스의 protected internal 멤버는 포함하는 어셈블리 내의 모든 형식에서 액세스할 수 있습니다. 또한 액세스가 파생된 클래스 형식의 변수를 통해 발생하는 경우에만 다른 어셈블리에 있는 파생 클래스에서 액세스할 수 있습니다. 예를 들어 다음 코드 세그먼트를 고려하세요.  
 
-```
+```csharp
 // Assembly1.cs  
 // Compile with: /target:library  
 public class BaseClass   
@@ -36,7 +32,7 @@ class TestAccess
 }  
 ```  
   
-```  
+```csharp  
 // Assembly2.cs  
 // Compile with: /reference:Assembly1.dll  
 class DerivedClass : BaseClass   
@@ -55,9 +51,9 @@ class DerivedClass : BaseClass
     }
 } 
 ```  
- 이 예제에는 `Assembly1.cs` 및 `Assembly2.cs`의 두 파일이 포함되어 있습니다. 공용 기본 클래스를 포함 하는 첫 번째 파일 `BaseClass`, 및 다른 클래스 `TestAccess`합니다. `BaseClass`보호 된 내부 멤버를 소유 하 고 `myValue`, 액세스는 `TestAccess` 유형입니다. 두 번째 파일에 액세스 하려고에서 `myValue` 의 인스턴스를 통해 `BaseClass` 에서는 파생된 클래스의 인스턴스를 통해이 멤버에 대 한 액세스 하는 동안 오류가 발생 `DerivedClass` 성공 합니다. 
+ 이 예제에는 `Assembly1.cs` 및 `Assembly2.cs`의 두 파일이 포함되어 있습니다. 첫 번째 파일은 공용 기본 클래스인 `BaseClass`와 다른 클래스인 `TestAccess`을 포함합니다. `BaseClass`는 `TestAccess` 형식으로 액세스되는 protected internal 멤버인 `myValue`를 소유합니다. 두 번째 파일에서 `BaseClass`의 인스턴스를 통한 `myValue` 액세스의 시도는 오류를 생성하지만 파생된 클래스 `DerivedClass`의 인스턴스를 통한 이 멤버로의 액세스는 성공합니다. 
 
- 구조체 멤버 수 없습니다 `protected internal` 되므로 구조체를 상속할 수 없습니다.  
+ 구조체를 상속할 수 없기 때문에 구조체 멤버는 `protected internal`일 수 없습니다.  
   
 ## <a name="c-language-specification"></a>C# 언어 사양  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
@@ -72,4 +68,4 @@ class DerivedClass : BaseClass
  [public](../../../csharp/language-reference/keywords/public.md)   
  [private](../../../csharp/language-reference/keywords/private.md)   
  [internal](../../../csharp/language-reference/keywords/internal.md)   
- [Internal virtual 키워드에 대 한 보안 문제](https://msdn.microsoft.com/library/heyd8kky(v=vs.110))
+ [internal virtual 키워드에 대한 보안 문제](https://msdn.microsoft.com/library/heyd8kky(v=vs.110))

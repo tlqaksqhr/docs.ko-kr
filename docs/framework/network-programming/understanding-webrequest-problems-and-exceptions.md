@@ -1,23 +1,15 @@
 ---
-title: "WebRequest 문제 및 예외 이해"
-ms.custom: 
+title: WebRequest 문제 및 예외 이해
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 74a361a5-e912-42d3-8f2e-8e9a96880a2b
-caps.latest.revision: "6"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: d59f30e71001adee0e6e1e68be3cf9cfd1952161
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: c7def5c041c5d16a8ea58479664402b7346e52b0
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="understanding-webrequest-problems-and-exceptions"></a>WebRequest 문제 및 예외 이해
 <xref:System.Net.WebRequest> 및 파생 클래스(<xref:System.Net.HttpWebRequest>, <xref:System.Net.FtpWebRequest> 및 <xref:System.Net.FileWebRequest>)는 예외를 throw하여 비정상 상태를 알립니다. 이러한 문제의 해결이 분명하지 않은 경우도 있습니다.  
@@ -32,8 +24,8 @@ ms.lasthandoff: 12/22/2017
 |<xref:System.Net.WebExceptionStatus.SecureChannelFailure>|SSL 트랜잭션에 오류가 발생했거나 인증서 문제가 있습니다.|.NET Framework 버전 1.1에서는 SSL 버전 3.0만 지원합니다. 서버에서 TLS 버전 1.0 또는 SSL 버전 2.0만 사용하는 경우 예외가 throw됩니다. .NET Framework 버전 2.0으로 업그레이드하고 <xref:System.Net.ServicePointManager.SecurityProtocol%2A>을 서버와 일치하도록 설정합니다.<br /><br /> 클라이언트 인증서가 서버에서 신뢰하지 않는 CA(인증 기관)에 의해 서명되었습니다. 서버에 CA의 인증서를 설치합니다. [http://support.microsoft.com/?id=332077](http://go.microsoft.com/fwlink/?LinkID=179654)을 참조하세요.<br /><br /> 최신 서비스 팩이 설치되어 있는지 확인합니다.|  
 |<xref:System.Net.WebExceptionStatus.ConnectFailure>|연결하지 못했습니다.|방화벽 또는 프록시가 연결을 차단합니다. 연결을 허용하도록 방화벽 또는 프록시를 수정합니다.<br /><br /> <xref:System.Net.WebProxy> 생성자(WebServiceProxyClass.Proxy = new WebProxy([http://server:80](http://server/), true))를 호출하여 클라이언트 응용 프로그램에서 <xref:System.Net.WebProxy>를 명시적으로 지정합니다.<br /><br /> Filemon 또는 Regmon을 실행하여 작업자 프로세스 ID에 WSPWSP.dll, HKLM\System\CurrentControlSet\Services\DnsCache 또는 HKLM\System\CurrentControlSet\Services\WinSock2를 액세스하는 데 필요한 권한이 있는지 확인합니다.|  
 |<xref:System.Net.WebExceptionStatus.NameResolutionFailure>|도메인 이름 서비스가 호스트 이름을 확인할 수 없습니다.|프록시를 올바르게 구성합니다. [http://support.microsoft.com/?id=318140](http://go.microsoft.com/fwlink/?LinkID=179655)을 참조하세요.<br /><br /> 설치된 바이러스 백신 소프트웨어 또는 방화벽이 연결을 차단하지 않는지 확인합니다.|  
-|<xref:System.Net.WebExceptionStatus.RequestCanceled>|<xref:System.Net.WebRequest.Abort%2A>가 호출되었거나 오류가 발생했습니다.|이 문제는 클라이언트 또는 서버의 부하가 심해서 발생했을 수 있습니다. 부하를 줄입니다.<br /><br /> <xref:System.Net.ServicePointManager.DefaultConnectionLimit%2A> 설정을 늘립니다.<br /><br /> 웹 서비스 성능 설정을 수정하려면 [http://support.microsoft.com/?id=821268](http://go.microsoft.com/fwlink/?LinkID=179656)을 참조하세요.|  
-|<xref:System.Net.WebExceptionStatus.ConnectionClosed>|응용 프로그램이 이미 닫힌 소켓에 쓰려고 했습니다.|클라이언트 또는 서버가 오버로드되었습니다. 부하를 줄입니다.<br /><br /> <xref:System.Net.ServicePointManager.DefaultConnectionLimit%2A> 설정을 늘립니다.<br /><br /> 웹 서비스 성능 설정을 수정하려면 [http://support.microsoft.com/?id=821268](http://go.microsoft.com/fwlink/?LinkID=179656)을 참조하세요.|  
+|<xref:System.Net.WebExceptionStatus.RequestCanceled>|<xref:System.Net.WebRequest.Abort%2A>가 호출되었거나 오류가 발생했습니다.|이 문제는 클라이언트 또는 서버의 부하가 심해서 발생했을 수 있습니다. 부하를 줄입니다.<br /><br /> <xref:System.Net.ServicePointManager.DefaultConnectionLimit%2A> 설정을 늘립니다.<br /><br /> [http://support.microsoft.com/?id=821268](http://go.microsoft.com/fwlink/?LinkID=179656)을 참조하여 웹 서비스 성능 설정을 수정합니다.|  
+|<xref:System.Net.WebExceptionStatus.ConnectionClosed>|응용 프로그램이 이미 닫힌 소켓에 쓰려고 했습니다.|클라이언트 또는 서버가 오버로드되었습니다. 부하를 줄입니다.<br /><br /> <xref:System.Net.ServicePointManager.DefaultConnectionLimit%2A> 설정을 늘립니다.<br /><br /> [http://support.microsoft.com/?id=821268](http://go.microsoft.com/fwlink/?LinkID=179656)을 참조하여 웹 서비스 성능 설정을 수정합니다.|  
 |<xref:System.Net.WebExceptionStatus.MessageLengthLimitExceeded>|메시지 길이에 설정된 제한(<xref:System.Net.HttpWebRequest.MaximumResponseHeadersLength%2A>)을 초과했습니다.|<xref:System.Net.HttpWebRequest.MaximumResponseHeadersLength%2A> 속성 값을 늘립니다.|  
 |<xref:System.Net.WebExceptionStatus.ProxyNameResolutionFailure>|도메인 이름 서비스가 프록시 호스트 이름을 확인할 수 없습니다.|프록시를 올바르게 구성합니다. [http://support.microsoft.com/?id=318140](http://go.microsoft.com/fwlink/?LinkID=179655)을 참조하세요.<br /><br /> <xref:System.Net.HttpWebRequest.Proxy%2A> 속성을 `null`로 설정하여 <xref:System.Net.HttpWebRequest>가 프록시를 사용하지 않도록 강제로 적용합니다.|  
 |<xref:System.Net.WebExceptionStatus.ServerProtocolViolation>|서버 응답이 유효한 HTTP 응답이 아닙니다. 이 문제는 .NET Framework에서 서버 응답이 HTTP 1.1 RFC에 맞지 않는 것을 감지할 경우 발생합니다. 응답에 잘못된 헤더 또는 잘못된 헤더 구분 기호가 포함된 경우 이 문제가 발생할 수 있습니다. RFC 2616에서는 HTTP 1.1 및 서버 응답에 유효한 형식을 정의합니다. 자세한 내용은 [http://www.ietf.org](http://go.microsoft.com/fwlink/?LinkID=147388)를 참조하세요.|트랜잭션의 네트워크 추적을 가져오고 응답의 헤더를 검사합니다.<br /><br /> 응용 프로그램에 구문 분석 없이 서버 응답이 필요한 경우(보안 문제가 발생할 수 있음) 구성 파일에서 `useUnsafeHeaderParsing`을 `true`로 설정합니다. [\<httpWebRequest> 요소(네트워크 설정)](../../../docs/framework/configure-apps/file-schema/network/httpwebrequest-element-network-settings.md)를 참조하세요.|  

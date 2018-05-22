@@ -1,23 +1,17 @@
 ---
-title: "값 형식 표(C# 참조)"
+title: 값 형식 표(C# 참조)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - value types [C#], table
 - Visual C#, types
 - types [C#], value types
 - types [C#], suffixes
 ms.assetid: 67d8f631-b6e3-4d83-9910-5ec497f8c5f3
-caps.latest.revision: "11"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 49ada8d7c006808077b5a7c93175a143932bf277
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: a3979a9c269c6268ef679d0494cf4da501201c97
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="value-types-table-c-reference"></a>값 형식 표(C# 참조)
 다음 표에는 C# 값 형식이 범주별로 나와 있습니다.  

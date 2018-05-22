@@ -1,21 +1,14 @@
 ---
-title: "Docker 컨테이너에 대해 .NET Framework를 선택하는 경우"
-description: "컨테이너화된 .NET 응용 프로그램용 .NET 마이크로 서비스 아키텍처 | Docker 컨테이너에 대해 .NET Framework를 선택하는 경우"
-keywords: "Docker, 마이크로 서비스, ASP.NET, 컨테이너"
+title: Docker 컨테이너에 대해 .NET Framework를 선택하는 경우
+description: 컨테이너화된 .NET 응용 프로그램용 .NET 마이크로 서비스 아키텍처 | Docker 컨테이너에 대해 .NET Framework를 선택하는 경우
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/18/2017
-ms.prod: .net-core
-ms.technology: dotnet-docker
-ms.topic: article
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: eec258ff01bcfeb834fa7a1138fdf822fd00c996
-ms.sourcegitcommit: c3957fdb990060559d73cca44ab3e2c7b4d049c0
+ms.openlocfilehash: e707c8f0e721915e829e41628891928594010b92
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="when-to-choose-net-framework-for-docker-containers"></a>Docker 컨테이너에 대해 .NET Framework를 선택하는 경우
 
@@ -53,7 +46,7 @@ ms.lasthandoff: 03/05/2018
 
 그동안 Azure의 플랫폼 또는 서비스에서 여전히 클라이언트 API를 통해 .NET Core를 지원하지 않는 경우에는 Azure 서비스 또는 .NET Framework의 클라이언트 SDK에서 동등한 REST API를 사용할 수 있습니다.
 
-### <a name="additional-resources"></a>추가 리소스
+### <a name="additional-resources"></a>추가 자료
 
 -   **.NET Core 가이드**
     [*https://docs.microsoft.com/dotnet/core/index*](../../../core/index.md)

@@ -6,11 +6,11 @@ f1_keywords:
 helpviewer_keywords:
 - ^= operator [C#]
 ms.assetid: 3658ff9a-61cd-467e-ad6b-8fbf1cfbaae4
-ms.openlocfilehash: 0315cab66729d8169527c4b0ba7e00ab3b5ad5da
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b868f2cdbfa8a80f89a12e6194a30154481f0b07
+ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/15/2018
 ---
 # <a name="-operator-c-reference"></a>^= 연산자(C# 참조)
 배타적 OR 대입 연산자입니다.  
@@ -18,13 +18,13 @@ ms.lasthandoff: 05/04/2018
 ## <a name="remarks"></a>설명  
  다음 형태의 식이 있다고 가정합니다.  
   
-```  
+```csharp  
 x ^= y  
 ```  
   
  이 식은 다음과 같이 계산됩니다.  
   
-```  
+```csharp  
 x = x ^ y  
 ```  
   

@@ -7,20 +7,23 @@ helpviewer_keywords:
 - Private keyword [Visual Basic]
 - Private keyword [Visual Basic], syntax
 ms.assetid: aba74a2e-5824-4613-bf63-b9ec7787f4e6
-ms.openlocfilehash: d7935cf691d961591ff5e3d2a290afb88de9165a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 40b64b8d2b6306d458b7a9cc657c5b7dc4270eb2
+ms.sourcegitcommit: 22c3c8f74eaa138dbbbb02eb7d720fce87fc30a9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="private-visual-basic"></a>Private(Visual Basic)
 하나 이상의 선언 된 프로그래밍 요소를에서 포함 된 모든 형식을 포함 하 여 해당 변수의 선언 컨텍스트 내 에서만 액세스할 수 있도록 지정 합니다.  
   
 ## <a name="remarks"></a>설명  
  프로그래밍 요소 소유권이 있는 기능 또는 기밀 데이터가 포함 된 경우에 일반적으로 최대한 엄격 하 게 액세스를 제한 합니다. 모듈, 클래스 또는 구조체 정의에 액세스 하는 허용 하 여 최대 한계를 달성 합니다. 이러한 방식으로 요소에 대 한 액세스를 제한 하려면 사용 하 여 선언할 수 있습니다 `Private`합니다.  
-  
+
+> [!NOTE]
+> 사용할 수도 있습니다는 [개인 보호](private-protected.md) 액세스 한정자는 멤버를 포함 하는 어셈블리가에 있는 파생 된 클래스 및 해당 클래스 내에서 액세스할 수 있게 됩니다.
+
 ## <a name="rules"></a>규칙  
-  
+
 -   **선언 컨텍스트입니다.** `Private`는 모듈 수준에서만 사용할 수 있습니다. 즉, 선언 컨텍스트는 `Private` 요소 모듈, 클래스 또는 구조 여야 하며 소스 파일, 네임 스페이스, 인터페이스, 또는 프로시저일 수 없습니다.  
   
 ## <a name="behavior"></a>동작  
@@ -59,7 +62,8 @@ ms.lasthandoff: 05/04/2018
  [공용](../../../visual-basic/language-reference/modifiers/public.md)  
  [보호됨](../../../visual-basic/language-reference/modifiers/protected.md)  
  [Friend](../../../visual-basic/language-reference/modifiers/friend.md)  
- [Visual Basic의 액세스 수준](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)  
+ [보호 된 개인](./private-protected.md)   
+ [Protected Friend](./protected-friend.md)[액세스 수준을 Visual basic    ](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)  
  [절차](../../../visual-basic/programming-guide/language-features/procedures/index.md)  
  [구조체](../../../visual-basic/programming-guide/language-features/data-types/structures.md)  
  [개체 및 클래스](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)

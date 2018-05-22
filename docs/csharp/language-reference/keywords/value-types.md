@@ -8,11 +8,11 @@ helpviewer_keywords:
 - types [C#], value types
 - C# language, value types
 ms.assetid: 471eb994-2958-49d5-a6be-19b4313f80a3
-ms.openlocfilehash: fdda6942c6883baaaea5e305a1e699a01e707d2b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 49043a9fe9eabbb54176a0106007ef0d26ed795f
+ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/15/2018
 ---
 # <a name="value-types-c-reference"></a>값 형식(C# 참조)
 값 형식은 다음 두 가지 기본 범주로 구성됩니다.  
@@ -56,31 +56,31 @@ ms.lasthandoff: 05/04/2018
 ## <a name="initializing-value-types"></a>값 형식 초기화  
  C#의 지역 변수는 사용하기 전에 초기화해야 합니다. 예를 들어 다음 예제와 같이 초기화하지 않고 지역 변수를 선언할 수 있습니다.  
   
-```  
+```csharp  
 int myInt;  
 ```  
   
  초기화하기 전에는 사용할 수 없습니다. 다음 문을 사용하여 초기화할 수 있습니다.  
   
-```  
+```csharp  
 myInt = new int();  // Invoke default constructor for int type.  
 ```  
   
  이 문은 다음 문과 같습니다.  
   
-```  
+```csharp  
 myInt = 0;         // Assign an initial value, 0 in this example.  
 ```  
   
  물론, 다음 예제와 같이 선언과 초기화를 동일한 문에 포함할 수 있습니다.  
   
-```  
+```csharp  
 int myInt = new int();  
 ```  
   
  – 또는 –  
   
-```  
+```csharp  
 int myInt = 0;  
 ```  
   
@@ -88,7 +88,7 @@ int myInt = 0;
   
  사용자 정의 형식의 경우 [new](../../../csharp/language-reference/keywords/new.md)를 사용하여 기본 생성자를 호출합니다. 예를 들어 다음 문은 `Point` 구조체의 기본 생성자를 호출합니다.  
   
-```  
+```csharp  
 Point p = new Point(); // Invoke default constructor for the struct.  
 ```  
   

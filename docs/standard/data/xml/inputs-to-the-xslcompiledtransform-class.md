@@ -1,35 +1,24 @@
 ---
-title: "XslCompiledTransform 클래스에 대한 입력"
-ms.custom: 
+title: XslCompiledTransform 클래스에 대한 입력
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 834049f1-ab41-449e-9f10-4a1d0701bc48
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 7aac1e85bdc27c9c8394eadcae841069115b369d
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: bc909b666b90d8c8825e7dbef33e48b6126bd7c2
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="inputs-to-the-xslcompiledtransform-class"></a>XslCompiledTransform 클래스에 대한 입력
 <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A> 메서드는 소스 문서에 대한 세 가지 입력 형식을 허용합니다. 즉, <xref:System.Xml.XPath.IXPathNavigable> 인터페이스를 구현하는 개체, 소스 문서를 읽는 <xref:System.Xml.XmlReader> 개체 또는 문자열 URI를 허용합니다.  
   
 > [!NOTE]
->  기본적으로 <xref:System.Xml.Xsl.XslCompiledTransform> 클래스는 공백을 유지합니다. 이러한 점은 W3C XSLT 1.0 권장 사항의 3.4단원(3.4단원, http://www.w3.org/TR/xslt.html#strip)과 일치합니다.  
+>  기본적으로 <xref:System.Xml.Xsl.XslCompiledTransform> 클래스는 공백을 유지합니다. 이러한 점은 W3C XSLT 1.0 권장 사항의 3.4단원(3.4단원, http://www.w3.org/TR/xslt.html#strip))과 일치합니다.  
   
 ## <a name="ixpathnavigable-interface"></a>IXPathNavigable 인터페이스  
  <xref:System.Xml.XPath.IXPathNavigable> 인터페이스는 <xref:System.Xml.XmlNode> 및 <xref:System.Xml.XPath.XPathDocument> 클래스에서 구현됩니다. 이 클래스는 XML 데이터의 메모리 내 캐시를 나타냅니다.  

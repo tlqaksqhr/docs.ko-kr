@@ -1,12 +1,6 @@
 ---
-title: "웹 및 소켓 사용 권한"
-ms.custom: 
+title: 웹 및 소켓 사용 권한
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - Networking
 - positions [.NET Framework], accepting
@@ -21,16 +15,14 @@ helpviewer_keywords:
 - security [.NET Framework], Internet
 - positions [.NET Framework], granting
 ms.assetid: d51ad8cb-03ae-4a51-bfcd-cfcf6b98afa9
-caps.latest.revision: "9"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: b426b5e7e6a9b617311db05670f526fc415d591d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 4353f029d2e82460ab413bc8ccc248577a505504
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="web-and-socket-permissions"></a>웹 및 소켓 사용 권한
 <xref:System.Net> 네임스페이스를 사용하는 응용 프로그램에 대한 인터넷 보안은 <xref:System.Net.WebPermission> 및 <xref:System.Net.SocketPermission> 클래스에서 제공됩니다. **WebPermission** 클래스는 URI의 데이터를 요청하거나 인터넷에 URI를 제공하는 응용 프로그램의 권한을 제어합니다. **SocketPermission** 클래스는 <xref:System.Net.Sockets.Socket>을 사용하여 로컬 포트에서 데이터를 허용하거나 호스트, 포트 번호 및 전송 프로토콜에 따라 다른 주소에서 전송 프로토콜을 사용하여 원격 장치에 연결하는 응용 프로그램의 권한을 제어합니다.  

@@ -1,19 +1,15 @@
 ---
-title: "Windows XP에 .NET Framework 설치"
-description: "Windows XP에서.NET Framework를 설치하는 방법을 알아봅니다."
+title: Windows XP에 .NET Framework 설치
+description: Windows XP에서.NET Framework를 설치하는 방법을 알아봅니다.
+ms.custom: updateeachrelease
 author: rlander
 ms.author: mairaw
-keywords: ".Net Framework, 설치"
-ms.date: 08/03/2017
-ms.topic: article
-ms.prod: .net-framework
-ms.devlang: dotnet
-ms.workload: dotnet
-ms.openlocfilehash: 83def2091cf1fdc7d3d359c98aa3116a009d465d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.date: 04/10/2018
+ms.openlocfilehash: 8ac695353e36466f05bae129ff1c37ba3d8cbb69
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="install-the-net-framework-on-windows-xp-and-windows-server-2003"></a>Windows XP 및 Windows Server 2003에 .NET Framework 설치
 
@@ -24,7 +20,7 @@ Windows에서 많은 응용 프로그램을 실행하는 데 .NET Framework가 �
 
 ![이 응용 프로그램을 시작할 수 없습니다.](./media/this-application-could-not-be-started.png)
 
-이러한 지침은 필요한 .NET Framework 버전을 설치하는 데 도움이 됩니다. [.NET Framework 4.7.1](https://www.microsoft.com/en-us/download/details.aspx?id=56115&desc=dotnet47)은 최신 버전입니다. Windows XP 및 Windows Server 2003에서 지원되지 않습니다. [Windows 10 Fall Creators Update](https://www.microsoft.com/software-download/windows10) 및 [Windows Server 2016 버전 1709](https://docs.microsoft.com/windows-server/get-started/get-started-with-1709)에 포함되어 있습니다.
+이러한 지침은 필요한 .NET Framework 버전을 설치하는 데 도움이 됩니다. [.NET Framework 4.7.2](http://go.microsoft.com/fwlink/?LinkID=863255)는 최신 버전입니다. Windows XP 및 Windows Server 2003에서 지원되지 않습니다. [Windows 10 2018년 4월 업데이트](https://www.microsoft.com/software-download/windows10)와 함께 포함됩니다.
 
 ## <a name="net-framework-403"></a>.NET Framework 4.0.3
 

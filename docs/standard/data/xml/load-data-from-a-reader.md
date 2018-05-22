@@ -1,26 +1,15 @@
 ---
-title: "판독기에서 데이터 로드"
-ms.custom: 
+title: 판독기에서 데이터 로드
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 7e74918c-bc72-4977-a49b-e1520a6d8f60
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 9e9f934d6bff2c9ff3733551bca89b43920f3104
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 5156374708beb07da875d2e2a8a3b74e52e21427
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="load-data-from-a-reader"></a>판독기에서 데이터 로드
 <xref:System.Xml.XmlDocument.Load%2A> 메서드와 <xref:System.Xml.XmlReader>의 매개 변수를 사용하여 XML 문서를 로드할 경우 발생하는 동작은 다른 형식의 데이터를 로드할 때의 동작과 차이가 있습니다. 판독기가 초기 상태에 있을 경우 <xref:System.Xml.XmlDocument.Load%2A>는 판독기의 전체 내용을 사용하며 판독기의 모든 데이터를 사용하여 XML DOM(문서 개체 모델)을 만듭니다.  

@@ -1,13 +1,6 @@
 ---
-title: "Mpgo.exe(관리되는 프로필 기반 최적화 도구)"
-ms.custom: 
+title: Mpgo.exe(관리되는 프로필 기반 최적화 도구)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - Mpgo.exe
 - training scenarios, generating profiles with
@@ -15,16 +8,13 @@ helpviewer_keywords:
 - Ngen.exe
 - Ngen.exe, profilers and native images
 ms.assetid: f6976502-a000-4fbe-aaf5-a7aab9ce4ec2
-caps.latest.revision: "31"
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 49d2154b1af4350c3145f2cb9be30505e0967a4e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 42e1fb080ac0af34c621cef3a991cad7bcf603ac
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="mpgoexe-managed-profile-guided-optimization-tool"></a>Mpgo.exe(관리되는 프로필 기반 최적화 도구)
 관리되는 프로필 기반 최적화 도구(Mpgo.exe)는 공통 최종 사용자 시나리오를 사용하여 [네이티브 이미지 생성기(Ngen.exe)](../../../docs/framework/tools/ngen-exe-native-image-generator.md)로 만들어지는 네이티브 이미지 어셈블리를 최적화하는 명령줄 도구입니다. 이 도구를 사용하면 프로필 데이터를 생성하는 교육 시나리오를 실행할 수 있습니다. [네이티브 이미지 생성기(Ngen.exe)](../../../docs/framework/tools/ngen-exe-native-image-generator.md)는 이 데이터를 사용하여 생성된 네이티브 이미지 응용 프로그램 어셈블리를 최적화합니다. 교육 시나리오는 응용 프로그램의 정상적 용도에 대한 평가 실행입니다. Mpgo.exe는 Visual Studio Ultimate 2012 이상 버전에서 사용할 수 있습니다. [!INCLUDE[vs_dev12](../../../includes/vs-dev12-md.md)]부터 Mpgo.exe를 사용하여 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 응용 프로그램을 최적화할 수도 있습니다.  

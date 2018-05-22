@@ -1,27 +1,17 @@
 ---
-title: "MDbg.exe(.NET Framework 명령줄 디버거)"
-ms.custom: 
+title: MDbg.exe(.NET Framework 명령줄 디버거)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - command-line debugger [.NET Framework]
 - MDbg.exe
 ms.assetid: 28a3f509-07e2-4dbe-81df-874c5e969cc4
-caps.latest.revision: "27"
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a4c4e06a5969aa6f7555a191f9950ddf64879e98
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: be32659a270cd7c6b7e3551594934926eabf0d31
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="mdbgexe-net-framework-command-line-debugger"></a>MDbg.exe(.NET Framework 명령줄 디버거)
 도구 공급업체와 응용 프로그램 개발자는 .NET Framework 명령줄 디버거를 사용하여 .NET Framework 공용 언어 런타임을 대상으로 하는 프로그램에서 버그를 찾고 수정할 수 있습니다. 이 도구에는 디버깅 서비스를 제공하기 위해 런타임 디버깅 API가 사용됩니다. MDbg.exe를 사용하여 관리 코드만 디버깅할 수 있습니다. 관리되지 않는 코드의 디버깅은 지원하지 않습니다.  
@@ -80,7 +70,7 @@ MDbg [ProgramName[arguments]] [options]
 |**pro**[**cessenum**]|활성 프로세스를 표시합니다.|  
 |**q**[**uit**] [*exitcode*]|선택적으로 프로세스 종료 코드를 지정하여 MDbg.exe 셸을 종료합니다.|  
 |**re**[**sume**] [`*` &#124; [`~`]*threadNumber*]|현재 스레드나 *threadNumber* 매개 변수에 의해 지정된 스레드를 다시 시작합니다.<br /><br /> *threadNumber* 매개 변수가 `*`로 지정되거나 스레드 번호가 `~`로 시작하는 경우 *threadNumber*에 의해 지정된 스레드를 제외한 모든 스레드에 명령이 적용됩니다.<br /><br /> 중단되지 않은 스레드를 다시 시작하는 것은 아무 효과가 없습니다.|  
-|**r**[**un**] [`-d`(`ebug`) &#124; -`o`(`ptimize`) &#124;`-enc`] [[*path_to_exe*] [*args_to_exe*]]|현재 프로세스를 중단하고 새 프로세스를 시작합니다. 실행 가능한 인수를 전달하지 않으면 이전에 `run` 명령으로 실행된 프로그램이 실행되고, 실행 가능한 인수를 제공하면 선택적으로 제공된 인수를 사용하여 지정한 프로그램이 실행됩니다.<br /><br /> 클래스 로드 이벤트, 모듈 로드 이벤트 및 스레드 시작 이벤트를 무시하는 경우(기본값) 프로그램은 주 스레드의 첫 번째 실행 가능한 명령에서 중단됩니다.<br /><br /> 다음 세 가지 플래그 중 하나를 사용하여 JIT(just-in-time)의 디버거가 코드를 컴파일하도록 합니다.<br /><br /> -   `-d` *(* `ebug` *)*는 최적화를 사용하지 않도록 설정합니다. 이것은 MDbg.exe의 기본값입니다.<br />-   `-o` *(* `ptimize` *)*는 디버거 외부에서 수행하는 것처럼 코드를 강제로 실행시키지만 디버깅을 더 어렵게 만듭니다. 이는 디버거 외부에서 사용하는 기본값입니다.<br />-   `-enc`를 사용하면 편집하며 계속하기 기능을 사용할 수 있지만 성능이 저하됩니다.|  
+|**r**[**un**] [`-d`(`ebug`) &#124; -`o`(`ptimize`) &#124;`-enc`] [[*path_to_exe*] [*args_to_exe*]]|현재 프로세스를 중단하고 새 프로세스를 시작합니다. 실행 가능한 인수를 전달하지 않으면 이전에 `run` 명령으로 실행된 프로그램이 실행되고, 실행 가능한 인수를 제공하면 선택적으로 제공된 인수를 사용하여 지정한 프로그램이 실행됩니다.<br /><br /> 클래스 로드 이벤트, 모듈 로드 이벤트 및 스레드 시작 이벤트를 무시하는 경우(기본값) 프로그램은 주 스레드의 첫 번째 실행 가능한 명령에서 중단됩니다.<br /><br /> 다음 세 가지 플래그 중 하나를 사용하여 JIT(just-in-time)의 디버거가 코드를 컴파일하도록 합니다.<br /><br /> -   `-d` *(* `ebug` *)* 는 최적화를 사용하지 않도록 설정합니다. 이것은 MDbg.exe의 기본값입니다.<br />-   `-o` *(* `ptimize` *)* 는 디버거 외부에서 수행하는 것처럼 코드를 강제로 실행시키지만 디버깅을 더 어렵게 만듭니다. 이는 디버거 외부에서 사용하는 기본값입니다.<br />-   `-enc`를 사용하면 편집하며 계속하기 기능을 사용할 수 있지만 성능이 저하됩니다.|  
 |**Set** *variable*=*value*|범위 안에 있는 변수의 값을 변경합니다.<br /><br /> 고유한 디버거 변수를 만들고 응용 프로그램 내에서 이 변수에 참조 값을 할당할 수 있습니다. 이 값은 원래 값에 대한 핸들로 사용되며 원본 값도 범위를 벗어납니다. 모든 디버거 변수는 `$`처럼 `$var`로 시작해야 합니다. 명령을 사용하여 이 핸들을 Nothing으로 설정하면 이 핸들이 지워집니다.<br /><br /> `set $var=`|  
 |**Setip** [`-il`] *number*|파일의 현재 IP(명령 포인터)를 지정한 위치로 설정합니다. `-il` 옵션을 지정하면 메서드에서 번호는 MSIL(Microsoft Intermediate Language) 오프셋을 나타냅니다. 그렇지 않으면 소스 줄 번호를 나타냅니다.|  
 |**sh**[**ow**] [*lines*]|표시할 줄 수를 지정합니다.|  

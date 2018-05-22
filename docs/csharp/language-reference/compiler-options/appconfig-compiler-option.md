@@ -1,10 +1,6 @@
 ---
-title: "-appconfig(C# 컴파일러 옵션)"
+title: -appconfig(C# 컴파일러 옵션)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 f1_keywords:
 - /appconfig
 helpviewer_keywords:
@@ -12,14 +8,11 @@ helpviewer_keywords:
 - -appconfig compiler option [C#]
 - appconfig compiler option [C#]
 ms.assetid: 1cdbcbcc-7813-4010-b5b8-e67c107c5a98
-caps.latest.revision: 
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: a3f2c1bc9d0d3fec0635d284f64138f0432f59ef
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 3fca0821b8665354d840783fca3ab90ece41b2cc
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="-appconfig-c-compiler-options"></a>-appconfig(C# 컴파일러 옵션)
 **-appconfig** 컴파일러 옵션을 사용하면 C# 응용 프로그램이 어셈블리 바인딩 시간에 어셈블리의 응용 프로그램 구성(app.config) 파일 위치를 CLR(공용 언어 런타임)에 지정할 수 있습니다.  

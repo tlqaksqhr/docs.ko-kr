@@ -1,21 +1,14 @@
 ---
-title: "상태 모니터링"
-description: "컨테이너화된 .NET 응용 프로그램용 .NET 마이크로 서비스 아키텍처 | 상태 모니터링"
-keywords: "Docker, 마이크로 서비스, ASP.NET, 컨테이너"
+title: 상태 모니터링
+description: 컨테이너화된 .NET 응용 프로그램용 .NET 마이크로 서비스 아키텍처 | 상태 모니터링
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 12/11/2017
-ms.prod: .net-core
-ms.technology: dotnet-docker
-ms.topic: article
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 76821e27613335609527b867a6b94dac551f6235
-ms.sourcegitcommit: 15316053918995cc1380163a7d7e7edd5c44e6d7
-ms.translationtype: MT
+ms.openlocfilehash: 81c4fc7662212bb3c6586a590d87e731220b7b7c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="health-monitoring"></a>상태 모니터링
 
@@ -27,7 +20,7 @@ ms.lasthandoff: 03/19/2018
 
 ## <a name="implementing-health-checks-in-aspnet-core-services"></a>ASP.NET Core 서비스에서 상태 검사 구현
 
-ASP.NET Core 마이크로 서비스 또는 웹 응용 프로그램을 개발할 때 ASP.NET 팀에서 `HealthChecks`라는 라이브러리를 사용할 수 있습니다. 초기 릴리스는 이 [GitHub 리포지토리](https://github.com/dotnet-architecture/HealthChecks)에서 사용할 수 있습니다.
+ASP.NET Core 마이크로 서비스 또는 웹 응용 프로그램을 개발할 때 ASP.NET 팀에서 `HealthChecks`라는 대역 외 라이브러리(ASP.NETCore의 일부로 공식이 아님)를 사용할 수 있습니다. 이 [GitHub 리포지토리](https://github.com/dotnet-architecture/HealthChecks)에서 사용할 수 있습니다.
 
 이 라이브러리는 사용하기 쉽고 응용 프로그램에 필요한 특정 외부 리소스(예: SQL Server 데이터베이스 또는 원격 API)가 사용할 수 있습니다. 작동하는지 확인할 수 있는 기능을 제공합니다. 이 라이브러리를 사용하면 나중에 설명하는 대로 정상 리소스에 대한 의미를 결정할 수도 있습니다.
 
@@ -37,7 +30,7 @@ ASP.NET Core 마이크로 서비스 또는 웹 응용 프로그램을 개발할 
 
 eShopOnContainers 샘플 응용 프로그램에서 HealthChecks 라이브러리가 사용되는 방식을 확인할 수 있습니다. 시작하려면 각 마이크로 서비스에 대한 성능 상태를 구성하는 항목을 정의해야 합니다. 샘플 응용 프로그램에서 마이크로 서비스 API가 HTTP를 통해 액세스할 수 있고 관련 SQL Server 데이터베이스도 사용할 수 있으면 마이크로 서비스가 정상입니다.
 
-나중에 HealthChecks 라이브러리를 NuGet 패키지로 설치할 수 있습니다. 그러나 이 문서를 작성한 시점 이후로는 코드를 솔루션의 일부로 다운로드하고 컴파일해야 합니다. 복제에 사용할 수 있는 코드가 https://github.com/dotnet-architecture/HealthChecks 솔루션을 다음 폴더에 복사 합니다.
+나중에 HealthChecks 라이브러리를 NuGet 패키지로 설치할 수 있습니다. 그러나 이 문서를 작성한 시점 이후로는 코드를 솔루션의 일부로 다운로드하고 컴파일해야 합니다. https://github.com/dotnet-architecture/HealthChecks에서 사용할 수 있는 코드를 복제하고 솔루션에 다음 폴더를 복사합니다.
 
   - src/common
   - src/Microsoft.AspNetCore.HealthChecks
@@ -190,12 +183,12 @@ Azure Service Fabric을 사용하는 경우 단순한 상태 검사보다 더 �
 
 ## <a name="additional-resources"></a>추가 자료
 
--   **ASP.NET Core HealthChecks** (초기 릴리스) [*https://github.com/aspnet/HealthChecks/*](https://github.com/aspnet/HealthChecks/)
+-   **ASP.NET Core HealthChecks**(초기 릴리스) [*https://github.com/aspnet/HealthChecks/*](https://github.com/aspnet/HealthChecks/)
 
--   **서비스 패브릭 상태 모니터링 소개**
+-   **Service Fabric 상태 모니터링 소개**
     [*https://docs.microsoft.com/azure/service-fabric/service-fabric-health-introduction*](https://docs.microsoft.com/azure/service-fabric/service-fabric-health-introduction)
 
--   **Azure 응용 프로그램 통찰력**
+-   **Azure Application Insights**
     [*https://azure.microsoft.com/services/application-insights/*](https://azure.microsoft.com/services/application-insights/)
 
 -   **Microsoft Operations Management Suite**

@@ -1,26 +1,15 @@
 ---
-title: "XSLT 컴파일러(xsltc.exe)"
-ms.custom: 
+title: XSLT 컴파일러(xsltc.exe)
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 672a5ac8-8305-4d28-ba10-11089c2c0924
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 36696617d1e28a370f6b15f15fb39bc816973f15
-ms.sourcegitcommit: ba765893e3efcece67d99fd6d5ce0074b050d1d9
+ms.openlocfilehash: aef49f70f3a60151aa053a1a94a06bc71401531e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/02/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="xslt-compiler-xsltcexe"></a>XSLT 컴파일러(xsltc.exe)
 XSLT 컴파일러(xsltc.exe)에서는 XSLT 스타일시트를 컴파일하여 어셈블리를 생성합니다. 컴파일된 스타일시트는 <xref:System.Xml.Xsl.XslCompiledTransform.Load%28System.Type%29?displayProperty=nameWithType> 메서드로 직접 전달될 수 있습니다. 서명된 어셈블리는 xsltc.exe를 사용하여 생성할 수 없습니다.  
@@ -47,7 +36,7 @@ xsltc [options] [/class:<name>] <sourceFile> [[/class:<name>] <sourceFile>...]
 |`/debug[`+&#124;-`]`|디버깅 정보를 생성할지 여부를 지정합니다.<br /><br /> `+` 또는 `/debug`를 지정하면 컴파일러에서 디버깅 정보를 생성하여 PDB(프로그램 데이터베이스) 파일에 넣습니다. 생성된 PDB 파일 이름은 `assemblyName`.pdb입니다.<br /><br /> `-`를 지정하면 `/debug`를 지정하지 않은 것으로 적용되어 디버그 정보가 생성되지 않습니다. 정식 버전의 어셈블리가 생성됩니다. **참고:** 디버그 모드에서 컴파일하면 XSLT 성능에 크게 영향을 미칠 수 있습니다.|  
 |`/help`|이 도구의 명령 구문 및 옵션을 표시합니다.|  
 |`/nologo`|컴파일러 저작권 메시지가 표시되지 않도록 합니다.|  
-|`/platform:` `string`|어셈블리가 실행되는 플랫폼을 지정합니다. 유효한 플랫폼 값은 다음과 같습니다.<br /><br /> `x86`을 지정하면 32비트 x86 호환 공용 언어 런타임에 의해 실행되도록 어셈블리를 컴파일합니다.<br /><br /> `x64`를 지정하면 AMD64 또는 EM64T 명령 집합을 지원하는 컴퓨터에서 64비트 공용 언어 런타임에 의해 실행되도록 어셈블리를 컴파일합니다.<br /><br /> [!INCLUDE[vcpritanium](../../../../includes/vcpritanium-md.md)] 지정하면 [!INCLUDE[vcpritanium](../../../../includes/vcpritanium-md.md)] 프로세서가 있는 컴퓨터에서 64비트 공용 언어 런타임에 의해 실행되도록 어셈블리를 컴파일합니다.<br /><br /> `anycpu`를 지정하면 임의의 플랫폼에서 실행되도록 어셈블리를 컴파일합니다. 이 값이 기본값입니다.|  
+|`/platform:` `string`|어셈블리가 실행되는 플랫폼을 지정합니다. 유효한 플랫폼 값은 다음과 같습니다.<br /><br /> `x86`을 지정하면 32비트 x86 호환 공용 언어 런타임에 의해 실행되도록 어셈블리를 컴파일합니다.<br /><br /> `x64`를 지정하면 AMD64 또는 EM64T 명령 집합을 지원하는 컴퓨터에서 64비트 공용 언어 런타임에 의해 실행되도록 어셈블리를 컴파일합니다.<br /><br /> [!INCLUDE[vcpritanium](../../../../includes/vcpritanium-md.md)]을 지정하면 [!INCLUDE[vcpritanium](../../../../includes/vcpritanium-md.md)] 프로세서가 있는 컴퓨터에서 64비트 공용 언어 런타임에 의해 실행되도록 어셈블리를 컴파일합니다.<br /><br /> `anycpu`를 지정하면 임의의 플랫폼에서 실행되도록 어셈블리를 컴파일합니다. 이 값이 기본값입니다.|  
 |`/out:` `assemblyName`|출력되는 어셈블리 이름을 지정합니다. 어셈블리 이름은 기본적으로 기본 스타일시트 이름 또는 첫 번째 스타일시트 이름(스타일시트가 여러 개 있는 경우)입니다.<br /><br /> 스타일시트에 스크립트가 포함된 경우 스크립트는 별도 어셈블리로 저장됩니다. 스크립트 어셈블리 이름은 기본 어셈블리 이름에서 생성됩니다. 예를 들어 어셈블리 이름으로 CustOrders.dll을 지정한 경우 첫 번째 스크립트 어셈블리 이름은 CustOrders_Script1.dll입니다.|  
 |`/settings:` `document+-, script+-, DTD+-,`|스타일시트에 `document()` 함수, XSLT 스크립트 또는 DTD(문서 종류 정의)를 허용할지 여부를 지정합니다.<br /><br /> 기본 동작에서는 DTD, `document()` 함수 및 스크립트를 지원하지 않습니다.|  
 |`@` `file`|컴파일러 옵션이 포함된 파일을 지정할 수 있습니다.|  

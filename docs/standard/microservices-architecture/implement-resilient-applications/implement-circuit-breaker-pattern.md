@@ -1,21 +1,14 @@
 ---
-title: "회로 차단기 패턴 구현"
-description: "컨테이너화된 .NET 응용 프로그램을 위한 .NET 마이크로 서비스 아키텍처 | 회로 차단기 패턴 구현"
-keywords: "Docker, 마이크로 서비스, ASP.NET, 컨테이너"
+title: 회로 차단기 패턴 구현
+description: 컨테이너화된 .NET 응용 프로그램을 위한 .NET 마이크로 서비스 아키텍처 | 회로 차단기 패턴 구현
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 11/12/2017
-ms.prod: .net-core
-ms.technology: dotnet-docker
-ms.topic: article
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 5d7db6899068f84f9165022cfbf17767a75e7db9
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: dea94d8eda3341cca5e3aaf6b3c8369c27381135
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="implementing-the-circuit-breaker-pattern"></a>회로 차단기 패턴 구현
 
@@ -233,19 +226,19 @@ Policy.Handle<HttpResponseException>() // etc
     );
 ```
 
-## <a name="additional-resources"></a>추가 리소스
+## <a name="additional-resources"></a>추가 자료
 
--   **재시도 패턴**
+-   **패턴 다시 시도**
     [*https://docs.microsoft.com/azure/architecture/patterns/retry*](https://docs.microsoft.com/azure/architecture/patterns/retry)
 
--   **연결 복원력**(Entity Framework Core) [*https://docs.microsoft.com/ef/core/miscellaneous/connection-resiliency*](https://docs.microsoft.com/ef/core/miscellaneous/connection-resiliency)
+-   **연결 복원력**(Entity Framework Core)[*https://docs.microsoft.com/ef/core/miscellaneous/connection-resiliency*](https://docs.microsoft.com/ef/core/miscellaneous/connection-resiliency)
 
 -   **Polly**(.NET 탄력성 및 transient-fault-handling 라이브러리) [*https://github.com/App-vNext/Polly*](https://github.com/App-vNext/Polly)
 
 -   **회로 차단기 패턴**
     [*https://docs.microsoft.com/azure/architecture/patterns/circuit-breaker*](https://docs.microsoft.com/azure/architecture/patterns/circuit-breaker)
 
--   **Marc Brooker. 지터: 임의성을 통한 작업 개선** https://brooker.co.za/blog/2015/03/21/backoff.html
+-   **Marc Brooker. 지터: 임의성으로 작업을 더 좋게 만들기** https://brooker.co.za/blog/2015/03/21/backoff.html
 
 
 >[!div class="step-by-step"]

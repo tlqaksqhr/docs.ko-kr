@@ -1,21 +1,12 @@
 ---
-title: "LINQ to XML 개요(C#)"
-ms.custom: 
+title: LINQ to XML 개요(C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-csharp
-ms.topic: article
 ms.assetid: 716b94d3-0091-4de1-8e05-41bc069fa9dd
-caps.latest.revision: "3"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 1c66e87ecc72bf711dfda33cd7c0ea35f126c1e7
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 318c5494134fd1dd3ac2adbf538d693ad4a5dbf8
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="linq-to-xml-overview-c"></a>LINQ to XML 개요(C#)
 XML은 다양한 컨텍스트에서 데이터의 형식을 지정하는 방법으로 널리 채택되고 있습니다. 예를 들어, 웹에 있는 구성 파일, Microsoft Office Word 파일 및 데이터베이스에서 XML을 찾을 수 있습니다.  
@@ -72,7 +63,7 @@ select item;
 -   이러한 기능을 함께 사용하여 XML 트리의 모양을 변환할 수 있습니다.  
   
 ## <a name="creating-xml-trees"></a>XML 트리 만들기  
- 사용한 프로그래밍의 가장 중요 한 이점 중 하나 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 쉽게 XML 트리를 만들 수 있다는 것입니다. 예를 들어 작은 XML 트리를 만들려면 다음과 같이 코드를 작성할 수 있습니다.  
+ [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]을 사용하여 프로그래밍하는 경우의 가장 중요한 이점 중 하나는 XML 트리를 쉽게 만들 수 있다는 점입니다. 예를 들어 작은 XML 트리를 만들려면 다음과 같이 코드를 작성할 수 있습니다.  
   
 ```csharp  
 XElement contacts =  

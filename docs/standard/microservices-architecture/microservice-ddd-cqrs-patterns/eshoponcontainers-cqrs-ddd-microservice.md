@@ -1,21 +1,14 @@
 ---
-title: "eShopOnContainers의 DDD 마이크로 서비스에서 CQRS 및 CQS 방법 적용"
-description: "컨테이너화된 .NET 응용 프로그램을 위한 .NET 마이크로 서비스 아키텍처 | eShopOnContainers의 DDD 마이크로 서비스에서 CQRS 및 CQS 방법 적용"
-keywords: "Docker, 마이크로 서비스, ASP.NET, 컨테이너"
+title: eShopOnContainers의 DDD 마이크로 서비스에서 CQRS 및 CQS 방법 적용
+description: 컨테이너화된 .NET 응용 프로그램을 위한 .NET 마이크로 서비스 아키텍처 | eShopOnContainers의 DDD 마이크로 서비스에서 CQRS 및 CQS 방법 적용
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.prod: .net-core
-ms.technology: dotnet-docker
-ms.topic: article
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 63e61a93aa2a162d7b48e0d423dab99dcea9d020
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 6be8b52f42e3e37ff03e561af45c46f4dd283d9e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="applying-cqrs-and-cqs-approaches-in-a-ddd-microservice-in-eshoponcontainers"></a>eShopOnContainers의 DDD 마이크로 서비스에서 CQRS 및 CQS 방법 적용
 
@@ -45,7 +38,7 @@ CQRS 및 대부분의 DDD 패턴(DDD 계층이나 집계가 있는 도메인 모
 
 응용 프로그램 아키텍처는 하나뿐입니다. 즉 사용자가 설계하는 시스템 아키텍처 또는 종단 간 응용 프로그램입니다(예: 마이크로 서비스 아키텍처). 그러나 이 응용 프로그램 내에서 경계가 지정된 각각의 컨텍스트나 마이크로 서비스의 설계에서는 아키텍처 패턴 수준에서 자체 절충 및 내부 설계 결정을 반영합니다. CQRS 또는 DDD처럼 동일한 아키텍처 패턴을 모든 곳에 적용해서는 안 됩니다. 
 
-####  <a name="additional-resources"></a>추가 리소스
+####  <a name="additional-resources"></a>추가 자료
 
 -   **Martin Fowler. CQRS**
     [*https://martinfowler.com/bliki/CQRS.html*](https://martinfowler.com/bliki/CQRS.html)
@@ -53,7 +46,7 @@ CQRS 및 대부분의 DDD 패턴(DDD 계층이나 집계가 있는 도메인 모
 -   **Greg Young. CQS vs. CQRS**
     [*http://codebetter.com/gregyoung/2009/08/13/command-query-separation/*](http://codebetter.com/gregyoung/2009/08/13/command-query-separation/)
 
--   **Greg Young. CQRS Documents**
+-   **Greg Young. CQRS 문서**
     [*https://cqrs.files.wordpress.com/2010/11/cqrs\_documents.pdf*](https://cqrs.files.wordpress.com/2010/11/cqrs_documents.pdf)
 
 -   **Greg Young. CQRS, 작업 기반 UI 및 이벤트 소싱**
@@ -65,7 +58,7 @@ CQRS 및 대부분의 DDD 패턴(DDD 계층이나 집계가 있는 도메인 모
 -   **CQRS**
     [*http://udidahan.com/2009/12/09/clarified-cqrs/*](http://udidahan.com/2009/12/09/clarified-cqrs/)
 
--   **이벤트 소싱 (ES)**
+-   **ES(이벤트 소싱)**
     [*http://codebetter.com/gregyoung/2010/02/20/why-use-event-sourcing/*](http://codebetter.com/gregyoung/2010/02/20/why-use-event-sourcing/)
 
 

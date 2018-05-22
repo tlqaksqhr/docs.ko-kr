@@ -1,21 +1,15 @@
 ---
-title: "문(C# 프로그래밍 가이드)"
+title: 문(C# 프로그래밍 가이드)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - statements [C#], about statements
 - C# language, statements
 ms.assetid: 901bcde7-87de-4e15-833c-f9cfd40c8ce3
-caps.latest.revision: "28"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 166130ca7a63127d0bd1df8328dc08b4a8cd7845
-ms.sourcegitcommit: 7e99f66ef09d2903e22c789c67ff5a10aa953b2f
+ms.openlocfilehash: 68f7f799ebbfe52c99820083eb22761c79f66483
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="statements-c-programming-guide"></a>문(C# 프로그래밍 가이드)
 프로그램이 수행하는 작업은 문으로 표현됩니다. 일반적인 작업으로 지정된 조건에 따라 변수 선언, 값 할당, 메서드 호출, 컬렉션 반복, 하나 또는 다른 코드 블록으로 분기 등이 있습니다. 프로그램에서 문이 실행되는 순서를 제어 흐름 또는 실행 흐름이라고 합니다. 제어 흐름은 프로그램이 런타임 시 수신하는 입력에 대응하는 방식에 따라 프로그램을 실행할 때마다 달라질 수 있습니다.  
@@ -44,7 +38,7 @@ ms.lasthandoff: 11/18/2017
 |빈 문|빈 문은 하나의 세미콜론으로 구성됩니다. 아무 작업도 수행하지 않으며, 문이 필요하지만 아무 작업도 수행할 필요가 없는 위치에서 사용할 수 있습니다. 다음 예제에서는 빈 문의 두 가지 사용을 보여 줍니다.<br /><br /> [!code-csharp[csProgGuideStatements#25](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/statements_4.cs)]|  
   
 ## <a name="embedded-statements"></a>포함 문  
- [do](../../../csharp/language-reference/keywords/do.md), [while](../../../csharp/language-reference/keywords/while.md), [for](../../../csharp/language-reference/keywords/for.md) 및 [foreach](../../../csharp/language-reference/keywords/foreach-in.md)를 비롯한 일부 문은 항상 포함 문이 뒤에 나옵니다. 이 포함 문은 단일 문이나 문 블록에서 {} 괄호로 묶인 여러 문일 수 있습니다. 한 줄로 된 각 포함 문을 다음 예제와 같이 {} 괄호로 묶을 수 있습니다.  
+ [do](../../../csharp/language-reference/keywords/do.md), [while](../../../csharp/language-reference/keywords/while.md), [for](../../../csharp/language-reference/keywords/for.md) 및 [foreach](../../../csharp/language-reference/keywords/foreach-in.md)를 비롯한 일부 문은 항상 포함 문이 뒤에 나옵니다. 이 포함 명령문은 단일 명령문이나 명령문 블록에서 {} 괄호로 묶인 여러 명령문일 수 있습니다. 한 줄로 된 각 포함 명령문을 다음 예제와 같이 {} 괄호로 묶을 수 있습니다.  
   
  [!code-csharp[csProgGuideStatements#26](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/statements_5.cs)]  
   

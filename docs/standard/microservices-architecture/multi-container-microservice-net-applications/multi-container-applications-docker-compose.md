@@ -1,25 +1,18 @@
 ---
 title: docker-compose.yml을 사용하여 다중 컨테이너 응용 프로그램 정의
 description: 컨테이너화된 .NET 응용 프로그램에 대한 .NET 마이크로 서비스 아키텍처 | docker-compose.yml을 사용하여 다중 컨테이너 응용 프로그램 정의
-keywords: Docker, 마이크로 서비스, ASP.NET, 컨테이너
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/30/2017
-ms.prod: .net-core
-ms.technology: dotnet-docker
-ms.topic: article
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: c4fed5c7ba5c2048d103f22bd2b463c143013280
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
-ms.translationtype: MT
+ms.openlocfilehash: ded2e5399938be25005776963b0310b6a49d0353
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="defining-your-multi-container-application-with-docker-composeyml"></a>docker-compose.yml을 사용하여 다중 컨테이너 응용 프로그램 정의 
 
-이 가이드에는 [docker compose.yml](https://docs.docker.com/compose/compose-file/) 파일 섹션에 도입 된 [4 단계. 다중 컨테이너 Docker 응용 프로그램을 빌드할 때 docker compose.yml 서비스 정의](#step4_define_svcs_in_docker_compose_yml)합니다. 그러나 더 자세히 살펴볼 가치가 있는 docker-compose 파일을 사용하는 다른 방법이 있습니다.
+이 가이드에서 [docker compose.yml](https://docs.docker.com/compose/compose-file/) 파일은 섹션 [4단계. 다중 컨테이너 Docker 응용 프로그램을 빌드할 때 docker compose.yml 파일에서 서비스 정의](#step4_define_svcs_in_docker_compose_yml)에서 도입되었습니다. 그러나 더 자세히 살펴볼 가치가 있는 docker-compose 파일을 사용하는 다른 방법이 있습니다.
 
 예를 들어 docker-compose.yml 파일에서 다중 컨테이너 응용 프로그램을 배포하려는 방법을 명시적으로 설명할 수 있습니다. 필요에 따라 사용자 지정 Docker 이미지를 작성하려는 방법을 설명할 수도 있습니다. (사용자 지정 Docker 이미지는 Docker CLI를 사용하여 빌드될 수도 있습니다.)
 
@@ -434,11 +427,11 @@ docker-compose는 .env 파일의 각 줄이 &lt;변수&gt;=&lt;값&gt; 형식이
 
 #### <a name="additional-resources"></a>추가 자료
 
--   **Docker 간략하게 작성**
+-   **Docker Compose 개요**
     [*https://docs.docker.com/compose/overview/*](https://docs.docker.com/compose/overview/)
 
 -   **여러 Compose 파일**
-    [*https://docs.docker.com/compose/extends/\#여러 구성 파일*](https://docs.docker.com/compose/extends/#multiple-compose-files)
+    [*https://docs.docker.com/compose/extends/\#multiple-compose-files*](https://docs.docker.com/compose/extends/#multiple-compose-files)
 
 ### <a name="building-optimized-aspnet-core-docker-images"></a>최적화된 ASP.NET Core Docker 이미지 빌드
 
@@ -468,7 +461,7 @@ ENTRYPOINT ["dotnet", "run"]
 
 #### <a name="additional-resources"></a>추가 자료
 
--   **ASP.NET Core를 사용 하 여 Docker 이미지를 최적화 구성**
+-   **ASP.NET Core를 사용하여 최적화된 Docker 이미지 빌드**
     [*https://blogs.msdn.microsoft.com/stevelasker/2016/09/29/building-optimized-docker-images-with-asp-net-core/*](https://blogs.msdn.microsoft.com/stevelasker/2016/09/29/building-optimized-docker-images-with-asp-net-core/)
 
 ### <a name="building-the-application-from-a-build-ci-container"></a>빌드(CI) 컨테이너에서 응용 프로그램 빌드
@@ -549,8 +542,8 @@ Visual Studio를 사용하는 경우 이러한 모든 단계가 내부적으로 
 
 #### <a name="additional-resources"></a>추가 자료
 
--   **컨테이너의 비트를 구축: Windows CLI 환경 (dotnet CLI Docker CLI 및 VS Code)에서 eShopOnContainers 솔루션 설정**
-    [*https://github.com/dotnet/eShopOnContainers/wiki/03.-Setting-the-eShopOnContainers-solution-up-in-a-Windows-CLI-environment-(dotnet-CLI,-Docker-CLI-및-VS-코드)*](https://github.com/dotnet/eShopOnContainers/wiki/03.-Setting-the-eShopOnContainers-solution-up-in-a-Windows-CLI-environment-(dotnet-CLI,-Docker-CLI-and-VS-Code))
+-   **컨테이너의 비트 빌드: Windows CLI 환경(dotnet CLI, Docker CLI 및 VS Code)에서 eShopOnContainers 솔루션 설정**
+    [*https://github.com/dotnet/eShopOnContainers/wiki/03.-Setting-the-eShopOnContainers-solution-up-in-a-Windows-CLI-environment-(dotnet-CLI,-Docker-CLI-and-VS-Code)*](https://github.com/dotnet/eShopOnContainers/wiki/03.-Setting-the-eShopOnContainers-solution-up-in-a-Windows-CLI-environment-(dotnet-CLI,-Docker-CLI-and-VS-Code))
 
 
 >[!div class="step-by-step"]

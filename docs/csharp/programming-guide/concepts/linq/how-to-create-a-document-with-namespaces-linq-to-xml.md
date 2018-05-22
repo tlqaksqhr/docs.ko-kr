@@ -1,26 +1,17 @@
 ---
-title: "방법: 네임스페이스로 문서 만들기(C#)(LINQ to XML)"
-ms.custom: 
+title: '방법: 네임스페이스로 문서 만들기(C#)(LINQ to XML)'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-csharp
-ms.topic: article
 ms.assetid: 37e63c57-f86d-47ac-88a7-2c2d107def30
-caps.latest.revision: "3"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: d913cdf8b9018aa2bf91fd5a05b823e90ba63df2
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: ab572e0af79d51205167ad60b1b80e8ba6b43707
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-a-document-with-namespaces-c-linq-to-xml"></a>방법: 네임스페이스로 문서 만들기(C#)(LINQ to XML)
 이 항목에서는 네임스페이스를 사용하여 문서를 만드는 방법을 보여 줍니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  네임스페이스에 포함되는 요소나 특성을 만들려면 먼저 <xref:System.Xml.Linq.XNamespace> 개체를 선언하고 초기화합니다. 그런 다음 추가 연산자 오버로드를 사용하여 네임스페이스를 문자열로 표현된 로컬 이름과 결합합니다.  
   
  다음 예제에서는 네임스페이스가 하나 포함된 문서를 만들고 기본적으로 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]은 기본 네임스페이스를 사용하여 이 문서를 serialize합니다.  
@@ -42,7 +33,7 @@ Console.WriteLine(root);
 </Root>  
 ```  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제에서는 네임스페이스가 하나 포함된 문서를 만들고 네임스페이스 접두사가 포함된 네임스페이스를 선언하는 특성도 만듭니다. 접두사가 포함된 네임스페이스를 선언하는 특성을 만들려면 특성 이름이 네임스페이스 접두사이고 이 이름이 <xref:System.Xml.Linq.XNamespace.Xmlns%2A> 네임스페이스에 포함되는 특성을 만듭니다. 이 특성의 값은 네임스페이스의 URI입니다.  
   
 ```csharp  
@@ -63,10 +54,10 @@ Console.WriteLine(root);
 </aw:Root>  
 ```  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제에서는 두 네임스페이스가 포함된 문서를 만드는 방법을 보여 줍니다. 두 네임스페이스 중 하나는 기본 네임스페이스이고 다른 하나는 접두사가 포함된 네임스페이스입니다.  
   
- 루트 요소에 네임스페이스 특성을 포함하면 http://www.adventure-works.com이 기본 네임스페이스가 되도록 네임스페이스가 serialize되고 www.fourthcoffee.com이 "fc" 접두사를 사용하여 serialize됩니다. 기본 네임스페이스를 선언하는 특성을 만들려면 네임스페이스 없이 이름이 "xmlns"인 특성을 만듭니다. 특성 값은 기본 네임스페이스 URI입니다.  
+ 루트 요소에 네임스페이스 특성을 포함하면 http://www.adventure-works.com이 기본 네임스페이스가 되도록 네임스페이스가 serialize되고 www.fourthcoffee.com이 “fc” 접두사를 사용하여 serialize됩니다. 기본 네임스페이스를 선언하는 특성을 만들려면 네임스페이스 없이 이름이 "xmlns"인 특성을 만듭니다. 특성 값은 기본 네임스페이스 URI입니다.  
   
 ```csharp  
 // The http://www.adventure-works.com namespace is forced to be the default namespace.  
@@ -96,7 +87,7 @@ Console.WriteLine(root);
 </Root>  
 ```  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제에서는 네임스페이스 접두사가 있는 두 가지 네임스페이스가 포함된 문서를 만듭니다.  
   
 ```csharp  
@@ -126,7 +117,7 @@ Console.WriteLine(root);
 </aw:Root>  
 ```  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  동일한 결과를 얻는 또 다른 방법은 <xref:System.Xml.Linq.XNamespace> 개체를 선언하고 만드는 대신 확장된 이름을 사용하는 것입니다.  
   
  이 방법에는 성능과 관련된 문제가 있습니다. 확장된 이름이 포함된 문자열을 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]에 전달할 때마다 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]에서는 이름을 구문 분석하고 원자화된 네임스페이스를 찾은 다음 원자화된 이름을 찾아야 합니다. 이 과정에는 CPU 시간이 필요합니다. 성능이 중요한 경우에는 <xref:System.Xml.Linq.XNamespace> 개체를 명시적으로 선언하고 사용할 수 있습니다.  

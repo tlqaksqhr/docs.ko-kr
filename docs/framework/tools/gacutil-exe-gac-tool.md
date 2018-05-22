@@ -1,13 +1,6 @@
 ---
-title: "Gacutil.exe(전역 어셈블리 캐시 도구)"
-ms.custom: 
+title: Gacutil.exe(전역 어셈블리 캐시 도구)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - assemblies [.NET Framework], global assembly cache
 - global assembly cache, viewing contents
@@ -24,16 +17,13 @@ helpviewer_keywords:
 - global assembly cache, Gacutil.exe
 - Global Assembly Cache tool
 ms.assetid: 4c7be9c8-72ae-481f-a01c-1a4716806e99
-caps.latest.revision: "17"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: f802abf6ed90a60b057b01589dcf32c2aa495676
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 98423e6c103f7eb93b4bfa35ef19b6551c0df0e0
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="gacutilexe-global-assembly-cache-tool"></a>Gacutil.exe(전역 어셈블리 캐시 도구)
 전역 어셈블리 캐시 도구를 사용하면 전역 어셈블리 캐시와 다운로드 캐시의 내용을 보고 조작할 수 있습니다.  

@@ -1,21 +1,14 @@
 ---
-title: "중첩 형식(C# 프로그래밍 가이드)"
+title: 중첩 형식(C# 프로그래밍 가이드)
 ms.date: 07/10/2017
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - nested types [C#]
 ms.assetid: f2e1b315-e3d1-48ce-977f-7bae0960ba99
-caps.latest.revision: 
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: ab13c68b638062ab89c90dbfc51b51b8d72d3bde
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 57356fbf4bff218932d1f1b4c62532f10c175757
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="nested-types-c-programming-guide"></a>중첩 형식(C# 프로그래밍 가이드)
 [클래스](../../../csharp/language-reference/keywords/class.md) 또는 [구조체](../../../csharp/language-reference/keywords/struct.md) 내에서 선언된 형식을 중첩 형식이라고 합니다. 예:  
@@ -26,9 +19,9 @@ ms.lasthandoff: 11/21/2017
 
 다음과 같이 [액세스 한정자](../../language-reference/keywords/access-modifiers.md)를 지정하여 중첩 형식의 접근성을 정의할 수도 있습니다.
 
-- 유형의 중첩는 **클래스** 수 [공용](../../../csharp/language-reference/keywords/public.md), [보호](../../../csharp/language-reference/keywords/protected.md), [내부](../../../csharp/language-reference/keywords/internal.md), [내부 보호](../../../csharp/language-reference/keywords/protected-internal.md), [개인](../../../csharp/language-reference/keywords/private.md) 또는 [보호 된 개인](../../../csharp/language-reference/keywords/private-protected.md)합니다. 
+- **클래스**의 중첩 형식은 [public](../../../csharp/language-reference/keywords/public.md), [protected](../../../csharp/language-reference/keywords/protected.md), [internal](../../../csharp/language-reference/keywords/internal.md), [protected internal](../../../csharp/language-reference/keywords/protected-internal.md), [private](../../../csharp/language-reference/keywords/private.md) 또는 [private protected](../../../csharp/language-reference/keywords/private-protected.md)일 수 있습니다. 
 
-   그러나 정의 `protected`, `protected internal` 또는 `private protected` 중첩 된 클래스 내부는 [봉인 클래스](../../language-reference/keywords/sealed.md) 컴파일러 경고를 생성 [CS0628](../../misc/cs0628.md), "봉인된 클래스에 새 protected 멤버가 선언 되었습니다."
+   그러나 [sealed 클래스](../../language-reference/keywords/sealed.md) 내에서 `protected`, `protected internal` 또는 `private protected` 중첩 클래스를 정의하면 컴파일러 경고 [CS0628](../../misc/cs0628.md), “sealed 클래스에 새 protected 멤버가 선언되었습니다.”가 생성됩니다.
   
 - **구조체**의 중첩 형식은 [public](../../../csharp/language-reference/keywords/public.md), [internal](../../../csharp/language-reference/keywords/internal.md) 또는 [private](../../../csharp/language-reference/keywords/private.md)일 수 있습니다.
   

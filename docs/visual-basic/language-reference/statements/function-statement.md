@@ -1,6 +1,6 @@
 ---
 title: Function 문(Visual Basic)
-ms.date: 07/20/2015
+ms.date: 05/12/2018
 f1_keywords:
 - vb.Function
 helpviewer_keywords:
@@ -28,11 +28,11 @@ helpviewer_keywords:
 - End keyword [Visual Basic], Function statements
 - Handles keyword [Visual Basic], Function statements
 ms.assetid: a4497077-0f46-4ede-a27f-9e8670df52b9
-ms.openlocfilehash: b4a0c33d6d466975ca5dde1bd20ad2e1a9f560e4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 908aa594ecbdd8ae2ec5a06de8181a1b16bb7e40
+ms.sourcegitcommit: 22c3c8f74eaa138dbbbb02eb7d720fce87fc30a9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="function-statement-visual-basic"></a>Function 문(Visual Basic)
 선언 이름과 매개 변수를 정의 하는 코드는 `Function` 프로시저입니다.  
@@ -66,7 +66,9 @@ End Function
   
     -   [전용](../../../visual-basic/language-reference/modifiers/private.md)  
   
-    -   `Protected Friend`  
+    -   [Protected Friend](../../language-reference/modifiers/protected-friend.md)
+
+    - [보호 된 개인](../../language-reference/modifiers/private-protected.md)  
   
      참조 [액세스 수준을 Visual Basic의](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)합니다.  
   

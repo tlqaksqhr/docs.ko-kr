@@ -1,10 +1,6 @@
 ---
 title: Null 조건부 연산자(C# 및 Visual Basic)
 ms.date: 04/03/2015
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -16,17 +12,16 @@ helpviewer_keywords:
 - ?[] operator [C#]
 - ?[] operator [Visual Basic]
 ms.assetid: 9c7b2c8f-a785-44ca-836c-407bfb6d27f5
-caps.latest.revision: 3
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 3ffeaa3c2088d0bb2c000704cfe312b0f9453b68
-ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
+ms.openlocfilehash: da771fa4a2a89dca308508ea81ef8e0060efa7f0
+ms.sourcegitcommit: e5bb395ec86f536e114314184288f40a8c745e2e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2018
+ms.lasthandoff: 05/12/2018
 ---
 # <a name="-and--null-conditional-operators-c-and-visual-basic"></a>?. 및 ?[] Null 조건부 연산자(C# 및 Visual Basic)
-멤버 액세스(`?.`) 또는 인덱스(`?[]`) 작업을 수행하기 전에 null을 테스트하는 데 사용됩니다.  이러한 연산자는 null 검사의 처리를 위해 작성하는 코드의 양을 줄이는 데 도움이 되며 특히 데이터 구조에서 아래로 내려가는 경우에 유용합니다.  
+멤버 액세스(`?.`) 또는 인덱스(`?[]`) 작업을 수행하기 전에 Null에서 왼쪽 피연산자의 값을 테스트합니다. 왼쪽 피연산자가 `null`로 계산하는 경우 `null`을 반환합니다. 
+
+이러한 연산자는 null 검사의 처리를 위해 작성하는 코드의 양을 줄이는 데 도움이 되며 특히 데이터 구조에서 아래로 내려가는 경우에 유용합니다.  
   
 ```csharp  
 int? length = customers?.Length; // null if customers is null   
@@ -52,7 +47,7 @@ A?.B?.C?.Do(E);
 A?.B?.C?(E);
 ```  
   
- 또한 null 조건 멤버 액세스는 훨씬 더 적은 코드를 사용하여 스레드로부터 안전한 방식으로 대리자를 호출하는 데 사용됩니다.  이전 방식에서는 다음과 같은 코드가 필요합니다.  
+ 또한 Null 조건부 멤버 액세스는 훨씬 더 적은 코드를 사용하여 스레드로부터 안전한 방식으로 대리자를 호출하는 데 사용됩니다.  이전 방식에서는 다음과 같은 코드가 필요합니다.  
   
 ```csharp  
 var handler = this.PropertyChanged;  
@@ -69,16 +64,14 @@ If handler IsNot Nothing
  새로운 방식은 훨씬 더 간단합니다.  
   
 ```csharp
-PropertyChanged?.Invoke(e)  
+PropertyChanged?.Invoke(…)  
 ```  
 
 ```vb
-PropertyChanged?.Invoke(e)
+PropertyChanged?.Invoke(…)
 ```  
   
- 새로운 방식은 컴파일러가 `PropertyChanged`를 한 번만 평가하는 코드를 생성하고 결과를 임시 변수에 유지하기 때문에 스레드로부터 안전합니다.  
-  
- null 조건부 대리자 호출 구문 `PropertyChanged?(e)`가 없기 때문에 `Invoke` 메서드를 명시적으로 호출해야 합니다.  
+ 새로운 방식은 컴파일러가 `PropertyChanged`를 한 번만 평가하는 코드를 생성하고 결과를 임시 변수에 유지하기 때문에 스레드로부터 안전합니다. null 조건부 대리자 호출 구문 `PropertyChanged?(e)`가 없기 때문에 `Invoke` 메서드를 명시적으로 호출해야 합니다.  
   
 ## <a name="language-specifications"></a>언어 사양  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
@@ -89,5 +82,4 @@ PropertyChanged?.Invoke(e)
  [??(Null 병합 연산자)](null-conditional-operator.md)  
  [C# 참조](../../../csharp/language-reference/index.md)  
  [C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)  
- [Visual Basic 언어 참조](../../../visual-basic/language-reference/index.md)  
  [Visual Basic 프로그래밍 가이드](../../../visual-basic/programming-guide/index.md)
