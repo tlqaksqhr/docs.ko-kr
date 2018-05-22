@@ -1,12 +1,6 @@
 ---
-title: "동기 서버 소켓 예제"
-ms.custom: 
+title: 동기 서버 소켓 예제
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -15,19 +9,17 @@ helpviewer_keywords:
 - sockets, code examples
 - sockets, synchronous server sockets
 ms.assetid: 5916c764-879f-4716-99fb-1d21c6237f1c
-caps.latest.revision: "8"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: 7a249277a82a1b234f83e2fe17510e997425f278
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 8b5dc8ed718402a128add375cc1adfb6d17713e8
+ms.sourcegitcommit: 88f251b08bf0718ce119f3d7302f514b74895038
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/10/2018
 ---
-# <a name="synchronous-server-socket-example"></a><span data-ttu-id="cfe39-102">동기 서버 소켓 예제</span><span class="sxs-lookup"><span data-stu-id="cfe39-102">Synchronous Server Socket Example</span></span>
-<span data-ttu-id="cfe39-103">다음 예제 프로그램은 클라이언트의 연결 요청을 수신하는 서버를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="cfe39-103">The following example program creates a server that receives connection requests from clients.</span></span> <span data-ttu-id="cfe39-104">이 서버는 동기 소켓으로 빌드되므로 클라이언트의 연결을 대기하는 동안 서버 응용 프로그램의 실행이 일시 중단됩니다.</span><span class="sxs-lookup"><span data-stu-id="cfe39-104">The server is built with a synchronous socket, so execution of the server application is suspended while it waits for a connection from a client.</span></span> <span data-ttu-id="cfe39-105">응용 프로그램은 클라이언트에서 문자열을 받아 콘솔에 문자열을 표시한 다음 문자열을 클라이언트에 다시 에코합니다.</span><span class="sxs-lookup"><span data-stu-id="cfe39-105">The application receives a string from the client, displays the string on the console, and then echoes the string back to the client.</span></span> <span data-ttu-id="cfe39-106">클라이언트의 문자열에는 메시지의 끝을 알리는 “\<EOF >” 문자열이 포함되어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="cfe39-106">The string from the client must contain the string "\<EOF>" to signal the end of the message.</span></span>  
+# <a name="synchronous-server-socket-example"></a><span data-ttu-id="e012c-102">동기 서버 소켓 예제</span><span class="sxs-lookup"><span data-stu-id="e012c-102">Synchronous Server Socket Example</span></span>
+<span data-ttu-id="e012c-103">다음 예제 프로그램은 클라이언트의 연결 요청을 수신하는 서버를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="e012c-103">The following example program creates a server that receives connection requests from clients.</span></span> <span data-ttu-id="e012c-104">이 서버는 동기 소켓으로 빌드되므로 클라이언트의 연결을 대기하는 동안 서버 응용 프로그램의 실행이 일시 중단됩니다.</span><span class="sxs-lookup"><span data-stu-id="e012c-104">The server is built with a synchronous socket, so execution of the server application is suspended while it waits for a connection from a client.</span></span> <span data-ttu-id="e012c-105">응용 프로그램은 클라이언트에서 문자열을 받아 콘솔에 문자열을 표시한 다음 문자열을 클라이언트에 다시 에코합니다.</span><span class="sxs-lookup"><span data-stu-id="e012c-105">The application receives a string from the client, displays the string on the console, and then echoes the string back to the client.</span></span> <span data-ttu-id="e012c-106">클라이언트의 문자열에는 메시지의 끝을 알리는 “\<EOF >” 문자열이 포함되어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="e012c-106">The string from the client must contain the string "\<EOF>" to signal the end of the message.</span></span>  
   
 ```vb  
 Imports System  
@@ -71,7 +63,6 @@ Public Class SynchronousSocketListener
   
             ' An incoming connection needs to be processed.  
             While True  
-                bytes = New Byte(1024) {}  
                 Dim bytesRec As Integer = handler.Receive(bytes)  
                 data += Encoding.ASCII.GetString(bytes, 0, bytesRec)  
                 If data.IndexOf("<EOF>") > -1 Then  
@@ -132,7 +123,6 @@ public class SynchronousSocketListener {
   
                 // An incoming connection needs to be processed.  
                 while (true) {  
-                    bytes = new byte[1024];  
                     int bytesRec = handler.Receive(bytes);  
                     data += Encoding.ASCII.GetString(bytes,0,bytesRec);  
                     if (data.IndexOf("<EOF>") > -1) {  
@@ -167,7 +157,7 @@ public class SynchronousSocketListener {
 }  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="cfe39-107">참고 항목</span><span class="sxs-lookup"><span data-stu-id="cfe39-107">See Also</span></span>  
- [<span data-ttu-id="cfe39-108">동기 클라이언트 소켓 예제</span><span class="sxs-lookup"><span data-stu-id="cfe39-108">Synchronous Client Socket Example</span></span>](../../../docs/framework/network-programming/synchronous-client-socket-example.md)  
- [<span data-ttu-id="cfe39-109">동기 서버 소켓 사용</span><span class="sxs-lookup"><span data-stu-id="cfe39-109">Using a Synchronous Server Socket</span></span>](../../../docs/framework/network-programming/using-a-synchronous-server-socket.md)  
- [<span data-ttu-id="cfe39-110">소켓 코드 예제</span><span class="sxs-lookup"><span data-stu-id="cfe39-110">Socket Code Examples</span></span>](../../../docs/framework/network-programming/socket-code-examples.md)
+## <a name="see-also"></a><span data-ttu-id="e012c-107">참고 항목</span><span class="sxs-lookup"><span data-stu-id="e012c-107">See Also</span></span>  
+ [<span data-ttu-id="e012c-108">동기 클라이언트 소켓 예제</span><span class="sxs-lookup"><span data-stu-id="e012c-108">Synchronous Client Socket Example</span></span>](../../../docs/framework/network-programming/synchronous-client-socket-example.md)  
+ [<span data-ttu-id="e012c-109">동기 서버 소켓 사용</span><span class="sxs-lookup"><span data-stu-id="e012c-109">Using a Synchronous Server Socket</span></span>](../../../docs/framework/network-programming/using-a-synchronous-server-socket.md)  
+ [<span data-ttu-id="e012c-110">소켓 코드 예제</span><span class="sxs-lookup"><span data-stu-id="e012c-110">Socket Code Examples</span></span>](../../../docs/framework/network-programming/socket-code-examples.md)

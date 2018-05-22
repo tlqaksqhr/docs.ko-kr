@@ -1,14 +1,6 @@
 ---
 title: 투명 효과 프레임을 WPF 응용 프로그램으로 확장
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-wpf
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -18,32 +10,26 @@ helpviewer_keywords:
 - extending glass frames into applications [WPF]
 - glass frames [WPF], extending into applications
 ms.assetid: 74388a3a-4b69-4a9d-ba1f-e107636bd660
-caps.latest.revision: ''
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: aad070bca408fc608eb000948c1b942d08f02018
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: 1e1efd6db6efa3a0b85d7d7794be7d3728da8c85
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="extend-glass-frame-into-a-wpf-application"></a><span data-ttu-id="e8ee5-102">투명 효과 프레임을 WPF 응용 프로그램으로 확장</span><span class="sxs-lookup"><span data-stu-id="e8ee5-102">Extend Glass Frame Into a WPF Application</span></span>
-<span data-ttu-id="e8ee5-103">이 항목에서는 [!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)] 투명 효과 프레임을 [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] 응용 프로그램의 클라이언트 영역으로 확장하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="e8ee5-103">This topic demonstrates how to extend the [!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)] glass frame into the client area of a [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] application.</span></span>  
+# <a name="extend-glass-frame-into-a-wpf-application"></a><span data-ttu-id="f4075-102">투명 효과 프레임을 WPF 응용 프로그램으로 확장</span><span class="sxs-lookup"><span data-stu-id="f4075-102">Extend Glass Frame Into a WPF Application</span></span>
+<span data-ttu-id="f4075-103">이 항목에서는 확장 하는 방법을 보여 줍니다.는 [!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)] Windows Presentation Foundation (WPF) 응용 프로그램의 클라이언트 영역에 투명 효과 프레임입니다.</span><span class="sxs-lookup"><span data-stu-id="f4075-103">This topic demonstrates how to extend the [!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)] glass frame into the client area of a Windows Presentation Foundation (WPF) application.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="e8ee5-104">이 예제는 투명 효과가 사용되도록 설정된 DWM(바탕 화면 창 관리자)를 실행하는 [!INCLUDE[TLA2#tla_winvista](../../../../includes/tla2sharptla-winvista-md.md)] 컴퓨터에서만 작동합니다.</span><span class="sxs-lookup"><span data-stu-id="e8ee5-104">This example will only work on a [!INCLUDE[TLA2#tla_winvista](../../../../includes/tla2sharptla-winvista-md.md)] machine running the Desktop Window Manager (DWM) with glass enabled.</span></span> [!INCLUDE[TLA2#tla_winvista](../../../../includes/tla2sharptla-winvista-md.md)]<span data-ttu-id="e8ee5-105"> Home Basic Edition에서는 투명 효과를 지원하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="e8ee5-105"> Home Basic edition does not support the transparent glass effect.</span></span> <span data-ttu-id="e8ee5-106">일반적으로 [!INCLUDE[TLA2#tla_winvista](../../../../includes/tla2sharptla-winvista-md.md)]의 다른 버전에서 투명 효과로 렌더링되는 영역은 불투명하게 렌더링됩니다.</span><span class="sxs-lookup"><span data-stu-id="e8ee5-106">Areas that would typically render with the transparent glass effect on other editions of [!INCLUDE[TLA2#tla_winvista](../../../../includes/tla2sharptla-winvista-md.md)] are rendered opaque.</span></span>  
+>  <span data-ttu-id="f4075-104">이 예제는 투명 효과가 사용되도록 설정된 DWM(바탕 화면 창 관리자)를 실행하는 [!INCLUDE[TLA2#tla_winvista](../../../../includes/tla2sharptla-winvista-md.md)] 컴퓨터에서만 작동합니다.</span><span class="sxs-lookup"><span data-stu-id="f4075-104">This example will only work on a [!INCLUDE[TLA2#tla_winvista](../../../../includes/tla2sharptla-winvista-md.md)] machine running the Desktop Window Manager (DWM) with glass enabled.</span></span> [!INCLUDE[TLA2#tla_winvista](../../../../includes/tla2sharptla-winvista-md.md)]<span data-ttu-id="f4075-105"> Home Basic Edition에서는 투명 효과를 지원하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="f4075-105"> Home Basic edition does not support the transparent glass effect.</span></span> <span data-ttu-id="f4075-106">일반적으로 [!INCLUDE[TLA2#tla_winvista](../../../../includes/tla2sharptla-winvista-md.md)]의 다른 버전에서 투명 효과로 렌더링되는 영역은 불투명하게 렌더링됩니다.</span><span class="sxs-lookup"><span data-stu-id="f4075-106">Areas that would typically render with the transparent glass effect on other editions of [!INCLUDE[TLA2#tla_winvista](../../../../includes/tla2sharptla-winvista-md.md)] are rendered opaque.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="e8ee5-107">예제</span><span class="sxs-lookup"><span data-stu-id="e8ee5-107">Example</span></span>  
- <span data-ttu-id="e8ee5-108">다음 그림에서는 Internet Explorer 7의 주소 표시줄로 확장되는 투명 효과 프레임을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="e8ee5-108">The following image illustrates the glass frame extended into the address bar of Internet Explorer 7.</span></span>  
+## <a name="example"></a><span data-ttu-id="f4075-107">예제</span><span class="sxs-lookup"><span data-stu-id="f4075-107">Example</span></span>  
+ <span data-ttu-id="f4075-108">다음 그림에서는 Internet Explorer 7의 주소 표시줄로 확장되는 투명 효과 프레임을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="f4075-108">The following image illustrates the glass frame extended into the address bar of Internet Explorer 7.</span></span>  
   
- <span data-ttu-id="e8ee5-109">**주소 표시줄 뒤로 투명 효과 프레임이 확장된 Internet Explorer**</span><span class="sxs-lookup"><span data-stu-id="e8ee5-109">**Internet Explorer with extended glass frame behind address bar.**</span></span>  
+ <span data-ttu-id="f4075-109">**주소 표시줄 뒤로 투명 효과 프레임이 확장된 Internet Explorer**</span><span class="sxs-lookup"><span data-stu-id="f4075-109">**Internet Explorer with extended glass frame behind address bar.**</span></span>  
   
- <span data-ttu-id="e8ee5-110">![주소 표시줄 뒤로 투명 효과 프레임이 확장된 IE7](../../../../docs/framework/wpf/graphics-multimedia/media/ie7glasstopbar.PNG "IE7glasstopbar")</span><span class="sxs-lookup"><span data-stu-id="e8ee5-110">![IE7 with glass frame extended behind address bar.](../../../../docs/framework/wpf/graphics-multimedia/media/ie7glasstopbar.PNG "IE7glasstopbar")</span></span>  
+ <span data-ttu-id="f4075-110">![주소 표시줄 뒤로 투명 효과 프레임이 확장된 IE7](../../../../docs/framework/wpf/graphics-multimedia/media/ie7glasstopbar.PNG "IE7glasstopbar")</span><span class="sxs-lookup"><span data-stu-id="f4075-110">![IE7 with glass frame extended behind address bar.](../../../../docs/framework/wpf/graphics-multimedia/media/ie7glasstopbar.PNG "IE7glasstopbar")</span></span>  
   
- <span data-ttu-id="e8ee5-111">[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 응용 프로그램에서 투명 효과 프레임을 확장하려면 관리되지 않는 [!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)]에 액세스해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="e8ee5-111">To extend the glass frame on a [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] application, access to unmanaged [!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)] is needed.</span></span> <span data-ttu-id="e8ee5-112">다음 코드 예제에서는 프레임을 클라이언트 영역으로 확장하는 데 필요한 두 개의 [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)]에 대해 플랫폼 호출(pinvoke)을 수행합니다.</span><span class="sxs-lookup"><span data-stu-id="e8ee5-112">The following code example does a Platform Invoke (pinvoke) for the two [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] needed to extend the frame into the client area.</span></span> <span data-ttu-id="e8ee5-113">이러한 각 [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)]는 **NonClientRegionAPI**라는 클래스에 선언됩니다.</span><span class="sxs-lookup"><span data-stu-id="e8ee5-113">Each of these [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] are declared in a class called **NonClientRegionAPI**.</span></span>  
+ <span data-ttu-id="f4075-111">[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 응용 프로그램에서 투명 효과 프레임을 확장하려면 관리되지 않는 [!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)]에 액세스해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="f4075-111">To extend the glass frame on a [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] application, access to unmanaged [!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)] is needed.</span></span> <span data-ttu-id="f4075-112">다음 코드 예제에서는 프레임을 클라이언트 영역으로 확장하는 데 필요한 두 개의 [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)]에 대해 플랫폼 호출(pinvoke)을 수행합니다.</span><span class="sxs-lookup"><span data-stu-id="f4075-112">The following code example does a Platform Invoke (pinvoke) for the two [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] needed to extend the frame into the client area.</span></span> <span data-ttu-id="f4075-113">이러한 각 [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)]는 **NonClientRegionAPI**라는 클래스에 선언됩니다.</span><span class="sxs-lookup"><span data-stu-id="f4075-113">Each of these [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] are declared in a class called **NonClientRegionAPI**.</span></span>  
   
 ```csharp  
 [StructLayout(LayoutKind.Sequential)]  
@@ -75,10 +61,10 @@ public static extern int DwmExtendFrameIntoClientArea(
         End Function  
 ```  
   
- <span data-ttu-id="e8ee5-114">[DwmExtendFrameIntoClientArea](https://msdn.microsoft.com/library/aa969512.aspx)는 프레임을 클라이언트 영역으로 확장하는 DWM 함수입니다.</span><span class="sxs-lookup"><span data-stu-id="e8ee5-114">[DwmExtendFrameIntoClientArea](https://msdn.microsoft.com/library/aa969512.aspx) is the DWM function that extends the frame into the client area.</span></span> <span data-ttu-id="e8ee5-115">이 함수는 창 핸들 및 [MARGINS](https://msdn.microsoft.com/library/bb773244.aspx) 구조체의 두 매개 변수를 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="e8ee5-115">It takes two parameters; a window handle and a [MARGINS](https://msdn.microsoft.com/library/bb773244.aspx) structure.</span></span> <span data-ttu-id="e8ee5-116">[MARGINS](https://msdn.microsoft.com/library/bb773244.aspx)는 프레임을 클라이언트 영역으로 얼마나 추가로 확장해야 하는지를 나타내는 데 사용됩니다.</span><span class="sxs-lookup"><span data-stu-id="e8ee5-116">[MARGINS](https://msdn.microsoft.com/library/bb773244.aspx) is used to tell the DWM how much extra the frame should be extended into the client area.</span></span>  
+ <span data-ttu-id="f4075-114">[DwmExtendFrameIntoClientArea](https://msdn.microsoft.com/library/aa969512.aspx)는 프레임을 클라이언트 영역으로 확장하는 DWM 함수입니다.</span><span class="sxs-lookup"><span data-stu-id="f4075-114">[DwmExtendFrameIntoClientArea](https://msdn.microsoft.com/library/aa969512.aspx) is the DWM function that extends the frame into the client area.</span></span> <span data-ttu-id="f4075-115">이 함수는 창 핸들 및 [MARGINS](https://msdn.microsoft.com/library/bb773244.aspx) 구조체의 두 매개 변수를 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="f4075-115">It takes two parameters; a window handle and a [MARGINS](https://msdn.microsoft.com/library/bb773244.aspx) structure.</span></span> <span data-ttu-id="f4075-116">[MARGINS](https://msdn.microsoft.com/library/bb773244.aspx)는 프레임을 클라이언트 영역으로 얼마나 추가로 확장해야 하는지를 나타내는 데 사용됩니다.</span><span class="sxs-lookup"><span data-stu-id="f4075-116">[MARGINS](https://msdn.microsoft.com/library/bb773244.aspx) is used to tell the DWM how much extra the frame should be extended into the client area.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="e8ee5-117">예제</span><span class="sxs-lookup"><span data-stu-id="e8ee5-117">Example</span></span>  
- <span data-ttu-id="e8ee5-118">[DwmExtendFrameIntoClientArea](https://msdn.microsoft.com/library/aa969512.aspx) 함수를 사용하려면 창 핸들을 가져와야 합니다.</span><span class="sxs-lookup"><span data-stu-id="e8ee5-118">To use the [DwmExtendFrameIntoClientArea](https://msdn.microsoft.com/library/aa969512.aspx) function, a window handle must be obtained.</span></span> <span data-ttu-id="e8ee5-119">[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)], 창 핸들에서 얻을 수 있습니다는 <xref:System.Windows.Interop.HwndSource.Handle%2A> 속성은 <xref:System.Windows.Interop.HwndSource>합니다.</span><span class="sxs-lookup"><span data-stu-id="e8ee5-119">In [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)], the window handle can be obtained from the <xref:System.Windows.Interop.HwndSource.Handle%2A> property of an <xref:System.Windows.Interop.HwndSource>.</span></span> <span data-ttu-id="e8ee5-120">다음 예에서 프레임까지 연장 됩니다 클라이언트 영역에는 <xref:System.Windows.FrameworkElement.Loaded> 창의 이벤트입니다.</span><span class="sxs-lookup"><span data-stu-id="e8ee5-120">In the following example, the frame is extended into the client area on the <xref:System.Windows.FrameworkElement.Loaded> event of the window.</span></span>  
+## <a name="example"></a><span data-ttu-id="f4075-117">예제</span><span class="sxs-lookup"><span data-stu-id="f4075-117">Example</span></span>  
+ <span data-ttu-id="f4075-118">[DwmExtendFrameIntoClientArea](https://msdn.microsoft.com/library/aa969512.aspx) 함수를 사용하려면 창 핸들을 가져와야 합니다.</span><span class="sxs-lookup"><span data-stu-id="f4075-118">To use the [DwmExtendFrameIntoClientArea](https://msdn.microsoft.com/library/aa969512.aspx) function, a window handle must be obtained.</span></span> <span data-ttu-id="f4075-119">[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)], 창 핸들에서 얻을 수 있습니다는 <xref:System.Windows.Interop.HwndSource.Handle%2A> 속성은 <xref:System.Windows.Interop.HwndSource>합니다.</span><span class="sxs-lookup"><span data-stu-id="f4075-119">In [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)], the window handle can be obtained from the <xref:System.Windows.Interop.HwndSource.Handle%2A> property of an <xref:System.Windows.Interop.HwndSource>.</span></span> <span data-ttu-id="f4075-120">다음 예에서 프레임까지 연장 됩니다 클라이언트 영역에는 <xref:System.Windows.FrameworkElement.Loaded> 창의 이벤트입니다.</span><span class="sxs-lookup"><span data-stu-id="f4075-120">In the following example, the frame is extended into the client area on the <xref:System.Windows.FrameworkElement.Loaded> event of the window.</span></span>  
   
 ```csharp  
 void OnLoaded(object sender, RoutedEventArgs e)  
@@ -121,8 +107,8 @@ void OnLoaded(object sender, RoutedEventArgs e)
 }  
 ```  
   
-## <a name="example"></a><span data-ttu-id="e8ee5-121">예제</span><span class="sxs-lookup"><span data-stu-id="e8ee5-121">Example</span></span>  
- <span data-ttu-id="e8ee5-122">다음 예제는 프레임이 클라이언트 영역으로 확장되는 간단한 창을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="e8ee5-122">The following example shows a simple window in which the frame is extended into the client area.</span></span> <span data-ttu-id="e8ee5-123">위쪽 테두리 뒤에서 두 가지를 포함 하는 프레임이 확장 <xref:System.Windows.Controls.TextBox> 개체입니다.</span><span class="sxs-lookup"><span data-stu-id="e8ee5-123">The frame is extended behind the top border that contains the two <xref:System.Windows.Controls.TextBox> objects.</span></span>  
+## <a name="example"></a><span data-ttu-id="f4075-121">예제</span><span class="sxs-lookup"><span data-stu-id="f4075-121">Example</span></span>  
+ <span data-ttu-id="f4075-122">다음 예제는 프레임이 클라이언트 영역으로 확장되는 간단한 창을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="f4075-122">The following example shows a simple window in which the frame is extended into the client area.</span></span> <span data-ttu-id="f4075-123">위쪽 테두리 뒤에서 두 가지를 포함 하는 프레임이 확장 <xref:System.Windows.Controls.TextBox> 개체입니다.</span><span class="sxs-lookup"><span data-stu-id="f4075-123">The frame is extended behind the top border that contains the two <xref:System.Windows.Controls.TextBox> objects.</span></span>  
   
 ```xaml  
 <Window x:Class="SDKSample.Window1"  
@@ -156,13 +142,13 @@ void OnLoaded(object sender, RoutedEventArgs e)
 </Window>  
 ```  
   
- <span data-ttu-id="e8ee5-124">다음 그림에서는 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 응용 프로그램으로 확장되는 투명 효과 프레임을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="e8ee5-124">The following image illustrates the glass frame extended into a [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] application.</span></span>  
+ <span data-ttu-id="f4075-124">다음 그림에서는 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 응용 프로그램으로 확장되는 투명 효과 프레임을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="f4075-124">The following image illustrates the glass frame extended into a [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] application.</span></span>  
   
- <span data-ttu-id="e8ee5-125">****  [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]  **응용 프로그램으로 확장된 투명 효과 프레임**</span><span class="sxs-lookup"><span data-stu-id="e8ee5-125">**Glass Frame Extended into a**  [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]  **Application.**</span></span>  
+ <span data-ttu-id="f4075-125">**투명 효과 프레임이 확장 된는**[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]**응용 프로그램입니다.**</span><span class="sxs-lookup"><span data-stu-id="f4075-125">**Glass Frame Extended into a**  [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]  **Application.**</span></span>  
   
- <span data-ttu-id="e8ee5-126">![WPF 응용 프로그램으로 확장된 투명 효과 프레임](../../../../docs/framework/wpf/graphics-multimedia/media/wpfextendedglassintoclient.PNG "WPFextendedGlassIntoClient")</span><span class="sxs-lookup"><span data-stu-id="e8ee5-126">![Glass Frame Extended into a WPF application.](../../../../docs/framework/wpf/graphics-multimedia/media/wpfextendedglassintoclient.PNG "WPFextendedGlassIntoClient")</span></span>  
+ <span data-ttu-id="f4075-126">![WPF 응용 프로그램으로 확장된 투명 효과 프레임](../../../../docs/framework/wpf/graphics-multimedia/media/wpfextendedglassintoclient.PNG "WPFextendedGlassIntoClient")</span><span class="sxs-lookup"><span data-stu-id="f4075-126">![Glass Frame Extended into a WPF application.](../../../../docs/framework/wpf/graphics-multimedia/media/wpfextendedglassintoclient.PNG "WPFextendedGlassIntoClient")</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="e8ee5-127">참고 항목</span><span class="sxs-lookup"><span data-stu-id="e8ee5-127">See Also</span></span>  
- [<span data-ttu-id="e8ee5-128">바탕 화면 창 관리자 개요</span><span class="sxs-lookup"><span data-stu-id="e8ee5-128">Desktop Window Manager Overview</span></span>](https://msdn.microsoft.com/library/aa969540.aspx)  
- [<span data-ttu-id="e8ee5-129">바탕 화면 창 관리자 흐림 효과 개요</span><span class="sxs-lookup"><span data-stu-id="e8ee5-129">Desktop Window Manager Blur Overview</span></span>](https://msdn.microsoft.com/library/aa969537.aspx)  
- [<span data-ttu-id="e8ee5-130">DwmExtendFrameIntoClientArea</span><span class="sxs-lookup"><span data-stu-id="e8ee5-130">DwmExtendFrameIntoClientArea</span></span>](https://msdn.microsoft.com/library/aa969512.aspx)
+## <a name="see-also"></a><span data-ttu-id="f4075-127">참고 항목</span><span class="sxs-lookup"><span data-stu-id="f4075-127">See Also</span></span>  
+ [<span data-ttu-id="f4075-128">바탕 화면 창 관리자 개요</span><span class="sxs-lookup"><span data-stu-id="f4075-128">Desktop Window Manager Overview</span></span>](https://msdn.microsoft.com/library/aa969540.aspx)  
+ [<span data-ttu-id="f4075-129">바탕 화면 창 관리자 흐림 효과 개요</span><span class="sxs-lookup"><span data-stu-id="f4075-129">Desktop Window Manager Blur Overview</span></span>](https://msdn.microsoft.com/library/aa969537.aspx)  
+ [<span data-ttu-id="f4075-130">DwmExtendFrameIntoClientArea</span><span class="sxs-lookup"><span data-stu-id="f4075-130">DwmExtendFrameIntoClientArea</span></span>](https://msdn.microsoft.com/library/aa969512.aspx)
