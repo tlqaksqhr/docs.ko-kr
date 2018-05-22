@@ -1,125 +1,113 @@
 ---
-title: 문자열 보간 - C#
-description: C# 6에서 문자열 보간이 작동하는 방법 알아보기
-keywords: .NET, .NET Core, C#, 문자열
-author: mgroves
-ms.author: wiwagn
-ms.date: 03/06/2017
-ms.topic: article
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.devlang: csharp
-ms.assetid: f8806f6b-3ac7-4ee6-9b3e-c524d5301ae9
-ms.openlocfilehash: a9578d006861b987871071961437345c378a5b58
-ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
+title: C#의 문자열 보간
+description: 문자열 보간을 사용하여 C#으로 결과 문자열에 서식이 지정된 식 결과를 포함하는 방법을 알아봅니다.
+author: pkulikov
+ms.date: 05/09/2018
+ms.openlocfilehash: 447e87cd4aae49896f0efbb8ece6097181079266
+ms.sourcegitcommit: ff1d40507b3eb6e2185478e37c66c66be6de46f1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 05/11/2018
 ---
-# <a name="string-interpolation-in-c"></a><span data-ttu-id="0736c-104">C#의 문자열 보간</span><span class="sxs-lookup"><span data-stu-id="0736c-104">String Interpolation in C#</span></span> #
+# <a name="string-interpolation-in-c"></a><span data-ttu-id="54400-103">C#의 문자열 보간</span><span class="sxs-lookup"><span data-stu-id="54400-103">String interpolation in C#</span></span> #
 
-<span data-ttu-id="0736c-105">문자열 보간은 문자열의 자리 표시자가 문자열 변수의 값으로 바뀌는 방식입니다.</span><span class="sxs-lookup"><span data-stu-id="0736c-105">String Interpolation is the way that placeholders in a string are replaced by the value of a string variable.</span></span> <span data-ttu-id="0736c-106">C# 6 이전에는 이 작업을 위해 <xref:System.String.Format%2A?displayProperty=nameWithType>을 사용했습니다.</span><span class="sxs-lookup"><span data-stu-id="0736c-106">Before C# 6, the way to do this is with <xref:System.String.Format%2A?displayProperty=nameWithType>.</span></span> <span data-ttu-id="0736c-107">이 방법도 괜찮지만 번호가 매겨진 자리 표시자를 사용하므로 읽기가 더 어렵고 좀 더 길 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="0736c-107">This works okay, but since it uses numbered placeholders, it can be harder to read and more verbose.</span></span>
+<span data-ttu-id="54400-104">이 자습서에서는 [문자열 보간](../language-reference/tokens/interpolated.md)을 사용하여 결과 문자열에서 식 결과의 서식을 지정하고 포함하는 방법을 보여줍니다.</span><span class="sxs-lookup"><span data-stu-id="54400-104">This tutorial shows you how to use [string interpolation](../language-reference/tokens/interpolated.md) to format and include expression results in a result string.</span></span> <span data-ttu-id="54400-105">예제에서는 사용자가 기본 C# 개념 및 .NET 형식 서식 지정에 익숙하다고 가정합니다.</span><span class="sxs-lookup"><span data-stu-id="54400-105">The examples assume that you are familiar with basic C# concepts and .NET type formatting.</span></span> <span data-ttu-id="54400-106">문자열 보간 또는 .NET 형식 서식 지정을 처음 접하는 경우 [대화형 문자열 보간 빠른 시작](../quick-starts/interpolated-strings.yml)을 먼저 체크 아웃합니다.</span><span class="sxs-lookup"><span data-stu-id="54400-106">If you are new to string interpolation or .NET type formatting, check out the [interactive string interpolation quickstart](../quick-starts/interpolated-strings.yml) first.</span></span> <span data-ttu-id="54400-107">.NET에서 형식 서식 지정하는 방법에 대한 자세한 내용은 [.NET의 형식 지정](../../standard/base-types/formatting-types.md) 항목을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="54400-107">For more information about formatting types in .NET, see the [Formatting Types in .NET](../../standard/base-types/formatting-types.md) topic.</span></span>
 
-<span data-ttu-id="0736c-108">다른 프로그래밍 언어의 경우 한동안 문자열 보간이 기본적으로 제공되었습니다.</span><span class="sxs-lookup"><span data-stu-id="0736c-108">Other programming languages have had string interpolation built into the language for a while.</span></span> <span data-ttu-id="0736c-109">예를 들면 PHP의 경우 다음과 같습니다.</span><span class="sxs-lookup"><span data-stu-id="0736c-109">For instance, in PHP:</span></span>
+[!INCLUDE[interactive-note](~/includes/csharp-interactive-note.md)]
 
-```php
-$name = "Jonas";
-echo "My name is $name.";
-// This will output "My name is Jonas."
-```
+## <a name="introduction"></a><span data-ttu-id="54400-108">소개</span><span class="sxs-lookup"><span data-stu-id="54400-108">Introduction</span></span>
 
-<span data-ttu-id="0736c-110">C# 6에서는 마침내 문자열 보간 스타일을 갖추게 되었습니다.</span><span class="sxs-lookup"><span data-stu-id="0736c-110">In C# 6, we finally have that style of string interpolation.</span></span> <span data-ttu-id="0736c-111">문자열 앞에 `$`를 사용하여 변수/식을 값으로 대체해야 함을 나타낼 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="0736c-111">You can use a `$` before a string to indicate that it should substitute variables/expressions for their values.</span></span>
+<span data-ttu-id="54400-109">[문자열 보간](../language-reference/tokens/interpolated.md) 기능은 [복합 서식 지정](../../standard/base-types/composite-formatting.md) 기능을 기반으로 빌드되고 결과 문자열에 서식이 지정된 식 결과를 포함하는 읽기 쉽고 편리한 구문을 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="54400-109">The [string interpolation](../language-reference/tokens/interpolated.md) feature is built on top of the [composite formatting](../../standard/base-types/composite-formatting.md) feature and provides a more readable and convenient syntax to include formatted expression results in a result string.</span></span>
 
-## <a name="prerequisites"></a><span data-ttu-id="0736c-112">전제 조건</span><span class="sxs-lookup"><span data-stu-id="0736c-112">Prerequisites</span></span>
-<span data-ttu-id="0736c-113">.NET Core를 실행하려면 컴퓨터에 설정해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="0736c-113">You’ll need to set up your machine to run .NET core.</span></span> <span data-ttu-id="0736c-114">[.NET Core](https://www.microsoft.com/net/core) 페이지에서 설치 지침을 확인할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="0736c-114">You can find the installation instructions on the [.NET Core](https://www.microsoft.com/net/core) page.</span></span>
-<span data-ttu-id="0736c-115">Windows, Ubuntu Linux, macOS 또는 Docker 컨테이너에서 이 응용 프로그램을 실행할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="0736c-115">You can run this application on Windows, Ubuntu Linux, macOS or in a Docker container.</span></span> <span data-ttu-id="0736c-116">선호하는 코드 편집기를 설치해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="0736c-116">You’ll need to install your favorite code editor.</span></span> <span data-ttu-id="0736c-117">아래 설명에서는 오픈 소스 플랫폼 간 편집기인 [Visual Studio Code](https://code.visualstudio.com/)를 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="0736c-117">The descriptions below use [Visual Studio Code](https://code.visualstudio.com/) which is an open source, cross platform editor.</span></span> <span data-ttu-id="0736c-118">그러나 익숙한 어떤 도구도 사용 가능합니다.</span><span class="sxs-lookup"><span data-stu-id="0736c-118">However, you can use whatever tools you are comfortable with.</span></span>
+<span data-ttu-id="54400-110">문자열 리터럴을 보간된 문자열로 식별하려면 `$` 기호를 사용하여 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="54400-110">To identify a string literal as an interpolated string, prepend it with the `$` symbol.</span></span> <span data-ttu-id="54400-111">보간된 문자열에서 값을 반환하는 유효한 C# 식을 포함할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="54400-111">You can embed any valid C# expression that returns a value in an interpolated string.</span></span> <span data-ttu-id="54400-112">다음 예제에서는 식이 계산되는 즉시 결과가 문자열로 변환되고 결과 문자열에 포함됩니다.</span><span class="sxs-lookup"><span data-stu-id="54400-112">In the following example, as soon as an expression is evaluated, its result is converted into a string and included in a result string:</span></span>
 
-## <a name="create-the-application"></a><span data-ttu-id="0736c-119">응용 프로그램 만들기</span><span class="sxs-lookup"><span data-stu-id="0736c-119">Create the Application</span></span>
+[!code-csharp-interactive[string interpolation example](~/samples/snippets/csharp/tutorials/string-interpolation/Program.cs#1)]
 
-<span data-ttu-id="0736c-120">이제 모든 도구를 설치했으므로 새로운 .NET Core 응용 프로그램을 만들어 보겠습니다.</span><span class="sxs-lookup"><span data-stu-id="0736c-120">Now that you've installed all the tools, create a new .NET Core application.</span></span> <span data-ttu-id="0736c-121">명령줄 생성기를 사용하려면 프로젝트에 대해 `interpolated`와 같은 디렉터리를 만들고 즐겨 사용하는 셸에서 다음 명령을 실행합니다.</span><span class="sxs-lookup"><span data-stu-id="0736c-121">To use the command line generator, create a directory for your project, such as `interpolated`, and execute the following command in your favorite shell:</span></span>
+<span data-ttu-id="54400-113">이 예제에서 볼 수 있듯이 중괄호를 포함하여 보간된 문자열에 식을 포함합니다.</span><span class="sxs-lookup"><span data-stu-id="54400-113">As the example shows, you include an expression in an interpolated string by enclosing it with braces:</span></span>
 
 ```
-dotnet new console
+{<interpolatedExpression>}
 ```
 
-<span data-ttu-id="0736c-122">이 명령은 프로젝트 파일 *interpolated.csproj* 및 소스 코드 파일 *Program.cs*를 사용하여 기본 .NET Core 프로젝트를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="0736c-122">This command creates a barebones .NET Core project with a project file, *interpolated.csproj*, and a source code file, *Program.cs*.</span></span> <span data-ttu-id="0736c-123">`dotnet restore`를 실행하여 이 프로젝트를 컴파일하는 데 필요한 종속성을 복원해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="0736c-123">You will need to execute `dotnet restore` to restore the dependencies needed to compile this project.</span></span>
+<span data-ttu-id="54400-114">컴파일 시 보간된 문자열은 일반적으로 <xref:System.String.Format%2A?displayProperty=nameWithType> 메서드 호출로 변환됩니다.</span><span class="sxs-lookup"><span data-stu-id="54400-114">At compile time, an interpolated string is typically transformed into a <xref:System.String.Format%2A?displayProperty=nameWithType> method call.</span></span> <span data-ttu-id="54400-115">[문자열 복합 서식 지정](../../standard/base-types/composite-formatting.md) 기능의 모든 기능을 사용할 수 있도록 하여 보간된 문자열도 함께 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="54400-115">That makes all the capabilities of the [string composite formatting](../../standard/base-types/composite-formatting.md) feature available to you to use with interpolated strings as well.</span></span>
 
-[!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
+## <a name="how-to-specify-a-format-string-for-an-interpolated-expression"></a><span data-ttu-id="54400-116">보간된 식의 서식 문자열을 지정하는 방법</span><span class="sxs-lookup"><span data-stu-id="54400-116">How to specify a format string for an interpolated expression</span></span>
 
-<span data-ttu-id="0736c-124">이 프로그램을 실행하려면 `dotnet run`을 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="0736c-124">To execute the program, use `dotnet run`.</span></span> <span data-ttu-id="0736c-125">콘솔에 "Hello, World" 출력이 표시됩니다.</span><span class="sxs-lookup"><span data-stu-id="0736c-125">You should see "Hello, World" output to the console.</span></span>
-
-
-
-## <a name="intro-to-string-interpolation"></a><span data-ttu-id="0736c-126">문자열 보간 소개</span><span class="sxs-lookup"><span data-stu-id="0736c-126">Intro to String Interpolation</span></span>
-
-<span data-ttu-id="0736c-127"><xref:System.String.Format%2A?displayProperty=nameWithType>을 사용하여 문자열에 따라 인수로 대체되는 문자열에서 "자리 표시자"를 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="0736c-127">With <xref:System.String.Format%2A?displayProperty=nameWithType>, you specify "placeholders" in a string that are replaced by the arguments following the string.</span></span> <span data-ttu-id="0736c-128">예를 들면 다음과 같습니다.</span><span class="sxs-lookup"><span data-stu-id="0736c-128">For instance:</span></span>
-
-[!code-csharp[String.Format example](../../../samples/snippets/csharp/new-in-6/string-interpolation.cs#StringFormatExample)]  
-
-<span data-ttu-id="0736c-129">그러면 "My name is Matt Groves"가 출력됩니다.</span><span class="sxs-lookup"><span data-stu-id="0736c-129">That will output "My name is Matt Groves".</span></span>
-
-<span data-ttu-id="0736c-130">C# 6에서 `String.Format`을 사용하는 대신, 앞에 `$` 기호를 붙인 다음 문자열에 직접 변수를 사용하여 보간된 문자열을 정의합니다.</span><span class="sxs-lookup"><span data-stu-id="0736c-130">In C# 6, instead of using `String.Format`, you define an interpolated string by prepending it with the `$` symbol, and then using the variables directly in the string.</span></span> <span data-ttu-id="0736c-131">예를 들면 다음과 같습니다.</span><span class="sxs-lookup"><span data-stu-id="0736c-131">For instance:</span></span>
-
-[!code-csharp[Interpolation example](../../../samples/snippets/csharp/new-in-6/string-interpolation.cs#InterpolationExample)]  
-
-<span data-ttu-id="0736c-132">단순히 변수를 사용할 필요는 없습니다.</span><span class="sxs-lookup"><span data-stu-id="0736c-132">You don't have to use just variables.</span></span> <span data-ttu-id="0736c-133">대괄호 안에 어떤 식도 사용 가능합니다.</span><span class="sxs-lookup"><span data-stu-id="0736c-133">You can use any expression within the brackets.</span></span> <span data-ttu-id="0736c-134">예를 들면 다음과 같습니다.</span><span class="sxs-lookup"><span data-stu-id="0736c-134">For instance:</span></span>
-
-[!code-csharp[Interpolation expression example](../../../samples/snippets/csharp/new-in-6/string-interpolation.cs#InterpolationExpressionExample)]  
-
-<span data-ttu-id="0736c-135">다음이 출력됩니다.</span><span class="sxs-lookup"><span data-stu-id="0736c-135">Which would output:</span></span>
+<span data-ttu-id="54400-117">콜론(":")과 형식 문자열을 사용하여 보간된 식에 따라 식 결과의 형식에서 지원하는 형식 문자열을 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="54400-117">You specify a format string that is supported by the type of the expression result by following the interpolated expression with a colon (":") and the format string:</span></span>
 
 ```
-This is line number 1
-This is line number 2
-This is line number 3
-This is line number 4
-This is line number 5
+{<interpolatedExpression>:<formatString>}
 ```
 
-## <a name="how-string-interpolation-works"></a><span data-ttu-id="0736c-136">문자열 보간이 작동하는 방법</span><span class="sxs-lookup"><span data-stu-id="0736c-136">How string interpolation works</span></span>
+<span data-ttu-id="54400-118">다음 예제에서는 날짜 및 시간 또는 숫자 결과를 생성하는 식의 표준 및 사용자 지정 서식 지정 문자열을 지정하는 방법을 보여줍니다.</span><span class="sxs-lookup"><span data-stu-id="54400-118">The following example shows how to specify standard and custom format strings for expressions that produce date and time or numeric results:</span></span>
 
-<span data-ttu-id="0736c-137">내부적으로 이 문자열 보간 구문은 컴파일러에서 `String.Format`로 변환됩니다.</span><span class="sxs-lookup"><span data-stu-id="0736c-137">Behind the scenes, this string interpolation syntax is translated into `String.Format` by the compiler.</span></span> <span data-ttu-id="0736c-138">따라서 [`String.Format` 이전에 String.Format으로 수행했던 것과 동일한 형식의 작업](../../standard/base-types/formatting-types.md)을 수행할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="0736c-138">So, you can do the [same type of stuff you've done before with `String.Format`](../../standard/base-types/formatting-types.md).</span></span>
+[!code-csharp-interactive[format string example](~/samples/snippets/csharp/tutorials/string-interpolation/Program.cs#2)]
 
-<span data-ttu-id="0736c-139">예를 들어 안쪽 여백 및 숫자 서식을 추가할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="0736c-139">For instance, you can add padding and numeric formatting:</span></span>
+<span data-ttu-id="54400-119">자세한 내용은 [복합 서식 지정](../../standard/base-types/composite-formatting.md) 항목의 [문자열 구성 요소 서식 지정](../../standard/base-types/composite-formatting.md#format-string-component) 섹션을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="54400-119">For more information, see the [Format String Component](../../standard/base-types/composite-formatting.md#format-string-component) section of the [Composite Formatting](../../standard/base-types/composite-formatting.md) topic.</span></span> <span data-ttu-id="54400-120">해당 섹션에서는 .NET 기본 형식에서 지원하는 표준 및 사용자 지정 서식 지정 문자열을 설명하는 항목에 대한 링크를 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="54400-120">That section provides links to the topics that describe standard and custom format strings supported by .NET base types.</span></span>
 
-[!code-csharp[Interpolation formatting example](../../../samples/snippets/csharp/new-in-6/string-interpolation.cs#InterpolationFormattingExample)]  
+## <a name="how-to-control-the-field-width-and-alignment-of-the-formatted-interpolated-expression"></a><span data-ttu-id="54400-121">필드 너비와 서식이 지정된 보간된 식의 맞춤을 제어하는 방법</span><span class="sxs-lookup"><span data-stu-id="54400-121">How to control the field width and alignment of the formatted interpolated expression</span></span>
 
-<span data-ttu-id="0736c-140">위 예제는 다음과 같은 결과를 출력합니다.</span><span class="sxs-lookup"><span data-stu-id="0736c-140">The above would output something like:</span></span>
+<span data-ttu-id="54400-122">쉼표(",") 및 상수 식을 포함한 보간된 식에 따라 최소 필드 너비 및 서식이 지정된 식 결과의 맞춤을 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="54400-122">You specify the minimum field width and the alignment of the formatted expression result by following the interpolated expression with a comma (",") and the constant expression:</span></span>
 
 ```
-998        5,177.67
-999        6,719.30
-1000       9,910.61
-1001       529.34
-1002       1,349.86
-1003       2,660.82
-1004       6,227.77
+{<interpolatedExpression>,<alignment>}
 ```
 
-<span data-ttu-id="0736c-141">변수 이름이 없는 경우 컴파일 타임 오류가 생성됩니다.</span><span class="sxs-lookup"><span data-stu-id="0736c-141">If a variable name is not found, then a compile-time error is generated.</span></span>
+<span data-ttu-id="54400-123">*맞춤* 값이 양수이면 서식이 지정된 식 결과는 오른쪽 맞춤입니다. 값이 음수이면 왼쪽 맞춤입니다.</span><span class="sxs-lookup"><span data-stu-id="54400-123">If the *alignment* value is positive, the formatted expression result is right-aligned; if negative, it's left-aligned.</span></span>
 
-<span data-ttu-id="0736c-142">예를 들면 다음과 같습니다.</span><span class="sxs-lookup"><span data-stu-id="0736c-142">For instance:</span></span>
+<span data-ttu-id="54400-124">맞춤 및 서식 문자열을 모두 지정해야 할 경우 맞춤 구성 요소를 시작합니다.</span><span class="sxs-lookup"><span data-stu-id="54400-124">If you need to specify both alignment and a format string, start with the alignment component:</span></span>
 
-```csharp
-var animal = "fox";
-var localizeMe = $"The {adj} brown {animal} jumped over the lazy {otheranimal}";
-var adj = "quick";
-Console.WriteLine(localizeMe);
+```
+{<interpolatedExpression>,<alignment>:<formatString>}
 ```
 
-<span data-ttu-id="0736c-143">이를 컴파일하면 오류가 발생합니다.</span><span class="sxs-lookup"><span data-stu-id="0736c-143">If you compile this, you get errors:</span></span>
- 
-* <span data-ttu-id="0736c-144">`Cannot use local variable 'adj' before it is declared` - `adj` 변수는 보간된 문자열 *이후*까지 선언되지 않았습니다.</span><span class="sxs-lookup"><span data-stu-id="0736c-144">`Cannot use local variable 'adj' before it is declared` - the `adj` variable wasn't declared until *after* the interpolated string.</span></span>
-* <span data-ttu-id="0736c-145">`The name 'otheranimal' does not exist in the current context` - `otheranimal`이라는 변수가 선언된 적이 없었습니다.</span><span class="sxs-lookup"><span data-stu-id="0736c-145">`The name 'otheranimal' does not exist in the current context` - a variable called `otheranimal` was never even declared</span></span>
+<span data-ttu-id="54400-125">다음 예제에서는 맞춤을 지정하고 파이프 문자("|")를 사용하여 텍스트 필드를 구분하는 방법을 보여줍니다.</span><span class="sxs-lookup"><span data-stu-id="54400-125">The following example shows how to specify alignment and uses pipe characters ("|") to delimit text fields:</span></span>
 
-## <a name="localization-and-internationalization"></a><span data-ttu-id="0736c-146">지역화 및 국제화</span><span class="sxs-lookup"><span data-stu-id="0736c-146">Localization and Internationalization</span></span>
+[!code-csharp-interactive[alignment example](~/samples/snippets/csharp/tutorials/string-interpolation/Program.cs#3)]
 
-<span data-ttu-id="0736c-147">보간된 문자열은 국제화에 유용할 수 있는 <xref:System.IFormattable?displayProperty=nameWithType> 및 <xref:System.FormattableString?displayProperty=nameWithType>을 지원합니다.</span><span class="sxs-lookup"><span data-stu-id="0736c-147">An interpolated string supports <xref:System.IFormattable?displayProperty=nameWithType> and <xref:System.FormattableString?displayProperty=nameWithType>, which can be useful for internationalization.</span></span>
+<span data-ttu-id="54400-126">출력 표시 예제에서 볼 수 있듯이 서식이 지정된 식 결과의 길이가 지정된 필드 너비를 초과하는 경우 *맞춤* 값은 무시됩니다.</span><span class="sxs-lookup"><span data-stu-id="54400-126">As the example output shows, if the length of the formatted expression result exceeds specified field width, the *alignment* value is ignored.</span></span>
 
-<span data-ttu-id="0736c-148">기본적으로 보간된 문자열은 현재 문화권을 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="0736c-148">By default, an interpolated string uses the current culture.</span></span> <span data-ttu-id="0736c-149">다른 문화권을 사용하려면 보간된 문자열을 `IFormattable`로 캐스팅합니다.</span><span class="sxs-lookup"><span data-stu-id="0736c-149">To use a different culture, cast an interpolated string as `IFormattable`.</span></span> <span data-ttu-id="0736c-150">예를 들면 다음과 같습니다.</span><span class="sxs-lookup"><span data-stu-id="0736c-150">For instance:</span></span>
+<span data-ttu-id="54400-127">자세한 내용은 [복합 서식 지정](../../standard/base-types/composite-formatting.md) 항목의 [맞춤 구성 요소](../../standard/base-types/composite-formatting.md#alignment-component) 섹션을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="54400-127">For more information, see the [Alignment Component](../../standard/base-types/composite-formatting.md#alignment-component) section of the [Composite Formatting](../../standard/base-types/composite-formatting.md) topic.</span></span>
 
-[!code-csharp[Interpolation internationalization example](../../../samples/snippets/csharp/new-in-6/string-interpolation.cs#InterpolationInternationalizationExample)]  
+## <a name="how-to-use-escape-sequences-in-an-interpolated-string"></a><span data-ttu-id="54400-128">보간된 문자열에서 이스케이프 시퀀스를 사용하는 방법</span><span class="sxs-lookup"><span data-stu-id="54400-128">How to use escape sequences in an interpolated string</span></span>
 
-## <a name="conclusion"></a><span data-ttu-id="0736c-151">결론</span><span class="sxs-lookup"><span data-stu-id="0736c-151">Conclusion</span></span> 
+<span data-ttu-id="54400-129">보간된 문자열에서는 일반 문자열 리터럴을 사용할 수 있는 모든 이스케이프 시퀀스를 지원합니다.</span><span class="sxs-lookup"><span data-stu-id="54400-129">Interpolated strings support all escape sequences that can be used in ordinary string literals.</span></span> <span data-ttu-id="54400-130">자세한 내용은 [문자열 이스케이프 시퀀스](../programming-guide/strings/index.md#string-escape-sequences)를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="54400-130">For more information, see [String escape sequences](../programming-guide/strings/index.md#string-escape-sequences).</span></span>
 
-<span data-ttu-id="0736c-152">이 자습서에서는 C# 6의 문자열 보간 기능을 사용하는 방법을 알아보았습니다.</span><span class="sxs-lookup"><span data-stu-id="0736c-152">In this tutorial, you learned how to use string interpolation features of C# 6.</span></span> <span data-ttu-id="0736c-153">이 기능은 기본적으로 고급 사용법에 대한 주의 사항을 사용하여 단순한 `String.Format` 문을 작성하는 정확한 방법입니다.</span><span class="sxs-lookup"><span data-stu-id="0736c-153">It's basically a more concise way of writing simple `String.Format` statements, with some caveats for more advanced uses.</span></span> <span data-ttu-id="0736c-154">자세한 내용은 [문자열 보간](../../csharp//language-reference/tokens/interpolated.md) 토픽을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="0736c-154">For more information, see the [String interpolation](../../csharp//language-reference/tokens/interpolated.md) topic.</span></span>
+<span data-ttu-id="54400-131">이스케이프 시퀀스를 문자 그대로 해석하려면 [약어](../language-reference/tokens/verbatim.md) 리터럴 문자열을 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="54400-131">To interpret escape sequences literally, use a [verbatim](../language-reference/tokens/verbatim.md) string literal.</span></span> <span data-ttu-id="54400-132">약어 보간된 문자열은 `@` 문자가 뒤에 오는 `$` 문자로 시작합니다.</span><span class="sxs-lookup"><span data-stu-id="54400-132">A verbatim interpolated string starts with the `$` character followed by the `@` character.</span></span>
+
+<span data-ttu-id="54400-133">중괄호("{" 또는 "}")를 포함하려면 결과 문자열에서 2개의 중괄호("{{" 또는 "}}")를 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="54400-133">To include a brace, "{" or "}", in a result string, use two braces, "{{" or "}}".</span></span> <span data-ttu-id="54400-134">자세한 내용은 [복합 서식 지정](../../standard/base-types/composite-formatting.md) 항목의 [중괄호 이스케이프 처리](../../standard/base-types/composite-formatting.md#escaping-braces) 섹션을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="54400-134">For more information, see the [Escaping Braces](../../standard/base-types/composite-formatting.md#escaping-braces) section of the [Composite Formatting](../../standard/base-types/composite-formatting.md) topic.</span></span>
+
+<span data-ttu-id="54400-135">다음 예제에서는 결과 문자열에 중괄호를 포함하고 약어 보간된 문자열을 만드는 방법을 보여줍니다.</span><span class="sxs-lookup"><span data-stu-id="54400-135">The following example shows how to include braces in a result string and construct a verbatim interpolated string:</span></span>
+
+[!code-csharp-interactive[escape sequence example](~/samples/snippets/csharp/tutorials/string-interpolation/Program.cs#4)]
+
+## <a name="how-to-use-a-ternary-conditional-operator--in-an-interpolated-expression"></a><span data-ttu-id="54400-136">보간된 식에서 3개로 구성된 `?:` 조건부 연산자를 사용하는 방법</span><span class="sxs-lookup"><span data-stu-id="54400-136">How to use a ternary conditional operator `?:` in an interpolated expression</span></span>
+
+<span data-ttu-id="54400-137">보간된 식에서 콜론(":")에 특별한 의미가 있으므로 식에서 [조건부 연산자](../language-reference/operators/conditional-operator.md)를 사용하기 위해 다음 예제에서 볼 수 있듯이 해당 식을 괄호로 묶습니다.</span><span class="sxs-lookup"><span data-stu-id="54400-137">As the colon (":") has special meaning in an item with an interpolated expression, in order to use a [conditional operator](../language-reference/operators/conditional-operator.md) in an expression, enclose it in parentheses, as the following example shows:</span></span>
+
+[!code-csharp-interactive[conditional operator example](~/samples/snippets/csharp/tutorials/string-interpolation/Program.cs#5)]
+
+## <a name="how-to-create-a-culture-specific-result-string-with-string-interpolation"></a><span data-ttu-id="54400-138">문자열 보간을 사용하여 문화권별 결과 문자열을 만드는 방법</span><span class="sxs-lookup"><span data-stu-id="54400-138">How to create a culture-specific result string with string interpolation</span></span>
+
+<span data-ttu-id="54400-139">기본적으로는 보간된 문자열은 모든 서식 지정 작업에 대해 <xref:System.Globalization.CultureInfo.CurrentCulture?displayProperty=nameWithType> 속성에서 정의한 현재 문화권을 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="54400-139">By default, an interpolated string uses the current culture defined by the <xref:System.Globalization.CultureInfo.CurrentCulture?displayProperty=nameWithType> property for all formatting operations.</span></span> <span data-ttu-id="54400-140"><xref:System.FormattableString?displayProperty=nameWithType> 인스턴스에 대한 보간된 문자열의 암시적 변환을 사용하고 해당 <xref:System.FormattableString.ToString(System.IFormatProvider)> 메서드를 호출하여 문화권별 결과 문자열을 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="54400-140">Use implicit conversion of an interpolated string to a <xref:System.FormattableString?displayProperty=nameWithType> instance and call its <xref:System.FormattableString.ToString(System.IFormatProvider)> method to create a culture-specific result string.</span></span> <span data-ttu-id="54400-141">다음 예제에서는 해당 작업을 수행하는 방법을 보여줍니다.</span><span class="sxs-lookup"><span data-stu-id="54400-141">The following example shows how to do that:</span></span>
+
+[!code-csharp-interactive[specify different cultures](~/samples/snippets/csharp/tutorials/string-interpolation/Program.cs#6)]
+
+<span data-ttu-id="54400-142">이 예제에서 볼 수 있듯이 하나의 <xref:System.FormattableString> 인스턴스를 사용하여 다양한 문화권에 여러 결과 문자열을 생성할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="54400-142">As the example shows, you can use one <xref:System.FormattableString> instance to generate multiple result strings for various cultures.</span></span>
+
+## <a name="how-to-create-a-result-string-using-the-invariant-culture"></a><span data-ttu-id="54400-143">고정 문화권을 사용하여 결과 문자열을 만드는 방법</span><span class="sxs-lookup"><span data-stu-id="54400-143">How to create a result string using the invariant culture</span></span>
+
+<span data-ttu-id="54400-144"><xref:System.FormattableString.ToString(System.IFormatProvider)?displayProperty=nameWithType> 메서드와 함께 고정 <xref:System.FormattableString.Invariant%2A?displayProperty=nameWithType> 메서드를 사용하여 <xref:System.Globalization.CultureInfo.InvariantCulture>에서 보간된 문자열을 결과 문자열로 해결할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="54400-144">Along with the <xref:System.FormattableString.ToString(System.IFormatProvider)?displayProperty=nameWithType> method, you can use the static <xref:System.FormattableString.Invariant%2A?displayProperty=nameWithType> method to resolve an interpolated string to a result string for the <xref:System.Globalization.CultureInfo.InvariantCulture>.</span></span> <span data-ttu-id="54400-145">다음 예제에서는 해당 작업을 수행하는 방법을 보여줍니다.</span><span class="sxs-lookup"><span data-stu-id="54400-145">The following example shows how to do that:</span></span>
+
+[!code-csharp-interactive[format with invariant culture](~/samples/snippets/csharp/tutorials/string-interpolation/Program.cs#7)]
+
+## <a name="conclusion"></a><span data-ttu-id="54400-146">결론</span><span class="sxs-lookup"><span data-stu-id="54400-146">Conclusion</span></span>
+
+<span data-ttu-id="54400-147">이 자습서에서는 문자열 보간 사용법의 일반적인 시나리오를 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="54400-147">This tutorial describes common scenarios of string interpolation usage.</span></span> <span data-ttu-id="54400-148">문자열 보간에 대한 자세한 내용은 [문자열 보간](../language-reference/tokens/interpolated.md) 항목을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="54400-148">For more information about string interpolation, see the [String interpolation](../language-reference/tokens/interpolated.md) topic.</span></span> <span data-ttu-id="54400-149">.NET에서 형식 서식 지정하는 방법에 대한 자세한 내용은 [.NET의 형식 지정](../../standard/base-types/formatting-types.md) 및 [복합 서식 지정](../../standard/base-types/composite-formatting.md) 항목을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="54400-149">For more information about formatting types in .NET, see the [Formatting Types in .NET](../../standard/base-types/formatting-types.md) and [Composite formatting](../../standard/base-types/composite-formatting.md) topics.</span></span>
+
+## <a name="see-also"></a><span data-ttu-id="54400-150">참고 항목</span><span class="sxs-lookup"><span data-stu-id="54400-150">See also</span></span>
+
+<xref:System.String.Format%2A?displayProperty=nameWithType>  
+<xref:System.FormattableString?displayProperty=nameWithType>  
+<xref:System.IFormattable?displayProperty=nameWithType>  
+[<span data-ttu-id="54400-151">문자열</span><span class="sxs-lookup"><span data-stu-id="54400-151">Strings</span></span>](../programming-guide/strings/index.md)  

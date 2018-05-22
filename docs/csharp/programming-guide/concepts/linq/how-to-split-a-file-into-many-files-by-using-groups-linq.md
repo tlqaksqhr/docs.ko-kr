@@ -1,28 +1,19 @@
 ---
-title: "방법: 그룹을 사용하여 파일을 여러 파일로 분할(LINQ)(C#)"
-ms.custom: 
+title: '방법: 그룹을 사용하여 파일을 여러 파일로 분할(LINQ)(C#)'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-csharp
-ms.topic: article
 ms.assetid: 8179b91c-d778-4e57-884f-77fe5a8e4e40
-caps.latest.revision: "3"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 74b7f40b09131cb6e4ed82d64933512c6e0499cb
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 8cce9176c303efe0da4b546afabe2bf6d491e167
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="how-to-split-a-file-into-many-files-by-using-groups-linq-c"></a><span data-ttu-id="84074-102">방법: 그룹을 사용하여 파일을 여러 파일로 분할(LINQ)(C#)</span><span class="sxs-lookup"><span data-stu-id="84074-102">How to: Split a File Into Many Files by Using Groups (LINQ) (C#)</span></span>
-<span data-ttu-id="84074-103">이 예제에서는 두 파일의 내용을 병합한 다음 새로운 방식으로 데이터를 구성하는 새 파일 집합을 만드는 한 가지 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="84074-103">This example shows one way to merge the contents of two files and then create a set of new files that organize the data in a new way.</span></span>  
+# <a name="how-to-split-a-file-into-many-files-by-using-groups-linq-c"></a><span data-ttu-id="ec080-102">방법: 그룹을 사용하여 파일을 여러 파일로 분할(LINQ)(C#)</span><span class="sxs-lookup"><span data-stu-id="ec080-102">How to: Split a File Into Many Files by Using Groups (LINQ) (C#)</span></span>
+<span data-ttu-id="ec080-103">이 예제에서는 두 파일의 내용을 병합한 다음 새로운 방식으로 데이터를 구성하는 새 파일 집합을 만드는 한 가지 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="ec080-103">This example shows one way to merge the contents of two files and then create a set of new files that organize the data in a new way.</span></span>  
   
-### <a name="to-create-the-data-files"></a><span data-ttu-id="84074-104">데이터 파일을 만들려면</span><span class="sxs-lookup"><span data-stu-id="84074-104">To create the data files</span></span>  
+### <a name="to-create-the-data-files"></a><span data-ttu-id="ec080-104">데이터 파일을 만들려면</span><span class="sxs-lookup"><span data-stu-id="ec080-104">To create the data files</span></span>  
   
-1.  <span data-ttu-id="84074-105">이러한 이름을 names1.txt 텍스트 파일에 복사하고 파일을 프로젝트 폴더에 저장합니다.</span><span class="sxs-lookup"><span data-stu-id="84074-105">Copy these names into a text file that is named names1.txt and save it in your project folder:</span></span>  
+1.  <span data-ttu-id="ec080-105">이러한 이름을 names1.txt 텍스트 파일에 복사하고 파일을 프로젝트 폴더에 저장합니다.</span><span class="sxs-lookup"><span data-stu-id="ec080-105">Copy these names into a text file that is named names1.txt and save it in your project folder:</span></span>  
   
     ```  
     Bankov, Peter  
@@ -37,7 +28,7 @@ ms.lasthandoff: 11/21/2017
     Garcia, Debra  
     ```  
   
-2.  <span data-ttu-id="84074-106">이러한 이름을 names2.txt 텍스트 파일에 복사하고 파일을 프로젝트 폴더에 저장합니다. 두 파일에서 일부 이름은 공통됩니다.</span><span class="sxs-lookup"><span data-stu-id="84074-106">Copy these names into a text file that is named names2.txt and save it in your project folder: Note that the two files have some names in common.</span></span>  
+2.  <span data-ttu-id="ec080-106">이러한 이름을 names2.txt 텍스트 파일에 복사하고 파일을 프로젝트 폴더에 저장합니다. 두 파일에서 일부 이름은 공통됩니다.</span><span class="sxs-lookup"><span data-stu-id="ec080-106">Copy these names into a text file that is named names2.txt and save it in your project folder: Note that the two files have some names in common.</span></span>  
   
     ```  
     Liu, Jinghao  
@@ -52,7 +43,7 @@ ms.lasthandoff: 11/21/2017
     El Yassir, Mehdi  
     ```  
   
-## <a name="example"></a><span data-ttu-id="84074-107">예제</span><span class="sxs-lookup"><span data-stu-id="84074-107">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="ec080-107">예</span><span class="sxs-lookup"><span data-stu-id="ec080-107">Example</span></span>  
   
 ```csharp  
 class SplitWithGroups  
@@ -130,11 +121,11 @@ class SplitWithGroups
  */  
 ```  
   
- <span data-ttu-id="84074-108">프로그램에서 데이터 파일과 동일한 폴더에 각 그룹에 대한 별도 파일을 작성합니다.</span><span class="sxs-lookup"><span data-stu-id="84074-108">The program writes a separate file for each group in the same folder as the data files.</span></span>  
+ <span data-ttu-id="ec080-108">프로그램에서 데이터 파일과 동일한 폴더에 각 그룹에 대한 별도 파일을 작성합니다.</span><span class="sxs-lookup"><span data-stu-id="ec080-108">The program writes a separate file for each group in the same folder as the data files.</span></span>  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="84074-109">코드 컴파일</span><span class="sxs-lookup"><span data-stu-id="84074-109">Compiling the Code</span></span>  
- <span data-ttu-id="84074-110">System.Core.dll에 대한 참조와 System.Linq 및 System.IO 네임스페이스에 대한 `using` 지시문을 사용하여 .NET Framework 버전 3.5 이상을 대상으로 하는 프로젝트를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="84074-110">Create a project that targets the .NET Framework  version 3.5 or higher, with a reference to System.Core.dll and `using` directives for the System.Linq and System.IO namespaces.</span></span>  
+## <a name="compiling-the-code"></a><span data-ttu-id="ec080-109">코드 컴파일</span><span class="sxs-lookup"><span data-stu-id="ec080-109">Compiling the Code</span></span>  
+ <span data-ttu-id="ec080-110">System.Core.dll에 대한 참조와 System.Linq 및 System.IO 네임스페이스에 대한 `using` 지시문을 사용하여 .NET Framework 버전 3.5 이상을 대상으로 하는 프로젝트를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="ec080-110">Create a project that targets the .NET Framework  version 3.5 or higher, with a reference to System.Core.dll and `using` directives for the System.Linq and System.IO namespaces.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="84074-111">참고 항목</span><span class="sxs-lookup"><span data-stu-id="84074-111">See Also</span></span>  
- [<span data-ttu-id="84074-112">LINQ 및 문자열(C#)</span><span class="sxs-lookup"><span data-stu-id="84074-112">LINQ and Strings (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/linq-and-strings.md)  
- [<span data-ttu-id="84074-113">LINQ 및 파일 디렉터리(C#)</span><span class="sxs-lookup"><span data-stu-id="84074-113">LINQ and File Directories (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/linq-and-file-directories.md)
+## <a name="see-also"></a><span data-ttu-id="ec080-111">참고 항목</span><span class="sxs-lookup"><span data-stu-id="ec080-111">See Also</span></span>  
+ [<span data-ttu-id="ec080-112">LINQ 및 문자열(C#)</span><span class="sxs-lookup"><span data-stu-id="ec080-112">LINQ and Strings (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/linq-and-strings.md)  
+ [<span data-ttu-id="ec080-113">LINQ 및 파일 디렉터리(C#)</span><span class="sxs-lookup"><span data-stu-id="ec080-113">LINQ and File Directories (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/linq-and-file-directories.md)

@@ -1,30 +1,21 @@
 ---
-title: "방법: 서명되지 않은 Friend 어셈블리 만들기(C#)"
-ms.custom: 
+title: '방법: 서명되지 않은 Friend 어셈블리 만들기(C#)'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-csharp
-ms.topic: article
 ms.assetid: 78cbc4f0-b021-4141-a4ff-eb4edbd814ca
-caps.latest.revision: "3"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 854df39394ef10bf2404fb3f762586fb102fba7b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 676b9d3c641f45736af50bc2290426e261b591c4
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="how-to-create-unsigned-friend-assemblies-c"></a><span data-ttu-id="3cbb6-102">방법: 서명되지 않은 Friend 어셈블리 만들기(C#)</span><span class="sxs-lookup"><span data-stu-id="3cbb6-102">How to: Create Unsigned Friend Assemblies (C#)</span></span>
-<span data-ttu-id="3cbb6-103">이 예제에서는 서명되지 않은 어셈블리와 함께 friend 어셈블리를 사용하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="3cbb6-103">This example shows how to use friend assemblies with assemblies that are unsigned.</span></span>  
+# <a name="how-to-create-unsigned-friend-assemblies-c"></a><span data-ttu-id="37f68-102">방법: 서명되지 않은 Friend 어셈블리 만들기(C#)</span><span class="sxs-lookup"><span data-stu-id="37f68-102">How to: Create Unsigned Friend Assemblies (C#)</span></span>
+<span data-ttu-id="37f68-103">이 예제에서는 서명되지 않은 어셈블리와 함께 friend 어셈블리를 사용하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="37f68-103">This example shows how to use friend assemblies with assemblies that are unsigned.</span></span>  
   
-### <a name="to-create-an-assembly-and-a-friend-assembly"></a><span data-ttu-id="3cbb6-104">어셈블리 및 friend 어셈블리를 만들려면</span><span class="sxs-lookup"><span data-stu-id="3cbb6-104">To create an assembly and a friend assembly</span></span>  
+### <a name="to-create-an-assembly-and-a-friend-assembly"></a><span data-ttu-id="37f68-104">어셈블리 및 friend 어셈블리를 만들려면</span><span class="sxs-lookup"><span data-stu-id="37f68-104">To create an assembly and a friend assembly</span></span>  
   
-1.  <span data-ttu-id="3cbb6-105">명령 프롬프트를 엽니다.</span><span class="sxs-lookup"><span data-stu-id="3cbb6-105">Open a command prompt.</span></span>  
+1.  <span data-ttu-id="37f68-105">명령 프롬프트를 엽니다.</span><span class="sxs-lookup"><span data-stu-id="37f68-105">Open a command prompt.</span></span>  
   
-2.  <span data-ttu-id="3cbb6-106">다음 코드가 포함된 `friend_signed_A.`라는 C# 파일을 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="3cbb6-106">Create a C# file named `friend_signed_A.` that contains the following code.</span></span> <span data-ttu-id="3cbb6-107">코드에서는 <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> 특성을 사용하여 friend_signed_B를 friend 어셈블리로 선언합니다.</span><span class="sxs-lookup"><span data-stu-id="3cbb6-107">The code uses the <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> attribute to declare friend_signed_B as a friend assembly.</span></span>  
+2.  <span data-ttu-id="37f68-106">다음 코드가 포함된 `friend_signed_A.`라는 C# 파일을 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="37f68-106">Create a C# file named `friend_signed_A.` that contains the following code.</span></span> <span data-ttu-id="37f68-107">코드에서는 <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> 특성을 사용하여 friend_signed_B를 friend 어셈블리로 선언합니다.</span><span class="sxs-lookup"><span data-stu-id="37f68-107">The code uses the <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> attribute to declare friend_signed_B as a friend assembly.</span></span>  
   
     ```csharp  
     // friend_unsigned_A.cs  
@@ -54,13 +45,13 @@ ms.lasthandoff: 11/21/2017
     }  
     ```  
   
-3.  <span data-ttu-id="3cbb6-108">다음 명령을 사용하여 friend_signed_A를 컴파일하고 서명합니다.</span><span class="sxs-lookup"><span data-stu-id="3cbb6-108">Compile and sign friend_signed_A by using the following command.</span></span>  
+3.  <span data-ttu-id="37f68-108">다음 명령을 사용하여 friend_signed_A를 컴파일하고 서명합니다.</span><span class="sxs-lookup"><span data-stu-id="37f68-108">Compile and sign friend_signed_A by using the following command.</span></span>  
   
     ```csharp  
     csc /target:library friend_unsigned_A.cs  
     ```  
   
-4.  <span data-ttu-id="3cbb6-109">다음 코드가 포함된 `friend_unsigned_B`라는 C# 파일을 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="3cbb6-109">Create a C# file named `friend_unsigned_B` that contains the following code.</span></span> <span data-ttu-id="3cbb6-110">friend_unsigned_A는 friend_unsigned_B를 friend 어셈블리로 지정하기 때문에 friend_unsigned_B의 코드는 friend_unsigned_A의 `internal` 형식과 멤버에 액세스할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="3cbb6-110">Because friend_unsigned_A specifies friend_unsigned_B as a friend assembly, the code in friend_unsigned_B can access `internal` types and members from friend_unsigned_A.</span></span>  
+4.  <span data-ttu-id="37f68-109">다음 코드가 포함된 `friend_unsigned_B`라는 C# 파일을 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="37f68-109">Create a C# file named `friend_unsigned_B` that contains the following code.</span></span> <span data-ttu-id="37f68-110">friend_unsigned_A는 friend_unsigned_B를 friend 어셈블리로 지정하기 때문에 friend_unsigned_B의 코드는 friend_unsigned_A의 `internal` 형식과 멤버에 액세스할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="37f68-110">Because friend_unsigned_A specifies friend_unsigned_B as a friend assembly, the code in friend_unsigned_B can access `internal` types and members from friend_unsigned_A.</span></span>  
   
     ```csharp  
     // friend_unsigned_B.cs  
@@ -83,24 +74,24 @@ ms.lasthandoff: 11/21/2017
     }  
     ```  
   
-5.  <span data-ttu-id="3cbb6-111">다음 명령을 사용하여 friend_signed_B를 컴파일합니다.</span><span class="sxs-lookup"><span data-stu-id="3cbb6-111">Compile friend_signed_B by using the following command.</span></span>  
+5.  <span data-ttu-id="37f68-111">다음 명령을 사용하여 friend_signed_B를 컴파일합니다.</span><span class="sxs-lookup"><span data-stu-id="37f68-111">Compile friend_signed_B by using the following command.</span></span>  
   
     ```csharp  
     csc /r:friend_unsigned_A.dll /out:friend_unsigned_B.exe friend_unsigned_B.cs  
     ```  
   
-     <span data-ttu-id="3cbb6-112">컴파일러에서 생성된 어셈블리 이름은 <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> 특성에 전달된 friend 어셈블리 이름과 일치해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="3cbb6-112">The name of the assembly that is generated by the compiler must match the friend assembly name that is passed to the <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> attribute.</span></span> <span data-ttu-id="3cbb6-113">`/out` 컴파일러 옵션을 사용하여 출력 어셈블리(.exe 또는 .dll)의 이름을 명시적으로 지정해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="3cbb6-113">You must explicitly specify the name of the output assembly (.exe or .dll) by using the `/out` compiler option.</span></span> <span data-ttu-id="3cbb6-114">자세한 내용은 [/out(C# 컴파일러 옵션)](../../../../csharp/language-reference/compiler-options/out-compiler-option.md)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="3cbb6-114">For more information, see [/out (C# Compiler Options)](../../../../csharp/language-reference/compiler-options/out-compiler-option.md).</span></span>  
+     <span data-ttu-id="37f68-112">컴파일러에서 생성된 어셈블리 이름은 <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> 특성에 전달된 friend 어셈블리 이름과 일치해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="37f68-112">The name of the assembly that is generated by the compiler must match the friend assembly name that is passed to the <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> attribute.</span></span> <span data-ttu-id="37f68-113">`/out` 컴파일러 옵션을 사용하여 출력 어셈블리(.exe 또는 .dll)의 이름을 명시적으로 지정해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="37f68-113">You must explicitly specify the name of the output assembly (.exe or .dll) by using the `/out` compiler option.</span></span> <span data-ttu-id="37f68-114">자세한 내용은 [/out(C# 컴파일러 옵션)](../../../../csharp/language-reference/compiler-options/out-compiler-option.md)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="37f68-114">For more information, see [/out (C# Compiler Options)](../../../../csharp/language-reference/compiler-options/out-compiler-option.md).</span></span>  
   
-6.  <span data-ttu-id="3cbb6-115">friend_signed_B.exe 파일을 실행합니다.</span><span class="sxs-lookup"><span data-stu-id="3cbb6-115">Run the friend_signed_B.exe file.</span></span>  
+6.  <span data-ttu-id="37f68-115">friend_signed_B.exe 파일을 실행합니다.</span><span class="sxs-lookup"><span data-stu-id="37f68-115">Run the friend_signed_B.exe file.</span></span>  
   
-     <span data-ttu-id="3cbb6-116">프로그램이 두 문자열 "Class1.Test" 및 "Class2.Test"를 인쇄합니다.</span><span class="sxs-lookup"><span data-stu-id="3cbb6-116">The program prints two strings: "Class1.Test" and "Class2.Test".</span></span>  
+     <span data-ttu-id="37f68-116">프로그램이 두 문자열 "Class1.Test" 및 "Class2.Test"를 인쇄합니다.</span><span class="sxs-lookup"><span data-stu-id="37f68-116">The program prints two strings: "Class1.Test" and "Class2.Test".</span></span>  
   
-## <a name="net-framework-security"></a><span data-ttu-id="3cbb6-117">.NET Framework 보안</span><span class="sxs-lookup"><span data-stu-id="3cbb6-117">.NET Framework Security</span></span>  
- <span data-ttu-id="3cbb6-118"><xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> 특성과 <xref:System.Security.Permissions.StrongNameIdentityPermission> 클래스 간에는 유사점이 있습니다.</span><span class="sxs-lookup"><span data-stu-id="3cbb6-118">There are similarities between the <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> attribute and the <xref:System.Security.Permissions.StrongNameIdentityPermission> class.</span></span> <span data-ttu-id="3cbb6-119">주요 차이점은 <xref:System.Security.Permissions.StrongNameIdentityPermission>은 코드의 특정 섹션을 실행하는 보안 권한을 요구할 수 있는 반면, <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> 특성은 `internal` 형식 및 멤버의 표시 유형을 제어한다는 것입니다.</span><span class="sxs-lookup"><span data-stu-id="3cbb6-119">The main difference is that <xref:System.Security.Permissions.StrongNameIdentityPermission> can demand security permissions to run a particular section of code, whereas the <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> attribute controls the visibility of `internal` types and members.</span></span>  
+## <a name="net-framework-security"></a><span data-ttu-id="37f68-117">.NET Framework 보안</span><span class="sxs-lookup"><span data-stu-id="37f68-117">.NET Framework Security</span></span>  
+ <span data-ttu-id="37f68-118"><xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> 특성과 <xref:System.Security.Permissions.StrongNameIdentityPermission> 클래스 간에는 유사점이 있습니다.</span><span class="sxs-lookup"><span data-stu-id="37f68-118">There are similarities between the <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> attribute and the <xref:System.Security.Permissions.StrongNameIdentityPermission> class.</span></span> <span data-ttu-id="37f68-119">주요 차이점은 <xref:System.Security.Permissions.StrongNameIdentityPermission>은 코드의 특정 섹션을 실행하는 보안 권한을 요구할 수 있는 반면, <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> 특성은 `internal` 형식 및 멤버의 표시 유형을 제어한다는 것입니다.</span><span class="sxs-lookup"><span data-stu-id="37f68-119">The main difference is that <xref:System.Security.Permissions.StrongNameIdentityPermission> can demand security permissions to run a particular section of code, whereas the <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> attribute controls the visibility of `internal` types and members.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="3cbb6-120">참고 항목</span><span class="sxs-lookup"><span data-stu-id="3cbb6-120">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="37f68-120">참고 항목</span><span class="sxs-lookup"><span data-stu-id="37f68-120">See Also</span></span>  
  <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>  
- [<span data-ttu-id="3cbb6-121">어셈블리 및 전역 어셈블리 캐시(C#)</span><span class="sxs-lookup"><span data-stu-id="3cbb6-121">Assemblies and the Global Assembly Cache (C#)</span></span>](../../../../csharp/programming-guide/concepts/assemblies-gac/index.md)  
- [<span data-ttu-id="3cbb6-122">Friend 어셈블리 (C#)</span><span class="sxs-lookup"><span data-stu-id="3cbb6-122">Friend Assemblies (C#)</span></span>](../../../../csharp/programming-guide/concepts/assemblies-gac/friend-assemblies.md)  
- [<span data-ttu-id="3cbb6-123">방법: 서명 된 Friend 어셈블리 (C#) 만들기</span><span class="sxs-lookup"><span data-stu-id="3cbb6-123">How to: Create Signed Friend Assemblies (C#)</span></span>](../../../../csharp/programming-guide/concepts/assemblies-gac/how-to-create-signed-friend-assemblies.md)  
- [<span data-ttu-id="3cbb6-124">C# 프로그래밍 가이드</span><span class="sxs-lookup"><span data-stu-id="3cbb6-124">C# Programming Guide</span></span>](../../../../csharp/programming-guide/index.md)
+ [<span data-ttu-id="37f68-121">어셈블리 및 전역 어셈블리 캐시(C#)</span><span class="sxs-lookup"><span data-stu-id="37f68-121">Assemblies and the Global Assembly Cache (C#)</span></span>](../../../../csharp/programming-guide/concepts/assemblies-gac/index.md)  
+ [<span data-ttu-id="37f68-122">Friend 어셈블리(C#)</span><span class="sxs-lookup"><span data-stu-id="37f68-122">Friend Assemblies (C#)</span></span>](../../../../csharp/programming-guide/concepts/assemblies-gac/friend-assemblies.md)  
+ [<span data-ttu-id="37f68-123">방법: 서명된 Friend 어셈블리 만들기(C#)</span><span class="sxs-lookup"><span data-stu-id="37f68-123">How to: Create Signed Friend Assemblies (C#)</span></span>](../../../../csharp/programming-guide/concepts/assemblies-gac/how-to-create-signed-friend-assemblies.md)  
+ [<span data-ttu-id="37f68-124">C# 프로그래밍 가이드</span><span class="sxs-lookup"><span data-stu-id="37f68-124">C# Programming Guide</span></span>](../../../../csharp/programming-guide/index.md)

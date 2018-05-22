@@ -1,29 +1,27 @@
 ### YamlMime:Tutorial
-title: <span data-ttu-id="3fe8b-101">C#의 컬렉션</span><span class="sxs-lookup"><span data-stu-id="3fe8b-101">Collections in C#</span></span>
+title: <span data-ttu-id="5bef0-101">C#의 컬렉션</span><span class="sxs-lookup"><span data-stu-id="5bef0-101">Collections in C#</span></span>
 metadata:
   title: 컬렉션 대화형 자습서 - C# 빠른 시작
   description: 이 자습서에서는 브라우저를 사용하여 C#을 대화형으로 학습할 수 있습니다. C# 코드를 작성하고 브라우저에서 직접 코드를 컴파일하고 실행한 결과를 확인할 수 있습니다.
   audience: Developer
-  ms.topic: get-started-article
+  ms.topic: quickstart
   ms.custom: mvc
   level: Beginner
   displayType: two-column
   interactive: csharp
-  ms.prod: .net
-  ms.technology: devlang-csharp
-  ms.openlocfilehash: 08060fc95d94db91a429439e502a8f6dc2978c4d
-  ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
+  ms.openlocfilehash: 79861f7a04939fafd77bd7a905b8fef0e94b8966
+  ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
   ms.translationtype: HT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 03/28/2018
+  ms.lasthandoff: 05/07/2018
 items:
 - durationInMinutes: 1
   content: >
-    <span data-ttu-id="3fe8b-105">이 빠른 시작에서는 브라우저를 사용하여 C# 코드를 작성하고, 코드를 컴파일 및 실행한 결과를 확인하는 방법을 대화형으로 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="3fe8b-105">This quickstart teaches you C# interactively, using your browser to write C# code and see the results of compiling and running your code.</span></span> <span data-ttu-id="3fe8b-106">컬렉션과 배열을 작성, 수정 및 탐색하는 일련의 단원이 포함되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="3fe8b-106">It contains a series of lessons that create, modify and explore collections and arrays.</span></span>
-- title: <span data-ttu-id="3fe8b-107">목록 만들기</span><span class="sxs-lookup"><span data-stu-id="3fe8b-107">Create lists</span></span>
+    <span data-ttu-id="5bef0-105">이 빠른 시작에서는 브라우저를 사용하여 C# 코드를 작성하고, 코드를 컴파일 및 실행한 결과를 확인하는 방법을 대화형으로 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="5bef0-105">This quickstart teaches you C# interactively, using your browser to write C# code and see the results of compiling and running your code.</span></span> <span data-ttu-id="5bef0-106">컬렉션과 배열을 작성, 수정 및 탐색하는 일련의 단원이 포함되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="5bef0-106">It contains a series of lessons that create, modify and explore collections and arrays.</span></span>
+- title: <span data-ttu-id="5bef0-107">목록 만들기</span><span class="sxs-lookup"><span data-stu-id="5bef0-107">Create lists</span></span>
   durationInMinutes: 2
   content: >
-    <span data-ttu-id="3fe8b-108">대화형 창에서 다음 코드를 실행합니다.</span><span class="sxs-lookup"><span data-stu-id="3fe8b-108">Run the following code in the interactive window.</span></span> <span data-ttu-id="3fe8b-109">그렇게 하려면 대화형 창에 다음 코드 블록을 입력하고(“<name>”을 사용자의 이름으로 바꿈) **실행** 단추를 클릭합니다.</span><span class="sxs-lookup"><span data-stu-id="3fe8b-109">To do that, type the following code block in the interactive window (replace "<name>" with your name) and click the **Run** button:</span></span>
+    <span data-ttu-id="5bef0-108">대화형 창에서 다음 코드를 실행합니다.</span><span class="sxs-lookup"><span data-stu-id="5bef0-108">Run the following code in the interactive window.</span></span> <span data-ttu-id="5bef0-109">그렇게 하려면 대화형 창에 다음 코드 블록을 입력하고(“<name>”을 사용자의 이름으로 바꿈) **실행** 단추를 클릭합니다.</span><span class="sxs-lookup"><span data-stu-id="5bef0-109">To do that, type the following code block in the interactive window (replace "<name>" with your name) and click the **Run** button:</span></span>
 
 
     ```csharp
@@ -39,25 +37,25 @@ items:
     ```
 
 
-    <span data-ttu-id="3fe8b-110">문자열 목록을 만들고, 해당 목록에 3개의 이름을 추가하고, 이름을 모두 대문자로 출력했습니다.</span><span class="sxs-lookup"><span data-stu-id="3fe8b-110">You've just created a list of strings, added three names to that list, and printed out the names in all CAPS.</span></span> <span data-ttu-id="3fe8b-111">이전 빠른 시작에서 학습한 개념을 사용하여 목록을 반복합니다.</span><span class="sxs-lookup"><span data-stu-id="3fe8b-111">You're using concepts that you've learned in earlier quickstarts to loop through the list.</span></span>
+    <span data-ttu-id="5bef0-110">문자열 목록을 만들고, 해당 목록에 3개의 이름을 추가하고, 이름을 모두 대문자로 출력했습니다.</span><span class="sxs-lookup"><span data-stu-id="5bef0-110">You've just created a list of strings, added three names to that list, and printed out the names in all CAPS.</span></span> <span data-ttu-id="5bef0-111">이전 빠른 시작에서 학습한 개념을 사용하여 목록을 반복합니다.</span><span class="sxs-lookup"><span data-stu-id="5bef0-111">You're using concepts that you've learned in earlier quickstarts to loop through the list.</span></span>
 
 
-    <span data-ttu-id="3fe8b-112">이름을 표시하는 코드는 [문자열 보간](../language-reference/tokens/interpolated.md) 기능을 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="3fe8b-112">The code to display names makes use of the [string interpolation](../language-reference/tokens/interpolated.md) feature.</span></span> <span data-ttu-id="3fe8b-113">`string` 앞에 `$` 문자를 넣으면 문자열 선언에 C# 코드를 포함할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="3fe8b-113">When you precede a `string` with the `$` character, you can embed C# code in the string declaration.</span></span> <span data-ttu-id="3fe8b-114">실제 문자열은 C# 코드를 생성하는 값으로 바꿉니다.</span><span class="sxs-lookup"><span data-stu-id="3fe8b-114">The actual string replaces that C# code with the value it generates.</span></span> <span data-ttu-id="3fe8b-115">이 예제에서는 <xref:System.String.ToUpper%2A> 메서드를 호출했기 때문에 `{name.ToUpper()}`를 대문자로 변환된 각 이름으로 바꿉니다.</span><span class="sxs-lookup"><span data-stu-id="3fe8b-115">In this example, it replaces the `{name.ToUpper()}` with each name, converted to capital letters, because you called the <xref:System.String.ToUpper%2A> method.</span></span>
+    <span data-ttu-id="5bef0-112">이름을 표시하는 코드는 [문자열 보간](../language-reference/tokens/interpolated.md) 기능을 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="5bef0-112">The code to display names makes use of the [string interpolation](../language-reference/tokens/interpolated.md) feature.</span></span> <span data-ttu-id="5bef0-113">`string` 앞에 `$` 문자를 넣으면 문자열 선언에 C# 코드를 포함할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="5bef0-113">When you precede a `string` with the `$` character, you can embed C# code in the string declaration.</span></span> <span data-ttu-id="5bef0-114">실제 문자열은 C# 코드를 생성하는 값으로 바꿉니다.</span><span class="sxs-lookup"><span data-stu-id="5bef0-114">The actual string replaces that C# code with the value it generates.</span></span> <span data-ttu-id="5bef0-115">이 예제에서는 <xref:System.String.ToUpper%2A> 메서드를 호출했기 때문에 `{name.ToUpper()}`를 대문자로 변환된 각 이름으로 바꿉니다.</span><span class="sxs-lookup"><span data-stu-id="5bef0-115">In this example, it replaces the `{name.ToUpper()}` with each name, converted to capital letters, because you called the <xref:System.String.ToUpper%2A> method.</span></span>
 
 
-    <span data-ttu-id="3fe8b-116">계속해서 살펴보겠습니다.</span><span class="sxs-lookup"><span data-stu-id="3fe8b-116">Let's keep exploring.</span></span>
+    <span data-ttu-id="5bef0-116">계속해서 살펴보겠습니다.</span><span class="sxs-lookup"><span data-stu-id="5bef0-116">Let's keep exploring.</span></span>
 
 
     > [!NOTE]
 
-    > <span data-ttu-id="3fe8b-117">이 온라인 코딩 환경은 미리 보기 모드로 제공됩니다.</span><span class="sxs-lookup"><span data-stu-id="3fe8b-117">This online coding experience is in preview mode.</span></span> <span data-ttu-id="3fe8b-118">문제가 발생하면 [dotnet/try 리포지토리](https://github.com/dotnet/try/issues)에 보고하세요.</span><span class="sxs-lookup"><span data-stu-id="3fe8b-118">If you encounter problems, please report them [on the dotnet/try repo](https://github.com/dotnet/try/issues).</span></span>
-- title: <span data-ttu-id="3fe8b-119">목록 콘텐츠 수정</span><span class="sxs-lookup"><span data-stu-id="3fe8b-119">Modify list contents</span></span>
+    > <span data-ttu-id="5bef0-117">이 온라인 코딩 환경은 미리 보기 모드로 제공됩니다.</span><span class="sxs-lookup"><span data-stu-id="5bef0-117">This online coding experience is in preview mode.</span></span> <span data-ttu-id="5bef0-118">문제가 발생하면 [dotnet/try 리포지토리](https://github.com/dotnet/try/issues)에 보고하세요.</span><span class="sxs-lookup"><span data-stu-id="5bef0-118">If you encounter problems, please report them [on the dotnet/try repo](https://github.com/dotnet/try/issues).</span></span>
+- title: <span data-ttu-id="5bef0-119">목록 콘텐츠 수정</span><span class="sxs-lookup"><span data-stu-id="5bef0-119">Modify list contents</span></span>
   durationInMinutes: 3
   content: >
-    <span data-ttu-id="3fe8b-120">생성한 컬렉션은 <xref:System.Collections.Generic.List%601> 형식을 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="3fe8b-120">The collection you created uses the <xref:System.Collections.Generic.List%601> type.</span></span> <span data-ttu-id="3fe8b-121">이 형식은 요소의 시퀀스를 저장합니다.</span><span class="sxs-lookup"><span data-stu-id="3fe8b-121">This type stores sequences of elements.</span></span> <span data-ttu-id="3fe8b-122">꺾쇠 괄호 사이의 요소 형식을 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="3fe8b-122">You specify the type of the elements between the angle brackets.</span></span>
+    <span data-ttu-id="5bef0-120">생성한 컬렉션은 <xref:System.Collections.Generic.List%601> 형식을 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="5bef0-120">The collection you created uses the <xref:System.Collections.Generic.List%601> type.</span></span> <span data-ttu-id="5bef0-121">이 형식은 요소의 시퀀스를 저장합니다.</span><span class="sxs-lookup"><span data-stu-id="5bef0-121">This type stores sequences of elements.</span></span> <span data-ttu-id="5bef0-122">꺾쇠 괄호 사이의 요소 형식을 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="5bef0-122">You specify the type of the elements between the angle brackets.</span></span>
 
 
-    <span data-ttu-id="3fe8b-123">이 <xref:System.Collections.Generic.List%601> 형식은 늘리거나 줄일 수 있어 요소를 추가하거나 제거할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="3fe8b-123">One important aspect of this <xref:System.Collections.Generic.List%601> type is that it can grow or shrink, enabling you to add or remove elements.</span></span> <span data-ttu-id="3fe8b-124">이미 작성한 코드 아래에 다음 코드를 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="3fe8b-124">Add the following code below the code you've already written:</span></span>
+    <span data-ttu-id="5bef0-123">이 <xref:System.Collections.Generic.List%601> 형식은 늘리거나 줄일 수 있어 요소를 추가하거나 제거할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="5bef0-123">One important aspect of this <xref:System.Collections.Generic.List%601> type is that it can grow or shrink, enabling you to add or remove elements.</span></span> <span data-ttu-id="5bef0-124">이미 작성한 코드 아래에 다음 코드를 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="5bef0-124">Add the following code below the code you've already written:</span></span>
 
 
     ```csharp
@@ -79,10 +77,10 @@ items:
     ```
 
 
-    <span data-ttu-id="3fe8b-125">목록 끝에 이름을 두 개 더 추가했습니다.</span><span class="sxs-lookup"><span data-stu-id="3fe8b-125">You've added two more names to the end of the list.</span></span> <span data-ttu-id="3fe8b-126">또한 이름을 하나 제거했습니다.</span><span class="sxs-lookup"><span data-stu-id="3fe8b-126">You've also removed one as well.</span></span>
+    <span data-ttu-id="5bef0-125">목록 끝에 이름을 두 개 더 추가했습니다.</span><span class="sxs-lookup"><span data-stu-id="5bef0-125">You've added two more names to the end of the list.</span></span> <span data-ttu-id="5bef0-126">또한 이름을 하나 제거했습니다.</span><span class="sxs-lookup"><span data-stu-id="5bef0-126">You've also removed one as well.</span></span>
 
 
-    <span data-ttu-id="3fe8b-127"><xref:System.Collections.Generic.List%601>를 사용하면 **인덱스**별로 각 항목을 참조할 수도 있습니다.</span><span class="sxs-lookup"><span data-stu-id="3fe8b-127">The <xref:System.Collections.Generic.List%601> enables you to reference individual items by **index** as well.</span></span> <span data-ttu-id="3fe8b-128">`[` 및 `]` 토큰을 사용하여 항목에 액세스합니다.</span><span class="sxs-lookup"><span data-stu-id="3fe8b-128">You access items using the `[` and `]` tokens.</span></span> <span data-ttu-id="3fe8b-129">이미 작성한 코드 아래에 다음 코드를 추가하고 다음을 시도합니다.</span><span class="sxs-lookup"><span data-stu-id="3fe8b-129">Add the following code below what you've already written and try it:</span></span>
+    <span data-ttu-id="5bef0-127"><xref:System.Collections.Generic.List%601>를 사용하면 **인덱스**별로 각 항목을 참조할 수도 있습니다.</span><span class="sxs-lookup"><span data-stu-id="5bef0-127">The <xref:System.Collections.Generic.List%601> enables you to reference individual items by **index** as well.</span></span> <span data-ttu-id="5bef0-128">`[` 및 `]` 토큰을 사용하여 항목에 액세스합니다.</span><span class="sxs-lookup"><span data-stu-id="5bef0-128">You access items using the `[` and `]` tokens.</span></span> <span data-ttu-id="5bef0-129">이미 작성한 코드 아래에 다음 코드를 추가하고 다음을 시도합니다.</span><span class="sxs-lookup"><span data-stu-id="5bef0-129">Add the following code below what you've already written and try it:</span></span>
 
 
     ```csharp
@@ -94,7 +92,7 @@ items:
     ```
 
 
-    <span data-ttu-id="3fe8b-130">목록 끝을 지나서 액세스할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="3fe8b-130">You're not allowed to access past the end of the list.</span></span> <span data-ttu-id="3fe8b-131"><xref:System.Collections.Generic.List%601.Count%2A> 속성을 사용하여 목록의 길이를 확인할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="3fe8b-131">You can check how long the list is using the <xref:System.Collections.Generic.List%601.Count%2A> property.</span></span> <span data-ttu-id="3fe8b-132">다음 코드를 추가하여 시도해 보세요.</span><span class="sxs-lookup"><span data-stu-id="3fe8b-132">Add the following code to try it:</span></span>
+    <span data-ttu-id="5bef0-130">목록 끝을 지나서 액세스할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="5bef0-130">You're not allowed to access past the end of the list.</span></span> <span data-ttu-id="5bef0-131"><xref:System.Collections.Generic.List%601.Count%2A> 속성을 사용하여 목록의 길이를 확인할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="5bef0-131">You can check how long the list is using the <xref:System.Collections.Generic.List%601.Count%2A> property.</span></span> <span data-ttu-id="5bef0-132">다음 코드를 추가하여 시도해 보세요.</span><span class="sxs-lookup"><span data-stu-id="5bef0-132">Add the following code to try it:</span></span>
 
 
     ```csharp
@@ -104,16 +102,16 @@ items:
     ```
 
 
-    <span data-ttu-id="3fe8b-133">**실행**을 클릭하여 결과를 다시 확인합니다.</span><span class="sxs-lookup"><span data-stu-id="3fe8b-133">Click **Run** again to see the results.</span></span> <span data-ttu-id="3fe8b-134">C#에서 인덱스는 0부터 시작하므로, 가장 큰 유효 인덱스는 목록의 항목 수보다 하나 작습니다.</span><span class="sxs-lookup"><span data-stu-id="3fe8b-134">In C#, indices start at 0, so the largest valid index is one less than the number of items in the list.</span></span>
+    <span data-ttu-id="5bef0-133">**실행**을 클릭하여 결과를 다시 확인합니다.</span><span class="sxs-lookup"><span data-stu-id="5bef0-133">Click **Run** again to see the results.</span></span> <span data-ttu-id="5bef0-134">C#에서 인덱스는 0부터 시작하므로, 가장 큰 유효 인덱스는 목록의 항목 수보다 하나 작습니다.</span><span class="sxs-lookup"><span data-stu-id="5bef0-134">In C#, indices start at 0, so the largest valid index is one less than the number of items in the list.</span></span>
 
 
     > [!NOTE]
 
-    > <span data-ttu-id="3fe8b-135">이 온라인 코딩 환경은 미리 보기 모드로 제공됩니다.</span><span class="sxs-lookup"><span data-stu-id="3fe8b-135">This online coding experience is in preview mode.</span></span> <span data-ttu-id="3fe8b-136">문제가 발생하면 [dotnet/try 리포지토리](https://github.com/dotnet/try/issues)에 보고하세요.</span><span class="sxs-lookup"><span data-stu-id="3fe8b-136">If you encounter problems, please report them [on the dotnet/try repo](https://github.com/dotnet/try/issues).</span></span>
-- title: <span data-ttu-id="3fe8b-137">목록 검색 및 정렬</span><span class="sxs-lookup"><span data-stu-id="3fe8b-137">Search and sort lists</span></span>
+    > <span data-ttu-id="5bef0-135">이 온라인 코딩 환경은 미리 보기 모드로 제공됩니다.</span><span class="sxs-lookup"><span data-stu-id="5bef0-135">This online coding experience is in preview mode.</span></span> <span data-ttu-id="5bef0-136">문제가 발생하면 [dotnet/try 리포지토리](https://github.com/dotnet/try/issues)에 보고하세요.</span><span class="sxs-lookup"><span data-stu-id="5bef0-136">If you encounter problems, please report them [on the dotnet/try repo](https://github.com/dotnet/try/issues).</span></span>
+- title: <span data-ttu-id="5bef0-137">목록 검색 및 정렬</span><span class="sxs-lookup"><span data-stu-id="5bef0-137">Search and sort lists</span></span>
   durationInMinutes: 5
   content: >
-    <span data-ttu-id="3fe8b-138">샘플에서는 상대적으로 작은 목록을 사용하지만 응용 프로그램에서는 수천에 달하는 많은 요소가 포함된 목록을 작성할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="3fe8b-138">Our samples use relatively small lists, but your applications may often create lists with many more elements, sometimes numbering in the thousands.</span></span> <span data-ttu-id="3fe8b-139">이러한 큰 컬렉션에서 요소를 찾으려면 여러 항목의 목록을 검색해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="3fe8b-139">To find elements in these larger collections, you need to search the list for different items.</span></span> <span data-ttu-id="3fe8b-140"><xref:System.Collections.Generic.List%601.IndexOf%2A> 메서드는 항목을 검색하고 항목의 인덱스를 반환합니다.</span><span class="sxs-lookup"><span data-stu-id="3fe8b-140">The <xref:System.Collections.Generic.List%601.IndexOf%2A> method searches for an item and returns the index of the item.</span></span> <span data-ttu-id="3fe8b-141">다음을 시도하여 작동 방식을 확인하세요.</span><span class="sxs-lookup"><span data-stu-id="3fe8b-141">Try this to see how it works.</span></span>  <span data-ttu-id="3fe8b-142">지금까지 작성한 코드 아래에 다음 코드를 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="3fe8b-142">Add the following code below what you've written so far:</span></span>
+    <span data-ttu-id="5bef0-138">샘플에서는 상대적으로 작은 목록을 사용하지만 응용 프로그램에서는 수천에 달하는 많은 요소가 포함된 목록을 작성할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="5bef0-138">Our samples use relatively small lists, but your applications may often create lists with many more elements, sometimes numbering in the thousands.</span></span> <span data-ttu-id="5bef0-139">이러한 큰 컬렉션에서 요소를 찾으려면 여러 항목의 목록을 검색해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="5bef0-139">To find elements in these larger collections, you need to search the list for different items.</span></span> <span data-ttu-id="5bef0-140"><xref:System.Collections.Generic.List%601.IndexOf%2A> 메서드는 항목을 검색하고 항목의 인덱스를 반환합니다.</span><span class="sxs-lookup"><span data-stu-id="5bef0-140">The <xref:System.Collections.Generic.List%601.IndexOf%2A> method searches for an item and returns the index of the item.</span></span> <span data-ttu-id="5bef0-141">다음을 시도하여 작동 방식을 확인하세요.</span><span class="sxs-lookup"><span data-stu-id="5bef0-141">Try this to see how it works.</span></span>  <span data-ttu-id="5bef0-142">지금까지 작성한 코드 아래에 다음 코드를 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="5bef0-142">Add the following code below what you've written so far:</span></span>
 
 
     ```csharp
@@ -128,10 +126,10 @@ items:
     ```
 
 
-    <span data-ttu-id="3fe8b-143">항목이 목록에 있는지 알 수 없으므로 <xref:System.Collections.Generic.List%601.IndexOf%2A>에서 반환된 인덱스를 항상 확인해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="3fe8b-143">You may not know if an item is in the list, so you should always check the index returned by <xref:System.Collections.Generic.List%601.IndexOf%2A>.</span></span> <span data-ttu-id="3fe8b-144">-1인 경우 항목을 찾을 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="3fe8b-144">If it is -1, the item was not found.</span></span>
+    <span data-ttu-id="5bef0-143">항목이 목록에 있는지 알 수 없으므로 <xref:System.Collections.Generic.List%601.IndexOf%2A>에서 반환된 인덱스를 항상 확인해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="5bef0-143">You may not know if an item is in the list, so you should always check the index returned by <xref:System.Collections.Generic.List%601.IndexOf%2A>.</span></span> <span data-ttu-id="5bef0-144">-1인 경우 항목을 찾을 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="5bef0-144">If it is -1, the item was not found.</span></span>
 
 
-    <span data-ttu-id="3fe8b-145">목록의 항목도 정렬할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="3fe8b-145">The items in your list can be sorted as well.</span></span> <span data-ttu-id="3fe8b-146"><xref:System.Collections.Generic.List%601.Sort%2A> 메서드는 일반적인 순서(문자열의 경우 사전순)로 목록의 모든 항목을 정렬합니다.</span><span class="sxs-lookup"><span data-stu-id="3fe8b-146">The <xref:System.Collections.Generic.List%601.Sort%2A> method sorts all the items in the list in their normal order (alphabetically in the case of strings).</span></span> <span data-ttu-id="3fe8b-147">이 코드를 추가하고 다시 실행하세요.</span><span class="sxs-lookup"><span data-stu-id="3fe8b-147">Add this code and run again:</span></span>
+    <span data-ttu-id="5bef0-145">목록의 항목도 정렬할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="5bef0-145">The items in your list can be sorted as well.</span></span> <span data-ttu-id="5bef0-146"><xref:System.Collections.Generic.List%601.Sort%2A> 메서드는 일반적인 순서(문자열의 경우 사전순)로 목록의 모든 항목을 정렬합니다.</span><span class="sxs-lookup"><span data-stu-id="5bef0-146">The <xref:System.Collections.Generic.List%601.Sort%2A> method sorts all the items in the list in their normal order (alphabetically in the case of strings).</span></span> <span data-ttu-id="5bef0-147">이 코드를 추가하고 다시 실행하세요.</span><span class="sxs-lookup"><span data-stu-id="5bef0-147">Add this code and run again:</span></span>
 
 
     ```csharp
@@ -149,11 +147,11 @@ items:
 
     > [!NOTE]
 
-    > <span data-ttu-id="3fe8b-148">이 온라인 코딩 환경은 미리 보기 모드로 제공됩니다.</span><span class="sxs-lookup"><span data-stu-id="3fe8b-148">This online coding experience is in preview mode.</span></span> <span data-ttu-id="3fe8b-149">문제가 발생하면 [dotnet/try 리포지토리](https://github.com/dotnet/try/issues)에 보고하세요.</span><span class="sxs-lookup"><span data-stu-id="3fe8b-149">If you encounter problems, please report them [on the dotnet/try repo](https://github.com/dotnet/try/issues).</span></span>
-- title: <span data-ttu-id="3fe8b-150">다른 형식 목록</span><span class="sxs-lookup"><span data-stu-id="3fe8b-150">Lists of other types</span></span>
+    > <span data-ttu-id="5bef0-148">이 온라인 코딩 환경은 미리 보기 모드로 제공됩니다.</span><span class="sxs-lookup"><span data-stu-id="5bef0-148">This online coding experience is in preview mode.</span></span> <span data-ttu-id="5bef0-149">문제가 발생하면 [dotnet/try 리포지토리](https://github.com/dotnet/try/issues)에 보고하세요.</span><span class="sxs-lookup"><span data-stu-id="5bef0-149">If you encounter problems, please report them [on the dotnet/try repo](https://github.com/dotnet/try/issues).</span></span>
+- title: <span data-ttu-id="5bef0-150">다른 형식 목록</span><span class="sxs-lookup"><span data-stu-id="5bef0-150">Lists of other types</span></span>
   durationInMinutes: 5
   content: >
-    <span data-ttu-id="3fe8b-151">지금까지 목록에 `string` 형식을 사용했습니다.</span><span class="sxs-lookup"><span data-stu-id="3fe8b-151">You've been using the `string` type in lists so far.</span></span> <span data-ttu-id="3fe8b-152">다른 형식을 사용하여 <xref:System.Collections.Generic.List%601>를 만들어 보겠습니다.</span><span class="sxs-lookup"><span data-stu-id="3fe8b-152">Let's make a <xref:System.Collections.Generic.List%601> using a different type.</span></span> <span data-ttu-id="3fe8b-153">숫자 집합을 빌드하겠습니다.</span><span class="sxs-lookup"><span data-stu-id="3fe8b-153">Let's build a set of numbers.</span></span> <span data-ttu-id="3fe8b-154">지금까지 작성한 코드를 삭제하고 다음으로 바꿉니다.</span><span class="sxs-lookup"><span data-stu-id="3fe8b-154">Delete the code you wrote so far, and replace it with this:</span></span>
+    <span data-ttu-id="5bef0-151">지금까지 목록에 `string` 형식을 사용했습니다.</span><span class="sxs-lookup"><span data-stu-id="5bef0-151">You've been using the `string` type in lists so far.</span></span> <span data-ttu-id="5bef0-152">다른 형식을 사용하여 <xref:System.Collections.Generic.List%601>를 만들어 보겠습니다.</span><span class="sxs-lookup"><span data-stu-id="5bef0-152">Let's make a <xref:System.Collections.Generic.List%601> using a different type.</span></span> <span data-ttu-id="5bef0-153">숫자 집합을 빌드하겠습니다.</span><span class="sxs-lookup"><span data-stu-id="5bef0-153">Let's build a set of numbers.</span></span> <span data-ttu-id="5bef0-154">지금까지 작성한 코드를 삭제하고 다음으로 바꿉니다.</span><span class="sxs-lookup"><span data-stu-id="5bef0-154">Delete the code you wrote so far, and replace it with this:</span></span>
 
 
     ```csharp
@@ -163,7 +161,7 @@ items:
     ```
 
 
-    <span data-ttu-id="3fe8b-155">정수 목록을 만들고 처음 두 정수를 값 1로 설정합니다.</span><span class="sxs-lookup"><span data-stu-id="3fe8b-155">That creates a list of integers, and sets the first two integers to the value 1.</span></span> <span data-ttu-id="3fe8b-156">숫자 시퀀스인 *피보나치 시퀀스*의 첫 번째 두 값입니다.</span><span class="sxs-lookup"><span data-stu-id="3fe8b-156">These are the first two values of a *Fibonacci Sequence*, a sequence of numbers.</span></span> <span data-ttu-id="3fe8b-157">다음 각 피보나치 수는 이전의 두 수의 합계를 사용하여 찾습니다.</span><span class="sxs-lookup"><span data-stu-id="3fe8b-157">Each next Fibonacci number is found by taking the sum of the previous two numbers.</span></span> <span data-ttu-id="3fe8b-158">이 코드를 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="3fe8b-158">Add this code:</span></span>
+    <span data-ttu-id="5bef0-155">정수 목록을 만들고 처음 두 정수를 값 1로 설정합니다.</span><span class="sxs-lookup"><span data-stu-id="5bef0-155">That creates a list of integers, and sets the first two integers to the value 1.</span></span> <span data-ttu-id="5bef0-156">숫자 시퀀스인 *피보나치 시퀀스*의 첫 번째 두 값입니다.</span><span class="sxs-lookup"><span data-stu-id="5bef0-156">These are the first two values of a *Fibonacci Sequence*, a sequence of numbers.</span></span> <span data-ttu-id="5bef0-157">다음 각 피보나치 수는 이전의 두 수의 합계를 사용하여 찾습니다.</span><span class="sxs-lookup"><span data-stu-id="5bef0-157">Each next Fibonacci number is found by taking the sum of the previous two numbers.</span></span> <span data-ttu-id="5bef0-158">이 코드를 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="5bef0-158">Add this code:</span></span>
 
 
     ```csharp
@@ -181,26 +179,26 @@ items:
     ```
 
 
-    <span data-ttu-id="3fe8b-159">**실행**을 눌러 결과를 확인합니다.</span><span class="sxs-lookup"><span data-stu-id="3fe8b-159">Press **Run** to see the results;</span></span>
+    <span data-ttu-id="5bef0-159">**실행**을 눌러 결과를 확인합니다.</span><span class="sxs-lookup"><span data-stu-id="5bef0-159">Press **Run** to see the results;</span></span>
 
 
     > [!NOTE]
 
-    > <span data-ttu-id="3fe8b-160">이 온라인 코딩 환경은 미리 보기 모드로 제공됩니다.</span><span class="sxs-lookup"><span data-stu-id="3fe8b-160">This online coding experience is in preview mode.</span></span> <span data-ttu-id="3fe8b-161">문제가 발생하면 [dotnet/try 리포지토리](https://github.com/dotnet/try/issues)에 보고하세요.</span><span class="sxs-lookup"><span data-stu-id="3fe8b-161">If you encounter problems, please report them [on the dotnet/try repo](https://github.com/dotnet/try/issues).</span></span>
-- title: <span data-ttu-id="3fe8b-162">과제</span><span class="sxs-lookup"><span data-stu-id="3fe8b-162">Challenge</span></span>
+    > <span data-ttu-id="5bef0-160">이 온라인 코딩 환경은 미리 보기 모드로 제공됩니다.</span><span class="sxs-lookup"><span data-stu-id="5bef0-160">This online coding experience is in preview mode.</span></span> <span data-ttu-id="5bef0-161">문제가 발생하면 [dotnet/try 리포지토리](https://github.com/dotnet/try/issues)에 보고하세요.</span><span class="sxs-lookup"><span data-stu-id="5bef0-161">If you encounter problems, please report them [on the dotnet/try repo](https://github.com/dotnet/try/issues).</span></span>
+- title: <span data-ttu-id="5bef0-162">과제</span><span class="sxs-lookup"><span data-stu-id="5bef0-162">Challenge</span></span>
   durationInMinutes: 10
   content: >
-    <span data-ttu-id="3fe8b-163">이 단원과 이전 단원에서 학습한 개념을 함께 적용할 수 있는지 확인하세요.</span><span class="sxs-lookup"><span data-stu-id="3fe8b-163">See if you can put together some of the concepts from this and earlier lessons.</span></span> <span data-ttu-id="3fe8b-164">피보나치 수를 사용하여 지금까지 빌드한 내용을 확장합니다.</span><span class="sxs-lookup"><span data-stu-id="3fe8b-164">Expand on what you've built so far with Fibonacci Numbers.</span></span> <span data-ttu-id="3fe8b-165">코드를 작성하여 시퀀스에서 처음 20개 수를 생성합니다.</span><span class="sxs-lookup"><span data-stu-id="3fe8b-165">Try and write the code to generate the first 20 numbers in the sequence.</span></span> <span data-ttu-id="3fe8b-166">(힌트: 20번째 피보나치 수는 6765입니다.)</span><span class="sxs-lookup"><span data-stu-id="3fe8b-166">(As a hint, the 20th Fibonacci number is 6765.)</span></span>
+    <span data-ttu-id="5bef0-163">이 단원과 이전 단원에서 학습한 개념을 함께 적용할 수 있는지 확인하세요.</span><span class="sxs-lookup"><span data-stu-id="5bef0-163">See if you can put together some of the concepts from this and earlier lessons.</span></span> <span data-ttu-id="5bef0-164">피보나치 수를 사용하여 지금까지 빌드한 내용을 확장합니다.</span><span class="sxs-lookup"><span data-stu-id="5bef0-164">Expand on what you've built so far with Fibonacci Numbers.</span></span> <span data-ttu-id="5bef0-165">코드를 작성하여 시퀀스에서 처음 20개 수를 생성합니다.</span><span class="sxs-lookup"><span data-stu-id="5bef0-165">Try and write the code to generate the first 20 numbers in the sequence.</span></span> <span data-ttu-id="5bef0-166">(힌트: 20번째 피보나치 수는 6765입니다.)</span><span class="sxs-lookup"><span data-stu-id="5bef0-166">(As a hint, the 20th Fibonacci number is 6765.)</span></span>
 
 
     > [!NOTE]
 
-    > <span data-ttu-id="3fe8b-167">이 온라인 코딩 환경은 미리 보기 모드로 제공됩니다.</span><span class="sxs-lookup"><span data-stu-id="3fe8b-167">This online coding experience is in preview mode.</span></span> <span data-ttu-id="3fe8b-168">문제가 발생하면 [dotnet/try 리포지토리](https://github.com/dotnet/try/issues)에 보고하세요.</span><span class="sxs-lookup"><span data-stu-id="3fe8b-168">If you encounter problems, please report them [on the dotnet/try repo](https://github.com/dotnet/try/issues).</span></span>
-- title: <span data-ttu-id="3fe8b-169">과제 완료</span><span class="sxs-lookup"><span data-stu-id="3fe8b-169">Complete challenge</span></span>
+    > <span data-ttu-id="5bef0-167">이 온라인 코딩 환경은 미리 보기 모드로 제공됩니다.</span><span class="sxs-lookup"><span data-stu-id="5bef0-167">This online coding experience is in preview mode.</span></span> <span data-ttu-id="5bef0-168">문제가 발생하면 [dotnet/try 리포지토리](https://github.com/dotnet/try/issues)에 보고하세요.</span><span class="sxs-lookup"><span data-stu-id="5bef0-168">If you encounter problems, please report them [on the dotnet/try repo](https://github.com/dotnet/try/issues).</span></span>
+- title: <span data-ttu-id="5bef0-169">과제 완료</span><span class="sxs-lookup"><span data-stu-id="5bef0-169">Complete challenge</span></span>
   durationInMinutes: 3
-  content: "<span data-ttu-id=\"3fe8b-170\">다음과 같은 답을 제시했나요?</span><span class=\"sxs-lookup\"><span data-stu-id=\"3fe8b-170\">Did you come up with something like this?</span></span>\n\n```csharp\nvar fibonacciNumbers = new List<int> {1, 1};\n\nwhile (fibonacciNumbers.Count < 20)\n{\n    var previous = fibonacciNumbers[fibonacciNumbers.Count - 1];\n    var previous2 = fibonacciNumbers[fibonacciNumbers.Count - 2];\n    \n    fibonacciNumbers.Add(previous + previous2);\n}\nforeach(var item in fibonacciNumbers)\n    Console.WriteLine(item);\n```\n\n<span data-ttu-id=\"3fe8b-171\">루프의 각 반복을 통해 목록의 마지막 두 정수를 사용하고, 더하고, 해당 값을 목록에 추가합니다.</span><span class=\"sxs-lookup\"><span data-stu-id=\"3fe8b-171\">With each iteration of the loop, you're taking the last two integers in the list, summing them, and adding that value to the list.</span></span> <span data-ttu-id=\"3fe8b-172\">목록에 20개의 항목이 추가될 때까지 루프가 반복됩니다.</span><span class=\"sxs-lookup\"><span data-stu-id=\"3fe8b-172\">The loop repeats until you've added 20 items to the list.</span></span>\n\n> [!NOTE]\n> <span data-ttu-id=\"3fe8b-173\">이 온라인 코딩 환경은 미리 보기 모드로 제공됩니다.</span><span class=\"sxs-lookup\"><span data-stu-id=\"3fe8b-173\">This online coding experience is in preview mode.</span></span> <span data-ttu-id=\"3fe8b-174\">문제가 발생하면 [dotnet/try 리포지토리](https://github.com/dotnet/try/issues)에 보고하세요.</span><span class=\"sxs-lookup\"><span data-stu-id=\"3fe8b-174\">If you encounter problems, please report them [on the dotnet/try repo](https://github.com/dotnet/try/issues).</span></span>\n"
+  content: "<span data-ttu-id=\"5bef0-170\">다음과 같은 답을 제시했나요?</span><span class=\"sxs-lookup\"><span data-stu-id=\"5bef0-170\">Did you come up with something like this?</span></span>\n\n```csharp\nvar fibonacciNumbers = new List<int> {1, 1};\n\nwhile (fibonacciNumbers.Count < 20)\n{\n    var previous = fibonacciNumbers[fibonacciNumbers.Count - 1];\n    var previous2 = fibonacciNumbers[fibonacciNumbers.Count - 2];\n    \n    fibonacciNumbers.Add(previous + previous2);\n}\nforeach(var item in fibonacciNumbers)\n    Console.WriteLine(item);\n```\n\n<span data-ttu-id=\"5bef0-171\">루프의 각 반복을 통해 목록의 마지막 두 정수를 사용하고, 더하고, 해당 값을 목록에 추가합니다.</span><span class=\"sxs-lookup\"><span data-stu-id=\"5bef0-171\">With each iteration of the loop, you're taking the last two integers in the list, summing them, and adding that value to the list.</span></span> <span data-ttu-id=\"5bef0-172\">목록에 20개의 항목이 추가될 때까지 루프가 반복됩니다.</span><span class=\"sxs-lookup\"><span data-stu-id=\"5bef0-172\">The loop repeats until you've added 20 items to the list.</span></span>\n\n> [!NOTE]\n> <span data-ttu-id=\"5bef0-173\">이 온라인 코딩 환경은 미리 보기 모드로 제공됩니다.</span><span class=\"sxs-lookup\"><span data-stu-id=\"5bef0-173\">This online coding experience is in preview mode.</span></span> <span data-ttu-id=\"5bef0-174\">문제가 발생하면 [dotnet/try 리포지토리](https://github.com/dotnet/try/issues)에 보고하세요.</span><span class=\"sxs-lookup\"><span data-stu-id=\"5bef0-174\">If you encounter problems, please report them [on the dotnet/try repo](https://github.com/dotnet/try/issues).</span></span>\n"
 - content: >-
-    <span data-ttu-id="3fe8b-175">목록 빠른 시작을 완료했습니다.</span><span class="sxs-lookup"><span data-stu-id="3fe8b-175">You've completed the list quickstart.</span></span> <span data-ttu-id="3fe8b-176">이 빠른 시작은 마지막 대화형 빠른 시작입니다.</span><span class="sxs-lookup"><span data-stu-id="3fe8b-176">This quickstart is the final interactive quickstart.</span></span> <span data-ttu-id="3fe8b-177">사용자의 개발 환경에서 이러한 빠른 시작을 계속 진행할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="3fe8b-177">You can continue these quickstarts on your own development environment.</span></span> <span data-ttu-id="3fe8b-178">[로컬 개발](local-environment.md)의 기본 내용을 알아본 후 빠른 시작을 선택하세요.</span><span class="sxs-lookup"><span data-stu-id="3fe8b-178">Learn the basics of [local development](local-environment.md) and then pick a quickstart.</span></span> <span data-ttu-id="3fe8b-179">동일한 연습을 시도해 보고, 다음 빠른 시작으로 직접 이동하거나, [C#의 숫자](numbers-in-csharp-local.md) 빠른 시작을 다시 시작할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="3fe8b-179">You can try this same exercise, move directly to the next quickstart, or start again at with the [numbers in C#](numbers-in-csharp-local.md) quickstart.</span></span>
+    <span data-ttu-id="5bef0-175">목록 빠른 시작을 완료했습니다.</span><span class="sxs-lookup"><span data-stu-id="5bef0-175">You've completed the list quickstart.</span></span> <span data-ttu-id="5bef0-176">이 빠른 시작은 마지막 대화형 빠른 시작입니다.</span><span class="sxs-lookup"><span data-stu-id="5bef0-176">This quickstart is the final interactive quickstart.</span></span> <span data-ttu-id="5bef0-177">사용자의 개발 환경에서 이러한 빠른 시작을 계속 진행할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="5bef0-177">You can continue these quickstarts on your own development environment.</span></span> <span data-ttu-id="5bef0-178">[로컬 개발](local-environment.md)의 기본 내용을 알아본 후 빠른 시작을 선택하세요.</span><span class="sxs-lookup"><span data-stu-id="5bef0-178">Learn the basics of [local development](local-environment.md) and then pick a quickstart.</span></span> <span data-ttu-id="5bef0-179">동일한 연습을 시도해 보고, 다음 빠른 시작으로 직접 이동하거나, [C#의 숫자](numbers-in-csharp-local.md) 빠른 시작을 다시 시작할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="5bef0-179">You can try this same exercise, move directly to the next quickstart, or start again at with the [numbers in C#](numbers-in-csharp-local.md) quickstart.</span></span>
 
 
-    <span data-ttu-id="3fe8b-180">[.NET 가이드](../../standard/index.md)의 [컬렉션](../../standard/collections/index.md) 항목에서 `List` 형식에 대해 더 자세히 학습할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="3fe8b-180">You can learn more about working with the `List` type in the [.NET Guide](../../standard/index.md) topic on [collections](../../standard/collections/index.md).</span></span> <span data-ttu-id="3fe8b-181">다른 많은 컬렉션 형식에 대해서도 학습합니다.</span><span class="sxs-lookup"><span data-stu-id="3fe8b-181">You'll also learn about many other collection types.</span></span>
+    <span data-ttu-id="5bef0-180">[.NET 가이드](../../standard/index.md)의 [컬렉션](../../standard/collections/index.md) 항목에서 `List` 형식에 대해 더 자세히 학습할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="5bef0-180">You can learn more about working with the `List` type in the [.NET Guide](../../standard/index.md) topic on [collections](../../standard/collections/index.md).</span></span> <span data-ttu-id="5bef0-181">다른 많은 컬렉션 형식에 대해서도 학습합니다.</span><span class="sxs-lookup"><span data-stu-id="5bef0-181">You'll also learn about many other collection types.</span></span>

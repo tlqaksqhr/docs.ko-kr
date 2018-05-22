@@ -1,33 +1,24 @@
 ---
-title: "방법: 특성 필터링(XPath 및 LINQ to XML)(C#)"
-ms.custom: 
+title: '방법: 특성 필터링(XPath 및 LINQ to XML)(C#)'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-csharp
-ms.topic: article
 ms.assetid: 208d6256-1bd7-4237-b2c9-909f26dfd0e2
-caps.latest.revision: "3"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 3ae49f729b46bd794eb614f90ab83fc80d4021a6
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 12ecf4c2c4b74cd58c4df0c355351232d09a84ab
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="how-to-filter-on-an-attribute-xpath-linq-to-xml-c"></a><span data-ttu-id="7d75d-102">방법: 특성 필터링(XPath 및 LINQ to XML)(C#)</span><span class="sxs-lookup"><span data-stu-id="7d75d-102">How to: Filter on an Attribute (XPath-LINQ to XML) (C#)</span></span>
-<span data-ttu-id="7d75d-103">이 항목에서는 지정된 이름을 가진 하위 요소와 지정된 값을 가진 특성이 포함된 하위 요소를 가져오는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="7d75d-103">This topic shows how to get the descendant elements with a specified name, and with an attribute with a specified value.</span></span>  
+# <a name="how-to-filter-on-an-attribute-xpath-linq-to-xml-c"></a><span data-ttu-id="2ee17-102">방법: 특성 필터링(XPath 및 LINQ to XML)(C#)</span><span class="sxs-lookup"><span data-stu-id="2ee17-102">How to: Filter on an Attribute (XPath-LINQ to XML) (C#)</span></span>
+<span data-ttu-id="2ee17-103">이 항목에서는 지정된 이름을 가진 하위 요소와 지정된 값을 가진 특성이 포함된 하위 요소를 가져오는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="2ee17-103">This topic shows how to get the descendant elements with a specified name, and with an attribute with a specified value.</span></span>  
   
- <span data-ttu-id="7d75d-104">XPath 식은 다음과 같습니다.</span><span class="sxs-lookup"><span data-stu-id="7d75d-104">The XPath expression is:</span></span>  
+ <span data-ttu-id="2ee17-104">XPath 식은 다음과 같습니다.</span><span class="sxs-lookup"><span data-stu-id="2ee17-104">The XPath expression is:</span></span>  
   
  `.//Address[@Type='Shipping']`  
   
-## <a name="example"></a><span data-ttu-id="7d75d-105">예제</span><span class="sxs-lookup"><span data-stu-id="7d75d-105">Example</span></span>  
- <span data-ttu-id="7d75d-106">이 예제에서는 이름이 `Address`인 하위 요소와 값이 "Shipping"인 `Type` 특성이 포함된 하위 요소를 모두 찾습니다.</span><span class="sxs-lookup"><span data-stu-id="7d75d-106">This example finds all descendants elements with the name of `Address`, and with a `Type` attribute with a value of "Shipping".</span></span>  
+## <a name="example"></a><span data-ttu-id="2ee17-105">예</span><span class="sxs-lookup"><span data-stu-id="2ee17-105">Example</span></span>  
+ <span data-ttu-id="2ee17-106">이 예제에서는 이름이 `Address`인 하위 요소와 값이 "Shipping"인 `Type` 특성이 포함된 하위 요소를 모두 찾습니다.</span><span class="sxs-lookup"><span data-stu-id="2ee17-106">This example finds all descendants elements with the name of `Address`, and with a `Type` attribute with a value of "Shipping".</span></span>  
   
- <span data-ttu-id="7d75d-107">이 예제에서는 XML 문서 [샘플 XML 파일: 여러 구매 주문(LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-linq-to-xml.md)을 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="7d75d-107">This example uses the following XML document: [Sample XML File: Multiple Purchase Orders (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-linq-to-xml.md).</span></span>  
+ <span data-ttu-id="2ee17-107">이 예제에서는 XML 문서 [샘플 XML 파일: 여러 구매 주문(LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-linq-to-xml.md)을 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="2ee17-107">This example uses the following XML document: [Sample XML File: Multiple Purchase Orders (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-linq-to-xml.md).</span></span>  
   
 ```csharp  
 XDocument po = XDocument.Load("PurchaseOrders.xml");  
@@ -50,7 +41,7 @@ foreach (XElement el in list1)
     Console.WriteLine(el);  
 ```  
   
- <span data-ttu-id="7d75d-108">이 예제는 다음과 같은 출력을 생성합니다.</span><span class="sxs-lookup"><span data-stu-id="7d75d-108">This example produces the following output:</span></span>  
+ <span data-ttu-id="2ee17-108">이 예제는 다음과 같은 출력을 생성합니다.</span><span class="sxs-lookup"><span data-stu-id="2ee17-108">This example produces the following output:</span></span>  
   
 ```  
 Results are identical  
@@ -80,5 +71,5 @@ Results are identical
 </Address>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="7d75d-109">참고 항목</span><span class="sxs-lookup"><span data-stu-id="7d75d-109">See Also</span></span>  
- [<span data-ttu-id="7d75d-110">XPath 사용자를 위한 LINQ to XML(C#)</span><span class="sxs-lookup"><span data-stu-id="7d75d-110">LINQ to XML for XPath Users (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
+## <a name="see-also"></a><span data-ttu-id="2ee17-109">참고 항목</span><span class="sxs-lookup"><span data-stu-id="2ee17-109">See Also</span></span>  
+ [<span data-ttu-id="2ee17-110">XPath 사용자를 위한 LINQ to XML(C#)</span><span class="sxs-lookup"><span data-stu-id="2ee17-110">LINQ to XML for XPath Users (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)

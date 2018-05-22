@@ -1,31 +1,25 @@
 ---
-title: "방법: 자동으로 구현된 속성을 사용하여 간단한 클래스 구현(C# 프로그래밍 가이드)"
+title: '방법: 자동으로 구현된 속성을 사용하여 간단한 클래스 구현(C# 프로그래밍 가이드)'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - auto-implemented properties [C#]
 - properties [C#], auto-implemented
 ms.assetid: 1dc5a8ad-a4f7-4f32-8506-3fc6d8c8bfed
-caps.latest.revision: "11"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: f43dfaffe6ff696387573729dc25cabe33c1fede
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 9612ec916481776691e85a84503ce5063c20b099
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="how-to-implement-a-lightweight-class-with-auto-implemented-properties-c-programming-guide"></a><span data-ttu-id="deefa-102">방법: 자동으로 구현된 속성을 사용하여 간단한 클래스 구현(C# 프로그래밍 가이드)</span><span class="sxs-lookup"><span data-stu-id="deefa-102">How to: Implement a Lightweight Class with Auto-Implemented Properties (C# Programming Guide)</span></span>
-<span data-ttu-id="deefa-103">이 예제에서는 자동 구현 속성 집합을 캡슐화하는 데만 사용되는 변경할 수 없는 간단한 클래스를 만드는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="deefa-103">This example shows how to create an immutable lightweight class that serves only to encapsulate a set of auto-implemented properties.</span></span> <span data-ttu-id="deefa-104">참조 형식 의미 체계를 사용해야 하는 경우 구조체 대신 이러한 종류의 구문을 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="deefa-104">Use this kind of construct instead of a struct when you must use reference type semantics.</span></span>  
+# <a name="how-to-implement-a-lightweight-class-with-auto-implemented-properties-c-programming-guide"></a><span data-ttu-id="4b17d-102">방법: 자동으로 구현된 속성을 사용하여 간단한 클래스 구현(C# 프로그래밍 가이드)</span><span class="sxs-lookup"><span data-stu-id="4b17d-102">How to: Implement a Lightweight Class with Auto-Implemented Properties (C# Programming Guide)</span></span>
+<span data-ttu-id="4b17d-103">이 예제에서는 자동 구현 속성 집합을 캡슐화하는 데만 사용되는 변경할 수 없는 간단한 클래스를 만드는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="4b17d-103">This example shows how to create an immutable lightweight class that serves only to encapsulate a set of auto-implemented properties.</span></span> <span data-ttu-id="4b17d-104">참조 형식 의미 체계를 사용해야 하는 경우 구조체 대신 이러한 종류의 구문을 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="4b17d-104">Use this kind of construct instead of a struct when you must use reference type semantics.</span></span>  
   
- <span data-ttu-id="deefa-105">변경할 수 없는 속성은 두 가지 방법으로 만들 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="deefa-105">You can make an immutable property in two ways.</span></span>  <span data-ttu-id="deefa-106">[set](../../../csharp/language-reference/keywords/set.md) 접근자를 [private](../../../csharp/language-reference/keywords/private.md)로 선언할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="deefa-106">You can declare the [set](../../../csharp/language-reference/keywords/set.md) accessor.to be [private](../../../csharp/language-reference/keywords/private.md).</span></span>  <span data-ttu-id="deefa-107">속성은 형식 내에서만 설정할 수 있고 소비자는 변경할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="deefa-107">The property is only settable within the type, but it is immutable to consumers.</span></span>  <span data-ttu-id="deefa-108">또는 [get](../../../csharp/language-reference/keywords/get.md) 접근자만 선언하여 형식의 생성자를 제외한 어떤 위치에서도 속성을 변경할 수 없도록 만들 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="deefa-108">You can instead declare only the [get](../../../csharp/language-reference/keywords/get.md) accessor, which makes the property immutable everywhere except in the type’s constructor.</span></span>  
+ <span data-ttu-id="4b17d-105">변경할 수 없는 속성은 두 가지 방법으로 만들 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="4b17d-105">You can make an immutable property in two ways.</span></span>  <span data-ttu-id="4b17d-106">[set](../../../csharp/language-reference/keywords/set.md) 접근자를 [private](../../../csharp/language-reference/keywords/private.md)로 선언할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="4b17d-106">You can declare the [set](../../../csharp/language-reference/keywords/set.md) accessor.to be [private](../../../csharp/language-reference/keywords/private.md).</span></span>  <span data-ttu-id="4b17d-107">속성은 형식 내에서만 설정할 수 있고 소비자는 변경할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="4b17d-107">The property is only settable within the type, but it is immutable to consumers.</span></span>  <span data-ttu-id="4b17d-108">또는 [get](../../../csharp/language-reference/keywords/get.md) 접근자만 선언하여 형식의 생성자를 제외한 어떤 위치에서도 속성을 변경할 수 없도록 만들 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="4b17d-108">You can instead declare only the [get](../../../csharp/language-reference/keywords/get.md) accessor, which makes the property immutable everywhere except in the type’s constructor.</span></span>  
   
- <span data-ttu-id="deefa-109">private `set` 접근자를 선언하는 경우 개체 이니셜라이저를 사용하여 속성을 초기화할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="deefa-109">When you declare a private `set` accessor, you cannot use an object initializer to initialize the property.</span></span> <span data-ttu-id="deefa-110">생성자나 팩터리 메서드를 사용해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="deefa-110">You must use a constructor or a factory method.</span></span>  
+ <span data-ttu-id="4b17d-109">private `set` 접근자를 선언하는 경우 개체 이니셜라이저를 사용하여 속성을 초기화할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="4b17d-109">When you declare a private `set` accessor, you cannot use an object initializer to initialize the property.</span></span> <span data-ttu-id="4b17d-110">생성자나 팩터리 메서드를 사용해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="4b17d-110">You must use a constructor or a factory method.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="deefa-111">예제</span><span class="sxs-lookup"><span data-stu-id="deefa-111">Example</span></span>  
- <span data-ttu-id="deefa-112">다음 예제에서는 자동 구현 속성을 갖는 변경할 수 없는 클래스를 구현하는 두 가지 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="deefa-112">The following example shows two ways to implement an immutable class that has auto-implemented properties.</span></span> <span data-ttu-id="deefa-113">각 방법에서 속성 중 하나는 private `set`으로 선언하고 다른 하나는 `get`으로만 선언합니다.</span><span class="sxs-lookup"><span data-stu-id="deefa-113">Each way declares one of the properties with a private `set` and one of the properties with a `get` only.</span></span>  <span data-ttu-id="deefa-114">첫 번째 클래스는 생성자만 사용하여 속성을 초기화하고 두 번째 클래스는 생성자를 호출하는 정적 팩터리 메서드를 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="deefa-114">The first class uses a constructor only to initialize the properties, and the second class uses a static factory method that calls a constructor.</span></span>  
+## <a name="example"></a><span data-ttu-id="4b17d-111">예</span><span class="sxs-lookup"><span data-stu-id="4b17d-111">Example</span></span>  
+ <span data-ttu-id="4b17d-112">다음 예제에서는 자동 구현 속성을 갖는 변경할 수 없는 클래스를 구현하는 두 가지 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="4b17d-112">The following example shows two ways to implement an immutable class that has auto-implemented properties.</span></span> <span data-ttu-id="4b17d-113">각 방법에서 속성 중 하나는 private `set`으로 선언하고 다른 하나는 `get`으로만 선언합니다.</span><span class="sxs-lookup"><span data-stu-id="4b17d-113">Each way declares one of the properties with a private `set` and one of the properties with a `get` only.</span></span>  <span data-ttu-id="4b17d-114">첫 번째 클래스는 생성자만 사용하여 속성을 초기화하고 두 번째 클래스는 생성자를 호출하는 정적 팩터리 메서드를 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="4b17d-114">The first class uses a constructor only to initialize the properties, and the second class uses a static factory method that calls a constructor.</span></span>  
   
 ```csharp  
 // This class is immutable. After an object is created,   
@@ -116,9 +110,9 @@ ms.lasthandoff: 11/21/2017
 */  
 ```  
   
- <span data-ttu-id="deefa-115">컴파일러는 각 자동 구현 속성에 대해 지원 필드를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="deefa-115">The compiler creates backing fields for each auto-implemented property.</span></span> <span data-ttu-id="deefa-116">이 필드는 소스 코드에서 직접 액세스할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="deefa-116">The fields are not accessible directly from source code.</span></span>  
+ <span data-ttu-id="4b17d-115">컴파일러는 각 자동 구현 속성에 대해 지원 필드를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="4b17d-115">The compiler creates backing fields for each auto-implemented property.</span></span> <span data-ttu-id="4b17d-116">이 필드는 소스 코드에서 직접 액세스할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="4b17d-116">The fields are not accessible directly from source code.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="deefa-117">참고 항목</span><span class="sxs-lookup"><span data-stu-id="deefa-117">See Also</span></span>  
- [<span data-ttu-id="deefa-118">속성</span><span class="sxs-lookup"><span data-stu-id="deefa-118">Properties</span></span>](../../../csharp/programming-guide/classes-and-structs/properties.md)  
- [<span data-ttu-id="deefa-119">struct</span><span class="sxs-lookup"><span data-stu-id="deefa-119">struct</span></span>](../../../csharp/language-reference/keywords/struct.md)  
- [<span data-ttu-id="deefa-120">개체 이니셜라이저 및 컬렉션 이니셜라이저</span><span class="sxs-lookup"><span data-stu-id="deefa-120">Object and Collection Initializers</span></span>](../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md)
+## <a name="see-also"></a><span data-ttu-id="4b17d-117">참고 항목</span><span class="sxs-lookup"><span data-stu-id="4b17d-117">See Also</span></span>  
+ [<span data-ttu-id="4b17d-118">속성</span><span class="sxs-lookup"><span data-stu-id="4b17d-118">Properties</span></span>](../../../csharp/programming-guide/classes-and-structs/properties.md)  
+ [<span data-ttu-id="4b17d-119">struct</span><span class="sxs-lookup"><span data-stu-id="4b17d-119">struct</span></span>](../../../csharp/language-reference/keywords/struct.md)  
+ [<span data-ttu-id="4b17d-120">개체 이니셜라이저 및 컬렉션 이니셜라이저</span><span class="sxs-lookup"><span data-stu-id="4b17d-120">Object and Collection Initializers</span></span>](../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md)
