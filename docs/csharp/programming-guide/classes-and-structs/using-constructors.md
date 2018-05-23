@@ -4,11 +4,11 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - constructors [C#], about constructors
 ms.assetid: 464253b2-fd5d-469a-836d-df0fdf2a43f7
-ms.openlocfilehash: 80400cc1eae697c931833a5444969a231e23c06e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5fe6f10e3842c0c0aac4b2669f8ca367fa8c3be2
+ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/15/2018
 ---
 # <a name="using-constructors-c-programming-guide"></a>생성자 사용(C# 프로그래밍 가이드)
 [class](../../../csharp/language-reference/keywords/class.md) 또는 [struct](../../../csharp/language-reference/keywords/struct.md)가 만들어지면 생성자가 호출됩니다. 생성자는 클래스 또는 구조체와 이름이 같으며 일반적으로 새 개체의 데이터 멤버를 초기화합니다.  
@@ -29,7 +29,7 @@ ms.lasthandoff: 05/04/2018
   
  [struct](../../../csharp/language-reference/keywords/struct.md) 형식의 생성자는 class 생성자와 비슷하지만, `structs`는 컴파일러에서 자동으로 제공되므로 명시적 기본 생성자를 포함할 수 없습니다. 이 생성자는 `struct`의 각 필드를 기본값으로 초기화합니다. 자세한 내용은 [기본값 표](../../../csharp/language-reference/keywords/default-values-table.md)를 참조하세요. 그러나 이 기본 생성자는 `struct`가 `new`로 인스턴스화될 경우에만 호출됩니다. 예를 들어, 이 코드는 <xref:System.Int32>에 기본 생성자를 사용하므로 정수가 초기화되었음을 확신할 수 있습니다.  
   
-```  
+```csharp  
 int i = new int();  
 Console.WriteLine(i);  
 ```  
