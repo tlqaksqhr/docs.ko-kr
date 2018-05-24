@@ -6,11 +6,11 @@ helpviewer_keywords:
 - C# language, operators
 - operators [C#], about operators
 ms.assetid: 214e7b83-1a41-4f7c-9867-64e9c0bab39f
-ms.openlocfilehash: d2eace5782b3a070a22acf751fd68340fa939a0b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 76371985e340945793310247ec48d9b0cb747aed
+ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="operators-c-programming-guide"></a>연산자(C# 프로그래밍 가이드)
 C#에서 *연산자* 는 식 또는 문에서 하나 이상의 *피연산자* 에 적용되는 프로그램 요소입니다. 증가 연산자(`++`)나 `new`같이 피연산자 하나를 사용하는 연산자를 *단항* 연산자라고 합니다. 산술 연산자(`+`,`-`,`*`,`/`) 같이 피연산자 두 개를 사용하는 연산자를 *이항* 연산자라고 합니다. 조건 연산자(`?:`)는 피연산자 세 개를 사용하며 이는 C#에서 유일한 삼진 연산자입니다.  
@@ -114,7 +114,7 @@ C#에서 *연산자* 는 식 또는 문에서 하나 이상의 *피연산자* �
 |논리적 OR|x [&#124;](../../../csharp/language-reference/operators/or-operator.md) y|정수 비트 OR, 부울 논리곱 OR|  
 |조건부 AND|x [&&](../../../csharp/language-reference/operators/conditional-and-operator.md) y|x가 true인 경우에만 y를 계산합니다.|  
 |조건부 OR|x [&#124;&#124;](../../../csharp/language-reference/operators/conditional-or-operator.md) y|x가 false인 경우에만 y를 계산합니다.|  
-|Null 결합|x [??](../../../csharp/language-reference/operators/null-conditional-operator.md) y|x가 null인 경우 y로 계산하고, 그렇지 않으면 x로 계산합니다.|  
+|Null 결합|x [??](../../../csharp/language-reference/operators/null-coalescing-operator.md) y|x가 null인 경우 y로 계산하고, 그렇지 않으면 x로 계산합니다.|  
 |조건|x [?](../../../csharp/language-reference/operators/conditional-operator.md) y : z|x가 true이면 y로 계산되고 false이면 z로 계산됩니다.|  
   
  **할당 및 익명 연산자**  

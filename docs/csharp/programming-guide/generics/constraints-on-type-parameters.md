@@ -6,11 +6,11 @@ helpviewer_keywords:
 - type constraints [C#]
 - type parameters [C#], constraints
 - unbound type parameter [C#]
-ms.openlocfilehash: 1d6487f4136b5a3f8bfc2e1721ae268e06f5ba98
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b5ad639309238912aa27b58c95466b4f37052699
+ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="constraints-on-type-parameters-c-programming-guide"></a>형식 매개 변수에 대한 제약 조건(C# 프로그래밍 가이드)
 
@@ -18,7 +18,7 @@ ms.lasthandoff: 05/04/2018
 
 |제약 조건|설명|
 |----------------|-----------------|
-|`where T: struct`|형식 인수는 값 형식이어야 합니다. <xref:System.Nullable>를 제외한 임의의 값 형식을 지정할 수 있습니다. 자세한 내용은 [Nullable 형식 사용](../nullable-types/using-nullable-types.md)을 참조하세요.|
+|`where T : struct`|형식 인수는 값 형식이어야 합니다. <xref:System.Nullable>를 제외한 임의의 값 형식을 지정할 수 있습니다. 자세한 내용은 [Nullable 형식 사용](../nullable-types/using-nullable-types.md)을 참조하세요.|
 |`where T : class`|형식 인수는 참조 형식이어야 합니다. 이 제약 조건은 모든 클래스, 인터페이스, 대리자 또는 배열 형식에도 적용됩니다.|
 |`where T : unmanaged`|형식 인수는 참조 형식일 수 없으며, 모든 중첩 수준에서 참조 형식 멤버를 포함할 수 없습니다.|
 |`where T : new()`|형식 인수에 매개 변수가 없는 public 생성자가 있어야 합니다. 다른 제약 조건과 함께 사용할 경우 `new()` 제약 조건을 마지막에 지정해야 합니다.|

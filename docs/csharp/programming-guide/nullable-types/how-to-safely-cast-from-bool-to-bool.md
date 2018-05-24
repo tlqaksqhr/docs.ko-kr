@@ -5,16 +5,16 @@ helpviewer_keywords:
 - casting [C#], nullable types
 - nullable types [C#], casting bool? to bool
 ms.assetid: e06e4274-a443-422d-8ef1-9dbf9df55237
-ms.openlocfilehash: 18f44018621182427199dee56146f29b8d3068f4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e04e34abd477730f9dd01486ec6bddcde4943edc
+ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="how-to-safely-cast-from-bool-to-bool-c-programming-guide"></a>방법: bool?에서 bool로 안전하게 캐스팅(C# 프로그래밍 가이드)
 `bool?` nullable 형식은 세 가지 값 `true`, `false` 및 `null`을 포함할 수 있습니다. 따라서 `bool?` 형식은 `if`, `for` 또는 `while`과 같은 조건에 사용할 수 없습니다. 예를 들어 다음 코드는 컴파일러 오류를 발생시킵니다.  
   
-```  
+```csharp  
 bool? b = null;  
 if (b) // Error CS0266.  
 {  
@@ -45,4 +45,4 @@ if((bool)test) //now this cast is safe
  [C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)  
  [리터럴 키워드](../../../csharp/language-reference/keywords/literal-keywords.md)  
  [Nullable 형식](../../../csharp/programming-guide/nullable-types/index.md)  
- [?? 연산자](../../../csharp/language-reference/operators/null-conditional-operator.md)
+ [?? 연산자](../../../csharp/language-reference/operators/null-coalescing-operator.md)

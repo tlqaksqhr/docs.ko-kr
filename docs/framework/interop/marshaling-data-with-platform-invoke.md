@@ -12,7 +12,7 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 2eb55d8490eae64e909ada68223983c570ef9afa
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
 ---
@@ -56,7 +56,7 @@ ms.lasthandoff: 05/04/2018
 ## <a name="pinvokelibdll"></a>PinvokeLib.dll  
  다음 코드에서는 Pinvoke.dll에서 제공되는 라이브러리 함수를 정의합니다. 이 섹션에 설명된 대부분 샘플이 이 라이브러리를 호출합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[PInvokeLib#1](../../../samples/snippets/cpp/VS_Snippets_CLR/pinvokelib/cpp/pinvokelib.cpp#1)]  
   
  [!code-cpp[PInvokeLib#2](../../../samples/snippets/cpp/VS_Snippets_CLR/pinvokelib/cpp/pinvokelib.h#2)]
