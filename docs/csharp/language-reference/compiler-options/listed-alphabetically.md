@@ -7,11 +7,11 @@ helpviewer_keywords:
 - Visual C# compiler, options listed alphabetically
 - Visual C#, compiler options listed alphabetically
 ms.assetid: 43535ea0-ca47-4a15-b528-615087a86092
-ms.openlocfilehash: f0c9e0ff5881695cc9426610056677d6053376a2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1198249afe6933342aea1a05515e6766603ab147
+ms.sourcegitcommit: 895c7602386a6dfe7ca4facce3d965b27e5c6e87
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="c-compiler-options-listed-alphabetically"></a>C# 컴파일러 옵션 사전순 목록
 여기에서는 컴파일러 옵션을 사전순으로 정렬합니다. 범주별 목록을 보려면 [C# 컴파일러 옵션 범주별 목록](listed-by-category.md)을 참조하세요.  
@@ -42,7 +42,7 @@ ms.lasthandoff: 05/04/2018
 |-incremental|증분 컴파일을 사용하도록 설정합니다(사용되지 않음).|  
 |[-keycontainer](keycontainer-compiler-option.md)|강력한 이름의 키 컨테이너를 지정합니다.|  
 |[-keyfile](keyfile-compiler-option.md)|강력한 이름의 키 파일을 지정합니다.|  
-|[-langversion:\<string>](langversion-compiler-option.md)|언어 버전 모드(Default, ISO-1, ISO-2, 3, 4, 5, 6, 7, 7.1 또는 최신)를 지정합니다. |  
+|[-langversion:\<string>](langversion-compiler-option.md)|언어 버전(기본값, ISO-1, ISO-2, 3, 4, 5, 6, 7, 7.1, 7.2, 7.3 또는 최신)을 지정합니다. |  
 |[/lib](lib-compiler-option.md)|참조를 검색할 추가 디렉터리를 지정합니다.|  
 |[-link](link-compiler-option.md)|지정된 어셈블리의 COM 형식 정보를 프로젝트에 사용할 수 있도록 합니다.|  
 |[-linkresource](linkresource-compiler-option.md)|지정한 리소스를 이 어셈블리에 링크합니다.|  
@@ -65,7 +65,7 @@ ms.lasthandoff: 05/04/2018
 |[/refout](refout-compiler-option.md)|주 어셈블리 외에도 참조 어셈블리를 생성합니다.|  
 |[/refonly](refonly-compiler-option.md)|주 어셈블리를 대신 참조 어셈블리를 생성합니다.|  
 |[-resource](resource-compiler-option.md)|지정한 리소스를 포함합니다.|  
-|-ruleset:\<file>|특정 진단을 사용하지 않는 규칙 집합 파일을 지정합니다.|  
+|-ruleset:\<file>|특정 진단을 사용하지 않도록 설정하는 규칙 집합 파일을 지정합니다.|  
 |[-subsystemversion](subsystemversion-compiler-option.md)|실행 파일이 사용할 수 있는 하위 시스템의 최소 버전을 지정합니다.|  
 |[-target](target-compiler-option.md)|네 가지 옵션([-target:appcontainerexe](target-appcontainerexe-compiler-option.md), [-target:exe](target-exe-compiler-option.md), [-target:library](target-library-compiler-option.md), [-target:module](target-module-compiler-option.md), [-target:winexe](target-winexe-compiler-option.md),  [-target:winmdobj](target-winmdobj-compiler-option.md)) 중 하나를 사용하여 출력 파일의 형식을 지정합니다.|  
 |[/unsafe](unsafe-compiler-option.md)|[안전하지 않은](../../../csharp/language-reference/keywords/unsafe.md) 코드를 허용합니다.|  

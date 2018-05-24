@@ -2,11 +2,11 @@
 title: 'F # 구성 요소 디자인 지침'
 description: '다른 호출자에 의해 사용 하도록 설계 된 F # 구성 요소를 작성 하는 것에 대 한 지침에 알아봅니다.'
 ms.date: 05/14/2018
-ms.openlocfilehash: 7859baac76be01b2cfbdc8602b6cc417cfe5106f
-ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
+ms.openlocfilehash: 7e71710b1bc2fe3e8d7a5a091513a1432650dc04
+ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/15/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="f-component-design-guidelines"></a>F # 구성 요소 디자인 지침
 
@@ -483,7 +483,7 @@ type MultiMap<'Key,'Value> = Map<'Key,'Value list>
 
 다른.NET 언어에서 사용 하기 위해 라이브러리를 디자인할 때이에 맞게 중요는 [.NET 라이브러리 디자인 지침](../../standard/design-guidelines/index.md)합니다. 이 문서에 이러한 라이브러리는 F # 달리 바닐라.NET 라이브러리로 표시 된-제한 없이 생성 F #을 사용 하는 라이브러리를 연결 합니다. F #의 사용을 최소화 하 여.NET Framework의 나머지 부분과 일치 친숙 하 고 관용구 Api를 제공 하 의미 바닐라.NET 라이브러리 디자인-공용 API에서 특정 구문입니다. 규칙은 다음 섹션에 설명 되어 있습니다.
 
-### <a name="namespace-and-type-sesign-for-libraries-for-use-from-other-net-languages"></a>Namespace 유형과 sesign (라이브러리에 대 한 다른.NET 언어에서 사용 하기 위해)
+### <a name="namespace-and-type-design-for-libraries-for-use-from-other-net-languages"></a>Namespace 및 형식 디자인 (라이브러리에 대 한 다른.NET 언어에서 사용 하기 위해)
 
 #### <a name="apply-the-net-naming-conventions-to-the-public-api-of-your-components"></a>구성 요소의 공용 API에.NET 명명 규칙을 적용
 

@@ -1,20 +1,20 @@
 ---
 title: fixed 문(C# 참조)
-ms.date: 04/20/2018
+ms.date: 05/10/2018
 f1_keywords:
 - fixed_CSharpKeyword
 - fixed
 helpviewer_keywords:
 - fixed keyword [C#]
-ms.openlocfilehash: e1664f508cb861ffa73b800eeb0da3a1f1cdc432
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e26e7e7f15dd48cf029d5f67bf5ef0de3e19b7bb
+ms.sourcegitcommit: 895c7602386a6dfe7ca4facce3d965b27e5c6e87
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="fixed-statement-c-reference"></a>fixed 문(C# 참조)
 
-`fixed` 문은 가비지 수집기에서 이동 가능한 변수를 재배치할 수 없도록 합니다. `fixed` 문은 [unsafe](unsafe.md) 컨텍스트에서만 허용됩니다. `Fixed`를 사용하여 [고정 크기 버퍼](../../programming-guide/unsafe-code-pointers/fixed-size-buffers.md)를 만들 수도 있습니다.
+`fixed` 문은 가비지 수집기에서 이동 가능한 변수를 재배치할 수 없도록 합니다. `fixed` 문은 [unsafe](unsafe.md) 컨텍스트에서만 허용됩니다. `fixed`를 사용하여 [고정 크기 버퍼](../../programming-guide/unsafe-code-pointers/fixed-size-buffers.md)를 만들 수도 있습니다.
 
 `fixed` 문은 관리되는 변수에 대한 포인터를 설정하고 문을 실행하는 동안 해당 변수를 "고정"합니다. 이동 가능한 관리되는 변수에 대한 포인터는 `fixed` 컨텍스트에만 유용합니다. `fixed` 컨텍스트 없는 가비지 수집은 예기치 않게 변수를 재배치할 수 있습니다. C# 컴파일러만 `fixed` 문에서 관리되는 변수에 대한 포인터를 할당할 수 있습니다.
 
@@ -23,6 +23,12 @@ ms.lasthandoff: 05/04/2018
 배열, 문자열, 고정 크기 버퍼 또는 변수의 주소를 사용하여 포인터를 초기화할 수 있습니다. 다음 예제에서는 변수 주소, 배열 및 문자열의 사용을 보여 줍니다. 고정 크기 버퍼에 대한 자세한 내용은 [고정 크기 버퍼](../../programming-guide/unsafe-code-pointers/fixed-size-buffers.md)를 참조하세요.
 
 [!code-csharp[Initializing fixed size buffers](../../../../samples/snippets/csharp/keywords/FixedKeywordExamples.cs#2)]
+
+C# 7.3부터 `fixed` 문은 배열, 문자열, 고정 크기 버퍼 또는 관리되지 않는 변수 외의 추가 형식에서 작동합니다. `DangerousGetPinnableReference` 메서드를 구현하는 모든 형식을 고정할 수 있습니다. `DangerousGetPinnableReference`는 `ref` 변수를 관리되지 않는 형식으로 반환해야 합니다. 자세한 내용은 [pointer types](../../programming-guide/unsafe-code-pointers/pointer-types.md)(포인터 형식)에 대한 항목을 참조하세요. .NET Core 2.0에 도입된 .NET 형식 <xref:System.Span%601?displayProperty=nameWithType> 및 <xref:System.ReadOnlySpan%601?displayProperty=nameWithType>은 이 패턴을 사용하며 고정될 수 있습니다. 이는 다음 예제에서 확인할 수 있습니다.
+
+[!code-csharp[Accessing fixed memory](../../../../samples/snippets/csharp/keywords/FixedKeywordExamples.cs#FixedSpan)]
+
+이 패턴에 참여해야 하는 형식을 만드는 경우 패턴을 구현하는 예제는 <xref:System.Span%601.DangerousGetPinnableReference?displayProperty=nameWithType>를 참조하세요.
 
 여러 개의 포인터가 모두 동일한 형식인 경우 하나의 명령문에서 초기화할 수 있습니다.
 

@@ -20,14 +20,17 @@ helpviewer_keywords:
 ms.assetid: 7536af08-4e86-4953-98a1-a8298623df92
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 573a3e954bf15bdbcf8b1885c10f68a222329ac1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 02c942dea3314581ce8f758bb9ed3ce88c2fe150
+ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/15/2018
 ---
 # <a name="how-to-verify-that-strings-are-in-valid-email-format"></a>방법: 문자열이 올바른 전자 메일 형식인지 확인
 다음 예제에서는 정규식을 사용하여 문자열이 올바른 전자 메일 형식인지 확인합니다.  
+
+> [!NOTE]
+>  <xref:System.Net.Mail.MailAddress?displayProperty=nameWithType> 클래스를 사용하여 문자열이 유효한 전자 메일 주소 형식인지 확인하는 것이 좋습니다. 그러려면 문자열이 인식할 수 없는 형식인 경우 <xref:System.FormatException>를 throw하는 <xref:System.Net.Mail.MailAddress.%23ctor%28System.String%29?displayProperty=nameWithType> 클래스 생성자에 전자 메일 주소 문자열을 전달합니다.  
   
 ## <a name="example"></a>예  
  이 예제에서는 문자열에 올바른 전자 메일 주소가 포함되어 있으면 `IsValidEmail` 를 반환하고, 그렇지 않으면 `true` 를 반환하지만 다른 작업을 수행하지 않는 `false` 메서드를 정의합니다.  
@@ -67,9 +70,6 @@ ms.lasthandoff: 05/04/2018
 |<code>&#124;(([0-9a-z][-0-9a-z]*[0-9a-z]*\.)+</code>|@ 뒤의 문자가 여는 대괄호가 아니면 영숫자(A-Z, a-z 또는 0-9) 1개, 하이픈 0개 이상, 영숫자(A-Z, a-z 또는 0-9) 0개 또는 1개와 마침표 1개로 구성된 패턴과 일치하는 항목을 찾습니다. 이 패턴은 한 번 이상 반복될 수 있으며, 뒤에 최상위 도메인 이름이 있어야 합니다.|  
 |`[a-z0-9][\-a-z0-9]{0,22}[a-z0-9]))`|최상위 도메인 이름은 영숫자(a-z, A-Z 및 0-9)로 시작하고 끝나야 하며, 영숫자이거나 하이픈인 0~22개의 ASCII 문자를 포함할 수도 있습니다.|  
 |`$`|문자열의 끝 부분에서 일치 항목 찾기를 끝냅니다.|  
-  
-> [!NOTE]
->  정규식을 사용하여 전자 메일 주소의 유효성을 검사하는 대신 <xref:System.Net.Mail.MailAddress?displayProperty=nameWithType> 클래스를 사용할 수 있습니다. 전자 메일 주소가 올바른지 확인하려면 전자 메일 주소를 <xref:System.Net.Mail.MailAddress.%23ctor%28System.String%29?displayProperty=nameWithType> 클래스 생성자에 전달합니다.  
   
 ## <a name="compiling-the-code"></a>코드 컴파일  
  `IsValidEmail` 및 `DomainMapper` 메서드는 정규식 유틸리티 메서드의 라이브러리에 포함되거나 응용 프로그램 클래스에서 전용 정적 또는 인스턴스 메서드로 포함될 수 있습니다.  

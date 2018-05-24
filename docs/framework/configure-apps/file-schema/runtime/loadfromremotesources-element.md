@@ -7,11 +7,11 @@ helpviewer_keywords:
 ms.assetid: 006d1280-2ac3-4db6-a984-a3d4e275046a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f0d442f71a0e2fc7deacd9aaa02cfba7b66f2349
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: acd66cdff9f2c68e7d665b1fd236b18eeb9b4bac
+ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="ltloadfromremotesourcesgt-element"></a>&lt;loadFromRemoteSources&gt; 요소
 부여할지 여부를 원격 원본에서 어셈블리가 완전 신뢰를 지정 합니다.  
@@ -69,7 +69,7 @@ ms.lasthandoff: 05/03/2018
   
  `enabled` 특성이이 요소는 코드 액세스 보안 (CA)를 사용 하지 않도록 설정 하는 경우에 유효 합니다. 기본적으로 CAS 정책에 사용할 수 없습니다는 [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)] 이상 버전입니다. 설정한 경우 `enabled` 를 `true`, 원격 응용 프로그램에 완전 신뢰가 부여 됩니다.  
   
- 경우 `<loadFromRemoteSources>``enabled` 로 설정 되지 않은 `true`, 다음과 같은 예외가 throw 됩니다.  
+ 경우 `<loadFromRemoteSources>` `enabled` 로 설정 되지 않은 `true`, 다음과 같은 예외가 throw 됩니다.  
   
 -   현재 도메인의 샌드 박싱 동작에서의 동작과에서 차이가 있는 [!INCLUDE[net_v35_short](../../../../../includes/net-v35-short-md.md)]합니다. CAS 정책을 사용 하지 않도록 설정할 고 샌드박스 아니어야 현재 도메인에 필요 합니다.  
   

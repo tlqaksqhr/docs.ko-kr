@@ -5,11 +5,11 @@ helpviewer_keywords:
 - XML processing [C#]
 - XML [C#], processing
 ms.assetid: 60c71193-9dac-4cd3-98c5-100bd0edcc42
-ms.openlocfilehash: b95101d2f8e12f7c6fee5b410e7801f9d890182d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ca70f0c8237a5d9cc4ad9e0bb8c1947c871ce064
+ms.sourcegitcommit: 895c7602386a6dfe7ca4facce3d965b27e5c6e87
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="processing-the-xml-file-c-programming-guide"></a>XML 파일 처리(C# 프로그래밍 가이드)
 컴파일러는 문서 생성을 위해 태그가 지정되는 코드의 각 구문에 대해 ID 문자열을 생성합니다. 코드에 태그를 지정하는 방법에 대한 자세한 내용은 [문서 주석에 대한 권장 태그](../../../csharp/programming-guide/xmldoc/recommended-tags-for-documentation-comments.md)를 참조하세요. ID 문자열은 구문을 고유하게 식별합니다. XML 파일을 처리하는 프로그램은 ID 문자열을 사용하여 문서가 적용되는 해당 .NET Framework 메타데이터/리플렉션 항목을 식별할 수 있습니다.  
@@ -42,7 +42,7 @@ ms.lasthandoff: 05/04/2018
   
     -   ELEMENT_TYPE_PTR은 수정된 형식 뒤에 '*'로 표시됩니다.  
   
-    -   ELEMENT_TYPE_BYREF는 수정된 형식 뒤에 '@'로 표시됩니다.  
+    -   ELEMENT_TYPE_BYREF는 수정된 형식 뒤에 ‘\@’으로 표시됩니다.  
   
     -   ELEMENT_TYPE_PINNED는 수정된 형식 뒤에 '^'로 표시됩니다. C# 컴파일러에서는 이 인수가 생성되지 않습니다.  
   

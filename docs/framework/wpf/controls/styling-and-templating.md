@@ -15,11 +15,11 @@ helpviewer_keywords:
 - styles [WPF], triggers
 - styles [WPF], event triggers
 ms.assetid: 481765e5-5467-4a75-9f7b-e10e2ac410d9
-ms.openlocfilehash: 85911647c089d51bafe2d65d1c5db907599b06d4
-ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
+ms.openlocfilehash: 9c2c38020bb57a008d0948a360a5b2cbe401089d
+ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/15/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="styling-and-templating"></a>스타일 지정 및 템플릿
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 스타일 지정 및 템플릿은 개발자와 디자이너가 시각적으로 눈에 띄는 효과를 만들고 제품에 대한 일관된 모양을 만들 수 있는 기능 모음(스타일, 템플릿, 트리거 및 스토리보드)을 나타냅니다. 개발자 및/또는 디자이너는 응용 프로그램에 따라 모양을 광범위하게 사용자 지정할 수 있지만 응용 프로그램 내에서 또는 응용 프로그램 간에 모양을 유지 관리 및 공유하려면 강력한 스타일 지정 및 템플릿 모델이 필요합니다. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]에서 이 모델을 제공합니다.  
@@ -28,10 +28,8 @@ ms.lasthandoff: 05/15/2018
   
  이 개요에서는 응용 프로그램의 스타일 지정 및 템플릿 측면을 집중적으로 살펴보고 데이터 바인딩 개념은 설명하지 않습니다. 데이터 바인딩에 대한 자세한 내용은 [데이터 바인딩 개요](../../../../docs/framework/wpf/data/data-binding-overview.md)를 참조하세요.  
   
- 또한 스타일 및 템플릿을 재사용할 수 있게 해주는 리소스를 이해해야 합니다. 리소스에 대한 자세한 내용은 [XAML 리소스](../../../../docs/framework/wpf/advanced/xaml-resources.md)를 참조하세요.  
-  
- 
-  
+ 또한 스타일 및 템플릿을 재사용할 수 있게 해주는 리소스를 이해해야 합니다. 리소스에 대한 자세한 내용은 [XAML 리소스](../../../../docs/framework/wpf/advanced/xaml-resources.md)를 참조하세요.
+
 <a name="styling_and_templating_sample"></a>   
 ## <a name="styling-and-templating-sample"></a>스타일 지정 및 템플릿 샘플  
  이 개요에 사용된 코드 예제는 다음 그림에 표시된 간단한 사진 샘플을 기반으로 합니다.  
@@ -183,9 +181,9 @@ ms.lasthandoff: 05/15/2018
   
  리소스 사전을 여러 응용 프로그램에 걸쳐 테마를 재사용할 수 있는 개별 파일로 정의할 수 있습니다. 또한 같은 형식의 리소스를 제공하지만 값이 서로 다른 여러 리소스 사전을 정의하여 전환 가능한 테마를 만들 수 있습니다. 응용 프로그램에 스킨을 지정하려면 응용 프로그램 수준에서 이러한 스타일이나 다른 리소스를 다시 정의하는 것이 좋습니다.  
   
- 스타일 및 서식 파일을 포함 하 여 응용 프로그램에서 리소스 집합을 공유를 만들 수 있습니다는 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 파일 및 정의 <xref:System.Windows.ResourceDictionary>합니다. 예를 들어 [Styling with ControlTemplates Sample](http://go.microsoft.com/fwlink/?LinkID=160041)(ControlTemplate으로 스타일 지정 샘플)의 일부를 보여 주는 다음 그림을 살펴보겠습니다.  
-  
- ![컨트롤 템플릿 예제](../../../../docs/framework/wpf/controls/media/stylingintro-controltemplateexamples.png "StylingIntro_ControlTemplateExamples")  
+ 스타일 및 서식 파일을 포함 하 여 응용 프로그램에서 리소스 집합을 공유를 만들 수 있습니다는 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 파일 및 정의 <xref:System.Windows.ResourceDictionary>합니다. 예를 들어 [Styling with ControlTemplates Sample](https://github.com/Microsoft/WPF-Samples/tree/master/Styles%20&%20Templates/IntroToStylingAndTemplating)(ControlTemplate으로 스타일 지정 샘플)의 일부를 보여 주는 다음 그림을 살펴보겠습니다.
+
+![컨트롤 템플릿 예제](../../../../docs/framework/wpf/controls/media/stylingintro-controltemplateexamples.png "StylingIntro_ControlTemplateExamples")  
   
  샘플에서 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 파일을 살펴보면 파일에 모두 다음 항목이 포함됨을 알 수 있습니다.  
   

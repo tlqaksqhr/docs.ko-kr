@@ -10,11 +10,11 @@ helpviewer_keywords:
 ms.assetid: 1d971dd7-10fc-4692-8dac-30ca308fc0fa
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1c0f831426762ddcb21e4c1c1191e20435a13deb
-ms.sourcegitcommit: 22c3c8f74eaa138dbbbb02eb7d720fce87fc30a9
+ms.openlocfilehash: b1e54aa8a9751a01e8856a3e9e71d63b55772f2c
+ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/17/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="whats-new-in-the-net-framework"></a>.NET Framework의 새로운 기능
 <a name="introduction"></a> 이 문서에서는 다음 버전의 .NET Framework에 새로 추가된 주요 기능과 향상된 내용에 대해 요약합니다.  
@@ -657,8 +657,6 @@ End Class
 | name                                 | 값                                     |
 | ------------------------------------ | ----------------------------------------- |
 | 등급은 1에서 10 사이여야 합니다. | La note doit être comprise entre 1 et 10. |
-
- 그러면 이 파일은 다음을 할 수 있습니다.
 
  또한, 데이터 주석 지역화를 확장할 수 있습니다. 개발자는 <xref:System.Web.Globalization.IStringLocalizerProvider> 인터페이스를 구현하여 리소스 파일 내부 이외의 위치에 지역화 문자열을 저장함으로써 문자열 로컬라이저 공급자를 연결할 수 있습니다.
 
@@ -1488,7 +1486,7 @@ SqlClient는 이제 자동으로 AlwaysOn AG(가용성 그룹)에 대한 더 빠
 
 - **코드 페이지 인코딩 지원**
 
-      [!INCLUDE[net_core](../../../includes/net-core-md.md)] primarily supports the Unicode encodings and by default provides limited support for code page encodings. You can add support for code page encodings available in the .NET Framework but unsupported in [!INCLUDE[net_core](../../../includes/net-core-md.md)] by registering code page encodings with the <xref:System.Text.Encoding.RegisterProvider%2A?displayProperty=nameWithType> method. For more information, see <xref:System.Text.CodePagesEncodingProvider?displayProperty=nameWithType>.
+     [!INCLUDE[net_core](../../../includes/net-core-md.md)]에서는 주로 유니코드 인코딩을 지원하며, 기본적으로 코드 페이지 인코딩에 대한 제한된 지원을 제공합니다. <xref:System.Text.Encoding.RegisterProvider%2A?displayProperty=nameWithType> 메서드로 코드 페이지 인코딩을 등록하여 .NET Framework에서 사용할 수 있지만 [!INCLUDE[net_core](../../../includes/net-core-md.md)]에서 지원되지 않는 코드 페이지 인코딩에 대한 지원을 추가할 수 있습니다. 자세한 내용은 <xref:System.Text.CodePagesEncodingProvider?displayProperty=nameWithType>을 참조하세요.
 
 - **.NET 네이티브**
 

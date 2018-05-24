@@ -6,11 +6,11 @@ helpviewer_keywords:
 - classes [C#]
 - C# language, classes
 ms.assetid: e8848524-7273-429f-8aba-c658d5eff5ad
-ms.openlocfilehash: 808e25315b0010fd55112f2ed237485c3d0c40d4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 688736aa8556719789b02d7db25858f442b4309e
+ms.sourcegitcommit: 895c7602386a6dfe7ca4facce3d965b27e5c6e87
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="classes-c-programming-guide"></a>클래스(C# 프로그래밍 가이드)
 *클래스*는 기타 형식, 메서드 및 이벤트의 변수를 그룹화하여 자체 사용자 지정 형식을 만들 수 있는 구문입니다. 클래스는 청사진과 비슷합니다. 클래스는 형식의 데이터 및 동작을 정의합니다. 클래스가 정적으로 선언되지 않으면 클라이언트 코드는 클래스의 ‘인스턴스’를 만들 수 있습니다. 이러한 인스턴스는 변수에 할당된 ‘개체’입니다. 클래스의 인스턴스는 모든 클래스에 대한 참조가 범위를 벗어날 때까지 메모리에 남습니다. 이때 CLR는 변수를 가비지 수집에 적격한 것으로 표시합니다. 클래스가 [정적](../../../csharp/language-reference/keywords/static.md)으로 선언되면 인스턴스를 만들 수 없고 클라이언트 코드는 클래스 자체를 통해서만 클래스에 액세스할 수 있습니다. 자세한 내용은 [static 클래스 및 static 클래스 멤버](../../../csharp/programming-guide/classes-and-structs/static-classes-and-static-class-members.md)를 참조하세요.  
@@ -83,10 +83,9 @@ MyClass mc2 = mc;
   
  클래스 정의는 여러 소스 파일로 분할될 수 있습니다. 자세한 내용은 참조 [Partial 클래스 및 메서드](../../../csharp/programming-guide/classes-and-structs/partial-classes-and-methods.md)합니다.  
   
-## <a name="description"></a>설명  
- 다음 예제에서는 단일 필드, 메서드 및 생성자라는 특수 메서드가 포함된 public 클래스가 정의됩니다. 자세한 내용은 [생성자](../../../csharp/programming-guide/classes-and-structs/constructors.md)를 참조하세요. 그런 다음 클래스는 `new` 키워드를 사용하여 인스턴스화됩니다.  
-  
 ## <a name="example"></a>예  
+ 다음 예제에서는 [자동 구현 속성](auto-implemented-properties.md), 메서드 및 생성자라는 특수 메서드를 포함하는 공용 클래스를 정의합니다. 자세한 내용은 [속성](properties.md), [메서드](methods.md) 및 [생성자](constructors.md) 항목을 참조하세요. 그런 다음, 클래스의 인스턴스는 `new` 키워드를 사용하여 인스턴스화됩니다.  
+  
  [!code-csharp[Class Example](~/samples/snippets/csharp/programming-guide/classes-and-structs/class-example.cs)] 
   
 ## <a name="c-language-specification"></a>C# 언어 사양  

@@ -15,11 +15,11 @@ helpviewer_keywords:
 - characters [WPF], curly brace
 - DynamicResource markup extensions [WPF]
 ms.assetid: 618dc745-8b14-4886-833f-486d2254bb78
-ms.openlocfilehash: f18a369157c1e37411a3c8d8b6dfcce99bc347c6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e2fb1e64f957b49743d8dfb19091bca50303e2d2
+ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="markup-extensions-and-wpf-xaml"></a>태그 확장명 및 WPF XAML
 이 항목에서는 XAML 태그 확장의 구문 규칙, 용도, 기반이 되는 클래스 개체 모델 등을 비롯한 개념에 대해 소개합니다. 태그 확장은 XAML 언어의 일반적 기능이며 XAML 서비스에 대한 .NET 구현의 일반적 기능입니다. 이 항목에서는 WPF XAML에서 사용할 태그 확장에 대해 자세히 설명합니다.  
@@ -64,7 +64,7 @@ ms.lasthandoff: 05/04/2018
   
 -   `RelativeSource` 에 대 한 원본 정보를 제공는 <xref:System.Windows.Data.Binding> 런타임에 개체 트리는 사용 가능한 여러 관계를 탐색할 수 있는 합니다. 즉, 주변 개체 트리에 대한 완전한 지식 없이 코드에 생성되거나 다용도 템플릿에 생성되는 바인딩에 대한 특수한 소스를 제공합니다. 자세한 내용은 [RelativeSource 태그 확장](../../../../docs/framework/wpf/advanced/relativesource-markupextension.md)을 참조하세요.  
   
--   `TemplateBinding`을 사용하면 컨트롤 템플릿에서 템플릿을 사용할 클래스의 개체-모델 정의 속성에서 가져온 템플릿 기반 속성 값을 사용할 수 있습니다. 즉, 템플릿 정의 내의 속성은 템플릿이 적용된 후의 컨텍스트에만 액세스할 수 있습니다. 자세한 내용은 [TemplateBinding 태그 확장](../../../../docs/framework/wpf/advanced/templatebinding-markup-extension.md)을 참조하세요. `TemplateBinding`의 실질적인 사용 방법에 대한 자세한 내용은 [Styling with ControlTemplates Sample](http://go.microsoft.com/fwlink/?LinkID=160041)(ControlTemplate으로 스타일 지정 샘플)을 참조하세요.  
+-   `TemplateBinding`을 사용하면 컨트롤 템플릿에서 템플릿을 사용할 클래스의 개체-모델 정의 속성에서 가져온 템플릿 기반 속성 값을 사용할 수 있습니다. 즉, 템플릿 정의 내의 속성은 템플릿이 적용된 후의 컨텍스트에만 액세스할 수 있습니다. 자세한 내용은 [TemplateBinding 태그 확장](../../../../docs/framework/wpf/advanced/templatebinding-markup-extension.md)을 참조하세요. `TemplateBinding`의 실질적인 사용 방법에 대한 자세한 내용은 [Styling with ControlTemplates Sample](https://github.com/Microsoft/WPF-Samples/tree/master/Styles%20&%20Templates/IntroToStylingAndTemplating)(ControlTemplate으로 스타일 지정 샘플)을 참조하세요.  
   
 -   `ColorConvertedBitmap`에서는 비교적 고급 이미징 시나리오를 지원합니다. 자세한 내용은 [ColorConvertedBitmap 태그 확장](../../../../docs/framework/wpf/advanced/colorconvertedbitmap-markup-extension.md)을 참조하세요.  
   

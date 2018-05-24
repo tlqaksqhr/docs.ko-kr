@@ -10,11 +10,11 @@ helpviewer_keywords:
 ms.assetid: 47cd5648-9469-4b1d-804c-43cc04384045
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1ecc707bb07d6d17ae4115b483cc8f52083f3933
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6900bca2bd94f52ea5603c752681163cde52ce19
+ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="compiling-apps-with-net-native"></a>.NET 네이티브로 앱 컴파일
 [!INCLUDE[net_native](../../../includes/net-native-md.md)] Visual Studio 2015 및 이상 버전에 포함 된 Windows 앱 빌드 및 배포에 대 한 미리 컴파일 기술입니다. 관리 코드(C# 또는 Visual Basic)로 작성되었으며 .NET Framework 및 Windows 10의 대상을 네이티브 코드로 지정하는 앱의 릴리스 버전을 자동으로 컴파일합니다.  
@@ -78,7 +78,4 @@ ms.lasthandoff: 05/04/2018
   
 -   [Windows 스토어 앱을 .NET 네이티브로 마이그레이션](../../../docs/framework/net-native/migrating-your-windows-store-app-to-net-native.md)  
   
--   [.NET 네이티브 일반 문제 해결](../../../docs/framework/net-native/net-native-general-troubleshooting.md)  
-  
-## <a name="see-also"></a>참고 항목  
- [.NET 네이티브 FAQ](http://msdn.microsoft.com/vstudio/dn642499.aspx)
+-   [.NET 네이티브 일반 문제 해결](../../../docs/framework/net-native/net-native-general-troubleshooting.md)

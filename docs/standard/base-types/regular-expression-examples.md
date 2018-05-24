@@ -9,11 +9,11 @@ helpviewer_keywords:
 ms.assetid: e9fd53f2-ed56-4b09-b2ea-e9bc9d65e6d6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8fb58f8e7a1fef711de28534fbe53dfc9d7084ac
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ee4d884a0efbeb6e57ed727396bf3bcb39979774
+ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/15/2018
 ---
 # <a name="regular-expression-examples"></a>정규식 예제
 이 섹션은 일반적인 응용 프로그램에서 정규식 사용을 보여 주는 코드 예제를 포함합니다.  
@@ -35,7 +35,7 @@ ms.lasthandoff: 05/04/2018
  문자열에서 유효하지 않은 영숫자가 아닌 문자를 제거하는 예제를 제공합니다.  
   
  [방법: 문자열이 올바른 전자 메일 형식인지 확인](../../../docs/standard/base-types/how-to-verify-that-strings-are-in-valid-email-format.md)  
- 문자열이 유효한 전자 메일 형식인지 확인하는 데 사용할 수 있는 예제를 제공합니다.  
+ 문자열이 유효한 전자 메일 형식인지 확인하는 예제를 제공합니다.  
   
 ## <a name="reference"></a>참조  
  <xref:System.Text.RegularExpressions>  

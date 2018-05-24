@@ -3,11 +3,11 @@ title: C# 특성 - C# 언어 둘러보기
 description: C#에서 특성을 사용하는 선언적 프로그래밍에 대해 알아보기
 ms.date: 08/10/2016
 ms.assetid: 753bcfe2-7ddd-4487-9513-ba70937fc8e9
-ms.openlocfilehash: d055f5386d1dddef0b70843a0a5fa6fc04922296
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 671023f268ae78d63db8868ef6046b8f13880659
+ms.sourcegitcommit: 895c7602386a6dfe7ca4facce3d965b27e5c6e87
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="attributes"></a>특성
 
@@ -17,7 +17,7 @@ C# 프로그램의 형식, 멤버 및 기타 엔터티는 동작의 특정 측�
 
 [!code-csharp[AttributeDefined](../../../samples/snippets/csharp/tour/attributes/Program.cs#L3-L20)]
 
-모든 특성 클래스는 표준 라이브러리에서 제공하는 <xref:System.Attribute> 기본 클래스에서 파생됩니다. 연결된 선언 바로 앞에 대괄호로 묶은 특성 이름을 인수와 함께 적용할 수 있습니다. 특성 이름이 `Attribute`로 끝나는 경우 특성이 참조될 때 이름의 해당 부분을 생략해도 됩니다. 예를 들어 `HelpAttribute` 특성을 다음과 같이 사용할 수 있습니다.
+모든 특성 클래스는 표준 라이브러리에서 제공하는 <xref:System.Attribute> 기본 클래스에서 파생됩니다. 연결된 선언 바로 앞에 대괄호로 묶은 특성 이름을 인수와 함께 적용할 수 있습니다. 특성 이름이 `Attribute`로 끝나는 경우 특성이 참조될 때 이름의 해당 부분을 생략해도 됩니다. 예를 들어 `HelpAttribute`는 다음과 같이 사용할 수 있습니다.
 
 [!code-csharp[AttributeApplied](../../../samples/snippets/csharp/tour/attributes/Program.cs#L22-L28)]
 

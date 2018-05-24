@@ -231,8 +231,8 @@
 ### [튜플](csharp/tuples.md)
 ### [튜플 및 기타 형식 분해](csharp/deconstruct.md)
 ### [인터페이스](csharp/programming-guide/interfaces/index.md)
-#### [메서드](csharp/methods.md)
-#### [람다 식](csharp/lambda-expressions.md)
+### [메서드](csharp/methods.md)
+### [람다 식](csharp/lambda-expressions.md)
 ### [속성](csharp/properties.md)
 ### [인덱서](csharp/indexers.md)
 ### [삭제](csharp/discards.md)
@@ -287,7 +287,7 @@
 ### [.NET Core CLI 시작](fsharp/get-started/get-started-command-line.md)
 
 ## [F# 스타일 가이드](fsharp/style-guide/index.md)
-### [F# 서식 지정 지침](fsharp/style-guide/formatting.md)
+### [F# 코드 서식 지정 지침](fsharp/style-guide/formatting.md)
 ### [F# 코딩 규칙](fsharp/style-guide/conventions.md)
 ### [F# 구성 요소 디자인 지침](fsharp/style-guide/component-design-guidelines.md)
 

@@ -6,11 +6,11 @@ helpviewer_keywords:
 - compiler options [C#], listed by category
 - Visual C#, compiler options listed by category
 ms.assetid: 96437ecc-6502-4cd3-b070-e9386a298e83
-ms.openlocfilehash: a3352b9f929382c7d5b7d0c62ef4022560caf371
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f02ae84544a60a992177332d528dd7970f84bf3f
+ms.sourcegitcommit: 895c7602386a6dfe7ca4facce3d965b27e5c6e87
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="c-compiler-options-listed-by-category"></a>C# 컴파일러 옵션 범주별 목록
 여기에서는 컴파일러 옵션을 범주별로 정렬합니다. 사전순 목록은 [C# 컴파일러 옵션 사전순 목록](listed-alphabetically.md)을 참조하세요.  
@@ -31,7 +31,7 @@ ms.lasthandoff: 05/04/2018
 |[-out](out-compiler-option.md)|출력 파일을 지정합니다.|  
 |[/pdb](pdb-compiler-option.md)|.pdb 파일의 이름과 위치를 지정합니다.|  
 |[-platform](platform-compiler-option.md)|출력 플랫폼을 지정합니다.|  
-|[/preferreduilang](preferreduilang-compiler-option.md)|컴파일러 출력 언어를 지정합니다.|  
+|[/preferreduilang](preferreduilang-compiler-option.md)|컴파일러 출력에 사용할 언어를 지정합니다.|  
 |[/refout](refout-compiler-option.md)|주 어셈블리 외에도 참조 어셈블리를 생성합니다.|  
 |[/refonly](refonly-compiler-option.md)|주 어셈블리를 대신 참조 어셈블리를 생성합니다.|  
 |[-target](target-compiler-option.md)|다섯 가지 옵션([-target:appcontainerexe](target-appcontainerexe-compiler-option.md), [-target:exe](target-exe-compiler-option.md), [-target:library](target-library-compiler-option.md), [-target:module](target-module-compiler-option.md), [-target:winexe](target-winexe-compiler-option.md) 또는 [-target:winmdobj](target-winmdobj-compiler-option.md)) 중 하나를 사용하여 출력 파일 형식을 지정합니다.|  
@@ -91,7 +91,7 @@ ms.lasthandoff: 05/04/2018
 |[-codepage](codepage-compiler-option.md)|컴파일할 때 모든 소스 코드 파일에 사용할 코드 페이지를 지정합니다.|  
 |[-help](help-compiler-option.md)|stdout에 컴파일러 옵션을 나열합니다.|  
 |[-highentropyva](highentropyva-compiler-option.md)|실행 파일이 ASLR(주소 공간 레이아웃 불규칙화)을 지원하도록 지정합니다.|  
-|[-langversion](langversion-compiler-option.md)|언어 버전 모드(Default, ISO-1, ISO-2, 3, 4, 5, 6, 7, 7.1 또는 최신)를 지정합니다. |  
+|[-langversion](langversion-compiler-option.md)|언어 버전(기본값, ISO-1, ISO-2, 3, 4, 5, 6, 7, 7.1, 7.2, 7.3 또는 최신)을 지정합니다. |  
 |[-main](main-compiler-option.md)|**Main** 메서드의 위치를 지정합니다.|  
 |[-noconfig](noconfig-compiler-option.md)|csc.rsp를 사용하여 컴파일하지 않도록 컴파일러에 지시합니다.|  
 |[-nologo](nologo-compiler-option.md)|컴파일러 배너 정보를 표시하지 않습니다.|  

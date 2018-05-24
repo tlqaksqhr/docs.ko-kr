@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 ms.assetid: 123457ac-4223-4273-bb58-3bc0e4957e9d
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 51b4758690257b999cce51f3e80fd263a6d5e275
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 846d41c31687df98b019f103e42cf586a23d8ff1
+ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="writing-large-responsive-net-framework-apps"></a>대형 응답성 .NET Framework 응용 프로그램 작성
 이 문서에서는 규모가 큰 .NET Framework 앱이나 파일 또는 데이터베이스와 같이 많은 양의 데이터를 처리하는 앱의 성능을 향상시키기 위한 팁을 제공합니다. 이러한 팁은 C# 및 Visual Basic 컴파일러를 관리 코드로 다시 작성하면서 수집되었으며, C# 컴파일러의 실제 몇 가지 예를 포함하고 있습니다.  
@@ -433,7 +433,7 @@ class Compilation { /*...*/
 }  
 ```  
   
- 이 코드에서는 `cachedResult`의 형식이 `Task<SyntaxTree>`로 변경되고 `async`의 원래 코드를 유지하는 `GetSyntaxTreeAsync()` 도우미 함수가 채택되었습니다.  이제 `GetSyntaxTreeAsync()`는 `cachedResult`가 null이 아닌 경우 이를 반환하기 위해 [null 병합 연산자](~/docs/csharp/language-reference/operators/null-conditional-operator.md)를 사용합니다.  `cachedResult`가 null인 경우 `GetSyntaxTreeAsync()`는 `GetSyntaxTreeUncachedAsync()`를 호출하고 결과를 캐시합니다.  일반적으로 코드가 그러는 것처럼 `GetSyntaxTreeAsync()`는 `GetSyntaxTreeUncachedAsync()`에 대한 호출을 기다리지 않습니다.  await를 사용하지 않는다는 말은 `GetSyntaxTreeUncachedAsync()`에서 해당 <xref:System.Threading.Tasks.Task> 개체를 반환할 때 `GetSyntaxTreeAsync()`가 즉시 <xref:System.Threading.Tasks.Task>를 반환한다는 의미입니다.  이제 캐시된 결과가 <xref:System.Threading.Tasks.Task>이므로 캐시된 결과를 반환하기 위한 할당이 없습니다.  
+ 이 코드에서는 `cachedResult`의 형식이 `Task<SyntaxTree>`로 변경되고 `async`의 원래 코드를 유지하는 `GetSyntaxTreeAsync()` 도우미 함수가 채택되었습니다.  이제 `GetSyntaxTreeAsync()`는 `cachedResult`가 null이 아닌 경우 이를 반환하기 위해 [null 병합 연산자](../../csharp/language-reference/operators/null-coalescing-operator.md)를 사용합니다.  `cachedResult`가 null인 경우 `GetSyntaxTreeAsync()`는 `GetSyntaxTreeUncachedAsync()`를 호출하고 결과를 캐시합니다.  일반적으로 코드가 그러는 것처럼 `GetSyntaxTreeAsync()`는 `GetSyntaxTreeUncachedAsync()`에 대한 호출을 기다리지 않습니다.  await를 사용하지 않는다는 말은 `GetSyntaxTreeUncachedAsync()`에서 해당 <xref:System.Threading.Tasks.Task> 개체를 반환할 때 `GetSyntaxTreeAsync()`가 즉시 <xref:System.Threading.Tasks.Task>를 반환한다는 의미입니다.  이제 캐시된 결과가 <xref:System.Threading.Tasks.Task>이므로 캐시된 결과를 반환하기 위한 할당이 없습니다.  
   
 ### <a name="additional-considerations"></a>추가 고려 사항  
  다음은 규모가 큰 앱이나 많은 데이터를 처리하는 앱에서 발생할 수 있는 잠재적 문제에 대한 몇 가지 추가 사항입니다.  

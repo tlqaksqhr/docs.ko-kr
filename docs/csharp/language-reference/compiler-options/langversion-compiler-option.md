@@ -1,6 +1,6 @@
 ---
 title: -langversion(C# 컴파일러 옵션)
-ms.date: 07/20/2015
+ms.date: 05/14/2018
 f1_keywords:
 - /langversion
 helpviewer_keywords:
@@ -8,11 +8,11 @@ helpviewer_keywords:
 - -langversion compiler option [C#]
 - langversion compiler option [C#]
 ms.assetid: 3fb00b05-a0ff-4782-b313-13a4c0f62d94
-ms.openlocfilehash: 523636663744acbbc85a08ebe3535f066e7dc160
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 299ff121bab87482b7cdcaebc8b43cb8a1b559ec
+ms.sourcegitcommit: 895c7602386a6dfe7ca4facce3d965b27e5c6e87
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="-langversion-c-compiler-options"></a>-langversion(C# 컴파일러 옵션)
 컴파일러가 선택한 C# 언어 사양에 포함된 구문만 허용하도록 합니다.  
@@ -29,20 +29,21 @@ ms.lasthandoff: 05/04/2018
   
 |옵션|의미|  
 |------------|-------------|  
-|default|컴파일러는 지원할 수 있는 최신 주 버전의 유효한 언어 구문을 모두 허용합니다. <sup id="TDefault">[Default](#FDefault)</sup>| 
-|ISO-1|컴파일러가 ISO/IEC 23270:2003 C#(1.0/1.1)에 포함된 구문만 허용합니다. <sup id="TISO1">[ISO1](#FISO1)</sup>|  
+|default|컴파일러는 지원할 수 있는 최신 주 버전의 유효한 언어 구문을 모두 허용합니다.|
+|ISO-1|컴파일러가 ISO/IEC 23270:2003 C#(1.0/1.2)에 포함된 구문만 허용합니다. <sup id="TISO1">[ISO1](#FISO1)</sup>|  
 |ISO-2|컴파일러가 ISO/IEC 23270:2006 C#(2.0)에 포함된 구문만 허용합니다. <sup id="TISO2">[ISO2](#FISO2)</sup>|
 |3|컴파일러가 C# 3.0 또는 이전 버전에 포함된 구문만 허용합니다. <sup id="TCS3">[CS3](#FCS3)</sup>|
 |4|컴파일러가 C# 4.0 또는 이전 버전에 포함된 구문만 허용합니다. <sup id="TCS4">[CS4](#FCS4)</sup>|
 |5|컴파일러가 C# 5.0 또는 이전 버전에 포함된 구문만 허용합니다. <sup id="TCS5">[CS5](#FCS5)</sup>|
 |6|컴파일러가 C# 6.0 또는 이전 버전에 포함된 구문만 허용합니다. <sup id="TCS6">[CS6](#FCS6)</sup>|
 |7|컴파일러가 C# 7.0 또는 이전 버전에 포함된 구문만 허용합니다. <sup id="TCS7">[CS7](#FCS7)</sup>|
-|latest|컴파일러가 지원할 수 있는 유효한 언어 구문을 모두 허용합니다. <sup id="TLatest">[Latest](#FLatest)</sup>|
+|7.1|컴파일러가 C# 7.1 또는 이전 버전에 포함된 구문만 허용합니다. <sup id="TCS71">[CS71](#FCS71)</sup>|
+|7.2|컴파일러가 C# 7.2 또는 이전 버전에 포함된 구문만 허용합니다. <sup id="TCS72">[CS72](#FCS72)</sup>|
+|7.3|컴파일러가 C# 7.3 또는 이전 버전에 포함된 구문만 허용합니다. <sup id="TCS73">[CS73](#FCS73)</sup>|
+|latest|컴파일러가 지원할 수 있는 유효한 언어 구문을 모두 허용합니다.|
+
 <!--- Uncomment and move these above
-|latest| once they're officially released
-|7.1|The compiler accepts only syntax that is included in C# 7.1 or lower <sup id="TCS71">[CS71](#FCS71)</sup>|
-|7.2|The compiler accepts only syntax that is included in C# 7.2 or lower <sup id="TCS71">[CS72](#FCS72)</sup>|
-|8|The compiler accepts only syntax that is included in C# 8 or lower <sup id="TCS71">[CS8](#FCS8)</sup>|
+|8|The compiler accepts only syntax that is included in C# 8 or lower <sup id="TCS8">[CS8](#FCS8)</sup>|
 -->
 
   
@@ -68,37 +69,33 @@ ms.lasthandoff: 05/04/2018
  이 컴파일러 옵션을 프로그래밍 방식으로 설정하는 방법에 대한 자세한 내용은 <xref:VSLangProj80.CSharpProjectConfigurationProperties3.LanguageVersion%2A>을 참조하십시오.  
     
 ## <a name="see-also"></a>참고 항목  
- [C# 컴파일러 옵션](../../../csharp/language-reference/compiler-options/index.md)  
+ [C# 컴파일러 옵션](index.md)  
  [프로젝트 및 솔루션 속성 관리](/visualstudio/ide/managing-project-and-solution-properties)  
  
 ### <a name="c-language-specification"></a>C# 언어 사양
- [C# 언어 사양 참조](../../../csharp/language-reference/language-specification/index.md): .NET Foundation  
- C# 1.0/1.1 [ISO/IEC 23270:2003](https://www.iso.org/standard/36768.html) 정보 기술 - C# 언어 사양: ISO 카탈로그  
- C# 2.0 [ISO/IEC 23270:2006](https://www.iso.org/standard/42926.html) 정보 기술 - C# 언어 사양: ISO 카탈로그  
- C# 2.0 [c042926_ISO_IEC_23270_2006 (E).zip](http://standards.iso.org/ittf/PubliclyAvailableStandards/c042926_ISO_IEC_23270_2006(E).zip) ISO/IEC 23270:2006(PDF 형식): ISO 자유롭게 사용할 수 있는 표준  
- C# 3.0 [CSharp Language Specification.doc](http://download.microsoft.com/download/3/8/8/388e7205-bc10-4226-b2a8-75351c669b09/CSharp%20Language%20Specification.doc) C# 언어 사양 버전 3.0: Microsoft Corporation  
- C# 4.0 [Ecma-334.pdf](https://www.ecma-international.org/publications/files/ECMA-ST/Ecma-334.pdf) 표준 ECMA-334 네 번째 버전    
- C# 5.0 [CSharp Language Specification.docx](https://www.microsoft.com/download/details.aspx?id=7029) C# 언어 사양 버전 5.0: Microsoft Corporation  
- C# 6.0 [README.md](https://github.com/dotnet/csharplang/blob/master/spec/README.md) C# 언어 사양 버전 6 - 비공식 초안: .NET Foundation  
- C# 7.0(현재 사용할 수 없음)  
 
-<!--- Uncomment and add to the above when they become officially released
- C# 7.1 (spec is not yet finished)  
- C# 7.2 (spec is not yet finished)  
- C# 8.0 (spec is not yet finished)  
--->
+|버전|링크|설명|
+|-------|----|-----------|
+|C# 1.0|[DOC 다운로드](http://download.microsoft.com/download/a/9/e/a9e229b9-fee5-4c3e-8476-917dee385062/csharp%20language%20specification%20v1.0.doc)|C# 언어 사양 버전 1.0: Microsoft Corporation|
+|C# 1.2|[DOC 다운로드](http://download.microsoft.com/download/5/e/5/5e58be0a-b02b-41ac-a4a3-7a22286214ff/csharp%20language%20specification%20v1.2.doc)|C# 언어 사양 버전 1.2: Microsoft Corporation|
+|C# 2.0|[PDF 다운로드](https://www.ecma-international.org/publications/files/ECMA-ST-ARCH/Ecma-334%204th%20edition%20June%202006.pdf)|표준 ECMA-334 네 번째 버전|
+|C# 3.0|[DOC 다운로드](http://download.microsoft.com/download/3/8/8/388e7205-bc10-4226-b2a8-75351c669b09/CSharp%20Language%20Specification.doc)|C# 언어 사양 버전 3.0: Microsoft Corporation|
+|C# 5.0|[PDF 다운로드](https://www.ecma-international.org/publications/files/ECMA-ST/Ecma-334.pdf)|표준 ECMA-334 다섯 번째 버전|
+|C# 6.0|[링크](../language-specification/index.md)|C# 언어 사양 버전 6 - 비공식 초안: .NET Foundation|
+|C# 7.0 이상||현재 사용할 수 없음|
 
 ### <a name="minimum-compiler-version-needed-to-support-all-language-features"></a>모든 언어 기능을 지원하는 데 필요한 최소 컴파일러 버전   
-[↩](#TDefault)<a name="FDefault">Default</a>, <a name="FISO1">ISO1</a>: Microsoft Visual Studio/Build Tools .Net 2002 또는 번들된 .Net Framework 1.0 컴파일러     
+[↩](#TISO1)<a name="FISO1">ISO1</a>: Microsoft Visual Studio/Build Tools .NET 2002 또는 번들된 .NET Framework 1.0 컴파일러     
 [↩](#TISO2)<a name="FISO2">ISO2</a>: Microsoft Visual Studio/Build Tools 2005 또는 번들된 .Net Framework 2.0 컴파일러    
 [↩](#TCS3)<a name="FCS3">CS3</a>: Microsoft Visual Studio/Build Tools 2008 또는 번들된 .Net Framework 3.5 컴파일러    
 [↩](#TCS4)<a name="FCS4">CS4</a>: Microsoft Visual Studio/Build Tools 2010 또는 번들된 .Net Framework 4.0 컴파일러    
 [↩](#TCS5)<a name="FCS5">CS5</a>: Microsoft Visual Studio/Build Tools 2012 또는 번들된 .Net Framework 4.5 컴파일러    
 [↩](#TCS6)<a name="FCS6">CS6</a>: Microsoft Visual Studio/Build Tools 2015    
-[↩](#TCS7)<a name="FCS7">CS7</a>, <a name="FLatest">Latest</a>: Microsoft Visual Studio/Build Tools 2017   
+[↩](#TCS7)<a name="FCS7">CS7</a>: Microsoft Visual Studio/Build Tools 2017   
+[↩](#TCS71)<a name="FCS71">CS71</a>: Microsoft Visual Studio/Build Tools 2017 버전 15.3    
+[↩](#TCS72)<a name="FCS72">CS72</a>: Microsoft Visual Studio/Build Tools 2017 버전 15.5    
+[↩](#TCS73)<a name="FCS73">CS73</a>: Microsoft Visual Studio/Build Tools 2017 버전 15.7    
 
 <!--- Uncomment and add to the above when they become officially released
-[↩](#TCS71)<a name="FCS71">CS71</a>: Microsoft Visual Studio/Build Tools 20??    
-[↩](#TCS72)<a name="FCS72">CS72</a>: Microsoft Visual Studio/Build Tools 20??    
-[↩](#TCS8)<a name="FCS71">CS8</a>: Microsoft Visual Studio/Build Tools 20??    
+[↩](#TCS8)<a name="FCS8">CS8</a>: Microsoft Visual Studio/Build Tools 20??    
 -->

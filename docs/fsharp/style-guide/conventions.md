@@ -2,11 +2,11 @@
 title: 'F # 코딩 규칙'
 description: 'F # 코드를 작성할 때는 일반적인 지침과 관용구를 알아봅니다.'
 ms.date: 05/14/2018
-ms.openlocfilehash: 4db1e2b4fef97fc060f717a080cd762f9fe08ee0
-ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
-ms.translationtype: HT
+ms.openlocfilehash: f3d16f735ddc1901aeaa5ebb39e2fa2b70a3d836
+ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/15/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="f-coding-conventions"></a>F # 코딩 규칙
 
@@ -91,7 +91,7 @@ let parsed = StringTokenization.parse s // Must qualify to use 'parse'
 
 F #에서 선언의 중요를 비롯 한 `open` 문. 이 C#과 달리 여기서의 효과 `using` 및 `using static` 문 파일의 순서와 무관 합니다.
 
-F #에서 요소 범위에 이미 다른 섀도잉할 수 때문에 제공 합니다. 즉, 해당 순서 바꾸기 `open` 문을 코드의 의미를 변경할 수 있습니다. 결과적으로, 정렬 알파벳순 (또는 pseudorandomly)은 일반적으로 좋지가 예상 하는 다른 동작이 생성 받지 않도록 합니다.
+F #에서 요소 범위에 이미 있는 다른 사용자를 숨길 수 있습니다. 즉, 해당 순서 바꾸기 `open` 문을 코드의 의미를 변경할 수 있습니다. 결과적으로 모든 정렬 된 임의의 `open` 문 (예를 들어, 사전순으로)은 일반적으로 권장 되지가 예상 하는 다른 동작이 생성 받지 않도록 합니다.
 
 대신 좋습니다 정렬 하기 [토폴로지 방식으로](https://en.wikipedia.org/wiki/Topological_sorting); 순서 즉, 프로그램 `open` 순서는 경우에 문을 _레이어_ 정의 된 시스템의 합니다. 다양 한 토폴로지 계층 내에서 정렬 영숫자 수행 고려도 수 있습니다.
 
@@ -108,12 +108,11 @@ open System.IO
 open System.Reflection
 open System.Text
 
-open Microsoft.FSharp.Core.Printf
 open Microsoft.FSharp.Compiler
 open Microsoft.FSharp.Compiler.AbstractIL
+open Microsoft.FSharp.Compiler.AbstractIL.Diagnostics
 open Microsoft.FSharp.Compiler.AbstractIL.IL
 open Microsoft.FSharp.Compiler.AbstractIL.ILBinaryReader
-open Microsoft.FSharp.Compiler.AbstractIL.Diagnostics
 open Microsoft.FSharp.Compiler.AbstractIL.Internal
 open Microsoft.FSharp.Compiler.AbstractIL.Internal.Library
 
@@ -123,24 +122,23 @@ open Microsoft.FSharp.Compiler.CompileOps
 open Microsoft.FSharp.Compiler.CompileOptions
 open Microsoft.FSharp.Compiler.Driver
 open Microsoft.FSharp.Compiler.ErrorLogger
+open Microsoft.FSharp.Compiler.Infos
+open Microsoft.FSharp.Compiler.InfoReader
+open Microsoft.FSharp.Compiler.Lexhelp
+open Microsoft.FSharp.Compiler.Layout
 open Microsoft.FSharp.Compiler.Lib
+open Microsoft.FSharp.Compiler.NameResolution
 open Microsoft.FSharp.Compiler.PrettyNaming
 open Microsoft.FSharp.Compiler.Parser
 open Microsoft.FSharp.Compiler.Range
-open Microsoft.FSharp.Compiler.Lexhelp
-open Microsoft.FSharp.Compiler.Layout
 open Microsoft.FSharp.Compiler.Tast
 open Microsoft.FSharp.Compiler.Tastops
 open Microsoft.FSharp.Compiler.TcGlobals
-open Microsoft.FSharp.Compiler.Infos
-open Microsoft.FSharp.Compiler.InfoReader
-open Microsoft.FSharp.Compiler.NameResolution
 open Microsoft.FSharp.Compiler.TypeChecker
 open Microsoft.FSharp.Compiler.SourceCodeServices.SymbolHelpers
 
 open Internal.Utilities
 open Internal.Utilities.Collections
-open Microsoft.FSharp.Compiler.Layout.TaggedTextOps
 ```
 
 참고 줄 바꿈을 나중에 사전순으로 정렬 하 고 각 레이어와 토폴로지 레이어를 구분 합니다. 이 값을 실수로 섀도잉 없이 코드를 완전히 구성 합니다.
@@ -154,7 +152,9 @@ open Microsoft.FSharp.Compiler.Layout.TaggedTextOps
 module MyApi =
     let dep1 = File.ReadAllText "/Users/{your name}/connectionstring.txt"
     let dep2 = Environment.GetEnvironmentVariable "DEP_2"
-    let dep3 = Random().Next() // Random is not thread-safe
+
+    let private r = Random()
+    let dep3() = r.Next() // Problematic if multiple threads use this
 
     let function1 arg = doStuffWith dep1 dep2 dep3 arg
     let function2 arg = doSutffWith dep1 dep2 dep3 arg
@@ -162,7 +162,9 @@ module MyApi =
 
 이것은 자주 좋지 않습니다는 몇 가지 이유로:
 
-첫째, 이렇게 하면 API 자체는 공유 상태에 기반한 있습니다. 예를 들어 여러 호출 스레드 수를 액세스 하려고는 `dep3` 값 (및 스레드로부터 안전 하지 않습니다). 둘째, 자체에서 코드 베이스로 응용 프로그램 구성을 푸시합니다. 이 큰 코드 베이스에 대 한 유지 관리 하기가 어렵습니다.
+응용 프로그램 구성 된 코드 베이스에 밀어 넣는 먼저 `dep1` 및 `dep2`합니다. 이 큰 코드 베이스에서 유지 관리 하기가 어렵습니다.
+
+둘째, 정적으로 초기화 된 데이터는 구성 요소 자체 다중 스레드 사용 하는 경우 스레드로부터 안전 하지 않은 값을 포함 되지 않습니다. 이것은 명확 하 게에 위반 `dep3`합니다.
 
 마지막으로 모듈을 초기화 전체 컴파일 단위에 대 한 정적 생성자로 컴파일합니다. 으로 매니페스트에 해당 모듈의 let 바인딩 값 초기화에서 오류가 발생 한 `TypeInitializationException` 다음 응용 프로그램의 전체 수명 동안 캐시 된 합니다. 이 진단이 어려울 수 있습니다. 일반적으로 내부 예외에 대 한 이유를 시작할 수 있습니다 하지만 없는 경우, 다음이 근본 원인을 란 합니다.
 
@@ -222,7 +224,7 @@ let handleWithdrawal amount =
 
 다음 기본 설정 순서에 예외를 발생 시키기 위해 F #에서 사용할 수 있는 기본 생성을 고려해 야 합니다.
 
-| 함수 | 구문 | 용도 |
+| 기능 | 구문 | 용도 |
 |----------|--------|---------|
 | `nullArg` | `nullArg "argumentName"` | 발생 한 `System.ArgumentNullException` 지정 된 인수 이름을 사용 합니다. |
 | `invalidArg` | `invalidArg "argumentName" "message"` | 발생 한 `System.ArgumentException` 지정 된 인수 이름 및 메시지를 사용 합니다. |
@@ -318,7 +320,7 @@ let tryReadAllTextIfPresent (path : string) =
 
 ## <a name="partial-application-and-point-free-programming"></a>부분 응용 프로그램 및 지점 필요 없는 프로그래밍
 
-F # 지점 필요 없는 스타일 부분 응용 프로그램 이므로, 프로그램에 다양 한 방법으로 지원합니다. 이 모듈 또는 항목의 구현 내에서 코드 재사용에 게 도움이 될 수 있지만 이것은 일반적으로 공개적으로 노출 하도록 합니다. 일반적으로 프로그래밍 지점 필요 없는 자체로, 전문화 아니며 스타일에서 immersed 하지는 사용자를 위해 중요 한 cognitive 장벽을 추가할 수 있습니다. F #에서 프로그래밍 지점 필요 없는 숙련 된 수학적에 대 한 기본 이지만 람다 미적분 법에 익숙하지 않은 사용자를 위해 어려울 수 있습니다.
+F # 지점 필요 없는 스타일 부분 응용 프로그램 이므로, 프로그램에 다양 한 방법으로 지원합니다. 이 모듈 또는 항목의 구현 내에서 코드 재사용에 게 도움이 될 수 있지만 이것은 일반적으로 공개적으로 노출 하도록 합니다. 일반적으로 프로그래밍 지점 필요 없는 자체로, 전문화 아니며 스타일에서 immersed 하지는 사용자를 위해 중요 한 cognitive 장벽을 추가할 수 있습니다.
 
 ### <a name="do-not-use-partial-application-and-currying-in-public-apis"></a>부분 응용 프로그램 및 커리 공용 Api에서 사용 하지 마십시오
 
