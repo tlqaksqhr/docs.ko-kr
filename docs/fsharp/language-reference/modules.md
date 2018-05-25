@@ -2,11 +2,11 @@
 title: 모듈(F#)
 description: 'F # 모듈은 F # 코드 값, 형식, F # 프로그램에서 함수 값 등의 그룹화 하는 방법에 대해 알아봅니다.'
 ms.date: 04/24/2017
-ms.openlocfilehash: ddb6a0762171f8acc94f0ba0cf29c4b6b3e4990e
-ms.sourcegitcommit: 88f251b08bf0718ce119f3d7302f514b74895038
+ms.openlocfilehash: 9a1416321e392f7a06551b4a7e3429e3a2d023bd
+ms.sourcegitcommit: b7763f3435635850a76d4cbcf09bdce6c019208a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 05/25/2018
 ---
 # <a name="modules"></a>모듈
 
@@ -129,8 +129,8 @@ module rec RecursiveModule =
 
 이 기능을 확장할 수 또한 [네임 스페이스](namespaces.md) F # 4.1을 사용 합니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참고자료
 
-[F # 언어 참조](index.md)
-[네임 스페이스](namespaces.md)
-[F # RFC FS-1009-파일 내에서 더 큰 범위를 통한 상호 참조 형식 및 모듈 허용](https://github.com/fsharp/fslang-design/blob/master/FSharp-4.1/FS-1009-mutually-referential-types-and-modules-single-scope.md)
+[F# 언어 참조](index.md)  
+[네임스페이스](namespaces.md)  
+[F # RFC FS 1009 파일 내에서 더 큰 범위를 통한 상호 참조 형식 및 모듈 허용](https://github.com/fsharp/fslang-design/blob/master/FSharp-4.1/FS-1009-mutually-referential-types-and-modules-single-scope.md)  
