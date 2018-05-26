@@ -2,11 +2,11 @@
 title: 레코드(F#)
 description: 'F # 레코드 멤버와 필요에 따라 명명 된 값의 간단한 집계를 표시 하는 방법에 대해 알아봅니다.'
 ms.date: 05/16/2016
-ms.openlocfilehash: 5bd1f76937bf5839b7da5cae7dea578747ec9b99
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ffb853ee11ff8cacb45dadf6ef14a4f29400aad4
+ms.sourcegitcommit: 54231aa56fca059e9297888a96fbca1d4cf3746c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/25/2018
 ---
 # <a name="records"></a>레코드
 
@@ -16,15 +16,15 @@ ms.lasthandoff: 05/04/2018
 
 ```fsharp
 [ attributes ]
-type [accessibility-modifier] typename = {
-    [ mutable ] label1 : type1;
-    [ mutable ] label2 : type2;
-    ...
-}
+type [accessibility-modifier] typename =
+    { [ mutable ] label1 : type1;
+      [ mutable ] label2 : type2;
+      ... }
     [ member-list ]
 ```
 
 ## <a name="remarks"></a>설명
+
 위 구문에서 *typename* 레코드 종류의 이름인 *label1* 및 *label2* 는 라고 값의 이름 *레이블을*, 및 *type1* 및 *type2* 이러한 값의 형식입니다. *멤버 목록* 멤버 유형에 대 한 선택적 목록입니다.  사용할 수는 `[<Struct>]` 특성 참조 형식인 하는 레코드 대신 구조체 레코드를 만듭니다.
 
 다음은 몇 가지 예입니다.
@@ -48,6 +48,7 @@ type [accessibility-modifier] typename = {
 클래스 형식 마찬가지로 레코드 형식에 대 한 메서드를 정의할 수 있습니다.
 
 ## <a name="creating-records-by-using-record-expressions"></a>레코드 식을 사용 하 여 레코드 만들기
+
 레코드에 정의 되는 레이블을 사용 하 여 레코드를 초기화할 수 있습니다. 이 작업을 수행 하는 식 이라고는 *식 기록*합니다. 레코드 식을 묶는 및 구분 기호로 세미콜론을 사용 하 여 중괄호를 사용 합니다.
 
 다음 예제에는 레코드를 만드는 방법을 보여 줍니다.
@@ -77,20 +78,19 @@ DefaultValue 특성 레코드 필드와 함께 사용 하지 마십시오. 기�
 ```fsharp
 // Rather than use [<DefaultValue>], define a default record.
 type MyRecord =
-{
-    field1 : int
-    field2 : int
-}
+    { Field1 : int
+      Field2 : int }
 
-let defaultRecord1 = { field1 = 0; field2 = 0 }
-let defaultRecord2 = { field1 = 1; field2 = 25 }
+let defaultRecord1 = { Field1 = 0; Field2 = 0 }
+let defaultRecord2 = { Field1 = 1; Field2 = 25 }
 
 // Use the with keyword to populate only a few chosen fields
 // and leave the rest with default values.
-let rr3 = { defaultRecord1 with field2 = 42 }
+let rr3 = { defaultRecord1 with Field2 = 42 }
 ```
 
 ## <a name="pattern-matching-with-records"></a>레코드를 사용한 패턴 일치
+
 레코드 패턴 일치에 사용할 수 있습니다. 일부 필드를 명시적으로 지정 하 고 일치 하는 항목이 때 할당 되는 다른 필드에 대 한 값을 제공할 수 합니다. 다음 코드 예제에서는 그 구체적인 방법을 보여 줍니다.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet1910.fs)]
@@ -104,17 +104,25 @@ Point is at (10.000000, 0.000000, -1.000000).
 ```
 
 ## <a name="differences-between-records-and-classes"></a>레코드 및 클래스 간의 차이점
+
 레코드 필드 속성으로 노출 되어 자동으로 생성에 사용 되 고 레코드의 복사 한다는 점에서 클래스에서 다릅니다. 레코드 생성 클래스 생성에서도 다릅니다. 레코드 종류에는 생성자를 정의할 수 없습니다. 대신,이 항목에서 설명한 구문이 적용 됩니다. 클래스는 생성자 매개 변수, 필드 및 속성 간 직접 관계가 있어야 합니다.
 
 공용 구조체 및 구조체 형식 처럼 레코드 구조적 같음 의미 체계를 가져야합니다. 클래스에는 참조 같음 의미 체계입니다. 다음 코드 예제에서는 이 작업을 보여줍니다.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet1911.fs)]
 
+이 코드의 출력은 다음과 같습니다.
+
+```
+The records are equal.
+```
+
 클래스를 사용 하 여 동일한 코드를 작성 하는 경우 두 클래스 개체가 같지 주소만 비교 되며 하 고 두 값은 힙의 두 개체를 나타냅니다 (해당 클래스 형식에서 `System.Object.Equals` 메서드).
 
 레코드에 대 한 같음을 참조 하 고 필요한 경우 추가 특성 `[<ReferenceEquality>]` 레코드 위에 있습니다.
 
 ## <a name="see-also"></a>참고 항목
+
 [F# 형식](fsharp-types.md)
 
 [클래스](classes.md)
