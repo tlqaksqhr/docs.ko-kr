@@ -47,7 +47,6 @@
 ## [개체 이니셜라이저 및 컬렉션 이니셜라이저](object-and-collection-initializers.md)
 ### [방법: 개체 이니셜라이저를 사용하여 개체 초기화](how-to-initialize-objects-by-using-an-object-initializer.md)
 ### [방법: 컬렉션 이니셜라이저를 사용하여 사전 초기화](how-to-initialize-a-dictionary-with-a-collection-initializer.md)
-## [방법: foreach를 사용하여 컬렉션 클래스 액세스](how-to-access-a-collection-class-with-foreach.md)
 ## [중첩 형식](nested-types.md)
 ## [Partial 클래스 및 메서드](partial-classes-and-methods.md)
 ## [익명 형식](anonymous-types.md)
