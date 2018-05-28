@@ -2,11 +2,11 @@
 title: 방법 문서(C# 가이드)
 description: 유용한 팁 및 간단하고 집중된 코드 샘플의 컬렉션
 ms.date: 12/20/2017
-ms.openlocfilehash: b8164abd84647fc9118acc6e0b84e7fd46838fe9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 209af8858de1a791997d254f5a2ddd5dd1803bff
+ms.sourcegitcommit: 54231aa56fca059e9297888a96fbca1d4cf3746c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/25/2018
 ---
 # <a name="how-to-c"></a>방법(C#)
 
@@ -43,9 +43,8 @@ C# 가이드의 방법 섹션에서 일반적인 질문에 대한 빠른 답변�
 이러한 문서를 통해 데이터의 컬렉션으로 작업할 수 있습니다.
 
 - [컬렉션 이니셜라이저를 사용하여 사전을 초기화합니다](../programming-guide/classes-and-structs/how-to-initialize-a-dictionary-with-a-collection-initializer.md).
-- [`foreach`를 사용하여 컬렉션에서 모든 요소에 액세스합니다](../programming-guide/classes-and-structs/how-to-access-a-collection-class-with-foreach.md).
 
-## <a name="strings"></a>문자열
+## <a name="working-with-strings"></a>문자열 작업
 
 문자열은 텍스트를 표시하거나 조작하는 데 사용되는 기본 데이터 형식입니다. 이러한 문서는 문자열이 포함된 일반적인 사례를 보여줍니다.
 
