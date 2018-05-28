@@ -14,7 +14,7 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 583cfb6e3a5145c6c0dfc82ec9ff64c6d87414ba
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
 ---
@@ -42,19 +42,19 @@ COM interop 및 플랫폼 호출에 대한 마샬링을 설명합니다.
 실행과 HRESULT 간 매핑을 설명합니다.
 
 [COM 래퍼](com-wrappers.md)  
-COM interop에서 제공 하는 래퍼를 설명 합니다.
+COM interop에서 제공하는 래퍼에 대해 설명합니다.
 
-[동일 형식 및 포함된 Interop 형식](type-equivalence-and-embedded-interop-types.md)  
-어셈블리에 COM 형식에 대 한 형식 정보는 포함 하는 방법 및 공용 언어 런타임 포함 된 COM 형식 일치를 확인 하는 방법을 설명 합니다.
+[형식 동등 및 포함된 Interop 형식](type-equivalence-and-embedded-interop-types.md)  
+COM 형식에 대한 형식 정보가 어셈블리에 포함되는 방식과 공용 언어 런타임에서 포함된 COM 형식이 동일한지 결정하는 방법을 설명합니다.
 
 [방법: Tlbimp.exe를 사용하여 주 Interop 어셈블리 생성](how-to-generate-primary-interop-assemblies-using-tlbimp-exe.md)  
-사용 하 여 주 interop 어셈블리를 생성 하는 방법에 설명 *Tlbimp.exe* (형식 라이브러리 가져오기).
+*Tlbimp.exe*(형식 라이브러리 가져오기)를 사용하여 주 interop 어셈블리를 생성하는 방법에 대해 설명합니다.
 
 [방법: 주 Interop 어셈블리 등록](how-to-register-primary-interop-assemblies.md)  
-프로젝트에서 참조할 수는 주 interop 어셈블리를 등록 하는 방법을 설명 합니다.
+주 interop 어셈블리를 프로젝트에서 참조할 수 있도록 등록하는 방법에 대해 설명합니다.
 
 [등록이 필요 없는 COM interop](registration-free-com-interop.md)  
-COM interop는 Windows 레지스트리를 사용 하지 않고 구성 요소를 활성화할 수 방법을 설명 합니다.
+COM interop에서 Windows 레지스트리를 사용하지 않고 구성 요소를 활성화하는 방법에 대해 설명합니다.
 
 [방법: 등록이 필요 없는 활성화를 위한 .NET Framework 기반 COM 구성 요소 구성](configure-net-framework-based-com-components-for-reg.md)  
-응용 프로그램 매니페스트를 만드는 방법 및 작성 및 구성 요소 매니페스트를 포함 하는 방법을 설명 합니다.
+응용 프로그램 매니페스트를 만드는 방법과 구성 요소 매니페스트를 만들고 포함하는 방법에 대해 설명합니다.

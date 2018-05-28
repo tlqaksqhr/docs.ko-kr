@@ -8,11 +8,11 @@ helpviewer_keywords:
 - C# language, reference
 - reference, C# language
 ms.assetid: 06de3167-c16c-4e1a-b3c5-c27841d4569a
-ms.openlocfilehash: 7ed85e294e25535f7600dab425a74adbbdbc4bc3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c9400c2836d923fe92ed88ec947a1953800bc47d
+ms.sourcegitcommit: 77d9a94dac4c05827ed0663d95e0f9ad35d6682e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/24/2018
 ---
 # <a name="c-reference"></a>C# 참조
 이 섹션에서는 C# 키워드, 연산자, 특수 문자, 전처리기 지시문, 컴파일러 옵션 및 컴파일러 오류와 경고에 대한 참조 자료를 제공합니다.  
@@ -34,14 +34,15 @@ ms.lasthandoff: 05/04/2018
  컴파일러 옵션 및 사용 방법에 대한 정보를 포함합니다.  
   
  [C# 컴파일러 오류](../../csharp/language-reference/compiler-messages/index.md)  
- C# 컴파일러 오류 및 경고의 원인과 해결 방법을 보여 주는 코드 조각을 포함합니다.  
+ C# 컴파일러 오류 및 경고의 원인과 해결 방법을 보여주는 코드 조각을 포함합니다.  
   
  [C# 언어 사양](../../csharp/language-reference/language-specification/index.md)  
- C# 언어 사양의 최신 버전(Microsoft Word 형식)에 대한 포인터를 제공합니다.  
+ C# 언어 사양의 최신 버전에 대한 링크를 제공합니다.  
   
 ## <a name="related-sections"></a>관련 단원  
 
- [C#](../../csharp/index.md) Visual C# 설명서 포털을 제공합니다.  
+ [C# 가이드](../../csharp/index.md)  
+ Visual C# 설명서 포털을 제공합니다.  
   
  [C#용 Visual Studio 개발 환경 사용](/visualstudio/csharp-ide/using-the-visual-studio-development-environment-for-csharp)  
  IDE 및 편집기를 설명하는 개념 및 작업 항목의 링크를 제공합니다.  
