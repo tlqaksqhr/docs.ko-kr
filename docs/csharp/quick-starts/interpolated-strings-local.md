@@ -5,11 +5,12 @@ author: rpetrusha
 ms.author: ronpet
 ms.date: 04/14/2018
 ms.custom: mvc
-ms.openlocfilehash: 314626e276f50178e2855b8c8a1edc104546d574
-ms.sourcegitcommit: 88f251b08bf0718ce119f3d7302f514b74895038
+ms.openlocfilehash: 80b7a2c39094f1101e714b47f0e77f0a7c4907f2
+ms.sourcegitcommit: 77d9a94dac4c05827ed0663d95e0f9ad35d6682e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 05/24/2018
+ms.locfileid: "34472765"
 ---
 # <a name="string-interpolation"></a>문자열 보간
 
@@ -48,13 +49,13 @@ Console.WriteLine($"Hello, {name}. It's a pleasure to meet you!");
 
 이전 섹션에서는 한 문자열을 다른 문자열 내에 삽입하는 데 문자열 보간을 사용했습니다. 보간된 식의 결과는 모든 데이터 형식일 수 있습니다. 보간된 문자열에 다양한 데이터 형식의 값을 포함시켜 보겠습니다.
 
-다음 예제에서는 먼저 `Name` [속성](../properties.md) 및 `ToString` 메서드가 있는 사용자 지정 데이터 형식 `Vegetable`을 정의합니다. 클라이언트 코드는 해당 메서드를 사용하여 `Vegetable` 인스턴스의 문자열 표현을 구할 수 있습니다. 예제에서 `Vegetable.ToString` 메서드는 `Vegetable` 생성자에서 초기화된 `Name` 속성의 값을 반환합니다.
+다음 예제에서는 먼저 `Name` [속성](../properties.md)과 <xref:System.Object.ToString?displayProperty=nameWithType> 메서드의 동작을 [재정의](../language-reference/keywords/override.md)하는 `ToString` [메서드](../methods.md)가 있는 [클래스](../programming-guide/classes-and-structs/classes.md) 데이터 형식 `Vegetable`을 정의합니다. [`public` 액세스 한정자](../language-reference/keywords/public.md)를 지정하면 해당 메서드를 모든 클라이언트 코드에 사용하여 `Vegetable` 인스턴스의 문자열 표현을 가져올 수 있습니다. 예제에서 `Vegetable.ToString` 메서드는 `Vegetable` [생성자](../programming-guide/classes-and-structs/constructors.md)에서 초기화된 `Name` 속성의 값을 반환합니다.
 
 ```csharp
 public Vegetable(string name) => Name = name;
 ```
 
-`new` 키워드를 사용하고 생성자 `Vegetable`에 대한 name 매개 변수를 제공하여 `Vegetable` 형식의 인스턴스를 만듭니다.
+다음으로, [`new` 키워드](../language-reference/keywords/new-operator.md)를 사용하고 생성자 `Vegetable`에 대한 name 매개 변수를 제공하여 `Vegetable` 클래스의 인스턴스를 만듭니다.
 
 ```csharp
 var item = new Vegetable("eggplant");
@@ -93,7 +94,7 @@ public class Program
 
 - 보간된 식이 `null`로 계산되고 빈 문자열("" 또는 <xref:System.String.Empty?displayProperty=nameWithType>)이 사용됩니다.
 
-- 보간된 식이 `null`로 계산되지 않고 결과 형식의 `ToString` 메서드가 호출됩니다. 이것은 `Vegetable.ToString` 메서드의 구현을 업데이트하여 테스트할 수 있습니다. 모든 C# 데이터 형식에는 이 메서드가 구현되어 있기 때문에 `ToString` 메서드를 구현하지 않을 수도 있습니다. 이것을 테스트하려면 예제에서 `Vegetable.ToString` 메서드 정의를 주석으로 처리합니다. (이렇게 하려면, 그 앞에 주석 기호 즉, `//`를 추가합니다.) 출력에서 "eggplant" 문자열은 정규화된 형식 이름(이 예제의 경우 "Vegetable")으로 바뀌며 이것이 <xref:System.Object.ToString?displayProperty=nameWithType> 메서드의 기본 동작입니다. 열거형 형식에 대한 `ToString` 메서드의 기본 동작은 열거형을 정의하는 데 사용된 값의 문자열 표현을 반환하는 것입니다.
+- 보간된 식이 `null`로 계산되지 않고 결과 형식의 `ToString` 메서드가 호출됩니다. 이것은 `Vegetable.ToString` 메서드의 구현을 업데이트하여 테스트할 수 있습니다. 모든 형식에는 `ToString` 메서드가 구현되어 있으므로 이 메서드를 구현할 필요가 없을 수도 있습니다. 이것을 테스트하려면 예제에서 `Vegetable.ToString` 메서드 정의를 주석으로 처리합니다. (이렇게 하려면, 그 앞에 주석 기호 즉, `//`를 추가합니다.) 출력에서 "eggplant" 문자열은 정규화된 형식 이름(이 예제의 경우 "Vegetable")으로 바뀌며 이것이 <xref:System.Object.ToString?displayProperty=nameWithType> 메서드의 기본 동작입니다. 열거형 값에 대한 `ToString` 메서드의 기본 동작은 값의 문자열 표현을 반환하는 것입니다.
 
 이 예제의 출력에서 날짜는 매우 정확하며(eggplant 가격은 초마다 변경되지 않음), 가격 값은 통화 단위를 나타내지 않습니다. 다음 섹션에서는 식 결과에 대한 문자열 표현의 형식을 제어하여 해당 문제를 해결하는 방법을 알아봅니다.
 

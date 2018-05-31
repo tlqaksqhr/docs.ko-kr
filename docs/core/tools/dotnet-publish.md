@@ -4,11 +4,12 @@ description: dotnet publish 명령은 .NET Core 프로젝트를 디렉터리에 
 author: mairaw
 ms.author: mairaw
 ms.date: 03/10/2018
-ms.openlocfilehash: f4c422eab20f5fe2d1b0c09133953f22a539474e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5e7ce5ce1240f03f53f6e120dfce53d15917425f
+ms.sourcegitcommit: 77d9a94dac4c05827ed0663d95e0f9ad35d6682e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/24/2018
+ms.locfileid: "34472632"
 ---
 # <a name="dotnet-publish"></a>dotnet publish
 
@@ -89,8 +90,8 @@ dotnet publish [-h|--help]
 
 `-o|--output <OUTPUT_DIRECTORY>`
 
-출력 디렉터리의 경로를 지정합니다. 지정하지 않으면 프레임워크 종속 배포의 경우 *./bin/[configuration]/[framework]/* 로, 자체 포함 배포의 경우 *./bin/[configuration]/[framework]/[runtime]* 으로 기본 설정됩니다.
-상대 경로가 제공되는 경우 생성된 출력 디렉터리는 현재 작업 디렉터리가 아닌 프로젝트 파일 위치에 상대적입니다.
+출력 디렉터리의 경로를 지정합니다. 지정하지 않으면 프레임워크 종속 배포의 경우 *./bin/[configuration]/[framework]/publish/* 로, 자체 포함 배포의 경우 *./bin/[configuration]/[framework]/[runtime]/publish/* 로 기본 설정됩니다.
+상대 경로인 경우 생성된 출력 디렉터리는 현재 작업 디렉터리가 아닌 프로젝트 파일 위치에 상대적입니다.
 
 `--self-contained`
 
@@ -128,8 +129,8 @@ dotnet publish [-h|--help]
 
 `-o|--output <OUTPUT_DIRECTORY>`
 
-출력 디렉터리의 경로를 지정합니다. 지정하지 않으면 프레임워크 종속 배포의 경우 *./bin/[configuration]/[framework]/* 로, 자체 포함 배포의 경우 *./bin/[configuration]/[framework]/[runtime]* 으로 기본 설정됩니다.
-상대 경로가 제공되는 경우 생성된 출력 디렉터리는 현재 작업 디렉터리가 아닌 프로젝트 파일 위치에 상대적입니다.
+출력 디렉터리의 경로를 지정합니다. 지정하지 않으면 프레임워크 종속 배포의 경우 *./bin/[configuration]/[framework]/publish/* 로, 자체 포함 배포의 경우 *./bin/[configuration]/[framework]/[runtime]/publish/* 로 기본 설정됩니다.
+상대 경로인 경우 생성된 출력 디렉터리는 현재 작업 디렉터리가 아닌 프로젝트 파일 위치에 상대적입니다.
 
 `-r|--runtime <RUNTIME_IDENTIFIER>`
 

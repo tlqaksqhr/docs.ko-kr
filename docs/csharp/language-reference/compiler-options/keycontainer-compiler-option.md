@@ -1,6 +1,6 @@
 ---
 title: -keycontainer(C# 컴파일러 옵션)
-ms.date: 07/20/2015
+ms.date: 05/16/2018
 f1_keywords:
 - /keycontainer
 helpviewer_keywords:
@@ -8,11 +8,12 @@ helpviewer_keywords:
 - keycontainer compiler option [C#]
 - -keycontainer compiler option [C#]
 ms.assetid: b3982b6d-2382-4f7e-bebd-ce98eaa30763
-ms.openlocfilehash: edb50dafa376abe55fbeeb312ca5bb8f34c83e7f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5a7b378cad7a1df9249fcbefa28bb9aa9a6a3da4
+ms.sourcegitcommit: 77d9a94dac4c05827ed0663d95e0f9ad35d6682e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/24/2018
+ms.locfileid: "34472570"
 ---
 # <a name="-keycontainer-c-compiler-options"></a>-keycontainer(C# 컴파일러 옵션)
 암호화 키 컨테이너의 이름을 지정합니다.  
@@ -28,7 +29,7 @@ ms.lasthandoff: 05/04/2018
  강력한 이름 키 컨테이너의 이름입니다.  
   
 ## <a name="remarks"></a>설명  
- **-keycontainer** 옵션을 사용하면 컴파일러는 지정된 컨테이너의 공개 키를 어셈블리 매니페스트에 삽입하고 최종 어셈블리를 개인 키로 서명하여 공유할 수 있는 구성 요소를 만듭니다. 키 파일을 생성하려면 명령줄에 sn -k `file`을 입력합니다. sn -i는 컨테이너에 키 쌍을 설치합니다.  
+ **-keycontainer** 옵션을 사용하면 컴파일러는 공유 가능한 구성 요소를 만듭니다. 컴파일러는 지정된 컨테이너의 공개 키를 어셈블리 매니페스트에 삽입하고 개인 키를 사용하여 최종 어셈블리에 서명합니다. 키 파일을 생성하려면 명령줄에 `sn -k file`을 입력합니다. `sn -i`는 컨테이너에 키 쌍을 설치합니다. CoreCLR에서 컴파일러를 실행하면 이 옵션이 지원되지 않습니다. CoreCLR에서 빌드할 때 어셈블리에 서명하려면 [-keyfile](keyfile-compiler-option.md) 옵션을 사용합니다.
   
  [-target:module](../../../csharp/language-reference/compiler-options/target-module-compiler-option.md)로 컴파일하는 경우 키 파일의 이름이 모듈에 저장되고, [-addmodule](../../../csharp/language-reference/compiler-options/addmodule-compiler-option.md)을 사용하여 이 모듈을 어셈블리로 컴파일할 때 어셈블리에 통합됩니다.  
   
@@ -45,5 +46,5 @@ ms.lasthandoff: 05/04/2018
  프로그래밍 방식으로 <xref:VSLangProj.ProjectProperties.AssemblyKeyContainerName%2A>을 사용하여 이 컴파일러 옵션에 액세스할 수 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [C# 컴파일러 옵션](../../../csharp/language-reference/compiler-options/index.md)  
+ [C# 컴파일러 -keyfile 옵션](keyfile-compiler-option.md) [C# 컴파일러 옵션](index.md)  
  [프로젝트 및 솔루션 속성 관리](/visualstudio/ide/managing-project-and-solution-properties)

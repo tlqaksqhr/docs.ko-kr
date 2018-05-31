@@ -2,14 +2,18 @@
 title: private protected (C# Reference)
 ms.date: 11/15/2017
 author: sputier
-ms.openlocfilehash: ee36cc713dd5fdb90ae20ef992f8e75eca09597d
-ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
+ms.openlocfilehash: 0d511f55f44511590fbe92a98cef118e0cb482e2
+ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/15/2018
+ms.lasthandoff: 05/23/2018
+ms.locfileid: "34457253"
 ---
 # <a name="private-protected-c-reference"></a>private protected (C# Reference)
 `private protected` 키워드 조합은 멤버 액세스 한정자입니다. private protected 멤버는 포함하는 클래스에서 파생된 형식으로 액세스할 수 있지만 포함하는 어셈블리 내에서만 가능합니다. `private protected` 및 다른 액세스 한정자와 비교는 [액세스 가능성 수준](../../../csharp/language-reference/keywords/accessibility-levels.md)을 참조하세요. 
+
+> [!NOTE]
+> `private protected` 액세스 한정자는 C# 7.2 버전에서 유효합니다.
    
 ## <a name="example"></a>예  
  기본 클래스의 private protected 멤버는 변수의 정적 형식이 파생 클래스 형식인 경우에만 포함 어셈블리의 파생된 형식에서 액세스할 수 있습니다. 예를 들어 다음 코드 세그먼트를 고려하세요.  

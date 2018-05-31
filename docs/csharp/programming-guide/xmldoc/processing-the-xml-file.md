@@ -5,11 +5,12 @@ helpviewer_keywords:
 - XML processing [C#]
 - XML [C#], processing
 ms.assetid: 60c71193-9dac-4cd3-98c5-100bd0edcc42
-ms.openlocfilehash: ca70f0c8237a5d9cc4ad9e0bb8c1947c871ce064
-ms.sourcegitcommit: 895c7602386a6dfe7ca4facce3d965b27e5c6e87
+ms.openlocfilehash: 659562864ad323162f15351aa960c2a54164c77d
+ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2018
+ms.lasthandoff: 05/23/2018
+ms.locfileid: "34458062"
 ---
 # <a name="processing-the-xml-file-c-programming-guide"></a>XML 파일 처리(C# 프로그래밍 가이드)
 컴파일러는 문서 생성을 위해 태그가 지정되는 코드의 각 구문에 대해 ID 문자열을 생성합니다. 코드에 태그를 지정하는 방법에 대한 자세한 내용은 [문서 주석에 대한 권장 태그](../../../csharp/programming-guide/xmldoc/recommended-tags-for-documentation-comments.md)를 참조하세요. ID 문자열은 구문을 고유하게 식별합니다. XML 파일을 처리하는 프로그램은 ID 문자열을 사용하여 문서가 적용되는 해당 .NET Framework 메타데이터/리플렉션 항목을 식별할 수 있습니다.  
@@ -40,7 +41,7 @@ ms.lasthandoff: 05/19/2018
   
     -   내장 형식(ELEMENT_TYPE_I4, ELEMENT_TYPE_OBJECT, ELEMENT_TYPE_STRING, ELEMENT_TYPE_TYPEDBYREF, ELEMENT_TYPE_VOID)은 해당하는 전체 형식의 정규화된 이름으로 표시됩니다. 예를 들면 System.Int32 또는 System.TypedReference와 같습니다.  
   
-    -   ELEMENT_TYPE_PTR은 수정된 형식 뒤에 '*'로 표시됩니다.  
+    -   ELEMENT_TYPE_PTR은 수정된 형식 뒤에 ‘\*’로 표시됩니다.  
   
     -   ELEMENT_TYPE_BYREF는 수정된 형식 뒤에 ‘\@’으로 표시됩니다.  
   
@@ -68,11 +69,11 @@ ms.lasthandoff: 05/19/2018
   
 -   변환 연산자(op_Implicit 및 op_Explicit)에 한해 메서드의 반환 값은 위에 인코딩되어 있는 것처럼 '~'에 반환 형식이 붙는 문자열로 인코딩됩니다.  
   
--   제네릭 형식의 경우에는 형식 이름 뒤에 역따옴표와 제네릭 형식 매개 변수의 수를 나타내는 숫자가 차례로 붙습니다.  예를 들어 개체에 적용된  
+-   제네릭 형식의 경우에는 형식 이름 뒤에 역따옴표와 제네릭 형식 매개 변수의 수를 나타내는 숫자가 차례로 붙습니다. 예:
   
      ``<member name="T:SampleClass`2">``는 `public class SampleClass<T, U>`로 정의된 형식의 태그입니다.  
   
-     제네릭 형식을 매개 변수로 사용하는 메서드의 경우 제네릭 형식 매개 변수는 \`0,`1과 같이 앞에 역따옴표가 붙은 숫자로 지정됩니다.  각 숫자는 해당 형식의 제네릭 매개 변수에 대한 0부터 시작되는 배열 표기법을 나타냅니다.  
+     제네릭 형식을 매개 변수로 사용하는 메서드의 경우 제네릭 형식 매개 변수는 \`0,\`1과 같이 앞에 역따옴표가 붙은 숫자로 지정됩니다. 각 숫자는 해당 형식의 제네릭 매개 변수에 대한 0부터 시작되는 배열 표기법을 나타냅니다.  
   
 ## <a name="examples"></a>예제  
  다음 예제에서는 클래스와 해당 멤버의 ID 문자열이 생성되는 방식을 보여 줍니다.  

@@ -3,11 +3,12 @@ title: 클래스 소개 자습서 - C# 로컬 빠른 시작
 description: 첫 번째 C# 프로그램을 만들고 개체 지향 개념을 살펴봅니다.
 ms.date: 10/11/2017
 ms.custom: mvc
-ms.openlocfilehash: 5d3363a34fb684985b3b060dce2784090f25a1b9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a951c84396e187b5ef1a832705b7722f818c990b
+ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/23/2018
+ms.locfileid: "34457335"
 ---
 # <a name="introduction-to-classes"></a>클래스 소개
 

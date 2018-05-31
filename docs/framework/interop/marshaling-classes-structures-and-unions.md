@@ -22,9 +22,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: be4c15f1093f359eeb9e742464b9d9e1dd5c756e
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33393395"
 ---
 # <a name="marshaling-classes-structures-and-unions"></a>클래스, 구조체 및 공용 구조체 마샬링
 .NET Framework에서는 클래스와 구조체가 서로 비슷합니다. 둘 다 필드, 속성 및 이벤트를 포함할 수 있습니다. 또한 정적 및 비정적 메서드를 포함할 수 있습니다. 한 가지 주목할 만한 차이점은 구조체는 값 형식이고 클래스는 참조 형식이라는 것입니다.  

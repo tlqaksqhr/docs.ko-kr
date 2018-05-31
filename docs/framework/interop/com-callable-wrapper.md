@@ -16,9 +16,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 21f7b0d56a788b4161fb7e99899b4dd15a434152
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33394968"
 ---
 # <a name="com-callable-wrapper"></a>CCW
 COM 클라이언트가.NET 개체를 호출할 때 공용 언어 런타임에서는 관리되는 개체 및 개체에 대한 COM 호출 가능 래퍼(CCW)를 만듭니다. .NET 개체를 직접 참조할 수는 없으며, COM 클라이언트는 CCW를 관리되는 개체에 대한 프록시로 사용합니다.  
@@ -38,7 +39,7 @@ COM 호출 가능 래퍼를 통해 .NET 개체 액세스
   
 ## <a name="simulating-com-interfaces"></a>COM 인터페이스 시뮬레이션
 
-CCW는 모든 public, COM 표시 인터페이스, 데이터 형식 및 COM의 인터페이스 기반 조작 적용과 일치 하는 방식으로 COM 클라이언트에 반환 값을 표시 합니다. COM 클라이언트의 경우 .NET Framework 개체에서 메서드를 호출하는 것은 COM 개체에서 메서드를 호출하는 것과 같습니다.  
+CCW는 COM에 표시되는 인터페이스 데이터 형식 및 반환 값을 모두 COM의 인터페이스 기반 조작 적용과 일치하는 방식으로 COM 클라이언트에 노출합니다. COM 클라이언트의 경우 .NET Framework 개체에서 메서드를 호출하는 것은 COM 개체에서 메서드를 호출하는 것과 같습니다.  
   
  이 원활한 접근 방식을 만들기 위해 CCW는 **IUnknown** 및 **IDispatch**와 같은 기존 COM 인터페이스를 만듭니다. 다음 그림과 같이 CCW는 래핑하고 있는 .NET 개체에 대한 단일 참조를 유지 관리합니다. COM 클라이언트 및 .NET 개체는 CCW의 프록시 및 스텁 생성을 통해 서로 상호 작용합니다.  
   
@@ -66,9 +67,9 @@ COM 인터페이스 및 COM 호출 가능 래퍼
 |**IEnumVARIANT**|클래스가 **IEnumerable**을 구현하는 경우 컬렉션에서 개체를 열거하는 컬렉션 형식 클래스에 대한 인터페이스입니다.|  
   
 ## <a name="introducing-the-class-interface"></a>클래스 인터페이스 소개  
- 관리 코드에서 명시적으로 정의되지 않은 클래스 인터페이스는 .NET 개체에서 명시적으로 노출되는 모든 공용 메서드, 속성, 필드, 이벤트를 노출하는 인터페이스입니다. 이 인터페이스는 이중 인터페이스이거나 디스패치 전용 인터페이스입니다. 클래스 인터페이스는 앞에 밑줄이 추가된 .NET 클래스 자체의 이름을 수신합니다. 예를 들어 Mammal 클래스의 클래스 인터페이스는 \_Mammal 합니다.  
+ 관리 코드에서 명시적으로 정의되지 않은 클래스 인터페이스는 .NET 개체에서 명시적으로 노출되는 모든 공용 메서드, 속성, 필드, 이벤트를 노출하는 인터페이스입니다. 이 인터페이스는 이중 인터페이스이거나 디스패치 전용 인터페이스입니다. 클래스 인터페이스는 앞에 밑줄이 추가된 .NET 클래스 자체의 이름을 수신합니다. 예를 들어 Mammal 클래스의 클래스 인터페이스는 \_Mammal입니다.  
   
- 파생 클래스의 클래스 인터페이스는 기본 클래스의 모든 공용 메서드, 속성 및 필드도 노출합니다. 파생 클래스는 각 기본 클래스의 클래스 인터페이스도 노출합니다. 예를 들어 Mammal 클래스 클래스가 클래스를 확장 하는 경우 논리 System.Object 확대 되었고, 인터페이스 라는 세 개의 클래스 COM 클라이언트에.NET 개체가 공개 \_Mammal, \_클래스가, 및 \_개체입니다.  
+ 파생 클래스의 클래스 인터페이스는 기본 클래스의 모든 공용 메서드, 속성 및 필드도 노출합니다. 파생 클래스는 각 기본 클래스의 클래스 인터페이스도 노출합니다. 예를 들어 System.Object를 확장하는 MammalSuperclass 클래스를 Mammal 클래스가 확장하면 .NET 개체는 \_Mammal, \_MammalSuperclass 및 \_Object라는 세 개의 인터페이스를 COM 클라이언트에 노출합니다.  
   
  예를 들어 다음 .NET 클래스를 예로 들어 봅니다.  
   
@@ -147,7 +148,7 @@ public class LoanApp : IExplicit {
   
  **ClassInterfaceType.None** 값은 클래스 메타데이터가 형식 라이브러리에 노출될 때 클래스 인터페이스가 생성되지 않도록 방지합니다. 이전 예제에서 COM 클라이언트는 `IExplicit` 인터페이스를 통해서만 `LoanApp` 클래스에 액세스할 수 있습니다.  
   
-### <a name="avoid-caching-dispatch-identifiers-dispids"></a>디스패치 식별자 (Dispid)를 캐시 하지 마세요
+### <a name="avoid-caching-dispatch-identifiers-dispids"></a>디스패치 식별자(DispId)를 캐시하지 마세요.
  클래스 인터페이스 사용은 스크립팅된 클라이언트, Microsoft Visual Basic 6.0 클라이언트 또는 인터페이스 멤버의 DispId를 캐시하지 않는 런타임에 바인딩된 클라이언트에 적용할 수 있는 옵션입니다. DispId로 런타임 바인딩을 가능하게 하는 인터페이스 멤버를 구별합니다.  
   
  클래스 인터페이스에 대한 DispId 생성은 인터페이스에서 멤버의 위치에 기반을 둡니다. 멤버 순서를 변경하고 클래스를 형식 라이브러리로 내보내면 클래스 인터페이스에서 생성된 DispId가 변경됩니다.  

@@ -11,11 +11,12 @@ metadata:
   displayType: two-column
   interactive: csharp
   ms.custom: mvc
-  ms.openlocfilehash: e1fb89d06896a61560a8638415b992236a5461e6
-  ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+  ms.openlocfilehash: 395ed81b5845047063d84469d91e3d03f17f12ae
+  ms.sourcegitcommit: 54231aa56fca059e9297888a96fbca1d4cf3746c
   ms.translationtype: HT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 05/07/2018
+  ms.lasthandoff: 05/25/2018
+  ms.locfileid: "34549674"
 items:
 - durationInMinutes: 1
   content: >
@@ -103,4 +104,4 @@ items:
 
     [C# 프로그래밍 가이드](../programming-guide/index.md)의 [문자열](../programming-guide/strings/index.md) 항목에서 `string` 형식 작업에 대해 더 자세히 학습할 수 있습니다.
 
-    [문자열에 팁 지정 방법](../how-to/index.md#strings).
+    [문자열 작업에 대한 방법 팁](../how-to/index.md#working-with-strings).

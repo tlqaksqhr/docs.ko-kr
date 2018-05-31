@@ -12,12 +12,13 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: ed2a4b91608306021ce510098eaf044520cbb089
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33391458"
 ---
 # <a name="marshaling-different-types-of-arrays"></a>여러 형식의 배열 마샬링
-배열은 동일한 형식의 요소를 하나 이상 포함하는 관리 코드의 참조 형식입니다. 배열은 참조 형식이지만 관리되지 않는 함수에 In 매개 변수로 전달됩니다. 이 동작은 관리되는 배열이 관리되는 개체에 전달되는 방식(In/Out 매개 변수로)과 일치하지 않습니다. 자세한 내용은 참조 하십시오. [복사 및 고정](copying-and-pinning.md)합니다.  
+배열은 동일한 형식의 요소를 하나 이상 포함하는 관리 코드의 참조 형식입니다. 배열은 참조 형식이지만 관리되지 않는 함수에 In 매개 변수로 전달됩니다. 이 동작은 관리되는 배열이 관리되는 개체에 전달되는 방식(In/Out 매개 변수로)과 일치하지 않습니다. 자세한 내용은 [복사 및 고정](copying-and-pinning.md)을 참조하세요.  
   
  다음 표에서는 배열에 대한 마샬링 옵션을 나열하고 사용법을 설명합니다.  
   
@@ -30,7 +31,7 @@ ms.lasthandoff: 05/04/2018
 |정수를 포함하는 구조체.|정수를 포함하는 구조체 배열을 In 매개 변수로 전달합니다.|  
 |문자열을 포함하는 구조체.|정수만 포함하는 구조체 배열을 In/Out 매개 변수로 전달합니다. 배열의 멤버를 변경할 수 있습니다.|  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  이 샘플에서는 다음 형식의 배열을 전달하는 방법을 보여 줍니다.  
   
 -   값 형식 정수 배열  
@@ -85,7 +86,7 @@ ms.lasthandoff: 05/04/2018
     int TestArrayOfStructs2 (MYPERSON* pPersonArray, int size);  
     ```  
   
- [PinvokeLib.dll](https://msdn.microsoft.com/library/5d1438d7-9946-489d-8ede-6c694a08f614(v=vs.100)) 는 이전에 나열 된 함수 및 2 개의 구조체 변수에 대 한 구현을 포함 하는 사용자 지정 관리 되지 않는 라이브러리 **MYPOINT** 및 **MYPERSON**합니다. 구조체에는 다음과 같은 요소가 포함됩니다.  
+ [PinvokeLib.dll](https://msdn.microsoft.com/library/5d1438d7-9946-489d-8ede-6c694a08f614(v=vs.100))은 앞에 나열된 함수 및 2개의 구조체 변수 **MYPOINT** 및 **MYPERSON**에 대한 구현을 포함하는 관리되지 않는 사용자 지정 라이브러리입니다. 구조체에는 다음과 같은 요소가 포함됩니다.  
   
 ```  
 typedef struct _MYPOINT  

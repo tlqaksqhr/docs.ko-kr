@@ -3,11 +3,12 @@ title: C# 6의 새로운 기능 - C# 가이드
 description: C# 버전 6의 새로운 기능을 알아봅니다.
 ms.date: 09/22/2016
 ms.assetid: 4d879f69-f889-4d3f-a781-75194e143400
-ms.openlocfilehash: 00aeb3ed940acfca748a1a9eb876fd0133baf6c0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d9f5c5ca94c04a873e4e98863f9fea3b8f477c1c
+ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/23/2018
+ms.locfileid: "34458007"
 ---
 # <a name="whats-new-in-c-6"></a>C# 6의 새로운 기능
 
@@ -351,7 +352,7 @@ C# 6에서는 catch 식에서 대기할 수도 있습니다. 이 방법이 로�
 
 이 기능은 여러 버전에 대한 시퀀스 컨테이너를 대신한 것과 비슷한 구문을 사용하여 연관 컨테이너를 초기화할 수 있음을 의미합니다.
 
-### <a name="extension-add-methods-in-collection-initializers"></a>컬렉션 이니셜라이저의 확장 `Add` 메서드
+## <a name="extension-add-methods-in-collection-initializers"></a>컬렉션 이니셜라이저의 확장 `Add` 메서드
 
 컬렉션을 더 쉽게 초기화하도록 하는 또 다른 기능은 `Add` 메서드에 *확장 메서드*를 사용하는 기능입니다. 이 기능은 Visual Basic의 패리티를 위해 추가되었습니다. 
 
@@ -370,10 +371,7 @@ C#의 이전 버전에서는 `Enrollment` 개체와 함께 컬렉션 이니셜�
 
 [!code-csharp[ExtensionAdd](../../../samples/snippets/csharp/new-in-6/classList.cs#ExtensionAdd)]
 
-이 기능을 통해 수행하는 작업은 확장 메서드를 만들어 컬렉션에 항목을 추가하는 모든 메서드를 `Add` 메서드에 매핑하는 것입니다. 
-
-[!code-csharp[Enrollment](../../../samples/snippets/csharp/new-in-6/enrollment.cs#Enrollment)]
-[!code-csharp[ExtensionAddSample](../../../samples/snippets/csharp/new-in-6/classList.cs#ExtensionAddSample)]
+이 기능을 통해 수행하는 작업은 확장 메서드를 만들어 컬렉션에 항목을 추가하는 모든 메서드를 `Add` 메서드에 매핑하는 것입니다.
 
 ## <a name="improved-overload-resolution"></a>향상된 오버로드 확인
 

@@ -8,9 +8,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: d0d94223223568efe921af3a340815a966cc6c6f
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33388357"
 ---
 # <a name="marshaling-data-with-com-interop"></a>COM Interop를 사용하여 데이터 마샬링
 COM interop는 관리 코드에서 COM 개체를 사용하고 관리되는 개체를 COM에 노출하는 기능을 모두 지원합니다. COM과의 데이터 마샬링 지원은 광범위하며 거의 항상 올바른 마샬링 동작을 제공합니다.  
@@ -21,21 +22,21 @@ COM interop는 관리 코드에서 COM 개체를 사용하고 관리되는 개�
   
 -   [형식 라이브러리 내보내기(Tlbexp.exe)](../../../docs/framework/tools/tlbexp-exe-type-library-exporter.md) - 어셈블리에서 COM 형식 라이브러리를 생성하고 메서드 호출 중 마샬링을 수행하는 래퍼를 생성합니다.  
   
- 다음 섹션에서는 마샬러에 추가 형식 정보를 수 있습니다 (또는 해야) 제공 하는 경우 interop 래퍼를 사용자 지정 하기 위한 프로세스를 설명 하는 항목을 연결 합니다.  
+ 다음 섹셕은 마샬러에 추가 형식 정보를 제공할 수 있는(제공해야 하는) 경우 interop 래퍼를 사용자 지정하는 프로세스를 설명하는 항목으로 연결됩니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
 [방법: 수동으로 래퍼 만들기](how-to-create-wrappers-manually.md)   
-관리 되는 소스 코드에서 수동으로 COM 래퍼를 만드는 방법을 설명 합니다. 
+관리 소스 코드에서 COM 래퍼를 수동으로 만드는 방법을 설명합니다. 
  
  [방법: 관리 코드 DCOM을 WCF로 마이그레이션](../../../docs/framework/interop/how-to-migrate-managed-code-dcom-to-wcf.md)  
- 가장 안전한 솔루션에 대 한 관리 되는 DCOM 코드를 WCF로 마이그레이션하는 방법에 설명 합니다.  
+ 보다 안전한 솔루션을 위해 관리되는 DCOM 코드를 WCF로 마이그레이션하는 방법을 설명합니다.  
   
 ## <a name="related-sections"></a>관련 단원  
  [COM 데이터 형식](https://msdn.microsoft.com/library/sak564ww(v=vs.100).aspx)  
  해당 관리되는 데이터 형식과 관리되지 않는 데이터 형식을 제공합니다.  
   
  [COM 호출 가능 래퍼 사용자 지정](https://msdn.microsoft.com/library/3bwc828w(v=vs.100).aspx)  
- 사용 하 여 데이터 형식을 명시적으로 마샬링하는 방법에 설명 된 <xref:System.Runtime.InteropServices.MarshalAsAttribute> 디자인 타임에 특성입니다.  
+ 디자인 타임에 <xref:System.Runtime.InteropServices.MarshalAsAttribute> 특성을 사용하여 데이터 형식을 명시적으로 마샬링하는 방법을 설명합니다.  
   
  [런타임 호출 가능 래퍼 사용자 지정](https://msdn.microsoft.com/library/e753eftz(v=vs.100).aspx)  
  interop 어셈블리에서 형식의 마샬링 동작을 조정하는 방법 및 COM 형식을 수동으로 조정하는 방법을 설명합니다.  

@@ -3,13 +3,14 @@ title: 메서드 - C# 가이드
 description: 메서드, 메서드 매개 변수 및 메서드 반환 값의 개요
 author: rpetrusha
 ms.author: ronpet
-ms.date: 10/26/2016
+ms.date: 05/21/2018
 ms.assetid: 577a8527-1081-4b36-9b9e-0685b6553c6e
-ms.openlocfilehash: 6a99ccc0157b044eb1a9ed7189de94ca69225d1b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a9d78ecfc3911cf959333c098a66614239609c4e
+ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/23/2018
+ms.locfileid: "34457958"
 ---
 # <a name="methods"></a>메서드 #
 
@@ -80,7 +81,7 @@ ms.lasthandoff: 05/04/2018
 [!code-csharp[csSnippets.Methods#46](../../samples/snippets/csharp/concepts/methods/named2.cs#46)]
 
  <a name="inherited"></a>
- ##<a name="inherited-and-overridden-methods"></a>상속 및 재정의된 메서드 ##
+ ## <a name="inherited-and-overridden-methods"></a>상속 및 재정의된 메서드 ##
 
 형식은 해당 형식에서 명시적으로 정의된 멤버 외에도 기본 클래스에서 정의된 멤버를 상속합니다. 관리되는 형식 시스템의 모든 형식이 직접 또는 간접적으로 <xref:System.Object> 클래스에서 상속하므로 모든 형식은 <xref:System.Object.Equals(System.Object)>, <xref:System.Object.GetType> 및 <xref:System.Object.ToString>과 같은 해당 멤버를 상속합니다. 다음 예제에서는 `Person` 클래스를 정의하고, 두 개의 `Person` 개체를 인스턴스화하고, `Person.Equals` 메서드를 호출하여 두 개체가 같은지 여부를 확인합니다. 그러나 `Equals` 메서드는 `Person` 클래스에서 정의되지 않고 <xref:System.Object>에서 상속됩니다.
 
@@ -258,7 +259,7 @@ if (person != null)
 > [!NOTE]
 > 비동기 메서드는 아직 완료되지 않은 첫 번째 대기된 개체를 검색할 때나 비동기 메서드의 끝에 도달할 때 중에서 먼저 발생하는 시점에 호출자에게 반환됩니다.
 
-비동기 메서드의 반환 형식은 <xref:System.Threading.Tasks.Task%601>, <xref:System.Threading.Tasks.Task> 또는 `void`일 수 있습니다. `void` 반환 형식은 기본적으로 `void` 반환 형식이 필요할 때 이벤트 처리기를 정의하는 데 사용됩니다. `void`를 반환하는 비동기 메서드는 대기할 수 없고 void를 반환하는 메서드의 호출자는 메서드가 throw하는 예외를 catch할 수 없습니다. C# 7.0이 릴리스되면 비동기 메서드가 [작업과 유사한 형식을 반환](https://github.com/ljw1004/roslyn/blob/features/async-return/docs/specs/feature%20-%20arbitrary%20async%20returns.md)할 수 있도록 이 제한이 완화됩니다.
+비동기 메서드의 반환 형식은 <xref:System.Threading.Tasks.Task%601>, <xref:System.Threading.Tasks.Task> 또는 `void`일 수 있습니다. `void` 반환 형식은 기본적으로 `void` 반환 형식이 필요할 때 이벤트 처리기를 정의하는 데 사용됩니다. `void`를 반환하는 비동기 메서드는 대기할 수 없고 void를 반환하는 메서드의 호출자는 메서드가 throw하는 예외를 catch할 수 없습니다. C# 7.0부터 비동기 메서드에는 [작업과 유사한 반환 형식](./whats-new/csharp-7.md#generalized-async-return-types)이 있을 수 있습니다.
 
 다음 예제에서 `DelayAsync`는 정수를 반환하는 return 문을 포함하는 비동기 메서드입니다. 비동기 메서드이기 때문에 해당 메서드 선언의 반환 형식은 `Task<int>`여야 합니다. 반환 형식이 `Task<int>`이므로 `DoSomethingAsync`의 `await` 식 계산에서 다음 `int result = await delayTask` 문과 같이 정수가 생성됩니다.
 

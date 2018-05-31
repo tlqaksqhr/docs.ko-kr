@@ -12,9 +12,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 744ce1f2810eee025f071cafaa71e473b6ed4c50
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33392855"
 ---
 # <a name="how-to-configure-net-framework-based-com-components-for-registration-free-activation"></a>방법: 등록이 필요 없는 활성화를 위한 .NET Framework 기반 COM 구성 요소 구성
 .NET Framework 기반 구성 요소에 대한 등록 없는 활성화는 COM 구성 요소보다 약간 더 복잡합니다. 설치 프로그램에 다음 두 개의 매니페스트가 필요합니다.  
@@ -36,7 +37,7 @@ ms.lasthandoff: 05/04/2018
     <assembly xmlns="urn:schemas-microsoft-com:asm.v1" manifestVersion="1.0">  
     ```  
   
-     매니페스트 요소와 해당 특성에 대 한 정보를 참조 하십시오. [응용 프로그램 매니페스트](https://msdn.microsoft.com/library/windows/desktop/aa374191.aspx)합니다.  
+     매니페스트 요소와 해당 특성에 대한 자세한 내용을 보려면 [응용 프로그램 매니페스트](https://msdn.microsoft.com/library/windows/desktop/aa374191.aspx)를 참조하세요.  
   
 3.  매니페스트의 소유자를 식별합니다. 다음 예제에서는 `myComApp` 버전 1이 매니페스트 파일을 소유합니다.  
   
@@ -76,7 +77,7 @@ ms.lasthandoff: 05/04/2018
   
 5.  매니페스트 파일을 저장하고 이름을 지정합니다. 응용 프로그램 매니페스트 이름은 어셈블리 실행 파일의 이름 뒤에 .manifest 확장명이 추가된 것입니다. 예를 들어 myComApp.exe의 응용 프로그램 매니페스트 파일 이름은 myComApp.exe.manifest입니다.  
   
- COM 응용 프로그램과 동일한 디렉터리에 응용 프로그램 매니페스트를 설치할 수 있습니다. 또는 응용 프로그램의 .exe 파일에 리소스로 추가할 수 있습니다. 자세한 내용은 추가 정보를 참조 하십시오. [Side-by-side-어셈블리에 대 한](https://msdn.microsoft.com/library/windows/desktop/ff951640.aspx)합니다.  
+ COM 응용 프로그램과 동일한 디렉터리에 응용 프로그램 매니페스트를 설치할 수 있습니다. 또는 응용 프로그램의 .exe 파일에 리소스로 추가할 수 있습니다. 자세한 내용은 [About Side-by-Side Assemblies](https://msdn.microsoft.com/library/windows/desktop/ff951640.aspx)(Side-by-Side 어셈블리 정보)를 참조하세요.  
   
 #### <a name="to-create-a-component-manifest"></a>구성 요소 매니페스트를 만들려면  
   
@@ -173,6 +174,6 @@ ms.lasthandoff: 05/04/2018
   
 ## <a name="see-also"></a>참고 항목  
  [등록이 필요 없는 COM interop](registration-free-com-interop.md)  
- [등록이 필요 없는 COM Interop에 대 한 요구 사항](https://msdn.microsoft.com/library/0c43bc57-eecf-4e6c-8114-490141cce4da(v=vs.100)))  
- [등록이 필요 없는 활성화를 위한 COM 구성 요소 구성](https://msdn.microsoft.com/library/bfe9b02f-d964-4784-960e-a1f94692fbfe(v=vs.100)))  
+ [등록이 필요 없는 COM Interop에 대한 요구 사항](https://msdn.microsoft.com/library/0c43bc57-eecf-4e6c-8114-490141cce4da(v=vs.100))  
+ [등록이 필요 없는 활성화를 위한 COM 구성 요소 구성](https://msdn.microsoft.com/library/bfe9b02f-d964-4784-960e-a1f94692fbfe(v=vs.100))  
  [.NET 기반 구성 요소의 등록이 필요 없는 활성화: 연습](https://msdn.microsoft.com/library/ms973915.aspx)

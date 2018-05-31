@@ -14,9 +14,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 32ee3babe054d55a45cc8826843252dba6aa2be7
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33390252"
 ---
 # <a name="registration-free-com-interop"></a>등록이 필요 없는 COM Interop
 등록이 필요 없는 COM interop는 Windows 레지스트리를 사용하여 어셈블리 정보를 저장하지 않고 구성 요소를 활성화합니다. 배포 중 컴퓨터에 구성 요소를 등록하는 대신 바인딩 및 활성화 정보를 포함하는 Win32 스타일의 매니페스트 파일을 디자인 타임에 만듭니다. 레지스트리 키 대신 이러한 매니페스트 파일에서 개체 활성화를 지시합니다.  
@@ -44,11 +45,11 @@ ms.lasthandoff: 05/04/2018
   
 ### <a name="configuring-com-components-for-registration-free-activation"></a>등록이 필요 없는 활성화를 위한 COM 구성 요소 구성  
   
-1.  COM 구성 요소가 등록이 필요 없는 활성화에 참여하려면 Side-by-side 어셈블리로 배포되어야 합니다. Side-by-side 어셈블리는 관리되지 않는 어셈블리입니다.  자세한 내용은 참조 [side-by-side-어셈블리 사용](https://msdn.microsoft.com/library/windows/desktop/aa376618.aspx)합니다.  
+1.  COM 구성 요소가 등록이 필요 없는 활성화에 참여하려면 Side-by-side 어셈블리로 배포되어야 합니다. Side-by-side 어셈블리는 관리되지 않는 어셈블리입니다.  자세한 내용은 [Using Side-by-side Assemblies](https://msdn.microsoft.com/library/windows/desktop/aa376618.aspx)(Side-by-Side 어셈블리 사용)를 참조하세요.  
   
      COM Side-by-side-어셈블리를 사용하려면 .NET 기반 응용 프로그램 개발자가 바인딩 및 활성화 정보를 포함하는 응용 프로그램 매니페스트를 제공해야 합니다. 관리되지 않는 Side-by-side 어셈블리에 대한 지원은 Windows XP 운영 체제에 기본 제공됩니다. 운영 체제에서 지원하는 COM 런타임은 활성화되는 구성 요소가 레지스트리에 없는 경우 응용 프로그램 매니페스트에서 활성화 정보를 검색합니다.  
   
-     Windows XP에 설치된 COM 구성 요소의 경우 등록이 필요 없는 활성화는 선택 사항입니다. Side-by-side-어셈블리를 응용 프로그램에 추가 하는 방법에 대 한 자세한 지침을 참조 하십시오. [side-by-side-어셈블리 사용](https://msdn.microsoft.com/library/windows/desktop/aa376618.aspx)합니다.  
+     Windows XP에 설치된 COM 구성 요소의 경우 등록이 필요 없는 활성화는 선택 사항입니다. Side-by-Side 어셈블리를 응용 프로그램에 추가하는 방법에 대한 자세한 내용은 [Using Side-by-side Assemblies](https://msdn.microsoft.com/library/windows/desktop/aa376618.aspx)(Side-by-Side 어셈블리 사용)를 참조하세요.  
   
     > [!NOTE]
     >  Side-by-side 실행은 여러 버전의 런타임 및 특정 런타임 버전을 사용하는 여러 버전의 응용 프로그램 및 구성 요소가 동시에 같은 컴퓨터에서 실행될 수 있도록 하는 .NET Framework 기능입니다. Side-by-side 실행 및 Side-by-side 어셈블리는 Side-by-side 기능을 제공하는 서로 다른 메커니즘입니다.  

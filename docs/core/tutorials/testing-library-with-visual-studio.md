@@ -7,11 +7,12 @@ ms.date: 08/07/2017
 dev_langs:
 - csharp
 - vb
-ms.openlocfilehash: 24d0f1366a8e4309bbfb5b548af7407de50eaf76
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1733f3fc66d79dafb9bc6f983773f043be6c1006
+ms.sourcegitcommit: b7763f3435635850a76d4cbcf09bdce6c019208a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/25/2018
+ms.locfileid: "34483475"
 ---
 # <a name="testing-a-class-library-with-net-core-in-visual-studio-2017"></a>Visual Studio 2017에서 .NET Core로 클래스 라이브러리 테스트
 
@@ -24,12 +25,12 @@ ms.lasthandoff: 05/04/2018
 # <a name="ctabcsharp"></a>[C#](#tab/csharp)
 1. **솔루션 탐색기**에서 **ClassLibraryProject** 솔루션 노드의 상황에 맞는 메뉴를 열고 **추가** > **새 프로젝트**를 선택합니다.
 
-1. **새 프로젝트 추가** 대화 상자에서 **Visual C#** 노드를 선택합니다. 그런 다음 **.NET Core** 노드, **단위 테스트 프로젝트(.NET Core)** 프로젝트 템플릿을 차례로 선택합니다. **이름** 텍스트 상자에 프로젝트 이름으로 "StringLibraryTest"를 입력합니다. **확인**을 선택하여 단위 테스트 프로젝트를 만듭니다.
+1. **새 프로젝트 추가** 대화 상자에서 **Visual C#** 노드를 선택합니다. 그런 다음, **.NET Core** 노드, **MSTest 테스트 프로젝트(.NET Core)** 프로젝트 템플릿을 차례로 선택합니다. **이름** 텍스트 상자에 프로젝트 이름으로 "StringLibraryTest"를 입력합니다. **확인**을 선택하여 단위 테스트 프로젝트를 만듭니다.
 
    ![새 프로젝트 추가 대화 상자](./media/testing-library-with-visual-studio/testproject.png)
 
    > [!NOTE]  
-   > 단위 테스트 프로젝트 이외에 Visual Studio를 사용하여 .NET Core에 xUnit test 테스트 프로젝트를 사용할 수도 있습니다.
+   > MSTest 테스트 프로젝트 외에 Visual Studio를 사용하여 .NET Core에 대한 xUnit 테스트 프로젝트를 만들 수도 있습니다.
 
 1. Visual Studio가 해당 프로젝트를 만들고 코드 창에서 *UnitTest1.cs* 파일을 엽니다.
 
@@ -53,12 +54,12 @@ ms.lasthandoff: 05/04/2018
 # <a name="visual-basictabvisual-basic"></a>[Visual Basic](#tab/visual-basic) 
 1. **솔루션 탐색기**에서 **ClassLibraryProject** 솔루션 노드의 상황에 맞는 메뉴를 열고 **추가** > **새 프로젝트**를 선택합니다.
 
-1. **새 프로젝트 추가** 대화 상자에서 **Visual Basic** 노드를 선택합니다. 그런 다음 **.NET Core** 노드, **단위 테스트 프로젝트(.NET Core)** 프로젝트 템플릿을 차례로 선택합니다. **이름** 텍스트 상자에 프로젝트 이름으로 "StringLibraryTest"를 입력합니다. **확인**을 선택하여 단위 테스트 프로젝트를 만듭니다.
+1. **새 프로젝트 추가** 대화 상자에서 **Visual Basic** 노드를 선택합니다. 그런 다음, **.NET Core** 노드, **MSTest 테스트 프로젝트(.NET Core)** 프로젝트 템플릿을 차례로 선택합니다. **이름** 텍스트 상자에 프로젝트 이름으로 "StringLibraryTest"를 입력합니다. **확인**을 선택하여 단위 테스트 프로젝트를 만듭니다.
 
    ![새 프로젝트 추가 대화 상자](./media/testing-library-with-visual-studio/vb-testproject.png)
 
    > [!NOTE]  
-   > 단위 테스트 프로젝트 이외에 Visual Studio를 사용하여 .NET Core에 xUnit test 테스트 프로젝트를 사용할 수도 있습니다.
+   > MSTest 테스트 프로젝트 외에 Visual Studio를 사용하여 .NET Core에 대한 xUnit 테스트 프로젝트를 만들 수도 있습니다.
 
 1. Visual Studio가 해당 프로젝트를 만들고 코드 창에서 *UnitTest1.vb* 파일을 엽니다.
 

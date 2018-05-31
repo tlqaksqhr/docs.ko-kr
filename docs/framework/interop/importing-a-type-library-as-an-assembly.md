@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 89479ca4a41f761d4aacaf6d8d962bfba62be811
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33393418"
 ---
 # <a name="importing-a-type-library-as-an-assembly"></a>형식 라이브러리를 어셈블리로 가져오기
 COM 형식 정의는 일반적으로 형식 라이브러리에 있습니다. 반면 CLS 규격 컴파일러는 어셈블리에서 형식 메타데이터를 생성합니다. 형식 정보의 두 가지 소스는 약간 다릅니다. 이 항목에서는 형식 라이브러리에서 메타데이터를 생성하기 위한 기술을 설명합니다. 결과 어셈블리를 interop 어셈블리라고 하고 포함된 형식 정보를 통해 .NET Framework 응용 프로그램이 COM 형식을 사용할 수 있습니다.  
@@ -34,7 +35,7 @@ COM 형식 정의는 일반적으로 형식 라이브러리에 있습니다. 반
   
  디자인 타임 전용 interop 어셈블리를 사용할 경우 COM 구성 요소의 작성자가 게시한 주 interop 어셈블리의 형식 정보를 포함할 수 있습니다. 그러나 주 interop 어셈블리를 응용 프로그램에 배포할 필요는 없습니다.  
   
- 대부분의 응용 프로그램에서는 COM 구성 요소의 일부 기능을 사용하지 않으므로 디자인 타임 전용 interop 어셈블리를 사용하면 응용 프로그램 크기가 감소합니다. 컴파일러가 형식 정보를 포함하면 매우 효율적으로 작동합니다. 응용 프로그램이 COM 인터페이스에서 일부 메서드만 사용할 경우 컴파일러는 사용되지 않는 메서드를 포함하지 않습니다. 형식 정보가 포함된 응용 프로그램이 이와 같은 다른 응용 프로그램과 상호 작용하거나 주 interop 어셈블리를 사용하는 응용 프로그램과 상호 작용하면 공용 언어 런타임은 형식 동등성 규칙을 사용하여 같은 이름의 두 가지 형식이 동일한 COM 형식을 나타내는지 확인합니다. COM 개체를 사용하기 위해 이러한 규칙을 알 필요는 없습니다. 그러나 규칙에 관심이 있다면 [형식 동등성 및 포함된 Interop 형식](../../../docs/framework/interop/type-equivalence-and-embedded-interop-types.md)을 참조하세요.  
+ 대부분의 응용 프로그램에서는 COM 구성 요소의 일부 기능을 사용하지 않으므로 디자인 타임 전용 interop 어셈블리를 사용하면 응용 프로그램 크기가 감소합니다. 컴파일러가 형식 정보를 포함하면 매우 효율적으로 작동합니다. 응용 프로그램이 COM 인터페이스에서 일부 메서드만 사용할 경우 컴파일러는 사용되지 않는 메서드를 포함하지 않습니다. 형식 정보가 포함된 응용 프로그램이 이와 같은 다른 응용 프로그램과 상호 작용하거나 주 interop 어셈블리를 사용하는 응용 프로그램과 상호 작용하면 공용 언어 런타임은 형식 동등 규칙을 사용하여 같은 이름의 두 가지 형식이 동일한 COM 형식을 나타내는지 확인합니다. COM 개체를 사용하기 위해 이러한 규칙을 알 필요는 없습니다. 그러나 규칙에 관심이 있다면 [형식 동등 및 포함된 Interop 형식](../../../docs/framework/interop/type-equivalence-and-embedded-interop-types.md)을 참조하세요.  
   
 ## <a name="generating-metadata"></a>메타데이터 생성  
  COM 형식 라이브러리는 확장명이 .tlb인 독립 실행형 파일일 수 있습니다(예: Loanlib.tlb). 일부 형식 라이브러리는 .dll 또는 .exe 파일의 리소스 섹션에 포함됩니다. 형식 라이브러리 정보의 기타 소스는 .olb 및 .ocx 파일입니다.  
@@ -75,7 +76,7 @@ COM 형식 정의는 일반적으로 형식 라이브러리에 있습니다. 반
  [형식 라이브러리를 어셈블리로 변환 요약](https://msdn.microsoft.com/library/bf3f90c5-4770-4ab8-895c-3ba1055cc958(v=vs.100))  
  [Tlbimp.exe(형식 라이브러리 가져오기)](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md)  
  [표준 래퍼 사용자 지정](https://msdn.microsoft.com/library/c40d089b-6a3c-41b5-a20d-d760c215e49d(v=vs.100))  
- [관리 코드에서 COM 형식을 사용 하 여](https://msdn.microsoft.com/library/1a95a8ca-c8b8-4464-90b0-5ee1a1135b66(v=vs.100))  
+ [관리 코드에서 COM 형식 사용](https://msdn.microsoft.com/library/1a95a8ca-c8b8-4464-90b0-5ee1a1135b66(v=vs.100))  
  [Interop 프로젝트 컴파일](../../../docs/framework/interop/compiling-an-interop-project.md)  
  [Interop 응용 프로그램 배포](../../../docs/framework/interop/deploying-an-interop-application.md)  
  [방법: 형식 라이브러리에 참조 추가](../../../docs/framework/interop/how-to-add-references-to-type-libraries.md)  

@@ -10,9 +10,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 1995c367039591c086054a086f2107e4a88ecefb
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33395371"
 ---
 # <a name="interop-marshaling"></a>Interop 마샬링
 <a name="top"></a> Interop 마샬링은 호출 중 관리되는 메모리와 관리되지 않는 메모리 간에 메서드 인수와 반환 값을 통해 데이터를 전달하는 방법을 제어합니다. Interop 마샬링은 공용 언어 런타임 마샬링 서비스에서 수행하는 런타임 작업입니다.  
@@ -101,7 +102,7 @@ ms.lasthandoff: 05/04/2018
   
 <a name="marshaling_remote_calls"></a>   
 ## <a name="marshaling-remote-calls"></a>원격 호출 마샬링  
- 아파트 간 마샬링과 마찬가지로 COM 마샬링은 개체가 개별 프로세스에 상주할 때마다 관리 및 비관리 코드 간의 각 호출에 사용됩니다. 예를 들면 다음과 같습니다.  
+ 아파트 간 마샬링과 마찬가지로 COM 마샬링은 개체가 개별 프로세스에 상주할 때마다 관리 및 비관리 코드 간의 각 호출에 사용됩니다. 예:  
   
 -   원격 호스트의 관리되는 서버를 호출하는 COM 클라이언트는 DCOM(분산된 COM)을 사용합니다.  
   
@@ -135,7 +136,7 @@ ms.lasthandoff: 05/04/2018
  ![SOAP 또는 TcpChannel](./media/interopremotesoap.gif "interopremotesoap")  
 SOAP 또는 TcpChannel 클래스를 사용하는 방화벽을 통한 원격 호출  
   
- 서비스 구성 요소와 COM. 간의 호출과 같은 관리 되지 않는 일부 호출은 soap를 채널로 사용할 수 있습니다.  
+ 서비스 구성 요소와 COM 간의 호출과 같은 관리되지 않는 일부 호출은 SOAP를 채널로 사용할 수 있습니다.  
   
  [맨 위로 이동](#top)  
   

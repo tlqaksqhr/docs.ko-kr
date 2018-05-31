@@ -4,11 +4,12 @@ description: Linux 컴퓨터에서 .NET Core 응용 프로그램을 개발, 배�
 author: jralexander
 ms.author: johalex
 ms.date: 05/08/2018
-ms.openlocfilehash: 41656bf8f18c2b66c35f0a65e4af0949db4464f9
-ms.sourcegitcommit: 88f251b08bf0718ce119f3d7302f514b74895038
+ms.openlocfilehash: 4890f682ee2d0b55dc5059d8f1d3091def07a8a5
+ms.sourcegitcommit: b7763f3435635850a76d4cbcf09bdce6c019208a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 05/25/2018
+ms.locfileid: "34483504"
 ---
 # <a name="prerequisites-for-net-core-on-linux"></a>Linux에서 .NET Core의 필수 구성 요소
 
@@ -65,29 +66,36 @@ ms.lasthandoff: 05/10/2018
 
 Ubuntu 배포에는 다음과 같은 라이브러리 설치가 필요합니다.
 
-* libunwind8
 * liblttng-ust0
 * libcurl3
 * libssl1.0.0
-* libuuid1
 * libkrb5-3
 * zlib1g
 * libicu52(14.x용)
 * libicu55(16.x용)
 * libicu57(17.x용)
+* libicu60(18.x용)
+
+.NET Core 2.1 이전 버전의 경우 다음 종속성도 필요합니다.
+
+* libunwind8
+* libuuid1
 
 ### <a name="centos"></a>CentOS
 
 CentOS 배포에는 다음과 같은 라이브러리 설치가 필요합니다.
 
-* libunwind
 * lttng-ust
 * libcurl
 * openssl-libs
-* libuuid
 * krb5-libs
 * libicu
 * zlib
+
+.NET Core 2.1 이전 버전의 경우 다음 종속성도 필요합니다.
+
+* libunwind
+* libuuid
 
 종속성에 대한 자세한 내용은 [자체 포함 Linux 응용 프로그램](https://github.com/dotnet/core/blob/master/Documentation/self-contained-linux-apps.md)을 참조하세요.
 

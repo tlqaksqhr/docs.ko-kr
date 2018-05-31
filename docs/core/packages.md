@@ -4,11 +4,12 @@ description: 패키지, 메타패키지 및 프레임워크 용어에 관해 알
 author: richlander
 ms.author: mairaw
 ms.date: 06/20/2016
-ms.openlocfilehash: 915ccadbb4d2cca50fd1caa53d90aa05d83d9378
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f10965a8f5f2848f2b942b92577adf3185d8bd3c
+ms.sourcegitcommit: 77d9a94dac4c05827ed0663d95e0f9ad35d6682e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/24/2018
+ms.locfileid: "34472804"
 ---
 # <a name="packages-metapackages-and-frameworks"></a>패키지, 메타패키지 및 프레임워크
 
@@ -96,9 +97,10 @@ ms.lasthandoff: 05/04/2018
 
 관계의 두 번째 부분은 자산 선택입니다. 패키지는 여러 프레임워크에 대한 자산을 포함할 수 있습니다. 패키지 및/또는 메타패키지 집합에 대한 참조를 고려하여, 프레임워크는 어떤 자산을 선택할지를 결정해야 합니다(예: `net46` 또는 `netstandard1.3`). 올바른 자산을 선택하는 것이 중요합니다. 예를 들어 한 `net46` 자산은 .NET Framework 4.0 또는 .NET Core 1.0과 호환될 것 같지 않습니다.
 
-![패키지 기반 프레임워크 구성](./media/packages/package-framework.png)
 
-위의 그림에서 이 관계를 볼 수 있습니다. *API*는 *프레임워크*를 대상으로 하고 정의합니다. *프레임워크*는 *자산 선택*에 사용됩니다. *자산*은 API를 제공합니다.
+다음 이미지에서 이 관계를 볼 수 있습니다. *API*는 *프레임워크*를 대상으로 하고 정의합니다. *프레임워크*는 *자산 선택*에 사용됩니다. *자산*은 API를 제공합니다.
+
+![패키지 기반 프레임워크 구성](./media/packages/package-framework.png)
 
 .NET Core와 사용되는 두 가지 기본 패키지 기반 프레임워크는 다음과 같습니다.
 

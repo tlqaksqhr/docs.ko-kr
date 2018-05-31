@@ -10,16 +10,17 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 6851ac334d439f2e5c0f6056f5226e3faa1503d5
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33392579"
 ---
 # <a name="composition-analysis-tool-mefx"></a>컴퍼지션 분석 도구(Mefx)
 컴퍼지션 분석 도구(Mefx)는 MEF(Managed Extensibility Framework) 파트를 포함하는 라이브러리(.dll) 및 응용 프로그램(.exe) 파일을 분석하는 명령줄 응용 프로그램입니다. Mefx는 주로 번거로운 추적 코드를 응용 프로그램 자체에 추가할 필요 없이 MEF 응용 프로그램에서 컴퍼지션 실패를 진단하는 방법을 개발자에게 제공하는 데 사용됩니다. 타사에서 제공된 라이브러리의 파트를 이해할 때 유용할 수 있습니다. 이 항목에서는 Mefx를 사용하는 방법을 설명하고 해당 구문에 대한 참조를 제공합니다.  
   
 <a name="getting_mefx"></a>   
 ## <a name="getting-mefx"></a>Mefx 가져오기  
- Mefx는 GitHub에서 [Managed Extensibility Framework](https://github.com/MicrosoftArchive/mef/releases/tag/4.0)합니다. 도구를 다운로드하고 압축을 풀면 됩니다.  
+ Mefx는 GitHub의 [Managed Extensibility Framework](https://github.com/MicrosoftArchive/mef/releases/tag/4.0)에 있습니다. 도구를 다운로드하고 압축을 풀면 됩니다.  
   
 <a name="basic_syntax"></a>   
 ## <a name="basic-syntax"></a>기본 구문  

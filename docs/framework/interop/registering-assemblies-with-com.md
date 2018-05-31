@@ -11,9 +11,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: b92f36488dec113dcffffac3e6cdc0c26a690b5b
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33389163"
 ---
 # <a name="registering-assemblies-with-com"></a>COM에 어셈블리 등록
 [어셈블리 등록 도구(Regasm.exe)](../tools/regasm-exe-assembly-registration-tool.md)라는 명령줄 도구를 실행하여 COM과 사용할 어셈블리를 등록하거나 등록 취소할 수 있습니다. COM 클라이언트에서 .NET Framework 클래스를 투명하게 사용할 수 있도록 Regasm.exe에서는 클래스에 대한 정보를 시스템 레지스트리에 추가합니다. <xref:System.Runtime.InteropServices.RegistrationServices> 클래스는 이와 동등한 기능을 제공합니다.  
@@ -45,5 +46,5 @@ ms.lasthandoff: 05/04/2018
 ## <a name="see-also"></a>참고 항목  
  [.NET Framework 구성 요소를 COM에 노출](exposing-dotnet-components-to-com.md)  
  [방법: COM에서 .NET 형식 참조](how-to-reference-net-types-from-com.md)  
- [.NET 개체를 호출합니다.](https://msdn.microsoft.com/library/40c9626c-aea6-4bad-b8f0-c1de462efd33(v=vs.100))  
+ [.NET 개체 호출](https://msdn.microsoft.com/library/40c9626c-aea6-4bad-b8f0-c1de462efd33(v=vs.100))  
  [COM 액세스를 위해 응용 프로그램 배포](https://msdn.microsoft.com/library/fb63564c-c1b9-4655-a094-a235625882ce(v=vs.100))

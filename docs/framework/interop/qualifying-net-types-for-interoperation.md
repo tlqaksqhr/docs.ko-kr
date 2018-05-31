@@ -13,18 +13,19 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: baa5b9f250fe7117838f936b09b050ba500b7209
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33389046"
 ---
 # <a name="qualifying-net-types-for-interoperation"></a>상호 운용할 .NET 형식의 정규화
 어셈블리에서 형식을 COM 응용 프로그램으로 노출하려는 경우 디자인 타임에 COM interop의 요구 사항을 고려하세요. 다음 지침을 준수하면 관리되는 형식(클래스, 인터페이스, 구조체 및 열거형)이 COM 형식과 원활하게 통합됩니다.  
   
 -   클래스에서 인터페이스를 명시적으로 구현해야 합니다.  
   
-     COM interop에서 클래스의 모든 멤버와 기본 클래스의 멤버를 포함하는 인터페이스를 자동으로 생성하는 메커니즘을 제공하지만 명시적 인터페이스를 제공하는 것이 훨씬 좋습니다. 자동으로 생성된 인터페이스는 클래스 인터페이스라고 합니다. 지침을 참조 하십시오. [클래스 인터페이스 소개](com-callable-wrapper.md#introducing-the-class-interface)합니다.  
+     COM interop에서 클래스의 모든 멤버와 기본 클래스의 멤버를 포함하는 인터페이스를 자동으로 생성하는 메커니즘을 제공하지만 명시적 인터페이스를 제공하는 것이 훨씬 좋습니다. 자동으로 생성된 인터페이스는 클래스 인터페이스라고 합니다. 지침은 [클래스 인터페이스 소개](com-callable-wrapper.md#introducing-the-class-interface)를 참조하세요.  
   
-     언어 IDL (인터페이스 정의) 또는 이와 동등한을 사용 하는 대신 코드에서 인터페이스 정의 통합 하는 Visual Basic, C# 및 c + +를 사용할 수 있습니다. 구문에 대한 세부 정보는 언어 문서를 참조하세요.  
+     IDL(Interface Definition Language) 또는 이와 동등한 사항을 사용할 필요 없이 Visual Basic, C# 및 C++를 사용하여 코드에 인터페이스 정의를 통합할 수 있습니다. 구문에 대한 세부 정보는 언어 문서를 참조하세요.  
   
 -   관리되는 형식은 public이어야 합니다.  
   

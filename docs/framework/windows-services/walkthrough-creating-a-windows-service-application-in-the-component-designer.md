@@ -12,9 +12,10 @@ author: ghogen
 manager: douge
 ms.openlocfilehash: c33b8badcacd4e228d70f8e770d4bf27144c29eb
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33520515"
 ---
 # <a name="walkthrough-creating-a-windows-service-application-in-the-component-designer"></a>연습: 구성 요소 디자이너에서 Windows 서비스 응용 프로그램 만들기
 이 문서에서는 이벤트 로그에 메시지를 쓰는 간단한 Windows 서비스 응용 프로그램을 Visual Studio에서 만드는 방법을 보여 줍니다. 서비스를 만들고 사용하기 위해 수행하는 기본적인 단계는 다음과 같습니다.  
@@ -108,7 +109,7 @@ ms.lasthandoff: 05/04/2018
     AddHandler timer.Elapsed, AddressOf Me.OnTimer  
     timer.Start()  
     ```  
-     클래스에 멤버 변수를 추가 합니다. 이벤트 로그에 쓸 수는 다음 이벤트의 식별자가 포함 됩니다.
+     멤버 변수를 클래스에 추가합니다. 여기에는 이벤트 로그에 기록할 다음 이벤트의 식별자가 포함됩니다.
 
     ```csharp
     private int eventId = 1;
@@ -270,7 +271,7 @@ ms.lasthandoff: 05/04/2018
 6.  (선택 사항) <xref:System.ServiceProcess.ServiceBase.OnStop%2A> 메서드에 대해 이 절차를 반복합니다.  
   
 > [!CAUTION]
->  서비스의 작업이 시작되고 나면 [서비스 제어 관리자](http://msdn.microsoft.com/library/windows/desktop/ms685150.aspx) 는 `dwWaitHint` 프로시저의 `dwCheckpoint` 및 [dwCheckpoint](http://msdn.microsoft.com/library/windows/desktop/ms685996.aspx) 멤버를 사용하여 Windows 서비스가 종료될 때까지 기다릴 시간을 결정합니다. 경우에 <xref:System.ServiceProcess.ServiceBase.OnStart%2A> 및 <xref:System.ServiceProcess.ServiceBase.OnStop%2A> 오랫동안 실행, 서비스를 호출 하 여 더 많은 시간을 요청할 수 [SetServiceStatus](http://msdn.microsoft.com/library/windows/desktop/ms686241.aspx) 다시 `dwCheckPoint` 값입니다.  
+>  서비스의 작업이 시작되고 나면 [서비스 제어 관리자](http://msdn.microsoft.com/library/windows/desktop/ms685150.aspx) 는 `dwWaitHint` 프로시저의 `dwCheckpoint` 및 [dwCheckpoint](http://msdn.microsoft.com/library/windows/desktop/ms685996.aspx) 멤버를 사용하여 Windows 서비스가 종료될 때까지 기다릴 시간을 결정합니다. <xref:System.ServiceProcess.ServiceBase.OnStart%2A> 및 <xref:System.ServiceProcess.ServiceBase.OnStop%2A> 메서드가 오랫동안 실행되는 경우 서비스는 증분된 `dwCheckPoint` 값을 포함하여 [SetServiceStatus](http://msdn.microsoft.com/library/windows/desktop/ms686241.aspx)를 다시 호출하여 시간을 더 요청할 수 있습니다.  
   
 <a name="BK_AddInstallers"></a>   
 ## <a name="adding-installers-to-the-service"></a>서비스에 설치 관리자 추가  
@@ -296,14 +297,14 @@ ms.lasthandoff: 05/04/2018
   
 8.  <xref:System.ServiceProcess.ServiceInstaller.StartType%2A> 속성을 <xref:System.ServiceProcess.ServiceStartMode.Automatic>으로 설정합니다.  
   
-     ![Windows 서비스에 대 한 설치 관리자 속성](../../../docs/framework/windows-services/media/windowsservice-installerproperties.PNG "WindowsService_InstallerProperties")  
+     ![Windows 서비스에 대한 설치 관리자 속성](../../../docs/framework/windows-services/media/windowsservice-installerproperties.PNG "WindowsService_InstallerProperties")  
   
 9. 디자이너에서 Visual C# 프로젝트의 경우 **serviceProcessInstaller1** 을 선택하고 Visual Basic 프로젝트의 경우 **ServiceProcessInstaller1** 을 선택합니다. <xref:System.ServiceProcess.ServiceProcessInstaller.Account%2A> 속성을 <xref:System.ServiceProcess.ServiceAccount.LocalSystem>으로 설정합니다. 이렇게 하면 서비스가 로컬 서비스 계정으로 설치되고 실행됩니다.  
   
     > [!IMPORTANT]
     >  <xref:System.ServiceProcess.ServiceAccount.LocalSystem> 계정에는 광범위한 권한이 있습니다. 예를 들어, 이 계정은 이벤트 로그에 쓸 수 있습니다. 이 계정을 사용할 때는 악성 소프트웨어의 공격을 받을 가능성이 커지므로 주의해야 합니다. 다른 작업에는 <xref:System.ServiceProcess.ServiceAccount.LocalService> 계정을 사용하는 것이 좋습니다. 이 계정은 로컬 컴퓨터에서 권한 없는 사용자의 역할을 하며 원격 서버에 익명 자격 증명을 제공합니다. <xref:System.ServiceProcess.ServiceAccount.LocalService> 계정을 사용하는 경우 이 예제는 실패합니다. 이벤트 로그에 대한 쓰기 권한이 필요하기 때문입니다.  
   
-     설치 관리자에 대한 자세한 내용은 [방법: 서비스 응용 프로그램에 설치 관리자 추가](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md)를 참조하세요.  
+     설치 관리자에 대한 자세한 내용은 [How to: Add Installers to Your Service Application](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md)를 참조하세요.  
   
 <a name="BK_StartupParameters"></a>   
 ## <a name="set-startup-parameters"></a>시작 매개 변수 설정  
@@ -429,7 +430,7 @@ End Sub
   
      서비스를 성공적으로 설치한 경우 installutil.exe에서 설치에 성공했음을 보고합니다. 시스템에서 InstallUtil.exe를 찾을 수 없는 경우 해당 파일이 컴퓨터에 있는지 확인합니다. 이 도구는 .NET Framework와 함께 `%WINDIR%\Microsoft.NET\Framework[64]\`*framework_version*폴더에 설치됩니다. 예를 들어 32비트 버전 .NET Framework 4, 4.5, 4.5.1 및 4.5.2의 기본 경로는 `C:\Windows\Microsoft.NET\Framework\v4.0.30319\InstallUtil.exe`입니다.  
   
-     Installutil.exe 프로세스에서 오류를 보고하는 경우 설치 로그를 확인하여 이유를 찾아 보세요. 기본적으로 로그는 서비스 실행 파일과 동일한 폴더에 있습니다. 설치가 실패할 수 있습니다는 <xref:System.ComponentModel.RunInstallerAttribute> 클래스에 없으면는 `ProjectInstaller` 특성 클래스, 그렇지 않으면으로 설정 되지 않은 `true`, 같지 않거나 `ProjectInstaller` 클래스가 아닙니다 `public`합니다.  
+     Installutil.exe 프로세스에서 오류를 보고하는 경우 설치 로그를 확인하여 이유를 찾아 보세요. 기본적으로 로그는 서비스 실행 파일과 동일한 폴더에 있습니다. <xref:System.ComponentModel.RunInstallerAttribute> 클래스가 `ProjectInstaller` 클래스에 없거나, 해당 특성이 `true`로 설정되어 있지 않거나, `ProjectInstaller` 클래스가 `public`이 아닌 경우 설치가 실패할 수 있습니다.  
   
      자세한 내용은 [How to: Install and Uninstall Services](../../../docs/framework/windows-services/how-to-install-and-uninstall-services.md)을 참조하세요.  
   
@@ -442,7 +443,7 @@ End Sub
   
      이제 **서비스** 창의 목록에 **MyNewService** 가 표시됩니다.  
   
-     ![서비스 창의 MyNewService입니다. ] (../../../docs/framework/windows-services/media/windowsservices-serviceswindow.PNG "WindowsServices_ServicesWindow")  
+     ![서비스 창의 MyNewService입니다.](../../../docs/framework/windows-services/media/windowsservices-serviceswindow.PNG "WindowsServices_ServicesWindow")  
   
 2.  **서비스** 창에서 서비스의 바로 가기 메뉴를 열고 **시작**을 선택합니다.  
   
@@ -456,7 +457,7 @@ End Sub
   
 2.  **MyNewLog** (선택적 절차를 사용하여 명령줄 인수를 추가한 경우에는 **MyLogFile1**)의 목록을 찾아서 확장합니다. 서비스에서 수행한 두 작업(시작 및 중지)의 항목을 확인할 수 있습니다.  
   
-     ![이벤트 뷰어를 사용 하 여 이벤트 로그 항목을 참조 하십시오. ] (../../../docs/framework/windows-services/media/windowsservices-eventviewer.PNG "WindowsServices_EventViewer")  
+     ![이벤트 뷰어를 사용하여 이벤트 로그 항목을 봅니다.](../../../docs/framework/windows-services/media/windowsservices-eventviewer.PNG "WindowsServices_EventViewer")  
   
 <a name="BK_Uninstall"></a>   
 ## <a name="uninstalling-a-windows-service"></a>Windows 서비스 제거  
@@ -486,4 +487,4 @@ End Sub
  [Windows 서비스 응용 프로그램](../../../docs/framework/windows-services/index.md)  
  [Windows 서비스 응용 프로그램 소개](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)  
  [방법: Windows 서비스 응용 프로그램 디버깅](../../../docs/framework/windows-services/how-to-debug-windows-service-applications.md)  
- [서비스 (Windows)](http://msdn.microsoft.com/library/windows/desktop/ms685141.aspx)
+ [Services (Windows)](http://msdn.microsoft.com/library/windows/desktop/ms685141.aspx)(서비스(Windows))

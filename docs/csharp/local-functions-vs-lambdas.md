@@ -3,11 +3,12 @@ title: 로컬 함수 및 람다 식
 description: 로컬 함수가 람다 식보다 더 적합한 선택일 수 있는 이유를 알아봅니다.
 ms.date: 06/27/2016
 ms.assetid: 368d1752-3659-489a-97b4-f15d87e49ae3
-ms.openlocfilehash: 0dfd34c5637bb4b8ae64a66e1ca1164fddec2cd7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4fb8ea78b783871a19a8d5578d571e00da37642a
+ms.sourcegitcommit: 77d9a94dac4c05827ed0663d95e0f9ad35d6682e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/24/2018
+ms.locfileid: "34472609"
 ---
 # <a name="local-functions-compared-to-lambda-expressions"></a>로컬 함수 및 람다 식 비교
 

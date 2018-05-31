@@ -20,9 +20,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: f2906159c7474b42f81bdf066855072466b6be63
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33392398"
 ---
 # <a name="packaging-an-assembly-for-com"></a>COM에서 사용할 어셈블리의 패키징
 COM 개발자는 응용 프로그램에 통합하려는 관리 형식에 대한 다음 정보를 활용할 수 있습니다.  
@@ -37,7 +38,7 @@ COM 개발자는 응용 프로그램에 통합하려는 관리 형식에 대한 
   
      클래스 인터페이스(COM interop 생성 인터페이스)를 구현하는 관리 클래스에는 버전 관리 제한 사항이 적용됩니다.  
   
-     클래스 인터페이스를 사용 하는 지침을 참조 하십시오. [클래스 인터페이스 소개](com-callable-wrapper.md#introducing-the-class-interface)합니다.  
+     클래스 인터페이스를 사용하는 데 대한 지침은 [클래스 인터페이스 소개](com-callable-wrapper.md#introducing-the-class-interface)를 참조하세요.  
   
 -   배포 지침  
   

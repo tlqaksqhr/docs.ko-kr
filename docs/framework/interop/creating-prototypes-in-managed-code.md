@@ -21,9 +21,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: b305158ac87f01044bae5455cea07ca3b3a2e491
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33398211"
 ---
 # <a name="creating-prototypes-in-managed-code"></a>관리 코드에서 프로토타입 만들기
 이 항목에서는 관리되지 않는 함수에 액세스하는 방법을 설명하고 관리 코드에서 메서드 정의에 주석을 다는 여러 특성 필드를 소개합니다. 플랫폼 호출에서 사용되는 .NET 기반 선언을 생성하는 방법을 보여 주는 예제는 [플랫폼 호출을 사용하여 데이터 마샬링](marshaling-data-with-platform-invoke.md)을 참조하세요.  
@@ -97,7 +98,7 @@ using namespace System::Runtime::InteropServices;
 ### <a name="platform-invoke-examples"></a>플랫폼 호출 예제  
  이 섹션의 플랫폼 호출 샘플에서는 스택 워크 한정자와 함께 `RegistryPermission` 특성을 사용하는 방법을 보여 줍니다.  
   
- 다음 코드 예제에서는 <xref:System.Security.Permissions.SecurityAction> `Assert`, `Deny`, 및 `PermitOnly` 한정자는 무시 됩니다.  
+ 다음 코드 예제에서는 <xref:System.Security.Permissions.SecurityAction>`Assert`, `Deny` 및 `PermitOnly` 한정자가 무시됩니다.  
   
 ```  
 [DllImport("MyClass.dll", EntryPoint = "CallRegistryPermission")]  
