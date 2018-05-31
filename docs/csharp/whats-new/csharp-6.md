@@ -3,12 +3,12 @@ title: C# 6의 새로운 기능 - C# 가이드
 description: C# 버전 6의 새로운 기능을 알아봅니다.
 ms.date: 09/22/2016
 ms.assetid: 4d879f69-f889-4d3f-a781-75194e143400
-ms.openlocfilehash: d9f5c5ca94c04a873e4e98863f9fea3b8f477c1c
-ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
+ms.openlocfilehash: c23d4f45441451fbf8a2ad2f939bdb1ed6144154
+ms.sourcegitcommit: b7763f3435635850a76d4cbcf09bdce6c019208a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34458007"
+ms.lasthandoff: 05/25/2018
+ms.locfileid: "34483491"
 ---
 # <a name="whats-new-in-c-6"></a>C# 6의 새로운 기능
 
@@ -342,11 +342,11 @@ C# 6에서는 catch 식에서 대기할 수도 있습니다. 이 방법이 로�
 
 ## <a name="index-initializers"></a>인덱스 이니셜라이저
 
-*인덱스 이니셜라이저*는 컬렉션 이니셜라이저를 더 일관되게 만드는 두 가지 기능 중 하나입니다. C#의 이전 예제에서는 시퀀스 스타일 컬렉션에서만 *컬렉션 이니셜라이저*를 사용할 수 있습니다.
+*인덱스 이니셜라이저*는 컬렉션 이니셜라이저를 인덱스 사용과 더 일관되도록 하는 두 가지 기능 중 하나입니다. C#의 이전 릴리스에서는 키 및 값 쌍을 중괄호로 묶어 <xref:System.Collections.Generic.Dictionary%602>를 포함하여 시퀀스 스타일 컬렉션에서만 *컬렉션 이니셜라이저*를 사용할 수 있습니다.
 
 [!code-csharp[ListInitializer](../../../samples/snippets/csharp/new-in-6/initializers.cs#ListInitializer)]
 
-이제 <xref:System.Collections.Generic.Dictionary%602> 컬렉션 및 비슷한 형식에서도 사용할 수 있습니다.
+이제 <xref:System.Collections.Generic.Dictionary%602> 컬렉션 및 비슷한 형식에서도 사용할 수 있습니다. 새로운 구문은 컬렉션에 인덱스를 사용하여 할당을 지원합니다.
 
 [!code-csharp[DictionaryInitializer](../../../samples/snippets/csharp/new-in-6/initializers.cs#DictionaryInitializer)]
 
