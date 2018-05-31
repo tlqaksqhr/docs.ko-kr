@@ -1,31 +1,35 @@
 ---
 title: 배열에 foreach 사용(C# 프로그래밍 가이드)
-ms.date: 07/20/2015
+ms.date: 05/23/2018
 helpviewer_keywords:
 - arrays [C#], foreach
 - foreach statement [C#], using with arrays
 ms.assetid: 5f2da2a9-1f56-4de5-94cc-e07f4f7a0244
-ms.openlocfilehash: 8511d9dd3b7155d2f6bca229f264071b54ed173b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b858f35167e24390a729769487ce98908a3d349f
+ms.sourcegitcommit: 54231aa56fca059e9297888a96fbca1d4cf3746c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/25/2018
+ms.locfileid: "34549457"
 ---
-# <a name="using-foreach-with-arrays-c-programming-guide"></a><span data-ttu-id="e0abb-102">배열에 foreach 사용(C# 프로그래밍 가이드)</span><span class="sxs-lookup"><span data-stu-id="e0abb-102">Using foreach with Arrays (C# Programming Guide)</span></span>
-<span data-ttu-id="e0abb-103">C#에서는 또한 [foreach](../../../csharp/language-reference/keywords/foreach-in.md) 문을 제공하여</span><span class="sxs-lookup"><span data-stu-id="e0abb-103">C# also provides the [foreach](../../../csharp/language-reference/keywords/foreach-in.md) statement.</span></span> <span data-ttu-id="e0abb-104">배열 또는 열거형 컬렉션의 요소를 간단하게 반복할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="e0abb-104">This statement provides a simple, clean way to iterate through the elements of an array or any enumerable collection.</span></span> <span data-ttu-id="e0abb-105">`foreach` 문은 배열 또는 컬렉션 형식의 열거자에서 반환한 순서대로 요소를 처리합니다(일반적으로 0번째부터 마지막까지).</span><span class="sxs-lookup"><span data-stu-id="e0abb-105">The `foreach` statement processes elements in the order returned by the array or collection type’s enumerator, which is usually from the 0th element to the last.</span></span> <span data-ttu-id="e0abb-106">예를 들어, 다음 코드에서는 `numbers`라는 배열을 만들어 `foreach` 문으로 배열의 요소를 반복하여 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="e0abb-106">For example, the following code creates an array called `numbers` and iterates through it with the `foreach` statement:</span></span>  
-  
- [!code-csharp[csProgGuideArrays#28](../../../csharp/programming-guide/arrays/codesnippet/CSharp/using-foreach-with-arrays_1.cs)]  
-  
- <span data-ttu-id="e0abb-107">다차원 배열의 경우에도 같은 방법으로 요소를 반복 실행할 수 있습니다. 예를 들면 다음과 같습니다.</span><span class="sxs-lookup"><span data-stu-id="e0abb-107">With multidimensional arrays, you can use the same method to iterate through the elements, for example:</span></span>  
-  
- [!code-csharp[csProgGuideArrays#29](../../../csharp/programming-guide/arrays/codesnippet/CSharp/using-foreach-with-arrays_2.cs)]  
-  
- <span data-ttu-id="e0abb-108">그러나 다차원 배열에서 중첩 [for](../../../csharp/language-reference/keywords/for.md) 루프를 사용하면 배열 요소를 보다 강력하게 제어할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="e0abb-108">However, with multidimensional arrays, using a nested [for](../../../csharp/language-reference/keywords/for.md) loop gives you more control over the array elements.</span></span>  
-  
-## <a name="see-also"></a><span data-ttu-id="e0abb-109">참고 항목</span><span class="sxs-lookup"><span data-stu-id="e0abb-109">See Also</span></span>  
+# <a name="using-foreach-with-arrays-c-programming-guide"></a><span data-ttu-id="ab0ea-102">배열에 foreach 사용(C# 프로그래밍 가이드)</span><span class="sxs-lookup"><span data-stu-id="ab0ea-102">Using foreach with Arrays (C# Programming Guide)</span></span>
+
+<span data-ttu-id="ab0ea-103">[foreach](../../language-reference/keywords/foreach-in.md) 문은 배열의 요소를 반복하는 단순하고 깔끔한 방법을 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="ab0ea-103">The [foreach](../../language-reference/keywords/foreach-in.md) statement provides a simple, clean way to iterate through the elements of an array.</span></span>
+
+<span data-ttu-id="ab0ea-104">1차원 배열의 경우 `foreach` 문은 인덱스 0으로 시작하고 인덱스 `Length - 1`로 끝나는 늘어나는 인덱스 순서로 요소를 처리합니다.</span><span class="sxs-lookup"><span data-stu-id="ab0ea-104">For single-dimensional arrays, the `foreach` statement processes elements in increasing index order, starting with index 0 and ending with index `Length - 1`:</span></span>
+
+[!code-csharp[csProgGuideArrays#28](./codesnippet/CSharp/using-foreach-with-arrays_1.cs)]
+
+<span data-ttu-id="ab0ea-105">다차원 배열의 경우 요소는 가장 오른쪽 차원의 인덱스가 먼저 증가한 이후, 다음 왼쪽 차원의 인덱스, 그다음 왼쪽 차원의 인덱스가 증가하는 방식으로 트래버스됩니다.</span><span class="sxs-lookup"><span data-stu-id="ab0ea-105">For multi-dimensional arrays, elements are traversed such that the indices of the rightmost dimension are increased first, then the next left dimension, and so on to the left:</span></span>
+
+[!code-csharp[csProgGuideArrays#29](./codesnippet/CSharp/using-foreach-with-arrays_2.cs)]
+
+<span data-ttu-id="ab0ea-106">그러나 다차원 배열에서 중첩 [for](../../language-reference/keywords/for.md) 루프를 사용하면 배열 요소를 처리하는 순서를 더 강력하게 제어할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="ab0ea-106">However, with multidimensional arrays, using a nested [for](../../language-reference/keywords/for.md) loop gives you more control over the order in which to process the array elements.</span></span>
+
+## <a name="see-also"></a><span data-ttu-id="ab0ea-107">참고 항목</span><span class="sxs-lookup"><span data-stu-id="ab0ea-107">See also</span></span>  
  <xref:System.Array>  
- [<span data-ttu-id="e0abb-110">C# 프로그래밍 가이드</span><span class="sxs-lookup"><span data-stu-id="e0abb-110">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
- [<span data-ttu-id="e0abb-111">배열</span><span class="sxs-lookup"><span data-stu-id="e0abb-111">Arrays</span></span>](../../../csharp/programming-guide/arrays/index.md)  
- [<span data-ttu-id="e0abb-112">1차원 배열</span><span class="sxs-lookup"><span data-stu-id="e0abb-112">Single-Dimensional Arrays</span></span>](../../../csharp/programming-guide/arrays/single-dimensional-arrays.md)  
- [<span data-ttu-id="e0abb-113">다차원 배열</span><span class="sxs-lookup"><span data-stu-id="e0abb-113">Multidimensional Arrays</span></span>](../../../csharp/programming-guide/arrays/multidimensional-arrays.md)  
- [<span data-ttu-id="e0abb-114">가변 배열</span><span class="sxs-lookup"><span data-stu-id="e0abb-114">Jagged Arrays</span></span>](../../../csharp/programming-guide/arrays/jagged-arrays.md)
+ [<span data-ttu-id="ab0ea-108">C# 프로그래밍 가이드</span><span class="sxs-lookup"><span data-stu-id="ab0ea-108">C# Programming Guide</span></span>](../index.md)  
+ [<span data-ttu-id="ab0ea-109">배열</span><span class="sxs-lookup"><span data-stu-id="ab0ea-109">Arrays</span></span>](index.md)  
+ [<span data-ttu-id="ab0ea-110">1차원 배열</span><span class="sxs-lookup"><span data-stu-id="ab0ea-110">Single-Dimensional Arrays</span></span>](single-dimensional-arrays.md)  
+ [<span data-ttu-id="ab0ea-111">다차원 배열</span><span class="sxs-lookup"><span data-stu-id="ab0ea-111">Multidimensional Arrays</span></span>](multidimensional-arrays.md)  
+ [<span data-ttu-id="ab0ea-112">가변 배열</span><span class="sxs-lookup"><span data-stu-id="ab0ea-112">Jagged Arrays</span></span>](jagged-arrays.md)
