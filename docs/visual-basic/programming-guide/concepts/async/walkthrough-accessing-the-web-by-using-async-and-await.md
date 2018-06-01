@@ -2,11 +2,12 @@
 title: '연습: Async 및 Await를 사용하여 웹에 액세스(Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 84fd047f-fab8-4d89-8ced-104fb7310a91
-ms.openlocfilehash: 7154ea12f2660074e3ad8251b9baaa3eeb3d453c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 535b431fcf8ab5dafa134b8a3c1e2f7eacd6b427
+ms.sourcegitcommit: 3540f614fc94f77ca4ab58df66db2d0f4d52dfee
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34696509"
 ---
 # <a name="walkthrough-accessing-the-web-by-using-async-and-await-visual-basic"></a>연습: Async 및 Await를 사용하여 웹에 액세스(Visual Basic)
 async/await 기능을 사용하여 비동기 프로그램을 보다 쉽고 직관적인 방식으로 작성할 수 있습니다. 동기 코드처럼 보이는 비동기 코드를 작성하고 일반적으로 비동기 코드에 수반되는 어려운 콜백 함수 및 연속 작업을 컴파일러에서 처리하도록 할 수 있습니다.  
@@ -15,7 +16,7 @@ async/await 기능을 사용하여 비동기 프로그램을 보다 쉽고 직�
   
  이 연습은 웹 사이트 목록에 있는 바이트 수의 합계를 계산하는 동기 WPF(Windows Presentation Foundation) 응용 프로그램에서 시작합니다. 그런 다음 새로운 기능을 사용하여 응용 프로그램을 비동기 솔루션으로 변환합니다.  
   
- 응용 프로그램을 직접 빌드하지 않으려면 [개발자 코드 샘플](http://go.microsoft.com/fwlink/?LinkId=255191)에서 "Async 샘플: 웹 연습에 액세스(C# 및 Visual Basic)"를 다운로드할 수 있습니다.  
+ 응용 프로그램을 직접 빌드하지 않으려면 [개발자 코드 샘플](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f)에서 "Async 샘플: 웹 연습에 액세스(C# 및 Visual Basic)"를 다운로드할 수 있습니다.  
   
  이 연습에서는 다음 작업을 완료합니다.  
   
@@ -673,7 +674,7 @@ End Class
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [Async 샘플: 웹 연습에 액세스(C# 및 Visual Basic)](http://go.microsoft.com/fwlink/?LinkId=255191)  
+ [Async 샘플: 웹 연습에 액세스(C# 및 Visual Basic)](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f)  
  [Await 연산자](../../../../visual-basic/language-reference/operators/await-operator.md)  
  [비동기](../../../../visual-basic/language-reference/modifiers/async.md)  
  [Async 및 Await를 사용한 비동기 프로그래밍(Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/index.md)  

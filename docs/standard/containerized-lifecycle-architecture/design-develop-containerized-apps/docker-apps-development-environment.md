@@ -4,11 +4,12 @@ description: Microsoft 플랫폼 및 도구를 사용하여 컨테이너화된 D
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/22/2017
-ms.openlocfilehash: 8db9f37e4fa8df63060982857d457c9e1ce90f60
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4adbdd7099dfc1c5ef13d5bbb4370ae2f14aba1e
+ms.sourcegitcommit: 3540f614fc94f77ca4ab58df66db2d0f4d52dfee
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34696782"
 ---
 # <a name="development-environment-for-docker-apps"></a>Docker 앱을 위한 개발 환경
 
@@ -23,7 +24,7 @@ ms.lasthandoff: 05/04/2018
 > [!NOTE]
 > Visual Studio 코드를 다운로드 하려면로 이동 <https://code.visualstudio.com/download>합니다.
 
-Mac 및 Windows 용 Docker을 다운로드 하려면로 이동 <http://www.docker.com/products/docker>합니다.
+Mac 및 Windows 용 Docker을 다운로드 하려면로 이동 <https://www.docker.com/products/docker>합니다.
 
 ### <a name="visual-studio-with-docker-tools"></a>Docker 도구와 visual Studio
 
@@ -37,15 +38,10 @@ Visual Studio 2015를 사용 하는 경우 "Visual Studio 용 Docker 도구입�
 Docker 응용 프로그램 및 대부분의 언어와 Microsoft 도구를 개발할 수 있습니다. 다음은 초기 목록을 하지만에 제한 되지 않습니다.
 
 -   .NET core 및 ASP.NET 코어
-
 -   Node.js
-
 -   Golang
-
 -   Java
-
 -   Ruby
-
 -   Python
 
 기본적으로, Linux 또는 Windows에서 Docker에서 지 원하는 다른 최신 언어를 사용할 수 있습니다.
