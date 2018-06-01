@@ -1,1 +1,0 @@
-<span data-ttu-id="af12f-101">ADO</span><span class="sxs-lookup"><span data-stu-id="af12f-101">ADO</span></span>

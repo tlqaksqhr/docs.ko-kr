@@ -1,1 +1,0 @@
-<span data-ttu-id="6c056-101">이 멤버는 .NET Framework 인프라를 지원하며 사용자 코드에서 직접 사용할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="6c056-101">This member supports the .NET Framework infrastructure and is not intended to be used directly from your code.</span></span>

@@ -1,1 +1,0 @@
-<span data-ttu-id="f98fa-101">ISV(Independent Software Vendor)</span><span class="sxs-lookup"><span data-stu-id="f98fa-101">independent software vendor (ISV)</span></span>

@@ -1,1 +1,0 @@
-<span data-ttu-id="40bcd-101">ID(식별자)</span><span class="sxs-lookup"><span data-stu-id="40bcd-101">identifier (ID)</span></span>

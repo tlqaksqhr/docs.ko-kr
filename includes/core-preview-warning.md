@@ -1,2 +1,0 @@
-> [!WARNING]
-> <span data-ttu-id="f6cee-101">이 항목은 .NET Core SDK 2.0 Preview 2에 적용됩니다.</span><span class="sxs-lookup"><span data-stu-id="f6cee-101">This topic applies to .NET Core SDK 2.0 Preview 2.</span></span>
