@@ -2,11 +2,12 @@
 title: (Visual Basic) 기간 이후 비동기 작업 취소
 ms.date: 07/20/2015
 ms.assetid: a48045a3-6a99-42af-b824-af340f0b9a5d
-ms.openlocfilehash: 1be9f976c68db41526aea2fbf250ecd8c4e9521e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f91fffd9bfcd66833ca3233251914868bf3b84de
+ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34728695"
 ---
 # <a name="cancel-async-tasks-after-a-period-of-time-visual-basic"></a>(Visual Basic) 기간 이후 비동기 작업 취소
 작업이 완료될 때까지 대기하지 않으려는 경우 일정 기간 후에 <xref:System.Threading.CancellationTokenSource.CancelAfter%2A?displayProperty=nameWithType> 메서드를 사용하여 비동기 작업을 취소할 수 있습니다. 이 메서드는 `CancelAfter` 식으로 지정된 일정 기간 내에 완료되지 않은 연결된 작업의 취소를 예약합니다.  
@@ -17,7 +18,7 @@ ms.lasthandoff: 05/04/2018
 >  예제를 실행 하려면 Visual Studio 2012 이상 및.NET Framework 4.5가 있어야 하거나 나중에 컴퓨터에 설치 합니다.  
   
 ## <a name="downloading-the-example"></a>예제 다운로드  
- [Async 샘플: 응용 프로그램 세부 조정](http://go.microsoft.com/fwlink/?LinkId=255046)에서 전체 WPF(Windows Presentation Foundation) 프로젝트를 다운로드한 후 다음 단계를 따를 수 있습니다.  
+ [Async 샘플: 응용 프로그램 세부 조정](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)에서 전체 WPF(Windows Presentation Foundation) 프로젝트를 다운로드한 후 다음 단계를 따를 수 있습니다.  
   
 1.  다운로드한 파일의 압축을 푼 다음 Visual Studio를 시작합니다.  
   
@@ -87,7 +88,7 @@ Downloads canceled.
   
  <xref:System.Net.Http>에 대한 참조를 추가해야 합니다.  
   
- [Async 샘플: 응용 프로그램 미세 조정](http://go.microsoft.com/fwlink/?LinkId=255046)에서 프로젝트를 다운로드할 수 있습니다.  
+ [Async 샘플: 응용 프로그램 미세 조정](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)에서 프로젝트를 다운로드할 수 있습니다.  
   
 ```vb  
 ' Add an Imports directive and a reference for System.Net.Http.  
@@ -193,4 +194,4 @@ End Class
  [연습: Async 및 Await를 사용하여 웹에 액세스(Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)  
  [비동기 작업 또는 작업 (Visual Basic) 목록 취소](../../../../visual-basic/programming-guide/concepts/async/cancel-an-async-task-or-a-list-of-tasks.md)  
  [Async 응용 프로그램 미세 조정(Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/fine-tuning-your-async-application.md)  
- [Async 샘플: 응용 프로그램 미세 조정](http://go.microsoft.com/fwlink/?LinkId=255046)
+ [Async 샘플: 응용 프로그램 미세 조정](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)

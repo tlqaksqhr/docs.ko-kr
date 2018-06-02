@@ -2,11 +2,12 @@
 title: '방법: Async를 사용 하 여 병렬로 여러 웹 요청 만들기 및 Await (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: a894b99b-7cfd-4a38-adfb-20d24f986730
-ms.openlocfilehash: 1b98a0f29409fa49af1c9c8f7c91f2170981f7cc
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4d4ccda6657dd4d889e8495fa000715c1f7a5ba6
+ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34728445"
 ---
 # <a name="how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await-visual-basic"></a>방법: Async를 사용 하 여 병렬로 여러 웹 요청 만들기 및 Await (Visual Basic)
 비동기 메서드에서 작업은 만들어질 때 시작됩니다. [Await](../../../../visual-basic/language-reference/operators/await-operator.md) 연산자를 계속할 수 없습니다 작업이 완료 될 때까지 메서드의 지점에서 작업에 적용 됩니다. 다음 예제와 같이 작업이 생성되는 즉시 대기되는 경우가 많습니다.  
@@ -39,7 +40,7 @@ Dim result = Await myTask
   
  동시에 여러 작업을 시작 하는 또 다른 예로, 참조 [하는 방법: Task.WhenAll (Visual Basic)를 사용 하 여 비동기 연습 확장](../../../../visual-basic/programming-guide/concepts/async/how-to-extend-the-async-walkthrough-by-using-task-whenall.md)합니다.  
   
- 이 예제의 코드는 [개발자 코드 샘플](http://go.microsoft.com/fwlink/?LinkId=254906)에서 다운로드할 수 있습니다.  
+ 이 예제의 코드는 [개발자 코드 샘플](https://code.msdn.microsoft.com/Async-Make-Multiple-Web-49adb82e)에서 다운로드할 수 있습니다.  
   
 ### <a name="to-set-up-the-project"></a>프로젝트를 설정하려면  
   
@@ -139,7 +140,7 @@ Dim result = Await myTask
   
      프로그램을 여러 번 실행하여 세 가지 작업이 항상 동일한 순서로 완료되지는 않으며, 완료되는 순서가 생성 및 대기된 순서와 다를 수도 있음을 확인합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 코드에는 전체 예제가 포함되어 있습니다.  
   
 ```vb  

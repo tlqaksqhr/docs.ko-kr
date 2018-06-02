@@ -2,11 +2,12 @@
 title: 'Visual Studio에서 F #으로 시작.'
 description: 'F # Visual Studio와 함께 사용 하는 방법에 알아봅니다.'
 ms.date: 02/13/2017
-ms.openlocfilehash: d392e3a93d5b13206f654e35a266e9d9569942fc
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 22fbe8086ec133605e1d9b4b28e524fe2ed8ac28
+ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34728536"
 ---
 # <a name="get-started-with-f-in-visual-studio"></a>Visual Studio에서 F #으로 시작.
 
@@ -71,58 +72,6 @@ val square: x:int -> int
 ```
 
 지금까지  첫 번째 F # 프로젝트를 Visual Studio에서 만든 하 고, F # 함수는 해당 함수 호출의 결과 인쇄를 작성 하 고, 몇 가지 결과 보려면 프로젝트를 실행 했습니다.
-
-## <a name="using-f-interactive"></a>F # Interactive를 사용 하 여
-
-Visual F # 도구 Visual Studio에서 가장 유용한 기능 중 하나에 F # Interactive 창입니다.  해당 코드를 호출 하 고 결과 대화형으로 확인할 수 있는 프로세스에 코드를 통해 보낼 수 있습니다.
-
-사용을 시작 하려면 강조 표시는 `square` 코드에 정의 된 함수입니다.  다음으로 저장 된 **Alt** 키를 누릅니다 **Enter**합니다.  F # 대화형 창에서 코드를 실행 합니다.  F # 대화형 표시 되는 창에 다음과 같이 표시 되어야 합니다.
-
-```
->
-
-val square : x:int -> int
-
->
-```
-
-에 대 한 동일한 함수 시그니처 표시는 `square` 함수 위로 가져갈 때 앞에서 본 하는 함수입니다.  때문에 `square` 은 F # Interactive 프로세스에 정의 된, 이제 서로 다른 값으로 호출할 수 있습니다.
-
-```
-> square 12;;
-val it : int = 144
->square 13;;
-val it : int = 169
-```
-
-이 함수를 실행, 결과 새 이름 바인딩합니다 `it`, 유형 및 값을 표시 하 고 `it`합니다.  각 줄을 종료 해야 참고 `;;`합니다.  이 어떻게 F # Interactive 알고 함수 호출이 완료 되 면입니다.  또한 F # Interactive에서 새로운 함수를 정의할 수 있습니다.
-
-```
-> let isOdd x = x % 2 <> 0;;
-
-val isOdd : x:int -> bool
-
-> isOdd 12;;
-val it : bool = false
-```
-
-위의 정의 새 함수로 `isOdd`,이 `int` 홀수 인지를 확인 하 고! 반환 서로 다른 입력을 확인 하려면이 함수를 호출할 수 있습니다.  함수 호출 내에서 함수를 호출할 수 있습니다.
-
-```
-> isOdd (square 15);;
-val it : bool = true
-```
-
-사용할 수도 있습니다는 [정방향 파이프 연산자](../language-reference/symbol-and-operator-reference/index.md) 값 두 함수에 파이프라인 할:
-
-```
-> 15 |> square |> isOdd;;
-val it : bool = true
-```
-
-정방향 파이프 연산자 등은 이후 자습서에서 다룹니다.
-
-이것은 F # 대화형으로 수행할 수 있는에 간략만 합니다. 자세한 내용을 보려면 체크 아웃 [F #을 사용한 대화형 프로그래밍](../tutorials/fsharp-interactive/index.md)합니다.
 
 ## <a name="next-steps"></a>다음 단계
 
