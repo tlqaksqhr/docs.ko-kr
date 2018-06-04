@@ -15,11 +15,12 @@ helpviewer_keywords:
 ms.assetid: fae2c15b-7adf-4b15-b118-58eb3906994f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9df41a404c091bb76490d762b55580c36cf33f62
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b270559e9e73e18bebb29e36b815268d5426a940
+ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34728682"
 ---
 # <a name="regular-expression-example-scanning-for-hrefs"></a>정규식 예제: HREF 스캐닝
 다음 예제는 입력 문자열을 검색하고 모든 href="…" 값과 문자열에서의 해당 위치를 보여 줍니다.  
@@ -43,9 +44,9 @@ ms.lasthandoff: 05/04/2018
 |`\s*`|0개 이상의 공백 문자가 일치하는지 확인합니다.|  
 |`=`|등호와 일치합니다.|  
 |`\s*`|0개 이상의 공백 문자가 일치하는지 확인합니다.|  
-|<code>(?:\["'\](?<1>\[^"'\]*)"&#124;(?<1>\S+))</code>|캡처된 그룹에 결과를 할당하지 않으며 다음 중 하나와 일치합니다.<br /> <ul><li><p>따옴표 또는 아포스트로피 뒤에 따옴표 또는 아포스트로피 이외의 다른 문자가 0개 이상 나오고 그 뒤에 다시 따옴표 또는 아포스트로피가 나오는 항목. `1`이라는 그룹이 이 패턴에 포함됩니다.</p></li><li><p>하나 이상의 공백이 아닌 문자. `1`이라는 그룹이 이 패턴에 포함됩니다.</p></li></ul>|  
+|<code>(?:\["'\](?<1>\[^"'\]*)["']&#124;(?<1>\S+))</code>|캡처된 그룹에 결과를 할당하지 않으며 다음 중 하나와 일치합니다.<br /> <ul><li><p>따옴표 또는 아포스트로피 뒤에 따옴표 또는 아포스트로피 이외의 다른 문자가 0개 이상 나오고 그 뒤에 다시 따옴표 또는 아포스트로피가 나오는 항목. `1`이라는 그룹이 이 패턴에 포함됩니다.</p></li><li><p>하나 이상의 공백이 아닌 문자. `1`이라는 그룹이 이 패턴에 포함됩니다.</p></li></ul>|  
 |`(?<1>[^"']*)`|`1`이라는 캡처 그룹에 따옴표 또는 아포스트로피 이외의 다른 문자 항목을 0개 이상 할당합니다.|  
-|`"(?<1>\S+)`|`1`이라는 캡처링 그룹에 하나 이상의 공백이 아닌 문자를 할당합니다.|  
+|`(?<1>\S+)`|`1`이라는 캡처링 그룹에 하나 이상의 공백이 아닌 문자를 할당합니다.|  
   
 ## <a name="match-result-class"></a>일치 결과 클래스  
  검색 결과는 <xref:System.Text.RegularExpressions.Match> 클래스에 저장되는데, 이 클래스는 검색에서 추출한 모든 부분 문자열에 대한 액세스를 제공합니다. 또한 검색 중인 문자열 및 사용 중인 정규식을 기억하므로 <xref:System.Text.RegularExpressions.Match.NextMatch%2A?displayProperty=nameWithType> 메서드를 호출하여 마지막 검색이 종료된 위치부터 또 다른 검색을 수행할 수 있습니다.  
