@@ -2,11 +2,12 @@
 title: C# 7.2의 새로운 기능
 description: C# 7.2의 새로운 기능에 대한 개요입니다.
 ms.date: 08/16/2017
-ms.openlocfilehash: b813bf5b38ef17986b21e928c9c86e583174c7d1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a74afd7f073daa46328d60149e2dd90207420a80
+ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34566191"
 ---
 # <a name="whats-new-in-c-72"></a>C# 7.2의 새로운 기능
 
@@ -15,7 +16,7 @@ C# 7.2는 다양한 유용한 기능을 추가하는 또 하나의 지점 릴리
 
 나머지 기능은 작지만 멋진 기능입니다.
 
-C# 7.2는 [언어 버전 선택](csharp-7-1.md#language-version-selection) 구성 요소를 사용하여 컴파일러 언어 버전을 선택합니다.
+C# 7.2는 [언어 버전 선택](../language-reference/configure-language-version.md) 구성 요소를 사용하여 컴파일러 언어 버전을 선택합니다.
 
 이 릴리스의 새로운 언어 기능은 다음과 같습니다.
 

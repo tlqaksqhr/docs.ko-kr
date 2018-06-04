@@ -3,11 +3,12 @@ title: .NET Core 명령줄 도구 아키텍처
 description: .NET Core 도구 레이어 및 최신 버전의 변경 내용에 대해 알아봅니다.
 author: blackdwarf
 ms.date: 03/06/2017
-ms.openlocfilehash: 50ccaa490f079c62901c57eb9cf91690ee655bf2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1d96a0b1e19bf84af0ab645ebd104afc899ae656
+ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34696545"
 ---
 # <a name="high-level-overview-of-changes-in-the-net-core-tools"></a>.NET Core 도구의 변경 내용에 대한 대략적인 개요
 
@@ -66,4 +67,5 @@ ms.lasthandoff: 05/04/2018
 
 이 규칙에서 주목할 만한 예외는 `new` 및 `run` 명령으로 MSBuild 대상으로 구현되지 않았습니다.
 
-<a name="dotnet-restore-note"></a> [!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
+<a name="dotnet-restore-note"></a>  
+[!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]

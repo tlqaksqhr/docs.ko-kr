@@ -7,11 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - parameters [C#], ref
 - ref keyword [C#]
-ms.openlocfilehash: 8b36f94e9476b857066c292feb9e77e9c2199b7e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a4d5719bccd240658880cc5c6e549e8c912ca1b9
+ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34696396"
 ---
 # <a name="ref-c-reference"></a>ref(C# 참조)
 
@@ -125,8 +126,9 @@ ref VeryLargeStruct reflocal = ref veryLargeStruct;
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>참고 항목  
- [C# 참조](../../../csharp/language-reference/index.md)  
- [C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)  
- [매개 변수 전달](../../../csharp/programming-guide/classes-and-structs/passing-parameters.md)  
- [메서드 매개 변수](../../../csharp/language-reference/keywords/method-parameters.md)  
- [C# 키워드](../../../csharp/language-reference/keywords/index.md)
+ [값 형식과 참조 의미 체계](../../reference-semantics-with-value-types.md)  
+ [매개 변수 전달](../../programming-guide/classes-and-structs/passing-parameters.md)  
+ [메서드 매개 변수](method-parameters.md)  
+ [C# 참조](../index.md)  
+ [C# 프로그래밍 가이드](../../programming-guide/index.md)  
+ [C# 키워드](index.md)

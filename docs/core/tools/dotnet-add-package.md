@@ -3,12 +3,13 @@ title: dotnet add package 명령 - .NET Core CLI
 description: ‘dotnet add package’ 명령은 NuGet 패키지 참조를 프로젝트에 추가하는 편리한 옵션을 제공합니다.
 author: mairaw
 ms.author: mairaw
-ms.date: 08/11/2017
-ms.openlocfilehash: fd3704bbb941835421d78e19f196fa52b3767c34
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.date: 05/25/2018
+ms.openlocfilehash: 31dda9dbb101238b3a33d8b0d9a17765744480e0
+ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34696301"
 ---
 # <a name="dotnet-add-package"></a>dotnet add package
 
@@ -20,7 +21,7 @@ ms.lasthandoff: 05/04/2018
 
 ## <a name="synopsis"></a>개요
 
-`dotnet add [<PROJECT>] package <PACKAGE_NAME> [-h|--help] [-v|--version] [-f|--framework] [-n|--no-restore] [-s|--source] [--package-directory]`
+`dotnet add [<PROJECT>] package <PACKAGE_NAME> [-h|--help] [-f|--framework] [-n|--no-restore] [--package-directory] [-s|--source] [-v|--version]`
 
 ## <a name="description"></a>설명
 
@@ -30,7 +31,7 @@ ms.lasthandoff: 05/04/2018
 
 예를 들어 `Newtonsoft.Json`를 *ToDo.csproj*에 추가하면 다음 예제와 유사한 출력이 생성됩니다.
 
-```
+```console
   Writing C:\Users\mairaw\AppData\Local\Temp\tmp95A8.tmp
 info : Adding PackageReference for package 'Newtonsoft.Json' into project 'C:\projects\ToDo\ToDo.csproj'.
 log  : Restoring packages for C:\projects\ToDo\ToDo.csproj...
@@ -62,10 +63,6 @@ info : PackageReference for package 'Newtonsoft.Json' version '10.0.3' added to 
 
 명령에 대한 간단한 도움말을 출력합니다.
 
-`-v|--version <VERSION>`
-
-패키지의 버전입니다.
-
 `-f|--framework <FRAMEWORK>`
 
 특정 [프레임워크](../../standard/frameworks.md)를 대상으로 하는 경우에만 패키지 참조를 추가합니다.
@@ -74,13 +71,17 @@ info : PackageReference for package 'Newtonsoft.Json' version '10.0.3' added to 
 
 복원 미리 보기 및 호환성 검사를 수행하지 않고 패키지 참조를 추가합니다.
 
+`--package-directory <PACKAGE_DIRECTORY>`
+
+지정된 디렉터리에 패키지를 복원합니다.
+
 `-s|--source <SOURCE>`
 
 복원 작업 중 특정 NuGet 패키지 소스를 사용합니다.
 
-`--package-directory <PACKAGE_DIRECTORY>`
+`-v|--version <VERSION>`
 
-지정된 디렉터리에 패키지를 복원합니다.
+패키지의 버전입니다.
 
 ## <a name="examples"></a>예제
 
