@@ -3,28 +3,29 @@ title: dotnet-add reference 명령 - .NET Core CLI
 description: dotnet add reference 명령은 프로젝트 간 참조를 추가하는 편리한 옵션을 제공합니다.
 author: mairaw
 ms.author: mairaw
-ms.date: 09/19/2017
-ms.openlocfilehash: ee9c058b83238655bd90a4bf5c809a9d0e4c13d6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.date: 05/25/2018
+ms.openlocfilehash: 3398d4dc7bf70eaadcdd92269dbd3b784079c22d
+ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34696964"
 ---
-# <a name="dotnet-add-reference"></a><span data-ttu-id="3ce1c-103">dotnet-add reference</span><span class="sxs-lookup"><span data-stu-id="3ce1c-103">dotnet-add reference</span></span>
+# <a name="dotnet-add-reference"></a><span data-ttu-id="bcde3-103">dotnet-add reference</span><span class="sxs-lookup"><span data-stu-id="bcde3-103">dotnet-add reference</span></span>
 
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
 
-## <a name="name"></a><span data-ttu-id="3ce1c-104">name</span><span class="sxs-lookup"><span data-stu-id="3ce1c-104">Name</span></span>
+## <a name="name"></a><span data-ttu-id="bcde3-104">name</span><span class="sxs-lookup"><span data-stu-id="bcde3-104">Name</span></span>
 
-<span data-ttu-id="3ce1c-105">`dotnet add reference` - 프로젝트 간(P2P) 참조를 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="3ce1c-105">`dotnet add reference` - Adds project-to-project (P2P) references.</span></span>
+<span data-ttu-id="bcde3-105">`dotnet add reference` - 프로젝트 간(P2P) 참조를 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="bcde3-105">`dotnet add reference` - Adds project-to-project (P2P) references.</span></span>
 
-## <a name="synopsis"></a><span data-ttu-id="3ce1c-106">개요</span><span class="sxs-lookup"><span data-stu-id="3ce1c-106">Synopsis</span></span>
+## <a name="synopsis"></a><span data-ttu-id="bcde3-106">개요</span><span class="sxs-lookup"><span data-stu-id="bcde3-106">Synopsis</span></span>
 
 `dotnet add [<PROJECT>] reference [-f|--framework] <PROJECT_REFERENCES> [-h|--help]`
 
-## <a name="description"></a><span data-ttu-id="3ce1c-107">설명</span><span class="sxs-lookup"><span data-stu-id="3ce1c-107">Description</span></span>
+## <a name="description"></a><span data-ttu-id="bcde3-107">설명</span><span class="sxs-lookup"><span data-stu-id="bcde3-107">Description</span></span>
 
-<span data-ttu-id="3ce1c-108">`dotnet add reference` 명령은 프로젝트에 프로젝트 참조를 추가하는 편리한 옵션을 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="3ce1c-108">The `dotnet add reference` command provides a convenient option to add project references to a project.</span></span> <span data-ttu-id="3ce1c-109">명령을 실행한 후 [ `<ProjectReference>` ](/visualstudio/msbuild/common-msbuild-project-items) 요소가 프로젝트 파일에 추가됩니다.</span><span class="sxs-lookup"><span data-stu-id="3ce1c-109">After running the command, the [`<ProjectReference>`](/visualstudio/msbuild/common-msbuild-project-items) elements are added to the project file.</span></span>
+<span data-ttu-id="bcde3-108">`dotnet add reference` 명령은 프로젝트에 프로젝트 참조를 추가하는 편리한 옵션을 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="bcde3-108">The `dotnet add reference` command provides a convenient option to add project references to a project.</span></span> <span data-ttu-id="bcde3-109">명령을 실행한 후 [ `<ProjectReference>` ](/visualstudio/msbuild/common-msbuild-project-items) 요소가 프로젝트 파일에 추가됩니다.</span><span class="sxs-lookup"><span data-stu-id="bcde3-109">After running the command, the [`<ProjectReference>`](/visualstudio/msbuild/common-msbuild-project-items) elements are added to the project file.</span></span>
 
 ```xml
 <ItemGroup>
@@ -34,36 +35,36 @@ ms.lasthandoff: 05/04/2018
 </ItemGroup>
 ```
 
-## <a name="arguments"></a><span data-ttu-id="3ce1c-110">인수</span><span class="sxs-lookup"><span data-stu-id="3ce1c-110">Arguments</span></span>
+## <a name="arguments"></a><span data-ttu-id="bcde3-110">인수</span><span class="sxs-lookup"><span data-stu-id="bcde3-110">Arguments</span></span>
 
 `PROJECT`
 
-<span data-ttu-id="3ce1c-111">프로젝트 파일을 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="3ce1c-111">Specifies the project file.</span></span> <span data-ttu-id="3ce1c-112">지정하지 않으면 이 명령은 현재 디렉터리에서 검색합니다.</span><span class="sxs-lookup"><span data-stu-id="3ce1c-112">If not specified, the command searches the current directory for one.</span></span>
+<span data-ttu-id="bcde3-111">프로젝트 파일을 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="bcde3-111">Specifies the project file.</span></span> <span data-ttu-id="bcde3-112">지정하지 않으면 이 명령은 현재 디렉터리에서 검색합니다.</span><span class="sxs-lookup"><span data-stu-id="bcde3-112">If not specified, the command searches the current directory for one.</span></span>
 
 `PROJECT_REFERENCES`
 
-<span data-ttu-id="3ce1c-113">추가할 프로젝트 간(P2P) 참조입니다.</span><span class="sxs-lookup"><span data-stu-id="3ce1c-113">Project-to-project (P2P) references to add.</span></span> <span data-ttu-id="3ce1c-114">하나 이상의 프로젝트를 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="3ce1c-114">Specify one or more projects.</span></span> <span data-ttu-id="3ce1c-115">Unix/Linux 기반 시스템에서는 [와일드카드 사용 패턴](https://en.wikipedia.org/wiki/Glob_(programming))이 지원됩니다.</span><span class="sxs-lookup"><span data-stu-id="3ce1c-115">[Glob patterns](https://en.wikipedia.org/wiki/Glob_(programming)) are supported on Unix/Linux-based systems.</span></span>
+<span data-ttu-id="bcde3-113">추가할 프로젝트 간(P2P) 참조입니다.</span><span class="sxs-lookup"><span data-stu-id="bcde3-113">Project-to-project (P2P) references to add.</span></span> <span data-ttu-id="bcde3-114">하나 이상의 프로젝트를 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="bcde3-114">Specify one or more projects.</span></span> <span data-ttu-id="bcde3-115">Unix/Linux 기반 시스템에서는 [와일드카드 사용 패턴](https://en.wikipedia.org/wiki/Glob_(programming))이 지원됩니다.</span><span class="sxs-lookup"><span data-stu-id="bcde3-115">[Glob patterns](https://en.wikipedia.org/wiki/Glob_(programming)) are supported on Unix/Linux-based systems.</span></span>
 
-## <a name="options"></a><span data-ttu-id="3ce1c-116">옵션</span><span class="sxs-lookup"><span data-stu-id="3ce1c-116">Options</span></span>
+## <a name="options"></a><span data-ttu-id="bcde3-116">옵션</span><span class="sxs-lookup"><span data-stu-id="bcde3-116">Options</span></span>
 
 `-h|--help`
 
-<span data-ttu-id="3ce1c-117">명령에 대한 간단한 도움말을 출력합니다.</span><span class="sxs-lookup"><span data-stu-id="3ce1c-117">Prints out a short help for the command.</span></span>
+<span data-ttu-id="bcde3-117">명령에 대한 간단한 도움말을 출력합니다.</span><span class="sxs-lookup"><span data-stu-id="bcde3-117">Prints out a short help for the command.</span></span>
 
 `-f|--framework <FRAMEWORK>`
 
-<span data-ttu-id="3ce1c-118">특정 [프레임워크](../../standard/frameworks.md)를 대상으로 하는 경우에만 프로젝트 참조를 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="3ce1c-118">Adds project references only when targeting a specific [framework](../../standard/frameworks.md).</span></span>
+<span data-ttu-id="bcde3-118">특정 [프레임워크](../../standard/frameworks.md)를 대상으로 하는 경우에만 프로젝트 참조를 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="bcde3-118">Adds project references only when targeting a specific [framework](../../standard/frameworks.md).</span></span>
 
-## <a name="examples"></a><span data-ttu-id="3ce1c-119">예제</span><span class="sxs-lookup"><span data-stu-id="3ce1c-119">Examples</span></span>
+## <a name="examples"></a><span data-ttu-id="bcde3-119">예제</span><span class="sxs-lookup"><span data-stu-id="bcde3-119">Examples</span></span>
 
-<span data-ttu-id="3ce1c-120">프로젝트 참조 추가:</span><span class="sxs-lookup"><span data-stu-id="3ce1c-120">Add a project reference:</span></span>
+<span data-ttu-id="bcde3-120">프로젝트 참조 추가:</span><span class="sxs-lookup"><span data-stu-id="bcde3-120">Add a project reference:</span></span>
 
 `dotnet add app/app.csproj reference lib/lib.csproj`
 
-<span data-ttu-id="3ce1c-121">현재 디렉터리의 프로젝트에 여러 프로젝트 참조를 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="3ce1c-121">Add multiple project references to the project in the current directory:</span></span>
+<span data-ttu-id="bcde3-121">현재 디렉터리의 프로젝트에 여러 프로젝트 참조를 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="bcde3-121">Add multiple project references to the project in the current directory:</span></span>
 
 `dotnet add reference lib1/lib1.csproj lib2/lib2.csproj`
 
-<span data-ttu-id="3ce1c-122">Linux/Unix에서 와일드카드 사용 패턴을 사용하여 여러 프로젝트 참조 추가:</span><span class="sxs-lookup"><span data-stu-id="3ce1c-122">Add multiple project references using a globbing pattern on Linux/Unix:</span></span>
+<span data-ttu-id="bcde3-122">Linux/Unix에서 와일드카드 사용 패턴을 사용하여 여러 프로젝트 참조 추가:</span><span class="sxs-lookup"><span data-stu-id="bcde3-122">Add multiple project references using a globbing pattern on Linux/Unix:</span></span>
 
 `dotnet add app/app.csproj reference **/*.csproj`
