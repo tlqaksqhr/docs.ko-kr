@@ -6,11 +6,12 @@ helpviewer_keywords:
 - .NET Framework [Visual Basic], reference
 - .NET Framework class library [Visual Basic], reference information
 ms.assetid: 8b202505-608b-4223-bbd9-2ace3d73e6cd
-ms.openlocfilehash: 969aed5e98c0017f34d57d3999292c10163b4385
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8a949fa6554316ebd2b4abd90e512f4a8496f874
+ms.sourcegitcommit: fc70fcb9c789b6a4aefcdace46f3643fd076450f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/06/2018
+ms.locfileid: "34805414"
 ---
 # <a name="net-framework-reference-information-visual-basic"></a>.NET Framework 참조 정보(Visual Basic)
 이 항목에서는 작동 하는 방법에 대 한 정보에 대 한 링크는 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 클래스 라이브러리입니다.  
@@ -31,5 +32,5 @@ ms.lasthandoff: 05/04/2018
  [.NET Framework 샘플](http://msdn.microsoft.com/library/177055f8-4a1f-43e7-aee6-995c196079b1)  
  .NET Framework 기술을 보여 주는 예제 응용 프로그램에 대 한 링크를 제공 합니다.  
   
- [.NET Framework 클래스 라이브러리](http://go.microsoft.com/fwlink/?LinkID=227195)  
+ [.NET API 브라우저](../../../api/index.md)  
  구문, 코드 예제 및.NET Framework 네임 스페이스의 각 클래스에 대 한 관련된 정보를 제공합니다.

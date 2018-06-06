@@ -10,11 +10,12 @@ helpviewer_keywords:
 - operands
 - expressions [Visual Basic]
 ms.assetid: b86f3131-94ee-448f-96cd-79611e028b26
-ms.openlocfilehash: 06397cf05fc4da977cfecb8e412f12766a2a342d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a0f6d026714f8e933dc75dbb7c3a5e6e8e1bd795
+ms.sourcegitcommit: fc70fcb9c789b6a4aefcdace46f3643fd076450f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/06/2018
+ms.locfileid: "34805450"
 ---
 # <a name="operators-and-expressions-in-visual-basic"></a>Visual Basic의 연산자 및 식
 *연산자*는 값을 가지는 하나 이상의 코드 요소에서 작업을 수행하는 코드 요소입니다. 값 요소는 변수, 상수, 리터럴, 속성을 포함하고 `Function` 및 `Operator` 프로시저와 식에서 반환됩니다.  
@@ -61,7 +62,7 @@ ms.lasthandoff: 05/04/2018
   
  앞의 예제에서 Visual Basic 할당 연산자의 오른쪽에는 식의 작업을 수행 (`=`), 변수에 결과 값을 할당 한 다음 `x` 왼쪽에 있습니다. 식에 결합할 수 있는 연산자 수에는 실제로 제한이 없지만 예상하는 결과를 얻으려면 [Visual Basic의 연산자 우선 순위](../../../../visual-basic/language-reference/operators/operator-precedence.md)를 이해해야 합니다.  
   
- 자세한 내용과 예제는 [Operator Overloading in Visual Basic 2005](http://go.microsoft.com/fwlink/?LinkId=101703)(Visual Basic 2005의 연산자 오버로드)를 참조하세요.  
+ 자세한 내용과 예제는 [Operator Overloading in Visual Basic 2005](https://msdn.microsoft.com/library/ms379613(v=vs.80).aspx)(Visual Basic 2005의 연산자 오버로드)를 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
  [연산자](../../../../visual-basic/language-reference/operators/index.md)  

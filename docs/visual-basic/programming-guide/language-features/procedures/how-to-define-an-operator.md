@@ -13,11 +13,12 @@ helpviewer_keywords:
 - return values [Visual Basic], Operator procedures
 - operator overloading
 ms.assetid: d4b0e253-092a-4e6e-9fe2-01f562140a29
-ms.openlocfilehash: c759ebf38ab0727aeada218d288b5ac01e3ecd03
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1f5a020a710cecdfd8722a9fca0a8b329697eced
+ms.sourcegitcommit: fc70fcb9c789b6a4aefcdace46f3643fd076450f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/06/2018
+ms.locfileid: "34805401"
 ---
 # <a name="how-to-define-an-operator-visual-basic"></a>방법: 연산자 정의(Visual Basic)
 클래스 또는 구조체를 정의한 경우에 표준 연산자의 동작을 정의할 수 있습니다 (같은 `*`, `<>`, 또는 `And`) 경우 하나 또는 두 개의 피연산자는 클래스 또는 구조체의 형식입니다.  
@@ -26,7 +27,7 @@ ms.lasthandoff: 05/04/2018
   
  클래스 또는 구조체에서 연산자를 정의 라고도 *오버 로드* 연산자입니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제에서는 정의 `+` 구조체에 대 한 연산자 호출 `height`합니다. 피트 및 인치 단위로 측정 된 높이 사용 하는 구조입니다. 하나의 *인치* 2.54 센티미터 개와 *foot* 는 12 인치입니다. 정규화 된 값 (인치 < 12.0)을 보장 하려면 생성자는 다음과 같이 수행 됩니다. *모듈로* 산술 12입니다. `+` 연산자 생성자를 사용 하 여 정규화 된 값을 생성 합니다.  
   
  [!code-vb[VbVbcnProcedures#25](./codesnippet/VisualBasic/how-to-define-an-operator_1.vb)]  
@@ -35,7 +36,7 @@ ms.lasthandoff: 05/04/2018
   
  [!code-vb[VbVbcnProcedures#26](./codesnippet/VisualBasic/how-to-define-an-operator_2.vb)]  
   
- 자세한 내용과 예제는 [Operator Overloading in Visual Basic 2005](http://go.microsoft.com/fwlink/?LinkId=101703)(Visual Basic 2005의 연산자 오버로드)를 참조하세요.  
+ 자세한 내용과 예제는 [Operator Overloading in Visual Basic 2005](https://msdn.microsoft.com/library/ms379613(v=vs.80).aspx)(Visual Basic 2005의 연산자 오버로드)를 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
  [연산자 프로시저](./operator-procedures.md)  

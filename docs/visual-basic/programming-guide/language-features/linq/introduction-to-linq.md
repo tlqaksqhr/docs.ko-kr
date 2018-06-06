@@ -12,11 +12,12 @@ helpviewer_keywords:
 - deferred execution
 - iteration variables [Visual Basic]
 ms.assetid: 3047d86e-0d49-40e2-928b-dc02e46c7984
-ms.openlocfilehash: ae59cb4d6b812ba956ce55723e034f381db14aa1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7e6d299bafff2a5a34a8f0942ba6dc9c25fcdd83
+ms.sourcegitcommit: fc70fcb9c789b6a4aefcdace46f3643fd076450f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/06/2018
+ms.locfileid: "34805739"
 ---
 # <a name="introduction-to-linq-in-visual-basic"></a>Visual Basic의 LINQ 소개
 통합 언어 쿼리 (LINQ) Visual Basic에서 쿼리 기능을 추가 하 고 모든 종류의 데이터를 사용 하 여 작업할 때 간단 하면서도 강력한 기능을 제공 합니다. 쿼리 처리 해야 하는 데이터베이스에 보내거나 검색 하는 데이터의 각 유형에 대해 서로 다른 쿼리 구문으로 작업을 하는 대신 LINQ에서는 Visual Basic 언어의 일부로 쿼리를 소개 합니다. LINQ는 데이터의 형식에 관계없이 통합된 구문을 사용합니다.  
@@ -189,7 +190,7 @@ ms.lasthandoff: 05/04/2018
  [방법: 저장된 프로시저를 할당 업데이트, 삽입 및 삭제 (O/R 디자이너)를 수행 합니다.](http://msdn.microsoft.com/library/e88224ab-ff61-4a3a-b6b8-6f3694546cac)  
   
 ## <a name="featured-book-chapters"></a>중요 설명서 장  
- [17 장: LINQ](http://go.microsoft.com/fwlink/?LinkId=195277) 에 [Visual Basic 2008 프로그래밍](http://go.microsoft.com/fwlink/?LinkId=195383)  
+ [17 장: LINQ](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/ff652502(v=orm.10)) 에 [Visual Basic 2008 프로그래밍](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/ff652504(v=orm.10))  
   
 ## <a name="see-also"></a>참고 항목  
  [LINQ(Language-Integrated Query)](http://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d)  

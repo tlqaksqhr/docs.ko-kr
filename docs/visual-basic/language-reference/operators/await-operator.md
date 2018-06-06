@@ -7,11 +7,12 @@ helpviewer_keywords:
 - Await operator [Visual Basic]
 - Await [Visual Basic]
 ms.assetid: 6b1ce283-e92b-4ba7-b081-7be7b3d37af9
-ms.openlocfilehash: b24b637969ced9b30644abda022db086dc91c1e3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8e1462c7e0097bb2f04c6833a1bb279611b24133
+ms.sourcegitcommit: fc70fcb9c789b6a4aefcdace46f3643fd076450f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/06/2018
+ms.locfileid: "34805512"
 ---
 # <a name="await-operator-visual-basic"></a>Await 연산자(Visual Basic)
 대기 중인 작업이 완료될 때까지 메서드 실행을 일시 중단하려면 비동기 메서드 또는 람다 식의 피연산자에 `Await` 연산자를 적용합니다. 작업은 진행 중인 작업을 나타냅니다.  
@@ -42,7 +43,7 @@ End Function
 ```  
   
 > [!IMPORTANT]
->  전체 예제는 [연습: Async 및 Await를 사용하여 웹에 액세스](../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)를 참조하세요. 샘플은 Microsoft 웹 사이트의 [Async Sample: Accessing the Web Walkthrough (C# and Visual Basic)](http://go.microsoft.com/fwlink/?LinkID=255191&clcid=0x409)(비동기 샘플: 웹 액세스 연습(C# 및 Visual Basic))에서 다운로드할 수 있습니다. 예제는 AsyncWalkthrough_HttpClient 프로젝트에 있습니다.  
+>  전체 예제는 [연습: Async 및 Await를 사용하여 웹에 액세스](../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)를 참조하세요. 샘플은 Microsoft 웹 사이트의 [Async Sample: Accessing the Web Walkthrough (C# and Visual Basic)](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f)(비동기 샘플: 웹 액세스 연습(C# 및 Visual Basic))에서 다운로드할 수 있습니다. 예제는 AsyncWalkthrough_HttpClient 프로젝트에 있습니다.  
   
  `Await`가 `Task(Of TResult)`를 반환하는 메서드 호출의 결과에 적용되는 경우, `Await`식의 형식은 TResult입니다. `Await`가 `Task`를 반환하는 메서드 호출의 결과에 적용되는 경우, `Await`식은 값을 반환하지 않습니다. 다음 예제에서 차이점을 보여 줍니다.  
   
@@ -69,7 +70,7 @@ Await AsyncMethodThatReturnsTask()
   
  비동기 메서드에의 오류 처리의 예 참조 [시도 중... Catch 하는 중... Finally 문](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 Windows Forms 예제에서는 비동기 메서드 `WaitAsynchronouslyAsync`에서 `Await`의 사용을 보여 줍니다. 해당 메서드의 동작을 `WaitSynchronously`의 동작과 대조합니다. `Await` 연산자가 없는 경우 `WaitSynchronously`는 해당 정의에 `Async` 수정자가 사용되었고 해당 본문에서 <xref:System.Threading.Thread.Sleep%2A?displayProperty=nameWithType> 호출이 있더라도 동기적으로 실행됩니다.  
   
 ```vb  
