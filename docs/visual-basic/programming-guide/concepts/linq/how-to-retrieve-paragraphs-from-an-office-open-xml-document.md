@@ -1,36 +1,27 @@
 ---
-title: "방법: Office Open XML 문서 (Visual Basic)에서 단락 검색"
-ms.custom: 
+title: '방법: Office Open XML 문서 (Visual Basic)에서 단락 검색'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 66053f21-9217-473c-a6f3-a0897be07756
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: ecce435601092e0025a977c797100e0b5ff74b86
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 17d8c0fb9ecd5d3cb7a4f692d25a9f1514696117
+ms.sourcegitcommit: d8bf4976eafe3289275be3811e7cb721bfff7e1e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34753314"
 ---
-# <a name="how-to-retrieve-paragraphs-from-an-office-open-xml-document-visual-basic"></a><span data-ttu-id="d6b9f-102">방법: Office Open XML 문서 (Visual Basic)에서 단락 검색</span><span class="sxs-lookup"><span data-stu-id="d6b9f-102">How to: Retrieve Paragraphs from an Office Open XML Document (Visual Basic)</span></span>
-<span data-ttu-id="d6b9f-103">이 항목에서는 Office Open XML 문서를 열고 문서에 있는 모든 단락의 컬렉션을 검색하는 예제를 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="d6b9f-103">This topic presents an example that opens an Office Open XML document, and retrieves a collection of all of the paragraphs in the document.</span></span>  
+# <a name="how-to-retrieve-paragraphs-from-an-office-open-xml-document-visual-basic"></a><span data-ttu-id="634e7-102">방법: Office Open XML 문서 (Visual Basic)에서 단락 검색</span><span class="sxs-lookup"><span data-stu-id="634e7-102">How to: Retrieve Paragraphs from an Office Open XML Document (Visual Basic)</span></span>
+<span data-ttu-id="634e7-103">이 항목에서는 Office Open XML 문서를 열고 문서에 있는 모든 단락의 컬렉션을 검색하는 예제를 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="634e7-103">This topic presents an example that opens an Office Open XML document, and retrieves a collection of all of the paragraphs in the document.</span></span>  
   
- <span data-ttu-id="d6b9f-104">Office Open XML에 대한 자세한 내용은 [www.openxmldeveloper.org](http://go.microsoft.com/fwlink/?LinkID=95573)를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="d6b9f-104">For more information on Office Open XML, see [www.openxmldeveloper.org](http://go.microsoft.com/fwlink/?LinkID=95573).</span></span>  
+ <span data-ttu-id="634e7-104">Office Open XML에 대 한 자세한 내용은 참조 하십시오. [Eric 흰색 블로그](http://www.ericwhite.com)합니다.</span><span class="sxs-lookup"><span data-stu-id="634e7-104">For more information on Office Open XML, see [Eric White's Blog](http://www.ericwhite.com).</span></span>  
   
-## <a name="example"></a><span data-ttu-id="d6b9f-105">예제</span><span class="sxs-lookup"><span data-stu-id="d6b9f-105">Example</span></span>  
- <span data-ttu-id="d6b9f-106">이 예제에서는 Office Open XML 패키지를 열고 Open XML 패키지에서의 관계를 사용하여 문서와 스타일 부분을 찾습니다.</span><span class="sxs-lookup"><span data-stu-id="d6b9f-106">This example opens an Office Open XML package, uses the relationships within the Open XML package to find the document and the style parts.</span></span> <span data-ttu-id="d6b9f-107">그런 다음 문서를 쿼리하여 단락 <xref:System.Xml.Linq.XElement> 노드, 각 단락의 스타일 이름 및 각 단락의 텍스트가 포함된 익명 형식의 컬렉션을 프로젝션합니다.</span><span class="sxs-lookup"><span data-stu-id="d6b9f-107">It then queries the document, projecting a collection of an anonymous type that contains the paragraph <xref:System.Xml.Linq.XElement> node, the style name of each paragraph, and the text of each paragraph.</span></span>  
+## <a name="example"></a><span data-ttu-id="634e7-105">예</span><span class="sxs-lookup"><span data-stu-id="634e7-105">Example</span></span>  
+ <span data-ttu-id="634e7-106">이 예제에서는 Office Open XML 패키지를 열고 Open XML 패키지에서의 관계를 사용하여 문서와 스타일 부분을 찾습니다.</span><span class="sxs-lookup"><span data-stu-id="634e7-106">This example opens an Office Open XML package, uses the relationships within the Open XML package to find the document and the style parts.</span></span> <span data-ttu-id="634e7-107">그런 다음 문서를 쿼리하여 단락 <xref:System.Xml.Linq.XElement> 노드, 각 단락의 스타일 이름 및 각 단락의 텍스트가 포함된 익명 형식의 컬렉션을 프로젝션합니다.</span><span class="sxs-lookup"><span data-stu-id="634e7-107">It then queries the document, projecting a collection of an anonymous type that contains the paragraph <xref:System.Xml.Linq.XElement> node, the style name of each paragraph, and the text of each paragraph.</span></span>  
   
- <span data-ttu-id="d6b9f-108">이 예제에서는 예제에서도 제공되는 `StringConcatenate`라는 확장 메서드를 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="d6b9f-108">The example uses an extension method named `StringConcatenate`, which is also supplied in the example.</span></span>  
+ <span data-ttu-id="634e7-108">이 예제에서는 예제에서도 제공되는 `StringConcatenate`라는 확장 메서드를 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="634e7-108">The example uses an extension method named `StringConcatenate`, which is also supplied in the example.</span></span>  
   
- <span data-ttu-id="d6b9f-109">이 예제의 작동 방식을 설명 하는 자세한 자습서를 참조 하십시오. [순수 함수 변환의 XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/pure-functional-transformations-of-xml.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="d6b9f-109">For a detailed tutorial that explains how this example works, see [Pure Functional Transformations of XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/pure-functional-transformations-of-xml.md).</span></span>  
+ <span data-ttu-id="634e7-109">이 예제의 작동 방식을 설명 하는 자세한 자습서를 참조 하십시오. [순수 함수 변환의 XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/pure-functional-transformations-of-xml.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="634e7-109">For a detailed tutorial that explains how this example works, see [Pure Functional Transformations of XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/pure-functional-transformations-of-xml.md).</span></span>  
   
- <span data-ttu-id="d6b9f-110">이 예제에서는 WindowsBase 어셈블리의 클래스를 사용하고</span><span class="sxs-lookup"><span data-stu-id="d6b9f-110">This example uses classes found in the WindowsBase assembly.</span></span> <span data-ttu-id="d6b9f-111"><xref:System.IO.Packaging?displayProperty=nameWithType> 네임스페이스의 형식을 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="d6b9f-111">It uses types in the <xref:System.IO.Packaging?displayProperty=nameWithType> namespace.</span></span>  
+ <span data-ttu-id="634e7-110">이 예제에서는 WindowsBase 어셈블리의 클래스를 사용하고</span><span class="sxs-lookup"><span data-stu-id="634e7-110">This example uses classes found in the WindowsBase assembly.</span></span> <span data-ttu-id="634e7-111"><xref:System.IO.Packaging?displayProperty=nameWithType> 네임스페이스의 형식을 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="634e7-111">It uses types in the <xref:System.IO.Packaging?displayProperty=nameWithType> namespace.</span></span>  
   
 ```vb  
 Imports <xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main">  
@@ -161,7 +152,7 @@ Module Module1
 End Module  
 ```  
   
- <span data-ttu-id="d6b9f-112">에 설명 된 샘플 Open XML 문서와 함께 실행할 때 [원본 Office Open XML 문서 (Visual Basic)를 만드는](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md),이 예제는 다음과 같은 출력을 생성 합니다.</span><span class="sxs-lookup"><span data-stu-id="d6b9f-112">When run with the sample Open XML document described in [Creating the Source Office Open XML Document (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md), this example produces the following output:</span></span>  
+ <span data-ttu-id="634e7-112">에 설명 된 샘플 Open XML 문서와 함께 실행할 때 [원본 Office Open XML 문서 (Visual Basic)를 만드는](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md),이 예제는 다음과 같은 출력을 생성 합니다.</span><span class="sxs-lookup"><span data-stu-id="634e7-112">When run with the sample Open XML document described in [Creating the Source Office Open XML Document (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md), this example produces the following output:</span></span>  
   
 ```  
 StyleName:Heading1 >Parsing WordprocessingML with LINQ to XML<  
@@ -181,5 +172,5 @@ StyleName:Normal ><
 StyleName:Code >Hello World<  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="d6b9f-113">참고 항목</span><span class="sxs-lookup"><span data-stu-id="d6b9f-113">See Also</span></span>  
- [<span data-ttu-id="d6b9f-114">고급 쿼리 기술 (LINQ to XML) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="d6b9f-114">Advanced Query Techniques (LINQ to XML) (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/advanced-query-techniques-linq-to-xml.md)
+## <a name="see-also"></a><span data-ttu-id="634e7-113">참고 항목</span><span class="sxs-lookup"><span data-stu-id="634e7-113">See Also</span></span>  
+ [<span data-ttu-id="634e7-114">고급 쿼리 기술 (LINQ to XML) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="634e7-114">Advanced Query Techniques (LINQ to XML) (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/advanced-query-techniques-linq-to-xml.md)
