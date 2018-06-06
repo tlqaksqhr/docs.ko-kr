@@ -6,7 +6,7 @@ ms.openlocfilehash: 2823514bc462f198a43316b40eb05bc1ffed0e72
 ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/02/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "34728669"
 ---
 # <a name="cancel-an-async-task-or-a-list-of-tasks-visual-basic"></a>비동기 작업 또는 작업 (Visual Basic) 목록 취소

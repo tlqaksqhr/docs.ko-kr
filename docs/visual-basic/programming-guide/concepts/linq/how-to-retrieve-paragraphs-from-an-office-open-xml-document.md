@@ -2,18 +2,19 @@
 title: '방법: Office Open XML 문서 (Visual Basic)에서 단락 검색'
 ms.date: 07/20/2015
 ms.assetid: 66053f21-9217-473c-a6f3-a0897be07756
-ms.openlocfilehash: 241971c65bb1569e4df98bc3580dea71428dbf2b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 17d8c0fb9ecd5d3cb7a4f692d25a9f1514696117
+ms.sourcegitcommit: d8bf4976eafe3289275be3811e7cb721bfff7e1e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34753314"
 ---
 # <a name="how-to-retrieve-paragraphs-from-an-office-open-xml-document-visual-basic"></a>방법: Office Open XML 문서 (Visual Basic)에서 단락 검색
 이 항목에서는 Office Open XML 문서를 열고 문서에 있는 모든 단락의 컬렉션을 검색하는 예제를 제공합니다.  
   
- Office Open XML에 대한 자세한 내용은 [www.openxmldeveloper.org](http://go.microsoft.com/fwlink/?LinkID=95573)를 참조하세요.  
+ Office Open XML에 대 한 자세한 내용은 참조 하십시오. [Eric 흰색 블로그](http://www.ericwhite.com)합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  이 예제에서는 Office Open XML 패키지를 열고 Open XML 패키지에서의 관계를 사용하여 문서와 스타일 부분을 찾습니다. 그런 다음 문서를 쿼리하여 단락 <xref:System.Xml.Linq.XElement> 노드, 각 단락의 스타일 이름 및 각 단락의 텍스트가 포함된 익명 형식의 컬렉션을 프로젝션합니다.  
   
  이 예제에서는 예제에서도 제공되는 `StringConcatenate`라는 확장 메서드를 사용합니다.  

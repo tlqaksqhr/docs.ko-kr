@@ -2,18 +2,19 @@
 title: '방법: Office Open XML 문서 (Visual Basic)를 수정 합니다.'
 ms.date: 07/20/2015
 ms.assetid: 1cefd7f5-8e39-44c4-869c-f8021538a777
-ms.openlocfilehash: 97e754f37580af990b1aaa64f389de5cbce91d60
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8d4ecdf89606190eed16b5374a5e43421d1260b7
+ms.sourcegitcommit: d8bf4976eafe3289275be3811e7cb721bfff7e1e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34753395"
 ---
 # <a name="how-to-modify-an-office-open-xml-document-visual-basic"></a>방법: Office Open XML 문서 (Visual Basic)를 수정 합니다.
 이 항목에서는 Office Open XML 문서를 열고, 수정하고, 저장하는 예제를 제공합니다.  
   
- Office Open XML에 대한 자세한 내용은 [www.openxmldeveloper.org](http://go.microsoft.com/fwlink/?LinkID=95573)를 참조하세요.  
+ Office Open XML에 대 한 자세한 내용은 참조 하십시오. [Eric 흰색 블로그](http://www.ericwhite.com)합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  이 예제에서는 문서의 첫 번째 단락 요소를 찾고 단락에서 텍스트를 검색한 다음 단락의 모든 텍스트 실행을 삭제합니다. 또한 대문자로 변환된 첫 번째 단락 텍스트로 구성된 새로운 텍스트 실행을 만들고 변경된 XML을 Open XML 패키지로 serialize한 후 닫습니다.  
   
  이 예제에서는 WindowsBase 어셈블리의 클래스를 사용하고 <xref:System.IO.Packaging?displayProperty=nameWithType> 네임스페이스의 형식을 사용합니다.  

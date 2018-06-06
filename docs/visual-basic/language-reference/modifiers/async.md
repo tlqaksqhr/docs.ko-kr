@@ -7,11 +7,12 @@ helpviewer_keywords:
 - Async [Visual Basic]
 - Async keyword [Visual Basic]
 ms.assetid: 1be8b4b5-9689-41b5-bd33-b906bfd53bc5
-ms.openlocfilehash: 829128ff39c0c5e4f6cb140852228a028e39e69c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 244f468d9432e132c93ae8272d51098f86ad439a
+ms.sourcegitcommit: d8bf4976eafe3289275be3811e7cb721bfff7e1e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34753346"
 ---
 # <a name="async-visual-basic"></a>Async(Visual Basic)
 `Async` 한정자가 나타내는 메서드 또는 [람다 식을](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md) 수정 하는 비동기입니다. 이러한 메서드는 라고 *비동기 메서드에*합니다.  
@@ -54,8 +55,8 @@ End Function
   
  자세한 내용과 예제는 [비동기 반환 형식](../../../visual-basic/programming-guide/concepts/async/async-return-types.md)을 참조하세요.  
   
-## <a name="example"></a>예제  
- 다음 예제는 비동기 이벤트 처리기, 비동기 람다 식 및 비동기 메서드를 보여줍니다. 이러한 요소를 사용 하는 전체 예제를 참조 하십시오. [연습:를 사용 하 여 Async 및 Await 하 여 웹 서비스에 액세스](../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)합니다. [Async Sample: Accessing the Web Walkthrough (C# and Visual Basic)](http://go.microsoft.com/fwlink/?LinkId=255191)(비동기 샘플: 웹 액세스 연습(C# 및 Visual Basic))에서 연습 코드를 다운로드할 수 있습니다.  
+## <a name="example"></a>예  
+ 다음 예제는 비동기 이벤트 처리기, 비동기 람다 식 및 비동기 메서드를 보여줍니다. 이러한 요소를 사용 하는 전체 예제를 참조 하십시오. [연습:를 사용 하 여 Async 및 Await 하 여 웹 서비스에 액세스](../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)합니다. [Async Sample: Accessing the Web Walkthrough (C# and Visual Basic)](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f)(비동기 샘플: 웹 액세스 연습(C# 및 Visual Basic))에서 연습 코드를 다운로드할 수 있습니다.  
   
 ```vb  
 ' An event handler must be a Sub procedure.  

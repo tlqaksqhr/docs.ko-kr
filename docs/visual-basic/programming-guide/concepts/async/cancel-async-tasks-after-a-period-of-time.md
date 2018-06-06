@@ -6,7 +6,7 @@ ms.openlocfilehash: f91fffd9bfcd66833ca3233251914868bf3b84de
 ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/02/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "34728695"
 ---
 # <a name="cancel-async-tasks-after-a-period-of-time-visual-basic"></a>(Visual Basic) 기간 이후 비동기 작업 취소

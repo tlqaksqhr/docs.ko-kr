@@ -2,16 +2,17 @@
 title: '자습서: WordprocessingML 문서 (Visual Basic)에서 내용 조작'
 ms.date: 07/20/2015
 ms.assetid: f8028ba8-2dd1-4425-930c-8cc23176ebbc
-ms.openlocfilehash: f43f193ed637656cef98583075ae0cb35e93c337
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 18008ebdf7f8d2bb3ca7abcc157109c9dc9c1ffe
+ms.sourcegitcommit: d8bf4976eafe3289275be3811e7cb721bfff7e1e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34753437"
 ---
 # <a name="tutorial-manipulating-content-in-a-wordprocessingml-document-visual-basic"></a>자습서: WordprocessingML 문서 (Visual Basic)에서 내용 조작
 이 자습서에서는 함수 변환 방법과 LINQ to XML을 적용하여 XML 문서를 조작하는 방법을 보여 줍니다. Visual Basic 예제 쿼리 및 Microsoft Word가 저장 된 Office Open XML WordprocessingML 문서에서 정보를 조작 합니다.  
   
- 자세한 내용은 [OpenXML Developer](http://go.microsoft.com/fwlink/?LinkID=95573) 웹 사이트를 참조하세요.  
+ 자세한 내용은 참조는 [Eric 흰색 블로그](http://www.ericwhite.com)합니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
   

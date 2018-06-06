@@ -6,7 +6,7 @@ ms.openlocfilehash: 22fbe8086ec133605e1d9b4b28e524fe2ed8ac28
 ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/02/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "34728536"
 ---
 # <a name="get-started-with-f-in-visual-studio"></a>Visual Studio에서 F #으로 시작.

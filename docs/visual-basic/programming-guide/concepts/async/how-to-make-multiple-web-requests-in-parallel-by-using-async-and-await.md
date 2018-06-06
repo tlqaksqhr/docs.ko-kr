@@ -6,7 +6,7 @@ ms.openlocfilehash: 4d4ccda6657dd4d889e8495fa000715c1f7a5ba6
 ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/02/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "34728445"
 ---
 # <a name="how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await-visual-basic"></a>방법: Async를 사용 하 여 병렬로 여러 웹 요청 만들기 및 Await (Visual Basic)
