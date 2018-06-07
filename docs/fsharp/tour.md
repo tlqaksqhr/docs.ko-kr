@@ -2,11 +2,12 @@
 title: 'F # 둘러보기'
 description: 'F # 프로그래밍 언어에서이 둘러보기는 샘플 코드의 주요 기능 중 일부를 검사 합니다.'
 ms.date: 02/28/2018
-ms.openlocfilehash: 2ce251b90d5c202996e0b1673e8f7f378a38af5f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 63c38d59376a148c439482fcf47488fc72b7b8aa
+ms.sourcegitcommit: d8bf4976eafe3289275be3811e7cb721bfff7e1e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34753489"
 ---
 # <a name="tour-of-f"></a>F # 둘러보기 #
 
@@ -54,11 +55,11 @@ F # 4.1을 기준으로 만들 수도 있습니다 `struct` 튜플 합니다.  �
 
 ## <a name="pipelines-and-composition"></a>파이프라인 및 구성
 
-연산자는 파이프 (`|>`, `<|`, `||>`, `<||`, `|||>`, `<|||`)와 컴퍼지션 연산자 (`>>` 및 `<<`) F #에서 데이터를 처리할 때 널리 사용 됩니다.  이러한 연산자는 유연한 방식 "파이프라인" 함수를 설정할 수 있는 함수입니다.  다음 예제에서는 간단한 기능 파이프라인 빌드를 이러한 연산자를 활용할 수 있습니다는 방법을 안내 합니다.
+연산자와 같은 파이프할 `|>` F #에서 데이터를 처리할 때 널리 사용 됩니다. 이러한 연산자는 유연한 방식 "파이프라인" 함수를 설정할 수 있도록 하는 함수입니다. 다음 예제에서는 있습니다 사용할 수 있는 방법을 이러한 연산자는 간단한 기능 파이프라인 빌드를 안내 합니다.
 
-[!code-fsharp[Pipelines](../../samples/snippets/fsharp/tour.fs#L227-L300)]
+[!code-fsharp[Pipelines](../../samples/snippets/fsharp/tour.fs#L227-L282)]
 
-만든 위의 샘플 목록 처리 함수를 첫 번째 클래스 기능을 포함 하 여 F #의 여러 기능을 사용 하 고 [부분 응용 프로그램](language-reference/functions/index.md#partial-application-of-arguments)합니다.  각 이러한 개념에 대 한 심층적 이해가, 다소 고급 될 수 있지만 명확 해야 얼마나 쉽게 파이프라인을 만들 때 데이터를 처리 하기 위해 함수를 사용할 수 있습니다.
+이전에 만든 샘플 목록 처리 함수를 첫 번째 클래스 기능을 포함 하 여 F #의 여러 기능을 사용 하 고 [부분 응용 프로그램](language-reference/functions/index.md#partial-application-of-arguments)합니다. 각 이러한 개념에 대 한 심층적 이해가, 다소 고급 될 수 있지만 명확 해야 얼마나 쉽게 파이프라인을 만들 때 데이터를 처리 하기 위해 함수를 사용할 수 있습니다.
 
 ## <a name="lists-arrays-and-sequences"></a>목록, 배열 및 시퀀스
 
