@@ -12,18 +12,19 @@ helpviewer_keywords:
 - queries [LINQ in Visual Basic], data changes in database
 - queries [LINQ in Visual Basic], how-to topics
 ms.assetid: cf52635f-0c1b-46c3-aff1-bdf181cf19b1
-ms.openlocfilehash: c0c00c15756ab4d488096d4311bb47986a5eb25e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 617bb62f9009c507658b5d1262657cb4dfa860e9
+ms.sourcegitcommit: d955cb4c681d68cf301d410925d83f25172ece86
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34827113"
 ---
 # <a name="how-to-modify-data-in-a-database-by-using-linq-visual-basic"></a>방법: LINQ를 사용하여 데이터베이스의 데이터 수정(Visual Basic)
 통합 언어 쿼리 (LINQ) 쿼리 쉽게 데이터베이스 정보를 액세스 및 데이터베이스의 값을 수정 합니다.  
   
  다음 예제에서는 SQL Server 데이터베이스에서를 검색 하는 새 응용 프로그램을 만드는 방법과 업데이트 정보를 보여 줍니다.  
   
- 이 항목의 예제에서는 Northwind 샘플 데이터베이스를 사용합니다. 개발 컴퓨터에 Northwind 샘플 데이터베이스가 없는 경우에서 다운로드할 수 있습니다는 [Microsoft 다운로드 센터](http://go.microsoft.com/fwlink/?LinkID=98088) 웹 사이트입니다. 자세한 내용은 [샘플 데이터베이스 다운로드](../../../../framework/data/adonet/sql/linq/downloading-sample-databases.md)합니다.  
+ 이 항목의 예제에서는 Northwind 샘플 데이터베이스를 사용합니다. 개발 컴퓨터에이 데이터베이스가 없는 경우에 Microsoft 다운로드 센터에서 다운로드할 수 있습니다. 자세한 내용은 [샘플 데이터베이스 다운로드](../../../../framework/data/adonet/sql/linq/downloading-sample-databases.md)합니다.  
   
 ### <a name="to-create-a-connection-to-a-database"></a>데이터베이스에 연결을 만들려면  
   
