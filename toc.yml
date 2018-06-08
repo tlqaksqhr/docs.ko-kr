@@ -216,7 +216,7 @@
               topicHref: /dotnet/framework/performance/index
             - name: .NET Framework의 동적 프로그래밍
               tocHref: /dotnet/framework/reflection-and-codedom/
-              topicHref: /dotnet/framework/framework/reflection-and-codedom/index
+              topicHref: /dotnet/framework/reflection-and-codedom/index
             - name: 데스크톱 응용 프로그램의 리소스
               tocHref: /dotnet/framework/resources/
               topicHref: /dotnet/framework/resources/index
