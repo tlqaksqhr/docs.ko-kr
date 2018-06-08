@@ -6,11 +6,12 @@ helpviewer_keywords:
 - Visual Basic
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ce1c9aa868636181a8dd4e59e61d3ed82c89c217
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 03c9c118104f6fe3196d0a4bb13d28a6a122d859
+ms.sourcegitcommit: fc70fcb9c789b6a4aefcdace46f3643fd076450f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/06/2018
+ms.locfileid: "34805544"
 ---
 # <a name="visual-basic-guide"></a>Visual Basic 가이드
 
@@ -51,5 +52,5 @@ Visual Basic은 형식이 안전한 개체 지향 응용 프로그램을 생산�
  [Visual Studio에서 개발 시작](/visualstudio/ide/get-started-developing-with-visual-studio)  
  Visual Studio의 기본에 대해 알아보는 데 도움이 되는 항목의 링크를 제공합니다.  
   
- [.NET Framework 클래스 라이브러리](http://go.microsoft.com/fwlink/?LinkID=227195)  
+ [.NET API 브라우저](../../api/index.md)  
  Microsoft [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] SDK에 포함된 클래스, 인터페이스, 값 형식 라이브러리에 대한 입문 정보를 제공합니다.
