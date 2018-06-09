@@ -2,11 +2,12 @@
 title: 'F # 코드 지침 서식 지정'
 description: 'F # 코드의 서식을 지정 하기 위한 지침에 알아봅니다.'
 ms.date: 05/14/2018
-ms.openlocfilehash: 1433b6891a6a0ddcdc082c141365ae54fa40c27b
-ms.sourcegitcommit: 22c3c8f74eaa138dbbbb02eb7d720fce87fc30a9
+ms.openlocfilehash: 6c8e4059fd4bf1e7450118a6df02609217c4f4db
+ms.sourcegitcommit: 2ad7d06f4f469b5d8a5280ac0e0289a81867fc8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/17/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35231511"
 ---
 # <a name="f-code-formatting-guidelines"></a>F # 코드 지침 서식 지정
 
@@ -29,6 +30,177 @@ F # 유효한 공백 기본적으로 사용합니다. 다음 지침은이 적용
 **들여쓰기 당 4 개의 공백을 사용 하는 것이 좋습니다.**
 
 즉, 프로그램의 들여쓰기는 주관적인 문제. 변형 [확인]을 있지만 따라야 하는 첫 번째 규칙은 *들여쓰기의 일관성*합니다. 들여쓰기의 일반적으로 허용 되는 스타일을 선택 하면 코드 베이스에서 체계적으로 사용 합니다.
+
+## <a name="formatting-blank-lines"></a>빈 줄에 서식 지정
+
+* 별도 최상위 함수 및 클래스 정의 두 개의 빈 줄만 작성 합니다.
+* 클래스 내의 메서드 정의 단일 줄으로 구분 됩니다.
+* 빈 줄을 별도의 관련 된 기능 그룹 (드물게) 사용할 수 있습니다. 다양 한 관련된 one-liners (예를 들어 더미 구현 집합) 사이의 빈 줄을 생략할 수 있습니다.
+* 논리적 섹션을 나타내기 위해 함수에서 빈 줄을 제한적으로 사용, 사용 합니다.
+
+## <a name="formatting-comments"></a>서식 주석
+
+일반적으로 ML 스타일 블록 주석을 통해 여러 이중 슬래시 의견을 선호 합니다.
+
+```fsharp
+// Prefer this style of comments when you want
+// to express written ideas on multiple lines.
+
+(*
+    ML-style comments are fine, but not a .NET-ism.
+    They are useful when needing to modify multi-line comments, though.
+*)
+```
+
+인라인 주석 첫 번째 글자를 대문자로 지정 해야 합니다.
+
+```fsharp
+let f x = x + 1 // Increment by one.
+```
+
+## <a name="naming-conventions"></a>명명 규칙
+
+### <a name="use-camelcase-for-class-bound-expression-bound-and-pattern-bound-values-and-functions"></a>CamelCase 클래스 바인딩, 바인딩 식 및 패턴 바인딩된 값 및 함수에 대 한 사용
+
+일반적인 바인딩되고 camelCase 모든 이름에 대해 사용 하도록 허용 된 F # 스타일 또는 패턴 일치 및 함수 정의에 지역 변수입니다.
+
+```fsharp
+// OK
+let addIAndJ i j = i + j
+
+// Bad
+let addIAndJ I J = I+J
+
+// Bad
+let AddIAndJ i j = i + j
+```
+
+클래스의 바인딩된 로컬로 함수 camelCase 또한 사용 해야 합니다.
+
+```fsharp
+type MyClass() =
+
+    let doSomething () =
+
+    let firstResult = ...
+
+    let secondResult = ...
+
+    member x.Result = doSomething()
+```
+
+### <a name="use-camelcase-for-module-bound-public-functions"></a>CamelCase를 사용 하 여 모듈 바인딩된 공용 함수에 대 한
+
+모듈 바인딩된 함수 공용 API의 일부일 때 camelCase 사용 해야 합니다.
+
+```fsharp
+module MyAPI =
+    let publicFunctionOne param1 param2 param2 = ...
+
+    let publicFunctionTwo param1 param2 param3 = ...
+```
+
+### <a name="use-camelcase-for-internal-and-private-module-bound-values-and-functions"></a>CamelCase를 사용 하 여 내부 및 개인 모듈 바인딩된 값 및 함수에 대 한
+
+다음을 포함 하는 개인 모듈 바인딩된 값에 대 한 camelCase를 사용 합니다.
+
+* 스크립트에서 임시 함수
+
+* 형식 또는 모듈의 내부 구현을 구성 하는 값
+
+```fsharp
+let emailMyBossTheLatestResults =
+    ...
+```
+
+### <a name="use-camelcase-for-parameters"></a>매개 변수에 대 한 camelCase를 사용 하 여
+
+모든 매개 변수는 camelCase.NET 명명 규칙에 따라 사용 해야 합니다.
+
+```fsharp
+module MyModule =
+    let myFunction paramOne paramTwo = ...
+
+type MyClass() =
+    member this.MyMethod(paramOne, paramTwo) = ...
+```
+
+### <a name="use-pascalcase-for-modules"></a>모듈에 대 한 표시 방법이 PascalCase를 사용 하 여
+
+모든 모듈 (예: 최상위, 내부, 개인, 중첩 된) 표시 방법이 PascalCase 사용 해야 합니다.
+
+```fsharp
+module MyTopLevelModule
+
+module Helpers =
+    module private SuperHelpers =
+        ...
+
+    ...
+```
+
+### <a name="use-pascalcase-for-type-declarations-members-and-labels"></a>형식 선언, 멤버 및 레이블 표시 방법이 PascalCase 사용
+
+클래스, 인터페이스, 구조체, 열거형, 대리자, 레코드 및 구분 된 공용 구조체 모두 표시 방법이 PascalCase로 지정 합니다. 또한 형식 및 레코드 및 구분 된 공용 구조체에 대 한 레이블 내에서 멤버 표시 방법이 PascalCase를 사용 해야 합니다.
+
+```fsharp
+type IMyInterface =
+    abstract Something: int
+
+type MyClass() =
+    member this.MyMethod(x, y) = x + y
+
+type MyRecord = { IntVal: int; StringVal: string }
+
+type SchoolPerson =
+    | Professor
+    | Student
+    | Advisor
+    | Administrator
+```
+
+### <a name="use-pascalcase-for-constructs-intrinsic-to-net"></a>.NET 내장 구문에 대 한 표시 방법이 PascalCase를 사용 하 여
+
+네임 스페이스, 예외, 이벤트 및 프로젝트 /`.dll` 이름 표시 방법이 PascalCase에도 사용 해야 합니다. 뿐만 아니라 소비자에 게 더 자연 스러운 생각 하는 다른.NET 언어에서 소비 되셨나요는 발생할 가능성이 있는.NET 명명 규칙과 일치 이기도 합니다.
+
+### <a name="avoid-underscores-in-names"></a>이름에 밑줄이 방지
+
+지금까지 일부 F # 라이브러리 이름에 밑줄을 사용 했습니다. 그러나이 더 이상 광범위 하 게 수락 거의.NET 명명 규칙와 충돌 하기 때문입니다. 즉, 일부 F # 프로그래머가 사용 밑줄 과도 하 게, 부분적으로 지금 및 내결함성 및 존중이 중요 합니다. 그러나 다른 사용 여부에 대 한 선택 옵션이 사용자 스타일은 종종 사이가 있는지 알아야 합니다.
+
+일부 예외는 밑줄을 매우 자주 네이티브 구성 요소와의 상호 운용 포함 되어 있습니다.
+
+### <a name="use-standard-f-operators"></a>표준 F # 연산자를 사용 하 여
+
+다음과 같은 연산자 F # 표준 라이브러리에 정의 되 고 해당 항목을 정의 하는 대신 사용 해야 합니다. 이러한 연산자를 사용 하 여 코드를 더 쉽게 읽고 관용구는 것으로 확인 하는 대로 좋습니다. 백그라운드 OCaml 또는 다른 함수형 프로그래밍 언어에서 개발자가 익숙한 다른 관용구 수 있습니다. 다음 목록에는 권장 되는 F # 연산자 요약 되어 있습니다.
+
+```fsharp
+x |> f // Forward pipeline
+f >> g // Forward composition
+x |> ignore // Discard away a value
+x + y // Overloaded addition (including string concatenation)
+x - y // Overloaded subtraction
+x * y // Overloaded multiplication
+x / y // Overloaded division
+x % y // Overloaded modulus
+x && y // Lazy/short-cut "and"
+x || y // Lazy/short-cut "or"
+x <<< y // Bitwise left shift
+x >>> y // Bitwise right shift
+x ||| y // Bitwise or, also for working with “flags” enumeration
+x &&& y // Bitwise and, also for working with “flags” enumeration
+x ^^^ y // Bitwise xor, also for working with “flags” enumeration
+```
+
+### <a name="use-prefix-syntax-for-generics-foot-in-preference-to-postfix-syntax-t-foo"></a>제네릭에 대 한 접두사 구문을 사용 하 여 (`Foo<T>`) 후 위 구문 대신 (`T Foo`)
+
+F # 제네릭 형식 명명의 두는 후 위 ML 스타일을 상속 합니다. (예를 들어 `int list`) 접두사.NET 스타일 뿐만 아니라 (예를 들어 `list<int>`). .NET 스타일 4 개의 특정 형식 제외 하 고 선호 합니다.
+
+1. 후 위 형태를 사용 하 여 F # 목록에 대 한: `int list` 대신 `list<int>`합니다.
+2. F # 옵션에 대해 후 위 형태를 사용 하 여: `int option` 대신 `option<int>`합니다.
+3. F # 배열에 대해 구문 이름을 사용 하 여 `int[]` 대신 `int array` 또는 `array<int>`합니다.
+4. 사용 하 여 참조 셀에 대 한 `int ref` 대신 `ref<int>` 또는 `Ref<int>`합니다.
+
+다른 모든 형식에 대 한 전위 형태를 사용 합니다.
 
 ## <a name="formatting-discriminated-union-declarations"></a>구별 된 공용 구조체 선언 서식 지정
 
@@ -198,7 +370,7 @@ else e4
 
 ### <a name="pattern-matching-constructs"></a>패턴 일치 하는 구문
 
-사용 하 여 한 `|` 없는 오목한 부분이 있는 일치 항목의 각 절에 대 한 합니다. 식이 짧은 경우에 한 줄을 사용할 수 있습니다.
+사용 하 여 한 `|` 없는 오목한 부분이 있는 일치 항목의 각 절에 대 한 합니다. 식이 짧은 경우에 각 하위 식 단순 이기도 한 경우 한 줄을 사용 하 여 고려할 수 있습니다.
 
 ```fsharp
 // OK
@@ -212,9 +384,6 @@ match l with
     | { him = x; her = "Posh" } :: tail -> _
     | _ :: tail -> findDavid tail
     | [] -> failwith "Couldn't find David"
-
-// OK
-match l with [] -> false | _ :: _ -> true
 ```
 
 패턴 일치 화살표 오른쪽의 식이 너무 클 경우 다음 줄에서 한 단계를 보다 한 수준된으로 이동 된 `match` / `|`합니다.
@@ -291,20 +460,23 @@ let printVolumes x =
         (convertVolumeImperialPint x)
 ```
 
-익명 함수 인수는 다음 줄에서 또는 현 수와 가능 `fun` 인수 줄에:
+람다 식에 대 한 함수 인수 동일한 지침이 적용 됩니다. 본문 람다 식의 본문에서 또 한 줄에 넣을 수 있는 경우 한 범위를 들여씁니다.
 
 ```fsharp
-// OK
 let printListWithOffset a list1 =
-    List.iter (fun elem ->
-        printfn "%d" (a + elem)) list1
+    List.iter
+        (fun elem -> printfn "%d" (a + elem))
+        list1
 
-// OK, but prefer previous
+// OK if lambda body is long enough
 let printListWithOffset a list1 =
-    List.iter (
-        fun elem ->
-            printfn "%d" (a + elem)) list1
+    List.iter
+        (fun elem ->
+            printfn "%d" (a + elem))
+        list1
 ```
+
+그러나 둘 이상의 줄 람다 식의 본문을 사용 하는 경우 아웃을 별도 함수로 팩터링 하는 것이 좋습니다. 것 보다 하나의 인수로 함수에 적용 하는 여러 줄 구문입니다.
 
 ### <a name="formatting-infix-operators"></a>서식 지정 중 위 연산자
 
@@ -402,162 +574,3 @@ let makeStreamReader x = new System.IO.StreamReader(path=x)
 // Not OK
 let makeStreamReader x = new System.IO.StreamReader(path = x)
 ```
-
-## <a name="formatting-blank-lines"></a>빈 줄에 서식 지정
-
-* 별도 최상위 함수 및 클래스 정의 두 개의 빈 줄만 작성 합니다.
-* 클래스 내의 메서드 정의 단일 줄으로 구분 됩니다.
-* 빈 줄을 별도의 관련 된 기능 그룹 (드물게) 사용할 수 있습니다. 다양 한 관련된 one-liners (예를 들어 더미 구현 집합) 사이의 빈 줄을 생략할 수 있습니다.
-* 논리적 섹션을 나타내기 위해 함수에서 빈 줄을 제한적으로 사용, 사용 합니다.
-
-## <a name="formatting-comments"></a>서식 주석
-
-일반적으로 ML 스타일 블록 주석을 통해 여러 이중 슬래시 의견을 선호 합니다.
-
-```fsharp
-// Prefer this style of comments when you want
-// to express written ideas on multiple lines.
-
-(*
-    Generally avoid these kinds of comments.
-*)
-```
-
-인라인 주석 첫 번째 글자를 대문자로 지정 해야 합니다.
-
-```fsharp
-let f x = x + 1 // Increment by one.
-```
-
-## <a name="naming-conventions"></a>명명 규칙
-
-### <a name="use-camelcase-for-class-bound-expression-bound-and-pattern-bound-values-and-functions"></a>CamelCase 클래스 바인딩, 바인딩 식 및 패턴 바인딩된 값 및 함수에 대 한 사용
-
-일반적인 바인딩되고 camelCase 모든 이름에 대해 사용 하도록 허용 된 F # 스타일 또는 패턴 일치 및 함수 정의에 지역 변수입니다.
-
-```fsharp
-// OK
-let addIAndJ i j = i + j
-
-// Bad
-let addIAndJ I J = I+J
-
-// Bad
-let AddIAndJ i j = i + j
-```
-
-클래스의 바인딩된 로컬로 함수 camelCase 또한 사용 해야 합니다.
-
-```fsharp
-type MyClass() =
-
-    let doSomething () =
-
-    let firstResult = ...
-
-    let secondResult = ...
-
-    member x.Result = doSomething()
-```
-
-### <a name="use-camelcase-for-internal-and-private-module-bound-values-and-functions"></a>CamelCase를 사용 하 여 내부 및 개인 모듈 바인딩된 값 및 함수에 대 한
-
-다음을 포함 하는 개인 모듈 바인딩된 값에 대 한 camelCase를 사용 합니다.
-
-* 스크립트에서 임시 함수
-
-* 형식 또는 모듈의 내부 구현을 구성 하는 값
-
-```fsharp
-let emailMyBossTheLatestResults =
-    ...
-```
-
-### <a name="use-camelcase-for-parameters"></a>매개 변수에 대 한 camelCase를 사용 하 여
-
-모든 매개 변수는 camelCase.NET 명명 규칙에 따라 사용 해야 합니다.
-
-```fsharp
-module MyModule =
-    let myFunction paramOne paramTwo = ...
-
-type MyClass() =
-    member this.MyMethod(paramOne, paramTwo) = ...
-```
-
-### <a name="use-pascalcase-for-modules"></a>모듈에 대 한 표시 방법이 PascalCase를 사용 하 여
-
-모든 모듈 (예: 최상위, 내부, 개인, 중첩 된) 표시 방법이 PascalCase 사용 해야 합니다.
-
-```fsharp
-module MyTopLevelModule
-
-module Helpers =
-    module private SuperHelpers =
-        ...
-
-    ...
-```
-
-### <a name="use-pascalcase-for-type-declarations-members-and-labels"></a>형식 선언, 멤버 및 레이블 표시 방법이 PascalCase 사용
-
-클래스, 인터페이스, 구조체, 열거형, 대리자, 레코드 및 구분 된 공용 구조체 모두 표시 방법이 PascalCase로 지정 합니다. 또한 형식 및 레코드 및 구분 된 공용 구조체에 대 한 레이블 내에서 멤버 표시 방법이 PascalCase를 사용 해야 합니다.
-
-```fsharp
-type IMyInterface =
-    abstract Something: int
-
-type MyClass() =
-    member this.MyMethod(x, y) = x + y
-
-type MyRecord = { IntVal: int; StringVal: string }
-
-type SchoolPerson =
-    | Professor
-    | Student
-    | Advisor
-    | Administrator
-```
-
-### <a name="use-pascalcase-for-constructs-intrinsic-to-net"></a>.NET 내장 구문에 대 한 표시 방법이 PascalCase를 사용 하 여
-
-네임 스페이스, 예외, 이벤트 및 프로젝트 /`.dll` 이름 표시 방법이 PascalCase에도 사용 해야 합니다. 뿐만 아니라 소비자에 게 더 자연 스러운 생각 하는 다른.NET 언어에서 소비 되셨나요는 발생할 가능성이 있는.NET 명명 규칙과 일치 이기도 합니다.
-
-### <a name="avoid-underscores-in-names"></a>이름에 밑줄이 방지
-
-지금까지 일부 F # 라이브러리 이름에 밑줄을 사용 했습니다. 그러나이 더 이상 광범위 하 게 수락 거의.NET 명명 규칙와 충돌 하기 때문입니다. 즉, 일부 F # 프로그래머가 사용 밑줄 과도 하 게, 부분적으로 지금 및 내결함성 및 존중이 중요 합니다. 그러나 다른 사용 여부에 대 한 선택 옵션이 사용자 스타일은 종종 사이가 있는지 알아야 합니다.
-
-일부 예외는 밑줄을 매우 자주 네이티브 구성 요소와의 상호 운용 포함 되어 있습니다.
-
-### <a name="use-standard-f-operators"></a>표준 F # 연산자를 사용 하 여
-
-다음과 같은 연산자 F # 표준 라이브러리에 정의 되 고 해당 항목을 정의 하는 대신 사용 해야 합니다. 이러한 연산자를 사용 하 여 코드를 더 쉽게 읽고 관용구는 것으로 확인 하는 대로 좋습니다. 백그라운드 OCaml 또는 다른 함수형 프로그래밍 언어에서 개발자가 익숙한 다른 관용구 수 있습니다. 다음 목록에는 권장 되는 F # 연산자 요약 되어 있습니다.
-
-```fsharp
-x |> f // Forward pipeline
-f >> g // Forward composition
-x |> ignore // Throwing away a value
-x + y // Overloaded addition (including string concatenation)
-x - y // Overloaded subtraction
-x * y // Overloaded multiplication
-x / y // Overloaded division
-x % y // Overloaded modulus
-x && y // Lazy/short-cut "and"
-x || y // Lazy/short-cut "or"
-x <<< y // Bitwise left shift
-x >>> y // Bitwise right shift
-x ||| y // Bitwise or, also for working with “flags” enumeration
-x &&& y // Bitwise and, also for working with “flags” enumeration
-x ^^^ y // Bitwise xor, also for working with “flags” enumeration
-```
-
-### <a name="use-prefix-syntax-for-generics-foot-in-preference-to-postfix-syntax-t-foo"></a>제네릭에 대 한 접두사 구문을 사용 하 여 (`Foo<T>`) 후 위 구문 대신 (`T Foo`)
-
-F # 제네릭 형식 명명의 두는 후 위 ML 스타일을 상속 합니다. (예를 들어 `int list`) 접두사.NET 스타일 뿐만 아니라 (예를 들어 `list<int>`). .NET 스타일 4 개의 특정 형식 제외 하 고 선호 합니다.
-
-1. 후 위 형태를 사용 하 여 F # 목록에 대 한: `int list` 대신 `list<int>`합니다.
-2. F # 옵션에 대해 후 위 형태를 사용 하 여: `int option` 대신 `option<int>`합니다.
-3. F # 배열에 대해 구문 이름을 사용 하 여 `int[]` 대신 `int array` 또는 `array<int>`합니다.
-4. 사용 하 여 참조 셀에 대 한 `int ref` 대신 `ref<int>` 또는 `Ref<int>`합니다.
-
-다른 모든 형식에 대 한 전위 형태를 사용 합니다.

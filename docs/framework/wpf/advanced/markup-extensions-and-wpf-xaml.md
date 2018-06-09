@@ -15,11 +15,12 @@ helpviewer_keywords:
 - characters [WPF], curly brace
 - DynamicResource markup extensions [WPF]
 ms.assetid: 618dc745-8b14-4886-833f-486d2254bb78
-ms.openlocfilehash: e2fb1e64f957b49743d8dfb19091bca50303e2d2
-ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
+ms.openlocfilehash: 907d5dcaae8f6e09902c2b3548d5ba8ac9a2b077
+ms.sourcegitcommit: 6c480773ae896f45af4671fb3e26611a50e4dd81
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 06/09/2018
+ms.locfileid: "35251170"
 ---
 # <a name="markup-extensions-and-wpf-xaml"></a>태그 확장명 및 WPF XAML
 이 항목에서는 XAML 태그 확장의 구문 규칙, 용도, 기반이 되는 클래스 개체 모델 등을 비롯한 개념에 대해 소개합니다. 태그 확장은 XAML 언어의 일반적 기능이며 XAML 서비스에 대한 .NET 구현의 일반적 기능입니다. 이 항목에서는 WPF XAML에서 사용할 태그 확장에 대해 자세히 설명합니다.  
@@ -41,7 +42,7 @@ ms.lasthandoff: 05/23/2018
 ## <a name="xaml-defined-markup-extensions"></a>XAML 정의 태그 확장명  
  XAML의 WPF 구현과 관련되지 않고 대신 XAML의 내장 형식 또는 기능 구현에서 언어로 사용되는 몇 가지 태그 확장도 있습니다. 이러한 태그 확장은 System.Xaml 어셈블리에 일반적인 .NET Framework XAML 서비스의 일부로 구현되어 있으며, XAML 언어 XAML 네임스페이스 내에 있습니다. 일반적인 태그 사용법에서 볼 수 있는 것처럼 이러한 태그 확장은 대개 사용법에서 `x:` 접두사로 식별됩니다. <xref:System.Windows.Markup.MarkupExtension> (System.Xaml에 정의) 기본 클래스에서 XAML 판독기 및 XAML 작성기를 WPF XAML에서 포함 하 여 지원을 받으려면 모든 태그 확장 사용 해야 하는 패턴을 제공 합니다.  
   
--   `x:Type` 은 명명된 형식에 <xref:System.Type> 개체를 제공합니다. 이 기능은 스타일 및 템플릿에서 가장 많이 사용됩니다. 자세한 내용은 [x:Type 태그 확장](../../../../docs/framework/xaml-services/x-type-markup-extension.md)을 참조하세요.  
+-   `x:Type`은 명명된 형식에 <xref:System.Type> 개체를 제공합니다. 이 기능은 스타일 및 템플릿에서 가장 많이 사용됩니다. 자세한 내용은 [x:Type 태그 확장](../../../../docs/framework/xaml-services/x-type-markup-extension.md)을 참조하세요.  
   
 -   `x:Static`은 정적 값을 생성합니다. 값은 직접적으로 대상 속성 값의 형식이 아니라 해당 형식으로 계산될 수 있는 값-형식 코드 엔터티에서 생성됩니다. 자세한 내용은 [x:Static 태그 확장](../../../../docs/framework/xaml-services/x-static-markup-extension.md)을 참조하세요.  
   
@@ -88,7 +89,7 @@ ms.lasthandoff: 05/23/2018
 -   구분된 개별 토큰에 등호가 포함되지 않은 경우 각 토큰은 생성자 인수로 처리됩니다. 각 생성자 매개 변수는 해당 시그니처에 필요한 형식과 순서로 지정되어야 합니다.  
   
     > [!NOTE]
-    >  XAML 프로세서는 여러 쌍 중 인수 수가 일치하는 생성자를 호출해야 합니다. 이러한 이유 때문에 사용자 지정 태그 확장을 구현할 경우 인수 수가 동일한 매개 변수를 여러 개 제공하지 않습니다. 매개 변수 수가 동일한 태그 확장 생성자 경로가 둘 이상 있을 때의 XAML 프로세서 동작은 정의되어 있지 않지만, 태그 확장 형식 정의에 이 상황이 있는 경우 XAML 프로세서에서 사용에 대한 예외를 throw할 수 있다고 예상해야 합니다.  
+    >  XAML 프로세서는 여러 쌍 중 인수 수가 일치하는 생성자를 호출해야 합니다. 이러한 이유로 사용자 지정 태그 확장을 구현 하는 경우 제공 하지 않습니다 여러 생성자 인수 수가 동일한. 매개 변수 수가 동일한 태그 확장 생성자 경로가 둘 이상 있을 때의 XAML 프로세서 동작은 정의되어 있지 않지만, 태그 확장 형식 정의에 이 상황이 있는 경우 XAML 프로세서에서 사용에 대한 예외를 throw할 수 있다고 예상해야 합니다.  
   
 -   구분된 개별 토큰에 등호가 있으면 XAML 프로세서는 먼저 태그 확장의 기본 생성자를 호출합니다. 그런 다음 각 이름=값 쌍이 태그 확장에 존재하는 속성 이름과 해당 속성에 할당할 값으로 해석됩니다.  
   
