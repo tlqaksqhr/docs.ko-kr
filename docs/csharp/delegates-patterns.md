@@ -3,11 +3,12 @@ title: 대리자에 대한 일반적인 패턴
 description: 코드에서 대리자를 사용하여 구성 요소 간의 강력한 결합을 방지하기 위한 일반적인 패턴에 대해 알아봅니다.
 ms.date: 06/20/2016
 ms.assetid: 0ff8fdfd-6a11-4327-b061-0f2526f35b43
-ms.openlocfilehash: fceab2b9c6bbd1d687566820366459ec57ae7a2d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 20d55a1aba345b962c506bbc3f82248a817923ea
+ms.sourcegitcommit: d955cb4c681d68cf301d410925d83f25172ece86
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34827022"
 ---
 # <a name="common-patterns-for-delegates"></a>대리자에 대한 일반적인 패턴
 
@@ -27,7 +28,7 @@ var smallNumbers = numbers.Where(n => n < 10);
 Where 메서드의 프로토타입은 다음과 같습니다.
 
 ```csharp
-public static IEnumerable<TSource> Where<in TSource> (IEnumerable<TSource> source, Func<TSource, bool> predicate);
+public static IEnumerable<TSource> Where<TSource> (this IEnumerable<TSource> source, Func<TSource, bool> predicate);
 ```
 
 이 예제에서는 LINQ의 일부인 모든 메서드가 반복됩니다. 이러한 메서드는 모두 특정 쿼리를 관리하는 코드에 대해 대리자를 사용합니다. 이 API 디자인 패턴은 매우 간단하게 배우고 이해할 수 있습니다.
@@ -53,32 +54,15 @@ public static IEnumerable<TSource> Where<in TSource> (IEnumerable<TSource> sourc
 
 작은 규모로 시작해 보겠습니다. 초기 구현에서는 새 메시지를 수락하고 연결된 대리자를 사용하여 메시지를 기록합니다. 메시지를 콘솔에 기록하는 대리자에서 시작할 수 있습니다.
 
-```csharp
-public static class Logger
-{
-    public static Action<string> WriteMessage;
-    
-    public static void LogMessage(string msg)
-    {
-        WriteMessage(msg);
-    }
-}
-```
+[!code-csharp[LoggerImplementation](../../samples/csharp/delegates-and-events/Logger.cs#FirstImplementation "A first Logger implementation.")]
 
 위의 정적 클래스는 사용할 수 있는 가장 간단한 클래스입니다. 메시지를 콘솔에 기록하는 메서드에 대한 단일 구현을 작성해야 합니다. 
 
-```csharp
-public static void LogToConsole(string message)
-{
-    Console.Error.WriteLine(message);
-}
-```
+[!code-csharp[LogToConsole](../../samples/csharp/delegates-and-events/Program.cs#LogToConsole "A Console logger.")]
 
 마지막으로 로거에 선언된 WriteMessage 대리자에 대리자를 연결함으로써 대리자를 연결해야 합니다.
 
-```csharp
-Logger.WriteMessage += LogToConsole;
-```
+[!code-csharp[ConnectDelegate](../../samples/csharp/delegates-and-events/Program.cs#ConnectDelegate "Connect to the delegate")]
 
 ## <a name="practices"></a>사례
 
@@ -94,49 +78,13 @@ Core Framework에 정의된 대리자 형식을 사용하면 사용자가 대리
 
 다음으로 로그 클래스에서 보다 구조적인 메시지를 만들도록 `LogMessage()` 메서드에 몇 가지 인수를 추가해 보겠습니다.
 
-```csharp
-// Logger implementation two
-public enum Severity
-{
-    Verbose,
-    Trace,
-    Information,
-    Warning,
-    Error,
-    Critical
-}
-
-public static class Logger
-{
-    public static Action<string> WriteMessage;
-    
-    public static void LogMessage(Severity s, string component, string msg)
-    {
-        var outputMsg = $"{DateTime.Now}\t{s}\t{component}\t{msg}";
-        WriteMessage(outputMsg);
-    }
-}
-```
+[!code-csharp[Severity](../../samples/csharp/delegates-and-events/Logger.cs#Severity "Define severities")]
+[!code-csharp[NextLogger](../../samples/csharp/delegates-and-events/Logger.cs#LoggerTwo "Refine the Logger")]
 
 그런 다음 해당 `Severity` 인수를 사용하여 로그의 출력으로 전송되는 메시지를 필터링해 보겠습니다. 
 
-```csharp
-public static class Logger
-{
-    public static Action<string> WriteMessage;
-    
-    public static Severity LogLevel {get;set;} = Severity.Warning;
-    
-    public static void LogMessage(Severity s, string component, string msg)
-    {
-        if (s < LogLevel)
-            return;
-            
-        var outputMsg = $"{DateTime.Now}\t{s}\t{component}\t{msg}";
-        WriteMessage(outputMsg);
-    }
-}
-```
+[!code-csharp[FinalLogger](../../samples/csharp/delegates-and-events/Logger.cs#LoggerFinal "Finish the Logger")]
+
 ## <a name="practices"></a>사례
 
 로깅 인프라에 새 기능을 추가했습니다. 로거 구성 요소는 모든 출력 메커니즘에 매우 느슨하게 결합되므로 로거 대리자를 구현하는 코드에 영향을 주지 않고 이러한 새 기능을 추가할 수 있습니다.
@@ -149,41 +97,12 @@ public static class Logger
 
 다음 해당 파일 기반 로거입니다.
 
-```csharp
-public class FileLogger
-{
-    private readonly string logPath;
-    public FileLogger(string path)
-    {
-        logPath = path;
-        Logger.WriteMessage += LogMessage;
-    }
-    
-    public void DetachLog() => Logger.WriteMessage -= LogMessage;
+[!code-csharp[FileLogger](../../samples/csharp/delegates-and-events/FileLogger.cs#FileLogger "Log to files")]
 
-    // make sure this can't throw.
-    private void LogMessage(string msg)
-    {
-        try {
-            using (var log = File.AppendText(logPath))
-            {
-                log.WriteLine(msg);
-                log.Flush();
-            }
-        } catch (Exception e)
-        {
-            // Hmm. Not sure what to do.
-            // Logging is failing...
-        }
-    }
-}
-```
 
 이 클래스를 만들었으면 인스턴스화하고 해당 LogMessage 메서드를 로거 구성 요소에 연결합니다.
 
-```csharp
-var file = new FileLogger("log.txt");
-```
+[!code-csharp[FileLogger](../../samples/csharp/delegates-and-events/Program.cs#FileLogger "Log to files")]
 
 이러한 두 메서드는 함께 사용할 수 있습니다. 두 로그 메서드를 연결하고 메시지를 콘솔 및 파일에 생성할 수 있습니다.
 

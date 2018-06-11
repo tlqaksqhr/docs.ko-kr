@@ -3,11 +3,12 @@ title: System.Delegate 및 `delegate` 키워드
 description: .NET Framework에서 대리자를 지원하는 클래스와 해당 클래스가 ‘delegate’ 키워드에 매핑되는 방법을 설명합니다.
 ms.date: 06/20/2016
 ms.assetid: f3742fda-13c2-4283-8966-9e21c2674393
-ms.openlocfilehash: 2265d081b884a19cda6fc9d80a0f621a30c87e2a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 39dca1053f87a5059bdc60f8b722091ba991cbd5
+ms.sourcegitcommit: d955cb4c681d68cf301d410925d83f25172ece86
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34827302"
 ---
 # <a name="systemdelegate-and-the-delegate-keyword"></a>System.Delegate 및 `delegate` 키워드
 
@@ -77,10 +78,8 @@ int result = comparator(left, right);
 길이별로 문자열 목록을 정렬한다고 가정합니다. 비교 함수는 다음과 같을 수 있습니다.
 
 ```csharp
-private static int CompareLength(string left, string right)
-{
-    return left.Length.CompareTo(right.Length);
-}
+private static int CompareLength(string left, string right) =>
+    left.Length.CompareTo(right.Length);
 ```
 
 메서드는 private 메서드로 선언됩니다. 괜찮습니다. 이 메서드를 public 인터페이스에 포함하지 않으려고 할 수 있습니다. 대리자에 연결될 경우 비교 메서드로 계속 사용할 수 있습니다. 호출 코드에서는 이 메서드를 대리자 개체의 대상 목록에 연결하고 해당 대리자를 통해 메서드에 액세스할 수 있습니다.
