@@ -9,6 +9,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33803694"
 ---
 # <a name="basic-programming-lifecycle"></a><span data-ttu-id="b43c7-102">기본 프로그래밍 수명 주기</span><span class="sxs-lookup"><span data-stu-id="b43c7-102">Basic Programming Lifecycle</span></span>
 <span data-ttu-id="b43c7-103">Windows Communication Foundation (WCF) 응용 프로그램이 있는지 동일한 컴퓨터에서 인터넷을 통해 또는 다른 응용 프로그램 플랫폼에서 통신할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="b43c7-103">Windows Communication Foundation (WCF) enables applications to communicate whether they are on the same computer, across the Internet, or on different application platforms.</span></span> <span data-ttu-id="b43c7-104">이 항목에서는 WCF 응용 프로그램을 빌드하는 데 필요한 작업에 설명 합니다.</span><span class="sxs-lookup"><span data-stu-id="b43c7-104">This topic outlines the tasks that are required to build a WCF application.</span></span> <span data-ttu-id="b43c7-105">작업 샘플 응용 프로그램에 대 한 참조 [초보자를 위한 자습서](../../../docs/framework/wcf/getting-started-tutorial.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="b43c7-105">For a working sample application, see [Getting Started Tutorial](../../../docs/framework/wcf/getting-started-tutorial.md).</span></span>  
