@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33340426"
 ---
 # <a name="projecting-xml-in-a-different-shape-c"></a><span data-ttu-id="593af-102">여러 모양으로 XML 프로젝션(C#)</span><span class="sxs-lookup"><span data-stu-id="593af-102">Projecting XML in a Different Shape (C#)</span></span>
 <span data-ttu-id="593af-103">이 항목에서는 소스 XML과 다른 모양으로 XML을 프로젝션하는 예제를 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="593af-103">This topic shows an example of projecting XML that is in a different shape than the source XML.</span></span>  

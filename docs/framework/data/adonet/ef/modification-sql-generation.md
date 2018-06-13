@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32766662"
 ---
 # <a name="modification-sql-generation"></a><span data-ttu-id="43a72-102">수정 SQL 생성</span><span class="sxs-lookup"><span data-stu-id="43a72-102">Modification SQL Generation</span></span>
 <span data-ttu-id="43a72-103">이 단원에서는 SQL:1999 규격 데이터베이스 공급자에 대한 수정 SQL 생성 모듈을 개발하는 방법에 대해 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="43a72-103">This section discusses how to develop a modification SQL generation module for your (SQL:1999-compliant database) provider.</span></span> <span data-ttu-id="43a72-104">이 모듈은 수정 명령 트리를 적절한 SQL INSERT, UPDATE 또는 DELETE 문으로 변환하는 작업을 담당합니다.</span><span class="sxs-lookup"><span data-stu-id="43a72-104">This module is responsible for translating a modification command tree into the appropriate SQL INSERT, UPDATE or DELETE statements.</span></span>  

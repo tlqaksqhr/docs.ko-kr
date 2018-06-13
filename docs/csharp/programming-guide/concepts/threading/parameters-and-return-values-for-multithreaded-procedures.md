@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33340218"
 ---
 # <a name="parameters-and-return-values-for-multithreaded-procedures-c"></a><span data-ttu-id="9e434-102">다중 스레드 프로시저의 매개 변수 및 반환 값(C#)</span><span class="sxs-lookup"><span data-stu-id="9e434-102">Parameters and Return Values for Multithreaded Procedures (C#)</span></span>
 <span data-ttu-id="9e434-103">스레드 클래스의 생성자에 인수를 사용하지 않고 값을 반환하지 않는 프로시저에 대한 참조를 전달해야 하기 때문에 다중 스레드 응용 프로그램에서 값을 제공하고 반환하는 작업은 복잡합니다.</span><span class="sxs-lookup"><span data-stu-id="9e434-103">Supplying and returning values in a multithreaded application is complicated because the constructor for the thread class must be passed a reference to a procedure that takes no arguments and returns no value.</span></span> <span data-ttu-id="9e434-104">다음 섹션에서는 매개 변수를 제공하고 별도 스레드의 프로시저에서 값을 반환하는 몇 가지 간단한 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="9e434-104">The following sections show some simple ways to supply parameters and return values from procedures on separate threads.</span></span>  

@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33325684"
 ---
 # <a name="delimiters-for-documentation-tags-c-programming-guide"></a><span data-ttu-id="22e26-102">문서 태그에 대한 구분 기호(C# 프로그래밍 가이드)</span><span class="sxs-lookup"><span data-stu-id="22e26-102">Delimiters for Documentation Tags (C# Programming Guide)</span></span>
 <span data-ttu-id="22e26-103">XML 문서 주석을 사용하려면 문서 주석이 시작되고 끝나는 위치를 컴파일러에 알리는 구분 기호가 필요합니다.</span><span class="sxs-lookup"><span data-stu-id="22e26-103">The use of XML doc comments requires delimiters, which indicate to the compiler where a documentation comment begins and ends.</span></span> <span data-ttu-id="22e26-104">XML 문서 태그에 다음과 같은 종류의 구분 기호를 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="22e26-104">You can use the following kinds of delimiters with the XML documentation tags:</span></span>  

@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33322694"
 ---
 # <a name="pointer-conversions-c-programming-guide"></a><span data-ttu-id="174fd-102">포인터 변환(C# 프로그래밍 가이드)</span><span class="sxs-lookup"><span data-stu-id="174fd-102">Pointer Conversions (C# Programming Guide)</span></span>
 <span data-ttu-id="174fd-103">다음 표에서는 미리 정의된 암시적 포인터 변환을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="174fd-103">The following table shows the predefined implicit pointer conversions.</span></span> <span data-ttu-id="174fd-104">암시적 변환은 메서드 호출, 할당 문을 비롯한 대부분의 경우에서 발생할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="174fd-104">Implicit conversions might occur in many situations, including method invoking and assignment statements.</span></span>  

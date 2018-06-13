@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32766948"
 ---
 # <a name="lttransportconfigurationtypesgt"></a><span data-ttu-id="16eb0-102">&lt;transportConfigurationTypes&gt;</span><span class="sxs-lookup"><span data-stu-id="16eb0-102">&lt;transportConfigurationTypes&gt;</span></span>
 <span data-ttu-id="16eb0-103">특정 전송의 형식을 식별하는 구성 요소 컬렉션을 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="16eb0-103">Represents a collection of configuration elements that identify the type of a particular transport.</span></span> <span data-ttu-id="16eb0-104">사용자 지정 WAS 프로토콜을 추가하는 데 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="16eb0-104">This can be used to add custom WAS protocols.</span></span>  

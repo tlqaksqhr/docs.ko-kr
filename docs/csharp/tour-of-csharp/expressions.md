@@ -8,6 +8,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33352304"
 ---
 # <a name="expressions"></a><span data-ttu-id="342bd-103">식</span><span class="sxs-lookup"><span data-stu-id="342bd-103">Expressions</span></span>
 

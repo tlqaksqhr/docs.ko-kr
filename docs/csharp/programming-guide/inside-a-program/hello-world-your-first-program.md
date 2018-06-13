@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33339172"
 ---
 # <a name="hello-world----your-first-program-c-programming-guide"></a><span data-ttu-id="41a0f-102">Hello World -- 프로그램 처음 만들기(C# 프로그래밍 가이드)</span><span class="sxs-lookup"><span data-stu-id="41a0f-102">Hello World -- Your First Program (C# Programming Guide)</span></span>
 <span data-ttu-id="41a0f-103">다음 절차에서는 기존 "Hello World!" 프로그램의 C# 버전을</span><span class="sxs-lookup"><span data-stu-id="41a0f-103">The following procedure creates a C# version of the traditional "Hello World!"</span></span> <span data-ttu-id="41a0f-104">만듭니다.</span><span class="sxs-lookup"><span data-stu-id="41a0f-104">program.</span></span> <span data-ttu-id="41a0f-105">이 프로그램은 문자열 `Hello World!`를 표시합니다.</span><span class="sxs-lookup"><span data-stu-id="41a0f-105">The program displays the string `Hello World!`</span></span>  

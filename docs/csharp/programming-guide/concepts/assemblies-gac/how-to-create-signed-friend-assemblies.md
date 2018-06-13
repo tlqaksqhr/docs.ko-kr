@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33340660"
 ---
 # <a name="how-to-create-signed-friend-assemblies-c"></a><span data-ttu-id="91092-102">방법: 서명된 Friend 어셈블리 만들기(C#)</span><span class="sxs-lookup"><span data-stu-id="91092-102">How to: Create Signed Friend Assemblies (C#)</span></span>
 <span data-ttu-id="91092-103">이 예제에서는 강력한 이름을 가진 어셈블리와 함께 friend 어셈블리를 사용하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="91092-103">This example shows how to use friend assemblies with assemblies that have strong names.</span></span> <span data-ttu-id="91092-104">두 어셈블리에 모두 강력한 이름을 지정해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="91092-104">Both assemblies must be strong named.</span></span> <span data-ttu-id="91092-105">이 예제의 두 어셈블리는 모두 동일한 키를 사용하지만 두 어셈블리에 서로 다른 키를 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="91092-105">Although both assemblies in this example use the same keys, you could use different keys for two assemblies.</span></span>  

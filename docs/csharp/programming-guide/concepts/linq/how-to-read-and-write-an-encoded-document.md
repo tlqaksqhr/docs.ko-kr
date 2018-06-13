@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33317160"
 ---
 # <a name="how-to-read-and-write-an-encoded-document-c"></a><span data-ttu-id="0b706-102">방법: 인코딩된 문서 읽기 및 쓰기(C#)</span><span class="sxs-lookup"><span data-stu-id="0b706-102">How to: Read and Write an Encoded Document (C#)</span></span>
 <span data-ttu-id="0b706-103">인코딩된 XML 문서를 만들려면 <xref:System.Xml.Linq.XDeclaration>을 XML 트리에 추가하여 인코딩을 원하는 코드 페이지 이름으로 설정합니다.</span><span class="sxs-lookup"><span data-stu-id="0b706-103">To create an encoded XML document, you add an <xref:System.Xml.Linq.XDeclaration> to the XML tree, setting the encoding to the desired code page name.</span></span>  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32765697"
 ---
 # <a name="working-with-data-providers"></a><span data-ttu-id="4ce06-102">데이터 공급자 작업</span><span class="sxs-lookup"><span data-stu-id="4ce06-102">Working with Data Providers</span></span>
 <span data-ttu-id="4ce06-103">이 단원의 항목에서는 개념적 모델에 대한 쿼리를 Entity Framework에서 지원되는 데이터 소스에 대한 기본 쿼리로 변형하는 서비스 및 공급자에 대해 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="4ce06-103">The topics in this section describe the services and providers that transform queries against a conceptual model into native queries against a data source that is supported by the Entity Framework.</span></span>  

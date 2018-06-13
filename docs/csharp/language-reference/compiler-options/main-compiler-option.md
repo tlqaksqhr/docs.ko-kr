@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33212422"
 ---
 # <a name="-main-c-compiler-options"></a><span data-ttu-id="5a3e0-102">-main(C# 컴파일러 옵션)</span><span class="sxs-lookup"><span data-stu-id="5a3e0-102">-main (C# Compiler Options)</span></span>
 <span data-ttu-id="5a3e0-103">이 옵션은 둘 이상의 클래스에 **Main** 메서드가 포함된 경우 프로그램에 대한 진입점을 포함하는 클래스를 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="5a3e0-103">This option specifies the class that contains the entry point to the program, if more than one class contains a **Main** method.</span></span>  

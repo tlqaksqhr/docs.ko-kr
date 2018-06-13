@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33339370"
 ---
 # <a name="walkthrough-multithreading-with-the-backgroundworker-component-c"></a><span data-ttu-id="786d2-102">연습: BackgroundWorker 구성 요소를 사용한 다중 스레딩(C#)</span><span class="sxs-lookup"><span data-stu-id="786d2-102">Walkthrough: Multithreading with the BackgroundWorker Component (C#)</span></span>
 <span data-ttu-id="786d2-103">이 연습에서는 텍스트 파일에서 단어를 검색하는 다중 스레드 Windows Forms 응용 프로그램을 만드는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="786d2-103">This walkthrough demonstrates how to create a multithreaded Windows Forms application that searches a text file for occurrences of a word.</span></span> <span data-ttu-id="786d2-104">세부 항목은 다음과 같습니다.</span><span class="sxs-lookup"><span data-stu-id="786d2-104">It demonstrates:</span></span>  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32766737"
 ---
 # <a name="entity-sql-reference"></a><span data-ttu-id="76ed5-102">엔터티 SQL 참조</span><span class="sxs-lookup"><span data-stu-id="76ed5-102">Entity SQL Reference</span></span>
 <span data-ttu-id="76ed5-103">이 단원에는 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 참조 항목이 포함되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="76ed5-103">This section contains [!INCLUDE[esql](../../../../../../includes/esql-md.md)] reference topics.</span></span> <span data-ttu-id="76ed5-104">이 항목에는 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 작업이 요약되고 범주별로 그룹화되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="76ed5-104">This topic summarizes and groups the [!INCLUDE[esql](../../../../../../includes/esql-md.md)] operators by category.</span></span>  

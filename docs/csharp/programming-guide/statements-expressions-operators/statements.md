@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33339529"
 ---
 # <a name="statements-c-programming-guide"></a><span data-ttu-id="bb411-102">문(C# 프로그래밍 가이드)</span><span class="sxs-lookup"><span data-stu-id="bb411-102">Statements (C# Programming Guide)</span></span>
 <span data-ttu-id="bb411-103">프로그램이 수행하는 작업은 문으로 표현됩니다.</span><span class="sxs-lookup"><span data-stu-id="bb411-103">The actions that a program takes are expressed in statements.</span></span> <span data-ttu-id="bb411-104">일반적인 작업으로 지정된 조건에 따라 변수 선언, 값 할당, 메서드 호출, 컬렉션 반복, 하나 또는 다른 코드 블록으로 분기 등이 있습니다.</span><span class="sxs-lookup"><span data-stu-id="bb411-104">Common actions include declaring variables, assigning values, calling methods, looping through collections, and branching to one or another block of code, depending on a given condition.</span></span> <span data-ttu-id="bb411-105">프로그램에서 문이 실행되는 순서를 제어 흐름 또는 실행 흐름이라고 합니다.</span><span class="sxs-lookup"><span data-stu-id="bb411-105">The order in which statements are executed in a program is called the flow of control or flow of execution.</span></span> <span data-ttu-id="bb411-106">제어 흐름은 프로그램이 런타임 시 수신하는 입력에 대응하는 방식에 따라 프로그램을 실행할 때마다 달라질 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="bb411-106">The flow of control may vary every time that a program is run, depending on how the program reacts to input that it receives at run time.</span></span>  

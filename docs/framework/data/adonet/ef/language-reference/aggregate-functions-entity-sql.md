@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32765583"
 ---
 # <a name="aggregate-functions-entity-sql"></a><span data-ttu-id="1bc54-102">집계 함수(Entity SQL)</span><span class="sxs-lookup"><span data-stu-id="1bc54-102">Aggregate Functions (Entity SQL)</span></span>
 <span data-ttu-id="1bc54-103">집계는 컬렉션을 그룹 작업의 일부분인 스칼라로 압축하는 언어 구문입니다.</span><span class="sxs-lookup"><span data-stu-id="1bc54-103">An aggregate is a language construct that condenses a collection into a scalar as a part of a group operation.</span></span> [!INCLUDE[esql](../../../../../../includes/esql-md.md)]<span data-ttu-id="1bc54-104"> 집계의 형식은 다음 두 가지입니다.</span><span class="sxs-lookup"><span data-stu-id="1bc54-104"> aggregates come in two forms:</span></span>  
