@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33807321"
 ---
 # <a name="using-performance-counters"></a>성능 카운터 사용
 이 샘플에는 사용자 정의 성능 카운터를 만드는 방법 및 Windows Communication Foundation (WCF) 성능 카운터에 액세스 하는 방법을 보여 줍니다. 이 샘플에 따라는 [시작](../../../../docs/framework/wcf/samples/getting-started-sample.md)합니다.  

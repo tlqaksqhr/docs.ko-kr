@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33654439"
 ---
 # <a name="-resource-visual-basic"></a>-리소스 (Visual Basic)
 관리되는 리소스를 어셈블리에 포함합니다.  

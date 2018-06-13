@@ -23,6 +23,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33656073"
 ---
 # <a name="shadowing-in-visual-basic"></a>Visual Basic의 숨김 기능
 두 개의 프로그래밍 요소가 동일한 이름을 공유 하는 경우 그 중 하나가 숨길 수, 또는 *그림자*, 다른 하나 있습니다. 이러한 상황에서 숨겨진된 요소는 참조용; 수 대신, 코드에서 요소 이름, Visual Basic 컴파일러 숨기는 요소 확인 합니다.  

@@ -12,6 +12,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33805449"
 ---
 # <a name="developing-and-deploying-wcf-data-services"></a>WCF Data Services 개발 및 배포
 이 항목에서는 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]의 개발 및 배포에 대한 정보를 제공합니다. 에 대 한 자세한 기본 정보에 대 한 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)], 참조 [시작](../../../../docs/framework/data/wcf/getting-started-with-wcf-data-services.md) 및 [개요](../../../../docs/framework/data/wcf/wcf-data-services-overview.md)합니다.  

@@ -12,6 +12,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33808054"
 ---
 # <a name="fundamental-windows-communication-foundation-concepts"></a>기본적인 Windows Communication Foundation 개념
 이 문서는 Windows Communication Foundation (WCF) 아키텍처의 고급 보기를 제공합니다. 또한 핵심 개념 및 이러한 개념이 서로 어떻게 연결되는지에 대해 설명합니다. WCF 서비스 및 클라이언트의 가장 간단한 버전을 만드는 방법에 대 한 자습서를 참조 하십시오. [초보자를 위한 자습서](../../../docs/framework/wcf/getting-started-tutorial.md)합니다. WCF 프로그래밍 자세한 내용은 [기본 WCF 프로그래밍](../../../docs/framework/wcf/basic-wcf-programming.md)합니다.  

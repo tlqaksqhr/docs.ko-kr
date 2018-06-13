@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33805670"
 ---
 # <a name="discovery-binding-element-sample"></a>Discovery 바인딩 Element 샘플
 이 샘플에서는 검색 클라이언트 바인딩 요소를 사용하여 서비스를 검색하는 방법을 보여 줍니다. 개발자는 이 기능을 사용하여 기존 클라이언트 채널 스택에 검색 클라이언트 채널을 추가할 수 있으므로 프로그래밍 모델을 매우 직관적으로 만들 수 있습니다. 연결된 채널이 열리면 검색을 사용하여 서비스의 주소가 확인됩니다. 이 샘플은 다음 프로젝트로 구성되어 있습니다.  

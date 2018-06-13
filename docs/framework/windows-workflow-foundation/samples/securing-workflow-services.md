@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33806671"
 ---
 # <a name="securing-workflow-services"></a>워크플로 서비스에 보안 설정
 보안 워크플로 서비스 샘플에서는 다음 절차를 보여 줍니다.  

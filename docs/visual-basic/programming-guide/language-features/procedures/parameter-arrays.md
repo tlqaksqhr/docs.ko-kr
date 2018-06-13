@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33652379"
 ---
 # <a name="parameter-arrays-visual-basic"></a>매개 변수 배열(Visual Basic)
 일반적으로 프로시저 선언에 지정 하는 보다 많은 인수를 사용 하 여 프로시저를 호출할 수 없습니다. 불특정 개수의 인수를 필요한 경우를 선언할 수 있습니다는 *매개 변수 배열*, 프로시저 매개 변수에 대해 값의 배열을 수락 하도록 허용 하는 합니다. 프로시저를 정의할 때 매개 변수 배열에 있는 요소의 수를 알 필요가 없습니다. 배열 크기는 각 프로시저를 호출 하 여 개별적으로 결정 됩니다.  

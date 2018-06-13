@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33806632"
 ---
 # <a name="hierarchical-configuration-model"></a>계층적 구성 모델
 이 샘플에서는 서비스의 구성 파일 계층 구조를 구현하는 방법을 보여 줍니다. 또한 계층 구조의 상위 수준에서 바인딩, 서비스 동작 및 끝점 동작이 상속되는 방식을 보여 줍니다.  

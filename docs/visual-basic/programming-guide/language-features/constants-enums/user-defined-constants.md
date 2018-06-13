@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33648777"
 ---
 # <a name="user-defined-constants-visual-basic"></a>사용자 정의 상수(Visual Basic)
 상수는 숫자 또는 변경 되지 않는 문자열의 일어나는 의미 있는 이름입니다. 상수는 응용 프로그램 실행 중 변함없이 유지되는 값을 저장합니다. 컨트롤이 나 함께 작업 하는 구성 요소에 정의 된 상수를 사용할 수 하거나 직접 만들 수 있습니다. 직접 만든 상수를 상수 라고 *사용자 정의*합니다.  

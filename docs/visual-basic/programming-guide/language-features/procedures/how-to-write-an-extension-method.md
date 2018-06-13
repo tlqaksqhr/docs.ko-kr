@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33648735"
 ---
 # <a name="how-to-write-an-extension-method-visual-basic"></a>방법: 확장명 메서드 작성(Visual Basic)
 확장 메서드를 사용 하 여 기존 클래스에 메서드를 추가할 수 있습니다. 해당 클래스의 인스턴스 된 확장 메서드를 호출할 수 있습니다.  

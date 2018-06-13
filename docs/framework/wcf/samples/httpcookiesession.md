@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33807230"
 ---
 # <a name="httpcookiesession"></a>HttpCookieSession
 이 샘플에서는 세션 관리에 HTTP 쿠키를 사용하기 위해 사용자 지정 프로토콜 채널을 빌드하는 방법을 보여 줍니다. 이 채널 또는 WCF 클라이언트와 ASMX 서비스 Windows Communication Foundation (WCF) 서비스와 ASMX 클라이언트 간의 통신을 수 있습니다.  

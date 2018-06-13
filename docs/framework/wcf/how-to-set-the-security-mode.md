@@ -16,6 +16,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33807243"
 ---
 # <a name="how-to-set-the-security-mode"></a>방법: 보안 모드 설정
 Windows Communication Foundation (WCF) 보안에 가장 미리 정의 된 바인딩에서 발견 되는 세 가지 일반 보안 모드가: 전송, 메시지 및 "메시지 자격 증명을 사용한 전송" 두 개의 추가 모드는 두 바인딩에만 해당됩니다. 즉, "전송-자격 증명만" 모드는 <xref:System.ServiceModel.BasicHttpBinding>에서 사용되고, "모두" 모드는 <xref:System.ServiceModel.NetMsmqBinding>에서 사용됩니다. 그러나 이 항목에서는 세 가지 일반 보안 모드(<xref:System.ServiceModel.SecurityMode.Transport>, <xref:System.ServiceModel.SecurityMode.Message>, <xref:System.ServiceModel.SecurityMode.TransportWithMessageCredential>)에 대해 중점적으로 설명합니다.  

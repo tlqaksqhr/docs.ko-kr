@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33647205"
 ---
 # <a name="how-to-declare-custom-events-to-conserve-memory-visual-basic"></a>방법: 메모리를 절약하는 사용자 지정 이벤트 선언(Visual Basic)
 이 응용 프로그램 메모리 사용을 낮게 유지 하는 중요 한 몇 가지 경우가 있습니다. 사용자 지정 이벤트를 처리 하는 이벤트에 대 한 메모리를 사용 하도록 응용 프로그램을 허용 합니다.  

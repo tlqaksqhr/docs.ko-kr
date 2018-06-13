@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33648608"
 ---
 # <a name="query-expression-syntax-for-standard-query-operators-visual-basic"></a>표준 쿼리 연산자 (Visual Basic)에 대 한 쿼리 식 구문
 더 자주 사용 되는 표준 쿼리 연산자 중 일부는 전용의 일부로 호출할 수 있도록 하는 Visual Basic 언어 키워드 구문이 *쿼리 식*합니다. 쿼리 식은 *메서드 기반* 양식과는 다른, 가독성이 더 우수한 쿼리 표현 양식입니다. 쿼리 식 절은 컴파일 시간에 쿼리 메서드 호출로 변환됩니다.  

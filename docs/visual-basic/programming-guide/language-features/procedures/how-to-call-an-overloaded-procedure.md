@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33649128"
 ---
 # <a name="how-to-call-an-overloaded-procedure-visual-basic"></a>방법: 오버로드된 프로시저 호출(Visual Basic)
 프로시저 오버 로드의 장점은 호출의 유연성에서입니다. 호출 코드 프로시저에 전달 하 고 전달 하는 인수에 관계 없이 하나의 프로시저 이름을 호출 하는 데 필요한 정보를 얻을 수 있습니다.  

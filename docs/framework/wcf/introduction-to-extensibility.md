@@ -11,6 +11,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33804435"
 ---
 # <a name="introduction-to-extensibility"></a>확장성 소개
 Windows Communication Foundation (WCF) 응용 프로그램 모델은 분산된 응용 프로그램의 통신 요구 사항의 대부분을 해결 하도록 설계 되었습니다. 그러나 기본 응용 프로그램 모델과 시스템 제공 구현이 지원되지 않습니다. WCF 확장성 모델은 전체 응용 프로그램 모델을 대체 지점에도 모든 수준에서 시스템 동작을 수정 하 여 사용자 지정 시나리오를 지원 하도록 도와줍니다. 이 항목에서는 다양한 확장명 영역에 대해 간략하게 설명하고 각 영역에 대한 자세한 내용을 제공합니다.  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33806863"
 ---
 # <a name="importing-custom-metadata-for-a-wcf-extension"></a>WCF 확장에 대한 사용자 지정 메타데이터 가져오기
 Windows Communication Foundation (WCF), 메타 데이터 가져오기는 해당 메타 데이터에서 서비스 또는 해당 구성 요소 부분의 추상적 표현을 생성 하는 과정입니다. 예를 들어 WCF 가져올 수 <xref:System.ServiceModel.Description.ServiceEndpoint> 인스턴스 <xref:System.ServiceModel.Channels.Binding> 인스턴스 또는 <xref:System.ServiceModel.Description.ContractDescription> WSDL에서 인스턴스는 서비스에 대해 설명 합니다. Wcf에서 서비스 메타 데이터를 가져오려면의 구현을 사용는 <xref:System.ServiceModel.Description.MetadataImporter?displayProperty=nameWithType> 추상 클래스입니다. 파생 된 형식에서 <xref:System.ServiceModel.Description.MetadataImporter> 클래스 가져오기 WCF에는 논리에서 Ws-policy를 활용 하는 메타 데이터 형식 가져오기에 대 한 지원을 구현 합니다.  

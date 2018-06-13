@@ -10,6 +10,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33806651"
 ---
 # <a name="how-to-specify-client-credential-values"></a>방법: 클라이언트 자격 증명 값 지정
 Windows Communication Foundation (WCF)를 사용 하 여 서비스 클라이언트가 서비스에 인증 하는 방법을 지정할 수 있습니다. 예를 들면 서비스는 클라이언트가 인증서를 사용하여 인증하도록 규정할 수 있습니다.  

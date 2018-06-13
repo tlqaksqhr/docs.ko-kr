@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33651611"
 ---
 # <a name="optional-parameters-visual-basic"></a>선택적 매개 변수(Visual Basic)
 프로시저 매개 변수를 선택적 요소로 지정하여 프로시저를 호출할 때 인수를 지정하지 않아도 되도록 할 수 있습니다. *선택적 매개 변수* 으로 표시 됩니다는 `Optional` 프로시저 정의에 키워드입니다. 이 때 적용되는 규칙은 다음과 같습니다.  

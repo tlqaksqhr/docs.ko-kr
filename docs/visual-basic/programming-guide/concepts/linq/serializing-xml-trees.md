@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33645345"
 ---
 # <a name="serializing-xml-trees-visual-basic"></a>XML 트리 (Visual Basic)를 직렬화 하는 작업
 XML 트리를 serialize하는 것은 XML 트리에서 XML을 생성하는 것을 의미합니다. 파일, <xref:System.IO.TextWriter> 클래스의 구체적 구현 또는 <xref:System.Xml.XmlWriter>의 구체적 구현으로 serialize할 수 있습니다.  

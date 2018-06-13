@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33804994"
 ---
 # <a name="data-binding-in-an-aspnet-client"></a>ASP.NET 클라이언트에서 데이터 바인딩
 이 샘플에는 Web Forms 응용 프로그램에서 일반적인 Windows Communication Foundation (WCF) 서비스에서 반환 된 데이터를 바인딩하는 방법을 보여 줍니다.  

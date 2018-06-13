@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33648199"
 ---
 # <a name="decision-structures-visual-basic"></a>판단 구조(Visual Basic)
 Visual Basic을 사용 하 여 조건을 테스트 하 고 해당 테스트의 결과 따라 다른 작업을 수행할 수 있습니다. 조건이 true 또는 false를 반환 하는 식의 다양 한 값에 대 한 또는 일련의 문 실행할 때 생성 되는 다양 한 예외에 대 한 인지 테스트할 수 있습니다.  

@@ -9,6 +9,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33806502"
 ---
 # <a name="specifying-and-handling-faults-in-contracts-and-services"></a>계약 및 서비스에서 오류 지정 및 처리
 Windows Communication Foundation (WCF) 응용 프로그램 SOAP 오류 개체 및 SOAP 오류 개체를 관리 되는 예외 개체를 관리 되는 예외 개체를 매핑하여 오류 상황을 처리 합니다. 이 단원의 항목에서는 사용자 지정 SOAP 오류와 같은 오류 조건을 노출하도록 계약을 디자인하는 방법, 이러한 오류를 서비스 구현의 일부로 반환하는 방법 및 클라이언트가 이러한 오류를 catch하는 방법에 대해 설명합니다.  

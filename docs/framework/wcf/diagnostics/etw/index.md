@@ -11,6 +11,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33809266"
 ---
 # <a name="analytic-tracing-with-etw"></a>ETW를 사용한 분석 추적
 Windows Communication Foundation (WCF) 분석 추적에서는 WCF 서비스를 실행 하는 동안 진단 정보를 캡처하는 방법을 제공 합니다. 프로덕션 환경에서 WCF 서비스의 문제 해결을 허용 하기 위해 WCF 스택의 주요 시점 WCF 분석 추적 이벤트를 내보냅니다. WCF 서비스에 대 한 분석 추적의 영향이 최소화는 프로덕션 서버의 성능에 호스팅하는 [!INCLUDE[netfx_current_long](../../../../../includes/netfx-current-long-md.md)] 매우 효율적으로 내보내지므로 이벤트 추적에 대 한 ETW (Windows) 세션에 따라 WCF 서비스입니다.  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33807191"
 ---
 # <a name="creating-a-bindingelement"></a>BindingElement 만들기
 바인딩 및 바인딩 요소 (확장 하는 개체 <xref:System.ServiceModel.Channels.Binding?displayProperty=nameWithType> 및 <xref:System.ServiceModel.Channels.BindingElement?displayProperty=nameWithType>각각)은 Windows Communication Foundation (WCF) 응용 프로그램 모델은 채널 팩터리 및 채널 수신기와 연결 하는 장소입니다. 바인딩으로 설정 하지 않고 사용자 지정 채널을 사용 하 여 프로그래밍이 필요 채널 수준에서에 설명 된 대로 [서비스 채널 수준 프로그래밍](../../../../docs/framework/wcf/extending/service-channel-level-programming.md) 및 [클라이언트 채널 수준 프로그래밍](../../../../docs/framework/wcf/extending/client-channel-level-programming.md)합니다. 이 항목에서는 채널을 사용 하 여 WCF에서의 개발에 사용할 수 있도록 최소 요구 사항을 설명는 <xref:System.ServiceModel.Channels.BindingElement> 채널 및의 4 단계에 설명 된 대로 응용 프로그램에서 사용에 대 한 [개발 채널](../../../../docs/framework/wcf/extending/developing-channels.md)합니다.  

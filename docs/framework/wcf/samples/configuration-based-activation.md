@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33809916"
 ---
 # <a name="configuration-based-activation"></a>구성 기반 활성화
 이 샘플에서는.svc 파일 없이 Windows Communication Foundation (WCF) 서비스를 활성화 하는 방법을 보여 줍니다.  

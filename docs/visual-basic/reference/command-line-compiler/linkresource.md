@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33654345"
 ---
 # <a name="-linkresource-visual-basic"></a>-linkresource (Visual Basic)
 관리되는 리소스에 대한 링크를 만듭니다.  

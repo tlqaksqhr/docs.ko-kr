@@ -14,6 +14,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33809390"
 ---
 # <a name="how-to-create-a-custom-security-token-authenticator"></a>방법: 사용자 지정 보안 토큰 인증자 만들기
 이 항목에서는 사용자 지정 보안 토큰 인증자를 만드는 방법과 이를 사용자 지정 보안 토큰 관리자와 통합하는 방법에 대해 설명합니다. 보안 토큰 인증자는 들어오는 메시지와 함께 제공된 보안 토큰 내용의 유효성을 검사합니다. 유효성 검사에 성공하면, 인증자는 평가 시 클레임 집합이 반환되는 <xref:System.IdentityModel.Policy.IAuthorizationPolicy> 인스턴스 컬렉션을 반환합니다.  

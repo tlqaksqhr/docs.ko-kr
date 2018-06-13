@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33641238"
 ---
 # <a name="how-to-build-linq-to-xml-examples-visual-basic"></a>방법: LINQ to XML 예제 (Visual Basic) 빌드
 이 설명서의 다양한 코드 조각과 예제에서는 여러 가지 네임스페이스의 클래스와 형식을 사용합니다. Visual Basic 코드를 컴파일하는 경우에는 적절한 `Imports` 문을 제공해야 합니다.  

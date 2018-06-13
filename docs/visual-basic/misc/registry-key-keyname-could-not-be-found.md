@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33640634"
 ---
 # <a name="registry-key-39ltkeynamegt39-could-not-be-found"></a>레지스트리 키 &#39; &lt;keyname&gt; &#39; 찾을 수 없습니다
 레지스트리 키를 찾을 수 없습니다.  

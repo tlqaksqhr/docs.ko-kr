@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33655363"
 ---
 # <a name="visual-basic-coding-conventions"></a>Visual Basic 코딩 규칙
 Microsoft 예제 및이 항목의 지침에 따라 설명서를 개발 합니다. 동일한 코딩 규칙을 따르는 경우는 다음과 같은 이점을 얻을 수 있습니다 수 있습니다.  

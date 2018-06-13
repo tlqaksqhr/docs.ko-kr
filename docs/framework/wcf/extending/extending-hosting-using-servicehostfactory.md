@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33806210"
 ---
 # <a name="extending-hosting-using-servicehostfactory"></a>ServiceHostFactory를 사용하여 호스팅 확장명
 표준 <xref:System.ServiceModel.ServiceHost> Windows Communication Foundation (WCF)에서 서비스를 호스팅하기 위한 API WCF 아키텍처의 확장성 지점입니다. 사용자는 일반적으로 <xref:System.ServiceModel.ServiceHost>을 사용하여 서비스를 열기 전에 기본 끝점을 명령적으로 추가하거나 동작을 수정하도록 <xref:System.ServiceModel.Channels.CommunicationObject.OnOpening>을 재지정하기 위해 <xref:System.ServiceModel.Description.ServiceDescription>에서 호스트 클래스를 파생할 수 있습니다.  

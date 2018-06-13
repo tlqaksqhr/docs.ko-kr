@@ -10,6 +10,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33805862"
 ---
 # <a name="service-channel-level-programming"></a>서비스 채널 수준 프로그래밍
 이 항목에서는 사용 하지 않고 Windows Communication Foundation (WCF) 서비스 응용 프로그램을 작성 하는 방법을 설명는 <xref:System.ServiceModel.ServiceHost?displayProperty=nameWithType> 및 관련된 개체 모델입니다.  

@@ -11,6 +11,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33806021"
 ---
 # <a name="getting-started-tutorial"></a>초보자를 위한 자습서
 이 섹션에 포함 된 항목은 빠른 노출 하는 WCF Windows Communication Foundation () 프로그래밍 기능을 제공 하는 데 사용 됩니다. 이 항목 아래쪽에 나열된 순서대로 진행하세요. 이 자습서를 통해 작업 WCF 서비스 및 클라이언트 응용 프로그램을 만드는 데 필요한 단계에 대 한 기초적인 이해를 제공 합니다. 서비스는 하나 이상의 끝점을 노출하며 각 끝점은 하나 이상의 서비스 작업을 노출합니다. *끝점* 서비스의 서비스를 찾을 수 있는, 클라이언트는 서비스 및 기능을 정의 하는 계약와 통신 하는 방법을 설명 하는 정보를 포함 하는 바인딩을 주소를 지정 합니다. 클라이언트에 서비스에서 제공 합니다.  

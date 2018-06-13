@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33802979"
 ---
 # <a name="viewing-message-logs"></a>메시지 로그 보기
 이 항목에서는 메시지 로그를 볼 수 있는 방법에 대해 설명합니다.  

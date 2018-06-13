@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33649609"
 ---
 # <a name="value-comparisons-visual-basic"></a>값 비교(Visual Basic)
 숫자 변수 값을 비교 하는 식을 구성할 비교 연산자를 사용할 수 있습니다. 이러한 식은 반환는 `Boolean` 비교가 true 인지에 따라 값 false입니다. 식의 예는 다음과 같습니다.  

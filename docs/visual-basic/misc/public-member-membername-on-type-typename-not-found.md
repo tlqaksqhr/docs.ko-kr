@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33637532"
 ---
 # <a name="public-member-39ltmembernamegt39-on-type-39lttypenamegt39-not-found"></a>Public 멤버 &#39; &lt;membername&gt; &#39; 유형에 &#39; &lt;typename&gt; &#39; 찾을 수 없음
 액세스하려는 멤버를 찾을 수 없습니다. 이 오류는 런타임에 바인딩된 개체의 public이 아닌 멤버에 액세스할 때 발생할 수 있습니다.  

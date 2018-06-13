@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33649154"
 ---
 # <a name="how-to-access-characters-in-strings-in-visual-basic"></a>방법: Visual Basic에서 문자열 안의 문자에 액세스
 사용 하는 방법을 보여 주는이 예제는 <xref:System.String.Chars%2A> 문자는 문자열에 지정된 된 위치에 액세스 하려면 속성입니다.  

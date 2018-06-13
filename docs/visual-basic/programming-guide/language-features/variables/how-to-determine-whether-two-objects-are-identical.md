@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33650100"
 ---
 # <a name="how-to-determine-whether-two-objects-are-identical-visual-basic"></a>방법: 두 개체가 동일한지 확인(Visual Basic)
 Visual Basic에서는 두 변수는 메모리의 동일한 클래스 인스턴스를 가리킬 경우에 두 개의 변수 참조를의 포인터가 동일한 경우, 즉, 같다고 간주 됩니다. 예를 들어 Windows Forms 응용 프로그램에서는 수 원하는 확인 하려면 비교를 위해 있는지 여부를 현재 인스턴스 (`Me`)와 같은 특정 인스턴스와 같은 `Form2`합니다.  

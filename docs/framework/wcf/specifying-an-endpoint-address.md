@@ -12,6 +12,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33809120"
 ---
 # <a name="specifying-an-endpoint-address"></a>끝점 주소 지정
 Windows Communication Foundation (WCF) 서비스와 모든 통신은 해당 끝점을 통해 발생합니다. 각 <xref:System.ServiceModel.Description.ServiceEndpoint>에는 <xref:System.ServiceModel.Description.ServiceEndpoint.Address%2A>, <xref:System.ServiceModel.Description.ServiceEndpoint.Binding%2A> 및 <xref:System.ServiceModel.Description.ServiceEndpoint.Contract%2A>가 포함되어 있습니다. 계약은 사용할 수 있는 작업을 지정합니다. 바인딩은 서비스와 통신하는 방법을 지정하고 주소는 서비스를 찾을 위치를 지정합니다. 모든 끝점에는 고유한 주소가 있어야 합니다. 끝점 주소는 서비스 주소를 표시하는 URI(Uniform Resource Identifier)가 포함된 <xref:System.ServiceModel.EndpointAddress> 클래스, 서비스의 보안 ID를 표시하는 <xref:System.ServiceModel.EndpointAddress.Identity%2A> 및 선택적 <xref:System.ServiceModel.EndpointAddress.Headers%2A>의 컬렉션에 의해 표시됩니다. 선택적 헤더는 끝점을 확인하거나 상호 작용하는 데 필요한 자세한 주소 지정 정보를 제공합니다. 예를 들어 헤더는 들어오는 메시지를 처리하는 방법, 끝점이 회신 메시지를 보내야 하는 위치 또는 여러 인스턴스를 사용할 수 있는 경우 특정 사용자의 들어오는 메시지를 처리하는 데 사용할 서비스 인스턴스를 나타낼 수 있습니다.  

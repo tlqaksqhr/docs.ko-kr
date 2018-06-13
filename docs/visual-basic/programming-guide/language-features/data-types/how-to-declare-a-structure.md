@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33650029"
 ---
 # <a name="how-to-declare-a-structure-visual-basic"></a>방법: 구조체 선언(Visual Basic)
 구조체 선언을 시작는 [Structure 문을](../../../../visual-basic/language-reference/statements/structure-statement.md), 사용 하 여를 종료 하 고는 `End` `Structure` 문. 두 문 사이 선언 해야 하나 이상 *요소*합니다. 모든 데이터 형식의 요소를 선언할 수 있지만 비공유 변수 또는 비공유, 비 사용자 정의 이벤트를 하나 이상 이어야 합니다.  

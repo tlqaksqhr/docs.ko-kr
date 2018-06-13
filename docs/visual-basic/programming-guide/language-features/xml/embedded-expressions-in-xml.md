@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33653522"
 ---
 # <a name="embedded-expressions-in-xml-visual-basic"></a>XML의 포함 식(Visual Basic)
 포함 된 식을 사용 하면 런타임 시 계산 되는 식을 포함 하는 XML 리터럴을 만들 수 있습니다. 포함 식 구문은 `<%=` `expression` `%>`, 같습니다 구문에서 사용 되는 [!INCLUDE[vstecasp](~/includes/vstecasp-md.md)]합니다.  

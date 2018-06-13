@@ -9,6 +9,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33804627"
 ---
 # <a name="bindings-and-binding-elements"></a>바인딩 및 바인딩 요소
 바인딩은 라고 하는 특수 구성 요소의 컬렉션입니다 *바인딩 요소의*, 클라이언트 때마다 서비스 런타임에 의해 평가 되 또는 서비스 끝점이 생성 되 고 있습니다. 한 바인딩 내에 있는 바인딩 요소의 형식과 순서는 끝점 채널 스택에서 프로토콜 및 전송 채널의 선택 및 스택 순서를 결정합니다.  

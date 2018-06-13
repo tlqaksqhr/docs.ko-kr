@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33649229"
 ---
 # <a name="calling-a-property-or-method-using-a-string-name-visual-basic"></a>문자열 이름을 사용하여 속성 또는 메서드 호출(Visual Basic)
 대부분의 경우에서 디자인 타임에 개체의 메서드와 속성을 검색 하 고 처리 하기 위한 코드를 작성할 수 있습니다. 그러나 경우에 따라 있습니다 모를 수도 개체의 속성 및 메서드에 대 한 사전에 있고 속성을 지정 하거나 실행 시 메서드를 실행 하려면 최종 사용자의 유연성 할 수 있습니다.  

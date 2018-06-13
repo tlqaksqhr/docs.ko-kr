@@ -10,6 +10,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33809107"
 ---
 # <a name="set-up-instructions"></a>설치 지침
 이 항목 집합에서는 Windows Communication Foundation (WCF) 서비스를 실행 하는 데 필요한 서비스를 설정 하는 방법에 설명 합니다.  

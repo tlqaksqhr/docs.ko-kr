@@ -9,6 +9,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33807435"
 ---
 # <a name="configuring-services-using-configuration-files"></a>구성 파일을 사용하여 서비스 구성
 구성 파일을 사용 하 여 Windows Communication Foundation (WCF) 서비스를 구성 하면 끝점을 제공 하 고 디자인 타임 대신 배포 지점에서 서비스 동작 데이터. 이 항목에서는 사용할 수 있는 기본 기술에 대해 간략하게 설명합니다.  

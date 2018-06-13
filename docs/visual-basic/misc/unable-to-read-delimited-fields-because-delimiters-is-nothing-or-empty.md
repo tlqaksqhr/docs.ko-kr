@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33640185"
 ---
 # <a name="unable-to-read-delimited-fields-because-delimiters-is-nothing-or-empty"></a>구분 기호가 Nothing이거나 비어 있기 때문에 구분된 필드를 읽을 수 없습니다.
 `TextFieldParser` 가 `Delimiters` 속성이 `Nothing` 으로 설정되어 있거나 비어 있기 때문에 파일에서 읽을 수 없습니다.  

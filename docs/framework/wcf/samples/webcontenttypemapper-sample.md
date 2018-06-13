@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33806970"
 ---
 # <a name="webcontenttypemapper-sample"></a>WebContentTypeMapper 샘플
 이 샘플에는 새 콘텐츠 형식을 Windows Communication Foundation (WCF) 메시지 본문 형식에 매핑하는 방법을 보여 줍니다.  

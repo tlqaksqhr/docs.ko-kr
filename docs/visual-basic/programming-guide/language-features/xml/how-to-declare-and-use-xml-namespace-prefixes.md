@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33648800"
 ---
 # <a name="how-to-declare-and-use-xml-namespace-prefixes-visual-basic"></a>방법: XML 네임스페이스 접두사 선언 및 사용(Visual Basic)
 XML 네임 스페이스 접두사를 가져오는 방법을 보여 주는이 예제 `ns` XML 리터럴 및 XML 축 속성에서 사용 합니다.  

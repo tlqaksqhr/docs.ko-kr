@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33803542"
 ---
 # <a name="extending-encoders-and-serializers"></a>인코더 및 Serializer 확장
 이 섹션의 항목에는 Windows Communication Foundation (WCF) serialization 시스템을 확장 하는 방법을 설명 합니다.  

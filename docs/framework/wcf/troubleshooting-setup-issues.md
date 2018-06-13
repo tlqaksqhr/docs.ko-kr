@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33806515"
 ---
 # <a name="troubleshooting-setup-issues"></a>설치 문제 해결
 이 항목에서는 Windows Communication Foundation (WCF) 설치 문제를 해결 하는 방법에 설명 합니다.  

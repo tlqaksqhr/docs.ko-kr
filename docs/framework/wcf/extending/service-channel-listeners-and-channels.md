@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33809653"
 ---
 # <a name="service-channel-listeners-and-channels"></a>서비스: 채널 수신기 및 채널
 채널 개체에는 채널, 채널 수신기 및 채널 팩터리의 세 가지 범주가 있습니다. 채널은 응용 프로그램과 채널 스택 사이의 인터페이스입니다. 채널 수신기는 받는(또는 수신) 쪽, 일반적으로 새 들어오는 메시지 또는 연결에 대한 응답으로 채널을 만듭니다. 채널 팩터리는 보내는 쪽에 끝점과 통신을 시작할 채널을 만듭니다.  

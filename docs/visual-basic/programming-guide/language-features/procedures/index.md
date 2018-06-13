@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33655138"
 ---
 # <a name="procedures-in-visual-basic"></a>Visual Basic의 프로시저
 A *프로시저* 는 Visual Basic 문에 포함 되는 선언문의 블록 (`Function`, `Sub`, `Operator`, `Get`, `Set`) 일치 하는 `End` 선언 합니다. Visual Basic의 모든 실행 가능 문은 프로시저 내에 있어야 합니다.  

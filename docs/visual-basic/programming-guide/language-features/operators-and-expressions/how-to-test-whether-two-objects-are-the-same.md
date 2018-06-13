@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33647607"
 ---
 # <a name="how-to-test-whether-two-objects-are-the-same-visual-basic"></a>방법: 두 개체가 동일한지 테스트(Visual Basic)
 개체 참조 하는 두 개의 변수를 설정한 경우 사용할 수 있습니다는 `Is` 또는 `IsNot` 연산자, 또는 둘 다를 동일한 인스턴스를 참조 하는지 확인 합니다.  

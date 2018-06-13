@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33809734"
 ---
 # <a name="service-interoperability"></a>서비스 상호 운용성
 이 섹션에는 Windows Communication Foundation (WCF) 및 다른 서비스 기술 간의 상호 작용을 보여 주는 샘플이 포함 되어 있습니다.  

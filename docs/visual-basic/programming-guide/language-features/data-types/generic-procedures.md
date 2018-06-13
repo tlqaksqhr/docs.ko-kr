@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33649398"
 ---
 # <a name="generic-procedures-in-visual-basic"></a>Generic Procedures in Visual Basic
 A *제네릭 프로시저*라고도 하는 *제네릭 메서드*, 하나 이상의 형식 매개 변수를 사용 하 여 정의 하는 절차입니다. 따라서 호출 코드를를 프로시저를 호출할 때마다 데이터 형식을 요구 사항에 맞출 수 있습니다.  

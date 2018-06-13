@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33805592"
 ---
 # <a name="advanced-format-selection"></a>고급 포맷 선택
 이 샘플에는 나가는 응답의 새로운 형식을 지원 하기 위해 Windows Communication Foundation (WCF) REST 프로그래밍 모델을 확장 하는 방법을 보여 줍니다. 또한 이 샘플에서는 T4 템플릿을 사용하여 응답을 XHTML 페이지로 반환하고, 뷰 스타일 프로그래밍 모델을 구현하는 방법을 보여 줍니다.  

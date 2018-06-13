@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33647390"
 ---
 # <a name="character-data-types-visual-basic"></a>문자 데이터 형식(Visual Basic)
 Visual Basic에서는 *문자 데이터 형식과* 를 인쇄 하거나 표시할 수 있는 문자를 처리 합니다. 유니코드 문자는 모두 처리 하는 동안 `Char` 반면은 단일 문자를 `String` 불특정 개수의 문자를 포함 합니다.  

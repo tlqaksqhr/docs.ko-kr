@@ -12,6 +12,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33810111"
 ---
 # <a name="accessing-services-using-a-wcf-client"></a>WCF 클라이언트를 사용하여 서비스 액세스
 서비스를 만든 후에 다음 단계에서는 WCF 클라이언트 프록시를 만드는 것입니다. 클라이언트 응용 프로그램 WCF 클라이언트 프록시를 사용 하 여 서비스와 통신 합니다. 클라이언트 응용 프로그램은 일반적으로 서비스를 호출 하는 데 사용할 수 있는 WCF 클라이언트 코드를 생성 하는 서비스의 메타 데이터를 가져옵니다.  

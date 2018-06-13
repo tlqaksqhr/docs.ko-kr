@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33805995"
 ---
 # <a name="fundamental-windows-workflow-concepts"></a>Fundamental Windows Workflow 개념
 [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)]의 워크플로 개발에는 일부 개발자들에게 생소한 개념이 사용됩니다. 이 항목에서는 이러한 몇 가지 개념과 그 구현 방법에 대해 설명합니다.  

@@ -9,6 +9,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33808639"
 ---
 # <a name="analytic-trace-event-reference"></a>분석 추적 이벤트 참조
 다음 표에서 이벤트 수준, 식별자 및 WCF 분석 추적와 관련 된 메시지를 정의 합니다.  

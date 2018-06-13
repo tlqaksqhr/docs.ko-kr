@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33810382"
 ---
 # <a name="dynamic-reconfiguration"></a>동적 재구성
 이 샘플 Windows Communication Foundation (WCF) 라우팅 서비스를 보여 줍니다. 라우팅 서비스는 쉽게 응용 프로그램에 내용 기반 라우터를 포함 하는 WCF 구성 요소입니다. 이 샘플에서는 라우팅 서비스를 사용 하 여 통신 하도록 표준 WCF Calculator 샘플입니다. 이 샘플에서는 런타임 동안 라우팅 서비스를 동적으로 다시 구성하는 방법을 보여 줍니다.  

@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33652963"
 ---
 # <a name="how-to-transform-xml-by-using-linq-visual-basic"></a>방법: LINQ를 사용하여 XML 변형(Visual Basic)
 [XML 리터럴](../../../../visual-basic/language-reference/xml-literals/index.md) 쉽게를 한 소스에서 XML을 읽고 새 XML 형식으로 변환 합니다. LINQ 쿼리를 변환, 콘텐츠를 검색할를 활용 하거나 새 XML 형식으로 기존 문서에서 콘텐츠를 변경할 수 있습니다.  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33655969"
 ---
 # <a name="object-oriented-programming-visual-basic"></a>개체 지향 프로그래밍 (Visual Basic)
 Visual Basic 캡슐화, 상속, 다형성 등 개체 지향 프로그래밍에 대 한 완벽 하 게 지원에서 제공 합니다.  

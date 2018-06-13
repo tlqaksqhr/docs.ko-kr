@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33655325"
 ---
 # <a name="local-type-inference-visual-basic"></a>지역 형식 유추(Visual Basic)
 Visual Basic 컴파일러를 사용 하 여 *형식 유추* 없이 선언 된 지역 변수의 데이터 형식을 결정 하는 `As` 절. 컴파일러는 초기화 식의 형식에서 변수의 형식을 유추합니다. 그러면 다음 예제와 같이 형식을 명시적으로 선언 하지 않고 변수를 선언할 수 있습니다. 선언 결과로 둘 다 `num1` 및 `num2` 는 정수로 강력한 형식입니다.  

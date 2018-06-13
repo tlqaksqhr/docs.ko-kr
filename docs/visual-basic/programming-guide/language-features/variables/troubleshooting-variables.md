@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33655697"
 ---
 # <a name="troubleshooting-variables-in-visual-basic"></a>Visual Basic의 변수 문제 해결
 이 페이지는 Visual Basic의 변수를 사용할 때 발생할 수 있는 몇 가지 일반적인 문제를 나열 합니다.  

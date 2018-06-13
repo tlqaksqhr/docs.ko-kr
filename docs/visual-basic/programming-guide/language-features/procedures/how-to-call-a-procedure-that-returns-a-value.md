@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33649414"
 ---
 # <a name="how-to-call-a-procedure-that-returns-a-value-visual-basic"></a>방법: 값을 반환하는 프로시저 호출(Visual Basic)
 A `Function` 프로시저가 호출 코드에 값을 반환 합니다. 식 또는 대입문의 오른쪽의 이름 및 인수를 포함 하 여 프로시저를 호출 합니다.  

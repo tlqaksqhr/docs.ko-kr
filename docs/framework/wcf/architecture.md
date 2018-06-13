@@ -11,6 +11,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33804224"
 ---
 # <a name="windows-communication-foundation-architecture"></a>Windows Communication Foundation 아키텍처
 다음 그림에서는 Windows Communication Foundation (WCF) 아키텍처의 주요 계층을 보여 줍니다.  

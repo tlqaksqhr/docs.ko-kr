@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33804965"
 ---
 # <a name="determining-service-operation-duration"></a>서비스 작업 기간 확인
 Windows Communication Foundation (WCF) 응용 프로그램에서 분석 추적을 사용 하는 경우 서비스 작업에 대 한 실행 기간 동안 이벤트 로그를 검사 하 여 쉽게 확인할 수 있습니다.  이 항목에서는 서비스 작업을 완료하는 데 소요되는 시간을 확인하는 방법을 보여 줍니다.  

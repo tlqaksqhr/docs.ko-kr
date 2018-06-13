@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33804149"
 ---
 # <a name="configuring-wcf-services-in-code"></a>코드로 WCF 서비스 구성
 Windows Communication Foundation (WCF) 구성 파일 또는 코드를 사용 하 여 서비스를 구성 하는 개발자를 있습니다.  구성 파일은 배포 후 서비스를 구성해야 하는 경우에 유용합니다. 구성 파일을 사용할 경우 IT 전문가가 구성 파일을 업데이트하기만 하면 되고 다시 컴파일할 필요가 없습니다. 하지만 구성 파일은 관리하기가 복잡하고 어려울 수 있습니다. 구성 파일 디버깅은 지원되지 않으며 구성 요소는 이름으로 참조되므로 구성 파일을 작성하기가 어렵고 오류가 발생하기 쉽습니다. WCF를 사용 하면 코드에서 서비스를 구성할 수 있습니다. 이전 버전의 코드에서 WCF (4.0 및 이전 버전) 서비스를 구성에서 자체 호스팅된 시나리오에서 쉬 웠는 <xref:System.ServiceModel.ServiceHost> 클래스 끝점 및 사용 하 여 ServiceHost.Open을 호출 하기 전에 동작을 구성할 수 있었습니다. 그러나 웹 호스팅 시나리오에서는 <xref:System.ServiceModel.ServiceHost> 클래스에 직접 액세스할 수 없습니다. 웹 호스팅 서비스를 구성하려면 `System.ServiceModel.ServiceHostFactory`를 만들고 필요한 구성을 수행하는 <xref:System.ServiceModel.Activation.ServiceHostFactory>를 만들어야 했습니다. .NET 4.5 부터는 WCF 있는 더욱 손쉬운 방법을 구성 하는 자체 호스팅 및 웹 호스팅 서비스 코드를 제공 합니다.  

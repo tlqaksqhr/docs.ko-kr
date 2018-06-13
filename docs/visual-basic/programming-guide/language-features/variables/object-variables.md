@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33649115"
 ---
 # <a name="object-variables-in-visual-basic"></a>Visual Basic의 개체 변수
 값을 직접 저장 하는 것 외에도 변수 개체를 참조할 수 있습니다. 변수에 값을 할당할 같은 이유로 변수에 개체 할당:  

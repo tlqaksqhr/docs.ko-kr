@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33638358"
 ---
 # <a name="string-length-exceeds-maximum-length-of-32767-characters-for-39filesystem39-apis"></a>문자열 길이가 최대 길이인 32767 자에 대 한 초과 &#39;FileSystem&#39; Api
 문자열 길이가 최대 길이인 32767자를 초과합니다.  

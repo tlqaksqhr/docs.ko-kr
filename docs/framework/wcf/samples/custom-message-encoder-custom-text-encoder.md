@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33808067"
 ---
 # <a name="custom-message-encoder-custom-text-encoder"></a>Custom Message Encoder: Custom Text Encoder
 이 샘플에는 Windows Communication Foundation (WCF)를 사용 하 여 사용자 지정 텍스트 메시지 인코더를 구현 하는 방법을 보여 줍니다.  

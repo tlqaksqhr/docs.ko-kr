@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33655586"
 ---
 # <a name="arithmetic-operators-in-visual-basic"></a>Visual Basic의 산술 연산자
 산술 연산자는 많은 리터럴, 변수, 다른 식, 함수 및 속성 호출 및 상수를 나타내는 숫자 값의 계산을 포함 하는 친숙 한 산술 연산을 수행 하는 데 사용 됩니다. 피연산자의 개별 비트 수준에서 작동 하 고 왼쪽 이나 오른쪽으로의 비트 패턴을 이동 하는 비트 시프트 연산자는 산술 연산자를 사용 하 여 분류도 합니다.  

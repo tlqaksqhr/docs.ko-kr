@@ -13,6 +13,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33806876"
 ---
 # <a name="defining-and-specifying-faults"></a>오류 정의 및 지정
 SOAP 오류는 오류 조건 정보를 서비스에서 클라이언트로 전달하고 양방향인 경우 상호 운용 가능한 방식으로 클라이언트에서 서비스로 전달합니다. 이 항목에서는 사용자 지정 오류 내용을 정의하는 시간과 방법에 대해 설명하고 이들을 반환할 수 있는 작업을 지정합니다. 서비스 또는 이중 클라이언트가 그러한 오류를 보낼 수 있는 방법 및 클라이언트 또는 서비스 응용 프로그램에서 이러한 오류를 처리 하는 방법에 대 한 자세한 내용은 참조 [송신 및 수신 오류](../../../docs/framework/wcf/sending-and-receiving-faults.md)합니다. Windows Communication Foundation (WCF) 응용 프로그램의 오류 처리의 개요를 참조 하십시오. [지정 및 계약 및 서비스에서 처리 오류](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)합니다.  
