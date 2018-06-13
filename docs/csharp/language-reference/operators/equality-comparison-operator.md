@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33273389"
 ---
 # <a name="-operator-c-reference"></a><span data-ttu-id="a2b80-102">== 연산자(C# 참조)</span><span class="sxs-lookup"><span data-stu-id="a2b80-102">== Operator (C# Reference)</span></span>
 <span data-ttu-id="a2b80-103">미리 정의된 값 형식의 경우 같음 연산자(`==`)는 피연산자의 값이 같으면 true, 같지 않으면 `false`를 반환합니다.</span><span class="sxs-lookup"><span data-stu-id="a2b80-103">For predefined value types, the equality operator (`==`) returns true if the values of its operands are equal, `false` otherwise.</span></span> <span data-ttu-id="a2b80-104">[string](../../../csharp/language-reference/keywords/string.md)을 제외한 참조 형식의 경우 `==`은 두 피연산자가 동일한 개체를 참조하면 `true`를 반환합니다.</span><span class="sxs-lookup"><span data-stu-id="a2b80-104">For reference types other than [string](../../../csharp/language-reference/keywords/string.md), `==` returns `true` if its two operands refer to the same object.</span></span> <span data-ttu-id="a2b80-105">`string` 형식의 경우 `==`은 문자열의 값을 비교합니다.</span><span class="sxs-lookup"><span data-stu-id="a2b80-105">For the `string` type, `==` compares the values of the strings.</span></span>  

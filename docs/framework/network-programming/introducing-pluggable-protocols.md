@@ -30,6 +30,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33396392"
 ---
 # <a name="introducing-pluggable-protocols"></a><span data-ttu-id="54c49-102">플러그형 프로토콜 소개</span><span class="sxs-lookup"><span data-stu-id="54c49-102">Introducing Pluggable Protocols</span></span>
 <span data-ttu-id="54c49-103">Microsoft .NET Framework는 더 빠르고 쉽게 응용 프로그램에 통합할 수 있는 계층적이고 확장 가능하며 관리되는 인터넷 서비스 구현을 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="54c49-103">The Microsoft .NET Framework provides a layered, extensible, and managed implementation of Internet services that can be integrated quickly and easily into your applications.</span></span> <span data-ttu-id="54c49-104"><xref:System.Net> 및 <xref:System.Net.Sockets> 네임스페이스의 인터넷 액세스 클래스를 사용하여 웹 기반 응용 프로그램과 인터넷 기반 응용 프로그램을 둘 다 구현할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="54c49-104">The Internet access classes in the <xref:System.Net> and <xref:System.Net.Sockets> namespaces can be used to implement both Web-based and Internet-based applications.</span></span>  

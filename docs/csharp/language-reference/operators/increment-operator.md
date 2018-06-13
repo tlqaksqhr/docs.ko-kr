@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33275066"
 ---
 # <a name="-operator-c-reference"></a><span data-ttu-id="44060-102">++ 연산자(C# 참조)</span><span class="sxs-lookup"><span data-stu-id="44060-102">++ Operator (C# Reference)</span></span>
 <span data-ttu-id="44060-103">증가 연산자(`++`)는 피연산자를 1씩 증가합니다.</span><span class="sxs-lookup"><span data-stu-id="44060-103">The increment operator (`++`) increments its operand by 1.</span></span> <span data-ttu-id="44060-104">증가 연산자는 피연산자 앞이나 뒤에 나타날 수 있습니다( `++variable` 및 `variable++`).</span><span class="sxs-lookup"><span data-stu-id="44060-104">The increment operator can appear before or after its operand: `++variable` and `variable++`.</span></span>  
