@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32767463"
 ---
 # <a name="ltworkflowinstancequeriesgt-of-wcf"></a><span data-ttu-id="dd926-102">WCF의 &lt;workflowInstanceQueries&gt;</span><span class="sxs-lookup"><span data-stu-id="dd926-102">&lt;workflowInstanceQueries&gt; of WCF</span></span>
 <span data-ttu-id="dd926-103">시작된 이벤트나 완료된 이벤트와 같이 워크플로 인스턴스 수명 주기의 변경 내용을 추적하는 구성 요소의 컬렉션을 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="dd926-103">Represents a collection of configuration elements that track workflow instance life cycle changes such as a started or completed event.</span></span>  

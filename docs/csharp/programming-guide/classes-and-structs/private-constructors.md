@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33315791"
 ---
 # <a name="private-constructors-c-programming-guide"></a><span data-ttu-id="9695b-102">전용 생성자(C# 프로그래밍 가이드)</span><span class="sxs-lookup"><span data-stu-id="9695b-102">Private Constructors (C# Programming Guide)</span></span>
 <span data-ttu-id="9695b-103">전용 생성자는 특수 인스턴스 생성자입니다.</span><span class="sxs-lookup"><span data-stu-id="9695b-103">A private constructor is a special instance constructor.</span></span> <span data-ttu-id="9695b-104">일반적으로 정적 멤버만 포함하는 클래스에서 사용됩니다.</span><span class="sxs-lookup"><span data-stu-id="9695b-104">It is generally used in classes that contain static members only.</span></span> <span data-ttu-id="9695b-105">클래스에 하나 이상의 private 생성자가 있고 public 생성자가 없는 경우 중첩 클래스를 제외한 다른 클래스는 이 클래스의 인스턴스를 만들 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="9695b-105">If a class has one or more private constructors and no public constructors, other classes (except nested classes) cannot create instances of this class.</span></span> <span data-ttu-id="9695b-106">예:</span><span class="sxs-lookup"><span data-stu-id="9695b-106">For example:</span></span>  

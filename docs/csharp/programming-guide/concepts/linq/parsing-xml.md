@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33321706"
 ---
 # <a name="parsing-xml-c"></a><span data-ttu-id="ea502-102">XML 구문 분석(C#)</span><span class="sxs-lookup"><span data-stu-id="ea502-102">Parsing XML (C#)</span></span>
 <span data-ttu-id="ea502-103">이 단원의 항목에서는 XML 문서의 구문을 분석하는 방법에 대해 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="ea502-103">The topics in this section describe how to parse XML documents.</span></span>  

@@ -14,6 +14,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32766883"
 ---
 # <a name="microsoftvisualstudioactivitiesasrclientactivitybuilder"></a><span data-ttu-id="bc8ed-102">Microsoft.VisualStudio.Activities.Asr.ClientActivityBuilder</span><span class="sxs-lookup"><span data-stu-id="bc8ed-102">Microsoft.VisualStudio.Activities.Asr.ClientActivityBuilder</span></span>
 <span data-ttu-id="bc8ed-103">이 클래스는 워크플로 활동의 데이터를 제공하는 <xref:System.Activities.ActivityBuilder> 개체를 만들고 구성하는 데 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="bc8ed-103">Use this class to create and configure a <xref:System.Activities.ActivityBuilder> object that provides data for a workflow activity.</span></span>  

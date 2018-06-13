@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32765726"
 ---
 # <a name="system-functions"></a><span data-ttu-id="ff736-102">시스템 함수</span><span class="sxs-lookup"><span data-stu-id="ff736-102">System Functions</span></span>
 <span data-ttu-id="ff736-103">.NET Framework Data Provider for SQL Server(SqlClient)에서는 다음 시스템 함수를 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="ff736-103">The .NET Framework Data Provider for SQL Server (SqlClient) provides the following system functions:</span></span>  

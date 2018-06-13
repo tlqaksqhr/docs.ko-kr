@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33210979"
 ---
 # <a name="-help---c-compiler-options"></a><span data-ttu-id="7e52c-103">-help, -?</span><span class="sxs-lookup"><span data-stu-id="7e52c-103">-help, -?</span></span> <span data-ttu-id="7e52c-104">(C# 컴파일러 옵션)</span><span class="sxs-lookup"><span data-stu-id="7e52c-104">(C# Compiler Options)</span></span>
 <span data-ttu-id="7e52c-105">이 옵션은 컴파일러 옵션 목록과 각 옵션에 대한 간략한 설명을 stdout에 보냅니다.</span><span class="sxs-lookup"><span data-stu-id="7e52c-105">This option sends a listing of compiler options, and a brief description of each option, to stdout.</span></span>  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32764881"
 ---
 # <a name="union-entity-sql"></a><span data-ttu-id="ae5d8-102">UNION (Entity SQL)</span><span class="sxs-lookup"><span data-stu-id="ae5d8-102">UNION (Entity SQL)</span></span>
 <span data-ttu-id="ae5d8-103">두 개 이상의 쿼리 결과를 단일 컬렉션으로 결합합니다.</span><span class="sxs-lookup"><span data-stu-id="ae5d8-103">Combines the results of two or more queries into a single collection.</span></span>  
