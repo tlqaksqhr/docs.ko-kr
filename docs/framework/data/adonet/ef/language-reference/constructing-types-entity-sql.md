@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32765258"
 ---
 # <a name="constructing-types-entity-sql"></a><span data-ttu-id="0a088-102">형식 생성(Entity SQL)</span><span class="sxs-lookup"><span data-stu-id="0a088-102">Constructing Types (Entity SQL)</span></span>
 [!INCLUDE[esql](../../../../../../includes/esql-md.md)]<span data-ttu-id="0a088-103"> 세 가지 종류의 생성자를 제공: 행 생성자, 명명 된 형식 생성자 및 컬렉션 생성자입니다.</span><span class="sxs-lookup"><span data-stu-id="0a088-103"> provides three kinds of constructors: row constructors, named type constructors, and collection constructors.</span></span>  

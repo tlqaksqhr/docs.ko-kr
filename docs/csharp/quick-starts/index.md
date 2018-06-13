@@ -8,6 +8,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33351799"
 ---
 # <a name="c-quickstarts"></a><span data-ttu-id="3dbc2-103">C# 빠른 시작</span><span class="sxs-lookup"><span data-stu-id="3dbc2-103">C# Quickstarts</span></span> #
 

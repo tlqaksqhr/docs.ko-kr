@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32766324"
 ---
 # <a name="walkthrough-sql-generation"></a><span data-ttu-id="2b5cb-102">연습: SQL 생성</span><span class="sxs-lookup"><span data-stu-id="2b5cb-102">Walkthrough: SQL Generation</span></span>
 <span data-ttu-id="2b5cb-103">이 항목에서는에서 SQL 생성이 생기는 [샘플 공급자](http://go.microsoft.com/fwlink/?LinkId=180616)합니다.</span><span class="sxs-lookup"><span data-stu-id="2b5cb-103">This topic illustrates how SQL generation occurs in the [Sample Provider](http://go.microsoft.com/fwlink/?LinkId=180616).</span></span> <span data-ttu-id="2b5cb-104">다음 Entity SQL 쿼리는 샘플 공급자에 포함된 모델을 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="2b5cb-104">The following Entity SQL query uses the model that is included with the sample provider:</span></span>  
