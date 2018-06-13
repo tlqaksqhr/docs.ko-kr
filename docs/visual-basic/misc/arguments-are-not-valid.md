@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33599078"
 ---
 # <a name="arguments-are-not-valid"></a>인수가 잘못되었습니다.
 유효하지 않은 인수가 함수 또는 서브루틴에 전달됩니다.  

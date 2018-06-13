@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33586756"
 ---
 # <a name="processing-drives-directories-and-files-visual-basic"></a>드라이브, 디렉터리 및 파일 처리(Visual Basic)
 Visual Basic을 사용하여 `My.Computer.FileSystem` 개체로 드라이브, 폴더 및 파일을 처리할 수 있습니다. `FileOpen` 및 `Write` 함수(여전히 사용할 수 있음)와 같은 기존 메서드보다 사용하기 쉬우며 더 나은 성능을 제공합니다. 다음 섹션에서는 이러한 메서드에 대해 자세히 설명합니다.  

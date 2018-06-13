@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33586659"
 ---
 # <a name="expression-does-not-produce-a-value"></a>식이 값을 산출하지 않습니다.
 같은 값을 산출 컨텍스트에 값을 산출 하지 않는 되는 식을 사용 하려는 `Sub` 컨텍스트에서 여기서는 `Function` 가 필요 합니다.  

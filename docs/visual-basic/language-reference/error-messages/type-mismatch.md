@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33593992"
 ---
 # <a name="type-mismatch-visual-basic"></a>형식이 일치하지 않습니다(Visual Basic).
 값을 유효 하지 않은 방식으로 다른 형식으로 변환 하려고 했습니다.  

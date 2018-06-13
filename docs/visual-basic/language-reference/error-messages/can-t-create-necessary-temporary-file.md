@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33585054"
 ---
 # <a name="can39t-create-necessary-temporary-file"></a>수&#39;t 필요한 임시 파일 만들기
 드라이브가 꽉 TEMP 환경 변수로 지정 된 디렉터리가 들어 있는 또는 TEMP 환경 변수에서 잘못 된 또는 읽기 전용 드라이브 또는 디렉터리를 지정 합니다.  

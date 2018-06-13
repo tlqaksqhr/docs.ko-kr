@@ -20,6 +20,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33599872"
 ---
 # <a name="mustoverride-visual-basic"></a>MustOverride(Visual Basic)
 이 클래스에서 구현 되지 않은 속성 또는 프로시저 이며 사용 하려면 먼저 파생된 클래스에서 재정의 되어야를 지정 합니다.  

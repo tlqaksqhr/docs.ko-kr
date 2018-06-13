@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33583866"
 ---
 # <a name="array-subscript-expression-missing"></a>배열 첨자식이 없습니다.
 배열 초기화 배열 범위를 정의 하는 첨자를 하나 이상 유지 합니다. 예를 들어 문이 포함 식을 `myArray (5,5,,10)`, 세 번째 첨자가를 유지 합니다.  

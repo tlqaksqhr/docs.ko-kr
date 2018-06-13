@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33584182"
 ---
 # <a name="using-threads-and-threading"></a>스레드 및 스레딩 사용
 이 섹션의 항목에서는 관리되는 스레드의 생성 및 관리에 대해 설명하고, 데이터를 관리되는 스레드로 전달하고 결과를 다시 가져오는 방법, 스레드를 제거하는 방법 그리고 <xref:System.Threading.ThreadAbortException>을 처리하는 방법에 대해 설명합니다.  

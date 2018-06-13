@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33586580"
 ---
 # <a name="creating-threads-and-passing-data-at-start-time"></a>스레드 만들기 및 시작할 때 데이터 전달
 운영 체제 프로세스가 작성될 때 운영 체제에서는 원래 응용 프로그램 도메인을 포함하여 이 프로세스에서 코드를 실행하는 스레드를 삽입합니다. 이 시점부터, 운영 체제 스레드를 꼭 만들거나 삭제하지 않고도 응용 프로그램 도메인을 만들거나 삭제할 수 있습니다. 실행되는 코드가 관리 코드인 경우 현재 응용 프로그램 도메인에서 실행 중인 스레드에 대한 <xref:System.Threading.Thread> 개체는 <xref:System.Threading.Thread> 형식의 정적 <xref:System.Threading.Thread.CurrentThread%2A> 속성을 검색하여 얻을 수 있습니다. 이 항목에서는 스레드 만들기를 설명하고 스레드 프로시저에 데이터를 전달하기 위한 대체 방법을 설명합니다.  

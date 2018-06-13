@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33596608"
 ---
 # <a name="property-let-procedure-not-defined-and-property-get-procedure-did-not-return-an-object"></a>Property Let 프로시저가 정의되지 않았고 Property Get 프로시저에서 개체를 반환하지 않았습니다.
 특정 속성, 메서드 및 작업에만 적용 수 `Collection` 개체입니다. 메서드는 작업 또는 컬렉션에 있는 속성을 지정 하지만 개체 컬렉션이 아닙니다.  

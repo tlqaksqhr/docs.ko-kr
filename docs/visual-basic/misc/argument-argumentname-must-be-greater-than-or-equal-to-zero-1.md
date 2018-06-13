@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33596209"
 ---
 # <a name="argument-ltargumentnamegt-must-be-greater-than-or-equal-to-zero"></a>인수 &lt;argumentname&gt; 보다 크거나 0 이어야 합니다
 인수 값이 0 보다 작습니다. 인수 값은 0보다 크거나 같아야 합니다.  

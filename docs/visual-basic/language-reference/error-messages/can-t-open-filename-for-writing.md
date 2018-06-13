@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33586538"
 ---
 # <a name="can39t-open-39ltfilenamegt39-for-writing"></a>수&#39;t 열려 &#39; &lt;filename&gt; &#39; 쓰기를 위한
 지정된 된 파일을 쓰기용 이미 열려 있으므로 열 수 없습니다.  

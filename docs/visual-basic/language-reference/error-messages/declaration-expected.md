@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33583892"
 ---
 # <a name="declaration-expected"></a>선언이 필요합니다.
 할당 또는 루프 문과 같은 선언문이 아닌 문을 프로시저 외부에서 발생 합니다. 선언에만 외부 프로시저 허용 됩니다.  

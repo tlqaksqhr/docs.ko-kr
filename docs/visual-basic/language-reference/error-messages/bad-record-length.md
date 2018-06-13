@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33585972"
 ---
 # <a name="bad-record-length"></a>레코드 길이가 잘못되었습니다.
 이 오류의 가능한 원인:  
