@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33388435"
 ---
 # <a name="mitigation-serialization-of-control-characters-with-the-datacontractjsonserializer"></a><span data-ttu-id="572ed-102">완화: DataContractJsonSerializer로 제어 문자 serialization</span><span class="sxs-lookup"><span data-stu-id="572ed-102">Mitigation: Serialization of Control Characters with the DataContractJsonSerializer</span></span>
 

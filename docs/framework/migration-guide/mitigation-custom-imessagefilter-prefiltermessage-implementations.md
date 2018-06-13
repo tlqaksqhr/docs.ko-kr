@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33388289"
 ---
 # <a name="mitigation-custom-imessagefilterprefiltermessage-implementations"></a><span data-ttu-id="99cc2-102">완화: 사용자 지정 IMessageFilter.PreFilterMessage 구현</span><span class="sxs-lookup"><span data-stu-id="99cc2-102">Mitigation: Custom IMessageFilter.PreFilterMessage Implementations</span></span>
 <span data-ttu-id="99cc2-103">[!INCLUDE[net_v461](../../../includes/net-v461-md.md)] 이상의 .NET Framework 버전을 대상으로 하는 Windows Forms 앱에서는 <xref:System.Windows.Forms.IMessageFilter.PreFilterMessage%2A?displayProperty=nameWithType> 구현이 다음에 해당하는 경우 <xref:System.Windows.Forms.Application.FilterMessage%2A?displayProperty=nameWithType> 메서드를 호출할 때 사용자 지정 <xref:System.Windows.Forms.IMessageFilter.PreFilterMessage%2A?displayProperty=nameWithType> 구현이 메시지를 안전하게 필터링할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="99cc2-103">In Windows Forms apps that target versions of the .NET Framework starting with the [!INCLUDE[net_v461](../../../includes/net-v461-md.md)], a custom <xref:System.Windows.Forms.IMessageFilter.PreFilterMessage%2A?displayProperty=nameWithType> implementation can safely filter messages when the <xref:System.Windows.Forms.Application.FilterMessage%2A?displayProperty=nameWithType> method is called if the <xref:System.Windows.Forms.IMessageFilter.PreFilterMessage%2A?displayProperty=nameWithType> implementation:</span></span>  

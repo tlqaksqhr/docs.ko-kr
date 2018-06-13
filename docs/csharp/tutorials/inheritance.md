@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33365763"
 ---
 # <a name="inheritance-in-c-and-net"></a><span data-ttu-id="8ec4f-103">C# 및 .NET의 상속</span><span class="sxs-lookup"><span data-stu-id="8ec4f-103">Inheritance in C# and .NET</span></span>
 
