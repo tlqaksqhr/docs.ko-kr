@@ -19,6 +19,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32745577"
 ---
 # <a name="ltsharedlistenersgt-element"></a><span data-ttu-id="931b7-102">&lt;sharedListeners&gt; 요소</span><span class="sxs-lookup"><span data-stu-id="931b7-102">&lt;sharedListeners&gt; Element</span></span>
 <span data-ttu-id="931b7-103">소스 또는 추적 요소가 참조할 수 있는 수신기가 포함되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="931b7-103">Contains listeners that any source or trace element can reference.</span></span>  <span data-ttu-id="931b7-104">기본적으로이 수신기에 설치 된 모든 수신 하지 않음 하 고 런타임 시 이러한 수신기를 검색할 수 없으면입니다.</span><span class="sxs-lookup"><span data-stu-id="931b7-104">These listeners do not receive any traces by default, and it is not possible to retrieve these listeners at run time.</span></span> <span data-ttu-id="931b7-105">공유 수신기로 식별 된 수신기 이름으로 원본 또는 추적에 추가할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="931b7-105">Listeners identified as shared listeners can be added to sources or traces by name.</span></span>  

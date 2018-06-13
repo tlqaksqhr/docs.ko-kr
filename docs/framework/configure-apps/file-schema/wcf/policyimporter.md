@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32753029"
 ---
 # <a name="ltpolicyimportergt"></a><span data-ttu-id="a5fcd-102">&lt;policyImporter&gt;</span><span class="sxs-lookup"><span data-stu-id="a5fcd-102">&lt;policyImporter&gt;</span></span>
 <span data-ttu-id="a5fcd-103">바인딩에 대한 사용자 지정 정책 어설션의 가져오기를 제어하는 정책 가져오기를 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="a5fcd-103">Specifies a policy importer that controls the import of custom policy assertions about bindings.</span></span>  

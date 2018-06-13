@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33218061"
 ---
 # <a name="command-line-build-with-cscexe"></a><span data-ttu-id="0e154-102">csc.exe를 사용한 명령줄 빌드</span><span class="sxs-lookup"><span data-stu-id="0e154-102">Command-line build with csc.exe</span></span>
 <span data-ttu-id="0e154-103">명령 프롬프트에서 실행 파일(*csc.exe*)의 이름을 입력하여 C# 컴파일러를 호출할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="0e154-103">You can invoke the C# compiler by typing the name of its executable file (*csc.exe*) at a command prompt.</span></span>

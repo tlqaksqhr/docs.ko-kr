@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33387135"
 ---
 # <a name="calling-a-dll-function"></a><span data-ttu-id="4bdd7-102">DLL 함수 호출</span><span class="sxs-lookup"><span data-stu-id="4bdd7-102">Calling a DLL Function</span></span>
 <span data-ttu-id="4bdd7-103">관리되지 않는 DLL 함수 호출은 다른 관리 코드 호출과 거의 동일하지만 처음에 DLL 함수를 혼동하게 만드는 차이점이 있습니다.</span><span class="sxs-lookup"><span data-stu-id="4bdd7-103">Although calling unmanaged DLL functions is nearly identical to calling other managed code, there are differences that can make DLL functions seem confusing at first.</span></span> <span data-ttu-id="4bdd7-104">이 섹션에서는 몇 가지 비정상적인 호출 관련 문제를 설명하는 항목을 소개합니다.</span><span class="sxs-lookup"><span data-stu-id="4bdd7-104">This section introduces topics that describe some of the unusual calling-related issues.</span></span>  

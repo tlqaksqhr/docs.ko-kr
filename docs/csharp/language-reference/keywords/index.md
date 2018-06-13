@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33289154"
 ---
 # <a name="c-keywords"></a><span data-ttu-id="d1d93-102">C# 키워드</span><span class="sxs-lookup"><span data-stu-id="d1d93-102">C# Keywords</span></span>
 <span data-ttu-id="d1d93-103">키워드는 컴파일러에 대해 특별한 의미를 갖는, 미리 정의되어 있는 예약된 식별자입니다.</span><span class="sxs-lookup"><span data-stu-id="d1d93-103">Keywords are predefined, reserved identifiers that have special meanings to the compiler.</span></span> <span data-ttu-id="d1d93-104">키워드는 프로그램에서 식별자로 사용되려면 접두어로 `@`을 포함해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="d1d93-104">They cannot be used as identifiers in your program unless they include `@` as a prefix.</span></span> <span data-ttu-id="d1d93-105">예를 들어 `@if`는 올바른 식별자이지만 `if`는 `if`가 키워드이므로 식별자로 적절하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="d1d93-105">For example, `@if` is a valid identifier, but `if` is not because `if` is a keyword.</span></span>  

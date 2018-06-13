@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33387434"
 ---
 # <a name="exposing-net-framework-components-to-com"></a><span data-ttu-id="5be22-102">.NET Framework 구성 요소를 COM에 노출</span><span class="sxs-lookup"><span data-stu-id="5be22-102">Exposing .NET Framework Components to COM</span></span>
 <span data-ttu-id="5be22-103">.NET 형식을 작성하고 비관리 코드에서 해당 형식을 사용하는 것은 개발자들에게 독특한 활동입니다.</span><span class="sxs-lookup"><span data-stu-id="5be22-103">Writing a .NET type and consuming that type from unmanaged code are distinct activities for developers.</span></span> <span data-ttu-id="5be22-104">이 섹션에서는 COM 클라이언트와 통합되는 관리 코드를 작성하기 위한 몇 가지 팁을 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="5be22-104">This section describes several tips for writing managed code that interoperates with COM clients:</span></span>  

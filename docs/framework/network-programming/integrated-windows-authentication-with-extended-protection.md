@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33398133"
 ---
 # <a name="integrated-windows-authentication-with-extended-protection"></a><span data-ttu-id="a33f4-102">확장된 보호를 사용하는 Windows 통합 인증</span><span class="sxs-lookup"><span data-stu-id="a33f4-102">Integrated Windows Authentication with Extended Protection</span></span>
 <span data-ttu-id="a33f4-103"><xref:System.Net.HttpWebRequest>, <xref:System.Net.HttpListener>, <xref:System.Net.Mail.SmtpClient>, <xref:System.Net.Security.SslStream>, <xref:System.Net.Security.NegotiateStream>, 그리고 <xref:System.Net> 및 관련 네임스페이스의 관련 클래스에 의해 Windows 통합 인증이 처리되는 방식에 영향을 미치는 기능이 향상되었습니다.</span><span class="sxs-lookup"><span data-stu-id="a33f4-103">Enhancements were made that affect how integrated Windows authentication is handled by the <xref:System.Net.HttpWebRequest>, <xref:System.Net.HttpListener>, <xref:System.Net.Mail.SmtpClient>, <xref:System.Net.Security.SslStream>, <xref:System.Net.Security.NegotiateStream>, and related classes in the <xref:System.Net> and related namespaces.</span></span> <span data-ttu-id="a33f4-104">보안을 강화하기 위한 확장된 보호에 대한 지원이 추가되었습니다.</span><span class="sxs-lookup"><span data-stu-id="a33f4-104">Support was added for extended protection to enhance security.</span></span>  

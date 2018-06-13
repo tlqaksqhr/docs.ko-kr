@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33214214"
 ---
 # <a name="false-c-reference"></a><span data-ttu-id="8d979-102">false(C# 참조)</span><span class="sxs-lookup"><span data-stu-id="8d979-102">false (C# Reference)</span></span>
 <span data-ttu-id="8d979-103">오버로드된 연산자 또는 리터럴로 사용됩니다.</span><span class="sxs-lookup"><span data-stu-id="8d979-103">Used as an overloaded operator or as a literal:</span></span>  

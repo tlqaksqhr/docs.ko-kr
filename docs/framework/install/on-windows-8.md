@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33386911"
 ---
 # <a name="install-the-net-framework-on-windows-8-and-windows-server-2012"></a><span data-ttu-id="b1d33-103">Windows 8 및 Windows Server 2012에 .NET Framework 설치</span><span class="sxs-lookup"><span data-stu-id="b1d33-103">Install the .NET Framework on Windows 8 and Windows Server 2012</span></span>
 
