@@ -19,6 +19,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32744644"
 ---
 # <a name="creating-and-using-strong-named-assemblies"></a><span data-ttu-id="23f7f-102">강력한 이름의 어셈블리 만들기 및 사용</span><span class="sxs-lookup"><span data-stu-id="23f7f-102">Creating and Using Strong-Named Assemblies</span></span>
 <a name="top"></a> <span data-ttu-id="23f7f-103">강력한 이름은 간단한 텍스트 이름, 버전 번호 및 문화권 정보(제공되는 경우)를 포함하는 어셈블리 ID와 공개 키 및 디지털 서명으로 구성됩니다.</span><span class="sxs-lookup"><span data-stu-id="23f7f-103">A strong name consists of the assembly's identity—its simple text name, version number, and culture information (if provided)—plus a public key and a digital signature.</span></span> <span data-ttu-id="23f7f-104">디지털 서명은 해당 개인 키를 사용하여 어셈블리 파일에서 생성됩니다.</span><span class="sxs-lookup"><span data-stu-id="23f7f-104">It is generated from an assembly file using the corresponding private key.</span></span> <span data-ttu-id="23f7f-105">어셈블리 파일은 어셈블리를 구성하는 모든 파일의 이름과 해시가 들어 있는 어셈블리 매니페스트를 포함합니다.</span><span class="sxs-lookup"><span data-stu-id="23f7f-105">(The assembly file contains the assembly manifest, which contains the names and hashes of all the files that make up the assembly.)</span></span>  

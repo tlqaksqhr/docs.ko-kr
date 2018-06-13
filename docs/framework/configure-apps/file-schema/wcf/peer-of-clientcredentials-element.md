@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32746477"
 ---
 # <a name="ltpeergt-of-ltclientcredentialsgt-element"></a><span data-ttu-id="cf436-102">&lt;clientCredentials&gt; 요소의 &lt;peer&gt;</span><span class="sxs-lookup"><span data-stu-id="cf436-102">&lt;peer&gt; of &lt;clientCredentials&gt; Element</span></span>
 <span data-ttu-id="cf436-103">피어 투 피어 클라이언트를 인증할 때 사용하는 자격 증명을 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="cf436-103">Specifies credentials used when authenticating peer-to-peer clients.</span></span>  

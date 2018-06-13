@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32742574"
 ---
 # <a name="ltidngt-element-uri-settings"></a><span data-ttu-id="7f76d-102">&lt;idn&gt; 요소 (Uri 설정)</span><span class="sxs-lookup"><span data-stu-id="7f76d-102">&lt;idn&gt; Element (Uri Settings)</span></span>
 <span data-ttu-id="7f76d-103">다국어 도메인 이름 (IDN) 구문 분석 된 도메인 이름에 적용 됩니다 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="7f76d-103">Specifies if Internationalized Domain Name (IDN) parsing is applied to a domain name.</span></span>  

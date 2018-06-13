@@ -16,6 +16,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32744914"
 ---
 # <a name="ltdependentassemblygt-element"></a><span data-ttu-id="5a699-102">&lt;dependentAssembly&gt; 요소</span><span class="sxs-lookup"><span data-stu-id="5a699-102">&lt;dependentAssembly&gt; Element</span></span>
 <span data-ttu-id="5a699-103">각 어셈블리에 대한 바인딩 정책 및 어셈블리 위치를 캡슐화합니다.</span><span class="sxs-lookup"><span data-stu-id="5a699-103">Encapsulates binding policy and assembly location for each assembly.</span></span> <span data-ttu-id="5a699-104">하나를 사용 하 여 `dependentAssembly` 각 어셈블리에 대 한 요소입니다.</span><span class="sxs-lookup"><span data-stu-id="5a699-104">Use one `dependentAssembly` element for each assembly.</span></span>  

@@ -12,6 +12,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32743487"
 ---
 # <a name="ltappdomainmanagertypegt-element"></a><span data-ttu-id="3c63f-102">&lt;appDomainManagerType&gt; 요소</span><span class="sxs-lookup"><span data-stu-id="3c63f-102">&lt;appDomainManagerType&gt; Element</span></span>
 <span data-ttu-id="3c63f-103">기본 응용 프로그램 도메인용 응용 프로그램 도메인 관리자로 사용되는 유형을 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="3c63f-103">Specifies the type that serves as the application domain manager for the default application domain.</span></span>  

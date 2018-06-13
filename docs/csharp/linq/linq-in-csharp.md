@@ -8,6 +8,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33275628"
 ---
 # <a name="linq-in-c"></a><span data-ttu-id="3b41f-103">C#의 LINQ</span><span class="sxs-lookup"><span data-stu-id="3b41f-103">LINQ in C#</span></span>
 <span data-ttu-id="3b41f-104">이 섹션에는 LINQ에 대한 자세한 정보를 제공하는 항목의 링크가 포함되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="3b41f-104">This section contains links to topics that provide more detailed information about LINQ.</span></span>  

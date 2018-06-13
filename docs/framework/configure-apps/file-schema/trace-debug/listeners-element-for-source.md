@@ -15,6 +15,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32746841"
 ---
 # <a name="ltlistenersgt-element-for-ltsourcegt"></a><span data-ttu-id="d9704-102">&lt;수신기&gt; 요소에 대 한 &lt;소스&gt;</span><span class="sxs-lookup"><span data-stu-id="d9704-102">&lt;listeners&gt; Element for &lt;source&gt;</span></span>
 <span data-ttu-id="d9704-103">추가 또는 제거의 수신기는 <xref:System.Diagnostics.TraceSource.Listeners%2A> 에 대 한 컬렉션은 <xref:System.Diagnostics.TraceSource>합니다.</span><span class="sxs-lookup"><span data-stu-id="d9704-103">Adds or removes listeners in the <xref:System.Diagnostics.TraceSource.Listeners%2A> collection for a <xref:System.Diagnostics.TraceSource>.</span></span> <span data-ttu-id="d9704-104">수신기는 추적 출력을 로그, 창 또는 텍스트 파일 등의 적절 한 대상에 지시합니다.</span><span class="sxs-lookup"><span data-stu-id="d9704-104">A listener directs the tracing output to an appropriate target, such as a log, window, or text file.</span></span>  

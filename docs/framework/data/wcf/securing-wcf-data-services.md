@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33359264"
 ---
 # <a name="securing-wcf-data-services"></a><span data-ttu-id="6d0be-102">WCF Data Services에 보안 설정</span><span class="sxs-lookup"><span data-stu-id="6d0be-102">Securing WCF Data Services</span></span>
 <span data-ttu-id="6d0be-103">이 항목에서는 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]을 지원하는 서비스에 액세스하는 응용 프로그램 및 [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]의 개발, 배포 및 실행과 관련된 보안 고려 사항에 대해 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="6d0be-103">This topic describes security considerations that are specific to developing, deploying, and running [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] and applications that access services that support the [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)].</span></span> <span data-ttu-id="6d0be-104">또한 보안 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 응용 프로그램을 만들기 위한 권장 사항도 따라야 합니다.</span><span class="sxs-lookup"><span data-stu-id="6d0be-104">You should also follow recommendations for creating secure [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] applications.</span></span>  

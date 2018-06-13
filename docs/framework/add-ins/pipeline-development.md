@@ -16,6 +16,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32744579"
 ---
 # <a name="pipeline-development"></a><span data-ttu-id="720bb-102">파이프라인 개발</span><span class="sxs-lookup"><span data-stu-id="720bb-102">Pipeline Development</span></span>
 <span data-ttu-id="720bb-103">추가 기능 파이프라인에는 서로 통신 하는 호스트 응용 프로그램 및 해당 추가 기능을 사용 해야 하는 파이프라인 세그먼트의 경로입니다.</span><span class="sxs-lookup"><span data-stu-id="720bb-103">The add-in pipeline is the path of pipeline segments that the host application and its add-in must use to communicate with each other.</span></span>  

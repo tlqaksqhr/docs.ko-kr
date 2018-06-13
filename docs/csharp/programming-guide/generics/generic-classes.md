@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33338288"
 ---
 # <a name="generic-classes-c-programming-guide"></a><span data-ttu-id="7679f-102">제네릭 클래스(C# 프로그래밍 가이드)</span><span class="sxs-lookup"><span data-stu-id="7679f-102">Generic Classes (C# Programming Guide)</span></span>
 <span data-ttu-id="7679f-103">제네릭 클래스는 특정 데이터 형식과 관련이 없는 작업을 캡슐화합니다.</span><span class="sxs-lookup"><span data-stu-id="7679f-103">Generic classes encapsulate operations that are not specific to a particular data type.</span></span> <span data-ttu-id="7679f-104">제네릭 클래스는 연결된 목록, 해시 테이블, 스택, 큐, 트리 등의 컬렉션에 가장 일반적으로 사용됩니다.</span><span class="sxs-lookup"><span data-stu-id="7679f-104">The most common use for generic classes is with collections like linked lists, hash tables, stacks, queues, trees, and so on.</span></span> <span data-ttu-id="7679f-105">컬렉션에서 항목을 추가하고 제거하는 등의 작업은 저장되는 데이터의 형식과 관계없이 기본적으로 동일한 방식으로 수행됩니다.</span><span class="sxs-lookup"><span data-stu-id="7679f-105">Operations such as adding and removing items from the collection are performed in basically the same way regardless of the type of data being stored.</span></span>  

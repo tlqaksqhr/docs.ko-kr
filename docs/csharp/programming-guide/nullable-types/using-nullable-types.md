@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33336923"
 ---
 # <a name="using-nullable-types-c-programming-guide"></a><span data-ttu-id="f5c21-102">Nullable 형식 사용(C# 프로그래밍 가이드)</span><span class="sxs-lookup"><span data-stu-id="f5c21-102">Using Nullable Types (C# Programming Guide)</span></span>
 <span data-ttu-id="f5c21-103">nullable 형식은 기본 형식의 모든 값과 추가 [null](../../../csharp/language-reference/keywords/null.md) 값을 나타낼 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="f5c21-103">Nullable types can represent all the values of an underlying type, and an additional [null](../../../csharp/language-reference/keywords/null.md) value.</span></span> <span data-ttu-id="f5c21-104">nullable 형식은 다음과 같은 두 가지 방법 중 하나로 선언됩니다.</span><span class="sxs-lookup"><span data-stu-id="f5c21-104">Nullable types are declared in one of two ways:</span></span>  

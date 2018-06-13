@@ -18,6 +18,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32743029"
 ---
 # <a name="ltremovegt-element-for-webrequestmodules-network-settings"></a><span data-ttu-id="1cdcc-102">&lt;제거&gt; webRequestModules (네트워크 설정)에 대 한 요소</span><span class="sxs-lookup"><span data-stu-id="1cdcc-102">&lt;remove&gt; Element for webRequestModules (Network Settings)</span></span>
 <span data-ttu-id="1cdcc-103">응용 프로그램에서 사용자 지정 웹 요청 모듈을 제거합니다.</span><span class="sxs-lookup"><span data-stu-id="1cdcc-103">Removes a custom Web request module from the application.</span></span>  
