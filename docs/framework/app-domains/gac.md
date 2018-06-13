@@ -17,6 +17,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32751976"
 ---
 # <a name="global-assembly-cache"></a><span data-ttu-id="604b7-102">전역 어셈블리 캐시</span><span class="sxs-lookup"><span data-stu-id="604b7-102">Global Assembly Cache</span></span>
 <span data-ttu-id="604b7-103">공용 언어 런타임이 설치된 각 컴퓨터에는 전역 어셈블리 캐시라는 컴퓨터 수준의 코드 캐시가 있습니다.</span><span class="sxs-lookup"><span data-stu-id="604b7-103">Each computer where the Common Language Runtime is installed has a machine-wide code cache called the Global Assembly Cache.</span></span> <span data-ttu-id="604b7-104">전역 어셈블리 캐시에는 컴퓨터의 여러 응용 프로그램에서 공유하도록 특별히 지정된 어셈블리가 저장됩니다.</span><span class="sxs-lookup"><span data-stu-id="604b7-104">The Global Assembly Cache stores assemblies specifically designated to be shared by several applications on the computer.</span></span>  

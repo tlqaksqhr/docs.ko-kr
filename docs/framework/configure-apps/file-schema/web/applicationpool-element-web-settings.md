@@ -13,6 +13,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32757699"
 ---
 # <a name="ltapplicationpoolgt-element-web-settings"></a><span data-ttu-id="75149-102">&lt;applicationPool&gt; 요소 (웹 설정)</span><span class="sxs-lookup"><span data-stu-id="75149-102">&lt;applicationPool&gt; Element (Web Settings)</span></span>
 <span data-ttu-id="75149-103">ASP.NET 응용 프로그램 통합된 모드에서 실행 중인 경우 프로세스 전체 동작을 관리 하려면 ASP.NET에서 사용 되는 구성 설정을 지정 [!INCLUDE[iisver](../../../../../includes/iisver-md.md)] 또는 이후 버전입니다.</span><span class="sxs-lookup"><span data-stu-id="75149-103">Specifies configuration settings that are used by ASP.NET to manage process-wide behavior when an ASP.NET application is running in Integrated mode on [!INCLUDE[iisver](../../../../../includes/iisver-md.md)] or a later version.</span></span>  

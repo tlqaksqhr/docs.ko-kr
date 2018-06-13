@@ -12,6 +12,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32749727"
 ---
 # <a name="ltshadowcopyverifybytimestampgt-element"></a><span data-ttu-id="4f881-102">&lt;shadowCopyVerifyByTimestamp&gt; 요소</span><span class="sxs-lookup"><span data-stu-id="4f881-102">&lt;shadowCopyVerifyByTimestamp&gt; Element</span></span>
 <span data-ttu-id="4f881-103">섀도 복사에서 [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)]에 도입된 기본 시작 동작을 사용하는지 아니면 이전 .NET Framework 버전의 시작 동작으로 되돌아가는지를 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="4f881-103">Specifies whether shadow copying uses the default startup behavior introduced in the [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)], or reverts to the startup behavior of earlier versions of the .NET Framework.</span></span>  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32763029"
 ---
 # <a name="msl-specification"></a><span data-ttu-id="f8285-102">XML 사양</span><span class="sxs-lookup"><span data-stu-id="f8285-102">MSL Specification</span></span>
 <span data-ttu-id="f8285-103">[msdn.microsoft.com/data/ef](http://msdn.microsoft.com/data/ef) Entity Framework 콘텐츠의 기본 위치는 이제 사이트가 됩니다.</span><span class="sxs-lookup"><span data-stu-id="f8285-103">The [msdn.microsoft.com/data/ef](http://msdn.microsoft.com/data/ef) site is now the main location for the Entity Framework content.</span></span>  

@@ -9,6 +9,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32759389"
 ---
 # <a name="ltfederationconfigurationgt"></a><span data-ttu-id="c7ab3-102">&lt;federationConfiguration&gt;</span><span class="sxs-lookup"><span data-stu-id="c7ab3-102">&lt;federationConfiguration&gt;</span></span>
 <span data-ttu-id="c7ab3-103">구성에서 <xref:System.IdentityModel.Services.WSFederationAuthenticationModule> (WSFAM) 및 <xref:System.IdentityModel.Services.SessionAuthenticationModule> (SAM)를 사용 하 여 Ws-federation 프로토콜을 통해 인증을 페더레이션 합니다.</span><span class="sxs-lookup"><span data-stu-id="c7ab3-103">Configures the <xref:System.IdentityModel.Services.WSFederationAuthenticationModule> (WSFAM) and the <xref:System.IdentityModel.Services.SessionAuthenticationModule> (SAM) when using federated authentication through the WS-Federation protocol.</span></span> <span data-ttu-id="c7ab3-104">구성에서 <xref:System.Security.Claims.ClaimsAuthorizationManager> 사용 하는 경우는 <xref:System.IdentityModel.Services.ClaimsPrincipalPermission> 또는 <xref:System.IdentityModel.Services.ClaimsPrincipalPermissionAttribute> 클레임 기반 액세스 제어를 제공 하는 클래스입니다.</span><span class="sxs-lookup"><span data-stu-id="c7ab3-104">Configures the <xref:System.Security.Claims.ClaimsAuthorizationManager> when using the <xref:System.IdentityModel.Services.ClaimsPrincipalPermission> or the <xref:System.IdentityModel.Services.ClaimsPrincipalPermissionAttribute> class to provide claims-based access control.</span></span>  

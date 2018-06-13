@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32765349"
 ---
 # <a name="getting-started-linq-to-dataset"></a><span data-ttu-id="847d2-102">시작(LINQ to DataSet)</span><span class="sxs-lookup"><span data-stu-id="847d2-102">Getting Started (LINQ to DataSet)</span></span>
 <span data-ttu-id="847d2-103">이 단원에서는 [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] 프로그래밍에 대한 기본 정보를 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="847d2-103">This section provides introductory information about programming with [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)].</span></span>  

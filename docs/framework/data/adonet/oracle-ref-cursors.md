@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32758726"
 ---
 # <a name="oracle-ref-cursors"></a><span data-ttu-id="9d5c4-102">Oracle REF CURSOR</span><span class="sxs-lookup"><span data-stu-id="9d5c4-102">Oracle REF CURSORs</span></span>
 <span data-ttu-id="9d5c4-103">.NET Framework Data Provider for Oracle은 Oracle 지원 **REF CURSOR** 데이터 형식입니다.</span><span class="sxs-lookup"><span data-stu-id="9d5c4-103">The .NET Framework Data Provider for Oracle supports the Oracle **REF CURSOR** data type.</span></span> <span data-ttu-id="9d5c4-104">Oracle REF CURSOR를 사용하는 데이터 공급자를 사용할 경우 다음 동작을 고려해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="9d5c4-104">When using the data provider to work with Oracle REF CURSORs, you should consider the following behaviors.</span></span>  

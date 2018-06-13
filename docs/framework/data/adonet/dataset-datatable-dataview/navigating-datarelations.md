@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32761430"
 ---
 # <a name="navigating-datarelations"></a><span data-ttu-id="85d03-102">DataRelation 탐색</span><span class="sxs-lookup"><span data-stu-id="85d03-102">Navigating DataRelations</span></span>
 <span data-ttu-id="85d03-103"><xref:System.Data.DataRelation>의 기본 기능 중 하나는 <xref:System.Data.DataTable> 내에서 <xref:System.Data.DataSet>를 하나씩 탐색할 수 있도록 하는 것입니다.</span><span class="sxs-lookup"><span data-stu-id="85d03-103">One of the primary functions of a <xref:System.Data.DataRelation> is to allow navigation from one <xref:System.Data.DataTable> to another within a <xref:System.Data.DataSet>.</span></span> <span data-ttu-id="85d03-104">모두 검색할 수 있습니다는 관련 <xref:System.Data.DataRow> 하나에서 개체 **DataTable** 단일 지정 되 면 **DataRow** 관련에서 **DataTable**합니다.</span><span class="sxs-lookup"><span data-stu-id="85d03-104">This allows you to retrieve all the related <xref:System.Data.DataRow> objects in one **DataTable** when given a single **DataRow** from a related **DataTable**.</span></span> <span data-ttu-id="85d03-105">예를 들어 설정 된 후 한 **DataRelation** 고객 테이블 사이의 orders 테이블을 사용 하 여 특정 고객 행에 대 한 모든 주문 행을 검색할 수 있습니다 **GetChildRows**합니다.</span><span class="sxs-lookup"><span data-stu-id="85d03-105">For example, after establishing a **DataRelation** between a table of customers and a table of orders, you can retrieve all the order rows for a particular customer row using **GetChildRows**.</span></span>  

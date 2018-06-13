@@ -9,6 +9,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32758310"
 ---
 # <a name="the-load-method"></a><span data-ttu-id="92425-102">로드 메서드</span><span class="sxs-lookup"><span data-stu-id="92425-102">The Load Method</span></span>
 <span data-ttu-id="92425-103"><xref:System.Data.DataTable.Load%2A> 메서드를 사용하여 데이터 소스의 행과 함께 <xref:System.Data.DataTable>을 로드할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="92425-103">You can use the <xref:System.Data.DataTable.Load%2A> method to load a <xref:System.Data.DataTable> with rows from a data source.</span></span> <span data-ttu-id="92425-104">이 가장 간단한 형태의 단일 매개 변수를 허용 하는 오버 로드 된 메서드는 **DataReader**합니다.</span><span class="sxs-lookup"><span data-stu-id="92425-104">This is an overloaded method which, in its simplest form, accepts a single parameter, a **DataReader**.</span></span> <span data-ttu-id="92425-105">이 양식에서 단순히 로드는 **DataTable** 행이 있는 합니다.</span><span class="sxs-lookup"><span data-stu-id="92425-105">In this form, it simply loads the **DataTable** with rows.</span></span> <span data-ttu-id="92425-106">선택적으로 지정할 수는 **LoadOption** 매개 변수 데이터를 추가 하는 방법을 제어 하는 **DataTable**합니다.</span><span class="sxs-lookup"><span data-stu-id="92425-106">Optionally, you can specify the **LoadOption** parameter to control how data is added to the **DataTable**.</span></span>  

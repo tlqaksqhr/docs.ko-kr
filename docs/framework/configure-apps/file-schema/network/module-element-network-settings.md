@@ -16,6 +16,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32753770"
 ---
 # <a name="ltmodulegt-element-network-settings"></a><span data-ttu-id="ed6d9-102">&lt;모듈&gt; 요소 (네트워크 설정)</span><span class="sxs-lookup"><span data-stu-id="ed6d9-102">&lt;module&gt; Element (Network Settings)</span></span>
 <span data-ttu-id="ed6d9-103">응용 프로그램에 새 프록시 모듈을 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="ed6d9-103">Adds a new proxy module to the application.</span></span>  
