@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32761196"
 ---
 # <a name="bitwise-canonical-functions"></a><span data-ttu-id="edef5-102">비트 정식 함수</span><span class="sxs-lookup"><span data-stu-id="edef5-102">Bitwise Canonical Functions</span></span>
 [!INCLUDE[esql](../../../../../../includes/esql-md.md)]<span data-ttu-id="edef5-103">에는 비트 정식 함수가 포함되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="edef5-103"> includes bitwise canonical functions.</span></span>  

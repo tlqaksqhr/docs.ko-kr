@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33336559"
 ---
 # <a name="casting-and-type-conversions-c-programming-guide"></a><span data-ttu-id="3c380-102">캐스팅 및 형식 변환(C# 프로그래밍 가이드)</span><span class="sxs-lookup"><span data-stu-id="3c380-102">Casting and Type Conversions (C# Programming Guide)</span></span>
 <span data-ttu-id="3c380-103">C#은 컴파일 시간에 정적으로 형식화되므로 변수가 선언된 후에는 다시 선언되거나 다른 형식의 값을 저장하는 데 사용될 수 없습니다. 단, 형식이 변수의 형식으로 변환될 수 있는 경우는 예외입니다.</span><span class="sxs-lookup"><span data-stu-id="3c380-103">Because C# is statically-typed at compile time, after a variable is declared, it cannot be declared again or used to store values of another type unless that type is convertible to the variable's type.</span></span> <span data-ttu-id="3c380-104">예를 들어 정수에서 임의 문자열로의 변환은 없습니다.</span><span class="sxs-lookup"><span data-stu-id="3c380-104">For example, there is no conversion from an integer to any arbitrary string.</span></span> <span data-ttu-id="3c380-105">따라서 `i`를 정수로 선언한 후에는 다음 코드와 같이 문자열 "Hello"를 할당할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="3c380-105">Therefore, after you declare `i` as an integer, you cannot assign the string "Hello" to it, as is shown in the following code.</span></span>  

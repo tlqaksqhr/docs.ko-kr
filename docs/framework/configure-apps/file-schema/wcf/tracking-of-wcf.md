@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32749321"
 ---
 # <a name="lttrackinggt-of-wcf"></a><span data-ttu-id="54a1a-102">WCF의 &lt;tracking&gt;</span><span class="sxs-lookup"><span data-stu-id="54a1a-102">&lt;tracking&gt; of WCF</span></span>
 <span data-ttu-id="54a1a-103">워크플로 서비스에 대한 추적 설정을 정의하기 위한 구성 섹션을 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="54a1a-103">Represents a configuration section for defining tracking settings for a workflow service.</span></span>  

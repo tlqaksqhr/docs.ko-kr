@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33336588"
 ---
 # <a name="how-to-determine-whether-a-string-represents-a-numeric-value-c-programming-guide"></a><span data-ttu-id="80f72-102">방법: 문자열이 숫자 값을 나타내는지 확인(C# 프로그래밍 가이드)</span><span class="sxs-lookup"><span data-stu-id="80f72-102">How to: Determine Whether a String Represents a Numeric Value (C# Programming Guide)</span></span>
 <span data-ttu-id="80f72-103">문자열이 지정된 숫자 형식의 유효한 표현인지 확인하려면 모든 기본 숫자 형식 및 <xref:System.DateTime>, <xref:System.Net.IPAddress> 등의 형식에 의해서도 구현되는 정적 `TryParse` 메서드를 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="80f72-103">To determine whether a string is a valid representation of a specified numeric type, use the static `TryParse` method that is implemented by all primitive numeric types and also by types such as <xref:System.DateTime> and <xref:System.Net.IPAddress>.</span></span> <span data-ttu-id="80f72-104">다음 예제에서는 "108"이 유효한 [int](../../../csharp/language-reference/keywords/int.md)인지 확인하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="80f72-104">The following example shows how to determine whether "108" is a valid [int](../../../csharp/language-reference/keywords/int.md).</span></span>  

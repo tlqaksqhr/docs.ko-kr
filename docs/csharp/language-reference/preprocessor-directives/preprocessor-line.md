@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33289271"
 ---
 # <a name="line-c-reference"></a><span data-ttu-id="0177a-102">#line(C# 참조)</span><span class="sxs-lookup"><span data-stu-id="0177a-102">#line (C# Reference)</span></span>
 <span data-ttu-id="0177a-103">`#line`을 사용하면 오류 및 경고에 대한 컴파일러의 줄 번호와 파일 이름 출력(옵션)을 수정할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="0177a-103">`#line` lets you modify the compiler's line number and (optionally) the file name output for errors and warnings.</span></span> <span data-ttu-id="0177a-104">이 예제에서는 줄 번호와 관련된 두 개의 경고를 보고하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="0177a-104">This example shows how to report two warnings associated with line numbers.</span></span> <span data-ttu-id="0177a-105">`#line 200` 지시문은 줄 번호를 강제로 200(기본값은 #7임)으로 설정하며, 다음 #line 지시문까지 파일 이름이 “Special”로 보고됩니다.</span><span class="sxs-lookup"><span data-stu-id="0177a-105">The `#line 200` directive forces the line number to be 200 (although the default is #7) and until the next #line directive, the filename will be reported as "Special".</span></span> <span data-ttu-id="0177a-106">#line 기본 지시문은 줄 번호 매기기를 기본 번호 매기기로 되돌립니다. 이 경우 이전 지시문을 통해 번호가 다시 매겨진 줄이 계산됩니다.</span><span class="sxs-lookup"><span data-stu-id="0177a-106">The #line default directive returns the line numbering to its default numbering, which counts the lines that were renumbered by the previous directive.</span></span>  

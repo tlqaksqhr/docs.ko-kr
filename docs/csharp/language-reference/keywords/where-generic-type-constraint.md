@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33288322"
 ---
 # <a name="where-generic-type-constraint-c-reference"></a><span data-ttu-id="1a3ba-102">where(제네릭 형식 제약 조건)(C# 참조)</span><span class="sxs-lookup"><span data-stu-id="1a3ba-102">where (generic type constraint) (C# Reference)</span></span>
 

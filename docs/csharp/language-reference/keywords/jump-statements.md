@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33265222"
 ---
 # <a name="jump-statements-c-reference"></a><span data-ttu-id="498bf-102">점프문(C# 참조)</span><span class="sxs-lookup"><span data-stu-id="498bf-102">Jump Statements (C# Reference)</span></span>
 <span data-ttu-id="498bf-103">분기는 점프 문을 사용하여 수행되며, 프로그램 제어가 즉시 전송됩니다.</span><span class="sxs-lookup"><span data-stu-id="498bf-103">Branching is performed using jump statements, which cause an immediate transfer of the program control.</span></span> <span data-ttu-id="498bf-104">점프 문에서 사용되는 키워드는 다음과 같습니다.</span><span class="sxs-lookup"><span data-stu-id="498bf-104">The following keywords are used in jump statements:</span></span>  

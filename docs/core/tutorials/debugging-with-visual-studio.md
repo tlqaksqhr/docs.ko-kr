@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33218432"
 ---
 # <a name="debug-your-hello-world-application-with-visual-studio-2017"></a><span data-ttu-id="5bb53-103">Visual Studio 2017을 사용하여 Hello World 응용 프로그램 디버그</span><span class="sxs-lookup"><span data-stu-id="5bb53-103">Debug your Hello World application with Visual Studio 2017</span></span>
 

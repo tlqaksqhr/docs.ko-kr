@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33218679"
 ---
 # <a name="deploying-net-core-apps-with-visual-studio"></a><span data-ttu-id="b5f9e-103">Visual Studio를 사용하여 .NET Core 앱 배포</span><span class="sxs-lookup"><span data-stu-id="b5f9e-103">Deploying .NET Core apps with Visual Studio</span></span>
 
