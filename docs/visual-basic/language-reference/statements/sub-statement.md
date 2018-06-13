@@ -34,6 +34,7 @@ ms.sourcegitcommit: 22c3c8f74eaa138dbbbb02eb7d720fce87fc30a9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/17/2018
+ms.locfileid: "34234178"
 ---
 # <a name="sub-statement-visual-basic"></a><span data-ttu-id="69f23-102">Sub 문(Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="69f23-102">Sub Statement (Visual Basic)</span></span>
 <span data-ttu-id="69f23-103">선언 이름과 매개 변수를 정의 하는 코드는 `Sub` 프로시저입니다.</span><span class="sxs-lookup"><span data-stu-id="69f23-103">Declares the name, parameters, and code that define a `Sub` procedure.</span></span>  

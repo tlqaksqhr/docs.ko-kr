@@ -12,6 +12,7 @@ ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/15/2018
+ms.locfileid: "34171420"
 ---
 # <a name="gtgt-operator-c-reference"></a><span data-ttu-id="64b03-102">&gt;&gt;= 연산자(C# 참조)</span><span class="sxs-lookup"><span data-stu-id="64b03-102">&gt;&gt;= Operator (C# Reference)</span></span>
 <span data-ttu-id="64b03-103">오른쪽 시프트 대입 연산자입니다.</span><span class="sxs-lookup"><span data-stu-id="64b03-103">The right-shift assignment operator.</span></span>  

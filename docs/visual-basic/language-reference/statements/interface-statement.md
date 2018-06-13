@@ -12,6 +12,7 @@ ms.sourcegitcommit: 22c3c8f74eaa138dbbbb02eb7d720fce87fc30a9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/17/2018
+ms.locfileid: "34233914"
 ---
 # <a name="interface-statement-visual-basic"></a><span data-ttu-id="0ed0d-102">Interface 문(Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="0ed0d-102">Interface Statement (Visual Basic)</span></span>
 <span data-ttu-id="0ed0d-103">인터페이스의 이름을 선언 하 고 인터페이스를 구성 하는 멤버의 정의 소개 합니다.</span><span class="sxs-lookup"><span data-stu-id="0ed0d-103">Declares the name of an interface and introduces the definitions of the members that the interface comprises.</span></span>  

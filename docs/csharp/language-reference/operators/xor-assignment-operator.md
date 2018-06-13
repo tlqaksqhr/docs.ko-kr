@@ -11,6 +11,7 @@ ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/15/2018
+ms.locfileid: "34172375"
 ---
 # <a name="-operator-c-reference"></a><span data-ttu-id="a6d9a-102">^= 연산자(C# 참조)</span><span class="sxs-lookup"><span data-stu-id="a6d9a-102">^= Operator (C# Reference)</span></span>
 <span data-ttu-id="a6d9a-103">배타적 OR 대입 연산자입니다.</span><span class="sxs-lookup"><span data-stu-id="a6d9a-103">The exclusive-OR assignment operator.</span></span>  

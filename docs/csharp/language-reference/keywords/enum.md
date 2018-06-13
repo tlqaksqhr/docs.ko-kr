@@ -12,6 +12,7 @@ ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/15/2018
+ms.locfileid: "34172230"
 ---
 # <a name="enum-c-reference"></a><span data-ttu-id="db3bc-102">enum(C# 참조)</span><span class="sxs-lookup"><span data-stu-id="db3bc-102">enum (C# Reference)</span></span>
 <span data-ttu-id="db3bc-103">`enum` 키워드는 열거자 목록이라고 하는 명명된 상수 집합으로 구성된 고유 형식인 열거형을 선언하는 데 사용됩니다.</span><span class="sxs-lookup"><span data-stu-id="db3bc-103">The `enum` keyword is used to declare an enumeration, a distinct type that consists of a set of named constants called the enumerator list.</span></span>  

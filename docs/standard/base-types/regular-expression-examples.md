@@ -14,6 +14,7 @@ ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/15/2018
+ms.locfileid: "34172505"
 ---
 # <a name="regular-expression-examples"></a><span data-ttu-id="cfc34-102">정규식 예제</span><span class="sxs-lookup"><span data-stu-id="cfc34-102">Regular Expression Examples</span></span>
 <span data-ttu-id="cfc34-103">이 섹션은 일반적인 응용 프로그램에서 정규식 사용을 보여 주는 코드 예제를 포함합니다.</span><span class="sxs-lookup"><span data-stu-id="cfc34-103">This section contains code examples that illustrate the use of regular expressions in common applications.</span></span>  

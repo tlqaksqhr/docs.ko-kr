@@ -12,6 +12,7 @@ ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/15/2018
+ms.locfileid: "34172518"
 ---
 # <a name="double-c-reference"></a><span data-ttu-id="a69fe-102">double(C# 참조)</span><span class="sxs-lookup"><span data-stu-id="a69fe-102">double (C# Reference)</span></span>
 <span data-ttu-id="a69fe-103">`double` 키워드는 64비트 부동 소수점 값을 저장하는 단순 형식을 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="a69fe-103">The `double` keyword signifies a simple type that stores 64-bit floating-point values.</span></span> <span data-ttu-id="a69fe-104">다음 표에서는 `double` 형식의 전체 자릿수와 근사 범위를 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="a69fe-104">The following table shows the precision and approximate range for the `double` type.</span></span>  
