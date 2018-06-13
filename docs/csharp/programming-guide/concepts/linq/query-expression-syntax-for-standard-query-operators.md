@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33339841"
 ---
 # <a name="query-expression-syntax-for-standard-query-operators-c"></a><span data-ttu-id="65d6a-102">표준 쿼리 연산자의 쿼리 식 구문(C#)</span><span class="sxs-lookup"><span data-stu-id="65d6a-102">Query Expression Syntax for Standard Query Operators (C#)</span></span>
 <span data-ttu-id="65d6a-103">자주 사용되는 표준 쿼리 연산자 중 일부에는 *쿼리 식*의 일부로 호출할 수 있는 전용 C# 언어 키워드 구문이 있습니다.</span><span class="sxs-lookup"><span data-stu-id="65d6a-103">Some of the more frequently used standard query operators have dedicated C# language keyword syntax that enables them to be called as part of a *query expression*.</span></span> <span data-ttu-id="65d6a-104">쿼리 식은 *메서드 기반* 양식과는 다른, 가독성이 더 우수한 쿼리 표현 양식입니다.</span><span class="sxs-lookup"><span data-stu-id="65d6a-104">A query expression is a different, more readable form of expressing a query than its *method-based*  equivalent.</span></span> <span data-ttu-id="65d6a-105">쿼리 식 절은 컴파일 시간에 쿼리 메서드 호출로 변환됩니다.</span><span class="sxs-lookup"><span data-stu-id="65d6a-105">Query expression clauses are translated into calls to the query methods at compile time.</span></span>  

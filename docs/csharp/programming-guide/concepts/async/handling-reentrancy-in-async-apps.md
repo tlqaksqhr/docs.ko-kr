@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33339763"
 ---
 # <a name="handling-reentrancy-in-async-apps-c"></a><span data-ttu-id="2074f-102">비동기 앱에서 재입력 처리(C#)</span><span class="sxs-lookup"><span data-stu-id="2074f-102">Handling Reentrancy in Async Apps (C#)</span></span>
 <span data-ttu-id="2074f-103">앱에 비동기 코드를 포함하는 경우 완료되기 전에 비동기 작업을 다시 입력하는 것을 나타내는 재입력을 고려하고 방지할 수 있어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="2074f-103">When you include asynchronous code in your app, you should consider and possibly prevent reentrancy, which refers to reentering an asynchronous operation before it has completed.</span></span> <span data-ttu-id="2074f-104">재입력 가능성을 식별하고 처리하지 못하면 예기치 않은 결과가 발생할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="2074f-104">If you don't identify and handle possibilities for reentrancy, it can cause unexpected results.</span></span>  

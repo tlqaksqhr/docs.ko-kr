@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33340478"
 ---
 # <a name="how-to-use-a-thread-pool-c"></a><span data-ttu-id="40450-102">방법: 스레드 풀 사용(C#)</span><span class="sxs-lookup"><span data-stu-id="40450-102">How to: Use a Thread Pool (C#)</span></span>
 <span data-ttu-id="40450-103">*스레드 풀링*은 스레드를 만들 때 자동으로 시작되고 작업이 큐에 추가되는 다중 스레딩의 한 형태입니다.</span><span class="sxs-lookup"><span data-stu-id="40450-103">*Thread pooling* is a form of multithreading in which tasks are added to a queue and automatically started when threads are created.</span></span> <span data-ttu-id="40450-104">자세한 내용은 [스레드 풀링(C#)](../../../../csharp/programming-guide/concepts/threading/thread-pooling.md)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="40450-104">For more information, see [Thread Pooling (C#)](../../../../csharp/programming-guide/concepts/threading/thread-pooling.md).</span></span>  

@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33339659"
 ---
 # <a name="expressions-c-programming-guide"></a><span data-ttu-id="075ca-102">식(C# 프로그래밍 가이드)</span><span class="sxs-lookup"><span data-stu-id="075ca-102">Expressions (C# Programming Guide)</span></span>
 <span data-ttu-id="075ca-103">*expression*은 단일 값, 개체, 메서드 또는 네임스페이스로 평가될 수 있는 하나 이상의 피연산자 및 0개 이상의 연산자 시퀀스입니다.</span><span class="sxs-lookup"><span data-stu-id="075ca-103">An *expression* is a sequence of one or more operands and zero or more operators that can be evaluated to a single value, object, method, or namespace.</span></span> <span data-ttu-id="075ca-104">식은 리터럴 값, 메서드 호출, 연산자 및 피연산자, *단순 이름* 등으로 구성될 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="075ca-104">Expressions can consist of a literal value, a method invocation, an operator and its operands, or a *simple name*.</span></span> <span data-ttu-id="075ca-105">단순한 이름이란 변수, 형식 멤버, 메서드 매개 변수, 네임스페이스 또는 형식의 이름일 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="075ca-105">Simple names can be the name of a variable, type member, method parameter, namespace or type.</span></span>  

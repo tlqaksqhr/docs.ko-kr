@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33272586"
 ---
 # <a name="volatile-c-reference"></a><span data-ttu-id="f8296-102">volatile(C# 참조)</span><span class="sxs-lookup"><span data-stu-id="f8296-102">volatile (C# Reference)</span></span>
 <span data-ttu-id="f8296-103">`volatile` 키워드는 동시에 실행되는 여러 스레드에 의해 필드가 수정될 수 있음을 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="f8296-103">The `volatile` keyword indicates that a field might be modified by multiple threads that are executing at the same time.</span></span> <span data-ttu-id="f8296-104">`volatile`로 선언된 필드에는 단일 스레드에 의한 액세스를 가정하는 컴파일러 최적화가 적용되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="f8296-104">Fields that are declared `volatile` are not subject to compiler optimizations that assume access by a single thread.</span></span> <span data-ttu-id="f8296-105">이렇게 하면 필드에 항상 최신 값이 표시됩니다.</span><span class="sxs-lookup"><span data-stu-id="f8296-105">This ensures that the most up-to-date value is present in the field at all times.</span></span>  

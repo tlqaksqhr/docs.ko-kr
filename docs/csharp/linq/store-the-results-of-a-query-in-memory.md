@@ -8,6 +8,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33279635"
 ---
 # <a name="store-the-results-of-a-query-in-memory"></a><span data-ttu-id="33595-103">쿼리 결과를 메모리에 저장</span><span class="sxs-lookup"><span data-stu-id="33595-103">Store the results of a query in memory</span></span>
 

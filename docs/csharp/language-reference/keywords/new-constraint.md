@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33268998"
 ---
 # <a name="new-constraint-c-reference"></a><span data-ttu-id="73b17-102">new 제약 조건(C# 참조)</span><span class="sxs-lookup"><span data-stu-id="73b17-102">new Constraint (C# Reference)</span></span>
 <span data-ttu-id="73b17-103">`new` 제약 조건은 제네릭 클래스 선언의 모든 형식 인수에 매개 변수가 없는 public 생성자가 있어야 하도록 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="73b17-103">The `new` constraint specifies that any type argument in a generic class declaration must have a public parameterless constructor.</span></span> <span data-ttu-id="73b17-104">새 제약 조건을 사용하려면 추상 형식일 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="73b17-104">To use the new constraint, the type cannot be abstract.</span></span>  

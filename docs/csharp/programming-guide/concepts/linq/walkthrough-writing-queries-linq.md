@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33340413"
 ---
 # <a name="walkthrough-writing-queries-in-c-linq"></a><span data-ttu-id="685a6-102">연습: C#에서 쿼리 작성(LINQ)</span><span class="sxs-lookup"><span data-stu-id="685a6-102">Walkthrough: Writing Queries in C# (LINQ)</span></span>
 <span data-ttu-id="685a6-103">이 연습에서는 LINQ 쿼리 식을 작성하는 데 사용되는 C # 언어 기능을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="685a6-103">This walkthrough demonstrates the C# language features that are used to write LINQ query expressions.</span></span>  

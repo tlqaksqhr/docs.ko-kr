@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33339802"
 ---
 # <a name="linq-to-xml-programming-overview-c"></a><span data-ttu-id="faf8a-102">LINQ to XML 프로그래밍 개요(C#)</span><span class="sxs-lookup"><span data-stu-id="faf8a-102">LINQ to XML Programming Overview (C#)</span></span>
 <span data-ttu-id="faf8a-103">이 단원의 항목에서는 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 클래스에 대한 대략적인 개요 정보와 가장 중요한 클래스 중 세 클래스에 대한 자세한 정보를 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="faf8a-103">These topics provide high-level overview information about the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] classes, as well as detailed information about three of the most important classes.</span></span>  

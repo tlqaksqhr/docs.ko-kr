@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33340114"
 ---
 # <a name="tutorial-manipulating-content-in-a-wordprocessingml-document-c"></a><span data-ttu-id="6d040-102">자습서: WordprocessingML 문서에서 내용 조작(C#)</span><span class="sxs-lookup"><span data-stu-id="6d040-102">Tutorial: Manipulating Content in a WordprocessingML Document (C#)</span></span>
 <span data-ttu-id="6d040-103">이 자습서에서는 함수 변환 방법과 LINQ to XML을 적용하여 XML 문서를 조작하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="6d040-103">This tutorial shows how to apply the functional transformational approach and LINQ to XML to manipulate XML documents.</span></span> <span data-ttu-id="6d040-104">C# 예제에서는 Microsoft Word에서 저장한 Office Open XML WordprocessingML 문서의 정보를 쿼리하고 조작합니다.</span><span class="sxs-lookup"><span data-stu-id="6d040-104">The C# examples query and manipulate information in Office Open XML WordprocessingML documents that are saved by Microsoft Word.</span></span>  

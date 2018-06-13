@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33275703"
 ---
 # <a name="query-keywords-c-reference"></a><span data-ttu-id="a2a48-102">쿼리 키워드(C# 참조)</span><span class="sxs-lookup"><span data-stu-id="a2a48-102">Query Keywords (C# Reference)</span></span>
 <span data-ttu-id="a2a48-103">이 섹션에는 쿼리 식에 사용되는 상황별 키워드가 포함되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="a2a48-103">This section contains the contextual keywords used in query expressions.</span></span>  

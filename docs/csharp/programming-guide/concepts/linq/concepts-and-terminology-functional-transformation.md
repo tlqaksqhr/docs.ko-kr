@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33339292"
 ---
 # <a name="concepts-and-terminology-functional-transformation-c"></a><span data-ttu-id="0a30b-102">개념과 용어(함수 변환)(C#)</span><span class="sxs-lookup"><span data-stu-id="0a30b-102">Concepts and Terminology (Functional Transformation) (C#)</span></span>
 <span data-ttu-id="0a30b-103">이 항목에서는 순수 함수 변환의 개념과 용어에 대해 소개합니다.</span><span class="sxs-lookup"><span data-stu-id="0a30b-103">This topic introduces the concepts and terminology of pure functional transformations.</span></span> <span data-ttu-id="0a30b-104">데이터 변환에 대한 함수 변환 방법은 전통적인 명령형 프로그래밍보다 신속하게 프로그래밍할 수 있고 표현이 다양하며 디버깅과 유지 관리가 쉬운 코드를 생성합니다.</span><span class="sxs-lookup"><span data-stu-id="0a30b-104">The functional transformation approach to transforming data yields code that is often quicker to program, more expressive, and easier to debug and maintain than more traditional, imperative programming.</span></span>  

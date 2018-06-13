@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33340465"
 ---
 # <a name="using-variance-in-interfaces-for-generic-collections-c"></a><span data-ttu-id="6c232-102">제네릭 컬렉션용 인터페이스의 가변성 사용(C#)</span><span class="sxs-lookup"><span data-stu-id="6c232-102">Using Variance in Interfaces for Generic Collections (C#)</span></span>
 <span data-ttu-id="6c232-103">공변(covariant) 인터페이스는 메서드가 인터페이스에 지정된 것보다 더 많은 수의 파생된 형식을 반환하도록 허용합니다.</span><span class="sxs-lookup"><span data-stu-id="6c232-103">A covariant interface allows its methods to return more derived types than those specified in the interface.</span></span> <span data-ttu-id="6c232-104">반공변(contravariant) 인터페이스는 메서드가 인터페이스에 지정된 것보다 더 적은 파생된 형식의 매개 변수를 수락하도록 허용합니다.</span><span class="sxs-lookup"><span data-stu-id="6c232-104">A contravariant interface allows its methods to accept parameters of less derived types than those specified in the interface.</span></span>  

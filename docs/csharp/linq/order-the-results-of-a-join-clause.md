@@ -8,6 +8,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33269702"
 ---
 # <a name="order-the-results-of-a-join-clause"></a><span data-ttu-id="a11cb-103">join 절 결과를 순서대로 정렬</span><span class="sxs-lookup"><span data-stu-id="a11cb-103">Order the results of a join clause</span></span>
 <span data-ttu-id="a11cb-104">이 예제에서는 조인 작업 결과를 순서대로 정렬하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="a11cb-104">This example shows how to order the results of a join operation.</span></span> <span data-ttu-id="a11cb-105">조인 후 순서대로 정렬합니다.</span><span class="sxs-lookup"><span data-stu-id="a11cb-105">Note that the ordering is performed after the join.</span></span> <span data-ttu-id="a11cb-106">조인 전에 하나 이상의 소스 시퀀스와 함께 `orderby` 절을 사용할 수도 있지만 일반적으로 권장되지는 않습니다.</span><span class="sxs-lookup"><span data-stu-id="a11cb-106">Although you can use an `orderby` clause with one or more of the source sequences before the join, generally we do not recommend it.</span></span> <span data-ttu-id="a11cb-107">일부 LINQ 공급자는 조인 후에 정렬 순서를 유지하지 않을 수도 있습니다.</span><span class="sxs-lookup"><span data-stu-id="a11cb-107">Some LINQ providers might not preserve that ordering after the join.</span></span>  

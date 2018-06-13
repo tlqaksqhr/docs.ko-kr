@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33339321"
 ---
 # <a name="getting-started-with-linq-in-c"></a><span data-ttu-id="0f3b0-102">C#에서 LINQ 시작</span><span class="sxs-lookup"><span data-stu-id="0f3b0-102">Getting Started with LINQ in C#</span></span>
 <span data-ttu-id="0f3b0-103">이 섹션에서는 LINQ 설명서 및 샘플의 나머지 부분을 이해하는 데 도움이 되는 기본 배경 정보를 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="0f3b0-103">This section contains basic background information that will help you understand the rest of the LINQ documentation and samples.</span></span>  

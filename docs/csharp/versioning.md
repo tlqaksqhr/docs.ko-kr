@@ -8,6 +8,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33351786"
 ---
 # <a name="versioning-in-c"></a><span data-ttu-id="3c3e6-103">C#으로 버전 관리</span><span class="sxs-lookup"><span data-stu-id="3c3e6-103">Versioning in C#</span></span> #
 
