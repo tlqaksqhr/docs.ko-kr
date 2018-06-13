@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33598494"
 ---
 # <a name="into-clause-visual-basic"></a>Into 절(Visual Basic)
 컬렉션에 적용할 그룹화 또는 집계 함수를 식별 합니다.  

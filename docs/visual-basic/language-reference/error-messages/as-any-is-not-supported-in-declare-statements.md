@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33588228"
 ---
 # <a name="39as-any39-is-not-supported-in-39declare39-statements"></a>&#39;As Any&#39; 에서 지원 되지 않습니다 &#39;Declare&#39; 문
 `Any` 데이터 형식이 사용 된 `Declare` Visual Basic 6.0 및 이전 버전의 모든 종류의 데이터를 포함할 수 있는 인수 사용을 허용 하는 문입니다. 그러나 오버 로드 하는 Visual Basic 지원 하 고 그렇게는 `Any` 데이터 형식은 사용 되지 않습니다.  

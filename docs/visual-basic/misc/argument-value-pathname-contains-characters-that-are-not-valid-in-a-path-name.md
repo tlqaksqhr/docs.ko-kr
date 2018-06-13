@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33599192"
 ---
 # <a name="argument-value-39ltpathnamegt39-contains-characters-that-are-not-valid-in-a-path-name"></a>인수 값 &#39; &lt;pathname&gt; &#39; 경로 이름에 유효 하지 않은 문자를 포함 합니다.
 경로 이름에 잘못된 문자가 하나 이상 포함되어 있습니다.  

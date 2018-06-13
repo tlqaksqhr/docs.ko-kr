@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33597362"
 ---
 # <a name="paramarray-visual-basic"></a>ParamArray(Visual Basic)
 프로시저 매개 변수가 지정 된 형식의 요소 선택적 배열 임을 지정 합니다. `ParamArray` 매개 변수 목록의 마지막 매개 변수 에서만 사용할 수 있습니다.  

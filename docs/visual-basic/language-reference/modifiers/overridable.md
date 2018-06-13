@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33603771"
 ---
 # <a name="overridable-visual-basic"></a>Overridable(Visual Basic)
 속성 또는 프로시저에서는 동일 하 게 명명 된 속성 또는 프로시저가 파생된 클래스에서 재정의 될 수 있다는 것을 지정 합니다.  

@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33596232"
 ---
 # <a name="byref-visual-basic"></a>ByRef(Visual Basic)
 인수는 호출된 된 프로시저 호출 코드의 기반이 되는 변수 값을 변경할 수는 방식으로 전달 되도록 지정 합니다.  

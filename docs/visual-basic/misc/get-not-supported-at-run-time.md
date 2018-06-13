@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33636567"
 ---
 # <a name="get-not-supported-at-run-time"></a>Get은 런타임에 지원되지 않습니다.
 디자인 타임에만 액세스 가능한 속성을 런타임에 읽으려고 했습니다.  

@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33635715"
 ---
 # <a name="cast-from-string-quotltstringgtquot-to-type-39lttypenamegt39-is-not-valid"></a>문자열에서 캐스팅 &quot; &lt;문자열&gt; &quot; 입력 &#39; &lt;typename&gt; &#39; 사용할 수 없습니다
 문자열 변수를 다른 형식으로 변환할 수 없습니다.  

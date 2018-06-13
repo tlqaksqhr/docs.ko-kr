@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33633310"
 ---
 # <a name="visual-basic-compiler-messages"></a>Visual Basic 컴파일러 메시지
 이 섹션에는 컴파일 시간 오류 메시지에서 발생 하는 Visual Basic 포함 되어 있습니다.

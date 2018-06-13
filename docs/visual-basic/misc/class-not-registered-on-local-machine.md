@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33638387"
 ---
 # <a name="class-not-registered-on-local-machine"></a>클래스가 로컬 컴퓨터에 등록되지 않았습니다.
 이 오류는 일반적으로 손상된 파일로 인해 발생합니다. Visual Studio를 다시 설치 해야 합니다.  

@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33633122"
 ---
 # <a name="cannot-calculate-number-of-periods-using-the-arguments-provided"></a>지정한 인수를 사용하여 기간을 계산할 수 없습니다.
 에 대 한 호출에서 `NPer` 함수 모든 필수 인수가 포함 되지 않습니다.  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33639313"
 ---
 # <a name="targetfilepath-specifies-an-existing-folder"></a>TargetFilePath가 기존 폴더를 지정합니다.
 매개 변수 `TargetFilePath` 가 기존 디렉터리를 지정하지만 새 디렉터리의 이름을 지정해야 합니다.  

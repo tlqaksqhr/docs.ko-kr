@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33596657"
 ---
 # <a name="unable-to-get-serial-port-names-because-of-an-internal-system-error"></a>내부 시스템 오류가 발생하여 직렬 포트 이름을 가져올 수 없습니다.
 `My.Computer.Ports.SerialPortNames` 속성을 호출할 때 내부 오류가 발생했습니다.  

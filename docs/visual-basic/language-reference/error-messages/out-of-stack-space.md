@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33593287"
 ---
 # <a name="out-of-stack-space-visual-basic"></a>스택 공간이 부족합니다(Visual Basic).
 스택은 실행 프로그램의 요청으로 동적으로 증가 하 고 감소 하는 메모리의 작업 영역입니다. 해당 한도 초과 했습니다.  

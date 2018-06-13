@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33639391"
 ---
 # <a name="printer-error"></a>프린터 오류
 프린터에서 오류가 발생했지만 파일을 전송한 컴퓨터로 다른 정보가 반환되지 않았습니다.  

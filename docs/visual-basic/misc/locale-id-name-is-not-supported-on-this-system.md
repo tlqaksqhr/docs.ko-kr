@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33636502"
 ---
 # <a name="locale-id-39ltnamegt39-is-not-supported-on-this-system"></a>로캘 ID &#39; &lt;이름&gt; &#39; 이 시스템에서 지원 되지 않습니다
 `VbStrConv`를 사용하려고 시도하지만 시스템이 지정된 로캘을 지원하지 않습니다.  

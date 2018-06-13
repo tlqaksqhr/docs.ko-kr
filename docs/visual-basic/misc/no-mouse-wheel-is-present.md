@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33637402"
 ---
 # <a name="no-mouse-wheel-is-present"></a>마우스 휠이 없습니다.
 `My.Computer.Mouse.WheelScrollLines` 속성을 호출했지만 마우스에 스크롤 휠이 없습니다.  

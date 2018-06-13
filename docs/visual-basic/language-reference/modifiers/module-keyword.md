@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33595279"
 ---
 # <a name="module-ltkeywordgt-visual-basic"></a>모듈 &lt;키워드&gt; (Visual Basic)
 소스 파일의 시작 부분에 있는 특성이 현재 어셈블리 모듈에 적용 되도록 지정 합니다.  

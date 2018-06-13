@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33602635"
 ---
 # <a name="visual-basic-language-reference"></a>Visual Basic 언어 참조
 이 섹션에서는 Visual Basic 언어의 다양 한 측면에 대 한 참조 정보를 제공 합니다.  

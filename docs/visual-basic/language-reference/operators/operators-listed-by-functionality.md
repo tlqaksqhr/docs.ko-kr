@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33599065"
 ---
 # <a name="operators-listed-by-functionality-visual-basic"></a>기능별 연산자 목록(Visual Basic)
 아래에 나열 된 범주 중 하나를 참조 하거나 도움말 목차를 보려면 Visual Basic 연산자의 사전순 목록의이 부분을 엽니다.  

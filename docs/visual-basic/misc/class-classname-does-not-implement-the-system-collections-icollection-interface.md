@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33637389"
 ---
 # <a name="class-39ltclassnamegt39-does-not-implement-the-systemcollectionsicollection-interface"></a>클래스 &#39; &lt;classname&gt; &#39; System.Collections.ICollection 인터페이스를 구현 하지 않습니다
 클래스가 모든 컬렉션에 대한 크기, 열거자 및 동기화 메서드를 정의하는 `System.Collections.ICollection` 인터페이스를 구현하지 않습니다. Visual Studio를 다시 설치 해야 할 수도 있습니다.  

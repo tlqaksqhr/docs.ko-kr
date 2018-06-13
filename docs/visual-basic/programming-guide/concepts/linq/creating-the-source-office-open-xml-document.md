@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33640445"
 ---
 # <a name="creating-the-source-office-open-xml-document-visual-basic"></a>원본 Office Open XML 문서 (Visual Basic) 만들기
 이 항목에서는 이 자습서의 다른 예제에서 사용하는 Office Open XML WordprocessingML 문서를 만드는 방법을 보여 줍니다. 이러한 지침을 따르는 경우 출력은 각 예제에서 제공되는 출력과 일치합니다.  

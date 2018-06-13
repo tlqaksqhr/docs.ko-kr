@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33638684"
 ---
 # <a name="some-files-and-folders-caused-exceptions-during-the-operation"></a>일부 파일 및 폴더에서 작업하는 동안 예외가 발생했습니다.
 작업이 시도되었지만 사용자에게 필요한 권한이 없는 경우 디렉터리 및 파일에서 예외가 발생할 수 있습니다.  

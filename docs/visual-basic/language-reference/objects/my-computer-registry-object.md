@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33596072"
 ---
 # <a name="mycomputerregistry-object"></a>My.Computer.Registry 개체
 레지스트리를 조작하기 위한 속성 및 메서드를 제공합니다.  
