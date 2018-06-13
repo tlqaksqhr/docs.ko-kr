@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33335469"
 ---
 # <a name="creating-xml-trees-in-c-linq-to-xml"></a><span data-ttu-id="102b6-102">C#에서 XML 트리 만들기(LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="102b6-102">Creating XML Trees in C# (LINQ to XML)</span></span>
 <span data-ttu-id="102b6-103">이 단원에서는 C#에서 XML 트리를 만드는 방법에 대해 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="102b6-103">This section provides information about creating XML trees in C#.</span></span>  

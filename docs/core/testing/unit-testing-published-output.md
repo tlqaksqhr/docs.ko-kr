@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33210255"
 ---
 # <a name="test-published-output-with-dotnet-vstest"></a><span data-ttu-id="fa944-103">dotnet vstest로 게시된 출력 테스트</span><span class="sxs-lookup"><span data-stu-id="fa944-103">Test published output with dotnet vstest</span></span>
 

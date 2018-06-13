@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32767143"
 ---
 # <a name="provider-manifest-specification"></a><span data-ttu-id="ad4de-102">공급자 매니페스트 지정</span><span class="sxs-lookup"><span data-stu-id="ad4de-102">Provider Manifest Specification</span></span>
 <span data-ttu-id="ad4de-103">이 단원에서는 데이터 저장소 공급자가 데이터 저장소의 형식 및 함수를 지원하는 방법에 대해 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="ad4de-103">This section discusses how a data store provider can support the types and functions in the data store.</span></span>  

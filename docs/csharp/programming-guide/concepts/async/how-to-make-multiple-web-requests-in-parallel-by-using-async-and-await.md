@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33337758"
 ---
 # <a name="how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await-c"></a><span data-ttu-id="4ab24-102">방법: async 및 await를 사용하여 병렬로 여러 웹 요청 만들기(C#)</span><span class="sxs-lookup"><span data-stu-id="4ab24-102">How to: Make Multiple Web Requests in Parallel by Using async and await (C#)</span></span>
 <span data-ttu-id="4ab24-103">비동기 메서드에서 작업은 만들어질 때 시작됩니다.</span><span class="sxs-lookup"><span data-stu-id="4ab24-103">In an async method, tasks are started when they’re created.</span></span> <span data-ttu-id="4ab24-104">작업이 완료될 때까지 처리를 계속할 수 없는 메서드 지점의 작업에 [await](../../../../csharp/language-reference/keywords/await.md) 연산자가 적용됩니다.</span><span class="sxs-lookup"><span data-stu-id="4ab24-104">The [await](../../../../csharp/language-reference/keywords/await.md) operator is applied to the task at the point in the method where processing can’t continue until the task finishes.</span></span> <span data-ttu-id="4ab24-105">다음 예제와 같이 작업이 생성되는 즉시 대기되는 경우가 많습니다.</span><span class="sxs-lookup"><span data-stu-id="4ab24-105">Often a task is awaited as soon as it’s created, as the following example shows.</span></span>  

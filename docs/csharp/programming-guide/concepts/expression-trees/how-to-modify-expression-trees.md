@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33329844"
 ---
 # <a name="how-to-modify-expression-trees-c"></a><span data-ttu-id="0c4a7-102">방법: 식 트리 수정(C#)</span><span class="sxs-lookup"><span data-stu-id="0c4a7-102">How to: Modify Expression Trees (C#)</span></span>
 <span data-ttu-id="0c4a7-103">이 항목에서는 식 트리를 수정하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="0c4a7-103">This topic shows you how to modify an expression tree.</span></span> <span data-ttu-id="0c4a7-104">식 트리는 변경할 수 없으며, 직접 수정할 수 없음을 의미합니다.</span><span class="sxs-lookup"><span data-stu-id="0c4a7-104">Expression trees are immutable, which means that they cannot be modified directly.</span></span> <span data-ttu-id="0c4a7-105">식 트리를 변경하려면 기존 식 트리의 복사본을 만들고, 해당 복사본을 만들 때 필요한 사항을 변경해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="0c4a7-105">To change an expression tree, you must create a copy of an existing expression tree and when you create the copy, make the required changes.</span></span> <span data-ttu-id="0c4a7-106"><xref:System.Linq.Expressions.ExpressionVisitor> 클래스를 사용하여 기존 식 트리를 트래버스하고 방문하는 각 노드를 복사할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="0c4a7-106">You can use the <xref:System.Linq.Expressions.ExpressionVisitor> class to traverse an existing expression tree and to copy each node that it visits.</span></span>  

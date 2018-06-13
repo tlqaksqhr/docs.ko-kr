@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33333042"
 ---
 # <a name="basic-linq-query-operations-c"></a><span data-ttu-id="fb0b2-102">기본 LINQ 쿼리 작업(C#)</span><span class="sxs-lookup"><span data-stu-id="fb0b2-102">Basic LINQ Query Operations (C#)</span></span>
 <span data-ttu-id="fb0b2-103">이 항목에서는 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 쿼리 식 및 쿼리에서 수행하는 일부 일반적인 작업을 간단히 소개합니다.</span><span class="sxs-lookup"><span data-stu-id="fb0b2-103">This topic gives a brief introduction to [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] query expressions and some of the typical kinds of operations that you perform in a query.</span></span> <span data-ttu-id="fb0b2-104">자세한 내용은 다음 항목을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="fb0b2-104">More detailed information is in the following topics:</span></span>  

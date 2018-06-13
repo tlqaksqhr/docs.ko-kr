@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33338437"
 ---
 # <a name="sample-xml-file-multiple-purchase-orders-in-a-namespace"></a><span data-ttu-id="a6b27-102">샘플 XML 파일: 네임스페이스에서 여러 구매 주문</span><span class="sxs-lookup"><span data-stu-id="a6b27-102">Sample XML File: Multiple Purchase Orders in a Namespace</span></span>
 <span data-ttu-id="a6b27-103">다음 XML 파일은 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 설명서의 다양한 예제에서 사용됩니다.</span><span class="sxs-lookup"><span data-stu-id="a6b27-103">The following XML file is used in various examples in the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] documentation.</span></span> <span data-ttu-id="a6b27-104">이 파일에는 몇 가지 구매 주문이 포함되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="a6b27-104">This file contains several purchase orders.</span></span> <span data-ttu-id="a6b27-105">XML은 네임스페이스에 있습니다.</span><span class="sxs-lookup"><span data-stu-id="a6b27-105">The XML is in a namespace.</span></span>  

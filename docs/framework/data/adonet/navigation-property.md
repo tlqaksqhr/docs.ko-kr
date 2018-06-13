@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32767403"
 ---
 # <a name="navigation-property"></a><span data-ttu-id="0c346-102">탐색 속성(navigation property)</span><span class="sxs-lookup"><span data-stu-id="0c346-102">navigation property</span></span>
 <span data-ttu-id="0c346-103">A *탐색 속성* 은 선택적 속성에는 [엔터티 형식](../../../../docs/framework/data/adonet/entity-type.md) 하나씩 탐색할 수 있게 해 주는 [끝](../../../../docs/framework/data/adonet/association-end.md) 의 [연결](../../../../docs/framework/data/adonet/association-type.md) 를 다른 쪽 끝입니다.</span><span class="sxs-lookup"><span data-stu-id="0c346-103">A *navigation property* is an optional property on an [entity type](../../../../docs/framework/data/adonet/entity-type.md) that allows for navigation from one [end](../../../../docs/framework/data/adonet/association-end.md) of an [association](../../../../docs/framework/data/adonet/association-type.md) to the other end.</span></span> <span data-ttu-id="0c346-104">다른 달리 [속성](../../../../docs/framework/data/adonet/property.md), 탐색 속성은 데이터를 전달 하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="0c346-104">Unlike other [properties](../../../../docs/framework/data/adonet/property.md), navigation properties do not carry data.</span></span>  

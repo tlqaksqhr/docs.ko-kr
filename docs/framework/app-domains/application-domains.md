@@ -19,6 +19,7 @@ ms.sourcegitcommit: 22c3c8f74eaa138dbbbb02eb7d720fce87fc30a9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/18/2018
+ms.locfileid: "34233953"
 ---
 # <a name="application-domains"></a><span data-ttu-id="b5a2b-102">응용 프로그램 도메인</span><span class="sxs-lookup"><span data-stu-id="b5a2b-102">Application Domains</span></span>
 <span data-ttu-id="b5a2b-103">운영 체제와 런타임 환경은 일반적으로 응용 프로그램 간에 몇 가지 형식의 격리를 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="b5a2b-103">Operating systems and runtime environments typically provide some form of isolation between applications.</span></span> <span data-ttu-id="b5a2b-104">예를 들어 Windows에서는 프로세스를 사용하여 응용 프로그램을 격리합니다.</span><span class="sxs-lookup"><span data-stu-id="b5a2b-104">For example, Windows uses processes to isolate applications.</span></span> <span data-ttu-id="b5a2b-105">격리는 한 응용 프로그램에서 실행 중인 코드가 서로 관련 없는 다른 응용 프로그램에 나쁜 영향을 주지 않도록 하기 위해 필요합니다.</span><span class="sxs-lookup"><span data-stu-id="b5a2b-105">This isolation is necessary to ensure that code running in one application cannot adversely affect other, unrelated applications.</span></span>  

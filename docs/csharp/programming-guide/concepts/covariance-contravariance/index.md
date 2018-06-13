@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33334089"
 ---
 # <a name="covariance-and-contravariance-c"></a><span data-ttu-id="a1ff2-102">공변성(Covariance) 및 반공변성(Contravariance)(C#)</span><span class="sxs-lookup"><span data-stu-id="a1ff2-102">Covariance and Contravariance (C#)</span></span>
 <span data-ttu-id="a1ff2-103">C#에서 공변성(Covariance)과 반공변성(Contravariance)은 배열 형식, 대리자 형식 및 제네릭 형식 인수에 대한 암시적 참조 변환을 가능하게 합니다.</span><span class="sxs-lookup"><span data-stu-id="a1ff2-103">In C#, covariance and contravariance enable implicit reference conversion for array types, delegate types, and generic type arguments.</span></span> <span data-ttu-id="a1ff2-104">공변성(Covariance)은 할당 호환성을 유지하고 반공변성(Contravariance)은 할당 호환성을 유지하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="a1ff2-104">Covariance preserves assignment compatibility and contravariance reverses it.</span></span>  

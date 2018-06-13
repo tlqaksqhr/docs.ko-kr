@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33333185"
 ---
 # <a name="how-to-identify-a-nullable-type-c-programming-guide"></a><span data-ttu-id="60764-102">방법: Nullable 형식 식별(C# 프로그래밍 가이드)</span><span class="sxs-lookup"><span data-stu-id="60764-102">How to: Identify a Nullable Type (C# Programming Guide)</span></span>
 <span data-ttu-id="60764-103">C# [typeof](../../../csharp/language-reference/keywords/typeof.md) 연산자를 사용하여 Nullable 형식을 나타내는 <xref:System.Type> 개체를 만들 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="60764-103">You can use the C# [typeof](../../../csharp/language-reference/keywords/typeof.md) operator to create a <xref:System.Type> object that represents a Nullable type:</span></span>  

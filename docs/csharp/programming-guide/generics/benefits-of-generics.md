@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33336832"
 ---
 # <a name="benefits-of-generics-c-programming-guide"></a><span data-ttu-id="689d0-102">제네릭의 장점(C# 프로그래밍 가이드)</span><span class="sxs-lookup"><span data-stu-id="689d0-102">Benefits of Generics (C# Programming Guide)</span></span>
 <span data-ttu-id="689d0-103">제네릭은 형식을 유니버설 기본 형식 <xref:System.Object>으로/에서 캐스팅하여 일반화가 수행되는 이전 버전의 공용 언어 런타임 및 C# 언어의 제한 사항에 대한 솔루션을 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="689d0-103">Generics provide the solution to a limitation in earlier versions of the common language runtime and the C# language in which generalization is accomplished by casting types to and from the universal base type <xref:System.Object>.</span></span> <span data-ttu-id="689d0-104">제네릭 클래스를 만들면 컴파일 시간에 형식이 안전한 컬렉션을 만들 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="689d0-104">By creating a generic class, you can create a collection that is type-safe at compile-time.</span></span>  

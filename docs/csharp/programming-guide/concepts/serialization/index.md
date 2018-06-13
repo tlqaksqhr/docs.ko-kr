@@ -6,6 +6,7 @@ ms.sourcegitcommit: 88f251b08bf0718ce119f3d7302f514b74895038
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "33957855"
 ---
 # <a name="serialization-c"></a><span data-ttu-id="f0835-102">Serialization(C#)</span><span class="sxs-lookup"><span data-stu-id="f0835-102">Serialization (C#)</span></span>
 

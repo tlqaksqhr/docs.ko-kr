@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33339932"
 ---
 # <a name="how-to-implement-user-defined-conversions-between-structs-c-programming-guide"></a><span data-ttu-id="bba42-102">방법: 구조체 간의 사용자 정의 변환 구현(C# 프로그래밍 가이드)</span><span class="sxs-lookup"><span data-stu-id="bba42-102">How to: Implement User-Defined Conversions Between Structs (C# Programming Guide)</span></span>
 <span data-ttu-id="bba42-103">이 예제에서는 두 개의 구조체 `RomanNumeral` 및 `BinaryNumeral`을 정의하고 두 구조체 간의 변환을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="bba42-103">This example defines two structs, `RomanNumeral` and `BinaryNumeral`, and demonstrates conversions between them.</span></span>  

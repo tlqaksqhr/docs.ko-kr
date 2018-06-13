@@ -1,14 +1,6 @@
 ---
-title: "COR_PRF_SNAPSHOT_INFO 열거형"
-ms.custom: 
+title: COR_PRF_SNAPSHOT_INFO 열거형
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - COR_PRF_SNAPSHOT_INFO
 api_location:
@@ -22,22 +14,19 @@ helpviewer_keywords:
 ms.assetid: a5906b2a-ad4a-4cc6-a421-2d7d8adf7468
 topic_type:
 - apiref
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 4573ec44253b1b0f26ae62591db149f0447d3935
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 9d6713a7f54f6a6d8dbf261ad45304e6ddbe24c0
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33450719"
 ---
-# <a name="corprfsnapshotinfo-enumeration"></a><span data-ttu-id="88b3e-102">COR_PRF_SNAPSHOT_INFO 열거형</span><span class="sxs-lookup"><span data-stu-id="88b3e-102">COR_PRF_SNAPSHOT_INFO Enumeration</span></span>
-<span data-ttu-id="88b3e-103">프로파일러를 호출할 때마다 스택 스냅숏과 함께 다시 전달할 데이터 양을 지정 [StackSnapshotCallback](../../../../docs/framework/unmanaged-api/profiling/stacksnapshotcallback-function.md) 함수입니다.</span><span class="sxs-lookup"><span data-stu-id="88b3e-103">Specifies how much data to pass back with a stack snapshot in each call to the profiler's [StackSnapshotCallback](../../../../docs/framework/unmanaged-api/profiling/stacksnapshotcallback-function.md) function.</span></span>  
+# <a name="corprfsnapshotinfo-enumeration"></a><span data-ttu-id="03d2a-102">COR_PRF_SNAPSHOT_INFO 열거형</span><span class="sxs-lookup"><span data-stu-id="03d2a-102">COR_PRF_SNAPSHOT_INFO Enumeration</span></span>
+<span data-ttu-id="03d2a-103">프로파일러를 호출할 때마다 스택 스냅숏과 함께 다시 전달할 데이터 양을 지정 [StackSnapshotCallback](../../../../docs/framework/unmanaged-api/profiling/stacksnapshotcallback-function.md) 함수입니다.</span><span class="sxs-lookup"><span data-stu-id="03d2a-103">Specifies how much data to pass back with a stack snapshot in each call to the profiler's [StackSnapshotCallback](../../../../docs/framework/unmanaged-api/profiling/stacksnapshotcallback-function.md) function.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="88b3e-104">구문</span><span class="sxs-lookup"><span data-stu-id="88b3e-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="03d2a-104">구문</span><span class="sxs-lookup"><span data-stu-id="03d2a-104">Syntax</span></span>  
   
 ```  
 typedef enum _COR_PRF_SNAPSHOT_INFO {  
@@ -47,26 +36,26 @@ typedef enum _COR_PRF_SNAPSHOT_INFO {
 } COR_PRF_SNAPSHOT_INFO;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="88b3e-105">멤버</span><span class="sxs-lookup"><span data-stu-id="88b3e-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="03d2a-105">멤버</span><span class="sxs-lookup"><span data-stu-id="03d2a-105">Members</span></span>  
   
-|<span data-ttu-id="88b3e-106">멤버</span><span class="sxs-lookup"><span data-stu-id="88b3e-106">Members</span></span>|<span data-ttu-id="88b3e-107">설명</span><span class="sxs-lookup"><span data-stu-id="88b3e-107">Description</span></span>|  
+|<span data-ttu-id="03d2a-106">멤버</span><span class="sxs-lookup"><span data-stu-id="03d2a-106">Members</span></span>|<span data-ttu-id="03d2a-107">설명</span><span class="sxs-lookup"><span data-stu-id="03d2a-107">Description</span></span>|  
 |-------------|-----------------|  
-|`COR_PRF_SNAPSHOT_DEFAULT`|<span data-ttu-id="88b3e-108">모든 값을 전달 해야 나타냅니다 `StackSnapshotCallback` 매개 변수를 제외 하 고는 `context` 매개 변수입니다.</span><span class="sxs-lookup"><span data-stu-id="88b3e-108">Indicates that values must be passed for all `StackSnapshotCallback` parameters, except the `context` parameter.</span></span>|  
-|`COR_PRF_SNAPSHOT_REGISTER_CONTEXT`|<span data-ttu-id="88b3e-109">모든 값을 전달 해야 나타냅니다 `StackSnapshotCallback` 매개 변수를 포함 하는 `context` 매개 변수입니다.</span><span class="sxs-lookup"><span data-stu-id="88b3e-109">Indicates that values must be passed for all `StackSnapshotCallback` parameters, including the `context` parameter.</span></span>|  
-|`COR_PRF_SNAPSHOT_X86_OPTIMIZED`|<span data-ttu-id="88b3e-110">스택 워크 간단 하 고 대체 알고리즘 사용될지를 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="88b3e-110">Indicates that a simpler, alternative stack-walking algorithm will be used.</span></span>|  
+|`COR_PRF_SNAPSHOT_DEFAULT`|<span data-ttu-id="03d2a-108">모든 값을 전달 해야 나타냅니다 `StackSnapshotCallback` 매개 변수를 제외 하 고는 `context` 매개 변수입니다.</span><span class="sxs-lookup"><span data-stu-id="03d2a-108">Indicates that values must be passed for all `StackSnapshotCallback` parameters, except the `context` parameter.</span></span>|  
+|`COR_PRF_SNAPSHOT_REGISTER_CONTEXT`|<span data-ttu-id="03d2a-109">모든 값을 전달 해야 나타냅니다 `StackSnapshotCallback` 매개 변수를 포함 하는 `context` 매개 변수입니다.</span><span class="sxs-lookup"><span data-stu-id="03d2a-109">Indicates that values must be passed for all `StackSnapshotCallback` parameters, including the `context` parameter.</span></span>|  
+|`COR_PRF_SNAPSHOT_X86_OPTIMIZED`|<span data-ttu-id="03d2a-110">스택 워크 간단 하 고 대체 알고리즘 사용될지를 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="03d2a-110">Indicates that a simpler, alternative stack-walking algorithm will be used.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="88b3e-111">설명</span><span class="sxs-lookup"><span data-stu-id="88b3e-111">Remarks</span></span>  
- <span data-ttu-id="88b3e-112">제공 되는 값은 `COR_PRF_SNAPSHOT_INFO` 열거형에 매개 변수로 전달 되는 [DoStackSnapshot](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-dostacksnapshot-method.md) 메서드.</span><span class="sxs-lookup"><span data-stu-id="88b3e-112">Values that are provided by the `COR_PRF_SNAPSHOT_INFO` enumeration are passed as parameters to the [DoStackSnapshot](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-dostacksnapshot-method.md) method.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="03d2a-111">설명</span><span class="sxs-lookup"><span data-stu-id="03d2a-111">Remarks</span></span>  
+ <span data-ttu-id="03d2a-112">제공 되는 값은 `COR_PRF_SNAPSHOT_INFO` 열거형에 매개 변수로 전달 되는 [DoStackSnapshot](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-dostacksnapshot-method.md) 메서드.</span><span class="sxs-lookup"><span data-stu-id="03d2a-112">Values that are provided by the `COR_PRF_SNAPSHOT_INFO` enumeration are passed as parameters to the [DoStackSnapshot](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-dostacksnapshot-method.md) method.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="88b3e-113">요구 사항</span><span class="sxs-lookup"><span data-stu-id="88b3e-113">Requirements</span></span>  
- <span data-ttu-id="88b3e-114">**플랫폼:** 참조 [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="88b3e-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="03d2a-113">요구 사항</span><span class="sxs-lookup"><span data-stu-id="03d2a-113">Requirements</span></span>  
+ <span data-ttu-id="03d2a-114">**플랫폼:** 참조 [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="03d2a-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="88b3e-115">**헤더:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="88b3e-115">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="03d2a-115">**헤더:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="03d2a-115">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="88b3e-116">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="88b3e-116">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="03d2a-116">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="03d2a-116">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="88b3e-117">**.NET framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="88b3e-117">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="03d2a-117">**.NET framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="03d2a-117">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="88b3e-118">참고 항목</span><span class="sxs-lookup"><span data-stu-id="88b3e-118">See Also</span></span>  
- [<span data-ttu-id="88b3e-119">DoStackSnapshot 메서드</span><span class="sxs-lookup"><span data-stu-id="88b3e-119">DoStackSnapshot Method</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-dostacksnapshot-method.md)  
- [<span data-ttu-id="88b3e-120">프로파일링 열거형</span><span class="sxs-lookup"><span data-stu-id="88b3e-120">Profiling Enumerations</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)
+## <a name="see-also"></a><span data-ttu-id="03d2a-118">참고 항목</span><span class="sxs-lookup"><span data-stu-id="03d2a-118">See Also</span></span>  
+ [<span data-ttu-id="03d2a-119">DoStackSnapshot 메서드</span><span class="sxs-lookup"><span data-stu-id="03d2a-119">DoStackSnapshot Method</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-dostacksnapshot-method.md)  
+ [<span data-ttu-id="03d2a-120">프로파일링 열거형</span><span class="sxs-lookup"><span data-stu-id="03d2a-120">Profiling Enumerations</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)

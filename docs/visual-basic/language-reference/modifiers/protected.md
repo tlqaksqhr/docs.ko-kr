@@ -15,6 +15,7 @@ ms.sourcegitcommit: 22c3c8f74eaa138dbbbb02eb7d720fce87fc30a9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/17/2018
+ms.locfileid: "34234759"
 ---
 # <a name="protected-visual-basic"></a><span data-ttu-id="e1be0-102">Protected(Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="e1be0-102">Protected (Visual Basic)</span></span>
 <span data-ttu-id="e1be0-103">하나 이상의 선언 된 프로그래밍 요소를 지정 하는 멤버 액세스 한정자는 자체 클래스 내부나 파생 클래스에서 에서만 액세스할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="e1be0-103">A member access modifier that specifies that one or more declared programming elements are accessible only from within their own class or from a derived class.</span></span>  
