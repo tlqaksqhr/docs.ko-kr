@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33565865"
 ---
 # <a name="type-converters-and-markup-extensions-for-xaml"></a>XAML을 위한 형식 변환기 및 태그 확장명
 형식 변환기 및 태그 확장은 XAML 형식 시스템과 XAML 작성기가 개체 그래프 구성 요소를 생성하는 데 사용하는 두 가지 기술입니다. 일부 특징을 공유하지만 형식 변환기 및 태그 확장은 XAML 노드 스트림에서 다르게 표현됩니다. 이 설명서 집합에서는 때때로 형식 변환기, 태그 확장 및 유사한 구문을 총체적으로 값 변환기라고 합니다.  

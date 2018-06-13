@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33515254"
 ---
 # <a name="exposing-data-with-cachemetadata"></a>CacheMetadata를 사용하여 데이터 노출
 작업을 실행하기 전에 워크플로 런타임은 실행을 유지하는 데 필요한 모든 작업 정보를 얻습니다. 워크플로 런타임은 <xref:System.Activities.Activity.CacheMetadata%2A> 메서드를 실행하는 동안 이 정보를 가져옵니다. 이 메서드의 기본 구현에서는 실행 시 작업에서 노출하는 모든 공용 인수, 변수 및 자식 작업을 런타임에 제공합니다. 작업에서 보다 많은 정보를 런타임에 제공해야 하는 경우(예: 전용 멤버 또는 작업에서 예약될 작업) 이 메서드를 재정의하여 제공할 수 있습니다.  

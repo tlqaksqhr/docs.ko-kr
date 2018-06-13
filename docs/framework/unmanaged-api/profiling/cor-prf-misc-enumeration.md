@@ -18,9 +18,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: c8f4cffd718fffa9145e1082092ecec45b80a2ec
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33451061"
 ---
 # <a name="corprfmisc-enumeration"></a>COR_PRF_MISC 열거형
 특수 식별자를 지정하는 상수 값을 포함합니다.  

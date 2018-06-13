@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33563586"
 ---
 # <a name="generics-in-xaml"></a>XAML의 제네릭
 System.Xaml에 구현 된 대로.NET Framework XAML 서비스 제네릭 CLR 형식 사용에 대 한 지원을 제공 합니다. 이 지원 형식 인수로 제네릭의 제약 조건을 지정 하는 제약 조건을 적절 한 호출 하 여 적용 및 포함 `Add` 방법의 경우 제네릭 컬렉션입니다. 이 항목에서는 사용 하 고 XAML의 제네릭 형식 참조의 측면을 설명 합니다.  

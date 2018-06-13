@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33518439"
 ---
 # <a name="what39s-new-in-windows-workflow-foundation"></a>어떤&#39;Windows Workflow Foundation의 새로운 s
 Windows WF (Workflow Foundation)에서 [!INCLUDE[netfx40_long](../../../includes/netfx40-long-md.md)] 이전 버전에서 다른 여러 개발 패러다임을 변경 합니다. 이제 워크플로에서 많은 새로운 기능을 보다 쉽게 작성, 실행, 유지 관리 및 구현할 수 있습니다. 마이그레이션.NET 3.0 및.NET 3.5 워크플로 응용 프로그램을 최신 버전을 사용 하는 방법에 대 한 자세한 내용은 참조 [마이그레이션 지침](../../../docs/framework/windows-workflow-foundation/migration-guidance.md)합니다.  

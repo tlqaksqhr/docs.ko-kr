@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33561737"
 ---
 # <a name="visual-layer-programming"></a>시각적 계층 프로그래밍
 <xref:System.Windows.Media.Visual> 개체는 핵심 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 주 역할이 렌더링 지원을 제공 하는 개체입니다. 와 같은 사용자 인터페이스 컨트롤 <xref:System.Windows.Controls.Button> 및 <xref:System.Windows.Controls.TextBox>에서 파생 되는 <xref:System.Windows.Media.Visual> 클래스를 사용 하 여 렌더링 데이터를 유지 하는 것에 대 한 합니다.  

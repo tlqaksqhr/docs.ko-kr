@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33555202"
 ---
 # <a name="how-to-style-a-row-in-a-listview-that-implements-a-gridview"></a>방법: GridView를 구현하는 ListView 행의 스타일 지정
 행 스타일을 지정 하는 방법을 보여 주는이 예제는 <xref:System.Windows.Controls.ListView> 구현 하는 컨트롤을 <xref:System.Windows.Controls.GridView> <xref:System.Windows.Controls.ListView.View%2A> 모드입니다.  

@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33601048"
 ---
 # <a name="baselogname-cannot-be-nothing-or-an-empty-string"></a>BaseLogName은 Nothing이나 빈 문자열일 수 없습니다.
 <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.BaseFileName%2A> 속성 값은 `Nothing` 이거나 빈 문자열일 수 없습니다.  

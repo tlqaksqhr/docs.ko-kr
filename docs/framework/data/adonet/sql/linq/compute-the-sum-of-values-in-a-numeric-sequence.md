@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33361431"
 ---
 # <a name="compute-the-sum-of-values-in-a-numeric-sequence"></a>숫자 시퀀스에서 값의 합계 계산
 <xref:System.Linq.Enumerable.Sum%2A> 연산자를 사용하여 시퀀스의 숫자 값의 합을 계산합니다.  

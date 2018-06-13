@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33363382"
 ---
 # <a name="code-generation-in-linq-to-sql"></a>LINQ to SQL에서 코드 생성
 데이터베이스를 나타내는 코드는 [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] 또는 SQLMetal 명령줄 도구를 사용하여 생성할 수 있습니다. 두 경우 모두 다음과 같은 세 단계로 코드가 생성됩니다.  

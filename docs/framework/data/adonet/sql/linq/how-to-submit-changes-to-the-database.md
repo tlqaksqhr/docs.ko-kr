@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33362888"
 ---
 # <a name="how-to-submit-changes-to-the-database"></a>방법: 데이터베이스에 변경 내용 전송
 개체의 변경 내용 수에 관계없이 메모리 내의 복제본에만 변경 내용이 적용됩니다. 데이터베이스의 실제 데이터는 변경하지 않습니다. <xref:System.Data.Linq.DataContext.SubmitChanges%2A>의 <xref:System.Data.Linq.DataContext>를 명시적으로 호출한 후에 변경 내용이 서버에 전송됩니다.  

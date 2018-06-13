@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32748908"
 ---
 # <a name="ltprotocolmappinggt"></a>&lt;protocolMapping&gt;
 전송 프로토콜 체계 (예: http, net.tcp, net.pipe 등) 및 WCF 바인딩 간의 기본 프로토콜 매핑 집합을 정의 하기 위한 구성 섹션을 나타냅니다. 런타임에 기본 끝점을 만들 때 Windows Communication Foundation (WCF)에서는 구성 된 매핑을 확인 하 고 기본 주소에서 특정 작업에 대해 사용할 바인딩을 결정 합니다.  

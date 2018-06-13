@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 761dd55d2ae48739f24a03b8ce81c571fb211a5a
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33453159"
 ---
 # <a name="icorprofilerinfogetinprocinspectioninterface-method"></a>ICorProfilerInfo::GetInprocInspectionInterface 메서드
 "ICorDebugProcess" 인터페이스에 대해 쿼리할 수 있는 개체를 가져옵니다. 이 메서드는.NET Framework 버전 2.0에서에서 사용 되지 않습니다.  

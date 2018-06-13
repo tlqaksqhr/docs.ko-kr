@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33513099"
 ---
 # <a name="windows-workflow-architecture"></a>Windows Workflow 아키텍처
 Windows WF (Workflow Foundation)에 대화형 장기 실행 응용 프로그램을 개발 하기 위한 추상화 수준을 생성 합니다. 작업 단위는 활동으로 캡슐화됩니다. 또한 활동은 흐름 제어, 예외 처리, 오류 전파, 상태 데이터 지속성, 메모리에서 진행 중인 워크플로 로드 및 언로드, 추적, 트랜잭션 흐름 등과 같은 기능을 제공하는 환경에서 실행됩니다.  

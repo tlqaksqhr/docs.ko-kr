@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33365308"
 ---
 # <a name="implementing-an-implicit-transaction-using-transaction-scope"></a>트랜잭션 범위를 사용하여 암시적 트랜잭션 구현
 <xref:System.Transactions.TransactionScope> 클래스는 트랜잭션 자체와 상호 작용할 필요 없이 코드 블록을 트랜잭션에 참여하는 것으로 표시하는 단순한 방법을 제공합니다. 트랜잭션 범위는 자동으로 앰비언트 트랜잭션을 선택하고 관리할 수 있습니다. 사용하기 쉽고 효율적이므로 트랜잭션 응용 프로그램을 개발할 때는 <xref:System.Transactions.TransactionScope> 클래스를 사용하는 것이 좋습니다.  

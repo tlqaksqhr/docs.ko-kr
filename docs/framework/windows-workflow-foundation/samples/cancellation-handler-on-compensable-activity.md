@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33515003"
 ---
 # <a name="cancellation-handler-on-compensable-activity"></a>보정 가능한 활동에 대한 취소 처리기
 이 샘플에서는 <xref:System.Activities.Statements.CompensableActivity>에 대해 취소 처리기를 사용하는 방법을 보여 줍니다.  

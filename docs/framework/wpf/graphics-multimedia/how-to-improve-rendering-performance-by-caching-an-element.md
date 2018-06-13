@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33559300"
 ---
 # <a name="how-to-improve-rendering-performance-by-caching-an-element"></a>방법: 요소를 캐시하여 렌더링 성능 향상
 사용 하 여는 <xref:System.Windows.Media.BitmapCache> 복잡 한의 렌더링 성능을 개선 하기 위해 클래스 <xref:System.Windows.UIElement>합니다. 새 인스턴스를 만들고 요소를 캐시 하려면는 <xref:System.Windows.Media.BitmapCache> 클래스 및 요소에 할당할 <xref:System.Windows.UIElement.CacheMode%2A> 속성입니다. 다시 사용할 수는 <xref:System.Windows.Media.BitmapCache> 에 효율적으로 한 <xref:System.Windows.Media.BitmapCacheBrush>합니다.  

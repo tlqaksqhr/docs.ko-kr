@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 474338ff1780ce9b442208cd06f8b14bc411be5e
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33447751"
 ---
 # <a name="imetadataimportgetuserstring-method"></a>IMetaDataImport::GetUserString 메서드
 지정한 메타데이터 토큰이 나타내는 리터럴 문자열을 가져옵니다.  

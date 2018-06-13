@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33556915"
 ---
 # <a name="control-styles-and-templates"></a>Control 스타일 및 템플릿
 Windows Presentation Foundation (WPF)의 컨트롤에는 한 <xref:System.Windows.Controls.ControlTemplate> 해당 컨트롤의 표시 트리를 포함 하는 합니다. 구조와 컨트롤의 모양을 수정 하 여 변경할 수 있습니다는 <xref:System.Windows.Controls.ControlTemplate> 해당 컨트롤의 합니다. 컨트롤의 시각적 트리의 부분만 바꿀 수 없으므로 설정 해야 하는 컨트롤의 시각적 트리를 변경 하는 <xref:System.Windows.Controls.Control.Template%2A> 을 새로운 전체 컨트롤의 속성 <xref:System.Windows.Controls.ControlTemplate>합니다.  

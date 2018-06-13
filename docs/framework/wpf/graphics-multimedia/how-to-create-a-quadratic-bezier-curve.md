@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33558893"
 ---
 # <a name="how-to-create-a-quadratic-bezier-curve"></a>방법: 정방형 3차원 곡선 만들기
 이 예제에 정방형 3 차원 곡선을 만드는 방법을 보여 줍니다.  정방형 3 차원 곡선을 만들려면 사용는 <xref:System.Windows.Media.PathGeometry>, <xref:System.Windows.Media.PathFigure>, 및 <xref:System.Windows.Media.QuadraticBezierSegment> 클래스입니다.  

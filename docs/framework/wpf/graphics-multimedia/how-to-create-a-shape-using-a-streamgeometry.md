@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33560371"
 ---
 # <a name="how-to-create-a-shape-using-a-streamgeometry"></a>방법: StreamGeometry를 사용하여 도형 만들기
 <xref:System.Windows.Media.StreamGeometry> 간단한 안으로 <xref:System.Windows.Media.PathGeometry> 기 하 도형 만들기에 대 한 합니다. 사용 하 여 한 <xref:System.Windows.Media.StreamGeometry> 복잡 기 하 도형을 설명 해야 하지만 데이터 바인딩, 애니메이션 또는 수정을 지원의 오버 헤드를 원하지 않는 합니다. 예를 들어는 효율성으로 인해는 <xref:System.Windows.Media.StreamGeometry> 클래스는 표시기를 설명 하기에 적합 합니다.  

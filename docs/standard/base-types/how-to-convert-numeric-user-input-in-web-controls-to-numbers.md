@@ -20,6 +20,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33571916"
 ---
 # <a name="how-to-convert-numeric-user-input-in-web-controls-to-numbers"></a>방법: 사용자가 웹 컨트롤에 입력한 숫자를 숫자로 변환
 전 세계 어디서든 웹 페이지를 표시할 수 있으므로 사용자가 거의 무제한의 형식으로 숫자 데이터를 <xref:System.Web.UI.WebControls.TextBox> 컨트롤에 입력할 수 있습니다. 따라서 웹 페이지 사용자의 로캘 및 문화권을 확인하는 것이 매우 중요합니다. 사용자 입력을 구문 분석할 때 사용자의 로캘 및 문화권에 의해 정의된 서식 지정 규칙을 적용할 수 있습니다.  

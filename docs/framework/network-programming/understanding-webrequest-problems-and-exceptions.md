@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33398068"
 ---
 # <a name="understanding-webrequest-problems-and-exceptions"></a>WebRequest 문제 및 예외 이해
 <xref:System.Net.WebRequest> 및 파생 클래스(<xref:System.Net.HttpWebRequest>, <xref:System.Net.FtpWebRequest> 및 <xref:System.Net.FileWebRequest>)는 예외를 throw하여 비정상 상태를 알립니다. 이러한 문제의 해결이 분명하지 않은 경우도 있습니다.  

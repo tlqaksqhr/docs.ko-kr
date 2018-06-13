@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33556837"
 ---
 # <a name="how-to-produce-a-value-based-on-a-list-of-bound-items"></a>방법: 바인딩된 항목 목록을 기반으로 값 산출
 <xref:System.Windows.Data.MultiBinding> 바인딩 대상 속성 원본 속성의 목록에 바인딩하고 다음 지정 된 입력을 지 원하는 값을 생성 하는 논리를 적용할 수 있습니다. 사용 하는 방법을 보여 주는이 예제 <xref:System.Windows.Data.MultiBinding>합니다.  

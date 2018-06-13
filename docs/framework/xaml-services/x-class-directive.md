@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33566810"
 ---
 # <a name="xclass-directive"></a>x:Class 지시문
 XAML 태그 컴파일을 태그와 코드 숨김 클래스를 부분 가입을 구성 합니다. 별도 코드 파일에 코드 partial 클래스가 정의 되어는 [!INCLUDE[TLA#tla_cls](../../../includes/tlasharptla-cls-md.md)] 언어에서 반면 태그 partial 클래스는 일반적으로 XAML 컴파일하는 동안 코드를 생성 하 여 만듭니다.  

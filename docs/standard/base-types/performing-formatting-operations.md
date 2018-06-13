@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33567847"
 ---
 # <a name="performing-formatting-operations"></a>서식 지정 작업 수행
 다음 항목은 특정 서식 지정 작업을 수행하기 위한 단계별 지침을 제공합니다.  

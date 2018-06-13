@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33560471"
 ---
 # <a name="how-to-create-a-line-using-a-linegeometry"></a>방법: LineGeometry를 사용하여 선 만들기
 사용 하는 방법을 보여 주는이 예제는 <xref:System.Windows.Media.LineGeometry> 줄을 설명 하는 클래스입니다. A <xref:System.Windows.Media.LineGeometry> 시작 및 끝 지점을 사용 하 여 정의 됩니다.  

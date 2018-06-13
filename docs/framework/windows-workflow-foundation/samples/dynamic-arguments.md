@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33517980"
 ---
 # <a name="dynamic-arguments"></a>Dynamic 인수
 이 샘플에서는 활동 작성자가 아니라 활동 소비자에 의해 인수가 정의되는 활동을 구현하는 방법을 보여 줍니다. 이를 위해 런타임에서 활동의 메타데이터가 생성되는 방식을 재정의합니다.  

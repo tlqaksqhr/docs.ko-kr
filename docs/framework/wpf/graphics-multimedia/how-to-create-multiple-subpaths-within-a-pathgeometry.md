@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33559333"
 ---
 # <a name="how-to-create-multiple-subpaths-within-a-pathgeometry"></a>방법: PathGeometry 내에 다중 하위 경로 만들기
 여러 하위 경로 만드는 방법을 보여 주는이 예제는 <xref:System.Windows.Media.PathGeometry>합니다. 여러 하위 경로 만들려면 만듭니다는 <xref:System.Windows.Media.PathFigure> 각 하위 경로 대 한 합니다.  

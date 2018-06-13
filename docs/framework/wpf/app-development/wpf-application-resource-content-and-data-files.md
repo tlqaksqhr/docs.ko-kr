@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33558267"
 ---
 # <a name="wpf-application-resource-content-and-data-files"></a>WPF 응용 프로그램 리소스, 콘텐츠 및 데이터 파일
 [!INCLUDE[TLA#tla_win](../../../../includes/tlasharptla-win-md.md)] 응용 프로그램은 종종 실행 파일이 아닌 데이터와 같은 포함 된 파일 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)], 이미지, 비디오 및 오디오 합니다. Windows Presentation Foundation (WPF)를 구성 하 고 식별 하 고, 이러한 종류의 응용 프로그램 데이터 파일 이라고 하는 데이터 파일을 사용 하 여 특별 한 지원을 제공 합니다. 이러한 지원에는 다음을 포함한 특정 응용 프로그램 데이터 파일 형식 집합이 포함됩니다.  

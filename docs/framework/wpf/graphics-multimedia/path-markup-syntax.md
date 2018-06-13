@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33566771"
 ---
 # <a name="path-markup-syntax"></a>경로 태그 구문
 그러나 경로에 대해서는 [Shape 및 기본 그리기 개요 WPF에서에서](../../../../docs/framework/wpf/graphics-multimedia/shapes-and-basic-drawing-in-wpf-overview.md) 및 [기 하 도형 개요](../../../../docs/framework/wpf/graphics-multimedia/geometry-overview.md),이 항목에 자세히 설명 경로 지정 하는 데 강력 하 고 복잡 한 최소 언어 더 조밀 하 게 사용 하 여 기 하 도형 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]합니다.  

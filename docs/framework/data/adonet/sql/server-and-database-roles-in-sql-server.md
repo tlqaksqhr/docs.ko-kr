@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33364800"
 ---
 # <a name="server-and-database-roles-in-sql-server"></a>SQL Server의 서버 및 데이터베이스 역할
 모든 버전의 SQL Server에서는 역할 기반 보안을 사용하므로 개별 사용자 대신 역할이나 사용자 그룹에 권한을 할당할 수 있습니다. 고정 서버 역할과 고정 데이터베이스 역할에는 고정 권한 집합이 할당되어 있습니다.  

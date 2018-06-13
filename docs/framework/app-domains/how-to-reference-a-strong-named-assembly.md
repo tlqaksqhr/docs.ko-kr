@@ -18,6 +18,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32743318"
 ---
 # <a name="how-to-reference-a-strong-named-assembly"></a>방법: 강력한 이름의 어셈블리 참조
 강력한 이름의 어셈블리에서 형식이나 리소스를 참조하는 프로세스는 일반적으로 투명합니다. 컴파일 시간(초기 바인딩) 또는 런타임에 참조를 만들 수 있습니다.  

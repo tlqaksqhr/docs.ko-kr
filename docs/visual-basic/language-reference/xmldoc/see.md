@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33602082"
 ---
 # <a name="ltseegt-visual-basic"></a>&lt;참조&gt; (Visual Basic)
 다른 멤버에 대 한 링크를 지정 합니다.  

@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33554887"
 ---
 # <a name="how-to-resize-rows-with-a-gridsplitter"></a>방법: GridSplitter로 행 크기 조정
 가로 사용 하는 방법을 보여 주는이 예제 <xref:System.Windows.Controls.GridSplitter> 에 있는 두 행 사이의 공백을 다시 배포 하는 <xref:System.Windows.Controls.Grid> 의 크기를 변경 하지 않고는 <xref:System.Windows.Controls.Grid>합니다.  

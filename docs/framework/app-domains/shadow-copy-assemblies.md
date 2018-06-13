@@ -13,6 +13,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32743955"
 ---
 # <a name="shadow-copying-assemblies"></a>어셈블리 섀도 복사
 섀도 복사를 사용하면 응용 프로그램 도메인을 언로드하지 않고 응용 프로그램 도메인에서 사용되는 어셈블리를 업데이트할 수 있습니다. 특히 이 기능은 ASP.NET 사이트와 같이 지속적으로 제공되어야 하는 응용 프로그램에 유용합니다.  

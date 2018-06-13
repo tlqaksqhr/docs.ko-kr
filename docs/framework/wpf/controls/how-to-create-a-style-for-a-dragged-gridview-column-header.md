@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33554575"
 ---
 # <a name="how-to-create-a-style-for-a-dragged-gridview-column-header"></a>방법: 끌어 온 GridView 열 머리글의 스타일 만들기
 끌어 온의 모양을 변경 하는 방법을 보여 주는이 예제 <xref:System.Windows.Controls.GridViewColumnHeader> 사용자 열 위치를 변경 하는 경우.  

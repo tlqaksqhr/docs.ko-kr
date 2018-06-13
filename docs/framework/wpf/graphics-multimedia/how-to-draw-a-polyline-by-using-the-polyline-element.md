@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33561763"
 ---
 # <a name="how-to-draw-a-polyline-by-using-the-polyline-element"></a>방법: Polyline 요소를 사용하여 다중선 그리기
 사용 하 여 일련의 연결 된 줄은 다중선 그리는 방법을 보여 주는이 예제는 <xref:System.Windows.Shapes.Polyline> 요소입니다.  

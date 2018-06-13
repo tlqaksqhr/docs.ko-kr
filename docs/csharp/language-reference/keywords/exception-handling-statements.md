@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33213225"
 ---
 # <a name="exception-handling-statements-c-reference"></a>예외 처리문(C# 참조)
 C#은 프로그램 실행 중에 발생할 수 있는 비정상적인 상황(예외) 처리를 기본적으로 지원합니다. 이러한 예외는 정상적인 제어 흐름 외부에 있는 코드에 의해 처리됩니다.  

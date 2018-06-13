@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33559816"
 ---
 # <a name="how-to-test-point4d-structures-for-equality-and-inequality"></a>방법: Point4D 구조체가 서로 같은지 및 다른지 여부 테스트
 테스트 하는 방법을 보여 주는이 예제 <xref:System.Windows.Media.Media3D.Point4D> 같음과 다름을 구조입니다.  

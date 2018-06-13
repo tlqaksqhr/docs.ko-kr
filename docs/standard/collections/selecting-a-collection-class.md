@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33574935"
 ---
 # <a name="selecting-a-collection-class"></a>Collection 클래스 선택
 컬렉션 클래스를 신중하게 선택해야 합니다. 잘못된 형식을 사용하면 컬렉션 사용이 제한될 수 있습니다. 일반적으로, .NET Framework 버전 1.1을 대상으로 하지 않는 한 <xref:System.Collections> 네임스페이스의 형식을 사용하지 마세요. 형식 안전성이 더 크고 기타 향상된 기능이 있는 제네릭 버전과 동시 버전의 컬렉션을 사용하는 것이 좋습니다.  

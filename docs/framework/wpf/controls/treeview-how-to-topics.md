@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33555402"
 ---
 # <a name="treeview-how-to-topics"></a>TreeView 방법 항목
 이 섹션의 항목 사용 하는 방법에 설명 된 <xref:System.Windows.Controls.TreeView> 컨트롤 계층 구조에 정보를 표시 합니다.  

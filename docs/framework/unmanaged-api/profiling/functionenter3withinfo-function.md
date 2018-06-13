@@ -18,9 +18,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 6a36f9b54ce7ac6a0a5a22b33a4d07150a96f40b
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33452545"
 ---
 # <a name="functionenter3withinfo-function"></a>FunctionEnter3WithInfo 함수
 제어는 함수에 전달 되 고 있음을 프로파일러에 알립니다. 고에 전달 될 수 있는 핸들을 제공 된 [icorprofilerinfo3:: Getfunctionenter3info 메서드](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-getfunctionenter3info-method.md) 스택 프레임 및 함수 인수를 검색 합니다.  

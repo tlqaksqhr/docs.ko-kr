@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33561334"
 ---
 # <a name="how-to-paint-an-area-with-a-solid-color"></a>방법: 단색으로 영역 그리기
 단색으로 영역을 그리는 데 사용할 수 있습니다는 미리 정의 된 시스템 브러시와 같은 <xref:System.Windows.Media.Brushes.Red%2A> 또는 <xref:System.Windows.Media.Brushes.Blue%2A>, 또는 새를 만들 수 있습니다 <xref:System.Windows.Media.SolidColorBrush> 설명 및 해당 <xref:System.Windows.Media.SolidColorBrush.Color%2A> 알파, 빨간색, 녹색 및 파랑 값을 사용 하 합니다. XAML에서 16진수 표기법을 사용하여 단색으로 영역을 그릴 수도 있습니다.  

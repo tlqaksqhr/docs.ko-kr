@@ -19,6 +19,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33562195"
 ---
 # <a name="shapes"></a>도형
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 사용 하 여 기본 도형에 대 한 지원을 제공는 <xref:System.Windows.Shapes.Shape> 클래스입니다. 파생 되는 도형 개체 <xref:System.Windows.FrameworkElement> 및 따라서 레이아웃 시스템에 참여 및 단순히를 사용 하 여 그릴 수 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]합니다.  

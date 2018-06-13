@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33555832"
 ---
 # <a name="how-to-sort-and-group-data-using-a-view-in-xaml"></a>방법: XAML에서 뷰를 사용하여 데이터 정렬 및 그룹화
 데이터 컬렉션의 보기를 만드는 방법을 보여 주는이 예제 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]합니다. 그룹화, 정렬, 필터링의 기능 및 현재 항목의 개념에 대 한 뷰를 통해.  

@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33564523"
 ---
 # <a name="-escape-sequence--markup-extension"></a>{} 이스케이프 시퀀스 / 태그 확장
 특성 값에 대 한 XAML 이스케이프 시퀀스를 제공합니다. 이스케이프 시퀀스는 리터럴로 해석 될 특성에 이후 값을 허용 합니다.  

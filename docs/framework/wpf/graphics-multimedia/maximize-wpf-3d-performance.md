@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33565440"
 ---
 # <a name="maximize-wpf-3d-performance"></a>WPF 3D 성능 최대화
 사용 하는 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 3D 컨트롤을 빌드하고 3D 장면을 응용 프로그램에 포함할 성능 최적화를 고려을 고려해 야 합니다. 이 항목에서는 3D 클래스 및 속성을 사용할 때 성능을 최적화 하기 위한 권장 사항과 함께 응용 프로그램에 대 한 성능 영향을 주는의 목록을 제공 합니다.  

@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33576313"
 ---
 # <a name="validating-an-xml-document-in-the-dom"></a>DOM에서의 XML 문서 유효성 검사
 기본적으로 <xref:System.Xml.XmlDocument> 클래스는 기본적으로 DOM(문서 개체 모델)에서 XSD(XML 스키마 정의 언어) 스키마 또는 DTD(문서 종류 정의)에 대해 XML의 유효성을 검사하지 않으며 XML이 제대로 구성되었는지만 확인합니다.  

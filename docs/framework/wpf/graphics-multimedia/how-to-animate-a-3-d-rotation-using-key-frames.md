@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33557624"
 ---
 # <a name="how-to-animate-a-3-d-rotation-using-key-frames"></a>방법: 키 프레임을 사용하여 3차원 회전에 애니메이션 효과 주기
 다음 예에서 <xref:System.Windows.Media.Animation.Rotation3DAnimationUsingKeyFrames> 3D 개체가 해당 축 회전 애니메이션 효과 주는 "비틀 거리 면 서" 하는 동안 회전을 만드는 데 사용 됩니다. 이 애니메이션 다음 키 프레임을 사용합니다.  

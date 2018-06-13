@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33360885"
 ---
 # <a name="how-to-define-a-service-operation-wcf-data-services"></a>방법: 서비스 작업 정의(WCF Data Services)
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]는 서버에서 서비스 작업으로 정의된 메서드를 노출합니다. 서비스 작업 URI는 서버에 정의 하는 메서드를 통해 액세스를 제공 하는 데이터 서비스를 허용 합니다. 서비스 작업을 정의 하려면 적용 된 [`WebGet]` 또는 `[WebInvoke]` 특성을 메서드에 합니다. 쿼리 연산자를 지원 하려면 서비스 작업을 반환 해야 합니다는 <xref:System.Linq.IQueryable%601> 인스턴스. 서비스 작업은 <xref:System.Data.Services.DataService%601.CurrentDataSource%2A>의 <xref:System.Data.Services.DataService%601> 속성을 통해 기본 데이터 소스에 액세스할 수 있습니다. 자세한 내용은 참조 [서비스 작업](../../../../docs/framework/data/wcf/service-operations-wcf-data-services.md)합니다.  

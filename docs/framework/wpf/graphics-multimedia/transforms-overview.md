@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33566758"
 ---
 # <a name="transforms-overview"></a>Transform 개요
 이 항목에서는 사용 하는 방법을 설명는 [!INCLUDE[TLA#tla_2d](../../../../includes/tlasharptla-2d-md.md)] <xref:System.Windows.Media.Transform> 회전, 크기 조정, 이동 하는 클래스 (변환) 및 기울이기 <xref:System.Windows.FrameworkElement> 개체입니다.  

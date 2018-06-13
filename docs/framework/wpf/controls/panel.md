@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33554926"
 ---
 # <a name="panel"></a>패널
 <xref:System.Windows.Controls.Panel> 지 원하는 응용 프로그램 레이아웃에서 모든 요소에 대 한 기본 클래스 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]합니다.  

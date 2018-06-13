@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33561477"
 ---
 # <a name="how-to-trigger-media-playback-with-a-user-event"></a>방법: 사용자 이벤트를 사용하여 미디어 재생 트리거
 이 예제에서는 미디어 재생을 이벤트와 동기화하는 방법을 보여 줍니다.  

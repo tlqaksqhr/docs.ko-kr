@@ -13,6 +13,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32745216"
 ---
 # <a name="ltremovegt-element-for-ltnamedcachesgt"></a>&lt;제거&gt; 요소에 대 한 &lt;namedCaches&gt;
 메모리 캐시용으로 명명된 캐시 항목을 `namedCaches` 컬렉션에서 제거합니다.  

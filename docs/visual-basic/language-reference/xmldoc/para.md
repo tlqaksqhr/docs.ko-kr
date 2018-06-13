@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33601727"
 ---
 # <a name="ltparagt-visual-basic"></a>&lt;p a r a&gt; (Visual Basic)
 콘텐츠를 단락으로 포맷 되어 있는지를 지정 합니다.  

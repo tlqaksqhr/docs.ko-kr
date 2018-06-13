@@ -18,9 +18,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 6f231c4f9782518e30cbaa89c6b085c72aafcc92
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33445447"
 ---
 # <a name="coropenflags-enumeration"></a>CorOpenFlags 열거형
 매니페스트 파일을 열 때 메타데이터 동작을 제어하는 플래그 값을 포함합니다.  

@@ -15,6 +15,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32744306"
 ---
 # <a name="working-with-assemblies-and-the-global-assembly-cache"></a>어셈블리 및 전역 어셈블리 캐시 사용
 여러 응용 프로그램에서 어셈블리를 공유하려면 어셈블리를 전역 어셈블리 캐시에 설치하면 됩니다. 공용 언어 런타임이 설치된 각 컴퓨터에는 이 컴퓨터 수준의 코드 캐시가 있습니다. 전역 어셈블리 캐시에는 컴퓨터의 여러 응용 프로그램에서 공유하도록 특별히 지정된 어셈블리가 저장됩니다. 전역 어셈블리 캐시에 설치하려면 어셈블리에 강력한 이름이 있어야 합니다.  

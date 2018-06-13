@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33571119"
 ---
 # <a name="field-design"></a>필드 디자인
 캡슐화의 원칙 개체 지향 디자인에서 가장 중요 한 개념 중 하나를입니다. 이 규칙에 따르면 개체 내부에 저장 된 데이터를 해당 개체에만 액세스할 수 여야 합니다.  

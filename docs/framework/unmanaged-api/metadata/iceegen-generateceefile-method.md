@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: d82952e34195ee813d4cd0217c904a5253859f99
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33445110"
 ---
 # <a name="iceegengenerateceefile-method"></a>ICeeGen::GenerateCeeFile 메서드
 이에 현재 로드 된 코드 베이스를 포함 하는 코드 베이스 파일이 생성 [ICeeGen](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md) 인터페이스입니다.  

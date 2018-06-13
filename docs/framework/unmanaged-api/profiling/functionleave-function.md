@@ -18,9 +18,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 2614ad988496a22f0e6234c2f3300e22ef548308
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33452444"
 ---
 # <a name="functionleave-function"></a>FunctionLeave 함수
 호출자에 게 반환 하는 함수 인지 프로파일러에 알립니다.  

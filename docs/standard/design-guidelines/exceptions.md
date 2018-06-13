@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33570605"
 ---
 # <a name="design-guidelines-for-exceptions"></a>예외 디자인 지침
 예외 처리에는 오류 반환 값 기반 보고를 통해 많은 이점이 있습니다. 프레임 워크 좋은 디자인 예외의 장점을 실제 이용 하는 응용 프로그램 개발자를 수 있습니다. 이 섹션의 예외 장점을 설명 하 고을 효과적으로 사용 하는 것에 대 한 지침을 제공 합니다.  

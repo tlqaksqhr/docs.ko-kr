@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33562299"
 ---
 # <a name="how-to-control-key-frame-animation-timing"></a>방법: 키 프레임 애니메이션 타이밍 제어
 이 예제에는 내 키 프레임 애니메이션 키 프레임의 타이밍을 제어 하는 방법을 보여 줍니다. 마찬가지로 다른 애니메이션 키 프레임 애니메이션에는 한 <xref:System.Windows.Media.Animation.Timeline.Duration%2A> 속성입니다. 애니메이션의 지속 시간을 지정 하는 것 외에도 각 키 프레임에 할당 되어 해당 기간의 어떤 부분을 지정 해야 합니다. 지정 시간을 할당 하는 <xref:System.Windows.Media.Animation.KeyTime> 애니메이션의 각 키 프레임에 대 한 합니다.  

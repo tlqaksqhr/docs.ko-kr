@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33562247"
 ---
 # <a name="xreference-markup-extension"></a>x:Reference 태그 확장명
 XAML 태그에 선언 된 인스턴스를 참조 합니다. 요소의 참조 `x:Name`합니다.  
