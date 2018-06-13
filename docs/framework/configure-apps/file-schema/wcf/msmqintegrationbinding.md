@@ -9,6 +9,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32751664"
 ---
 # <a name="ltmsmqintegrationbindinggt"></a><span data-ttu-id="7d64e-102">&lt;msmqIntegrationBinding&gt;</span><span class="sxs-lookup"><span data-stu-id="7d64e-102">&lt;msmqIntegrationBinding&gt;</span></span>
 <span data-ttu-id="7d64e-103">MSMQ를 통해 메시지를 라우팅하여 큐 지원을 제공하는 바인딩을 정의합니다.</span><span class="sxs-lookup"><span data-stu-id="7d64e-103">Defines a binding that provides queuing support by routing messages through MSMQ.</span></span>  

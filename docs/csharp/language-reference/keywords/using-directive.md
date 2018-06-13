@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33280093"
 ---
 # <a name="using-directive-c-reference"></a><span data-ttu-id="1c9c9-102">using 지시문(C# 참조)</span><span class="sxs-lookup"><span data-stu-id="1c9c9-102">using Directive (C# Reference)</span></span>
 <span data-ttu-id="1c9c9-103">`using` 지시문에는 다음 세 가지 용도가 있습니다.</span><span class="sxs-lookup"><span data-stu-id="1c9c9-103">The `using` directive has three uses:</span></span>  

@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33278811"
 ---
 # <a name="pragma-c-reference"></a><span data-ttu-id="5a1d5-102">#pragma(C# 참조)</span><span class="sxs-lookup"><span data-stu-id="5a1d5-102">#pragma (C# Reference)</span></span>
 <span data-ttu-id="5a1d5-103">`#pragma`는 이 코드가 표시되는 파일의 컴파일에 대한 특수 명령을 컴파일러에 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="5a1d5-103">`#pragma` gives the compiler special instructions for the compilation of the file in which it appears.</span></span> <span data-ttu-id="5a1d5-104">컴파일러에서 명령을 지원해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="5a1d5-104">The instructions must be supported by the compiler.</span></span> <span data-ttu-id="5a1d5-105">즉, `#pragma`를 사용하여 사용자 지정 전처리 명령을 만들 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="5a1d5-105">In other words, you cannot use `#pragma` to create custom preprocessing instructions.</span></span> <span data-ttu-id="5a1d5-106">Microsoft C# 컴파일러는 다음 두 가지 `#pragma` 명령을 지원합니다.</span><span class="sxs-lookup"><span data-stu-id="5a1d5-106">The Microsoft C# compiler supports the following two `#pragma` instructions:</span></span>  
