@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33569534"
 ---
 # <a name="entity-references-are-expanded-and-not-preserved"></a><span data-ttu-id="d7b3a-102">유지되지 않고 확장되는 엔터티 참조</span><span class="sxs-lookup"><span data-stu-id="d7b3a-102">Entity References are Expanded and Not Preserved</span></span>
 <span data-ttu-id="d7b3a-103">엔터티 참조가 확장되어 해당 참조가 나타내는 텍스트로 바뀌면 **XmlEntityReference** 노드가 생성되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="d7b3a-103">When the entity reference is expanded and replaced by the text it represents, the **XmlEntityReference** node is not created.</span></span> <span data-ttu-id="d7b3a-104">대신 엔터티 선언이 구문 분석되고 선언의 내용에서 생성된 노드가 **XmlEntityReference**를 대신하여 복사됩니다.</span><span class="sxs-lookup"><span data-stu-id="d7b3a-104">Instead, the entity declaration is parsed, and nodes created from the content in the declaration are copied in the place of the **XmlEntityReference**.</span></span> <span data-ttu-id="d7b3a-105">따라서 `&publisher;` 예제에서 `&publisher;`가 저장되는 대신 **XmlText** 노드가 생성됩니다.</span><span class="sxs-lookup"><span data-stu-id="d7b3a-105">Therefore, in the `&publisher;` example, the `&publisher;` is not saved, but instead, an **XmlText** node is created.</span></span>  

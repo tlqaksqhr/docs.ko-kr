@@ -13,6 +13,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32743825"
 ---
 # <a name="ltaddgt-element-for-ltnamedcachesgt"></a><span data-ttu-id="66070-102">&lt;추가&gt; 요소에 대 한 &lt;namedCaches&gt;</span><span class="sxs-lookup"><span data-stu-id="66070-102">&lt;add&gt; Element for &lt;namedCaches&gt;</span></span>
 <span data-ttu-id="66070-103">추가 `namedCache` 항목에는 `namedCaches` 메모리 내 캐시에 대 한 컬렉션입니다.</span><span class="sxs-lookup"><span data-stu-id="66070-103">Adds a `namedCache` entry to the `namedCaches` collection for a memory cache.</span></span>  

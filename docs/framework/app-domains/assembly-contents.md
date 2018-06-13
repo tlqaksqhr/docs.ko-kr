@@ -14,6 +14,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32741830"
 ---
 # <a name="assembly-contents"></a><span data-ttu-id="32cb6-102">어셈블리 콘텐츠</span><span class="sxs-lookup"><span data-stu-id="32cb6-102">Assembly Contents</span></span>
 <span data-ttu-id="32cb6-103">일반적으로 정적 어셈블리는 네 가지 요소로 구성됩니다.</span><span class="sxs-lookup"><span data-stu-id="32cb6-103">In general, a static assembly can consist of four elements:</span></span>  

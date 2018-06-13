@@ -1,32 +1,22 @@
 ---
-title: "DynamicActivity 만들기"
-ms.custom: 
+title: DynamicActivity 만들기
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: d8ebe82f-98c8-4452-aed7-2c60a512b097
-caps.latest.revision: "14"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 1760324fc7911ebe9b3139f79c65222b54a329d0
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 93435be69f90ca0b74dae6b934cb145fabb7afff
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33518105"
 ---
-# <a name="dynamicactivity-creation"></a><span data-ttu-id="53f3e-102">DynamicActivity 만들기</span><span class="sxs-lookup"><span data-stu-id="53f3e-102">DynamicActivity Creation</span></span>
-<span data-ttu-id="53f3e-103">이 샘플에서는 <xref:System.Activities.DynamicActivity> 활동을 사용하여 런타임에 활동을 만드는 두 가지 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="53f3e-103">This sample demonstrates two different ways to create an activity at runtime using the <xref:System.Activities.DynamicActivity> activity.</span></span>  
+# <a name="dynamicactivity-creation"></a><span data-ttu-id="bd68c-102">DynamicActivity 만들기</span><span class="sxs-lookup"><span data-stu-id="bd68c-102">DynamicActivity Creation</span></span>
+<span data-ttu-id="bd68c-103">이 샘플에서는 <xref:System.Activities.DynamicActivity> 활동을 사용하여 런타임에 활동을 만드는 두 가지 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="bd68c-103">This sample demonstrates two different ways to create an activity at runtime using the <xref:System.Activities.DynamicActivity> activity.</span></span>  
   
- <span data-ttu-id="53f3e-104">이 샘플에서는 <xref:System.Activities.Statements.Sequence> 및 <xref:System.Activities.Statements.ForEach%601> 활동이 포함된 <xref:System.Activities.Statements.Assign%601> 활동이 들어 있는 본문을 사용하여 런타임에 활동을 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="53f3e-104">In this sample, an activity is created at runtime with a body that contains a <xref:System.Activities.Statements.Sequence> activity that contains <xref:System.Activities.Statements.ForEach%601> and <xref:System.Activities.Statements.Assign%601> activities.</span></span> <span data-ttu-id="53f3e-105">여기에서는 정수의 입력 목록이 활동에 전달되고 속성으로 설정됩니다.</span><span class="sxs-lookup"><span data-stu-id="53f3e-105">An input list of integers is passed into the activity and set as a property.</span></span> <span data-ttu-id="53f3e-106">그런 다음 <xref:System.Activities.Statements.ForEach%601> 활동에서 값의 목록을 반복하며 누적 계산합니다.</span><span class="sxs-lookup"><span data-stu-id="53f3e-106">The <xref:System.Activities.Statements.ForEach%601> activity then iterates over the list of values and accumulates it.</span></span> <span data-ttu-id="53f3e-107"><xref:System.Activities.Statements.Assign%601> 활동에서는 목록의 요소 수로 누적기를 나눠 평균 값을 계산하고 그 결과를 평균에 할당합니다.</span><span class="sxs-lookup"><span data-stu-id="53f3e-107">In the <xref:System.Activities.Statements.Assign%601> activity, the average value is calculated by dividing the accumulator by the number of elements in the list and assign it to the average.</span></span>  
+ <span data-ttu-id="bd68c-104">이 샘플에서는 <xref:System.Activities.Statements.Sequence> 및 <xref:System.Activities.Statements.ForEach%601> 활동이 포함된 <xref:System.Activities.Statements.Assign%601> 활동이 들어 있는 본문을 사용하여 런타임에 활동을 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="bd68c-104">In this sample, an activity is created at runtime with a body that contains a <xref:System.Activities.Statements.Sequence> activity that contains <xref:System.Activities.Statements.ForEach%601> and <xref:System.Activities.Statements.Assign%601> activities.</span></span> <span data-ttu-id="bd68c-105">여기에서는 정수의 입력 목록이 활동에 전달되고 속성으로 설정됩니다.</span><span class="sxs-lookup"><span data-stu-id="bd68c-105">An input list of integers is passed into the activity and set as a property.</span></span> <span data-ttu-id="bd68c-106">그런 다음 <xref:System.Activities.Statements.ForEach%601> 활동에서 값의 목록을 반복하며 누적 계산합니다.</span><span class="sxs-lookup"><span data-stu-id="bd68c-106">The <xref:System.Activities.Statements.ForEach%601> activity then iterates over the list of values and accumulates it.</span></span> <span data-ttu-id="bd68c-107"><xref:System.Activities.Statements.Assign%601> 활동에서는 목록의 요소 수로 누적기를 나눠 평균 값을 계산하고 그 결과를 평균에 할당합니다.</span><span class="sxs-lookup"><span data-stu-id="bd68c-107">In the <xref:System.Activities.Statements.Assign%601> activity, the average value is calculated by dividing the accumulator by the number of elements in the list and assign it to the average.</span></span>  
   
- <span data-ttu-id="53f3e-108">이 샘플에서는 변수를 입력 인수로 이동하고 값을 출력 인수로 반환하는 <xref:System.Activities.DynamicActivity> 활동의 사용 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="53f3e-108">The sample demonstrates the usage of a <xref:System.Activities.DynamicActivity> activity that flows in variables as input arguments and returning values as output arguments.</span></span> <span data-ttu-id="53f3e-109">이 활동에는 정수 목록인 `Numbers`라는 입력 인수 한 개가 있습니다.</span><span class="sxs-lookup"><span data-stu-id="53f3e-109">The activity has one input argument named `Numbers` that is a list of integers.</span></span> <span data-ttu-id="53f3e-110"><xref:System.Activities.Statements.ForEach%601> 활동에서 값의 목록을 반복하며 누적 계산합니다.</span><span class="sxs-lookup"><span data-stu-id="53f3e-110">The <xref:System.Activities.Statements.ForEach%601> activity iterates over the list of values and accumulates it.</span></span> <span data-ttu-id="53f3e-111"><xref:System.Activities.Statements.Assign%601> 활동에서는 목록의 요소 수로 누적기를 나눠 평균 값을 계산하고 그 결과를 평균에 할당합니다.</span><span class="sxs-lookup"><span data-stu-id="53f3e-111">In the <xref:System.Activities.Statements.Assign%601> activity, the average value is calculated by dividing the accumulator by the number of elements in the list and assigning it to the average.</span></span> <span data-ttu-id="53f3e-112">평균은 `Average`라는 출력 인수로 반환됩니다.</span><span class="sxs-lookup"><span data-stu-id="53f3e-112">The average is returned as an output argument named `Average`.</span></span>  
+ <span data-ttu-id="bd68c-108">이 샘플에서는 변수를 입력 인수로 이동하고 값을 출력 인수로 반환하는 <xref:System.Activities.DynamicActivity> 활동의 사용 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="bd68c-108">The sample demonstrates the usage of a <xref:System.Activities.DynamicActivity> activity that flows in variables as input arguments and returning values as output arguments.</span></span> <span data-ttu-id="bd68c-109">이 활동에는 정수 목록인 `Numbers`라는 입력 인수 한 개가 있습니다.</span><span class="sxs-lookup"><span data-stu-id="bd68c-109">The activity has one input argument named `Numbers` that is a list of integers.</span></span> <span data-ttu-id="bd68c-110"><xref:System.Activities.Statements.ForEach%601> 활동에서 값의 목록을 반복하며 누적 계산합니다.</span><span class="sxs-lookup"><span data-stu-id="bd68c-110">The <xref:System.Activities.Statements.ForEach%601> activity iterates over the list of values and accumulates it.</span></span> <span data-ttu-id="bd68c-111"><xref:System.Activities.Statements.Assign%601> 활동에서는 목록의 요소 수로 누적기를 나눠 평균 값을 계산하고 그 결과를 평균에 할당합니다.</span><span class="sxs-lookup"><span data-stu-id="bd68c-111">In the <xref:System.Activities.Statements.Assign%601> activity, the average value is calculated by dividing the accumulator by the number of elements in the list and assigning it to the average.</span></span> <span data-ttu-id="bd68c-112">평균은 `Average`라는 출력 인수로 반환됩니다.</span><span class="sxs-lookup"><span data-stu-id="bd68c-112">The average is returned as an output argument named `Average`.</span></span>  
   
- <span data-ttu-id="53f3e-113">프로그래밍 방식으로 동적 활동을 만드는 경우 입력과 출력이 다음 코드 예제에서와 같이 선언됩니다.</span><span class="sxs-lookup"><span data-stu-id="53f3e-113">When the dynamic activity is created programmatically, the input and output are declared as shown in the following code example.</span></span>  
+ <span data-ttu-id="bd68c-113">프로그래밍 방식으로 동적 활동을 만드는 경우 입력과 출력이 다음 코드 예제에서와 같이 선언됩니다.</span><span class="sxs-lookup"><span data-stu-id="bd68c-113">When the dynamic activity is created programmatically, the input and output are declared as shown in the following code example.</span></span>  
   
 ```csharp  
 DynamicActivity act = new DynamicActivity()  
@@ -52,7 +42,7 @@ DynamicActivity act = new DynamicActivity()
 };  
 ```  
   
- <span data-ttu-id="53f3e-114">다음 코드 예제에서는 목록의 값에 대한 평균을 계산하는 `DynamicActivity`의 완벽한 정의를 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="53f3e-114">The following code example shows the complete definition of the `DynamicActivity` that computes the average of the values in a list.</span></span>  
+ <span data-ttu-id="bd68c-114">다음 코드 예제에서는 목록의 값에 대한 평균을 계산하는 `DynamicActivity`의 완벽한 정의를 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="bd68c-114">The following code example shows the complete definition of the `DynamicActivity` that computes the average of the values in a list.</span></span>  
   
 ```  
 DynamicActivity act = new DynamicActivity()  
@@ -106,7 +96,7 @@ DynamicActivity act = new DynamicActivity()
 };  
 ```  
   
- <span data-ttu-id="53f3e-115">XAML에서 이를 만드는 경우 입력과 출력이 다음 예제에서와 같이 선언됩니다.</span><span class="sxs-lookup"><span data-stu-id="53f3e-115">When created in XAML, the input and output are declared as shown in the following example.</span></span>  
+ <span data-ttu-id="bd68c-115">XAML에서 이를 만드는 경우 입력과 출력이 다음 예제에서와 같이 선언됩니다.</span><span class="sxs-lookup"><span data-stu-id="bd68c-115">When created in XAML, the input and output are declared as shown in the following example.</span></span>  
   
 ```xml  
 <Activity x:Class="Microsoft.Samples.DynamicActivityCreation.FindAverage"  
@@ -122,13 +112,13 @@ DynamicActivity act = new DynamicActivity()
 </Activity>  
 ```  
   
- <span data-ttu-id="53f3e-116">[!INCLUDE[wfd1](../../../../includes/wfd1-md.md)]에서 XAML을 시각적으로 만들 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="53f3e-116">The XAML can be created visually using the [!INCLUDE[wfd1](../../../../includes/wfd1-md.md)].</span></span> <span data-ttu-id="53f3e-117">Visual Studio 프로젝트에 포함 되어 있는 경우에 "빌드 작업"을 "None" 컴파일할 하지 않도록 설정 해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="53f3e-117">If it is included in a Visual Studio project, be sure to set its "Build Action" to "None" to prevent it from being compiled.</span></span> <span data-ttu-id="53f3e-118">그런 다음 아래와 같은 호출을 사용하여 동적으로 XAML을 로드할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="53f3e-118">The XAML can then be loaded dynamically using the following call.</span></span>  
+ <span data-ttu-id="bd68c-116">[!INCLUDE[wfd1](../../../../includes/wfd1-md.md)]에서 XAML을 시각적으로 만들 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="bd68c-116">The XAML can be created visually using the [!INCLUDE[wfd1](../../../../includes/wfd1-md.md)].</span></span> <span data-ttu-id="bd68c-117">Visual Studio 프로젝트에 포함 되어 있는 경우에 "빌드 작업"을 "None" 컴파일할 하지 않도록 설정 해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="bd68c-117">If it is included in a Visual Studio project, be sure to set its "Build Action" to "None" to prevent it from being compiled.</span></span> <span data-ttu-id="bd68c-118">그런 다음 아래와 같은 호출을 사용하여 동적으로 XAML을 로드할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="bd68c-118">The XAML can then be loaded dynamically using the following call.</span></span>  
   
 ```  
 Activity act2 = ActivityXamlServices.Load(@"FindAverage.xaml");  
 ```  
   
- <span data-ttu-id="53f3e-119">프로그래밍 방식으로 만들거나 XAML 워크플로를 로드하여 만든 <xref:System.Activities.DynamicActivity> 인스턴스를 다음 코드 예제에서와 같이 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="53f3e-119">The <xref:System.Activities.DynamicActivity> instance created programmatically or through loading a XAML workflow can be used as shown in the following code example.</span></span> <span data-ttu-id="53f3e-120">에 전달 된 "작동"는 점에 유의 하십시오는 `WorkflowInvoker.Invoke` 된 "act" <xref:System.Activities.Activity> 첫 번째 코드 예제에 정의 합니다.</span><span class="sxs-lookup"><span data-stu-id="53f3e-120">Please note that "act" passed to the `WorkflowInvoker.Invoke` is the "act" <xref:System.Activities.Activity> defined in the first code example.</span></span>  
+ <span data-ttu-id="bd68c-119">프로그래밍 방식으로 만들거나 XAML 워크플로를 로드하여 만든 <xref:System.Activities.DynamicActivity> 인스턴스를 다음 코드 예제에서와 같이 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="bd68c-119">The <xref:System.Activities.DynamicActivity> instance created programmatically or through loading a XAML workflow can be used as shown in the following code example.</span></span> <span data-ttu-id="bd68c-120">에 전달 된 "작동"는 점에 유의 하십시오는 `WorkflowInvoker.Invoke` 된 "act" <xref:System.Activities.Activity> 첫 번째 코드 예제에 정의 합니다.</span><span class="sxs-lookup"><span data-stu-id="bd68c-120">Please note that "act" passed to the `WorkflowInvoker.Invoke` is the "act" <xref:System.Activities.Activity> defined in the first code example.</span></span>  
   
 ```  
 IDictionary<string, object> results = WorkflowInvoker.Invoke(act, new Dictionary<string, object> { { "Numbers", numbers } });  
@@ -136,23 +126,23 @@ IDictionary<string, object> results = WorkflowInvoker.Invoke(act, new Dictionary
 Console.WriteLine("The average calculated using the code activity is = " + results["Average"]);  
 ```  
   
-#### <a name="to-use-this-sample"></a><span data-ttu-id="53f3e-121">이 샘플을 사용하려면</span><span class="sxs-lookup"><span data-stu-id="53f3e-121">To use this sample</span></span>  
+#### <a name="to-use-this-sample"></a><span data-ttu-id="bd68c-121">이 샘플을 사용하려면</span><span class="sxs-lookup"><span data-stu-id="bd68c-121">To use this sample</span></span>  
   
-1.  <span data-ttu-id="53f3e-122">[!INCLUDE[vs2010](../../../../includes/vs2010-md.md)]에서 DynamicActivityCreation.sln 솔루션 파일을 엽니다.</span><span class="sxs-lookup"><span data-stu-id="53f3e-122">Using [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)], open the DynamicActivityCreation.sln solution file.</span></span>  
+1.  <span data-ttu-id="bd68c-122">[!INCLUDE[vs2010](../../../../includes/vs2010-md.md)]에서 DynamicActivityCreation.sln 솔루션 파일을 엽니다.</span><span class="sxs-lookup"><span data-stu-id="bd68c-122">Using [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)], open the DynamicActivityCreation.sln solution file.</span></span>  
   
-2.  <span data-ttu-id="53f3e-123">Ctrl+Shift+B를 눌러 솔루션을 빌드합니다.</span><span class="sxs-lookup"><span data-stu-id="53f3e-123">To build the solution, press CTRL+SHIFT+B.</span></span>  
+2.  <span data-ttu-id="bd68c-123">Ctrl+Shift+B를 눌러 솔루션을 빌드합니다.</span><span class="sxs-lookup"><span data-stu-id="bd68c-123">To build the solution, press CTRL+SHIFT+B.</span></span>  
   
-3.  <span data-ttu-id="53f3e-124">Ctrl+F5를 눌러 솔루션을 실행합니다.</span><span class="sxs-lookup"><span data-stu-id="53f3e-124">To run the solution, press CTRL+F5.</span></span>  
+3.  <span data-ttu-id="bd68c-124">Ctrl+F5를 눌러 솔루션을 실행합니다.</span><span class="sxs-lookup"><span data-stu-id="bd68c-124">To run the solution, press CTRL+F5.</span></span>  
   
-## <a name="command-line-arguments"></a><span data-ttu-id="53f3e-125">명령줄 인수</span><span class="sxs-lookup"><span data-stu-id="53f3e-125">Command line arguments</span></span>  
- <span data-ttu-id="53f3e-126">이 샘플에는 명령줄 인수를 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="53f3e-126">This sample accepts command line arguments.</span></span> <span data-ttu-id="53f3e-127">활동에서 평균을 계산하는 데 필요한 숫자 목록을 사용자가 입력할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="53f3e-127">Users can provide a list of numbers for the activity to calculate their average.</span></span> <span data-ttu-id="53f3e-128">사용할 숫자의 목록을 입력할 때는 목록의 각 숫자를 공백으로 구분해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="53f3e-128">The list of numbers to be used is passed as a list of numbers separated by a space.</span></span> <span data-ttu-id="53f3e-129">예를 들어 5, 10, 32의 평균을 계산하려면 다음과 같은 명령줄을 사용하여 샘플을 호출합니다.</span><span class="sxs-lookup"><span data-stu-id="53f3e-129">For example, to calculate the average of 5, 10, and 32 invoke the sample using the following command line.</span></span>  
+## <a name="command-line-arguments"></a><span data-ttu-id="bd68c-125">명령줄 인수</span><span class="sxs-lookup"><span data-stu-id="bd68c-125">Command line arguments</span></span>  
+ <span data-ttu-id="bd68c-126">이 샘플에는 명령줄 인수를 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="bd68c-126">This sample accepts command line arguments.</span></span> <span data-ttu-id="bd68c-127">활동에서 평균을 계산하는 데 필요한 숫자 목록을 사용자가 입력할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="bd68c-127">Users can provide a list of numbers for the activity to calculate their average.</span></span> <span data-ttu-id="bd68c-128">사용할 숫자의 목록을 입력할 때는 목록의 각 숫자를 공백으로 구분해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="bd68c-128">The list of numbers to be used is passed as a list of numbers separated by a space.</span></span> <span data-ttu-id="bd68c-129">예를 들어 5, 10, 32의 평균을 계산하려면 다음과 같은 명령줄을 사용하여 샘플을 호출합니다.</span><span class="sxs-lookup"><span data-stu-id="bd68c-129">For example, to calculate the average of 5, 10, and 32 invoke the sample using the following command line.</span></span>  
   
- <span data-ttu-id="53f3e-130">**DynamicActivityCreation 5 10 32**</span><span class="sxs-lookup"><span data-stu-id="53f3e-130">**DynamicActivityCreation 5 10 32**</span></span>  
+ <span data-ttu-id="bd68c-130">**DynamicActivityCreation 5 10 32**</span><span class="sxs-lookup"><span data-stu-id="bd68c-130">**DynamicActivityCreation 5 10 32**</span></span>  
 > [!IMPORTANT]
->  <span data-ttu-id="53f3e-131">컴퓨터에 이 샘플이 이미 설치되어 있을 수도 있습니다.</span><span class="sxs-lookup"><span data-stu-id="53f3e-131">The samples may already be installed on your machine.</span></span> <span data-ttu-id="53f3e-132">계속하기 전에 다음(기본) 디렉터리를 확인하세요.</span><span class="sxs-lookup"><span data-stu-id="53f3e-132">Check for the following (default) directory before continuing.</span></span>  
+>  <span data-ttu-id="bd68c-131">컴퓨터에 이 샘플이 이미 설치되어 있을 수도 있습니다.</span><span class="sxs-lookup"><span data-stu-id="bd68c-131">The samples may already be installed on your machine.</span></span> <span data-ttu-id="bd68c-132">계속하기 전에 다음(기본) 디렉터리를 확인하세요.</span><span class="sxs-lookup"><span data-stu-id="bd68c-132">Check for the following (default) directory before continuing.</span></span>  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  <span data-ttu-id="53f3e-133">이 디렉터리가 없으면 [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4(.NET Framework 4용 WCF(Windows Communication Foundation) 및 WF(Windows Workflow Foundation) 샘플)](http://go.microsoft.com/fwlink/?LinkId=150780) 로 이동하여 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 및 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플을 모두 다운로드하세요.</span><span class="sxs-lookup"><span data-stu-id="53f3e-133">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="53f3e-134">이 샘플은 다음 디렉터리에 있습니다.</span><span class="sxs-lookup"><span data-stu-id="53f3e-134">This sample is located in the following directory.</span></span>  
+>  <span data-ttu-id="bd68c-133">이 디렉터리가로 이동 [Windows Communication Foundation (WCF) 및.NET Framework 4에 대 한 Windows WF (Workflow Foundation) 샘플](http://go.microsoft.com/fwlink/?LinkId=150780) 모든 Windows Communication Foundation (WCF)를 다운로드 하 고 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플.</span><span class="sxs-lookup"><span data-stu-id="bd68c-133">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all Windows Communication Foundation (WCF) and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="bd68c-134">이 샘플은 다음 디렉터리에 있습니다.</span><span class="sxs-lookup"><span data-stu-id="bd68c-134">This sample is located in the following directory.</span></span>  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Built-InActivities\DynamicActivity\DynamicActivityCreation`

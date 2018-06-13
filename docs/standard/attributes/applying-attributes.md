@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33567369"
 ---
 # <a name="applying-attributes"></a><span data-ttu-id="9aa14-102">특성 적용</span><span class="sxs-lookup"><span data-stu-id="9aa14-102">Applying Attributes</span></span>
 <span data-ttu-id="9aa14-103">다음 프로세스를 사용하여 코드 요소에 특성을 적용합니다.</span><span class="sxs-lookup"><span data-stu-id="9aa14-103">Use the following process to apply an attribute to an element of your code.</span></span>  

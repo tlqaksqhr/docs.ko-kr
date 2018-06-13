@@ -1,14 +1,6 @@
 ---
-title: "IHostMemoryManager::GetMemoryLoad 메서드"
-ms.custom: 
+title: IHostMemoryManager::GetMemoryLoad 메서드
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - IHostMemoryManager.GetMemoryLoad
 api_location:
@@ -23,22 +15,19 @@ helpviewer_keywords:
 ms.assetid: e8138f6e-a0a4-48d4-8dae-9466b4dc6180
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 320881447eed00bf0dfeada0f5fbd224c32dfe96
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: b92ef3a6d7eb45a3b978c916c406bfa6199f17d4
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33440150"
 ---
-# <a name="ihostmemorymanagergetmemoryload-method"></a><span data-ttu-id="9fa8f-102">IHostMemoryManager::GetMemoryLoad 메서드</span><span class="sxs-lookup"><span data-stu-id="9fa8f-102">IHostMemoryManager::GetMemoryLoad Method</span></span>
-<span data-ttu-id="9fa8f-103">현재 사용에서 되 고 따라서 호스트에서 보고 있는 실제 메모리의 양을 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="9fa8f-103">Gets the amount of physical memory that is currently in use, and therefore unavailable, as reported by the host.</span></span>  
+# <a name="ihostmemorymanagergetmemoryload-method"></a><span data-ttu-id="b2d42-102">IHostMemoryManager::GetMemoryLoad 메서드</span><span class="sxs-lookup"><span data-stu-id="b2d42-102">IHostMemoryManager::GetMemoryLoad Method</span></span>
+<span data-ttu-id="b2d42-103">현재 사용에서 되 고 따라서 호스트에서 보고 있는 실제 메모리의 양을 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="b2d42-103">Gets the amount of physical memory that is currently in use, and therefore unavailable, as reported by the host.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="9fa8f-104">구문</span><span class="sxs-lookup"><span data-stu-id="9fa8f-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="b2d42-104">구문</span><span class="sxs-lookup"><span data-stu-id="b2d42-104">Syntax</span></span>  
   
 ```  
 HRESULT GetMemoryLoad (  
@@ -47,38 +36,38 @@ HRESULT GetMemoryLoad (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="9fa8f-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="9fa8f-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="b2d42-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="b2d42-105">Parameters</span></span>  
  `pMemoryLoad`  
- <span data-ttu-id="9fa8f-106">[out] 현재 사용 중인 총 실제 메모리의 대략적인 백분율에 대 한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="9fa8f-106">[out] A pointer to the approximate percentage of total physical memory that is currently in use.</span></span>  
+ <span data-ttu-id="b2d42-106">[out] 현재 사용 중인 총 실제 메모리의 대략적인 백분율에 대 한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="b2d42-106">[out] A pointer to the approximate percentage of total physical memory that is currently in use.</span></span>  
   
  `pAvailableBytes`  
- <span data-ttu-id="9fa8f-107">[out] 공용 언어 런타임 (CLR)를 사용할 수 있는 바이트 수에 대 한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="9fa8f-107">[out] A pointer to the number of bytes available to the common language runtime (CLR).</span></span>  
+ <span data-ttu-id="b2d42-107">[out] 공용 언어 런타임 (CLR)를 사용할 수 있는 바이트 수에 대 한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="b2d42-107">[out] A pointer to the number of bytes available to the common language runtime (CLR).</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="9fa8f-108">반환 값</span><span class="sxs-lookup"><span data-stu-id="9fa8f-108">Return Value</span></span>  
+## <a name="return-value"></a><span data-ttu-id="b2d42-108">반환 값</span><span class="sxs-lookup"><span data-stu-id="b2d42-108">Return Value</span></span>  
   
-|<span data-ttu-id="9fa8f-109">HRESULT</span><span class="sxs-lookup"><span data-stu-id="9fa8f-109">HRESULT</span></span>|<span data-ttu-id="9fa8f-110">설명</span><span class="sxs-lookup"><span data-stu-id="9fa8f-110">Description</span></span>|  
+|<span data-ttu-id="b2d42-109">HRESULT</span><span class="sxs-lookup"><span data-stu-id="b2d42-109">HRESULT</span></span>|<span data-ttu-id="b2d42-110">설명</span><span class="sxs-lookup"><span data-stu-id="b2d42-110">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="9fa8f-111">S_OK</span><span class="sxs-lookup"><span data-stu-id="9fa8f-111">S_OK</span></span>|<span data-ttu-id="9fa8f-112">`GetMemoryLoad`성공적으로 반환 합니다.</span><span class="sxs-lookup"><span data-stu-id="9fa8f-112">`GetMemoryLoad` returned successfully.</span></span>|  
-|<span data-ttu-id="9fa8f-113">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="9fa8f-113">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="9fa8f-114">CLR은 프로세스에 로드 되지 않았습니다 또는 CLR 중인 상태를 관리 코드를 실행 하거나 호출을 처리할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="9fa8f-114">The CLR has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
-|<span data-ttu-id="9fa8f-115">HOST_E_TIMEOUT</span><span class="sxs-lookup"><span data-stu-id="9fa8f-115">HOST_E_TIMEOUT</span></span>|<span data-ttu-id="9fa8f-116">호출 시간이 초과 되었습니다.</span><span class="sxs-lookup"><span data-stu-id="9fa8f-116">The call timed out.</span></span>|  
-|<span data-ttu-id="9fa8f-117">HOST_E_NOT_OWNER</span><span class="sxs-lookup"><span data-stu-id="9fa8f-117">HOST_E_NOT_OWNER</span></span>|<span data-ttu-id="9fa8f-118">호출자에 게 잠금을 소유 하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="9fa8f-118">The caller does not own the lock.</span></span>|  
-|<span data-ttu-id="9fa8f-119">HOST_E_ABANDONED</span><span class="sxs-lookup"><span data-stu-id="9fa8f-119">HOST_E_ABANDONED</span></span>|<span data-ttu-id="9fa8f-120">차단 된 스레드 이벤트 취소 되었습니다 또는 파이버가 기다리던 합니다.</span><span class="sxs-lookup"><span data-stu-id="9fa8f-120">An event was canceled while a blocked thread or fiber was waiting on it.</span></span>|  
-|<span data-ttu-id="9fa8f-121">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="9fa8f-121">E_FAIL</span></span>|<span data-ttu-id="9fa8f-122">알 수 없는 치명적인 오류가 발생 했습니다.</span><span class="sxs-lookup"><span data-stu-id="9fa8f-122">An unknown catastrophic failure occurred.</span></span> <span data-ttu-id="9fa8f-123">메서드가 E_FAIL을 반환 하는 경우 CLR을 하는 프로세스 내에서 사용할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="9fa8f-123">When a method returns E_FAIL, the CLR is no longer usable within the process.</span></span> <span data-ttu-id="9fa8f-124">호스팅 방법에 대 한 후속 호출 HOST_E_CLRNOTAVAILABLE를 반환 합니다.</span><span class="sxs-lookup"><span data-stu-id="9fa8f-124">Subsequent calls to hosting methods return HOST_E_CLRNOTAVAILABLE.</span></span>|  
+|<span data-ttu-id="b2d42-111">S_OK</span><span class="sxs-lookup"><span data-stu-id="b2d42-111">S_OK</span></span>|<span data-ttu-id="b2d42-112">`GetMemoryLoad` 성공적으로 반환 합니다.</span><span class="sxs-lookup"><span data-stu-id="b2d42-112">`GetMemoryLoad` returned successfully.</span></span>|  
+|<span data-ttu-id="b2d42-113">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="b2d42-113">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="b2d42-114">CLR은 프로세스에 로드 되지 않았습니다 또는 CLR 중인 상태를 관리 코드를 실행 하거나 호출을 처리할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="b2d42-114">The CLR has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
+|<span data-ttu-id="b2d42-115">HOST_E_TIMEOUT</span><span class="sxs-lookup"><span data-stu-id="b2d42-115">HOST_E_TIMEOUT</span></span>|<span data-ttu-id="b2d42-116">호출 시간이 초과 되었습니다.</span><span class="sxs-lookup"><span data-stu-id="b2d42-116">The call timed out.</span></span>|  
+|<span data-ttu-id="b2d42-117">HOST_E_NOT_OWNER</span><span class="sxs-lookup"><span data-stu-id="b2d42-117">HOST_E_NOT_OWNER</span></span>|<span data-ttu-id="b2d42-118">호출자에 게 잠금을 소유 하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="b2d42-118">The caller does not own the lock.</span></span>|  
+|<span data-ttu-id="b2d42-119">HOST_E_ABANDONED</span><span class="sxs-lookup"><span data-stu-id="b2d42-119">HOST_E_ABANDONED</span></span>|<span data-ttu-id="b2d42-120">차단 된 스레드 이벤트 취소 되었습니다 또는 파이버가 기다리던 합니다.</span><span class="sxs-lookup"><span data-stu-id="b2d42-120">An event was canceled while a blocked thread or fiber was waiting on it.</span></span>|  
+|<span data-ttu-id="b2d42-121">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="b2d42-121">E_FAIL</span></span>|<span data-ttu-id="b2d42-122">알 수 없는 치명적인 오류가 발생 했습니다.</span><span class="sxs-lookup"><span data-stu-id="b2d42-122">An unknown catastrophic failure occurred.</span></span> <span data-ttu-id="b2d42-123">메서드가 E_FAIL을 반환 하는 경우 CLR을 하는 프로세스 내에서 사용할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="b2d42-123">When a method returns E_FAIL, the CLR is no longer usable within the process.</span></span> <span data-ttu-id="b2d42-124">호스팅 방법에 대 한 후속 호출 HOST_E_CLRNOTAVAILABLE를 반환 합니다.</span><span class="sxs-lookup"><span data-stu-id="b2d42-124">Subsequent calls to hosting methods return HOST_E_CLRNOTAVAILABLE.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="9fa8f-125">설명</span><span class="sxs-lookup"><span data-stu-id="9fa8f-125">Remarks</span></span>  
- <span data-ttu-id="9fa8f-126">`GetMemoryLoad`Win32 래핑합니다 `GlobalMemoryStatus` 함수입니다.</span><span class="sxs-lookup"><span data-stu-id="9fa8f-126">`GetMemoryLoad` wraps the Win32 `GlobalMemoryStatus` function.</span></span> <span data-ttu-id="9fa8f-127">값 `pMemoryLoad` 해당는 `dwMemoryLoad` 필드에 `MEMORYSTATUS` 에서 반환 된 구조 `GlobalMemoryStatus`합니다.</span><span class="sxs-lookup"><span data-stu-id="9fa8f-127">The value of `pMemoryLoad` is the equivalent of the `dwMemoryLoad` field in the `MEMORYSTATUS` structure returned from `GlobalMemoryStatus`.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="b2d42-125">설명</span><span class="sxs-lookup"><span data-stu-id="b2d42-125">Remarks</span></span>  
+ <span data-ttu-id="b2d42-126">`GetMemoryLoad` Win32 래핑합니다 `GlobalMemoryStatus` 함수입니다.</span><span class="sxs-lookup"><span data-stu-id="b2d42-126">`GetMemoryLoad` wraps the Win32 `GlobalMemoryStatus` function.</span></span> <span data-ttu-id="b2d42-127">값 `pMemoryLoad` 해당는 `dwMemoryLoad` 필드에 `MEMORYSTATUS` 에서 반환 된 구조 `GlobalMemoryStatus`합니다.</span><span class="sxs-lookup"><span data-stu-id="b2d42-127">The value of `pMemoryLoad` is the equivalent of the `dwMemoryLoad` field in the `MEMORYSTATUS` structure returned from `GlobalMemoryStatus`.</span></span>  
   
- <span data-ttu-id="9fa8f-128">런타임은은 가비지 수집기에 대 한 휴리스틱으로 반환 값을 사용 합니다.</span><span class="sxs-lookup"><span data-stu-id="9fa8f-128">The runtime uses the return value as a heuristic for the garbage collector.</span></span> <span data-ttu-id="9fa8f-129">예를 들어 호스트에서 사용 중인 메모리의 대부분을 보고 가비지 수집기를 사용할 수 있는 상태가 될 수 있는 메모리 양을 늘리려면 여러 세대에서 수집 하도록 선택할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="9fa8f-129">For example, if the host reports that the majority of memory is in use, the garbage collector may elect to collect from multiple generations to increase the amount of memory that can potentially become available.</span></span>  
+ <span data-ttu-id="b2d42-128">런타임은은 가비지 수집기에 대 한 휴리스틱으로 반환 값을 사용 합니다.</span><span class="sxs-lookup"><span data-stu-id="b2d42-128">The runtime uses the return value as a heuristic for the garbage collector.</span></span> <span data-ttu-id="b2d42-129">예를 들어 호스트에서 사용 중인 메모리의 대부분을 보고 가비지 수집기를 사용할 수 있는 상태가 될 수 있는 메모리 양을 늘리려면 여러 세대에서 수집 하도록 선택할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="b2d42-129">For example, if the host reports that the majority of memory is in use, the garbage collector may elect to collect from multiple generations to increase the amount of memory that can potentially become available.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="9fa8f-130">요구 사항</span><span class="sxs-lookup"><span data-stu-id="9fa8f-130">Requirements</span></span>  
- <span data-ttu-id="9fa8f-131">**플랫폼:** 참조 [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="9fa8f-131">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="b2d42-130">요구 사항</span><span class="sxs-lookup"><span data-stu-id="b2d42-130">Requirements</span></span>  
+ <span data-ttu-id="b2d42-131">**플랫폼:** 참조 [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="b2d42-131">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="9fa8f-132">**헤더:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="9fa8f-132">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="b2d42-132">**헤더:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="b2d42-132">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="9fa8f-133">**라이브러리:** MSCorEE.dll에 리소스로 포함</span><span class="sxs-lookup"><span data-stu-id="9fa8f-133">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="b2d42-133">**라이브러리:** MSCorEE.dll에 리소스로 포함</span><span class="sxs-lookup"><span data-stu-id="b2d42-133">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="9fa8f-134">**.NET framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="9fa8f-134">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="b2d42-134">**.NET framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="b2d42-134">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="9fa8f-135">참고 항목</span><span class="sxs-lookup"><span data-stu-id="9fa8f-135">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="b2d42-135">참고 항목</span><span class="sxs-lookup"><span data-stu-id="b2d42-135">See Also</span></span>  
  <xref:System.GC?displayProperty=nameWithType>  
- [<span data-ttu-id="9fa8f-136">IHostMemoryManager 인터페이스</span><span class="sxs-lookup"><span data-stu-id="9fa8f-136">IHostMemoryManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostmemorymanager-interface.md)
+ [<span data-ttu-id="b2d42-136">IHostMemoryManager 인터페이스</span><span class="sxs-lookup"><span data-stu-id="b2d42-136">IHostMemoryManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostmemorymanager-interface.md)

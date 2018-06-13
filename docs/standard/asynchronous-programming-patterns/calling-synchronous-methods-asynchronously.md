@@ -27,6 +27,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33575496"
 ---
 # <a name="calling-synchronous-methods-asynchronously"></a><span data-ttu-id="84b6c-102">동기 메서드를 비동기 방식으로 호출</span><span class="sxs-lookup"><span data-stu-id="84b6c-102">Calling Synchronous Methods Asynchronously</span></span>
 <span data-ttu-id="84b6c-103">.NET Framework에서는 모든 메서드를 비동기 방식으로 호출할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="84b6c-103">The .NET Framework enables you to call any method asynchronously.</span></span> <span data-ttu-id="84b6c-104">이렇게 하려면 호출하려는 메서드와 같은 시그니처를 사용하여 대리자를 정의합니다. 그러면 공용 언어 런타임은 이 대리자에 대해 `BeginInvoke` 및 `EndInvoke` 메서드를 해당 시그니처와 함께 자동으로 정의합니다.</span><span class="sxs-lookup"><span data-stu-id="84b6c-104">To do this you define a delegate with the same signature as the method you want to call; the common language runtime automatically defines `BeginInvoke` and `EndInvoke` methods for this delegate, with the appropriate signatures.</span></span>  

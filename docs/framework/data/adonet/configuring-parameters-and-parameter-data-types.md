@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32759545"
 ---
 # <a name="configuring-parameters-and-parameter-data-types"></a><span data-ttu-id="34e3c-102">매개 변수 및 매개 변수 데이터 형식 구성</span><span class="sxs-lookup"><span data-stu-id="34e3c-102">Configuring Parameters and Parameter Data Types</span></span>
 <span data-ttu-id="34e3c-103">Command 개체는 매개 변수를 통해 SQL 문이나 저장 프로시저에 값을 전달하여 형식 검사 및 유효성 검사 기능을 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="34e3c-103">Command objects use parameters to pass values to SQL statements or stored procedures, providing type checking and validation.</span></span> <span data-ttu-id="34e3c-104">명령 텍스트와 달리 매개 변수 입력은 실행 코드가 아니라 리터럴 값으로 처리됩니다.</span><span class="sxs-lookup"><span data-stu-id="34e3c-104">Unlike command text, parameter input is treated as a literal value, not as executable code.</span></span> <span data-ttu-id="34e3c-105">따라서 매개 변수화된 명령을 사용하면 공격자가 서버의 보안을 손상시키는 명령을 SQL 문에 삽입하는 "SQL 삽입" 공격을 막을 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="34e3c-105">This helps guard against "SQL injection" attacks, in which an attacker inserts a command that compromises security on the server into an SQL statement.</span></span>  

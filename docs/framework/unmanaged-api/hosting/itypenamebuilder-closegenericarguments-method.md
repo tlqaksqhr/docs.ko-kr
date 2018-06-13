@@ -1,14 +1,6 @@
 ---
-title: "ITypeNameBuilder::CloseGenericArguments 메서드"
-ms.custom: 
+title: ITypeNameBuilder::CloseGenericArguments 메서드
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ITypeNameBuilder.CloseGenericArguments
 api_location:
@@ -23,35 +15,32 @@ helpviewer_keywords:
 ms.assetid: 583d13f9-786b-49e3-bc42-a4ba3aa8d9c6
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 2fe724fa7b05852b10fe6653659558656bb57e36
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 6baf1dad362baf1952a9230f4434720a3e07bb69
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33443276"
 ---
-# <a name="itypenamebuilderclosegenericarguments-method"></a><span data-ttu-id="1ed16-102">ITypeNameBuilder::CloseGenericArguments 메서드</span><span class="sxs-lookup"><span data-stu-id="1ed16-102">ITypeNameBuilder::CloseGenericArguments Method</span></span>
-<span data-ttu-id="1ed16-103">이 메서드는 .NET Framework 인프라를 지원하며 사용자 코드에서 직접 사용할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="1ed16-103">This method supports the .NET Framework infrastructure and is not intended to be used directly from your code.</span></span>  
+# <a name="itypenamebuilderclosegenericarguments-method"></a><span data-ttu-id="80d90-102">ITypeNameBuilder::CloseGenericArguments 메서드</span><span class="sxs-lookup"><span data-stu-id="80d90-102">ITypeNameBuilder::CloseGenericArguments Method</span></span>
+<span data-ttu-id="80d90-103">이 메서드는 .NET Framework 인프라를 지원하며 사용자 코드에서 직접 사용할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="80d90-103">This method supports the .NET Framework infrastructure and is not intended to be used directly from your code.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="1ed16-104">구문</span><span class="sxs-lookup"><span data-stu-id="1ed16-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="80d90-104">구문</span><span class="sxs-lookup"><span data-stu-id="80d90-104">Syntax</span></span>  
   
 ```  
 HRESULT CloseGenericArguments ( );  
 ```  
   
-## <a name="requirements"></a><span data-ttu-id="1ed16-105">요구 사항</span><span class="sxs-lookup"><span data-stu-id="1ed16-105">Requirements</span></span>  
- <span data-ttu-id="1ed16-106">**플랫폼:** 참조 [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="1ed16-106">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="80d90-105">요구 사항</span><span class="sxs-lookup"><span data-stu-id="80d90-105">Requirements</span></span>  
+ <span data-ttu-id="80d90-106">**플랫폼:** 참조 [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="80d90-106">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="1ed16-107">**헤더:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="1ed16-107">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="80d90-107">**헤더:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="80d90-107">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="1ed16-108">**라이브러리:** MSCorEE.dll에 리소스로 포함</span><span class="sxs-lookup"><span data-stu-id="1ed16-108">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="80d90-108">**라이브러리:** MSCorEE.dll에 리소스로 포함</span><span class="sxs-lookup"><span data-stu-id="80d90-108">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="1ed16-109">**.NET framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="1ed16-109">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="80d90-109">**.NET framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="80d90-109">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="1ed16-110">참고 항목</span><span class="sxs-lookup"><span data-stu-id="1ed16-110">See Also</span></span>  
- [<span data-ttu-id="1ed16-111">호스팅 인터페이스</span><span class="sxs-lookup"><span data-stu-id="1ed16-111">Hosting Interfaces</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
+## <a name="see-also"></a><span data-ttu-id="80d90-110">참고 항목</span><span class="sxs-lookup"><span data-stu-id="80d90-110">See Also</span></span>  
+ [<span data-ttu-id="80d90-111">호스팅 인터페이스</span><span class="sxs-lookup"><span data-stu-id="80d90-111">Hosting Interfaces</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
