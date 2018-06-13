@@ -1,14 +1,6 @@
 ---
-title: "ICLRDebugging::CanUnloadNow 메서드"
-ms.custom: 
+title: ICLRDebugging::CanUnloadNow 메서드
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICLRDebugging.CanUnloadNow Method
 api_location:
@@ -23,54 +15,51 @@ helpviewer_keywords:
 ms.assetid: 62e0630c-8cb7-45d2-b622-5a472abfd8cf
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: b781db409991b07463002008a834dfb7ac32c9e1
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 557b53df3669bb0567e4d1261124ac725c796c70
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33407476"
 ---
-# <a name="iclrdebuggingcanunloadnow-method"></a><span data-ttu-id="d124a-102">ICLRDebugging::CanUnloadNow 메서드</span><span class="sxs-lookup"><span data-stu-id="d124a-102">ICLRDebugging::CanUnloadNow Method</span></span>
-<span data-ttu-id="d124a-103">제공 하는 라이브러리 여부를 확인 한 [ICLRDebuggingLibraryProvider](../../../../docs/framework/unmanaged-api/debugging/iclrdebugginglibraryprovider-interface.md) 인터페이스 사용 되 고 또는 언로드할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="d124a-103">Determines whether a library that was provided by an [ICLRDebuggingLibraryProvider](../../../../docs/framework/unmanaged-api/debugging/iclrdebugginglibraryprovider-interface.md) interface is still in use or can be unloaded.</span></span>  
+# <a name="iclrdebuggingcanunloadnow-method"></a><span data-ttu-id="0a281-102">ICLRDebugging::CanUnloadNow 메서드</span><span class="sxs-lookup"><span data-stu-id="0a281-102">ICLRDebugging::CanUnloadNow Method</span></span>
+<span data-ttu-id="0a281-103">제공 하는 라이브러리 여부를 확인 한 [ICLRDebuggingLibraryProvider](../../../../docs/framework/unmanaged-api/debugging/iclrdebugginglibraryprovider-interface.md) 인터페이스 사용 되 고 또는 언로드할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="0a281-103">Determines whether a library that was provided by an [ICLRDebuggingLibraryProvider](../../../../docs/framework/unmanaged-api/debugging/iclrdebugginglibraryprovider-interface.md) interface is still in use or can be unloaded.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="d124a-104">구문</span><span class="sxs-lookup"><span data-stu-id="d124a-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="0a281-104">구문</span><span class="sxs-lookup"><span data-stu-id="0a281-104">Syntax</span></span>  
   
 ```  
 HRESULT CanUnloadNow(HMODULE hModule);  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="d124a-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="d124a-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="0a281-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="0a281-105">Parameters</span></span>  
  `hmodule`  
- <span data-ttu-id="d124a-106">[in] 대상 프로세스에서 특정 모듈의 기본 주소입니다.</span><span class="sxs-lookup"><span data-stu-id="d124a-106">[in] The base address of a module in the target process.</span></span>  
+ <span data-ttu-id="0a281-106">[in] 대상 프로세스에서 특정 모듈의 기본 주소입니다.</span><span class="sxs-lookup"><span data-stu-id="0a281-106">[in] The base address of a module in the target process.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="d124a-107">반환 값</span><span class="sxs-lookup"><span data-stu-id="d124a-107">Return Value</span></span>  
- <span data-ttu-id="d124a-108">이 메서드는 다음과 같은 특정 HRESULT뿐만 아니라 메서드 오류를 나타내는 HRESULT 오류도 반환합니다.</span><span class="sxs-lookup"><span data-stu-id="d124a-108">This method returns the following specific HRESULTs as well as HRESULT errors that indicate method failure.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="0a281-107">반환 값</span><span class="sxs-lookup"><span data-stu-id="0a281-107">Return Value</span></span>  
+ <span data-ttu-id="0a281-108">이 메서드는 다음과 같은 특정 HRESULT뿐만 아니라 메서드 오류를 나타내는 HRESULT 오류도 반환합니다.</span><span class="sxs-lookup"><span data-stu-id="0a281-108">This method returns the following specific HRESULTs as well as HRESULT errors that indicate method failure.</span></span>  
   
-|<span data-ttu-id="d124a-109">HRESULT</span><span class="sxs-lookup"><span data-stu-id="d124a-109">HRESULT</span></span>|<span data-ttu-id="d124a-110">설명</span><span class="sxs-lookup"><span data-stu-id="d124a-110">Description</span></span>|  
+|<span data-ttu-id="0a281-109">HRESULT</span><span class="sxs-lookup"><span data-stu-id="0a281-109">HRESULT</span></span>|<span data-ttu-id="0a281-110">설명</span><span class="sxs-lookup"><span data-stu-id="0a281-110">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="d124a-111">S_OK</span><span class="sxs-lookup"><span data-stu-id="d124a-111">S_OK</span></span>|<span data-ttu-id="d124a-112">참조 하는 모듈 `hmodule` 언로드할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="d124a-112">The module that is referenced by `hmodule` can be unloaded.</span></span>|  
-|<span data-ttu-id="d124a-113">S_FALSE</span><span class="sxs-lookup"><span data-stu-id="d124a-113">S_FALSE</span></span>|<span data-ttu-id="d124a-114">참조 하는 모듈 `hmodule` 사용 중입니다.</span><span class="sxs-lookup"><span data-stu-id="d124a-114">The module that is referenced by `hmodule` is still in use.</span></span>|  
-|<span data-ttu-id="d124a-115">COR_E_NOT_CLR</span><span class="sxs-lookup"><span data-stu-id="d124a-115">COR_E_NOT_CLR</span></span>|<span data-ttu-id="d124a-116">표시 된 모듈이 CLR 모듈이 아닙니다.</span><span class="sxs-lookup"><span data-stu-id="d124a-116">The indicated module is not a CLR module.</span></span>|  
+|<span data-ttu-id="0a281-111">S_OK</span><span class="sxs-lookup"><span data-stu-id="0a281-111">S_OK</span></span>|<span data-ttu-id="0a281-112">참조 하는 모듈 `hmodule` 언로드할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="0a281-112">The module that is referenced by `hmodule` can be unloaded.</span></span>|  
+|<span data-ttu-id="0a281-113">S_FALSE</span><span class="sxs-lookup"><span data-stu-id="0a281-113">S_FALSE</span></span>|<span data-ttu-id="0a281-114">참조 하는 모듈 `hmodule` 사용 중입니다.</span><span class="sxs-lookup"><span data-stu-id="0a281-114">The module that is referenced by `hmodule` is still in use.</span></span>|  
+|<span data-ttu-id="0a281-115">COR_E_NOT_CLR</span><span class="sxs-lookup"><span data-stu-id="0a281-115">COR_E_NOT_CLR</span></span>|<span data-ttu-id="0a281-116">표시 된 모듈이 CLR 모듈이 아닙니다.</span><span class="sxs-lookup"><span data-stu-id="0a281-116">The indicated module is not a CLR module.</span></span>|  
   
-## <a name="exceptions"></a><span data-ttu-id="d124a-117">예외</span><span class="sxs-lookup"><span data-stu-id="d124a-117">Exceptions</span></span>  
+## <a name="exceptions"></a><span data-ttu-id="0a281-117">예외</span><span class="sxs-lookup"><span data-stu-id="0a281-117">Exceptions</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="d124a-118">설명</span><span class="sxs-lookup"><span data-stu-id="d124a-118">Remarks</span></span>  
- <span data-ttu-id="d124a-119">이 메서드를 모든 확인 인스턴스의 `ICorDebug*` 릴리스된 인터페이스를 스레드가 현재 내에 대 한 호출의 [iclrdebugging:: Openvirtualprocess](../../../../docs/framework/unmanaged-api/debugging/iclrdebugging-openvirtualprocess-method.md) 메서드.</span><span class="sxs-lookup"><span data-stu-id="d124a-119">This method checks to see if all instances of `ICorDebug*` interfaces have been released and no thread is currently within a call to the [ICLRDebugging::OpenVirtualProcess](../../../../docs/framework/unmanaged-api/debugging/iclrdebugging-openvirtualprocess-method.md) method.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="0a281-118">설명</span><span class="sxs-lookup"><span data-stu-id="0a281-118">Remarks</span></span>  
+ <span data-ttu-id="0a281-119">이 메서드를 모든 확인 인스턴스의 `ICorDebug*` 릴리스된 인터페이스를 스레드가 현재 내에 대 한 호출의 [iclrdebugging:: Openvirtualprocess](../../../../docs/framework/unmanaged-api/debugging/iclrdebugging-openvirtualprocess-method.md) 메서드.</span><span class="sxs-lookup"><span data-stu-id="0a281-119">This method checks to see if all instances of `ICorDebug*` interfaces have been released and no thread is currently within a call to the [ICLRDebugging::OpenVirtualProcess](../../../../docs/framework/unmanaged-api/debugging/iclrdebugging-openvirtualprocess-method.md) method.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="d124a-120">요구 사항</span><span class="sxs-lookup"><span data-stu-id="d124a-120">Requirements</span></span>  
- <span data-ttu-id="d124a-121">**플랫폼:** 참조 [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="d124a-121">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="0a281-120">요구 사항</span><span class="sxs-lookup"><span data-stu-id="0a281-120">Requirements</span></span>  
+ <span data-ttu-id="0a281-121">**플랫폼:** 참조 [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="0a281-121">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="d124a-122">**헤더:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="d124a-122">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="0a281-122">**헤더:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="0a281-122">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="d124a-123">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="d124a-123">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="0a281-123">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="0a281-123">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="d124a-124">**.NET framework 버전:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="d124a-124">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
+ <span data-ttu-id="0a281-124">**.NET framework 버전:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="0a281-124">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="d124a-125">참고 항목</span><span class="sxs-lookup"><span data-stu-id="d124a-125">See Also</span></span>  
- [<span data-ttu-id="d124a-126">디버깅 인터페이스</span><span class="sxs-lookup"><span data-stu-id="d124a-126">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)  
- [<span data-ttu-id="d124a-127">디버깅</span><span class="sxs-lookup"><span data-stu-id="d124a-127">Debugging</span></span>](../../../../docs/framework/unmanaged-api/debugging/index.md)
+## <a name="see-also"></a><span data-ttu-id="0a281-125">참고 항목</span><span class="sxs-lookup"><span data-stu-id="0a281-125">See Also</span></span>  
+ [<span data-ttu-id="0a281-126">디버깅 인터페이스</span><span class="sxs-lookup"><span data-stu-id="0a281-126">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)  
+ [<span data-ttu-id="0a281-127">디버깅</span><span class="sxs-lookup"><span data-stu-id="0a281-127">Debugging</span></span>](../../../../docs/framework/unmanaged-api/debugging/index.md)

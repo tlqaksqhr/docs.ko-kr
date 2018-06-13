@@ -8,6 +8,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33349771"
 ---
 # <a name="structs"></a><span data-ttu-id="3d431-103">구조체</span><span class="sxs-lookup"><span data-stu-id="3d431-103">Structs</span></span>
 <span data-ttu-id="3d431-104">*struct*가 값 형식입니다.</span><span class="sxs-lookup"><span data-stu-id="3d431-104">A *struct* is a value type.</span></span> <span data-ttu-id="3d431-105">구조체를 만드는 경우 구조체가 할당된 변수에 구조체의 실제 데이터가 포함됩니다.</span><span class="sxs-lookup"><span data-stu-id="3d431-105">When a struct is created, the variable to which the struct is assigned holds the struct's actual data.</span></span> <span data-ttu-id="3d431-106">구조체를 새 변수에 할당하면 구조체가 복사됩니다.</span><span class="sxs-lookup"><span data-stu-id="3d431-106">When the struct is assigned to a new variable, it is copied.</span></span> <span data-ttu-id="3d431-107">따라서 새 변수와 원래 변수에 동일한 데이터의 두 가지 별도 복사본이 포함됩니다.</span><span class="sxs-lookup"><span data-stu-id="3d431-107">The new variable and the original variable therefore contain two separate copies of the same data.</span></span> <span data-ttu-id="3d431-108">한 복사본의 변경 내용은 다른 복사본에 영향을 주지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="3d431-108">Changes made to one copy do not affect the other copy.</span></span>

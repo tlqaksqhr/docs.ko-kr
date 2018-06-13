@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33400213"
 ---
 # <a name="fuslogvwexe-assembly-binding-log-viewer"></a><span data-ttu-id="a4cb3-102">Fuslogvw.exe(어셈블리 바인딩 로그 뷰어)</span><span class="sxs-lookup"><span data-stu-id="a4cb3-102">Fuslogvw.exe (Assembly Binding Log Viewer)</span></span>
 <span data-ttu-id="a4cb3-103">어셈블리 바인딩 로그 뷰어는 어셈블리 바인딩에 대한 자세한 내용을 표시합니다.</span><span class="sxs-lookup"><span data-stu-id="a4cb3-103">The Assembly Binding Log Viewer displays details for assembly binds.</span></span> <span data-ttu-id="a4cb3-104">이 정보를 검토하면 .NET Framework에서 런타임에 어셈블리를 찾지 못하는 이유를 진단할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="a4cb3-104">This information helps you diagnose why the .NET Framework cannot locate an assembly at run time.</span></span> <span data-ttu-id="a4cb3-105">이러한 오류는 일반적으로 어셈블리가 잘못된 위치에 배포되었거나 네이티브 이미지가 더 이상 유효하지 않거나 버전 번호 또는 문화권이 일치하지 않기 때문에 일어납니다.</span><span class="sxs-lookup"><span data-stu-id="a4cb3-105">These failures are usually the result of an assembly deployed to the wrong location, a native image that is no longer valid, or a mismatch in version numbers or cultures.</span></span> <span data-ttu-id="a4cb3-106">공용 언어 런타임의 어셈블리 찾기 오류는 일반적으로 응용 프로그램에서 <xref:System.TypeLoadException>으로 나타납니다.</span><span class="sxs-lookup"><span data-stu-id="a4cb3-106">The common language runtime's failure to locate an assembly typically shows up as a <xref:System.TypeLoadException> in your application.</span></span>  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33326399"
 ---
 # <a name="generation-operations-c"></a><span data-ttu-id="d75a9-102">생성 작업(C#)</span><span class="sxs-lookup"><span data-stu-id="d75a9-102">Generation Operations (C#)</span></span>
 <span data-ttu-id="d75a9-103">생성은 값의 새 시퀀스를 만드는 작업을 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="d75a9-103">Generation refers to creating a new sequence of values.</span></span>  

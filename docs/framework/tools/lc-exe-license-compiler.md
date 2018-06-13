@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33409080"
 ---
 # <a name="lcexe-license-compiler"></a><span data-ttu-id="3e487-102">Lc.exe(라이선스 컴파일러)</span><span class="sxs-lookup"><span data-stu-id="3e487-102">Lc.exe (License Compiler)</span></span>
 <span data-ttu-id="3e487-103">라이선스 컴파일러를 사용하면 라이선스 정보가 들어 있는 텍스트 파일을 읽고, 공용 언어 런타임 실행 파일에 리소스로 포함될 수 있는 바이너리 파일을 생성할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="3e487-103">The License Compiler reads text files that contain licensing information and produces a binary file that can be embedded in a common language runtime executable as a resource.</span></span>  

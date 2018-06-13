@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33314111"
 ---
 # <a name="access-modifiers-c-programming-guide"></a><span data-ttu-id="b7507-102">액세스 한정자(C# 프로그래밍 가이드)</span><span class="sxs-lookup"><span data-stu-id="b7507-102">Access Modifiers (C# Programming Guide)</span></span>
 <span data-ttu-id="b7507-103">모든 형식과 형식 멤버에는 사용 중인 어셈블리나 기타 어셈블리의 다른 코드에서 사용될 수 있는지 여부를 제어하는 액세스 가능성 수준이 있습니다.</span><span class="sxs-lookup"><span data-stu-id="b7507-103">All types and type members have an accessibility level, which controls whether they can be used from other code in your assembly or other assemblies.</span></span> <span data-ttu-id="b7507-104">다음 액세스 한정자를 사용하여 형식 또는 멤버를 선언할 때 해당 항목의 액세스 가능성을 지정할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="b7507-104">You can use the following access modifiers to specify the accessibility of a type or member when you declare it:</span></span>  

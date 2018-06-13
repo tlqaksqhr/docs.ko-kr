@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33399823"
 ---
 # <a name="creating-resource-files-for-desktop-apps"></a><span data-ttu-id="39eac-102">데스크톱 응용 프로그램용 리소스 파일 만들기</span><span class="sxs-lookup"><span data-stu-id="39eac-102">Creating Resource Files for Desktop Apps</span></span>
 <span data-ttu-id="39eac-103">문자열, 이미지 또는 개체 데이터와 같은 리소스를 리소스 파일에 포함하여 응용 프로그램에서 쉽게 사용할 수 있게 설정할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="39eac-103">You can include resources, such as strings, images, or object data, in resources files to make them easily available to your application.</span></span> <span data-ttu-id="39eac-104">.NET Framework에서는 리소스 파일을 만드는 다섯 가지 방법을 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="39eac-104">The .NET Framework offers five ways to create resources files:</span></span>  

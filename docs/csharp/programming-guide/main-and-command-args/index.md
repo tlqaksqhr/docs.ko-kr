@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33332370"
 ---
 # <a name="main-and-command-line-arguments-c-programming-guide"></a><span data-ttu-id="d2b0e-102">Main()과 명령줄 인수(C# 프로그래밍 가이드)</span><span class="sxs-lookup"><span data-stu-id="d2b0e-102">Main() and command-line arguments (C# Programming Guide)</span></span>
 

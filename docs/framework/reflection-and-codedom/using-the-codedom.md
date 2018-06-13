@@ -27,6 +27,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33399021"
 ---
 # <a name="using-the-codedom"></a><span data-ttu-id="be87f-102">CodeDOM 사용</span><span class="sxs-lookup"><span data-stu-id="be87f-102">Using the CodeDOM</span></span>
 <span data-ttu-id="be87f-103">CodeDOM은 소스 코드 요소의 다양한 일반적인 형식을 나타내는 형식을 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="be87f-103">The CodeDOM provides types that represent many common types of source code elements.</span></span> <span data-ttu-id="be87f-104">개체 그래프를 어셈블하는 데 CodeDOM 요소를 사용하는 소스 코드 모델을 빌드하는 프로그램을 디자인할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="be87f-104">You can design a program that builds a source code model using CodeDOM elements to assemble an object graph.</span></span> <span data-ttu-id="be87f-105">이 개체 그래프는 CodeDOM 코드 생성기를 사용하여 지원되는 프로그래밍 언어에 대한 소스 코드로 렌더링할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="be87f-105">This object graph can be rendered as source code using a CodeDOM code generator for a supported programming language.</span></span> <span data-ttu-id="be87f-106">CodeDOM은 소스 코드를 이진 어셈블리로 컴파일하는 데도 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="be87f-106">The CodeDOM can also be used to compile source code into a binary assembly.</span></span>  

@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33331443"
 ---
 # <a name="compiler-generated-exceptions-c-programming-guide"></a><span data-ttu-id="d808a-102">컴파일러 생성 예외(C# 프로그래밍 가이드)</span><span class="sxs-lookup"><span data-stu-id="d808a-102">Compiler-Generated Exceptions (C# Programming Guide)</span></span>
 <span data-ttu-id="d808a-103">기본 작업이 실패하면 .NET Framework의 CLR(공용 언어 런타임)에 의해 자동으로 일부 예외가 throw됩니다.</span><span class="sxs-lookup"><span data-stu-id="d808a-103">Some exceptions are thrown automatically by the .NET Framework's common language runtime (CLR) when basic operations fail.</span></span> <span data-ttu-id="d808a-104">이러한 예외와 관련 오류 조건이 다음 표에 나와 있습니다.</span><span class="sxs-lookup"><span data-stu-id="d808a-104">These exceptions and their error conditions are listed in the following table.</span></span>  

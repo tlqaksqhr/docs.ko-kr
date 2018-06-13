@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33326152"
 ---
 # <a name="chaining-standard-query-operators-together-c"></a><span data-ttu-id="97c27-102">여러 표준 쿼리 연산자 연결(C#)</span><span class="sxs-lookup"><span data-stu-id="97c27-102">Chaining Standard Query Operators Together (C#)</span></span>
 <span data-ttu-id="97c27-103">이 항목은 [자습서: 쿼리 연결(C#)](../../../../csharp/programming-guide/concepts/linq/tutorial-chaining-queries-together.md) 자습서의 마지막 항목입니다.</span><span class="sxs-lookup"><span data-stu-id="97c27-103">This is the final topic in the [Tutorial: Chaining Queries Together (C#)](../../../../csharp/programming-guide/concepts/linq/tutorial-chaining-queries-together.md) tutorial.</span></span>  

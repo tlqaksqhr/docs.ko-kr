@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33402030"
 ---
 # <a name="developer-command-prompt-for-visual-studio"></a><span data-ttu-id="21605-102">Visual Studio용 개발자 명령 프롬프트</span><span class="sxs-lookup"><span data-stu-id="21605-102">Developer Command Prompt for Visual Studio</span></span>
 <span data-ttu-id="21605-103">Visual Studio용 개발자 명령 프롬프트는 .NET Framework 도구를 쉽게 사용할 수 있는 환경 변수를 자동으로 설정합니다.</span><span class="sxs-lookup"><span data-stu-id="21605-103">The Developer Command Prompt for Visual Studio automatically sets the environment variables that enable you to easily use .NET Framework tools.</span></span> <span data-ttu-id="21605-104">개발자 명령 프롬프트는 전체 또는 커뮤니티 버전의 Visual Studio와 함께 설치됩니다.</span><span class="sxs-lookup"><span data-stu-id="21605-104">The Developer Command Prompt is installed with full or community editions of Visual Studio.</span></span> <span data-ttu-id="21605-105">Express 버전의 Visual Studio에서는 설치되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="21605-105">It is not installed with the Express versions of Visual Studio.</span></span>  

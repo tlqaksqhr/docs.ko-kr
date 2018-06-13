@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33330475"
 ---
 # <a name="working-with-xml-namespaces-c"></a><span data-ttu-id="3bb26-102">XML 네임스페이스 작업(C#)</span><span class="sxs-lookup"><span data-stu-id="3bb26-102">Working with XML Namespaces (C#)</span></span>
 <span data-ttu-id="3bb26-103">이 단원의 항목에서는 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]에서 네임스페이스를 지원하는 방법에 대해 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="3bb26-103">The topics in this section describe how [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] supports namespaces.</span></span>  

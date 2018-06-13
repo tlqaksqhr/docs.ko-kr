@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33329883"
 ---
 # <a name="preserving-white-space-while-serializing"></a><span data-ttu-id="0570f-102">serialize할 때 공백 유지</span><span class="sxs-lookup"><span data-stu-id="0570f-102">Preserving White Space While Serializing</span></span>
 <span data-ttu-id="0570f-103">이 항목에서는 XML 트리를 serialize할 때 공백을 제어하는 방법에 대해 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="0570f-103">This topic describes how to control white space when serializing an XML tree.</span></span>  

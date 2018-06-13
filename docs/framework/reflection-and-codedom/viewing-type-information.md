@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33399745"
 ---
 # <a name="viewing-type-information"></a><span data-ttu-id="cc9c9-102">형식 정보 보기</span><span class="sxs-lookup"><span data-stu-id="cc9c9-102">Viewing Type Information</span></span>
 <span data-ttu-id="cc9c9-103"><xref:System.Type?displayProperty=nameWithType> 클래스는 리플렉션의 핵심입니다.</span><span class="sxs-lookup"><span data-stu-id="cc9c9-103">The <xref:System.Type?displayProperty=nameWithType> class is central to reflection.</span></span> <span data-ttu-id="cc9c9-104">공용 언어 런타임은 리플렉션이 요청할 때 로드된 형식의 **Type**을 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="cc9c9-104">The common language runtime creates the **Type** for a loaded type when reflection requests it.</span></span> <span data-ttu-id="cc9c9-105">**Type** 개체의 메서드, 필드, 속성 및 중첩 클래스를 사용하여 해당 형식에 대한 모든 것을 찾을 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="cc9c9-105">You can use a **Type** object's methods, fields, properties, and nested classes to find out everything about that type.</span></span>  

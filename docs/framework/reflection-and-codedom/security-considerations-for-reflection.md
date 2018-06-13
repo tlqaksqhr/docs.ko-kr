@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33398706"
 ---
 # <a name="security-considerations-for-reflection"></a><span data-ttu-id="889af-102">리플렉션의 보안 고려 사항</span><span class="sxs-lookup"><span data-stu-id="889af-102">Security Considerations for Reflection</span></span>
 <span data-ttu-id="889af-103">리플렉션은 형식 및 멤버에 대한 정보를 가져오고 멤버에 액세스하는 기능(즉, 메서드 및 생성자 호출, 속성 값 가져오기 및 설정, 이벤트 처리기 추가 및 제거 등)을 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="889af-103">Reflection provides the ability to obtain information about types and members, and to access members (that is, to call methods and constructors, to get and set property values, to add and remove event handlers, and so on).</span></span> <span data-ttu-id="889af-104">리플렉션을 사용하여 형식 및 멤버에 대한 정보를 가져오는 기능은 제한되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="889af-104">The use of reflection to obtain information about types and members is not restricted.</span></span> <span data-ttu-id="889af-105">모든 코드에서 리플렉션을 사용하여 다음 작업을 수행할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="889af-105">All code can use reflection to perform the following tasks:</span></span>  

@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33339737"
 ---
 # <a name="how-to-read-a-text-file-one-line-at-a-time-visual-c"></a><span data-ttu-id="9eee1-102">방법: 텍스트 파일을 한 번에 한 줄씩 읽기(Visual C#)</span><span class="sxs-lookup"><span data-stu-id="9eee1-102">How to: Read a Text File One Line at a Time (Visual C#)</span></span>
 <span data-ttu-id="9eee1-103">이 예제에서는 `StreamReader` 클래스의 `ReadLine` 메서드를 사용하여 텍스트 파일 내용을 한 번에 한 줄씩 문자열로 읽어옵니다.</span><span class="sxs-lookup"><span data-stu-id="9eee1-103">This example reads the contents of a text file, one line at a time, into a string using the `ReadLine` method of the `StreamReader` class.</span></span> <span data-ttu-id="9eee1-104">각 텍스트 줄은 `line` 문자열에 저장되고 화면에 표시됩니다.</span><span class="sxs-lookup"><span data-stu-id="9eee1-104">Each text line is stored into the string `line` and displayed on the screen.</span></span>  
