@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33521759"
 ---
 # <a name="graphics-overview-windows-forms"></a>그래픽 개요(Windows Forms)
 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 프로그래머가 장치 독립적인 응용 프로그램을 작성 하는 데 사용할 수 있는 그래픽 장치 인터페이스입니다. 서비스 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 일련의 관리 클래스를 통해 노출 됩니다.  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33518387"
 ---
 # <a name="absolute-delay"></a>절대 지연
 이 샘플의 주요 시나리오는 워크플로 응용 프로그램에서 지속형 타이머를 사용하여 지정된 <xref:System.DateTime>까지 지연하는 것입니다. 지정된 <xref:System.Activities.Statements.Delay>(또는 분/초 수) 동안만 지연할 수 있다는 점에서 이 샘플은 기본 제공 <xref:System.TimeSpan> 작업을 사용하는 것과는 다릅니다.  

@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 637ff0fca74dc123a3f7a47dcc3fdeded8d884ea
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33430049"
 ---
 # <a name="getcorrequiredversion-function"></a>GetCORRequiredVersion 함수
 필요한 공용 언어 런타임 (CLR) 버전 번호를 가져옵니다.  

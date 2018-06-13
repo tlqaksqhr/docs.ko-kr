@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 3ce887d59d02cfc2e4d8c183aa495dcc1535853c
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33461531"
 ---
 # <a name="putclasswmi-function"></a>PutClassWmi 함수
 새 클래스를 만들거나 기존을 업데이트 합니다.  

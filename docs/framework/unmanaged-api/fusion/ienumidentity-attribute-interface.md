@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: da6462a320b1f090940473f566ade91d36e74780
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33431703"
 ---
 # <a name="ienumidentityattribute-interface"></a>IEnumIDENTITY_ATTRIBUTE 인터페이스
 현재 범위에 있는 코드 개체의 특성에 대 한 열거자 역할을 합니다.  

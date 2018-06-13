@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: f716ff35ae0cd3d2a53c55756b8957e54fa355c6
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33431537"
 ---
 # <a name="identityattribute-structure"></a>IDENTITY_ATTRIBUTE 구조체
 에 대 한 메타 데이터 특성 정보를 포함 한 [IDefinitionIdentity](../../../../docs/framework/unmanaged-api/fusion/idefinitionidentity-interface.md) 인스턴스.  

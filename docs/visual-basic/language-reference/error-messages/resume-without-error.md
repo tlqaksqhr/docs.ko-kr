@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33597877"
 ---
 # <a name="resume-without-error"></a>오류 없이 계속됩니다.
 A `Resume` 문의 오류 처리 코드 외부에 있거나 오류가 있습니다. 경우에 오류 처리기로 코드 점프 합니다.  

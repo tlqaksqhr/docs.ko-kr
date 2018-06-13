@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33477554"
 ---
 # <a name="systemservicemodelchannelspeerserviceopened"></a>System.ServiceModel.Channels.PeerServiceOpened
 피어 서비스 모듈이 열려 지정된 주소에서 수신 대기를 시작했습니다.  

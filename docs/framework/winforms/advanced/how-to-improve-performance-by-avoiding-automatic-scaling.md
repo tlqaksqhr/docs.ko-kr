@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33523044"
 ---
 # <a name="how-to-improve-performance-by-avoiding-automatic-scaling"></a>방법: 자동 배율 조정 없이 성능 향상
 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 그릴 때, 성능 저하가 발생 하는 이미지의 배율을 조정 자동으로 될 수 있습니다. 이미지의 배율에 대상 사각형의 크기를 전달 하 여 제어할 수 또는 <xref:System.Drawing.Graphics.DrawImage%2A> 메서드.  

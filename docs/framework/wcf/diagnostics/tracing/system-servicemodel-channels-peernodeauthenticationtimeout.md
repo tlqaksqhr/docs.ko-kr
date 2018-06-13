@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33478412"
 ---
 # <a name="systemservicemodelchannelspeernodeauthenticationtimeout"></a>System.ServiceModel.Channels.PeerNodeAuthenticationTimeout
 보안 핸드셰이크가 지정된 제한 시간 내에 성공하지 못했습니다.  

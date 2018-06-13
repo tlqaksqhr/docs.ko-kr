@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33521162"
 ---
 # <a name="how-to-fill-open-figures"></a>방법: 열린 그림 채우기
 전달 하 여 경로 채울 수는 <xref:System.Drawing.Drawing2D.GraphicsPath> 개체는 <xref:System.Drawing.Graphics.FillPath%2A> 메서드. <xref:System.Drawing.Graphics.FillPath%2A> 메서드는 현재 경로 대해 설정 된 채우기 모드 (대체 또는 굴곡)에 따라 경로 입력 합니다. 경로 열린 그림이, 경로 해당 종료 된 경우에 따라 채워집니다. [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 시작 점으로 끝점에서 직선 그리기 하 여 그림을 닫습니다.  

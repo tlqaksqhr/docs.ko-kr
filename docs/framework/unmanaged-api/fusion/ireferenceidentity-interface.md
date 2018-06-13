@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 4708fa173725e4c91a13f5b92cdbb1fdf8a8a4d1
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33432105"
 ---
 # <a name="ireferenceidentity-interface"></a>IReferenceIdentity 인터페이스
 코드 개체의 고유 서명에 대 한 참조를 나타냅니다.  

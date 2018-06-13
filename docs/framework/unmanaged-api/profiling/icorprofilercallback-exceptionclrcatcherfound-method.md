@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 33dc6a863af0c03066d5f01e5101c9a6cc6d5859
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33451125"
 ---
 # <a name="icorprofilercallbackexceptionclrcatcherfound-method"></a>ICorProfilerCallback::ExceptionCLRCatcherFound 메서드
 될 때 호출 된 `catch` 공용 언어 런타임 (CLR) 자체 내부 예외를 찾을 수에 대 한 차단 합니다. 이 메서드는.NET Framework 버전 2.0에서에서 사용 되지 않습니다.  

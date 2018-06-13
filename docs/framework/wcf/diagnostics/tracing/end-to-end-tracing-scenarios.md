@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33474749"
 ---
 # <a name="end-to-end-tracing-scenarios"></a>종단 간 추적 시나리오
 이 단원에는 추적에 사용하는 다양한 시나리오를 설명하는 항목이 있습니다.  

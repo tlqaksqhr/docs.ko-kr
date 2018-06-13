@@ -17,9 +17,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: c0555299779aebc6cc37c3863e8b5504b357b262
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33461495"
 ---
 # <a name="strongnamesignaturegeneration-function"></a>StrongNameSignatureGeneration 함수
 지정된 된 어셈블리에 대 한 강력한 이름 서명을 생성합니다.  

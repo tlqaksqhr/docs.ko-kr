@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33595841"
 ---
 # <a name="modules-visual-basic"></a>모듈(Visual Basic)
 Visual Basic 사용 하면 문자열 조작, 시스템 정보 가져오기, 파일 및 디렉터리 작업을 수행 수학 계산 수행을 비롯 하 여 코드에서 일반적인 작업을 간소화 하 고 등 여러 모듈을 제공 합니다. 다음 표에서 Visual Basic에서 제공 되는 모듈을 나열 합니다.  

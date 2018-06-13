@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33596686"
 ---
 # <a name="statement-cannot-end-a-block-outside-of-a-line-39if39-statement"></a>문 줄 외부의 블록에서 끝날 수 없으며 &#39;경우&#39; 문
 한 줄 `If` 문 중 하나는 콜론 (:)으로 구분 된 여러 문을 포함 한 `End` 문을 한 줄의 외부 제어 블록에 대 한 `If`합니다. 한 줄 `If` 문을 사용 하지 않는 `End If` 문.  

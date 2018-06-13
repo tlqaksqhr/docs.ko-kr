@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33595802"
 ---
 # <a name="myapplicationlog-object"></a>My.Application.Log 개체
 응용 프로그램의 로그 수신기에 이벤트 및 예외 정보를 쓸 수 있는 속성 및 메서드를 제공합니다.  

@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 6b195d3a512c537ca409bd2039add9e69abaf4df
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33456364"
 ---
 # <a name="getdemultiplexedstub-function"></a>GetDemultiplexedStub 함수
 Windows 관리에서 비동기 호출을 받는 클라이언트를 지원 하기 위해 개체 전달자 싱크를 만듭니다.

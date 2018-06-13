@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33518322"
 ---
 # <a name="using-custom-activity-designers-and-templates"></a>사용자 지정 활동 디자이너 및 템플릿 사용
 이 단원의 항목에서는 사용자 지정 활동 디자이너와 사용자 지정 활동 템플릿을 만드는 방법에 대해 설명합니다.  

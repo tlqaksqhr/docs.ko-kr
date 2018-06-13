@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: bd8a2d373b801bd8238d50eecb388ef511bc34bc
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33446204"
 ---
 # <a name="imetadataimportenumfields-method"></a>IMetaDataImport::EnumFields 메서드
 지정한 TypeDef 토큰이 참조하는 형식에 대한 FieldDef 토큰을 열거합니다.  

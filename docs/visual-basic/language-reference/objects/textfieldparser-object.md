@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33596569"
 ---
 # <a name="textfieldparser-object"></a>TextFieldParser Object
 구조화된 텍스트 파일을 구문 분석하기 위한 메서드와 속성을 제공합니다.  

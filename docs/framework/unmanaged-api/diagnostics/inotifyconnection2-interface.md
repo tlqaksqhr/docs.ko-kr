@@ -18,9 +18,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: d0f67b1be58da82c2096c355ba5334b3bfd73611
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33426511"
 ---
 # <a name="inotifyconnection2-interface"></a>INotifyConnection2 인터페이스
 등록 및 연결 알림 소스를 등록 취소 하기 위한 메서드를 선언 합니다.  

@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 5d5b3c60845fce39ce7f904c6871e7feb16e8970
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33429816"
 ---
 # <a name="isymunmanagedwriterdefinefield-method"></a>ISymUnmanagedWriter::DefineField 메서드
 메서드에 포함 되지 않는 단일 변수를 정의 합니다. 이 방법은 클래스의 특정 필드, 비트 필드 등에 사용 합니다.  

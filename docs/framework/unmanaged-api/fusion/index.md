@@ -10,9 +10,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 7bc6c9079b6f233946fa38979800e28097e849f8
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33428591"
 ---
 # <a name="fusion-unmanaged-api-reference"></a>Fusion(관리되지 않는 API 참조)
 Fusion API에는 런타임 호스트가 응용 프로그램에 대 한 이러한 리소스의 올바른 버전을 찾을 응용 프로그램의 리소스의 속성에 액세스할 수 있게 해줍니다.  

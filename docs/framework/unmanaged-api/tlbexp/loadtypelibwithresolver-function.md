@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 751794746e26bd8f0ec2cd6db2f62876e78674e5
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33460277"
 ---
 # <a name="loadtypelibwithresolver-function"></a>LoadTypeLibWithResolver 함수
 형식 라이브러리를 로드 하 고 사용 하 여 제공 된 [ITypeLibResolver 인터페이스](../../../../docs/framework/unmanaged-api/tlbexp/itypelibresolver-interface.md) 내부적으로 참조 된 형식 라이브러리를 확인할 수 있습니다.  

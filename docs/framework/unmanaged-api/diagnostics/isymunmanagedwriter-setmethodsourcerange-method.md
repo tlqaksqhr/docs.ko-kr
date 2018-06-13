@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: d057201c7d7bec3070027bb1d9de62735d583cf6
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33429004"
 ---
 # <a name="isymunmanagedwritersetmethodsourcerange-method"></a>ISymUnmanagedWriter::SetMethodSourceRange 메서드
 실제 시작과 소스 파일 내의 메서드의 끝을 지정합니다. 이 메서드를 사용 하 여 메서드 내에 있는 시퀀스 위치의 별개로 메서드의 범위를 지정 합니다.  
