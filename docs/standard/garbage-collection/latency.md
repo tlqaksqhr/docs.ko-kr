@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33573902"
 ---
 # <a name="latency-modes"></a><span data-ttu-id="28251-102">대기 모드</span><span class="sxs-lookup"><span data-stu-id="28251-102">Latency Modes</span></span>
 <span data-ttu-id="28251-103">개체를 회수하려면, 가비지 수집기가 응용 프로그램의 실행 스레드를 모두 중지해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="28251-103">To reclaim objects, the garbage collector must stop all the executing threads in an application.</span></span> <span data-ttu-id="28251-104">응용 프로그램이 데이터를 검색하거나 콘텐츠를 표시하는 경우와 같은 일부 상황에서는 전체 가비지 수집이 중요한 시간에 발생하여 성능이 저하될 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="28251-104">In some situations, such as when an application retrieves data or displays content, a full garbage collection can occur at a critical time and impede performance.</span></span> <span data-ttu-id="28251-105"><xref:System.Runtime.GCSettings.LatencyMode%2A?displayProperty=nameWithType> 속성을 <xref:System.Runtime.GCLatencyMode?displayProperty=nameWithType> 값 중 하나로 설정하여 가비지 수집기의 개입을 조정할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="28251-105">You can adjust the intrusiveness of the garbage collector by setting the <xref:System.Runtime.GCSettings.LatencyMode%2A?displayProperty=nameWithType> property to one of the <xref:System.Runtime.GCLatencyMode?displayProperty=nameWithType> values.</span></span>  

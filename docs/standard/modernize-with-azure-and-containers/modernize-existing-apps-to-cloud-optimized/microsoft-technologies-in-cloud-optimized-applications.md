@@ -9,6 +9,7 @@ ms.sourcegitcommit: 88f251b08bf0718ce119f3d7302f514b74895038
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "33957943"
 ---
 # <a name="microsoft-technologies-in-cloud-optimized-applications"></a><span data-ttu-id="44e55-103">클라우드 액세스에 최적화 된 응용 프로그램에서 Microsoft 기술</span><span class="sxs-lookup"><span data-stu-id="44e55-103">Microsoft technologies in cloud-optimized applications</span></span>
 

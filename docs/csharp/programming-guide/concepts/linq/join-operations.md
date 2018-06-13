@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33325346"
 ---
 # <a name="join-operations-c"></a><span data-ttu-id="2d24a-102">조인 작업(C#)</span><span class="sxs-lookup"><span data-stu-id="2d24a-102">Join Operations (C#)</span></span>
 <span data-ttu-id="2d24a-103">두 데이터 소스를 *조인*하는 것은 한 데이터 소스의 개체를 공통 특성을 공유하는 다른 데이터 소스의 개체와 연결하는 것입니다.</span><span class="sxs-lookup"><span data-stu-id="2d24a-103">A *join* of two data sources is the association of objects in one data source with objects that share a common attribute in another data source.</span></span>  
