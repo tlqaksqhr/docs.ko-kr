@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33397470"
 ---
 # <a name="network-programming-samples"></a><span data-ttu-id="e6c25-102">네트워크 프로그래밍 샘플</span><span class="sxs-lookup"><span data-stu-id="e6c25-102">Network Programming Samples</span></span>
 <span data-ttu-id="e6c25-103">이 섹션에는 <xref:System.Net>, <xref:System.Net.Cache>, <xref:System.Net.Configuration>, <xref:System.Net.Mail>, <xref:System.Net.Mime>, <xref:System.Net.NetworkInformation>, <xref:System.Net.Security>, <xref:System.Net.Sockets> 및 관련 네임스페이스의 클래스를 사용하는 다운로드 가능한 네트워크 프로그래밍 샘플에 대한 링크와 설명이 포함되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="e6c25-103">This section contains descriptions and links to downloadable network programming samples that use classes in the <xref:System.Net>, <xref:System.Net.Cache>, <xref:System.Net.Configuration>, <xref:System.Net.Mail>, <xref:System.Net.Mime>, <xref:System.Net.NetworkInformation>, <xref:System.Net.Security>, <xref:System.Net.Sockets>, and related namespaces.</span></span> 
