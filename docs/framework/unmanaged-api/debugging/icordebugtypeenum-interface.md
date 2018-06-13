@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: c683c8109970c05d9f666a9ed07535d95685cd43
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33420286"
 ---
 # <a name="icordebugtypeenum-interface1"></a>ICorDebugTypeEnum Interface1
 "ICorDebugEnum" 메서드를 구현 하 고 "ICorDebugType" 배열을 열거 합니다.  

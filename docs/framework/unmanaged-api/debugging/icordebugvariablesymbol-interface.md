@@ -6,9 +6,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 73072dd9564853852b4d57e73c810680fdbcc4f9
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33421339"
 ---
 # <a name="icordebugvariablesymbol-interface"></a>ICorDebugVariableSymbol 인터페이스
 변수에 대한 디버그 기호 정보를 검색합니다.  

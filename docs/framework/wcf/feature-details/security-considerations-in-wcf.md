@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33497531"
 ---
 # <a name="security-considerations-in-wcf"></a>WCF에서의 보안 고려 사항
 이 섹션의 항목은 Windows Communication Foundation (WCF) 응용 프로그램을 디자인할 때 고려해 야 할 다양 한 보안 관련 항목을 나열 합니다.  

@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: fb0e70bffe5bf895fedbfde559674e161757ee48
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33423691"
 ---
 # <a name="icorpublishenumreset-method"></a>ICorPublishEnum::Reset 메서드
 열거형의 시작 부분으로 커서를 이동합니다.  

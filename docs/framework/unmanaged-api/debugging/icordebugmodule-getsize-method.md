@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: f0d741bda5426dee1292df0e6fd9107cc2f44c8a
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33413321"
 ---
 # <a name="icordebugmodulegetsize-method"></a>ICorDebugModule::GetSize 메서드
 모듈의 바이트 단위로 크기를 가져옵니다.  

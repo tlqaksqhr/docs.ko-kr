@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 3f7e5fceacc3fefa9267a9d7f989e745c392322e
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33414127"
 ---
 # <a name="icordebuginternalframegetframetype-method"></a>ICorDebugInternalFrame::GetFrameType 메서드
 이 내부 프레임의 유형을 가져옵니다.  

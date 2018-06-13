@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 45a710e6d8be4a041d9852585ea83fea85376f66
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33413828"
 ---
 # <a name="icordebuginternalframe-interface1"></a>ICorDebugInternalFrame Interface1
 스택에 런타임 내부 프레임을 나타냅니다. 이 인터페이스는 ICorDebugFrame 인터페이스의 서브 클래스입니다.  

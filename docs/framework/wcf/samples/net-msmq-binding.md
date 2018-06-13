@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33500882"
 ---
 # <a name="net-msmq-binding"></a>Net MSMQ 바인딩
 이 단원에는 끝점 요소의 MSMQ 바인딩 특성을 사용하는 방법을 보여 주는 샘플이 포함되어 있습니다.  

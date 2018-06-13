@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 94ba2b0cf7d88104eaadd434732edf3c1d4060e2
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33422703"
 ---
 # <a name="icordebugprocess2setdesiredngencompilerflags-method"></a>ICorDebugProcess2::SetDesiredNGENCompilerFlags 메서드
 현재 프로세스에 해당 이미지를 로드 하도록 런타임에 위해 미리 컴파일된 이미지에 포함 되어야 하는 플래그를 설정 합니다.  

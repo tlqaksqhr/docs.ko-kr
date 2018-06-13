@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 6a1bbe5674ba11b5ee6033c65f229d698eff15ae
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33420643"
 ---
 # <a name="icordebugthreadgetactiveframe-method"></a>ICorDebugThread::GetActiveFrame 메서드
 활성 (가장 최근) 프레임으로이 ICorDebugThread 개체에 대 한 인터페이스 포인터를 가져옵니다.  

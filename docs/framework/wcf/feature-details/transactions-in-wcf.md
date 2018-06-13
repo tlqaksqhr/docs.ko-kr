@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33498172"
 ---
 # <a name="transactions-in-wcf"></a>WCF에서 트랜잭션
 Windows Communication Foundation (WCF) 트랜잭션 기능에는 여러 구성 요소가 동시에 데이터 작업에 참여할 수 있습니다. 이 단원의 항목에서는 이 기능에 대해 자세히 설명합니다.  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33498025"
 ---
 # <a name="systemwebrouting-integration"></a>System.Web.Routing 통합
 Windows Communication Foundation (WCF) 서비스를 인터넷 정보 서비스 (IIS)에서 호스트할 때 가상 디렉터리에.svc 파일을 저장 합니다. 이 .svc 파일은 사용할 서비스 호스트 팩터리와 함께 서비스를 구현하는 클래스를 지정합니다. 때 서비스에 대 한 요청.svc 파일의에서 지정 된 URI, 예: http://contoso.com/EmployeeServce.svc합니다. REST 서비스를 작성하는 프로그래머에게는 이러한 유형의 URI가 적합하지 않을 수 있습니다. REST 서비스의 URI는 특정 리소스를 지정하며 일반적으로 확장명을 포함하지 않습니다. <xref:System.Web.Routing> 통합 기능을 사용 하면 확장이 없는 Uri에 응답 하는 WCF REST 서비스를 호스팅할 수 있습니다. 라우팅 참조에 대 한 자세한 내용은 [ASP.NET 라우팅](http://go.microsoft.com/fwlink/?LinkId=184660) 및 [AspNetRouteIntegration](../../../../docs/framework/wcf/samples/aspnetrouteintegration.md) 샘플.  

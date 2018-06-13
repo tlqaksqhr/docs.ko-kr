@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 9e8aa71a79bee45d5a8e1f3448c781e6ba1ec605
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33414140"
 ---
 # <a name="icordebugmanagedcallbackeditandcontinueremap-method"></a>ICorDebugManagedCallback::EditAndContinueRemap 메서드
 이 메서드는 사용되지 않습니다. 통합된 개발 환경 (IDE)에 다시 매핑 이벤트 보냈음을 디버거에 알립니다.  

@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 77ffb53e3a2b3802d3fcc1319397c8f51c5b127c
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33416113"
 ---
 # <a name="icordebugprocess2getdesiredngencompilerflags-method"></a>ICorDebugProcess2::GetDesiredNGENCompilerFlags 메서드
 현재 컴파일러 공용 언어 런타임 (CLR)를 사용 하 여 미리 컴파일된 올바른 선택 플래그 설정을 가져옵니다 (즉, 네이티브) 이미지가이 프로세스에 로드 합니다.  

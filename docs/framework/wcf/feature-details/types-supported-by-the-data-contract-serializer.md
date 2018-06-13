@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33504892"
 ---
 # <a name="types-supported-by-the-data-contract-serializer"></a>데이터 계약 Serializer에서 지원하는 형식
 Windows Communication Foundation (WCF) 사용 하 여는 <xref:System.Runtime.Serialization.DataContractSerializer> 데이터를 XML로 변환 하 고 XML을 다시 데이터로 변환 하려면 기본 serialization 엔진으로 합니다. <xref:System.Runtime.Serialization.DataContractSerializer> 는 *데이터 계약* 형식을 serialize하도록 디자인되었습니다. 그러나 암시적 데이터 계약이 있는 것으로 간주될 수 있는 여러 가지 다른 형식을 지원합니다. 다음은 serialize할 수 있는 형식의 전체 목록입니다.  

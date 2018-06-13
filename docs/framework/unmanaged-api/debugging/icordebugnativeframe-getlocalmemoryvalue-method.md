@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 5419d2e6932e08d05c8336d473cf68bd16058a48
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33417273"
 ---
 # <a name="icordebugnativeframegetlocalmemoryvalue-method"></a>ICorDebugNativeFrame::GetLocalMemoryValue 메서드
 네이티브 프레임에 대 한 특정된 메모리 위치에 저장 된 지역 변수 또는 인수의 값을 가져옵니다.  

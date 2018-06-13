@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33502949"
 ---
 # <a name="custom-binding-reliable-session-over-https"></a>HPPTS 기반의 사용자 지정 바인딩 신뢰할 수 있는 세션
 이 샘플에서는 신뢰할 수 있는 세션에 SSL 전송 보안을 사용하는 방법을 보여 줍니다. 신뢰할 수 있는 세션에서는 WS-Reliable Messaging 프로토콜을 구현합니다. 신뢰할 수 있는 세션에 WS-Security를 작성하여 신뢰할 수 있는 보안 세션을 만들 수 있습니다. 하지만 경우에 따라 대신 SSL에 HTTP 전송 보안을 사용할 수도 있습니다.  

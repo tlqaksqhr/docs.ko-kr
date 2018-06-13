@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33498448"
 ---
 # <a name="using-multiple-authentication-schemes-with-wcf"></a>WCF와 함께 여러 인증 스키마 사용
 이제 WCF를 사용하여 단일 끝점에 여러 인증 체계를 지정할 수 있습니다. 또한 웹 호스팅 서비스가 IIS에서 직접 인증 설정을 상속할 수 있습니다. 자체 호스팅 서비스는 사용할 수 있는 인증 체계를 지정할 수 있습니다. IIS에서 인증 설정을 설정 하는 방법에 대 한 자세한 내용은 참조 [IIS 인증](http://go.microsoft.com/fwlink/?LinkId=232458)  

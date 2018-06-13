@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 9ee003d668916baec313c6115cc12826286f6cdd
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33423678"
 ---
 # <a name="pfnclrdatacreateinstance-function-pointer"></a>PFN_CLRDataCreateInstance 함수 포인터
 지정 된 대상 항목에 대 한 인터페이스 개체를 만드는 함수를 가리킵니다.  
