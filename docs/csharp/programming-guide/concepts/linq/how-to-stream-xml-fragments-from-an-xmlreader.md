@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33321066"
 ---
 # <a name="how-to-stream-xml-fragments-from-an-xmlreader-c"></a><span data-ttu-id="e4f0f-102">방법: XmlReader에서 XML 조각 스트리밍(C#)</span><span class="sxs-lookup"><span data-stu-id="e4f0f-102">How to: Stream XML Fragments from an XmlReader (C#)</span></span>
 <span data-ttu-id="e4f0f-103">큰 XML 파일을 처리해야 하는 경우 전체 XML 트리를 메모리에 로드하는 것이 가능하지 않을 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="e4f0f-103">When you have to process large XML files, it might not be feasible to load the whole XML tree into memory.</span></span> <span data-ttu-id="e4f0f-104">이 항목에서는 <xref:System.Xml.XmlReader>를 사용하여 조각을 스트림하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="e4f0f-104">This topic shows how to stream fragments using an <xref:System.Xml.XmlReader>.</span></span>  

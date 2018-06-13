@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33323712"
 ---
 # <a name="tutorial-chaining-queries-together-c"></a><span data-ttu-id="868f5-102">자습서: 여러 쿼리 연결(C#)</span><span class="sxs-lookup"><span data-stu-id="868f5-102">Tutorial: Chaining Queries Together (C#)</span></span>
 <span data-ttu-id="868f5-103">이 자습서에서는 쿼리를 연결할 때의 처리 모델을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="868f5-103">This tutorial illustrates the processing model when you chain queries together.</span></span> <span data-ttu-id="868f5-104">쿼리 연결은 함수 변환을 작성할 때 핵심 부분을 차지합니다.</span><span class="sxs-lookup"><span data-stu-id="868f5-104">Chaining queries together is a key part of writing functional transformations.</span></span> <span data-ttu-id="868f5-105">연결된 쿼리의 작동 방식을 정확히 이해해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="868f5-105">It is important to understand exactly how chained queries work.</span></span>  

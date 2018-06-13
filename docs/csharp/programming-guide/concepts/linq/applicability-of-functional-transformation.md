@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33319153"
 ---
 # <a name="applicability-of-functional-transformation-c"></a><span data-ttu-id="561b8-102">함수 변환의 적용 가능 범위(C#)</span><span class="sxs-lookup"><span data-stu-id="561b8-102">Applicability of Functional Transformation (C#)</span></span>
 <span data-ttu-id="561b8-103">순수 함수 변환은 광범위한 상황에서 적용 가능합니다.</span><span class="sxs-lookup"><span data-stu-id="561b8-103">Pure functional transformations are applicable in a wide variety of situations.</span></span>  

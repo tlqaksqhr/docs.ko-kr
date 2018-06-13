@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33323890"
 ---
 # <a name="how-to-find-an-element-with-a-specific-child-element-c"></a><span data-ttu-id="d1e4f-102">방법: 특정 자식 요소로 요소 찾기(C#)</span><span class="sxs-lookup"><span data-stu-id="d1e4f-102">How to: Find an Element with a Specific Child Element (C#)</span></span>
 <span data-ttu-id="d1e4f-103">이 항목에서는 지정된 값을 가진 자식 요소가 포함된 특정 요소를 찾는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="d1e4f-103">This topic shows how to find a particular element that has a child element with a specific value.</span></span>  

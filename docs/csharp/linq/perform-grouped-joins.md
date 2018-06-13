@@ -8,6 +8,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33288179"
 ---
 # <a name="perform-grouped-joins"></a><span data-ttu-id="afed7-103">그룹화 조인 수행</span><span class="sxs-lookup"><span data-stu-id="afed7-103">Perform grouped joins</span></span>
 

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32751898"
 ---
 # <a name="ltenablewebscriptgt"></a><span data-ttu-id="39cb9-102">&lt;enableWebScript&gt;</span><span class="sxs-lookup"><span data-stu-id="39cb9-102">&lt;enableWebScript&gt;</span></span>
 <span data-ttu-id="39cb9-103">이 요소는 ASP.NET AJAX 웹 페이지에서 서비스를 사용할 수 있게 하는 끝점 동작을 설정합니다.</span><span class="sxs-lookup"><span data-stu-id="39cb9-103">This element enables the endpoint behavior that makes it possible to consume the service from ASP.NET AJAX web pages.</span></span>  

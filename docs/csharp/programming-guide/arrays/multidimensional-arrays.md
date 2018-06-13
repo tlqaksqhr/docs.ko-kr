@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33313851"
 ---
 # <a name="multidimensional-arrays-c-programming-guide"></a><span data-ttu-id="4c861-102">다차원 배열(C# 프로그래밍 가이드)</span><span class="sxs-lookup"><span data-stu-id="4c861-102">Multidimensional Arrays (C# Programming Guide)</span></span>
 <span data-ttu-id="4c861-103">배열에 둘 이상의 차원이 있을 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="4c861-103">Arrays can have more than one dimension.</span></span> <span data-ttu-id="4c861-104">예를 들어 다음 선언은 행 4개, 열 2개의 2차원 배열을 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="4c861-104">For example, the following declaration creates a two-dimensional array of four rows and two columns.</span></span>  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33320146"
 ---
 # <a name="how-to-parse-a-string-c"></a><span data-ttu-id="f4859-102">방법: 문자열 구문 분석(C#)</span><span class="sxs-lookup"><span data-stu-id="f4859-102">How to: Parse a String (C#)</span></span>
 <span data-ttu-id="f4859-103">이 항목에서는 C#에서 문자열의 구문을 분석하여 XML 트리를 만드는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="f4859-103">This topic shows how to parse a string to create an XML tree in C#.</span></span>  

@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33313503"
 ---
 # <a name="arrays-c-programming-guide"></a><span data-ttu-id="99cc1-102">배열(C# 프로그래밍 가이드)</span><span class="sxs-lookup"><span data-stu-id="99cc1-102">Arrays (C# Programming Guide)</span></span>
 <span data-ttu-id="99cc1-103">배열 데이터 구조에 형식이 동일한 변수를 여러 개 저장할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="99cc1-103">You can store multiple variables of the same type in an array data structure.</span></span> <span data-ttu-id="99cc1-104">요소의 형식을 지정하여 배열을 선언합니다.</span><span class="sxs-lookup"><span data-stu-id="99cc1-104">You declare an array by specifying the type of its elements.</span></span>  

@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33313955"
 ---
 # <a name="single-dimensional-arrays-c-programming-guide"></a><span data-ttu-id="cc175-102">1차원 배열(C# 프로그래밍 가이드)</span><span class="sxs-lookup"><span data-stu-id="cc175-102">Single-Dimensional Arrays (C# Programming Guide)</span></span>
 <span data-ttu-id="cc175-103">다음 예제와 같이 5개 정수의 1차원 배열을 선언할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="cc175-103">You can declare a single-dimensional array of five integers as shown in the following example:</span></span>  

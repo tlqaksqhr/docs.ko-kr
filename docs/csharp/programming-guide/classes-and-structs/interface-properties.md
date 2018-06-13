@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33325411"
 ---
 # <a name="interface-properties-c-programming-guide"></a><span data-ttu-id="e5e87-102">인터페이스 속성(C# 프로그래밍 가이드)</span><span class="sxs-lookup"><span data-stu-id="e5e87-102">Interface Properties (C# Programming Guide)</span></span>
 <span data-ttu-id="e5e87-103">[interface](../../../csharp/language-reference/keywords/interface.md)에 속성을 선언할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="e5e87-103">Properties can be declared on an [interface](../../../csharp/language-reference/keywords/interface.md).</span></span> <span data-ttu-id="e5e87-104">다음은 인터페이스 인덱서 접근자의 예입니다.</span><span class="sxs-lookup"><span data-stu-id="e5e87-104">The following is an example of an interface indexer accessor:</span></span>  

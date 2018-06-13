@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32751443"
 ---
 # <a name="ltreliablesessiongt"></a><span data-ttu-id="4f103-102">&lt;reliableSession&gt;</span><span class="sxs-lookup"><span data-stu-id="4f103-102">&lt;reliableSession&gt;</span></span>
 <span data-ttu-id="4f103-103">WS-Reliable Messaging 설정을 정의합니다.</span><span class="sxs-lookup"><span data-stu-id="4f103-103">Defines setting for WS-Reliable Messaging.</span></span> <span data-ttu-id="4f103-104">이 요소가 사용자 지정 바인딩에 추가되면 그 결과로 만들어지는 채널에서 EOD(Exactly-Once Delivery) 보증을 지원할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="4f103-104">When this element is added to a custom binding, the resulting channel can support exactly-once delivery assurances.</span></span>  

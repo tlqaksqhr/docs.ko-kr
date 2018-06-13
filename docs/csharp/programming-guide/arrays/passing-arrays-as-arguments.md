@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33315518"
 ---
 # <a name="passing-arrays-as-arguments-c-programming-guide"></a><span data-ttu-id="6635a-102">배열을 인수로 전달(C# 프로그래밍 가이드)</span><span class="sxs-lookup"><span data-stu-id="6635a-102">Passing Arrays as Arguments (C# Programming Guide)</span></span>
 <span data-ttu-id="6635a-103">배열을 메서드 매개 변수에 인수로 전달할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="6635a-103">Arrays can be passed as arguments to method parameters.</span></span> <span data-ttu-id="6635a-104">배열은 참조 형식이므로 메서드를 통해 요소 값을 변경할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="6635a-104">Because arrays are reference types, the method can change the value of the elements.</span></span>  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33324813"
 ---
 # <a name="how-to-write-queries-with-complex-filtering-c"></a><span data-ttu-id="97f93-102">방법: 복합 필터링으로 쿼리 작성(C#)</span><span class="sxs-lookup"><span data-stu-id="97f93-102">How to: Write Queries with Complex Filtering (C#)</span></span>
 <span data-ttu-id="97f93-103">복잡한 필터를 사용하여 LINQ to XML 쿼리를 작성하려는 경우가 있습니다.</span><span class="sxs-lookup"><span data-stu-id="97f93-103">Sometimes you want to write LINQ to XML queries with complex filters.</span></span> <span data-ttu-id="97f93-104">예를 들어, 특정 이름과 값을 가진 자식 요소가 있는 모든 요소를 찾으려고 할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="97f93-104">For example, you might have to find all elements that have a child element with a particular name and value.</span></span> <span data-ttu-id="97f93-105">이 항목에서는 복잡한 필터링을 사용하여 쿼리를 작성하는 예제를 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="97f93-105">This topic gives an example of writing a query with complex filtering.</span></span>  

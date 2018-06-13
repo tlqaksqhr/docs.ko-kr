@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33322277"
 ---
 # <a name="example-com-class-c-programming-guide"></a><span data-ttu-id="e6f50-102">COM 클래스 예제(C# 프로그래밍 가이드)</span><span class="sxs-lookup"><span data-stu-id="e6f50-102">Example COM Class (C# Programming Guide)</span></span>
 <span data-ttu-id="e6f50-103">다음은 COM 개체로 노출되는 클래스의 예제입니다.</span><span class="sxs-lookup"><span data-stu-id="e6f50-103">The following is an example of a class that you would expose as a COM object.</span></span> <span data-ttu-id="e6f50-104">이 코드를 .cs 파일에 배치하고 프로젝트에 추가한 후 **COM Interop 등록** 속성을 **True**로 설정합니다.</span><span class="sxs-lookup"><span data-stu-id="e6f50-104">After this code has been placed in a .cs file and added to your project, set the **Register for COM Interop** property to **True**.</span></span> <span data-ttu-id="e6f50-105">자세한 내용은 [NIB: 방법: 구성 요소 COM Interop 등록](http://msdn.microsoft.com/library/4de7d474-56e8-4027-994d-d47ca4725c5e)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="e6f50-105">For more information, see [NIB: How to: Register a Component for COM Interop](http://msdn.microsoft.com/library/4de7d474-56e8-4027-994d-d47ca4725c5e).</span></span>  

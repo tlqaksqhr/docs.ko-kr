@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33326721"
 ---
 # <a name="details-of-office-open-xml-wordprocessingml-documents-c"></a><span data-ttu-id="efde4-102">Office Open XML WordprocessingML 문서 정보(C#)</span><span class="sxs-lookup"><span data-stu-id="efde4-102">Details of Office Open XML WordprocessingML Documents (C#)</span></span>
 <span data-ttu-id="efde4-103">이 단원에서는 Office Open XML WordprocessingML 문서에 대한 상세한 정보를 제공하고</span><span class="sxs-lookup"><span data-stu-id="efde4-103">This section provides information about the details of Office Open XML WordprocessingML documents.</span></span> <span data-ttu-id="efde4-104">Open XML 문서의 문서 부분과 스타일 부분에 대한 예제를 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="efde4-104">It shows examples of the document and style parts of an Open XML document.</span></span>  

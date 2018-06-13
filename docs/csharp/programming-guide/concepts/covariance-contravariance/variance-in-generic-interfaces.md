@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33326760"
 ---
 # <a name="variance-in-generic-interfaces-c"></a><span data-ttu-id="ab418-102">제네릭 인터페이스의 가변성(C#)</span><span class="sxs-lookup"><span data-stu-id="ab418-102">Variance in Generic Interfaces (C#)</span></span>
 <span data-ttu-id="ab418-103">.NET Framework 4에서는 기존의 몇몇 제네릭 인터페이스에 대한 가변성 지원이 추가되었습니다.</span><span class="sxs-lookup"><span data-stu-id="ab418-103">.NET Framework 4 introduced variance support for several existing generic interfaces.</span></span> <span data-ttu-id="ab418-104">가변성 지원은 이러한 인터페이스를 구현하는 클래스의 암시적 변환을 가능하게 합니다.</span><span class="sxs-lookup"><span data-stu-id="ab418-104">Variance support enables implicit conversion of classes that implement these interfaces.</span></span> <span data-ttu-id="ab418-105">다음 인터페이스는 현재 variant입니다.</span><span class="sxs-lookup"><span data-stu-id="ab418-105">The following interfaces are now variant:</span></span>  

@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33324287"
 ---
 # <a name="how-to-increment-and-decrement-pointers-c-programming-guide"></a><span data-ttu-id="db227-102">방법: 포인터 증가 및 감소(C# 프로그래밍 가이드)</span><span class="sxs-lookup"><span data-stu-id="db227-102">How to: Increment and Decrement Pointers (C# Programming Guide)</span></span>
 <span data-ttu-id="db227-103">증가 및 감소 연산자인 `++` 및 `--`를 사용하여 pointer-type\* 형식의 포인터에 대한 포인터 위치를 [sizeof](../../../csharp/language-reference/keywords/sizeof.md)(`pointer-type`)만큼 변경할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="db227-103">Use the increment and the decrement operators, `++` and `--`, to change the pointer location by [sizeof](../../../csharp/language-reference/keywords/sizeof.md) (`pointer-type`) for a pointer of type pointer-type\*.</span></span> <span data-ttu-id="db227-104">증가 및 감소 식은 다음 형식을 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="db227-104">The increment and decrement expressions take the following form:</span></span>  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33324420"
 ---
 # <a name="xattribute-class-overview-c"></a><span data-ttu-id="35bc7-102">XAttribute 클래스 개요(C#)</span><span class="sxs-lookup"><span data-stu-id="35bc7-102">XAttribute Class Overview (C#)</span></span>
 <span data-ttu-id="35bc7-103">특성은 요소와 연결된 이름/값 쌍입니다.</span><span class="sxs-lookup"><span data-stu-id="35bc7-103">Attributes are name/value pairs that are associated with an element.</span></span> <span data-ttu-id="35bc7-104"><xref:System.Xml.Linq.XAttribute> 클래스는 XML 특성을 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="35bc7-104">The <xref:System.Xml.Linq.XAttribute> class represents XML attributes.</span></span>  

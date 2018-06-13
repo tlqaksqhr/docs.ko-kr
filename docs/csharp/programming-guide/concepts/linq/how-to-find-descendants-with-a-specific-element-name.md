@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33320234"
 ---
 # <a name="how-to-find-descendants-with-a-specific-element-name-c"></a><span data-ttu-id="5a1c1-102">방법: 특정 요소 이름으로 하위 항목 찾기(C#)</span><span class="sxs-lookup"><span data-stu-id="5a1c1-102">How to: Find Descendants with a Specific Element Name (C#)</span></span>
 <span data-ttu-id="5a1c1-103">특정 이름을 가진 모든 하위 요소를 찾으려는 경우가 있습니다.</span><span class="sxs-lookup"><span data-stu-id="5a1c1-103">Sometimes you want to find all descendants with a particular name.</span></span> <span data-ttu-id="5a1c1-104">모든 하위 요소를 반복하는 코드를 작성할 수 있지만 <xref:System.Xml.Linq.XContainer.Descendants%2A> 축을 사용하는 것이 더 쉽습니다.</span><span class="sxs-lookup"><span data-stu-id="5a1c1-104">You could write code to iterate through all of the descendants, but it is easier to use the <xref:System.Xml.Linq.XContainer.Descendants%2A> axis.</span></span>  

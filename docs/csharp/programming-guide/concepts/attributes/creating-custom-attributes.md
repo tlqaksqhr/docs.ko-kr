@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33315882"
 ---
 # <a name="creating-custom-attributes-c"></a><span data-ttu-id="b8cba-102">사용자 지정 특성 만들기(C#)</span><span class="sxs-lookup"><span data-stu-id="b8cba-102">Creating Custom Attributes (C#)</span></span>
 <span data-ttu-id="b8cba-103">메타데이터에서 특성 정의를 빠르고 쉽게 식별할 수 있도록 하는 <xref:System.Attribute>에서 직접 또는 간접적으로 파생되는 특성 클래스를 정의하여 자체 사용자 지정 특성을 만들 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="b8cba-103">You can create your own custom attributes by defining an attribute class, a class that derives directly or indirectly from <xref:System.Attribute>, which makes identifying attribute definitions in metadata fast and easy.</span></span> <span data-ttu-id="b8cba-104">형식을 작성한 프로그래머의 이름을 형식에 태그로 지정한다고 가정합니다.</span><span class="sxs-lookup"><span data-stu-id="b8cba-104">Suppose you want to tag types with the name of the programmer who wrote the type.</span></span> <span data-ttu-id="b8cba-105">사용자 지정 `Author` 특성 클래스를 정의할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="b8cba-105">You might define a custom `Author` attribute class:</span></span>  

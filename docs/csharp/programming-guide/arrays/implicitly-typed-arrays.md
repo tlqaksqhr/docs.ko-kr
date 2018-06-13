@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33315206"
 ---
 # <a name="implicitly-typed-arrays-c-programming-guide"></a><span data-ttu-id="4c0f4-102">암시적으로 형식화된 배열(C# 프로그래밍 가이드)</span><span class="sxs-lookup"><span data-stu-id="4c0f4-102">Implicitly Typed Arrays (C# Programming Guide)</span></span>
 <span data-ttu-id="4c0f4-103">배열 인스턴스의 형식이 배열 이니셜라이저에 지정된 요소에서 유추되는 암시적으로 형식화된 배열을 만들 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="4c0f4-103">You can create an implicitly-typed array in which the type of the array instance is inferred from the elements specified in the array initializer.</span></span> <span data-ttu-id="4c0f4-104">암시적으로 형식화된 변수에 대한 규칙은 암시적으로 형식화된 배열에도 적용됩니다.</span><span class="sxs-lookup"><span data-stu-id="4c0f4-104">The rules for any implicitly-typed variable also apply to implicitly-typed arrays.</span></span> <span data-ttu-id="4c0f4-105">자세한 내용은 [암시적으로 형식화된 지역 변수](../../../csharp/programming-guide/classes-and-structs/implicitly-typed-local-variables.md)를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="4c0f4-105">For more information, see [Implicitly Typed Local Variables](../../../csharp/programming-guide/classes-and-structs/implicitly-typed-local-variables.md).</span></span>  

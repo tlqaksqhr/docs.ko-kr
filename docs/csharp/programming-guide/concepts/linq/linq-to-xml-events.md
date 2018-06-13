@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33322395"
 ---
 # <a name="linq-to-xml-events-c"></a><span data-ttu-id="90fec-102">LINQ to XML 이벤트(C#)</span><span class="sxs-lookup"><span data-stu-id="90fec-102">LINQ to XML Events (C#)</span></span>
 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]<span data-ttu-id="90fec-103"> 이벤트를 통해 XML 트리가 변경될 때 알림을 받을 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="90fec-103"> events enable you to be notified when an XML tree is altered.</span></span>  

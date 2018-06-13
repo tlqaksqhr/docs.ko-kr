@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33332224"
 ---
 # <a name="wordprocessingml-document-with-styles"></a><span data-ttu-id="4eddc-102">스타일이 사용된 WordprocessingML 문서</span><span class="sxs-lookup"><span data-stu-id="4eddc-102">WordprocessingML Document with Styles</span></span>
 <span data-ttu-id="4eddc-103">더 복잡한 WordprocessingML 문서에는 스타일로 서식이 지정된 단락이 있습니다.</span><span class="sxs-lookup"><span data-stu-id="4eddc-103">More complicated WordprocessingML documents have paragraphs that are formatted with styles.</span></span>  

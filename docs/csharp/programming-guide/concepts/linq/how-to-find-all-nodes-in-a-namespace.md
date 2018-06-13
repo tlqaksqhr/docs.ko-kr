@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33317780"
 ---
 # <a name="how-to-find-all-nodes-in-a-namespace-c"></a><span data-ttu-id="fb557-102">방법: 네임스페이스에서 모든 노드 찾기(C#)</span><span class="sxs-lookup"><span data-stu-id="fb557-102">How to: Find All Nodes in a Namespace (C#)</span></span>
 <span data-ttu-id="fb557-103">해당 특정 네임스페이스에서 모든 노드를 찾기 위해 각 요소나 특성의 네임스페이스를 기준으로 필터링할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="fb557-103">You can filter on the namespace of each element or attribute to find all nodes in that particular namespace.</span></span>  

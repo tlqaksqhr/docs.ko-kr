@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33319552"
 ---
 # <a name="aggregation-operations-c"></a><span data-ttu-id="3bfe1-102">집계 작업(C#)</span><span class="sxs-lookup"><span data-stu-id="3bfe1-102">Aggregation Operations (C#)</span></span>
 <span data-ttu-id="3bfe1-103">집계 작업에서는 값의 컬렉션에서 하나의 값을 계산합니다.</span><span class="sxs-lookup"><span data-stu-id="3bfe1-103">An aggregation operation computes a single value from a collection of values.</span></span> <span data-ttu-id="3bfe1-104">예를 들어 1달 동안의 일일 온도 값에서 평균 일일 온도를 계산하는 것이 집계 작업입니다.</span><span class="sxs-lookup"><span data-stu-id="3bfe1-104">An example of an aggregation operation is calculating the average daily temperature from a month's worth of daily temperature values.</span></span>  

@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33321849"
 ---
 # <a name="anonymous-functions-c-programming-guide"></a><span data-ttu-id="e3c71-102">익명 함수(C# 프로그래밍 가이드)</span><span class="sxs-lookup"><span data-stu-id="e3c71-102">Anonymous Functions (C# Programming Guide)</span></span>
 <span data-ttu-id="e3c71-103">익명 함수는 대리자 형식이 예상되는 곳에서 항상 사용할 수 있는 “인라인” 문 또는 식입니다.</span><span class="sxs-lookup"><span data-stu-id="e3c71-103">An anonymous function is an "inline" statement or expression that can be used wherever a delegate type is expected.</span></span> <span data-ttu-id="e3c71-104">이를 사용하여 명명된 대리자를 초기화하거나 명명된 대리자 형식 대신 이를 메서드 매개 변수로 전달할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="e3c71-104">You can use it to initialize a named delegate or pass it instead of a named delegate type as a method parameter.</span></span>  

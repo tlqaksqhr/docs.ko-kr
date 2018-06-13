@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33323383"
 ---
 # <a name="concatenation-operations-c"></a><span data-ttu-id="06923-102">연결 작업(C#)</span><span class="sxs-lookup"><span data-stu-id="06923-102">Concatenation Operations (C#)</span></span>
 <span data-ttu-id="06923-103">연결은 한 시퀀스를 다른 시퀀스에 추가하는 작업을 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="06923-103">Concatenation refers to the operation of appending one sequence to another.</span></span>  

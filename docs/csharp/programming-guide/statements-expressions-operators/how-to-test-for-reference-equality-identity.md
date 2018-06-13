@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33322343"
 ---
 # <a name="how-to-test-for-reference-equality-identity-c-programming-guide"></a><span data-ttu-id="254f9-102">방법: 참조 일치(같음) 테스트(C# 프로그래밍 가이드)</span><span class="sxs-lookup"><span data-stu-id="254f9-102">How to: Test for Reference Equality (Identity) (C# Programming Guide)</span></span>
 <span data-ttu-id="254f9-103">형식에서 참조 같음 비교를 지원하기 위해 사용자 지정 논리를 구현할 필요는 없습니다.</span><span class="sxs-lookup"><span data-stu-id="254f9-103">You do not have to implement any custom logic to support reference equality comparisons in your types.</span></span> <span data-ttu-id="254f9-104">이 기능은 정적 <xref:System.Object.ReferenceEquals%2A?displayProperty=nameWithType> 메서드가 모든 형식에 대해 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="254f9-104">This functionality is provided for all types by the static <xref:System.Object.ReferenceEquals%2A?displayProperty=nameWithType> method.</span></span>  
