@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33644398"
 ---
 # <a name="introduction-to-com-interop-visual-basic"></a>COM Interop 소개(Visual Basic)
 구성 요소 개체 모델 (COM)에 다른 구성 요소를 응용 프로그램을 호스트 하는 기능을 노출 하는 개체 수 있습니다. COM 개체, 기본 windows 수 년에 대 한 프로그래밍 된 하는 동안 공용 언어 런타임 (CLR)에 대 한 설계 된 응용 프로그램에는 다양 한 이점을 제공 합니다.  

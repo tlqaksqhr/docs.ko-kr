@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33560226"
 ---
 # <a name="how-to-interactively-control-a-clock"></a>방법: 대화형으로 Clock 제어
 A <xref:System.Windows.Media.Animation.Clock> 개체의 <xref:System.Windows.Media.Animation.ClockController> 속성을 사용 하면 대화형으로 시작, 일시 중지, 다시 시작, 검색, 시계를 해당 전체 기간 이동 및 시계를 중지 합니다. 시간 트리의 루트 클록만을 대화형으로 제어할 수 있습니다.  

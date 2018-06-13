@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33656060"
 ---
 # <a name="object-variable-assignment-visual-basic"></a>개체 변수 할당(Visual Basic)
 일반적인 대입문을 사용 하 여 개체 변수에 개체를 할당 합니다. 개체 식을 할당할 수 있습니다 또는 [Nothing](../../../../visual-basic/language-reference/nothing.md) 키워드를 다음 예제와 같이 보여 줍니다.  

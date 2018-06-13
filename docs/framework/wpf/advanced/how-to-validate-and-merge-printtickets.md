@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33548495"
 ---
 # <a name="how-to-validate-and-merge-printtickets"></a>방법: PrintTicket 유효성 검사 및 병합
 [!INCLUDE[TLA#tla_win](../../../../includes/tlasharptla-win-md.md)] [Schema](http://go.microsoft.com/fwlink/?LinkId=186397) 유연성이 있고 확장 가능 포함 <xref:System.Printing.PrintCapabilities> 및 <xref:System.Printing.PrintTicket> 요소입니다. 인쇄 장치의 기능을 전자 항목별로 정리 하 고 후자 지정이 장치가 문서, 개별 문서 또는 개별 페이지의 특정 시퀀스에 대해 이러한 기능을 어떻게 사용 해야 합니다.  

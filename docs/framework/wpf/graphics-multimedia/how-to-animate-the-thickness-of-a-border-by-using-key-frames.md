@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33560804"
 ---
 # <a name="how-to-animate-the-thickness-of-a-border-by-using-key-frames"></a>방법: 키 프레임을 사용하여 테두리 두께에 애니메이션 효과 주기
 애니메이션 효과 적용 하는 방법을 보여 주는이 예제는 <xref:System.Windows.Controls.Control.BorderThickness%2A> 속성은 <xref:System.Windows.Controls.Border>합니다.  

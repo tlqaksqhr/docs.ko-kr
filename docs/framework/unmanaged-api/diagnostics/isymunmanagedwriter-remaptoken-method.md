@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: f37630c9631e2e76d9b98730b84086b8b86ec55d
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33427836"
 ---
 # <a name="isymunmanagedwriterremaptoken-method"></a>ISymUnmanagedWriter::RemapToken 메서드
 메타 데이터를 내보낼 처럼 메타 데이터 토큰을 다시 매핑할 된 기호 작성기에 알립니다. 기호 작성기가 이전 토큰 기호 저장소를 저장, 업데이트를 하거나 새 값으로 저장 된 토큰 읽기 단계 중에 다시 매핑하려면 해당 기호 판독기에 대 한 맵을 저장 해야 합니다.  

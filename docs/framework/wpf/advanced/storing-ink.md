@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33546099"
 ---
 # <a name="storing-ink"></a>잉크 저장
 <xref:System.Windows.Ink.StrokeCollection.Save%2A> 메서드 잉크도 잉크 직렬화 형식 ISF ()를 저장 하기 위한 지원을 제공 합니다. 에 대 한 생성자는 <xref:System.Windows.Ink.StrokeCollection> 클래스 잉크 데이터를 읽기 위한 지원을 제공 합니다.  

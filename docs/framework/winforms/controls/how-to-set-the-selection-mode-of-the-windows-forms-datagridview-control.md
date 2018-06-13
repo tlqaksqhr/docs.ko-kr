@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33533558"
 ---
 # <a name="how-to-set-the-selection-mode-of-the-windows-forms-datagridview-control"></a>방법: Windows Forms DataGridView 컨트롤의 선택 모드 설정
 다음 코드 예제에서는 구성 하는 방법을 보여 줍니다.는 <xref:System.Windows.Forms.DataGridView> 컨트롤 자동으로 행 내에서 아무 곳 이나 클릭 하 여 전체 행을 선택한 한 번에 해당 행을 하나만 선택할 수 있습니다.  

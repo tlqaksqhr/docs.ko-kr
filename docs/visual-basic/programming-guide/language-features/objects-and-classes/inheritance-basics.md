@@ -25,6 +25,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33655191"
 ---
 # <a name="inheritance-basics-visual-basic"></a>상속 기본 사항(Visual Basic)
 `Inherits` 문을 사용 하 라는 새 클래스를 선언 하는 *파생 클래스*라고 하는 기존 클래스에 따라 한 *기본 클래스*합니다. 파생된 클래스는 상속 하 고 속성, 메서드, 이벤트, 필드 및 기본 클래스에 정의 된 상수 확장할 수 있습니다. 다음 섹션에서는 일부의 상속에 대 한 규칙 한 방식으로 클래스를 변경 하는 데 한정자 상속 나 상속 합니다.  

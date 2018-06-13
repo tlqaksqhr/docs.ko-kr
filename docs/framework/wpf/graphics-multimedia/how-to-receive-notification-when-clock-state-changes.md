@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33561175"
 ---
 # <a name="how-to-receive-notification-when-a-clock39s-state-changes"></a>방법: 클록 때 알림을 받을&#39;s 상태 변경
 클록의 <xref:System.Windows.Media.Animation.Clock.CurrentStateInvalidated> 이벤트가 발생할 때 해당 <xref:System.Windows.Media.Animation.Clock.CurrentState%2A> 클록 시작 되거나 중지 될 때와 같은 유효 하지 않게 합니다. 사용 하 여 직접이 이벤트에 등록할 수는 <xref:System.Windows.Media.Animation.Clock>, 하거나 사용 하 여 등록할 수 있습니다는 <xref:System.Windows.Media.Animation.Timeline>합니다.  

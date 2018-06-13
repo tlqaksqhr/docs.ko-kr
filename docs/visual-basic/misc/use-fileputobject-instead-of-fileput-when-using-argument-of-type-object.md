@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33641130"
 ---
 # <a name="use-39fileputobject39-instead-of-39fileput39-when-using-argument-of-type-39object39"></a>사용 하 여 &#39;FilePutObject&#39; 대신 &#39;FilePut&#39; 형식의 인수를 사용 하는 경우 &#39;개체&#39;
 `FilePut` 형식의 인수를 포함 하는 메서드 `Object`합니다. 모호성을 피하기 위해`FilePutObject` 대신 `FilePut` 를 사용해야 합니다.  

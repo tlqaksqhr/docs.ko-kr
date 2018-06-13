@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33546317"
 ---
 # <a name="typography-how-to-topics"></a>입력 체계 방법 항목
 이 섹션의 항목을 사용 하는 방법을 설명 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 풍부한 응용 프로그램에서 텍스트 표시를 지원 합니다.  

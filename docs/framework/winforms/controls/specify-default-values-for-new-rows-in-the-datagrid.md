@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33535235"
 ---
 # <a name="how-to-specify-default-values-for-new-rows-in-the-windows-forms-datagridview-control"></a>방법: Windows Forms DataGridView 컨트롤에서 새 행에 기본값 지정
 응용 프로그램 작성 기본 새로 추가 된 행에 대 한 값 경우 데이터 입력을 보다 편리 하 게 만들 수 있습니다. 와 <xref:System.Windows.Forms.DataGridView> 클래스를 채울 수 있습니다 기본 값과는 <xref:System.Windows.Forms.DataGridView.DefaultValuesNeeded> 이벤트입니다. 이 이벤트는 사용자가 새 레코드에 대 한 행을 입력할 때 발생 합니다. 코드에서이 이벤트를 처리 하는 경우에 선택한 값이 포함 된 원하는 셀을 채울 수 있습니다.  

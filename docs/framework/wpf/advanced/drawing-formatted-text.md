@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33548768"
 ---
 # <a name="drawing-formatted-text"></a>서식 있는 텍스트 그리기
 이 항목에서는의 기능에 대 한 개요는 <xref:System.Windows.Media.FormattedText> 개체입니다. 이 개체는 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 응용 프로그램에서 텍스트를 그리기 위한 하위 수준의 컨트롤을 제공합니다.  

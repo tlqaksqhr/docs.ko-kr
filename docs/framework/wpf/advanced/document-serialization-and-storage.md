@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33546685"
 ---
 # <a name="document-serialization-and-storage"></a>문서 serialization 및 저장소
 Microsoft.NET Framework를 만들고 고품질 문서를 표시 하기 위한 강력한 환경을 제공 합니다.  강력한 2d 고정 문서 및 고급 흐름-문서를 모두 지 원하는 향상 된 기능 보기 컨트롤, 결합 및 3D 그래픽 기능과.NET Framework 응용 프로그램의 품질 및 사용자 환경 새로운 수준으로 합니다.  문서의 메모리 내 표현을 유연 하 게 관리할 수.NET Framework의 핵심 기능은 이며을 효율적으로 저장 하 고 데이터 저장소에서 문서를 로드할 수 있으면이 필요 하다는 거의 모든 응용 프로그램.  내부 메모리 내 표현에서 외부 데이터 저장소로 문서를 변환하는 프로세스를 serialization이라고 합니다.  데이터 저장소를 읽고 원래 메모리 내 인스턴스를 다시 만드는 역프로세스는 deserialization이라고 합니다.  

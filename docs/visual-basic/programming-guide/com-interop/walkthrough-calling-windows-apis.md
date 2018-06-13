@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33644357"
 ---
 # <a name="walkthrough-calling-windows-apis-visual-basic"></a>연습: Windows API 호출(Visual Basic)
 Windows Api는 Windows 운영 체제의 일부인 동적 연결 라이브러리 (Dll)입니다. 사용 하면 수 자신만의 프로시저 작성 하기 어려울 때는 작업을 수행 합니다. Windows 라는 함수를 제공 하는 예를 들어 `FlashWindowEx` 수 있게 해 주는 밝은 영역과 어두운 음영을 교대로 응용 프로그램에 대 한 제목 표시줄을 확인 합니다.  

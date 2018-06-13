@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33656284"
 ---
 # <a name="object-variable-declaration-visual-basic"></a>개체 변수 선언(Visual Basic)
 일반 선언문을 사용 하 여 개체 변수를 선언 합니다. 데이터 형식에 대 한 지정 하면 `Object` (즉,는 [Object 데이터 형식](../../../../visual-basic/language-reference/data-types/object-data-type.md)) 또는 보다 구체적인 클래스를 만들 개체입니다.  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33642066"
 ---
 # <a name="the-folder-cannot-be-created-since-a-file-already-exists-with-the-same-path"></a>동일한 경로에 파일이 이미 있으므로 폴더를 만들 수 없습니다.
 해당 경로에 파일이 이미 있는데 디렉터리를 만들려고 했습니다. 특히 상대 경로를 사용할 때 경로가 잘못 구문 분석된 것 같습니다.  

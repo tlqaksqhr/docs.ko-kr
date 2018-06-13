@@ -18,9 +18,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 6305338a95d7710a5feda2dc4c89e5a92262514c
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33428715"
 ---
 # <a name="isymunmanagedscope-interface"></a>ISymUnmanagedScope 인터페이스
 메서드에 들어 있는 어휘 범위를 나타냅니다.  

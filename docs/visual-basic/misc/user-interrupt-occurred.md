@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33640349"
 ---
 # <a name="user-interrupt-occurred"></a>사용자가 중단했습니다.
 사용자는 Ctrl+Break 또는 다른 인터럽트 키를 눌렀습니다.  

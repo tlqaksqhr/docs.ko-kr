@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33656021"
 ---
 # <a name="nullable-value-types-visual-basic"></a>Nullable 값 형식(Visual Basic)
 경우에 따라 상황에 따라 정의 된 값이 없는 값 형식과 함께 사용할 수도 있습니다. 예를 들어 한 데이터베이스의 필드에에서 의미 있는 있는 할당 된 값이 있는 할당된 된 값 고 다니지 않아도 구분 해야 합니다. 값 형식 매개 변수 정상 값 또는 null 값을 확장할 수 있습니다. 이러한 확장 라고는 *nullable 형식*합니다.  

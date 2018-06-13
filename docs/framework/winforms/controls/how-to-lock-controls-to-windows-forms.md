@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33534747"
 ---
 # <a name="how-to-lock-controls-to-windows-forms"></a>방법: Windows Forms에 컨트롤 고정
 Windows 응용 프로그램의 사용자 인터페이스 (UI)를 디자인할 때 않습니다 잘못 이동 하거나 다른 속성을 설정 하는 경우 크기를 조정할 수 있도록 올바르게 배치 되 면 컨트롤을 잠글 수 있습니다.  

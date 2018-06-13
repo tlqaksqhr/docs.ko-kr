@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33641016"
 ---
 # <a name="you-must-specify-a-file-name"></a>파일 이름을 지정해야 합니다.
 파일 이름을 제공해야 하는 파일 이동 또는 복사와 같은 작업을 시도했습니다.  

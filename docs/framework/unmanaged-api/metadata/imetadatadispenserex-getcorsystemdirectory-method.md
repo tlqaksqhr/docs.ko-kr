@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: cf580f6d3fb18e729f3eca300aa817036eb61e4f
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33443432"
 ---
 # <a name="imetadatadispenserexgetcorsystemdirectory-method"></a>IMetaDataDispenserEx::GetCORSystemDirectory 메서드
 현재 공용 언어 런타임 (CLR) 저장 하는 디렉터리를 가져옵니다. 이 메서드는 작업 중이 아닌 디버거에서 사용에 대해서만 지원 됩니다. 다른 구성 요소에서 메서드를 호출 하면 E_NOTIMPL이 반환 됩니다.  

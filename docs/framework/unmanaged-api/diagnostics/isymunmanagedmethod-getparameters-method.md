@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 2fbedb7b1c10dcc2b9b9940db10aae7e4101436b
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33426213"
 ---
 # <a name="isymunmanagedmethodgetparameters-method"></a>ISymUnmanagedMethod::GetParameters 메서드
 이 메서드에 대 한 매개 변수를 가져옵니다. 매개 변수는 메서드의 서명 내에서 정의 된 순서 대로 반환 됩니다.  
