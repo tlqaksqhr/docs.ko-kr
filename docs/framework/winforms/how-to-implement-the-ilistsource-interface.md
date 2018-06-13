@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33539418"
 ---
 # <a name="how-to-implement-the-ilistsource-interface"></a>방법: IListSource 인터페이스 구현
 구현 된 <xref:System.ComponentModel.IListSource> 인터페이스를 구현 하지 않는 바인딩 가능한 클래스를 만드는 <xref:System.Collections.IList> 않지만 다른 위치에서 목록을 제공 합니다.  

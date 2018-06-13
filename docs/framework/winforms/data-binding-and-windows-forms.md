@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33541663"
 ---
 # <a name="data-binding-and-windows-forms"></a>데이터 바인딩 및 Windows Forms
 Windows Forms에서는 기존의 데이터 소스뿐 아니라 데이터를 포함하는 거의 모든 구조에 바인딩할 수 있습니다. 런타임에 계산하거나 파일에서 읽거나 다른 컨트롤의 값에서 파생하는 값 배열에 바인딩할 수 있습니다.  

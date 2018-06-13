@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33526239"
 ---
 # <a name="considerations-when-hosting-an-activex-control-on-a-windows-form"></a>Windows Form에서 ActiveX 컨트롤을 호스팅할 때의 고려 사항
 Windows Forms는 Windows Forms 컨트롤을 호스팅하도록 최적화되어 있지만 ActiveX 컨트롤을 사용할 수도 있습니다. ActiveX 컨트롤을 사용하는 응용 프로그램을 계획할 때 다음 사항을 고려하세요.  
