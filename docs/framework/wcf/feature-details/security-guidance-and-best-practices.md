@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33497505"
 ---
 # <a name="security-guidance-and-best-practices"></a>보안 지침 및 최선의 방법
 이 섹션의 항목에 대 한 지침 및 보안 Windows Communication Foundation (WCF) 응용 프로그램을 만들 때 고려해 야 할 항목을 표시 합니다. Windows Server AppFabric 및 보안 참조에 대 한 자세한 내용은 [보안 모델에 대 한 Windows Server App Fabric](http://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)  

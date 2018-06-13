@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33496049"
 ---
 # <a name="how-the-wcf-syndication-object-model-maps-to-atom-and-rss"></a>WCF 배포 개체 모델을 Atom 및 RSS로 매핑하는 방법
 Windows Communication Foundation (WCF) 배포 서비스를 개발할 때 피드 및 다음 클래스를 사용 하 여 항목을 만듭니다.  

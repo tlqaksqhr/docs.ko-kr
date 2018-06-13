@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33496853"
 ---
 # <a name="how-to-specify-channel-security-credentials"></a>방법: 채널 보안 자격 증명 지정
 Windows Communication Foundation (WCF) 서비스 모니커 COM 응용 프로그램을을 WCF 서비스를 호출할 수 있습니다. 대부분의 WCF 서비스에 클라이언트 인증 및 권한 부여에 대 한 자격 증명을 지정할 필요 합니다. WCF 클라이언트에서 WCF 서비스를 호출할 때 응용 프로그램 구성 파일에서 또는 관리 코드에서 이러한 자격 증명을 지정할 수 있습니다. COM 응용 프로그램에서 WCF 서비스를 호출할 때 사용할 수 있습니다는 <xref:System.ServiceModel.ComIntegration.IChannelCredentials> 인터페이스 자격 증명을 지정 합니다. 이 항목에서는 <xref:System.ServiceModel.ComIntegration.IChannelCredentials> 인터페이스를 사용하여 자격 증명을 지정하는 다양한 방식을 설명합니다.  
