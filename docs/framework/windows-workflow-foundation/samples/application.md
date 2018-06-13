@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33513853"
 ---
 # <a name="application"></a>응용 프로그램
 이 섹션에는 워크플로 응용 프로그램에서 Windows WF (Workflow Foundation)에 관련 된 샘플이 포함 되어 있습니다.  

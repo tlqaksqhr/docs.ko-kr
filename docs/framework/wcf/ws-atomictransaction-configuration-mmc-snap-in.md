@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33507901"
 ---
 # <a name="ws-atomictransaction-configuration-mmc-snap-in"></a>WS-AtomicTransaction 구성 MMC 스냅인
 WS-AtomicTransaction 구성 MMC 스냅인은 로컬 및 원격 시스템에서 WS-AtomicTransaction 설정의 일부분을 구성하는 데 사용됩니다.  

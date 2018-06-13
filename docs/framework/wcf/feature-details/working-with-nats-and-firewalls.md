@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33508105"
 ---
 # <a name="working-with-nats-and-firewalls"></a>NAT 및 방화벽 작업
 네트워크 연결의 클라이언트와 서버에 통신을 위한 직접 및 열린 경로가 없는 경우가 자주 발생합니다. 패킷은 네트워크의 중간 컴퓨터와 끝점 컴퓨터 모두에서 필터링, 라우트, 분석 및 변환됩니다. NAT(Network Address Translation) 및 방화벽은 네트워크 통신에 참여할 수 있는 일반적인 중간 응용 프로그램의 예입니다.  

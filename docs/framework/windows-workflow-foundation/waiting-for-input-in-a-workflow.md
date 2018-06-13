@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33513668"
 ---
 # <a name="waiting-for-input-in-a-workflow"></a>워크플로에서 입력 대기
 이 단원의 항목에서는 책갈피 및 메시징 활동을 사용하는 방법에 대해 설명합니다.  

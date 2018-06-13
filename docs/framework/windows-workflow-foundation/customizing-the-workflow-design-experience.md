@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33512959"
 ---
 # <a name="customizing-the-workflow-design-experience"></a>워크플로 디자인 환경 사용자 지정
 [!INCLUDE[wfd1](../../../includes/wfd1-md.md)]에서는 사용자 지정 활동을 디자인하고 [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)]를 다시 호스트하기 위한 시나리오가 크게 단순화되었습니다. 따라서 개발과 배포를 더 쉽고 유연하게 수행할 수 있습니다. 키 주요 변경 새로운 활동 디자이너 프로그래밍 모델이 시 Windows Presentation Foundation (WPF)를 작성은입니다. 따라서 다른 응용 프로그램에서 비교적 쉽게 활동 디자이너를 선언적으로 정의하고 [!INCLUDE[wfd2](../../../includes/wfd2-md.md)]를 다시 호스트할 수 있습니다. Workflow Designer를 다시 호스트하면 IntelliSense 또는 간소화된 식 도메인을 지원하는 사용자 지정 식 편집기를 개발할 수 있습니다. Windows Communication Foundation (WCF)와 통합 워크플로 서비스를 사용 하 여 더 자연스럽 게 합니다. 사용자 지정 활동 디자이너와 모델 항목 트리를 사용하여 다시 호스트된 워크플로 디자이너의 디자인 타임 환경을 향상시킬 수 있습니다.  

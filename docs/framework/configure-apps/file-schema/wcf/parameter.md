@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32754056"
 ---
 # <a name="ltparametergt"></a>&lt;parameter&gt;
 선언된 형식이 제네릭 형식이면 제네릭 매개 변수를 지정합니다.  

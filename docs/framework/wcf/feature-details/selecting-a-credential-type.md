@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33508477"
 ---
 # <a name="selecting-a-credential-type"></a>자격 증명 형식 선택
 *자격 증명* 요구 된 id 또는 기능을 설정 하기 위해 Windows Communication Foundation (WCF) 사용 하는 데이터입니다. 예를 들어 여권은 정부에서 국가나 지역의 시민권을 입증하기 위해 발급하는 자격 증명입니다. WCF, 자격 증명 사용자 이름 토큰 및 X.509 인증서 같은 다양 한 형태를 취할 수 있습니다. 이 항목에서는 자격 증명, WCF에서 어떻게 사용 되는지 및 응용 프로그램에 대 한 적합 한 자격 증명을 선택 하는 방법에 설명 합니다.  

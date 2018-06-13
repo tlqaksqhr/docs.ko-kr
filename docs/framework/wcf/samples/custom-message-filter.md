@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33504148"
 ---
 # <a name="custom-message-filter"></a>사용자 지정 메시지 필터
 이 샘플에는 Windows Communication Foundation (WCF) 메시지를 끝점에 디스패치할 때 사용 하는 메시지 필터를 대체 하는 방법을 보여 줍니다.  

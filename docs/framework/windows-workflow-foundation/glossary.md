@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33513359"
 ---
 # <a name="windows-workflow-foundation-glossary-for-net-framework-45"></a>.NET Framework 4.5용 Windows Workflow Foundation 용어집
 다음은 Windows Workflow Foundation 설명서에서 사용되는 용어입니다.  

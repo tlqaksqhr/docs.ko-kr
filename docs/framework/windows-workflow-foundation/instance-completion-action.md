@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33513203"
 ---
 # <a name="instance-completion-action"></a>인스턴스 완료 동작
 **인스턴스 완료 동작** SQL 워크플로 인스턴스 저장소의 속성을 사용 하면 삭제 여부를 데이터와 메타 데이터의 워크플로 인스턴스는 지 속성 데이터베이스에서 인스턴스를 완료 한 후를 지정할 수 있습니다. 이 속성에 대 한 허용 된 값은 **DeleteAll** 및 **DeleteNothing**합니다. 다음 목록에서는 이러한 옵션에 대해 설명합니다.  

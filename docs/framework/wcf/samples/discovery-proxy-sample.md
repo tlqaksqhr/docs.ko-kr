@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33503186"
 ---
 # <a name="discovery-proxy-sample"></a>Discovery Proxy 샘플
 이 샘플에서는 검색 프록시를 구현하여 기존 서비스에 대한 정보를 저장하는 방법과 클라이언트가 해당 프록시에서 정보를 쿼리하는 방법을 보여 줍니다. 이 샘플은 다음의 세 프로젝트로 구성되어 있습니다.  

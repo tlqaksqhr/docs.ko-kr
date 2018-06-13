@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32748281"
 ---
 # <a name="ltheadersgt-element"></a>&lt;headers&gt; 요소
 여기에는 로컬 발급자의 주소를 올바로 지정하는 데 필요한 주소 헤더 컬렉션이 포함됩니다. `add` 키워드를 사용하여 이 컬렉션에 헤더를 추가할 수 있습니다.  

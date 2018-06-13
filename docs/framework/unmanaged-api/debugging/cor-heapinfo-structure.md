@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 8fb1ae367c30bb038bfe25961e91f02f172f486c
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33405758"
 ---
 # <a name="corheapinfo-structure"></a>COR_HEAPINFO 구조체
 가비지 컬렉션 힙에 대한 일반 정보(열거 가능 여부 포함)를 제공합니다.  

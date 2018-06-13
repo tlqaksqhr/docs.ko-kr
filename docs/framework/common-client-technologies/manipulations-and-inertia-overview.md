@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32744397"
 ---
 # <a name="manipulations-and-inertia-overview"></a>조작 및 관성 개요
 *조작*을 통해 사용자는 *조작자*를 사용하여 UI(사용자 인터페이스) 요소를 이동, 회전하고 크기를 조정할 수 있습니다. 조작자는 마우스, 터치 사용 시나리오의 스타일러스 또는 손가락을 나타냅니다.  

@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 46532592057f4fa6d9883d46dcef2f8f9e5f7228
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33406346"
 ---
 # <a name="iclrdatatarget2allocvirtual-method"></a>ICLRDataTarget2::AllocVirtual 메서드
 이 대상 프로세스의 주소 공간에 메모리를 할당할는 공용 언어 런타임 (CLR) 데이터 액세스 서비스에서 호출 됩니다.  

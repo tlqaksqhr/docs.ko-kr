@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33511851"
 ---
 # <a name="windows-workflow-conceptual-overview"></a>Windows Workflow 개념적 개요
 이 섹션 뒤에 있는 Windows WF (Workflow Foundation) 보다 큰 개념을 설명 하는 항목 집합이 포함 되어 있습니다.  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33512387"
 ---
 # <a name="error-handling-activities-in-wf"></a>WF의 오류 처리 활동
 [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)]에서는 오류 처리 및 복구를 구현하기 위해 여러 시스템 제공 활동을 제공합니다. 자세한 내용은 참조 [예외](../../../docs/framework/windows-workflow-foundation/exceptions.md)합니다.  

@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33509049"
 ---
 # <a name="using-the-xmlserializer-class"></a>XmlSerializer 클래스 사용
 Windows Communication Foundation (WCF) 프로세스를 serialization 이라고 클라이언트와 서비스 간에 전송 되는 XML로 응용 프로그램에서 데이터를 바꿀 수에서는 두 가지 다른 serialization 기술을 사용할 수 있습니다.  

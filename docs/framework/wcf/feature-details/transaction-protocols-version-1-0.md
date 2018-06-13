@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33506701"
 ---
 # <a name="transaction-protocols-version-10"></a>트랜잭션 프로토콜 버전 1.0
 Windows Communication Foundation (WCF) 버전 1은 Ws-atomic Transaction 및 Ws-coordination 프로토콜의 버전 1.0을 구현합니다. 버전 1.1에 대 한 자세한 내용은 참조 [트랜잭션 프로토콜](../../../../docs/framework/wcf/feature-details/transaction-protocols.md)합니다.  

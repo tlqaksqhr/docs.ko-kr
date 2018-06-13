@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33514054"
 ---
 # <a name="how-to-deserialize-instance-data-properties"></a>방법: 인스턴스 데이터 속성 Deserialize
 경우에 따라서는 유지되고 있는 워크플로 인스턴스의 상태를 사용자나 워크플로 관리자가 수동으로 조사하고 싶을 수 있습니다. <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore>에서는 다음과 같은 네 개의 열이 포함된 인스턴스 테이블에 대한 뷰를 제공합니다.  

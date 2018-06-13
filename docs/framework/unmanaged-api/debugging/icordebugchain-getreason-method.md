@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 9d02a68e80e34be906e9fe09f3457a0f2214c6f0
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33405069"
 ---
 # <a name="icordebugchaingetreason-method"></a>ICorDebugChain::GetReason 메서드
 이 호출 체인이 발생 한 이유를 가져옵니다.  

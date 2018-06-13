@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33513252"
 ---
 # <a name="composite"></a>복합
 이 섹션에는 다른 활동의 Windows WF (Workflow Foundation) 구성 된 사용자 지정 활동 샘플이 포함 되어 있습니다.  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33512540"
 ---
 # <a name="instance-encoding-option"></a>인스턴스 인코딩 옵션
 **Instance Encoding Option** SQL 워크플로 인스턴스 저장소의 속성을 사용 하면 SQL 지 속성 공급자가 저장 하기 전에 GZip 알고리즘을 사용 하 여 워크플로 인스턴스 상태 정보를 압축 해야 하는지 여부를 지정할 수는 지 속성 데이터베이스에 대 한 정보입니다. 이 속성에 허용되는 값은 GZip과 None입니다. 기본값은 None입니다. 다음 목록에서는 이러한 옵션에 대해 설명합니다.  

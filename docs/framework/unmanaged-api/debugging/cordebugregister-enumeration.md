@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 82bcbf363a4fa682a85adf485596fea713457051
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33409219"
 ---
 # <a name="cordebugregister-enumeration"></a>CorDebugRegister 열거형
 지정한 프로세서 아키텍처에 연결된 레지스터를 지정합니다.  

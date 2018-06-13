@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33511679"
 ---
 # <a name="designing-workflows"></a>워크플로 디자인
 이 단원의 항목에서는 워크플로 개발에 사용되는 흐름 제어 패러다임에 대해 설명합니다.  

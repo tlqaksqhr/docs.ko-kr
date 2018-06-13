@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: a4ce7b90b417e0126337283ff16790f136cb16fc
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33407690"
 ---
 # <a name="iclrdatatargetgetthreadcontext-method"></a>ICLRDataTarget::GetThreadContext 메서드
 대상 프로세스에서 지정 된 스레드의 현재 실행 컨텍스트를 가져옵니다. 이 메서드는 공용 언어 런타임 데이터 액세스 서비스에 의해 호출 됩니다.  

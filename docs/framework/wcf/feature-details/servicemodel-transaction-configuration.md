@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33498347"
 ---
 # <a name="servicemodel-transaction-configuration"></a>ServiceModel 트랜잭션 구성
 Windows Communication Foundation (WCF) 서비스의 트랜잭션을 구성 하기 위한 세 가지 특성을 제공: `transactionFlow`, `transactionProtocol`, 및 `transactionTimeout`합니다.  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33508711"
 ---
 # <a name="wcf-simplification-features"></a>WCF 단순화 기능
 이 항목에서는 WCF 응용 프로그램을 더 간단하게 작성할 수 있는 새로운 기능에 대해 설명합니다.  

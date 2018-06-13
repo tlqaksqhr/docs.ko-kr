@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33512602"
 ---
 # <a name="configuring-activity-validation"></a>활동 유효성 검사 구성
 활동 유효성 검사를 사용하면 활동 작성자 및 사용자가 활동을 실행하기 이전에 활동 구성 오류를 식별하여 보고할 수 있습니다. Windows WF (Workflow Foundation)는 다음 세 가지 유형의 활동 유효성 검사를 제공합니다.  

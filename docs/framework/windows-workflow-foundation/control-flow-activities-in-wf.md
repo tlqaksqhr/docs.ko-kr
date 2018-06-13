@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33513001"
 ---
 # <a name="control-flow-activities-in-wf"></a>WF의 흐름 제어 활동
 [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)]에서는 워크플로 내의 실행 흐름 제어를 위한 다양한 활동을 제공합니다. 이러한 작업 중 일부 (같은 `Switch` 및 `If`) 프로그래밍 하는 동안 다른 사용자와 같은 Visual C#, 환경에서와 비슷한 흐름 제어 구조를 구현 (같은 `Pick`) 새 프로그래밍 구조를 모델링 합니다.  

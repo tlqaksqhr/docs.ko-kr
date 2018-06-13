@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33513128"
 ---
 # <a name="guide-to-the-windows-workflow-documentation"></a>Windows Workflow 설명서에 대한 안내
 이 항목에서는 Windows Workflow Foundation 설명서를 사용하는 방법을 설명합니다. 구체적인 관심사와 지식 수준에 따라 그룹화된 링크 문서부터 보시는 것이 좋습니다.  
