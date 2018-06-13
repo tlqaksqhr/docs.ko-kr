@@ -17,6 +17,7 @@ ms.sourcegitcommit: 77d9a94dac4c05827ed0663d95e0f9ad35d6682e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/24/2018
+ms.locfileid: "34472583"
 ---
 # <a name="winresexe-windows-forms-resource-editor"></a><span data-ttu-id="e8234-102">Winres.exe(Windows Forms 리소스 편집기)</span><span class="sxs-lookup"><span data-stu-id="e8234-102">Winres.exe (Windows Forms Resource Editor)</span></span>
 <span data-ttu-id="e8234-103">Winres.exe(Windows Forms 리소스 편집기)는 지역화 전문가가 폼에 사용된 Windows Forms UI(사용자 인터페이스)를 쉽게 지역화하는 데 사용할 수 있는 시각적 레이아웃 도구입니다.</span><span class="sxs-lookup"><span data-stu-id="e8234-103">The Windows Forms Resource Editor, Winres.exe, is a visual layout tool that helps localization experts localize Windows Forms user interface (UI) resources used by forms.</span></span> <span data-ttu-id="e8234-104">Winres.exe의 입력으로 사용되는 .resx 또는 .resources 파일은 Microsoft Visual Studio 같은 시각적 디자인 환경을 사용하여 만들 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="e8234-104">The .resx or .resources files that are used as input to Winres.exe can be created using a visual design environment such as Microsoft Visual Studio.</span></span> <span data-ttu-id="e8234-105">.NET Framework 응용 프로그램의 리소스를 배포하는 데 대한 자세한 내용은 [데스크톱 앱의 리소스](../../../docs/framework/resources/index.md)를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="e8234-105">For information on deploying resources in .NET Framework applications, see [Resources in Desktop Apps](../../../docs/framework/resources/index.md).</span></span>  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33810150"
 ---
 # <a name="ws-transport-with-message-credential"></a><span data-ttu-id="3a48b-102">WS Transport With Message Credential</span><span class="sxs-lookup"><span data-stu-id="3a48b-102">WS Transport With Message Credential</span></span>
 <span data-ttu-id="3a48b-103">이 샘플에서는 메시지로 전달되는 클라이언트 자격 증명과 SSL 전송 보안을 조합하여 사용하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="3a48b-103">This sample demonstrates the use of SSL transport security in combination with client credential being carried in the message.</span></span> <span data-ttu-id="3a48b-104">이 샘플에서는 `wsHttpBinding` 바인딩을 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="3a48b-104">This sample uses the `wsHttpBinding` binding.</span></span>  

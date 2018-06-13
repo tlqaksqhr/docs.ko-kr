@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33803584"
 ---
 # <a name="deploying-services"></a><span data-ttu-id="e5d7f-102">서비스 배포</span><span class="sxs-lookup"><span data-stu-id="e5d7f-102">Deploying Services</span></span>
 <span data-ttu-id="e5d7f-103">이 항목에서는 방법을 런타임 환경에 Windows Communication Foundation (WCF) 응용 프로그램을 배포할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="e5d7f-103">This topic describes how you can deploy a Windows Communication Foundation (WCF) application to a run-time environment.</span></span>  

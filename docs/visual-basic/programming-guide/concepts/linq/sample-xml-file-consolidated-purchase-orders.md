@@ -1,27 +1,18 @@
 ---
-title: "샘플 XML 파일: 구매 Orders3 통합"
-ms.custom: 
+title: '샘플 XML 파일: 구매 Orders3 통합'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 7203da90-a514-415a-b978-6980e89f3e9c
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: ccb1e08ee6fc45ea407fbe3a0501062e8340ea02
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 4de74aab208b3ee09a49210dd1f97c13af273789
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33644848"
 ---
-# <a name="sample-xml-file-consolidated-purchase-orders"></a><span data-ttu-id="994a0-102">샘플 XML 파일: 통합된 구매 주문</span><span class="sxs-lookup"><span data-stu-id="994a0-102">Sample XML File: Consolidated Purchase Orders</span></span>
-<span data-ttu-id="994a0-103">다음 XML 파일은 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 설명서의 다양한 예제에서 사용됩니다.</span><span class="sxs-lookup"><span data-stu-id="994a0-103">The following XML file is used in various examples in the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] documentation.</span></span> <span data-ttu-id="994a0-104">이 파일은 여러 회사에 속한 모양이 다른 구매 주문의 집합입니다.</span><span class="sxs-lookup"><span data-stu-id="994a0-104">This file is a set of purchase orders with different shapes from multiple companies.</span></span> <span data-ttu-id="994a0-105">각 회사의 구매 주문은 별도의 네임스페이스에 있습니다.</span><span class="sxs-lookup"><span data-stu-id="994a0-105">Purchase orders from each company are in separate namespaces.</span></span>  
+# <a name="sample-xml-file-consolidated-purchase-orders"></a><span data-ttu-id="b51f3-102">샘플 XML 파일: 통합된 구매 주문</span><span class="sxs-lookup"><span data-stu-id="b51f3-102">Sample XML File: Consolidated Purchase Orders</span></span>
+<span data-ttu-id="b51f3-103">다음 XML 파일은 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 설명서의 다양한 예제에서 사용됩니다.</span><span class="sxs-lookup"><span data-stu-id="b51f3-103">The following XML file is used in various examples in the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] documentation.</span></span> <span data-ttu-id="b51f3-104">이 파일은 여러 회사에 속한 모양이 다른 구매 주문의 집합입니다.</span><span class="sxs-lookup"><span data-stu-id="b51f3-104">This file is a set of purchase orders with different shapes from multiple companies.</span></span> <span data-ttu-id="b51f3-105">각 회사의 구매 주문은 별도의 네임스페이스에 있습니다.</span><span class="sxs-lookup"><span data-stu-id="b51f3-105">Purchase orders from each company are in separate namespaces.</span></span>  
   
-## <a name="consolidatedpurchaseordersxml"></a><span data-ttu-id="994a0-106">ConsolidatedPurchaseOrders.xml</span><span class="sxs-lookup"><span data-stu-id="994a0-106">ConsolidatedPurchaseOrders.xml</span></span>  
+## <a name="consolidatedpurchaseordersxml"></a><span data-ttu-id="b51f3-106">ConsolidatedPurchaseOrders.xml</span><span class="sxs-lookup"><span data-stu-id="b51f3-106">ConsolidatedPurchaseOrders.xml</span></span>  
   
 ```xml  
 <?xml version="1.0"?>  
@@ -153,5 +144,5 @@ ms.lasthandoff: 10/18/2017
 </PurchaseOrders>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="994a0-107">참고 항목</span><span class="sxs-lookup"><span data-stu-id="994a0-107">See Also</span></span>  
- [<span data-ttu-id="994a0-108">샘플 XML 문서(LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="994a0-108">Sample XML Documents (LINQ to XML)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)
+## <a name="see-also"></a><span data-ttu-id="b51f3-107">참고 항목</span><span class="sxs-lookup"><span data-stu-id="b51f3-107">See Also</span></span>  
+ [<span data-ttu-id="b51f3-108">샘플 XML 문서(LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="b51f3-108">Sample XML Documents (LINQ to XML)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)

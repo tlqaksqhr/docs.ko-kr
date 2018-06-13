@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33803769"
 ---
 # <a name="monitoring-service-operation-failures"></a><span data-ttu-id="ce435-102">서비스 작업 오류 모니터링</span><span class="sxs-lookup"><span data-stu-id="ce435-102">Monitoring Service Operation Failures</span></span>
 <span data-ttu-id="ce435-103">응용 프로그램에 분석 추적을 사용하도록 설정된 경우 이벤트 뷰어에서 서비스 오류를 쉽게 모니터링할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="ce435-103">If analytic tracing is enabled for an application, service failures can easily be monitored in the event viewer.</span></span>  <span data-ttu-id="ce435-104">이 항목에서는 서비스 작업이 실패한 경우를 확인하는 방법과 오류가 발생한 원인을 확인하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="ce435-104">This topic demonstrates how to determine when a service operation fails, and how to determine what caused the failure.</span></span>  

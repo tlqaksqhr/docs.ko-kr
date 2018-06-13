@@ -9,6 +9,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33803396"
 ---
 # <a name="windows-communication-foundation-endpoints"></a><span data-ttu-id="ce0ba-102">Windows Communication Foundation 끝점</span><span class="sxs-lookup"><span data-stu-id="ce0ba-102">Windows Communication Foundation Endpoints</span></span>
 <span data-ttu-id="ce0ba-103">Windows Communication Foundation (WCF) 서비스와 모든 통신을 통해 발생 된 *끝점* 서비스의 합니다.</span><span class="sxs-lookup"><span data-stu-id="ce0ba-103">All communication with a Windows Communication Foundation (WCF) service occurs through the *endpoints* of the service.</span></span> <span data-ttu-id="ce0ba-104">끝점 클라이언트는 WCF 서비스에서 제공 하는 기능에 대 한 액세스를 제공 합니다.</span><span class="sxs-lookup"><span data-stu-id="ce0ba-104">Endpoints provide clients access to the functionality that a WCF service offers.</span></span>  

@@ -9,6 +9,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33803597"
 ---
 # <a name="windows-communication-foundation-bindings"></a><span data-ttu-id="83b5a-102">Windows Communication Foundation 바인딩</span><span class="sxs-lookup"><span data-stu-id="83b5a-102">Windows Communication Foundation Bindings</span></span>
 <span data-ttu-id="83b5a-103">바인딩은은 Windows Communication Foundation (WCF) 서비스 끝점이 다른 끝점과 통신 하는 방법을 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="83b5a-103">Bindings specify how a Windows Communication Foundation (WCF) service endpoint communicates with other endpoints.</span></span> <span data-ttu-id="83b5a-104">가장 기본적으로 바인딩은 HTTP 또는 TCP와 같은 사용할 전송을 지정해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="83b5a-104">At its most basic, a binding must specify the transport (for example, HTTP or TCP) to use.</span></span> <span data-ttu-id="83b5a-105">바인딩을 통해 보안 및 트랜잭션 지원과 같은 다른 특징을 설정할 수도 있습니다.</span><span class="sxs-lookup"><span data-stu-id="83b5a-105">You can also set other characteristics, such as security and transaction support, through bindings.</span></span>  

@@ -10,6 +10,7 @@ ms.sourcegitcommit: 54231aa56fca059e9297888a96fbca1d4cf3746c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/25/2018
+ms.locfileid: "34549593"
 ---
 # <a name="iteration-statements-c-reference"></a><span data-ttu-id="09dc5-102">반복문(C# 참조)</span><span class="sxs-lookup"><span data-stu-id="09dc5-102">Iteration Statements (C# Reference)</span></span>
 

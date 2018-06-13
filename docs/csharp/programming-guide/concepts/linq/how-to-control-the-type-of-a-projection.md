@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33808769"
 ---
 # <a name="how-to-control-the-type-of-a-projection-c"></a><span data-ttu-id="1befc-102">방법: 프로젝션 형식 제어(C#)</span><span class="sxs-lookup"><span data-stu-id="1befc-102">How to: Control the Type of a Projection (C#)</span></span>
 <span data-ttu-id="1befc-103">프로젝션은 데이터 집합을 하나 가져와서 필터링하고 모양을 변경하며 형식까지도 변경하는 프로세스입니다.</span><span class="sxs-lookup"><span data-stu-id="1befc-103">Projection is the process of taking one set of data, filtering it, changing its shape, and even changing its type.</span></span> <span data-ttu-id="1befc-104">대부분의 쿼리 식은 프로젝션을 수행합니다.</span><span class="sxs-lookup"><span data-stu-id="1befc-104">Most query expressions perform projections.</span></span> <span data-ttu-id="1befc-105">이 단원에 나와 있는 대부분의 쿼리 식은 <xref:System.Collections.Generic.IEnumerable%601>의 <xref:System.Xml.Linq.XElement>로 확인되지만 다른 형식의 컬렉션을 만들기 위해 프로젝션의 형식을 제어할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="1befc-105">Most of the query expressions shown in this section evaluate to <xref:System.Collections.Generic.IEnumerable%601> of <xref:System.Xml.Linq.XElement>, but you can control the type of the projection to create collections of other types.</span></span> <span data-ttu-id="1befc-106">이 항목에서는 프로젝션의 형식을 제어하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="1befc-106">This topic shows how to do this.</span></span>  

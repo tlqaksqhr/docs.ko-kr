@@ -7,6 +7,7 @@ ms.sourcegitcommit: 54231aa56fca059e9297888a96fbca1d4cf3746c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/25/2018
+ms.locfileid: "34549622"
 ---
 # <a name="collections-c"></a><span data-ttu-id="8c5cb-102">컬렉션(C#)</span><span class="sxs-lookup"><span data-stu-id="8c5cb-102">Collections (C#)</span></span>
 <span data-ttu-id="8c5cb-103">대부분의 응용 프로그램의 경우 관련 개체의 그룹을 만들고 관리하려고 합니다.</span><span class="sxs-lookup"><span data-stu-id="8c5cb-103">For many applications, you want to create and manage groups of related objects.</span></span> <span data-ttu-id="8c5cb-104">개체를 그룹화하는 방법에는 개체 배열을 만들거나 개체 컬렉션을 만드는 두 가지가 있습니다.</span><span class="sxs-lookup"><span data-stu-id="8c5cb-104">There are two ways to group objects: by creating arrays of objects, and by creating collections of objects.</span></span>  

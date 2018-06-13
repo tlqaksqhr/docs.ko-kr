@@ -15,6 +15,7 @@ ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/23/2018
+ms.locfileid: "34458023"
 ---
 # <a name="whats-new-in-the-net-framework"></a><span data-ttu-id="9b90a-102">.NET Framework의 새로운 기능</span><span class="sxs-lookup"><span data-stu-id="9b90a-102">What's new in the .NET Framework</span></span>
 <a name="introduction"></a> <span data-ttu-id="9b90a-103">이 문서에서는 다음 버전의 .NET Framework에 새로 추가된 주요 기능과 향상된 내용에 대해 요약합니다.</span><span class="sxs-lookup"><span data-stu-id="9b90a-103">This article summarizes key new features and improvements in the following versions of the .NET Framework:</span></span>  

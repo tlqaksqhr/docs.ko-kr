@@ -10,6 +10,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33810163"
 ---
 # <a name="feedback-and-community"></a><span data-ttu-id="98b83-102">사용자 의견 및 커뮤니티</span><span class="sxs-lookup"><span data-stu-id="98b83-102">Feedback and Community</span></span>
 <span data-ttu-id="98b83-103">의견과 Windows Communication Foundation (WCF)에 대 한 감사 드립니다 또는 [!INCLUDE[infocard](../../../includes/infocard-md.md)] 설명서입니다.</span><span class="sxs-lookup"><span data-stu-id="98b83-103">We appreciate your comments and concerns about the Windows Communication Foundation (WCF) or [!INCLUDE[infocard](../../../includes/infocard-md.md)] documentation.</span></span> <span data-ttu-id="98b83-104">SDK의 각 페이지 아래쪽에는 "이 항목에 대한 의견을 Microsoft에 보내 주세요."라는 문장이 있습니다.</span><span class="sxs-lookup"><span data-stu-id="98b83-104">On the bottom of every page in the SDK is the sentence "Send comments about this topic to Microsoft."</span></span> <span data-ttu-id="98b83-105">"의견" 링크를 클릭하여 특정 항목에 대한 의견이나 제안 사항을 보내 주세요.</span><span class="sxs-lookup"><span data-stu-id="98b83-105">Click the "comments" link to send your views or suggestions about the specific topic.</span></span>  
