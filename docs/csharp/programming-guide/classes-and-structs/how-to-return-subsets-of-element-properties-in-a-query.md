@@ -9,6 +9,7 @@ ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/15/2018
+ms.locfileid: "34172661"
 ---
 # <a name="how-to-return-subsets-of-element-properties-in-a-query-c-programming-guide"></a><span data-ttu-id="4ad77-102">방법: 쿼리에서 요소 속성의 하위 집합 반환(C# 프로그래밍 가이드)</span><span class="sxs-lookup"><span data-stu-id="4ad77-102">How to: Return Subsets of Element Properties in a Query (C# Programming Guide)</span></span>
 <span data-ttu-id="4ad77-103">이러한 조건이 둘 다 적용되는 경우 쿼리 식에서 무명 형식을 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="4ad77-103">Use an anonymous type in a query expression when both of these conditions apply:</span></span>  

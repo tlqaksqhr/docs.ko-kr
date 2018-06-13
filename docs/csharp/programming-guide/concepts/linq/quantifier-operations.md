@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33339867"
 ---
 # <a name="quantifier-operations-c"></a><span data-ttu-id="ede93-102">수량자 작업(C#)</span><span class="sxs-lookup"><span data-stu-id="ede93-102">Quantifier Operations (C#)</span></span>
 <span data-ttu-id="ede93-103">수량자 작업은 시퀀스에서 조건을 충족하는 요소가 일부인지 전체인지를 나타내는 <xref:System.Boolean> 값을 반환합니다.</span><span class="sxs-lookup"><span data-stu-id="ede93-103">Quantifier operations return a <xref:System.Boolean> value that indicates whether some or all of the elements in a sequence satisfy a condition.</span></span>  

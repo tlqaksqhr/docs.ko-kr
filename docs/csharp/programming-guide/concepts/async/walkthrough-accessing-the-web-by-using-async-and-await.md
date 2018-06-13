@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33338132"
 ---
 # <a name="walkthrough-accessing-the-web-by-using-async-and-await-c"></a><span data-ttu-id="14c08-102">연습: async 및 await를 사용하여 웹에 액세스(C#)</span><span class="sxs-lookup"><span data-stu-id="14c08-102">Walkthrough: Accessing the Web by Using async and await (C#)</span></span>
 <span data-ttu-id="14c08-103">async/await 기능을 사용하여 비동기 프로그램을 보다 쉽고 직관적인 방식으로 작성할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="14c08-103">You can write asynchronous programs more easily and intuitively by using async/await features.</span></span> <span data-ttu-id="14c08-104">동기 코드처럼 보이는 비동기 코드를 작성하고 일반적으로 비동기 코드에 수반되는 어려운 콜백 함수 및 연속 작업을 컴파일러에서 처리하도록 할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="14c08-104">You can write asynchronous code that looks like synchronous code and let the compiler handle the difficult callback functions and continuations that asynchronous code usually entails.</span></span>  

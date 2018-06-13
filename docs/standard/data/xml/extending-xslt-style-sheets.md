@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33568825"
 ---
 # <a name="extending-xslt-style-sheets"></a><span data-ttu-id="738e3-102">XSLT 스타일시트 확장</span><span class="sxs-lookup"><span data-stu-id="738e3-102">Extending XSLT Style Sheets</span></span>
 <span data-ttu-id="738e3-103">이 단원에서는 XSLT 기능을 확장하는 여러 가지 방법을 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="738e3-103">This section describes the different methods of extending the XSLT functionality.</span></span> <span data-ttu-id="738e3-104"><xref:System.Xml.Xsl.XsltArgumentList> 클래스를 사용하여 확장 개체 또는 매개 변수를 추가할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="738e3-104">You can add extension objects or parameters using the <xref:System.Xml.Xsl.XsltArgumentList> class.</span></span> <span data-ttu-id="738e3-105">그런 다음 스타일시트에서 확장명 개체 및 매개 변수를 호출할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="738e3-105">The extension objects or parameters can then be called from the style sheet.</span></span> <span data-ttu-id="738e3-106">또한 `msxsl:script` 요소를 사용하여 스크립트 블록을 스타일시트에 포함할 수도 있습니다.</span><span class="sxs-lookup"><span data-stu-id="738e3-106">In addition, you can also embed script blocks into the style sheet by using the `msxsl:script` element.</span></span>  

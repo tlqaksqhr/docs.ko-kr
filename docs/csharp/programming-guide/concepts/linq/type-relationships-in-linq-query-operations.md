@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33339581"
 ---
 # <a name="type-relationships-in-linq-query-operations-c"></a><span data-ttu-id="77855-102">LINQ 쿼리 작업의 형식 관계(C#)</span><span class="sxs-lookup"><span data-stu-id="77855-102">Type Relationships in LINQ Query Operations (C#)</span></span>
 <span data-ttu-id="77855-103">쿼리를 효과적으로 작성하려면 전체 쿼리 작업의 변수 형식이 모두 어떻게 서로 관련되는지를 이해해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="77855-103">To write queries effectively, you should understand how types of the variables in a complete query operation all relate to each other.</span></span> <span data-ttu-id="77855-104">이러한 관계를 이해하면 설명서의 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 샘플 및 코드 예제를 더 쉽게 이해할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="77855-104">If you understand these relationships you will more easily comprehend the [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] samples and code examples in the documentation.</span></span> <span data-ttu-id="77855-105">또한 `var`을 사용하여 변수를 암시적으로 형식화하는 경우 백그라운드에서 발생하는 상황을 이해할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="77855-105">Furthermore, you will understand what occurs behind the scenes when variables are implicitly typed by using `var`.</span></span>  

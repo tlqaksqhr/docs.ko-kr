@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33335421"
 ---
 # <a name="programming-with-nodes-c"></a><span data-ttu-id="560df-102">노드를 사용한 프로그래밍(C#)</span><span class="sxs-lookup"><span data-stu-id="560df-102">Programming with Nodes (C#)</span></span>
 <span data-ttu-id="560df-103">XML 편집기, 변환 시스템 또는 보고서 작성기와 같은 프로그램을 작성해야 하는 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 개발자는 요소와 특성보다 세부적인 단위에서 작업하는 프로그램을 작성해야 하는 경우가 많습니다.</span><span class="sxs-lookup"><span data-stu-id="560df-103">[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] developers who need to write programs such as an XML editor, a transform system, or a report writer often need to write programs that work at a finer level of granularity than elements and attributes.</span></span> <span data-ttu-id="560df-104">LINQ to XML 개발자는 흔히 노드 수준에서 작업하여 텍스트 노드, 처리 명령 및 주석을 조작해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="560df-104">They often need to work at the node level, manipulating text nodes, processing instructions, and comments.</span></span> <span data-ttu-id="560df-105">이 항목에서는 노드 수준의 프로그래밍에 대해 자세히 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="560df-105">This topic provides some details about programming at the node level.</span></span>  

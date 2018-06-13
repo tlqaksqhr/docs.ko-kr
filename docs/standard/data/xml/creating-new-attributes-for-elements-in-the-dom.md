@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33570386"
 ---
 # <a name="creating-new-attributes-for-elements-in-the-dom"></a><span data-ttu-id="3454f-102">DOM에서 요소의 새 특성 만들기</span><span class="sxs-lookup"><span data-stu-id="3454f-102">Creating New Attributes for Elements in the DOM</span></span>
 <span data-ttu-id="3454f-103">특성은 노드가 아니라 요소 노드의 속성이며 요소와 연결된 **XmlAttributeCollection**에 포함되어 있으므로 새 특성을 만드는 것은 다른 노드 형식을 만드는 것과 다릅니다.</span><span class="sxs-lookup"><span data-stu-id="3454f-103">Creating new attributes is different than creating other node types, because attributes are not nodes, but are properties of an element node and are contained in an **XmlAttributeCollection** associated with the element.</span></span> <span data-ttu-id="3454f-104">다음과 같은 여러 가지 방법으로 특성을 만들고 요소를 추가할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="3454f-104">There are multiple ways to create an attribute and attach it to an element:</span></span>  

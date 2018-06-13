@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33215773"
 ---
 # <a name="-addmodule-c-compiler-options"></a><span data-ttu-id="98e74-102">-addmodule(C# 컴파일러 옵션)</span><span class="sxs-lookup"><span data-stu-id="98e74-102">-addmodule (C# Compiler Options)</span></span>
 <span data-ttu-id="98e74-103">이 옵션은 target:module 스위치로 만들어진 모듈을 현재 컴파일에 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="98e74-103">This option adds a module that was created with the target:module switch to the current compilation.</span></span>  

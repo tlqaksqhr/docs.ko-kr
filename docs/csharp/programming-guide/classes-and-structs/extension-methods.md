@@ -11,6 +11,7 @@ ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/15/2018
+ms.locfileid: "34172609"
 ---
 # <a name="extension-methods-c-programming-guide"></a><span data-ttu-id="7bce1-102">확장명 메서드(C# 프로그래밍 가이드)</span><span class="sxs-lookup"><span data-stu-id="7bce1-102">Extension Methods (C# Programming Guide)</span></span>
 <span data-ttu-id="7bce1-103">확장명 메서드를 사용하면 새 파생 형식을 만들거나 다시 컴파일하거나 원래 형식을 수정하지 않고도 기존 형식에 메서드를 "추가"할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="7bce1-103">Extension methods enable you to "add" methods to existing types without creating a new derived type, recompiling, or otherwise modifying the original type.</span></span> <span data-ttu-id="7bce1-104">확장 메서드는 특수한 종류의 정적 메서드이지만 확장 형식의 인스턴스 메서드인 것처럼 호출됩니다.</span><span class="sxs-lookup"><span data-stu-id="7bce1-104">Extension methods are a special kind of static method, but they are called as if they were instance methods on the extended type.</span></span> <span data-ttu-id="7bce1-105">C#, F# 및 Visual Basic에서 작성된 클라이언트 코드의 경우 확장명 메서드를 호출하는 것과 형식에 실제로 정의된 메서드를 호출하는 데는 명백한 차이가 없습니다.</span><span class="sxs-lookup"><span data-stu-id="7bce1-105">For client code written in C#, F# and Visual Basic, there is no apparent difference between calling an extension method and the methods that are actually defined in a type.</span></span>  

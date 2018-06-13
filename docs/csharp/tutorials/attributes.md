@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33352697"
 ---
 # <a name="using-attributes-in-c"></a><span data-ttu-id="8f1e3-103">C#에서 특성 사용</span><span class="sxs-lookup"><span data-stu-id="8f1e3-103">Using Attributes in C#</span></span> #
 

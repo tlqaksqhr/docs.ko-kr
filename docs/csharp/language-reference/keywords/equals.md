@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33216177"
 ---
 # <a name="equals-c-reference"></a><span data-ttu-id="2a1f6-102">equals(C# 참조)</span><span class="sxs-lookup"><span data-stu-id="2a1f6-102">equals (C# Reference)</span></span>
 <span data-ttu-id="2a1f6-103">`equals` 상황별 키워드는 쿼리 식의 `join` 절에서 사용되어 두 시퀀스의 요소를 비교합니다.</span><span class="sxs-lookup"><span data-stu-id="2a1f6-103">The `equals` contextual keyword is used in a `join` clause in a query expression to compare the elements of two sequences.</span></span> <span data-ttu-id="2a1f6-104">자세한 내용은 [join 절](../../../csharp/language-reference/keywords/join-clause.md)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="2a1f6-104">For more information, see [join clause](../../../csharp/language-reference/keywords/join-clause.md).</span></span>  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33335486"
 ---
 # <a name="refactoring-using-an-extension-method-c"></a><span data-ttu-id="559a9-102">확장 메서드를 사용하여 리팩터링(C#)</span><span class="sxs-lookup"><span data-stu-id="559a9-102">Refactoring Using an Extension Method (C#)</span></span>
 <span data-ttu-id="559a9-103">이 예제는 확장 메서드로 구현된 순수 함수를 사용하여 문자열의 연결을 리팩터링하는 방법으로 이전 예제인 [단락의 텍스트 검색(C#)](../../../../csharp/programming-guide/concepts/linq/retrieving-the-text-of-the-paragraphs.md)을 기반으로 작성되었습니다.</span><span class="sxs-lookup"><span data-stu-id="559a9-103">This example builds on the previous example, [Retrieving the Text of the Paragraphs (C#)](../../../../csharp/programming-guide/concepts/linq/retrieving-the-text-of-the-paragraphs.md), by refactoring the concatenation of strings using a pure function that is implemented as an extension method.</span></span>  

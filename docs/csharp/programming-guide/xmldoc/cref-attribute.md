@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33337027"
 ---
 # <a name="cref-attribute-c-programming-guide"></a><span data-ttu-id="e580a-102">cref 특성(C# 프로그래밍 가이드)</span><span class="sxs-lookup"><span data-stu-id="e580a-102">cref Attribute (C# Programming Guide)</span></span>
 <span data-ttu-id="e580a-103">XML 문서 태그의 `cref` 특성은 "코드 참조"를 의미합니다.</span><span class="sxs-lookup"><span data-stu-id="e580a-103">The `cref` attribute in an XML documentation tag means "code reference."</span></span> <span data-ttu-id="e580a-104">태그의 내부 텍스트를 형식, 메서드, 속성 등의 코드 요소로 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="e580a-104">It specifies that the inner text of the tag is a code element, such as a type, method, or property.</span></span> <span data-ttu-id="e580a-105">[Sandcastle](https://github.com/EWSoftware/SHFB) 등의 문서 도구는 `cref` 특성을 사용하여 형식 또는 멤버가 문서화된 페이지에 대한 하이퍼링크를 자동으로 생성합니다.</span><span class="sxs-lookup"><span data-stu-id="e580a-105">Documentation tools like [Sandcastle](https://github.com/EWSoftware/SHFB) use the `cref` attributes to automatically generate hyperlinks to the page where the type or member is documented.</span></span>  

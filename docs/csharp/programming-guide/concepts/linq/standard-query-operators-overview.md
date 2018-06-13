@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33337326"
 ---
 # <a name="standard-query-operators-overview-c"></a><span data-ttu-id="518d0-102">표준 쿼리 연산자 개요(C#)</span><span class="sxs-lookup"><span data-stu-id="518d0-102">Standard Query Operators Overview (C#)</span></span>
 <span data-ttu-id="518d0-103">*표준 쿼리 연산자*는 LINQ 패턴을 형성하는 메서드입니다.</span><span class="sxs-lookup"><span data-stu-id="518d0-103">The *standard query operators* are the methods that form the LINQ pattern.</span></span> <span data-ttu-id="518d0-104">이 메서드 중 대부분은 시퀀스에서 작동합니다. 여기서 시퀀스란 <xref:System.Collections.Generic.IEnumerable%601> 인터페이스 또는 <xref:System.Linq.IQueryable%601> 인터페이스를 구현하는 형식의 개체입니다.</span><span class="sxs-lookup"><span data-stu-id="518d0-104">Most of these methods operate on sequences, where a sequence is an object whose type implements the <xref:System.Collections.Generic.IEnumerable%601> interface or the <xref:System.Linq.IQueryable%601> interface.</span></span> <span data-ttu-id="518d0-105">표준 쿼리 연산자는 필터링, 프로젝션, 집계, 정렬 등을 포함하여 쿼리 기능을 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="518d0-105">The standard query operators provide query capabilities including filtering, projection, aggregation, sorting and more.</span></span>  

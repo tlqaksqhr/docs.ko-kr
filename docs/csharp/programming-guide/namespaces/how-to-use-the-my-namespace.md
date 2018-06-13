@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33332012"
 ---
 # <a name="how-to-use-the-my-namespace-c-programming-guide"></a><span data-ttu-id="94247-102">방법: My 네임스페이스 사용(C# 프로그래밍 가이드)</span><span class="sxs-lookup"><span data-stu-id="94247-102">How to: Use the My Namespace (C# Programming Guide)</span></span>
 <span data-ttu-id="94247-103"><xref:Microsoft.VisualBasic.MyServices> 네임스페이스(Visual Basic의 `My`)는 .NET Framework 클래스에 대한 쉽고 직관적인 액세스를 제공하여 컴퓨터, 응용 프로그램, 설정, 리소스 등을 조작하는 코드를 작성할 수 있게 해줍니다.</span><span class="sxs-lookup"><span data-stu-id="94247-103">The <xref:Microsoft.VisualBasic.MyServices> namespace (`My` in Visual Basic) provides easy and intuitive access to a number of .NET Framework classes, enabling you to write code that interacts with the computer, application, settings, resources, and so on.</span></span> <span data-ttu-id="94247-104">원래 Visual Basic에서 사용하도록 설계되었지만 `MyServices` 네임스페이스는 C# 응용 프로그램에서 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="94247-104">Although originally designed for use with Visual Basic, the `MyServices` namespace can be used in C# applications.</span></span>  

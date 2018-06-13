@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33217170"
 ---
 # <a name="access-modifiers-c-reference"></a><span data-ttu-id="cd4d1-102">액세스 한정자(C# 참조)</span><span class="sxs-lookup"><span data-stu-id="cd4d1-102">Access Modifiers (C# Reference)</span></span>
 <span data-ttu-id="cd4d1-103">액세스 한정자는 멤버 또는 형식의 선언된 접근성을 지정하는 데 사용되는 키워드입니다.</span><span class="sxs-lookup"><span data-stu-id="cd4d1-103">Access modifiers are keywords used to specify the declared accessibility of a member or a type.</span></span> <span data-ttu-id="cd4d1-104">이 섹션에서는 다음 네 가지 액세스 한정자를 소개합니다.</span><span class="sxs-lookup"><span data-stu-id="cd4d1-104">This section introduces the four access modifiers:</span></span>  

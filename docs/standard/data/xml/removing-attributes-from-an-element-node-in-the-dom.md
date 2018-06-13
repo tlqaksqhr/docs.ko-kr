@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33570569"
 ---
 # <a name="removing-attributes-from-an-element-node-in-the-dom"></a><span data-ttu-id="bbc42-102">DOM의 요소 노드에서 특성 제거</span><span class="sxs-lookup"><span data-stu-id="bbc42-102">Removing Attributes from an Element Node in the DOM</span></span>
 <span data-ttu-id="bbc42-103">여러 가지 방법으로 특성을 제거할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="bbc42-103">There are many ways to remove attributes.</span></span> <span data-ttu-id="bbc42-104">그 중 한 가지 방법은 특성 컬렉션에서 특성을 제거하는 것입니다.</span><span class="sxs-lookup"><span data-stu-id="bbc42-104">One technique is to remove them from the attribute collection.</span></span> <span data-ttu-id="bbc42-105">이 방법을 사용하려면 다음 단계를 수행합니다.</span><span class="sxs-lookup"><span data-stu-id="bbc42-105">To do this, the following steps are performed:</span></span>  
