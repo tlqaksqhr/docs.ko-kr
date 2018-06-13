@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33321339"
 ---
 # <a name="how-to-retrieve-a-single-child-element-linq-to-xml-c"></a><span data-ttu-id="9bb8c-102">방법: 단일 자식 요소 검색(LINQ to XML)(C#)</span><span class="sxs-lookup"><span data-stu-id="9bb8c-102">How to: Retrieve a Single Child Element (LINQ to XML) (C#)</span></span>
 <span data-ttu-id="9bb8c-103">이 항목에서는 자식 요소의 이름이 제공되는 경우 단일 자식 요소를 검색하는 방법에 대해 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="9bb8c-103">This topic explains how to retrieve a single child element, given the name of the child element.</span></span> <span data-ttu-id="9bb8c-104">자식 요소의 이름과 해당 이름을 가진 요소가 하나만 있음을 알고 있는 경우 컬렉션 대신 한 요소만 검색하는 것이 편리할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="9bb8c-104">When you know the name of the child element and that there is only one element that has this name, it can be convenient to retrieve just one element, instead of a collection.</span></span>  

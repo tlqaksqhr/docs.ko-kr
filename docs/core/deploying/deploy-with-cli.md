@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33217835"
 ---
 # <a name="deploying-net-core-apps-with-command-line-interface-cli-tools"></a><span data-ttu-id="1517f-103">CLI(명령줄 인터페이스) 도구를 사용하여 .NET Core 앱 배포</span><span class="sxs-lookup"><span data-stu-id="1517f-103">Deploying .NET Core apps with command-line interface (CLI) tools</span></span>
 

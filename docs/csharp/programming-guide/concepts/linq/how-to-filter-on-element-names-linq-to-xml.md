@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33323263"
 ---
 # <a name="how-to-filter-on-element-names-linq-to-xml-c"></a><span data-ttu-id="ca489-102">방법: 요소 이름 필터링(LINQ to XML)(C#)</span><span class="sxs-lookup"><span data-stu-id="ca489-102">How to: Filter on Element Names (LINQ to XML) (C#)</span></span>
 <span data-ttu-id="ca489-103"><xref:System.Collections.Generic.IEnumerable%601>의 <xref:System.Xml.Linq.XElement>을 반환하는 메서드 중 하나를 호출하면 요소 이름을 기준으로 필터링할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="ca489-103">When you call one of the methods that return <xref:System.Collections.Generic.IEnumerable%601> of <xref:System.Xml.Linq.XElement>, you can filter on the element name.</span></span>  
