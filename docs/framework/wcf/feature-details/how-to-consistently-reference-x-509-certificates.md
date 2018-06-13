@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33489387"
 ---
 # <a name="how-to-consistently-reference-x509-certificates"></a>방법: 일관성 있게 X.509 인증서 참조
 인증서의 해시, 발급자와 일련 번호 또는 SKI(주체 키 식별자) 등의 다양한 방법으로 인증서를 식별할 수 있습니다. SKI는 인증서 주체 공개 키의 고유 ID를 제공하며 XML 디지털 서명을 사용할 때 주로 사용됩니다. SKI 값은 일반적으로 X.509 인증서의 일부는 *X.509 인정 서 확장*합니다. Windows Communication Foundation (WCF)에 기본 *참조 스타일* 발급자와 일련 번호를 사용 하는 인증서에 SKI 확장이 없는 경우. 인증서에 SKI 확장이 있는 경우 기본 참조 스타일에서는 SKI를 사용하여 인증서를 가리킵니다. 중간 방식으로 응용 프로그램을 개발 하는 경우을 전환 하는 SKI 확장을 사용 하는 인증서에 SKI 확장을 사용 하지 않는 인증서를 사용 하 여 WCF에서 생성 된 메시지에 사용 되는 참조 스타일도 변경 합니다.  

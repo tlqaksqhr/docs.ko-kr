@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33493398"
 ---
 # <a name="integrating-with-com-applications-overview"></a>COM 응용 프로그램과 통합 개요
 Windows Communication Foundation (WCF)은 관리 코드 개발자와 연결 된 응용 프로그램을 만들기 위한 풍부한 환경 제공 합니다. 그러나 관리 되지 않는 COM 기반 코드에 이미 상당한 투자 하 고 마이그레이션할 하지 않으려는 경우 통합할 수도 있습니다 WCF 웹 서비스 기존 코드에 직접 WCF 서비스 모니커를 사용 하 여 합니다. 서비스 모니커는 Office VBA, Visual Basic 6.0 또는 Visual C++ 6.0과 같은 다양한 범위의 COM 기반 개발 환경에서 사용할 수 있습니다.  

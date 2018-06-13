@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33489484"
 ---
 # <a name="encoding-binary-objects-with-bytestream-encoder"></a>ByteStream 인코더를 사용하여 이진 개체 인코딩
 Windows Communication Foundation (WCF)와 원시 이진 데이터를 사용 하 여 구성 된 <xref:System.ServiceModel.Channels.ByteStreamMessageEncodingBindingElement>합니다.  

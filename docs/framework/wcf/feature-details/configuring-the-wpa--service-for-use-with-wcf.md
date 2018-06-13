@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33489770"
 ---
 # <a name="configuring-the-windows-process-activation-service-for-use-with-windows-communication-foundation"></a>Windows Communication Foundation과 함께 사용하도록 Windows Process Activation Service 구성
 이 항목에서는에 Windows Process Activation Service (WAS 라고도 함)를 설정 하는 데 필요한 단계를 설명 [!INCLUDE[wv](../../../../includes/wv-md.md)] 네트워크 프로토콜을 HTTP를 통해 통신 하지 않는 서비스를 호스팅하려면 Windows Communication Foundation (WCF). 다음 단원에서는 이 구성 단계에 대해 간략히 설명합니다.  

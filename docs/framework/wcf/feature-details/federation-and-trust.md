@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33492907"
 ---
 # <a name="federation-and-trust"></a>페더레이션 및 트러스트
 이 항목에서는 페더레이션된 응용 프로그램, 신뢰 경계 및 구성 및 사용 하 여 Windows Communication Foundation (WCF)에서 발급 된 토큰의 관련 된 다양 한 측면에 설명 합니다.  

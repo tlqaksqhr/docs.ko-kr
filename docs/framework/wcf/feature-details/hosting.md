@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33489400"
 ---
 # <a name="hosting"></a>호스팅
 이 단원의 항목에서는 서비스 호스팅에 대해 설명합니다. 서비스 또는 관리 되는 응용 프로그램에 인터넷 정보 서비스 (IIS), WAS Windows Process Activation Service (), Windows Server AppFabric, Windows 서비스에 의해 호스팅될 수-이 옵션은 라고도 *자체 호스팅*합니다.  

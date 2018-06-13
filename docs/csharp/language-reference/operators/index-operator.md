@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33286031"
 ---
 # <a name="-operator-c-reference"></a>[] 연산자(C# 참조)
 대괄호(`[]`)는 배열, 인덱서 및 특성에 사용됩니다. 포인터에 사용할 수도 있습니다.  

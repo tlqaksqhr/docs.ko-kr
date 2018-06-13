@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33489666"
 ---
 # <a name="windows-communcation-foundation-bindings"></a>Windows Communication Foundation 바인딩
 Windows Communication Foundation (WCF) 소프트웨어 응용 프로그램에 대 한 다른 소프트웨어와 통신 하는 방법에서 작성 하는 방법을 구분 합니다. 바인딩은 클라이언트와 서비스 간에 통신하는 데 필요한 전송, 인코딩 및 프로토콜 세부 정보를 지정하는 데 사용됩니다. WCF 바인딩을 사용 하 여 서로 통신 하는 당사자가 대부분의 바인딩 상세 정보를에 동의 해야 하므로 끝점의 기본 연결 표시를 생성 합니다. 이를 수행하는 가장 쉬운 방법은 서비스 클라이언트가 서비스 끝점에서 사용하는 동일한 바인딩을 사용하는 것입니다. 이 작업을 수행 하는 방법에 대 한 자세한 내용은 참조 하십시오. [구성 Windows Communication Foundation 서비스 및 클라이언트에 대 한 바인딩을 사용 하 여](http://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb)합니다.  

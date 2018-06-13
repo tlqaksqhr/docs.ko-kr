@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33494058"
 ---
 # <a name="inside-the-custompeerresolverservice-client-registrations"></a>CustomPeerResolverService: 클라이언트 등록 내부
 메시의 각 노드는 `Register` 함수를 통해 해당 끝점 정보를 확인자 서비스에 게시합니다. 확인자 서비스는 이 정보를 등록 레코드로 저장합니다. 이 레코드에는 노드의 고유 식별자(RegistrationID) 및 끝점 정보(PeerNodeAddress)가 포함됩니다.  

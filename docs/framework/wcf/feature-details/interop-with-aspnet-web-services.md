@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33494298"
 ---
 # <a name="interoperability-with-aspnet-web-services"></a>ASP.NET 웹 서비스와의 상호 운용성
 간의 상호 운용성 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 웹 서비스와 Windows Communication Foundation (WCF) 웹 서비스 기술에서 모두 사용 하 여 구현 된 서비스는 WS 따르는지 함으로써 실현할 수 있습니다-Basic Profile 1.1 사양입니다. [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] WS를 준수 하는 웹 서비스-Basic Profile 1.1은 상호 운용성이 WCF 클라이언트와 WCF 시스템 제공 바인딩을 사용 하 여 <xref:System.ServiceModel.BasicHttpBinding>합니다.  

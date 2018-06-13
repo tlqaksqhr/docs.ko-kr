@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33492013"
 ---
 # <a name="partial-trust"></a>부분 신뢰
 [!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)]부터는 부분적으로 신뢰하는 호출자가 <xref:System.ServiceModel>, <xref:System.Runtime.Serialization> 및 <xref:System.ServiceModel.Web>에서 구현된 public 형식 및 메서드에 액세스할 수 있습니다. 이 섹션에서는 Windows Communication Foundation (WCF)를 사용 하 여 축소 된 코드 액세스 보안 (CA)를 실행 하는 응용 프로그램에 사용할 수 있는 WCF 기능 제한 된 하위 집합 뿐 아니라 부분적으로 신뢰할 수 있는 응용 프로그램 내에 대 한 지원 되는 시나리오 설명 사용 권한입니다.  

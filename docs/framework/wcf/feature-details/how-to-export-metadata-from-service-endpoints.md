@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33491545"
 ---
 # <a name="how-to-export-metadata-from-service-endpoints"></a>방법: 서비스 끝점에서 메타데이터 내보내기
 이 항목에서는 서비스 끝점으로부터 메타데이터를 내보내는 방법에 대해 설명합니다.  

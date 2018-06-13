@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33490229"
 ---
 # <a name="how-to-create-a-service-endpoint-in-configuration"></a>방법: 구성에서 서비스 끝점 만들기
 끝점의 클라이언트에 Windows Communication Foundation (WCF) 서비스에서 제공 하는 기능에 대 한 액세스를 제공 합니다. 상대 및 절대 끝점 주소 조합을 사용하여 끝점을 하나 이상 정의할 수 있으며, 서비스 끝점을 정의하지 않는 경우에는 런타임이 기본적으로 일부 끝점을 자동으로 제공합니다. 이 항목에서는 상대 주소와 절대 주소를 모두 포함하는 구성 파일을 사용해 끝점을 추가하는 방법을 보여 줍니다.  

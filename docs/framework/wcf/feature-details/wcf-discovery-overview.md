@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33505903"
 ---
 # <a name="wcf-discovery-overview"></a>WCF Discovery 개요
 Discovery API는 WS-Discovery 프로토콜을 사용한 웹 서비스의 동적 게시 및 검색을 위한 통합 프로그래밍 모델을 제공합니다. 이러한 API를 통해 서비스는 스스로를 게시할 수 있고 클라이언트는 게시된 서비스를 찾을 수 있습니다. 서비스가 검색 가능하게 되면 해당 서비스는 검색 요청을 수신하고 이에 대해 응답하는 것 외에 알림 메시지를 보낼 수도 있습니다. 검색 가능한 서비스는 Hello 메시지를 보내 네트워크에서 서비스의 도착을 알리며, Bye 메시지를 보내 네트워크에서 서비스의 출발을 알립니다. 클라이언트는 서비스를 찾기 위해 서비스 계약 형식, 키워드 및 네트워크 범위와 같은 특정 조건이 포함된 `Probe` 요청을 보냅니다. 서비스는 `Probe` 요청을 받고 자신이 이 조건에 일치하는지 여부를 확인합니다. 일치할 경우 서비스는 서비스에 연결하는 데 필요한 정보와 함께 `ProbeMatch` 메시지를 클라이언트로 돌려보내 응답합니다. 또한 클라이언트는 끝점 주소가 변경된 경우에도 서비스를 찾을 수 있는 `Resolve` 요청을 보낼 수도 있습니다. 일치하는 서비스는 `Resolve` 메시지를 클라이언트로 돌려보내 `ResolveMatch` 요청에 응답합니다.  

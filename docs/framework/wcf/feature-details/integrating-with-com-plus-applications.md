@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33490499"
 ---
 # <a name="integrating-with-com-applications"></a>COM+ 응용 프로그램과 통합
 Windows Communication Foundation (WCF)는 분산된 응용 프로그램을 만들기 위한 다양 한 환경을 제공 합니다. COM +에서 호스팅되는 구성 요소 기반 응용 프로그램 논리에 상당한 투자 했다면를 확장 하 여 기존 논리는 다시 작성 하지 WCF를 사용할 수 있습니다. 이 섹션 내에서 WCF와 함께 COM +를 사용 하는 방법에 설명 합니다.  

@@ -20,9 +20,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: f0436991512713c05e60a3c10d6fbdaa17bb378c
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33429829"
 ---
 # <a name="nukedownloadedcache-function"></a>NukeDownloadedCache 함수
 공용 언어 런타임 (CLR) 다운로드 캐시를 삭제합니다.  

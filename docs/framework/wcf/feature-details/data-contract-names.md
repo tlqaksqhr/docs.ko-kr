@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33494272"
 ---
 # <a name="data-contract-names"></a>데이터 계약 이름
 때때로 클라이언트와 서비스는 동일한 형식을 공유하지 않습니다. 그래도 양쪽의 데이터 계약이 동일하면 서로 데이터를 전달할 수 있습니다. [데이터 계약 동등성](../../../../docs/framework/wcf/feature-details/data-contract-equivalence.md) 데이터 계약 및 데이터 멤버 이름에 따라 및 따라서 메커니즘은 형식 및 멤버 이름에 매핑할 수 제공 됩니다. 이 항목에서는 이름을 만들 경우 Windows Communication Foundation (WCF) 인프라의 기본 동작 뿐만 아니라 데이터 계약 이름 지정에 대 한 규칙을 설명 합니다.  

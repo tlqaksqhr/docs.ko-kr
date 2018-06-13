@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33489598"
 ---
 # <a name="anticipating-adopting-the-windows-communication-foundation-easing-future-integration"></a>Windows Communication Foundation 채택 예상: 이후의 통합을 용이하게 함
 현재 ASP.NET을 사용 하 고 나중에 WCF를 사용할 계획인 경우이 항목에서는 WCF 응용 프로그램도 함께 새 ASP.NET 웹 서비스는 사용할 수 있도록 지침을 제공 합니다.  

@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33489208"
 ---
 # <a name="data-transfer-and-serialization"></a>데이터 전송 및 Serialization
 연결된 시스템에서 서비스 및 클라이언트는 데이터 교환에 의존하여 작업을 수행합니다. 개발자는 서비스 또는 클라이언트의 Windows Communication Foundation (WCF)는 효율적이 고 유지 관리 하기 쉬운 응용 프로그램을 만들기 위해 데이터 및 데이터 serialization을 처리 방법을 알고 있어야 합니다.  

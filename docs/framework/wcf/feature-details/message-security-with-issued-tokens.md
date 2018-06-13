@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33491188"
 ---
 # <a name="message-security-with-issued-tokens"></a>발급된 토큰을 사용하는 메시지 보안
 발급 된 토큰 클라이언트는 페더레이션된 보안 시나리오를에서 Windows Communication Foundation (WCF) 수 있습니다.  

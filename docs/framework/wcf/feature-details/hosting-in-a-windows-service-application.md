@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33492234"
 ---
 # <a name="hosting-in-a-windows-service-application"></a>Windows 서비스 응용 프로그램에서의 호스팅
 Windows 서비스(이전의 Windows NT 서비스)에서는 장기 실행되는 실행 파일에 있어야 하는 응용 프로그램에 특히 적합한 프로세스 모델을 제공하지만 사용자 인터페이스 폼을 표시하지 않습니다. Windows 서비스 응용 프로그램의 프로세스 수명은 Windows 서비스 응용 프로그램을 시작, 중지 및 일지 중지할 수 있도록 해 주는 SCM(서비스 제어 관리자)이 관리합니다. Windows 서비스 프로세스가 "항상" 응용 프로그램에 적합 한 호스팅 환경을 만들 컴퓨터를 시작할 때 자동으로 시작 되도록 구성할 수 있습니다. Windows 서비스 응용 프로그램에 대 한 자세한 내용은 참조 [Windows 서비스 응용 프로그램](http://go.microsoft.com/fwlink/?LinkId=89450)합니다.  

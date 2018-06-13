@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33494734"
 ---
 # <a name="saml-tokens-and-claims"></a>SAML 토큰 및 클레임
 SAML security Assertions Markup Language () *토큰* 클레임의 XML 표현 됩니다. Windows Communication Foundation (WCF) 페더레이션된 보안 시나리오에서 사용 하 여 SAML 토큰에는 기본적으로 *발급 된 토큰*합니다.  

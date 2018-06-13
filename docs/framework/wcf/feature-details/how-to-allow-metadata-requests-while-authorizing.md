@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33489637"
 ---
 # <a name="how-to-allow-metadata-requests-while-authorizing"></a>방법: 권한을 부여하는 동안 메타데이터 요청 허용
 사용자 지정 인증을 수행하는 동안 메타데이터를 처리하도록 요청을 허용해야 할 수 있습니다. 다음 항목에서는 이러한 요청의 유효성을 검사하는 단계에 대해 설명합니다.  

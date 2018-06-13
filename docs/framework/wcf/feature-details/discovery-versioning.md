@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33489182"
 ---
 # <a name="discovery-versioning"></a>검색 버전 관리
 이 항목에서는 일부 새 검색 기능의 구현에 대해 간략하게 설명하고 사용할 검색 버전을 선택하는 방법에 대해서도 간략하게 설명합니다.  

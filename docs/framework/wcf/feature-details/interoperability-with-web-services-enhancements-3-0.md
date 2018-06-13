@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33490921"
 ---
 # <a name="interoperability-with-web-services-enhancements-30"></a>Web Services Enhancements 3.0과의 상호 운용성
 Windows Communication Foundation (WCF) 클라이언트 및 서비스 WCF 클라이언트 및 서비스의 2004 년 8 월 버전을 사용 하도록 구성 된 경우 Microsoft.NET (WSE) 클라이언트와 서비스에 대 한 Web Services Enhancements 3.0과 유선 수준 호환 되는 Ws-addressing 사양입니다.  

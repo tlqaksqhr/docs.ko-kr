@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33494324"
 ---
 # <a name="how-to-access-wcf-services-with-one-way-and-request-reply-contracts"></a>방법: 단방향 및 요청-회신 계약을 사용하여 WCF 서비스 액세스
 다음 절차는 Windows Communication Foundation (WCF) 서비스에 액세스 하는 단방향 계약 및 요청-회신 계약을 정의 하 고 이중 통신 패턴을 사용 하지 않는 방법을 설명 합니다.  

@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33491844"
 ---
 # <a name="integrating-with-com-applications"></a>COM 응용 프로그램과 통합
 Windows Communication Foundation (WCF) 서비스는 WCF 서비스 모니커를 사용 하 여 기존 코드에 직접 통합할 수 있습니다. 서비스 모니커는 Office VBA, Visual Basic 6.0 또는 Visual C++ 6.0과 같은 다양한 범위의 COM 기반 개발 환경에서 사용할 수 있습니다.  

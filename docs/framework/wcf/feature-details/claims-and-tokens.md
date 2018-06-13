@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33491857"
 ---
 # <a name="claims-and-tokens"></a>클레임 및 토큰
 이 항목에서는 Windows Communication Foundation (WCF) 지원 되는 기본 토큰 으로부터 만드는 다양 한 클레임 유형을 설명 합니다.  

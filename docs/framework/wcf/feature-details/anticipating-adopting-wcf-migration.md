@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33490047"
 ---
 # <a name="anticipating-adopting-the-windows-communication-foundation-easing-future-migration"></a>Windows Communication Foundation 채택 예상: 이후의 마이그레이션을 용이하게 함
 을 보장 하기 위해 새로운 ASP.NET 응용 프로그램을 WCF로 쉽게는 향후 마이그레이션 권장 사항 뿐만 아니라 다음 권장 사항을 따릅니다.  

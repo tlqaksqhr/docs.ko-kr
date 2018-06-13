@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33491629"
 ---
 # <a name="best-practices-for-reliable-sessions"></a>신뢰할 수 있는 세션을 위한 최선의 방법
 

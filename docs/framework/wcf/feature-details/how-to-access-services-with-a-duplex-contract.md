@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33490154"
 ---
 # <a name="how-to-access-services-with-a-duplex-contract"></a>방법: 이중 계약을 사용하여 서비스 액세스
 Windows Communication Foundation (WCF)의 기능 중 하나는 이중 메시징 패턴을 사용 하는 서비스를 만드는 기능입니다. 이 패턴을 사용하면 서비스에서 콜백을 통해 클라이언트와 통신할 수 있습니다. 이 항목에서는 콜백 인터페이스를 구현 하는 클라이언트 클래스에는 WCF 클라이언트를 만드는 단계를 보여 줍니다.  

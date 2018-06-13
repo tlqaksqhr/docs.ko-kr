@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33492208"
 ---
 # <a name="forward-compatible-data-contracts"></a>이후 버전과 호환되는 데이터 계약
 Foundation WCF (Windows Communication) 데이터 계약 시스템은 계약의 계약 하는 기능 시간이 지남에 따라 줄 바꿈하지 않는 방법으로 개발할 수 있습니다. 즉, 이전 버전의 데이터 계약을 가진 클라이언트가 새 버전의 동일한 데이터 계약을 가진 서비스와 통신할 수 있거나, 새 버전의 데이터 계약을 가진 클라이언트가 이전 버전의 동일한 데이터 계약과 통신할 수 있습니다. 자세한 내용은 참조 [모범 사례: 데이터 계약 버전 관리](../../../../docs/framework/wcf/best-practices-data-contract-versioning.md)합니다.  

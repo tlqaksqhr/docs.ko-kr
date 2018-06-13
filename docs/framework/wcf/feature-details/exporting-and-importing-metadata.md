@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33495426"
 ---
 # <a name="exporting-and-importing-metadata"></a>메타데이터 내보내기 및 가져오기
 Windows Communication Foundation (WCF), 서비스 끝점을 설명 하는 클라이언트 서비스를 사용 하는 방법을 이해 하는 데 사용할 수 있는 병렬의 표준화 된 표현으로 하는 과정은 메타 데이터 내보내기. 서비스 메타데이터 가져오기는 서비스 메타데이터에서 <xref:System.ServiceModel.Description.ServiceEndpoint> 인스턴스 또는 부분을 생성하는 프로세스입니다.  
