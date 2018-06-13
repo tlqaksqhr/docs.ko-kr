@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33494019"
 ---
 # <a name="generating-a-wcf-client-from-service-metadata"></a>서비스 메타데이터에서 WCF 클라이언트 생성
 이 항목에서는 Svcutil.exe의 여러 가지 스위치를 사용하여 메타데이터 문서에서 클라이언트를 생성하는 방법에 대해 설명합니다.  

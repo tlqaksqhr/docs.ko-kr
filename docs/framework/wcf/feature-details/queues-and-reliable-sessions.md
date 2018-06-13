@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33494672"
 ---
 # <a name="queues-and-reliable-sessions"></a>큐 및 신뢰할 수 있는 세션
 큐 및 신뢰할 수 있는 세션은 신뢰할 수 있는 메시징을 구현 하는 Windows Communication Foundation (WCF) 기능입니다. 이 섹션에 포함 된 항목 WCF 신뢰할 수 있는 메시징 기능에 설명 합니다.  

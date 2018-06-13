@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33493604"
 ---
 # <a name="how-to-error-handling"></a>방법: 오류 처리
 이 항목에서는 오류 처리를 사용하는 라우팅 구성을 만드는 데 필요한 기본 단계에 대해 간략하게 설명합니다. 이 예제에서는 메시지를 대상 끝점으로 라우트합니다. 네트워크 또는 통신 관련 오류(<xref:System.ServiceModel.CommunicationException>)로 인해 메시지를 전달할 수 없는 경우에는 메시지가 대체 끝점으로 다시 보내집니다.  

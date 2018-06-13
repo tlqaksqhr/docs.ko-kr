@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33494541"
 ---
 # <a name="changing-the-cache-sharing-levels-for-send-activities"></a>Send 활동의 캐시 공유 수준 변경
 <xref:System.ServiceModel.Activities.SendMessageChannelCache> 확장을 사용하면 <xref:System.ServiceModel.Activities.Send> 메시징 활동을 사용하여 서비스 끝점으로 메시지를 전송하는 워크플로에 대한 채널 캐시 설정, 채널 팩터리 캐시 설정 및 캐시 공유 수준을 사용자 지정할 수 있습니다. 이러한 워크플로는 일반적으로 클라이언트 워크플로이지만 <xref:System.ServiceModel.WorkflowServiceHost>에서 호스팅되는 워크플로 서비스일 수도 있습니다. 채널 팩터리 캐시는 캐시된 <xref:System.ServiceModel.ChannelFactory%601> 개체를 포함하고, 채널 캐시는 캐시된 채널을 포함합니다.  

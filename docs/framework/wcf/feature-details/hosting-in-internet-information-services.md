@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33494116"
 ---
 # <a name="hosting-in-internet-information-services"></a>인터넷 정보 서비스에서의 호스팅
 Windows Communication Foundation (WCF) 서비스를 호스팅하기 위한 한 가지 옵션은 인터넷 정보 서비스 (IIS) 응용 프로그램 내부 하는 것입니다. 이 호스팅 모델은 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 및 ASP.NET 웹 서비스(ASMX) 웹 서비스에서 사용되는 모델과 비슷합니다.  

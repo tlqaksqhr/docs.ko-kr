@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33491961"
 ---
 # <a name="accessing-wcf-services-with-a-windows-store-client-app"></a>Windows 스토어 클라이언트 응용 프로그램을 사용하여 WCF 서비스에 액세스
 Windows 8에서는 Windows 스토어 응용 프로그램이라는 새로운 형식의 응용 프로그램을 제공합니다. 이러한 응용 프로그램은 터치 스크린 인터페이스를 바탕으로 설계되었습니다. .NET Framework 4.5에서는 Windows 스토어 응용 프로그램을 사용하여 WCF 서비스를 호출할 수 있습니다.  

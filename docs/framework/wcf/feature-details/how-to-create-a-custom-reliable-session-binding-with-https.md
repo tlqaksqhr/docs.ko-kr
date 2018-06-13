@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33492764"
 ---
 # <a name="how-to-create-a-custom-reliable-session-binding-with-https"></a>방법: HTTPS를 사용하여 신뢰할 수 있는 사용자 지정 세션 바인딩 만들기
 

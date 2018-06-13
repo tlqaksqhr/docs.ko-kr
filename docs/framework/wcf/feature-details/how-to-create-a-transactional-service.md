@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33494981"
 ---
 # <a name="how-to-create-a-transactional-service"></a>방법: 트랜잭션 서비스 만들기
 이 샘플에서는 트랜잭션 서비스 만들기의 다양한 측면과 함께, 클라이언트에서 시작한 트랜잭션을 사용하여 서비스 작업을 조정하는 방법을 보여 줍니다.  

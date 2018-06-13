@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33508063"
 ---
 # <a name="custom-secure-metadata-endpoint"></a>Custom Secure Metadata Endpoint
 이 샘플을 구성 하는 방법과 비 메타 데이터 교환 바인딩을 중 하나를 사용 하 여 보안 메타 데이터 끝점을 사용 하 여 서비스를 구현 하는 방법을 보여 줍니다. [ServiceModel Metadata 유틸리티 도구 (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) 또는 인출 하는 클라이언트는 이러한 메타 데이터 끝점에서 메타 데이터입니다. 메타데이터 끝점을 노출하는 데 시스템에서 제공한 두 가지 바인딩, mexHttpBinding 및 mexHttpsBinding을 사용할 수 있습니다. mexHttpBinding은 HTTP를 통해 비보안 방식으로 메타데이터 끝점을 노출하는 데 사용되고, mexHttpsBinding은 HTTPS를 통해 보안 방식으로 메타데이터 끝점을 노출하는 데 사용됩니다. 이 샘플에서는 <xref:System.ServiceModel.WSHttpBinding>을 사용하여 보안 메타데이터 끝점을 노출하는 방법을 보여 줍니다. 바인딩의 보안 설정을 변경하려고 하지만 HTTPS를 사용하지 않으려는 경우 이 방법을 사용할 수 있습니다. mexHttpsBinding을 사용하면 메타데이터 끝점이 보안되지만 바인딩 설정은 수정할 수 없습니다.  

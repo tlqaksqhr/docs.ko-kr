@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33495056"
 ---
 # <a name="message-security-with-an-anonymous-client"></a>익명 클라이언트를 사용하는 메시지 보안
 다음 시나리오에서는 클라이언트와 서비스는 Windows Communication Foundation (WCF) 메시지 보안 적용을 보여 줍니다. 이 디자인은 전송 보안 대신 메시지 보안을 사용하여 나중에 보다 다양한 클레임 기반 모델을 지원할 수 있도록 하는 것을 목적으로 합니다. 권한 부여에 대 한 다양 한 클레임을 사용 하는 방법에 대 한 자세한 내용은 참조 [관리 클레임 및 권한 부여 Id 모델](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md)합니다.  

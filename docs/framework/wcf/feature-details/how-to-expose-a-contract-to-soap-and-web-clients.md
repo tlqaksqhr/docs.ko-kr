@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33494152"
 ---
 # <a name="how-to-expose-a-contract-to-soap-and-web-clients"></a>방법: SOAP 및 웹 클라이언트에 계약 공개
 에서는 기본적으로 Windows Communication Foundation (WCF) 끝점이 사용할 수 있는 SOAP 클라이언트에만 합니다. [하는 방법: 기본 WCF 웹 HTTP 서비스 만들기](../../../../docs/framework/wcf/feature-details/how-to-create-a-basic-wcf-web-http-service.md), 비 SOAP 클라이언트를 끝점 사용할 수 있습니다. 동일한 계약을 웹 끝점 및 SOAP 끝점으로 모두 사용해야 하는 경우가 있습니다. 이 항목에서는 이 작업을 수행하는 방법을 보여 줍니다.  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33491804"
 ---
 # <a name="how-to-service-data-partitioning"></a>방법: 서비스 데이터 분할
 이 항목에서는 동일한 대상 서비스의 여러 인스턴스에서 메시지를 분할하는 데 필요한 기본 단계에 대해 간략하게 설명합니다. 일반적으로 서비스 데이터 분할은 더 좋은 품질의 서비스를 제공하기 위해 서비스의 크기를 조정해야 하는 경우나 다양한 고객의 요청을 특정 방식으로 처리해야 하는 경우에 사용됩니다. 예를 들어 우수 또는 "골드" 고객의 메시지는 일반 고객의 메시지 보다 더 높은 우선 순위로 처리 해야 합니다.  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33494202"
 ---
 # <a name="interoperability-with-pox-applications"></a>POX 응용 프로그램과의 상호 운용성
 "Plain Old XML" (POX) 응용 프로그램은 SOAP 봉투 내에 포함 되지 않은 XML 응용 프로그램 데이터만 포함 하는 원시 HTTP 메시지를 교환 하 여 통신 합니다. Windows Communication Foundation (WCF) 서비스와 POX 메시지를 사용 하는 클라이언트에 제공할 수 있습니다. 서비스에서 WCF 웹 브라우저 같은 클라이언트에 끝점을 노출 하는 서비스 및 스크립팅 언어 POX 메시지를 구현 하 사용할 수 있습니다. 클라이언트에서 POX 기반 서비스와 통신 하는 클라이언트를 구현 하는 WCF 프로그래밍 모델을 사용할 수 있습니다.  

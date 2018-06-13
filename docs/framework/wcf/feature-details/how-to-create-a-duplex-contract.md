@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33491932"
 ---
 # <a name="how-to-create-a-duplex-contract"></a>방법: 이중 계약 만들기
 이 항목에서는 이중(양방향) 계약을 사용하는 메서드를 만드는 기본 단계를 보여 줍니다. 이중 계약을 사용하면 클라이언트와 서버가 각각 독립적으로 통신하므로 서로 호출을 시작할 수 있습니다. 이중 계약은 Windows Communication Foundation (WCF) 서비스를 사용할 수 있는 세 가지 메시지 패턴 중 하나입니다. 다른 두 가지 메시지 패턴은 단방향과 요청-회신입니다. 이중 계약은 클라이언트와 서버 간 두 개의 단방향 계약으로 구성되며, 메서드 호출을 상호 관련시키지 않아도 됩니다. 서비스가 클라이언트에 세부 정보를 쿼리하거나 클라이언트에서 이벤트를 명시적으로 발생시킬 때 이러한 종류의 계약을 사용합니다. 이중 계약에 대 한 클라이언트 응용 프로그램을 만드는 방법에 대 한 자세한 내용은 참조 [하는 방법: 이중 계약와 함께 Access Services](../../../../docs/framework/wcf/feature-details/how-to-access-services-with-a-duplex-contract.md)합니다. 작업 예제에 대 한 참조는 [이중](../../../../docs/framework/wcf/samples/duplex.md) 샘플.  

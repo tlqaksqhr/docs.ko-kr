@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33492514"
 ---
 # <a name="integrating-enterprise-services-transactional-components"></a>엔터프라이즈 서비스 트랜잭션 구성 요소 통합
 엔터프라이즈 서비스와 통합 하기 위한 자동 메커니즘을 제공 하는 Windows Communication Foundation (WCF) (참조 [COM + 응용 프로그램과 통합](../../../../docs/framework/wcf/feature-details/integrating-with-com-plus-applications.md)). 하지만 엔터프라이즈 서비스에 호스트된 트랜잭션 구성 요소를 내부적으로 사용하는 서비스를 개발하기 위한 유연성이 필요할 수 있습니다. WCF 트랜잭션 기능은 기반으로 하므로 <xref:System.Transactions> 인프라, 엔터프라이즈 서비스와 WCF 통합에 대 한 프로세스는 간의 상호 운용성을 지정 하는 데 동일 <xref:System.Transactions> 및 설명에 따라 엔터프라이즈 서비스 [엔터프라이즈 서비스와 COM + 트랜잭션을와 상호 운용성](http://go.microsoft.com/fwlink/?LinkId=94949)합니다.  

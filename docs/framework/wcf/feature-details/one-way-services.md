@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33494376"
 ---
 # <a name="one-way-services"></a>단방향 서비스
 서비스 작업의 기본 동작은 요청-회신 패턴입니다. 요청-회신 패턴의 경우 서비스 작업이 `void` 메서드로 코드에 표현된 경우에도 클라이언트에서 회신 메시지를 기다립니다. 단방향 작업을 사용하는 경우 하나의 메시지만 전송됩니다. 수신자는 회신 메시지를 보내지 않으며 발신자도 메시지를 기다리지 않습니다.  

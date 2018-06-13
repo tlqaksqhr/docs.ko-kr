@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33494129"
 ---
 # <a name="choosing-a-filter"></a>필터 선택
 라우팅 서비스를 구성할 때는 올바른 메시지 필터를 선택하고 수신하는 메시지와 정확히 일치하도록 메시지 필터를 구성해야 합니다. 선택한 필터가 과도하게 광범위하거나 올바르게 구성되지 않은 경우 메시지가 잘못 라우트됩니다. 필터가 너무 제한적인 경우에는 일부 메시지에 유효한 경로가 제공되지 않을 수 있습니다.  

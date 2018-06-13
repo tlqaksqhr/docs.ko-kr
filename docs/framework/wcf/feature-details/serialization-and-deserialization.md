@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33508615"
 ---
 # <a name="serialization-and-deserialization"></a>Serialization 및 Deserialization
 Windows Communication Foundation (WCF)는 새로운 serialization 엔진인 포함 된 <xref:System.Runtime.Serialization.DataContractSerializer>합니다. <xref:System.Runtime.Serialization.DataContractSerializer> 는 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 개체를 XML로, XML을 .NET Framework 개체로 변환합니다. 이 항목에서는 serializer가 작동하는 방식에 대해 설명합니다.  

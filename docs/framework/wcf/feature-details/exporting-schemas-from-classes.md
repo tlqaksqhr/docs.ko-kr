@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33494545"
 ---
 # <a name="exporting-schemas-from-classes"></a>클래스에서 스키마 내보내기
 데이터 계약 모델에 사용되는 클래스에서 XSD(XML 스키마 정의 언어) 스키마를 생성하려면 <xref:System.Runtime.Serialization.XsdDataContractExporter> 클래스를 사용합니다. 이 항목에서는 스키마를 만드는 프로세스에 대해 설명합니다.  

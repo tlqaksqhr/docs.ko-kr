@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33492725"
 ---
 # <a name="how-to-create-a-service-that-requires-sessions"></a>방법: 세션이 필요한 서비스 만들기
 세션은 콜백, 다중 홉 보안 및 클라이언트와 서비스 인스턴스 간의 연결과 같은 유용한 기능을 사용하는 둘 이상의 끝점 사이에서 공유 상태를 만듭니다. Windows Communication Foundation (WCF) 응용 프로그램에서 세션에 대 한 자세한 내용은 참조 [를 사용 하 여 세션](../../../../docs/framework/wcf/using-sessions.md)합니다.  

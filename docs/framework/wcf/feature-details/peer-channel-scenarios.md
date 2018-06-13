@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33492986"
 ---
 # <a name="peer-channel-scenarios"></a>피어 채널 시나리오
 피어 채널 API는 다음과 같은 개발 시나리오를 지원합니다.  

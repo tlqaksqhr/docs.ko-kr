@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33495082"
 ---
 # <a name="readme-for-extended-protection-authentication-sample"></a>인증에 대한 확장된 보호 ReadMe 샘플
 확장 된 보호는 공격자 (에서 "man에서-들기")는 클라이언트의 자격 증명을 가로채 고 하는 클라이언트의 의도 된 서버에서 보안 리소스에 액세스 하는 데 사용 중간자 개입 (mitm 메시지) 공격 으로부터 보호 하려면 보안 이니셔티브입니다.  

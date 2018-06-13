@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33493323"
 ---
 # <a name="how-to-register-and-configure-a-service-moniker"></a>방법: 서비스 모니커 등록 및 구성
 형식화 된 계약이 있는 COM 응용 프로그램 내에서 Windows Communication Foundation (WCF) 서비스 모니커를 사용 하기 전에 필요한 특성 사용된 하는 형식을 COM에 등록 하며 필수 바인딩을 사용 하 여 COM 응용 프로그램과 모니커를 구성 합니다. 구성입니다.  

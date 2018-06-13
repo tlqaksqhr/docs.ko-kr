@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33495537"
 ---
 # <a name="choosing-a-transport"></a>전송 선택
 이 항목에서는 Windows Communication Foundation (WCF)에 포함 된 3 개의 주요 전송 사이의 선택 기준에 설명: HTTP, TCP 및 명명 된 파이프 합니다. WCF도 포함 됩니다. 메시지 큐 (MSMQ) 전송 되지만이 문서는 메시지 큐를 처리 하지 않습니다.  

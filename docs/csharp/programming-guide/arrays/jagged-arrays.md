@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33297370"
 ---
 # <a name="jagged-arrays-c-programming-guide"></a>가변 배열(C# 프로그래밍 가이드)
 가변 배열의 요소에는 배열이 사용됩니다. 가변 배열의 요소는 차원과 크기가 서로 다를 수 있습니다. 가변 배열을 “배열의 배열”이라고도 합니다. 다음 예제에서는 가변 배열을 선언, 초기화 및 액세스하는 방법을 보여 줍니다.  
