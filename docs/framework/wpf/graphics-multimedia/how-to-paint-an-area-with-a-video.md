@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33560779"
 ---
 # <a name="how-to-paint-an-area-with-a-video"></a>방법: 비디오로 영역 그리기
 이 예제에는 미디어와 영역을 그리는 방법을 보여 줍니다. 한 가지 방법은 미디어를 사용 하 여 영역을 그리는 데 사용 하는 것을 <xref:System.Windows.Controls.MediaElement> 와 함께 한 <xref:System.Windows.Media.VisualBrush>합니다. 사용 하 여는 <xref:System.Windows.Controls.MediaElement> 로드는 미디어 재생 및를 사용 하 여 설정 하는 <xref:System.Windows.Media.VisualBrush.Visual%2A> 의 속성은 <xref:System.Windows.Media.VisualBrush>합니다. 그런 다음 사용할 수는 <xref:System.Windows.Media.VisualBrush> 로드 된 미디어를 사용 하 여 영역을 그리는 데 합니다.  
