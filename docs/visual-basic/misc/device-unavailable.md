@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33634848"
 ---
 # <a name="device-unavailable"></a>장치를 사용할 수 없습니다.
 네트워크 연결이 끊어졌거나, 액세스하려는 장치가 오프라인 상태이거나 존재하지 않습니다.  

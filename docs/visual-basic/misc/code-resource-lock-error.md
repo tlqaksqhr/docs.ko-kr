@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33635608"
 ---
 # <a name="code-resource-lock-error"></a>코드 리소스 잠금 오류입니다.
 코드 리소스의 프로시저를 호출했습니다. 코드 리소스를 찾았지만 리소스를 잠그려고 할 때 오류가 발생했습니다. 리소스를 사용 중인 것 같습니다.  

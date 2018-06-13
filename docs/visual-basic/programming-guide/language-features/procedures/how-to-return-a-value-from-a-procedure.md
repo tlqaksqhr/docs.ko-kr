@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33651836"
 ---
 # <a name="how-to-return-a-value-from-a-procedure-visual-basic"></a>방법: 프로시저에서 값 반환(Visual Basic)
 A `Function` 프로시저가 반환 값을 호출 하는 코드 실행 하거나 한 `Return` 문 또는 발생 하 여는 `Exit Function` 또는 `End Function` 문.  

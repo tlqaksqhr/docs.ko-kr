@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33636717"
 ---
 # <a name="one-or-more-folders-in-the-target-path-do-not-exist"></a>대상 경로에 하나 이상의 폴더가 없는 경우
 대상 경로에 포함되는 하나 이상의 디렉터리가 없는 경우입니다. 경로가 올바르게 구문 분석되지 않은 것 같습니다. 특히 상대 경로를 지정하는 경우 그럴 수 있습니다.  

@@ -19,6 +19,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33655800"
 ---
 # <a name="boolean-expressions-visual-basic"></a>부울 식(Visual Basic)
 A *부울 식* 식의 값으로 계산 되는 [Boolean 데이터 형식](../../../../visual-basic/language-reference/data-types/boolean-data-type.md): `True` 또는 `False`합니다. `Boolean` 식에는 여러 가지 형식을 취할 수 있습니다. 가장 간단한는 값의 직접 비교는 `Boolean` 변수를 한 `Boolean` 리터럴, 다음 예제와 같이 합니다.  

@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33655813"
 ---
 # <a name="references-to-declared-elements-visual-basic"></a>선언된 요소 참조(Visual Basic)
 코드에서 선언 된 요소를 참조 하는 경우 Visual Basic 컴파일러에서 참조를 해당 이름의 적절 한 선언에 있는 이름과 일치 합니다. 이름이 같은 둘 이상의 요소가 선언 된 경우 요소를 참조할 수는 제어할 수 있습니다 *조건에 맞는* 이름입니다.  

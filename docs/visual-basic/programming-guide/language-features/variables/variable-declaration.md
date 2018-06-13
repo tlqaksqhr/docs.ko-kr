@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33656141"
 ---
 # <a name="variable-declaration-in-visual-basic"></a>Visual Basic의 변수 선언
 이름 및 특성을 지정 하려면 변수를 선언 합니다. 변수에 대 한 선언문이 [Dim 문](../../../../visual-basic/language-reference/statements/dim-statement.md)합니다. 해당 위치 및 내용을 변수의 특성을 결정 합니다.  

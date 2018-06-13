@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33636927"
 ---
 # <a name="for-loop-not-initialized-visual-basic"></a>For 루프가 초기화되지 않았습니다(Visual Basic).
 `For...Next` 루프 중간으로 점프했습니다.  

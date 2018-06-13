@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33636046"
 ---
 # <a name="search-text-not-found"></a>검색 텍스트를 찾을 수 없습니다.
 지정한 텍스트를 찾을 수 없습니다.  

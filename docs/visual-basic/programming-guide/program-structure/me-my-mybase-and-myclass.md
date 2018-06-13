@@ -26,6 +26,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33650529"
 ---
 # <a name="me-my-mybase-and-myclass-in-visual-basic"></a>Visual Basic의 Me, My, MyBase 및 MyClass
 `Me``My`, `MyBase`, 및 `MyClass` Visual Basic의 비슷한 이름을 하지만 서로 다른 목적으로 있어야 합니다. 이 항목에서는 구별할 수 있도록 이러한 각 엔터티를 설명 합니다.  

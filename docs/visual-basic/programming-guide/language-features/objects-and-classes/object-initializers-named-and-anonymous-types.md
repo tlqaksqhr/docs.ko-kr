@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33655638"
 ---
 # <a name="object-initializers-named-and-anonymous-types-visual-basic"></a>개체 이니셜라이저: 명명된 형식과 익명 형식(Visual Basic)
 개체 이니셜라이저를 사용 하 여 단일 식을 사용 하 여 복잡 한 개체에 대 한 속성을 지정할 수 있습니다. 명명 된 형식의 및 익명 형식의 인스턴스를 만드는 데 사용할 수 있습니다.  

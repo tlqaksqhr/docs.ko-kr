@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33654944"
 ---
 # <a name="program-structure-and-code-conventions-visual-basic"></a>프로그램 구조 및 코드 규칙(Visual Basic)
 이 섹션 일반적인 Visual Basic 프로그램 구조를 소개 하 고, "Hello, World" 간단한 Visual Basic 프로그램을 제공, Visual Basic 코드 규칙을 설명 합니다. 코드 규칙은 프로그램의 논리에 없는 있지만 물리적 구조 및 모양에 집중 하는 제안 사항입니다. 그 뒤에 더 쉽게 코드를 읽고, 이해 하며 관리 합니다. 코드 규칙 다른 규칙 으로부터 포함할 수 있습니다.  

@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33655214"
 ---
 # <a name="how-to-match-a-string-against-a-pattern-visual-basic"></a>방법: 패턴에 대해 문자열 비교(Visual Basic)
 식을 확인 하려는 경우는 [문자열 데이터 형식](../../../../visual-basic/language-reference/data-types/string-data-type.md) 사용 하 여 패턴을 만족는 [Like 연산자](../../../../visual-basic/language-reference/operators/like-operator.md)합니다.  

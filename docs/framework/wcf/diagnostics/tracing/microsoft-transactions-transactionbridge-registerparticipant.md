@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33476052"
 ---
 # <a name="microsofttransactionstransactionbridgeregisterparticipant"></a>Microsoft.Transactions.TransactionBridge.RegisterParticipant
 WS-Atomic Transaction 프로토콜 서비스가 제어 프로토콜에 참가자를 등록했습니다.  

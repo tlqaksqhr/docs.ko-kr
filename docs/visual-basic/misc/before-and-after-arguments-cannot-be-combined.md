@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33636681"
 ---
 # <a name="39before39-and-39after39-arguments-cannot-be-combined"></a>&#39;하기 전에&#39; 및 &#39;후&#39; 인수는 함께 사용할 수 없습니다
 인수 목록에는 상호 배타적인 `Before` 및 `After` 인수가 모두 포함됩니다.  

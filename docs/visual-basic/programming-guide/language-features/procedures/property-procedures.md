@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33656089"
 ---
 # <a name="property-procedures-visual-basic"></a>Property 프로시저(Visual Basic)
 속성 프로시저는 일련의 모듈, 클래스 또는 구조체에서 사용자 지정 속성을 조작 하는 Visual Basic 문입니다. 속성 프로시저는 라고도 *속성 접근자*합니다.  

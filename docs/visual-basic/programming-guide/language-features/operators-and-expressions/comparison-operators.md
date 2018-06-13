@@ -20,6 +20,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33655144"
 ---
 # <a name="comparison-operators-in-visual-basic"></a>Comparison Operators in Visual Basic
 두 식을 비교 하 고 반환 하는 비교 연산자는 `Boolean` 값의 관계를 나타내는 값입니다. 숫자 값, 문자열, 비교 연산자 및 개체를 비교 연산자를 비교 하는 데는 연산자입니다. 세 가지 유형의 연산자를 모두 여기에 설명 되어 있습니다.  

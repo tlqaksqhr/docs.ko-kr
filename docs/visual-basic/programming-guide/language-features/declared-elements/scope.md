@@ -20,6 +20,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33656297"
 ---
 # <a name="scope-in-visual-basic"></a>Visual Basic의 범위
 *범위* 의 선언 된 요소는 집합을 통해 사용할 수 있도록 하거나 이름을 한정 하지 않고 변수를 참조할 수 있는 모든 코드는 [Imports 문 (.NET Namespace 및 형식)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)합니다. 요소는 다음 수준 중 하나에서 범위를 가질 수 있습니다.  

@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33635686"
 ---
 # <a name="connection-to-type-library-or-object-library-for-remote-process-has-been-lost"></a>원격 프로세스의 형식 라이브러리 또는 개체 라이브러리에 대한 연결이 끊어졌습니다.
 원격 프로세스의 개체 라이브러리 또는 형식 라이브러리에 대한 연결이 끊어졌습니다.  

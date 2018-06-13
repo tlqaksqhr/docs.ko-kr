@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33650688"
 ---
 # <a name="differences-between-parameters-and-arguments-visual-basic"></a>매개 변수와 인수의 차이점(Visual Basic)
 대부분의 경우에서 프로시저 호출 된 있는 상황에 대 한 정보가 제공 되어야 합니다. 반복 또는 공유 작업을 수행 하는 프로시저는 각 호출에 대 한 다른 정보를 사용 합니다. 이 정보는 변수, 상수, 및 호출 하면 프로시저에 전달 하는 식으로 구성 됩니다.  

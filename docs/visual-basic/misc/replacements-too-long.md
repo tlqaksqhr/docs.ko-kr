@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33634835"
 ---
 # <a name="replacements-too-long"></a>대체 텍스트가 너무 깁니다.
 허용된 길이를 초과하는 대체 텍스트를 지정했습니다.  

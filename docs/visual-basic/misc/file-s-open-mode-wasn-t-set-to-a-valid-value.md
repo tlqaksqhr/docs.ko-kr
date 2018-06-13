@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33635908"
 ---
 # <a name="file39s-open-mode-wasn39t-set-to-a-valid-value"></a>파일&#39;s 모드가 열고&#39;t 유효한 값으로 설정 합니다.
 파일의 열기 모드에 대해 제공된 값이 잘못되었습니다. 다음 표에서는 <xref:Microsoft.VisualBasic.OpenMode> 열거형에 유효한 값을 보여 줍니다.  

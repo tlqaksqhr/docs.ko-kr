@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33633701"
 ---
 # <a name="insufficient-security-permissions-to-set-the-system-date"></a>시스템 날짜를 설정할 수 있는 보안 권한이 없습니다.
 시스템 날짜를 설정할 수 있는 보안 권한이 없습니다.  

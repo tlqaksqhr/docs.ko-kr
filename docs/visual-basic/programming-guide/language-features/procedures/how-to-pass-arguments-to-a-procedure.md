@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33650594"
 ---
 # <a name="how-to-pass-arguments-to-a-procedure-visual-basic"></a>방법: 프로시저에 인수 전달(Visual Basic)
 프로시저를 호출 하는 경우에 인수 목록 괄호로 묶어 프로시저 이름 뒤에. 프로시저에 정의 된 모든 필수 매개 변수에 해당 하는 인수를 제공 하 고 인수를 선택적으로 제공할 수는 `Optional` 매개 변수입니다. 지정 하지 않으면 프로그램 `Optional` 호출에 매개 변수를 모든 후속 인수를 제공 하는 경우 인수 목록에 해당 위치를 표시 하려면 쉼표를 포함 해야 합니다.  

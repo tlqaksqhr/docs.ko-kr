@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33654231"
 ---
 # <a name="lifetime-in-visual-basic"></a>Visual Basic의 수명
 *수명* 는 시간 동안의 선언 된 요소는 자신이 사용 하 여 사용할 수 있습니다. 변수는 수명이 유일한 요소입니다. 이 작업을 위해 컴파일러가 프로시저 매개 변수를 처리 하 고 함수 변수의 특별 한 경우로 반환 합니다. 변수의 수명은 해당 값을 보유할 수 있는 시간을 나타냅니다. 해당 값은 수명 주기 동안 변경 될 수 있지만 항상 어떤 값을 가집니다.  

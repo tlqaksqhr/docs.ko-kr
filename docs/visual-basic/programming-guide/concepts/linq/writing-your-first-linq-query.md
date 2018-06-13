@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33654892"
 ---
 # <a name="writing-your-first-linq-query-visual-basic"></a>LINQ 쿼리 처음 작성(Visual Basic)
 *쿼리*는 데이터 소스에서 데이터를 검색하는 식입니다. 쿼리는 전용된 쿼리 언어로 표현 됩니다. 시간이 지남에 따라 다른 언어로 개발 되었습니다 다양 한 유형의 데이터 원본에 대 한 예를 들어, 관계형 데이터베이스에 대 한 SQL 및 XML에 대 한 XQuery. 이렇게 하면 응용 프로그램 개발자가 각 유형의 데이터 원본 또는 지원 되는 데이터 형식에 대 한 새 쿼리 언어를 배울 필요 합니다.  

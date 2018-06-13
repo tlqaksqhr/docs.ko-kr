@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33635841"
 ---
 # <a name="could-not-obtain-memory-information-due-to-internal-error"></a>내부 오류 때문에 메모리 정보를 가져올 수 없습니다.
 `My.Computer.Info` 개체의 메모리 정보 속성 중 하나에 대한 호출이 실패했습니다.  

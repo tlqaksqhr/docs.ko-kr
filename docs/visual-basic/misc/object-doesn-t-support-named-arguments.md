@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33636743"
 ---
 # <a name="object-doesn39t-support-named-arguments"></a>개체 원본이&#39;t 지원 명명 된 인수
 메서드가 명명된 인수를 지원하지 않는 개체에 액세스하려고 했습니다.  

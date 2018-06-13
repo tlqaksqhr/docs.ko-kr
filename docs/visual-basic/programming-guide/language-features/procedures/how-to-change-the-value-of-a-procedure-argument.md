@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33655839"
 ---
 # <a name="how-to-change-the-value-of-a-procedure-argument-visual-basic"></a>방법: 프로시저 인수의 값 변경(Visual Basic)
 프로시저를 호출할 때 각 인수를 제공 하는 프로시저에 정의 된 매개 변수 중 하나에 해당 합니다. 경우에 따라 프로시저 코드에서 호출 코드의 기반이 되는 값을 변경할 수 있습니다. 다른 경우에 프로시저 자체 로컬 복사본 인수를 변경할 수 있습니다.  

@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33656349"
 ---
 # <a name="walkthrough-implementing-ienumerableof-t-in-visual-basic"></a>연습: Visual Basic에서 IEnumerable(Of T) 구현
 <xref:System.Collections.Generic.IEnumerable%601> 인터페이스는 한 번에 하나의 항목 값의 시퀀스를 반환할 수 있는 클래스에서 구현 됩니다. 데이터를 한 번에 한 항목은 작업을 메모리에 완전 한 데이터 집합을 로드할 필요가 없습니다 반환 활용 합니다. 충분 한 메모리를 사용 하 여 데이터에서 단일 항목을 로드 해야 합니다. 구현 하는 클래스는 `IEnumerable(T)` 인터페이스를 함께 사용할 수 있습니다 `For Each` 루프 또는 LINQ 쿼리 합니다.  

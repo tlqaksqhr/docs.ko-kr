@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33636134"
 ---
 # <a name="format-not-valid-in-resource-file"></a>리소스 파일의 형식이 잘못되었습니다.
 프로젝트에 리소스 파일에 Windows 리소스 파일에 대 한 표준 형식 어긋납니다 않거나 리소스 파일 및 Visual Basic 프로젝트 사이 불일치가 있습니다.  

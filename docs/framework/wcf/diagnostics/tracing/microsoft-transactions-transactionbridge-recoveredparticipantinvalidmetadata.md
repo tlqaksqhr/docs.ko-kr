@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33475272"
 ---
 # <a name="microsofttransactionstransactionbridgerecoveredparticipantinvalidmetadata"></a>Microsoft.Transactions.TransactionBridge.RecoveredParticipantInvalidMetadata
 참가자 복구 로그 항목에 있는 끝점 참조에 잘못되었거나 호환되지 않는 메타데이터가 있습니다.  

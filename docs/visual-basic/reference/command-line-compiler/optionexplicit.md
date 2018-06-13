@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33653600"
 ---
 # <a name="-optionexplicit"></a>-optionexplicit
 사용 하면 컴파일러 오류 보고를 사용 하기 전에 선언 되지 않은 경우.  

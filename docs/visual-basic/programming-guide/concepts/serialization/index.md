@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33653272"
 ---
 # <a name="serialization-visual-basic"></a>Serialization(Visual Basic)
 Serialization은 개체를 저장하거나 메모리, 데이터베이스 또는 파일로 전송하기 위해 개체를 바이트 스트림으로 변환하는 프로세스입니다. 주 목적은 필요할 때 다시 만들 수 있도록 개체의 상태를 저장하는 것입니다. 역 프로세스를 deserialization이라고 합니다.  

@@ -20,6 +20,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33655723"
 ---
 # <a name="statements-in-visual-basic"></a>Visual Basic의 문
 Visual Basic의 문은 전체 명령입니다. 키워드, 연산자, 변수, 상수, 및 식을 포함할 수 있습니다. 각 문에 다음 범주 중 하나에 속합니다.  

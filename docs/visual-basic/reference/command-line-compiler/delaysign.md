@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33654244"
 ---
 # <a name="-delaysign"></a>-delaysign
 어셈블리를 완전히 서명할지, 아니면 부분적으로 서명할지를 지정합니다.  

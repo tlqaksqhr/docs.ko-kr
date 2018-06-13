@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33654137"
 ---
 # <a name="building-from-the-command-line-visual-basic"></a>명령줄에서 빌드(Visual Basic)
 Visual Basic 프로젝트는 하나 이상의 별도 소스 파일로 구성 됩니다. 컴파일 이라는 프로세스 동안 이러한 파일 통합할 하나의 패키지로-응용 프로그램으로 실행할 수 있는 단일 실행 파일입니다.  

@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33650201"
 ---
 # <a name="how-to-speed-up-access-to-an-object-with-a-long-qualification-path-visual-basic"></a>방법: 정규화 경로가 긴 개체에 대한 액세스 속도 개선(Visual Basic)
 여러 메서드 및 속성의 정규화 경로가 필요로 하는 개체를 자주 액세스 하는 경우 있습니다 속도를 높일 수 코드 정규화 된 경로 반복 하지 않음으로써 합니다.  

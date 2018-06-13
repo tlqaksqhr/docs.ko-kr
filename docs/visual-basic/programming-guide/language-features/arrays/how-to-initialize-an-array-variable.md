@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33651572"
 ---
 # <a name="how-to-initialize-an-array-variable-in-visual-basic"></a>방법: Visual Basic에서 배열 변수 초기화
 배열에 리터럴을 포함 하 여 배열 변수 초기화는 `New` 절과 배열의 초기 값을 지정 합니다. 형식을 지정 하거나 배열 리터럴의 값에서 유추 될 수 있도록 허용 합니다. 형식 유추 되는 방법에 대 한 자세한 내용은 "채우기는 배열에 초기 값"의 참조 [배열](../../../../visual-basic/programming-guide/language-features/arrays/index.md)합니다.  

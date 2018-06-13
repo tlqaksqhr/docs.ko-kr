@@ -26,6 +26,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33656154"
 ---
 # <a name="logical-and-bitwise-operators-in-visual-basic"></a>Visual Basic의 논리 및 비트 연산자
 논리 연산자 비교 `Boolean` 식 및 반환 된 `Boolean` 결과입니다. `And`, `Or`, `AndAlso`, `OrElse`, 및 `Xor` 연산자는 *이진* 동안 두 개의 피연산자를 고려 하기 때문에 `Not` 연산자는 *단항* 단일 피연산자를 사용 하기 때문에 있습니다. 정수 계열 값의 비트 논리 연산을 수행할 수도 이러한 연산자 중 일부입니다.  

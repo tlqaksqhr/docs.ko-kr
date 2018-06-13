@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33654124"
 ---
 # <a name="structures-and-classes-visual-basic"></a>구조체와 클래스(Visual Basic)
 Visual Basic 구조체와 클래스에 대 한 구문의 통합 합니다. 그러나 구조체와 클래스의 중요 한 차이점이 있습니다.  

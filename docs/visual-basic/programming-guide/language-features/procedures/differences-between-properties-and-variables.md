@@ -19,6 +19,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33651507"
 ---
 # <a name="differences-between-properties-and-variables-in-visual-basic"></a>Visual Basic에서 속성과 변수의 차이점
 변수 및 속성에 모두 액세스할 수 있는 값을 나타냅니다. 그러나, 저장소 및 구현에 차이가 있습니다.  

@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33636730"
 ---
 # <a name="managed-classes-derived-from-a-com-class-cannot-be-called-late-bound"></a>COM 클래스에서 파생된 관리되는 클래스는 런타임에 바인딩된 호출을 할 수 없습니다.
 COM 클래스에서 파생된 관리되는 클래스에 런타임에 바인딩된 호출을 하려고 했습니다. 이러한 호출은 지원되지 않습니다.  

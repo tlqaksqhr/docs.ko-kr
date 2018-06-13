@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33654832"
 ---
 # <a name="structure-of-a-visual-basic-program"></a>Visual Basic 프로그램의 구조
 Visual Basic 프로그램은 표준 구성 요소에서 빌드됩니다. A *솔루션* 하나 이상의 프로젝트를 구성 합니다. A *프로젝트* 어셈블리를 하나 이상 포함할 수 있습니다. 각 *어셈블리* 는 하나 이상의 소스 파일에서 컴파일됩니다. A *소스 파일* 정 및 클래스, 구조체, 모듈 및 모든 코드를 포함 하는 인터페이스의 구현을 제공 합니다.  

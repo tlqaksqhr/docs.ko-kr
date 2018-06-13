@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33634900"
 ---
 # <a name="feature-not-yet-implemented"></a>이 기능은 아직 구현되지 않았습니다.
 Visual Basic에서 현재 구현되지 않은 기능에 액세스하려고 했습니다.  

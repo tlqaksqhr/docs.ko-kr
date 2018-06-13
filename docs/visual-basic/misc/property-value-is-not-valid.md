@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33635954"
 ---
 # <a name="property-value-is-not-valid"></a>속성 값이 잘못되었습니다.
 개체 또는 컨트롤의 속성 중 하나가 범위를 벗어난 값으로 설정되었습니다.  
