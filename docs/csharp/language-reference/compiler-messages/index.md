@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33213212"
 ---
 # <a name="c-compiler-errors"></a>C# 컴파일러 오류
 일부 C# 컴파일러 오류는 오류가 생성된 이유 및 경우에 따라 오류 수정 방법을 설명하는 항목이 있습니다. 특정 오류 메시지에 대해 도움말을 사용할 수 있는지 여부를 확인하려면 다음 단계 중 하나를 사용합니다.  

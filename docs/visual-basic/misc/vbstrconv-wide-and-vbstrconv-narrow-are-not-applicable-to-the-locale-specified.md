@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33641962"
 ---
 # <a name="vbstrconvwide-and-vbstrconvnarrow-are-not-applicable-to-the-locale-specified"></a>VbStrConv.Wide와 VbStrConv.Narrow는 지정한 로캘에 적용할 수 없습니다.
 응용 프로그램이 지정된 로캘에 적용할 수 없는 `VbStrConv` 열거형 멤버 `Wide` 또는 `Narrow`를 사용하려고 시도하고 있습니다.  

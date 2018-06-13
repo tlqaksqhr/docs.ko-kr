@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33562292"
 ---
 # <a name="how-to-use-a-drawing-as-an-image-source"></a>방법: 그림을 이미지 소스로 사용
 사용 하는 방법을 보여 주는이 예제는 <xref:System.Windows.Media.Drawing> 로 <xref:System.Windows.Controls.Image.Source%2A> 에 대 한 프로그램 <xref:System.Windows.Controls.Image> 제어 합니다. 표시 하는 <xref:System.Windows.Media.Drawing> 와 <xref:System.Windows.Controls.Image> 컨트롤을 사용 하 여는 <xref:System.Windows.Media.DrawingImage> 로 <xref:System.Windows.Controls.Image> 컨트롤의 <xref:System.Windows.Controls.Image.Source%2A> 설정는 <xref:System.Windows.Media.DrawingImage> 개체의 <xref:System.Windows.Media.DrawingImage.Drawing%2A?displayProperty=nameWithType> 속성을 표시 하려는 드로잉을 합니다.  

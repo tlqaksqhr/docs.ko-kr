@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: b6cdfa9f3717e4025ff6f4fe6da3c1457cdebf7e
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33422333"
 ---
 # <a name="icordebugreferencevalue-interface1"></a>ICorDebugReferenceValue Interface1
 개체에 대 한 참조 하는 값을 관리 하는 메서드를 제공 합니다. (즉,이 메서드는 포인터를 관리 하는 합니다.) 이 인터페이스는 "ICorDebugValue"를 구현합니다.  

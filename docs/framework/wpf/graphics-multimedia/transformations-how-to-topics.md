@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33562377"
 ---
 # <a name="transformations-how-to-topics"></a>변환 방법 항목
 이 섹션의 항목에는 개체에 다른 변환을 적용 하는 방법을 설명 합니다.  

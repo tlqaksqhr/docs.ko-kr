@@ -18,9 +18,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: c067ee16c8e64a1996b7267069dada4052b39db2
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33452038"
 ---
 # <a name="imetadatavalidate-interface"></a>IMetaDataValidate 인터페이스
 메타데이터 서명의 유효성을 검사할 메서드를 제공합니다.  

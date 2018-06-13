@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33640559"
 ---
 # <a name="specified-registry-path-does-not-start-with-a-valid-hive-name"></a>지정된 레지스트리 경로가 유효한 하이브 이름으로 시작되지 않습니다.
 지정된 레지스트리 경로가 유효한 하이브 이름으로 시작되지 않습니다. 유효한 하이브 이름은 다음과 같습니다.  

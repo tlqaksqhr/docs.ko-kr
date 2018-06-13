@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33643388"
 ---
 # <a name="programming-concepts-visual-basic"></a>프로그래밍 개념(Visual Basic)
 이 섹션에서는 Visual Basic 언어의 프로그래밍 개념을 설명합니다.  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32763698"
 ---
 # <a name="-not-equal-to-entity-sql"></a>!= (같지 않음)(Entity SQL)
 두 식을 비교하여 왼쪽 식의 값이 오른쪽 식의 값과 다른지 여부를 결정합니다. !=(같지 않음) 연산자는 기능이 <> 연산자와 동일합니다.  
