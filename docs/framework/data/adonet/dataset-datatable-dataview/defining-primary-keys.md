@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32757582"
 ---
 # <a name="defining-primary-keys"></a><span data-ttu-id="30520-102">기본 키 정의</span><span class="sxs-lookup"><span data-stu-id="30520-102">Defining Primary Keys</span></span>
 <span data-ttu-id="30520-103">일반적으로 데이터베이스 테이블에는 테이블의 각 행을 고유하게 식별하는 열 또는 열 그룹이 있습니다.</span><span class="sxs-lookup"><span data-stu-id="30520-103">A database table commonly has a column or group of columns that uniquely identifies each row in the table.</span></span> <span data-ttu-id="30520-104">이 식별 열 또는 열 그룹을 기본 키라고 합니다.</span><span class="sxs-lookup"><span data-stu-id="30520-104">This identifying column or group of columns is called the primary key.</span></span>  

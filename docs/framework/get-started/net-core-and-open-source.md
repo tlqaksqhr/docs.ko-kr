@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33389254"
 ---
 # <a name="net-core-and-open-source"></a><span data-ttu-id="b53d1-102">.NET Core 및 오픈 소스</span><span class="sxs-lookup"><span data-stu-id="b53d1-102">.NET Core and Open-Source</span></span>
 <span data-ttu-id="b53d1-103">이 항목에서는 .NET Core에 대한 간략한 개요 및 자세한 정보를 찾는 방법을 보여줍니다.</span><span class="sxs-lookup"><span data-stu-id="b53d1-103">This topic provides a brief overview  of what .NET Core is and shows how you can find more information.</span></span> <span data-ttu-id="b53d1-104">.NET Core 주제에 대한 전체 목록은 [.NET Core 가이드](../../core/index.md)를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="b53d1-104">To find the complete list of topics for .NET Core, visit the [.NET Core Guide](../../core/index.md).</span></span>

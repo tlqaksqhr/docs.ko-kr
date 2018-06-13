@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33394581"
 ---
 # <a name="how-to-list-directory-contents-with-ftp"></a><span data-ttu-id="97d59-102">방법: FTP로 디렉터리 내용 나열</span><span class="sxs-lookup"><span data-stu-id="97d59-102">How to: List Directory Contents with FTP</span></span>
 <span data-ttu-id="97d59-103">이 샘플은 FTP 서버의 디렉터리 콘텐츠를 나열하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="97d59-103">This sample shows how to list the directory contents of an FTP server.</span></span>  

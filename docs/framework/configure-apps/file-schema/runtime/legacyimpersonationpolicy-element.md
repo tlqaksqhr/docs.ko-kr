@@ -15,6 +15,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32745190"
 ---
 # <a name="ltlegacyimpersonationpolicygt-element"></a><span data-ttu-id="c95e6-102">&lt;legacyImpersonationPolicy&gt; 요소</span><span class="sxs-lookup"><span data-stu-id="c95e6-102">&lt;legacyImpersonationPolicy&gt; Element</span></span>
 <span data-ttu-id="c95e6-103">현재 스레드의 실행 컨텍스트 흐름 설정과 관계없이 Windows ID가 비동기 지점 간을 흐르지 않도록 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="c95e6-103">Specifies that the Windows identity does not flow across asynchronous points, regardless of the flow settings for the execution context on the current thread.</span></span>  

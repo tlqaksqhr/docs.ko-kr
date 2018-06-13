@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33391035"
 ---
 # <a name="guidelines-for-creating-components-for-side-by-side-execution"></a><span data-ttu-id="d532e-102">Side-by-Side 실행용 구성 요소를 만들기 위한 지침</span><span class="sxs-lookup"><span data-stu-id="d532e-102">Guidelines for Creating Components for Side-by-Side Execution</span></span>
 <span data-ttu-id="d532e-103">다음 일반 지침에 따라 Side-by-Side 실행용으로 디자인된 관리되는 응용 프로그램 또는 구성 요소를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="d532e-103">Follow these general guidelines to create managed applications or components designed for side-by-side execution:</span></span>  

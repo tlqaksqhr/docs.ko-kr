@@ -18,6 +18,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32744826"
 ---
 # <a name="walkthrough-creating-an-extensible-application"></a><span data-ttu-id="f1602-102">연습: 확장 가능한 응용 프로그램 만들기</span><span class="sxs-lookup"><span data-stu-id="f1602-102">Walkthrough: Creating an Extensible Application</span></span>
 <span data-ttu-id="f1602-103">이 연습에는 추가 기능에 대 한 간단한 계산기 기능을 수행 하는 파이프라인을 만드는 방법을 설명 합니다.</span><span class="sxs-lookup"><span data-stu-id="f1602-103">This walkthrough describes how to create a pipeline for an add-in that performs simple calculator functions.</span></span> <span data-ttu-id="f1602-104">실제 시나리오; 보여 주지 않습니다. 대신, 파이프라인 및 방법을 추가 기능에서 서비스를 제공할 수는 호스트의 기본 기능을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="f1602-104">It does not demonstrate a real-world scenario; rather, it demonstrates the basic functionality of a pipeline and how an add-in can provide services for a host.</span></span>  

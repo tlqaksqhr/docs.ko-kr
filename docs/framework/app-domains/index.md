@@ -14,6 +14,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32742434"
 ---
 # <a name="programming-with-application-domains-and-assemblies"></a><span data-ttu-id="9148e-102">응용 프로그램 도메인 및 어셈블리를 사용한 프로그래밍</span><span class="sxs-lookup"><span data-stu-id="9148e-102">Programming with Application Domains and Assemblies</span></span>
 <span data-ttu-id="9148e-103">Microsoft Internet Explorer, ASP.NET 및 Windows 셸과 같은 호스트는 프로세스에 공용 언어 런타임을 로드하고, 해당 프로세스에서 [응용 프로그램 도메인](../../../docs/framework/app-domains/application-domains.md)을 만든 다음 .NET Framework 응용 프로그램을 실행할 때 해당 응용 프로그램 도메인에서 사용자 코드를 로드한 후 실행합니다.</span><span class="sxs-lookup"><span data-stu-id="9148e-103">Hosts such as Microsoft Internet Explorer, ASP.NET, and the Windows shell load the common language runtime into a process, create an [application domain](../../../docs/framework/app-domains/application-domains.md) in that process, and then load and execute user code in that application domain when running a .NET Framework application.</span></span> <span data-ttu-id="9148e-104">대부분의 경우 런타임 호스트가 알아서 작업을 진행하므로 응용 프로그램 도메인 만들기 및 어셈블리 로드에 대해 걱정할 필요가 없습니다.</span><span class="sxs-lookup"><span data-stu-id="9148e-104">In most cases, you do not have to worry about creating application domains and loading assemblies into them because the runtime host performs those tasks.</span></span>  

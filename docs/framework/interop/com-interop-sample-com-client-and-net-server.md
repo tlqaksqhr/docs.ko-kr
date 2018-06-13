@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33389557"
 ---
 # <a name="com-interop-sample-com-client-and-net-server"></a><span data-ttu-id="14490-102">COM Interop 샘플: COM 클라이언트 및 .NET 서버</span><span class="sxs-lookup"><span data-stu-id="14490-102">COM Interop Sample: COM Client and .NET Server</span></span>
 <span data-ttu-id="14490-103">이 샘플에서는 담보 대출 계산을 수행하는 [COM 클라이언트](#cpconcominteropsamplecomclientnetserveranchor1) 및 [.NET 서버](#cpconcominteropsamplecomclientnetserveranchor2)의 상호 운용을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="14490-103">This sample demonstrates the interoperation of a [COM Client](#cpconcominteropsamplecomclientnetserveranchor1) and a [.NET Server](#cpconcominteropsamplecomclientnetserveranchor2) that performs mortgage calculations.</span></span> <span data-ttu-id="14490-104">이 예제에서 클라이언트는 관리되는 `Loan` 클래스 인스턴스를 만들고 호출한 다음 4개의 인수(4개 중 하나는 0임)를 인스턴스에 전달하고 계산 내용을 표시합니다.</span><span class="sxs-lookup"><span data-stu-id="14490-104">In this example, the client creates and calls an instance of the managed `Loan` class, passes four arguments (one of those four being equal to zero) to the instance, and displays the computations.</span></span> <span data-ttu-id="14490-105">이 샘플의 코드 예제는 이 섹션 전반에 표시됩니다.</span><span class="sxs-lookup"><span data-stu-id="14490-105">Code examples from this sample appear throughout this section.</span></span>  

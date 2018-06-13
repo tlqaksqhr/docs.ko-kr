@@ -19,6 +19,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33395234"
 ---
 # <a name="how-to-set-a-location-based-cache-policy-for-an-application"></a><span data-ttu-id="4a9ae-102">방법: 응용 프로그램에 대해 위치 기반 캐시 정책 설정</span><span class="sxs-lookup"><span data-stu-id="4a9ae-102">How to: Set a Location-Based Cache Policy for an Application</span></span>
 <span data-ttu-id="4a9ae-103">위치 기반 캐시 정책을 사용하면 응용 프로그램이 요청된 리소스의 위치를 기반으로 캐싱 동작을 명시적으로 정의할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="4a9ae-103">Location-based cache policies allow an application to explicitly define caching behavior based on the location of the requested resource.</span></span> <span data-ttu-id="4a9ae-104">이 항목에서는 캐시 정책을 프로그래밍 방식으로 설정하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="4a9ae-104">This topic demonstrates setting the cache policy programmatically.</span></span> <span data-ttu-id="4a9ae-105">구성 파일을 사용하여 응용 프로그램에 대한 정책을 설정하는 방법에 대한 자세한 내용은 [\<requestCaching> 요소(네트워크 설정)](../../../docs/framework/configure-apps/file-schema/network/requestcaching-element-network-settings.md)를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="4a9ae-105">For information on setting the policy for an application using the configuration files, see [\<requestCaching> Element (Network Settings)](../../../docs/framework/configure-apps/file-schema/network/requestcaching-element-network-settings.md).</span></span>  

@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33396531"
 ---
 # <a name="deploying-the-net-framework-and-applications"></a><span data-ttu-id="a7abb-102">.NET Framework 및 응용 프로그램 배포</span><span class="sxs-lookup"><span data-stu-id="a7abb-102">Deploying the .NET Framework and Applications</span></span>
 <span data-ttu-id="a7abb-103">이 문서는 응용 프로그램과 함께 .NET Framework 배포를 시작하는 데 도움이 됩니다.</span><span class="sxs-lookup"><span data-stu-id="a7abb-103">This article helps you get started deploying the .NET Framework with your application.</span></span> <span data-ttu-id="a7abb-104">대부분의 정보는 개발자, OEM 및 엔터프라이즈 관리자를 위한 것입니다.</span><span class="sxs-lookup"><span data-stu-id="a7abb-104">Most of the information is intended for developers, OEMs, and enterprise administrators.</span></span> <span data-ttu-id="a7abb-105">컴퓨터에 .NET Framework를 설치하려는 사용자는 [.NET Framework 설치](~/docs/framework/install/index.md)를 읽어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="a7abb-105">Users who want to install the .NET Framework on their computers should read [Installing the .NET Framework](~/docs/framework/install/index.md).</span></span>  

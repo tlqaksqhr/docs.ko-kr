@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32757127"
 ---
 # <a name="dbconnection-dbcommand-and-dbexception"></a><span data-ttu-id="36423-102">DbConnection, DbCommand 및 DbException</span><span class="sxs-lookup"><span data-stu-id="36423-102">DbConnection, DbCommand and DbException</span></span>
 <span data-ttu-id="36423-103"><xref:System.Data.Common.DbProviderFactory>와 <xref:System.Data.Common.DbConnection>을 만든 다음 명령과 데이터 판독기를 사용하여 데이터 소스에서 데이터를 검색할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="36423-103">Once you have created a <xref:System.Data.Common.DbProviderFactory> and a <xref:System.Data.Common.DbConnection>, you can then work with commands and data readers to retrieve data from the data source.</span></span>  

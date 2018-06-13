@@ -25,6 +25,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33396300"
 ---
 # <a name="requesting-data"></a><span data-ttu-id="169bb-102">데이터 요청</span><span class="sxs-lookup"><span data-stu-id="169bb-102">Requesting Data</span></span>
 <span data-ttu-id="169bb-103">현재 인터넷의 분산된 운영 환경에서 실행되는 응용 프로그램을 개발하려면 모든 형식의 리소스에서 데이터를 검색하기 위한 효율적이고 사용하기 쉬운 메서드가 필요합니다.</span><span class="sxs-lookup"><span data-stu-id="169bb-103">Developing applications that run in the distributed operating environment of today's Internet requires an efficient, easy-to-use method for retrieving data from resources of all types.</span></span> <span data-ttu-id="169bb-104">플러그형 프로토콜을 사용하면 단일 인터페이스를 사용하여 여러 인터넷 프로토콜에서 데이터를 검색하는 응용 프로그램을 개발할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="169bb-104">Pluggable protocols let you develop applications that use a single interface to retrieve data from multiple Internet protocols.</span></span>  
