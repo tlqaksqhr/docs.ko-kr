@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33803948"
 ---
 # <a name="automatic-format-selection"></a><span data-ttu-id="b1fba-102">자동 포맷 선택</span><span class="sxs-lookup"><span data-stu-id="b1fba-102">Automatic Format Selection</span></span>
 <span data-ttu-id="b1fba-103">이 샘플의 작업 코드에서 형식을 명시적으로 설정 하는 방법 뿐만 아니라 모델을 프로그래밍 Windows Communication Foundation (WCF) 나머지 선택 영역 자동 서식 지정 (XML 또는 JSON)을 사용 하도록 설정 하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="b1fba-103">This sample demonstrates how to enable automatic format selection (XML or JSON) with the Windows Communication Foundation (WCF) REST programming model, as well as how to explicitly set the format in the operation code.</span></span>  

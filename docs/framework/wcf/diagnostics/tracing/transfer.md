@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33803002"
 ---
 # <a name="transfer"></a><span data-ttu-id="b6abd-102">전송</span><span class="sxs-lookup"><span data-stu-id="b6abd-102">Transfer</span></span>
 <span data-ttu-id="b6abd-103">Windows Communication Foundation (WCF) 동작 추적 모델의 전송에 설명 합니다.</span><span class="sxs-lookup"><span data-stu-id="b6abd-103">This topic describes transfer in the Windows Communication Foundation (WCF) activity tracing model.</span></span>  

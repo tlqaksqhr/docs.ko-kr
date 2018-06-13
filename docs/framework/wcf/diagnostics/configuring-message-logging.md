@@ -9,6 +9,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33807842"
 ---
 # <a name="configuring-message-logging"></a><span data-ttu-id="d9ba9-102">메시지 로깅 구성</span><span class="sxs-lookup"><span data-stu-id="d9ba9-102">Configuring Message Logging</span></span>
 <span data-ttu-id="d9ba9-103">이 항목에서는 다양한 시나리오에서 메시지 로깅을 구성하는 방법에 대해 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="d9ba9-103">This topic describes how you can configure message logging for different scenarios.</span></span>  

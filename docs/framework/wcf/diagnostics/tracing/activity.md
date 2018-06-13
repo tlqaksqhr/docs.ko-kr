@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33806834"
 ---
 # <a name="activity"></a><span data-ttu-id="802b4-102">활동</span><span class="sxs-lookup"><span data-stu-id="802b4-102">Activity</span></span>
 <span data-ttu-id="802b4-103">이 항목에서는 Windows Communication Foundation (WCF) 추적 모델의 동작 추적에 설명 합니다.</span><span class="sxs-lookup"><span data-stu-id="802b4-103">This topic describes activity traces in the Windows Communication Foundation (WCF) tracing model.</span></span> <span data-ttu-id="802b4-104">동작은 실패의 범위를 줄이도록 돕는 처리 단위입니다.</span><span class="sxs-lookup"><span data-stu-id="802b4-104">Activities are processing units that help the user narrow down the scope of a failure.</span></span> <span data-ttu-id="802b4-105">동일한 동작에서 발생하는 오류는 직접적으로 관련됩니다.</span><span class="sxs-lookup"><span data-stu-id="802b4-105">Errors that occur in the same activity are directly related.</span></span> <span data-ttu-id="802b4-106">예를 들어 메시지 암호 해독이 실패하면 작업이 실패합니다.</span><span class="sxs-lookup"><span data-stu-id="802b4-106">For example, an operation fails because message decryption has failed.</span></span> <span data-ttu-id="802b4-107">작업 실패와 메시지 암호 해독 실패 둘 다에 대한 추적은 동일한 동작에서 나타나며, 암호 해독 오류와 요청 오류 사이의 직접적인 상관 관계를 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="802b4-107">The traces for both the operation and message decryption failure appear in the same activity, showing direct correlation between the decryption error and the request error.</span></span>  

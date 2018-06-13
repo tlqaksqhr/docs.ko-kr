@@ -10,6 +10,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33804273"
 ---
 # <a name="developing-service-oriented-applications-with-wcf"></a><span data-ttu-id="030d2-102">WCF를 사용하여 서비스 기반 응용 프로그램 개발</span><span class="sxs-lookup"><span data-stu-id="030d2-102">Developing Service-Oriented Applications with WCF</span></span>
 <span data-ttu-id="030d2-103">설명서의 이 섹션에서는 서비스 지향 응용 프로그램 빌드를 위한 통합 프로그래밍 모델인 WCF(Windows Communication Foundation)에 대한 정보를 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="030d2-103">This section of the documentation provides information about Windows Communication Foundation (WCF), which is a unified programming model for building service-oriented applications.</span></span> <span data-ttu-id="030d2-104">이를 통해 개발자는 플랫폼 간에 통합되고 기존 투자와 상호 운용할 수 있는 안정적인 보안 트랜잭션된 솔루션을 빌드할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="030d2-104">It enables developers to build secure, reliable, transacted solutions that integrate across platforms and interoperate with existing investments.</span></span>
