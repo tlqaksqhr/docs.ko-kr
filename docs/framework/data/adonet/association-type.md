@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32756513"
 ---
 # <a name="association-type"></a>연결 형식
 *연결 형식* (연결이 라고도 함)는 엔터티 데이터 모델 (EDM)의 관계를 설명 하기 위한 기본적인 빌딩 블록입니다. 개념적 모델에서 연결 두 개 사이의 관계를 나타내는 [엔터티 형식](../../../../docs/framework/data/adonet/entity-type.md) (같은 `Customer` 및 `Order`). 응용 프로그램에서 연결 인스턴스는 특정 연결(예: `Customer` 인스턴스와 `Order` 인스턴스 간의 연결)을 나타냅니다. 연결 인스턴스는 논리적으로 그룹화는 [연결 집합](../../../../docs/framework/data/adonet/association-set.md)합니다.  

@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33496288"
 ---
 # <a name="data-contract-versioning"></a>데이터 계약 버전 관리
 응용 프로그램이 발전하면서 서비스가 사용하는 데이터 계약을 변경해야 할 수도 있습니다. 이 항목에서는 데이터 계약의 버전 관리 방법에 대해 설명합니다. 이 항목에서는 데이터 계약 버전 관리 메커니즘에 대해 설명합니다. 전체 개요 및 규정적 버전 관리 지침에 대 한 참조 [모범 사례: 데이터 계약 버전 관리](../../../../docs/framework/wcf/best-practices-data-contract-versioning.md)합니다.  

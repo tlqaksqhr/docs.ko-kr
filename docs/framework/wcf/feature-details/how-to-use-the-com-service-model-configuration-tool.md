@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33496242"
 ---
 # <a name="how-to-use-the-com-service-model-configuration-tool"></a>방법: COM+ 서비스 모델 구성 도구 사용
 적절한 호스팅 모드를 선택한 다음 COM+ 서비스 모델 구성 명령줄 도구(ComSvcConfig.exe)를 사용하여 웹 서비스로 노출될 응용 프로그램 인터페이스를 구성합니다.  

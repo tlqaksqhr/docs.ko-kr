@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 385ccc7a63fb5eb27ae7bdda5bdcf13c750eb667
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33436149"
 ---
 # <a name="assemblybindinfo-structure"></a>AssemblyBindInfo 구조체
 참조 된 어셈블리에 대 한 자세한 정보를 제공 합니다.  

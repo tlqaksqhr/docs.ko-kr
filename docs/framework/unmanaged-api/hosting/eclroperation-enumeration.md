@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 4b18c89cee0c3f5088a9978e448a0d61de1b9848
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33434247"
 ---
 # <a name="eclroperation-enumeration"></a>EClrOperation 열거형
 호스트 정책 작업을 적용할 수는 작업 집합에 설명 합니다.  

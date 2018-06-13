@@ -17,6 +17,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32755463"
 ---
 # <a name="how-to-locate-assemblies-by-using-devpath"></a>방법: DEVPATH를 사용하여 어셈블리 찾기
 개발자가 작성 하는 공유 어셈블리를 여러 응용 프로그램으로 제대로 작동 하는지 확인 수도 있습니다. 지속적으로 개발 주기 동안 어셈블리를 전역 어셈블리 캐시에 저장, 대신 개발자 어셈블리에 대 한 빌드 출력 디렉터리를 가리키는 DEVPATH 환경 변수를 만들 수 있습니다.  

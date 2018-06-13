@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33529992"
 ---
 # <a name="autosize-property-overview"></a>AutoSize 속성 개요
 <xref:System.Windows.Forms.Control.AutoSize%2A> 속성으로 지정 된 값을 사용 하기 위해 필요한 경우 크기를 변경 하는 컨트롤을 사용 하면는 <xref:System.Windows.Forms.Control.PreferredSize%2A> 속성입니다. 특정 컨트롤에 대 한 크기 조정 동작을 설정 하 여 조정 된 `AutoSizeMode` 속성입니다.  

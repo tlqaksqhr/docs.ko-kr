@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33526939"
 ---
 # <a name="filedialog-class"></a>FileDialog 클래스
 Windows Forms <xref:System.Windows.Forms.FileDialog> 클래스에 대 한 공통 기본 클래스는는 <xref:System.Windows.Forms.OpenFileDialog> 및 <xref:System.Windows.Forms.SaveFileDialog> 구성 요소입니다. 변경할 수는 <xref:System.Windows.Forms.FileDialog> 모양 및 동작의 응용 프로그램에서 실행 중인 Windows 버전에 따라 이러한 대화 상자에 영향을 주는 클래스입니다.  

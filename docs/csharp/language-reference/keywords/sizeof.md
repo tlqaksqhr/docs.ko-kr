@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33270580"
 ---
 # <a name="sizeof-c-reference"></a>sizeof(C# 참조)
 관리되지 않는 형식의 크기(바이트)를 가져오는 데 사용됩니다. 관리되지 않는 형식에는 뒤에 나오는 표에 나열된 기본 제공 형식과 다음 형식이 포함됩니다.  

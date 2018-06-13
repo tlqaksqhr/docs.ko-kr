@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33529625"
 ---
 # <a name="walkthrough-creating-an-accessible-windows-based-application"></a>연습: 내게 필요한 옵션이 지원되는 Windows 기반 응용 프로그램 만들기
 액세스할 수 있는 응용 프로그램을 만드는 것은 비즈니스에 중요한 영향을 줍니다. 많은 정부 기관에는 소프트웨어 구매와 관련된 접근성 규정이 있습니다. Certified for Windows 로고에는 접근성 요구 사항이 포함됩니다. 미국에만 3천만 명이 거주하는 것으로 추정되는 잠재 고객 중 많은 사람이 소프트웨어의 내게 필요한 옵션 기능에 따른 영향을 받습니다.  

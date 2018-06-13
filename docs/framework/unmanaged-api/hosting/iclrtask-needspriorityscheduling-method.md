@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 36403abcae4d4e691fe6362e61cf7fa979ec7f5e
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33435740"
 ---
 # <a name="iclrtaskneedspriorityscheduling-method"></a>ICLRTask::NeedsPriorityScheduling 메서드
 으로 전환 되 고는 현재 작업의 일정 조정을 대 한 우선 순위가 높은로 표시 되어야 하는지 여부를 나타내는 값을 가져옵니다.  

@@ -34,6 +34,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33394838"
 ---
 # <a name="ipv6-addressing"></a>IPv6 주소 지정
 IPv6(인터넷 프로토콜 버전 6)에서 주소의 길이는 128비트입니다. 주소 공간이 이렇게 큰 하나의 이유는 사용 가능한 주소를 인터넷 토폴로지를 반영하는 라우팅 도메인 계층 구조로 세분화하기 위한 것입니다. 또 다른 이유는 장치를 네트워크에 연결하는 네트워크 어댑터(또는 인터페이스)의 주소를 매핑하기 위한 것입니다. IPv6은 최하위 수준인 네트워크 인터페이스 수준에서 주소를 확인하는 고유한 기능과 자동 구성 기능을 제공합니다.  
