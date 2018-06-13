@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33571188"
 ---
 # <a name="naming-resources"></a>리소스 이름 지정
 큐브인 것 처럼 속성에 특정 개체를 통해 지역화 가능한 리소스를 참조할 수 있습니다, 때문에 리소스에 대 한 이름 지정 지침 속성 지침 비슷합니다.  

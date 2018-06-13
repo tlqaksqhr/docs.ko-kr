@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33522668"
 ---
 # <a name="how-to-extract-the-icon-associated-with-a-file-in-windows-forms"></a>방법: Windows Forms에서 파일과 연결된 아이콘 추출
 많은 파일을 시각적 연결된 된 파일 형식으로 제공 하는 아이콘 포함 되어 있습니다. 예를 들어 Microsoft Word 문서 Word 문서를 식별 하는 아이콘을 포함 합니다. Table 컨트롤 또는 목록 컨트롤에 파일을 표시할 때 각 파일 이름 옆에 있는 파일 형식을 나타내는 아이콘을 표시 하는 것이 좋습니다. 사용 하 여이 작업을 쉽게 수행할 수 있습니다는 <xref:System.Drawing.Icon.ExtractAssociatedIcon%2A> 메서드.  

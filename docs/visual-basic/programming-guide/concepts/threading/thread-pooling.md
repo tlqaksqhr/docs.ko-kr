@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33647835"
 ---
 # <a name="thread-pooling-visual-basic"></a>스레드 풀링 (Visual Basic)
 *스레드 풀*은 백그라운드에서 몇 가지 작업을 수행하는 데 사용할 수 있는 스레드 컬렉션입니다. (참조 [스레딩 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/threading/index.md) 배경 정보에 대 한 합니다.) 이렇게 하면 기본 스레드가 자유롭게 다른 작업을 비동기적으로 수행할 수 있습니다.  

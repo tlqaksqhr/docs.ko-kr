@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: c5841c89cf394502f68381dfed42593c9debdcb1
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33457318"
 ---
 # <a name="clone-function"></a>복제 함수
 새 개체는 현재 개체의 전체 복제를 반환 합니다.   

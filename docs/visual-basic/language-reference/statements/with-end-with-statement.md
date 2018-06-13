@@ -20,6 +20,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33604668"
 ---
 # <a name="withend-with-statement-visual-basic"></a>With...End With 문(Visual Basic)
 개체 또는 구문의 멤버에 액세스할 때 문에서 단순화된 구문을 사용할 수 있도록 단일 개체를 반복적으로 참조하는 일련의 문을 실행합니다.  구조체를 사용하면 멤버 또는 호출 메서드의 값을 읽을 수만 있으며, `With...End With` 문에서 사용된 구조체의 멤버에 값을 할당하도록 시도하는 경우 오류가 발생합니다.  

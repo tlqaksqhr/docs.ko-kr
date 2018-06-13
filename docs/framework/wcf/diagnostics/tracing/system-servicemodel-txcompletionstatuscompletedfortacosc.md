@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33485097"
 ---
 # <a name="systemservicemodeltxcompletionstatuscompletedfortacosc"></a>System.ServiceModel.TxCompletionStatusCompletedForTACOSC
 세션이 닫혔을 때 특정 트랜잭션이 완료되었습니다.  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33643244"
 ---
 # <a name="how-to-determine-if-a-file-is-an-assembly-visual-basic"></a>방법: 파일 어셈블리 (Visual Basic) 인지 확인 합니다.
 파일은 관리되고 해당 메타데이터에 어셈블리 항목을 포함하는 경우에만 어셈블리입니다. 어셈블리 및 메타데이터에 대한 자세한 내용은 [어셈블리 매니페스트](../../../../framework/app-domains/assembly-manifest.md) 항목을 참조하세요.  

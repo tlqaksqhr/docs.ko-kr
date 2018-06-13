@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33577217"
 ---
 # <a name="editing-xml-schemas"></a>XML 스키마 편집
 XML 스키마 편집 기능은 SOM(스키마 개체 모델)의 중요한 기능 중 하나입니다. SOM의 모든 pre-schema-compilation 속성을 사용하여 XML 스키마에서 기존 값을 변경할 수 있습니다. 그런 다음 XML 스키마를 다시 컴파일하여 변경 내용을 적용할 수 있습니다.  

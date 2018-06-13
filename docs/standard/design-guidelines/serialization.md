@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33578068"
 ---
 # <a name="serialization"></a>Serialization
 Serialization은 개체를 쉽게 유지 하거나 전송할 수 있는 형식으로 변환는 프로세스입니다. 예를 들어 HTTP를 사용 하 고 대상 컴퓨터에서 deserialize 인터넷을 통해 전송을 개체를 serialize 할 수 있습니다.  

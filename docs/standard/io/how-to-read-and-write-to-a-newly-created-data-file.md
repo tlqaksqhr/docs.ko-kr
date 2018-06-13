@@ -20,6 +20,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33572699"
 ---
 # <a name="how-to-read-and-write-to-a-newly-created-data-file"></a>방법: 새로 만든 데이터 파일 읽기 및 쓰기
 <xref:System.IO.BinaryWriter>와 <xref:System.IO.BinaryReader?displayProperty=nameWithType> 클래스는 문자열이 아닌 데이터를 쓰고 읽는 데 사용됩니다. 다음 예제에서는 `Test.data`라는 새로 만든 빈 파일 스트림에서 데이터를 읽거나 이 스트림에 데이터를 쓰는 방법을 보여 줍니다. 현재 디렉터리에 데이터 파일을 만든 후 관련된 <xref:System.IO.BinaryWriter> 및 <xref:System.IO.BinaryReader> 개체를 만들고 <xref:System.IO.BinaryWriter> 개체를 사용하여 0부터 10까지의 정수를 `Test.data`에 씁니다. 이렇게 하면 파일 포인터가 파일 끝에 옵니다. 파일 포인터를 다시 원점으로 설정하고 나면, <xref:System.IO.BinaryReader> 개체는 지정된 내용을 읽습니다.  

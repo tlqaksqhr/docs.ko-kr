@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33647806"
 ---
 # <a name="how-to-validate-file-names-and-paths-in-visual-basic"></a>방법: Visual Basic에서 파일 이름 및 경로 확인
 이 예제에서는 반환 된 `Boolean` 문자열이 파일 이름 또는 경로 나타내는지 여부를 나타내는 값입니다. 유효성 검사 이름 파일 시스템에서 허용 되지 않는 문자를 포함 하는 경우를 확인 합니다.  

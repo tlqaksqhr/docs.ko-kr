@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33605448"
 ---
 # <a name="declaration-contexts-and-default-access-levels-visual-basic"></a>선언 컨텍스트 및 기본 액세스 수준(Visual Basic)
 이 항목에서는 있는 Visual Basic 형식과 다른 형식 내에서 선언 될 수 있으며 어떤 액세스 수준을 기본적으로 지정 하지 않은 경우를 설명 합니다.  

@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33575703"
 ---
 # <a name="xml-integration-with-relational-data-and-adonet"></a>XML과 관계형 데이터 및 ADO.NET의 통합
 **XmlDataDocument** 클래스는 **XmlDocument**의 파생 클래스이며 XML 데이터를 포함합니다. **XmlDataDocument**의 이점은 관계형 데이터와 계층형 데이터 간을 연결해 준다는 것입니다. **XmlDocument**는 **DataSet**에 바인딩할 수 있는 클래스입니다. 이러한 두 클래스는 모두 클래스에 포함된 데이터의 변경 내용을 동기화할 수 있습니다. **DataSet**에 바인딩된 **XmlDocument**를 통해 XML을 관계형 데이터와 통합할 수 있으므로 데이터를 XML 또는 관계형 형식으로 나타낼 필요가 없습니다. 데이터를 두 가지 형식으로 나타낼 수 있으며 한 가지 형식으로만 제약되지 않습니다.  

@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33577400"
 ---
 # <a name="migrating-from-the-xsltransform-class"></a>XslTransform 클래스에서 마이그레이션
 XSLT 아키텍처는 [!INCLUDE[vsprvslong](../../../../includes/vsprvslong-md.md)] 릴리스에서 다시 디자인되었습니다. <xref:System.Xml.Xsl.XslTransform> 클래스는 <xref:System.Xml.Xsl.XslCompiledTransform> 클래스로 대체되었습니다.  

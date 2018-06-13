@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33575338"
 ---
 # <a name="exceptions-and-performance"></a>예외 및 성능
 예외와 관련 된 일반적인 문제 하나는 지속적으로 실패 하는 코드에 대 한 예외를 사용 하면 성능을 구현 됩니다 허용입니다. 이 유효한 중요 합니다. 예외를 throw 하는 멤버 성능이 현저히 저하 될 수 있습니다. 그러나, 오류 코드를 사용 하지 않도록 설정 하는 예외 지침을 따르면 엄격 하 게 하는 동안 좋은 성능을 얻을 수는 있습니다. 이 섹션에 설명 된 두 개의 패턴에는이 작업을 수행 하는 방법을 제안 합니다.  

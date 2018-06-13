@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33570489"
 ---
 # <a name="naming-parameters"></a>매개 변수 이름 지정
 가독성의 이유를 벗어나는 Intellisense 및 검색 기능을 하는 클래스를 제공 하는 비주얼 디자인 도구 매개 변수는 설명서 및 디자이너에 표시 되기 때문에 매개 변수 이름에 대 한 지침을 수행 해야 합니다.  

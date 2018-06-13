@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33643506"
 ---
 # <a name="creating-xml-trees-visual-basic"></a>XML 트리 만들기 (Visual Basic)
 가장 일반적인 XML 작업 중 하나는 XML 트리를 생성하는 것입니다. 이 단원에서는 XML 트리를 만드는 몇 가지 방법에 대해 설명합니다.  

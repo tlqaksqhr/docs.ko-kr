@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33648387"
 ---
 # <a name="constants-overview-visual-basic"></a>상수 개요(Visual Basic)
 상수는 숫자 또는 변경 되지 않는 문자열의 일어나는 의미 있는 이름입니다. 상수 이름에서 알 수 있듯이 응용 프로그램의 실행 전체에서 동일 하 게 유지 하는 값을 저장 합니다. 코드의 가독성을 개선 하 고 상수를 사용 하 여 유지 쉽게 크게 있습니다. 더 이상 표시 하는 값을 포함 하는 코드에서 사용 하거나 기억 하거나 의미가 명확 하지 않은 하기 어려운 특정 숫자에 따라 다릅니다.  

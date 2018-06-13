@@ -26,6 +26,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33604993"
 ---
 # <a name="ifthenelse-statement-visual-basic"></a>If...Then...Else 문(Visual Basic)
 식의 값에 따라 문 그룹을 조건부로 실행합니다.  

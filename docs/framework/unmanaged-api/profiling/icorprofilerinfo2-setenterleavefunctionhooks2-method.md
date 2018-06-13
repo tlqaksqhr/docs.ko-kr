@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 52988378ff4df0bb03e15c9a4b25efbcd6c318f9
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33457728"
 ---
 # <a name="icorprofilerinfo2setenterleavefunctionhooks2-method"></a>ICorProfilerInfo2::SetEnterLeaveFunctionHooks2 메서드
 업데이트 된 버전의 "입력", "둡니다" 및 "tailcall" 후크 관리 되는 함수에서 호출 되도록 하는 프로파일러 구현 함수를 지정 합니다.  

@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33649622"
 ---
 # <a name="anonymous-type-definition-visual-basic"></a>익명 형식 정의(Visual Basic)
 익명 형식의 인스턴스 선언에 대 한 응답, 컴파일러는 형식에 대 한 지정 된 속성을 포함 하는 새 클래스 정을 만듭니다.  

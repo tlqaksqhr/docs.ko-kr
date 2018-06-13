@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33605357"
 ---
 # <a name="option-strict-statement"></a>Long
 암시적 데이터 형식 변환을 확대 변환 으로만 제한 하 고 런타임에 바인딩을 사용할 수 없습니다. 암시적 형식 지정을 허용 하지 않는 한 `Object` 유형입니다.  

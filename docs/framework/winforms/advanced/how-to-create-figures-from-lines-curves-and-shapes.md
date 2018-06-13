@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33521858"
 ---
 # <a name="how-to-create-figures-from-lines-curves-and-shapes"></a>방법: 선, 곡선 및 도형으로 그림 만들기
 그림을 만들려면 하려면를 생성 하는 <xref:System.Drawing.Drawing2D.GraphicsPath>와 같은 메서드를 호출 하 고 <xref:System.Drawing.Drawing2D.GraphicsPath.AddLine%2A> 및 <xref:System.Drawing.Drawing2D.GraphicsPath.AddCurve%2A>경로에 기본 형식에 추가 합니다.  

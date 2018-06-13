@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33572891"
 ---
 # <a name="type-design-guidelines"></a>형식 디자인 지침
 CLR 관점에서는 두 가지 범주의 형식-참조 형식과 값 형식-하지만 프레임 워크 디자인에 대 한 토론을 목적으로 각각의 특정 디자인 규칙 자체에 더 많은 논리 그룹으로 형식 나눕니다.  
