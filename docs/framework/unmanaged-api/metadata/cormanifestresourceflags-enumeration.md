@@ -18,9 +18,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 21cce26c94d26f6c079fca644a31bf83cd1a6432
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33440712"
 ---
 # <a name="cormanifestresourceflags-enumeration"></a>CorManifestResourceFlags 열거형
 어셈블리 매니페스트에 인코딩된 리소스의 표시 여부를 나타냅니다.  

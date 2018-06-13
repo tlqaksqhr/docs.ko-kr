@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33280896"
 ---
 # <a name="value-types-table-c-reference"></a>값 형식 표(C# 참조)
 다음 표에는 C# 값 형식이 범주별로 나와 있습니다.  

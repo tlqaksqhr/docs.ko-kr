@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 8d479e271c2cc4ebf9ea6ff349fd28bff37c3857
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33436100"
 ---
 # <a name="iclrruntimehoststop-method"></a>ICLRRuntimeHost::Stop 메서드
 공용 언어 런타임 (CLR) 하 여 코드의 실행을 중지 합니다.  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32760390"
 ---
 # <a name="entity-framework-data-providers"></a>Entity Framework 데이터 공급자
 이 단원에서는 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]를 지원하는 데이터 공급자에 대한 정보를 제공합니다.  

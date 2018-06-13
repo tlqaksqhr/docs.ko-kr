@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33275843"
 ---
 # <a name="-operator-c-reference"></a>* 연산자(C# 참조)
 곱하기 연산자(`*`)는 피연산자의 곱을 계산합니다. 모든 숫자 형식에는 곱하기 연산자가 미리 정의되어 있습니다.  

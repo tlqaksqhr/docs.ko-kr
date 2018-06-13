@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33561643"
 ---
 # <a name="how-to-round-the-corners-of-a-rectanglegeometry"></a>방법: 사각형 기하 도형의 모퉁이 둥글게 하기
 모퉁이 둥글게 하는 <xref:System.Windows.Media.RectangleGeometry>설정, 해당 <xref:System.Windows.Media.RectangleGeometry.RadiusX%2A> 및 <xref:System.Windows.Media.RectangleGeometry.RadiusY%2A> 속성을 0 보다 큰 값입니다. 이 값이 클수록 더 둥글게 사각형의 모퉁이입니다.  

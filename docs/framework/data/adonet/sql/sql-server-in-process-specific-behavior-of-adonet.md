@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33356605"
 ---
 # <a name="sql-server-in-process-specific-behavior-of-adonet"></a>ADO.NET의 SQL Server In-Process별 동작
 in-process에만 사용되는 ADO.NET에 대한 주요 기능 확장은 <xref:Microsoft.SqlServer.Server> 네임스페이스에서 확인할 수 있으며, <xref:Microsoft.SqlServer.Server.SqlContext>, <xref:Microsoft.SqlServer.Server.SqlPipe>, <xref:Microsoft.SqlServer.Server.SqlTriggerContext>, <xref:Microsoft.SqlServer.Server.SqlDataRecord> 등 네 가지가 있습니다.  

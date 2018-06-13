@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33359935"
 ---
 # <a name="creating-the-object-model"></a>개체 모델 만들기
 기존 데이터베이스에서 개체 모델을 만들어 해당 모델을 기본 상태로 사용할 수 있습니다. 또한 모델의 많은 부분과 동작을 사용자 지정할 수 있습니다.  

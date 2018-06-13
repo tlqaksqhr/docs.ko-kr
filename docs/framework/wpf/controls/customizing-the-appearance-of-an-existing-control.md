@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33558059"
 ---
 # <a name="customizing-the-appearance-of-an-existing-control-by-creating-a-controltemplate"></a>ControlTemplate을 만들어 기존 컨트롤의 모양 사용자 지정
 <a name="introduction"></a> A <xref:System.Windows.Controls.ControlTemplate> 시각적 구조와 컨트롤의 시각적 동작을 지정 합니다. 새 제공 하 여 컨트롤의 모양을 사용자 지정할 수 있습니다 <xref:System.Windows.Controls.ControlTemplate>합니다. 만들 때 한 <xref:System.Windows.Controls.ControlTemplate>, 기능을 변경 하지 않고 기존 컨트롤의 모양을 바꿉니다. 예를 들어 만들 수 있는 단추 응용 프로그램에서 기본 정사각형 대신 라운드 있지만 단추에서 여전히 발생는 <xref:System.Windows.Controls.Primitives.ButtonBase.Click> 이벤트입니다.  

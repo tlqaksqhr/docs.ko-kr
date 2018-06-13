@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33558657"
 ---
 # <a name="how-to-repeat-media-playback"></a>방법: 미디어 재생 반복
 이 예제에서는 미디어를 무기한 재생하는 방법, 즉 무한 루프로 재생되도록 설정하는 방법을 보여 줍니다.  

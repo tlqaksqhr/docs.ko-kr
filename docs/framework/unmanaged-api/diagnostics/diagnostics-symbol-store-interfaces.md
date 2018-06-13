@@ -13,9 +13,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 6fca7359888b8b73b2e1cf709ab708d71abf0db6
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33435814"
 ---
 # <a name="diagnostics-symbol-store-interfaces"></a>진단 기호 저장소 인터페이스
 이 항목에서는 컴파일러가 디버거에 사용에 대 한 기호 정보를 생성 하는 데 사용할 수 있는 관리 되지 않는 인터페이스에 설명 합니다.  

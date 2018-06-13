@@ -16,6 +16,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32755164"
 ---
 # <a name="ltsystemwebgt-element-web-settings"></a>&lt;system.web&gt; 요소 (웹 설정)
 ASP.NET 호스팅 계층에서 프로세스 전체 동작을 관리 하는 방법에 대 한 정보를 포함 합니다.  

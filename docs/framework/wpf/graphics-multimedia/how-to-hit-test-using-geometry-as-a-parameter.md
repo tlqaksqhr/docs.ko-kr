@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33561257"
 ---
 # <a name="how-to-hit-test-using-geometry-as-a-parameter"></a>방법: 기하 도형을 매개 변수로 사용하여 적중 테스트
 적중 횟수 테스트를 사용 하 여 시각적 개체에서 수행 하는 방법을 보여 주는이 예제는 <xref:System.Windows.Media.Geometry> 적중 매개 변수를 테스트 합니다.  

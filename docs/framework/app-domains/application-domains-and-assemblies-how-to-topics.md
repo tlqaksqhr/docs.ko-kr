@@ -12,6 +12,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32743097"
 ---
 # <a name="application-domains-and-assemblies-how-to-topics"></a>응용 프로그램 도메인 및 어셈블리 방법 항목
 다음 섹션에는 응용 프로그램 도메인 및 어셈블리를 사용한 프로그래밍에 대한 개념 설명서에 나오는 모든 방법 항목에 대한 링크가 있습니다.  

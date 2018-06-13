@@ -18,9 +18,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 4bb91423b2eaeda7d945cf14553609fd33ce9b0c
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33443491"
 ---
 # <a name="cormethodimpl-enumeration"></a>CorMethodImpl 열거형
 메서드 구현 기능을 설명하는 값을 포함합니다.  

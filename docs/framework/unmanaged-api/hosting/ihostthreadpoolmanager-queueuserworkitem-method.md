@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: b458739db024bdbe8cf0fb5a12a5d5f508d332da
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33441723"
 ---
 # <a name="ihostthreadpoolmanagerqueueuserworkitem-method"></a>IHostThreadPoolManager::QueueUserWorkItem 메서드
 실행을 위한 함수 큐 대기 하 고 해당 함수에서 사용할 데이터를 포함 하는 개체를 지정 합니다. 스레드를 사용할 수 있게 되 면 함수가 실행 됩니다.  

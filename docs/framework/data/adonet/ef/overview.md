@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32759896"
 ---
 # <a name="entity-framework-overview"></a>Entity Framework 개요
 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]는 데이터 지향 소프트웨어 응용 프로그램의 개발을 지원하는 ADO.NET의 기술 집합입니다. 데이터 지향 응용 프로그램의 설계자와 개발자는 두 가지 다른 목적을 달성하기 위해 노력해 왔습니다. 해결 중인 비즈니스 문제의 엔터티, 관계 및 논리를 모델링해야 하며, 데이터를 저장 및 검색하는 데 사용되는 데이터 엔진도 사용해야 합니다. 데이터는 각각 해당 프로토콜을 가진 여러 개의 저장소 시스템에 걸쳐 있을 수 있습니다. 단일 저장소 시스템에서 작동하는 응용 프로그램도 저장소 시스템의 요구 사항 및 효율적이고 유지 가능한 응용 프로그램 코드를 작성하기 위한 요구 사항의 균형을 조정해야 합니다.  

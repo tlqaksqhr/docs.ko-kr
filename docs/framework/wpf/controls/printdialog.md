@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33554770"
 ---
 # <a name="printdialog"></a>PrintDialog
 <xref:System.Windows.Controls.PrintDialog> 컨트롤은 자동으로 구성 된 표준 인쇄 대화 상자를 인스턴스화하는 데 사용 된 <xref:System.Printing.PrintTicket> 및 <xref:System.Printing.PrintQueue> 사용자 입력에 따라 합니다.  

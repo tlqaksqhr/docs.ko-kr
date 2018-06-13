@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33557396"
 ---
 # <a name="toolbar-overview"></a>ToolBar 개요
 <xref:System.Windows.Controls.ToolBar> 컨트롤은 명령 또는 해당 함수에서 일반적으로 관련이 있는 컨트롤의 그룹에 대 한 컨테이너입니다. A <xref:System.Windows.Controls.ToolBar> 일반적으로 명령을 호출 하는 단추가 포함 되어 있습니다.  
