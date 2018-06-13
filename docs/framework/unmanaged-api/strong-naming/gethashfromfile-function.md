@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: f98f888280090bfa613acf6ae37bc60ab63c371e
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33456516"
 ---
 # <a name="gethashfromfile-function"></a>GetHashFromFile 함수
 지정된 된 파일의 내용에 대 한 해시를 생성 합니다.  

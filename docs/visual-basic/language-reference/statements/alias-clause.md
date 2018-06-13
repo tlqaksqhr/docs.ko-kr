@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33599176"
 ---
 # <a name="alias-clause-visual-basic"></a>Alias 절(Visual Basic)
 외부 프로시저의 DLL에 다른 이름이 있음을 나타냅니다.  

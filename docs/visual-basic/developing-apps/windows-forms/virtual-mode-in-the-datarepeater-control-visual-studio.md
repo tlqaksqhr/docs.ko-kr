@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33592238"
 ---
 # <a name="virtual-mode-in-the-datarepeater-control-visual-studio"></a>DataRepeater 컨트롤의 가상 모드(Visual Studio)
 테이블 형식 데이터를 표시 하려는 경우는 <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> 컨트롤을 설정 하 여 성능을 향상 시킬 수 있습니다는 <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.VirtualMode%2A> 속성을 `True` 명시적으로 해당 데이터 원본 컨트롤의 상호 작용을 관리 합니다. <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> 컨트롤은 데이터 원본과 상호 작용 하 고 런타임 시 필요에 따라 데이터를 표시 하기 위해 처리할 수 있는 여러 이벤트를 제공 합니다.  

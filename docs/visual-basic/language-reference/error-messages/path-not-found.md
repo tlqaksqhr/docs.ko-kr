@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33593895"
 ---
 # <a name="path-not-found"></a>경로를 찾을 수 없습니다.
 파일 액세스 또는 디스크 액세스 작업 중 운영 체제를 지정된 된 경로 찾을 수 없습니다. 파일의 경로 드라이브 사양과, 디렉터리 및 파일을 찾을 이동 해야 하는 하위 디렉터리를 포함 합니다. 경로는 상대적이거나 절대적일 수 있습니다.  

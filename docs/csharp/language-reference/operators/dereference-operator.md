@@ -12,6 +12,7 @@ ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/15/2018
+ms.locfileid: "34171982"
 ---
 # <a name="-gt-operator-c-reference"></a>-&gt; 연산자(C# 참조)
 `->` 연산자는 포인터 역참조와 멤버 액세스를 결합합니다.  

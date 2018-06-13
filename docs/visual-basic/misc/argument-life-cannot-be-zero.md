@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33597701"
 ---
 # <a name="argument-39life39-cannot-be-zero"></a>인수 &#39;수명&#39; 0 일 수 없습니다
 자산의 내용 연수 길이를 지정하는 `Life`이어야 하는 `Double` 에 대한 인수가 잘못되었습니다.  

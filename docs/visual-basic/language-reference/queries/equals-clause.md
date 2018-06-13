@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33597336"
 ---
 # <a name="equals-clause-visual-basic"></a>Equals 절(Visual Basic)
 조인 중인 컬렉션에서 키를 비교 합니다.  

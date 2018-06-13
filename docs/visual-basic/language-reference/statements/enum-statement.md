@@ -16,6 +16,7 @@ ms.sourcegitcommit: 22c3c8f74eaa138dbbbb02eb7d720fce87fc30a9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/17/2018
+ms.locfileid: "34234018"
 ---
 # <a name="enum-statement-visual-basic"></a>Enum 문(Visual Basic)
 열거형을 선언 하 고 해당 멤버의 값을 정의 합니다.  

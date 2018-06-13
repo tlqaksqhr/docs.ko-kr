@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33593918"
 ---
 # <a name="optional-parameters-must-specify-a-default-value"></a>선택적 매개 변수는 기본값을 지정해야 합니다.
 선택적 매개 변수는 프로시저 호출에서 매개 변수가 없는 제공 하는 경우 사용할 수 있는 기본 값을 제공 해야 합니다.  

@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33595094"
 ---
 # <a name="variable-39ltvariablenamegt39-hides-a-variable-in-an-enclosing-block"></a>변수 &#39; &lt;variablename&gt; &#39; 바깥쪽 블록의 변수를 숨깁니다.
 블록에 포함 된 변수의 동일한 이름으로 다른 지역 변수에 있습니다.  

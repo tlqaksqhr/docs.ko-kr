@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33597688"
 ---
 # <a name="else-statement-visual-basic"></a>Else 문(Visual Basic)
 실행 하거나 조건부 어떤 다른 그룹의 문 실행 하거나 컴파일할 경우 컴파일할 문 그룹을 소개 합니다.  

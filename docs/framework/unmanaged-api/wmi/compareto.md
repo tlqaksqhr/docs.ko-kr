@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: db4431da90842f4f96a0f09a2f28dc473d956ee3
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33460410"
 ---
 # <a name="compareto-function"></a>CompareTo 함수
 다른 Windows 관리 개체에 개체를 비교합니다.  

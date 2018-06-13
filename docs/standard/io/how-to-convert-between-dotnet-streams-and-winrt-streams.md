@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33577563"
 ---
 # <a name="how-to-convert-between-net-framework-streams-and-windows-runtime-streams"></a>방법: .NET Framework 스트림과 Windows 런타임 스트림 간 변환
 Windows 스토어 앱용 .NET Framework는 전체 .NET Framework의 하위 집합입니다. Windows 스토어 앱에 대한 보안과 기타 요구 사항 때문에, 파일을 열고 읽기 위해 전체 .NET Framework API 집합을 사용할 수 없습니다. 자세한 내용은 [Windows 스토어 앱용 .NET 개요](http://msdn.microsoft.com/library/windows/apps/br230302.aspx)를 참조하세요. 그러나 다른 스트림 조작 작업에 대한 .NET Framework API를 사용하고 싶을 수 있습니다. 이러한 스트림을 조작하기 위해 <xref:System.IO.MemoryStream> 또는 <xref:System.IO.FileStream>과 같은 .NET Framework 스트림 형식과 [IInputStream](http://msdn.microsoft.com/library/windows/apps/windows.storage.streams.iinputstream.aspx), [IOutputStream](http://msdn.microsoft.com/library/windows/apps/windows.storage.streams.ioutputstream.aspx)또는 [IRandomAccessStream](http://msdn.microsoft.com/library/windows/apps/windows.storage.streams.irandomaccessstream.aspx)과 같은 Windows 런타임 스트림 간에 변환해야 할 수도 있습니다.  

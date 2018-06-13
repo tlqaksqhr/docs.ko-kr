@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33599777"
 ---
 # <a name="add-failed-duplicate-key-value-supplied"></a>추가하지 못했습니다. 중복 키 값이 제공되었습니다.
 키 값이 다른 키 값과 같기 때문에 `Add` 작업에 실패했습니다. 키 값은 고유해야 합니다.  

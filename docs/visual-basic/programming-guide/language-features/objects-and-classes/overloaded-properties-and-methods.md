@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33652196"
 ---
 # <a name="overloaded-properties-and-methods-visual-basic"></a>오버 로드 된 속성 및 메서드 (Visual Basic)
 

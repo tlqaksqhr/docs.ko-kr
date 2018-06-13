@@ -8,11 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - this keyword [C#]
 ms.assetid: d4f827fe-4710-410b-89b8-867dad44b8a3
-ms.openlocfilehash: d26ad1565dc6faf8aba6c971b3a0023bac886775
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 04496079114be45388926993b67e8f1d3f2e9f15
+ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/15/2018
+ms.locfileid: "34172037"
 ---
 # <a name="this-c-reference"></a>this(C# 참조)
 `this` 키워드는 클래스의 현재 인스턴스를 가리키며 확장 메서드의 첫 번째 매개 변수에 대한 한정자로도 사용됩니다.  
@@ -28,7 +29,7 @@ ms.lasthandoff: 05/04/2018
   
 -   개체를 다른 메서드에 매개 변수로 전달합니다. 예를 들면 다음과 같습니다.  
   
-    ```  
+    ```csharp  
     CalcTax(this);  
     ```  
   

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33645241"
 ---
 # <a name="parsing-xml-visual-basic"></a>XML 구문 분석 (Visual Basic)
 이 단원의 항목에서는 XML 문서의 구문을 분석하는 방법에 대해 설명합니다.  

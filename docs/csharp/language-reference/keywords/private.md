@@ -12,6 +12,7 @@ ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/15/2018
+ms.locfileid: "34171865"
 ---
 # <a name="private-c-reference"></a>private(C# 참조)
 `private` 키워드는 멤버 액세스 한정자입니다. 

@@ -25,6 +25,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33591083"
 ---
 # <a name="ifthenelse-directives"></a>#If...Then...#Else 지시문
 Visual Basic 코드의 선택 된 블록을 조건부로 컴파일합니다.  

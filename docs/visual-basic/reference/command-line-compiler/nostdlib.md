@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33652720"
 ---
 # <a name="-nostdlib-visual-basic"></a>-nostdlib (Visual Basic)
 컴파일러가를 자동으로 표준 라이브러리를 참조 하지 않습니다.  

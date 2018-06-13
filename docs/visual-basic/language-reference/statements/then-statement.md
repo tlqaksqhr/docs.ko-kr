@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33598400"
 ---
 # <a name="then-statement"></a>Then 문
 컴파일하거나 테스트 된 조건이 true 인 경우 실행할 문 블록을 정의 합니다.  

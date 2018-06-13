@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33599595"
 ---
 # <a name="argument-39ltargumentnamegt39-cannot-be-a-multidimensional-array"></a>인수 &#39; &lt;argumentname&gt; &#39; 다차원 배열일 수 없습니다.
 배열 인수의 차수는 1보다 크지만 1차원 배열만 가능합니다.  

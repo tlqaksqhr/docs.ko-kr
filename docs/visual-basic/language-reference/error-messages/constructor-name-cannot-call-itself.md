@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33588998"
 ---
 # <a name="constructor-39ltnamegt39-cannot-call-itself"></a>생성자 &#39; &lt;이름&gt; &#39; 자신을 호출할 수 없습니다
 A `Sub New` 클래스 또는 구조체에는 프로시저가 자신을 호출 합니다.  

@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33571035"
 ---
 # <a name="usage-guidelines"></a>사용 지침
 이 섹션에는 공개적으로 액세스할 수 있는 Api에서 공용 형식 사용에 대 한 지침이 포함 되어 있습니다. 기본 제공 프레임 워크 형식 (예: 직렬화 특성) 및 일반 연산자 오버 로딩을 직접 사용을 다룹니다.  

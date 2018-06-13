@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33592342"
 ---
 # <a name="version-tolerant-serialization"></a>버전 독립적 Serialization
 .NET Framework의 버전 1.0과 1.1에서는 버전이 다른 응용 프로그램에서 재사용할 수 있는 serialize 가능한 형식을 만드는 작업에 문제가 있었습니다. 추가 필드를 추가하여 형식을 수정하면 다음 문제가 발생합니다.  

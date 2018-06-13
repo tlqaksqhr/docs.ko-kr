@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33589462"
 ---
 # <a name="first-statement-of-this-39sub-new39-must-be-a-call-to-39mybasenew39-or-39myclassnew39-no-accessible-constructor-without-parameters"></a>이 첫 번째 문은 &#39;Sub New&#39; 에 대 한 호출 이어야 합니다 &#39;MyBase.New&#39; 또는 &#39;MyClass.New&#39; (No 액세스할 수 있는 매개 변수가 없는 생성자)
 때문에이 ' Sub n e w '의 첫째 문은 'MyBase.New' 또는 'MyClass.New'에 대 한 호출 이어야 합니다 기본 클래스\<basename >'의 '\<derivedname >' 인수 없이 호출 될 수 있는 액세스 가능한 ' Sub n가 없습니다.  

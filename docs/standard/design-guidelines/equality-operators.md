@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33571019"
 ---
 # <a name="equality-operators"></a>같음 연산자
 이 섹션 같음 연산자를 오버 로드에 대해 설명 하 고 가리키는 `operator==` 및 `operator!=` 같음 연산자입니다.  

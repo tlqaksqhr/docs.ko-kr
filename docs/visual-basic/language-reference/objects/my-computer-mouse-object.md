@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33593618"
 ---
 # <a name="mycomputermouse-object"></a>My.Computer.Mouse 개체
 형식 및 로컬 컴퓨터에 설치 된 마우스의 구성에 대 한 정보를 가져오기 위한 속성을 제공 합니다.  

@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33649850"
 ---
 # <a name="constant-and-literal-data-types-visual-basic"></a>상수 및 리터럴 데이터 형식(Visual Basic)
 리터럴은 변수의 값 또는 3 숫자 또는 문자열 "Hello"와 같은 식의 결과가 아닌 자체로 표시 되는 값입니다. 상수는 리터럴 대신 하며 값 변경 될 수 있습니다 변수와 달리 프로그램 전체이 동일한 값을 유지 하는 의미 있는 이름을.  

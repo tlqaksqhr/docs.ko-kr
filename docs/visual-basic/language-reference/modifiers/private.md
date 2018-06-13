@@ -12,6 +12,7 @@ ms.sourcegitcommit: 22c3c8f74eaa138dbbbb02eb7d720fce87fc30a9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/17/2018
+ms.locfileid: "34234557"
 ---
 # <a name="private-visual-basic"></a>Private(Visual Basic)
 하나 이상의 선언 된 프로그래밍 요소를에서 포함 된 모든 형식을 포함 하 여 해당 변수의 선언 컨텍스트 내 에서만 액세스할 수 있도록 지정 합니다.  

@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33589011"
 ---
 # <a name="expression-of-type-lttypegt-is-not-queryable"></a>형식의 식은 &lt;형식&gt; 를 쿼리할 수 없습니다
 형식의 식은 \<유형 >를 쿼리할 수 없습니다. LINQ 공급자에 대 한 어셈블리 참조 및/또는 네임 스페이스 가져오기 누락 되지 않았는지 확인 합니다.  

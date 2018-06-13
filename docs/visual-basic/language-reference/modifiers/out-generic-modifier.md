@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33598155"
 ---
 # <a name="out-generic-modifier-visual-basic"></a>Out(제네릭 한정자)(Visual Basic)
 제네릭 형식 매개 변수에 `Out` 키워드 형식이 공변 (covariant) 임을 지정 합니다.  

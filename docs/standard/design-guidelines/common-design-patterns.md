@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33570348"
 ---
 # <a name="common-design-patterns"></a>일반 디자인 패턴
 소프트웨어 패턴, 패턴 언어 및 패턴의 매우 광범위 한 주제를 해결 하는 antipatterns에 대 한 다양 한 문서가 있습니다. 따라서이 장에서 지침 및.NET Framework Api의 디자인에 자주 사용 되는 패턴의 매우 제한적인와 관련 된 토론을 제공 합니다.  

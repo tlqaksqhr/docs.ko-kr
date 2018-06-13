@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33652846"
 ---
 # <a name="reference-visual-basic"></a>참조(Visual Basic)
 이 섹션에서는 Visual Basic 프로그래밍의 다양 한 측면에 대 한 참조 정보에 대 한 링크를 제공 합니다.  
