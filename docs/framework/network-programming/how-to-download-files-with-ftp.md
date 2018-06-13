@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33394851"
 ---
 # <a name="how-to-download-files-with-ftp"></a><span data-ttu-id="95297-102">방법: FTP를 사용하여 파일 다운로드</span><span class="sxs-lookup"><span data-stu-id="95297-102">How to: Download Files with FTP</span></span>
 <span data-ttu-id="95297-103">이 샘플은 FTP 서버에서 파일을 다운로드하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="95297-103">This sample shows how to download a file from an FTP server.</span></span>  

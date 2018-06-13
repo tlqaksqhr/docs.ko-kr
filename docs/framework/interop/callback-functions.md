@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33397392"
 ---
 # <a name="callback-functions"></a><span data-ttu-id="cbeca-102">콜백 함수</span><span class="sxs-lookup"><span data-stu-id="cbeca-102">Callback Functions</span></span>
 <span data-ttu-id="cbeca-103">콜백 함수는 관리되지 않는 DLL 함수가 작업을 완료하는 데 도움이 되는, 관리되는 응용 프로그램 내의 코드입니다.</span><span class="sxs-lookup"><span data-stu-id="cbeca-103">A callback function is code within a managed application that helps an unmanaged DLL function complete a task.</span></span> <span data-ttu-id="cbeca-104">콜백 함수 호출은 관리되는 응용 프로그램에서 간접적으로, DLL 함수를 통해, 그리고 다시 관리되는 구현으로 전달됩니다.</span><span class="sxs-lookup"><span data-stu-id="cbeca-104">Calls to a callback function pass indirectly from a managed application, through a DLL function, and back to the managed implementation.</span></span> <span data-ttu-id="cbeca-105">플랫폼 호출을 사용하여 호출되는 많은 DLL 함수 중 일부는 제대로 실행되기 위해 관리 코드에 콜백 함수가 있어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="cbeca-105">Some of the many DLL functions called with platform invoke require a callback function in managed code to run properly.</span></span>  

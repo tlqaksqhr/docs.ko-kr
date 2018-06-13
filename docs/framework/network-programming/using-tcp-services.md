@@ -24,6 +24,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33397171"
 ---
 # <a name="using-tcp-services"></a><span data-ttu-id="d1ff1-102">TCP 서비스 사용</span><span class="sxs-lookup"><span data-stu-id="d1ff1-102">Using TCP Services</span></span>
 <span data-ttu-id="d1ff1-103"><xref:System.Net.Sockets.TcpClient> 클래스는 TCP를 사용하여 인터넷 리소스의 데이터를 요청합니다.</span><span class="sxs-lookup"><span data-stu-id="d1ff1-103">The <xref:System.Net.Sockets.TcpClient> class requests data from an Internet resource using TCP.</span></span> <span data-ttu-id="d1ff1-104">**TcpClient**의 메서드 및 속성은 TCP를 사용하여 데이터를 요청 및 수신하는 <xref:System.Net.Sockets.Socket>을 만들기 위한 세부 정보를 추상화합니다.</span><span class="sxs-lookup"><span data-stu-id="d1ff1-104">The methods and properties of **TcpClient** abstract the details for creating a <xref:System.Net.Sockets.Socket> for requesting and receiving data using TCP.</span></span> <span data-ttu-id="d1ff1-105">원격 장치에 대한 연결은 스트림으로 표현되므로 .NET Framework 스트림 처리 기법을 사용하여 데이터를 읽고 쓸 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="d1ff1-105">Because the connection to the remote device is represented as a stream, data can be read and written with .NET Framework stream-handling techniques.</span></span>  

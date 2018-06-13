@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33394659"
 ---
 # <a name="how-to-send-data-using-the-webrequest-class"></a><span data-ttu-id="55ee8-102">방법: WebRequest 클래스를 사용하여 데이터 보내기</span><span class="sxs-lookup"><span data-stu-id="55ee8-102">How to: Send Data Using the WebRequest Class</span></span>
 <span data-ttu-id="55ee8-103">다음 프로시저에서는 서버에 데이터를 보내는 데 사용되는 단계를 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="55ee8-103">The following procedure describes the steps used to send data to a server.</span></span> <span data-ttu-id="55ee8-104">이 프로시저는 일반적으로 웹 페이지에 데이터를 게시하는 데 사용됩니다.</span><span class="sxs-lookup"><span data-stu-id="55ee8-104">This procedure is commonly used to post data to a Web page.</span></span>  

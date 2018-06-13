@@ -19,6 +19,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33397535"
 ---
 # <a name="proxy-configuration"></a><span data-ttu-id="9e27c-102">프록시 구성</span><span class="sxs-lookup"><span data-stu-id="9e27c-102">Proxy Configuration</span></span>
 <span data-ttu-id="9e27c-103">프록시 서버는 리소스에 대한 클라이언트 요청을 처리합니다.</span><span class="sxs-lookup"><span data-stu-id="9e27c-103">A proxy server handles client requests for resources.</span></span> <span data-ttu-id="9e27c-104">프록시는 해당 캐시에서 요청한 리소스를 반환하거나 리소스가 있는 서버로 요청을 전달할 수 있으며,</span><span class="sxs-lookup"><span data-stu-id="9e27c-104">A proxy can return a requested resource from its cache or forward the request to the server where the resource resides.</span></span> <span data-ttu-id="9e27c-105">원격 서버로 전송되는 요청 수를 줄여 네트워크 성능을 개선할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="9e27c-105">Proxies can improve network performance by reducing the number of requests sent to remote servers.</span></span> <span data-ttu-id="9e27c-106">프록시를 사용하여 리소스에 대한 액세스를 제한할 수도 있습니다.</span><span class="sxs-lookup"><span data-stu-id="9e27c-106">Proxies can also be used to restrict access to resources.</span></span>  

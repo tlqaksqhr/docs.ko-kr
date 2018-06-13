@@ -20,6 +20,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33393168"
 ---
 # <a name="security-in-network-programming"></a><span data-ttu-id="3e09f-102">네트워크 프로그래밍의 보안</span><span class="sxs-lookup"><span data-stu-id="3e09f-102">Security in network programming</span></span>
 

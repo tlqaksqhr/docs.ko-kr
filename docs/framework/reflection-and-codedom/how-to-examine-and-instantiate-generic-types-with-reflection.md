@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33397574"
 ---
 # <a name="how-to-examine-and-instantiate-generic-types-with-reflection"></a><span data-ttu-id="ca16c-102">방법: 리플렉션을 사용하여 제네릭 형식 검사 및 인스턴스화</span><span class="sxs-lookup"><span data-stu-id="ca16c-102">How to: Examine and Instantiate Generic Types with Reflection</span></span>
 <span data-ttu-id="ca16c-103">다른 형식에 대한 정보와 동일한 방식으로 제네릭 형식에 대한 정보를 가져올 수 있습니다. 제네릭 형식을 나타내는 <xref:System.Type> 개체를 검사하면 됩니다.</span><span class="sxs-lookup"><span data-stu-id="ca16c-103">Information about generic types is obtained in the same way as information about other types: by examining a <xref:System.Type> object that represents the generic type.</span></span> <span data-ttu-id="ca16c-104">원칙의 차이점은 제네릭 형식에는 제네릭 형식 매개 변수를 나타내는 <xref:System.Type> 개체 목록이 있다는 것입니다.</span><span class="sxs-lookup"><span data-stu-id="ca16c-104">The principle difference is that a generic type has a list of <xref:System.Type> objects representing its generic type parameters.</span></span> <span data-ttu-id="ca16c-105">이 섹션의 첫 번째 절차에서는 제네릭 형식을 검사합니다.</span><span class="sxs-lookup"><span data-stu-id="ca16c-105">The first procedure in this section examines generic types.</span></span>  

@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33396963"
 ---
 # <a name="interpreting-network-tracing"></a><span data-ttu-id="9943c-102">네트워크 추적 해석</span><span class="sxs-lookup"><span data-stu-id="9943c-102">Interpreting Network Tracing</span></span>
 <span data-ttu-id="9943c-103">네트워크 추적이 사용하도록 설정되면 추적 기능을 사용하여 응용 프로그램이 다양한 <xref:System.Net> 클래스 멤버에 대해 실행하는 호출을 캡처할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="9943c-103">When network tracing is enabled, you can use tracing to capture calls your application makes to various <xref:System.Net> class members.</span></span> <span data-ttu-id="9943c-104">이러한 호출의 출력은 다음 예제와 비슷할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="9943c-104">The output from these calls may be similar to the following examples.</span></span>  

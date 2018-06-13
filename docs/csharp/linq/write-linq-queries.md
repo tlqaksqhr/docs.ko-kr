@@ -8,6 +8,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33288839"
 ---
 # <a name="write-linq-queries-in-c"></a><span data-ttu-id="30ac8-103">C#에서 LINQ 쿼리 작성하기</span><span class="sxs-lookup"><span data-stu-id="30ac8-103">Write LINQ queries in C#</span></span>
 

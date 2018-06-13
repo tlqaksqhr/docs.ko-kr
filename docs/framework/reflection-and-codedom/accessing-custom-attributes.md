@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33397093"
 ---
 # <a name="accessing-custom-attributes"></a><span data-ttu-id="3906c-102">사용자 지정 특성 액세스</span><span class="sxs-lookup"><span data-stu-id="3906c-102">Accessing Custom Attributes</span></span>
 <span data-ttu-id="3906c-103">특성이 프로그램 요소와 연결된 후 리플렉션을 사용하여 특성의 존재 및 값을 쿼리할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="3906c-103">After attributes have been associated with program elements, reflection can be used to query their existence and values.</span></span> <span data-ttu-id="3906c-104">.NET Framework 버전 1.0 및 1.1에서 사용자 지정 특성은 실행 컨텍스트에서 검사됩니다.</span><span class="sxs-lookup"><span data-stu-id="3906c-104">In the .NET Framework version 1.0 and 1.1, custom attributes are examined in the execution context.</span></span> <span data-ttu-id="3906c-105">.NET Framework 버전 2.0에서는 실행을 위해 로드할 수 없는 코드를 검사하는 데 사용할 수 있는 새로운 로드 컨텍스트인 리플렉션 전용 컨텍스트를 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="3906c-105">The .NET Framework version 2.0 provides a new load context, the reflection-only context, which can be used to examine code that cannot be loaded for execution.</span></span>  

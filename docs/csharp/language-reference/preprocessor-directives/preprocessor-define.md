@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33286736"
 ---
 # <a name="define-c-reference"></a><span data-ttu-id="eebb6-102">#define(C# 참조)</span><span class="sxs-lookup"><span data-stu-id="eebb6-102">#define (C# Reference)</span></span>
 <span data-ttu-id="eebb6-103">`#define`을 사용하여 기호를 정의합니다.</span><span class="sxs-lookup"><span data-stu-id="eebb6-103">You use `#define` to define a symbol.</span></span> <span data-ttu-id="eebb6-104">기호를 [#if](../../../csharp/language-reference/preprocessor-directives/preprocessor-if.md) 지시문에 전달되는 식으로 사용하는 경우 식이 다음 예제와 같이 `true`로 평가됩니다.</span><span class="sxs-lookup"><span data-stu-id="eebb6-104">When you use the symbol as the expression that's passed to the [#if](../../../csharp/language-reference/preprocessor-directives/preprocessor-if.md) directive, the expression will evaluate to `true`, as the following example shows:</span></span>  

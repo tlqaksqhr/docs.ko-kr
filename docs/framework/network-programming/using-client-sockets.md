@@ -24,6 +24,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33395949"
 ---
 # <a name="using-client-sockets"></a><span data-ttu-id="0a12f-102">클라이언트 소켓 사용</span><span class="sxs-lookup"><span data-stu-id="0a12f-102">Using Client Sockets</span></span>
 <span data-ttu-id="0a12f-103"><xref:System.Net.Sockets.Socket>을 통해 대화를 시작하려면 먼저 응용 프로그램과 원격 장치 간에 데이터 파이프를 만들어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="0a12f-103">Before you can initiate a conversation through a <xref:System.Net.Sockets.Socket>, you must create a data pipe between your application and the remote device.</span></span> <span data-ttu-id="0a12f-104">다른 네트워크 주소 패밀리 및 프로토콜이 있어도 이 예제에서는 원격 서비스에 대한 TCP/IP 연결을 만드는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="0a12f-104">Although other network address families and protocols exist, this example shows how to create a TCP/IP connection to a remote service.</span></span>  

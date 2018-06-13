@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33393603"
 ---
 # <a name="net-framework-4-migration-issues"></a><span data-ttu-id="bce6e-102">.NET Framework 4 마이그레이션 문제</span><span class="sxs-lookup"><span data-stu-id="bce6e-102">.NET Framework 4 migration issues</span></span>
 

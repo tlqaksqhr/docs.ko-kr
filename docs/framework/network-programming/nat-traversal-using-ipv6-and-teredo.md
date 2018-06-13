@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33398120"
 ---
 # <a name="nat-traversal-using-ipv6-and-teredo"></a><span data-ttu-id="770e7-102">IPv6 및 Teredo를 사용하는 NAT 통과</span><span class="sxs-lookup"><span data-stu-id="770e7-102">NAT Traversal using IPv6 and Teredo</span></span>
 <span data-ttu-id="770e7-103">NAT(Network Address Translation) 통과 지원을 제공하도록 개선되었습니다.</span><span class="sxs-lookup"><span data-stu-id="770e7-103">Enhancements were made that provide support for Network Address Translation (NAT) traversal.</span></span> <span data-ttu-id="770e7-104">이러한 변경 사항은 IPv6 및 Teredo와 함께 사용하도록 설계되었지만, 다른 IP 터널링 기술에도 적용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="770e7-104">These changes are designed for use with IPv6 and Teredo, but they are also applicable to other IP tunneling technologies.</span></span> <span data-ttu-id="770e7-105">이러한 개선사항은 <xref:System.Net> 및 관련 네임스페이스의 클래스에 영향을 미칩니다.</span><span class="sxs-lookup"><span data-stu-id="770e7-105">These enhancements affect classes in the <xref:System.Net> and related namespaces.</span></span>  

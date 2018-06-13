@@ -19,6 +19,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33397717"
 ---
 # <a name="how-to-request-data-using-the-webrequest-class"></a><span data-ttu-id="6b788-102">방법: WebRequest 클래스를 사용하여 데이터 요청</span><span class="sxs-lookup"><span data-stu-id="6b788-102">How to: Request Data Using the WebRequest Class</span></span>
 <span data-ttu-id="6b788-103">다음 프로시저에서는 서버의 웹 페이지 또는 파일과 같은 리소스를 요청하는 데 사용되는 단계를 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="6b788-103">The following procedure describes the steps used to request a resource from a server, for example, a Web page or file.</span></span> <span data-ttu-id="6b788-104">리소스는 URI로 식별되어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="6b788-104">The resource must be identified by a URI.</span></span>  

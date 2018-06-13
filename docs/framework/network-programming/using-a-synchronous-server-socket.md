@@ -25,6 +25,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33398146"
 ---
 # <a name="using-a-synchronous-server-socket"></a><span data-ttu-id="0ca18-102">동기 서버 소켓 사용</span><span class="sxs-lookup"><span data-stu-id="0ca18-102">Using a Synchronous Server Socket</span></span>
 <span data-ttu-id="0ca18-103">동기 서버 소켓은 소켓에 연결 요청이 수신될 때까지 응용 프로그램 실행을 일시 중단합니다.</span><span class="sxs-lookup"><span data-stu-id="0ca18-103">Synchronous server sockets suspend the execution of the application until a connection request is received on the socket.</span></span> <span data-ttu-id="0ca18-104">동기 서버 소켓은 네트워크를 작업에 많이 사용하는 응용 프로그램에 적합하지 않지만 간단한 네트워크 응용 프로그램에는 적합할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="0ca18-104">Synchronous server sockets are not suitable for applications that make heavy use of the network in their operation, but they can be suitable for simple network applications.</span></span>  

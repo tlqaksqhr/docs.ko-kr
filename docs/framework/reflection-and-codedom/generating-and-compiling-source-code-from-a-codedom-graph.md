@@ -33,6 +33,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33397015"
 ---
 # <a name="generating-and-compiling-source-code-from-a-codedom-graph"></a><span data-ttu-id="4cd0b-102">CodeDOM 그래프에서 소스 코드 생성 및 컴파일</span><span class="sxs-lookup"><span data-stu-id="4cd0b-102">Generating and Compiling Source Code from a CodeDOM Graph</span></span>
 <span data-ttu-id="4cd0b-103"><xref:System.CodeDom.Compiler> 네임스페이스는 CodeDOM 개체 그래프에서 소스 코드를 생성하고 지원되는 컴파일러를 통한 컴파일을 관리하기 위한 인터페이스를 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="4cd0b-103">The <xref:System.CodeDom.Compiler> namespace provides interfaces for generating source code from CodeDOM object graphs and for managing compilation with supported compilers.</span></span> <span data-ttu-id="4cd0b-104">코드 공급자는 CodeDOM 그래프에 따라 특정 프로그래밍 언어로 소스 코드를 생성할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="4cd0b-104">A code provider can produce source code in a particular programming language according to a CodeDOM graph.</span></span> <span data-ttu-id="4cd0b-105"><xref:System.CodeDom.Compiler.CodeDomProvider>에서 파생되는 클래스는 일반적으로 공급자가 지원하는 언어의 코드를 생성 및 컴파일하기 위한 메서드를 제공할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="4cd0b-105">A class that derives from <xref:System.CodeDom.Compiler.CodeDomProvider> can typically provide methods for generating and compiling code for the language the provider supports.</span></span>  

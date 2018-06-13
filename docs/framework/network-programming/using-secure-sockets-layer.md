@@ -23,6 +23,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33396248"
 ---
 # <a name="using-secure-sockets-layer"></a><span data-ttu-id="74405-102">SSL(Secure Sockets Layer) 사용</span><span class="sxs-lookup"><span data-stu-id="74405-102">Using Secure Sockets Layer</span></span>
 <span data-ttu-id="74405-103"><xref:System.Net> 클래스는 SSL(Secure Sockets Layer)을 사용하여 여러 네트워크 프로토콜에 대한 연결을 암호화합니다.</span><span class="sxs-lookup"><span data-stu-id="74405-103">The <xref:System.Net> classes use the Secure Sockets Layer (SSL) to encrypt the connection for several network protocols.</span></span>  
