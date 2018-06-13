@@ -14,6 +14,7 @@ ms.sourcegitcommit: b7763f3435635850a76d4cbcf09bdce6c019208a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/25/2018
+ms.locfileid: "34483543"
 ---
 # <a name="high-dpi-support-in-windows-forms"></a><span data-ttu-id="c31f7-102">Windows Forms의 높은 DPI 지원</span><span class="sxs-lookup"><span data-stu-id="c31f7-102">High DPI support in Windows Forms</span></span>
 

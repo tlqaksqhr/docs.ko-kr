@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33573674"
 ---
 # <a name="microservices-addressability-and-the-service-registry"></a><span data-ttu-id="3c5f9-103">마이크로 서비스 주소 지정 기능 및 서비스 레지스트리</span><span class="sxs-lookup"><span data-stu-id="3c5f9-103">Microservices addressability and the service registry</span></span>
 

@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33569958"
 ---
 # <a name="xdr-validation-with-xmlschemacollection"></a><span data-ttu-id="f74b4-102">XmlSchemaCollection을 사용하여 XDR 유효성 검사</span><span class="sxs-lookup"><span data-stu-id="f74b4-102">XDR Validation with XmlSchemaCollection</span></span>
 <span data-ttu-id="f74b4-103">유효성을 검사하려는 XDR(XML 데이터 축소) 스키마가 **XmlSchemaCollection**에 저장된 경우 스키마를 컬렉션에 추가할 때 지정한 네임스페이스 URI와 연관됩니다.</span><span class="sxs-lookup"><span data-stu-id="f74b4-103">If the XML-Data Reduced (XDR) schema you are validating against is stored in the **XmlSchemaCollection**, it is associated with the namespace URI specified when the schema was added to the collection.</span></span> <span data-ttu-id="f74b4-104">**XmlValidatingReader**에서는 XML 문서의 네임스페이스 URI를 컬렉션의 해당 URI에 상응하는 스키마로 매핑합니다.</span><span class="sxs-lookup"><span data-stu-id="f74b4-104">**XmlValidatingReader** maps the namespace URI in the XML document to the schema that corresponds to that URI in the collection.</span></span>  

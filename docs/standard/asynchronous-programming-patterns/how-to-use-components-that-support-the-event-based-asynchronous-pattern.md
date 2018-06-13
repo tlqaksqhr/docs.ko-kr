@@ -23,6 +23,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33567635"
 ---
 # <a name="how-to-use-components-that-support-the-event-based-asynchronous-pattern"></a><span data-ttu-id="aad57-102">방법: 이벤트 기반 비동기 패턴을 지원하는 구성 요소 사용</span><span class="sxs-lookup"><span data-stu-id="aad57-102">How to: Use Components That Support the Event-based Asynchronous Pattern</span></span>
 <span data-ttu-id="aad57-103">많은 구성 요소가 비동기적으로 작업을 수행하는 옵션을 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="aad57-103">Many components provide you with the option of performing their work asynchronously.</span></span> <span data-ttu-id="aad57-104">예를 들어 <xref:System.Media.SoundPlayer> 및 <xref:System.Windows.Forms.PictureBox> 구성 요소를 사용하면 기본 스레드가 중단 없이 계속 실행되는 동안 사운드 및 이미지를 “배경”으로 로드할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="aad57-104">The <xref:System.Media.SoundPlayer> and <xref:System.Windows.Forms.PictureBox> components, for example, enable you to load sounds and images "in the background" while your main thread continues running without interruption.</span></span>  

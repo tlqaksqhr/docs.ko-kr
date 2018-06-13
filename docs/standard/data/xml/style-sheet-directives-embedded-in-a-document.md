@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33569332"
 ---
 # <a name="style-sheet-directives-embedded-in-a-document"></a><span data-ttu-id="a1f31-102">문서에 포함된 스타일시트 지시문</span><span class="sxs-lookup"><span data-stu-id="a1f31-102">Style Sheet Directives Embedded in a Document</span></span>
 <span data-ttu-id="a1f31-103">기존 XML에 `<?xml:stylesheet?>`의 스타일시트 지시문이 포함된 경우도 있습니다.</span><span class="sxs-lookup"><span data-stu-id="a1f31-103">Occasionally, existing XML contains the style sheet directive of `<?xml:stylesheet?>`.</span></span> <span data-ttu-id="a1f31-104">Microsoft Internet Explorer에서는 `<?xml-stylesheet?>` 구문 대신 이처럼 포함된 지시문이 적용됩니다.</span><span class="sxs-lookup"><span data-stu-id="a1f31-104">Microsoft Internet Explorer accepts this as an alternative to the `<?xml-stylesheet?>` syntax.</span></span> <span data-ttu-id="a1f31-105">다음 데이터와 같이 XML 데이터에 `<?xml:stylesheet?>` 지시문이 있는 경우 이 데이터를 XML DOM(문서 개체 모델)으로 로드하려고 하면 예외가 throw됩니다.</span><span class="sxs-lookup"><span data-stu-id="a1f31-105">When the XML data contains an `<?xml:stylesheet?>` directive, as shown in the following data, attempting to load this data into the XML Document Object Model (DOM) throws an exception.</span></span>  

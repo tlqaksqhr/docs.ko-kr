@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33574701"
 ---
 # <a name="result-tree-fragment-in-transformations"></a><span data-ttu-id="ee63f-102">변형의 결과 트리 조각</span><span class="sxs-lookup"><span data-stu-id="ee63f-102">Result Tree Fragment in Transformations</span></span>
 > [!NOTE]

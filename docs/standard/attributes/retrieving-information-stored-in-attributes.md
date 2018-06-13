@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33570410"
 ---
 # <a name="retrieving-information-stored-in-attributes"></a><span data-ttu-id="d4d6f-102">특성에 저장된 정보 검색</span><span class="sxs-lookup"><span data-stu-id="d4d6f-102">Retrieving Information Stored in Attributes</span></span>
 <span data-ttu-id="d4d6f-103">사용자 지정 특성 검색은 간단한 프로세스입니다.</span><span class="sxs-lookup"><span data-stu-id="d4d6f-103">Retrieving a custom attribute is a simple process.</span></span> <span data-ttu-id="d4d6f-104">먼저, 검색하려는 특성의 인스턴스를 선언합니다.</span><span class="sxs-lookup"><span data-stu-id="d4d6f-104">First, declare an instance of the attribute you want to retrieve.</span></span> <span data-ttu-id="d4d6f-105">그런 다음, <xref:System.Attribute.GetCustomAttribute%2A?displayProperty=nameWithType> 메서드를 사용하여 검색하려는 특성 값으로 새 특성을 초기화합니다.</span><span class="sxs-lookup"><span data-stu-id="d4d6f-105">Then, use the <xref:System.Attribute.GetCustomAttribute%2A?displayProperty=nameWithType> method to initialize the new attribute to the value of the attribute you want to retrieve.</span></span> <span data-ttu-id="d4d6f-106">새 특성이 초기화되면 해당 속성을 사용하여 값을 가져오기만 하면 됩니다.</span><span class="sxs-lookup"><span data-stu-id="d4d6f-106">Once the new attribute is initialized, you simply use its properties to get the values.</span></span>  

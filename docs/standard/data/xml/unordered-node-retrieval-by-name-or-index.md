@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33572943"
 ---
 # <a name="unordered-node-retrieval-by-name-or-index"></a><span data-ttu-id="1302a-102">이름 또는 인덱스별로 정렬되지 않은 노드 검색</span><span class="sxs-lookup"><span data-stu-id="1302a-102">Unordered Node Retrieval by Name or Index</span></span>
 <span data-ttu-id="1302a-103">**XmlNamedNodeMap**은 W3C(World Wide Web 컨소시엄) 사양에서 NamedNodeMap으로 설명되며 이름이나 인덱스를 사용하여 노드를 참조할 수 있는 정렬되지 않은 노드 집합 처리에 필수적입니다.</span><span class="sxs-lookup"><span data-stu-id="1302a-103">The **XmlNamedNodeMap** is described in the World Wide Web Consortium (W3C) specification as the NamedNodeMap and is required to handle an unordered set of nodes with the ability to reference nodes by their name or index.</span></span> <span data-ttu-id="1302a-104">**XmlNamedNodeMap**에 액세스할 수 있는 유일한 방법은 메서드나 속성을 통해 **XmlNamedNodeMap**을 반환하는 경우입니다.</span><span class="sxs-lookup"><span data-stu-id="1302a-104">The only way you have access to an **XmlNamedNodeMap** is when an **XmlNamedNodeMap** is returned through a method or property.</span></span> <span data-ttu-id="1302a-105">다음과 같은 세 가지 메서드나 속성이 **XmlNamedNodeMap**을 반환합니다.</span><span class="sxs-lookup"><span data-stu-id="1302a-105">There are three methods or properties that return an **XmlNamedNodeMap**:</span></span>  
