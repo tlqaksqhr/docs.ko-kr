@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33558189"
 ---
 # <a name="drawing-objects-overview"></a>Drawing 개체 개요
 이 항목에서는 소개 <xref:System.Windows.Media.Drawing> 개체를 효율적으로 셰이프, 비트맵, 텍스트 및 미디어를 그리는 데 사용 하는 방법에 설명 합니다. 사용 하 여 <xref:System.Windows.Media.Drawing> 개체 클립 아트를 만들 때 사용 하 여 페인트는 <xref:System.Windows.Media.DrawingBrush>, 사용 또는 <xref:System.Windows.Media.Visual> 개체입니다.  

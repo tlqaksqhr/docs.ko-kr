@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33556005"
 ---
 # <a name="scrollbar"></a>ScrollBar
 A <xref:System.Windows.Controls.Primitives.ScrollBar> 이동 하 여 현재 보기 영역 밖에 있는 콘텐츠를 볼 수 있습니다는 <xref:System.Windows.Controls.Primitives.Thumb> 는 콘텐츠를 볼 수 있도록 합니다.  

@@ -19,6 +19,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33558358"
 ---
 # <a name="animation-tips-and-tricks"></a>애니메이션에 대한 유용한 정보
 애니메이션을 사용할 때 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)], 팁의 여러 가지 및 애니메이션을 만들 수 있는 방법을 더 잘 수행 불만 저장 합니다.  

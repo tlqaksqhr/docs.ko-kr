@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33394659"
 ---
 # <a name="how-to-send-data-using-the-webrequest-class"></a>방법: WebRequest 클래스를 사용하여 데이터 보내기
 다음 프로시저에서는 서버에 데이터를 보내는 데 사용되는 단계를 설명합니다. 이 프로시저는 일반적으로 웹 페이지에 데이터를 게시하는 데 사용됩니다.  

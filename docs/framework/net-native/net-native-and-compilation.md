@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33395530"
 ---
 # <a name="net-native-and-compilation"></a>.NET 네이티브 및 컴파일
 .NET Framework를 대상으로 지정하는 Windows 8.1 응용 프로그램과 Windows 데스크톱 응용 프로그램은 특정 프로그래밍 언어로 작성되고 IL(중간 언어)로 컴파일됩니다. 런타임에 JIT(Just-In-Time) 컴파일러는 메서드가 처음 실행되기 바로 전에 로컬 컴퓨터에 대한 네이티브 코드로 IL을 컴파일합니다. 반대로 .NET 네이티브 도구 체인은 컴파일 타임에 소스 코드를 네이티브 코드로 변환합니다. 이 항목에서는 .NET Framework 앱에 사용할 수 있는 다른 컴파일 기술과 .NET 네이티브를 비교하고 .NET 네이티브로 컴파일된 코드에서 발생하는 예외가 JIT로 컴파일된 코드에서 발생하지 않는 이유를 이해하는 데 도움이 될 수 있는 네이티브 코드를 .NET 네이티브에서 생성하는 방법에 대한 실제적인 개요를 제공합니다.  

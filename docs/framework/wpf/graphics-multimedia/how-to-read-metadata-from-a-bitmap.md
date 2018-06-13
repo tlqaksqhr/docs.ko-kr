@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33559172"
 ---
 # <a name="how-to-read-metadata-from-a-bitmap"></a>방법: 비트맵에서 메타데이터 읽기
 이 예제에는 메타 데이터 쿼리 언어를 사용 하 여 비트맵 메타 데이터를 읽는 방법을 보여 줍니다.  

@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33556668"
 ---
 # <a name="drawings-how-to-topics"></a>그리기 방법 항목
 이 섹션의 항목을 사용 하는 방법을 설명 <xref:System.Windows.Media.Drawing> 도형, 이미지 또는 텍스트를 그리는 데 개체입니다.  

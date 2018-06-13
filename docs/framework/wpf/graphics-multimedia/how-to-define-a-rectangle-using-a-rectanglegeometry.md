@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33560425"
 ---
 # <a name="how-to-define-a-rectangle-using-a-rectanglegeometry"></a>방법: RectangleGeometry를 사용하여 사각형 정의
 이 예제에 사용 하는 방법에 설명 된 <xref:System.Windows.Media.RectangleGeometry> 사각형을 설명 하는 클래스입니다.  

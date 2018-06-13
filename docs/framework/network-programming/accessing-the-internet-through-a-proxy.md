@@ -20,6 +20,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33394981"
 ---
 # <a name="accessing-the-internet-through-a-proxy"></a>프록시를 통해 인터넷 액세스
 사이트가 프록시를 사용하여 인터넷에 대한 액세스를 제공하는 경우 응용 프로그램이 웹 프록시와 통신할 수 있도록 프록시 인스턴스를 구성해야 합니다.  

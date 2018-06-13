@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33561377"
 ---
 # <a name="how-to-set-a-duration-for-an-animation"></a>방법: 애니메이션의 지속 시간 설정
 A <xref:System.Windows.Media.Animation.Timeline> 시간을 세그먼트와 해당 세그먼트의 길이 따라 사용자가 타임 라인의 나타냅니다 <xref:System.Windows.Duration>합니다. 경우는 <xref:System.Windows.Media.Animation.Timeline> 끝에 도달한 기간의 해당 재생이 중지 합니다. 경우는 <xref:System.Windows.Media.Animation.Timeline> 자식 타임 라인에도 재생을 중지 합니다. 애니메이션의 경우는 <xref:System.Windows.Duration> 애니메이션의 소요 시간 전환의 시작 값 끝 값을 지정 합니다.  

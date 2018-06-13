@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33557214"
 ---
 # <a name="binding-declarations-overview"></a>바인딩 선언 개요
 이 항목에서는 바인딩을 선언할 수 있는 여러 가지 방법을 설명합니다.  

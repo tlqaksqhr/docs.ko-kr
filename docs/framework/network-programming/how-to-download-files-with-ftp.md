@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33394851"
 ---
 # <a name="how-to-download-files-with-ftp"></a>방법: FTP를 사용하여 파일 다운로드
 이 샘플은 FTP 서버에서 파일을 다운로드하는 방법을 보여 줍니다.  

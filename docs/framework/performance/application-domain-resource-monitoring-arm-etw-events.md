@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33398185"
 ---
 # <a name="application-domain-resource-monitoring-arm-etw-events"></a>ARM(응용 프로그램 도메인 리소스 모니터링) ETW 이벤트
 <a name="top"></a> 이들 이벤트는 응용 프로그램 도메인 상태에 대한 자세한 진단 정보를 제공합니다. 이들 이벤트를 사용하거나 응용 프로그램 도메인 리소스 모니터링(ARM) 기능을 사용하여 같은 정보를 얻을 수 있습니다.  

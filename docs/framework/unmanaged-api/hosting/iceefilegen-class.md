@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 9f0ab07377b9e5db36ca9e4f1fd93aacd3464df4
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33436311"
 ---
 # <a name="iceefilegen-class"></a>ICeeFileGen 클래스
 네이티브 이식 가능한 실행 (PE) 파일을 만들기 위한 기능을 제공 합니다. 인터페이스 컴파일된 출력 실행 파일을 생성 하는 컴파일러에 일반적으로 사용 됩니다.  

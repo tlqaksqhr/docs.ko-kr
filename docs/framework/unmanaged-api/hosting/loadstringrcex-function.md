@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 38c942b9a94c83f5a3316cf3ae3ccbbad2b0ec69
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33444319"
 ---
 # <a name="loadstringrcex-function"></a>LoadStringRCEx 함수
 HRESULT 값을 지정된 된 문화권에 대 한 적절 한 오류 메시지를 변환합니다.  

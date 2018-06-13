@@ -33,6 +33,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33558124"
 ---
 # <a name="wpf-windows-overview"></a>WPF 창 개요
 사용자가 windows 통해 독립 실행형 응용 프로그램을 Windows Presentation Foundation (WPF)와 상호 작용 합니다. 창의 기본 용도는 데이터를 시각화하는 콘텐츠를 호스트하고 사용자가 데이터와 상호 작용할 수 있도록 하는 것입니다. 독립 실행형 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 응용 프로그램은 고유 창을 사용 하 여 제공 된 <xref:System.Windows.Window> 클래스입니다. 이 항목에서는 소개 <xref:System.Windows.Window> 독립 실행형 응용 프로그램에는 창을 만들고 관리의 기본 개념을 다루기 전에 합니다.  

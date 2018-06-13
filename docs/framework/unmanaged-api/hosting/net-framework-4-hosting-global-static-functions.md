@@ -10,9 +10,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 019a17b38eb1cfccab4537d5f27b7625fdef1268
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33441470"
 ---
 # <a name="net-framework-4-hosting-global-static-functions"></a>.NET Framework 4 호스팅 전역 정적 함수
 [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)] MSCorEE.dll의 새로운 내보낸된 방법으로 하나의 소개: [CLRCreateIntstance](../../../../docs/framework/unmanaged-api/hosting/clrcreateinstance-function.md)합니다.  

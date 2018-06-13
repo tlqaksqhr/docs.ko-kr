@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33561675"
 ---
 # <a name="how-to-simplify-animations-by-using-child-timelines"></a>방법: 자식 Timeline을 사용하여 애니메이션 단순화
 자식을 사용 하 여 애니메이션을 단순화 하는 방법을 보여 주는이 예제 <xref:System.Windows.Media.Animation.ParallelTimeline> 개체입니다. A <xref:System.Windows.Media.Animation.Storyboard> 는 유형의 <xref:System.Windows.Media.Animation.Timeline> 포함 된 타임 라인에 대 한 대상 정보를 제공 하는 합니다. 사용 하 여 한 <xref:System.Windows.Media.Animation.Storyboard> 개체 및 속성 정보를 포함 하 여 정보를 대상으로 하는 시간 표시 막대 수 있도록 합니다.  

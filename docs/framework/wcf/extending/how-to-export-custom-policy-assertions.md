@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33488220"
 ---
 # <a name="how-to-export-custom-policy-assertions"></a>방법: 사용자 지정 정책 어설션 내보내기
 정책 어설션은 서비스 끝점의 기능 및 요구 사항에 대해 설명합니다. 서비스 응용 프로그램은 서비스 메타데이터에서 사용자 지정 정책 어설션을 사용하여 끝점, 바인딩 또는 계약 사용자 지정 정보에 대해 클라이언트 응용 프로그램과 통신할 수 있습니다. Windows Communication Foundation (WCF)를 사용 하 여에 끝점, 작업 또는 기능 또는 사용자가 통신 하는 요구 사항에 따라 메시지 제목의 WSDL 바인딩에 연결 된 정책 식으로 어설션을 내보낼 수 있습니다.  

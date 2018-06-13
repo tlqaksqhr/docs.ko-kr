@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33558842"
 ---
 # <a name="how-to-animate-camera-position-and-direction-using-key-frames"></a>방법: 키 프레임을 사용하여 카메라 위치 및 방향에 애니메이션 효과 주기
 다음 예에서 <xref:System.Windows.Media.Animation.Point3DAnimationUsingKeyFrames> 의 위치에 애니메이션을 적용 하는 데 사용 되는 <xref:System.Windows.Media.Media3D.PerspectiveCamera> 3D 장면에 있습니다. 또한 <xref:System.Windows.Media.Animation.Vector3DAnimationUsingKeyFrames> 3D 장면에 카메라가 가리키는 방향에 애니메이션을 적용 하는 데 사용 됩니다. 모두 이러한 애니메이션 일련의 애니메이션 효과 생성 하는 여러 키 프레임을 사용 합니다.  

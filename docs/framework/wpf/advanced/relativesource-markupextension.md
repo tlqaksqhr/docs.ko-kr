@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33548268"
 ---
 # <a name="relativesource-markupextension"></a>RelativeSource MarkupExtension
 속성을 지정는 <xref:System.Windows.Data.RelativeSource> 내에서 사용 되는 바인딩 원본의 [바인딩 태그 확장](../../../../docs/framework/wpf/advanced/binding-markup-extension.md), 설정할 때 또는 <xref:System.Windows.Data.Binding.RelativeSource%2A> 속성은 <xref:System.Windows.Data.Binding> XAML에 설정 된 요소입니다.  

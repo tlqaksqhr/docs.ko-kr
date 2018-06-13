@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33557851"
 ---
 # <a name="sizing-options-in-the-datagrid-control"></a>DataGrid 컨트롤의 크기 조정 옵션
 다양 한 옵션을 제어할 수 있는 방법을 <xref:System.Windows.Controls.DataGrid> 크기가 자동으로 조정 합니다. <xref:System.Windows.Controls.DataGrid>, 개별 행과 열에는 <xref:System.Windows.Controls.DataGrid>를 내용에 자동으로 크기가 조정 되도록 설정할 수 있습니다, 또는 특정 값으로 설정할 수 있습니다. 기본적으로는 <xref:System.Windows.Controls.DataGrid> 확장 및 해당 내용의 크기에 맞게 축소 됩니다.  

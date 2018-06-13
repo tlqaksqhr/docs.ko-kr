@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33560287"
 ---
 # <a name="how-to-seek-a-storyboard"></a>방법: Storyboard 검색
 사용 하는 방법을 보여 주는 다음 예제는 <xref:System.Windows.Media.Animation.Storyboard.Seek%2A> 의 메서드는 <xref:System.Windows.Media.Animation.Storyboard> 스토리 보드 애니메이션에서 모든 위치로 이동할 수 있습니다.  

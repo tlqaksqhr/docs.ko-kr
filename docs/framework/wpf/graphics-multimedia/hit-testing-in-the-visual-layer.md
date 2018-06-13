@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33558111"
 ---
 # <a name="hit-testing-in-the-visual-layer"></a>시각적 계층에서 적중 테스트
 이 항목에서는 시각적 계층에서 제공하는 적중 테스트 기능의 개요를 제공합니다. 적중 횟수 테스트 지원 기 하 도형 또는 포인트 값이의 렌더링된 콘텐츠 내에 있는지 확인할 수 있습니다는 <xref:System.Windows.Media.Visual>, 여러 개체를 선택할 선택 영역 직사각형 같은 사용자 인터페이스 동작을 구현할 수 있도록 합니다.  

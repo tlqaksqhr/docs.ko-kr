@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33556057"
 ---
 # <a name="geometries"></a>Geometry
 <xref:System.Windows.Media.Geometry> 렌더링 하는 데 사용 하는 다양 한 클래스는 [!INCLUDE[TLA#tla_2d](../../../../includes/tlasharptla-2d-md.md)] 그래픽 개체, 적중 테스트 및 클리핑 영역을 정의  

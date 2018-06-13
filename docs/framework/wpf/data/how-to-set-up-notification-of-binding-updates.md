@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33555844"
 ---
 # <a name="how-to-set-up-notification-of-binding-updates"></a>방법: 바인딩 업데이트 알림 설정
 이 예제에서는 바인딩의 바인딩 대상(대상) 또는 바인딩 소스(소스) 속성이 업데이트될 경우 알림을 받도록 설정하는 방법을 보여 줍니다.  

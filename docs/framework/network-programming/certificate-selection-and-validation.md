@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33396794"
 ---
 # <a name="certificate-selection-and-validation"></a>인증서 선택 및 유효성 검사
 <xref:System.Net> 클래스는 SSL(Secure Sockets Layer) 연결에 대한 <xref:System.Security.Cryptography.X509Certificates>를 선택하고 유효성을 검사하는 여러 가지 방법을 지원합니다. 클라이언트는 서버에 인증하기 위해 하나 이상의 인증서를 선택할 수 있습니다. 서버는 인증을 위해 클라이언트 인증서에 하나 이상의 특정 특성이 있도록 요구할 수 있습니다.  

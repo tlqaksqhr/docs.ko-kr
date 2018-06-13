@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33552921"
 ---
 # <a name="how-to-save-load-and-print-richtextbox-content"></a>방법: RichTextBox 콘텐츠 저장, 로드 및 인쇄
 내용을 저장 하는 방법을 보여 주는 다음 예제는 <xref:System.Windows.Controls.RichTextBox> 로드에 다시 해당 파일에 <xref:System.Windows.Controls.RichTextBox>, 내용을 인쇄 하 고 있습니다.  

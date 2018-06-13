@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33398081"
 ---
 # <a name="lttypegt-element-net-native"></a>&lt;유형&gt; 요소(.NET 네이티브)
 클래스 또는 구조체와 같은 특정 형식에 런타임 정책을 적용합니다.  

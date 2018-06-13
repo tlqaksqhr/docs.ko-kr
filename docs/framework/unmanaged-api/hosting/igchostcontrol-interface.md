@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 2b957642606cfcd43b6a02d64450d51174eb7768
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33439754"
 ---
 # <a name="igchostcontrol-interface"></a>IGCHostControl 인터페이스
 가비지 수집기를 호스트에 가상 메모리의 한계를 변경 하도록 요청을 허용 하는 메서드를 제공 합니다.  

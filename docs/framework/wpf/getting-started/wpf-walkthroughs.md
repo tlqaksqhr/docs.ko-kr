@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33557890"
 ---
 # <a name="wpf-walkthroughs"></a>WPF 연습
 연습에서는 일반 시나리오에 대 한 단계별 지침을 제공 합니다. 제품 또는 특정 기능 영역 파악을 효율적으로 시작할 수 있습니다.  

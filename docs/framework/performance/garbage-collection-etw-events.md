@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33396937"
 ---
 # <a name="garbage-collection-etw-events"></a>가비지 컬렉션 ETW 이벤트
 <a name="top"></a> 이들 이벤트는 가비지 수집과 관련된 정보를 수집합니다. 가비지 수집 수행 횟수, 가비지 수집 중에 해제된 메모리 양 등을 판별하는 작업을 포함하여 진단과 디버깅에 도움이 됩니다.  

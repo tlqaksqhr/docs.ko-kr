@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: ab6b13c6b7dba34f5ea82d05f483b36bf96aab1d
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33437328"
 ---
 # <a name="iclrtaskmanagersetlocale-method"></a>ICLRTaskManager::SetLocale 메서드
 호스트가 실행 중인 현재 작업 (에 매핑되는 지리적 culture 및 언어) 로캘 식별자의 값을 수정 했음을 공용 언어 런타임 (CLR)에 알립니다.  

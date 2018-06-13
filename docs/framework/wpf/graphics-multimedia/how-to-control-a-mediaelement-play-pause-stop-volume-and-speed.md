@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33561393"
 ---
 # <a name="how-to-control-a-mediaelement-play-pause-stop-volume-and-speed"></a>방법: MediaElement 제어(재생, 일시 중지, 정지, 볼륨 및 속도)
 다음 예제에서는 미디어를 사용 하 여의 재생을 제어 하는 <xref:System.Windows.Controls.MediaElement>합니다. 이 예에서는 재생, 일시 중지, 중지 및 미디어에서 앞뒤로 건너뛰려면으로 볼륨 및 속도 비율을 조정할 수 있도록 간단한 미디어 플레이어를 만듭니다.  

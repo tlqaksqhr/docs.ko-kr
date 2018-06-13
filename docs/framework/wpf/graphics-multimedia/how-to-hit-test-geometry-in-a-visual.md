@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33560921"
 ---
 # <a name="how-to-hit-test-geometry-in-a-visual"></a>방법: 시각적 요소의 기하 도형 적중 테스트
 하나 이상의 요소로 구성 된 시각적 개체에서 적중 횟수 테스트를 수행 하는 방법을 보여 주는이 예제 <xref:System.Windows.Media.Geometry> 개체입니다.  

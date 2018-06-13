@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33545326"
 ---
 # <a name="dynamicresource-markup-extension"></a>DynamicResource 태그 확장
 에 대 한 값을 제공 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 정의 된 리소스에 대 한 참조가 되도록 지연 하 여 property 특성입니다. 해당 리소스에 대 한 조회 동작은 런타임에 조회과 같습니다.  

@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33395260"
 ---
 # <a name="configuring-caching-in-network-applications"></a>네트워크 응용 프로그램에서 캐싱 구성
 캐싱을 구성하려면 응용 프로그램 또는 <xref:System.Net.WebRequest> 수준에서 캐시 정책을 지정해야 합니다. 다음 항목에서는 캐싱을 사용하도록 응용 프로그램 및 요청을 구성하는 방법을 보여 주는 코드 예제를 제공합니다.  

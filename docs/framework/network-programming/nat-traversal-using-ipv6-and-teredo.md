@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33398120"
 ---
 # <a name="nat-traversal-using-ipv6-and-teredo"></a>IPv6 및 Teredo를 사용하는 NAT 통과
 NAT(Network Address Translation) 통과 지원을 제공하도록 개선되었습니다. 이러한 변경 사항은 IPv6 및 Teredo와 함께 사용하도록 설계되었지만, 다른 IP 터널링 기술에도 적용할 수 있습니다. 이러한 개선사항은 <xref:System.Net> 및 관련 네임스페이스의 클래스에 영향을 미칩니다.  

@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: df1fb24c4003f77523ef01a4029fd19cc55a3fef
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33442223"
 ---
 # <a name="ihosttask-interface"></a>IHostTask 인터페이스
 공용 언어 런타임 (CLR) 작업을 관리 하기 위해 호스트와 통신할 수 있는 메서드를 제공 합니다.  

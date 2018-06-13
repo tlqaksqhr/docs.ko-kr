@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33558345"
 ---
 # <a name="popup-placement-behavior"></a>Popup 배치 동작
 A <xref:System.Windows.Controls.Primitives.Popup> 컨트롤은 응용 프로그램 위에 배치 되는 별도 창에서 콘텐츠를 표시 합니다. 위치를 지정할 수는 <xref:System.Windows.Controls.Primitives.Popup> 컨트롤, 마우스, 또는 사용 하 여 화면을 기준으로 <xref:System.Windows.Controls.Primitives.Popup.PlacementTarget%2A>, <xref:System.Windows.Controls.Primitives.Popup.Placement%2A>, <xref:System.Windows.Controls.Primitives.Popup.PlacementRectangle%2A>, <xref:System.Windows.Controls.Primitives.Popup.HorizontalOffset%2A>, 및 <xref:System.Windows.Controls.Primitives.Popup.VerticalOffset%2A> 속성입니다.  이러한 속성의 위치를 지정 하는 유연성을 제공 하기 위해 함께 작동는 <xref:System.Windows.Controls.Primitives.Popup>합니다.  

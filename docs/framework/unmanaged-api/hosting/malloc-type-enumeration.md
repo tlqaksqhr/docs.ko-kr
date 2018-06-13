@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 2c5e970a1677b1e43821cce9985e32ebd0726686
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33442542"
 ---
 # <a name="malloctype-enumeration"></a>MALLOC_TYPE 열거형
 할당 된 메모리의 특성을 지정 하는 값을 포함 합니다.  

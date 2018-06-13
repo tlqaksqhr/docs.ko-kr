@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33546268"
 ---
 # <a name="how-to-navigate-forward-or-back-through-navigation-history"></a>방법: 탐색 기록을 앞으로 또는 뒤로 탐색
 이 예제에는 앞으로 또는 뒤로 탐색 기록의 항목을 탐색 하는 방법을 보여 줍니다.  

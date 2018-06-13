@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 92ae4c2f4a6fb126f5d86cee216e5b2bb6170e66
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33436113"
 ---
 # <a name="iclrstrongname-interface"></a>ICLRStrongName 인터페이스
 강력한 이름의 어셈블리를 서명 하는 것에 대 한 기본 전역 정적 함수를 제공 합니다. 모든 `ICLRStrongName` 메서드 표준 COM Hresult를 반환 합니다.  

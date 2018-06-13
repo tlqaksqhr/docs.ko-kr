@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33560553"
 ---
 # <a name="how-to-specify-handoffbehavior-between-storyboard-animations"></a>방법: Storyboard 애니메이션 간의 HandoffBehavior 지정
 이 예제에는 스토리 보드 애니메이션 간의 전달 동작을 지정 하는 방법을 보여 줍니다. <xref:System.Windows.Media.Animation.BeginStoryboard.HandoffBehavior%2A> 속성 <xref:System.Windows.Media.Animation.BeginStoryboard> 지정 방법을 새 애니메이션 속성에 이미 적용 된 기존 애니메이션과 상호 작용 합니다.  

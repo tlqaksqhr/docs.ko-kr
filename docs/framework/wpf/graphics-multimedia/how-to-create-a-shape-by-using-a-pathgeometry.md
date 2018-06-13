@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33560184"
 ---
 # <a name="how-to-create-a-shape-by-using-a-pathgeometry"></a>방법: PathGeometry를 사용하여 도형 만들기
 사용 하 여 도형을 만드는 방법을 보여 주는이 예제는 <xref:System.Windows.Media.PathGeometry> 클래스입니다. <xref:System.Windows.Media.PathGeometry> 개체는 하나 이상의 구성 됩니다 <xref:System.Windows.Media.PathFigure> 객체; 각 <xref:System.Windows.Media.PathFigure> 다른 "그림" 또는 셰이프를 나타냅니다. 각 <xref:System.Windows.Media.PathFigure> 은 자체 구성 된 하나 이상의 <xref:System.Windows.Media.PathSegment> 각각 또는 도형의의 연결 된 부분을 나타내는 개체입니다. 세그먼트 종류 <xref:System.Windows.Media.LineSegment>, <xref:System.Windows.Media.ArcSegment>, 및 <xref:System.Windows.Media.BezierSegment>합니다.  

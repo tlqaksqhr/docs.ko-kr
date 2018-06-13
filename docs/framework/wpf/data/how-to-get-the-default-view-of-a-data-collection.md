@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33557175"
 ---
 # <a name="how-to-get-the-default-view-of-a-data-collection"></a>방법: 데이터 수집의 기본 뷰 가져오기
 뷰는 동일한 데이터 수집을 정렬, 필터링 또는 그룹화 기준에 따라 다양 한 방법으로 볼 수 있도록 합니다. 모든 컬렉션에 바인딩 원본으로 컬렉션을 지정 하는 경우 실제 바인딩 원본으로 사용 되는 하나의 공유 기본 보기. 이 예제에는 컬렉션의 기본 보기를 가져오는 방법을 보여 줍니다.  

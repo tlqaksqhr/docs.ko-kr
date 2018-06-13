@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33545167"
 ---
 # <a name="how-to-manipulate-a-table39s-row-groups-through-the-rowgroups-property"></a>방법: 테이블을 조작&#39;Rowgroup 속성을 통해 s 행 그룹
 이 예제에서는 통해 테이블의 행 그룹에서 수행할 수 있는 보다 일반적인 작업 중 일부는 <xref:System.Windows.Documents.Table.RowGroups%2A> 속성입니다.  

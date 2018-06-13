@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33548196"
 ---
 # <a name="iwpfhostsupport"></a>IWpfHostSupport
 응용 프로그램을 호스팅할 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] PresentationHost.exe 통해 콘텐츠를 호스트와 PresentationHost.exe 간의 통합 지점을 제공 하기 위해이 인터페이스를 구현 합니다.  

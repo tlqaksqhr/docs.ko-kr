@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33398107"
 ---
 # <a name="method-etw-events"></a>메서드 ETW 이벤트
 <a name="top"></a> 이들 이벤트는 메서드와 관련된 정보를 수집합니다. 이들 이벤트의 페이로드는 기호 확인을 위해 필요합니다. 또한 이들 이벤트는 메서드를 호출한 횟수와 같은 유용한 정보를 제공합니다.  

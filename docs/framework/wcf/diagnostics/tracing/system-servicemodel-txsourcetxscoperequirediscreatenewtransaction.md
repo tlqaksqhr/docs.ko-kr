@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33485969"
 ---
 # <a name="systemservicemodeltxsourcetxscoperequirediscreatenewtransaction"></a>System.ServiceModel.TxSourceTxScopeRequiredIsCreateNewTransaction
 지정된 작업에 대해 지정된 트랜잭션이 새롭게 작성되었습니다.  

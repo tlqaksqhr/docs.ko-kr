@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33560905"
 ---
 # <a name="how-to-paint-an-area-with-a-drawing"></a>방법: Drawing으로 영역 그리기
 이 예제에서는 그리기로 영역을 그리는 방법을 보여 줍니다. 로 드로잉 영역을 그리는 데 사용 하는 <xref:System.Windows.Media.DrawingBrush> 와 하나 이상의 <xref:System.Windows.Media.Drawing> 개체입니다.   다음 예제에서는 한 <xref:System.Windows.Media.DrawingBrush> 그림 두 타원으로 개체를 그리는 합니다.  

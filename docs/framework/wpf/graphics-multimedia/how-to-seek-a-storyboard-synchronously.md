@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33560010"
 ---
 # <a name="how-to-seek-a-storyboard-synchronously"></a>방법: 동기적으로 Storyboard 검색
 사용 하는 방법을 보여 주는 다음 예제는 <xref:System.Windows.Media.Animation.Storyboard.SeekAlignedToLastTick%2A> 의 메서드는 <xref:System.Windows.Media.Animation.Storyboard> 동기적으로 검색 된 스토리 보드 애니메이션 위치 하도록 합니다.  

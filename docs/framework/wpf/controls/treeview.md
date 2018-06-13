@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33556255"
 ---
 # <a name="treeview"></a>TreeView
 <xref:System.Windows.Controls.TreeView> 컨트롤 계층 구조에서 축소 가능한 노드를 사용 하 여 정보를 표시 합니다.  
