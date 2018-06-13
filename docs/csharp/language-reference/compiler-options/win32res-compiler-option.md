@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33216767"
 ---
 # <a name="-win32res-c-compiler-options"></a><span data-ttu-id="c76a2-102">-win32res(C# 컴파일러 옵션)</span><span class="sxs-lookup"><span data-stu-id="c76a2-102">-win32res (C# Compiler Options)</span></span>
 <span data-ttu-id="c76a2-103">**-win32res** 옵션은 출력 파일에 Win32 리소스를 삽입합니다.</span><span class="sxs-lookup"><span data-stu-id="c76a2-103">The **-win32res** option inserts a Win32 resource in the output file.</span></span>  

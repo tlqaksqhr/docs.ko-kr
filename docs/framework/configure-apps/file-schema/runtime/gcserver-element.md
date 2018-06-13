@@ -15,6 +15,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32745021"
 ---
 # <a name="ltgcservergt-element"></a><span data-ttu-id="b804f-102">&lt;gcServer&gt; 요소</span><span class="sxs-lookup"><span data-stu-id="b804f-102">&lt;gcServer&gt; Element</span></span>
 <span data-ttu-id="b804f-103">공용 언어 런타임이 서버 가비지 컬렉션을 실행하는지 여부를 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="b804f-103">Specifies whether the common language runtime runs server garbage collection.</span></span>  

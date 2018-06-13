@@ -12,6 +12,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32745476"
 ---
 # <a name="ltprefercominsteadofmanagedremotinggt-element"></a><span data-ttu-id="8ba93-102">&lt;PreferComInsteadOfManagedRemoting&gt; 요소</span><span class="sxs-lookup"><span data-stu-id="8ba93-102">&lt;PreferComInsteadOfManagedRemoting&gt; Element</span></span>
 <span data-ttu-id="8ba93-103">여부를 런타임에서 COM interop를 사용 원격 서비스 대신 모든 호출에 대 한 응용 프로그램 도메인 경계를 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="8ba93-103">Specifies whether the runtime will use COM interop instead of remoting for all calls across application domain boundaries.</span></span>  

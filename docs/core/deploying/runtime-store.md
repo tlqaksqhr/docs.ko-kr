@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33218705"
 ---
 # <a name="runtime-package-store"></a><span data-ttu-id="7be82-103">런타임 패키지 저장소</span><span class="sxs-lookup"><span data-stu-id="7be82-103">Runtime package store</span></span>
 

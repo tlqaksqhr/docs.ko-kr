@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33271031"
 ---
 # <a name="-operator-c-reference"></a><span data-ttu-id="88207-103">이어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="88207-103">.</span></span> <span data-ttu-id="88207-104">연산자(C# 참조)</span><span class="sxs-lookup"><span data-stu-id="88207-104">Operator (C# Reference)</span></span>
 <span data-ttu-id="88207-105">점 연산자(`.`)는 멤버 액세스에 사용됩니다.</span><span class="sxs-lookup"><span data-stu-id="88207-105">The dot operator (`.`) is used for member access.</span></span> <span data-ttu-id="88207-106">점 연산자는 형식 또는 네임스페이스의 멤버를 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="88207-106">The dot operator specifies a member of a type or namespace.</span></span> <span data-ttu-id="88207-107">예를 들어 점 연산자는 .NET Framework 클래스 라이브러리 내의 특정 메서드에 액세스하는 데 사용됩니다.</span><span class="sxs-lookup"><span data-stu-id="88207-107">For example, the dot operator is used to access specific methods within the .NET Framework class libraries:</span></span>  

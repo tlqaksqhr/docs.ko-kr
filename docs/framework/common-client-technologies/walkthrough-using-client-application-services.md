@@ -13,6 +13,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32745372"
 ---
 # <a name="walkthrough-using-client-application-services"></a><span data-ttu-id="460cb-102">연습: 클라이언트 응용 프로그램 서비스 사용</span><span class="sxs-lookup"><span data-stu-id="460cb-102">Walkthrough: Using Client Application Services</span></span>
 <span data-ttu-id="460cb-103">이 항목에서는 클라이언트 응용 프로그램 서비스를 사용하여 사용자를 인증하고 사용자 역할 및 설정을 검색하는 Windows 응용 프로그램을 만드는 방법을 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="460cb-103">This topic describes how to create a Windows application that uses client application services to authenticate users and retrieve user roles and settings.</span></span>  

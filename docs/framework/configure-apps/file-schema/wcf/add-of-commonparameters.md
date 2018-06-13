@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32746867"
 ---
 # <a name="ltaddgt-of-ltcommonparametersgt"></a><span data-ttu-id="d0cf0-102">&lt;commonParameters&gt;의 &lt;add&gt;</span><span class="sxs-lookup"><span data-stu-id="d0cf0-102">&lt;add&gt; of &lt;commonParameters&gt;</span></span>
 <span data-ttu-id="d0cf0-103">여러 서비스에서 전역적으로 사용되는 매개 변수의 이름-값 쌍을 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="d0cf0-103">Specifies a name-value pair of parameters that are used globally across multiple services.</span></span> <span data-ttu-id="d0cf0-104">일반적으로 이 매개 변수에는 영속 서비스에서 공유할 수 있는 데이터베이스 연결 문자열이 포함됩니다.</span><span class="sxs-lookup"><span data-stu-id="d0cf0-104">Typically this parameter includes the database connection string that might be shared by durable services.</span></span>  

@@ -1,13 +1,6 @@
 ---
-title: "방법: 페이지 단위 결과 로드(WCF Data Services)"
-ms.custom: 
+title: '방법: 페이지 단위 결과 로드(WCF Data Services)'
 ms.date: 03/30/2017
-ms.prod: .net-framework-oob
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -15,34 +8,30 @@ helpviewer_keywords:
 - WCF Data Services, deferred content
 - WCF Data Services, loading data
 ms.assetid: bb786ea4-f3ef-4ad3-9a41-3a0b7feb6a1f
-caps.latest.revision: "2"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 405bea18b03ba695dcb952d10a193decc124841d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 6706ad2eb6821c2c30b5d2482f709ba849b59f32
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33356592"
 ---
-# <a name="how-to-load-paged-results-wcf-data-services"></a><span data-ttu-id="cc7c5-102">방법: 페이지 단위 결과 로드(WCF Data Services)</span><span class="sxs-lookup"><span data-stu-id="cc7c5-102">How to: Load Paged Results (WCF Data Services)</span></span>
-[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]<span data-ttu-id="cc7c5-103">를 사용하면 데이터 서비스에서 단일 응답 피드에 반환되는 엔터티 수를 제한할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="cc7c5-103"> enables the data service to limit the number of entities that are returned in a single response feed.</span></span> <span data-ttu-id="cc7c5-104">이 경우 피드의 최종 항목에 다음 데이터 페이지에 대한 링크가 포함됩니다.</span><span class="sxs-lookup"><span data-stu-id="cc7c5-104">When this happens, the final entry in the feed contains a link to the next page of data.</span></span> <span data-ttu-id="cc7c5-105">다음 데이터 페이지의 URI는 <xref:System.Data.Services.Client.QueryOperationResponse%601.GetContinuation%2A>를 실행할 때 반환되는 <xref:System.Data.Services.Client.QueryOperationResponse%601>의 <xref:System.Data.Services.Client.DataServiceQuery%601> 메서드를 호출하여 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="cc7c5-105">The URI for the next page of data is obtained by calling the <xref:System.Data.Services.Client.QueryOperationResponse%601.GetContinuation%2A> method of the <xref:System.Data.Services.Client.QueryOperationResponse%601>, which is returned when the <xref:System.Data.Services.Client.DataServiceQuery%601> is executed.</span></span> <span data-ttu-id="cc7c5-106">이 개체가 나타내는 URI를 사용하여 다음 결과 페이지를 로드합니다.</span><span class="sxs-lookup"><span data-stu-id="cc7c5-106">The URI represented by this object is then used to load the next page of results.</span></span> <span data-ttu-id="cc7c5-107">자세한 내용은 참조 [지연 콘텐츠 로드](../../../../docs/framework/data/wcf/loading-deferred-content-wcf-data-services.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="cc7c5-107">For more information, see [Loading Deferred Content](../../../../docs/framework/data/wcf/loading-deferred-content-wcf-data-services.md).</span></span>  
+# <a name="how-to-load-paged-results-wcf-data-services"></a><span data-ttu-id="5074a-102">방법: 페이지 단위 결과 로드(WCF Data Services)</span><span class="sxs-lookup"><span data-stu-id="5074a-102">How to: Load Paged Results (WCF Data Services)</span></span>
+[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]<span data-ttu-id="5074a-103">를 사용하면 데이터 서비스에서 단일 응답 피드에 반환되는 엔터티 수를 제한할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="5074a-103"> enables the data service to limit the number of entities that are returned in a single response feed.</span></span> <span data-ttu-id="5074a-104">이 경우 피드의 최종 항목에 다음 데이터 페이지에 대한 링크가 포함됩니다.</span><span class="sxs-lookup"><span data-stu-id="5074a-104">When this happens, the final entry in the feed contains a link to the next page of data.</span></span> <span data-ttu-id="5074a-105">다음 데이터 페이지의 URI는 <xref:System.Data.Services.Client.QueryOperationResponse%601.GetContinuation%2A>를 실행할 때 반환되는 <xref:System.Data.Services.Client.QueryOperationResponse%601>의 <xref:System.Data.Services.Client.DataServiceQuery%601> 메서드를 호출하여 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="5074a-105">The URI for the next page of data is obtained by calling the <xref:System.Data.Services.Client.QueryOperationResponse%601.GetContinuation%2A> method of the <xref:System.Data.Services.Client.QueryOperationResponse%601>, which is returned when the <xref:System.Data.Services.Client.DataServiceQuery%601> is executed.</span></span> <span data-ttu-id="5074a-106">이 개체가 나타내는 URI를 사용하여 다음 결과 페이지를 로드합니다.</span><span class="sxs-lookup"><span data-stu-id="5074a-106">The URI represented by this object is then used to load the next page of results.</span></span> <span data-ttu-id="5074a-107">자세한 내용은 참조 [지연 콘텐츠 로드](../../../../docs/framework/data/wcf/loading-deferred-content-wcf-data-services.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="5074a-107">For more information, see [Loading Deferred Content](../../../../docs/framework/data/wcf/loading-deferred-content-wcf-data-services.md).</span></span>  
   
- <span data-ttu-id="cc7c5-108">이 항목의 예제에서는 Northwind 샘플 데이터 서비스 및 자동 생성된 클라이언트 데이터 서비스 클래스를 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="cc7c5-108">The example in this topic uses the Northwind sample data service and autogenerated client data service classes.</span></span> <span data-ttu-id="cc7c5-109">완료 하면이 서비스 및 클라이언트 데이터 클래스 생성 됩니다는 [WCF Data Services 퀵 스타트](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="cc7c5-109">This service and the client data classes are created when you complete the [WCF Data Services quickstart](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md).</span></span>  
+ <span data-ttu-id="5074a-108">이 항목의 예제에서는 Northwind 샘플 데이터 서비스 및 자동 생성된 클라이언트 데이터 서비스 클래스를 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="5074a-108">The example in this topic uses the Northwind sample data service and autogenerated client data service classes.</span></span> <span data-ttu-id="5074a-109">완료 하면이 서비스 및 클라이언트 데이터 클래스 생성 됩니다는 [WCF Data Services 퀵 스타트](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="5074a-109">This service and the client data classes are created when you complete the [WCF Data Services quickstart](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md).</span></span>  
   
-## <a name="example"></a><span data-ttu-id="cc7c5-110">예</span><span class="sxs-lookup"><span data-stu-id="cc7c5-110">Example</span></span>  
- <span data-ttu-id="cc7c5-111">다음 예제에서는 `do…while` 루프를 사용하여 데이터 서비스의 페이징 결과에서 `Customers` 엔터티를 로드합니다.</span><span class="sxs-lookup"><span data-stu-id="cc7c5-111">This example uses a `do…while` loop to load `Customers` entities from a paged results from the data service.</span></span>  
+## <a name="example"></a><span data-ttu-id="5074a-110">예제</span><span class="sxs-lookup"><span data-stu-id="5074a-110">Example</span></span>  
+ <span data-ttu-id="5074a-111">다음 예제에서는 `do…while` 루프를 사용하여 데이터 서비스의 페이징 결과에서 `Customers` 엔터티를 로드합니다.</span><span class="sxs-lookup"><span data-stu-id="5074a-111">This example uses a `do…while` loop to load `Customers` entities from a paged results from the data service.</span></span>  
   
  [!code-csharp[Astoria Northwind Client#GetCustomersPaged](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/source.cs#getcustomerspaged)]
  [!code-vb[Astoria Northwind Client#GetCustomersPaged](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/source.vb#getcustomerspaged)]  
   
-## <a name="example"></a><span data-ttu-id="cc7c5-112">예</span><span class="sxs-lookup"><span data-stu-id="cc7c5-112">Example</span></span>  
- <span data-ttu-id="cc7c5-113">다음 예제에서는 각 `Orders` 엔터티와 관련된 `Customers` 엔터티를 반환하고, `do…while` 루프를 사용하여 `Customers` 엔터티 페이지를 로드하고, 중첩된 `while` 루프를 사용하여 데이터 서비스에서 관련된 `Orders` 엔터티 페이지를 로드합니다.</span><span class="sxs-lookup"><span data-stu-id="cc7c5-113">This example returns related `Orders` entities with each `Customers` entity and uses a `do…while` loop to load `Customers` entities pages and a nested `while` loop to load pages of related `Orders` entities from the data service.</span></span>  
+## <a name="example"></a><span data-ttu-id="5074a-112">예제</span><span class="sxs-lookup"><span data-stu-id="5074a-112">Example</span></span>  
+ <span data-ttu-id="5074a-113">다음 예제에서는 각 `Orders` 엔터티와 관련된 `Customers` 엔터티를 반환하고, `do…while` 루프를 사용하여 `Customers` 엔터티 페이지를 로드하고, 중첩된 `while` 루프를 사용하여 데이터 서비스에서 관련된 `Orders` 엔터티 페이지를 로드합니다.</span><span class="sxs-lookup"><span data-stu-id="5074a-113">This example returns related `Orders` entities with each `Customers` entity and uses a `do…while` loop to load `Customers` entities pages and a nested `while` loop to load pages of related `Orders` entities from the data service.</span></span>  
   
  [!code-csharp[Astoria Northwind Client#GetCustomersPagedNested](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/source.cs#getcustomerspagednested)]
  [!code-vb[Astoria Northwind Client#GetCustomersPagedNested](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/source.vb#getcustomerspagednested)]  
   
-## <a name="see-also"></a><span data-ttu-id="cc7c5-114">참고 항목</span><span class="sxs-lookup"><span data-stu-id="cc7c5-114">See Also</span></span>  
- [<span data-ttu-id="cc7c5-115">지연 콘텐츠 로드</span><span class="sxs-lookup"><span data-stu-id="cc7c5-115">Loading Deferred Content</span></span>](../../../../docs/framework/data/wcf/loading-deferred-content-wcf-data-services.md)  
- [<span data-ttu-id="cc7c5-116">방법: 관련 엔터티 로드</span><span class="sxs-lookup"><span data-stu-id="cc7c5-116">How to: Load Related Entities</span></span>](../../../../docs/framework/data/wcf/how-to-load-related-entities-wcf-data-services.md)
+## <a name="see-also"></a><span data-ttu-id="5074a-114">참고 항목</span><span class="sxs-lookup"><span data-stu-id="5074a-114">See Also</span></span>  
+ [<span data-ttu-id="5074a-115">지연 콘텐츠 로드</span><span class="sxs-lookup"><span data-stu-id="5074a-115">Loading Deferred Content</span></span>](../../../../docs/framework/data/wcf/loading-deferred-content-wcf-data-services.md)  
+ [<span data-ttu-id="5074a-116">방법: 관련 엔터티 로드</span><span class="sxs-lookup"><span data-stu-id="5074a-116">How to: Load Related Entities</span></span>](../../../../docs/framework/data/wcf/how-to-load-related-entities-wcf-data-services.md)

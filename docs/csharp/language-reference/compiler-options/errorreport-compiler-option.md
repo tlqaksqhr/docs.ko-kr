@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33218987"
 ---
 # <a name="-errorreport-c-compiler-options"></a><span data-ttu-id="d0868-102">-errorreport(C# 컴파일러 옵션)</span><span class="sxs-lookup"><span data-stu-id="d0868-102">-errorreport (C# Compiler Options)</span></span>
 <span data-ttu-id="d0868-103">이 옵션은 C# 내부 컴파일러 오류를 Microsoft에 보고하는 편리한 방법을 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="d0868-103">This option provides a convenient way to report a C# internal compiler error to Microsoft.</span></span>  

@@ -17,6 +17,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32745681"
 ---
 # <a name="ltdisablecachingbindingfailuresgt-element"></a><span data-ttu-id="a73e0-102">&lt;disableCachingBindingFailures&gt; 요소</span><span class="sxs-lookup"><span data-stu-id="a73e0-102">&lt;disableCachingBindingFailures&gt; Element</span></span>
 <span data-ttu-id="a73e0-103">바인딩 실패를 검색 하 여 어셈블리를 찾지 못했기 때문에 발생 하는 캐싱을 사용 하지 않도록 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="a73e0-103">Specifies whether to disable the caching of binding failures that occur because the assembly was not found by probing.</span></span>  

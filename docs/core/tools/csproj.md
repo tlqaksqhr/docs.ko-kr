@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33218234"
 ---
 # <a name="additions-to-the-csproj-format-for-net-core"></a><span data-ttu-id="5fe48-103">.NET Core용 csproj 형식에 대한 추가 사항</span><span class="sxs-lookup"><span data-stu-id="5fe48-103">Additions to the csproj format for .NET Core</span></span>
 

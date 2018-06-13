@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32746659"
 ---
 # <a name="ltpersistenceprovidergt"></a><span data-ttu-id="c5260-102">&lt;persistenceProvider&gt;</span><span class="sxs-lookup"><span data-stu-id="c5260-102">&lt;persistenceProvider&gt;</span></span>
 <span data-ttu-id="c5260-103">사용할 지속성 공급자 구현 형식 및 지속성 작업에 사용할 제한 시간을 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="c5260-103">Specifies the type of the persistence provider implementation to use, as well as the time-out to use for persistence operations.</span></span>  

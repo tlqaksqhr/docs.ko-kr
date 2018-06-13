@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33268122"
 ---
 # <a name="null-c-reference"></a><span data-ttu-id="39943-102">null(C# 참조)</span><span class="sxs-lookup"><span data-stu-id="39943-102">null (C# Reference)</span></span>
 <span data-ttu-id="39943-103">`null` 키워드는 개체를 참조하지 않는 null 참조를 나타내는 리터럴입니다.</span><span class="sxs-lookup"><span data-stu-id="39943-103">The `null` keyword is a literal that represents a null reference, one that does not refer to any object.</span></span> <span data-ttu-id="39943-104">`null`은 참조 형식 변수의 기본값입니다.</span><span class="sxs-lookup"><span data-stu-id="39943-104">`null` is the default value of reference-type variables.</span></span> <span data-ttu-id="39943-105">일반적인 값 형식은 null일 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="39943-105">Ordinary value types cannot be null.</span></span> <span data-ttu-id="39943-106">그러나 C# 2.0에서 nullable 값 형식이 도입되었습니다.</span><span class="sxs-lookup"><span data-stu-id="39943-106">However, C# 2.0 introduced nullable value types.</span></span> <span data-ttu-id="39943-107">[Nullable 형식](../../../csharp/programming-guide/nullable-types/index.md)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="39943-107">See [Nullable Types](../../../csharp/programming-guide/nullable-types/index.md).</span></span>  
