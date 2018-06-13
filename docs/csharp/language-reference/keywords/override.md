@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33280155"
 ---
 # <a name="override-c-reference"></a><span data-ttu-id="4ad3b-102">override(C# 참조)</span><span class="sxs-lookup"><span data-stu-id="4ad3b-102">override (C# Reference)</span></span>
 <span data-ttu-id="4ad3b-103">`override` 한정자는 상속된 메서드, 속성, 인덱서 또는 이벤트의 추상 또는 가상 구현을 확장하거나 수정하는 데 필요합니다.</span><span class="sxs-lookup"><span data-stu-id="4ad3b-103">The `override` modifier is required to extend or modify the abstract or virtual implementation of an inherited method, property, indexer, or event.</span></span>  

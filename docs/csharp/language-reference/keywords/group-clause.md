@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33217486"
 ---
 # <a name="group-clause-c-reference"></a><span data-ttu-id="383ca-102">group 절(C# 참조)</span><span class="sxs-lookup"><span data-stu-id="383ca-102">group clause (C# Reference)</span></span>
 <span data-ttu-id="383ca-103">`group` 절은 그룹의 키 값과 일치하는 0개 이상의 항목이 포함된 <xref:System.Linq.IGrouping%602> 개체 시퀀스를 반환합니다.</span><span class="sxs-lookup"><span data-stu-id="383ca-103">The `group` clause returns a sequence of <xref:System.Linq.IGrouping%602> objects that contain zero or more items that match the key value for the group.</span></span> <span data-ttu-id="383ca-104">예를 들어 각 문자열의 첫 번째 문자에 따라 문자열 시퀀스를 그룹화할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="383ca-104">For example, you can group a sequence of strings according to the first letter in each string.</span></span> <span data-ttu-id="383ca-105">이 경우 첫 번째 문자는 키로, [char](../../../csharp/language-reference/keywords/char.md) 형식이며 각 <xref:System.Linq.IGrouping%602> 개체의 `Key` 속성에 저장됩니다.</span><span class="sxs-lookup"><span data-stu-id="383ca-105">In this case, the first letter is the key and has a type [char](../../../csharp/language-reference/keywords/char.md), and is stored in the `Key` property of each <xref:System.Linq.IGrouping%602> object.</span></span> <span data-ttu-id="383ca-106">컴파일러는 키의 형식을 유추합니다.</span><span class="sxs-lookup"><span data-stu-id="383ca-106">The compiler infers the type of the key.</span></span>  

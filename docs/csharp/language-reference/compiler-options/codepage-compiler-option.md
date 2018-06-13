@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33216927"
 ---
 # <a name="-codepage-c-compiler-options"></a><span data-ttu-id="56fa1-102">-codepage(C# 컴파일러 옵션)</span><span class="sxs-lookup"><span data-stu-id="56fa1-102">-codepage (C# Compiler Options)</span></span>
 <span data-ttu-id="56fa1-103">이 옵션은 필수 페이지가 시스템에 대한 현재 기본 코드 페이지가 아닌 경우 컴파일 중에 사용할 코드 페이지를 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="56fa1-103">This option specifies which codepage to use during compilation if the required page is not the current default codepage for the system.</span></span>  

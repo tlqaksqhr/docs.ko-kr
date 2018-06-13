@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33218750"
 ---
 # <a name="-out-c-compiler-options"></a><span data-ttu-id="1879c-102">-out(C# 컴파일러 옵션)</span><span class="sxs-lookup"><span data-stu-id="1879c-102">-out (C# Compiler Options)</span></span>
 <span data-ttu-id="1879c-103">**-out** 옵션은 출력 파일의 이름을 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="1879c-103">The **-out** option specifies the name of the output file.</span></span>  

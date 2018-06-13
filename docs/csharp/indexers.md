@@ -8,6 +8,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33218301"
 ---
 # <a name="indexers"></a><span data-ttu-id="980eb-103">인덱서</span><span class="sxs-lookup"><span data-stu-id="980eb-103">Indexers</span></span>
 

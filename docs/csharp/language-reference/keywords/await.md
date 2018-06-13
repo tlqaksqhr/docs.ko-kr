@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33218922"
 ---
 # <a name="await-c-reference"></a><span data-ttu-id="a768f-102">await(C# 참조)</span><span class="sxs-lookup"><span data-stu-id="a768f-102">await (C# Reference)</span></span>
 <span data-ttu-id="a768f-103">`await` 연산자는 비동기 메서드의 작업에 적용되어 대기 중인 작업이 완료될 때까지 메서드의 실행에 일시 중단 지점을 삽입합니다.</span><span class="sxs-lookup"><span data-stu-id="a768f-103">The `await` operator is applied to a task in an asynchronous method to insert a suspension point in the execution of the method until the awaited task completes.</span></span> <span data-ttu-id="a768f-104">작업은 진행 중인 작업을 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="a768f-104">The task represents ongoing work.</span></span>  

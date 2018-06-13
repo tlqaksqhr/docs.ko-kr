@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33218660"
 ---
 # <a name="-targetwinmdobj-c-compiler-options"></a><span data-ttu-id="f329f-102">-target:winmdobj(C# 컴파일러 옵션)</span><span class="sxs-lookup"><span data-stu-id="f329f-102">-target:winmdobj (C# Compiler Options)</span></span>
 <span data-ttu-id="f329f-103">**-target:winmdobj** 컴파일러 옵션을 사용하는 경우 컴파일러는 사용자가 Windows 런타임 이진(.winmd) 파일로 변환할 수 있는 중간 .winmdobj 파일을 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="f329f-103">If you use the **-target:winmdobj** compiler option, the compiler creates an intermediate .winmdobj file that you can convert to a Windows Runtime binary (.winmd) file.</span></span> <span data-ttu-id="f329f-104">그런 다음 관리되는 언어 프로그램뿐만 아니라 JavaScript 및 C++ 프로그램에서도 .winmd 파일을 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="f329f-104">The .winmd file can then be consumed by JavaScript and C++ programs, in addition to managed language programs.</span></span>  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32762652"
 ---
 # <a name="foreign-key-property"></a><span data-ttu-id="93c2b-102">외래 키 속성</span><span class="sxs-lookup"><span data-stu-id="93c2b-102">foreign key property</span></span>
 <span data-ttu-id="93c2b-103">A *외래 키 속성* 엔터티 데이터 모델 (EDM)의 기본 형식이 [속성](../../../../docs/framework/data/adonet/property.md) (또는 기본 형식 속성 집합)에 [엔터티 형식](../../../../docs/framework/data/adonet/entity-type.md) 는 포함된[엔터티 키](../../../../docs/framework/data/adonet/entity-key.md) 다른 엔터티 형식의 합니다.</span><span class="sxs-lookup"><span data-stu-id="93c2b-103">A *foreign key property* in the Entity Data Model (EDM) is a primitive type [property](../../../../docs/framework/data/adonet/property.md) (or a set of primitive type properties) on an [entity type](../../../../docs/framework/data/adonet/entity-type.md) that contains the [entity key](../../../../docs/framework/data/adonet/entity-key.md) of another entity type.</span></span>  

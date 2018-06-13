@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33219458"
 ---
 # <a name="how-to-create-a-nuget-package-with-cross-platform-tools"></a><span data-ttu-id="4460b-103">플랫폼 간 도구로 NuGet 패키지를 만드는 방법</span><span class="sxs-lookup"><span data-stu-id="4460b-103">How to Create a NuGet Package with Cross Platform Tools</span></span>
 

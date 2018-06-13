@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33271775"
 ---
 # <a name="-operator-c-reference"></a><span data-ttu-id="36e29-102">:: 연산자(C# 참조)</span><span class="sxs-lookup"><span data-stu-id="36e29-102">:: Operator (C# Reference)</span></span>
 <span data-ttu-id="36e29-103">네임스페이스 별칭 한정자(`::`)는 식별자를 조회하는 데 사용됩니다.</span><span class="sxs-lookup"><span data-stu-id="36e29-103">The namespace alias qualifier (`::`) is used to look up identifiers.</span></span> <span data-ttu-id="36e29-104">다음 예제와 같이 항상 두 식별자 사이에 옵니다.</span><span class="sxs-lookup"><span data-stu-id="36e29-104">It is always positioned between two identifiers, as in this example:</span></span>  

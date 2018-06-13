@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33218757"
 ---
 # <a name="if-else-c-reference"></a><span data-ttu-id="1a097-102">if-else(C# 참조)</span><span class="sxs-lookup"><span data-stu-id="1a097-102">if-else (C# Reference)</span></span>
 <span data-ttu-id="1a097-103">`if` 문은 `Boolean` 식의 값에 따라 실행할 문을 식별합니다.</span><span class="sxs-lookup"><span data-stu-id="1a097-103">An `if` statement identifies which statement to run based on the value of a `Boolean` expression.</span></span> <span data-ttu-id="1a097-104">다음 예제에서는 `Boolean` 변수 `result` 가 `true` 로 설정된 다음 `if` 문에서 확인됩니다.</span><span class="sxs-lookup"><span data-stu-id="1a097-104">In the following example, the `Boolean` variable `result` is set to `true` and then checked in the `if` statement.</span></span> <span data-ttu-id="1a097-105">출력은 `The condition is true`입니다.</span><span class="sxs-lookup"><span data-stu-id="1a097-105">The output is `The condition is true`.</span></span>  

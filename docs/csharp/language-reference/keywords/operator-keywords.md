@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33273317"
 ---
 # <a name="operator-keywords-c-reference"></a><span data-ttu-id="7d94d-102">연산자 키워드(C# 참조)</span><span class="sxs-lookup"><span data-stu-id="7d94d-102">Operator Keywords (C# Reference)</span></span>
 <span data-ttu-id="7d94d-103">개체 생성, 개체의 런타임 형식 확인, 형식의 크기 가져오기 등의 기타 작업을 수행하는 데 사용됩니다.</span><span class="sxs-lookup"><span data-stu-id="7d94d-103">Used to perform miscellaneous actions such as creating objects, checking the run-time type of an object, obtaining the size of a type, and other actions.</span></span> <span data-ttu-id="7d94d-104">이 섹션에서는 다음과 같은 키워드를 소개합니다.</span><span class="sxs-lookup"><span data-stu-id="7d94d-104">This section introduces the following keywords:</span></span>  

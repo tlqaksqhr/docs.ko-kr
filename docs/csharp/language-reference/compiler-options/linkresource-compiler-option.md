@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33219182"
 ---
 # <a name="-linkresource-c-compiler-options"></a><span data-ttu-id="c3011-102">-linkresource(C# 컴파일러 옵션)</span><span class="sxs-lookup"><span data-stu-id="c3011-102">-linkresource (C# Compiler Options)</span></span>
 <span data-ttu-id="c3011-103">출력 파일에 .NET Framework 리소스에 대한 링크를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="c3011-103">Creates a link to a .NET Framework resource in the output file.</span></span> <span data-ttu-id="c3011-104">리소스 파일은 출력 파일에 추가되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="c3011-104">The resource file is not added to the output file.</span></span> <span data-ttu-id="c3011-105">이 점에서 출력 파일에 리소스 파일을 포함하는 [-resource](../../../csharp/language-reference/compiler-options/resource-compiler-option.md) 옵션과 다릅니다.</span><span class="sxs-lookup"><span data-stu-id="c3011-105">This differs from the [-resource](../../../csharp/language-reference/compiler-options/resource-compiler-option.md) option which does embed a resource file in the output file.</span></span>  

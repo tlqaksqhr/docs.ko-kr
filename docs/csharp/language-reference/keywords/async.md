@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33216940"
 ---
 # <a name="async-c-reference"></a><span data-ttu-id="51185-102">async(C# 참조)</span><span class="sxs-lookup"><span data-stu-id="51185-102">async (C# Reference)</span></span>
 <span data-ttu-id="51185-103">`async` 한정자를 사용하여 메서드, [람다 식](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md) 또는 [무명 메서드](../../../csharp/programming-guide/statements-expressions-operators/anonymous-methods.md)를 비동기로 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="51185-103">Use the `async` modifier to specify that a method, [lambda expression](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md), or [anonymous method](../../../csharp/programming-guide/statements-expressions-operators/anonymous-methods.md) is asynchronous.</span></span> <span data-ttu-id="51185-104">메서드 또는 식에 이 한정자를 사용하면 *비동기 메서드*라고 합니다.</span><span class="sxs-lookup"><span data-stu-id="51185-104">If you use this modifier on a method or expression, it's referred to as an *async method*.</span></span> <span data-ttu-id="51185-105">다음 예제에서는 `ExampleMethodAsync`라는 비동기 메서드를 정의합니다.</span><span class="sxs-lookup"><span data-stu-id="51185-105">The following example defines an async method named `ExampleMethodAsync`:</span></span> 

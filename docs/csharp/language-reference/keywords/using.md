@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33266570"
 ---
 # <a name="using-c-reference"></a><span data-ttu-id="44fd8-102">using(C# 참조)</span><span class="sxs-lookup"><span data-stu-id="44fd8-102">using (C# Reference)</span></span>
 <span data-ttu-id="44fd8-103">`using` 키워드의 주요 용도는 두 가지입니다.</span><span class="sxs-lookup"><span data-stu-id="44fd8-103">The `using` keyword has two major uses:</span></span>  

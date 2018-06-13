@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33216858"
 ---
 # <a name="-lib-c-compiler-options"></a><span data-ttu-id="b838a-102">-lib(C# 컴파일러 옵션)</span><span class="sxs-lookup"><span data-stu-id="b838a-102">-lib (C# Compiler Options)</span></span>
 <span data-ttu-id="b838a-103">**-lib** 옵션은 [-reference(C# 컴파일러 옵션)](../../../csharp/language-reference/compiler-options/reference-compiler-option.md) 옵션을 통해 참조되는 어셈블리의 위치를 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="b838a-103">The **-lib** option specifies the location of assemblies referenced by means of the [-reference (C# Compiler Options)](../../../csharp/language-reference/compiler-options/reference-compiler-option.md) option.</span></span>  

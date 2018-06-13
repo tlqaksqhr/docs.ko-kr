@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33216137"
 ---
 # <a name="-nostdlib-c-compiler-options"></a><span data-ttu-id="bc079-102">-nostdlib(C# 컴파일러 옵션)</span><span class="sxs-lookup"><span data-stu-id="bc079-102">-nostdlib (C# Compiler Options)</span></span>
 <span data-ttu-id="bc079-103">**-nostdlib**를 사용하면 전체 시스템 네임스페이스를 정의하는 mscorlib.dll을 가져올 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="bc079-103">**-nostdlib** prevents the import of mscorlib.dll, which defines the entire System namespace.</span></span>  

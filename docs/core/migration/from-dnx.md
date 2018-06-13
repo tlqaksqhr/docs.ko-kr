@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33217453"
 ---
 # <a name="migrating-from-dnx-to-net-core-cli-projectjson"></a><span data-ttu-id="8e1bb-103">DNX에서.NET Core CLI(project.json)로 마이그레이션</span><span class="sxs-lookup"><span data-stu-id="8e1bb-103">Migrating from DNX to .NET Core CLI (project.json)</span></span>
 

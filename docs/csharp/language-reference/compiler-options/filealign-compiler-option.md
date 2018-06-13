@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33218373"
 ---
 # <a name="-filealign-c-compiler-options"></a><span data-ttu-id="498b6-102">-filealign(C# 컴파일러 옵션)</span><span class="sxs-lookup"><span data-stu-id="498b6-102">-filealign (C# Compiler Options)</span></span>
 <span data-ttu-id="498b6-103">**-filealign** 옵션을 사용하여 출력 파일의 섹션 크기를 지정할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="498b6-103">The **-filealign** option lets you specify the size of sections in your output file.</span></span>  

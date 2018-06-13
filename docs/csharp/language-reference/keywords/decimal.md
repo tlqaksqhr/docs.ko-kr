@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33219338"
 ---
 # <a name="decimal-c-reference"></a><span data-ttu-id="e06f3-102">decimal(C# 참조)</span><span class="sxs-lookup"><span data-stu-id="e06f3-102">decimal (C# Reference)</span></span>
 <span data-ttu-id="e06f3-103">`decimal` 키워드는 128비트 데이터 형식을 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="e06f3-103">The `decimal` keyword indicates a 128-bit data type.</span></span> <span data-ttu-id="e06f3-104">`decimal` 형식은 부동 소수점 형식보다 전체 자릿수는 크고 범위는 작아서 재무 및 통화 계산에 적합합니다.</span><span class="sxs-lookup"><span data-stu-id="e06f3-104">Compared to other floating-point types, the `decimal` type has more precision and a smaller range, which makes it appropriate for financial and monetary calculations.</span></span> <span data-ttu-id="e06f3-105">다음 표에서는 `decimal` 형식의 대략적인 범위와 전체 자릿수를 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="e06f3-105">The approximate range and precision for the `decimal` type are shown in the following table.</span></span>  

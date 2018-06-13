@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33216479"
 ---
 # <a name="explicit-c-reference"></a><span data-ttu-id="45a39-102">explicit(C# 참조)</span><span class="sxs-lookup"><span data-stu-id="45a39-102">explicit (C# Reference)</span></span>
 <span data-ttu-id="45a39-103">`explicit` 키워드는 캐스트를 통해 호출해야 하는 사용자 정의 형식 변환 연산자를 선언합니다.</span><span class="sxs-lookup"><span data-stu-id="45a39-103">The `explicit` keyword declares a user-defined type conversion operator that must be invoked with a cast.</span></span> <span data-ttu-id="45a39-104">예를 들어 이 연산자는 Fahrenheit라는 클래스를 Celsius라는 클래스로 변환합니다.</span><span class="sxs-lookup"><span data-stu-id="45a39-104">For example, this operator converts from a class called Fahrenheit to a class called Celsius:</span></span>  
