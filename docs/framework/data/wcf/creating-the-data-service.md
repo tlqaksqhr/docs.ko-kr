@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33362839"
 ---
 # <a name="creating-the-data-service"></a>데이터 서비스 만들기
 이 작업을 사용 하는 샘플 데이터 서비스 만듭니다 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 노출 하는 [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] Northwind 샘플 데이터베이스를 기반으로 하는 피드입니다. 작업에 필요한 기본 단계는 다음과 같습니다.  

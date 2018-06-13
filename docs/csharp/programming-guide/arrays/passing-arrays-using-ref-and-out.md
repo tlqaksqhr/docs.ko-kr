@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33313572"
 ---
 # <a name="passing-arrays-using-ref-and-out-c-programming-guide"></a>ref 및 out을 사용하여 배열 전달(C# 프로그래밍 가이드)
 모든 [out](../../../csharp/language-reference/keywords/out-parameter-modifier.md) 매개 변수처럼 배열 형식의 `out` 매개 변수는 사용하기 전에 할당해야 합니다. 즉, 호출 수신자가 할당해야 합니다. 예:  

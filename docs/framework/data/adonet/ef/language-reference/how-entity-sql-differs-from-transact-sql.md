@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32766298"
 ---
 # <a name="how-entity-sql-differs-from-transact-sql"></a>Entity SQL과 Transact-SQL의 차이점
 이 항목 간의 차이점을 설명 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 및 [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)]합니다.  

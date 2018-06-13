@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33355177"
 ---
 # <a name="systemobject-methods"></a>System.Object 메서드
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 다음과 같은 지원 <xref:System.Object> 메서드.  

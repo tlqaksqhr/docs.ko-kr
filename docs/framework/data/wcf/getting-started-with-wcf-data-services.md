@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33359493"
 ---
 # <a name="getting-started-with-wcf-data-services"></a>WCF Data Services로 시작
 이 섹션의 항목 신속 하 게 이해 하는 데 도움이 [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] 및 사용 하는 방법을 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 노출 하 고 소비 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 기본 기술에는 설명 하 여 피드입니다. 이 섹션에서는 두 개념 콘텐츠 및 [퀵 스타트](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md) 자습서입니다.  

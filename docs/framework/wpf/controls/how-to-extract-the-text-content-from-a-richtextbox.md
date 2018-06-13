@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33553938"
 ---
 # <a name="how-to-extract-the-text-content-from-a-richtextbox"></a>방법: RichTextBox에서 텍스트 콘텐츠 추출
 내용을 추출 하는 방법을 보여 주는이 예제는 <xref:System.Windows.Controls.RichTextBox> 일반 텍스트로 합니다.  

@@ -19,6 +19,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33604395"
 ---
 # <a name="not-operator-visual-basic"></a>Not 연산자(Visual Basic)
 논리 부정을 수행는 `Boolean` 식 또는 숫자 식에 비트 부정을 합니다.  

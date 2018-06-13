@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33339681"
 ---
 # <a name="generics-and-attributes-c-programming-guide"></a>제네릭 및 특성(C# 프로그래밍 가이드)
 제네릭 형식에 특성을 적용하는 방법은 제네릭이 아닌 형식의 경우와 동일합니다. 특성 적용에 대한 자세한 내용은 [특성](../../../csharp/programming-guide/concepts/attributes/index.md)을 참조하세요.  

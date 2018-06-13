@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33353262"
 ---
 # <a name="retrieving-data-using-a-datareader"></a>DataReader를 사용하여 데이터 검색
 사용 하 여 데이터를 검색 하는 **DataReader** 의 인스턴스를 만들고는 **명령** 개체 어셈블리 한 후 한 **DataReader** 호출 하 여  **Command.ExecuteReader** 데이터 원본에서 행을 검색 합니다. 다음 예제에서는 사용 하 여는 **DataReader** 여기서 `reader` 유효한 DataReader 나타냅니다 및 `command` 유효한 명령 개체를 나타냅니다.  

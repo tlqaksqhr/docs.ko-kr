@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33551793"
 ---
 # <a name="how-to-wrap-a-border-around-the-content-of-a-canvas"></a>방법: Border를 사용하여 Canvas의 내용 래핑
 래핑하는 방법을 보여 주는이 예제는 <xref:System.Windows.Controls.Canvas> 인 요소는 <xref:System.Windows.Controls.Border>합니다.  

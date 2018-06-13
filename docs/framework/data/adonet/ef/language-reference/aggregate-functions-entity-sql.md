@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32765583"
 ---
 # <a name="aggregate-functions-entity-sql"></a>집계 함수(Entity SQL)
 집계는 컬렉션을 그룹 작업의 일부분인 스칼라로 압축하는 언어 구문입니다. [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 집계의 형식은 다음 두 가지입니다.  

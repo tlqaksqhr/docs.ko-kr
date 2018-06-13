@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33604317"
 ---
 # <a name="--operator-visual-basic"></a>- 연산자(Visual Basic)
 두 숫자 식 또는 숫자 식의 음수 값의 차이 반환합니다.  

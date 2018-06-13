@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33603407"
 ---
 # <a name="implements-clause-visual-basic"></a>Implements 절(Visual Basic)
 클래스 또는 구조체 멤버가 인터페이스에 정의 된 멤버에 대 한 구현을 제공 하는 것을 나타냅니다.  

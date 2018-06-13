@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33551767"
 ---
 # <a name="adorners"></a>표시기(Adorner)
 이 섹션에서는 표시기 (adorner)에 대 한 정보를 제공 및 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 표시기 프레임 워크입니다.  

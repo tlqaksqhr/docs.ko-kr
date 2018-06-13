@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33526580"
 ---
 # <a name="how-to-read-image-metadata"></a>방법: 이미지 메타데이터 읽기
 일부 이미지 파일 이미지의 기능을 확인 읽을 수 있는 메타 데이터를 포함 합니다. 예를 들어 디지털 사진 제조업체와 이미지를 캡처하는 데 사용 하는 카메라 모델을 확인 하려면 읽을 수 있는 메타 데이터를 포함 될 수 있습니다. 와 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)], 기존 메타 데이터를 읽을 수 있습니다 및 이미지 파일에 새 메타 데이터를 쓸 수도 있습니다.  

@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33554379"
 ---
 # <a name="how-to-bind-a-treeview-to-data-that-has-an-indeterminable-depth"></a>방법: 깊이를 확인할 수 없는 데이터에 TreeView 바인딩
 바인딩할 하는 경우가 있을 수 있습니다는 <xref:System.Windows.Controls.TreeView> 깊이가 알 수 없는 데이터 원본에 있습니다.  이 데이터를 재귀 폴더가 포함 폴더, 파일 시스템 또는 회사의 조직 구조와 같이 기본적 직원 부하 직원으로 다른 직원 들이 있는 경우에 발생할 수 있습니다.  

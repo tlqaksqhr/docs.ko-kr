@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33353184"
 ---
 # <a name="ltstandardendpointsgt"></a>&lt;d a r d&gt;
 이 구성 섹션에서는 다시 사용할 수 있는 미리 구성된 끝점인 표준 끝점의 컬렉션을 정의할 수 있습니다. 표준 끝점에는 고정 값으로 설정된 하나 이상의 주소, 바인딩 및 계약 특성이 있습니다. 예를 들어 검색 끝점에서는 계약이 고정됩니다. 표준 끝점을 사용자 지정 바인딩 정의와 유사한 새 속성과 함께 사용하여 서비스 끝점을 확장할 수도 있습니다.  

@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33551754"
 ---
 # <a name="popup"></a>Popup
 <xref:System.Windows.Controls.Primitives.Popup> 컨트롤 현재 응용 프로그램 창 위에 배치 되는 별도 창에서 콘텐츠를 표시 합니다.  
