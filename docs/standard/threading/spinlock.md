@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33582261"
 ---
 # <a name="spinlock"></a>SpinLock
 <xref:System.Threading.SpinLock> 구조는 잠금을 획득하기 위해 대기하는 동안 회전하는 하위 수준의 동기화 기본 형식입니다. 멀티 코어 컴퓨터에서 대기 시간이 짧은 것으로 예상되고 경합이 최소인 경우 <xref:System.Threading.SpinLock>의 성능이 다른 종류의 잠금보다 더 뛰어납니다. 그러나 프로파일링을 통해 <xref:System.Threading.Monitor?displayProperty=nameWithType> 메서드 또는 <xref:System.Threading.Interlocked> 메서드가 프로그램의 성능을 크게 낮추는 것을 확인하는 경우에만 <xref:System.Threading.SpinLock>을 사용하는 것이 좋습니다.  

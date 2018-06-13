@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33599914"
 ---
 # <a name="readonly-visual-basic"></a>ReadOnly(Visual Basic)
 변수 또는 속성 읽을 수 있지만 기록 되지를 지정 합니다.  
