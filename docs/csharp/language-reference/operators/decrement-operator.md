@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33288803"
 ---
 # <a name="---operator-c-reference"></a>-- 연산자(C# 참조)
 감소 연산자(`--`)는 피연산자를 1씩 감소시킵니다. 감소 연산자는 피연산자 앞이나 뒤에 나타날 수 있습니다(`--variable` 및 `variable--`). 첫 번째 형태는 전위 감소 연산입니다. 연산 결과는 감소된 후의 피연산자 값입니다. 두 번째 형태는 후위 감소 연산입니다. 연산 결과는 감소되기 전의 피연산자 값입니다.  

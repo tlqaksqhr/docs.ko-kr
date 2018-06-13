@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33317026"
 ---
 # <a name="passing-value-type-parameters-c-programming-guide"></a>값 형식 매개 변수 전달(C# 프로그래밍 가이드)
 데이터에 대한 참조가 포함되어 있는 [참조 형식](../../../csharp/language-reference/keywords/reference-types.md) 변수와는 달리, [값 형식](../../../csharp/language-reference/keywords/value-types.md) 변수에는 해당 데이터가 직접 포함됩니다. 값 형식 변수를 메서드에 값으로 전달하는 것은 변수의 복사본을 메서드에 전달하는 것과 같습니다. 메서드 내에서 수행되는 매개 변수 변경 작업은 인수 변수에 저장된 원래 데이터에는 영향을 주지 않습니다. 호출한 메서드가 매개 변수의 값을 변경하도록 하려면 [ref](../../../csharp/language-reference/keywords/ref.md) 또는 [아웃](../../../csharp/language-reference/keywords/out-parameter-modifier.md) 키워드를 사용하여 해당 메서드를 참조로 전달해야 합니다. [in](../../../csharp/language-reference/keywords/out-parameter-modifier.md) 키워드를 사용하여 값이 변경되지 않도록 보장하는 동안 복사를 방지하도록 참조로 값 매개 변수를 전달할 수도 있습니다. 간단한 설명을 위해 다음 예제에서는 `ref`를 사용합니다.  

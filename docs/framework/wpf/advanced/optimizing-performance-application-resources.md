@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33546597"
 ---
 # <a name="optimizing-performance-application-resources"></a>성능 최적화: 응용 프로그램 리소스
 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 비슷한 형식의 요소에서 일관성 있는 모양이 나 동작을 지원할 수 있도록 응용 프로그램 리소스를 공유할 수 있습니다. 이 항목에서는 몇 가지 권장 사항 수 있는이 영역에 응용 프로그램의 성능을 개선 합니다.  

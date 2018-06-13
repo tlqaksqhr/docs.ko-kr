@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33553730"
 ---
 # <a name="label"></a>레이블
 <xref:System.Windows.Controls.Label> 컨트롤의 정보는 일반적으로 제공 된 [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]합니다.  지금까지 <xref:System.Windows.Controls.Label> 만 텍스트 요소가 포함 되어 있는 하지만 없기 때문에 <xref:System.Windows.Controls.Label> 함께 제공 되는 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 는 <xref:System.Windows.Controls.ContentControl>, 텍스트를 포함할 수 있습니다 또는 <xref:System.Windows.UIElement>합니다.  

@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33267911"
 ---
 # <a name="integral-types-table-c-reference"></a>정수 계열 형식 표(C# 참조)
 다음 표에서는 단순 형식의 하위 집합을 구성하는 정수 형식의 크기와 범위를 보여 줍니다.  

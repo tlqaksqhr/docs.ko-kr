@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33323712"
 ---
 # <a name="tutorial-chaining-queries-together-c"></a>자습서: 여러 쿼리 연결(C#)
 이 자습서에서는 쿼리를 연결할 때의 처리 모델을 보여 줍니다. 쿼리 연결은 함수 변환을 작성할 때 핵심 부분을 차지합니다. 연결된 쿼리의 작동 방식을 정확히 이해해야 합니다.  

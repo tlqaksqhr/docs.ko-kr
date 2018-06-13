@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33548125"
 ---
 # <a name="xaml-in-wpf"></a>WPF의 XAML
 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] 선언적 응용 프로그램에 대 한 태그 언어 프로그래밍 합니다. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] aXAML 프로세서 구현에서 구현 하 고 XAML 언어 지원을 제공 합니다. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 형식을 구현 되어 필요한 형식 XAML 표현에 대 한 지원을 제공할 수 있습니다. 일반적으로 대부분의를 만들 수 있습니다 프로그램 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] XAML 태그에 응용 프로그램 UI입니다.  

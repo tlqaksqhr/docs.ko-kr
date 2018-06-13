@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33217287"
 ---
 # <a name="introduction-to-the-c-language-and-the-net-framework"></a>C# 언어 및 .NET Framework 소개
 유연하고 형식이 안전한 개체 지향 언어인 C#은 개발자가 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]에서 실행되는 안전하고 강력한 여러 응용 프로그램을 구축할 수 있도록 지원합니다. C#을 사용하여 Windows 클라이언트 응용 프로그램, XML Web services, 분산 구성 요소, 클라이언트-서버 응용 프로그램, 데이터베이스 응용 프로그램 등을 만들 수 있습니다. Visual C#에서는 고급 코드 편집기, 편리한 사용자 인터페이스 디자이너, 통합 디버거 및 다른 많은 도구를 제공하여 C# 언어 및 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]에 따라 보다 쉽게 응용 프로그램을 개발할 수 있습니다.  

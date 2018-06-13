@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33547256"
 ---
 # <a name="optimizing-performance-taking-advantage-of-hardware"></a>성능 최적화: 하드웨어 이용
 내부 아키텍처 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 에 두 개의 렌더링 파이프라인, 하드웨어 및 소프트웨어. 이 항목에서는 응용 프로그램의 성능 최적화에 대 한 결정을 내릴 수 있도록 이러한 렌더링 파이프라인에 대 한 정보를 제공 합니다.  

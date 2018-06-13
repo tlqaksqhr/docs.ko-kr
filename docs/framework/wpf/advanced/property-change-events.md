@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33547653"
 ---
 # <a name="property-change-events"></a>속성 변경 이벤트
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]는 속성 값 변경에 대한 응답으로 발생하는 여러 이벤트를 정의합니다. 일반적으로 속성은 종속성 속성입니다. 이벤트 자체는 라우트된 이벤트인 경우도 있고 표준 [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] 이벤트인 경우도 있습니다. 이벤트 정의는 시나리오에 따라 달라집니다. 일부 속성 변경은 요소 트리를 통해 더 적절하게 라우트되지만 다른 속성 변경은 일반적으로 해당 속성이 변경한 개체에만 영향을 미치기 때문입니다.  

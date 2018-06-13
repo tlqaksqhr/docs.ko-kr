@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33332224"
 ---
 # <a name="wordprocessingml-document-with-styles"></a>스타일이 사용된 WordprocessingML 문서
 더 복잡한 WordprocessingML 문서에는 스타일로 서식이 지정된 단락이 있습니다.  

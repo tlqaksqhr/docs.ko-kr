@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33325411"
 ---
 # <a name="interface-properties-c-programming-guide"></a>인터페이스 속성(C# 프로그래밍 가이드)
 [interface](../../../csharp/language-reference/keywords/interface.md)에 속성을 선언할 수 있습니다. 다음은 인터페이스 인덱서 접근자의 예입니다.  
