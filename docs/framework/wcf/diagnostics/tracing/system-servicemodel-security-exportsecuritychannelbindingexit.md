@@ -1,32 +1,23 @@
 ---
 title: System.ServiceModel.Security.ExportSecurityChannelBindingExit
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 714a8f4d-a297-4f1c-b9df-d97115a1d82a
-caps.latest.revision: "4"
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: b555660449a036892c4053470e144665c0f5ec42
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 3d07f1b3de741ddb2b9fc726ab1dd91e4a4ed986
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33483742"
 ---
-# <a name="systemservicemodelsecurityexportsecuritychannelbindingexit"></a><span data-ttu-id="0502f-102">System.ServiceModel.Security.ExportSecurityChannelBindingExit</span><span class="sxs-lookup"><span data-stu-id="0502f-102">System.ServiceModel.Security.ExportSecurityChannelBindingExit</span></span>
-<span data-ttu-id="0502f-103">System.ServiceModel.Security.ExportSecurityChannelBindingExit</span><span class="sxs-lookup"><span data-stu-id="0502f-103">System.ServiceModel.Security.ExportSecurityChannelBindingExit</span></span>  
+# <a name="systemservicemodelsecurityexportsecuritychannelbindingexit"></a><span data-ttu-id="10f2c-102">System.ServiceModel.Security.ExportSecurityChannelBindingExit</span><span class="sxs-lookup"><span data-stu-id="10f2c-102">System.ServiceModel.Security.ExportSecurityChannelBindingExit</span></span>
+<span data-ttu-id="10f2c-103">System.ServiceModel.Security.ExportSecurityChannelBindingExit</span><span class="sxs-lookup"><span data-stu-id="10f2c-103">System.ServiceModel.Security.ExportSecurityChannelBindingExit</span></span>  
   
-## <a name="description"></a><span data-ttu-id="0502f-104">설명</span><span class="sxs-lookup"><span data-stu-id="0502f-104">Description</span></span>  
- <span data-ttu-id="0502f-105">보안 ExportChannelBinding을 완료했습니다.</span><span class="sxs-lookup"><span data-stu-id="0502f-105">The Security ExportChannelBinding finished.</span></span>  
+## <a name="description"></a><span data-ttu-id="10f2c-104">설명</span><span class="sxs-lookup"><span data-stu-id="10f2c-104">Description</span></span>  
+ <span data-ttu-id="10f2c-105">보안 ExportChannelBinding을 완료했습니다.</span><span class="sxs-lookup"><span data-stu-id="10f2c-105">The Security ExportChannelBinding finished.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="0502f-106">참고 항목</span><span class="sxs-lookup"><span data-stu-id="0502f-106">See Also</span></span>  
- [<span data-ttu-id="0502f-107">추적</span><span class="sxs-lookup"><span data-stu-id="0502f-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [<span data-ttu-id="0502f-108">추적을 사용하여 응용 프로그램 문제 해결</span><span class="sxs-lookup"><span data-stu-id="0502f-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
- [<span data-ttu-id="0502f-109">관리 및 진단</span><span class="sxs-lookup"><span data-stu-id="0502f-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a><span data-ttu-id="10f2c-106">참고 항목</span><span class="sxs-lookup"><span data-stu-id="10f2c-106">See Also</span></span>  
+ [<span data-ttu-id="10f2c-107">추적</span><span class="sxs-lookup"><span data-stu-id="10f2c-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
+ [<span data-ttu-id="10f2c-108">추적을 사용하여 응용 프로그램 문제 해결</span><span class="sxs-lookup"><span data-stu-id="10f2c-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [<span data-ttu-id="10f2c-109">관리 및 진단</span><span class="sxs-lookup"><span data-stu-id="10f2c-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)

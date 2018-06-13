@@ -44,6 +44,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33577308"
 ---
 # <a name="net-class-library-overview"></a><span data-ttu-id="a5ae4-102">.NET 클래스 라이브러리 개요</span><span class="sxs-lookup"><span data-stu-id="a5ae4-102">.NET Class Library Overview</span></span>
 <span data-ttu-id="a5ae4-103">.NET 구현에는 개발 과정을 지원 및 최적화하고 시스템 기능에 대한 액세스를 제공하는 클래스, 인터페이스, 대리자 및 값 형식이 포함되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="a5ae4-103">.NET implementations include classes, interfaces, delegates, and value types that expedite and optimize the development process and provide access to system functionality.</span></span> <span data-ttu-id="a5ae4-104">언어 간의 원활한 상호 운용성을 위해 대부분의 .NET 형식은 CLS(공용 언어 사양) 규격을 따르므로 CLS 규격 컴파일러를 사용하는 모든 프로그래밍 언어에서 사용될 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="a5ae4-104">To facilitate interoperability between languages, most .NET types are CLS-compliant and can therefore be used from any programming language whose compiler conforms to the common language specification (CLS).</span></span>  

@@ -1,14 +1,6 @@
 ---
 title: Windows Presentation Foundation
-ms.custom: ''
 ms.date: 01/25/2018
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-wpf
-ms.tgt_pltfrm: ''
-ms.topic: article
 applies_to:
 - Windows 10
 - Windows 7
@@ -22,23 +14,18 @@ helpviewer_keywords:
 - Windows Presentation Foundation [WPF]
 - WPF [WPF]
 ms.assetid: f667bd15-2134-41e9-b4af-5ced6fafab5d
-caps.latest.revision: 97
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: a6d4596ad10c518a4ddcb9b295393b57ffb243b0
-ms.sourcegitcommit: 655fd4f78741967f80c409cef98347fdcf77857d
+ms.openlocfilehash: 35a936cbc34bf10219099090e1af8c145d7fb23d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33561724"
 ---
-# <a name="windows-presentation-foundation"></a><span data-ttu-id="439df-102">Windows Presentation Foundation</span><span class="sxs-lookup"><span data-stu-id="439df-102">Windows Presentation Foundation</span></span>
-<span data-ttu-id="439df-103">Visual Studio에서 Windows Presentation Foundation (WPF) 기간 업무 windows 데스크톱 응용 프로그램을 구축 하기 위한 통합된 프로그래밍 모델 개발자에 게 제공 합니다.</span><span class="sxs-lookup"><span data-stu-id="439df-103">Windows Presentation Foundation (WPF) in Visual Studio provides developers with a unified programming model for building line-of-business desktop applications on Windows.</span></span>  
+# <a name="windows-presentation-foundation"></a><span data-ttu-id="96724-102">Windows Presentation Foundation</span><span class="sxs-lookup"><span data-stu-id="96724-102">Windows Presentation Foundation</span></span>
+<span data-ttu-id="96724-103">Visual Studio에서 Windows Presentation Foundation (WPF) 기간 업무 windows 데스크톱 응용 프로그램을 구축 하기 위한 통합된 프로그래밍 모델 개발자에 게 제공 합니다.</span><span class="sxs-lookup"><span data-stu-id="96724-103">Windows Presentation Foundation (WPF) in Visual Studio provides developers with a unified programming model for building line-of-business desktop applications on Windows.</span></span>  
   
- [<span data-ttu-id="439df-104">Windows Presentation Foundation으로 데스크톱 응용 프로그램 만들기</span><span class="sxs-lookup"><span data-stu-id="439df-104">Create Desktop Applications with Windows Presentation Foundation</span></span>](/visualstudio/designers/create-modern-desktop-applications-with-windows-presentation-foundation)  
+ [<span data-ttu-id="96724-104">Windows Presentation Foundation으로 데스크톱 응용 프로그램 만들기</span><span class="sxs-lookup"><span data-stu-id="96724-104">Create Desktop Applications with Windows Presentation Foundation</span></span>](/visualstudio/designers/create-modern-desktop-applications-with-windows-presentation-foundation)  
 
- [<span data-ttu-id="439df-105">Visual Studio 및 Blend for Visual Studio에서 XAML 디자인</span><span class="sxs-lookup"><span data-stu-id="439df-105">Designing XAML in Visual Studio and Blend for Visual Studio</span></span>](/visualstudio/designers/designing-xaml-in-visual-studio)  
+ [<span data-ttu-id="96724-105">Visual Studio 및 Blend for Visual Studio에서 XAML 디자인</span><span class="sxs-lookup"><span data-stu-id="96724-105">Designing XAML in Visual Studio and Blend for Visual Studio</span></span>](/visualstudio/designers/designing-xaml-in-visual-studio)  
   
- [<span data-ttu-id="439df-106">Visual Studio 가져오기</span><span class="sxs-lookup"><span data-stu-id="439df-106">Get Visual Studio</span></span>](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs)
+ [<span data-ttu-id="96724-106">Visual Studio 가져오기</span><span class="sxs-lookup"><span data-stu-id="96724-106">Get Visual Studio</span></span>](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs)

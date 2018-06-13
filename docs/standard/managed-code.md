@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33574545"
 ---
 # <a name="what-is-managed-code"></a><span data-ttu-id="3bb8c-103">"관리 코드"란?</span><span class="sxs-lookup"><span data-stu-id="3bb8c-103">What is "managed code"?</span></span>
 

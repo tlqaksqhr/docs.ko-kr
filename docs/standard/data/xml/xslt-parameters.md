@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33570642"
 ---
 # <a name="xslt-parameters"></a><span data-ttu-id="a679f-102">XSLT 매개 변수</span><span class="sxs-lookup"><span data-stu-id="a679f-102">XSLT Parameters</span></span>
 <span data-ttu-id="a679f-103"><xref:System.Xml.Xsl.XsltArgumentList> 메서드를 사용하여 <xref:System.Xml.Xsl.XsltArgumentList.AddParam%2A>에 XSLT 매개 변수를 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="a679f-103">XSLT parameters are added to the <xref:System.Xml.Xsl.XsltArgumentList> using the <xref:System.Xml.Xsl.XsltArgumentList.AddParam%2A> method.</span></span> <span data-ttu-id="a679f-104">이 때 정규화된 이름 및 네임스페이스 URI가 매개 변수 개체와 연결됩니다.</span><span class="sxs-lookup"><span data-stu-id="a679f-104">A qualified name and namespace URI are associated with the parameter object at that time.</span></span>  

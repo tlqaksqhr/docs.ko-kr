@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33572212"
 ---
 # <a name="types-of-xml-nodes"></a><span data-ttu-id="69d91-102">XML 노드 형식</span><span class="sxs-lookup"><span data-stu-id="69d91-102">Types of XML Nodes</span></span>
 <span data-ttu-id="69d91-103">XML 문서를 노드 트리로 메모리에 읽어올 경우 노드의 형식은 노드가 만들어질 때 결정됩니다.</span><span class="sxs-lookup"><span data-stu-id="69d91-103">When an XML document is read into memory as a tree of nodes, the node types for the nodes are decided when the nodes are created.</span></span> <span data-ttu-id="69d91-104">XML DOM(문서 개체 모델)에는 다양한 노드 형식이 있습니다. 이러한 노드 형식은 W3C(World Wide Web 컨소시엄)에서 결정하며 1.1.1단원 The DOM Structure Model에 목록이 제공됩니다.</span><span class="sxs-lookup"><span data-stu-id="69d91-104">The XML Document Object Model (DOM) has several kinds of node types, determined by the World Wide Web Consortium (W3C) and listed in section 1.1.1 The DOM Structure Model.</span></span> <span data-ttu-id="69d91-105">다음 표에서는 노드 형식, 해당 노드 형식에 지정된 개체 및 각각에 대한 간략한 설명의 목록을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="69d91-105">The following table lists the node types, the object assigned to that node type, and a short description of each.</span></span>  

@@ -9,6 +9,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32758583"
 ---
 # <a name="ltissuertokenresolvergt"></a><span data-ttu-id="b8673-102">&lt;issuerTokenResolver&gt;</span><span class="sxs-lookup"><span data-stu-id="b8673-102">&lt;issuerTokenResolver&gt;</span></span>
 <span data-ttu-id="b8673-103">토큰 처리기 컬렉션에 대 한 처리기가 사용 되는 발급자 토큰 확인자를 등록 합니다.</span><span class="sxs-lookup"><span data-stu-id="b8673-103">Registers the issuer token resolver that is used by handlers in the token handler collection.</span></span> <span data-ttu-id="b8673-104">발급자 토큰 확인 자가 들어오는 토큰 및 메시지에 서명 토큰을 확인 하는 데 사용 됩니다.</span><span class="sxs-lookup"><span data-stu-id="b8673-104">The issuer token resolver is used to resolve the signing token on incoming tokens and messages.</span></span>  

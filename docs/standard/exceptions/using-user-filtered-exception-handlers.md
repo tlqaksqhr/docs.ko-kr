@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33571893"
 ---
 # <a name="using-user-filtered-exception-handlers"></a><span data-ttu-id="c0d5f-102">사용자 필터 예외 처리기 사용</span><span class="sxs-lookup"><span data-stu-id="c0d5f-102">Using User-Filtered Exception Handlers</span></span>
 <span data-ttu-id="c0d5f-103">현재 Visual Basic에서는 사용자 필터 예외를 지원합니다.</span><span class="sxs-lookup"><span data-stu-id="c0d5f-103">Currently, Visual Basic supports user-filtered exceptions.</span></span> <span data-ttu-id="c0d5f-104">사용자 필터 예외 처리기는 예외에 대해 정의한 요구 사항을 기반으로 하여 예외를 catch하고 처리합니다.</span><span class="sxs-lookup"><span data-stu-id="c0d5f-104">User-filtered exception handlers catch and handle exceptions based on requirements you define for the exception.</span></span> <span data-ttu-id="c0d5f-105">이러한 처리기는 **Catch** 문을 **When** 키워드와 함께 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="c0d5f-105">These handlers use the **Catch** statement with the **When** keyword.</span></span>  

@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33568627"
 ---
 # <a name="ordered-node-retrieval-by-index"></a><span data-ttu-id="34744-102">인덱스를 사용한 정렬된 노드 검색</span><span class="sxs-lookup"><span data-stu-id="34744-102">Ordered Node Retrieval by Index</span></span>
 <span data-ttu-id="34744-103">W3C(World Wide Web 컨소시엄) XML DOM(문서 개체 모델)에서는 **XmlNamedNodeMap**으로 처리되는 정렬되지 않은 집합과 반대되는 정렬된 노드 목록을 처리할 수 있는 NodeList에 대해서도 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="34744-103">The World Wide Web Consortium (W3C) XML Document Object Model (DOM) also describes a NodeList, which has the ability to handle an ordered list of nodes, as opposed to the unordered set handled by the **XmlNamedNodeMap**.</span></span> <span data-ttu-id="34744-104">Microsoft .NET Framework에서는 NodeList를 **XmlNodeList**라고 합니다.</span><span class="sxs-lookup"><span data-stu-id="34744-104">The NodeList in the Microsoft .NET Framework is called **XmlNodeList**.</span></span> <span data-ttu-id="34744-105">**XmlNodeList**를 반환하는 메서드와 속성은 다음과 같습니다.</span><span class="sxs-lookup"><span data-stu-id="34744-105">Methods and properties that return an **XmlNodeList** are:</span></span>  

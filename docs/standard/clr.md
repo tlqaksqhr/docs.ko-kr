@@ -23,6 +23,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33572293"
 ---
 # <a name="common-language-runtime-clr-overview"></a><span data-ttu-id="b8109-102">CLR(공용 언어 런타임) 개요</span><span class="sxs-lookup"><span data-stu-id="b8109-102">Common Language Runtime (CLR) overview</span></span>
 

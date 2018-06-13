@@ -19,6 +19,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33573188"
 ---
 # <a name="how-to-round-trip-date-and-time-values"></a><span data-ttu-id="90e35-102">방법: 날짜 및 시간 값 라운드트립</span><span class="sxs-lookup"><span data-stu-id="90e35-102">How to: Round-trip Date and Time Values</span></span>
 <span data-ttu-id="90e35-103">많은 응용 프로그램에서 날짜 및 시간 값은 단일 시점을 명확하게 식별하는 데 사용됩니다.</span><span class="sxs-lookup"><span data-stu-id="90e35-103">In many applications, a date and time value is intended to unambiguously identify a single point in time.</span></span> <span data-ttu-id="90e35-104">이 항목에서는 복원된 값이 저장된 값과 같은 시간을 식별할 수 있도록 <xref:System.DateTime> 값, <xref:System.DateTimeOffset> 값 그리고 표준 시간대 정보가 있는 날짜 및 시간 값을 저장하고 복원하는 방법을 보여줍니다.</span><span class="sxs-lookup"><span data-stu-id="90e35-104">This topic shows how to save and restore a <xref:System.DateTime> value, a <xref:System.DateTimeOffset> value, and a date and time value with time zone information so that the restored value identifies the same time as the saved value.</span></span>  

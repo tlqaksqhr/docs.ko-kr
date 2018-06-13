@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33570620"
 ---
 # <a name="xmldocument-input-to-xsltransform"></a><span data-ttu-id="1d95e-102">XslTransform에 대한 XmlDocument 입력</span><span class="sxs-lookup"><span data-stu-id="1d95e-102">XmlDocument Input to XslTransform</span></span>
 <span data-ttu-id="1d95e-103"><xref:System.Xml.XmlDocument> 클래스는 XML 문서에 편집 기능을 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="1d95e-103">The <xref:System.Xml.XmlDocument> class provides editing capabilities for an XML document.</span></span> <span data-ttu-id="1d95e-104"><xref:System.Xml.Xsl.XslTransform.Transform%2A> 메서드로 보내기 전에 XML을 편집 또는 수정해야 하는 경우 XML을 <xref:System.Xml.XmlDocument>에 로드하고 편집한 다음 <xref:System.Xml.Xsl.XslTransform>으로 보냅니다.</span><span class="sxs-lookup"><span data-stu-id="1d95e-104">If the XML needs to be edited or modified before being sent to the <xref:System.Xml.Xsl.XslTransform.Transform%2A> method, load the XML into an <xref:System.Xml.XmlDocument>, edit it, and send it in to the <xref:System.Xml.Xsl.XslTransform>.</span></span>  

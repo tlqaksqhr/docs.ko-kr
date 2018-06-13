@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33567252"
 ---
 # <a name="net-assembly-file-format"></a><span data-ttu-id="b82ae-103">.NET 어셈블리 파일 형식</span><span class="sxs-lookup"><span data-stu-id="b82ae-103">.NET Assembly File Format</span></span>
 

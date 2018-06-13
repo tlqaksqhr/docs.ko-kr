@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33577035"
 ---
 # <a name="remove-xml-data-using-xpathnavigator"></a><span data-ttu-id="8bf15-102">XPathNavigator를 사용하여 XML 데이터 제거</span><span class="sxs-lookup"><span data-stu-id="8bf15-102">Remove XML Data using XPathNavigator</span></span>
 <span data-ttu-id="8bf15-103"><xref:System.Xml.XPath.XPathNavigator> 클래스는 XML 문서에서 노드와 값을 제거하는 메서드 집합을 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="8bf15-103">The <xref:System.Xml.XPath.XPathNavigator> class provides a set of methods used to remove nodes and values from an XML document.</span></span> <span data-ttu-id="8bf15-104">이러한 메서드를 사용하려면 <xref:System.Xml.XPath.XPathNavigator> 개체가 편집 가능한 상태여야 합니다. 즉, <xref:System.Xml.XPath.XPathNavigator.CanEdit%2A> 속성이 `true`여야 합니다.</span><span class="sxs-lookup"><span data-stu-id="8bf15-104">In order to use these methods, the <xref:System.Xml.XPath.XPathNavigator> object must be editable, that is, its <xref:System.Xml.XPath.XPathNavigator.CanEdit%2A> property must be `true`.</span></span>  

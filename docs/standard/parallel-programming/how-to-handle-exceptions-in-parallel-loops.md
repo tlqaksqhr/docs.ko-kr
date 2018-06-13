@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33580551"
 ---
 # <a name="how-to-handle-exceptions-in-parallel-loops"></a><span data-ttu-id="31115-102">방법: 병렬 루프의 예외 처리</span><span class="sxs-lookup"><span data-stu-id="31115-102">How to: Handle Exceptions in Parallel Loops</span></span>
 <span data-ttu-id="31115-103"><xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> 및 <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> 오버로드에는 throw될 수 있는 예외를 처리하기 위한 특별한 메커니즘이 없습니다.</span><span class="sxs-lookup"><span data-stu-id="31115-103">The <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> and <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> overloads do not have any special mechanism to handle exceptions that might be thrown.</span></span> <span data-ttu-id="31115-104">이런 점에서 일반 `for` 및 `foreach` 루프(Visual Basic의 `For` 및 `For Each`)와 비슷합니다. 처리되지 않은 예외로 인해 루프가 즉시 종료됩니다.</span><span class="sxs-lookup"><span data-stu-id="31115-104">In this respect, they resemble regular `for` and `foreach` loops (`For` and `For Each` in Visual Basic); an unhandled exception causes the loop to terminate immediately.</span></span>  

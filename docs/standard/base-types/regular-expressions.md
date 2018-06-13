@@ -27,6 +27,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33577145"
 ---
 # <a name="net-regular-expressions"></a><span data-ttu-id="091e8-102">.NET 정규식</span><span class="sxs-lookup"><span data-stu-id="091e8-102">.NET Regular Expressions</span></span>
 <span data-ttu-id="091e8-103">정규식은 텍스트를 처리하는 강력하고 유연하며 효율적인 방법을 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="091e8-103">Regular expressions provide a powerful, flexible, and efficient method for processing text.</span></span> <span data-ttu-id="091e8-104">정규식의 광범위한 패턴 일치 표기법을 사용하여 많은 양의 텍스트를 신속하게 구문 분석함으로써 특정 문자 패턴을 찾고, 텍스트의 유효성을 검사하여 해당 텍스트가 미리 정의된 패턴(예: 전자 메일 주소)과 일치하는지 확인하며, 텍스트 부분 문자열을 추출, 편집, 바꾸기 또는 삭제하고, 추출된 문자열을 컬렉션에 추가하여 보고서를 생성할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="091e8-104">The extensive pattern-matching notation of regular expressions enables you to quickly parse large amounts of text to find specific character patterns; to validate text to ensure that it matches a predefined pattern (such as an email address); to extract, edit, replace, or delete text substrings; and to add the extracted strings to a collection in order to generate a report.</span></span> <span data-ttu-id="091e8-105">문자열을 처리하거나 텍스트의 큰 블록을 구문 분석하는 많은 응용 프로그램의 경우 정규식은 필수적인 도구입니다.</span><span class="sxs-lookup"><span data-stu-id="091e8-105">For many applications that deal with strings or that parse large blocks of text, regular expressions are an indispensable tool.</span></span>  

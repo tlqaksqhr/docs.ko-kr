@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33575657"
 ---
 # <a name="weak-references"></a><span data-ttu-id="ececb-102">약한 참조</span><span class="sxs-lookup"><span data-stu-id="ececb-102">Weak References</span></span>
 <span data-ttu-id="ececb-103">응용 프로그램의 코드가 해당 개체에 연결될 수 있는 반면 가비지 수집기는 응용 프로그램에서 사용 중인 개체를 수집할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="ececb-103">The garbage collector cannot collect an object in use by an application while the application's code can reach that object.</span></span> <span data-ttu-id="ececb-104">응용 프로그램은 개체에 대한 강력한 참조를 가진다고 합니다.</span><span class="sxs-lookup"><span data-stu-id="ececb-104">The application is said to have a strong reference to the object.</span></span>  

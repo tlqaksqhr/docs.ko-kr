@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33571266"
 ---
 # <a name="handling-com-interop-exceptions"></a><span data-ttu-id="9bb7d-102">COM Interop 예외 처리</span><span class="sxs-lookup"><span data-stu-id="9bb7d-102">Handling COM Interop Exceptions</span></span>
 <span data-ttu-id="9bb7d-103">관리 코드와 비관리 코드를 함께 사용하여 예외를 처리합니다.</span><span class="sxs-lookup"><span data-stu-id="9bb7d-103">Managed and unmanaged code can work together to handle exceptions.</span></span> <span data-ttu-id="9bb7d-104">메서드가 관리 코드에서 예외를 throw하면 공용 언어 런타임이 HRESULT를 COM 개체에 전달할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="9bb7d-104">If a method throws an exception in managed code, the common language runtime can pass an HRESULT to a COM object.</span></span> <span data-ttu-id="9bb7d-105">메서드가 비관리 코드에서 오류 HRESULT를 반환함으로써 실패하면 런타임에서는 관리 코드가 catch할 수 있는 예외를 throw합니다.</span><span class="sxs-lookup"><span data-stu-id="9bb7d-105">If a method fails in unmanaged code by returning a failure HRESULT, the runtime throws an exception that can be caught by managed code.</span></span>  

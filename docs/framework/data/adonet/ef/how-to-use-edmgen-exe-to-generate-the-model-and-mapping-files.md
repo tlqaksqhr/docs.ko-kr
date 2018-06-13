@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32760949"
 ---
 # <a name="how-to-use-edmgenexe-to-generate-the-model-and-mapping-files"></a><span data-ttu-id="24243-102">방법: EdmGen.exe를 사용하여 모델 생성 및 파일 매핑</span><span class="sxs-lookup"><span data-stu-id="24243-102">How to: Use EdmGen.exe to Generate the Model and Mapping Files</span></span>
 <span data-ttu-id="24243-103">이 항목에서는 EDM 생성기(EdmGen.exe) 도구를 사용하여 School 데이터베이스를 기반으로 하는 다음 파일을 생성하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="24243-103">This topic shows how to use the EDM Generator (EdmGen.exe) tool to generate the following files based on the School database:</span></span>  

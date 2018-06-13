@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33572254"
 ---
 # <a name="extending-the-dom"></a><span data-ttu-id="235a4-102">DOM 확장</span><span class="sxs-lookup"><span data-stu-id="235a4-102">Extending the DOM</span></span>
 <span data-ttu-id="235a4-103">Microsoft .NET Framework에는 XML DOM(문서 개체 모델)을 구현하는 기본 클래스 집합이 포함되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="235a4-103">The Microsoft .NET Framework includes a base set of classes that provides an implementation of the XML Document Object Model (DOM).</span></span> <span data-ttu-id="235a4-104"><xref:System.Xml.XmlNode>와 해당 파생 클래스는 XML 문서의 내용 및 구조를 탐색하고, 쿼리하고, 수정할 수 있게 해 주는 메서드 및 속성을 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="235a4-104">The <xref:System.Xml.XmlNode>, and its derived classes, provides methods and properties that allow you to navigate, query, and modify the content and structure of an XML document.</span></span>  

@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33572647"
 ---
 # <a name="when-to-use-generic-collections"></a><span data-ttu-id="4ca10-102">제네릭 컬렉션 사용 기준</span><span class="sxs-lookup"><span data-stu-id="4ca10-102">When to Use Generic Collections</span></span>
 <span data-ttu-id="4ca10-103">제네릭 컬렉션을 사용하면 기본 컬렉션 형식에서 파생하고 형식별 멤버를 구현하지 않아도 형식 보안 이점이 즉시 제공되므로 일반적으로는 제네릭 컬렉션을 사용하는 것이 좋습니다.</span><span class="sxs-lookup"><span data-stu-id="4ca10-103">Using generic collections is generally recommended, because you gain the immediate benefit of type safety without having to derive from a base collection type and implement type-specific members.</span></span> <span data-ttu-id="4ca10-104">또한 컬렉션 요소가 값 형식일 때는 대개 제네릭 컬렉션 형식이 해당하는 제네릭이 아닌 컬렉션 형식 및 제네릭이 아닌 기본 컬렉션 형식에서 파행되는 형식에 비해 성능도 뛰어납니다. 제네릭을 사용하는 경우에는 요소를 boxing할 필요가 없기 때문입니다.</span><span class="sxs-lookup"><span data-stu-id="4ca10-104">Generic collection types also generally perform better than the corresponding nongeneric collection types (and better than types that are derived from nongeneric base collection types) when the collection elements are value types, because with generics there is no need to box the elements.</span></span>  

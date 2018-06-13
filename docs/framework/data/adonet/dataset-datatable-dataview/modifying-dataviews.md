@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32760104"
 ---
 # <a name="modifying-dataviews"></a><span data-ttu-id="0f4c1-102">데이터 보기 수정</span><span class="sxs-lookup"><span data-stu-id="0f4c1-102">Modifying DataViews</span></span>
 <span data-ttu-id="0f4c1-103"><xref:System.Data.DataView>를 사용하여 원본 테이블의 데이터 행을 추가, 삭제 또는 수정할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="0f4c1-103">You can use the <xref:System.Data.DataView> to add, delete, or modify rows of data in the underlying table.</span></span> <span data-ttu-id="0f4c1-104">사용 하는 기능은 **DataView** 의 세 가지 부울 속성 중 하나를 설정 하 여 제어 되는 원본 테이블에 데이터를 수정 하는 **DataView**합니다.</span><span class="sxs-lookup"><span data-stu-id="0f4c1-104">The ability to use the **DataView** to modify data in the underlying table is controlled by setting one of three Boolean properties of the **DataView**.</span></span> <span data-ttu-id="0f4c1-105">이러한 속성에는 <xref:System.Data.DataView.AllowNew%2A>, <xref:System.Data.DataView.AllowEdit%2A> 및 <xref:System.Data.DataView.AllowDelete%2A>가 있습니다.</span><span class="sxs-lookup"><span data-stu-id="0f4c1-105">These properties are <xref:System.Data.DataView.AllowNew%2A>, <xref:System.Data.DataView.AllowEdit%2A>, and <xref:System.Data.DataView.AllowDelete%2A>.</span></span> <span data-ttu-id="0f4c1-106">으로 설정 되어 **true** 기본적으로 합니다.</span><span class="sxs-lookup"><span data-stu-id="0f4c1-106">They are set to **true** by default.</span></span>  

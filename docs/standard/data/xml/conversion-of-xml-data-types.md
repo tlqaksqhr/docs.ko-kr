@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33569368"
 ---
 # <a name="conversion-of-xml-data-types"></a><span data-ttu-id="65937-102">XML 데이터 형식 변환</span><span class="sxs-lookup"><span data-stu-id="65937-102">Conversion of XML Data Types</span></span>
 <span data-ttu-id="65937-103">**XmlConvert** 클래스에 있는 대부분의 메서드는 문자열과 강력한 형식의 서식 간에 데이터를 변환하는 데 사용됩니다.</span><span class="sxs-lookup"><span data-stu-id="65937-103">The majority of the methods found in an **XmlConvert** class are used to convert data between strings and strongly-typed formats.</span></span> <span data-ttu-id="65937-104">메서드는 로캘과 무관합니다.</span><span class="sxs-lookup"><span data-stu-id="65937-104">Methods are locale independent.</span></span> <span data-ttu-id="65937-105">즉, 변환을 수행하는 경우 메서드는 로캘 설정을 고려하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="65937-105">This means that they do not take into account any locale settings when doing conversion.</span></span>  

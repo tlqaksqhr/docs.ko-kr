@@ -23,6 +23,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33574649"
 ---
 # <a name="writing-custom-attributes"></a><span data-ttu-id="2ab75-102">사용자 지정 특성 작성</span><span class="sxs-lookup"><span data-stu-id="2ab75-102">Writing Custom Attributes</span></span>
 <span data-ttu-id="2ab75-103">사용자 지정 특성을 직접 디자인하는 데 새로운 개념을 모두 알 필요는 없습니다.</span><span class="sxs-lookup"><span data-stu-id="2ab75-103">To design your own custom attributes, you do not need to master many new concepts.</span></span> <span data-ttu-id="2ab75-104">개체 지향 프로그래밍에 익숙하고 클래스 디자인 방법을 알고 있는 것으로 충분합니다.</span><span class="sxs-lookup"><span data-stu-id="2ab75-104">If you are familiar with object-oriented programming and know how to design classes, you already have most of the knowledge needed.</span></span> <span data-ttu-id="2ab75-105">사용자 지정 특성은 본래 <xref:System.Attribute?displayProperty=nameWithType>에서 직접 또는 간접적으로 파생된 일반적인 클래스입니다.</span><span class="sxs-lookup"><span data-stu-id="2ab75-105">Custom attributes are essentially traditional classes that derive directly or indirectly from <xref:System.Attribute?displayProperty=nameWithType>.</span></span> <span data-ttu-id="2ab75-106">일반적인 클래스와 마찬가지로 사용자 지정 특성에도 데이터를 저장하고 검색하는 메서드가 포함되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="2ab75-106">Just like traditional classes, custom attributes contain methods that store and retrieve data.</span></span>  

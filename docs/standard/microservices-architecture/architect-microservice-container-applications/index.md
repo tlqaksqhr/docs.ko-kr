@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33573648"
 ---
 # <a name="architecting-container--and-microservice-based-applications"></a><span data-ttu-id="9a7c0-103">컨테이너 및 마이크로 서비스 기반 응용 프로그램 설계</span><span class="sxs-lookup"><span data-stu-id="9a7c0-103">Architecting Container- and Microservice-Based Applications</span></span>
 

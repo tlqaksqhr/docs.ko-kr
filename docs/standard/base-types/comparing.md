@@ -25,6 +25,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33577819"
 ---
 # <a name="comparing-strings-in-net"></a><span data-ttu-id="e1286-102">.NET에서 문자열 비교</span><span class="sxs-lookup"><span data-stu-id="e1286-102">Comparing Strings in .NET</span></span>
 <span data-ttu-id="e1286-103">.NET에서는 문자열의 값을 비교하는 여러 가지 메서드를 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="e1286-103">.NET provides several methods to compare the values of strings.</span></span> <span data-ttu-id="e1286-104">다음 표에서는 값 비교 메서드를 나열하고 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="e1286-104">The following table lists and describes the value-comparison methods.</span></span>  

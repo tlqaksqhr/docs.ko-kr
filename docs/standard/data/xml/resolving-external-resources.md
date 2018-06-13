@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33577103"
 ---
 # <a name="resolving-external-resources"></a><span data-ttu-id="8cad2-102">외부 리소스 확인</span><span class="sxs-lookup"><span data-stu-id="8cad2-102">Resolving External Resources</span></span>
 <span data-ttu-id="8cad2-103">**XmlDocument** 클래스는 **XmlDocument**의 **XmlResolver** 속성을 사용하여 외부 DTD(문서 종류 정의), 엔터티 및 스키마와 같이 XML 데이터에 인라인으로 들어 있지 않은 리소스를 찾습니다.</span><span class="sxs-lookup"><span data-stu-id="8cad2-103">The **XmlResolver** property of the **XmlDocument** is used by the **XmlDocument** class to locate resources that are not inline in the XML data, such as external document type definitions (DTDs), entities, and schemas.</span></span> <span data-ttu-id="8cad2-104">이러한 항목은 네트워크나 로컬 드라이브에 있을 수 있으며 URI(Uniform Resource Identifier)로 식별할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="8cad2-104">These items can be located on a network or on a local drive, and are identifiable by a Uniform Resource Identifier (URI).</span></span> <span data-ttu-id="8cad2-105">따라서 **XmlDocument**로 문서에 있는 **EntityReference** 노드를 확인하고 외부 DTD나 스키마에 따라 문서의 유효성을 검사할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="8cad2-105">This allows the **XmlDocument** to resolve **EntityReference** nodes that are present in the document and validate the document according to the external DTD or schema.</span></span>  

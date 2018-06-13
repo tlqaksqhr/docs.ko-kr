@@ -20,6 +20,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33579576"
 ---
 # <a name="globalization"></a><span data-ttu-id="98327-102">전역화</span><span class="sxs-lookup"><span data-stu-id="98327-102">Globalization</span></span>
 <span data-ttu-id="98327-103">전역화는 다양한 문화권의 사용자를 위해 현지화된 인터페이스와 국가별 데이터를 지원하는 지역화 대비 응용 프로그램을 디자인하고 개발하는 작업을 수반합니다.</span><span class="sxs-lookup"><span data-stu-id="98327-103">Globalization involves designing and developing a world-ready app that supports localized interfaces and regional data for users in multiple cultures.</span></span> <span data-ttu-id="98327-104">디자인 단계를 시작하기 전에 앱에서 지원할 문화권을 결정해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="98327-104">Before beginning the design phase, you should determine which cultures your app will support.</span></span> <span data-ttu-id="98327-105">앱이 기본적으로 단일 문화권이나 국가를 대상으로 하더라도, 다른 문화권이나 국가의 사용자에게 쉽게 확장될 수 있도록 디자인하고 작성할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="98327-105">Although an app targets a single culture or region as its default, you can design and write it so that it can easily be extended to users in other cultures or regions.</span></span>  

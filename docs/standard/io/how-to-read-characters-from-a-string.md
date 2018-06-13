@@ -20,6 +20,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33572777"
 ---
 # <a name="how-to-read-characters-from-a-string"></a><span data-ttu-id="e24fe-102">방법: 문자열에서 문자 읽기</span><span class="sxs-lookup"><span data-stu-id="e24fe-102">How to: Read Characters from a String</span></span>
 <span data-ttu-id="e24fe-103">다음 코드 예제는 문자열에서 동기적 및 비동기적으로 문자를 읽는 방법을 보여줍니다.</span><span class="sxs-lookup"><span data-stu-id="e24fe-103">The following code examples show how to read characters synchronously and asynchronously from a string.</span></span>  

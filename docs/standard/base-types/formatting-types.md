@@ -32,6 +32,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33579849"
 ---
 # <a name="formatting-types-in-net"></a><span data-ttu-id="9922a-102">.NET의 서식 지정 형식</span><span class="sxs-lookup"><span data-stu-id="9922a-102">Formatting Types in .NET</span></span>
 <a name="Introduction"></a> <span data-ttu-id="9922a-103">형식 지정은 대개 결과 문자열을 사용자에게 표시하거나 deserialize하여 원본 데이터 형식으로 복원하기 위해 클래스, 구조체 또는 열거형 값의 인스턴스를 해당 문자열 표현으로 변환하는 프로세스입니다.</span><span class="sxs-lookup"><span data-stu-id="9922a-103">Formatting is the process of converting an instance of a class, structure, or enumeration value to its string representation, often so that the resulting string can be displayed to users or deserialized to restore the original data type.</span></span> <span data-ttu-id="9922a-104">이 변환 프로세스에는 다음과 같은 여러 가지 문제점이 나타날 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="9922a-104">This conversion can pose a number of challenges:</span></span>  
