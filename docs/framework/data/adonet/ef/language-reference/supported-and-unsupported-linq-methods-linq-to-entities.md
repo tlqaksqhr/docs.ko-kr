@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32766636"
 ---
 # <a name="supported-and-unsupported-linq-methods-linq-to-entities"></a>지원 및 미지원 LINQ 메서드 (LINQ to Entities)
 이 단원에서는 [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] 쿼리에서 지원되거나 지원되지 않는 LINQ(Language-Integrated Query) 표준 쿼리 연산자에 대한 정보를 제공합니다. LINQ 표준 쿼리 연산자 중 상당수는 정수 인수를 허용하는 오버로드된 버전이 있습니다. 정수 인수는 연산 대상인 시퀀스에서 0부터 시작하는 인덱스, <xref:System.Collections.Generic.IEqualityComparer%601> 또는 <xref:System.Collections.Generic.IComparer%601>에 해당합니다. 별도로 명시하지 않는 한 오버로드된 버전의 이 LINQ 표준 쿼리 연산자는 지원되지 않으며, 이 버전을 사용할 경우 예외가 throw됩니다.  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32765973"
 ---
 # <a name="entity-data-model-primitive-data-types"></a>엔터티 데이터 모델: 기본 데이터 형식
 (EDM (엔터티 데이터 모델) 집합을 정의 하는 데 사용 되는 추상 기본 데이터 형식 (예: 문자열, Boolean, Int32, 및 등)을 지원 [속성](../../../../docs/framework/data/adonet/property.md) 개념적 모델에서. 이러한 기본 데이터 형식은 SQL Server 데이터베이스나 CLR(공용 언어 런타임)과 같은 저장소 또는 호스팅 환경에서 지원되는 실제 기본 데이터 형식의 프록시입니다. EDM에서는 기본 데이터 형식에 대한 작업 또는 변환의 의미 체계를 정의하지 않습니다. 이러한 의미 체계는 저장소 또는 호스팅 환경에서 정의됩니다. 일반적으로 EDM의 기본 데이터 형식은 저장소 또는 호스팅 환경에서 해당하는 기본 데이터 형식에 매핑됩니다. Entity Framework 매핑되는 방법을 EDM의 기본 형식은 SQL Server 데이터 형식에 대 한 정보를 참조 하십시오. [Entity FrameworkTypes 용 SqlClient](../../../../docs/framework/data/adonet/ef/sqlclient-for-ef-types.md)합니다.  
