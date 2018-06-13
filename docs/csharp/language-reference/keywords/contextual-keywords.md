@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33216188"
 ---
 # <a name="contextual-keywords-c-reference"></a><span data-ttu-id="2397c-102">상황별 키워드(C# 참조)</span><span class="sxs-lookup"><span data-stu-id="2397c-102">Contextual Keywords (C# Reference)</span></span>
 <span data-ttu-id="2397c-103">상황별 키워드는 코드에서 특정 의미를 제공하는 데 사용되지만 C#의 예약어입니다.</span><span class="sxs-lookup"><span data-stu-id="2397c-103">A contextual keyword is used to provide a specific meaning in the code, but it is not a reserved word in C#.</span></span> <span data-ttu-id="2397c-104">다음 상황별 키워드를 이 섹션에서 소개합니다.</span><span class="sxs-lookup"><span data-stu-id="2397c-104">The following contextual keywords are introduced in this section:</span></span>  

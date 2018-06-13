@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33217934"
 ---
 # <a name="net-core-command-line-interface-cli-tools"></a><span data-ttu-id="b535e-103">.NET Core CLI(명령줄 인터페이스) 도구</span><span class="sxs-lookup"><span data-stu-id="b535e-103">.NET Core command-line interface (CLI) tools</span></span>
 

@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33218314"
 ---
 # <a name="-checked-c-compiler-options"></a><span data-ttu-id="2bcbe-102">-checked(C# 컴파일러 옵션)</span><span class="sxs-lookup"><span data-stu-id="2bcbe-102">-checked (C# Compiler Options)</span></span>
 <span data-ttu-id="2bcbe-103">**-checked** 옵션은 데이터 형식 범위를 벗어나고 [checked](../../../csharp/language-reference/keywords/checked.md) 또는 [unchecked](../../../csharp/language-reference/keywords/unchecked.md) 키워드의 범위 내에 없는 값을 생성하는 정수 산술 문이 런타임 예외를 일으킬지 여부를 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="2bcbe-103">The **-checked** option specifies whether an integer arithmetic statement that results in a value that is outside the range of the data type, and that is not in the scope of a [checked](../../../csharp/language-reference/keywords/checked.md) or [unchecked](../../../csharp/language-reference/keywords/unchecked.md) keyword, causes a run-time exception.</span></span>  

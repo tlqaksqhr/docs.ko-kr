@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32750169"
 ---
 # <a name="ltservicethrottlinggt"></a><span data-ttu-id="80e9b-102">&lt;serviceThrottling&gt;</span><span class="sxs-lookup"><span data-stu-id="80e9b-102">&lt;serviceThrottling&gt;</span></span>
 <span data-ttu-id="80e9b-103">WCF(Windows Communication Foundation) 서비스의 스로틀 메커니즘을 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="80e9b-103">Specifies the throttling mechanism of a Windows Communication Foundation (WCF) service.</span></span>  
