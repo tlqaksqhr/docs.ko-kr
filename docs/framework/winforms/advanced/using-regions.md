@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33522611"
 ---
 # <a name="using-regions"></a>영역 사용
 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] <xref:System.Drawing.Region> 클래스를 사용 하는 사용자 지정 모양을 정의할 수 있습니다. 선, 다각형 및 곡선의 모양 구성 될 수 있습니다.  

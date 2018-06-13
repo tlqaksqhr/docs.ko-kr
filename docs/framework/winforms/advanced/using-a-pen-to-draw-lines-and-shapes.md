@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33524344"
 ---
 # <a name="using-a-pen-to-draw-lines-and-shapes"></a>펜을 사용하여 선과 도형 그리기
 사용 하 여 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] `Pen` 개체를 선 세그먼트, 곡선 및 도형 윤곽선을 그립니다. 이 섹션에서는 *줄* 선분만 의미를 지정 하지 않는 한, 이러한 항목 중 하나를 참조 합니다. 색, 너비, 맞춤 및 해당 펜을 사용 하 여 그리는 선의 스타일을 제어 하는 펜의 속성을 설정 합니다.  

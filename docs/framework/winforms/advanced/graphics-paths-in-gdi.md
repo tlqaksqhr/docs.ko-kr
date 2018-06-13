@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33523890"
 ---
 # <a name="graphics-paths-in-gdi"></a>GDI+의 그래픽 경로
 경로 선, 사각형 및 간단한 곡선을 결합 하 여 구성 됩니다. 설명한 대로 [벡터 그래픽 개요](../../../../docs/framework/winforms/advanced/vector-graphics-overview.md) 다음과 같은 기본 빌딩 블록 그림 그리기에 대 한 가장 유용한 입증 되었습니다.  

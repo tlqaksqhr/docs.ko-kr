@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33533743"
 ---
 # <a name="how-to-set-the-image-displayed-by-a-windows-forms-control"></a>방법: Windows Forms 컨트롤에서 표시하는 이미지 설정
 여러 Windows Forms 컨트롤 이미지를 표시할 수 있습니다. 이러한 이미지는 단추를 나타내는에 있는 디스켓 아이콘은 같은 컨트롤의 용도 설명 하는 아이콘이 있을 수 있습니다는 **저장** 명령입니다. 또는 아이콘 배경 이미지를 모양 및 원하는 동작을 제어 될 수 있습니다.  

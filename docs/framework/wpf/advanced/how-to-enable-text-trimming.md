@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33543542"
 ---
 # <a name="how-to-enable-text-trimming"></a>방법: 텍스트 잘라내기 사용
 사용 및에서 사용할 수 있는 값의 효과 보여 주는이 예제는 <xref:System.Windows.TextTrimming> 열거형입니다.  
