@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33506165"
 ---
 # <a name="wcf-services-and-aspnet"></a>WCF 서비스 및 ASP.NET
 이 항목에서는 호스팅 Windows Communication Foundation (WCF) 서비스--와 함께 ASP.NET 및 ASP.NET 호환 모드에서 호스팅한를 설명 합니다.  

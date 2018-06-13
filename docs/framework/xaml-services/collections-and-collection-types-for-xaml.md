@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33562978"
 ---
 # <a name="collections-and-collection-types-for-xaml"></a>XAML을 위한 컬렉션 및 컬렉션 형식
 이 항목 컬렉션을 지원 하 고 컬렉션 항목 요소는 부모 개체의 요소 또는 속성 요소 자식으로 인스턴스화하기 위한 XAML 구문을 지원 하도록 설계 된 형식의 속성을 정의 하는 방법을 설명 합니다.  

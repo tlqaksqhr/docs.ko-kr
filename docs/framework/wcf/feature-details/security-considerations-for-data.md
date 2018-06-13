@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33509081"
 ---
 # <a name="security-considerations-for-data"></a>데이터에 대한 보안 고려 사항
 Windows Communication Foundation (WCF)에서 데이터를 처리할 때는 여러 가지 위협 범주를 고려해 야 합니다. 다음 표에는 데이터 처리와 관련하여 가장 중요한 위협 클래스가 나열되어 있습니다. WCF는 이러한 위협을 완화 하는 도구를 제공 합니다.  

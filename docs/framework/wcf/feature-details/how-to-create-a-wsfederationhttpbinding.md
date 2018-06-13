@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33496314"
 ---
 # <a name="how-to-create-a-wsfederationhttpbinding"></a>방법: WSFederationHttpBinding 만들기
 Windows Communication Foundation (WCF)는 <xref:System.ServiceModel.WSFederationHttpBinding> 클래스 ([\<wsFederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md) 구성에서) 페더레이션된 서비스를 노출 하기 위한 메커니즘을 제공 합니다. 즉, 보안 토큰 서비스에서 발급된 보안 토큰을 사용하여 클라이언트가 인증해야 하는 서비스입니다. 이 항목에서는 코드와 구성 둘 다에서 <xref:System.ServiceModel.WSFederationHttpBinding>을 설정하는 방법을 보여 줍니다. 바인딩을 만들고 나면 해당 바인딩을 사용하도록 끝점을 설정할 수 있습니다.  

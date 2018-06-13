@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33537754"
 ---
 # <a name="toolstripprogressbar-control-overview"></a>ToolStripProgressBar 컨트롤 개요
 <xref:System.Windows.Forms.ToolStripProgressBar> 래프팅 (rafting) 및 모든 렌더링 기능이 결합 <xref:System.Windows.Forms.ToolStrip> 일반적인 프로세스 추적 기능을 사용 하 여 컨트롤입니다. A <xref:System.Windows.Forms.ToolStripProgressBar> 에서 가장 일반적으로 호스트 <xref:System.Windows.Forms.StatusStrip>, 의해서도 자주는 <xref:System.Windows.Forms.ToolStrip>합니다.  

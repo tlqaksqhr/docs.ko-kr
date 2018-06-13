@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33497518"
 ---
 # <a name="support-for-json-and-other-data-transfer-formats"></a>JSON 및 기타 데이터 전송 형식에 대한 지원
 JSON(JavaScript Object Notation)은 클라이언트 브라우저 및 AJAX(Asynchronous JavaScript and XML) 사용 웹 서비스 간에 소량의 데이터를 신속하게 교환할 수 있는 효율적인 데이터 인코딩 형식입니다.  

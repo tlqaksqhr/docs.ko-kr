@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33500671"
 ---
 # <a name="custom-binding-imperative"></a>사용자 지정 바인딩 명령
 정의 및 구성 파일 또는 Windows Communication Foundation (WCF)가 생성 된 클라이언트를 사용 하지 않고 사용자 지정 바인딩을 사용 하는 명령적 코드를 작성 하는 방법을 보여가 줍니다. 이 샘플에서는 HTTP 전송에서 제공하는 기능과 신뢰할 수 있는 세션 채널을 조합하여 신뢰할 수 있는 HTTP 기반 바인딩을 만듭니다. 이 샘플에 따라는 [시작](../../../../docs/framework/wcf/samples/getting-started-sample.md) 계산기 서비스를 구현 하는 합니다.  

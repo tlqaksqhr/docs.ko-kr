@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33496989"
 ---
 # <a name="mapping-between-json-and-xml"></a>JSON과 XML 간의 매핑
 <xref:System.Runtime.Serialization.Json.JsonReaderWriterFactory>에서 생성된 판독기 및 작성기는 JSON(JavaScript Object Notation) 콘텐츠를 통해 XML API를 제공합니다. JSON은 JavaScript 개체 리터럴의 하위 집합을 사용하여 데이터를 인코딩합니다. 판독기와 작성기가 팩터리에서 생성 된 JSON 콘텐츠를 하는 경우에 사용 됩니다 사용 하 여 Windows Communication Foundation (WCF) 응용 프로그램에서 보내거나 받는 <xref:System.ServiceModel.Channels.WebMessageEncodingBindingElement> 또는 <xref:System.ServiceModel.WebHttpBinding>합니다.  

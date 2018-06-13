@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33500788"
 ---
 # <a name="transport-extensibility"></a>전송 확장성
 이 섹션에는 사용자 지정 전송 Windows Communication Foundation (WCF)를 보여 주는 샘플이 포함 되어 있습니다.  

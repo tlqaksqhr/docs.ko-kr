@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33501358"
 ---
 # <a name="understanding-generated-client-code"></a>생성된 클라이언트 코드 이해
 [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) 는 클라이언트 응용 프로그램을 빌드하는 데 사용할 클라이언트 응용 프로그램 구성 파일과 클라이언트 코드를 생성합니다. 이 항목에서는 표준 서비스 계약 시나리오를 위해 생성된 코드 예제를 간략히 살펴 봅니다. 생성된 된 코드를 사용 하 여 클라이언트 응용 프로그램을 작성 하는 방법에 대 한 자세한 내용은 참조 [WCF 클라이언트 개요](../../../../docs/framework/wcf/wcf-client-overview.md)합니다.  

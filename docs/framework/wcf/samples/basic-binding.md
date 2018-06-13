@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33498944"
 ---
 # <a name="basic-binding"></a>기본 바인딩
 이 단원에는 끝점 요소의 바인딩 특성을 사용하는 방법을 보여 주는 기본 샘플이 포함되어 있습니다.  

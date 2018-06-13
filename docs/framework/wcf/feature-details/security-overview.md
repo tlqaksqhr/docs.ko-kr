@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33505683"
 ---
 # <a name="security-overview"></a>보안 개요
 Windows Communication Foundation (WCF)는 SOAP 메시지 기반의 분산된 프로그래밍 플랫폼 이므로 클라이언트와 서비스 간의 메시지 보안 데이터를 보호 하는 데 필수적입니다. WCF는 기존 보안 인프라와 SOAP 메시지의 승인된 보안 표준에 따라 보안 메시지를 교환 하기 위한 하 게 상호 운용 가능한 플랫폼을 제공 합니다.  

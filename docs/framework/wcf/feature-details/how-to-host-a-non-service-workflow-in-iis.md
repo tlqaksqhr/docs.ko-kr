@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33496761"
 ---
 # <a name="how-to-host-a-non-service-workflow-in-iis"></a>방법: IIS에서 서비스가 아닌 워크플로 호스팅
 워크플로 서비스가 아닌 워크플로는 IIS/WAS에서 호스트될 수 있습니다. 이는 다른 사람이 작성한 워크플로를 호스트해야 하는 경우에 유용합니다. Workflow Designer를 다시 호스트하고 사용자가 워크플로를 직접 만들 수 있도록 허용하는 경우를 예로 들 수 있습니다.  IIS에서 서비스가 아닌 워크플로를 호스트하면 프로세스 재활용, 유휴 상태이면 종료, 프로세스 상태 모니터링 및 메시지 기반 활성화와 같은 기능이 지원됩니다. IIS에서 호스트되는 워크플로 서비스에는 <xref:System.ServiceModel.Activities.Receive> 활동이 포함되고 IIS에서 메시지가 수신되면 서비스가 활성화됩니다. 서비스가 아닌 워크플로에는 메시징 활동이 포함되지 않으며 기본적으로 메시지 전송을 통해 활성화할 수 없습니다.  <xref:System.ServiceModel.Activities.WorkflowHostingEndpoint>에서 클래스를 파생하고 워크플로 인스턴스를 만드는 작업이 포함된 서비스 계약을 정의해야 합니다. 이 항목에서는 간단한 워크플로 만드는에서 워크플로 활성화 하기 위해 클라이언트가 사용할 수는 서비스 계약을 정의 및에서 클래스를 파생 하는 과정을 안내 <xref:System.ServiceModel.Activities.WorkflowHostingEndpoint> 워크플로 만들기 요청에 대 한 수신 하도록 서비스 계약을 사용 하 여입니다.  

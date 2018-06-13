@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33544500"
 ---
 # <a name="how-to-use-a-resourcedictionary-to-manage-localizable-string-resources"></a>방법: ResourceDictionary를 사용하여 지역화 가능한 문자열 리소스 관리
 사용 하는 방법을 보여 주는이 예제는 <xref:System.Windows.ResourceDictionary> Windows Presentation Foundation (WPF) 응용 프로그램에 대 한 패키지 지역화 가능한 문자열 리소스를 합니다.  

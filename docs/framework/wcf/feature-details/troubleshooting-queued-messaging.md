@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33509127"
 ---
 # <a name="troubleshooting-queued-messaging"></a>대기 중인 메시지 문제 해결
 이 섹션에는 일반적인 질문 및 문제 해결 Windows Communication Foundation (WCF)에서 큐를 사용 하 여에 대 한 도움말이 포함 되어 있습니다.  

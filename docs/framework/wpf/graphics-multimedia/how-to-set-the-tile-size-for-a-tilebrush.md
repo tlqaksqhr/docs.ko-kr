@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33561750"
 ---
 # <a name="how-to-set-the-tile-size-for-a-tilebrush"></a>방법: TileBrush의 바둑판 크기 설정
 타일 크기를 설정 하는 방법을 보여 주는이 예제는 <xref:System.Windows.Media.TileBrush>합니다. 기본적으로는 <xref:System.Windows.Media.TileBrush> 완전히 사용자 칠하고 있는 영역을 채우는 한 분할을 생성 합니다. 설정 하 여이 동작을 재정의할 수는 <xref:System.Windows.Media.TileBrush.Viewport%2A> 및 <xref:System.Windows.Media.TileBrush.ViewportUnits%2A> 속성입니다.  

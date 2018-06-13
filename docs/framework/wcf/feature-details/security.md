@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33499091"
 ---
 # <a name="windows-communication-foundation-security"></a>Windows Communication Foundation 보안
 이 단원의 항목에서는 Windows Communication Foundation (WCF) 보안 기능 및 보안 메시지를 사용 하는 방법에 설명 합니다.  

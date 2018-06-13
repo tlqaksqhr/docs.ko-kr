@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33498529"
 ---
 # <a name="wcf-and-websockets"></a>WCF 및 웹 소켓
 .NET Framework 4.5부터 Windows Communication Foundation에서 WebSocket을 지원합니다.  WebSocket은 표준 HTTP 포트 80 및 443에서 양방향 통신을 가능하게 하는 효율적 표준 기반 기술입니다. 표준 HTTP 포트를 사용하면 WebSocket이 매개자를 통해 웹에서 통신할 수 있습니다.  WebSocket 전송에서 통신을 지원하기 위해 <xref:System.ServiceModel.NetHttpBinding>와 <xref:System.ServiceModel.NetHttpsBinding>을 참조하세요. Websocket 관련 설정은 구성할 수 있습니다는 <xref:System.ServiceModel.Channels.HttpTransportBindingElement> 에 액세스 하 여는 <xref:System.ServiceModel.Channels.HttpTransportBindingElement.WebSocketSettings%2A> 속성입니다.

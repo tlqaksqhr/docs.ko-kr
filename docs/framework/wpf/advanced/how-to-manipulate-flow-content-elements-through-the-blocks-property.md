@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33544552"
 ---
 # <a name="how-to-manipulate-flow-content-elements-through-the-blocks-property"></a>방법: Blocks 속성을 통한 유동 콘텐츠 요소 조작
 이러한 예제를 보여 주는 통해 유동 콘텐츠 요소에서 수행할 수 있는 일반적인 작업 중 몇 가지는 **블록** 속성입니다. 항목 추가 및 제거 하려면이 속성은 사용 <xref:System.Windows.Documents.BlockCollection>합니다. 유동 콘텐츠 요소는 **블록** 속성에 포함 합니다.  

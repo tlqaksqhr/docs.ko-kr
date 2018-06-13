@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33542251"
 ---
 # <a name="windows-forms"></a>Windows Forms
 폼은 응용 프로그램의 기본 단위이므로 폼의 기능과 디자인을 고려해야 합니다. 폼은 기본적으로 개발자가 컨트롤을 통해 향상시켜 사용자 인터페이스를 만들고 코드를 통해 향상시켜 데이터를 조작하는 빈 슬레이트입니다. 이 위해 Visual Studio에서는 제공 된 통합된 개발 환경 (IDE) 코드를 작성을 돕는 뿐만 아니라 다양 한 컨트롤 집합로 작성 된는 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]합니다. 이러한 컨트롤의 기능을 코드로 보완하면 필요한 솔루션을 쉽고 빠르게 개발할 수 있습니다.  

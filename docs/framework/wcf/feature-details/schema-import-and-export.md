@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33497284"
 ---
 # <a name="schema-import-and-export"></a>스키마 가져오기 및 내보내기
 Windows Communication Foundation (WCF)는 새로운 serialization 엔진인 포함 된 <xref:System.Runtime.Serialization.DataContractSerializer>합니다. `DataContractSerializer`는 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 개체와 XML을 양방향으로 변환합니다. 자체 serializer 이외에 WCF 관련된 스키마를 가져오고 내보내는 메커니즘이 포함 되어 있습니다. *스키마* serializer 생성 하거나 deserializer가 액세스할 수 있는 XML 형태에, 정규화 되 고 컴퓨터가 읽을 수 있는 설명입니다. WCF에서는 여러 타사 플랫폼과 상호 운용할 수 있는 스키마 표현으로 World Wide Web Consortium (W3C) XML 스키마 정의 언어 (XSD)를 사용 합니다.  

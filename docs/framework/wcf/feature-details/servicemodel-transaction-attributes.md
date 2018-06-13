@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33500833"
 ---
 # <a name="servicemodel-transaction-attributes"></a>ServiceModel 트랜잭션 특성
 세 가지 표준의 속성을 제공 하는 Windows Communication Foundation (WCF) <xref:System.ServiceModel> WCF 서비스에 대 한 트랜잭션의 동작을 구성할 수 있는 특성:  

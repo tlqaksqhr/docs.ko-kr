@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33499313"
 ---
 # <a name="how-to-implement-a-windows-communication-foundation-service-contract"></a>방법: Windows Communication Foundation 서비스 계약 구현
 기본 Windows Communication Foundation (WCF) 서비스 및 서비스를 호출할 수 있는 클라이언트를 만드는 데 필요한 6 가지 작업 중 두 번째 숫자입니다. 전체 7 개 작업의 개요를 참조 하십시오.는 [초보자를 위한 자습서](../../../docs/framework/wcf/getting-started-tutorial.md) 항목입니다.  

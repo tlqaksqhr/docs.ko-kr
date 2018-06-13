@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33496701"
 ---
 # <a name="how-to-migrate-aspnet-web-service-code-to-the-windows-communication-foundation"></a>방법: ASP.NET 웹 서비스 코드를 Windows Communication Foundation으로 마이그레이션
 다음 절차는 Windows Communication Foundation (WCF)에 ASP.NET 웹 서비스를 마이그레이션하는 방법을 설명 합니다.  

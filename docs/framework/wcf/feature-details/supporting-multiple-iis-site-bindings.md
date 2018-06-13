@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33497622"
 ---
 # <a name="supporting-multiple-iis-site-bindings"></a>여러 IIS 사이트 바인딩 지원
 인터넷 정보 서비스 (IIS) 7.0에서 Windows Communication Foundation (WCF) 서비스를 호스팅하는 경우에 동일한 사이트에 동일한 프로토콜을 사용 하는 여러 기본 주소를 제공 하는 것이 좋습니다. 이렇게 하면 동일한 서비스에서 여러 다른 URI에 응답할 수 있습니다. 수신 대기 하는 서비스를 호스트 하려는 경우 유용 http://www.contoso.com 및 http://contoso.com합니다. 내부 사용자에 대한 기본 주소와 외부 사용자에 대한 별도의 기본 주소가 있는 서비스를 만들려는 경우에 유용합니다. 예를 들어: http://internal.contoso.com 및 http://www.contoso.com합니다.  

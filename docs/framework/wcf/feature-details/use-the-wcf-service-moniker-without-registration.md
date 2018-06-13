@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33497973"
 ---
 # <a name="how-to-use-the-windows-communication-foundation-service-moniker-without-registration"></a>방법: 등록 없이 Windows Communication Foundation 서비스 모니커 사용
 에 연결 하 고 Windows Communication Foundation (WCF) 서비스와 통신 하려면 WCF 클라이언트 응용 프로그램에 서비스 주소, 바인딩 구성 및 서비스 계약의 세부 정보 있어야 합니다.  

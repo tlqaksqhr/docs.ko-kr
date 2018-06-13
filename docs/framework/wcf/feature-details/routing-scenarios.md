@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33496154"
 ---
 # <a name="routing-scenarios"></a>라우팅 시나리오
 라우팅 서비스는 폭넓은 사용자 지정이 가능하지만 새 구성을 처음부터 만드는 경우 효율적인 라우팅 논리를 디자인하기란 어려운 일입니다.  다만 대부분의 라우팅 서비스 구성에 해당되는 몇 가지 일반적인 시나리오는 있습니다. 이러한 시나리오가 사용자의 특정 구성에 바로 적용되지는 않겠지만 이러한 시나리오를 처리하도록 라우팅 서비스를 구성하는 방법을 이해하면 라우팅 서비스를 더 잘 이해할 수 있습니다.  

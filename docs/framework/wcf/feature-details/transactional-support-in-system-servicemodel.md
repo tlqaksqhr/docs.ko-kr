@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33497921"
 ---
 # <a name="transactional-support-in-systemservicemodel"></a>System.ServiceModel의 트랜잭션 지원
 이 단원의 항목에서는 Windows Communication Foundation (WCF)를 제공 하는 트랜잭션 기능에 설명 합니다.  

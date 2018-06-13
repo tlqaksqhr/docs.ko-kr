@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33497154"
 ---
 # <a name="nettcp-port-sharing"></a>Net.TCP 포트 공유
 Windows Communication Foundation (WCF) 고성능 통신을 위한 새로운 TCP 기반 네트워크 프로토콜 (net.tcp://)를 제공합니다. WCF에는 새 시스템 구성 요소를 net.tcp 포트를 여러 사용자 프로세스에서 공유할 수 있도록는 Net.TCP Port Sharing Service를 도입 되었습니다.  

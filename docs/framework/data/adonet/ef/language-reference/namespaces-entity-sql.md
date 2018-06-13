@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32763643"
 ---
 # <a name="namespaces-entity-sql"></a>네임스페이스(Entity SQL)
 [!INCLUDE[esql](../../../../../../includes/esql-md.md)]에서는 형식 이름, 엔터티 집합, 함수 등의 전역 식별자에 대한 이름 충돌을 피하기 위해 네임스페이스가 도입되었습니다. [!INCLUDE[esql](../../../../../../includes/esql-md.md)]의 네임스페이스 지원은 [!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)]의 네임스페이스 지원과 유사합니다.  

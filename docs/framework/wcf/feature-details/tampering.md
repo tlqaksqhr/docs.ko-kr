@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33498633"
 ---
 # <a name="tampering"></a>변조
 *변조* 은 변경, 메시지 또는 메시지를 배달 하 고 메시지 변경된 의도 된 것 이외의 용도로 사용 하는 작업입니다.  

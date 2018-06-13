@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33498217"
 ---
 # <a name="transport-security"></a>전송 보안
 선택한 바인딩에 따라 전송 보안에서 Windows Communication Foundation (WCF)에 따라 달라 집니다. 바인딩이 구현하는 전송은 실제 보안 메커니즘을 결정합니다. 이 단원의 항목에서는 구현된 메커니즘 및 해당 옵션에 대해 설명합니다.  

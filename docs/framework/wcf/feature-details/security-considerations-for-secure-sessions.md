@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33497492"
 ---
 # <a name="security-considerations-for-secure-sessions"></a>보안 세션에 대한 보안 고려 사항
 보안 세션 구현 시 보안에 영향을 주는 다음 항목에 대해 고려해야 합니다. 보안 고려 사항에 대 한 자세한 내용은 참조 [보안 고려 사항](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md) 및 [보안에 대 한 유용한](../../../../docs/framework/wcf/feature-details/best-practices-for-security-in-wcf.md)합니다.  

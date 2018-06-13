@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33497015"
 ---
 # <a name="queues-overview"></a>큐 개요
 이 단원에서는 큐를 사용하는 통신의 일반 개념과 핵심 개념을 소개합니다. 이후 단원에서는 큐 개념을 여기에 설명 된 Windows Communication Foundation (WCF)를 명시 되는 방법에 대 한 세부 정보로 이동 합니다.  

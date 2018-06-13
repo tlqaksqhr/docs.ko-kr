@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33496840"
 ---
 # <a name="configuring-system-provided-bindings"></a>시스템 제공 바인딩 구성
 바인딩은 끝점과 통신할 때 사용할 통신 메커니즘을 지정하고 끝점에 연결하는 방법을 나타냅니다. 바인딩은 방법을 Windows Communication Foundation (WCF) 채널이 필수 통신 기능을 제공 하기 위해 계층화 되 정의 하는 요소로 구성 됩니다. 바인딩에는 다음 세 가지 형식의 요소가 있습니다.  

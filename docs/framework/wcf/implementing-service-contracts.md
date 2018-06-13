@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33499377"
 ---
 # <a name="implementing-service-contracts"></a>서비스 계약 구현
 서비스는 클라이언트에서 사용할 수 있는 기능을 하나 이상의 끝점에 노출하는 클래스입니다. 서비스를 만들려면 Windows Communication Foundation (WCF) 계약을 구현 하는 클래스를 작성 합니다. 이 작업은 두 가지 방법 중 한 가지로 수행할 수 있습니다. 계약을 인터페이스로 따로 정의한 다음 해당 인터페이스를 구현하는 클래스를 만들 수 있습니다. 또는 클래스 자체에 <xref:System.ServiceModel.ServiceContractAttribute> 특성을 두고 서비스 클라이언트에서 사용할 수 있는 메서드에 <xref:System.ServiceModel.OperationContractAttribute> 특성을 두어 클래스와 계약을 직접 만들 수도 있습니다.  

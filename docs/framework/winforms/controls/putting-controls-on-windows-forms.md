@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33536220"
 ---
 # <a name="putting-controls-on-windows-forms"></a>Windows Forms에 컨트롤 넣기
 응용 프로그램의 필요에 따라 Windows Forms에 넣을 수 있는 컨트롤의 다양 한 가지가 있습니다.  

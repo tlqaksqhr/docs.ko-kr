@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33544819"
 ---
 # <a name="how-to-use-mailto-to-send-mail-from-a-page"></a>방법: mailto를 사용 하 여: 정도 페이지에서 메일 보내기
 사용 하는 방법을 보여 주는이 예제 <xref:System.Windows.Documents.Hyperlink> 함께에서 **mailto:**[!INCLUDE[TLA#tla_uri](../../../../includes/tlasharptla-uri-md.md)]합니다.  

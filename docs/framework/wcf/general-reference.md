@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33498230"
 ---
 # <a name="general-reference"></a>일반 참조
 섹션 [ \<system.serviceModel >](../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md) Windows Communication Foundation (WCF) 클라이언트와 서비스를 구성 하는 데 사용 되는 요소에 설명 합니다.

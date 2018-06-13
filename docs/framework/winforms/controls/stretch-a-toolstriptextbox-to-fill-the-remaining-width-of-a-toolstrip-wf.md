@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33537722"
 ---
 # <a name="how-to-stretch-a-toolstriptextbox-to-fill-the-remaining-width-of-a-toolstrip-windows-forms"></a>방법: ToolStripTextBox를 늘려 ToolStrip의 나머지 너비 채우기(Windows Forms)
 설정 하는 경우는 <xref:System.Windows.Forms.ToolStrip.Stretch%2A> 속성의는 <xref:System.Windows.Forms.ToolStrip> 컨트롤을 `true`, 해당 컨테이너를 끝까지 채웁니다 컨트롤과 해당 컨테이너 크기를 조정할 때의 크기를 조정 합니다. 이 구성에서는 하면 유용할 수와 같은 컨트롤에서 항목을 스트레치 하는 <xref:System.Windows.Forms.ToolStripTextBox>, 사용 가능한 공간 및 컨트롤 크기를 조정할 때의 크기를 조정 합니다. 이러한 늘이기, 예를 들어 경우 유용 모양 및 동작 Microsoft® Internet Explorer의 주소 표시줄 유사 합니다.  

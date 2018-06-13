@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33497960"
 ---
 # <a name="wcf-discovery"></a>WCF 검색
 Windows Communication Foundation (WCF)는 Ws-discovery 프로토콜을 사용 하는 상호 운용 가능한 방식으로 런타임에 검색 가능 하도록 서비스를 사용 하도록 지원 합니다. WCF 서비스는 멀티 캐스트 메시지를 사용 하 여 네트워크 또는 검색 프록시 서버에 자신의 가용성을 알릴 수 있습니다. 클라이언트 응용 프로그램은 네트워크나 검색 프록시 서버를 검색하여 일련의 조건을 만족하는 서비스를 찾습니다. 이 단원의 항목에서는 이 기능의 프로그램 모델에 대한 개요와 자세한 설명을 제공합니다.  

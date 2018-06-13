@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33356592"
 ---
 # <a name="how-to-load-paged-results-wcf-data-services"></a>방법: 페이지 단위 결과 로드(WCF Data Services)
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]를 사용하면 데이터 서비스에서 단일 응답 피드에 반환되는 엔터티 수를 제한할 수 있습니다. 이 경우 피드의 최종 항목에 다음 데이터 페이지에 대한 링크가 포함됩니다. 다음 데이터 페이지의 URI는 <xref:System.Data.Services.Client.QueryOperationResponse%601.GetContinuation%2A>를 실행할 때 반환되는 <xref:System.Data.Services.Client.QueryOperationResponse%601>의 <xref:System.Data.Services.Client.DataServiceQuery%601> 메서드를 호출하여 가져옵니다. 이 개체가 나타내는 URI를 사용하여 다음 결과 페이지를 로드합니다. 자세한 내용은 참조 [지연 콘텐츠 로드](../../../../docs/framework/data/wcf/loading-deferred-content-wcf-data-services.md)합니다.  

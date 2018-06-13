@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33505233"
 ---
 # <a name="how-to-host-a-wcf-service-in-a-managed-application"></a>방법: 관리되는 응용 프로그램에서 WCF 서비스 호스팅
 관리되는 응용 프로그램 내에서 서비스를 호스팅하려면 관리되는 응용 프로그램 코드 내에 서비스에 대한 코드를 포함하고, 코드에서 명령적으로, 구성을 통해 선언적으로 또는 기본 끝점을 사용해 서비스에 대한 끝점을 정의한 다음 <xref:System.ServiceModel.ServiceHost>의 인스턴스를 만듭니다.  

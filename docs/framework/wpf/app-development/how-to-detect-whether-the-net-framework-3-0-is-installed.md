@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33546493"
 ---
 # <a name="how-to-detect-whether-the-net-framework-30-is-installed"></a>방법: .NET Framework 3.0 설치 여부 확인
 관리자가 시스템에서 Microsoft.NET Framework 응용 프로그램을 배포 하려면 먼저.NET Framework 런타임에서 존재 하는지 먼저 확인 해야 합니다. 이 항목에서는 HTML/JavaScript로 작성 된 스크립트를 관리자는 시스템에.NET Framework 되는지 확인 하려면 사용할 수 있습니다.  

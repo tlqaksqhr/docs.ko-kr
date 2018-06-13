@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33506495"
 ---
 # <a name="usage-of-standard-endpoints"></a>표준 끝점 사용
 이 샘플에서는 서비스 구성 파일에서 표준 끝점을 사용하는 방법을 보여 줍니다. 표준 끝점을 사용하면 사용자는 주소, 바인딩 및 계약 조합을 설명하는 단일 속성과 끝점에 관련된 추가 속성을 사용하여 끝점 정의를 단순화할 수 있습니다. 이 샘플에서는 사용자 지정 표준 끝점을 정의 및 구현하는 방법과 끝점의 특정 속성을 정의하는 방법을 보여 줍니다.  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33497002"
 ---
 # <a name="diagnosing-transactional-applications"></a>트랜잭션 응용 프로그램 진단
 이 항목에서는 트랜잭션 응용 프로그램 문제를 해결 하 고 Windows Communication Foundation (WCF) 관리 및 진단 기능을 사용 하는 방법을 설명 합니다.  

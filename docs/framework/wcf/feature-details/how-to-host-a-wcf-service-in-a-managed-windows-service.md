@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33497219"
 ---
 # <a name="how-to-host-a-wcf-service-in-a-managed-windows-service"></a>방법: 관리되는 Windows 서비스에서 WCF 서비스 호스팅
 이 항목에서는 Windows 서비스에서 호스팅하는 Windows Communication Foundation (WCF) 서비스를 만드는 데 필요한 기본 단계에 설명 합니다. 관리 되는 Windows 서비스 호스팅 옵션을 활성화 메시지를 보안 환경에서는 인터넷 정보 서비스 (IIS) 외부에서 호스팅되는 장기 실행 WCF 서비스에서 사용할 수 있는 시나리오 서비스 수명은 대신 운영 체제에 의해 제어됩니다. 모든 버전의 Windows에서 이 호스팅 옵션을 사용할 수 있습니다.  

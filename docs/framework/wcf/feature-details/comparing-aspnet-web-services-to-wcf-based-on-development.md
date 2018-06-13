@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33496652"
 ---
 # <a name="comparing-aspnet-web-services-to-wcf-based-on-development"></a>개발을 기반으로 ASP.NET 웹 서비스와 WCF 비교
 Windows Communication Foundation (WCF)에 ASP.NET 호환 모드 옵션을 프로그래밍 하 고 ASP.NET 웹 서비스와 같은 구성 WCF 응용 프로그램을 사용 하며 동작을 모방 합니다. 다음 섹션에서는 ASP.NET 웹 서비스를 비교 하 고 WCF 사항을 기반으로 두 기술을 사용 하 여 응용 프로그램을 개발 하는 데 필요 합니다.  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33504944"
 ---
 # <a name="service-endpoints-and-queue-addressing"></a>서비스 끝점 및 큐 주소 지정
 이 항목에서는 클라이언트가 큐에서 읽는 서비스에 주소를 지정하는 방법 및 서비스 끝점이 큐에 매핑되는 방법을 설명합니다. 참고로는 다음 그림에서는 기본 Windows Communication Foundation (WCF) 대기 응용 프로그램 배포  

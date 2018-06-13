@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33561701"
 ---
 # <a name="images"></a>이미지
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]에서는 여러 이미지 형식, 고화질 이미지 렌더링 및 코덱 확장성에 대한 기본 제공 지원을 제공합니다.  

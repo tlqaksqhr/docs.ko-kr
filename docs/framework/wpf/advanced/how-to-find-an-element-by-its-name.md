@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33543578"
 ---
 # <a name="how-to-find-an-element-by-its-name"></a>방법: 이름에 따라 요소 찾기
 이 예제에서는 사용 하는 방법을 설명는 <xref:System.Windows.FrameworkElement.FindName%2A> 메서드 여 요소를 해당 <xref:System.Windows.FrameworkElement.Name%2A> 값입니다.  

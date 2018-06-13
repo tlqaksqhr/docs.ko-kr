@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33550828"
 ---
 # <a name="flowdocumentscrollviewer"></a>FlowDocumentScrollViewer
 <xref:System.Windows.Controls.FlowDocumentScrollViewer> 컨트롤 보는 데 사용 됩니다 <xref:System.Windows.Documents.FlowDocument> 스크롤 컨테이너의 콘텐츠입니다. 와 대비 <xref:System.Windows.Controls.FlowDocumentPageViewer>, 콘텐츠 페이지 단위로를 보는입니다.  

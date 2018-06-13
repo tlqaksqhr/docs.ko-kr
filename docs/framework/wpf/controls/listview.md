@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33551239"
 ---
 # <a name="listview"></a>ListView
 <xref:System.Windows.Controls.ListView> 컨트롤은 다양 한 레이아웃 또는 뷰에 데이터 항목 집합을 표시 하기 위한 인프라를 제공 합니다.  

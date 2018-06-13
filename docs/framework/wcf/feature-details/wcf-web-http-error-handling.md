@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33498487"
 ---
 # <a name="wcf-web-http-error-handling"></a>WCF 웹 HTTP 오류 처리
 Windows Communication Foundation (WCF) 웹 HTTP 오류 처리를 사용 하면 WCF 웹 HTTP 서비스는 HTTP 상태 코드를 지정 하 고 작업 (예를 들어, XML 또는 JSON)으로 같은 형식을 사용 하 여 오류 정보를 반환 하는 오류를 반환할 수 있습니다.  

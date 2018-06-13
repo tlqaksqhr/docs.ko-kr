@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33539454"
 ---
 # <a name="how-to-respond-to-font-scheme-changes-in-a-windows-forms-application"></a>방법: Windows Forms 응용 프로그램에서 글꼴 구성표 변경에 응답
 Windows 운영 체제에서 사용자 표시의 기본 글꼴 확대 하거나 축소 하도록 시스템 수준 글꼴 설정을 변경할 수 있습니다. 이러한 글꼴 설정을 변경 하는 것은 화면에 텍스트를 읽을 수 있는 더 큰 유형 필요 하 고 시각 장애가 있는 사용자는 사용자에 게 중요 합니다. 글꼴 구성표 변경 될 때마다는 양식 및 포함 된 모든 텍스트의 크기를 늘리거나 하 여 이러한 변경에 대응 하 여 Windows Forms 응용 프로그램을 조정할 수 있습니다. 동적으로 글꼴 크기의 변경 내용을 수용 하기 위해 폼을 하려는 경우를 폼 코드를 추가할 수 있습니다.  

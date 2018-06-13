@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33497401"
 ---
 # <a name="security-concepts"></a>보안 개념
 Windows Communication Foundation (WCF) 보안과 관련 된 개념을 간략하게 설명이 합니다.  
