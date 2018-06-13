@@ -14,9 +14,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 79730bb98a7e2d84517ed068a52614ad8650f541
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33406223"
 ---
 # <a name="cordebugcodeinvokepurpose-enumeration"></a>CorDebugCodeInvokePurpose 열거형
 내보낸 함수가 관리 코드를 호출하는 이유를 설명합니다.  
