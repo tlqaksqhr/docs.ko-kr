@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 4bd1d098f21a3d5ba43b6251c87c36df4347a924
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33457563"
 ---
 # <a name="strongnamecompareassemblies-function"></a>StrongNameCompareAssemblies 함수
 두 어셈블리가 강력한 이름 서명만 다른 지 여부를 결정 합니다.  

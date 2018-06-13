@@ -10,9 +10,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: dd0bdee6127aca259ae5ca1fe1aa8ecc574662b7
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33430427"
 ---
 # <a name="hosting-global-static-functions"></a>호스팅 전역 정적 함수
 이 섹션에서는 호스팅 Api는.NET Framework에서 사용 되는 관리 되지 않는 호스팅 함수에 설명 합니다.  

@@ -16,6 +16,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32743903"
 ---
 # <a name="ltbypasslistgt-element-network-settings"></a>&lt;bypasslist&gt; 요소 (네트워크 설정)
 프록시를 사용 하지 않는 주소를 설명 하는 정규식 집합을 제공 합니다.  

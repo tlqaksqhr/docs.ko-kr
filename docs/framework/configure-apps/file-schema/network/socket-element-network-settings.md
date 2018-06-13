@@ -16,6 +16,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32744241"
 ---
 # <a name="ltsocketgt-element-network-settings"></a>&lt;소켓&gt; 요소 (네트워크 설정)
 소켓 작업 완료 포트를 사용 하는지 여부를 지정 합니다.  

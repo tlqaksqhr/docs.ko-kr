@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33386950"
 ---
 # <a name="developing-web-applications-with-aspnet"></a>ASP.NET을 사용하여 웹 응용 프로그램 개발
 ASP.NET은 웹 응용 프로그램을 만들기 위한 .NET Framework 기술입니다. 사용자 편의를 위해 제공되는 다음 링크를 참조하십시오.  

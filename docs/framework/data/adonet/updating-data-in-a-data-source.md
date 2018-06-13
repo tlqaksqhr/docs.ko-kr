@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33357795"
 ---
 # <a name="updating-data-in-a-data-source"></a>데이터 원본에서 데이터 업데이트
 INSERT, UPDATE 또는 DELETE와 같이 데이터를 수정하는 SQL 문은 행을 반환하지 않습니다. 마찬가지로 대부분의 저장 프로시저도 동작을 수행하기는 하지만 행을 반환하지는 않습니다. 행을 반환 하지 않는 명령을 실행 하려면 만듭니다는 **명령** 개체를 적절 한 SQL 명령으로는 및 **연결**를 비롯 한 모든 필수 **매개 변수**합니다. 사용 하 여 명령을 실행의 **ExecuteNonQuery** 의 메서드는 **명령** 개체입니다.  

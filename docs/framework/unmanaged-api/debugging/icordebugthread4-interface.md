@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: cf486be306e149e2350e7239884c8f05b84f3a86
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33422086"
 ---
 # <a name="icordebugthread4-interface"></a>ICorDebugThread4 인터페이스
 스레드 차단 정보를 제공합니다.  

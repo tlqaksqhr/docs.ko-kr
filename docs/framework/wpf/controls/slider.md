@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33554410"
 ---
 # <a name="slider"></a>슬라이더
 <xref:System.Windows.Controls.Slider> 이동 하 여 값의 범위에서 선택할 수 있습니다는 <xref:System.Windows.Controls.Primitives.Thumb> 따라는 <xref:System.Windows.Controls.Primitives.Track>합니다.  

@@ -11,9 +11,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: d7675e4ade28be1f57e20e655fd7b82603b91f4c
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33427296"
 ---
 # <a name="diagnostics-symbol-store-enumerations"></a>진단 기호 저장소 열거형
 이 항목에서는 진단 기호 저장소 API를 사용 하는 관리 되지 않는 열거형을 설명 합니다.  

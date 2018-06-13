@@ -16,6 +16,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32746399"
 ---
 # <a name="ltprovideroptiongt-element"></a>&lt;providerOption&gt; 요소
 언어 공급자에 대 한 컴파일러 버전 특성을 지정합니다.  

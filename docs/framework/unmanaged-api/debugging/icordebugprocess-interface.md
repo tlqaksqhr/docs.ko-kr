@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 06e4e3854a850c9639e93c8db2ec8ccd567b242b
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33423171"
 ---
 # <a name="icordebugprocess-interface1"></a>ICorDebugProcess Interface1
 관리 코드를 실행하는 프로세스를 나타냅니다. 이 인터페이스는 ICorDebugController의 서브 클래스입니다.  

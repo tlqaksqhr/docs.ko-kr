@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 12b002aaad65fd5f2a1207700c8de2ca8dd60eec
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33421881"
 ---
 # <a name="icordebugtypeenumeratetypeparameters-method"></a>ICorDebugType::EnumerateTypeParameters 메서드
 포함 된 ICorDebugTypeEnum에 대 한 인터페이스 포인터를 가져옵니다는 <xref:System.Type> 이 ICorDebugType에서 참조 하는 클래스의 매개 변수입니다.  

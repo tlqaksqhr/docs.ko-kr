@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 00baed93bd9ab48c92de83dac76931c3149afc2b
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33424640"
 ---
 # <a name="isymunmanageddocumentgetsourcerange-method"></a>ISymUnmanagedDocument::GetSourceRange 메서드
 지정 된 버퍼로 포함된 리소스의 지정된 된 범위를 반환합니다. 버퍼 소스를 저장할 수 있을 만큼 크기가 커야 합니다.  

@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: b9902b96a6f9ca56435430b6120a34dfb6cfadd7
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33431219"
 ---
 # <a name="asmname-enumeration"></a>ASM_NAME 열거형
 버전, 빌드, culture, 서명 및 어셈블리 속성을 검색 하거나 설정 하 여을 이런 식으로 나타냅니다 [IAssemblyName](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md) 메서드.  
