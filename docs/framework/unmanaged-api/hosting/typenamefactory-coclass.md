@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 015116e96a2fa534ecf26845c5926ddfa179df0c
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33440884"
 ---
 # <a name="typenamefactory-coclass"></a>TypeNameFactory Coclass
 형식 이름의 제거를 관리 하는 인터페이스를 제공 합니다.  

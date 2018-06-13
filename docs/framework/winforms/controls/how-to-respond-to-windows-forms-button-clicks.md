@@ -20,6 +20,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33534253"
 ---
 # <a name="how-to-respond-to-windows-forms-button-clicks"></a>방법: Windows Forms 단추 클릭에 응답
 Windows Forms의 가장 기본적인 사용법 <xref:System.Windows.Forms.Button> 컨트롤에서 단추를 클릭할 때 일부 코드를 실행 하는 것입니다.  

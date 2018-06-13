@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33552716"
 ---
 # <a name="how-to-use-the-betweenshowdelay-property"></a>방법: BetweenShowDelay 속성 사용
 사용 하는 방법을 보여 주는이 예제는 <xref:System.Windows.Controls.ToolTipService.BetweenShowDelay%2A> 도구 설명 신속 하 게 표시 되도록 시간 속성-거의 없거나 전혀 없이 지연 되어 — 사용자로 이동 하면 마우스 포인터 한 도구 설명에서 직접 다른 합니다.  

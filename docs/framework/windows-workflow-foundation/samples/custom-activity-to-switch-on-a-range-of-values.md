@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33517071"
 ---
 # <a name="custom-activity-to-switch-on-a-range-of-values"></a>값 범위에서 전환할 사용자 지정 활동
 이 샘플에서는 <xref:System.Activities.Statements.Switch%601>의 사용을 확장하는 사용자 지정 활동을 만드는 방법을 보여 줍니다. 일반적인 <xref:System.Activities.Statements.Switch%601> 문을 사용하면 단일 값에 따라 전환할 수 있습니다. 그러나 값 범위에 따라 활동을 전환해야 하는 비즈니스 시나리오도 있습니다. 예를 들어 활동이 전환되는 기준 값이 1과 5 사이인 경우 하나의 동작을 실행하고 값이 6에서 10 사이인 경우 다른 동작을 실행하고 다른 모든 값의 경우 기본 동작을 실행할 수 있습니다. 이 사용자 지정 활동을 사용하면 해당 시나리오를 정확하게 수행할 수 있습니다.  

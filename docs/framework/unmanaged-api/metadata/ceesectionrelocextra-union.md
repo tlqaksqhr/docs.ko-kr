@@ -18,9 +18,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: c7634ec801a30aa7ba07954c1df0c3d37ec279eb
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33440303"
 ---
 # <a name="ceesectionrelocextra-union"></a>CeeSectionRelocExtra 공용 구조체
 사용 되는 주소 오프셋을 나타냅니다는 [ICeeGen](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md) 인터페이스에서 섹션을 재배치 합니다.  

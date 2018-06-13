@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33552859"
 ---
 # <a name="tooltip-how-to-topics"></a>도구 설명 방법 항목
 ## <a name="in-this-section"></a>섹션 내용  

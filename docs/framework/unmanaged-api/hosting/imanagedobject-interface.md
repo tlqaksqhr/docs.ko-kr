@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: c9d10126ac7edd3073d91a9c68c86a7df8cad402
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33441125"
 ---
 # <a name="imanagedobject-interface"></a>IManagedObject 인터페이스
 관리 되는 개체를 제어 하기 위한 메서드를 제공 합니다.  

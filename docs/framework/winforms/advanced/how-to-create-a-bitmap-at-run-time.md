@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33520642"
 ---
 # <a name="how-to-create-a-bitmap-at-run-time"></a>방법: 런타임에 비트맵 만들기
 이 예제에서는 만들고에 그리는 데는 <xref:System.Drawing.Bitmap> 개체 하 고는 기존 Windows Forms에 표시 <xref:System.Windows.Forms.PictureBox> 제어 합니다.  

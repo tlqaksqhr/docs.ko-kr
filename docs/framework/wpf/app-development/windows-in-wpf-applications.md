@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33550779"
 ---
 # <a name="windows-in-wpf-applications"></a>WPF 응용 프로그램의 창
 사용자가 windows 통해 응용 프로그램과 상호 작용 합니다. 창의 기본 목적은를 호스팅하고 콘텐츠를 표시 하는 것입니다. 창 호스트에 종속 되도록 데이터 형식에는 응용 프로그램에 대해 작동, 미디어, XAML Extensible Application Markup Language () 페이지, 웹 페이지, 문서, 데이터베이스 테이블 및 레코드 및 시스템 정보를 포함할 수 있는 콘텐츠 형식입니다.  

@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33534088"
 ---
 # <a name="how-to-set-options-with-windows-forms-checkbox-controls"></a>방법: Windows Forms CheckBox 컨트롤을 사용하여 옵션 설정
 Windows Forms <xref:System.Windows.Forms.CheckBox> 컨트롤이 True/False 사용자에 게 부여 하는 데 사용 되 나 예/아니요 옵션입니다. 컨트롤 선택 된 경우 확인 표시가 나타납니다.  

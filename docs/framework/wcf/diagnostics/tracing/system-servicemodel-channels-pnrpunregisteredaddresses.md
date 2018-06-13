@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33477934"
 ---
 # <a name="systemservicemodelchannelspnrpunregisteredaddresses"></a>System.ServiceModel.Channels.PnrpUnregisteredAddresses
 Pnrp Resolver에서 로컬 노드 주소의 등록을 취소했습니다.  
