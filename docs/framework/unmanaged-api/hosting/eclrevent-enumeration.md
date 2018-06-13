@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 63d79b0c1fed0178f8463174fe981f250d6f6fb5
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33430709"
 ---
 # <a name="eclrevent-enumeration"></a>EClrEvent 열거형
 호스트 콜백을 등록할 수 있는 공용 언어 런타임 (CLR) 이벤트에 설명 합니다.  

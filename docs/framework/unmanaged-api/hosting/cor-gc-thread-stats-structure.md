@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 24a386fe82bbd004954924a573c090af7f58824a
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33431830"
 ---
 # <a name="corgcthreadstats-structure"></a>COR_GC_THREAD_STATS 구조체
 가비지 수집에 관련 된 스레드 통계를 포함 합니다.  

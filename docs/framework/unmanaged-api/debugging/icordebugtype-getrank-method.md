@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 9f112e0d064041a877963939b78029da08bbbed1
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33417656"
 ---
 # <a name="icordebugtypegetrank-method"></a>ICorDebugType::GetRank 메서드
 배열 형식에서 차원 수를 가져옵니다.  

@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 897fd45f9448ac57b0e2da493d528b80e76e30ae
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33420302"
 ---
 # <a name="icordebugprocessenum-interface1"></a>ICorDebugProcessEnum Interface1
 ICorDebugEnum 메서드를 구현 하 고 ICorDebugProcess 배열을 열거 합니다.  

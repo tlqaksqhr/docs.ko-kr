@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33489575"
 ---
 # <a name="how-to-create-a-request-reply-contract"></a>방법: 요청-회신 계약 만들기
 요청-회신 계약에서는 회신을 반환하는 메서드를 지정합니다. 회신은 이 계약 조건 하의 요청에 따라 전송되고 상호 관련되어야 합니다. 메서드가 회신을 반환하지 않는 경우(C#에서는 `void`, Visual Basic에서는 `Sub`)에도 인프라에서 빈 메시지를 만들어 호출자에게 보냅니다. 빈 회신 메시지가 전송되지 않도록 하려면 작업에 대한 단방향 계약을 사용합니다.  

@@ -18,9 +18,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: e91941865fd829f66dc0c4945bc7cbeb1ede486d
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33424633"
 ---
 # <a name="isymunmanagedconstant-interface"></a>ISymUnmanagedConstant 인터페이스
 관리 되지 않는 상수에 대 한 액세스를 제공합니다.  

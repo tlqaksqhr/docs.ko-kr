@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 3d1e0f0d57440f0074a7ca179955a7a13e41f5d5
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33415856"
 ---
 # <a name="icordebugmodulegettoken-method"></a>ICorDebugModule::GetToken 메서드
 이 모듈에 대 한 테이블 항목에 대 한 토큰을 가져옵니다.  

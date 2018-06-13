@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: b6b01abc16334dbe091e7586efcce1c3e390a64e
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33426977"
 ---
 # <a name="isymunmanagedwriterdefineparameter-method"></a>ISymUnmanagedWriter::DefineParameter 메서드
 현재 메서드의 단일 매개 변수를 정의합니다. 메서드 시그니처 내에서 매개 변수 위치 (시퀀스)에서 매개 변수 형식을 가져옵니다.  

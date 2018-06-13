@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32757062"
 ---
 # <a name="creating-a-datatable-from-a-dataview"></a>DataView에서 DataTable 만들기
 데이터 소스에서 데이터를 검색하여 이 데이터로 <xref:System.Data.DataTable>을 채웠으면 해당 데이터를 다시 검색하지 않고 반환된 데이터를 정렬하고 필터링하거나 제한할 수 있습니다. 이러한 작업은 <xref:System.Data.DataView> 클래스를 사용하여 수행할 수 있습니다. 또한 새 만들어야 할 경우 <xref:System.Data.DataTable> 에서 <xref:System.Data.DataView>를 사용할 수 있습니다는 <xref:System.Data.DataView.ToTable%2A> 형식의 새 파일에 있는 모든 행과 열 또는 데이터의 하위 집합을 복사 하려면 <xref:System.Data.DataTable>합니다. <xref:System.Data.DataView.ToTable%2A> 메서드는 다음 작업을 위한 오버로드를 제공합니다.  

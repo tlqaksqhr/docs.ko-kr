@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 93c8256ae95108f0800b56869d67570c4e42202e
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33416899"
 ---
 # <a name="icordebugnativeframecansetip-method"></a>ICorDebugNativeFrame::CanSetIP 메서드
 네이티브 코드에서 지정된 된 오프셋된 위치를은 IP (명령 포인터)를 설정할 수 있는지 여부를 나타내는 HRESULT를 가져옵니다.  

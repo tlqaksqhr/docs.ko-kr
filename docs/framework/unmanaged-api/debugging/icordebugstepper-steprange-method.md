@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 838f2df06f8875037edbe39d2db0411f31abe01f
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33421365"
 ---
 # <a name="icordebugsteppersteprange-method"></a>ICorDebugStepper::StepRange 메서드
 한 단계씩 실행 하 고 이후의 지정된 된 범위의 코드에 도달할 때 반환할 포함 스레드를 통해이 ICorDebugStepper 하면 됩니다.  

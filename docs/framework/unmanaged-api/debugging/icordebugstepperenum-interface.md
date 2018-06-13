@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: af99bd165386f86d2045a7f5a5a7708c7b0d0b8c
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33419724"
 ---
 # <a name="icordebugstepperenum-interface1"></a>ICorDebugStepperEnum Interface1
 ICorDebugEnum 메서드를 구현 하 고 ICorDebugStepper 배열을 열거 합니다.  

@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33490106"
 ---
 # <a name="how-to-configure-com-service-settings"></a>방법: COM+ 서비스 설정 구성
 COM+ 서비스 구성 도구를 사용하여 응용 프로그램 인터페이스를 추가하거나 제거하면 응용 프로그램의 구성 파일에서 웹 서비스 구성이 업데이트됩니다. COM + 호스팅 모드 Application.config 파일은 응용 프로그램 루트 디렉터리에 배치 (%PROGRAMFILES%\ComPlus 응용 프로그램\\값이 기본값 {appid}). 웹 호스팅 모드에서는 지정된 vroot 디렉터리에 Web.config 파일이 있습니다.  

@@ -18,9 +18,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 9408a56b7a1e8cbad94014b55ec5d830e1734810
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33426090"
 ---
 # <a name="isymunmanagednamespace-interface"></a>ISymUnmanagedNamespace 인터페이스
 네임 스페이스를 나타냅니다.  

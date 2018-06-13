@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32748622"
 ---
 # <a name="ltpeertransportgt"></a>&lt;r t&gt;
 사용자 지정 바인딩에 대한 피어 전송을 정의합니다.  

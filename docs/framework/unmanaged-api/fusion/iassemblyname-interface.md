@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: aa12252c4f2a8e710a4a880af103aa324f8118ac
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33432402"
 ---
 # <a name="iassemblyname-interface"></a>IAssemblyName 인터페이스
 설명 하 고 어셈블리의 고유 id를 가진 작업 하기 위한 메서드를 제공 합니다.  

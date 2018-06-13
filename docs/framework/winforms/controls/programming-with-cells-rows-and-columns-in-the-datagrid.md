@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33538543"
 ---
 # <a name="programming-with-cells-rows-and-columns-in-the-windows-forms-datagridview-control"></a>Windows Forms DataGridView 컨트롤에서 셀, 행 및 열 프로그래밍
 이 섹션에서는 셀, 행 및 열 개체를 관련 된 다양 한 프로그래밍 작업을 보여 주는 항목을 제공 합니다.  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33490599"
 ---
 # <a name="how-to-implement-a-discoverable-service-that-registers-with-the-discovery-proxy"></a>방법: 검색 프록시에 등록할 검색 가능한 서비스 구현
 이 항목은 검색 프록시를 구현하는 방법에 대해 설명하는 네 항목 중 두 번째 항목입니다. 이전 항목에서 [하는 방법: 검색 프록시를 구현](../../../../docs/framework/wcf/feature-details/how-to-implement-a-discovery-proxy.md), 검색 프록시를 구현 합니다. 이 항목에서는 알림 메시지를 보내는 WCF 서비스를 만들 (`Hello` 및 `Bye`) 검색 프록시에 프로그램이 등록 및 검색 프록시에 자체 등록을 취소 합니다.  

@@ -10,9 +10,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: ffee9084bd07882079b2d44de25391f2491a1520
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33432784"
 ---
 # <a name="fusion-enumerations"></a>Fusion 열거형
 이 섹션에는 fusion API에 사용 되는 관리 되지 않는 열거형을 설명 합니다.  

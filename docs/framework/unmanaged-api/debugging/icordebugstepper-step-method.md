@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: c2d282e27ec5068fa6fe7f58ba95458fdc219972
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33419226"
 ---
 # <a name="icordebugstepperstep-method"></a>ICorDebugStepper::Step 메서드
 한 단계씩 실행 하려면 필요에 따라 하 고 포함 스레드를 통해이 ICorDebugStepper로 인해 스레드 내에서 호출 된 함수를 통해 단일 단계를 계속 합니다.  

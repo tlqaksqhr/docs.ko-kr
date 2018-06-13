@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 1e15bab136540c73f8e1cff0e6bb52ec1d6c0063
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33426226"
 ---
 # <a name="isymunmanagedmethodgetsourcestartend-method"></a>ISymUnmanagedMethod::GetSourceStartEnd 메서드
 이 방법의 원본에 대 한 시작 및 끝 문서 위치를 가져옵니다. 첫 번째 배열 위치 시작, 이며 두 번째 배열 위치 끝입니다.  

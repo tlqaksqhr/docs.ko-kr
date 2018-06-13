@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33550909"
 ---
 # <a name="documentviewer"></a>DocumentViewer
 <xref:System.Windows.Controls.DocumentViewer> 컨트롤 보는 데 사용 됩니다 <xref:System.Windows.Documents.FixedDocument> 콘텐츠 (예: [!INCLUDE[TLA#tla_metro](../../../../includes/tlasharptla-metro-md.md)] 문서) 페이지가 매겨진 형식에서.  

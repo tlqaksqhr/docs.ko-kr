@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33488649"
 ---
 # <a name="comparing-transactions-in-com-and-servicemodel"></a>COM+ 및 ServiceModel의 트랜잭션 비교
 이 항목에서는 트랜잭션 COM + 서비스의 Windows Communication Foundation (WCF) 특성을 사용 하 여 동작을 시뮬레이션 하는 방법을 설명의 <xref:System.ServiceModel> 네임 스페이스를 제공 합니다.  

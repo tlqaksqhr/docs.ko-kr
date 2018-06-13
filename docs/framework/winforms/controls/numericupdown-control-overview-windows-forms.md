@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33537163"
 ---
 # <a name="numericupdown-control-overview-windows-forms"></a>NumericUpDown 컨트롤 개요(Windows Forms)
 <xref:System.Windows.Forms.NumericUpDown> 제어는 텍스트 상자가 조합과 한 쌍의 값을 조정 하기 위해 클릭할 수 화살표가 같습니다. 컨트롤은 표시 하거나 고정 된 숫자 값 선택 목록에서 단일 숫자 값을 가져오거나 설정 합니다. 사용자를 늘리고 컨트롤의 텍스트 상자 부분에 숫자를 입력 하거나 위쪽 및 아래쪽 화살표 키를 누르거나 및 아래쪽 화살표를 위쪽을 클릭 하 여 수를 줄일 수 있습니다. 최대; 방향으로 번호를 이동 위쪽 화살표 키를 클릭 하면 아래쪽 화살표 키를 클릭 하면 최소값으로 수 만큼 이동 합니다.  

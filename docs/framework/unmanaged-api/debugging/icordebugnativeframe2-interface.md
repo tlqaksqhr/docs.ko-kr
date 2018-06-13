@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: dd8f1adee6bbcb3b57b87a2d6c85c01c624da9ec
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33421232"
 ---
 # <a name="icordebugnativeframe2-interface"></a>ICorDebugNativeFrame2 인터페이스
 자식 및 부모 프레임 관계를 테스트하는 메서드를 제공합니다.  

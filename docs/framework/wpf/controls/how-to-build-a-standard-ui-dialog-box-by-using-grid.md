@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33551884"
 ---
 # <a name="how-to-build-a-standard-ui-dialog-box-by-using-grid"></a>방법: Grid를 사용하여 표준 UI 대화 상자 빌드
 이 예제에서는 한 표준을 만들 [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] 대화 상자를 사용 하 여는 <xref:System.Windows.Controls.Grid> 요소입니다.  

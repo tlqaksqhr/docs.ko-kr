@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33537962"
 ---
 # <a name="toolstripstatuslabel-control"></a>ToolStripStatusLabel 컨트롤
 <xref:System.Windows.Forms.ToolStripStatusLabel> 의 표시 영역을 제공 된 <xref:System.Windows.Forms.StatusStrip> 텍스트, 이미지, 또는 둘 다에 대 한 합니다.  

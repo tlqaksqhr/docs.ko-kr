@@ -11,9 +11,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 1f6c20a69894c95086dbd813601ac8811ab4f337
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33429226"
 ---
 # <a name="deprecated-clr-hosting-interfaces-and-coclasses"></a>사용되지 않는 CLR 호스팅 인터페이스 및 Coclass
 이 섹션에서는 관리 되지 않은 인터페이스 설명 호스트 응용 프로그램에.NET Framework 버전 1.0 및 1.1에서에서 공용 언어 런타임 (CLR) 통합을 사용할 수 있습니다. 이러한 인터페이스는 런타임 프로세스에 로드 하기 위해 호스트에 대 한 메서드를 제공 합니다.  
