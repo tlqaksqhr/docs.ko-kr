@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33569453"
 ---
 # <a name="namespace-support-in-the-dom"></a><span data-ttu-id="3e30d-102">DOM의 네임스페이스 지원</span><span class="sxs-lookup"><span data-stu-id="3e30d-102">Namespace Support in the DOM</span></span>
 <span data-ttu-id="3e30d-103">XML DOM(문서 개체 모델)은 네임스페이스를 완전하게 인식합니다.</span><span class="sxs-lookup"><span data-stu-id="3e30d-103">The XML Document Object Model (DOM) is completely namespace-aware.</span></span> <span data-ttu-id="3e30d-104">또한 네임스페이스를 인식하는 XML 문서만 지원됩니다.</span><span class="sxs-lookup"><span data-stu-id="3e30d-104">Only namespace-aware XML documents are supported.</span></span> <span data-ttu-id="3e30d-105">W3C(World Wide Web 컨소시엄)는 Level 1을 구현한 DOM 응용 프로그램은 네임스페이스를 인식하지 못할 수 있으며 DOM Level 2 기능은 네임스페이스를 인식한다고 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="3e30d-105">The World Wide Web Consortium (W3C) specifies that DOM applications that implement Level 1 can be non-namespace-aware, and DOM Level 2 features are namespace-aware.</span></span> <span data-ttu-id="3e30d-106">하지만 메서드가 Level 1 또는 Level 2 DOM 권장 사항을 따르는지 여부에 관계없이 XML DOM의 모든 기능은 네임스페이스를 인식합니다.</span><span class="sxs-lookup"><span data-stu-id="3e30d-106">However, all features in the XML DOM are namespace-aware, regardless if the method is from the Level 1 or Level 2 DOM Recommendation.</span></span>  

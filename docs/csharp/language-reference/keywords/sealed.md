@@ -12,6 +12,7 @@ ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/15/2018
+ms.locfileid: "34172125"
 ---
 # <a name="sealed-c-reference"></a><span data-ttu-id="6973c-102">sealed(C# 참조)</span><span class="sxs-lookup"><span data-stu-id="6973c-102">sealed (C# Reference)</span></span>
 <span data-ttu-id="6973c-103">클래스에 적용된 경우 `sealed` 한정자는 다른 클래스가 해당 클래스에서 상속하지 못하도록 합니다.</span><span class="sxs-lookup"><span data-stu-id="6973c-103">When applied to a class, the `sealed` modifier prevents other classes from inheriting from it.</span></span> <span data-ttu-id="6973c-104">다음 예제에서 `B` 클래스는 `A` 클래스에서 상속하지만 `B` 클래스에서 상속할 수 있는 클래스는 없습니다.</span><span class="sxs-lookup"><span data-stu-id="6973c-104">In the following example, class `B` inherits from class `A`, but no class can inherit from class `B`.</span></span>  

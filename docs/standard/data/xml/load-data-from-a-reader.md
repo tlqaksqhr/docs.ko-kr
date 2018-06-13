@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33569976"
 ---
 # <a name="load-data-from-a-reader"></a><span data-ttu-id="a059f-102">판독기에서 데이터 로드</span><span class="sxs-lookup"><span data-stu-id="a059f-102">Load Data from a Reader</span></span>
 <span data-ttu-id="a059f-103"><xref:System.Xml.XmlDocument.Load%2A> 메서드와 <xref:System.Xml.XmlReader>의 매개 변수를 사용하여 XML 문서를 로드할 경우 발생하는 동작은 다른 형식의 데이터를 로드할 때의 동작과 차이가 있습니다.</span><span class="sxs-lookup"><span data-stu-id="a059f-103">If an XML document is loaded using the <xref:System.Xml.XmlDocument.Load%2A> method and a parameter of an <xref:System.Xml.XmlReader>, there are differences in the behavior that occurs when compared to the behavior of loading data from the other formats.</span></span> <span data-ttu-id="a059f-104">판독기가 초기 상태에 있을 경우 <xref:System.Xml.XmlDocument.Load%2A>는 판독기의 전체 내용을 사용하며 판독기의 모든 데이터를 사용하여 XML DOM(문서 개체 모델)을 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="a059f-104">If the reader is in its initial state, <xref:System.Xml.XmlDocument.Load%2A> consumes the entire contents from the reader and builds the XML Document Object Model (DOM) from all the data in the reader.</span></span>  

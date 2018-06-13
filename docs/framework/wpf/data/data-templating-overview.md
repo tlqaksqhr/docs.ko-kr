@@ -15,6 +15,7 @@ ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/15/2018
+ms.locfileid: "34172492"
 ---
 # <a name="data-templating-overview"></a><span data-ttu-id="02db4-102">데이터 템플릿 개요</span><span class="sxs-lookup"><span data-stu-id="02db4-102">Data Templating Overview</span></span>
 <span data-ttu-id="02db4-103">WPF 데이터 템플릿 모델을 사용하면 데이터 표시를 매우 유연하게 정의할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="02db4-103">The WPF data templating model provides you with great flexibility to define the presentation of your data.</span></span> <span data-ttu-id="02db4-104">WPF 컨트롤에는 데이터 표시의 사용자 지정을 지원하는 기본 제공 기능이 있습니다.</span><span class="sxs-lookup"><span data-stu-id="02db4-104">WPF controls have built-in functionality to support the customization of data presentation.</span></span> <span data-ttu-id="02db4-105">이 항목에는 먼저 정의 하는 방법을 보여 줍니다는 <xref:System.Windows.DataTemplate> 하 고 다음 사용자 지정 논리 및 계층적 데이터의 표시에 대 한 지원에 따라 템플릿 선택과 같은 다른 데이터 템플릿 기능을 소개 합니다.</span><span class="sxs-lookup"><span data-stu-id="02db4-105">This topic first demonstrates how to define a <xref:System.Windows.DataTemplate> and then introduces other data templating features, such as the selection of templates based on custom logic and the support for the display of hierarchical data.</span></span>  

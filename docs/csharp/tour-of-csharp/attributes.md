@@ -8,6 +8,7 @@ ms.sourcegitcommit: 895c7602386a6dfe7ca4facce3d965b27e5c6e87
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/19/2018
+ms.locfileid: "34312237"
 ---
 # <a name="attributes"></a><span data-ttu-id="54322-103">특성</span><span class="sxs-lookup"><span data-stu-id="54322-103">Attributes</span></span>
 

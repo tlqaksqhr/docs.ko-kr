@@ -10,6 +10,7 @@ ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/15/2018
+ms.locfileid: "34172063"
 ---
 # <a name="how-to-define-abstract-properties-c-programming-guide"></a><span data-ttu-id="1fc9b-102">방법: 추상 속성 정의(C# 프로그래밍 가이드)</span><span class="sxs-lookup"><span data-stu-id="1fc9b-102">How to: Define Abstract Properties (C# Programming Guide)</span></span>
 <span data-ttu-id="1fc9b-103">다음 예제에서는 [abstract](../../../csharp/language-reference/keywords/abstract.md) 속성을 정의하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="1fc9b-103">The following example shows how to define [abstract](../../../csharp/language-reference/keywords/abstract.md) properties.</span></span> <span data-ttu-id="1fc9b-104">추상 속성 선언은 속성 접근자의 구현을 제공하지 않습니다. 클래스가 속성을 지원하도록 선언하지만 접근자 구현은 파생 클래스에서 처리되도록 합니다.</span><span class="sxs-lookup"><span data-stu-id="1fc9b-104">An abstract property declaration does not provide an implementation of the property accessors -- it declares that the class supports properties, but leaves the accessor implementation to derived classes.</span></span> <span data-ttu-id="1fc9b-105">다음 예제에서는 기본 클래스에서 상속된 추상 속성을 구현하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="1fc9b-105">The following example demonstrates how to implement the abstract properties inherited from a base class.</span></span>  

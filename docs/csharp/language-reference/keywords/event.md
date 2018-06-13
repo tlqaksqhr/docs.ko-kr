@@ -14,6 +14,7 @@ ms.sourcegitcommit: 88f251b08bf0718ce119f3d7302f514b74895038
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "33955968"
 ---
 # <a name="event-c-reference"></a><span data-ttu-id="2625c-102">event(C# 참조)</span><span class="sxs-lookup"><span data-stu-id="2625c-102">event (C# Reference)</span></span>
 <span data-ttu-id="2625c-103">`event` 키워드는 게시자 클래스에서 이벤트를 선언하는 데 사용됩니다.</span><span class="sxs-lookup"><span data-stu-id="2625c-103">The `event` keyword is used to declare an event in a publisher class.</span></span>  

@@ -17,6 +17,7 @@ ms.sourcegitcommit: 22c3c8f74eaa138dbbbb02eb7d720fce87fc30a9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/17/2018
+ms.locfileid: "34234467"
 ---
 # <a name="structure-statement"></a><span data-ttu-id="8935e-102">Structure 문</span><span class="sxs-lookup"><span data-stu-id="8935e-102">Structure Statement</span></span>
 <span data-ttu-id="8935e-103">구조의 이름을 선언 하 고 변수, 속성, 이벤트 및 구조를 구성 하는 프로시저의 정의 소개 합니다.</span><span class="sxs-lookup"><span data-stu-id="8935e-103">Declares the name of a structure and introduces the definition of the variables, properties, events, and procedures that the structure comprises.</span></span>  

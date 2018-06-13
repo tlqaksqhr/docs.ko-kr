@@ -13,6 +13,7 @@ ms.sourcegitcommit: 22c3c8f74eaa138dbbbb02eb7d720fce87fc30a9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/17/2018
+ms.locfileid: "34235920"
 ---
 # <a name="public-visual-basic"></a><span data-ttu-id="de9fa-102">Public(Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="de9fa-102">Public (Visual Basic)</span></span>
 <span data-ttu-id="de9fa-103">선언 된 프로그래밍 요소를 하나 이상의 액세스 제한이 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="de9fa-103">Specifies that one or more declared programming elements have no access restrictions.</span></span>  

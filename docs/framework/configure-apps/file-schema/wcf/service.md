@@ -7,6 +7,7 @@ ms.sourcegitcommit: ff1d40507b3eb6e2185478e37c66c66be6de46f1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/11/2018
+ms.locfileid: "34059032"
 ---
 # <a name="ltservicegt"></a><span data-ttu-id="d3c03-102">&lt;서비스&gt;</span><span class="sxs-lookup"><span data-stu-id="d3c03-102">&lt;service&gt;</span></span>
 <span data-ttu-id="d3c03-103">`service` 요소에는 WCF(Windows Communication Foundation) 서비스 설정이 포함되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="d3c03-103">The `service` element contains the settings for a Windows Communication Foundation (WCF) service.</span></span> <span data-ttu-id="d3c03-104">이 요소에는 서비스를 공개하는 끝점도 포함되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="d3c03-104">It also contains endpoints that expose the service.</span></span>  

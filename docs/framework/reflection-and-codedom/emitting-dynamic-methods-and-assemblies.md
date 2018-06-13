@@ -14,6 +14,7 @@ ms.sourcegitcommit: c03eef711abe961a85db2b4d0715257d1524aef6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33848299"
 ---
 # <a name="emitting-dynamic-methods-and-assemblies"></a><span data-ttu-id="88771-102">동적 메서드 및 어셈블리 생성</span><span class="sxs-lookup"><span data-stu-id="88771-102">Emitting Dynamic Methods and Assemblies</span></span>
 <span data-ttu-id="88771-103">이 섹션에서는 컴파일러 또는 도구가 런타임에 메타데이터 및 MSIL(Microsoft Intermediate Language)을 내보내고 선택적으로 디스크에서 PE(이식 가능한 실행) 파일을 생성할 수 있게 해주는 <xref:System.Reflection.Emit> 네임스페이스의 관리되는 형식 집합을 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="88771-103">This section describes a set of managed types in the <xref:System.Reflection.Emit> namespace that allow a compiler or tool to emit metadata and Microsoft intermediate language (MSIL) at run time and optionally generate a portable executable (PE) file on disk.</span></span> <span data-ttu-id="88771-104">스크립트 엔진과 컴파일러는 이 네임스페이스의 주 사용자입니다.</span><span class="sxs-lookup"><span data-stu-id="88771-104">Script engines and compilers are the primary users of this namespace.</span></span> <span data-ttu-id="88771-105">이 섹션에서는 <xref:System.Reflection.Emit> 네임스페이스에서 제공하는 기능을 리플렉션 내보내기라고 합니다.</span><span class="sxs-lookup"><span data-stu-id="88771-105">In this section, the functionality provided by the <xref:System.Reflection.Emit> namespace is referred to as reflection emit.</span></span>  

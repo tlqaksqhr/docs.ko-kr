@@ -10,6 +10,7 @@ ms.sourcegitcommit: 88f251b08bf0718ce119f3d7302f514b74895038
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "34037365"
 ---
 # <a name="duplex-services"></a><span data-ttu-id="8e7c8-102">이중 서비스</span><span class="sxs-lookup"><span data-stu-id="8e7c8-102">Duplex Services</span></span>
 <span data-ttu-id="8e7c8-103">이중 서비스 계약은 양쪽 끝점에서 메시지를 다른 사용자에게 독립적으로 전송할 수 있는 메시지 교환 패턴입니다.</span><span class="sxs-lookup"><span data-stu-id="8e7c8-103">A duplex service contract is a message exchange pattern in which both endpoints can send messages to the other independently.</span></span> <span data-ttu-id="8e7c8-104">따라서 이중 서비스에서는 클라이언트 끝점으로 메시지를 보내 이벤트와 비슷한 동작을 제공할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="8e7c8-104">A duplex service, therefore, can send messages back to the client endpoint, providing event-like behavior.</span></span> <span data-ttu-id="8e7c8-105">이중 통신은 클라이언트가 서비스에 연결할 때 이루어지며, 서비스에서 클라이언트로 메시지를 다시 보낼 수 있는 채널을 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="8e7c8-105">Duplex communication occurs when a client connects to a service and provides the service with a channel on which the service can send messages back to the client.</span></span> <span data-ttu-id="8e7c8-106">이중 서비스의 이벤트와 비슷한 동작은 세션 내에서만 작동합니다.</span><span class="sxs-lookup"><span data-stu-id="8e7c8-106">Note that the event-like behavior of duplex services only works within a session.</span></span>  

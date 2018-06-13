@@ -12,6 +12,7 @@ ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/15/2018
+ms.locfileid: "34171995"
 ---
 # <a name="public-c-reference"></a><span data-ttu-id="b9e5d-102">public(C# 참조)</span><span class="sxs-lookup"><span data-stu-id="b9e5d-102">public (C# Reference)</span></span>
 <span data-ttu-id="b9e5d-103">`public` 키워드는 형식 및 형식 멤버에 대한 액세스 한정자입니다.</span><span class="sxs-lookup"><span data-stu-id="b9e5d-103">The `public` keyword is an access modifier for types and type members.</span></span> <span data-ttu-id="b9e5d-104">공용 액세스는 허용 범위가 가장 큰 액세스 수준입니다.</span><span class="sxs-lookup"><span data-stu-id="b9e5d-104">Public access is the most permissive access level.</span></span> <span data-ttu-id="b9e5d-105">다음 예제와 같이, 공용 멤버 액세스에 대한 제한은 없습니다.</span><span class="sxs-lookup"><span data-stu-id="b9e5d-105">There are no restrictions on accessing public members, as in this example:</span></span>  

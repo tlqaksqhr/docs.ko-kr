@@ -9,6 +9,7 @@ ms.sourcegitcommit: 88f251b08bf0718ce119f3d7302f514b74895038
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "33956385"
 ---
 # <a name="modernize-existing-net-applications-with-azure-cloud-and-windows-containers-2nd-edition"></a><span data-ttu-id="e6e91-103">기존.NET 응용 프로그램을 Azure 클라우드 및 Windows 컨테이너를 현대화 할 (2nd edition)</span><span class="sxs-lookup"><span data-stu-id="e6e91-103">Modernize existing .NET applications with Azure cloud and Windows Containers (2nd edition)</span></span>
 

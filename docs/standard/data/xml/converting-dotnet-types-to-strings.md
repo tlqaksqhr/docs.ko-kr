@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33568773"
 ---
 # <a name="converting-net-framework-types-to-strings"></a><span data-ttu-id="fbdb8-102">.NET Framework 형식을 문자열로 변환</span><span class="sxs-lookup"><span data-stu-id="fbdb8-102">Converting .NET Framework Types to Strings</span></span>
 <span data-ttu-id="fbdb8-103">.NET Framework 형식을 문자열로 변환하려면 **ToString** 메서드를 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="fbdb8-103">If you want to convert a .NET Framework type to a string, use the **ToString** method.</span></span> <span data-ttu-id="fbdb8-104">**ToString** 메서드는 전달된 형식의 문자열 표현을 반환합니다.</span><span class="sxs-lookup"><span data-stu-id="fbdb8-104">The **ToString** method returns a string representation of the type passed in.</span></span> <span data-ttu-id="fbdb8-105">다음 표에서는 XSD(XML 스키마) 사양에 대응하는 형식으로 문자열을 반환하는 .NET Framework 형식의 목록을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="fbdb8-105">The following table lists the .NET Framework types that return a string in a format that maps to the XML Schema (XSD) specifications.</span></span>  
