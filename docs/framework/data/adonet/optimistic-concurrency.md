@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32766230"
 ---
 # <a name="optimistic-concurrency"></a><span data-ttu-id="5a8d7-102">낙관적 동시성</span><span class="sxs-lookup"><span data-stu-id="5a8d7-102">Optimistic Concurrency</span></span>
 <span data-ttu-id="5a8d7-103">다중 사용자 환경에서는 낙관적 동시성 및 비관적 동시성의 두 가지 모델을 사용하여 데이터베이스의 데이터를 업데이트할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="5a8d7-103">In a multiuser environment, there are two models for updating data in a database: optimistic concurrency and pessimistic concurrency.</span></span> <span data-ttu-id="5a8d7-104"><xref:System.Data.DataSet> 개체는 데이터를 원격으로 사용하거나 데이터와 상호 작용하는 등의 장기 실행 작업에 대해 낙관적 동시성을 사용하기에 적합하도록 만들어졌습니다.</span><span class="sxs-lookup"><span data-stu-id="5a8d7-104">The <xref:System.Data.DataSet> object is designed to encourage the use of optimistic concurrency for long-running activities, such as remoting data and interacting with data.</span></span>  

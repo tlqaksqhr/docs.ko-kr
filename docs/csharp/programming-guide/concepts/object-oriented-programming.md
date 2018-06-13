@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33340595"
 ---
 # <a name="object-oriented-programming-c"></a><span data-ttu-id="451d8-102">개체 지향 프로그래밍(C#)</span><span class="sxs-lookup"><span data-stu-id="451d8-102">Object-Oriented Programming (C#)</span></span>
 <span data-ttu-id="451d8-103">C#은 캡슐화, 상속, 다형성 등 개체 지향 프로그래밍에 대한 모든 지원을 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="451d8-103">C# provides full support for object-oriented programming including encapsulation, inheritance, and polymorphism.</span></span>  

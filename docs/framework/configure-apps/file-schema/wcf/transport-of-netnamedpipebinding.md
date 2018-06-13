@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32753146"
 ---
 # <a name="lttransportgt-of-ltnetnamedpipebindinggt"></a><span data-ttu-id="3354f-102">&lt;netNamedPipeBinding&gt;의 &lt;transport&gt;</span><span class="sxs-lookup"><span data-stu-id="3354f-102">&lt;transport&gt; of &lt;netNamedPipeBinding&gt;</span></span>
 <span data-ttu-id="3354f-103">명명된 파이프에 대한 전송 보안 설정을 정의합니다.</span><span class="sxs-lookup"><span data-stu-id="3354f-103">Defines the transport security settings for a named pipe.</span></span>  

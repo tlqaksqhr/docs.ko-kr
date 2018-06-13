@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33393986"
 ---
 # <a name="cache-policy"></a><span data-ttu-id="1277d-102">캐시 정책</span><span class="sxs-lookup"><span data-stu-id="1277d-102">Cache Policy</span></span>
 <span data-ttu-id="1277d-103">캐시 정책이 요청된 리소스의 캐시된 복사본을 통해 요청을 충족할 수 있는지 여부를 결정하는 데 사용되는 규칙을 정의합니다.</span><span class="sxs-lookup"><span data-stu-id="1277d-103">A cache policy defines rules that are used to determine whether a request can be satisfied using a cached copy of the requested resource.</span></span> <span data-ttu-id="1277d-104">응용 프로그램에서 새로 고침에 대한 클라이언트 캐시 요구 사항을 지정하지만, 유효한 캐시 정책은 클라이언트 캐시 요구 사항, 서버의 콘텐츠 만료 요구 사항 및 서버의 유효성 재검사 요구 사항에 의해 결정됩니다.</span><span class="sxs-lookup"><span data-stu-id="1277d-104">Applications specify client cache requirements for freshness, but the effective cache policy is determined by the client cache requirements, the server's content expiration requirements, and the server's revalidation requirements.</span></span> <span data-ttu-id="1277d-105">최신 콘텐츠가 클라이언트 응용 프로그램에 반환되도록 돕기 위해 클라이언트 캐시 정책 및 서버 요구 사항의 상호 작용 결과로 항상 가장 보수적인 캐시 정책이 생성됩니다.</span><span class="sxs-lookup"><span data-stu-id="1277d-105">The interaction of client cache policy and server requirements always results in the most conservative cache policy, to help ensure that the freshest content is returned to the client application.</span></span>  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33326975"
 ---
 # <a name="how-to-split-a-file-into-many-files-by-using-groups-linq-c"></a><span data-ttu-id="ec080-102">방법: 그룹을 사용하여 파일을 여러 파일로 분할(LINQ)(C#)</span><span class="sxs-lookup"><span data-stu-id="ec080-102">How to: Split a File Into Many Files by Using Groups (LINQ) (C#)</span></span>
 <span data-ttu-id="ec080-103">이 예제에서는 두 파일의 내용을 병합한 다음 새로운 방식으로 데이터를 구성하는 새 파일 집합을 만드는 한 가지 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="ec080-103">This example shows one way to merge the contents of two files and then create a set of new files that organize the data in a new way.</span></span>  

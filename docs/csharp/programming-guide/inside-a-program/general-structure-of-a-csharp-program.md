@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33331216"
 ---
 # <a name="general-structure-of-a-c-program-c-programming-guide"></a><span data-ttu-id="63ff9-102">C# 프로그램의 일반적인 구조(C# 프로그래밍 가이드)</span><span class="sxs-lookup"><span data-stu-id="63ff9-102">General Structure of a C# Program (C# Programming Guide)</span></span>
 <span data-ttu-id="63ff9-103">C# 프로그램은 하나 이상의 파일로 구성됩니다.</span><span class="sxs-lookup"><span data-stu-id="63ff9-103">C# programs can consist of one or more files.</span></span> <span data-ttu-id="63ff9-104">각 파일에는 0개 이상의 네임스페이스가 포함될 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="63ff9-104">Each file can contain zero or more namespaces.</span></span> <span data-ttu-id="63ff9-105">네임스페이스에는 다른 네임스페이스 외에 클래스, 구조체, 인터페이스, 열거형 및 대리자 같은 형식이 포함될 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="63ff9-105">A namespace can contain types such as classes, structs, interfaces, enumerations, and delegates, in addition to other namespaces.</span></span> <span data-ttu-id="63ff9-106">다음은 이러한 모든 요소를 포함하는 C# 프로그램의 기본 구조입니다.</span><span class="sxs-lookup"><span data-stu-id="63ff9-106">The following is the skeleton of a C# program that contains all of these elements.</span></span>  

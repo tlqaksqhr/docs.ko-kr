@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33332857"
 ---
 # <a name="how-to-convert-a-string-to-a-number-c-programming-guide"></a><span data-ttu-id="44edd-102">방법: 문자열을 숫자로 변환(C# 프로그래밍 가이드)</span><span class="sxs-lookup"><span data-stu-id="44edd-102">How to: Convert a String to a Number (C# Programming Guide)</span></span>
 <span data-ttu-id="44edd-103"><xref:System.Convert> 클래스의 메서드를 사용하거나 다양한 숫자 형식(int, long, float 등)에 있는 `TryParse` 메서드를 사용하여 [문자열](../../../csharp/language-reference/keywords/string.md)을 숫자로 변환할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="44edd-103">You can convert a [string](../../../csharp/language-reference/keywords/string.md) to a number by using methods in the <xref:System.Convert> class or by using the `TryParse` method found on the various numeric types (int, long, float, etc.).</span></span>  

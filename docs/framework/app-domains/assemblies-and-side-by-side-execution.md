@@ -12,6 +12,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32752145"
 ---
 # <a name="assemblies-and-side-by-side-execution"></a><span data-ttu-id="d10ac-102">어셈블리 및 Side-by-Side 실행</span><span class="sxs-lookup"><span data-stu-id="d10ac-102">Assemblies and Side-by-Side Execution</span></span>
 <span data-ttu-id="d10ac-103">Side-by-side 실행은 같은 컴퓨터에 여러 버전의 응용 프로그램이나 구성 요소를 저장하고 실행할 수 있는 기능입니다.</span><span class="sxs-lookup"><span data-stu-id="d10ac-103">Side-by-side execution is the ability to store and execute multiple versions of an application or component on the same computer.</span></span> <span data-ttu-id="d10ac-104">다시 말해 동시에 같은 컴퓨터에서 여러 런타임 버전을 사용할 수 있으며 특정 런타임 버전을 바탕으로 하는 여러 버전의 응용 프로그램 및 구성 요소를 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="d10ac-104">This means that you can have multiple versions of the runtime, and multiple versions of applications and components that use a version of the runtime, on the same computer at the same time.</span></span> <span data-ttu-id="d10ac-105">Side-by-Side 실행을 사용하면 응용 프로그램이 바인딩되는 구성 요소 버전과 응용 프로그램에서 사용되는 런타임 버전을 보다 효과적으로 관리할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="d10ac-105">Side-by-side execution gives you more control over what versions of a component an application binds to, and more control over what version of the runtime an application uses.</span></span>  

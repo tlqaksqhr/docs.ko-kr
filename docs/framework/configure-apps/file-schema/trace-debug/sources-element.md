@@ -17,6 +17,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32752704"
 ---
 # <a name="ltsourcesgt-element"></a><span data-ttu-id="db684-102">&lt;소스&gt; 요소</span><span class="sxs-lookup"><span data-stu-id="db684-102">&lt;sources&gt; Element</span></span>
 <span data-ttu-id="db684-103">추적 메시지를 시작 하는 추적 소스를 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="db684-103">Specifies trace sources that initiate tracing messages.</span></span>  

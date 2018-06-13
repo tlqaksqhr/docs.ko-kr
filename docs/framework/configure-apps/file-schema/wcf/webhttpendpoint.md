@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32767091"
 ---
 # <a name="ltwebhttpendpointgt"></a><span data-ttu-id="b23c6-102">&lt;webHttpEndpoint&gt;</span><span class="sxs-lookup"><span data-stu-id="b23c6-102">&lt;webHttpEndpoint&gt;</span></span>
 <span data-ttu-id="b23c6-103">이 구성 요소는 고정 되어 있는 표준 끝점을 정의 [ \<webHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/webhttpbinding.md) 바인딩에 자동으로 추가 하는 [ \<webHttp >](../../../../../docs/framework/configure-apps/file-schema/wcf/webhttp.md) 동작 합니다.</span><span class="sxs-lookup"><span data-stu-id="b23c6-103">This configuration element defines a standard endpoint with a fixed [\<webHttpBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/webhttpbinding.md) binding that automatically adds the [\<webHttp>](../../../../../docs/framework/configure-apps/file-schema/wcf/webhttp.md) behavior.</span></span> <span data-ttu-id="b23c6-104">REST 서비스를 작성할 때는 이 끝점을 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="b23c6-104">Use this endpoint when writing a REST service.</span></span>  

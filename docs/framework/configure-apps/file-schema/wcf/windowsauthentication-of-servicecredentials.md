@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32767546"
 ---
 # <a name="ltwindowsauthenticationgt-of-ltservicecredentialsgt"></a><span data-ttu-id="86a7e-102">&lt;serviceCredentials&gt;의 &lt;windowsAuthentication&gt;</span><span class="sxs-lookup"><span data-stu-id="86a7e-102">&lt;windowsAuthentication&gt; of &lt;serviceCredentials&gt;</span></span>
 <span data-ttu-id="86a7e-103">Windows 서비스 자격 증명의 설정을 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="86a7e-103">Specifies the settings of a Windows service credential.</span></span>  

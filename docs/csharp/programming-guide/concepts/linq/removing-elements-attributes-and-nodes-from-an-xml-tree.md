@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33339971"
 ---
 # <a name="removing-elements-attributes-and-nodes-from-an-xml-tree-c"></a><span data-ttu-id="9423b-102">XML 트리에서 요소, 특성 및 노드 제거(C#)</span><span class="sxs-lookup"><span data-stu-id="9423b-102">Removing Elements, Attributes, and Nodes from an XML Tree (C#)</span></span>
 <span data-ttu-id="9423b-103">XML 트리를 수정하여 요소, 특성 및 다른 형식의 노드를 제거할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="9423b-103">You can modify an XML tree, removing elements, attributes, and other types of nodes.</span></span>  

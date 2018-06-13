@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32764218"
 ---
 # <a name="null-literals-and-type-inference-entity-sql"></a><span data-ttu-id="43008-102">Null 리터럴 및 형식 유추(Entity SQL)</span><span class="sxs-lookup"><span data-stu-id="43008-102">Null Literals and Type Inference (Entity SQL)</span></span>
 <span data-ttu-id="43008-103">null 리터럴은 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 형식 시스템의 모든 형식과 호환됩니다.</span><span class="sxs-lookup"><span data-stu-id="43008-103">Null literals are compatible with any type in the [!INCLUDE[esql](../../../../../../includes/esql-md.md)] type system.</span></span> <span data-ttu-id="43008-104">하지만 null 리터럴의 형식을 올바르게 유추할 수 있도록 [!INCLUDE[esql](../../../../../../includes/esql-md.md)]에서는 null 리터럴을 사용할 수 있는 위치에 대한 특정 제약 조건을 설정합니다.</span><span class="sxs-lookup"><span data-stu-id="43008-104">However, for the type of a null literal to be inferred correctly, [!INCLUDE[esql](../../../../../../includes/esql-md.md)] imposes certain constraints on where a null literal can be used.</span></span>  

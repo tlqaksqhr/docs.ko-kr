@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33340374"
 ---
 # <a name="deferred-execution-and-lazy-evaluation-in-linq-to-xml-c"></a><span data-ttu-id="3b4a0-102">LINQ to XML에서 지연된 실행 및 지연 계산(C#)</span><span class="sxs-lookup"><span data-stu-id="3b4a0-102">Deferred Execution and Lazy Evaluation in LINQ to XML (C#)</span></span>
 <span data-ttu-id="3b4a0-103">쿼리 및 축 연산은 흔히 지연된 실행을 사용하도록 구현됩니다.</span><span class="sxs-lookup"><span data-stu-id="3b4a0-103">Query and axis operations are often implemented to use deferred execution.</span></span> <span data-ttu-id="3b4a0-104">이 항목에서는 지연된 실행의 요구 사항 및 장점과 몇 가지 구현 고려 사항에 대해 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="3b4a0-104">This topic explains the requirements and advantages of deferred execution, and some implementation considerations.</span></span>  

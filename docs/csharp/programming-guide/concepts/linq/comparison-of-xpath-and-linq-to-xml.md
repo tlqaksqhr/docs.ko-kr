@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33326435"
 ---
 # <a name="comparison-of-xpath-and-linq-to-xml"></a><span data-ttu-id="c40ed-102">XPath 및 LINQ to XML 비교</span><span class="sxs-lookup"><span data-stu-id="c40ed-102">Comparison of XPath and LINQ to XML</span></span>
 <span data-ttu-id="c40ed-103">XPath와 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]은 유사한 기능을 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="c40ed-103">XPath and [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] offer some similar functionality.</span></span> <span data-ttu-id="c40ed-104">XML 트리를 쿼리하여 결과를 요소 컬렉션, 특성 컬렉션, 노드 컬렉션 또는 요소나 특성의 값으로 반환하는 데 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="c40ed-104">Both can be used to query an XML tree, returning such results as a collection of elements, a collection of attributes, a collection of nodes, or the value of an element or attribute.</span></span> <span data-ttu-id="c40ed-105">하지만 차이점도 있습니다.</span><span class="sxs-lookup"><span data-stu-id="c40ed-105">However, there are also some differences.</span></span>  

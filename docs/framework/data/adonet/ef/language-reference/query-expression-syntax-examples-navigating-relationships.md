@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32765492"
 ---
 # <a name="query-expression-syntax-examples-navigating-relationships"></a><span data-ttu-id="9d1ce-102">쿼리 식 구문 예제: 관계 탐색</span><span class="sxs-lookup"><span data-stu-id="9d1ce-102">Query Expression Syntax Examples: Navigating Relationships</span></span>
 <span data-ttu-id="9d1ce-103">[!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)]의 탐색 속성은 연결의 End에서 엔터티를 찾는 데 사용되는 바로 가기 속성입니다.</span><span class="sxs-lookup"><span data-stu-id="9d1ce-103">Navigation properties in the [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)] are shortcut properties used to locate the entities at the ends of an association.</span></span> <span data-ttu-id="9d1ce-104">탐색 속성을 사용하면 엔터티 간에 탐색하거나 연결 집합을 통해 관련 엔터티 간에 탐색할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="9d1ce-104">Navigation properties allow a user to navigate from one entity to another, or from one entity to related entities through an association set.</span></span> <span data-ttu-id="9d1ce-105">이 항목에서는 [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] 쿼리에서 탐색 속성을 통해 관계를 탐색하는 방법을 보여 주는 쿼리 식 구문 예제를 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="9d1ce-105">This topic provides examples in query expression syntax of how to navigate relationships through navigation properties in [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] queries.</span></span>  

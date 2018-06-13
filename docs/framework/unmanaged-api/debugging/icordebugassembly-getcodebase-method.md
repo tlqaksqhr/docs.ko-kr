@@ -1,14 +1,6 @@
 ---
-title: "ICorDebugAssembly::GetCodeBase 메서드"
-ms.custom: 
+title: ICorDebugAssembly::GetCodeBase 메서드
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICorDebugAssembly.GetCodeBase
 api_location:
@@ -23,22 +15,19 @@ helpviewer_keywords:
 ms.assetid: 48adc154-9058-4fef-9c43-e9aad80e4dbf
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 24ac81f841be21fe477ad46ef210e2f7d1595acb
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: f6236d6b5349a9c2a528a85559c0cbc02c8da381
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33401718"
 ---
-# <a name="icordebugassemblygetcodebase-method"></a><span data-ttu-id="d063e-102">ICorDebugAssembly::GetCodeBase 메서드</span><span class="sxs-lookup"><span data-stu-id="d063e-102">ICorDebugAssembly::GetCodeBase Method</span></span>
-<span data-ttu-id="d063e-103">이 메서드는 현재 버전의.NET Framework에서 구현 되지 않았습니다.</span><span class="sxs-lookup"><span data-stu-id="d063e-103">This method is not implemented in the current version of the .NET Framework.</span></span>  
+# <a name="icordebugassemblygetcodebase-method"></a><span data-ttu-id="2c3f2-102">ICorDebugAssembly::GetCodeBase 메서드</span><span class="sxs-lookup"><span data-stu-id="2c3f2-102">ICorDebugAssembly::GetCodeBase Method</span></span>
+<span data-ttu-id="2c3f2-103">이 메서드는 현재 버전의.NET Framework에서 구현 되지 않았습니다.</span><span class="sxs-lookup"><span data-stu-id="2c3f2-103">This method is not implemented in the current version of the .NET Framework.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="d063e-104">구문</span><span class="sxs-lookup"><span data-stu-id="d063e-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="2c3f2-104">구문</span><span class="sxs-lookup"><span data-stu-id="2c3f2-104">Syntax</span></span>  
   
 ```  
 HRESULT GetCodeBase (  
