@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33604746"
 ---
 # <a name="goto-statement"></a>GoTo 문
 프로시저에 지정된 된 줄으로 무조건 분기 합니다.  

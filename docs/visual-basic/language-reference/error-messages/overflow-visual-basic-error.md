@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33594915"
 ---
 # <a name="overflow-visual-basic-error"></a>오버플로가 발생했습니다(Visual Basic 오류).
 리터럴 할당 하 고 데이터 형식의 범위를 벗어나는 값을 나타냅니다.  

@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33604499"
 ---
 # <a name="typographic-and-code-conventions-visual-basic"></a>글꼴 표시 및 코드 규칙(Visual Basic)
 Visual Basic 설명서는 다음과 같은 인쇄 및 코드 규칙을 사용합니다.  

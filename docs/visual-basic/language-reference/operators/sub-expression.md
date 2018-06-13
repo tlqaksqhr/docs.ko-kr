@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33603537"
 ---
 # <a name="sub-expression-visual-basic"></a>하위 식(Visual Basic)
 매개 변수 및 서브루틴 람다 식을 정의 하는 코드를 선언 합니다.  

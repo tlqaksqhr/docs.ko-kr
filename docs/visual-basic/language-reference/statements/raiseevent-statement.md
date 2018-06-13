@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33605344"
 ---
 # <a name="raiseevent-statement"></a>RaiseEvent 문
 트리거는 이벤트 클래스, 폼 또는 문서의 모듈 수준에서 선언 되었습니다.  

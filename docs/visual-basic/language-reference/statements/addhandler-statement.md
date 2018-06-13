@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33603654"
 ---
 # <a name="addhandler-statement"></a>AddHandler 문
 이벤트 처리기에서 런타임에 이벤트에 연결합니다.  

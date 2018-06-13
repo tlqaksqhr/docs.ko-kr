@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33604785"
 ---
 # <a name="queries-visual-basic"></a>쿼리(Visual Basic)
 Visual Basic을 사용 하면 만들려는 [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] 코드의 식입니다.  

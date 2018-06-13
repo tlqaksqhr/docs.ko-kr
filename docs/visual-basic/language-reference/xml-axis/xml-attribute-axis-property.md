@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33604915"
 ---
 # <a name="xml-attribute-axis-property-visual-basic"></a>XML 특성 축 속성(Visual Basic)
 에 대 한 특성의 값에 액세스할 수는 <xref:System.Xml.Linq.XElement> 개체 또는 컬렉션의 첫 번째 요소로 <xref:System.Xml.Linq.XElement> 개체입니다.  

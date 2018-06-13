@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33637573"
 ---
 # <a name="the-file-is-currently-open-for-writing"></a>파일이 현재 쓰기용으로 열려 있습니다.
 현재 쓰기용으로 열려 있는 파일에 액세스하려고 했습니다.  

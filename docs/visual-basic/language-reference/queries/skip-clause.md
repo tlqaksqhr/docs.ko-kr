@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33602829"
 ---
 # <a name="skip-clause-visual-basic"></a>Skip 절(Visual Basic)
 컬렉션에서 지정된 수의 요소를 무시하고 나머지 요소를 반환합니다.  

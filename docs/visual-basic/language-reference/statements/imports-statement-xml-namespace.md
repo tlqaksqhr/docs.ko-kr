@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33604564"
 ---
 # <a name="imports-statement-xml-namespace"></a>Imports 문(XML 네임스페이스)
 XML 리터럴과 XML 축 속성에서 사용 하기 위해 XML 네임 스페이스 접두사를 가져옵니다.  

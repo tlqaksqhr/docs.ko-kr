@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33593716"
 ---
 # <a name="object-required-visual-basic"></a>개체가 필요합니다(Visual Basic).
 명시적 개체 한정자는 메서드와 속성에 대 한 참조 해야합니다. 이러한 경우 이것이입니다.  

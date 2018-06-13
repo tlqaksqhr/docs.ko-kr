@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33605500"
 ---
 # <a name="operator-statement"></a>Operator Statement
 연산자 기호, 피연산자의 경우 클래스 또는 구조체에서 연산자 프로시저를 정의 하는 코드를 선언 합니다.  

@@ -31,6 +31,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33605396"
 ---
 # <a name="redim-statement-visual-basic"></a>ReDim 문(Visual Basic)
 배열 변수의 저장 공간을 다시 할당합니다.  

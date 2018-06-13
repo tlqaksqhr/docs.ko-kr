@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33603992"
 ---
 # <a name="nothing-visual-basic"></a>Nothing(Visual Basic)
 모든 데이터 형식의 기본 값을 나타냅니다. 기본값은 참조 형식에 대해는 `null` 참조 합니다. 값 형식에 대 한 기본값 값 형식이 nullable 인지에 따라 달라 집니다.  

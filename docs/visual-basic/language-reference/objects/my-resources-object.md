@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33604707"
 ---
 # <a name="myresources-object"></a>My.Resources 개체
 응용 프로그램의 리소스에 액세스 하기 위한 속성 및 클래스를 제공 합니다.  

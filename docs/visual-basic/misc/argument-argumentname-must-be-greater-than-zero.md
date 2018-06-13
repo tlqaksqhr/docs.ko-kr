@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33598087"
 ---
 # <a name="argument-39ltargumentnamegt39-must-be-greater-than-zero"></a>인수 &#39; &lt;argumentname&gt; &#39; 0 보다 커야 합니다
 인수가 0이하이기 때문에 유효하지 않습니다.  

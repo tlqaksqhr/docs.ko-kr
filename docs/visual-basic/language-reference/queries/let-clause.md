@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33604473"
 ---
 # <a name="let-clause-visual-basic"></a>Let 절(Visual Basic)
 값을 계산 하 고 쿼리 내에서 새 변수를 할당 합니다.  

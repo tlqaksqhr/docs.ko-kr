@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33604824"
 ---
 # <a name="orelse-operator-visual-basic"></a>OrElse 연산자(Visual Basic)
 두 식에 포함 논리합 단락 수행 합니다.  

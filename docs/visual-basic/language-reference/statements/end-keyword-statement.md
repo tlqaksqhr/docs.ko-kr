@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33605266"
 ---
 # <a name="end-ltkeywordgt-statement-visual-basic"></a>최종 &lt;키워드&gt; 문 (Visual Basic)
 추가 키워드 뒤에 나올, 해당 키워드 뒤에 문 블록의 정의 종료 합니다.  

@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33604122"
 ---
 # <a name="order-by-clause-visual-basic"></a>Order By 절(Visual Basic)
 쿼리 결과 대 한 정렬 순서를 지정합니다.  
