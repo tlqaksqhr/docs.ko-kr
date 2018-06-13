@@ -18,9 +18,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 4c77edfff640f796dd3f345eaeb4728830c5f4c6
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33449146"
 ---
 # <a name="imetadataemit-interface"></a>IMetaDataEmit 인터페이스
 생성, 수정 및 현재 정의 된 범위에서 어셈블리에 대 한 메타 데이터를 저장 하는 메서드를 제공 합니다. 메타 데이터 메모리에 저장 하거나 디스크에 저장 될 수 있습니다.  

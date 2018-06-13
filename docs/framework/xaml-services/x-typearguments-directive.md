@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33566862"
 ---
 # <a name="xtypearguments-directive"></a>x:TypeArguments 지시문
 제네릭 형식의 생성자에 제네릭의 인수를 입력 하는 전달 합니다.  

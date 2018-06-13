@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33567200"
 ---
 # <a name="calling-asynchronous-methods-using-iasyncresult"></a>IAsyncResult를 사용하는 비동기 메서드 호출
 .NET Framework 및 타사 클래스 라이브러리의 유형은 주 응용 프로그램 스레드가 아닌 다른 스레드에서 비동기 작업을 수행하는 동안 응용 프로그램이 계속 실행할 수 있도록 하는 메서드를 제공할 수 있습니다. 다음 섹션에서는 <xref:System.IAsyncResult> 디자인 패턴을 사용하는 비동기 메서드를 호출할 수 있는 다양한 방법을 보여주는 코드 예제를 설명하고 제공합니다.  

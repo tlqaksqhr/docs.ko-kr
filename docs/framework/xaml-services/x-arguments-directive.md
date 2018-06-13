@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33564880"
 ---
 # <a name="xarguments-directive"></a>x:Arguments 지시문
 패키지 생성 인수 XAML에서 기본값이 아닌 생성자 개체 요소 선언에 대 한 또는 팩터리 메서드 개체 선언에 대 한 합니다.  

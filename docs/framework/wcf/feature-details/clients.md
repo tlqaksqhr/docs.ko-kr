@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33488805"
 ---
 # <a name="clients"></a>클라이언트
 이 섹션의 항목에서는 클라이언트 아키텍처를 어떻게 설명에 액세스 하려면 Windows Communication Foundation (WCF) 서비스의 WCF 클라이언트에 대 한 보안 고려 사항 및 WCF 클라이언트를 구성 하는 방법입니다.  

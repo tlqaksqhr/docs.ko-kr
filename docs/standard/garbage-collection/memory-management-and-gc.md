@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33569917"
 ---
 # <a name="memory-management-and-garbage-collection-in-net"></a>.NET에서 메모리 관리 및 가비지 수집
 설명서의 이 섹션에서는 .NET에서의 메모리 관리에 대한 정보를 제공합니다.  

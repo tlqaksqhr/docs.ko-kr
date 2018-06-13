@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 3ed3501930b94eae59cf38355f8255ecf4165bcc
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33449584"
 ---
 # <a name="imetadatatablesgetstring-method"></a>IMetaDataTables::GetString 메서드
 현재 참조 범위에서 테이블 열에서 지정된 된 인덱스에 문자열을 가져옵니다.  

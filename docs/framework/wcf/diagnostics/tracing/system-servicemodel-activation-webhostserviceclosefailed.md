@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33476489"
 ---
 # <a name="systemservicemodelactivationwebhostserviceclosefailed"></a>System.ServiceModel.Activation.WebHostServiceCloseFailed
 서비스를 정상적으로 닫을 수 없고 중단된 경우 발생합니다.  

@@ -19,6 +19,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33522017"
 ---
 # <a name="how-to-join-lines"></a>방법: 선 조인
 선 조인은 두 줄 끝 부분이 만나거나 겹칠으로 구성 되는 일반 영역입니다. [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 세 개의 선 조인 스타일 제공: 마이터, 빗면 및 반올림 합니다. 선 조인 스타일의 속성은는 <xref:System.Drawing.Pen> 클래스입니다. 선 조인 스타일을 지정 하는 경우는 <xref:System.Drawing.Pen> 개체에 연결 된 모든 행에는 음 스타일 적용 됨 <xref:System.Drawing.Drawing2D.GraphicsPath> 개체 펜을 사용 하 여 그려집니다.  

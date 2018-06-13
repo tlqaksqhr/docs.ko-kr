@@ -24,6 +24,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33521917"
 ---
 # <a name="how-to-draw-an-outlined-shape"></a>방법: 윤곽선이 있는 도형 그리기
 이 예제에서는 폼에 개략적으로 설명 된 타원 및 사각형을 그립니다.  

@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33569657"
 ---
 # <a name="reading-entity-declarations-and-entity-references-into-the-dom"></a>DOM에 엔터티 선언 및 엔터티 참조 읽어오기
 엔터티는 XML에서 내용 또는 태그 대신 사용되는 이름을 나타내는 선언입니다. 엔터티는 두 부분으로 구성됩니다. 먼저 엔터티 선언을 사용하여 이름을 대체 내용에 연결해야 합니다. 엔터티 선언은 DTD(문서 종류 정의) 또는 XML 스키마에 `<!ENTITY name "value">` 구문을 사용하여 만듭니다. 그러면 엔터티 선언에 정의된 이름이 XML에서 사용됩니다. XML에서 사용될 경우 이 이름을 엔터티 참조라고 합니다. 예를 들어, 다음 엔터티 선언은 "Microsoft Press"라는 내용과 연결될 `publisher`라는 이름의 엔터티를 선언합니다.  

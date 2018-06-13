@@ -18,9 +18,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 769802eae048427325af9807d788b1fbc5a15665
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33448434"
 ---
 # <a name="cortokentype-enumeration"></a>CorTokenType 열거형
 메타 데이터 토큰의 유형을 나타냅니다.  

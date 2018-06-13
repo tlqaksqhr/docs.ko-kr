@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33474430"
 ---
 # <a name="microsofttransactionstransactionbridgeenlisttransaction"></a>Microsoft.Transactions.TransactionBridge.EnlistTransaction
 WS-AT 프로토콜 서비스가 제공된 코디네이션 컨텍스트를 사용하여 트랜잭션에 참여했습니다.  

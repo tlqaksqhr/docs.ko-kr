@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33476738"
 ---
 # <a name="systemservicemodelchannelshttpchannelrequestaborted"></a>System.ServiceModel.Channels.HttpChannelRequestAborted
 HTTP를 통해 요청 메시지를 보내지 못했습니다.  

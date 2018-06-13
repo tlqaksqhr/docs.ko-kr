@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: b794a62a0ac0d253f1431be29b43101816dc7233
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33449444"
 ---
 # <a name="imetadataemitmergeend-method"></a>IMetaDataEmit::MergeEnd 메서드
 하나 이상의 이전 호출에 의해 지정 된 모든 메타 데이터 범위를 범위에 현재 병합 [트리거합니다](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-merge-method.md)합니다.  

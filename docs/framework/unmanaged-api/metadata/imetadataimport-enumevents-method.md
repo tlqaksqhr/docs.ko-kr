@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 608b4a7d147124ede60e9d81f91600dfdaad0a65
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33446498"
 ---
 # <a name="imetadataimportenumevents-method"></a>IMetaDataImport::EnumEvents 메서드
 지정한 TypeDef 토큰에 대한 이벤트 정의 토큰을 열거합니다.  

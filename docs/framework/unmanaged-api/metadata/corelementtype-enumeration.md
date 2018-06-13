@@ -18,9 +18,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: ebe2cf95f5637e6924b85c2389f1c59679580298
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33449172"
 ---
 # <a name="corelementtype-enumeration1"></a>CorElementType Enumeration1
 공용 언어 런타임에서 지정 <xref:System.Type>, 형식 한정자 또는 형식 메타 데이터 서명에 형식에 대 한 정보입니다.  

@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 05339787b112ad029cb9870e8c6ffca37e55e631
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33445191"
 ---
 # <a name="imetadataemitdefinepermissionset-method"></a>IMetaDataEmit::DefinePermissionSet 메서드
 지정 된 메타 데이터 서명을 가진 권한 집합에 대 한 정의 만들고 해당 사용 권한 집합 정의에 토큰을 가져옵니다.  

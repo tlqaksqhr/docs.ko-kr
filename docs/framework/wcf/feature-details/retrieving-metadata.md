@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33493610"
 ---
 # <a name="retrieving-metadata"></a>메타데이터 검색
 메타데이터 검색은 WS-MEX(WS-MetadataExchange) 메타데이터 끝점 또는 HTTP/GET 메타데이터 끝점 같은 메타데이터 끝점에서 메타데이터를 요청 및 검색하는 프로세스입니다.  

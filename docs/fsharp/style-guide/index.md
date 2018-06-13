@@ -2,11 +2,12 @@
 title: 'F # 스타일 가이드'
 description: '좋은 F # 코드의 다섯 가지 원칙에 알아봅니다.'
 ms.date: 05/14/2018
-ms.openlocfilehash: 317fc2c101449b0500a54dd9fea3d426757af5cd
-ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
-ms.translationtype: HT
+ms.openlocfilehash: 6d8c1336ca991040a8f6e13290d209cb3b70054d
+ms.sourcegitcommit: 22c3c8f74eaa138dbbbb02eb7d720fce87fc30a9
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/15/2018
+ms.lasthandoff: 05/17/2018
+ms.locfileid: "34235907"
 ---
 # <a name="f-style-guide"></a>F # 스타일 가이드
 
@@ -40,8 +41,8 @@ ms.lasthandoff: 05/15/2018
 
 ## <a name="next-steps"></a>다음 단계
 
-[F # 서식 지정 지침](formatting.md) 쉽게 읽을 수 있도록 코드 서식을 지정 하는 방법에 지침을 제공 합니다.
+[F # 코드 지침 서식](formatting.md) 쉽게 읽을 수 있도록 코드 서식을 지정 하는 방법에 지침을 제공 합니다.
 
 [F # 코딩 규칙](conventions.md) 프로그래밍 관용구를 더 큰 F #의 장기적인 유지 관리 하는 데 도움이 되는 F # 코드 베이스에 대 한 지침을 제공 합니다.
 
-[F # 구성 요소 디자인 지침](component-design-guidelines.md) 포괄적인 집합 라이브러리 등 F # 구성 요소를 작성 하기 위한 지침입니다.
+[F # 구성 요소 디자인 지침](component-design-guidelines.md) F # 등의 구성 요소 라이브러리 작성에 대 한 지침을 제공 합니다.

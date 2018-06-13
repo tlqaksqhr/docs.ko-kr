@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 1ed9e097dccd0fcb81ea9023cc9b84906589ccb0
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33446260"
 ---
 # <a name="imetadataerroronerror-method"></a>IMetaDataError::OnError 메서드
 메타 데이터를 병합 하는 동안 발생 하는 오류에 대 한 알림을 제공 합니다.  

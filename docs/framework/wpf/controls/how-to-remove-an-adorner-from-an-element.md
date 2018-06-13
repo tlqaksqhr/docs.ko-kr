@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33551845"
 ---
 # <a name="how-to-remove-an-adorner-from-an-element"></a>방법: 요소에서 표시기 제거
 프로그래밍 방식으로 지정 된 특정 표시기를 제거 하는 방법을 보여 주는이 예제 <xref:System.Windows.UIElement>합니다.  
