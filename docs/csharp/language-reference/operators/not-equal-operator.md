@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33272441"
 ---
 # <a name="-operator-c-reference"></a>!= 연산자(C# 참조)
 같지 않음 연산자(`!=`)는 피연산자가 같으면 false, 다르면 true를 반환합니다. 문자열과 개체를 포함하여 모든 형식에 대해 같지 않음 연산자가 미리 정의되어 있습니다. 사용자 정의 형식은 `!=` 연산자를 오버로드할 수 있습니다.  

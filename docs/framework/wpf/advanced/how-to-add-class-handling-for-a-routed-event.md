@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33545365"
 ---
 # <a name="how-to-add-class-handling-for-a-routed-event"></a>방법: 라우트된 이벤트에 대한 클래스 처리 추가
 클래스 처리기 또는 경로의 지정 된 노드에서 인스턴스 처리기에 의해 라우트된 이벤트를 처리할 수 있습니다. 클래스 처리기 먼저 호출 되며 및 인스턴스 처리에서 이벤트를 억제 또는 기본 클래스에서 소유 하는 이벤트에 다른 이벤트 특정 동작을 클래스 구현에서 사용할 수 있습니다. 이 예제에는 클래스 처리기를 구현 하기 위한 밀접 한 관련이 있는 두 가지 기술을 보여 줍니다.  

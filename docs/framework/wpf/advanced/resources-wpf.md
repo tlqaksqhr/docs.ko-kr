@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33545820"
 ---
 # <a name="resources-wpf"></a>리소스(WPF)
 리소스는 응용 프로그램의 여러 위치에서 다시 사용할 수 있는 개체입니다. WPF는 다양 한 유형의 리소스를 지원합니다. 이러한 리소스는 주로 두 가지 유형의 리소스: XAML 리소스 및 리소스 데이터 파일. XAML 리소스의 예로 브러시 및 스타일을 들 수 있습니다. 리소스 데이터 파일은 응용 프로그램에 필요한 실행 파일이 아닌 데이터 파일.  

@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33267370"
 ---
 # <a name="selection-statements-c-reference"></a>선택문(C# 참조)
 선택문을 사용하면 특정 조건이 `true`인지 여부에 따라 프로그램 제어가 특정 흐름에 전송됩니다.  

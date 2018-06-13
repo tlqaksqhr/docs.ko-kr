@@ -25,6 +25,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33529027"
 ---
 # <a name="types-of-bitmaps"></a>비트맵의 유형
 비트맵은 픽셀의 사각형 배열에서 각 픽셀의 색을 지정 하는 비트의 배열입니다. 각 픽셀에 사용 되는 비트 수는 해당 픽셀에 지정할 수 있는 색 수를 결정 합니다. 예를 들어 각 픽셀을 4 비트로 표시할 다음 지정된 된 픽셀 수 할당할 수 16 다른 색상 중 하나로 (2 ^4 = 16). 다음 표에서 비트의 지정 된 수로 표현 되는 픽셀을 지정할 수 있는 색 수가 몇 가지 예를 보여 줍니다.  

@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33216150"
 ---
 # <a name="-doc-c-compiler-options"></a>/doc(C# 컴파일러 옵션)
 **-doc** 옵션을 사용하면 XML 파일에 문서 주석을 삽입할 수 있습니다.  

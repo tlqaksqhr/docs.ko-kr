@@ -8,9 +8,10 @@ helpviewer_keywords:
 ms.assetid: fef9db31-9a7f-42d5-ad37-3e7faf661f95
 ms.openlocfilehash: c4c2f915d6172e3c30fc32c5c57fe9921c3f915d
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33280347"
 ---
 # <a name="compiler-warning-cs3024"></a>컴파일러 경고 CS3024
 'type' 제약 조건 형식이 CLS 규격이 아닙니다.  

@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33526024"
 ---
 # <a name="button-control-overview-windows-forms"></a>Button 컨트롤 개요(Windows Forms)
 사용자는 Windows Forms <xref:System.Windows.Forms.Button> 컨트롤을 클릭하여 작업을 수행할 수 있습니다. 단추를 클릭하면 눌렀다 놓는 것처럼 표시됩니다. 사용자가 단추를 클릭할 때마다는 <xref:System.Windows.Forms.Control.Click> 이벤트 처리기가 호출 됩니다. 에 코드를 넣을 <xref:System.Windows.Forms.Control.Click> 선택한 동작을 수행 하는 이벤트 처리기입니다.  

@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33528533"
 ---
 # <a name="how-to-display-specific-days-in-bold-with-the-windows-forms-monthcalendar-control"></a>방법: Windows Forms MonthCalendar 컨트롤을 사용하여 특정 날짜를 굵게 표시
 Windows Forms <xref:System.Windows.Forms.MonthCalendar> 반복적으로 또는 단 수 날짜로 컨트롤 굵은 글꼴로 일 표시할 수 있습니다. 휴일 및 주말 같은 특정 날짜에 주목 하도록이 수행할 수 있습니다.  

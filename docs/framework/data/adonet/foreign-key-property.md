@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32762652"
 ---
 # <a name="foreign-key-property"></a>외래 키 속성
 A *외래 키 속성* 엔터티 데이터 모델 (EDM)의 기본 형식이 [속성](../../../../docs/framework/data/adonet/property.md) (또는 기본 형식 속성 집합)에 [엔터티 형식](../../../../docs/framework/data/adonet/entity-type.md) 는 포함된[엔터티 키](../../../../docs/framework/data/adonet/entity-key.md) 다른 엔터티 형식의 합니다.  

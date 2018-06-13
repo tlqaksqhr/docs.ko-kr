@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33219338"
 ---
 # <a name="decimal-c-reference"></a>decimal(C# 참조)
 `decimal` 키워드는 128비트 데이터 형식을 나타냅니다. `decimal` 형식은 부동 소수점 형식보다 전체 자릿수는 크고 범위는 작아서 재무 및 통화 계산에 적합합니다. 다음 표에서는 `decimal` 형식의 대략적인 범위와 전체 자릿수를 보여 줍니다.  

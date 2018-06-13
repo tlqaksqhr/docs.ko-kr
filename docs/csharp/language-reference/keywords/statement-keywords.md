@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33269663"
 ---
 # <a name="statement-keywords-c-reference"></a>문 키워드(C# 참조)
 문은 프로그램 명령입니다. 다음 표에서 참조된 항목에 설명된 경우를 제외하고 문은 순서대로 실행됩니다. 다음 표에는 C# 문 키워드가 나와 있습니다. 키워드로 표현되지 않은 문에 대한 자세한 내용은 [문](../../../csharp/programming-guide/statements-expressions-operators/statements.md)을 참조하세요.  

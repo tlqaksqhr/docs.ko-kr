@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33266157"
 ---
 # <a name="namespace-keywords-c-reference"></a>네임스페이스 키워드(C# 참조)
 이 섹션에서는 네임스페이스 사용과 관련된 키워드 및 연산자를 설명합니다.  

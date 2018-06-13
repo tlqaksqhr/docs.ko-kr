@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33526369"
 ---
 # <a name="fontdialog-component-windows-forms"></a>FontDialog 구성 요소(Windows Forms)
 Windows Forms <xref:System.Windows.Forms.FontDialog> 구성 요소는 미리 구성된 대화 상자입니다. 동일 **글꼴** Windows 운영 체제에 의해 노출 되는 대화 상자. 상속 되는 구성 요소는 <xref:System.Windows.Forms.CommonDialog> 클래스입니다.  

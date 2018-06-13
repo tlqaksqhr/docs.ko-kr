@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33265764"
 ---
 # <a name="literal-keywords-c-reference"></a>리터럴 키워드(C# 참조)
 C#에는 다음과 같은 리터럴 키워드가 있습니다.  

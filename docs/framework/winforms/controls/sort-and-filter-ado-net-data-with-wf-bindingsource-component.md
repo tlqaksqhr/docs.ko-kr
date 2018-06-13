@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33538074"
 ---
 # <a name="how-to-sort-and-filter-adonet-data-with-the-windows-forms-bindingsource-component"></a>방법: Windows Forms BindingSource 구성 요소를 사용하여 ADO.NET 데이터 정렬 및 필터링
 정렬 및 필터링 기능을 노출할 수 <xref:System.Windows.Forms.BindingSource> 를 통해 제어는 <xref:System.Windows.Forms.BindingSource.Sort%2A> 및 <xref:System.Windows.Forms.BindingSource.Filter%2A> 속성입니다. 기본 데이터 원본이 때 간단한 정렬을 적용할 수 있습니다는 <xref:System.ComponentModel.IBindingList>, 및 고급 데이터 원본 경우를 정렬 및 필터링을 적용할 수는 <xref:System.ComponentModel.IBindingListView>합니다. <xref:System.Windows.Forms.BindingSource.Sort%2A> 속성 해야 표준 [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] 구문: 데이터 원본의 데이터의 열 이름을 나타내는 문자열 뒤 `ASC` 또는 `DESC` 목록을 오름차순 또는 내림차순으로 정렬할지 여부를 나타냅니다. 고급 정렬 또는 각 열 쉼표 구분 기호가 구분 하 여 여러 열 정렬을 설정할 수 있습니다. <xref:System.Windows.Forms.BindingSource.Filter%2A> 속성은 문자열 식을 사용 합니다.  

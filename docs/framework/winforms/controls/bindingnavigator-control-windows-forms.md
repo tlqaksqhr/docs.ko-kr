@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33526066"
 ---
 # <a name="bindingnavigator-control-windows-forms"></a>BindingNavigator 컨트롤(Windows Forms)
 `BindingNavigator` 컨트롤은 데이터에 바인딩된 컨트롤에 대한 탐색 및 조작 UI (사용자 인터페이스)입니다. `BindingNavigator` 컨트롤을 사용하면 사용자가 Windows Form에서 데이터를 탐색하고 조작할 수 있습니다.  

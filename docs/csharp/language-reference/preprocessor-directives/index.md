@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33279921"
 ---
 # <a name="c-preprocessor-directives"></a>C# 전처리기 지시문
 이 단원에서는 다음 C# 전처리기 지시문에 대한 정보를 제공합니다.
