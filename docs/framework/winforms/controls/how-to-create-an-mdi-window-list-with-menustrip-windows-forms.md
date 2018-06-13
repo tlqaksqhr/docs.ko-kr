@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33530825"
 ---
 # <a name="how-to-create-an-mdi-window-list-with-menustrip-windows-forms"></a>방법: MenuStrip이 포함된 MDI 창 목록 만들기(Windows Forms)
 다중 문서 인터페이스 MDI ()를 사용 하 여 동일한 시간 및 복사에 여러 문서를 열고 다른 한 문서에서 콘텐츠를 붙여 넣을 수 있는 응용 프로그램을 만드는 합니다.  

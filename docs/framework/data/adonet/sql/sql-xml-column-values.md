@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33362739"
 ---
 # <a name="sql-xml-column-values"></a>SQL XML 열 값
 SQL Server는 지원의 `xml` 데이터 형식이 개발자의 표준 동작을 사용 하 여이 형식을 포함 하 여 결과 집합을 검색할 수 있습니다는 <xref:System.Data.SqlClient.SqlCommand> 클래스입니다. `xml` 열은 다른 열과 마찬가지 방식으로 검색할 수 있지만(예: <xref:System.Data.SqlClient.SqlDataReader>로) 열의 내용을 XML로 작업하려면 <xref:System.Xml.XmlReader>를 사용해야 합니다.  

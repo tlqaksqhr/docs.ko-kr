@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33526629"
 ---
 # <a name="default-functionality-in-the-windows-forms-datagridview-control"></a>Windows Forms DataGridView 컨트롤의 기본 기능
 Windows Forms <xref:System.Windows.Forms.DataGridView> 컨트롤은 상당한 양의 기본 기능으로 사용자가 제공 합니다.  

@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33339750"
 ---
 # <a name="using-properties-c-programming-guide"></a>속성 사용(C# 프로그래밍 가이드)
 속성은 필드 및 메서드 모두의 측면을 결합합니다. 개체의 사용자에게 속성은 필드로 표시되며, 속성에 액세스하려면 동일한 구문이 필요합니다. 클래스의 구현자에게 속성은 [get](../../../csharp/language-reference/keywords/get.md) 접근자 및/또는 [set](../../../csharp/language-reference/keywords/set.md) 접근자를 나타내는 하나 또는 두 개의 코드 블록입니다. `get` 접근자에 대한 코드 블록은 속성을 읽을 때 실행되고, `set` 접근자에 대한 코드 블록은 속성에 새 값을 할당할 때 실행됩니다. `set` 접근자가 없는 속성은 읽기 전용으로 간주됩니다. `get` 접근자가 없는 속성은 쓰기 전용으로 간주됩니다. 두 접근자가 모두 있는 속성은 읽기/쓰기입니다.  

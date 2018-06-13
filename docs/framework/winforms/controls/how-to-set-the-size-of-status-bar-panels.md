@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33533782"
 ---
 # <a name="how-to-set-the-size-of-status-bar-panels"></a>방법: 상태 표시줄 패널의 크기 설정
 > [!NOTE]

@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33534835"
 ---
 # <a name="how-to-put-quotation-marks-in-a-string-windows-forms"></a>방법: 문자열에 인용 부호 넣기(Windows Forms)
 경우에 따라 텍스트의 문자열에 따옴표(" ")를 배치하려고 합니다. 예:  

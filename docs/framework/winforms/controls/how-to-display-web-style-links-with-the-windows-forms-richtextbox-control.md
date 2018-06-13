@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33532609"
 ---
 # <a name="how-to-display-web-style-links-with-the-windows-forms-richtextbox-control"></a>방법: Windows Forms RichTextBox 컨트롤을 사용하여 웹 스타일 링크 표시
 Windows Forms <xref:System.Windows.Forms.RichTextBox> 컨트롤 색이 지정 된이 및 밑줄 표시 된 웹 링크를 표시할 수 있습니다. 브라우저 창에 링크를 클릭 하면 링크 텍스트에 지정 된 웹 사이트를 표시 하는 코드를 작성할 수 있습니다.  

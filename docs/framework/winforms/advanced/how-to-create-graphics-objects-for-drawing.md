@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33526490"
 ---
 # <a name="how-to-create-graphics-objects-for-drawing"></a>방법: 그리는 데 필요한 그래픽 개체 만들기
 선 및 모양을 그릴 수 있습니다, 전에 텍스트를 렌더링 하거나 이미지를 조작으로 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]를 만들어야 할 한 <xref:System.Drawing.Graphics> 개체입니다. <xref:System.Drawing.Graphics> 개체가 나타내는 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 그리기 화면, 및는 그래픽 이미지를 만드는 데 사용 되는 개체입니다.  

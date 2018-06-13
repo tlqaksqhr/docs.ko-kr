@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33357753"
 ---
 # <a name="generating-the-data-service-client-library-wcf-data-services"></a>데이터 서비스 클라이언트 라이브러리 생성(WCF Data Services)
 구현 하는 데이터 서비스는 [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] 의해 노출 된 데이터 모델을 설명 하는 서비스 메타 데이터 문서를 반환할 수 있습니다는 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 피드입니다. 자세한 내용은 참조 [OData: 서비스 메타 데이터 문서](http://go.microsoft.com/fwlink/?LinkId=186070)합니다. 사용할 수는 **서비스 참조 추가** 대화 상자에 대 한 참조를 추가 하려면 Visual Studio에는 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]-기반 서비스입니다. 반환 된 메타 데이터에 대 한 참조를 추가 하려면이 도구를 사용 하면는 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 다음 작업을 수행 클라이언트 프로젝트에서 피드를:  

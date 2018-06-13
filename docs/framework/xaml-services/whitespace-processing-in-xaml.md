@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33565547"
 ---
 # <a name="whitespace-processing-in-xaml"></a>XAML의 공백 처리
 XAML에 대한 언어 규칙에 따르면 [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] 프로세서 구현에서 의미 있는 공백을 처리해야 합니다. 이 항목에서는 이들 XAML 언어 규칙에 대해 설명합니다. 또한 serialization을 위해 XAML 프로세서 및 XAML 작성기의 [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] 구현에서 정의된 추가 공백 처리에 대해 설명합니다.  

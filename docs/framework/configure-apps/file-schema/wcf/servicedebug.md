@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33352248"
 ---
 # <a name="ltservicedebuggt"></a>&lt;serviceDebug&gt;
 Windows Communication Foundation (WCF) 서비스에 대 한 디버깅 및 도움말 정보 기능을 지정합니다.  

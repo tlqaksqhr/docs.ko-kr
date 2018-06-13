@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33530275"
 ---
 # <a name="how-to-copy-controls-between-windows-forms"></a>방법: Windows Forms 간에 컨트롤 복사
 컨트롤 같은 양식으로, 프로젝트 내에서 다른 폼으로 또는 다른 솔루션에서 사용 하기 위해 클립보드에 복사할 수 있습니다.  

@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33357259"
 ---
 # <a name="schema-restrictions"></a>스키마 제한
 두 번째 선택적 매개 변수는 **GetSchema** 메서드는 스키마 정보의 양을 제한 하는 데 사용 되는 제한을 반환 되 고에 전달 되는 **GetSchema** 문자열의 배열로 메서드 . 배열의 위치는 전달할 수 있는 값을 결정하며 이 위치는 제한 번호와 동일합니다.  

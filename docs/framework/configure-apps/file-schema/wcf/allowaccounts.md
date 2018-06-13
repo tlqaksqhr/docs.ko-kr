@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33352879"
 ---
 # <a name="ltallowaccountsgt"></a>&lt;allowAccounts&gt;
 해당 호스트 Windows Communication Foundation (WCF) 서비스, 프로세스에 대 한 계정 사용자를 지정 하 고 공유 서비스에 대 한 연결 액세스가 부여 된 하는 구성 요소의 컬렉션을 포함 합니다.  

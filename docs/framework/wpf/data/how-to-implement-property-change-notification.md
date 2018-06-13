@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33555992"
 ---
 # <a name="how-to-implement-property-change-notification"></a>방법: 속성 변경 알림 구현
 지원 하기 위해 <xref:System.Windows.Data.BindingMode.OneWay> 또는 <xref:System.Windows.Data.BindingMode.TwoWay> 바인딩 소스 (예: 사용자가 폼을 편집할 때 자동으로 업데이트 미리 보기 창이에), 동적 변경 내용을 자동으로 반영 하 여 바인딩 대상 속성을 사용 하려면 바인딩 클래스 적절 한 속성 변경 알림을 제공 해야 합니다. 구현 하는 클래스를 만드는 방법을 보여 주는이 예제 <xref:System.ComponentModel.INotifyPropertyChanged>합니다.  

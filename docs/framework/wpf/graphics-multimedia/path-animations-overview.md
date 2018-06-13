@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33565691"
 ---
 # <a name="path-animations-overview"></a>경로 애니메이션 개요
 <a name="introduction"></a> 이 항목에서는 기하학적 경로를 사용하여 출력 값을 생성할 수 있도록 하는 경로 애니메이션을 소개합니다. 경로 애니메이션은 복잡한 경로를 따라 개체를 이동하고 회전하는 데 유용합니다.  

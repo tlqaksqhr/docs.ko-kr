@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33353659"
 ---
 # <a name="communicating-with-the-database"></a>데이터베이스와 통신
 이 단원의 항목에서는 데이터베이스와의 통신을 설정하고 유지하는 몇 가지 기본 기능에 대해 설명합니다.  

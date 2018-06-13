@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33353213"
 ---
 # <a name="ltsystemservicemodelgt"></a>&lt;system.serviceModel&gt;
 이 구성 섹션에는 모든 Windows Communication Foundation (WCF) ServiceModel 구성 요소가 들어 있습니다.  

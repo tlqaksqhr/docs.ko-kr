@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33357863"
 ---
 # <a name="batching-operations-wcf-data-services"></a>일괄 처리 작업(WCF Data Services)
 [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] 지원 일괄 처리에 대 한 요청을 처리 한 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]-기반 서비스입니다. 자세한 내용은 참조 [OData: 일괄 처리](http://go.microsoft.com/fwlink/?LinkId=186075)합니다. [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)], 각 작업을 사용 하는 <xref:System.Data.Services.Client.DataServiceContext>, 같은 쿼리를 실행 하거나 결과 데이터 서비스에 전송 되는 별도 요청에 변경 내용을 저장 합니다. 작업 집합에 대해 논리적 범위를 유지하려면 작업 일괄 처리를 명시적으로 정의합니다. 이렇게 하면 일괄 처리의 모든 작업이 단일 HTTP 요청에 데이터 서비스에 전송, 서버가 작업을 개별적으로 처리할 수 있도록 데이터 서비스와 왕복 수를 줄입니다.  

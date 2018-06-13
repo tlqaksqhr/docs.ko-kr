@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33363802"
 ---
 # <a name="interceptors-wcf-data-services"></a>인터셉터(WCF Data Services)
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 응용을 프로그램 작업에 사용자 지정 논리를 추가할 수 있도록 요청 메시지를 가로챌 수 있습니다. 들어오는 메시지의 데이터 유효성 검사에이 사용자 지정 논리를 사용할 수 있습니다. 요청별로 사용자 지정 인증 정책을 삽입하는 등 쿼리 요청 범위를 추가로 제한하는 데에도 이 논리를 사용할 수 있습니다.  

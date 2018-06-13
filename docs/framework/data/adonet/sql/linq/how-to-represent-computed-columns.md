@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33353109"
 ---
 # <a name="how-to-represent-computed-columns"></a>방법: 계산 열 표현
 사용 하 여는 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] <xref:System.Data.Linq.Mapping.ColumnAttribute.Expression%2A> 속성에는 <xref:System.Data.Linq.Mapping.ColumnAttribute> 특성 내용이 계산의 결과 열을 나타내도록 합니다.  

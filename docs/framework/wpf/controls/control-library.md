@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33555872"
 ---
 # <a name="control-library"></a>컨트롤 라이브러리
 Windows Presentation Foundation (WPF) 컨트롤 라이브러리는 제공 하 여 WPF Windows Presentation Foundation (), 사전순으로 나열 하는 컨트롤에 대 한 정보를 포함 합니다.  

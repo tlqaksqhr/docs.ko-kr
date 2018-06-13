@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33355788"
 ---
 # <a name="sql-server-compact-and-linq-to-sql"></a>SQL Server Compact 및 LINQ to SQL
 SQL Server Compact는 Visual Studio와 함께 설치 된 기본 데이터베이스입니다. 자세한 내용은 참조 [PAVE 조치를 사용 하 여 SQL Server Compact (Visual Studio)](http://msdn.microsoft.com/library/13320dd1-94e5-4077-bf76-8df253695ccc)합니다.  

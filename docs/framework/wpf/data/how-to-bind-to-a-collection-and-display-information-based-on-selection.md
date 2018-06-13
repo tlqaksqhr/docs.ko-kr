@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33557411"
 ---
 # <a name="how-to-bind-to-a-collection-and-display-information-based-on-selection"></a>방법: 선택에 따라 수집 및 표시 정보에 바인딩
 데이터 바인딩된 있는 간단한 마스터-세부 시나리오에서 <xref:System.Windows.Controls.ItemsControl> 와 같은 <xref:System.Windows.Controls.ListBox>합니다. 선택한 항목에 대 한 자세한 정보를 표시할 사용자 선택에 따라 있습니다. 이 예제에서는이 시나리오를 구현 하는 방법을 보여 줍니다.  

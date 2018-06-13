@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33267409"
 ---
 # <a name="-operator-c-reference"></a>+ 연산자(C# 참조)
 `+` 연산자는 단항 또는 이항 연산자로 작동할 수 있습니다.  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33352641"
 ---
 # <a name="referential-integrity-constraint"></a>참조 무결성 제약 조건
 A *참조 무결성 제약 조건을* 엔터티 데이터 모델 (EDM)에 관계형 데이터베이스의 참조 무결성 제약 조건을 비슷합니다. 데이터베이스 테이블에서 열 (또는 열) 다른 테이블의 기본 키를 참조할 수 있도록 동일한 방법으로 [속성](../../../../docs/framework/data/adonet/property.md) (또는 속성)의 [엔터티 형식](../../../../docs/framework/data/adonet/entity-type.md) 참조할 수는 [엔터티 키 ](../../../../docs/framework/data/adonet/entity-key.md) 다른 엔터티 형식의 합니다. 참조 되는 엔터티 형식 라고는 *주 끝* 제약 조건입니다. 주 끝을 참조 하는 엔터티 형식은 라고는 *종속 끝* 제약 조건입니다.  

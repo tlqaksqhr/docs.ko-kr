@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33356516"
 ---
 # <a name="how-to-add-modify-and-delete-entities-wcf-data-services"></a>방법: 엔터티 추가, 수정 및 삭제(WCF Data Services)
 와 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 클라이언트 라이브러리를 있습니다 수 만들기, 업데이트 및 삭제 데이터 서비스에서 엔터티 데이터에 있는 개체에 해당 하는 동작을 수행 하 여는 <xref:System.Data.Services.Client.DataServiceContext>합니다. 자세한 내용은 참조 [데이터 서비스 업데이트](../../../../docs/framework/data/wcf/updating-the-data-service-wcf-data-services.md)합니다.  

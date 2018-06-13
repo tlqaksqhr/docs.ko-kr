@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33358767"
 ---
 # <a name="query-expression-examples-linq-to-dataset"></a>쿼리 식 예제(LINQ to DataSet)
 이 단원에서는 표준 쿼리 연산자를 사용하는 쿼리 식 구문으로 작성된 [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] 프로그래밍 예제를 제공합니다. <xref:System.Data.DataSet> 이러한 예에서 사용 된를 사용 하 여 채워집니다는 `FillDataSet` 에 지정 된 메서드를 [로드 데이터에는 데이터 집합](../../../../docs/framework/data/adonet/loading-data-into-a-dataset.md)합니다. 자세한 내용은 참조 [표준 쿼리 연산자 개요](http://msdn.microsoft.com/library/24cda21e-8af8-4632-b519-c404a839b9b2)합니다.  

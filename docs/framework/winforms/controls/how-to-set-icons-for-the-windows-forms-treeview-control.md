@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33536487"
 ---
 # <a name="how-to-set-icons-for-the-windows-forms-treeview-control"></a>방법: Windows Forms TreeView 컨트롤의 아이콘 설정
 Windows Forms <xref:System.Windows.Forms.TreeView> 컨트롤 각 노드 옆에 아이콘을 표시할 수 있습니다. 노드 텍스트의 바로 왼쪽에 있는 아이콘에 배치 됩니다. 이러한 아이콘을 표시 하려면 있는 트리 뷰를 연결 해야는 <xref:System.Windows.Forms.ImageList> 제어 합니다. 이미지 목록에 대 한 자세한 내용은 참조 [ImageList 구성 요소](../../../../docs/framework/winforms/controls/imagelist-component-windows-forms.md) 및 [하는 방법: Windows Forms ImageList 구성 요소와 이미지 추가 또는 제거](../../../../docs/framework/winforms/controls/how-to-add-or-remove-images-with-the-windows-forms-imagelist-component.md)합니다.  

@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33363395"
 ---
 # <a name="polling-in-console-applications"></a>콘솔 응용 프로그램에서 폴링
 ADO.NET에서 비동기 작업을 수행하면 다른 스레드에서 다른 작업을 수행하는 동안 한 스레드에서 시간이 많이 걸리는 데이터베이스 작업을 시작할 수 있습니다. 그러나 대부분은 결국 데이터베이스 작업을 완료할 때까지 응용 프로그램을 계속 실행할 수 없는 지점에 이르게 됩니다. 이 경우 비동기 작업을 폴링하여 작업의 완료 여부를 확인하면 도움이 됩니다.  

@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33527328"
 ---
 # <a name="domainupdown-control-windows-forms"></a>DomainUpDown 컨트롤(Windows Forms)
 Windows Forms <xref:System.Windows.Forms.DomainUpDown> 컨트롤 쌍의 단추와 텍스트 상자의 조합 용 모양 목록에서 위로 또는 아래로 이동 합니다. 컨트롤은 표시 하거나 선택 목록에서 텍스트 문자열을 설정 합니다. 위쪽 및 아래쪽 목록 사이 이동 하는 단추를 클릭 하 여, 위쪽 및 아래쪽 화살표 키를 누르거나 또는 목록에 있는 항목과 일치 하는 문자열을 입력 하 여 사용자 문자열을 선택할 수입니다. 이름의 사전순으로 정렬된 된 목록에서 항목을 선택 하는이 컨트롤에 대 한 가능한 사용 됩니다. (설정 목록을 정렬 하는 <xref:System.Windows.Forms.DomainUpDown.Sorted%2A> 속성을 `true`.) 이 컨트롤의 기능 목록 상자 또는 콤보 상자에 매우 유사 하지만 매우 작은 공간을 차지 합니다.  

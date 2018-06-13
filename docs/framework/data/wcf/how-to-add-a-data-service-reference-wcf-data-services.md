@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33356233"
 ---
 # <a name="how-to-add-a-data-service-reference-wcf-data-services"></a>방법: 데이터 서비스 참조 추가(WCF Data Services)
 사용할 수는 **서비스 참조 추가** 대화에 대 한 참조를 추가 하려면 Visual Studio에서 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]합니다. 이렇게 하면 Visual Studio에서 개발하는 클라이언트 응용 프로그램에서 데이터 서비스에 보다 쉽게 액세스할 수 있습니다. 이 절차를 완료하면 데이터 서비스에서 가져온 메타데이터를 기준으로 데이터 클래스가 생성됩니다. 자세한 내용은 참조 [데이터 서비스 클라이언트 라이브러리 생성](../../../../docs/framework/data/wcf/generating-the-data-service-client-library-wcf-data-services.md)합니다.  

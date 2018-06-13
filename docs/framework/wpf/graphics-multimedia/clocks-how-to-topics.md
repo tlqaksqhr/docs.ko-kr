@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33554809"
 ---
 # <a name="clocks-how-to-topics"></a>Clock 방법 항목
 다음 항목을 사용 하는 방법을 설명는 <xref:System.Windows.Media.Animation.Clock> 타이밍 상태 정보에 대 한 유지 관리 하는 개체는 <xref:System.Windows.Media.Animation.Timeline>합니다.  

@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33358165"
 ---
 # <a name="how-to-load-related-entities-wcf-data-services"></a>방법: 관련 엔터티 로드(WCF Data Services)
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]에서 관련 엔터티를 로드해야 하는 경우 <xref:System.Data.Services.Client.DataServiceContext.LoadProperty%2A> 클래스의 <xref:System.Data.Services.Client.DataServiceContext> 메서드를 사용할 수 있습니다. 사용할 수도 있습니다는 <xref:System.Data.Services.Client.DataServiceQuery%601.Expand%2A> 에서 메서드는 <xref:System.Data.Services.Client.DataServiceQuery%601> 같은 쿼리 응답에서 관련된 엔터티 로드 되도록 할을 요구 하도록 합니다.  

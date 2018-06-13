@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33557695"
 ---
 # <a name="data-binding-how-to-topics"></a>데이터 바인딩 방법 항목
 이 섹션의 항목에는 데이터에 바인딩할 요소 다양 한 형식의 공용 언어 런타임 (CLR) 개체 및 XML 데이터 원본에서에서 데이터 바인딩을 사용 하는 방법을 설명 합니다.  

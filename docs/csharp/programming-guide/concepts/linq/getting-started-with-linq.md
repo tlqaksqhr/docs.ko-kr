@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33339321"
 ---
 # <a name="getting-started-with-linq-in-c"></a>C#에서 LINQ 시작
 이 섹션에서는 LINQ 설명서 및 샘플의 나머지 부분을 이해하는 데 도움이 되는 기본 배경 정보를 제공합니다.  

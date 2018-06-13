@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33340647"
 ---
 # <a name="lambda-expressions-c-programming-guide"></a>람다 식(C# 프로그래밍 가이드)
 람다 식은 [대리자](../../../csharp/programming-guide/statements-expressions-operators/anonymous-methods.md) 또는 [식 트리](../../../csharp/programming-guide/delegates/using-delegates.md) 형식을 만드는 데 사용할 수 있는 [익명 함수](http://msdn.microsoft.com/library/fb1d3ed8-d5b0-4211-a71f-dd271529294b) 입니다. 람다 식을 사용하여 인수로 전달되거나 함수 호출 값으로 반환되는 로컬 함수를 쓸 수 있습니다. 람다 식은 LINQ 쿼리 식을 작성하는 데 특히 유용합니다.  
