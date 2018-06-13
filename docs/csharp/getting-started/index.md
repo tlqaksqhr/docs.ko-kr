@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33212631"
 ---
 # <a name="get-started-with-c"></a><span data-ttu-id="9602d-103">C# 시작</span><span class="sxs-lookup"><span data-stu-id="9602d-103">Get started with C#</span></span> #
 

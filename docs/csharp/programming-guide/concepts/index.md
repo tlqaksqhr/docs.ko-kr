@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33335641"
 ---
 # <a name="programming-concepts-c"></a><span data-ttu-id="08194-102">프로그래밍 개념(C#)</span><span class="sxs-lookup"><span data-stu-id="08194-102">Programming Concepts (C#)</span></span>
 <span data-ttu-id="08194-103">이 섹션에서는 C# 언어의 프로그래밍 개념을 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="08194-103">This section explains programming concepts in the C# language.</span></span>  

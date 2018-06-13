@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33592150"
 ---
 # <a name="walkthrough-creating-a-custom-dataflow-block-type"></a><span data-ttu-id="e0653-102">연습: 사용자 지정 데이터 흐름 블록 형식 만들기</span><span class="sxs-lookup"><span data-stu-id="e0653-102">Walkthrough: Creating a Custom Dataflow Block Type</span></span>
 <span data-ttu-id="e0653-103">TPL 데이터 흐름 라이브러리는 다양한 기능을 구현하는 여러 데이터 흐름 블록 형식을 제공하지만 사용자 지정 블록 형식을 만들 수도 있습니다.</span><span class="sxs-lookup"><span data-stu-id="e0653-103">Although the TPL Dataflow Library provides several dataflow block types that enable a variety of functionality, you can also create custom block types.</span></span> <span data-ttu-id="e0653-104">이 문서에서는 사용자 지정 동작을 구현하는 데이터 흐름 블록 형식을 만드는 방법을 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="e0653-104">This document describes how to create a dataflow block type that implements custom behavior.</span></span>  

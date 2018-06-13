@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33328840"
 ---
 # <a name="how-to-use-annotations-to-transform-linq-to-xml-trees-in-an-xslt-style-c"></a><span data-ttu-id="8d0e7-102">방법: XSLT 스타일에서 주석을 사용하여 LINQ to XML 트리 변환(C#)</span><span class="sxs-lookup"><span data-stu-id="8d0e7-102">How to: Use Annotations to Transform LINQ to XML Trees in an XSLT Style (C#)</span></span>
 <span data-ttu-id="8d0e7-103">주석을 사용하여 XML 트리를 쉽게 변환할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="8d0e7-103">Annotations can be used to facilitate transforms of an XML tree.</span></span>  

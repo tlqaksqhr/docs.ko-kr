@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33588460"
 ---
 # <a name="playing-sounds-visual-basic"></a><span data-ttu-id="1e2f6-102">소리 재생(Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="1e2f6-102">Playing Sounds (Visual Basic)</span></span>
 <span data-ttu-id="1e2f6-103">`My.Computer.Audio` 개체는 소리 재생 메서드를 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="1e2f6-103">The `My.Computer.Audio` object provides methods for playing sounds.</span></span>  

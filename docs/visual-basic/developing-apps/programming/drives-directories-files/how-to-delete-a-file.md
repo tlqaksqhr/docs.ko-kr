@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33588625"
 ---
 # <a name="how-to-delete-a-file-in-visual-basic"></a><span data-ttu-id="ac638-102">방법: Visual Basic에서 파일 삭제</span><span class="sxs-lookup"><span data-stu-id="ac638-102">How to: Delete a File in Visual Basic</span></span>
 <span data-ttu-id="ac638-103">`My.Computer.FileSystem` 개체의 `DeleteFile` 메서드를 사용하면 파일을 삭제할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="ac638-103">The `DeleteFile` method of the `My.Computer.FileSystem` object allows you to delete a file.</span></span> <span data-ttu-id="ac638-104">삭제된 파일을 **휴지통**으로 보낼지 여부, 사용자에게 파일 삭제를 확인하는 메시지를 표시할지 여부, 사용자가 작업을 취소할 때 수행할 작업 등의 옵션이 제공됩니다.</span><span class="sxs-lookup"><span data-stu-id="ac638-104">Among the options it offers are: whether to send the deleted file to the **Recycle Bin**, whether to ask the user to confirm that the file should be deleted, and what to do when the user cancels the operation.</span></span>  

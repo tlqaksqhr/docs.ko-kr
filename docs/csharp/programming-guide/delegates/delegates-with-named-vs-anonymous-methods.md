@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33330767"
 ---
 # <a name="delegates-with-named-vs-anonymous-methods-c-programming-guide"></a><span data-ttu-id="cb2e9-102">대리자 비교: 명명된 메서드 및 무명 메서드(C# 프로그래밍 가이드)</span><span class="sxs-lookup"><span data-stu-id="cb2e9-102">Delegates with Named vs. Anonymous Methods (C# Programming Guide)</span></span>
 <span data-ttu-id="cb2e9-103">[대리자](../../../csharp/language-reference/keywords/delegate.md)는 명명된 메서드에 연결할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="cb2e9-103">A [delegate](../../../csharp/language-reference/keywords/delegate.md) can be associated with a named method.</span></span> <span data-ttu-id="cb2e9-104">명명된 메서드를 사용하여 대리자를 인스턴스화하면 메서드가 매개 변수로 전달됩니다. 예를 들면 다음과 같습니다.</span><span class="sxs-lookup"><span data-stu-id="cb2e9-104">When you instantiate a delegate by using a named method, the method is passed as a parameter, for example:</span></span>  

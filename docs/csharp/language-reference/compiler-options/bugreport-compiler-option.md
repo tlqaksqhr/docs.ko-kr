@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33214094"
 ---
 # <a name="-bugreport-c-compiler-options"></a><span data-ttu-id="d9bd3-102">-bugreport(C# 컴파일러 옵션)</span><span class="sxs-lookup"><span data-stu-id="d9bd3-102">-bugreport (C# Compiler Options)</span></span>
 <span data-ttu-id="d9bd3-103">나중에 분석하기 위해 파일에 디버그 정보를 포함하도록 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="d9bd3-103">Specifies that debug information should be placed in a file for later analysis.</span></span>  

@@ -12,6 +12,7 @@ ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/15/2018
+ms.locfileid: "34171519"
 ---
 # <a name="-operator-c-reference"></a><span data-ttu-id="6e27d-102">|= 연산자(C# 참조)</span><span class="sxs-lookup"><span data-stu-id="6e27d-102">|= Operator (C# Reference)</span></span>
 <span data-ttu-id="6e27d-103">OR 대입 연산자입니다.</span><span class="sxs-lookup"><span data-stu-id="6e27d-103">The OR assignment operator.</span></span>  

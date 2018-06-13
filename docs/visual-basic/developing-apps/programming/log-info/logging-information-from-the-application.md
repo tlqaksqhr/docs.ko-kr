@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33589934"
 ---
 # <a name="logging-information-from-the-application-visual-basic"></a><span data-ttu-id="a5740-102">응용 프로그램의 정보 기록(Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="a5740-102">Logging Information from the Application (Visual Basic)</span></span>
 <span data-ttu-id="a5740-103">이 섹션에는 `My.Application.Log` 또는 `My.Log` 개체를 사용하여 응용 프로그램의 정보를 기록하는 방법과 응용 프로그램의 로깅 기능을 확장하는 방법을 설명하는 항목이 포함되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="a5740-103">This section contains topics that cover how to log information from your application using the `My.Application.Log` or `My.Log` object, and how to extend the application's logging capabilities.</span></span>  

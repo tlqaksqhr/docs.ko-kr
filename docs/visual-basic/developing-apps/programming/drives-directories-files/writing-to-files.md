@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33588121"
 ---
 # <a name="writing-to-files-in-visual-basic"></a><span data-ttu-id="b9ce3-102">Visual Basic에서 파일에 쓰기</span><span class="sxs-lookup"><span data-stu-id="b9ce3-102">Writing to Files in Visual Basic</span></span>
 <span data-ttu-id="b9ce3-103">이 섹션에서는 파일에 쓰기와 관련된 작업을 수행하는 방법을 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="b9ce3-103">This section explains how to perform tasks that involve writing to files.</span></span>  

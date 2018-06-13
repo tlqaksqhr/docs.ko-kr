@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33398237"
 ---
 # <a name="specifying-a-character-set"></a><span data-ttu-id="7ca80-102">문자 집합 지정</span><span class="sxs-lookup"><span data-stu-id="7ca80-102">Specifying a Character Set</span></span>
 <span data-ttu-id="7ca80-103"><xref:System.Runtime.InteropServices.DllImportAttribute.CharSet?displayProperty=nameWithType> 필드는 문자열 마샬링을 제어하고 플랫폼 호출이 DLL에서 함수 이름을 찾는 방법을 결정합니다.</span><span class="sxs-lookup"><span data-stu-id="7ca80-103">The <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet?displayProperty=nameWithType> field controls string marshaling and determines how platform invoke finds function names in a DLL.</span></span> <span data-ttu-id="7ca80-104">이 항목에서는 두 동작에 대해 모두 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="7ca80-104">This topic describes both behaviors.</span></span>  

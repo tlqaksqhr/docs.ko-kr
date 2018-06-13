@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33332756"
 ---
 # <a name="expression-bodied-members-c-programming-guide"></a><span data-ttu-id="990df-102">식 본문 멤버(C# 프로그래밍 가이드)</span><span class="sxs-lookup"><span data-stu-id="990df-102">Expression-bodied members (C# programming guide)</span></span>
 <span data-ttu-id="990df-103">식 본문 정의를 사용하면 간결하고 읽을 수 있는 형식으로 멤버 구현을 제공할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="990df-103">Expression body definitions let you provide a member's implementation in a very concise, readable form.</span></span> <span data-ttu-id="990df-104">메서드 또는 속성과 같은 지원되는 멤버에 대한 논리가 단일 식으로 구성된 경우 식 본문 정의를 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="990df-104">You can use an expression body definition whenever the logic for any supported member, such as a method or property, consists of a single expression.</span></span> <span data-ttu-id="990df-105">식 본문 정의의 일반 구문은 다음과 같습니다.</span><span class="sxs-lookup"><span data-stu-id="990df-105">An expression body definition has the following general syntax:</span></span>

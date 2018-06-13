@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33212464"
 ---
 # <a name="-optimize-c-compiler-options"></a><span data-ttu-id="de1a5-102">-optimize(C# 컴파일러 옵션)</span><span class="sxs-lookup"><span data-stu-id="de1a5-102">-optimize (C# Compiler Options)</span></span>
 <span data-ttu-id="de1a5-103">**-optimize** 옵션은 컴파일러에서 더 작지만 빠르고 효율적인 출력 파일을 만들기 위해 수행하는 최적화 기능을 사용하거나 사용하지 않도록 설정합니다.</span><span class="sxs-lookup"><span data-stu-id="de1a5-103">The **-optimize** option enables or disables optimizations performed by the compiler to make your output file smaller, faster, and more efficient.</span></span>  
