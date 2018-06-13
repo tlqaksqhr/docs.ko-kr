@@ -16,6 +16,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32741908"
 ---
 # <a name="how-to-load-assemblies-into-an-application-domain"></a><span data-ttu-id="55983-102">방법: 응용 프로그램 도메인에 어셈블리 로드</span><span class="sxs-lookup"><span data-stu-id="55983-102">How to: Load Assemblies into an Application Domain</span></span>
 <span data-ttu-id="55983-103">응용 프로그램 도메인에 어셈블리를 로드하는 방법에는 여러 가지가 있습니다.</span><span class="sxs-lookup"><span data-stu-id="55983-103">There are several ways to load an assembly into an application domain.</span></span> <span data-ttu-id="55983-104"><xref:System.Reflection.Assembly?displayProperty=nameWithType> 클래스의 `static`(Visual Basic에서는 `Shared`) <xref:System.Reflection.Assembly.Load%2A> 메서드를 사용하는 것이 좋습니다.</span><span class="sxs-lookup"><span data-stu-id="55983-104">The recommended way is to use the `static` (`Shared` in Visual Basic) <xref:System.Reflection.Assembly.Load%2A> method of the <xref:System.Reflection.Assembly?displayProperty=nameWithType> class.</span></span> <span data-ttu-id="55983-105">어셈블리를 로드할 수 있는 다른 방법은 다음과 같습니다.</span><span class="sxs-lookup"><span data-stu-id="55983-105">Other ways assemblies can be loaded include:</span></span>  

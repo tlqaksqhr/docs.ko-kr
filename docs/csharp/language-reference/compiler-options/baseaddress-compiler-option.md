@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33215234"
 ---
 # <a name="-baseaddress-c-compiler-options"></a><span data-ttu-id="3c3e1-102">-baseaddress(C# 컴파일러 옵션)</span><span class="sxs-lookup"><span data-stu-id="3c3e1-102">-baseaddress (C# Compiler Options)</span></span>
 <span data-ttu-id="3c3e1-103">**-baseaddress** 옵션을 사용하면 DLL을 로드할 기본 기준 주소를 지정할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="3c3e1-103">The **-baseaddress** option lets you specify the preferred base address at which to load a DLL.</span></span> <span data-ttu-id="3c3e1-104">이 옵션을 사용하는 시기와 이유에 대한 자세한 내용은 [Larry Osterman's WebLog](https://blogs.msdn.microsoft.com/larryosterman/2004/07/06/why-should-i-even-bother-to-use-dlls-in-my-system/)를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="3c3e1-104">For more information about when and why to use this option, see [Larry Osterman's WebLog](https://blogs.msdn.microsoft.com/larryosterman/2004/07/06/why-should-i-even-bother-to-use-dlls-in-my-system/).</span></span>  

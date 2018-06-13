@@ -18,6 +18,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32742792"
 ---
 # <a name="ltaddgt-element-for-webrequestmodules-network-settings"></a><span data-ttu-id="b3da9-102">&lt;추가&gt; webRequestModules (네트워크 설정)에 대 한 요소</span><span class="sxs-lookup"><span data-stu-id="b3da9-102">&lt;add&gt; Element for webRequestModules (Network Settings)</span></span>
 <span data-ttu-id="b3da9-103">응용 프로그램에 사용자 지정 웹 요청 모듈을 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="b3da9-103">Adds a custom Web request module to the application.</span></span>  

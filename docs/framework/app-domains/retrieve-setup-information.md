@@ -17,6 +17,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32743890"
 ---
 # <a name="retrieving-setup-information-from-an-application-domain"></a><span data-ttu-id="172df-102">응용 프로그램 도메인에서 설치 정보 검색</span><span class="sxs-lookup"><span data-stu-id="172df-102">Retrieving Setup Information from an Application Domain</span></span>
 <span data-ttu-id="172df-103">응용 프로그램 도메인의 각 인스턴스는 두 속성과 <xref:System.AppDomainSetup> 정보로 구성됩니다.</span><span class="sxs-lookup"><span data-stu-id="172df-103">Each instance of an application domain consists of both properties and <xref:System.AppDomainSetup> information.</span></span> <span data-ttu-id="172df-104"><xref:System.AppDomain?displayProperty=nameWithType> 클래스를 사용하여 응용 프로그램 도메인에서 설치 정보를 검색할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="172df-104">You can retrieve setup information from an application domain using the <xref:System.AppDomain?displayProperty=nameWithType> class.</span></span> <span data-ttu-id="172df-105">이 클래스는 응용 프로그램 도메인에 대한 구성 정보를 검색하는 여러 멤버를 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="172df-105">This class provides several members that retrieve configuration information about an application domain.</span></span>  

@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33572790"
 ---
 # <a name="xml-document-creation"></a><span data-ttu-id="64470-102">XML 문서 만들기</span><span class="sxs-lookup"><span data-stu-id="64470-102">XML Document Creation</span></span>
 <span data-ttu-id="64470-103">XML 문서를 만드는 방법에는 두 가지가 있습니다.</span><span class="sxs-lookup"><span data-stu-id="64470-103">There are two ways to create an XML document.</span></span> <span data-ttu-id="64470-104">하나는 매개 변수 없이 **XmlDocument**를 만드는 방법이고</span><span class="sxs-lookup"><span data-stu-id="64470-104">One way is to create an **XmlDocument** with no parameters.</span></span> <span data-ttu-id="64470-105">다른 방법은 **XmlDocument**를 만들어 XmlNameTable를 매개 변수로 전달하는 것입니다.</span><span class="sxs-lookup"><span data-stu-id="64470-105">The other way is to create an **XmlDocument** and pass it an XmlNameTable as a parameter.</span></span> <span data-ttu-id="64470-106">다음 예제에서는 매개 변수를 사용하지 않고 비어 있는 새 **XmlDocument**를 만드는 방법을 보여줍니다.</span><span class="sxs-lookup"><span data-stu-id="64470-106">The following example shows how to create a new, empty **XmlDocument** using no parameters.</span></span>  

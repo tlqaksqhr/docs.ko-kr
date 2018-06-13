@@ -22,6 +22,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32743422"
 ---
 # <a name="assembly-security-considerations"></a><span data-ttu-id="f3061-102">어셈블리 보안 고려 사항</span><span class="sxs-lookup"><span data-stu-id="f3061-102">Assembly Security Considerations</span></span>
 <a name="top"></a> <span data-ttu-id="f3061-103">어셈블리를 빌드할 때 어셈블리를 실행하는 데 필요한 권한을 지정할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="f3061-103">When you build an assembly, you can specify a set of permissions that the assembly requires to run.</span></span> <span data-ttu-id="f3061-104">어셈블리에 대한 특정 권한 부여 여부는 증명 정보를 바탕으로 합니다.</span><span class="sxs-lookup"><span data-stu-id="f3061-104">Whether certain permissions are granted or not granted to an assembly is based on evidence.</span></span>  

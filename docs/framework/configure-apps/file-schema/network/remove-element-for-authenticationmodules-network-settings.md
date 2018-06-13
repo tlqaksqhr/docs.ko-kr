@@ -18,6 +18,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32742392"
 ---
 # <a name="ltremovegt-element-for-authenticationmodules-network-settings"></a><span data-ttu-id="ce95a-102">&lt;제거&gt; authenticationModules (네트워크 설정)에 대 한 요소</span><span class="sxs-lookup"><span data-stu-id="ce95a-102">&lt;remove&gt; Element for authenticationModules (Network Settings)</span></span>
 <span data-ttu-id="ce95a-103">응용 프로그램에서 사용자 지정 인증 모듈을 제거합니다.</span><span class="sxs-lookup"><span data-stu-id="ce95a-103">Removes an authentication module from the application.</span></span>  

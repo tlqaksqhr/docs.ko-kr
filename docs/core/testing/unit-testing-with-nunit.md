@@ -8,6 +8,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33214408"
 ---
 # <a name="unit-testing-c-with-nunit-and-net-core"></a><span data-ttu-id="d8ba5-103">NUnit 및 .NET Core를 사용한 C# 유닛 테스트</span><span class="sxs-lookup"><span data-stu-id="d8ba5-103">Unit testing C# with NUnit and .NET Core</span></span>
 

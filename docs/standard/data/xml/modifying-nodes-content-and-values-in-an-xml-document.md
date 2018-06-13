@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33571438"
 ---
 # <a name="modifying-nodes-content-and-values-in-an-xml-document"></a><span data-ttu-id="d0e50-102">XML 문서에서 노드, 내용 및 값 수정</span><span class="sxs-lookup"><span data-stu-id="d0e50-102">Modifying Nodes, Content, and Values in an XML Document</span></span>
 <span data-ttu-id="d0e50-103">여러 가지 방법으로 문서에서 노드와 내용을 수정할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="d0e50-103">There are many ways you can modify the nodes and content in a document.</span></span> <span data-ttu-id="d0e50-104">다음과 같은 작업을 수행할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="d0e50-104">You can:</span></span>  

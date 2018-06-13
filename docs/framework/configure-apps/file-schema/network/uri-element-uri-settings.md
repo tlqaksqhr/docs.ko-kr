@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32742811"
 ---
 # <a name="lturigt-element-uri-settings"></a><span data-ttu-id="c0f93-102">&lt;Uri&gt; 요소 (Uri 설정)</span><span class="sxs-lookup"><span data-stu-id="c0f93-102">&lt;Uri&gt; Element (Uri Settings)</span></span>
 <span data-ttu-id="c0f93-103">.NET Framework 웹 주소 (Uri) uniform resource identifier를 사용 하 여 표시를 처리 하는 방법을 지정 하는 설정을 포함 합니다.</span><span class="sxs-lookup"><span data-stu-id="c0f93-103">Contains settings that specify how the .NET Framework handles web addresses expressed using uniform resource identifiers (URIs).</span></span>  

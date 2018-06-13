@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33519719"
 ---
 # <a name="how-to-support-com-interop-by-displaying-a-windows-form-with-the-showdialog-method"></a><span data-ttu-id="94f79-102">방법: ShowDialog 메서드로 Windows Form을 표시하여 COM Interop 지원</span><span class="sxs-lookup"><span data-stu-id="94f79-102">How to: Support COM Interop by Displaying a Windows Form with the ShowDialog Method</span></span>
 <span data-ttu-id="94f79-103"><xref:System.Windows.Forms.Application.Run%2A?displayProperty=nameWithType> 메서드를 사용하여 만드는 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 메시지 루프에 Windows Form에 표시하여 COM(구성 요소 개체 모델) 상호 운용성 문제를 해결할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="94f79-103">You can resolve Component Object Model (COM) interoperability problems by displaying your Windows Form on a [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] message loop, which is created by using the <xref:System.Windows.Forms.Application.Run%2A?displayProperty=nameWithType> method.</span></span>  

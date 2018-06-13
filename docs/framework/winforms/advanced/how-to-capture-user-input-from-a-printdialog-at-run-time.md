@@ -1,13 +1,6 @@
 ---
-title: "방법: 런타임에 PrintDialog에서 사용자 입력 캡처"
-ms.custom: 
+title: '방법: 런타임에 PrintDialog에서 사용자 입력 캡처'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -18,25 +11,21 @@ helpviewer_keywords:
 - print options
 - run time [Windows Forms], changing print options
 ms.assetid: 438501d8-9a70-4fb3-aae6-e46579aba0c6
-caps.latest.revision: "19"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 5fcc2ccc240752c8c54c28fe2358d3ef49cbf3b6
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 554c3c43f8ac4d41ddfc8651472d0b7fbed960bb
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33522878"
 ---
-# <a name="how-to-capture-user-input-from-a-printdialog-at-run-time"></a><span data-ttu-id="4df26-102">방법: 런타임에 PrintDialog에서 사용자 입력 캡처</span><span class="sxs-lookup"><span data-stu-id="4df26-102">How to: Capture User Input from a PrintDialog at Run Time</span></span>
-<span data-ttu-id="4df26-103">디자인 타임에 인쇄와 관련 된 옵션을 설정할 수 있지만 런타임 시 사용자가을 선택한 경우에 가능성이 가장 높은 이러한 옵션을 변경 하려는 경우에 따라 합니다.</span><span class="sxs-lookup"><span data-stu-id="4df26-103">While you can set options related to printing at design time, you will sometimes want to change these options at run time, most likely because of choices made by the user.</span></span> <span data-ttu-id="4df26-104">사용 하 여 문서 인쇄를 위한 사용자 입력을 캡처할 수 있습니다는 <xref:System.Windows.Forms.PrintDialog> 및 <xref:System.Drawing.Printing.PrintDocument> 구성 요소입니다.</span><span class="sxs-lookup"><span data-stu-id="4df26-104">You can capture user input for printing a document using the <xref:System.Windows.Forms.PrintDialog> and the <xref:System.Drawing.Printing.PrintDocument> components.</span></span>  
+# <a name="how-to-capture-user-input-from-a-printdialog-at-run-time"></a><span data-ttu-id="23f58-102">방법: 런타임에 PrintDialog에서 사용자 입력 캡처</span><span class="sxs-lookup"><span data-stu-id="23f58-102">How to: Capture User Input from a PrintDialog at Run Time</span></span>
+<span data-ttu-id="23f58-103">디자인 타임에 인쇄와 관련 된 옵션을 설정할 수 있지만 런타임 시 사용자가을 선택한 경우에 가능성이 가장 높은 이러한 옵션을 변경 하려는 경우에 따라 합니다.</span><span class="sxs-lookup"><span data-stu-id="23f58-103">While you can set options related to printing at design time, you will sometimes want to change these options at run time, most likely because of choices made by the user.</span></span> <span data-ttu-id="23f58-104">사용 하 여 문서 인쇄를 위한 사용자 입력을 캡처할 수 있습니다는 <xref:System.Windows.Forms.PrintDialog> 및 <xref:System.Drawing.Printing.PrintDocument> 구성 요소입니다.</span><span class="sxs-lookup"><span data-stu-id="23f58-104">You can capture user input for printing a document using the <xref:System.Windows.Forms.PrintDialog> and the <xref:System.Drawing.Printing.PrintDocument> components.</span></span>  
   
-### <a name="to-change-print-options-programmatically"></a><span data-ttu-id="4df26-105">인쇄 옵션을 프로그래밍 방식으로 변경 하려면</span><span class="sxs-lookup"><span data-stu-id="4df26-105">To change print options programmatically</span></span>  
+### <a name="to-change-print-options-programmatically"></a><span data-ttu-id="23f58-105">인쇄 옵션을 프로그래밍 방식으로 변경 하려면</span><span class="sxs-lookup"><span data-stu-id="23f58-105">To change print options programmatically</span></span>  
   
-1.  <span data-ttu-id="4df26-106">추가 <xref:System.Windows.Forms.PrintDialog> 및 <xref:System.Drawing.Printing.PrintDocument> 폼 구성 요소입니다.</span><span class="sxs-lookup"><span data-stu-id="4df26-106">Add a <xref:System.Windows.Forms.PrintDialog> and a <xref:System.Drawing.Printing.PrintDocument> component to your form.</span></span>  
+1.  <span data-ttu-id="23f58-106">추가 <xref:System.Windows.Forms.PrintDialog> 및 <xref:System.Drawing.Printing.PrintDocument> 폼 구성 요소입니다.</span><span class="sxs-lookup"><span data-stu-id="23f58-106">Add a <xref:System.Windows.Forms.PrintDialog> and a <xref:System.Drawing.Printing.PrintDocument> component to your form.</span></span>  
   
-2.  <span data-ttu-id="4df26-107">설정의 <xref:System.Windows.Forms.PrintDialog.Document%2A> 의 속성은 <xref:System.Windows.Forms.PrintDialog> 에 <xref:System.Drawing.Printing.PrintDocument> 폼에 추가 합니다.</span><span class="sxs-lookup"><span data-stu-id="4df26-107">Set the <xref:System.Windows.Forms.PrintDialog.Document%2A> property of the <xref:System.Windows.Forms.PrintDialog> to the <xref:System.Drawing.Printing.PrintDocument> added to the form.</span></span>  
+2.  <span data-ttu-id="23f58-107">설정의 <xref:System.Windows.Forms.PrintDialog.Document%2A> 의 속성은 <xref:System.Windows.Forms.PrintDialog> 에 <xref:System.Drawing.Printing.PrintDocument> 폼에 추가 합니다.</span><span class="sxs-lookup"><span data-stu-id="23f58-107">Set the <xref:System.Windows.Forms.PrintDialog.Document%2A> property of the <xref:System.Windows.Forms.PrintDialog> to the <xref:System.Drawing.Printing.PrintDocument> added to the form.</span></span>  
   
     ```vb  
     PrintDialog1.Document = PrintDocument1  
@@ -50,7 +39,7 @@ ms.lasthandoff: 12/22/2017
     printDialog1->Document = PrintDocument1;  
     ```  
   
-3.  <span data-ttu-id="4df26-108">표시는 <xref:System.Windows.Forms.PrintDialog> 를 사용 하 여 구성 요소는 <xref:System.Windows.Forms.CommonDialog.ShowDialog%2A> 메서드.</span><span class="sxs-lookup"><span data-stu-id="4df26-108">Display the <xref:System.Windows.Forms.PrintDialog> component by using the <xref:System.Windows.Forms.CommonDialog.ShowDialog%2A> method.</span></span>  
+3.  <span data-ttu-id="23f58-108">표시는 <xref:System.Windows.Forms.PrintDialog> 를 사용 하 여 구성 요소는 <xref:System.Windows.Forms.CommonDialog.ShowDialog%2A> 메서드.</span><span class="sxs-lookup"><span data-stu-id="23f58-108">Display the <xref:System.Windows.Forms.PrintDialog> component by using the <xref:System.Windows.Forms.CommonDialog.ShowDialog%2A> method.</span></span>  
   
     ```vb  
     PrintDialog1.ShowDialog()  
@@ -64,8 +53,8 @@ ms.lasthandoff: 12/22/2017
     printDialog1->ShowDialog();  
     ```  
   
-4.  <span data-ttu-id="4df26-109">사용자의 인쇄 선택 대화 상자에서 복사할 수는 <xref:System.Drawing.Printing.PrinterSettings> 의 속성은 <xref:System.Drawing.Printing.PrintDocument> 구성 요소입니다.</span><span class="sxs-lookup"><span data-stu-id="4df26-109">The user's printing choices from the dialog will be copied to the <xref:System.Drawing.Printing.PrinterSettings> property of the <xref:System.Drawing.Printing.PrintDocument> component.</span></span>  
+4.  <span data-ttu-id="23f58-109">사용자의 인쇄 선택 대화 상자에서 복사할 수는 <xref:System.Drawing.Printing.PrinterSettings> 의 속성은 <xref:System.Drawing.Printing.PrintDocument> 구성 요소입니다.</span><span class="sxs-lookup"><span data-stu-id="23f58-109">The user's printing choices from the dialog will be copied to the <xref:System.Drawing.Printing.PrinterSettings> property of the <xref:System.Drawing.Printing.PrintDocument> component.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="4df26-110">참고 항목</span><span class="sxs-lookup"><span data-stu-id="4df26-110">See Also</span></span>  
- [<span data-ttu-id="4df26-111">방법: Windows Forms에서 다중 페이지 텍스트 파일 인쇄</span><span class="sxs-lookup"><span data-stu-id="4df26-111">How to: Print a Multi-Page Text File in Windows Forms</span></span>](../../../../docs/framework/winforms/advanced/how-to-print-a-multi-page-text-file-in-windows-forms.md)  
- [<span data-ttu-id="4df26-112">Windows Forms 인쇄 지원</span><span class="sxs-lookup"><span data-stu-id="4df26-112">Windows Forms Print Support</span></span>](../../../../docs/framework/winforms/advanced/windows-forms-print-support.md)
+## <a name="see-also"></a><span data-ttu-id="23f58-110">참고 항목</span><span class="sxs-lookup"><span data-stu-id="23f58-110">See Also</span></span>  
+ [<span data-ttu-id="23f58-111">방법: Windows Forms에서 다중 페이지 텍스트 파일 인쇄</span><span class="sxs-lookup"><span data-stu-id="23f58-111">How to: Print a Multi-Page Text File in Windows Forms</span></span>](../../../../docs/framework/winforms/advanced/how-to-print-a-multi-page-text-file-in-windows-forms.md)  
+ [<span data-ttu-id="23f58-112">Windows Forms 인쇄 지원</span><span class="sxs-lookup"><span data-stu-id="23f58-112">Windows Forms Print Support</span></span>](../../../../docs/framework/winforms/advanced/windows-forms-print-support.md)

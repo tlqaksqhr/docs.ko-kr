@@ -9,6 +9,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32767429"
 ---
 # <a name="ltclaimtypegt"></a><span data-ttu-id="ae9f4-102">&lt;ClaimType&gt;</span><span class="sxs-lookup"><span data-stu-id="ae9f4-102">&lt;claimType&gt;</span></span>
 <span data-ttu-id="ae9f4-103">들어오는 보안 토큰에 대 한 단일 옵션 또는 필요한 클레임을 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="ae9f4-103">Specifies a single optional or required claim for incoming security tokens.</span></span>  

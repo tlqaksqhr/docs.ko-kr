@@ -18,6 +18,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32742902"
 ---
 # <a name="ltaddgt-element-for-authenticationmodules-network-settings"></a><span data-ttu-id="bbf61-102">&lt;추가&gt; authenticationModules (네트워크 설정)에 대 한 요소</span><span class="sxs-lookup"><span data-stu-id="bbf61-102">&lt;add&gt; Element for authenticationModules (Network Settings)</span></span>
 <span data-ttu-id="bbf61-103">응용 프로그램에 사용자 지정 인증 모듈을 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="bbf61-103">Adds an authentication module to the application.</span></span>  

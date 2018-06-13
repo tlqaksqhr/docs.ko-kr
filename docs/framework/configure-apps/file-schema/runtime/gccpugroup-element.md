@@ -12,6 +12,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32744020"
 ---
 # <a name="ltgccpugroupgt-element"></a><span data-ttu-id="bc876-102">&lt;GCCpuGroup&gt; 요소</span><span class="sxs-lookup"><span data-stu-id="bc876-102">&lt;GCCpuGroup&gt; Element</span></span>
 <span data-ttu-id="bc876-103">가비지 수집에서 여러 CPU 그룹을 지원할지를 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="bc876-103">Specifies whether garbage collection supports multiple CPU groups.</span></span>  

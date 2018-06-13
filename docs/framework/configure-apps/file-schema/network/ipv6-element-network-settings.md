@@ -16,6 +16,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32742486"
 ---
 # <a name="ltipv6gt-element-network-settings"></a><span data-ttu-id="6d7f1-102">&lt;ipv6&gt; 요소 (네트워크 설정)</span><span class="sxs-lookup"><span data-stu-id="6d7f1-102">&lt;ipv6&gt; Element (Network Settings)</span></span>
 <span data-ttu-id="6d7f1-103">인터넷 프로토콜 버전 6 (IPv6)의 사용 되지 않는 멤버의 응답은 <xref:System.Net.Dns> 클래스입니다.</span><span class="sxs-lookup"><span data-stu-id="6d7f1-103">Enables Internet Protocol version 6 (IPv6) responses from obsolete members of the <xref:System.Net.Dns> class.</span></span>  

@@ -15,6 +15,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32742246"
 ---
 # <a name="type-forwarding-in-the-common-language-runtime"></a><span data-ttu-id="a039f-102">공용 언어 런타임의 형식 전달</span><span class="sxs-lookup"><span data-stu-id="a039f-102">Type Forwarding in the Common Language Runtime</span></span>
 <span data-ttu-id="a039f-103">형식 전달을 사용하면 원본 어셈블리를 사용하는 응용 프로그램을 다시 컴파일하지 않고도 형식을 다른 어셈블리로 이동할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="a039f-103">Type forwarding allows you to move a type to another assembly without having to recompile applications that use the original assembly.</span></span>  
