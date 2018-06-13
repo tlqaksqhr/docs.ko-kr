@@ -9,6 +9,7 @@ ms.sourcegitcommit: 895c7602386a6dfe7ca4facce3d965b27e5c6e87
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/19/2018
+ms.locfileid: "34312211"
 ---
 # <a name="object-doesnt-support-this-action-visual-basic"></a>개체가 이 작업을 지원하지 않습니다(Visual Basic).
 이 개체에서 지원되지 않는 메서드 또는 속성을 참조했습니다.  

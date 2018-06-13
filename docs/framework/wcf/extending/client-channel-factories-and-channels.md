@@ -7,6 +7,7 @@ ms.sourcegitcommit: b7763f3435635850a76d4cbcf09bdce6c019208a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/25/2018
+ms.locfileid: "34483556"
 ---
 # <a name="client-channel-factories-and-channels"></a>클라이언트: 채널 팩터리 및 채널
 이 항목에서는 채널 팩터리 및 채널 만들기에 대해 설명합니다.  

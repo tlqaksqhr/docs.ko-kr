@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33590123"
 ---
 # <a name="how-to-change-the-appearance-of-a-datarepeater-control-visual-studio"></a>방법: DataRepeater 컨트롤의 모양 변경(Visual Studio)
 모양을 변경할 수 있습니다는 <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> 속성을 설정 하 여 디자인 타임 또는 런타임에 처리 하 여 컨트롤의 <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.DrawItem> 이벤트입니다.  

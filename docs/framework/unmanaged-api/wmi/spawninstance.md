@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 3f8189f0adb62aa32cd0b85ca5a653aa466c7032
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33460465"
 ---
 # <a name="spawninstance-function"></a>SpawnInstance 함수
 클래스의 새 인스턴스를 만듭니다.    

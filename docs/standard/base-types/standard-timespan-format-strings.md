@@ -24,6 +24,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33578309"
 ---
 # <a name="standard-timespan-format-strings"></a>표준 TimeSpan 서식 문자열
 <a name="Top"></a> 표준 <xref:System.TimeSpan> 형식 문자열은 단일 형식 지정자를 사용하여 서식 지정 작업으로 생성되는 <xref:System.TimeSpan> 값의 텍스트 표현을 정의합니다. 공백을 포함하여 문자가 두 개 이상 포함된 형식 문자열은 사용자 지정 <xref:System.TimeSpan> 형식 문자열로 해석됩니다. 자세한 내용은 [사용자 지정 TimeSpan 서식 문자열](../../../docs/standard/base-types/custom-timespan-format-strings.md)을 참조하세요.  

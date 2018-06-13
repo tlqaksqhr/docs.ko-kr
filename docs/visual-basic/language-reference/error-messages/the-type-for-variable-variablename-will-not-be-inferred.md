@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33594285"
 ---
 # <a name="the-type-for-variable-39ltvariablenamegt39-will-not-be-inferred-because-it-is-bound-to-a-field-in-an-enclosing-scope"></a>변수 형식이 &#39; &lt;variablename&gt; &#39; 괄호로 묶인 범위 내의 필드에 바인딩되어 있기 때문에 유추 되지 것입니다
 변수 형식이 '\<variablename >'의 필드는 바깥쪽 범위에 바인딩되어 있기 때문에 유추 되지 것입니다. 이름을 변경 하거나 '\<variablename >', 하거나 정규화 된 이름 (예: 'Me.variablename' 또는 'MyBase.variablename')를 사용 합니다.  

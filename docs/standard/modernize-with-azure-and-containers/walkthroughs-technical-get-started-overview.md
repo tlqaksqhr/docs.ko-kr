@@ -9,6 +9,7 @@ ms.sourcegitcommit: 88f251b08bf0718ce119f3d7302f514b74895038
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "34027391"
 ---
 # <a name="walkthroughs-and-technical-get-started-overview"></a>연습 및 technical 시작된 개요 가져오기
 

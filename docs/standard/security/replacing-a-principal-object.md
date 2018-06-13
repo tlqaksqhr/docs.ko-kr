@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33581166"
 ---
 # <a name="replacing-a-principal-object"></a>Principal 개체 바꾸기
 인증 서비스를 제공하는 응용 프로그램은 지정된 스레드에 대해 **Principal** 개체(<xref:System.Security.Principal.IPrincipal>)를 대체할 수 있어야 합니다. 또한 보안 시스템은 **Principal** 개체를 대체하는 기능을 보호할 수 있어야 합니다. 악의적으로 연결된 잘못된 **Principal** 은 허위 ID 또는 역할을 요청함으로써 응용 프로그램의 보안을 손상시킵니다. 따라서 응용 프로그램 할 수 있는 대체 하는 기능 **주** 부여 해야 하는 개체는 <xref:System.Security.Permissions.SecurityPermission?displayProperty=nameWithType> 주 컨트롤에 대 한 개체입니다. (이 사용 권한은 역할을 기반으로 하는 보안 검사를 수행하거나 **Principal** 개체를 만들 때는 필요하지 않습니다.)  

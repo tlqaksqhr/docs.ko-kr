@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33585478"
 ---
 # <a name="cannot-convert-anonymous-type-to-expression-tree-because-it-contains-a-field-that-is-used-in-the-initialization-of-another-field"></a>익명 형식이 다른 필드를 초기화하는 데 사용되는 필드를 포함하고 있으므로 식 트리로 변환할 수 없습니다.
 익명 형식의 한 속성은 익명 형식의 다른 속성을 초기화 하는 데 사용 하는 경우 컴파일러는 익명의 식 트리로 변환할을 허용 하지 않습니다. 예를 들어, 다음 코드에서에서 `Prop1` 초기화 목록에서 선언 되 고 다음에 대 한 초기 값으로 사용 `Prop2`합니다.  

@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33579179"
 ---
 # <a name="implementing-event-based-communication-between-microservices-integration-events"></a>마이크로 서비스(통합 이벤트) 간 이벤트 기반 통신 구현
 

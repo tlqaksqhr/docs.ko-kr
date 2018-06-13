@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33598442"
 ---
 # <a name="all-field-widths-except-the-last-element-must-be-greater-than-zero"></a>마지막 요소를 제외한 모든 필드 너비는 0보다 커야 합니다.
 마지막 요소를 제외한 모든 필드 너비는 0보다 커야 합니다. 마지막 요소의 0보다 작거나 같은 필드 너비는 마지막 필드가 가변 길이임을 나타냅니다.  

@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33593235"
 ---
 # <a name="39region39-and-39end-region39-statements-are-not-valid-within-method-bodiesmultiline-lambdas"></a>&#39;#Region&#39; 및 &#39;#End 지역&#39; 문은 메서드 본문/여러 줄 람다 식 내에서 유효 하지 않습니다.
 `#Region` 블록 클래스, 모듈 또는 네임 스페이스 수준에서 선언 해야 합니다. 축소 가능한 영역에는 하나 이상의 프로시저 포함할 수 있지만 시작 되거나 프로시저 내부에서 완료 된 것입니다.  

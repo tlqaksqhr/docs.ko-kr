@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33581409"
 ---
 # <a name="serialization-tools"></a>Serialization 도구
 이 단원에는 serialization 도구에 대한 자세한 설명이 들어 있습니다. 명령줄에서 모든 도구를 실행할 수 있습니다.  

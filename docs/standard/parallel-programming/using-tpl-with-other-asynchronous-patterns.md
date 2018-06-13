@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33580928"
 ---
 # <a name="using-tpl-with-other-asynchronous-patterns"></a>TPL과 기타 비동기 패턴 사용
 작업 병렬 라이브러리는 일반적인 .NET Framework 비동기 프로그래밍 패턴과 함께 다양한 방법으로 사용할 수 있습니다.  

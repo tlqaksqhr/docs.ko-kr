@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33578276"
 ---
 # <a name="parameter-design"></a>매개 변수 디자인
 이 섹션 인수 검사에 대 한 지침과 섹션을 추가 하는 매개 변수 디자인에는 광범위 한 지침을 제공 합니다. 에 설명 된 지침을 참조 해야 또한 [매개 변수 이름 지정](../../../docs/standard/design-guidelines/naming-parameters.md)합니다.  

@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33579251"
 ---
 # <a name="enum-design"></a>열거형 디자인
 열거형은 특수 한 유형의 값 형식입니다. 열거형의 두 종류가: 단순 열거형 및 플래그 열거형입니다.  

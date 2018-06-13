@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33593745"
 ---
 # <a name="property-not-found"></a>속성을 찾을 수 없습니다.
 이 개체는 지정된 된 속성을 지원 하지 않습니다.  

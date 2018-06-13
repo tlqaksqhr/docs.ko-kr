@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33585530"
 ---
 # <a name="device-io-error"></a>장치 입/출력(I/O) 오류입니다.
 사용자 프로그램에서 프린터 또는 디스크 드라이브와 같은 장치를 사용 하는 동안 입력 또는 출력 오류가 발생 합니다.  

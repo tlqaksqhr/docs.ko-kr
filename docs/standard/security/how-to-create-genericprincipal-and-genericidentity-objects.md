@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33581780"
 ---
 # <a name="how-to-create-genericprincipal-and-genericidentity-objects"></a>방법: GenericPrincipal 및 GenericIdentity 개체 만들기
 사용할 수는 <xref:System.Security.Principal.GenericIdentity> 클래스와 함께 <xref:System.Security.Principal.GenericPrincipal> 를 Windows 도메인의 독립적인 존재 하는 권한 부여 체계를 만드는 클래스입니다.  

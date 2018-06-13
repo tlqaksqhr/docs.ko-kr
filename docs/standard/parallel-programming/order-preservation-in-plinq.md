@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33591642"
 ---
 # <a name="order-preservation-in-plinq"></a>PLINQ에서 순서 유지
 PLINQ에서 목표는 정확성을 유지하면서 성능을 최대화하는 것입니다. 쿼리는 가능한 한 빠르게 실행되지만 올바른 결과를 생성해야 합니다. 경우에 따라 정확성을 위해 소스 시퀀스의 순서를 유지해야 하지만 순서 지정의 계산 비용이 높을 수 있습니다. 따라서 기본적으로 PLINQ는 소스 시퀀스의 순서를 유지하지 않습니다. 이와 관련하여 PLINQ는 [!INCLUDE[vbtecdlinq](../../../includes/vbtecdlinq-md.md)]과 비슷하지만 순서를 유지하는 LINQ to Objects와는 다릅니다.  

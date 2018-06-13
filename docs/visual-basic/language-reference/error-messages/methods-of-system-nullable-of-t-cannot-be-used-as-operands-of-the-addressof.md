@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33594122"
 ---
 # <a name="methods-of-39systemnullableof-t39-cannot-be-used-as-operands-of-the-39addressof39-operator"></a>메서드 &#39;System.Nullable (Of T)&#39; 의 피연산자로 사용할 수 없습니다는 &#39;AddressOf&#39; 연산자
 문을 사용 하 여는 `AddressOf` 의 프로시저를 나타내는 피연산자와 연산자는 <xref:System.Nullable%601> 구조입니다.  

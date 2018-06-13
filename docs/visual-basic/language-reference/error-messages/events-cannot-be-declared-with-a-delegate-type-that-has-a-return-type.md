@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33586466"
 ---
 # <a name="events-cannot-be-declared-with-a-delegate-type-that-has-a-return-type"></a>이벤트는 반환 형식이 있는 대리자 형식으로 선언할 수 없습니다.
 Function 프로시저에 대 한 대리자를 지정 했습니다.  

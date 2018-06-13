@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33594473"
 ---
 # <a name="nested-function-does-not-have-a-signature-that-is-compatible-with-delegate-39ltdelegatenamegt39"></a>중첩 된 함수에 대리자와 호환 되는 서명이 없는 &#39; &lt;delegatename&gt;&#39;
 람다 식에 호환 되지 않는 서명이 대리자에 할당 되었습니다. 예를 들어 다음 코드를 위임할 `Del` 은 두 개의 정수 매개 변수입니다.  

@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33597525"
 ---
 # <a name="myresponse-object"></a>My.Response 개체
 가져옵니다는 <xref:System.Web.HttpResponse> 연관 된 개체는 <xref:System.Web.UI.Page>합니다. 이 개체를 사용하여 HTTP 응답 데이터를 클라이언트에 보낼 수 있고 이 개체는 해당 응답에 대한 정보를 포함합니다.  

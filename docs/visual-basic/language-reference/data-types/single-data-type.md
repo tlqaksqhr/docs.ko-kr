@@ -25,6 +25,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33590787"
 ---
 # <a name="single-data-type-visual-basic"></a>Single 데이터 형식(Visual Basic)
 부호 있는 IEEE 32 비트 (4 바이트) 단 정밀도 부동 소수점 숫자 값의 범위가-3.4028235 e + 38에서 저장-1.401298 e을 통해-음수 값 1.401298 e에서 45-45 3.4028235 e + 38 양수 값에 대 한 합니다. 단 정밀도 수는 실수의 근사값을 저장 합니다.  

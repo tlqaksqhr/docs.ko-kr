@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33595854"
 ---
 # <a name="39set39-accessor-of-property-39ltpropertynamegt39-is-not-accessible"></a>&#39;설정&#39; 속성의 접근자 &#39; &lt;propertyname&gt; &#39; 는 액세스할 수 없습니다
 문에서 속성에 대 한 액세스 권한이 없습니다 속성의 값을 저장 하려고 `Set` 프로시저입니다.  

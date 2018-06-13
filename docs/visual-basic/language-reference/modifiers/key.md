@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33599846"
 ---
 # <a name="key-visual-basic"></a>Key(Visual Basic)
 `Key` 키워드를 사용 하면 익명 형식의 속성에 대 한 동작을 지정할 수 있습니다. 전용 속성으로 지정 하는 키 속성이 익명 형식 인스턴스, 또는 계산의 해시 코드 값 사이의 같음 테스트에 참여 합니다. 키 속성의 값을 변경할 수 없습니다.  

@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33585517"
 ---
 # <a name="39class39-statement-must-end-with-a-matching-39end-class39"></a>&#39;클래스&#39; 문은 짝이 되는 끝나야 &#39;End 클래스&#39;
 `Class` 시작 하는 데 사용 되는 `Class` 차단; 되므로 일치 하는 블록의 시작 부분에만 나타날 수 `End Class` 문 블록을 종료 합니다. 중복가 있거나 `Class` 문이 종료 한 프로그램 `Class` 블록와 함께 `End Class`합니다.  

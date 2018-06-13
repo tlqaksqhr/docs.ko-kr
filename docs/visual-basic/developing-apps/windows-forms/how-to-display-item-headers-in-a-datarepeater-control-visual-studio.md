@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33592142"
 ---
 # <a name="how-to-display-item-headers-in-a-datarepeater-control-visual-studio"></a>방법: DataRepeater 컨트롤의 항목 머리글 표시(Visual Studio)
 항목 헤더에는 <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> 시각적 표시기를 제공 하는 컨트롤 때는 <xref:Microsoft.VisualBasic.PowerPacks.DataRepeaterItem> 을 선택 합니다. 경우는 <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.LayoutStyle%2A> 속성이 <xref:Microsoft.VisualBasic.PowerPacks.DataRepeaterLayoutStyles.Vertical> (기본값) 이면 항목 머리글이 각 항목의 왼쪽에 표시 됩니다. 경우는 <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.LayoutStyle%2A> 속성이 <xref:Microsoft.VisualBasic.PowerPacks.DataRepeaterLayoutStyles.Horizontal>, 항목 머리글이 각 항목의 위쪽에 표시 됩니다.  

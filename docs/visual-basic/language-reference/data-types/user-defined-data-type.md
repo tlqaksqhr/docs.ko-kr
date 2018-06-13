@@ -28,6 +28,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33590677"
 ---
 # <a name="user-defined-data-type"></a>사용자 정의 데이터 형식
 사용자가 정의한 형식에서 데이터를 저장 합니다. `Structure` 문으로 형식을 정의 합니다.  

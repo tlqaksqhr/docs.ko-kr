@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33576581"
 ---
 # <a name="converting-strings-to-net-framework-data-types"></a>문자열을 .NET Framework 데이터 형식으로 변환
 문자열을 .NET Framework 데이터 형식으로 변환하려면 응용 프로그램 요구 사항에 적합한 **XmlConvert** 메서드를 사용합니다. **XmlConvert** 클래스에서 사용 가능한 변환 메서드의 전체 목록은 <xref:System.Xml.XmlConvert>를 참조하세요.  

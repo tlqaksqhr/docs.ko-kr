@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33590740"
 ---
 # <a name="introduction-to-the-line-and-shape-controls-visual-studio"></a>Line 및 Shape 컨트롤 소개(Visual Studio)
 Visual Basic Power Packs Line 및 Shape 컨트롤은 폼과 컨테이너에서 선 및 모양 그리기 수 있도록 하는 세 가지 그래픽 컨트롤의 집합입니다. <xref:Microsoft.VisualBasic.PowerPacks.LineShape> 컨트롤 가로, 세로, 및 대각선를 그리는 데 사용 됩니다. <xref:Microsoft.VisualBasic.PowerPacks.OvalShape> 컨트롤을 원 및 타원, 사용 및 <xref:Microsoft.VisualBasic.PowerPacks.RectangleShape> 컨트롤 사각형 및 정사각형을 그리는 데 사용 됩니다.  

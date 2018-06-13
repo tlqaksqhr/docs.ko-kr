@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33590774"
 ---
 # <a name="attached-and-detached-child-tasks"></a>연결된 자식 작업 및 분리된 자식 작업
 ‘자식 작업’(또는 ‘중첩 작업’)은 ‘부모 작업’이라는 다른 작업의 사용자 대리자에 만들어진 <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> 인스턴스입니다. 자식 작업을 분리하거나 연결할 수 있습니다. ‘분리된 자식 작업’은 부모와 독립적으로 실행되는 작업입니다. ‘연결된 자식 작업’은 부모가 명시적으로나 기본적으로 연결을 금지하지 않는 <xref:System.Threading.Tasks.TaskCreationOptions.AttachedToParent?displayProperty=nameWithType> 옵션으로 만들어진 중첩 작업입니다. 연결된 자식 작업 및 분리된 자식 작업은 작업에서 개수와 관계없이 만들 수 있고 시스템 자원에 의해서만 제한됩니다.  

@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33591874"
 ---
 # <a name="extending-the-visual-basic-application-model"></a>Visual Basic 응용 프로그램 모델 확장
 재정의 하 여 응용 프로그램 모델에 기능을 추가할 수 있습니다는 `Overridable` 의 멤버는 <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase> 클래스입니다. 이 기법을 사용 하면 응용 프로그램이 시작 되 고 종료 하는 대로 사용자 고유의 메서드 호출을 추가 하 고 응용 프로그램 모델의 동작을 사용자 지정할 수 있습니다.  

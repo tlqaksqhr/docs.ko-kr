@@ -16,6 +16,7 @@ ms.sourcegitcommit: 22c3c8f74eaa138dbbbb02eb7d720fce87fc30a9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/17/2018
+ms.locfileid: "34235992"
 ---
 # <a name="property-statement"></a>Property Statement
 속성을 저장 하 고 속성의 값을 검색 하는 데 사용 하는 속성 프로시저의 이름을 선언 합니다.  

@@ -34,6 +34,7 @@ ms.sourcegitcommit: 22c3c8f74eaa138dbbbb02eb7d720fce87fc30a9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/17/2018
+ms.locfileid: "34234729"
 ---
 # <a name="dim-statement-visual-basic"></a>Dim 문(Visual Basic)
 선언 하 고 하나 이상의 변수에 대 한 저장 공간을 할당 합니다.  

@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33597789"
 ---
 # <a name="addressof-operator-visual-basic"></a>AddressOf 연산자(Visual Basic)
 특정 프로시저를 참조 하는 프로시저 대리자 인스턴스를 만듭니다.  
