@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33365607"
 ---
 # <a name="enlisting-resources-as-participants-in-a-transaction"></a>리소스를 트랜잭션에 참가 요소로 등록
 트랜잭션에 참여하는 각 리소스는 RM(리소스 관리자)에 의해 관리되고, RM의 작업은 TM(트랜잭션 관리자)에 의해 조정됩니다. 코디네이션은 트랜잭션 관리자를 통해 트랜잭션에 참여한 구독자에게 제공되는 알림을 통해 수행됩니다.  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33363932"
 ---
 # <a name="performing-recovery"></a>복구 수행
 리소스 관리자는 리소스 오류가 발생한 후에 트랜잭션 참가 요소를 다시 참여시켜 트랜잭션에서 영속적 참여 항목을 쉽게 확인할 수 있도록 합니다.  

@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33363566"
 ---
 # <a name="exposing-your-data-as-a-service-wcf-data-services"></a>서비스로 데이터 노출(WCF Data Services)
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 데이터를 노출 하는 서비스를 보다 쉽게 정의할 수 있도록 Visual Studio와 통합 되어 [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] 피드입니다. 노출 하는 데이터 서비스 만들기는 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 피드에 필요한 다음과 같은 기본 단계:  

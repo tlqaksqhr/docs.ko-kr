@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33362066"
 ---
 # <a name="performing-catalog-operations"></a>카탈로그 작업 수행
 CREATE TABLE 또는 CREATE PROCEDURE 문과 같은 카탈로그 또는 데이터베이스를 수정 하는 명령을 실행 하려면 만듭니다는 **명령** 적절 한 SQL 문을 사용 하 여 개체 및 **연결** 개체입니다. 사용 하 여 명령을 실행의 **ExecuteNonQuery** 의 메서드는 **명령** 개체입니다.  

@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33365399"
 ---
 # <a name="quickstart-wcf-data-services"></a>빠른 시작(WCF Data Services)
 이 빠른 시작을 사용 하면 익숙해지는 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 및 [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] 일련의 항목에서는 지 원하는 작업을 통해 [시작](../../../../docs/framework/data/wcf/getting-started-with-wcf-data-services.md)합니다.  

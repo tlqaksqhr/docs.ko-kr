@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33363353"
 ---
 # <a name="protecting-connection-information"></a>연결 정보 보호
 응용 프로그램 보안의 가장 중요한 목표 중 하나는 데이터 소스에 대한 액세스를 보호하는 것입니다. 연결 문자열을 안전하게 보호하지 않으면 이로 인해 보안상 취약한 부분이 생길 수 있습니다. 연결 정보를 일반 텍스트로 저장하거나 메모리에 유지하면 전체 시스템을 손상시킬 위험이 있습니다. 사용 하 여 소스 코드에 포함 된 연결 문자열을 읽을 수는 [Ildasm.exe (IL 디스어셈블러)](../../../../docs/framework/tools/ildasm-exe-il-disassembler.md) Microsoft MSIL (intermediate language) 컴파일된 어셈블리에서 볼 수 있습니다.  

@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33365373"
 ---
 # <a name="working-with-binary-data-wcf-data-services"></a>이진 데이터 작업(WCF Data Services)
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 클라이언트 라이브러리를 사용 하면 검색에서 이진 데이터를 업데이트 하는 [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] 다음 방법 중 하나에 피드:  

@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33360352"
 ---
 # <a name="deferred-versus-immediate-loading"></a>지연된 로드 및 즉시 로드 비교
 개체를 쿼리하는 경우 실제로는 요청한 개체만 검색합니다. *관련* 개체는 동시에 자동으로 페치 되지 않습니다. (자세한 내용은 참조 [관계 간 쿼리](../../../../../../docs/framework/data/adonet/sql/linq/querying-across-relationships.md).) 관련 개체에 액세스할 때 검색 요청을 생성하기 때문에 관련 개체가 아직 로드되지 않았다는 사실을 확인할 수 없습니다.  

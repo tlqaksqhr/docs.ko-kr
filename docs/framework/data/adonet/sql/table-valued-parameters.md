@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33365945"
 ---
 # <a name="table-valued-parameters"></a>테이블 반환 매개 변수
 테이블 반환 매개 변수를 사용하면 클라이언트 응용 프로그램에서 여러 행 데이터를 반복적인 라운드트립이나 데이터 처리를 위한 특수한 서버측 논리를 사용하지 않고도 SQL Server로 쉽게 마샬링할 수 있습니다. 또한 테이블 반환 매개 변수를 사용하면 클라이언트 응용 프로그램에서 데이터 행을 캡슐화하여 매개 변수화된 단일 명령을 통해 데이터를 서버에 보낼 수 있습니다. 들어오는 데이터 행은 테이블 변수에 저장되며, 이러한 테이블 변수에 대해서는 [!INCLUDE[tsql](../../../../../includes/tsql-md.md)]을 사용하여 작업할 수 있습니다.  

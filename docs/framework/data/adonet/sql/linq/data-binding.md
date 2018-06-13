@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33365172"
 ---
 # <a name="data-binding"></a>데이터 바인딩
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 에서는 표 컨트롤과 같은 공용 컨트롤에 대 한 바인딩을 지원 합니다. 특히 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]에서는 데이터 표에 바인딩과 마스터-세부 사항 바인딩 처리를 위한 기본 패턴을 표시 및 업데이트 측면 모두에서 정의합니다.  

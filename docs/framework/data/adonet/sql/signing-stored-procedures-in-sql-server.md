@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33361080"
 ---
 # <a name="signing-stored-procedures-in-sql-server"></a>SQL Server에서 저장 프로시저에 서명
  디지털 설명은 서명자의 개인 키로 암호화된 데이터 다이제스트입니다. 개인 키를 사용하면 디지털 서명이 소유자별로 고유하게 유지됩니다. 저장된 프로시저, 함수 (인라인 테이블 반환 함수)를 제외한, 트리거 및 어셈블리를 서명할 수 있습니다.  

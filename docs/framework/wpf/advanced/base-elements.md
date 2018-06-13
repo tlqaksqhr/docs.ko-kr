@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33539467"
 ---
 # <a name="base-elements"></a>기본 요소
 4 개의 주요 클래스<xref:System.Windows.UIElement>, <xref:System.Windows.ContentElement>, <xref:System.Windows.FrameworkElement>, 및 <xref:System.Windows.FrameworkContentElement>-상당 WPF 프로그래밍에서 사용할 수 있는 공통 요소 기능을 구현 합니다. 이 네 가지 클래스 라고이 SDK에서 기본 요소 클래스입니다.  

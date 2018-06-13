@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33365477"
 ---
 # <a name="windows-applications-using-callbacks"></a>콜백을 사용하는 Windows 응용 프로그램
 대부분의 비동기 처리 시나리오에서 사용자는 데이터베이스 작업을 시작하면서 해당 데이터베이스 작업이 완료되기 전에 다른 프로세스를 계속해서 실행하고자 합니다. 그러나 많은 시나리오에서는 일단 데이터베이스 작업이 종료된 후 다른 작업을 수행해야 합니다. 예를 들어, Windows 응용 프로그램에서는 장기 실행 작업을 배경 스레드에 위임하면서 사용자 인터페이스 스레드가 응답을 유지하도록 할 수 있습니다. 그러나 데이터베이스 작업이 완료되면 결과를 사용하여 폼을 채웁니다. 이러한 종류의 시나리오는 콜백을 사용할 때 가장 효과적으로 구현됩니다.  

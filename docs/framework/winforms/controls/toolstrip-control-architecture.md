@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33542160"
 ---
 # <a name="toolstrip-control-architecture"></a>ToolStrip 컨트롤 아키텍처
 <xref:System.Windows.Forms.ToolStrip> 및 <xref:System.Windows.Forms.ToolStripItem> 클래스 도구 모음, 상태 및 메뉴 항목을 표시 하기 위한 유연 하 고 확장 가능한 시스템을 제공 합니다. 이러한 클래스에 포함 된 모든는 <xref:System.Windows.Forms> "ToolStrip" 접두사는 네임 스페이스 및 이러한를 명명 된 일반적으로 (와 같은 <xref:System.Windows.Forms.ToolStripOverflow>) 또는 "Strip" 접미사와 함께 (같은 <xref:System.Windows.Forms.MenuStrip>).  

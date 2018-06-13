@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33541579"
 ---
 # <a name="windows-forms-controls-by-function"></a>기능별 Windows Forms 컨트롤
 Windows Forms 컨트롤 및 다양 한 기능을 수행 하는 구성 요소를 제공 합니다. 다음 표에서 Windows Forms 컨트롤 및 일반 함수에 따라 구성 요소를 나열합니다. 또한 컨트롤이 여러 개 동일한 기능을 제공 하는 있는 권장된 컨트롤 대체 된 컨트롤에 대 한 메모 함께 나열 됩니다. 별도 후속 테이블에서 대체 컨트롤과 권장된 대신 사용할 함께 나열 됩니다.  

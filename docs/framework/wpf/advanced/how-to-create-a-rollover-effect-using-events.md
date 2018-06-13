@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33543012"
 ---
 # <a name="how-to-create-a-rollover-effect-using-events"></a>방법: 이벤트를 사용하여 롤오버 효과 만들기
 이 예제에는 마우스 포인터가 요소에서 사용 하는 영역을 들어가고을 요소의 색을 변경 하는 방법을 보여 줍니다.  

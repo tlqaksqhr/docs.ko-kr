@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33364963"
 ---
 # <a name="security-linq-to-dataset"></a>보안(LINQ to DataSet)
 이 항목에서는 [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]의 보안 문제에 대해 설명합니다.  

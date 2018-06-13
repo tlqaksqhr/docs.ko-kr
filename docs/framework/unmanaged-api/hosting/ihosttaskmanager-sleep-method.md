@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 648d705f21b23feb740e1791c8f32a707b985df2
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33442665"
 ---
 # <a name="ihosttaskmanagersleep-method"></a>IHostTaskManager::Sleep 메서드
 현재 작업 절전 모드로 전환 됨 호스트에 알립니다.  

@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: b1e652588d27521a04015228e86eb9af9c53346e
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33440816"
 ---
 # <a name="stackoverflowinfo-structure"></a>StackOverflowInfo 구조체
 오버플로로 인해 throw 된 예외에 발생 한 오버플로 종류 정보를 저장 합니다.  
