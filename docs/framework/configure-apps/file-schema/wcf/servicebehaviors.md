@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32750088"
 ---
 # <a name="ltservicebehaviorsgt"></a><span data-ttu-id="b76d7-102">&lt;serviceBehaviors&gt;</span><span class="sxs-lookup"><span data-stu-id="b76d7-102">&lt;serviceBehaviors&gt;</span></span>
 <span data-ttu-id="b76d7-103">이 구성 섹션은 특정 서비스에 정의된 모든 동작을 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="b76d7-103">This configuration section represents all the behaviors defined for a specific service.</span></span>  

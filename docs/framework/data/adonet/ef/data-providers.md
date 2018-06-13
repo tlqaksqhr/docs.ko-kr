@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32760390"
 ---
 # <a name="entity-framework-data-providers"></a><span data-ttu-id="adc22-102">Entity Framework 데이터 공급자</span><span class="sxs-lookup"><span data-stu-id="adc22-102">Entity Framework Data Providers</span></span>
 <span data-ttu-id="adc22-103">이 단원에서는 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]를 지원하는 데이터 공급자에 대한 정보를 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="adc22-103">This section provides information on data providers that support the [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)].</span></span>  

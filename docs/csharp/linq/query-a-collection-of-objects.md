@@ -8,6 +8,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33282394"
 ---
 # <a name="query-a-collection-of-objects"></a><span data-ttu-id="9059a-103">개체의 컬렉션 쿼리</span><span class="sxs-lookup"><span data-stu-id="9059a-103">Query a collection of objects</span></span>
 <span data-ttu-id="9059a-104">다음 예제는 `Student` 개체의 목록에 대해 간단한 쿼리를 수행하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="9059a-104">This example shows how to perform a simple query over a list of `Student` objects.</span></span> <span data-ttu-id="9059a-105">각 `Student` 개체에는 학생에 대한 몇 가지 기본 정보와 네 개 시험에서 학생의 점수를 나타내는 목록이 있습니다.</span><span class="sxs-lookup"><span data-stu-id="9059a-105">Each `Student` object contains some basic information about the student, and a list that represents the student's scores on four examinations.</span></span>  

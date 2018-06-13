@@ -8,6 +8,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32757023"
 ---
 # <a name="ltcancelrequestedqueriesgt"></a><span data-ttu-id="b1485-102">&lt;cancelRequestedQueries&gt;</span><span class="sxs-lookup"><span data-stu-id="b1485-102">&lt;cancelRequestedQueries&gt;</span></span>
 <span data-ttu-id="b1485-103">부모 활동에 의한 자식 활동 취소 요청을 추적하는 데 사용되는 쿼리의 컬렉션을 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="b1485-103">Represents a collection of queries that are used to track requests to cancel a child activity by the parent activity.</span></span> <span data-ttu-id="b1485-104">추적 참가자가 취소 요청 레코드 개체를 구독하려면 쿼리가 필요합니다.</span><span class="sxs-lookup"><span data-stu-id="b1485-104">The query is necessary for a tracking participant to subscribe to cancel request record objects.</span></span>  

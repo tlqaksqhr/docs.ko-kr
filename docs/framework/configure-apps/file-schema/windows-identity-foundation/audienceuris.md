@@ -9,6 +9,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32755996"
 ---
 # <a name="ltaudienceurisgt"></a><span data-ttu-id="ed474-102">&lt;audienceUris&gt;</span><span class="sxs-lookup"><span data-stu-id="ed474-102">&lt;audienceUris&gt;</span></span>
 <span data-ttu-id="ed474-103">신뢰 당사자 (RP)의 식별자를 허용 하는 Uri의 집합을 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="ed474-103">Specifies the set of URIs that are acceptable identifiers of the relying party (RP).</span></span> <span data-ttu-id="ed474-104">허용 되는 대상 Uri 중 하나에 대해 범위가 지정 되지 않는 한 토큰을 허용 하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="ed474-104">Tokens will not be accepted unless they are scoped for one of the allowed audience URIs.</span></span>  

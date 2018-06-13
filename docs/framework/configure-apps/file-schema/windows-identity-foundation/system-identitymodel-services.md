@@ -9,6 +9,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32757049"
 ---
 # <a name="ltsystemidentitymodelservicesgt"></a><span data-ttu-id="db343-102">&lt;system.identityModel.services&gt;</span><span class="sxs-lookup"><span data-stu-id="db343-102">&lt;system.identityModel.services&gt;</span></span>
 <span data-ttu-id="db343-103">Ws-federation 프로토콜을 사용 하 여 인증에 대 한 구성 섹션입니다.</span><span class="sxs-lookup"><span data-stu-id="db343-103">Configuration section for authentication using the WS-Federation protocol.</span></span>  

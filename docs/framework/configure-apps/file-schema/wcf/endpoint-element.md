@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32749506"
 ---
 # <a name="ltendpointgt-element"></a><span data-ttu-id="a7c91-102">&lt;endpoint&gt; 요소</span><span class="sxs-lookup"><span data-stu-id="a7c91-102">&lt;endpoint&gt; element</span></span>
 <span data-ttu-id="a7c91-103">서비스 공개에 사용되는 서비스 끝점에 대한 바인딩, 계약 및 주소 속성을 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="a7c91-103">Specifies binding, contract, and address properties for a service endpoint, which is used to expose services.</span></span>  

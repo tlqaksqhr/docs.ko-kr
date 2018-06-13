@@ -22,6 +22,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32743227"
 ---
 # <a name="client-application-services"></a><span data-ttu-id="ffeb4-102">클라이언트 응용 프로그램 서비스</span><span class="sxs-lookup"><span data-stu-id="ffeb4-102">Client Application Services</span></span>
 <span data-ttu-id="ffeb4-103">클라이언트 응용 프로그램 서비스를 통해 Microsoft ASP.NET 2.0 AJAX 확장에 포함된 [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)] 로그인, 역할 및 프로필 응용 프로그램 서비스를 사용하는 Windows 기반 응용 프로그램을 쉽게 만들 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="ffeb4-103">Client application services make it easy for you to create Windows-based applications that use the [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)] login, roles, and profile application services included in the Microsoft ASP.NET 2.0 AJAX Extensions.</span></span> <span data-ttu-id="ffeb4-104">이 서비스를 통해 여러 웹 응용 프로그램과 Windows 기반 응용 프로그램이 단일 서버에서 사용자 정보와 사용자 관리 기능을 공유할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="ffeb4-104">These services enable multiple Web and Windows-based applications to share user information and user-management functionality from a single server.</span></span> <span data-ttu-id="ffeb4-105">예를 들어 이 서비스를 통해 다음 작업을 수행할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="ffeb4-105">For example, you can use these services to perform the following tasks:</span></span>  

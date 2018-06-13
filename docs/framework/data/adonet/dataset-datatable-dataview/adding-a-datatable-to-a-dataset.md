@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32758544"
 ---
 # <a name="adding-a-datatable-to-a-dataset"></a><span data-ttu-id="7a929-102">데이터 집합에 DataTable 추가</span><span class="sxs-lookup"><span data-stu-id="7a929-102">Adding a DataTable to a DataSet</span></span>
 <span data-ttu-id="7a929-103">ADO.NET에서는 <xref:System.Data.DataTable> 개체를 만들어 기존 <xref:System.Data.DataSet>에 추가할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="7a929-103">ADO.NET enables you to create <xref:System.Data.DataTable> objects and add them to an existing <xref:System.Data.DataSet>.</span></span> <span data-ttu-id="7a929-104">또한 <xref:System.Data.DataTable> 및 <xref:System.Data.DataTable.PrimaryKey%2A> 속성을 사용하여 <xref:System.Data.DataColumn.Unique%2A>에 대한 제약 조건 정보를 설정할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="7a929-104">You can set constraint information for a <xref:System.Data.DataTable> by using the <xref:System.Data.DataTable.PrimaryKey%2A> and <xref:System.Data.DataColumn.Unique%2A> properties.</span></span>  

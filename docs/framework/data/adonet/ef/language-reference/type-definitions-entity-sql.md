@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32761157"
 ---
 # <a name="type-definitions-entity-sql"></a><span data-ttu-id="9e1b3-102">형식 정의(Entity SQL)</span><span class="sxs-lookup"><span data-stu-id="9e1b3-102">Type Definitions (Entity SQL)</span></span>
 <span data-ttu-id="9e1b3-103">형식 정의는 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 인라인 함수의 선언문에 사용됩니다.</span><span class="sxs-lookup"><span data-stu-id="9e1b3-103">A type definition is used in the declaration statement of an [!INCLUDE[esql](../../../../../../includes/esql-md.md)] Inline function.</span></span>  

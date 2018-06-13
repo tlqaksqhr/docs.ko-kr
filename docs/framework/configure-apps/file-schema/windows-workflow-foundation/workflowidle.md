@@ -8,6 +8,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32756906"
 ---
 # <a name="ltworkflowidlegt"></a><span data-ttu-id="02ada-102">&lt;workflowIdle&gt;</span><span class="sxs-lookup"><span data-stu-id="02ada-102">&lt;workflowIdle&gt;</span></span>
 <span data-ttu-id="02ada-103">유휴 워크플로 인스턴스가 언로드되고 유지되는 시간을 제어하는 서비스 동작입니다.</span><span class="sxs-lookup"><span data-stu-id="02ada-103">A service behavior that controls when idle workflow instances are unloaded and persisted.</span></span>  

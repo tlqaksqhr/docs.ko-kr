@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32750728"
 ---
 # <a name="ltserviceprincipalnamegt"></a><span data-ttu-id="ad97c-102">&lt;서비스 사용자 이름&gt;</span><span class="sxs-lookup"><span data-stu-id="ad97c-102">&lt;servicePrincipalName&gt;</span></span>
 <span data-ttu-id="ad97c-103">SPN(서비스 사용자 이름)으로 서비스 ID를 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="ad97c-103">Specifies the identity of a service by its Service Principal Name (SPN).</span></span>  

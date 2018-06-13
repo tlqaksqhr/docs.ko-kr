@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33334836"
 ---
 # <a name="how-to-create-a-file-or-folder-c-programming-guide"></a><span data-ttu-id="6b04b-102">방법: 파일 또는 폴더 만들기(C# 프로그래밍 가이드)</span><span class="sxs-lookup"><span data-stu-id="6b04b-102">How to: Create a File or Folder (C# Programming Guide)</span></span>
 <span data-ttu-id="6b04b-103">프로그래밍 방식으로 컴퓨터에 폴더를 만들고, 하위 폴더를 만들고, 하위 폴더에 파일을 만들고, 파일에 데이터를 쓸 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="6b04b-103">You can programmatically create a folder on your computer, create a subfolder, create a file in the subfolder, and write data to the file.</span></span>  
