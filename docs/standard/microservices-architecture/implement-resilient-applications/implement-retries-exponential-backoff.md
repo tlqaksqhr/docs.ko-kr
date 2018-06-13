@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33571425"
 ---
 # <a name="implementing-retries-with-exponential-backoff"></a><span data-ttu-id="f12fd-103">지수 백오프를 사용하여 다시 시도 구현</span><span class="sxs-lookup"><span data-stu-id="f12fd-103">Implementing retries with exponential backoff</span></span>
 

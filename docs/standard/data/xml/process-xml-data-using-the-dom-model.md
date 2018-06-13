@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33570365"
 ---
 # <a name="process-xml-data-using-the-dom-model"></a><span data-ttu-id="b8964-102">DOM 모델을 사용하여 XML 데이터 처리</span><span class="sxs-lookup"><span data-stu-id="b8964-102">Process XML Data Using the DOM Model</span></span>
 <span data-ttu-id="b8964-103">XML DOM(문서 개체 모델)은 XML 데이터를 표준 개체 집합으로 간주하며 메모리에서 XML 데이터를 처리하는 데 사용됩니다.</span><span class="sxs-lookup"><span data-stu-id="b8964-103">The XML Document Object Model (DOM) treats XML data as a standard set of objects and is used to process XML data in memory.</span></span> <span data-ttu-id="b8964-104">`System.Xml` 네임스페이스는 XML 문서, 조각, 노드 또는 노드 집합의 프로그래밍 방식 표현을 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="b8964-104">The `System.Xml` namespace provides a programmatic representation of XML documents, fragments, nodes, or node-sets.</span></span> <span data-ttu-id="b8964-105">또한 W3C(World Wide Web 컨소시엄) DOM Level 1 Core 및 DOM Level 2 Core 권장 사항을 기반으로 합니다.</span><span class="sxs-lookup"><span data-stu-id="b8964-105">It is based on the World Wide Web Consortium (W3C) DOM Level 1 Core and the DOM Level 2 Core recommendations.</span></span>  
