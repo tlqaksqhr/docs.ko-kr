@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33494711"
 ---
 # <a name="wcf-feature-details"></a>WCF 기능 정보
 Windows Communication Foundation (WCF) 응용 프로그램의 메시징 기능을 제어할 수 있습니다. 이 섹션의 항목에서는 사용 가능한 기능에 대해 자세히 설명합니다. 기본 프로그래밍에 대 한 자세한 내용은 참조 [기본 WCF 프로그래밍](../../../../docs/framework/wcf/basic-wcf-programming.md)합니다.  

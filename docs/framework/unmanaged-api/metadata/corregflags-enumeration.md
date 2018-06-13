@@ -18,9 +18,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: f7b935b8f59e434c9da364be1986dbed654a1efd
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33445811"
 ---
 # <a name="corregflags-enumeration"></a>CorRegFlags 열거형
 모듈 또는 합성 이미지를 설치할 때 등록에 사용 되는 플래그 값을 제공 합니다.  

@@ -18,9 +18,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 7d930088d6e621885d14fc4bdab2475aa27594e6
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33448702"
 ---
 # <a name="imetadatadispenserex-interface"></a>IMetaDataDispenserEx 인터페이스
 확장 된 [IMetaDataDispenser 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-interface.md) 메타 데이터 Api에서 현재 메타 데이터 범위에 작동 하는 방식을 제어 하는 기능을 제공 하는 인터페이스입니다.  
