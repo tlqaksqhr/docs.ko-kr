@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: c3abb3e80226da909a0c7eb8e4bf54959557dcbf
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33436269"
 ---
 # <a name="iclriocompletionmanager-interface"></a>ICLRIoCompletionManager 인터페이스
 구현 상태를 지정 된 I/O의 공용 언어 런타임 (CLR)에 알리기 위해 호스트를 허용 하는 콜백 메서드를 요청 합니다.  

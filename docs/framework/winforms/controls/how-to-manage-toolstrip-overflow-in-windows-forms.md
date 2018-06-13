@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33534894"
 ---
 # <a name="how-to-manage-toolstrip-overflow-in-windows-forms"></a>방법: Windows Forms의 ToolStrip 오버플로 관리
 경우에 있는 모든 항목이 <xref:System.Windows.Forms.ToolStrip> 제어 할당된 된 공간에 맞지 않는에서 오버플로 기능을 사용할 수 있습니다는 <xref:System.Windows.Forms.ToolStrip> 특정 오버플로 동작을 결정 하 고 <xref:System.Windows.Forms.ToolStripItem>s입니다.  

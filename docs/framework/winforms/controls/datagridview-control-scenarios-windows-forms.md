@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33529040"
 ---
 # <a name="datagridview-control-scenarios-windows-forms"></a>DataGridView 컨트롤 시나리오(Windows Forms)
 와 <xref:System.Windows.Forms.DataGridView> 컨트롤을 다양 한 데이터 원본에서에서 테이블 형식 데이터를 표시할 수 있습니다. 간단한 용도로 수동으로 차원을 채울 수 있습니다는 <xref:System.Windows.Forms.DataGridView> 제어를 통해 직접 데이터를 조작 합니다. 그러나 일반적으로는 외부 데이터 원본에 데이터를 저장 한 키를 통해에 컨트롤 바인딩는 <xref:System.Windows.Forms.BindingSource> 구성 요소입니다.  

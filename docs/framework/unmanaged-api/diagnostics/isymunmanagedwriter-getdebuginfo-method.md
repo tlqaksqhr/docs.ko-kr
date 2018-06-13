@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: c1e9a2261ab5fd06e0514efdddf8a8e952a6e3d1
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33426902"
 ---
 # <a name="isymunmanagedwritergetdebuginfo-method"></a>ISymUnmanagedWriter::GetDebugInfo 메서드
 컴파일러가 이식 가능한 실행 (PE) 파일 헤더에서 디버그 디렉터리 항목을 작성 하는 데 필요한 정보를 반환 합니다. 기호 작성기를 제외한 모든 필드 입력 `TimeDateStamp` 및 `PointerToRawData`합니다. (컴파일러는이 두 필드를 적절 하 게 설정 해야 합니다.)  

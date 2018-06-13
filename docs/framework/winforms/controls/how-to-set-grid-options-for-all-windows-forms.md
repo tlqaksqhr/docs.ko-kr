@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33535027"
 ---
 # <a name="how-to-set-grid-options-for-all-windows-forms"></a>방법: 모든 Windows Forms에 대한 모눈 옵션 설정
 Visual Studio 개발 환경에서 작업 하는 데 익숙해지면 모든 폼과 프로젝트와 작업에 대 한 기본 설정을 Windows Forms 디자이너에서 설정할 수 있습니다.  

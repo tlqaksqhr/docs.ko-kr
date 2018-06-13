@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33536500"
 ---
 # <a name="how-to-show-a-font-list-with-the-fontdialog-component"></a>방법: FontDialog 구성 요소를 사용하여 글꼴 목록 표시
 [FontDialog](../../../../docs/framework/winforms/controls/fontdialog-component-windows-forms.md) 구성 요소에 글꼴을 선택 하 고 가중치와 크기 같은 표시 요소를 변경할 사용자를 허용 합니다.  

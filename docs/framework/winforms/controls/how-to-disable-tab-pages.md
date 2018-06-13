@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33534269"
 ---
 # <a name="how-to-disable-tab-pages"></a>방법: 탭 페이지 사용 안 함
 일부 경우에 Windows Forms 응용 프로그램 내에서 사용할 수 있는 데이터 액세스를 제한 합니다. 탭 컨트롤;의 탭 페이지에 표시 된 데이터가 있는 경우이 예로 들 수 있습니다. 관리자는 게스트 또는 하위 수준의 사용자 옵션을 원하는 탭 페이지의 정보에 있을 수 있습니다.  

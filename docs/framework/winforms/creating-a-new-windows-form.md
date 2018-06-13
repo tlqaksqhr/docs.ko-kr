@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33537783"
 ---
 # <a name="creating-a-new-windows-form"></a>새 Windows Form 만들기
 이 항목에는 첫 번째 Windows Forms 응용 프로그램을 만드는 방법을 설명하는 항목의 링크가 포함되어 있습니다. 또한 이 섹션의 항목에서는 Windows Forms 응용 프로그램을 만들 때 알고 있어야 하는 일부 기본 용어와 지침을 소개합니다. Windows Forms 응용 프로그램에 대 한 자세한 내용을 보려면, 이벤트 및 이벤트 처리 및 사용자 입력을 처리 하는 방법에 사용할 수는 컨트롤에 관련된 항목 목록을 참조 하십시오.  

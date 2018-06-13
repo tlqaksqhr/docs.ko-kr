@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33529167"
 ---
 # <a name="how-to-create-a-path-gradient"></a>방법: 경로 그라데이션 만들기
 <xref:System.Drawing.Drawing2D.PathGradientBrush> 클래스 점진적으로 색을 변경 하 여 도형 채우기 방법을 사용자 지정할 수 있습니다. 예를 들어 경로의 가운데에 대 한 한 가지 색 및 경로의 경계에 대 한 다른 색을 지정할 수 있습니다. 각 경로 경계를 따라 여러 지점에 대 한 별도 색을 지정할 수도 있습니다.  

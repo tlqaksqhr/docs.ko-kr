@@ -25,6 +25,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33530951"
 ---
 # <a name="how-to-create-access-keys-for-windows-forms-controls"></a>방법: Windows Forms 컨트롤에 대한 선택키 만들기
 *선택 키* 은 메뉴, 메뉴 항목 또는 예: 단추 컨트롤의 레이블 텍스트에 밑줄이 그어진된 문자. 액세스 키가 있는 사용자 "" 단추를 클릭 수 미리 정의 된 선택 키와 함께에서 ALT 키를 눌러 합니다. 예를 들어, 단추는 폼을 인쇄 하는 프로시저를 실행 하는 경우 일부 이므로 해당 `Text` 속성이 "Print"로 설정 된 "p" 하면 "P" 단추 텍스트에는 런타임 시 밑줄이 그어집니다 전에 앰퍼샌드를 추가 합니다. 사용자는 ALT + P를 눌러 단추와 연결 된 명령을 실행할 수 있습니다. 포커스를 받을 수 없는 컨트롤에 대 한 선택 키를 사용할 수 없습니다.  

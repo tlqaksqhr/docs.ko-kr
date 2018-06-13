@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 74de8838d7f9ad1995bf7b15699b5589d13a0cab
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33428839"
 ---
 # <a name="corgcthreadstatstypes-enumeration"></a>COR_GC_THREAD_STATS_TYPES 열거형
 스레드에 대 한 가비지 수집 통계를 나타냅니다.  

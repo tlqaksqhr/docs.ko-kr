@@ -9,9 +9,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 80cee666a05432099a380a5ac547a5ca28698c31
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33436035"
 ---
 # <a name="silverlight-debugging"></a>Silverlight 디버깅
 이 섹션의 항목에서는 CLR(공용 언어 런타임)이 Windows 운영 체제나 Macintosh 플랫폼에서 실행 중인 Silverlight 기반 응용 프로그램 디버그를 지원하기 위해 제공하는 환경 및 인터페이스를 설명합니다.  

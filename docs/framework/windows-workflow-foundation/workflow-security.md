@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33519583"
 ---
 # <a name="workflow-security"></a>워크플로 보안
 Windows WF (Workflow Foundation)는 Microsoft SQL Server 및 Windows Communication Foundation (WCF)와 같은 여러 가지 다른 기술로와 통합 됩니다. 이러한 기술과 잘못 상호 작용하면 워크플로에 보안 문제가 발생할 수 있습니다.  

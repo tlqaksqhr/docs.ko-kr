@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33528751"
 ---
 # <a name="how-to-change-the-border-and-gridline-styles-in-the-windows-forms-datagridview-control"></a>방법: Windows Forms DataGridView 컨트롤의 테두리 및 모눈선 스타일 변경
 와 <xref:System.Windows.Forms.DataGridView> 컨트롤을 컨트롤의 테두리 및 사용자 환경을 개선 하기 위해 눈금선의 모양을 사용자 지정할 수 있습니다. 눈금선 색과 컨트롤에서 셀 테두리 스타일 이외에도 컨트롤의 테두리 스타일을 수정할 수 있습니다. 일반 셀, 행 머리글 셀 및 열 머리글 셀에 대 한 다른 셀 테두리 스타일을 적용할 수도 있습니다.  

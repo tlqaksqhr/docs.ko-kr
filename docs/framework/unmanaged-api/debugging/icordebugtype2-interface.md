@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 038598e6fa8c0f7d47a161783d21f03b3c87af0c
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33420331"
 ---
 # <a name="icordebugtype2-interface"></a>ICorDebugType2 인터페이스
 ICorDebugType 인터페이스의 기본 형식 또는 복합 (사용자 정의) 형식을 형식 식별자를 검색 하는 확장 합니다.  

@@ -18,9 +18,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 7bbdc4b1f15c8dbb154ed7b967bb21c61d11782a
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33425554"
 ---
 # <a name="isymunmanagedbinder-interface"></a>ISymUnmanagedBinder 인터페이스
 비관리 코드의 기호 바인더를 나타냅니다.  

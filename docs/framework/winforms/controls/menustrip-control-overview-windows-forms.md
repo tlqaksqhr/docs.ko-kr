@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33537488"
 ---
 # <a name="menustrip-control-overview-windows-forms"></a>MenuStrip 컨트롤 개요(Windows Forms)
 메뉴는 상황도 별로 그룹화 되어 있는 명령을 포함 하 여 사용자에 게 기능을 노출 합니다.  

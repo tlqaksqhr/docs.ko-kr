@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33533372"
 ---
 # <a name="toolstripprogressbar-control"></a>ToolStripProgressBar 컨트롤
 <xref:System.Windows.Forms.ToolStripProgressBar> 결합 <xref:System.Windows.Forms.ToolStrip> 렌더링 및 일반적인 프로세스 추적 기능으로 기능을 래프팅 (rafting).  

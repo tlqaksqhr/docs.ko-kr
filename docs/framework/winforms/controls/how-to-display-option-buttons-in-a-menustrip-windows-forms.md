@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33538031"
 ---
 # <a name="how-to-display-option-buttons-in-a-menustrip-windows-forms"></a>방법: MenuStrip에 옵션 단추 표시(Windows Forms)
 옵션 단추, 라디오 단추 라고도 한 번에 하나씩만 선택할 수 있다는 점을 제외 하 고 확인란을 선택 하는 것과 비슷합니다. 기본적으로 있지만 <xref:System.Windows.Forms.ToolStripMenuItem> 클래스 옵션 단추 동작을 제공 하지 않습니다는 클래스에서 메뉴 항목에 대 한 옵션 단추 동작을 구현 하는 사용자 지정할 수 있는 확인란 동작을 제공는 <xref:System.Windows.Forms.MenuStrip> 제어 합니다.  

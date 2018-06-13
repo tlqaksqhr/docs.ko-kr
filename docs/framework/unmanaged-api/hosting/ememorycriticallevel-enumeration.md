@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: acf4f3f582e417c5e7b814622986427f996796ce
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33432531"
 ---
 # <a name="ememorycriticallevel-enumeration"></a>EMemoryCriticalLevel 열거형
 특정 메모리 할당이 요청 되었으나 처리할 수 없는 경우 오류가 끼치는 영향을 표시 하는 값을 포함 합니다.  

@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33531864"
 ---
 # <a name="how-to-handle-the-contextmenustrip-opening-event"></a>방법: ContextMenuStrip Opening 이벤트 처리
 동작을 사용자 지정할 수 있습니다 프로그램 <xref:System.Windows.Forms.ContextMenuStrip> 처리 하 여 컨트롤의 <xref:System.Windows.Forms.ToolStripDropDown.Opening> 이벤트입니다.  

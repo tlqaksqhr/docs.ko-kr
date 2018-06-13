@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33532414"
 ---
 # <a name="how-to-make-your-control-invisible-at-run-time"></a>방법: 런타임에 컨트롤 숨기기
 런타임 시 표시 되지 않는 사용자 정의 컨트롤 만들기 하려는 경우 경우가 있습니다. 예를 들어 알람 시계에 있는 컨트롤은 경보를 울릴 제외 하 고 볼 수 있습니다. 설정 하 여 쉽게 이렇게는 <xref:System.Windows.Forms.Control.Visible%2A> 속성입니다. 경우는 <xref:System.Windows.Forms.Control.Visible%2A> 속성은 `true`, 컨트롤을 정상적으로 표시 됩니다. 경우 `false`, 컨트롤에 표시 되지 것입니다. 컨트롤의 코드 숨겨진 동안 계속 실행 될 수 있습니다 하지만 사용자 인터페이스를 통해 컨트롤과 상호 작용할 수 없습니다. 사용자 입력 (예: 마우스 클릭)에 계속 응답 보이지 않는 컨트롤을 만들려는 경우에 투명 한 컨트롤을 만들어야 합니다. 자세한 내용은 참조 [컨트롤에 투명 한 배경을 지정](../../../../docs/framework/winforms/controls/how-to-give-your-control-a-transparent-background.md)합니다.  

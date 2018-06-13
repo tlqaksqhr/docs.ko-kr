@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33532823"
 ---
 # <a name="how-to-select-an-item-in-the-windows-forms-listview-control"></a>방법: Windows Forms ListView 컨트롤에서 항목 선택
 이 예제에서는 프로그래밍 방식으로 Windows Forms에서 항목을 선택 하는 방법을 보여 줍니다 <xref:System.Windows.Forms.ListView> 제어 합니다. 프로그래밍 방식으로 항목을 선택 하면 자동으로 바뀌지 않습니다에 포커스는 <xref:System.Windows.Forms.ListView> 제어 합니다. 이러한 이유로 일반적으로 하려는 항목을 선택할 때 중심으로 항목을 설정 합니다.  

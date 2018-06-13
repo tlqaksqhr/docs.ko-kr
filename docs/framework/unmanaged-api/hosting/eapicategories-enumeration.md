@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: f25348410387a7b0e03ef897e8534336baeb126a
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33432211"
 ---
 # <a name="eapicategories-enumeration"></a>EApiCategories 열거형
 부분적으로 신뢰할 수 있는 코드에서 실행 되는 호스트를 차단할 수 있는 기능의 범주를 설명 합니다.  

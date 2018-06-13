@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33529540"
 ---
 # <a name="clickonce-deployment-for-windows-forms"></a>Windows Forms에 대한 ClickOnce 배포
 다음 항목에서는 Windows Forms 응용 프로그램을 클라이언트 컴퓨터에 쉽게 배포하는 데 사용되는 기술인 [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)]를 설명합니다.  

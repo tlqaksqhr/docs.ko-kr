@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: a56b5c31c26dbe5c5371fdb7a10c13ad11847117
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33419474"
 ---
 # <a name="icordebugmodule2setjmcstatus-method"></a>ICorDebugModule2::SetJMCStatus 메서드
 모든 클래스의 모든 메서드의 코드 JMC (내) 상태에서 제외 하 고 지정 된 값이 ICorDebugModule2 설정는 `pTokens` 반대 값을 설정 하는 배열입니다.  

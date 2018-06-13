@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33531195"
 ---
 # <a name="how-to-display-images-in-cells-of-the-windows-forms-datagridview-control"></a>방법: Windows Forms DataGridView 컨트롤의 셀에 이미지 표시
 그림 또는 그래픽 데이터의 행에 표시할 수 있는 값 중 하나입니다. 대부분의 경우 이러한 그래픽 직원의 사진은 또는 회사 로고의 형식을 따릅니다.  

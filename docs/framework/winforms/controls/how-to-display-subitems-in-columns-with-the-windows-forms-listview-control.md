@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33532509"
 ---
 # <a name="how-to-display-subitems-in-columns-with-the-windows-forms-listview-control"></a>방법: Windows Forms ListView 컨트롤을 사용하여 열에 하위 항목 표시
 Windows Forms <xref:System.Windows.Forms.ListView> 컨트롤 추가 텍스트 또는 자세히 보기의 각 항목에 대 한 하위 항목을 표시할 수 있습니다. 첫 번째 열에는 예를 들어 직원 번호 항목 텍스트를 표시합니다. 두 번째, 두 번째, 첫 번째, 세 번째 및 이후의 열에 표시 하 고 후속 관련 된 하위 항목입니다.  

@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33537624"
 ---
 # <a name="how-to-render-a-visual-style-element"></a>방법: 비주얼 스타일 요소 렌더링
 <xref:System.Windows.Forms.VisualStyles?displayProperty=nameWithType> 네임 스페이스를 노출 <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> Windows 사용자를 나타내는 개체 인터페이스 (UI) 요소에서 비주얼 스타일을 지원 합니다. 이 항목에서는 사용 하는 방법을 보여 줍니다.는 <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer> 렌더링 하는 클래스는 <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> 나타내는 **로그 오프** 및 **종료** 시작 메뉴의 단추입니다.  

@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33532189"
 ---
 # <a name="how-to-display-the-printdialog-component"></a>방법: PrintDialog 구성 요소 표시
 <xref:System.Windows.Forms.PrintDialog> 구성 요소는 표준 Windows 인쇄 대화 상자 많은 사용자 익숙할 것입니다. 사용자가 즉시 만족 하기 때문에 있다면 좋을 것 사용할 수는 <xref:System.Windows.Forms.PrintDialog> 구성 요소입니다.  

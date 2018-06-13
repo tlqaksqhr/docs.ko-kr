@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33532852"
 ---
 # <a name="how-to-print-with-a-webbrowser-control"></a>방법: WebBrowser 컨트롤을 사용하여 인쇄
 다음 코드 예제에서는 사용 하는 방법을 <xref:System.Windows.Forms.WebBrowser> 컨트롤을 표시 하지 않고 웹 페이지를 인쇄 합니다.  

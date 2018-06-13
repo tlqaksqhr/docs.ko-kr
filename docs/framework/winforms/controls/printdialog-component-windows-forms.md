@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33535469"
 ---
 # <a name="printdialog-component-windows-forms"></a>PrintDialog 구성 요소(Windows Forms)
 Windows Forms `PrintDialog` 구성 요소는 프린터를 선택하고, 인쇄할 페이지를 선택하고, Windows 기반 응용 프로그램에서 다른 인쇄 관련 설정을 결정하는 데 사용되는 미리 구성된 대화 상자입니다. 고유한 대화 상자를 구성하는 대신 이 대화 상자를 프린터 및 인쇄 관련 설정 선택을 위한 간단한 솔루션으로 사용합니다. 사용자가 모두 인쇄, 지정한 페이지 범위 인쇄 또는 선택 영역 인쇄 등 문서의 대부분을 인쇄할 수 있도록 할 수 있습니다. 표준 Windows 대화 상자를 사용하여 기본 기능이 사용자에게 익숙한 응용 프로그램을 만듭니다.  

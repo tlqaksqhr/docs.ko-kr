@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: c22dfa99d8069c060a525a9ae2cbef73d6625898
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33434105"
 ---
 # <a name="iclroneventmanager-interface"></a>ICLROnEventManager 인터페이스
 등록 하 고 공용 언어 런타임 (CLR) 이벤트에 대 한 콜백을 등록을 취소 하기 위해 호스트에 사용할 수 있는 메서드를 제공 합니다.  

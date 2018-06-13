@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33528592"
 ---
 # <a name="how-to-align-multiple-controls-on-windows-forms"></a>방법: Windows Forms에서 여러 컨트롤 맞춤
 Windows 기반 응용 프로그램의 사용자 인터페이스 (UI)의 레이아웃을 표준화 하는 단일 명령으로 컨트롤 그룹을 배치할 수 있습니다.  

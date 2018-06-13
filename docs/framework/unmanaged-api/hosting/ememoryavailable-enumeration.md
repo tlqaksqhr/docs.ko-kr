@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 139cf540617e278eeaae8a2a5acf10dd797d5d10
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33429888"
 ---
 # <a name="ememoryavailable-enumeration"></a>EMemoryAvailable 열거형
 컴퓨터에서 사용 가능한 실제 메모리의 양을 나타내는 값을 포함 합니다. 이러한 값은 이벤트에 메모리에서 반환 되 고가 및 저가 대 한 논리적으로 매핑하는 `CreateMemoryResourceNotification` Win32 api에서 함수입니다.  

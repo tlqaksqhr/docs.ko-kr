@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: c9f22f23835f01022d5d62596b2cf63425759193
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33426065"
 ---
 # <a name="isymunmanagedreadergetsymattribute-method"></a>ISymUnmanagedReader::GetSymAttribute 메서드
 이름을 기반으로 사용자 지정 특성을 가져옵니다. 사용자 지정 특성 메타 데이터와는 달리 이러한 사용자 지정 특성 기호 저장소에 보관 됩니다.  

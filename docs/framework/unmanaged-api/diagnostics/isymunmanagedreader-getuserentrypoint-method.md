@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 7b4c334d82320066bf9459907660fe6b7e2acefd
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33425323"
 ---
 # <a name="isymunmanagedreadergetuserentrypoint-method"></a>ISymUnmanagedReader::GetUserEntryPoint 메서드
 있는 경우 모듈의 사용자 진입점으로 지정 된 메서드를 반환 합니다. 예를 들어이 메서드는 컴파일러에서 생성 된 스텁이 main 메서드 전에 아닌 사용자의 주요 메서드 수 있습니다.  

@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33531016"
 ---
 # <a name="how-to-determine-checked-items-in-the-windows-forms-checkedlistbox-control"></a>방법: Windows Forms CheckedListBox 컨트롤에서 선택된 항목 확인
 Windows Forms에서 데이터를 표시할 때는 <xref:System.Windows.Forms.CheckedListBox> 컨트롤을 반복할 수 있습니다 중 하나에 저장 된 컬렉션의 <xref:System.Windows.Forms.CheckedListBox.CheckedItems%2A> 속성 또는 사용 하 여 목록을 단계별로 <xref:System.Windows.Forms.CheckedListBox.GetItemChecked%2A> 선택한 항목을 결정 하는 메서드. <xref:System.Windows.Forms.CheckedListBox.GetItemChecked%2A> 메서드를 해당 인수로 항목 인덱스 번호를 가져와서 반환 `true` 또는 `false`합니다. 반대로 예상 하는 것을 <xref:System.Windows.Forms.ListBox.SelectedItems%2A> 및 <xref:System.Windows.Forms.ListBox.SelectedIndices%2A> 속성에서 선택한 항목을 결정 하지 않습니다; 결정 하는 항목 강조 표시 됩니다.  

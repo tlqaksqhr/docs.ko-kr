@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33528160"
 ---
 # <a name="bindingsource-component"></a>BindingSource 구성 요소
 컨트롤에 바인딩할 데이터 소스를 캡슐화합니다.  
